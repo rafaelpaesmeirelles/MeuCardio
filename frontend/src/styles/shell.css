@@ -140,7 +140,7 @@
   box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.6);
 }
 .login__brasao { text-align: center; margin-bottom: 1.1rem; }
-.login__brasao img { width: 280px; max-width: 90%; height: auto; }
+.login__brasao img { width: 360px; max-width: 92%; height: auto; }
 
 /* --- Assistente clínico ---------------------------------------------------- */
 .ia { display: flex; flex-direction: column; height: calc(100dvh - 190px); }

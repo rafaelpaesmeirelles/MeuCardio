@@ -78,8 +78,9 @@ export default function Entrar() {
         </Link>
 
         <p className="aviso">
-          Uso restrito à equipe assistencial. Dados de pacientes registrados aqui seguem as
-          mesmas regras de sigilo do prontuário.
+          Biblioteca científica, calculadoras validadas, comparador de medicamentos e
+          um assistente de IA treinado na sua base — tudo em um só lugar para agilizar
+          a decisão clínica em cardiologia.
         </p>
         <Credito compacto />
         <ApoioBiolab />
