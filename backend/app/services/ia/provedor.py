@@ -109,12 +109,30 @@ class ProvedorAnthropic(ProvedorIA):
 
 
 _cache: ProvedorIA | None = None
+_cache_embeddings: ProvedorIA | None = None
 
 
 def obter_provedor() -> ProvedorIA:
+    """Provedor usado pra GERAR RESPOSTA (chat) — pode ser OpenAI ou Anthropic."""
     global _cache
     if _cache is None:
         _cache = {"openai": ProvedorOpenAI, "anthropic": ProvedorAnthropic}[
             settings.ai_provider
         ]()
     return _cache
+
+
+def obter_provedor_embeddings() -> ProvedorIA:
+    """Provedor usado só pra EMBEDDING (busca semântica) — hoje só a OpenAI
+    oferece isso. Mesmo com ai_provider="anthropic", a busca na biblioteca
+    continua usando este provedor, não o de cima. Se os dois forem "openai",
+    reaproveita a mesma instância (evita duplicar cliente HTTP à toa)."""
+    global _cache_embeddings
+    if _cache_embeddings is None:
+        if settings.ai_embedding_provider == settings.ai_provider:
+            _cache_embeddings = obter_provedor()
+        else:
+            _cache_embeddings = {"openai": ProvedorOpenAI, "anthropic": ProvedorAnthropic}[
+                settings.ai_embedding_provider
+            ]()
+    return _cache_embeddings

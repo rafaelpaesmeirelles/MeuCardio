@@ -27,7 +27,7 @@ from sqlalchemy.orm import Session
 from app.core.config import settings
 from app.models.content import Document
 from app.models.rag import AIConversation, AIMessage, DocumentChunk
-from app.services.ia.provedor import obter_provedor
+from app.services.ia.provedor import obter_provedor, obter_provedor_embeddings
 
 MAX_CHARS = 1400
 MIN_CHARS = 200
@@ -104,7 +104,7 @@ def dividir(markdown: str) -> list[tuple[str | None, str]]:
 
 
 def indexar_documento(db: Session, doc: Document, provedor=None) -> int:
-    provedor = provedor or obter_provedor()
+    provedor = provedor or obter_provedor_embeddings()
     db.query(DocumentChunk).filter(DocumentChunk.document_id == doc.id).delete()
 
     pedacos = dividir(doc.body_md)
@@ -130,7 +130,7 @@ def indexar_documento(db: Session, doc: Document, provedor=None) -> int:
 
 
 def indexar_tudo(db: Session, apenas_pendentes: bool = True) -> dict:
-    provedor = obter_provedor()
+    provedor = obter_provedor_embeddings()
     q = db.query(Document)
     if apenas_pendentes:
         q = q.filter(~Document.id.in_(select(DocumentChunk.document_id).distinct()))
@@ -160,7 +160,7 @@ def _rrf(listas: list[list[int]], k: int = 60) -> list[int]:
 
 def recuperar(db: Session, pergunta: str, temas: list[str] | None = None) -> list[dict]:
     limite = settings.ai_top_k * 3
-    vetor = obter_provedor().embeddings([pergunta])[0]
+    vetor = obter_provedor_embeddings().embeddings([pergunta])[0]
 
     consulta = select(DocumentChunk.id)
     if temas:

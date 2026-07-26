@@ -26,7 +26,11 @@ class Settings(BaseSettings):
 
     # --- IA clínica --------------------------------------------------------
     ai_enabled: bool = False
-    ai_provider: str = "openai"  # openai | anthropic
+    ai_provider: str = "openai"  # openai | anthropic — só pra geração de resposta
+    ai_embedding_provider: str = "openai"
+    # A Anthropic não oferece API de embeddings — esse campo é sempre "openai"
+    # na prática, mesmo com ai_provider="anthropic". Existe como campo explícito
+    # (não hardcoded) pra o dia em que outro provedor de embedding for suportado.
     ai_daily_limit: int = 50
     ai_max_output_tokens: int = 1800
     ai_top_k: int = 8
