@@ -10,7 +10,8 @@ from app.models.drug import Drug
 router = APIRouter(prefix="/api/drugs", tags=["medicamentos"])
 
 FIELDS = (
-    "slug generic_name brand_names drug_class mechanism presentations dosing "
+    "slug generic_name brand_names drug_class mechanism presentations "
+    "commercial_presentations dosing "
     "renal_adjustment hepatic_adjustment contraindications interactions monitoring "
     "pregnancy lactation outcomes cost_reference half_life_hours half_life_note "
     "sbp_reduction_mmhg dbp_reduction_mmhg bp_evidence_source "
@@ -31,6 +32,15 @@ class EficaciaPAIn(BaseModel):
     sbp_reduction_mmhg: float | None = None
     dbp_reduction_mmhg: float | None = None
     bp_evidence_source: str | None = None
+
+
+class ApresentacaoComercial(BaseModel):
+    brand_name: str
+    manufacturer: str
+    form: str = "comprimido"
+    dosage: str
+    pack_sizes: list[int] = []
+    generic_available: bool = False
 
 
 @router.get("")
@@ -93,6 +103,26 @@ def definir_meia_vida(
     db.add(AuditLog(
         user_id=admin.id, action="definir_meia_vida", entity="drug", entity_id=slug,
         detail={"half_life_hours": dados.half_life_hours},
+    ))
+    db.commit()
+    return _dump(d)
+
+
+@router.put("/{slug}/apresentacoes-comerciais")
+def definir_apresentacoes_comerciais(
+    slug: str, dados: list[ApresentacaoComercial],
+    db: Session = Depends(get_db), admin=Depends(require_admin),
+):
+    """Substitui a lista inteira de apresentações comerciais do medicamento.
+    Só admin — dado comercial (marca, laboratório, caixa) exige a mesma
+    checagem de fonte que qualquer outro dado clínico neste sistema."""
+    d = db.query(Drug).filter(Drug.slug == slug).first()
+    if not d:
+        raise HTTPException(status_code=404, detail="Medicamento não encontrado.")
+    d.commercial_presentations = [item.model_dump() for item in dados]
+    db.add(AuditLog(
+        user_id=admin.id, action="definir_apresentacoes_comerciais", entity="drug", entity_id=slug,
+        detail={"quantidade": len(dados)},
     ))
     db.commit()
     return _dump(d)

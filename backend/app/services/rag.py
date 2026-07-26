@@ -242,16 +242,22 @@ PROMPT_SISTEMA = """Você é o assistente clínico do MeuCardio.
 Como responder:
 1. Baseie a resposta no CONTEXTO INSTITUCIONAL fornecido e cite os trechos usados pelo \
 marcador correspondente, como [F1] ou [F3].
-2. Quando o contexto não sustentar a resposta, diga isso com todas as letras e separe \
-claramente conhecimento geral de cardiologia do que consta na base institucional.
-3. Nunca invente dose, classe de recomendação, nível de evidência, desfecho de estudo, \
-DOI ou referência. Não havendo o dado, escreva: não consta na base institucional.
-4. Se um trecho vier marcado como pendente de verificação humana, sinalize isso ao usar \
+2. Se houver uma seção "LITERATURA PÚBLICA (PubMed/NCBI)" no contexto, você pode citá-la \
+com o marcador [PM1], [PM2] etc. — deixe sempre claro que é uma fonte externa, pública, \
+não parte da base institucional revisada. Nunca misture os dois tipos de marcador como \
+se fossem a mesma coisa.
+3. Quando nem o contexto institucional nem o PubMed sustentarem a resposta, diga isso com \
+todas as letras e separe claramente conhecimento geral de cardiologia do que consta em \
+qualquer uma das duas fontes.
+4. Nunca invente dose, classe de recomendação, nível de evidência, desfecho de estudo, \
+DOI ou referência. Não havendo o dado em nenhuma fonte, escreva: não consta nas fontes \
+consultadas.
+5. Se um trecho vier marcado como pendente de verificação humana, sinalize isso ao usar \
 aquela informação.
-5. Não peça nem repita identificadores de paciente.
-6. Em instabilidade hemodinâmica ou emergência, oriente avaliação imediata à beira do \
+6. Não peça nem repita identificadores de paciente.
+7. Em instabilidade hemodinâmica ou emergência, oriente avaliação imediata à beira do \
 leito e o protocolo local antes de qualquer detalhamento.
-7. Escreva em português do Brasil, técnico e direto, sem repetir a pergunta.
+8. Escreva em português do Brasil, técnico e direto, sem repetir a pergunta.
 
 Encerre com: "Apoio à decisão — não substitui julgamento clínico, bula e diretriz vigente."
 """
@@ -298,6 +304,8 @@ Regras que valem para as três seções:
 - Baseie-se no CONTEXTO INSTITUCIONAL fornecido sempre que houver correspondência, citando
   o marcador [F1], [F2] etc. Quando não houver, use conhecimento geral de cardiologia e
   diga isso com todas as letras — não force uma citação que não existe.
+- Se houver uma seção "LITERATURA PÚBLICA (PubMed/NCBI)", pode citá-la com [PM1], [PM2] etc.,
+  sempre deixando claro que é fonte externa, pública, não institucional.
 - Nunca invente dose, classe de recomendação, nível de evidência, valor de exame ou dado
   que o paciente não tem registrado no caso.
 - Seja específico e clinicamente útil — evite generalidades vagas tipo "investigar conforme
@@ -376,6 +384,8 @@ def analisar_caso(db: Session, patient) -> dict:
     terapêuticas para um paciente do Round. O resultado nunca é gravado como
     fato no prontuário — fica em registro separado (PatientAISuggestion),
     sempre rotulado como sugestão."""
+    from app.services.pubmed import buscar_pubmed, montar_contexto_pubmed
+
     resumo = _resumo_caso(patient)
     consulta_busca = " ".join(filter(None, [
         patient.chief_complaint, patient.physical_exam,
@@ -387,6 +397,11 @@ def analisar_caso(db: Session, patient) -> dict:
     if not contexto:
         contexto = "[Nenhum trecho da base institucional correspondeu a este caso.]"
 
+    artigos_pubmed = buscar_pubmed(consulta_busca)
+    contexto_pubmed = montar_contexto_pubmed(artigos_pubmed)
+    if contexto_pubmed:
+        contexto = f"{contexto}\n\n{contexto_pubmed}"
+
     resposta = obter_provedor().responder(PROMPT_CASO, [
         {"role": "user", "content": f"CONTEXTO INSTITUCIONAL:\n{contexto}\n\nDADOS DO CASO:\n{resumo}"},
     ])
@@ -396,6 +411,7 @@ def analisar_caso(db: Session, patient) -> dict:
         **secoes,
         "case_snapshot": {"resumo_enviado": resumo},
         "sources": fontes,
+        "sources_pubmed": artigos_pubmed,
         "model": resposta.modelo,
         "texto_completo": resposta.texto,
     }
@@ -416,10 +432,17 @@ def contar_uso_diario(db: Session, user_id: int) -> int:
 def perguntar(
     db: Session, pergunta: str, historico: list[dict], temas: list[str] | None = None
 ) -> dict:
+    from app.services.pubmed import buscar_pubmed, montar_contexto_pubmed
+
     trechos = recuperar(db, pergunta, temas)
     contexto, fontes = montar_contexto(trechos)
     if not contexto:
         contexto = "[Nenhum trecho da base institucional correspondeu à pergunta.]"
+
+    artigos_pubmed = buscar_pubmed(pergunta)
+    contexto_pubmed = montar_contexto_pubmed(artigos_pubmed)
+    if contexto_pubmed:
+        contexto = f"{contexto}\n\n{contexto_pubmed}"
 
     resposta = obter_provedor().responder(PROMPT_SISTEMA, [
         *historico[-8:],
@@ -429,6 +452,7 @@ def perguntar(
     return {
         "texto": resposta.texto,
         "fontes": fontes,
+        "fontes_pubmed": artigos_pubmed,
         "fontes_json": json.dumps(fontes, ensure_ascii=False),
         "modelo": resposta.modelo,
         "tokens_entrada": resposta.tokens_entrada,

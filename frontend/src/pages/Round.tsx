@@ -10,6 +10,7 @@ type Sugestao = {
   id: number; created_at: string; model: string;
   differential_diagnosis: string; suggested_workup: string;
   treatment_considerations: string; sources: { slug: string; titulo: string }[];
+  sources_pubmed: { pmid: string; titulo: string; autores: string; revista: string; ano: string; url: string }[];
 };
 type Paciente = {
   id: number; record_number: string; initials: string; bed: string | null;
@@ -422,6 +423,15 @@ export default function Round() {
                           {s.sources.length > 0 && (
                             <p style={{ fontSize: "0.78rem", color: "var(--cinza-texto)" }}>
                               Fontes: {s.sources.map((f) => f.titulo).join(", ")}
+                            </p>
+                          )}
+                          {s.sources_pubmed && s.sources_pubmed.length > 0 && (
+                            <p style={{ fontSize: "0.78rem", color: "var(--cinza-texto)" }}>
+                              Literatura pública (PubMed): {s.sources_pubmed.map((f) => (
+                                <a key={f.pmid} href={f.url} target="_blank" rel="noopener noreferrer" style={{ marginRight: 6 }}>
+                                  {f.titulo} ({f.ano})
+                                </a>
+                              ))}
                             </p>
                           )}
                         </div>

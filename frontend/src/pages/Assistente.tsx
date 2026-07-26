@@ -8,7 +8,8 @@ import { Carregando } from "../components/Estado";
 type Fonte = {
   referencia: string; slug: string; titulo: string; tema: string; review_status: string;
 };
-type Mensagem = { papel: "user" | "assistant"; conteudo: string; fontes?: Fonte[] };
+type FontePubmed = { pmid: string; titulo: string; autores: string; revista: string; ano: string; url: string };
+type Mensagem = { papel: "user" | "assistant"; conteudo: string; fontes?: Fonte[]; fontesPubmed?: FontePubmed[] };
 type Status = {
   ativo: boolean; provedor: string; modelo: string;
   limite_diario: number; usado_hoje: number; restante_hoje: number;
@@ -33,11 +34,14 @@ export default function Assistente() {
   useEffect(() => { recarregarHistorico(); }, []);
 
   async function abrirConversa(id: number) {
-    const c = await api.get<{ mensagens: { papel: "user" | "assistant"; conteudo: string; fontes: Fonte[] }[] }>(
-      `/ai/conversas/${id}`
-    );
+    const c = await api.get<{
+      mensagens: { papel: "user" | "assistant"; conteudo: string; fontes: Fonte[]; fontes_pubmed: FontePubmed[] }[]
+    }>(`/ai/conversas/${id}`);
     setConversa(id);
-    setMensagens(c.mensagens.map((m) => ({ ...m, fontes: m.fontes.length ? m.fontes : undefined })));
+    setMensagens(c.mensagens.map((m) => ({
+      ...m, fontes: m.fontes.length ? m.fontes : undefined,
+      fontesPubmed: m.fontes_pubmed?.length ? m.fontes_pubmed : undefined,
+    })));
     setMostrarHistorico(false);
   }
 
@@ -63,10 +67,13 @@ export default function Assistente() {
     setPensando(true);
     try {
       const r = await api.post<{
-        conversation_id: number; resposta: string; fontes: Fonte[];
+        conversation_id: number; resposta: string; fontes: Fonte[]; fontes_pubmed: FontePubmed[];
       }>("/ai/perguntar", { pergunta: texto, conversation_id: conversa });
       setConversa(r.conversation_id);
-      setMensagens((m) => [...m, { papel: "assistant", conteudo: r.resposta, fontes: r.fontes }]);
+      setMensagens((m) => [...m, {
+        papel: "assistant", conteudo: r.resposta, fontes: r.fontes,
+        fontesPubmed: r.fontes_pubmed?.length ? r.fontes_pubmed : undefined,
+      }]);
       setStatus((s) => s && { ...s, usado_hoje: s.usado_hoje + 1, restante_hoje: s.restante_hoje - 1 });
       recarregarHistorico();
     } catch (e) {
@@ -183,6 +190,17 @@ export default function Assistente() {
                           <span className="selo selo--pendente">verificar</span>
                         )}
                       </Link>
+                    ))}
+                  </div>
+                )}
+                {m.fontesPubmed && m.fontesPubmed.length > 0 && (
+                  <div className="ia__fontes">
+                    <p className="eyebrow">Literatura pública (PubMed) — fonte externa, não institucional</p>
+                    {m.fontesPubmed.map((f) => (
+                      <a key={f.pmid} href={f.url} target="_blank" rel="noopener noreferrer" className="ia__fonte">
+                        <span className="dado ia__fonte__marca">PM</span>
+                        <span>{f.titulo} — {f.autores} et al. {f.revista}, {f.ano}</span>
+                      </a>
                     ))}
                   </div>
                 )}

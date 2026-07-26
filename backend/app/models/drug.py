@@ -15,6 +15,13 @@ class Drug(Base):
     drug_class: Mapped[str] = mapped_column(String(120), index=True)
     mechanism: Mapped[str | None] = mapped_column(Text, nullable=True)
     presentations: Mapped[list[str]] = mapped_column(ARRAY(String), default=list)
+    commercial_presentations: Mapped[list] = mapped_column(JSONB, default=list)
+    # Apresentações comerciais estruturadas, uma entrada por marca/dosagem/embalagem:
+    # [{"brand_name": "Puran T4", "manufacturer": "Sanofi", "form": "comprimido",
+    #   "dosage": "50mcg", "pack_sizes": [30, 60], "generic_available": true}]
+    # Fonte esperada: bula/registro ANVISA ou bula do fabricante — nunca inventado.
+    # Isso é dado comercial que muda (descontinuação, novo genérico) — reconfirmar
+    # periodicamente, não tratar como fato permanente.
     dosing: Mapped[dict] = mapped_column(JSONB, default=dict)
     renal_adjustment: Mapped[str | None] = mapped_column(Text, nullable=True)
     hepatic_adjustment: Mapped[str | None] = mapped_column(Text, nullable=True)

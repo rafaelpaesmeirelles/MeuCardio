@@ -53,6 +53,7 @@ class AIMessage(Base):
     papel: Mapped[str] = mapped_column(String(20))  # user | assistant
     conteudo: Mapped[str] = mapped_column(Text)
     fontes: Mapped[str | None] = mapped_column(Text, nullable=True)  # JSON com slugs citados
+    fontes_pubmed: Mapped[str | None] = mapped_column(Text, nullable=True)  # JSON com artigos externos citados
     modelo: Mapped[str | None] = mapped_column(String(80), nullable=True)
     tokens_entrada: Mapped[int] = mapped_column(Integer, default=0)
     tokens_saida: Mapped[int] = mapped_column(Integer, default=0)

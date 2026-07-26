@@ -153,6 +153,7 @@ def _dump_sugestao(s: PatientAISuggestion) -> dict:
         "suggested_workup": s.suggested_workup,
         "treatment_considerations": s.treatment_considerations,
         "sources": s.sources,
+        "sources_pubmed": s.sources_pubmed,
     }
 
 
@@ -190,7 +191,8 @@ def gerar_auxilio_ia(pid: int, db: Session = Depends(get_db), user=Depends(curre
 
     sugestao = PatientAISuggestion(
         patient_id=p.id, requested_by=user.id,
-        case_snapshot=r["case_snapshot"], sources=r["sources"], model=r["model"],
+        case_snapshot=r["case_snapshot"], sources=r["sources"],
+        sources_pubmed=r["sources_pubmed"], model=r["model"],
         differential_diagnosis=r["differential_diagnosis"],
         suggested_workup=r["suggested_workup"],
         treatment_considerations=r["treatment_considerations"],

@@ -61,6 +61,7 @@ def ler_conversa(cid: int, db: Session = Depends(get_db), user=Depends(current_u
             "papel": m.papel,
             "conteudo": m.conteudo,
             "fontes": json.loads(m.fontes) if m.fontes else [],
+            "fontes_pubmed": json.loads(m.fontes_pubmed) if m.fontes_pubmed else [],
             "created_at": m.created_at,
         } for m in msgs],
     }
@@ -121,12 +122,15 @@ def perguntar(dados: Pergunta, db: Session = Depends(get_db), user=Depends(curre
     db.add(AIMessage(conversation_id=conv.id, papel="user", conteudo=dados.pergunta))
     db.add(AIMessage(
         conversation_id=conv.id, papel="assistant", conteudo=r["texto"],
-        fontes=r["fontes_json"], modelo=r["modelo"],
+        fontes=r["fontes_json"],
+        fontes_pubmed=json.dumps(r["fontes_pubmed"], ensure_ascii=False) if r["fontes_pubmed"] else None,
+        modelo=r["modelo"],
         tokens_entrada=r["tokens_entrada"], tokens_saida=r["tokens_saida"],
     ))
     db.add(AuditLog(
         user_id=user.id, action="perguntar", entity="ia", entity_id=str(conv.id),
         detail={"modelo": r["modelo"], "fontes": [f["slug"] for f in r["fontes"]],
+                "fontes_pubmed": [f["pmid"] for f in r["fontes_pubmed"]],
                 "tokens": r["tokens_entrada"] + r["tokens_saida"]},
     ))
     db.commit()
@@ -135,6 +139,7 @@ def perguntar(dados: Pergunta, db: Session = Depends(get_db), user=Depends(curre
         "conversation_id": conv.id,
         "resposta": r["texto"],
         "fontes": r["fontes"],
+        "fontes_pubmed": r["fontes_pubmed"],
         "modelo": r["modelo"],
     }
 

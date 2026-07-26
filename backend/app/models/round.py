@@ -100,6 +100,7 @@ class PatientAISuggestion(Base):
     suggested_workup: Mapped[str] = mapped_column(Text)
     treatment_considerations: Mapped[str] = mapped_column(Text)
     sources: Mapped[list] = mapped_column(JSONB, default=list)  # documentos da biblioteca usados como base
+    sources_pubmed: Mapped[list] = mapped_column(JSONB, default=list)  # artigos externos (PubMed) usados como base
     model: Mapped[str] = mapped_column(String(80))
 
     created_at: Mapped[datetime] = mapped_column(
