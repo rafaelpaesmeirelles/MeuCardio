@@ -50,8 +50,8 @@ class Settings(BaseSettings):
     smtp_port: int = 587
     smtp_user: str = ""
     smtp_password: str = ""
-    smtp_from: str = "MeuCardio <nao-responda@meucardio.example.com>"  # ajustar quando houver domínio real
-    public_url: str = "https://meucardio.example.com"  # ajustar quando houver domínio real
+    smtp_from: str = "MeuCardio <nao-responda@meucardio.med.br>"
+    public_url: str = "https://meucardio.med.br"
 
     @property
     def smtp_configurado(self) -> bool:
