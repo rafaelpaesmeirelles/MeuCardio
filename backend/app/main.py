@@ -2,8 +2,9 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.api import (
-    admin, ai, auth, calculators, drugs, evidence, favorites, gallery, health,
-    lab_tests, library, password_reset, round as round_api, search, studies,
+    admin, ai, appointments, auth, calculators, documents, drugs, evidence,
+    favorites, gallery, health, lab_tests, library, password_reset,
+    prescriptions, round as round_api, search, studies, timeline,
 )
 from app.core.config import settings
 from app.services.bootstrap import init_db
@@ -30,7 +31,8 @@ app.add_middleware(
 for r in (health.router, auth.router, library.router, search.router,
           calculators.router, drugs.router, round_api.router,
           ai.router, admin.router, gallery.router, favorites.router,
-          password_reset.router, lab_tests.router, evidence.router, studies.router):
+          password_reset.router, lab_tests.router, evidence.router, studies.router,
+          prescriptions.router, documents.router, appointments.router, timeline.router):
     app.include_router(r)
 
 

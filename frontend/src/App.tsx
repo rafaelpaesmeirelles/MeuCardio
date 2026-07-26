@@ -25,6 +25,8 @@ import Evidencias from "./pages/Evidencias";
 import Evidencia from "./pages/Evidencia";
 import Estudos from "./pages/Estudos";
 import Estudo from "./pages/Estudo";
+import Agenda from "./pages/Agenda";
+import Templates from "./pages/Templates";
 
 export default function App() {
   const { usuario, carregando } = useAuth();
@@ -63,6 +65,8 @@ export default function App() {
         <Route path="favoritos" element={<Favoritos />} />
         <Route path="assistente" element={<Assistente />} />
         <Route path="round" element={<Round />} />
+        <Route path="agenda" element={<Agenda />} />
+        <Route path="documentos" element={<Templates />} />
         {usuario.role === "admin" && (
           <Route path="admin" element={<Admin />} />
         )}

@@ -237,3 +237,15 @@
   border-radius: var(--r); padding: 0.6rem 0.75rem;
   font-family: var(--fonte-dados); font-size: 0.8rem; overflow-x: auto; margin: 0;
 }
+
+/* Impressão de receita/atestado/laudo ---------------------------------- */
+.folha-impressao { display: none; }
+@media print {
+  body * { visibility: hidden; }
+  .folha-impressao, .folha-impressao * { visibility: visible; }
+  .folha-impressao {
+    display: block;
+    position: absolute; top: 0; left: 0; width: 100%;
+    padding: 2cm;
+  }
+}

@@ -17,6 +17,8 @@ const NAV_BASE = [
   { to: "/estudos", rotulo: "Estudos", curto: "Estudos" },
   { to: "/favoritos", rotulo: "Favoritos", curto: "Favoritos" },
   { to: "/round", rotulo: "Round hospitalar", curto: "Round" },
+  { to: "/agenda", rotulo: "Agenda", curto: "Agenda" },
+  { to: "/documentos", rotulo: "Modelos de documento", curto: "Documentos" },
 ];
 
 export default function Shell() {

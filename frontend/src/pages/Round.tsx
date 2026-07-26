@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { api } from "../lib/api";
 import { Carregando, Vazio } from "../components/Estado";
+import PatientPrescricao from "../components/PatientPrescricao";
+import PatientDocumentos from "../components/PatientDocumentos";
+import PatientTimeline from "../components/PatientTimeline";
 
 type Problema = { id: number; label: string; status: string };
 type Sugestao = {
@@ -425,6 +428,10 @@ export default function Round() {
                       ))
                     )}
                   </div>
+
+                  <PatientPrescricao patientId={p.id} />
+                  <PatientDocumentos patientId={p.id} />
+                  <PatientTimeline patientId={p.id} />
                 </div>
               )}
             </div>
