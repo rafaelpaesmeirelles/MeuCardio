@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../lib/auth";
 import Credito from "../components/Credito";
+import ApoioBiolab from "../components/ApoioBiolab";
 
 export default function Entrar() {
   const { entrar } = useAuth();
@@ -26,11 +27,11 @@ export default function Entrar() {
     <div className="login">
       <div className="login__cartao">
         <div className="login__brasao">
-          <h1 style={{ fontSize: "1.6rem", marginTop: 14 }}>MeuCardio</h1>
+          <img src="/logo.png" alt="MeuCardio" style={{ maxWidth: 220, width: "100%", height: "auto" }} />
         </div>
         <div className="fio-dourado" style={{ marginBottom: "1.1rem" }} />
 
-        <label htmlFor="email">E-mail institucional</label>
+        <label htmlFor="email">E-mail</label>
         <input
           id="email"
           type="email"
@@ -81,6 +82,7 @@ export default function Entrar() {
           mesmas regras de sigilo do prontuário.
         </p>
         <Credito compacto />
+        <ApoioBiolab />
       </div>
     </div>
   );

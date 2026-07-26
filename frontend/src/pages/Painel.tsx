@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { api } from "../lib/api";
 import { useAuth } from "../lib/auth";
 import { Carregando } from "../components/Estado";
+import ApoioBiolab from "../components/ApoioBiolab";
 
 type Tema = { theme: string; count: number };
 type Paciente = { id: number; initials: string; bed: string | null; unit: string | null };
@@ -80,6 +81,7 @@ export default function Painel() {
           ))}
         </div>
       )}
+      <ApoioBiolab />
     </>
   );
 }
