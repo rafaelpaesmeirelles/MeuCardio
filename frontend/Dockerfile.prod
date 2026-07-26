@@ -1,0 +1,15 @@
+# Build de produção: compila os arquivos estáticos e para. Não serve nada
+# sozinho — o serviço "caddy" do docker-compose.prod.yml lê o resultado
+# direto do volume compartilhado "sitefiles".
+FROM node:22-alpine AS build
+WORKDIR /app
+COPY package.json ./
+RUN npm install
+COPY . .
+ARG VITE_API_URL=/api
+ENV VITE_API_URL=${VITE_API_URL}
+RUN npm run build
+
+FROM alpine:3.20
+COPY --from=build /app/dist /dist
+CMD ["sh", "-c", "rm -rf /site/* && cp -r /dist/* /site/ && echo 'build copiado para /site'"]

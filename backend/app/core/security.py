@@ -1,0 +1,53 @@
+from datetime import datetime, timedelta, timezone
+
+from fastapi import Depends, HTTPException, status
+from fastapi.security import OAuth2PasswordBearer
+from jose import JWTError, jwt
+from passlib.context import CryptContext
+from sqlalchemy.orm import Session
+
+from app.core.config import settings
+from app.core.db import get_db
+
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/auth/login")
+
+
+def hash_password(raw: str) -> str:
+    return pwd_context.hash(raw)
+
+
+def verify_password(raw: str, hashed: str) -> bool:
+    return pwd_context.verify(raw, hashed)
+
+
+def create_access_token(subject: str) -> str:
+    expire = datetime.now(timezone.utc) + timedelta(minutes=settings.jwt_expire_minutes)
+    return jwt.encode(
+        {"sub": subject, "exp": expire}, settings.jwt_secret, algorithm=settings.jwt_algorithm
+    )
+
+
+def current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(get_db)):
+    from app.models.user import User
+
+    credentials_error = HTTPException(
+        status_code=status.HTTP_401_UNAUTHORIZED,
+        detail="Sessão inválida ou expirada. Entre novamente.",
+        headers={"WWW-Authenticate": "Bearer"},
+    )
+    try:
+        payload = jwt.decode(token, settings.jwt_secret, algorithms=[settings.jwt_algorithm])
+        email = payload.get("sub")
+    except JWTError:
+        raise credentials_error
+    user = db.query(User).filter(User.email == email, User.is_active.is_(True)).first()
+    if not user:
+        raise credentials_error
+    return user
+
+
+def require_admin(user=Depends(current_user)):
+    if user.role != "admin":
+        raise HTTPException(status_code=403, detail="Ação restrita a administradores.")
+    return user

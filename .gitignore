@@ -1,0 +1,26 @@
+# segredos — nunca versionar
+.env
+*.keystore
+keystore.properties
+*.pem
+*_rsa
+*_ed25519
+
+# dependências e build (regenerados por comando, não precisam estar no git)
+node_modules/
+frontend/dist/
+frontend/android/build/
+frontend/android/app/build/
+frontend/android/.gradle/
+frontend/android/capacitor-cordova-android-plugins/build/
+backend/**/__pycache__/
+backend/migrations/versions/__pycache__/
+*.pyc
+
+# artefatos de build Android (arquivo grande, regenerado pelo gradlew)
+frontend/android/app/build/outputs/
+
+# backups de banco (ficam só no servidor)
+infra/backup/dumps/
+infra/backup/backup.log
+*.tsbuildinfo

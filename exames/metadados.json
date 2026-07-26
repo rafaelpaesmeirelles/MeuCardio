@@ -1,0 +1,416 @@
+[
+  {
+    "slug": "troponina-de-alta-sensibilidade",
+    "name": "Troponina de alta sensibilidade (hs-cTn)",
+    "category": "laboratorial",
+    "theme": "Doença coronariana",
+    "what_it_measures": "Proteína liberada por dano ao miócito cardíaco (necrose). Existem duas isoformas medidas na prática — troponina I e troponina T — não intercambiáveis entre si nem entre fabricantes diferentes do mesmo ensaio.",
+    "reference_range": "Não existe um valor de corte único — cada ensaio de alta sensibilidade tem seu próprio percentil 99 de referência, que varia por fabricante e por sexo. Use sempre o valor de corte informado pelo laboratório que processou a amostra, não um número de memória.",
+    "indications": "Suspeita de síndrome coronariana aguda — dosagem seriada (0h e 1h ou 0h e 2h, conforme o protocolo local) é o padrão para algoritmos de rule-in/rule-out de infarto.",
+    "interpretation": "O diagnóstico de infarto exige elevação e/ou queda dinâmica do valor entre as dosagens seriadas, não um valor isolado acima do corte — troponina cronicamente elevada (ex.: DRC, ICFEr) sem variação dinâmica sugere lesão miocárdica crônica, não evento agudo.",
+    "limitations": "Eleva-se em diversas condições não coronarianas: embolia pulmonar, miocardite, sepse, insuficiência renal, taquiarritmia sustentada, exercício extremo. Interpretar sempre no contexto clínico, nunca isoladamente.",
+    "source_refs": [
+      "2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826.",
+      "Averina M et al. NT-proBNP and high-sensitivity troponin T as screening tests for subclinical chronic heart failure. ESC Heart Fail. 2022;9(3):1954-1962."
+    ],
+    "review_status": "pendente_revisao",
+    "published": false,
+    "tags": [
+      "troponina",
+      "hs-ctn",
+      "sca",
+      "infarto",
+      "biomarcador"
+    ]
+  },
+  {
+    "slug": "nt-probnp",
+    "name": "NT-proBNP",
+    "category": "laboratorial",
+    "theme": "Insuficiência cardíaca",
+    "what_it_measures": "Fragmento inativo liberado junto com o BNP quando o miocárdio ventricular é distendido por sobrecarga de volume ou pressão — reflete estresse de parede, não é específico de uma etiologia.",
+    "reference_range": "Contexto ambulatorial/crônico (afastar IC): < 125 pg/mL. Contexto agudo (pronto-socorro): corte mais alto, ao redor de 300 pg/mL — os dois contextos usam cortes diferentes de propósito, não confundir.",
+    "indications": "Investigação de dispneia com suspeita de insuficiência cardíaca — tanto para afastar o diagnóstico (bom valor preditivo negativo) quanto para reforçá-lo.",
+    "interpretation": "A diretriz de 2023 da Heart Failure Association (ESC) propõe corte ajustado por idade para reforçar o diagnóstico (\"rule-in\") no ambiente comunitário: ≥ 125 pg/mL abaixo de 50 anos, ≥ 250 pg/mL entre 50–75 anos, ≥ 500 pg/mL acima de 75 anos — reflete que o valor sobe com a idade mesmo sem IC.",
+    "limitations": "Eleva-se com idade avançada, disfunção renal e fibrilação atrial mesmo sem IC. Reduz-se artificialmente em obesidade — um valor 'normal' em paciente obeso não exclui IC com a mesma confiança.",
+    "source_refs": [
+      "ESC Heart Failure Association age-adjusted natriuretic peptide thresholds for a new diagnosis of heart failure. Eur Heart J. 2024;45(Suppl 1).",
+      "2023 Focused Update of the 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2023;44(37):3627-3639."
+    ],
+    "review_status": "pendente_revisao",
+    "published": false,
+    "tags": [
+      "nt-probnp",
+      "bnp",
+      "insuficiência cardíaca",
+      "biomarcador",
+      "dispneia"
+    ]
+  },
+  {
+    "slug": "d-dimero",
+    "name": "D-dímero",
+    "category": "laboratorial",
+    "theme": "Tromboembolismo",
+    "what_it_measures": "Produto de degradação da fibrina, liberado quando um trombo é formado e simultaneamente degradado pelo sistema fibrinolítico — marcador de atividade de coagulação/fibrinólise, não específico de local ou causa.",
+    "reference_range": "Corte convencional: <500 µg/L. Corte ajustado por idade (pacientes >50 anos): <(idade × 10) µg/L — ex.: 700 µg/L para um paciente de 70 anos.",
+    "indications": "Exclusão de tromboembolismo venoso (TVP/TEP) em pacientes com probabilidade clínica pré-teste baixa a intermediária — não deve ser solicitado em pacientes de alta probabilidade clínica, nos quais um resultado negativo não afasta o diagnóstico com segurança.",
+    "interpretation": "Diretriz europeia de 2019 sobre TEP agudo recomenda uso do corte ajustado por idade (idade × 10 µg/L) em suspeita de TEP com mais de 50 anos e probabilidade clínica baixa ou intermediária — recomendação classe IIa, nível de evidência B. No estudo de validação ADJUST-PE, taxa de falha em 3 meses foi de 0,3% (1 em 331 pacientes) com D-dímero acima de 500 µg/L mas abaixo do corte ajustado por idade.",
+    "limitations": "Alto valor preditivo negativo, mas baixa especificidade — eleva-se em gestação, câncer, infecção, cirurgia recente, trauma e idade avançada, entre outras condições, sem indicar tromboembolismo. Um resultado positivo sempre exige confirmação por imagem.",
+    "source_refs": [
+      "Age-Adjusted and Clinical Probability Adapted D-Dimer Cutoffs to Rule Out Pulmonary Embolism: A Narrative Review of Clinical Trials. PMC. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11204230/",
+      "Age-adjusted D-dimer cutoff levels to rule out pulmonary embolism: the ADJUST-PE study. PubMed. https://pubmed.ncbi.nlm.nih.gov/24643601/"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "d-dímero",
+      "tev",
+      "tvp",
+      "tep",
+      "biomarcador",
+      "corte ajustado por idade"
+    ]
+  },
+  {
+    "slug": "lactato-serico",
+    "name": "Lactato sérico",
+    "category": "laboratorial",
+    "theme": "Terapia intensiva",
+    "what_it_measures": "Produto do metabolismo anaeróbico da glicose — eleva-se quando a demanda de oxigênio tecidual excede a oferta (hipoperfusão) ou quando o clearance hepático está comprometido; marcador de gravidade e perfusão tecidual, não de um diagnóstico específico.",
+    "reference_range": "Limiar de avaliação em sepse/choque: ≥2 mmol/L. Em choque cardiogênico, lactato inicial >5 mmol/L identifica subgrupo de maior gravidade, no qual o clearance tem melhor valor prognóstico.",
+    "indications": "Estratificação de gravidade e monitorização de resposta ao tratamento em choque séptico e choque cardiogênico; lactato ≥2 mmol/L associado a hipotensão com necessidade de vasopressor compõe a definição de choque séptico (Sepsis-3).",
+    "interpretation": "Choque cardiogênico: clearance de lactato em 24h ≥64% associado a mortalidade intra-hospitalar de 25,5% versus 42,7% com clearance <64% (OR 0,42; IC95% 0,30-0,60); mortalidade em 12 meses de 33,0% versus 48,8% (HR 0,55; IC95% 0,42-0,70). Sepse: sobreviventes têm lactato de 6h mediano de 2,5 mmol/L com 35,4% de clearance, contra 4,6 mmol/L e 14,8% de clearance em não sobreviventes; nível absoluto de lactato em 6h tem valor prognóstico superior ao clearance (AUC 0,70 vs. 0,65).",
+    "limitations": "Elevação não é específica de hipoperfusão — também ocorre em insuficiência hepática, uso de metformina, convulsão, exercício extremo e algumas neoplasias. Diretriz Surviving Sepsis Campaign recomenda remedir lactato em até 6 horas se o valor inicial estiver elevado; em choque cardiogênico de alto risco, avaliações mais frequentes (a cada 24h, ou horárias em casos graves) são recomendadas.",
+    "source_refs": [
+      "Prognostic value of lactate levels and lactate clearance in sepsis and septic shock with initial hyperlactatemia. PMC. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7899836/",
+      "Clinical significance of lactate clearance in patients with cardiogenic shock: results from the RESCUE registry. PMC. https://pmc.ncbi.nlm.nih.gov/articles/PMC8522140/"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "lactato",
+      "choque cardiogênico",
+      "choque séptico",
+      "clearance",
+      "biomarcador",
+      "terapia intensiva"
+    ]
+  },
+  {
+    "slug": "hemoglobina-glicada-hba1c",
+    "name": "Hemoglobina glicada (HbA1c)",
+    "category": "laboratorial",
+    "theme": "Diabetes e cardiologia",
+    "what_it_measures": "Fração da hemoglobina ligada de forma não enzimática à glicose — reflete a glicemia média dos últimos 2-3 meses (tempo de vida da hemácia), não a glicemia pontual.",
+    "reference_range": "Diagnóstico de diabetes: HbA1c ≥48 mmol/mol (≥6,5%). Meta terapêutica individualizada: 48-64 mmol/mol (6,5-8,0%), com alvo <53 mmol/mol (<7,0%) para redução de complicações microvasculares sempre que possível.",
+    "indications": "Diagnóstico e monitorização de controle glicêmico em diabetes; um dos parâmetros de entrada do escore SCORE2-Diabetes para estratificação de risco cardiovascular em 10 anos.",
+    "interpretation": "Diretriz ESC 2023 recomenda individualizar a meta de HbA1c conforme comorbidades, tempo de diagnóstico do diabetes e expectativa de vida — não um alvo único para todos os pacientes. HbA1c integra o cálculo do SCORE2-Diabetes junto com idade ao diagnóstico e TFGe, além dos fatores de risco convencionais (idade, tabagismo, PAS, colesterol total e HDL).",
+    "limitations": "Pode ser falsamente reduzida ou elevada em condições que alteram o turnover de hemácias (anemia hemolítica, hemoglobinopatias, deficiência de ferro, gestação, doença renal crônica) — nessas situações a glicemia de jejum ou o monitoramento contínuo de glicose são mais confiáveis.",
+    "source_refs": [
+      "2023 ESC Guidelines for the management of cardiovascular disease in patients with diabetes. Eur Heart J. 2023;44(39):4043-4140.",
+      "2023 ESC Guidelines for Managing CVD in Diabetes: Key Points — Part 1. American College of Cardiology. https://www.acc.org/latest-in-cardiology/ten-points-to-remember/2023/09/08/18/40/2023-esc-guidelines-cvd-diabetes-part-1-esc-2023"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "hba1c",
+      "hemoglobina glicada",
+      "diabetes",
+      "score2-diabetes",
+      "biomarcador"
+    ]
+  },
+  {
+    "slug": "antiestreptolisina-o-aslo",
+    "name": "Antiestreptolisina O (ASLO/ASO)",
+    "category": "laboratorial",
+    "theme": "Febre reumática",
+    "what_it_measures": "Anticorpo contra a estreptolisina O, toxina produzida pelo Streptococcus pyogenes (grupo A) — marcador sorológico de infecção estreptocócica recente ou pregressa, não de infecção ativa no momento da coleta.",
+    "reference_range": "Limite superior de normalidade classicamente usado: 320 UI/mL, mas deve ser ajustado por faixa etária, já que infecção estreptocócica do grupo A é mais comum em crianças que em adultos.",
+    "indications": "Evidência de infecção estreptocócica prévia como parte dos critérios de Jones para diagnóstico de febre reumática aguda, associada a critérios maiores/menores.",
+    "interpretation": "Sensibilidade de 73,3% e especificidade de 57,6% no limiar de 320 UI/mL; especificidade e valor preditivo positivo aumentam com títulos mais altos (>960 UI/mL). Título seriado ascendente ao longo de semanas, seguido de queda gradual, é evidência mais confiável de infecção estreptocócica recente do que uma única medida — títulos em febre reumática aguda aumentam significativamente até o intervalo de 2-4 meses.",
+    "limitations": "Positivo em apenas 80-85% das infecções estreptocócicas do grupo A — teste negativo não exclui infecção prévia nem o diagnóstico. Falsos positivos ocorrem por reatividade cruzada em mieloma, hipergamaglobulinemia, doença hepática e doença autoimune com fator reumatoide elevado. Isoladamente carece de especificidade para sustentar diagnóstico de febre reumática ou glomerulonefrite pós-estreptocócica.",
+    "source_refs": [
+      "Revising the value of Antistreptolysin O titre in childhood and its interpretation in the diagnostic approach of rheumatic diseases. PubMed. https://pubmed.ncbi.nlm.nih.gov/38038770/",
+      "Antistreptolysin O Titer: Reference Range, Interpretation, Collection and Panels. Medscape. https://emedicine.medscape.com/article/2113540-overview"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "aslo",
+      "aso",
+      "antiestreptolisina",
+      "febre reumática",
+      "estreptococo",
+      "biomarcador"
+    ]
+  },
+  {
+    "slug": "strain-longitudinal-global-gls",
+    "name": "Strain longitudinal global (GLS) ao ecocardiograma",
+    "category": "imagem",
+    "theme": "Cardio-oncologia",
+    "what_it_measures": "Deformação miocárdica longitudinal medida por speckle tracking — detecta disfunção contrátil subclínica do ventrículo esquerdo antes que a fração de ejeção caia, por ser mais sensível a lesão miocárdica inicial.",
+    "reference_range": "GLS basal normal: em torno de -18% a -20% (valores mais negativos = melhor função). Ponto de corte de disfunção subclínica: queda relativa >15% em relação ao basal durante o tratamento oncológico.",
+    "indications": "Monitorização seriada durante quimioterapia cardiotóxica (antraciclina, terapia anti-HER2) para detecção precoce de cardiotoxicidade, antes que a fração de ejeção seja afetada — elemento importante no diagnóstico de disfunção cardíaca relacionada a terapia do câncer (CTRD) nas diretrizes ESC de cardio-oncologia.",
+    "interpretation": "Queda relativa de GLS >15% é o ponto de corte mais recomendado para suspeitar de disfunção cardíaca subclínica. Estudos identificam também pontos de corte absolutos: GLS de -18,05% como ótimo para CTRD em uma coorte, e queda significativa a partir do 3º mês de tratamento, com corte de valor absoluto de -16,6% ou variação percentual de -14%, como preditor independente de cardiotoxicidade.",
+    "limitations": "Variabilidade entre plataformas de ecógrafo e entre observadores pode ser relevante — idealmente comparar exames seriados no mesmo equipamento/software. Pontos de corte variam entre estudos, sem consenso único definitivo.",
+    "source_refs": [
+      "Global Longitudinal Strain in Cardio-Oncology: A Review. PubMed. https://pubmed.ncbi.nlm.nih.gov/36765941/",
+      "Global Longitudinal Strain Accuracy for Cardiotoxicity Prediction in a Cohort of Breast Cancer Patients During Anthracycline and/or Trastuzumab Treatment. PMC. https://pmc.ncbi.nlm.nih.gov/articles/PMC5855907/"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "gls",
+      "strain longitudinal global",
+      "cardio-oncologia",
+      "cardiotoxicidade",
+      "ecocardiograma"
+    ]
+  },
+  {
+    "slug": "teste-ergometrico",
+    "name": "Teste ergométrico (teste de esforço em esteira)",
+    "category": "metodo_grafico",
+    "theme": "Doença coronariana",
+    "what_it_measures": "Resposta do coração ao esforço físico progressivo (protocolo de Bruce, o mais usado) — frequência cardíaca, pressão arterial, sintomas e alterações eletrocardiográficas durante e após o exercício.",
+    "reference_range": "Resultado negativo: sem alteração isquêmica do segmento ST, sem angina limitante, com capacidade funcional adequada para a idade. Resultado positivo: infradesnivelamento de ST ≥ 1 mm, horizontal ou descendente, em derivações contíguas, durante o esforço ou na recuperação.",
+    "indications": "Investigação diagnóstica de doença arterial coronariana em paciente com ECG de repouso normal ou próximo do normal e capacidade de realizar esforço adequado. Também usado para avaliar capacidade funcional e resposta ao tratamento.",
+    "interpretation": "O Escore de Duke (Duke Treadmill Score) combina três variáveis do teste — tempo de exercício em minutos, desvio máximo do segmento ST em mm e índice de angina (0 = ausente, 1 = não limitante, 2 = limitante) — na fórmula: Escore = tempo de exercício − (5 × desvio de ST) − (4 × índice de angina). Classificação: ≥ 5 = baixo risco (sobrevida em 5 anos ~97%); entre 4 e −10 = risco intermediário (~90%); ≤ −11 = alto risco (~65%), com indicação de considerar cateterismo.",
+    "limitations": "Sensibilidade e especificidade moderadas para detecção de DAC (na faixa de 68% e 77%, respectivamente, com ampla variação entre estudos) — resultado negativo não exclui doença coronariana com segurança absoluta, especialmente em paciente de alta probabilidade pré-teste. Falso-positivo mais comum em mulheres e em quem já tem alteração de base do segmento ST-T. Não interpretável em bloqueio de ramo esquerdo, ritmo de marcapasso ou alteração significativa de ST em repouso — nesses casos, preferir teste com imagem (cintilografia, eco de estresse) ou estresse farmacológico se o paciente não conseguir se exercitar.",
+    "source_refs": [
+      "Duke Treadmill Score — MDCalc, validado pelas diretrizes ACC/AHA de teste de esforço (1997) e de doença isquêmica crônica (2012).",
+      "Shaw LJ et al. Use of a Prognostic Treadmill Score in Identifying Diagnostic Coronary Disease Subgroups. Circulation. 1998;98(16):1622-1630. DOI: 10.1161/01.CIR.98.16.1622",
+      "Treadmill Stress Testing — Medscape/eMedicine, revisado em 2024."
+    ],
+    "review_status": "pendente_revisao",
+    "published": false,
+    "tags": [
+      "teste ergométrico",
+      "esteira",
+      "escore de duke",
+      "duke treadmill score",
+      "doença coronariana",
+      "teste funcional"
+    ]
+  },
+  {
+    "slug": "holter-24h",
+    "name": "Holter — monitorização eletrocardiográfica ambulatorial",
+    "category": "metodo_grafico",
+    "theme": "Arritmias",
+    "what_it_measures": "Registro contínuo do ritmo cardíaco por 24 a 48 horas (podendo se estender a 7-14 dias em dispositivos de longa duração), enquanto o paciente segue a rotina normal fora do ambiente hospitalar.",
+    "reference_range": "Não tem valor de referência único — a interpretação é qualitativa (presença ou ausência de arritmia, correlação com sintoma relatado em diário).",
+    "indications": "Palpitação, síncope ou pré-síncope, tontura recorrente, avaliação de carga arrítmica em paciente já com arritmia conhecida, rastreio de fibrilação atrial após AVC criptogênico, avaliação de paciente com insuficiência cardíaca para arritmia subclínica.",
+    "interpretation": "Correlaciona o traçado com o diário de sintomas preenchido pelo paciente durante o exame. Resultado é considerado não diagnóstico quando nenhuma alteração de ritmo correlaciona com o sintoma relatado — nesse caso, considerar monitorização mais prolongada (7 dias ou looper implantável) se a suspeita clínica permanecer alta.",
+    "limitations": "Não é adequado para sintoma que ocorre com frequência menor que a cada 48 horas — a chance de captar o evento nesse período é baixa. Não substitui ECG de repouso na avaliação inicial.",
+    "source_refs": [
+      "Ambulatory Cardiac Rhythm Monitoring — Carelon Clinical Guidelines, 2024.",
+      "Ambulatory ECG Monitoring — Geeky Medics, revisado em 2025.",
+      "2024 ACC Expert Consensus Pathway on arrhythmia monitoring after stroke."
+    ],
+    "review_status": "pendente_revisao",
+    "published": false,
+    "tags": [
+      "holter",
+      "monitorização ambulatorial",
+      "arritmia",
+      "palpitação",
+      "síncope"
+    ]
+  },
+  {
+    "slug": "mapa-monitorizacao-ambulatorial-pressao-arterial",
+    "name": "MAPA — Monitorização Ambulatorial da Pressão Arterial",
+    "category": "metodo_grafico",
+    "theme": "Hipertensão",
+    "what_it_measures": "Registro automático da pressão arterial em intervalos regulares (geralmente a cada 15-30 min) ao longo de 24 horas, incluindo período de sono, enquanto o paciente segue a rotina normal.",
+    "reference_range": "Diagnóstico de hipertensão pela média de 24h: maior ou igual a 130/80 mmHg — limiar mais baixo que o de consultório (140/90 mmHg), refletindo que a pressão medida fora do ambiente clínico tende a ser menor (sem efeito do avental branco).",
+    "indications": "Confirmação diagnóstica de hipertensão antes de iniciar tratamento (especialmente quando há suspeita de hipertensão do avental branco ou mascarada), avaliação do padrão de descenso noturno da pressão, investigação de hipertensão resistente, avaliação de eficácia terapêutica ao longo do dia.",
+    "interpretation": "Além da média de 24h, avalia separadamente o período de vigília e o de sono, e o percentual de descenso da PA durante o sono em relação à vigília — descenso menor que 10 por cento (padrão não-dipper) associa-se a maior risco cardiovascular.",
+    "limitations": "Desconforto do manguito insuflando repetidamente pode atrapalhar o sono e alterar o próprio padrão que se está tentando medir. Arritmia com batimento muito irregular (ex.: fibrilação atrial) pode reduzir a precisão de algumas leituras oscilométricas.",
+    "source_refs": [
+      "Brandão AA et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624.",
+      "The Diagnostic Value of Combined 24-h BP and ECG Holter Monitoring — PMC, 2022."
+    ],
+    "review_status": "pendente_revisao",
+    "published": false,
+    "tags": [
+      "mapa",
+      "pressão arterial",
+      "hipertensão",
+      "monitorização ambulatorial",
+      "dipper"
+    ]
+  },
+  {
+    "slug": "hemocultura-endocardite",
+    "name": "Hemocultura (critério maior de Duke)",
+    "category": "laboratorial",
+    "theme": "Endocardite",
+    "what_it_measures": "Cultura de amostras de sangue para isolamento de microrganismo circulante — pilar microbiológico do diagnóstico de endocardite infecciosa.",
+    "reference_range": "Não se aplica valor de referência numérico — resultado é qualitativo (positivo/negativo) e depende do microrganismo isolado e do número de amostras positivas.",
+    "indications": "Todo paciente com suspeita clínica de endocardite infecciosa, antes do início de antibioticoterapia empírica sempre que possível.",
+    "interpretation": "Critério maior de Duke quando há hemocultura positiva para microrganismo típico de endocardite (Streptococcus viridans, Streptococcus bovis, grupo HACEK, Staphylococcus aureus, Enterococcus adquirido em comunidade sem foco primário) em duas amostras separadas, ou positividade persistente em amostras coletadas com intervalo definido. Coxiella burnetii preenche o critério maior com apenas uma hemocultura positiva ou título de IgG para antígeno de fase 1 >1:800.",
+    "limitations": "Critérios de tempo e separação entre coletas individuais foram abolidos na atualização Duke-ISCVID 2023, tornando o processo mais flexível, mas ainda é essencial coletar antes do início do antibiótico. Endocardite com hemocultura negativa ocorre em uso prévio de antibiótico ou organismos fastidiosos, exigindo métodos complementares (sorologia, PCR).",
+    "source_refs": [
+      "The 2023 Duke-ISCVID Criteria for Infective Endocarditis. ISCVID. https://www.iscvid.org/wp-content/uploads/2023/07/2023-The-2023-Duke-ISCVID-Criteria-for-Infective-Endocarditis-Fowler-CID-May-4-2023-Final.pdf",
+      "Infective Endocarditis Workup: Blood Culture. Medscape. https://emedicine.medscape.com/article/216650-workup"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "hemocultura",
+      "endocardite",
+      "critérios de duke",
+      "microbiologia"
+    ]
+  },
+  {
+    "slug": "ada-liquido-pericardico",
+    "name": "Adenosina desaminase (ADA) no líquido pericárdico",
+    "category": "laboratorial",
+    "theme": "Pericárdio",
+    "what_it_measures": "Enzima liberada por linfócitos ativados, particularmente em resposta a infecção micobacteriana — usada como marcador indireto de etiologia tuberculosa do derrame pericárdico.",
+    "reference_range": "Corte mais usado na literatura: ≥40 U/L. Estudos individuais relatam desempenho variável nesse corte (sensibilidade 84-93%, especificidade 72-97%, conforme a população estudada).",
+    "indications": "Investigação etiológica de derrame pericárdico com suspeita de tuberculose, especialmente em regiões de alta carga da doença — parte da tríade diagnóstica junto com Xpert MTB/RIF e interferon-gama não estimulado.",
+    "interpretation": "Nível mediano de ADA em pericardite tuberculosa comprovada foi de 71,7 U/L em uma série (variação 10,3-303,6 U/L), significativamente maior que em outros grupos diagnósticos. Diferentes pontos de corte (30, 40, 72 U/L) têm sido propostos, com desempenho variável — nenhum corte único é universalmente validado.",
+    "limitations": "Desempenho diagnóstico varia consideravelmente entre estudos e populações, refletindo diferenças de método e prevalência local de tuberculose. Deve ser interpretado em conjunto com testes moleculares (Xpert MTB/RIF) e clínica, não isoladamente.",
+    "source_refs": [
+      "Diagnostic values of Xpert MTB/RIF, T-SPOT.TB and adenosine deaminase for HIV-negative tuberculous pericarditis in a high burden setting. PMC. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7530650/",
+      "What are the adenosine deaminase (ADA) cut-off values for different body fluids when evaluating suspected tuberculosis? droracle. https://www.droracle.ai/articles/973485/what-are-the-adenosine-deaminase-ada-cutoff-values-for"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ada",
+      "adenosina desaminase",
+      "pericardite tuberculosa",
+      "derrame pericárdico",
+      "biomarcador"
+    ]
+  },
+  {
+    "slug": "area-valvar-aortica-e-gradiente-medio",
+    "name": "Área valvar aórtica e gradiente médio (ecocardiograma)",
+    "category": "imagem",
+    "theme": "Valvopatias",
+    "what_it_measures": "Parâmetros ecocardiográficos Doppler que quantificam a gravidade da estenose aórtica — velocidade de pico transvalvar (Vmax), gradiente de pressão médio e área valvar calculada pela equação de continuidade.",
+    "reference_range": "Estenose aórtica grave de alto gradiente: Vmax ≥4,0 m/s, gradiente médio ≥40 mmHg, área valvar ≤1,0 cm² (ou ≤0,6 cm²/m² indexada pela superfície corporal).",
+    "indications": "Todo paciente com sopro sistólico sugestivo de estenose aórtica, ou seguimento de estenose aórtica já diagnosticada, para graduar gravidade e decidir momento de intervenção.",
+    "interpretation": "Os três parâmetros (Vmax, gradiente médio, área valvar) devem ser avaliados em conjunto — casos discordantes (ex.: área valvar grave com gradiente não grave) exigem avaliação adicional de débito sistólico, grau de calcificação valvar, função de VE e condições de fluxo, podendo indicar estenose aórtica de baixo fluxo/baixo gradiente.",
+    "limitations": "Gradiente e velocidade são dependentes do débito cardíaco — em baixo fluxo (função de VE reduzida ou volume sistólico baixo), gradiente pode subestimar a gravidade real mesmo com área valvar grave; nesses casos, escore de cálcio valvar por TC ou eco de estresse com dobutamina em baixa dose auxiliam a confirmar gravidade.",
+    "source_refs": [
+      "Aortic Valve Stenosis: Diagnostic Approaches and Recommendations of the 2021 ESC/EACTS Guidelines for the Management of Valvular Heart Disease. PMC. https://pmc.ncbi.nlm.nih.gov/articles/PMC9410571/",
+      "2021 ESC/EACTS Guidelines for the management of valvular heart disease. EuroIntervention. https://eurointervention.pcronline.com/article/2021-esc-eacts-guidelines-for-the-management-of-valvular-heart-disease"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "estenose aórtica",
+      "área valvar",
+      "gradiente transvalvar",
+      "ecocardiograma",
+      "valvopatia"
+    ]
+  },
+  {
+    "slug": "cateterismo-cardiaco-direito",
+    "name": "Cateterismo cardíaco direito",
+    "category": "metodo_grafico",
+    "theme": "Hipertensão pulmonar",
+    "what_it_measures": "Medida hemodinâmica invasiva direta das pressões nas câmaras direitas e circulação pulmonar — pressão arterial pulmonar média (mPAP), pressão de oclusão da artéria pulmonar/pressão capilar pulmonar (PAWP), débito cardíaco e resistência vascular pulmonar (RVP) calculada.",
+    "reference_range": "Hipertensão pulmonar definida por mPAP >20 mmHg em repouso. Classificação hemodinâmica: pré-capilar (PAWP ≤15 mmHg e RVP >2 UW), pós-capilar isolada (PAWP >15 mmHg e RVP ≤2 UW), combinada pré e pós-capilar (PAWP >15 mmHg e RVP >2 UW).",
+    "indications": "Exame padrão-ouro para confirmação diagnóstica de hipertensão pulmonar suspeitada por ecocardiograma, e para classificação hemodinâmica precisa antes de definir estratégia terapêutica — obrigatório antes de iniciar terapia específica para hipertensão arterial pulmonar.",
+    "interpretation": "A combinação de PAWP e RVP é o que distingue as diferentes categorias hemodinâmicas de hipertensão pulmonar (pré-capilar vs. pós-capilar vs. combinada), determinando a via fisiopatológica predominante e orientando a escolha terapêutica.",
+    "limitations": "Procedimento invasivo, exige equipe experiente e protocolo padronizado de aferição; os novos pontos de corte (mPAP >20 mmHg, antes ≥25 mmHg) ainda não têm implicação terapêutica definida na faixa limítrofe (mPAP 21-24 mmHg e/ou RVP 2-3 UW), cuja eficácia de terapia específica permanece incerta.",
+    "source_refs": [
+      "2022 ESC/ERS Guidelines for the diagnosis and treatment of pulmonary hypertension. Eur Respir J. 2023;61(1):2200879. https://publications.ersnet.org/content/erj/61/1/2200879",
+      "2022 ESC/ERS Guidelines for Pulmonary Hypertension: Key Points. American College of Cardiology. https://www.acc.org/latest-in-cardiology/ten-points-to-remember/2022/08/30/19/11/2022-esc-guidelines-for-pulmonary-hypertension-esc-2022"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "hipertensão pulmonar",
+      "cateterismo direito",
+      "hemodinâmica",
+      "pressão arterial pulmonar",
+      "resistência vascular pulmonar"
+    ]
+  },
+  {
+    "slug": "indice-tornozelo-braquial-itb",
+    "name": "Índice tornozelo-braquial (ITB)",
+    "category": "metodo_grafico",
+    "theme": "Aorta e doença arterial periférica",
+    "what_it_measures": "Razão entre a pressão sistólica aferida no tornozelo (artéria pediosa dorsal ou tibial posterior) e a maior pressão sistólica braquial, medida com paciente em decúbito dorsal após repouso de pelo menos 10 minutos, usando esfigmomanômetro e Doppler portátil.",
+    "reference_range": "Normal: ITB entre 0,9 e 1,3. Anormal (sugestivo de doença arterial periférica): ITB < 0,9. Não compressível (sugestivo de calcificação arterial medial, comum em diabetes e doença renal crônica): ITB > 1,3.",
+    "indications": "Rastreamento e diagnóstico de doença arterial periférica em pacientes com claudicação, dor em repouso, feridas de cicatrização lenta em membros inferiores, ou como marcador de risco cardiovascular global em pacientes assintomáticos de alto risco.",
+    "interpretation": "Quanto mais baixo o ITB, maior a gravidade da doença arterial periférica. Um ITB não compressível (>1,3) não exclui doença arterial periférica — indica calcificação arterial que invalida a medida, exigindo métodos alternativos (índice hálux-braquial, Doppler arterial, ou angiografia).",
+    "limitations": "Pouco confiável em pacientes com calcificação arterial extensa (diabetes de longa data, doença renal crônica em diálise) — nesses casos, considerar índice hálux-braquial ou avaliação por imagem direta.",
+    "source_refs": [
+      "Espinoza-Enciso LF et al. Prevalence of peripheral arterial disease and arterial calcification based on three ankle-brachial index calculation methods. PLoS One. 2025;20(9):e0316981."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "índice tornozelo-braquial",
+      "itb",
+      "doença arterial periférica",
+      "doppler",
+      "calcificação arterial"
+    ]
+  },
+  {
+    "slug": "monitor-cardiaco-implantavel-deteccao-fa-subclinica",
+    "name": "Monitor cardíaco implantável (detecção de fibrilação atrial subclínica)",
+    "category": "metodo_grafico",
+    "theme": "Fibrilação atrial",
+    "what_it_measures": "Registro eletrocardiográfico contínuo de longo prazo (meses a anos) por dispositivo implantável subcutâneo (loop recorder) ou por dispositivo cardíaco eletrônico já implantado (marca-passo, CDI), capaz de detectar episódios assintomáticos de fibrilação atrial — a chamada FA subclínica ou episódios de alta frequência atrial (AHRE).",
+    "reference_range": "Episódios são classificados por duração: <6 minutos (risco mais baixo, <1,68%/paciente-ano de AVC), 6 minutos a 24 horas (risco intermediário, 1,7-2,5%/paciente-ano), e >24 horas (risco mais alto, >4%/paciente-ano). FA subclínica é detectada em aproximadamente 30-40% dos pacientes monitorizados por 3 anos com esses dispositivos.",
+    "indications": "Investigação de AVC criptogênico (sem etiologia definida); pacientes com dispositivo cardíaco eletrônico implantado que apresentam episódios de alta frequência atrial no interrogatório de rotina; rastreamento em pacientes de alto risco cardioembólico sem FA documentada em ECG convencional.",
+    "interpretation": "A duração do episódio detectado orienta a decisão terapêutica: para episódios de 6 minutos a 24 horas com CHA2DS2-VASc >3, ou episódios >24 horas com CHA2DS2-VASc >2, diretrizes ACC/AHA 2023 recomendam considerar anticoagulação oral. O ensaio ARTESIA (apixabana vs. aspirina, FA subclínica de 6 minutos a 24 horas) mostrou redução de 37% em AVC/embolismo sistêmico com apixabana, às custas de mais sangramento maior; já o NOAH-AFNET 6 (edoxabana vs. placebo, AHRE >6 minutos) foi interrompido precocemente por futilidade, sem benefício líquido demonstrado.",
+    "limitations": "A decisão de anticoagular a partir de FA subclínica não é uniforme — resultados discordantes entre ARTESIA e NOAH-AFNET 6 refletem que o risco tromboembólico e o benefício da anticoagulação variam conforme duração do episódio, carga de FA e perfil de risco de sangramento do paciente, exigindo individualização.",
+    "source_refs": [
+      "Subclinical atrial fibrillation: Implications of recent trials for guideline updates? World J Cardiol. 2026.",
+      "Healey JS et al. Apixaban for Stroke Prevention in Subclinical Atrial Fibrillation (ARTESIA). N Engl J Med. 2024;390:107-117.",
+      "Kirchhof P et al. Anticoagulation with Edoxaban in Patients with Atrial High-Rate Episodes (NOAH-AFNET 6). N Engl J Med. 2023;389:1167-1179."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "fibrilação atrial subclínica",
+      "monitor cardíaco implantável",
+      "loop recorder",
+      "ahre",
+      "avc criptogênico"
+    ]
+  },
+  {
+    "slug": "realce-tardio-de-gadolinio-em-ressonancia-cardiaca",
+    "name": "Realce tardio de gadolínio (RTG) em ressonância magnética cardíaca",
+    "category": "imagem",
+    "theme": "Cardiomiopatias",
+    "what_it_measures": "Padrão de captação tardia de contraste à base de gadolínio pelo miocárdio, que identifica áreas de fibrose miocárdica — em pacientes com cardiomiopatia hipertrófica, a fibrose está presente em 33-84% dos casos, tipicamente com distribuição em mosaico (patchy) na porção média da parede, com preferência pelas regiões de maior hipertrofia.",
+    "reference_range": "Extensão de RTG ≥15% da massa ventricular esquerda é considerada significativa para inclusão na decisão compartilhada sobre indicação de cardiodesfibrilador implantável (CDI) profilático. Modelos de aprendizado de máquina identificaram extensão de RTG ≥11,6% como preditor de eventos cardiovasculares adversos maiores.",
+    "indications": "Estratificação de risco de morte súbita cardíaca em cardiomiopatia hipertrófica, especialmente em pacientes classificados como risco baixo a intermediário pelas calculadoras de risco disponíveis (ex.: HCM Risk-SCD); caracterização diagnóstica do padrão e extensão de fibrose em cardiomiopatias em geral.",
+    "interpretation": "A presença de fibrose miocárdica ao RTG associa-se a risco 2,32 vezes maior de morte súbita cardíaca, morte súbita abortada ou terapia apropriada de CDI. Diretrizes ESC recomendam uso da ressonância cardíaca com RTG para complementar a decisão de indicação de CDI em pacientes com cardiomiopatia hipertrófica de risco baixo a intermediário pelos escores tradicionais.",
+    "limitations": "A extensão de RTG é apenas um dos fatores de risco a serem integrados na decisão de CDI, não um critério isolado — deve ser interpretada em conjunto com outros marcadores de risco (história familiar de morte súbita, síncope inexplicada, espessura parietal máxima, gradiente de via de saída, resposta pressórica ao exercício).",
+    "source_refs": [
+      "Multimodality Imaging in Hypertrophic Cardiomyopathy. Card Fail Rev. 2026.",
+      "Kamp NJ et al. Prog Cardiovasc Dis. 2021;66:10-16.",
+      "Zhao Y et al. JACC Cardiovasc Imaging. 2024;17:880-893."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "realce tardio de gadolínio",
+      "ressonância magnética cardíaca",
+      "cardiomiopatia hipertrófica",
+      "fibrose miocárdica",
+      "morte súbita cardíaca"
+    ]
+  }
+]

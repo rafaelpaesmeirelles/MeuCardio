@@ -1,0 +1,30 @@
+{$DOMAIN} {
+	encode gzip zstd
+
+	# API e documentação do backend
+	handle /api/* {
+		reverse_proxy backend:8000
+	}
+
+	# Galeria de imagens — arquivo estático, servido direto (não passa pelo backend)
+	handle_path /galeria/* {
+		root * /galeria
+		file_server
+		header Cache-Control "public, max-age=2592000"
+	}
+
+	# PWA: arquivos estáticos, com fallback para index.html (rotas do React Router)
+	handle {
+		root * /site
+		try_files {path} /index.html
+		file_server
+		header /assets/* Cache-Control "public, max-age=31536000, immutable"
+	}
+
+	header {
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		X-Content-Type-Options "nosniff"
+		X-Frame-Options "DENY"
+		Referrer-Policy "strict-origin-when-cross-origin"
+	}
+}

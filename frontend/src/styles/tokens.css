@@ -1,0 +1,147 @@
+/* CardioBene — identidade do Serviço de Cardiologia
+   Derivada do brasão institucional: bordô do escudo, dourado da coroa e das
+   serpentes, branco do jaleco. Nada além disso entra na paleta. */
+
+:root {
+  --bordo: #6e1220;
+  --bordo-escuro: #4d0c17;
+  --bordo-claro: #8d2231;
+  --dourado: #c4a15a;
+  --dourado-claro: #e0c68f;
+  --branco: #ffffff;
+  --cinza-fundo: #f4f2f0;
+  --cinza-borda: #e3ded9;
+  --cinza-texto: #6b625c;
+  --tinta: #1c1715;
+  --alerta: #9a3412;
+
+  --fonte-display: "Archivo", system-ui, sans-serif;
+  --fonte-texto: "Inter", system-ui, sans-serif;
+  --fonte-dados: "IBM Plex Mono", ui-monospace, monospace;
+
+  --r: 6px;
+  --sombra: 0 1px 2px rgba(28, 23, 21, 0.06), 0 8px 24px -16px rgba(28, 23, 21, 0.25);
+  --barra-inferior: 60px;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root { height: 100%; margin: 0; }
+
+body {
+  background: var(--cinza-fundo);
+  color: var(--tinta);
+  font-family: var(--fonte-texto);
+  font-size: 15px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--fonte-display);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.15;
+  margin: 0 0 0.5rem;
+}
+h1 { font-size: 1.6rem; }
+h2 { font-size: 1.2rem; }
+h3 { font-size: 1rem; text-transform: none; }
+
+a { color: var(--bordo); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+:focus-visible {
+  outline: 2px solid var(--dourado);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* --- Elemento de assinatura: fio dourado herdado da borda do escudo -------- */
+.fio-dourado {
+  height: 2px;
+  background: linear-gradient(90deg, var(--dourado) 0%, var(--dourado-claro) 45%, transparent 100%);
+}
+
+/* --- Blocos ---------------------------------------------------------------- */
+.cartao {
+  background: var(--branco);
+  border: 1px solid var(--cinza-borda);
+  border-radius: var(--r);
+  box-shadow: var(--sombra);
+  padding: 1rem 1.1rem;
+  position: relative;
+}
+.cartao--clinico { border-left: 3px solid var(--dourado); }
+
+.eyebrow {
+  font-family: var(--fonte-dados);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cinza-texto);
+}
+
+.dado {
+  font-family: var(--fonte-dados);
+  font-variant-numeric: tabular-nums;
+}
+
+.selo {
+  display: inline-block;
+  font-family: var(--fonte-dados);
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.45rem;
+  border-radius: 3px;
+  border: 1px solid var(--cinza-borda);
+  color: var(--cinza-texto);
+}
+.selo--revisado { border-color: var(--dourado); color: #7a5f21; background: #fdf8ee; }
+.selo--pendente { border-color: var(--alerta); color: var(--alerta); background: #fdf3ef; }
+
+.botao {
+  font-family: var(--fonte-texto);
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 0.6rem 1.05rem;
+  border-radius: var(--r);
+  border: 1px solid var(--bordo);
+  background: var(--bordo);
+  color: var(--branco);
+  cursor: pointer;
+}
+.botao:hover { background: var(--bordo-claro); }
+.botao:disabled { opacity: 0.5; cursor: not-allowed; }
+.botao--secundario { background: transparent; color: var(--bordo); }
+.botao--secundario:hover { background: #f8eff0; }
+
+label { display: block; font-size: 0.86rem; font-weight: 500; margin-bottom: 0.3rem; }
+
+input, select, textarea {
+  width: 100%;
+  font: inherit;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid var(--cinza-borda);
+  border-radius: var(--r);
+  background: var(--branco);
+  color: inherit;
+}
+input:focus, select:focus, textarea:focus { border-color: var(--bordo); }
+
+.grade { display: grid; gap: 0.9rem; }
+@media (min-width: 760px) { .grade--2 { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1020px) { .grade--3 { grid-template-columns: repeat(3, 1fr); } }
+
+.aviso {
+  font-size: 0.82rem;
+  color: var(--cinza-texto);
+  border-top: 1px solid var(--cinza-borda);
+  padding-top: 0.7rem;
+  margin-top: 0.9rem;
+}
