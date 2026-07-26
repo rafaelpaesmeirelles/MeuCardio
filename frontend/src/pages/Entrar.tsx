@@ -27,7 +27,7 @@ export default function Entrar() {
     <div className="login">
       <div className="login__cartao">
         <div className="login__brasao">
-          <img src="/logo.png" alt="MeuCardio" style={{ maxWidth: 220, width: "100%", height: "auto" }} />
+          <img src="/logo.png" alt="MeuCardio" />
         </div>
         <div className="fio-dourado" style={{ marginBottom: "1.1rem" }} />
 
