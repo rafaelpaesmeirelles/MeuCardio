@@ -2,10 +2,10 @@
 # Restaura um backup específico. USO RARO E PERIGOSO — apaga o banco atual
 # antes de restaurar. Confirma duas vezes de propósito.
 #
-#   ./infra/backup/restaurar.sh dumps/cardiobene_2026-07-24_0300.sql.gz
+#   ./infra/backup/restaurar.sh dumps/meucardio_2026-07-24_0300.sql.gz
 set -euo pipefail
 
-PROJETO="/opt/cardiobene"
+PROJETO="/opt/meucardio"
 COMPOSE="docker compose -f $PROJETO/docker-compose.prod.yml"
 ARQUIVO="${1:-}"
 

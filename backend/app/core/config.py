@@ -8,9 +8,9 @@ class Settings(BaseSettings):
     # Ter uma DATABASE_URL solta e desincronizada foi a causa de um bug real
     # de autenticação: o valor fixo abaixo ficava sempre valendo porque a
     # variável DATABASE_URL nunca era definida de fato no .env.
-    postgres_user: str = "cardiobene"
-    postgres_password: str = "cardiobene"
-    postgres_db: str = "cardiobene"
+    postgres_user: str = "meucardio"
+    postgres_password: str = "meucardio"
+    postgres_db: str = "meucardio"
     postgres_host: str = "db"
     postgres_port: int = 5432
 
@@ -20,8 +20,8 @@ class Settings(BaseSettings):
     jwt_algorithm: str = "HS256"
     jwt_expire_minutes: int = 720
     content_dir: str = "/content"
-    admin_email: str = "admin@cardiobene.local"
-    admin_password: str = "cardiobene"
+    admin_email: str = "admin@meucardio.local"
+    admin_password: str = "troque-esta-senha"
     cors_origins: str = "http://localhost:5173,http://localhost:8080"
 
     # --- IA clínica --------------------------------------------------------

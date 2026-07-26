@@ -2,13 +2,13 @@ services:
   db:
     image: pgvector/pgvector:pg16   # Postgres 16 com a extensão vector
     environment:
-      POSTGRES_USER: ${POSTGRES_USER:-cardiobene}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-cardiobene}
-      POSTGRES_DB: ${POSTGRES_DB:-cardiobene}
+      POSTGRES_USER: ${POSTGRES_USER:-meucardio}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-meucardio}
+      POSTGRES_DB: ${POSTGRES_DB:-meucardio}
     volumes:
       - pgdata:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-cardiobene}"]
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-meucardio}"]
       interval: 5s
       timeout: 5s
       retries: 10

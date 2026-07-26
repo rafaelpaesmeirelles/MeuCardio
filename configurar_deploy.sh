@@ -8,10 +8,10 @@
 set -euo pipefail
 
 CHAVE_PUBLICA="${1:-}"
-PROJETO="/opt/cardiobene"
+PROJETO="/opt/meucardio"
 
 if [ -z "$CHAVE_PUBLICA" ]; then
-  echo "Uso: sudo bash configurar_deploy.sh \"ssh-ed25519 AAAA... cardiobene-deploy-claude\""
+  echo "Uso: sudo bash configurar_deploy.sh \"ssh-ed25519 AAAA... meucardio-deploy-claude\""
   exit 1
 fi
 

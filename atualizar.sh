@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-# Aplica uma atualização do CardioBene com um comando só.
+# Aplica uma atualização do MeuCardio com um comando só.
 # Detecta sozinho se precisa reconstruir os containers (mudou código),
 # reimportar conteúdo (mudou algum .md em content/), e publicar os
 # documentos já revisados — só roda o que precisa.
 #
 # Modo pacote (scp de um .tar.gz):
-#   ./atualizar.sh cardiobene-pacote.tar.gz
+#   ./atualizar.sh meucardio-pacote.tar.gz
 #
 # Modo git (depois de "git pull"):
 #   git pull && ./atualizar.sh --git
@@ -16,7 +16,7 @@
 #   --sem-publicar   importa e indexa mas não publica automaticamente
 set -euo pipefail
 
-PROJETO="/opt/cardiobene"
+PROJETO="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 COMPOSE="docker compose -f docker-compose.prod.yml"
 MODO_GIT=false
 FORCAR_REBUILD=false
@@ -35,6 +35,7 @@ for arg in "$@"; do
 done
 
 cd "$PROJETO"
+DB_USER="$(grep -E '^POSTGRES_USER=' .env | cut -d= -f2)"
 
 echo "[1/10] Descobrindo o que mudou..."
 MUDOU_CODIGO=false
@@ -106,9 +107,9 @@ if [ "$MUDOU_CONTEUDO" = true ]; then
 
   if [ "$PULAR_PUBLICACAO" = false ]; then
     echo "[5/10] Publicando documentos já revisados..."
-    $COMPOSE exec -T db psql -U cardiobene -c \
+    $COMPOSE exec -T db psql -U "$DB_USER" -c \
       "UPDATE documents SET published = true WHERE review_status = 'revisado' AND published = false;"
-    $COMPOSE exec -T db psql -U cardiobene -c \
+    $COMPOSE exec -T db psql -U "$DB_USER" -c \
       "SELECT published, count(*) FROM documents GROUP BY published;"
   else
     echo "[5/10] Publicação pulada por --sem-publicar."
@@ -122,7 +123,7 @@ if [ "$MUDOU_GALERIA" = true ]; then
   echo "[6/10] Galeria de imagens mudou — carregando metadados..."
   $COMPOSE exec -T backend python -m app.services.carregar_galeria /galeria/metadados.json
   if [ "$PULAR_PUBLICACAO" = false ]; then
-    $COMPOSE exec -T db psql -U cardiobene -c \
+    $COMPOSE exec -T db psql -U "$DB_USER" -c \
       "UPDATE gallery_images SET published = true WHERE review_status = 'revisado' AND published = false;"
   fi
 else
@@ -133,7 +134,7 @@ if [ "$MUDOU_EXAMES" = true ]; then
   echo "[7/10] Banco de exames mudou — carregando metadados..."
   $COMPOSE exec -T backend python -m app.services.carregar_exames /exames/metadados.json
   if [ "$PULAR_PUBLICACAO" = false ]; then
-    $COMPOSE exec -T db psql -U cardiobene -c \
+    $COMPOSE exec -T db psql -U "$DB_USER" -c \
       "UPDATE lab_tests SET published = true WHERE review_status = 'revisado' AND published = false;"
   fi
 else
@@ -144,7 +145,7 @@ if [ "$MUDOU_EVIDENCIAS" = true ]; then
   echo "[8/10] Evidências mudaram — carregando metadados..."
   $COMPOSE exec -T backend python -m app.services.carregar_evidencias /evidencias/metadados.json
   if [ "$PULAR_PUBLICACAO" = false ]; then
-    $COMPOSE exec -T db psql -U cardiobene -c \
+    $COMPOSE exec -T db psql -U "$DB_USER" -c \
       "UPDATE evidence_records SET published = true WHERE review_status = 'revisado' AND published = false;"
   fi
 else
@@ -155,7 +156,7 @@ if [ "$MUDOU_ESTUDOS" = true ]; then
   echo "[9/10] Estudos mudaram — carregando metadados..."
   $COMPOSE exec -T backend python -m app.services.carregar_estudos /estudos/metadados.json
   if [ "$PULAR_PUBLICACAO" = false ]; then
-    $COMPOSE exec -T db psql -U cardiobene -c \
+    $COMPOSE exec -T db psql -U "$DB_USER" -c \
       "UPDATE scientific_studies SET published = true WHERE review_status = 'revisado' AND published = false;"
   fi
 else
@@ -164,4 +165,4 @@ fi
 
 echo "[10/10] Feito."
 echo
-echo "Confere em https://cardiobeneribeirao.com.br"
+echo "Confere em https://meucardio.med.br"

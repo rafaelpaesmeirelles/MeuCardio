@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-# Instala o CardioBene a partir do GitHub — roda UMA VEZ no servidor.
+# Instala o MeuCardio a partir do GitHub — roda UMA VEZ no servidor.
 # Depois disso, atualizar é: git pull && ./atualizar.sh --git
 set -euo pipefail
 
-REPO="https://github.com/rafaelpaesmeirelles/CardioBeneRibeirao.git"
-DESTINO="/opt/cardiobene"
+REPO="https://github.com/rafaelpaesmeirelles/MeuCardio.git"
+DESTINO="/opt/meucardio"
 
 if [ -d "$DESTINO/.git" ]; then
   echo "$DESTINO já é um repositório git — nada a instalar, use 'git pull' direto."

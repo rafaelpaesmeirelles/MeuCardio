@@ -10,7 +10,7 @@ from email.mime.text import MIMEText
 
 from app.core.config import settings
 
-log = logging.getLogger("cardiobene.notificar")
+log = logging.getLogger("meucardio.notificar")
 
 
 def tentar_enviar_email(destinatario: str, assunto: str, corpo: str) -> bool:

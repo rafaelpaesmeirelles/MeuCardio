@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Deploy do CardioBene em produção: HTTPS automático no domínio configurado.
+# Deploy do MeuCardio em produção: HTTPS automático no domínio configurado.
 # Rodar no servidor, dentro da pasta do projeto.
 set -euo pipefail
 
@@ -13,7 +13,7 @@ source .env
 
 for var in DOMAIN POSTGRES_PASSWORD JWT_SECRET; do
   valor="${!var:-}"
-  if [ -z "$valor" ] || [[ "$valor" == troque-esta-senha* ]] || [[ "$valor" == gere-com-* ]] || [[ "$valor" == cardiobene.seudominio* ]]; then
+  if [ -z "$valor" ] || [[ "$valor" == troque-esta-senha* ]] || [[ "$valor" == gere-com-* ]] || [[ "$valor" == *seudominio* ]]; then
     echo "A variável $var no .env ainda está com o valor de exemplo. Ajuste antes de continuar."
     exit 1
   fi

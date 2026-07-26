@@ -7,7 +7,7 @@
 # Rodar UMA VEZ, depois do deploy do pacote que traz backend/migrations/.
 set -euo pipefail
 
-PROJETO="/opt/cardiobene"
+PROJETO="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 COMPOSE="docker compose -f $PROJETO/docker-compose.prod.yml"
 cd "$PROJETO"
 
