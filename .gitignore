@@ -1,5 +1,7 @@
 # segredos — nunca versionar
 .env
+.env.*
+!.env.example
 *.keystore
 keystore.properties
 *.pem
