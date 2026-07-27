@@ -11,3 +11,4 @@ from app.models.lab_test import LabTest  # noqa: F401
 from app.models.evidence import EvidenceRecord  # noqa: F401
 from app.models.study import ScientificStudy  # noqa: F401
 from app.models.clinical_docs import Prescription, DocumentTemplate, GeneratedDocument, Appointment  # noqa: F401
+from app.models.subscription import Subscription  # noqa: F401
