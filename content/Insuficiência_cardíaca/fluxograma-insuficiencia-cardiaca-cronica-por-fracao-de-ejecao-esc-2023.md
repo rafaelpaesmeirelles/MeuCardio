@@ -1,0 +1,76 @@
+---
+title: "Fluxograma: Insuficiência Cardíaca crônica — conduta por fração de ejeção (ESC 2021 / atualização 2023)"
+slug: fluxograma-insuficiencia-cardiaca-cronica-por-fracao-de-ejecao-esc-2023
+theme: "Insuficiência cardíaca"
+kind: fluxograma
+summary: "Classificação da IC pela fração de ejeção e conduta farmacológica correspondente: os quatro pilares na ICFEr e o iSGLT2 como recomendação Classe I na ICFElr e na ICFEp após a atualização de 2023."
+review_status: revisado
+source_refs: ["2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure · European Heart Journal · 2021 · 42(36):3599-3726 · https://academic.oup.com/eurheartj/article/42/36/3599/6358045", "2023 Focused Update of the 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure · European Heart Journal · 2023 · 44(37):3627-3639 · https://academic.oup.com/eurheartj/article/44/37/3627/7246292", "2023 Focused Update of ESC Guidelines for Acute and Chronic HF: Key Points · American College of Cardiology · 2023 · https://www.acc.org/Latest-in-Cardiology/ten-points-to-remember/2023/08/29/14/58/2023-focused-update-esc-guidelines-hf-esc-2023"]
+---
+
+# Fluxograma: Insuficiência Cardíaca crônica — conduta por fração de ejeção
+
+A fração de ejeção continua sendo o eixo que organiza o tratamento da IC crônica,
+mas a atualização de 2023 reduziu a distância entre os fenótipos: o inibidor de
+SGLT2 passou a ser recomendação **Classe I, nível de evidência A** também na IC
+com fração de ejeção levemente reduzida e na preservada — faixas que, na diretriz
+de 2021, não tinham nenhuma recomendação de iSGLT2 porque ainda não havia ensaio
+conduzido nesses grupos.
+
+## Caminho decisório
+
+```mermaid
+flowchart TD
+  A["Sinais e sintomas de IC<br/>+ peptídeos natriuréticos elevados<br/>e/ou alteração estrutural/funcional"] --> B["Medir fração de ejeção<br/>do ventrículo esquerdo"]
+
+  B --> C{"FEVE"}
+
+  C -->|"menor ou igual a 40%"| D["ICFEr<br/>fração de ejeção reduzida"]
+  C -->|"41 a 49%"| E["ICFElr<br/>levemente reduzida"]
+  C -->|"maior ou igual a 50%"| F["ICFEp<br/>preservada"]
+
+  D --> G["Quatro pilares<br/>iniciar e titular"]
+  G --> G1["IECA ou ARNI"]
+  G --> G2["Betabloqueador"]
+  G --> G3["Antagonista mineralocorticoide"]
+  G --> G4["Inibidor de SGLT2"]
+
+  E --> H["Inibidor de SGLT2<br/>dapagliflozina ou empagliflozina<br/>Classe I, nível A"]
+  F --> I["Inibidor de SGLT2<br/>dapagliflozina ou empagliflozina<br/>Classe I, nível A"]
+
+  G1 --> J["Tratar comorbidades<br/>e congestão; reavaliar"]
+  G2 --> J
+  G3 --> J
+  G4 --> J
+  H --> J
+  I --> J
+```
+
+## Os quatro pilares na ICFEr
+
+A terapia de base da IC com fração de ejeção reduzida combina quatro classes,
+usadas em conjunto e não em sequência escalonada:
+
+- **inibição do sistema renina-angiotensina** — IECA ou, na forma de inibição da
+  neprilisina associada ao bloqueio do receptor de angiotensina, sacubitril/valsartana
+- **betabloqueador**
+- **antagonista do receptor mineralocorticoide**
+- **inibidor de SGLT2**
+
+## O que mudou em 2023
+
+| Faixa de FEVE | Diretriz 2021 | Atualização 2023 |
+|---|---|---|
+| ICFElr (41–49%) | sem recomendação de iSGLT2 | iSGLT2 Classe I, nível A |
+| ICFEp (≥ 50%) | sem recomendação de iSGLT2 | iSGLT2 Classe I, nível A |
+
+A mudança apoia-se nos ensaios EMPEROR-Preserved (empagliflozina) e DELIVER
+(dapagliflozina), que forneceram a evidência ausente em 2021. O desfecho alvo da
+recomendação é a redução de hospitalização por IC ou morte cardiovascular.
+
+## Diagnóstico da ICFEp
+
+O diagnóstico exige sinais e sintomas de IC acompanhados de evidência de
+alteração estrutural e/ou funcional cardíaca e/ou peptídeos natriuréticos
+elevados, com FEVE ≥ 50%. Não há teste isolado que confirme: **quanto maior o
+número de alterações presentes, maior a probabilidade de ICFEp**.
