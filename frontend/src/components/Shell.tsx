@@ -8,6 +8,7 @@ const NAV_BASE = [
   { to: "/", rotulo: "Painel", curto: "Painel", fim: true },
   { to: "/assistente", rotulo: "Assistente clínico", curto: "Assistente" },
   { to: "/biblioteca", rotulo: "Biblioteca científica", curto: "Biblioteca" },
+  { to: "/fluxogramas", rotulo: "Fluxogramas clínicos", curto: "Fluxogramas" },
   { to: "/busca", rotulo: "Busca", curto: "Busca" },
   { to: "/calculadoras", rotulo: "Calculadoras", curto: "Escores" },
   { to: "/medicamentos", rotulo: "Medicamentos", curto: "Fármacos" },
