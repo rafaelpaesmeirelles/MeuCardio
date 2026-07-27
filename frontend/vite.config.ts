@@ -9,10 +9,10 @@ export default defineConfig({
       registerType: "autoUpdate",
       includeAssets: ["favicon.png", "apple-touch-icon.png", "logo-horizontal.png", "brasao.png"],
       manifest: {
-        name: "CardioBene — Serviço de Cardiologia",
+        name: "CardioBene — Guia de Cardiologia",
         short_name: "CardioBene",
         description:
-          "Plataforma clínica do Serviço de Cardiologia da Beneficência Portuguesa de Ribeirão Preto.",
+          "Plataforma clínica de apoio à decisão em Cardiologia.",
         lang: "pt-BR",
         theme_color: "#6E1220",
         background_color: "#FFFFFF",

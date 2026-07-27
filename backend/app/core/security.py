@@ -51,3 +51,26 @@ def require_admin(user=Depends(current_user)):
     if user.role != "admin":
         raise HTTPException(status_code=403, detail="Ação restrita a administradores.")
     return user
+
+
+# Status (já traduzidos, ver app/api/billing.py) que dão direito de uso.
+# 'inadimplente' entra de propósito: é o past_due do Stripe, período de
+# tolerância em que a cobrança falhou mas o assinante ainda não perdeu acesso.
+ACESSO_LIBERADO = {"ativo", "teste", "inadimplente"}
+
+
+def assinante_ativo(user=Depends(current_user), db: Session = Depends(get_db)):
+    """Exige assinatura vigente. Aplicada por router em app/main.py — os únicos
+    de acesso livre são health, auth, password_reset, billing e admin."""
+    from app.models.subscription import Subscription
+
+    if user.role == "admin":
+        return user
+
+    sub = db.query(Subscription).filter(Subscription.user_id == user.id).first()
+    if sub is None or sub.status not in ACESSO_LIBERADO:
+        raise HTTPException(
+            status_code=402,
+            detail="Assinatura necessária para acessar este conteúdo.",
+        )
+    return user

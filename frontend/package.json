@@ -16,7 +16,8 @@
     "react-dom": "^18.3.1",
     "react-markdown": "^9.0.1",
     "react-router-dom": "^6.28.0",
-    "remark-gfm": "^4.0.0"
+    "remark-gfm": "^4.0.0",
+    "mermaid": "^11.4.0"
   },
   "devDependencies": {
     "@capacitor/assets": "^3.0.5",

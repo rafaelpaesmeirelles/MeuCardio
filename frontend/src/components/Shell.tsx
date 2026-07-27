@@ -53,7 +53,8 @@ export default function Shell() {
         </button>
         
         <div>
-          <span className="topo__servico">Serviço de Cardiologia</span>
+          <img src="/logo.png" alt="MeuCardio" style={{ height: 36, width: "auto", marginRight: "0.5rem" }} />
+          <span className="topo__servico">Guia de Cardiologia</span>
           <span className="topo__marca">MeuCardio</span>
         </div>
         <div className="topo__usuario">

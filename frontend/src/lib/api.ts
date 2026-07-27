@@ -27,6 +27,14 @@ async function request<T>(path: string, init: RequestInit = {}): Promise<T> {
     window.location.assign("/entrar");
     throw new ApiError(401, "Sessão expirada.");
   }
+  // 402 = logado, porém sem assinatura vigente. Não limpa o token: a sessão
+  // continua válida, só falta assinar.
+  if (res.status === 402) {
+    if (!window.location.pathname.startsWith("/assinatura")) {
+      window.location.assign("/assinatura?status=necessaria");
+    }
+    throw new ApiError(402, "Assinatura necessária.");
+  }
   if (!res.ok) {
     const detail = await res.json().catch(() => null);
     throw new ApiError(res.status, detail?.detail ?? "Não foi possível concluir a solicitação.");

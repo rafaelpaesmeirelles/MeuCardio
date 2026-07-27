@@ -57,6 +57,12 @@ class Settings(BaseSettings):
     smtp_from: str = "MeuCardio <nao-responda@meucardio.med.br>"
     public_url: str = "https://meucardio.med.br"
 
+    # --- Stripe / Assinatura -----------------------------------------------
+    stripe_publishable_key: str = ""
+    stripe_secret_key: str = ""
+    stripe_webhook_secret: str = ""
+    stripe_price_id: str = ""
+
     @property
     def smtp_configurado(self) -> bool:
         return bool(self.smtp_host and self.smtp_user and self.smtp_password)

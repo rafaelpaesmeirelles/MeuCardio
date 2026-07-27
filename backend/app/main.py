@@ -1,12 +1,13 @@
-from fastapi import FastAPI
+from fastapi import Depends, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.api import (
     admin, ai, appointments, auth, calculators, documents, drugs, evidence,
     favorites, gallery, health, lab_tests, library, password_reset,
-    prescriptions, round as round_api, search, studies, timeline,
+    prescriptions, round as round_api, search, studies, timeline, billing,
 )
 from app.core.config import settings
+from app.core.security import assinante_ativo
 from app.services.bootstrap import init_db
 
 app = FastAPI(
@@ -28,12 +29,24 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-for r in (health.router, auth.router, library.router, search.router,
-          calculators.router, drugs.router, round_api.router,
-          ai.router, admin.router, gallery.router, favorites.router,
-          password_reset.router, lab_tests.router, evidence.router, studies.router,
-          prescriptions.router, documents.router, appointments.router, timeline.router):
+# Acesso livre: entrar, recuperar senha, assinar e o próprio painel de admin
+# (que já se restringe por papel). Todo o resto exige assinatura vigente.
+ROUTERS_LIVRES = (
+    health.router, auth.router, password_reset.router, billing.router, admin.router,
+)
+
+ROUTERS_ASSINANTES = (
+    library.router, search.router, calculators.router, drugs.router, round_api.router,
+    ai.router, gallery.router, favorites.router, lab_tests.router, evidence.router,
+    studies.router, prescriptions.router, documents.router, appointments.router,
+    timeline.router,
+)
+
+for r in ROUTERS_LIVRES:
     app.include_router(r)
+
+for r in ROUTERS_ASSINANTES:
+    app.include_router(r, dependencies=[Depends(assinante_ativo)])
 
 
 @app.on_event("startup")
