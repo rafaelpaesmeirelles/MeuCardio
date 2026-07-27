@@ -4,6 +4,19 @@ import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { api } from "../lib/api";
 import { Carregando, Erro, SeloRevisao } from "../components/Estado";
+import Fluxograma from "../components/Fluxograma";
+
+/** Extrai o código de um bloco ```mermaid```; devolve null para qualquer outro
+ * bloco. Sobrescrevemos `pre` em vez de `code` porque o diagrama é uma <div>, e
+ * <div> dentro de <pre> é aninhamento inválido. */
+function fonteMermaid(children: unknown): string | null {
+  const filho: any = Array.isArray(children) ? children[0] : children;
+  const classe = filho?.props?.className ?? "";
+  if (!String(classe).split(/\s+/).includes("language-mermaid")) return null;
+  const conteudo = filho.props.children;
+  const texto = Array.isArray(conteudo) ? conteudo.join("") : String(conteudo ?? "");
+  return texto.trim() || null;
+}
 
 type Doc = {
   title: string; theme: string; kind: string; body_md: string;
@@ -34,7 +47,18 @@ export default function Documento() {
       <div className="fio-dourado" style={{ marginBottom: "1.4rem" }} />
 
       <div className="cartao">
-        <Markdown remarkPlugins={[remarkGfm]}>{doc.body_md}</Markdown>
+        <Markdown
+          remarkPlugins={[remarkGfm]}
+          components={{
+            pre({ children, ...props }) {
+              const fonte = fonteMermaid(children);
+              if (fonte) return <Fluxograma fonte={fonte} />;
+              return <pre {...props}>{children}</pre>;
+            },
+          }}
+        >
+          {doc.body_md}
+        </Markdown>
       </div>
 
       {doc.source_refs.length > 0 && (
