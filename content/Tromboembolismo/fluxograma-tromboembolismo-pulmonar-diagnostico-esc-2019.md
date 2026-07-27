@@ -14,38 +14,43 @@ A diretriz ESC 2019 mantém **dois algoritmos diagnósticos distintos**, e a
 bifurcação vem antes de qualquer exame: a presença ou ausência de instabilidade
 hemodinâmica muda tanto a urgência quanto a ordem dos testes.
 
-## Caminho decisório
+## Árvore de decisão
 
 ```mermaid
 flowchart TD
-  A["Suspeita de TEP agudo"] --> B{"Instabilidade<br/>hemodinâmica?"}
+  R0["Suspeita de TEP agudo"] --> D1{"Instabilidade<br/>hemodinâmica?"}
 
-  B -->|Sim| C["TEP de alto risco suspeito"]
-  B -->|Não| D["Avaliar probabilidade pré-teste<br/>escore de Wells ou Genebra revisado"]
+  D1 -->|"Sim — TEP de alto risco suspeito"| D2{"Angiotomografia viável<br/>de imediato?"}
 
-  C --> E["Angiotomografia de artérias pulmonares<br/>como teste inicial<br/>na alta probabilidade clínica"]
-  C --> F["Ecocardiograma à beira do leito<br/>quando a TC não for viável de imediato"]
-  F --> G{"Sobrecarga ou disfunção<br/>de ventrículo direito?"}
-  G -->|Ausente| H["TEP praticamente afastado<br/>como causa da instabilidade"]
-  G -->|Presente| I["Tratar como TEP de alto risco"]
-  E --> I
+  D2 -->|Sim| P1["Angiotomografia de<br/>artérias pulmonares"]
+  P1 --> D3{"TEP confirmado?"}
+  D3 -->|Sim| C1(["Tratar como TEP de alto risco<br/>reperfusão"])
+  D3 -->|Não| C2(["Investigar diagnóstico alternativo"])
 
-  D --> J{"Probabilidade clínica"}
-  J -->|"Baixa ou intermediária"| K["D-dímero<br/>corte ajustado pela idade"]
-  J -->|Alta| L["Angiotomografia de<br/>artérias pulmonares"]
+  D2 -->|Não| P2["Ecocardiograma<br/>à beira do leito"]
+  P2 --> D4{"Sobrecarga ou disfunção<br/>de ventrículo direito?"}
+  D4 -->|Presente| C3(["Tratar como TEP de alto risco<br/>reperfusão"])
+  D4 -->|Ausente| C4(["TEP praticamente afastado<br/>como causa da instabilidade"])
 
-  K --> M{"D-dímero"}
-  M -->|Negativo| N["TEP afastado<br/>sem necessidade de imagem"]
-  M -->|Positivo| L
+  D1 -->|Não| P3["Avaliar probabilidade pré-teste<br/>escore de Wells ou Genebra revisado"]
+  P3 --> D5{"Probabilidade clínica"}
 
-  L --> O{"TEP confirmado?"}
-  O -->|Não| P["Investigar diagnóstico alternativo"]
-  O -->|Sim| Q["Estratificação prognóstica"]
+  D5 -->|"Baixa ou intermediária"| P4["D-dímero<br/>corte ajustado pela idade"]
+  P4 --> D6{"D-dímero"}
+  D6 -->|Negativo| C5(["TEP afastado<br/>sem necessidade de imagem"])
 
-  I --> R["Reperfusão"]
-  Q --> Q1["sPESI"]
-  Q --> Q2["Função do ventrículo direito"]
-  Q --> Q3["Biomarcadores"]
+  D6 -->|Positivo| P5["Angiotomografia de<br/>artérias pulmonares"]
+  P5 --> D7{"TEP confirmado?"}
+  D7 -->|Sim| C6(["Estratificação prognóstica<br/>sPESI, função do ventrículo direito<br/>e biomarcadores"])
+  D7 -->|Não| C7(["Investigar diagnóstico alternativo"])
+
+  D5 -->|Alta| P6["Angiotomografia de<br/>artérias pulmonares"]
+  P6 --> D8{"TEP confirmado?"}
+  D8 -->|Sim| C8(["Estratificação prognóstica<br/>sPESI, função do ventrículo direito<br/>e biomarcadores"])
+  D8 -->|Não| C9(["Investigar diagnóstico alternativo"])
+
+  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  class C1,C2,C3,C4,C5,C6,C7,C8,C9 conduta;
 ```
 
 ## O que define instabilidade hemodinâmica

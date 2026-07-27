@@ -18,39 +18,44 @@ ancorado no escore ADD-RS** (Classe I, nível B) e uma **nova classificação
 TEM**, que descreve o caso por tipo de síndrome, localização da porta de
 entrada e presença de má perfusão.
 
-## Caminho decisório
+## Árvore de decisão
 
 ```mermaid
 flowchart TD
-  A["Dor toracica, dorsal ou abdominal<br/>com suspeita de sindrome aortica aguda"] --> B["Calcular o ADD-RS<br/>escore de 0 a 3"]
+  R0["Dor torácica, dorsal ou abdominal<br/>com suspeita de síndrome aórtica aguda"] --> P1["Calcular o ADD-RS<br/>escore de 0 a 3"]
 
-  B --> C{"Instabilidade hemodinamica<br/>ou ADD-RS de 2 a 3?"}
-  C -->|Sim| D["Imagem imediata<br/>sem esperar D-dimero"]
+  P1 --> D1{"Instabilidade hemodinâmica<br/>ou ADD-RS de 2 a 3?"}
 
-  C -->|Nao| E{"ADD-RS igual a 0 ou 1"}
-  E --> F["Dosar D-dimero"]
+  D1 -->|Não| D2{"D-dímero maior ou igual<br/>a 500 ng/mL FEU?"}
 
-  F --> G{"D-dimero maior ou igual<br/>a 500 ng/mL FEU?"}
-  G -->|Sim| D
-  G -->|Nao| H["Risco muito baixo<br/>imagem dispensavel<br/>investigar diagnostico alternativo"]
+  D2 -->|Não| C1(["Risco muito baixo — imagem dispensável<br/>investigar diagnóstico alternativo"])
 
-  D --> I["Angio-TC sincronizada ao ECG<br/>do pescoco a pelve<br/>exame de primeira linha"]
+  D2 -->|Sim| P2["Angio-TC sincronizada ao ECG<br/>do pescoço à pelve"]
 
-  I --> J{"Sindrome aortica aguda<br/>confirmada?"}
-  J -->|Nao| H
+  D1 -->|Sim| P3["Angio-TC sincronizada ao ECG do<br/>pescoço à pelve, sem esperar o D-dímero"]
 
-  J -->|Sim| K["Classificar em TEM<br/>tipo, porta de entrada, ma perfusao"]
+  P2 --> D3{"Síndrome aórtica<br/>aguda confirmada?"}
+  D3 -->|Não| C2(["Investigar diagnóstico alternativo"])
+  D3 -->|Sim| D4{"Acomete a aorta ascendente?"}
 
-  K --> L{"Acomete a aorta ascendente?"}
-  L -->|Sim| M["Tipo A<br/>cirurgia aberta"]
-  L -->|Nao| N["Tipo B"]
+  P3 --> D5{"Síndrome aórtica<br/>aguda confirmada?"}
+  D5 -->|Não| C3(["Investigar diagnóstico alternativo"])
+  D5 -->|Sim| D6{"Acomete a aorta ascendente?"}
 
-  N --> O{"Complicada?<br/>ma perfusao, ruptura, dor ou<br/>hipertensao refrataria, expansao"}
-  O -->|Sim| P["Reparo endovascular na fase aguda<br/>se a anatomia for favoravel<br/>cirurgia aberta como alternativa"]
-  O -->|Nao| Q["Tratamento clinico e<br/>reparo endovascular na fase subaguda<br/>deve ser considerado"]
+  D4 -->|"Sim — tipo A"| C4(["Cirurgia aberta, com ecocardiograma<br/>transesofágico para guiar o perioperatório<br/>e detectar complicação precoce"])
+  D4 -->|"Não — tipo B"| D7{"Complicada?<br/>má perfusão, ruptura, dor ou<br/>hipertensão refratária, expansão"}
 
-  M --> R["Ecocardiograma transesofagico<br/>para guiar o perioperatorio e<br/>detectar complicacao precoce"]
-  P --> R
+  D6 -->|"Sim — tipo A"| C5(["Cirurgia aberta, com ecocardiograma<br/>transesofágico para guiar o perioperatório<br/>e detectar complicação precoce"])
+  D6 -->|"Não — tipo B"| D8{"Complicada?<br/>má perfusão, ruptura, dor ou<br/>hipertensão refratária, expansão"}
+
+  D7 -->|Sim| C6(["Reparo endovascular na fase aguda se a<br/>anatomia for favorável, com cirurgia aberta<br/>como alternativa, guiado por ETE"])
+  D7 -->|Não| C7(["Tratamento clínico; reparo endovascular<br/>na fase subaguda deve ser considerado"])
+
+  D8 -->|Sim| C8(["Reparo endovascular na fase aguda se a<br/>anatomia for favorável, com cirurgia aberta<br/>como alternativa, guiado por ETE"])
+  D8 -->|Não| C9(["Tratamento clínico; reparo endovascular<br/>na fase subaguda deve ser considerado"])
+
+  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  class C1,C2,C3,C4,C5,C6,C7,C8,C9 conduta;
 ```
 
 ## O escore ADD-RS

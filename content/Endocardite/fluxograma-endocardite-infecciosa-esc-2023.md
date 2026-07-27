@@ -21,39 +21,30 @@ positivo, com uma única exceção.
 
 ```mermaid
 flowchart TD
-  A["Suspeita clínica de endocardite infecciosa"] --> B["Hemoculturas antes do antibiotico<br/>e ecocardiograma transtoracico"]
+  R0["Suspeita clínica de<br/>endocardite infecciosa"] --> P1["Hemoculturas antes do antibiótico<br/>e ecocardiograma transtorácico"]
 
-  B --> C{"ETT conclusivo?"}
+  P1 --> D1{"Endocardite de valva nativa direita<br/>isolada, com ETT de boa qualidade<br/>e achado inequívoco?"}
 
-  C -->|Nao ou duvida| D["Ecocardiograma transesofagico"]
-  C -->|Sim, positivo| D
+  D1 -->|Sim| C1(["ETE dispensável — classificar<br/>pelos critérios da ESC 2023"])
 
-  C -->|"Excecao: EI de valva nativa<br/>direita isolada, ETT de boa<br/>qualidade e achado inequivoco"| E["ETE dispensavel"]
+  D1 -->|Não| P2["Ecocardiograma transesofágico<br/>Classe I mesmo com ETT positivo"]
 
-  D --> F{"Achado ecocardiografico<br/>conclusivo?"}
+  P2 --> D2{"Achado ecocardiográfico<br/>conclusivo?"}
 
-  F -->|Sim| G["Aplicar os criterios diagnosticos<br/>da ESC 2023"]
+  D2 -->|Sim| D3{"Classificação pelos<br/>critérios da ESC 2023"}
 
-  F -->|"Nao, valva nativa<br/>ou protese"| H["Angio-TC cardiaca"]
-  F -->|"Nao, valva protetica"| I["PET/TC com 18F-FDG"]
-  F -->|"Nao, dispositivo<br/>cardiaco implantavel"| J["PET/TC com 18F-FDG<br/>pode ser considerado"]
+  D3 -->|Definida| C2(["Tratar como endocardite, encaminhar ao<br/>Time de Endocardite e solicitar imagem<br/>cerebral e de corpo inteiro se<br/>houver sintomas"])
+  D3 -->|Possível| C3(["Manter investigação e repetir o ETE em<br/>5 a 7 dias se a suspeita clínica<br/>permanecer alta, reclassificando depois"])
+  D3 -->|Rejeitada| C4(["Buscar diagnóstico alternativo"])
 
-  H --> G
-  I --> G
-  J --> G
+  D2 -->|"Não — valva nativa"| C5(["Angio-TC cardíaca e, com o resultado,<br/>classificar pelos critérios da ESC 2023"])
 
-  F -->|"PET/TC indisponivel"| K["SPECT/TC com leucocitos marcados<br/>deve ser considerado"]
-  K --> G
+  D2 -->|"Não — valva protética"| C6(["Angio-TC cardíaca e PET/TC com 18F-FDG;<br/>se o PET não estiver disponível, SPECT/TC<br/>com leucócitos marcados deve ser<br/>considerado. Classificar em seguida"])
 
-  G --> L{"Classificacao"}
-  L -->|Definida| M["Tratar como endocardite"]
-  L -->|Possivel| N["Manter investigacao<br/>repetir ETE em 5-7 dias se a<br/>suspeita clinica permanecer alta"]
-  L -->|Rejeitada| O["Buscar diagnostico alternativo"]
+  D2 -->|"Não — dispositivo<br/>cardíaco implantável"| C7(["PET/TC com 18F-FDG pode ser considerado;<br/>se indisponível, SPECT/TC com leucócitos<br/>marcados. Classificar em seguida"])
 
-  N --> L
-
-  M --> P["Imagem cerebral e de corpo inteiro<br/>recomendada se houver sintomas"]
-  M --> Q["Encaminhar ao Time de Endocardite"]
+  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  class C1,C2,C3,C4,C5,C6,C7 conduta;
 ```
 
 ## Onde tratar
@@ -76,21 +67,29 @@ controlada e prevenção de embolia. O que muda entre elas é o prazo.
 
 ```mermaid
 flowchart TD
-  A["Endocardite confirmada"] --> B{"Regurgitacao, obstrucao ou fistula<br/>com edema agudo de pulmao refratario<br/>ou choque cardiogenico?"}
-  B -->|Sim| C["Cirurgia de emergencia<br/>em ate 24 horas"]
+  R0["Endocardite confirmada"] --> D1{"Regurgitação, obstrução ou fístula<br/>com edema agudo de pulmão refratário<br/>ou choque cardiogênico?"}
 
-  B -->|Nao| D{"Insuficiencia cardiaca<br/>sem refratariedade?"}
-  D -->|Sim| E["Cirurgia de urgencia<br/>em 3 a 5 dias"]
+  D1 -->|Sim| C1(["Cirurgia de emergência<br/>em até 24 horas"])
 
-  D -->|Nao| F{"Infeccao localmente nao controlada?<br/>abscesso, falso aneurisma, fistula,<br/>vegetacao crescente, bloqueio AV novo"}
-  F -->|Sim| E
+  D1 -->|Não| D2{"Insuficiência cardíaca<br/>sem refratariedade?"}
 
-  F -->|Nao| G{"Vegetacao persistente maior ou igual<br/>a 10 mm apos ao menos um episodio<br/>embolico, ou maior ou igual a 10 mm com<br/>outra indicacao cirurgica?"}
-  G -->|Sim| E
+  D2 -->|Sim| C2(["Cirurgia de urgência<br/>em 3 a 5 dias"])
 
-  G -->|Nao| H{"Endocardite fungica ou por<br/>germe multirresistente?"}
-  H -->|Sim| I["Cirurgia urgente ou eletiva<br/>conforme a hemodinamica"]
-  H -->|Nao| J["Tratamento clinico<br/>com vigilancia ativa"]
+  D2 -->|Não| D3{"Infecção localmente não controlada?<br/>abscesso, falso aneurisma, fístula,<br/>vegetação crescente, bloqueio AV novo"}
+
+  D3 -->|Sim| C3(["Cirurgia de urgência<br/>em 3 a 5 dias"])
+
+  D3 -->|Não| D4{"Vegetação persistente maior ou igual<br/>a 10 mm após ao menos um episódio<br/>embólico, ou maior ou igual a 10 mm com<br/>outra indicação cirúrgica?"}
+
+  D4 -->|Sim| C4(["Cirurgia de urgência<br/>em 3 a 5 dias"])
+
+  D4 -->|Não| D5{"Endocardite fúngica ou por<br/>germe multirresistente?"}
+
+  D5 -->|Sim| C5(["Cirurgia urgente ou eletiva<br/>conforme a hemodinâmica"])
+  D5 -->|Não| C6(["Tratamento clínico<br/>com vigilância ativa"])
+
+  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  class C1,C2,C3,C4,C5,C6 conduta;
 ```
 
 ## Situações que têm regra própria

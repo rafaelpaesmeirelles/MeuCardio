@@ -16,37 +16,33 @@ são praticamente os mesmos ao longo do espectro — **o que separa as formas de
 apresentação é o tempo até a angiografia coronariana invasiva**. O fluxograma
 abaixo é organizado em torno dessa decisão.
 
-## Caminho decisório
+## Árvore de decisão
 
 ```mermaid
 flowchart TD
-  A["Dor torácica ou equivalente<br/>suspeita de SCA"] --> B["ECG de 12 derivações<br/>em até 10 minutos do primeiro contato"]
+  R0["Dor torácica ou equivalente<br/>suspeita de SCA"] --> P1["ECG de 12 derivações<br/>em até 10 minutos do primeiro contato"]
 
-  B --> C{"Elevação persistente<br/>do segmento ST?"}
+  P1 --> D1{"Elevação persistente<br/>do segmento ST?"}
 
-  C -->|Sim| D["STEMI"]
-  C -->|Não| E["NSTE-ACS suspeita"]
+  D1 -->|Sim — STEMI| D2{"ICP primária possível<br/>em até 120 min do diagnóstico?"}
+  D2 -->|Sim| C1(["ICP primária"])
+  D2 -->|Não| C2(["Fibrinólise imediata<br/>e transferência para centro com ICP"])
 
-  D --> F{"ICP primária possível<br/>em até 120 min do diagnóstico?"}
-  F -->|Sim| G["ICP primária"]
-  F -->|Não| H["Fibrinólise imediata<br/>e transferência para centro com ICP"]
+  D1 -->|Não — NSTE-ACS suspeita| D3{"Algum critério<br/>de risco muito alto?"}
+  D3 -->|Sim| C3(["Angiografia invasiva imediata<br/>equiparada ao STEMI"])
 
-  E --> I{"Algum critério<br/>de risco muito alto?"}
-  I -->|Sim| J["Angiografia invasiva imediata<br/>equiparada ao STEMI"]
+  D3 -->|Não| D4{"Troponina ultrassensível<br/>algoritmo 0h/1h"}
 
-  I -->|Não| K["Troponina ultrassensível<br/>algoritmo 0h/1h"]
+  D4 -->|Rule-in — NSTEMI confirmado| D5{"Critério de alto risco?<br/>GRACE > 140, elevação transitória de ST,<br/>alterações dinâmicas de ST/T"}
+  D5 -->|Sim| C4(["Estratégia invasiva precoce<br/>considerar em até 24h da admissão"])
+  D5 -->|Não| C5(["Estratégia invasiva<br/>durante a internação"])
 
-  K --> L{"Resultado"}
-  L -->|Rule-in| M["NSTEMI confirmado"]
-  L -->|Zona de observação| N["Nova dosagem seriada<br/>e reavaliação clínica"]
-  L -->|Rule-out| O["IAM afastado<br/>investigar diagnóstico alternativo"]
+  D4 -->|Zona de observação| C6(["Nova dosagem seriada de troponina<br/>e reavaliação clínica, reclassificando<br/>o paciente no próprio algoritmo"])
 
-  N --> M
-  N --> O
+  D4 -->|Rule-out| C7(["IAM afastado<br/>investigar diagnóstico alternativo"])
 
-  M --> P{"Critério de alto risco?<br/>NSTEMI confirmado, GRACE > 140,<br/>elevação transitória de ST,<br/>alterações dinâmicas de ST/T"}
-  P -->|Sim| Q["Estratégia invasiva precoce<br/>considerar em até 24h da admissão"]
-  P -->|Não| R["Estratégia invasiva<br/>durante a internação"]
+  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  class C1,C2,C3,C4,C5,C6,C7 conduta;
 ```
 
 ## Critérios de risco muito alto

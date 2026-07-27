@@ -15,38 +15,39 @@ estágios de gravidade crescente, de **A a E**, e o eixo do manejo não é escol
 uma conduta definitiva no início, e sim **reavaliar com frequência** se o paciente
 está melhorando ou deteriorando.
 
-## Caminho decisório
+## Árvore de decisão: causa do choque
 
 ```mermaid
 flowchart TD
-  A["Suspeita de choque cardiogênico"] --> B{"Causa isquêmica?<br/>SCA em curso"}
-  B -->|Sim| C["Critério de risco muito alto na ESC 2023:<br/>angiografia invasiva imediata"]
-  B -->|Não| D["Investigar e tratar<br/>a causa de base"]
+  R0["Suspeita de choque cardiogênico"] --> D1{"Causa isquêmica?<br/>SCA em curso"}
 
-  C --> E["Classificar o estágio SCAI"]
-  D --> E
+  D1 -->|Sim| C1(["Critério de risco muito alto na ESC 2023:<br/>angiografia invasiva imediata"])
+  D1 -->|Não| C2(["Investigar e tratar<br/>a causa de base"])
 
-  E --> F["Estágio A — em risco"]
-  E --> G["Estágio B — início"]
-  E --> H["Estágio C — clássico"]
-  E --> I["Estágio D — em deterioração"]
-  E --> J["Estágio E — extremo"]
-
-  H --> K["Considerar suporte circulatório mecânico<br/>decisão individualizada"]
-  I --> K
-  J --> K
-
-  F --> L["Reavaliação frequente<br/>em todos os estágios"]
-  G --> L
-  H --> L
-  I --> L
-  J --> L
-  K --> L
-
-  L --> M{"O paciente está<br/>melhorando ou deteriorando?"}
-  M -->|Deteriorando| E
-  M -->|Melhorando| N["Desescalonar suporte<br/>conforme tolerado"]
+  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  class C1,C2 conduta;
 ```
+
+## Árvore de decisão: estágio SCAI e suporte circulatório
+
+```mermaid
+flowchart TD
+  R0["Choque cardiogênico<br/>classificar o estágio SCAI"] --> D1{"Estágio SCAI"}
+
+  D1 -->|"A — em risco"| C1(["Vigilância, sem suporte<br/>circulatório mecânico"])
+  D1 -->|"B — início"| C2(["Vigilância, sem suporte<br/>circulatório mecânico"])
+  D1 -->|"C — clássico"| C3(["Considerar suporte circulatório mecânico<br/>decisão individualizada"])
+  D1 -->|"D — em deterioração"| C4(["Considerar suporte circulatório mecânico<br/>decisão individualizada"])
+  D1 -->|"E — extremo"| C5(["Considerar suporte circulatório mecânico<br/>decisão individualizada"])
+
+  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  class C1,C2,C3,C4,C5 conduta;
+```
+
+O estágio SCAI não é um rótulo fixo. A reavaliação frequente vale para todos os
+estágios: quem deteriora é reclassificado e volta a percorrer a árvore acima;
+quem melhora tem o suporte desescalonado conforme tolerado. É por isso que a
+reavaliação não aparece como folha — ela é o que devolve o paciente à raiz.
 
 ## Mortalidade por estágio
 

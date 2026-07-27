@@ -18,45 +18,38 @@ clássico de 140/90. A segunda é o **alvo sistólico de 120–129 mmHg** como
 ponto de partida da maioria dos tratados, e não como meta opcional: o
 documento inverteu a lógica anterior, em que a intensificação era a exceção.
 
-## Caminho decisório
+## Árvore de decisão
 
 ```mermaid
 flowchart TD
-  A["Medida de pressao arterial<br/>em consultorio"] --> B{"Categoria"}
+  R0["Medida de pressão arterial<br/>em consultório, confirmada por medida<br/>fora do consultório"] --> D1{"Categoria"}
 
-  B -->|"Menor que 120/70 mmHg"| C["Pressao nao elevada<br/>tratamento medicamentoso<br/>nao recomendado"]
+  D1 -->|"Menor que 120/70 mmHg"| C1(["Pressão não elevada — tratamento<br/>medicamentoso não recomendado"])
 
-  B -->|"120-139 sistolica ou<br/>70-89 diastolica"| D["Pressao elevada"]
+  D1 -->|"Maior ou igual a 140/90 mmHg"| P1["Hipertensão — confirmar prontamente<br/>e tratar na maioria dos indivíduos"]
 
-  B -->|"Maior ou igual a 140/90 mmHg"| E["Hipertensao<br/>confirmar prontamente e tratar<br/>na maioria dos individuos"]
+  D1 -->|"120-139 sistólica ou<br/>70-89 diastólica"| P2["Pressão elevada — medidas de<br/>estilo de vida por 3 meses"]
 
-  D --> F["Medida fora do consultorio<br/>MAPA ou monitorizacao residencial<br/>recomendada para o diagnostico"]
-  E --> F
+  P2 --> D2{"Sistólica permanece<br/>entre 130 e 139 mmHg?"}
 
-  F --> G{"Confirma hipertensao<br/>do avental branco ou mascarada?"}
-  G -->|"Avental branco"| H["Reclassificar<br/>e acompanhar"]
-  G -->|"Mascarada"| E
+  D2 -->|Não| C2(["Manter estilo de vida<br/>e reavaliação periódica"])
 
-  D --> I["Medidas de estilo de vida<br/>por 3 meses"]
+  D2 -->|Sim| D3{"Alto risco? DCV estabelecida, diabetes<br/>em adulto de 60 anos ou mais, SCORE2 ou<br/>SCORE2-OP acima de 10% em 10 anos, ou<br/>5% a 10% com modificadores de risco"}
 
-  I --> J{"Sistolica permanece<br/>entre 130 e 139 mmHg?"}
-  J -->|Nao| K["Manter estilo de vida<br/>e reavaliacao periodica"]
+  D3 -->|Não| C3(["Manter estilo de vida<br/>e reavaliação periódica"])
 
-  J -->|Sim| L{"Risco alto?"}
+  D3 -->|Sim| D4{"Idade acima de 85 anos, fragilidade,<br/>sintoma ortostático ou expectativa<br/>de vida limitada?"}
 
-  L -->|"Doenca cardiovascular estabelecida,<br/>ou diabetes em adulto de 60 anos ou mais"| M["Tratamento medicamentoso<br/>recomendado"]
-  L -->|"SCORE2 ou SCORE2-OP<br/>maior que 10% em 10 anos"| M
-  L -->|"Risco de 5% a 10% com<br/>modificadores de risco presentes"| M
-  L -->|Nao| K
+  D4 -->|Não| C4(["Tratamento medicamentoso<br/>alvo sistólico de 120 a 129 mmHg"])
+  D4 -->|Sim| C5(["Tratamento medicamentoso com<br/>alvo individualizado, menos intensivo"])
 
-  E --> N["Tratamento medicamentoso"]
-  M --> N
+  P1 --> D5{"Idade acima de 85 anos, fragilidade,<br/>sintoma ortostático ou expectativa<br/>de vida limitada?"}
 
-  N --> O["Alvo sistolico de 120 a 129 mmHg"]
+  D5 -->|Não| C6(["Tratamento medicamentoso<br/>alvo sistólico de 120 a 129 mmHg"])
+  D5 -->|Sim| C7(["Tratamento medicamentoso com<br/>alvo individualizado, menos intensivo"])
 
-  O --> P{"Idade acima de 85 anos, fragilidade,<br/>sintoma ortostatico ou expectativa<br/>de vida limitada?"}
-  P -->|Sim| Q["Alvo individualizado<br/>menos intensivo"]
-  P -->|Nao| R["Manter o alvo de 120-129 mmHg<br/>se tolerado"]
+  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  class C1,C2,C3,C4,C5,C6,C7 conduta;
 ```
 
 ## As três categorias

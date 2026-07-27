@@ -17,34 +17,27 @@ com fração de ejeção levemente reduzida e na preservada — faixas que, na d
 de 2021, não tinham nenhuma recomendação de iSGLT2 porque ainda não havia ensaio
 conduzido nesses grupos.
 
-## Caminho decisório
+## Árvore de decisão
 
 ```mermaid
 flowchart TD
-  A["Sinais e sintomas de IC<br/>+ peptídeos natriuréticos elevados<br/>e/ou alteração estrutural/funcional"] --> B["Medir fração de ejeção<br/>do ventrículo esquerdo"]
+  R0["Sinais e sintomas de IC<br/>+ peptídeos natriuréticos elevados<br/>e/ou alteração estrutural/funcional"] --> P1["Medir fração de ejeção<br/>do ventrículo esquerdo"]
 
-  B --> C{"FEVE"}
+  P1 --> D1{"FEVE"}
 
-  C -->|"menor ou igual a 40%"| D["ICFEr<br/>fração de ejeção reduzida"]
-  C -->|"41 a 49%"| E["ICFElr<br/>levemente reduzida"]
-  C -->|"maior ou igual a 50%"| F["ICFEp<br/>preservada"]
+  D1 -->|"menor ou igual a 40%"| C1(["ICFEr — iniciar e titular<br/>os quatro pilares:<br/>IECA ou ARNI, betabloqueador,<br/>antagonista mineralocorticoide<br/>e inibidor de SGLT2"])
 
-  D --> G["Quatro pilares<br/>iniciar e titular"]
-  G --> G1["IECA ou ARNI"]
-  G --> G2["Betabloqueador"]
-  G --> G3["Antagonista mineralocorticoide"]
-  G --> G4["Inibidor de SGLT2"]
+  D1 -->|"41 a 49%"| C2(["ICFElr — inibidor de SGLT2<br/>dapagliflozina ou empagliflozina<br/>Classe I, nível A"])
 
-  E --> H["Inibidor de SGLT2<br/>dapagliflozina ou empagliflozina<br/>Classe I, nível A"]
-  F --> I["Inibidor de SGLT2<br/>dapagliflozina ou empagliflozina<br/>Classe I, nível A"]
+  D1 -->|"maior ou igual a 50%"| C3(["ICFEp — inibidor de SGLT2<br/>dapagliflozina ou empagliflozina<br/>Classe I, nível A"])
 
-  G1 --> J["Tratar comorbidades<br/>e congestão; reavaliar"]
-  G2 --> J
-  G3 --> J
-  G4 --> J
-  H --> J
-  I --> J
+  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  class C1,C2,C3 conduta;
 ```
+
+Qualquer que seja a faixa de fração de ejeção, o tratamento das comorbidades e
+da congestão e a reavaliação periódica são parte do manejo — não são um ramo
+alternativo do algoritmo, e por isso não aparecem como folha da árvore.
 
 ## Os quatro pilares na ICFEr
 

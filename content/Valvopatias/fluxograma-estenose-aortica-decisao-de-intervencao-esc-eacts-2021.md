@@ -16,45 +16,30 @@ combinação de vários eixos — clínico, anatômico, técnico e de preferênc
 paciente. O fluxograma reflete essa estrutura: a via de acesso é o último nó, não
 o primeiro.
 
-## Caminho decisório
+## Árvore de decisão
 
 ```mermaid
 flowchart TD
-  A["Estenose aórtica grave"] --> B{"Indicação de intervenção<br/>estabelecida?"}
-  B -->|Não| C["Acompanhamento clínico<br/>e reavaliação periódica"]
-  B -->|Sim| D["Avaliação pelo Heart Team"]
+  R0["Estenose aórtica grave"] --> D1{"Indicação de intervenção<br/>estabelecida?"}
 
-  D --> E["Características clínicas"]
-  D --> F["Características anatômicas"]
-  D --> G["Fatores do serviço"]
-  D --> H["Preferência informada<br/>do paciente"]
+  D1 -->|Não| C1(["Acompanhamento clínico<br/>e reavaliação periódica"])
 
-  E --> E1["Idade e expectativa<br/>de vida estimada"]
-  E --> E2["Condição geral"]
-  E --> E3["Risco relativo de<br/>cirurgia e de TAVI"]
+  D1 -->|Sim| P1["Avaliação pelo Heart Team"]
+  P1 --> D2{"Modo de intervenção"}
 
-  F --> F1["Viabilidade de acesso<br/>transfemoral"]
-  F --> F2["Anatomia valvar e vascular"]
+  D2 -->|Cirurgia| C2(["Troca valvar aórtica<br/>cirúrgica"])
 
-  G --> G1["Experiência local"]
-  G --> G2["Dados de desfecho<br/>do serviço"]
+  D2 -->|TAVI| D3{"Outra indicação de<br/>anticoagulação oral?"}
+  D3 -->|Não| C3(["Implante por cateter e<br/>antiagregante plaquetário simples"])
+  D3 -->|Sim| C4(["Implante por cateter e<br/>manutenção da anticoagulação<br/>já indicada"])
 
-  E1 --> I{"Modo de intervenção"}
-  E2 --> I
-  E3 --> I
-  F1 --> I
-  F2 --> I
-  G1 --> I
-  G2 --> I
-  H --> I
-
-  I -->|TAVI| J["Implante valvar aórtico<br/>por cateter"]
-  I -->|Cirurgia| K["Troca valvar aórtica<br/>cirúrgica"]
-
-  J --> L{"Outra indicação de<br/>anticoagulação oral?"}
-  L -->|Não| M["Antiagregante plaquetário simples"]
-  L -->|Sim| N["Manter a indicação<br/>de anticoagulação"]
+  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  class C1,C2,C3,C4 conduta;
 ```
+
+A decisão do Heart Team entre TAVI e cirurgia não é um teste com resposta
+binária: pondera quatro conjuntos de fatores ao mesmo tempo, listados na seção
+seguinte. Por isso eles não aparecem como ramos da árvore.
 
 ## Os quatro eixos da decisão do Heart Team
 

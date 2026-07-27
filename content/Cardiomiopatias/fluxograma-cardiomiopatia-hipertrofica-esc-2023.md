@@ -21,29 +21,23 @@ próprio.
 
 ```mermaid
 flowchart TD
-  A["Hipertrofia ventricular esquerda<br/>espessura parietal maior ou igual a 15 mm<br/>nao explicada por condicao de sobrecarga"] --> B["Cardiomiopatia hipertrofica"]
+  R0["Hipertrofia ventricular esquerda<br/>espessura parietal maior ou igual a 15 mm<br/>não explicada por condição de sobrecarga"] --> P1["Cardiomiopatia hipertrófica — caracterização<br/>por imagem multimodal, com ressonância<br/>magnética para caracterização tecidual, e teste<br/>genético com aconselhamento"]
 
-  B --> C["Caracterizacao por imagem multimodal<br/>ressonancia magnetica cardiaca para<br/>caracterizacao tecidual"]
+  P1 --> D1{"Red flags de<br/>etiologia específica?"}
 
-  B --> D["Teste genetico com<br/>aconselhamento genetico"]
+  D1 -->|Sim| C1(["Perseguir a fenocópia — amiloidose,<br/>doença de Fabry, ataxia de Friedreich,<br/>RASopatias, doenças de depósito — e aplicar<br/>o tratamento dirigido à etiologia<br/>quando existir"])
 
-  C --> E{"Red flags de etiologia especifica?"}
-  D --> E
+  D1 -->|Não| C2(["Cardiomiopatia hipertrófica sarcomérica<br/>ou de causa não identificada"])
 
-  E -->|Sim| F["Perseguir a fenocopia<br/>amiloidose, doenca de Fabry,<br/>ataxia de Friedreich, sindromes<br/>de RASopatia, doencas de deposito"]
-  E -->|Nao| G["Cardiomiopatia hipertrofica<br/>sarcomerica ou de causa nao identificada"]
-
-  F --> H["Tratamento dirigido a etiologia<br/>quando existir"]
-
-  G --> I["Duas perguntas independentes<br/>seguem em paralelo"]
-  H --> I
-
-  I --> J["1. Qual o risco de morte subita?"]
-  I --> K["2. Ha obstrucao da via de saida?"]
-
-  J --> L["Rastreamento familiar em cascata"]
-  K --> L
+  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  class C1,C2 conduta;
 ```
+
+Qualquer que seja o ramo, o diagnóstico abre em seguida duas perguntas
+independentes — **qual o risco de morte súbita** e **há obstrução da via de
+saída** —, cada uma com sua própria árvore abaixo, e o **rastreamento familiar
+em cascata**. Nenhum dos três é alternativa ao outro, e por isso não aparecem
+como folhas da árvore acima.
 
 O ponto de corte diagnóstico é **espessura de parede do ventrículo esquerdo
 de pelo menos 15 mm**, sem outra causa que explique a hipertrofia. Em
@@ -60,23 +54,22 @@ paciente.
 
 ```mermaid
 flowchart TD
-  A["Cardiomiopatia hipertrofica<br/>sem parada cardiaca previa nem<br/>taquicardia ventricular sustentada"] --> B["Calcular o HCM Risk-SCD<br/>risco estimado em 5 anos"]
+  R0["Cardiomiopatia hipertrófica<br/>sem parada cardíaca prévia nem<br/>taquicardia ventricular sustentada"] --> P1["Calcular o HCM Risk-SCD<br/>risco estimado em 5 anos"]
 
-  B --> C{"Faixa de risco"}
+  P1 --> D1{"Faixa de risco em 5 anos"}
 
-  C -->|"Maior ou igual a 6%<br/>alto risco"| D["CDI deve ser considerado"]
-  C -->|"4% a menos de 6%<br/>risco intermediario"| E["Decisao individualizada<br/>com julgamento clinico adicional"]
-  C -->|"Menor que 4%<br/>baixo risco"| F["CDI em geral nao indicado"]
+  D1 -->|"Maior ou igual a 6%<br/>alto risco"| C1(["CDI deve ser considerado,<br/>em decisão compartilhada"])
 
-  E --> G{"Modificadores de risco presentes?"}
-  F --> G
+  D1 -->|"4% a menos de 6%<br/>risco intermediário"| C2(["Decisão individualizada, com julgamento<br/>clínico adicional e reavaliação<br/>periódica do escore"])
 
-  G -->|"Realce tardio extenso<br/>maior ou igual a 15% na RMC"| H["Pode ser considerado na<br/>decisao compartilhada<br/>Classe IIb, nivel B"]
-  G -->|"Fracao de ejecao<br/>menor que 50%"| H
-  G -->|Nao| I["Manter vigilancia<br/>e reavaliacao periodica do escore"]
+  D1 -->|"Menor que 4%<br/>baixo risco"| D2{"Realce tardio extenso na RMC<br/>maior ou igual a 15%, ou fração<br/>de ejeção menor que 50%?"}
 
-  H --> J["Decisao compartilhada<br/>sobre CDI profilatico"]
-  D --> J
+  D2 -->|Sim| C3(["Pode ser considerado na decisão<br/>compartilhada sobre CDI profilático<br/>Classe IIb, nível B"])
+
+  D2 -->|Não| C4(["CDI em geral não indicado — manter<br/>vigilância e reavaliação periódica<br/>do escore"])
+
+  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  class C1,C2,C3,C4 conduta;
 ```
 
 As faixas de risco em 5 anos usadas pela ESC são: **baixo, abaixo de 4%;
@@ -96,26 +89,30 @@ específica.
 
 ```mermaid
 flowchart TD
-  A["Cardiomiopatia hipertrofica sintomatica"] --> B{"Gradiente na via de saida<br/>em repouso ou provocado<br/>maior ou igual a 50 mmHg?"}
+  R0["Cardiomiopatia hipertrófica sintomática"] --> D1{"Gradiente na via de saída,<br/>em repouso ou provocado,<br/>maior ou igual a 50 mmHg?"}
 
-  B -->|Nao| C["Fenotipo nao obstrutivo<br/>tratar sintoma e comorbidade"]
+  D1 -->|Não| C1(["Fenótipo não obstrutivo<br/>tratar sintoma e comorbidade"])
 
-  B -->|Sim| D["Terapia medica maxima tolerada"]
+  D1 -->|Sim| P1["Terapia médica máxima tolerada"]
 
-  D --> E{"Permanece sintomatico?"}
-  E -->|Nao| F["Manter e reavaliar"]
+  P1 --> D2{"Permanece sintomático?"}
 
-  E -->|Sim| G["Inibidor de miosina cardiaca<br/>mavacanteno deve ser considerado"]
+  D2 -->|Não| C2(["Manter o tratamento e reavaliar"])
 
-  G --> H{"Permanece sintomatico em<br/>classe funcional NYHA III-IV<br/>apesar da terapia maxima?"}
-  H -->|Nao| F
+  D2 -->|Sim| P2["Inibidor de miosina cardíaca<br/>mavacanteno deve ser considerado"]
 
-  H -->|Sim| I["Terapia de reducao septal<br/>por operador experiente, em equipe<br/>multidisciplinar especializada em CMH"]
+  P2 --> D3{"Permanece sintomático em classe<br/>funcional NYHA III-IV apesar<br/>da terapia máxima?"}
 
-  I --> J{"Qual tecnica?"}
-  J -->|"Paciente pediatrico"| K["Miectomia septal"]
-  J -->|"Adulto com outra lesao que<br/>exige cirurgia no mesmo tempo"| K
-  J -->|"Demais adultos"| L["Miectomia septal ou<br/>ablacao septal alcoolica"]
+  D3 -->|Não| C3(["Manter o tratamento e reavaliar"])
+
+  D3 -->|Sim| D4{"Paciente pediátrico, ou adulto com<br/>outra lesão que exige cirurgia<br/>no mesmo tempo?"}
+
+  D4 -->|Sim| C4(["Miectomia septal — recomendada em vez da<br/>ablação alcoólica nesse cenário — por<br/>operador experiente, em equipe<br/>multidisciplinar especializada em CMH"])
+
+  D4 -->|Não| C5(["Terapia de redução septal: miectomia septal<br/>ou ablação septal alcoólica, por operador<br/>experiente, em equipe multidisciplinar<br/>especializada em CMH"])
+
+  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  class C1,C2,C3,C4,C5 conduta;
 ```
 
 Dois critérios delimitam a indicação de terapia de redução septal, e valem

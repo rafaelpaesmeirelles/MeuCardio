@@ -16,35 +16,27 @@ altera a conduta na prática**: sai do modelo de desaconselhar a gestação em
 mulheres classificadas como de alto risco e adota uma abordagem personalizada e
 multidisciplinar, centrada na autonomia reprodutiva da mulher.
 
-## Caminho decisório
+## Árvore de decisão
 
 ```mermaid
 flowchart TD
-  A["Mulher com cardiopatia<br/>em idade fértil"] --> B["Avaliação de risco materno<br/>antes da concepção"]
+  R0["Mulher com cardiopatia<br/>em idade fértil"] --> P1["Avaliação de risco materno antes da<br/>concepção pela classificação mWHO 2.0,<br/>que incorpora evidência do CARPREG II"]
 
-  B --> C["Classificação mWHO 2.0"]
-  C --> C1["Incorpora evidência<br/>do estudo CARPREG II"]
+  P1 --> D1{"Categoria de risco materno"}
 
-  C1 --> D{"Categoria de risco materno"}
+  D1 -->|"Risco mais baixo"| C1(["Acompanhamento conforme<br/>a cardiopatia de base"])
 
-  D -->|"Risco mais baixo"| E["Acompanhamento conforme<br/>a cardiopatia de base"]
-  D -->|"Risco mais elevado"| F["Pregnancy Heart Team<br/>equipe multidisciplinar"]
+  D1 -->|"Risco mais elevado"| P2["Pregnancy Heart Team — aconselhamento<br/>pré-concepcional com risco materno e fetal<br/>informado de forma individualizada, em<br/>decisão compartilhada que respeita<br/>a autonomia da mulher"]
 
-  F --> G["Aconselhamento pré-concepcional"]
-  G --> G1["Informar risco materno e fetal<br/>de forma individualizada"]
-  G --> G2["Decisão compartilhada,<br/>respeitando a autonomia da mulher"]
+  P2 --> C2(["Plano de acompanhamento definido<br/>antecipadamente: seguimento durante a<br/>gestação, plano de parto e<br/>cuidado pós-parto"])
 
-  G1 --> H["Plano de acompanhamento"]
-  G2 --> H
-
-  H --> H1["Seguimento durante a gestação"]
-  H --> H2["Plano de parto definido<br/>antecipadamente"]
-  H --> H3["Cuidado pós-parto definido"]
-
-  H1 --> I["Seguimento de longo prazo<br/>após desfecho gestacional adverso"]
-  H2 --> I
-  H3 --> I
+  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  class C1,C2 conduta;
 ```
+
+O seguimento de longo prazo após desfecho gestacional adverso vale para as duas
+categorias de risco — é consequência do desfecho, não do ramo escolhido, e por
+isso não figura como folha da árvore.
 
 ## mWHO 2.0
 

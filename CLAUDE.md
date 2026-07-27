@@ -72,6 +72,38 @@ Para cada entrada em JSON (galeria/exames/evidências/estudos), o slug precisa s
 duplicar. Consulte COBERTURA.md para decidir qual das seis frentes está mais fraca
 e priorize por aí, mas sinta-se livre para alternar entre frentes na mesma sessão.
 
+## Fluxogramas: formato obrigatório de árvore de decisão
+Decisão do Rafael, válida para os fluxogramas já existentes e para todos os
+próximos: o diagrama tem de ser uma **árvore de decisão estrita**, não um
+fluxograma-grafo. Regras, todas verificáveis mecanicamente:
+
+- `flowchart TD` (de cima para baixo), em bloco ```mermaid``` dentro do `.md`.
+- **Uma única raiz**, e todo nó não-raiz com **exatamente um pai**. Caminho que
+  converge ou que volta (ciclo) está proibido — é o que separa árvore de grafo.
+  Quando dois ramos chegam à mesma conduta, **duplique o nó de conduta**; quando
+  algo vale para todos os ramos (reavaliação periódica, tratar comorbidade),
+  tire do diagrama e escreva em prosa logo abaixo dele.
+- Formas com significado fixo: raiz e passos intermediários em retângulo
+  `X["..."]`; decisão em losango `D{"...?"}`, com **rótulo em toda aresta** que
+  sai dela e no mínimo dois ramos; **conduta em estádio `C(["..."])`, sempre
+  folha** — toda folha da árvore é uma conduta, e nenhuma conduta tem filho.
+- Fechar o bloco com `classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;`
+  e `class C1,C2,... conduta;`. A forma de estádio já distingue conduta sem
+  depender do CSS; a cor é reforço.
+- Entradas de um mesmo cálculo (variáveis de um escore, parâmetros de uma
+  probabilidade) **não são ramos** — vão para prosa ou tabela.
+- Seção do diagrama intitulada `## Árvore de decisão` (ou
+  `## Árvore de decisão: <recorte>` quando o documento tiver mais de uma).
+
+Validação antes de commitar (os dois scripts ficam no scratchpad da sessão, e
+podem ser recriados a partir desta descrição):
+1. **sintaxe** — `mermaid.parse()` da própria lib, rodando em node com jsdom
+   (`jsdom@24`; a versão nova não roda no node 18 do servidor). Renderização
+   completa não funciona headless, jsdom não implementa `getBBox`.
+2. **estrutura** — validador próprio que confere as regras de árvore acima
+   (uma raiz, um pai por nó, sem ciclo, folha sempre conduta, decisão com
+   rótulo em toda aresta).
+
 Processo, igual para as seis:
 1. Escolher o item mais fraco/ausente sozinho, sem perguntar.
 2. Pesquisar (WebSearch/WebFetch) fonte real — diretriz mais atual (ESC, AHA/ACC,

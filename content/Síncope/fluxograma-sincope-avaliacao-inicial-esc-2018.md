@@ -14,29 +14,28 @@ A decisão central na síncope não é diagnóstica, é **de destino**: quem pod
 para casa, quem fica em observação e quem precisa de investigação intensiva
 imediata. O fluxograma abaixo organiza esse caminho.
 
-## Caminho decisório
+## Árvore de decisão
 
 ```mermaid
 flowchart TD
-  A["Perda transitória da consciência<br/>(PTC)"] --> B["Avaliação inicial<br/>obrigatória nos três componentes"]
+  R0["Perda transitória da consciência<br/>(PTC)"] --> P1["Avaliação inicial, obrigatória nos<br/>três componentes: história clínica completa,<br/>exame físico com PA em ortostase<br/>e ECG de 12 derivações"]
 
-  B --> B1["História clínica completa"]
-  B --> B2["Exame físico<br/>incluindo PA em ortostase"]
-  B --> B3["ECG de 12 derivações"]
+  P1 --> D1{"A PTC é síncope?"}
 
-  B1 --> C{"A PTC é síncope?"}
-  B2 --> C
-  B3 --> C
+  D1 -->|Não| C1(["Investigar causa não sincopal<br/>de PTC"])
 
-  C -->|Não| D["Investigar causa não sincopal<br/>de PTC"]
-  C -->|Sim| E{"Diagnóstico definido<br/>pela avaliação inicial?"}
+  D1 -->|Sim| D2{"Diagnóstico definido<br/>pela avaliação inicial?"}
 
-  E -->|Sim| F["Tratar a causa identificada"]
-  E -->|Não| G{"Estratificação de risco"}
+  D2 -->|Sim| C2(["Tratar a causa identificada"])
 
-  G -->|"Alto risco"| H["Avaliação intensiva e precoce<br/>unidade de síncope, observação<br/>em emergência ou internação"]
-  G -->|"Risco intermediário"| I["Observação na emergência<br/>ou unidade de síncope"]
-  G -->|"Baixo risco"| J["Manejo ambulatorial"]
+  D2 -->|Não| D3{"Estratificação de risco"}
+
+  D3 -->|"Alto risco"| C3(["Avaliação intensiva e precoce<br/>unidade de síncope, observação<br/>em emergência ou internação"])
+  D3 -->|"Risco intermediário"| C4(["Observação na emergência<br/>ou unidade de síncope"])
+  D3 -->|"Baixo risco"| C5(["Manejo ambulatorial"])
+
+  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  class C1,C2,C3,C4,C5 conduta;
 ```
 
 ## Os três componentes da avaliação inicial

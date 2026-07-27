@@ -15,32 +15,33 @@ abordagem de **três passos**, com divisão explícita de responsabilidade: a
 suspeita nasce com o médico de primeiro contato, a detecção é ecocardiográfica, e
 a confirmação é hemodinâmica em centro especializado.
 
-## Caminho decisório
+## Árvore de decisão
 
 ```mermaid
 flowchart TD
-  A["Passo 1 — Suspeita<br/>médico de primeiro contato<br/>sintomas, fatores de risco, comorbidades"] --> B["Passo 2 — Detecção<br/>ecocardiograma transtorácico"]
+  R0["Passo 1 — Suspeita<br/>médico de primeiro contato<br/>sintomas, fatores de risco, comorbidades"] --> P1["Passo 2 — Detecção<br/>ecocardiograma transtorácico<br/>atribuir probabilidade ecocardiográfica"]
 
-  B --> C["Atribuir probabilidade<br/>ecocardiográfica de HP"]
-  C --> C1["Velocidade de regurgitação tricúspide"]
-  C --> C2["Outros sinais ecocardiográficos de HP"]
-  C --> C3["Relação TAPSE/PSAP"]
-  C --> C4["Diâmetro da artéria pulmonar<br/>e da raiz da aorta, em conjunto"]
+  P1 --> D1{"Probabilidade<br/>ecocardiográfica de HP"}
 
-  C1 --> D{"Probabilidade<br/>ecocardiográfica"}
-  C2 --> D
-  C3 --> D
-  C4 --> D
+  D1 -->|Baixa| C1(["Considerar diagnóstico alternativo<br/>reavaliar se persistir a suspeita"])
 
-  D -->|Baixa| E["Considerar diagnóstico alternativo<br/>reavaliar se persistir a suspeita"]
-  D -->|"Intermediária ou alta"| F["Investigar causas comuns<br/>doença cardíaca esquerda e<br/>doença pulmonar"]
+  D1 -->|"Intermediária ou alta"| P2["Investigar causas comuns<br/>doença cardíaca esquerda e<br/>doença pulmonar"]
 
-  F --> G["Passo 3 — Confirmação<br/>cateterismo cardíaco direito<br/>em centro de HP"]
+  P2 --> P3["Passo 3 — Confirmação<br/>cateterismo cardíaco direito<br/>em centro de HP"]
 
-  G --> H{"PAPm em repouso"}
-  H -->|"maior que 20 mmHg"| I["Hipertensão pulmonar confirmada<br/>classificar o grupo hemodinâmico"]
-  H -->|"menor ou igual a 20 mmHg"| J["HP afastada pela definição atual"]
+  P3 --> D2{"PAPm em repouso"}
+  D2 -->|"maior que 20 mmHg"| C2(["Hipertensão pulmonar confirmada<br/>classificar o grupo hemodinâmico"])
+  D2 -->|"menor ou igual a 20 mmHg"| C3(["HP afastada pela definição atual"])
+
+  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  class C1,C2,C3 conduta;
 ```
+
+A probabilidade ecocardiográfica do Passo 2 não é um achado isolado: resulta da
+leitura conjunta da **velocidade de regurgitação tricúspide**, dos **demais
+sinais ecocardiográficos de HP**, da **relação TAPSE/PSAP** e do **diâmetro da
+artéria pulmonar comparado ao da raiz da aorta**. São entradas da mesma
+avaliação, e por isso não figuram como ramos da árvore.
 
 ## A definição mudou
 

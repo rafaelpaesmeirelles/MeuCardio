@@ -16,36 +16,29 @@ deve ser avaliado para doença cardiovascular e doença renal crônica**. A part
 daí, a conduta farmacológica deixa de depender exclusivamente do controle
 glicêmico.
 
-## Caminho decisório
+## Árvore de decisão
 
 ```mermaid
 flowchart TD
-  A["Paciente com doença<br/>cardiovascular estabelecida"] --> B["Rastreamento sistemático<br/>de diabetes"]
-  C["Paciente com diabetes"] --> D["Avaliar risco e presença de DCV<br/>e de doença renal crônica"]
-  B --> D
+  R0["Paciente com diabetes — próprio ou<br/>identificado pelo rastreamento sistemático<br/>de quem tem doença cardiovascular"] --> P1["Avaliar risco e presença de DCV<br/>e de doença renal crônica"]
 
-  D --> E{"Doença aterosclerótica<br/>cardiovascular estabelecida?"}
+  P1 --> D1{"Doença aterosclerótica<br/>cardiovascular estabelecida?"}
 
-  E -->|Sim| F["Agonista de receptor de GLP-1<br/>e/ou inibidor de SGLT2<br/>para reduzir risco cardiovascular"]
-  F --> G["Independente do controle glicêmico<br/>e somado ao tratamento padrão"]
-  G --> G1["Antiagregante plaquetário"]
-  G --> G2["Anti-hipertensivo"]
-  G --> G3["Hipolipemiante"]
+  D1 -->|Sim| C1(["Agonista de receptor de GLP-1<br/>e/ou inibidor de SGLT2, independente do<br/>controle glicêmico e somado ao tratamento<br/>padrão: antiagregante plaquetário,<br/>anti-hipertensivo e hipolipemiante"])
 
-  E -->|Não| H{"Insuficiência cardíaca<br/>presente?"}
-  H -->|Sim| I["Inibidor de SGLT2<br/>qualquer fração de ejeção"]
+  D1 -->|Não| D2{"Insuficiência cardíaca<br/>presente?"}
 
-  H -->|Não| J["Estimar risco pelo<br/>SCORE2-Diabetes"]
-  J --> J1["Fatores convencionais:<br/>idade, tabagismo, PA sistólica,<br/>colesterol total e HDL"]
-  J --> J2["Fatores específicos do diabetes:<br/>idade ao diagnóstico, HbA1c, TFGe"]
+  D2 -->|Sim| C2(["Inibidor de SGLT2<br/>qualquer fração de ejeção"])
 
-  J1 --> K{"Categoria de risco<br/>cardiovascular em 10 anos"}
-  J2 --> K
-  K -->|Baixo| L["Conduta conforme categoria"]
-  K -->|Moderado| L
-  K -->|Alto| L
-  K -->|Muito alto| L
+  D2 -->|Não| C3(["Estimar o risco em 10 anos pelo<br/>SCORE2-Diabetes e definir a intensidade<br/>da prevenção pela categoria obtida:<br/>baixo, moderado, alto ou muito alto"])
+
+  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  class C1,C2,C3 conduta;
 ```
+
+As variáveis que alimentam o SCORE2-Diabetes estão detalhadas na seção seguinte:
+são entradas de um mesmo cálculo, não ramos de decisão, e por isso não aparecem
+na árvore.
 
 ## SCORE2-Diabetes
 

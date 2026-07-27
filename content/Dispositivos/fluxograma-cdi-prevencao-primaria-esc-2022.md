@@ -16,29 +16,22 @@ critério isolado**. Ela continua central na doença coronariana crônica, mas n
 cardiomiopatia dilatada a indicação deixou de poder ser reduzida a um corte
 numérico.
 
-## Caminho decisório
+## Árvore de decisão
 
 ```mermaid
 flowchart TD
-  A["Avaliação para CDI<br/>em prevenção primária"] --> B{"Substrato de base"}
+  R0["Avaliação para CDI<br/>em prevenção primária"] --> D1{"Substrato de base"}
 
-  B -->|"Doença coronariana crônica"| C["FEVE combinada à<br/>classe funcional NYHA"]
-  B -->|"Cardiomiopatia dilatada ou<br/>cardiomiopatia não dilatada<br/>hipocinética"| D["Decisão não restrita<br/>à FEVE menor ou igual a 35%"]
+  D1 -->|"Doença coronariana crônica"| C1(["Indicar pela FEVE combinada à classe<br/>funcional NYHA, conforme os<br/>critérios da diretriz"])
 
-  C --> E["Indicação conforme<br/>os critérios da diretriz"]
+  D1 -->|"Cardiomiopatia dilatada ou<br/>cardiomiopatia não dilatada<br/>hipocinética"| C2(["Decisão individualizada, não restrita à<br/>FEVE menor ou igual a 35%: considerar em<br/>conjunto apresentação clínica, ressonância<br/>magnética cardíaca e teste genético"])
 
-  D --> F["Considerar em conjunto"]
-  F --> F1["Apresentação clínica"]
-  F --> F2["Ressonância magnética cardíaca"]
-  F --> F3["Teste genético"]
-
-  F1 --> G["Decisão individualizada<br/>sobre o implante"]
-  F2 --> G
-  F3 --> G
-
-  E --> H["Reavaliação periódica"]
-  G --> H
+  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  class C1,C2 conduta;
 ```
+
+A reavaliação periódica segue nos dois ramos: a indicação de CDI não é uma
+decisão tomada uma única vez, e por isso não aparece como folha da árvore.
 
 ## Onde a fração de ejeção ainda decide
 

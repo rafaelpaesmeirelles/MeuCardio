@@ -15,35 +15,28 @@ da aorta em um único documento — a justificativa declarada é a
 **interconectividade do sistema arterial como um todo**. Ela funde e atualiza as
 diretrizes de DAP de 2017 e de aorta de 2014.
 
-## Caminho decisório
+## Árvore de decisão
 
 ```mermaid
 flowchart TD
-  A["Suspeita de doença<br/>arterial periférica"] --> B["Índice tornozelo-braquial<br/>ITB em repouso — primeiro teste"]
+  R0["Suspeita de doença<br/>arterial periférica"] --> P1["Índice tornozelo-braquial<br/>ITB em repouso — primeiro teste"]
 
-  B --> C{"Valor do ITB"}
+  P1 --> D1{"Valor do ITB"}
 
-  C -->|"menor ou igual a 0,90"| D["Diagnóstico de DAP confirmado"]
-  C -->|"maior que 1,40"| E["Artérias não compressíveis<br/>ITB não interpretável para excluir DAP"]
-  C -->|"entre 0,91 e 1,40"| F["Faixa não diagnóstica<br/>manter investigação se a suspeita persistir"]
+  D1 -->|"maior que 1,40"| C1(["Artérias não compressíveis<br/>ITB não interpretável para excluir DAP"])
 
-  D --> G["Estratificar risco isquêmico"]
+  D1 -->|"entre 0,91 e 1,40"| C2(["Faixa não diagnóstica<br/>manter investigação se a suspeita persistir"])
 
-  G --> G1["Amputação prévia"]
-  G --> G2["Isquemia crônica ameaçadora<br/>do membro"]
-  G --> G3["Revascularização prévia"]
-  G --> G4["Comorbidades de alto risco:<br/>insuficiência cardíaca, diabetes,<br/>doença poliarterial"]
-  G --> G5["TFGe abaixo de<br/>60 mL/min/1,73 m²"]
+  D1 -->|"menor ou igual a 0,90"| P2["Diagnóstico de DAP confirmado<br/>estratificar o risco isquêmico"]
 
-  G1 --> H["Alto risco isquêmico"]
-  G2 --> H
-  G3 --> H
-  G4 --> H
-  G5 --> H
+  P2 --> D2{"Algum critério de<br/>alto risco isquêmico?"}
 
-  D --> I["Prevenção e modificação<br/>de estilo de vida"]
-  I --> I1["Atividade física"]
-  I --> I2["Controle de fatores de risco"]
+  D2 -->|Sim| C3(["Alto risco isquêmico — prevenção e<br/>modificação de estilo de vida, com<br/>atividade física e controle intensificado<br/>de fatores de risco"])
+
+  D2 -->|Não| C4(["Prevenção e modificação de estilo<br/>de vida: atividade física e<br/>controle de fatores de risco"])
+
+  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  class C1,C2,C3,C4 conduta;
 ```
 
 ## O ITB como primeiro teste

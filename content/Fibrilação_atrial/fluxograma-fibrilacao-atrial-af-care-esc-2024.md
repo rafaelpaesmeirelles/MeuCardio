@@ -16,30 +16,44 @@ fatores de risco deixa de ser cuidado acessório e passa a ser **o ponto de
 partida**, porque as terapias para FA são mais eficazes e a recorrência menos
 provável quando as condições associadas estão controladas.
 
-## Caminho decisório
+## A trajetória AF-CARE
+
+O AF-CARE é uma **sequência de cuidado**, não uma árvore de decisão: as quatro
+etapas se aplicam a todo paciente, em ordem, e o **E** final devolve ao começo.
+Por isso ela aparece aqui como sequência, e as duas decisões de fato
+ramificadas — anticoagular e como reduzir sintomas — aparecem logo abaixo,
+cada uma como sua própria árvore.
+
+1. **C — Comorbidades e fatores de risco.** Ponto de partida do manejo.
+2. **A — Anticoagulação.** Evitar AVC e tromboembolismo.
+3. **R — Reduzir sintomas.** Controle de frequência e de ritmo.
+4. **E — Avaliação e reavaliação dinâmica.** Retorna ao passo 1.
+
+## Árvore de decisão: anticoagulação (A)
 
 ```mermaid
 flowchart TD
-  A["Fibrilação atrial confirmada"] --> C["C — Comorbidades e fatores de risco<br/>ponto de partida do manejo"]
+  R0["Fibrilação atrial confirmada<br/>comorbidades já abordadas na etapa C"] --> D1{"Escore CHA2DS2-VA"}
 
-  C --> B["A — Anticoagulação<br/>evitar AVC e tromboembolismo"]
+  D1 -->|"maior ou igual a 2"| C1(["Anticoagulante oral indicado<br/>DOAC preferencial"])
+  D1 -->|"igual a 1"| C2(["Considerar anticoagulante oral<br/>decisão individualizada"])
+  D1 -->|"igual a 0"| C3(["Anticoagulação não indicada<br/>apenas pelo escore"])
 
-  B --> D{"Escore CHA2DS2-VA"}
-  D -->|"maior ou igual a 2"| E["Anticoagulante oral indicado<br/>DOAC preferencial"]
-  D -->|"igual a 1"| F["Considerar anticoagulante oral<br/>decisão individualizada"]
-  D -->|"igual a 0"| G["Anticoagulação não indicada<br/>apenas pelo escore"]
+  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  class C1,C2,C3 conduta;
+```
 
-  E --> H["R — Reduzir sintomas<br/>controle de frequência e ritmo"]
-  F --> H
-  G --> H
+## Árvore de decisão: redução de sintomas (R)
 
-  H --> I{"Estratégia de ritmo<br/>indicada?"}
-  I -->|"FA paroxística, candidato adequado"| J["Ablação por cateter<br/>opção de primeira linha"]
-  I -->|"Demais casos"| K["Controle de frequência<br/>e/ou antiarrítmico"]
+```mermaid
+flowchart TD
+  R0["Etapa R — reduzir sintomas<br/>após definida a anticoagulação"] --> D1{"Estratégia de controle<br/>de ritmo indicada?"}
 
-  J --> L["E — Avaliação e<br/>reavaliação dinâmica"]
-  K --> L
-  L --> C
+  D1 -->|"FA paroxística, candidato adequado"| C1(["Ablação por cateter<br/>opção de primeira linha"])
+  D1 -->|"Demais casos"| C2(["Controle de frequência<br/>e/ou antiarrítmico"])
+
+  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  class C1,C2 conduta;
 ```
 
 ## Cardioversão: a janela mudou
