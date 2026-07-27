@@ -16,7 +16,19 @@ extraction_note: "Documento reconstruído de um arquivo texto com layout de duas
 > seguimento de dispositivo ainda não foram escritos — ver `COBERTURA.md`.
 
 ## Fontes-base do módulo
-A estrutura será fundamentada principalmente em: ESC 2022 — Ventricular Arrhythmias and Prevention of Sudden Cardiac Death AHA/ACC/HRS 2017 — Ventricular Arrhythmias and Prevention of Sudden Cardiac Death Diretrizes contemporâneas de insuficiência cardíaca Consensos HRS/EHRA sobre programação e acompanhamento de dispositivos Ensaios MADIT, MADIT II, MUSTT, SCD-HeFT, DEFINITE, DANISH, DINAMIT e CABG-Patch A diretriz ESC de 2022 ampliou a estratificação para além da FEVE, incorporando com maior peso etiologia, ressonância cardíaca, genética, apresentação arrítmica e marcadores específicos de cada cardiomiopatia. ESC 365 +2 Nota de implementação: materiais da ESC possuem restrições específicas de reutilização em softwares e sistemas de inteligência artificial. O CardioBene deve utilizar redação própria, referências bibliográficas e, quando necessário, licenciamento formal, sem reproduzir tabelas ou algoritmos protegidos literalmente.
+
+- ESC 2022 — *Ventricular Arrhythmias and Prevention of Sudden Cardiac Death*
+- AHA/ACC/HRS 2017 — *Guideline for Management of Patients With Ventricular
+  Arrhythmias and the Prevention of Sudden Cardiac Death*
+- Diretrizes contemporâneas de insuficiência cardíaca
+- Consensos HRS/EHRA sobre programação e acompanhamento de dispositivos
+- Ensaios MADIT, MADIT II, MUSTT, SCD-HeFT, DEFINITE, DANISH, DINAMIT e
+  CABG-Patch
+
+A diretriz ESC de 2022 ampliou a estratificação para além da fração de ejeção,
+incorporando com maior peso a etiologia, a ressonância magnética cardíaca, a
+genética, a apresentação arrítmica e os marcadores específicos de cada
+cardiomiopatia.
 
 ## Definição
 O cardiodesfibrilador implantável — CDI é um dispositivo capaz de:

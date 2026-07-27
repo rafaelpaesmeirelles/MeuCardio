@@ -1,11 +1,11 @@
-# Colocar o CardioBene no ar
+# Colocar o MeuCardio no ar
 
 Guia para o seu servidor já contratado, com o domínio já registrado.
 
 ## 1. Antes de começar
 
 - **DNS**: crie um registro **A** apontando seu domínio (ou subdomínio, ex.
-  `cardiobene.seudominio.com.br`) para o **IP do servidor**. Sem isso o
+  `meucardio.med.br`) para o **IP do servidor**. Sem isso o
   Caddy não consegue emitir o certificado HTTPS.
 - **Portas 80 e 443 liberadas** no firewall do servidor/provedor.
 - **Chave da OpenAI** em mãos, se for ligar a IA clínica agora.
@@ -15,7 +15,7 @@ Guia para o seu servidor já contratado, com o domínio já registrado.
 Envie a pasta do projeto (via `scp`, `rsync` ou `git clone` se você versionar
 em algum repositório privado). Exemplo com `scp` a partir do seu computador:
 
-    scp -r cardiobene usuario@SEU_SERVIDOR:/opt/
+    scp -r meucardio usuario@SEU_SERVIDOR:/opt/
 
 ## 3. Configurar o ambiente
 
@@ -62,7 +62,7 @@ o Postgres com pgvector e o build do frontend rodam do zero.
     docker compose -f docker-compose.prod.yml exec backend python -m app.services.indexar
 
     # backup do banco
-    docker compose -f docker-compose.prod.yml exec db pg_dump -U cardiobene cardiobene > backup.sql
+    docker compose -f docker-compose.prod.yml exec db pg_dump -U meucardio meucardio > backup.sql
 
     # parar tudo
     docker compose -f docker-compose.prod.yml down
@@ -77,17 +77,17 @@ restart caddy`.
 
 ## Backup automático
 
-    scp -r infra/backup root@SEU_SERVIDOR:/opt/cardiobene/infra/
+    scp -r infra/backup root@SEU_SERVIDOR:/opt/meucardio/infra/
     ssh root@SEU_SERVIDOR
-    chmod +x /opt/cardiobene/infra/backup/*.sh
+    chmod +x /opt/meucardio/infra/backup/*.sh
     crontab -e
     # adicionar:
-    0 3 * * * /opt/cardiobene/infra/backup/backup.sh >> /opt/cardiobene/infra/backup/backup.log 2>&1
+    0 3 * * * /opt/meucardio/infra/backup/backup.sh >> /opt/meucardio/infra/backup/backup.log 2>&1
 
 Backup diário às 3h, compactado, com 14 dias de retenção automática. Os arquivos ficam em
 `infra/backup/dumps/`. Para restaurar:
 
-    ./infra/backup/restaurar.sh infra/backup/dumps/cardiobene_AAAA-MM-DD_HHMM.sql.gz
+    ./infra/backup/restaurar.sh infra/backup/dumps/meucardio_AAAA-MM-DD_HHMM.sql.gz
 
 O script pede confirmação explícita antes de apagar o banco atual — não é destrutivo por acidente.
 

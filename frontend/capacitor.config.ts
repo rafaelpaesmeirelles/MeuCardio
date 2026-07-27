@@ -9,7 +9,7 @@ import type { CapacitorConfig } from "@capacitor/cli";
  *   npm run sync:mobile
  */
 const config: CapacitorConfig = {
-  appId: "br.org.beneficenciaportuguesa.cardiobene",
+  appId: "br.med.meucardio",
   appName: "MeuCardio",
   webDir: "dist",
   server: {

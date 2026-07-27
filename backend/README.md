@@ -1,4 +1,4 @@
-# CardioBene — API
+# MeuCardio — API
 
 FastAPI + PostgreSQL + Redis.
 

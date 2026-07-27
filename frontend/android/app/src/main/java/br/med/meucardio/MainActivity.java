@@ -1,4 +1,4 @@
-package br.org.beneficenciaportuguesa.cardiobene;
+package br.med.meucardio;
 
 import com.getcapacitor.BridgeActivity;
 

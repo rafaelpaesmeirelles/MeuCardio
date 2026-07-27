@@ -172,47 +172,70 @@ Processo, igual para as seis:
   `https://meucardio.med.br/api/billing/webhook`. Chaves no `.env`:
   `STRIPE_PUBLISHABLE_KEY`, `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET`,
   `STRIPE_PRICE_ID` (valores reais só no `.env`, nunca commitados).
-- Início dos fluxogramas clínicos: dependência `mermaid` adicionada ao
-  `package.json`; componente `frontend/src/components/Fluxograma.tsx` criado
-  (renderiza blocos ```mermaid``` via lib `mermaid`); `Documento.tsx` ajustado
-  para detectar `kind === "fluxograma"` e renderizar visualmente; item de
-  menu "⚡ Fluxogramas clínicos" adicionado ao `Shell.tsx` apontando para
-  `/fluxogramas` (rota/página de listagem **ainda não criada**).
+- Fluxogramas clínicos no ar: dependência `mermaid` no `package.json`,
+  componente `frontend/src/components/Fluxograma.tsx`, `Documento.tsx`
+  detectando `kind === "fluxograma"`, página de listagem `/fluxogramas` e item
+  de menu no `Shell.tsx`. Rebuild confirmado em produção — o `mermaid` é
+  servido como chunk separado e a rota responde. 16 fluxogramas publicados,
+  todos no formato de árvore de decisão.
+- Minha Conta implementado (commit `d13c330`): `PATCH /api/auth/me`,
+  `POST /api/auth/alterar-senha`, `POST /api/billing/portal` (Stripe Customer
+  Portal) e a página `frontend/src/pages/MinhaConta.tsx` em `/minha-conta`.
+  **Falta o deploy** — ver "O que falta fazer".
+- **Pegadinha do Customer Portal: a configuração do portal é por modo.** O
+  Rafael ativou o portal no painel, mas em modo *live* — o link gerado foi
+  `https://billing.stripe.com/p/login/fZu9AS6n3bKD30JgGy2sM00`, e link de
+  teste teria o prefixo `test_`. Conferido via API com a chave do `.env`
+  (`GET /v1/billing_portal/configurations` devolveu **0 configurações**),
+  porque o `.env` usa `sk_test_`. Enquanto o portal não for salvo também em
+  modo de teste, `POST /api/billing/portal` cai no `InvalidRequestError` e
+  devolve 503. A conta ainda está com `charges_enabled: false`, então trocar
+  para chave live não é alternativa disponível hoje.
+- Rebranding concluído e conferido por varredura no repositório inteiro: além
+  do frontend, foram corrigidos o `<title>` da página, o nome do PWA, o app
+  Android (pacote renomeado de `br.org.beneficenciaportuguesa.cardiobene` para
+  `br.med.meucardio`, com `MainActivity.java` movido de diretório), a URL do
+  Capacitor, `DEPLOY.md`, `COBERTURA.md`, `backend/README.md` e a chave do
+  localStorage. As duas únicas ocorrências que sobraram são deliberadas: a
+  regra neste arquivo, que precisa citar o termo para poder proibi-lo, e o
+  nome literal do ZIP legado no histórico do `COBERTURA.md`, que é registro
+  de proveniência.
+- Chave do token no localStorage passou de `cardiobene.token` para
+  `meucardio.token`, com **migração automática** em `frontend/src/lib/api.ts`:
+  o `token.get()` lê a chave antiga, copia para a nova e apaga a antiga. Sem
+  isso, a troca deslogaria todos os usuários de uma vez. A constante
+  `TOKEN_KEY_ANTIGA` existe só para essa migração — pode ser removida quando
+  já não houver sessões antigas em circulação.
 
 ## O que falta fazer
 Ordem de prioridade herdada das metas: primeiro o que destrava a cobrança da
-assinatura (itens 3 e 5), depois amplitude de conteúdo (item 2), depois o resto.
+assinatura (itens 1, 3 e 4), depois amplitude de conteúdo (item 2).
 
-1. **Confirmar o rebuild do frontend** (mermaid + logo no Shell) terminou
-   sem erro: `docker compose -f docker-compose.prod.yml up -d --build frontend-build`.
-2. **Fluxogramas clínicos** — conteúdo ainda não escrito, só a infraestrutura.
-   Decisão do Rafael: sem fluxo de revisão humana interna (ele assume a
-   responsabilidade clínica como cardiologista responsável do projeto), abrangendo
-   todas as patologias, com destaque na navegação. Mesmo assim, fundamentar
-   cada fluxograma em diretriz atual (ESC/AHA/ACC/SBC) via pesquisa — não
-   preencher de memória cortes de score, doses ou sequência de algoritmo.
-   Lista de patologias a cobrir (mesma do restante do projeto): SCA/IAM
-   (já pesquisado: ESC 2023, unificou STEMI/NSTE-ACS), choque cardiogênico,
-   IC (HFrEF/HFpEF), arritmias (FA, ablação, CDI), hipertensão pulmonar, TEV,
-   gestação e DCV, valvopatias, diabetes e DCV, DAP/aórtica, síncope.
-   Reaproveitar a tabela `documents` existente com `kind = "fluxograma"`.
-   Falta criar: página de listagem `/fluxogramas` (filtro `kind=fluxograma`
-   via `GET /api/library/documents?kind=fluxograma`) e o primeiro conteúdo
-   (SCA/IAM) para validar o formato antes de produzir os demais em lote.
-3. **Menu "Minha Conta"** — não existe ainda. Hoje só há `GET /me` no backend
-   (`backend/app/api/auth.py`). Precisa: endpoint de troca de senha logada,
-   endpoint de atualização de dados pessoais, endpoint/uso do Stripe Customer
-   Portal para troca de forma de pagamento e cancelamento de assinatura
-   (diferente do Checkout Session já implementado), página de frontend
-   reunindo dados da conta + dados da assinatura (`/billing/status`) + essas
-   ações. Pré-requisito para vender assinatura de verdade.
-4. Verificar se restam outras referências institucionais antigas
-   (Beneficência Portuguesa de Ribeirão Preto, CardioBenê, cardiobene) em
-   qualquer outro arquivo — só foi checado uma vez, no início do rebranding.
-5. Trocar as chaves do Stripe de teste (`pk_test_`/`sk_test_`) para produção
+1. **Subir o deploy do Minha Conta.** O código está commitado e no GitHub, mas
+   o container em produção ainda roda a versão anterior — o Claude não tem
+   senha de sudo para o Docker no servidor, então quem roda é o Rafael:
+   `sudo docker compose -f docker-compose.prod.yml up -d --build backend frontend-build`.
+   Enquanto isso não rodar, `/minha-conta` responde 404 em produção.
+2. **Ampliar os fluxogramas clínicos.** Infraestrutura e formato prontos; 16
+   documentos publicados (SCA, FA, IC, HP, síncope, TEP, estenose aórtica,
+   diabetes, gravidez, DAP, CDI, choque cardiogênico, endocardite, síndrome
+   aórtica aguda, cardiomiopatia hipertrófica, hipertensão arterial). Formato
+   obrigatório de árvore de decisão: ver a seção própria acima. Patologias
+   ainda sem fluxograma, em ordem sugerida: regurgitação mitral, miocardite,
+   amiloidose cardíaca, bradiarritmia e indicação de marcapasso, taquicardia
+   de QRS largo e TV, síndrome coronariana crônica, pericardite, cardiopatia
+   congênita do adulto, cardio-oncologia, avaliação perioperatória, febre
+   reumática, dislipidemia e prevenção primária.
+3. **Salvar a configuração do Customer Portal também em modo de teste**, no
+   painel do Stripe: alternar para *Test mode* → Settings → Billing → Customer
+   portal → salvar as configurações padrão. Sem isso o botão "Gerenciar
+   assinatura" da página Minha Conta devolve 503 enquanto o `.env` usar
+   `sk_test_` (ver a pegadinha registrada acima).
+4. **Trocar as chaves do Stripe de teste (`pk_test_`/`sk_test_`) para produção**
    (`pk_live_`/`sk_live_`) quando o Rafael decidir ativar cobranças reais —
-   requer conta Stripe totalmente verificada (aparecia "Análise em andamento"
-   no painel).
+   requer conta Stripe totalmente verificada. Conferido nesta sessão:
+   `details_submitted: true`, mas `charges_enabled: false`, então a conta ainda
+   não cobra. É o último bloqueio para faturar de verdade.
 
 ## Notas importantes
 - O usuário (Rafael) opera via terminal SSH em um app de celular — comandos

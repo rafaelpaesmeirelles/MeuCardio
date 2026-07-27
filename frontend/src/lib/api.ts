@@ -1,10 +1,26 @@
 const BASE = import.meta.env.VITE_API_URL ?? "/api";
-const TOKEN_KEY = "cardiobene.token";
+const TOKEN_KEY = "meucardio.token";
+// Chave usada antes do rebranding. Só existe para migrar quem já estava
+// logado — trocar a chave sem isso deslogaria todo mundo de uma vez.
+const TOKEN_KEY_ANTIGA = "cardiobene.token";
 
 export const token = {
-  get: () => localStorage.getItem(TOKEN_KEY),
+  get: () => {
+    const atual = localStorage.getItem(TOKEN_KEY);
+    if (atual) return atual;
+    const antiga = localStorage.getItem(TOKEN_KEY_ANTIGA);
+    if (antiga) {
+      localStorage.setItem(TOKEN_KEY, antiga);
+      localStorage.removeItem(TOKEN_KEY_ANTIGA);
+      return antiga;
+    }
+    return null;
+  },
   set: (v: string) => localStorage.setItem(TOKEN_KEY, v),
-  clear: () => localStorage.removeItem(TOKEN_KEY),
+  clear: () => {
+    localStorage.removeItem(TOKEN_KEY);
+    localStorage.removeItem(TOKEN_KEY_ANTIGA);
+  },
 };
 
 export class ApiError extends Error {

@@ -1,4 +1,4 @@
-# Cobertura da base científica — CardioBene
+# Cobertura da base científica — MeuCardio
 
 Medido diretamente sobre os arquivos em `content/` (contagem por `theme:` do front matter
 de cada documento). Nenhum número é estimado.
