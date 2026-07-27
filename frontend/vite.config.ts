@@ -9,8 +9,8 @@ export default defineConfig({
       registerType: "autoUpdate",
       includeAssets: ["favicon.png", "apple-touch-icon.png", "logo-horizontal.png", "brasao.png"],
       manifest: {
-        name: "CardioBene — Guia de Cardiologia",
-        short_name: "CardioBene",
+        name: "MeuCardio — Guia de Cardiologia",
+        short_name: "MeuCardio",
         description:
           "Plataforma clínica de apoio à decisão em Cardiologia.",
         lang: "pt-BR",
@@ -32,7 +32,7 @@ export default defineConfig({
             // Conteúdo científico fica disponível offline após a primeira leitura.
             urlPattern: /\/api\/(library|calculators|drugs)/,
             handler: "StaleWhileRevalidate",
-            options: { cacheName: "cardiobene-conteudo", expiration: { maxEntries: 500 } }
+            options: { cacheName: "meucardio-conteudo", expiration: { maxEntries: 500 } }
           },
           {
             // Dados de paciente nunca são cacheados.

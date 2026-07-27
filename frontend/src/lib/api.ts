@@ -72,4 +72,13 @@ export type Usuario = {
   full_name: string;
   crm: string | null;
   role: string;
+  specialty: string | null;
+  council: string | null;
+  profession: string | null;
+  council_name: string | null;
+  council_number: string | null;
+  council_state: string | null;
+  cpf_mascarado: string | null;
+  birth_date: string | null;
+  created_at: string;
 };

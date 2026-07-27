@@ -10,14 +10,14 @@ import type { CapacitorConfig } from "@capacitor/cli";
  */
 const config: CapacitorConfig = {
   appId: "br.org.beneficenciaportuguesa.cardiobene",
-  appName: "CardioBene",
+  appName: "MeuCardio",
   webDir: "dist",
   server: {
     // O app carrega o site ao vivo, não um build congelado dentro do pacote.
     // Vantagem: atualizar o site atualiza o app pra todo mundo, sem passar
     // de novo pela loja. Desvantagem: sem internet, o app não abre (dá pra
     // resolver depois com um modo offline dedicado, se precisar).
-    url: "https://cardiobeneribeirao.com.br",
+    url: "https://meucardio.med.br",
     androidScheme: "https",
     cleartext: false,
   },

@@ -29,6 +29,7 @@ import Estudo from "./pages/Estudo";
 import Agenda from "./pages/Agenda";
 import Templates from "./pages/Templates";
 import Assinatura from "./pages/Assinatura";
+import MinhaConta from "./pages/MinhaConta";
 
 export default function App() {
   const { usuario, carregando } = useAuth();
@@ -70,7 +71,8 @@ export default function App() {
         <Route path="round" element={<Round />} />
         <Route path="agenda" element={<Agenda />} />
         <Route path="documentos" element={<Templates />} />
-          <Route path="assinatura" element={<Assinatura />} />
+        <Route path="assinatura" element={<Assinatura />} />
+        <Route path="minha-conta" element={<MinhaConta />} />
         {usuario.role === "admin" && (
           <Route path="admin" element={<Admin />} />
         )}

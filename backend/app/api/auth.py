@@ -35,14 +35,100 @@ def login(form: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get
     return {"access_token": create_access_token(user.email), "token_type": "bearer"}
 
 
-@router.get("/me")
-def me(user: User = Depends(current_user)):
+def _cpf_mascarado(cpf: str | None) -> str | None:
+    """Só os quatro últimos dígitos ficam legíveis — o suficiente pro titular
+    reconhecer o próprio cadastro sem expor o documento inteiro na tela."""
+    if not cpf:
+        return None
+    digitos = limpar_cpf(cpf)
+    if len(digitos) != 11:
+        return None
+    return f"***.***.{digitos[6:9]}-{digitos[9:]}"
+
+
+def _perfil(user: User) -> dict:
     return {
         "id": user.id, "email": user.email, "full_name": user.full_name,
         "role": user.role, "specialty": user.specialty,
         "council": f"{user.council_name} {user.council_number}/{user.council_state}"
                    if user.council_name else None,
+        "crm": user.crm,
+        "profession": user.profession,
+        "council_name": user.council_name,
+        "council_number": user.council_number,
+        "council_state": user.council_state,
+        "cpf_mascarado": _cpf_mascarado(user.cpf),
+        "birth_date": user.birth_date,
+        "created_at": user.created_at,
     }
+
+
+@router.get("/me")
+def me(user: User = Depends(current_user)):
+    return _perfil(user)
+
+
+class DadosPessoais(BaseModel):
+    """Só o que o próprio titular pode corrigir sozinho. E-mail fica de fora
+    porque é a identidade do token JWT, e CPF/data de nascimento porque são os
+    dados conferidos na aprovação do cadastro — mudança neles passa pelo admin."""
+
+    full_name: str
+    profession: str | None = None
+    council_name: str | None = None
+    council_number: str | None = None
+    council_state: str | None = None
+    specialty: str | None = None
+
+    @field_validator("full_name")
+    @classmethod
+    def _nome(cls, v: str) -> str:
+        if len(v.strip().split()) < 2:
+            raise ValueError("Informe nome completo.")
+        return v.strip()
+
+    @field_validator("council_state")
+    @classmethod
+    def _uf(cls, v: str | None) -> str | None:
+        if v is None or not v.strip():
+            return None
+        v = v.strip().upper()
+        if v not in UFS:
+            raise ValueError("Estado do conselho inválido — use a sigla (ex.: SP).")
+        return v
+
+
+@router.patch("/me")
+def atualizar_me(dados: DadosPessoais, db: Session = Depends(get_db),
+                 user: User = Depends(current_user)):
+    user.full_name = dados.full_name
+    user.profession = (dados.profession or "").strip() or None
+    user.council_name = (dados.council_name or "").strip().upper() or None
+    user.council_number = (dados.council_number or "").strip() or None
+    user.council_state = dados.council_state
+    user.specialty = (dados.specialty or "").strip() or None
+    db.commit()
+    db.refresh(user)
+    return _perfil(user)
+
+
+class TrocaDeSenha(BaseModel):
+    senha_atual: str
+    nova_senha: str
+
+
+@router.post("/alterar-senha")
+def alterar_senha(dados: TrocaDeSenha, db: Session = Depends(get_db),
+                  user: User = Depends(current_user)):
+    if not verify_password(dados.senha_atual, user.password_hash):
+        raise HTTPException(status_code=400, detail="Senha atual incorreta.")
+    if len(dados.nova_senha) < 8:
+        raise HTTPException(status_code=422, detail="A nova senha precisa ter ao menos 8 caracteres.")
+    if dados.nova_senha == dados.senha_atual:
+        raise HTTPException(status_code=422, detail="A nova senha precisa ser diferente da atual.")
+    user.password_hash = hash_password(dados.nova_senha)
+    db.commit()
+    return {"nota": "Senha alterada."}
 
 
 class SolicitacaoAcesso(BaseModel):

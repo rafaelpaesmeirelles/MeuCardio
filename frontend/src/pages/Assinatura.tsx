@@ -69,7 +69,7 @@ export default function Assinatura() {
           <div className="fio-dourado" style={{ margin: "1rem 0" }} />
 
           <p>
-            <strong>R$ 20,00/mês</strong> — acesso completo à plataforma CardioBenê.
+            <strong>R$ 20,00/mês</strong> — acesso completo à plataforma MeuCardio.
           </p>
 
           {erro && (

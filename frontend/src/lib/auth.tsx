@@ -6,6 +6,7 @@ type Estado = {
   carregando: boolean;
   entrar: (email: string, senha: string) => Promise<void>;
   sair: () => void;
+  recarregar: () => void;
 };
 
 const Ctx = createContext<Estado | null>(null);
@@ -36,7 +37,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setUsuario(null);
   }
 
-  return <Ctx.Provider value={{ usuario, carregando, entrar, sair }}>{children}</Ctx.Provider>;
+  // Usada depois de editar o perfil em /minha-conta, pra que o nome no
+  // cabeçalho reflita a alteração sem exigir novo login.
+  function recarregar() {
+    if (!token.get()) return;
+    api.get<Usuario>("/auth/me").then(setUsuario).catch(() => {});
+  }
+
+  return (
+    <Ctx.Provider value={{ usuario, carregando, entrar, sair, recarregar }}>{children}</Ctx.Provider>
+  );
 }
 
 export function useAuth() {

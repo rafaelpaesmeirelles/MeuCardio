@@ -4,7 +4,9 @@ import { useAuth } from "../lib/auth";
 import { api } from "../lib/api";
 import Credito from "./Credito";
 
-const NAV_BASE = [
+type ItemNav = { to: string; rotulo: string; curto: string; fim?: boolean };
+
+const NAV_BASE: ItemNav[] = [
   { to: "/", rotulo: "Painel", curto: "Painel", fim: true },
   { to: "/assistente", rotulo: "Assistente clínico", curto: "Assistente" },
   { to: "/biblioteca", rotulo: "Biblioteca científica", curto: "Biblioteca" },
@@ -32,14 +34,16 @@ export default function Shell() {
     api.get<any[]>("/admin/users?status=pendente").then((l) => setPendentes(l.length)).catch(() => {});
   }, [usuario]);
 
-  const nav =
+  const CONTA: ItemNav = { to: "/minha-conta", rotulo: "Minha conta", curto: "Conta" };
+
+  const nav: ItemNav[] =
     usuario?.role === "admin"
       ? [...NAV_BASE, {
           to: "/admin",
           rotulo: pendentes > 0 ? `Administração (${pendentes})` : "Administração",
           curto: pendentes > 0 ? `Admin (${pendentes})` : "Admin",
-        }]
-      : NAV_BASE;
+        }, CONTA]
+      : [...NAV_BASE, CONTA];
 
   return (
     <div>
@@ -59,7 +63,9 @@ export default function Shell() {
           <span className="topo__marca">MeuCardio</span>
         </div>
         <div className="topo__usuario">
-          {usuario?.full_name}
+          <NavLink to="/minha-conta" style={{ color: "inherit" }}>
+            {usuario?.full_name}
+          </NavLink>
           <button
             onClick={sair}
             className="botao botao--secundario"

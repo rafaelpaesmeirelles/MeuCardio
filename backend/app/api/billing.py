@@ -105,6 +105,31 @@ def criar_checkout(db: Session = Depends(get_db), user: User = Depends(current_u
     return {"checkout_url": session["url"]}
 
 
+@router.post("/portal")
+def abrir_portal(db: Session = Depends(get_db), user: User = Depends(current_user)):
+    """Customer Portal do Stripe: é por ele que o assinante troca o cartão,
+    baixa recibo e cancela. Diferente do Checkout, que só serve pra assinar."""
+    sub = db.query(Subscription).filter(Subscription.user_id == user.id).first()
+    if not sub or not sub.stripe_customer_id:
+        raise HTTPException(
+            status_code=404,
+            detail="Você ainda não tem uma assinatura para gerenciar.",
+        )
+    try:
+        session = stripe.billing_portal.Session.create(
+            customer=sub.stripe_customer_id,
+            return_url=f"{settings.public_url}/minha-conta",
+        )
+    except stripe.error.InvalidRequestError:
+        # Caso clássico: o portal ainda não teve as configurações salvas no
+        # painel do Stripe. É erro de configuração nossa, não do assinante.
+        raise HTTPException(
+            status_code=503,
+            detail="O portal de assinatura está indisponível no momento. Tente novamente mais tarde.",
+        )
+    return {"portal_url": session["url"]}
+
+
 @router.get("/status")
 def status_assinatura(db: Session = Depends(get_db), user: User = Depends(current_user)):
     sub = db.query(Subscription).filter(Subscription.user_id == user.id).first()
