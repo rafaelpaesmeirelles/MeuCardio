@@ -4,7 +4,7 @@ slug: ezetimiba
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["Ezetimiba: farmacocinética e terapêutica · Arquivos Brasileiros de Cardiologia/SciELO · 2005 · https://www.scielo.br/j/abc/a/TgsCg95WVQHyh7Cdn3stbnG/", "Ezetimibe: Clinical and Scientific Meaning of the IMPROVE-IT Study · SciELO · 2016 · https://www.scielo.br/j/abc/a/9wBykJvH3XSfTjxV5Gjrvzr/?lang=pt", "Ezetimiba: bula, para que serve e como usar · Consulta Remédios/ANVISA · 2024 · https://consultaremedios.com.br/ezetimiba/bula"]
+source_refs: ["Ezetimibe tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 090776cf-f211-49a3-a993-ff5d707311f2", "Cannon CP, Blazing MA, Giugliano RP, et al. Ezetimibe added to statin therapy after acute coronary syndromes (IMPROVE-IT). N Engl J Med. 2015;372(25):2387-2397. DOI: 10.1056/NEJMoa1410489"]
 legacy_source: "medicamentos/banco-de-medicamentos-ezetimiba.md"
 ---
 
@@ -27,10 +27,12 @@ Comprimidos de 10 mg — dose ótima identificada em ensaios de Fase II ao compa
 
 ## Dose
 - **padrao**: 10 mg VO 1x/dia, isolado ou em associação com estatina
-- **fonte**: Scielo — Farmacocinética e Terapêutica
+- **fonte**: rótulo da ezetimiba aprovado pelo FDA (DailyMed)
 
 ## Indicacoes
-Em associação com estatina, indicado para redução de colesterol total e LDL-C em pacientes com hipercolesterolemia familiar homozigótica (HFHo); em associação com fenofibrato, eficaz para melhorar colesterol total, LDL-C, ApoB, triglicérides e HDL-C
+Redução de colesterol total e LDL-C na **hipercolesterolemia primária**, isolada ou associada a estatina — que é o uso de longe mais frequente e o que a própria seção de posicionamento em diretrizes deste documento descreve. Também na hipercolesterolemia familiar homozigótica, em associação com estatina, e na sitosterolemia homozigótica.
+
+A versão anterior listava **apenas** a hipercolesterolemia familiar homozigótica como indicação de uso com estatina, o que fazia a ezetimiba parecer fármaco de doença rara e contradizia o próprio verbete, que a apresenta como segunda linha após estatina em dose máxima tolerada. VERIFICAÇÃO HUMANA NECESSÁRIA para o conjunto exato de indicações registradas na ANVISA
 
 ## Efeito incremental com estatina
 Associação com estatina de alta potência proporciona incremento de aproximadamente 15-20% na redução adicional de LDL-C além do efeito já obtido pela estatina isolada (efeito aditivo, não sinérgico exponencial)

@@ -4,7 +4,7 @@ slug: hidralazina
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["HIDRALAZINA — Guia Farmacêutico · Hospital Sírio-Libanês · https://guiafarmaceutico.hsl.org.br/hidralazina", "Hipertensão na Gravidez — Protocolo · CAISM/UNICAMP · https://www.caism.unicamp.br/download/protocolos/obstetricia/Hipertens%C3%A3o%20na%20Gravidez.pdf"]
+source_refs: ["Hydralazine hydrochloride — rótulo aprovado pelo FDA, DailyMed SPL setid 1275dd50-d97f-2e8f-e063-6394a90a4a67", "Taylor AL, Ziesche S, Yancy C, et al. Combination of isosorbide dinitrate and hydralazine in blacks with heart failure (A-HeFT). N Engl J Med. 2004;351(20):2049-2057. DOI: 10.1056/NEJMoa042934. PMID: 15533851"]
 legacy_source: "medicamentos/banco-de-medicamentos-hidralazina.md"
 ---
 
@@ -32,7 +32,7 @@ Comprimidos de 25 e 50 mg; ampola injetável 20 mg
 - **emergencia hipertensiva gestacional**: 5 mg (2,5mL) EV em bolus, observando PA a cada 20 min; repetir 10mg se necessário (dose total 20mg); início de efeito em 15-20min, duração 2-6h
 - **dose maxima adultos**: 300 mg/dia
 - **dose maxima criancas**: 200 mg/dia
-- **fonte**: Guia Farmacêutico HSL ; Protocolo CAISM-UNICAMP
+- **fonte**: rótulo da hidralazina aprovado pelo FDA (DailyMed). VERIFICAÇÃO HUMANA NECESSÁRIA para o esquema da emergência hipertensiva gestacional, que vinha de protocolo institucional de terceiro — conferir contra a diretriz de hipertensão na gravidez vigente, porque dose e intervalo nessa indicação variam entre protocolos
 
 ## Ajuste renal
 Não é necessária dose suplementar em hemodiálise

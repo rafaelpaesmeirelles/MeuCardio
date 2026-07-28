@@ -4,7 +4,7 @@ slug: clonidina
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["CLONIDINA — Guia Farmacêutico · Hospital São Camilo · 2022 · https://guiafarmaceutico.hospitalsaocamilosp.org.br/blog/2022/11/15/clonidina/", "ATENSINA (cloridrato de clonidina) — Bula Paciente · Anvisa · https://bula-anvisa.s3.sa-east-1.amazonaws.com/158320003_paciente.pdf"]
+source_refs: ["Clonidine hydrochloride tablets — rótulo aprovado pelo FDA, DailyMed SPL setid e96ab74c-eedf-4d71-8a35-d5ec3daa7592"]
 legacy_source: "Clonidina (dose completa, fecha lacuna anterior)"
 ---
 
@@ -34,7 +34,7 @@ Comprimidos de 0,100 mg e 0,150 mg (Atensina); solução injetável 150 mcg/mL
 - **dose maxima comprimido**: 2,4 mg/dia VO
 - **dose maxima injetavel**: 40 mcg/h para infusão peridural
 - **administracao**: Com ou sem alimentos
-- **fonte**: Guia Farmacêutico Hospital São Camilo
+- **fonte**: rótulo da clonidina aprovado pelo FDA (DailyMed), no lugar do guia farmacêutico de outra instituição
 
 ## Ajuste renal
 Dose estabelecida conforme resposta anti-hipertensiva individual; não é necessária dose suplementar após hemodiálise (clonidina não é dialisável, 0-5%)

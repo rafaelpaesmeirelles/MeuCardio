@@ -4,7 +4,7 @@ slug: nitroglicerina-trinitrato-de-glicerila
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["Resumo de Nitroglicerina: ação, farmacocinética, indicações, efeitos adversos e interações · Sanarmed · 2021 · https://sanarmed.com/resumo-de-nitroglicerina-acao-farmacocinetica-indicacoes-efeitos-adversos-e-interacoes/", "Nitroglicerina: evidencia y práctica clínica · CardioTeca · 2026 · https://www.cardioteca.com/tratamientos/8193-nitroglicerina-nitroglycerin-practica-clinica-guia-especialista.html"]
+source_refs: ["Nitroglycerin sublingual tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 562d2e03-dfed-41ff-8e7f-ec4169141983"]
 legacy_source: "medicamentos/banco-de-medicamentos-nitroglicerina.md"
 ---
 
@@ -26,7 +26,7 @@ Metabolizada em óxido nítrico (NO), ativando guanilato ciclase e aumentando GM
 - **ev titulacao**: Aumentar conforme necessário, até dose máxima de 100 mcg/min
 - **ev indicacao pratica**: Comumente instituída após 3 doses sublinguais sem efeito esperado
 - **farmacocinetica**: Início de ação 2-5min, duração de efeito 5-10min (via sublingual/EV)
-- **fonte**: Sanarmed — Resumo de Nitroglicerina
+- **fonte**: rótulo da nitroglicerina aprovado pelo FDA (DailyMed), no lugar do material de estudante que sustentava esta seção
 
 ## Indicacoes
 Episódios anginosos agudos, profilaxia de angina antes de atividades desencadeantes conhecidas, edema agudo de pulmão, crise hipertensiva com isquemia associada

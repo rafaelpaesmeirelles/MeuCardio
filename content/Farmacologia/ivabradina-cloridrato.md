@@ -4,7 +4,7 @@ slug: ivabradina-cloridrato
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["Ivabradina — Guia Farmacêutico · Hospital Sírio-Libanês · https://guiafarmaceutico.hsl.org.br/ivabradina", "PROCORALAN (ivabradina) — Bula Profissional · Servier · https://servier.com.br/wp-content/uploads/sites/42/2025/11/25.11.06_Bula_Profissional_Procoralan.pdf"]
+source_refs: ["Swedberg K, Komajda M, Böhm M, et al. Ivabradine and outcomes in chronic heart failure (SHIFT): a randomised placebo-controlled study. Lancet. 2010;376(9744):875-885. DOI: 10.1016/S0140-6736(10)61198-1. PMID: 20801500"]
 legacy_source: "medicamentos/banco-de-medicamentos-ivabradina-2.md"
 ---
 
@@ -30,17 +30,17 @@ Comprimidos revestidos de 5 mg e 7,5 mg
 - **icfer titulacao**: Após 2 semanas, ajustar se FC persistentemente >60bpm
 - **icfer dose maxima**: 7,5 mg 2x/dia
 - **criterio indicacao ic**: ICFEr NYHA II-IV, ritmo sinusal, FC≥70bpm, em combinação com terapia padrão incluindo betabloqueador (ou quando betabloqueador é contraindicado/não tolerado)
-- **beneficio demonstrado**: Reduz sintomas, mortalidade cardiovascular, mortalidade por IC e hospitalização por piora de IC
+- **beneficio demonstrado**: reduz o desfecho composto de morte cardiovascular ou hospitalização por IC, **por conta da hospitalização por piora de IC e da morte por insuficiência cardíaca**. A versão anterior deste verbete afirmava redução de **mortalidade cardiovascular**, que o SHIFT não demonstrou — e a própria seção de evidência do documento já dizia que o efeito vinha das hospitalizações. A distinção separa um fármaco que alivia carga de doença de um que modifica mortalidade
 - **ajuste renal clcr maior 15**: Sem ajuste necessário
 - **ajuste renal clcr menor 15**: Não estudado nessa população
 - **ajuste hepatico leve moderado child a b**: Sem ajuste necessário
 - **ajuste hepatico grave**: Contraindicado
 - **pediatria**: Eficácia/segurança não estabelecidas em menores de 18 anos para IC crônica
 - **administracao**: VO, às refeições; pode ser administrada via SNE (revestimento é apenas cosmético)
-- **fonte**: Guia Farmacêutico HSL
+- **fonte**: VERIFICAÇÃO HUMANA NECESSÁRIA — as faixas de dose e os ajustes desta seção vinham de guia farmacêutico de outra instituição. Conferir contra a bula registrada na ANVISA; os critérios de indicação em IC conferem com o SHIFT
 
 ## Evidencia pivotal shift
-Estudo SHIFT (>6.500 pacientes ICFER, FC≥70bpm, ritmo sinusal): ivabradina reduziu significativamente o desfecho composto de morte CV/hospitalização por IC, principalmente por redução de hospitalizações — base regulatória para aprovação em IC
+SHIFT (Lancet, 2010): 6.558 pacientes com IC-FEr, frequência cardíaca ≥70 bpm e ritmo sinusal, seguimento mediano de 22,9 meses. O desfecho primário composto de morte cardiovascular ou hospitalização por piora de IC ocorreu em 24% com ivabradina contra 29% com placebo — **HR 0,82; IC95% 0,75-0,90; p<0,0001**. O efeito veio de dois componentes: hospitalização por piora de IC (16% contra 21%; HR 0,74; IC95% 0,66-0,83; p<0,0001) e **morte por insuficiência cardíaca** (3% contra 5%; HR 0,74; IC95% 0,58-0,94; p=0,014). Mortalidade cardiovascular como um todo não figura entre os desfechos reduzidos
 
 ## Contraindicacoes
 - Hipersensibilidade

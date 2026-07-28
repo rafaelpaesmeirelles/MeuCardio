@@ -4,7 +4,7 @@ slug: atorvastatina-calcica
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["Atorvastatina · Guia Farmacêutico HSL · https://guiafarmaceutico.hsl.org.br/atorvastatina", "Atorvastatina: evidência e prática clínica · Cardioteca · https://www.cardioteca.com/tratamientos/8273-atorvastatina-atorvastatin-practica-clinica-guia-especialista.html"]
+source_refs: ["Atorvastatin calcium tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 86841382-4229-4e03-958e-3ac22639efd4"]
 legacy_source: "medicamentos/banco-de-medicamentos-item-21.md"
 ---
 
@@ -31,7 +31,7 @@ Comprimidos de 10, 20, 40 e 80 mg
 - **sca alto risco**: Até 80 mg/dia, individualizada conforme meta de LDL-C
 - **pediatria 10 17 anos**: 20 mg/dia (dose máxima)
 - **via administracao**: Via oral, pode ser tomada em qualquer horário do dia, independente de refeições
-- **fonte**: Guia Farmacêutico HSL
+- **fonte**: rótulo da atorvastatina aprovado pelo FDA (DailyMed). VERIFICAÇÃO HUMANA NECESSÁRIA para a dose pediátrica de 20 mg/dia como máximo, que deve ser conferida contra a bula registrada na ANVISA
 
 ## Ajuste renal
 Não é necessário ajuste de dose em insuficiência renal, incluindo pacientes em hemodiálise — diferencia-se de outras estatinas que requerem ajuste
