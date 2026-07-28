@@ -26,7 +26,7 @@ Angina pectoris (crises agudas e profilaxia), edema agudo de pulmão, crise hipe
 Uso contínuo desenvolve tolerância farmacológica (taquifilaxia) em 24-48h — requer intervalo livre de nitrato de pelo menos 8-12h/dia para manter eficácia em uso crônico
 
 ## Dose especifica
- — esquema numérico completo de dose por apresentação (sublingual, EV, transdérmica, oral) e por indicação não foi extraído com valores precisos de fonte primária nesta rodada
+ — o esquema de dose por apresentação e por indicação está nas monografias individuais: `nitroglicerina-trinitrato-de-glicerila.md` e `dinitrato-de-isossorbida.md`, nesta mesma pasta, ambas já conferidas contra rótulo aprovado
 
 ## Contraindicacoes
 - Uso concomitante com inibidores de fosfodiesterase-5 (sildenafila, tadalafila) — risco de hipotensão grave

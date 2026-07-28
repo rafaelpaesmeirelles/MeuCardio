@@ -38,7 +38,7 @@ Fornecer orientação clara para avaliação segura e eficiente, decisão razoá
  — critérios restritivos específicos mencionados no resumo não foram detalhados nesta rodada; consultar diretriz completa (Eur Heart J 2018;39:1883-1948)
 
 ## Classificacao etiologica detalhada
- — subtipos de síncope reflexa, ortostática e cardíaca requerem módulo dedicado com fonte primária completa
+ — os três grandes grupos (reflexa, ortostática e cardíaca) estão detalhados em `sincope-classificacao-etiologica-em-tres-grandes-grupos.md`, nesta mesma pasta
 
 ## Criterios marca passo cdi detalhados
  — classes de recomendação específicas não foram extraídas nesta rodada

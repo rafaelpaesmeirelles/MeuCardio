@@ -38,7 +38,7 @@ Position statement da Heart Failure Association (HFA) da ESC constitui referênc
  — estágios SCAI (A-E) e critérios hemodinâmicos específicos requerem consulta a fonte primária detalhada
 
 ## Farmacos suporte hemodinamico
- — doses de inotrópicos e vasopressores (dobutamina, noradrenalina, milrinona) não confirmadas nesta rodada
+ — as doses de noradrenalina e dobutamina estão em `choque-cardiogenico-diagnostico-e-manejo-com-drogas-vasoativas.md`, nesta mesma pasta, conferidas contra rótulo aprovado pelo FDA. Milrinona e as demais aminas seguem sem fonte própria e permanecem marcadas lá
 
 ## Suporte circulatorio mecanico
  — indicações de balão intra-aórtico, ECMO e dispositivos de assistência ventricular requerem módulo específico com fonte primária
