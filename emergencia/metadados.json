@@ -8,7 +8,7 @@
     "fluxograma_slug": "fluxograma-sindrome-coronariana-aguda-esc-2023",
     "relacionados": [
       "sindrome-coronariana-aguda-timing-invasivo-e-dapt-esc-2023",
-      "sindrome-coronariana-aguda-estratificacao-de-risco-grace-complemento"
+      "sindrome-coronariana-aguda-estratificacao-de-risco-grace-complemento-numerico"
     ],
     "review_status": "revisado"
   },
@@ -63,7 +63,9 @@
     "ordem": 6,
     "documento_slug": "arritmias-ventriculares-e-prevencao-de-morte-subita-cardiaca-esc-2022",
     "fluxograma_slug": null,
-    "relacionados": ["bradiarritmias-bloqueio-atrioventricular-e-tempestade-eletrica"],
+    "relacionados": [
+      "bradiarritmias-bloqueio-atrioventricular-e-tempestade-eletrica"
+    ],
     "review_status": "revisado"
   },
   {
