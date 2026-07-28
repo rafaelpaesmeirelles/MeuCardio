@@ -24,6 +24,18 @@ class Settings(BaseSettings):
     # perfil). Fica fora do banco de propósito: binário em coluna infla dump e
     # backup sem necessidade. O Caddy serve o mesmo volume em /fotos/*.
     uploads_dir: str = "/uploads"
+    # Exame de paciente NÃO fica junto com os uploads públicos: o volume de
+    # /uploads é servido pelo Caddy, e arquivo de exame não pode ter URL
+    # alcançável de fora. Este volume não é montado no Caddy — o acesso passa
+    # obrigatoriamente por rota autenticada, que registra quem leu.
+    exames_dir: str = "/exames-pacientes"
+    storage_encryption_key: str = ""
+    # Janela de plantão para o SLA de 2h do pedido urgente. Fora dela, o
+    # prazo passa a contar como eletivo (decisão do Rafael: 7h às 22h, todos
+    # os dias, horário de São Paulo).
+    plantao_inicio_hora: int = 7
+    plantao_fim_hora: int = 22
+    fuso_operacao: str = "America/Sao_Paulo"
     admin_email: str = "admin@meucardio.local"
     admin_password: str = "troque-esta-senha"
     cors_origins: str = "http://localhost:5173,http://localhost:8080"

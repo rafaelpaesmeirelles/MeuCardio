@@ -1,6 +1,6 @@
 from datetime import datetime, timezone
 
-from sqlalchemy import DateTime, ForeignKey, Integer, String
+from sqlalchemy import DateTime, ForeignKey, Integer, String, Text
 from sqlalchemy.orm import Mapped, mapped_column
 
 from app.core.db import Base
@@ -45,6 +45,49 @@ class ServiceOrder(Base):
     stripe_payment_intent_id: Mapped[str | None] = mapped_column(String(255), nullable=True, index=True)
     pago_em: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
 
+    # --- conteúdo clínico do pedido ---------------------------------------
+    duvida: Mapped[str | None] = mapped_column(Text, nullable=True)
+    contato_email: Mapped[str | None] = mapped_column(String(255), nullable=True)
+    contato_whatsapp: Mapped[str | None] = mapped_column(String(40), nullable=True)
+
+    # Nome do arquivo cifrado no cofre (UUID), não o nome original enviado.
+    arquivo_exame: Mapped[str | None] = mapped_column(String(80), nullable=True)
+    arquivo_nome_original: Mapped[str | None] = mapped_column(String(255), nullable=True)
+    arquivo_tipo: Mapped[str | None] = mapped_column(String(40), nullable=True)
+
+    # Consentimento declarado pelo médico solicitante, conforme o TCLE. Guarda
+    # o momento: "declarou" sem quando não serve de nada numa auditoria.
+    consentimento_em: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+
+    # --- fila de atendimento ----------------------------------------------
+    prazo_em: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    atendido_em: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    # Resposta da consultoria (texto). O laudo assinado é outra coisa e só
+    # existe depois da assinatura digital — ver Tarefa 4/5 do briefing.
+    resposta: Mapped[str | None] = mapped_column(Text, nullable=True)
+
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
+    )
+
+
+class ServiceOrderPatient(Base):
+    """Dados do paciente, obrigatórios só quando o serviço é laudo assinado.
+
+    Em tabela separada de propósito: a fila de atendimento e o histórico do
+    solicitante consultam `service_orders` o tempo todo, e não há motivo para
+    carregar nome e CPF de paciente em toda listagem. Separar reduz a
+    superfície de exposição do dado mais sensível do sistema.
+    """
+
+    __tablename__ = "service_order_patient"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    order_id: Mapped[int] = mapped_column(
+        ForeignKey("service_orders.id", ondelete="CASCADE"), unique=True, index=True
+    )
+    nome: Mapped[str] = mapped_column(String(255))
+    cpf: Mapped[str] = mapped_column(String(14))
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
     )
