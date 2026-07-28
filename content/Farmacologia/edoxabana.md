@@ -4,7 +4,7 @@ slug: edoxabana
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["Edoxabana: bula, para que serve e como usar · Consulta Remédios/ANVISA · 2023 · https://consultaremedios.com.br/edoxabana/bula", "Edoxaban (Lixiana) — Guia Clínico · Thrombosis Canada · https://thrombosiscanada.ca/clinical_guides/pdfs/89_43.pdf", "SAVAYSA (edoxaban) — bula FDA/accessdata.fda.gov", "Edoxaban — StatPearls, NCBI Bookshelf", "Edoxaban — Drugs.com Dosage Guide e Medscape Reference"]
+source_refs: ["Edoxaban tablets (SAVAYSA) — rótulo aprovado pelo FDA", "Giugliano RP, Ruff CT, Braunwald E, et al. Edoxaban versus warfarin in patients with atrial fibrillation (ENGAGE AF-TIMI 48). N Engl J Med. 2013;369(22):2093-2104. DOI: 10.1056/NEJMoa1310907"]
 legacy_source: "medicamentos/banco-de-medicamentos-edoxabana.md"
 ---
 
@@ -27,7 +27,7 @@ Inibe diretamente e seletivamente o fator Xa, tanto livre quanto ligado ao compl
 - **fa ajuste dose reduzida**: 30 mg VO 1x/dia se ≥1 dos seguintes: ClCr 15-50 mL/min, peso ≤60 kg, uso concomitante de inibidores potentes de P-gp
 - **tev tvp tep**: 60 mg VO 1x/dia (ou 30mg com fatores de redução), após 5-10 dias de anticoagulante parenteral inicial
 - **evidencia base**: Esquema sustentado pelo estudo ENGAGE AF-TIMI 48
-- **fonte**: Consulta Remédios/ANVISA ; Thrombosis Canada
+- **fonte**: rótulo da edoxabana aprovado pelo FDA. VERIFICAÇÃO HUMANA NECESSÁRIA — os critérios de redução para 30 mg por **peso ≤60 kg** e por **inibidor de P-gp** constam da rotulagem europeia; a norte-americana reduz por função renal. Conferir qual conjunto vale na bula registrada na ANVISA antes de prescrever pelos três critérios
 
 ## Particularidade farmacologica
 Único entre os DOACs de fator Xa com recomendação explícita de dose reduzida por múltiplos critérios combinados (peso, função renal, interação medicamentosa), refletindo maior sensibilidade farmacocinética a estes fatores

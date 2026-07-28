@@ -20,7 +20,7 @@ Sacubitril/Valsartana
 Inibidor da neprilisina e do receptor de angiotensina (INRA/ARNI)
 
 ## Mecanismo acao
-Inibe simultaneamente a neprilisina (via sacubitril), enzima que degrada peptídeos natriuréticos e bradicinina, e bloqueia o receptor AT1 de angiotensina II (via valsartana), resultando em maior natriurese, vasodilata��ão e redução de remodelamento cardíaco comparado a IECA/BRA isolados
+Inibe simultaneamente a neprilisina (via sacubitril), enzima que degrada peptídeos natriuréticos e bradicinina, e bloqueia o receptor AT1 de angiotensina II (via valsartana), resultando em maior natriurese, vasodilatação e redução de remodelamento cardíaco comparado a IECA/BRA isolados
 
 ## Apresentacoes
 Comprimidos revestidos de 24mg/26mg, 49mg/51mg e 97mg/103mg
