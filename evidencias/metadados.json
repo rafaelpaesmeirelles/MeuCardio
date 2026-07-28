@@ -97,14 +97,14 @@
   },
   {
     "slug": "colchicina-baixa-dose-prevencao-secundaria-dac",
-    "statement": "Colchicina em baixa dose (0,5 mg/dia) pode ser considerada na prevenção secundária de doença cardiovascular, particularmente se outros fatores de risco estiverem insuficientemente controlados ou se eventos cardiovasculares recorrerem apesar de terapia otimizada.",
+    "statement": "Colchicina em baixa dose (0,5 mg/dia) deve ser considerada para reduzir o risco de infarto, acidente vascular cerebral e necessidade de revascularização em pacientes com síndrome coronariana crônica e doença aterosclerótica coronariana. A diretriz de 2024 ampliou a indicação para a totalidade desses pacientes e elevou a recomendação de IIb para IIa; até então, ela se restringia a quem tinha fatores de risco insuficientemente controlados ou eventos recorrentes apesar de terapia otimizada.",
     "recommendation_class": "IIa",
     "evidence_level": "A",
     "society": "ESC",
-    "year": 2023,
-    "guideline_title": "2023 ESC Guidelines for the management of chronic coronary syndromes / atualização sobre colchicina em prevenção cardiovascular",
-    "reference": "Low-Dose Colchicine for Secondary Prevention of CAD: Key Points. American College of Cardiology, 2023. https://www.acc.org/Latest-in-Cardiology/ten-points-to-remember/2023/08/08/02/29/low-dose-colchicine",
-    "theme": "Prevenção e lipídios",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of chronic coronary syndromes",
+    "reference": "2024 ESC Guidelines for the management of chronic coronary syndromes. Eur Heart J. 2024;45:3415-3537. DOI: 10.1093/eurheartj/ehae177",
+    "theme": "Doença coronariana",
     "tags": [
       "colchicina",
       "anti-inflamatório",
@@ -191,7 +191,7 @@
     "published": false
   },
   {
-    "slug": "cdi-prevencao-primaria-fevе-35-doenca-coronariana",
+    "slug": "cdi-prevencao-primaria-feve-35-doenca-coronariana",
     "statement": "Implante de CDI é recomendado em pacientes com doença arterial coronariana, insuficiência cardíaca sintomática (NYHA II-III) e FEVE ≤35% apesar de pelo menos 3 meses de terapia médica otimizada, para prevenção primária de morte súbita cardíaca.",
     "recommendation_class": "I",
     "evidence_level": "A",
@@ -366,7 +366,7 @@
   },
   {
     "slug": "colchicina-adjuvante-na-pericardite-aguda",
-    "statement": "Colchicina pode ser considerada como terapia adjuvante na pericardite aguda, na dose de 1 mg/dia (0,5 mg 2 vezes ao dia) por 3 meses, ajustada por peso e tolerância — não indicada de forma universal a todo paciente com pericardite aguda.",
+    "statement": "VERIFICAÇÃO HUMANA NECESSÁRIA — este registro está desatualizado e subestima a força da recomendação. Ele se apoia na diretriz brasileira de 2013, que classifica a colchicina na pericardite aguda como IIa ('pode ser considerada'). A diretriz ESC de 2015 sobre doenças do pericárdio, posterior, descreve a colchicina como recomendada em primeira linha, como adjuvante a AAS ou AINE, na dose de 0,5 mg/dia abaixo de 70 kg ou 0,5 mg duas vezes ao dia a partir de 70 kg, por 3 meses — linguagem de Classe I. Duas fontes independentes convergem na classe, mas não consegui confirmar o nível de evidência com segurança. A classe e o nível precisam ser conferidos na tabela de recomendações da diretriz antes de este registro voltar ao ar.",
     "recommendation_class": "IIa",
     "evidence_level": "B",
     "society": "SBC",
@@ -380,7 +380,7 @@
       "anti-inflamatório",
       "terapia adjuvante"
     ],
-    "review_status": "revisado",
+    "review_status": "pendente_revisao",
     "published": false
   }
 ]
