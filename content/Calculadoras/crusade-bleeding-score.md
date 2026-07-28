@@ -3,8 +3,8 @@ title: "CRUSADE Bleeding Score"
 slug: crusade-bleeding-score
 theme: "Calculadoras"
 kind: calculadora
-review_status: pendente_revisao
-source_refs: []
+review_status: revisado
+source_refs: ["Subherwal S, Bach RG, Chen AY, et al. Baseline risk of major bleeding in non-ST-segment-elevation myocardial infarction: the CRUSADE bleeding score. Circulation. 2009;119(14):1873-1882. DOI: 10.1161/CIRCULATIONAHA.108.828541. PMID: 19332461"]
 legacy_source: "calculadoras/calculadora-crusade-risco-de-sangramento.md"
 ---
 
@@ -34,7 +34,7 @@ Soma direta dos pontos de todas as 8 variáveis (escore de 1 a 100 pontos)
 - **categoria**: Risco baixo; **escore**: 21-30; **sangramento maior**: ~5,5%
 - **categoria**: Risco moderado; **escore**: 31-40; **sangramento maior**: ~8-9%
 - **categoria**: Risco alto; **escore**: 41-50; **sangramento maior**: ~12%
-- **categoria**: Risco muito alto; **escore**: ≥50; **sangramento maior**: 19,5%
+- **categoria**: Risco muito alto; **escore**: >50; **sangramento maior**: 19,5%
 
 ## Validacao
 C-statistic de 0,80-0,82 em coortes contemporâneas espanholas, com boa calibração (Hosmer-Lemeshow p>0,3); menor capacidade discriminativa em subgrupo específico tratado com ≥2 antitrombóticos sem cateterismo (C=0,56)
@@ -46,4 +46,4 @@ Usado em conjunto com escores isquêmicos (GRACE, TIMI) para balancear risco tro
 Desenvolvido especificamente para NSTEMI; validação em STEMI é mais limitada, embora estudos de validação existam para essa extensão
 
 ## Fonte
-AHA Journals ; MDCalc ; Duke CICU
+Subherwal S et al. Circulation. 2009;119(14):1873-1882 — artigo de derivação do escore CRUSADE

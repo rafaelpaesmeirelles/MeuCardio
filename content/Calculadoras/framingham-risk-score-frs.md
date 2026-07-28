@@ -4,7 +4,7 @@ slug: framingham-risk-score-frs
 theme: "Calculadoras"
 kind: calculadora
 review_status: pendente_revisao
-source_refs: []
+source_refs: ["D'Agostino RB Sr, Vasan RS, Pencina MJ, et al. General cardiovascular risk profile for use in primary care: the Framingham Heart Study. Circulation. 2008;117(6):743-753. DOI: 10.1161/CIRCULATIONAHA.107.699579. PMID: 18212285"]
 legacy_source: "calculadoras/calculadora-framingham-risk-score.md"
 ---
 
@@ -28,7 +28,7 @@ Estimativa de risco de doença cardiovascular em 10 anos, um dos primeiros e mai
 ## Pontuacao idade
 - **faixas homens**: [{'faixa': '35-39', 'pontos': 2}, {'faixa': '40-44', 'pontos': 5}, {'faixa': '45-49', 'pontos': 7}, {'faixa': '50-54', 'pontos': 8}, {'faixa': '55-59', 'pontos': 10}, {'faixa': '60-64', 'pontos': 11}, {'faixa': '65-69', 'pontos': 12}, {'faixa': '70-74', 'pontos': 14}, {'faixa': '≥75', 'pontos': 15}]
 - **faixas mulheres**: [{'faixa': '35-39', 'pontos': 2}, {'faixa': '40-44', 'pontos': 4}, {'faixa': '45-49', 'pontos': 5}, {'faixa': '50-54', 'pontos': 7}, {'faixa': '55-59', 'pontos': 8}, {'faixa': '60-64', 'pontos': 9}, {'faixa': '65-69', 'pontos': 10}, {'faixa': '70-74', 'pontos': 11}, {'faixa': '≥75', 'pontos': 12}]
-- **fonte**: Empendium McMaster
+- **fonte**: VERIFICAÇÃO HUMANA NECESSÁRIA — estas tabelas de pontos estão em mmol/L e não correspondem ao modelo de D'Agostino RB Sr et al., Circulation 2008;117:743-753, que é a referência do FRS geral. Parecem vir de uma adaptação regional não identificada; conferir a procedência antes de usar
 
 ## Pontuacao hdl mmol l
 - **faixa**: >1,60; **pontos**: -2

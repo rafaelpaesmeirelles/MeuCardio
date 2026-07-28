@@ -3,8 +3,8 @@ title: "SCORE2 e SCORE2-OP"
 slug: score2-e-score2-op
 theme: "Calculadoras"
 kind: calculadora
-review_status: pendente_revisao
-source_refs: []
+review_status: revisado
+source_refs: ["SCORE2 working group and ESC Cardiovascular Risk Collaboration. SCORE2 risk prediction algorithms: new models to estimate 10-year risk of cardiovascular disease in Europe. Eur Heart J. 2021;42(25):2439-2454. DOI: 10.1093/eurheartj/ehab309. PMID: 34120177", "SCORE2-OP working group and ESC Cardiovascular Risk Collaboration. SCORE2-OP risk prediction algorithms: estimating incident cardiovascular event risk in older persons in four geographical risk regions. Eur Heart J. 2021;42(25):2455-2467. DOI: 10.1093/eurheartj/ehab312. PMID: 34120185"]
 legacy_source: "calculadoras/calculadora-score2-score2-op.md"
 ---
 
@@ -47,4 +47,4 @@ Resultado percentual orienta discussão sobre intervenções de estilo de vida, 
 Não aplicável a pacientes com doença cardiovascular estabelecida, diabetes ou LDL/colesterol total extremamente elevado (indicação familiar de hipercolesterolemia requer avaliação separada)
 
 ## Fonte
-ESC SCORE2/SCORE2-OP Calculators ; MedExplainer
+SCORE2 working group. Eur Heart J. 2021;42(25):2439-2454 e SCORE2-OP working group. Eur Heart J. 2021;42(25):2455-2467
