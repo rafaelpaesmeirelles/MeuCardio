@@ -3,8 +3,9 @@ title: "Roteiro de conversa difícil em Cardiologia"
 slug: roteiro-de-conversa-dificil-em-cardiologia
 theme: "Comunicação clínica"
 kind: protocolo
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Baile WF, Buckman R, Lenzi R, Glober G, Beale EA, Kudelka AP. SPIKES — a six-step protocol for delivering bad news: application to the patient with cancer. The Oncologist. 2000;5(4):302-311. PMID: 10964998", "Back AL, Arnold RM, Baile WF, Tulsky JA, Fryer-Edwards K. Approaching difficult communication tasks in oncology. CA Cancer J Clin. 2005;55(3):164-177. DOI: 10.3322/canjclin.55.3.164. PMID: 15890639", "Sobanski PZ, Alt-Epping B, Currow DC, et al. Palliative care for people living with heart failure: European Association for Palliative Care Task Force expert position statement. Cardiovasc Res. 2020;116(1):12-27. DOI: 10.1093/cvr/cvz200. PMID: 31386104"]
+revisao: "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) em 28/07/2026."
 legacy_source: "Escrito para a Tarefa 20 do briefing. Texto próprio, estruturado em etapas. Os protocolos de comunicação citados nas referências são a origem intelectual da estrutura — nenhum material licenciado deles foi reproduzido aqui."
 ---
 
