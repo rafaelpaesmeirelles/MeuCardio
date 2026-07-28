@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MeuCardio — Solicitar laudo ou consultoria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0B2E45; --navy-dark:#081E30;
+    --red:#D5001D; --red-dark:#B0001A;
+    --teal:#1C7293; --teal-light:#6FB4CC;
+    --off:#FCFCFC; --ink:#26333B; --muted:#55666F; --line:#E4E8EA;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Inter',Arial,sans-serif;color:var(--ink);background:var(--off);line-height:1.55;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Source Serif 4',Georgia,serif;}
+  .container{max-width:900px;margin:0 auto;padding:0 24px;}
+
+  .top-bar{height:8px;background:linear-gradient(90deg,var(--red) 0%,var(--navy) 100%);}
+  header.page-head{background:var(--navy);color:#fff;padding:36px 0 46px;}
+  .nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;}
+  .nav-logo{height:30px;}
+  .nav-tag{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--teal-light);border:1px solid rgba(111,180,204,.4);padding:7px 14px;border-radius:30px;}
+  header.page-head h1{font-size:clamp(26px,4vw,38px);font-weight:600;max-width:640px;}
+  header.page-head p{color:#C4D6DF;margin-top:14px;max-width:600px;font-size:16px;}
+
+  .scope-box{background:#0F3D57;border-radius:14px;padding:22px 24px;margin-top:28px;}
+  .scope-box .label{color:var(--teal-light);font-size:12.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;}
+  .scope-chips{display:flex;gap:8px;flex-wrap:wrap;}
+  .scope-chip{background:#123f57;border:1px solid rgba(111,180,204,.35);color:#fff;font-size:13.5px;padding:7px 14px;border-radius:20px;}
+
+  /* pricing table */
+  .section{padding:52px 0;}
+  .section h2{color:var(--navy);font-size:24px;font-weight:600;margin-bottom:6px;}
+  .section .sub{color:var(--muted);font-size:14.5px;margin-bottom:22px;}
+  table.price{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;}
+  table.price th{background:var(--navy);color:#fff;font-size:13px;text-transform:uppercase;letter-spacing:1px;padding:14px 16px;text-align:left;}
+  table.price td{padding:14px 16px;border-top:1px solid var(--line);font-size:14.5px;}
+  table.price td.serv{font-weight:600;color:var(--navy);}
+  table.price td.price-cell{color:var(--red);font-weight:700;}
+  .sla-note{margin-top:14px;font-size:13.5px;color:var(--muted);}
+  .tcle-link{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-size:14px;font-weight:600;color:var(--teal);text-decoration:none;border-bottom:1px solid var(--teal);padding-bottom:2px;}
+
+  /* form */
+  .form-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:34px;}
+  fieldset{border:none;margin-bottom:26px;}
+  legend{font-family:'Source Serif 4',Georgia,serif;font-size:17px;color:var(--navy);font-weight:600;margin-bottom:14px;padding:0;}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .field{margin-bottom:14px;}
+  .field label{display:block;font-size:13px;font-weight:600;color:var(--navy);margin-bottom:6px;}
+  .field input, .field select, .field textarea{
+    width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-size:15px;
+    font-family:'Inter',Arial,sans-serif;color:var(--ink);background:#FBFBFC;
+  }
+  .field textarea{min-height:100px;resize:vertical;}
+  .field input:focus, .field select:focus, .field textarea:focus{outline:2px solid var(--teal);outline-offset:1px;border-color:var(--teal);}
+  .field .hint{font-size:12px;color:#8896A0;margin-top:5px;}
+
+  .choice-row{display:flex;gap:10px;flex-wrap:wrap;}
+  .choice-card{flex:1;min-width:200px;border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;cursor:pointer;transition:all .15s ease;}
+  .choice-card input{display:none;}
+  .choice-card .t{font-weight:700;color:var(--navy);font-size:14.5px;}
+  .choice-card .d{font-size:12.5px;color:var(--muted);margin-top:3px;}
+  .choice-card.active{border-color:var(--red);background:#FDF3F4;}
+
+  #patientFields{display:none;}
+  #patientFields.show{display:block;}
+
+  .file-drop{border:2px dashed var(--line);border-radius:12px;padding:24px;text-align:center;background:#FBFBFC;}
+  .file-drop input{margin-top:10px;}
+  .file-drop .icon{font-size:26px;}
+
+  .consent-box{background:#FBFBFC;border:1px solid var(--line);border-radius:12px;padding:16px 18px;display:flex;gap:12px;align-items:flex-start;}
+  .consent-box input{margin-top:3px;}
+  .consent-box label{font-size:13.5px;color:var(--ink);}
+  .consent-box a{color:var(--teal);font-weight:600;}
+
+  .price-summary{
+    margin-top:22px;background:var(--navy);color:#fff;border-radius:12px;padding:20px 22px;
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;
+  }
+  .price-summary .label{font-size:13px;color:#B9CEDA;text-transform:uppercase;letter-spacing:1px;}
+  .price-summary .amount{font-family:'Source Serif 4',Georgia,serif;font-size:30px;font-weight:700;color:#fff;}
+  .price-summary .amount .flag{color:var(--teal-light);font-size:14px;font-weight:500;margin-left:8px;}
+
+  .submit-btn{
+    width:100%;margin-top:22px;background:var(--red);color:#fff;border:none;padding:16px;border-radius:10px;
+    font-size:16px;font-weight:700;cursor:pointer;font-family:'Inter',Arial,sans-serif;box-shadow:0 12px 26px rgba(213,0,29,.35);
+  }
+  .submit-btn:hover{background:var(--red-dark);}
+
+  .confirm{display:none;text-align:center;padding:30px 10px;}
+  .confirm.show{display:block;}
+  .confirm .check{width:56px;height:56px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:28px;}
+  .confirm h3{color:var(--navy);}
+  .confirm p{color:var(--muted);font-size:14.5px;margin-top:8px;max-width:420px;margin-left:auto;margin-right:auto;}
+
+  .warn-banner{
+    background:#FFF7E6;border:1px solid #F0D793;color:#7A5A00;font-size:13px;padding:14px 18px;border-radius:10px;margin-bottom:26px;
+  }
+
+  footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:#8896A0;font-size:13px;}
+
+  @media (max-width:640px){
+    .grid2{grid-template-columns:1fr;}
+    .form-card{padding:22px;}
+  }
+</style>
+</head>
+<body>
+  <div class="top-bar"></div>
+  <header class="page-head">
+    <div class="container">
+      <div class="nav">
+        <img class="nav-logo" src="logo_trimmed.png" alt="MeuCardio">
+        <div class="nav-tag">Laudo &amp; Consultoria</div>
+      </div>
+      <h1>Solicite um laudo ou uma consultoria cardiológica</h1>
+      <p>Envie o exame, conte a sua dúvida e receba a resposta do Dr. Rafael Paes Meirelles dentro do prazo combinado — direto no MeuCardio.</p>
+
+      <div class="scope-box">
+        <div class="label">Exames aceitos nesta fase</div>
+        <div class="scope-chips">
+          <div class="scope-chip">Eletrocardiograma (ECG)</div>
+          <div class="scope-chip">MAPA</div>
+          <div class="scope-chip">Holter 24h</div>
+          <div class="scope-chip">Teste Ergométrico</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <section class="section" id="precos">
+      <h2>Como funciona o preço</h2>
+      <div class="sub">Escolha o serviço e a urgência no formulário abaixo — o valor é calculado automaticamente.</div>
+      <table class="price">
+        <tr><th>Serviço</th><th>Eletivo (até 12h)</th><th>Urgente / Plantão (até 2h)</th></tr>
+        <tr><td class="serv">Consultoria (interpretação, sem laudo assinado)</td><td class="price-cell">R$ 40</td><td class="price-cell">R$ 60</td></tr>
+        <tr><td class="serv">Laudo completo assinado digitalmente</td><td class="price-cell">R$ 70</td><td class="price-cell">R$ 100</td></tr>
+      </table>
+      <div class="sla-note">Urgente/Plantão é para quem precisa da resposta ainda durante o plantão atual. Fora desse horário, o pedido é tratado como eletivo.</div>
+      <a class="tcle-link" href="TCLE_MeuCardio_Telediagnostico.docx" download>&#8594; Baixar o modelo de Termo de Consentimento (TCLE) para o paciente</a>
+    </section>
+
+    <section class="section" id="formulario" style="padding-top:0;">
+      <h2>Formulário de solicitação</h2>
+      <div class="sub">Preencha os dados abaixo. Você receberá a resposta pelo contato informado.</div>
+
+      <div class="warn-banner">
+        Este exame contém dados de saúde do seu paciente. Envie apenas exames para os quais você já obteve o consentimento do paciente (TCLE).
+      </div>
+
+      <div class="form-card">
+        <div id="formState">
+          <form id="requestForm">
+
+            <fieldset>
+              <legend>1. Seus dados</legend>
+              <div class="grid2">
+                <div class="field">
+                  <label for="docName">Nome completo</label>
+                  <input id="docName" type="text" required placeholder="Seu nome">
+                </div>
+                <div class="field">
+                  <label for="crm">CRM/UF</label>
+                  <input id="crm" type="text" required placeholder="Ex: 123456/SP">
+                </div>
+              </div>
+              <div class="grid2">
+                <div class="field">
+                  <label for="contactEmail">E-mail</label>
+                  <input id="contactEmail" type="email" required placeholder="seu@email.com">
+                </div>
+                <div class="field">
+                  <label for="contactWhats">WhatsApp</label>
+                  <input id="contactWhats" type="tel" required placeholder="(00) 00000-0000">
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>2. O exame</legend>
+              <div class="field">
+                <label for="examType">Tipo de exame</label>
+                <select id="examType" required>
+                  <option value="">Selecione</option>
+                  <option value="ECG">Eletrocardiograma (ECG)</option>
+                  <option value="MAPA">MAPA</option>
+                  <option value="Holter">Holter 24h</option>
+                  <option value="TE">Teste Ergométrico</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>Foto ou PDF do exame</label>
+                <div class="file-drop">
+                  <div class="icon">📎</div>
+                  <div>Anexe o arquivo do exame</div>
+                  <input type="file" id="examFile" accept="image/*,.pdf" required>
+                </div>
+              </div>
+              <div class="field">
+                <label for="doubt">Sua dúvida específica</label>
+                <textarea id="doubt" required placeholder="Descreva o que você gostaria que fosse avaliado ou esclarecido"></textarea>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>3. Tipo de serviço</legend>
+              <div class="choice-row" id="serviceChoice">
+                <label class="choice-card active" data-value="consultoria" data-price-eletivo="40" data-price-urgente="60">
+                  <input type="radio" name="service" value="consultoria" checked>
+                  <div class="t">Consultoria</div>
+                  <div class="d">Interpretação e resposta à sua dúvida, sem laudo assinado</div>
+                </label>
+                <label class="choice-card" data-value="laudo" data-price-eletivo="70" data-price-urgente="100">
+                  <input type="radio" name="service" value="laudo">
+                  <div class="t">Laudo completo assinado</div>
+                  <div class="d">Documento oficial, assinado digitalmente (ICP-Brasil)</div>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>4. Urgência</legend>
+              <div class="choice-row" id="urgencyChoice">
+                <label class="choice-card active" data-value="eletivo">
+                  <input type="radio" name="urgency" value="eletivo" checked>
+                  <div class="t">Eletivo</div>
+                  <div class="d">Resposta em até 12 horas</div>
+                </label>
+                <label class="choice-card" data-value="urgente">
+                  <input type="radio" name="urgency" value="urgente">
+                  <div class="t">Urgente / Plantão</div>
+                  <div class="d">Resposta em até 2 horas (horário comercial estendido)</div>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset id="patientFields">
+              <legend>5. Dados do paciente (necessários para o laudo assinado)</legend>
+              <div class="grid2">
+                <div class="field">
+                  <label for="patName">Nome completo do paciente</label>
+                  <input id="patName" type="text" placeholder="Nome do paciente">
+                </div>
+                <div class="field">
+                  <label for="patDoc">CPF do paciente</label>
+                  <input id="patDoc" type="text" placeholder="000.000.000-00">
+                </div>
+              </div>
+            </fieldset>
+
+            <div class="consent-box">
+              <input type="checkbox" id="consentCheck" required>
+              <label for="consentCheck">Confirmo que obtive o consentimento do paciente (ou responsável legal) para o envio deste exame e destes dados ao MeuCardio, conforme o <a href="TCLE_MeuCardio_Telediagnostico.docx" download>Termo de Consentimento Livre e Esclarecido (TCLE)</a>.</label>
+            </div>
+
+            <div class="price-summary">
+              <div>
+                <div class="label">Valor estimado</div>
+                <div class="amount" id="priceLabel">R$ 40 <span class="flag" id="priceFlag">· Consultoria, eletivo</span></div>
+              </div>
+            </div>
+
+            <button class="submit-btn" type="submit">Enviar solicitação</button>
+          </form>
+        </div>
+
+        <div class="confirm" id="confirmState">
+          <div class="check">&#10003;</div>
+          <h3>Solicitação recebida!</h3>
+          <p>Você receberá a resposta pelo e-mail ou WhatsApp informado, dentro do prazo escolhido. Obrigado por confiar no MeuCardio.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div>MeuCardio © 2026 · Serviço de telediagnóstico/teleconsultoria realizado nos termos da Resolução CFM nº 2.314/2022</div>
+  </footer>
+
+<script>
+  // ---- Choice card toggling ----
+  function wireChoices(containerId){
+    var container = document.getElementById(containerId);
+    container.querySelectorAll('.choice-card').forEach(function(card){
+      card.addEventListener('click', function(){
+        container.querySelectorAll('.choice-card').forEach(function(c){ c.classList.remove('active'); });
+        card.classList.add('active');
+        card.querySelector('input').checked = true;
+        updatePrice();
+      });
+    });
+  }
+  wireChoices('serviceChoice');
+  wireChoices('urgencyChoice');
+
+  // ---- Show patient fields only for "laudo" ----
+  function updatePatientFields(){
+    var service = document.querySelector('input[name="service"]:checked').value;
+    var pf = document.getElementById('patientFields');
+    if(service === 'laudo'){
+      pf.classList.add('show');
+      document.getElementById('patName').required = true;
+      document.getElementById('patDoc').required = true;
+    } else {
+      pf.classList.remove('show');
+      document.getElementById('patName').required = false;
+      document.getElementById('patDoc').required = false;
+    }
+  }
+
+  // ---- Dynamic price ----
+  var PRICES = {
+    consultoria: { eletivo: 40, urgente: 60 },
+    laudo: { eletivo: 70, urgente: 100 }
+  };
+  var LABELS = {
+    consultoria: 'Consultoria',
+    laudo: 'Laudo completo assinado',
+    eletivo: 'eletivo',
+    urgente: 'urgente/plantão'
+  };
+  function updatePrice(){
+    var service = document.querySelector('input[name="service"]:checked').value;
+    var urgency = document.querySelector('input[name="urgency"]:checked').value;
+    var value = PRICES[service][urgency];
+    document.getElementById('priceLabel').innerHTML = 'R$ ' + value + ' <span class="flag" id="priceFlag">· ' + LABELS[service] + ', ' + LABELS[urgency] + '</span>';
+    updatePatientFields();
+  }
+  document.querySelectorAll('input[name="service"], input[name="urgency"]').forEach(function(el){
+    el.addEventListener('change', updatePrice);
+  });
+  updatePrice();
+
+  // ---- Form submit ----
+  // IMPORTANT: this demo only shows a local confirmation message.
+  // Before publishing, this form must be connected to a real, secure backend:
+  // - the exam file contains patient health data (LGPD) — do NOT wire this to
+  //   generic form services (Formspree/Google Forms) that were not vetted for
+  //   health data handling and a data processing agreement.
+  // - use your own backend / a HIPAA-or-LGPD-appropriate storage + a payment
+  //   provider (e.g. Stripe, Mercado Pago) for the price captured in priceLabel.
+  document.getElementById('requestForm').addEventListener('submit', function(e){
+    e.preventDefault();
+
+    // ---> Replace this block with a real submission to your backend <---
+    // Example shape of what you'd send:
+    // const formData = new FormData();
+    // formData.append('doctor_name', document.getElementById('docName').value);
+    // formData.append('crm', document.getElementById('crm').value);
+    // formData.append('exam_type', document.getElementById('examType').value);
+    // formData.append('service', document.querySelector('input[name="service"]:checked').value);
+    // formData.append('urgency', document.querySelector('input[name="urgency"]:checked').value);
+    // formData.append('doubt', document.getElementById('doubt').value);
+    // formData.append('exam_file', document.getElementById('examFile').files[0]);
+    // fetch('/api/laudo-requests', { method: 'POST', body: formData });
+
+    document.getElementById('formState').style.display = 'none';
+    document.getElementById('confirmState').classList.add('show');
+  });
+</script>
+</body>
+</html>

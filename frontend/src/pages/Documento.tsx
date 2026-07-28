@@ -44,7 +44,6 @@ export default function Documento() {
         <SeloRevisao status={doc.review_status} />
         <span className="selo">versão {doc.version}</span>
       </div>
-      <div className="fio-dourado" style={{ marginBottom: "1.4rem" }} />
 
       <div className="cartao">
         <Markdown

@@ -34,7 +34,7 @@ export default function Exames() {
     <>
       <p className="eyebrow">Exames</p>
       <h1>Marcadores e exames cardiológicos</h1>
-      <p style={{ color: "var(--cinza-texto)", maxWidth: "60ch" }}>
+      <p style={{ color: "var(--texto-secundario)", maxWidth: "60ch" }}>
         Biomarcadores, testes funcionais e exames eletrofisiológicos — indicação, interpretação e limitações.
       </p>
 

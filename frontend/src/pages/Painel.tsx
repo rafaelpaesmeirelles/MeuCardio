@@ -31,7 +31,7 @@ export default function Painel() {
           <p className="dado" style={{ fontSize: "2rem", margin: "0.2rem 0" }}>
             {pacientes.length}
           </p>
-          <p style={{ margin: 0, color: "var(--cinza-texto)" }}>
+          <p style={{ margin: 0, color: "var(--texto-secundario)" }}>
             {pacientes.length === 1 ? "paciente internado" : "pacientes internados"}
           </p>
         </Link>
@@ -39,7 +39,7 @@ export default function Painel() {
         <Link to="/biblioteca" className="cartao" style={{ color: "inherit" }}>
           <p className="eyebrow">Biblioteca</p>
           <p className="dado" style={{ fontSize: "2rem", margin: "0.2rem 0" }}>{totalDocs}</p>
-          <p style={{ margin: 0, color: "var(--cinza-texto)" }}>
+          <p style={{ margin: 0, color: "var(--texto-secundario)" }}>
             documentos em {temas?.length ?? 0} temas
           </p>
         </Link>
@@ -49,7 +49,7 @@ export default function Painel() {
           <p style={{ margin: "0.4rem 0 0", fontWeight: 600 }}>
             CHA₂DS₂-VASc · HAS-BLED · HEART · CKD-EPI
           </p>
-          <p style={{ margin: 0, color: "var(--cinza-texto)" }}>Com fórmula e referência à vista</p>
+          <p style={{ margin: 0, color: "var(--texto-secundario)" }}>Com fórmula e referência à vista</p>
         </Link>
       </div>
 
@@ -59,7 +59,7 @@ export default function Painel() {
       ) : temas.length === 0 ? (
         <div className="cartao">
           <h3>A biblioteca está vazia</h3>
-          <p style={{ margin: 0, color: "var(--cinza-texto)" }}>
+          <p style={{ margin: 0, color: "var(--texto-secundario)" }}>
             Coloque os arquivos Markdown em <code>content/&lt;tema&gt;/</code> e rode{" "}
             <code>docker compose exec backend python -m app.services.importer</code>.
           </p>
@@ -74,7 +74,7 @@ export default function Painel() {
               style={{ color: "inherit" }}
             >
               <strong>{t.theme}</strong>
-              <span className="dado" style={{ float: "right", color: "var(--cinza-texto)" }}>
+              <span className="dado" style={{ float: "right", color: "var(--texto-secundario)" }}>
                 {t.count}
               </span>
             </Link>

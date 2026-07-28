@@ -57,7 +57,7 @@ export default function Calculadora() {
       <Link to="/calculadoras" className="eyebrow">← Calculadoras</Link>
       <p className="eyebrow" style={{ marginTop: "0.8rem" }}>{calc.theme}</p>
       <h1>{calc.name}</h1>
-      <p style={{ color: "var(--cinza-texto)" }}>{calc.purpose}</p>
+      <p style={{ color: "var(--texto-secundario)" }}>{calc.purpose}</p>
 
       <div className="cartao cartao--clinico" style={{ marginTop: "1rem" }}>
         {calc.fields.map((f) => (
@@ -73,7 +73,7 @@ export default function Calculadora() {
                 <span>
                   {f.label}
                   {f.help && (
-                    <span style={{ display: "block", fontSize: "0.8rem", color: "var(--cinza-texto)" }}>
+                    <span style={{ display: "block", fontSize: "0.8rem", color: "var(--texto-secundario)" }}>
                       {f.help}
                     </span>
                   )}
@@ -121,11 +121,11 @@ export default function Calculadora() {
       {erro && <div style={{ marginTop: "1rem" }}><Erro mensagem={erro} /></div>}
 
       {saida && (
-        <div className="cartao" style={{ marginTop: "1rem", borderLeft: "3px solid var(--bordo)" }}>
+        <div className="cartao" style={{ marginTop: "1rem", borderLeft: "3px solid var(--acento)" }}>
           <p className="eyebrow">Resultado</p>
-          <p className="dado" style={{ fontSize: "2.4rem", margin: "0.2rem 0", color: "var(--bordo)" }}>
+          <p className="dado" style={{ fontSize: "2.4rem", margin: "0.2rem 0", color: "var(--acento)" }}>
             {Object.values(saida.result)[0] as string | number}
-            <span style={{ fontSize: "1rem", color: "var(--cinza-texto)", marginLeft: 8 }}>
+            <span style={{ fontSize: "1rem", color: "var(--texto-secundario)", marginLeft: 8 }}>
               {(saida.result.max ? `/ ${saida.result.max}` : (saida.result.unidade as string) ?? "")}
             </span>
           </p>

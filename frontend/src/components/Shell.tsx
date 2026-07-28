@@ -69,13 +69,12 @@ export default function Shell() {
           <button
             onClick={sair}
             className="botao botao--secundario"
-            style={{ color: "#fff", borderColor: "#a4535e", marginLeft: 10, padding: "0.3rem 0.7rem" }}
+            style={{ color: "var(--branco)", borderColor: "var(--acento-claro)", marginLeft: 10, padding: "0.3rem 0.7rem" }}
           >
             Sair
           </button>
         </div>
       </header>
-      <div className="fio-dourado" />
 
       <div className="shell">
         <nav className="lateral" aria-label="Navegação principal">
@@ -105,7 +104,7 @@ export default function Shell() {
         aria-label="Navegação principal"
       >
         <div className="gaveta__topo">
-          <span className="topo__marca" style={{ color: "var(--bordo)" }}>MeuCardio</span>
+          <span className="topo__marca" style={{ color: "var(--acento)" }}>MeuCardio</span>
           <button className="botao botao--secundario" style={{ padding: "0.3rem 0.6rem" }}
                   onClick={() => setMenuAberto(false)} aria-label="Fechar menu">
             ✕

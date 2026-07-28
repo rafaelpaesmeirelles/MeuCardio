@@ -8,9 +8,16 @@ type Item = {
   evidence_level: string; society: string; year: number; theme: string;
 };
 
-const COR_CLASSE: Record<string, string> = {
-  I: "var(--bordo)", IIa: "var(--dourado)", IIb: "#b8860b", III: "var(--alerta)",
+// Fundo e cor de texto por classe de recomendação. O texto acompanha o fundo
+// porque `teal-light` é claro demais para receber branco — branco sobre ele dá
+// 2,31:1, abaixo do mínimo AA de 4,5:1. Sobre navy, o mesmo tom passa folgado.
+const COR_CLASSE: Record<string, { fundo: string; texto: string }> = {
+  I: { fundo: "var(--primaria)", texto: "var(--branco)" },
+  IIa: { fundo: "var(--acento)", texto: "var(--branco)" },
+  IIb: { fundo: "var(--acento-claro)", texto: "var(--primaria)" },
+  III: { fundo: "var(--alerta)", texto: "var(--branco)" },
 };
+const COR_CLASSE_PADRAO = { fundo: "var(--fundo)", texto: "var(--texto)" };
 
 export default function Evidencias() {
   const [temas, setTemas] = useState<{ theme: string; count: number }[]>([]);
@@ -35,7 +42,7 @@ export default function Evidencias() {
     <>
       <p className="eyebrow">Evidências</p>
       <h1>Banco de recomendações</h1>
-      <p style={{ color: "var(--cinza-texto)", maxWidth: "60ch" }}>
+      <p style={{ color: "var(--texto-secundario)", maxWidth: "60ch" }}>
         Recomendações pontuais com classe e nível de evidência, extraídas das diretrizes vigentes.
       </p>
 
@@ -66,8 +73,9 @@ export default function Evidencias() {
             <Link key={e.slug} to={`/evidencias/${e.slug}`} className="cartao"
                   style={{ textDecoration: "none", display: "flex", gap: 12, alignItems: "start" }}>
               <span className="selo" style={{
-                background: COR_CLASSE[e.recommendation_class] ?? "var(--cinza-fundo)",
-                color: "#fff", minWidth: 46, textAlign: "center", flexShrink: 0,
+                background: (COR_CLASSE[e.recommendation_class] ?? COR_CLASSE_PADRAO).fundo,
+                color: (COR_CLASSE[e.recommendation_class] ?? COR_CLASSE_PADRAO).texto,
+                minWidth: 46, textAlign: "center", flexShrink: 0,
               }}>
                 {e.recommendation_class}
               </span>

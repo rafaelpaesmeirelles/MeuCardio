@@ -33,7 +33,7 @@ export default function Estudos() {
     <>
       <p className="eyebrow">Estudos</p>
       <h1>Trabalhos científicos</h1>
-      <p style={{ color: "var(--cinza-texto)", maxWidth: "60ch" }}>
+      <p style={{ color: "var(--texto-secundario)", maxWidth: "60ch" }}>
         Ensaios clínicos, revisões sistemáticas e metanálises — resumo, principais achados e implicação clínica.
       </p>
 
@@ -64,7 +64,7 @@ export default function Estudos() {
             <Link key={s.slug} to={`/estudos/${s.slug}`} className="cartao" style={{ textDecoration: "none" }}>
               <p className="eyebrow">{RÓTULO_TIPO[s.study_type] ?? s.study_type} · {s.year}</p>
               <strong>{s.title}</strong>
-              <div style={{ fontSize: "0.82rem", color: "var(--cinza-texto)", marginTop: 4 }}>{s.journal}</div>
+              <div style={{ fontSize: "0.82rem", color: "var(--texto-secundario)", marginTop: 4 }}>{s.journal}</div>
             </Link>
           ))}
         </div>

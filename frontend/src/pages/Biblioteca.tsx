@@ -60,7 +60,7 @@ export default function Biblioteca() {
               <p className="eyebrow">{d.kind}</p>
               <h3>{d.title}</h3>
               {d.summary && (
-                <p style={{ color: "var(--cinza-texto)", fontSize: "0.88rem" }}>{d.summary}</p>
+                <p style={{ color: "var(--texto-secundario)", fontSize: "0.88rem" }}>{d.summary}</p>
               )}
               <SeloRevisao status={d.review_status} />
             </Link>

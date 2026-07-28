@@ -43,7 +43,7 @@ flowchart TD
 
   D2 -->|"Não — dispositivo<br/>cardíaco implantável"| C7(["PET/TC com 18F-FDG pode ser considerado;<br/>se indisponível, SPECT/TC com leucócitos<br/>marcados. Classificar em seguida"])
 
-  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  classDef conduta fill:#eef5f8,stroke:#1c7293,color:#0b2e45;
   class C1,C2,C3,C4,C5,C6,C7 conduta;
 ```
 
@@ -88,7 +88,7 @@ flowchart TD
   D5 -->|Sim| C5(["Cirurgia urgente ou eletiva<br/>conforme a hemodinâmica"])
   D5 -->|Não| C6(["Tratamento clínico<br/>com vigilância ativa"])
 
-  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  classDef conduta fill:#eef5f8,stroke:#1c7293,color:#0b2e45;
   class C1,C2,C3,C4,C5,C6 conduta;
 ```
 

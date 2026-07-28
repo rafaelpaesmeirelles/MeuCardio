@@ -99,6 +99,123 @@ def importar(db: Session = Depends(get_db), user=Depends(require_admin)):
     return resultado
 
 
+# ------------------------------------------------- galeria, exames, etc. --
+# As quatro frentes abaixo têm o conteúdo versionado em JSON no repositório e
+# carregadores em app/services/carregar_*.py — mas os carregadores nasceram
+# como scripts avulsos (`python -m ...`), sem nenhuma rota que os acionasse.
+# Resultado: o conteúdo existia no disco e nunca chegava ao banco, e as quatro
+# seções apareciam vazias na interface. Estas rotas fecham esse buraco, no
+# mesmo formato do /import que já existe para os documentos de content/.
+
+FRENTES = {
+    "galeria": ("/galeria/metadados.json", "carregar_galeria", "GalleryImage"),
+    "exames": ("/exames/metadados.json", "carregar_exames", "LabTest"),
+    "evidencias": ("/evidencias/metadados.json", "carregar_evidencias", "EvidenceRecord"),
+    "estudos": ("/estudos/metadados.json", "carregar_estudos", "ScientificStudy"),
+}
+
+
+def _modelo(nome: str):
+    from app.models.evidence import EvidenceRecord
+    from app.models.gallery import GalleryImage
+    from app.models.lab_test import LabTest
+    from app.models.study import ScientificStudy
+
+    return {"GalleryImage": GalleryImage, "LabTest": LabTest,
+            "EvidenceRecord": EvidenceRecord, "ScientificStudy": ScientificStudy}[nome]
+
+
+@router.post("/conteudo/carregar")
+def carregar_conteudo(
+    frente: str | None = Query(None, description="galeria|exames|evidencias|estudos; vazio = todas"),
+    db: Session = Depends(get_db),
+    user=Depends(require_admin),
+):
+    """Lê os JSON versionados e faz upsert por slug. Não publica nada: os itens
+    entram com published=false e só aparecem na interface depois da rota de
+    publicação abaixo — o checkpoint de revisão exigido para conteúdo clínico."""
+    import importlib
+
+    alvos = [frente] if frente else list(FRENTES)
+    desconhecidas = [f for f in alvos if f not in FRENTES]
+    if desconhecidas:
+        raise HTTPException(status_code=422, detail=f"Frente desconhecida: {desconhecidas[0]}")
+
+    resultado = {}
+    for nome in alvos:
+        caminho, modulo, _ = FRENTES[nome]
+        try:
+            mod = importlib.import_module(f"app.services.{modulo}")
+            resultado[nome] = mod.carregar(caminho)
+        except FileNotFoundError:
+            resultado[nome] = {"erro": f"{caminho} não encontrado no container"}
+        except Exception as e:  # noqa: BLE001 — uma frente com problema não derruba as outras
+            resultado[nome] = {"erro": f"{type(e).__name__}: {e}"}
+
+    db.add(AuditLog(user_id=user.id, action="carregar_conteudo", entity="conteudo",
+                    detail=resultado))
+    db.commit()
+    return resultado
+
+
+@router.get("/conteudo/pendentes")
+def conteudo_pendente(db: Session = Depends(get_db), _=Depends(require_admin)):
+    """Quantos itens de cada frente estão carregados e ainda não publicados,
+    separados por review_status — é o que o Rafael olha antes de aprovar."""
+    resumo = {}
+    for nome, (_, _, modelo_nome) in FRENTES.items():
+        Modelo = _modelo(modelo_nome)
+        total = db.query(Modelo).count()
+        publicados = db.query(Modelo).filter(Modelo.published.is_(True)).count()
+        revisados_pendentes = (
+            db.query(Modelo)
+            .filter(Modelo.published.is_(False), Modelo.review_status == "revisado")
+            .count()
+        )
+        resumo[nome] = {
+            "total": total,
+            "publicados": publicados,
+            "nao_publicados": total - publicados,
+            "nao_publicados_com_review_revisado": revisados_pendentes,
+        }
+    return resumo
+
+
+class PublicacaoConteudo(BaseModel):
+    frente: str
+    slugs: list[str] | None = None       # vazio = todos os elegíveis da frente
+    somente_revisados: bool = True       # não publica o que ainda está pendente_revisao
+
+
+@router.post("/conteudo/publicar")
+def publicar_conteudo(
+    dados: PublicacaoConteudo,
+    db: Session = Depends(get_db),
+    user=Depends(require_admin),
+):
+    if dados.frente not in FRENTES:
+        raise HTTPException(status_code=422, detail=f"Frente desconhecida: {dados.frente}")
+
+    Modelo = _modelo(FRENTES[dados.frente][2])
+    query = db.query(Modelo).filter(Modelo.published.is_(False))
+    if dados.slugs:
+        query = query.filter(Modelo.slug.in_(dados.slugs))
+    if dados.somente_revisados:
+        query = query.filter(Modelo.review_status == "revisado")
+
+    itens = query.all()
+    for item in itens:
+        item.published = True
+
+    db.add(AuditLog(
+        user_id=user.id, action="publicar", entity=dados.frente,
+        detail={"quantidade": len(itens), "slugs": [i.slug for i in itens]},
+    ))
+    db.commit()
+    return {"frente": dados.frente, "publicados": len(itens),
+            "slugs": [i.slug for i in itens]}
+
+
 # --------------------------------------------------------------- usuários --
 # Duas portas de entrada: o admin cria uma conta já aprovada (rota abaixo), ou
 # a pessoa se cadastra sozinha em /api/auth/solicitar-acesso e cai numa fila

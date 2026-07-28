@@ -50,7 +50,7 @@ function SolicitacaoCard({ u, aoDecidir }: { u: Usuario; aoDecidir: () => void }
         {u.profession} — {u.council_name} {u.council_number}/{u.council_state}
         {u.specialty && <> · {u.specialty}</>}
       </div>
-      <div style={{ fontSize: "0.82rem", color: "var(--cinza-texto)", marginTop: 2 }}>
+      <div style={{ fontSize: "0.82rem", color: "var(--texto-secundario)", marginTop: 2 }}>
         {u.email} · CPF {u.cpf} · solicitado em {new Date(u.created_at).toLocaleDateString("pt-BR")}
       </div>
 
@@ -145,7 +145,7 @@ export default function Admin() {
               <h2 style={{ marginTop: "1.2rem" }}>
                 Solicitações de acesso <span className="selo selo--pendente">{pendentes.length}</span>
               </h2>
-              <p style={{ color: "var(--cinza-texto)", maxWidth: "60ch" }}>
+              <p style={{ color: "var(--texto-secundario)", maxWidth: "60ch" }}>
                 Confira o registro no conselho de classe antes de aprovar — o MeuCardio não
                 valida isso automaticamente.
               </p>
@@ -158,7 +158,7 @@ export default function Admin() {
           )}
 
           <h2 style={{ marginTop: "1.6rem" }}>Criar conta diretamente</h2>
-          <p style={{ color: "var(--cinza-texto)", maxWidth: "58ch" }}>
+          <p style={{ color: "var(--texto-secundario)", maxWidth: "58ch" }}>
             Pula a fila de solicitação — a conta já nasce aprovada. Repasse a senha
             temporária por um canal seguro.
           </p>
@@ -194,7 +194,7 @@ export default function Admin() {
               <input id="senha" type="text" value={novo.password}
                      onChange={(e) => setNovo({ ...novo, password: e.target.value })}
                      aria-describedby="senha-ajuda" />
-              <span id="senha-ajuda" style={{ fontSize: "0.8rem", color: "var(--cinza-texto)" }}>
+              <span id="senha-ajuda" style={{ fontSize: "0.8rem", color: "var(--texto-secundario)" }}>
                 Mínimo 8 caracteres. Fica visível aqui de propósito, para você copiar e repassar.
               </span>
               {senhaFraca && (
@@ -215,7 +215,7 @@ export default function Admin() {
                 <div style={{ flex: 1 }}>
                   <strong>{u.full_name}</strong>{" "}
                   <span className="eyebrow">{PERFIS.find((p) => p.valor === u.role)?.rotulo}</span>
-                  <div style={{ fontSize: "0.86rem", color: "var(--cinza-texto)" }}>
+                  <div style={{ fontSize: "0.86rem", color: "var(--texto-secundario)" }}>
                     {u.email}
                     {u.council_name && ` · ${u.council_name} ${u.council_number}/${u.council_state}`}
                     {u.crm && !u.council_name && ` · CRM ${u.crm}`}

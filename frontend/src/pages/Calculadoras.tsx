@@ -15,7 +15,7 @@ export default function Calculadoras() {
     <>
       <p className="eyebrow">Escores clínicos</p>
       <h1>Calculadoras</h1>
-      <p style={{ color: "var(--cinza-texto)", maxWidth: "60ch" }}>
+      <p style={{ color: "var(--texto-secundario)", maxWidth: "60ch" }}>
         Cada escore mostra a referência original e as limitações de aplicação. Escores cujos
         coeficientes oficiais ainda não foram conferidos ficam bloqueados até a validação.
       </p>
@@ -27,7 +27,7 @@ export default function Calculadoras() {
             <>
               <p className="eyebrow">{c.theme}</p>
               <h3>{c.name}</h3>
-              <p style={{ color: "var(--cinza-texto)", fontSize: "0.88rem" }}>{c.purpose}</p>
+              <p style={{ color: "var(--texto-secundario)", fontSize: "0.88rem" }}>{c.purpose}</p>
               {!liberada && <SeloRevisao status={c.status} />}
             </>
           );

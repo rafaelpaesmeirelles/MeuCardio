@@ -1,25 +1,56 @@
-/* MeuCardio — identidade do Guia de Cardiologia
-   Bordô, dourado e branco. Nada além disso entra na paleta. */
+/* MeuCardio — paleta oficial da marca.
+   A mesma da logo e do material de divulgação. Nenhuma cor entra aqui sem
+   estar na tabela abaixo, com duas exceções declaradas (ver "cores de estado").
+
+   Os componentes NÃO devem usar os tokens de marca diretamente: usam os papéis
+   semânticos. Assim, se um papel mudar de cor, muda num lugar só. */
 
 :root {
-  --bordo: #6e1220;
-  --bordo-escuro: #4d0c17;
-  --bordo-claro: #8d2231;
-  --dourado: #c4a15a;
-  --dourado-claro: #e0c68f;
+  /* --- Paleta da marca ---------------------------------------------------- */
+  --navy: #0b2e45;
+  --navy-dark: #081e30;
+  --red: #d5001d;
+  --red-dark: #b0001a;
+  --teal: #1c7293;
+  --teal-light: #6fb4cc;
+  --off-white: #fcfcfc;
+  --ink: #26333b;
+  --muted: #55666f;
+  --line: #e4e8ea;
   --branco: #ffffff;
-  --cinza-fundo: #f4f2f0;
-  --cinza-borda: #e3ded9;
-  --cinza-texto: #6b625c;
-  --tinta: #1c1715;
-  --alerta: #9a3412;
+
+  /* --- Papéis semânticos: é isto que os componentes usam ------------------ */
+  --primaria: var(--navy);          /* cabeçalho, marca, superfícies escuras */
+  --primaria-escura: var(--navy-dark);
+  --acao: var(--red);               /* CTA: botão primário, chamada principal */
+  --acao-hover: var(--red-dark);
+  --acento: var(--teal);            /* links, estado ativo, realces */
+  --acento-claro: var(--teal-light);/* só sobre fundo escuro — ver nota */
+  --fundo: var(--off-white);
+  --superficie: var(--branco);
+  --texto: var(--ink);
+  --texto-secundario: var(--muted);
+  --borda: var(--line);
+
+  /* --- Cores de estado ----------------------------------------------------
+     Ficam fora da paleta de marca de propósito: comunicam estado do sistema,
+     não identidade. Verde para sucesso é convenção de usabilidade que a paleta
+     não cobre; erro usa o vermelho escuro da marca para não competir com o CTA. */
+  --alerta: var(--red-dark);
+  --sucesso: #1e7a4d;
+
+  /* --- Tintas de apoio ----------------------------------------------------
+     Fundos muito claros derivados dos tons acima, para selos e estados hover. */
+  --acento-tinta: #eef5f8;
+  --acao-tinta: #fdeef0;
+  --sucesso-tinta: #edf6f1;
 
   --fonte-display: "Archivo", system-ui, sans-serif;
   --fonte-texto: "Inter", system-ui, sans-serif;
   --fonte-dados: "IBM Plex Mono", ui-monospace, monospace;
 
   --r: 6px;
-  --sombra: 0 1px 2px rgba(28, 23, 21, 0.06), 0 8px 24px -16px rgba(28, 23, 21, 0.25);
+  --sombra: 0 1px 2px rgba(11, 46, 69, 0.06), 0 8px 24px -16px rgba(11, 46, 69, 0.28);
   --barra-inferior: 60px;
 }
 
@@ -28,8 +59,8 @@
 html, body, #root { height: 100%; margin: 0; }
 
 body {
-  background: var(--cinza-fundo);
-  color: var(--tinta);
+  background: var(--fundo);
+  color: var(--texto);
   font-family: var(--fonte-texto);
   font-size: 15px;
   line-height: 1.55;
@@ -42,16 +73,17 @@ h1, h2, h3, h4 {
   letter-spacing: -0.015em;
   line-height: 1.15;
   margin: 0 0 0.5rem;
+  color: var(--primaria);
 }
 h1 { font-size: 1.6rem; }
 h2 { font-size: 1.2rem; }
 h3 { font-size: 1rem; text-transform: none; }
 
-a { color: var(--bordo); text-decoration: none; }
+a { color: var(--acento); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 :focus-visible {
-  outline: 2px solid var(--dourado);
+  outline: 2px solid var(--acento);
   outline-offset: 2px;
   border-radius: 3px;
 }
@@ -60,29 +92,23 @@ a:hover { text-decoration: underline; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
 
-/* --- Elemento de assinatura: fio dourado herdado da borda do escudo -------- */
-.fio-dourado {
-  height: 2px;
-  background: linear-gradient(90deg, var(--dourado) 0%, var(--dourado-claro) 45%, transparent 100%);
-}
-
 /* --- Blocos ---------------------------------------------------------------- */
 .cartao {
-  background: var(--branco);
-  border: 1px solid var(--cinza-borda);
+  background: var(--superficie);
+  border: 1px solid var(--borda);
   border-radius: var(--r);
   box-shadow: var(--sombra);
   padding: 1rem 1.1rem;
   position: relative;
 }
-.cartao--clinico { border-left: 3px solid var(--dourado); }
+.cartao--clinico { border-left: 3px solid var(--acento); }
 
 .eyebrow {
   font-family: var(--fonte-dados);
   font-size: 0.68rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--cinza-texto);
+  color: var(--texto-secundario);
 }
 
 .dado {
@@ -98,11 +124,11 @@ a:hover { text-decoration: underline; }
   text-transform: uppercase;
   padding: 0.15rem 0.45rem;
   border-radius: 3px;
-  border: 1px solid var(--cinza-borda);
-  color: var(--cinza-texto);
+  border: 1px solid var(--borda);
+  color: var(--texto-secundario);
 }
-.selo--revisado { border-color: var(--dourado); color: #7a5f21; background: #fdf8ee; }
-.selo--pendente { border-color: var(--alerta); color: var(--alerta); background: #fdf3ef; }
+.selo--revisado { border-color: var(--acento); color: var(--acento); background: var(--acento-tinta); }
+.selo--pendente { border-color: var(--alerta); color: var(--alerta); background: var(--acao-tinta); }
 
 .botao {
   font-family: var(--fonte-texto);
@@ -110,15 +136,15 @@ a:hover { text-decoration: underline; }
   font-size: 0.92rem;
   padding: 0.6rem 1.05rem;
   border-radius: var(--r);
-  border: 1px solid var(--bordo);
-  background: var(--bordo);
+  border: 1px solid var(--acao);
+  background: var(--acao);
   color: var(--branco);
   cursor: pointer;
 }
-.botao:hover { background: var(--bordo-claro); }
+.botao:hover { background: var(--acao-hover); border-color: var(--acao-hover); }
 .botao:disabled { opacity: 0.5; cursor: not-allowed; }
-.botao--secundario { background: transparent; color: var(--bordo); }
-.botao--secundario:hover { background: #f8eff0; }
+.botao--secundario { background: transparent; color: var(--acento); border-color: var(--acento); }
+.botao--secundario:hover { background: var(--acento-tinta); }
 
 label { display: block; font-size: 0.86rem; font-weight: 500; margin-bottom: 0.3rem; }
 
@@ -126,12 +152,12 @@ input, select, textarea {
   width: 100%;
   font: inherit;
   padding: 0.55rem 0.65rem;
-  border: 1px solid var(--cinza-borda);
+  border: 1px solid var(--borda);
   border-radius: var(--r);
-  background: var(--branco);
+  background: var(--superficie);
   color: inherit;
 }
-input:focus, select:focus, textarea:focus { border-color: var(--bordo); }
+input:focus, select:focus, textarea:focus { border-color: var(--acento); }
 
 .grade { display: grid; gap: 0.9rem; }
 @media (min-width: 760px) { .grade--2 { grid-template-columns: 1fr 1fr; } }
@@ -139,8 +165,8 @@ input:focus, select:focus, textarea:focus { border-color: var(--bordo); }
 
 .aviso {
   font-size: 0.82rem;
-  color: var(--cinza-texto);
-  border-top: 1px solid var(--cinza-borda);
+  color: var(--texto-secundario);
+  border-top: 1px solid var(--borda);
   padding-top: 0.7rem;
   margin-top: 0.9rem;
 }

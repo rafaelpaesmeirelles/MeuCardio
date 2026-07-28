@@ -39,7 +39,7 @@ export default function Templates() {
     <>
       <p className="eyebrow">Documentos</p>
       <h1>Modelos de atestado e laudo</h1>
-      <p style={{ color: "var(--cinza-texto)", maxWidth: "60ch" }}>
+      <p style={{ color: "var(--texto-secundario)", maxWidth: "60ch" }}>
         Crie modelos com variáveis entre chaves duplas — ex.: <code>{"{{dias_afastamento}}"}</code> —
         preenchidas na hora de gerar o documento, dentro da ficha de cada paciente.
       </p>

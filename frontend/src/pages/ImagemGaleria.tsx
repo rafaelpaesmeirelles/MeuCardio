@@ -66,7 +66,7 @@ export default function ImagemGaleria() {
         <div style={{ marginTop: "0.8rem", display: "flex", gap: 6, flexWrap: "wrap" }}>
           {img.tags.map((t) => (
             <span key={t} className="eyebrow" style={{
-              background: "var(--cinza-fundo)", padding: "0.2rem 0.5rem", borderRadius: 4,
+              background: "var(--fundo)", padding: "0.2rem 0.5rem", borderRadius: 4,
             }}>
               {t}
             </span>

@@ -33,7 +33,7 @@ flowchart TD
   D2 -->|"maior que 20 mmHg"| C2(["Hipertensão pulmonar confirmada<br/>classificar o grupo hemodinâmico"])
   D2 -->|"menor ou igual a 20 mmHg"| C3(["HP afastada pela definição atual"])
 
-  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  classDef conduta fill:#eef5f8,stroke:#1c7293,color:#0b2e45;
   class C1,C2,C3 conduta;
 ```
 

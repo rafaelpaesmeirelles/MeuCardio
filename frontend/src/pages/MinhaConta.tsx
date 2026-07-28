@@ -110,7 +110,6 @@ function DadosPessoais({ perfil, aoSalvar }: { perfil: Usuario; aoSalvar: (u: Us
       </label>
       <input id="conta-especialidade" value={dados.specialty} onChange={(e) => set("specialty", e.target.value)} />
 
-      <div className="fio-dourado" style={{ margin: "1rem 0" }} />
 
       <p style={{ fontSize: "0.86rem", opacity: 0.8, margin: 0 }}>
         E-mail de acesso: <strong>{perfil.email}</strong>
@@ -122,7 +121,7 @@ function DadosPessoais({ perfil, aoSalvar }: { perfil: Usuario; aoSalvar: (u: Us
       </p>
 
       {erro && <p role="alert" style={{ color: "var(--alerta)", fontSize: "0.86rem" }}>{erro}</p>}
-      {ok && <p style={{ color: "var(--sucesso, #0a5)", fontSize: "0.86rem" }}>Dados salvos.</p>}
+      {ok && <p style={{ color: "var(--sucesso)", fontSize: "0.86rem" }}>Dados salvos.</p>}
 
       <button className="botao" style={{ marginTop: "0.8rem" }} onClick={salvar} disabled={!valido || salvando}>
         {salvando ? "Salvando…" : "Salvar dados"}
@@ -196,7 +195,7 @@ function TrocarSenha() {
       </label>
 
       {erro && <p role="alert" style={{ color: "var(--alerta)", fontSize: "0.86rem" }}>{erro}</p>}
-      {ok && <p style={{ color: "var(--sucesso, #0a5)", fontSize: "0.86rem" }}>Senha alterada.</p>}
+      {ok && <p style={{ color: "var(--sucesso)", fontSize: "0.86rem" }}>Senha alterada.</p>}
 
       <button className="botao" style={{ marginTop: "0.8rem" }} onClick={alterar} disabled={!valido || salvando}>
         {salvando ? "Alterando…" : "Alterar senha"}
@@ -253,7 +252,6 @@ function Assinatura() {
             </p>
           )}
 
-          <div className="fio-dourado" style={{ margin: "1rem 0" }} />
 
           <p><strong>R$ 20,00/mês</strong> — acesso completo à plataforma.</p>
 

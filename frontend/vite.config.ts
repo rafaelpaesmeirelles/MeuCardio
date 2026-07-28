@@ -14,7 +14,7 @@ export default defineConfig({
         description:
           "Plataforma clínica de apoio à decisão em Cardiologia.",
         lang: "pt-BR",
-        theme_color: "#6E1220",
+        theme_color: "#0B2E45",
         background_color: "#FFFFFF",
         display: "standalone",
         orientation: "portrait",

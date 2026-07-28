@@ -11,7 +11,7 @@ type Agendamento = {
 const RÓTULO_TIPO: Record<string, string> = { consulta: "Consulta", retorno: "Retorno", exame: "Exame", outro: "Outro" };
 const RÓTULO_STATUS: Record<string, string> = { confirmado: "Confirmado", cancelado: "Cancelado", realizado: "Realizado", faltou: "Faltou" };
 const COR_STATUS: Record<string, string> = {
-  confirmado: "var(--bordo)", cancelado: "var(--cinza-texto)", realizado: "#2e7d52", faltou: "var(--alerta)",
+  confirmado: "var(--acento)", cancelado: "var(--texto-secundario)", realizado: "var(--sucesso)", faltou: "var(--alerta)",
 };
 
 function agora() {

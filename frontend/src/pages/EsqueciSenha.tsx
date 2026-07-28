@@ -24,7 +24,6 @@ export default function EsqueciSenha() {
         <div className="login__brasao">
           <h1 style={{ fontSize: "1.25rem", marginTop: 14 }}>Esqueci minha senha</h1>
         </div>
-        <div className="fio-dourado" style={{ marginBottom: "1rem" }} />
 
         {enviado ? (
           <>

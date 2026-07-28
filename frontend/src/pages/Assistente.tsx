@@ -126,7 +126,7 @@ export default function Assistente() {
       {mostrarHistorico && (
         <div className="cartao" style={{ marginBottom: "0.8rem", maxHeight: 260, overflowY: "auto" }}>
           {historico.length === 0 ? (
-            <p style={{ margin: 0, color: "var(--cinza-texto)", fontSize: "0.88rem" }}>
+            <p style={{ margin: 0, color: "var(--texto-secundario)", fontSize: "0.88rem" }}>
               Nenhuma conversa anterior ainda.
             </p>
           ) : (
@@ -135,8 +135,8 @@ export default function Assistente() {
                    onClick={() => abrirConversa(c.id)}
                    style={{
                      display: "flex", justifyContent: "space-between", alignItems: "center",
-                     padding: "0.5rem 0.3rem", borderBottom: "1px solid var(--cinza-borda)",
-                     cursor: "pointer", background: conversa === c.id ? "var(--cinza-fundo)" : "transparent",
+                     padding: "0.5rem 0.3rem", borderBottom: "1px solid var(--borda)",
+                     cursor: "pointer", background: conversa === c.id ? "var(--fundo)" : "transparent",
                    }}>
                 <span style={{ fontSize: "0.88rem" }}>{c.titulo}</span>
                 <button className="botao botao--secundario" style={{ padding: "0.2rem 0.5rem", fontSize: "0.76rem" }}

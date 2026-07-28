@@ -34,7 +34,7 @@ flowchart TD
   D3 -->|"Risco intermediário"| C4(["Observação na emergência<br/>ou unidade de síncope"])
   D3 -->|"Baixo risco"| C5(["Manejo ambulatorial"])
 
-  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  classDef conduta fill:#eef5f8,stroke:#1c7293,color:#0b2e45;
   class C1,C2,C3,C4,C5 conduta;
 ```
 

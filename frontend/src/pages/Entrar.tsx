@@ -30,7 +30,6 @@ export default function Entrar() {
         <div className="login__brasao">
           <img src="/logo.png" alt="MeuCardio" style={{ width: "100%", maxWidth: "340px", height: "auto" }} />
         </div>
-        <div className="fio-dourado" style={{ marginBottom: "1.1rem" }} />
 
         <label htmlFor="email">E-mail</label>
         <input
@@ -65,7 +64,7 @@ export default function Entrar() {
               background: "none",
               border: "none",
               fontSize: "0.78rem",
-              color: "var(--link, #0a5)",
+              color: "var(--acento)",
               cursor: "pointer",
               padding: 0,
             }}

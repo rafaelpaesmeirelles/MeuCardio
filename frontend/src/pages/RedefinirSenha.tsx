@@ -48,7 +48,6 @@ export default function RedefinirSenha() {
         <div className="login__brasao">
           <h1 style={{ fontSize: "1.25rem", marginTop: 14 }}>Nova senha</h1>
         </div>
-        <div className="fio-dourado" style={{ marginBottom: "1rem" }} />
 
         {feito ? (
           <p>Senha redefinida. Levando você para o login…</p>

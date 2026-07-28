@@ -24,7 +24,7 @@ flowchart TD
   D1 -->|Sim| C1(["Critério de risco muito alto na ESC 2023:<br/>angiografia invasiva imediata"])
   D1 -->|Não| C2(["Investigar e tratar<br/>a causa de base"])
 
-  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  classDef conduta fill:#eef5f8,stroke:#1c7293,color:#0b2e45;
   class C1,C2 conduta;
 ```
 
@@ -40,7 +40,7 @@ flowchart TD
   D1 -->|"D — em deterioração"| C4(["Considerar suporte circulatório mecânico<br/>decisão individualizada"])
   D1 -->|"E — extremo"| C5(["Considerar suporte circulatório mecânico<br/>decisão individualizada"])
 
-  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  classDef conduta fill:#eef5f8,stroke:#1c7293,color:#0b2e45;
   class C1,C2,C3,C4,C5 conduta;
 ```
 

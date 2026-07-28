@@ -32,7 +32,7 @@ export default function Estudo() {
         <div>
           <p className="eyebrow">{s.journal} · {s.year} · {s.theme}</p>
           <h1 style={{ margin: 0 }}>{s.title}</h1>
-          {s.authors && <p style={{ color: "var(--cinza-texto)", marginTop: 4 }}>{s.authors}</p>}
+          {s.authors && <p style={{ color: "var(--texto-secundario)", marginTop: 4 }}>{s.authors}</p>}
         </div>
         <BotaoFavorito itemType="estudo" itemId={s.id} />
       </div>

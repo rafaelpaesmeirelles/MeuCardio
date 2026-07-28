@@ -31,7 +31,7 @@ flowchart TD
 
   D1 -->|"maior ou igual a 50%"| C3(["ICFEp — inibidor de SGLT2<br/>dapagliflozina ou empagliflozina<br/>Classe I, nível A"])
 
-  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  classDef conduta fill:#eef5f8,stroke:#1c7293,color:#0b2e45;
   class C1,C2,C3 conduta;
 ```
 

@@ -48,7 +48,7 @@ flowchart TD
   D5 -->|Não| C6(["Tratamento medicamentoso<br/>alvo sistólico de 120 a 129 mmHg"])
   D5 -->|Sim| C7(["Tratamento medicamentoso com<br/>alvo individualizado, menos intensivo"])
 
-  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  classDef conduta fill:#eef5f8,stroke:#1c7293,color:#0b2e45;
   class C1,C2,C3,C4,C5,C6,C7 conduta;
 ```
 

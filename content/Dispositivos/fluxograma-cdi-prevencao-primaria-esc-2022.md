@@ -26,7 +26,7 @@ flowchart TD
 
   D1 -->|"Cardiomiopatia dilatada ou<br/>cardiomiopatia não dilatada<br/>hipocinética"| C2(["Decisão individualizada, não restrita à<br/>FEVE menor ou igual a 35%: considerar em<br/>conjunto apresentação clínica, ressonância<br/>magnética cardíaca e teste genético"])
 
-  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  classDef conduta fill:#eef5f8,stroke:#1c7293,color:#0b2e45;
   class C1,C2 conduta;
 ```
 

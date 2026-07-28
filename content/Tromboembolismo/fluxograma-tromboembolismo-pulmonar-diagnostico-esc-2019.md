@@ -49,7 +49,7 @@ flowchart TD
   D8 -->|Sim| C8(["Estratificação prognóstica<br/>sPESI, função do ventrículo direito<br/>e biomarcadores"])
   D8 -->|Não| C9(["Investigar diagnóstico alternativo"])
 
-  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  classDef conduta fill:#eef5f8,stroke:#1c7293,color:#0b2e45;
   class C1,C2,C3,C4,C5,C6,C7,C8,C9 conduta;
 ```
 

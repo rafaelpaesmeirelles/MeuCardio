@@ -14,7 +14,7 @@ export function Vazio({ titulo, acao }: { titulo: string; acao?: string }) {
   return (
     <div className="cartao">
       <h3>{titulo}</h3>
-      {acao && <p style={{ margin: 0, color: "var(--cinza-texto)" }}>{acao}</p>}
+      {acao && <p style={{ margin: 0, color: "var(--texto-secundario)" }}>{acao}</p>}
     </div>
   );
 }

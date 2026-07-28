@@ -90,7 +90,7 @@ export default function PatientPrescricao({ patientId }: { patientId: number }) 
   }
 
   return (
-    <div className="cartao" style={{ background: "var(--cinza-fundo)" }}>
+    <div className="cartao" style={{ background: "var(--fundo)" }}>
       <p className="eyebrow" style={{ margin: 0 }}>Prescrição</p>
 
       <div style={{ position: "relative", marginTop: "0.5rem" }}>
@@ -117,7 +117,7 @@ export default function PatientPrescricao({ patientId }: { patientId: number }) 
             <strong>{escolhendo.nome}</strong> — escolha a apresentação:
           </p>
           {escolhendo.opcoes.map((ap, i) => (
-            <div key={i} style={{ marginTop: "0.5rem", borderTop: "1px solid var(--cinza-borda)", paddingTop: "0.4rem" }}>
+            <div key={i} style={{ marginTop: "0.5rem", borderTop: "1px solid var(--borda)", paddingTop: "0.4rem" }}>
               <p style={{ margin: 0, fontSize: "0.86rem" }}>
                 <strong>{ap.brand_name}</strong> — {ap.manufacturer} — {ap.dosage}
                 {ap.generic_available && <span className="eyebrow"> (tem genérico)</span>}
@@ -140,7 +140,7 @@ export default function PatientPrescricao({ patientId }: { patientId: number }) 
       )}
 
       {itens.map((item, i) => (
-        <div key={i} style={{ marginTop: "0.6rem", borderTop: "1px solid var(--cinza-borda)", paddingTop: "0.5rem" }}>
+        <div key={i} style={{ marginTop: "0.6rem", borderTop: "1px solid var(--borda)", paddingTop: "0.5rem" }}>
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             <strong style={{ fontSize: "0.9rem" }}>{item.drug_name}</strong>
             <button className="botao botao--secundario" style={{ padding: "0.1rem 0.4rem" }} onClick={() => removerItem(i)}>✕</button>

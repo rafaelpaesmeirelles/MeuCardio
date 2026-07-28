@@ -64,17 +64,17 @@ function GraficoMeiaVida({ drogas, admin, aoSalvar }: {
             <div key={d.slug}>
               <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.86rem" }}>
                 <span>{d.generic_name}</span>
-                <span className="dado" style={{ color: "var(--cinza-texto)" }}>
+                <span className="dado" style={{ color: "var(--texto-secundario)" }}>
                   {valorAtual ? `${valorAtual} h` : "sem dado"}
                 </span>
               </div>
               <div style={{
-                background: "var(--cinza-fundo)", borderRadius: 5, height: 18, marginTop: 4,
-                border: "1px solid var(--cinza-borda)", overflow: "hidden",
+                background: "var(--fundo)", borderRadius: 5, height: 18, marginTop: 4,
+                border: "1px solid var(--borda)", overflow: "hidden",
               }}>
                 {valorAtual !== null && (
                   <div style={{
-                    width: `${pct}%`, height: "100%", background: "var(--bordo)",
+                    width: `${pct}%`, height: "100%", background: "var(--acento)",
                     borderRadius: 4, transition: "width 0.3s",
                   }} />
                 )}
@@ -107,7 +107,7 @@ function GraficoMeiaVida({ drogas, admin, aoSalvar }: {
         })}
       </div>
       {comDado.length === 0 && (
-        <p style={{ color: "var(--cinza-texto)", fontSize: "0.9rem", marginTop: "0.5rem" }}>
+        <p style={{ color: "var(--texto-secundario)", fontSize: "0.9rem", marginTop: "0.5rem" }}>
           Nenhum dos medicamentos selecionados tem meia-vida cadastrada ainda.
           {admin ? " Use os botões abaixo pra preencher." : " Peça a um administrador para preencher."}
         </p>
@@ -130,13 +130,13 @@ function BarraComparativa({ rotulo, valor, unidade, max, cor }: {
     <div>
       <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.86rem" }}>
         <span>{rotulo}</span>
-        <span className="dado" style={{ color: "var(--cinza-texto)" }}>
+        <span className="dado" style={{ color: "var(--texto-secundario)" }}>
           {valor !== null ? `${valor} ${unidade}` : "sem dado"}
         </span>
       </div>
       <div style={{
-        background: "var(--cinza-fundo)", borderRadius: 5, height: 18, marginTop: 4,
-        border: "1px solid var(--cinza-borda)", overflow: "hidden",
+        background: "var(--fundo)", borderRadius: 5, height: 18, marginTop: 4,
+        border: "1px solid var(--borda)", overflow: "hidden",
       }}>
         {valor !== null && (
           <div style={{
@@ -158,7 +158,7 @@ function GraficoEficaciaPA({ drogas }: { drogas: Detalhe[] }) {
       <p className="eyebrow">Redução média de pressão arterial (PAS/PAD, mmHg)</p>
 
       {comDado.length === 0 ? (
-        <p style={{ color: "var(--cinza-texto)", fontSize: "0.9rem", marginTop: "0.5rem" }}>
+        <p style={{ color: "var(--texto-secundario)", fontSize: "0.9rem", marginTop: "0.5rem" }}>
           Nenhum dos medicamentos selecionados tem dado de eficácia anti-hipertensiva
           cadastrado ainda — cobrimos só os principais anti-hipertensivos por classe até agora.
         </p>
@@ -171,8 +171,8 @@ function GraficoEficaciaPA({ drogas }: { drogas: Detalhe[] }) {
               <div key={d.slug}>
                 <strong style={{ fontSize: "0.9rem" }}>{d.generic_name}</strong>
                 <div style={{ display: "flex", flexDirection: "column", gap: 6, marginTop: 4 }}>
-                  <BarraComparativa rotulo="PAS" valor={sbp} unidade="mmHg" max={max} cor="var(--bordo)" />
-                  <BarraComparativa rotulo="PAD" valor={dbp} unidade="mmHg" max={max} cor="var(--dourado)" />
+                  <BarraComparativa rotulo="PAS" valor={sbp} unidade="mmHg" max={max} cor="var(--acento)" />
+                  <BarraComparativa rotulo="PAD" valor={dbp} unidade="mmHg" max={max} cor="var(--acento)" />
                 </div>
               </div>
             );
@@ -309,7 +309,7 @@ export default function Medicamentos() {
         </div>
       ) : (
         <>
-          <p style={{ color: "var(--cinza-texto)", marginTop: "0.9rem" }}>
+          <p style={{ color: "var(--texto-secundario)", marginTop: "0.9rem" }}>
             Selecione um medicamento para ver os detalhes, ou até 4 para comparar lado a lado.
           </p>
           <div className="grade grade--3" style={{ marginTop: "0.8rem" }}>
@@ -321,12 +321,12 @@ export default function Medicamentos() {
                 style={{
                   textAlign: "left",
                   cursor: "pointer",
-                  borderLeft: sel.includes(d.slug) ? "3px solid var(--bordo)" : undefined,
+                  borderLeft: sel.includes(d.slug) ? "3px solid var(--acento)" : undefined,
                 }}
               >
                 <p className="eyebrow">{classeAmpla(d.drug_class)}</p>
                 <strong>{d.generic_name}</strong>
-                <div style={{ fontSize: "0.78rem", color: "var(--cinza-texto)", marginTop: 2 }}>
+                <div style={{ fontSize: "0.78rem", color: "var(--texto-secundario)", marginTop: 2 }}>
                   {d.drug_class}
                 </div>
                 <div style={{ marginTop: 6 }}><SeloRevisao status={d.review_status} /></div>

@@ -66,7 +66,6 @@ export default function Assinatura() {
             </p>
           )}
 
-          <div className="fio-dourado" style={{ margin: "1rem 0" }} />
 
           <p>
             <strong>R$ 20,00/mês</strong> — acesso completo à plataforma MeuCardio.
@@ -84,7 +83,7 @@ export default function Assinatura() {
             </button>
           )}
 
-          {ativa && <p style={{ color: "var(--sucesso, #0a5)", marginTop: "1rem" }}>Sua assinatura está ativa.</p>}
+          {ativa && <p style={{ color: "var(--sucesso)", marginTop: "1rem" }}>Sua assinatura está ativa.</p>}
         </div>
       )}
     </div>

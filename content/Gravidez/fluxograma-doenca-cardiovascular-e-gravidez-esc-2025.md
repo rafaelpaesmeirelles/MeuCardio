@@ -30,7 +30,7 @@ flowchart TD
 
   P2 --> C2(["Plano de acompanhamento definido<br/>antecipadamente: seguimento durante a<br/>gestação, plano de parto e<br/>cuidado pós-parto"])
 
-  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  classDef conduta fill:#eef5f8,stroke:#1c7293,color:#0b2e45;
   class C1,C2 conduta;
 ```
 

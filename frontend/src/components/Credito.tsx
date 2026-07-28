@@ -3,7 +3,7 @@ export default function Credito({ compacto = false }: { compacto?: boolean }) {
     <p
       style={{
         fontSize: compacto ? "0.7rem" : "0.76rem",
-        color: "var(--cinza-texto)",
+        color: "var(--texto-secundario)",
         textAlign: "center",
         margin: compacto ? "0.6rem 0 0" : "1.4rem 0 0",
         lineHeight: 1.5,

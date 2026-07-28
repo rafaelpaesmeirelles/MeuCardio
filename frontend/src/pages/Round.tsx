@@ -262,7 +262,7 @@ export default function Round() {
                               onChange={(e) => setForm({ ...form, physical_exam: e.target.value })} />
                   </div>
 
-                  <div className="cartao" style={{ background: "var(--cinza-fundo)" }}>
+                  <div className="cartao" style={{ background: "var(--fundo)" }}>
                     <p className="eyebrow" style={{ margin: 0 }}>Exame físico cardiológico</p>
                     <div className="grade grade--2" style={{ marginTop: "0.5rem", gap: "0.5rem" }}>
                       <div>
@@ -388,7 +388,7 @@ export default function Round() {
                     </button>
                   </div>
 
-                  <div className="cartao" style={{ background: "var(--cinza-fundo)" }}>
+                  <div className="cartao" style={{ background: "var(--fundo)" }}>
                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                       <p className="eyebrow" style={{ margin: 0 }}>Auxílio de IA</p>
                       <button className="botao" style={{ padding: "0.35rem 0.75rem", fontSize: "0.82rem" }}
@@ -403,14 +403,14 @@ export default function Round() {
                     {erroIA && <p style={{ color: "var(--alerta)", fontSize: "0.86rem" }}>{erroIA}</p>}
 
                     {sugestoes === null ? (
-                      <p style={{ fontSize: "0.86rem", color: "var(--cinza-texto)" }}>Carregando…</p>
+                      <p style={{ fontSize: "0.86rem", color: "var(--texto-secundario)" }}>Carregando…</p>
                     ) : sugestoes.length === 0 ? (
-                      <p style={{ fontSize: "0.86rem", color: "var(--cinza-texto)" }}>
+                      <p style={{ fontSize: "0.86rem", color: "var(--texto-secundario)" }}>
                         Nenhuma sugestão gerada ainda para este paciente.
                       </p>
                     ) : (
                       sugestoes.map((s) => (
-                        <div key={s.id} style={{ marginTop: "0.8rem", borderTop: "1px solid var(--cinza-borda)", paddingTop: "0.6rem" }}>
+                        <div key={s.id} style={{ marginTop: "0.8rem", borderTop: "1px solid var(--borda)", paddingTop: "0.6rem" }}>
                           <p className="eyebrow" style={{ margin: 0 }}>
                             {new Date(s.created_at).toLocaleString("pt-BR")} · {s.model}
                           </p>
@@ -421,12 +421,12 @@ export default function Round() {
                           <p style={{ fontSize: "0.88rem", margin: "0.4rem 0 0" }}><strong>Considerações terapêuticas</strong></p>
                           <p style={{ fontSize: "0.88rem", whiteSpace: "pre-wrap" }}>{s.treatment_considerations}</p>
                           {s.sources.length > 0 && (
-                            <p style={{ fontSize: "0.78rem", color: "var(--cinza-texto)" }}>
+                            <p style={{ fontSize: "0.78rem", color: "var(--texto-secundario)" }}>
                               Fontes: {s.sources.map((f) => f.titulo).join(", ")}
                             </p>
                           )}
                           {s.sources_pubmed && s.sources_pubmed.length > 0 && (
-                            <p style={{ fontSize: "0.78rem", color: "var(--cinza-texto)" }}>
+                            <p style={{ fontSize: "0.78rem", color: "var(--texto-secundario)" }}>
                               Literatura pública (PubMed): {s.sources_pubmed.map((f) => (
                                 <a key={f.pmid} href={f.url} target="_blank" rel="noopener noreferrer" style={{ marginRight: 6 }}>
                                   {f.titulo} ({f.ano})

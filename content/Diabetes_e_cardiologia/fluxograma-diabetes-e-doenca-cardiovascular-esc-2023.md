@@ -32,7 +32,7 @@ flowchart TD
 
   D2 -->|Não| C3(["Estimar o risco em 10 anos pelo<br/>SCORE2-Diabetes e definir a intensidade<br/>da prevenção pela categoria obtida:<br/>baixo, moderado, alto ou muito alto"])
 
-  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  classDef conduta fill:#eef5f8,stroke:#1c7293,color:#0b2e45;
   class C1,C2,C3 conduta;
 ```
 

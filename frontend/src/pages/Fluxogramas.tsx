@@ -31,7 +31,7 @@ export default function Fluxogramas() {
     <>
       <p className="eyebrow">Fluxogramas</p>
       <h1>Fluxogramas clínicos</h1>
-      <p style={{ color: "var(--cinza-texto)", maxWidth: "60ch" }}>
+      <p style={{ color: "var(--texto-secundario)", maxWidth: "60ch" }}>
         Algoritmos visuais de investigação e tratamento, organizados por patologia
         e fundamentados nas diretrizes vigentes (ESC, AHA/ACC, SBC).
       </p>
@@ -81,7 +81,7 @@ export default function Fluxogramas() {
               <p className="eyebrow">{f.theme}</p>
               <strong>{f.title}</strong>
               {f.summary && (
-                <div style={{ fontSize: "0.82rem", color: "var(--cinza-texto)", marginTop: 4 }}>
+                <div style={{ fontSize: "0.82rem", color: "var(--texto-secundario)", marginTop: 4 }}>
                   {f.summary}
                 </div>
               )}

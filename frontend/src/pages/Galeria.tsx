@@ -34,7 +34,7 @@ export default function Galeria() {
     <>
       <p className="eyebrow">Galeria</p>
       <h1>Achados de imagem em cardiologia</h1>
-      <p style={{ color: "var(--cinza-texto)", maxWidth: "60ch" }}>
+      <p style={{ color: "var(--texto-secundario)", maxWidth: "60ch" }}>
         ECG, ecocardiograma, TC, RM, radiografia e cateterismo — imagens de fonte aberta,
         com origem e licença sempre indicadas.
       </p>

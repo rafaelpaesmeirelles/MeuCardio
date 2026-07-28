@@ -23,12 +23,16 @@ export default function Fluxograma({ fonte }: { fonte: string }) {
           securityLevel: "strict", // não permite HTML arbitrário nos rótulos
           theme: "base",
           fontFamily: "Inter, system-ui, sans-serif",
+          // Espelha os tokens de tokens.css. O mermaid recebe cor literal, não
+          // aceita var(--…), então este é o único ponto do frontend em que a
+          // paleta aparece em hex fora do arquivo de tema — se a paleta mudar,
+          // mudar aqui junto.
           themeVariables: {
-            primaryColor: "#fdf8ee",
-            primaryBorderColor: "#c4a15a",
-            primaryTextColor: "#1c1715",
-            lineColor: "#6e1220",
-            secondaryColor: "#f4f2f0",
+            primaryColor: "#eef5f8",      // --acento-tinta
+            primaryBorderColor: "#1c7293", // --teal
+            primaryTextColor: "#26333b",   // --ink
+            lineColor: "#0b2e45",          // --navy
+            secondaryColor: "#fcfcfc",     // --off-white
             tertiaryColor: "#ffffff",
             fontSize: "14px",
           },

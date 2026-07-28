@@ -49,7 +49,7 @@ export default function Busca() {
             <p className="eyebrow">{r.theme} · {r.kind}</p>
             <h3>{r.title}</h3>
             <p
-              style={{ color: "var(--cinza-texto)", fontSize: "0.88rem", margin: 0 }}
+              style={{ color: "var(--texto-secundario)", fontSize: "0.88rem", margin: 0 }}
               dangerouslySetInnerHTML={{ __html: r.snippet }}
             />
           </Link>

@@ -39,7 +39,7 @@ flowchart TD
   D1 -->|"igual a 1"| C2(["Considerar anticoagulante oral<br/>decisão individualizada"])
   D1 -->|"igual a 0"| C3(["Anticoagulação não indicada<br/>apenas pelo escore"])
 
-  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  classDef conduta fill:#eef5f8,stroke:#1c7293,color:#0b2e45;
   class C1,C2,C3 conduta;
 ```
 
@@ -52,7 +52,7 @@ flowchart TD
   D1 -->|"FA paroxística, candidato adequado"| C1(["Ablação por cateter<br/>opção de primeira linha"])
   D1 -->|"Demais casos"| C2(["Controle de frequência<br/>e/ou antiarrítmico"])
 
-  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  classDef conduta fill:#eef5f8,stroke:#1c7293,color:#0b2e45;
   class C1,C2 conduta;
 ```
 

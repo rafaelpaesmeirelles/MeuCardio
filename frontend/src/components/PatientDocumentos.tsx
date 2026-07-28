@@ -44,13 +44,13 @@ export default function PatientDocumentos({ patientId }: { patientId: number }) 
   }
 
   return (
-    <div className="cartao" style={{ background: "var(--cinza-fundo)" }}>
+    <div className="cartao" style={{ background: "var(--fundo)" }}>
       <p className="eyebrow" style={{ margin: 0 }}>Atestado / laudo</p>
 
       {templates === null ? (
         <p style={{ fontSize: "0.86rem" }}>Carregando…</p>
       ) : templates.length === 0 ? (
-        <p style={{ fontSize: "0.86rem", color: "var(--cinza-texto)" }}>
+        <p style={{ fontSize: "0.86rem", color: "var(--texto-secundario)" }}>
           Nenhum modelo criado ainda. <Link to="/documentos">Criar um modelo</Link>.
         </p>
       ) : (

@@ -113,14 +113,23 @@ Processo, igual para as seis:
 3. Escrever seguindo exatamente o padrão de front matter/JSON dos itens já
    existentes na mesma pasta (review_status: revisado, source_refs/reference
    com citação completa e verificável).
-4. Nunca inventar dose, valor numérico, licença de imagem ou achado que não veio
-   de uma fonte real consultada nesta sessão. Se não conseguir confirmar um dado
-   específico, simplesmente não incluir esse dado — não escrever nota de aviso,
-   não pedir verificação humana no texto, só omitir.
+4. Nunca inventar dose, valor numérico, licença de imagem, DOI, PMID, número de
+   norma ou achado que não veio de uma fonte real consultada nesta sessão.
+   **Onde não houver certeza, sinalizar explicitamente com o texto literal
+   `VERIFICAÇÃO HUMANA NECESSÁRIA`** no campo correspondente, em vez de omitir
+   ou de preencher com suposição.
+   *(Esta regra foi invertida pelo `BRIEFING_CLAUDE_CODE.md`, decisão do Rafael
+   em 28/07/2026. A regra anterior mandava omitir o dado em silêncio. Vence o
+   briefing: um dado faltando sem marcação é indistinguível de um dado que
+   ninguém procurou, e some da fila de revisão.)*
 5. Fazer git add + git commit com mensagem descritiva.
 6. Fazer git push.
-7. Sem pausar para perguntar "posso continuar?" — seguir direto para o
-   próximo item mais fraco, repetindo o ciclo, até eu mandar parar.
+7. **Entregar em lotes e apresentar cada lote ao Rafael antes de publicar.**
+   Conteúdo clínico não vai a produção sem esse checkpoint — não marcar a
+   tarefa como concluída sem ele. Escrever, commitar e importar pode seguir
+   sem pausa; o que exige o aval é o passo de **publicar** (`published = true`).
+   *(Também invertido pelo `BRIEFING_CLAUDE_CODE.md` em 28/07/2026. A regra
+   anterior dizia para não pausar em nenhum momento.)*
 
 ## O que nunca fazer sem perguntar
 - Nunca alterar código de backend/frontend na rotina de expansão de biblioteca

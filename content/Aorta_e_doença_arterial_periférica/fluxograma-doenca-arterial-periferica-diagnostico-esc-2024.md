@@ -35,7 +35,7 @@ flowchart TD
 
   D2 -->|Não| C4(["Prevenção e modificação de estilo<br/>de vida: atividade física e<br/>controle de fatores de risco"])
 
-  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  classDef conduta fill:#eef5f8,stroke:#1c7293,color:#0b2e45;
   class C1,C2,C3,C4 conduta;
 ```
 

@@ -54,7 +54,7 @@ flowchart TD
   D8 -->|Sim| C8(["Reparo endovascular na fase aguda se a<br/>anatomia for favorável, com cirurgia aberta<br/>como alternativa, guiado por ETE"])
   D8 -->|Não| C9(["Tratamento clínico; reparo endovascular<br/>na fase subaguda deve ser considerado"])
 
-  classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
+  classDef conduta fill:#eef5f8,stroke:#1c7293,color:#0b2e45;
   class C1,C2,C3,C4,C5,C6,C7,C8,C9 conduta;
 ```
 

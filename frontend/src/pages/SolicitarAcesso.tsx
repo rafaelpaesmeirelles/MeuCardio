@@ -62,7 +62,6 @@ export default function SolicitarAcesso() {
           <div className="login__brasao">
             <h1 style={{ fontSize: "1.25rem", marginTop: 14 }}>Solicitação enviada</h1>
           </div>
-          <div className="fio-dourado" style={{ marginBottom: "1.1rem" }} />
           <p>
             Seus dados foram registrados. Um administrador vai conferir seu registro no
             conselho de classe antes de liberar o acesso — você recebe a confirmação por
@@ -83,7 +82,6 @@ export default function SolicitarAcesso() {
         <div className="login__brasao">
           <h1 style={{ fontSize: "1.25rem", marginTop: 14 }}>Solicitar acesso</h1>
         </div>
-        <div className="fio-dourado" style={{ marginBottom: "1rem" }} />
 
         <p className="aviso" style={{ borderTop: "none", marginTop: 0, paddingTop: 0 }}>
           Seu acesso só é liberado depois que um administrador confirmar seu registro

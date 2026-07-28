@@ -34,10 +34,10 @@ export default function Evidencia() {
 
       <div className="cartao" style={{ marginTop: "0.4rem" }}>
         <div style={{ display: "flex", gap: 10, marginBottom: "0.6rem" }}>
-          <span className="selo" style={{ background: "var(--bordo)", color: "#fff" }}>
+          <span className="selo" style={{ background: "var(--acento)", color: "var(--branco)" }}>
             Classe {e.recommendation_class}
           </span>
-          <span className="selo" style={{ background: "var(--dourado)", color: "#fff" }}>
+          <span className="selo" style={{ background: "var(--acento)", color: "var(--branco)" }}>
             Nível {e.evidence_level}
           </span>
         </div>
