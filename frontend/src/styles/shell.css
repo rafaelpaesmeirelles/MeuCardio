@@ -508,3 +508,46 @@
    inclui e exclui. Ficam legíveis, não em letra miúda. */
 .indicadores__notas { max-width: 58ch; font-size: 0.86rem; color: var(--texto-secundario); }
 .indicadores__notas li { margin-bottom: 0.35rem; }
+
+/* ------------------------------------------------- checklist de alta */
+.checklist__abertas { list-style: none; padding: 0; }
+.checklist__abertas li {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem;
+  padding: 0.55rem 0; border-bottom: 1px solid var(--line);
+}
+.checklist__abertas a { display: flex; gap: 0.6rem; align-items: baseline; }
+.checklist__progresso { margin-left: auto; font-size: 0.85rem; color: var(--texto-secundario); }
+.checklist__progresso em { color: var(--acao); font-style: normal; }
+
+.checklist__contador {
+  display: flex; align-items: baseline; gap: 0.7rem;
+  margin: 0.8rem 0 1.2rem; padding: 0.6rem 0.9rem;
+  background: var(--superficie, #fff); border: 1px solid var(--line);
+  border-left: 4px solid var(--acento); border-radius: 8px;
+}
+.checklist__contador strong { font-size: 1.35rem; color: var(--primaria); }
+.checklist__pendente { margin-left: auto; font-size: 0.85rem; font-weight: 600; color: var(--acao); }
+
+.checklist__grupo { margin-bottom: 1.2rem; }
+.checklist__grupo h3 { margin: 0 0 0.4rem; font-size: 0.95rem; color: var(--primaria); }
+
+.checklist__item {
+  display: flex; gap: 0.7rem; align-items: flex-start;
+  padding: 0.55rem 0.7rem; margin-bottom: 0.35rem;
+  border: 1px solid var(--line); border-radius: 8px; cursor: pointer;
+}
+.checklist__item--ok { background: #f4f8f5; border-color: #cfe3d5; }
+.checklist__item input { margin-top: 0.2rem; width: 1.05rem; height: 1.05rem; flex: 0 0 auto; }
+.checklist__texto { display: flex; flex-direction: column; gap: 0.15rem; }
+.checklist__obrig {
+  align-self: flex-start; font-size: 0.68rem; font-style: normal; font-weight: 700;
+  letter-spacing: 0.03em; text-transform: uppercase; color: var(--acao);
+}
+/* A seção de origem fica visível de propósito: é ela que responde por que o
+   item está na lista, e é o que permite discordar dele com fundamento. */
+.checklist__origem-item { font-size: 0.74rem; color: var(--texto-secundario); font-style: italic; }
+
+.checklist__obs { width: 100%; max-width: 46rem; padding: 0.6rem; border: 1px solid var(--line); border-radius: 8px; }
+.checklist__acoes { display: flex; flex-wrap: wrap; align-items: center; gap: 0.7rem; margin: 0.9rem 0; }
+.checklist__nota { font-size: 0.82rem; color: var(--texto-secundario); }
+.checklist__origem { font-size: 0.85rem; }
