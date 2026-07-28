@@ -192,7 +192,7 @@ def criar_pedido_e_checkout(
                 "price_data": {
                     "currency": "brl",
                     "unit_amount": valor,
-                    "product_data": {"name": "MeuCardio — Telediagnóstico",
+                    "product_data": {"name": "Corvia — Telediagnóstico",
                                      "description": descricao},
                 },
             }],

@@ -1,3 +1,4 @@
+import CabecalhoDocumento from "./CabecalhoDocumento";
 import { useEffect, useState } from "react";
 import { api } from "../lib/api";
 
@@ -183,8 +184,8 @@ export default function PatientPrescricao({ patientId }: { patientId: number }) 
 
       {impressao && (
         <div className="folha-impressao">
+          <CabecalhoDocumento medico={impressao.medico} />
           <h2>Receituário</h2>
-          <p>{impressao.medico.full_name} — {impressao.medico.council_name} {impressao.medico.council_number}/{impressao.medico.council_state}</p>
           <hr />
           <p>Paciente: {impressao.paciente.initials} — prontuário {impressao.paciente.record_number}</p>
           <ol>

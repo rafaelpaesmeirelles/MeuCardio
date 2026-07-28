@@ -584,3 +584,26 @@
 /* O "por quê" é o que a trilha acrescenta ao conteúdo que já existe — fica
    legível, e não em letra de nota de rodapé. */
 .trilha__porque { margin: 0.15rem 0 0; font-size: 0.88rem; color: var(--texto-secundario); max-width: 62ch; }
+
+/* --------------------------------------- cabeçalho dos documentos impressos
+   O documento é do médico, não da plataforma: quem assina e responde pelo
+   conteúdo é ele. Por isso o nome tem peso maior que a logo, e a logo entra
+   como identificação de origem, não como emissor. */
+.doc-cabecalho {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  gap: 1.5rem; padding-bottom: 0.7rem; margin-bottom: 0.9rem;
+  border-bottom: 2px solid var(--primaria);
+}
+.doc-cabecalho__profissional { display: flex; flex-direction: column; gap: 0.1rem; }
+.doc-cabecalho__nome { font-size: 1.05rem; color: var(--primaria); }
+.doc-cabecalho__registro { font-size: 0.88rem; }
+.doc-cabecalho__especialidade { font-size: 0.82rem; color: var(--texto-secundario); }
+.doc-cabecalho__logo { width: 148px; height: auto; flex: 0 0 auto; }
+
+@media print {
+  /* Impressora costuma suprimir imagem de fundo, mas <img> em documento
+     precisa sair — sem isto a logo some justamente no papel, que é onde ela
+     deveria aparecer. */
+  .doc-cabecalho__logo { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .doc-cabecalho { border-bottom: 2px solid #0b2e45; }
+}

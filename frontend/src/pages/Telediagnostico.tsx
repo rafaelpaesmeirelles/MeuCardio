@@ -214,7 +214,7 @@ function Solicitar({ tabela, aoCriar }: { tabela: Tabela; aoCriar: () => void })
                onChange={(e) => set("consentimento", e.target.checked)} />
         <span style={{ fontSize: "0.86rem" }}>
           Confirmo que obtive o consentimento do paciente (ou responsável legal) para o envio
-          deste exame e destes dados ao MeuCardio, conforme o TCLE.
+          deste exame e destes dados à Corvia, conforme o TCLE.
         </span>
       </label>
 

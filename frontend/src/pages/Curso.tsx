@@ -20,7 +20,7 @@ type Curso = {
 };
 
 /**
- * Página do curso parceiro dentro do MeuCardio.
+ * Página do curso parceiro dentro da Corvia.
  *
  * O vídeo não vive aqui: aula ao vivo e gravadas ficam no ambiente do parceiro,
  * e estes são links de redirecionamento. O que é servido daqui é o material de
@@ -150,7 +150,7 @@ export default function Curso() {
             <small>/mês</small>
           </span>
           <p>
-            Assinatura do curso, cobrada à parte da assinatura do MeuCardio. Uma não
+            Assinatura do curso, cobrada à parte da assinatura da Corvia. Uma não
             substitui a outra.
           </p>
           <button className="botao botao--acao" onClick={assinar} disabled={assinando}>
@@ -161,7 +161,7 @@ export default function Curso() {
 
       {(curso.trilhas_vinculadas.length > 0 || curso.casos_vinculados.length > 0) && (
         <>
-          <h2>Para praticar no MeuCardio</h2>
+          <h2>Para praticar na Corvia</h2>
           <p className="curso__nota">
             Conteúdo da plataforma ligado a este curso, para aplicar o que acabou de
             estudar sem sair daqui.

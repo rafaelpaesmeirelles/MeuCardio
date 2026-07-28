@@ -12,7 +12,7 @@ from app.core.security import assinante_ativo
 from app.services.bootstrap import init_db
 
 app = FastAPI(
-    title="MeuCardio — API",
+    title="Corvia — API",
     description=(
         "Idealizador, desenvolvedor, revisor e responsável técnico: "
         "Dr. Rafael Paes Meirelles — CRM-SP 138266 · RQE 134798 em Cardiologia"

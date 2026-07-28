@@ -73,6 +73,10 @@ def dados_para_impressao(pid: int, db: Session = Depends(get_db), user=Depends(c
     return {
         "prescricao": _dump(presc),
         "paciente": {"initials": paciente.initials, "record_number": paciente.record_number},
+        # RQE e especialidade entram no cabeçalho impresso: num receituário que
+        # circula fora da plataforma, é o registro do especialista que dá peso ao
+        # documento — e é dado que o médico já preencheu em Minha Conta.
         "medico": {"full_name": user.full_name, "council_name": user.council_name,
-                    "council_number": user.council_number, "council_state": user.council_state},
+                    "council_number": user.council_number, "council_state": user.council_state,
+                    "rqe": user.rqe, "specialty": user.specialty},
     }

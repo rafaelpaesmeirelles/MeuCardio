@@ -1,4 +1,4 @@
-"""Cadastra o curso de exemplo `MeuCardio Curso`.
+"""Cadastra o curso de exemplo `Corvia Curso`.
 
 Existe para o Rafael ver o cartão do Painel funcionando antes de haver parceiro
 fechado. Duas escolhas deliberadas:
@@ -26,8 +26,8 @@ def semear() -> dict:
 
         curso = PartnerCourse(
             slug=SLUG,
-            nome="MeuCardio Curso",
-            parceiro="MeuCardio",
+            nome="Corvia Curso",
+            parceiro="Corvia",
             descricao=(
                 "Curso de exemplo, cadastrado para demonstrar a área de cursos "
                 "parceiros. Preparação para o Título de Especialista em Cardiologia, "
@@ -37,7 +37,7 @@ def semear() -> dict:
             # Frase e fonte andam juntas — a rota de cadastro recusa uma sem a
             # outra, e este exemplo respeita a mesma regra em vez de contorná-la.
             frase_destaque="Curso de exemplo para demonstração da área de cursos parceiros.",
-            frase_destaque_fonte="MeuCardio (curso de demonstração, sem dado de terceiro)",
+            frase_destaque_fonte="Corvia (curso de demonstração, sem dado de terceiro)",
             link_aula_ao_vivo=None,
             link_aulas_gravadas=None,
             preco_parceiro_centavos=19000,   # R$ 190,00 ao parceiro

@@ -237,7 +237,7 @@ def identificadores_encontrados(texto: str) -> list[str]:
     return achados
 
 
-PROMPT_SISTEMA = """Você é o assistente clínico do MeuCardio.
+PROMPT_SISTEMA = """Você é o assistente clínico da Corvia.
 
 Como responder:
 1. Baseie a resposta no CONTEXTO INSTITUCIONAL fornecido e cite os trechos usados pelo \
@@ -263,7 +263,7 @@ Encerre com: "Apoio à decisão — não substitui julgamento clínico, bula e d
 """
 
 
-PROMPT_CASO = """Você é o assistente clínico do MeuCardio, ajudando um médico a conduzir um caso.
+PROMPT_CASO = """Você é o assistente clínico da Corvia, ajudando um médico a conduzir um caso.
 
 Você recebeu os dados estruturados de um paciente internado. Sua tarefa é produzir uma análise
 de apoio à decisão completa, SEM nunca afirmar um diagnóstico como definitivo — sempre como

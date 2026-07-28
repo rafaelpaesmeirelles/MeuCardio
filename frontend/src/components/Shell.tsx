@@ -63,14 +63,14 @@ export default function Shell() {
         </button>
         
         <div className="topo__identidade">
-          {/* A logo já traz o nome "MeuCardio" na própria arte — repetir em texto
+          {/* A logo já traz o nome "CorvIA" na própria arte — repetir em texto
               ao lado era duplicata. A placa clara existe porque metade da arte é
               navy (#003048) e o cabeçalho também: sobre o fundo do topo esse
               trecho fica com 1,02:1 de contraste, ou seja, invisível. */}
           <span className="topo__logo">
-            <img src="/logo-marca.png" alt="MeuCardio" />
+            <img src="/corvia-logo-compacta.png" alt="Corvia" />
           </span>
-          <span className="topo__servico">Guia de Cardiologia</span>
+          <span className="topo__servico">O caminho do coração</span>
         </div>
         <div className="topo__usuario">
           <NavLink to="/minha-conta" style={{ color: "inherit" }}>
@@ -114,7 +114,7 @@ export default function Shell() {
         aria-label="Navegação principal"
       >
         <div className="gaveta__topo">
-          <img src="/logo-marca.png" alt="MeuCardio" className="gaveta__logo" />
+          <img src="/corvia-logo-compacta.png" alt="Corvia" className="gaveta__logo" />
           <button className="botao botao--secundario" style={{ padding: "0.3rem 0.6rem" }}
                   onClick={() => setMenuAberto(false)} aria-label="Fechar menu">
             ✕

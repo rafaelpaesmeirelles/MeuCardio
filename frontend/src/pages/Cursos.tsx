@@ -30,7 +30,7 @@ export default function Cursos() {
       <h1>Cursos parceiros</h1>
       <p className="subtitulo">
         Cursos de preparação para o Título de Especialista em Cardiologia, oferecidos
-        por parceiros e assinados dentro do MeuCardio. A assinatura de um curso é
+        por parceiros e assinados dentro da Corvia. A assinatura de um curso é
         separada da assinatura da plataforma.
       </p>
 

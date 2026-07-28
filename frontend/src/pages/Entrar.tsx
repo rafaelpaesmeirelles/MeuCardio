@@ -27,7 +27,7 @@ export default function Entrar() {
     <div className="login">
       <div className="login__cartao">
         <div className="login__brasao">
-          <img src="/logo.png" alt="MeuCardio" style={{ width: "100%", maxWidth: "340px", height: "auto" }} />
+          <img src="/corvia-logo.png" alt="Corvia — O caminho do coração" style={{ width: "100%", maxWidth: "340px", height: "auto" }} />
         </div>
 
         <label htmlFor="email">E-mail</label>

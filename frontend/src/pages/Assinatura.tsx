@@ -68,7 +68,7 @@ export default function Assinatura() {
 
 
           <p>
-            <strong>R$ 20,00/mês</strong> — acesso completo à plataforma MeuCardio.
+            <strong>R$ 20,00/mês</strong> — acesso completo à plataforma Corvia.
           </p>
 
           {erro && (

@@ -394,7 +394,7 @@ def redefinir_senha(
 
 @router.post("/cursos/semear-exemplo")
 def semear_curso_exemplo(_=Depends(require_admin)):
-    """Cadastra o curso de demonstração `MeuCardio Curso`.
+    """Cadastra o curso de demonstração `Corvia Curso`.
 
     Idempotente e sem conta conectada no Stripe, de modo que a rota de
     assinatura recusa a venda: curso de demonstração que aceitasse cartão

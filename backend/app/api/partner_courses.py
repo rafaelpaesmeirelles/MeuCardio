@@ -114,7 +114,7 @@ def _exigir_fonte_da_frase(dados: CursoIn | PartnerCourse) -> None:
 
 @router.get("")
 def listar(db: Session = Depends(get_db), user: User = Depends(current_user)):
-    """Catálogo dos cursos ativos. Acesso livre a assinante do MeuCardio e a
+    """Catálogo dos cursos ativos. Acesso livre a assinante da Corvia e a
     quem ainda não assina — é vitrine de venda."""
     cursos = db.query(PartnerCourse).filter(PartnerCourse.ativo.is_(True)).order_by(
         PartnerCourse.nome
@@ -413,7 +413,7 @@ def resumo_financeiro(db: Session = Depends(get_db), _=Depends(require_admin)):
             "receita_propria_centavos": sum(l["receita_propria_centavos"] for l in por_curso),
         },
         "nota": "Receita própria é só a margem. O repasse é passivo com o parceiro e "
-                "não deve entrar no faturamento do MeuCardio.",
+                "não deve entrar no faturamento da Corvia.",
     }
 
 

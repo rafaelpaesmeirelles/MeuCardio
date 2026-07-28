@@ -1,3 +1,4 @@
+import CabecalhoDocumento from "./CabecalhoDocumento";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../lib/api";
@@ -78,8 +79,8 @@ export default function PatientDocumentos({ patientId }: { patientId: number }) 
 
       {gerado && (
         <div className="folha-impressao">
+          <CabecalhoDocumento medico={gerado.medico} />
           <h2>{gerado.title}</h2>
-          <p>{gerado.medico.full_name} — {gerado.medico.council_name} {gerado.medico.council_number}/{gerado.medico.council_state}</p>
           <hr />
           <p style={{ whiteSpace: "pre-wrap" }}>{gerado.rendered_body}</p>
         </div>

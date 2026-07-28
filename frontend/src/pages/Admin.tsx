@@ -146,7 +146,7 @@ export default function Admin() {
                 Solicitações de acesso <span className="selo selo--pendente">{pendentes.length}</span>
               </h2>
               <p style={{ color: "var(--texto-secundario)", maxWidth: "60ch" }}>
-                Confira o registro no conselho de classe antes de aprovar — o MeuCardio não
+                Confira o registro no conselho de classe antes de aprovar — a Corvia não
                 valida isso automaticamente.
               </p>
               <div className="grade" style={{ marginTop: "0.6rem" }}>

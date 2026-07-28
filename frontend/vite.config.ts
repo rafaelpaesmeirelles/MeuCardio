@@ -9,8 +9,8 @@ export default defineConfig({
       registerType: "autoUpdate",
       includeAssets: ["favicon.png", "apple-touch-icon.png", "logo-horizontal.png", "brasao.png"],
       manifest: {
-        name: "MeuCardio — Guia de Cardiologia",
-        short_name: "MeuCardio",
+        name: "Corvia — O caminho do coração",
+        short_name: "Corvia",
         description:
           "Plataforma clínica de apoio à decisão em Cardiologia.",
         lang: "pt-BR",

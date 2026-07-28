@@ -321,7 +321,7 @@ def meus_alertas(db: Session = Depends(get_db), user: User = Depends(current_use
                             "doi": nova.doi, "url": nova.url} if nova else None,
             "seus_documentos": [{"slug": d.slug, "titulo": d.title} for d in docs],
             "significado": "A diretriz de origem foi revisada. Isto não quer dizer que o "
-                           "conteúdo do MeuCardio esteja desatualizado — quer dizer que há "
+                           "conteúdo da Corvia esteja desatualizado — quer dizer que há "
                            "uma versão nova a considerar, e que a revisão interna deste "
                            "material ainda não foi concluída.",
         })
@@ -367,13 +367,13 @@ def enviar_alertas(
         nova = db.query(Guideline).filter(Guideline.id == g.superseded_by_id).first()
         assunto = f"Diretriz atualizada: {g.org} {g.ano} → {nova.ano if nova else 'nova versão'}"
         corpo = (
-            f"A diretriz que embasa conteúdo que você acompanha no MeuCardio foi revisada.\n\n"
+            f"A diretriz que embasa conteúdo que você acompanha na Corvia foi revisada.\n\n"
             f"Revisada: {g.titulo} ({g.org}, {g.ano})\n"
             f"Nova versão: {nova.titulo} ({nova.ano})\n\n" if nova else ""
         ) + (
             f"Documentos que você favoritou e dependem dela:\n"
             + "".join(f"  - {d.title}\n    {{DOMINIO}}/biblioteca/{d.slug}\n" for d in docs)
-            + "\nImportante: isto não significa que o conteúdo do MeuCardio esteja "
+            + "\nImportante: isto não significa que o conteúdo da Corvia esteja "
               "desatualizado. Significa que existe uma versão nova da diretriz a "
               "considerar, e que a revisão interna deste material ainda não foi "
               "concluída.\n"

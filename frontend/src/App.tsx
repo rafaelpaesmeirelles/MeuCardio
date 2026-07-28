@@ -43,7 +43,7 @@ import FilaTelediagnostico from "./pages/FilaTelediagnostico";
 export default function App() {
   const { usuario, carregando } = useAuth();
 
-  if (carregando) return <Carregando texto="Abrindo o MeuCardio…" />;
+  if (carregando) return <Carregando texto="Abrindo a Corvia…" />;
   if (!usuario) {
     return (
       <Routes>

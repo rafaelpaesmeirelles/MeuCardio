@@ -94,5 +94,6 @@ def gerar_documento(dados: GerarDocumentoIn, db: Session = Depends(get_db), user
         "id": gerado.id, "title": gerado.title, "doc_type": gerado.doc_type,
         "rendered_body": gerado.rendered_body, "created_at": gerado.created_at,
         "medico": {"full_name": user.full_name, "council_name": user.council_name,
-                    "council_number": user.council_number, "council_state": user.council_state},
+                   "council_number": user.council_number, "council_state": user.council_state,
+                   "rqe": user.rqe, "specialty": user.specialty},
     }

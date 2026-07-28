@@ -30,7 +30,7 @@ def esqueci_senha(dados: SolicitacaoReset, db: Session = Depends(get_db)):
         link = f"/redefinir-senha?token={token.token}"
         enviado = tentar_enviar_email(
             destinatario=user.email,
-            assunto="MeuCardio — redefinição de senha",
+            assunto="Corvia — redefinição de senha",
             corpo=f"Use este link para redefinir sua senha (válido por 2 horas): {{DOMINIO}}{link}",
         )
         if not enviado:
