@@ -10,8 +10,7 @@
     "interpretation": "O diagnóstico de infarto exige elevação e/ou queda dinâmica do valor entre as dosagens seriadas, não um valor isolado acima do corte — troponina cronicamente elevada (ex.: DRC, ICFEr) sem variação dinâmica sugere lesão miocárdica crônica, não evento agudo.",
     "limitations": "Eleva-se em diversas condições não coronarianas: embolia pulmonar, miocardite, sepse, insuficiência renal, taquiarritmia sustentada, exercício extremo. Interpretar sempre no contexto clínico, nunca isoladamente.",
     "source_refs": [
-      "2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826.",
-      "Averina M et al. NT-proBNP and high-sensitivity troponin T as screening tests for subclinical chronic heart failure. ESC Heart Fail. 2022;9(3):1954-1962."
+      "2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826."
     ],
     "review_status": "revisado",
     "published": false,
@@ -32,9 +31,10 @@
     "reference_range": "Contexto ambulatorial/crônico (afastar IC): < 125 pg/mL. Contexto agudo (pronto-socorro): corte mais alto, ao redor de 300 pg/mL — os dois contextos usam cortes diferentes de propósito, não confundir.",
     "indications": "Investigação de dispneia com suspeita de insuficiência cardíaca — tanto para afastar o diagnóstico (bom valor preditivo negativo) quanto para reforçá-lo.",
     "interpretation": "A diretriz de 2023 da Heart Failure Association (ESC) propõe corte ajustado por idade para reforçar o diagnóstico (\"rule-in\") no ambiente comunitário: ≥ 125 pg/mL abaixo de 50 anos, ≥ 250 pg/mL entre 50–75 anos, ≥ 500 pg/mL acima de 75 anos — reflete que o valor sobe com a idade mesmo sem IC.",
-    "limitations": "Eleva-se com idade avançada, disfunção renal e fibrilação atrial mesmo sem IC. Reduz-se artificialmente em obesidade — um valor 'normal' em paciente obeso não exclui IC com a mesma confiança.",
+    "limitations": "Eleva-se com idade avançada, disfunção renal e fibrilação atrial mesmo sem IC. Reduz-se artificialmente na obesidade — um valor 'normal' em paciente obeso não exclui IC com a mesma confiança. O consenso da Heart Failure Association sugere reduzir os limiares ajustados por idade em 25% para IMC de 30 a 35 kg/m², 30% para IMC de 35 a 40 e 40% para IMC acima de 40.",
     "source_refs": [
-      "ESC Heart Failure Association age-adjusted natriuretic peptide thresholds for a new diagnosis of heart failure. Eur Heart J. 2024;45(Suppl 1).",
+      "Taylor CJ et al. Age-adjusted natriuretic peptide thresholds for a diagnosis of heart failure in the community: diagnostic accuracy study. ESC Heart Fail. 2025;12(5):3552. DOI: 10.1002/ehf2.15383",
+      "Practical algorithms for early diagnosis of heart failure and heart stress using NT-proBNP: a clinical consensus statement from the Heart Failure Association of the ESC. Eur J Heart Fail. DOI: 10.1002/ejhf.3036",
       "2023 Focused Update of the 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2023;44(37):3627-3639."
     ],
     "review_status": "revisado",
@@ -178,12 +178,12 @@
     "what_it_measures": "Resposta do coração ao esforço físico progressivo (protocolo de Bruce, o mais usado) — frequência cardíaca, pressão arterial, sintomas e alterações eletrocardiográficas durante e após o exercício.",
     "reference_range": "Resultado negativo: sem alteração isquêmica do segmento ST, sem angina limitante, com capacidade funcional adequada para a idade. Resultado positivo: infradesnivelamento de ST ≥ 1 mm, horizontal ou descendente, em derivações contíguas, durante o esforço ou na recuperação.",
     "indications": "Investigação diagnóstica de doença arterial coronariana em paciente com ECG de repouso normal ou próximo do normal e capacidade de realizar esforço adequado. Também usado para avaliar capacidade funcional e resposta ao tratamento.",
-    "interpretation": "O Escore de Duke (Duke Treadmill Score) combina três variáveis do teste — tempo de exercício em minutos, desvio máximo do segmento ST em mm e índice de angina (0 = ausente, 1 = não limitante, 2 = limitante) — na fórmula: Escore = tempo de exercício − (5 × desvio de ST) − (4 × índice de angina). Classificação: ≥ 5 = baixo risco (sobrevida em 5 anos ~97%); entre 4 e −10 = risco intermediário (~90%); ≤ −11 = alto risco (~65%), com indicação de considerar cateterismo.",
-    "limitations": "Sensibilidade e especificidade moderadas para detecção de DAC (na faixa de 68% e 77%, respectivamente, com ampla variação entre estudos) — resultado negativo não exclui doença coronariana com segurança absoluta, especialmente em paciente de alta probabilidade pré-teste. Falso-positivo mais comum em mulheres e em quem já tem alteração de base do segmento ST-T. Não interpretável em bloqueio de ramo esquerdo, ritmo de marcapasso ou alteração significativa de ST em repouso — nesses casos, preferir teste com imagem (cintilografia, eco de estresse) ou estresse farmacológico se o paciente não conseguir se exercitar.",
+    "interpretation": "O Escore de Duke (Duke Treadmill Score) combina três variáveis do teste — tempo de exercício em minutos, desvio máximo do segmento ST em mm, medido em qualquer derivação exceto aVR e índice de angina (0 = ausente, 1 = não limitante, 2 = limitante) — na fórmula: Escore = tempo de exercício − (5 × desvio de ST) − (4 × índice de angina). Classificação: ≥ 5 = baixo risco (sobrevida em 5 anos ~97%); entre 4 e −10 = risco intermediário (~90%); ≤ −11 = alto risco (~65%), com indicação de considerar cateterismo.",
+    "limitations": "A acurácia é modesta e as estimativas divergem muito entre metanálises: a de Knuuti et al. encontrou sensibilidade de 58% e especificidade de 62% para DAC obstrutiva, enquanto a de Banerjee et al. encontrou 79% e 69%. Essa própria discrepância é um achado — resultado negativo não exclui doença coronariana com segurança, sobretudo em paciente com alta probabilidade pré-teste. Falso-positivo é mais comum em mulheres e em quem já tem alteração de base do segmento ST-T. Não interpretável em bloqueio de ramo esquerdo, ritmo de marcapasso ou alteração significativa de ST em repouso — nesses casos, preferir teste com imagem (cintilografia, eco de estresse) ou estresse farmacológico se o paciente não conseguir se exercitar.",
     "source_refs": [
-      "Duke Treadmill Score — MDCalc, validado pelas diretrizes ACC/AHA de teste de esforço (1997) e de doença isquêmica crônica (2012).",
       "Shaw LJ et al. Use of a Prognostic Treadmill Score in Identifying Diagnostic Coronary Disease Subgroups. Circulation. 1998;98(16):1622-1630. DOI: 10.1161/01.CIR.98.16.1622",
-      "Treadmill Stress Testing — Medscape/eMedicine, revisado em 2024."
+      "Banerjee A et al. Diagnostic accuracy of exercise stress testing for coronary artery disease: a systematic review and meta-analysis of prospective studies. Int J Clin Pract. 2012. DOI: 10.1111/j.1742-1241.2012.02900.x",
+      "The Role of ECG Exercise Stress Testing in the Assessment of Patients with Suspected Coronary Artery Disease. European Cardiology Review. https://www.ecrjournal.com/articles/role-ecg-exercise-stress-testing-assessment-patients-suspected-coronary-artery-disease"
     ],
     "review_status": "revisado",
     "published": false,
@@ -204,12 +204,11 @@
     "what_it_measures": "Registro contínuo do ritmo cardíaco por 24 a 48 horas (podendo se estender a 7-14 dias em dispositivos de longa duração), enquanto o paciente segue a rotina normal fora do ambiente hospitalar.",
     "reference_range": "Não tem valor de referência único — a interpretação é qualitativa (presença ou ausência de arritmia, correlação com sintoma relatado em diário).",
     "indications": "Palpitação, síncope ou pré-síncope, tontura recorrente, avaliação de carga arrítmica em paciente já com arritmia conhecida, rastreio de fibrilação atrial após AVC criptogênico, avaliação de paciente com insuficiência cardíaca para arritmia subclínica.",
-    "interpretation": "Correlaciona o traçado com o diário de sintomas preenchido pelo paciente durante o exame. Resultado é considerado não diagnóstico quando nenhuma alteração de ritmo correlaciona com o sintoma relatado — nesse caso, considerar monitorização mais prolongada (7 dias ou looper implantável) se a suspeita clínica permanecer alta.",
+    "interpretation": "Correlaciona o traçado com o diário de sintomas preenchido pelo paciente durante o exame. O resultado é não diagnóstico quando nenhuma alteração de ritmo coincide com o sintoma relatado. Nesse caso, a escolha do próximo passo depende do intervalo entre os episódios: na diretriz ESC 2018 de síncope, o gravador de eventos externo deve ser considerado quando o intervalo entre sintomas é menor que 4 semanas (Classe IIa, nível B), e o monitor de eventos implantável é recomendação Classe I na síncope recorrente de origem incerta com alta probabilidade de recorrência dentro da vida útil do dispositivo.",
     "limitations": "Não é adequado para sintoma que ocorre com frequência menor que a cada 48 horas — a chance de captar o evento nesse período é baixa. Não substitui ECG de repouso na avaliação inicial.",
     "source_refs": [
-      "Ambulatory Cardiac Rhythm Monitoring — Carelon Clinical Guidelines, 2024.",
-      "Ambulatory ECG Monitoring — Geeky Medics, revisado em 2025.",
-      "2024 ACC Expert Consensus Pathway on arrhythmia monitoring after stroke."
+      "2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948.",
+      "Practical Instructions for the 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):e43-e80."
     ],
     "review_status": "revisado",
     "published": false,
@@ -227,13 +226,13 @@
     "category": "metodo_grafico",
     "theme": "Hipertensão",
     "what_it_measures": "Registro automático da pressão arterial em intervalos regulares (geralmente a cada 15-30 min) ao longo de 24 horas, incluindo período de sono, enquanto o paciente segue a rotina normal.",
-    "reference_range": "Diagnóstico de hipertensão pela média de 24h: maior ou igual a 130/80 mmHg — limiar mais baixo que o de consultório (140/90 mmHg), refletindo que a pressão medida fora do ambiente clínico tende a ser menor (sem efeito do avental branco).",
+    "reference_range": "Cortes diagnósticos de hipertensão pela MAPA: média de 24 horas ≥ 130/80 mmHg; média de vigília ≥ 135/85 mmHg; média de sono ≥ 120/70 mmHg. São limiares mais baixos que o de consultório (140/90 mmHg), refletindo que a pressão medida fora do ambiente clínico tende a ser menor, sem o efeito do avental branco.",
     "indications": "Confirmação diagnóstica de hipertensão antes de iniciar tratamento (especialmente quando há suspeita de hipertensão do avental branco ou mascarada), avaliação do padrão de descenso noturno da pressão, investigação de hipertensão resistente, avaliação de eficácia terapêutica ao longo do dia.",
     "interpretation": "Além da média de 24h, avalia separadamente o período de vigília e o de sono, e o percentual de descenso da PA durante o sono em relação à vigília — descenso menor que 10 por cento (padrão não-dipper) associa-se a maior risco cardiovascular.",
     "limitations": "Desconforto do manguito insuflando repetidamente pode atrapalhar o sono e alterar o próprio padrão que se está tentando medir. Arritmia com batimento muito irregular (ex.: fibrilação atrial) pode reduzir a precisão de algumas leituras oscilométricas.",
     "source_refs": [
-      "Brandão AA et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624.",
-      "The Diagnostic Value of Combined 24-h BP and ECG Holter Monitoring — PMC, 2022."
+      "Brandão AA et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624",
+      "2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178"
     ],
     "review_status": "revisado",
     "published": false,
