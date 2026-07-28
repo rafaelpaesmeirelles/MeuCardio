@@ -21,13 +21,13 @@
     "published": false
   },
   {
-    "slug": "ecg-stemi-anterior",
-    "title": "ECG — Infarto agudo do miocárdio com supra de ST (parede anterior)",
+    "slug": "ecg-stemi-inferior",
+    "title": "ECG — Infarto agudo do miocárdio com supra de ST (parede inferior)",
     "modality": "ECG",
     "theme": "Doença coronariana",
-    "file_path": "ecg/stemi-anterior.jpg",
-    "findings": "VERIFICAÇÃO HUMANA NECESSÁRIA — há uma inconsistência entre o rótulo deste registro e o traçado. O registro descreve infarto de parede anterior por oclusão da descendente anterior, mas a imagem é um ECG de 15 derivações (I, aVR, V1, V4, V4R / II, aVL, V2, V5, V7 / III, aVF, V3, V6, V8), e a inclusão de V4R, V7 e V8 é o arranjo usado para investigar acometimento de ventrículo direito e de parede posterior, típico da investigação de infarto inferior — não de anterior. A parede acometida precisa ser confirmada por leitura médica antes que este registro seja usado como referência.",
-    "teaching_points": "O critério eletrocardiográfico de STEMI usa o ponto J como referência: supradesnivelamento ≥ 0,2 mV (2 mm) em homens ou ≥ 0,15 mV (1,5 mm) em mulheres nas derivações V2–V3, ou ≥ 0,1 mV (1 mm) nas demais derivações, em pelo menos duas derivações contíguas. Quando há suspeita de infarto inferior, acrescentar V4R (ventrículo direito) e V7–V8 (parede posterior) muda conduta, e é esse o arranjo registrado nesta imagem.",
+    "file_path": "ecg/stemi-inferior.jpg",
+    "findings": "Supradesnivelamento do segmento ST nas derivações inferiores (II, III e aVF). Achado de emergência: indica reperfusão imediata, por angioplastia primária ou fibrinólise, conforme o tempo disponível até um centro com hemodinâmica. O traçado é um registro de 15 derivações — além das 12 habituais, inclui V4R, V7 e V8.",
+    "teaching_points": "O critério eletrocardiográfico de STEMI usa o ponto J como referência: supradesnivelamento ≥ 0,2 mV (2 mm) em homens ou ≥ 0,15 mV (1,5 mm) em mulheres nas derivações V2–V3, ou ≥ 0,1 mV (1 mm) nas demais derivações, em pelo menos duas derivações contíguas.\n\nDiante de supra inferior, vale acrescentar derivações que não fazem parte das 12 habituais — e é exatamente isso que este traçado mostra: V4R para avaliar acometimento do ventrículo direito e V7–V8 para avaliar parede posterior. As duas extensões mudam conduta, e nenhuma delas aparece num ECG convencional.",
     "source_name": "Wikimedia Commons",
     "source_url": "https://commons.wikimedia.org/wiki/File:ST_Segment_Elevation_Myocardial_Infarction_Unlabeled.jpg",
     "license": "CC BY-SA 4.0",
@@ -35,12 +35,12 @@
     "tags": [
       "ecg",
       "stemi",
-      "iamcsst",
       "infarto",
-      "supra de st",
-      "emergência"
+      "parede inferior",
+      "v4r",
+      "derivações posteriores"
     ],
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "published": false
   },
   {
