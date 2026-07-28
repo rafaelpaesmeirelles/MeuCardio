@@ -17,7 +17,7 @@
       "referência",
       "eletrocardiograma normal"
     ],
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "published": false
   },
   {
@@ -40,14 +40,14 @@
       "supra de st",
       "emergência"
     ],
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "published": false
   },
   {
     "slug": "ecg-fibrilacao-atrial",
     "title": "ECG — Fibrilação atrial",
     "modality": "ECG",
-    "theme": "Fibrilação_atrial",
+    "theme": "Fibrilação atrial",
     "file_path": "ecg/fibrilacao-atrial.jpg",
     "findings": "Ausência de ondas P organizadas, substituídas por atividade atrial caótica (ondas fibrilatórias). Intervalos R-R irregularmente irregulares — sem padrão repetitivo de distância entre os batimentos.",
     "teaching_points": "\"Irregularmente irregular\" é o achado-chave: diferente do flutter atrial (que costuma ter irregularidade com algum padrão) ou de extrassístoles frequentes (que mantêm o ritmo de base regular entre elas), a FA não tem nenhuma regularidade subjacente no intervalo R-R.",
@@ -62,7 +62,7 @@
       "arritmia",
       "irregularmente irregular"
     ],
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "published": false
   },
   {
@@ -580,7 +580,7 @@
       "anatomia",
       "eco transtorácico"
     ],
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "published": false
   },
   {
