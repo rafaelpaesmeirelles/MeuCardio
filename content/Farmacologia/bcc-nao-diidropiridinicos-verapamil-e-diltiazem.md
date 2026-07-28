@@ -3,7 +3,7 @@ title: "Bloqueadores de canal de cálcio não di-hidropiridínicos (verapamil e 
 slug: verapamil-diltiazem
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Verapamil hydrochloride — rótulo aprovado pelo FDA, DailyMed SPL setid df79ee3a-f0ed-1cc7-e053-2995a90af97f", "Diltiazem hydrochloride injection — rótulo aprovado pelo FDA, DailyMed SPL setid bba03666-ff4f-4bf6-fa92-78e1ec2d9073"]
 legacy_source: "medicamentos/banco-de-medicamentos-verapamil-diltiazem.md"
 ---

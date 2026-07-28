@@ -3,7 +3,7 @@ title: "Metformina (cloridrato)"
 slug: metformina-cloridrato
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Metformin hydrochloride tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 4d3dbf6f-1c8a-4daa-8343-8cd8f64a65cd"]
 legacy_source: "medicamentos/banco-de-medicamentos-metformina-completo.md"
 ---

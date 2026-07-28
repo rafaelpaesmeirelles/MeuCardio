@@ -3,7 +3,7 @@ title: "Fondaparinux (sódico)"
 slug: fondaparinux-sodico
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Fondaparinux sodium injection — rótulo aprovado pelo FDA, DailyMed SPL setid dffbf7c9-495e-4a33-ac76-57b52f014fc2"]
 legacy_source: "medicamentos/banco-de-medicamentos-fondaparinux-completo.md"
 ---

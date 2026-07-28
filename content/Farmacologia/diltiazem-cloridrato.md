@@ -3,7 +3,7 @@ title: "Diltiazem (cloridrato)"
 slug: diltiazem-cloridrato
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Diltiazem hydrochloride injection — rótulo aprovado pelo FDA, DailyMed SPL setid bba03666-ff4f-4bf6-fa92-78e1ec2d9073"]
 legacy_source: "medicamentos/banco-de-medicamentos-diltiazem.md"
 ---

@@ -3,7 +3,7 @@ title: "Anlodipino (besilato)"
 slug: anlodipino-besilato
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Amlodipine besylate tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 27b0c628-820a-48bf-a411-86c0ebd4cc8d"]
 legacy_source: "medicamentos/banco-de-medicamentos-anlodipino-2.md"
 ---
