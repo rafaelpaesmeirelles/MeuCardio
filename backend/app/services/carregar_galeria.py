@@ -17,6 +17,15 @@ from app.models.gallery import GalleryImage
 GALERIA_DIR = Path("/galeria")
 
 
+# `published` NUNCA vem do JSON. Publicar e decisao humana, registrada no banco
+# pela rota /api/admin/conteudo/publicar — e o checkpoint de revisao clinica
+# exigido para conteudo que vai a producao. Antes desta guarda, qualquer
+# recarga copiava `published: false` do arquivo por cima do banco e tirava do
+# ar tudo que ja estava publicado. Foi o que aconteceu com evidencias e
+# estudos ao recarregar uma correcao de texto. Mesmo principio que o
+# importer.py ja aplica aos documentos de content/.
+
+
 def carregar(caminho_json: str) -> dict:
     itens = json.load(open(caminho_json, encoding="utf-8"))
     db = SessionLocal()
@@ -32,12 +41,12 @@ def carregar(caminho_json: str) -> dict:
             if existente:
                 for campo in ("title", "modality", "theme", "findings", "teaching_points",
                               "file_path", "thumbnail_path", "source_name", "source_url",
-                              "license", "attribution", "tags", "review_status", "published"):
+                              "license", "attribution", "tags", "review_status"):
                     if campo in item:
                         setattr(existente, campo, item[campo])
                 atualizados += 1
             else:
-                db.add(GalleryImage(**{k: v for k, v in item.items()}))
+                db.add(GalleryImage(**{k: v for k, v in item.items() if k != "published"}))
                 novos += 1
         db.commit()
     finally:

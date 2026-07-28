@@ -11,12 +11,22 @@ from app.core.db import SessionLocal
 from app.models.evidence import EvidenceRecord
 
 
+# `published` NUNCA vem do JSON. Publicar e decisao humana, registrada no banco
+# pela rota /api/admin/conteudo/publicar — e o checkpoint de revisao clinica
+# exigido para conteudo que vai a producao. Antes desta guarda, qualquer
+# recarga copiava `published: false` do arquivo por cima do banco e tirava do
+# ar tudo que ja estava publicado. Foi o que aconteceu com evidencias e
+# estudos ao recarregar uma correcao de texto. Mesmo principio que o
+# importer.py ja aplica aos documentos de content/.
+
+
 def carregar(caminho_json: str) -> dict:
     itens = json.load(open(caminho_json, encoding="utf-8"))
     db = SessionLocal()
     novos, atualizados = 0, 0
     try:
         for item in itens:
+            item = {k: v for k, v in item.items() if k != "published"}
             existente = db.query(EvidenceRecord).filter(EvidenceRecord.slug == item["slug"]).first()
             if existente:
                 for campo, valor in item.items():
