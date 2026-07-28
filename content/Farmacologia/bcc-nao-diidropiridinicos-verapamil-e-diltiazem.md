@@ -1,5 +1,5 @@
 ---
-title: "Verapamil / Diltiazem"
+title: "Bloqueadores de canal de cálcio não di-hidropiridínicos (verapamil e diltiazem)"
 slug: verapamil-diltiazem
 theme: "Farmacologia"
 kind: farmacologia
@@ -8,7 +8,9 @@ source_refs: ["Bula Dilacoron 80mg — Bula Profissional · Abbott Brasil · htt
 legacy_source: "medicamentos/banco-de-medicamentos-verapamil-diltiazem.md"
 ---
 
-# Verapamil / Diltiazem
+# Bloqueadores de canal de cálcio não di-hidropiridínicos (verapamil e diltiazem)
+
+Documento de **classe**, sobre o que verapamil e diltiazem têm em comum e onde diferem. As monografias individuais, com dose e farmacocinética de cada um, estão em `verapamil-cloridrato` e `diltiazem-cloridrato`.
 
 ## Nome generico
 Verapamil / Diltiazem
