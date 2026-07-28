@@ -352,3 +352,116 @@
 }
 
 .gaveta__logo { height: 26px; width: auto; display: block; }
+
+/* ---------------------------------------------- curso parceiro em destaque
+   Cartão comercial dentro do Painel. Precisa se distinguir do resto sem
+   competir com as funções clínicas, que são o motivo de o médico estar aqui —
+   por isso a faixa em teal (papel de acento) e não o vermelho de ação, que
+   neste produto identifica CTA de assinatura da própria plataforma.
+   Usa só os papéis semânticos: trocar a paleta continua sendo mudança de uma
+   linha em tokens.css. */
+.curso-destaque {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.4rem;
+  margin: 1.6rem 0 0;
+  padding: 1.15rem 1.25rem;
+  background: var(--superficie, #fff);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--acento);
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(11, 46, 69, 0.06);
+}
+
+.curso-destaque__selo {
+  position: absolute;
+  top: -0.62rem;
+  left: 1.1rem;
+  padding: 0.12rem 0.55rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--acento);
+  border-radius: 999px;
+}
+
+.curso-destaque__corpo { flex: 1 1 18rem; min-width: 0; }
+
+.curso-destaque__nome {
+  margin: 0.15rem 0 0.1rem;
+  font-size: 1.12rem;
+  color: var(--primaria);
+}
+
+.curso-destaque__parceiro {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--texto-secundario);
+}
+
+.curso-destaque__frase {
+  margin: 0.5rem 0 0;
+  font-size: 0.94rem;
+  color: var(--texto);
+}
+
+/* A fonte do dado nunca é opcional na tela: se a frase aparece, a origem
+   aparece junto. Menor e discreta, mas presente — número sem procedência ao
+   lado de conteúdo clínico contamina o que está em volta. */
+.curso-destaque__fonte,
+.curso__fonte {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.76rem;
+  color: var(--texto-secundario);
+}
+
+.curso-destaque__acao {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.45rem;
+}
+
+.curso-destaque__preco,
+.curso__preco {
+  font-size: 1.24rem;
+  font-weight: 700;
+  color: var(--primaria);
+}
+
+.curso-destaque__preco small,
+.curso__preco small { font-size: 0.8rem; font-weight: 500; color: var(--texto-secundario); }
+
+.curso-destaque__assinado {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--acento);
+}
+
+@media (min-width: 760px) {
+  .curso-destaque__acao { align-items: flex-end; margin-left: auto; }
+}
+
+/* ------------------------------------------------------- página do curso */
+.curso__voltar { margin-bottom: 0.6rem; font-size: 0.9rem; }
+.curso__parceiro { margin-top: -0.4rem; color: var(--texto-secundario); }
+.curso__frase { font-size: 1.02rem; }
+.curso__descricao { max-width: 62ch; }
+.curso__links { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.curso__nota { font-size: 0.85rem; color: var(--texto-secundario); }
+.curso__vazio { color: var(--texto-secundario); font-style: italic; }
+
+.curso__oferta { display: flex; flex-direction: column; gap: 0.6rem; align-items: flex-start; max-width: 32rem; }
+
+.curso__materiais { list-style: none; padding: 0; }
+.curso__materiais li {
+  display: flex; align-items: center; gap: 0.7rem;
+  padding: 0.5rem 0; border-bottom: 1px solid var(--line);
+}
+
+.curso__vinculos { max-width: 48rem; }

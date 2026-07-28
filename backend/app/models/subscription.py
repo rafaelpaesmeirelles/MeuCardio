@@ -1,16 +1,49 @@
 from datetime import datetime, timezone
 
-from sqlalchemy import String, DateTime, ForeignKey
+from sqlalchemy import String, DateTime, ForeignKey, Index, text
 from sqlalchemy.orm import Mapped, mapped_column
 
 from app.core.db import Base
+
+TIPO_MEUCARDIO = "meucardio"
+TIPO_CURSO = "curso"
 
 
 class Subscription(Base):
     __tablename__ = "subscriptions"
 
+    # `user_id` era `unique=True`, o que impunha **uma assinatura por médico** no
+    # nível do banco. Isso impedia o modelo de cursos parceiros, em que o médico
+    # pode ter a assinatura do MeuCardio e mais uma por curso. A unicidade não
+    # foi jogada fora, foi movida para onde ela de fato vale: o índice parcial
+    # abaixo garante uma única assinatura viva por par médico/curso, e uma única
+    # assinatura viva do próprio MeuCardio por médico. Sem esse índice, uma
+    # dupla submissão do checkout criaria duas cobranças para a mesma coisa.
+    __table_args__ = (
+        Index(
+            "uq_assinatura_meucardio_por_usuario",
+            "user_id",
+            unique=True,
+            postgresql_where=text("kind = 'meucardio' AND status <> 'cancelado'"),
+        ),
+        Index(
+            "uq_assinatura_curso_por_usuario",
+            "user_id",
+            "course_id",
+            unique=True,
+            postgresql_where=text("kind = 'curso' AND status <> 'cancelado'"),
+        ),
+    )
+
     id: Mapped[int] = mapped_column(primary_key=True)
-    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), unique=True, index=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), index=True)
+
+    # Discrimina o que está sendo assinado. Antes existia uma linha só por
+    # médico e o tipo era implícito; com curso parceiro isso deixou de valer.
+    kind: Mapped[str] = mapped_column(String(20), default=TIPO_MEUCARDIO, index=True)
+    course_id: Mapped[int | None] = mapped_column(
+        ForeignKey("partner_courses.id"), nullable=True, index=True
+    )
     stripe_customer_id: Mapped[str | None] = mapped_column(String(255), nullable=True, index=True)
     stripe_subscription_id: Mapped[str | None] = mapped_column(String(255), nullable=True, unique=True, index=True)
     status: Mapped[str] = mapped_column(String(30), default="inativo")

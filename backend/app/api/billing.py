@@ -8,7 +8,7 @@ from sqlalchemy.orm import Session
 from app.core.config import settings
 from app.core.db import get_db
 from app.core.security import current_user
-from app.models.subscription import Subscription
+from app.models.subscription import TIPO_CURSO, TIPO_MEUCARDIO, Subscription
 from app.models.user import User
 
 # O prefixo precisa incluir /api: o Caddy usa `handle /api/*` (que, ao contrário
@@ -60,19 +60,37 @@ def _fim_do_periodo(obj) -> datetime | None:
     return datetime.fromtimestamp(fim, tz=timezone.utc)
 
 
+def _assinatura_meucardio(db: Session, user_id: int) -> Subscription | None:
+    """A assinatura da plataforma, e só ela.
+
+    Filtrar por `kind` deixou de ser opcional quando surgiram as assinaturas de
+    curso parceiro: um médico passou a poder ter várias linhas, e um
+    `filter(user_id == …).first()` devolveria qualquer uma delas. Aplicado a
+    `/status` ou ao portal, isso mostraria ao médico o estado de um curso no
+    lugar do estado da plataforma.
+    """
+    return (
+        db.query(Subscription)
+        .filter(Subscription.user_id == user_id, Subscription.kind == TIPO_MEUCARDIO)
+        .order_by(Subscription.id)
+        .first()
+    )
+
+
 def _obter_ou_criar_assinatura(db: Session, user: User) -> Subscription:
-    sub = db.query(Subscription).filter(Subscription.user_id == user.id).first()
+    sub = _assinatura_meucardio(db, user.id)
     if sub:
         return sub
-    sub = Subscription(user_id=user.id)
+    sub = Subscription(user_id=user.id, kind=TIPO_MEUCARDIO)
     db.add(sub)
     try:
         db.commit()
     except IntegrityError:
         # Duas chamadas simultâneas de /checkout: a que perdeu a corrida relê a
-        # linha criada pela outra em vez de estourar 500 no unique de user_id.
+        # linha criada pela outra em vez de estourar 500 no índice parcial que
+        # garante uma assinatura viva da plataforma por médico.
         db.rollback()
-        sub = db.query(Subscription).filter(Subscription.user_id == user.id).first()
+        sub = _assinatura_meucardio(db, user.id)
         if sub is None:
             raise
         return sub
@@ -86,7 +104,36 @@ def _aplicar_evento(db: Session, obj, quando: datetime, alteracoes) -> None:
     O Stripe reentrega eventos e não garante ordem de chegada, então um evento
     atrasado pode desfazer um estado mais recente (ex.: um cancelamento antigo
     chegando depois de uma reativação)."""
-    sub = db.query(Subscription).filter(Subscription.stripe_customer_id == obj["customer"]).first()
+    # Casar pelo id da assinatura no Stripe, não pelo cliente. Um médico com a
+    # plataforma e um curso parceiro tem **várias** linhas sob o mesmo
+    # `stripe_customer_id`, e o `.first()` que existia aqui devolvia uma
+    # qualquer: um evento de curso poderia sobrescrever o estado da assinatura
+    # da plataforma, cancelando o acesso de um assinante pagante sem que
+    # nenhuma requisição desse erro.
+    sub = None
+    id_assinatura = obj["id"] if "id" in obj else None
+    if id_assinatura:
+        sub = db.query(Subscription).filter(
+            Subscription.stripe_subscription_id == id_assinatura
+        ).first()
+    if sub is None:
+        # Primeiro evento de uma assinatura ainda sem id gravado. O metadata diz
+        # de qual das duas se trata; sem metadata, é a da plataforma, que é o
+        # fluxo antigo e o único que existia antes dos cursos.
+        metadata = obj["metadata"] if "metadata" in obj else {}
+        tipo_assinatura = (metadata or {}).get("tipo")
+        consulta = db.query(Subscription).filter(
+            Subscription.stripe_customer_id == obj["customer"]
+        )
+        if tipo_assinatura == "curso":
+            curso_id = (metadata or {}).get("curso_id")
+            consulta = consulta.filter(
+                Subscription.kind == TIPO_CURSO,
+                Subscription.course_id == (int(curso_id) if curso_id else None),
+            )
+        else:
+            consulta = consulta.filter(Subscription.kind == TIPO_MEUCARDIO)
+        sub = consulta.order_by(Subscription.id.desc()).first()
     if sub is None:
         return
     if sub.last_event_at is not None and quando < sub.last_event_at:
@@ -120,7 +167,7 @@ def criar_checkout(db: Session = Depends(get_db), user: User = Depends(current_u
 def abrir_portal(db: Session = Depends(get_db), user: User = Depends(current_user)):
     """Customer Portal do Stripe: é por ele que o assinante troca o cartão,
     baixa recibo e cancela. Diferente do Checkout, que só serve pra assinar."""
-    sub = db.query(Subscription).filter(Subscription.user_id == user.id).first()
+    sub = _assinatura_meucardio(db, user.id)
     if not sub or not sub.stripe_customer_id:
         raise HTTPException(
             status_code=404,
@@ -146,7 +193,7 @@ def listar_faturas(db: Session = Depends(get_db), user: User = Depends(current_u
     """Histórico de cobranças. Lê direto do Stripe em vez de espelhar faturas no
     banco: o Stripe é a fonte da verdade sobre cobrança, e espelhar criaria uma
     segunda versão que sai de sincronia no primeiro estorno ou ajuste."""
-    sub = db.query(Subscription).filter(Subscription.user_id == user.id).first()
+    sub = _assinatura_meucardio(db, user.id)
     if not sub or not sub.stripe_customer_id:
         return {"faturas": []}
 
@@ -178,7 +225,7 @@ def listar_faturas(db: Session = Depends(get_db), user: User = Depends(current_u
 
 @router.get("/status")
 def status_assinatura(db: Session = Depends(get_db), user: User = Depends(current_user)):
-    sub = db.query(Subscription).filter(Subscription.user_id == user.id).first()
+    sub = _assinatura_meucardio(db, user.id)
     if not sub:
         return {"status": "inativo", "current_period_end": None}
     return {"status": sub.status, "current_period_end": sub.current_period_end}
@@ -213,6 +260,15 @@ async def webhook(request: Request, db: Session = Depends(get_db)):
 
     elif tipo == "invoice.payment_failed":
         _aplicar_evento(db, obj, quando, lambda sub: setattr(sub, "status", "inadimplente"))
+
+    elif tipo == "invoice.payment_succeeded":
+        # Cada fatura paga de assinatura de curso vira um registro com bruto,
+        # repasse e margem separados. Registrar no pagamento, e não calcular
+        # depois a partir do curso, e o que permite que preco e margem mudem sem
+        # reescrever o historico financeiro ja fechado.
+        from app.api.partner_courses import registrar_pagamento
+
+        registrar_pagamento(db, obj)
 
     elif tipo == "checkout.session.completed":
         # A mesma rota recebe os dois fluxos de cobrança. O `mode` separa:

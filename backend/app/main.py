@@ -5,7 +5,7 @@ from app.api import (
     admin, ai, appointments, auth, calculators, documents, drugs, evidence,
     favorites, gallery, health, lab_tests, library, password_reset,
     prescriptions, round as round_api, search, service_orders, studies,
-    timeline, billing,
+    timeline, billing, partner_courses,
 )
 from app.core.config import settings
 from app.core.security import assinante_ativo
@@ -38,7 +38,7 @@ app.add_middleware(
 # que ainda não assina e chegou pelo telediagnóstico.
 ROUTERS_LIVRES = (
     health.router, auth.router, password_reset.router, billing.router, admin.router,
-    service_orders.router,
+    service_orders.router, partner_courses.router,
 )
 
 ROUTERS_ASSINANTES = (

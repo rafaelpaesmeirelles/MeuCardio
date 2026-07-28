@@ -67,7 +67,17 @@ def assinante_ativo(user=Depends(current_user), db: Session = Depends(get_db)):
     if user.role == "admin":
         return user
 
-    sub = db.query(Subscription).filter(Subscription.user_id == user.id).first()
+    # Filtrar por `kind` é o que impede uma assinatura de curso parceiro de
+    # valer como assinatura da plataforma. Sem isso, quem assinasse só um curso
+    # (que é venda de terceiro, com repasse) entraria em toda a biblioteca de
+    # graça — e quem tivesse a assinatura da plataforma cancelada mas um curso
+    # ativo continuaria com acesso, sem que nada acusasse erro.
+    sub = (
+        db.query(Subscription)
+        .filter(Subscription.user_id == user.id, Subscription.kind == "meucardio")
+        .order_by(Subscription.id)
+        .first()
+    )
     if sub is None or sub.status not in ACESSO_LIBERADO:
         raise HTTPException(
             status_code=402,

@@ -4,6 +4,8 @@ import { Carregando } from "./components/Estado";
 import { useAuth } from "./lib/auth";
 import Entrar from "./pages/Entrar";
 import Painel from "./pages/Painel";
+import Cursos from "./pages/Cursos";
+import Curso from "./pages/Curso";
 import Biblioteca from "./pages/Biblioteca";
 import Fluxogramas from "./pages/Fluxogramas";
 import Galeria from "./pages/Galeria";
@@ -68,6 +70,8 @@ export default function App() {
         <Route path="evidencias/:slug" element={<Evidencia />} />
         <Route path="estudos" element={<Estudos />} />
         <Route path="estudos/:slug" element={<Estudo />} />
+        <Route path="cursos" element={<Cursos />} />
+        <Route path="cursos/:slug" element={<Curso />} />
         <Route path="favoritos" element={<Favoritos />} />
         <Route path="assistente" element={<Assistente />} />
         <Route path="round" element={<Round />} />

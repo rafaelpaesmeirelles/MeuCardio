@@ -52,6 +52,7 @@ services:
       # Caddy de proposito: arquivo de exame nao pode ter URL alcancavel de
       # fora, o acesso passa obrigatoriamente pela rota autenticada que audita.
       - examefiles:/exames-pacientes
+      - cursofiles:/materiais-curso
     command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --workers 2
     restart: unless-stopped
 
@@ -92,5 +93,6 @@ volumes:
   sitefiles:
   userfiles:
   examefiles:
+  cursofiles:
   caddy_data:
   caddy_config:

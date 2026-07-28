@@ -385,3 +385,16 @@ def redefinir_senha(
                     entity_id=str(alvo.id)))
     db.commit()
     return {"id": alvo.id, "nota": "Senha redefinida. Repasse ao usuário por um canal seguro."}
+
+
+@router.post("/cursos/semear-exemplo")
+def semear_curso_exemplo(_=Depends(require_admin)):
+    """Cadastra o curso de demonstração `MeuCardio Curso`.
+
+    Idempotente e sem conta conectada no Stripe, de modo que a rota de
+    assinatura recusa a venda: curso de demonstração que aceitasse cartão
+    cobraria de verdade em nome de um parceiro que não existe.
+    """
+    from app.services.seed_curso_exemplo import semear
+
+    return semear()

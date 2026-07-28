@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../lib/api";
+import CursoDestaque from "../components/CursoDestaque";
 import { useAuth } from "../lib/auth";
 
 type Tema = { theme: string; count: number };
@@ -149,6 +150,8 @@ export default function Painel() {
         <Numero rotulo="estudos" valor={estudos} to="/estudos" />
         <Numero rotulo="no round" valor={pacientes} to="/round" />
       </div>
+
+      <CursoDestaque />
 
       <h2 style={{ marginTop: "1.6rem" }}>Acesso rápido</h2>
       <div className="painel__funcoes">
