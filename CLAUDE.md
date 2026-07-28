@@ -182,15 +182,19 @@ Processo, igual para as seis:
   `POST /api/auth/alterar-senha`, `POST /api/billing/portal` (Stripe Customer
   Portal) e a página `frontend/src/pages/MinhaConta.tsx` em `/minha-conta`.
   **Falta o deploy** — ver "O que falta fazer".
-- **Pegadinha do Customer Portal: a configuração do portal é por modo.** O
-  Rafael ativou o portal no painel, mas em modo *live* — o link gerado foi
-  `https://billing.stripe.com/p/login/fZu9AS6n3bKD30JgGy2sM00`, e link de
-  teste teria o prefixo `test_`. Conferido via API com a chave do `.env`
-  (`GET /v1/billing_portal/configurations` devolveu **0 configurações**),
-  porque o `.env` usa `sk_test_`. Enquanto o portal não for salvo também em
-  modo de teste, `POST /api/billing/portal` cai no `InvalidRequestError` e
-  devolve 503. A conta ainda está com `charges_enabled: false`, então trocar
-  para chave live não é alternativa disponível hoje.
+- **Customer Portal: funciona em modo de teste, confirmado na marra.** Criar
+  uma sessão do portal (`POST /v1/billing_portal/sessions`) com a chave
+  `sk_test_` do `.env` devolve uma URL válida — testado com um cliente
+  descartável, depois apagado. É exatamente o que `POST /api/billing/portal`
+  faz, então o botão "Gerenciar assinatura" está destravado do lado do Stripe.
+- **Não use `GET /v1/billing_portal/configurations` para saber se o portal
+  está configurado.** Esse endpoint lista só as configurações criadas
+  explicitamente via API; a configuração padrão feita pelo painel **não
+  aparece**, e o endpoint devolve `0` mesmo com o portal funcionando. Foi um
+  diagnóstico errado já cometido aqui. O teste que vale é tentar criar a
+  sessão de verdade.
+- A conta Stripe está com `details_submitted: true` e `charges_enabled:
+  false` — ainda não cobra de verdade, o que mantém o `.env` em `sk_test_`.
 - Rebranding concluído e conferido por varredura no repositório inteiro: além
   do frontend, foram corrigidos o `<title>` da página, o nome do PWA, o app
   Android (pacote renomeado de `br.org.beneficenciaportuguesa.cardiobene` para
@@ -209,7 +213,7 @@ Processo, igual para as seis:
 
 ## O que falta fazer
 Ordem de prioridade herdada das metas: primeiro o que destrava a cobrança da
-assinatura (itens 1, 3 e 4), depois amplitude de conteúdo (item 2).
+assinatura (itens 1 e 3), depois amplitude de conteúdo (item 2).
 
 1. **Subir o deploy do Minha Conta.** O código está commitado e no GitHub, mas
    o container em produção ainda roda a versão anterior — o Claude não tem
@@ -226,12 +230,7 @@ assinatura (itens 1, 3 e 4), depois amplitude de conteúdo (item 2).
    de QRS largo e TV, síndrome coronariana crônica, pericardite, cardiopatia
    congênita do adulto, cardio-oncologia, avaliação perioperatória, febre
    reumática, dislipidemia e prevenção primária.
-3. **Salvar a configuração do Customer Portal também em modo de teste**, no
-   painel do Stripe: alternar para *Test mode* → Settings → Billing → Customer
-   portal → salvar as configurações padrão. Sem isso o botão "Gerenciar
-   assinatura" da página Minha Conta devolve 503 enquanto o `.env` usar
-   `sk_test_` (ver a pegadinha registrada acima).
-4. **Trocar as chaves do Stripe de teste (`pk_test_`/`sk_test_`) para produção**
+3. **Trocar as chaves do Stripe de teste (`pk_test_`/`sk_test_`) para produção**
    (`pk_live_`/`sk_live_`) quando o Rafael decidir ativar cobranças reais —
    requer conta Stripe totalmente verificada. Conferido nesta sessão:
    `details_submitted: true`, mas `charges_enabled: false`, então a conta ainda
