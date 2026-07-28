@@ -153,9 +153,10 @@
     "what_it_measures": "Deformação miocárdica longitudinal medida por speckle tracking — detecta disfunção contrátil subclínica do ventrículo esquerdo antes que a fração de ejeção caia, por ser mais sensível a lesão miocárdica inicial.",
     "reference_range": "GLS basal normal: em torno de -18% a -20% (valores mais negativos = melhor função). Ponto de corte de disfunção subclínica: queda relativa >15% em relação ao basal durante o tratamento oncológico.",
     "indications": "Monitorização seriada durante quimioterapia cardiotóxica (antraciclina, terapia anti-HER2) para detecção precoce de cardiotoxicidade, antes que a fração de ejeção seja afetada — elemento importante no diagnóstico de disfunção cardíaca relacionada a terapia do câncer (CTRD) nas diretrizes ESC de cardio-oncologia.",
-    "interpretation": "Queda relativa de GLS >15% é o ponto de corte mais recomendado para suspeitar de disfunção cardíaca subclínica. Estudos identificam também pontos de corte absolutos: GLS de -18,05% como ótimo para CTRD em uma coorte, e queda significativa a partir do 3º mês de tratamento, com corte de valor absoluto de -16,6% ou variação percentual de -14%, como preditor independente de cardiotoxicidade.",
+    "interpretation": "A diretriz ESC 2022 de cardio-oncologia define disfunção cardíaca leve assintomática relacionada ao tratamento oncológico como fração de ejeção preservada acompanhada de queda relativa do GLS superior a 15% em relação ao basal, e/ou elevação de biomarcadores cardíacos. Estudos identificam também pontos de corte absolutos: GLS de -18,05% como ótimo para disfunção em uma coorte, e queda significativa a partir do 3º mês de tratamento, com corte absoluto de -16,6% ou variação percentual de -14% como preditor independente de cardiotoxicidade.",
     "limitations": "Variabilidade entre plataformas de ecógrafo e entre observadores pode ser relevante — idealmente comparar exames seriados no mesmo equipamento/software. Pontos de corte variam entre estudos, sem consenso único definitivo.",
     "source_refs": [
+      "2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361.",
       "Global Longitudinal Strain in Cardio-Oncology: A Review. PubMed. https://pubmed.ncbi.nlm.nih.gov/36765941/",
       "Global Longitudinal Strain Accuracy for Cardiotoxicity Prediction in a Cohort of Breast Cancer Patients During Anthracycline and/or Trastuzumab Treatment. PMC. https://pmc.ncbi.nlm.nih.gov/articles/PMC5855907/"
     ],
@@ -277,8 +278,7 @@
     "interpretation": "Nível mediano de ADA em pericardite tuberculosa comprovada foi de 71,7 U/L em uma série (variação 10,3-303,6 U/L), significativamente maior que em outros grupos diagnósticos. Diferentes pontos de corte (30, 40, 72 U/L) têm sido propostos, com desempenho variável — nenhum corte único é universalmente validado.",
     "limitations": "Desempenho diagnóstico varia consideravelmente entre estudos e populações, refletindo diferenças de método e prevalência local de tuberculose. Deve ser interpretado em conjunto com testes moleculares (Xpert MTB/RIF) e clínica, não isoladamente.",
     "source_refs": [
-      "Diagnostic values of Xpert MTB/RIF, T-SPOT.TB and adenosine deaminase for HIV-negative tuberculous pericarditis in a high burden setting. PMC. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7530650/",
-      "What are the adenosine deaminase (ADA) cut-off values for different body fluids when evaluating suspected tuberculosis? droracle. https://www.droracle.ai/articles/973485/what-are-the-adenosine-deaminase-ada-cutoff-values-for"
+      "Diagnostic values of Xpert MTB/RIF, T-SPOT.TB and adenosine deaminase for HIV-negative tuberculous pericarditis in a high burden setting. PMC. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7530650/"
     ],
     "review_status": "revisado",
     "published": false,
@@ -344,11 +344,12 @@
     "category": "metodo_grafico",
     "theme": "Aorta e doença arterial periférica",
     "what_it_measures": "Razão entre a pressão sistólica aferida no tornozelo (artéria pediosa dorsal ou tibial posterior) e a maior pressão sistólica braquial, medida com paciente em decúbito dorsal após repouso de pelo menos 10 minutos, usando esfigmomanômetro e Doppler portátil.",
-    "reference_range": "Normal: ITB entre 0,9 e 1,3. Anormal (sugestivo de doença arterial periférica): ITB < 0,9. Não compressível (sugestivo de calcificação arterial medial, comum em diabetes e doença renal crônica): ITB > 1,3.",
+    "reference_range": "Doença arterial periférica confirmada: ITB ≤ 0,90. Faixa normal: 0,91 a 1,39. Artérias não compressíveis: ITB > 1,40 — situação em que a medida perde validade e não permite excluir doença arterial periférica.",
     "indications": "Rastreamento e diagnóstico de doença arterial periférica em pacientes com claudicação, dor em repouso, feridas de cicatrização lenta em membros inferiores, ou como marcador de risco cardiovascular global em pacientes assintomáticos de alto risco.",
-    "interpretation": "Quanto mais baixo o ITB, maior a gravidade da doença arterial periférica. Um ITB não compressível (>1,3) não exclui doença arterial periférica — indica calcificação arterial que invalida a medida, exigindo métodos alternativos (índice hálux-braquial, Doppler arterial, ou angiografia).",
-    "limitations": "Pouco confiável em pacientes com calcificação arterial extensa (diabetes de longa data, doença renal crônica em diálise) — nesses casos, considerar índice hálux-braquial ou avaliação por imagem direta.",
+    "interpretation": "Quanto mais baixo o ITB, maior a gravidade da doença arterial periférica. Um ITB acima de 1,40 indica artéria não compressível — sinal de rigidez arterial, comum em diabetes, insuficiência renal grave e idade avançada — e correlaciona-se com maior risco de eventos cardiovasculares e mortalidade, apesar de invalidar a medida. Nesse caso a diretriz recomenda medir o índice hálux-braquial em repouso, porque o dedo do pé costuma preservar compressibilidade.",
+    "limitations": "O ITB de repouso tem sensibilidade de 68% a 84% e especificidade de 84% a 99% para o diagnóstico de doença arterial periférica — ou seja, um exame normal não exclui a doença com segurança quando a suspeita clínica é alta. Pouco confiável em calcificação arterial extensa (diabetes de longa data, doença renal crônica em diálise); nesses casos, considerar índice hálux-braquial ou avaliação por imagem direta.",
     "source_refs": [
+      "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179",
       "Espinoza-Enciso LF et al. Prevalence of peripheral arterial disease and arterial calcification based on three ankle-brachial index calculation methods. PLoS One. 2025;20(9):e0316981."
     ],
     "review_status": "revisado",
