@@ -1340,13 +1340,16 @@
     ],
     "pregnancy": "Uso deve ser evitado na gestação devido à ação anti-androgênica; evitar também durante a lactação",
     "dosing": {
-      "hipertensao essencial e edema": "50-100 mg/dia, em dose única ou fracionada; pode ser aumentada gradualmente em intervalos de 2 semanas até 200 mg/dia",
-      "ic congestiva dose inicial diuretica": "100 mg/dia (dose única ou fracionada), podendo variar entre 25-200 mg/dia",
-      "icfer dose alvo": "25-50 mg/dia, associado a IECA/BRA/INRA + betabloqueador, para redução de morbimortalidade",
-      "hipertensao resistente 4a droga": "50-100 mg, podendo chegar a 200 mg/dia, como quarta droga quando paciente permanece hipertenso apesar de tríplice terapia (ex.: IECA/BRA + anlodipina + hidroclorotiazida)",
-      "dose maxima adulto": "400 mg/dia",
-      "dose maxima pediatrica": "3,3 mg/kg/dia",
-      "fonte": "A dose-alvo em IC-FEr de 25-50 mg/dia está **confirmada**: vem do RALES, conferido no artigo original. VERIFICAÇÃO HUMANA NECESSÁRIA para as demais faixas desta seção (hipertensão, edema, hipertensão resistente e doses máximas), que vinham de guia farmacêutico de terceiro e de material de curso, e precisam ser conferidas contra a bula registrada na ANVISA."
+      "hipertensao essencial": "**50 a 100 mg/dia** como dose usual; em casos resistentes ou graves pode ser aumentada gradualmente, **em intervalos de duas semanas, até 200 mg/dia**.",
+      "ic congestiva dose usual da bula": "**100 mg/dia**.",
+      "icfer dose alvo (diretriz)": "**25 a 50 mg/dia**, associada a IECA/BRA/INRA e betabloqueador, para redução de morbimortalidade — é a dose do RALES, e é a que vale como alvo em IC-FEr. Note que ela é **menor** que a dose usual de 100 mg/dia que a bula traz para insuficiência cardíaca congestiva: a bula descreve o uso diurético, o alvo do RALES é o antagonismo mineralocorticoide em dose baixa.",
+      "cirrose hepatica": "Relação sódio/potássio urinário **maior que 1**: 100 mg/dia. **Menor que 1**: 200 a 400 mg/dia.",
+      "sindrome nefrotica": "100 a 200 mg/dia em adultos.",
+      "hipopotassemia hipomagnesemia": "25 a 100 mg/dia, quando a suplementação oral de potássio ou magnésio for considerada inadequada.",
+      "hiperaldosteronismo primario pre operatorio": "100 a 400 mg/dia como preparo cirúrgico, após diagnóstico estabelecido.",
+      "dose maxima adulto": "**400 mg/dia**.",
+      "pediatria edema": "**Dose diária inicial de aproximadamente 3,3 mg/kg**, fracionada. Atenção: este número é a dose **inicial**, e a versão anterior deste verbete o rotulava como dose **máxima** pediátrica — inversão que poderia levar a subtratar tanto quanto a tratar sem teto definido.",
+      "fonte": "Bula brasileira de Aldactone, conferida na íntegra. **A marca anterior está resolvida**: as faixas vinham de guia farmacêutico de terceiro e de material de curso, e agora vêm da bula. As apresentações vistas no documento são de 25 mg e 50 mg."
     },
     "outcomes": {
       "Evidencia pivotal": "- **rales icfer**: RALES (N Engl J Med, 1999): 1.663 pacientes em classe funcional III-IV com FE ≤35%, com redução de 30% na mortalidade - **icfep (topcat)**: 3.445 pacientes com FE ≥45%. O **desfecho primário composto não foi reduzido** (morte cardiovascular, parada cardíaca abortada ou hospitalização por IC: 18,6% contra 20,4%; HR 0,89; IC95% 0,77-1,04; p=0,14). Apenas o componente de **hospitalização por insuficiência cardíaca** caiu de forma significativa: 12,0% contra 14,2%, HR 0,83 (IC95% 0,69-0,99), p=0,04 — a redução de 17% citada aqui. Mortalidade total e hospitalização por qualquer causa não foram reduzidas. É essa distinção que sustenta uma recomendação de classe IIa e não mais forte - **fonte**: Pitt B et al. N Engl J Med. 2014;370(15):1383-1392 (TOPCAT), conferido no resumo indexado"
@@ -1357,7 +1360,8 @@
     },
     "references": [
       "Pitt B, Zannad F, Remme WJ, et al. The effect of spironolactone on morbidity and mortality in patients with severe heart failure (RALES). N Engl J Med. 1999;341(10):709-717. DOI: 10.1056/NEJM199909023411001. PMID: 10471456",
-      "Pitt B, Pfeffer MA, Assmann SF, et al. Spironolactone for heart failure with preserved ejection fraction (TOPCAT). N Engl J Med. 2014;370(15):1383-1392. DOI: 10.1056/NEJMoa1313731. PMID: 24716680"
+      "Pitt B, Pfeffer MA, Assmann SF, et al. Spironolactone for heart failure with preserved ejection fraction (TOPCAT). N Engl J Med. 2014;370(15):1383-1392. DOI: 10.1056/NEJMoa1313731. PMID: 24716680",
+      "Bula de ALDACTONE (espironolactona), Wyeth Indústria Farmacêutica Ltda. — seções de composição e posologia, versão brasileira."
     ]
   },
   {
@@ -1863,27 +1867,25 @@
       "Gravidez e lactação"
     ],
     "dosing": {
-      "angina pectoris cronica estavel inicial": "2,5-5 mg 2x/dia",
-      "angina titulacao": "Após 3-4 semanas, ajustar se sintomas persistirem e FC>60bpm",
-      "angina manutencao": "7,5 mg 2x/dia",
-      "icfer inicial": "2,5-5 mg 2x/dia",
-      "icfer titulacao": "Após 2 semanas, ajustar se FC persistentemente >60bpm",
-      "icfer dose maxima": "7,5 mg 2x/dia",
-      "criterio indicacao ic": "ICFEr NYHA II-IV, ritmo sinusal, FC≥70bpm, em combinação com terapia padrão incluindo betabloqueador (ou quando betabloqueador é contraindicado/não tolerado)",
-      "beneficio demonstrado": "reduz o desfecho composto de morte cardiovascular ou hospitalização por IC, **por conta da hospitalização por piora de IC e da morte por insuficiência cardíaca**. A versão anterior deste verbete afirmava redução de **mortalidade cardiovascular**, que o SHIFT não demonstrou — e a própria seção de evidência do documento já dizia que o efeito vinha das hospitalizações. A distinção separa um fármaco que alivia carga de doença de um que modifica mortalidade",
-      "ajuste renal clcr maior 15": "Sem ajuste necessário",
-      "ajuste renal clcr menor 15": "Não estudado nessa população",
-      "ajuste hepatico leve moderado child a b": "Sem ajuste necessário",
-      "ajuste hepatico grave": "Contraindicado",
-      "pediatria": "Eficácia/segurança não estabelecidas em menores de 18 anos para IC crônica",
-      "administracao": "VO, às refeições; pode ser administrada via SNE (revestimento é apenas cosmético)",
-      "fonte": "Os critérios de indicação em IC estão **confirmados** contra o SHIFT, conferido no artigo original. VERIFICAÇÃO HUMANA NECESSÁRIA para as faixas de dose e os intervalos de titulação desta seção, que vinham de guia farmacêutico de terceiro e precisam ser conferidos contra a bula registrada na ANVISA."
+      "apresentacoes": "Comprimidos revestidos de 5 mg e 7,5 mg. A dose de 2,5 mg é obtida com meio comprimido de 5 mg.",
+      "angina inicial": "**Não exceder 5 mg 2x/dia** em pacientes com menos de 75 anos.",
+      "angina titulacao": "Após **3 a 4 semanas**, aumentar para a dose seguinte se o paciente ainda estiver sintomático, a dose inicial for bem tolerada e a frequência de repouso permanecer **acima de 60 bpm**.",
+      "angina manutencao": "**Não exceder 7,5 mg 2x/dia.** Descontinuar se não houver melhora dos sintomas em 3 meses, ou se a resposta for apenas limitada sem redução clinicamente relevante da frequência de repouso.",
+      "icfer inicial": "**5 mg 2x/dia**, apenas em insuficiência cardíaca **estável**, e a bula recomenda que o prescritor tenha experiência no manejo de IC crônica.",
+      "icfer titulacao": "Após **2 semanas**: subir para 7,5 mg 2x/dia se a frequência de repouso estiver persistentemente **acima de 60 bpm**; **manter 5 mg 2x/dia se estiver entre 50 e 60 bpm**; reduzir para 2,5 mg 2x/dia se estiver persistentemente **abaixo de 50 bpm** ou houver sintoma de bradicardia (tontura, fadiga, hipotensão).",
+      "icfer dose maxima": "7,5 mg 2x/dia.",
+      "quando suspender": "**Descontinuar se a frequência permanecer abaixo de 50 bpm** ou se os sintomas de bradicardia persistirem apesar da redução de dose. Vale para as duas indicações.",
+      "idosos": "A partir de **75 anos**, considerar dose inicial mais baixa — 2,5 mg 2x/dia (meio comprimido de 5 mg) — antes de titular.",
+      "ajuste renal": "**Sem ajuste com clearance de creatinina acima de 15 mL/min** — a contribuição renal para a eliminação é de cerca de 20%.",
+      "criterio indicacao ic": "IC crônica em adulto com frequência cardíaca **≥70 bpm**, associada à terapia padrão. Em angina estável, mesma exigência de FC ≥70 bpm, sobretudo quando betabloqueador não é recomendado ou como complemento a ele.",
+      "fonte": "Bula profissional brasileira, seção de Posologia e Modo de Usar, conferida na íntegra. **A marca anterior está resolvida**: as faixas de dose e os intervalos de titulação vinham de guia farmacêutico de terceiro e agora estão substituídos pelo texto da bula. Os critérios de indicação em IC já conferiam com o SHIFT."
     },
     "outcomes": {
       "Evidencia pivotal shift": "SHIFT (Lancet, 2010): 6.558 pacientes com IC-FEr, frequência cardíaca ≥70 bpm e ritmo sinusal, seguimento mediano de 22,9 meses. O desfecho primário composto de morte cardiovascular ou hospitalização por piora de IC ocorreu em 24% com ivabradina contra 29% com placebo — **HR 0,82; IC95% 0,75-0,90; p<0,0001**. O efeito veio de dois componentes: hospitalização por piora de IC (16% contra 21%; HR 0,74; IC95% 0,66-0,83; p<0,0001) e **morte por insuficiência cardíaca** (3% contra 5%; HR 0,74; IC95% 0,58-0,94; p=0,014). Mortalidade cardiovascular como um todo não figura entre os desfechos reduzidos"
     },
     "references": [
-      "Swedberg K, Komajda M, Böhm M, et al. Ivabradine and outcomes in chronic heart failure (SHIFT): a randomised placebo-controlled study. Lancet. 2010;376(9744):875-885. DOI: 10.1016/S0140-6736(10)61198-1. PMID: 20801500"
+      "Swedberg K, Komajda M, Böhm M, et al. Ivabradine and outcomes in chronic heart failure (SHIFT): a randomised placebo-controlled study. Lancet. 2010;376(9744):875-885. DOI: 10.1016/S0140-6736(10)61198-1. PMID: 20801500",
+      "Bula profissional de PROCORALAN (cloridrato de ivabradina) 5 mg e 7,5 mg, Laboratórios Servier do Brasil Ltda. — seção 8, Posologia e Modo de Usar. Documento obtido no site do detentor do registro."
     ]
   },
   {
