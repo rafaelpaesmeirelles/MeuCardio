@@ -55,3 +55,12 @@ Tontura (o mais frequente), hipercalemia, hipotensão sintomática — sobretudo
 
 ## Particularidade
 A combinação com IECA não é recomendada, por comprometer a função renal sem ganho de desfecho. O uso concomitante com betabloqueador na insuficiência cardíaca exige cautela na titulação.
+
+## Relacao com sacubitril-valsartana
+Não associar. O sacubitril-valsartana **já contém valsartana**, de modo que somar um BRA a ele é duplicar o bloqueio do receptor de angiotensina, sem ganho e com mais hipotensão, hipercalemia e disfunção renal. Ao migrar de um BRA para o sacubitril-valsartana, o BRA é substituído, não somado.
+
+A janela obrigatória de 36 horas do rótulo se aplica à troca com **IECA**, não com BRA — a diferença está no risco de angioedema, que é o que a janela previne. VERIFICAÇÃO HUMANA NECESSÁRIA para a conduta de intervalo ao trocar de BRA para sacubitril-valsartana, que o rótulo consultado não especifica.
+
+Além disso, história de angioedema por IECA **ou por BRA** contraindica o sacubitril-valsartana.
+
+Fonte: rótulo do sacubitril-valsartana aprovado pelo FDA (DailyMed SPL setid 000dc81d-ab91-450c-8eae-8eb74e72296f).

@@ -4,7 +4,7 @@ slug: atenolol
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["Atenolol — Bula Profissional · Consulta Remédios · https://uploads.consultaremedios.com.br/drug_leaflet/pro/Bula-Atenolol-Profissional-Consulta-Remedios.pdf", "Tenormin (atenolol) — bula FDA · accessdata.fda.gov", "Atenolol — Drugs.com Dosage Guide, 2026"]
+source_refs: ["Atenolol tablets — rótulo aprovado pelo FDA, DailyMed SPL setid c58e12ad-d705-4643-91ac-ff079e9eb28e"]
 legacy_source: "medicamentos/banco-de-medicamentos-atenolol.md"
 ---
 
@@ -49,4 +49,4 @@ Bradicardia, fadiga, extremidades frias, broncoespasmo (menos frequente que beta
 
 **Idosos**: considerar iniciar com 25 mg/dia.
 
-Fonte: bula FDA (Tenormin), convergente entre 3 fontes independentes consultadas.
+Fonte: rótulo do atenolol aprovado pelo FDA (DailyMed). A versão anterior citava convergência com três fontes independentes sem nomeá-las, o que não é rastreável — a referência agora é o rótulo, com identificador.

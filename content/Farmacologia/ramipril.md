@@ -58,3 +58,12 @@ C (1º trimestre) e D (2º/3º trimestre) — contraindicado, notificar médico 
 
 ## Efeitos adversos
 Tosse seca irritativa (mais comum em mulheres/não fumantes, pior à noite), hipotensão/tontura no início, hipercalemia, alteração/perda do paladar, angioedema (raro, risco de vida), disfunção renal, leucopenia/plaquetopenia (raras), impotência, tosse
+
+## Interacao com sacubitril-valsartana
+**Contraindicado o uso concomitante**, e é preciso respeitar uma **janela de 36 horas** ao trocar de ou para o sacubitril-valsartana. O inibidor de neprilisina e o IECA somam risco de angioedema, e a janela existe para evitar a sobreposição dos dois efeitos.
+
+Isto não é detalhe teórico em Cardiologia: a migração de IECA para sacubitril-valsartana é justamente o caminho recomendado na insuficiência cardíaca com fração de ejeção reduzida, então essa transição acontece na prática rotineira.
+
+Também não se deve coadministrar alisquireno a paciente diabético.
+
+Fonte: rótulo do sacubitril-valsartana aprovado pelo FDA (DailyMed SPL setid 000dc81d-ab91-450c-8eae-8eb74e72296f).

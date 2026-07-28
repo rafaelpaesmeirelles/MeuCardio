@@ -4,7 +4,7 @@ slug: telmisartana
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["Telmisartan Teva Pharma — EPAR · EMA · https://www.ema.europa.eu/pt/documents/overview/telmisartan-teva-pharma-epar-summary-public_pt.pdf", "Telmisartana Comprimidos 40mg & 80mg — Bula Profissional · Consulta Remédios/Ranbaxy · https://uploads.consultaremedios.com.br/drug_leaflet/pro/Bula-Telmisartana-Ranbaxy-Profissional-Consulta-Remedios.pdf", "Telmisartan (Micardis) — bula FDA/DailyMed (múltiplas versões consultadas)", "Micardis (telmisartan) — Medscape Reference"]
+source_refs: ["Telmisartan tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 5743c58e-deab-ac93-e063-6294a90ac1eb", "Telmisartan — resumo das características do produto (EMA), consultado para a orientação europeia de ajuste renal", "ONTARGET Investigators. Telmisartan, ramipril, or both in patients at high risk for vascular events. N Engl J Med. 2008;358(15):1547-1559. DOI: 10.1056/NEJMoa0801317"]
 legacy_source: "medicamentos/banco-de-medicamentos-telmisartana-completo.md"
 ---
 
@@ -55,3 +55,12 @@ Potássio sérico periodicamente, sobretudo em quem tem fator de risco pra hiper
 - Gravidez
 - Insuficiência hepática grave/colestase biliar
 - Hipersensibilidade
+
+## Relacao com sacubitril-valsartana
+Não associar. O sacubitril-valsartana **já contém valsartana**, de modo que somar um BRA a ele é duplicar o bloqueio do receptor de angiotensina, sem ganho e com mais hipotensão, hipercalemia e disfunção renal. Ao migrar de um BRA para o sacubitril-valsartana, o BRA é substituído, não somado.
+
+A janela obrigatória de 36 horas do rótulo se aplica à troca com **IECA**, não com BRA — a diferença está no risco de angioedema, que é o que a janela previne. VERIFICAÇÃO HUMANA NECESSÁRIA para a conduta de intervalo ao trocar de BRA para sacubitril-valsartana, que o rótulo consultado não especifica.
+
+Além disso, história de angioedema por IECA **ou por BRA** contraindica o sacubitril-valsartana.
+
+Fonte: rótulo do sacubitril-valsartana aprovado pelo FDA (DailyMed SPL setid 000dc81d-ab91-450c-8eae-8eb74e72296f).
