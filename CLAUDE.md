@@ -331,13 +331,23 @@ em produção. As pendências abaixo são trabalho novo ou decisão do Rafael.
    live, e vice-versa.
 
 ### Trabalho novo
-4. **Medicamentos — única seção zerada.** É a única frente que exige escrever
-   conteúdo do zero: não existe fonte de dados. O `popular_drugs.py` lê de
-   `knowledge/medicamentos/*.md`, formato do ZIP original que não está mais no
-   repositório, e os documentos de `content/Farmacologia/` são prosa — o
-   comparador precisa de campos estruturados (`dosing` como dict,
-   contraindicações como lista). Precisa de JSON novo, em lotes, com dose,
-   apresentação, ajuste renal, contraindicação e interação.
+4. **Medicamentos — 99 carregados, nenhum publicado.** A seção deixou de ser
+   zerada: `extrair_drugs_de_markdown.py` reconstruiu os campos estruturados a
+   partir dos 100 documentos de `content/Farmacologia`, e os 99 estão no banco
+   com `review_status: pendente_revisao` e `published: false`. O ZIP original
+   (`knowledge/medicamentos/*.md`, que o `popular_drugs.py` lê) **não existe
+   mais neste servidor** — procurado em todo o sistema de arquivos, dentro de
+   todo zip/tar e no histórico completo do git. Não procurar de novo.
+   Falta, antes de publicar: conferir contra fonte e resolver o
+   **`drug_class` com 89 valores distintos para 99 fármacos**. A classe veio
+   de cabeçalho em prosa ("Betabloqueador não seletivo com atividade alfa-1
+   bloqueadora adicional"), então serve para ler mas é inútil como filtro —
+   e é exatamente por ela que a API filtra. Precisa de um campo canônico ao
+   lado do descritivo, não de substituição.
+   Também vazios por decisão, nunca por esquecimento: `half_life_hours`,
+   `sbp/dbp_reduction_mmhg` e `commercial_presentations` — os três exigem
+   escolha de revisor ou bula/ANVISA, e um extrator que os adivinhasse
+   produziria o dado sem procedência que a Fase B passou semanas removendo.
 5. **Ampliar os fluxogramas.** 16 publicados (SCA, FA, IC, HP, síncope, TEP,
    estenose aórtica, diabetes, gravidez, DAP, CDI, choque cardiogênico,
    endocardite, síndrome aórtica aguda, cardiomiopatia hipertrófica, hipertensão
@@ -355,10 +365,79 @@ em produção. As pendências abaixo são trabalho novo ou decisão do Rafael.
    tabela `documents`. Galeria, exames, evidências e estudos são invisíveis
    para a busca — 88 itens publicados que ninguém encontra pesquisando.
 
+### No fim da fila: preço, marca e relatório de prescrição
+Três tarefas pedidas pelo Rafael em 28/07/2026, aprovadas para o **fim** da
+fila — depois de tudo que já estava planejado. O levantamento abaixo já foi
+feito sobre a lista real da CMED de 21/07/2026 (12,4 MB), não sobre suposição;
+não refazer.
+
+10. **Tarefa A — marcas, laboratório, apresentações e preço via CMED.**
+    Fonte obrigatória, sem exceção: lista de preços da CMED em
+    `gov.br/anvisa/pt-br/assuntos/medicamentos/cmed/precos`. Nenhum preço de
+    outra origem.
+    O que a planilha é: **25.702 linhas, 2.053 substâncias, 74 colunas**,
+    header na linha 42, dados a partir da 43. Traz `LABORATÓRIO`, `PRODUTO`
+    (marca), `APRESENTAÇÃO`, `EAN`, `REGISTRO`, `TARJA`, `TIPO DE PRODUTO`.
+    Quatro achados que definem o desenho:
+    - **Não existe coluna por UF.** São 13 alíquotas de ICMS, cada uma com
+      variante "ALC" (Áreas de Livre Comércio). A nota (i) da própria lista diz
+      que cabe ao adquirente checar a alíquota do estado de destino — o mapa
+      UF→alíquota é responsabilidade nossa, é matéria tributária que muda por
+      norma estadual e **não pode ser inventado**: vai como JSON versionado com
+      fonte e data por UF, e onde não houver norma rastreável entra
+      `VERIFICAÇÃO HUMANA NECESSÁRIA` com queda para média nacional rotulada.
+    - **3.884 apresentações não têm PMC em nenhuma alíquota** — uso restrito
+      hospitalar, proibidas de venda por PMC pela Resolução CMED nº 3/2009.
+      Exibir "sem preço ao consumidor publicado", nunca em branco nem estimado.
+    - **A URL tem timestamp** (`xls_conformidade_site_<AAAAMMDD>_<ms>.xlsx`),
+      não é previsível por mês, e o servidor da ANVISA **devolve 403 sem
+      User-Agent de browser** (medido: 403 no curl padrão, 200 com UA de
+      Chrome). Automação exige raspar o link da página.
+    - Parser em **stdlib pura** (`zipfile` + `ElementTree`), já validado no
+      arquivo real: o servidor não tem `openpyxl` nem `pip`.
+    Casamento com os 99 fármacos, medido: 62/99 por nome cru, **89/99** com
+    normalizador que remove sal e parênteses ("Anlodipino (besilato)" ×
+    "BESILATO DE ANLODIPINO"). Dos 10 restantes, 3 são grafia e resolvem por
+    tabela de sinônimos — a CMED usa `VARFARINA SÓDICA`, `HEMITARTARATO DE
+    NOREPINEFRINA`, e desmembra nitratos em `MONONITRATO DE ISOSSORBIDA` /
+    `DINITRATO DE ISOSSORBIDA` / `NITROGLICERINA`. Os outros **7 estão
+    genuinamente ausentes da CMED**: bivalirudina, cangrelor, disopiramida,
+    dronedarona, flecainida, mavacamteno e vericiguate — isso é informação
+    clínica válida ("sem preço regulado publicado no Brasil"), não uma falha.
+    Rótulo obrigatório na interface: **"Preço máximo ao consumidor — teto
+    regulado pela CMED, <UF>, ICMS <x>%, lista de <data>"**. Nunca "preço
+    médio": PMC é teto, farmácia vende abaixo. UF padrão vem de
+    `users.council_state`, com seletor ao lado — é a UF do conselho, que nem
+    sempre é onde o paciente compra.
+    Atualização mensal automática (preferência do Rafael): rota
+    `POST /api/admin/cmed/atualizar` mais agendador diário, **um só caminho de
+    código** para manual e automático; só baixa se o timestamp mudou; carga em
+    transação única. Tabela `cmed_versions` com data de publicação, hash e nº
+    de linhas — sem ela não dá para provar de qual lista veio um preço.
+11. **Tarefa B — sugestão de marca durante a prescrição.** Depende da A.
+    Ponto estrutural: `Prescription.items` hoje é `{"drug_name": <texto
+    livre>}`. Precisa ganhar `drug_slug`, `brand_name`, `manufacturer`,
+    `ggrem`, `pmc_snapshot`, `uf` e `cmed_version` — **snapshot do preço no
+    momento da prescrição**, porque a lista muda todo mês e relatório de junho
+    não pode ser recalculado com preço de agosto. Genérico continua sendo o
+    padrão do campo; marca é escolha explícita, **nunca seleção automática**.
+    Conferir antes de implementar o alcance da Lei 9.787/1999 (denominação
+    genérica) fora do SUS — não afirmar de memória.
+12. **Tarefa C — relatório de medicações prescritas, na Minha Conta.**
+    Depende da B: agregar `drug_name` de texto livre por marca e laboratório
+    dá contagem sem sentido. Prescrições anteriores à B entram por casamento
+    aproximado e **rotuladas como tal**. Filtro por período, agregando por
+    fármaco + marca + laboratório, sempre restrito a `created_by` — cada médico
+    só vê o próprio. **Sem nome de paciente**: é contagem agregada, e manter
+    dado de paciente fora do relatório é a escolha certa sob a LGPD.
+    Exportação em PDF **não existe no sistema** — a escolha do renderizador
+    deve ser feita aqui e reaproveitada nas tarefas 12 e 16 do briefing 2, em
+    vez de decidida duas vezes.
+
 ### Decisões pendentes de terceiros
-8. **Revisão jurídica do TCLE** e definição de encarregado de dados (DPO). O
+13. **Revisão jurídica do TCLE** e definição de encarregado de dados (DPO). O
    próprio modelo diz que precisa disso antes do uso em produção.
-9. **Prazo de retenção** de exame e laudo: segue regra de guarda de prontuário,
+14. **Prazo de retenção** de exame e laudo: segue regra de guarda de prontuário,
    sem exclusão automática (decisão do Rafael); o prazo exato ele confirma com
    o jurídico. **Pedido abandonado** — com exame e dados de paciente gravados
    antes do pagamento — por ora não é expurgado, por decisão dele.
