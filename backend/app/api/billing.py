@@ -236,9 +236,18 @@ async def webhook(request: Request, db: Session = Depends(get_db)):
     payload = await request.body()
     sig_header = request.headers.get("stripe-signature")
 
-    try:
-        event = stripe.Webhook.construct_event(payload, sig_header, settings.stripe_webhook_secret)
-    except (ValueError, stripe.error.SignatureVerificationError):
+    # Tenta cada secret configurado. Durante a migração de domínio há dois
+    # endpoints ativos no Stripe, um por domínio, com secrets distintos — validar
+    # contra um só faria todo evento do outro voltar 400, e o Stripe reenfileira
+    # sem que nada aqui acuse o problema.
+    event = None
+    for secret in settings.stripe_webhook_secrets:
+        try:
+            event = stripe.Webhook.construct_event(payload, sig_header, secret)
+            break
+        except (ValueError, stripe.error.SignatureVerificationError):
+            continue
+    if event is None:
         raise HTTPException(status_code=400, detail="Assinatura de webhook inválida.")
 
     tipo = event["type"]

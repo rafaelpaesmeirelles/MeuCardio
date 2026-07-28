@@ -77,6 +77,22 @@ class Settings(BaseSettings):
     stripe_publishable_key: str = ""
     stripe_secret_key: str = ""
     stripe_webhook_secret: str = ""
+
+    @property
+    def stripe_webhook_secrets(self) -> list[str]:
+        """Todos os secrets aceitos na validação de assinatura.
+
+        Durante uma migração de domínio existem **dois endpoints ativos no
+        Stripe**, um por domínio, e cada um tem secret próprio. Com um único
+        secret configurado, todo evento vindo do endpoint novo é rejeitado com
+        400 — e o Stripe apenas reenfileira em silêncio, sem que nada no
+        sistema acuse problema. Foi medido: 400 no domínio novo enquanto o
+        antigo passava.
+
+        Aceita lista separada por vírgula justamente para a janela em que os
+        dois convivem. Depois da migração, volta a ser um só.
+        """
+        return [s.strip() for s in (self.stripe_webhook_secret or "").split(",") if s.strip()]
     stripe_price_id: str = ""
 
     @property
