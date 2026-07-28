@@ -39,7 +39,7 @@ FONTES_FRACAS = (
     "sírio-libanês", "sirio-libanes", "health.ucsd.edu", "medscape", "mdcalc",
     "drugs.com", "wikipedia", "wikipédia", "wikidoc", "sanarmed", "sanar",
     "pebmed", "medicinanet", "tuasaude", "youtube", "empendium", "rdocumentation",
-    "doccheck", "flexikon", "slideshare", "scribd",
+    "doccheck", "flexikon", "slideshare", "scribd", "conduta.med.br", "medicpulse",
 )
 
 # Marcadores de fonte primária: diretriz de sociedade ou artigo com
