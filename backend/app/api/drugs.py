@@ -13,6 +13,7 @@ FIELDS = (
     "slug generic_name brand_names drug_class mechanism presentations "
     "commercial_presentations dosing "
     "renal_adjustment hepatic_adjustment contraindications interactions monitoring "
+    "indications adverse_effects notes "
     "pregnancy lactation outcomes cost_reference half_life_hours half_life_note "
     "sbp_reduction_mmhg dbp_reduction_mmhg bp_evidence_source "
     "references review_status"
