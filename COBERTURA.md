@@ -157,3 +157,35 @@ despublicava em silêncio tudo que já estava no ar.
 dois temas). Documentos que existem em um único tema mas foram classificados errado —
 sem duplicado para revelar o erro — podem não ter sido pegos. O caso do
 `Febre_reumática` com underscore, encontrado agora, é exemplo disso.
+
+## Duplicatas de tema: 11 pares complementares (achado de 28/07/2026)
+
+Varredura por sobreposição de assunto entre todos os documentos, filtrada por
+`kind` para não confundir fluxograma com protocolo do mesmo tema — esse par é
+legítimo e foi excluído. Sobraram **11 pares reais, todos complementares**:
+em nenhum deles um documento contém o outro. As seções se dividem entre os
+dois, de modo que **nenhum dos dois está completo**.
+
+| tema | documentos | seções em comum |
+|---|---|---|
+| Síndrome coronariana aguda (ESC 2023) | estrutura-detalhada × diagnostico-e-tratamento | 2 de 13 e 9 |
+| Endocardite infecciosa (ESC 2023) | versao-completa × base | 1 de 14 e 6 |
+| Ablação de FA (ESC 2024) | versao-completa × base | 0 de 8 e 7 |
+| Hipertensão pulmonar (ESC/ERS 2022) | versao-completa × base | 0 de 7 e 13 |
+| IC — atualização focada 2023 | atualizacao-focada × complemento | 1 de 10 e 8 |
+| SCAI shock | complemento × classificacao | 0 de 7 e 11 |
+| Choque cardiogênico | drogas-vasoativas × esc-2023-acs | 2 de 5 e 9 |
+| TEP agudo (ESC 2019) | esc-2019 × escers-2019 | 2 de 9 e 14 |
+| TVP aguda | aguda-diagnostico × diagnostico-e-tratamento | 3 de 11 e 12 |
+| Valvopatia (ESC/EACTS) | 20212025 × vhd | 4 de 13 e 9 |
+| DCV no diabetes (ESC 2023) | estratificacao-de-risco × esc-2023 | 1 de 10 e 13 |
+
+Por que isso importa mais do que parece: quem procura "endocardite" encontra
+dois documentos e lê um deles. Se pegar o errado, perde os critérios de Duke
+modificados ou perde os esquemas de antibiótico — **cada um está num arquivo
+diferente**. A fusão é o mesmo trabalho já feito em losartana, metoprolol,
+varfarina e HAS-BLED, e pelo mesmo motivo.
+
+Dois falsos positivos foram descartados na conferência, porque compartilhavam
+palavras sem compartilhar assunto: síndrome aórtica aguda × síndrome
+coronariana aguda, e cardiomiopatia arritmogênica × cardiomiopatia dilatada.
