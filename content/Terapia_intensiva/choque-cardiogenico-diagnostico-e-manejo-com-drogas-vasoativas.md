@@ -5,7 +5,7 @@ theme: "Terapia intensiva"
 kind: protocolo
 review_status: pendente_revisao
 source_refs: ["Norepinephrine bitartrate injection — rótulo aprovado pelo FDA, DailyMed SPL setid e375a0b9-4d26-4749-bbc3-43d63a7cf65a", "Dobutamine injection — rótulo aprovado pelo FDA, DailyMed SPL setid 559367ef-5c20-99ea-e063-6294a90a4ff2"]
-legacy_source: "Protocolo Clínico: Choque Cardiogênico"
+legacy_source: "Fusão de dois documentos de choque cardiogênico na mesma pasta, com 5 e 9 seções e 2 em comum."
 ---
 
 # Choque Cardiogênico: Diagnóstico e Manejo com Drogas Vasoativas
@@ -33,7 +33,35 @@ Critérios hemodinâmicos completos por estágio (A–E), com valores numéricos
 
 ## Suporte circulatorio mecanico
 
-Indicação de balão intra-aórtico, ECMO veno-arterial e dispositivos de assistência ventricular percutânea (Impella e similares) não está coberta neste documento — critério de seleção de paciente complexo o suficiente para merecer módulo próprio, ainda não escrito.
+As diretrizes contemporâneas tratam do papel do suporte circulatório mecânico agudo no choque refratário às medidas farmacológicas iniciais. **O critério de seleção de paciente para balão intra-aórtico, ECMO venoarterial e dispositivo de assistência ventricular percutânea não está detalhado aqui** — é complexo o bastante para merecer documento próprio, ainda não escrito. O que existe hoje sobre indicação por gravidade está em `classificacao-scai-de-estagios-do-choque-cardiogenico.md`, que relaciona o estágio SCAI ao momento de considerar cada dispositivo.
 
 ## Procedencia das doses
 VERIFICAÇÃO HUMANA NECESSÁRIA — a versão anterior deste documento apoiava as doses de droga vasoativa em um protocolo de 2008, uma revista de hospital, um **PDF de podcast** e um agregador. Num documento sobre amina em choque cardiogênico, onde erro de dose mata, isso não é fonte. As doses de noradrenalina e dobutamina passaram a apontar para os rótulos aprovados; as demais (dopamina, adrenalina, milrinona, levosimendana) e os alvos hemodinâmicos precisam ser conferidos contra diretriz de choque cardiogênico vigente antes de esta marcação sair.
+
+## Contexto diretriz unificada
+
+Diretriz 2023 aborda diagnóstico, manejo agudo, tratamento antitrombótico, parada cardíaca extra-hospitalar e choque cardiogênico, estratégias invasivas e tratamento de longo prazo em documento consolidado
+
+## Recursos educacionais disponiveis
+
+ESC oferece recurso dedicado 'FOCUS on Cardiogenic Shock and Acute Mechanical Circulatory Support', fornecendo orientação sobre reconhecimento precoce de sinais de choque cardiogênico e manejo guiado pelas diretrizes mais recentes
+
+## Principio reconhecimento precoce
+
+Reconhecimento precoce dos sinais de choque cardiogênico é enfatizado como determinante crítico para desfecho, permitindo intervenção terapêutica e suporte circulatório mecânico agudo antes de deterioração hemodinâmica irreversível
+
+## Revascularizacao multivascular
+
+Diretriz 2023 trouxe atualização sobre procedimento de revascularização em doença arterial coronariana multivascular, tema relevante ao contexto de choque cardiogênico pós-IAM
+
+## Criterios diagnosticos gerais
+
+Hipotensão persistente com evidência de hipoperfusão tecidual (extremidades frias, oligúria, alteração do estado mental, elevação de lactato) na presença de disfunção cardíaca primária — critérios hemodinâmicos numéricos precisos e protocolo terapêutico escalonado completo
+
+## Criterios internacao
+
+Diagnóstico de choque cardiogênico por si só constitui indicação de internação em unidade de terapia intensiva cardiológica com capacidade de suporte hemodinâmico avançado
+
+## Armadilhas clinicas
+
+Retardar reconhecimento de sinais precoces de choque cardiogênico; não considerar suporte circulatório mecânico em tempo oportuno antes de deterioração hemodinâmica extrema
