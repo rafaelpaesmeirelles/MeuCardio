@@ -53,7 +53,7 @@ Interromper 48h antes de cirurgias eletivas de grande porte ou exames com contra
 Estudo UKPDS demonstrou redução significativa de eventos macrovasculares (incluindo IAM) e mortalidade por todas as causas em pacientes com DM2 e sobrepeso tratados com metformina, estabelecendo-a como terapia de primeira linha com benefício cardiovascular adicional ao controle glicêmico
 
 ## Contraindicacoes
-- Insuficiência renal grave (ClCr<60mL/min pela bula clássica)
+- Insuficiência renal grave, definida como **eGFR abaixo de 30 mL/min/1,73 m²** — e não ClCr abaixo de 60, que era o critério de uma geração anterior de bula e constava aqui. Ver a seção de ajuste renal para as faixas intermediárias, que não são contraindicação e sim decisão de iniciar ou manter
 - Acidose metabólica aguda/crônica
 - Insuficiência hepática grave
 - Alcoolismo
