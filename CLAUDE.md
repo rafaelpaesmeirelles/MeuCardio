@@ -5,10 +5,11 @@ Plataforma de apoio à decisão clínica em Cardiologia ("Guia de Cardiologia"),
 idealizada e desenvolvida por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798).
 Uso independente, sem vínculo institucional.
 
-Inclui biblioteca científica, calculadoras/escores validados, comparador de
-medicamentos, galeria de imagens, exames, evidências, estudos, round hospitalar,
-agenda, modelos de documento, assistente de IA clínica, e (em construção)
-fluxogramas visuais de investigação/tratamento por patologia.
+Inclui biblioteca científica, fluxogramas clínicos em árvore de decisão,
+calculadoras/escores validados, comparador de medicamentos, galeria de imagens,
+exames, evidências, estudos, round hospitalar, agenda, modelos de documento,
+assistente de IA clínica, gestão de conta e assinatura, e o serviço de
+telediagnóstico (laudo e consultoria à distância).
 
 ## Identidade do produto
 O **MeuCardio** (https://meucardio.med.br) é produto independente e próprio,
@@ -142,11 +143,17 @@ Processo, igual para as seis:
   `pg_trgm` e `unaccent` (busca full-text/fuzzy).
 - Frontend: React + TypeScript + Vite. Rotas em `frontend/src/App.tsx`.
   Chamadas de API centralizadas em `frontend/src/lib/api.ts` (token JWT,
-  tratamento de 401, helpers get/post/patch/put/delete).
+  tratamento de 401, helpers get/post/patch/put/delete, `upload` para
+  multipart e `blob` para arquivo protegido). **`FormData` não pode receber
+  `Content-Type` manual** — o browser precisa gerar o boundary; e um
+  `<a href="/api/...">` para arquivo protegido toma 401, porque a API
+  autentica por header `Bearer`, não por cookie. Use `api.blob()`.
 - Deploy: Docker Compose (`docker-compose.prod.yml`), serviços:
   `db` (pgvector/pgvector:pg16), `redis`, `backend`, `frontend-build`
   (container one-shot: builda e sai, não fica "rodando" — isso é normal),
-  `caddy` (HTTPS automático).
+  `caddy` (HTTPS automático). Volumes: `sitefiles` (build do frontend),
+  `userfiles` (foto de perfil, servido pelo Caddy em `/fotos/*`) e
+  `examefiles` (exames cifrados, **não** montado no Caddy).
 - Domínio: https://meucardio.med.br
 
 ## O que já foi feito
@@ -163,16 +170,28 @@ Processo, igual para as seis:
 - IA indexada: 233 documentos, 1328 chunks com embeddings.
 - Login do admin corrigido (usuário criado pelo `bootstrap.py` no startup do
   backend, a partir de `ADMIN_EMAIL`/`ADMIN_PASSWORD` do `.env`).
-- Rebranding: "Serviço de Cardiologia" → "Guia de Cardiologia" em todos os
-  arquivos do frontend. Removida referência institucional antiga do
-  `vite.config.ts` (verificar se restam outras menções).
+- Rebranding: "Serviço de Cardiologia" → "Guia de Cardiologia" em todo o
+  frontend.
+- **Paleta oficial aplicada** (navy `#0B2E45`, vermelho `#D5001D`, teal
+  `#1C7293`, off-white, ink, muted, line). O `tokens.css` tem duas camadas:
+  tokens de marca e, acima deles, papéis semânticos (`--primaria`, `--acao`,
+  `--acento`, `--fundo`, `--texto`). **Componentes usam só os papéis** — trocar
+  a cor de um papel é mudança de uma linha. Cabeçalho e títulos em navy, CTA em
+  vermelho, link e estado ativo em teal. Verde de sucesso e vermelho escuro de
+  erro ficam declaradamente fora da paleta, com o motivo escrito no arquivo:
+  comunicam estado do sistema, não identidade. Contraste conferido em 13 pares,
+  todos AA. O fio dourado foi removido do sistema — não recolocar.
+  Três lugares fora do CSS que precisam acompanhar qualquer troca de paleta: o
+  tema do mermaid em `Fluxograma.tsx`, o `theme_color` do PWA em
+  `vite.config.ts` e a meta `theme-color` no `index.html`.
+- **Painel redesenhado**: contadores viraram barra compacta; o espaço principal
+  é "Acesso rápido", com as funções do sistema em cartões que dizem o que cada
+  uma resolve. Menu lateral continua — o painel é caminho adicional.
 - Login (`Entrar.tsx`): logo aumentada (340px), botão de mostrar/ocultar
   senha, link "Assine já" apontando para `/assinatura`.
-- Logo adicionada no cabeçalho de todas as páginas (`Shell.tsx`) — **checar
-  se o rebuild do frontend após essa mudança + a instalação do `mermaid`
-  concluiu com sucesso, a conexão caiu no meio do processo antes de eu
-  confirmar.**
-- "Apoio" como rótulo ao lado do logo da Biolab (`ApoioBiolab.tsx`).
+- Logo no cabeçalho de todas as páginas (`Shell.tsx`); rebuild confirmado.
+- O selo de apoio da Biolab foi **removido** do sistema a pedido do Rafael —
+  componente, imagem e usos. Não recolocar.
 - Assinatura via Stripe (modo teste): produto + preço criados (R$20/mês),
   modelo `Subscription` (`backend/app/models/subscription.py`), router
   `backend/app/api/billing.py` (`/billing/checkout`, `/billing/status`,
@@ -187,10 +206,48 @@ Processo, igual para as seis:
   de menu no `Shell.tsx`. Rebuild confirmado em produção — o `mermaid` é
   servido como chunk separado e a rota responde. 16 fluxogramas publicados,
   todos no formato de árvore de decisão.
-- Minha Conta implementado (commit `d13c330`): `PATCH /api/auth/me`,
-  `POST /api/auth/alterar-senha`, `POST /api/billing/portal` (Stripe Customer
-  Portal) e a página `frontend/src/pages/MinhaConta.tsx` em `/minha-conta`.
-  **Falta o deploy** — ver "O que falta fazer".
+- **Minha Conta no ar e testado em produção**: `GET`/`PATCH /api/auth/me`,
+  `POST /api/auth/alterar-senha`, upload e remoção de foto
+  (`POST`/`DELETE /api/auth/me/foto`), `GET /api/billing/faturas` (lê do
+  Stripe, sem espelhar no banco) e `POST /api/billing/portal`. Colunas `rqe` e
+  `photo_url` em `users` (migração `a7f2c8d19e04`). A foto é validada por
+  assinatura de arquivo (magic bytes), não por Content-Type nem extensão, com
+  limite de 3 MB, e servida pelo Caddy em `/fotos/*` a partir do volume
+  `userfiles`. Não implementei upgrade/downgrade de plano: com um plano só,
+  seria tela morta.
+- **Telediagnóstico completo, menos a assinatura digital.** Modelo
+  `ServiceOrder` + `ServiceOrderPatient`, rotas em `app/api/service_orders.py`
+  (`/api/pedidos`), páginas `/telediagnostico` (solicitante) e
+  `/fila-telediagnostico` (só admin). Escopo fechado: ECG, MAPA, Holter e teste
+  ergométrico. Preço calculado no servidor a partir de serviço × urgência —
+  nunca recebido do cliente. O pedido só entra na fila quando o webhook do
+  Stripe confirma o pagamento.
+  - **Cofre** (`app/services/cofre.py`): exame cifrado em repouso com
+    AES-256-GCM, chave em `STORAGE_ENCRYPTION_KEY` (só no `.env`; **se ela for
+    perdida, os exames ficam ilegíveis para sempre** — precisa estar no backup
+    de segredos, separado do backup do banco). Volume `examefiles`, **não
+    montado no Caddy**: exame de paciente não pode ter URL alcançável de fora.
+    O id do pedido entra como dado autenticado do GCM, então arquivo movido
+    para outro pedido não decifra. Toda leitura vai para o `AuditLog`.
+  - SLA: prazo conta a partir da confirmação do pagamento. Plantão das 7h às
+    22h (America/Sao_Paulo); fora dessa janela, pedido urgente passa a valer
+    como eletivo. Decisão do Rafael: o prazo pode ultrapassar o fim da janela.
+- **Pagamento único via Stripe** (`mode: "payment"`, `price_data` inline em
+  BRL): R$40/R$60 consultoria e R$70/R$100 laudo, eletivo/urgente. O webhook
+  trata `checkout.session.completed` filtrando por `mode == "payment"` — sem
+  esse filtro, uma assinatura nova cairia no caminho do pedido avulso. Existe
+  `POST /api/pedidos/{id}/reconciliar` como rede de segurança para webhook
+  perdido: consulta a sessão no Stripe, sem confiar no cliente.
+- **Webhook de teste criado via API** (`we_1Ty0a2D3njwJY8wsSNnz2HuW`) apontando
+  para `https://meucardio.med.br/api/billing/webhook`, com 5 eventos, e o
+  `STRIPE_WEBHOOK_SECRET` do `.env` atualizado. Antes disso o webhook só
+  existia em modo live, e **nenhum evento chegava em teste** — o que significa
+  que o fluxo de assinatura nunca havia funcionado de ponta a ponta.
+- **Objeto do Stripe não é dict.** Na lib 15.3.1, `.get()` levanta
+  `AttributeError` — só subscrito funciona. Existe o helper `_campo()` em
+  `billing.py` para isso. Esse erro já causou um 500 no histórico de faturas e
+  estava latente no webhook de assinatura, onde quebraria no primeiro
+  assinante pagante.
 - **Customer Portal: funciona em modo de teste, confirmado na marra.** Criar
   uma sessão do portal (`POST /v1/billing_portal/sessions`) com a chave
   `sk_test_` do `.env` devolve uma URL válida — testado com um cliente
@@ -218,36 +275,124 @@ Processo, igual para as seis:
   depois que a varredura de resíduos foi concluída — quem não abria o site
   desde então precisou entrar de novo, o que é esperado.
 
-## O que falta fazer
-Ordem de prioridade herdada das metas: primeiro o que destrava a cobrança da
-assinatura (itens 1 e 3), depois amplitude de conteúdo (item 2).
+### Conteúdo: as quatro frentes JSON foram carregadas e verificadas
+- **As seções apareciam vazias porque nunca haviam sido carregadas no banco**,
+  não por falta de conteúdo. Os carregadores `app/services/carregar_*.py`
+  existiam só como scripts avulsos, sem rota que os chamasse. Hoje há
+  `POST /api/admin/conteudo/carregar`, `GET /api/admin/conteudo/pendentes` e
+  `POST /api/admin/conteudo/publicar` (que também **despublica**, com
+  `publicar: false` + lista de slugs obrigatória).
+- **Publicados: galeria 36, exames 17, evidências 19, estudos 15.**
+- **`published` NUNCA vem do JSON.** Os carregadores copiavam esse campo do
+  arquivo por cima do banco, e qualquer recarga despublicava tudo em silêncio —
+  aconteceu de verdade com evidências e estudos. Corrigido nos quatro; o motivo
+  está escrito no topo de cada carregador.
+- **Fase B (verificação) concluída nas quatro frentes.** Nenhuma fabricação:
+  15/15 DOIs resolvem no Crossref, todos os PMIDs existem, 36/36 licenças de
+  imagem conferem e nenhuma é NC ou ND (importante: o produto é assinatura
+  paga). Os defeitos encontrados foram de outra natureza — número errado
+  (PEITHO), dado principal ausente (DAPA-HF, POST 2), fonte apontando para o
+  artigo errado do mesmo ensaio (CLEAR SYNERGY), atribuição a diretriz errada
+  (iSGLT2, colchicina na DAC), 7 fontes inaceitáveis (site de estudante,
+  material de operadora, calculadoras, Medscape, site de respostas geradas por
+  IA), imagem descrita como o que não é (ECG rotulado como parede anterior,
+  sendo inferior) e **contradição entre telas** (ITB com 1,3 no verbete e 1,40
+  no fluxograma). Esta última é a mais insidiosa: só aparece quando alguém
+  compara duas páginas, que é o que um assinante faz.
+- Lição que vale para conteúdo novo: **DOI que resolve não prova nada sobre o
+  conteúdo** — é preciso conferir se o artigo que ele abre é o que o registro
+  descreve.
 
-1. **Subir o deploy do Minha Conta.** O código está commitado e no GitHub, mas
-   o container em produção ainda roda a versão anterior — o Claude não tem
-   senha de sudo para o Docker no servidor, então quem roda é o Rafael:
-   `sudo docker compose -f docker-compose.prod.yml up -d --build backend frontend-build`.
-   Enquanto isso não rodar, `/minha-conta` responde 404 em produção.
-2. **Ampliar os fluxogramas clínicos.** Infraestrutura e formato prontos; 16
-   documentos publicados (SCA, FA, IC, HP, síncope, TEP, estenose aórtica,
-   diabetes, gravidez, DAP, CDI, choque cardiogênico, endocardite, síndrome
-   aórtica aguda, cardiomiopatia hipertrófica, hipertensão arterial). Formato
-   obrigatório de árvore de decisão: ver a seção própria acima. Patologias
-   ainda sem fluxograma, em ordem sugerida: regurgitação mitral, miocardite,
-   amiloidose cardíaca, bradiarritmia e indicação de marcapasso, taquicardia
-   de QRS largo e TV, síndrome coronariana crônica, pericardite, cardiopatia
-   congênita do adulto, cardio-oncologia, avaliação perioperatória, febre
-   reumática, dislipidemia e prevenção primária.
-3. **Trocar as chaves do Stripe de teste (`pk_test_`/`sk_test_`) para produção**
-   (`pk_live_`/`sk_live_`) quando o Rafael decidir ativar cobranças reais —
-   requer conta Stripe totalmente verificada. Conferido nesta sessão:
-   `details_submitted: true`, mas `charges_enabled: false`, então a conta ainda
-   não cobra. É o último bloqueio para faturar de verdade.
+## O que falta fazer
+Nada está pela metade: tudo que foi construído está commitado, no ar e testado
+em produção. As pendências abaixo são trabalho novo ou decisão do Rafael.
+
+### Bloqueado, esperando o Rafael
+1. **Colchicina na pericardite aguda** (`evidencias`, slug
+   `colchicina-adjuvante-na-pericardite-aguda`) — **único item fora do ar.**
+   O registro se apoia na diretriz brasileira de 2013 e classifica como IIa
+   ("pode ser considerada"). A ESC 2015 de doenças do pericárdio, posterior,
+   usa linguagem de Classe I: colchicina em primeira linha como adjuvante a
+   AAS/AINE, 0,5 mg/dia abaixo de 70 kg ou 0,5 mg 2x/dia a partir de 70 kg, por
+   3 meses. Duas fontes independentes convergem na classe, mas a extração do
+   texto integral devolveu IIb/B, conflitando — por isso não registrei nem
+   classe nem nível. **Falta conferir na tabela de recomendações da diretriz.**
+   O erro atual é clinicamente relevante na direção ruim: subestimar leva a não
+   prescrever colchicina onde ela reduz recorrência.
+2. **Credencial VIDAAS de homologação/API** — pedida, sem retorno até
+   28/07/2026. Bloqueia a assinatura digital do telediagnóstico e a Tarefa 4
+   inteira. Regra que não se flexibiliza: **nunca simular a assinatura.** A rota
+   `POST /api/pedidos/{id}/responder` já devolve aviso explícito de que
+   registrar resposta em pedido de laudo não emite laudo assinado.
+3. **Chaves do Stripe de teste para produção** (`pk_live_`/`sk_live_`). A conta
+   está com `details_submitted: true` e `charges_enabled: false` — ainda não
+   cobra. É o último bloqueio para faturar de verdade. Ao trocar, lembrar que
+   **portal e webhook são configurados por modo**: os de teste não valem em
+   live, e vice-versa.
+
+### Trabalho novo
+4. **Medicamentos — única seção zerada.** É a única frente que exige escrever
+   conteúdo do zero: não existe fonte de dados. O `popular_drugs.py` lê de
+   `knowledge/medicamentos/*.md`, formato do ZIP original que não está mais no
+   repositório, e os documentos de `content/Farmacologia/` são prosa — o
+   comparador precisa de campos estruturados (`dosing` como dict,
+   contraindicações como lista). Precisa de JSON novo, em lotes, com dose,
+   apresentação, ajuste renal, contraindicação e interação.
+5. **Ampliar os fluxogramas.** 16 publicados (SCA, FA, IC, HP, síncope, TEP,
+   estenose aórtica, diabetes, gravidez, DAP, CDI, choque cardiogênico,
+   endocardite, síndrome aórtica aguda, cardiomiopatia hipertrófica, hipertensão
+   arterial), todos em árvore de decisão. Formato obrigatório: ver seção acima.
+   Ainda sem fluxograma: regurgitação mitral, miocardite, amiloidose cardíaca,
+   bradiarritmia e marcapasso, taquicardia de QRS largo e TV, síndrome
+   coronariana crônica, pericardite, cardiopatia congênita do adulto,
+   cardio-oncologia, avaliação perioperatória, febre reumática, dislipidemia.
+6. **Tarefa 4 do briefing — documentos com assinatura digital.** Existe base
+   parcial (`prescriptions.py`, `documents.py`), mas **não há geração de PDF**
+   nem assinatura. Receita de controle especial (Portaria 344/98) tem regra
+   própria de numeração, via, validade e retenção — decidir o formato com o
+   Rafael antes de implementar, como o próprio briefing pede.
+7. **A busca não cobre as frentes novas.** `app/api/search.py` consulta só a
+   tabela `documents`. Galeria, exames, evidências e estudos são invisíveis
+   para a busca — 88 itens publicados que ninguém encontra pesquisando.
+
+### Decisões pendentes de terceiros
+8. **Revisão jurídica do TCLE** e definição de encarregado de dados (DPO). O
+   próprio modelo diz que precisa disso antes do uso em produção.
+9. **Prazo de retenção** de exame e laudo: segue regra de guarda de prontuário,
+   sem exclusão automática (decisão do Rafael); o prazo exato ele confirma com
+   o jurídico. **Pedido abandonado** — com exame e dados de paciente gravados
+   antes do pagamento — por ora não é expurgado, por decisão dele.
 
 ## Notas importantes
 - O usuário (Rafael) opera via terminal SSH em um app de celular — comandos
   longos ou builds demorados às vezes derrubam a conexão. Prefira comandos
   que não dependam de sessão interativa prolongada quando possível, e
   documente progresso incremental.
+
+### Como o deploy funciona na prática
+- **O Claude não tem senha de sudo, então não roda Docker.** Todo build,
+  restart, migração e SQL no banco dependem do Rafael executar. Entregue o
+  comando pronto, numa linha, e diga exatamente o que ele faz.
+- **Conteúdo não precisa de deploy.** Escrever em `content/` ou nos JSON e
+  acionar `POST /api/admin/import` ou `/api/admin/conteudo/carregar` publica
+  sem rebuild. Só código exige build.
+- **Migração vem antes do rebuild.** O startup do backend **não roda alembic** —
+  o `init_db()` só faz `create_all`, que cria tabela nova mas **nunca adiciona
+  coluna em tabela existente**. Subir código que espera coluna nova sem migrar
+  quebra o backend. E como `migrations/versions` é bind mount, o container
+  em execução já enxerga a migração nova: dá para migrar antes de rebuildar.
+  Escreva migração **idempotente** (conferir a coluna no catálogo antes de
+  criar) — este banco já teve `alembic_version` fora de sincronia.
+- Quando o Caddyfile ou um volume mudar, o `caddy` também entra no rebuild.
+- Dá para testar muita coisa sem Docker: a API responde em
+  `https://meucardio.med.br/api`, e o login de admin sai de
+  `ADMIN_EMAIL`/`ADMIN_PASSWORD` do `.env`. Webhook do Stripe pode ser testado
+  assinando o payload com o `STRIPE_WEBHOOK_SECRET` (HMAC-SHA256 de
+  `timestamp.corpo`), que é exatamente o que o Stripe faz.
+- Para validar mermaid e a estrutura de árvore dos fluxogramas existem dois
+  scripts em `.claude/ferramentas/`. Precisam de `jsdom@24` (a versão nova não
+  roda no Node 18 do servidor). Renderização completa não funciona headless —
+  jsdom não implementa `getBBox`; `mermaid.parse()` é o que dá para validar.
 - Nunca reproduzir o incidente do item "O que já foi feito" nº 1: sempre
   `alembic upgrade head` de verdade, nunca `stamp` sozinho, exceto quando o
   schema real já foi confirmado como equivalente.
