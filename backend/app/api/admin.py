@@ -185,6 +185,7 @@ class PublicacaoConteudo(BaseModel):
     frente: str
     slugs: list[str] | None = None       # vazio = todos os elegíveis da frente
     somente_revisados: bool = True       # não publica o que ainda está pendente_revisao
+    publicar: bool = True                # false = tira do ar
 
 
 @router.post("/conteudo/publicar")
@@ -193,27 +194,41 @@ def publicar_conteudo(
     db: Session = Depends(get_db),
     user=Depends(require_admin),
 ):
+    """Publica ou despublica itens de uma frente.
+
+    Despublicar existe porque a verificação de conteúdo já publicado encontra
+    erro: um item que afirma a parede errada num ECG precisa sair do ar no
+    mesmo momento em que o erro é identificado, sem esperar deploy nem SQL
+    manual. Sem `slugs`, despublicar atingiria a frente inteira — por isso a
+    lista é obrigatória nesse sentido."""
     if dados.frente not in FRENTES:
         raise HTTPException(status_code=422, detail=f"Frente desconhecida: {dados.frente}")
+    if not dados.publicar and not dados.slugs:
+        raise HTTPException(
+            status_code=422,
+            detail="Para despublicar, informe os slugs — despublicar a frente inteira "
+                   "por engano tiraria todo o conteúdo do ar.",
+        )
 
     Modelo = _modelo(FRENTES[dados.frente][2])
-    query = db.query(Modelo).filter(Modelo.published.is_(False))
+    query = db.query(Modelo).filter(Modelo.published.is_(not dados.publicar))
     if dados.slugs:
         query = query.filter(Modelo.slug.in_(dados.slugs))
-    if dados.somente_revisados:
+    if dados.publicar and dados.somente_revisados:
         query = query.filter(Modelo.review_status == "revisado")
 
     itens = query.all()
     for item in itens:
-        item.published = True
+        item.published = dados.publicar
 
     db.add(AuditLog(
-        user_id=user.id, action="publicar", entity=dados.frente,
+        user_id=user.id, action="publicar" if dados.publicar else "despublicar",
+        entity=dados.frente,
         detail={"quantidade": len(itens), "slugs": [i.slug for i in itens]},
     ))
     db.commit()
-    return {"frente": dados.frente, "publicados": len(itens),
-            "slugs": [i.slug for i in itens]}
+    chave = "publicados" if dados.publicar else "despublicados"
+    return {"frente": dados.frente, chave: len(itens), "slugs": [i.slug for i in itens]}
 
 
 # --------------------------------------------------------------- usuários --
