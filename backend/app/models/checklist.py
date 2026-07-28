@@ -34,6 +34,10 @@ class DischargeChecklist(Base):
     source_refs: Mapped[list] = mapped_column(JSONB, default=list)
 
     review_status: Mapped[str] = mapped_column(String(30), default="pendente_revisao")
+    # Quem aprovou e quando, em texto. O `review_status` diz que houve revisão;
+    # este campo diz de quem foi — e num produto cuja responsabilidade clínica
+    # é de uma pessoa nomeada, isso não pode ficar só no log de auditoria.
+    revisao: Mapped[str | None] = mapped_column(Text, nullable=True)
     published: Mapped[bool] = mapped_column(Boolean, default=False, index=True)
 
     created_at: Mapped[datetime] = mapped_column(

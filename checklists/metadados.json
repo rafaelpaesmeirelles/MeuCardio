@@ -5,47 +5,97 @@
     "resumo": "O que não pode faltar na alta de uma internação por infarto ou angina instável, derivado da diretriz ESC 2023.",
     "documento_origem": "sindrome-coronariana-aguda-diagnostico-e-manejo-esc-2023",
     "theme": "Doença coronariana",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654"
     ],
     "itens": [
-      {"id": "sca-lipid", "categoria": "medicacao", "obrigatorio": true,
-       "texto": "Hipolipemiante intensificado ainda na internação índice, sem esperar o retorno ambulatorial",
-       "origem_secao": "Novidades de 2023 (Classe I)"},
-      {"id": "sca-dapt", "categoria": "medicacao", "obrigatorio": true,
-       "texto": "Dupla antiagregação definida, com a duração e o prazo de reavaliação anotados na alta",
-       "origem_secao": "Terapia antitrombótica"},
-      {"id": "sca-desescalada", "categoria": "medicacao", "obrigatorio": true,
-       "texto": "Registrado que não se desescalona a antiagregação nos primeiros 30 dias (Classe III)",
-       "origem_secao": "Terapia antitrombótica"},
-      {"id": "sca-bb", "categoria": "medicacao", "obrigatorio": false,
-       "texto": "Betabloqueador avaliado, considerando que o benefício depende da fração de ejeção",
-       "origem_secao": "Reabilitação e tratamento de longo prazo"},
-      {"id": "sca-ieca", "categoria": "medicacao", "obrigatorio": false,
-       "texto": "IECA ou BRA avaliado", "origem_secao": "Reabilitação e tratamento de longo prazo"},
-      {"id": "sca-sglt2", "categoria": "medicacao", "obrigatorio": false,
-       "texto": "Inibidor de SGLT2 avaliado, sobretudo se houver diabetes, doença renal ou disfunção ventricular",
-       "origem_secao": "Reabilitação e tratamento de longo prazo"},
-      {"id": "sca-glicemia", "categoria": "medicacao", "obrigatorio": false,
-       "texto": "Tratamento hipoglicemiante individualizado por comorbidade — única recomendação Classe I com nível A da diretriz",
-       "origem_secao": "Novidades de 2023"},
-      {"id": "sca-reab", "categoria": "encaminhamento", "obrigatorio": true,
-       "texto": "Encaminhamento a programa estruturado e multidisciplinar de reabilitação cardíaca baseado em exercício",
-       "origem_secao": "Reabilitação e tratamento de longo prazo"},
-      {"id": "sca-educacao", "categoria": "orientacao", "obrigatorio": true,
-       "texto": "Material educativo entregue por escrito e explicado verbalmente, com verificação de compreensão",
-       "origem_secao": "Cuidado centrado no paciente"},
-      {"id": "sca-neuro", "categoria": "seguimento", "obrigatorio": false,
-       "texto": "Se houve parada cardíaca com coma: avaliação de prognóstico neurológico feita a partir de 72 horas da admissão",
-       "origem_secao": "Novidades de 2023 (Classe I)"},
-      {"id": "sca-bav", "categoria": "seguimento", "obrigatorio": false,
-       "texto": "Se houve bloqueio atrioventricular de alto grau: respeitada a espera de 5 dias antes de indicar marca-passo permanente",
-       "origem_secao": "Novidades de 2023 (Classe I)"},
-      {"id": "sca-retorno", "categoria": "seguimento", "obrigatorio": true,
-       "texto": "Retorno agendado com data definida, e não apenas orientado",
-       "origem_secao": "Cuidado centrado no paciente"}
-    ]
+      {
+        "id": "sca-lipid",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Hipolipemiante intensificado ainda na internação índice, sem esperar o retorno ambulatorial",
+        "origem_secao": "Novidades de 2023 (Classe I)"
+      },
+      {
+        "id": "sca-dapt",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Dupla antiagregação definida, com a duração e o prazo de reavaliação anotados na alta",
+        "origem_secao": "Terapia antitrombótica"
+      },
+      {
+        "id": "sca-desescalada",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Registrado que não se desescalona a antiagregação nos primeiros 30 dias (Classe III)",
+        "origem_secao": "Terapia antitrombótica"
+      },
+      {
+        "id": "sca-bb",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Betabloqueador avaliado, considerando que o benefício depende da fração de ejeção",
+        "origem_secao": "Reabilitação e tratamento de longo prazo"
+      },
+      {
+        "id": "sca-ieca",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "IECA ou BRA avaliado",
+        "origem_secao": "Reabilitação e tratamento de longo prazo"
+      },
+      {
+        "id": "sca-sglt2",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Inibidor de SGLT2 avaliado, sobretudo se houver diabetes, doença renal ou disfunção ventricular",
+        "origem_secao": "Reabilitação e tratamento de longo prazo"
+      },
+      {
+        "id": "sca-glicemia",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Tratamento hipoglicemiante individualizado por comorbidade — única recomendação Classe I com nível A da diretriz",
+        "origem_secao": "Novidades de 2023"
+      },
+      {
+        "id": "sca-reab",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Encaminhamento a programa estruturado e multidisciplinar de reabilitação cardíaca baseado em exercício",
+        "origem_secao": "Reabilitação e tratamento de longo prazo"
+      },
+      {
+        "id": "sca-educacao",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Material educativo entregue por escrito e explicado verbalmente, com verificação de compreensão",
+        "origem_secao": "Cuidado centrado no paciente"
+      },
+      {
+        "id": "sca-neuro",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Se houve parada cardíaca com coma: avaliação de prognóstico neurológico feita a partir de 72 horas da admissão",
+        "origem_secao": "Novidades de 2023 (Classe I)"
+      },
+      {
+        "id": "sca-bav",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Se houve bloqueio atrioventricular de alto grau: respeitada a espera de 5 dias antes de indicar marca-passo permanente",
+        "origem_secao": "Novidades de 2023 (Classe I)"
+      },
+      {
+        "id": "sca-retorno",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Retorno agendado com data definida, e não apenas orientado",
+        "origem_secao": "Cuidado centrado no paciente"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) em 28/07/2026. Os itens derivam dos protocolos citados em source_refs, com a seção de origem registrada em cada item."
   },
   {
     "slug": "alta-pos-insuficiencia-cardiaca-descompensada",
@@ -53,47 +103,92 @@
     "resumo": "Os quatro pilares e a janela de seguimento que a evidência mostra ser decisiva nas primeiras seis semanas.",
     "documento_origem": "icfer-classificacao-diagnostico-quatro-pilares",
     "theme": "Insuficiência cardíaca",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726",
       "2023 Focused Update of the 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2023;44(37):3627-3639. DOI: 10.1093/eurheartj/ehad195",
       "Mebazaa A, Davison B, Chioncel O, et al. Safety, tolerability and efficacy of up-titration of guideline-directed medical therapies for acute heart failure (STRONG-HF). Lancet. 2022;400(10367):1938-1952. DOI: 10.1016/S0140-6736(22)02076-1. PMID: 36356631"
     ],
     "itens": [
-      {"id": "ic-sra", "categoria": "medicacao", "obrigatorio": true,
-       "texto": "Inibidor do sistema renina-angiotensina em uso — de preferência sacubitril-valsartana; IECA ou BRA quando o INRA não for possível",
-       "origem_secao": "Os quatro pilares"},
-      {"id": "ic-washout", "categoria": "medicacao", "obrigatorio": true,
-       "texto": "Se houve troca de IECA para sacubitril-valsartana: respeitado o intervalo de 36 horas sem IECA antes da primeira dose",
-       "origem_secao": "Os quatro pilares — risco de angioedema"},
-      {"id": "ic-bb", "categoria": "medicacao", "obrigatorio": true,
-       "texto": "Betabloqueador com evidência específica em ICFEr — bisoprolol, carvedilol, succinato de metoprolol ou nebivolol, e não qualquer betabloqueador",
-       "origem_secao": "Os quatro pilares"},
-      {"id": "ic-arm", "categoria": "medicacao", "obrigatorio": true,
-       "texto": "Antagonista do receptor mineralocorticoide em uso (espironolactona ou eplerenona)",
-       "origem_secao": "Os quatro pilares"},
-      {"id": "ic-sglt2", "categoria": "medicacao", "obrigatorio": true,
-       "texto": "Inibidor de SGLT2 em uso — o benefício independe da presença de diabetes",
-       "origem_secao": "Os quatro pilares"},
-      {"id": "ic-titulacao", "categoria": "medicacao", "obrigatorio": true,
-       "texto": "Titulação iniciada antes da alta, sem esperar o ambulatório para começar",
-       "origem_secao": "Atualização focada 2023 — STRONG-HF (Classe I)"},
-      {"id": "ic-ferro", "categoria": "medicacao", "obrigatorio": false,
-       "texto": "Deficiência de ferro pesquisada e, se presente, ferro endovenoso indicado",
-       "origem_secao": "Atualização focada 2023 (Classe I)"},
-      {"id": "ic-eletrolitos", "categoria": "seguimento", "obrigatorio": true,
-       "texto": "Função renal e potássio conferidos antes da alta, com plano de recontrole",
-       "origem_secao": "Os quatro pilares — o que este documento não substitui"},
-      {"id": "ic-seguimento", "categoria": "seguimento", "obrigatorio": true,
-       "texto": "Seguimento próximo e frequente programado para as primeiras 6 semanas após a alta",
-       "origem_secao": "Atualização focada 2023 — STRONG-HF (Classe I)"},
-      {"id": "ic-peso", "categoria": "orientacao", "obrigatorio": true,
-       "texto": "Paciente orientado a pesar-se diariamente e a procurar atendimento diante de ganho rápido de peso ou piora de dispneia",
-       "origem_secao": "derivado do manejo de congestão"},
-      {"id": "ic-dispositivo", "categoria": "encaminhamento", "obrigatorio": false,
-       "texto": "Indicação de dispositivo (CDI ou terapia de ressincronização) avaliada ou reavaliação programada após otimização clínica",
-       "origem_secao": "Dispositivos — critério resumido"}
-    ]
+      {
+        "id": "ic-sra",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Inibidor do sistema renina-angiotensina em uso — de preferência sacubitril-valsartana; IECA ou BRA quando o INRA não for possível",
+        "origem_secao": "Os quatro pilares"
+      },
+      {
+        "id": "ic-washout",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Se houve troca de IECA para sacubitril-valsartana: respeitado o intervalo de 36 horas sem IECA antes da primeira dose",
+        "origem_secao": "Os quatro pilares — risco de angioedema"
+      },
+      {
+        "id": "ic-bb",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Betabloqueador com evidência específica em ICFEr — bisoprolol, carvedilol, succinato de metoprolol ou nebivolol, e não qualquer betabloqueador",
+        "origem_secao": "Os quatro pilares"
+      },
+      {
+        "id": "ic-arm",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Antagonista do receptor mineralocorticoide em uso (espironolactona ou eplerenona)",
+        "origem_secao": "Os quatro pilares"
+      },
+      {
+        "id": "ic-sglt2",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Inibidor de SGLT2 em uso — o benefício independe da presença de diabetes",
+        "origem_secao": "Os quatro pilares"
+      },
+      {
+        "id": "ic-titulacao",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Titulação iniciada antes da alta, sem esperar o ambulatório para começar",
+        "origem_secao": "Atualização focada 2023 — STRONG-HF (Classe I)"
+      },
+      {
+        "id": "ic-ferro",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Deficiência de ferro pesquisada e, se presente, ferro endovenoso indicado",
+        "origem_secao": "Atualização focada 2023 (Classe I)"
+      },
+      {
+        "id": "ic-eletrolitos",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Função renal e potássio conferidos antes da alta, com plano de recontrole",
+        "origem_secao": "Os quatro pilares — o que este documento não substitui"
+      },
+      {
+        "id": "ic-seguimento",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Seguimento próximo e frequente programado para as primeiras 6 semanas após a alta",
+        "origem_secao": "Atualização focada 2023 — STRONG-HF (Classe I)"
+      },
+      {
+        "id": "ic-peso",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente orientado a pesar-se diariamente e a procurar atendimento diante de ganho rápido de peso ou piora de dispneia",
+        "origem_secao": "derivado do manejo de congestão"
+      },
+      {
+        "id": "ic-dispositivo",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Indicação de dispositivo (CDI ou terapia de ressincronização) avaliada ou reavaliação programada após otimização clínica",
+        "origem_secao": "Dispositivos — critério resumido"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) em 28/07/2026. Os itens derivam dos protocolos citados em source_refs, com a seção de origem registrada em cada item."
   },
   {
     "slug": "alta-pos-fibrilacao-atrial",
@@ -101,32 +196,61 @@
     "resumo": "Derivado do caminho AF-CARE da ESC 2024, que coloca comorbidade antes de qualquer decisão de ritmo.",
     "documento_origem": "fibrilacao-atrial-diagnostico-e-manejo-esc-2024-via-af-care",
     "theme": "Fibrilação atrial",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the EACTS. Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176. PMID: 39210723"
     ],
     "itens": [
-      {"id": "fa-comorbidade", "categoria": "orientacao", "obrigatorio": true,
-       "texto": "Comorbidades endereçadas como primeira etapa: hipertensão, obesidade, apneia do sono, diabetes, insuficiência cardíaca e uso de álcool",
-       "origem_secao": "Via central AF-CARE — etapa C"},
-      {"id": "fa-escore", "categoria": "medicacao", "obrigatorio": true,
-       "texto": "CHA₂DS₂-VA calculado e registrado — sem o ponto de sexo feminino do escore anterior",
-       "origem_secao": "Novo escore de risco tromboembólico"},
-      {"id": "fa-anticoag", "categoria": "medicacao", "obrigatorio": true,
-       "texto": "Decisão de anticoagular tomada pelo escore, e não pelo resultado de cardioversão ou ablação",
-       "origem_secao": "Via central AF-CARE — etapa A"},
-      {"id": "fa-interacoes", "categoria": "medicacao", "obrigatorio": false,
-       "texto": "Interações que reduzem a eficácia do anticoagulante revisadas na lista de medicamentos de alta",
-       "origem_secao": "Interações medicamentosas"},
-      {"id": "fa-ritmo", "categoria": "medicacao", "obrigatorio": true,
-       "texto": "Estratégia de frequência ou de ritmo definida e escrita, com o que fazer se os sintomas persistirem",
-       "origem_secao": "Via central AF-CARE — etapa R"},
-      {"id": "fa-reavaliacao", "categoria": "seguimento", "obrigatorio": true,
-       "texto": "Reavaliação programada — a etapa E do AF-CARE é parte do tratamento, não cortesia",
-       "origem_secao": "Via central AF-CARE — etapa E"},
-      {"id": "fa-cardioversao", "categoria": "seguimento", "obrigatorio": false,
-       "texto": "Se houve cardioversão: anticoagulação mantida pelo período devido, independentemente do sucesso do procedimento",
-       "origem_secao": "Cardioversão na FA aguda"}
-    ]
+      {
+        "id": "fa-comorbidade",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Comorbidades endereçadas como primeira etapa: hipertensão, obesidade, apneia do sono, diabetes, insuficiência cardíaca e uso de álcool",
+        "origem_secao": "Via central AF-CARE — etapa C"
+      },
+      {
+        "id": "fa-escore",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "CHA₂DS₂-VA calculado e registrado — sem o ponto de sexo feminino do escore anterior",
+        "origem_secao": "Novo escore de risco tromboembólico"
+      },
+      {
+        "id": "fa-anticoag",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Decisão de anticoagular tomada pelo escore, e não pelo resultado de cardioversão ou ablação",
+        "origem_secao": "Via central AF-CARE — etapa A"
+      },
+      {
+        "id": "fa-interacoes",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Interações que reduzem a eficácia do anticoagulante revisadas na lista de medicamentos de alta",
+        "origem_secao": "Interações medicamentosas"
+      },
+      {
+        "id": "fa-ritmo",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Estratégia de frequência ou de ritmo definida e escrita, com o que fazer se os sintomas persistirem",
+        "origem_secao": "Via central AF-CARE — etapa R"
+      },
+      {
+        "id": "fa-reavaliacao",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Reavaliação programada — a etapa E do AF-CARE é parte do tratamento, não cortesia",
+        "origem_secao": "Via central AF-CARE — etapa E"
+      },
+      {
+        "id": "fa-cardioversao",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Se houve cardioversão: anticoagulação mantida pelo período devido, independentemente do sucesso do procedimento",
+        "origem_secao": "Cardioversão na FA aguda"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) em 28/07/2026. Os itens derivam dos protocolos citados em source_refs, com a seção de origem registrada em cada item."
   }
 ]

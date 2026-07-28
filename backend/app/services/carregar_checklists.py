@@ -18,7 +18,7 @@ from app.models.checklist import DischargeChecklist
 # um campo novo no arquivo deve falhar em ser gravado, e não criar coluna
 # fantasma ou estourar erro no meio da carga das outras condições.
 CAMPOS = {"slug", "condicao", "resumo", "theme", "documento_origem",
-          "itens", "source_refs", "review_status"}
+          "itens", "source_refs", "review_status", "revisao"}
 
 
 def carregar(caminho_json: str) -> dict:
