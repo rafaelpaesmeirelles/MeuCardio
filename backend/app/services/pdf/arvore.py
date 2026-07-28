@@ -128,6 +128,20 @@ def montar(fonte: str) -> No | None:
 # ---------------------------------------------------------------------------
 
 def _medir(n: No, largura_max: float, corpo: float) -> None:
+    """Mede a caixa de um nó **pela forma que ele realmente tem**.
+
+    Retângulo é o caso fácil: largura do texto mais folga. As outras duas formas
+    perdem área útil onde o texto está, e ignorar isso foi o defeito relatado —
+    as frases não vazavam do retângulo envolvente, mas encostavam ou saíam da
+    silhueta desenhada:
+
+    - **Losango**: a largura disponível diminui conforme se afasta do centro
+      vertical. A primeira e a última linha caem justamente onde a forma já
+      estreitou, então a largura é calculada a partir da linha mais exigente,
+      cada uma medida na altura em que ela de fato fica.
+    - **Estádio**: as duas pontas são arredondadas. O texto precisa de folga
+      maior que a do retângulo para não encostar na curva.
+    """
     from .layout import quebrar
 
     # O `<br/>` do mermaid é quebra deliberada de quem escreveu o fluxograma,
@@ -139,14 +153,30 @@ def _medir(n: No, largura_max: float, corpo: float) -> None:
     for seg in segmentos or [""]:
         n.linhas.extend(quebrar(seg, largura_max - 20, corpo) or [""])
     n.linhas = n.linhas or [""]
-    larg_texto = max(largura_texto(l, corpo) for l in n.linhas)
-    n.largura = min(largura_max, larg_texto + 22)
-    n.altura = len(n.linhas) * corpo * 1.32 + 16
+
+    entrelinha = corpo * 1.32
+    larguras = [largura_texto(l, corpo) for l in n.linhas]
+    altura_texto = len(n.linhas) * entrelinha
+
     if n.forma == "decisao":
-        # O losango perde área útil nas quinas: o texto ocupa a faixa central,
-        # então a caixa precisa ser maior que o texto para caber sem invadir.
-        n.largura = min(largura_max * 1.35, n.largura * 1.5)
-        n.altura *= 1.45
+        n.altura = altura_texto * 1.45 + 26
+        # Para cada linha, a fração da largura total ainda disponível na altura
+        # em que ela cai. `1 - 2|dy|/H` é a meia-largura do losango naquele nível.
+        precisa = []
+        for i, larg in enumerate(larguras):
+            dy = altura_texto / 2 - (i + 0.5) * entrelinha
+            fracao = max(0.25, 1 - 2 * abs(dy) / n.altura)
+            precisa.append((larg + 14) / fracao)
+        n.largura = min(largura_max * 1.7, max(precisa))
+    elif n.forma == "conduta":
+        n.altura = altura_texto + 16
+        raio = min(n.altura / 2, 14)
+        # Folga = padding normal + o que as duas pontas arredondadas consomem.
+        n.largura = min(largura_max + 2 * raio, max(larguras) + 22 + 1.6 * raio)
+    else:
+        n.altura = altura_texto + 16
+        n.largura = min(largura_max, max(larguras) + 22)
+
     for _, f in n.filhos:
         _medir(f, largura_max, corpo)
 

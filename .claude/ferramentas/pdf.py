@@ -265,9 +265,14 @@ class PDF:
             return
         fonte = "FB" if negrito else ("FI" if italico else "F1")
         r, g, b = cor
-        tc = f"{espaco_extra:.2f} Tc " if espaco_extra else ""
+        # O `Tc` é SEMPRE emitido, inclusive zerado. Espaçamento de caractere é
+        # estado gráfico de texto e **não é reposto por `BT`/`ET`**: emitir só
+        # quando diferente de zero fazia um rótulo com espaçamento contaminar
+        # todo o texto seguinte da mesma página, que ficava mais largo do que a
+        # quebra de linha havia calculado e vazava para fora da margem.
         self._op(
-            f"BT {tc}/{fonte} {tamanho:.2f} Tf {r:.4f} {g:.4f} {b:.4f} rg "
+            f"BT {espaco_extra:.2f} Tc /{fonte} {tamanho:.2f} Tf "
+            f"{r:.4f} {g:.4f} {b:.4f} rg "
             f"{x:.2f} {y:.2f} Td ".encode() + _literal(conteudo) + b" Tj ET"
         )
 
