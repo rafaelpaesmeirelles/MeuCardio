@@ -4,7 +4,7 @@ slug: digoxina
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["Digoxina: Guia Completo para Uso na Insuficiência Cardíaca e Fibrilação Atrial · Resumos Medicina · 2025 · https://www.resumosmedicina.com.br/blog/digoxina-guia-completo-para-uso-na-insuficiencia-cardiaca-e-fibrilacao-atrial", "Digoxina na fibrilação atrial: remédio ou veneno? · Afya Cardiologia/PEBMED · 2018 · https://portal.afya.com.br/cardiologia/digoxina-na-fibrilacao-atrial-remedio-ou-veneno"]
+source_refs: ["Digoxin tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 5886e233-b2da-4acb-be05-9bf40fb8e7f4"]
 legacy_source: "medicamentos/banco-de-medicamentos-digoxina.md"
 ---
 
@@ -22,13 +22,12 @@ Inibe parcialmente a bomba de sódio-potássio (Na-K-ATPase) na membrana do card
 ## Dose
 - **manutencao adulto**: 0,125-0,250 mg/dia, individualizada
 - **ajuste populacoes especiais**: Reduzir em insuficiência renal e idosos (eliminação reduzida)
-- **fonte**: Guia Completo Digoxina — Resumos Medicina
-
 ## Monitorizacao niveis sericos
 - **faixa terapeutica alvo ic**: 0,5-0,8 ng/mL
 - **risco mortalidade acima**: ≥1,2 ng/mL — associado a aumento de mortalidade, deve ser evitado
+- **procedencia dos dois cortes**: VERIFICAÇÃO HUMANA NECESSÁRIA — a faixa-alvo de 0,5-0,8 ng/mL e o corte de 1,2 ng/mL vêm de análises post hoc do ensaio DIG e estavam apoiados aqui em material de estudante. Não consegui confirmar a referência do DIG no PubMed nesta sessão
 - **observacao**: Toxicidade pode ocorrer mesmo dentro da faixa terapêutica — diagnóstico deve combinar laboratório com avaliação clínica
-- **fonte**: Guia Completo Digoxina — Resumos Medicina
+- **fonte**: rótulo da digoxina aprovado pelo FDA (DailyMed)
 
 ## Indicacoes precisas
 ICFEr sintomática apesar de terapia otimizada (IECA/BRA/INRA + betabloqueador + antagonista mineralocorticoide + iSGLT2); ICFEr com FA concomitante (duplo benefício: força contrátil + controle de frequência); adjuvante ao betabloqueador quando este é insuficiente ou limitado por hipotensão no controle de FC em FA
@@ -40,11 +39,21 @@ Reduz hospitalizações por descompensação e melhora sintomas/classe funcional
 Eficácia reduzida durante esforço físico, pois seu mecanismo depende de estímulo vagal (inibido durante exercício) — mais adequada para pacientes sedentários; betabloqueadores/BCC não-diidropiridínicos são primeira linha para controle de FC na FA por serem mais eficazes ao esforço
 
 ## Contraindicacoes
-- Cardiomiopatia hipertrófica obstrutiva (agrava gradiente de via de saída do VE)
-- Síndromes de pré-excitação/WPW em FA (risco de FV)
-- BAV de alto grau (Mobitz II, 3º grau) ou bradicardia sinusal severa sem marca-passo
-- ICFEp (sem evidência de benefício)
-- Insuficiência renal crônica (risco elevado de acúmulo/intoxicação)
+O rótulo aprovado contraindica a digoxina em apenas duas situações:
+
+- Fibrilação ventricular
+- Hipersensibilidade conhecida à digoxina ou a outro digitálico
+
+**Insuficiência renal não é contraindicação — é ajuste de dose.** A versão anterior deste verbete a listava como proibição, o que nega uma terapia indicada a quem mais convive com fibrilação atrial e insuficiência cardíaca. O rótulo é explícito: a meia-vida se prolonga e o risco de toxicidade é alto **se a dose não for reduzida**, e é a redução que resolve. Da mesma forma, ICFEp não é contraindicação: ausência de evidência de benefício é motivo para não indicar, não para proibir — a distinção importa quando existe outra razão para usar o fármaco.
+
+## Cautelas do rotulo
+- Não recomendada no infarto agudo do miocárdio
+- Evitar na miocardite
+- Risco de arritmia ventricular durante cardioversão elétrica
+- Idade avançada, baixo peso, disfunção renal e distúrbio eletrolítico predispõem à toxicidade
+
+## Situacoes de cautela clinica reconhecida
+Cardiomiopatia hipertrófica obstrutiva (o inotropismo positivo agrava o gradiente da via de saída), pré-excitação/WPW com fibrilação atrial (risco de condução acelerada pela via acessória) e bloqueio atrioventricular de alto grau ou bradicardia sinusal grave sem marca-passo. VERIFICAÇÃO HUMANA NECESSÁRIA para o estatuto formal de cada uma — são cautelas consagradas na prática, mas não constam da seção de contraindicações do rótulo consultado.
 
 ## Interacoes criticas
 Amiodarona e verapamil aumentam níveis sanguíneos de digoxina, exigindo redução de dose e monitorização
@@ -53,4 +62,4 @@ Amiodarona e verapamil aumentam níveis sanguíneos de digoxina, exigindo reduç
 - **sintomas gi**: Náuseas, vômitos, perda de apetite (geralmente os primeiros sinais)
 - **sintomas neurologicos**: Fadiga, confusão, visão turva, halos coloridos, xantopsia (visão amarelada)
 - **manifestacoes cardiacas**: Bradicardias, bloqueios AV, arritmias ventriculares potencialmente fatais — qualquer nova arritmia em uso de digoxina deve levantar suspeita de intoxicação
-- **fonte**: Guia Completo Digoxina — Resumos Medicina
+- **fonte**: rótulo da digoxina aprovado pelo FDA (DailyMed) para o quadro de toxicidade
