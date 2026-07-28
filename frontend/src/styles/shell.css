@@ -323,3 +323,23 @@
 }
 .painel__tema:hover { border-color: var(--acento); text-decoration: none; }
 .painel__tema .dado { font-size: 0.75rem; color: var(--texto-secundario); }
+
+/* --- Minha conta: foto de perfil ------------------------------------------- */
+.conta__foto {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--borda);
+  flex-shrink: 0;
+}
+.conta__foto--vazia {
+  display: grid;
+  place-items: center;
+  background: var(--acento-tinta);
+  color: var(--primaria);
+  font-family: var(--fonte-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-color: var(--acento);
+}

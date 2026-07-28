@@ -26,6 +26,8 @@ class User(Base):
     council_number: Mapped[str | None] = mapped_column(String(30), nullable=True)
     council_state: Mapped[str | None] = mapped_column(String(2), nullable=True)  # UF, ex.: SP
     specialty: Mapped[str | None] = mapped_column(String(120), nullable=True)
+    rqe: Mapped[str | None] = mapped_column(String(40), nullable=True)  # registro de qualificação de especialista
+    photo_url: Mapped[str | None] = mapped_column(String(255), nullable=True)
     crm: Mapped[str | None] = mapped_column(String(40), nullable=True)  # mantido por compatibilidade
 
     # --- fila de aprovação -----------------------------------------------

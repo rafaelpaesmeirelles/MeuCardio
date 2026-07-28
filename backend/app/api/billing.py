@@ -130,6 +130,41 @@ def abrir_portal(db: Session = Depends(get_db), user: User = Depends(current_use
     return {"portal_url": session["url"]}
 
 
+@router.get("/faturas")
+def listar_faturas(db: Session = Depends(get_db), user: User = Depends(current_user)):
+    """Histórico de cobranças. Lê direto do Stripe em vez de espelhar faturas no
+    banco: o Stripe é a fonte da verdade sobre cobrança, e espelhar criaria uma
+    segunda versão que sai de sincronia no primeiro estorno ou ajuste."""
+    sub = db.query(Subscription).filter(Subscription.user_id == user.id).first()
+    if not sub or not sub.stripe_customer_id:
+        return {"faturas": []}
+
+    try:
+        faturas = stripe.Invoice.list(customer=sub.stripe_customer_id, limit=24)
+    except stripe.error.StripeError:
+        raise HTTPException(
+            status_code=503,
+            detail="Não foi possível consultar o histórico de cobranças agora.",
+        )
+
+    return {
+        "faturas": [
+            {
+                "id": f["id"],
+                "numero": f.get("number"),
+                "status": f.get("status"),
+                "total_centavos": f.get("total"),
+                "moeda": (f.get("currency") or "brl").upper(),
+                "criada_em": datetime.fromtimestamp(f["created"], tz=timezone.utc)
+                if f.get("created") else None,
+                "url_fatura": f.get("hosted_invoice_url"),
+                "url_pdf": f.get("invoice_pdf"),
+            }
+            for f in faturas.get("data", [])
+        ]
+    }
+
+
 @router.get("/status")
 def status_assinatura(db: Session = Depends(get_db), user: User = Depends(current_user)):
     sub = db.query(Subscription).filter(Subscription.user_id == user.id).first()

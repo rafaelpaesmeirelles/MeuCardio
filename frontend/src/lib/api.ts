@@ -33,7 +33,10 @@ async function request<T>(path: string, init: RequestInit = {}): Promise<T> {
   const headers = new Headers(init.headers);
   const t = token.get();
   if (t) headers.set("Authorization", `Bearer ${t}`);
-  if (init.body && !headers.has("Content-Type")) {
+  // FormData fica de fora: quem define o Content-Type dela é o browser, que
+  // precisa incluir o boundary do multipart. Forçar application/json aqui
+  // quebraria todo upload de arquivo.
+  if (init.body && !(init.body instanceof FormData) && !headers.has("Content-Type")) {
     headers.set("Content-Type", "application/json");
   }
 
@@ -68,6 +71,14 @@ export const api = {
     request<T>(p, { method: "PUT", body: JSON.stringify(body) }),
   delete: <T>(p: string) => request<T>(p, { method: "DELETE" }),
 
+  /** Envio de arquivo. Não define Content-Type de propósito: o browser precisa
+   *  gerar o boundary do multipart sozinho. */
+  upload: <T>(p: string, campo: string, arquivo: File) => {
+    const form = new FormData();
+    form.append(campo, arquivo);
+    return request<T>(p, { method: "POST", body: form });
+  },
+
   async login(email: string, password: string) {
     const form = new URLSearchParams({ username: email, password });
     const res = await fetch(`${BASE}/auth/login`, {
@@ -88,6 +99,8 @@ export type Usuario = {
   full_name: string;
   crm: string | null;
   role: string;
+  rqe: string | null;
+  photo_url: string | null;
   specialty: string | null;
   council: string | null;
   profession: string | null;

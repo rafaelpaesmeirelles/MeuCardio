@@ -13,6 +13,15 @@
 		header Cache-Control "public, max-age=2592000"
 	}
 
+	# Foto de perfil enviada pelo usuário. Volume somente-leitura aqui: quem
+	# grava é o backend. Cache curto porque a foto pode ser trocada — o nome do
+	# arquivo já muda a cada envio, mas o curto evita foto velha após remoção.
+	handle_path /fotos/* {
+		root * /uploads/fotos
+		file_server
+		header Cache-Control "public, max-age=300"
+	}
+
 	# PWA: arquivos estáticos, com fallback para index.html (rotas do React Router)
 	handle {
 		root * /site

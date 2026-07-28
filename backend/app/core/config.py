@@ -20,6 +20,10 @@ class Settings(BaseSettings):
     jwt_algorithm: str = "HS256"
     jwt_expire_minutes: int = 720
     content_dir: str = "/content"
+    # Volume gravável para arquivos enviados pelo usuário (hoje só foto de
+    # perfil). Fica fora do banco de propósito: binário em coluna infla dump e
+    # backup sem necessidade. O Caddy serve o mesmo volume em /fotos/*.
+    uploads_dir: str = "/uploads"
     admin_email: str = "admin@meucardio.local"
     admin_password: str = "troque-esta-senha"
     cors_origins: str = "http://localhost:5173,http://localhost:8080"

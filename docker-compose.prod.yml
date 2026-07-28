@@ -44,6 +44,9 @@ services:
       - ./evidencias:/evidencias:ro
       - ./estudos:/estudos:ro
       - ./backend/migrations/versions:/app/migrations/versions
+      # Único volume gravável pelo backend: arquivos enviados pelo usuário
+      # (foto de perfil). O Caddy monta o mesmo volume como somente-leitura.
+      - userfiles:/uploads
     command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --workers 2
     restart: unless-stopped
 
@@ -70,6 +73,7 @@ services:
       - ./infra/Caddyfile:/etc/caddy/Caddyfile:ro
       - sitefiles:/site:ro
       - ./galeria:/galeria:ro
+      - userfiles:/uploads:ro
       - caddy_data:/data
       - caddy_config:/config
     ports:
@@ -81,5 +85,6 @@ volumes:
   pgdata:
   redisdata:
   sitefiles:
+  userfiles:
   caddy_data:
   caddy_config:

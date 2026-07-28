@@ -1,10 +1,13 @@
+import secrets
 from datetime import date
+from pathlib import Path
 
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, File, HTTPException, UploadFile
 from fastapi.security import OAuth2PasswordRequestForm
 from pydantic import BaseModel, field_validator
 from sqlalchemy.orm import Session
 
+from app.core.config import settings
 from app.core.db import get_db
 from app.core.security import create_access_token, current_user, hash_password, verify_password
 from app.core.validators import UFS, cpf_valido, limpar_cpf
@@ -53,6 +56,8 @@ def _perfil(user: User) -> dict:
         "council": f"{user.council_name} {user.council_number}/{user.council_state}"
                    if user.council_name else None,
         "crm": user.crm,
+        "rqe": user.rqe,
+        "photo_url": user.photo_url,
         "profession": user.profession,
         "council_name": user.council_name,
         "council_number": user.council_number,
@@ -79,6 +84,7 @@ class DadosPessoais(BaseModel):
     council_number: str | None = None
     council_state: str | None = None
     specialty: str | None = None
+    rqe: str | None = None
 
     @field_validator("full_name")
     @classmethod
@@ -107,6 +113,71 @@ def atualizar_me(dados: DadosPessoais, db: Session = Depends(get_db),
     user.council_number = (dados.council_number or "").strip() or None
     user.council_state = dados.council_state
     user.specialty = (dados.specialty or "").strip() or None
+    user.rqe = (dados.rqe or "").strip() or None
+    db.commit()
+    db.refresh(user)
+    return _perfil(user)
+
+
+# --- foto de perfil --------------------------------------------------------
+# Validação por assinatura de arquivo (magic bytes), não por Content-Type nem
+# por extensão: os dois são informados pelo cliente e não provam nada sobre o
+# conteúdo. Sem dependência de biblioteca de imagem — só os bytes iniciais.
+ASSINATURAS = {
+    b"\xff\xd8\xff": ".jpg",
+    b"\x89PNG\r\n\x1a\n": ".png",
+}
+TAMANHO_MAXIMO = 3 * 1024 * 1024  # 3 MB
+
+
+def _extensao_valida(conteudo: bytes) -> str | None:
+    for assinatura, ext in ASSINATURAS.items():
+        if conteudo.startswith(assinatura):
+            return ext
+    # WEBP: "RIFF" nos 4 primeiros bytes e "WEBP" nos bytes 8-12.
+    if conteudo[:4] == b"RIFF" and conteudo[8:12] == b"WEBP":
+        return ".webp"
+    return None
+
+
+@router.post("/me/foto")
+async def enviar_foto(
+    arquivo: UploadFile = File(...),
+    db: Session = Depends(get_db),
+    user: User = Depends(current_user),
+):
+    conteudo = await arquivo.read(TAMANHO_MAXIMO + 1)
+    if len(conteudo) > TAMANHO_MAXIMO:
+        raise HTTPException(status_code=413, detail="A imagem precisa ter no máximo 3 MB.")
+    if not conteudo:
+        raise HTTPException(status_code=422, detail="Arquivo vazio.")
+
+    extensao = _extensao_valida(conteudo)
+    if extensao is None:
+        raise HTTPException(status_code=422, detail="Envie uma imagem JPEG, PNG ou WEBP.")
+
+    destino = Path(settings.uploads_dir) / "fotos"
+    destino.mkdir(parents=True, exist_ok=True)
+
+    # Nome derivado do id do usuário: um arquivo por pessoa, sem acumular lixo
+    # a cada troca. O sufixo aleatório force o cache do navegador a recarregar.
+    for antigo in destino.glob(f"{user.id}-*"):
+        antigo.unlink(missing_ok=True)
+    nome = f"{user.id}-{secrets.token_hex(4)}{extensao}"
+    (destino / nome).write_bytes(conteudo)
+
+    user.photo_url = f"/fotos/{nome}"
+    db.commit()
+    db.refresh(user)
+    return _perfil(user)
+
+
+@router.delete("/me/foto")
+def remover_foto(db: Session = Depends(get_db), user: User = Depends(current_user)):
+    destino = Path(settings.uploads_dir) / "fotos"
+    for antigo in destino.glob(f"{user.id}-*"):
+        antigo.unlink(missing_ok=True)
+    user.photo_url = None
     db.commit()
     db.refresh(user)
     return _perfil(user)
