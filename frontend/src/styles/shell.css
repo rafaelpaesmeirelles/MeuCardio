@@ -465,3 +465,46 @@
 }
 
 .curso__vinculos { max-width: 48rem; }
+
+/* ------------------------------------------------- indicadores pessoais */
+.indicadores__janela { display: flex; gap: 0.4rem; margin: 0.8rem 0 1.2rem; }
+
+.chip {
+  padding: 0.3rem 0.8rem; font-size: 0.85rem; cursor: pointer;
+  color: var(--texto-secundario); background: transparent;
+  border: 1px solid var(--line); border-radius: 999px;
+}
+.chip--ativo {
+  color: #fff; background: var(--acento); border-color: var(--acento); font-weight: 600;
+}
+
+.indicadores__grade {
+  display: grid; gap: 0.8rem;
+  grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+}
+
+.indicador {
+  display: flex; flex-direction: column; gap: 0.15rem;
+  padding: 0.9rem 1rem;
+  background: var(--superficie, #fff);
+  border: 1px solid var(--line); border-left: 3px solid var(--acento);
+  border-radius: 10px;
+}
+.indicador__valor { font-size: 1.5rem; font-weight: 700; color: var(--primaria); line-height: 1.1; }
+.indicador__rotulo { font-size: 0.82rem; color: var(--texto-secundario); }
+.indicador__detalhe { font-size: 0.74rem; color: var(--texto-secundario); font-style: italic; }
+
+.indicadores__distribuicoes {
+  display: grid; gap: 1.2rem; margin-top: 1.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+.distribuicao h4 { margin: 0 0 0.4rem; font-size: 0.9rem; color: var(--primaria); }
+.distribuicao__linha { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.3rem; }
+.distribuicao__nome { flex: 0 0 7rem; font-size: 0.82rem; }
+.distribuicao__barra { flex: 1; height: 0.5rem; background: var(--line); border-radius: 999px; overflow: hidden; }
+.distribuicao__barra > span { display: block; height: 100%; background: var(--acento); }
+
+/* As notas de cálculo não são rodapé decorativo: elas dizem o que cada número
+   inclui e exclui. Ficam legíveis, não em letra miúda. */
+.indicadores__notas { max-width: 58ch; font-size: 0.86rem; color: var(--texto-secundario); }
+.indicadores__notas li { margin-bottom: 0.35rem; }
