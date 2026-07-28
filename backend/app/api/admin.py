@@ -75,7 +75,12 @@ def revisar(
         raise HTTPException(status_code=404, detail="Documento não encontrado.")
 
     doc.published = decisao.publicar
-    doc.review_status = "revisado" if decisao.publicar else "pendente_revisao"
+    # Publicar não é revisar. Esta rota mexia no `review_status` junto, e como o
+    # importador se recusava a rebaixar um documento já "revisado", publicar
+    # carimbava a revisão de forma permanente e irreversível — 249/249
+    # documentos constavam revisados sem que ninguém os tivesse conferido.
+    # Quem decide o status de revisão é o front matter do arquivo, que é onde
+    # a conferência de fato acontece.
     doc.reviewed_by = user.id
     doc.reviewed_at = datetime.now(timezone.utc)
     db.add(AuditLog(

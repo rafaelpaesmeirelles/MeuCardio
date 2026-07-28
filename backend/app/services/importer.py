@@ -20,6 +20,7 @@ Só um administrador publica, pela rota de revisão. Reimportar preserva a decis
 de publicação já tomada por um humano.
 """
 
+import re
 from pathlib import Path
 
 import frontmatter
@@ -27,6 +28,58 @@ import frontmatter
 from app.core.config import settings
 from app.core.db import SessionLocal
 from app.models.content import Document, DocumentRevision
+
+
+# Fontes que não sustentam conteúdo clínico neste produto: site comercial de
+# bula, guia interno de outra instituição, wiki, material de estudante,
+# agregador e calculadora. A Fase B já removeu sete delas do acervo à mão; esta
+# lista existe para o importador reconhecer o resto sozinho.
+FONTES_FRACAS = (
+    "consultaremedios", "consulta remédios", "guiafarmaceutico", "hsl.org.br",
+    "sírio-libanês", "sirio-libanes", "health.ucsd.edu", "medscape", "mdcalc",
+    "drugs.com", "wikipedia", "wikipédia", "wikidoc", "sanarmed", "sanar",
+    "pebmed", "medicinanet", "tuasaude", "youtube", "empendium", "rdocumentation",
+    "doccheck", "flexikon",
+)
+
+# Marcadores de fonte primária: diretriz de sociedade ou artigo com
+# identificador persistente. Um DOI/PMID não prova que o artigo diz o que o
+# documento afirma — prova só que a referência existe e é rastreável, que é
+# exatamente o que este campo mede.
+#
+# O DOI vai por regex, não por substring: procurar `"10."` solto classificava
+# como primária qualquer referência cuja URL tivesse um `10.` no meio, e foi o
+# que aconteceu com um verbete apoiado só no NCBI Bookshelf.
+IDENTIFICADOR_PERSISTENTE = re.compile(r"\b10\.\d{4,9}/\S+|\bpmid[:\s]*\d{6,9}", re.I)
+
+MARCADORES_PRIMARIOS = (
+    "diretriz", "guideline", "consensus", "consenso", "statement",
+    "sociedade brasileira de cardiologia", "american college of",
+    "american heart association", "european society of cardiology",
+    "n engl j med", "lancet", "circulation", "jama", "eur heart j", "bmj",
+)
+
+MARCA_LACUNA = "VERIFICAÇÃO HUMANA NECESSÁRIA"
+
+
+def derivar_tier(refs: list[str]) -> str:
+    """Deriva `source_tier` das próprias referências.
+
+    Existe porque o campo era lido só do front matter, com padrão `sem_fonte`, e
+    **nenhum** dos arquivos o declara — então os 249 documentos entravam como
+    "sem fonte", inclusive os bem referenciados. A fila de revisão ordena por
+    tier, de modo que o defeito não deixava um dado errado à vista: deixava a
+    priorização inteira sem efeito, que é pior porque não parece quebrado.
+    """
+    if not refs:
+        return "sem_fonte"
+    texto = [r.lower() for r in refs]
+    if any(IDENTIFICADOR_PERSISTENTE.search(r) or any(m in r for m in MARCADORES_PRIMARIOS)
+           for r in texto):
+        return "A"
+    if all(any(f in r for f in FONTES_FRACAS) for r in texto):
+        return "C"
+    return "B"
 
 
 def _slugify(value: str) -> str:
@@ -102,13 +155,28 @@ def import_directory(path: str | None = None) -> dict:
                 doc.summary = meta.get("summary")
                 doc.tags = list(meta.get("tags") or [])
                 doc.source_refs = list(meta.get("source_refs") or [])
-                doc.source_tier = meta.get("source_tier", "sem_fonte")
-                doc.gaps = list(meta.get("gaps") or [])
+                # Declarado no arquivo vence; sem declaração, deriva das refs.
+                doc.source_tier = meta.get("source_tier") or derivar_tier(doc.source_refs)
+
+                lacunas = list(meta.get("gaps") or [])
+                # Quem escreve marca a incerteza no corpo, com o texto literal que o
+                # CLAUDE.md exige. Sem esta linha a marcação ficava só na prosa e não
+                # chegava a `com_lacuna_declarada`, ou seja, não entrava em fila
+                # nenhuma — some da revisão exatamente o que foi sinalizado.
+                if MARCA_LACUNA in body and MARCA_LACUNA not in lacunas:
+                    lacunas.append(MARCA_LACUNA)
+                doc.gaps = lacunas
                 doc.evidence_level = meta.get("evidence_level")
 
-                # A revisão humana manda: se já foi revisado, o importador não rebaixa.
-                if doc.review_status != "revisado":
-                    doc.review_status = meta.get("review_status", "pendente_revisao")
+                # O arquivo é a fonte da verdade do status de revisão, inclusive para
+                # rebaixar. Antes, o importador se recusava a mexer em qualquer
+                # documento já marcado `revisado` — e como a rota de publicação
+                # carimbava `revisado` ao publicar, bastava publicar para o status
+                # ficar preso em "revisado" para sempre. Resultado medido: 249/249
+                # documentos constavam revisados, com 159 arquivos dizendo
+                # `pendente_revisao`. O sistema afirmava ao assinante uma revisão
+                # que ninguém tinha feito.
+                doc.review_status = meta.get("review_status", "pendente_revisao")
 
                 # Commit por arquivo: um documento com problema não pode derrubar
                 # os outros 153 que estão corretos.
