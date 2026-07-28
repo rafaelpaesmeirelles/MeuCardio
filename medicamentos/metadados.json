@@ -116,7 +116,7 @@
   },
   {
     "slug": "alteplase",
-    "review_status": "revisado",
+    "review_status": "pendente_revisao",
     "generic_name": "Alteplase (ativador do plasminogênio tecidual recombinante, rt-PA)",
     "drug_class": "Trombolítico/fibrinolítico",
     "mechanism": "Ativa a conversão de plasminogênio em plasmina de forma seletiva na superfície da fibrina, promovendo a lise do trombo já formado",
@@ -184,7 +184,7 @@
   },
   {
     "slug": "anlodipino-besilato",
-    "review_status": "revisado",
+    "review_status": "pendente_revisao",
     "generic_name": "Anlodipino (besilato)",
     "drug_class": "Bloqueador de canal de cálcio diidropiridínico de longa duração",
     "mechanism": "Inibe o influxo transmembrana de íons cálcio para a musculatura lisa cardíaca e vascular; efeito anti-hipertensivo por relaxamento direto da musculatura vascular lisa (redução de pós-carga); efeito antianginoso por dupla ação — dilatação de arteríolas periféricas (reduz consumo de O2 miocárdico) e dilatação de artérias/arteríolas coronárias (aumenta liberação de O2, útil em angina de Prinzmetal/vasoespástica)",
@@ -390,7 +390,7 @@
   },
   {
     "slug": "verapamil-diltiazem",
-    "review_status": "revisado",
+    "review_status": "pendente_revisao",
     "generic_name": "Verapamil / Diltiazem",
     "drug_class": "Bloqueadores de canal de cálcio não-dihidropiridínicos",
     "mechanism": "Inibem influxo de cálcio em células musculares lisas vasculares E em tecido cardíaco (nó sinusal, nó AV, miocárdio), diferente dos dihidropiridínicos (anlodipino) que agem quase exclusivamente sobre vasculatura; efeito combinado: redução de FC, retardo de condução AV e depressão discreta de contratilidade",
@@ -520,7 +520,7 @@
   },
   {
     "slug": "bivalirudina",
-    "review_status": "revisado",
+    "review_status": "pendente_revisao",
     "generic_name": "Bivalirudina",
     "drug_class": "Anticoagulante inibidor direto da trombina, intravenoso",
     "mechanism": "Peptídeo sintético que se liga direta e especificamente tanto à trombina livre quanto à ligada ao coágulo (sítio catalítico e sítio de ligação ao substrato), inibindo a conversão de fibrinogênio em fibrina de forma reversível — não depende de antitrombina como cofator, ao contrário da heparina. Cerca de 80% de seu clearance ocorre por clivagem proteolítica (independente de órgão) e aproximadamente 20% por eliminação renal, resultando em meia-vida curta (cerca de 25 minutos) em pacientes com função renal normal - **fonte**: StatPearls",
@@ -606,7 +606,7 @@
   },
   {
     "slug": "cangrelor",
-    "review_status": "revisado",
+    "review_status": "pendente_revisao",
     "generic_name": "Cangrelor",
     "drug_class": "Antiplaquetário inibidor do receptor P2Y12, intravenoso",
     "mechanism": "Análogo de ATP que inibe direta e reversivelmente a ligação de ADP ao receptor P2Y12, de forma dose-dependente — início de ação imediato (dentro de 2 minutos) e término rápido de efeito (meia-vida plasmática de 3-6 minutos, com retorno da função plaquetária ao basal em cerca de 1 hora após suspensão), inativado por desfosforilação por ectonucleotidase. Diferente dos inibidores orais de P2Y12 (clopidogrel, prasugrel, ticagrelor), que têm início de ação mais lento e efeito mais prolongado",
@@ -828,7 +828,7 @@
   },
   {
     "slug": "colchicina",
-    "review_status": "revisado",
+    "review_status": "pendente_revisao",
     "generic_name": "Colchicina",
     "drug_class": "Anti-inflamatório de mecanismo não esteroidal (inibidor da polimerização de microtúbulos/função neutrofílica)",
     "mechanism": "Inibe a polimerização de tubulina em microtúbulos, interferindo na ativação, migração e função de neutrófilos e no inflamassoma NLRP3 — efeito anti-inflamatório distinto de AINEs e corticosteroides, relevante tanto na doença pericárdica quanto na aterosclerose (inflamação vascular)",
@@ -957,7 +957,7 @@
   },
   {
     "slug": "diltiazem-cloridrato",
-    "review_status": "revisado",
+    "review_status": "pendente_revisao",
     "generic_name": "Diltiazem (cloridrato)",
     "drug_class": "Bloqueador de canal de cálcio não-diidropiridínico (benzotiazepina), antiarrítmico classe IV",
     "mechanism": "Bloqueia canais de cálcio tipo L no músculo liso vascular e miocárdio, promovendo vasodilatação coronariana/sistêmica e redução da condução no nó AV; em doença isquêmica coronariana, reduz o produto frequência cardíaca x pressão arterial durante o exercício, aumentando a capacidade de exercício sem induzir aumento reflexo de FC (posição intermediária entre verapamil, com maior efeito na condução AV, e as diidropiridinas, com maior seletividade vascular)",
@@ -1038,7 +1038,7 @@
   },
   {
     "slug": "disopiramida",
-    "review_status": "revisado",
+    "review_status": "pendente_revisao",
     "generic_name": "Disopiramida",
     "drug_class": "Antiarrítmico classe Ia (classificação de Vaughan Williams), com efeito inotrópico negativo e ação anticolinérgica",
     "mechanism": "Bloqueio de canais de sódio associado a efeito inotrópico negativo direto sobre o miocárdio e ação anticolinérgica — no contexto da cardiomiopatia hipertrófica obstrutiva, o efeito inotrópico negativo reduz a contratilidade septal e, consequentemente, o grau de obstrução dinâmica da via de saída do ventrículo esquerdo - **fonte**: European Heart Journal — Cardiovascular Pharmacotherapy (revisão sistemática e metanálise)",
@@ -1049,7 +1049,8 @@
       "Prolonga o intervalo QT, aumentando o risco de arritmias — requer monitorização eletrocardiográfica. Efeitos colaterais anticolinérgicos gastrointestinais (boca seca, constipação, retenção urinária) são frequentes e podem limitar a tolerabilidade - **fonte**: European Heart Journal — Cardiovascular Pharmacotherapy (Awad K et al., 2025)"
     ],
     "dosing": {
-      "fonte": "European Heart Journal — Cardiovascular Pharmacotherapy (Awad K et al., 2025)"
+      "fonte": "European Heart Journal — Cardiovascular Pharmacotherapy (Awad K et al., 2025)",
+      "posologia": "VERIFICAÇÃO HUMANA NECESSÁRIA — **este verbete não tem posologia**. O campo existia apenas com a fonte, sem nenhuma dose, e ainda assim o registro estava marcado como revisado. Não prescrever por ele até que a posologia seja preenchida a partir da bula registrada na ANVISA ou de diretriz."
     },
     "notes": {
       "Eficacia": "Em metanálise de terapias farmacológicas para cardiomiopatia hipertrófica obstrutiva, a disopiramida apresentou a maior redução de gradiente de via de saída em repouso entre os agentes estudados: diferença média de -43,5 mmHg (IC95% -51,6 a -35,3; n=482). Para gradientes provocados, a redução também foi substancial: diferença média de -38,0 mmHg (IC95% -64,7 a -11,3; n=7, análise de sensibilidade excluindo estudos agudos) - **fonte**: European Heart Journal — Cardiovascular Pharmacotherapy (Awad K et al., 2025)"
@@ -1102,7 +1103,7 @@
   },
   {
     "slug": "dronedarona",
-    "review_status": "revisado",
+    "review_status": "pendente_revisao",
     "generic_name": "Dronedarona",
     "drug_class": "Antiarrítmico classe III (análogo não iodado da amiodarona)",
     "mechanism": "Bloqueia múltiplos canais iônicos (potássio, sódio, cálcio) e tem atividade antiadrenérgica, de forma semelhante à amiodarona, mas sem o átomo de iodo — desenhada para reduzir toxicidade tireoidiana e pulmonar associada à amiodarona, ao custo de eficácia antiarrítmica um pouco menor",
@@ -1123,7 +1124,10 @@
       "Rhythm- and Rate-Controlling Effects of Dronedarone in Patients With Atrial Fibrillation (from the ATHENA Trial) · ScienceDirect · https://www.sciencedirect.com/science/article/abs/pii/S000291491002552X",
       "Dronedarone in High-Risk Permanent Atrial Fibrillation (PALLAS) · New England Journal of Medicine · https://www.nejm.org/doi/full/10.1056/NEJMoa1109867",
       "Dronedarone · LiverTox (NCBI Bookshelf) · https://www.ncbi.nlm.nih.gov/books/NBK548208/"
-    ]
+    ],
+    "dosing": {
+      "posologia": "VERIFICAÇÃO HUMANA NECESSÁRIA — **este verbete não tem posologia**. O campo existia apenas com a fonte, sem nenhuma dose, e ainda assim o registro estava marcado como revisado. Não prescrever por ele até que a posologia seja preenchida a partir da bula registrada na ANVISA ou de diretriz."
+    }
   },
   {
     "slug": "edoxabana",
@@ -1170,7 +1174,7 @@
   },
   {
     "slug": "empagliflozina",
-    "review_status": "revisado",
+    "review_status": "pendente_revisao",
     "generic_name": "Empagliflozina",
     "drug_class": "Inibidor do cotransportador sódio-glicose tipo 2 (iSGLT2)",
     "mechanism": "Inibe o cotransportador SGLT2 nos túbulos renais proximais, reduzindo reabsorção de glicose e sódio, com natriurese osmótica e redução de pré-carga; benefício cardiovascular em insuficiência cardíaca parece independente do efeito glicêmico, de forma análoga à dapagliflozina",
@@ -1267,7 +1271,7 @@
   },
   {
     "slug": "epinefrina-adrenalina",
-    "review_status": "revisado",
+    "review_status": "pendente_revisao",
     "generic_name": "Epinefrina (adrenalina)",
     "drug_class": "Catecolamina agonista adrenérgico não seletivo (α1, α2, β1, β2)",
     "mechanism": "Agonismo α1-adrenérgico produz vasoconstrição periférica, elevando a pressão de perfusão coronariana durante reanimação cardiopulmonar. Agonismo β1-adrenérgico aumenta a contratilidade e a frequência cardíaca. Em doses de choque/parada, o efeito α1 vasoconstritor predomina como racional principal de uso na parada cardíaca",
@@ -1277,7 +1281,8 @@
       "Bradicardia sintomática refratária a atropina, como agente de segunda linha"
     ],
     "dosing": {
-      "fonte": "NEJM (PARAMEDIC2 — protocolo do ensaio)"
+      "fonte": "NEJM (PARAMEDIC2 — protocolo do ensaio)",
+      "posologia": "VERIFICAÇÃO HUMANA NECESSÁRIA — **este verbete não tem posologia**. O campo existia apenas com a fonte, sem nenhuma dose, e ainda assim o registro estava marcado como revisado. Não prescrever por ele até que a posologia seja preenchida a partir da bula registrada na ANVISA ou de diretriz."
     },
     "outcomes": {
       "Evidencia pivotal — PARAMEDIC2": "- **desenho**: ensaio randomizado, controlado por placebo, com 8.016 pacientes em parada cardiorrespiratória extra-hospitalar não responsiva à reanimação inicial, randomizados para adrenalina 1 mg intravenosa ou placebo - **resultado**: adrenalina aumentou significativamente o retorno da circulação espontânea (RCE) e a sobrevida em 30 dias/alta hospitalar comparada a placebo, porém sem diferença significativa em desfecho neurológico favorável na alta hospitalar (2,2% no grupo adrenalina vs. 1,9% no grupo placebo; razão de chances não ajustada 1,18; IC95% 0,86-1,61) - **fonte**: NEJM (PARAMEDIC2, Perkins et al. 2018)"
@@ -1525,7 +1530,7 @@
   },
   {
     "slug": "finerenona",
-    "review_status": "revisado",
+    "review_status": "pendente_revisao",
     "generic_name": "Finerenona",
     "drug_class": "Antagonista mineralocorticoide não esteroidal de terceira geração",
     "mechanism": "Bloqueia seletivamente o receptor mineralocorticoide, com maior seletividade e menor afinidade por receptores de andrógeno/progesterona que espironolactona; demonstra efeitos anti-inflamatórios e antifibróticos em modelos pré-clínicos de doença renal e cardiovascular, distintos do efeito primariamente diurético dos antagonistas esteroidais",
@@ -1553,7 +1558,7 @@
   },
   {
     "slug": "flecainida",
-    "review_status": "revisado",
+    "review_status": "pendente_revisao",
     "generic_name": "Flecainida (acetato de flecainida)",
     "drug_class": "Antiarrítmico classe IC (classificação de Vaughan Williams)",
     "mechanism": "Inibição potente do canal de sódio Nav1.5, responsável pelo influxo rápido de sódio na fase 0 do potencial de ação — reduz a velocidade de condução cardíaca sem prolongar significativamente a repolarização - **fonte**: Cardiology Journal (revisão sobre flecainida)",
@@ -1567,7 +1572,8 @@
       "Contraindicada em pacientes com doença cardíaca estrutural, incluindo doença arterial coronariana — o estudo CAST demonstrou aumento de mortalidade e morte súbita cardíaca no grupo flecainida em pacientes pós-infarto do miocárdio com arritmia ventricular assintomática ou pouco sintomática, levando às restrições atuais de uso apesar de segurança demonstrada em populações selecionadas sem cardiopatia estrutural - **fonte**: Cardiology Journal (revisão sobre flecainida, referência ao estudo CAST)"
     ],
     "dosing": {
-      "fonte": "Europace (utilização real da estratégia pill-in-the-pocket)"
+      "fonte": "Europace (utilização real da estratégia pill-in-the-pocket)",
+      "posologia": "VERIFICAÇÃO HUMANA NECESSÁRIA — **este verbete não tem posologia**. O campo existia apenas com a fonte, sem nenhuma dose, e ainda assim o registro estava marcado como revisado. Não prescrever por ele até que a posologia seja preenchida a partir da bula registrada na ANVISA ou de diretriz."
     },
     "notes": {
       "Outras contraindicacoes": "Doença hepática ou renal significativa - **fonte**: Cardiology Journal (revisão sobre flecainida)"
@@ -1579,7 +1585,7 @@
   },
   {
     "slug": "fondaparinux-sodico",
-    "review_status": "revisado",
+    "review_status": "pendente_revisao",
     "generic_name": "Fondaparinux (sódico)",
     "drug_class": "Anticoagulante parenteral — pentassacarídeo sintético, inibidor indireto seletivo do fator Xa",
     "mechanism": "Liga-se seletivamente à antitrombina, potencializando (~300x) a inibição natural do fator Xa; não inibe a trombina diretamente e não interage com o fator 4 plaquetário — praticamente sem risco de trombocitopenia induzida por heparina (HIT)",
@@ -1765,7 +1771,7 @@
   },
   {
     "slug": "idarucizumabe",
-    "review_status": "revisado",
+    "review_status": "pendente_revisao",
     "generic_name": "Idarucizumabe",
     "drug_class": "Agente reversor específico de anticoagulante — fragmento de anticorpo monoclonal humanizado",
     "mechanism": "Fragmento de anticorpo (Fab) com alta afinidade de ligação à dabigatrana, neutralizando diretamente sua atividade anticoagulante ao se ligar à molécula livre e à ligada à trombina, sem atividade agonista ou antagonista sobre outros alvos de coagulação - **fonte**: Frontiers in Neurology (revisão sobre idarucizumabe)",
@@ -1773,7 +1779,8 @@
       "Reversão do efeito anticoagulante da dabigatrana em pacientes com sangramento com risco de vida ou não controlado, ou que necessitem de cirurgia ou procedimento invasivo urgente"
     ],
     "dosing": {
-      "fonte": "Frontiers in Neurology (revisão sobre idarucizumabe)"
+      "fonte": "Frontiers in Neurology (revisão sobre idarucizumabe)",
+      "posologia": "VERIFICAÇÃO HUMANA NECESSÁRIA — **este verbete não tem posologia**. O campo existia apenas com a fonte, sem nenhuma dose, e ainda assim o registro estava marcado como revisado. Não prescrever por ele até que a posologia seja preenchida a partir da bula registrada na ANVISA ou de diretriz."
     },
     "outcomes": {
       "Evidencia pivotal — RE-VERSE AD": "Ensaio prospectivo, sem grupo controle, que avaliou idarucizumabe em pacientes em uso de dabigatrana com sangramento sério ou necessidade de procedimento urgente, demonstrando reversão completa e sustentada do efeito anticoagulante na grande maioria dos pacientes - **fonte**: Pollack CV Jr et al., NEJM 2017 (RE-VERSE AD — full cohort analysis)"
@@ -1788,7 +1795,7 @@
   },
   {
     "slug": "inclisirana",
-    "review_status": "revisado",
+    "review_status": "pendente_revisao",
     "generic_name": "Inclisirana",
     "drug_class": "RNA de interferência pequeno (siRNA) direcionado a PCSK9",
     "mechanism": "Conjugado a GalNAc, é captado seletivamente por hepatócitos via receptor de asialoglicoproteína, ativando o complexo RISC (RNA-induced silencing complex) e silenciando o RNAm de PCSK9 dentro do hepatócito, antes da síntese da proteína — mecanismo distinto dos anticorpos monoclonais anti-PCSK9 (evolocumabe/alirocumabe), que bloqueiam a proteína já circulante. Por atuar na síntese, o efeito de redução de LDL-C persiste muito além da meia-vida plasmática do fármaco",
@@ -1799,7 +1806,8 @@
     "dosing": {
       "eficacia": "redução de LDL-C de 49,9% a 52,2% no mês 17 comparado a placebo; redução de LDL-C time-adjusted entre os meses 3 e 18 de 49,2% a 53,8%",
       "sustentabilidade": "eficácia mantida por até 4 anos de seguimento com a dosagem semestral",
-      "fonte": "NEJM (ensaios ORION fase 3); The Lancet Diabetes & Endocrinology (ORION-3, extensão de 4 anos)"
+      "fonte": "NEJM (ensaios ORION fase 3); The Lancet Diabetes & Endocrinology (ORION-3, extensão de 4 anos)",
+      "posologia": "VERIFICAÇÃO HUMANA NECESSÁRIA — **este verbete não tem posologia**. O campo existia apenas com a fonte, sem nenhuma dose, e ainda assim o registro estava marcado como revisado. Não prescrever por ele até que a posologia seja preenchida a partir da bula registrada na ANVISA ou de diretriz."
     },
     "references": [
       "Two Phase 3 Trials of Inclisiran in Patients with Elevated LDL Cholesterol · New England Journal of Medicine · https://www.nejm.org/doi/full/10.1056/NEJMoa1912387",
@@ -1896,7 +1904,7 @@
   },
   {
     "slug": "levosimendana",
-    "review_status": "revisado",
+    "review_status": "pendente_revisao",
     "generic_name": "Levosimendana",
     "drug_class": "Sensibilizador de cálcio (inodilatador)",
     "mechanism": "Estabiliza o complexo cálcio-troponina C no miócito cardíaco, aumentando a contratilidade sem elevar o cálcio intracelular nem o consumo miocárdico de oxigênio; também abre canais de potássio dependentes de ATP, promovendo vasodilatação. Atua de forma independente do receptor beta-adrenérgico — mecanismo distinto de dobutamina (agonista beta) e de milrinona (inibidor de PDE3, também eleva cálcio intracelular)",
@@ -2006,7 +2014,7 @@
   },
   {
     "slug": "mavacamten",
-    "review_status": "revisado",
+    "review_status": "pendente_revisao",
     "generic_name": "Mavacamten",
     "drug_class": "Inibidor seletivo da miosina cardíaca (primeiro da classe)",
     "mechanism": "Inibe seletivamente a miosina cardíaca, reduzindo o número de pontes cruzadas actina-miosina em estado de ligação — diminui hipercontratilidade do sarcômero, característica fisiopatológica central da cardiomiopatia hipertrófica obstrutiva. Reduz o gradiente dinâmico na via de saída do VE (LVOT) sem atuar como inotrópico negativo convencional",
@@ -2037,7 +2045,7 @@
   },
   {
     "slug": "metformina-cloridrato",
-    "review_status": "revisado",
+    "review_status": "pendente_revisao",
     "generic_name": "Metformina (cloridrato)",
     "drug_class": "Biguanida — sensibilizador de insulina",
     "mechanism": "Reduz a produção hepática de glicose (gliconeogênese) e aumenta a sensibilidade periférica à insulina no músculo esquelético, com discreta redução de absorção intestinal de glicose; não estimula secreção pancreática de insulina, portanto não causa hipoglicemia em monoterapia",
@@ -2188,7 +2196,7 @@
   },
   {
     "slug": "milrinona",
-    "review_status": "revisado",
+    "review_status": "pendente_revisao",
     "generic_name": "Milrinona (lactato de milrinona)",
     "drug_class": "Inibidor da fosfodiesterase tipo 3 (inodilatador)",
     "mechanism": "Inibe a enzima PDE3, responsável pela degradação do AMPc em cardiomiócitos e músculo liso vascular; o acúmulo de AMPc aumenta a atividade da proteína quinase A, fosforilando canais de cálcio no retículo sarcoplasmático e aumentando a disponibilidade de cálcio no sarcômero — efeito inotrópico positivo. A maior recaptação de cálcio para o retículo sarcoplasmático também melhora o relaxamento miocárdico (efeito lusitrópico). Em vasos, causa vasodilatação (inodilatador), reduzindo pós-carga",
@@ -2448,7 +2456,7 @@
   },
   {
     "slug": "nitroprussiato-de-sodio",
-    "review_status": "revisado",
+    "review_status": "pendente_revisao",
     "generic_name": "Nitroprussiato de sódio",
     "drug_class": "Vasodilatador de ação direta (doador de óxido nítrico), arterial e venoso",
     "mechanism": "Libera óxido nítrico que ativa guanilato ciclase no músculo liso vascular, aumentando GMPc e promovendo vasodilatação arterial e venosa balanceada — reduz pré-carga e pós-carga simultaneamente",
@@ -2777,7 +2785,7 @@
   },
   {
     "slug": "protamina",
-    "review_status": "revisado",
+    "review_status": "pendente_revisao",
     "generic_name": "Protamina (sulfato de protamina)",
     "drug_class": "Agente reversor específico da heparina",
     "mechanism": "Proteína fortemente catiônica que se liga ionicamente à heparina (fortemente aniônica), dissociando o complexo heparina-antitrombina III e formando um complexo heparina-protamina inativo — a protamina tem maior afinidade pela heparina do que a antitrombina III, revertendo seu efeito anticoagulante - **fonte**: Annals of Cardiac Anaesthesia (revisão sobre interação protamina-heparina)",
@@ -2785,7 +2793,8 @@
       "Reversão do efeito anticoagulante da heparina não fracionada e, com eficácia parcial, de heparinas de baixo peso molecular — tipicamente durante ou após circulação extracorpórea em cirurgia cardíaca, ou em sangramento significativo associado a heparinização"
     ],
     "dosing": {
-      "fonte": "Annals of Cardiac Anaesthesia (revisão sobre interação protamina-heparina)"
+      "fonte": "Annals of Cardiac Anaesthesia (revisão sobre interação protamina-heparina)",
+      "posologia": "VERIFICAÇÃO HUMANA NECESSÁRIA — **este verbete não tem posologia**. O campo existia apenas com a fonte, sem nenhuma dose, e ainda assim o registro estava marcado como revisado. Não prescrever por ele até que a posologia seja preenchida a partir da bula registrada na ANVISA ou de diretriz."
     },
     "notes": {
       "Reacoes de hipersensibilidade": "Reações anafilactoides podem afetar até 1 em cada 10 pacientes. Fatores de risco incluem alergia a proteína de peixe, diabetes insulino-dependente (particularmente uso de insulina protamina neutra de Hagedorn — NPH — ou insulina zinco-protamina humana recombinante), exposição prévia à protamina, e história de vasectomia. Manifestações variam de urticária e angioedema a choque vasodilatador, disfunção cardiopulmonar aguda, hipertensão pulmonar aguda e bradicardia - **fonte**: Annals of Cardiac Anaesthesia (revisão sobre interação protamina-heparina)",
@@ -2846,7 +2855,7 @@
   },
   {
     "slug": "ranolazina",
-    "review_status": "revisado",
+    "review_status": "pendente_revisao",
     "generic_name": "Ranolazina",
     "drug_class": "Antianginoso de mecanismo não hemodinâmico (inibidor da corrente tardia de sódio)",
     "mechanism": "Inibe a corrente tardia de sódio (late INa) nos miócitos, reduzindo sobrecarga intracelular de cálcio e tensão de parede miocárdica — reduz isquemia sem efeito significativo sobre frequência cardíaca ou pressão arterial, diferente de beta-bloqueadores, antagonistas de canal de cálcio e nitratos",
@@ -3178,7 +3187,7 @@
   },
   {
     "slug": "tafamidis",
-    "review_status": "revisado",
+    "review_status": "pendente_revisao",
     "generic_name": "Tafamidis (meglumina ou ácido livre)",
     "drug_class": "Estabilizador de transtirretina (TTR)",
     "mechanism": "Liga-se ao sítio de ligação da tiroxina na transtirretina, estabilizando sua estrutura tetramérica e prevenindo a dissociação em monômeros que se agregam como fibrilas amiloides — mecanismo que retarda a progressão da deposição amiloide no miocárdio, distinto de tratamento sintomático de insuficiência cardíaca",
@@ -3247,7 +3256,7 @@
   },
   {
     "slug": "tenecteplase",
-    "review_status": "revisado",
+    "review_status": "pendente_revisao",
     "generic_name": "Tenecteplase (TNK-tPA)",
     "drug_class": "Trombolítico/fibrinolítico — variante geneticamente modificada do ativador do plasminogênio tecidual (alteplase)",
     "mechanism": "Converte plasminogênio em plasmina de forma seletiva na superfície da fibrina — apresenta especificidade por fibrina cerca de 15 vezes maior que a alteplase, o que reduz a ativação sistêmica de plasminogênio e a degradação de fibrinogênio circulante, diminuindo teoricamente o risco de sangramento sistêmico comparado à molécula original",
@@ -3493,7 +3502,7 @@
   },
   {
     "slug": "vasopressina",
-    "review_status": "revisado",
+    "review_status": "pendente_revisao",
     "generic_name": "Vasopressina (hormônio antidiurético, arginina-vasopressina)",
     "drug_class": "Vasopressor não catecolaminérgico",
     "mechanism": "Atua em três subtipos de receptores: V1 no músculo liso vascular, mediando vasoconstrição; V2 nos ductos coletores renais, mediando efeito antidiurético; e V3 (V1b) na hipófise anterior, estimulando liberação de ACTH e cortisol. Potencializa a resposta vascular às catecolaminas e pode bloquear canais de potássio sensíveis a ATP, amplificando o efeito adrenérgico em estados de choque - **fonte**: Journal of Personalized Medicine (revisão sobre vasopressina em choque)",
@@ -3501,7 +3510,8 @@
       "Vasopressor de segunda linha no choque séptico refratário a noradrenalina, como agente poupador de catecolamina — diretrizes da Surviving Sepsis Campaign 2021 sugerem seu início precoce em vez de aguardar choque francamente refratário, tipicamente quando a dose de noradrenalina se aproxima de 0,25 mcg/kg/min - **fonte**: Journal of Personalized Medicine (revisão sobre vasopressina em choque)"
     ],
     "dosing": {
-      "fonte": "N Engl J Med (VASST); JAMA (VANISH)"
+      "fonte": "N Engl J Med (VASST); JAMA (VANISH)",
+      "posologia": "VERIFICAÇÃO HUMANA NECESSÁRIA — **este verbete não tem posologia**. O campo existia apenas com a fonte, sem nenhuma dose, e ainda assim o registro estava marcado como revisado. Não prescrever por ele até que a posologia seja preenchida a partir da bula registrada na ANVISA ou de diretriz."
     },
     "outcomes": {
       "Evidencia pivotal — VASST": "- **desenho**: comparação randomizada entre vasopressina em baixa dose associada a noradrenalina aberta versus noradrenalina isolada, em pacientes com choque séptico - **resultado**: mortalidade em 28 dias de 35,4% no grupo vasopressina versus 39,3% no grupo controle (diferença não estatisticamente significativa); em subgrupo com dose basal de noradrenalina mais baixa (≤14 mcg/min), vasopressina associou-se a redução de mortalidade de quase 10% - **fonte**: N Engl J Med (VASST)",
@@ -3558,7 +3568,7 @@
   },
   {
     "slug": "vericiguate",
-    "review_status": "revisado",
+    "review_status": "pendente_revisao",
     "generic_name": "Vericiguate",
     "drug_class": "Estimulador da guanilato ciclase solúvel (sGC)",
     "mechanism": "Na IC, há disfunção do eixo óxido nítrico-GCs-GMPc. Vericiguate estimula diretamente a guanilato ciclase solúvel e potencializa o efeito do óxido nítrico endógeno, aumentando GMPc — resulta em redução do remodelamento de VE, melhora de função vascular e diastólica, e redução de fibrose e inflamação. Mecanismo distinto dos demais pilares farmacológicos da ICFEr (não é IECA/BRA/INRA, beta-bloqueador, antagonista mineralocorticoide nem iSGLT2)",
