@@ -338,15 +338,16 @@
     "dosing": {
       "inicial usual": "10 mg 1x/dia",
       "sca alto risco": "Até 80 mg/dia, individualizada conforme meta de LDL-C",
-      "pediatria 10 17 anos": "20 mg/dia (dose máxima)",
+      "pediatria 10 17 anos": "Hipercolesterolemia familiar heterozigótica, dos 10 aos 17 anos (meninas pós-menarca e meninos): **dose inicial de 10 mg/dia e dose máxima de 20 mg/dia**. A bula brasileira explicita o motivo do teto, que é o que muda a leitura: **doses acima de 20 mg não foram estudadas nessa população** — o limite é ausência de dado, não toxicidade demonstrada.\n\nCoerente com o registro das apresentações: **10 mg e 20 mg são de uso adulto e pediátrico acima de 10 anos; 40 mg e 80 mg são de uso adulto**.",
       "via administracao": "Via oral, pode ser tomada em qualquer horário do dia, independente de refeições",
-      "fonte": "rótulo da atorvastatina aprovado pelo FDA (DailyMed). VERIFICAÇÃO HUMANA NECESSÁRIA para a dose pediátrica de 20 mg/dia como máximo, que deve ser conferida contra a bula registrada na ANVISA"
+      "fonte": "Bula profissional brasileira, conferida na íntegra. A dose pediátrica máxima de 20 mg/dia, que estava marcada para conferência, **está confirmada**."
     },
     "outcomes": {
       "Evidencia pivotal": "Sustentada por múltiplos ensaios marco: ASCOT-LLA (prevenção primária em hipertensos), CARDS (prevenção primária em diabéticos), TNT (dose alta vs. moderada em DAC estável), SPARCL (prevenção secundária pós-AVC) e PROVE-IT (dose alta precoce em SCA)"
     },
     "references": [
-      "Atorvastatin calcium tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 86841382-4229-4e03-958e-3ac22639efd4"
+      "Atorvastatin calcium tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 86841382-4229-4e03-958e-3ac22639efd4",
+      "Bula profissional de CITALOR (atorvastatina cálcica), Viatris Farmacêutica do Brasil Ltda. — seções de identificação, indicações e posologia. Documento obtido no site do detentor do registro."
     ]
   },
   {
@@ -2115,7 +2116,8 @@
     "drug_class": "Betabloqueador cardiosseletivo beta-1, de segunda geração, sem atividade simpaticomimética intrínseca",
     "mechanism": "Bloqueio competitivo e reversível de receptores beta-1 adrenérgicos cardíacos, com seletividade beta1:beta2 de 10 a 20 vezes, reduzindo frequência cardíaca, contratilidade, condução atrioventricular e liberação de renina. Metabolismo hepático via CYP2D6: metabolizadores lentos, 5 a 10% da população, atingem níveis plasmáticos várias vezes maiores. A lipofilia explica a penetração no sistema nervoso central e os efeitos de insônia e pesadelos.",
     "presentations": [
-      "Comprimidos de liberação prolongada de 25, 50, 100 e 200 mg (succinato); comprimidos de liberação imediata e solução injetável (tartarato). VERIFICAÇÃO HUMANA NECESSÁRIA para as apresentações efetivamente registradas no Brasil, que devem ser conferidas na bula registrada na ANVISA — a lista acima segue a rotulagem norte-americana."
+      "**Succinato (liberação controlada, SELOZOK)** — comprimidos revestidos de **25 mg, 50 mg e 100 mg**, conferidos na bula brasileira. **Não existe comprimido de 200 mg no Brasil**: a lista anterior trazia 200 mg por seguir a rotulagem norte-americana. A confusão tem origem previsível — 200 mg **é** uma dose prevista na bula (100-200 mg uma vez ao dia em hipertensão e em angina), mas alcançada por combinação de comprimidos, não por uma apresentação de 200 mg. Cada comprimido declara a equivalência: 23,75 mg de succinato = 25 mg de tartarato; 47,5 mg = 50 mg; 95 mg = 100 mg.",
+      "**Tartarato (liberação imediata e injetável)** — VERIFICAÇÃO HUMANA NECESSÁRIA para as apresentações de tartarato efetivamente registradas no Brasil, que não foram conferidas nesta rodada. A conferência acima cobre apenas o succinato."
     ],
     "renal_adjustment": "Não é necessário ajuste. Em hemodiálise, administrar a dose de manutenção após a sessão.",
     "hepatic_adjustment": "Normalmente dispensável na cirrose; considerar redução quando houver comprometimento hepático grave.",
@@ -2163,7 +2165,8 @@
       "Yndigegn T, Lindahl B, Mars K, et al. Beta-blockers after myocardial infarction and preserved ejection fraction (REDUCE-AMI). N Engl J Med. 2024;390(15):1372-1381. DOI: 10.1056/NEJMoa2401479. PMID: 38587241",
       "Kristensen AMD, Rossello X, Atar D, et al; Beta-Blocker Trialists' Collaboration. Beta-blockers after myocardial infarction with normal ejection fraction. N Engl J Med. 2026;394(6):540-550 (publicado on-line em 9 de novembro de 2025). DOI: 10.1056/NEJMoa2512686. PMID: 41211954",
       "Metoprolol succinate extended-release tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 76c69d7c-e90c-4f96-a45b-e9dad9444263",
-      "Kristensen AMD, Rossello X, Atar D, et al.; Beta-Blocker Trialists' Collaboration. Beta-Blockers after Myocardial Infarction with Normal Ejection Fraction. N Engl J Med. 2026;394(6):540-550. DOI: 10.1056/NEJMoa2512686. PMID: 41211954"
+      "Kristensen AMD, Rossello X, Atar D, et al.; Beta-Blocker Trialists' Collaboration. Beta-Blockers after Myocardial Infarction with Normal Ejection Fraction. N Engl J Med. 2026;394(6):540-550. DOI: 10.1056/NEJMoa2512686. PMID: 41211954",
+      "Bula de SELOZOK (succinato de metoprolol), AstraZeneca do Brasil Ltda. — seção Apresentações e Composição. Documento obtido no site do detentor do registro."
     ]
   },
   {

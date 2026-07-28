@@ -66,30 +66,50 @@ def _decodificar(bruto, cmap):
 
 
 def _strings(conteudo, cmaps, fontes):
-    """Percorre o fluxo juntando os operadores de texto na ordem em que saem."""
-    saida, atual = [], None
-    for m in re.finditer(
-            rb"/([A-Za-z0-9_.+-]+)\s+[\d.]+\s+Tf|\((?:\\.|[^\\()])*\)|<([0-9A-Fa-f\s]+)>"
-            rb"|\bT[Jj]\b|\bTd\b|\bTD\b|\bT\*\b|\bTm\b|'|\"", conteudo, re.S):
+    """Percorre o fluxo juntando os operadores de texto na ordem em que saem.
+
+    A quebra de linha vem da **mudança de Y**, não da presença de um operador de
+    posicionamento. Bula costuma ser composta glifo a glifo, cada um com seu
+    próprio Td: quebrar em todo Td transformava "SELOZOK" em "S E L O Z O K".
+    """
+    saida, atual, y, x = [], None, None, None
+    padrao = re.compile(
+        rb"/([A-Za-z0-9_.+-]+)\s+[\d.]+\s+Tf"
+        rb"|\((?:\\.|[^\\()])*\)"
+        rb"|<([0-9A-Fa-f\s]+)>"
+        rb"|([-\d.]+)\s+([-\d.]+)\s+(?:Td|TD)\b"
+        rb"|([-\d.]+)\s+([-\d.]+)\s+(?:Tm)\b"
+        rb"|\bT\*\b|'|\"", re.S)
+    for m in padrao.finditer(conteudo):
         txt = m.group(0)
         if txt.endswith(b"Tf"):
             atual = cmaps.get(fontes.get(m.group(1)))
         elif txt.startswith(b"("):
             corpo = txt[1:-1]
             corpo = re.sub(rb"\\([nrtbf()\\])",
-                           lambda x: {b"n": b"\n", b"r": b"\r", b"t": b"\t",
+                           lambda z: {b"n": b"\n", b"r": b"\r", b"t": b"\t",
                                       b"b": b"", b"f": b"", b"(": b"(", b")": b")",
-                                      b"\\": b"\\"}[x.group(1)], corpo)
+                                      b"\\": b"\\"}[z.group(1)], corpo)
             corpo = re.sub(rb"\\([0-7]{1,3})",
-                           lambda x: bytes([int(x.group(1), 8) & 0xFF]), corpo)
+                           lambda z: bytes([int(z.group(1), 8) & 0xFF]), corpo)
             saida.append(_decodificar(corpo, atual))
         elif txt.startswith(b"<") and m.group(2):
             hexa = re.sub(rb"\s", b"", m.group(2))
             if len(hexa) % 2:
                 hexa += b"0"
             saida.append(_decodificar(bytes.fromhex(hexa.decode()), atual))
-        elif txt in (b"Td", b"TD", b"T*", b"Tm", b"'", b'"'):
+        elif txt.endswith(b"*") or txt in (b"'", b'"'):
             saida.append("\n")
+        else:
+            nx, ny = (m.group(3), m.group(4)) if m.group(3) else (m.group(5), m.group(6))
+            nx, ny = float(nx), float(ny)
+            if y is not None and abs(ny - y) > 0.9:
+                saida.append("\n")
+            elif x is not None and nx - x > 1.2:
+                saida.append(" ")
+            # Td é relativo e Tm absoluto; para decidir quebra de linha, o que
+            # importa é ter mudado de altura, e ambos revelam isso.
+            y, x = ny, nx
     return "".join(saida)
 
 
@@ -118,7 +138,29 @@ def texto(caminho):
             partes.append(_strings(d, cmaps, fontes))
     t = "\n".join(partes)
     t = re.sub(r"[ \t]+", " ", t)
-    return re.sub(r"\n{3,}", "\n\n", t)
+    t = re.sub(r"\n{3,}", "\n\n", t)
+    _avisar_se_ilegivel(t)
+    return t
+
+
+PALAVRAS = ("de ", "da ", "do ", "com", "para", "que", "não", " mg", "em ",
+            "uma", "por", "ção", "dose")
+
+
+def _avisar_se_ilegivel(t):
+    """Avisa quando o texto saiu ilegível, em vez de tentar adivinhar.
+
+    Há PDFs cuja fonte é subconjunto com codificação própria e sem /ToUnicode:
+    não existe no arquivo o mapa que traduziria os códigos, e o texto sai
+    embaralhado. Houve aqui uma tentativa de descobrir o deslocamento por
+    tentativa e erro, pontuando qual candidato parecia mais português — **foi
+    removida de propósito**. Um extrator que adivinha produz texto plausível e
+    errado, que é o pior resultado possível para dose e valor de referência.
+    Quando isto dispara, o certo é buscar o documento em outra fonte.
+    """
+    if len(t) > 500 and sum(t.lower().count(w) for w in PALAVRAS) < len(t) / 400:
+        print("AVISO: texto ilegivel — fonte sem /ToUnicode. Use outra fonte para "
+              "este documento; nao confie no que saiu.", file=sys.stderr)
 
 
 if __name__ == "__main__":
