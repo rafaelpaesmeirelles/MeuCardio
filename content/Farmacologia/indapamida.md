@@ -4,7 +4,7 @@ slug: indapamida
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["INDAPAMIDA — Nova Literatura · Purifarma · http://purifarma.com.br/Arquivos/Produto/INDAPAMIDA_Nova%20Literatura.pdf", "Lozol/Indapamide — bula FDA/DailyMed (múltiplas versões consultadas)", "Indapamide — Drugs.com Monograph e Prescribing Information"]
+source_refs: ["Indapamide — rótulo aprovado pelo FDA, DailyMed SPL setid 59cd3331-7afe-432a-8b50-39533fd5f392", "INDAPAMIDA — Nova Literatura · Purifarma · http://purifarma.com.br/Arquivos/Produto/INDAPAMIDA_Nova%20Literatura.pdf", "Lozol/Indapamide — bula FDA/DailyMed (múltiplas versões consultadas)"]
 legacy_source: "medicamentos/banco-de-medicamentos-indapamida.md"
 ---
 
@@ -28,7 +28,7 @@ Absorção rápida no trato GI; fixação na parede vascular pela natureza lipof
 - **particularidade titulacao**: Aumento da dose não resulta em maior ação anti-hipertensiva — apenas aumenta ação diurética e efeitos colaterais, sem benefício pressórico adicional
 - **Ajuste renal**: mantém efeito mesmo em TFG < 30 mL/min/1,73m² (diferente dos tiazídicos clássicos, que perdem eficácia nessa faixa) — mas depleção de volume pode agravar azotemia em quem já tem insuficiência renal
 - **Ajuste hepático**: usar com cautela e iniciar com dose baixa em hepatopata — distúrbio hidroeletrolítico pode precipitar coma hepático em doença hepática avançada
-- **fonte**: Purifarma — Nova Literatura; bula FDA/DailyMed (Lozol); Drugs.com
+- **fonte**: rótulo aprovado pelo FDA (DailyMed), setid 59cd3331-7afe-432a-8b50-39533fd5f392
 
 ## Indicacoes
 Hipertensão arterial sistêmica (todos os tipos)

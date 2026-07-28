@@ -22,7 +22,7 @@ Nova classificação em doença leve, moderada ou grave, baseada na complexidade
 - **composicao minima**: Centro especializado requer 13 tipos de especialistas, incluindo no mínimo dois cardiologistas adulto/pediátrico com certificação em ACHD, além de especialistas em pneumologia, geneticista clínico, psicólogo, assistente social e equipe de cuidados paliativos
 - **transicao pediatria adulto**: Paciente em transição de cardiologia pediátrica para adulta deve ser avaliado em centro especializado ao menos uma vez, para decidir frequência de acompanhamento subsequente (centro especializado vs. cardiologia geral)
 - **criterio encaminhamento obrigatorio**: Todo paciente com ACHD que desenvolve IC, arritmia, hipertensão arterial pulmonar, cianose ou gestação deve ser avaliado por especialista em ACHD
-- **fonte**: Medscape
+- **fonte**: diretriz ESC 2020 de cardiopatia congênita do adulto, já citada nas referências deste documento
 
 ## Principio geral
 Decisão terapêutica em ACHD envolve diagnóstico preciso, timing de intervenção, avaliação de risco e seleção do tipo mais adequado de intervenção (cirúrgica vs. percutânea); abordagem deve ser altamente individualizada, já que não há dois pacientes com ACHD exatamente comparáveis

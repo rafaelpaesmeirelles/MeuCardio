@@ -35,7 +35,7 @@ Recomendação reforçada de início imediato de estatina de alta intensidade, n
 - **hiv**: Estatina recomendada a partir dos 40 anos independentemente do LDL-C
 - **anticiclina**: Estatina recomendada em pacientes de alto risco em tratamento com antraciclina
 - **risco extremo**: Novo alvo de LDL-C de 40 mg/dL (aproximadamente 1,0 mmol/L) considerado para pacientes de risco extremo, com papel reforçado para imagem na avaliação
-- **fonte**: Medscape
+- **fonte**: diretriz de dislipidemia já citada nas referências deste documento
 
 ## Suplementos vitaminas
 Uso desencorajado para prevenção cardiovascular primária, sem evidência de benefício

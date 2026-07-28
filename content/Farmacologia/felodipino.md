@@ -4,7 +4,7 @@ slug: felodipino
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["Felodipino: bula, para que serve e como usar · Consulta Remédios/ANVISA · https://consultaremedios.com.br/felodipino/bula", "SPLENDIL — Bula Profissional · AZMED/AstraZeneca · https://www.azmed.com.br/content/dam/multibrand/br/pt/azmed-2022/home/bulas-profissionais/bulas/Splendil_Bula_Profissional.pdf"]
+source_refs: ["Felodipine — rótulo aprovado pelo FDA, DailyMed SPL setid 924b2633-74bd-469f-b831-77f09dfebbf7", "SPLENDIL — Bula Profissional · AZMED/AstraZeneca · https://www.azmed.com.br/content/dam/multibrand/br/pt/azmed-2022/home/bulas-profissionais/bulas/Splendil_Bula_Profissional.pdf"]
 legacy_source: "medicamentos/banco-de-medicamentos-felodipino.md"
 ---
 
@@ -30,7 +30,7 @@ Biodisponibilidade sistêmica ~15%, independente da dose na faixa terapêutica; 
 - **angina dose maxima**: 10 mg/dia
 - **idosos inicial**: 2,5 mg 1x/dia, com ajustes em intervalos de pelo menos 2 semanas conforme resposta; dose máxima 10mg/dia
 - **insuficiencia hepatica inicial**: 2,5 mg 1x/dia
-- **fonte**: Consulta Remédios/ANVISA ; Perfil Farmacológico — Studocu/Universidad UTE
+- **fonte**: rótulo aprovado pelo FDA (DailyMed), setid 924b2633-74bd-469f-b831-77f09dfebbf7
 
 ## Particularidade clinica
 Eficaz em todos os graus de hipertensão, incluindo hipertensão sistólica isolada, mantendo ação anti-hipertensiva sustentada ao longo do intervalo de 24h entre doses

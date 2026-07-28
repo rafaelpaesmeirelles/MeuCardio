@@ -21,7 +21,7 @@ Diretriz estratifica TEP agudo com base na mortalidade prevista em 30 dias, clas
 - **risco intermediario alto**: PESI/sPESI elevado + disfunção de ventrículo direito por imagem + biomarcadores cardíacos elevados (troponina, BNP) — sem instabilidade hemodinâmica, porém com risco elevado de descompensação
 - **risco intermediario baixo**: PESI/sPESI elevado, mas apenas um ou nenhum dos critérios adicionais (disfunção de VD ou biomarcadores) presente
 - **baixo risco**: PESI/sPESI baixo, sem disfunção de VD, sem elevação de biomarcadores — candidatos a tratamento ambulatorial
-- **fonte**: Sanar/Guideline TdC
+- **fonte**: diretriz ESC 2019 de embolia pulmonar aguda, já citada nas referências deste documento
 
 ## Possibilidade tratamento domiciliar
 Diretriz permite considerar alta precoce e tratamento ambulatorial em pacientes de baixo risco cuidadosamente selecionados, sustentada por estudos como Hestia Study e ensaio de Aujesky et al. (Lancet 2011), que demonstraram não-inferioridade do tratamento ambulatorial vs. hospitalar em pacientes selecionados

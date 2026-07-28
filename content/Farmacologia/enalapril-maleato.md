@@ -4,7 +4,7 @@ slug: enalapril-maleato
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["Maleato de Enalapril: bula, para que serve e como usar · Consulta Remédios/ANVISA · https://consultaremedios.com.br/maleato-de-enalapril/bula", "Enalapril: o que é, para que serve, efeitos e contraindicações · UOL VivaBem · 2022 · https://www.uol.com.br/vivabem/noticias/redacao/2022/11/22/enalapril-o-que-e-para-que-serve-efeitos-e-contraindicacoes.htm", "Vasotec (enalapril maleate) — bula FDA · accessdata.fda.gov", "Enalapril — StatPearls, NCBI Bookshelf, 2024"]
+source_refs: ["Enalapril maleate — rótulo aprovado pelo FDA, DailyMed SPL setid b31372f7-cda3-4ead-a481-4cde62e843fd", "Enalapril: o que é, para que serve, efeitos e contraindicações · UOL VivaBem · 2022 · https://www.uol.com.br/vivabem/noticias/redacao/2022/11/22/enalapril-o-que-e-para-que-serve-efeitos-e-contraindicacoes.htm", "Vasotec (enalapril maleate) — bula FDA · accessdata.fda.gov", "Enalapril — StatPearls, NCBI Bookshelf, 2024"]
 legacy_source: "medicamentos/banco-de-medicamentos-enalapril.md"
 ---
 

@@ -4,7 +4,7 @@ slug: metildopa-alfa-metildopa
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["Quais anti-hipertensivos podem ser utilizados na gestação? · APS-BVS · https://aps-repo.bvs.br/aps/quais-anti-hipertensivos-podem-ser-utilizados-na-gestacao/", "Hipertensão na Gravidez — Protocolo · CAISM/UNICAMP · https://www.caism.unicamp.br/download/protocolos/obstetricia/Hipertens%C3%A3o%20na%20Gravidez.pdf", "Methyldopa — LiverTox, NCBI Bookshelf", "Pregnancy Outcome After First Trimester Use of Methyldopa — Hypertension (AHA journals), 2018", "Methyldopa (Aldomet) Use During Pregnancy — Drugs.com"]
+source_refs: ["Methyldopa — rótulo aprovado pelo FDA, DailyMed SPL setid 9e22e1d8-04ec-4b67-92ea-b09c706f2703", "Quais anti-hipertensivos podem ser utilizados na gestação? · APS-BVS · https://aps-repo.bvs.br/aps/quais-anti-hipertensivos-podem-ser-utilizados-na-gestacao/", "Hipertensão na Gravidez — Protocolo · CAISM/UNICAMP · https://www.caism.unicamp.br/download/protocolos/obstetricia/Hipertens%C3%A3o%20na%20Gravidez.pdf", "Methyldopa — LiverTox, NCBI Bookshelf", "Pregnancy Outcome After First Trimester Use of Methyldopa — Hypertension (AHA journals), 2018"]
 legacy_source: "medicamentos/banco-de-medicamentos-metildopa.md"
 ---
 

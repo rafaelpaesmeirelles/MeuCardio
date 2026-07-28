@@ -4,7 +4,7 @@ slug: clortalidona
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["CLORTALIDONA — Guia Farmacêutico · Hospital Sírio-Libanês · https://guiafarmaceutico.hsl.org.br/clortalidona", "Chlorthalidone/THALITONE — bula FDA/DailyMed (múltiplas versões consultadas)", "Chlorthalidone — StatPearls, NCBI Bookshelf"]
+source_refs: ["Chlorthalidone — rótulo aprovado pelo FDA, DailyMed SPL setid da0fe4da-a4f3-4aa8-84f4-4d31c5cbdb0e", "Chlorthalidone/THALITONE — bula FDA/DailyMed (múltiplas versões consultadas)", "Chlorthalidone — StatPearls, NCBI Bookshelf"]
 legacy_source: "medicamentos/banco-de-medicamentos-clortalidona.md"
 ---
 
@@ -33,7 +33,7 @@ Inibe reabsorção de sódio e cloreto no túbulo contornado distal; meia-vida m
 - **ajuste renal**: Sem ajuste em IR leve-moderada; cautela em IR grave (ClCr<30mL/min) — risco de azotemia
 - **ajuste hepatico**: Sem ajuste necessário em IH leve-moderada
 - **administracao**: VO, preferencialmente pela manhã, com líquido e alimento
-- **fonte**: Guia Farmacêutico HSL
+- **fonte**: rótulo aprovado pelo FDA (DailyMed), setid da0fe4da-a4f3-4aa8-84f4-4d31c5cbdb0e
 
 ## Monitorizacao
 Eletrólitos séricos periodicamente — hipopotassemia, hiponatremia, alcalose hipoclorêmica e hipomagnesemia são comuns. Corrigir hipopotassemia e hipomagnesemia coexistentes **antes** de iniciar o tratamento, se possível — hipomagnesemia pode tornar a hipopotassemia refratária à reposição isolada de potássio. Suspender se hipopotassemia vier acompanhada de sinal clínico (fraqueza muscular, paresia, alteração de ECG).

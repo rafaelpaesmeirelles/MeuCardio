@@ -61,4 +61,4 @@ Ferramenta também calcula 'idade cardíaca' (heart age), um conceito de comunic
 Desenvolvido em coorte predominantemente branca americana; desempenho pode ser inferior a escores mais contemporâneos (SCORE2) em populações europeias ou não caucasianas
 
 ## Fonte
-Canadian Cardiovascular Society ; Empendium McMaster
+Canadian Cardiovascular Society — pista importante sobre a procedência: as tabelas de pontos em mmol/L acima provavelmente vêm da adaptação canadense do escore, não do modelo de D'Agostino RB Sr et al., Circulation 2008;117:743-753, que é a referência do FRS geral. VERIFICAÇÃO HUMANA NECESSÁRIA para confirmar a origem e decidir qual das duas versões o documento descreve.

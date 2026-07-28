@@ -4,7 +4,7 @@ slug: perindopril-argininaerbumina
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["Coversyl 4mg — Bula Profissional · Servier · https://static-webv8.jet.com.br/drogaosuper/Bulas/7898029551046.pdf", "Coversyl — Bula Profissional · A Nossa Drogaria · http://institucional.anossadrogaria.com.br/bula/924166.pdf", "Perindopril — Drugs.com Dosage Guide e Prescribing Information", "Sandoz Perindopril Erbumine Product Monograph"]
+source_refs: ["Perindopril — rótulo aprovado pelo FDA, DailyMed SPL setid 87768fbf-7c63-47da-8925-0316f343d6ef", "Coversyl 4mg — Bula Profissional · Servier · https://static-webv8.jet.com.br/drogaosuper/Bulas/7898029551046.pdf", "Coversyl — Bula Profissional · A Nossa Drogaria · http://institucional.anossadrogaria.com.br/bula/924166.pdf", "Sandoz Perindopril Erbumine Product Monograph"]
 legacy_source: "medicamentos/banco-de-medicamentos-perindopril-completo.md"
 ---
 
@@ -30,7 +30,7 @@ Comprimidos de 4 mg (erbumina) e equivalentes de arginina 5mg/10mg
 - **hipertensao renovascular**: Iniciar com dose pequena de 2mg
 - **Ajuste renal (erbumina)**: ClCr ≥ 30 mL/min — dose inicial 2 mg/dia, máximo 8 mg/dia. ClCr < 30 mL/min — não recomendado
 - **Idoso**: sempre iniciar com 2 mg/dia, independentemente da função renal, com monitorização próxima no início
-- **fonte**: Bula COVERSYL 4mg ; Bula COVERSYL — anossadrogaria; Drugs.com Dosage Guide
+- **fonte**: rótulo aprovado pelo FDA (DailyMed), setid 87768fbf-7c63-47da-8925-0316f343d6ef
 
 ## Nota sobre equivalencia entre sais
 Perindopril arginina e perindopril erbumina não são equivalentes dose a dose — aproximadamente, arginina 10 mg ≈ erbumina 8 mg. Ao trocar de apresentação, não assumir conversão 1:1.

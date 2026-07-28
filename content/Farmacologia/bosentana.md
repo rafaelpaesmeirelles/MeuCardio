@@ -4,7 +4,7 @@ slug: bosentana
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["Bosentana — Bula Profissional (Ranbaxy) · Consulta Remédios · https://uploads.consultaremedios.com.br/drug_leaflet/pro/Bula-Bosentana-Ranbaxy-Profissional-Consulta-Remedios.pdf", "Tracleer (bosentan) — bula FDA/Drugs.com", "Rubin LJ et al. Bosentan Therapy for Pulmonary Arterial Hypertension (BREATHE-1). N Engl J Med. 2002;346(12):896-903.", "Safety and tolerability of bosentan — PMC review"]
+source_refs: ["Bosentan — rótulo aprovado pelo FDA, DailyMed SPL setid 8444da17-6c31-492b-8842-93740f083d9d", "Rubin LJ et al. Bosentan Therapy for Pulmonary Arterial Hypertension (BREATHE-1). N Engl J Med. 2002;346(12):896-903.", "Safety and tolerability of bosentan — PMC review"]
 legacy_source: "medicamentos/banco-de-medicamentos-bosentana.md"
 ---
 

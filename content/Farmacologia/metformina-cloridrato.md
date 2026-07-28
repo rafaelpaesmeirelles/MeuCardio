@@ -4,7 +4,7 @@ slug: metformina-cloridrato
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["METFORMINA — Guia Farmacêutico · Hospital Sírio-Libanês · https://guiafarmaceutico.hsl.org.br/metformina", "Metformina 500-850mg · Secretaria de Saúde do Rio Grande do Sul · 2023 · https://admin.saude.rs.gov.br/upload/arquivos/202312/01110541-metformina.pdf"]
+source_refs: ["Metformin hydrochloride tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 4d3dbf6f-1c8a-4daa-8343-8cd8f64a65cd"]
 legacy_source: "medicamentos/banco-de-medicamentos-metformina-completo.md"
 ---
 
@@ -34,10 +34,17 @@ Comprimidos de liberação imediata (Glifage) 500/850/1000mg; comprimidos de lib
 - **pediatria dose maxima**: 2.000 mg/dia
 - **administracao**: VO, durante ou logo após as refeições (café da manhã e/ou jantar), reduz efeitos adversos GI
 - **idosos maior 80 anos**: Usar com cautela — titulação conservadora
-- **fonte**: Guia Farmacêutico HSL ; Metformina 500-850mg — Secretaria de Saúde RS
+- **fonte**: rótulo da metformina aprovado pelo FDA (DailyMed)
 
 ## Ajuste renal
-Contraindicado se ClCr<60mL/min conforme Guia HSL (bulas mais recentes/internacionais permitem uso cauteloso até ClCr≥30 com ajuste de dose — seguir protocolo institucional vigente)
+A avaliação é por **taxa de filtração glomerular estimada (eGFR)**, não por clearance de creatinina, e os cortes atuais do rótulo são:
+
+- **eGFR abaixo de 30 mL/min/1,73 m²**: contraindicado; suspender se a função cair abaixo disso
+- **eGFR entre 30 e 45**: não iniciar; se o paciente já usa, reavaliar risco e benefício de continuar
+- **eGFR acima de 45**: sem restrição por função renal
+- Avaliar a função renal **antes de iniciar** e periodicamente
+
+A versão anterior deste verbete contraindicava com ClCr abaixo de 60, critério de uma geração anterior de bula, e relegava a regra vigente a um parêntese. Isso nega o fármaco de primeira linha do diabetes tipo 2 a toda a faixa de eGFR entre 45 e 60, que deve recebê-lo.
 
 ## Suspensao perioperatoria contraste
 Interromper 48h antes de cirurgias eletivas de grande porte ou exames com contraste iodado (urografia, angiografia); reiniciar somente após 48h do procedimento e confirmação de função renal normal — risco de acidose lática

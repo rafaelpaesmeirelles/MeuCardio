@@ -4,7 +4,7 @@ slug: carvedilol
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["CARVEDILOL — Farmácia Dose Certa · Secretaria de Saúde SP/FURP · https://www.saude.sp.gov.br/resources/ses/perfil/gestor/assistencia-farmaceutica/medicamentos-das-unidades-farmacia-dose-certa/carvedilol", "Boletim Farmacoterapêutico Nº 19 — Carvedilol · Secretaria de Saúde de Ribeirão Preto · https://www.ribeiraopreto.sp.gov.br/files/ssaude/pdf/inftec-19carvedilol.pdf", "Carvedilol: bula, para que serve e como usar · Consulta Remédios/ANVISA · 2023 · https://consultaremedios.com.br/carvedilol/bula"]
+source_refs: ["Carvedilol tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 574c419f-3b9e-2171-e063-6394a90a0e90", "Packer M, Coats AJS, Fowler MB, et al. Effect of carvedilol on survival in severe chronic heart failure (COPERNICUS). N Engl J Med. 2001;344(22):1651-1658. DOI: 10.1056/NEJM200105313442201. PMID: 11386263"]
 legacy_source: "medicamentos/banco-de-medicamentos-carvedilol.md"
 ---
 
@@ -30,7 +30,7 @@ Comprimidos de 3,125 mg, 6,25 mg, 12,5 mg e 25 mg
 - **dose maxima peso menor 85kg**: 25 mg 2x/dia
 - **dose maxima peso maior 85kg**: 50 mg 2x/dia
 - **dose maxima idosos**: 50 mg/dia, em doses fracionadas 2x/dia
-- **fonte**: Secretaria de Saúde SP/FURP
+- **fonte**: rótulo do carvedilol aprovado pelo FDA (DailyMed)
 
 ## Administracao
 Ingerir preferencialmente com alimentos, para reduzir risco de hipotensão e melhorar tolerabilidade

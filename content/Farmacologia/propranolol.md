@@ -4,7 +4,7 @@ slug: propranolol
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["Resumo sobre Propranolol: indicações, farmacologia e mais · Estratégia MED · 2022 · https://med.estrategia.com/portal/conteudos-gratis/doencas/resumo-sobre-propranolol-indicacoes-farmacologia-e-mais/", "Bula Propranolol · Droga Raia · https://www.drogaraia.com.br/bulas/propranolol", "Inderal (propranolol) — bula FDA", "Propranolol — StatPearls, NCBI Bookshelf", "Propranolol — Drugs.com Dosage Guide, 2025"]
+source_refs: ["Propranolol hydrochloride — rótulo aprovado pelo FDA, DailyMed SPL setid c751ee54-27b4-4ed7-829a-ced735c41312", "Resumo sobre Propranolol: indicações, farmacologia e mais · Estratégia MED · 2022 · https://med.estrategia.com/portal/conteudos-gratis/doencas/resumo-sobre-propranolol-indicacoes-farmacologia-e-mais/", "Bula Propranolol · Droga Raia · https://www.drogaraia.com.br/bulas/propranolol", "Inderal (propranolol) — bula FDA", "Propranolol — StatPearls, NCBI Bookshelf"]
 legacy_source: "medicamentos/banco-de-medicamentos-propranolol.md"
 ---
 
@@ -50,4 +50,4 @@ Bradicardia, broncoespasmo (risco maior que betabloqueadores seletivos), fadiga,
 
 **Retirada**: nunca suspender abruptamente — reduzir gradualmente ao longo de 1–2 semanas, pelo risco de piora de angina ou infarto de rebote.
 
-Fonte: bula FDA (Inderal), StatPearls, Drugs.com — dados convergentes.
+Fonte: rótulo aprovado pelo FDA (DailyMed), setid c751ee54-27b4-4ed7-829a-ced735c41312

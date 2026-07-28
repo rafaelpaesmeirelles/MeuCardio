@@ -4,7 +4,7 @@ slug: olmesartana-medoxomila
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["Olmesartana para Hipertensão: como funciona e como prescrever · WeMeds · 2025 · https://portal.wemeds.com.br/olmesartana-para-hipertensao-como-prescrever/", "Bula para Profissionais - Olmesartana medoxomila · Accord Farma · https://accordfarma.com.br/bulas/bula_Olmesartana_medoxomila_Profissional.pdf", "Olmesartan medoxomil — bula FDA/DailyMed (múltiplas versões consultadas)", "Olmesartan Medoxomil — Drugs.com Prescribing Information"]
+source_refs: ["Olmesartan medoxomil — rótulo aprovado pelo FDA, DailyMed SPL setid 574d2679-c036-fa12-e063-6394a90aef33", "Olmesartana para Hipertensão: como funciona e como prescrever · WeMeds · 2025 · https://portal.wemeds.com.br/olmesartana-para-hipertensao-como-prescrever/", "Bula para Profissionais - Olmesartana medoxomila · Accord Farma · https://accordfarma.com.br/bulas/bula_Olmesartana_medoxomila_Profissional.pdf", "Olmesartan medoxomil — bula FDA/DailyMed (múltiplas versões consultadas)"]
 legacy_source: "medicamentos/banco-de-medicamentos-olmesartana-medoxomila.md"
 ---
 

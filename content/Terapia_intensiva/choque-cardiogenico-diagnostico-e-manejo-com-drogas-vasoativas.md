@@ -4,7 +4,7 @@ slug: choque-cardiogenico-diagnostico-e-manejo-com-drogas-vasoativas
 theme: "Terapia intensiva"
 kind: protocolo
 review_status: pendente_revisao
-source_refs: ["PROTOCOLO DE CHOQUE CARDIOGÊNICO 2008 · Saúde Direta · https://www.saudedireta.com.br/docsupload/1332097248Choque_Cardiog.pdf", "Vasopressores e inotrópicos na Sala de Urgência · Revista Qualidade HC-USP · https://www.hcrp.usp.br/revistaqualidadehc/uploads/Artigos/197/197.pdf", "Diluições e doses (infusões contínuas) — drogas vasoativas · Curem Podcast · https://blog.curem.com.br/wp-content/uploads/2022/07/CUREM_Podcast_Choque_qual-amina_doses-.pdf", "Dobutamine — bula FDA/Drugs.com Dosage Guide", "Norepinephrine — bula FDA/Drugs.com Dosage Guide", "Surviving Sepsis Campaign 2021 — dosagem de noradrenalina e vasopressina", "Pressors in cardiogenic shock — Maimonides EM Residency"]
+source_refs: ["Norepinephrine bitartrate injection — rótulo aprovado pelo FDA, DailyMed SPL setid e375a0b9-4d26-4749-bbc3-43d63a7cf65a", "Dobutamine injection — rótulo aprovado pelo FDA, DailyMed SPL setid 559367ef-5c20-99ea-e063-6294a90a4ff2"]
 legacy_source: "Protocolo Clínico: Choque Cardiogênico"
 ---
 
@@ -34,3 +34,6 @@ Critérios hemodinâmicos completos por estágio (A–E), com valores numéricos
 ## Suporte circulatorio mecanico
 
 Indicação de balão intra-aórtico, ECMO veno-arterial e dispositivos de assistência ventricular percutânea (Impella e similares) não está coberta neste documento — critério de seleção de paciente complexo o suficiente para merecer módulo próprio, ainda não escrito.
+
+## Procedencia das doses
+VERIFICAÇÃO HUMANA NECESSÁRIA — a versão anterior deste documento apoiava as doses de droga vasoativa em um protocolo de 2008, uma revista de hospital, um **PDF de podcast** e um agregador. Num documento sobre amina em choque cardiogênico, onde erro de dose mata, isso não é fonte. As doses de noradrenalina e dobutamina passaram a apontar para os rótulos aprovados; as demais (dopamina, adrenalina, milrinona, levosimendana) e os alvos hemodinâmicos precisam ser conferidos contra diretriz de choque cardiogênico vigente antes de esta marcação sair.

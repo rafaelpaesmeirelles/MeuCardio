@@ -4,7 +4,7 @@ slug: ablacao-por-cateter-em-fibrilacao-atrial-esc-2024-versao-completa
 theme: "Fibrilação atrial"
 kind: estudo
 review_status: pendente_revisao
-source_refs: ["Les recommandations de l'ESC 2024 sur la FA en pratique: place du traitement interventionnel · Cardio-online/JESFC 2025 · 2025 · https://www.youtube.com/watch?v=Wfry3E4_HGo", "ESC 2024: Primeiro estudo de ablação de fibrilação atrial com procedimento-placebo · Afya Cardiologia · 2024 · https://portal.afya.com.br/cardiologia/esc-2024-primeiro-estudo-de-ablacao-de-fibrilacao-atrial-com-procedimento-placebo", "O que fala a nova Diretriz de Ablação Cirúrgica e por Cateter de FA · Afya Cardiologia · 2024 · https://portal.afya.com.br/cardiologia/o-que-fala-a-nova-diretriz-de-ablacao-cirurgica-e-por-cateter-de-fa"]
+source_refs: ["Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the EACTS. Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176. PMID: 39210723"]
 legacy_source: "estudos/modulo-atualizado-ablacao-de-fibrilacao-atrial-completa-a-versao-anterior.md"
 ---
 

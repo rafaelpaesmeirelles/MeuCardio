@@ -4,7 +4,7 @@ slug: benazepril-cloridrato
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["LOTENSIN (Cloridrato de Benazepril) · Bulas.med.br · 2014 · https://www.bulas.med.br/p/bulas-de-medicamentos/bula/3018/lotensin.htm", "Lotensin H · Saúde Direta · https://www.saudedireta.com.br/catinc/drugs/bulas/lotensinh.pdf", "LOTENSIN (benazepril hydrochloride) — bula FDA/DailyMed", "Benazepril — StatPearls, NCBI Bookshelf, 2024", "Benazepril — Drugs.com Dosage Guide"]
+source_refs: ["Benazepril hydrochloride — rótulo aprovado pelo FDA, DailyMed SPL setid afd616b9-0c75-48be-862d-5ac18364fd9d", "LOTENSIN (Cloridrato de Benazepril) · Bulas.med.br · 2014 · https://www.bulas.med.br/p/bulas-de-medicamentos/bula/3018/lotensin.htm", "Lotensin H · Saúde Direta · https://www.saudedireta.com.br/catinc/drugs/bulas/lotensinh.pdf", "LOTENSIN (benazepril hydrochloride) — bula FDA/DailyMed", "Benazepril — StatPearls, NCBI Bookshelf, 2024"]
 legacy_source: "medicamentos/banco-de-medicamentos-benazepril-completo.md"
 ---
 
@@ -29,7 +29,7 @@ Pró-fármaco hidrolisado em benazeprilato ativo; inibição do sistema renina-a
 - **Ajuste renal**: TFG ou ClCr < 30 mL/min (creatinina sérica > 3 mg/dL) — iniciar com 5 mg 1x/dia
 - **combinacao hctz dose mais baixa**: 5mg benazepril + 6,25mg HCTZ 1x/dia — controla PA em grande parte dos pacientes
 - **Farmacocinética**: meia-vida efetiva do benazeprilato (metabólito ativo) de 10-11 horas — estado de equilíbrio atingido após 2-3 doses diárias
-- **fonte**: bula FDA (Lotensin/benazepril hidroclorido), StatPearls, Drugs.com — dados convergentes
+- **fonte**: rótulo aprovado pelo FDA (DailyMed), setid afd616b9-0c75-48be-862d-5ac18364fd9d
 
 ## Indicacoes
 Tratamento da hipertensão arterial sistêmica em pacientes adultos
