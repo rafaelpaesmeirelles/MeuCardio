@@ -4,7 +4,7 @@ slug: noradrenalina-norepinefrina
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["NORADRENALINA — Guia Farmacêutico · Hospital Sírio-Libanês · https://guiafarmaceutico.hsl.org.br/noradrenalina", "Noradrenalina: Bulário · Guia TdC · 2026 · https://www.tadeclinicagem.com.br/guia/523/noradrenalina-bulario/"]
+source_refs: ["Norepinephrine bitartrate injection — rótulo aprovado pelo FDA, DailyMed SPL setid e375a0b9-4d26-4749-bbc3-43d63a7cf65a"]
 legacy_source: "medicamentos/banco-de-medicamentos-noradrenalina.md"
 ---
 
@@ -29,7 +29,7 @@ Ampola de norepinefrina base 4 mg/4 mL (equivalente a 8 mg/4 mL de hemitartarato
 - **choque septico**: Doses utilizadas em estudos clínicos: 0,01-3 mcg/kg/min; dose máxima descrita de 3,3 mcg/kg/min
 - **pediatria inicial**: 0,05-0,1 mcg/kg/min, ajustando conforme resposta; dose máxima de 2,5 mcg/kg/min
 - **observacao titulacao**: Não existe esquema único de titulação nem dose máxima absoluta claramente definida; há grande variação individual na dose necessária para estabilizar e manter adequadamente a pressão arterial
-- **fonte**: Guia Farmacêutico HSL ; Guia TdC Bulário
+- **fonte**: rótulo do bitartarato de norepinefrina aprovado pelo FDA (DailyMed)
 
 ## Diluicao administracao
 Diluir em SG 5%, SF 0,9%, soro glicofisiológico ou Ringer lactato; 1 ampola (4 mL) pode ser adicionada a volume de 100 ou 250 mL de SF ou SG. Concentração máxima adulto: 0,5 mg/mL; pediátrica: 16 mcg/mL. Administração exclusivamente EV em veia central, nunca sem diluição, sempre em bomba de infusão
@@ -38,7 +38,7 @@ Diluir em SG 5%, SF 0,9%, soro glicofisiológico ou Ringer lactato; 1 ampola (4 
 Não administrar solução de bicarbonato ou outra solução alcalina simultaneamente no mesmo acesso venoso, sob risco de inativação do efeito da noradrenalina
 
 ## Acesso venoso
-Medicamento vesicante — administrar via cateter venoso central (CVC) devido ao alto risco de ulceração e necrose em caso de extravasamento periférico
+Medicamento vesicante: o extravasamento causa ulceração e necrose, e a via de escolha é o cateter venoso central. VERIFICAÇÃO HUMANA NECESSÁRIA para a formulação "exclusivamente central" que constava aqui — há prática difundida de infusão periférica por tempo limitado e sob vigilância, em veia calibrosa, enquanto o acesso central é obtido. Definir a conduta do serviço com fonte própria, em vez de proibir de forma absoluta o que se faz na sala de emergência ou permitir sem critério
 
 ## Indicacoes cardiologicas
 Vasopressor de primeira linha em choque séptico e outros estados de choque distributivo; suporte hemodinâmico pós-parada cardíaca; hipotensão aguda refratária a volume

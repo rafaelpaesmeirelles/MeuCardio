@@ -4,7 +4,7 @@ slug: espironolactona
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["ESPIRONOLACTONA — Guia Farmacêutico · Hospital Sírio-Libanês · https://guiafarmaceutico.hsl.org.br/espironolactona", "Como eu uso Espironolactona! · Afya Cardiologia · 2021 · https://portal.afya.com.br/cardiologia/como-eu-uso-espironolactona", "RALES Trial · 1999"]
+source_refs: ["Pitt B, Zannad F, Remme WJ, et al. The effect of spironolactone on morbidity and mortality in patients with severe heart failure (RALES). N Engl J Med. 1999;341(10):709-717. DOI: 10.1056/NEJM199909023411001. PMID: 10471456", "Pitt B, Pfeffer MA, Assmann SF, et al. Spironolactone for heart failure with preserved ejection fraction (TOPCAT). N Engl J Med. 2014;370(15):1383-1392. DOI: 10.1056/NEJMoa1313731. PMID: 24716680"]
 legacy_source: "medicamentos/banco-de-medicamentos-espironolactona.md"
 ---
 
@@ -35,7 +35,7 @@ Comprimidos de 25, 50 e 100 mg
 - **hipertensao resistente 4a droga**: 50-100 mg, podendo chegar a 200 mg/dia, como quarta droga quando paciente permanece hipertenso apesar de tríplice terapia (ex.: IECA/BRA + anlodipina + hidroclorotiazida)
 - **dose maxima adulto**: 400 mg/dia
 - **dose maxima pediatrica**: 3,3 mg/kg/dia
-- **fonte**: Guia Farmacêutico HSL ; Afya Cardiologia
+- **fonte**: VERIFICAÇÃO HUMANA NECESSÁRIA — as faixas de dose desta seção vinham de guia farmacêutico de outra instituição e de material de curso. As doses-alvo em IC (25-50 mg/dia) correspondem ao RALES; as demais precisam de conferência contra a bula registrada na ANVISA
 
 ## Ajuste renal
 - **clcr 30 50**: 12,5 mg 1x/dia ou em dias alternados; manutenção pode aumentar para 12,5-25 mg/dia
@@ -50,9 +50,9 @@ Comprimidos de 25, 50 e 100 mg
 IC com fração de ejeção reduzida (FEVE <35%), associada a IECA/BRA/INRA e betabloqueador, para redução de morbimortalidade; IC com fração de ejeção preservada (FEVE ≥45%) como indicação IIa para redução de risco de hospitalização; hipertensão arterial resistente verdadeira
 
 ## Evidencia pivotal
-- **rales icfer**: Estudo RALES (NEJM, 1999): 1663 pacientes com classe funcional III-IV e FE <35% apresentaram redução de 30% na mortalidade com espironolactona
-- **icfep**: Estudo em 3345 pacientes com FE ≥45% mostrou redução de 17% no risco de hospitalização, com risco aumentado de hipercalemia; motivou indicação Classe IIa em diretrizes para essa população
-- **fonte**: Afya Cardiologia
+- **rales icfer**: RALES (N Engl J Med, 1999): 1.663 pacientes em classe funcional III-IV com FE ≤35%, com redução de 30% na mortalidade
+- **icfep (topcat)**: 3.445 pacientes com FE ≥45%. O **desfecho primário composto não foi reduzido** (morte cardiovascular, parada cardíaca abortada ou hospitalização por IC: 18,6% contra 20,4%; HR 0,89; IC95% 0,77-1,04; p=0,14). Apenas o componente de **hospitalização por insuficiência cardíaca** caiu de forma significativa: 12,0% contra 14,2%, HR 0,83 (IC95% 0,69-0,99), p=0,04 — a redução de 17% citada aqui. Mortalidade total e hospitalização por qualquer causa não foram reduzidas. É essa distinção que sustenta uma recomendação de classe IIa e não mais forte
+- **fonte**: Pitt B et al. N Engl J Med. 2014;370(15):1383-1392 (TOPCAT), conferido no resumo indexado
 
 ## Contraindicacoes
 - Insuficiência renal aguda

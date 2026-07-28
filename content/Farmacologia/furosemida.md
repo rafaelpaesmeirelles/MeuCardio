@@ -4,7 +4,7 @@ slug: furosemida
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["FUROSEMIDA — Guia Farmacêutico · Hospital Sírio-Libanês · https://guiafarmaceutico.hsl.org.br/furosemida", "Como eu uso Furosemida · Afya Cardiologia · 2021 · https://portal.afya.com.br/cardiologia/como-eu-uso-furosemida"]
+source_refs: ["Furosemide injection — rótulo aprovado pelo FDA, DailyMed SPL setid 75d5611a-f9e0-1841-e053-2991aa0af415"]
 legacy_source: "medicamentos/banco-de-medicamentos-furosemida.md"
 ---
 
@@ -32,10 +32,10 @@ Comprimidos orais; solução injetável (10 mg/mL) para uso EV ou IM
 - **diurese forcada**: 20-40 mg associados a infusão de eletrólitos; posologia total de 100-300 mg/dia por período máximo de 48 horas
 - **pediatria oral**: Lactentes e crianças menores de 15 anos: 1-2 mg/kg/dose a cada 6-8 horas
 - **pediatria injetavel**: 1 mg/kg/dose EV ou IM; não repetir antes de 2h; manutenção 1 mg/kg/dose a cada 6-12h
-- **dose maxima adulto**: Oral: 600 mg/dia; EV em infusão: 6 gramas/dia
+- **dose maxima adulto**: **600 mg/dia** — é a dose humana máxima a que o rótulo se refere, e vale como teto de referência para as duas vias. A versão anterior deste verbete trazia "EV em infusão: 6 gramas/dia", **dez vezes** esse valor, num diurético de alça cujo risco de ototoxicidade cresce justamente com dose alta e infusão rápida. VERIFICAÇÃO HUMANA NECESSÁRIA para doses acima de 600 mg/dia em congestão refratária, que existem na prática de terapia intensiva mas precisam de fonte própria — não de um teto herdado sem procedência
 - **dose maxima pediatrica**: Oral: 40 mg/dia ou 6 mg/kg/dose; injetável: 20 mg/dia ou 6 mg/kg/dose
 - **velocidade infusao**: Adulto: não exceder 4 mg/min; pediatria: 0,5 mg/kg/min
-- **fonte**: Guia Farmacêutico HSL
+- **fonte**: rótulo da furosemida injetável aprovado pelo FDA (DailyMed)
 
 ## Ajuste renal
 Em insuficiência renal grave (creatinina sérica > 5 mg/dL), recomenda-se não exceder velocidade de infusão de 2,5 mg/min; não é necessário ajuste para pacientes em hemodiálise
