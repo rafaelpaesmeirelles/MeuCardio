@@ -1,4 +1,4 @@
-package br.med.meucardio;
+package br.med.corvia;
 
 import com.getcapacitor.BridgeActivity;
 

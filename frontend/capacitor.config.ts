@@ -9,11 +9,17 @@ import type { CapacitorConfig } from "@capacitor/cli";
  *   npm run sync:mobile
  */
 const config: CapacitorConfig = {
-  // O appId NÃO acompanha o rebrand: trocar o identificador do pacote cria
-  // um aplicativo NOVO na loja — instalações, avaliações e histórico ficam
-  // no antigo, e quem já tem o app não recebe atualização nenhuma. É
-  // identificador técnico, invisível ao usuário. appId permanece.
-  appId: "br.med.meucardio",
+  // O appId acompanha o rebrand. Ele NÃO é invisível como parece: aparece na
+  // URL da loja (play.google.com/store/apps/details?id=…), e a marca anterior
+  // está registrada por outro titular — o mesmo motivo que levou a desligar o
+  // domínio antigo.
+  //
+  // O custo é real e foi aceito com conhecimento: identificador novo é
+  // aplicativo NOVO na loja. Instalações, avaliações e histórico ficam no
+  // antigo, e quem tem a versão velha não recebe atualização — precisa
+  // instalar de novo. A troca foi feita agora justamente porque o app está
+  // sendo gerado do zero: adiar só aumentaria a base a migrar.
+  appId: "br.med.corvia",
   appName: "Corvia",
   webDir: "dist",
   server: {

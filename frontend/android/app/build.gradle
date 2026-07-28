@@ -7,10 +7,10 @@ if (keystorePropertiesFile.exists()) {
 }
 
 android {
-    namespace = "br.med.meucardio"
+    namespace = "br.med.corvia"
     compileSdk = rootProject.ext.compileSdkVersion
     defaultConfig {
-        applicationId "br.med.meucardio"
+        applicationId "br.med.corvia"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
