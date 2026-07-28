@@ -1,13 +1,5 @@
-# Domínio principal e legado no mesmo bloco.
-#
-# `{$DOMAIN}` é corvia.med.br. `{$DOMAIN_LEGADO}` é meucardio.med.br, que
-# **continua servindo** — quem tem link antigo, favorito ou app instalado não
-# pode encontrar porta fechada. O certificado dos dois já foi emitido antes
-# desta virada, então não existe janela sem TLS válido.
-#
-# Desativar o legado é decisão separada e posterior, e quando for feita deve
-# ser por redirecionamento permanente, não por desligamento.
-{$DOMAIN}, www.{$DOMAIN}, {$DOMAIN_LEGADO} {
+# Domínio principal da marca. O legado tem bloco próprio, mais abaixo.
+{$DOMAIN}, www.{$DOMAIN} {
 	encode gzip zstd
 
 	# API e documentação do backend
@@ -43,6 +35,51 @@
 		Strict-Transport-Security "max-age=31536000; includeSubDomains"
 		X-Content-Type-Options "nosniff"
 		X-Frame-Options "DENY"
+		Referrer-Policy "strict-origin-when-cross-origin"
+	}
+}
+
+# ---------------------------------------------------------------- legado ----
+# meucardio.med.br. Redireciona o SITE para a marca nova, mas **não** a API.
+#
+# A distinção não é preciosismo: o Stripe **não segue redirecionamento** em
+# webhook. Um 301 aqui derrubaria em silêncio o endpoint que ainda está ativo
+# no domínio antigo — e o sintoma apareceria como assinatura que não ativa,
+# dias depois, que é exatamente o incidente que este projeto já teve duas
+# vezes. Pela mesma razão vale para o app Android já instalado, que chama
+# /api neste domínio e só passa a usar o novo depois de publicado na loja.
+#
+# Quando o webhook antigo for removido e o app novo estiver na loja, este
+# bloco inteiro pode virar um `redir` único.
+{$DOMAIN_LEGADO} {
+	encode gzip zstd
+
+	# API continua sendo servida aqui, sem redirecionamento.
+	handle /api/* {
+		reverse_proxy backend:8000
+	}
+
+	# Arquivo estático que pode estar referenciado em documento já emitido.
+	handle_path /galeria/* {
+		root * /galeria
+		file_server
+		header Cache-Control "public, max-age=2592000"
+	}
+	handle_path /fotos/* {
+		root * /uploads/fotos
+		file_server
+		header Cache-Control "public, max-age=300"
+	}
+
+	# O resto do site vai para a marca nova, preservando o caminho: quem tinha
+	# favorito em /biblioteca/algum-documento cai no mesmo documento.
+	handle {
+		redir https://{$DOMAIN}{uri} permanent
+	}
+
+	header {
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		X-Content-Type-Options "nosniff"
 		Referrer-Policy "strict-origin-when-cross-origin"
 	}
 }
