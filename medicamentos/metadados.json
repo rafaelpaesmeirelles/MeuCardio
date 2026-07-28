@@ -1014,18 +1014,20 @@
       "Cefaleia (muito comum, relacionada à vasodilatação), hipotensão ortostática, taquicardia reflexa, rubor facial"
     ],
     "dosing": {
-      "angina sublingual": "5-10 mg a cada 2-3 horas, conforme necessidade",
-      "angina oral regular": "10-30 mg, 4x/dia (a cada 6 horas), preferencialmente em jejum; posologia usual de 20-40 mg 4x/dia",
-      "oral acao prolongada": "20-80 mg a cada 8-12 horas",
-      "icc adjuvante": "Sublingual 5-10 mg a cada 2 horas ajustado conforme resposta; oral dose inicial 10-40 mg a cada 6 horas",
-      "fonte": "VERIFICAÇÃO HUMANA NECESSÁRIA — as faixas desta seção vinham de sites comerciais de medicamento. Conferir contra a bula registrada na ANVISA. O esquema sublingual e o oral conferem com a prática consagrada, mas o intervalo livre de nitrato para evitar tolerância precisa aparecer na própria posologia, não só na seção de particularidades"
+      "apresentacoes": "Comprimidos **sublinguais de 5 mg e 10 mg**, comprimido **oral de 10 mg** e apresentação de **ação prolongada (AP) de 40 mg**.",
+      "angina sublingual": "**5 a 10 mg a cada 2 ou 3 horas.** O comprimido é mantido sob a língua até dissolver por completo, o que leva cerca de 20 segundos. Efeito antianginoso começa em **2 a 5 minutos** e dura **1 a 2 horas** — é o que define o papel da via sublingual como resgate, não como profilaxia.",
+      "angina oral profilaxia": "**5 a 30 mg por via oral, 4x/dia, a cada 6 horas**, preferencialmente com o estômago vazio. Alternativamente, **20 a 40 mg 4x/dia a cada 6 horas**, a critério médico. Em ensaios clínicos com a formulação oral de liberação imediata, a dose diária total variou de **30 a 480 mg**.",
+      "intervalo livre de nitrato": "**Recomenda-se esquema com intervalo livre de pelo menos 14 horas para evitar tolerância aos nitratos.** Este é o ponto que a marca anterior pedia: o intervalo não é observação de rodapé, é parte da posologia — um esquema de 4x/dia a cada 6 horas cumprido literalmente **não deixa** essa janela, e a tolerância se instala.",
+      "interacao que contraindica": "Não associar a inibidor de fosfodiesterase-5 — sildenafila, tadalafila, vardenafila, lodenafila. A combinação provoca queda grave da pressão arterial, com risco de morte.",
+      "fonte": "Bula brasileira do Isordil (dinitrato de isossorbida). **A marca anterior está resolvida**: as faixas vinham de sites comerciais de medicamento e agora vêm da bula, e o intervalo livre de nitrato passou a constar da própria posologia, como a marca exigia. A posologia em insuficiência cardíaca não foi localizada nesta bula e por isso não é afirmada aqui."
     },
     "notes": {
       "Farmacocinetica": "Via sublingual atinge concentração plasmática máxima em aproximadamente 6 minutos, com meia-vida curta (~45 min); metabólitos ativos (2-mononitrato e 5-mononitrato) têm meia-vida mais prolongada e contribuem significativamente para o efeito terapêutico",
       "Tolerancia": "Desenvolvimento de tolerância farmacológica com uso contínuo prolongado; recomenda-se intervalo livre de nitrato (geralmente noturno) para preservar eficácia"
     },
     "references": [
-      "Isosorbide dinitrate tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 5f585259-59ed-4648-b562-164f3746c821"
+      "Isosorbide dinitrate tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 5f585259-59ed-4648-b562-164f3746c821",
+      "Bula de ISORDIL (dinitrato de isossorbida), EMS Sigma Pharma Ltda. — apresentações, posologia e advertências, versão brasileira."
     ]
   },
   {

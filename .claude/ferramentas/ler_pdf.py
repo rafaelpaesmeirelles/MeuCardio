@@ -129,12 +129,21 @@ def texto(caminho):
                 if tu:
                     fontes[apelido] = int(tu.group(1))
 
+    # Programa de fonte embutido (/FontFile*) é um binário que contém as
+    # sequências "Tj"/"TJ" por acaso, dentro das tabelas glyf e hmtx. Sem esta
+    # exclusão ele entra no texto como lixo — foi o que sujou a extração de uma
+    # bula inteira. /Length1 é o marcador que todo fluxo de fonte carrega.
+    def _e_fonte(corpo, dados):
+        return (b"/FontFile" in corpo or b"/Length1" in corpo
+                or dados[:4] in (b"\x00\x01\x00\x00", b"OTTO", b"true", b"ttcf")
+                or b"glyf" in dados[:600] or dados[:2] == b"%!")
+
     partes = []
     for n, corpo in objs.items():
         if n in cmaps or b"/Image" in corpo:
             continue
         d = _fluxo(corpo)
-        if d and (b"Tj" in d or b"TJ" in d):
+        if d and (b"Tj" in d or b"TJ" in d) and not _e_fonte(corpo, d):
             partes.append(_strings(d, cmaps, fontes))
     t = "\n".join(partes)
     t = re.sub(r"[ \t]+", " ", t)
