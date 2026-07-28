@@ -214,4 +214,15 @@ async def webhook(request: Request, db: Session = Depends(get_db)):
     elif tipo == "invoice.payment_failed":
         _aplicar_evento(db, obj, quando, lambda sub: setattr(sub, "status", "inadimplente"))
 
+    elif tipo == "checkout.session.completed":
+        # A mesma rota recebe os dois fluxos de cobrança. O `mode` separa:
+        # `subscription` já é tratado pelos eventos de customer.subscription,
+        # então aqui só interessa `payment`, que é o pedido avulso de laudo ou
+        # consultoria. Sem esse filtro, uma assinatura nova cairia no caminho
+        # do pedido e não acharia nenhum ServiceOrder.
+        if _campo(obj, "mode") == "payment":
+            from app.api.service_orders import confirmar_pagamento
+
+            confirmar_pagamento(db, obj)
+
     return {"received": True}

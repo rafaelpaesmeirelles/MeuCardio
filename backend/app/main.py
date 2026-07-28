@@ -4,7 +4,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.api import (
     admin, ai, appointments, auth, calculators, documents, drugs, evidence,
     favorites, gallery, health, lab_tests, library, password_reset,
-    prescriptions, round as round_api, search, studies, timeline, billing,
+    prescriptions, round as round_api, search, service_orders, studies,
+    timeline, billing,
 )
 from app.core.config import settings
 from app.core.security import assinante_ativo
@@ -31,8 +32,13 @@ app.add_middleware(
 
 # Acesso livre: entrar, recuperar senha, assinar e o próprio painel de admin
 # (que já se restringe por papel). Todo o resto exige assinatura vigente.
+# `service_orders` entra aqui, e não entre os routers de assinante, de
+# propósito: laudo e consultoria são serviço avulso pago por fora — exigir
+# assinatura vigente para comprá-los fecharia a porta justamente para o médico
+# que ainda não assina e chegou pelo telediagnóstico.
 ROUTERS_LIVRES = (
     health.router, auth.router, password_reset.router, billing.router, admin.router,
+    service_orders.router,
 )
 
 ROUTERS_ASSINANTES = (
