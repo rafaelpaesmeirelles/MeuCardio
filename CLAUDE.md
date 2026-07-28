@@ -10,21 +10,21 @@ medicamentos, galeria de imagens, exames, evidências, estudos, round hospitalar
 agenda, modelos de documento, assistente de IA clínica, e (em construção)
 fluxogramas visuais de investigação/tratamento por patologia.
 
-## Mudança de foco: de CardioBenê para MeuCardio
-O projeto nasceu como **CardioBenê**, ferramenta interna ligada a um serviço
-hospitalar. Ele **deixou de ser isso**. Hoje é o **MeuCardio**
-(https://meucardio.med.br): produto independente, próprio, sem vínculo
-institucional com nenhum hospital ou serviço.
+## Identidade do produto
+O **MeuCardio** (https://meucardio.med.br) é produto independente e próprio,
+**sem vínculo institucional com nenhum hospital ou serviço**. O projeto teve
+uma marca anterior, ligada a um serviço hospitalar; ela foi integralmente
+removida do repositório, do banco e da interface. Regras que decorrem disso:
 
-Consequências práticas dessa mudança, válidas para qualquer trabalho no repo:
-- Nenhuma marca, nome ou referência institucional antiga deve sobreviver em
-  código, conteúdo, textos de interface, metadados ou configuração. Ao
-  encontrar qualquer resíduo (inclusive "Beneficência Portuguesa de Ribeirão
-  Preto", "CardioBenê", "cardiobene", caminhos `/opt/cardiobene`), remover.
+- Nenhuma marca, nome ou referência institucional anterior pode voltar a
+  aparecer em código, conteúdo, textos de interface, metadados ou
+  configuração. Se precisar identificar os termos exatos para uma varredura,
+  eles estão no histórico do git (`git log -S`), não neste arquivo — mantê-los
+  escritos aqui recria justamente o resíduo que a regra proíbe.
 - Nada de fluxo de revisão institucional: a responsabilidade clínica é do
   Rafael, cardiologista responsável pelo projeto.
-- O público não é mais uma equipe interna, é o cardiologista brasileiro em
-  geral. Linguagem, navegação e conteúdo devem assumir esse leitor.
+- O público é o cardiologista brasileiro em geral, não uma equipe interna.
+  Linguagem, navegação e conteúdo devem assumir esse leitor.
 
 ## Metas do projeto (norteiam prioridade de qualquer tarefa)
 1. **Ser referência em Cardiologia no Brasil.** A régua de qualidade é a de
@@ -204,21 +204,19 @@ Processo, igual para as seis:
   sessão de verdade.
 - A conta Stripe está com `details_submitted: true` e `charges_enabled:
   false` — ainda não cobra de verdade, o que mantém o `.env` em `sk_test_`.
-- Rebranding concluído e conferido por varredura no repositório inteiro: além
-  do frontend, foram corrigidos o `<title>` da página, o nome do PWA, o app
-  Android (pacote renomeado de `br.org.beneficenciaportuguesa.cardiobene` para
+- **Rebranding concluído e verificado a zero.** Varredura no repositório
+  inteiro, nos arquivos binários rastreados e no banco (88 itens das quatro
+  frentes, mais a busca full-text sobre o corpo dos documentos publicados):
+  nenhuma ocorrência da marca anterior. Foram corrigidos, entre outros, o
+  `<title>` da página, o nome do PWA, o pacote do app Android (renomeado para
   `br.med.meucardio`, com `MainActivity.java` movido de diretório), a URL do
-  Capacitor, `DEPLOY.md`, `COBERTURA.md`, `backend/README.md` e a chave do
-  localStorage. As duas únicas ocorrências que sobraram são deliberadas: a
-  regra neste arquivo, que precisa citar o termo para poder proibi-lo, e o
-  nome literal do ZIP legado no histórico do `COBERTURA.md`, que é registro
-  de proveniência.
-- Chave do token no localStorage passou de `cardiobene.token` para
-  `meucardio.token`, com **migração automática** em `frontend/src/lib/api.ts`:
-  o `token.get()` lê a chave antiga, copia para a nova e apaga a antiga. Sem
-  isso, a troca deslogaria todos os usuários de uma vez. A constante
-  `TOKEN_KEY_ANTIGA` existe só para essa migração — pode ser removida quando
-  já não houver sessões antigas em circulação.
+  Capacitor, `DEPLOY.md`, `COBERTURA.md`, `backend/README.md`, a chave do
+  localStorage e um parágrafo de andaime que havia vazado para um documento
+  publicado da biblioteca.
+- A chave do token no localStorage é `meucardio.token`. Houve uma migração
+  automática a partir da chave antiga em `frontend/src/lib/api.ts`, removida
+  depois que a varredura de resíduos foi concluída — quem não abria o site
+  desde então precisou entrar de novo, o que é esperado.
 
 ## O que falta fazer
 Ordem de prioridade herdada das metas: primeiro o que destrava a cobrança da

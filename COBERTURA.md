@@ -108,7 +108,7 @@ As duas pastas não existem no corpus atual — por desenho, não por engano. To
 
 ## Histórico desta base
 
-1. Migração do ZIP `CardioBene_Ribeirao_V2_2_FINAL` (`migrar_corpus_legado.py`): 164 documentos.
+1. Migração do ZIP do corpus legado (`migrar_corpus_legado.py`): 164 documentos.
 2. Extração do módulo de CDI a partir de um arquivo texto mal identificado como PDF (layout em duas colunas reconstruído manualmente).
 3. Extração de `Faça___3_.md` (225 módulos adicionais, `migrar_perplexity_md.py`): documentos novos/atualizados adicionados sobre a base existente.
 4. Consolidação entre temas (`consolidar_temas.py`): as migrações 1 e 3 usavam uma lista de palavras-chave cuja ordem causava falso positivo (ex.: 'FA não valvar' sendo lido como Valvopatias por conter a substring 'valvar'). Isso produziu 53 documentos duplicados em dois temas ao mesmo tempo, todos identificados e resolvidos nesta consolidação.
