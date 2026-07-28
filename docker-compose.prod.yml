@@ -77,7 +77,6 @@ services:
         condition: service_completed_successfully
     environment:
       DOMAIN: ${DOMAIN}
-      DOMAIN_LEGADO: ${DOMAIN_LEGADO}
     volumes:
       - ./infra/Caddyfile:/etc/caddy/Caddyfile:ro
       - sitefiles:/site:ro
