@@ -58,10 +58,15 @@ export default function Shell() {
           <span /><span /><span />
         </button>
         
-        <div>
-          <img src="/logo.png" alt="MeuCardio" style={{ height: 36, width: "auto", marginRight: "0.5rem" }} />
+        <div className="topo__identidade">
+          {/* A logo já traz o nome "MeuCardio" na própria arte — repetir em texto
+              ao lado era duplicata. A placa clara existe porque metade da arte é
+              navy (#003048) e o cabeçalho também: sobre o fundo do topo esse
+              trecho fica com 1,02:1 de contraste, ou seja, invisível. */}
+          <span className="topo__logo">
+            <img src="/logo-marca.png" alt="MeuCardio" />
+          </span>
           <span className="topo__servico">Guia de Cardiologia</span>
-          <span className="topo__marca">MeuCardio</span>
         </div>
         <div className="topo__usuario">
           <NavLink to="/minha-conta" style={{ color: "inherit" }}>
@@ -105,7 +110,7 @@ export default function Shell() {
         aria-label="Navegação principal"
       >
         <div className="gaveta__topo">
-          <span className="topo__marca" style={{ color: "var(--acento)" }}>MeuCardio</span>
+          <img src="/logo-marca.png" alt="MeuCardio" className="gaveta__logo" />
           <button className="botao botao--secundario" style={{ padding: "0.3rem 0.6rem" }}
                   onClick={() => setMenuAberto(false)} aria-label="Fechar menu">
             ✕

@@ -50,7 +50,8 @@ def list_drugs(
     db: Session = Depends(get_db),
     _=Depends(current_user),
 ):
-    query = db.query(Drug)
+    # Só medicamento publicado aparece — mesmo checkpoint das outras frentes.
+    query = db.query(Drug).filter(Drug.published.is_(True))
     if q:
         query = query.filter(Drug.generic_name.ilike(f"%{q}%"))
     if drug_class:
@@ -70,7 +71,7 @@ def compare(
 ):
     if not 1 <= len(slugs) <= 4:
         raise HTTPException(status_code=422, detail="Selecione de 1 a 4 medicamentos.")
-    drugs = db.query(Drug).filter(Drug.slug.in_(slugs)).all()
+    drugs = db.query(Drug).filter(Drug.slug.in_(slugs), Drug.published.is_(True)).all()
     found = {d.slug for d in drugs}
     missing = [s for s in slugs if s not in found]
     if missing:
@@ -80,7 +81,7 @@ def compare(
 
 @router.get("/{slug}")
 def get_drug(slug: str, db: Session = Depends(get_db), _=Depends(current_user)):
-    d = db.query(Drug).filter(Drug.slug == slug).first()
+    d = db.query(Drug).filter(Drug.slug == slug, Drug.published.is_(True)).first()
     if not d:
         raise HTTPException(status_code=404, detail="Medicamento não encontrado.")
     return _dump(d)

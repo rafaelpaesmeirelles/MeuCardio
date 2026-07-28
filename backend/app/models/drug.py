@@ -1,4 +1,4 @@
-from sqlalchemy import Numeric, String, Text
+from sqlalchemy import Boolean, Numeric, String, Text
 from sqlalchemy.dialects.postgresql import ARRAY, JSONB
 from sqlalchemy.orm import Mapped, mapped_column
 
@@ -28,6 +28,15 @@ class Drug(Base):
     contraindications: Mapped[list[str]] = mapped_column(ARRAY(String), default=list)
     interactions: Mapped[list[str]] = mapped_column(ARRAY(String), default=list)
     monitoring: Mapped[list[str]] = mapped_column(ARRAY(String), default=list)
+    indications: Mapped[list[str]] = mapped_column(ARRAY(String), default=list)
+    adverse_effects: Mapped[list[str]] = mapped_column(ARRAY(String), default=list)
+    # Conteúdo curado que não cabe nos campos acima, guardado com o título de
+    # origem como chave: farmacocinética, particularidades, administração,
+    # diluição, antídoto/reversão. Existe porque os documentos de origem têm 104
+    # cabeçalhos distintos além dos campos estruturados, e descartá-los perderia
+    # 252 seções escritas — preservar com o rótulo é melhor do que forçar tudo
+    # em campos que não descrevem o conteúdo.
+    notes: Mapped[dict] = mapped_column(JSONB, default=dict)
     pregnancy: Mapped[str | None] = mapped_column(Text, nullable=True)
     lactation: Mapped[str | None] = mapped_column(Text, nullable=True)
     outcomes: Mapped[dict] = mapped_column(JSONB, default=dict)
@@ -47,3 +56,8 @@ class Drug(Base):
     bp_evidence_source: Mapped[str | None] = mapped_column(Text, nullable=True)
     references: Mapped[list[str]] = mapped_column(ARRAY(String), default=list)
     review_status: Mapped[str] = mapped_column(String(30), default="pendente_revisao")
+    # Mesmo checkpoint das outras frentes de conteúdo: carregar não publica.
+    # Sem este campo, tudo que entrasse na tabela ficava visível na hora — a API
+    # de medicamentos não filtrava nada —, o que furava a revisão clínica
+    # exigida para conteúdo que vai a produção.
+    published: Mapped[bool] = mapped_column(Boolean, default=False, index=True)

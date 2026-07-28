@@ -9,23 +9,30 @@
   align-items: center;
   gap: 0.75rem;
 }
-.topo__brasao { width: 34px; height: auto; flex: 0 0 34px; }
-.topo__brasao { height: 34px; width: auto; flex: 0 0 auto; }
-.topo__marca {
-  font-family: var(--fonte-display);
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  font-size: 1.05rem;
-  line-height: 1;
+.topo__identidade { display: flex; flex-direction: column; gap: 0.3rem; }
+
+/* Placa clara sob a logo. Não é enfeite: a arte é meio navy, meio vermelha, e o
+   cabeçalho é navy — sobre ele o trecho navy da logo tem 1,02:1 de contraste.
+   Sobre branco, sobe para 14,08:1. */
+.topo__logo {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  background: var(--branco);
+  padding: 0.4rem 0.65rem;
+  border-radius: 9px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
 }
+.topo__logo img { height: 30px; width: auto; display: block; }
+@media (min-width: 760px) { .topo__logo img { height: 38px; } }
 .topo__servico {
   font-family: var(--fonte-dados);
-  font-size: 0.6rem;
+  font-size: 0.62rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--acento-claro);
   display: block;
-  margin-bottom: 2px;
+  margin: 0;
 }
 .topo__usuario { margin-left: auto; font-size: 0.82rem; color: var(--acento-claro); }
 
@@ -343,3 +350,5 @@
   font-weight: 700;
   border-color: var(--acento);
 }
+
+.gaveta__logo { height: 26px; width: auto; display: block; }
