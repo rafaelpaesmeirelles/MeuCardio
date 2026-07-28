@@ -434,10 +434,32 @@ não refazer.
     deve ser feita aqui e reaproveitada nas tarefas 12 e 16 do briefing 2, em
     vez de decidida duas vezes.
 
+13. **Tarefa 26 — destaque de curso parceiro no Painel principal.** Acréscimo
+    de escopo pedido pelo Rafael em 28/07/2026, para o **último lugar da fila**.
+    **Atenção: a "Tarefa 26" não existe em nenhum briefing presente no
+    repositório** — o `BRIEFING_CLAUDE_CODE_2.md` termina na 23 e nenhum dos
+    dois menciona curso ou parceiro. O texto abaixo é o acréscimo, não a
+    tarefa-mãe; a descrição da área de cursos parceiros deve chegar em
+    instrução posterior. Não começar sem ela.
+    O que foi pedido: um espaço de destaque para o curso parceiro **dentro do
+    Painel principal** — banner ou cartão visualmente diferenciado, **não
+    escondido em submenu** —, com nome do curso, uma frase de destaque (por
+    exemplo índice de aprovação, *se o parceiro fornecer o dado*) e link direto
+    para a página do curso **dentro do MeuCardio**, não para fora.
+    Dois requisitos de operação, que são de configuração e não de código:
+    trocar qual curso aparece em destaque tem de ser fácil, e o espaço precisa
+    **desativar por inteiro quando não houver curso parceiro ativo** — sem
+    deixar moldura vazia nem texto de exemplo no ar.
+    Ponto a resolver com o Rafael antes de implementar: índice de aprovação é
+    afirmação de terceiro sobre resultado de curso. Vale a mesma régua do
+    resto do produto — ou o parceiro fornece o dado por escrito e ele aparece
+    atribuído a ele, ou não aparece. Não inventar, não arredondar e não exibir
+    número sem origem declarada.
+
 ### Decisões pendentes de terceiros
-13. **Revisão jurídica do TCLE** e definição de encarregado de dados (DPO). O
+14. **Revisão jurídica do TCLE** e definição de encarregado de dados (DPO). O
    próprio modelo diz que precisa disso antes do uso em produção.
-14. **Prazo de retenção** de exame e laudo: segue regra de guarda de prontuário,
+15. **Prazo de retenção** de exame e laudo: segue regra de guarda de prontuário,
    sem exclusão automática (decisão do Rafael); o prazo exato ele confirma com
    o jurídico. **Pedido abandonado** — com exame e dados de paciente gravados
    antes do pagamento — por ora não é expurgado, por decisão dele.
