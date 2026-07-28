@@ -4,11 +4,8 @@ legacy_source: "Fusão de dois documentos da mesma diretriz na mesma pasta: este
 review_status: pendente_revisao
 slug: hipertensao-pulmonar-diagnostico-e-tratamento-escers-2022
 source_refs:
-- Humbert M, Kovacs G, Hoeper MM, et al. 2022 ESC/ERS Guidelines for the diagnosis
-  and treatment of pulmonary hypertension. Eur Heart J. 2022;43(38):3618-3731. DOI:
-  10.1093/eurheartj/ehac237. PMID 36017548
-- Protocolo Clínico e Diretrizes Terapêuticas — Hipertensão Pulmonar · Ministério
-  da Saúde do Brasil
+- "Humbert M, Kovacs G, Hoeper MM, et al. 2022 ESC/ERS Guidelines for the diagnosis and treatment of pulmonary hypertension. Eur Heart J. 2022;43(38):3618-3731. DOI: 10.1093/eurheartj/ehac237. PMID: 36017548"
+- "Protocolo Clínico e Diretrizes Terapêuticas — Hipertensão Pulmonar. Ministério da Saúde do Brasil"
 theme: Hipertensão pulmonar
 title: 'Hipertensão Pulmonar: Diagnóstico e Tratamento (ESC/ERS 2022)'
 ---
