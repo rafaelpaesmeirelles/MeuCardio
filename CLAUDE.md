@@ -434,27 +434,59 @@ não refazer.
     deve ser feita aqui e reaproveitada nas tarefas 12 e 16 do briefing 2, em
     vez de decidida duas vezes.
 
-13. **Tarefa 26 — destaque de curso parceiro no Painel principal.** Acréscimo
-    de escopo pedido pelo Rafael em 28/07/2026, para o **último lugar da fila**.
-    **Atenção: a "Tarefa 26" não existe em nenhum briefing presente no
-    repositório** — o `BRIEFING_CLAUDE_CODE_2.md` termina na 23 e nenhum dos
-    dois menciona curso ou parceiro. O texto abaixo é o acréscimo, não a
-    tarefa-mãe; a descrição da área de cursos parceiros deve chegar em
-    instrução posterior. Não começar sem ela.
-    O que foi pedido: um espaço de destaque para o curso parceiro **dentro do
-    Painel principal** — banner ou cartão visualmente diferenciado, **não
-    escondido em submenu** —, com nome do curso, uma frase de destaque (por
-    exemplo índice de aprovação, *se o parceiro fornecer o dado*) e link direto
-    para a página do curso **dentro do MeuCardio**, não para fora.
-    Dois requisitos de operação, que são de configuração e não de código:
-    trocar qual curso aparece em destaque tem de ser fácil, e o espaço precisa
-    **desativar por inteiro quando não houver curso parceiro ativo** — sem
-    deixar moldura vazia nem texto de exemplo no ar.
-    Ponto a resolver com o Rafael antes de implementar: índice de aprovação é
-    afirmação de terceiro sobre resultado de curso. Vale a mesma régua do
-    resto do produto — ou o parceiro fornece o dado por escrito e ele aparece
-    atribuído a ele, ou não aparece. Não inventar, não arredondar e não exibir
-    número sem origem declarada.
+13. **Tarefa 24 — área de cursos parceiros (revenda com repasse).** Definida
+    pelo Rafael em 28/07/2026 como a tarefa seguinte à 23 do briefing 2, no
+    **último lugar da fila**. Funcionalidade comercial: cursos de preparação
+    para o Título de Especialista em Cardiologia, de parceiros externos
+    (negociação em andamento), vendidos por assinatura dentro do MeuCardio.
+    **O que o sistema faz e o que não faz:**
+    - **Não hospeda vídeo.** Aula ao vivo e gravada continuam no ambiente do
+      parceiro. O MeuCardio guarda, por curso, um link de acesso à aula ao vivo
+      e um link para as gravadas, e redireciona o aluno.
+    - **Guarda o material de apoio.** Apostila e documento enviados pelo curso
+      ficam arquivados aqui, no mesmo padrão de armazenamento de arquivo já
+      usado no resto do sistema.
+    - **Vincula ao conteúdo existente.** Cada curso, módulo ou aula precisa
+      poder apontar para trilha de estudo e/ou caso clínico da plataforma
+      (Tarefa 11), para o aluno praticar sem sair do MeuCardio.
+    **Cobrança — repasse com margem:**
+    - Cada curso tem preço definido pelo parceiro (X). O MeuCardio cobra
+      X + margem definida por nós e repassa X ao parceiro.
+    - Via **Stripe Connect** (contas conectadas), com repasse automático na
+      própria cobrança — nada de transferência manual.
+    - **Preço e margem são por curso, configuráveis** — nunca fixados no código.
+    - É **adicional** à assinatura de R$20/mês, não substitui: o médico pode
+      assinar só o MeuCardio, ou o MeuCardio mais um ou mais cursos.
+    - Nota fiscal dos dois lados está sendo tratada com o contador, não é
+      decisão técnica — mas os registros internos precisam **separar receita
+      própria de valor de repasse a terceiro**, senão o faturamento aparece
+      inflado pelo dinheiro que só passa por aqui.
+    - Ainda não há parceiro fechado: o primeiro curso é cadastrado à mão, sem
+      interface de autocadastro para o parceiro.
+    **Destaque no Painel principal** (acréscimo pedido no mesmo dia): banner ou
+    cartão visualmente diferenciado **dentro do Painel**, não escondido em
+    submenu, com nome do curso, frase de destaque (por exemplo índice de
+    aprovação, *se o parceiro fornecer o dado*) e link direto para a página do
+    curso **dentro do MeuCardio**. Trocar o curso em destaque tem de ser fácil,
+    e o espaço deve **sumir por inteiro quando não houver curso ativo** — sem
+    moldura vazia nem texto de exemplo no ar. Cadastrar `MeuCardio Curso` como
+    exemplo.
+    **Três bloqueios estruturais levantados antes de começar, já medidos:**
+    1. `subscriptions.user_id` é **`unique=True`** — o banco impõe **uma
+       assinatura por médico**. "MeuCardio + um ou mais cursos" é impossível sem
+       migração que remova a restrição e acrescente discriminador de tipo e
+       referência ao curso.
+    2. O webhook separa os fluxos por `mode == "payment"`. Assinatura de curso
+       também é `mode: "subscription"` e cairia no mesmo caminho da assinatura
+       do MeuCardio, sobrescrevendo o estado dela. Precisa de discriminação por
+       metadata, não por `mode`.
+    3. **Trilhas de estudo e casos clínicos não existem** — a Tarefa 11 não foi
+       construída. O vínculo pedido depende dela, então ou a 24 entra depois da
+       11, ou o vínculo nasce como referência opcional que fica inerte até lá.
+    Régua que vale aqui como no resto do produto: **índice de aprovação é
+    afirmação de terceiro.** Ou o parceiro fornece por escrito e o número
+    aparece atribuído a ele, ou não aparece. Não inventar, não arredondar, não
+    exibir número sem origem declarada.
 
 ### Decisões pendentes de terceiros
 14. **Revisão jurídica do TCLE** e definição de encarregado de dados (DPO). O
