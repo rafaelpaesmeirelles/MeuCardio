@@ -1442,7 +1442,12 @@
       "Comprimidos de 10 mg — dose ótima identificada em ensaios de Fase II ao comparar 5, 10, 20 e 40 mg/dia, sendo 10 mg a que apresentou melhor redução de LDL-colesterol com perfil de segurança adequado"
     ],
     "indications": [
-      "Redução de colesterol total e LDL-C na **hipercolesterolemia primária**, isolada ou associada a estatina — que é o uso de longe mais frequente e o que a própria seção de posicionamento em diretrizes deste documento descreve. Também na hipercolesterolemia familiar homozigótica, em associação com estatina, e na sitosterolemia homozigótica. A versão anterior listava **apenas** a hipercolesterolemia familiar homozigótica como indicação de uso com estatina, o que fazia a ezetimiba parecer fármaco de doença rara e contradizia o próprio verbete, que a apresenta como segunda linha após estatina em dose máxima tolerada. VERIFICAÇÃO HUMANA NECESSÁRIA para o conjunto exato de indicações registradas na ANVISA"
+      "**Hipercolesterolemia primária** (familiar heterozigótica e não familiar), em associação a estatina **ou isoladamente**, como adjuvante à dieta — em adultos e em adolescentes de 10 a 17 anos. É o uso de longe mais frequente, e o que o restante deste verbete descreve.",
+      "**Hiperlipidemia mista**, em combinação com fenofibrato, em adultos.",
+      "**Hipercolesterolemia familiar homozigótica**, em associação a estatina, em adultos — podendo somar-se a tratamento adjuvante como aférese de LDL.",
+      "**Sitosterolemia familiar homozigótica (fitosterolemia)**, para redução de sitosterol e campesterol.",
+      "**Prevenção de eventos cardiovasculares maiores na doença renal crônica**, administrada com sinvastatina.",
+      "Nota de procedência: a versão anterior deste verbete listava **apenas** a hipercolesterolemia familiar homozigótica como indicação de uso com estatina, o que fazia a ezetimiba parecer fármaco de doença rara e contradizia o próprio documento, que a apresenta como segunda linha após estatina em dose máxima tolerada. O conjunto acima **está conferido** na bula profissional brasileira, seção de Indicações, e inclui duas indicações que não constavam aqui: a combinação com fenofibrato na hiperlipidemia mista e a prevenção cardiovascular na doença renal crônica."
     ],
     "contraindications": [
       "Hipersensibilidade ao componente",
@@ -1465,7 +1470,8 @@
     },
     "references": [
       "Ezetimibe tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 090776cf-f211-49a3-a993-ff5d707311f2",
-      "Cannon CP, Blazing MA, Giugliano RP, et al. Ezetimibe added to statin therapy after acute coronary syndromes (IMPROVE-IT). N Engl J Med. 2015;372(25):2387-2397. DOI: 10.1056/NEJMoa1410489"
+      "Cannon CP, Blazing MA, Giugliano RP, et al. Ezetimibe added to statin therapy after acute coronary syndromes (IMPROVE-IT). N Engl J Med. 2015;372(25):2387-2397. DOI: 10.1056/NEJMoa1410489",
+      "Bula profissional de ZETIA (ezetimiba), Organon Farmacêutica Ltda. — seção 1, Indicações. Documento obtido no site do detentor do registro."
     ]
   },
   {
@@ -2260,12 +2266,12 @@
       "hipertensao adulto": "5 mg (1 comprimido) 1x/dia; efeito evidente em 1-2 semanas, ótimo em até 4 semanas",
       "hipertensao idoso maior 65 anos": "Dose inicial 2,5 mg/dia, podendo aumentar para 5mg/dia",
       "hipertensao insuficiencia renal": "Dose inicial 2,5 mg/dia, podendo aumentar até 5mg/dia",
-      "icfer indicacao especifica": "Insuficiência cardíaca em idosos, associado à terapia padrão. O critério de FEVE ≤35% que constava aqui está **errado** e foi removido: o SENIORS, que sustenta a indicação, randomizou 2.128 pacientes com 70 anos ou mais e história de insuficiência cardíaca **independentemente da fração de ejeção** — o critério de entrada era internação por IC no ano anterior **ou** FEVE ≤35%. A FEVE média foi de 36%, e **35% da amostra tinha FEVE acima de 35%**. Titulação de 1,25 mg 1x/dia até 10 mg 1x/dia; seguimento médio de 21 meses; desfecho primário composto de morte por qualquer causa ou internação cardiovascular.",
+      "icfer indicacao especifica": "**Indicação registrada no Brasil**: insuficiência cardíaca em **idosos acima de 70 anos, com fração de ejeção igual ou inferior a 35%** — texto da bula brasileira. O critério de FEVE se aplica à indicação aprovada e deve ser respeitado na prescrição.\n\n**A população do estudo era mais ampla que a indicação.** O SENIORS randomizou 2.128 pacientes de 70 anos ou mais **independentemente da fração de ejeção** — o critério de entrada era internação por IC no ano anterior **ou** FEVE ≤35%. A FEVE média foi de 36%, e **35% da amostra tinha FEVE acima de 35%**. Titulação de 1,25 mg 1x/dia até 10 mg 1x/dia, seguimento médio de 21 meses, desfecho primário composto de morte por qualquer causa ou internação cardiovascular.\n\nNão é contradição: **o registro é mais estreito que o ensaio**, e é o registro que delimita a prescrição na bula. Usar nebivolol em idoso com fração preservada tem respaldo no estudo, mas está fora da indicação aprovada aqui.",
       "icfer titulacao": "1,25mg 1x/dia → 2,5mg 1x/dia → 5mg 1x/dia → 10mg 1x/dia, com intervalos de 1-2 semanas conforme tolerabilidade; monitorização de pelo menos 2h a cada início/aumento de dose",
       "icfer dose maxima": "10 mg 1x/dia",
       "insuficiencia hepatica": "Contraindicado — dados limitados",
       "insuficiencia renal grave creatinina maior 250": "Não recomendado — sem experiência clínica",
-      "fonte": "VERIFICAÇÃO HUMANA NECESSÁRIA — a indicação em insuficiência cardíaca **não existe na rotulagem norte-americana**, onde o nebivolol é aprovado apenas para hipertensão; ela vem da rotulagem europeia e brasileira. Conferir a bula registrada na ANVISA para a indicação, a faixa etária e a titulação"
+      "fonte": "Bula brasileira de NEBILET (cloridrato de nebivolol), Biolab Sanus Farmacêutica Ltda. A indicação em insuficiência cardíaca, que **não existe na rotulagem norte-americana** (onde o nebivolol é aprovado só para hipertensão), **está confirmada no Brasil**, com o recorte de idade e de fração de ejeção acima. VERIFICAÇÃO HUMANA NECESSÁRIA para o esquema de titulação: o documento consultado cita as doses de 2,5, 5 e 10 mg e apresentação de 5 mg, **sem que o degrau de 1,25 mg tenha sido localizado nele** — o 1,25 mg acima vem do SENIORS, não da bula. Conferir o degrau inicial antes de prescrever por este verbete."
     },
     "outcomes": {
       "Evidencia pivotal seniors": "Estudo SENIORS avaliou nebivolol em pacientes idosos com IC independentemente da FEVI, demonstrando prolongamento significativo do tempo até morte ou hospitalização cardiovascular"
@@ -2275,7 +2281,8 @@
     },
     "references": [
       "Nebivolol (BYSTOLIC) tablets — rótulo aprovado pelo FDA, indicação de hipertensão arterial",
-      "Flather MD, Shibata MC, Coats AJS, et al. Randomized trial to determine the effect of nebivolol on mortality and cardiovascular hospital admission in elderly patients with heart failure (SENIORS). Eur Heart J. 2005;26(3):215-225. DOI: 10.1093/eurheartj/ehi115. PMID: 15642700"
+      "Flather MD, Shibata MC, Coats AJS, et al. Randomized trial to determine the effect of nebivolol on mortality and cardiovascular hospital admission in elderly patients with heart failure (SENIORS). Eur Heart J. 2005;26(3):215-225. DOI: 10.1093/eurheartj/ehi115. PMID: 15642700",
+      "Bula de NEBILET (cloridrato de nebivolol), Biolab Sanus Farmacêutica Ltda. — indicações e posologia, versão brasileira."
     ]
   },
   {
