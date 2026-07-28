@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../lib/api";
 import { useAuth } from "../lib/auth";
-import ApoioBiolab from "../components/ApoioBiolab";
 
 type Tema = { theme: string; count: number };
 type Paciente = { id: number };
@@ -174,7 +173,6 @@ export default function Painel() {
         </>
       )}
 
-      <ApoioBiolab />
     </>
   );
 }

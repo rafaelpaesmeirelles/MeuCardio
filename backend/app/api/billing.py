@@ -37,13 +37,24 @@ def traduzir_status(status_stripe: str) -> str:
     return STATUS_STRIPE_PT.get(status_stripe, "pendente")
 
 
+def _campo(objeto, chave, padrao=None):
+    """Leitura tolerante a campo ausente em objeto do Stripe.
+
+    Objeto do Stripe NÃO é dict: na versão 15 da lib, `.get()` levanta
+    `AttributeError: get` — só subscrito e acesso por atributo funcionam, e o
+    subscrito levanta KeyError quando o campo não veio. Este helper existe para
+    não repetir esse erro, que já custou um 500 em produção no histórico de
+    faturas e estava latente no webhook de assinatura."""
+    return objeto[chave] if chave in objeto else padrao
+
+
 def _fim_do_periodo(obj) -> datetime | None:
     """Desde a versão de API 2025-03-31.basil o current_period_end saiu do objeto
     Subscription e passou a viver em cada item da assinatura."""
-    itens = (obj.get("items") or {}).get("data") or []
+    itens = _campo(_campo(obj, "items") or {}, "data") or []
     if not itens:
         return None
-    fim = itens[0].get("current_period_end")
+    fim = _campo(itens[0], "current_period_end")
     if not fim:
         return None
     return datetime.fromtimestamp(fim, tz=timezone.utc)
@@ -151,16 +162,16 @@ def listar_faturas(db: Session = Depends(get_db), user: User = Depends(current_u
         "faturas": [
             {
                 "id": f["id"],
-                "numero": f.get("number"),
-                "status": f.get("status"),
-                "total_centavos": f.get("total"),
-                "moeda": (f.get("currency") or "brl").upper(),
-                "criada_em": datetime.fromtimestamp(f["created"], tz=timezone.utc)
-                if f.get("created") else None,
-                "url_fatura": f.get("hosted_invoice_url"),
-                "url_pdf": f.get("invoice_pdf"),
+                "numero": _campo(f, "number"),
+                "status": _campo(f, "status"),
+                "total_centavos": _campo(f, "total"),
+                "moeda": (_campo(f, "currency") or "brl").upper(),
+                "criada_em": datetime.fromtimestamp(_campo(f, "created"), tz=timezone.utc)
+                if _campo(f, "created") else None,
+                "url_fatura": _campo(f, "hosted_invoice_url"),
+                "url_pdf": _campo(f, "invoice_pdf"),
             }
-            for f in faturas.get("data", [])
+            for f in faturas["data"]
         ]
     }
 

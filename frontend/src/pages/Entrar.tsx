@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../lib/auth";
 import Credito from "../components/Credito";
-import ApoioBiolab from "../components/ApoioBiolab";
 
 export default function Entrar() {
   const { entrar } = useAuth();
@@ -111,7 +110,6 @@ export default function Entrar() {
           a decisão clínica em cardiologia.
         </p>
         <Credito compacto />
-        <ApoioBiolab />
       </div>
     </div>
   );
