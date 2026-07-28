@@ -62,6 +62,15 @@ class ServiceOrder(Base):
     # --- fila de atendimento ----------------------------------------------
     prazo_em: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
     atendido_em: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    # Quem respondeu. Hoje é sempre o Rafael, único com papel de admin, então
+    # o campo parece redundante — e é exatamente por isso que precisa existir
+    # antes do segundo respondente, e não depois. O painel de indicadores fala
+    # em 'receita gerada' e 'meus laudos emitidos': sem este campo, esses
+    # números não têm dono, e a primeira contratação de um segundo cardiologista
+    # exigiria migrar dado histórico sem ter como saber quem fez o quê.
+    respondido_por: Mapped[int | None] = mapped_column(
+        ForeignKey("users.id"), nullable=True, index=True
+    )
     # Resposta da consultoria (texto). O laudo assinado é outra coisa e só
     # existe depois da assinatura digital — ver Tarefa 4/5 do briefing.
     resposta: Mapped[str | None] = mapped_column(Text, nullable=True)

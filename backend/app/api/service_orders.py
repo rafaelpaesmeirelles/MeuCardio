@@ -435,6 +435,7 @@ def responder(
 
     pedido.resposta = dados.resposta.strip()
     pedido.atendido_em = datetime.now(timezone.utc)
+    pedido.respondido_por = user.id
     db.add(AuditLog(user_id=user.id, action="responder", entity="service_order",
                     entity_id=str(pedido.id), detail={"servico": pedido.servico}))
     db.commit()
