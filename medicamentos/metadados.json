@@ -854,7 +854,7 @@
     "presentations": [
       "Cápsulas de 75, 110 e 150 mg"
     ],
-    "renal_adjustment": "Eliminação predominantemente renal, cerca de 80%. Acima de ClCr 30 mL/min não há ajuste; entre 15 e 30 a dose cai para 75 mg 2x/dia; abaixo de 15 ou em diálise o rótulo não oferece recomendação. VERIFICAÇÃO HUMANA NECESSÁRIA para a contraindicação em ClCr <30 que constava aqui: ela reflete a rotulagem europeia, enquanto a norte-americana prevê 75 mg 2x/dia entre 15 e 30. Conferir o que a bula registrada na ANVISA determina, porque a diferença decide entre tratar e não tratar",
+    "renal_adjustment": "Eliminação predominantemente renal, cerca de 80%. **A rotulagem brasileira segue a europeia, não a norte-americana**: é **contraindicado em insuficiência renal grave, definida como ClCr < 30 mL/min**, e acima de 30 mL/min não há ajuste de dose. O esquema de **75 mg 2x/dia entre ClCr 15 e 30, que existe na rotulagem dos Estados Unidos, não tem equivalente no Brasil** — aqui a cápsula de 75 mg aparece apenas como 2 cápsulas (150 mg) uma vez ao dia na profilaxia de TEV em cirurgia ortopédica de grande porte, para comprometimento renal moderado ou uso concomitante de amiodarona, quinidina ou verapamil.\n\nFarmacocinética que sustenta o corte: em ClCr 30-50 mL/min a exposição (AUC) é cerca de **3 vezes maior**; em ClCr 10-30 mL/min é cerca de **6 vezes maior**, com meia-vida cerca de 2 vezes mais longa (meia-vida média de 27,2 h abaixo de 30 mL/min, contra 13,4 h acima de 80).\n\n**Procedência desta conferência**: o bulário eletrônico da ANVISA não estava acessível (bloqueio de Cloudflare), então a bula do detentor do registro foi lida em duas fontes independentes que a republicam, com resultados concordantes. Vale como conferência cruzada, **não** como leitura no bulário oficial — reconferir ali quando houver acesso. Cautela específica descoberta nesta verificação: um PDF de bula servido por CDN de farmácia mostrou-se de versão antiga, anterior à indicação em fibrilação atrial, sem nenhuma menção a mL/min. Bula republicada precisa ter a versão conferida antes de ser usada.",
     "contraindications": [
       "Sangramento ativo clinicamente significativo",
       "Válvulas cardíacas mecânicas",
@@ -883,7 +883,8 @@
     "references": [
       "Dabigatran etexilate capsules — rótulo aprovado pelo FDA, DailyMed SPL setid f7ea7e2c-ca54-4ecc-9fc7-bd3571b0ebc2",
       "Connolly SJ, Ezekowitz MD, Yusuf S, et al. Dabigatran versus warfarin in patients with atrial fibrillation (RE-LY). N Engl J Med. 2009;361(12):1139-1151. DOI: 10.1056/NEJMoa0905561. PMID: 19717844",
-      "ANDEXXA (andexanete alfa) — rótulo aprovado pelo FDA, DailyMed SPL setid 2d9d90a6-63e6-46ef-96ff-dd6519ae7b6c"
+      "ANDEXXA (andexanete alfa) — rótulo aprovado pelo FDA, DailyMed SPL setid 2d9d90a6-63e6-46ef-96ff-dd6519ae7b6c",
+      "Bula profissional de Pradaxa (etexilato de dabigatrana), Boehringer Ingelheim do Brasil — seções de contraindicações, posologia e características farmacológicas, consultada em republicação por duas fontes independentes em julho de 2026. Reconferir no bulário eletrônico da ANVISA quando acessível."
     ]
   },
   {
