@@ -1711,13 +1711,14 @@
       "insuficiencia cardiaca cronica": "Doses habitualmente maiores que na hipertensão e com variação ampla entre pacientes. Após titulação progressiva, a dose média eficaz de manutenção é de **50 a 75 mg a cada 6 horas, ou 100 mg 2 a 3x/dia**.",
       "ajuste renal e hepatico": "Em disfunção renal moderada a grave — **clearance de creatinina <30 mL/min** ou creatinina sérica **>2,5 mg/dL** — e em disfunção hepática, a dose ou o intervalo entre doses devem ser adaptados.",
       "gravidez": "A bula orienta **evitar antes do terceiro trimestre**. No fim da gravidez pode ser empregada quando não houver alternativa mais segura, ou quando a doença representar risco sério para a mãe ou para o recém-nascido — **pré-eclâmpsia e eclâmpsia são os exemplos citados pela própria bula**. Mulher que pretende engravidar não deve usar, e confirmada a gravidez o tratamento deve ser interrompido imediatamente.",
-      "emergencia hipertensiva gestacional (endovenosa)": "VERIFICAÇÃO HUMANA NECESSÁRIA — o esquema de 5 mg EV em bolus com repetição, que constava aqui, vinha de protocolo institucional de terceiro. Ele pertence à **bula da apresentação injetável**, que é outro registro e outro detentor, e não foi possível acessá-la nesta conferência. A bula oral acima **não traz posologia endovenosa** — não usar os números orais para a via injetável.",
+      "emergencia hipertensiva gestacional (endovenosa)": "Conferido na bula da **apresentação injetável** (20 mg/mL), que é registro distinto do da apresentação oral.\n\n- **Diluição**: uma ampola (20 mg) em **9 mL de cloreto de sódio 0,9%**, resultando em **2 mg/mL**.\n- **Dose inicial no adulto: 1 a 5 mg por via endovenosa**, seguida de **20 minutos de observação**.\n- **Se não houver controle** — definido como queda de 20% dos níveis iniciais ou pressão diastólica entre 90 e 100 mmHg — administrar **5 a 10 mg a intervalos de 20 minutos**, até uma **dose cumulativa máxima de 40 mg**.\n- **Crianças**, emergência hipertensiva: 0,1 a 0,5 mg/kg a cada 4 ou 6 horas, IM ou EV. A própria bula registra que **não há ensaio controlado** estabelecendo segurança e eficácia nessa faixa etária.\n\n**Duas diferenças em relação ao que estava escrito aqui**, que vinha de protocolo institucional de terceiro: a dose inicial é uma **faixa de 1 a 5 mg**, não 5 mg fixos, e o teto cumulativo é de **40 mg**, não 20 mg — o valor anterior interrompia a titulação na metade do que a bula autoriza.\n\nSobre a gestação especificamente: a bula injetável classifica a hidralazina em **categoria de risco C** e condiciona o uso a que o benefício justifique claramente o risco; ela **não traz protocolo próprio de pré-eclâmpsia**. A indicação nesse cenário vem da bula oral, que cita pré-eclâmpsia e eclâmpsia como exemplo de risco materno grave, e de diretriz obstétrica — que não foi conferida nesta rodada.",
       "fonte": "Bula profissional brasileira da Apresolina (drágeas), conferida na íntegra. Cobre apenas a via oral."
     },
     "references": [
       "Hydralazine hydrochloride — rótulo aprovado pelo FDA, DailyMed SPL setid 1275dd50-d97f-2e8f-e063-6394a90a4a67",
       "Taylor AL, Ziesche S, Yancy C, et al. Combination of isosorbide dinitrate and hydralazine in blacks with heart failure (A-HeFT). N Engl J Med. 2004;351(20):2049-2057. DOI: 10.1056/NEJMoa042934. PMID: 15533851",
-      "Bula do profissional de saúde de APRESOLINA (cloridrato de hidralazina, drágeas), Novartis Biociências SA — seções de posologia, populações especiais e gravidez."
+      "Bula do profissional de saúde de APRESOLINA (cloridrato de hidralazina, drágeas), Novartis Biociências SA — seções de posologia, populações especiais e gravidez.",
+      "Bula profissional de NEPRESOL (cloridrato de hidralazina, solução injetável 20 mg/mL), Cristália Produtos Químicos Farmacêuticos Ltda. — posologia, diluição e populações especiais."
     ]
   },
   {
@@ -2123,8 +2124,9 @@
     "drug_class": "Betabloqueador cardiosseletivo beta-1, de segunda geração, sem atividade simpaticomimética intrínseca",
     "mechanism": "Bloqueio competitivo e reversível de receptores beta-1 adrenérgicos cardíacos, com seletividade beta1:beta2 de 10 a 20 vezes, reduzindo frequência cardíaca, contratilidade, condução atrioventricular e liberação de renina. Metabolismo hepático via CYP2D6: metabolizadores lentos, 5 a 10% da população, atingem níveis plasmáticos várias vezes maiores. A lipofilia explica a penetração no sistema nervoso central e os efeitos de insônia e pesadelos.",
     "presentations": [
-      "**Succinato (liberação controlada, SELOZOK)** — comprimidos revestidos de **25 mg, 50 mg e 100 mg**, conferidos na bula brasileira. **Não existe comprimido de 200 mg no Brasil**: a lista anterior trazia 200 mg por seguir a rotulagem norte-americana. A confusão tem origem previsível — 200 mg **é** uma dose prevista na bula (100-200 mg uma vez ao dia em hipertensão e em angina), mas alcançada por combinação de comprimidos, não por uma apresentação de 200 mg. Cada comprimido declara a equivalência: 23,75 mg de succinato = 25 mg de tartarato; 47,5 mg = 50 mg; 95 mg = 100 mg.",
-      "**Tartarato (liberação imediata e injetável)** — VERIFICAÇÃO HUMANA NECESSÁRIA para as apresentações de tartarato efetivamente registradas no Brasil, que não foram conferidas nesta rodada. A conferência acima cobre apenas o succinato."
+      "**Succinato (liberação controlada)** — comprimidos revestidos de **25 mg, 50 mg e 100 mg**. **Não existe comprimido de 200 mg no Brasil**: a lista anterior trazia 200 mg por seguir a rotulagem norte-americana. A confusão tem origem previsível — 200 mg **é** uma dose prevista na bula (100-200 mg uma vez ao dia em hipertensão e em angina), mas alcançada por combinação de comprimidos, não por uma apresentação. Cada comprimido declara a equivalência: 23,75 mg de succinato = 25 mg de tartarato; 47,5 mg = 50 mg; 95 mg = 100 mg.",
+      "**Tartarato, via oral** — comprimidos de **100 mg**, embalagem com 30. Uso adulto.",
+      "**Tartarato, via intravenosa** — solução injetável de **5 mg por ampola (1 mg/mL)**, ampolas de 5 mL, embalagem com 5. Uso adulto. Indicada, entre outras, para distúrbios do ritmo cardíaco, sobretudo taquiarritmias supraventriculares."
     ],
     "renal_adjustment": "Não é necessário ajuste. Em hemodiálise, administrar a dose de manutenção após a sessão.",
     "hepatic_adjustment": "Normalmente dispensável na cirrose; considerar redução quando houver comprometimento hepático grave.",
@@ -2132,7 +2134,7 @@
       "Hipertensão arterial, angina, tratamento de manutenção pós-IAM, insuficiência cardíaca com fração de ejeção reduzida (classes II-IV da NYHA, apenas o succinato), arritmias e profilaxia de enxaqueca."
     ],
     "interactions": [
-      "Efeito aditivo sobre a condução, com risco de bradicardia sinusal e bloqueio atrioventricular. A meia-vida da amiodarona é de dezenas de dias, então a interação persiste muito depois da suspensão. VERIFICAÇÃO HUMANA NECESSÁRIA para a conduta de reduzir a dose de metoprolol à metade ao associar amiodarona, que estava escrita aqui sem fonte identificada."
+      "**Amiodarona e outros antiarrítmicos** — a bula brasileira registra que betabloqueadores podem **aumentar os efeitos negativos sobre o inotropismo e o dromotropismo cardíacos** de antiarrítmicos do tipo da quinidina e da amiodarona. O risco prático é bradicardia sinusal e bloqueio atrioventricular, e a meia-vida da amiodarona é de dezenas de dias — a interação persiste muito depois de suspendê-la.\n\n**A conduta de reduzir a dose de metoprolol à metade ao associar amiodarona, que estava escrita aqui, foi retirada**: a bula descreve o efeito aditivo e orienta cautela, mas **não prescreve fração de redução**. O número não foi localizado em nenhuma fonte conferida, e mantê-lo daria aparência de recomendação de bula a uma regra sem procedência. A conduta amparada é monitorar frequência e condução, e titular pela resposta."
     ],
     "adverse_effects": [
       "Bradicardia sinusal, hipotensão, fadiga (em geral transitória, mais comum nos primeiros 2 a 3 meses), extremidades frias, insônia e pesadelos (ligados à lipofilia), bloqueio atrioventricular, broncoespasmo dose-dependente e mascaramento dos sinais de hipoglicemia em diabético insulinizado."
@@ -2173,7 +2175,9 @@
       "Kristensen AMD, Rossello X, Atar D, et al; Beta-Blocker Trialists' Collaboration. Beta-blockers after myocardial infarction with normal ejection fraction. N Engl J Med. 2026;394(6):540-550 (publicado on-line em 9 de novembro de 2025). DOI: 10.1056/NEJMoa2512686. PMID: 41211954",
       "Metoprolol succinate extended-release tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 76c69d7c-e90c-4f96-a45b-e9dad9444263",
       "Kristensen AMD, Rossello X, Atar D, et al.; Beta-Blocker Trialists' Collaboration. Beta-Blockers after Myocardial Infarction with Normal Ejection Fraction. N Engl J Med. 2026;394(6):540-550. DOI: 10.1056/NEJMoa2512686. PMID: 41211954",
-      "Bula de SELOZOK (succinato de metoprolol), AstraZeneca do Brasil Ltda. — seção Apresentações e Composição. Documento obtido no site do detentor do registro."
+      "Bula de SELOZOK (succinato de metoprolol), AstraZeneca do Brasil Ltda. — seção Apresentações e Composição. Documento obtido no site do detentor do registro.",
+      "Bula de SELOKEN (tartarato de metoprolol) comprimidos 100 mg, AstraZeneca do Brasil Ltda. — apresentações e composição.",
+      "Bula profissional de SELOKEN injetável (tartarato de metoprolol) 5 mg/5 mL, AstraZeneca do Brasil Ltda. — apresentações, indicações e interações medicamentosas."
     ]
   },
   {
