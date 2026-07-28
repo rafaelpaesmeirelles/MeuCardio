@@ -1635,16 +1635,14 @@
       "Monitorizar níveis de creatinina, sódio e potássio regularmente durante o tratamento"
     ],
     "dosing": {
-      "oral diuretico adulto": "Dose inicial de 20-80 mg/dia; pode repetir em 6-8 horas; dose de manutenção 20-40 mg/dia; dose habitual 40-120 mg/dia",
-      "injetavel adulto": "20-40 mg EV ou IM, 1-2x/dia, podendo repetir em intervalos de 2h com incrementos de 20 mg até resposta desejada",
-      "edema pulmonar agudo": "40 mg EV inicial; se necessário, dose adicional de 20-40 mg (1-2 ampolas) após 20 minutos",
-      "diurese forcada": "20-40 mg associados a infusão de eletrólitos; posologia total de 100-300 mg/dia por período máximo de 48 horas",
-      "pediatria oral": "Lactentes e crianças menores de 15 anos: 1-2 mg/kg/dose a cada 6-8 horas",
-      "pediatria injetavel": "1 mg/kg/dose EV ou IM; não repetir antes de 2h; manutenção 1 mg/kg/dose a cada 6-12h",
-      "dose maxima adulto": "**600 mg/dia** — é a dose humana máxima a que o rótulo se refere, e vale como teto de referência para as duas vias. A versão anterior deste verbete trazia \"EV em infusão: 6 gramas/dia\", **dez vezes** esse valor, num diurético de alça cujo risco de ototoxicidade cresce justamente com dose alta e infusão rápida. VERIFICAÇÃO HUMANA NECESSÁRIA para doses acima de 600 mg/dia em congestão refratária, que existem na prática de terapia intensiva mas precisam de fonte própria — não de um teto herdado sem procedência",
-      "dose maxima pediatrica": "Oral: 40 mg/dia ou 6 mg/kg/dose; injetável: 20 mg/dia ou 6 mg/kg/dose",
-      "velocidade infusao": "Adulto: não exceder 4 mg/min; pediatria: 0,5 mg/kg/min",
-      "fonte": "rótulo da furosemida injetável aprovado pelo FDA (DailyMed)"
+      "oral adulto": "Início com **20 a 80 mg/dia**; manutenção de **20 a 40 mg/dia**. O princípio que a bula coloca antes de qualquer número: *a dose deve ser a menor possível para atingir o efeito desejado*.",
+      "dose maxima adulto": "**A bula brasileira não fixa um teto**: diz literalmente que *a dose máxima depende da resposta do paciente*. O valor de 600 mg/dia que constava aqui vem da **rotulagem norte-americana**, não da brasileira, e foi retirado dessa posição para não passar por limite regulatório que não existe aqui. O maior número que aparece na bula brasileira é o da diurese forçada, abaixo, e ele tem prazo.\n\nRegistro do que já esteve errado neste campo, porque a diferença é de ordem de grandeza: uma versão anterior trazia *EV em infusão: 6 gramas/dia* — **dez vezes** o teto americano, num diurético de alça cujo risco de ototoxicidade cresce justamente com dose alta e infusão rápida.",
+      "injetavel adulto": "20 a 40 mg EV ou IM, 1 a 2x/dia, podendo repetir a intervalos de 2 horas com incrementos de 20 mg até a resposta desejada.",
+      "edema agudo de pulmao": "**40 mg EV** inicialmente; se necessário, dose adicional de **20 a 40 mg após 20 minutos**.",
+      "diurese forcada": "**100 a 300 mg/dia**, associada a reposição de eletrólitos, por período **máximo de 48 horas**. É o esquema de dose mais alta previsto na bula brasileira, e o prazo faz parte da posologia.",
+      "pediatria oral": "**2 mg/kg/dia, até o máximo de 40 mg/dia**, em lactentes e crianças abaixo de 15 anos. A bula orienta preferir a via oral nessa faixa.",
+      "pediatria injetavel": "**1 mg/kg, até o máximo diário de 20 mg** (1 ampola), por via endovenosa ou intramuscular.",
+      "fonte": "Bula brasileira de Lasix (Sanofi), seção de posologia, conferida na íntegra. **A marca anterior está resolvida**, e com resultado diferente do esperado: não havia teto de 600 mg/dia a confirmar, porque a bula registrada no Brasil não estabelece teto fixo para adulto. Dose acima das faixas acima continua sendo decisão clínica individual, e não está amparada por número da bula."
     },
     "notes": {
       "Diluicao": "Pode ser administrada sem diluição ou diluída em SF, SG 5%, Ringer ou Ringer lactato, em concentração de 1-2 mg/mL (concentração máxima 10 mg/mL)",
@@ -1653,7 +1651,8 @@
       "Administracao intramuscular": "Deve ser restrita a casos excepcionais em que administração oral ou intravenosa não são possíveis; não é adequada para tratamento de condições agudas como edema pulmonar"
     },
     "references": [
-      "Furosemide injection — rótulo aprovado pelo FDA, DailyMed SPL setid 75d5611a-f9e0-1841-e053-2991aa0af415"
+      "Furosemide injection — rótulo aprovado pelo FDA, DailyMed SPL setid 75d5611a-f9e0-1841-e053-2991aa0af415",
+      "Bula de LASIX (furosemida), Sanofi Medley Farmacêutica Ltda. — seção de posologia, versão brasileira."
     ]
   },
   {
@@ -3071,11 +3070,14 @@
     ],
     "dosing": {
       "disfuncao eretil": "50 mg VO, 1h antes da relação sexual; ajuste de 25-100 mg conforme tolerabilidade; dose máxima de 100 mg/dia",
-      "hipertensao arterial pulmonar": "**20 mg por via oral, 3x/dia** — e a indicação **não é off-label**: existe produto especificamente aprovado para hipertensão arterial pulmonar do grupo I da OMS, em adultos e em pediatria de 1 a 17 anos, para melhorar a capacidade de exercício e retardar a piora clínica. A versão anterior deste verbete chamava o uso de off-label e dava a faixa de 5-20 mg 3x/dia com máximo de 80 mg/dia, que não corresponde à posologia aprovada. VERIFICAÇÃO HUMANA NECESSÁRIA para doses acima da aprovada, que existem na prática mas precisam de fonte própria",
-      "fonte": "rótulo do sildenafila para hipertensão arterial pulmonar aprovado pelo FDA (DailyMed)"
+      "hipertensao arterial pulmonar": "**20 mg por via oral, 3x/dia**, a cada 6 a 8 horas, com ou sem alimentos. O comprimido não deve ser partido, aberto nem mastigado.\n\n**A indicação não é off-label**: existe produto registrado no Brasil especificamente para hipertensão arterial pulmonar, com eficácia declarada em melhorar a capacidade de exercício, retardar a piora clínica e reduzir a pressão arterial pulmonar média. A versão anterior deste verbete chamava o uso de off-label e dava a faixa de 5-20 mg 3x/dia com máximo de 80 mg/dia, que não corresponde à posologia aprovada.",
+      "fonte": "Bula profissional brasileira do Revatio, seções de indicações e de posologia, conferida na íntegra. **A marca anterior está resolvida** quanto à dose de adulto. VERIFICAÇÃO HUMANA NECESSÁRIA para duas coisas que **não foram localizadas neste documento** e por isso não são afirmadas aqui: a posologia pediátrica (a faixa de 1 a 17 anos, com 10 mg 3x/dia até 20 kg e 20 mg 3x/dia acima, consta da rotulagem norte-americana) e a delimitação da indicação ao grupo I da OMS, que a bula brasileira não traz nesses termos.",
+      "ajuste por inibidor de cyp3a4": "Ajuste que faltava neste verbete e muda a prescrição: **20 mg 2x/dia** quando já houver uso de inibidor da CYP3A4 como eritromicina ou saquinavir; **20 mg 1x/dia** com inibidores mais potentes como claritromicina, telitromicina e nefazodona; e **não é recomendado** o uso concomitante com os mais potentes — cetoconazol, itraconazol e ritonavir.",
+      "populacoes especiais": "**Idosos**: sem ajuste. **Insuficiência renal**: sem ajuste, **inclusive na grave** (clearance de creatinina <30 mL/min) — o que distingue a sildenafila de boa parte do arsenal cardiológico. **Insuficiência hepática**: sem ajuste nas classes A e B de Child-Pugh; **não estudada na classe C**."
     },
     "references": [
-      "Sildenafil (REVATIO) — rótulo aprovado pelo FDA para hipertensão arterial pulmonar, DailyMed SPL setid 3bb9363e-b28d-4019-8aae-539233dca214"
+      "Sildenafil (REVATIO) — rótulo aprovado pelo FDA para hipertensão arterial pulmonar, DailyMed SPL setid 3bb9363e-b28d-4019-8aae-539233dca214",
+      "Bula do profissional de saúde de REVATIO (citrato de sildenafila), Viatris Farmacêutica do Brasil Ltda. — seções 1, 4 e 8. Documento obtido no site do detentor do registro."
     ]
   },
   {
