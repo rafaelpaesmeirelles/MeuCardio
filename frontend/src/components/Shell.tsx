@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "../lib/auth";
 import { api } from "../lib/api";
 import Credito from "./Credito";
@@ -32,6 +32,10 @@ const NAV_BASE: ItemNav[] = [
 
 export default function Shell() {
   const { usuario, sair } = useAuth();
+  const navigate = useNavigate();
+  // O atalho não aparece dentro do próprio modo emergência: lá ele seria um
+  // botão que não leva a lugar nenhum, ocupando o canto que a tela usa.
+  const naEmergencia = useLocation().pathname.startsWith("/emergencia");
   const [pendentes, setPendentes] = useState(0);
   const [menuAberto, setMenuAberto] = useState(false);
 
@@ -133,6 +137,20 @@ export default function Shell() {
           </NavLink>
         ))}
       </nav>
-    </div>
+    
+      {/* Tarefa 15 — acesso ao Modo Emergência em um toque, de qualquer tela.
+          Fica fora do menu de propósito: o requisito é chegar lá sob pressão,
+          e um item de menu já custa o toque de abrir o menu. */}
+      {!naEmergencia && (
+        <button
+          className="emerg-atalho"
+          onClick={() => navigate("/emergencia")}
+          aria-label="Abrir o modo emergência"
+          title="Protocolos de risco imediato de vida"
+        >
+          ● Emergência
+        </button>
+      )}
+</div>
   );
 }

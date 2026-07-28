@@ -27,12 +27,26 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ["**/*.{js,css,html,svg,png,woff2}"],
+        // Sem isto, abrir /emergencia offline devolveria 404 do servidor em vez
+        // da aplicação: a rota é do roteador do cliente, não existe no disco.
+        navigateFallback: "index.html",
         runtimeCaching: [
           {
-            // Conteúdo científico fica disponível offline após a primeira leitura.
-            urlPattern: /\/api\/(library|calculators|drugs)/,
+            // O pacote do Modo Emergência tem regra própria e vem primeiro: a
+            // resposta guardada é servida de imediato e revalidada em segundo
+            // plano, de modo que a tela abre mesmo sem rede. A página também
+            // guarda o pacote por conta própria (localStorage), porque um
+            // service worker pode não estar ativo no primeiro acesso — e a
+            // única tela que não pode falhar é justamente esta.
+            urlPattern: /\/api\/emergencia/,
             handler: "StaleWhileRevalidate",
-            options: { cacheName: "meucardio-conteudo", expiration: { maxEntries: 500 } }
+            options: { cacheName: "corvia-emergencia", expiration: { maxEntries: 8 } }
+          },
+          {
+            // Conteúdo científico fica disponível offline após a primeira leitura.
+            urlPattern: /\/api\/(library|calculators|drugs|material-paciente)/,
+            handler: "StaleWhileRevalidate",
+            options: { cacheName: "corvia-conteudo", expiration: { maxEntries: 500 } }
           },
           {
             // Dados de paciente nunca são cacheados.

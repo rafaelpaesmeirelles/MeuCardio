@@ -1,0 +1,99 @@
+[
+  {
+    "slug": "sindrome-coronariana-aguda",
+    "titulo": "Síndrome coronariana aguda",
+    "gatilho": "Dor torácica com suspeita de isquemia · supra de ST · instabilidade",
+    "ordem": 1,
+    "documento_slug": "sindrome-coronariana-aguda-diagnostico-e-manejo-esc-2023",
+    "fluxograma_slug": "fluxograma-sindrome-coronariana-aguda-esc-2023",
+    "relacionados": [
+      "sindrome-coronariana-aguda-timing-invasivo-e-dapt-esc-2023",
+      "sindrome-coronariana-aguda-estratificacao-de-risco-grace-complemento"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "choque-cardiogenico",
+    "titulo": "Choque cardiogênico",
+    "gatilho": "Hipoperfusão com congestão · lactato em elevação · PAS baixa sustentada",
+    "ordem": 2,
+    "documento_slug": "choque-cardiogenico-fisiopatologia-e-manejo",
+    "fluxograma_slug": "fluxograma-choque-cardiogenico-estagios-scai",
+    "relacionados": [
+      "choque-cardiogenico-diagnostico-e-manejo-com-drogas-vasoativas",
+      "classificacao-scai-de-estagios-do-choque-cardiogenico",
+      "choque-cardiogenico-suporte-circulatorio-mecanico-temporario"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "tromboembolismo-pulmonar",
+    "titulo": "Tromboembolismo pulmonar agudo",
+    "gatilho": "Dispneia súbita · hipotensão com sobrecarga de VD · síncope inexplicada",
+    "ordem": 3,
+    "documento_slug": "tromboembolismo-pulmonar-agudo-diagnostico-e-manejo-escers-2019",
+    "fluxograma_slug": "fluxograma-tromboembolismo-pulmonar-diagnostico-esc-2019",
+    "relacionados": [],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sindrome-aortica-aguda",
+    "titulo": "Síndrome aórtica aguda",
+    "gatilho": "Dor de início súbito e máxima no começo · assimetria de pulso ou de pressão",
+    "ordem": 4,
+    "documento_slug": "sindrome-aortica-aguda-dissecacao-diagnostico-e-manejo",
+    "fluxograma_slug": "fluxograma-sindrome-aortica-aguda-esc-2024",
+    "relacionados": [],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "tamponamento-cardiaco",
+    "titulo": "Tamponamento cardíaco",
+    "gatilho": "Hipotensão com turgência jugular · pulso paradoxal · bulhas abafadas",
+    "ordem": 5,
+    "documento_slug": "tamponamento-cardiaco-e-pericardite-constritiva-diagnostico-e-manejo",
+    "fluxograma_slug": null,
+    "relacionados": [],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "arritmia-ventricular-e-morte-subita",
+    "titulo": "Arritmia ventricular e risco de morte súbita",
+    "gatilho": "Taquicardia de QRS largo · TV sustentada · tempestade elétrica",
+    "ordem": 6,
+    "documento_slug": "arritmias-ventriculares-e-prevencao-de-morte-subita-cardiaca-esc-2022",
+    "fluxograma_slug": null,
+    "relacionados": ["bradiarritmias-bloqueio-atrioventricular-e-tempestade-eletrica"],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "bradiarritmia-e-bloqueio-av",
+    "titulo": "Bradiarritmia e bloqueio atrioventricular",
+    "gatilho": "Bradicardia com hipoperfusão · BAV avançado · pausas sintomáticas",
+    "ordem": 7,
+    "documento_slug": "bradiarritmias-bloqueio-atrioventricular-e-tempestade-eletrica",
+    "fluxograma_slug": null,
+    "relacionados": [],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "taquicardia-supraventricular",
+    "titulo": "Taquicardia supraventricular",
+    "gatilho": "Taquicardia regular de QRS estreito · instabilidade hemodinâmica",
+    "ordem": 8,
+    "documento_slug": "taquicardia-supraventricular-diagnostico-e-manejo-esc-2019",
+    "fluxograma_slug": null,
+    "relacionados": [],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "emergencia-hipertensiva",
+    "titulo": "Emergência hipertensiva",
+    "gatilho": "Pressão muito elevada COM lesão aguda de órgão-alvo",
+    "ordem": 9,
+    "documento_slug": "emergencia-hipertensiva-e-triagem-de-hipertensao-secundaria",
+    "fluxograma_slug": null,
+    "relacionados": [],
+    "review_status": "revisado"
+  }
+]

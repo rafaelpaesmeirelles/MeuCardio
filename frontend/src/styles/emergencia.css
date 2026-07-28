@@ -1,0 +1,150 @@
+/* Modo Emergência (Tarefa 15) — regras de design próprias.
+ *
+ * Não usa os papéis semânticos do resto do sistema porque não é mais uma tela
+ * do sistema: é um modo com prioridade diferente. Onde a plataforma inteira
+ * otimiza densidade de informação, aqui a prioridade é velocidade de leitura
+ * sob estresse.
+ *
+ * Fundo navy escuro com texto claro, e não o inverso, por dois motivos
+ * concretos: distingue o modo à primeira olhada, de modo que ninguém confunde
+ * com a leitura tranquila da biblioteca; e reduz o ofuscamento num corredor mal
+ * iluminado às três da manhã, que é onde a tela vai ser aberta.
+ *
+ * As cores vêm da paleta da marca — este é o sexto lugar fora do tokens.css
+ * que precisa acompanhar uma troca de paleta.
+ */
+
+.emerg {
+  --e-fundo: #081e30;
+  --e-superficie: #0b2e45;
+  --e-borda: #1c4a68;
+  --e-texto: #f4f7f9;
+  --e-suave: #a9c2d2;
+  --e-acao: #d5001d;
+  --e-alerta: #ffb4b4;
+
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  overflow-y: auto;
+  background: var(--e-fundo);
+  color: var(--e-texto);
+  padding: 0 1rem 4rem;
+  font-size: 1.08rem;
+  line-height: 1.6;
+  -webkit-overflow-scrolling: touch;
+}
+
+.emerg__topo {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  margin: 0 -1rem 1rem;
+  padding: 0.85rem 1rem;
+  background: var(--e-acao);
+  color: #fff;
+}
+.emerg__marca {
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  font-size: 0.86rem;
+}
+.emerg__offline {
+  font-size: 0.78rem;
+  background: rgba(0, 0, 0, 0.28);
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+}
+
+.emerg__aviso { color: var(--e-suave); font-size: 0.95rem; margin: 0 0 1.1rem; }
+.emerg__erro  { color: var(--e-alerta); font-size: 1rem; margin: 0 0 1.1rem; }
+
+.emerg__lista { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.7rem; }
+
+/* Alvo de toque grande de propósito: mão trêmula, tela suja, pressa. */
+.emerg__alvo {
+  display: block;
+  width: 100%;
+  min-height: 74px;
+  text-align: left;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--e-borda);
+  border-left: 5px solid var(--e-acao);
+  border-radius: 10px;
+  background: var(--e-superficie);
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+.emerg__alvo:hover, .emerg__alvo:focus-visible { background: #10395458; outline: none; border-color: #4d90b3; }
+.emerg__alvo strong { display: block; font-size: 1.35rem; line-height: 1.25; }
+.emerg__alvo span   { display: block; margin-top: 0.35rem; color: var(--e-suave); font-size: 0.94rem; }
+
+.emerg__voltar {
+  background: none; border: 0; color: var(--e-suave);
+  font: inherit; padding: 0.4rem 0; cursor: pointer;
+}
+.emerg__protocolo h1 { font-size: 1.9rem; line-height: 1.2; margin: 0.2rem 0 1rem; }
+
+.emerg__lacuna {
+  background: #3a1119; border-left: 5px solid var(--e-acao);
+  padding: 0.75rem 0.9rem; border-radius: 8px; color: var(--e-alerta);
+  font-size: 0.95rem;
+}
+
+.emerg__diagrama { margin: 1.2rem 0; }
+.emerg__diagrama h2 { font-size: 1.05rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--e-suave); }
+/* O mermaid desenha sobre fundo claro: uma placa branca sob o diagrama
+ * preserva o contraste do próprio diagrama em vez de forçar um tema escuro
+ * que mudaria as cores das formas — e as formas têm significado. */
+.emerg__diagrama > div { background: #fff; border-radius: 10px; padding: 0.6rem; overflow-x: auto; }
+
+.emerg__secao { border-top: 1px solid var(--e-borda); }
+.emerg__secaoTitulo {
+  width: 100%; text-align: left; background: none; border: 0; color: var(--e-texto);
+  font: inherit; font-weight: 700; font-size: 1.16rem;
+  padding: 0.95rem 1.6rem 0.95rem 0; cursor: pointer; position: relative;
+}
+.emerg__secaoTitulo::after {
+  content: "＋"; position: absolute; right: 0.1rem; color: var(--e-suave); font-weight: 400;
+}
+.emerg__secaoTitulo.aberta::after { content: "－"; }
+.emerg__corpo { padding-bottom: 1rem; }
+.emerg__corpo :is(p, li) { font-size: 1.06rem; }
+.emerg__corpo :is(h3, h4) { font-size: 1.02rem; color: var(--e-suave); }
+.emerg__corpo strong { color: #fff; }
+.emerg__corpo a { color: #8fd0ea; }
+.emerg__corpo table { width: 100%; border-collapse: collapse; font-size: 0.95rem; display: block; overflow-x: auto; }
+.emerg__corpo :is(th, td) { border: 1px solid var(--e-borda); padding: 0.45rem 0.6rem; text-align: left; }
+.emerg__corpo th { background: var(--e-superficie); }
+
+.emerg__origem { margin-top: 1.6rem; color: var(--e-suave); font-size: 0.85rem; }
+
+/* Botão de acesso, fixo em todas as telas — o requisito é chegar aqui em um
+ * ou dois toques a partir de qualquer lugar, então ele não pode morar no menu. */
+.emerg-atalho {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 55;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.8rem 1.15rem;
+  border: 0;
+  border-radius: 999px;
+  background: #d5001d;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+}
+.emerg-atalho:hover, .emerg-atalho:focus-visible { background: #b00018; outline: none; }
+@media print { .emerg-atalho { display: none; } }
