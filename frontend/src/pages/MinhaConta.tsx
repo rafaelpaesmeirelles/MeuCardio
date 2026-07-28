@@ -73,6 +73,14 @@ function DadosPessoais({ perfil, aoSalvar }: { perfil: Usuario; aoSalvar: (u: Us
 
       <label htmlFor="conta-nome">Nome completo</label>
       <input id="conta-nome" value={dados.full_name} onChange={(e) => set("full_name", e.target.value)} />
+      {!valido && (
+        // Sem esta mensagem o botão fica desabilitado sem explicação, e quem
+        // tem só um nome cadastrado (contas criadas pelo admin, por exemplo)
+        // não descobre por que não consegue salvar nada da página.
+        <p style={{ color: "var(--alerta)", fontSize: "0.82rem", margin: "0.3rem 0 0" }}>
+          Informe nome e sobrenome — é o que o cadastro exige para salvar.
+        </p>
+      )}
 
       <label htmlFor="conta-profissao" style={{ marginTop: "0.8rem" }}>Profissão</label>
       <input id="conta-profissao" value={dados.profession} onChange={(e) => set("profession", e.target.value)} />
