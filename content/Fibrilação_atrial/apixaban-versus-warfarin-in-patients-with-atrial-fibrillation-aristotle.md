@@ -3,8 +3,8 @@ title: "Apixaban versus Warfarin in Patients with Atrial Fibrillation (ARISTOTLE
 slug: apixaban-versus-warfarin-in-patients-with-atrial-fibrillation-aristotle
 theme: "Fibrilação atrial"
 kind: estudo
-review_status: pendente_revisao
-source_refs: []
+review_status: revisado
+source_refs: ["Granger CB, Alexander JH, McMurray JJV, et al. Apixaban versus warfarin in patients with atrial fibrillation (ARISTOTLE). N Engl J Med. 2011;365(11):981-992. DOI: 10.1056/NEJMoa1107039. PMID: 21870978", "Connolly SJ, Ezekowitz MD, Yusuf S, et al. Dabigatran versus warfarin in patients with atrial fibrillation (RE-LY). N Engl J Med. 2009;361(12):1139-1151. DOI: 10.1056/NEJMoa0905561. PMID: 19717844"]
 legacy_source: "estudos/biblioteca-cientifica-aristotle-dados-completos.md"
 ---
 
@@ -35,7 +35,7 @@ Apixabana superior à warfarina na prevenção de AVC/embolismo sistêmico (HR 0
 Menor incidência de AVC hemorrágico e sangramento maior comparado à warfarina, diferencial de segurança importante da classe dos DOACs
 
 ## Implicacoes clinicas
-Único entre os grandes ensaios de DOACs a demonstrar superioridade (não apenas não inferioridade) em relação à warfarina para o desfecho primário, consolidando apixabana como opção de referência em FA não valvar
+Único entre os grandes ensaios de DOACs a reunir, no mesmo estudo, superioridade em AVC/embolismo sistêmico, menos sangramento maior e menor mortalidade por todas as causas. A afirmação de ser o único a mostrar superioridade no desfecho primário não se sustenta: no RE-LY, a dabigatrana 150 mg 2x/dia também foi superior à varfarina (RR 0,66, IC95% 0,53-0,82, p<0,001 para superioridade)
 
 ## Fonte
 NEJM ; 2 Minute Medicine ; Nature Reviews Cardiology

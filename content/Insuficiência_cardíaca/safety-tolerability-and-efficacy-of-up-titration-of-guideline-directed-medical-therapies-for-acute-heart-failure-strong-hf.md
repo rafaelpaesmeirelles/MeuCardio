@@ -4,7 +4,7 @@ slug: safety-tolerability-and-efficacy-of-up-titration-of-guideline-directed-med
 theme: "Insuficiência cardíaca"
 kind: estudo
 review_status: pendente_revisao
-source_refs: []
+source_refs: ["Mebazaa A, Davison B, Chioncel O, et al. Safety, tolerability and efficacy of up-titration of guideline-directed medical therapies for acute heart failure (STRONG-HF): a multinational, open-label, randomised, trial. Lancet. 2022;400(10367):1938-1952. DOI: 10.1016/S0140-6736(22)02076-1. PMID: 36356631"]
 legacy_source: "estudos/biblioteca-cientifica-strong-hf.md"
 ---
 
@@ -23,7 +23,7 @@ The Lancet
 Ensaio clínico randomizado, multinacional, aberto (open-label), pragmático, interrompido precocemente por eficácia
 
 ## Populacao
-1.085 pacientes adultos admitidos por IC aguda; idade média 63 anos, 61% homens, 77% caucasianos, FEVE média de 36%
+1.078 pacientes adultos randomizados após admissão por IC aguda (1.641 triados; 542 em alta intensidade e 536 em cuidado usual); idade média 63 anos, 61% homens, 77% caucasianos, FEVE média de 36%
 
 ## Intervencao
 Estratégia de alta intensidade (n=542): primeira dose de terapia guiada por diretriz 2 dias antes da alta, com titulação rápida até 100% das doses recomendadas dentro de 2 semanas, monitorizada por visitas quinzenais (média de 4,8 consultas) vs. cuidado usual (n=536, média de 1 consulta), conforme julgamento do médico assistente local
@@ -34,10 +34,10 @@ Estratégia de alta intensidade (n=542): primeira dose de terapia guiada por dir
 - **titulacao medicamentosa**: 49-84% dos pacientes do grupo de alta intensidade atingiram dose plena de inibidores do sistema renina-angiotensina, betabloqueadores e/ou antagonistas mineralocorticoides aos 90 dias, comparado a apenas 2-46% no grupo usual
 - **marcadores secundarios**: Redução significativa de NT-proBNP, melhora de classificação funcional NYHA, e normalização de pressão arterial e pulso no grupo de alta intensidade
 - **qualidade de vida**: Estratégia intensiva foi bem aceita pelos pacientes, associada a redução de sintomas e melhora de qualidade de vida
-- **fonte**: The Hospitalist ; Lancet ; Roche
+- **fonte**: Mebazaa A et al. Lancet. 2022;400(10367):1938-1952 — números conferidos no resumo indexado (PMID 36356631)
 
 ## Implicacoes clinicas
-Evidência pivotal que fundamentou a recomendação Classe I, Nível B do 2023 ESC Focused Update em favor de estratégia de titulação rápida pré-alta e seguimento estreito nas 6 semanas pós-hospitalização por IC
+Evidência pivotal do 2023 ESC Focused Update sobre insuficiência cardíaca (VERIFICAÇÃO HUMANA NECESSÁRIA para a classe e o nível exatos da recomendação, que não foram conferidos na tabela da diretriz) em favor de estratégia de titulação rápida pré-alta e seguimento estreito nas 6 semanas pós-hospitalização por IC
 
 ## Seguranca
 Estratégia intensiva foi geralmente segura e bem tolerada, apesar da titulação acelerada de múltiplas classes medicamentosas simultaneamente
