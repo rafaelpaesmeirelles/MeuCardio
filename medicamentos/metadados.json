@@ -1144,17 +1144,19 @@
     ],
     "dosing": {
       "fa nao valvular padrao": "60 mg VO 1x/dia",
-      "fa ajuste dose reduzida": "30 mg VO 1x/dia se ≥1 dos seguintes: ClCr 15-50 mL/min, peso ≤60 kg, uso concomitante de inibidores potentes de P-gp",
-      "tev tvp tep": "60 mg VO 1x/dia (ou 30mg com fatores de redução), após 5-10 dias de anticoagulante parenteral inicial",
+      "fa ajuste dose reduzida": "**30 mg VO 1x/dia** se presente **um ou mais** dos seguintes fatores: insuficiência renal moderada a grave (**ClCr 15-50 mL/min**), baixo peso corpóreo (**≤60 kg**) ou uso concomitante de inibidor da P-glicoproteína — **exceto amiodarona**, que não dispara a redução.",
+      "tev tvp tep": "60 mg VO 1x/dia após uso inicial de heparina, com os mesmos três critérios de redução para 30 mg.",
       "evidencia base": "Esquema sustentado pelo estudo ENGAGE AF-TIMI 48",
-      "fonte": "rótulo da edoxabana aprovado pelo FDA. VERIFICAÇÃO HUMANA NECESSÁRIA — os critérios de redução para 30 mg por **peso ≤60 kg** e por **inibidor de P-gp** constam da rotulagem europeia; a norte-americana reduz por função renal. Conferir qual conjunto vale na bula registrada na ANVISA antes de prescrever pelos três critérios"
+      "fonte": "Bula profissional brasileira, seção 8 (Posologia e modo de usar), conferida na íntegra. **A dúvida anterior está resolvida**: o conjunto de três critérios de redução — função renal, peso e inibidor de P-gp — é o que vale no Brasil, como na Europa, e **não** o critério isolado de função renal da rotulagem norte-americana. A exceção da amiodarona não constava deste verbete e foi acrescentada.",
+      "ajuste renal": "ClCr >50-80 mL/min: 60 mg 1x/dia. ClCr 15-50 mL/min: 30 mg 1x/dia. **ClCr <15 mL/min ou diálise: não recomendada** — há dados limitados. A função renal deve ser calculada antes de iniciar, por Cockcroft-Gault, que foi a fórmula usada nos estudos clínicos, e reavaliada sempre que houver suspeita de alteração."
     },
     "notes": {
       "Particularidade farmacologica": "Único entre os DOACs de fator Xa com recomendação explícita de dose reduzida por múltiplos critérios combinados (peso, função renal, interação medicamentosa), refletindo maior sensibilidade farmacocinética a estes fatores"
     },
     "references": [
       "Edoxaban tablets (SAVAYSA) — rótulo aprovado pelo FDA",
-      "Giugliano RP, Ruff CT, Braunwald E, et al. Edoxaban versus warfarin in patients with atrial fibrillation (ENGAGE AF-TIMI 48). N Engl J Med. 2013;369(22):2093-2104. DOI: 10.1056/NEJMoa1310907"
+      "Giugliano RP, Ruff CT, Braunwald E, et al. Edoxaban versus warfarin in patients with atrial fibrillation (ENGAGE AF-TIMI 48). N Engl J Med. 2013;369(22):2093-2104. DOI: 10.1056/NEJMoa1310907",
+      "Bula profissional de LIXIANA (edoxabana), Daiichi Sankyo Brasil Farmacêutica Ltda., seção 8 — Posologia e modo de usar. Documento obtido no site do detentor do registro."
     ]
   },
   {
@@ -2880,7 +2882,8 @@
       "conversao avk para rivaroxabana": "Iniciar quando RNI <2,5 (TVP/EP) ou <3,0 (FA)",
       "conversao rivaroxabana para avk": "Manter ambos até RNI ≥2,0; medir RNI apenas 24h após dose anterior",
       "esquecimento de dose": "Tomar imediatamente; não dobrar dose no mesmo dia",
-      "fonte": "rótulo da rivaroxabana aprovado pelo FDA (DailyMed). VERIFICAÇÃO HUMANA NECESSÁRIA para o esquema de 15 mg 1x/dia após ICP com stent em fibrilação atrial, que segue o desenho do PIONEER AF-PCI e consta da rotulagem europeia, não da americana — conferir o que a bula registrada na ANVISA autoriza"
+      "fonte": "Bula de Xarelto (rivaroxabana), Bayer S.A., versão VE0222 (CCDS14 para 15/20 mg e CCDS17 para 2,5/10 mg). **A dúvida anterior está resolvida**: o esquema de 15 mg 1x/dia após ICP com stent em fibrilação atrial consta da bula registrada no Brasil, com a alternativa de 10 mg 1x/dia em disfunção renal.",
+      "fa nao valvular apos icp com stent": "**15 mg 1x/dia**, associada a antiplaquetário (por exemplo clopidogrel) — esquema **previsto na bula aprovada no Brasil**, e não apenas na rotulagem europeia. A própria bula acrescenta um degrau que faltava neste verbete: **10 mg 1x/dia quando há comprometimento renal**."
     },
     "outcomes": {
       "Evidencia pivotal rocket af": "O ROCKET-AF comparou rivaroxabana 20 mg/dia (15 mg na insuficiência renal) à varfarina ajustada por INR em fibrilação atrial não valvar. Desfecho de AVC ou embolismo sistêmico na análise por protocolo: 1,7%/ano contra 2,2%/ano, HR 0,79 (IC95% 0,66-0,96), p<0,001 **para não inferioridade**. Na intenção de tratar, HR 0,88 (0,74-1,03), p=0,12 para superioridade. Os autores concluem não inferioridade, não superioridade. Sangramento intracraniano e fatal foram menos frequentes com rivaroxabana, sem diferença significativa no sangramento maior total"
@@ -2891,7 +2894,8 @@
     },
     "references": [
       "Rivaroxaban tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 481b7802-5093-43e7-bbd9-1532197eb6e6",
-      "Patel MR, Mahaffey KW, Garg J, et al. Rivaroxaban versus warfarin in nonvalvular atrial fibrillation (ROCKET AF). N Engl J Med. 2011;365(10):883-891. DOI: 10.1056/NEJMoa1009638. PMID: 21830957"
+      "Patel MR, Mahaffey KW, Garg J, et al. Rivaroxaban versus warfarin in nonvalvular atrial fibrillation (ROCKET AF). N Engl J Med. 2011;365(10):883-891. DOI: 10.1056/NEJMoa1009638. PMID: 21830957",
+      "Bula de XARELTO (rivaroxabana), Bayer S.A., versão VE0222 — CCDS14 (15 e 20 mg) e CCDS17 (2,5 e 10 mg), aprovada pela ANVISA."
     ]
   },
   {
