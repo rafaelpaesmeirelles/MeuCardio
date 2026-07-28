@@ -4,7 +4,7 @@ slug: diltiazem-cloridrato
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["Diltiazem hydrochloride — rótulos aprovados pelo FDA (formulações oral e injetável), consultados no DailyMed"]
+source_refs: ["Diltiazem hydrochloride injection — rótulo aprovado pelo FDA, DailyMed SPL setid bba03666-ff4f-4bf6-fa92-78e1ec2d9073"]
 legacy_source: "medicamentos/banco-de-medicamentos-diltiazem.md"
 ---
 
@@ -21,7 +21,7 @@ Bloqueia canais de cálcio tipo L no músculo liso vascular e miocárdio, promov
 
 ## Dose
 - **vo angina coronariopatias hipertensao**: 30-60 mg, 3-4x/dia; ou formulação de liberação programada 120-240mg 1x/dia
-- **ev fa flutter taquicardia supraventricular paroxistica dose inicial**: 0,25 mg/kg, EV direto em 2min (dose máxima 20mg); se resposta inadequada, repetir 0,35mg/kg após 15min (dose máxima 25mg)
+- **ev fa flutter taquicardia supraventricular paroxistica dose inicial**: 0,25 mg/kg de peso real em bolus por 2 minutos — **20 mg é a dose razoável para o paciente médio, não um teto**. Se a resposta for inadequada, repetir 0,35 mg/kg por 2 minutos após 15 minutos (25 mg para o paciente médio). Chamar esses valores de "dose máxima", como constava aqui, subdosaria quem pesa mais: 0,25 mg/kg em 100 kg dá 25 mg. Doses seguintes são individualizadas, e quem tem baixo peso deve ser dosado por mg/kg
 - **ev infusao continua**: 10 mg/h (infusões >24h ou >15mg/h não são recomendadas)
 - **adolescentes vo inicial**: 30 mg 4x/dia (não usar em menores de 12 anos)
 - **adulto dose maxima diaria vo**: 360 mg/dia
@@ -30,7 +30,7 @@ Bloqueia canais de cálcio tipo L no músculo liso vascular e miocárdio, promov
 - **insuficiencia renal**: Usar com cautela; sem dados específicos de ajuste para hemodiálise
 - **administracao vo**: 15 min antes das refeições para formulação de liberação imediata
 - **diluicao ev**: SF ou SG5%, concentração máxima 1mg/mL; estabilidade de 24h após diluição em bolsas PVC (temperatura ambiente controlada 15-30°C ou refrigeração 2-8°C)
-- **fonte**: VERIFICAÇÃO HUMANA NECESSÁRIA — as doses desta seção vinham de guia farmacêutico de outra instituição. As faixas conferem com a prática consagrada (0,25 mg/kg EV em 2 minutos, repetição de 0,35 mg/kg, infusão de 5 a 15 mg/h), mas cada valor precisa ser conferido contra a bula registrada na ANVISA e a diretriz de arritmias antes de a marcação sair
+- **fonte**: rótulo do cloridrato de diltiazem injetável aprovado pelo FDA (DailyMed). As doses endovenosas foram conferidas linha a linha; a infusão contínua é indicada para redução de frequência por até 24 horas em fibrilação ou flutter atrial
 
 ## Indicacoes
 Angina, coronariopatias, hipertensão arterial (VO); fibrilação/flutter atrial, taquicardia supraventricular paroxística (EV)

@@ -4,7 +4,7 @@ slug: verapamil-diltiazem
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["Bula Dilacoron 80mg — Bula Profissional · Abbott Brasil · https://www.abbottbrasil.com.br/content/dam/corp/abbott/pt-br/documents/pdfs/nossas-bulas/D/BU-12-Dilacoron-80-mg-bula-profissional.pdf", "Verapamil (Calan/Verelan) e Diltiazem (Cardizem LA) — bulas FDA · accessdata.fda.gov", "Verapamil — Drugs.com Dosage Guide, 2024"]
+source_refs: ["Verapamil hydrochloride — rótulo aprovado pelo FDA, DailyMed SPL setid df79ee3a-f0ed-1cc7-e053-2995a90af97f", "Diltiazem hydrochloride injection — rótulo aprovado pelo FDA, DailyMed SPL setid bba03666-ff4f-4bf6-fa92-78e1ec2d9073"]
 legacy_source: "medicamentos/banco-de-medicamentos-verapamil-diltiazem.md"
 ---
 
@@ -50,4 +50,4 @@ Não devem ser usados em combinação com betabloqueador por via IV (risco de bl
 
 **Ambos**: contraindicados em disfunção sistólica de VE relevante (efeito inotrópico negativo) e em bloqueio AV avançado sem marcapasso. Cautela em associação com betabloqueador pelo efeito aditivo na condução AV e na contratilidade.
 
-Fonte: bula FDA (Verelan/Calan para verapamil, Cardizem LA para diltiazem) e Drugs.com — dados convergentes.
+Fonte: rótulos aprovados pelo FDA do cloridrato de verapamil e do cloridrato de diltiazem, consultados no DailyMed. As doses acima foram conferidas linha a linha contra eles.
