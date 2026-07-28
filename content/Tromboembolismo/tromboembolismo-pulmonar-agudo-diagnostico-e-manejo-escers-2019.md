@@ -40,7 +40,7 @@ Algoritmo revisado de manejo ajustado ao risco considera gravidade clínica, dis
 ## Cancer e tep
 - **escolha farmacologica**: Edoxabana ou rivaroxabana devem ser consideradas como alternativa à heparina de baixo peso molecular em pacientes com câncer, com cautela em câncer gastrointestinal devido ao risco aumentado de sangramento com DOACs
 - **duracao**: Tratamento indefinido com HBPM, edoxabana ou rivaroxabana (indicação Classe IIa)
-- **fonte**: ACC Ten Points ; Slideshare
+- **fonte**: diretriz ESC 2019 de embolia pulmonar aguda, citada nas referências deste documento
 
 ## Tep na gravidez
 Algoritmo diagnóstico dedicado proposto para suspeita de TEP na gravidez; uso de D-dímero e outras regras de predição clínica para excluir TEP durante a gravidez é agora recomendação Classe IIa (previamente IIb). DOACs não são recomendados na gravidez (Classe III)
