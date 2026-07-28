@@ -4,8 +4,8 @@ slug: losartana-potassica
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["Bula do Losartana Potássica · Consulta Remédios/ANVISA · 2024 · https://consultaremedios.com.br/losartana-potassica/bula"]
-legacy_source: "medicamentos/banco-de-medicamentos-losartana-potassica.md"
+source_refs: ["Dahlöf B et al. Cardiovascular morbidity and mortality in the Losartan Intervention For Endpoint reduction in hypertension study (LIFE). The Lancet. 2002;359:995-1003. DOI: 10.1016/S0140-6736(02)08089-3", "Brenner BM et al. Effects of Losartan on Renal and Cardiovascular Outcomes in Patients with Type 2 Diabetes and Nephropathy (RENAAL). N Engl J Med. 2001;345:861-869. DOI: 10.1056/NEJMoa011161", "Bula profissional de losartana potássica — Agência Nacional de Vigilância Sanitária (ANVISA)"]
+legacy_source: "Fusão de dois documentos que colidiam no mesmo slug: medicamentos/banco-de-medicamentos-losartana-potassica.md (theme Farmacologia) e protocolos/modulo-atualizado-losartana-dose-completa-fecha-lacuna-anterior.md (theme Hipertensão). O segundo era descartado silenciosamente pelo importador a cada execução, então apresentações, farmacocinética, dose pediátrica e a contraindicação de estenose bilateral de artéria renal nunca chegaram a ficar disponíveis."
 ---
 
 # Losartana potássica
@@ -17,30 +17,41 @@ Losartana potássica
 Bloqueador do receptor de angiotensina II (BRA/ARA-II) — primeiro da classe
 
 ## Mecanismo acao
-Antagonista seletivo do receptor AT1 de angiotensina II, bloqueando diretamente a ação vasoconstritora e de liberação de aldosterona da angiotensina II, sem necessidade de inibir a ECA (não causa acúmulo de bradicinina, logo menor incidência de tosse seca vs. IECA)
+Antagonista seletivo do receptor AT1 de angiotensina II, bloqueando diretamente a ação vasoconstritora e a liberação de aldosterona mediadas pela angiotensina II. Não inibe a ECA e, portanto, não causa acúmulo de bradicinina — daí a menor incidência de tosse seca em comparação com os IECA.
+
+## Apresentacoes
+Comprimidos revestidos de 25 mg e 50 mg
+
+## Farmacocinetica
+Controla a pressão arterial por 24 horas sem induzir hipotensão acentuada nas primeiras horas de tratamento, o que permite dose única diária. Doses de 50 e 100 mg mantêm relação linear de exposição com o metabólito ativo principal, até 200 mg por via oral.
 
 ## Dose
-- **hipertensao**: 50 mg 1x/dia inicial e manutenção; pode aumentar para 100mg/dia; se depleção de volume, iniciar 25mg/dia; efeito máximo em 3-6 semanas
-- **hvE reducao risco cv**: 50 mg/dia inicial, associando HCTZ baixa dose e/ou elevando para 100mg/dia conforme resposta pressórica
-- **insuficiencia cardiaca**: Dose inicial 12,5 mg/dia, titulada semanalmente (12,5→25→50mg) até dose de manutenção de 50mg 1x/dia
-- **protecao renal dm2 proteinuria**: 50 mg/dia inicial, podendo aumentar para 100mg/dia (estudo RENAAL)
-- **ajuste renal hepatico**: Sem necessidade de ajuste inicial em insuficiência renal, incluindo diálise; considerar dose menor em insuficiência hepática; não é removida por hemodiálise
-- **fonte**: Consulta Remédios/ANVISA
+- **hipertensao**: 50 mg 1x/dia como dose inicial e de manutenção; pode ser aumentada até 100 mg/dia. Iniciar com 25 mg/dia quando houver depleção de volume (uso de diurético, por exemplo) ou história de disfunção hepática. Faixa usual de manutenção: 25 a 100 mg/dia, em dose única ou dividida a cada 12 horas. Efeito máximo em 3 a 6 semanas
+- **insuficiencia cardiaca**: 12,5 mg/dia inicial, com titulação semanal (12,5 → 25 → 50 mg) até a manutenção de 50 mg 1x/dia
+- **hipertrofia ventricular esquerda, reducao de risco cardiovascular**: 50 mg/dia inicial, com manutenção de até 100 mg/dia, associando hidroclorotiazida em dose baixa (12,5–25 mg) conforme a resposta pressórica
+- **nefropatia diabetica tipo 2 com proteinuria**: 50 mg/dia inicial, podendo aumentar para 100 mg/dia conforme o controle pressórico
+- **criancas a partir de 6 anos**: 0,7 mg/kg a cada 24 horas, até o máximo de 50 mg/dia
+- **ajuste renal**: sem necessidade de ajuste inicial na insuficiência renal, inclusive em diálise. Não é removida por hemodiálise
+- **ajuste hepatico**: iniciar com 25 mg em história de disfunção hepática; não recomendada na insuficiência hepática grave
+
+## Indicacoes cardiologicas
+Hipertensão arterial, isolada ou em associação; insuficiência cardíaca, em dose baixa titulada; redução de risco cardiovascular e de AVC em hipertensos com hipertrofia ventricular esquerda; nefropatia diabética tipo 2 com proteinúria.
 
 ## Evidencia pivotal life
-Estudo LIFE (9.193 pacientes hipertensos com HVE): losartana reduziu desfecho composto (morte CV, AVC, IAM) em 13% vs. atenolol (p=0,021), com redução de 25% no risco de AVC especificamente (p=0,001); benefício não se estendeu a pacientes negros
+Estudo LIFE, com 9.193 pacientes hipertensos com hipertrofia ventricular esquerda: a losartana reduziu o desfecho composto de morte cardiovascular, AVC e infarto em 13% em relação ao atenolol (p = 0,021), com redução de 25% no risco de AVC isoladamente (p = 0,001). O benefício não se estendeu aos pacientes negros do estudo.
 
 ## Evidencia pivotal renaal
-Estudo RENAAL (1.513 pacientes com DM2 e proteinúria): losartana reduziu desfecho renal composto em 16,1% vs. placebo, com 28,6% de redução de risco de doença renal terminal
+Estudo RENAAL, com 1.513 pacientes com diabetes tipo 2 e nefropatia: a losartana reduziu o desfecho renal composto em 16,1% em relação ao placebo, com redução de 28,6% no risco de doença renal terminal.
 
 ## Contraindicacoes
-- Gravidez (2º e 3º trimestres — categoria D)
+- Gravidez, em qualquer trimestre. No segundo e terceiro trimestres, o bloqueio do sistema renina-angiotensina reduz a perfusão renal fetal e associa-se a oligoidrâmnio, insuficiência renal fetal, hipoplasia pulmonar, deformidades de crânio e esqueleto e morte fetal; no primeiro trimestre há risco aumentado de malformação congênita. Suspender imediatamente ao confirmar a gravidez, e discutir a substituição em aconselhamento pré-concepcional
+- Estenose bilateral de artéria renal
 - Insuficiência hepática grave
-- Uso concomitante com alisquireno em diabéticos com TFG<60
-- Hipersensibilidade
+- Uso concomitante com alisquireno em pacientes diabéticos ou com taxa de filtração glomerular abaixo de 60 mL/min/1,73 m²
+- Hipersensibilidade ao componente
 
 ## Efeitos adversos
-Tontura (mais comum), hipercalemia, hipotensão sintomática (especialmente com depleção de volume), angioedema (raro), discreta redução de hemoglobina/hematócrito
+Tontura (o mais frequente), hipercalemia, hipotensão sintomática — sobretudo em depleção de volume —, angioedema (raro) e discreta redução de hemoglobina e hematócrito.
 
 ## Particularidade
-Combinação com IECA não é recomendada (compromete função renal); uso concomitante com betabloqueador em IC deve ser cauteloso
+A combinação com IECA não é recomendada, por comprometer a função renal sem ganho de desfecho. O uso concomitante com betabloqueador na insuficiência cardíaca exige cautela na titulação.
