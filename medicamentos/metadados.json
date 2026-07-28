@@ -1049,8 +1049,9 @@
       "Prolonga o intervalo QT, aumentando o risco de arritmias — requer monitorização eletrocardiográfica. Efeitos colaterais anticolinérgicos gastrointestinais (boca seca, constipação, retenção urinária) são frequentes e podem limitar a tolerabilidade - **fonte**: European Heart Journal — Cardiovascular Pharmacotherapy (Awad K et al., 2025)"
     ],
     "dosing": {
-      "fonte": "European Heart Journal — Cardiovascular Pharmacotherapy (Awad K et al., 2025)",
-      "posologia": "VERIFICAÇÃO HUMANA NECESSÁRIA — **este verbete não tem posologia**. O campo existia apenas com a fonte, sem nenhuma dose, e ainda assim o registro estava marcado como revisado. Não prescrever por ele até que a posologia seja preenchida a partir da bula registrada na ANVISA ou de diretriz."
+      "disponibilidade no brasil": "**Sem produto comercializado no Brasil até onde foi possível apurar.** A disopiramida está ausente da lista de preços da CMED, que cobre os medicamentos com preço regulado comercializados no país — ausência que é evidência forte, ainda que indireta, de que não há apresentação disponível. Isso importa na leitura de diretriz europeia, em que a disopiramida aparece com papel definido.",
+      "posologia": "VERIFICAÇÃO HUMANA NECESSÁRIA para a dose — e a razão de ela não estar preenchida é parte da informação: **não foi localizada apresentação da disopiramida registrada e comercializada no Brasil, e a ausência na CMED sustenta isso.**\n\nSem produto registrado, não há bula brasileira de onde extrair posologia. A dose de referência existe na rotulagem estrangeira, e **não foi transcrita aqui de memória** — quem precisar dela deve buscá-la na fonte, ciente de que se aplica a um produto sem registro no Brasil.",
+      "fonte": "Ausência conferida contra a lista de preços da CMED. Confirmar no cadastro de medicamentos da ANVISA antes de tratar como definitivo."
     },
     "notes": {
       "Eficacia": "Em metanálise de terapias farmacológicas para cardiomiopatia hipertrófica obstrutiva, a disopiramida apresentou a maior redução de gradiente de via de saída em repouso entre os agentes estudados: diferença média de -43,5 mmHg (IC95% -51,6 a -35,3; n=482). Para gradientes provocados, a redução também foi substancial: diferença média de -38,0 mmHg (IC95% -64,7 a -11,3; n=7, análise de sensibilidade excluindo estudos agudos) - **fonte**: European Heart Journal — Cardiovascular Pharmacotherapy (Awad K et al., 2025)"
@@ -1111,7 +1112,9 @@
       "Manutenção de ritmo sinusal em fibrilação atrial ou flutter atrial paroxístico ou persistente, em pacientes sem disfunção ventricular significativa"
     ],
     "contraindications": [
-      "Deve ser evitada em insuficiência cardíaca, especialmente classe funcional acima de NYHA II ou FEVE ≤35% — contraindicação com alerta de tarja preta - **fonte**: PALLAS (contexto de contraindicação)"
+      "**Insuficiência cardíaca**, sobretudo classe funcional acima de NYHA II ou FEVE ≤35% — alerta de tarja preta. O ensaio PALLAS, em fibrilação atrial permanente, foi interrompido por aumento significativo de eventos cardiovasculares.",
+      "Hepatotoxicidade: elevação de enzimas hepáticas é frequente, e há relatos raros de lesão hepática grave, com necessidade de transplante e óbito.",
+      "Fibrilação atrial permanente — a indicação é manutenção de ritmo em FA paroxística ou persistente, e o uso na permanente foi justamente o cenário do PALLAS."
     ],
     "outcomes": {
       "Evidencia pivotal — ATHENA": "Dronedarona 400 mg 2x/dia, associada a terapia de base, reduziu em 24% o desfecho composto de hospitalização cardiovascular ou morte por qualquer causa comparada a placebo, em pacientes com FA ou flutter atrial. Estudo não incluiu pacientes com IC classe funcional NYHA IV recente ou hospitalização por IC descompensada nas últimas 4 semanas - **fonte**: ScienceDirect (ATHENA)",
@@ -1126,7 +1129,10 @@
       "Dronedarone · LiverTox (NCBI Bookshelf) · https://www.ncbi.nlm.nih.gov/books/NBK548208/"
     ],
     "dosing": {
-      "posologia": "VERIFICAÇÃO HUMANA NECESSÁRIA — **este verbete não tem posologia**. O campo existia apenas com a fonte, sem nenhuma dose, e ainda assim o registro estava marcado como revisado. Não prescrever por ele até que a posologia seja preenchida a partir da bula registrada na ANVISA ou de diretriz."
+      "disponibilidade no brasil": "**Não é comercializada no Brasil**: o registro sanitário na ANVISA está cancelado/caduco. O fármaco aparece nas diretrizes europeias e norte-americanas como opção de manutenção de ritmo, mas não é prescritível aqui.",
+      "posologia": "VERIFICAÇÃO HUMANA NECESSÁRIA para a dose — e a razão de ela não estar preenchida é parte da informação: **a dronedarona não tem registro vigente no Brasil.**\n\nSem produto registrado, não há bula brasileira de onde extrair posologia. A dose de referência existe na rotulagem estrangeira, e **não foi transcrita aqui de memória** — quem precisar dela deve buscá-la na fonte, ciente de que se aplica a um produto sem registro no Brasil.",
+      "dose usada no ensaio pivotal": "No ATHENA, o esquema estudado foi de **400 mg duas vezes ao dia**, associado à terapia de base. Está registrado aqui como dado do ensaio, não como recomendação posológica.",
+      "fonte": "Situação de registro conferida em julho de 2026. A dose do ATHENA vem do próprio ensaio, não de bula."
     }
   },
   {
@@ -1281,18 +1287,28 @@
       "Bradicardia sintomática refratária a atropina, como agente de segunda linha"
     ],
     "dosing": {
-      "fonte": "NEJM (PARAMEDIC2 — protocolo do ensaio)",
-      "posologia": "VERIFICAÇÃO HUMANA NECESSÁRIA — **este verbete não tem posologia**. O campo existia apenas com a fonte, sem nenhuma dose, e ainda assim o registro estava marcado como revisado. Não prescrever por ele até que a posologia seja preenchida a partir da bula registrada na ANVISA ou de diretriz."
+      "alerta de concentracao e via": "**Este é o item que mata quando sai errado, e por isso vem antes das doses.** São duas concentrações com uma ordem de grandeza de diferença: **1 mg/mL (1:1.000)** é a ampola pronta, para uso **intramuscular**; **0,1 mg/mL (1:10.000)** é a solução diluída, para **bolus intravenoso**. A injeção intravenosa inadvertida da solução 1:1.000 pode causar hemorragia cerebral e arritmia fatal. A bula é explícita: por via intravenosa, aplicar de forma lenta e diluída.",
+      "anafilaxia adulto": "**0,3 a 0,5 mg**, repetível a cada 5 a 15 minutos conforme a resposta.\n\n**Divergência entre a bula e a prática vigente, registrada em vez de escondida**: a bula brasileira descreve as vias intravenosa e subcutânea, enquanto as diretrizes atuais preferem a **via intramuscular na face anterolateral da coxa**, por atingir pico mais rápido que a subcutânea e ter margem de segurança maior que a intravenosa. A via IM na coxa é a conduta de primeira linha na anafilaxia.",
+      "anafilaxia pediatria": "**0,01 mg/kg por via intramuscular**, até o máximo de 0,3 a 0,5 mg.",
+      "parada cardiorrespiratoria pediatria": "**0,01 mg/kg** por via intravenosa ou intraóssea.",
+      "parada cardiorrespiratoria adulto": "VERIFICAÇÃO HUMANA NECESSÁRIA para o número exato — e a razão importa, porque as duas leituras que encontrei **não são a mesma coisa**, e confundi-las é erro clínico:\n\n- **0,5 a 1 mg a cada 3 a 5 minutos** é um esquema de **bolus** durante a ressuscitação, com a solução diluída a 1:10.000.\n- **0,1 a 0,5 mcg/kg/min** é **infusão contínua**, que é o regime de suporte hemodinâmico no choque, não o da parada.\n\nAs duas apareceram atribuídas à bula em consultas diferentes. Conferir qual consta da bula registrada e alinhar ao protocolo de suporte avançado de vida adotado no serviço, antes de usar este verbete como referência de dose.",
+      "fonte": "Bula brasileira de epinefrina solução injetável 1 mg/mL, seções de indicações e posologia. O esquema de parada em adulto segue marcado — ver o campo acima."
     },
     "outcomes": {
-      "Evidencia pivotal — PARAMEDIC2": "- **desenho**: ensaio randomizado, controlado por placebo, com 8.016 pacientes em parada cardiorrespiratória extra-hospitalar não responsiva à reanimação inicial, randomizados para adrenalina 1 mg intravenosa ou placebo - **resultado**: adrenalina aumentou significativamente o retorno da circulação espontânea (RCE) e a sobrevida em 30 dias/alta hospitalar comparada a placebo, porém sem diferença significativa em desfecho neurológico favorável na alta hospitalar (2,2% no grupo adrenalina vs. 1,9% no grupo placebo; razão de chances não ajustada 1,18; IC95% 0,86-1,61) - **fonte**: NEJM (PARAMEDIC2, Perkins et al. 2018)"
+      "Evidencia pivotal — PARAMEDIC2": "8.014 pacientes com parada cardiorrespiratória extra-hospitalar, adrenalina contra placebo salino, em estudo duplo-cego. **Sobrevida em 30 dias: 3,2% contra 2,4%** (razão de chances 1,39; IC95% 1,06-1,82; p=0,02). **Sobrevida até a alta com desfecho neurológico favorável — Rankin modificado ≤3 — não diferiu**: 2,2% contra 1,9% (razão de chances 1,18; IC95% 0,86-1,61). Na alta, comprometimento neurológico grave (Rankin 4 ou 5) foi **mais frequente** entre os sobreviventes do grupo adrenalina.\n\nÉ essa a leitura honesta do estudo: a adrenalina aumenta a sobrevida, e o ganho se concentra em sobreviventes com dano neurológico maior. Ela permanece nos algoritmos internacionais de suporte avançado de vida."
     },
     "notes": {
       "Implicacao clinica": "PARAMEDIC2 confirmou que a adrenalina melhora sobrevida a curto prazo na parada cardíaca extra-hospitalar, mas gerou debate sobre o benefício em termos de sobrevida com bom desfecho neurológico — mantendo, ainda assim, seu papel central nos algoritmos internacionais de suporte avançado de vida - **fonte**: European Journal of Emergency Medicine (análise de desfechos do PARAMEDIC2)"
     },
     "references": [
       "Perkins GD, Ji C, Deakin CD et al. A Randomized Trial of Epinephrine in Out-of-Hospital Cardiac Arrest (PARAMEDIC2). N Engl J Med. 2018;379(8):711-721.",
-      "Outcome differences between PARAMEDIC2 and time-to-drug sub-analysis · European Journal of Emergency Medicine / Intensive Care Medicine · https://pmc.ncbi.nlm.nih.gov/articles/PMC9605191/"
+      "Outcome differences between PARAMEDIC2 and time-to-drug sub-analysis · European Journal of Emergency Medicine / Intensive Care Medicine · https://pmc.ncbi.nlm.nih.gov/articles/PMC9605191/",
+      "Perkins GD, Ji C, Deakin CD, et al. A Randomized Trial of Epinephrine in Out-of-Hospital Cardiac Arrest (PARAMEDIC2). N Engl J Med. 2018;379(8):711-721. DOI: 10.1056/NEJMoa1806842. PMID: 30021076"
+    ],
+    "contraindications": [
+      "Não há contraindicação absoluta na parada cardiorrespiratória nem na anafilaxia — nas duas, o risco de não administrar supera qualquer outro. As cautelas abaixo valem para as demais indicações.",
+      "Cautela em hipertensão grave, doença coronariana, arritmia ventricular, hipertireoidismo e feocromocitoma.",
+      "Interação relevante: em uso de betabloqueador não seletivo, o bloqueio beta deixa o efeito alfa sem oposição, podendo produzir hipertensão grave com bradicardia reflexa."
     ]
   },
   {
@@ -1572,8 +1588,9 @@
       "Contraindicada em pacientes com doença cardíaca estrutural, incluindo doença arterial coronariana — o estudo CAST demonstrou aumento de mortalidade e morte súbita cardíaca no grupo flecainida em pacientes pós-infarto do miocárdio com arritmia ventricular assintomática ou pouco sintomática, levando às restrições atuais de uso apesar de segurança demonstrada em populações selecionadas sem cardiopatia estrutural - **fonte**: Cardiology Journal (revisão sobre flecainida, referência ao estudo CAST)"
     ],
     "dosing": {
-      "fonte": "Europace (utilização real da estratégia pill-in-the-pocket)",
-      "posologia": "VERIFICAÇÃO HUMANA NECESSÁRIA — **este verbete não tem posologia**. O campo existia apenas com a fonte, sem nenhuma dose, e ainda assim o registro estava marcado como revisado. Não prescrever por ele até que a posologia seja preenchida a partir da bula registrada na ANVISA ou de diretriz."
+      "disponibilidade no brasil": "**Sem produto comercializado no Brasil até onde foi possível apurar.** A flecainida está ausente da lista de preços da CMED, que cobre os medicamentos com preço regulado comercializados no país — ausência que é evidência forte, ainda que indireta, de que não há apresentação disponível. Isso importa na leitura de diretriz europeia, em que a flecainida aparece com papel definido.",
+      "posologia": "VERIFICAÇÃO HUMANA NECESSÁRIA para a dose — e a razão de ela não estar preenchida é parte da informação: **não foi localizada apresentação da flecainida registrada e comercializada no Brasil, e a ausência na CMED sustenta isso.**\n\nSem produto registrado, não há bula brasileira de onde extrair posologia. A dose de referência existe na rotulagem estrangeira, e **não foi transcrita aqui de memória** — quem precisar dela deve buscá-la na fonte, ciente de que se aplica a um produto sem registro no Brasil.",
+      "fonte": "Ausência conferida contra a lista de preços da CMED. Confirmar no cadastro de medicamentos da ANVISA antes de tratar como definitivo."
     },
     "notes": {
       "Outras contraindicacoes": "Doença hepática ou renal significativa - **fonte**: Cardiology Journal (revisão sobre flecainida)"
@@ -1779,8 +1796,12 @@
       "Reversão do efeito anticoagulante da dabigatrana em pacientes com sangramento com risco de vida ou não controlado, ou que necessitem de cirurgia ou procedimento invasivo urgente"
     ],
     "dosing": {
-      "fonte": "Frontiers in Neurology (revisão sobre idarucizumabe)",
-      "posologia": "VERIFICAÇÃO HUMANA NECESSÁRIA — **este verbete não tem posologia**. O campo existia apenas com a fonte, sem nenhuma dose, e ainda assim o registro estava marcado como revisado. Não prescrever por ele até que a posologia seja preenchida a partir da bula registrada na ANVISA ou de diretriz."
+      "apresentacao": "Solução injetável de **50 mg/mL**, embalagem com **2 frascos-ampola de 50 mL** — ou seja, 2,5 g por frasco.",
+      "dose": "**5 g por via intravenosa**, correspondendo aos dois frascos de 2,5 g. A dose é fixa: não se ajusta por peso, por função renal nem pela intensidade da anticoagulação.",
+      "administracao": "As duas infusões consecutivas, de **5 a 10 minutos cada**, ou em bolus.",
+      "indicacao": "Reversão rápida do efeito anticoagulante do etexilato de dabigatrana, quando necessária: cirurgia ou procedimento de emergência, e sangramento não controlado ou com ameaça à vida. **É específico da dabigatrana** — não reverte inibidores do fator Xa.",
+      "efeito esperado": "A maioria dos pacientes atinge reversão completa do efeito anticoagulante da dabigatrana **nas primeiras 4 horas** após os 5 g.",
+      "fonte": "Bula brasileira de PRAXBIND (idarucizumabe), Boehringer Ingelheim do Brasil. **A lacuna anterior está resolvida** — o verbete não tinha dose."
     },
     "outcomes": {
       "Evidencia pivotal — RE-VERSE AD": "Ensaio prospectivo, sem grupo controle, que avaliou idarucizumabe em pacientes em uso de dabigatrana com sangramento sério ou necessidade de procedimento urgente, demonstrando reversão completa e sustentada do efeito anticoagulante na grande maioria dos pacientes - **fonte**: Pollack CV Jr et al., NEJM 2017 (RE-VERSE AD — full cohort analysis)"
@@ -1790,7 +1811,8 @@
     },
     "references": [
       "Idarucizumab in dabigatran-treated patients with acute stroke: a review and clinical update · Frontiers in Neurology · https://pmc.ncbi.nlm.nih.gov/articles/PMC11137220/",
-      "Pollack CV Jr et al. Idarucizumab for Dabigatran Reversal — Full Cohort Analysis. N Engl J Med. 2017;377(5):431-441."
+      "Pollack CV Jr et al. Idarucizumab for Dabigatran Reversal — Full Cohort Analysis. N Engl J Med. 2017;377(5):431-441.",
+      "Bula de PRAXBIND (idarucizumabe, solução injetável 50 mg/mL), Boehringer Ingelheim do Brasil Química e Farmacêutica Ltda. — apresentação, indicações e posologia."
     ]
   },
   {
@@ -1806,13 +1828,17 @@
     "dosing": {
       "eficacia": "redução de LDL-C de 49,9% a 52,2% no mês 17 comparado a placebo; redução de LDL-C time-adjusted entre os meses 3 e 18 de 49,2% a 53,8%",
       "sustentabilidade": "eficácia mantida por até 4 anos de seguimento com a dosagem semestral",
-      "fonte": "NEJM (ensaios ORION fase 3); The Lancet Diabetes & Endocrinology (ORION-3, extensão de 4 anos)",
-      "posologia": "VERIFICAÇÃO HUMANA NECESSÁRIA — **este verbete não tem posologia**. O campo existia apenas com a fonte, sem nenhuma dose, e ainda assim o registro estava marcado como revisado. Não prescrever por ele até que a posologia seja preenchida a partir da bula registrada na ANVISA ou de diretriz."
+      "fonte": "Bula brasileira de SYBRAVA (inclisirana), Novartis. **A lacuna anterior está resolvida** — o campo trazia apenas dados de eficácia, sem posologia.",
+      "nome comercial no brasil": "Registrada como **Sybrava** (Novartis). *Leqvio* é o nome usado em outros mercados — atenção ao ler literatura estrangeira.",
+      "apresentacao": "Seringa preenchida com 1,5 mL contendo **284 mg de inclisirana**.",
+      "esquema": "**Uma aplicação no início, repetida após 3 meses, e depois a cada 6 meses.** É o que define o fármaco na prática: duas aplicações por ano após a fase inicial, o que remove a adesão diária da equação.",
+      "via": "**Subcutânea, no abdome**, aplicada por profissional de saúde."
     },
     "references": [
       "Two Phase 3 Trials of Inclisiran in Patients with Elevated LDL Cholesterol · New England Journal of Medicine · https://www.nejm.org/doi/full/10.1056/NEJMoa1912387",
       "Long-term efficacy and safety of inclisiran in patients with high cardiovascular risk and elevated LDL cholesterol (ORION-3) · The Lancet Diabetes & Endocrinology · https://www.thelancet.com/journals/landia/article/PIIS2213-8587(22)00353-9/fulltext",
-      "Effects of Renal Impairment on the Pharmacokinetics, Efficacy, and Safety of Inclisiran: An Analysis of the ORION-7 and ORION-1 Studies · Mayo Clinic Proceedings · https://www.mayoclinicproceedings.org/article/S0025-6196(19)30756-6/abstract"
+      "Effects of Renal Impairment on the Pharmacokinetics, Efficacy, and Safety of Inclisiran: An Analysis of the ORION-7 and ORION-1 Studies · Mayo Clinic Proceedings · https://www.mayoclinicproceedings.org/article/S0025-6196(19)30756-6/abstract",
+      "Bula de SYBRAVA (inclisirana, solução injetável em seringa preenchida), Novartis Biociências S.A. — apresentação, posologia e modo de usar. Versão brasileira."
     ]
   },
   {
@@ -2793,15 +2819,26 @@
       "Reversão do efeito anticoagulante da heparina não fracionada e, com eficácia parcial, de heparinas de baixo peso molecular — tipicamente durante ou após circulação extracorpórea em cirurgia cardíaca, ou em sangramento significativo associado a heparinização"
     ],
     "dosing": {
-      "fonte": "Annals of Cardiac Anaesthesia (revisão sobre interação protamina-heparina)",
-      "posologia": "VERIFICAÇÃO HUMANA NECESSÁRIA — **este verbete não tem posologia**. O campo existia apenas com a fonte, sem nenhuma dose, e ainda assim o registro estava marcado como revisado. Não prescrever por ele até que a posologia seja preenchida a partir da bula registrada na ANVISA ou de diretriz."
+      "equivalencia": "**1 mL de protamina a 10 mg/mL neutraliza 1.000 UI de heparina** — ou seja, 1 mg para cada 100 UI.",
+      "quando a heparinemia nao e conhecida": "A bula recomenda **não administrar mais do que 1 mL** (10 mg) se a concentração de heparina não tiver sido determinada.",
+      "hemorragia por heparina": "Como regra geral, usar a dose que neutralize **50% da última dose de heparina** — e não a dose total, porque parte dela já foi eliminada. A quantidade necessária depende de quanto tempo passou desde a administração.",
+      "apos circulacao extracorporea": "Mesmas proporções, com a posologia ajustada por tempo de trombina e tempo de tromboplastina parcial.",
+      "velocidade de administracao": "Via intravenosa **lenta**: cerca de **10 minutos** para doses de até **50 mg (5.000 UI)**. Habitualmente injeta-se 1 mL (10 mg, 1.000 UI) em 1 a 3 minutos.",
+      "quando parar": "**Interromper assim que o tempo de protrombina normalizar**, para evitar excesso de protamina — que tem efeito anticoagulante próprio.",
+      "fonte": "Bula profissional brasileira de Protamina 1000 (solução injetável 10 mg/mL), seção de posologia e modo de usar. **A lacuna anterior está resolvida**: o verbete não tinha nenhuma dose."
     },
     "notes": {
       "Reacoes de hipersensibilidade": "Reações anafilactoides podem afetar até 1 em cada 10 pacientes. Fatores de risco incluem alergia a proteína de peixe, diabetes insulino-dependente (particularmente uso de insulina protamina neutra de Hagedorn — NPH — ou insulina zinco-protamina humana recombinante), exposição prévia à protamina, e história de vasectomia. Manifestações variam de urticária e angioedema a choque vasodilatador, disfunção cardiopulmonar aguda, hipertensão pulmonar aguda e bradicardia - **fonte**: Annals of Cardiac Anaesthesia (revisão sobre interação protamina-heparina)",
       "Efeito anticoagulante paradoxal": "Doses excessivas de protamina podem causar efeito anticoagulante paradoxal dose-dependente, por disfunção plaquetária, inibição da interação glicoproteína Ib-fator de von Willebrand, atividade de serino-protease e aumento da fibrinólise — piorando, paradoxalmente, o sangramento - **fonte**: Annals of Cardiac Anaesthesia (revisão sobre interação protamina-heparina)"
     },
     "references": [
-      "Crivellari M et al. Protamine and Heparin Interactions: A Narrative Review. Ann Card Anaesth. 2024;27(3):202-212."
+      "Crivellari M et al. Protamine and Heparin Interactions: A Narrative Review. Ann Card Anaesth. 2024;27(3):202-212.",
+      "Bula profissional de PROTAMINA 1000 (sulfato de protamina, solução injetável 10 mg/mL) — seção 8, Posologia e Modo de Usar, e seção 9, Reações Adversas. Versão brasileira."
+    ],
+    "contraindications": [
+      "Hipersensibilidade conhecida à protamina.",
+      "Atenção ao risco de reação anafilactoide, que pode afetar até 1 em cada 10 pacientes. São fatores de risco: alergia a proteína de peixe, diabetes em uso de insulina contendo protamina (NPH ou zinco-protamina), exposição prévia à protamina, angioplastia coronariana ou circulação extracorpórea prévias, e vasectomia ou infertilidade.",
+      "Dose excessiva produz **efeito anticoagulante paradoxal**, dose-dependente, por disfunção plaquetária e aumento da fibrinólise — piorando o sangramento que se queria tratar."
     ]
   },
   {
@@ -3510,8 +3547,12 @@
       "Vasopressor de segunda linha no choque séptico refratário a noradrenalina, como agente poupador de catecolamina — diretrizes da Surviving Sepsis Campaign 2021 sugerem seu início precoce em vez de aguardar choque francamente refratário, tipicamente quando a dose de noradrenalina se aproxima de 0,25 mcg/kg/min - **fonte**: Journal of Personalized Medicine (revisão sobre vasopressina em choque)"
     ],
     "dosing": {
-      "fonte": "N Engl J Med (VASST); JAMA (VANISH)",
-      "posologia": "VERIFICAÇÃO HUMANA NECESSÁRIA — **este verbete não tem posologia**. O campo existia apenas com a fonte, sem nenhuma dose, e ainda assim o registro estava marcado como revisado. Não prescrever por ele até que a posologia seja preenchida a partir da bula registrada na ANVISA ou de diretriz."
+      "apresentacao e vias": "Solução injetável de **20 U/mL**, ampola de 1 mL. Vias subcutânea, intramuscular e intravenosa — esta em bolus ou infusão contínua.",
+      "choque septico": "**0,01 a 0,04 unidades por minuto em infusão contínua.** É a indicação cardiovascular mais usada hoje, e a diretriz de sepse a coloca como adjuvante à noradrenalina, com o objetivo de elevar a pressão arterial média ou de reduzir a dose de noradrenalina.",
+      "parada cardiorrespiratoria — leia a ressalva": "A bula brasileira traz **40 U por via intravenosa ou intraóssea**, no lugar da primeira ou segunda dose de epinefrina, em assistolia, AESP e FV/TV sem pulso.\n\n**A ressalva é essencial e está na própria bula**: ela atribui essa recomendação ao *algoritmo de tratamento da PCR da American Heart Association, 2005*. Esse algoritmo mudou desde então — a vasopressina foi **retirada** do algoritmo de parada do adulto por não demonstrar vantagem sobre a epinefrina isolada. O número continua na bula porque a bula não foi atualizada, não porque a recomendação siga vigente. Seguir o protocolo de suporte avançado de vida adotado no serviço, não este campo.",
+      "distensao abdominal pos operatoria": "5 unidades (0,25 mL) por via intramuscular, podendo subir a 10 unidades (0,5 mL) nas injeções seguintes, repetidas a cada 3 ou 4 horas se necessário. Doses proporcionalmente menores em pediatria.",
+      "outras indicacoes registradas": "Radiografia abdominal (duas injeções intramusculares de 10 unidades, duas horas e meia hora antes da exposição), diabetes insipidus e hemorragia gastrointestinal.",
+      "fonte": "Bula profissional brasileira de vasopressina 20 U/mL, seções de indicações, resultados de eficácia e posologia. **A lacuna anterior está resolvida** — o verbete não tinha nenhuma dose. A ressalva sobre a parada é do próprio texto da bula, que declara a origem da recomendação."
     },
     "outcomes": {
       "Evidencia pivotal — VASST": "- **desenho**: comparação randomizada entre vasopressina em baixa dose associada a noradrenalina aberta versus noradrenalina isolada, em pacientes com choque séptico - **resultado**: mortalidade em 28 dias de 35,4% no grupo vasopressina versus 39,3% no grupo controle (diferença não estatisticamente significativa); em subgrupo com dose basal de noradrenalina mais baixa (≤14 mcg/min), vasopressina associou-se a redução de mortalidade de quase 10% - **fonte**: N Engl J Med (VASST)",
@@ -3520,7 +3561,8 @@
     "references": [
       "Vasopressin in Sepsis and Other Shock States: State of the Art · Journal of Personalized Medicine · https://pmc.ncbi.nlm.nih.gov/articles/PMC10672256/",
       "Russell JA et al. Vasopressin versus Norepinephrine Infusion in Patients with Septic Shock (VASST). N Engl J Med. 2008;358(9):877-887.",
-      "Gordon AC et al. Effect of Early Vasopressin vs Norepinephrine on Kidney Failure in Patients with Septic Shock: The VANISH Randomized Clinical Trial. JAMA. 2016;316(5):509-518."
+      "Gordon AC et al. Effect of Early Vasopressin vs Norepinephrine on Kidney Failure in Patients with Septic Shock: The VANISH Randomized Clinical Trial. JAMA. 2016;316(5):509-518.",
+      "Bula profissional de vasopressina (Encrise, solução injetável 20 U/mL), Biolab — seções 1, 2 e 8. Versão brasileira."
     ]
   },
   {
