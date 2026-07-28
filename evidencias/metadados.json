@@ -366,13 +366,13 @@
   },
   {
     "slug": "colchicina-adjuvante-na-pericardite-aguda",
-    "statement": "VERIFICAÇÃO HUMANA NECESSÁRIA — este registro está desatualizado e subestima a força da recomendação. Ele se apoia na diretriz brasileira de 2013, que classifica a colchicina na pericardite aguda como IIa ('pode ser considerada'). A diretriz ESC de 2015 sobre doenças do pericárdio, posterior, descreve a colchicina como recomendada em primeira linha, como adjuvante a AAS ou AINE, na dose de 0,5 mg/dia abaixo de 70 kg ou 0,5 mg duas vezes ao dia a partir de 70 kg, por 3 meses — linguagem de Classe I. Duas fontes independentes convergem na classe, mas não consegui confirmar o nível de evidência com segurança. A classe e o nível precisam ser conferidos na tabela de recomendações da diretriz antes de este registro voltar ao ar.",
+    "statement": "VERIFICAÇÃO HUMANA NECESSÁRIA para a classe e o nível. O que está confirmado: a colchicina é terapia adjuvante de primeira linha à aspirina ou ao AINE na pericardite aguda, em dose ajustada pelo peso e sem dose de ataque — 0,5 mg uma vez ao dia abaixo de 70 kg e 0,5 mg duas vezes ao dia a partir de 70 kg. A duração difere conforme o quadro: cerca de 3 meses na pericardite aguda e pelo menos 6 meses na recorrente. O ensaio ICAP (Imazio M et al., N Engl J Med. 2013;369(16):1522-1528, PMID 23992557) é o pivotal. MOTIVO DO BLOQUEIO, agora identificado: na versão de acesso aberto da diretriz ESC 2015, as tabelas de recomendação são IMAGENS, não texto — por isso toda tentativa de extração automática devolve classe inconsistente. Uma delas chegou a devolver IIb/B, mas com duração de 6 meses, o que indica que a extração pegou a tabela da pericardite RECORRENTE, não a da aguda. A classificação IIa/B que consta abaixo é da diretriz brasileira de 2013 e está desatualizada. Para desbloquear: abrir a tabela 'Recommendations for the treatment of acute pericarditis' da ESC 2015 e ler a linha da colchicina visualmente.",
     "recommendation_class": "IIa",
     "evidence_level": "B",
     "society": "SBC",
     "year": 2013,
     "guideline_title": "I Diretriz Brasileira de Miocardites e Pericardites",
-    "reference": "Montera MW, Mesquita ET, Colafranceschi AS et al. I Diretriz Brasileira de Miocardites e Pericardites. Arq Bras Cardiol. 2013;100(4 Supl 1):1-36.",
+    "reference": "Adler Y, Charron P, Imazio M, et al. 2015 ESC Guidelines for the diagnosis and management of pericardial diseases. Eur Heart J. 2015;36(42):2921-2964. DOI: 10.1093/eurheartj/ehv318 — classe e nível pendentes de leitura da tabela. Registro anterior apoiado em: Montera MW et al. I Diretriz Brasileira de Miocardites e Pericardites. Arq Bras Cardiol. 2013;100(4 Supl 1):1-36. Ensaio pivotal: Imazio M, Brucato A, Cemin R, et al. A randomized trial of colchicine for acute pericarditis. N Engl J Med. 2013;369(16):1522-1528. DOI: 10.1056/NEJMoa1208536. PMID: 23992557",
     "theme": "Pericárdio",
     "tags": [
       "pericardite aguda",
