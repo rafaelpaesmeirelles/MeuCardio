@@ -1,17 +1,13 @@
-# Dois domínios no mesmo bloco durante a migração de marca. O Caddy emite e
-# renova certificado para ambos por ACME, então não existe janela em que um
-# deles fique sem TLS válido — que é justamente o risco de trocar o DNS antes
-# de ter o certificado emitido.
+# Domínio principal e legado no mesmo bloco.
 #
-# `{$DOMAIN}` continua vindo do .env e hoje é meucardio.med.br. Quando a
-# migração estiver confirmada, ele passa a ser corvia.med.br e o antigo vira
-# redirecionamento — não desligamento.
+# `{$DOMAIN}` é corvia.med.br. `{$DOMAIN_LEGADO}` é meucardio.med.br, que
+# **continua servindo** — quem tem link antigo, favorito ou app instalado não
+# pode encontrar porta fechada. O certificado dos dois já foi emitido antes
+# desta virada, então não existe janela sem TLS válido.
 #
-# `www` entra porque o DNS já resolve para cá: sem estar no bloco, o Caddy não
-# tem certificado para ele e quem digita com www recebe erro de conexão, não
-# uma página. Domínio que resolve e não é atendido é pior do que domínio que
-# não resolve.
-{$DOMAIN}, {$DOMAIN_NOVO}, www.{$DOMAIN_NOVO} {
+# Desativar o legado é decisão separada e posterior, e quando for feita deve
+# ser por redirecionamento permanente, não por desligamento.
+{$DOMAIN}, www.{$DOMAIN}, {$DOMAIN_LEGADO} {
 	encode gzip zstd
 
 	# API e documentação do backend

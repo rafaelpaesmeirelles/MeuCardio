@@ -71,7 +71,7 @@ class Settings(BaseSettings):
     smtp_user: str = ""
     smtp_password: str = ""
     smtp_from: str = "Corvia <nao-responda@corvia.med.br>"
-    public_url: str = "https://meucardio.med.br"
+    public_url: str = "https://corvia.med.br"
 
     # --- Stripe / Assinatura -----------------------------------------------
     stripe_publishable_key: str = ""
