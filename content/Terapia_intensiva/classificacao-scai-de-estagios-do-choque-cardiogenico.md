@@ -5,7 +5,7 @@ theme: "Terapia intensiva"
 kind: protocolo
 review_status: pendente_revisao
 source_refs: ["SCAI clinical expert consensus statement on the classification of cardiogenic shock · SCAI/ACC/AHA/SCCM/STS · 2019 · 10.1002/ccd.28329", "Criteria for Defining Stages of Cardiogenic Shock Severity · JACC · 2022 · 10.1016/j.jacc.2022.04.049", "2026 SCAI SHOCK Classification Expert Consensus Update · SCAI · 2026", "SCAI SHOCK Bedside Checklist 2022 — scai.org, endossado por ACC/ACEP/AHA/ESC-ACVC/ISHLT/SCCM/STS", "Naidu SS et al. SCAI SHOCK Stage Classification Expert Consensus Update. J Soc Cardiovasc Angiogr Interv. 2022."]
-legacy_source: "Classificação SCAI do Choque Cardiogênico (Complemento ao Protocolo 057)"
+legacy_source: "Fusão de dois documentos sobre a mesma classificação, na mesma pasta, com zero seções em comum entre 7 e 11: este e choque-cardiogenico-classificacao-scai-shock-complemento.md. O absorvido trazia dois defeitos de forma que o desqualificavam como base: dicionário de Python serializado vazado no corpo do texto, em vez de markdown, e uma referência a 'thai source' deixada dentro de um critério clínico. O conteúdo clínico dele foi preservado aqui."
 ---
 
 # Classificação SCAI de Estágios do Choque Cardiogênico
@@ -62,3 +62,20 @@ Existe atualização de consenso de especialistas SCAI SHOCK 2026 em processo de
 
 ## Limitacoes
 Sistema original careceu de critérios uniformes definindo cada estágio até a publicação de critérios formais objetivos em 2022; utilidade clínica e implicações prognósticas potenciais continuam sendo validadas em estudos adicionais
+
+## Modificador A: parada cardiaca
+O sufixo **A** pode ser acrescentado a qualquer estágio — AA, BA, CA, DA, EA — quando há parada cardiorrespiratória associada, independentemente da duração. Episódio breve, rapidamente revertido e sem repercussão neurológica não altera necessariamente o estadiamento.
+
+## Relevancia prognostica
+A mortalidade cresce progressivamente de A para E. Os estágios D e E sinalizam necessidade de suporte circulatório mecânico avançado e pior prognóstico.
+
+## Suporte circulatorio mecanico
+Balão intra-aórtico, dispositivo percutâneo de fluxo axial e ECMO venoarterial são as principais opções, consideradas progressivamente a partir do estágio C, com uso mais frequente em D e praticamente incontornável em E.
+
+## Aplicacao em cirurgia cardiaca
+Nos pacientes cirúrgicos, os estágios A a D concentram 66 a 78% de procedimentos eletivos, contra apenas 31% no estágio E — o choque extremo se associa a proporção muito maior de cirurgia de urgência ou emergência.
+
+## Divergencia a resolver no criterio bioquimico do estagio C
+VERIFICAÇÃO HUMANA NECESSÁRIA — os dois documentos consolidados aqui **discordavam do corte de creatinina** que define o estágio C: um exigia **creatinina dobrada**, o outro **1,5 vez o basal**. A tabela acima registra 1,5×, que veio do documento melhor referenciado, mas a divergência precisa ser resolvida contra o checklist oficial SCAI SHOCK de 2022 antes de esta marcação sair. A diferença muda a fronteira entre pré-choque e choque estabelecido, que é justamente onde a classificação decide conduta.
+
+O mesmo par divergia no lactato do estágio E, com um deles registrando "≥8 mmol/L" e anotando entre parênteses que outra fonte citava ≥5 — anotação de conferência que ficou publicada como se fosse conteúdo.
