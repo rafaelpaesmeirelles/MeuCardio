@@ -65,3 +65,8 @@ entre TAVI e cirurgia — mas **adotam pontos de corte etários diferentes entre
 si**. A abordagem da ESC/EACTS 2021 é deliberadamente mais flexível e centrada
 no paciente do que uma regra de idade isolada, e é por isso que este fluxograma
 não fixa um número.
+
+## O que define estenose aortica grave
+Este fluxograma parte do diagnóstico de gravidade já estabelecido. Os cortes que o sustentam — velocidade de pico ≥ 4,0 m/s, gradiente médio ≥ 40 mmHg, área valvar < 1,0 cm² e área indexada < 0,6 cm²/m² — estão em `valvopatias-estenose-aortica-e-atualizacoes-gerais-esceacts-2021.md`, nesta mesma pasta, junto dos dois subtipos de baixo fluxo e baixo gradiente.
+
+Atenção ao ponto que a árvore não mostra: em 20 a 30% dos casos os parâmetros discordam, em geral com área abaixo de 1 cm² e gradiente abaixo de 40 mmHg. Entrar nesta árvore apoiado só no gradiente deixa esses pacientes de fora.
