@@ -4,7 +4,7 @@ slug: tromboembolismo-pulmonar-agudo-diagnostico-e-manejo-esc-2019
 theme: "Tromboembolismo"
 kind: protocolo
 review_status: pendente_revisao
-source_refs: ["2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism · European Heart Journal · 2020 · 41(4):543-603 · https://academic.oup.com/eurheartj/article/41/4/543/5556136", "ESC 2019: Diretriz de diagnóstico e manejo do tromboembolismo pulmonar · Afya Medicina de Emergência · 2019 · https://portal.afya.com.br/medicina-de-emergencia/esc-2019-diretriz-de-diagnostico-e-manejo-do-tromboembolismo-pulmonar", "Guideline de TEP ESC 2019 · Guia TdC · 2020 · https://www.youtube.com/watch?v=oOa_M7l9jM4"]
+source_refs: ["Konstantinides SV, Meyer G, Becattini C, et al. 2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism developed in collaboration with the ERS. Eur Heart J. 2020;41(4):543-603. DOI: 10.1093/eurheartj/ehz405", "ESC 2019: Diretriz de diagnóstico e manejo do tromboembolismo pulmonar · Afya Medicina de Emergência · 2019 · https://portal.afya.com.br/medicina-de-emergencia/esc-2019-diretriz-de-diagnostico-e-manejo-do-tromboembolismo-pulmonar"]
 legacy_source: "protocolos/protocolo-clinico-tromboembolismo-pulmonar-agudo-esc-2019.md"
 ---
 
