@@ -1,7 +1,7 @@
 ---
 title: "Profilaxia Secundária Antibiótica na Febre Reumática: Duração por Categoria de Risco"
 slug: profilaxia-secundaria-antibiotica-na-febre-reumatica-duracao-por-categoria-de-risco
-theme: "Febre_reumática"
+theme: "Febre reumática"
 kind: protocolo
 review_status: revisado
 source_refs: ["Ralph AP, Noonan S, Wade V, Currie BJ. Prescribing for people with acute rheumatic fever. Aust Prescr. 2017;40(2):70-74.", "Implementing the World Health Organization Guidelines for Rheumatic Heart Disease in Highly Endemic Settings: Balancing Evidence with Reality. Global Heart. 2026."]

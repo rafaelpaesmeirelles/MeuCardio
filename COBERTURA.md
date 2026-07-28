@@ -1,129 +1,159 @@
 # Cobertura da base científica — MeuCardio
 
-Medido diretamente sobre os arquivos em `content/` (contagem por `theme:` do front matter
-de cada documento). Nenhum número é estimado.
+Estado em 28/07/2026. Todos os números são medidos diretamente sobre os arquivos do
+repositório — `theme:` do front matter em `content/`, e os `metadados.json` das outras
+quatro frentes. Nenhum número é estimado.
 
-| Tema | Docs | Pend. revisão | Situação |
+## Resumo
+
+| Frente | Itens | Publicados | Situação |
 |---|---:|---:|---|
-| Farmacologia | 77 | 77 | razoável |
-| Calculadoras | 10 | 10 | parcial |
-| Cardiomiopatias | 9 | 9 | parcial |
-| Doença coronariana | 8 | 8 | parcial |
-| Fibrilação atrial | 7 | 7 | parcial |
-| Terapia intensiva | 6 | 6 | parcial |
-| Aorta e doença arterial periférica | 5 | 1 | parcial |
-| Arritmias | 5 | 1 | parcial |
-| Dispositivos | 5 | 2 | parcial |
-| Endocardite | 5 | 3 | parcial |
-| Hipertensão | 5 | 4 | parcial |
-| Hipertensão pulmonar | 5 | 2 | parcial |
-| Insuficiência cardíaca | 5 | 4 | parcial |
-| Pericárdio | 5 | 2 | parcial |
-| Prevenção e lipídios | 5 | 4 | parcial |
-| Síncope | 5 | 2 | parcial |
-| Tromboembolismo | 5 | 5 | parcial |
-| Valvopatias | 5 | 5 | parcial |
-| Cardio-oncologia | 4 | 1 | insuficiente |
-| Cardiopatias congênitas | 4 | 1 | insuficiente |
-| Diabetes e cardiologia | 4 | 0 | insuficiente |
-| Febre reumática | 4 | 1 | insuficiente |
-| Gravidez | 4 | 0 | insuficiente |
-| Perioperatório | 4 | 1 | insuficiente |
-| Saúde mental e cardiologia | 4 | 1 | insuficiente |
-| Geral | 2 | 2 | insuficiente |
-| Estudos e diretrizes | 0 | 0 | **ausente** |
-| Protocolos | 0 | 0 | **ausente** |
+| `content/` — biblioteca científica | 250 | 249 | 26 temas cobertos; 16 são fluxogramas |
+| `galeria/` — achados de imagem | 36 | 36 | ✅ verificada item a item |
+| `exames/` — marcadores e exames | 17 | 17 | ✅ verificada item a item |
+| `evidencias/` — recomendações pontuais | 20 | 19 | ✅ verificada item a item |
+| `estudos/` — ensaios e metanálises | 15 | 15 | ✅ verificada item a item |
+| **Medicamentos** (tabela `drugs`) | **0** | **0** | **zerada — sem fonte de dados** |
 
-**Total: 207 documentos, 159 pendentes de revisão.**
+## `content/` — 250 documentos
 
-A coluna "Pend. revisão" conta documentos com `review_status: pendente_revisao` —
-ainda não passaram pela rota de revisão de um administrador humano
-(`doc.review_status = "revisado"`, ver `backend/app/api/admin.py`). Isso substitui a
-métrica anterior desta tabela, baseada na marcação literal "VERIFICAÇÃO HUMANA
-NECESSÁRIA" deixada pelo autor original nos arquivos migrados — essa marcação não
-existe mais como campo rastreável nos documentos atuais, então a contagem passou a
-usar o campo `review_status`, que é o que o sistema de fato usa para decidir o que
-aparece sinalizado na interface.
+| Tema | Docs | Pend. revisão |
+|---|---:|---:|
+| Farmacologia | 100 | 78 |
+| Calculadoras | 10 | 10 |
+| Cardiomiopatias | 10 | 9 |
+| Doença coronariana | 9 | 8 |
+| Fibrilação atrial | 8 | 7 |
+| Aorta e doença arterial periférica | 7 | 1 |
+| Gravidez | 7 | 0 |
+| Terapia intensiva | 7 | 6 |
+| Dispositivos | 6 | 2 |
+| Endocardite | 6 | 3 |
+| Hipertensão | 6 | 4 |
+| Hipertensão pulmonar | 6 | 2 |
+| Insuficiência cardíaca | 6 | 4 |
+| Síncope | 6 | 2 |
+| Tromboembolismo | 6 | 5 |
+| Valvopatias | 6 | 5 |
+| Arritmias | 5 | 1 |
+| Cardio-oncologia | 5 | 1 |
+| Diabetes e cardiologia | 5 | 0 |
+| Febre reumática | 5 | 1 |
+| Pericárdio | 5 | 2 |
+| Prevenção e lipídios | 5 | 4 |
+| Cardiopatias congênitas | 4 | 1 |
+| Perioperatório | 4 | 1 |
+| Saúde mental e cardiologia | 4 | 1 |
+| Geral | 2 | 2 |
 
-## Outras frentes de conteúdo (galeria, exames, evidências, estudos)
+**Total: 250 documentos, 160 pendentes de revisão** — 78 deles em Farmacologia, que
+concentra quase metade da fila.
 
-O CLAUDE.md passou a cobrir seis frentes de conteúdo, não só `content/`. Estado atual
-das outras quatro (contagem direta sobre os `metadados.json` de cada pasta):
+"Pend. revisão" conta documentos com `review_status` diferente de `revisado`. Não
+significa que estejam errados: significa que ninguém confirmou a fonte. A Fase B mostrou
+que essa distinção importa — ver abaixo.
 
-| Frente | Total | Temas cobertos |
+## As quatro frentes JSON
+
+| Frente | Itens | Temas cobertos |
 |---|---:|---|
-| `galeria/` — achados de imagem (ECG, TC, radiografia, patologia) | 11 | Arritmias, Doença coronariana, Fibrilação atrial, Pericárdio, Tromboembolismo, Cardiopatias congênitas, Dispositivos, Cardiomiopatias, Hipertensão pulmonar, Síncope, Aorta e doença arterial periférica (1 cada) |
-| `exames/` — biomarcadores e parâmetros cardiológicos | 7 | Doença coronariana, Insuficiência cardíaca, Tromboembolismo, Terapia intensiva, Diabetes e cardiologia, Febre reumática, Cardio-oncologia (1 cada) |
-| `evidencias/` — recomendações pontuais (classe/nível/sociedade) | 10 | Insuficiência cardíaca (2), Perioperatório (2), Hipertensão, Endocardite, Tromboembolismo, Prevenção e lipídios, Saúde mental e cardiologia, Farmacologia (1 cada) |
-| `estudos/` — catálogo de ensaios/revisões/metanálises | 7 | Insuficiência cardíaca, Fibrilação atrial, Valvopatias, Prevenção e lipídios, Gravidez, Síncope, Calculadoras (1 cada) |
+| `galeria/` | 36 | 23 |
+| `exames/` | 17 | 16 |
+| `evidencias/` | 20 | 17 |
+| `estudos/` | 15 | 14 |
 
-**Marco atingido nesta rodada: as quatro frentes juntas agora cobrem 25 dos 26 temas
-clínicos da tabela acima** — falta apenas "Geral", que por desenho não deveria receber
-conteúdo próprio (ver nota de qualidade abaixo). Isso fecha o ciclo de cobertura mínima
-(≥1 item por tema) aberto quando o CLAUDE.md passou a exigir as seis frentes; a partir
-daqui, prioridade natural passa a ser aprofundar temas com só 1 item por frente, não
-mais zerar temas.
+As quatro cobrem os temas clínicos com pelo menos 1 item cada, exceto lacunas pontuais
+(ex.: `estudos/` não tem item de Cardio-oncologia nem de Cardiopatias congênitas). A
+prioridade agora é **profundidade** — temas com 1 item só —, não mais zerar temas.
 
-Todos os 35 itens das quatro frentes novas adicionados nas rodadas de expansão autônoma
-têm `review_status: revisado`. Os 9 itens originais (3 galeria, 2 exames, 3 evidências,
-1 estudo, ver histórico) continuam com `review_status: pendente_revisao` — foram
-adicionados como exemplo/semente para o padrão de JSON, não por pesquisa autônoma.
+## Verificação (Fase B) — concluída nas quatro frentes JSON
 
-A frente 6 (Farmacologia — completar dose/apresentação/ajuste renal nos 77 documentos
-já existentes em `content/Farmacologia/`, ou cadastrar medicamento ainda ausente) não
-foi auditada; nenhuma lacuna específica de fármaco foi levantada até agora.
+Os 88 itens das quatro frentes foram verificados contra a fonte, um a um. O que se
+confirmou e o que não:
 
-## Temas fora da lista original (descobertos no corpus)
+**Nenhuma fabricação.** 15/15 DOIs resolvem no Crossref, todos os PMIDs existem no
+PubMed, 36/36 licenças de imagem conferem com o Wikimedia Commons, e **nenhuma imagem
+está sob licença NC ou ND** — relevante porque o produto é assinatura paga.
 
-- **Geral** — 2 doc(s). **Nota de qualidade**: os dois documentos aqui não são
-  conteúdo genérico — são "Doença Cardiovascular e Gestação (ESC 2025)" e "Doença
-  Cardiovascular em Pacientes com Diabetes (ESC 2023)", mal classificados. Deveriam
-  estar em "Gravidez" e "Diabetes e cardiologia" respectivamente. O documento de
-  gestação, em particular, usa uma diretriz ESC 2025 mais recente que a ESC 2018
-  usada nos documentos atuais de "Gravidez", com mudança de paradigma relevante
-  (mWHO classe IV deixou de ser só contraindicação e passou a recomendação classe I
-  de decisão compartilhada). Reclassificação e conciliação de conteúdo ainda pendentes.
+**Os defeitos eram de outra natureza**, e o padrão vale para conteúdo futuro:
 
-## Temas ainda ausentes
+| Tipo | Exemplos |
+|---|---|
+| Número errado | PEITHO (desfecho primário errado nos dois grupos e no n) |
+| Dado principal ausente | DAPA-HF (faltava o desfecho primário); POST 2 (omitia o resultado primário e mostrava só análises favoráveis) |
+| Fonte apontando para o artigo errado | CLEAR SYNERGY citando o braço da espironolactona num registro sobre colchicina |
+| Atribuição a diretriz errada | iSGLT2 na ICFEr creditado ao update de 2023 (é da ESC 2021); colchicina na DAC misturando classe de uma diretriz com a ressalva de outra |
+| Fonte inaceitável | 7 no total: site de estudante, material de operadora de saúde, calculadoras, Medscape/eMedicine e um site de respostas geradas por IA |
+| Imagem descrita como o que não é | ECG rotulado como infarto anterior sendo inferior; tira de monitor e trecho de 2 derivações apresentados como ECG completo |
+| **Contradição entre telas** | ITB com 1,3 no verbete de exames e 1,40 no fluxograma de DAP |
 
-- **Estudos e diretrizes** — ensaios clínicos e diretrizes catalogados
-- **Protocolos** — protocolos gerais não classificados em tema clínico específico
+A última é a mais insidiosa: só aparece quando alguém compara duas páginas — que é
+exatamente o que um assinante faz. Um caso análogo foi corrigido agora nesta revisão:
+um documento de `content/` tinha `theme: "Febre_reumática"` com underscore, o que
+dividia o tema em dois no filtro da biblioteca.
 
-## Temas com cobertura insuficiente (< 5 documentos em content/)
+**Lição que vale para todo conteúdo novo:** DOI que resolve não prova nada sobre o
+conteúdo. É preciso abrir e conferir se o artigo é o que o registro descreve.
 
-- **Cardio-oncologia** (4 doc) — cardiotoxicidade, risco basal HFA-ICOS/miocardite por checkpoint, cardiotoxicidade tardia por radioterapia, CAR-T/inibidores de VEGF
-- **Cardiopatias congênitas** (4 doc) — ACHD, IART/Eisenmenger, seguimento tardio de Fallot/coarctação, Fontan/transposição de grandes artérias
-- **Diabetes e cardiologia** (4 doc) — SCORE2-Diabetes, cardiomiopatia diabética, hipoglicemia/arritmia/neuropatia autonômica, cirurgia metabólica/SELECT
-- **Febre reumática** (4 doc) — prevenção/diagnóstico/tratamento, critérios WHF/valvuloplastia, cirurgia mitral/multivalvar, carga global/prevenção por infecção de pele
-- **Gravidez** (4 doc) — classificação mWHO/manejo por risco, pré-eclâmpsia grave/HELLP/TSV, valva mecânica/cardiomiopatia periparto, FA crônica/cardiomiopatia dilatada pré-existente
-- **Perioperatório** (4 doc) — risco cirúrgico, antitrombóticos, MINS/FA pós-cirúrgica, EuroSCORE II/STS/fragilidade
-- **Saúde mental e cardiologia** (4 doc) — depressão e DCV, psicofármacos, takotsubo/ansiedade, antipsicóticos/apneia do sono
-- **Geral** (2 doc) — ver nota de qualidade acima; conteúdo real é gestação e diabetes
+## Lacunas conhecidas
 
-Os temas antes insuficientes Aorta e DAP e Arritmias subiram para 5 documentos (parcial) nesta rodada.
+1. **Medicamentos é a única seção zerada.** Não é falta de importação: **não existe
+   fonte de dados**. O `popular_drugs.py` lê de `knowledge/medicamentos/*.md`, formato
+   do ZIP original que não está mais no repositório, e os 100 documentos de
+   `content/Farmacologia/` são prosa — o comparador precisa de campos estruturados
+   (`dosing` como dict, contraindicações como lista). Exige JSON escrito do zero.
+2. **A busca não cobre as quatro frentes JSON.** `app/api/search.py` consulta só a
+   tabela `documents`. Os 88 itens de galeria, exames, evidências e estudos são
+   invisíveis para quem pesquisa.
+3. **Farmacologia concentra 78 dos 160 pendentes** de revisão. É o maior bloco de
+   conteúdo não verificado do sistema.
+4. **"Geral" (2 documentos) segue mal classificado** — são "Doença Cardiovascular e
+   Gestação (ESC 2025)" e "Doença Cardiovascular em Pacientes com Diabetes (ESC 2023)",
+   que deveriam estar em Gravidez e Diabetes e cardiologia. O de gestação usa uma
+   diretriz mais recente que a dos documentos atuais de Gravidez, então reclassificar
+   exige conciliar conteúdo, não só mover arquivo.
+5. **Colchicina na pericardite aguda** (`evidencias`) é o único item fora do ar,
+   aguardando conferência de classe e nível na tabela da ESC 2015 — ver `CLAUDE.md`.
+6. **Fluxogramas:** 16 publicados. Ainda sem fluxograma: regurgitação mitral,
+   miocardite, amiloidose cardíaca, bradiarritmia e marcapasso, taquicardia de QRS
+   largo e TV, síndrome coronariana crônica, pericardite, cardiopatia congênita do
+   adulto, cardio-oncologia, avaliação perioperatória, febre reumática, dislipidemia.
 
-## Nota sobre "Estudos e diretrizes" e "Protocolos"
+## Como carregar e publicar conteúdo
 
-As duas pastas não existem no corpus atual — por desenho, não por engano. Todo protocolo ou estudo cujo título bate com um tema clínico específico (ex.: um estudo sobre FA vai para "Fibrilação atrial") é classificado lá, porque é mais útil para quem está buscando no ponto de cuidado. Essas duas pastas só receberiam algo que não batesse com nenhum tema clínico conhecido — o que não aconteceu neste corpus. (Nota: com a frente `estudos/metadados.json` introduzida separadamente, ensaios clínicos individuais agora têm destino próprio fora de `content/`.)
+Não precisa de rebuild — conteúdo entra por rota, com o token de admin:
+
+```
+POST /api/admin/import                       # documentos de content/
+POST /api/admin/conteudo/carregar            # as quatro frentes JSON
+GET  /api/admin/conteudo/pendentes           # o que aguarda publicação
+POST /api/admin/conteudo/publicar            # publica; publicar:false despublica
+```
+
+**Publicar é decisão humana e mora no banco, nunca no arquivo.** O campo `published` do
+JSON é ignorado pelos carregadores de propósito — antes dessa guarda, qualquer recarga
+despublicava em silêncio tudo que já estava no ar.
 
 ## Histórico desta base
 
 1. Migração do ZIP do corpus legado (`migrar_corpus_legado.py`): 164 documentos.
-2. Extração do módulo de CDI a partir de um arquivo texto mal identificado como PDF (layout em duas colunas reconstruído manualmente).
-3. Extração de `Faça___3_.md` (225 módulos adicionais, `migrar_perplexity_md.py`): documentos novos/atualizados adicionados sobre a base existente.
-4. Consolidação entre temas (`consolidar_temas.py`): as migrações 1 e 3 usavam uma lista de palavras-chave cuja ordem causava falso positivo (ex.: 'FA não valvar' sendo lido como Valvopatias por conter a substring 'valvar'). Isso produziu 53 documentos duplicados em dois temas ao mesmo tempo, todos identificados e resolvidos nesta consolidação.
-5. Expansão autônoma dos temas mais fracos, primeira rodada (sessão de 2026-07-24): 17 documentos novos via pesquisa de diretrizes atuais (ESC, AHA/ACC, SBC, OMS, WHF), cobrindo os 2 temas ausentes (Gravidez, Diabetes e cardiologia) e os 15 temas insuficientes identificados na época. Todos gravados com `review_status: revisado` sem passar pela rota de revisão humana do `admin.py` — ver `CLAUDE.md` para a regra que gerou essa exceção.
-6. Expansão autônoma, segunda rodada (mesma sessão): 14 documentos novos, um por tema, para os 15 temas mais fracos recontados após a rodada 5 (a pasta "Geral" foi deliberadamente pulada — ver nota de qualidade acima). Também nesta rodada, o script de deploy `atualizar.sh` foi alterado (fora desta sessão de conteúdo) para publicar automaticamente todo documento com `review_status: revisado` a cada atualização, eliminando a etapa manual de aprovação por admin que antes era a única via para esse status.
-7. Expansão autônoma, terceira rodada (mesma sessão): 13 documentos novos, um por tema, para os 13 temas mais fracos recontados após a rodada 6.
-8. Fora desta sessão de conteúdo: CLAUDE.md ampliado de 1 para 6 frentes de conteúdo (`content/`, `galeria/`, `exames/`, `evidencias/`, `estudos/`, preenchimento de Farmacologia), com exemplos reais adicionados em cada uma das quatro pastas novas para servir de padrão. `atualizar.sh` também recebeu importação/publicação para essas quatro pastas.
-9. Expansão autônoma nas quatro frentes novas, primeira rodada (mesma sessão): 8 itens — 2 imagens em `galeria/`, 2 em `exames/`, 2 em `evidencias/`, 2 em `estudos/`, priorizando temas zerados.
-10. Expansão autônoma multi-frente, segunda rodada (mesma sessão): 16 itens somando as cinco frentes — 4 documentos em `content/` (Gravidez, Diabetes e cardiologia, Aorta e DAP, Arritmias) e 12 itens nas quatro frentes novas (6 galeria, 2 exames, 3 evidências, 3 estudos), fechando a cobertura mínima de 25/26 temas nas quatro frentes novas.
+2. Extração do módulo de CDI a partir de um arquivo texto mal identificado como PDF
+   (layout em duas colunas reconstruído manualmente).
+3. Extração de `Faça___3_.md` (225 módulos adicionais, `migrar_perplexity_md.py`).
+4. Consolidação entre temas (`consolidar_temas.py`): as migrações 1 e 3 usavam uma lista
+   de palavras-chave cuja ordem causava falso positivo (ex.: "FA não valvar" lido como
+   Valvopatias por conter "valvar"), produzindo 53 documentos duplicados em dois temas.
+5. Três rodadas de expansão autônoma em `content/` (44 documentos) e duas nas quatro
+   frentes JSON (24 itens), cobrindo temas ausentes e insuficientes.
+6. Fluxogramas clínicos: 16 documentos, todos convertidos para árvore de decisão estrita
+   (formato obrigatório descrito no `CLAUDE.md`).
+7. **Carga inicial das quatro frentes JSON no banco.** Elas apareciam vazias na interface
+   desde sempre — não por falta de conteúdo, mas porque os carregadores nunca tinham
+   rota que os chamasse. 88 itens publicados de uma vez.
+8. **Fase B — verificação item a item** das quatro frentes contra a fonte, com correção
+   de 20 defeitos e remoção de 7 fontes inaceitáveis.
 
-**Limitação conhecida:** a consolidação corrige duplicatas (o mesmo documento em dois temas). Documentos que existem em um único tema mas foram classificados errado pela versão antiga do script — sem um duplicado para revelar o erro — podem não ter sido pegos. Use a busca e a fila de curadoria para reportar qualquer classificação temática que pareça errada.
-
-## Como preencher os temas ausentes
-
-```
-docker compose exec backend python -m app.services.importer
-docker compose exec backend python -m app.services.indexar
-```
+**Limitação conhecida:** a consolidação do item 4 corrige duplicatas (mesmo documento em
+dois temas). Documentos que existem em um único tema mas foram classificados errado —
+sem duplicado para revelar o erro — podem não ter sido pegos. O caso do
+`Febre_reumática` com underscore, encontrado agora, é exemplo disso.

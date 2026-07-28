@@ -73,15 +73,24 @@ def import_directory(path: str | None = None) -> dict:
                 vistos_neste_lote[slug] = str(md.relative_to(root))
 
                 doc = db.query(Document).filter(Document.slug == slug).first()
+                corpo_mudou = doc is None or doc.body_md != body
                 if doc:
-                    if doc.body_md == body:
+                    # Só o corpo gera revisão e sobe a versão. O front matter é
+                    # reaplicado sempre, mesmo com corpo idêntico: antes desta
+                    # separação, o importador dava `continue` quando o corpo não
+                    # mudava e engolia toda correção de metadado — trocar
+                    # `theme`, `summary`, `tags` ou `source_refs` não tinha
+                    # efeito nenhum, e o relatório ainda dizia "inalterados",
+                    # o que parecia sucesso. Foi assim que um `theme` com
+                    # underscore sobreviveu a várias reimportações.
+                    if corpo_mudou:
+                        db.add(DocumentRevision(document_id=doc.id, version=doc.version,
+                                                body_md=doc.body_md))
+                        doc.body_md = body
+                        doc.version += 1
+                        atualizados += 1
+                    else:
                         inalterados += 1
-                        continue
-                    db.add(DocumentRevision(document_id=doc.id, version=doc.version,
-                                            body_md=doc.body_md))
-                    doc.body_md = body
-                    doc.version += 1
-                    atualizados += 1
                 else:
                     doc = Document(slug=slug, body_md=body, published=False)
                     db.add(doc)
