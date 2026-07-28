@@ -30,6 +30,8 @@ import Agenda from "./pages/Agenda";
 import Templates from "./pages/Templates";
 import Assinatura from "./pages/Assinatura";
 import MinhaConta from "./pages/MinhaConta";
+import Telediagnostico from "./pages/Telediagnostico";
+import FilaTelediagnostico from "./pages/FilaTelediagnostico";
 
 export default function App() {
   const { usuario, carregando } = useAuth();
@@ -73,8 +75,12 @@ export default function App() {
         <Route path="documentos" element={<Templates />} />
         <Route path="assinatura" element={<Assinatura />} />
         <Route path="minha-conta" element={<MinhaConta />} />
+        <Route path="telediagnostico" element={<Telediagnostico />} />
         {usuario.role === "admin" && (
           <Route path="admin" element={<Admin />} />
+        )}
+        {usuario.role === "admin" && (
+          <Route path="fila-telediagnostico" element={<FilaTelediagnostico />} />
         )}
       </Route>
       <Route path="*" element={<Navigate to="/" replace />} />

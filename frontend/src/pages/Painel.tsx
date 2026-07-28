@@ -66,6 +66,11 @@ const FUNCOES: { to: string; nome: string; descricao: string; destaque?: boolean
     descricao: "Ensaios, revisões e metanálises com os números reais do estudo e a implicação clínica.",
   },
   {
+    to: "/telediagnostico",
+    nome: "Laudo e consultoria",
+    descricao: "Envie ECG, MAPA, Holter ou teste ergométrico e receba interpretação ou laudo assinado, com prazo definido.",
+  },
+  {
     to: "/round",
     nome: "Round hospitalar",
     descricao: "Pacientes internados, evolução, prescrição e linha do tempo de cada caso.",

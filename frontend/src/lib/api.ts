@@ -63,6 +63,26 @@ export const api = {
     return request<T>(p, { method: "POST", body: form });
   },
 
+  /** Baixa um arquivo protegido. Precisa existir porque a API autentica por
+   *  header Bearer, não por cookie: um <a href="/api/..."> abriria a URL sem
+   *  o token e tomaria 401. Aqui o fetch leva o header e devolve o conteúdo. */
+  async blob(p: string): Promise<Blob> {
+    const headers = new Headers();
+    const t = token.get();
+    if (t) headers.set("Authorization", `Bearer ${t}`);
+    const res = await fetch(`${BASE}${p}`, { headers });
+    if (res.status === 401) {
+      token.clear();
+      window.location.assign("/entrar");
+      throw new ApiError(401, "Sessão expirada.");
+    }
+    if (!res.ok) {
+      const detail = await res.json().catch(() => null);
+      throw new ApiError(res.status, detail?.detail ?? "Não foi possível abrir o arquivo.");
+    }
+    return res.blob();
+  },
+
   async login(email: string, password: string) {
     const form = new URLSearchParams({ username: email, password });
     const res = await fetch(`${BASE}/auth/login`, {

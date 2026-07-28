@@ -22,6 +22,7 @@ const NAV_BASE: ItemNav[] = [
   { to: "/round", rotulo: "Round hospitalar", curto: "Round" },
   { to: "/agenda", rotulo: "Agenda", curto: "Agenda" },
   { to: "/documentos", rotulo: "Modelos de documento", curto: "Documentos" },
+  { to: "/telediagnostico", rotulo: "Laudo e consultoria", curto: "Laudo" },
 ];
 
 export default function Shell() {
@@ -42,7 +43,7 @@ export default function Shell() {
           to: "/admin",
           rotulo: pendentes > 0 ? `Administração (${pendentes})` : "Administração",
           curto: pendentes > 0 ? `Admin (${pendentes})` : "Admin",
-        }, CONTA]
+        }, { to: "/fila-telediagnostico", rotulo: "Fila de telediagnóstico", curto: "Fila" }, CONTA]
       : [...NAV_BASE, CONTA];
 
   return (
