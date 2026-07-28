@@ -30,13 +30,38 @@ ROTA = {
 }
 
 
+
+def _disponivel(db: Session, item_type: str, slug: str) -> bool:
+    """A etapa aponta para conteúdo que o assinante consegue abrir agora?
+
+    Existir e estar no ar são coisas diferentes. O carregador valida existência
+    — impede trilha com slug digitado errado —, mas conteúdo em revisão continua
+    despublicado, e uma etapa clicável que devolve 404 quebra a confiança na
+    trilha inteira. Melhor mostrar a etapa marcada como indisponível do que
+    escondê-la: a curadoria continua legível, e fica claro que falta publicar,
+    não que falta conteúdo.
+    """
+    from app.models.checklist import DischargeChecklist
+    from app.models.content import Document
+    from app.models.drug import Drug
+    from app.models.study import ScientificStudy
+
+    modelos = {"documento": Document, "medicamento": Drug,
+               "estudo": ScientificStudy, "checklist": DischargeChecklist}
+    Modelo = modelos.get(item_type)
+    if Modelo is None:
+        return True  # calculadora vive em código, não em tabela
+    item = db.query(Modelo).filter(Modelo.slug == slug).first()
+    return bool(item and getattr(item, "published", False))
+
+
 def _progresso(db: Session, user_id: int, track: StudyTrack) -> StudyTrackProgress | None:
     return db.query(StudyTrackProgress).filter(
         StudyTrackProgress.user_id == user_id, StudyTrackProgress.track_id == track.id
     ).first()
 
 
-def _dump(t: StudyTrack, prog: StudyTrackProgress | None, com_etapas: bool = True) -> dict:
+def _dump(db: Session, t: StudyTrack, prog: StudyTrackProgress | None, com_etapas: bool = True) -> dict:
     feitas = set((prog.concluidas if prog else []) or [])
     etapas = t.etapas or []
     d = {
@@ -49,16 +74,18 @@ def _dump(t: StudyTrack, prog: StudyTrackProgress | None, com_etapas: bool = Tru
         d["etapas"] = [
             {**e,
              "link": ROTA.get(e.get("item_type"), "").format(slug=e.get("item_slug")),
-             "concluida": e.get("item_slug") in feitas}
+             "concluida": e.get("item_slug") in feitas,
+             "disponivel": _disponivel(db, e.get("item_type"), e.get("item_slug"))}
             for e in etapas
         ]
+        d["etapas_indisponiveis"] = len([e for e in d["etapas"] if not e["disponivel"]])
     return d
 
 
 @router.get("")
 def listar(db: Session = Depends(get_db), user: User = Depends(current_user)):
     ts = db.query(StudyTrack).filter(StudyTrack.published.is_(True)).order_by(StudyTrack.titulo).all()
-    return [_dump(t, _progresso(db, user.id, t), com_etapas=False) for t in ts]
+    return [_dump(db, t, _progresso(db, user.id, t), com_etapas=False) for t in ts]
 
 
 @router.get("/{slug}")
@@ -68,7 +95,7 @@ def detalhe(slug: str, db: Session = Depends(get_db), user: User = Depends(curre
     ).first()
     if t is None:
         raise HTTPException(status_code=404, detail="Trilha não encontrada.")
-    return _dump(t, _progresso(db, user.id, t))
+    return _dump(db, t, _progresso(db, user.id, t))
 
 
 class MarcarEtapa(BaseModel):
@@ -100,4 +127,4 @@ def marcar(slug: str, dados: MarcarEtapa,
     # de "finalizar", porque a conclusão é consequência e não decisão.
     prog.concluida_em = datetime.now(timezone.utc) if feitas >= validos else None
     db.commit()
-    return _dump(t, prog)
+    return _dump(db, t, prog)

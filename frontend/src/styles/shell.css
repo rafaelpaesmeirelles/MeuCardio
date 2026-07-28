@@ -551,3 +551,36 @@
 .checklist__acoes { display: flex; flex-wrap: wrap; align-items: center; gap: 0.7rem; margin: 0.9rem 0; }
 .checklist__nota { font-size: 0.82rem; color: var(--texto-secundario); }
 .checklist__origem { font-size: 0.85rem; }
+
+/* ------------------------------------------------------ trilhas de estudo */
+.trilha__barra { display: block; height: 0.4rem; margin: 0.4rem 0; background: var(--line); border-radius: 999px; overflow: hidden; }
+.trilha__barra > span { display: block; height: 100%; background: var(--acento); }
+.trilha__barra--larga { flex: 1; margin: 0 0.8rem; max-width: 18rem; }
+.trilha__concluida { font-size: 0.85rem; font-weight: 600; color: var(--acento); }
+
+.trilha__etapas { list-style: none; padding: 0; counter-reset: etapa; }
+.trilha__etapa {
+  display: flex; gap: 0.8rem; align-items: flex-start;
+  padding: 0.8rem 0; border-bottom: 1px solid var(--line);
+}
+.trilha__etapa--ok .trilha__titulo { color: var(--texto-secundario); }
+.trilha__etapa--indisponivel { opacity: 0.72; }
+
+.trilha__marcar {
+  flex: 0 0 auto; width: 1.9rem; height: 1.9rem; cursor: pointer;
+  font-size: 0.9rem; font-weight: 700; color: var(--texto-secundario);
+  background: transparent; border: 2px solid var(--line); border-radius: 50%;
+}
+.trilha__etapa--ok .trilha__marcar { color: #fff; background: var(--acento); border-color: var(--acento); }
+
+.trilha__corpo { display: flex; flex-direction: column; gap: 0.2rem; min-width: 0; }
+.trilha__tipo {
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.04em;
+  text-transform: uppercase; color: var(--acento);
+}
+.trilha__titulo { font-weight: 600; text-transform: capitalize; }
+.trilha__titulo--off { color: var(--texto-secundario); }
+.trilha__titulo--off em { font-size: 0.8rem; font-weight: 400; }
+/* O "por quê" é o que a trilha acrescenta ao conteúdo que já existe — fica
+   legível, e não em letra de nota de rodapé. */
+.trilha__porque { margin: 0.15rem 0 0; font-size: 0.88rem; color: var(--texto-secundario); max-width: 62ch; }
