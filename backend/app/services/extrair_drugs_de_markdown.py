@@ -116,7 +116,12 @@ def extrair(pasta: str = "content/Farmacologia") -> tuple[list[dict], dict]:
             falhas.append(f"{md.name}: sem slug")
             continue
 
-        d: dict = {"slug": slug, "review_status": "pendente_revisao"}
+        # O status de revisão vem do próprio documento, não é fixado aqui. Os
+        # verbetes de Farmacologia foram auditados um a um contra rótulo
+        # aprovado, e alguns já estão marcados como revisados — carimbar
+        # "pendente" por cima apagaria esse trabalho e devolveria à fila
+        # documentos que já saíram dela.
+        d: dict = {"slug": slug, "review_status": campo_fm("review_status", "pendente_revisao")}
         dosing: dict = {}
         outcomes: dict = {}
         notes: dict = {}

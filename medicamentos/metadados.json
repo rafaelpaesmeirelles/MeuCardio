@@ -86,7 +86,7 @@
       "Conversão de taquicardia supraventricular paroxística, incluindo a associada à síndrome de Wolff-Parkinson-White; teste de estresse farmacológico"
     ],
     "interactions": [
-      "Carbamazepina e dipiridamol potencializam o efeito da adenosina — reduzir dose inicial para 3mg se uso concomitante"
+      "O dipiridamol bloqueia o transporte de nucleosídeos e **potencializa** a adenosina — o rótulo diz que doses menores podem ser eficazes, sem fixar um valor (VERIFICAÇÃO HUMANA NECESSÁRIA para o corte de 3 mg que circulava aqui, que não está no rótulo). A carbamazepina é situação diferente: o rótulo relata **aumento do grau de bloqueio AV**, não potencialização do efeito antiarrítmico, e a conduta é cautela, não redução de dose. Metilxantinas (cafeína, teofilina) antagonizam competitivamente a adenosina e podem torná-la ineficaz"
     ],
     "adverse_effects": [
       "Rubor facial, dispneia transitória, desconforto torácico, bradicardia transitória/assistolia breve (esperada e autolimitada), broncoespasmo"
@@ -97,22 +97,23 @@
       "tsvp adulto terceira dose": "Uma terceira dose de 12mg pode ser administrada se necessário",
       "tsvp pediatria inicial": "0,05-0,1 mg/kg (dose máxima inicial 6mg)",
       "tsvp pediatria titulacao": "Se não houver conversão em 1-2min, aumentar em 0,05-0,1mg/kg; repetir até ritmo sinusal ou dose única máxima de 0,3mg/kg ou 12mg",
-      "teste estresse farmacologico": "12 mg como dose única (adulto e pediatria)",
+      "teste estresse farmacologico": "0,14 mg/kg/min em infusão intravenosa contínua por 6 minutos (dose total de 0,84 mg/kg), com o radiotraçador injetado no ponto médio da infusão. **Não é bolus**: a versão anterior deste verbete indicava 12 mg em dose única, o que confunde o produto de reversão de TSVP com o agente de estresse farmacológico",
       "ajuste renal hepatico": "Não é necessário ajuste",
       "via administracao": "EV rápido, em bolus, seguido de flush de 20mL de soro fisiológico a cada dose",
-      "fonte": "Guia Farmacêutico HSL"
+      "fonte": "rótulos aprovados pelo FDA (DailyMed). Doses de TSVP conferidas no rótulo do produto de reversão; a de estresse farmacológico, no rótulo do agente de perfusão miocárdica"
     },
     "notes": {
       "Precaucoes": "Evitar em pacientes com bradicardia sintomática e/ou broncoespasmo/broncoconstrição — pode exacerbar esses sintomas",
       "Particularidade clinica": "Efeito extremamente breve exige administração em bolus rápido seguido de flush imediato, idealmente em acesso venoso central ou periférico calibroso próximo ao coração"
     },
     "references": [
-      "ADENOSINA — Guia Farmacêutico · Hospital Sírio-Libanês · https://guiafarmaceutico.hsl.org.br/adenosina"
+      "Adenosine injection (agente de estresse farmacológico) — rótulo aprovado pelo FDA, DailyMed SPL setid b6851256-6cef-4f23-8129-19bb64380cd5, Meitheal Pharmaceuticals",
+      "Adenosine injection (taquicardia supraventricular paroxística) — rótulo aprovado pelo FDA, DailyMed SPL setid d28ff4f3-baf4-4640-ae00-f0eb065417be, Henry Schein"
     ]
   },
   {
     "slug": "alteplase",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Alteplase (ativador do plasminogênio tecidual recombinante, rt-PA)",
     "drug_class": "Trombolítico/fibrinolítico",
     "mechanism": "Ativa a conversão de plasminogênio em plasmina de forma seletiva na superfície da fibrina, promovendo a lise do trombo já formado",
@@ -180,12 +181,12 @@
   },
   {
     "slug": "anlodipino-besilato",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Anlodipino (besilato)",
     "drug_class": "Bloqueador de canal de cálcio diidropiridínico de longa duração",
     "mechanism": "Inibe o influxo transmembrana de íons cálcio para a musculatura lisa cardíaca e vascular; efeito anti-hipertensivo por relaxamento direto da musculatura vascular lisa (redução de pós-carga); efeito antianginoso por dupla ação — dilatação de arteríolas periféricas (reduz consumo de O2 miocárdico) e dilatação de artérias/arteríolas coronárias (aumenta liberação de O2, útil em angina de Prinzmetal/vasoespástica)",
     "interactions": [
-      "Sinvastatina — avaliar dose se anlodipino ≥20mg/dia (aumenta exposição à sinvastatina); grapefruit/suco de grapefruit reduz efeito; cautela com inibidores (cetoconazol, itraconazol, ritonavir) ou indutores (rifampicina, Hypericum) de CYP3A4; monitorar níveis de ciclosporina e tacrolimo em transplantados; seguro com tiazídicos, betabloqueadores, IECA, nitratos, AINEs, antibióticos e hipoglicemiantes orais"
+      "Sinvastatina — **não exceder 20 mg/dia de sinvastatina** em quem usa anlodipino, porque o anlodipino aumenta a exposição à sinvastatina e o risco de miopatia. A versão anterior deste verbete invertia a advertência, condicionando-a a anlodipino ≥20 mg/dia — dose que nem existe, já que o máximo do anlodipino é 10 mg/dia; grapefruit/suco de grapefruit reduz efeito; cautela com inibidores (cetoconazol, itraconazol, ritonavir) ou indutores (rifampicina, Hypericum) de CYP3A4; monitorar níveis de ciclosporina e tacrolimo em transplantados; seguro com tiazídicos, betabloqueadores, IECA, nitratos, AINEs, antibióticos e hipoglicemiantes orais"
     ],
     "adverse_effects": [
       "Cefaleia, tontura, sonolência, palpitações, rubor facial, edema periférico (dose-dependente), fadiga; menos comuns: hiperplasia gengival, ginecomastia, disfunção erétil; raros: hepatite/icterícia colestática, angioedema"
@@ -201,7 +202,7 @@
       "insuficiencia hepatica": "Administrar com cuidado (clearance reduzido)",
       "insuficiencia renal": "Doses habituais podem ser empregadas — não é dialisável",
       "administracao": "Com ou sem alimentos, não deve ser partido/mastigado",
-      "fonte": "Consulta Remédios/ANVISA — bula LFM"
+      "fonte": "rótulo do anlodipino aprovado pelo FDA (DailyMed). Apresentações comerciais brasileiras devem ser conferidas na bula registrada na ANVISA"
     },
     "outcomes": {
       "Evidencia camelot": "Estudo CAMELOT (1997 pacientes com DAC) comparou anlodipino vs. placebo em adição a terapia padrão: redução de 31% no desfecho cardiovascular composto (p=0,003), 42% em hospitalização por angina (p=0,002) e 27% em revascularização coronária (p=0,033)",
@@ -212,7 +213,7 @@
       "Farmacocinetica": "Biodisponibilidade absoluta 64-80%; pico plasmático em 6-12h; ligação proteica ~97,5%; meia-vida de eliminação 35-50h (permite dose única diária); estado de equilíbrio em 7-8 dias; metabolização hepática extensa em metabólitos inativos; início de ação anti-hipertensiva em 24-96h (lento, sem hipotensão aguda)"
     },
     "references": [
-      "Anlodipino: bula, para que serve e como usar · Consulta Remédios/ANVISA · 2023 · https://consultaremedios.com.br/anlodipino/bula"
+      "Amlodipine besylate tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 27b0c628-820a-48bf-a411-86c0ebd4cc8d"
     ]
   },
   {
@@ -243,17 +244,17 @@
       "tvp ep prevencao recorrencia apos 6 meses": "2,5 mg 2x/dia",
       "ajuste renal leve moderada": "Sem ajuste necessário",
       "ajuste renal grave": "Avaliar criteriosamente; AUC aumenta 44% em ClCr 15-29mL/min",
-      "contraindicado clcr menor 15 ou dialise": "Uso não recomendado",
+      "doenca renal terminal em dialise": "os rótulos divergem, e a diferença muda conduta. O rótulo aprovado pelo FDA orienta usar a **dose habitual** em doença renal terminal mantida em hemodiálise intermitente, por produzir concentrações semelhantes às observadas no ARISTOTLE (com a ressalva de que esses pacientes não foram incluídos nos ensaios). Já o rótulo europeu não recomenda o uso abaixo de ClCr 15 mL/min. VERIFICAÇÃO HUMANA NECESSÁRIA para o que a bula registrada na ANVISA determina, que é a que vale aqui — a versão anterior deste verbete afirmava apenas 'uso não recomendado', o que retira uma opção que o rótulo americano descreve",
       "ajuste hepatico leve moderado": "Sem ajuste necessário",
       "ajuste hepatico grave": "Não recomendado",
       "cirurgia risco moderado alto sangramento": "Descontinuar ≥48h antes",
       "cirurgia risco baixo sangramento": "Descontinuar ≥24h antes",
       "esquecimento de dose": "Tomar imediatamente e continuar esquema 2x/dia; não dobrar dose",
-      "fonte": "Consulta Remédios/ANVISA — bula profissional completa"
+      "fonte": "rótulo do apixabana aprovado pelo FDA (DailyMed). Apresentações e restrições registradas no Brasil devem ser conferidas na bula da ANVISA"
     },
     "outcomes": {
       "Evidencia pivotal aristotle": "Estudo ARISTOTLE (vs. varfarina, RNI 2-3, em FA não valvular): apixabana demonstrou superioridade estatística no desfecho primário de AVC/embolia sistêmica, superioridade em óbito por qualquer causa, e redução de sangramento maior; hemorragia intracraniana reduzida em >50%, sangramento fatal reduzido em >70%",
-      "Evidencia averroes": "Estudo AVERROES (vs. AAS 81-324mg/dia, em pacientes inadequados para AVK): apixabana superior na prevenção de AVC/embolia sistêmica; estudo interrompido precocemente por benefício claro; sem aumento estatisticamente significativo de sangramento maior vs. AAS",
+      "Evidencia averroes": "VERIFICAÇÃO HUMANA NECESSÁRIA — os ensaios AVERROES, AMPLIFY e AMPLIFY-EXT são citados aqui pelo acrônimo, sem referência. Tentei confirmar os três no PubMed nesta sessão e as buscas devolveram publicações posteriores, não os artigos de derivação; por isso não inseri citação. Confirmar antes de tratar os números abaixo como verificados. Estudo AVERROES (vs. AAS 81-324mg/dia, em pacientes inadequados para AVK): apixabana superior na prevenção de AVC/embolia sistêmica; estudo interrompido precocemente por benefício claro; sem aumento estatisticamente significativo de sangramento maior vs. AAS",
       "Evidencia amplify": "Estudo AMPLIFY (tratamento de TVP/EP, apixabana 10mg 2x/dia por 7 dias seguido de 5mg 2x/dia vs. enoxaparina/varfarina): não-inferioridade em eficácia, com superioridade estatística em segurança (sangramento maior reduzido, RR 0,31)",
       "Evidencia amplify ext": "Estudo AMPLIFY-EXT (prevenção de recorrência, 2,5mg ou 5mg 2x/dia vs. placebo por 12 meses após 6-12 meses de anticoagulação prévia): ambas as doses superiores ao placebo na prevenção de TEV recorrente/óbito, sem aumento de sangramento maior"
     },
@@ -263,7 +264,8 @@
       "Administracao via sonda": "Comprimidos podem ser triturados e suspensos em água, D5W ou suco de maçã, estáveis por até 4h; administráveis por sonda nasogástrica"
     },
     "references": [
-      "Apixabana Medley: bula, para que serve e como usar · Consulta Remédios/ANVISA · 2024 · https://consultaremedios.com.br/apixabana-medley/bula"
+      "Apixaban (ELIQUIS) tablets — rótulo aprovado pelo FDA, DailyMed SPL setid a454cd24-0c6d-46e8-b1e4-197388606175",
+      "Granger CB, Alexander JH, McMurray JJV, et al. Apixaban versus warfarin in patients with atrial fibrillation (ARISTOTLE). N Engl J Med. 2011;365(11):981-992. DOI: 10.1056/NEJMoa1107039. PMID: 21870978"
     ]
   },
   {
@@ -289,15 +291,13 @@
       "Bradicardia, fadiga, extremidades frias, broncoespasmo (menos frequente que betabloqueadores não seletivos), disfunção erétil, mascaramento de sintomas de hipoglicemia em diabéticos"
     ],
     "dosing": {
-      "dose_ajuste_renal_especifico": "**Hipertensão, sem disfunção renal**: dose inicial 50 mg 1x/dia, titular até 100 mg/dia após 1–2 semanas se resposta insuficiente. Doses acima de 100 mg/dia não trazem benefício adicional de PA e aumentam efeito colateral (fadiga). **Ajuste renal** (atenolol tem eliminação predominantemente renal, diferente de metoprolol/carvedilol que são majoritariamente hepáticos): - ClCr 15–35 mL/min/1,73m²: dose máxima 50 mg/dia - ClCr < 15 mL/min/1,73m²: dose máxima 25 mg/dia - Hemodiálise: 25–50 mg após cada sessão, sob supervisão hospitalar (o fármaco é dialisável, diferente do propranolol) **Idosos**: considerar iniciar com 25 mg/dia. Fonte: bula FDA (Tenormin), convergente entre 3 fontes independentes consultadas."
+      "dose_ajuste_renal_especifico": "**Hipertensão, sem disfunção renal**: dose inicial 50 mg 1x/dia, titular até 100 mg/dia após 1–2 semanas se resposta insuficiente. Doses acima de 100 mg/dia não trazem benefício adicional de PA e aumentam efeito colateral (fadiga). **Ajuste renal** (atenolol tem eliminação predominantemente renal, diferente de metoprolol/carvedilol que são majoritariamente hepáticos): - ClCr 15–35 mL/min/1,73m²: dose máxima 50 mg/dia - ClCr < 15 mL/min/1,73m²: dose máxima 25 mg/dia - Hemodiálise: 25–50 mg após cada sessão, sob supervisão hospitalar (o fármaco é dialisável, diferente do propranolol) **Idosos**: considerar iniciar com 25 mg/dia. Fonte: rótulo do atenolol aprovado pelo FDA (DailyMed). A versão anterior citava convergência com três fontes independentes sem nomeá-las, o que não é rastreável — a referência agora é o rótulo, com identificador."
     },
     "notes": {
       "Particularidade diferenca metoprolol": "Diferente do metoprolol succinato, atenolol não possui evidência robusta de redução de mortalidade em insuficiência cardíaca crônica, não sendo recomendado como opção de primeira linha entre os betabloqueadores baseados em evidência para ICFER (bisoprolol, carvedilol, metoprolol succinato)"
     },
     "references": [
-      "Atenolol — Bula Profissional · Consulta Remédios · https://uploads.consultaremedios.com.br/drug_leaflet/pro/Bula-Atenolol-Profissional-Consulta-Remedios.pdf",
-      "Tenormin (atenolol) — bula FDA · accessdata.fda.gov",
-      "Atenolol — Drugs.com Dosage Guide, 2026"
+      "Atenolol tablets — rótulo aprovado pelo FDA, DailyMed SPL setid c58e12ad-d705-4643-91ac-ff079e9eb28e"
     ]
   },
   {
@@ -337,14 +337,13 @@
       "sca alto risco": "Até 80 mg/dia, individualizada conforme meta de LDL-C",
       "pediatria 10 17 anos": "20 mg/dia (dose máxima)",
       "via administracao": "Via oral, pode ser tomada em qualquer horário do dia, independente de refeições",
-      "fonte": "Guia Farmacêutico HSL"
+      "fonte": "rótulo da atorvastatina aprovado pelo FDA (DailyMed). VERIFICAÇÃO HUMANA NECESSÁRIA para a dose pediátrica de 20 mg/dia como máximo, que deve ser conferida contra a bula registrada na ANVISA"
     },
     "outcomes": {
       "Evidencia pivotal": "Sustentada por múltiplos ensaios marco: ASCOT-LLA (prevenção primária em hipertensos), CARDS (prevenção primária em diabéticos), TNT (dose alta vs. moderada em DAC estável), SPARCL (prevenção secundária pós-AVC) e PROVE-IT (dose alta precoce em SCA)"
     },
     "references": [
-      "Atorvastatina · Guia Farmacêutico HSL · https://guiafarmaceutico.hsl.org.br/atorvastatina",
-      "Atorvastatina: evidência e prática clínica · Cardioteca · https://www.cardioteca.com/tratamientos/8273-atorvastatina-atorvastatin-practica-clinica-guia-especialista.html"
+      "Atorvastatin calcium tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 86841382-4229-4e03-958e-3ac22639efd4"
     ]
   },
   {
@@ -382,6 +381,37 @@
     ]
   },
   {
+    "slug": "verapamil-diltiazem",
+    "review_status": "revisado",
+    "generic_name": "Verapamil / Diltiazem",
+    "drug_class": "Bloqueadores de canal de cálcio não-dihidropiridínicos",
+    "mechanism": "Inibem influxo de cálcio em células musculares lisas vasculares E em tecido cardíaco (nó sinusal, nó AV, miocárdio), diferente dos dihidropiridínicos (anlodipino) que agem quase exclusivamente sobre vasculatura; efeito combinado: redução de FC, retardo de condução AV e depressão discreta de contratilidade",
+    "indications": [
+      "Controle de frequência em fibrilação atrial/flutter atrial, taquicardia supraventricular paroxística, angina estável (incluindo Prinzmetal), hipertensão arterial"
+    ],
+    "presentations": [
+      "Comprimidos de liberação prolongada de 80, 120 e 240 mg (ex.: Dilacoron)"
+    ],
+    "contraindications": [
+      "Não devem ser usados em combinação com betabloqueador por via IV (risco de bloqueio AV grave/assistolia) e uso combinado oral requer cautela extrema",
+      "Disfunção sistólica de VE grave (FE reduzida)",
+      "Bloqueio AV 2º/3º grau sem marcapasso",
+      "Doença do nó sinusal",
+      "Síndrome de Wolff-Parkinson-White com FA (risco de condução preferencial pela via acessória)",
+      "Choque cardiogênico"
+    ],
+    "dosing": {
+      "dose_titulacao_especifica": "**Verapamil, hipertensão**: - Liberação imediata: 80–120 mg 3x/dia (ou 40 mg 3x/dia em paciente com resposta aumentada esperada, ex.: idoso). Máximo 480 mg/dia. - Liberação prolongada: 180 mg 1x/dia à noite, titular conforme resposta. Máximo 480 mg/dia. **Diltiazem, hipertensão** (liberação prolongada): dose inicial 180–240 mg 1x/dia. Ajustar conforme resposta pressórica até máximo de 540 mg/dia. **Ambos**: contraindicados em disfunção sistólica de VE relevante (efeito inotrópico negativo) e em bloqueio AV avançado sem marcapasso. Cautela em associação com betabloqueador pelo efeito aditivo na condução AV e na contratilidade. Fonte: rótulos aprovados pelo FDA do cloridrato de verapamil e do cloridrato de diltiazem, consultados no DailyMed. As doses acima foram conferidas linha a linha contra eles."
+    },
+    "notes": {
+      "Particularidade uso ic": "Contraindicados em ICFER com FE reduzida devido ao efeito inotrópico negativo — diferente dos dihidropiridínicos, que são relativamente seguros em IC quando necessários para controle pressórico"
+    },
+    "references": [
+      "Verapamil hydrochloride — rótulo aprovado pelo FDA, DailyMed SPL setid df79ee3a-f0ed-1cc7-e053-2995a90af97f",
+      "Diltiazem hydrochloride injection — rótulo aprovado pelo FDA, DailyMed SPL setid bba03666-ff4f-4bf6-fa92-78e1ec2d9073"
+    ]
+  },
+  {
     "slug": "benazepril-cloridrato",
     "review_status": "pendente_revisao",
     "generic_name": "Benazepril (cloridrato)",
@@ -401,7 +431,8 @@
       "Função renal periodicamente (especialmente nas primeiras 2 semanas de tratamento e a cada aumento de dose, em paciente de risco para hipotensão — IC com PAS < 100 mmHg, doença isquêmica, hiponatremia, uso de diurético em dose alta, diálise). Pressão arterial após o início. Potássio sérico periodicamente (risco de hipercalemia, maior em insuficiência renal, diabetes e uso concomitante de poupador de potássio). Função hepática — observar icterícia ou sinais de falência hepática."
     ],
     "interactions": [
-      "- **Diuréticos**: queda excessiva de PA, especialmente na primeira dose - **Antidiabéticos** (insulina, hipoglicemiantes orais): risco aumentado de hipoglicemia - **AINE**: reduz o efeito anti-hipertensivo e aumenta risco de lesão renal - **Dupla inibição do sistema renina-angiotensina** (associação com BRA ou alisquireno): risco maior de lesão renal, hipotensão e hipercalemia — alisquireno contraindicado nessa associação em diabéticos - **Lítio**: risco de toxicidade por lítio, geralmente reversível com a suspensão"
+      "- **Diuréticos**: queda excessiva de PA, especialmente na primeira dose - **Antidiabéticos** (insulina, hipoglicemiantes orais): risco aumentado de hipoglicemia - **AINE**: reduz o efeito anti-hipertensivo e aumenta risco de lesão renal - **Dupla inibição do sistema renina-angiotensina** (associação com BRA ou alisquireno): risco maior de lesão renal, hipotensão e hipercalemia — alisquireno contraindicado nessa associação em diabéticos - **Lítio**: risco de toxicidade por lítio, geralmente reversível com a suspensão",
+      "**Contraindicado o uso concomitante**, e é preciso respeitar uma **janela de 36 horas** ao trocar de ou para o sacubitril-valsartana. O inibidor de neprilisina e o IECA somam risco de angioedema, e a janela existe para evitar a sobreposição dos dois efeitos. Isto não é detalhe teórico em Cardiologia: a migração de IECA para sacubitril-valsartana é justamente o caminho recomendado na insuficiência cardíaca com fração de ejeção reduzida, então essa transição acontece na prática rotineira. Também não se deve coadministrar alisquireno a paciente diabético. Fonte: rótulo do sacubitril-valsartana aprovado pelo FDA (DailyMed SPL setid 000dc81d-ab91-450c-8eae-8eb74e72296f)."
     ],
     "pregnancy": "Categoria D — contraindicado no 2º e 3º trimestres (risco de hipoplasia de calvária fetal, anúria, hipotensão neonatal, insuficiência renal e óbito). Suspender assim que a gravidez for identificada.",
     "contraindications": [
@@ -416,14 +447,14 @@
       "Ajuste renal": "TFG ou ClCr < 30 mL/min (creatinina sérica > 3 mg/dL) — iniciar com 5 mg 1x/dia",
       "combinacao hctz dose mais baixa": "5mg benazepril + 6,25mg HCTZ 1x/dia — controla PA em grande parte dos pacientes",
       "Farmacocinética": "meia-vida efetiva do benazeprilato (metabólito ativo) de 10-11 horas — estado de equilíbrio atingido após 2-3 doses diárias",
-      "fonte": "bula FDA (Lotensin/benazepril hidroclorido), StatPearls, Drugs.com — dados convergentes"
+      "fonte": "rótulo aprovado pelo FDA (DailyMed), setid afd616b9-0c75-48be-862d-5ac18364fd9d"
     },
     "references": [
+      "Benazepril hydrochloride — rótulo aprovado pelo FDA, DailyMed SPL setid afd616b9-0c75-48be-862d-5ac18364fd9d",
       "LOTENSIN (Cloridrato de Benazepril) · Bulas.med.br · 2014 · https://www.bulas.med.br/p/bulas-de-medicamentos/bula/3018/lotensin.htm",
       "Lotensin H · Saúde Direta · https://www.saudedireta.com.br/catinc/drugs/bulas/lotensinh.pdf",
       "LOTENSIN (benazepril hydrochloride) — bula FDA/DailyMed",
-      "Benazepril — StatPearls, NCBI Bookshelf, 2024",
-      "Benazepril — Drugs.com Dosage Guide"
+      "Benazepril — StatPearls, NCBI Bookshelf, 2024"
     ]
   },
   {
@@ -481,7 +512,7 @@
   },
   {
     "slug": "bivalirudina",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Bivalirudina",
     "drug_class": "Anticoagulante inibidor direto da trombina, intravenoso",
     "mechanism": "Peptídeo sintético que se liga direta e especificamente tanto à trombina livre quanto à ligada ao coágulo (sítio catalítico e sítio de ligação ao substrato), inibindo a conversão de fibrinogênio em fibrina de forma reversível — não depende de antitrombina como cofator, ao contrário da heparina. Cerca de 80% de seu clearance ocorre por clivagem proteolítica (independente de órgão) e aproximadamente 20% por eliminação renal, resultando em meia-vida curta (cerca de 25 minutos) em pacientes com função renal normal - **fonte**: StatPearls",
@@ -530,8 +561,7 @@
       "dose_apresentacoes_especificas": "**Hipertensão arterial pulmonar (adulto, > 40 kg)**: dose inicial 62,5 mg 2x/dia por 4 semanas, depois aumentar para dose de manutenção de 125 mg 2x/dia. Doses acima de 125 mg 2x/dia não mostraram benefício adicional suficiente para compensar o aumento de risco de hepatotoxicidade. **Apresentações**: comprimidos de 62,5 mg e 125 mg; comprimido dispersível de 32 mg (uso pediátrico). **Sem ajuste necessário** por sexo, idade, peso corporal ou disfunção hepática leve. **Monitorização obrigatória**: função hepática (transaminases) mensalmente durante todo o tratamento — hepatotoxicidade é o risco principal da classe (antagonistas do receptor de endotelina). Interromper progressão de dose ou suspender conforme elevação de transaminases. **Suspensão**: não interromper abruptamente — retirada súbita pode piorar a hipertensão pulmonar. Se precisar suspender, considerar redução para 62,5 mg 2x/dia por alguns dias antes de parar. Fonte: bula FDA (Tracleer), estudo BREATHE-1 (NEJM 2002) e revisão de segurança em PMC — dados convergentes."
     },
     "references": [
-      "Bosentana — Bula Profissional (Ranbaxy) · Consulta Remédios · https://uploads.consultaremedios.com.br/drug_leaflet/pro/Bula-Bosentana-Ranbaxy-Profissional-Consulta-Remedios.pdf",
-      "Tracleer (bosentan) — bula FDA/Drugs.com",
+      "Bosentan — rótulo aprovado pelo FDA, DailyMed SPL setid 8444da17-6c31-492b-8842-93740f083d9d",
       "Rubin LJ et al. Bosentan Therapy for Pulmonary Arterial Hypertension (BREATHE-1). N Engl J Med. 2002;346(12):896-903.",
       "Safety and tolerability of bosentan — PMC review"
     ]
@@ -556,6 +586,9 @@
     "outcomes": {
       "Evidencia pivotal charm": "Programa CHARM avaliou candesartana em amplo espectro de IC (FEVI reduzida e preservada, tolerantes e intolerantes a IECA), demonstrando redução de mortalidade cardiovascular e hospitalizações por IC, sendo um dos BRAs com maior corpo de evidência em insuficiência cardíaca"
     },
+    "notes": {
+      "Relacao com sacubitril-valsartana": "Não associar. O sacubitril-valsartana **já contém valsartana**, de modo que somar um BRA a ele é duplicar o bloqueio do receptor de angiotensina, sem ganho e com mais hipotensão, hipercalemia e disfunção renal. Ao migrar de um BRA para o sacubitril-valsartana, o BRA é substituído, não somado. A janela obrigatória de 36 horas do rótulo se aplica à troca com **IECA**, não com BRA — a diferença está no risco de angioedema, que é o que a janela previne. VERIFICAÇÃO HUMANA NECESSÁRIA para a conduta de intervalo ao trocar de BRA para sacubitril-valsartana, que o rótulo consultado não especifica. Além disso, história de angioedema por IECA **ou por BRA** contraindica o sacubitril-valsartana. Fonte: rótulo do sacubitril-valsartana aprovado pelo FDA (DailyMed SPL setid 000dc81d-ab91-450c-8eae-8eb74e72296f)."
+    },
     "references": [
       "BLOPRESS — Bula Profissional · Abbott · https://dam.abbott.com/pt-br/documents/pdfs/nossas-bulas/B/BU_11_BLOPRESS_bula_profissional_FINAL.pdf",
       "Candesartán: evidencia y práctica clínica · CardioTeca · 2026 · https://www.cardioteca.com/tratamientos/8238-candesartan-practica-clinica-guia-especialista.html",
@@ -565,7 +598,7 @@
   },
   {
     "slug": "cangrelor",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Cangrelor",
     "drug_class": "Antiplaquetário inibidor do receptor P2Y12, intravenoso",
     "mechanism": "Análogo de ATP que inibe direta e reversivelmente a ligação de ADP ao receptor P2Y12, de forma dose-dependente — início de ação imediato (dentro de 2 minutos) e término rápido de efeito (meia-vida plasmática de 3-6 minutos, com retorno da função plaquetária ao basal em cerca de 1 hora após suspensão), inativado por desfosforilação por ectonucleotidase. Diferente dos inibidores orais de P2Y12 (clopidogrel, prasugrel, ticagrelor), que têm início de ação mais lento e efeito mais prolongado",
@@ -600,6 +633,9 @@
     ],
     "adverse_effects": [
       "Disgeusia, exantema cutâneo, tosse seca, hipercalemia, angioedema, hipotensão"
+    ],
+    "interactions": [
+      "**Contraindicado o uso concomitante**, e é preciso respeitar uma **janela de 36 horas** ao trocar de ou para o sacubitril-valsartana. O inibidor de neprilisina e o IECA somam risco de angioedema, e a janela existe para evitar a sobreposição dos dois efeitos. Isto não é detalhe teórico em Cardiologia: a migração de IECA para sacubitril-valsartana é justamente o caminho recomendado na insuficiência cardíaca com fração de ejeção reduzida, então essa transição acontece na prática rotineira. Também não se deve coadministrar alisquireno a paciente diabético. Fonte: rótulo do sacubitril-valsartana aprovado pelo FDA (DailyMed SPL setid 000dc81d-ab91-450c-8eae-8eb74e72296f)."
     ],
     "dosing": {
       "hipertensao leve moderada": "Inicial 25-50 mg/dia em 2 tomas divididas (ou 6,25-12,5mg 2-3x/dia conforme DATASUS); ajuste a cada 2 semanas até 100-150mg/dia",
@@ -646,7 +682,7 @@
       "dose maxima peso menor 85kg": "25 mg 2x/dia",
       "dose maxima peso maior 85kg": "50 mg 2x/dia",
       "dose maxima idosos": "50 mg/dia, em doses fracionadas 2x/dia",
-      "fonte": "Secretaria de Saúde SP/FURP"
+      "fonte": "rótulo do carvedilol aprovado pelo FDA (DailyMed)"
     },
     "outcomes": {
       "Evidencia pivotal copernicus": "Estudo COPERNICUS demonstrou redução de mortalidade com carvedilol mesmo em pacientes com IC grave (classe funcional IV), população em que outros betabloqueadores têm evidência mais limitada"
@@ -656,9 +692,8 @@
       "Diferencial perfil hemodinamico": "Devido à ação vasodilatadora adicional (bloqueio alfa-1), pode ser preferido em pacientes com componente hipertensivo importante associado à IC; por outro lado, tem maior propensão a causar hipotensão sintomática durante titulação comparado a betabloqueadores cardiosseletivos"
     },
     "references": [
-      "CARVEDILOL — Farmácia Dose Certa · Secretaria de Saúde SP/FURP · https://www.saude.sp.gov.br/resources/ses/perfil/gestor/assistencia-farmaceutica/medicamentos-das-unidades-farmacia-dose-certa/carvedilol",
-      "Boletim Farmacoterapêutico Nº 19 — Carvedilol · Secretaria de Saúde de Ribeirão Preto · https://www.ribeiraopreto.sp.gov.br/files/ssaude/pdf/inftec-19carvedilol.pdf",
-      "Carvedilol: bula, para que serve e como usar · Consulta Remédios/ANVISA · 2023 · https://consultaremedios.com.br/carvedilol/bula"
+      "Carvedilol tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 574c419f-3b9e-2171-e063-6394a90a0e90",
+      "Packer M, Coats AJS, Fowler MB, et al. Effect of carvedilol on survival in severe chronic heart failure (COPERNICUS). N Engl J Med. 2001;344(22):1651-1658. DOI: 10.1056/NEJM200105313442201. PMID: 11386263"
     ]
   },
   {
@@ -692,14 +727,13 @@
       "dose maxima comprimido": "2,4 mg/dia VO",
       "dose maxima injetavel": "40 mcg/h para infusão peridural",
       "administracao": "Com ou sem alimentos",
-      "fonte": "Guia Farmacêutico Hospital São Camilo"
+      "fonte": "rótulo da clonidina aprovado pelo FDA (DailyMed), no lugar do guia farmacêutico de outra instituição"
     },
     "notes": {
       "Particularidade farmacologica": "Risco de hipertensão rebote grave se interrompida abruptamente — requer retirada gradual"
     },
     "references": [
-      "CLONIDINA — Guia Farmacêutico · Hospital São Camilo · 2022 · https://guiafarmaceutico.hospitalsaocamilosp.org.br/blog/2022/11/15/clonidina/",
-      "ATENSINA (cloridrato de clonidina) — Bula Paciente · Anvisa · https://bula-anvisa.s3.sa-east-1.amazonaws.com/158320003_paciente.pdf"
+      "Clonidine hydrochloride tablets — rótulo aprovado pelo FDA, DailyMed SPL setid e96ab74c-eedf-4d71-8a35-d5ec3daa7592"
     ]
   },
   {
@@ -776,17 +810,17 @@
       "ajuste renal": "Sem ajuste em IR leve-moderada; cautela em IR grave (ClCr<30mL/min) — risco de azotemia",
       "ajuste hepatico": "Sem ajuste necessário em IH leve-moderada",
       "administracao": "VO, preferencialmente pela manhã, com líquido e alimento",
-      "fonte": "Guia Farmacêutico HSL"
+      "fonte": "rótulo aprovado pelo FDA (DailyMed), setid da0fe4da-a4f3-4aa8-84f4-4d31c5cbdb0e"
     },
     "references": [
-      "CLORTALIDONA — Guia Farmacêutico · Hospital Sírio-Libanês · https://guiafarmaceutico.hsl.org.br/clortalidona",
+      "Chlorthalidone — rótulo aprovado pelo FDA, DailyMed SPL setid da0fe4da-a4f3-4aa8-84f4-4d31c5cbdb0e",
       "Chlorthalidone/THALITONE — bula FDA/DailyMed (múltiplas versões consultadas)",
       "Chlorthalidone — StatPearls, NCBI Bookshelf"
     ]
   },
   {
     "slug": "colchicina",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Colchicina",
     "drug_class": "Anti-inflamatório de mecanismo não esteroidal (inibidor da polimerização de microtúbulos/função neutrofílica)",
     "mechanism": "Inibe a polimerização de tubulina em microtúbulos, interferindo na ativação, migração e função de neutrófilos e no inflamassoma NLRP3 — efeito anti-inflamatório distinto de AINEs e corticosteroides, relevante tanto na doença pericárdica quanto na aterosclerose (inflamação vascular)",
@@ -817,7 +851,7 @@
     "presentations": [
       "Cápsulas de 75, 110 e 150 mg"
     ],
-    "renal_adjustment": "Elimina��ão predominantemente renal (~80%); não é necessário ajuste em ClCr >30 mL/min; contraindicado em insuficiência renal grave",
+    "renal_adjustment": "Eliminação predominantemente renal, cerca de 80%. Acima de ClCr 30 mL/min não há ajuste; entre 15 e 30 a dose cai para 75 mg 2x/dia; abaixo de 15 ou em diálise o rótulo não oferece recomendação. VERIFICAÇÃO HUMANA NECESSÁRIA para a contraindicação em ClCr <30 que constava aqui: ela reflete a rotulagem europeia, enquanto a norte-americana prevê 75 mg 2x/dia entre 15 e 30. Conferir o que a bula registrada na ANVISA determina, porque a diferença decide entre tratar e não tratar",
     "contraindications": [
       "Sangramento ativo clinicamente significativo",
       "Válvulas cardíacas mecânicas",
@@ -827,7 +861,10 @@
     "dosing": {
       "fa nao valvular padrao": "150 mg VO 2x/dia (dose diária total de 300mg)",
       "fa ajuste idosos ou sangramento": "110 mg VO 2x/dia se idade >80 anos ou risco de sangramento elevado, a critério médico",
-      "fa clcr 30 50": "150 mg VO 1x/dia",
+      "fa clcr acima de 30": "150 mg VO **2x/dia** — não existe ajuste na faixa de 30 a 50 mL/min pela função renal isolada. A versão anterior deste verbete indicava 150 mg **1x/dia** nessa faixa, ou seja, metade da dose diária, em prevenção de AVC por fibrilação atrial",
+      "fa clcr 15 a 30": "75 mg VO 2x/dia (é para isso que serve a cápsula de 75 mg)",
+      "fa clcr abaixo de 15 ou dialise": "o rótulo declara que **não há recomendação de dose**",
+      "fa clcr 30 a 50 com inibidor de p-gp": "reduzir para 75 mg 2x/dia quando associado a dronedarona ou cetoconazol sistêmico; com ClCr abaixo de 30, evitar a associação",
       "tvp tep tratamento": "150 mg VO 2x/dia, após tratamento com anticoagulante parenteral por pelo menos 5 dias",
       "prevencao tvp tep recorrente": "150 mg VO 2x/dia",
       "profilaxia tvp artroplastia quadril": "Dose inicial 110mg dose única (1-4h pós-cirurgia); manutenção 220mg (2x110mg) 1x/dia por 28-35 dias",
@@ -835,15 +872,15 @@
       "ajuste disfuncao renal profilaxia": "150mg (2x75mg) 1x/dia se disfunção renal",
       "esquecimento de dose": "Dose esquecida pode ainda ser tomada até 6h antes da próxima dose programada",
       "evidencia base": "Estudo RE-LY sustenta esquema de FA; contraindicado em válvulas mecânicas (estudo REALIGN)",
-      "fonte": "Manual Farmacêutico Einstein ; Afya Cardiologia ; Bula Pradaxa"
+      "fonte": "rótulo do etexilato de dabigatrana aprovado pelo FDA (DailyMed)"
     },
     "notes": {
-      "Particularidade farmacologica": "Único DOAC com antídoto específico amplamente disponível (idarucizumabe), permitindo reversão rápida em sangramentos graves ou cirurgia de urgência"
+      "Particularidade farmacologica": "Tem antídoto específico, o idarucizumabe, que permite reversão rápida em sangramento grave ou cirurgia de urgência. **Deixou de ser o único**: o andexanete alfa é reversor específico dos inibidores do fator Xa, com rótulo aprovado. A vantagem que resta é de classe e de tempo de disponibilidade, não de exclusividade"
     },
     "references": [
-      "Guia de medicamentos cardiovasculares: Dabigatrana · Afya Cardiologia · https://portal.afya.com.br/cardiologia/bulario-dabigatrana",
-      "Pradaxa — Bula Profissional · Consulta Remédios · https://uploads.consultaremedios.com.br/drug_leaflet/pro/Bula-Pradaxa-Profissional-Consulta-Remedios.pdf",
-      "Manual Farmacêutico — Dabigatrana · Hospital Israelita Albert Einstein · https://aplicacoes.einstein.br/manualfarmaceutico/"
+      "Dabigatran etexilate capsules — rótulo aprovado pelo FDA, DailyMed SPL setid f7ea7e2c-ca54-4ecc-9fc7-bd3571b0ebc2",
+      "Connolly SJ, Ezekowitz MD, Yusuf S, et al. Dabigatran versus warfarin in patients with atrial fibrillation (RE-LY). N Engl J Med. 2009;361(12):1139-1151. DOI: 10.1056/NEJMoa0905561. PMID: 19717844",
+      "ANDEXXA (andexanete alfa) — rótulo aprovado pelo FDA, DailyMed SPL setid 2d9d90a6-63e6-46ef-96ff-dd6519ae7b6c"
     ]
   },
   {
@@ -878,39 +915,36 @@
     "drug_class": "Glicosídeo cardíaco (digitálico)",
     "mechanism": "Inibe parcialmente a bomba de sódio-potássio (Na-K-ATPase) na membrana do cardiomiócito; o acúmulo de sódio intracelular reduz a eficiência do trocador sódio-cálcio, resultando em aumento do cálcio intracelular; esse cálcio adicional gera efeito inotrópico positivo (contração mais forte); paralelamente, aumenta o tônus vagal, produzindo efeito cronotrópico negativo (redução de FC) e dromotrópico negativo (retarda condução pelo nó AV)",
     "monitoring": [
-      "- **faixa terapeutica alvo ic**: 0,5-0,8 ng/mL - **risco mortalidade acima**: ≥1,2 ng/mL — associado a aumento de mortalidade, deve ser evitado - **observacao**: Toxicidade pode ocorrer mesmo dentro da faixa terapêutica — diagnóstico deve combinar laboratório com avaliação clínica - **fonte**: Guia Completo Digoxina — Resumos Medicina"
+      "- **faixa terapeutica alvo ic**: 0,5-0,8 ng/mL - **risco mortalidade acima**: ≥1,2 ng/mL — associado a aumento de mortalidade, deve ser evitado - **procedencia dos dois cortes**: VERIFICAÇÃO HUMANA NECESSÁRIA — a faixa-alvo de 0,5-0,8 ng/mL e o corte de 1,2 ng/mL vêm de análises post hoc do ensaio DIG e estavam apoiados aqui em material de estudante. Não consegui confirmar a referência do DIG no PubMed nesta sessão - **observacao**: Toxicidade pode ocorrer mesmo dentro da faixa terapêutica — diagnóstico deve combinar laboratório com avaliação clínica - **fonte**: rótulo da digoxina aprovado pelo FDA (DailyMed)"
     ],
     "indications": [
       "ICFEr sintomática apesar de terapia otimizada (IECA/BRA/INRA + betabloqueador + antagonista mineralocorticoide + iSGLT2); ICFEr com FA concomitante (duplo benefício: força contrátil + controle de frequência); adjuvante ao betabloqueador quando este é insuficiente ou limitado por hipotensão no controle de FC em FA"
     ],
     "contraindications": [
-      "Cardiomiopatia hipertrófica obstrutiva (agrava gradiente de via de saída do VE)",
-      "Síndromes de pré-excitação/WPW em FA (risco de FV)",
-      "BAV de alto grau (Mobitz II, 3º grau) ou bradicardia sinusal severa sem marca-passo",
-      "ICFEp (sem evidência de benefício)",
-      "Insuficiência renal crônica (risco elevado de acúmulo/intoxicação)"
+      "Fibrilação ventricular",
+      "Hipersensibilidade conhecida à digoxina ou a outro digitálico"
     ],
     "interactions": [
       "Amiodarona e verapamil aumentam níveis sanguíneos de digoxina, exigindo redução de dose e monitorização"
     ],
     "dosing": {
       "manutencao adulto": "0,125-0,250 mg/dia, individualizada",
-      "ajuste populacoes especiais": "Reduzir em insuficiência renal e idosos (eliminação reduzida)",
-      "fonte": "Guia Completo Digoxina — Resumos Medicina"
+      "ajuste populacoes especiais": "Reduzir em insuficiência renal e idosos (eliminação reduzida)"
     },
     "notes": {
       "Beneficio clinico": "Reduz hospitalizações por descompensação e melhora sintomas/classe funcional/tolerância ao exercício; NÃO reduz mortalidade — é terapia adjuvante, não modificadora de doença",
       "Limitacao fa esforco": "Eficácia reduzida durante esforço físico, pois seu mecanismo depende de estímulo vagal (inibido durante exercício) — mais adequada para pacientes sedentários; betabloqueadores/BCC não-diidropiridínicos são primeira linha para controle de FC na FA por serem mais eficazes ao esforço",
-      "Toxicidade digitalica": "- **sintomas gi**: Náuseas, vômitos, perda de apetite (geralmente os primeiros sinais) - **sintomas neurologicos**: Fadiga, confusão, visão turva, halos coloridos, xantopsia (visão amarelada) - **manifestacoes cardiacas**: Bradicardias, bloqueios AV, arritmias ventriculares potencialmente fatais — qualquer nova arritmia em uso de digoxina deve levantar suspeita de intoxicação - **fonte**: Guia Completo Digoxina — Resumos Medicina"
+      "Cautelas do rotulo": "- Não recomendada no infarto agudo do miocárdio - Evitar na miocardite - Risco de arritmia ventricular durante cardioversão elétrica - Idade avançada, baixo peso, disfunção renal e distúrbio eletrolítico predispõem à toxicidade",
+      "Situacoes de cautela clinica reconhecida": "Cardiomiopatia hipertrófica obstrutiva (o inotropismo positivo agrava o gradiente da via de saída), pré-excitação/WPW com fibrilação atrial (risco de condução acelerada pela via acessória) e bloqueio atrioventricular de alto grau ou bradicardia sinusal grave sem marca-passo. VERIFICAÇÃO HUMANA NECESSÁRIA para o estatuto formal de cada uma — são cautelas consagradas na prática, mas não constam da seção de contraindicações do rótulo consultado.",
+      "Toxicidade digitalica": "- **sintomas gi**: Náuseas, vômitos, perda de apetite (geralmente os primeiros sinais) - **sintomas neurologicos**: Fadiga, confusão, visão turva, halos coloridos, xantopsia (visão amarelada) - **manifestacoes cardiacas**: Bradicardias, bloqueios AV, arritmias ventriculares potencialmente fatais — qualquer nova arritmia em uso de digoxina deve levantar suspeita de intoxicação - **fonte**: rótulo da digoxina aprovado pelo FDA (DailyMed) para o quadro de toxicidade"
     },
     "references": [
-      "Digoxina: Guia Completo para Uso na Insuficiência Cardíaca e Fibrilação Atrial · Resumos Medicina · 2025 · https://www.resumosmedicina.com.br/blog/digoxina-guia-completo-para-uso-na-insuficiencia-cardiaca-e-fibrilacao-atrial",
-      "Digoxina na fibrilação atrial: remédio ou veneno? · Afya Cardiologia/PEBMED · 2018 · https://portal.afya.com.br/cardiologia/digoxina-na-fibrilacao-atrial-remedio-ou-veneno"
+      "Digoxin tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 5886e233-b2da-4acb-be05-9bf40fb8e7f4"
     ]
   },
   {
     "slug": "diltiazem-cloridrato",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Diltiazem (cloridrato)",
     "drug_class": "Bloqueador de canal de cálcio não-diidropiridínico (benzotiazepina), antiarrítmico classe IV",
     "mechanism": "Bloqueia canais de cálcio tipo L no músculo liso vascular e miocárdio, promovendo vasodilatação coronariana/sistêmica e redução da condução no nó AV; em doença isquêmica coronariana, reduz o produto frequência cardíaca x pressão arterial durante o exercício, aumentando a capacidade de exercício sem induzir aumento reflexo de FC (posição intermediária entre verapamil, com maior efeito na condução AV, e as diidropiridinas, com maior seletividade vascular)",
@@ -933,7 +967,7 @@
     ],
     "dosing": {
       "vo angina coronariopatias hipertensao": "30-60 mg, 3-4x/dia; ou formulação de liberação programada 120-240mg 1x/dia",
-      "ev fa flutter taquicardia supraventricular paroxistica dose inicial": "0,25 mg/kg, EV direto em 2min (dose máxima 20mg); se resposta inadequada, repetir 0,35mg/kg após 15min (dose máxima 25mg)",
+      "ev fa flutter taquicardia supraventricular paroxistica dose inicial": "0,25 mg/kg de peso real em bolus por 2 minutos — **20 mg é a dose razoável para o paciente médio, não um teto**. Se a resposta for inadequada, repetir 0,35 mg/kg por 2 minutos após 15 minutos (25 mg para o paciente médio). Chamar esses valores de \"dose máxima\", como constava aqui, subdosaria quem pesa mais: 0,25 mg/kg em 100 kg dá 25 mg. Doses seguintes são individualizadas, e quem tem baixo peso deve ser dosado por mg/kg",
       "ev infusao continua": "10 mg/h (infusões >24h ou >15mg/h não são recomendadas)",
       "adolescentes vo inicial": "30 mg 4x/dia (não usar em menores de 12 anos)",
       "adulto dose maxima diaria vo": "360 mg/dia",
@@ -942,11 +976,10 @@
       "insuficiencia renal": "Usar com cautela; sem dados específicos de ajuste para hemodiálise",
       "administracao vo": "15 min antes das refeições para formulação de liberação imediata",
       "diluicao ev": "SF ou SG5%, concentração máxima 1mg/mL; estabilidade de 24h após diluição em bolsas PVC (temperatura ambiente controlada 15-30°C ou refrigeração 2-8°C)",
-      "fonte": "Guia Farmacêutico HSL"
+      "fonte": "rótulo do cloridrato de diltiazem injetável aprovado pelo FDA (DailyMed). As doses endovenosas foram conferidas linha a linha; a infusão contínua é indicada para redução de frequência por até 24 horas em fibrilação ou flutter atrial"
     },
     "references": [
-      "DILTIAZEM — Guia Farmacêutico · Hospital Sírio-Libanês · https://guiafarmaceutico.hsl.org.br/diltiazem",
-      "Cloridrato de Diltiazem: bula, para que serve e como usar · Consulta Remédios/ANVISA · 2021 · https://consultaremedios.com.br/cloridrato-de-diltiazem/bula"
+      "Diltiazem hydrochloride injection — rótulo aprovado pelo FDA, DailyMed SPL setid bba03666-ff4f-4bf6-fa92-78e1ec2d9073"
     ]
   },
   {
@@ -959,7 +992,7 @@
     "drug_class": "Vasodilatador coronariano — nitrato orgânico",
     "mechanism": "Conversão em óxido nítrico no músculo liso vascular, ativando guanilato ciclase e aumentando GMPc, resultando em relaxamento da musculatura lisa vascular (venodilatação predominante em doses baixas, dilatação arterial adicional em doses mais altas), reduzindo pré-carga e demanda miocárdica de oxigênio",
     "presentations": [
-      "- **sublingual**: 5 mg - **oral regular**: 10 mg (comprimidos convencionais) - **oral acao prolongada**: Disponível em formulações de liberação prolongada - **fonte**: GPMED ; Lepuge"
+      "- **sublingual**: 5 mg - **oral regular**: 10 mg (comprimidos convencionais) - **oral acao prolongada**: Disponível em formulações de liberação prolongada - **fonte**: rótulo do dinitrato de isossorbida aprovado pelo FDA (DailyMed)"
     ],
     "indications": [
       "Profilaxia de angina de peito (aguda e crônica), tratamento adjuvante de ICC particularmente com pressão diastólica final de VE elevada; nitroglicerina sublingual é preferida para tratamento agudo de crise anginosa, reservando isossorbida para casos de intolerância ou falta de resposta à nitroglicerina"
@@ -978,20 +1011,19 @@
       "angina oral regular": "10-30 mg, 4x/dia (a cada 6 horas), preferencialmente em jejum; posologia usual de 20-40 mg 4x/dia",
       "oral acao prolongada": "20-80 mg a cada 8-12 horas",
       "icc adjuvante": "Sublingual 5-10 mg a cada 2 horas ajustado conforme resposta; oral dose inicial 10-40 mg a cada 6 horas",
-      "fonte": "GPMED ; Lepuge"
+      "fonte": "VERIFICAÇÃO HUMANA NECESSÁRIA — as faixas desta seção vinham de sites comerciais de medicamento. Conferir contra a bula registrada na ANVISA. O esquema sublingual e o oral conferem com a prática consagrada, mas o intervalo livre de nitrato para evitar tolerância precisa aparecer na própria posologia, não só na seção de particularidades"
     },
     "notes": {
       "Farmacocinetica": "Via sublingual atinge concentração plasmática máxima em aproximadamente 6 minutos, com meia-vida curta (~45 min); metabólitos ativos (2-mononitrato e 5-mononitrato) têm meia-vida mais prolongada e contribuem significativamente para o efeito terapêutico",
       "Tolerancia": "Desenvolvimento de tolerância farmacológica com uso contínuo prolongado; recomenda-se intervalo livre de nitrato (geralmente noturno) para preservar eficácia"
     },
     "references": [
-      "Dinitrato de Isossorbida - informações completas · GPMED · https://web.gpmed.app/medicamentos/01986748-0669-7618-aaec-0609a7994c0b/dinitrato-de-isossorbida",
-      "Dinitrato de Isossorbida: bula · Consulta Remédios/ANVISA · https://consultaremedios.com.br/dinitrato-de-isossorbida/bula"
+      "Isosorbide dinitrate tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 5f585259-59ed-4648-b562-164f3746c821"
     ]
   },
   {
     "slug": "disopiramida",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Disopiramida",
     "drug_class": "Antiarrítmico classe Ia (classificação de Vaughan Williams), com efeito inotrópico negativo e ação anticolinérgica",
     "mechanism": "Bloqueio de canais de sódio associado a efeito inotrópico negativo direto sobre o miocárdio e ação anticolinérgica — no contexto da cardiomiopatia hipertrófica obstrutiva, o efeito inotrópico negativo reduz a contratilidade septal e, consequentemente, o grau de obstrução dinâmica da via de saída do ventrículo esquerdo - **fonte**: European Heart Journal — Cardiovascular Pharmacotherapy (revisão sistemática e metanálise)",
@@ -1055,7 +1087,7 @@
   },
   {
     "slug": "dronedarona",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Dronedarona",
     "drug_class": "Antiarrítmico classe III (análogo não iodado da amiodarona)",
     "mechanism": "Bloqueia múltiplos canais iônicos (potássio, sódio, cálcio) e tem atividade antiadrenérgica, de forma semelhante à amiodarona, mas sem o átomo de iodo — desenhada para reduzir toxicidade tireoidiana e pulmonar associada à amiodarona, ao custo de eficácia antiarrítmica um pouco menor",
@@ -1109,22 +1141,19 @@
       "fa ajuste dose reduzida": "30 mg VO 1x/dia se ≥1 dos seguintes: ClCr 15-50 mL/min, peso ≤60 kg, uso concomitante de inibidores potentes de P-gp",
       "tev tvp tep": "60 mg VO 1x/dia (ou 30mg com fatores de redução), após 5-10 dias de anticoagulante parenteral inicial",
       "evidencia base": "Esquema sustentado pelo estudo ENGAGE AF-TIMI 48",
-      "fonte": "Consulta Remédios/ANVISA ; Thrombosis Canada"
+      "fonte": "rótulo da edoxabana aprovado pelo FDA. VERIFICAÇÃO HUMANA NECESSÁRIA — os critérios de redução para 30 mg por **peso ≤60 kg** e por **inibidor de P-gp** constam da rotulagem europeia; a norte-americana reduz por função renal. Conferir qual conjunto vale na bula registrada na ANVISA antes de prescrever pelos três critérios"
     },
     "notes": {
       "Particularidade farmacologica": "Único entre os DOACs de fator Xa com recomendação explícita de dose reduzida por múltiplos critérios combinados (peso, função renal, interação medicamentosa), refletindo maior sensibilidade farmacocinética a estes fatores"
     },
     "references": [
-      "Edoxabana: bula, para que serve e como usar · Consulta Remédios/ANVISA · 2023 · https://consultaremedios.com.br/edoxabana/bula",
-      "Edoxaban (Lixiana) — Guia Clínico · Thrombosis Canada · https://thrombosiscanada.ca/clinical_guides/pdfs/89_43.pdf",
-      "SAVAYSA (edoxaban) — bula FDA/accessdata.fda.gov",
-      "Edoxaban — StatPearls, NCBI Bookshelf",
-      "Edoxaban — Drugs.com Dosage Guide e Medscape Reference"
+      "Edoxaban tablets (SAVAYSA) — rótulo aprovado pelo FDA",
+      "Giugliano RP, Ruff CT, Braunwald E, et al. Edoxaban versus warfarin in patients with atrial fibrillation (ENGAGE AF-TIMI 48). N Engl J Med. 2013;369(22):2093-2104. DOI: 10.1056/NEJMoa1310907"
     ]
   },
   {
     "slug": "empagliflozina",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Empagliflozina",
     "drug_class": "Inibidor do cotransportador sódio-glicose tipo 2 (iSGLT2)",
     "mechanism": "Inibe o cotransportador SGLT2 nos túbulos renais proximais, reduzindo reabsorção de glicose e sódio, com natriurese osmótica e redução de pré-carga; benefício cardiovascular em insuficiência cardíaca parece independente do efeito glicêmico, de forma análoga à dapagliflozina",
@@ -1181,7 +1210,7 @@
       "Papel historico": "Um dos primeiros IECA amplamente estudados em IC, sendo referência histórica para a classe; atualmente, IECA/BRA seguem indicados como alternativa quando sacubitril/valsartana não está disponível ou não é tolerado"
     },
     "references": [
-      "Maleato de Enalapril: bula, para que serve e como usar · Consulta Remédios/ANVISA · https://consultaremedios.com.br/maleato-de-enalapril/bula",
+      "Enalapril maleate — rótulo aprovado pelo FDA, DailyMed SPL setid b31372f7-cda3-4ead-a481-4cde62e843fd",
       "Enalapril: o que é, para que serve, efeitos e contraindicações · UOL VivaBem · 2022 · https://www.uol.com.br/vivabem/noticias/redacao/2022/11/22/enalapril-o-que-e-para-que-serve-efeitos-e-contraindicacoes.htm",
       "Vasotec (enalapril maleate) — bula FDA · accessdata.fda.gov",
       "Enalapril — StatPearls, NCBI Bookshelf, 2024"
@@ -1221,7 +1250,7 @@
   },
   {
     "slug": "epinefrina-adrenalina",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Epinefrina (adrenalina)",
     "drug_class": "Catecolamina agonista adrenérgico não seletivo (α1, α2, β1, β2)",
     "mechanism": "Agonismo α1-adrenérgico produz vasoconstrição periférica, elevando a pressão de perfusão coronariana durante reanimação cardiopulmonar. Agonismo β1-adrenérgico aumenta a contratilidade e a frequência cardíaca. Em doses de choque/parada, o efeito α1 vasoconstritor predomina como racional principal de uso na parada cardíaca",
@@ -1308,19 +1337,18 @@
       "hipertensao resistente 4a droga": "50-100 mg, podendo chegar a 200 mg/dia, como quarta droga quando paciente permanece hipertenso apesar de tríplice terapia (ex.: IECA/BRA + anlodipina + hidroclorotiazida)",
       "dose maxima adulto": "400 mg/dia",
       "dose maxima pediatrica": "3,3 mg/kg/dia",
-      "fonte": "Guia Farmacêutico HSL ; Afya Cardiologia"
+      "fonte": "VERIFICAÇÃO HUMANA NECESSÁRIA — as faixas de dose desta seção vinham de guia farmacêutico de outra instituição e de material de curso. As doses-alvo em IC (25-50 mg/dia) correspondem ao RALES; as demais precisam de conferência contra a bula registrada na ANVISA"
     },
     "outcomes": {
-      "Evidencia pivotal": "- **rales icfer**: Estudo RALES (NEJM, 1999): 1663 pacientes com classe funcional III-IV e FE <35% apresentaram redução de 30% na mortalidade com espironolactona - **icfep**: Estudo em 3345 pacientes com FE ≥45% mostrou redução de 17% no risco de hospitalização, com risco aumentado de hipercalemia; motivou indicação Classe IIa em diretrizes para essa população - **fonte**: Afya Cardiologia"
+      "Evidencia pivotal": "- **rales icfer**: RALES (N Engl J Med, 1999): 1.663 pacientes em classe funcional III-IV com FE ≤35%, com redução de 30% na mortalidade - **icfep (topcat)**: 3.445 pacientes com FE ≥45%. O **desfecho primário composto não foi reduzido** (morte cardiovascular, parada cardíaca abortada ou hospitalização por IC: 18,6% contra 20,4%; HR 0,89; IC95% 0,77-1,04; p=0,14). Apenas o componente de **hospitalização por insuficiência cardíaca** caiu de forma significativa: 12,0% contra 14,2%, HR 0,83 (IC95% 0,69-0,99), p=0,04 — a redução de 17% citada aqui. Mortalidade total e hospitalização por qualquer causa não foram reduzidas. É essa distinção que sustenta uma recomendação de classe IIa e não mais forte - **fonte**: Pitt B et al. N Engl J Med. 2014;370(15):1383-1392 (TOPCAT), conferido no resumo indexado"
     },
     "notes": {
       "Farmacocinetica": "Espironolactona e seus metabólitos são mais de 90% ligados a proteínas plasmáticas; excretados primariamente na urina e secundariamente na bile",
       "Criterios evitar uso": "Evitar em pacientes com creatinina ≥2,5 mg/dL (homens) ou ≥2,0 mg/dL (mulheres), ClCr <30 mL/min, ou potássio >5,0 mEq/L; nunca associar IECA + BRA + espironolactona simultaneamente (tríplice bloqueio do sistema renina-angiotensina-aldosterona)"
     },
     "references": [
-      "ESPIRONOLACTONA — Guia Farmacêutico · Hospital Sírio-Libanês · https://guiafarmaceutico.hsl.org.br/espironolactona",
-      "Como eu uso Espironolactona! · Afya Cardiologia · 2021 · https://portal.afya.com.br/cardiologia/como-eu-uso-espironolactona",
-      "RALES Trial · 1999"
+      "Pitt B, Zannad F, Remme WJ, et al. The effect of spironolactone on morbidity and mortality in patients with severe heart failure (RALES). N Engl J Med. 1999;341(10):709-717. DOI: 10.1056/NEJM199909023411001. PMID: 10471456",
+      "Pitt B, Pfeffer MA, Assmann SF, et al. Spironolactone for heart failure with preserved ejection fraction (TOPCAT). N Engl J Med. 2014;370(15):1383-1392. DOI: 10.1056/NEJMoa1313731. PMID: 24716680"
     ]
   },
   {
@@ -1405,7 +1433,7 @@
       "Comprimidos de 10 mg — dose ótima identificada em ensaios de Fase II ao comparar 5, 10, 20 e 40 mg/dia, sendo 10 mg a que apresentou melhor redução de LDL-colesterol com perfil de segurança adequado"
     ],
     "indications": [
-      "Em associação com estatina, indicado para redução de colesterol total e LDL-C em pacientes com hipercolesterolemia familiar homozigótica (HFHo); em associação com fenofibrato, eficaz para melhorar colesterol total, LDL-C, ApoB, triglicérides e HDL-C"
+      "Redução de colesterol total e LDL-C na **hipercolesterolemia primária**, isolada ou associada a estatina — que é o uso de longe mais frequente e o que a própria seção de posicionamento em diretrizes deste documento descreve. Também na hipercolesterolemia familiar homozigótica, em associação com estatina, e na sitosterolemia homozigótica. A versão anterior listava **apenas** a hipercolesterolemia familiar homozigótica como indicação de uso com estatina, o que fazia a ezetimiba parecer fármaco de doença rara e contradizia o próprio verbete, que a apresenta como segunda linha após estatina em dose máxima tolerada. VERIFICAÇÃO HUMANA NECESSÁRIA para o conjunto exato de indicações registradas na ANVISA"
     ],
     "contraindications": [
       "Hipersensibilidade ao componente",
@@ -1417,7 +1445,7 @@
     ],
     "dosing": {
       "padrao": "10 mg VO 1x/dia, isolado ou em associação com estatina",
-      "fonte": "Scielo — Farmacocinética e Terapêutica"
+      "fonte": "rótulo da ezetimiba aprovado pelo FDA (DailyMed)"
     },
     "outcomes": {
       "Evidencia pivotal improve it": "Estudo IMPROVE-IT demonstrou que adição de ezetimiba à sinvastatina reduz eventos cardiovasculares comparado à sinvastatina isolada em pacientes pós-síndrome coronariana aguda, sendo o primeiro estudo a comprovar benefício clínico de reduzir LDL por mecanismo não-estatina, sustentando a hipótese 'quanto mais baixo, melhor' independente da via farmacológica"
@@ -1427,9 +1455,8 @@
       "Posicao nas diretrizes": "Segunda linha terapêutica após estatina em dose máxima tolerada, quando meta de LDL-C não é atingida (conforme diretriz ESC/EAS de dislipidemias)"
     },
     "references": [
-      "Ezetimiba: farmacocinética e terapêutica · Arquivos Brasileiros de Cardiologia/SciELO · 2005 · https://www.scielo.br/j/abc/a/TgsCg95WVQHyh7Cdn3stbnG/",
-      "Ezetimibe: Clinical and Scientific Meaning of the IMPROVE-IT Study · SciELO · 2016 · https://www.scielo.br/j/abc/a/9wBykJvH3XSfTjxV5Gjrvzr/?lang=pt",
-      "Ezetimiba: bula, para que serve e como usar · Consulta Remédios/ANVISA · 2024 · https://consultaremedios.com.br/ezetimiba/bula"
+      "Ezetimibe tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 090776cf-f211-49a3-a993-ff5d707311f2",
+      "Cannon CP, Blazing MA, Giugliano RP, et al. Ezetimibe added to statin therapy after acute coronary syndromes (IMPROVE-IT). N Engl J Med. 2015;372(25):2387-2397. DOI: 10.1056/NEJMoa1410489"
     ]
   },
   {
@@ -1458,20 +1485,20 @@
       "angina dose maxima": "10 mg/dia",
       "idosos inicial": "2,5 mg 1x/dia, com ajustes em intervalos de pelo menos 2 semanas conforme resposta; dose máxima 10mg/dia",
       "insuficiencia hepatica inicial": "2,5 mg 1x/dia",
-      "fonte": "Consulta Remédios/ANVISA ; Perfil Farmacológico — Studocu/Universidad UTE"
+      "fonte": "rótulo aprovado pelo FDA (DailyMed), setid 924b2633-74bd-469f-b831-77f09dfebbf7"
     },
     "notes": {
       "Farmacocinetica": "Biodisponibilidade sistêmica ~15%, independente da dose na faixa terapêutica; redução de PA evidente em 2h após primeira dose oral, prolongando-se por pelo menos 24h; formulação de liberação prolongada permite dose única diária",
       "Particularidade clinica": "Eficaz em todos os graus de hipertensão, incluindo hipertensão sistólica isolada, mantendo ação anti-hipertensiva sustentada ao longo do intervalo de 24h entre doses"
     },
     "references": [
-      "Felodipino: bula, para que serve e como usar · Consulta Remédios/ANVISA · https://consultaremedios.com.br/felodipino/bula",
+      "Felodipine — rótulo aprovado pelo FDA, DailyMed SPL setid 924b2633-74bd-469f-b831-77f09dfebbf7",
       "SPLENDIL — Bula Profissional · AZMED/AstraZeneca · https://www.azmed.com.br/content/dam/multibrand/br/pt/azmed-2022/home/bulas-profissionais/bulas/Splendil_Bula_Profissional.pdf"
     ]
   },
   {
     "slug": "finerenona",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Finerenona",
     "drug_class": "Antagonista mineralocorticoide não esteroidal de terceira geração",
     "mechanism": "Bloqueia seletivamente o receptor mineralocorticoide, com maior seletividade e menor afinidade por receptores de andrógeno/progesterona que espironolactona; demonstra efeitos anti-inflamatórios e antifibróticos em modelos pré-clínicos de doença renal e cardiovascular, distintos do efeito primariamente diurético dos antagonistas esteroidais",
@@ -1499,7 +1526,7 @@
   },
   {
     "slug": "flecainida",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Flecainida (acetato de flecainida)",
     "drug_class": "Antiarrítmico classe IC (classificação de Vaughan Williams)",
     "mechanism": "Inibição potente do canal de sódio Nav1.5, responsável pelo influxo rápido de sódio na fase 0 do potencial de ação — reduz a velocidade de condução cardíaca sem prolongar significativamente a repolarização - **fonte**: Cardiology Journal (revisão sobre flecainida)",
@@ -1525,7 +1552,7 @@
   },
   {
     "slug": "fondaparinux-sodico",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Fondaparinux (sódico)",
     "drug_class": "Anticoagulante parenteral — pentassacarídeo sintético, inibidor indireto seletivo do fator Xa",
     "mechanism": "Liga-se seletivamente à antitrombina, potencializando (~300x) a inibição natural do fator Xa; não inibe a trombina diretamente e não interage com o fator 4 plaquetário — praticamente sem risco de trombocitopenia induzida por heparina (HIT)",
@@ -1544,22 +1571,21 @@
       "tratamento tvp tep duracao": "Pelo menos 5 dias, até anticoagulação oral adequada estabelecida",
       "angina instavel iamsst": "2,5 mg/dia, iniciado ao diagnóstico, por até 8 dias",
       "iamcst": "2,5 mg/dia; primeira dose EV, doses subsequentes SC; iniciado ao diagnóstico, por até 8 dias",
-      "ajuste renal prevencao clcr 20 30": "2,5 mg em dias alternados",
-      "ajuste renal tratamento clcr maior 30": "Sem ajuste necessário",
-      "contraindicado clcr menor 20": "Não recomendado (todas indicações)",
+      "contraindicado clcr menor 30": "**Contraindicado** na insuficiência renal grave, definida como ClCr <30 mL/min, em todas as indicações. A versão anterior deste verbete punha o corte em 20 mL/min e ainda oferecia 2,5 mg em dias alternados entre 20 e 30 — ou seja, autorizava uso numa faixa em que o rótulo contraindica",
+      "ajuste renal clcr maior 30": "sem ajuste de dose; usar com cautela e vigiar sangramento quando o ClCr estiver entre 30 e 50 mL/min",
+      "peso abaixo de 50 kg": "contraindicado na **profilaxia** de TEV (o uso em tratamento, com 5 mg, é indicação distinta)",
       "ajuste hepatico leve moderado": "Sem ajuste necessário",
       "ajuste hepatico grave": "Usar com cautela, monitorar sinais de hemorragia",
       "primeira dose pos cirurgia": "Não antes de 6h após término da cirurgia, apenas após hemostase estabelecida",
       "via administracao": "SC (alternando parede abdominal ântero/póstero-lateral); EV apenas para 1ª dose em IAMCST, infundida em 1-2min",
-      "fonte": "Guia Farmacêutico HSL"
+      "fonte": "rótulo do fondaparinux aprovado pelo FDA (DailyMed)"
     },
     "notes": {
       "Vantagem pratica": "Praticamente isento de risco de HIT — opção segura em pacientes com histórico dessa complicação",
       "Ausencia antidoto": "Não possui antídoto específico eficaz (protamina não neutraliza fondaparinux)"
     },
     "references": [
-      "FONDAPARINUX — Guia Farmacêutico · Hospital Sírio-Libanês · https://guiafarmaceutico.hsl.org.br/fondaparinux",
-      "ARIXTRA (fondaparinux sódico) — Bula Profissional · Consulta Remédios · https://uploads.consultaremedios.com.br/drug_leaflet/pro/Bula-Arixtra-Profissional-Consulta-Remedios.pdf"
+      "Fondaparinux sodium injection — rótulo aprovado pelo FDA, DailyMed SPL setid dffbf7c9-495e-4a33-ac76-57b52f014fc2"
     ]
   },
   {
@@ -1596,10 +1622,10 @@
       "diurese forcada": "20-40 mg associados a infusão de eletrólitos; posologia total de 100-300 mg/dia por período máximo de 48 horas",
       "pediatria oral": "Lactentes e crianças menores de 15 anos: 1-2 mg/kg/dose a cada 6-8 horas",
       "pediatria injetavel": "1 mg/kg/dose EV ou IM; não repetir antes de 2h; manutenção 1 mg/kg/dose a cada 6-12h",
-      "dose maxima adulto": "Oral: 600 mg/dia; EV em infusão: 6 gramas/dia",
+      "dose maxima adulto": "**600 mg/dia** — é a dose humana máxima a que o rótulo se refere, e vale como teto de referência para as duas vias. A versão anterior deste verbete trazia \"EV em infusão: 6 gramas/dia\", **dez vezes** esse valor, num diurético de alça cujo risco de ototoxicidade cresce justamente com dose alta e infusão rápida. VERIFICAÇÃO HUMANA NECESSÁRIA para doses acima de 600 mg/dia em congestão refratária, que existem na prática de terapia intensiva mas precisam de fonte própria — não de um teto herdado sem procedência",
       "dose maxima pediatrica": "Oral: 40 mg/dia ou 6 mg/kg/dose; injetável: 20 mg/dia ou 6 mg/kg/dose",
       "velocidade infusao": "Adulto: não exceder 4 mg/min; pediatria: 0,5 mg/kg/min",
-      "fonte": "Guia Farmacêutico HSL"
+      "fonte": "rótulo da furosemida injetável aprovado pelo FDA (DailyMed)"
     },
     "notes": {
       "Diluicao": "Pode ser administrada sem diluição ou diluída em SF, SG 5%, Ringer ou Ringer lactato, em concentração de 1-2 mg/mL (concentração máxima 10 mg/mL)",
@@ -1608,8 +1634,7 @@
       "Administracao intramuscular": "Deve ser restrita a casos excepcionais em que administração oral ou intravenosa não são possíveis; não é adequada para tratamento de condições agudas como edema pulmonar"
     },
     "references": [
-      "FUROSEMIDA — Guia Farmacêutico · Hospital Sírio-Libanês · https://guiafarmaceutico.hsl.org.br/furosemida",
-      "Como eu uso Furosemida · Afya Cardiologia · 2021 · https://portal.afya.com.br/cardiologia/como-eu-uso-furosemida"
+      "Furosemide injection — rótulo aprovado pelo FDA, DailyMed SPL setid 75d5611a-f9e0-1841-e053-2991aa0af415"
     ]
   },
   {
@@ -1670,11 +1695,11 @@
       "emergencia hipertensiva gestacional": "5 mg (2,5mL) EV em bolus, observando PA a cada 20 min; repetir 10mg se necessário (dose total 20mg); início de efeito em 15-20min, duração 2-6h",
       "dose maxima adultos": "300 mg/dia",
       "dose maxima criancas": "200 mg/dia",
-      "fonte": "Guia Farmacêutico HSL ; Protocolo CAISM-UNICAMP"
+      "fonte": "rótulo da hidralazina aprovado pelo FDA (DailyMed). VERIFICAÇÃO HUMANA NECESSÁRIA para o esquema da emergência hipertensiva gestacional, que vinha de protocolo institucional de terceiro — conferir contra a diretriz de hipertensão na gravidez vigente, porque dose e intervalo nessa indicação variam entre protocolos"
     },
     "references": [
-      "HIDRALAZINA — Guia Farmacêutico · Hospital Sírio-Libanês · https://guiafarmaceutico.hsl.org.br/hidralazina",
-      "Hipertensão na Gravidez — Protocolo · CAISM/UNICAMP · https://www.caism.unicamp.br/download/protocolos/obstetricia/Hipertens%C3%A3o%20na%20Gravidez.pdf"
+      "Hydralazine hydrochloride — rótulo aprovado pelo FDA, DailyMed SPL setid 1275dd50-d97f-2e8f-e063-6394a90a4a67",
+      "Taylor AL, Ziesche S, Yancy C, et al. Combination of isosorbide dinitrate and hydralazine in blacks with heart failure (A-HeFT). N Engl J Med. 2004;351(20):2049-2057. DOI: 10.1056/NEJMoa042934. PMID: 15533851"
     ]
   },
   {
@@ -1715,7 +1740,7 @@
   },
   {
     "slug": "idarucizumabe",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Idarucizumabe",
     "drug_class": "Agente reversor específico de anticoagulante — fragmento de anticorpo monoclonal humanizado",
     "mechanism": "Fragmento de anticorpo (Fab) com alta afinidade de ligação à dabigatrana, neutralizando diretamente sua atividade anticoagulante ao se ligar à molécula livre e à ligada à trombina, sem atividade agonista ou antagonista sobre outros alvos de coagulação - **fonte**: Frontiers in Neurology (revisão sobre idarucizumabe)",
@@ -1738,7 +1763,7 @@
   },
   {
     "slug": "inclisirana",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Inclisirana",
     "drug_class": "RNA de interferência pequeno (siRNA) direcionado a PCSK9",
     "mechanism": "Conjugado a GalNAc, é captado seletivamente por hepatócitos via receptor de asialoglicoproteína, ativando o complexo RISC (RNA-induced silencing complex) e silenciando o RNAm de PCSK9 dentro do hepatócito, antes da síntese da proteína — mecanismo distinto dos anticorpos monoclonais anti-PCSK9 (evolocumabe/alirocumabe), que bloqueiam a proteína já circulante. Por atuar na síntese, o efeito de redução de LDL-C persiste muito além da meia-vida plasmática do fármaco",
@@ -1787,15 +1812,15 @@
       "particularidade titulacao": "Aumento da dose não resulta em maior ação anti-hipertensiva — apenas aumenta ação diurética e efeitos colaterais, sem benefício pressórico adicional",
       "Ajuste renal": "mantém efeito mesmo em TFG < 30 mL/min/1,73m² (diferente dos tiazídicos clássicos, que perdem eficácia nessa faixa) — mas depleção de volume pode agravar azotemia em quem já tem insuficiência renal",
       "Ajuste hepático": "usar com cautela e iniciar com dose baixa em hepatopata — distúrbio hidroeletrolítico pode precipitar coma hepático em doença hepática avançada",
-      "fonte": "Purifarma — Nova Literatura; bula FDA/DailyMed (Lozol); Drugs.com"
+      "fonte": "rótulo aprovado pelo FDA (DailyMed), setid 59cd3331-7afe-432a-8b50-39533fd5f392"
     },
     "notes": {
       "Farmacocinetica": "Absorção rápida no trato GI; fixação na parede vascular pela natureza lipofílica; transformação hepática em metabólitos ativos, eliminação urinária, meia-vida de 16h"
     },
     "references": [
+      "Indapamide — rótulo aprovado pelo FDA, DailyMed SPL setid 59cd3331-7afe-432a-8b50-39533fd5f392",
       "INDAPAMIDA — Nova Literatura · Purifarma · http://purifarma.com.br/Arquivos/Produto/INDAPAMIDA_Nova%20Literatura.pdf",
-      "Lozol/Indapamide — bula FDA/DailyMed (múltiplas versões consultadas)",
-      "Indapamide — Drugs.com Monograph e Prescribing Information"
+      "Lozol/Indapamide — bula FDA/DailyMed (múltiplas versões consultadas)"
     ]
   },
   {
@@ -1830,26 +1855,25 @@
       "icfer titulacao": "Após 2 semanas, ajustar se FC persistentemente >60bpm",
       "icfer dose maxima": "7,5 mg 2x/dia",
       "criterio indicacao ic": "ICFEr NYHA II-IV, ritmo sinusal, FC≥70bpm, em combinação com terapia padrão incluindo betabloqueador (ou quando betabloqueador é contraindicado/não tolerado)",
-      "beneficio demonstrado": "Reduz sintomas, mortalidade cardiovascular, mortalidade por IC e hospitalização por piora de IC",
+      "beneficio demonstrado": "reduz o desfecho composto de morte cardiovascular ou hospitalização por IC, **por conta da hospitalização por piora de IC e da morte por insuficiência cardíaca**. A versão anterior deste verbete afirmava redução de **mortalidade cardiovascular**, que o SHIFT não demonstrou — e a própria seção de evidência do documento já dizia que o efeito vinha das hospitalizações. A distinção separa um fármaco que alivia carga de doença de um que modifica mortalidade",
       "ajuste renal clcr maior 15": "Sem ajuste necessário",
       "ajuste renal clcr menor 15": "Não estudado nessa população",
       "ajuste hepatico leve moderado child a b": "Sem ajuste necessário",
       "ajuste hepatico grave": "Contraindicado",
       "pediatria": "Eficácia/segurança não estabelecidas em menores de 18 anos para IC crônica",
       "administracao": "VO, às refeições; pode ser administrada via SNE (revestimento é apenas cosmético)",
-      "fonte": "Guia Farmacêutico HSL"
+      "fonte": "VERIFICAÇÃO HUMANA NECESSÁRIA — as faixas de dose e os ajustes desta seção vinham de guia farmacêutico de outra instituição. Conferir contra a bula registrada na ANVISA; os critérios de indicação em IC conferem com o SHIFT"
     },
     "outcomes": {
-      "Evidencia pivotal shift": "Estudo SHIFT (>6.500 pacientes ICFER, FC≥70bpm, ritmo sinusal): ivabradina reduziu significativamente o desfecho composto de morte CV/hospitalização por IC, principalmente por redução de hospitalizações — base regulatória para aprovação em IC"
+      "Evidencia pivotal shift": "SHIFT (Lancet, 2010): 6.558 pacientes com IC-FEr, frequência cardíaca ≥70 bpm e ritmo sinusal, seguimento mediano de 22,9 meses. O desfecho primário composto de morte cardiovascular ou hospitalização por piora de IC ocorreu em 24% com ivabradina contra 29% com placebo — **HR 0,82; IC95% 0,75-0,90; p<0,0001**. O efeito veio de dois componentes: hospitalização por piora de IC (16% contra 21%; HR 0,74; IC95% 0,66-0,83; p<0,0001) e **morte por insuficiência cardíaca** (3% contra 5%; HR 0,74; IC95% 0,58-0,94; p=0,014). Mortalidade cardiovascular como um todo não figura entre os desfechos reduzidos"
     },
     "references": [
-      "Ivabradina — Guia Farmacêutico · Hospital Sírio-Libanês · https://guiafarmaceutico.hsl.org.br/ivabradina",
-      "PROCORALAN (ivabradina) — Bula Profissional · Servier · https://servier.com.br/wp-content/uploads/sites/42/2025/11/25.11.06_Bula_Profissional_Procoralan.pdf"
+      "Swedberg K, Komajda M, Böhm M, et al. Ivabradine and outcomes in chronic heart failure (SHIFT): a randomised placebo-controlled study. Lancet. 2010;376(9744):875-885. DOI: 10.1016/S0140-6736(10)61198-1. PMID: 20801500"
     ]
   },
   {
     "slug": "levosimendana",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Levosimendana",
     "drug_class": "Sensibilizador de cálcio (inodilatador)",
     "mechanism": "Estabiliza o complexo cálcio-troponina C no miócito cardíaco, aumentando a contratilidade sem elevar o cálcio intracelular nem o consumo miocárdico de oxigênio; também abre canais de potássio dependentes de ATP, promovendo vasodilatação. Atua de forma independente do receptor beta-adrenérgico — mecanismo distinto de dobutamina (agonista beta) e de milrinona (inibidor de PDE3, também eleva cálcio intracelular)",
@@ -1886,8 +1910,7 @@
     ],
     "contraindications": [
       "Gravidez",
-      "Angioedema prévio por IECA",
-      "Estenose bilateral de artéria renal",
+      "Angioedema prévio relacionado a tratamento com IECA",
       "Hipersensibilidade"
     ],
     "adverse_effects": [
@@ -1900,18 +1923,16 @@
       "iam agudo": "Primeira dose 5mg, seguida de 5mg em 24h, 10mg em 48h, então 10mg 1x/dia; se PAS ≤120mmHg, iniciar com 2,5mg nos primeiros 3 dias",
       "complicacoes renais retinianas dm": "10-20mg/dia",
       "pediatria 6 anos ou mais": "0,07 mg/kg/dia (até 5mg), aumentar a intervalos de 1-2 semanas até máximo 0,61mg/kg ou 40mg/dia",
-      "dose maxima adulto": "80 mg/dia",
+      "dose maxima na hipertensao": "40 mg/dia. O rótulo manda iniciar com 10 mg e titular **até 40 mg** conforme a resposta pressórica; a versão anterior deste verbete trazia 80 mg/dia, o dobro",
       "Ajuste renal — ClCr 10-30 mL/min": "metade da dose inicial usual (hipertensão: 5mg; ICC: 2,5mg; IAM: 2,5mg)",
       "ajuste hemodialise": "É removido por hemodiálise; dose inicial 2,5mg/dia, máximo 40mg/dia",
-      "fonte": "Guia Farmacêutico HSL; bula FDA/DailyMed (Zestril); Drugs.com"
+      "fonte": "rótulo do lisinopril aprovado pelo FDA (DailyMed)"
     },
     "notes": {
       "Particularidade": "Precaução com risco de hipotensão em pacientes em uso concomitante de diuréticos; se diurético não puder ser descontinuado, iniciar lisinopril com 5mg"
     },
     "references": [
-      "LISINOPRIL — Guia Farmacêutico · Hospital Sírio-Libanês · https://guiafarmaceutico.hsl.org.br/lisinopril",
-      "Zestril/Lisinopril — bula FDA/DailyMed (múltiplas versões consultadas)",
-      "Lisinopril — Drugs.com Dosage Guide e Medscape Reference"
+      "Lisinopril tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 0e6364a4-6d66-4151-8197-d45e2a762895"
     ]
   },
   {
@@ -1951,7 +1972,8 @@
     },
     "notes": {
       "Farmacocinetica": "Controla a pressão arterial por 24 horas sem induzir hipotensão acentuada nas primeiras horas de tratamento, o que permite dose única diária. Doses de 50 e 100 mg mantêm relação linear de exposição com o metabólito ativo principal, até 200 mg por via oral.",
-      "Particularidade": "A combinação com IECA não é recomendada, por comprometer a função renal sem ganho de desfecho. O uso concomitante com betabloqueador na insuficiência cardíaca exige cautela na titulação."
+      "Particularidade": "A combinação com IECA não é recomendada, por comprometer a função renal sem ganho de desfecho. O uso concomitante com betabloqueador na insuficiência cardíaca exige cautela na titulação.",
+      "Relacao com sacubitril-valsartana": "Não associar. O sacubitril-valsartana **já contém valsartana**, de modo que somar um BRA a ele é duplicar o bloqueio do receptor de angiotensina, sem ganho e com mais hipotensão, hipercalemia e disfunção renal. Ao migrar de um BRA para o sacubitril-valsartana, o BRA é substituído, não somado. A janela obrigatória de 36 horas do rótulo se aplica à troca com **IECA**, não com BRA — a diferença está no risco de angioedema, que é o que a janela previne. VERIFICAÇÃO HUMANA NECESSÁRIA para a conduta de intervalo ao trocar de BRA para sacubitril-valsartana, que o rótulo consultado não especifica. Além disso, história de angioedema por IECA **ou por BRA** contraindica o sacubitril-valsartana. Fonte: rótulo do sacubitril-valsartana aprovado pelo FDA (DailyMed SPL setid 000dc81d-ab91-450c-8eae-8eb74e72296f)."
     },
     "references": [
       "Dahlöf B et al. Cardiovascular morbidity and mortality in the Losartan Intervention For Endpoint reduction in hypertension study (LIFE). The Lancet. 2002;359:995-1003. DOI: 10.1016/S0140-6736(02)08089-3",
@@ -1961,7 +1983,7 @@
   },
   {
     "slug": "mavacamten",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Mavacamten",
     "drug_class": "Inibidor seletivo da miosina cardíaca (primeiro da classe)",
     "mechanism": "Inibe seletivamente a miosina cardíaca, reduzindo o número de pontes cruzadas actina-miosina em estado de ligação — diminui hipercontratilidade do sarcômero, característica fisiopatológica central da cardiomiopatia hipertrófica obstrutiva. Reduz o gradiente dinâmico na via de saída do VE (LVOT) sem atuar como inotrópico negativo convencional",
@@ -1992,16 +2014,16 @@
   },
   {
     "slug": "metformina-cloridrato",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Metformina (cloridrato)",
     "drug_class": "Biguanida — sensibilizador de insulina",
     "mechanism": "Reduz a produção hepática de glicose (gliconeogênese) e aumenta a sensibilidade periférica à insulina no músculo esquelético, com discreta redução de absorção intestinal de glicose; não estimula secreção pancreática de insulina, portanto não causa hipoglicemia em monoterapia",
     "presentations": [
       "Comprimidos de liberação imediata (Glifage) 500/850/1000mg; comprimidos de liberação prolongada (Glifage XR) 500/750mg"
     ],
-    "renal_adjustment": "Contraindicado se ClCr<60mL/min conforme Guia HSL (bulas mais recentes/internacionais permitem uso cauteloso até ClCr≥30 com ajuste de dose — seguir protocolo institucional vigente)",
+    "renal_adjustment": "A avaliação é por **taxa de filtração glomerular estimada (eGFR)**, não por clearance de creatinina, e os cortes atuais do rótulo são: - **eGFR abaixo de 30 mL/min/1,73 m²**: contraindicado; suspender se a função cair abaixo disso - **eGFR entre 30 e 45**: não iniciar; se o paciente já usa, reavaliar risco e benefício de continuar - **eGFR acima de 45**: sem restrição por função renal - Avaliar a função renal **antes de iniciar** e periodicamente A versão anterior deste verbete contraindicava com ClCr abaixo de 60, critério de uma geração anterior de bula, e relegava a regra vigente a um parêntese. Isso nega o fármaco de primeira linha do diabetes tipo 2 a toda a faixa de eGFR entre 45 e 60, que deve recebê-lo.",
     "contraindications": [
-      "Insuficiência renal grave (ClCr<60mL/min pela bula clássica)",
+      "Insuficiência renal grave, definida como **eGFR abaixo de 30 mL/min/1,73 m²** — e não ClCr abaixo de 60, que era o critério de uma geração anterior de bula e constava aqui. Ver a seção de ajuste renal para as faixas intermediárias, que não são contraindicação e sim decisão de iniciar ou manter",
       "Acidose metabólica aguda/crônica",
       "Insuficiência hepática grave",
       "Alcoolismo",
@@ -2022,7 +2044,7 @@
       "pediatria dose maxima": "2.000 mg/dia",
       "administracao": "VO, durante ou logo após as refeições (café da manhã e/ou jantar), reduz efeitos adversos GI",
       "idosos maior 80 anos": "Usar com cautela — titulação conservadora",
-      "fonte": "Guia Farmacêutico HSL ; Metformina 500-850mg — Secretaria de Saúde RS"
+      "fonte": "rótulo da metformina aprovado pelo FDA (DailyMed)"
     },
     "outcomes": {
       "Evidencia pivotal ukpds": "Estudo UKPDS demonstrou redução significativa de eventos macrovasculares (incluindo IAM) e mortalidade por todas as causas em pacientes com DM2 e sobrepeso tratados com metformina, estabelecendo-a como terapia de primeira linha com benefício cardiovascular adicional ao controle glicêmico"
@@ -2031,8 +2053,7 @@
       "Suspensao perioperatoria contraste": "Interromper 48h antes de cirurgias eletivas de grande porte ou exames com contraste iodado (urografia, angiografia); reiniciar somente após 48h do procedimento e confirmação de função renal normal — risco de acidose lática"
     },
     "references": [
-      "METFORMINA — Guia Farmacêutico · Hospital Sírio-Libanês · https://guiafarmaceutico.hsl.org.br/metformina",
-      "Metformina 500-850mg · Secretaria de Saúde do Rio Grande do Sul · 2023 · https://admin.saude.rs.gov.br/upload/arquivos/202312/01110541-metformina.pdf"
+      "Metformin hydrochloride tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 4d3dbf6f-1c8a-4daa-8343-8cd8f64a65cd"
     ]
   },
   {
@@ -2072,144 +2093,73 @@
       "Farmacocinetica": "Excreção renal; nível plasmático estável em 24h; início de ação farmacológica após 6-8h"
     },
     "references": [
+      "Methyldopa — rótulo aprovado pelo FDA, DailyMed SPL setid 9e22e1d8-04ec-4b67-92ea-b09c706f2703",
       "Quais anti-hipertensivos podem ser utilizados na gestação? · APS-BVS · https://aps-repo.bvs.br/aps/quais-anti-hipertensivos-podem-ser-utilizados-na-gestacao/",
       "Hipertensão na Gravidez — Protocolo · CAISM/UNICAMP · https://www.caism.unicamp.br/download/protocolos/obstetricia/Hipertens%C3%A3o%20na%20Gravidez.pdf",
       "Methyldopa — LiverTox, NCBI Bookshelf",
-      "Pregnancy Outcome After First Trimester Use of Methyldopa — Hypertension (AHA journals), 2018",
-      "Methyldopa (Aldomet) Use During Pregnancy — Drugs.com"
+      "Pregnancy Outcome After First Trimester Use of Methyldopa — Hypertension (AHA journals), 2018"
     ]
   },
   {
-    "slug": "metoprolol-succinato-de-liberacao-prolongada",
+    "slug": "metoprolol",
     "review_status": "pendente_revisao",
-    "generic_name": "Metoprolol (succinato de liberação prolongada)",
-    "drug_class": "Betabloqueador cardiosseletivo (beta-1 seletivo)",
-    "mechanism": "Antagonista competitivo e seletivo de receptores beta-1 adrenérgicos miocárdicos, reduzindo frequência cardíaca, contratilidade e liberação de renina. A formulação succinato de liberação prolongada permite absorção lenta e constante ao longo de 20 horas, resultando em concentração plasmática mais estável comparada ao tartarato de liberação imediata",
+    "generic_name": "Metoprolol — succinato (liberação prolongada) e tartarato (liberação imediata)",
+    "drug_class": "Betabloqueador cardiosseletivo beta-1, de segunda geração, sem atividade simpaticomimética intrínseca",
+    "mechanism": "Bloqueio competitivo e reversível de receptores beta-1 adrenérgicos cardíacos, com seletividade beta1:beta2 de 10 a 20 vezes, reduzindo frequência cardíaca, contratilidade, condução atrioventricular e liberação de renina. Metabolismo hepático via CYP2D6: metabolizadores lentos, 5 a 10% da população, atingem níveis plasmáticos várias vezes maiores. A lipofilia explica a penetração no sistema nervoso central e os efeitos de insônia e pesadelos.",
     "presentations": [
-      "Comprimidos de liberação prolongada de 25, 50, 100 e 200 mg"
+      "Comprimidos de liberação prolongada de 25, 50, 100 e 200 mg (succinato); comprimidos de liberação imediata e solução injetável (tartarato). VERIFICAÇÃO HUMANA NECESSÁRIA para as apresentações efetivamente registradas no Brasil, que devem ser conferidas na bula registrada na ANVISA — a lista acima segue a rotulagem norte-americana."
     ],
-    "renal_adjustment": "Não é necessário ajuste para insuficiência renal; em hemodiálise, administrar dose de manutenção após a sessão",
-    "hepatic_adjustment": "Normalmente não é necessário ajuste em cirrose hepática; considerar redução de dose quando há sinais de comprometimento sério da função hepática",
+    "renal_adjustment": "Não é necessário ajuste. Em hemodiálise, administrar a dose de manutenção após a sessão.",
+    "hepatic_adjustment": "Normalmente dispensável na cirrose; considerar redução quando houver comprometimento hepático grave.",
     "indications": [
-      "Hipertensão, angina pectoris, tratamento de manutenção pós-IAM, alterações do ritmo cardíaco, IC crônica sintomática leve a grave (terapia adjuvante), alterações cardíacas funcionais com palpitações"
+      "Hipertensão arterial, angina, tratamento de manutenção pós-IAM, insuficiência cardíaca com fração de ejeção reduzida (classes II-IV da NYHA, apenas o succinato), arritmias e profilaxia de enxaqueca."
     ],
-    "contraindications": [
-      "Bradicardia sinusal grave",
-      "Bloqueio AV de 2º/3º grau",
-      "Choque cardiogênico",
-      "IC descompensada aguda para início/titulação",
-      "Doença arterial periférica grave"
-    ],
-    "dosing": {
-      "hipertensao": "50 mg/dia em hipertensão leve a moderada; pode ser aumentada para 100-200 mg/dia ou combinada com outro anti-hipertensivo se resposta insuficiente",
-      "angina pectoris": "100-200 mg/dia, podendo ser combinado com outros agentes antianginosos",
-      "ic cronica dose inicial": "25 mg 1x/dia durante as duas primeiras semanas (dose inicial recomendada)",
-      "ic titulacao": "Dose deve ser ajustada individualmente, dobrando a cada 2 semanas conforme tolerância, até dose alvo ou dose máxima tolerada",
-      "arritmias cardiacas": "100-200 mg/dia",
-      "pos iam manutencao": "200 mg/dia demonstrou benefício em tratamento de longo prazo",
-      "profilaxia enxaqueca": "100-200 mg/dia",
-      "pediatria acima 6 anos": "1 mg/kg/dia",
-      "fonte": "Guia Farmacêutico HSL"
-    },
-    "outcomes": {
-      "Evidencia pivotal merit hf": "Estudo MERIT-HF demonstrou que metoprolol succinato reduz mortalidade e hospitalização em pacientes com IC crônica e FEVE reduzida, fundamentando sua posição como uma das três opções de betabloqueador de primeira linha em ICFER (junto com bisoprolol e carvedilol)"
-    },
-    "notes": {
-      "Diferenca succinato tartarato": "Succinato (liberação prolongada, 1x/dia) é a formulação com evidência estabelecida em IC; tartarato (liberação imediata, 2x/dia) tem uso mais voltado a hipertensão/angina e não possui a mesma robustez de evidência em IC"
-    },
-    "references": [
-      "METOPROLOL, succinato — Guia Farmacêutico · Hospital Sírio-Libanês · https://guiafarmaceutico.hsl.org.br/metoprolol-succinato",
-      "Estudio MERIT-HF: Metoprolol en insuficiencia cardíaca · Redalyc · https://www.redalyc.org/pdf/3219/321927778007.pdf",
-      "Metoprolol: evidencia y práctica clínica · CardioTeca · 2026 · https://www.cardioteca.com/tratamientos/8260-metoprolol-practica-clinica-guia-especialista.html"
-    ]
-  },
-  {
-    "slug": "metoprolol-succinato-e-tartrato",
-    "review_status": "pendente_revisao",
-    "generic_name": "Metoprolol (succinato e tartrato)",
-    "drug_class": "Betabloqueador cardiosseletivo (beta-1 seletivo) de segunda geração",
-    "mechanism": "Bloqueio competitivo e reversível de receptores beta-1 adrenérgicos cardíacos, com seletividade beta1:beta2 de 10-20x; reduz FC, contratilidade e condução AV; sem atividade simpaticomimética intrínseca; metabolismo hepático via CYP2D6, com metabolizadores lentos (5-10% da população) apresentando níveis 5-10x mais altos",
     "interactions": [
-      "Risco de bradicardia sinusal e BAV por efeito aditivo na condução; reduzir dose de metoprolol à metade ao associar amiodarona, dada sua meia-vida ultralonga (>50 dias)"
+      "Efeito aditivo sobre a condução, com risco de bradicardia sinusal e bloqueio atrioventricular. A meia-vida da amiodarona é de dezenas de dias, então a interação persiste muito depois da suspensão. VERIFICAÇÃO HUMANA NECESSÁRIA para a conduta de reduzir a dose de metoprolol à metade ao associar amiodarona, que estava escrita aqui sem fonte identificada."
     ],
     "adverse_effects": [
-      "Bradicardia sinusal, hipotensão, fadiga (transitória, mais comum nos primeiros 2-3 meses), extremidades frias, insônia/pesadelos (relacionado à lipofilia), BAV, broncoespasmo (dose-dependente), mascaramento de hipoglicemia em DM insulinizado"
+      "Bradicardia sinusal, hipotensão, fadiga (em geral transitória, mais comum nos primeiros 2 a 3 meses), extremidades frias, insônia e pesadelos (ligados à lipofilia), bloqueio atrioventricular, broncoespasmo dose-dependente e mascaramento dos sinais de hipoglicemia em diabético insulinizado."
     ],
     "contraindications": [
-      "BAV 2º/3º grau sem marcapasso",
-      "Doença do nó sinusal sem marcapasso",
+      "Bloqueio atrioventricular de 2º ou 3º grau sem marca-passo",
+      "Doença do nó sinusal sem marca-passo",
       "Bradicardia sinusal sintomática",
-      "IC descompensada/choque cardiogênico",
+      "Insuficiência cardíaca descompensada e choque cardiogênico",
       "Doença arterial periférica grave",
-      "Asma ativa/broncoespasmo grave",
+      "Asma ativa ou broncoespasmo grave",
       "Feocromocitoma não tratado"
     ],
     "dosing": {
-      "ic nyha ii inicio": "23,75 mg succinato/dia (≈25mg tartrato)",
-      "ic nyha iii iv inicio": "11,88 mg succinato/dia (≈12,5mg tartrato)",
-      "ic titulacao": "Dobrar dose a cada 2 semanas conforme tolerância (FC, PA, ausência de descompensação)",
-      "ic dose alvo": "190 mg succinato/dia (≈200mg tartrato)",
-      "hipertensao": "47,5-95 mg succinato/dia, até 190mg/dia",
-      "angina arritmias": "95-190 mg succinato/dia, até 190mg/dia",
-      "pos iam preventivo": "190 mg succinato/dia",
-      "profilaxia migranea": "95-190 mg succinato/dia",
-      "iv urgencia arritmias tartrato": "5mg em bolo lento, repetível",
-      "fonte": "CardioTeca — Metoprolol: evidencia y práctica clínica"
+      "hipertensao": "50 mg/dia em hipertensão leve a moderada; aumentar para 100-200 mg/dia ou associar outro anti-hipertensivo se a resposta for insuficiente",
+      "angina": "100-200 mg/dia, podendo combinar com outros antianginosos",
+      "ic cronica dose inicial": "25 mg 1x/dia nas duas primeiras semanas; em classe funcional mais avançada, iniciar com 12,5 mg 1x/dia",
+      "ic titulacao": "dobrar a dose a cada 2 semanas conforme tolerância, guiada por frequência cardíaca, pressão arterial e ausência de descompensação",
+      "ic dose alvo": "200 mg 1x/dia",
+      "arritmias": "100-200 mg/dia",
+      "pos iam manutencao": "200 mg/dia",
+      "profilaxia de enxaqueca": "100-200 mg/dia",
+      "criancas acima de 6 anos": "1 mg/kg/dia",
+      "urgencia endovenosa (tartarato)": "5 mg em bolus lento, repetível",
+      "fonte": "rótulo do succinato de metoprolol aprovado pelo FDA (DailyMed) e as diretrizes de IC para a titulação"
     },
     "outcomes": {
-      "Evidencia pivotal merit hf": "3.991 pacientes com IC-FEr NYHA II-IV, FEVI≤40%; metoprolol succinato reduziu mortalidade total em 34% (HR 0,66) e morte súbita em 41% (HR 0,59); estudo interrompido precocemente por benefício claro; curva de mortalidade só se separa do placebo a partir do dia 60",
-      "Evidencia pos iam atualizada": "REDUCE-AMI (2024, FEVI>50%): sem benefício significativo em mortalidade/reinfarto; BETAMI-DANBLOCK (ESC 2025, FEVI≥40%): benefício significativo no desfecho composto; metanálise NEJM nov/2025 (17.801 pacientes) concluiu: sem benefício em FEVI≥50% (HR 0,97), benefício significativo em FEVI 40-49% (HR 0,75)"
+      "Evidencia pivotal merit hf": "3.991 pacientes com IC-FEr, classes II-IV da NYHA e FEVE ≤40%. O metoprolol CR/XL reduziu a **mortalidade por todas as causas em 34%** (7,2% contra 11,0% por paciente-ano; RR 0,66; IC95% 0,53-0,81; p=0,00009, ou p=0,0062 ajustado para as análises interinas), a **morte súbita em 41%** (79 contra 132 eventos; RR 0,59; IC95% 0,45-0,78) e a **morte por piora da IC em 49%** (30 contra 58; RR 0,51; IC95% 0,33-0,79). O estudo foi interrompido precocemente por recomendação do comitê de segurança. É o que sustenta o metoprolol succinato como um dos três betabloqueadores de primeira linha em IC-FEr, ao lado de bisoprolol e carvedilol.",
+      "Evidencia pos iam atualizada": "O papel do betabloqueador depois do infarto com função ventricular preservada mudou: - **REDUCE-AMI** (2024), em FEVE ≥50%: sem benefício significativo no desfecho de morte ou novo infarto. - **Beta-Blocker Trialists' Collaboration** (NEJM, on-line em novembro de 2025): metanálise de dados individuais de **17.801 pacientes** de cinco ensaios (REBOOT, REDUCE-AMI, BETAMI, DANBLOCK e CAPITAL-RCT), **todos com FEVE ≥50%**. Em 3,6 anos de seguimento mediano, o desfecho primário composto ocorreu em 8,1% contra 8,3% — **HR 0,97; IC95% 0,87-1,07; p=0,54**. Mortalidade por todas as causas HR 1,04 (0,89-1,21); infarto HR 0,89 (0,77-1,03); insuficiência cardíaca HR 0,87 (0,64-1,19). VERIFICAÇÃO HUMANA NECESSÁRIA para a afirmação de benefício em FEVE 40-49% (HR 0,75) que circulava aqui atribuída a essa metanálise: ela **não pode ter produzido esse resultado**, porque incluiu apenas pacientes com FEVE ≥50%. O dado pode vir de outro estudo — provavelmente do BETAMI-DANBLOCK, cuja população incluía FEVE ≥40% —, e precisa ser reatribuído à fonte correta antes de ser citado."
     },
     "notes": {
-      "Formulacoes distintas": "Succinato = liberação prolongada, dose única diária, ÚNICA formulação com evidência em IC (MERIT-HF); Tartrato = liberação imediata, 2-3x/dia, sem evidência em IC mas com apresentação EV para urgências (arritmias, IAM agudo)",
-      "Combinacao ic pilares": "Parte do quarteto terapêutico em IC-FEr junto com IECA/BRA/sacubitril-valsartana, antagonista mineralocorticoide e inibidor SGLT2"
+      "Formulacoes distintas": "Distinção que muda conduta, não é detalhe farmacêutico: - **Succinato** — liberação prolongada, dose única diária, concentração plasmática estável. É a **única formulação com evidência em insuficiência cardíaca** (MERIT-HF). - **Tartarato** — liberação imediata, 2 a 3 vezes ao dia, sem evidência equivalente em IC, mas com apresentação endovenosa para urgência (arritmia, fase aguda do IAM). Trocar um pelo outro em paciente com IC-FEr não é equivalência terapêutica.",
+      "Combinacao ic pilares": "Compõe o quarteto terapêutico da IC-FEr junto com IECA/BRA ou sacubitril-valsartana, antagonista do receptor mineralocorticoide e inibidor de SGLT2."
     },
     "references": [
-      "Metoprolol: evidencia y práctica clínica · CardioTeca · 2026 · https://www.cardioteca.com/tratamientos/8260-metoprolol-practica-clinica-guia-especialista.html",
-      "Estudio MERIT-HF. Metoprolol en insuficiencia cardíaca · Redalyc · https://www.redalyc.org/pdf/3219/321927778007.pdf"
-    ]
-  },
-  {
-    "slug": "metoprolol-succinato",
-    "review_status": "pendente_revisao",
-    "generic_name": "Metoprolol (succinato)",
-    "drug_class": "Betabloqueador cardiosseletivo (beta-1 seletivo), formulação de liberação prolongada",
-    "mechanism": "Antagonista competitivo seletivo de receptores beta-1 adrenérgicos, reduzindo frequência cardíaca, contratilidade e liberação de renina; formulação succinato de liberação prolongada permite concentração plasmática estável em 24h, diferente do tartarato (liberação imediata)",
-    "presentations": [
-      "Comprimidos de liberação prolongada de 25, 50 e 100 mg"
-    ],
-    "renal_adjustment": "Não é necessário ajuste; em hemodiálise, administrar dose de manutenção após a sessão",
-    "hepatic_adjustment": "Normalmente não necessário em cirrose; considerar redução de dose se comprometimento hepático grave",
-    "indications": [
-      "Hipertensão, angina, manutenção pós-IAM, ICFER (classes II-IV NYHA), arritmias, profilaxia de enxaqueca"
-    ],
-    "contraindications": [
-      "Bradicardia sinusal grave",
-      "Bloqueio AV 2º/3º grau",
-      "Choque cardiogênico",
-      "IC descompensada aguda"
-    ],
-    "dosing": {
-      "hipertensao": "50 mg/dia (leve a moderada); se não responsivo, aumentar para 100-200mg/dia ou combinar com outro anti-hipertensivo",
-      "angina": "100-200 mg/dia, podendo ser combinado com outros antianginosos",
-      "icc titulacao": "Dose inicial de 25 mg/dia nas primeiras 2 semanas, com titulação gradual ascendente conforme tolerabilidade",
-      "arritmias cardiacas": "100-200 mg/dia",
-      "manutencao pos iam": "200 mg/dia demonstrou benefício em tratamento a longo prazo",
-      "criancas maiores 6 anos": "1 mg/kg/dia",
-      "fonte": "Guia Farmacêutico HSL"
-    },
-    "outcomes": {
-      "Evidencia pivotal merit hf": "Estudo MERIT-HF demonstrou redução significativa de mortalidade total e morte súbita em pacientes com ICFER classes II-IV NYHA, consolidando metoprolol succinato como um dos três betabloqueadores com evidência robusta em IC (junto com bisoprolol e carvedilol)",
-      "Evidencias adicionais recentes": "Estudos mais recentes como REDUCE-AMI e BETAMI-DANBLOCK têm reexaminado papel do betabloqueador pós-IAM com FE preservada, tema em debate na cardiologia contemporânea"
-    },
-    "references": [
-      "METOPROLOL succinato — Guia Farmacêutico · Hospital Sírio-Libanês · https://guiafarmaceutico.hsl.org.br/metoprolol-succinato",
-      "Metoprolol: evidencia y práctica clínica · CardioTeca · 2026 · https://www.cardioteca.com/tratamientos/8260-metoprolol-practica-clinica-guia-especialista.html"
+      "MERIT-HF Study Group. Effect of metoprolol CR/XL in chronic heart failure: Metoprolol CR/XL Randomised Intervention Trial in Congestive Heart Failure (MERIT-HF). Lancet. 1999;353(9169):2001-2007. PMID: 10376614",
+      "Yndigegn T, Lindahl B, Mars K, et al. Beta-blockers after myocardial infarction and preserved ejection fraction (REDUCE-AMI). N Engl J Med. 2024;390(15):1372-1381. DOI: 10.1056/NEJMoa2401479. PMID: 38587241",
+      "Kristensen AMD, Rossello X, Atar D, et al; Beta-Blocker Trialists' Collaboration. Beta-blockers after myocardial infarction with normal ejection fraction. N Engl J Med. 2026;394(6):540-550 (publicado on-line em 9 de novembro de 2025). DOI: 10.1056/NEJMoa2512686. PMID: 41211954",
+      "Metoprolol succinate extended-release tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 76c69d7c-e90c-4f96-a45b-e9dad9444263"
     ]
   },
   {
     "slug": "milrinona",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Milrinona (lactato de milrinona)",
     "drug_class": "Inibidor da fosfodiesterase tipo 3 (inodilatador)",
     "mechanism": "Inibe a enzima PDE3, responsável pela degradação do AMPc em cardiomiócitos e músculo liso vascular; o acúmulo de AMPc aumenta a atividade da proteína quinase A, fosforilando canais de cálcio no retículo sarcoplasmático e aumentando a disponibilidade de cálcio no sarcômero — efeito inotrópico positivo. A maior recaptação de cálcio para o retículo sarcoplasmático também melhora o relaxamento miocárdico (efeito lusitrópico). Em vasos, causa vasodilatação (inodilatador), reduzindo pós-carga",
@@ -2298,12 +2248,12 @@
       "hipertensao adulto": "5 mg (1 comprimido) 1x/dia; efeito evidente em 1-2 semanas, ótimo em até 4 semanas",
       "hipertensao idoso maior 65 anos": "Dose inicial 2,5 mg/dia, podendo aumentar para 5mg/dia",
       "hipertensao insuficiencia renal": "Dose inicial 2,5 mg/dia, podendo aumentar até 5mg/dia",
-      "icfer indicacao especifica": "Aprovado para IC em associação com terapêutica padronizada em pacientes idosos ≥70 anos com FEVI ≤35%",
+      "icfer indicacao especifica": "aprovado para insuficiência cardíaca em associação à terapia padrão, em idosos a partir de 70 anos. VERIFICAÇÃO HUMANA NECESSÁRIA para o critério de FEVE ≤35% escrito aqui: ele **contradiz a própria seção de evidência deste documento**, que descreve o SENIORS como estudo em idosos com IC independentemente da fração de ejeção. Uma das duas afirmações está errada e é preciso decidir qual contra a bula e o artigo original",
       "icfer titulacao": "1,25mg 1x/dia → 2,5mg 1x/dia → 5mg 1x/dia → 10mg 1x/dia, com intervalos de 1-2 semanas conforme tolerabilidade; monitorização de pelo menos 2h a cada início/aumento de dose",
       "icfer dose maxima": "10 mg 1x/dia",
       "insuficiencia hepatica": "Contraindicado — dados limitados",
       "insuficiencia renal grave creatinina maior 250": "Não recomendado — sem experiência clínica",
-      "fonte": "Consulta Remédios/ANVISA — bula profissional completa"
+      "fonte": "VERIFICAÇÃO HUMANA NECESSÁRIA — a indicação em insuficiência cardíaca **não existe na rotulagem norte-americana**, onde o nebivolol é aprovado apenas para hipertensão; ela vem da rotulagem europeia e brasileira. Conferir a bula registrada na ANVISA para a indicação, a faixa etária e a titulação"
     },
     "outcomes": {
       "Evidencia pivotal seniors": "Estudo SENIORS avaliou nebivolol em pacientes idosos com IC independentemente da FEVI, demonstrando prolongamento significativo do tempo até morte ou hospitalização cardiovascular"
@@ -2312,7 +2262,7 @@
       "Farmacocinetica": "Metabolizado via CYP2D6 com polimorfismo genético significativo; biodisponibilidade oral média de 12% em metabolizadores rápidos, virtualmente completa em metabolizadores lentos; meia-vida de eliminação ~10h (rápidos) vs. 3-5x mais longa (lentos)"
     },
     "references": [
-      "Bula do Cloridrato de Nebivolol · Consulta Remédios/ANVISA · 2020 · https://consultaremedios.com.br/cloridrato-de-nebivolol/bula"
+      "Nebivolol (BYSTOLIC) tablets — rótulo aprovado pelo FDA, indicação de hipertensão arterial"
     ]
   },
   {
@@ -2351,9 +2301,9 @@
       "Particularidade versus anlodipino": "Formulação de liberação imediata (sublingual/cápsula) tem sido historicamente associada a maior risco de eventos isquêmicos por taquicardia reflexa e queda abrupta de PA — atualmente contraindicada em crise hipertensiva; formulações de liberação prolongada mitigam esse risco"
     },
     "references": [
+      "Nifedipine — rótulo aprovado pelo FDA, DailyMed SPL setid acb493a3-b8f2-41a9-8ab2-550d97c4592a",
       "Nifedipina — Bula · Farmacam · 2019 · https://institucional.farmacam.com.br/wp-content/uploads/2023/12/Nifedipina-farmacam-2019-1.pdf",
-      "Procardia XL (nifedipine) — bula FDA/DailyMed (múltiplas versões consultadas)",
-      "Nifedipine — Medscape Reference"
+      "Procardia XL (nifedipine) — bula FDA/DailyMed (múltiplas versões consultadas)"
     ]
   },
   {
@@ -2376,7 +2326,7 @@
       "Cefaleia (muito comum, por vasodilatação cerebral), hipotensão ortostática, taquicardia reflexa, rubor facial, tolerância com uso contínuo"
     ],
     "dosing": {
-      "dose_especifica": "— esquema numérico completo de dose por apresentação (sublingual, EV, transdérmica, oral) e por indicação não foi extraído com valores precisos de fonte primária nesta rodada"
+      "dose_especifica": "— o esquema de dose por apresentação e por indicação está nas monografias individuais: `nitroglicerina-trinitrato-de-glicerila.md` e `dinitrato-de-isossorbida.md`, nesta mesma pasta, ambas já conferidas contra rótulo aprovado"
     },
     "notes": {
       "Particularidade tolerancia": "Uso contínuo desenvolve tolerância farmacológica (taquifilaxia) em 24-48h — requer intervalo livre de nitrato de pelo menos 8-12h/dia para manter eficácia em uso crônico"
@@ -2455,19 +2405,18 @@
       "ev titulacao": "Aumentar conforme necessário, até dose máxima de 100 mcg/min",
       "ev indicacao pratica": "Comumente instituída após 3 doses sublinguais sem efeito esperado",
       "farmacocinetica": "Início de ação 2-5min, duração de efeito 5-10min (via sublingual/EV)",
-      "fonte": "Sanarmed — Resumo de Nitroglicerina"
+      "fonte": "rótulo da nitroglicerina aprovado pelo FDA (DailyMed), no lugar do material de estudante que sustentava esta seção"
     },
     "notes": {
       "Particularidade tolerancia": "Uso contínuo (especialmente EV/transdérmico) desenvolve tolerância em 24-48h — requer intervalo livre de nitrato"
     },
     "references": [
-      "Resumo de Nitroglicerina: ação, farmacocinética, indicações, efeitos adversos e interações · Sanarmed · 2021 · https://sanarmed.com/resumo-de-nitroglicerina-acao-farmacocinetica-indicacoes-efeitos-adversos-e-interacoes/",
-      "Nitroglicerina: evidencia y práctica clínica · CardioTeca · 2026 · https://www.cardioteca.com/tratamientos/8193-nitroglicerina-nitroglycerin-practica-clinica-guia-especialista.html"
+      "Nitroglycerin sublingual tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 562d2e03-dfed-41ff-8e7f-ec4169141983"
     ]
   },
   {
     "slug": "nitroprussiato-de-sodio",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Nitroprussiato de sódio",
     "drug_class": "Vasodilatador de ação direta (doador de óxido nítrico), arterial e venoso",
     "mechanism": "Libera óxido nítrico que ativa guanilato ciclase no músculo liso vascular, aumentando GMPc e promovendo vasodilatação arterial e venosa balanceada — reduz pré-carga e pós-carga simultaneamente",
@@ -2523,16 +2472,15 @@
       "choque septico": "Doses utilizadas em estudos clínicos: 0,01-3 mcg/kg/min; dose máxima descrita de 3,3 mcg/kg/min",
       "pediatria inicial": "0,05-0,1 mcg/kg/min, ajustando conforme resposta; dose máxima de 2,5 mcg/kg/min",
       "observacao titulacao": "Não existe esquema único de titulação nem dose máxima absoluta claramente definida; há grande variação individual na dose necessária para estabilizar e manter adequadamente a pressão arterial",
-      "fonte": "Guia Farmacêutico HSL ; Guia TdC Bulário"
+      "fonte": "rótulo do bitartarato de norepinefrina aprovado pelo FDA (DailyMed)"
     },
     "notes": {
       "Diluicao administracao": "Diluir em SG 5%, SF 0,9%, soro glicofisiológico ou Ringer lactato; 1 ampola (4 mL) pode ser adicionada a volume de 100 ou 250 mL de SF ou SG. Concentração máxima adulto: 0,5 mg/mL; pediátrica: 16 mcg/mL. Administração exclusivamente EV em veia central, nunca sem diluição, sempre em bomba de infusão",
       "Compatibilidade": "Não administrar solução de bicarbonato ou outra solução alcalina simultaneamente no mesmo acesso venoso, sob risco de inativação do efeito da noradrenalina",
-      "Acesso venoso": "Medicamento vesicante — administrar via cateter venoso central (CVC) devido ao alto risco de ulceração e necrose em caso de extravasamento periférico"
+      "Acesso venoso": "Medicamento vesicante: o extravasamento causa ulceração e necrose, e a via de escolha é o cateter venoso central. VERIFICAÇÃO HUMANA NECESSÁRIA para a formulação \"exclusivamente central\" que constava aqui — há prática difundida de infusão periférica por tempo limitado e sob vigilância, em veia calibrosa, enquanto o acesso central é obtido. Definir a conduta do serviço com fonte própria, em vez de proibir de forma absoluta o que se faz na sala de emergência ou permitir sem critério"
     },
     "references": [
-      "NORADRENALINA — Guia Farmacêutico · Hospital Sírio-Libanês · https://guiafarmaceutico.hsl.org.br/noradrenalina",
-      "Noradrenalina: Bulário · Guia TdC · 2026 · https://www.tadeclinicagem.com.br/guia/523/noradrenalina-bulario/"
+      "Norepinephrine bitartrate injection — rótulo aprovado pelo FDA, DailyMed SPL setid e375a0b9-4d26-4749-bbc3-43d63a7cf65a"
     ]
   },
   {
@@ -2566,11 +2514,14 @@
       "Ajuste hepático": "não é necessário ajuste, mesmo em disfunção hepática grave — cautela, pois alteração de fluidos/eletrólitos pode precipitar coma hepático em hepatopata grave",
       "fonte": "WeMeds — Olmesartana para Hipertensão; bula FDA/DailyMed"
     },
+    "notes": {
+      "Relacao com sacubitril-valsartana": "Não associar. O sacubitril-valsartana **já contém valsartana**, de modo que somar um BRA a ele é duplicar o bloqueio do receptor de angiotensina, sem ganho e com mais hipotensão, hipercalemia e disfunção renal. Ao migrar de um BRA para o sacubitril-valsartana, o BRA é substituído, não somado. A janela obrigatória de 36 horas do rótulo se aplica à troca com **IECA**, não com BRA — a diferença está no risco de angioedema, que é o que a janela previne. VERIFICAÇÃO HUMANA NECESSÁRIA para a conduta de intervalo ao trocar de BRA para sacubitril-valsartana, que o rótulo consultado não especifica. Além disso, história de angioedema por IECA **ou por BRA** contraindica o sacubitril-valsartana. Fonte: rótulo do sacubitril-valsartana aprovado pelo FDA (DailyMed SPL setid 000dc81d-ab91-450c-8eae-8eb74e72296f)."
+    },
     "references": [
+      "Olmesartan medoxomil — rótulo aprovado pelo FDA, DailyMed SPL setid 574d2679-c036-fa12-e063-6394a90aef33",
       "Olmesartana para Hipertensão: como funciona e como prescrever · WeMeds · 2025 · https://portal.wemeds.com.br/olmesartana-para-hipertensao-como-prescrever/",
       "Bula para Profissionais - Olmesartana medoxomila · Accord Farma · https://accordfarma.com.br/bulas/bula_Olmesartana_medoxomila_Profissional.pdf",
-      "Olmesartan medoxomil — bula FDA/DailyMed (múltiplas versões consultadas)",
-      "Olmesartan Medoxomil — Drugs.com Prescribing Information"
+      "Olmesartan medoxomil — bula FDA/DailyMed (múltiplas versões consultadas)"
     ]
   },
   {
@@ -2597,6 +2548,9 @@
       "Estenose bilateral de artéria renal",
       "Hipersensibilidade"
     ],
+    "interactions": [
+      "**Contraindicado o uso concomitante**, e é preciso respeitar uma **janela de 36 horas** ao trocar de ou para o sacubitril-valsartana. O inibidor de neprilisina e o IECA somam risco de angioedema, e a janela existe para evitar a sobreposição dos dois efeitos. Isto não é detalhe teórico em Cardiologia: a migração de IECA para sacubitril-valsartana é justamente o caminho recomendado na insuficiência cardíaca com fração de ejeção reduzida, então essa transição acontece na prática rotineira. Também não se deve coadministrar alisquireno a paciente diabético. Fonte: rótulo do sacubitril-valsartana aprovado pelo FDA (DailyMed SPL setid 000dc81d-ab91-450c-8eae-8eb74e72296f)."
+    ],
     "dosing": {
       "hipertensao inicial": "4 mg (erbumina) 1x/dia, podendo aumentar para 8mg 1x/dia",
       "insuficiencia cardiaca inicial": "Meio comprimido (2mg) 1x/dia",
@@ -2605,7 +2559,7 @@
       "hipertensao renovascular": "Iniciar com dose pequena de 2mg",
       "Ajuste renal (erbumina)": "ClCr ≥ 30 mL/min — dose inicial 2 mg/dia, máximo 8 mg/dia. ClCr < 30 mL/min — não recomendado",
       "Idoso": "sempre iniciar com 2 mg/dia, independentemente da função renal, com monitorização próxima no início",
-      "fonte": "Bula COVERSYL 4mg ; Bula COVERSYL — anossadrogaria; Drugs.com Dosage Guide"
+      "fonte": "rótulo aprovado pelo FDA (DailyMed), setid 87768fbf-7c63-47da-8925-0316f343d6ef"
     },
     "outcomes": {
       "Evidencia pivotal europa": "Estudo EUROPA (>12.000 pacientes com DAC estável) demonstrou redução significativa do desfecho composto (morte CV, IAM não fatal, parada cardíaca ressuscitada) com perindopril 8mg/dia vs. placebo, estabelecendo benefício de IECA em prevenção mesmo sem IC obrigatória"
@@ -2614,9 +2568,9 @@
       "Nota sobre equivalencia entre sais": "Perindopril arginina e perindopril erbumina não são equivalentes dose a dose — aproximadamente, arginina 10 mg ≈ erbumina 8 mg. Ao trocar de apresentação, não assumir conversão 1:1."
     },
     "references": [
+      "Perindopril — rótulo aprovado pelo FDA, DailyMed SPL setid 87768fbf-7c63-47da-8925-0316f343d6ef",
       "Coversyl 4mg — Bula Profissional · Servier · https://static-webv8.jet.com.br/drogaosuper/Bulas/7898029551046.pdf",
       "Coversyl — Bula Profissional · A Nossa Drogaria · http://institucional.anossadrogaria.com.br/bula/924166.pdf",
-      "Perindopril — Drugs.com Dosage Guide e Prescribing Information",
       "Sandoz Perindopril Erbumine Product Monograph"
     ]
   },
@@ -2774,22 +2728,22 @@
       "Bradicardia, broncoespasmo (risco maior que betabloqueadores seletivos), fadiga, extremidades frias, disfunção erétil, mascaramento de sintomas de hipoglicemia em diabéticos"
     ],
     "dosing": {
-      "dose_especifica_por_indicacao": "**Hipertensão** (liberação prolongada): dose inicial 80 mg 1x/dia, titular até manutenção de 120–160 mg/dia. Máximo de bula: 640 mg/dia, raramente usado nessa faixa na prática. **Angina estável**: 80–320 mg/dia, em 2–3 tomadas (formulação de liberação imediata) ou 1x/dia (liberação prolongada). **Pós-infarto** (redução de mortalidade cardiovascular em paciente hemodinamicamente estável): 180–240 mg/dia, em doses divididas; manter por 1–3 anos na ausência de contraindicação. **Ajuste renal**: não é rotineiramente necessário em insuficiência renal leve a moderada — o propranolol é metabolizado principalmente no fígado, e a fração não ligada às proteínas plasmáticas não é significativamente removida por diálise (diferente do atenolol). Em insuficiência renal grave, titular com cautela e monitorização clínica. **Retirada**: nunca suspender abruptamente — reduzir gradualmente ao longo de 1–2 semanas, pelo risco de piora de angina ou infarto de rebote. Fonte: bula FDA (Inderal), StatPearls, Drugs.com — dados convergentes."
+      "dose_especifica_por_indicacao": "**Hipertensão** (liberação prolongada): dose inicial 80 mg 1x/dia, titular até manutenção de 120–160 mg/dia. Máximo de bula: 640 mg/dia, raramente usado nessa faixa na prática. **Angina estável**: 80–320 mg/dia, em 2–3 tomadas (formulação de liberação imediata) ou 1x/dia (liberação prolongada). **Pós-infarto** (redução de mortalidade cardiovascular em paciente hemodinamicamente estável): 180–240 mg/dia, em doses divididas; manter por 1–3 anos na ausência de contraindicação. **Ajuste renal**: não é rotineiramente necessário em insuficiência renal leve a moderada — o propranolol é metabolizado principalmente no fígado, e a fração não ligada às proteínas plasmáticas não é significativamente removida por diálise (diferente do atenolol). Em insuficiência renal grave, titular com cautela e monitorização clínica. **Retirada**: nunca suspender abruptamente — reduzir gradualmente ao longo de 1–2 semanas, pelo risco de piora de angina ou infarto de rebote. Fonte: rótulo aprovado pelo FDA (DailyMed), setid c751ee54-27b4-4ed7-829a-ced735c41312"
     },
     "notes": {
       "Particularidade farmacologica": "Alta lipossolubilidade permite atravessar barreira hematoencefálica com facilidade, explicando eficácia em tremor essencial e enxaqueca, mas também maior risco de efeitos adversos no SNC (fadiga, pesadelos, depressão) comparado a betabloqueadores hidrofílicos (atenolol)"
     },
     "references": [
+      "Propranolol hydrochloride — rótulo aprovado pelo FDA, DailyMed SPL setid c751ee54-27b4-4ed7-829a-ced735c41312",
       "Resumo sobre Propranolol: indicações, farmacologia e mais · Estratégia MED · 2022 · https://med.estrategia.com/portal/conteudos-gratis/doencas/resumo-sobre-propranolol-indicacoes-farmacologia-e-mais/",
       "Bula Propranolol · Droga Raia · https://www.drogaraia.com.br/bulas/propranolol",
       "Inderal (propranolol) — bula FDA",
-      "Propranolol — StatPearls, NCBI Bookshelf",
-      "Propranolol — Drugs.com Dosage Guide, 2025"
+      "Propranolol — StatPearls, NCBI Bookshelf"
     ]
   },
   {
     "slug": "protamina",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Protamina (sulfato de protamina)",
     "drug_class": "Agente reversor específico da heparina",
     "mechanism": "Proteína fortemente catiônica que se liga ionicamente à heparina (fortemente aniônica), dissociando o complexo heparina-antitrombina III e formando um complexo heparina-protamina inativo — a protamina tem maior afinidade pela heparina do que a antitrombina III, revertendo seu efeito anticoagulante - **fonte**: Annals of Cardiac Anaesthesia (revisão sobre interação protamina-heparina)",
@@ -2827,7 +2781,8 @@
       "Hipotensão ou instabilidade circulatória"
     ],
     "interactions": [
-      "Membranas de diálise de poliacrilonitrila (risco de reação anafilactoide) — evitar ou trocar terapia; sais de potássio/diuréticos poupadores de K+/heparina (hipercalemia); lítio (intoxicação); AINEs (redução do efeito hipotensor); álcool (potencialização)"
+      "Membranas de diálise de poliacrilonitrila (risco de reação anafilactoide) — evitar ou trocar terapia; sais de potássio/diuréticos poupadores de K+/heparina (hipercalemia); lítio (intoxicação); AINEs (redução do efeito hipotensor); álcool (potencialização)",
+      "**Contraindicado o uso concomitante**, e é preciso respeitar uma **janela de 36 horas** ao trocar de ou para o sacubitril-valsartana. O inibidor de neprilisina e o IECA somam risco de angioedema, e a janela existe para evitar a sobreposição dos dois efeitos. Isto não é detalhe teórico em Cardiologia: a migração de IECA para sacubitril-valsartana é justamente o caminho recomendado na insuficiência cardíaca com fração de ejeção reduzida, então essa transição acontece na prática rotineira. Também não se deve coadministrar alisquireno a paciente diabético. Fonte: rótulo do sacubitril-valsartana aprovado pelo FDA (DailyMed SPL setid 000dc81d-ab91-450c-8eae-8eb74e72296f)."
     ],
     "pregnancy": "C (1º trimestre) e D (2º/3º trimestre) — contraindicado, notificar médico imediatamente se suspeita de gravidez",
     "adverse_effects": [
@@ -2857,7 +2812,7 @@
   },
   {
     "slug": "ranolazina",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Ranolazina",
     "drug_class": "Antianginoso de mecanismo não hemodinâmico (inibidor da corrente tardia de sódio)",
     "mechanism": "Inibe a corrente tardia de sódio (late INa) nos miócitos, reduzindo sobrecarga intracelular de cálcio e tensão de parede miocárdica — reduz isquemia sem efeito significativo sobre frequência cardíaca ou pressão arterial, diferente de beta-bloqueadores, antagonistas de canal de cálcio e nitratos",
@@ -2917,17 +2872,18 @@
       "conversao avk para rivaroxabana": "Iniciar quando RNI <2,5 (TVP/EP) ou <3,0 (FA)",
       "conversao rivaroxabana para avk": "Manter ambos até RNI ≥2,0; medir RNI apenas 24h após dose anterior",
       "esquecimento de dose": "Tomar imediatamente; não dobrar dose no mesmo dia",
-      "fonte": "Consulta Remédios/ANVISA — bula profissional completa"
+      "fonte": "rótulo da rivaroxabana aprovado pelo FDA (DailyMed). VERIFICAÇÃO HUMANA NECESSÁRIA para o esquema de 15 mg 1x/dia após ICP com stent em fibrilação atrial, que segue o desenho do PIONEER AF-PCI e consta da rotulagem europeia, não da americana — conferir o que a bula registrada na ANVISA autoriza"
     },
     "outcomes": {
-      "Evidencia pivotal rocket af": "Estudo ROCKET-AF comparou rivaroxabana 20mg/dia (15mg se IR) ao ajuste de dose de varfarina em FA não valvular, demonstrando não-inferioridade na prevenção de AVC/embolismo sistêmico, com redução de sangramento intracraniano e fatal"
+      "Evidencia pivotal rocket af": "O ROCKET-AF comparou rivaroxabana 20 mg/dia (15 mg na insuficiência renal) à varfarina ajustada por INR em fibrilação atrial não valvar. Desfecho de AVC ou embolismo sistêmico na análise por protocolo: 1,7%/ano contra 2,2%/ano, HR 0,79 (IC95% 0,66-0,96), p<0,001 **para não inferioridade**. Na intenção de tratar, HR 0,88 (0,74-1,03), p=0,12 para superioridade. Os autores concluem não inferioridade, não superioridade. Sangramento intracraniano e fatal foram menos frequentes com rivaroxabana, sem diferença significativa no sangramento maior total"
     },
     "notes": {
       "Cuidados neuraxial": "Cateter epidural não deve ser removido antes de 18h após última dose; rivaroxabana deve ser reiniciada ≥6h após remoção do cateter; se punção traumática, adiar 24h",
       "Cirurgia procedimentos": "Interromper pelo menos 24h antes de procedimento invasivo, se possível"
     },
     "references": [
-      "Rivaroxabana: bula, para que serve e como usar · Consulta Remédios/ANVISA · 2024 · https://consultaremedios.com.br/rivaroxabana/bula"
+      "Rivaroxaban tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 481b7802-5093-43e7-bbd9-1532197eb6e6",
+      "Patel MR, Mahaffey KW, Garg J, et al. Rivaroxaban versus warfarin in nonvalvular atrial fibrillation (ROCKET AF). N Engl J Med. 2011;365(10):883-891. DOI: 10.1056/NEJMoa1009638. PMID: 21830957"
     ]
   },
   {
@@ -2980,12 +2936,12 @@
       "Entresto"
     ],
     "drug_class": "Inibidor da neprilisina e do receptor de angiotensina (INRA/ARNI)",
-    "mechanism": "Inibe simultaneamente a neprilisina (via sacubitril), enzima que degrada peptídeos natriuréticos e bradicinina, e bloqueia o receptor AT1 de angiotensina II (via valsartana), resultando em maior natriurese, vasodilata��ão e redução de remodelamento cardíaco comparado a IECA/BRA isolados",
+    "mechanism": "Inibe simultaneamente a neprilisina (via sacubitril), enzima que degrada peptídeos natriuréticos e bradicinina, e bloqueia o receptor AT1 de angiotensina II (via valsartana), resultando em maior natriurese, vasodilatação e redução de remodelamento cardíaco comparado a IECA/BRA isolados",
     "presentations": [
       "Comprimidos revestidos de 24mg/26mg, 49mg/51mg e 97mg/103mg"
     ],
-    "renal_adjustment": "- **clcr maior igual 30**: Não é necessário ajuste - **clcr menor 30**: Dose inicial de 24mg/26mg 2x/dia - **fonte**: Guia Farmacêutico HSL",
-    "hepatic_adjustment": "- **child pugh a**: Não é necessário ajuste - **child pugh b**: 24mg/26mg 2x/dia - **child pugh c**: Não recomendado - **fonte**: Guia Farmacêutico HSL",
+    "renal_adjustment": "- **clcr maior igual 30**: Não é necessário ajuste - **clcr menor 30**: Dose inicial de 24mg/26mg 2x/dia - **fonte**: rótulo do sacubitril-valsartana aprovado pelo FDA (DailyMed)",
+    "hepatic_adjustment": "- **child pugh a**: Não é necessário ajuste - **child pugh b**: 24mg/26mg 2x/dia - **child pugh c**: Não recomendado - **fonte**: rótulo do sacubitril-valsartana aprovado pelo FDA (DailyMed)",
     "indications": [
       "IC crônica sintomática avançada (NYHA II-IV) com fração de ejeção reduzida, substituindo IECA/BRA no esquema terapêutico"
     ],
@@ -3001,7 +2957,7 @@
       "uso previo baixa dose ieca ate 10mg enalapril": "24mg/26mg 2x/dia, com mesma titulação até dose alvo de 97mg/103mg 2x/dia",
       "uso previo alta dose ieca maior 10mg enalapril": "49mg/51mg 2x/dia, com titulação até dose alvo de 97mg/103mg 2x/dia",
       "washout ieca": "Aguardar 36 horas após descontinuação de IECA antes de iniciar Entresto, devido ao risco de angioedema",
-      "fonte": "Guia Farmacêutico HSL ; SES-SP PCDT"
+      "fonte": "rótulo do sacubitril-valsartana aprovado pelo FDA (DailyMed). A janela de 36 horas em relação ao IECA e a contraindicação de uso concomitante conferem com ele"
     },
     "outcomes": {
       "Evidencia pivotal paradigm hf": "Estudo PARADIGM-HF demonstrou superioridade sobre enalapril em ICFER, com redução significativa de mortalidade cardiovascular e hospitalização, consolidando posição como um dos quatro pilares farmacológicos de ICFER"
@@ -3011,9 +2967,7 @@
       "Criterios etarios pcdt brasileiro": "Conforme PCDT nacional, início de tratamento requer idade mínima de 18 anos e máxima de 75 anos; pacientes que iniciaram antes dos 75 anos mantêm tratamento continuamente"
     },
     "references": [
-      "Sacubitril Valsartana — Guia Farmacêutico · Hospital Sírio-Libanês · https://guiafarmaceutico.hsl.org.br/sacubitril-valsartana",
-      "Sacubitril/valsartana para tratamento de pacientes adultos com IC · CONITEC · 2018 · https://www.gov.br/conitec/pt-br/midias/consultas/relatorios/2018/relatorio_sacubitril-valsartana_ic_cp70_2018.pdf",
-      "PARADIGM-HF Trial · 2014"
+      "Sacubitril/valsartan (ENTRESTO) — rótulo aprovado pelo FDA, DailyMed SPL setid 000dc81d-ab91-450c-8eae-8eb74e72296f"
     ]
   },
   {
@@ -3071,7 +3025,7 @@
     "review_status": "pendente_revisao",
     "generic_name": "Sildenafila (citrato)",
     "drug_class": "Inibidor da fosfodiesterase-5 (PDE5)",
-    "mechanism": "Inibe seletivamente a fosfodiesterase tipo 5, enzima responsável pela degradação do GMP cíclico; no leito vascular pulmonar, o acúmulo de GMPc promove relaxamento da musculatura lisa vascular e vasodilatação, reduzindo a resistência vascular pulmonar (mecanismo de uso off-label em HAP); na disfunção erétil, potencializa o efeito vasodilatador do óxido nítrico no corpo cavernoso",
+    "mechanism": "Inibe seletivamente a fosfodiesterase tipo 5, enzima responsável pela degradação do GMP cíclico; no leito vascular pulmonar, o acúmulo de GMPc promove relaxamento da musculatura lisa vascular e vasodilatação, reduzindo a resistência vascular pulmonar; na disfunção erétil, potencializa o efeito vasodilatador do óxido nítrico no corpo cavernoso",
     "presentations": [
       "Comprimidos de 25, 50 e 100 mg"
     ],
@@ -3093,12 +3047,11 @@
     ],
     "dosing": {
       "disfuncao eretil": "50 mg VO, 1h antes da relação sexual; ajuste de 25-100 mg conforme tolerabilidade; dose máxima de 100 mg/dia",
-      "hipertensao pulmonar off label": "5-20 mg VO, 3x/dia; dose máxima de 80 mg/dia",
-      "fonte": "Guia Farmacêutico HSL"
+      "hipertensao arterial pulmonar": "**20 mg por via oral, 3x/dia** — e a indicação **não é off-label**: existe produto especificamente aprovado para hipertensão arterial pulmonar do grupo I da OMS, em adultos e em pediatria de 1 a 17 anos, para melhorar a capacidade de exercício e retardar a piora clínica. A versão anterior deste verbete chamava o uso de off-label e dava a faixa de 5-20 mg 3x/dia com máximo de 80 mg/dia, que não corresponde à posologia aprovada. VERIFICAÇÃO HUMANA NECESSÁRIA para doses acima da aprovada, que existem na prática mas precisam de fonte própria",
+      "fonte": "rótulo do sildenafila para hipertensão arterial pulmonar aprovado pelo FDA (DailyMed)"
     },
     "references": [
-      "SILDENAFILA — Guia Farmacêutico · Hospital Sírio-Libanês · https://guiafarmaceutico.hsl.org.br/sildenafila",
-      "Citrato de Sildenafila — Bula Profissional FURP · Consulta Remédios · https://uploads.consultaremedios.com.br/drug_leaflet/pro/Bula-Citrato-de-Sildenafila-FURP-Profissional-Consulta-Remedios.pdf"
+      "Sildenafil (REVATIO) — rótulo aprovado pelo FDA para hipertensão arterial pulmonar, DailyMed SPL setid 3bb9363e-b28d-4019-8aae-539233dca214"
     ]
   },
   {
@@ -3185,7 +3138,7 @@
   },
   {
     "slug": "tafamidis",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Tafamidis (meglumina ou ácido livre)",
     "drug_class": "Estabilizador de transtirretina (TTR)",
     "mechanism": "Liga-se ao sítio de ligação da tiroxina na transtirretina, estabilizando sua estrutura tetramérica e prevenindo a dissociação em monômeros que se agregam como fibrilas amiloides — mecanismo que retarda a progressão da deposição amiloide no miocárdio, distinto de tratamento sintomático de insuficiência cardíaca",
@@ -3243,16 +3196,18 @@
     "outcomes": {
       "Evidencia pivotal ontarget": "Estudo ONTARGET comparou telmisartana 80mg/dia ao ramipril 10mg/dia em pacientes de alto risco cardiovascular, estabelecendo eficácia comparável com melhor tolerabilidade (menor tosse e angioedema) que IECA"
     },
+    "notes": {
+      "Relacao com sacubitril-valsartana": "Não associar. O sacubitril-valsartana **já contém valsartana**, de modo que somar um BRA a ele é duplicar o bloqueio do receptor de angiotensina, sem ganho e com mais hipotensão, hipercalemia e disfunção renal. Ao migrar de um BRA para o sacubitril-valsartana, o BRA é substituído, não somado. A janela obrigatória de 36 horas do rótulo se aplica à troca com **IECA**, não com BRA — a diferença está no risco de angioedema, que é o que a janela previne. VERIFICAÇÃO HUMANA NECESSÁRIA para a conduta de intervalo ao trocar de BRA para sacubitril-valsartana, que o rótulo consultado não especifica. Além disso, história de angioedema por IECA **ou por BRA** contraindica o sacubitril-valsartana. Fonte: rótulo do sacubitril-valsartana aprovado pelo FDA (DailyMed SPL setid 000dc81d-ab91-450c-8eae-8eb74e72296f)."
+    },
     "references": [
-      "Telmisartan Teva Pharma — EPAR · EMA · https://www.ema.europa.eu/pt/documents/overview/telmisartan-teva-pharma-epar-summary-public_pt.pdf",
-      "Telmisartana Comprimidos 40mg & 80mg — Bula Profissional · Consulta Remédios/Ranbaxy · https://uploads.consultaremedios.com.br/drug_leaflet/pro/Bula-Telmisartana-Ranbaxy-Profissional-Consulta-Remedios.pdf",
-      "Telmisartan (Micardis) — bula FDA/DailyMed (múltiplas versões consultadas)",
-      "Micardis (telmisartan) — Medscape Reference"
+      "Telmisartan tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 5743c58e-deab-ac93-e063-6294a90ac1eb",
+      "Telmisartan — resumo das características do produto (EMA), consultado para a orientação europeia de ajuste renal",
+      "ONTARGET Investigators. Telmisartan, ramipril, or both in patients at high risk for vascular events. N Engl J Med. 2008;358(15):1547-1559. DOI: 10.1056/NEJMoa0801317"
     ]
   },
   {
     "slug": "tenecteplase",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Tenecteplase (TNK-tPA)",
     "drug_class": "Trombolítico/fibrinolítico — variante geneticamente modificada do ativador do plasminogênio tecidual (alteplase)",
     "mechanism": "Converte plasminogênio em plasmina de forma seletiva na superfície da fibrina — apresenta especificidade por fibrina cerca de 15 vezes maior que a alteplase, o que reduz a ativação sistêmica de plasminogênio e a degradação de fibrinogênio circulante, diminuindo teoricamente o risco de sangramento sistêmico comparado à molécula original",
@@ -3427,6 +3382,9 @@
       "Evidencia pivotal val heft": "5.010 pacientes com ICFER classes II-IV NYHA; valsartana reduziu morbidade em 13,2% vs. placebo, com redução de 27,5% no risco de primeira hospitalização por IC; mortalidade total foi similar entre grupos; maior benefício em pacientes não tratados com IECA ou betabloqueador; a tripla combinação (IECA+BB+BRA) mostrou tendência desfavorável",
       "Evidencia pivotal valiant": "14.703 pacientes pós-IAM com disfunção ventricular/IC; valsartana foi tão eficaz quanto captopril na redução de mortalidade por todas as causas (19,9% vs. 19,5%); combinação valsartana+captopril não agregou benefício e aumentou efeitos adversos"
     },
+    "notes": {
+      "Relacao com sacubitril-valsartana": "Não associar. O sacubitril-valsartana **já contém valsartana**, de modo que somar um BRA a ele é duplicar o bloqueio do receptor de angiotensina, sem ganho e com mais hipotensão, hipercalemia e disfunção renal. Ao migrar de um BRA para o sacubitril-valsartana, o BRA é substituído, não somado. A janela obrigatória de 36 horas do rótulo se aplica à troca com **IECA**, não com BRA — a diferença está no risco de angioedema, que é o que a janela previne. VERIFICAÇÃO HUMANA NECESSÁRIA para a conduta de intervalo ao trocar de BRA para sacubitril-valsartana, que o rótulo consultado não especifica. Além disso, história de angioedema por IECA **ou por BRA** contraindica o sacubitril-valsartana. Fonte: rótulo do sacubitril-valsartana aprovado pelo FDA (DailyMed SPL setid 000dc81d-ab91-450c-8eae-8eb74e72296f)."
+    },
     "references": [
       "Valsartana — Bula Profissional Completa · Medley/Sanofi-Aventis · https://www.saudedireta.com.br/catinc/drugs/bulas/valsartanamedley.pdf"
     ]
@@ -3434,49 +3392,64 @@
   {
     "slug": "varfarina-sodica",
     "review_status": "pendente_revisao",
-    "generic_name": "Varfarina sódica",
+    "generic_name": "Varfarina sódica (grafia alternativa: warfarina)",
+    "brand_names": [
+      "Marevan",
+      "Coumadin"
+    ],
     "drug_class": "Anticoagulante oral — antagonista da vitamina K",
-    "mechanism": "Inibe a enzima vitamina K epóxido redutase, bloqueando a regeneração da vitamina K reduzida necessária para a carboxilação (ativação) dos fatores de coagulação II, VII, IX e X, além das proteínas anticoagulantes C e S",
+    "mechanism": "Inibe a vitamina K epóxido redutase, bloqueando a regeneração da vitamina K reduzida necessária à carboxilação dos fatores de coagulação II, VII, IX e X, além das proteínas anticoagulantes C e S. A queda mais rápida da proteína C, de meia-vida curta, é o que explica o estado transitoriamente pró-trombótico do início do tratamento.",
     "indications": [
-      "Prevenção e/ou tratamento de trombose venosa e embolia pulmonar, complicações tromboembólicas associadas a FA e/ou substituição de válvula cardíaca, redução de risco de morte/recidiva de infarto/eventos tromboembólicos pós-IAM"
+      "Fibrilação atrial, sobretudo a valvar e a de portador de prótese mecânica, onde os anticoagulantes orais diretos são contraindicados; trombose venosa profunda e embolia pulmonar; prótese valvar mecânica e biológica; trombo intracavitário; redução de risco de morte, reinfarto e eventos tromboembólicos após o infarto."
     ],
-    "renal_adjustment": "Não é necessário ajuste de dose para insuficiência renal; disfunção hepática pode potencializar a resposta à varfarina, exigindo monitorização mais cuidadosa",
+    "monitoring": [
+      "INR, com alvo variável conforme a indicação. Acima de 4,0 não há benefício terapêutico adicional na maioria dos pacientes, só aumento de risco de sangramento."
+    ],
+    "renal_adjustment": "Não é necessário ajuste na insuficiência renal. A disfunção hepática potencializa a resposta e exige monitorização mais cuidadosa.",
+    "adverse_effects": [
+      "O sangramento é o risco principal, da equimose leve à hemorragia grave, intracraniana ou gastrointestinal. Menos comuns, mas específicos da classe: - **necrose cutânea induzida por varfarina**, em geral nos primeiros dias, mais associada a deficiência de proteína C ou S — é por isso que quem tem essa condição de base precisa de sobreposição com heparina na fase inicial; - **síndrome do dedo roxo**, por embolização de cristais de colesterol, tipicamente 3 a 8 semanas após o início."
+    ],
+    "interactions": [
+      "- **aumentam o inr**: amiodarona (espera-se reduzir a dose de varfarina em 25 a 50%, com interação lenta ao longo de 6 a 8 semanas), fluconazol, metronidazol, sulfametoxazol-trimetoprima, doxiciclina, fibratos e vacina influenza (efeito variável) - **diminuem o inr**: rifampicina (aumento de 2 a 5 vezes na necessidade de dose), carbamazepina, dicloxacilina em uso acima de 14 dias - **aumentam o risco de sangramento sem alterar o inr**: antiagregantes, AINEs, corticosteroides, outros anticoagulantes, óleo de peixe/ômega-3 e vitamina E"
+    ],
     "contraindications": [
-      "Hipersensibilidade a componentes",
-      "Gravidez (risco de malformações e hemorragia fetal fatal — atravessa a barreira placentária)",
-      "Risco de aborto, eclâmpsia/pré-eclâmpsia",
-      "Tendências hemorrágicas/discrasias sanguíneas",
-      "Cirurgias oculares ou de SNC recentes/potenciais",
+      "Hipersensibilidade ao componente",
+      "Gravidez, pela passagem placentária, com risco de malformação e de hemorragia fetal fatal",
+      "Tendência hemorrágica e discrasia sanguínea",
+      "Cirurgia ocular ou do sistema nervoso central recente ou prevista",
       "Hipertensão grave não controlada ou maligna",
-      "Pericardite, efusão pericárdica, endocardite bacteriana",
-      "Pacientes sem supervisão com alto risco de uso incorreto"
+      "Pericardite, derrame pericárdico e endocardite bacteriana",
+      "Paciente sem supervisão adequada e com alto risco de uso incorreto"
     ],
-    "lactation": "Não é excretada no leite materno — compatível com amamentação",
+    "lactation": "Não é excretada no leite materno, sendo compatível com a amamentação.",
     "dosing": {
-      "tev e fibrilacao atrial": "Manter INR de 2-3",
-      "pos infarto miocardio": "Iniciar 2-4 semanas após o infarto; ajustar para manter INR de 2,5-3,5 por tempo prolongado",
-      "valvulas mecanicas": "Profilaxia por longo prazo mantendo INR de 2,5-3,5",
-      "valvulas bioproteticas": "Terapia por 12 semanas após inserção, com INR de 2-3",
-      "embolia sistemica recorrente alto risco": "Pode ser necessária INR mais elevada",
-      "limite superior util": "INR >4,0 não oferece benefício terapêutico adicional na maioria dos pacientes e aumenta risco de sangramento",
-      "fonte": "Guia Farmacêutico HSL",
-      "adultos faixa usual": "2-10 mg/dia, com ajuste baseado em TP/INR",
-      "criancas inicial se inr 1 a 1 3": "0,2 mg/kg (máximo 10 mg/dose)",
-      "criancas manutencao": "0,09-0,33 mg/kg/dia para manter INR 2-3",
-      "idosos": "Tendem a necessitar doses menores para atingir mesmo nível terapêutico"
+      "tev e fibrilacao atrial": "INR 2,0-3,0",
+      "pos infarto do miocardio": "iniciar 2 a 4 semanas após o infarto, mantendo INR 2,5-3,5 por tempo prolongado",
+      "protese valvar mecanica": "profilaxia de longo prazo com INR 2,5-3,5",
+      "protese valvar biologica": "12 semanas após o implante, com INR 2,0-3,0",
+      "embolia sistemica recorrente de alto risco": "pode exigir alvo mais elevado",
+      "fonte": "VERIFICAÇÃO HUMANA NECESSÁRIA — as metas por indicação, sobretudo o alvo de prótese mecânica (que varia conforme posição da prótese, modelo e fatores de risco do paciente), devem ser conferidas na tabela de recomendações da diretriz de valvopatia vigente. A referência de valvopatia citada acima foi incluída para essa conferência, não como confirmação do que está escrito aqui.",
+      "dose_inicial": "Sem informação de genótipo, 2 a 5 mg 1x/dia, ajustando conforme a resposta do INR. Não existe dose inicial fixa correta: a variabilidade entre indivíduos chega a 20 vezes. Considerar dose menor em idoso e em pessoas de ascendência asiática.",
+      "adultos, faixa usual": "2-10 mg/dia, ajustada por TP/INR",
+      "criancas, dose inicial com inr 1,0-1,3": "0,2 mg/kg (máximo de 10 mg por dose)",
+      "criancas, manutencao": "0,09-0,33 mg/kg/dia para manter INR 2,0-3,0",
+      "idosos": "costumam precisar de doses menores para o mesmo nível terapêutico"
     },
     "notes": {
-      "Manejo inr supraterapeutico": "- **inr menor 5 sem sangramento**: Suspender varfarina e monitorar - **inr 5 a 9 sem sangramento ativo**: Suspender 1-2 doses e administrar fitomenadiona (vitamina K) 1-2,5 mg VO (até 5 mg se reversão mais rápida necessária) - **inr maior 9 sem sangramento relevante**: Suspender varfarina e administrar fitomenadiona 2,5-5 mg VO; repetir INR e nova dose se necessário - **sangramento grave qualquer inr**: Suspender varfarina e administrar fitomenadiona 10 mg EV; considerar plasma fresco, complexo protrombínico ou fator VIIa; vitamina K pode ser repetida a cada 12h - **fonte**: Guia Farmacêutico HSL",
-      "Excecao gravidas valvula mecanica": "Grávidas com válvula cardíaca mecânica e alto risco de tromboembolismo podem usar varfarina quando benefícios superam riscos claramente"
+      "Vantagem sobre doacs": "É o único anticoagulante oral com eficácia estabelecida em prótese valvar mecânica e em fibrilação atrial valvar reumática — situações em que os DOACs são contraindicados. Não é uma opção antiga que sobrou: nesses dois cenários é a única opção.",
+      "Farmacogenetica": "Variantes de **VKORC1** e **CYP2C9** respondem por parte importante da variabilidade da dose. O VKORC1 influencia mais a resposta inicial do INR, ou seja, o tempo até a faixa terapêutica; o CYP2C9, mais o risco de INR supraterapêutico acima de 4 nas primeiras semanas. O teste farmacogenético pode orientar a dose inicial quando disponível, mas não substitui a monitorização do INR.",
+      "Manejo inr supraterapeutico": "- **inr abaixo de 5, sem sangramento**: suspender e monitorar - **inr 5 a 9, sem sangramento ativo**: suspender 1 a 2 doses e administrar fitomenadiona (vitamina K) 1-2,5 mg por via oral, até 5 mg quando for preciso reverter mais rápido - **inr acima de 9, sem sangramento relevante**: suspender e administrar fitomenadiona 2,5-5 mg por via oral, repetindo o INR e a dose se necessário - **sangramento grave, em qualquer inr**: suspender e administrar fitomenadiona 10 mg por via endovenosa; considerar complexo protrombínico, plasma fresco congelado ou fator VIIa; a vitamina K pode ser repetida a cada 12 horas - **fonte**: VERIFICAÇÃO HUMANA NECESSÁRIA — este esquema por faixas de INR vem da tradição das diretrizes de anticoagulação do ACCP e estava aqui apoiado em guia farmacêutico de outra instituição. Precisa ser conferido contra a diretriz de manejo de anticoagulação vigente, porque a conduta em INR entre 5 e 9 sem sangramento mudou ao longo das edições.",
+      "Excecao gravidas com valvula mecanica": "Gestante com prótese valvar mecânica e alto risco tromboembólico pode usar varfarina quando o benefício supera claramente o risco — decisão individual, tomada com a paciente informada do risco fetal.",
+      "Desafios praticos": "Monitorização laboratorial frequente, muitas interações medicamentosas e alimentares (alimentos ricos em vitamina K) e grande variabilidade individual de resposta."
     },
     "references": [
-      "VARFARINA — Guia Farmacêutico · Hospital Sírio-Libanês · https://guiafarmaceutico.hsl.org.br/varfarina",
-      "WARFARIN (varfarina sódica) — Bula Profissional · Consulta Remédios · https://uploads.consultaremedios.com.br/drug_leaflet/pro/Bula-Warfarin-Profissional-Consulta-Remedios.pdf"
+      "Warfarin sodium tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 541c9a70-adaf-4ef3-94ba-ad4e70dfa057",
+      "Otto CM, Nishimura RA, Bonow RO, et al. 2020 ACC/AHA Guideline for the Management of Patients With Valvular Heart Disease. Circulation. 2021;143(5):e72-e227. DOI: 10.1161/CIR.0000000000000923"
     ]
   },
   {
     "slug": "vasopressina",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Vasopressina (hormônio antidiurético, arginina-vasopressina)",
     "drug_class": "Vasopressor não catecolaminérgico",
     "mechanism": "Atua em três subtipos de receptores: V1 no músculo liso vascular, mediando vasoconstrição; V2 nos ductos coletores renais, mediando efeito antidiurético; e V3 (V1b) na hipófise anterior, estimulando liberação de ACTH e cortisol. Potencializa a resposta vascular às catecolaminas e pode bloquear canais de potássio sensíveis a ATP, amplificando o efeito adrenérgico em estados de choque - **fonte**: Journal of Personalized Medicine (revisão sobre vasopressina em choque)",
@@ -3523,56 +3496,20 @@
     "dosing": {
       "vo isquemia taquisupraventricular flutter fa adulto maior 50kg": "120-480 mg/dia, divididos em 3-4 tomas (a cada 6-8h)",
       "vo hipertensao adulto": "120-480 mg/dia, divididos em 3 tomas (a cada 8h)",
-      "vo adulto alternativa wikipedia": "80-240mg, 3-4x/dia, dose máxima diária 480mg/dia",
       "ev taquiarritmia supraventricular adulto": "5-10 mg (0,075-0,15 mg/kg) em injeção IV lenta, 2-3 min; se resposta insuficiente, repetir 10mg (0,15mg/kg) após 30min",
-      "criança ate 6 anos": "80-120 mg/dia, divididos em 2-3 tomas (a cada 8-12h)",
-      "criança 6 a 14 anos": "80-360 mg/dia, divididos em 2-4 tomas",
-      "fonte": "Sanarmed — Resumo Cloridrato de Verapamil ; Wikipédia com refs de bula"
+      "pediatria": "VERIFICAÇÃO HUMANA NECESSÁRIA — as faixas que constavam aqui (80-120 mg/dia abaixo de 6 anos e 80-360 mg/dia dos 6 aos 14) vinham de material de estudante e de wiki. Dose pediátrica de verapamil exige fonte própria, e o uso endovenoso em lactente tem alerta de colapso hemodinâmico; não prescrever por este verbete até a conferência",
+      "fonte": "rótulo do cloridrato de verapamil aprovado pelo FDA (DailyMed)"
     },
     "notes": {
       "Farmacocinetica": "Metabolização hepática extensa (principal metabólito ativo: norverapamil); início de ação VO 1-2h, IV 1-5min (efeitos antiarrítmicos) ou 3-5min (efeitos hemodinâmicos)"
     },
     "references": [
-      "Resumo de Cloridrato de Verapamil: Ligas · Sanarmed · 2024 · https://sanarmed.com/resumo-de-cloridrato-de-verapamil-ligas/",
-      "Verapamil — Wikipédia · Wikipédia · https://pt.wikipedia.org/wiki/Verapamil",
-      "Verapamil · StatPearls/NCBI Bookshelf · 2023 · https://www.ncbi.nlm.nih.gov/books/NBK538495/"
-    ]
-  },
-  {
-    "slug": "verapamil-diltiazem",
-    "review_status": "pendente_revisao",
-    "generic_name": "Verapamil / Diltiazem",
-    "drug_class": "Bloqueadores de canal de cálcio não-dihidropiridínicos",
-    "mechanism": "Inibem influxo de cálcio em células musculares lisas vasculares E em tecido cardíaco (nó sinusal, nó AV, miocárdio), diferente dos dihidropiridínicos (anlodipino) que agem quase exclusivamente sobre vasculatura; efeito combinado: redução de FC, retardo de condução AV e depressão discreta de contratilidade",
-    "indications": [
-      "Controle de frequência em fibrilação atrial/flutter atrial, taquicardia supraventricular paroxística, angina estável (incluindo Prinzmetal), hipertensão arterial"
-    ],
-    "presentations": [
-      "Comprimidos de liberação prolongada de 80, 120 e 240 mg (ex.: Dilacoron)"
-    ],
-    "contraindications": [
-      "Não devem ser usados em combinação com betabloqueador por via IV (risco de bloqueio AV grave/assistolia) e uso combinado oral requer cautela extrema",
-      "Disfunção sistólica de VE grave (FE reduzida)",
-      "Bloqueio AV 2º/3º grau sem marcapasso",
-      "Doença do nó sinusal",
-      "Síndrome de Wolff-Parkinson-White com FA (risco de condução preferencial pela via acessória)",
-      "Choque cardiogênico"
-    ],
-    "dosing": {
-      "dose_titulacao_especifica": "**Verapamil, hipertensão**: - Liberação imediata: 80–120 mg 3x/dia (ou 40 mg 3x/dia em paciente com resposta aumentada esperada, ex.: idoso). Máximo 480 mg/dia. - Liberação prolongada: 180 mg 1x/dia à noite, titular conforme resposta. Máximo 480 mg/dia. **Diltiazem, hipertensão** (liberação prolongada): dose inicial 180–240 mg 1x/dia. Ajustar conforme resposta pressórica até máximo de 540 mg/dia. **Ambos**: contraindicados em disfunção sistólica de VE relevante (efeito inotrópico negativo) e em bloqueio AV avançado sem marcapasso. Cautela em associação com betabloqueador pelo efeito aditivo na condução AV e na contratilidade. Fonte: bula FDA (Verelan/Calan para verapamil, Cardizem LA para diltiazem) e Drugs.com — dados convergentes."
-    },
-    "notes": {
-      "Particularidade uso ic": "Contraindicados em ICFER com FE reduzida devido ao efeito inotrópico negativo — diferente dos dihidropiridínicos, que são relativamente seguros em IC quando necessários para controle pressórico"
-    },
-    "references": [
-      "Bula Dilacoron 80mg — Bula Profissional · Abbott Brasil · https://www.abbottbrasil.com.br/content/dam/corp/abbott/pt-br/documents/pdfs/nossas-bulas/D/BU-12-Dilacoron-80-mg-bula-profissional.pdf",
-      "Verapamil (Calan/Verelan) e Diltiazem (Cardizem LA) — bulas FDA · accessdata.fda.gov",
-      "Verapamil — Drugs.com Dosage Guide, 2024"
+      "Verapamil hydrochloride — rótulo aprovado pelo FDA, DailyMed SPL setid df79ee3a-f0ed-1cc7-e053-2995a90af97f"
     ]
   },
   {
     "slug": "vericiguate",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Vericiguate",
     "drug_class": "Estimulador da guanilato ciclase solúvel (sGC)",
     "mechanism": "Na IC, há disfunção do eixo óxido nítrico-GCs-GMPc. Vericiguate estimula diretamente a guanilato ciclase solúvel e potencializa o efeito do óxido nítrico endógeno, aumentando GMPc — resulta em redução do remodelamento de VE, melhora de função vascular e diastólica, e redução de fibrose e inflamação. Mecanismo distinto dos demais pilares farmacológicos da ICFEr (não é IECA/BRA/INRA, beta-bloqueador, antagonista mineralocorticoide nem iSGLT2)",
@@ -3593,43 +3530,6 @@
       "The Role of Vericiguat in the Expanding Realm of Heart Failure Pharmacotherapy: An Overview of the VICTORIA Trial · American College of Cardiology · https://www.acc.org/latest-in-cardiology/articles/2020/07/08/08/49/the-role-of-vericiguat-in-the-expanding-realm-of-hf-pharmacotherapy",
       "Vericiguat · StatPearls (NCBI Bookshelf) · https://www.ncbi.nlm.nih.gov/books/NBK574528/",
       "Renal function and vericiguat in heart failure patients: light at the end of the tunnel! · European Journal of Heart Failure · 2021 · https://onlinelibrary.wiley.com/doi/full/10.1002/ejhf.2280"
-    ]
-  },
-  {
-    "slug": "warfarina",
-    "review_status": "pendente_revisao",
-    "generic_name": "Warfarina",
-    "brand_names": [
-      "Marevan",
-      "Coumadin"
-    ],
-    "drug_class": "Anticoagulante oral — antagonista da vitamina K",
-    "mechanism": "Inibição da enzima vitamina K epóxido redutase, bloqueando a regeneração da vitamina K reduzida necessária para a carboxilação dos fatores de coagulação II, VII, IX e X",
-    "indications": [
-      "FA (especialmente valvar/prótese mecânica, onde DOACs são contraindicados), TVP/TEP, prótese valvar mecânica, trombo intracavitário"
-    ],
-    "monitoring": [
-      "INR (razão normalizada internacional), com alvo terapêutico variável conforme indicação (geralmente 2,0-3,0; até 2,5-3,5 em prótese mecânica mitral)"
-    ],
-    "adverse_effects": [
-      "Sangramento é o risco principal — de equimose leve a hemorragia grave (intracraniana, gastrointestinal). Menos comuns, mas específicos da classe: **necrose cutânea induzida por varfarina** (geralmente nos primeiros dias, mais associada a deficiência de proteína C ou S — por isso a fase inicial exige sobreposição com heparina em quem tem essa condição de base) e **síndrome do dedo roxo** (embolização de cristais de colesterol, geralmente 3-8 semanas após o início)."
-    ],
-    "interactions": [
-      "- **aumentam inr**: ['Amiodarona (redução de 25-50% da dose de warfarina esperada, interação lenta ao longo de 6-8 semanas)', 'Fluconazol', 'Metronidazol', 'Sulfametoxazol-trimetoprima', 'Doxiciclina', 'Fibratos', 'Vacina influenza (variável)'] - **diminuem inr**: ['Rifampicina (aumento de 2-5x na necessidade de dose)', 'Carbamazepina', 'Dicloxacilina (>14 dias)'] - **risco sangramento aumentado**: ['Antiplaquetários', 'Óleo de peixe/ômega-3', 'AINEs', 'Outros anticoagulantes', 'Corticosteroides', 'Vitamina E'] - **fonte**: UCSD Anticoagulation Clinic"
-    ],
-    "dosing": {
-      "dose_inicial": "Sem informação de genótipo disponível: 2-5 mg 1x/dia, ajustando conforme resposta do INR — não existe dose fixa correta de início, a variabilidade entre indivíduos é de até 20 vezes. Considerar dose inicial mais baixa em idoso e em pessoas de ascendência asiática."
-    },
-    "notes": {
-      "Farmacogenetica": "Variantes nos genes **VKORC1** e **CYP2C9** respondem por parte importante da variabilidade de dose necessária. VKORC1 influencia mais a resposta inicial do INR (tempo até atingir a faixa terapêutica); CYP2C9 influencia mais o risco de INR supraterapêutico (> 4) nas primeiras semanas. Teste farmacogenético pode orientar a dose inicial quando disponível, mas não substitui a monitorização do INR.",
-      "Vantagem sobre doacs": "Único anticoagulante oral com eficácia estabelecida em prótese valvar mecânica e algumas formas de FA valvar reumática, onde DOACs são contraindicados",
-      "Desafios praticos": "Necessidade de monitorização laboratorial frequente, múltiplas interações medicamentosas e alimentares (alimentos ricos em vitamina K), maior variabilidade individual de resposta"
-    },
-    "references": [
-      "Warfarin Drug Interactions · UCSD Health Anticoagulation Clinic · https://health.ucsd.edu/for-health-care-professionals/anticoagulation-guidelines/warfarin/drug-interactions/",
-      "Coumadin (warfarin sodium) — bula FDA/accessdata.fda.gov",
-      "Warfarin Therapy and VKORC1 and CYP Genotype — Medical Genetics Summaries, NCBI Bookshelf",
-      "Genetic Determinants of Response to Warfarin during Initial Anticoagulation — NEJM"
     ]
   }
 ]
