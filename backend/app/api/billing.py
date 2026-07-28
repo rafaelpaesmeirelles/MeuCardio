@@ -120,13 +120,19 @@ def _aplicar_evento(db: Session, obj, quando: datetime, alteracoes) -> None:
         # Primeiro evento de uma assinatura ainda sem id gravado. O metadata diz
         # de qual das duas se trata; sem metadata, é a da plataforma, que é o
         # fluxo antigo e o único que existia antes dos cursos.
-        metadata = obj["metadata"] if "metadata" in obj else {}
-        tipo_assinatura = (metadata or {}).get("tipo")
+        # `.get()` NÃO funciona em objeto do Stripe — levanta AttributeError na
+        # lib 15.x. É o mesmo erro que este projeto já documentou e corrigiu uma
+        # vez, e que eu reintroduzi aqui ao escrever a discriminação por tipo:
+        # como evento real do Stripe SEMPRE traz `metadata`, todo primeiro evento
+        # de assinatura nova estourava 500 — ou seja, nenhuma assinatura nova
+        # chegaria a ativar. Usar o helper `_campo`, que é para isto.
+        metadata = _campo(obj, "metadata") or {}
+        tipo_assinatura = _campo(metadata, "tipo")
         consulta = db.query(Subscription).filter(
             Subscription.stripe_customer_id == obj["customer"]
         )
         if tipo_assinatura == "curso":
-            curso_id = (metadata or {}).get("curso_id")
+            curso_id = _campo(metadata, "curso_id")
             consulta = consulta.filter(
                 Subscription.kind == TIPO_CURSO,
                 Subscription.course_id == (int(curso_id) if curso_id else None),
