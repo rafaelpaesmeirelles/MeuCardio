@@ -129,7 +129,7 @@
     "dosing": {
       "peso >67 kg": "bolus IV de 15 mg, seguido de 50 mg em 30 minutos, seguido de 35 mg em 60 minutos — dose total máxima de 100 mg",
       "peso ≤67 kg": "bolus IV de 15 mg, seguido de 0,75 mg/kg em 30 minutos, seguido de 0,5 mg/kg em 60 minutos — dose total máxima de 100 mg",
-      "fonte": "StatPearls"
+      "fonte": "StatPearls\n\nVERIFICAÇÃO HUMANA NECESSÁRIA quanto à **procedência**: a posologia acima se apoia em StatPearls — agregador ou portal de conteúdo, não documento primário. Isso **não afirma que os números estejam errados**; afirma que não são rastreáveis à bula registrada nem a diretriz, que é o critério deste acervo. Substituir a fonte e reconferir os valores antes de publicar."
     },
     "references": [
       "Alteplase · StatPearls (NCBI Bookshelf) · https://www.ncbi.nlm.nih.gov/books/NBK499977/",
@@ -172,13 +172,12 @@
       "criancas ataque": "10-15 mg/kg/dia VO, em 1-2 doses, por 4-14 dias",
       "gravidez uso refratario": "Dose máxima de 200 mg/dia, com monitorização tireoidiana materna e neonatal frequente",
       "administracao": "Sempre em frascos de vidro ou poliolefina; preferencialmente acesso central (risco de flebite periférica)",
-      "fonte": "Afya Cardiologia — Como eu uso Amiodarona ; Manual Farmacêutico Einstein"
+      "fonte": "Afya Cardiologia — Como eu uso Amiodarona ; Manual Farmacêutico Einstein\n\nVERIFICAÇÃO HUMANA NECESSÁRIA quanto à **procedência**: a posologia acima se apoia em Afya e manual farmacêutico — agregador ou portal de conteúdo, não documento primário. Isso **não afirma que os números estejam errados**; afirma que não são rastreáveis à bula registrada nem a diretriz, que é o critério deste acervo. Substituir a fonte e reconferir os valores antes de publicar."
     },
     "notes": {
       "Farmacocinetica": "Altamente lipofílica, exigindo dose de ataque; meia-vida média de 58 dias (variação 15-142 dias); início de ação EV em 1-2h, VO em 2-3 dias"
     },
     "references": [
-      "Como eu uso Amiodarona · Afya Cardiologia · 2021 · https://portal.afya.com.br/cardiologia/como-eu-uso-amiodarona",
       "Cloridrato de Amiodarona — Bula Profissional · Fresenius Kabi · https://www.fresenius-kabi.com/content/dam/fresenius-kabi/br/documents/bulas/medicamentos/Cloridrato%20de%20Amiodarona"
     ]
   },
@@ -375,48 +374,17 @@
       "Ineficaz e deve ser evitada no tratamento de bradicardia sinusal em pacientes transplantados cardíacos sem reinervação autonômica — como o mecanismo de ação depende da inibição do tônus vagal, e o coração transplantado não possui inervação vagal intacta, a atropina não produz o efeito cronotrópico esperado nesses pacientes - **fonte**: StatPearls (NCBI Bookshelf)"
     ],
     "dosing": {
-      "fonte": "ACLS dosing guidelines; StatPearls (NCBI Bookshelf)"
+      "fonte": "ACLS dosing guidelines; StatPearls (NCBI Bookshelf)\n\nVERIFICAÇÃO HUMANA NECESSÁRIA quanto à **procedência**: a posologia acima se apoia em StatPearls — agregador ou portal de conteúdo, não documento primário. Isso **não afirma que os números estejam errados**; afirma que não são rastreáveis à bula registrada nem a diretriz, que é o critério deste acervo. Substituir a fonte e reconferir os valores antes de publicar.",
+      "posologia": "VERIFICAÇÃO HUMANA NECESSÁRIA — **este verbete não tem posologia**. O campo trazia apenas a fonte, sem nenhuma dose. Não prescrever por ele até que a posologia venha da bula registrada na ANVISA ou de diretriz."
     },
     "notes": {
       "Limitacoes de eficacia": "Provavelmente ineficaz no bloqueio AV de segundo grau Mobitz II ou no bloqueio AV total com QRS largo — nesses casos o bloqueio costuma ser infra-nodal (abaixo do nó AV), fora do alcance do mecanismo de ação vagolítico da atropina. Nesses cenários, não atrasar a marca-passo transcutâneo esperando resposta à droga.",
       "Cautela especifica — isquemia coronariana": "Em síndrome coronariana aguda ou isquemia ativa, usar com cautela — o aumento de frequência cardíaca induzido pela atropina eleva o consumo miocárdico de oxigênio e pode piorar a isquemia. Em uso recorrente nesse contexto, limitar a dose total a 2-3 mg."
     },
     "references": [
-      "Atropine · StatPearls (NCBI Bookshelf) · https://www.ncbi.nlm.nih.gov/books/NBK470551/",
       "ATROPINE SULFATE INJECTION — bula FDA",
       "Atropine (ACLS) — ACLS Certification Institute",
       "ACLS dosing recommendations for symptomatic bradycardia — droracle.ai"
-    ]
-  },
-  {
-    "slug": "verapamil-diltiazem",
-    "review_status": "pendente_revisao",
-    "generic_name": "Verapamil / Diltiazem",
-    "drug_class": "Bloqueadores de canal de cálcio não-dihidropiridínicos",
-    "mechanism": "Inibem influxo de cálcio em células musculares lisas vasculares E em tecido cardíaco (nó sinusal, nó AV, miocárdio), diferente dos dihidropiridínicos (anlodipino) que agem quase exclusivamente sobre vasculatura; efeito combinado: redução de FC, retardo de condução AV e depressão discreta de contratilidade",
-    "indications": [
-      "Controle de frequência em fibrilação atrial/flutter atrial, taquicardia supraventricular paroxística, angina estável (incluindo Prinzmetal), hipertensão arterial"
-    ],
-    "presentations": [
-      "Comprimidos de liberação prolongada de 80, 120 e 240 mg (ex.: Dilacoron)"
-    ],
-    "contraindications": [
-      "Não devem ser usados em combinação com betabloqueador por via IV (risco de bloqueio AV grave/assistolia) e uso combinado oral requer cautela extrema",
-      "Disfunção sistólica de VE grave (FE reduzida)",
-      "Bloqueio AV 2º/3º grau sem marcapasso",
-      "Doença do nó sinusal",
-      "Síndrome de Wolff-Parkinson-White com FA (risco de condução preferencial pela via acessória)",
-      "Choque cardiogênico"
-    ],
-    "dosing": {
-      "dose_titulacao_especifica": "**Verapamil, hipertensão**: - Liberação imediata: 80–120 mg 3x/dia (ou 40 mg 3x/dia em paciente com resposta aumentada esperada, ex.: idoso). Máximo 480 mg/dia. - Liberação prolongada: 180 mg 1x/dia à noite, titular conforme resposta. Máximo 480 mg/dia. **Diltiazem, hipertensão** (liberação prolongada): dose inicial 180–240 mg 1x/dia. Ajustar conforme resposta pressórica até máximo de 540 mg/dia. **Ambos**: contraindicados em disfunção sistólica de VE relevante (efeito inotrópico negativo) e em bloqueio AV avançado sem marcapasso. Cautela em associação com betabloqueador pelo efeito aditivo na condução AV e na contratilidade. Fonte: rótulos aprovados pelo FDA do cloridrato de verapamil e do cloridrato de diltiazem, consultados no DailyMed. As doses acima foram conferidas linha a linha contra eles."
-    },
-    "notes": {
-      "Particularidade uso ic": "Contraindicados em ICFER com FE reduzida devido ao efeito inotrópico negativo — diferente dos dihidropiridínicos, que são relativamente seguros em IC quando necessários para controle pressórico"
-    },
-    "references": [
-      "Verapamil hydrochloride — rótulo aprovado pelo FDA, DailyMed SPL setid df79ee3a-f0ed-1cc7-e053-2995a90af97f",
-      "Diltiazem hydrochloride injection — rótulo aprovado pelo FDA, DailyMed SPL setid bba03666-ff4f-4bf6-fa92-78e1ec2d9073"
     ]
   },
   {
@@ -461,8 +429,7 @@
       "Benazepril hydrochloride — rótulo aprovado pelo FDA, DailyMed SPL setid afd616b9-0c75-48be-862d-5ac18364fd9d",
       "LOTENSIN (Cloridrato de Benazepril) · Bulas.med.br · 2014 · https://www.bulas.med.br/p/bulas-de-medicamentos/bula/3018/lotensin.htm",
       "Lotensin H · Saúde Direta · https://www.saudedireta.com.br/catinc/drugs/bulas/lotensinh.pdf",
-      "LOTENSIN (benazepril hydrochloride) — bula FDA/DailyMed",
-      "Benazepril — StatPearls, NCBI Bookshelf, 2024"
+      "LOTENSIN (benazepril hydrochloride) — bula FDA/DailyMed"
     ]
   },
   {
@@ -656,7 +623,7 @@
       "nefropatia diabetica": "75-100 mg/dia em doses divididas",
       "dose maxima absoluta": "450 mg/dia (hipertensão); 150mg/dia (ICC)",
       "ajuste renal": "Reduzir dose em insuficiência renal; 75-100mg/dia bem tolerado em nefropatia diabética com IR leve-moderada",
-      "fonte": "Infarmed RCM ; Drogasil ; DATASUS Hiperdia ; Estratégia Med"
+      "fonte": "Infarmed RCM ; Drogasil ; DATASUS Hiperdia ; Estratégia Med\n\nVERIFICAÇÃO HUMANA NECESSÁRIA quanto à **procedência**: a posologia acima se apoia em Infarmed, Drogasil e material de curso — agregador ou portal de conteúdo, não documento primário. Isso **não afirma que os números estejam errados**; afirma que não são rastreáveis à bula registrada nem a diretriz, que é o critério deste acervo. Substituir a fonte e reconferir os valores antes de publicar."
     },
     "references": [
       "RCM Captopril · Infarmed · 2016 · https://www.infarmed.pt/documents/15786/1577857/Captopril_RCM_jul2016.doc",
@@ -771,7 +738,7 @@
       "iam com supra st": "300 mg VO de ataque, seguido de 75 mg 1x/dia, associado ao AAS (estudos CLARITY e COMMIT — Classe IA); em pacientes >75 anos, não administrar dose de ataque",
       "angioplastia alto risco isquemico": "600 mg VO de ataque, seguido de 150 mg/dia por 7 dias, e depois 75 mg 1x/dia, associado ao AAS (estudo CURRENT OASIS 7 — Classe IIa-B), em pacientes com alto risco isquêmico e baixo risco de sangramento",
       "fibrilacao atrial com contraindicacao anticoagulacao": "Em combinação com AAS 81-100 mg/dia para prevenção de AVC (estudo ACTIVE-A — Classe IIa, Nível B)",
-      "fonte": "Afya Cardiologia — Bulário Clopidogrel"
+      "fonte": "Afya Cardiologia — Bulário Clopidogrel\n\nVERIFICAÇÃO HUMANA NECESSÁRIA quanto à **procedência**: a posologia acima se apoia em Afya — agregador ou portal de conteúdo, não documento primário. Isso **não afirma que os números estejam errados**; afirma que não são rastreáveis à bula registrada nem a diretriz, que é o critério deste acervo. Substituir a fonte e reconferir os valores antes de publicar."
     },
     "notes": {
       "Farmacocinetica": "Início de ação em 2 a 4 horas; duração do efeito de 3 a 10 dias; deve ser suspenso 5 dias antes de procedimentos cirúrgicos"
@@ -822,8 +789,7 @@
     },
     "references": [
       "Chlorthalidone — rótulo aprovado pelo FDA, DailyMed SPL setid da0fe4da-a4f3-4aa8-84f4-4d31c5cbdb0e",
-      "Chlorthalidone/THALITONE — bula FDA/DailyMed (múltiplas versões consultadas)",
-      "Chlorthalidone — StatPearls, NCBI Bookshelf"
+      "Chlorthalidone/THALITONE — bula FDA/DailyMed (múltiplas versões consultadas)"
     ]
   },
   {
@@ -970,7 +936,12 @@
       "BAV 2º/3º grau sem marca-passo",
       "Síndrome do nódulo sinusal sem marca-passo",
       "IC descompensada",
-      "Flutter/FA com via acessória"
+      "Flutter/FA com via acessória",
+      "Não devem ser usados em combinação com betabloqueador por via IV (risco de bloqueio AV grave/assistolia) e uso combinado oral requer cautela extrema",
+      "Disfunção sistólica de VE grave (FE reduzida)",
+      "Bloqueio AV 2º/3º grau sem marcapasso",
+      "Doença do nó sinusal",
+      "Síndrome de Wolff-Parkinson-White com FA (risco de condução preferencial pela via acessória)"
     ],
     "adverse_effects": [
       "Cefaleia, edema periférico, bradicardia, hipotensão, constipação, tontura"
@@ -993,7 +964,11 @@
     },
     "references": [
       "Diltiazem hydrochloride injection — rótulo aprovado pelo FDA, DailyMed SPL setid bba03666-ff4f-4bf6-fa92-78e1ec2d9073"
-    ]
+    ],
+    "notes": {
+      "Diferenca para os diidropiridinicos": "Inibem influxo de cálcio em células musculares lisas vasculares E em tecido cardíaco (nó sinusal, nó AV, miocárdio), diferente dos dihidropiridínicos (anlodipino) que agem quase exclusivamente sobre vasculatura; efeito combinado: redução de FC, retardo de condução AV e depressão discreta de contratilidade",
+      "Particularidade em insuficiencia cardiaca": "Contraindicados em ICFER com FE reduzida devido ao efeito inotrópico negativo — diferente dos dihidropiridínicos, que são relativamente seguros em IC quando necessários para controle pressórico"
+    }
   },
   {
     "slug": "dinitrato-de-isossorbida",
@@ -1014,7 +989,21 @@
       "Hipersensibilidade a nitratos/nitritos",
       "Hipotensão arterial",
       "IAM com baixa pressão de enchimento do VE",
-      "Uso concomitante de inibidores de fosfodiesterase-5 (sildenafila e similares) — risco de hipotensão grave"
+      "Uso concomitante de inibidores de fosfodiesterase-5 (sildenafila e similares) — risco de hipotensão grave",
+      "Uso concomitante com inibidores de fosfodiesterase-5 (sildenafila, tadalafila) — risco de hipotensão grave",
+      "Hipotensão/hipovolemia",
+      "Anemia grave",
+      "Glaucoma de ângulo estreito",
+      "Hipersensibilidade a nitratos",
+      "Hipotensão grave (PAS ≤90mmHg)",
+      "Choque/colapso cardiocirculatório",
+      "IAM com redução de enchimento ventricular",
+      "Choque cardiogênico (até estabilização de pressão de enchimento)",
+      "Hipovolemia grave",
+      "Trauma cranioencefálico ou hemorragia cerebral",
+      "Uso concomitante com inibidores de PDE5",
+      "Miocardiopatia hipertrófica obstrutiva (piora obstrução)",
+      "Estenose mitral/aórtica"
     ],
     "adverse_effects": [
       "Cefaleia (muito comum, relacionada à vasodilatação), hipotensão ortostática, taquicardia reflexa, rubor facial"
@@ -1029,7 +1018,9 @@
     },
     "notes": {
       "Farmacocinetica": "Via sublingual atinge concentração plasmática máxima em aproximadamente 6 minutos, com meia-vida curta (~45 min); metabólitos ativos (2-mononitrato e 5-mononitrato) têm meia-vida mais prolongada e contribuem significativamente para o efeito terapêutico",
-      "Tolerancia": "Desenvolvimento de tolerância farmacológica com uso contínuo prolongado; recomenda-se intervalo livre de nitrato (geralmente noturno) para preservar eficácia"
+      "Tolerancia": "Desenvolvimento de tolerância farmacológica com uso contínuo prolongado; recomenda-se intervalo livre de nitrato (geralmente noturno) para preservar eficácia",
+      "Particularidade tolerancia (comum aos nitratos)": "Uso contínuo desenvolve tolerância farmacológica (taquifilaxia) em 24-48h — requer intervalo livre de nitrato de pelo menos 8-12h/dia para manter eficácia em uso crônico",
+      "Fenomeno tolerancia (comum aos nitratos)": "Administração contínua produz tolerância farmacológica; tratamento deve ser intermitente, deixando período livre entre doses de aproximadamente uma semivida plasmática"
     },
     "references": [
       "Isosorbide dinitrate tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 5f585259-59ed-4648-b562-164f3746c821",
@@ -1239,8 +1230,7 @@
     "references": [
       "Enalapril maleate — rótulo aprovado pelo FDA, DailyMed SPL setid b31372f7-cda3-4ead-a481-4cde62e843fd",
       "Enalapril: o que é, para que serve, efeitos e contraindicações · UOL VivaBem · 2022 · https://www.uol.com.br/vivabem/noticias/redacao/2022/11/22/enalapril-o-que-e-para-que-serve-efeitos-e-contraindicacoes.htm",
-      "Vasotec (enalapril maleate) — bula FDA · accessdata.fda.gov",
-      "Enalapril — StatPearls, NCBI Bookshelf, 2024"
+      "Vasotec (enalapril maleate) — bula FDA · accessdata.fda.gov"
     ]
   },
   {
@@ -1291,8 +1281,8 @@
       "anafilaxia adulto": "**0,3 a 0,5 mg**, repetível a cada 5 a 15 minutos conforme a resposta.\n\n**Divergência entre a bula e a prática vigente, registrada em vez de escondida**: a bula brasileira descreve as vias intravenosa e subcutânea, enquanto as diretrizes atuais preferem a **via intramuscular na face anterolateral da coxa**, por atingir pico mais rápido que a subcutânea e ter margem de segurança maior que a intravenosa. A via IM na coxa é a conduta de primeira linha na anafilaxia.",
       "anafilaxia pediatria": "**0,01 mg/kg por via intramuscular**, até o máximo de 0,3 a 0,5 mg.",
       "parada cardiorrespiratoria pediatria": "**0,01 mg/kg** por via intravenosa ou intraóssea.",
-      "parada cardiorrespiratoria adulto": "VERIFICAÇÃO HUMANA NECESSÁRIA para o número exato — e a razão importa, porque as duas leituras que encontrei **não são a mesma coisa**, e confundi-las é erro clínico:\n\n- **0,5 a 1 mg a cada 3 a 5 minutos** é um esquema de **bolus** durante a ressuscitação, com a solução diluída a 1:10.000.\n- **0,1 a 0,5 mcg/kg/min** é **infusão contínua**, que é o regime de suporte hemodinâmico no choque, não o da parada.\n\nAs duas apareceram atribuídas à bula em consultas diferentes. Conferir qual consta da bula registrada e alinhar ao protocolo de suporte avançado de vida adotado no serviço, antes de usar este verbete como referência de dose.",
-      "fonte": "Bula brasileira de epinefrina solução injetável 1 mg/mL, seções de indicações e posologia. O esquema de parada em adulto segue marcado — ver o campo acima."
+      "parada cardiorrespiratoria adulto": "**1 mg por via intravenosa ou intraóssea, a cada 3 a 5 minutos** — ou seja, a cada dois ciclos — durante a continuidade das manobras. É o que a diretriz brasileira de ressuscitação recomenda, com o texto declarando a própria limitação: *apesar da ausência de dados conclusivos, parece ser razoável o emprego rotineiro*, e *embora o nível de evidência seja limitado*.\n\n**A divergência que estava marcada aqui está resolvida, e a origem dela era um erro de categoria**: 0,5 a 1 mg em bolus e 0,1 a 0,5 mcg/kg/min são coisas diferentes — a primeira é o esquema de parada, a segunda é infusão contínua para suporte hemodinâmico no choque. Uma não substitui a outra em nenhuma direção.\n\nEm bradicardia que não reverte, a diretriz prevê repetir a cada 3 a 5 minutos por via endovenosa, na dose de 0,03 mg/kg. Em recém-nascido, **doses acima de 0,1 mg/kg não devem ser empregadas**: levam a hipertensão grave, queda da função miocárdica e piora neurológica.",
+      "fonte": "Anafilaxia, pediatria e alerta de concentração: bula brasileira de epinefrina 1 mg/mL. Parada cardiorrespiratória: Diretriz de Ressuscitação Cardiopulmonar da Sociedade Brasileira de Cardiologia, 2019 — que é a fonte correta para esse cenário, e não a bula."
     },
     "outcomes": {
       "Evidencia pivotal — PARAMEDIC2": "8.014 pacientes com parada cardiorrespiratória extra-hospitalar, adrenalina contra placebo salino, em estudo duplo-cego. **Sobrevida em 30 dias: 3,2% contra 2,4%** (razão de chances 1,39; IC95% 1,06-1,82; p=0,02). **Sobrevida até a alta com desfecho neurológico favorável — Rankin modificado ≤3 — não diferiu**: 2,2% contra 1,9% (razão de chances 1,18; IC95% 0,86-1,61). Na alta, comprometimento neurológico grave (Rankin 4 ou 5) foi **mais frequente** entre os sobreviventes do grupo adrenalina.\n\nÉ essa a leitura honesta do estudo: a adrenalina aumenta a sobrevida, e o ganho se concentra em sobreviventes com dano neurológico maior. Ela permanece nos algoritmos internacionais de suporte avançado de vida."
@@ -1303,7 +1293,8 @@
     "references": [
       "Perkins GD, Ji C, Deakin CD et al. A Randomized Trial of Epinephrine in Out-of-Hospital Cardiac Arrest (PARAMEDIC2). N Engl J Med. 2018;379(8):711-721.",
       "Outcome differences between PARAMEDIC2 and time-to-drug sub-analysis · European Journal of Emergency Medicine / Intensive Care Medicine · https://pmc.ncbi.nlm.nih.gov/articles/PMC9605191/",
-      "Perkins GD, Ji C, Deakin CD, et al. A Randomized Trial of Epinephrine in Out-of-Hospital Cardiac Arrest (PARAMEDIC2). N Engl J Med. 2018;379(8):711-721. DOI: 10.1056/NEJMoa1806842. PMID: 30021076"
+      "Perkins GD, Ji C, Deakin CD, et al. A Randomized Trial of Epinephrine in Out-of-Hospital Cardiac Arrest (PARAMEDIC2). N Engl J Med. 2018;379(8):711-721. DOI: 10.1056/NEJMoa1806842. PMID: 30021076",
+      "Bernoche C, Timerman S, Polastri TF, et al. Atualização da Diretriz de Ressuscitação Cardiopulmonar e Cuidados Cardiovasculares de Emergência da Sociedade Brasileira de Cardiologia — 2019. Arq Bras Cardiol. 2019;113(3):449-663. PMID: 31621787"
     ],
     "contraindications": [
       "Não há contraindicação absoluta na parada cardiorrespiratória nem na anafilaxia — nas duas, o risco de não administrar supera qualquer outro. As cautelas abaixo valem para as demais indicações.",
@@ -1336,7 +1327,6 @@
     "references": [
       "Nota: módulo requer complementação com fonte primária de bula brasileira (ANVISA) para dose completa",
       "Inspra (eplerenone) — bula FDA/DailyMed",
-      "Eplerenone — StatPearls, NCBI Bookshelf, 2023",
       "EPHESUS trial — dosagem usada no estudo pivotal"
     ]
   },
@@ -1422,9 +1412,11 @@
       "Evkeeza, INN-evinacumab · EMA · https://www.ema.europa.eu/en/documents/product-information/evkeeza-epar-product-information_en.pdf",
       "Evinacumab: Mechanism of action, clinical, and translational science · PMC · 2024 · https://pmc.ncbi.nlm.nih.gov/articles/PMC11157145/",
       "Evkeeza (evinacumab) — bula FDA/prescriberpoint, 2025",
-      "Evinacumab — StatPearls, NCBI Bookshelf",
       "FDA approves add-on therapy for patients with genetic form of severely high cholesterol — FDA.gov, 2021"
-    ]
+    ],
+    "dosing": {
+      "posologia": "VERIFICAÇÃO HUMANA NECESSÁRIA — **este verbete não tem posologia**. O campo trazia apenas a fonte, sem nenhuma dose. Não prescrever por ele até que a posologia venha da bula registrada na ANVISA ou de diretriz."
+    }
   },
   {
     "slug": "evolocumabe-e-alirocumabe-inibidores-de-pcsk9",
@@ -1447,7 +1439,7 @@
       "alirocumabe opcao1": "75 mg SC a cada 2 semanas",
       "alirocumabe opcao2": "150 mg SC a cada 2 semanas",
       "via administracao": "Subcutânea (autoaplicação com caneta/seringa pré-cheia)",
-      "fonte": "Afya Endocrinologia — Inibidores da PCSK9: manual de instruções"
+      "fonte": "Afya Endocrinologia — Inibidores da PCSK9: manual de instruções\n\nVERIFICAÇÃO HUMANA NECESSÁRIA quanto à **procedência**: a posologia acima se apoia em Afya — agregador ou portal de conteúdo, não documento primário. Isso **não afirma que os números estejam errados**; afirma que não são rastreáveis à bula registrada nem a diretriz, que é o critério deste acervo. Substituir a fonte e reconferir os valores antes de publicar."
     },
     "outcomes": {
       "Evidencia pivotal fourier": "Estudo FOURIER (evolocumabe, pacientes com evento CV prévio, LDL-c>70mg/dL em estatina de alta dose): redução do desfecho cardiovascular composto, benefício mais pronunciado em LDL-c>100mg/dL mas mantido mesmo em <80mg/dL",
@@ -1458,7 +1450,6 @@
       "Perfil seguranca": "Excelente perfil de segurança — sem aumento de sintomas musculares ou de incidência de diabetes (ao contrário das preocupações associadas a estatinas)"
     },
     "references": [
-      "Inibidores da PCSK9: manual de instruções · Afya Endocrinologia · 2025 · https://portal.afya.com.br/endocrinologia/inibidores-da-pcsk9-manual-de-instrucoes",
       "REPATHA (evolocumabe) — Bula Profissional · Amgen · https://www.amgen.com.br/~/media/Themes/CorporateAffairs/amgen-com-br/amgen-com-br/PDF/Products/2022.06.08_Repatha_Bula_Profissional.pdf"
     ]
   },
@@ -1560,7 +1551,7 @@
       "TFGe 25 a <60 mL/min/1,73m²": "iniciar com 10 mg 1x/dia",
       "TFGe >=60 mL/min/1,73m²": "iniciar com 20 mg 1x/dia",
       "dose alvo": "20 mg 1x/dia, titulada conforme potássio sérico e TFGe",
-      "fonte": "MedCentral; Drugs.com"
+      "fonte": "MedCentral; Drugs.com\n\nVERIFICAÇÃO HUMANA NECESSÁRIA quanto à **procedência**: a posologia acima se apoia em MedCentral e Drugs.com — agregador ou portal de conteúdo, não documento primário. Isso **não afirma que os números estejam errados**; afirma que não são rastreáveis à bula registrada nem a diretriz, que é o critério deste acervo. Substituir a fonte e reconferir os valores antes de publicar."
     },
     "outcomes": {
       "Evidencia pivotal — FIDELIO-DKD e FIGARO-DKD (pool FIDELITY)": "- **populacao**: pacientes com diabetes tipo 2 e doença renal crônica - **reducao de albuminuria**: redução relativa corrigida por placebo na razão albumina-creatinina urinária de 31% (FIDELIO-DKD) e 32% (FIGARO-DKD) no mês 4 - **desfechos cardiovasculares e renais**: análise agrupada (FIDELITY) confirma redução significativa de desfechos cardiovasculares e renais compostos - **fonte**: NEJM (FIDELIO-DKD); MedCentral"
@@ -2258,7 +2249,9 @@
       "Hipotensão/hipovolemia",
       "Anemia grave",
       "Glaucoma de ângulo estreito",
-      "Hipersensibilidade"
+      "Hipersensibilidade",
+      "Uso concomitante com inibidores de fosfodiesterase-5 (sildenafila, tadalafila) — risco de hipotensão grave",
+      "Hipersensibilidade a nitratos"
     ],
     "adverse_effects": [
       "Cefaleia (mitigável com titulação gradual), hipotensão ortostática, rubor facial, taquicardia reflexa"
@@ -2274,7 +2267,8 @@
     },
     "notes": {
       "Particularidade": "NÃO indicado para tratamento de crises agudas de angina (papel é profilático/manutenção, diferente da nitroglicerina sublingual de ação rápida)",
-      "Particularidade tolerancia": "Requer intervalo livre de nitrato para evitar taquifilaxia — daí o cuidado em espaçar a segunda dose diária adequadamente"
+      "Particularidade tolerancia": "Requer intervalo livre de nitrato para evitar taquifilaxia — daí o cuidado em espaçar a segunda dose diária adequadamente",
+      "Particularidade tolerancia (comum aos nitratos)": "Uso contínuo desenvolve tolerância farmacológica (taquifilaxia) em 24-48h — requer intervalo livre de nitrato de pelo menos 8-12h/dia para manter eficácia em uso crônico"
     },
     "references": [
       "Isossorbida — Farmácia Dose Certa · Secretaria de Estado da Saúde de SP · https://www.saude.sp.gov.br/resources/ses/perfil/gestor/assistencia-farmaceutica/medicamentos-das-unidades-farmacia-dose-certa/",
@@ -2373,78 +2367,6 @@
     ]
   },
   {
-    "slug": "nitratos-nitroglicerina-dinitratomononitrato-de-isossorbida",
-    "review_status": "pendente_revisao",
-    "generic_name": "Nitratos (nitroglicerina, dinitrato/mononitrato de isossorbida)",
-    "drug_class": "Vasodilatador — doador de óxido nítrico",
-    "mechanism": "Metabolizado em óxido nítrico (NO), que ativa guanilato ciclase nas células musculares lisas vasculares, aumentando GMPc e promovendo relaxamento da musculatura lisa; predominantemente venodilatador em doses baixas (reduz pré-carga e consumo de O2 miocárdico), com dilatação arterial coronariana adicional em doses maiores (alivia vasoespasmo e redistribui fluxo coronariano)",
-    "indications": [
-      "Angina pectoris (crises agudas e profilaxia), edema agudo de pulmão, crise hipertensiva associada a isquemia, insuficiência cardíaca descompensada com congestão"
-    ],
-    "contraindications": [
-      "Uso concomitante com inibidores de fosfodiesterase-5 (sildenafila, tadalafila) — risco de hipotensão grave",
-      "Hipotensão/hipovolemia",
-      "Anemia grave",
-      "Glaucoma de ângulo estreito",
-      "Hipersensibilidade a nitratos"
-    ],
-    "adverse_effects": [
-      "Cefaleia (muito comum, por vasodilatação cerebral), hipotensão ortostática, taquicardia reflexa, rubor facial, tolerância com uso contínuo"
-    ],
-    "dosing": {
-      "dose_especifica": "— o esquema de dose por apresentação e por indicação está nas monografias individuais: `nitroglicerina-trinitrato-de-glicerila.md` e `dinitrato-de-isossorbida.md`, nesta mesma pasta, ambas já conferidas contra rótulo aprovado"
-    },
-    "notes": {
-      "Particularidade tolerancia": "Uso contínuo desenvolve tolerância farmacológica (taquifilaxia) em 24-48h — requer intervalo livre de nitrato de pelo menos 8-12h/dia para manter eficácia em uso crônico"
-    },
-    "references": [
-      "Nitratos: Farmacologia Clínica e Aplicações · Arquivos Brasileiros de Cardiologia · 1986 · http://cardiol.br/portal-publicacoes/Pdfs/ABC/1986/v47n5/47050012.pdf"
-    ]
-  },
-  {
-    "slug": "nitroglicerina-dinitrato-de-isossorbida",
-    "review_status": "pendente_revisao",
-    "generic_name": "Nitroglicerina / Dinitrato de isossorbida",
-    "drug_class": "Vasodilatadores — nitratos orgânicos",
-    "mechanism": "Promovem relaxamento da fibra muscular lisa vascular, resultando em intensa vasodilatação venosa central e, em menor grau, vasodilatação arterial periférica e coronária; efeito antianginoso ocorre por redução de pré-carga (menor trabalho cardíaco e consumo de O2) e vasodilatação coronária direta",
-    "presentations": [
-      "Nitroglicerina: solução injetável 5mg/mL (ex.: Tridil), comprimidos sublinguais, spray bucal, adesivos transdérmicos; dinitrato de isossorbida: comprimidos sublinguais/orais"
-    ],
-    "interactions": [
-      "Contraindicação absoluta de uso concomitante com inibidores de fosfodiesterase-5 (sildenafila, tadalafila) — risco de hipotensão grave potencialmente fatal"
-    ],
-    "contraindications": [
-      "Hipersensibilidade a nitratos",
-      "Hipotensão grave (PAS ≤90mmHg)",
-      "Choque/colapso cardiocirculatório",
-      "IAM com redução de enchimento ventricular",
-      "Anemia grave",
-      "Choque cardiogênico (até estabilização de pressão de enchimento)",
-      "Hipovolemia grave",
-      "Trauma cranioencefálico ou hemorragia cerebral",
-      "Uso concomitante com inibidores de PDE5",
-      "Miocardiopatia hipertrófica obstrutiva (piora obstrução)",
-      "Estenose mitral/aórtica"
-    ],
-    "adverse_effects": [
-      "Hipotensão ortostática, cefaleia (muito comum, por vasodilatação cerebral), rubor facial, distúrbios digestivos, vertigem, fraqueza"
-    ],
-    "dosing": {
-      "dinitrato isossorbida oral manutencao": "5 mg a cada 3-4h; dose máxima 240 mg/dia",
-      "dinitrato isossorbida crise anginosa": "5 mg sublingual, mastigado e depositado sob a língua; repetir se sintomas persistirem ou nova crise ocorrer",
-      "administracao adesivos": "Manter mínimo de 10h livres de adesivo por dia para evitar tolerância",
-      "administracao via oral longa acao": "1 tomada única pela manhã ou 2 tomadas (manhã e meio-dia), respeitando período livre de nitrato",
-      "fonte": "AccessMedicina/Vidal Vademecum"
-    },
-    "notes": {
-      "Fenomeno tolerancia": "Administração contínua produz tolerância farmacológica; tratamento deve ser intermitente, deixando período livre entre doses de aproximadamente uma semivida plasmática"
-    },
-    "references": [
-      "Isosorbida Dinitrato — Ficha Técnica · AccessMedicina/Vidal Vademecum · https://accessmedicina.mhmedical.com/data/accessmedicina/vidal/FT_C01DA08.html",
-      "Tridil (nitroglicerina) — Bula Profissional · Cristália · https://www.cristalia.com.br/produto/177/bula-profissional"
-    ]
-  },
-  {
     "slug": "nitroglicerina-trinitrato-de-glicerila",
     "review_status": "pendente_revisao",
     "generic_name": "Nitroglicerina (trinitrato de glicerila)",
@@ -2459,7 +2381,18 @@
       "Anemia grave",
       "Glaucoma de ângulo estreito",
       "Hipersensibilidade",
-      "IAM de VD (hipotensão dependente de pré-carga)"
+      "IAM de VD (hipotensão dependente de pré-carga)",
+      "Uso concomitante com inibidores de fosfodiesterase-5 (sildenafila, tadalafila) — risco de hipotensão grave",
+      "Hipersensibilidade a nitratos",
+      "Hipotensão grave (PAS ≤90mmHg)",
+      "Choque/colapso cardiocirculatório",
+      "IAM com redução de enchimento ventricular",
+      "Choque cardiogênico (até estabilização de pressão de enchimento)",
+      "Hipovolemia grave",
+      "Trauma cranioencefálico ou hemorragia cerebral",
+      "Uso concomitante com inibidores de PDE5",
+      "Miocardiopatia hipertrófica obstrutiva (piora obstrução)",
+      "Estenose mitral/aórtica"
     ],
     "adverse_effects": [
       "Cefaleia (muito comum), hipotensão ortostática, taquicardia reflexa, rubor facial, tolerância"
@@ -2474,7 +2407,9 @@
       "fonte": "rótulo da nitroglicerina aprovado pelo FDA (DailyMed), no lugar do material de estudante que sustentava esta seção"
     },
     "notes": {
-      "Particularidade tolerancia": "Uso contínuo (especialmente EV/transdérmico) desenvolve tolerância em 24-48h — requer intervalo livre de nitrato"
+      "Particularidade tolerancia": "Uso contínuo (especialmente EV/transdérmico) desenvolve tolerância em 24-48h — requer intervalo livre de nitrato",
+      "Particularidade tolerancia (comum aos nitratos)": "Uso contínuo desenvolve tolerância farmacológica (taquifilaxia) em 24-48h — requer intervalo livre de nitrato de pelo menos 8-12h/dia para manter eficácia em uso crônico",
+      "Fenomeno tolerancia (comum aos nitratos)": "Administração contínua produz tolerância farmacológica; tratamento deve ser intermitente, deixando período livre entre doses de aproximadamente uma semivida plasmática"
     },
     "references": [
       "Nitroglycerin sublingual tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 562d2e03-dfed-41ff-8e7f-ec4169141983"
@@ -2495,7 +2430,7 @@
     "dosing": {
       "faixa usual": "0,5-10 mcg/kg/min, em infusão contínua intravenosa, titulada conforme resposta pressórica",
       "limite de tempo na dose maxima": "infusão na dose máxima nunca deve durar mais de 10 minutos; se a pressão não for controlada adequadamente após 10 minutos na dose máxima, a administração deve ser interrompida imediatamente",
-      "fonte": "Drugs.com (monografia)"
+      "fonte": "Drugs.com (monografia)\n\nVERIFICAÇÃO HUMANA NECESSÁRIA quanto à **procedência**: a posologia acima se apoia em Drugs.com — agregador ou portal de conteúdo, não documento primário. Isso **não afirma que os números estejam errados**; afirma que não são rastreáveis à bula registrada nem a diretriz, que é o critério deste acervo. Substituir a fonte e reconferir os valores antes de publicar."
     },
     "notes": {
       "Risco de toxicidade por cianeto": "- **limiar de risco**: taxas de infusão acima de 2 mcg/kg/min podem gerar níveis clinicamente importantes de cianeto, podendo atingir concentrações tóxicas ou potencialmente letais - **tempo ate exceder capacidade de tamponamento**: infusão na dose máxima de 10 mcg/kg/min excede a capacidade do paciente de tamponar cianeto em 10 minutos - **fonte**: Drugs.com (monografia)"
@@ -2643,93 +2578,64 @@
     ]
   },
   {
-    "slug": "prasugrel-cloridrato",
-    "review_status": "pendente_revisao",
-    "generic_name": "Prasugrel (cloridrato)",
-    "brand_names": [
-      "Effient"
-    ],
-    "drug_class": "Antiagregante plaquetário — tienopiridínico, inibidor do receptor P2Y12",
-    "mechanism": "Pró-fármaco que, diferente do clopidogrel, requer apenas uma fase de metabolização hepática (a primeira fase ocorre por esterases plasmáticas), sofrendo menor interferência dos agentes que atuam no citocromo P450. Seu metabólito ativo é inibidor irreversível do receptor P2Y12, inibindo seletivamente a ligação de ADP e a ativação do complexo glicoproteico GPIIb/IIIa mediado por ADP",
-    "presentations": [
-      "Comprimidos de 5 mg ou 10 mg"
-    ],
-    "indications": [
-      "SCA com e sem supra de ST (estudo TRITON-TIMI 38), associado ao AAS, em pacientes virgens de tratamento com clopidogrel, com anatomia coronária conhecida, submetidos à intervenção coronariana percutânea (indicação Classe IB)"
-    ],
-    "contraindications": [
-      "Hipersensibilidade à substância ou componentes",
-      "Sangramento ativo (úlcera péptica ou hemorragia intracraniana)",
-      "História de AVC ou AIT prévio (contraindicação absoluta, diferente do clopidogrel)",
-      "Doença hepática grave (Child-Pugh C)"
-    ],
-    "adverse_effects": [
-      "Hemorragias, dispepsia, diarreia, bradicardia, dispneia, anemia"
-    ],
-    "pregnancy": "Categoria B — estudos em animais não mostram evidência de prejuízo à fertilidade ou toxicidade fetal; poucos dados em mulheres; desconhecido se é excretado no leite",
-    "dosing": {
-      "sca ataque": "60 mg VO de ataque",
-      "sca manutencao": "10 mg 1x/dia após dose de ataque",
-      "grupos alto risco sangramento": "Sugere-se manutenção de 5 mg 1x/dia para pacientes ≥75 anos ou peso <60 kg; esta dose reduzida não foi testada prospectivamente em ensaios clínicos de SCA",
-      "aas associado": "Doses de manutenção associadas a 75-325 mg de AAS/dia",
-      "fonte": "Afya Cardiologia ; CONITEC"
-    },
-    "outcomes": {
-      "Evidencia pivotal triton timi38": "Reduziu desfechos compostos isquêmicos comparado a clopidogrel, porém aumentou o risco de sangramento. Análises post-hoc identificaram grupos de maior risco de sangramento: idade ≥75 anos, peso <60 kg, e AVC ou AIT prévios"
-    },
-    "notes": {
-      "Vantagem farmacocinetica": "Início de ação mais rápido que clopidogrel, com concentração plasmática máxima do metabólito ativo atingida em aproximadamente 30 minutos; não apresenta a variabilidade inter-individual de ação encontrada com clopidogrel",
-      "Cuidados perioperatorios": "Interromper uso 7 dias antes de procedimento cirúrgico"
-    },
-    "references": [
-      "Guia de medicamentos cardiovasculares: prasugrel · Afya Cardiologia · https://portal.afya.com.br/cardiologia/guia-de-medicamentos-cardiovasculares-prasugrel",
-      "EFFIENT — Bula Profissional · Daiichi Sankyo · https://daiichisankyo.com.br/wp-content/uploads/2022/09/100625-bula-effient-profissional.pdf",
-      "EFFIENT — Dossiê CONITEC · CONITEC · 2020 · https://www.gov.br/conitec/pt-br/midias/consultas/dossie/2020/20200914_dossie_prasugrel_cp48_conitec.pdf"
-    ]
-  },
-  {
     "slug": "prasugrel",
     "review_status": "pendente_revisao",
-    "generic_name": "Prasugrel",
+    "generic_name": "Prasugrel (cloridrato)",
     "brand_names": [
       "Effient"
     ],
     "drug_class": "Antiplaquetário — inibidor de receptor P2Y12 (tienopiridina de terceira geração)",
     "mechanism": "Pró-fármaco que, após absorção rápida, é convertido em metabólito ativo através de via metabólica mais eficiente e menos variável que o clopidogrel (menor dependência de CYP2C19), resultando em inibição irreversível mais rápida e potente do receptor P2Y12 plaquetário",
     "presentations": [
-      "Comprimidos de 5 mg e 10 mg"
+      "Comprimidos de 5 mg e 10 mg",
+      "Comprimidos de 5 mg ou 10 mg"
     ],
     "indications": [
-      "SCA (angina instável/IAMSSST) submetida a ICP; IAM com supra de ST submetido a ICP — sempre associado a AAS em baixa dose"
+      "SCA (angina instável/IAMSSST) submetida a ICP; IAM com supra de ST submetido a ICP — sempre associado a AAS em baixa dose",
+      "SCA com e sem supra de ST (estudo TRITON-TIMI 38), associado ao AAS, em pacientes virgens de tratamento com clopidogrel, com anatomia coronária conhecida, submetidos à intervenção coronariana percutânea (indicação Classe IB)"
     ],
     "contraindications": [
+      "**História de acidente vascular cerebral ou ataque isquêmico transitório** — contraindicação expressa na bula brasileira.",
       "AVC ou AIT prévio (contraindicação absoluta — risco aumentado de sangramento)",
       "Sangramento ativo",
       "Hepatopatia grave",
       "Idade ≥75 anos (evitar, exceto casos selecionados de alto risco)",
-      "Baixo peso corporal (cautela)"
+      "Baixo peso corporal (cautela)",
+      "Hipersensibilidade à substância ou componentes",
+      "Sangramento ativo (úlcera péptica ou hemorragia intracraniana)",
+      "História de AVC ou AIT prévio (contraindicação absoluta, diferente do clopidogrel)",
+      "Doença hepática grave (Child-Pugh C)"
     ],
     "adverse_effects": [
-      "Sangramento (epistaxe, equimoses), náusea, diarreia, tontura; sangramento grave (GI), trombocitopenia, reações alérgicas"
+      "Sangramento (epistaxe, equimoses), náusea, diarreia, tontura; sangramento grave (GI), trombocitopenia, reações alérgicas",
+      "Hemorragias, dispepsia, diarreia, bradicardia, dispneia, anemia"
     ],
     "interactions": [
       "Anticoagulantes (varfarina, heparina) e outros antiplaquetários (AAS, clopidogrel) aumentam risco de sangramento; AINEs (ibuprofeno, naproxeno) também aumentam esse risco"
     ],
     "dosing": {
-      "ataque": "60 mg via oral, dose única, antes da ICP",
-      "manutencao peso maior 60kg": "10 mg 1x/dia",
-      "manutencao peso menor 60kg": "Considerar 5 mg 1x/dia",
-      "duracao dapt": "Tipicamente até 12 meses após SCA com ICP, associado a AAS em dose baixa",
-      "fonte": "Apollo Hospitals"
+      "ataque": "**60 mg por via oral, dose única.** Na síndrome coronariana aguda sem supradesnivelamento de ST, a bula determina que a dose de ataque seja administrada **no momento da intervenção coronariana percutânea**.",
+      "manutencao": "**10 mg uma vez ao dia**, associado a AAS em dose baixa.",
+      "dose reduzida de 5 mg — dois gatilhos, nao um": "A bula prevê **5 mg/dia** em duas situações distintas, e um dos verbetes fundidos trazia só a primeira:\n- **Peso corporal abaixo de 60 kg** — a concentração do metabólito ativo sobe e com ela o risco de sangramento. Mantém-se o ataque de 60 mg e segue-se com 5 mg/dia.\n- **Idade a partir de 75 anos** — maior exposição ao metabólito ativo com 10 mg e possível maior sensibilidade ao sangramento; a bula orienta considerar 5 mg/dia.\n\nRessalva que vale registrar: **a dose reduzida de 5 mg não foi testada prospectivamente** em ensaio de desfecho na síndrome coronariana aguda.",
+      "duracao": "Tipicamente até 12 meses após síndrome coronariana aguda tratada com intervenção percutânea, em dupla antiagregação.",
+      "cautela": "A bula pede cautela em propensão a sangramento (trauma ou cirurgia recentes, úlcera péptica ativa), insuficiência hepática grave, insuficiência renal moderada a grave, peso abaixo de 60 kg e uso concomitante de anticoagulante oral ou anti-inflamatório não esteroidal.",
+      "fonte": "Bula profissional brasileira de EFFIENT (cloridrato de prasugrel), Daiichi Sankyo Brasil. **Substitui as fontes anteriores dos dois verbetes fundidos** — uma delas era o site de uma rede hospitalar estrangeira."
     },
     "notes": {
       "Vantagem sobre clopidogrel": "Início de ação mais rápido e resposta antiplaquetária mais consistente entre pacientes, devido a menor dependência de polimorfismo do CYP2C19; diferentemente do clopidogrel, inibidores de bomba de prótons geralmente não representam preocupação significativa de redução de eficácia",
-      "Restricao avc previo": "Não recomendado para prevenção de eventos trombóticos em pacientes com histórico de AVC/AIT devido ao risco aumentado de sangramento — distinção importante em relação a outros antiplaquetários"
+      "Restricao avc previo": "Não recomendado para prevenção de eventos trombóticos em pacientes com histórico de AVC/AIT devido ao risco aumentado de sangramento — distinção importante em relação a outros antiplaquetários",
+      "Vantagem farmacocinetica": "Início de ação mais rápido que clopidogrel, com concentração plasmática máxima do metabólito ativo atingida em aproximadamente 30 minutos; não apresenta a variabilidade inter-individual de ação encontrada com clopidogrel",
+      "Cuidados perioperatorios": "Interromper uso 7 dias antes de procedimento cirúrgico"
     },
     "references": [
-      "Prasugrel - Usos, Dosagem, Efeitos Colaterais · Apollo Hospitals · https://www.apollohospitals.com/pt/medicines/prasugrel",
-      "Prasugrel Viatris EPAR · EMA · https://www.ema.europa.eu/pt/documents/product-information/prasugrel-viatris-epar-product-information_pt.pdf"
-    ]
+      "Prasugrel Viatris EPAR · EMA · https://www.ema.europa.eu/pt/documents/product-information/prasugrel-viatris-epar-product-information_pt.pdf",
+      "EFFIENT — Bula Profissional · Daiichi Sankyo · https://daiichisankyo.com.br/wp-content/uploads/2022/09/100625-bula-effient-profissional.pdf",
+      "Bula profissional de EFFIENT (cloridrato de prasugrel), Daiichi Sankyo Brasil Farmacêutica Ltda. — apresentações, posologia, contraindicações e advertências."
+    ],
+    "pregnancy": "Categoria B — estudos em animais não mostram evidência de prejuízo à fertilidade ou toxicidade fetal; poucos dados em mulheres; desconhecido se é excretado no leite",
+    "outcomes": {
+      "Evidencia pivotal triton timi38": "Reduziu desfechos compostos isquêmicos comparado a clopidogrel, porém aumentou o risco de sangramento. Análises post-hoc identificaram grupos de maior risco de sangramento: idade ≥75 anos, peso <60 kg, e AVC ou AIT prévios"
+    }
   },
   {
     "slug": "propafenona-cloridrato",
@@ -2763,7 +2669,7 @@
       "ajuste renal": "Uso com cautela",
       "ajuste hepatico": "Reduzir dose em 70-80%",
       "acompanhamento": "Repetir ECG em 1-2 semanas após início/ajuste de dose crônica",
-      "fonte": "Afya Cardiologia — Como eu uso Propafenona ; Protocolo SES-SP"
+      "fonte": "Afya Cardiologia — Como eu uso Propafenona ; Protocolo SES-SP\n\nVERIFICAÇÃO HUMANA NECESSÁRIA quanto à **procedência**: a posologia acima se apoia em Afya e protocolo estadual — agregador ou portal de conteúdo, não documento primário. Isso **não afirma que os números estejam errados**; afirma que não são rastreáveis à bula registrada nem a diretriz, que é o critério deste acervo. Substituir a fonte e reconferir os valores antes de publicar."
     },
     "notes": {
       "Restricao critica uso": "Não deve ser utilizada em pacientes com doença arterial coronariana, hipertrofia ventricular esquerda, disfunção ventricular, DPOC ou IC — restrita a coração estruturalmente normal",
@@ -2805,8 +2711,7 @@
       "Propranolol hydrochloride — rótulo aprovado pelo FDA, DailyMed SPL setid c751ee54-27b4-4ed7-829a-ced735c41312",
       "Resumo sobre Propranolol: indicações, farmacologia e mais · Estratégia MED · 2022 · https://med.estrategia.com/portal/conteudos-gratis/doencas/resumo-sobre-propranolol-indicacoes-farmacologia-e-mais/",
       "Bula Propranolol · Droga Raia · https://www.drogaraia.com.br/bulas/propranolol",
-      "Inderal (propranolol) — bula FDA",
-      "Propranolol — StatPearls, NCBI Bookshelf"
+      "Inderal (propranolol) — bula FDA"
     ]
   },
   {
@@ -2904,7 +2809,7 @@
       "faixa terapeutica": "500 a 1000 mg, via oral, 2x/dia",
       "dose maxima": "1000 mg 2x/dia",
       "efeitos adversos mais comuns": "constipação, náusea, astenia, tontura",
-      "fonte": "StatPearls"
+      "fonte": "StatPearls\n\nVERIFICAÇÃO HUMANA NECESSÁRIA quanto à **procedência**: a posologia acima se apoia em StatPearls — agregador ou portal de conteúdo, não documento primário. Isso **não afirma que os números estejam errados**; afirma que não são rastreáveis à bula registrada nem a diretriz, que é o critério deste acervo. Substituir a fonte e reconferir os valores antes de publicar."
     },
     "notes": {
       "Metabolismo e interacoes com CYP3A4": "- **via principal**: metabolização extensa via CYP3A4, com menos de 5% excretado inalterado na urina - **inibidores moderados de CYP3A4**: dose de ranolazina não deve exceder 500 mg 2x/dia quando associada - **inibidores fortes de CYP3A4 (contraindicacao absoluta)**: cetoconazol, claritromicina, nelfinavir - **fonte**: StatPearls",
@@ -3141,48 +3046,12 @@
     ]
   },
   {
-    "slug": "sotalol-cloridrato",
-    "review_status": "pendente_revisao",
-    "generic_name": "Sotalol (cloridrato)",
-    "drug_class": "Antiarrítmico classe III (Vaughan-Williams) com propriedades adicionais de betabloqueio classe II — mistura racêmica d/l",
-    "mechanism": "Mistura racêmica: o isômero-d possui atividade classe III pura (bloqueio de canais de potássio, prolongando repolarização/QT); o isômero-l acrescenta bloqueio beta-adrenérgico não seletivo; resultado é prolongamento do potencial de ação e período refratário efetivo em átrios, ventrículos e vias acessórias, além de redução de FC e automaticidade",
-    "indications": [
-      "Taquiarritmia ventricular grave, taquiarritmia ventricular não sustentada sintomática, contrações ventriculares prematuras, manutenção do ritmo sinusal em FA/flutter sintomáticos"
-    ],
-    "monitoring": [
-      "ECG obrigatório antes do início e a cada ajuste de dose — risco de prolongamento de QT e torsades de pointes é dose-dependente; suspender/reduzir dose se QTc>500ms ou aumento significativo"
-    ],
-    "renal_adjustment": "Eliminação predominantemente renal — requer ajuste de dose e de intervalo posológico em insuficiência renal, com monitorização mais frequente de QT",
-    "contraindications": [
-      "QT longo congênito",
-      "Asma/broncoespasmo grave (efeito beta-bloqueador não seletivo)",
-      "Bradicardia sinusal grave",
-      "BAV 2º/3º grau sem marca-passo",
-      "Insuficiência renal grave sem ajuste",
-      "Hipocalemia/hipomagnesemia não corrigidas (risco de torsades)"
-    ],
-    "adverse_effects": [
-      "Fadiga, bradicardia, dispneia, torsades de pointes (dose-dependente), broncoespasmo"
-    ],
-    "dosing": {
-      "dose_titulacao": "Ajuste gradual com intervalo de 2-3 dias entre aumentos, para atingir estado de equilíbrio e permitir monitorização adequada do QT a cada incremento"
-    },
-    "outcomes": {
-      "Evidencia esvem": "Estudo ESVEM avaliou eficácia antiarrítmica de sotalol comparado a outros agentes em arritmias ventriculares, contribuindo para posicionamento atual na hierarquia terapêutica",
-      "Evidencia sword alerta": "Estudo SWORD (d-sotalol puro, pós-IAM com disfunção de VE) foi interrompido precocemente por aumento de mortalidade — reforça que sotalol deve ser reservado a populações selecionadas e sob monitorização eletrocardiográfica rigorosa, evitando uso amplo pós-IAM"
-    },
-    "references": [
-      "Cloridrato de Sotalol — Bula Profissional · Merck/Saúde Direta · https://www.saudedireta.com.br/catinc/drugs/bulas/cloridratodesotalolmerck.pdf",
-      "Sotalol: evidencia y práctica clínica · CardioTeca · 2026 · https://www.cardioteca.com/tratamientos/8221-sotalol-practica-clinica-guia-especialista-arritmias.html"
-    ]
-  },
-  {
     "slug": "sotalol",
     "review_status": "pendente_revisao",
-    "generic_name": "Sotalol",
+    "generic_name": "Sotalol (cloridrato)",
     "drug_class": "Antiarrítmico classe II e III (betabloqueador não seletivo com propriedades de prolongamento do potencial de ação)",
     "mechanism": "Prolonga uniformemente a duração do potencial de ação em todos os tecidos cardíacos (efeito classe III), retardando a repolarização sem afetar a despolarização; efeito betabloqueador não seletivo (classe II) reduz FC e contratilidade; desprovido de atividade simpatomimética intrínseca e de ação estabilizante de membrana",
-    "renal_adjustment": "- ClCr 30-60 mL/min: iniciar com 80 mg 1x/dia - ClCr 10-30 mL/min: iniciar com 80 mg a cada 48h - ClCr < 10 mL/min: evitar — dados insuficientes, maior risco de acúmulo e QT prolongado - É dialisável (ausência de ligação proteica) — hemodiálise remove o fármaco, útil em intoxicação",
+    "renal_adjustment": "A bula brasileira ajusta **por creatinina sérica**, não por clearance calculado — o sotalol é excretado predominantemente pela urina e a meia-vida se prolonga muito na insuficiência renal:\n\n- creatinina **< 1,2 mg/dL** (<120 µmol/L): dose normal\n- **1,2 a 2,3 mg/dL** (120-200 µmol/L): **3/4** da dose\n- **2,3 a 3,4 mg/dL** (200-300 µmol/L): **1/2** da dose\n- **3,4 a 5,7 mg/dL** (300-500 µmol/L): **1/4** da dose",
     "interactions": [
       "- **Outros fármacos que prolongam o QT**: evitar associação — risco somado de torsades de pointes - **Outros cronotrópicos negativos** (verapamil, diltiazem, digoxina): risco aditivo de bradicardia e bloqueio AV"
     ],
@@ -3193,22 +3062,25 @@
       "Bloqueio AV 2º/3º grau",
       "Asma/broncoespasmo grave",
       "Choque cardiogênico",
-      "Hipocalemia/hipomagnesemia não corrigidas"
+      "Hipocalemia/hipomagnesemia não corrigidas",
+      "QT longo congênito",
+      "Asma/broncoespasmo grave (efeito beta-bloqueador não seletivo)",
+      "BAV 2º/3º grau sem marca-passo",
+      "Insuficiência renal grave sem ajuste",
+      "Hipocalemia/hipomagnesemia não corrigidas (risco de torsades)"
     ],
     "indications": [
-      "Arritmias ventriculares e supraventriculares graves, manutenção de ritmo sinusal em FA/flutter atrial"
+      "Arritmias ventriculares e supraventriculares graves, manutenção de ritmo sinusal em FA/flutter atrial",
+      "Taquiarritmia ventricular grave, taquiarritmia ventricular não sustentada sintomática, contrações ventriculares prematuras, manutenção do ritmo sinusal em FA/flutter sintomáticos"
     ],
-    "monitoring": [
-      "ECG com QTc deve ser monitorado rigorosamente durante titulação — risco proarrítmico inerente à classe III"
-    ],
+    "monitoring": "**Intervalo QT é o parâmetro que governa o uso.**\n- Não iniciar se o QTc antes do tratamento passar de **450 mseg** — foi o critério dos estudos clínicos.\n- Após suspender amiodarona, **não iniciar sotalol até o QTc ficar abaixo de 450 mseg**.\n- **Cautela se o QTc passar de 500 mseg** durante a terapia.\n- **Considerar seriamente reduzir a dose ou suspender se o QT exceder 550 mseg** — prolongamento acima desse valor é sinal de toxicidade e deve ser evitado.\n\nPara dimensionar: com 160 a 640 mg/dia, o eletrocardiograma mostra aumento médio dose-dependente de **40 a 100 mseg no QT** e de 10 a 40 mseg no QTc.",
     "dosing": {
-      "antiarritmico padrao": "80 mg a cada 12h",
-      "antiarritmico funcao miocardica reduzida": "40 mg 2x/dia",
-      "antiarritmico dose maxima": "640 mg/dia",
-      "antiarritmico faixa habitual": "160-640 mg/dia",
-      "antianginoso inicial": "160 mg/dia",
-      "antianginoso titulacao": "Dobrar semanalmente até 320 mg/dia conforme resposta",
-      "fonte": "Misodor/Farmacon"
+      "inicial": "**160 mg/dia, em duas tomadas** com intervalo de cerca de 12 horas.",
+      "titulacao": "Aumentar **a cada 2 ou 3 dias**, para atingir o estado de equilíbrio e permitir a monitorização do QT a cada incremento. A bula é explícita quanto ao local: iniciar e aumentar dose **onde haja monitorização e avaliação do ritmo cardíaco** — evento pró-arrítmico ocorre não só no início, mas a cada aumento.",
+      "faixa habitual": "**160 a 320 mg/dia**, em duas tomadas — onde a maioria dos pacientes responde. Pode ser elevada a 240 ou 320 mg/dia após avaliação.",
+      "doses altas": "**480 a 640 mg/dia** apenas em arritmia ventricular refratária com risco de vida, e a bula condiciona: *somente quando o benefício potencial exceder o aumento do risco de eventos adversos, particularmente pró-arritmia*.",
+      "quando suspender no inicio": "Bradicardia ou hipotensão excessiva no início do tratamento pedem suspensão, com reintrodução posterior em dose menor.",
+      "fonte": "Bula profissional brasileira de SOTACOR (cloridrato de sotalol). **Substitui a fonte anterior**, que era um agregador sem procedência."
     },
     "notes": {
       "Inicio obrigatorio em ambiente hospitalar": "Iniciar (ou reiniciar) sempre internado, no mínimo 3 dias, em local com monitorização contínua de ECG e capacidade de ressuscitação cardíaca — até atingir concentração de equilíbrio. Não é droga pra início ambulatorial. Corrigir hipocalemia e hipomagnesemia **antes** de iniciar, já que ambas aumentam o risco de torsades de pointes.",
@@ -3216,11 +3088,19 @@
       "Efeitos hemodinamicos documentados": "Na dose de 160mg, reduz FC em 21-24% e PA sistólica/diastólica em 8%, mas aumenta fração de ejeção em 6-10% e volume sistólico em 10-20%"
     },
     "references": [
-      "SOTALOL — Farmacon · Misodor · https://www.misodor.com.br/FARMACON/SOTALOL.html",
       "Sotalol Hydrochloride Injection — bula FDA/accessdata.fda.gov, 2025",
-      "Sotalol — StatPearls, NCBI Bookshelf",
-      "Sotalol — Medcentral/ASHP Monograph"
-    ]
+      "Sotalol — Medcentral/ASHP Monograph",
+      "Cloridrato de Sotalol — Bula Profissional · Merck/Saúde Direta · https://www.saudedireta.com.br/catinc/drugs/bulas/cloridratodesotalolmerck.pdf",
+      "Sotalol: evidencia y práctica clínica · CardioTeca · 2026 · https://www.cardioteca.com/tratamientos/8221-sotalol-practica-clinica-guia-especialista-arritmias.html",
+      "Bula para o profissional de saúde de SOTACOR (cloridrato de sotalol), Bristol-Myers Squibb — posologia, pacientes com insuficiência renal e advertências."
+    ],
+    "adverse_effects": [
+      "Fadiga, bradicardia, dispneia, torsades de pointes (dose-dependente), broncoespasmo"
+    ],
+    "outcomes": {
+      "Evidencia esvem": "Estudo ESVEM avaliou eficácia antiarrítmica de sotalol comparado a outros agentes em arritmias ventriculares, contribuindo para posicionamento atual na hierarquia terapêutica",
+      "Evidencia sword alerta": "Estudo SWORD (d-sotalol puro, pós-IAM com disfunção de VE) foi interrompido precocemente por aumento de mortalidade — reforça que sotalol deve ser reservado a populações selecionadas e sob monitorização eletrocardiográfica rigorosa, evitando uso amplo pós-IAM"
+    }
   },
   {
     "slug": "tafamidis",
@@ -3308,7 +3188,7 @@
       "dose": "ajustada por peso corporal, em faixas de 0,25 a 0,50 mg/kg, com dose máxima de 50 mg",
       "vantagem pratica": "administração em bolus único, diferente da infusão prolongada necessária com alteplase",
       "meia-vida": "bifásica — fase inicial de 20-24 minutos, fase terminal de 90-130 minutos",
-      "fonte": "StatPearls"
+      "fonte": "StatPearls\n\nVERIFICAÇÃO HUMANA NECESSÁRIA quanto à **procedência**: a posologia acima se apoia em StatPearls — agregador ou portal de conteúdo, não documento primário. Isso **não afirma que os números estejam errados**; afirma que não são rastreáveis à bula registrada nem a diretriz, que é o critério deste acervo. Substituir a fonte e reconferir os valores antes de publicar."
     },
     "references": [
       "Tenecteplase · StatPearls (NCBI Bookshelf) · https://www.ncbi.nlm.nih.gov/books/NBK592420/",
@@ -3346,7 +3226,7 @@
     "dosing": {
       "ataque": "Dose de ataque de 2 comprimidos (180 mg)",
       "manutencao": "90 mg 2x/dia por 12 meses, associado ao AAS",
-      "fonte": "Afya Cardiologia"
+      "fonte": "Afya Cardiologia\n\nVERIFICAÇÃO HUMANA NECESSÁRIA quanto à **procedência**: a posologia acima se apoia em Afya — agregador ou portal de conteúdo, não documento primário. Isso **não afirma que os números estejam errados**; afirma que não são rastreáveis à bula registrada nem a diretriz, que é o critério deste acervo. Substituir a fonte e reconferir os valores antes de publicar."
     },
     "outcomes": {
       "Evidencia pivotal plato": "- **desenho**: Estudo PLATO randomizou 18.624 pacientes hospitalizados com SCA (com ou sem supra de ST) para ticagrelor vs. clopidogrel, duplo-cego, seguimento até 12 meses - **desfecho primario**: Redução de 11,7% para 9,8% com ticagrelor comparado a clopidogrel (HR 0,84; p<0,001) - **desfechos secundarios**: Redução de IAM (5,8% vs 6,9%; HR 0,84; p=0,005) e morte por causas vasculares (4,0% vs 5,1%; HR 0,79; p=0,001) - **mortalidade geral**: Único entre os principais estudos de antiplaquetários mais potentes a demonstrar redução de mortalidade por todas as causas: 4,5% vs 5,9% com clopidogrel (redução de 22%; p<0,001) - **sangramento**: Sangramentos maiores gerais sem diferença estatística (11,6% vs 11,2%; p=0,43); porém aumento de sangramentos maiores não relacionados a cirurgia de revascularização (4,5% vs 3,8%; p=0,03) - **efeitos adversos notaveis**: Maior incidência de dispneia (13,8% vs 7,8%; p<0,001) e pausas ventriculares ≥3 segundos na primeira semana de Holter (5,8% vs 3,6%; p=0,01), sem diferença no Holter de 30 dias - **fonte**: Cardiol.br — Principais Estudos"
@@ -3361,67 +3241,37 @@
     ]
   },
   {
-    "slug": "trimetazidina-dicloridrato",
-    "review_status": "pendente_revisao",
-    "generic_name": "Trimetazidina (dicloridrato)",
-    "drug_class": "Antianginoso metabólico — inibidor parcial da beta-oxidação de ácidos graxos",
-    "mechanism": "Inibe parcialmente a enzima 3-cetoacil-CoA-tiolase de cadeia longa, deslocando o metabolismo energético do miocárdio da beta-oxidação de ácidos graxos para a via mais eficiente de oxidação da glicose, otimizando o uso de oxigênio em isquemia sem efeito hemodinâmico (não altera FC ou PA)",
-    "presentations": [
-      "Comprimidos revestidos de liberação modificada de 20mg e 35mg"
-    ],
-    "contraindications": [
-      "Doença de Parkinson",
-      "Tremor essencial e outros distúrbios do movimento",
-      "Insuficiência renal grave (ClCr<15mL/min)",
-      "Hipersensibilidade"
-    ],
-    "adverse_effects": [
-      "Tontura, cefaleia, distúrbios GI, sintomas extrapiramidais (parkinsonismo, tremor), síndrome das pernas inquietas"
-    ],
-    "dosing": {
-      "formulacao 20mg padrao": "1 comprimido de 20mg 3x/dia (às refeições)",
-      "formulacao 35mg liberacao modificada": "1 comprimido de 35mg 2x/dia (manhã e noite, às refeições)",
-      "posicao terapeutica": "Terapia adjuvante em pacientes não adequadamente controlados ou com intolerância a antianginosos hemodinâmicos de primeira linha (betabloqueador, BCC, nitrato)",
-      "insuficiencia renal moderada clcr 30 60": "1 comprimido de 20mg 2x/dia (manhã e noite)",
-      "idosos maior 75 anos": "Iniciar com dose mais baixa, ajustando com cautela",
-      "fonte": "RCM Trimetazidina 20mg — Infarmed"
-    },
-    "notes": {
-      "Particularidade regulatoria": "Uso restrito pela EMA devido a risco de sintomas parkinsonianos e outros distúrbios do movimento (tremor, síndrome das pernas inquietas), especialmente em idosos — reavaliar necessidade de continuidade periodicamente e descontinuar se surgirem sintomas extrapiramidais"
-    },
-    "references": [
-      "RCM Trimetazidina 20mg · Infarmed · https://www.infarmed.pt/documents/15786/1577857/RCM_Trimetazidina20mgcomprevestidos/eb5df257-ef62-4618-8ab7-c6cfafc96bde",
-      "Trimetazidine Article 31 Annex III · EMA · https://www.ema.europa.eu/en/documents/referral/trimetazidine-article-31-annex-iii_en.pdf"
-    ]
-  },
-  {
     "slug": "trimetazidina",
     "review_status": "pendente_revisao",
-    "generic_name": "Trimetazidina",
+    "generic_name": "Trimetazidina (dicloridrato)",
     "drug_class": "Antianginoso metabólico — inibidor parcial da beta-oxidação de ácidos graxos",
     "mechanism": "Inibe parcialmente a enzima 3-cetoacil-CoA-tiolase de cadeia longa, deslocando o metabolismo energético do miocárdio da beta-oxidação de ácidos graxos para a via mais eficiente de oxidação da glicose, otimizando o uso de oxigênio em condições de isquemia sem efeito hemodinâmico (não altera FC ou PA) — mecanismo complementar aos antianginosos hemodinâmicos (betabloqueadores, BCC, nitratos)",
     "indications": [
       "Tratamento sintomático adjuvante da angina pectoris estável, em pacientes não adequadamente controlados ou com intolerância a terapias antianginosas de primeira linha"
     ],
     "adverse_effects": [
-      "Gastrointestinais: dor abdominal, dispepsia, náusea, vômito. Cardiovascular: palpitação. O alerta mais importante são os **distúrbios do movimento** — sintomas parkinsonianos (tremor, acinesia, hipertonia), síndrome das pernas inquietas, instabilidade de marcha — que exigem suspensão definitiva do fármaco quando ocorrem, não só redução de dose. Geralmente reversíveis, mas a resolução pode levar até 4 meses após a suspensão; se persistir além disso, encaminhar à neurologia."
+      "Gastrointestinais: dor abdominal, dispepsia, náusea, vômito. Cardiovascular: palpitação. O alerta mais importante são os **distúrbios do movimento** — sintomas parkinsonianos (tremor, acinesia, hipertonia), síndrome das pernas inquietas, instabilidade de marcha — que exigem suspensão definitiva do fármaco quando ocorrem, não só redução de dose. Geralmente reversíveis, mas a resolução pode levar até 4 meses após a suspensão; se persistir além disso, encaminhar à neurologia.",
+      "Tontura, cefaleia, distúrbios GI, sintomas extrapiramidais (parkinsonismo, tremor), síndrome das pernas inquietas"
     ],
-    "monitoring": [
-      "Vigilância clínica periódica para sinais precoces de distúrbio do movimento, especialmente em idoso — tremor, rigidez, alteração de marcha. Reavaliar necessidade de continuidade do tratamento periodicamente, dado o benefício modesto já reconhecido pela própria EMA."
-    ],
+    "monitoring": "**Parkinsonismo é o efeito que define a vigilância deste fármaco.** A trimetazidina pode causar ou agravar sintomas parkinsonianos — tremor, acinesia, hipertonia —, que devem ser **investigados regularmente**, sobretudo em idosos. O quadro é **reversível com a descontinuação**, o que torna o reconhecimento precoce decisivo: um idoso com tremor novo em uso de trimetazidina pode estar sendo investigado para doença de Parkinson quando o que existe é efeito de fármaco.\n\nVigilância clínica periódica para sinais precoces de distúrbio do movimento, especialmente em idoso — tremor, rigidez, alteração de marcha. Reavaliar necessidade de continuidade do tratamento periodicamente, dado o benefício modesto já reconhecido pela própria EMA.",
     "contraindications": [
       "Doença de Parkinson",
       "Tremor essencial",
       "Síndrome das pernas inquietas e outros distúrbios do movimento",
       "Insuficiência renal grave",
-      "Hipersensibilidade"
+      "Hipersensibilidade",
+      "Tremor essencial e outros distúrbios do movimento",
+      "Insuficiência renal grave (ClCr<15mL/min)"
     ],
     "dosing": {
-      "Dose padrão": "35 mg de liberação modificada, 2x/dia, sempre como terapia adjuvante a outro antianginoso (betabloqueador, BCC ou nitrato) — nunca como monoterapia de primeira linha",
-      "Insuficiência renal moderada (ClCr 30-60 mL/min)": "reduzir para 20 mg de liberação imediata 2x/dia",
-      "Insuficiência renal grave (ClCr < 30 mL/min)": "contraindicado",
-      "Idoso": "maior exposição ao fármaco por redução renal relacionada à idade — titular com cautela",
-      "fonte": "EMA (revisão CHMP 2012); Infarmed; Vinmec"
+      "apresentacao": "Comprimido revestido de **35 mg de dicloridrato de trimetazidina**, equivalente a 27,48 mg de trimetazidina base, em liberação modificada. Existe também apresentação de 20 mg de liberação imediata.",
+      "dose padrao": "**35 mg duas vezes ao dia** — manhã e noite, **junto das refeições**, com um copo de água. Na apresentação de 20 mg de liberação imediata, 3 vezes ao dia às refeições.",
+      "posicao terapeutica": "**Terapia adjuvante**, em quem não está adequadamente controlado ou não tolera os antianginosos hemodinâmicos de primeira linha (betabloqueador, bloqueador de canal de cálcio, nitrato). **Nunca como monoterapia de primeira linha.**",
+      "insuficiencia renal moderada (clcr 30-60)": "**35 mg uma vez ao dia, pela manhã.**\n\n**Os dois verbetes fundidos estavam errados neste ponto, cada um à sua maneira**: um dizia para reduzir a 20 mg de liberação imediata duas vezes ao dia, o outro dizia 20 mg duas vezes ao dia. A bula brasileira reduz a **frequência** da apresentação de liberação modificada, mantendo a dose — não troca de apresentação.",
+      "insuficiencia renal grave (clcr < 30)": "A exposição plasmática é cerca de **2 vezes maior** que com clearance acima de 60 mL/min. VERIFICAÇÃO HUMANA NECESSÁRIA para o estatuto formal — um dos verbetes fundidos afirmava contraindicação, e o texto que consultei descreve o aumento de exposição sem que eu tenha localizado a palavra contraindicação. Conferir na seção de contraindicações da bula antes de prescrever nesta faixa.",
+      "idosos": "Maior exposição por redução da função renal ligada à idade. Iniciar mais baixo e titular com cautela, sobretudo a partir dos 75 anos.",
+      "reavaliacao obrigatoria": "**Avaliar o benefício em 3 meses e descontinuar se não houver resposta.** É parte da posologia, não uma sugestão.",
+      "fonte": "Bula profissional brasileira de VASTAREL MR (dicloridrato de trimetazidina), Laboratórios Servier do Brasil. **Substitui as fontes anteriores**, que eram portuguesa (Infarmed) e de um hospital estrangeiro."
     },
     "notes": {
       "Particularidade regulatoria": "Uso restrito em alguns países (ex: alerta EMA) devido a risco de sintomas parkinsonianos e outros distúrbios do movimento, especialmente em idosos — reavaliar necessidade de continuidade periodicamente"
@@ -3430,7 +3280,12 @@
       "RCM Trimetazidina 20mg · Infarmed · https://www.infarmed.pt/documents/15786/1577857/RCM_Trimetazidina20mgcomprevestidos/eb5df257-ef62-4618-8ab7-c6cfafc96bde",
       "Parecer Trimetazidina · Secretaria de Estado da Saúde de MG · 2022 · https://www.saude.mg.gov.br/wp-content/uploads/2025/01/Parecer-Trimetazidina.pdf",
       "Restricted indications and new contraindication for trimetazidine — EMA/CHMP review 2012, via HSA Singapore",
-      "Trimetazidine Article 31 — EMA referral document"
+      "Trimetazidine Article 31 — EMA referral document",
+      "Trimetazidine Article 31 Annex III · EMA · https://www.ema.europa.eu/en/documents/referral/trimetazidine-article-31-annex-iii_en.pdf",
+      "Bula do profissional de saúde de VASTAREL MR (dicloridrato de trimetazidina 35 mg), Laboratórios Servier do Brasil Ltda. — composição, posologia, reações adversas."
+    ],
+    "presentations": [
+      "Comprimidos revestidos de liberação modificada de 20mg e 35mg"
     ]
   },
   {
@@ -3549,10 +3404,10 @@
     "dosing": {
       "apresentacao e vias": "Solução injetável de **20 U/mL**, ampola de 1 mL. Vias subcutânea, intramuscular e intravenosa — esta em bolus ou infusão contínua.",
       "choque septico": "**0,01 a 0,04 unidades por minuto em infusão contínua.** É a indicação cardiovascular mais usada hoje, e a diretriz de sepse a coloca como adjuvante à noradrenalina, com o objetivo de elevar a pressão arterial média ou de reduzir a dose de noradrenalina.",
-      "parada cardiorrespiratoria — leia a ressalva": "A bula brasileira traz **40 U por via intravenosa ou intraóssea**, no lugar da primeira ou segunda dose de epinefrina, em assistolia, AESP e FV/TV sem pulso.\n\n**A ressalva é essencial e está na própria bula**: ela atribui essa recomendação ao *algoritmo de tratamento da PCR da American Heart Association, 2005*. Esse algoritmo mudou desde então — a vasopressina foi **retirada** do algoritmo de parada do adulto por não demonstrar vantagem sobre a epinefrina isolada. O número continua na bula porque a bula não foi atualizada, não porque a recomendação siga vigente. Seguir o protocolo de suporte avançado de vida adotado no serviço, não este campo.",
+      "parada cardiorrespiratoria — leia a ressalva": "A bula brasileira traz **40 U por via intravenosa ou intraóssea**, no lugar da primeira ou segunda dose de epinefrina, em assistolia, AESP e FV/TV sem pulso — e ela própria atribui essa recomendação ao *algoritmo da American Heart Association de 2005*.\n\n**Esse esquema não vale mais, e agora com fonte brasileira: a Diretriz de Ressuscitação Cardiopulmonar da SBC de 2019 afirma que *a vasopressina não é mais indicada como droga vasopressora na PCR* e que *não oferece vantagem em relação à administração da adrenalina e não deve ser utilizada de rotina* (Classe IIb, Nível de Evidência B).** O número permanece na bula porque a bula não foi atualizada.\n\nOnde a mesma diretriz ainda a considera: **anafilaxia com ou sem parada, não responsiva à epinefrina** (Classe IIb, Nível C) — cenário distinto e bem mais estreito.",
       "distensao abdominal pos operatoria": "5 unidades (0,25 mL) por via intramuscular, podendo subir a 10 unidades (0,5 mL) nas injeções seguintes, repetidas a cada 3 ou 4 horas se necessário. Doses proporcionalmente menores em pediatria.",
       "outras indicacoes registradas": "Radiografia abdominal (duas injeções intramusculares de 10 unidades, duas horas e meia hora antes da exposição), diabetes insipidus e hemorragia gastrointestinal.",
-      "fonte": "Bula profissional brasileira de vasopressina 20 U/mL, seções de indicações, resultados de eficácia e posologia. **A lacuna anterior está resolvida** — o verbete não tinha nenhuma dose. A ressalva sobre a parada é do próprio texto da bula, que declara a origem da recomendação."
+      "fonte": "Bula profissional brasileira de vasopressina 20 U/mL para as demais indicações, e Diretriz de Ressuscitação Cardiopulmonar da SBC de 2019 para a situação na parada. **A lacuna anterior está resolvida** — o verbete não tinha nenhuma dose."
     },
     "outcomes": {
       "Evidencia pivotal — VASST": "- **desenho**: comparação randomizada entre vasopressina em baixa dose associada a noradrenalina aberta versus noradrenalina isolada, em pacientes com choque séptico - **resultado**: mortalidade em 28 dias de 35,4% no grupo vasopressina versus 39,3% no grupo controle (diferença não estatisticamente significativa); em subgrupo com dose basal de noradrenalina mais baixa (≤14 mcg/min), vasopressina associou-se a redução de mortalidade de quase 10% - **fonte**: N Engl J Med (VASST)",
@@ -3562,7 +3417,8 @@
       "Vasopressin in Sepsis and Other Shock States: State of the Art · Journal of Personalized Medicine · https://pmc.ncbi.nlm.nih.gov/articles/PMC10672256/",
       "Russell JA et al. Vasopressin versus Norepinephrine Infusion in Patients with Septic Shock (VASST). N Engl J Med. 2008;358(9):877-887.",
       "Gordon AC et al. Effect of Early Vasopressin vs Norepinephrine on Kidney Failure in Patients with Septic Shock: The VANISH Randomized Clinical Trial. JAMA. 2016;316(5):509-518.",
-      "Bula profissional de vasopressina (Encrise, solução injetável 20 U/mL), Biolab — seções 1, 2 e 8. Versão brasileira."
+      "Bula profissional de vasopressina (Encrise, solução injetável 20 U/mL), Biolab — seções 1, 2 e 8. Versão brasileira.",
+      "Bernoche C, Timerman S, Polastri TF, et al. Atualização da Diretriz de Ressuscitação Cardiopulmonar e Cuidados Cardiovasculares de Emergência da Sociedade Brasileira de Cardiologia — 2019. Arq Bras Cardiol. 2019;113(3):449-663. PMID: 31621787"
     ]
   },
   {
@@ -3581,7 +3437,12 @@
       "Síndrome do nódulo sinusal (exceto com marca-passo)",
       "Insuficiência cardíaca congestiva",
       "Flutter/FA com via acessória (WPW, Lown-Ganong-Levine) — risco de FV",
-      "Uso concomitante com ivabradina"
+      "Uso concomitante com ivabradina",
+      "Não devem ser usados em combinação com betabloqueador por via IV (risco de bloqueio AV grave/assistolia) e uso combinado oral requer cautela extrema",
+      "Disfunção sistólica de VE grave (FE reduzida)",
+      "Bloqueio AV 2º/3º grau sem marcapasso",
+      "Doença do nó sinusal",
+      "Síndrome de Wolff-Parkinson-White com FA (risco de condução preferencial pela via acessória)"
     ],
     "adverse_effects": [
       "Cefaleia e tontura (comuns); constipação (7%, o mais frequente) e náusea (3%); bradicardia (comum); edema periférico (comum); parestesia, tremor, sonolência (raros); hipotensão (3%)"
@@ -3600,7 +3461,9 @@
       "endovenoso": "**Adulto**: dose inicial de **5 mg por via intravenosa lenta, em cerca de 2 minutos**, em todas as indicações.\n\n**Pediátrico** (bula da apresentação injetável, 5 mg/2 mL):\n- **Recém-nascidos**: 0,75 a 1 mg (0,3 a 0,4 mL)\n- **Lactentes**: 0,75 a 2 mg (0,3 a 0,8 mL)\n- **1 a 5 anos**: 2 a 3 mg (0,8 a 1,2 mL)\n- **5 a 14 anos**: 2,5 a 5 mg (1 a 2 mL)\n\n**A instrução de segurança que faltava, e que responde ao alerta de colapso hemodinâmico**: em recém-nascido e lactente que apresente sintomas de insuficiência cardíaca dependente da taquicardia — esgotamento energético do miocárdio —, a bula determina **digitalizar antes** da administração intravenosa. Não é cautela genérica: é uma etapa prévia exigida.\n\nA bula registra também que **não há estudo controlado em pediatria**; a base é a experiência com mais de 250 pacientes, metade abaixo de 12 meses e cerca de um quarto recém-nascidos, com resultados descritos como semelhantes aos de adultos."
     },
     "notes": {
-      "Farmacocinetica": "Metabolização hepática extensa (principal metabólito ativo: norverapamil); início de ação VO 1-2h, IV 1-5min (efeitos antiarrítmicos) ou 3-5min (efeitos hemodinâmicos)"
+      "Farmacocinetica": "Metabolização hepática extensa (principal metabólito ativo: norverapamil); início de ação VO 1-2h, IV 1-5min (efeitos antiarrítmicos) ou 3-5min (efeitos hemodinâmicos)",
+      "Diferenca para os diidropiridinicos": "Inibem influxo de cálcio em células musculares lisas vasculares E em tecido cardíaco (nó sinusal, nó AV, miocárdio), diferente dos dihidropiridínicos (anlodipino) que agem quase exclusivamente sobre vasculatura; efeito combinado: redução de FC, retardo de condução AV e depressão discreta de contratilidade",
+      "Particularidade em insuficiencia cardiaca": "Contraindicados em ICFER com FE reduzida devido ao efeito inotrópico negativo — diferente dos dihidropiridínicos, que são relativamente seguros em IC quando necessários para controle pressórico"
     },
     "references": [
       "Verapamil hydrochloride — rótulo aprovado pelo FDA, DailyMed SPL setid df79ee3a-f0ed-1cc7-e053-2995a90af97f",
