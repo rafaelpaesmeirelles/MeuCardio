@@ -4,7 +4,7 @@ slug: adenosina
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["ADENOSINA — Guia Farmacêutico · Hospital Sírio-Libanês · https://guiafarmaceutico.hsl.org.br/adenosina"]
+source_refs: ["Adenosine injection (agente de estresse farmacológico) — rótulo aprovado pelo FDA, DailyMed SPL setid b6851256-6cef-4f23-8129-19bb64380cd5, Meitheal Pharmaceuticals", "Adenosine injection (taquicardia supraventricular paroxística) — rótulo aprovado pelo FDA, DailyMed SPL setid d28ff4f3-baf4-4640-ae00-f0eb065417be, Henry Schein"]
 legacy_source: "medicamentos/banco-de-medicamentos-adenosina.md"
 ---
 
@@ -28,13 +28,13 @@ Conversão de taquicardia supraventricular paroxística, incluindo a associada �
 - **tsvp adulto terceira dose**: Uma terceira dose de 12mg pode ser administrada se necessário
 - **tsvp pediatria inicial**: 0,05-0,1 mg/kg (dose máxima inicial 6mg)
 - **tsvp pediatria titulacao**: Se não houver conversão em 1-2min, aumentar em 0,05-0,1mg/kg; repetir até ritmo sinusal ou dose única máxima de 0,3mg/kg ou 12mg
-- **teste estresse farmacologico**: 12 mg como dose única (adulto e pediatria)
+- **teste estresse farmacologico**: 0,14 mg/kg/min em infusão intravenosa contínua por 6 minutos (dose total de 0,84 mg/kg), com o radiotraçador injetado no ponto médio da infusão. **Não é bolus**: a versão anterior deste verbete indicava 12 mg em dose única, o que confunde o produto de reversão de TSVP com o agente de estresse farmacológico
 - **ajuste renal hepatico**: Não é necessário ajuste
 - **via administracao**: EV rápido, em bolus, seguido de flush de 20mL de soro fisiológico a cada dose
-- **fonte**: Guia Farmacêutico HSL
+- **fonte**: rótulos aprovados pelo FDA (DailyMed). Doses de TSVP conferidas no rótulo do produto de reversão; a de estresse farmacológico, no rótulo do agente de perfusão miocárdica
 
 ## Interacoes criticas
-Carbamazepina e dipiridamol potencializam o efeito da adenosina — reduzir dose inicial para 3mg se uso concomitante
+O dipiridamol bloqueia o transporte de nucleosídeos e **potencializa** a adenosina — o rótulo diz que doses menores podem ser eficazes, sem fixar um valor (VERIFICAÇÃO HUMANA NECESSÁRIA para o corte de 3 mg que circulava aqui, que não está no rótulo). A carbamazepina é situação diferente: o rótulo relata **aumento do grau de bloqueio AV**, não potencialização do efeito antiarrítmico, e a conduta é cautela, não redução de dose. Metilxantinas (cafeína, teofilina) antagonizam competitivamente a adenosina e podem torná-la ineficaz
 
 ## Precaucoes
 Evitar em pacientes com bradicardia sintomática e/ou broncoespasmo/broncoconstrição — pode exacerbar esses sintomas
