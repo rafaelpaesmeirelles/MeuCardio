@@ -4,7 +4,7 @@ slug: anlodipino-besilato
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["Anlodipino: bula, para que serve e como usar · Consulta Remédios/ANVISA · 2023 · https://consultaremedios.com.br/anlodipino/bula"]
+source_refs: ["Amlodipine besylate tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 27b0c628-820a-48bf-a411-86c0ebd4cc8d"]
 legacy_source: "medicamentos/banco-de-medicamentos-anlodipino-2.md"
 ---
 
@@ -29,7 +29,7 @@ Biodisponibilidade absoluta 64-80%; pico plasmático em 6-12h; ligação proteic
 - **insuficiencia hepatica**: Administrar com cuidado (clearance reduzido)
 - **insuficiencia renal**: Doses habituais podem ser empregadas — não é dialisável
 - **administracao**: Com ou sem alimentos, não deve ser partido/mastigado
-- **fonte**: Consulta Remédios/ANVISA — bula LFM
+- **fonte**: rótulo do anlodipino aprovado pelo FDA (DailyMed). Apresentações comerciais brasileiras devem ser conferidas na bula registrada na ANVISA
 
 ## Evidencia camelot
 Estudo CAMELOT (1997 pacientes com DAC) comparou anlodipino vs. placebo em adição a terapia padrão: redução de 31% no desfecho cardiovascular composto (p=0,003), 42% em hospitalização por angina (p=0,002) e 27% em revascularização coronária (p=0,033)
@@ -41,7 +41,7 @@ Estudo PREVENT (825 pacientes com DAC angiograficamente definida, seguimento de 
 Estudos PRAISE e PRAISE-2 (IC classes NYHA III-IV, em uso de IECA/digoxina/diurético): anlodipino não aumentou mortalidade nem morbimortalidade combinada, sendo considerado seguro em IC não isquêmica; porém associado a maior relato de edema pulmonar (sem diferença significativa na piora global de IC)
 
 ## Interacoes
-Sinvastatina — avaliar dose se anlodipino ≥20mg/dia (aumenta exposição à sinvastatina); grapefruit/suco de grapefruit reduz efeito; cautela com inibidores (cetoconazol, itraconazol, ritonavir) ou indutores (rifampicina, Hypericum) de CYP3A4; monitorar níveis de ciclosporina e tacrolimo em transplantados; seguro com tiazídicos, betabloqueadores, IECA, nitratos, AINEs, antibióticos e hipoglicemiantes orais
+Sinvastatina — **não exceder 20 mg/dia de sinvastatina** em quem usa anlodipino, porque o anlodipino aumenta a exposição à sinvastatina e o risco de miopatia. A versão anterior deste verbete invertia a advertência, condicionando-a a anlodipino ≥20 mg/dia — dose que nem existe, já que o máximo do anlodipino é 10 mg/dia; grapefruit/suco de grapefruit reduz efeito; cautela com inibidores (cetoconazol, itraconazol, ritonavir) ou indutores (rifampicina, Hypericum) de CYP3A4; monitorar níveis de ciclosporina e tacrolimo em transplantados; seguro com tiazídicos, betabloqueadores, IECA, nitratos, AINEs, antibióticos e hipoglicemiantes orais
 
 ## Efeitos adversos
 Cefaleia, tontura, sonolência, palpitações, rubor facial, edema periférico (dose-dependente), fadiga; menos comuns: hiperplasia gengival, ginecomastia, disfunção erétil; raros: hepatite/icterícia colestática, angioedema
