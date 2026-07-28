@@ -48,9 +48,12 @@ def verificar(caminho):
     # Todo fluxo tem de descomprimir e o /Length tem de bater com o real.
     texto_total, fluxos = 0, 0
     for i, corpo_obj in objetos.items():
-        if b"stream" not in corpo_obj: continue
+        # `stream` tem de ser a palavra-chave que abre o fluxo, não qualquer
+        # ocorrência: o titulo "rastreamento" contem a substring e fazia o
+        # validador tratar o objeto /Info como se fosse um fluxo.
+        if not re.search(rb">>\s*stream\r?\n", corpo_obj): continue
         fluxos += 1
-        ini = corpo_obj.find(b"stream") + 7
+        ini = re.search(rb">>\s*stream\r?\n", corpo_obj).end()
         fim = corpo_obj.rfind(b"endstream")
         dados = corpo_obj[ini:fim].strip(b"\r\n")
         declarado = int(re.search(rb"/Length (\d+)", corpo_obj).group(1))

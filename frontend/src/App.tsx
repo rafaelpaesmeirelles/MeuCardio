@@ -5,6 +5,7 @@ import { useAuth } from "./lib/auth";
 import Entrar from "./pages/Entrar";
 import Painel from "./pages/Painel";
 import Trilhas from "./pages/Trilhas";
+import MaterialPaciente from "./pages/MaterialPaciente";
 import Trilha from "./pages/Trilha";
 import Checklists from "./pages/Checklists";
 import ChecklistAlta from "./pages/ChecklistAlta";
@@ -76,6 +77,8 @@ export default function App() {
         <Route path="estudos" element={<Estudos />} />
         <Route path="estudos/:slug" element={<Estudo />} />
         <Route path="trilhas" element={<Trilhas />} />
+
+        <Route path="material-paciente" element={<MaterialPaciente />} />
         <Route path="trilhas/:slug" element={<Trilha />} />
         <Route path="checklists" element={<Checklists />} />
         <Route path="checklists/alta/:id" element={<ChecklistAlta />} />

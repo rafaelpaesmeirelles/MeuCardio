@@ -5,6 +5,7 @@ import remarkGfm from "remark-gfm";
 import { api } from "../lib/api";
 import { Carregando, Erro, SeloRevisao } from "../components/Estado";
 import Fluxograma from "../components/Fluxograma";
+import ExportarApresentacao from "../components/ExportarApresentacao";
 
 /** Extrai o código de um bloco ```mermaid```; devolve null para qualquer outro
  * bloco. Sobrescrevemos `pre` em vez de `code` porque o diagrama é uma <div>, e
@@ -44,6 +45,8 @@ export default function Documento() {
         <SeloRevisao status={doc.review_status} />
         <span className="selo">versão {doc.version}</span>
       </div>
+
+      <ExportarApresentacao slug={slug!} titulo={doc.title} />
 
       <div className="cartao">
         <Markdown

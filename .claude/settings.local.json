@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git config *)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(ssh -T -o BatchMode=yes git@github.com)",
+      "Bash(git check-ignore *)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(docker compose *)",
+      "Bash(docker exec *)",
+      "Bash(echo \"tabela ainda existe? -> $\\(docker exec migtest psql -U test -d test -tAc \"select count\\(*\\) from information_schema.tables where table_name='subscriptions';\"\\)\")",
+      "WebSearch",
+      "Bash(python3 -c ' *)",
+      "Bash(npx --prefix frontend tsc --noEmit -p frontend/tsconfig.json)",
+      "Bash(docker run *)",
+      "Bash(break)",
+      "Bash(docker stop *)",
+      "Bash(curl -s -o /dev/null -w 'site: HTTP %{http_code}\\\\n' https://meucardio.med.br/)",
+      "Bash(curl -s -o /dev/null -w 'raiz:        HTTP %{http_code}\\\\n' https://meucardio.med.br/)",
+      "Bash(curl -s -o /dev/null -w '/assinatura: HTTP %{http_code}\\\\n' https://meucardio.med.br/assinatura)",
+      "Bash(curl -s -I https://meucardio.med.br/)",
+      "Bash(curl -s https://meucardio.med.br/)",
+      "Bash(timeout 400 docker build --target build -t meucardio-frontend-builder -f Dockerfile.prod .)",
+      "Bash(docker rmi *)",
+      "WebFetch(domain:www.acc.org)"
+    ]
+  }
+}

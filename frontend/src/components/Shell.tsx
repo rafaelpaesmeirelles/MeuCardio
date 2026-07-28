@@ -21,6 +21,7 @@ const NAV_BASE: ItemNav[] = [
   { to: "/favoritos", rotulo: "Favoritos", curto: "Favoritos" },
   { to: "/round", rotulo: "Round hospitalar", curto: "Round" },
   { to: "/agenda", rotulo: "Agenda", curto: "Agenda" },
+  { to: "/material-paciente", rotulo: "Material para o paciente", curto: "Paciente" },
   { to: "/documentos", rotulo: "Modelos de documento", curto: "Documentos" },
   { to: "/trilhas", rotulo: "Trilhas de estudo", curto: "Trilhas" },
   { to: "/checklists", rotulo: "Checklist de alta", curto: "Alta" },

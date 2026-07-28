@@ -120,6 +120,8 @@ FRENTES = {
     "medicamentos": ("/medicamentos/metadados.json", "carregar_drugs", "Drug"),
     "checklists": ("/checklists/metadados.json", "carregar_checklists", "DischargeChecklist"),
     "trilhas": ("/trilhas/metadados.json", "carregar_trilhas", "StudyTrack"),
+    "material_paciente": ("/material-paciente/metadados.json",
+                          "carregar_material_paciente", "PatientMaterial"),
 }
 
 
@@ -131,11 +133,12 @@ def _modelo(nome: str):
     from app.models.checklist import DischargeChecklist
     from app.models.study_track import StudyTrack
     from app.models.study import ScientificStudy
+    from app.models.patient_material import PatientMaterial
 
     return {"GalleryImage": GalleryImage, "LabTest": LabTest,
             "EvidenceRecord": EvidenceRecord, "ScientificStudy": ScientificStudy,
             "Drug": Drug, "DischargeChecklist": DischargeChecklist,
-            "StudyTrack": StudyTrack}[nome]
+            "StudyTrack": StudyTrack, "PatientMaterial": PatientMaterial}[nome]
 
 
 @router.post("/conteudo/carregar")

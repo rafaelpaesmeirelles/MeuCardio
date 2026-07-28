@@ -83,6 +83,31 @@ export const api = {
     return res.blob();
   },
 
+  /** Igual ao `blob`, mas com corpo JSON. Existe porque a exportação em modo
+   *  apresentação recebe a anotação do médico no corpo da requisição: ela pode
+   *  ter algumas linhas, o que não cabe bem em query string, e não deve ficar
+   *  registrada no log de acesso do servidor como uma URL ficaria. */
+  async blobPost(p: string, corpo: unknown): Promise<Blob> {
+    const headers = new Headers({ "Content-Type": "application/json" });
+    const t = token.get();
+    if (t) headers.set("Authorization", `Bearer ${t}`);
+    const res = await fetch(`${BASE}${p}`, {
+      method: "POST",
+      headers,
+      body: JSON.stringify(corpo),
+    });
+    if (res.status === 401) {
+      token.clear();
+      window.location.assign("/entrar");
+      throw new ApiError(401, "Sessão expirada.");
+    }
+    if (!res.ok) {
+      const detail = await res.json().catch(() => null);
+      throw new ApiError(res.status, detail?.detail ?? "Não foi possível gerar o arquivo.");
+    }
+    return res.blob();
+  },
+
   async login(email: string, password: string) {
     const form = new URLSearchParams({ username: email, password });
     const res = await fetch(`${BASE}/auth/login`, {
