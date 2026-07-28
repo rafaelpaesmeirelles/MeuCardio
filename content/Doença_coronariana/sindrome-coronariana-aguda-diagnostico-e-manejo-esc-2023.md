@@ -4,55 +4,73 @@ slug: sindrome-coronariana-aguda-diagnostico-e-manejo-esc-2023
 theme: "Doença coronariana"
 kind: protocolo
 review_status: pendente_revisao
-source_refs: ["2023 ESC Guidelines for the management of acute coronary syndromes · European Heart Journal · 2023 · 44(38):3720-3826 · 10.1093/eurheartj/ehad191", "2023 ESC Guidelines for Acute Coronary Syndromes — Ten Points to Remember · ACC · 2023 · https://www.acc.org/latest-in-cardiology/ten-points-to-remember/2023/08/29/14/01/2023-esc-guidelines-acs-esc-2023"]
-legacy_source: "protocolos/protocolo-clinico-sindrome-coronariana-aguda-esc-2023.md"
+source_refs: ["Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654", "2023 ESC Guidelines for Acute Coronary Syndromes — Ten Points to Remember. American College of Cardiology, 2023"]
+legacy_source: "Consolidação de quatro documentos que cobriam a mesma diretriz ESC 2023 na mesma pasta: este, sindrome-coronariana-aguda-espectro-completo-unificado-esc-2023.md (conteúdo quase idêntico, com nomes de seção diferentes), sindrome-coronariana-aguda-diagnostico-e-tratamento-esc-2023-estrutura-detalhada.md (detalhe estrutural único, mas apoiado em link do Scribd) e sindrome-coronariana-aguda-diagnostico-e-tratamento-esc-2023.md (quatro seções declarando que o conteúdo não fora extraído, mais uma nota de trabalho sobre a próxima etapa). Os complementos temáticos da pasta — GRACE, duração de DAPT, timing invasivo e reperfusão no STEMI — continuam como documentos próprios, porque tratam de recortes específicos."
 ---
 
 # Síndrome Coronariana Aguda: Diagnóstico e Manejo (ESC 2023)
 
-## Definicao
-SCA engloba um espectro de condições que incluem pacientes com alterações clínicas recentes de sintomas ou sinais, com ou sem elevação persistente do segmento ST; pela primeira vez, a diretriz ESC unifica recomendações para STEMI e SCA sem elevação de ST (NSTE-ACS) em um único documento
+## Publicacao e coordenacao
+*European Heart Journal* 2023;44(38):3720-3826, com publicação simultânea no *EHJ-Acute Cardiovascular Care*. Coordenação de Robert A. Byrne e Borja Ibañez, com Xavier Rossello e J.J. Coughlan à frente do grupo de trabalho.
 
-## Unificacao stemi nste acs
-Testes diagnósticos, procedimentos invasivos e tratamentos farmacológicos são praticamente os mesmos ao longo do espectro; as diferenças no manejo entre as formas de apresentação relacionam-se principalmente ao tempo da angiografia coronariana invasiva
+## Marco historico: a unificacao
+Pela primeira vez a ESC reúne num documento único as recomendações para **todo o espectro** da síndrome coronariana aguda — infarto com supra de ST, infarto sem supra e angina instável —, substituindo as diretrizes separadas de STEMI (2017) e de NSTE-ACS (2020).
+
+## Conceito de espectro unico
+A síndrome coronariana aguda passa a ser tratada como um contínuo, da angina nova ou progressiva com troponina negativa até o STEMI, o choque cardiogênico e a parada cardíaca. Teste diagnóstico, procedimento invasivo e tratamento farmacológico são amplamente os mesmos ao longo desse espectro — **a diferença principal está no tempo até a angiografia invasiva**.
 
 ## Estrategia invasiva por apresentacao
-- **stemi**: Angiografia invasiva imediata
-- **nste acs muito alto risco**: Angiografia invasiva imediata, equiparada ao STEMI
-- **nste acs geral**: Estratégia invasiva recomendada durante a hospitalização (internação); em pacientes de alto risco, considerar dentro de 24 horas da admissão (estratégia invasiva precoce)
-- **fonte**: ESC Congress News
+- **STEMI**: angiografia invasiva imediata
+- **NSTE-ACS de muito alto risco**: angiografia invasiva imediata, equiparada ao STEMI
+- **NSTE-ACS em geral**: estratégia invasiva durante a internação; em paciente de alto risco, considerar dentro de 24 horas da admissão
 
-## Novidades principais 2023
-- **total novas recomendacoes**: 37 novas recomendações sobre terapia antiplaquetária e anticoagulação, tratamento de doença multiarterial, manejo de complicações da SCA e intensificação de terapia hipolipemiante
-- **tratamento glicemico**: Único recomendação Classe I com nível de evidência A: individualizar tratamento hipoglicemiante conforme comorbidades, refletindo evidência crescente de benefício cardiovascular de terapias específicas
-- **dapt pos revascularizacao cirurgica**: Classe I: retomar dupla terapia antiplaquetária (DAPT) por pelo menos 12 meses após cirurgia de revascularização miocárdica (nível de evidência C)
-- **avaliacao neurologica pos pcr**: Classe I: avaliação de prognóstico neurológico 72 horas após admissão em sobreviventes comatosos de parada cardíaca (nível de evidência C)
-- **estrategias invasivas**: Recomendações Classe I e IIa priorizam intervenção coronariana percutânea (ICP) baseada em gravidade angiográfica e uso de imagem intravascular como guia (níveis de evidência B e A)
-- **implante de dispositivo**: Classe I: marcapasso permanente para bloqueio AV de alto grau não resolvido após infarto do miocárdio, aguardando período de 5 dias (nível de evidência C)
-- **cancer e sca**: Recomendações Classe I e IIa focam em tratamento individualizado (intervencionista e farmacológico) para pacientes oncológicos com SCA, baseado em prognóstico e risco de sangramento (níveis B e C)
-- **manejo longo prazo**: Classe I e IIb: intensificar terapia hipolipemiante durante a hospitalização índice da SCA e considerar colchicina em baixa dose para risco residual (níveis C e A)
-- **cuidado centrado no paciente**: Recomendações Classe I e IIa enfatizam cuidado centrado no paciente e inclusão do paciente na tomada de decisão (níveis B e C)
-- **cautela com desescalonamento**: Classe III: contraindica desescalonamento de terapia antiplaquetária nos primeiros 30 dias pós-SCA e em pacientes oncológicos com plaquetopenia (níveis B e C)
-- **fonte**: ACC Ten Points to Remember
+A diretriz padroniza a nomenclatura em tabela própria, separando estratégia invasiva **imediata**, **precoce** e **seletiva**. Os tempos-alvo em horas para cada uma estão detalhados no documento `sindrome-coronariana-aguda-timing-invasivo-e-dapt-esc-2023.md`.
 
-## Manejo cancer sca detalhado
-Pacientes oncológicos com SCA são reportados como recebendo manejo invasivo com menor frequência; porém, manejo invasivo é recomendado em pacientes com SCA de alto risco e sobrevida esperada de 6 meses ou mais. Estratégia conservadora não invasiva deve ser considerada em pacientes com prognóstico oncológico ruim (sobrevida esperada menor que 6 meses) e/ou risco de sangramento muito alto. Interrupção temporária da terapia oncológica é recomendada quando suspeita de ser causa contribuinte da SCA
+## Triagem e ferramentas diagnosticas
+- **algoritmos de troponina**: algoritmos de descarte, confirmação e observação com troponina cardíaca de alta sensibilidade em **0h/1h** ou **0h/2h**, para quem chega ao pronto-socorro com suspeita de infarto sem supra e sem indicação de angiografia imediata
+- **fatores de confusão**: a diretriz alerta para idade, função renal e tempo desde o início dos sintomas na interpretação da troponina
+- **triagem inicial**: sistema **A.C.S.** — *Abnormal ECG? Clinical context? Stable patient?* — proposto como ferramenta rápida de triagem
 
-## Cuidado centrado paciente secao nova
-Seção inédita sobre perspectivas do paciente foi incorporada pela primeira vez na área de SCA; recomenda-se incluir pacientes na tomada de decisão sempre que possível, informando-os sobre risco de eventos adversos, exposição à radiação e opções alternativas. Envolvimento e educação do paciente devem ser vistos como processo contínuo, com preparação para alta iniciando já na admissão
+## Farmacoterapia da fase aguda
+Seção dedicada a oxigênio, nitrato, alívio da dor e betabloqueador endovenoso como medidas iniciais.
 
-## Reabilitacao cardiaca
-Recomendado que todos os pacientes com SCA participem de programa de exercício estruturado, supervisionado por equipe médica, abrangente e multidisciplinar de reabilitação cardíaca e prevenção, além de adoção de estilo de vida saudável
+## Terapia antitrombotica
+- **desescalada**: o conceito é formalizado — troca de inibidor potente de P2Y12 (ticagrelor ou prasugrel) por clopidogrel após período inicial, como estratégia de redução de risco hemorrágico
+- **duração da DAPT**: seção dedicada às estratégias de encurtamento nos primeiros 12 meses para reduzir sangramento
+- **quem também precisa de anticoagulante oral**: regime próprio para quem tem fibrilação atrial associada, com escolha entre terapia antitrombótica dupla e tripla
+- **cautela obrigatória**: **Classe III** contra desescalonamento nos primeiros **30 dias** após a síndrome coronariana aguda, e em paciente oncológico com plaquetopenia
 
-## Criterios internacao
+Os regimes de dose por cenário estão em tabela própria da diretriz. VERIFICAÇÃO HUMANA NECESSÁRIA para a posologia exata de antiagregante e anticoagulante — nenhum dos documentos consolidados aqui a trazia, e dose de antitrombótico não se preenche por inferência.
 
-## Criterios uti
+## Novidades de 2023
+São **37 novas recomendações** sobre terapia antiplaquetária e anticoagulante, doença multiarterial, complicações da síndrome coronariana aguda e intensificação de hipolipemiante, além de seis recomendações específicas para o paciente oncológico.
 
-## Doses farmacologicas especificas
- — diretriz completa (Eur Heart J 2023;44:3720-3826) deve ser consultada para posologia exata de antiplaquetários e anticoagulantes por cenário clínico
+- **controle glicêmico**: é a **única recomendação Classe I com nível de evidência A** — individualizar o tratamento hipoglicemiante conforme comorbidade, refletindo o benefício cardiovascular de classes específicas
+- **DAPT após revascularização cirúrgica**: Classe I para retomar por pelo menos 12 meses após cirurgia
+- **avaliação neurológica**: Classe I para prognóstico neurológico **72 horas** após a admissão em sobrevivente comatoso de parada cardíaca
+- **estratégias invasivas**: Classe I e IIa priorizam a intervenção percutânea guiada pela gravidade angiográfica e o uso de imagem intravascular
+- **marca-passo**: Classe I para marca-passo permanente em bloqueio atrioventricular de alto grau não resolvido após o infarto, respeitada a espera de **5 dias**
+- **manejo de longo prazo**: Classe I para intensificar hipolipemiante **durante a internação índice**; Classe IIb para considerar colchicina em dose baixa no risco residual
+
+## Cancer e sindrome coronariana aguda
+O paciente oncológico recebe manejo invasivo com menos frequência do que deveria. A recomendação é de **manejo invasivo quando o risco é alto e a sobrevida esperada é de 6 meses ou mais**. A estratégia conservadora fica reservada a prognóstico oncológico ruim, com sobrevida esperada abaixo de 6 meses, ou risco de sangramento muito alto. Interromper temporariamente a terapia oncológica é recomendado quando houver suspeita de que ela contribuiu para o evento.
+
+## Choque cardiogenico e minoca
+- **choque cardiogênico**: capítulo dedicado, com recomendações próprias, incluindo suporte circulatório mecânico
+- **MINOCA**: capítulo específico para o infarto sem doença coronariana obstrutiva, com algoritmo diagnóstico dedicado e mapeamento das causas subjacentes
+
+## Situacoes especiais com capitulo proprio
+Infarto tipo 2 e lesão miocárdica aguda; complicações mecânicas do infarto; trombo de ventrículo esquerdo; pericardite pós-síndrome coronariana; fibrilação atrial e arritmia ventricular pós-evento; doença renal crônica; diabetes; idoso com fragilidade; gravidez; uso de drogas; câncer; e COVID-19.
+
+## Cuidado centrado no paciente
+Seção inédita na área de síndrome coronariana aguda. Recomenda-se incluir o paciente na decisão sempre que possível, informando sobre risco de evento adverso, exposição à radiação e alternativas. A diretriz sugere **teach-back** e entrevista motivacional, com educação em fragmentos e verificação de compreensão. O envolvimento é processo contínuo, e a preparação para a alta **começa na admissão**, com material escrito e verbal.
+
+## Reabilitacao e tratamento de longo prazo
+Todo paciente deve participar de programa estruturado e multidisciplinar de reabilitação cardíaca baseado em exercício, com supervisão médica. O tratamento de longo prazo inclui mudança de estilo de vida e farmacoterapia com hipolipemiante, betabloqueador, IECA ou BRA, inibidor de SGLT2, agonista do receptor de GLP-1 e terapia anti-inflamatória.
 
 ## Armadilhas clinicas
-- Desescalonar terapia antiplaquetária nos primeiros 30 dias pós-SCA (contraindicado, Classe III)
-- Não considerar manejo invasivo em paciente oncológico com sobrevida esperada adequada apenas por ter diagnóstico de câncer
-- Negligenciar avaliação de prognóstico neurológico antes de 72h em comatosos pós-parada cardíaca
-- Não incluir paciente na tomada de decisão compartilhada
+- Desescalonar a terapia antiplaquetária nos primeiros 30 dias (contraindicado, Classe III)
+- Negar manejo invasivo a paciente oncológico apenas pelo diagnóstico de câncer, sem considerar a sobrevida esperada
+- Avaliar prognóstico neurológico antes de 72 horas no comatoso pós-parada cardíaca
+- Adiar a intensificação do hipolipemiante para depois da alta, quando a recomendação é fazê-la na internação índice
+- Deixar a preparação para a alta para o dia da alta
