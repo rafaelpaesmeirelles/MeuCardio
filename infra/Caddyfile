@@ -6,7 +6,12 @@
 # `{$DOMAIN}` continua vindo do .env e hoje é meucardio.med.br. Quando a
 # migração estiver confirmada, ele passa a ser corvia.med.br e o antigo vira
 # redirecionamento — não desligamento.
-{$DOMAIN}, {$DOMAIN_NOVO} {
+#
+# `www` entra porque o DNS já resolve para cá: sem estar no bloco, o Caddy não
+# tem certificado para ele e quem digita com www recebe erro de conexão, não
+# uma página. Domínio que resolve e não é atendido é pior do que domínio que
+# não resolve.
+{$DOMAIN}, {$DOMAIN_NOVO}, www.{$DOMAIN_NOVO} {
 	encode gzip zstd
 
 	# API e documentação do backend

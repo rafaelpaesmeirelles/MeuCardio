@@ -70,7 +70,7 @@ class Settings(BaseSettings):
     smtp_port: int = 587
     smtp_user: str = ""
     smtp_password: str = ""
-    smtp_from: str = "Corvia <nao-responda@meucardio.med.br>"
+    smtp_from: str = "Corvia <nao-responda@corvia.med.br>"
     public_url: str = "https://meucardio.med.br"
 
     # --- Stripe / Assinatura -----------------------------------------------
