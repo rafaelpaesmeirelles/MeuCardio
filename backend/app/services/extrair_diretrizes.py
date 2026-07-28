@@ -99,6 +99,10 @@ def analisar_referencia(ref: str) -> dict | None:
         inicio_diretriz = re.search(r'\b(19[89]\d|20[0-4]\d)\s+(ESC|AHA|ACC|SBC|EACTS|ERS|EAS|SCAI)', titulo)
         if inicio_diretriz:
             titulo = titulo[inicio_diretriz.start():]
+    # A citação bibliográfica também sai do título, não só do slug: ela
+    # identifica onde a diretriz foi publicada, não qual diretriz é, e
+    # polui a lista que o admin lê para decidir substituições.
+    titulo = CITACAO.sub('', titulo).strip().rstrip('.,;')
     titulo = titulo.strip()[:300]
 
     doi = DOI.search(ref)

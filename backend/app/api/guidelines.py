@@ -79,8 +79,14 @@ def impacto(slug: str, db: Session = Depends(get_db), _=Depends(require_admin)):
         raise HTTPException(status_code=404, detail="Diretriz não encontrada.")
 
     vinculos = db.query(GuidelineLink).filter(GuidelineLink.guideline_id == g.id).all()
-    ids_doc = [v.item_id for v in vinculos if v.item_type == "documento"]
-    docs = db.query(Document).filter(Document.id.in_(ids_doc)).all() if ids_doc else []
+    ids_ligados = [v.item_id for v in vinculos if v.item_type == "documento"]
+    # Só conteúdo publicado conta como impacto. Documento retido — por estar
+    # em revisão ou por ter sido absorvido numa fusão — continua com vínculo
+    # no banco, mas ninguém o lê, e contá-lo inflaria o alcance do alerta.
+    docs = (db.query(Document)
+              .filter(Document.id.in_(ids_ligados), Document.published.is_(True))
+              .all()) if ids_ligados else []
+    ids_doc = [d.id for d in docs]
 
     favoritos = dict(
         db.query(Favorite.item_id, func.count(func.distinct(Favorite.user_id)))
@@ -101,6 +107,7 @@ def impacto(slug: str, db: Session = Depends(get_db), _=Depends(require_admin)):
             for d in sorted(docs, key=lambda x: x.title)
         ],
         "assinantes_impactados": usuarios,
+        "vinculos_em_conteudo_retido": len(ids_ligados) - len(ids_doc),
         "nota": "Favoritar é o sinal de uso disponível hoje. Assinante que leu sem "
                 "favoritar não é contado — o número é piso, não total.",
     }
