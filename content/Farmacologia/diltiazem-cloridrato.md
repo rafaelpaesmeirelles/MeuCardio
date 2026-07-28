@@ -4,7 +4,7 @@ slug: diltiazem-cloridrato
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["DILTIAZEM — Guia Farmacêutico · Hospital Sírio-Libanês · https://guiafarmaceutico.hsl.org.br/diltiazem", "Cloridrato de Diltiazem: bula, para que serve e como usar · Consulta Remédios/ANVISA · 2021 · https://consultaremedios.com.br/cloridrato-de-diltiazem/bula"]
+source_refs: ["Diltiazem hydrochloride — rótulos aprovados pelo FDA (formulações oral e injetável), consultados no DailyMed"]
 legacy_source: "medicamentos/banco-de-medicamentos-diltiazem.md"
 ---
 
@@ -30,7 +30,7 @@ Bloqueia canais de cálcio tipo L no músculo liso vascular e miocárdio, promov
 - **insuficiencia renal**: Usar com cautela; sem dados específicos de ajuste para hemodiálise
 - **administracao vo**: 15 min antes das refeições para formulação de liberação imediata
 - **diluicao ev**: SF ou SG5%, concentração máxima 1mg/mL; estabilidade de 24h após diluição em bolsas PVC (temperatura ambiente controlada 15-30°C ou refrigeração 2-8°C)
-- **fonte**: Guia Farmacêutico HSL
+- **fonte**: VERIFICAÇÃO HUMANA NECESSÁRIA — as doses desta seção vinham de guia farmacêutico de outra instituição. As faixas conferem com a prática consagrada (0,25 mg/kg EV em 2 minutos, repetição de 0,35 mg/kg, infusão de 5 a 15 mg/h), mas cada valor precisa ser conferido contra a bula registrada na ANVISA e a diretriz de arritmias antes de a marcação sair
 
 ## Indicacoes
 Angina, coronariopatias, hipertensão arterial (VO); fibrilação/flutter atrial, taquicardia supraventricular paroxística (EV)

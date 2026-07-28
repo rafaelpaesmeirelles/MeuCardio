@@ -4,7 +4,7 @@ slug: apixabana
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["Apixabana Medley: bula, para que serve e como usar · Consulta Remédios/ANVISA · 2024 · https://consultaremedios.com.br/apixabana-medley/bula"]
+source_refs: ["Apixaban (ELIQUIS) tablets — rótulo aprovado pelo FDA, DailyMed SPL setid a454cd24-0c6d-46e8-b1e4-197388606175", "Granger CB, Alexander JH, McMurray JJV, et al. Apixaban versus warfarin in patients with atrial fibrillation (ARISTOTLE). N Engl J Med. 2011;365(11):981-992. DOI: 10.1056/NEJMoa1107039. PMID: 21870978"]
 legacy_source: "medicamentos/banco-de-medicamentos-apixabana-completo.md"
 ---
 
@@ -31,18 +31,20 @@ Comprimidos revestidos de 2,5 mg e 5 mg
 - **tvp ep prevencao recorrencia apos 6 meses**: 2,5 mg 2x/dia
 - **ajuste renal leve moderada**: Sem ajuste necessário
 - **ajuste renal grave**: Avaliar criteriosamente; AUC aumenta 44% em ClCr 15-29mL/min
-- **contraindicado clcr menor 15 ou dialise**: Uso não recomendado
+- **doenca renal terminal em dialise**: os rótulos divergem, e a diferença muda conduta. O rótulo aprovado pelo FDA orienta usar a **dose habitual** em doença renal terminal mantida em hemodiálise intermitente, por produzir concentrações semelhantes às observadas no ARISTOTLE (com a ressalva de que esses pacientes não foram incluídos nos ensaios). Já o rótulo europeu não recomenda o uso abaixo de ClCr 15 mL/min. VERIFICAÇÃO HUMANA NECESSÁRIA para o que a bula registrada na ANVISA determina, que é a que vale aqui — a versão anterior deste verbete afirmava apenas 'uso não recomendado', o que retira uma opção que o rótulo americano descreve
 - **ajuste hepatico leve moderado**: Sem ajuste necessário
 - **ajuste hepatico grave**: Não recomendado
 - **cirurgia risco moderado alto sangramento**: Descontinuar ≥48h antes
 - **cirurgia risco baixo sangramento**: Descontinuar ≥24h antes
 - **esquecimento de dose**: Tomar imediatamente e continuar esquema 2x/dia; não dobrar dose
-- **fonte**: Consulta Remédios/ANVISA — bula profissional completa
+- **fonte**: rótulo do apixabana aprovado pelo FDA (DailyMed). Apresentações e restrições registradas no Brasil devem ser conferidas na bula da ANVISA
 
 ## Evidencia pivotal aristotle
 Estudo ARISTOTLE (vs. varfarina, RNI 2-3, em FA não valvular): apixabana demonstrou superioridade estatística no desfecho primário de AVC/embolia sistêmica, superioridade em óbito por qualquer causa, e redução de sangramento maior; hemorragia intracraniana reduzida em >50%, sangramento fatal reduzido em >70%
 
 ## Evidencia averroes
+VERIFICAÇÃO HUMANA NECESSÁRIA — os ensaios AVERROES, AMPLIFY e AMPLIFY-EXT são citados aqui pelo acrônimo, sem referência. Tentei confirmar os três no PubMed nesta sessão e as buscas devolveram publicações posteriores, não os artigos de derivação; por isso não inseri citação. Confirmar antes de tratar os números abaixo como verificados.
+
 Estudo AVERROES (vs. AAS 81-324mg/dia, em pacientes inadequados para AVK): apixabana superior na prevenção de AVC/embolia sistêmica; estudo interrompido precocemente por benefício claro; sem aumento estatisticamente significativo de sangramento maior vs. AAS
 
 ## Evidencia amplify

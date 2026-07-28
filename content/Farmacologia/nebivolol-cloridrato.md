@@ -4,7 +4,7 @@ slug: nebivolol-cloridrato
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["Bula do Cloridrato de Nebivolol · Consulta Remédios/ANVISA · 2020 · https://consultaremedios.com.br/cloridrato-de-nebivolol/bula"]
+source_refs: ["Nebivolol (BYSTOLIC) tablets — rótulo aprovado pelo FDA, indicação de hipertensão arterial"]
 legacy_source: "medicamentos/banco-de-medicamentos-nebivolol.md"
 ---
 
@@ -26,12 +26,12 @@ Metabolizado via CYP2D6 com polimorfismo genético significativo; biodisponibili
 - **hipertensao adulto**: 5 mg (1 comprimido) 1x/dia; efeito evidente em 1-2 semanas, ótimo em até 4 semanas
 - **hipertensao idoso maior 65 anos**: Dose inicial 2,5 mg/dia, podendo aumentar para 5mg/dia
 - **hipertensao insuficiencia renal**: Dose inicial 2,5 mg/dia, podendo aumentar até 5mg/dia
-- **icfer indicacao especifica**: Aprovado para IC em associação com terapêutica padronizada em pacientes idosos ≥70 anos com FEVI ≤35%
+- **icfer indicacao especifica**: aprovado para insuficiência cardíaca em associação à terapia padrão, em idosos a partir de 70 anos. VERIFICAÇÃO HUMANA NECESSÁRIA para o critério de FEVE ≤35% escrito aqui: ele **contradiz a própria seção de evidência deste documento**, que descreve o SENIORS como estudo em idosos com IC independentemente da fração de ejeção. Uma das duas afirmações está errada e é preciso decidir qual contra a bula e o artigo original
 - **icfer titulacao**: 1,25mg 1x/dia → 2,5mg 1x/dia → 5mg 1x/dia → 10mg 1x/dia, com intervalos de 1-2 semanas conforme tolerabilidade; monitorização de pelo menos 2h a cada início/aumento de dose
 - **icfer dose maxima**: 10 mg 1x/dia
 - **insuficiencia hepatica**: Contraindicado — dados limitados
 - **insuficiencia renal grave creatinina maior 250**: Não recomendado — sem experiência clínica
-- **fonte**: Consulta Remédios/ANVISA — bula profissional completa
+- **fonte**: VERIFICAÇÃO HUMANA NECESSÁRIA — a indicação em insuficiência cardíaca **não existe na rotulagem norte-americana**, onde o nebivolol é aprovado apenas para hipertensão; ela vem da rotulagem europeia e brasileira. Conferir a bula registrada na ANVISA para a indicação, a faixa etária e a titulação
 
 ## Evidencia pivotal seniors
 Estudo SENIORS avaliou nebivolol em pacientes idosos com IC independentemente da FEVI, demonstrando prolongamento significativo do tempo até morte ou hospitalização cardiovascular

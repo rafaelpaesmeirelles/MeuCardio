@@ -4,7 +4,7 @@ slug: rivaroxabana
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["Rivaroxabana: bula, para que serve e como usar · Consulta Remédios/ANVISA · 2024 · https://consultaremedios.com.br/rivaroxabana/bula"]
+source_refs: ["Rivaroxaban tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 481b7802-5093-43e7-bbd9-1532197eb6e6", "Patel MR, Mahaffey KW, Garg J, et al. Rivaroxaban versus warfarin in nonvalvular atrial fibrillation (ROCKET AF). N Engl J Med. 2011;365(10):883-891. DOI: 10.1056/NEJMoa1009638. PMID: 21830957"]
 legacy_source: "medicamentos/banco-de-medicamentos-rivaroxabana-completo.md"
 ---
 
@@ -38,10 +38,10 @@ Comprimidos de 10mg, 15mg e 20mg
 - **conversao avk para rivaroxabana**: Iniciar quando RNI <2,5 (TVP/EP) ou <3,0 (FA)
 - **conversao rivaroxabana para avk**: Manter ambos até RNI ≥2,0; medir RNI apenas 24h após dose anterior
 - **esquecimento de dose**: Tomar imediatamente; não dobrar dose no mesmo dia
-- **fonte**: Consulta Remédios/ANVISA — bula profissional completa
+- **fonte**: rótulo da rivaroxabana aprovado pelo FDA (DailyMed). VERIFICAÇÃO HUMANA NECESSÁRIA para o esquema de 15 mg 1x/dia após ICP com stent em fibrilação atrial, que segue o desenho do PIONEER AF-PCI e consta da rotulagem europeia, não da americana — conferir o que a bula registrada na ANVISA autoriza
 
 ## Evidencia pivotal rocket af
-Estudo ROCKET-AF comparou rivaroxabana 20mg/dia (15mg se IR) ao ajuste de dose de varfarina em FA não valvular, demonstrando não-inferioridade na prevenção de AVC/embolismo sistêmico, com redução de sangramento intracraniano e fatal
+O ROCKET-AF comparou rivaroxabana 20 mg/dia (15 mg na insuficiência renal) à varfarina ajustada por INR em fibrilação atrial não valvar. Desfecho de AVC ou embolismo sistêmico na análise por protocolo: 1,7%/ano contra 2,2%/ano, HR 0,79 (IC95% 0,66-0,96), p<0,001 **para não inferioridade**. Na intenção de tratar, HR 0,88 (0,74-1,03), p=0,12 para superioridade. Os autores concluem não inferioridade, não superioridade. Sangramento intracraniano e fatal foram menos frequentes com rivaroxabana, sem diferença significativa no sangramento maior total
 
 ## Contraindicacoes populacoes especiais
 Não recomendado em prótese valvular após TAVR; não recomendado em síndrome antifosfolípide triplo positivo (aumento de trombose recorrente vs. AVK); não recomendado em EP hemodinamicamente instável candidata a trombólise/embolectomia
