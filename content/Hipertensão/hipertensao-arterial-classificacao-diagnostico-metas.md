@@ -130,3 +130,10 @@ Padrão de resposta a fármaco difere entre os dois grupos: hipertensão resiste
 ## Referências
 
 Ver `source_refs` no cabeçalho deste documento.
+
+## Como esta meta se relaciona com a da ESC 2024
+A diretriz brasileira de 2025 fixa **< 130/80 mmHg para todos**, sem estratificar por risco. A diretriz europeia de 2024, descrita nos documentos de hipertensão desta mesma biblioteca, adota alvo **sistólico de 120–129 mmHg e diastólico de 70–79 mmHg** em quem tolera o tratamento.
+
+As duas não se contradizem por erro: são sociedades diferentes, com metodologias e populações de referência diferentes. Mas convivem nesta biblioteca, e o número que aparece muda conforme a página aberta. **Para a prática no Brasil, a referência é a diretriz da SBC.** A meta europeia, mais baixa, é útil para entender a direção do debate e para o paciente em que o alvo mais estrito é buscado e tolerado.
+
+Vale ainda a distinção que costuma confundir na leitura da ESC 2024: **70–89 mmHg é a definição da categoria "pressão elevada"**, não uma meta de tratamento — a meta diastólica é 70–79 mmHg.

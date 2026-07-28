@@ -104,3 +104,8 @@ A abordagem baseada em risco significa priorizar ativamente os pacientes com
 diabetes, doença renal, doença cardiovascular, lesão de órgão-alvo ou
 hipercolesterolemia familiar — grupos em que a mesma cifra de pressão tem
 consequência maior.
+
+## Como esta meta se relaciona com a diretriz brasileira
+O alvo descrito aqui é o da ESC 2024. A **Diretriz Brasileira de Hipertensão Arterial de 2025** (SBC/SBH/SBN) fixa meta diferente: **< 130/80 mmHg para todos**, sem estratificação por risco, e reclassifica 120/80 mmHg como pré-hipertensão.
+
+Não é contradição por erro — são sociedades distintas. Mas, **para a prática no Brasil, a referência é a diretriz da SBC**, detalhada em `hipertensao-arterial-classificacao-diagnostico-metas.md`, nesta mesma pasta. Ela também traz três mudanças que a europeia não tem: o abandono do termo "urgência hipertensiva", a substituição do escore de Framingham/ERG pelo PREVENT e a divisão da hipertensão em três estágios.
