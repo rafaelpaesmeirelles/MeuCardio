@@ -1,14 +1,14 @@
 ---
-title: "Ablação por Catéter em Fibrilação Atrial: Indicações e Técnica"
+title: "Ablação por Cateter em Fibrilação Atrial: Indicações e Técnica"
 slug: ablacao-por-cateter-em-fibrilacao-atrial-indicacoes-e-tecnica
 theme: "Fibrilação atrial"
 kind: estudo
 review_status: pendente_revisao
 source_refs: ["Catheter ablation for atrial fibrillation: indications and future perspective · European Heart Journal · 2024 · 10.1093/eurheartj/ehae618", "2024 European Heart Rhythm Association consensus document on catheter and surgical ablation of AF · EHRA/HRS/APHRS/LAHRS · 2024 · https://academic.oup.com/europace/article/26/4/euae043/7639428", "Upgrade on atrial fibrillation ablation in the new ESC Guidelines · PMC · 2025 · https://pmc.ncbi.nlm.nih.gov/articles/PMC12001759/"]
-legacy_source: "estudos/protocolo-de-ablacao-por-cateter-em-fibrilacao-atrial-esc-2024-ehra-2024.md"
+legacy_source: "Consolidação de três documentos de ablação de FA que coexistiam na mesma pasta: este, ablacao-...-esc-2024.md e ablacao-...-esc-2024-versao-completa.md. Mantido este por ser o mais completo (15 seções) e o único com procedência primária — Eur Heart J com DOI e consenso EHRA/HRS/APHRS/LAHRS. Os outros dois apoiavam-se em vídeo de congresso e posts de portal médico, e um deles trazia seções declarando que o conteúdo não fora extraído, além de uma nota de trabalho sobre a próxima etapa."
 ---
 
-# Ablação por Catéter em Fibrilação Atrial: Indicações e Técnica
+# Ablação por Cateter em Fibrilação Atrial: Indicações e Técnica
 
 ## Definicao
 Avanços recentes em técnicas, tecnologias e superioridade comprovada sobre antiarrítmicos tornaram a ablação por catéter pedra angular do manejo da FA, cuja prevalência aumenta continuamente em população envelhecida globalmente
@@ -58,3 +58,30 @@ Procedimento tipicamente realizado em regime de internação de curta permanênc
 
 ## Armadilhas clinicas
 Realizar ablação com trombo em átrio esquerdo não excluído (contraindicação absoluta); tratar FA persistente apenas com PVI isolado sem considerar estratégias adjuvantes; não considerar gatilhos não relacionados a veia pulmonar em recidiva tardia pós-PVI
+
+## Anticoagulacao no periprocedimento
+- **antes**: anticoagulação por pelo menos 3 semanas antes do procedimento, **independentemente do escore** CHA₂DS₂-VA
+- **durante**: realizar a ablação com o anticoagulante oral direto **não interrompido**
+- **depois**: manter anticoagulação por 2 meses após o procedimento
+- **longo prazo**: passados os 2 meses, a decisão de manter ou suspender segue o escore CHA₂DS₂-VA, e não o resultado da ablação — suspender só se considera em escore muito baixo. Ablação bem-sucedida não é motivo para suspender anticoagulação em quem tem indicação por escore
+
+## Ablacao em fibrilacao atrial assintomatica
+A recomendação passou a contemplar também a FA clínica assintomática, detectada por ECG sistemático ou por monitor com registro eletrocardiográfico — **não por fotopletismografia**. Paciente assintomático com frequência tem carga elevada de FA e relata melhora perceptível após a ablação, mesmo tendo negado sintomas antes.
+
+## Ablacao para evitar marca-passo
+Na síndrome bradicardia-taquicardia, a ablação de FA pode evitar o implante de marca-passo, ao eliminar a arritmia e permitir a suspensão dos antiarrítmicos bradicardizantes que causam a bradicardia.
+
+## Ablacao e insuficiencia cardiaca: detalhamento
+- **cardiomiopatia induzida por taquicardia**: quando há suspeita de que a FA causou a disfunção ventricular, com expectativa de melhora ou normalização da fração de ejeção após a ablação
+- **FA associada a IC sem cura da arritmia**: há evidência (CASTLE-AF e CASTLE-HTX) de melhora clínica e, em parte dos casos, de saída de contextos críticos como fila de transplante ou discussão de suporte circulatório mecânico
+
+## Tecnologia de campo pulsado (PFA)
+A ablação por campo pulsado é fonte de energia não térmica que vem ampliando a discussão sobre indicação precoce, por perfil de segurança distinto das fontes térmicas.
+
+## Divergencia a resolver sobre a linha de indicacao
+VERIFICAÇÃO HUMANA NECESSÁRIA — os documentos que foram consolidados aqui **discordavam entre si** sobre a posição da ablação:
+
+- um afirmava recomendação **Classe I em primeira linha** para FA paroxística, entendida como antes de tentar antiarrítmico e não na primeira crise;
+- outro afirmava ablação como **segunda linha**, após falha de antiarrítmico, com primeira linha apenas em cenários específicos.
+
+A diferença muda conduta e precisa ser resolvida na tabela de recomendações da diretriz ESC 2024, não por síntese de textos secundários. Até lá, as duas leituras ficam registradas aqui de propósito, em vez de uma delas ser escolhida sem fonte.
