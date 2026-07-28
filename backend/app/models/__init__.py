@@ -16,3 +16,4 @@ from app.models.service_order import ServiceOrder, ServiceOrderPatient  # noqa: 
 from app.models.partner_course import PartnerCourse, CourseMaterial, CoursePayment  # noqa: F401
 from app.models.guideline import Guideline, GuidelineLink  # noqa: F401
 from app.models.checklist import DischargeChecklist, DischargeChecklistRun  # noqa: F401
+from app.models.study_track import StudyTrack, StudyTrackProgress  # noqa: F401

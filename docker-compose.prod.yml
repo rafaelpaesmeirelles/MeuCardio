@@ -45,6 +45,7 @@ services:
       - ./estudos:/estudos:ro
       - ./medicamentos:/medicamentos:ro
       - ./checklists:/checklists:ro
+      - ./trilhas:/trilhas:ro
       - ./backend/migrations/versions:/app/migrations/versions
       # Único volume gravável pelo backend: arquivos enviados pelo usuário
       # (foto de perfil). O Caddy monta o mesmo volume como somente-leitura.
