@@ -1704,20 +1704,18 @@
       "Taquicardia reflexa, cefaleia, síndrome lupus-like (uso prolongado em altas doses), retenção hídrica"
     ],
     "dosing": {
-      "hipertensao inicial": "10 mg VO 4x/dia por 2-4 dias, aumentando gradualmente a cada semana para 25 e 50 mg 4x/dia conforme resposta",
-      "hipertensao manutencao": "50-200 mg/dia",
-      "icc cronica inicial": "10-25 mg VO 3-4x/dia",
-      "icc manutencao": "50-75 mg a cada 6h, ou 100 mg 2-3x/dia",
-      "pediatria hipertensao inicial": "0,75-1 mg/kg/dia, dividida em 2-4 doses",
-      "pediatria manutencao": "Até 7,5 mg/kg/dia",
-      "emergencia hipertensiva gestacional": "5 mg (2,5mL) EV em bolus, observando PA a cada 20 min; repetir 10mg se necessário (dose total 20mg); início de efeito em 15-20min, duração 2-6h",
-      "dose maxima adultos": "300 mg/dia",
-      "dose maxima criancas": "200 mg/dia",
-      "fonte": "rótulo da hidralazina aprovado pelo FDA (DailyMed). VERIFICAÇÃO HUMANA NECESSÁRIA para o esquema da emergência hipertensiva gestacional, que vinha de protocolo institucional de terceiro — conferir contra a diretriz de hipertensão na gravidez vigente, porque dose e intervalo nessa indicação variam entre protocolos"
+      "hipertensao adulto (bula brasileira)": "Início com **25 mg 2x/dia**, aumentando gradualmente conforme a resposta, dentro de uma faixa de manutenção eficaz de **50 a 200 mg/dia**. A bula orienta administrar duas vezes ao dia sempre que possível. A versão anterior deste verbete trazia 10 mg 4x/dia como esquema inicial, que é o da **rotulagem norte-americana** — a brasileira começa mais alto e com menos tomadas.",
+      "teto que exige investigacao antes de ultrapassar": "**A dose de 100 mg/dia não deve ser excedida sem determinar a capacidade acetiladora do paciente**, e a bula destaca a mesma cautela **em mulheres**. Não é um teto absoluto: é a fronteira a partir da qual o risco de lúpus induzido por fármaco em acetilador lento deixa de ser aceitável às cegas. Esta advertência não constava deste verbete e é o achado mais relevante desta conferência.",
+      "insuficiencia cardiaca cronica": "Doses habitualmente maiores que na hipertensão e com variação ampla entre pacientes. Após titulação progressiva, a dose média eficaz de manutenção é de **50 a 75 mg a cada 6 horas, ou 100 mg 2 a 3x/dia**.",
+      "ajuste renal e hepatico": "Em disfunção renal moderada a grave — **clearance de creatinina <30 mL/min** ou creatinina sérica **>2,5 mg/dL** — e em disfunção hepática, a dose ou o intervalo entre doses devem ser adaptados.",
+      "gravidez": "A bula orienta **evitar antes do terceiro trimestre**. No fim da gravidez pode ser empregada quando não houver alternativa mais segura, ou quando a doença representar risco sério para a mãe ou para o recém-nascido — **pré-eclâmpsia e eclâmpsia são os exemplos citados pela própria bula**. Mulher que pretende engravidar não deve usar, e confirmada a gravidez o tratamento deve ser interrompido imediatamente.",
+      "emergencia hipertensiva gestacional (endovenosa)": "VERIFICAÇÃO HUMANA NECESSÁRIA — o esquema de 5 mg EV em bolus com repetição, que constava aqui, vinha de protocolo institucional de terceiro. Ele pertence à **bula da apresentação injetável**, que é outro registro e outro detentor, e não foi possível acessá-la nesta conferência. A bula oral acima **não traz posologia endovenosa** — não usar os números orais para a via injetável.",
+      "fonte": "Bula profissional brasileira da Apresolina (drágeas), conferida na íntegra. Cobre apenas a via oral."
     },
     "references": [
       "Hydralazine hydrochloride — rótulo aprovado pelo FDA, DailyMed SPL setid 1275dd50-d97f-2e8f-e063-6394a90a4a67",
-      "Taylor AL, Ziesche S, Yancy C, et al. Combination of isosorbide dinitrate and hydralazine in blacks with heart failure (A-HeFT). N Engl J Med. 2004;351(20):2049-2057. DOI: 10.1056/NEJMoa042934. PMID: 15533851"
+      "Taylor AL, Ziesche S, Yancy C, et al. Combination of isosorbide dinitrate and hydralazine in blacks with heart failure (A-HeFT). N Engl J Med. 2004;351(20):2049-2057. DOI: 10.1056/NEJMoa042934. PMID: 15533851",
+      "Bula do profissional de saúde de APRESOLINA (cloridrato de hidralazina, drágeas), Novartis Biociências SA — seções de posologia, populações especiais e gravidez."
     ]
   },
   {
@@ -3523,14 +3521,17 @@
       "vo isquemia taquisupraventricular flutter fa adulto maior 50kg": "120-480 mg/dia, divididos em 3-4 tomas (a cada 6-8h)",
       "vo hipertensao adulto": "120-480 mg/dia, divididos em 3 tomas (a cada 8h)",
       "ev taquiarritmia supraventricular adulto": "5-10 mg (0,075-0,15 mg/kg) em injeção IV lenta, 2-3 min; se resposta insuficiente, repetir 10mg (0,15mg/kg) após 30min",
-      "pediatria": "VERIFICAÇÃO HUMANA NECESSÁRIA — as faixas que constavam aqui (80-120 mg/dia abaixo de 6 anos e 80-360 mg/dia dos 6 aos 14) vinham de material de estudante e de wiki. Dose pediátrica de verapamil exige fonte própria, e o uso endovenoso em lactente tem alerta de colapso hemodinâmico; não prescrever por este verbete até a conferência",
-      "fonte": "rótulo do cloridrato de verapamil aprovado pelo FDA (DailyMed)"
+      "pediatria": "**Somente para distúrbios do ritmo cardíaco** — a bula brasileira restringe a indicação pediátrica a essa finalidade, qualificador que não constava aqui.\n\n- **Até 6 anos: 80 a 120 mg/dia**, divididos em 2 a 3 doses.\n- **De 6 a 14 anos: 80 a 360 mg/dia**, divididos em 2 a 4 doses.\n\nEstas faixas **estavam corretas** neste verbete e foram marcadas por vir de material de estudante e de wiki. A conferência na bula do detentor confirma os números e resolve a procedência — o problema era a fonte, não o dado.\n\nVERIFICAÇÃO HUMANA NECESSÁRIA para a **via endovenosa em lactente**, que não é coberta por esta bula (de apresentação oral). O alerta de colapso hemodinâmico no uso endovenoso em lactente permanece válido e não deve ser resolvido pelos números orais acima.",
+      "fonte": "rótulo do cloridrato de verapamil aprovado pelo FDA (DailyMed)",
+      "adultos e adolescentes acima de 50 kg": "Isquemia miocárdica, taquicardia supraventricular paroxística, flutter e fibrilação atrial: **120 a 480 mg/dia**, fracionados em 3 ou 4 tomadas. Hipertensão: **120 a 480 mg/dia**, em até 3 doses. A apresentação de 40 mg é destinada a quem responde a doses baixas — disfunção hepática, idoso.",
+      "disfuncao hepatica e renal": "**Hepática**: o metabolismo pode ser retardado conforme a gravidade da lesão, prolongando o efeito — iniciar com dose reduzida. **Renal**: usar com cautela e acompanhamento cuidadoso."
     },
     "notes": {
       "Farmacocinetica": "Metabolização hepática extensa (principal metabólito ativo: norverapamil); início de ação VO 1-2h, IV 1-5min (efeitos antiarrítmicos) ou 3-5min (efeitos hemodinâmicos)"
     },
     "references": [
-      "Verapamil hydrochloride — rótulo aprovado pelo FDA, DailyMed SPL setid df79ee3a-f0ed-1cc7-e053-2995a90af97f"
+      "Verapamil hydrochloride — rótulo aprovado pelo FDA, DailyMed SPL setid df79ee3a-f0ed-1cc7-e053-2995a90af97f",
+      "Bula do profissional de saúde de DILACORON (cloridrato de verapamil) 80 mg, Abbott Laboratórios do Brasil Ltda. — seção de posologia. Documento obtido no site do detentor do registro."
     ]
   },
   {
