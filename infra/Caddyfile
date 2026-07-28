@@ -1,4 +1,12 @@
-{$DOMAIN} {
+# Dois domínios no mesmo bloco durante a migração de marca. O Caddy emite e
+# renova certificado para ambos por ACME, então não existe janela em que um
+# deles fique sem TLS válido — que é justamente o risco de trocar o DNS antes
+# de ter o certificado emitido.
+#
+# `{$DOMAIN}` continua vindo do .env e hoje é meucardio.med.br. Quando a
+# migração estiver confirmada, ele passa a ser corvia.med.br e o antigo vira
+# redirecionamento — não desligamento.
+{$DOMAIN}, {$DOMAIN_NOVO} {
 	encode gzip zstd
 
 	# API e documentação do backend
