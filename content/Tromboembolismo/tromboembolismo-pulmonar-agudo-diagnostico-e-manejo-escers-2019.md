@@ -5,7 +5,7 @@ theme: "Tromboembolismo"
 kind: protocolo
 review_status: pendente_revisao
 source_refs: ["2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism · ESC/ERS · 2019 · https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/acute-pulmonary-embolism/", "2019 ESC Guidelines for Acute Pulmonary Embolism — Ten Points to Remember · ACC · 2019 · https://www.acc.org/latest-in-cardiology/ten-points-to-remember/2019/09/04/13/39/2019-esc-guidelines-for-acute-pulmonary-embolism"]
-legacy_source: "protocolos/protocolo-clinico-tromboembolismo-pulmonar-agudo-esc-ers-2019.md"
+legacy_source: "Fusão de dois documentos da mesma diretriz ESC 2019 na mesma pasta, com 14 e 9 seções e apenas 2 em comum. Do absorvido vieram estratificação de mortalidade em 30 dias, tratamento domiciliar, papel da tomografia, trombólise, TEP subsegmentar e outras formas de embolia."
 ---
 
 # Tromboembolismo Pulmonar Agudo: Diagnóstico e Manejo (ESC/ERS 2019)
@@ -34,7 +34,8 @@ Algoritmo revisado de manejo ajustado ao risco considera gravidade clínica, dis
 - **primeira escolha**: Anticoagulantes orais diretos (DOACs) agora recomendados como primeira escolha sobre warfarina, mesmo em pacientes elegíveis para warfarina
 - **anticoagulacao estendida**: Dose reduzida de apixabana ou rivaroxabana deve ser considerada para anticoagulação estendida após os primeiros 6 meses de tratamento
 - **duracao minima**: Tratamento com anticoagulação oral por no mínimo 3 meses sempre; duração adaptada conforme risco de recorrência
-- **fonte**: ACC Ten Points ; Slideshare clinical summary
+- **principio geral**: a anticoagulação plena é o pilar do tratamento de todo TEP confirmado, salvo contraindicação absoluta; a escolha entre heparina, antagonista da vitamina K e anticoagulante oral direto depende de função renal e estabilidade clínica
+- **fonte**: diretriz ESC 2019 de embolia pulmonar aguda, citada nas referências deste documento
 
 ## Cancer e tep
 - **escolha farmacologica**: Edoxabana ou rivaroxabana devem ser consideradas como alternativa à heparina de baixo peso molecular em pacientes com câncer, com cautela em câncer gastrointestinal devido ao risco aumentado de sangramento com DOACs
@@ -60,3 +61,40 @@ Regras de predição clínica validadas (PESI) devem ser usadas para estratifica
 - Retardar trombólise de resgate em TEP de alto risco com deterioração hemodinâmica
 - Usar DOAC em gestante (contraindicado, Classe III)
 - Não referenciar paciente com defeitos de perfusão persistentes para centro especializado em CTEPH
+
+## Estratificacao risco mortalidade 30 dias
+
+Diretriz estratifica TEP agudo com base na mortalidade prevista em 30 dias, classificando pacientes em baixo, intermediário e alto risco — esta estratificação é o pilar central que orienta toda a decisão terapêutica
+
+## Criterios estratificacao
+
+- **alto risco**: Instabilidade hemodinâmica (choque ou hipotensão persistente) — requer terapia de reperfusão imediata (trombólise sistêmica como primeira escolha)
+- **risco intermediario alto**: PESI/sPESI elevado + disfunção de ventrículo direito por imagem + biomarcadores cardíacos elevados (troponina, BNP) — sem instabilidade hemodinâmica, porém com risco elevado de descompensação
+- **risco intermediario baixo**: PESI/sPESI elevado, mas apenas um ou nenhum dos critérios adicionais (disfunção de VD ou biomarcadores) presente
+- **baixo risco**: PESI/sPESI baixo, sem disfunção de VD, sem elevação de biomarcadores — candidatos a tratamento ambulatorial
+- **fonte**: diretriz ESC 2019 de embolia pulmonar aguda, já citada nas referências deste documento
+
+## Possibilidade tratamento domiciliar
+
+Diretriz permite considerar alta precoce e tratamento ambulatorial em pacientes de baixo risco cuidadosamente selecionados, sustentada por estudos como Hestia Study e ensaio de Aujesky et al. (Lancet 2011), que demonstraram não-inferioridade do tratamento ambulatorial vs. hospitalar em pacientes selecionados
+
+## Papel da tomografia
+
+TC de tórax com contraste (angio-TC) não serve apenas para diagnóstico, mas também fornece informações prognósticas relevantes através de sinais de sobrecarga/disfunção de ventrículo direito, auxiliando na estratificação de risco
+
+## Trombolise
+
+- **indicacao absoluta**: TEP de alto risco com instabilidade hemodinâmica
+- **indicacao controversa risco intermediario alto**: Estudo PEITHO (Meyer et al., NEJM 2014) avaliou fibrinólise em TEP de risco intermediário, demonstrando redução de descompensação hemodinâmica, mas com aumento significativo de sangramento maior e hemorragia intracraniana, sustentando cautela nesta população
+- **seguranca geral**: Metanálise de Chatterjee et al. (JAMA 2014) associou trombólise a redução de mortalidade por todas as causas, mas com aumento de sangramento maior e hemorragia intracraniana
+- **fonte**: Guideline TdC
+
+## Tep subsegmentar
+
+Manejo de TEP subsegmentar isolado (sem trombo em vasos maiores) é tema de debate — revisão sistemática e metanálise de Carrier et al. (2010) fundamenta discussão sobre necessidade real de anticoagulação nestes casos de menor carga trombótica, dependendo do contexto clínico e risco de sangramento
+
+## Outras formas de embolia discutidas
+
+- Embolia amniótica
+- Embolia gordurosa
+- Embolia aérea
