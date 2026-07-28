@@ -268,3 +268,138 @@ def consolidar_duplicatas(db: Session = Depends(get_db), admin=Depends(require_a
     db.commit()
     return {"diretrizes_fundidas": fundidas, "vinculos_movidos": vinculos_movidos,
             "restantes": db.query(Guideline).count()}
+
+def _conteudo_afetado(db: Session, g: Guideline) -> list[Document]:
+    ids = [v.item_id for v in db.query(GuidelineLink).filter(
+        GuidelineLink.guideline_id == g.id, GuidelineLink.item_type == "documento").all()]
+    if not ids:
+        return []
+    return db.query(Document).filter(Document.id.in_(ids), Document.published.is_(True)).all()
+
+
+@router.get("/meus-alertas")
+def meus_alertas(db: Session = Depends(get_db), user: User = Depends(current_user)):
+    """Alertas de diretriz revisada que tocam o conteúdo que ESTE médico usa.
+
+    Existe como canal próprio, e não apenas como e-mail, por dois motivos. O
+    primeiro é técnico: `notificar.py` devolve False em silêncio quando não há
+    SMTP configurado, então e-mail como canal único significaria alerta nenhum.
+    O segundo é de produto: o aviso é útil no momento em que a pessoa abre o
+    documento, não três semanas depois na caixa de entrada.
+    """
+    favoritos = db.query(Favorite).filter(
+        Favorite.user_id == user.id, Favorite.item_type == "documento"
+    ).all()
+    if not favoritos:
+        return {"alertas": [], "nota": "Alertas seguem os documentos que você favoritou."}
+
+    ids = {f.item_id for f in favoritos}
+    vinculos = db.query(GuidelineLink).filter(
+        GuidelineLink.item_type == "documento", GuidelineLink.item_id.in_(ids)
+    ).all()
+    if not vinculos:
+        return {"alertas": []}
+
+    por_diretriz: dict[int, list[int]] = {}
+    for v in vinculos:
+        por_diretriz.setdefault(v.guideline_id, []).append(v.item_id)
+
+    alertas = []
+    revisadas = db.query(Guideline).filter(
+        Guideline.id.in_(por_diretriz), Guideline.superseded_by_id.isnot(None)
+    ).all()
+    for g in revisadas:
+        nova = db.query(Guideline).filter(Guideline.id == g.superseded_by_id).first()
+        docs = db.query(Document).filter(
+            Document.id.in_(por_diretriz[g.id]), Document.published.is_(True)
+        ).all()
+        if not docs:
+            continue
+        alertas.append({
+            "diretriz_revisada": {"titulo": g.titulo, "org": g.org, "ano": g.ano},
+            "nova_versao": {"titulo": nova.titulo, "ano": nova.ano,
+                            "doi": nova.doi, "url": nova.url} if nova else None,
+            "seus_documentos": [{"slug": d.slug, "titulo": d.title} for d in docs],
+            "significado": "A diretriz de origem foi revisada. Isto não quer dizer que o "
+                           "conteúdo do MeuCardio esteja desatualizado — quer dizer que há "
+                           "uma versão nova a considerar, e que a revisão interna deste "
+                           "material ainda não foi concluída.",
+        })
+    return {"alertas": alertas}
+
+
+class EnvioAlerta(BaseModel):
+    apenas_simular: bool = True
+
+
+@router.post("/admin/alertas/enviar")
+def enviar_alertas(
+    dados: EnvioAlerta, db: Session = Depends(get_db), admin=Depends(require_admin),
+):
+    """Envia o alerta das diretrizes substituídas ainda não comunicadas.
+
+    Nasce em `apenas_simular=True` de propósito: e-mail é ação externa e
+    irreversível, e a primeira execução de qualquer disparo em massa deve poder
+    ser lida antes de sair. Só marca `alerta_enviado_em` quando envia de verdade
+    — sem isso, reprocessar a fila reenviaria tudo.
+    """
+    from app.services.notificar import tentar_enviar_email
+
+    pendentes = db.query(Guideline).filter(
+        Guideline.superseded_by_id.isnot(None), Guideline.alerta_enviado_em.is_(None)
+    ).all()
+
+    resumo, enviados_total = [], 0
+    for g in pendentes:
+        docs = _conteudo_afetado(db, g)
+        if not docs:
+            resumo.append({"diretriz": g.slug, "destinatarios": 0,
+                           "motivo": "nenhum conteúdo publicado depende dela"})
+            continue
+        ids = [d.id for d in docs]
+        user_ids = [u for (u,) in db.query(Favorite.user_id).filter(
+            Favorite.item_type == "documento", Favorite.item_id.in_(ids)
+        ).distinct().all()]
+        destinatarios = db.query(User).filter(
+            User.id.in_(user_ids), User.is_active.is_(True)
+        ).all() if user_ids else []
+
+        nova = db.query(Guideline).filter(Guideline.id == g.superseded_by_id).first()
+        assunto = f"Diretriz atualizada: {g.org} {g.ano} → {nova.ano if nova else 'nova versão'}"
+        corpo = (
+            f"A diretriz que embasa conteúdo que você acompanha no MeuCardio foi revisada.\n\n"
+            f"Revisada: {g.titulo} ({g.org}, {g.ano})\n"
+            f"Nova versão: {nova.titulo} ({nova.ano})\n\n" if nova else ""
+        ) + (
+            f"Documentos que você favoritou e dependem dela:\n"
+            + "".join(f"  - {d.title}\n    {{DOMINIO}}/biblioteca/{d.slug}\n" for d in docs)
+            + "\nImportante: isto não significa que o conteúdo do MeuCardio esteja "
+              "desatualizado. Significa que existe uma versão nova da diretriz a "
+              "considerar, e que a revisão interna deste material ainda não foi "
+              "concluída.\n"
+        )
+
+        if dados.apenas_simular:
+            resumo.append({"diretriz": g.slug, "destinatarios": len(destinatarios),
+                           "documentos": len(docs), "assunto": assunto})
+            continue
+
+        enviados = sum(1 for u in destinatarios if tentar_enviar_email(u.email, assunto, corpo))
+        enviados_total += enviados
+        g.alerta_enviado_em = datetime.now(timezone.utc)
+        resumo.append({"diretriz": g.slug, "destinatarios": len(destinatarios),
+                       "emails_enviados": enviados, "documentos": len(docs)})
+
+    if not dados.apenas_simular:
+        db.add(AuditLog(user_id=admin.id, action="enviar_alertas_diretriz",
+                        entity="guideline", detail={"resumo": resumo}))
+        db.commit()
+
+    return {
+        "simulacao": dados.apenas_simular,
+        "diretrizes_processadas": len(pendentes),
+        "emails_enviados": enviados_total,
+        "detalhe": resumo,
+        "nota": "O alerta em produto vive em GET /api/diretrizes/meus-alertas e não "
+                "depende de SMTP. O e-mail é reforço, não o canal principal.",
+    }
