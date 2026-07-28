@@ -212,3 +212,59 @@ def extrair_vinculos(db: Session = Depends(get_db), admin=Depends(require_admin)
         "nota": "Vínculos entram como não confirmados. Confirme antes de usá-los "
                 "como base de alerta — a extração acerta muito e erra alguma coisa.",
     }
+
+@router.post("/admin/consolidar")
+def consolidar_duplicatas(db: Session = Depends(get_db), admin=Depends(require_admin)):
+    """Funde diretrizes que o extrator criou em duplicidade.
+
+    A geração de slug foi corrigida depois que as primeiras entradas já estavam
+    no banco: variantes de título — citação da revista colada no fim, ou o
+    subtítulo "developed in collaboration with…" estourando o corte — produziam
+    duas entradas para a mesma diretriz. Isso é pior do que parece: o alerta
+    avisaria só metade dos documentos que dependem dela.
+
+    Recalcula o slug de cada diretriz com a regra atual e funde as que colidem,
+    mantendo a mais antiga (menor id), transferindo os vínculos e preservando
+    qualquer confirmação humana já feita.
+    """
+    from app.services.extrair_diretrizes import _slug
+
+    por_slug: dict[str, Guideline] = {}
+    fundidas, vinculos_movidos = 0, 0
+    for g in db.query(Guideline).order_by(Guideline.id).all():
+        canonico = _slug(g.org, g.ano, g.titulo)
+        principal = por_slug.get(canonico)
+        if principal is None:
+            por_slug[canonico] = g
+            if g.slug != canonico and not db.query(Guideline).filter(
+                Guideline.slug == canonico, Guideline.id != g.id
+            ).first():
+                g.slug = canonico
+            continue
+
+        for v in db.query(GuidelineLink).filter(GuidelineLink.guideline_id == g.id).all():
+            ja = db.query(GuidelineLink).filter(
+                GuidelineLink.guideline_id == principal.id,
+                GuidelineLink.item_type == v.item_type,
+                GuidelineLink.item_id == v.item_id,
+            ).first()
+            if ja is None:
+                v.guideline_id = principal.id
+                vinculos_movidos += 1
+            else:
+                # Confirmação humana nunca se perde numa fusão.
+                if v.confirmado and not ja.confirmado:
+                    ja.confirmado = True
+                    ja.origem = v.origem
+                db.delete(v)
+        if principal.doi is None and g.doi:
+            principal.doi = g.doi
+        db.delete(g)
+        fundidas += 1
+
+    db.commit()
+    db.add(AuditLog(user_id=admin.id, action="consolidar_diretrizes", entity="guideline",
+                    detail={"fundidas": fundidas, "vinculos_movidos": vinculos_movidos}))
+    db.commit()
+    return {"diretrizes_fundidas": fundidas, "vinculos_movidos": vinculos_movidos,
+            "restantes": db.query(Guideline).count()}

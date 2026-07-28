@@ -51,12 +51,23 @@ DOI = re.compile(r'\b(10\.\d{4,9}/[^\s,;)\]]+)')
 # passa a avisar metade dos documentos que dependem dela.
 CITACAO = re.compile(
     r'\b(eur heart j|circulation|j am coll cardiol|arq bras cardiol|lancet|'
-    r'n engl j med|europace|eur respir j|bmj)\b.*$', re.I
+    r'n engl j med|europace|eur respir j|bmj|intern emerg med|eur j prev cardiol|'
+    r'j soc cardiovasc angiogr interv|clin infect dis|cardiol cardiovasc med|herz)\b.*$', re.I
+)
+
+# Subtítulo que descreve quem colaborou ou endossou a diretriz. Identifica a
+# autoria, não a diretriz, e é longo o bastante para estourar o corte do slug —
+# o que gerava duas entradas para a mesma ESC de embolia pulmonar, uma truncada
+# antes e outra depois de "developed in collaboration with the ERS".
+SUBTITULO = re.compile(
+    r'\s*[:—-]?\s*(developed in collaboration with|developed by the task force|'
+    r'endorsed by|in collaboration with|the task force for)\b.*$', re.I
 )
 
 
 def _slug(org: str, ano: int, titulo: str) -> str:
     titulo = CITACAO.sub(' ', titulo)
+    titulo = SUBTITULO.sub(' ', titulo)
     titulo = re.sub(r'\d+\s*\(\d+\)\s*:\s*[\d-]+', ' ', titulo)
     base = unicodedata.normalize('NFKD', titulo).encode('ascii', 'ignore').decode().lower()
     base = re.sub(r'\b(20\d\d|19\d\d)\b', ' ', base)
