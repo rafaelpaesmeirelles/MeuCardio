@@ -5,7 +5,7 @@ from app.api import (
     admin, ai, appointments, auth, calculators, documents, drugs, evidence,
     favorites, gallery, health, lab_tests, library, password_reset,
     prescriptions, round as round_api, search, service_orders, studies,
-    timeline, billing, partner_courses,
+    timeline, billing, partner_courses, guidelines,
 )
 from app.core.config import settings
 from app.core.security import assinante_ativo
@@ -45,7 +45,7 @@ ROUTERS_ASSINANTES = (
     library.router, search.router, calculators.router, drugs.router, round_api.router,
     ai.router, gallery.router, favorites.router, lab_tests.router, evidence.router,
     studies.router, prescriptions.router, documents.router, appointments.router,
-    timeline.router,
+    timeline.router, guidelines.router,
 )
 
 for r in ROUTERS_LIVRES:
