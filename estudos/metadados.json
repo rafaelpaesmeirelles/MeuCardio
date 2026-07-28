@@ -82,9 +82,9 @@
     "study_type": "ensaio_clinico",
     "authors": "Mehta SR, Jolly SS et al.",
     "journal": "New England Journal of Medicine",
-    "year": 2024,
-    "doi": "10.1056/NEJMoa2405923",
-    "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2405923",
+    "year": 2025,
+    "doi": "10.1056/NEJMoa2405922",
+    "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2405922",
     "summary": "Ensaio fatorial 2x2, randomizado, duplo-cego, controlado por placebo, com 7062 pacientes com infarto agudo do miocárdio, testando colchicina 0,5 mg/dia versus placebo e espironolactona 25 mg/dia versus placebo, com colchicina iniciada o mais rápido possível após intervenção coronária percutânea (tempo médio 1,6h). Seguimento mediano de 2,98 anos.",
     "key_findings": "Desfecho primário (MACE: morte cardiovascular, infarto recorrente, AVC ou revascularização guiada por isquemia) neutro para colchicina: 9,1% versus 9,3% no placebo (HR 0,99; IC95% 0,85-1,16) — sem benefício estatisticamente significativo.",
     "clinical_implications": "Resultado neutro contrasta com o benefício observado no ensaio COLCOT (2019, ~4.745 pacientes, redução de MACE com colchicina), que embasou a recomendação classe IIa da ESC 2023 para colchicina em prevenção secundária. Sendo um ensaio maior e mais recente, o CLEAR-SYNERGY levanta incerteza sobre o benefício real da colchicina rotineira pós-IAM e reforça a necessidade de reavaliação dessa recomendação nas próximas atualizações de diretriz.",
@@ -99,7 +99,8 @@
       "ensaio clínico"
     ],
     "review_status": "revisado",
-    "published": false
+    "published": false,
+    "pmid": 39555823
   },
   {
     "slug": "chap-tratamento-hipertensao-cronica-leve-na-gestacao",
