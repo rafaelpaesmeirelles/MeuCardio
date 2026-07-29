@@ -4,7 +4,7 @@ slug: ezetimiba
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["Ezetimibe tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 090776cf-f211-49a3-a993-ff5d707311f2", "Cannon CP, Blazing MA, Giugliano RP, et al. Ezetimibe added to statin therapy after acute coronary syndromes (IMPROVE-IT). N Engl J Med. 2015;372(25):2387-2397. DOI: 10.1056/NEJMoa1410489"]
+source_refs: ["Ezetimibe tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 090776cf-f211-49a3-a993-ff5d707311f2", "Cannon CP, Blazing MA, Giugliano RP, et al. Ezetimibe added to statin therapy after acute coronary syndromes (IMPROVE-IT). N Engl J Med. 2015;372(25):2387-2397. DOI: 10.1056/NEJMoa1410489", "Bula do EZETROL (ezetimiba), MSD, registrada na ANVISA — seção de Indicações, conferida em 29/07/2026"]
 legacy_source: "medicamentos/banco-de-medicamentos-ezetimiba.md"
 ---
 
@@ -30,9 +30,14 @@ Comprimidos de 10 mg — dose ótima identificada em ensaios de Fase II ao compa
 - **fonte**: rótulo da ezetimiba aprovado pelo FDA (DailyMed)
 
 ## Indicacoes
-Redução de colesterol total e LDL-C na **hipercolesterolemia primária**, isolada ou associada a estatina — que é o uso de longe mais frequente e o que a própria seção de posicionamento em diretrizes deste documento descreve. Também na hipercolesterolemia familiar homozigótica, em associação com estatina, e na sitosterolemia homozigótica.
+**Resolvido em 29/07/2026** com a bula brasileira do EZETROL, registrada na ANVISA — conjunto completo e exato das quatro indicações registradas:
 
-A versão anterior listava **apenas** a hipercolesterolemia familiar homozigótica como indicação de uso com estatina, o que fazia a ezetimiba parecer fármaco de doença rara e contradizia o próprio verbete, que a apresenta como segunda linha após estatina em dose máxima tolerada. VERIFICAÇÃO HUMANA NECESSÁRIA para o conjunto exato de indicações registradas na ANVISA
+- **Hipercolesterolemia primária** (familiar heterozigótica e não familiar): isolada ou associada a estatina, como terapia adjuvante à dieta, para reduzir colesterol total, LDL-C, apolipoproteína B e triglicérides, e para aumentar HDL-C
+- **Hiperlipidemia mista**: em combinação com fenofibrato, como terapia adjuvante à dieta, para reduzir colesterol total, LDL-C, apolipoproteína B e colesterol não-HDL — indicação que **não constava** na versão anterior deste documento
+- **Hipercolesterolemia familiar homozigótica (HFHo)**: em associação com estatina, podendo o paciente também receber tratamento adjuvante como aférese de LDL
+- **Sitosterolemia homozigótica (fitosterolemia)**: isolada, para reduzir sitosterol e campesterol elevados
+
+A versão anterior listava **apenas** a hipercolesterolemia familiar homozigótica como indicação de uso com estatina, o que fazia a ezetimiba parecer fármaco de doença rara e contradizia o próprio verbete, que a apresenta como segunda linha após estatina em dose máxima tolerada — a lista completa acima corrige essa lacuna e acrescenta a hiperlipidemia mista com fenofibrato, que não estava registrada de nenhuma forma.
 
 ## Efeito incremental com estatina
 Associação com estatina de alta potência proporciona incremento de aproximadamente 15-20% na redução adicional de LDL-C além do efeito já obtido pela estatina isolada (efeito aditivo, não sinérgico exponencial)
