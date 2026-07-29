@@ -551,7 +551,7 @@ e responde"; não significa auditada.
 | 12 | Material educativo para o paciente | **Concluída.** 4 itens, `/api/material-paciente` com PDF. |
 | 13 | Leitura assistida de ECG (v1) | **Não começou.** |
 | 13b | Notificação ANVISA | **Não começou.** Sem dossiê, sem arquivo de gerenciamento de risco (ISO 14971), sem IFU/rotulagem. |
-| 15 | Modo Emergência | **Concluída**, inclusive o offline: cache em `localStorage` com aviso "cópia de \<data\>". 10 protocolos. |
+| 15 | Modo Emergência | **No ar desde 29/07/2026, e VAZIO.** O backend nunca havia sido rebuildado desde a tarefa: as rotas `/api/emergencia` não existiam em produção (medido no `/api/openapi.json`), e por isso o carregador nunca pôde ser chamado. O rebuild de 29/07 subiu as rotas — `/api/emergencia` responde `{"protocolos":[],"documentos":{}}`. **São 10 protocolos no `emergencia/metadados.json` e 0 no banco.** Falta `POST /api/admin/conteudo/carregar?frente=emergencia` e depois publicar. |
 | 16 | Modo Apresentação/Ensino | **Concluída.** `ExportarApresentacao` + `/api/biblioteca/{slug}/apresentacao`, com anotação do médico. |
 | 18 | Checklist de alta | **Concluída.** 3 checklists, aplicações com marcação item a item. |
 | 19 | Contraindicação por condição especial | **Não começou.** |
