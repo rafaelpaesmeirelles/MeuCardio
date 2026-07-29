@@ -348,8 +348,8 @@ em produção. As demais pendências são trabalho novo ou decisão do Rafael.
 
 ### Fila, na ordem definida pelo Rafael em 29/07/2026
 1. **Ampliar a busca E o RAG para as quatro frentes JSON** — item 7 de
-   "Trabalho novo". Backend autorizado para esta tarefa. Inclui o defeito do
-   aviso de verificação do `rag.py`, que hoje nunca dispara.
+   "Trabalho novo". Backend autorizado para esta tarefa. O defeito do aviso de
+   verificação do `rag.py` já foi corrigido em separado — falta só o rebuild.
 2. **Voltar às marcações `VERIFICAÇÃO HUMANA NECESSÁRIA`** — 46 em 37 arquivos
    de `content/`, o grosso em Farmacologia. Método que está funcionando: bula do
    detentor do registro no Brasil, baixada com `curl` e User-Agent de browser
@@ -503,8 +503,9 @@ em produção. As demais pendências são trabalho novo ou decisão do Rafael.
        formato atual. Mesmo obstáculo de esquema da busca, agora afetando o que
        o médico lê como referência.
 
-   - **DEFEITO ENCONTRADO em 29/07/2026, corrigir junto: o aviso de conteúdo não
-     verificado do RAG nunca dispara.** `rag.py` linha 205 compara
+   - **DEFEITO CORRIGIDO em 29/07/2026 — o código está no repositório e
+     AGUARDA REBUILD do backend para valer em produção.** Era: o aviso de
+     conteúdo não verificado do RAG nunca disparava. `rag.py` linha 205 compara
      `doc.review_status == "verificacao_humana_necessaria"` para acrescentar
      "(ATENÇÃO: documento pendente de verificação humana)" ao cabeçalho do
      trecho. Esse valor **não existe** no vocabulário de `documents.review_status`
@@ -514,10 +515,13 @@ em produção. As demais pendências são trabalho novo ou decisão do Rafael.
      O sinal real está em **`documents.gaps`**, o array que o importador
      preenche com o texto literal `VERIFICAÇÃO HUMANA NECESSÁRIA` — **38
      documentos** o têm hoje —, e `rag.py` **nunca lê `gaps`**.
-     Consequência: a IA clínica pode citar documento que carrega marcação
-     explícita de verificação **sem nenhum aviso**. A correção é trocar a
-     condição por `if t["gaps"]:` e trazer `gaps` no dicionário do trecho em
-     `recuperar()`.
+     Consequência, enquanto o rebuild não sai: a IA clínica cita documento que
+     carrega marcação explícita de verificação **sem nenhum aviso**.
+     O que foi feito: `recuperar()` passou a trazer `gaps` no dicionário do
+     trecho, e `montar_contexto()` troca a condição morta por `if t.get("gaps")`.
+     O campo `gaps` também entra na lista de fontes — **aditivo e inerte até o
+     frontend consumi-lo**, que é trabalho ainda não feito. A função foi testada
+     isolada, com os três casos: com `gaps`, sem `gaps` e com a chave ausente.
 
 ### Recado entre sessões (29/07/2026)
 Há **duas sessões trabalhando neste repositório ao mesmo tempo**, com divisão

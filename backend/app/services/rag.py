@@ -189,6 +189,11 @@ def recuperar(db: Session, pergunta: str, temas: list[str] | None = None) -> lis
         "slug": doc.slug, "titulo": doc.title, "tema": doc.theme,
         "secao": chunk.titulo_secao, "conteudo": chunk.conteudo,
         "review_status": doc.review_status,
+        # `gaps` é o campo que de fato marca incerteza: o importador o preenche
+        # com o texto literal `VERIFICAÇÃO HUMANA NECESSÁRIA` encontrado no
+        # corpo do documento. Sem trazê-lo até aqui, `montar_contexto` não tem
+        # como avisar o modelo de que a fonte carrega ponto não conferido.
+        "gaps": list(doc.gaps or []),
     } for chunk, doc in linhas]
 
 
@@ -202,8 +207,18 @@ def montar_contexto(trechos: list[dict]) -> tuple[str, list[dict]]:
         cabecalho = f"[F{i}] {t['titulo']}"
         if t["secao"]:
             cabecalho += f" — {t['secao']}"
-        if t["review_status"] == "verificacao_humana_necessaria":
-            cabecalho += "  (ATENÇÃO: documento pendente de verificação humana)"
+        # O aviso sai de `gaps`, não de `review_status`. Esta linha comparava
+        # `review_status` com "verificacao_humana_necessaria", valor que NUNCA
+        # existiu no vocabulário de `documents.review_status` — ele só tem
+        # `pendente_revisao` e `revisado`. A string vem do domínio das
+        # calculadoras, onde é status de cálculo. Resultado: o aviso jamais
+        # disparou, e a IA citava documento com marcação explícita de
+        # verificação sem alertar ninguém. Medido em 29/07/2026: 38 documentos
+        # com `gaps` preenchido, zero com aquele `review_status`.
+        if t.get("gaps"):
+            cabecalho += ("  (ATENÇÃO: este documento tem ponto declarado como "
+                          "VERIFICAÇÃO HUMANA NECESSÁRIA — não apresente o dado "
+                          "correspondente como confirmado)")
         bloco = f"{cabecalho}\n{t['conteudo']}"
         if tamanho + len(bloco) > settings.ai_max_context_chars:
             break
@@ -212,6 +227,10 @@ def montar_contexto(trechos: list[dict]) -> tuple[str, list[dict]]:
         fontes.setdefault(t["slug"], {
             "referencia": f"F{i}", "slug": t["slug"], "titulo": t["titulo"],
             "tema": t["tema"], "review_status": t["review_status"],
+            # Campo aditivo: permite que a lista de fontes mostre ao médico que
+            # aquela fonte tem ponto não conferido, sem depender de o modelo
+            # repetir o aviso na resposta. Inerte até o frontend consumi-lo.
+            "gaps": t.get("gaps") or [],
         })
     return "\n\n---\n\n".join(blocos), list(fontes.values())
 
