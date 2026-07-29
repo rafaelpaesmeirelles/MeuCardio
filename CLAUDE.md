@@ -346,6 +346,100 @@ ainda não publicado**, esperando o aval do Rafael — 6 fluxogramas e o registr
 da colchicina. Todo o resto que foi construído está commitado, no ar e testado
 em produção. As demais pendências são trabalho novo ou decisão do Rafael.
 
+### Tarefa 27 — Receituário comum e de controle especial (briefing 3)
+Frente aberta em 29/07/2026, `BRIEFING_CLAUDE_CODE_3.md`. **Pausa autorizada no
+briefing 2**: concluída a 27, retomar a fila abaixo.
+
+**Rumo aprovado pelo Rafael: Opção C, faseada.** Construir agora só o que não
+depende da ANVISA; manter o controle especial desligado na interface até o SNCR
+abrir. Nada a jogar fora em setembro.
+
+**Status da ferramenta da ANVISA, medido em 29/07/2026 — não repesquisar antes
+de setembro:**
+- A norma é a **RDC nº 1.000, de 11/12/2025** (o briefing diz "1.000/2026" — o
+  ano está errado, a vigência de 13/02/2026 está certa).
+- O prazo da emissão eletrônica foi **prorrogado de 01/06 para 30/09/2026** pela
+  **RDC 1.028/2026**. Texto literal da página do SNCR hoje: *"Esses modelos não
+  podem ser utilizados até que a Anvisa disponibilize a integração dos serviços
+  de prescrição eletrônica ao SNCR, o que ainda não ocorreu."*
+- Em **30/06/2026** a ANVISA publicou a **documentação técnica de integração**
+  (Manual API SNCR, 1ª ed.), dirigida a plataformas de prescrição eletrônica.
+  Ou seja: **a especificação existe, o serviço não está ligado.**
+
+**O que o Manual da API diz (lido na íntegra, não presumido):**
+- A API **só distribui numeração**. Não armazena receita nem valida prescrição.
+- Homologação aberta agora: `https://sncr-api.hmg.apps.anvisa.gov.br/api/v1`,
+  com Swagger em `/swagger-ui/index.html`. Dá para integrar e testar sem
+  esperar 30/09.
+- **Autenticação é OAuth 2.0 / OIDC via Gov.br** (Keycloak, `kc_idp_hint=govbr`).
+  **Não há credenciamento de empresa nem ICP-Brasil para consumir a API.** O
+  médico autentica com a conta gov.br dele, e o profissional autenticado tem de
+  corresponder ao prescritor da requisição. Whitelist aceita só domínio `.br` —
+  `corvia.med.br` qualifica.
+- **O prescritor precisa estar previamente cadastrado no SNCR** — passo de
+  onboarding fora do nosso controle.
+- Dois endpoints, com regimes diferentes — é a prova de que os formatos são
+  famílias distintas, não rótulos:
+
+  | | Notificação de Receita | Controle Especial / Retenção |
+  |---|---|---|
+  | endpoint | `POST /numeracoes/notificacao-receita` | `POST /numeracoes/receita-especial-retencao` |
+  | tipos | `NRA`, `NRB`, `NRB2`, `NRR`, `NRT` | `RCE`, `RET` |
+  | lote | 10 a 50 números | 1.000, constante |
+  | limite | 50/tipo/prescritor/dia | 3 requisições/mês, teto de 3.000 |
+  | exige CNPJ | não | **sim** |
+
+  Formato do número: `2411.1-00.0000001`.
+
+**Decisões do Rafael em 29/07/2026:**
+1. **Dado identificável do paciente vai para entidade separada e cifrada.** O
+   `Patient` do round hospitalar **continua anonimizado** — `initials` e
+   `record_number`, sem nome. Nome, endereço e CPF vivem numa entidade própria,
+   ligada à prescrição. **Reaproveitar o padrão do Cofre do telediagnóstico**
+   (`services/cofre.py`): AES-256-GCM, id como dado autenticado do GCM, e
+   `AuditLog` a cada leitura. **Não criar esquema de cifragem novo.**
+2. **Existe CNPJ**, que o Rafael fornece. O RCE entra no escopo. O CNPJ vai para
+   o `.env` como segredo, junto das chaves do Stripe — nunca commitado.
+3. **Classificação automática**, a partir do medicamento selecionado na base
+   estruturada — nunca do texto livre. O médico não escolhe o tipo; **revisa
+   antes de gerar**. Receita com medicamentos de listas diferentes **gera
+   documentos separados**, apresentados juntos para revisão antes da emissão.
+4. A base substância→lista fica **ligada à base de medicamentos** de marca,
+   laboratório e preço (Tarefas A e B), para o médico ver tudo ao digitar.
+
+**Correção de nomenclatura:** o Rafael se referiu a "Tarefas 24/25" para a base
+de marca/laboratório/preço. Neste arquivo isso é **Tarefas A e B**; a 24 é a área
+de cursos parceiros e a 25 não existe. E o rótulo é **PMC, teto regulado** —
+**nunca "preço médio"**, decisão já registrada na Tarefa A.
+
+**A base 344/98: fonte encontrada e provada extraível.**
+Não existe lista consolidada oficial em formato de dados — é a Portaria base mais
+~15 RDCs que a alteram. Mas a **RDC 999/2025**
+(`gov.br/anvisa/.../controlados/RDC9992025.pdf`) **republica as listas
+completas**, e o `pdftotext -layout` as extrai limpas: **13 listas, 687
+substâncias** (A1 94, A2 13, A3 13, B1 95, B2 8, C1 212, C2 5, C3 3, C5 31,
+D1 26, D2 13, E 9, F 165). Faltam as RDCs posteriores como delta — 1.011/2026 e
+1.021/2026 entre elas. Versionar com fonte e data, como foi desenhado para a CMED.
+
+**`poppler-utils` foi instalado no servidor em 29/07/2026.** `pdftotext -layout`
+resolve os PDFs oficiais que o extrator em stdlib não abria. Use-o antes de
+tentar decodificar CID na mão.
+
+**Bloqueios herdados que a 27 não resolve:** a assinatura digital continua
+parada na credencial VIDAAS (Tarefa 4), e **não existe geração de PDF no
+sistema** — hoje `/api/prescricoes/{id}/imprimir` devolve dados e o frontend
+monta a impressão.
+
+**Plano de execução aprovado, em fases:**
+1. ~~Ler o Manual da API do SNCR~~ — **concluído em 29/07/2026.**
+2. ~~Decidir o modelo de dado do paciente~~ — **concluído**, ver decisão 1.
+3. `PrescriptionType` como entidade de primeira classe, com campos, vias e
+   validações próprias por tipo. Nunca um enum decorativo.
+4. Base substância→lista da 344/98, versionada, ligada à base de medicamentos.
+5. Receituário comum, completo e em produção.
+6. Numeração sequencial, incluindo o QR Code do modelo eletrônico.
+7. Controle especial, atrás de flag, ligado quando SNCR e assinatura existirem.
+
 ### Fila, na ordem definida pelo Rafael em 29/07/2026
 1. **Ampliar a busca E o RAG para as quatro frentes JSON** — item 7 de
    "Trabalho novo". Backend autorizado para esta tarefa. O defeito do aviso de
