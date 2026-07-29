@@ -96,11 +96,21 @@ indicada.
 
 A recomendação **Classe I, nível A** para o M-TEER se aplica a pacientes
 **muito selecionados** que permanecem sintomáticos apesar do tratamento
-otimizado. Uma das fontes secundárias consultadas descreve essa recomendação
-como específica para regurgitação secundária ventricular **sem doença arterial
-coronariana** — a redação exata quanto à coexistência de DAC precisa ser
-conferida na tabela de recomendações da diretriz:
-`VERIFICAÇÃO HUMANA NECESSÁRIA`.
+otimizado — **confirmado na Recommendation Table 7 da diretriz**: a redação
+literal é *"TEER is recommended to reduce HF hospitalizations and improve
+quality of life in haemodynamically stable, symptomatic patients with impaired
+LVEF (<50%) and persistent severe ventricular SMR, despite optimized GDMT and
+CRT (if indicated), fulfilling specific clinical and echocardiographic
+criteria"*, e a própria diretriz coloca essa recomendação sob o título "Severe
+ventricular secondary mitral regurgitation **without concomitant coronary
+artery disease**" (Figura 13 e seção 9.2.4.2) — a fonte secundária estava
+certa: a Classe I/A vale só na **ausência** de DAC relevante. Quando há DAC
+concomitante exigindo revascularização, a diretriz separa a conduta: cirurgia
+valvar mitral é recomendada (Classe I, nível B) se o paciente já for para CRM;
+cirurgia pode ser considerada (Classe IIb, nível B) na regurgitação moderada
+associada a CRM; e ICP seguida de TEER após reavaliação da regurgitação pode
+ser considerada (Classe IIb, nível C) no paciente sintomático com DAC não
+complexa.
 
 ## A novidade da secundária atrial
 
