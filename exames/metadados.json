@@ -578,5 +578,29 @@
       "criterio diagnostico",
       "corticoide"
     ]
+  },
+  {
+    "slug": "ecocardiograma-transesofagico-na-endocardite-infecciosa",
+    "name": "Ecocardiograma transesofágico (ETE) na endocardite infecciosa",
+    "category": "imagem",
+    "theme": "Endocardite",
+    "what_it_measures": "Imagem ecocardiográfica obtida por sonda esofágica, com maior resolução que o transtorácico (ETT) para estruturas valvares, próteses e complicações perianulares — vegetação, destruição valvar, abscesso, pseudoaneurisma e fístula.",
+    "reference_range": "Não se aplica valor de referência numérico — o achado é descritivo (presença/ausência de vegetação, abscesso, deiscência protética) e entra como critério maior de Duke-ISCVID quando positivo para os achados típicos de endocardite.",
+    "indications": "Pela Recomendação da Tabela 5 da diretriz: ETT é sempre o exame de primeira linha (Classe I, Nível B). O ETE é recomendado (Classe I, Nível B) em todo paciente com suspeita clínica e ETT negativo ou não diagnóstico, e sempre que houver válvula protética ou dispositivo intracardíaco. Repetir ETT e/ou ETE em 5-7 dias é recomendado (Classe I, Nível C) se a suspeita clínica permanecer alta apesar de exame inicial negativo ou inconclusivo. Mudança central da diretriz de 2023: o ETE passou a ser recomendado (Classe I, Nível C) mesmo com ETT positivo, exceto na endocardite de valva nativa isoladamente à direita com ETT de boa qualidade e achado inequívoco — na diretriz anterior essa mesma indicação era apenas Classe IIa, Nível C. Realizar o exame deve ser considerado (Classe IIa, Nível B) em bacteremia por S. aureus, E. faecalis e alguns estreptococos, mesmo sem suspeita clínica firme de endocardite.",
+    "interpretation": "No seguimento sob tratamento clínico, repetir ETT e/ou ETE é recomendado (Classe I, Nível B) assim que houver suspeita de nova complicação (novo sopro, embolia, febre e bacteremia persistentes, insuficiência cardíaca, abscesso, bloqueio atrioventricular), e o ETE é recomendado (Classe I, Nível B) antes de trocar antibiótico venoso por via oral, com o paciente estável. Na endocardite não complicada, repetir o exame para detectar complicação silenciosa deve ser considerado (Classe IIa, Nível B), com o intervalo definido pelo achado inicial, o microrganismo e a resposta ao tratamento. Ecocardiograma intraoperatório é recomendado (Classe I, Nível C) em toda cirurgia por endocardite, e ETT e/ou ETE ao final do tratamento antibiótico são recomendados (Classe I, Nível C) em quem não foi operado, para reavaliar morfologia e função valvar.",
+    "limitations": "Vegetação pequena (<10 mm) e fístulas continuam mais bem detectadas por ecocardiografia do que por tomografia cardíaca, mas o inverso vale para complicações perivalvulares e periprotéticas (abscesso, pseudoaneurisma, fístula), onde a angiotomografia cardíaca é mais acurada que o ETE e está recomendada quando o ETE é inconclusivo ou inviável. ETT de boa qualidade e achado inequívoco só dispensa o ETE no cenário restrito de endocardite de valva nativa isoladamente à direita — em qualquer outro cenário, incluindo prótese valvar e dispositivo intracardíaco, o ETE é indicado independentemente do resultado do ETT.",
+    "source_refs": [
+      "2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. PMID 37622656. DOI 10.1093/eurheartj/ehad193 — Recommendation Table 5 (Recommendations for the role of echocardiography in infective endocarditis) e Table 4 (Revised recommendations, mudança de Classe IIa para Classe I na indicação de ETE mesmo com ETT positivo)."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ecocardiograma transesofagico",
+      "ete",
+      "endocardite",
+      "vegetacao",
+      "abscesso perivalvular",
+      "duke-iscvid"
+    ]
   }
 ]
