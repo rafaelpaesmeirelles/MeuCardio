@@ -90,6 +90,13 @@ da circulação espontânea**, em bomba de infusão contínua: **900 mg em 24 ho
 além das 24 horas iniciais é decisão da equipe de especialistas, assim como o uso
 em quem não recebeu amiodarona durante a parada.
 
+**Controle de temperatura tem documento próprio nesta biblioteca** —
+`controle-de-temperatura-pos-parada-cardiorrespiratoria-ttm-e-ttm2.md`,
+acrescentado em 29/07/2026 por esta seção não cobrir o tema. Resumo do que
+os ensaios TTM e TTM2 mostraram: hipotermia induzida a 33°C **não superou**
+36°C nem normotermia com tratamento precoce de febre, em nenhum dos dois
+ensaios — o que sobrevive à evidência é evitar febre, não induzir frio.
+
 ## Ritmo não chocável — assistolia e AESP
 
 Não há indicação de desfibrilação. O que resta é o que mais importa: **RCP de
