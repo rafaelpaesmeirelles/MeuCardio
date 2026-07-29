@@ -9,7 +9,7 @@ do banco. Nenhum número é estimado.
 
 | Frente | Itens | Publicados | Situação |
 |---|---:|---:|---|
-| `content/` — biblioteca científica | 253 | 252 | 27 temas cobertos; 29 são fluxogramas, **todos publicados** |
+| `content/` — biblioteca científica | 264 (medido no disco) | não remedido | 27 temas cobertos; 29 são fluxogramas, **todos publicados**; contagem de publicados desatualizada — várias sessões escreveram content/ desde a última medição no banco |
 | `galeria/` — achados de imagem | 36 | 36 | ✅ verificada item a item |
 | `exames/` — marcadores e exames | 40 | 0 | crescida de 17 para 40 pela sessão da Biblioteca em 29/07 à noite; **zero temas com 1 item só**; aguardando publicação |
 | `evidencias/` — recomendações pontuais | 104 | 100 | 4 novas (anti-IL-1 na pericardite, ILR na síncope, rastreio de AAA, ISRS na depressão em DAC); ainda `published: false` |
@@ -36,24 +36,26 @@ Nenhum órfão está no ar.
 | Febre reumática | 7 | 1 |
 | Prevenção e lipídios | 7 | 4 |
 | Cardio-oncologia | 6 | 1 |
+| Cardiopatias congênitas | 6 | 1 |
 | Endocardite | 6 | 2 |
 | Hipertensão | 6 | 3 |
 | Pericárdio | 6 | 2 |
 | Perioperatório | 6 | 1 |
 | Síncope | 6 | 2 |
 | Valvopatias | 6 | 4 |
-| Cardiopatias congênitas | 5 | 1 |
 | Diabetes e cardiologia | 5 | 0 |
 | Fibrilação atrial | 5 | 2 |
 | Hipertensão pulmonar | 5 | 1 |
 | Insuficiência cardíaca | 5 | 3 |
 | Saúde mental e cardiologia | 4 | 1 |
 | Tromboembolismo | 4 | 2 |
-| Comunicação clínica | 2 | 0 |
+| Comunicação clínica | 3 | 0 |
 | Geral | 1 | 1 |
 
-**Total: 253 documentos, 121 pendentes de revisão** — 66 deles em Farmacologia, que
-concentra mais da metade da fila.
+**Total: 255 documentos, 121 pendentes de revisão** — 66 deles em Farmacologia, que
+concentra mais da metade da fila. Cardiopatias congênitas (valva aórtica bicúspide,
+ESC 2024) e Comunicação clínica (desativação de CDI/marca-passo, HRS/EHRA 2010)
+ganharam um documento cada nesta sessão, ambos já `revisado`.
 
 A queda de 250 para 241, registrada na medição anterior, não foi perda de conteúdo:
 foram as **11 fusões de pares complementares** descritas no fim deste arquivo, mais as
