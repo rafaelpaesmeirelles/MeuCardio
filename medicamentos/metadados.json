@@ -497,7 +497,8 @@
     "references": [
       "Bizo (hemifumarato de bisoprolol) — Bula para Profissional da Saúde · Eurofarma/Sanofi Medley · 2025 · https://bulas-hm.eurofarma.com.br/storage/media/15850/EZaC1XBYfNGjKPvrFofyImmf7HKyOoRDoFTGr2GE.pdf",
       "CIBIS-II Investigators and Committees · 1999 · 353:9-13"
-    ]
+    ],
+    "lactation": "**Não recomendado durante a amamentação.** Não há dados sobre excreção do bisoprolol no leite humano nem sobre a segurança da exposição em crianças. Fonte: bula do profissional do Concor (Merck S.A.)."
   },
   {
     "slug": "bivalirudina",
@@ -642,7 +643,9 @@
     "references": [
       "RCM Captopril · Infarmed · 2016 · https://www.infarmed.pt/documents/15786/1577857/Captopril_RCM_jul2016.doc",
       "Resumo sobre captopril: indicações, farmacologia e mais · Estratégia MED · 2023 · https://med.estrategia.com/portal/conteudos-gratis/farmacos/resumo-sobre-captopril-indicacoes-farmacologia-e-mais/"
-    ]
+    ],
+    "pregnancy": "**Categoria de risco D na gravidez.** A bula registra a categoria e determina que o medicamento não seja usado por gestante sem orientação médica, com aviso imediato ao médico em caso de suspeita de gravidez. Fonte: bula do profissional de saúde do Farmanguinhos captopril (Fiocruz).",
+    "lactation": "O captopril passa ao leite materno em concentrações correspondentes a **cerca de 1% das do sangue materno**. Pelo potencial de reações adversas graves no lactente, a bula determina **decidir entre suspender a amamentação ou suspender o medicamento**, pesando a importância do captopril para a mãe. Fonte: bula do profissional de saúde do Farmanguinhos captopril (Fiocruz)."
   },
   {
     "slug": "carvedilol",
@@ -3396,7 +3399,9 @@
     },
     "references": [
       "Valsartana — Bula Profissional Completa · Medley/Sanofi-Aventis · https://www.saudedireta.com.br/catinc/drugs/bulas/valsartanamedley.pdf"
-    ]
+    ],
+    "pregnancy": "**Contraindicado durante a gravidez. Categoria de risco D** — o fármaco demonstrou evidências positivas de risco fetal humano; o benefício só justificaria o risco em doença grave ou ameaçadora à vida sem alternativa mais segura. Fonte: bula para o profissional de saúde da valsartana (Brainfarma).",
+    "lactation": "**Contraindicado para uso por lactantes**, conforme a seção de contraindicações da bula. Fonte: bula para o profissional de saúde da valsartana (Brainfarma)."
   },
   {
     "slug": "varfarina-sodica",
