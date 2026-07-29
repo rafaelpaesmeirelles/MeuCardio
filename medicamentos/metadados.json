@@ -602,7 +602,7 @@
   },
   {
     "slug": "captopril",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Captopril",
     "drug_class": "Inibidor da enzima conversora de angiotensina (IECA) — primeiro da classe",
     "mechanism": "Inibe diretamente a ECA (não requer conversão hepática), bloqueando conversão de angiotensina I em II; possui grupo sulfidrila, associado a maior incidência de disgeusia e exantema comparado a IECAs não sulfidrílicos",
@@ -619,17 +619,17 @@
       "**Contraindicado o uso concomitante**, e é preciso respeitar uma **janela de 36 horas** ao trocar de ou para o sacubitril-valsartana. O inibidor de neprilisina e o IECA somam risco de angioedema, e a janela existe para evitar a sobreposição dos dois efeitos. Isto não é detalhe teórico em Cardiologia: a migração de IECA para sacubitril-valsartana é justamente o caminho recomendado na insuficiência cardíaca com fração de ejeção reduzida, então essa transição acontece na prática rotineira. Também não se deve coadministrar alisquireno a paciente diabético. Fonte: rótulo do sacubitril-valsartana aprovado pelo FDA (DailyMed SPL setid 000dc81d-ab91-450c-8eae-8eb74e72296f)."
     ],
     "dosing": {
-      "hipertensao leve moderada": "Inicial 25-50 mg/dia em 2 tomas divididas (ou 6,25-12,5mg 2-3x/dia conforme DATASUS); ajuste a cada 2 semanas até 100-150mg/dia",
-      "hipertensao grave": "Inicial 25mg 2-3x/dia, aumentando a cada 1-2 semanas até 150mg 2-3x/dia; dose máxima diária 450mg",
-      "icc inicio padrao": "25 mg 2-3x/dia",
-      "icc inicio hipovolemia hiponatremia": "3,125-6,25 mg 3x/dia (dose mais cautelosa)",
-      "icc manutencao": "75-150 mg/dia em 2-3 doses, máximo 150mg/dia",
-      "icfer diretriz brasileira": "Inicial 6,25mg 3x/dia, titulando até dose-alvo de 50mg 3x/dia",
-      "pos iam": "Iniciar 3 dias após evento; dose inicial 6,25mg, aumentar para 37,5mg/dia, depois 75mg/dia, dose-alvo final 150mg/dia em doses divididas",
-      "nefropatia diabetica": "75-100 mg/dia em doses divididas",
-      "dose maxima absoluta": "450 mg/dia (hipertensão); 150mg/dia (ICC)",
-      "ajuste renal": "Reduzir dose em insuficiência renal; 75-100mg/dia bem tolerado em nefropatia diabética com IR leve-moderada",
-      "fonte": "Infarmed RCM ; Drogasil ; DATASUS Hiperdia ; Estratégia Med\n\nVERIFICAÇÃO HUMANA NECESSÁRIA quanto à **procedência**: a posologia acima se apoia em Infarmed, Drogasil e material de curso — agregador ou portal de conteúdo, não documento primário. Isso **não afirma que os números estejam errados**; afirma que não são rastreáveis à bula registrada nem a diretriz, que é o critério deste acervo. Substituir a fonte e reconferir os valores antes de publicar."
+      "modo de usar": "**Uma hora antes das refeições**, por via oral. A dose é individualizada.",
+      "hipertensao inicial": "**50 mg uma vez ao dia ou 25 mg duas vezes ao dia.** Sem redução satisfatória da pressão após **2 a 4 semanas**, aumentar para 100 mg 1x/dia ou 50 mg 2x/dia.",
+      "hipertensao associacao": "Se a pressão não for controlada após 1 a 2 semanas nessa dose e o paciente ainda não usar diurético, acrescentar **tiazídico em dose pequena** (por exemplo hidroclorotiazida 25 mg/dia), aumentando o diurético a cada 1 a 2 semanas até a dose anti-hipertensiva usual máxima dele. Só depois considerar esquema de 3 tomadas do captopril.",
+      "hipertensao teto": "No tratamento da hipertensão a dose **normalmente não excede 150 mg/dia**, e a **dose diária máxima é de 450 mg** — teto que vale para todas as indicações.",
+      "hipertensao grave": "Quando não for viável suspender a terapia prévia ou for preciso titular rápido: manter o diurético, interromper os demais anti-hipertensivos e iniciar captopril **25 mg duas a três vezes ao dia sob rigoroso controle médico**, podendo aumentar a dose **a cada 24 horas ou menos** com monitoramento contínuo.",
+      "insuficiencia cardiaca inicial": "Dose usual inicial de **25 mg duas ou três vezes ao dia**. Em quem tem pressão normal ou baixa, foi tratado vigorosamente com diurético e pode estar hiponatrêmico ou hipovolêmico, começar com **6,25 ou 12,5 mg duas a três vezes ao dia** reduz a magnitude e a duração do efeito hipotensor.",
+      "insuficiencia cardiaca titulacao": "Alcançados **50 mg duas ou três vezes ao dia**, adiar novos aumentos por **pelo menos duas semanas** para avaliar a resposta. A maioria dos pacientes melhorou com **150 mg/dia ou menos**. Usar em conjunto com diurético e digitálico, com início sob rigoroso monitoramento.",
+      "pos infarto": "Iniciar **três dias após o infarto**. Após dose inicial de **6,25 mg**, subir para **37,5 mg/dia divididos em 3 tomadas** conforme tolerado; nos dias seguintes, para **75 mg/dia em 3 tomadas**; e ao longo das semanas seguintes até a **dose-alvo de 150 mg/dia em 3 tomadas**. Havendo hipotensão sintomática, reduzir — as tentativas seguintes de chegar a 150 mg/dia dependem da tolerância. Pode ser usado junto de trombolítico, AAS ou betabloqueador.",
+      "nefropatia diabetica": "**75 a 100 mg/dia em doses divididas.** Se for preciso baixar mais a pressão, associar outro anti-hipertensivo.",
+      "ajuste renal": "O captopril é excretado principalmente pelos rins, e a excreção cai na função renal comprometida — esses pacientes podem responder a **doses menores ou menos frequentes**. Na insuficiência renal significativa, **reduzir a dose diária inicial** e titular com **incrementos menores e intervalos de uma a duas semanas**. Doses divididas de 75 a 100 mg/dia são bem toleradas na nefropatia diabética com insuficiência renal leve a moderada.",
+      "fonte": "Bula do profissional de saúde do Farmanguinhos captopril (Instituto de Tecnologia em Fármacos — Fiocruz), item 8, conferida na íntegra. **Marcação de procedência resolvida.** As quatro indicações com posologia própria — hipertensão, insuficiência cardíaca, pós-infarto e nefropatia diabética — e o ajuste renal vêm todos desta bula."
     },
     "references": [
       "RCM Captopril · Infarmed · 2016 · https://www.infarmed.pt/documents/15786/1577857/Captopril_RCM_jul2016.doc",
@@ -2806,7 +2806,7 @@
   },
   {
     "slug": "ranolazina",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Ranolazina",
     "drug_class": "Antianginoso de mecanismo não hemodinâmico (inibidor da corrente tardia de sódio)",
     "mechanism": "Inibe a corrente tardia de sódio (late INa) nos miócitos, reduzindo sobrecarga intracelular de cálcio e tensão de parede miocárdica — reduz isquemia sem efeito significativo sobre frequência cardíaca ou pressão arterial, diferente de beta-bloqueadores, antagonistas de canal de cálcio e nitratos",
@@ -2815,10 +2815,14 @@
     ],
     "renal_adjustment": "- **insuficiencia renal moderada**: níveis plasmáticos aumentam 50-60% - **contraindicacao renal**: clearance de creatinina ≤30 mL/min ou pacientes em diálise - **contraindicacao hepatica**: contraindicada em qualquer grau de insuficiência hepática — pode elevar ainda mais as concentrações plasmáticas e agravar o prolongamento de QTc - **fonte**: StatPearls",
     "dosing": {
-      "faixa terapeutica": "500 a 1000 mg, via oral, 2x/dia",
-      "dose maxima": "1000 mg 2x/dia",
-      "efeitos adversos mais comuns": "constipação, náusea, astenia, tontura",
-      "fonte": "StatPearls\n\nVERIFICAÇÃO HUMANA NECESSÁRIA quanto à **procedência**: a posologia acima se apoia em StatPearls — agregador ou portal de conteúdo, não documento primário. Isso **não afirma que os números estejam errados**; afirma que não são rastreáveis à bula registrada nem a diretriz, que é o critério deste acervo. Substituir a fonte e reconferir os valores antes de publicar."
+      "inicial": "**500 mg duas vezes ao dia**, aumentando para **1000 mg duas vezes ao dia** se necessário, com base nos sintomas clínicos.",
+      "dose maxima": "**1000 mg duas vezes ao dia.**",
+      "com inibidor moderado de cyp3a": "**Limitar a 500 mg duas vezes ao dia** em quem usa inibidor moderado do CYP3A — **diltiazem, verapamil e eritromicina** estão nomeados na bula. Os dois primeiros são de uso cardiológico corrente, o que torna esta a interação mais provável na prática.",
+      "com inibidor forte de cyp3a": "**Contraindicado.**",
+      "com inibidor de p-gp": "Inibidor da glicoproteína P, como a ciclosporina, pode aumentar a exposição à ranolazina — **ajustar a dose pela resposta clínica**.",
+      "modo de usar": "Com ou entre as refeições. **Não partir nem mastigar.**",
+      "dose esquecida": "Tomar a dose seguinte no horário normal, **sem dobrar**.",
+      "fonte": "Bula brasileira do Riscard (ranolazina, Biolab Sanus Farmacêutica Ltda., comprimido revestido de 500 mg e 1000 mg), seção de posologia, conferida na íntegra. **É a bula do paciente, versão 06/2016** — a do profissional não foi obtida, e isso fica declarado em vez de omitido: a posologia, os limites por interação e o modo de usar constam integralmente dela. **A marcação de procedência está resolvida** — a fonte anterior era agregador; esta é a bula registrada do produto comercializado no Brasil, onde a ranolazina existe sob a marca Riscard."
     },
     "notes": {
       "Metabolismo e interacoes com CYP3A4": "- **via principal**: metabolização extensa via CYP3A4, com menos de 5% excretado inalterado na urina - **inibidores moderados de CYP3A4**: dose de ranolazina não deve exceder 500 mg 2x/dia quando associada - **inibidores fortes de CYP3A4 (contraindicacao absoluta)**: cetoconazol, claritromicina, nelfinavir - **fonte**: StatPearls",
