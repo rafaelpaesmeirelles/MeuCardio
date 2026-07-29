@@ -554,5 +554,29 @@
       "cardiomiopatia hipertrofica",
       "aconselhamento genetico"
     ]
+  },
+  {
+    "slug": "proteina-c-reativa-na-pericardite-aguda",
+    "name": "Proteína C-reativa (PCR) na pericardite aguda",
+    "category": "laboratorial",
+    "theme": "Pericárdio",
+    "what_it_measures": "Reagente de fase aguda hepático, induzido por IL-6 — marcador inflamatório mais comumente elevado na pericardite aguda, presente em 79-90% dos casos, ao lado de velocidade de hemossedimentação (VHS) e leucocitose neutrofílica.",
+    "reference_range": "O corte de normalidade depende do ensaio do laboratório — a maioria dos laboratórios considera normal um valor de PCR convencional (não ultrassensível) abaixo de 10 mg/L (1,0 mg/dL). Use sempre o valor de referência informado pelo laboratório que processou a amostra, não um número de memória.",
+    "indications": "Um dos critérios diagnósticos de apoio da pericardite aguda: o diagnóstico definitivo exige apresentação clínica típica (dor torácica pleurítica que piora deitado e melhora sentado/inclinado para frente) mais pelo menos um critério adicional — atrito pericárdico, alteração eletrocardiográfica sugestiva, derrame pericárdico novo ou em piora, ou elevação de marcador inflamatório (PCR, VHS ou leucocitose). Também indicada para guiar a velocidade do desmame de corticoide (só reduzir a dose se o paciente estiver assintomático e a PCR normal, sobretudo abaixo de 25 mg/dia de prednisona) e como um dos critérios, junto com dependência de corticoide e resistência à colchicina, para indicar terapia anti-IL-1 (anacinra ou rilonacepte) na pericardite recorrente.",
+    "interpretation": "PCR elevada sustenta o diagnóstico de pericardite aguda quando associada ao quadro clínico típico, e sua normalização é usada como critério de resposta ao tratamento antes de iniciar ou acelerar o desmame de corticoide. PCR persistentemente elevada apesar de terapia otimizada com colchicina e corticoide é um dos gatilhos para considerar anti-IL-1.",
+    "limitations": "Marcador sensível mas inespecífico — não localiza etiologia nem substitui a investigação causal. A diretriz reconhece explicitamente a existência de pericardite com PCR normal ou pouco elevada, mais difícil de tratar e com prognóstico incerto: PCR normal não deve, isoladamente, excluir o diagnóstico se os critérios clínicos estiverem presentes.",
+    "source_refs": [
+      "2025 ESC Guidelines for the management of myocarditis and pericarditis. Eur Heart J. 2025;46(40):3952-4041. PMID 40878297. DOI 10.1093/eurheartj/ehaf192 — seção 3.3.2 (Diagnostic criteria for pericarditis), Tabela 14 (Tapering of corticosteroids) e seção sobre terapia anti-IL-1 na pericardite recorrente."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "pcr",
+      "proteina c reativa",
+      "pericardite",
+      "marcador inflamatorio",
+      "criterio diagnostico",
+      "corticoide"
+    ]
   }
 ]
