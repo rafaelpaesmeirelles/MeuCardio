@@ -774,5 +774,29 @@
       "insuficiência cardíaca",
       "carboximaltose férrica"
     ]
+  },
+  {
+    "slug": "bnp-e-nt-probnp-na-estratificacao-de-risco-da-hipertensao-arterial-pulmonar",
+    "name": "BNP/NT-proBNP na estratificação de risco da hipertensão arterial pulmonar",
+    "category": "laboratorial",
+    "theme": "Hipertensão pulmonar",
+    "what_it_measures": "Peptídeo natriurético (BNP ou NT-proBNP), um dos parâmetros da avaliação de risco multiparamétrica em três estratos da diretriz ESC/ERS 2022 para hipertensão arterial pulmonar (HAP) — ao lado de sinais de insuficiência cardíaca direita, progressão de sintomas, síncope, classe funcional OMS, distância no teste de caminhada de 6 minutos, ergoespirometria, ecocardiograma, ressonância cardíaca e hemodinâmica invasiva. Nenhum parâmetro isolado, incluindo o biomarcador, define a categoria de risco sozinho.",
+    "reference_range": "Pela Tabela 16 da diretriz, o corte de baixo risco (mortalidade estimada em 1 ano <5%) é BNP <50 ng/L ou NT-proBNP <300 ng/L; risco intermediário (mortalidade 5-20%) é BNP 50-800 ng/L ou NT-proBNP 300-1100 ng/L; e alto risco (mortalidade >20%) é BNP >800 ng/L ou NT-proBNP >1100 ng/L. A própria diretriz registra que esses cortes foram atualizados a partir dos dados do registro REVEAL para harmonizar com o modelo de quatro estratos usado no seguimento, e que os estudos de validação europeus usaram os cortes da versão de 2015 — ou seja, os números têm procedência de coorte norte-americana, não de validação europeia direta.",
+    "indications": "Avaliação de risco multiparamétrica é recomendada tanto ao diagnóstico (modelo de três estratos — baixo, intermediário, alto) quanto no seguimento (modelo de quatro estratos — baixo, intermediário-baixo, intermediário-alto, alto), com nível de evidência elevado de C para B nesta atualização de 2022 em relação à versão anterior da diretriz. Dosar BNP/NT-proBNP faz parte da bateria mínima de reavaliação periódica em todo paciente com HAP confirmada, junto com classe funcional e teste de caminhada de 6 minutos.",
+    "interpretation": "O paciente é classificado pela combinação dos parâmetros disponíveis na consulta, não pelo biomarcador isolado — por exemplo, BNP em faixa de baixo risco não sobrepõe classe funcional III ou síncope recente, que sozinhos já indicam risco mais alto. Piora da classe funcional é considerada um dos sinais mais preocupantes de progressão de doença, mesmo quando outros parâmetros ainda não pioraram, e deve motivar investigação da causa da deterioração clínica.",
+    "limitations": "Nenhum limiar isolado de biomarcador se aplica a todos os pacientes — a diretriz recomenda que a decisão terapêutica sempre integre múltiplos domínios (clínico, funcional, imagem, hemodinâmica), não o valor de BNP/NT-proBNP isolado. Recorte deste verbete: cobre o parâmetro de biomarcador da Tabela 16 (avaliação de risco em HAP); não cobre o cateterismo cardíaco direito, que tem verbete próprio no mesmo tema, nem os parâmetros ecocardiográficos, de ressonância ou de ergoespirometria da mesma tabela.",
+    "source_refs": [
+      "2022 ESC/ERS Guidelines for the diagnosis and treatment of pulmonary hypertension. Eur Heart J. 2022;43(38):3618-3731. DOI: 10.1093/eurheartj/ehac237 — Tabela 16 (Comprehensive risk assessment in pulmonary arterial hypertension, three-strata model), seção 6.2.3 e nota de rodapé sobre a atualização dos cortes de BNP/NT-proBNP a partir do registro REVEAL."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "bnp",
+      "nt-probnp",
+      "hipertensão arterial pulmonar",
+      "estratificação de risco",
+      "reveal",
+      "esc/ers 2022"
+    ]
   }
 ]
