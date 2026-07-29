@@ -145,7 +145,9 @@
       "Alteplase · StatPearls (NCBI Bookshelf) · https://www.ncbi.nlm.nih.gov/books/NBK499977/",
       "Tissue Plasminogen Activator Therapy · StatPearls (NCBI Bookshelf) · https://www.ncbi.nlm.nih.gov/books/NBK482376/",
       "ACTIVASE (alteplase) for injection · FDA prescribing information · https://www.accessdata.fda.gov/drugsatfda_docs/label/2015/103172s5203lbl.pdf"
-    ]
+    ],
+    "pregnancy": "**Categoria de risco C.** Dados limitados em gestantes. Estudos pré-clínicos em doses maiores que as humanas mostraram imaturidade fetal e/ou embriotoxicidade, secundárias à atividade farmacológica do fármaco. Fonte: bula do profissional do ACTILYSE (Boehringer Ingelheim), versão de 04/09/2012.",
+    "lactation": "**Não se sabe se o alteplase é excretado no leite humano.** Fonte: bula do profissional do ACTILYSE (Boehringer Ingelheim), versão de 04/09/2012."
   },
   {
     "slug": "amiodarona-cloridrato",
@@ -879,7 +881,9 @@
       "Connolly SJ, Ezekowitz MD, Yusuf S, et al. Dabigatran versus warfarin in patients with atrial fibrillation (RE-LY). N Engl J Med. 2009;361(12):1139-1151. DOI: 10.1056/NEJMoa0905561. PMID: 19717844",
       "ANDEXXA (andexanete alfa) — rótulo aprovado pelo FDA, DailyMed SPL setid 2d9d90a6-63e6-46ef-96ff-dd6519ae7b6c",
       "Bula profissional de Pradaxa (etexilato de dabigatrana), Boehringer Ingelheim do Brasil — seções de contraindicações, posologia e características farmacológicas, consultada em republicação por duas fontes independentes em julho de 2026. Reconferir no bulário eletrônico da ANVISA quando acessível."
-    ]
+    ],
+    "pregnancy": "Quem tem possibilidade de engravidar **deve evitar a gravidez durante o tratamento**. Grávida só deve ser tratada se o médico considerar que o benefício esperado supera os riscos. Fonte: bula do PRADAXA (Boehringer Ingelheim), bula do paciente.",
+    "lactation": "**Como precaução, a amamentação deve ser interrompida** durante o tratamento. Fonte: bula do PRADAXA (Boehringer Ingelheim), bula do paciente."
   },
   {
     "slug": "dapagliflozina",
@@ -1491,7 +1495,9 @@
     },
     "references": [
       "REPATHA (evolocumabe) — Bula Profissional · Amgen · https://www.amgen.com.br/~/media/Themes/CorporateAffairs/amgen-com-br/amgen-com-br/PDF/Products/2022.06.08_Repatha_Bula_Profissional.pdf"
-    ]
+    ],
+    "pregnancy": "**Evolocumabe (Repatha):** dados ausentes ou limitados em gestantes; estudos em animais não indicam toxicidade reprodutiva. Não deve ser usado na gravidez a menos que a condição clínica da mulher exija.\n\n**Alirocumabe (Praluent):** uso **não recomendado** na gravidez; sem dados disponíveis, e espera-se que atravesse a barreira placentária, como outros anticorpos IgG.\n\n**Atenção à terapia combinada:** as estatinas são contraindicadas na gravidez — se o inibidor de PCSK9 estiver associado a estatina, a contraindicação da estatina prevalece sobre a orientação mais branda do anticorpo. Fontes: bulas do REPATHA (Amgen) e do PRALUENT (Sanofi).",
+    "lactation": "**Evolocumabe:** não se sabe se é excretado no leite humano; o risco para o recém-nascido não pode ser excluído, e a decisão é **descontinuar a amamentação ou descontinuar o tratamento**.\n\n**Alirocumabe:** também sem dados de excreção; **não recomendado durante a amamentação**, cabendo ao médico decidir qual dos dois descontinuar. Fontes: bulas do REPATHA (Amgen) e do PRALUENT (Sanofi)."
   },
   {
     "slug": "ezetimiba",
@@ -3263,7 +3269,8 @@
     "references": [
       "Tenecteplase · StatPearls (NCBI Bookshelf) · https://www.ncbi.nlm.nih.gov/books/NBK592420/",
       "When is Tenecteplase (TNK) indicated, what are the weight-based bolus doses for STEMI and acute ischemic stroke, and what are the absolute contraindications? · droracle · https://www.droracle.ai/articles/816666/when-is-tenecteplase-tnk-indicated-what-are-the-weightbased"
-    ]
+    ],
+    "pregnancy": "**Não há experiência com o uso em gestantes.** No infarto agudo do miocárdio durante a gravidez, os benefícios do tratamento devem ser avaliados contra os riscos potenciais — a bula coloca a decisão como ponderação caso a caso, não como proibição. Fonte: bula do profissional do METALYSE (Boehringer Ingelheim), versão de 2009."
   },
   {
     "slug": "ticagrelor",
