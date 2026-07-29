@@ -626,5 +626,78 @@
       "ctrcd",
       "biomarcador"
     ]
+  },
+  {
+    "slug": "angiotomografia-na-sindrome-aortica-aguda",
+    "name": "Angiotomografia (ECG-gated) na síndrome aórtica aguda",
+    "category": "imagem",
+    "theme": "Aorta e doença arterial periférica",
+    "what_it_measures": "Angiotomografia computadorizada sincronizada ao ECG (ECG-gated CCT), do pescoço à pelve, para identificar dissecção aórtica, hematoma intramural ou úlcera aterosclerótica penetrante — as três entidades que compõem a síndrome aórtica aguda (SAA) — e caracterizar porta de entrada, extensão e complicações associadas (malperfusão, dilatação, ruptura).",
+    "reference_range": "Não se aplica valor de referência numérico — o achado é descritivo (presença/ausência de flap intimal, hematoma intramural, úlcera penetrante, extensão da lesão e envolvimento de ramos).",
+    "indications": "Pela Recommendation Table 44 da diretriz: em paciente com apresentação clínica compatível com possível SAA, é recomendado (Classe I, Nível B) um algoritmo multiparamétrico de descarte/confirmação usando o ADD-RS (Aortic Dissection Detection Risk Score). A angiotomografia ECG-gated do pescoço à pelve é recomendada (Classe I, Nível C) como técnica de imagem de primeira linha, por ampla disponibilidade, acurácia e por fornecer informação sobre porta de entrada, extensão e complicações. Ecocardiograma transtorácico focado (com contraste, se factível) é recomendado (Classe I, Nível C) na avaliação inicial. Em paciente instável que não pode ser transferido para a tomografia, o ecocardiograma transesofágico (ETE) é recomendado (Classe I, Nível B) para diagnóstico e avaliação do tronco celíaco e das artérias mesentéricas.",
+    "interpretation": "Achado positivo (flap intimal com dupla luz, hematoma intramural circunferencial ou em crescente, ou úlcera penetrante) confirma SAA e direciona a classificação anatômica (tipo A vs. B) que determina a via de tratamento — cirúrgica de urgência no tipo A, inicialmente clínica ou endovascular no tipo B não complicado. O ETE é recomendado (Classe I, Nível C) para guiar o manejo perioperatório e detectar complicações no intraoperatório.",
+    "limitations": "A ressonância magnética cardiovascular (RMC) deve ser considerada (Classe IIa, Nível C) como alternativa apenas quando a angiotomografia não estiver disponível — não é opção de primeira linha por menor disponibilidade em cenário de urgência e tempo de aquisição mais longo. A angiotomografia exige contraste iodado intravenoso, com as limitações usuais em disfunção renal e alergia ao contraste.",
+    "source_refs": [
+      "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. PMID 39210722. DOI 10.1093/eurheartj/ehae179 — Recommendation Table 44 (Recommendations for the diagnostic work-up in acute aortic syndrome)."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "angiotomografia",
+      "sindrome aortica aguda",
+      "dissecção aortica",
+      "add-rs",
+      "ecg-gated",
+      "hematoma intramural"
+    ]
+  },
+  {
+    "slug": "troponina-na-lesao-miocardica-perioperatoria",
+    "name": "Troponina cardíaca na detecção de lesão miocárdica perioperatória (PMI)",
+    "category": "laboratorial",
+    "theme": "Perioperatório",
+    "what_it_measures": "Troponina cardíaca (T ou I) dosada de forma seriada — no pré-operatório e no primeiro e/ou segundo dia pós-operatório — para detectar lesão miocárdica perioperatória (PMI, na sigla da diretriz) após cirurgia não cardíaca, independentemente de sintoma isquêmico. NT-proBNP/BNP pré-operatório mede um risco diferente: não detecta lesão, estratifica o paciente antes da cirurgia.",
+    "reference_range": "Não há corte numérico absoluto definido pela diretriz — o diagnóstico de PMI usa o percentil 99 do valor superior de referência do próprio kit de troponina utilizado no laboratório, o mesmo referencial de qualquer troponina de alta sensibilidade. Use o valor de referência informado pelo laboratório que processou a amostra, não um número de memória.",
+    "indications": "Pela diretriz brasileira de avaliação cardiovascular perioperatória (2024), Seção 5 (Biomarcadores no perioperatório): peptídeo natriurético (BNP ou NT-proBNP) pré-operatório é recomendado (Classe I) em paciente com mais de 65 anos, ou entre 45 e 64 anos com doença cardiovascular estabelecida ou fator de risco cardiovascular, submetido a cirurgia não cardíaca — para estratificação de risco, não para detectar lesão. Monitorização de troponina em UTI por 48 horas de pós-operatório é recomendada (Classe I) no paciente classificado como alto risco pelos algoritmos da diretriz, e deve ser considerada (Classe IIa) no paciente de risco intermediário, ambos em cirurgia não cardíaca de risco intermediário ou alto.",
+    "interpretation": "O diagnóstico de PMI é feito pela presença de um delta absoluto igual ou maior que o percentil 99 do valor superior de referência do kit, comparando o valor pré-operatório ao do primeiro ou segundo dia pós-operatório — dosagem isolada, sem comparação seriada, não estabelece o diagnóstico. PMI ocorre com frequência sem dor torácica ou outro sintoma isquêmico, o que torna a monitorização seriada, e não a investigação orientada por sintoma, a estratégia recomendada nos grupos de risco definidos.",
+    "limitations": "A diretriz não especifica um valor de corte numérico absoluto para o peptídeo natriurético pré-operatório (diferente de outras diretrizes internacionais, que citam limiares como NT-proBNP ≥300 ng/L) — a indicação aqui é definida por faixa etária e comorbidade, não por resultado de exame prévio. Recorte deste verbete: cobre biomarcadores no perioperatório pela diretriz brasileira de 2024; não cobre o ecocardiograma pré-operatório, que tem verbete próprio no mesmo tema.",
+    "source_refs": [
+      "Diretriz de Avaliação Cardiovascular Perioperatória da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. DOI: 10.36660/abc.20240590 — Seção 5 (Biomarcadores no Perioperatório), Seção 5.1 (Peptídeos Natriuréticos) e Seção 5.2 (Troponinas Cardíacas e Monitorização de Complicações Cardiovasculares), texto integral em acesso aberto no PubMed Central (PMC12094288)."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "troponina",
+      "lesão miocárdica perioperatória",
+      "pmi",
+      "nt-probnp",
+      "perioperatório",
+      "sbc 2024"
+    ]
+  },
+  {
+    "slug": "ecocardiograma-nos-criterios-whf-para-cardite-reumatica",
+    "name": "Ecocardiograma (2D e Doppler) nos critérios da World Heart Federation para cardite reumática",
+    "category": "imagem",
+    "theme": "Febre reumática",
+    "what_it_measures": "Avaliação bidimensional e por Doppler das valvas mitral e aórtica — morfologia valvar e regurgitação — segundo os critérios padronizados da World Heart Federation (WHF) para diagnóstico ecocardiográfico de doença cardíaca reumática (RHD), usados tanto na triagem populacional quanto na detecção de cardite subclínica (sem sopro à auscultação) durante um episódio agudo de febre reumática.",
+    "reference_range": "Não se aplica valor de referência numérico contínuo — o resultado é categórico, em três grupos: RHD definitiva ('definite RHD'), RHD limítrofe ('borderline RHD') e normal, conforme a combinação de achados morfológicos e de Doppler descrita em Indicações.",
+    "indications": "RHD definitiva exige pelo menos uma das quatro combinações: (A) regurgitação mitral (RM) patológica associada a no mínimo duas características morfológicas reumáticas da valva mitral; (B) estenose mitral com gradiente médio ≥4 mmHg; (C) regurgitação aórtica (RA) patológica associada a no mínimo duas características morfológicas reumáticas da valva aórtica; ou (D) doença limítrofe simultânea nas valvas aórtica e mitral. RHD limítrofe exige uma das três: (A) no mínimo duas características morfológicas reumáticas da valva mitral sem RM ou estenose mitral patológicas; (B) RM patológica isolada; ou (C) RA patológica isolada.",
+    "interpretation": "RM é considerada patológica só quando os quatro critérios de Doppler estão presentes simultaneamente: jato visualizado em pelo menos duas projeções, comprimento ≥2 cm em ao menos uma projeção, velocidade de pico ≥3 m/s em pelo menos um envelope completo, e padrão pan-sistólico em pelo menos um envelope. RA é considerada patológica com o critério espelhado: duas projeções, comprimento ≥1 cm, velocidade ≥3 m/s no início da diástole e padrão pan-diastólico em pelo menos um envelope. Regurgitação que não atinge todos os quatro critérios de sua valva não conta como patológica, mesmo que visível ao Doppler colorido.",
+    "limitations": "Critério válido apenas quando os quatro parâmetros de Doppler coexistem — jato leve, breve ou fisiológico (frequente em crianças e adultos sem doença valvar) não deve ser confundido com regurgitação patológica. A World Heart Federation publicou em 2023 uma atualização destes critérios (mesma organização, documento revisado), o que não foi detalhado neste verbete — checar a versão mais recente antes de aplicar em programa de triagem novo. Recorte deste verbete: cobre o ecocardiograma nos critérios de imagem da WHF; não cobre a antiestreptolisina O, que tem verbete próprio no mesmo tema, nem os critérios clínicos de Jones para o diagnóstico da febre reumática aguda.",
+    "source_refs": [
+      "Reményi B, Wilson N, Steer A, et al. World Heart Federation criteria for echocardiographic diagnosis of rheumatic heart disease—an evidence-based guideline. Nat Rev Cardiol. 2012;9(5):297-309. DOI: 10.1038/nrcardio.2012.7",
+      "World Heart Federation. 2023 World Heart Federation guidelines for the echocardiographic diagnosis of rheumatic heart disease. Nat Rev Cardiol. 2023. DOI: 10.1038/s41569-023-00940-9 (atualização citada, não detalhada neste verbete — VERIFICAÇÃO HUMANA NECESSÁRIA para incorporar as mudanças de 2023 antes de uso em programa de triagem)."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ecocardiograma",
+      "febre reumática",
+      "cardite reumática",
+      "world heart federation",
+      "whf",
+      "regurgitação mitral patológica"
+    ]
   }
 ]
