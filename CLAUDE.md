@@ -88,6 +88,58 @@ Regras que decorrem disso:
 >    lactação completas (88/88) e 59 interações. Não confie em número que ela
 >    tenha em memória — meça antes de escrever.
 >
+> ---
+>
+> ### 🚧 PARA A SESSÃO DA BIBLIOTECA — limites da faixa de Medicamentos
+> Escrito às 20h30 de 29/07/2026, **depois de uma colisão real**, e por pedido
+> do Rafael. Não é formalidade: já custou a procedência de um lote de trabalho.
+>
+> **O que aconteceu:** o commit `dbcf6d2`, cuja mensagem fala só de
+> `COBERTURA.md`, carrega **seis arquivos da sessão de Medicamentos** que nada
+> têm a ver com cobertura — correções de trombólise no AVC e a remoção de uma
+> fonte gerada por IA de quatro documentos publicados. Eles foram varridos por
+> um `git commit -a` executado com a árvore suja. O conteúdo sobreviveu; a
+> procedência não, porque a mensagem não descreve nada disso. O registro do que
+> entrou está em `3c4044c` e em `.claude/handoff-medicamentos.md`.
+>
+> **A regra que faltava, e que agora vale:**
+> **Nunca use `git commit -a` nem `git add -A` nem `git add .`.** O `CLAUDE.md`
+> já proibia `git add -A`; a variante `-a` do `commit` tem exatamente o mesmo
+> efeito e não estava nomeada. **Adicione caminho por caminho**, e rode
+> `git status` antes de commitar: se aparecer arquivo que você não editou,
+> **pare** — é trabalho da outra sessão em curso, e commitá-lo o quebra pela
+> metade, sem conflito de merge e sem aviso.
+>
+> **NÃO ESCREVA nestes caminhos — são da sessão de Medicamentos:**
+> - `medicamentos/metadados.json` e `medicamentos/interacoes.json`
+> - `backend/app/api/drugs.py`
+> - `frontend/src/pages/Medicamentos.tsx`, `Interacoes.tsx`, `Condicoes.tsx`
+> - `.claude/handoff-medicamentos.md` e `.claude/ferramentas/*`
+> - **estes 13 temas de `content/`:** `Farmacologia/`, `Gravidez/`,
+>   `Terapia_intensiva/`, `Tromboembolismo/`, `Fibrilação_atrial/`,
+>   `Arritmias/`, `Dispositivos/`, `Prevenção_e_lipídios/`,
+>   `Diabetes_e_cardiologia/`, `Insuficiência_cardíaca/`, `Hipertensão/`,
+>   `Hipertensão_pulmonar/`, `Calculadoras/`
+>
+> **`Farmacologia/` é o ponto de atrito mais provável**, e merece atenção
+> especial: a prosa de lá e os registros de `medicamentos/metadados.json`
+> descrevem os mesmos fármacos. Uma contradição entre os dois é o defeito
+> "contradição entre telas" que a Fase B passou semanas removendo — o git
+> aceita sem avisar, e o prejuízo só aparece quando um assinante compara duas
+> páginas. **Se precisar de algo em Farmacologia, não edite: escreva o pedido
+> neste bloco e deixe para a sessão de Medicamentos.**
+>
+> **Se precisar mesmo entrar na faixa alheia**, o caminho é este bloco do
+> `CLAUDE.md` — declare aqui antes, commite a declaração, e espere. Não há
+> outro canal entre as sessões.
+>
+> **O que é seu, e onde há trabalho medido esperando:** os 14 temas restantes
+> de `content/`, mais `evidencias/`, `estudos/`, `galeria/` e `exames/`. O
+> `COBERTURA.md`, que você mesma remediu às 20h, aponta **exames** como a maior
+> lacuna atual.
+>
+> ---
+>
 > ### ⚠️ Suspensão de 19h50 (histórico, já revogada)
 > Decisão do Rafael, tomada depois de medirmos o estado real dos processos:
 > **a sessão da Biblioteca morreu** (o processo não existe mais — ela rodava
