@@ -7,6 +7,21 @@ fluxos de conteúdo, junta os operadores de texto (Tj, TJ, ', ") e, quando a
 fonte é subconjunto com codificação própria, traduz pelo /ToUnicode do próprio
 arquivo. Sem ToUnicode e com fonte simbólica, o texto sai ilegível — e nesse
 caso é melhor saber que saiu do que receber lixo achando que é conteúdo.
+
+LIMITES CONHECIDOS, medidos em bulas reais (29/07/2026). Quando a saída vier
+vazia, é quase certo que seja um destes dois — e nenhum é o caso de fonte sem
+/ToUnicode, que produz texto embaralhado, não vazio:
+
+1. **PDF cifrado** (`/Encrypt` com `/Filter /Standard`). Comum em bula de
+   laboratório, em geral com senha de usuário vazia e restrição só de
+   permissões. Ler exige implementar a derivação de chave do handler padrão
+   mais RC4/AES. Caso conhecido: bula do Xarelto (rivaroxabana).
+2. **Objetos em fluxo** (`/ObjStm` e xref em stream, PDF 1.5+). O parser aqui
+   varre `N 0 obj ... endobj` no arquivo cru e não enxerga objeto empacotado
+   dentro de outro fluxo. Aparece no mesmo arquivo do item 1.
+
+Diagnóstico rápido, antes de suspeitar de qualquer outra coisa:
+    grep -c '/Encrypt' arquivo.pdf ; grep -c '/ObjStm' arquivo.pdf
 """
 import re, sys, zlib
 
