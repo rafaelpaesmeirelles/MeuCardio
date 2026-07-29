@@ -550,5 +550,161 @@
     "conduta": "Consequência prática registrada na própria rotulagem: a contracepção deve ser mantida por 6 meses após a descontinuação, prazo dimensionado pelo pior cenário metabólico. Considerar o estado do CYP2C19 ao planejar interrupção ou gravidez.",
     "fonte": "Resumo das Características do Medicamento (RCM) da EMA, em português do CAMZYOS (mavacamten, Bristol-Myers Squibb), secções 4.4, 4.6 e 5.2.",
     "review_status": "revisado"
+  },
+  {
+    "slug": "edoxabana-dronedarona",
+    "farmacos": [
+      "edoxabana",
+      "dronedarona"
+    ],
+    "gravidade": "grave",
+    "efeito": "A dronedarona inibe a glicoproteína P, via de efluxo da edoxabana. Medido: 400 mg de dronedarona duas vezes ao dia por 7 dias elevaram a **AUC da edoxabana em 85% e a Cmax em 46%**.",
+    "conduta": "Reduzir a edoxabana para 30 mg uma vez ao dia enquanto durar a associação.",
+    "fonte": "Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.5 do LIXIANA (edoxabano, Daiichi Sankyo) — a dronedarona está nomeada, com o número.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "edoxabana-verapamil",
+    "farmacos": [
+      "edoxabana",
+      "verapamil-cloridrato"
+    ],
+    "gravidade": "leve",
+    "efeito": "O verapamil inibe a glicoproteína P e eleva a concentração plasmática da edoxabana — mas a magnitude não exigiu ajuste nos dados clínicos.",
+    "conduta": "**Não reduzir a dose.** O registro existe justamente para evitar a redução por precaução: a bula nomeia verapamil, quinidina e amiodarona como os inibidores da gp-P que **dispensam** ajuste, ao contrário de ciclosporina, dronedarona, eritromicina e cetoconazol, que exigem 30 mg/dia.",
+    "fonte": "Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.5 do LIXIANA (edoxabano, Daiichi Sankyo).",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "edoxabana-amiodarona",
+    "farmacos": [
+      "edoxabana",
+      "amiodarona-cloridrato"
+    ],
+    "gravidade": "leve",
+    "efeito": "A amiodarona inibe a glicoproteína P e eleva a exposição à edoxabana, sem magnitude que exigisse ajuste nos dados clínicos.",
+    "conduta": "**Não reduzir a dose.** Vale a mesma observação do par com verapamil: a amiodarona está entre os inibidores da gp-P que a bula dispensa de ajuste. Note o contraste dentro da mesma classe de antiarrítmicos — a **dronedarona exige** redução para 30 mg/dia, a amiodarona não.",
+    "fonte": "Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.5 do LIXIANA (edoxabano, Daiichi Sankyo).",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "finerenona-espironolactona",
+    "farmacos": [
+      "finerenona",
+      "espironolactona"
+    ],
+    "gravidade": "grave",
+    "efeito": "Dois antagonistas do receptor mineralocorticoide somados elevam o risco de hipercalemia.",
+    "conduta": "Uso concomitante não recomendado pela bula. Vale para qualquer outro ARM (eplerenona, esaxerenona, canrenona) e também para os diuréticos poupadores de potássio, amilorida e triantereno.",
+    "fonte": "Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.5 do KERENDIA (finerenona, Bayer) — a espironolactona está nomeada no texto.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "finerenona-eplerenona",
+    "farmacos": [
+      "finerenona",
+      "eplerenona"
+    ],
+    "gravidade": "grave",
+    "efeito": "Dois antagonistas do receptor mineralocorticoide somados elevam o risco de hipercalemia.",
+    "conduta": "Uso concomitante não recomendado pela bula.",
+    "fonte": "Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.5 do KERENDIA (finerenona, Bayer) — a eplerenona está nomeada no texto.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "finerenona-inibidor-forte-cyp3a4",
+    "farmacos": [
+      "finerenona"
+    ],
+    "classe_oposta": "inibidor forte do CYP3A4 (itraconazol, claritromicina, cetoconazol, ritonavir, nelfinavir, cobicistate, telitromicina, nefazodona)",
+    "gravidade": "contraindicada",
+    "efeito": "A finerenona é depurada quase só por metabolismo oxidativo do citocromo P450 — 90% pelo CYP3A4 e 10% pelo CYP2C8 —, de modo que a inibição forte dessa via provoca aumento acentuado da exposição.",
+    "conduta": "Associação contraindicada pela bula. A toranja e o suco de toranja também devem ser evitados durante o tratamento, pelo mesmo mecanismo.",
+    "fonte": "Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.5 do KERENDIA (finerenona, Bayer), item de uso concomitante contraindicado.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "finerenona-indutor-cyp3a4",
+    "farmacos": [
+      "finerenona"
+    ],
+    "classe_oposta": "indutor forte ou moderado do CYP3A4 (rifampicina, carbamazepina, fenitoína, fenobarbital, hipérico, efavirenz)",
+    "gravidade": "moderada",
+    "efeito": "Queda acentuada da concentração plasmática da finerenona, com **perda de efeito terapêutico** — é o risco inverso do par anterior, e por isso costuma passar despercebido.",
+    "conduta": "Uso concomitante não recomendado pela bula.",
+    "fonte": "Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.5 do KERENDIA (finerenona, Bayer), item de uso concomitante não recomendado.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "vericiguate-sildenafila",
+    "farmacos": [
+      "vericiguate",
+      "sildenafila-citrato"
+    ],
+    "gravidade": "grave",
+    "efeito": "Somam-se dois vasodilatadores que agem na mesma via do GMP cíclico. Em voluntários saudáveis, acrescentar sildenafila em dose única (25, 50 ou 100 mg) ao vericiguate 10 mg/dia reduziu a pressão arterial sentada em até 5,4 mmHg além do vericiguate isolado, sem tendência dependente da dose e sem alterar a exposição de nenhum dos dois.",
+    "conduta": "Não recomendado. A associação **não foi estudada em pacientes com insuficiência cardíaca**, e o receio é hipotensão sintomática — o dado disponível vem de voluntários saudáveis, que toleram queda pressórica bem melhor que o paciente com IC.",
+    "fonte": "Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.5 do VERQUVO (vericiguat, Bayer) — a sildenafila está nomeada, com o número.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "vericiguate-estimulador-da-guanilato-ciclase",
+    "farmacos": [
+      "vericiguate"
+    ],
+    "classe_oposta": "outro estimulador da guanilato ciclase solúvel (ex.: riociguate)",
+    "gravidade": "contraindicada",
+    "efeito": "Dois estimuladores da mesma enzima somam efeito vasodilatador.",
+    "conduta": "Associação contraindicada pela bula.",
+    "fonte": "Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.5 do VERQUVO (vericiguat, Bayer), com remissão à secção 4.3 (Contraindicações).",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "bosentana-sildenafila",
+    "farmacos": [
+      "bosentana",
+      "sildenafila-citrato"
+    ],
+    "gravidade": "moderada",
+    "efeito": "Interação bidirecional e em sentidos opostos, ambos medidos em voluntários saudáveis com bosentana 125 mg duas vezes ao dia e sildenafila 80 mg três vezes ao dia por 6 dias: a **AUC da sildenafila caiu 63%** e a **AUC da bosentana subiu 50%**. Ou seja, a bosentana reduz a exposição ao inibidor da PDE5 enquanto tem a própria exposição aumentada.",
+    "conduta": "A bula recomenda precaução na coadministração, sem proibir — os dois são usados juntos na hipertensão arterial pulmonar. O ponto de atenção é duplo: possível perda de efeito da sildenafila e maior exposição à bosentana, cujo risco principal é hepático.",
+    "fonte": "Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.5 do TRACLEER (bosentano, Janssen-Cilag) — a sildenafila está nomeada, com os dois números.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "ranolazina-digoxina",
+    "farmacos": [
+      "ranolazina",
+      "digoxina"
+    ],
+    "gravidade": "moderada",
+    "efeito": "Aumento médio de **1,5 vez** nas concentrações plasmáticas da digoxina quando associada à ranolazina.",
+    "conduta": "Monitorar a digoxinemia **ao iniciar e ao encerrar** a ranolazina — a bula chama atenção para os dois momentos, e o segundo é o que costuma ser esquecido: suspender a ranolazina derruba o nível de digoxina.",
+    "fonte": "Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.5 do RANEXA (ranolazina, Menarini) — a digoxina está nomeada, com o número.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "ranolazina-sinvastatina",
+    "farmacos": [
+      "ranolazina"
+    ],
+    "classe_oposta": "sinvastatina",
+    "gravidade": "grave",
+    "efeito": "O metabolismo e a depuração da sinvastatina dependem muito do CYP3A4. Ranolazina 1000 mg duas vezes ao dia elevou em cerca de **2 vezes** as concentrações de sinvastatina, na forma lactona e na forma ácida. Há **casos de rabdomiólise notificados** em pacientes usando os dois na experiência pós-comercialização.",
+    "conduta": "Limitar a sinvastatina a **20 mg uma vez ao dia** em quem usa ranolazina, seja qual for a dose desta.",
+    "fonte": "Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.5 do RANEXA (ranolazina, Menarini).",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "mavacamten-inotropico-negativo",
+    "farmacos": [
+      "mavacamten"
+    ],
+    "classe_oposta": "inotrópico negativo (betabloqueador, verapamil, diltiazem)",
+    "gravidade": "grave",
+    "efeito": "Somam-se efeitos inotrópicos negativos sobre um coração já sob redução farmacológica da contratilidade — o mavacamteno atua justamente reduzindo a hipercontratilidade.",
+    "conduta": "Ao iniciar um inotrópico negativo novo, ou ao aumentar a dose de um em uso, manter supervisão médica rigorosa **com monitorização da fração de ejeção** até que a dose esteja estável e a resposta clínica definida.",
+    "fonte": "Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.5 do CAMZYOS (mavacamten, Bristol-Myers Squibb), item de interações farmacodinâmicas.",
+    "review_status": "revisado"
   }
 ]
