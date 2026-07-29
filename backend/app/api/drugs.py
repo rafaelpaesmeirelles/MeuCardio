@@ -24,6 +24,31 @@ def _dump(d: Drug) -> dict:
     return {f: getattr(d, f) for f in FIELDS}
 
 
+ARQUIVO_INTERACOES = "/medicamentos/interacoes.json"
+
+
+def _interacoes_curadas() -> list[dict]:
+    """Lê a base par a par do disco a cada chamada.
+
+    É bind mount somente-leitura, igual às outras frentes de conteúdo: corrigir
+    uma interação é editar o JSON e importar, sem rebuild e sem migração. Se o
+    arquivo faltar ou estiver quebrado, devolve lista vazia — a rota continua
+    respondendo com as menções em prosa em vez de derrubar a tela inteira.
+    """
+    import json
+
+    try:
+        with open(ARQUIVO_INTERACOES, encoding="utf-8") as f:
+            dados = json.load(f)
+        return dados if isinstance(dados, list) else []
+    except (OSError, ValueError):
+        return []
+
+
+class InteracoesIn(BaseModel):
+    slugs: list[str]
+
+
 class MeiaVidaIn(BaseModel):
     half_life_hours: float | None = None
     half_life_note: str | None = None
@@ -78,6 +103,92 @@ def compare(
     if missing:
         raise HTTPException(status_code=404, detail=f"Não encontrado: {', '.join(missing)}")
     return {"drugs": [_dump(d) for d in drugs]}
+
+
+@router.post("/interacoes")
+def checar_interacoes(
+    dados: InteracoesIn, db: Session = Depends(get_db), _=Depends(current_user)
+):
+    """Cruza a lista de fármacos do médico com a base de interações.
+
+    Devolve DOIS blocos separados de propósito, e a separação é o ponto do
+    recurso:
+
+    - `verificadas`: pares da base curada, cada um com gravidade e fonte
+      nominal. É o único bloco em que o sistema afirma alguma coisa.
+    - `mencoes`: o texto de `interactions` da bula de cada fármaco escolhido,
+      quando cita outro fármaco da mesma lista. **Sem gravidade atribuída** —
+      é o que a bula diz, não uma classificação nossa. Graduar isso sem fonte
+      seria inventar a parte mais importante da resposta.
+
+    O `aviso` volta sempre: base pequena, ausência de alerta não é atestado de
+    segurança.
+    """
+    slugs = [s for s in dict.fromkeys(dados.slugs) if s]
+    if not 2 <= len(slugs) <= 10:
+        raise HTTPException(status_code=422, detail="Selecione de 2 a 10 medicamentos.")
+
+    drogas = db.query(Drug).filter(Drug.slug.in_(slugs), Drug.published.is_(True)).all()
+    achados = {d.slug for d in drogas}
+    ausentes = [s for s in slugs if s not in achados]
+    if ausentes:
+        raise HTTPException(status_code=404, detail=f"Não encontrado: {', '.join(ausentes)}")
+
+    nome = {d.slug: d.generic_name for d in drogas}
+    selecionados = set(achados)
+
+    verificadas: list[dict] = []
+    avisos_de_classe: list[dict] = []
+    for i in _interacoes_curadas():
+        farmacos = i.get("farmacos", [])
+        envolvidos = [f for f in farmacos if f in selecionados]
+        registro = {
+            **{k: i[k] for k in ("slug", "gravidade", "efeito", "conduta", "fonte") if k in i},
+            "classe_oposta": i.get("classe_oposta"),
+            "farmacos": [{"slug": s, "nome": nome[s]} for s in envolvidos],
+        }
+        # Par fármaco×fármaco: os dois têm de estar na lista, e aí o alerta é
+        # sobre a combinação que o médico montou.
+        if len(farmacos) == 2 and len(envolvidos) == 2:
+            verificadas.append(registro)
+        # Fármaco×classe: só um lado é fármaco nomeado; o outro é uma classe
+        # inteira. Fica em bloco SEPARADO de propósito — misturar com o de cima
+        # faria "contraindicada" aparecer no topo por causa de um fármaco que o
+        # paciente talvez nem use, e alerta que grita sem motivo é alerta que o
+        # médico aprende a ignorar.
+        elif len(farmacos) == 1 and len(envolvidos) == 1:
+            avisos_de_classe.append(registro)
+
+    ordem = {"contraindicada": 0, "grave": 1, "moderada": 2, "leve": 3}
+    verificadas.sort(key=lambda v: ordem.get(v.get("gravidade", ""), 9))
+    avisos_de_classe.sort(key=lambda v: ordem.get(v.get("gravidade", ""), 9))
+
+    mencoes = []
+    for d in drogas:
+        for texto in (d.interactions or []):
+            baixo = texto.lower()
+            citados = [
+                s for s in selecionados
+                if s != d.slug and nome[s].split()[0].lower() in baixo
+            ]
+            if citados:
+                mencoes.append({
+                    "de": {"slug": d.slug, "nome": d.generic_name},
+                    "cita": [{"slug": s, "nome": nome[s]} for s in citados],
+                    "texto": texto,
+                })
+
+    return {
+        "selecionados": [{"slug": d.slug, "nome": d.generic_name} for d in drogas],
+        "verificadas": verificadas,
+        "avisos_de_classe": avisos_de_classe,
+        "mencoes": mencoes,
+        "aviso": (
+            "A base de interações verificadas é pequena e cresce por conferência "
+            "contra bula. Nenhum alerta aqui NÃO significa ausência de interação — "
+            "significa que não há registro com fonte rastreável para esta combinação."
+        ),
+    }
 
 
 @router.get("/{slug}")

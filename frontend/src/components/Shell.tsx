@@ -14,6 +14,7 @@ const NAV_BASE: ItemNav[] = [
   { to: "/busca", rotulo: "Busca", curto: "Busca" },
   { to: "/calculadoras", rotulo: "Calculadoras", curto: "Escores" },
   { to: "/medicamentos", rotulo: "Medicamentos", curto: "Fármacos" },
+  { to: "/interacoes", rotulo: "Checador de interação", curto: "Interações" },
   { to: "/galeria", rotulo: "Galeria de imagens", curto: "Galeria" },
   { to: "/exames", rotulo: "Exames", curto: "Exames" },
   { to: "/evidencias", rotulo: "Evidências", curto: "Evidências" },

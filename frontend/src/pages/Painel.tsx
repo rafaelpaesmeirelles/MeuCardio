@@ -46,6 +46,7 @@ const GRUPOS: Grupo[] = [
         descricao: "Comparador lado a lado: dose, apresentação, ajuste renal, contraindicação e interação, com a bula de origem declarada.",
       },
       {
+        to: "/interacoes",
         nome: "Checador de interação",
         descricao: "Monte a lista do que o paciente já usa e do que você vai prescrever, e veja as interações com gravidade e fonte.",
       },

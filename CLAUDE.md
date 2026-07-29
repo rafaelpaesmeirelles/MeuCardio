@@ -429,6 +429,19 @@ em produção. As demais pendências são trabalho novo ou decisão do Rafael.
    tabela `documents`. Galeria, exames, evidências e estudos são invisíveis
    para a busca — 88 itens publicados que ninguém encontra pesquisando.
 
+### Recado entre sessões (29/07/2026)
+Há **duas sessões trabalhando neste repositório ao mesmo tempo**, com divisão
+por arquivo decidida pelo Rafael: uma fica em `medicamentos/` e no frontend, a
+outra em `content/` e `evidencias/`. **Não escrever fora da própria faixa** — os
+JSON são reescritos inteiros a cada atualização, então quem grava por último
+apaga o trabalho do outro.
+
+**Pedido do Rafael para a sessão que está em `content/`:** quando terminar o que
+já está fazendo, assumir os três fluxogramas que ainda faltam — **cardiopatia
+congênita do adulto, cardio-oncologia e febre reumática**. Não é urgente; se
+preferir, ele decide depois quem pega. Formato obrigatório de árvore de decisão:
+ver a seção própria acima.
+
 ### Estado das tarefas 8 a 26 do briefing 2
 Medido em 29/07/2026 direto sobre o código e o `git log`, não sobre o que este
 arquivo dizia antes. **Concluída** aqui significa "existe rota + tela + conteúdo
