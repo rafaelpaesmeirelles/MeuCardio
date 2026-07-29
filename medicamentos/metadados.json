@@ -3281,7 +3281,7 @@
   },
   {
     "slug": "trimetazidina",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Trimetazidina (dicloridrato)",
     "drug_class": "Antianginoso metabólico — inibidor parcial da beta-oxidação de ácidos graxos",
     "mechanism": "Inibe parcialmente a enzima 3-cetoacil-CoA-tiolase de cadeia longa, deslocando o metabolismo energético do miocárdio da beta-oxidação de ácidos graxos para a via mais eficiente de oxidação da glicose, otimizando o uso de oxigênio em condições de isquemia sem efeito hemodinâmico (não altera FC ou PA) — mecanismo complementar aos antianginosos hemodinâmicos (betabloqueadores, BCC, nitratos)",
@@ -3303,14 +3303,15 @@
       "Insuficiência renal grave (ClCr<15mL/min)"
     ],
     "dosing": {
-      "apresentacao": "Comprimido revestido de **35 mg de dicloridrato de trimetazidina**, equivalente a 27,48 mg de trimetazidina base, em liberação modificada. Existe também apresentação de 20 mg de liberação imediata.",
-      "dose padrao": "**35 mg duas vezes ao dia** — manhã e noite, **junto das refeições**, com um copo de água. Na apresentação de 20 mg de liberação imediata, 3 vezes ao dia às refeições.",
-      "posicao terapeutica": "**Terapia adjuvante**, em quem não está adequadamente controlado ou não tolera os antianginosos hemodinâmicos de primeira linha (betabloqueador, bloqueador de canal de cálcio, nitrato). **Nunca como monoterapia de primeira linha.**",
-      "insuficiencia renal moderada (clcr 30-60)": "**35 mg uma vez ao dia, pela manhã.**\n\n**Os dois verbetes fundidos estavam errados neste ponto, cada um à sua maneira**: um dizia para reduzir a 20 mg de liberação imediata duas vezes ao dia, o outro dizia 20 mg duas vezes ao dia. A bula brasileira reduz a **frequência** da apresentação de liberação modificada, mantendo a dose — não troca de apresentação.",
-      "insuficiencia renal grave (clcr < 30)": "A exposição plasmática é cerca de **2 vezes maior** que com clearance acima de 60 mL/min. VERIFICAÇÃO HUMANA NECESSÁRIA para o estatuto formal — um dos verbetes fundidos afirmava contraindicação, e o texto que consultei descreve o aumento de exposição sem que eu tenha localizado a palavra contraindicação. Conferir na seção de contraindicações da bula antes de prescrever nesta faixa.",
-      "idosos": "Maior exposição por redução da função renal ligada à idade. Iniciar mais baixo e titular com cautela, sobretudo a partir dos 75 anos.",
-      "reavaliacao obrigatoria": "**Avaliar o benefício em 3 meses e descontinuar se não houver resposta.** É parte da posologia, não uma sugestão.",
-      "fonte": "Bula profissional brasileira de VASTAREL MR (dicloridrato de trimetazidina), Laboratórios Servier do Brasil. **Substitui as fontes anteriores**, que eram portuguesa (Infarmed) e de um hospital estrangeiro."
+      "marca no brasil": "**Vastarel MR** (Laboratórios Servier do Brasil), comprimido revestido de **35 mg** de dicloridrato de trimetazidina.",
+      "posologia": "**1 comprimido de 35 mg duas vezes ao dia** — um de manhã, durante o café da manhã, e outro à noite, durante o jantar. Ingerir com um copo de água, **no momento das refeições**. **Não partir, abrir nem mastigar.**",
+      "reavaliar em tres meses": "**Os benefícios do tratamento devem ser avaliados após três meses, e a trimetazidina deve ser descontinuada se não houver resposta.** Não é fármaco para manter indefinidamente sem verificar efeito — a própria bula fixa o prazo.",
+      "insuficiencia renal moderada": "Depuração de creatinina de **30 a 60 mL/min**: **1 comprimido de 35 mg pela manhã**, durante o café da manhã — metade da dose usual.",
+      "idosos": "Pela queda da função renal com a idade, a exposição à trimetazidina pode ser maior; **o ajuste da dose no idoso deve ser feito com cuidado**.",
+      "contraindicacoes que mudam a prescricao": "**Insuficiência renal grave (depuração de creatinina abaixo de 30 mL/min)** e **doença de Parkinson, parkinsonismo, tremores, síndrome das pernas inquietas e outras alterações do movimento**. Também **contraindicado em crianças**, e a segurança e eficácia abaixo de 18 anos não foram estabelecidas.",
+      "vigilancia do parkinsonismo": "A trimetazidina **pode causar ou agravar sintomas de parkinsonismo** — tremor, acinesia, hipertonia —, que devem ser investigados regularmente, **sobretudo no idoso**. O surgimento de alteração de movimento, incluindo síndrome das pernas inquietas e instabilidade da marcha, obriga à **descontinuação definitiva**. Os casos têm incidência baixa e costumam ser reversíveis após a suspensão.",
+      "o que a trimetazidina nao e": "A bula é explícita: **não trata a crise de angina**, **não é tratamento inicial da angina instável** e **não é tratamento do infarto**. Não é indicada na fase pré-hospitalar nem nos primeiros dias de internação. A indicação registrada é a cardiopatia isquêmica e a insuficiência cardíaca de causa isquêmica, **em paciente que já usa outros medicamentos** para a doença.",
+      "fonte": "Bula do Vastarel MR (dicloridrato de trimetazidina 35 mg, Laboratórios Servier do Brasil Ltda.), seções de indicações, contraindicações, advertências e posologia, conferida na íntegra. **A marcação de procedência está resolvida.** Esta é a versão **posterior à revisão de segurança** da trimetazidina — traz a contraindicação em doença de Parkinson e distúrbios do movimento e o ajuste na insuficiência renal, ausentes da versão antiga que foi recusada em tentativa anterior."
     },
     "notes": {
       "Particularidade regulatoria": "Uso restrito em alguns países (ex: alerta EMA) devido a risco de sintomas parkinsonianos e outros distúrbios do movimento, especialmente em idosos — reavaliar necessidade de continuidade periodicamente"
