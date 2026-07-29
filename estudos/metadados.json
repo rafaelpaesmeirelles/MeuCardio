@@ -1133,5 +1133,30 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "ttm2-hipotermia-versus-normotermia-pos-parada-cardiorrespiratoria",
+    "title": "TTM2 — Hipotermia versus normotermia após parada cardiorrespiratória extra-hospitalar",
+    "study_type": "ensaio_clinico",
+    "authors": "Dankiewicz J et al.",
+    "journal": "New England Journal of Medicine",
+    "year": 2021,
+    "doi": "10.1056/NEJMoa2100591",
+    "pmid": "34133859",
+    "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2100591",
+    "summary": "Ensaio randomizado, multicêntrico, com 1.861 pacientes em coma após parada cardiorrespiratória extra-hospitalar de provável causa cardíaca ou indeterminada, comparando hipotermia terapêutica alvo de 33°C (n=930) contra normotermia com tratamento agressivo de febre, gatilho em 37,8°C e alvo de 37,5°C (n=931). Desfecho primário: mortalidade por qualquer causa em 6 meses.",
+    "key_findings": "Mortalidade em 6 meses: 50% no grupo hipotermia contra 48% no grupo normotermia — risco relativo 1,04 (IC95% 0,94-1,14; p=0,37), sem diferença estatística. Desfecho funcional ruim (escala de Rankin modificada 4-6) em 6 meses: 55% em ambos os grupos — risco relativo 1,00 (IC95% 0,92-1,09). Arritmia com repercussão hemodinâmica foi mais frequente no grupo hipotermia: 24% contra 16% — risco relativo 1,45 (IC95% 1,21-1,75; p<0,001).",
+    "clinical_implications": "Resultado negativo que mudou a prática: hipotermia terapêutica a 33°C não trouxe benefício de sobrevida nem funcional sobre o controle rigoroso de febre, e ainda aumentou arritmia. Sustenta a mudança de paradigma pós-TTM2, incorporada em diretrizes de ressuscitação subsequentes, de hipotermia obrigatória para controle de temperatura com meta normotérmica e prevenção ativa de febre — mais simples de implementar e sem o risco adicional de arritmia da hipotermia.",
+    "limitations": "Excluiu parada de causa não cardíaca clara em alguns subgrupos e pacientes com contraindicação a um dos dois protocolos de resfriamento. Não testa ausência total de controle de temperatura — o grupo controle já recebia tratamento ativo para evitar febre, não é grupo sem intervenção nenhuma; o resultado não deve ser lido como 'temperatura não importa'.",
+    "theme": "Terapia intensiva",
+    "tags": [
+      "ttm2",
+      "hipotermia terapêutica",
+      "parada cardiorrespiratória",
+      "controle de temperatura",
+      "ensaio clínico"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
