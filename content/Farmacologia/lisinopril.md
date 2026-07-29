@@ -42,6 +42,8 @@ Função renal periodicamente. Potássio sérico (aumento médio de ~0,1 mEq/L e
 ## Particularidade
 Precaução com risco de hipotensão em pacientes em uso concomitante de diuréticos; se diurético não puder ser descontinuado, iniciar lisinopril com 5mg
 
+**Estenose de artéria renal (bilateral, ou em rim único) — não é contraindicação formal, nem no rótulo do FDA nem na bula brasileira do ZESTRIL.** Resolvido em 29/07/2026: as duas fontes tratam essa situação como **precaução de dose**, na seção de posologia/advertências, não na de contraindicações — risco de resposta hipotensora exagerada à primeira dose e de piora aguda (geralmente reversível) da função renal, pela dependência do sistema renina-angiotensina para manter a perfusão glomerular nesses pacientes. Conduta de ambos os rótulos: iniciar com dose baixa (2,5-5mg) sob supervisão médica cuidadosa, não evitar o fármaco por completo. A cautela consagrada na prática clínica é real, mas não tem status de contraindicação absoluta em nenhuma das duas bulas.
+
 ## Contraindicacoes
 - **Gravidez — as duas rotulagens divergem, e a diferença é de natureza, não de grau.** O rótulo do FDA citado neste documento **não** lista a gravidez entre as contraindicações: trata-a como *boxed warning* de toxicidade fetal — "quando a gravidez for detectada, descontinuar o lisinopril assim que possível", porque os fármacos que agem diretamente no sistema renina-angiotensina podem causar lesão e morte do feto, e o uso no segundo e terceiro trimestres reduz a função renal fetal e aumenta a morbidade e a mortalidade fetal e neonatal. Já a **bula brasileira do ZESTRIL contraindica formalmente o segundo e o terceiro trimestres**, atribui **categoria de risco D** e considera o uso no primeiro trimestre "não recomendado". Registrado em 29/07/2026: antes constava só "Gravidez", sem fonte nem recorte de trimestre. Na prática as duas convergem na conduta — suspender assim que a gravidez for detectada —, mas só a brasileira transforma isso em contraindicação formal
 - Angioedema prévio relacionado a tratamento com IECA
@@ -50,8 +52,6 @@ Precaução com risco de hipotensão em pacientes em uso concomitante de diurét
 - Hipersensibilidade
 
 Não coadministrar alisquireno a paciente diabético.
-
-VERIFICAÇÃO HUMANA NECESSÁRIA para a estenose bilateral de artéria renal, que constava aqui: é cautela consagrada e clinicamente sólida, mas não aparece na seção de contraindicações do rótulo consultado — conferir o estatuto formal antes de apresentá-la como contraindicação absoluta.
 
 ## Efeitos adversos
 Tosse seca, hipotensão, hipercalemia, angioedema (raro mas grave), piora de função renal
