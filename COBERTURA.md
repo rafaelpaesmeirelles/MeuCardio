@@ -11,7 +11,7 @@ do banco. Nenhum número é estimado.
 |---|---:|---:|---|
 | `content/` — biblioteca científica | 253 | 252 | 27 temas cobertos; 29 são fluxogramas, **todos publicados** |
 | `galeria/` — achados de imagem | 36 | 36 | ✅ verificada item a item |
-| `exames/` — marcadores e exames | 17 | 17 | ✅ verificada item a item; **única frente que não cresceu em 29/07** |
+| `exames/` — marcadores e exames | 34 | 0 | crescida de 17 para 34 pela sessão da Biblioteca em 29/07 à noite; aguardando publicação |
 | `evidencias/` — recomendações pontuais | 100 | 100 | 20 verificadas item a item; as demais entraram nos lotes de 29/07 |
 | `estudos/` — ensaios e metanálises | 41 | 41 | 15 verificados item a item; os demais entraram nos lotes de 29/07 |
 | **Medicamentos** (tabela `drugs`) | **100** | **88** | reconstruída de `content/Farmacologia`; gestação e lactação fechadas em 88/88 |
@@ -72,17 +72,20 @@ que essa distinção importa — ver abaixo.
 | Frente | Itens | Temas cobertos (de 27) | Temas com 1 item só |
 |---|---:|---:|---:|
 | `galeria/` | 36 | 23 | 12 |
-| `exames/` | 17 | 16 | 15 |
+| `exames/` | 34 | 20 | 6 |
 | `evidencias/` | 100 | 19 | 9 |
 | `estudos/` | 41 | 24 | 12 |
 
 A prioridade é **profundidade** — temas com 1 item só —, não mais zerar temas. Duas
 leituras que a tabela deixa explícitas:
 
-- **`exames/` é a frente mais fraca do sistema.** 17 itens, e **15 dos 16 temas que ela
-  cobre têm um item só**. Foi a única frente que não cresceu nos lotes de 29/07.
-  Sem nenhum exame: Cardiopatias congênitas, Síncope, Perioperatório, Saúde mental e
-  cardiologia, Comunicação clínica, Geral e os demais temas fora dos 16.
+- **`exames/` cresceu de 17 para 34 na noite de 29/07**, pela sessão da Biblioteca,
+  ainda com `published: false` em todo o lote — falta o aval do Rafael para publicar.
+  Passou de 15 para **6 temas com um item só** (Arritmias, Diabetes e cardiologia,
+  Fibrilação atrial, Hipertensão, Terapia intensiva, Valvopatias) e de 16 para **20
+  temas cobertos**. Sem nenhum exame ainda: Comunicação clínica, Geral, Farmacologia,
+  Gravidez, Dispositivos, Prevenção e lipídios e Calculadoras — os sete são temas da
+  faixa de Medicamentos ou de menor rendimento por hora (Comunicação clínica, Geral).
 - **`evidencias/` cresceu em volume, não em amplitude.** Passou de 32 para 100 itens
   mas cobre 19 temas — o crescimento se concentrou em Cardiomiopatias, Doença
   coronariana e Cardio-oncologia. Pericárdio, Aorta e doença arterial periférica,
@@ -148,10 +151,11 @@ conteúdo. É preciso abrir e conferir se o artigo é o que o registro descreve.
    e os 6 que aguardavam aval — síndrome coronariana crônica, regurgitação mitral,
    bradiarritmia e marcapasso, taquicardia de QRS largo, pericardite aguda e miocardite
    aguda — **entraram no ar**. Não há tema de fluxograma em aberto.
-7. **`exames/` é a maior lacuna aberta das frentes JSON**, e substituiu `estudos` nessa
-   posição. Ver a leitura na seção acima: 17 itens, 15 dos 16 temas com um item só,
-   e nenhum item nos temas de Síncope, Perioperatório, Cardiopatias congênitas, Saúde
-   mental e Comunicação clínica.
+7. **`exames/` cresceu de 17 para 34 na noite de 29/07** (sessão da Biblioteca), ainda
+   `published: false` esperando o aval do Rafael. Ver a leitura na seção acima: 6 dos
+   20 temas cobertos ainda têm um item só, e sete temas seguem sem nenhum exame
+   (Comunicação clínica, Geral e os cinco da faixa de Medicamentos: Farmacologia,
+   Gravidez, Dispositivos, Prevenção e lipídios, Calculadoras).
 8. **Comunicação clínica é o tema mais fraco do acervo**: 2 documentos e **zero nas
    quatro frentes JSON**.
 
