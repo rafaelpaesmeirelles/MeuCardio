@@ -2904,7 +2904,9 @@
       "Rivaroxaban tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 481b7802-5093-43e7-bbd9-1532197eb6e6",
       "Patel MR, Mahaffey KW, Garg J, et al. Rivaroxaban versus warfarin in nonvalvular atrial fibrillation (ROCKET AF). N Engl J Med. 2011;365(10):883-891. DOI: 10.1056/NEJMoa1009638. PMID: 21830957",
       "Bula de XARELTO (rivaroxabana), Bayer S.A., versão VE0222 — CCDS14 (15 e 20 mg) e CCDS17 (2,5 e 10 mg), aprovada pela ANVISA."
-    ]
+    ],
+    "pregnancy": "**Contraindicado na gravidez**: \"devido ao risco intrínseco de sangramentos e a evidência de que a rivaroxabana atravessa a placenta, Xarelto (rivaroxabana) é contraindicado na gravidez\". A bula acrescenta que \"a segurança e a eficácia de Xarelto (rivaroxabana) não foram estabelecidas em mulheres grávidas\" e que estudos pré-clínicos em animais mostraram **toxicidade materna com alterações placentárias**, levando a toxicidade reprodutiva, **sem identificar potencial teratogênico primário**. Consistente com a contraindicação já registrada no campo `contraindications`. Fonte: bula do XARELTO (rivaroxabana, Bayer S.A.), seção \"Gravidez\", consultada no bulário BulasMed, que republica o texto registrado — o PDF do fabricante é cifrado e não pôde ser lido diretamente (ver limites em .claude/ferramentas/ler_pdf.py).",
+    "lactation": "**Só pode ser administrado após descontinuada a amamentação.** A bula afirma: \"a segurança e a eficácia de Xarelto (rivaroxabana) não foram estabelecidas em lactantes. Em ratas, a rivaroxabana é secretada no leite materno. Portanto, Xarelto (rivaroxabana) só pode ser administrado depois de descontinuada a amamentação\". Fonte: bula do XARELTO (rivaroxabana, Bayer S.A.), seção \"Lactação\", consultada no bulário BulasMed, que republica o texto registrado — mesmo contorno usado para a seção de gravidez, pelo mesmo motivo (PDF do fabricante cifrado)."
   },
   {
     "slug": "rosuvastatina-calcica",
