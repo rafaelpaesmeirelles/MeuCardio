@@ -4,7 +4,7 @@ slug: rivaroxabana
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["Rivaroxaban tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 481b7802-5093-43e7-bbd9-1532197eb6e6", "Patel MR, Mahaffey KW, Garg J, et al. Rivaroxaban versus warfarin in nonvalvular atrial fibrillation (ROCKET AF). N Engl J Med. 2011;365(10):883-891. DOI: 10.1056/NEJMoa1009638. PMID: 21830957", "Anvisa. Ondexxya (alfa-andexanete): novo registro. Publicado em 04/09/2023 · https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/novos-medicamentos-e-indicacoes/ondexxya-alfa-andexanete-novo-registro"]
+source_refs: ["XARELTO (rivaroxabana, Bayer) — Resumo das Características do Medicamento, EMA, em português, secções 4.2 e 5.1 · https://www.ema.europa.eu/pt/documents/product-information/xarelto-epar-product-information_pt.pdf · consultado em 29/07/2026", "Rivaroxaban tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 481b7802-5093-43e7-bbd9-1532197eb6e6", "Patel MR, Mahaffey KW, Garg J, et al. Rivaroxaban versus warfarin in nonvalvular atrial fibrillation (ROCKET AF). N Engl J Med. 2011;365(10):883-891. DOI: 10.1056/NEJMoa1009638. PMID: 21830957", "Anvisa. Ondexxya (alfa-andexanete): novo registro. Publicado em 04/09/2023 · https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/novos-medicamentos-e-indicacoes/ondexxya-alfa-andexanete-novo-registro"]
 legacy_source: "medicamentos/banco-de-medicamentos-rivaroxabana-completo.md"
 ---
 
@@ -38,7 +38,7 @@ Comprimidos de 10mg, 15mg e 20mg
 - **conversao avk para rivaroxabana**: Iniciar quando RNI <2,5 (TVP/EP) ou <3,0 (FA)
 - **conversao rivaroxabana para avk**: Manter ambos até RNI ≥2,0; medir RNI apenas 24h após dose anterior
 - **esquecimento de dose**: Tomar imediatamente; não dobrar dose no mesmo dia
-- **fonte**: rótulo da rivaroxabana aprovado pelo FDA (DailyMed). VERIFICAÇÃO HUMANA NECESSÁRIA para o esquema de 15 mg 1x/dia após ICP com stent em fibrilação atrial, que segue o desenho do PIONEER AF-PCI e consta da rotulagem europeia, não da americana — conferir o que a bula registrada na ANVISA autoriza
+- **fonte**: rótulo da rivaroxabana aprovado pelo FDA (DailyMed), para a posologia geral; Resumo das Características do Medicamento (RCM) da EMA do XARELTO (rivaroxabana, Bayer), em português, secções 4.2 e 5.1, conferido em 29/07/2026, para o esquema de ICP com stent em FA (linha "icp com stent em fa" acima) — **confirmado**: o esquema vem do PIONEER AF-PCI e consta do RCM europeu, com a ressalva de que os dados de eficácia são limitados e não há dado para quem tem AVC/AIT prévio. **Ainda não conferido diretamente contra a bula brasileira** — o RCM é da mesma marca (Xarelto, Bayer) vendida no Brasil, o que torna provável que a bula nacional traga o mesmo esquema, mas isso não substitui a leitura direta
 
 ## Evidencia pivotal rocket af
 O ROCKET-AF comparou rivaroxabana 20 mg/dia (15 mg na insuficiência renal) à varfarina ajustada por INR em fibrilação atrial não valvar. Desfecho de AVC ou embolismo sistêmico na análise por protocolo: 1,7%/ano contra 2,2%/ano, HR 0,79 (IC95% 0,66-0,96), p<0,001 **para não inferioridade**. Na intenção de tratar, HR 0,88 (0,74-1,03), p=0,12 para superioridade. Os autores concluem não inferioridade, não superioridade. Sangramento intracraniano e fatal foram menos frequentes com rivaroxabana, sem diferença significativa no sangramento maior total
