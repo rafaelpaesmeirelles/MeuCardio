@@ -1,0 +1,68 @@
+[
+  {
+    "slug": "ranolazina-inibidor-forte-cyp3a",
+    "farmacos": ["ranolazina"],
+    "classe_oposta": "inibidor forte da CYP3A",
+    "gravidade": "contraindicada",
+    "efeito": "Aumento acentuado da exposição à ranolazina.",
+    "conduta": "O uso de ranolazina com inibidor forte da CYP3A é contraindicado pela bula.",
+    "fonte": "Bula brasileira do Riscard (ranolazina, Biolab Sanus), seção de posologia.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "ranolazina-diltiazem",
+    "farmacos": ["ranolazina", "diltiazem-cloridrato"],
+    "gravidade": "moderada",
+    "efeito": "O diltiazem é inibidor moderado da CYP3A e aumenta a exposição à ranolazina.",
+    "conduta": "Limitar a ranolazina a 500 mg duas vezes ao dia enquanto durar a associação.",
+    "fonte": "Bula brasileira do Riscard (ranolazina, Biolab Sanus), seção de posologia — o diltiazem está nomeado no texto.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "ranolazina-verapamil",
+    "farmacos": ["ranolazina", "verapamil-cloridrato"],
+    "gravidade": "moderada",
+    "efeito": "O verapamil é inibidor moderado da CYP3A e aumenta a exposição à ranolazina.",
+    "conduta": "Limitar a ranolazina a 500 mg duas vezes ao dia enquanto durar a associação.",
+    "fonte": "Bula brasileira do Riscard (ranolazina, Biolab Sanus), seção de posologia — o verapamil está nomeado no texto.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "amiodarona-sofosbuvir",
+    "farmacos": ["amiodarona-cloridrato"],
+    "classe_oposta": "sofosbuvir associado a outro antiviral de ação direta contra o vírus da hepatite C (daclatasvir, simeprevir ou ledipasvir)",
+    "gravidade": "grave",
+    "efeito": "Bradicardia grave, potencialmente fatal, e bloqueio cardíaco.",
+    "conduta": "A coadministração não é recomendada. Se for inevitável, monitorizar de perto ao iniciar o sofosbuvir; paciente de alto risco de bradiarritmia deve ficar em monitorização contínua por pelo menos 48 horas em ambiente adequado. Pela meia-vida longa da amiodarona, a vigilância também vale para quem a suspendeu nos últimos meses.",
+    "fonte": "Bula do profissional de saúde do cloridrato de amiodarona (Fresenius Kabi Brasil), seção de advertências e precauções.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "dronedarona-antiarritmico-classe-i-ou-iii",
+    "farmacos": ["dronedarona"],
+    "classe_oposta": "antiarrítmico de classe I ou III (flecainida, propafenona, quinidina, disopiramida, dofetilida, sotalol, amiodarona)",
+    "gravidade": "grave",
+    "efeito": "Sobreposição de efeito antiarrítmico.",
+    "conduta": "O antiarrítmico de classe I ou III tem de ser interrompido antes de iniciar a dronedarona. A troca a partir da amiodarona exige supervisão de especialista: a amiodarona pode manter ação por longo tempo após a suspensão, pela meia-vida longa.",
+    "fonte": "Resumo das Características do Medicamento do MULTAQ (dronedarona) aprovado pela EMA, versão em português, seção de posologia. ⚠️ Rotulagem europeia — a dronedarona não tem produto comercializado no Brasil.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "flecainida-digoxina",
+    "farmacos": ["flecainida", "digoxina"],
+    "gravidade": "leve",
+    "efeito": "Pequeno aumento do nível plasmático de digoxina durante a coadministração.",
+    "conduta": "Considerar o efeito ao interpretar a digoxinemia; a rotulagem não determina ajuste fixo de dose.",
+    "fonte": "Rotulagem do FDA para acetato de flecainida comprimidos USP, via DailyMed. ⚠️ Rotulagem norte-americana — a flecainida não tem produto comercializado no Brasil.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "flecainida-propranolol",
+    "farmacos": ["flecainida", "propranolol"],
+    "gravidade": "moderada",
+    "efeito": "Pequeno aumento dos níveis plasmáticos dos dois fármacos durante a coadministração.",
+    "conduta": "Vigiar efeito aditivo sobre condução e função ventricular.",
+    "fonte": "Rotulagem do FDA para acetato de flecainida comprimidos USP, via DailyMed. ⚠️ Rotulagem norte-americana — a flecainida não tem produto comercializado no Brasil.",
+    "review_status": "revisado"
+  }
+]
