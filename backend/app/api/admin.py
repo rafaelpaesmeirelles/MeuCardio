@@ -409,3 +409,25 @@ def semear_curso_exemplo(_=Depends(require_admin)):
     from app.services.seed_curso_exemplo import semear
 
     return semear()
+
+
+# ------------------------------------------------------- receituário (T27) --
+# Não entra no dicionário FRENTES de propósito: aquelas rotas assumem que o
+# modelo tem `published`, e dado regulatório não se publica — ele vale ou não
+# vale. `/conteudo/pendentes` quebraria ao consultar Modelo.published.
+
+
+@router.post("/receituario/carregar-listas")
+def carregar_listas_controladas(db: Session = Depends(get_db), user=Depends(require_admin)):
+    """Carrega as listas da Portaria 344/98 e semeia os tipos de receituário.
+
+    Não liga nenhum tipo: `ativo` de registro existente é preservado, porque
+    ligar o controle especial depende do SNCR e da assinatura digital, e é
+    decisão humana — não efeito colateral de uma recarga."""
+    from app.services.carregar_controlados import carregar
+
+    resultado = carregar(db)
+    db.add(AuditLog(user_id=user.id, action="carregar_listas_344",
+                    entity="receituario", detail=resultado))
+    db.commit()
+    return resultado
