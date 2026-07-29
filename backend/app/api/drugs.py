@@ -191,6 +191,104 @@ def checar_interacoes(
     }
 
 
+CONDICOES = {
+    "gestacao": ("pregnancy", "Gestação"),
+    "lactacao": ("lactation", "Lactação"),
+    "renal": ("renal_adjustment", "Doença renal crônica"),
+    "hepatica": ("hepatic_adjustment", "Hepatopatia"),
+}
+
+
+class CondicoesIn(BaseModel):
+    slugs: list[str]
+    condicoes: list[str]
+
+
+@router.post("/condicoes")
+def checar_condicoes(
+    dados: CondicoesIn, db: Session = Depends(get_db), _=Depends(current_user)
+):
+    """Cruza os fármacos escolhidos com condições clínicas especiais do paciente.
+
+    Não há base nova aqui: usa o que os verbetes já trazem com fonte conferida
+    — `contraindications`, `pregnancy`, `lactation`, `renal_adjustment` e
+    `hepatic_adjustment`.
+
+    A resposta distingue TRÊS estados por fármaco e condição, e a distinção é o
+    recurso:
+
+    - `achados`: o verbete diz alguma coisa sobre aquela condição;
+    - `sem_informacao`: o campo está vazio no verbete. **Não é atestado de
+      segurança** — é ausência de dado, e aparece nomeado justamente porque a
+      cobertura é desigual (contraindicações em 81% dos fármacos, mas gestação
+      em 14% e lactação em 3%). Um alerta que ficasse calado nesses casos
+      diria "pode usar" sem ninguém ter afirmado isso.
+
+    A busca em `contraindications` é textual e por isso entra como achado
+    separado, com o trecho à vista: quem classifica é o leitor.
+    """
+    slugs = [s for s in dict.fromkeys(dados.slugs) if s]
+    condicoes = [c for c in dict.fromkeys(dados.condicoes) if c in CONDICOES]
+    if not slugs:
+        raise HTTPException(status_code=422, detail="Selecione ao menos um medicamento.")
+    if not condicoes:
+        raise HTTPException(
+            status_code=422,
+            detail=f"Informe ao menos uma condição: {', '.join(CONDICOES)}.",
+        )
+
+    drogas = db.query(Drug).filter(Drug.slug.in_(slugs), Drug.published.is_(True)).all()
+    achados_ausentes = [s for s in slugs if s not in {d.slug for d in drogas}]
+    if achados_ausentes:
+        raise HTTPException(
+            status_code=404, detail=f"Não encontrado: {', '.join(achados_ausentes)}"
+        )
+
+    # Termos que revelam a condição citada dentro do texto livre de
+    # contraindicação. Deliberadamente curtos e amplos: aqui um falso positivo
+    # custa uma leitura a mais, e um falso negativo custa a contraindicação.
+    PISTAS = {
+        "gestacao": ("gest", "grav", "gravíd"),
+        "lactacao": ("lacta", "amament", "leite"),
+        "renal": ("renal", "rim", "clearance", "depuração", "diálise"),
+        "hepatica": ("hepát", "hepat", "fígado", "cirros"),
+    }
+
+    achados, sem_informacao = [], []
+    for d in drogas:
+        for c in condicoes:
+            campo, rotulo = CONDICOES[c]
+            texto = (getattr(d, campo, None) or "").strip()
+            citados = [
+                t for t in (d.contraindications or [])
+                if any(p in t.lower() for p in PISTAS[c])
+            ]
+            if texto or citados:
+                achados.append({
+                    "farmaco": {"slug": d.slug, "nome": d.generic_name},
+                    "condicao": c, "condicao_rotulo": rotulo,
+                    "campo_proprio": texto or None,
+                    "contraindicacoes_citando": citados,
+                    "review_status": d.review_status,
+                })
+            else:
+                sem_informacao.append({
+                    "farmaco": {"slug": d.slug, "nome": d.generic_name},
+                    "condicao": c, "condicao_rotulo": rotulo,
+                })
+
+    return {
+        "achados": achados,
+        "sem_informacao": sem_informacao,
+        "aviso": (
+            "Ausência de achado NÃO é atestado de segurança: significa que o verbete "
+            "não traz informação para aquela condição. A cobertura é desigual — "
+            "contraindicações constam em 81% dos fármacos, ajuste renal em 23%, "
+            "gestação em 14% e lactação em 3%."
+        ),
+    }
+
+
 @router.get("/{slug}")
 def get_drug(slug: str, db: Session = Depends(get_db), _=Depends(current_user)):
     d = db.query(Drug).filter(Drug.slug == slug, Drug.published.is_(True)).first()
