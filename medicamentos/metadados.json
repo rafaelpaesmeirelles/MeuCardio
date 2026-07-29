@@ -3197,11 +3197,15 @@
       "Sangramento interno ativo, hipertensão grave não controlada, história de AVC, história de aneurisma ou malformação arteriovenosa, história de neoplasia intracraniana, cirurgia intracraniana ou intraespinhal nos últimos 2 meses, trauma craniano ou espinhal nos últimos 2 meses, condições que aumentam risco de sangramento - **contraindicacao relativa**: gestação — requer avaliação cuidadosa de risco-benefício, não é contraindicação absoluta - **fonte**: StatPearls"
     ],
     "dosing": {
-      "via": "bolus intravenoso único, administrado em 5 segundos",
-      "dose": "ajustada por peso corporal, em faixas de 0,25 a 0,50 mg/kg, com dose máxima de 50 mg",
-      "vantagem pratica": "administração em bolus único, diferente da infusão prolongada necessária com alteplase",
-      "meia-vida": "bifásica — fase inicial de 20-24 minutos, fase terminal de 90-130 minutos",
-      "fonte": "StatPearls\n\nVERIFICAÇÃO HUMANA NECESSÁRIA quanto à **procedência**: a posologia acima se apoia em StatPearls — agregador ou portal de conteúdo, não documento primário. Isso **não afirma que os números estejam errados**; afirma que não são rastreáveis à bula registrada nem a diretriz, que é o critério deste acervo. Substituir a fonte e reconferir os valores antes de publicar."
+      "dose por peso": "Dose única, calculada pelo peso, com **máximo de 10.000 U (50 mg)**: **abaixo de 60 kg** → 6.000 U (30 mg, 6 mL); **60 a menos de 70 kg** → 7.000 U (35 mg, 7 mL); **70 a menos de 80 kg** → 8.000 U (40 mg, 8 mL); **80 a menos de 90 kg** → 9.000 U (45 mg, 9 mL); **90 kg ou mais** → 10.000 U (50 mg, 10 mL).",
+      "administracao": "**Bolo intravenoso único, em cerca de 5 a 10 segundos.** A solução reconstituída contém 5 mg/mL.",
+      "incompatibilidades que causam erro de administracao": "**Incompatível com solução glicosada** — não administrar por acesso que contenha glicose. **Não administrar junto de nenhum outro fármaco**, nem no mesmo frasco, nem no mesmo acesso venoso — **nem mesmo heparina**. Acesso preexistente só serve se tiver sido usado apenas com cloreto de sódio 0,9%, e deve ser lavado após a injeção.",
+      "reconstituicao": "Adicionar todo o conteúdo da seringa pré-carregada ao frasco do pó, empurrando o pistão **lentamente para não formar espuma**, e homogeneizar com agitação suave. Usar apenas solução límpida, incolor a amarelo-clara, sem partículas. Descartar o que sobrar.",
+      "quem prescreve": "A bula determina prescrição por **médico com experiência em tratamento trombolítico** e com meios de monitorar o uso — o que **não exclui o uso pré-hospitalar** —, com medicamentos e equipamentos de ressuscitação disponíveis.",
+      "idade": "**Contraindicado abaixo de 12 anos** nesta bula.",
+      "meia dose acima de 75 anos": "VERIFICAÇÃO HUMANA NECESSÁRIA — a redução para **metade da dose em pacientes com 75 anos ou mais** é recomendação de diretriz para o IAM com supra de ST e **não consta desta bula**, cuja versão é de 2009. Não a apliquei aos números acima nem a descartei: precisa ser conferida na diretriz vigente e, de preferência, em versão mais recente da bula.",
+      "avc isquemico": "VERIFICAÇÃO HUMANA NECESSÁRIA — esta bula cobre **apenas o infarto agudo do miocárdio**. O uso no AVC isquêmico, com dose por quilo distinta da tabela acima, **não está registrado neste documento** e não foi conferido em outra fonte nesta sessão.",
+      "fonte": "Bula do profissional de saúde do METALYSE (tenecteplase, Boehringer Ingelheim do Brasil Química e Farmacêutica Ltda.), item 8, conferida na íntegra. **Versão do documento: 20091020** — declarada aqui porque importa: a tabela de dose por peso é a do IAM e não mudou, mas a bula é anterior tanto à indicação em AVC quanto à recomendação de meia dose no idoso, e por isso esses dois pontos seguem marcados. **A marcação de procedência está resolvida** para a dose no IAM."
     },
     "references": [
       "Tenecteplase · StatPearls (NCBI Bookshelf) · https://www.ncbi.nlm.nih.gov/books/NBK592420/",
