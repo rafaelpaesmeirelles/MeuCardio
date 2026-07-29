@@ -880,5 +880,55 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "danish-cdi-profilatico-na-cardiomiopatia-nao-isquemica",
+    "title": "DANISH — Cardiodesfibrilador implantável profilático na insuficiência cardíaca sistólica não isquêmica",
+    "study_type": "ensaio_clinico",
+    "authors": "Køber L, Thune JJ, Nielsen JC, et al.",
+    "journal": "New England Journal of Medicine",
+    "year": 2016,
+    "doi": "10.1056/NEJMoa1608029",
+    "pmid": "27571011",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/27571011/",
+    "summary": "Ensaio randomizado com 1.116 pacientes com insuficiência cardíaca sistólica sintomática e fração de ejeção de 35% ou menos, **não causada por doença coronariana**. Comparou implante de cardiodesfibrilador (556 pacientes) contra tratamento clínico usual (560). Seguimento mediano de 67,6 meses — mais de cinco anos.",
+    "key_findings": "Ensaio negativo no desfecho primário e positivo no mecanismo. Morte por qualquer causa: 21,6% (120) com CDI contra 23,4% (131) no controle — HR 0,87; IC 95% 0,68–1,12; p = 0,28, sem diferença significativa. Mas a morte súbita cardíaca **caiu pela metade**: 4,3% (24) contra 8,2% (46) — HR 0,50; IC 95% 0,31–0,82; p = 0,005.",
+    "clinical_implications": "É o ensaio que separou 'o dispositivo funciona' de 'o paciente vive mais'. O CDI fez exatamente o que se espera dele — reduziu morte súbita à metade — e ainda assim não reduziu mortalidade total, porque nessa população a morte não súbita responde por parcela grande demais do desfecho. A leitura prática é que o benefício depende de quanto da mortalidade do paciente é arrítmica, e não da fração de ejeção isolada. Ajuda a explicar por que as diretrizes tratam a indicação na cardiomiopatia não isquêmica com classe mais baixa que na isquêmica.",
+    "limitations": "A coorte recebeu terapia otimizada e ressincronização em alta proporção — cerca de 58% em ambos os braços —, o que reduz o espaço para o CDI mostrar ganho adicional e limita a extrapolação para populações menos tratadas. Análises por idade sugeriram benefício nos mais jovens, mas são de subgrupo e não do desfecho primário. Não inclui cardiomiopatia isquêmica, onde a evidência é outra.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia não isquêmica",
+      "cardiodesfibrilador implantável",
+      "morte súbita",
+      "DANISH",
+      "ensaio negativo"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "orbita-angioplastia-versus-procedimento-simulado-na-angina-estavel",
+    "title": "ORBITA — Angioplastia versus procedimento simulado na angina estável",
+    "study_type": "ensaio_clinico",
+    "authors": "Al-Lamee R, Thompson D, Dehbi HM, et al.",
+    "journal": "The Lancet",
+    "year": 2018,
+    "doi": "10.1016/S0140-6736(17)32714-9",
+    "pmid": "29103656",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29103656/",
+    "summary": "Ensaio multicêntrico, randomizado e **cego contra procedimento simulado** — o paciente do braço controle passava por cateterismo com sedação e a intervenção não era realizada. Foram 230 pacientes recrutados e 200 randomizados: 105 para angioplastia e 95 para o procedimento simulado. Todos tinham angina em tratamento clínico e estenose coronariana grave em vaso único.",
+    "key_findings": "Não houve diferença significativa no desfecho primário de incremento no tempo de exercício: angioplastia menos placebo de 16,6 segundos; IC 95% −8,9 a 42,0; p = 0,20. Não houve óbitos; os eventos adversos sérios incluíram complicações relacionadas ao fio de pressão no braço do procedimento simulado e sangramento maior nos dois grupos.",
+    "clinical_implications": "É o primeiro ensaio a submeter a angioplastia na angina estável ao mesmo padrão que se exige de um fármaco — comparação cega contra placebo. O resultado não diz que a angioplastia não alivia sintoma; diz que, nessa população e nesse desfecho, ela não aliviou **mais que o procedimento simulado**. Isso obriga a separar o efeito da desobstrução do efeito do ato de intervir, e sustenta a orientação de otimizar tratamento clínico antes de indicar revascularização por sintoma na doença estável.",
+    "limitations": "Amostra pequena (200 randomizados), seguimento curto (6 semanas após a randomização) e desfecho de tempo de exercício, não de sintoma relatado em vida real nem de desfecho duro. Restrito a doença de vaso único com estenose grave, o que exclui exatamente os anatômicos mais complexos. O curto período de tratamento clínico otimizado antes da randomização foi objeto de crítica, por poder ter deixado o braço controle mais bem tratado do que a prática habitual.",
+    "theme": "Doença coronariana",
+    "tags": [
+      "angina estável",
+      "angioplastia",
+      "procedimento simulado",
+      "ORBITA",
+      "ensaio cego"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
