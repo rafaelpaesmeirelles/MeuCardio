@@ -382,5 +382,237 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "meta-de-ldl-abaixo-de-40-mg-dl-apos-segundo-evento-vascular-em-2-anos",
+    "statement": "Em paciente com doença aterosclerótica que sofre um segundo evento vascular em até 2 anos — não necessariamente do mesmo tipo do primeiro — já em uso de estatina na dose máxima tolerada, uma meta de LDL-C abaixo de 40 mg/dL (1,0 mmol/L) pode ser considerada. É o degrau mais fraco entre as recomendações a favor: a diretriz abre a porta, não obriga. O gatilho é específico — evento recorrente em janela de 2 anos, já sob tratamento —, e não gravidade em sentido genérico.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "ESC/EAS",
+    "year": 2019,
+    "guideline_title": "2019 ESC/EAS Guidelines for the management of dyslipidaemias",
+    "reference": "Mach F et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188. DOI: 10.1093/eurheartj/ehz455 — recomendações de metas de LDL-C, 2ª tabela",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "dislipidemia",
+      "LDL-C",
+      "meta terapêutica",
+      "prevenção secundária",
+      "evento recorrente"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "inibidor-de-pcsk9-em-prevencao-secundaria-de-muito-alto-risco",
+    "statement": "Em prevenção secundária, no paciente de muito alto risco que não atinge a meta de LDL-C com estatina na dose máxima tolerada associada a ezetimiba, a combinação com um inibidor de PCSK9 é recomendada. Na hipercolesterolemia familiar de muito alto risco — com doença aterosclerótica ou outro fator de risco maior — a mesma combinação é recomendada com nível C; em prevenção primária de muito alto risco sem hipercolesterolemia familiar, cai para Classe IIb, nível C.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC/EAS",
+    "year": 2019,
+    "guideline_title": "2019 ESC/EAS Guidelines for the management of dyslipidaemias",
+    "reference": "Mach F et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188. DOI: 10.1093/eurheartj/ehz455 — recomendações para redução farmacológica do LDL-C",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "dislipidemia",
+      "inibidor de PCSK9",
+      "prevenção secundária",
+      "LDL-C"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ezetimiba-quando-a-meta-de-ldl-nao-e-atingida-com-estatina-maxima",
+    "statement": "Quando a meta de LDL-C da categoria de risco não é atingida com a dose máxima tolerada de estatina, a combinação com ezetimiba é recomendada. A estatina de alta intensidade, titulada até a maior dose tolerada, permanece o primeiro passo (Classe I, nível A). Se nenhum esquema com estatina for tolerado, mesmo após nova tentativa, a ezetimiba deve ser considerada isoladamente (Classe IIa, nível C).",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC/EAS",
+    "year": 2019,
+    "guideline_title": "2019 ESC/EAS Guidelines for the management of dyslipidaemias",
+    "reference": "Mach F et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188. DOI: 10.1093/eurheartj/ehz455 — recomendações para redução farmacológica do LDL-C",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "dislipidemia",
+      "ezetimiba",
+      "estatina",
+      "LDL-C"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "lipoproteina-a-acima-de-50-mg-dl-como-fator-agravante-de-risco",
+    "statement": "Valores de lipoproteína(a) acima de 50 mg/dL (105 nmol/L) devem ser considerados fator agravante de risco cardiovascular em todo adulto, e quanto mais alta a Lp(a), maior o acréscimo de risco. Como a concentração é geneticamente determinada e praticamente não varia ao longo da vida, uma única dosagem basta.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC/EAS",
+    "year": 2025,
+    "guideline_title": "2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias",
+    "reference": "Mach F, Koskinas KC, Roeters van Lennep JE, et al. 2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias. Eur Heart J. 2025;46(42):4359-4378. DOI: 10.1093/eurheartj/ehaf190. PMID: 40878289 — Tabela de Recomendação 4",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "lipoproteína(a)",
+      "estratificação de risco",
+      "dislipidemia",
+      "prevenção"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "intensificar-hipolipemiante-durante-a-internacao-por-sca",
+    "statement": "Em paciente que já vinha em uso de qualquer terapia hipolipemiante e interna por síndrome coronariana aguda, a intensificação do tratamento durante a própria internação do evento é recomendada, para reduzir mais o LDL-C. É a mudança de conduta central da atualização de 2025: não esperar a reavaliação ambulatorial.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC/EAS",
+    "year": 2025,
+    "guideline_title": "2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias",
+    "reference": "Mach F, Koskinas KC, Roeters van Lennep JE, et al. 2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias. Eur Heart J. 2025;46(42):4359-4378. DOI: 10.1093/eurheartj/ehaf190. PMID: 40878289 — Tabela de Recomendação 3",
+    "theme": "Doença coronariana",
+    "tags": [
+      "síndrome coronariana aguda",
+      "dislipidemia",
+      "LDL-C",
+      "intensificação"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "estatina-de-alta-intensidade-com-ezetimiba-na-internacao-por-sca",
+    "statement": "No paciente virgem de tratamento hipolipemiante que interna por síndrome coronariana aguda, iniciar terapia combinada de estatina de alta intensidade com ezetimiba já durante a internação deve ser considerado, quando não se espera atingir a meta de LDL-C apenas com a estatina.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC/EAS",
+    "year": 2025,
+    "guideline_title": "2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias",
+    "reference": "Mach F, Koskinas KC, Roeters van Lennep JE, et al. 2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias. Eur Heart J. 2025;46(42):4359-4378. DOI: 10.1093/eurheartj/ehaf190. PMID: 40878289 — Tabela de Recomendação 3",
+    "theme": "Doença coronariana",
+    "tags": [
+      "síndrome coronariana aguda",
+      "estatina",
+      "ezetimiba",
+      "terapia combinada"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "suplemento-alimentar-e-vitamina-nao-reduzem-ldl-nem-risco",
+    "statement": "Não há indicação para suplemento alimentar nem vitamina com a finalidade de reduzir o LDL-C e o risco de doença aterosclerótica. É recomendação contra, não ausência de recomendação — a distinção importa na conversa de consultório, em que o suplemento costuma ser apresentado como inócuo.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "ESC/EAS",
+    "year": 2025,
+    "guideline_title": "2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias",
+    "reference": "Mach F, Koskinas KC, Roeters van Lennep JE, et al. 2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias. Eur Heart J. 2025;46(42):4359-4378. DOI: 10.1093/eurheartj/ehaf190. PMID: 40878289 — Tabela de Recomendação 8",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "suplemento alimentar",
+      "vitamina",
+      "dislipidemia",
+      "não recomendado"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "estatina-em-prevencao-primaria-em-pessoas-vivendo-com-hiv",
+    "statement": "Em pessoas vivendo com HIV a partir de 40 anos, em prevenção primária, a estatina é recomendada independentemente do risco cardiovascular estimado e do valor de LDL-C. É uma das poucas situações em que a diretriz de lípides desacopla a indicação do escore e da meta.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC/EAS",
+    "year": 2025,
+    "guideline_title": "2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias",
+    "reference": "Mach F, Koskinas KC, Roeters van Lennep JE, et al. 2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias. Eur Heart J. 2025;46(42):4359-4378. DOI: 10.1093/eurheartj/ehaf190. PMID: 40878289 — Tabela de Recomendação 6",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "HIV",
+      "estatina",
+      "prevenção primária",
+      "população especial"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "estatina-em-prevencao-primaria-de-cardiotoxicidade-por-antraciclina",
+    "statement": "Em pacientes adultos com alto ou muito alto risco de toxicidade cardiovascular relacionada à quimioterapia por antraciclina, a estatina deve ser considerada em prevenção primária, para reduzir o risco de disfunção cardíaca induzida por antraciclina.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC/EAS",
+    "year": 2025,
+    "guideline_title": "2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias",
+    "reference": "Mach F, Koskinas KC, Roeters van Lennep JE, et al. 2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias. Eur Heart J. 2025;46(42):4359-4378. DOI: 10.1093/eurheartj/ehaf190. PMID: 40878289 — Tabela de Recomendação 7",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "antraciclina",
+      "estatina",
+      "cardiotoxicidade",
+      "prevenção primária"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "hs-troponina-seriada-antes-e-24-e-48-horas-apos-cirurgia-nao-cardiaca",
+    "statement": "Em paciente com doença cardiovascular conhecida, fator de risco cardiovascular (incluindo idade de 65 anos ou mais) ou sintoma sugestivo de doença cardiovascular, é recomendado medir troponina de alta sensibilidade T ou I antes de cirurgia não cardíaca de risco intermediário ou alto, e novamente com 24 e 48 horas de pós-operatório. A recomendação é seriada: medir só no pré-operatório cumpre metade dela e perde justamente a lesão miocárdica pós-operatória, assintomática na maioria dos casos.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines on cardiovascular assessment and management of patients undergoing non-cardiac surgery",
+    "reference": "Halvorsen S, Mehilli J, Cassese S, et al. 2022 ESC Guidelines on cardiovascular assessment and management of patients undergoing non-cardiac surgery. Eur Heart J. 2022;43(39):3826-3924. DOI: 10.1093/eurheartj/ehac270 — Tabela de Recomendação 7",
+    "theme": "Perioperatório",
+    "tags": [
+      "perioperatório",
+      "troponina",
+      "biomarcador",
+      "cirurgia não cardíaca",
+      "lesão miocárdica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ecg-de-12-derivacoes-antes-de-cirurgia-de-risco-intermediario-ou-alto",
+    "statement": "Em paciente com doença cardiovascular conhecida ou fator de risco cardiovascular (incluindo idade de 65 anos ou mais), ou com sintoma ou sinal sugestivo de doença cardiovascular, é recomendado obter ECG de 12 derivações antes de cirurgia não cardíaca de risco intermediário ou alto. O contraponto é igualmente formal: em paciente de baixo risco submetido a cirurgia de baixo ou intermediário risco, não se recomenda obter de rotina ECG, hs-troponina nem BNP/NT-proBNP (Classe III).",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines on cardiovascular assessment and management of patients undergoing non-cardiac surgery",
+    "reference": "Halvorsen S, Mehilli J, Cassese S, et al. 2022 ESC Guidelines on cardiovascular assessment and management of patients undergoing non-cardiac surgery. Eur Heart J. 2022;43(39):3826-3924. DOI: 10.1093/eurheartj/ehac270 — Tabela de Recomendação 7",
+    "theme": "Perioperatório",
+    "tags": [
+      "perioperatório",
+      "ECG",
+      "avaliação pré-operatória",
+      "cirurgia não cardíaca"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "adiar-cirurgia-eletiva-6-meses-apos-icp-eletiva-e-12-meses-apos-sca",
+    "statement": "É recomendado adiar a cirurgia não cardíaca eletiva por 6 meses após intervenção coronariana percutânea eletiva e por 12 meses após síndrome coronariana aguda. O prazo é contado a partir do procedimento ou do evento índice, e não da alta.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines on cardiovascular assessment and management of patients undergoing non-cardiac surgery",
+    "reference": "Halvorsen S, Mehilli J, Cassese S, et al. 2022 ESC Guidelines on cardiovascular assessment and management of patients undergoing non-cardiac surgery. Eur Heart J. 2022;43(39):3826-3924. DOI: 10.1093/eurheartj/ehac270 — recomendações para manejo perioperatório de agentes antitrombóticos",
+    "theme": "Perioperatório",
+    "tags": [
+      "perioperatório",
+      "antiagregante",
+      "intervenção coronariana percutânea",
+      "síndrome coronariana aguda",
+      "cirurgia eletiva"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
