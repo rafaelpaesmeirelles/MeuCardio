@@ -4,7 +4,7 @@ slug: espironolactona
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["Bula do ALDACTONE (espironolactona), seção de posologia e administração, conferida em 29/07/2026", "Pitt B, Zannad F, Remme WJ, et al. The effect of spironolactone on morbidity and mortality in patients with severe heart failure (RALES). N Engl J Med. 1999;341(10):709-717. DOI: 10.1056/NEJM199909023411001. PMID: 10471456", "Pitt B, Pfeffer MA, Assmann SF, et al. Spironolactone for heart failure with preserved ejection fraction (TOPCAT). N Engl J Med. 2014;370(15):1383-1392. DOI: 10.1056/NEJMoa1313731. PMID: 24716680"]
+source_refs: ["Bula do ALDACTONE (espironolactona), seção de posologia e administração, conferida em 29/07/2026", "Pitt B, Zannad F, Remme WJ, et al. The effect of spironolactone on morbidity and mortality in patients with severe heart failure (RALES). N Engl J Med. 1999;341(10):709-717. DOI: 10.1056/NEJM199909023411001. PMID: 10471456", "Pitt B, Pfeffer MA, Assmann SF, et al. Spironolactone for heart failure with preserved ejection fraction (TOPCAT). N Engl J Med. 2014;370(15):1383-1392. DOI: 10.1056/NEJMoa1313731. PMID: 24716680", "Williams B, MacDonald TM, Morant S, et al. Spironolactone versus placebo, bisoprolol, and doxazosin to determine the optimal treatment for drug-resistant hypertension (PATHWAY-2). Lancet. 2015;386(10008):2059-2068. DOI: 10.1016/S0140-6736(15)00257-3. PMID: 26414968"]
 legacy_source: "medicamentos/banco-de-medicamentos-espironolactona.md"
 ---
 
@@ -42,7 +42,7 @@ Comprimidos de 25, 50 e 100 mg
 
 **Correção de conteúdo**: o "teto de adulto de 400 mg/dia" que constava aqui, sem recorte, era impreciso — 400 mg/dia é o teto da **cirrose hepática com relação Na⁺/K⁺ baixa especificamente**, não um teto geral de adulto. Em hipertensão e em IC congestiva, o teto que a bula sustenta é 200 mg/dia.
 
-VERIFICAÇÃO HUMANA NECESSÁRIA para a **quarta droga em hipertensão resistente**: essa indicação não vem da bula (que não cobre hipertensão resistente como categoria própria) — é recomendação de diretriz de hipertensão, provavelmente apoiada no PATHWAY-2, que não foi lida nesta sessão.
+**Resolvido em 29/07/2026** com a leitura do PATHWAY-2 (Williams B et al., Lancet 2015;386(10008):2059-2068, PMID 26414968) — confirmado: a indicação de quarta droga em hipertensão resistente não vem da bula (que não cobre hipertensão resistente como categoria própria), é recomendação de diretriz apoiada neste ensaio. Desenho: 335 pacientes com PA sistólica em consultório ≥140mmHg (ou ≥135mmHg se diabético) e domiciliar ≥130mmHg, apesar de pelo menos 3 meses com doses máximas toleradas de três fármacos, rotacionados de forma cruzada e randomizada por espironolactona (25-50mg/dia), bisoprolol (5-10mg/dia), doxazosina de liberação modificada (4-8mg/dia) e placebo, 12 semanas cada braço. Redução de PAS domiciliar com espironolactona **8,70mmHg maior que com placebo** (IC95% 7,69-9,72; p<0,0001) e **4,26mmHg maior que a média dos outros dois fármacos ativos** (IC95% 3,38-5,13; p<0,0001) — superior tanto à doxazosina (-4,03mmHg) quanto ao bisoprolol (-4,48mmHg) isoladamente. Espironolactona foi a droga mais eficaz em toda a distribuição de renina plasmática basal, com vantagem maior nos pacientes de renina mais baixa. Potássio sérico >6,0mmol/L ocorreu em 6 dos 285 pacientes tratados com espironolactona, em uma ocasião cada.
 
 ## Ajuste renal
 - **clcr 30 50**: 12,5 mg 1x/dia ou em dias alternados; manutenção pode aumentar para 12,5-25 mg/dia
