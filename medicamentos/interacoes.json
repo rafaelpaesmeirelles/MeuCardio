@@ -1,7 +1,9 @@
 [
   {
     "slug": "ranolazina-inibidor-forte-cyp3a",
-    "farmacos": ["ranolazina"],
+    "farmacos": [
+      "ranolazina"
+    ],
     "classe_oposta": "inibidor forte da CYP3A",
     "gravidade": "contraindicada",
     "efeito": "Aumento acentuado da exposição à ranolazina.",
@@ -11,7 +13,10 @@
   },
   {
     "slug": "ranolazina-diltiazem",
-    "farmacos": ["ranolazina", "diltiazem-cloridrato"],
+    "farmacos": [
+      "ranolazina",
+      "diltiazem-cloridrato"
+    ],
     "gravidade": "moderada",
     "efeito": "O diltiazem é inibidor moderado da CYP3A e aumenta a exposição à ranolazina.",
     "conduta": "Limitar a ranolazina a 500 mg duas vezes ao dia enquanto durar a associação.",
@@ -20,7 +25,10 @@
   },
   {
     "slug": "ranolazina-verapamil",
-    "farmacos": ["ranolazina", "verapamil-cloridrato"],
+    "farmacos": [
+      "ranolazina",
+      "verapamil-cloridrato"
+    ],
     "gravidade": "moderada",
     "efeito": "O verapamil é inibidor moderado da CYP3A e aumenta a exposição à ranolazina.",
     "conduta": "Limitar a ranolazina a 500 mg duas vezes ao dia enquanto durar a associação.",
@@ -29,7 +37,9 @@
   },
   {
     "slug": "amiodarona-sofosbuvir",
-    "farmacos": ["amiodarona-cloridrato"],
+    "farmacos": [
+      "amiodarona-cloridrato"
+    ],
     "classe_oposta": "sofosbuvir associado a outro antiviral de ação direta contra o vírus da hepatite C (daclatasvir, simeprevir ou ledipasvir)",
     "gravidade": "grave",
     "efeito": "Bradicardia grave, potencialmente fatal, e bloqueio cardíaco.",
@@ -39,7 +49,9 @@
   },
   {
     "slug": "dronedarona-antiarritmico-classe-i-ou-iii",
-    "farmacos": ["dronedarona"],
+    "farmacos": [
+      "dronedarona"
+    ],
     "classe_oposta": "antiarrítmico de classe I ou III (flecainida, propafenona, quinidina, disopiramida, dofetilida, sotalol, amiodarona)",
     "gravidade": "grave",
     "efeito": "Sobreposição de efeito antiarrítmico.",
@@ -49,7 +61,10 @@
   },
   {
     "slug": "flecainida-digoxina",
-    "farmacos": ["flecainida", "digoxina"],
+    "farmacos": [
+      "flecainida",
+      "digoxina"
+    ],
     "gravidade": "leve",
     "efeito": "Pequeno aumento do nível plasmático de digoxina durante a coadministração.",
     "conduta": "Considerar o efeito ao interpretar a digoxinemia; a rotulagem não determina ajuste fixo de dose.",
@@ -58,11 +73,62 @@
   },
   {
     "slug": "flecainida-propranolol",
-    "farmacos": ["flecainida", "propranolol"],
+    "farmacos": [
+      "flecainida",
+      "propranolol"
+    ],
     "gravidade": "moderada",
     "efeito": "Pequeno aumento dos níveis plasmáticos dos dois fármacos durante a coadministração.",
     "conduta": "Vigiar efeito aditivo sobre condução e função ventricular.",
     "fonte": "Rotulagem do FDA para acetato de flecainida comprimidos USP, via DailyMed. ⚠️ Rotulagem norte-americana — a flecainida não tem produto comercializado no Brasil.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "amiodarona-digoxina",
+    "farmacos": [
+      "amiodarona-cloridrato",
+      "digoxina"
+    ],
+    "gravidade": "grave",
+    "efeito": "Ação sinérgica sobre o nó sinusal e a condução atrioventricular — bradicardia excessiva e distúrbio de condução. Além disso, a amiodarona reduz o clearance da digoxina e eleva a concentração plasmática dela.",
+    "conduta": "Monitorar digoxinemia e ECG, observar sinais clínicos de toxicidade digitálica e ajustar a dose do digitálico. Atenção à janela: pela meia-vida longa da amiodarona, a bula registra que as interações podem ser observadas por VÁRIOS MESES após a descontinuação dela. Suspender a amiodarona não encerra a vigilância.",
+    "fonte": "Bula do profissional de saúde do cloridrato de amiodarona (Fresenius Kabi Brasil), item 6 — Interações Medicamentosas.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "amiodarona-varfarina",
+    "farmacos": [
+      "amiodarona-cloridrato",
+      "varfarina-sodica"
+    ],
+    "gravidade": "grave",
+    "efeito": "A amiodarona inibe a CYP2C9 e aumenta a concentração da varfarina, exacerbando o efeito anticoagulante e elevando o risco de sangramento.",
+    "conduta": "Monitorar o INR regularmente e ajustar a dose do anticoagulante oral DURANTE E APÓS o tratamento com amiodarona. Atenção à janela: pela meia-vida longa da amiodarona, a bula registra que as interações podem ser observadas por VÁRIOS MESES após a descontinuação dela. Suspender a amiodarona não encerra a vigilância.",
+    "fonte": "Bula do profissional de saúde do cloridrato de amiodarona (Fresenius Kabi Brasil), item 6 — Interações Medicamentosas.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "amiodarona-dabigatrana",
+    "farmacos": [
+      "amiodarona-cloridrato",
+      "dabigatrana-etexilato"
+    ],
+    "gravidade": "moderada",
+    "efeito": "A amiodarona é inibidora da glicoproteína P e aumenta a exposição à dabigatrana, com risco de sangramento.",
+    "conduta": "Usar com cautela e, se necessário, ajustar a dose da dabigatrana conforme a bula dela. Atenção à janela: pela meia-vida longa da amiodarona, a bula registra que as interações podem ser observadas por VÁRIOS MESES após a descontinuação dela. Suspender a amiodarona não encerra a vigilância.",
+    "fonte": "Bula do profissional de saúde do cloridrato de amiodarona (Fresenius Kabi Brasil), item 6 — Interações Medicamentosas.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "amiodarona-flecainida",
+    "farmacos": [
+      "amiodarona-cloridrato",
+      "flecainida"
+    ],
+    "gravidade": "moderada",
+    "efeito": "A amiodarona inibe a CYP2D6 e aumenta as concentrações plasmáticas da flecainida.",
+    "conduta": "A dose de flecainida deve ser ajustada. Atenção à janela: pela meia-vida longa da amiodarona, a bula registra que as interações podem ser observadas por VÁRIOS MESES após a descontinuação dela. Suspender a amiodarona não encerra a vigilância.",
+    "fonte": "Bula do profissional de saúde do cloridrato de amiodarona (Fresenius Kabi Brasil), item 6 — Interações Medicamentosas.",
     "review_status": "revisado"
   }
 ]
