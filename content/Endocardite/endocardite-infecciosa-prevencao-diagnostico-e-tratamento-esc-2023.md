@@ -52,7 +52,7 @@ A estrutura clássica de Duke se mantém — diagnóstico definido por **2 crit�
 Categorias diagnósticas: definida, possível e rejeitada, como na estrutura clássica.
 
 ## Esquemas antibioticos
-A diretriz completa traz tabelas dedicadas por patógeno — estreptococos orais e *S. gallolyticus*, *Staphylococcus* spp., *Enterococcus* spp., e esquema empírico inicial antes da identificação do agente. **Os fármacos, doses e durações específicas de cada tabela não são reproduzidos aqui**: não foi possível confirmá-los com o grau de certeza que dose de antibiótico exige, o que demanda o texto integral da diretriz.
+A diretriz completa traz tabelas dedicadas por patógeno — estreptococos orais e *S. gallolyticus*, *Staphylococcus* spp., *Enterococcus* spp., e esquema empírico inicial antes da identificação do agente. **As doses estão agora em documento próprio desta biblioteca**, `esquemas-antibioticos-na-endocardite-infecciosa-por-agente-esc-2023`, lidas no texto integral da diretriz. A ressalva que existia aqui — de que as doses não podiam ser confirmadas com o grau de certeza que dose de antibiótico exige — deixou de valer quando o texto integral foi obtido, em 29/07/2026. O único esquema que segue ausente é o **empírico**, e o motivo está escrito no documento novo.
 
 O que está confirmado sobre a **estrutura** do tratamento:
 - **Fase 1**, sempre hospitalar: 2 semanas de antibiótico parenteral. É nessa janela que devem acontecer a cirurgia (quando indicada), a remoção de corpo estranho infectado e a drenagem de abscesso cardíaco ou extracardíaco.
