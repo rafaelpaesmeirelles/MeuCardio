@@ -83,6 +83,28 @@ ninguém procurou. **Não rebaixe as mesmas fontes esperando resultado diferente
 - Tarefas 8 (checador de interação), 9 (alerta de diretriz), 19 (alerta por
   condição especial) e 21 (Painel) no ar.
 
+## Incidente de 29/07/2026 às 20h — leia antes de confiar no `git log`
+
+**O commit `dbcf6d2`, cuja mensagem fala só de `COBERTURA.md`, contém também
+seis arquivos meus** que nada têm a ver com cobertura. A outra sessão rodou
+`git commit -a` com a minha árvore de trabalho suja e varreu tudo junto. O
+conteúdo está íntegro — o que se perdeu foi a procedência, porque a mensagem
+não descreve o que entrou.
+
+**O que está dentro de `dbcf6d2` além do `COBERTURA.md`:**
+- `medicamentos/metadados.json` — tenecteplase com o AVC isquêmico resolvido
+  pelo rótulo do TNKase (FDA, 02/2025); alteplase com a premissa da marcação
+  corrigida; milrinona reescrita pela bula do Primacor; colchicina marcada.
+- `content/Farmacologia/`: `tenecteplase.md`, `alteplase.md`, `milrinona.md`,
+  `colchicina.md`, `atropina.md` — as mesmas correções do lado da prosa, mais
+  a remoção de **todas as 15 citações de `droracle.ai`** do repositório.
+
+**Como não repetir:** o `CLAUDE.md` já proíbe `git add -A`, e o problema aqui
+foi a variante `git commit -a`, que tem o mesmo efeito e não está nomeada lá.
+Enquanto houver duas sessões, **commite caminho por caminho** e confira
+`git status` antes: árvore suja da outra sessão vira commit alheio sem aviso
+e sem conflito de merge.
+
 ## Regras que não se flexibilizam
 1. **Nada é publicado sem o aval do Rafael.** `published` fica `false`; o campo
    do JSON é ignorado pelos carregadores de propósito.
