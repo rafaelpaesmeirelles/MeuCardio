@@ -62,6 +62,63 @@ Regras que decorrem disso:
    (dose, corte de escore, valor de referência, número real do estudo).
    Lacuna de cobertura é dívida do produto, não detalhe.
 
+## Divisão de trabalho entre sessões simultâneas
+Pedido do Rafael em 29/07/2026: quando houver mais de uma sessão do Claude Code
+aberta ao mesmo tempo, **cada uma declara aqui onde vai mexer**, para que a
+outra leia antes de começar e ninguém pise no trabalho do outro. Este bloco é o
+canal — não há outro.
+
+**Como usar:** antes de abrir uma frente, edite a tabela abaixo com o caminho
+exato. Ao terminar, marque como livre. Quem chegar depois lê primeiro e escolhe
+uma frente livre em vez de negociar no meio do commit.
+
+| Caminho | Sessão | Estado |
+|---|---|---|
+| `medicamentos/metadados.json` | **outra sessão** (verbetes contra bula brasileira) | **ocupado — não tocar** |
+| `content/Farmacologia/*.md` | sessão da biblioteca | ocupado em rodízio, ver abaixo |
+| `content/<demais temas>/*.md` | sessão da biblioteca | livre |
+| `evidencias/`, `estudos/`, `galeria/`, `exames/` | sessão da biblioteca | livre |
+| `controlados/`, `backend/app/**/receituario*`, `backend/app/services/classificacao_*` | sessão do receituário (Tarefa 27) | ocupado |
+| `CLAUDE.md`, `COBERTURA.md` | ambas | **editar só a própria seção**, e `git pull --rebase` antes |
+
+**Regras que evitam colisão, todas aprendidas apanhando aqui:**
+
+1. **`git pull --rebase origin main` antes de commitar.** As duas sessões
+   commitam no mesmo `main`; sem isso o push é rejeitado no pior momento.
+2. **Nunca `git add -A`.** Adicione caminho por caminho — `add -A` varre
+   trabalho da outra sessão em curso e o commita pela metade, com mensagem que
+   não descreve o que entrou.
+3. **`ls .git/index.lock` antes de commitar.** Lock presente = a outra sessão
+   está commitando agora; espere em vez de forçar.
+4. **Import e publicação são globais.** `POST /api/admin/import` reimporta
+   `content/` inteiro, e `carregar?frente=X` recarrega a frente toda —
+   inclusive o que a outra sessão deixou no disco pela metade. Antes de
+   importar, confira `git status` das pastas envolvidas; árvore suja de outra
+   sessão vira conteúdo publicado sem revisão.
+5. **Publicar continua sendo decisão do Rafael**, para as duas sessões, sem
+   exceção.
+
+### Onde a sessão da biblioteca vai trabalhar
+Frentes de ampliação, na ordem de prioridade medida em `COBERTURA.md`. A sessão
+do receituário **não** entra em nenhuma delas enquanto a Tarefa 27 não fechar.
+
+| Frente | Caminho | Prioridade e motivo |
+|---|---|---|
+| Estudos | `estudos/metadados.json` | **1ª** — cobre 15 dos 27 temas; sem nenhum item em Cardiopatias congênitas, Febre reumática e Comunicação clínica |
+| Evidências | `evidencias/metadados.json` | **2ª** — 18 dos 27 temas |
+| Documentos | `content/<Tema>/*.md` | **3ª** — profundidade nos temas com menos de 6 documentos |
+| Galeria e exames | `galeria/`, `exames/` | 4ª — dependem de licença verificável, rendimento menor por hora |
+| Marcações de verificação | `content/**` | contínua — 46 em 37 arquivos, o grosso em Farmacologia |
+
+**Farmacologia é o único ponto de atrito real** entre as duas sessões: os
+verbetes de `content/Farmacologia/*.md` e os registros de
+`medicamentos/metadados.json` descrevem os mesmos fármacos, e uma contradição
+entre eles é exatamente o defeito "contradição entre telas" que a Fase B passou
+semanas removendo. Combinado: **a sessão de medicamentos manda no dado
+estruturado, a da biblioteca manda na prosa** — e quem alterar dose,
+apresentação ou ajuste renal de um fármaco **confere o outro lado antes de
+commitar**, citando a mesma bula.
+
 ## Regra permanente de autonomia
 Quando eu pedir para "continuar expandindo a biblioteca" ou similar, você deve
 trabalhar em QUALQUER uma das seis frentes abaixo (não só documentos de texto):
@@ -640,6 +697,51 @@ já está fazendo, assumir os três fluxogramas que ainda faltam — **cardiopat
 congênita do adulto, cardio-oncologia e febre reumática**. Não é urgente; se
 preferir, ele decide depois quem pega. Formato obrigatório de árvore de decisão:
 ver a seção própria acima.
+
+#### Divisão por arquivo, atualizada em 29/07/2026 — leia antes de editar
+A divisão inicial ("uma em medicamentos, outra em content") ficou ampla demais
+quando as duas sessões passaram a mexer em **código**. Vale esta lista, que é
+por arquivo e não por assunto.
+
+**Faixa da sessão de Medicamentos** — não editar sem combinar:
+- `medicamentos/metadados.json` e `medicamentos/interacoes.json`
+- `backend/app/api/drugs.py`
+- `frontend/src/pages/Interacoes.tsx`, `Condicoes.tsx`, `Medicamentos.tsx`
+- `.claude/ferramentas/ler_pdf.py` e `decodifica_cid_offset.py`
+
+**Faixa da sessão de Conteúdo** — a de Medicamentos não toca:
+- `content/**`, `evidencias/`, `estudos/`, `galeria/`, `exames/`
+- o que a Tarefa 27 (receituário) exigir em `backend/` e `frontend/`
+
+**Arquivos COMPARTILHADOS, onde a colisão é provável:** `frontend/src/App.tsx`
+(rotas), `frontend/src/components/Shell.tsx` (menu),
+`frontend/src/pages/Painel.tsx` (cartões), `CLAUDE.md` e `COBERTURA.md`.
+Regra para eles: **`git pull --rebase` imediatamente antes de editar**, editar
+só a própria linha (são listas — acréscimo, nunca reescrita do bloco) e
+commitar na sequência, sem deixar a edição parada na árvore.
+
+**Por que o cuidado:** os JSON e os `.tsx` são reescritos inteiros a cada
+gravação. Quem grava por último apaga o trabalho do outro **sem conflito de
+merge e sem aviso** — o git aceita, e o prejuízo só aparece depois, quando
+alguém nota que um lote sumiu.
+
+#### O que a sessão de Medicamentos está expandindo agora (29/07/2026)
+Duas frentes, ambas inteiramente dentro de `medicamentos/`:
+
+1. **Gestação e lactação nos verbetes que ainda não têm.** Hoje `pregnancy`
+   está em 27 dos 90 e `lactation` em 17. A meta é fechar os mais prescritos em
+   cardiologia. Método que funciona: buscar a bula **pelo nome comercial** em
+   dois bulários (`saudedireta.com.br/catinc/drugs/bulas/<marca>.pdf` e
+   `img.drogasil.com.br/raiadrogasil_bula/<Marca>.pdf`) — 403 num deles é nome
+   de arquivo errado, não documento ausente; tentar o outro antes de desistir.
+2. **Base de interações par a par** (`interacoes.json`, hoje 27 registros).
+   Cresce de graça: cada bula lida para o item 1 costuma render também
+   interação com gravidade e fonte.
+
+Regra que vale para as duas frentes e não muda: **nada entra sem bula lida**.
+Resumo de resultado de busca não é fonte. Onde a fonte não afirmar, o campo
+fica vazio e marcado — campo preenchido com texto vago é pior que campo vazio,
+porque faz o médico parar de procurar.
 
 ### Estado das tarefas 8 a 26 do briefing 2
 Medido em 29/07/2026 direto sobre o código e o `git log`, não sobre o que este
