@@ -1930,5 +1930,25 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "monitor-cardiaco-implantavel-ilr-na-sincope-inexplicada-recorrente",
+    "statement": "O monitor cardíaco implantável (ILR) é indicado numa fase precoce da investigação em paciente com síncope recorrente de origem incerta, sem critérios de alto risco, e com alta probabilidade de recorrência dentro da vida útil da bateria do dispositivo. O ILR também é indicado, separadamente, em paciente com critério de alto risco em quem a avaliação completa não demonstrou causa da síncope nem levou a tratamento específico, desde que não haja indicação convencional de CDI de prevenção primária ou de marca-passo. Um meta-análise de 5 ensaios randomizados com 660 pacientes mostrou que implantar o ILR já no início da investigação, em vez da estratégia convencional (monitor de eventos externo, teste de mesa inclinada e estudo eletrofisiológico), aumenta em 3,7 vezes (IC95% 2,7-5,0) a probabilidade relativa de chegar a um diagnóstico, além de ser mais custo-efetivo.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2018,
+    "guideline_title": "2018 ESC Guidelines for the diagnosis and management of syncope",
+    "reference": "Brignole M, Moya A, de Lange FJ, et al. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948. DOI: 10.1093/eurheartj/ehy037. PMID: 29562304 — seção 4.2.4.7 (Implantable loop recorders) e tabela de recomendações de monitorização eletrocardiográfica.",
+    "theme": "Síncope",
+    "tags": [
+      "síncope",
+      "monitor cardíaco implantável",
+      "ilr",
+      "arritmia",
+      "estratégia diagnóstica precoce"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
