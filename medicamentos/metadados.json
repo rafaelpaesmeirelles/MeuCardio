@@ -1543,7 +1543,7 @@
   },
   {
     "slug": "finerenona",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Finerenona",
     "drug_class": "Antagonista mineralocorticoide não esteroidal de terceira geração",
     "mechanism": "Bloqueia seletivamente o receptor mineralocorticoide, com maior seletividade e menor afinidade por receptores de andrógeno/progesterona que espironolactona; demonstra efeitos anti-inflamatórios e antifibróticos em modelos pré-clínicos de doença renal e cardiovascular, distintos do efeito primariamente diurético dos antagonistas esteroidais",
@@ -1554,10 +1554,14 @@
       "- **contraindicacao de inicio**: não iniciar se potássio sérico >5 mEq/L - **monitorizacao**: medir potássio sérico e TFGe 4 semanas após início e periodicamente durante o tratamento, ajustando dose conforme necessário - **limiar para titulacao para 20 mg em FIDELIO-DKD**: potássio ≤4,8 mmol/L - **fonte**: MedCentral; Drugs.com"
     ],
     "dosing": {
-      "TFGe 25 a <60 mL/min/1,73m²": "iniciar com 10 mg 1x/dia",
-      "TFGe >=60 mL/min/1,73m²": "iniciar com 20 mg 1x/dia",
-      "dose alvo": "20 mg 1x/dia, titulada conforme potássio sérico e TFGe",
-      "fonte": "MedCentral; Drugs.com\n\nVERIFICAÇÃO HUMANA NECESSÁRIA quanto à **procedência**: a posologia acima se apoia em MedCentral e Drugs.com — agregador ou portal de conteúdo, não documento primário. Isso **não afirma que os números estejam errados**; afirma que não são rastreáveis à bula registrada nem a diretriz, que é o critério deste acervo. Substituir a fonte e reconferir os valores antes de publicar."
+      "marca no brasil": "**Firialta** (Bayer S.A.), comprimidos revestidos de 10 mg e 20 mg. O nome Kerendia, usado em outros países, **não é o registrado aqui**.",
+      "duas indicacoes com tetos diferentes": "A bula brasileira cobre **duas** indicações, e a dose máxima diária **não é a mesma**: **doença renal crônica com diabetes tipo 2 → 20 mg/dia**; **insuficiência cardíaca com FEVE ≥ 40% → 40 mg/dia**. Confundir os dois tetos subdosa uma indicação ou ultrapassa a outra.",
+      "dose inicial pela funcao renal": "**TFGe de 25 a menos de 60 mL/min/1,73 m² → 10 mg uma vez ao dia.** **TFGe de 60 mL/min/1,73 m² ou mais → 20 mg uma vez ao dia.**",
+      "quando nao iniciar": "**TFGe abaixo de 25 mL/min/1,73 m²: não iniciar** — a experiência clínica é limitada.",
+      "reavaliacao obrigatoria": "**Quatro semanas após o início, o reinício ou qualquer ajuste de dose**, medir novamente **potássio sérico e TFGe**. Depois disso, o potássio segue sendo medido periodicamente, conforme as características do paciente e os valores prévios.",
+      "ajuste na drc com diabetes tipo 2": "Pelo potássio sérico, após as 4 semanas e nas medidas seguintes: **≤ 4,8 mmol/L** → manter 20 mg/dia; se estiver em 10 mg, aumentar para 20 mg **desde que a TFGe não tenha caído mais de 30%** em relação à medida anterior. **> 4,8 a 5,5** → manter a dose. **> 5,5** → **suspender**, e reiniciar com 10 mg/dia quando o potássio for ≤ 5,0.",
+      "ajuste na insuficiencia cardiaca com feve 40 por cento ou mais": "**Abaixo de 5,0 mmol/L** → se estiver em 10 mg, aumentar para 20 mg; se estiver em 20 mg, manter, **ou aumentar para 40 mg se a TFGe era de 60 mL/min/1,73 m² ou mais no início do tratamento** — ambos condicionados a a TFGe não ter caído mais de 30%. A dose-alvo é **40 mg/dia**. **5,0 a menos de 5,5** → manter. **5,5 a menos de 6,0** → reduzir para a dose imediatamente menor, e **suspender se já estiver em 10 mg**; reiniciar com 10 mg quando o potássio for menor que 5,5. **6,0 ou mais** → **suspender**; reiniciar com 10 mg quando o potássio for menor que 5,5 — e, se as medidas repetidas ficarem em 5,5 ou acima, reiniciar com 10 mg só quando estiver abaixo de 5,0.",
+      "fonte": "Bula brasileira do Firialta (finerenona, Bayer S.A., comprimidos revestidos de 10 mg e 20 mg), seção de posologia e tabelas 1 e 2 de ajuste, conferida na íntegra. **A marcação de procedência está resolvida.** O documento traz histórico de alteração com aprovação em **29/06/2026**, incluindo nova indicação terapêutica e alteração de posologia — é essa atualização que acrescenta a insuficiência cardíaca com FEVE ≥ 40% e o teto de 40 mg/dia, ausentes da versão anterior deste verbete."
     },
     "outcomes": {
       "Evidencia pivotal — FIDELIO-DKD e FIGARO-DKD (pool FIDELITY)": "- **populacao**: pacientes com diabetes tipo 2 e doença renal crônica - **reducao de albuminuria**: redução relativa corrigida por placebo na razão albumina-creatinina urinária de 31% (FIDELIO-DKD) e 32% (FIGARO-DKD) no mês 4 - **desfechos cardiovasculares e renais**: análise agrupada (FIDELITY) confirma redução significativa de desfechos cardiovasculares e renais compostos - **fonte**: NEJM (FIDELIO-DKD); MedCentral"
