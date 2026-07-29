@@ -602,5 +602,29 @@
       "abscesso perivalvular",
       "duke-iscvid"
     ]
+  },
+  {
+    "slug": "troponina-na-cardiotoxicidade-por-antraciclina",
+    "name": "Troponina (cTn) na vigilância de cardiotoxicidade por antraciclina",
+    "category": "laboratorial",
+    "theme": "Cardio-oncologia",
+    "what_it_measures": "Troponina I ou T (incluindo troponina T de alta sensibilidade), medida em conjunto com peptídeo natriurético (BNP ou NT-proBNP), para estratificar o risco cardiovascular basal e detectar lesão miocárdica subclínica durante e após quimioterapia com antraciclina — disfunção cardíaca relacionada a terapia oncológica (CTRCD, na sigla em inglês).",
+    "reference_range": "Não há corte único endossado pela diretriz como valor de referência formal — o percentil 99 depende do ensaio do laboratório, como em qualquer troponina de alta sensibilidade. A diretriz cita achados de estudos observacionais isolados (não um corte diagnóstico recomendado): troponina I ultrassensível basal >80 ng/L associada a maior risco de disfunção cardíaca sob trastuzumabe, e troponina basal elevada (>40 ng/L para hs-cTnI, >14 ng/L para hs-cTnT) associada a risco quatro vezes maior de disfunção ventricular esquerda num estudo com 533 pacientes. Use o valor de referência e a variação dinâmica informados pelo laboratório que processou a amostra, não um número isolado de memória.",
+    "indications": "Pela Recommendation Table 7 da diretriz — biomarcadores cardíacos na quimioterapia com antraciclina: medida basal de NP e cTn é recomendada (Classe I, Nível B) em paciente de risco alto ou muito alto antes de iniciar antraciclina, e deve ser considerada (Classe IIa, Nível C) em risco baixo ou moderado. Durante o tratamento, monitorização de cTn e NP antes de cada ciclo e aos 3 e 12 meses após o término é recomendada (Classe I, Nível B) em risco alto/muito alto; a cada dois ciclos e em até 3 meses após o término deve ser considerada (Classe IIa, Nível C) em risco moderado e em risco baixo que atinja dose cumulativa ≥250 mg/m² de doxorrubicina ou equivalente; e pode ser considerada (Classe IIb, Nível C) em risco baixo sem esse critério de dose.",
+    "interpretation": "Elevação de cTn durante a vigilância, isolada ou associada a elevação de NP, sinaliza lesão miocárdica subclínica e deve motivar encaminhamento à cardio-oncologia e avaliação ecocardiográfica adicional — a diretriz articula biomarcador e imagem no mesmo algoritmo de vigilância, não como testes independentes.",
+    "limitations": "A própria diretriz registra que a literatura sobre biomarcadores para estratificação de risco em cardio-oncologia é limitada e que a maioria das recomendações desta tabela tem nível de evidência C, baseada em opinião de especialista. Os achados prognósticos citados vêm de coortes pequenas e heterogêneas: no registro CARDIOTOX, com 855 pacientes em tratamento oncológico variado, elevação basal de troponina e NT-proBNP não se associou ao desenvolvimento de CTRCD grave (FEVE <40% ou insuficiência cardíaca clínica) — resultado que contradiz os estudos menores citados acima, e a diretriz não resolve essa divergência.",
+    "source_refs": [
+      "2022 ESC Guidelines on cardio-oncology developed in collaboration with the European Hematology Association (EHA), the European Society for Therapeutic Radiology and Oncology (ESTRO) and the International Cardio-Oncology Society (IC-OS). Eur Heart J. 2022;43(41):4229-4361. PMID 36017568. DOI 10.1093/eurheartj/ehac244 — Recommendation Table 7 (baseline risk assessment and monitoring during anthracycline chemotherapy) e Recommendation Table 3 (cardiac biomarker assessment prior to potentially cardiotoxic therapies)."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "troponina",
+      "cardio-oncologia",
+      "antraciclina",
+      "cardiotoxicidade",
+      "ctrcd",
+      "biomarcador"
+    ]
   }
 ]
