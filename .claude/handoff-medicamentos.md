@@ -29,9 +29,41 @@ Medicamentos**. Não escreva fora da sua faixa.
 na sequência. **Nunca `git add -A`** — varre trabalho alheio pela metade.
 Confira `ls .git/index.lock` antes de commitar.
 
-## Estado atual (29/07/2026)
-- **90 fármacos** em `medicamentos/metadados.json`; 88 publicados.
-  `pregnancy` em 38/90, `lactation` em 24/90.
+## Estado atual (29/07/2026, fim da 2ª sessão)
+- **88 fármacos** em `medicamentos/metadados.json`.
+  `pregnancy` em **59/88**, `lactation` em **44/88**, **41 interações**.
+  (Números da 1ª sessão, para comparar: 42 e 30, com 32 interações.)
+- **Login da API é form OAuth2, não JSON** — custou uma tentativa. Use
+  `curl -X POST .../api/auth/login --data-urlencode "username=$EMAIL"
+  --data-urlencode "password=$PASS"`. Mandar `{"email":...}` devolve 422.
+- **O espelho `img.drogasil.com.br` devolveu 403 em tudo** nesta sessão,
+  inclusive em nomes que funcionaram na anterior. Parece bloqueio geral do
+  servidor, não nome de arquivo errado — não gaste tentativas ali antes de
+  conferir se algum nome conhecido ainda passa.
+- **Bulas obtidas e lidas nesta sessão** (todas em
+  `saudedireta.com.br/catinc/drugs/bulas/<nome>.pdf`, extraídas com
+  `pdftotext -layout`, nenhuma cifrada): `inderal`, `dilacoron`, `cardizem`,
+  `adalat`, `crestor`, `rosucor`, `micardishct`, `atacand`, `benicar`,
+  `zestril`, `natrilixsr`, `higroton`, `sotacor`, `eliquis`, `glifage`,
+  `revatio`, `colchis`, `adenocard`, `monocordil`, `isordil`, `viagra`.
+  Fora do espelho: a **bula profissional do Eliquis Rev0515** sai direto do
+  site da BMS (URL está no `source_refs` de `content/Farmacologia/apixabana.md`)
+  e é muito melhor que a do paciente — traz categoria de risco.
+- **Bulas que existem mas NÃO servem, para não serem rebaixadas de novo:**
+  `natrilix` (texto de compêndio antigo, sem seção de gravidez — use
+  `natrilixsr`), `monocordil` (só texto ao paciente, nada sobre gravidez além
+  do boilerplate), `micardis` (resumo de compêndio; o profissional só apareceu
+  na associação `micardishct`), `revatio` (só o boilerplate genérico).
+- **Bulas lidas cuja seção de lactação simplesmente não existe** — não vale
+  rebaixá-las de novo pelo mesmo documento: **adenosina** (Adenocard) e
+  **indapamida** (Natrilix SR). As duas têm gravidez preenchida.
+- **Ainda sem espelho, acumulado das duas sessões:** digoxina, Forxiga,
+  Jardiance, Entresto, atropina injetável, Evkeeza, e agora também Coversyl
+  (perindopril), Inspra (eplerenona), Tambocor (flecainida), Lixiana
+  (edoxabana), Ozempic (semaglutida), Tracleer (bosentana), Verquvo
+  (vericiguate), Vyndaqel (tafamidis), Camzyos (mavacamteno), Leqvio
+  (inclisirana), Nilemdo (ácido bempedoico), Ranexa (ranolazina), Tridil
+  (nitroglicerina).
 - **Atropina e evinacumabe despublicados** por não terem posologia — só voltam
   quando a dose entrar com fonte.
 - 10 linhas órfãs no banco (duplicatas fundidas, despublicadas). O `DELETE`
@@ -89,9 +121,18 @@ cobre**. Fluxograma tem formato obrigatório de árvore de decisão: ver
 `CLAUDE.md` e validar com os dois scripts de `.claude/ferramentas/`.
 
 ## Por onde continuar
-1. **Gestação e lactação** nos 52 fármacos que ainda não têm. Faltam com bula
-   não obtida: digoxina, clopidogrel (só achei modelo antigo), Forxiga,
-   Jardiance, Entresto, rivaroxabana (seção de gravidez).
+0. **PENDENTE COM O RAFAEL, e é o item mais urgente:** duas correções em
+   `content/Farmacologia/` estão **commitadas mas ainda não no ar**, porque a
+   única rota que as sobe é `POST /api/admin/import`, que **reimporta
+   `content/` inteiro** e por isso alcança a faixa da outra sessão. Enquanto
+   não rodar, o documento publicado da **apixabana continua listando
+   "Gravidez" e "Insuficiência hepática grave" como contraindicações** — o
+   que a bula profissional Rev0515, citada no próprio arquivo, não faz
+   (categoria B, "não recomendada"). Conferido no ar em 29/07/2026 pela
+   `/api/library/documents/apixabana`.
+1. **Gestação e lactação** nos fármacos que ainda não têm — 29 sem `pregnancy`
+   e 44 sem `lactation`. A lista de quem não tem espelho de bula está na
+   seção "Estado atual" acima; comece pelos que ainda não foram tentados.
 2. **Base de interações** — cresce de graça: cada bula lida rende par com
    gravidade e fonte. Há 33 candidatos já sinalizados pelo texto do acervo.
 3. **Conteúdo novo nos seus 13 temas.** Os que precisam de diretriz nova
