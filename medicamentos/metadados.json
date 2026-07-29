@@ -200,7 +200,8 @@
     },
     "references": [
       "Cloridrato de Amiodarona — Bula Profissional · Fresenius Kabi · https://www.fresenius-kabi.com/content/dam/fresenius-kabi/br/documents/bulas/medicamentos/Cloridrato%20de%20Amiodarona"
-    ]
+    ],
+    "lactation": "**Contraindicada na lactação** — a lactação está nomeada na lista formal de contraindicações da bula, não apenas numa advertência. O motivo é quantitativo: a amiodarona **é excretada no leite materno em quantidades significantes**. Fonte: bula do ATLANSIL (cloridrato de amiodarona, Sanofi), seções de contraindicações e \"Amamentação\"."
   },
   {
     "slug": "anlodipino-besilato",
@@ -329,7 +330,8 @@
     "references": [
       "Atenolol tablets — rótulo aprovado pelo FDA, DailyMed SPL setid c58e12ad-d705-4643-91ac-ff079e9eb28e"
     ],
-    "pregnancy": "**Categoria de risco D.** O atenolol **atravessa a barreira placentária**. Não usar na gravidez sem orientação médica, com aviso imediato em caso de suspeita. Fonte: bula do ATENOL (atenolol). Note a diferença dentro da própria classe: metoprolol é categoria C e atenolol é D — betabloqueador não é bloco homogêneo na gestação."
+    "pregnancy": "**Categoria de risco D.** O atenolol **atravessa a barreira placentária**. Não usar na gravidez sem orientação médica, com aviso imediato em caso de suspeita. Fonte: bula do ATENOL (atenolol). Note a diferença dentro da própria classe: metoprolol é categoria C e atenolol é D — betabloqueador não é bloco homogêneo na gestação.",
+    "lactation": "**Cautela, com risco nomeado no recém-nascido.** A bula é específica onde a maioria é vaga: há **acúmulo significativo de atenolol no leite materno**. Os neonatos de mães que usaram atenolol na gravidez ou na amamentação **podem apresentar hipoglicemia e bradicardia**. Coerente com a categoria D atribuída na gestação, e em contraste com o metoprolol, categoria C — a rotulagem trata os betabloqueadores de forma desigual também na lactação. Fonte: bula do ATENOL (atenolol, AstraZeneca), seção \"Uso durante a gravidez e lactação\"."
   },
   {
     "slug": "atorvastatina-calcica",
@@ -423,7 +425,8 @@
       "LOTENSIN (Cloridrato de Benazepril) · Bulas.med.br · 2014 · https://www.bulas.med.br/p/bulas-de-medicamentos/bula/3018/lotensin.htm",
       "Lotensin H · Saúde Direta · https://www.saudedireta.com.br/catinc/drugs/bulas/lotensinh.pdf",
       "LOTENSIN (benazepril hydrochloride) — bula FDA/DailyMed"
-    ]
+    ],
+    "lactation": "**Não recomendado — mesmo com o número dizendo que a exposição é desprezível.** É o caso mais explícito do acervo em que a rotulagem não segue a magnitude do dado: o benazepril e o benazeprilato são excretados no leite materno, mas as concentrações máximas corresponderam a apenas **0,3% das concentrações plasmáticas**, e a fração que atinge a circulação sistêmica da criança **pode ser desprezível**. A bula reconhece que qualquer efeito adverso na criança é **pouco provável** e ainda assim não recomenda o uso durante a amamentação. Fonte: bula do LOTENSIN (cloridrato de benazepril, Novartis), seção \"Gravidez e lactação\"."
   },
   {
     "slug": "bisoprolol-hemifumarato",
@@ -504,7 +507,9 @@
       "Bivalirudin during Primary PCI in Acute Myocardial Infarction (HORIZONS-AMI) · New England Journal of Medicine · https://www.nejm.org/doi/full/10.1056/NEJMoa0708191",
       "Bivalirudin · StatPearls (NCBI Bookshelf) · https://www.ncbi.nlm.nih.gov/books/NBK557823/",
       "Angiomax (bivalirudin) prescribing information · Pfizer · https://labeling.pfizer.com/ShowLabeling.aspx?id=5411"
-    ]
+    ],
+    "pregnancy": "**Não usar, a menos que o estado clínico da mulher exija o tratamento** — a fonte deixa a porta aberta para a indicação urgente, em vez de proibir. Os dados em gestantes são limitados ou inexistentes, e os **estudos em animais são insuficientes** para determinar efeitos sobre a gravidez, o desenvolvimento embriofetal, o parto ou o desenvolvimento pós-natal. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do ANGIOX (bivalirudina, The Medicines Company). Fonte europeia, não a bula da ANVISA: não há bula do detentor do registro no Brasil nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer.",
+    "lactation": "**Administrar com precaução em quem amamenta.** Desconhece-se se a bivalirudina é excretada para o leite materno; a fonte pede precaução e não suspensão. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do ANGIOX (bivalirudina, The Medicines Company). Fonte europeia, não a bula da ANVISA: não há bula do detentor do registro no Brasil nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer."
   },
   {
     "slug": "bosentana",
@@ -590,7 +595,9 @@
       "Effect of Platelet Inhibition with Cangrelor during PCI on Ischemic Events · New England Journal of Medicine · https://www.nejm.org/doi/full/10.1056/NEJMoa1300815",
       "Efficacy and Safety of Cangrelor in Preventing Periprocedural Complications... The CHAMPION PHOENIX Trial · JACC: Cardiovascular Interventions · https://www.jacc.org/doi/10.1016/j.jcin.2016.06.046",
       "Cangrelor · StatPearls (NCBI Bookshelf) · https://www.ncbi.nlm.nih.gov/books/NBK594269/"
-    ]
+    ],
+    "pregnancy": "**Não recomendado durante a gravidez.** Os dados em gestantes são limitados ou inexistentes, e os estudos em animais revelaram **toxicidade reprodutiva**. Registro à parte, da mesma secção: observou-se **efeito reversível sobre a fertilidade em ratos machos**, sem efeito sobre a fertilidade em fêmeas. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do KENGREXAL (cangrelor, Chiesi). Fonte europeia, não a bula da ANVISA: não há bula do detentor do registro no Brasil nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer.",
+    "lactation": "**Dado ausente, com risco não excluído.** Desconhece-se se o cangrelor é excretado no leite humano, e a fonte registra que **não pode ser excluído qualquer risco** para o recém-nascido — mas não chega a orientar suspender a amamentação. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do KENGREXAL (cangrelor, Chiesi). Fonte europeia, não a bula da ANVISA: não há bula do detentor do registro no Brasil nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer."
   },
   {
     "slug": "captopril",
@@ -670,7 +677,8 @@
       "Carvedilol tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 574c419f-3b9e-2171-e063-6394a90a0e90",
       "Packer M, Coats AJS, Fowler MB, et al. Effect of carvedilol on survival in severe chronic heart failure (COPERNICUS). N Engl J Med. 2001;344(22):1651-1658. DOI: 10.1056/NEJM200105313442201. PMID: 11386263"
     ],
-    "pregnancy": "Não usar na gravidez sem orientação médica; havendo gravidez durante ou logo após o tratamento, informar o médico imediatamente. A bula **não traz categoria de risco nem dado específico** — registrado como está. Fonte: bula do COREG (carvedilol, Roche)."
+    "pregnancy": "Não usar na gravidez sem orientação médica; havendo gravidez durante ou logo após o tratamento, informar o médico imediatamente. A bula **não traz categoria de risco nem dado específico** — registrado como está. Fonte: bula do COREG (carvedilol, Roche).",
+    "lactation": "**Amamentação não recomendada.** A bula distingue com cuidado o que sabe do que não sabe: o carvedilol e seus metabólitos **são excretados no leite** em estudos animais, e **desconhece-se se o carvedilol é excretado no leite humano** — mesmo assim a recomendação é não amamentar durante o uso. Fonte: bula do COREG (carvedilol, GlaxoSmithKline), seção \"Gestação e Lactação\"."
   },
   {
     "slug": "clonidina",
@@ -711,7 +719,8 @@
     "references": [
       "Clonidine hydrochloride tablets — rótulo aprovado pelo FDA, DailyMed SPL setid e96ab74c-eedf-4d71-8a35-d5ec3daa7592"
     ],
-    "pregnancy": "Os dados em gestantes são **limitados**. Só deve ser administrada na gravidez em caso de **necessidade evidente**, com **monitoração minuciosa da mãe e da criança**. A clonidina **atravessa a barreira placentária**. Fonte: bula do profissional da ATENSINA (clonidina)."
+    "pregnancy": "Os dados em gestantes são **limitados**. Só deve ser administrada na gravidez em caso de **necessidade evidente**, com **monitoração minuciosa da mãe e da criança**. A clonidina **atravessa a barreira placentária**. Fonte: bula do profissional da ATENSINA (clonidina).",
+    "lactation": "**Uso não recomendado durante a amamentação.** A clonidina **é excretada no leite materno**, e a bula é explícita quanto ao motivo da restrição: não há informação suficiente sobre o efeito no recém-nascido. Fonte: bula profissional da ATENSINA (cloridrato de clonidina, Boehringer Ingelheim), seção \"Fertilidade, Gravidez e Lactação\"."
   },
   {
     "slug": "clopidogrel-bissulfato",
@@ -1274,7 +1283,8 @@
       "Enalapril: o que é, para que serve, efeitos e contraindicações · UOL VivaBem · 2022 · https://www.uol.com.br/vivabem/noticias/redacao/2022/11/22/enalapril-o-que-e-para-que-serve-efeitos-e-contraindicacoes.htm",
       "Vasotec (enalapril maleate) — bula FDA · accessdata.fda.gov"
     ],
-    "pregnancy": "**Os inibidores da ECA podem prejudicar o desenvolvimento e até causar MORTE DO FETO** se usados no segundo e no terceiro trimestres. Fonte: bula do RENITEC (maleato de enalapril, MSD). Coerente com o captopril, que é categoria D pela mesma razão de classe."
+    "pregnancy": "**Os inibidores da ECA podem prejudicar o desenvolvimento e até causar MORTE DO FETO** se usados no segundo e no terceiro trimestres. Fonte: bula do RENITEC (maleato de enalapril, MSD). Coerente com o captopril, que é categoria D pela mesma razão de classe.",
+    "lactation": "**Cautela, não proibição.** O enalapril e o enalaprilato **são secretados no leite humano em quantidades muito pequenas**, e a bula pede cuidado ao prescrever a lactantes — sem contraindicar, ao contrário do que faz para a gravidez. Fonte: bula do RENITEC (maleato de enalapril, Merck Sharp & Dohme), seções \"Uso na Gravidez e Amamentação\" e \"Amamentação\"."
   },
   {
     "slug": "enoxaparina-sodica",
@@ -1555,7 +1565,9 @@
     "references": [
       "Felodipine — rótulo aprovado pelo FDA, DailyMed SPL setid 924b2633-74bd-469f-b831-77f09dfebbf7",
       "SPLENDIL — Bula Profissional · AZMED/AstraZeneca · https://www.azmed.com.br/content/dam/multibrand/br/pt/azmed-2022/home/bulas-profissionais/bulas/Splendil_Bula_Profissional.pdf"
-    ]
+    ],
+    "pregnancy": "**Contraindicado na gravidez** — a gravidez está na lista de contraindicações, e o texto ao paciente repete que o medicamento não deve ser usado por mulheres grávidas. **Divergência dentro da própria bula, registrada e não resolvida:** o mesmo documento atribui **categoria de risco C**, que descreve risco possível, e não a proibição absoluta da lista de contraindicações. É o mesmo padrão já visto no diltiazem. Fonte: bula do SPLENDIL (felodipino, AstraZeneca), seções de contraindicações e \"Uso durante a gravidez e lactação\".",
+    "lactation": "**Excretado no leite, mas sem efeito esperado no lactente.** A bula afirma que o felodipino **é detectado no leite materno** e que, **mesmo em doses terapêuticas usadas pela mãe, é provável que não afete a criança** — não chega a proibir a amamentação. Contraste dentro do mesmo verbete: contraindicado na gravidez, praticamente liberado na lactação. Fonte: bula do SPLENDIL (felodipino, AstraZeneca), seção \"Uso durante a gravidez e lactação\"."
   },
   {
     "slug": "finerenona",
@@ -1776,7 +1788,8 @@
       "Bula do profissional de saúde de APRESOLINA (cloridrato de hidralazina, drágeas), Novartis Biociências SA — seções de posologia, populações especiais e gravidez.",
       "Bula profissional de NEPRESOL (cloridrato de hidralazina, solução injetável 20 mg/mL), Cristália Produtos Químicos Farmacêuticos Ltda. — posologia, diluição e populações especiais."
     ],
-    "pregnancy": "A bula é categórica para a apresentação oral: **mulheres que pretendem engravidar não devem tomar**, e **confirmada a gravidez o tratamento deve ser interrompido imediatamente**. Fonte: bula da APRESOLINA (hidralazina).\n\n**Atenção ao recorte:** esta é a bula do produto oral, para hipertensão crônica. O uso da hidralazina **parenteral na emergência hipertensiva da gestação** é outro contexto, com recomendação obstétrica própria, que **não vem desta fonte e não está afirmada aqui**. Ler a restrição acima como proibição absoluta na gestante seria erro de leitura."
+    "pregnancy": "A bula é categórica para a apresentação oral: **mulheres que pretendem engravidar não devem tomar**, e **confirmada a gravidez o tratamento deve ser interrompido imediatamente**. Fonte: bula da APRESOLINA (hidralazina).\n\n**Atenção ao recorte:** esta é a bula do produto oral, para hipertensão crônica. O uso da hidralazina **parenteral na emergência hipertensiva da gestação** é outro contexto, com recomendação obstétrica própria, que **não vem desta fonte e não está afirmada aqui**. Ler a restrição acima como proibição absoluta na gestante seria erro de leitura.",
+    "lactation": "**Pode amamentar — é a rotulagem mais permissiva do acervo nesta seção, e vem com a razão.** A hidralazina **é excretada no leite materno**, mas os dados disponíveis **não relatam efeito adverso sobre o lactente**; a bula autoriza a mãe em tratamento a amamentar, desde que se observe com atenção qualquer efeito adverso inesperado. Contraste que vale reter, porque é do mesmo fármaco: na **gravidez** a bula manda interromper o uso oral, enquanto a forma parenteral é usada na emergência hipertensiva — restritiva na gestação, permissiva na lactação. Fonte: bula da APRESOLINA (cloridrato de hidralazina, Novartis), seção \"Lactação\"."
   },
   {
     "slug": "hidroclorotiazida",
@@ -1812,7 +1825,8 @@
     "references": [
       "Hidroclorotiazida (diurético): para que serve e posologia · MD Saúde · 2024 · https://www.mdsaude.com/bulas/hidroclorotiazida/",
       "Resumo sobre hidroclorotiazida: indicações, farmacologia e mais · Estratégia MED · 2023 · https://med.estrategia.com/portal/conteudos-gratis/farmacos/resumo-sobre-hidroclorotiazida-indicacoes-farmacologia-e-mais/"
-    ]
+    ],
+    "lactation": "**Avaliar benefício contra risco — não há estudo bem controlado.** A bula descreve o comportamento da classe: as tiazidas **atravessam a barreira placentária**, são encontradas no sangue do cordão umbilical e **são excretadas no leite materno**. O uso em lactantes exige que os benefícios sejam pesados contra os possíveis riscos ao lactente, justamente porque faltam estudos controlados. Fonte: bula da CLORANA (hidroclorotiazida, Sanofi), seção de informação técnica."
   },
   {
     "slug": "idarucizumabe",
@@ -1960,7 +1974,8 @@
       "Swedberg K, Komajda M, Böhm M, et al. Ivabradine and outcomes in chronic heart failure (SHIFT): a randomised placebo-controlled study. Lancet. 2010;376(9744):875-885. DOI: 10.1016/S0140-6736(10)61198-1. PMID: 20801500",
       "Bula profissional de PROCORALAN (cloridrato de ivabradina) 5 mg e 7,5 mg, Laboratórios Servier do Brasil Ltda. — seção 8, Posologia e Modo de Usar. Documento obtido no site do detentor do registro."
     ],
-    "pregnancy": "**Não utilizar em caso de gravidez ou suspeita de gravidez.** Havendo gravidez durante o uso, contatar o médico. Fonte: bula do PROCORALAN (cloridrato de ivabradina)."
+    "pregnancy": "**Não utilizar em caso de gravidez ou suspeita de gravidez.** Havendo gravidez durante o uso, contatar o médico. Fonte: bula do PROCORALAN (cloridrato de ivabradina).",
+    "lactation": "**Não utilizar durante a amamentação.** A bula é categórica e não apresenta dado de excreção que justifique a orientação — o texto se limita à proibição. Fonte: bula do PROCORALAN (cloridrato de ivabradina, Servier), seção \"Lactação\"."
   },
   {
     "slug": "levosimendana",
@@ -1985,7 +2000,9 @@
       "Levosimendan: a calcium-sensitizing agent for the treatment of patients with decompensated heart failure · PubMed · https://pubmed.ncbi.nlm.nih.gov/16036037/",
       "Levosimendan: Uses, Interactions, Mechanism of Action · DrugBank · https://go.drugbank.com/drugs/DB00922",
       "Acute hemodynamic and clinical effects of levosimendan in patients with severe heart failure · PubMed · https://pubmed.ncbi.nlm.nih.gov/11056096/"
-    ]
+    ],
+    "pregnancy": "**Só se o benefício justificar o risco fetal.** Não há experiência de uso em mulheres grávidas, e os **estudos em animais demonstraram efeitos tóxicos sobre a reprodução**. A bula não atribui letra de categoria. Fonte: bula do SIMDAX (levosimendana, Orion/Abbott), seção \"Uso em idosos, crianças e outros grupos de risco\".",
+    "lactation": "**Não amamentar.** A bula converte a incerteza em proibição explícita: não se sabe se a levosimendana é excretada no leite humano, **portanto** mulheres em uso não devem amamentar. Comparação útil dentro do mesmo lote: diante de lacuna idêntica, a milrinona recebeu \"cautela\" e a levosimendana recebeu \"não amamentar\". Fonte: bula do SIMDAX (levosimendana, Orion/Abbott), seção \"Lactação\"."
   },
   {
     "slug": "lisinopril",
@@ -2285,7 +2302,9 @@
       "Milrinone · StatPearls (NCBI Bookshelf) · https://www.ncbi.nlm.nih.gov/books/NBK532943/",
       "Milrinone Dosage Guide + Max Dose, Adjustments · Drugs.com · https://www.drugs.com/dosage/milrinone.html",
       "Dose regimen adjustment for milrinone in congestive heart failure patients with moderate and severe renal failure · PubMed · https://pubmed.ncbi.nlm.nih.gov/8583366/"
-    ]
+    ],
+    "pregnancy": "**Só se o benefício justificar o risco fetal.** Não existem estudos adequadamente controlados em mulheres grávidas, e a bula não atribui letra de categoria. Fonte: bula do PRIMACOR IV (lactato de milrinona, Sanofi), seção \"Gravidez e lactação\".",
+    "lactation": "**Cautela — a excreção no leite não está bem estudada.** A bula é explícita quanto à lacuna, e não converte a incerteza em proibição: recomenda cautela na administração a lactantes. Fonte: bula do PRIMACOR IV (lactato de milrinona, Sanofi), seção \"Gravidez e lactação\"."
   },
   {
     "slug": "mononitrato-de-isossorbida",
@@ -2859,7 +2878,8 @@
     },
     "references": [
       "Ramipril — Bula Profissional Completa · Biosintética/Saúde Direta · https://www.saudedireta.com.br/catinc/drugs/bulas/ramiprilbiosintetica.pdf"
-    ]
+    ],
+    "lactation": "**Não amamentar durante o tratamento** — a amamentação consta da lista de contraindicações da bula. O raciocínio está escrito: estudos em animais demonstraram que o ramipril **passa para o leite materno**, e a orientação é não amamentar para evitar que a criança receba mesmo pequenas quantidades. Fonte: bula do TRIATEC (ramipril, Sanofi), seções de contraindicações e \"Amamentação\"."
   },
   {
     "slug": "ranolazina",
@@ -2890,7 +2910,8 @@
       "Ranolazine · StatPearls (NCBI Bookshelf) · https://www.ncbi.nlm.nih.gov/books/NBK507828/",
       "Ranolazine: A Contemporary Review · Journal of the American Heart Association · https://www.ahajournals.org/doi/10.1161/jaha.116.003196"
     ],
-    "lactation": "**Não há dados** sobre passagem da ranolazina para o leite materno; a continuidade do tratamento depende de orientação médica. Fonte: bula do Riscard (Biolab Sanus), bula do paciente."
+    "lactation": "**As duas rotulagens divergem, e a diferença muda a conduta.** A **bula brasileira** registra que **não há dados** sobre a passagem da ranolazina para o leite materno e devolve a decisão ao médico — a continuidade do tratamento depende de orientação. O **RCM europeu vai além e conclui em sentido restritivo**: desconhece-se a excreção no leite humano, mas os dados em ratos **demonstraram excreção no leite**, o risco para a criança amamentada não pode ser excluído e, por isso, o produto **não deverá ser utilizado durante a amamentação**. Ou seja: mesma lacuna de dado humano, decisão oposta — a brasileira deixa em aberto, a europeia proíbe. Fontes: bula do Riscard (ranolazina, Biolab Sanus), bula do paciente; e Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do RANEXA (ranolazina, Menarini).",
+    "pregnancy": "**Não usar na gravidez, a menos que seja claramente necessário.** Os dados em gestantes são limitados e os **estudos em animais demonstraram toxicidade embrionária**; o risco potencial para o ser humano é desconhecido. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do RANEXA (ranolazina, Menarini). Fonte europeia, não a bula da ANVISA: não há bula do detentor do registro no Brasil nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer."
   },
   {
     "slug": "rivaroxabana",
@@ -3283,7 +3304,8 @@
       "Tenecteplase · StatPearls (NCBI Bookshelf) · https://www.ncbi.nlm.nih.gov/books/NBK592420/",
       "When is Tenecteplase (TNK) indicated, what are the weight-based bolus doses for STEMI and acute ischemic stroke, and what are the absolute contraindications? · droracle · https://www.droracle.ai/articles/816666/when-is-tenecteplase-tnk-indicated-what-are-the-weightbased"
     ],
-    "pregnancy": "**Não há experiência com o uso em gestantes.** No infarto agudo do miocárdio durante a gravidez, os benefícios do tratamento devem ser avaliados contra os riscos potenciais — a bula coloca a decisão como ponderação caso a caso, não como proibição. Fonte: bula do profissional do METALYSE (Boehringer Ingelheim), versão de 2009."
+    "pregnancy": "**Não há experiência com o uso em gestantes.** No infarto agudo do miocárdio durante a gravidez, os benefícios do tratamento devem ser avaliados contra os riscos potenciais — a bula coloca a decisão como ponderação caso a caso, não como proibição. Fonte: bula do profissional do METALYSE (Boehringer Ingelheim), versão de 2009.",
+    "lactation": "**Dado ausente, sem recomendação.** A bula registra apenas que **não se sabe** se a tenecteplase é excretada no leite materno; não orienta suspender nem manter a amamentação. Na gestação, o mesmo documento atribui **categoria C** e pede que, no infarto do miocárdio durante a gravidez, os benefícios do tratamento sejam pesados contra os riscos potenciais. Fonte: bula profissional do METALYSE (tenecteplase, Boehringer Ingelheim), seção \"Gravidez e lactação\"."
   },
   {
     "slug": "ticagrelor",

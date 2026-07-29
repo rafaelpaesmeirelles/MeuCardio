@@ -51,6 +51,7 @@ Prevalência de efeitos colaterais até 15% no primeiro ano e 50% a longo prazo;
 - Bradicardia sinusal grave
 - Bloqueio sinoatrial
 - Doença do nó sinusal sem marcapasso
+- **Lactação** — acrescentada em 29/07/2026, por constar da lista formal de contraindicações da bula brasileira e faltar aqui. A amiodarona é excretada no leite materno **em quantidades significantes**, e por isso a bula a contraindica em lactantes (bula do ATLANSIL, cloridrato de amiodarona, Sanofi)
 
 ## Gravidez classificacao
 Classe D — uso apenas em casos refratários
