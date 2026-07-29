@@ -4,7 +4,7 @@ slug: propafenona-cloridrato
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["Como eu uso: Propafenona! · Afya Cardiologia · 2021 · https://portal.afya.com.br/cardiologia/como-eu-uso-propafenona", "Abordagem da fibrilação atrial na sala de emergência · SOCERJ · 2025 · https://socerj.org.br/abordagem-fibrilacao-atrial-sala-emergencia-visao-pratica-racional/", "PROPAFENONA — Farmácia Dose Certa · Secretaria de Estado da Saúde de SP · https://www.saude.sp.gov.br/resources/ses/perfil/gestor/assistencia-farmaceutica/medicamentos-das-unidades-farmacia-dose-certa/"]
+source_refs: ["Alboni P, Botto GL, Baldi N, et al. Outpatient treatment of recent-onset atrial fibrillation with the \"pill-in-the-pocket\" approach. N Engl J Med. 2004;351(23):2384-2391. DOI: 10.1056/NEJMoa041233. PMID: 15575054 — ensaio original da estratégia; resumo indexado lido em 29/07/2026", "Bula do RITMONORM (cloridrato de propafenona, Abbott), apresentação oral de 300 mg — cobre a terapia contínua, e NÃO cobre dose única nem via endovenosa", "Abordagem da fibrilação atrial na sala de emergência · SOCERJ · 2025 · https://socerj.org.br/abordagem-fibrilacao-atrial-sala-emergencia-visao-pratica-racional/", "PROPAFENONA — Farmácia Dose Certa · Secretaria de Estado da Saúde de SP · https://www.saude.sp.gov.br/resources/ses/perfil/gestor/assistencia-farmaceutica/medicamentos-das-unidades-farmacia-dose-certa/"]
 legacy_source: "medicamentos/banco-de-medicamentos-propafenona-completo.md"
 ---
 
@@ -28,16 +28,25 @@ Comprimidos de 150mg ou 300mg; ampola de 70mg/20mL (formulação EV)
 - **vo dose minima alternativa**: 450 mg/dia (½ comprimido 3x/dia)
 - **vo dose media alternativa**: 600 mg/dia (1 comprimido 2x/dia)
 - **vo dose maxima absoluta**: 900 mg/dia
-- **pediatria**: 10-20 mg/kg/dia, fracionadas em 3-4 doses
-- **pill in the pocket ataque**: 600 mg VO (ou 450mg se peso <70kg), dose única
-- **pill in the pocket criterio sucesso**: Reversão ao ritmo sinusal em até 6h após administração
-- **pill in the pocket pre requisito**: Estratégia extra-hospitalar só deve ser indicada após pelo menos 1 uso prévio supervisionado em pronto-socorro, comprovando segurança
-- **ev dose**: 1-2 mg/kg em 10 minutos, repetível após 90-120min se necessário; duração do efeito 2-4h
-- **protecao flutter 1 1**: Administrar betabloqueador ou verapamil/diltiazem 30min antes da propafenona na emergência, para prevenir resposta ventricular elevada caso ocorra conversão para flutter 1:1 (incidência 3,5-5,0%)
 - **ajuste renal**: Uso com cautela
 - **ajuste hepatico**: Reduzir dose em 70-80%
 - **acompanhamento**: Repetir ECG em 1-2 semanas após início/ajuste de dose crônica
-- **fonte**: Afya Cardiologia — Como eu uso Propafenona ; Protocolo SES-SP
+- **fonte da posologia oral de manutenção**: bula do RITMONORM (cloridrato de propafenona, Abbott), apresentação oral de 300 mg
+
+## Pill in the pocket — a estratégia está sustentada, os números da dose não
+
+**Reescrito em 29/07/2026**, porque esta seção se apoiava em portal comercial de educação médica e em protocolo institucional, e afirmava como certo o que o verbete estruturado da propafenona já marcava como não confirmado.
+
+**O que o ensaio original confirma** — Alboni P, Botto GL, Baldi N, et al., *N Engl J Med.* 2004;351(23):2384-2391, PMID 15575054:
+
+- A estratégia é **autoadministração oral de dose única de carga**, fora do hospital, logo após o início das palpitações, em quem tem **doença cardíaca leve ou nenhuma** e fibrilação atrial recente **hemodinamicamente bem tolerada**.
+- **O pré-requisito de teste supervisionado não é formalidade — é o que o ensaio mede.** Dos 268 pacientes que receberam a dose **no hospital**, **58 (22 por cento) foram excluídos** por falha ou efeito adverso. Só os 210 restantes foram liberados para uso domiciliar. Pular essa etapa libera para casa uma população que o ensaio nunca autorizou.
+- Em uso domiciliar: 569 episódios tratados em média **36 minutos** após o início dos sintomas, com **sucesso em 94 por cento** e resolução em cerca de **113 minutos**.
+- **Segurança, e o motivo do frenador do nó AV antes:** efeitos adversos em 7 por cento dos pacientes, **incluindo flutter atrial com resposta ventricular rápida em 1 paciente**.
+
+VERIFICAÇÃO HUMANA NECESSÁRIA para os **números** que constavam aqui e continuam sem fonte primária: dose de **600 mg** (ou **450 mg** abaixo de 70 kg), critério de sucesso de **até 6 horas**, dose endovenosa de **1 a 2 mg/kg em 10 minutos** repetível em 90 a 120 minutos, **pediatria de 10 a 20 mg/kg/dia**, e a **incidência de 3,5 a 5,0 por cento** de flutter 1:1. Nenhum está no resumo indexado do ensaio nem na bula brasileira, que é da apresentação oral e trata de terapia contínua. Próximo passo: texto completo do NEJM 2004 ou diretriz de fibrilação atrial vigente.
+
+**O que vale manter enquanto isso**, porque é conduta e não número: dar **betabloqueador ou verapamil/diltiazem antes** da propafenona, para que uma eventual conversão a flutter 1:1 não venha com resposta ventricular alta — o ensaio original registra esse evento.
 
 ## Restricao critica uso
 Não deve ser utilizada em pacientes com doença arterial coronariana, hipertrofia ventricular esquerda, disfunção ventricular, DPOC ou IC — restrita a coração estruturalmente normal

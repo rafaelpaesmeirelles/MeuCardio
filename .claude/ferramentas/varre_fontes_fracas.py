@@ -41,6 +41,12 @@ FONTES_FRACAS = (
     "healthline", "webmd", "medicalnewstoday", "minutosaudavel",
     "quora", "reddit", "brainly",
     "passeidireto", "studocu", "docsity",
+    # portal comercial de educação médica — achado em 29/07/2026 sustentando a
+    # posologia do "pill in the pocket" da propafenona, num documento publicado.
+    # AINDA NÃO ESTÁ em backend/app/services/importer.py: acrescentar lá no
+    # próximo rebuild, porque a lista de lá só vale depois de reconstruir a imagem.
+    "afya", "portal.afya", "medcentral", "sanarflix", "jaleko", "medway",
+    "estrategiamed", "aristo.com.br",
 )
 
 # Onde procurar. Conteúdo clínico e os JSON das frentes — não o código.
