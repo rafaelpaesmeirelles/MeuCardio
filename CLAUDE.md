@@ -98,6 +98,36 @@ uma frente livre em vez de negociar no meio do commit.
 5. **Publicar continua sendo decisão do Rafael**, para as duas sessões, sem
    exceção.
 
+### O que a sessão de Conteúdo está fazendo agora (29/07/2026, à tarde)
+Confirmado pelo Rafael. Duas frentes, ambas **fora** da faixa da sessão de
+Medicamentos, e escolhidas justamente por isso.
+
+1. **Estudos nos temas zerados** — `estudos/metadados.json`, arquivo que é só
+   desta sessão. Medido hoje: **12 dos 27 temas não têm nenhum estudo** —
+   Cardiomiopatias, Hipertensão pulmonar, Pericárdio, Diabetes e cardiologia,
+   Aorta e doença arterial periférica, Cardio-oncologia, Cardiopatias
+   congênitas, Febre reumática, Saúde mental, Comunicação clínica, Farmacologia
+   e Geral. É a maior lacuna da biblioteca e a de maior rendimento por hora,
+   porque cada diretriz já lida cita os ensaios pivotais com PMID.
+2. **As 18 marcações `VERIFICAÇÃO HUMANA NECESSÁRIA` que estão FORA de
+   Farmacologia** — Terapia intensiva, Calculadoras, Doença coronariana,
+   Fibrilação atrial, Valvopatias, Insuficiência cardíaca, Cardiomiopatias e
+   Prevenção e lipídios. Das 47 marcações do repositório, 29 estão em
+   Farmacologia e **ficam de fora desta rodada de propósito**.
+
+**Por que Farmacologia fica de fora agora:** a sessão de Medicamentos está
+escrevendo gestação e lactação dos mesmos fármacos a partir de bula. Mexer nos
+verbetes em prosa em paralelo não gera conflito de git — gera **contradição
+entre a prosa e o dado estruturado**, que o git aceita sem avisar e que a Fase B
+levou semanas removendo. Quando aquela frente fechar, esta sessão assume as 29.
+
+**O que esta sessão NÃO vai começar sem decisão do Rafael:** ampliar o RAG às
+quatro frentes. `document_chunks.document_id` é FK para `documents`, e indexar
+as outras exige escolher entre origem polimórfica, tabela de trechos por frente
+ou documento-sombra — decisão de esquema, não ajuste de consulta.
+
+Tudo entra com `published = false` e espera o aval, como sempre.
+
 ### Onde a sessão da biblioteca vai trabalhar
 Frentes de ampliação, na ordem de prioridade medida em `COBERTURA.md`. A sessão
 do receituário **não** entra em nenhuma delas enquanto a Tarefa 27 não fechar.
