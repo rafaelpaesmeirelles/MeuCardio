@@ -5,7 +5,7 @@ theme: "Tromboembolismo"
 kind: protocolo
 summary: "Comparação, fármaco a fármaco, do que a rotulagem brasileira afirma sobre uso de anticoagulante na gravidez e na amamentação — com as duas divergências entre bula brasileira e internacional nomeadas."
 review_status: revisado
-source_refs: ["Bula da CLEXANE (enoxaparina sódica, Sanofi-Aventis Farmacêutica Ltda.), seções de gravidez e amamentação, conferida em 29/07/2026", "Bula do MAREVAN (varfarina sódica), seção de contraindicações, conferida em 29/07/2026", "Bula do ELIQUIS (apixabana, Bristol-Myers Squibb Farmacêutica S.A.), bula do paciente, conferida em 29/07/2026", "Bula do PRADAXA (dabigatrana etexilato, Boehringer Ingelheim), bula do paciente, conferida em 29/07/2026", "Bula do profissional do XARELTO (rivaroxabana, Bayer S.A.), seção de interações, consultada no bulário BulasMed, que republica o texto registrado, em 29/07/2026", "Warfarin sodium tablets — rótulo aprovado pelo FDA, via DailyMed"]
+source_refs: ["Bula da CLEXANE (enoxaparina sódica, Sanofi-Aventis Farmacêutica Ltda.), seções de gravidez e amamentação, conferida em 29/07/2026", "Bula do MAREVAN (varfarina sódica), seção de contraindicações, conferida em 29/07/2026", "Bula do ELIQUIS (apixabana, Bristol-Myers Squibb Farmacêutica S.A.), bula do paciente, conferida em 29/07/2026", "Bula do PRADAXA (dabigatrana etexilato, Boehringer Ingelheim), bula do paciente, conferida em 29/07/2026", "Bula do profissional do XARELTO (rivaroxabana, Bayer S.A.), seções de interações, gravidez e lactação, consultada no bulário BulasMed, que republica o texto registrado — o PDF do fabricante é cifrado e não abre direto; conferida em 29/07/2026", "LIXIANA (edoxabano, Daiichi Sankyo) — Resumo das Características do Medicamento, EMA, em português, secções 4.3 e 4.6 · https://www.ema.europa.eu/pt/documents/product-information/lixiana-epar-product-information_pt.pdf · consultado em 29/07/2026", "Bula para o profissional de saúde do ELIQUIS (apixabana, Bristol-Myers Squibb), Rev0515, itens 4 e 5 — é ela que traz a categoria de risco B, ausente da bula do paciente; conferida em 29/07/2026", "Warfarin sodium tablets — rótulo aprovado pelo FDA, via DailyMed"]
 ---
 
 # Anticoagulantes na gestação e na lactação: o que diz a bula registrada no Brasil
@@ -23,9 +23,10 @@ prescrição no Brasil e é onde estão as divergências que ninguém espera.
 |---|---|---|
 | **Enoxaparina** | Sem evidência de passagem placentária em humanos no 2º trimestre; sem toxicidade fetal ou malformação em animais | **Não amamentar** durante o tratamento, por precaução |
 | **Varfarina** | **Contraindicada** (contraindicação formal) | **Contraindicada** na bula brasileira — mas ver a divergência abaixo |
-| **Apixabana** | Não usar sem orientação médica | Decidir entre **interromper a amamentação ou descontinuar o fármaco** |
+| **Apixabana** | **Categoria B**, e ainda assim "**não recomendada**" — ver por quê abaixo | Decidir entre **interromper a amamentação ou descontinuar o fármaco** |
 | **Dabigatrana** | Quem pode engravidar **deve evitar a gravidez** durante o tratamento | **Interromper a amamentação**, por precaução |
-| **Rivaroxabana** | Não conferido nesta revisão | Não conferido nesta revisão |
+| **Rivaroxabana** | **Contraindicada** — atravessa a placenta, somado ao risco intrínseco de sangramento | Só administrar **depois de descontinuada a amamentação** |
+| **Edoxabana** | **Contraindicada** — atravessa a placenta, risco de sangramento e toxicidade reprodutiva em animais | **Contraindicada**; excretada no leite em estudos animais |
 
 ## Enoxaparina — o perfil que sustenta a escolha
 
@@ -63,6 +64,17 @@ A **apixabana** manda **decidir entre interromper a amamentação ou descontinua
 o tratamento** — a mesma escolha binária que a bula do captopril impõe, e não um
 "usar com cautela".
 
+Na gestação, a apixabana traz a combinação mais curiosa do grupo, e ela só
+aparece na **bula profissional** (Rev0515), não na do paciente: **categoria de
+risco B** e, ao mesmo tempo, "**não é recomendada durante a gravidez**". As duas
+frases não se contradizem quando se lê o motivo de cada uma. A letra B vem de os
+estudos em animais **não indicarem efeito nocivo** quanto à toxicidade
+reprodutiva; a recomendação contrária vem de haver **dados limitados em mulheres
+grávidas**. O que restringe é a lacuna de dado humano, não um sinal de dano — e
+a gravidez **não** consta do item de contraindicações dessa bula, que lista
+apenas hipersensibilidade, sangramento ativo significativo e doença hepática com
+coagulopatia.
+
 A **dabigatrana** é a mais restritiva na gestação de todo o grupo: quem tem
 possibilidade de engravidar **deve evitar a gravidez durante o tratamento**, e a
 amamentação **deve ser interrompida** por precaução.
@@ -73,16 +85,40 @@ A distinção importa: é o motivo pelo qual essas restrições podem mudar quan
 houver dado, e o motivo pelo qual não se deve lê-las como equivalentes à
 contraindicação da varfarina, que tem mecanismo conhecido.
 
+### Rivaroxabana e edoxabana — aqui a restrição tem mecanismo
+
+Acrescentadas em 29/07/2026, quando as duas bulas foram lidas. Elas mudam a
+frase acima: **o grupo dos diretos não é homogêneo**, e nestas duas a proibição
+não vem da ausência de dado, e sim de um mecanismo demonstrado.
+
+A **rivaroxabana** é **contraindicada na gravidez** com dois motivos declarados
+lado a lado: o risco intrínseco de sangramento e a **evidência de que atravessa
+a placenta**. Os estudos pré-clínicos mostraram toxicidade materna com
+**alterações placentárias**, levando a toxicidade reprodutiva, mas **sem
+potencial teratogênico primário** — a distinção é da própria bula. Na lactação,
+o texto é operacional: em ratas a rivaroxabana **é secretada no leite**, e o
+produto **só pode ser administrado depois de descontinuada a amamentação**.
+
+A **edoxabana** é **contraindicada nos dois períodos**, e a rotulagem enumera
+três motivos somados para a gestação: toxicidade reprodutiva vista em animais,
+o risco intrínseco de hemorragia e a **evidência de que a edoxabana atravessa a
+placenta**. Na lactação, os dados em animais indicam **excreção no leite**.
+
+**Consequência prática de ler os cinco juntos:** dentro da mesma classe, a
+apixabana é **categoria B** e apenas "não recomendada", enquanto rivaroxabana e
+edoxabana são **contraindicadas**. Quem trata "DOAC" como bloco na gestante
+está apagando uma diferença que a rotulagem faz questão de marcar.
+
 ## O que este documento não cobre
 
 **Quando anticoagular.** Indicação, dose ajustada por peso na gestação, manejo
 periparto e retomada no puerpério são matéria de diretriz obstétrica e
 cardiológica, não de bula. Nada disso está afirmado aqui.
 
-**Rivaroxabana.** A bula do Xarelto foi consultada nesta série de revisões, mas
-**apenas na seção de interações** — a de gravidez e lactação não foi lida, e por
-isso a linha do quadro está declarada como não conferida em vez de preenchida
-por analogia com os outros diretos.
+**A magnitude do risco.** Nenhuma das bulas quantifica o risco absoluto de
+malformação, perda fetal ou sangramento — elas dizem "contraindicado" ou "não
+recomendado", sem número. Este documento reproduz o que está escrito e **não
+converte isso em probabilidade**.
 
 **Valva mecânica na gestação** tem documento próprio em Gravidez nesta
 biblioteca, e é justamente o cenário em que a contraindicação da varfarina entra
