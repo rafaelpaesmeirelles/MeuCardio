@@ -505,5 +505,29 @@
       "fridericia",
       "psicofármaco"
     ]
+  },
+  {
+    "slug": "ecocardiograma-transesofagico-com-contraste-salino-agitado",
+    "name": "Ecocardiograma transesofágico com contraste salino agitado (estudo de microbolhas)",
+    "category": "imagem",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Presença e sentido de shunt intracardíaco — sobretudo forame oval patente (FOP) e comunicação interatrial — pela passagem de microbolhas de contraste salino agitado do átrio direito para o esquerdo. O posicionamento da SBC de 2020 trata o contraste salino como parte da própria indicação do transesofágico: ele é o que determina a possibilidade de fluxo direita-esquerda.",
+    "reference_range": "Não há valor de referência — o exame é dicotômico quanto à passagem, e graduado quanto ao risco. O que a SBC quantifica são os **fatores de risco do FOP para AVE/AIT**, e eles têm números: aneurisma de septo interatrial, passagem de **mais de 30 microbolhas** do átrio direito para o esquerdo, **túnel do FOP maior que 10 mm** e valva de Eustáquio proeminente.",
+    "indications": "Pela Tabela 7 do posicionamento, todas **classe I, nível A**: avaliação de FOP como possível etiologia de evento embólico central ou periférico em paciente jovem (**menos de 60 anos**), com o contraste salino agitado; avaliação de FOP antes do implante de marca-passo transvenoso; classificação, dimensão e localização do defeito septal atrial, principalmente no adulto e quando a definição transtorácica é inadequada, para selecionar candidato à oclusão percutânea e escolher a prótese; e, de forma geral, confirmação ou exclusão de suspeita diagnóstica relevante não demonstrada pelo transtorácico, incluindo o adulto com cardiopatia congênita.",
+    "interpretation": "A passagem de microbolhas para as câmaras esquerdas indica shunt direita-esquerda. O achado isolado não fecha conduta: no contexto de evento embólico, é a soma com os quatro fatores de risco acima que qualifica o FOP como provável responsável. Para o defeito septal atrial, o exame não responde só \"existe ou não\" — responde classificação, dimensão e localização, que são o que decide se cabe oclusão percutânea e qual prótese.",
+    "limitations": "O transesofágico entra justamente onde o transtorácico falha, e o posicionamento nomeia as duas causas: **janela transtorácica inadequada** em quem tem cirurgia cardíaca prévia ou deformidade da parede torácica. Mas há um limite que nenhum dos dois resolve — **a ecocardiografia não é adequada para avaliar arco aórtico, artérias coronárias, artérias pulmonares e vasos colaterais**; nessas situações o caminho é angiotomografia ou ressonância magnética. A própria Tabela 6 registra como **classe III** a avaliação de lesões do arco aórtico, artérias pulmonares e colaterais cuja anatomia é melhor definida por outro método. Também classe III, e útil contra o exame repetido por hábito: exame periódico em paciente operado de persistência do canal arterial, comunicação interatrial, comunicação interventricular, coarctação aórtica ou valva aórtica bicúspide **sem defeito residual e sem mudança clínica**, e acompanhamento de cardiopatia sem significado hemodinâmico e sem mudança na condição clínica.",
+    "source_refs": [
+      "Posicionamento sobre Indicações da Ecocardiografia em Cardiologia Fetal, Pediátrica e Cardiopatias Congênitas do Adulto – 2020. Arq Bras Cardiol. 2020;115(5):987-1005. DOI: 10.36660/abc.20201122 · PMID 33295472 — Tabela 6 (recomendações para a ecocardiografia em adultos com cardiopatias congênitas) e Tabela 7 (ecocardiografia transesofágica como ferramenta diagnóstica); texto integral em acesso aberto no PubMed Central (PMC8452202)"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ecocardiograma transesofágico",
+      "contraste salino",
+      "microbolhas",
+      "forame oval patente",
+      "comunicação interatrial",
+      "shunt"
+    ]
   }
 ]
