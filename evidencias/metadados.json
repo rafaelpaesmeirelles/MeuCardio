@@ -1393,5 +1393,198 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "ecocardiograma-de-base-antes-de-antraciclina-em-todo-paciente",
+    "statement": "Ecocardiograma de base é recomendado em **todos** os pacientes com câncer antes de quimioterapia com antraciclina — não apenas nos de alto risco. Sem o exame basal não há como caracterizar queda posterior de fração de ejeção nem de strain, e a definição de disfunção cardíaca relacionada ao tratamento depende justamente da comparação com o basal.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines on cardio-oncology",
+    "reference": "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244 — classe e nível conferidos em contexto no texto original",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "antraciclina",
+      "ecocardiograma",
+      "avaliação basal"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ecocardiograma-em-ate-12-meses-apos-o-fim-da-antraciclina",
+    "statement": "Em todos os adultos que receberam quimioterapia com antraciclina, é recomendado ecocardiograma em até 12 meses após o término do tratamento. A vigilância não termina com a última dose — a disfunção pode aparecer depois dela, e é essa janela que a recomendação cobre.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines on cardio-oncology",
+    "reference": "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244 — classe e nível conferidos em contexto no texto original",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "antraciclina",
+      "vigilância",
+      "ecocardiograma",
+      "seguimento"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ecocardiografia-3d-e-a-modalidade-preferida-para-medir-a-fevE",
+    "statement": "A ecocardiografia tridimensional é a modalidade ecocardiográfica preferida para medir a fração de ejeção em paciente oncológico. A precisão da medida importa mais aqui que na maioria dos contextos: os limiares de disfunção são de 10 pontos percentuais, e a variabilidade do modo bidimensional pode ser dessa ordem.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines on cardio-oncology",
+    "reference": "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244 — classe e nível conferidos em contexto no texto original",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "ecocardiografia 3D",
+      "fração de ejeção",
+      "cardiotoxicidade"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "strain-longitudinal-global-em-todo-ecocardiograma-de-paciente-oncologico",
+    "statement": "O strain longitudinal global é recomendado em todos os pacientes com câncer submetidos a ecocardiograma, quando disponível. É o parâmetro que detecta disfunção antes da queda da fração de ejeção, e é ele que define a forma leve de disfunção cardíaca relacionada ao tratamento.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines on cardio-oncology",
+    "reference": "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244 — classe e nível conferidos em contexto no texto original",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "strain longitudinal global",
+      "GLS",
+      "detecção precoce"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ecocardiograma-e-a-primeira-modalidade-para-avaliar-funcao-cardiaca-no-cancer",
+    "statement": "O ecocardiograma é recomendado como modalidade de primeira linha para avaliação da função cardíaca em pacientes com câncer.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines on cardio-oncology",
+    "reference": "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244 — classe e nível conferidos em contexto no texto original",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "ecocardiograma",
+      "função cardíaca",
+      "imagem"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "peptideo-natriuretico-e-troponina-de-base-no-alto-risco-antes-de-antraciclina",
+    "statement": "A medida basal de peptídeo natriurético e troponina cardíaca é recomendada em pacientes de alto e muito alto risco antes de quimioterapia com antraciclina. Antes de terapia dirigida ao HER2, a mesma medida basal é recomendada no mesmo grupo de risco, com nível C.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines on cardio-oncology",
+    "reference": "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244 — classe e nível conferidos em contexto no texto original",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "biomarcadores",
+      "troponina",
+      "peptídeo natriurético",
+      "antraciclina"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ecocardiograma-de-base-antes-de-terapia-anti-her2-em-todos",
+    "statement": "Ecocardiograma de base é recomendado antes de terapia dirigida ao HER2 em todos os pacientes.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines on cardio-oncology",
+    "reference": "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244 — classe e nível conferidos em contexto no texto original",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "anti-HER2",
+      "trastuzumabe",
+      "ecocardiograma",
+      "avaliação basal"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ecg-de-base-em-todo-paciente-que-inicia-terapia-oncologica",
+    "statement": "O ECG é recomendado em todos os pacientes que iniciam terapia oncológica, como parte da avaliação basal de risco cardiovascular. E havendo ECG basal alterado, o encaminhamento ao cardiologista é recomendado.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines on cardio-oncology",
+    "reference": "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244 — classe e nível conferidos em contexto no texto original",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "ECG",
+      "avaliação basal",
+      "risco cardiovascular"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "encaminhamento-ao-cardiologista-no-alto-risco-antes-da-terapia-oncologica",
+    "statement": "O encaminhamento à cardiologia é recomendado em pacientes de alto e muito alto risco **antes** de iniciar a terapia oncológica. O momento é parte da recomendação: a avaliação existe para permitir cardioproteção e escolha de esquema, o que só é possível antes da primeira dose.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines on cardio-oncology",
+    "reference": "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244 — classe e nível conferidos em contexto no texto original",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "estratificação de risco",
+      "encaminhamento",
+      "cardio-oncologista"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ecocardiograma-de-base-antes-de-fluoropirimidina-em-quem-tem-doenca-cardiovascular",
+    "statement": "Ecocardiograma de base é recomendado em pacientes com história de doença cardiovascular sintomática antes de iniciar fluoropirimidinas.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines on cardio-oncology",
+    "reference": "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244 — classe e nível conferidos em contexto no texto original",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "fluoropirimidina",
+      "5-fluorouracil",
+      "ecocardiograma"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
