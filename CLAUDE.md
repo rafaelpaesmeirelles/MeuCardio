@@ -219,8 +219,29 @@ uma frente livre em vez de negociar no meio do commit.
 2. **Nunca `git add -A`.** Adicione caminho por caminho — `add -A` varre
    trabalho da outra sessão em curso e o commita pela metade, com mensagem que
    não descreve o que entrou.
+2b. **`git commit` sem caminho commita o ÍNDICE INTEIRO, não o que você acabou
+   de adicionar.** É a regra 2 pelo outro lado, e ela sozinha não protege:
+   **o índice é compartilhado entre as sessões**. Se a outra sessão já deu
+   `git add` no trabalho dela e ainda não commitou, um `git add <meu arquivo> &&
+   git commit -m "..."` leva os arquivos dela junto, com a sua mensagem.
+   **Aconteceu em 29/07/2026 às 20h21**, no commit `dbcf6d2`: a mensagem fala só
+   de `COBERTURA.md` e o commit carrega seis arquivos da sessão de Medicamentos
+   (alteplase, atropina, colchicina, milrinona, tenecteplase e
+   `medicamentos/metadados.json`). O conteúdo entrou íntegro; o que se perdeu foi
+   a procedência.
+   **O diagnóstico registrado no handoff daquela sessão atribui o caso a um
+   `git commit -a`, e isso está errado** — o `-a` não foi usado, e evitá-lo não
+   teria impedido nada. Duas defesas que de fato funcionam:
+   - **`git diff --cached --name-only` antes de commitar.** Se aparecer arquivo
+     que não é seu, pare: a outra sessão está com trabalho staged.
+   - **Commite por caminho: `git commit -m "..." -- <caminho>`.** Assim só aquele
+     caminho entra, qualquer que seja o estado do índice.
+   Corolário para quem escreve: **não deixe arquivo staged e parado**. `git add`
+   e `git commit` andam juntos, na mesma chamada, sempre.
 3. **`ls .git/index.lock` antes de commitar.** Lock presente = a outra sessão
-   está commitando agora; espere em vez de forçar.
+   está commitando agora; espere em vez de forçar. Note que o lock só existe
+   durante a escrita — ele **não** avisa que há arquivo alheio staged, que é o
+   caso da regra 2b.
 4. **Import e publicação são globais.** `POST /api/admin/import` reimporta
    `content/` inteiro, e `carregar?frente=X` recarrega a frente toda —
    inclusive o que a outra sessão deixou no disco pela metade. Antes de
