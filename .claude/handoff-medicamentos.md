@@ -32,7 +32,7 @@ Confira `ls .git/index.lock` antes de commitar.
 ## Estado atual (29/07/2026, fim da 2ª sessão)
 - **88 fármacos** em `medicamentos/metadados.json`.
   **`pregnancy` em 88/88 e `lactation` em 88/88 — as duas frentes FECHARAM** em
-  29/07/2026. **46 interações.**
+  29/07/2026. **59 interações.**
   (Números no início desta sessão, para comparar: 42 e 30, com 32 interações.)
 
 **Os únicos 3 campos de lactação sem conteúdo estão MARCADOS, não vazios** — adenosina,
@@ -77,7 +77,9 @@ ninguém procurou. **Não rebaixe as mesmas fontes esperando resultado diferente
   quando a dose entrar com fonte.
 - 10 linhas órfãs no banco (duplicatas fundidas, despublicadas). O `DELETE`
   precisa do Rafael; o classificador bloqueia escrita destrutiva.
-- **46 interações** em `interacoes.json`, todas com gravidade e fonte.
+- **59 interações** em `interacoes.json`, todas com gravidade e fonte. **Elas são
+  lidas do disco a cada chamada da rota** (`_interacoes_curadas()` em
+  `backend/app/api/drugs.py`) — não há passo de carga, e editar o JSON já vale.
 - Tarefas 8 (checador de interação), 9 (alerta de diretriz), 19 (alerta por
   condição especial) e 21 (Painel) no ar.
 
@@ -194,8 +196,17 @@ cobre**. Fluxograma tem formato obrigatório de árvore de decisão: ver
    noradrenalina não têm EPAR porque são anteriores ao procedimento centralizado
    europeu. Sempre declare a origem **dentro do texto do campo** quando não for a
    bula da ANVISA.
-2. **Base de interações** — cresce de graça: cada bula lida rende par com
-   gravidade e fonte. Há 33 candidatos já sinalizados pelo texto do acervo.
+2. **Base de interações — 59, e a fonte mais produtiva agora é a secção 4.5 dos
+   RCM da EMA.** Ela nomeia o fármaco com o número medido, que é o que a
+   Tarefa 8 precisa. Priorize pares em que **os dois** lados estão no acervo:
+   par a par serve ao checador, `classe_oposta` só serve para leitura.
+   Vale registrar também a interação que **NÃO exige conduta** — edoxabana com
+   verapamil e com amiodarona entraram como `leve` de propósito, para impedir
+   a redução de dose por precaução que a bula dispensa.
+
+   **Aguardando o aval do Rafael:** o documento
+   `content/Terapia_intensiva/inotropicos-e-vasopressores-na-gestacao-e-lactacao-o-que-diz-a-rotulagem.md`
+   está importado com `published = false`.
 3. **Conteúdo novo nos seus 13 temas.** Os que precisam de diretriz nova
    (baixar e ler): Terapia intensiva, Insuficiência cardíaca, Diabetes e
    cardiologia, Fibrilação atrial, Dispositivos, Hipertensão pulmonar.
