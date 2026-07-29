@@ -288,7 +288,8 @@
       "Agnelli G, Buller HR, Cohen A, et al. Oral apixaban for the treatment of acute venous thromboembolism (AMPLIFY). N Engl J Med. 2013;369(9):799-808. DOI: 10.1056/NEJMoa1302507. PMID: 23808982",
       "Agnelli G, Buller HR, Cohen A, et al. Apixaban for extended treatment of venous thromboembolism (AMPLIFY-EXT). N Engl J Med. 2013;368(8):699-708. DOI: 10.1056/NEJMoa1207541. PMID: 23216615",
       "Bula profissional de ELIQUIS (apixabana), Bristol-Myers Squibb Farmacêutica Ltda. — posologia em insuficiência renal, advertências e propriedades farmacocinéticas, versão brasileira."
-    ]
+    ],
+    "lactation": "A bula determina **decidir entre interromper a amamentação ou descontinuar a apixabana** — é escolha binária, não uso com cautela. Fonte: bula do ELIQUIS (Bristol-Myers Squibb), bula do paciente."
   },
   {
     "slug": "atenolol",
@@ -1604,7 +1605,8 @@
       "Finerenone: uses, dosing, warnings, adverse events, interactions · MedCentral · https://www.medcentral.com/drugs/monograph/181910-321044/finerenone-oral",
       "Finerenone Dosage Guide + Max Dose, Adjustments · Drugs.com · https://www.drugs.com/dosage/finerenone.html",
       "2023 ESC Guidelines for the management of cardiovascular disease in patients with diabetes · Eur Heart J · 2023;44(39):4043-4140"
-    ]
+    ],
+    "pregnancy": "**Não deve ser tomado durante a gravidez, a menos que estritamente necessário.** Fonte: bula do Firialta (finerenona, Bayer S.A.)."
   },
   {
     "slug": "flecainida",
@@ -2736,7 +2738,9 @@
       "Como eu uso: Propafenona! · Afya Cardiologia · 2021 · https://portal.afya.com.br/cardiologia/como-eu-uso-propafenona",
       "Abordagem da fibrilação atrial na sala de emergência · SOCERJ · 2025 · https://socerj.org.br/abordagem-fibrilacao-atrial-sala-emergencia-visao-pratica-racional/",
       "PROPAFENONA — Farmácia Dose Certa · Secretaria de Estado da Saúde de SP · https://www.saude.sp.gov.br/resources/ses/perfil/gestor/assistencia-farmaceutica/medicamentos-das-unidades-farmacia-dose-certa/"
-    ]
+    ],
+    "pregnancy": "Não há estudos adequados e bem controlados em gestantes. **Usar na gravidez somente se o benefício potencial justificar o risco ao feto.** A bula registra que a propafenona **atravessa a barreira placentária em humanos**. Fonte: bula do profissional do RITMONORM (Abbott).",
+    "lactation": "A excreção no leite materno **não foi estudada**, e dados limitados sugerem que a propafenona **pode ser excretada**. Usar com cuidado em lactantes. Fonte: bula do profissional do RITMONORM (Abbott)."
   },
   {
     "slug": "propranolol",
@@ -2880,7 +2884,8 @@
       "Ranolazine for the Treatment of Chronic Angina and Potential Use in Other Cardiovascular Conditions · Circulation · https://www.ahajournals.org/doi/10.1161/circulationaha.105.597500",
       "Ranolazine · StatPearls (NCBI Bookshelf) · https://www.ncbi.nlm.nih.gov/books/NBK507828/",
       "Ranolazine: A Contemporary Review · Journal of the American Heart Association · https://www.ahajournals.org/doi/10.1161/jaha.116.003196"
-    ]
+    ],
+    "lactation": "**Não há dados** sobre passagem da ranolazina para o leite materno; a continuidade do tratamento depende de orientação médica. Fonte: bula do Riscard (Biolab Sanus), bula do paciente."
   },
   {
     "slug": "rivaroxabana",
@@ -3314,7 +3319,9 @@
       "Guia de medicamentos cardiovasculares: Ticagrelor · Afya Cardiologia · https://portal.afya.com.br/cardiologia/guia-de-medicamentos-cardiovasculares-ticagrelor",
       "Estudo PLATO — Principais Estudos Publicados em 2009 · Cardiol.br · http://cientifico.cardiol.br/cardiosource2/int_estudo02.asp",
       "Ticagrelor para prevenção de eventos trombóticos · CONITEC · http://antigo-conitec.saude.gov.br/images/Incorporados/Ticagrelor-final.pdf"
-    ]
+    ],
+    "pregnancy": "**Categoria de risco C.** Não deve ser usado por gestante sem orientação médica. Em animais, houve morte de filhotes e efeito sobre o crescimento em doses de 180 mg/kg/dia (cerca de 10 vezes a dose máxima recomendada em humanos, em mg/m²). Fonte: bula profissional do BRILINTA (AstraZeneca).",
+    "lactation": "**Uso criterioso no aleitamento e na doação de leite humano**, dependente de avaliação e acompanhamento médico. Fonte: bula profissional do BRILINTA (AstraZeneca)."
   },
   {
     "slug": "trimetazidina",
@@ -3363,7 +3370,9 @@
     ],
     "presentations": [
       "Comprimidos revestidos de liberação modificada de 20mg e 35mg"
-    ]
+    ],
+    "pregnancy": "Estudos em animais não mostraram efeito teratogênico, mas **na ausência de dados clínicos o risco de malformação fetal não pode ser excluído**. Por segurança, **é preferível evitar a prescrição durante a gravidez**. Fonte: bula do Vastarel MR (Servier).",
+    "lactation": "A bula **não recomenda o uso durante a amamentação**. Fonte: bula do Vastarel MR (Servier)."
   },
   {
     "slug": "valsartana",
