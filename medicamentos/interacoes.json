@@ -130,5 +130,53 @@
     "conduta": "A dose de flecainida deve ser ajustada. Atenção à janela: pela meia-vida longa da amiodarona, a bula registra que as interações podem ser observadas por VÁRIOS MESES após a descontinuação dela. Suspender a amiodarona não encerra a vigilância.",
     "fonte": "Bula do profissional de saúde do cloridrato de amiodarona (Fresenius Kabi Brasil), item 6 — Interações Medicamentosas.",
     "review_status": "revisado"
+  },
+  {
+    "slug": "amiodarona-verapamil",
+    "farmacos": [
+      "amiodarona-cloridrato",
+      "verapamil-cloridrato"
+    ],
+    "gravidade": "grave",
+    "efeito": "Distúrbio de automatismo, com bradicardia excessiva, e distúrbio de condução — os dois fármacos reduzem a frequência cardíaca pelo mesmo alvo.",
+    "conduta": "A bula classifica a associação como NÃO RECOMENDADA. Se for inevitável, exige monitorização de frequência e condução.",
+    "fonte": "Bula do profissional de saúde do cloridrato de amiodarona (Fresenius Kabi Brasil), item 5 — Advertências e Precauções — e item 6 — Interações Medicamentosas.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "amiodarona-diltiazem",
+    "farmacos": [
+      "amiodarona-cloridrato",
+      "diltiazem-cloridrato"
+    ],
+    "gravidade": "grave",
+    "efeito": "Distúrbio de automatismo, com bradicardia excessiva, e distúrbio de condução — os dois fármacos reduzem a frequência cardíaca pelo mesmo alvo.",
+    "conduta": "A bula classifica a associação como NÃO RECOMENDADA. Se for inevitável, exige monitorização de frequência e condução.",
+    "fonte": "Bula do profissional de saúde do cloridrato de amiodarona (Fresenius Kabi Brasil), item 5 — Advertências e Precauções — e item 6 — Interações Medicamentosas.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "amiodarona-betabloqueador",
+    "farmacos": [
+      "amiodarona-cloridrato"
+    ],
+    "classe_oposta": "betabloqueador (qualquer)",
+    "gravidade": "grave",
+    "efeito": "Distúrbio de automatismo, com bradicardia excessiva, e distúrbio de condução — os dois fármacos reduzem a frequência cardíaca pelo mesmo alvo.",
+    "conduta": "A bula classifica a associação com betabloqueadores como NÃO RECOMENDADA, pelo mesmo motivo dos bloqueadores de canal de cálcio que reduzem a frequência. Entra como aviso de classe porque a bula nomeia a classe inteira, não fármacos específicos.",
+    "fonte": "Bula do profissional de saúde do cloridrato de amiodarona (Fresenius Kabi Brasil), item 5 — Advertências e Precauções — e item 6 — Interações Medicamentosas.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "amiodarona-fluoroquinolona",
+    "farmacos": [
+      "amiodarona-cloridrato"
+    ],
+    "classe_oposta": "fluoroquinolona",
+    "gravidade": "moderada",
+    "efeito": "Risco aumentado de prolongamento do intervalo QT e de torsades de pointes.",
+    "conduta": "A bula determina que fluoroquinolonas devem ser EVITADAS em quem recebe amiodarona.",
+    "fonte": "Bula do profissional de saúde do cloridrato de amiodarona (Fresenius Kabi Brasil), item 5 — Advertências e Precauções — e item 6 — Interações Medicamentosas.",
+    "review_status": "revisado"
   }
 ]
