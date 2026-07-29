@@ -61,18 +61,18 @@ Confira `ls .git/index.lock` antes de commitar.
 - **Bulas lidas cuja seção de lactação simplesmente não existe** — não vale
   rebaixá-las de novo pelo mesmo documento: **adenosina** (Adenocard) e
   **indapamida** (Natrilix SR). As duas têm gravidez preenchida.
-- **Ainda sem espelho, acumulado das duas sessões:** digoxina, Forxiga,
-  Jardiance, Entresto, atropina injetável, Evkeeza, e agora também Coversyl
-  (perindopril), Inspra (eplerenona), Tambocor (flecainida), Lixiana
-  (edoxabana), Ozempic (semaglutida), Tracleer (bosentana), Verquvo
-  (vericiguate), Vyndaqel (tafamidis), Camzyos (mavacamteno), Leqvio
-  (inclisirana), Nilemdo (ácido bempedoico), Ranexa (ranolazina), Tridil
-  (nitroglicerina).
+- **Ainda sem fonte, depois de tentar espelho brasileiro E a EMA:** Coversyl
+  (perindopril), Inspra (eplerenona) — a eplerenona **não tem EPAR na EMA** —,
+  Tambocor (flecainida), Ranexa (ranolazina), Tridil (nitroglicerina),
+  Monocordil retard (mononitrato), atropina injetável e Evkeeza (evinacumabe).
+  Os que estavam nesta lista e **saíram pela EMA** (não tentar de novo pelo
+  espelho brasileiro): Forxiga, Jardiance, Entresto, Lixiana, Ozempic,
+  Tracleer, Verquvo, Vyndaqel, Camzyos, Leqvio, Nilemdo.
 - **Atropina e evinacumabe despublicados** por não terem posologia — só voltam
   quando a dose entrar com fonte.
 - 10 linhas órfãs no banco (duplicatas fundidas, despublicadas). O `DELETE`
   precisa do Rafael; o classificador bloqueia escrita destrutiva.
-- **27 interações par a par** em `interacoes.json`, todas com gravidade e fonte.
+- **46 interações** em `interacoes.json`, todas com gravidade e fonte.
 - Tarefas 8 (checador de interação), 9 (alerta de diretriz), 19 (alerta por
   condição especial) e 21 (Painel) no ar.
 
