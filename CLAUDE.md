@@ -433,9 +433,16 @@ monta a impressão.
 **Plano de execução aprovado, em fases:**
 1. ~~Ler o Manual da API do SNCR~~ — **concluído em 29/07/2026.**
 2. ~~Decidir o modelo de dado do paciente~~ — **concluído**, ver decisão 1.
-3. `PrescriptionType` como entidade de primeira classe, com campos, vias e
-   validações próprias por tipo. Nunca um enum decorativo.
-4. Base substância→lista da 344/98, versionada, ligada à base de medicamentos.
+3. ~~`PrescriptionType` como entidade de primeira classe~~ — **desenho leve
+   concluído em 29/07/2026, em `controlados/DESENHO.md`.** Quatro entidades:
+   `ControlledSubstance`, `PrescriptionType` (tabela de referência, **não enum** —
+   o regime já mudou uma vez por RDC), `PrescriptionRule` (as condições dos
+   adendos) e a separação `Prescription` → `PrescriptionDocument`, que é o que faz
+   receita com listas diferentes gerar documentos separados sem caso especial.
+4. ~~Base substância→lista da 344/98~~ — **extraída em 29/07/2026**, em
+   `controlados/listas-344-98.json`, com o extrator versionado ao lado. 16 listas,
+   775 substâncias, 474 prescritíveis e 254 proscritas. Falta ligá-la à base de
+   medicamentos e aplicar as RDCs posteriores (1.011/2026, 1.021/2026).
 5. Receituário comum, completo e em produção.
 6. Numeração sequencial, incluindo o QR Code do modelo eletrônico.
 7. Controle especial, atrás de flag, ligado quando SNCR e assinatura existirem.
@@ -473,7 +480,11 @@ monta a impressão.
    inteira. Regra que não se flexibiliza: **nunca simular a assinatura.** A rota
    `POST /api/pedidos/{id}/responder` já devolve aviso explícito de que
    registrar resposta em pedido de laudo não emite laudo assinado.
-3. **Chaves do Stripe de teste para produção** (`pk_live_`/`sk_live_`). A conta
+3. **Cadastro do Rafael no SNCR** — sem ele nenhuma numeração pode ser obtida,
+   e a chamada não deve ser simulada em hipótese alguma. Ele começou a
+   providenciar em 30/07/2026, com a mesma prioridade da VIDAAS. Bloqueia as
+   fases 6 e 7 da Tarefa 27; tudo que não depende disso segue.
+4. **Chaves do Stripe de teste para produção** (`pk_live_`/`sk_live_`). A conta
    está com `details_submitted: true` e `charges_enabled: false` — ainda não
    cobra. É o último bloqueio para faturar de verdade. Ao trocar, lembrar que
    **portal e webhook são configurados por modo**: os de teste não valem em
