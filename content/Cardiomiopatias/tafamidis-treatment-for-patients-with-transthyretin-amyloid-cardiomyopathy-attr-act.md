@@ -4,7 +4,7 @@ slug: tafamidis-treatment-for-patients-with-transthyretin-amyloid-cardiomyopathy
 theme: "Cardiomiopatias"
 kind: estudo
 review_status: pendente_revisao
-source_refs: ["Maurer MS, Schwartz JH, Gundapaneni B, et al. Tafamidis treatment for patients with transthyretin amyloid cardiomyopathy (ATTR-ACT). N Engl J Med. 2018;379(11):1007-1016. DOI: 10.1056/NEJMoa1805689. PMID: 30145929"]
+source_refs: ["Maurer MS, Schwartz JH, Gundapaneni B, et al. Tafamidis treatment for patients with transthyretin amyloid cardiomyopathy (ATTR-ACT). N Engl J Med. 2018;379(11):1007-1016. DOI: 10.1056/NEJMoa1805689. PMID: 30145929", "Elliott P, Drachman BM, Gottlieb SS, et al. Long-Term Survival With Tafamidis in Patients With Transthyretin Amyloid Cardiomyopathy. Circ Heart Fail. 2022;15(1):e008193. DOI: 10.1161/CIRCHEARTFAILURE.120.008193. PMID: 34923848 — fonte da seção de extensão de longo prazo"]
 legacy_source: "estudos/biblioteca-cientifica-attr-act.md"
 ---
 
@@ -36,9 +36,16 @@ Tafamidis 80 mg ou 20 mg 1x/dia (doses combinadas na análise, n=264) vs. placeb
 - **fonte**: Maurer MS et al. N Engl J Med. 2018;379(11):1007-1016 — mortalidade e hospitalização conferidas no resumo indexado (PMID 30145929)
 
 ## Analise extensao longo prazo
-VERIFICAÇÃO HUMANA NECESSÁRIA — os números desta seção (extensão de longo prazo e subgrupos por classe NYHA) não estão no artigo do ATTR-ACT e vêm de publicação separada não identificada aqui. Confirmar a referência antes de citar.
+**Publicação identificada e números corrigidos em 29/07/2026.** A fonte é Elliott P, Drachman BM, Gottlieb SS, et al. *Long-Term Survival With Tafamidis in Patients With Transthyretin Amyloid Cardiomyopathy*. Circ Heart Fail. 2022;15(1):e008193. DOI: 10.1161/CIRCHEARTFAILURE.120.008193. PMID: 34923848.
 
-Análise combinada de dados do ATTR-ACT com estudo de extensão (seguimento mediano de 36 meses) confirmou redução significativa e sustentada de mortalidade (HR 0,64, IC95% 0,47-0,85, p=0,001); benefício mais pronunciado em pacientes NYHA classe I-II ao basal (HR 0,49, IC95% 0,32-0,75, p=0,001) comparado a NYHA III (não significativo)
+**Os números que estavam aqui não conferiam com o artigo.** O que ele de fato traz, lido no resumo indexado:
+
+- **Seguimento mediano de 58,5 meses** no grupo que recebeu tafamidis desde o início e de 57,1 meses no que começou com placebo — e não os 36 meses que constavam aqui.
+- **Mortalidade: 44,9% (79 de 176) com tafamidis contínuo contra 62,7% (111 de 177) no grupo placebo→tafamidis — HR 0,59; IC 95% 0,44–0,79; p < 0,001.** O valor que constava era HR 0,64 (0,47–0,85).
+- **NYHA I–II: HR 0,56; IC 95% 0,38–0,82; p = 0,003** — e não 0,49 (0,32–0,75).
+- **NYHA III: HR 0,65; IC 95% 0,41–1,01; p = 0,06** — sem significância, o que a versão anterior já dizia corretamente.
+
+A leitura clínica que o desenho impõe, e que é o achado central: a comparação **não é tafamidis contra placebo**. Os dois braços receberam tafamidis na extensão; o que os separa é **quando começaram**. Quem só iniciou depois do período de placebo nunca alcançou a sobrevida de quem começou cedo — o benefício perdido no atraso não foi recuperado. É o argumento mais forte a favor do diagnóstico precoce da amiloidose por transtirretina.
 
 ## Subgrupos
 Redução significativa de mortalidade tanto no subgrupo ATTRwt (HR 0,64) quanto tendência de benefício em ATTRm (HR 0,66), embora este último sem significância estatística devido ao menor tamanho amostral
