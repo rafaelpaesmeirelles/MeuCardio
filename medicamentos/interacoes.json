@@ -358,5 +358,29 @@
     "conduta": "Não usar concomitantemente. Aguardar 36 horas após a última dose de IECA antes de iniciar sacubitril/valsartana, e o mesmo intervalo no sentido inverso, se um IECA for reintroduzido.",
     "fonte": "Bula do Entresto (sacubitril valsartana sódica hidratada, Novartis Biociências) e rótulo do sacubitril-valsartana aprovado pelo FDA (DailyMed), já citados no verbete de sacubitrilvalsartana em medicamentos/metadados.json — os dois concordam na janela de 36 horas.",
     "review_status": "revisado"
+  },
+  {
+    "slug": "clopidogrel-inibidor-cyp2c19",
+    "farmacos": [
+      "clopidogrel-bissulfato"
+    ],
+    "classe_oposta": "inibidor forte ou moderado do CYP2C19 (ex.: omeprazol, esomeprazol)",
+    "gravidade": "moderada",
+    "efeito": "Reduz o nível do metabólito ativo do clopidogrel e a inibição da agregação plaquetária — demonstrado em estudos com omeprazol (efeito maior) e pantoprazol (efeito menor).",
+    "conduta": "Uso concomitante desaconselhado pela bula. Se um inibidor de bomba de prótons for necessário junto com clopidogrel, considerar um com menor atividade inibidora do CYP2C19, como o pantoprazol.",
+    "fonte": "Bula do bissulfato de clopidogrel (Novartis Biociências/Sandoz do Brasil), seção de interações medicamentosas.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "clopidogrel-varfarina",
+    "farmacos": [
+      "clopidogrel-bissulfato",
+      "varfarina-sodica"
+    ],
+    "gravidade": "moderada",
+    "efeito": "Risco aumentado de sangramento pelos efeitos independentes dos dois fármacos na hemostasia.",
+    "conduta": "Associação deve ser avaliada com cautela pelo médico.",
+    "fonte": "Bula do bissulfato de clopidogrel (Novartis Biociências/Sandoz do Brasil), seção de interações medicamentosas.",
+    "review_status": "revisado"
   }
 ]
