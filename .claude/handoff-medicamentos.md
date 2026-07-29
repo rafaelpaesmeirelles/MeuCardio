@@ -206,6 +206,22 @@ Documentos de `content/` entram por `POST /api/admin/import`.
 Só código exige `docker compose -f docker-compose.prod.yml up -d --build ...`,
 e rebuild pede confirmação do Rafael antes.
 
+**`indexar_tudo()` NÃO reindexa documento editado, só documento novo.**
+Descoberto em 29/07/2026, corrigindo 9 verbetes de Farmacologia: rodei
+`import_directory()` (atualizou o `body_md`) e depois `indexar_tudo(db)`, que
+devolveu `{'documentos': 0, 'trechos': 0}`. A causa está no próprio código
+(`services/rag.py`): `apenas_pendentes=True` filtra por
+`~Document.id.in_(chunks já existentes)` — ou seja, só pega documento **sem
+nenhum trecho**, nunca detecta que o corpo mudou. Resultado: o assistente
+clínico continuava citando a versão **antiga** dos nove verbetes, mesmo
+depois do import e do "reindex". Correção, por documento:
+```python
+from app.services.rag import indexar_documento
+indexar_documento(db, doc)  # apaga os trechos antigos e recria
+```
+Sempre que corrigir um documento **já publicado e já indexado**, reindexe-o
+individualmente por slug — `indexar_tudo()` sozinho não é suficiente.
+
 ## Padrão de documento novo em `content/`
 Front matter igual ao dos existentes (`title`, `slug`, `theme`, `kind`,
 `summary`, `review_status: revisado`, `source_refs` com citação completa).
