@@ -918,5 +918,29 @@
       "hipertensão secundária",
       "esc 2024"
     ]
+  },
+  {
+    "slug": "ultrassom-pulmonar-linhas-b-na-congestao-pulmonar-aguda",
+    "name": "Ultrassom pulmonar (linhas B) na congestão pulmonar aguda",
+    "category": "imagem",
+    "theme": "Terapia intensiva",
+    "what_it_measures": "Linhas B — artefatos verticais hiperecogênicos que partem da linha pleural e se estendem até o fundo da tela, gerados pelo espessamento dos septos interlobulares por líquido — à beira do leito, em paciente com dispneia aguda, para diferenciar edema pulmonar cardiogênico de outras causas de dispneia (DPOC, pneumonia sem congestão).",
+    "reference_range": "Padrão positivo de edema pulmonar cardiogênico exige os três critérios simultâneos: 'múltiplo' (pelo menos 3 linhas B numa mesma zona torácica), 'difuso' (pelo menos duas zonas positivas por hemitórax) e 'bilateral'. Poucas linhas B localizadas, principalmente nas bases pulmonares, ocorrem até em indivíduo saudável e não configuram o achado patológico.",
+    "indications": "Uso à beira do leito para incluir ou excluir edema pulmonar em paciente com dispneia aguda e suspeita de insuficiência cardíaca esquerda aguda, e para detectar congestão pulmonar persistente antes da alta hospitalar em paciente internado por IC aguda, identificando quem tem maior risco de reinternação ou óbito. O protocolo de 8 zonas (4 por hemitórax) é o recomendado pelo consenso por equilibrar simplicidade e acurácia — o índice de acurácia do protocolo de 8 zonas é não inferior ao do protocolo de 28 zonas, mais demorado.",
+    "interpretation": "Sensibilidade de 94-97% e especificidade de 97% para insuficiência cardíaca aguda em paciente com dispneia aguda — superior à radiografia de tórax convencional (sensibilidade de 91,8% do ultrassom contra 76,5% da radiografia, no mesmo estudo comparativo). À alta hospitalar, a persistência de múltiplas linhas B é preditor independente de pior desfecho: no protocolo de 4 zonas, 7 ou mais linhas B tem hazard ratio de 3,03 para o desfecho em 90 dias; no protocolo de 8 zonas, ao menos uma zona com 3 ou mais linhas B tem hazard ratio de 3,30 no mesmo prazo.",
+    "limitations": "O achado de linhas B não é específico de causa cardíaca — septo interlobular espessado por líquido ocorre também em síndrome do desconforto respiratório agudo, fibrose pulmonar e outras pneumopatias intersticiais; a interpretação exige sempre o contexto clínico. O consenso não recomenda ultrassom pulmonar seriado rotineiro em paciente ambulatorial estável com IC crônica, reservando seu uso para dispneia aguda e reavaliação pré-alta — não é ferramenta de monitorização de rotina fora desses cenários.",
+    "source_refs": [
+      "Gargani L, Pugliese NR, Frassi F, et al. Lung ultrasound in acute and chronic heart failure: a clinical consensus statement of the European Association of Cardiovascular Imaging (EACVI). Eur Heart J Cardiovasc Imaging. 2023;24(12):1569-1582. DOI: 10.1093/ehjci/jead169."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ultrassom pulmonar",
+      "linhas b",
+      "congestão pulmonar",
+      "insuficiência cardíaca aguda",
+      "dispneia aguda",
+      "eacvi"
+    ]
   }
 ]
