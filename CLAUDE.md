@@ -692,11 +692,16 @@ outra em `content/` e `evidencias/`. **Não escrever fora da própria faixa** �
 JSON são reescritos inteiros a cada atualização, então quem grava por último
 apaga o trabalho do outro.
 
-**Pedido do Rafael para a sessão que está em `content/`:** quando terminar o que
-já está fazendo, assumir os três fluxogramas que ainda faltam — **cardiopatia
-congênita do adulto, cardio-oncologia e febre reumática**. Não é urgente; se
-preferir, ele decide depois quem pega. Formato obrigatório de árvore de decisão:
-ver a seção própria acima.
+**Pedido do Rafael para a sessão que está em `content/` — JÁ CUMPRIDO em
+29/07/2026, não refazer.** Os três fluxogramas pedidos (cardiopatia congênita do
+adulto, cardio-oncologia e febre reumática) foram escritos, validados nos dois
+validadores, aprovados e **publicados**. Conferido pela rota pública: os três
+respondem 200. Com eles, **não há mais tema de fluxograma em aberto** — são 29
+publicados, e a lista de lacunas do `COBERTURA.md` está zerada nessa frente.
+Slugs, para quem for conferir:
+`fluxograma-comunicacao-interatrial-e-shunt-esquerda-direita-no-adulto-esc-2020`,
+`fluxograma-disfuncao-cardiaca-por-antraciclina-e-anti-her2-esc-2022`,
+`fluxograma-febre-reumatica-aguda-criterios-de-jones-2015`.
 
 #### Divisão por arquivo, atualizada em 29/07/2026 — leia antes de editar
 A divisão inicial ("uma em medicamentos, outra em content") ficou ampla demais
@@ -712,6 +717,11 @@ por arquivo e não por assunto.
 **Faixa da sessão de Conteúdo** — a de Medicamentos não toca:
 - `content/**`, `evidencias/`, `estudos/`, `galeria/`, `exames/`
 - o que a Tarefa 27 (receituário) exigir em `backend/` e `frontend/`
+- **acrescentado em 29/07/2026, antes de começar:** `backend/app/api/search.py`,
+  `backend/app/services/rag.py` e `backend/app/services/bootstrap.py`, para a
+  tarefa de ampliar busca e RAG às quatro frentes JSON. Não é Tarefa 27, e por
+  isso precisava ser declarado à parte. A sessão de Medicamentos não tem
+  trabalho previsto nesses três.
 
 **Arquivos COMPARTILHADOS, onde a colisão é provável:** `frontend/src/App.tsx`
 (rotas), `frontend/src/components/Shell.tsx` (menu),
