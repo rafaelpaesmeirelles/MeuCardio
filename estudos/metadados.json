@@ -1108,5 +1108,30 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "einstein-pe-rivaroxabana-tromboembolismo-pulmonar",
+    "title": "EINSTEIN-PE — Rivaroxabana oral no tratamento do tromboembolismo pulmonar sintomático",
+    "study_type": "ensaio_clinico",
+    "authors": "Büller HR et al.",
+    "journal": "New England Journal of Medicine",
+    "year": 2012,
+    "doi": "10.1056/NEJMoa1113572",
+    "pmid": "22449293",
+    "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1113572",
+    "summary": "Ensaio randomizado, aberto, de não inferioridade, com 4.832 pacientes com tromboembolismo pulmonar (TEP) agudo sintomático, com ou sem trombose venosa profunda associada. Comparou rivaroxabana oral (15 mg 2x/dia por 3 semanas, depois 20 mg 1x/dia) contra terapia padrão (enoxaparina associada a varfarina ou acenocumarol). Desfecho primário de eficácia: tromboembolismo venoso recorrente. Desfecho primário de segurança: sangramento maior ou clinicamente relevante não maior.",
+    "key_findings": "Tromboembolismo venoso recorrente: 2,1% no grupo rivaroxabana (n=2.419) contra 1,8% no grupo terapia padrão (n=2.413) — razão de risco 1,12 (IC95% 0,75-1,68), confirmando não inferioridade. Sangramento maior: 1,1% com rivaroxabana contra 2,2% com terapia padrão — razão de risco 0,49 (IC95% 0,31-0,79), favorecendo a rivaroxabana.",
+    "clinical_implications": "Um dos ensaios pivotais que sustentou a aprovação da rivaroxabana para tratamento do TEP agudo, com o diferencial de ser anticoagulante oral direto, sem necessidade de heparina parenteral inicial associada nem de monitorização de INR — mudança relevante de praticidade em relação ao esquema clássico com varfarina, mantendo eficácia não inferior e com menos sangramento maior.",
+    "limitations": "Desenho aberto (não cego) para o desfecho de eficácia, com adjudicação cega apenas dos eventos — risco de viés de aferição, mitigado pela adjudicação cega. Excluiu gestantes e pacientes com clearance de creatinina muito baixo; população geral de TEP hemodinamicamente estável, não incluindo o TEP de alto risco com instabilidade.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "einstein-pe",
+      "rivaroxabana",
+      "tromboembolismo pulmonar",
+      "doac",
+      "ensaio clínico"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
