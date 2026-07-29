@@ -87,3 +87,32 @@ def apagar(nome: str) -> None:
     caminho = _raiz() / nome
     if caminho.resolve().is_relative_to(_raiz().resolve()):
         caminho.unlink(missing_ok=True)
+
+
+# --------------------------------------------------------------- em memória --
+# O receituário (Tarefa 27) precisa cifrar campo de banco, não arquivo: nome e
+# endereço do paciente exigidos pela Portaria 344/98. A decisão do Rafael em
+# 29/07/2026 foi reaproveitar ESTE cofre em vez de criar esquema novo — então as
+# duas funções abaixo usam a mesma chave, o mesmo AES-256-GCM e o mesmo padrão
+# de dado autenticado. O que muda é só o destino: bytes de volta, em vez de
+# arquivo em disco.
+
+
+def cifrar_campo(texto: str, dono_id: int) -> bytes:
+    """Cifra um valor para guardar em coluna. `dono_id` entra como dado
+    autenticado: valor copiado para outra linha não decifra, em vez de decifrar
+    para o paciente errado — mesma garantia que o arquivo já tinha."""
+    aesgcm = AESGCM(_chave())
+    nonce = secrets.token_bytes(TAMANHO_NONCE)
+    return nonce + aesgcm.encrypt(nonce, texto.encode("utf-8"), str(dono_id).encode())
+
+
+def decifrar_campo(dados: bytes, dono_id: int) -> str:
+    aesgcm = AESGCM(_chave())
+    try:
+        claro = aesgcm.decrypt(dados[:TAMANHO_NONCE], dados[TAMANHO_NONCE:], str(dono_id).encode())
+    except InvalidTag as e:
+        raise CofreIndisponivel(
+            "Campo não pôde ser decifrado: chave trocada ou registro adulterado."
+        ) from e
+    return claro.decode("utf-8")
