@@ -12,8 +12,8 @@ do banco. Nenhum número é estimado.
 | `content/` — biblioteca científica | 253 | 252 | 27 temas cobertos; 29 são fluxogramas, **todos publicados** |
 | `galeria/` — achados de imagem | 36 | 36 | ✅ verificada item a item |
 | `exames/` — marcadores e exames | 40 | 0 | crescida de 17 para 40 pela sessão da Biblioteca em 29/07 à noite; **zero temas com 1 item só**; aguardando publicação |
-| `evidencias/` — recomendações pontuais | 102 | 100 | 2 novas (anti-IL-1 na pericardite, ILR na síncope), ainda `published: false` |
-| `estudos/` — ensaios e metanálises | 43 | 41 | 2 novos (BREATHE-5, profilaxia da febre reumática), zeram Cardiopatias congênitas e Febre reumática; ainda `published: false` |
+| `evidencias/` — recomendações pontuais | 103 | 100 | 3 novas (anti-IL-1 na pericardite, ILR na síncope, rastreio de AAA), ainda `published: false` |
+| `estudos/` — ensaios e metanálises | 45 | 41 | 4 novos (BREATHE-5, profilaxia da febre reumática, AMBITION, EINSTEIN-PE); ainda `published: false` |
 | **Medicamentos** (tabela `drugs`) | **100** | **88** | reconstruída de `content/Farmacologia`; gestação e lactação fechadas em 88/88 |
 
 O banco tem **275 registros** em `documents` contra 253 arquivos no disco: os 22
@@ -73,8 +73,8 @@ que essa distinção importa — ver abaixo.
 |---|---:|---:|---:|
 | `galeria/` | 36 | 23 | 12 |
 | `exames/` | 40 | 20 | **0** |
-| `evidencias/` | 102 | 19 | 7 |
-| `estudos/` | 43 | 24 | 10 |
+| `evidencias/` | 103 | 19 | 6 |
+| `estudos/` | 45 | 24 | 9 |
 
 A prioridade é **profundidade** — temas com 1 item só —, não mais zerar temas. Duas
 leituras que a tabela deixa explícitas:
@@ -88,15 +88,18 @@ leituras que a tabela deixa explícitas:
   (Comunicação clínica, Geral). Próximo passo natural nesta frente: aprofundar os
   20 temas cobertos (a maioria ainda com só 2 itens) ou avançar nos sete zerados
   que não são da faixa de Medicamentos (Comunicação clínica, Geral).
-- **`evidencias/` cresceu em volume, não em amplitude.** Passou de 32 para 102 itens
+- **`evidencias/` cresceu em volume, não em amplitude.** Passou de 32 para 103 itens
   mas cobre 19 temas — o crescimento se concentrou em Cardiomiopatias, Doença
   coronariana e Cardio-oncologia. Síncope saiu de "uma recomendação só" com a
   entrada do ILR (ESC 2018); Pericárdio ganhou uma segunda entrada (anti-IL-1,
-  ESC 2025). Aorta e doença arterial periférica, Saúde mental, Arritmias,
-  Dispositivos, Farmacologia, Hipertensão e Tromboembolismo seguem com uma só.
+  ESC 2025); Aorta e doença arterial periférica ganhou uma segunda (rastreio de
+  AAA, ESC 2024). Saúde mental, Arritmias, Dispositivos, Farmacologia, Hipertensão
+  e Tromboembolismo seguem com uma só.
 - **`estudos/` zerou Cardiopatias congênitas e Febre reumática** (BREATHE-5 e o
-  ensaio de profilaxia secundária com penicilina benzatina a cada 3 semanas),
-  restando só Comunicação clínica, Geral e Farmacologia sem nenhum estudo — os
+  ensaio de profilaxia secundária com penicilina benzatina a cada 3 semanas) e
+  aprofundou Hipertensão pulmonar (AMBITION) e Tromboembolismo (EINSTEIN-PE), que
+  tinham só 1 item. Resta só Comunicação clínica, Geral e Farmacologia sem nenhum
+  estudo — os
   dois primeiros são de baixo rendimento por hora para este formato (ensaio
   clínico), o terceiro é turno da sessão de Medicamentos.
 
