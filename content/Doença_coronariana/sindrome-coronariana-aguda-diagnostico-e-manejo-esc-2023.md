@@ -40,7 +40,7 @@ Seção dedicada a oxigênio, nitrato, alívio da dor e betabloqueador endovenos
 - **quem também precisa de anticoagulante oral**: regime próprio para quem tem fibrilação atrial associada, com escolha entre terapia antitrombótica dupla e tripla
 - **cautela obrigatória**: **Classe III** contra desescalonamento nos primeiros **30 dias** após a síndrome coronariana aguda, e em paciente oncológico com plaquetopenia
 
-Os regimes de dose por cenário estão em tabela própria da diretriz. VERIFICAÇÃO HUMANA NECESSÁRIA para a posologia exata de antiagregante e anticoagulante — nenhum dos documentos consolidados aqui a trazia, e dose de antitrombótico não se preenche por inferência.
+Os regimes de dose por cenário estão na Tabela 6 da diretriz, e **agora estão em documento próprio desta biblioteca**: `posologia-de-antiagregantes-e-anticoagulantes-na-sindrome-coronariana-aguda-esc-2023`, com ataque, manutenção, ajuste renal e contraindicação de cada fármaco. A ressalva que existia aqui — de que dose de antitrombótico não se preenche por inferência — continua correta como princípio; ela deixou de bloquear quando o texto integral da diretriz foi obtido, em 29/07/2026.
 
 ## Novidades de 2023
 São **37 novas recomendações** sobre terapia antiplaquetária e anticoagulante, doença multiarterial, complicações da síndrome coronariana aguda e intensificação de hipolipemiante, além de seis recomendações específicas para o paciente oncológico.
