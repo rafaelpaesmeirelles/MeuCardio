@@ -31,12 +31,17 @@ Confira `ls .git/index.lock` antes de commitar.
 
 ## Estado atual (29/07/2026, fim da 2ª sessão)
 - **88 fármacos** em `medicamentos/metadados.json`.
-  `pregnancy` em **69/88**, `lactation` em **54/88**, **46 interações**.
-  (Números da 1ª sessão, para comparar: 42 e 30, com 32 interações.)
+  **`pregnancy` em 88/88 e `lactation` em 88/88 — as duas frentes FECHARAM** em
+  29/07/2026. **46 interações.**
+  (Números no início desta sessão, para comparar: 42 e 30, com 32 interações.)
 
-**Sem `pregnancy` (19):** bivalirudina, cangrelor, disopiramida, dobutamina, epinefrina-adrenalina, eplerenona, felodipino, flecainida, heparina-nao-fracionada, levosimendana, milrinona, mononitrato-de-isossorbida, nitroglicerina-trinitrato-de-glicerila, nitroprussiato-de-sodio, perindopril-argininaerbumina, protamina, ranolazina, sildenafila-citrato, vasopressina
+**Os únicos 3 campos de lactação sem conteúdo estão MARCADOS, não vazios** — adenosina,
+dobutamina e indapamida. Nos três a fonte foi lida e é silente: Adenocard e Natrilix SR
+não têm seção de lactação, e o rótulo do FDA da dobutamina não traz "Nursing Mothers".
+Cada marcação diz qual documento foi lido e sugere o próximo, para não virar campo que
+ninguém procurou. **Não rebaixe as mesmas fontes esperando resultado diferente.**
 
-**Sem `lactation` (34):** adenosina, amiodarona-cloridrato, atenolol, benazepril-cloridrato, bivalirudina, cangrelor, carvedilol, clonidina, disopiramida, dobutamina, enalapril-maleato, epinefrina-adrenalina, eplerenona, felodipino, finerenona, flecainida, heparina-nao-fracionada, hidralazina, hidroclorotiazida, indapamida, ivabradina-cloridrato, levosimendana, milrinona, mononitrato-de-isossorbida, nitroglicerina-trinitrato-de-glicerila, nitroprussiato-de-sodio, noradrenalina-norepinefrina, perindopril-argininaerbumina, prasugrel, protamina, ramipril, sildenafila-citrato, tenecteplase, vasopressina
+
 - **Login da API é form OAuth2, não JSON** — custou uma tentativa. Use
   `curl -X POST .../api/auth/login --data-urlencode "username=$EMAIL"
   --data-urlencode "password=$PASS"`. Mandar `{"email":...}` devolve 422.
@@ -58,16 +63,16 @@ Confira `ls .git/index.lock` antes de commitar.
   `natrilixsr`), `monocordil` (só texto ao paciente, nada sobre gravidez além
   do boilerplate), `micardis` (resumo de compêndio; o profissional só apareceu
   na associação `micardishct`), `revatio` (só o boilerplate genérico).
-- **Bulas lidas cuja seção de lactação simplesmente não existe** — não vale
-  rebaixá-las de novo pelo mesmo documento: **adenosina** (Adenocard) e
-  **indapamida** (Natrilix SR). As duas têm gravidez preenchida.
-- **Ainda sem fonte, depois de tentar espelho brasileiro E a EMA:** Coversyl
-  (perindopril), Inspra (eplerenona) — a eplerenona **não tem EPAR na EMA** —,
-  Tambocor (flecainida), Ranexa (ranolazina), Tridil (nitroglicerina),
-  Monocordil retard (mononitrato), atropina injetável e Evkeeza (evinacumabe).
-  Os que estavam nesta lista e **saíram pela EMA** (não tentar de novo pelo
-  espelho brasileiro): Forxiga, Jardiance, Entresto, Lixiana, Ozempic,
-  Tracleer, Verquvo, Vyndaqel, Camzyos, Leqvio, Nilemdo.
+- **Ainda sem NENHUMA fonte, depois de tentar os três caminhos:** bula
+  injetável da **atropina** e **Evkeeza** (evinacumabe) — os dois verbetes
+  saíram do arquivo-fonte por não terem posologia, e voltam quando a bula
+  aparecer. Todo o resto do acervo foi coberto.
+  **Não repita estas buscas — elas já foram resolvidas por outro caminho:**
+  Forxiga, Jardiance, Entresto, Lixiana, Ozempic, Tracleer, Verquvo, Vyndaqel,
+  Camzyos, Leqvio, Nilemdo, Kengrexal, Angiox, Ranexa, Kerendia e Efient saíram
+  pela **EMA**; flecainida, eplerenona, perindopril, sildenafila, nitroglicerina,
+  mononitrato, nitroprussiato, heparina, protamina, vasopressina, dobutamina,
+  adrenalina, noradrenalina e disopiramida saíram pelo **DailyMed**.
 - **Atropina e evinacumabe despublicados** por não terem posologia — só voltam
   quando a dose entrar com fonte.
 - 10 linhas órfãs no banco (duplicatas fundidas, despublicadas). O `DELETE`
@@ -106,7 +111,9 @@ campo e interação de uma vez. Extraia com
 
 **Funcionaram:** `verquvo`, `camzyos`, `leqvio`, `nilemdo`, `nustendi`,
 `vyndaqel`, `lixiana`, `ozempic`, `tracleer`, `praxbind`, `multaq`, `entresto`,
-`forxiga`, `jardiance`. **Não existem lá:** `inspra` (eplerenona).
+`forxiga`, `jardiance`, `kengrexal`, `angiox`, `ranexa`, `kerendia`, `efient`.
+**Não existem lá:** `inspra` (eplerenona) e, em geral, **nada anterior ao
+procedimento centralizado europeu** — os hospitalares antigos não têm EPAR.
 
 Isto resolve exatamente a lista que as duas sessões anteriores tinham dado por
 perdida — Forxiga, Jardiance e Entresto estavam marcados como "não saíram em
@@ -115,6 +122,28 @@ espelho nenhum" e estão na EMA.
 **Ressalva que precisa continuar aparecendo no campo:** é rotulagem europeia,
 não bula da ANVISA. Escreva a origem dentro do próprio texto do campo, como
 está feito nos dez que entraram, para o revisor saber o que está lendo.
+
+### Para os hospitalares antigos: DailyMed (FDA)
+Sem EPAR na EMA e sem espelho brasileiro, o caminho é o rótulo americano. Busca
+por nome do princípio, depois o XML pelo `setid`:
+
+```
+https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?drug_name=<nome>&pagesize=20
+https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/<setid>.xml
+```
+
+Tire as tags com regex e leia as secções **8.1 Pregnancy** e **8.2 Lactation**
+no formato novo (PLLR), ou **Pregnancy Category** e **Nursing Mothers** nos
+rótulos antigos. Dois cuidados que custaram retrabalho:
+1. **Confira o título do resultado.** Buscar `protamine` devolve *insulina
+   protamina*, que é outro fármaco. Filtre pelo título antes de baixar.
+2. **Confira a forma farmacêutica.** `nitroglycerin` devolve a pomada; para
+   cardiologia é preciso filtrar por `INJECTION`.
+
+**O PLLR aboliu as categorias por letra.** Rótulo no formato novo **não tem**
+categoria A/B/C/D/X — se um verbete atribui letra citando rótulo do FDA
+recente, provavelmente é invenção. Foi assim que se achou o defeito da
+noradrenalina em 29/07/2026.
 
 ### Depois: os espelhos brasileiros, pelo nome comercial
 - `https://www.saudedireta.com.br/catinc/drugs/bulas/<marca>.pdf`
@@ -157,14 +186,14 @@ cobre**. Fluxograma tem formato obrigatório de árvore de decisão: ver
    seguiram em **246**, e os retidos foram de 22 para 24 — os dois que
    entraram são da sessão da Biblioteca e chegaram como `published = false`.
    Nada foi publicado indevidamente.
-1. **Gestação e lactação** nos fármacos que ainda não têm — as duas listas
-   exatas estão na seção "Estado atual" acima. **Comece pela EMA**, e só depois
-   pelos espelhos brasileiros: foi assim que 10 fármacos dados como perdidos
-   entraram numa tarde. Os que sobraram são, na maioria, **fármacos de uso
-   hospitalar antigos** (dobutamina, milrinona, vasopressina, protamina,
-   heparina não fracionada, nitroglicerina) — esses não têm EPAR na EMA, porque
-   são anteriores ao procedimento centralizado; o caminho para eles é bula de
-   genérico brasileiro ou DailyMed.
+1. ~~Gestação e lactação~~ — **FRENTE ENCERRADA em 29/07/2026, 88/88 nos dois
+   campos.** A ordem de fontes que resolveu, e que vale para qualquer campo novo:
+   **(1) espelho brasileiro** pelo nome comercial; **(2) EMA em português**, que
+   cobre tudo que é moderno; **(3) DailyMed**, que cobre os hospitalares antigos —
+   dobutamina, vasopressina, protamina, nitroprussiato, heparina, adrenalina e
+   noradrenalina não têm EPAR porque são anteriores ao procedimento centralizado
+   europeu. Sempre declare a origem **dentro do texto do campo** quando não for a
+   bula da ANVISA.
 2. **Base de interações** — cresce de graça: cada bula lida rende par com
    gravidade e fonte. Há 33 candidatos já sinalizados pelo texto do acervo.
 3. **Conteúdo novo nos seus 13 temas.** Os que precisam de diretriz nova
