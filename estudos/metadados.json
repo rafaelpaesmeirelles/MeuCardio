@@ -628,5 +628,56 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "breathe-5-bosentana-na-sindrome-de-eisenmenger",
+    "title": "BREATHE-5 — Bosentana na síndrome de Eisenmenger",
+    "study_type": "ensaio_clinico",
+    "authors": "Galiè N, Beghetti M, Gatzoulis MA, et al.",
+    "journal": "Circulation",
+    "year": 2006,
+    "doi": "10.1161/CIRCULATIONAHA.106.630715",
+    "pmid": "16801459",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/16801459/",
+    "summary": "Ensaio multicêntrico, randomizado, duplo-cego e controlado por placebo, de 16 semanas, em 54 pacientes com síndrome de Eisenmenger em classe funcional III da OMS. Randomização 2:1 — 37 para bosentana, antagonista duplo do receptor de endotelina, e 17 para placebo. O desenho tinha uma preocupação de segurança específica e declarada como desfecho primário: vasodilatar o leito pulmonar num paciente com shunt direita-esquerda poderia agravar a hipoxemia sistêmica.",
+    "key_findings": "A preocupação de segurança não se confirmou: o efeito corrigido por placebo na oximetria de pulso sistêmica foi de +1,0% (IC 95% −0,7 a 2,8), ou seja, não houve piora da saturação. Desfecho primário de eficácia: queda do índice de resistência vascular pulmonar de 472,0 dyn·s·cm⁻⁵ (p = 0,0383). A pressão arterial pulmonar média caiu 5,5 mmHg (p = 0,0363) e a distância no teste de caminhada de 6 minutos aumentou 53,1 m (p = 0,0079). Descontinuação por evento adverso foi semelhante: 2 pacientes (5%) com bosentana e 2 (12%) com placebo.",
+    "clinical_implications": "É o ensaio que tornou a terapia específica para hipertensão pulmonar aceitável na síndrome de Eisenmenger, quebrando o receio de que vasodilatar piorasse a hipoxemia por aumento do shunt direita-esquerda. Sustenta a conduta atual de tratar o paciente de Eisenmenger em classe funcional III em vez de apenas observá-lo, e é a base da estratégia sequencial de terapia que as diretrizes de cardiopatia congênita do adulto descrevem.",
+    "limitations": "Amostra pequena (54 pacientes) e seguimento curto (16 semanas), sem desfecho duro de mortalidade ou transplante. Restrito à classe funcional III da OMS — não responde sobre classe II nem sobre doença avançada. Randomização 2:1 reduz o poder do braço placebo. A extensão aberta do estudo sugeriu manutenção do ganho funcional, mas sem controle.",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "síndrome de Eisenmenger",
+      "bosentana",
+      "cardiopatia congênita do adulto",
+      "hipertensão pulmonar",
+      "BREATHE-5"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "mood-hf-escitalopram-na-depressao-com-insuficiencia-cardiaca",
+    "title": "MOOD-HF — Escitalopram na depressão associada à insuficiência cardíaca sistólica",
+    "study_type": "ensaio_clinico",
+    "authors": "Angermann CE, Gelbrich G, Störk S, et al.",
+    "journal": "JAMA",
+    "year": 2016,
+    "doi": "10.1001/jama.2016.7635",
+    "pmid": "27367876",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/27367876/",
+    "summary": "Ensaio randomizado, duplo-cego e controlado por placebo em 16 centros terciários da Alemanha, com 372 pacientes — idade média de 62 anos, 24% mulheres — com insuficiência cardíaca sistólica crônica (FEVE abaixo de 45%) e depressão diagnosticada. Escitalopram 10 a 20 mg contra placebo por 24 meses.",
+    "key_findings": "Ensaio negativo nos dois desfechos. Primário, de morte por qualquer causa ou hospitalização não programada: 63% (116 de 185) com escitalopram contra 64% (119 de 187) com placebo — HR 0,99; IC 95% 0,76–1,27; p = 0,92. E o antidepressivo também não superou o placebo no que se propunha a tratar: o escore MADRS caiu de 20,2 para 11,2 com escitalopram e de 21,4 para 12,5 com placebo em 12 semanas — diferença de −0,9; IC 95% −2,6 a 0,7; p = 0,26.",
+    "clinical_implications": "Resultado que contraria uma expectativa razoável e por isso vale mais que muitos ensaios positivos: a depressão é fator de risco consistente na insuficiência cardíaca, mas tratá-la com um ISRS não melhorou desfecho cardiovascular — e, neste ensaio, nem a própria depressão. Não sustenta prescrever escitalopram esperando ganho cardiológico. O rastreamento e o cuidado da saúde mental no cardiopata continuam recomendados; o que este estudo remove é a suposição de que o antidepressivo resolve o desfecho cardíaco.",
+    "limitations": "A resposta expressiva do braço placebo no MADRS — de 21,4 para 12,5 — sugere efeito de acompanhamento estruturado e de regressão à média, e reduz o espaço para o fármaco demonstrar diferença. Testou um único ISRS, numa faixa de dose, em insuficiência cardíaca sistólica; não se estende à ICFEp nem a outras classes de antidepressivo ou a intervenções não farmacológicas, como terapia cognitivo-comportamental e exercício supervisionado.",
+    "theme": "Saúde mental e cardiologia",
+    "tags": [
+      "depressão",
+      "insuficiência cardíaca",
+      "escitalopram",
+      "ISRS",
+      "MOOD-HF",
+      "ensaio negativo"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
