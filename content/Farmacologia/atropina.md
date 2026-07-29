@@ -4,7 +4,7 @@ slug: atropina
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["Atropine · StatPearls (NCBI Bookshelf) · https://www.ncbi.nlm.nih.gov/books/NBK470551/", "ATROPINE SULFATE INJECTION — bula FDA", "Atropine (ACLS) — ACLS Certification Institute", "ACLS dosing recommendations for symptomatic bradycardia — droracle.ai"]
+source_refs: ["Atropine · StatPearls (NCBI Bookshelf) · https://www.ncbi.nlm.nih.gov/books/NBK470551/", "ATROPINE SULFATE INJECTION — bula FDA", "Atropine (ACLS) — ACLS Certification Institute"]
 ---
 
 # Atropina

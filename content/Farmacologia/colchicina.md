@@ -4,7 +4,7 @@ slug: colchicina
 theme: "Farmacologia"
 kind: farmacologia
 review_status: revisado
-source_refs: ["Low-Dose Colchicine for Secondary Prevention of Coronary Artery Disease: JACC Review Topic of the Week · JACC · https://www.jacc.org/doi/10.1016/j.jacc.2023.05.055", "Colchicine's Role in Cardiovascular Disease Management · Arteriosclerosis, Thrombosis, and Vascular Biology · https://www.ahajournals.org/doi/10.1161/ATVBAHA.124.319851", "What is the recommended dosage of colchicine for pericarditis in patients with End-Stage Renal Disease (ESRD)? · droracle · https://www.droracle.ai/articles/171950/what-is-the-recommended-dosage-of-colchicine-colchicine-for"]
+source_refs: ["Low-Dose Colchicine for Secondary Prevention of Coronary Artery Disease: JACC Review Topic of the Week · JACC · https://www.jacc.org/doi/10.1016/j.jacc.2023.05.055", "Colchicine's Role in Cardiovascular Disease Management · Arteriosclerosis, Thrombosis, and Vascular Biology · https://www.ahajournals.org/doi/10.1161/ATVBAHA.124.319851", "Bula do COLCHIS (colchicina, Apsen Farmacêutica), seções de posologia, precauções e advertências · conferida em 29/07/2026 · é bula da indicação de gota, e não cobre pericardite"]
 ---
 
 # Colchicina
@@ -25,10 +25,15 @@ Inibe a polimerização de tubulina em microtúbulos, interferindo na ativação
 ## Dose e apresentacao
 - **pericardite aguda**: 0,5 mg 1x/dia (peso <70 kg) ou 0,5 mg 2x/dia (peso ≥70 kg), por 3 meses
 - **prevencao cardiovascular (baixa dose)**: 0,5 mg 1x/dia — reduz eventos cardiovasculares em 25-30% em pacientes com aterosclerose coronariana nos ensaios que mostraram benefício
-- **fonte**: JACC (revisão sobre colchicina em baixa dose); droracle (dosagem em pericardite)
+- **fonte**: para a prevenção cardiovascular em baixa dose, a revisão do JACC citada nas referências. **Para a pericardite, sem fonte verificável** — ver a marcação abaixo
+
+VERIFICAÇÃO HUMANA NECESSÁRIA para o esquema da **pericardite aguda**: ele estava apoiado num site de respostas geradas por IA, categoria que a Fase B removeu do acervo, e a bula brasileira conferida (COLCHIS, Apsen) é da indicação de **gota** e não cobre pericardite. O esquema **não foi alterado**, porque corresponde à prática corrente e mudá-lo sem fonte trocaria um problema por outro — mas está aqui **sem procedência verificável**. Próximo passo: ESC 2025 de miocardite e pericardite, seção de tratamento, que é a mesma diretriz que já sustenta o registro de evidência da colchicina na pericardite (classe I, nível A) nesta biblioteca.
 
 ## Ajuste renal e hepatico
-- **funcao renal normal ou leve alteracao**: dose de 0,5 mg/dia mantém níveis dentro do limite seguro para a maioria dos pacientes; dose crônica de 0,6 mg/dia já pode exceder o limiar seguro em pacientes com insuficiência renal leve
-- **doenca renal terminal (ESRD)**: redução mais agressiva — 0,3 mg 1x/dia ou 0,3 mg em dias alternados para pericardite
-- **interacoes**: eliminação primariamente renal e hepática — cautela com inibidores de CYP3A4 e de glicoproteína P, que aumentam risco de toxicidade
-- **fonte**: droracle (dosagem em ESRD)
+
+**O que está confirmado por bula, e é pouco:** aumentar o **intervalo entre as doses** em paciente crônico cuja **taxa de filtração glomerular seja inferior a 10 mL/min**; **reduzir a dose** se surgir debilidade muscular, náusea, vômito ou diarreia, que são os primeiros sinais de superdosagem; e avaliar com atenção os casos de insuficiência renal ou hepatobiliar.
+- **fonte**: bula do COLCHIS (colchicina, Apsen), seções de posologia e de precauções e advertências, conferida em 29/07/2026
+
+**Interações:** a colchicina depende da CYP3A4 e da glicoproteína P, e o uso com inibidores dessas vias eleva o risco de toxicidade. Confirmado pelo outro lado: a bula brasileira do DILACORON (verapamil) **não recomenda** a associação com colchicina.
+
+VERIFICAÇÃO HUMANA NECESSÁRIA para os valores numéricos que constavam aqui — 0,5 mg/dia mantendo nível seguro na função renal normal ou levemente alterada, 0,6 mg/dia crônico já excedendo o limiar na insuficiência renal leve, e 0,3 mg ao dia ou em dias alternados na doença renal terminal. Todos vinham de site de respostas geradas por IA e **não foram confirmados**. Ficam registrados aqui para não sumirem de quem já os usava, mas **não devem ser prescritos por este documento** enquanto não vierem de bula ou diretriz.

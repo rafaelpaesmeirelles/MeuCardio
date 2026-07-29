@@ -1,61 +1,67 @@
 # Cobertura da base científica — Corvia
 
-Estado em 29/07/2026. Todos os números são medidos diretamente sobre os arquivos do
-repositório — `theme:` do front matter em `content/`, e os `metadados.json` das outras
-quatro frentes. Nenhum número é estimado.
+Estado em 29/07/2026, **remedido às 20h** pela sessão da Biblioteca. Todos os números
+são medidos diretamente sobre os arquivos do repositório — `theme:` do front matter em
+`content/`, e os `metadados.json` das outras quatro frentes; a coluna "Publicados" vem
+do banco. Nenhum número é estimado.
 
 ## Resumo
 
 | Frente | Itens | Publicados | Situação |
 |---|---:|---:|---|
-| `content/` — biblioteca científica | 241 | 235 | 27 temas cobertos; 29 são fluxogramas, 23 publicados |
+| `content/` — biblioteca científica | 253 | 252 | 27 temas cobertos; 29 são fluxogramas, **todos publicados** |
 | `galeria/` — achados de imagem | 36 | 36 | ✅ verificada item a item |
-| `exames/` — marcadores e exames | 17 | 17 | ✅ verificada item a item |
-| `evidencias/` — recomendações pontuais | 32 | 32 | 20 verificadas item a item; 12 novas em 29/07 |
-| `estudos/` — ensaios e metanálises | 18 | 18 | 15 verificados item a item; 3 novos em 29/07 |
-| **Medicamentos** (tabela `drugs`) | **100** | **88** | reconstruída de `content/Farmacologia`; em conferência contra bula brasileira |
+| `exames/` — marcadores e exames | 17 | 17 | ✅ verificada item a item; **única frente que não cresceu em 29/07** |
+| `evidencias/` — recomendações pontuais | 100 | 100 | 20 verificadas item a item; as demais entraram nos lotes de 29/07 |
+| `estudos/` — ensaios e metanálises | 41 | 41 | 15 verificados item a item; os demais entraram nos lotes de 29/07 |
+| **Medicamentos** (tabela `drugs`) | **100** | **88** | reconstruída de `content/Farmacologia`; gestação e lactação fechadas em 88/88 |
 
-## `content/` — 241 documentos
+O banco tem **275 registros** em `documents` contra 253 arquivos no disco: os 22
+excedentes são as fusões e duplicatas já removidas do disco, todas despublicadas.
+Nenhum órfão está no ar.
+
+## `content/` — 253 documentos
 
 | Tema | Docs | Pend. revisão |
 |---|---:|---:|
-| Farmacologia | 96 | 68 |
-| Cardiomiopatias | 11 | 8 |
+| Farmacologia | 96 | 66 |
+| Cardiomiopatias | 12 | 8 |
 | Calculadoras | 8 | 3 |
+| Doença coronariana | 8 | 5 |
+| Gravidez | 8 | 0 |
+| Terapia intensiva | 8 | 4 |
 | Aorta e doença arterial periférica | 7 | 1 |
+| Arritmias | 7 | 1 |
 | Dispositivos | 7 | 2 |
-| Doença coronariana | 7 | 5 |
-| Gravidez | 7 | 0 |
-| Terapia intensiva | 7 | 4 |
-| Arritmias | 6 | 1 |
+| Febre reumática | 7 | 1 |
+| Prevenção e lipídios | 7 | 4 |
 | Cardio-oncologia | 6 | 1 |
-| Febre reumática | 6 | 1 |
+| Endocardite | 6 | 2 |
+| Hipertensão | 6 | 3 |
 | Pericárdio | 6 | 2 |
-| Prevenção e lipídios | 6 | 4 |
+| Perioperatório | 6 | 1 |
 | Síncope | 6 | 2 |
 | Valvopatias | 6 | 4 |
 | Cardiopatias congênitas | 5 | 1 |
 | Diabetes e cardiologia | 5 | 0 |
-| Endocardite | 5 | 2 |
 | Fibrilação atrial | 5 | 2 |
-| Hipertensão | 5 | 3 |
 | Hipertensão pulmonar | 5 | 1 |
 | Insuficiência cardíaca | 5 | 3 |
-| Perioperatório | 5 | 1 |
 | Saúde mental e cardiologia | 4 | 1 |
-| Tromboembolismo | 3 | 2 |
-| Comunicação clínica | 1 | 0 |
+| Tromboembolismo | 4 | 2 |
+| Comunicação clínica | 2 | 0 |
 | Geral | 1 | 1 |
 
-**Total: 241 documentos, 123 pendentes de revisão** — 68 deles em Farmacologia, que
+**Total: 253 documentos, 121 pendentes de revisão** — 66 deles em Farmacologia, que
 concentra mais da metade da fila.
 
-A queda de 250 para 241 não é perda de conteúdo: são as **11 fusões de pares
-complementares** descritas no fim deste arquivo, mais as duplicatas de metoprolol,
-varfarina e HAS-BLED, menos os 6 fluxogramas escritos em 29/07. Todo documento
-removido do disco foi **despublicado** no banco — conferido em 29/07/2026 comparando
-os 235 slugs publicados contra os 241 arquivos: **nenhum órfão publicado**. Os 22
-registros que sobram no banco sem arquivo estão todos fora do ar.
+A queda de 250 para 241, registrada na medição anterior, não foi perda de conteúdo:
+foram as **11 fusões de pares complementares** descritas no fim deste arquivo, mais as
+duplicatas de metoprolol, varfarina e HAS-BLED. Os 12 documentos que entraram depois
+disso são conteúdo novo dos lotes de 29/07. Todo documento removido do disco foi
+**despublicado** no banco — conferido de novo às 20h: 252 publicados contra 253
+arquivos, e **nenhum órfão publicado**. Os 22 registros que sobram no banco sem
+arquivo estão todos fora do ar.
 
 "Pend. revisão" conta documentos com `review_status` diferente de `revisado`. Não
 significa que estejam errados: significa que ninguém confirmou a fonte. A Fase B mostrou
@@ -63,16 +69,24 @@ que essa distinção importa — ver abaixo.
 
 ## As quatro frentes JSON
 
-| Frente | Itens | Temas cobertos |
-|---|---:|---|
-| `galeria/` | 36 | 23 |
-| `exames/` | 17 | 16 |
-| `evidencias/` | 32 | 18 |
-| `estudos/` | 18 | 15 |
+| Frente | Itens | Temas cobertos (de 27) | Temas com 1 item só |
+|---|---:|---:|---:|
+| `galeria/` | 36 | 23 | 12 |
+| `exames/` | 17 | 16 | 15 |
+| `evidencias/` | 100 | 19 | 9 |
+| `estudos/` | 41 | 24 | 12 |
 
-As quatro cobrem os temas clínicos com pelo menos 1 item cada, exceto lacunas pontuais
-(ex.: `estudos/` não tem item de Cardio-oncologia nem de Cardiopatias congênitas). A
-prioridade agora é **profundidade** — temas com 1 item só —, não mais zerar temas.
+A prioridade é **profundidade** — temas com 1 item só —, não mais zerar temas. Duas
+leituras que a tabela deixa explícitas:
+
+- **`exames/` é a frente mais fraca do sistema.** 17 itens, e **15 dos 16 temas que ela
+  cobre têm um item só**. Foi a única frente que não cresceu nos lotes de 29/07.
+  Sem nenhum exame: Cardiopatias congênitas, Síncope, Perioperatório, Saúde mental e
+  cardiologia, Comunicação clínica, Geral e os demais temas fora dos 16.
+- **`evidencias/` cresceu em volume, não em amplitude.** Passou de 32 para 100 itens
+  mas cobre 19 temas — o crescimento se concentrou em Cardiomiopatias, Doença
+  coronariana e Cardio-oncologia. Pericárdio, Aorta e doença arterial periférica,
+  Síncope e Saúde mental seguem com **uma recomendação cada**.
 
 ## Verificação (Fase B) — concluída nas quatro frentes JSON
 
@@ -111,9 +125,10 @@ conteúdo. É preciso abrir e conferir se o artigo é o que o registro descreve.
    andamento, e resolver o `drug_class` com quase um valor distinto por fármaco, que
    serve para ler e é inútil como filtro — e é por ele que a API filtra.
 2. **A busca não cobre as quatro frentes JSON.** `app/api/search.py` consulta só a
-   tabela `documents`. Os 103 itens de galeria, exames, evidências e estudos são
-   invisíveis para quem pesquisa. A lacuna cresceu junto com o conteúdo.
-3. **Farmacologia concentra 68 dos 123 pendentes** de revisão. Segue sendo o maior bloco
+   tabela `documents`. Os **194 itens** de galeria, exames, evidências e estudos são
+   invisíveis para quem pesquisa. A lacuna quase dobrou em 29/07, junto com o conteúdo:
+   eram 103 pela manhã.
+3. **Farmacologia concentra 66 dos 121 pendentes** de revisão. Segue sendo o maior bloco
    de conteúdo não verificado do sistema. O método que funciona: bula do detentor do
    registro no Brasil, baixada com `curl` e User-Agent de browser — o `WebFetch` toma
    403 na maioria dos sites de laboratório.
@@ -123,16 +138,22 @@ conteúdo. É preciso abrir e conferir se o artigo é o que o registro descreve.
    arquivo.
 5. **Marcações de verificação: 47, em 38 arquivos de `content/`.** Cada uma é uma
    pergunta específica e respondível, não incerteza genérica. Zero nas quatro frentes
-   JSON.
-6. **Fluxogramas: 29 escritos, 23 publicados.** Os 6 temas que faltavam foram cobertos
-   em 29/07/2026 — dislipidemia, amiloidose cardíaca, avaliação perioperatória,
-   cardio-oncologia, febre reumática e cardiopatia congênita do adulto. **Os 6 que
-   seguem fora do ar** são os escritos na sessão anterior e ainda sem aval do Rafael:
-   síndrome coronariana crônica, regurgitação mitral, bradiarritmia e marcapasso,
-   taquicardia de QRS largo, pericardite aguda e miocardite aguda.
-7. **Profundidade, não amplitude, é o gargalo das frentes JSON.** `estudos` cobre 15
-   temas dos 27 de `content/`; `evidencias`, 18. Cardiopatias congênitas, febre
-   reumática e comunicação clínica não têm estudo nenhum.
+   JSON. Distribuição medida às 20h: **24 em Farmacologia**, 3 em Calculadoras, 2 em
+   Terapia intensiva, 2 em Fibrilação atrial, e 1 em cada um de Valvopatias, Prevenção
+   e lipídios, Perioperatório, Insuficiência cardíaca, Doença coronariana,
+   Cardiomiopatias e Arritmias.
+6. **Fluxogramas: 29 escritos, 29 publicados — frente zerada.** Os 6 temas que faltavam
+   foram cobertos em 29/07/2026 (dislipidemia, amiloidose cardíaca, avaliação
+   perioperatória, cardio-oncologia, febre reumática e cardiopatia congênita do adulto)
+   e os 6 que aguardavam aval — síndrome coronariana crônica, regurgitação mitral,
+   bradiarritmia e marcapasso, taquicardia de QRS largo, pericardite aguda e miocardite
+   aguda — **entraram no ar**. Não há tema de fluxograma em aberto.
+7. **`exames/` é a maior lacuna aberta das frentes JSON**, e substituiu `estudos` nessa
+   posição. Ver a leitura na seção acima: 17 itens, 15 dos 16 temas com um item só,
+   e nenhum item nos temas de Síncope, Perioperatório, Cardiopatias congênitas, Saúde
+   mental e Comunicação clínica.
+8. **Comunicação clínica é o tema mais fraco do acervo**: 2 documentos e **zero nas
+   quatro frentes JSON**.
 
 ## Como carregar e publicar conteúdo
 
