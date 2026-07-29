@@ -63,6 +63,28 @@ Regras que decorrem disso:
    Lacuna de cobertura é dívida do produto, não detalhe.
 
 ## Divisão de trabalho entre sessões simultâneas
+
+> ### ⚠️ SUSPENSA em 29/07/2026, às 19h50 — hoje há UMA sessão só
+> Decisão do Rafael, tomada depois de medirmos o estado real dos processos:
+> **a sessão da Biblioteca morreu** (o processo não existe mais — ela rodava
+> fora do tmux e caiu junto com a conexão SSH; o último commit dela é
+> `612aab0`, às 19:10). E a única outra sessão viva, num tmux chamado `claude`,
+> está **congelada desde 27/07 às 04:59**, parada num pedido de permissão, com
+> contexto **anterior ao rebranding** — cita o domínio desligado 15 vezes, o
+> atual nenhuma, e acha que a biblioteca tem 238 documentos quando tem 275.
+> Ela **não deve ser retomada como está**: uma sessão que desconhece a troca de
+> marca pode reintroduzir o nome abandonado, que é proibido em termos absolutos.
+>
+> **Enquanto isso valer, a sessão de Medicamentos assume os 27 temas** e todas
+> as seis frentes — não há mais faixa alheia a respeitar. A divisão por tema
+> abaixo fica registrada como histórico, não como regra em vigor.
+>
+> **Se uma segunda sessão for aberta de novo**, esta seção volta a valer
+> integralmente e as duas precisam redividir aqui antes de escrever. As regras
+> anticolisão da tabela abaixo (`git pull --rebase` antes de commitar, nunca
+> `git add -A`, conferir `.git/index.lock`) **continuam valendo mesmo com uma
+> sessão só** — custam pouco e cobrem o caso de alguém abrir outra sem avisar.
+
 Pedido do Rafael em 29/07/2026: quando houver mais de uma sessão do Claude Code
 aberta ao mesmo tempo, **cada uma declara aqui onde vai mexer**, para que a
 outra leia antes de começar e ninguém pise no trabalho do outro. Este bloco é o
