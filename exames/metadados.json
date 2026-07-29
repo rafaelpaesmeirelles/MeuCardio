@@ -798,5 +798,29 @@
       "reveal",
       "esc/ers 2022"
     ]
+  },
+  {
+    "slug": "cintilografia-de-ventilacao-perfusao-vq-no-diagnostico-de-tromboembolismo-pulmonar",
+    "name": "Cintilografia de ventilação/perfusão (V/Q) no diagnóstico de tromboembolismo pulmonar",
+    "category": "imagem",
+    "theme": "Tromboembolismo",
+    "what_it_measures": "Comparação entre a distribuição de um radiofármaco inalado (ventilação) e um radiofármaco injetado (perfusão) no parênquima pulmonar — uma área ventilada mas não perfundida ('mismatch') sugere obstrução vascular por êmbolo, sem o dano ao parênquima que causaria um defeito combinado de ventilação e perfusão.",
+    "reference_range": "Resultado classificado em três categorias, pela classificação simplificada preferida pela diretriz para facilitar a comunicação com o clínico: cintilografia normal (exclui TEP), alta probabilidade (considerada diagnóstica de TEP na maioria dos pacientes) e não diagnóstica — esta última ocorre em até 50% dos exames planares e é a principal limitação do método.",
+    "indications": "Pela diretriz ESC 2019 de TEP agudo, na gestante com suspeita de TEP: cintilografia de perfusão ou angiotomografia (com protocolo de baixa dose de radiação) devem ser consideradas para excluir TEP (Classe IIa, Nível C), com a angiotomografia preferida como primeira opção se a radiografia de tórax estiver alterada. A cintilografia é a alternativa de escolha justamente para poupar radiação — a dose efetiva do V/Q planar (~2 mSv) é menor que a da angiotomografia (3-10 mSv), com exposição à mama muito menor, relevante em mulher jovem. Também indicada em alergia a contraste iodado, hipertireoidismo e insuficiência renal grave, cenários em que a angiotomografia é contraindicada ou de uso limitado.",
+    "interpretation": "Estudos de desfecho clínico prospectivos, incluindo um ensaio randomizado comparando V/Q com angiotomografia, mostraram ser seguro não anticoagular o paciente com cintilografia de perfusão normal. Cintilografia de alta probabilidade é considerada diagnóstica na maioria dos pacientes, mas seu valor preditivo positivo é insuficiente para confirmar TEP em paciente com baixa probabilidade clínica pré-teste — o resultado sempre deve ser lido em conjunto com a probabilidade clínica, nunca isoladamente. A V/Q por SPECT reduz a taxa de exames não diagnósticos para menos de 3-5%, com interpretação binária (TEP ou não TEP) em vez das três categorias do método planar, mas tem menos validação em estudos prospectivos de desfecho.",
+    "limitations": "Resultado não diagnóstico em até metade dos exames planares é a limitação central do método, e exige teste adicional na maioria desses casos. Ao contrário da angiotomografia, a cintilografia não oferece diagnóstico alternativo quando exclui TEP. Fora do diagnóstico agudo, a cintilografia V/Q é também o exame de escolha de primeira linha para rastrear hipertensão pulmonar tromboembólica crônica (HPTEC) no seguimento pós-TEP, com sensibilidade de 96-97% e especificidade de 90-95% — sensibilidade superior à angiotomografia para essa indicação específica, por detectar defeitos de perfusão em vasos pequenos que a angiotomografia pode não resolver.",
+    "source_refs": [
+      "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism developed in collaboration with the European Respiratory Society (ERS). Eur Respir J. 2019;54(3):1901647. DOI: 10.1183/13993003.01647-2019 — Tabela 6 (Imaging tests for diagnosis of pulmonary embolism), seção 9.5 (Recommendations for pulmonary embolism in pregnancy) e seção 10.2.2 (rastreio de HPTEC)."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "cintilografia",
+      "v/q",
+      "ventilação perfusão",
+      "tromboembolismo pulmonar",
+      "gestação",
+      "hipertensão pulmonar tromboembólica crônica"
+    ]
   }
 ]
