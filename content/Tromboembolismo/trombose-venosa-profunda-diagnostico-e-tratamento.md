@@ -4,7 +4,7 @@ slug: trombose-venosa-profunda-diagnostico-e-tratamento
 theme: "Tromboembolismo"
 kind: protocolo
 review_status: pendente_revisao
-source_refs: ["Diagnostic et prise en charge de la thrombose veineuse — synthèse SFMV/ESC · Société Française de Médecine Vasculaire · https://ex.sfmv.fr/sites/default/files/docs/fiches_rbp_mtev_aigu_esc_2017_vd3.pdf", "Diretrizes sobre trombose venosa profunda da Sociedade Brasileira de Angiologia e Cirurgia Vascular · 2024 · https://www.scielo.br/j/jvb/a/QrkKryFq4fDkCHZPLBbgpdJ/?format=pdf&lang=pt"]
+source_refs: ["Diagnostic et prise en charge de la thrombose veineuse — synthèse SFMV/ESC · Société Française de Médecine Vasculaire · https://ex.sfmv.fr/sites/default/files/docs/fiches_rbp_mtev_aigu_esc_2017_vd3.pdf", "Diretrizes sobre trombose venosa profunda da Sociedade Brasileira de Angiologia e Cirurgia Vascular · 2024 · https://www.scielo.br/j/jvb/a/QrkKryFq4fDkCHZPLBbgpdJ/?format=pdf&lang=pt", "Mismetti P, Laporte S, Pellerin O, et al. Effect of a retrievable inferior vena cava filter plus anticoagulation vs anticoagulation alone on risk of recurrent pulmonary embolism (PREPIC2). JAMA. 2015;313(16):1627-1635. DOI: 10.1001/jama.2015.3780. PMID: 25919526"]
 legacy_source: "Fusão de dois documentos de TVP na mesma pasta, com 12 e 11 seções e apenas 3 em comum. Do absorvido vieram imagem diagnóstica, duração da anticoagulação, terapia intervencionista e adjuvante, individualização da duração e TVP na gestação."
 ---
 
@@ -57,7 +57,9 @@ Diretrizes da Sociedade Brasileira de Angiologia e Cirurgia Vascular sobre TVP t
 ## Criterios internacao
 
 ## Filtro veia cava
- — indicações específicas não confirmadas nesta rodada
+**Resolvido em 30/07/2026** com o PREPIC2 (Mismetti P et al., JAMA 2015;313(16):1627-1635, PMID 25919526), ensaio randomizado, aberto, com adjudicação cega, em 399 pacientes hospitalizados com TEP agudo sintomático associado a trombose venosa de membro inferior e pelo menos um critério de gravidade — todos em anticoagulação plena por pelo menos 6 meses, randomizados para receber também um filtro de veia cava inferior **recuperável** (200) ou não (199, controle). TEP recorrente sintomático em 3 meses: **3,0% no grupo filtro (todos fatais) vs. 1,5% no grupo controle** (risco relativo 2,00; IC95% 0,51-7,89; p=0,50) — **sem diferença**, resultados semelhantes aos 6 meses. Trombose do próprio filtro ocorreu em 3 pacientes. **Conclusão do próprio ensaio**: em paciente que pode ser tratado com anticoagulação, acrescentar filtro de veia cava recuperável não reduz o risco de TEP recorrente — o achado não sustenta esse uso.
+
+**Indicação aceita, portanto, é por exclusão**: filtro de veia cava é considerado quando a anticoagulação plena é **contraindicada** (sangramento ativo, risco hemorrágico proibitivo) na vigência de TEV agudo, ou em TEV recorrente comprovado **apesar de** anticoagulação adequada — não como adição de rotina a quem já pode ser anticoagulado, que é exatamente a população testada no PREPIC2 e onde o filtro não mostrou benefício.
 
 ## Armadilhas clinicas
 - Não usar escore de Wells validado para estratificação inicial
