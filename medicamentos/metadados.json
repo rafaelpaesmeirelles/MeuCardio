@@ -377,40 +377,6 @@
     "lactation": "**Contraindicada na amamentação.** Não se sabe se é excretada no leite materno, e pelo risco potencial ao lactente a bula determina que mulheres em uso **não devem amamentar**. Fonte: bula do LÍPITOR (atorvastatina)."
   },
   {
-    "slug": "atropina",
-    "review_status": "pendente_revisao",
-    "generic_name": "Atropina (sulfato de atropina)",
-    "drug_class": "Antimuscarínico (antagonista competitivo e reversível dos receptores muscarínicos de acetilcolina)",
-    "mechanism": "Antagonismo competitivo dos receptores muscarínicos pós-ganglionares de acetilcolina — no coração, bloqueia o tônus vagal sobre o nó sinusal e o nó atrioventricular, aumentando a frequência de disparo sinusal e a condução AV - **fonte**: StatPearls (NCBI Bookshelf)",
-    "indications": [
-      "Terapia de primeira linha (classe IIa) para bradicardia sintomática na ausência de causas reversíveis identificáveis - **fonte**: StatPearls (NCBI Bookshelf)"
-    ],
-    "adverse_effects": [
-      "Boca seca, visão turva, fotofobia, taquicardia — diretamente relacionados ao efeito antimuscarínico. Anidrose (pode causar intolerância ao calor). Retenção urinária e constipação, mais relevantes em idoso. Em dose alta: midríase, hipertermia, delirium, arritmia."
-    ],
-    "contraindications": [
-      "Glaucoma de ângulo estreito",
-      "Obstrução gastrointestinal ou pilórica",
-      "Retenção urinária por obstrução de via de saída vesical",
-      "Colite ulcerativa grave/megacólon tóxico",
-      "Miastenia gravis (piora a fraqueza muscular)",
-      "Ineficaz e deve ser evitada no tratamento de bradicardia sinusal em pacientes transplantados cardíacos sem reinervação autonômica — como o mecanismo de ação depende da inibição do tônus vagal, e o coração transplantado não possui inervação vagal intacta, a atropina não produz o efeito cronotrópico esperado nesses pacientes - **fonte**: StatPearls (NCBI Bookshelf)"
-    ],
-    "dosing": {
-      "fonte": "ACLS dosing guidelines; StatPearls (NCBI Bookshelf)\n\nVERIFICAÇÃO HUMANA NECESSÁRIA quanto à **procedência**: a posologia acima se apoia em StatPearls — agregador ou portal de conteúdo, não documento primário. Isso **não afirma que os números estejam errados**; afirma que não são rastreáveis à bula registrada nem a diretriz, que é o critério deste acervo. Substituir a fonte e reconferir os valores antes de publicar.",
-      "posologia": "VERIFICAÇÃO HUMANA NECESSÁRIA — **este verbete não tem posologia**. O campo trazia apenas a fonte, sem nenhuma dose. Não prescrever por ele até que a posologia venha da bula registrada na ANVISA ou de diretriz."
-    },
-    "notes": {
-      "Limitacoes de eficacia": "Provavelmente ineficaz no bloqueio AV de segundo grau Mobitz II ou no bloqueio AV total com QRS largo — nesses casos o bloqueio costuma ser infra-nodal (abaixo do nó AV), fora do alcance do mecanismo de ação vagolítico da atropina. Nesses cenários, não atrasar a marca-passo transcutâneo esperando resposta à droga.",
-      "Cautela especifica — isquemia coronariana": "Em síndrome coronariana aguda ou isquemia ativa, usar com cautela — o aumento de frequência cardíaca induzido pela atropina eleva o consumo miocárdico de oxigênio e pode piorar a isquemia. Em uso recorrente nesse contexto, limitar a dose total a 2-3 mg."
-    },
-    "references": [
-      "ATROPINE SULFATE INJECTION — bula FDA",
-      "Atropine (ACLS) — ACLS Certification Institute",
-      "ACLS dosing recommendations for symptomatic bradycardia — droracle.ai"
-    ]
-  },
-  {
     "slug": "benazepril-cloridrato",
     "review_status": "pendente_revisao",
     "generic_name": "Benazepril (cloridrato)",
@@ -1429,41 +1395,6 @@
       "Bula de ALDACTONE (espironolactona), Wyeth Indústria Farmacêutica Ltda. — seções de composição e posologia, versão brasileira."
     ],
     "lactation": "Se o uso na amamentação for considerado essencial, **deve-se instituir método alternativo de alimentação para a criança** — ou seja, a bula resolve pela suspensão do aleitamento, não pela suspensão do fármaco. Fonte: bula do ALDACTONE (espironolactona)."
-  },
-  {
-    "slug": "evinacumabe",
-    "review_status": "pendente_revisao",
-    "generic_name": "Evinacumabe",
-    "brand_names": [
-      "Evkeeza"
-    ],
-    "drug_class": "Hipolipemiante biológico — anticorpo monoclonal anti-ANGPTL3",
-    "mechanism": "Anticorpo monoclonal humano que se liga e inibe a proteína ANGPTL3 (angiopoietin-like 3), removendo sua ação inibitória sobre a lipase lipoproteica e a lipase endotelial; mecanismo independente de receptor de LDL, permitindo eficácia mesmo em pacientes com HF homozigótica com receptores de LDL não funcionantes — diferencial crucial em relação a estatinas/ezetimiba/PCSK9i",
-    "indications": [
-      "Hipercolesterolemia familiar homozigótica (HoFH) em pacientes ≥5 anos, como terapia adjuvante a outras terapias hipolipemiantes"
-    ],
-    "pregnancy": "Estudos em animais sugerem risco de dano fetal. Considerar teste de gravidez antes de iniciar em mulher com potencial reprodutivo.",
-    "monitoring": [
-      "Resposta de LDL-C pode ser avaliada já a partir de 2 semanas após o início. Observar sinais de reação de hipersensibilidade durante e após a infusão — a maioria é leve a moderada, mas anafilaxia já foi descrita (rara); se ocorrer reação grave, interromper a infusão e tratar conforme protocolo de anafilaxia."
-    ],
-    "adverse_effects": [
-      "Reações relacionadas à infusão, nasofaringite, gripe, tontura, rinorreia"
-    ],
-    "notes": {
-      "Via administracao": "Infusão intravenosa de **15 mg/kg**, a cada 4 semanas (mensal), infundida ao longo de 60 minutos, através de linha com filtro em linha de 0,2 a 5 micra. Não misturar nem administrar outro medicamento na mesma linha de infusão.",
-      "Populacao alvo": "HoFH que não atinge meta de LDL-C apesar de dose máxima tolerada de terapia hipolipemiante combinada (estatina + ezetimiba + inibidor de PCSK9, quando aplicável)",
-      "Eficacia": "Redução significativa de LDL-C independentemente do genótipo do receptor de LDL, incluindo pacientes com receptores nulos/nulos (ausência completa de função)",
-      "Particularidade regulatoria": "Extensão de indicação avaliada e aprovada pela EMA para faixa pediátrica ampliada, refletindo necessidade de tratamento precoce nesta condição genética grave"
-    },
-    "references": [
-      "Evkeeza, INN-evinacumab · EMA · https://www.ema.europa.eu/en/documents/product-information/evkeeza-epar-product-information_en.pdf",
-      "Evinacumab: Mechanism of action, clinical, and translational science · PMC · 2024 · https://pmc.ncbi.nlm.nih.gov/articles/PMC11157145/",
-      "Evkeeza (evinacumab) — bula FDA/prescriberpoint, 2025",
-      "FDA approves add-on therapy for patients with genetic form of severely high cholesterol — FDA.gov, 2021"
-    ],
-    "dosing": {
-      "posologia": "VERIFICAÇÃO HUMANA NECESSÁRIA — **este verbete não tem posologia**. O campo trazia apenas a fonte, sem nenhuma dose. Não prescrever por ele até que a posologia venha da bula registrada na ANVISA ou de diretriz."
-    }
   },
   {
     "slug": "evolocumabe-e-alirocumabe-inibidores-de-pcsk9",
