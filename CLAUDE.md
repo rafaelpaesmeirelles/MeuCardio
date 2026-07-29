@@ -64,7 +64,31 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
-> ### ⚠️ SUSPENSA em 29/07/2026, às 19h50 — hoje há UMA sessão só
+> ### ✅ REATIVADA em 29/07/2026, às 20h — duas sessões de novo
+> O Rafael reatachou a sessão do tmux e vai recolocá-la para trabalhar. **A
+> suspensão abaixo durou cerca de dez minutos e não vale mais.** Divisão em
+> vigor a partir de agora, que é a mesma de 29/07 pela manhã, restaurada:
+>
+> | Frente | Dono |
+> |---|---|
+> | `medicamentos/*.json`, `backend/app/api/drugs.py` | **sessão de Medicamentos** |
+> | os **13 temas** de `content/` da lista de Medicamentos, abaixo | **sessão de Medicamentos** |
+> | os **14 temas** de `content/` da lista da Biblioteca, abaixo | **sessão da Biblioteca** |
+> | `evidencias/`, `estudos/`, `galeria/`, `exames/` | **sessão da Biblioteca** |
+>
+> **Três avisos para a sessão que está voltando, e eles não são formalidade:**
+> 1. **O contexto dela é de 27/07 e está errado em pontos que importam.** Ela
+>    precisa rodar `/clear` **antes** de qualquer coisa. Sem isso, carrega o
+>    domínio antigo e um retrato desatualizado da biblioteca.
+> 2. **O domínio mudou.** O antigo foi desligado por risco jurídico e **falha no
+>    TLS** — não é redirecionamento, é porta fechada. Qualquer comando que ela
+>    tinha em fila apontando para lá deve ser recusado, não aprovado.
+> 3. **O acervo cresceu muito desde 27/07:** eram 238 documentos, hoje são 275,
+>    com 250 publicados. Medicamentos está em 88 fármacos com gestação e
+>    lactação completas (88/88) e 59 interações. Não confie em número que ela
+>    tenha em memória — meça antes de escrever.
+>
+> ### ⚠️ Suspensão de 19h50 (histórico, já revogada)
 > Decisão do Rafael, tomada depois de medirmos o estado real dos processos:
 > **a sessão da Biblioteca morreu** (o processo não existe mais — ela rodava
 > fora do tmux e caiu junto com a conexão SSH; o último commit dela é
