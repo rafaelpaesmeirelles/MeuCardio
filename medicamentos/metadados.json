@@ -736,7 +736,8 @@
     },
     "references": [
       "Clonidine hydrochloride tablets — rótulo aprovado pelo FDA, DailyMed SPL setid e96ab74c-eedf-4d71-8a35-d5ec3daa7592"
-    ]
+    ],
+    "pregnancy": "Os dados em gestantes são **limitados**. Só deve ser administrada na gravidez em caso de **necessidade evidente**, com **monitoração minuciosa da mãe e da criança**. A clonidina **atravessa a barreira placentária**. Fonte: bula do profissional da ATENSINA (clonidina)."
   },
   {
     "slug": "clopidogrel-bissulfato",
@@ -1549,7 +1550,9 @@
       "Ezetimibe tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 090776cf-f211-49a3-a993-ff5d707311f2",
       "Cannon CP, Blazing MA, Giugliano RP, et al. Ezetimibe added to statin therapy after acute coronary syndromes (IMPROVE-IT). N Engl J Med. 2015;372(25):2387-2397. DOI: 10.1056/NEJMoa1410489",
       "Bula profissional de ZETIA (ezetimiba), Organon Farmacêutica Ltda. — seção 1, Indicações. Documento obtido no site do detentor do registro."
-    ]
+    ],
+    "pregnancy": "A bula registra que, em quem está grávida ou planeja engravidar, **pode não ser o medicamento adequado**. Fonte: bula do ZETIA (ezetimiba). Vale a comparação com a atorvastatina, **contraindicada** — a associação ezetimiba + estatina herda a restrição mais forte, que é a da estatina.",
+    "lactation": "**Pode passar para o leite materno.** Fonte: bula do ZETIA (ezetimiba)."
   },
   {
     "slug": "felodipino",
@@ -1806,7 +1809,8 @@
       "Taylor AL, Ziesche S, Yancy C, et al. Combination of isosorbide dinitrate and hydralazine in blacks with heart failure (A-HeFT). N Engl J Med. 2004;351(20):2049-2057. DOI: 10.1056/NEJMoa042934. PMID: 15533851",
       "Bula do profissional de saúde de APRESOLINA (cloridrato de hidralazina, drágeas), Novartis Biociências SA — seções de posologia, populações especiais e gravidez.",
       "Bula profissional de NEPRESOL (cloridrato de hidralazina, solução injetável 20 mg/mL), Cristália Produtos Químicos Farmacêuticos Ltda. — posologia, diluição e populações especiais."
-    ]
+    ],
+    "pregnancy": "A bula é categórica para a apresentação oral: **mulheres que pretendem engravidar não devem tomar**, e **confirmada a gravidez o tratamento deve ser interrompido imediatamente**. Fonte: bula da APRESOLINA (hidralazina).\n\n**Atenção ao recorte:** esta é a bula do produto oral, para hipertensão crônica. O uso da hidralazina **parenteral na emergência hipertensiva da gestação** é outro contexto, com recomendação obstétrica própria, que **não vem desta fonte e não está afirmada aqui**. Ler a restrição acima como proibição absoluta na gestante seria erro de leitura."
   },
   {
     "slug": "hidroclorotiazida",
@@ -1984,7 +1988,8 @@
     "references": [
       "Swedberg K, Komajda M, Böhm M, et al. Ivabradine and outcomes in chronic heart failure (SHIFT): a randomised placebo-controlled study. Lancet. 2010;376(9744):875-885. DOI: 10.1016/S0140-6736(10)61198-1. PMID: 20801500",
       "Bula profissional de PROCORALAN (cloridrato de ivabradina) 5 mg e 7,5 mg, Laboratórios Servier do Brasil Ltda. — seção 8, Posologia e Modo de Usar. Documento obtido no site do detentor do registro."
-    ]
+    ],
+    "pregnancy": "**Não utilizar em caso de gravidez ou suspeita de gravidez.** Havendo gravidez durante o uso, contatar o médico. Fonte: bula do PROCORALAN (cloridrato de ivabradina)."
   },
   {
     "slug": "levosimendana",
@@ -2215,7 +2220,9 @@
       "Hipertensão na Gravidez — Protocolo · CAISM/UNICAMP · https://www.caism.unicamp.br/download/protocolos/obstetricia/Hipertens%C3%A3o%20na%20Gravidez.pdf",
       "Methyldopa — LiverTox, NCBI Bookshelf",
       "Pregnancy Outcome After First Trimester Use of Methyldopa — Hypertension (AHA journals), 2018"
-    ]
+    ],
+    "pregnancy": "A bula do produto **não traz restrição nem categoria de risco** — orienta informar o médico se estiver grávida ou pretender engravidar. Fonte: bula do ALDOMET (metildopa, MSD).\n\n**Atenção ao que esta fonte NÃO diz:** o papel da metildopa como anti-hipertensivo de escolha na gestação é recomendação de diretriz obstétrica, e **não está afirmado aqui** — não foi conferido em fonte primária nesta sessão.",
+    "lactation": "**A metildopa é excretada no leite materno.** A bula orienta informar o médico se estiver amamentando ou pretender amamentar, sem determinar suspensão. Fonte: bula do ALDOMET (MSD)."
   },
   {
     "slug": "metoprolol",
