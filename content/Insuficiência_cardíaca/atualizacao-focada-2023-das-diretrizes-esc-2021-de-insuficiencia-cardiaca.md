@@ -29,7 +29,7 @@ Nova categoria de IC com fração de ejeção melhorada (HFimpEF) passa a ser en
 SGLT2i (dapagliflozina/empagliflozina) tornam-se terapia fundamental recomendada através de todo o espectro de fração de ejeção da IC (HFrEF, HFmrEF, HFpEF), representando mudança conceitual importante em relação à diretriz de 2021
 
 ## Manejo ic aguda atualizado
-Recomendações revisadas para estratégias de diuréticos, vasodilatadores e suporte inotrópico na fase aguda, refletindo evidência mais recente
+Recomendações revisadas para estratégias de diuréticos, vasodilatadores e suporte inotrópico na fase aguda, refletindo evidência mais recente. **A estratégia diurética tem documento próprio nesta biblioteca**, acrescentado em 29/07/2026 por esta linha estar sem número — `estrategia-diuretica-na-insuficiencia-cardiaca-aguda-descompensada.md`, com os ensaios DOSE-AHF, CARRESS-HF e ADVOR. Vasodilatador e suporte inotrópico na fase aguda continuam sem cobertura própria
 
 ## Comorbidades atualizadas
 Orientação atualizada para manejo de deficiência de ferro, doença renal e diabetes em pacientes com IC, com integração explícita de finerenona ao arsenal terapêutico
