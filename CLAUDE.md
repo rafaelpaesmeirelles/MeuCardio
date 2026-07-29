@@ -1,4 +1,4 @@
-# MeuCardio — contexto e instruções permanentes
+# Corvia — contexto e instruções permanentes
 
 ## O que é
 Plataforma de apoio à decisão clínica em Cardiologia ("Guia de Cardiologia"),
@@ -12,16 +12,35 @@ assistente de IA clínica, gestão de conta e assinatura, e o serviço de
 telediagnóstico (laudo e consultoria à distância).
 
 ## Identidade do produto
-O **MeuCardio** (https://meucardio.med.br) é produto independente e próprio,
-**sem vínculo institucional com nenhum hospital ou serviço**. O projeto teve
-uma marca anterior, ligada a um serviço hospitalar; ela foi integralmente
-removida do repositório, do banco e da interface. Regras que decorrem disso:
+A **Corvia** (https://corvia.med.br) é produto independente e próprio,
+**sem vínculo institucional com nenhum hospital ou serviço**. A assinatura da
+marca é "O caminho do coração".
 
-- Nenhuma marca, nome ou referência institucional anterior pode voltar a
-  aparecer em código, conteúdo, textos de interface, metadados ou
-  configuração. Se precisar identificar os termos exatos para uma varredura,
-  eles estão no histórico do git (`git log -S`), não neste arquivo — mantê-los
-  escritos aqui recria justamente o resíduo que a regra proíbe.
+O projeto já teve **duas marcas anteriores**, e nenhuma das duas pode voltar:
+
+1. a primeira, ligada a um serviço hospitalar, removida integralmente do
+   repositório, do banco e da interface;
+2. a segunda, o nome usado até 28/07/2026, abandonado por **risco jurídico** —
+   está registrado por outro titular. Por isso o domínio antigo foi
+   **desligado, não redirecionado**: mantê-lo no ar, ainda que só redirecionando,
+   prolongaria o uso do nome. Decisão do Rafael, registrada no `infra/Caddyfile`.
+   Consequência assumida e conferida antes: link antigo, favorito e app já
+   instalado deixam de resolver, e não havia assinante pagante nem usuário além
+   do administrador.
+
+Regras que decorrem disso:
+
+- Nenhuma marca, nome ou referência anterior — institucional ou do próprio
+  produto — pode voltar a aparecer em código, conteúdo, textos de interface,
+  metadados ou configuração. Se precisar identificar os termos exatos para uma
+  varredura, eles estão no histórico do git (`git log -S`), não neste arquivo —
+  mantê-los escritos aqui recria justamente o resíduo que a regra proíbe.
+- **Resíduos internos conhecidos do segundo nome, ainda no código** (invisíveis
+  ao usuário, cada um com custo próprio para trocar, nenhum resolvido): a chave
+  do token no `localStorage`, o valor de `kind` das assinaturas no banco e o
+  nome do índice único que depende dele, o nome do logger de notificação e
+  helpers internos do `billing.py`. Trocar a chave do token desloga todo mundo;
+  trocar o `kind` é migração de dado. Não mexer sem decisão explícita.
 - Nada de fluxo de revisão institucional: a responsabilidade clínica é do
   Rafael, cardiologista responsável pelo projeto.
 - O público é o cardiologista brasileiro em geral, não uma equipe interna.
@@ -154,7 +173,9 @@ Processo, igual para as seis:
   `caddy` (HTTPS automático). Volumes: `sitefiles` (build do frontend),
   `userfiles` (foto de perfil, servido pelo Caddy em `/fotos/*`) e
   `examefiles` (exames cifrados, **não** montado no Caddy).
-- Domínio: https://meucardio.med.br
+- Domínio: https://corvia.med.br (o Caddy atende também `www.corvia.med.br`).
+  É **domínio único**: o antigo foi desligado, e nada no sistema deve voltar a
+  apontar para ele.
 
 ## O que já foi feito
 - Deploy inicial resolvido: havia um bug grave no fluxo de migração — o script
@@ -197,7 +218,7 @@ Processo, igual para as seis:
   `backend/app/api/billing.py` (`/billing/checkout`, `/billing/status`,
   `/billing/webhook`), página `frontend/src/pages/Assinatura.tsx`. Webhook
   registrado no painel Stripe apontando para
-  `https://meucardio.med.br/api/billing/webhook`. Chaves no `.env`:
+  `https://corvia.med.br/api/billing/webhook`. Chaves no `.env`:
   `STRIPE_PUBLISHABLE_KEY`, `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET`,
   `STRIPE_PRICE_ID` (valores reais só no `.env`, nunca commitados).
 - Fluxogramas clínicos no ar: dependência `mermaid` no `package.json`,
@@ -238,11 +259,15 @@ Processo, igual para as seis:
   esse filtro, uma assinatura nova cairia no caminho do pedido avulso. Existe
   `POST /api/pedidos/{id}/reconciliar` como rede de segurança para webhook
   perdido: consulta a sessão no Stripe, sem confiar no cliente.
-- **Webhook de teste criado via API** (`we_1Ty0a2D3njwJY8wsSNnz2HuW`) apontando
-  para `https://meucardio.med.br/api/billing/webhook`, com 5 eventos, e o
-  `STRIPE_WEBHOOK_SECRET` do `.env` atualizado. Antes disso o webhook só
-  existia em modo live, e **nenhum evento chegava em teste** — o que significa
-  que o fluxo de assinatura nunca havia funcionado de ponta a ponta.
+- **Webhook de teste criado via API**, e depois migrado para o domínio novo.
+  Hoje existe **um único endpoint**, em `https://corvia.med.br/api/billing/webhook`,
+  com 6 eventos. Antes de criá-lo o webhook só existia em modo live, e **nenhum
+  evento chegava em teste** — o que significa que o fluxo de assinatura nunca
+  havia funcionado de ponta a ponta.
+  **Ordem que a migração seguiu, e que vale para a próxima:** remover primeiro o
+  webhook que aponta para o domínio a desligar, e só depois desligar o domínio.
+  O inverso deixa endpoint cadastrado apontando para lugar nenhum, com evento
+  falhando em silêncio — o padrão que já mordeu este projeto duas vezes.
 - **Objeto do Stripe não é dict.** Na lib 15.3.1, `.get()` levanta
   `AttributeError` — só subscrito funciona. Existe o helper `_campo()` em
   `billing.py` para isso. Esse erro já causou um 500 no histórico de faturas e
@@ -261,16 +286,25 @@ Processo, igual para as seis:
   sessão de verdade.
 - A conta Stripe está com `details_submitted: true` e `charges_enabled:
   false` — ainda não cobra de verdade, o que mantém o `.env` em `sk_test_`.
-- **Rebranding concluído e verificado a zero.** Varredura no repositório
-  inteiro, nos arquivos binários rastreados e no banco (88 itens das quatro
-  frentes, mais a busca full-text sobre o corpo dos documentos publicados):
-  nenhuma ocorrência da marca anterior. Foram corrigidos, entre outros, o
-  `<title>` da página, o nome do PWA, o pacote do app Android (renomeado para
-  `br.med.meucardio`, com `MainActivity.java` movido de diretório), a URL do
-  Capacitor, `DEPLOY.md`, `COBERTURA.md`, `backend/README.md`, a chave do
-  localStorage e um parágrafo de andaime que havia vazado para um documento
-  publicado da biblioteca.
-- A chave do token no localStorage é `meucardio.token`. Houve uma migração
+- **Primeiro rebranding (saída da marca institucional) concluído e verificado a
+  zero.** Varredura no repositório inteiro, nos arquivos binários rastreados e
+  no banco (88 itens das quatro frentes, mais a busca full-text sobre o corpo
+  dos documentos publicados): nenhuma ocorrência daquela marca. Foram
+  corrigidos, entre outros, o `<title>` da página, o nome do PWA, o pacote do
+  app Android (com `MainActivity.java` movido de diretório), a URL do Capacitor,
+  `DEPLOY.md`, `COBERTURA.md`, `backend/README.md`, a chave do localStorage e um
+  parágrafo de andaime que havia vazado para um documento publicado da
+  biblioteca.
+- **Segundo rebranding (para Corvia), feito em 28/07/2026 em fases.** Interface,
+  logo e assinatura "O caminho do coração"; `DOMAIN` e `public_url` — e é o
+  `public_url` que mais importa, porque dele saem as URLs de retorno do Stripe
+  (checkout, portal, cursos, telediagnóstico) e os links dos e-mails; certificados
+  emitidos para os dois domínios *antes* da virada, para não abrir janela sem
+  TLS; app Android com nome exibido e `appId` (`br.med.corvia`) novos; e, por
+  último, o desligamento do domínio antigo. **Não foi verificado a zero como o
+  primeiro** — os resíduos internos conhecidos estão listados em "Identidade do
+  produto".
+- A chave do token no localStorage ainda é a do nome anterior. Houve uma migração
   automática a partir da chave antiga em `frontend/src/lib/api.ts`, removida
   depois que a varredura de resíduos foi concluída — quem não abria o site
   desde então precisou entrar de novo, o que é esperado.
@@ -438,25 +472,25 @@ não refazer.
     pelo Rafael em 28/07/2026 como a tarefa seguinte à 23 do briefing 2, no
     **último lugar da fila**. Funcionalidade comercial: cursos de preparação
     para o Título de Especialista em Cardiologia, de parceiros externos
-    (negociação em andamento), vendidos por assinatura dentro do MeuCardio.
+    (negociação em andamento), vendidos por assinatura dentro da Corvia.
     **O que o sistema faz e o que não faz:**
     - **Não hospeda vídeo.** Aula ao vivo e gravada continuam no ambiente do
-      parceiro. O MeuCardio guarda, por curso, um link de acesso à aula ao vivo
+      parceiro. A Corvia guarda, por curso, um link de acesso à aula ao vivo
       e um link para as gravadas, e redireciona o aluno.
     - **Guarda o material de apoio.** Apostila e documento enviados pelo curso
       ficam arquivados aqui, no mesmo padrão de armazenamento de arquivo já
       usado no resto do sistema.
     - **Vincula ao conteúdo existente.** Cada curso, módulo ou aula precisa
       poder apontar para trilha de estudo e/ou caso clínico da plataforma
-      (Tarefa 11), para o aluno praticar sem sair do MeuCardio.
+      (Tarefa 11), para o aluno praticar sem sair da Corvia.
     **Cobrança — repasse com margem:**
-    - Cada curso tem preço definido pelo parceiro (X). O MeuCardio cobra
+    - Cada curso tem preço definido pelo parceiro (X). A Corvia cobra
       X + margem definida por nós e repassa X ao parceiro.
     - Via **Stripe Connect** (contas conectadas), com repasse automático na
       própria cobrança — nada de transferência manual.
     - **Preço e margem são por curso, configuráveis** — nunca fixados no código.
     - É **adicional** à assinatura de R$20/mês, não substitui: o médico pode
-      assinar só o MeuCardio, ou o MeuCardio mais um ou mais cursos.
+      assinar só a Corvia, ou a Corvia mais um ou mais cursos.
     - Nota fiscal dos dois lados está sendo tratada com o contador, não é
       decisão técnica — mas os registros internos precisam **separar receita
       própria de valor de repasse a terceiro**, senão o faturamento aparece
@@ -467,18 +501,18 @@ não refazer.
     cartão visualmente diferenciado **dentro do Painel**, não escondido em
     submenu, com nome do curso, frase de destaque (por exemplo índice de
     aprovação, *se o parceiro fornecer o dado*) e link direto para a página do
-    curso **dentro do MeuCardio**. Trocar o curso em destaque tem de ser fácil,
+    curso **dentro da Corvia**. Trocar o curso em destaque tem de ser fácil,
     e o espaço deve **sumir por inteiro quando não houver curso ativo** — sem
-    moldura vazia nem texto de exemplo no ar. Cadastrar `MeuCardio Curso` como
+    moldura vazia nem texto de exemplo no ar. Cadastrar `Corvia Curso` como
     exemplo.
     **Três bloqueios estruturais levantados antes de começar, já medidos:**
     1. `subscriptions.user_id` é **`unique=True`** — o banco impõe **uma
-       assinatura por médico**. "MeuCardio + um ou mais cursos" é impossível sem
+       assinatura por médico**. "Corvia + um ou mais cursos" é impossível sem
        migração que remova a restrição e acrescente discriminador de tipo e
        referência ao curso.
     2. O webhook separa os fluxos por `mode == "payment"`. Assinatura de curso
        também é `mode: "subscription"` e cairia no mesmo caminho da assinatura
-       do MeuCardio, sobrescrevendo o estado dela. Precisa de discriminação por
+       da Corvia, sobrescrevendo o estado dela. Precisa de discriminação por
        metadata, não por `mode`.
     3. **Trilhas de estudo e casos clínicos não existem** — a Tarefa 11 não foi
        construída. O vínculo pedido depende dela, então ou a 24 entra depois da
@@ -518,7 +552,7 @@ não refazer.
   criar) — este banco já teve `alembic_version` fora de sincronia.
 - Quando o Caddyfile ou um volume mudar, o `caddy` também entra no rebuild.
 - Dá para testar muita coisa sem Docker: a API responde em
-  `https://meucardio.med.br/api`, e o login de admin sai de
+  `https://corvia.med.br/api`, e o login de admin sai de
   `ADMIN_EMAIL`/`ADMIN_PASSWORD` do `.env`. Webhook do Stripe pode ser testado
   assinando o payload com o `STRIPE_WEBHOOK_SECRET` (HMAC-SHA256 de
   `timestamp.corpo`), que é exatamente o que o Stripe faz.
@@ -529,6 +563,8 @@ não refazer.
 - Nunca reproduzir o incidente do item "O que já foi feito" nº 1: sempre
   `alembic upgrade head` de verdade, nunca `stamp` sozinho, exceto quando o
   schema real já foi confirmado como equivalente.
-- O domínio de produção é `meucardio.med.br` — nunca usar variações como
-  `meucardio.br.br` ou domínios sem TLD completo (erro já cometido uma vez
-  na configuração do webhook Stripe).
+- O domínio de produção é `corvia.med.br` — nunca usar variações como
+  `corvia.br.br` ou domínios sem TLD completo (erro já cometido uma vez na
+  configuração do webhook Stripe). E **nunca voltar a usar o domínio anterior**:
+  ele foi desligado por risco jurídico, não por questão técnica, e qualquer
+  chamada a ele hoje falha no TLS — não é redirecionamento, é porta fechada.
