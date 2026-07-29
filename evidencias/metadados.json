@@ -614,5 +614,177 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "ressonancia-com-contraste-na-avaliacao-inicial-de-cardiomiopatia",
+    "statement": "Ressonância magnética cardíaca com contraste é recomendada em todo paciente com cardiomiopatia na avaliação inicial. Não é exame de exceção nem de segunda linha: entra na primeira avaliação, porque a caracterização tecidual muda a hipótese etiológica e o realce tardio pesa na estratificação de risco.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 ESC Guidelines for the management of cardiomyopathies",
+    "reference": "Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI: 10.1093/eurheartj/ehad194 — tabelas de recomendação, classe e nível conferidos no texto original",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia",
+      "ressonância magnética cardíaca",
+      "realce tardio",
+      "avaliação inicial"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cintilografia-com-tracador-osseo-na-suspeita-de-attr",
+    "statement": "Cintilografia com traçador ósseo — DPD, PYP ou HMDP — é recomendada em paciente com suspeita de amiloidose cardíaca por transtirretina, para auxiliar o diagnóstico. A ressalva que não está nesta linha e vale sempre: captação positiva só fecha ATTR com as três provas de proteína monoclonal normais, porque grau 2 ou 3 também aparece na amiloidose de cadeia leve.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 ESC Guidelines for the management of cardiomyopathies",
+    "reference": "Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI: 10.1093/eurheartj/ehad194 — tabelas de recomendação, classe e nível conferidos no texto original",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "amiloidose cardíaca",
+      "ATTR",
+      "cintilografia",
+      "DPD",
+      "medicina nuclear"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "aconselhamento-genetico-antes-e-depois-do-teste-em-cardiomiopatia",
+    "statement": "Aconselhamento genético antes e depois do teste é recomendado em todo indivíduo submetido a teste genético para cardiomiopatia. O aconselhamento é parte do teste, não etapa opcional que o segue — resultado devolvido sem ele transfere ao paciente e à família uma informação de risco que eles não têm como interpretar.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 ESC Guidelines for the management of cardiomyopathies",
+    "reference": "Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI: 10.1093/eurheartj/ehad194 — tabelas de recomendação, classe e nível conferidos no texto original",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia",
+      "teste genético",
+      "aconselhamento genético",
+      "rastreamento familiar"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cdi-so-com-expectativa-de-sobrevida-de-qualidade-superior-a-um-ano",
+    "statement": "O implante de cardiodesfibrilador só é recomendado em paciente com expectativa de sobrevida com boa qualidade superior a 1 ano. É critério de elegibilidade que antecede qualquer escore de risco arrítmico: sem essa expectativa, o dispositivo troca uma morte súbita por um processo de morrer mais longo.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 ESC Guidelines for the management of cardiomyopathies",
+    "reference": "Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI: 10.1093/eurheartj/ehad194 — tabelas de recomendação, classe e nível conferidos no texto original",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiodesfibrilador implantável",
+      "morte súbita",
+      "cardiomiopatia",
+      "elegibilidade"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "nao-implantar-cdi-com-arritmia-ventricular-incessante",
+    "statement": "Não é recomendado implantar cardiodesfibrilador em paciente com arritmia ventricular incessante enquanto a arritmia não estiver controlada. É recomendação contra, não adiamento por conveniência: o dispositivo implantado nesse cenário choca repetidamente sem tratar a causa.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 ESC Guidelines for the management of cardiomyopathies",
+    "reference": "Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI: 10.1093/eurheartj/ehad194 — tabelas de recomendação, classe e nível conferidos no texto original",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiodesfibrilador implantável",
+      "arritmia ventricular",
+      "não recomendado",
+      "cardiomiopatia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "avaliar-terapia-de-ressincronizacao-sempre-que-o-cdi-for-indicado",
+    "statement": "Quando há indicação de cardiodesfibrilador, é recomendado avaliar se o paciente também se beneficiaria de terapia de ressincronização cardíaca. A decisão é conjunta e no mesmo momento — descobrir a indicação de ressincronização depois do implante custa um segundo procedimento.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 ESC Guidelines for the management of cardiomyopathies",
+    "reference": "Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI: 10.1093/eurheartj/ehad194 — tabelas de recomendação, classe e nível conferidos no texto original",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiodesfibrilador implantável",
+      "ressincronização cardíaca",
+      "TRC",
+      "cardiomiopatia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "holter-anual-na-cardiomiopatia-arritmogenica",
+    "statement": "Monitorização ambulatorial do ECG por 24 horas, anual, é recomendada no paciente com cardiomiopatia arritmogênica do ventrículo direito, para auxiliar diagnóstico, manejo e estratificação de risco. A periodicidade é parte da recomendação: exame único não caracteriza a carga arrítmica de uma doença que progride.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 ESC Guidelines for the management of cardiomyopathies",
+    "reference": "Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI: 10.1093/eurheartj/ehad194 — tabelas de recomendação, classe e nível conferidos no texto original",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia arritmogênica",
+      "ARVC",
+      "Holter",
+      "estratificação de risco"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "betabloqueador-na-cardiomiopatia-arritmogenica-com-arritmia-ventricular",
+    "statement": "Betabloqueador é recomendado no paciente com cardiomiopatia arritmogênica do ventrículo direito que apresenta extrassístoles ventriculares, taquicardia ventricular não sustentada ou taquicardia ventricular.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 ESC Guidelines for the management of cardiomyopathies",
+    "reference": "Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI: 10.1093/eurheartj/ehad194 — tabelas de recomendação, classe e nível conferidos no texto original",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia arritmogênica",
+      "ARVC",
+      "betabloqueador",
+      "arritmia ventricular"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "imagem-multimodal-para-diferenciar-cardiomiopatia-restritiva",
+    "statement": "É recomendado usar imagem multimodal para diferenciar cardiomiopatia restritiva da cardiomiopatia hipertrófica e da dilatada com fisiologia restritiva. As três podem se apresentar com o mesmo padrão hemodinâmico, e a distinção muda etiologia, tratamento e rastreamento familiar.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 ESC Guidelines for the management of cardiomyopathies",
+    "reference": "Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI: 10.1093/eurheartj/ehad194 — tabelas de recomendação, classe e nível conferidos no texto original",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia restritiva",
+      "imagem multimodal",
+      "diagnóstico diferencial",
+      "cardiomiopatia"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
