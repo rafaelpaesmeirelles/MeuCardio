@@ -845,5 +845,27 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "torsades-de-pointes-qt-longo",
+    "title": "ECG — Torsades de pointes em QT longo",
+    "modality": "ECG",
+    "theme": "Síncope",
+    "file_path": "ecg/torsades-de-pointes-qt-longo.png",
+    "findings": "Traçado de 12 derivações com intervalo QT visivelmente prolongado nos complexos de base, seguido de taquicardia ventricular polimórfica com o padrão característico de 'torção de pontas' — a amplitude e a polaridade do QRS variam progressivamente ao redor da linha de base, visível de forma especialmente clara na tira de ritmo contínua (derivação II, na parte inferior).",
+    "teaching_points": "Torsades de pointes é a taquiarritmia associada ao QT longo — congênito ou, mais comumente na prática, adquirido por fármaco que prolonga a repolarização, distúrbio eletrolítico (hipocalemia, hipomagnesemia) ou bradicardia extrema. O episódio costuma ser autolimitado, terminando espontaneamente em ritmo sinusal — e é exatamente essa autolimitação que faz da síncope, não da parada cardíaca, a apresentação clínica mais comum: o paciente desmaia, recupera a consciência, e o ECG intercrise pode parecer normal se o QT não for medido com atenção. Quando não termina sozinho, degenera em fibrilação ventricular. O tratamento agudo de primeira linha é sulfato de magnésio intravenoso, mesmo com magnésio sérico normal, e a causa reversível (fármaco, eletrólito) deve ser corrigida.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Torsades_de_Pointes_TdP.png",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Jer5150, via Wikimedia Commons — CC BY-SA 3.0. Cortesia original: Jason E. Roediger, CCT, CRAT.",
+    "tags": [
+      "torsades de pointes",
+      "qt longo",
+      "síncope",
+      "taquicardia ventricular polimórfica",
+      "ecg"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
