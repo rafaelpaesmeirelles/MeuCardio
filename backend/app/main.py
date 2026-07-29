@@ -6,7 +6,7 @@ from app.api import (
     favorites, gallery, health, lab_tests, library, password_reset,
     prescriptions, round as round_api, search, service_orders, studies,
     timeline, billing, partner_courses, guidelines, indicadores, checklists, study_tracks,
-    exportacao, emergencia,
+    exportacao, emergencia, receituario,
 )
 from app.core.config import settings
 from app.core.security import assinante_ativo
@@ -47,7 +47,7 @@ ROUTERS_ASSINANTES = (
     ai.router, gallery.router, favorites.router, lab_tests.router, evidence.router,
     studies.router, prescriptions.router, documents.router, appointments.router,
     timeline.router, guidelines.router, indicadores.router, checklists.router, study_tracks.router,
-    exportacao.router, emergencia.router,
+    exportacao.router, emergencia.router, receituario.router,
 )
 
 for r in ROUTERS_LIVRES:
