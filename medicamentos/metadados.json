@@ -1426,7 +1426,7 @@
   },
   {
     "slug": "evolocumabe-e-alirocumabe-inibidores-de-pcsk9",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Evolocumabe e Alirocumabe (inibidores de PCSK9)",
     "drug_class": "Anticorpo monoclonal — inibidor da PCSK9 (pró-proteína convertase subtilisina/kexina tipo 9)",
     "mechanism": "Anticorpos monoclonais que neutralizam a PCSK9, proteína que se liga ao complexo LDL/receptor de LDL (LDL-R) induzindo sua degradação intra-hepatocitária; ao bloquear a PCSK9, aumentam a reciclagem e disponibilidade do LDL-R na superfície hepática, promovendo redução do LDL-c em até 60-70%; estatinas aumentam expressão de PCSK9 como mecanismo compensatório, justificando sinergia terapêutica",
@@ -1440,12 +1440,19 @@
       "Reações no local da injeção, sintomas gripais leves, raramente reações de hipersensibilidade"
     ],
     "dosing": {
-      "evolocumabe opcao1": "140 mg SC a cada 2 semanas",
-      "evolocumabe opcao2": "420 mg SC 1x/mês",
-      "alirocumabe opcao1": "75 mg SC a cada 2 semanas",
-      "alirocumabe opcao2": "150 mg SC a cada 2 semanas",
-      "via administracao": "Subcutânea (autoaplicação com caneta/seringa pré-cheia)",
-      "fonte": "Afya Endocrinologia — Inibidores da PCSK9: manual de instruções\n\nVERIFICAÇÃO HUMANA NECESSÁRIA quanto à **procedência**: a posologia acima se apoia em Afya — agregador ou portal de conteúdo, não documento primário. Isso **não afirma que os números estejam errados**; afirma que não são rastreáveis à bula registrada nem a diretriz, que é o critério deste acervo. Substituir a fonte e reconferir os valores antes de publicar."
+      "evolocumabe hipercolesterolemia primaria e dislipidemia mista": "Inclui a **hipercolesterolemia familiar heterozigótica**, em adultos e pediátricos **a partir de 10 anos**: **140 mg a cada 2 semanas ou 420 mg uma vez ao mês** — a bula afirma que as duas doses são **clinicamente equivalentes**.",
+      "evolocumabe hipercolesterolemia familiar homozigotica": "Adultos e pediátricos a partir de 10 anos: **420 mg uma vez ao mês.** Aqui **não há a alternativa de 140 mg quinzenais** — é a diferença que o verbete anterior não registrava.",
+      "evolocumabe doenca cardiovascular aterosclerotica estabelecida": "Adultos: **140 mg a cada 2 semanas ou 420 mg uma vez ao mês**, também clinicamente equivalentes.",
+      "evolocumabe quantas aplicacoes": "A caneta preenchida contém **140 mg**. A dose de **420 mg exige 3 aplicações** — consequência direta da apresentação registrada, e o detalhe que mais gera erro de dispensação no regime mensal.",
+      "evolocumabe ajustes": "**Sem ajuste de dose** por idade, etnia, sexo ou **peso corporal**. Não foi estudado na insuficiência hepática grave (Child-Pugh C).",
+      "alirocumabe inicial": "**75 mg por via subcutânea a cada 2 semanas** é a dose inicial habitual.",
+      "alirocumabe quando comecar mais alto": "Pacientes que precisam de **redução de LDL-C maior que 60%** podem iniciar com **150 mg a cada 2 semanas** ou **300 mg a cada 4 semanas (mensal)**.",
+      "alirocumabe ajuste": "Se for preciso reduzir mais o LDL-C em quem está em 75 mg quinzenais ou 300 mg mensais, ajustar para o **máximo de 150 mg a cada 2 semanas**. Avaliar os lípides **4 a 8 semanas** após o início ou a titulação.",
+      "alirocumabe cuidado no regime mensal": "No esquema de **300 mg a cada 4 semanas**, avaliar o LDL-C **imediatamente antes da próxima dose programada** — em alguns pacientes o LDL-C varia consideravelmente entre as doses nesse regime.",
+      "alirocumabe ajustes": "**Sem ajuste** por idade, peso, insuficiência hepática leve a moderada ou insuficiência renal leve a moderada. **Sem dados** na insuficiência hepática grave nem na renal grave. **Segurança e eficácia não estabelecidas em pediatria** — ao contrário do evolocumabe, que tem uso registrado a partir dos 10 anos.",
+      "alirocumabe dose esquecida": "Aplicar assim que possível e retomar o esquema prescrito.",
+      "via": "**Exclusivamente subcutânea**, com caneta ou seringa preenchida.",
+      "fonte": "Duas bulas brasileiras conferidas na íntegra: **REPATHA** (evolocumabe, Amgen Biotecnologia do Brasil Ltda., solução injetável) — **bula do profissional**, item 8; e **PRALUENT** (alirocumabe, Sanofi, solução injetável) — **bula do paciente**, seção de posologia, declarada aqui como tal por não ter sido obtida a do profissional. **A marcação de procedência está resolvida**: a fonte anterior era portal de conteúdo. Três lacunas do registro anterior foram preenchidas — o regime de **300 mg a cada 4 semanas** do alirocumabe, que não constava; a dose própria da **hipercolesterolemia familiar homozigótica** para o evolocumabe; e a divergência entre os dois quanto ao **uso pediátrico**."
     },
     "outcomes": {
       "Evidencia pivotal fourier": "Estudo FOURIER (evolocumabe, pacientes com evento CV prévio, LDL-c>70mg/dL em estatina de alta dose): redução do desfecho cardiovascular composto, benefício mais pronunciado em LDL-c>100mg/dL mas mantido mesmo em <80mg/dL",
