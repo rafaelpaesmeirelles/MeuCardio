@@ -4,7 +4,7 @@ slug: nebivolol-cloridrato
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["Nebivolol (BYSTOLIC) tablets — rótulo aprovado pelo FDA, indicação de hipertensão arterial", "Flather MD, Shibata MC, Coats AJS, et al. Randomized trial to determine the effect of nebivolol on mortality and cardiovascular hospital admission in elderly patients with heart failure (SENIORS). Eur Heart J. 2005;26(3):215-225. DOI: 10.1093/eurheartj/ehi115. PMID: 15642700"]
+source_refs: ["Bula do NEBILET (cloridrato de nebivolol), bula do paciente, conferida em 29/07/2026 — texto registrado no Brasil", "Nebivolol (BYSTOLIC) tablets — rótulo aprovado pelo FDA, indicação de hipertensão arterial", "Flather MD, Shibata MC, Coats AJS, et al. Randomized trial to determine the effect of nebivolol on mortality and cardiovascular hospital admission in elderly patients with heart failure (SENIORS). Eur Heart J. 2005;26(3):215-225. DOI: 10.1093/eurheartj/ehi115. PMID: 15642700"]
 legacy_source: "medicamentos/banco-de-medicamentos-nebivolol.md"
 ---
 
@@ -31,7 +31,7 @@ Metabolizado via CYP2D6 com polimorfismo genético significativo; biodisponibili
 - **icfer dose maxima**: 10 mg 1x/dia
 - **insuficiencia hepatica**: Contraindicado — dados limitados
 - **insuficiencia renal grave creatinina maior 250**: Não recomendado — sem experiência clínica
-- **fonte**: VERIFICAÇÃO HUMANA NECESSÁRIA — a indicação em insuficiência cardíaca **não existe na rotulagem norte-americana**, onde o nebivolol é aprovado apenas para hipertensão; ela vem da rotulagem europeia e brasileira. Conferir a bula registrada na ANVISA para a indicação, a faixa etária e a titulação
+- **fonte**: **confirmado em 29/07/2026** pela bula do NEBILET (cloridrato de nebivolol), registrada no Brasil — texto literal: *"insuficiência cardíaca em idosos (acima de 70 anos), com fração de ejeção ≤ 35%"*. A indicação, a faixa etária (>70 anos) e o corte de FEVE que já constavam aqui **conferem exatamente** com a bula brasileira. Ela **não existe na rotulagem norte-americana**, onde o nebivolol é aprovado só para hipertensão — a bula brasileira segue a europeia nesse ponto
 
 ## Evidencia pivotal seniors
 2.128 pacientes ≥70 anos (média 76 anos) com história de IC — hospitalização por IC no ano anterior **ou** FEVE conhecida ≤35% —, randomizados para nebivolol titulado de 1,25 mg a 10 mg 1x/dia (1.067) ou placebo (1.061), com seguimento médio de 21 meses. FEVE média de 36%, com **35% dos pacientes com FEVE acima de 35%**. Desfecho composto de morte por qualquer causa ou internação cardiovascular: **31,1% com nebivolol vs. 35,3% com placebo — HR 0,86 (IC95% 0,74-0,99)**
