@@ -779,5 +779,28 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "artefato-de-strain-longitudinal-global-em-cardio-oncologia",
+    "title": "Strain longitudinal global — reconhecendo artefato de rastreamento",
+    "modality": "Ecocardiograma",
+    "theme": "Cardio-oncologia",
+    "file_path": "ecocardiograma/artefato-de-strain-longitudinal-global-em-cardio-oncologia.jpg",
+    "findings": "Análise de strain por speckle tracking bidimensional num paciente assintomático em vigilância de cardiotoxicidade, com FEVE biplanar de 62% (normal) e GLS automático relatado em −14% (abaixo do normal, que é mais negativo que −18% a −20%). O mapa polar (bull's eye, painel 'a') mostra heterogeneidade regional de strain concentrada de forma desproporcional nos segmentos basais — padrão incomum para um paciente sem doença estrutural conhecida. Nas curvas de strain dos três planos (4 câmaras, 2 câmaras e apical longitudinal, painéis 'b'), várias curvas mostram um alongamento inicial antes do encurtamento sistólico — achado que pode ocorrer em área de cicatriz miocárdica, mas que seria incomum num ventrículo esquerdo aparentemente normal.",
+    "teaching_points": "O GLS de −14% aqui **não reflete cardiotoxicidade real** — é artefato de rastreamento (tracking). Os dois sinais que apontam para artefato, e não para disfunção verdadeira: (1) heterogeneidade regional de magnitude incomum, concentrada nos segmentos basais, sem um padrão de doença coerente; e (2) o alongamento pré-sistólico em múltiplas curvas, que seria esperado em área de cicatriz, não num coração sem lesão conhecida. Depois de revisar e corrigir o rastreamento manualmente, o GLS deste mesmo paciente voltou ao normal. A lição prática para quem monitoriza GLS seriado durante quimioterapia cardiotóxica: **um GLS isoladamente anormal, sobretudo com padrão regional incomum, deve ser conferido pela revisão manual do traçado antes de mudar conduta** — trocar ou suspender terapia oncológica com base num artefato tem custo real para o tratamento do câncer.",
+    "source_name": "Current Oncology Reports (PMC, acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9054886/",
+    "license": "CC BY 4.0",
+    "attribution": "Marwick TH. Global Longitudinal Strain Monitoring to Guide Cardioprotective Medications During Anthracycline Treatment. Curr Oncol Rep. 2022;24(6):687-694. DOI: 10.1007/s11912-022-01242-y. PMID: 35239105 — Figura 1, licenciada sob CC BY 4.0 (Creative Commons Attribution 4.0 International).",
+    "tags": [
+      "strain longitudinal global",
+      "gls",
+      "cardio-oncologia",
+      "cardiotoxicidade",
+      "artefato de rastreamento",
+      "speckle tracking"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
