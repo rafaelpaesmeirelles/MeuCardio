@@ -3197,7 +3197,7 @@
   },
   {
     "slug": "ticagrelor",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Ticagrelor",
     "brand_names": [
       "Brilinta",
@@ -3224,9 +3224,20 @@
       "Sangramentos, cefaleia, dispneia (efeito mediado por adenosina), aumento de pausas ao Holter, elevação de ácido úrico, elevação transitória de creatinina (efeito de adenosina no aparelho justaglomerular)"
     ],
     "dosing": {
-      "ataque": "Dose de ataque de 2 comprimidos (180 mg)",
-      "manutencao": "90 mg 2x/dia por 12 meses, associado ao AAS",
-      "fonte": "Afya Cardiologia\n\nVERIFICAÇÃO HUMANA NECESSÁRIA quanto à **procedência**: a posologia acima se apoia em Afya — agregador ou portal de conteúdo, não documento primário. Isso **não afirma que os números estejam errados**; afirma que não são rastreáveis à bula registrada nem a diretriz, que é o critério deste acervo. Substituir a fonte e reconferir os valores antes de publicar."
+      "sca ataque": "**Dose única de 180 mg** (dois comprimidos de 90 mg) para iniciar o tratamento na síndrome coronariana aguda.",
+      "sca manutencao": "**90 mg duas vezes ao dia.** A bula diz **\"por pelo menos 12 meses\"**, e não \"por 12 meses\" — a interrupção antes disso depende de indicação clínica, não do calendário.",
+      "avc isquemico agudo ou ait": "Mesma dose de ataque de **180 mg**, seguida de **90 mg duas vezes ao dia por 30 dias**.",
+      "aas concomitante": "Quem usa ticagrelor deve tomar também **AAS 75 a 150 mg por dia** como manutenção. Dose de ataque de AAS é recomendada nos pacientes com SCA, AVC isquêmico agudo ou AIT.",
+      "quando suspender o aas": "A descontinuação do AAS **deve ser considerada após 3 meses** nos pacientes com SCA submetidos a ICP que tenham risco aumentado de sangramento.",
+      "troca de antiagregante": "Ao trocar outro antiplaquetário por ticagrelor, administrar a **primeira dose 24 horas após a última dose do fármaco anterior**.",
+      "dose esquecida": "Tomar a **próxima dose no horário programado** — não dobrar.",
+      "modo de usar": "Via oral, com ou sem alimento. **Não partir nem mastigar.** Para quem não engole o comprimido inteiro, pode ser triturado a pó fino, misturado em meio copo de água e ingerido imediatamente, lavando o copo com mais meio copo; a mistura também pode ir por sonda nasogástrica CH8 ou maior, lavando a sonda com água depois.",
+      "idosos": "Sem ajuste de dose.",
+      "ajuste renal": "**Sem ajuste** na insuficiência renal.",
+      "ajuste hepatico": "Insuficiência hepática **leve**: sem ajuste. **Moderada**: ajuste não é recomendado, mas usar com cautela, e as informações disponíveis são limitadas. **Grave: contraindicado** — não foi estudado.",
+      "pediatria": "Segurança e eficácia **não estabelecidas abaixo de 18 anos**.",
+      "sobre a dose de 60 mg": "A bula brasileira conferida é a da apresentação de **90 mg**, e a posologia de 60 mg 2x/dia do PEGASUS **não consta da seção de posologia** dela. O que a bula registra sobre 60 mg está nos resultados de eficácia, e é desfavorável: sem redução do desfecho primário composto e com aumento do risco de sangramento em pacientes clinicamente estáveis, ou seja, há mais de 2 anos do infarto ou mais de 1 ano após o fim do tratamento prévio com inibidor do receptor de ADP.",
+      "fonte": "Bula profissional brasileira do BRILINTA (ticagrelor, AstraZeneca do Brasil Ltda., comprimido revestido 90 mg), item 8 — Posologia e Modo de Usar — conferida na íntegra. **A marcação anterior está resolvida**: a posologia vinha de portal de conteúdo (Afya) e agora vem da bula registrada. Dois ajustes de conteúdo vieram junto: a duração é \"pelo menos 12 meses\", não \"12 meses\", e a dose de AAS que acompanha (75 a 150 mg) não constava."
     },
     "outcomes": {
       "Evidencia pivotal plato": "- **desenho**: Estudo PLATO randomizou 18.624 pacientes hospitalizados com SCA (com ou sem supra de ST) para ticagrelor vs. clopidogrel, duplo-cego, seguimento até 12 meses - **desfecho primario**: Redução de 11,7% para 9,8% com ticagrelor comparado a clopidogrel (HR 0,84; p<0,001) - **desfechos secundarios**: Redução de IAM (5,8% vs 6,9%; HR 0,84; p=0,005) e morte por causas vasculares (4,0% vs 5,1%; HR 0,79; p=0,001) - **mortalidade geral**: Único entre os principais estudos de antiplaquetários mais potentes a demonstrar redução de mortalidade por todas as causas: 4,5% vs 5,9% com clopidogrel (redução de 22%; p<0,001) - **sangramento**: Sangramentos maiores gerais sem diferença estatística (11,6% vs 11,2%; p=0,43); porém aumento de sangramentos maiores não relacionados a cirurgia de revascularização (4,5% vs 3,8%; p=0,03) - **efeitos adversos notaveis**: Maior incidência de dispneia (13,8% vs 7,8%; p<0,001) e pausas ventriculares ≥3 segundos na primeira semana de Holter (5,8% vs 3,6%; p=0,01), sem diferença no Holter de 30 dias - **fonte**: Cardiol.br — Principais Estudos"
