@@ -347,8 +347,9 @@ da colchicina. Todo o resto que foi construído está commitado, no ar e testado
 em produção. As demais pendências são trabalho novo ou decisão do Rafael.
 
 ### Fila, na ordem definida pelo Rafael em 29/07/2026
-1. **Ampliar a busca para as quatro frentes JSON** — item 7 de "Trabalho novo".
-   Backend autorizado para esta tarefa.
+1. **Ampliar a busca E o RAG para as quatro frentes JSON** — item 7 de
+   "Trabalho novo". Backend autorizado para esta tarefa. Inclui o defeito do
+   aviso de verificação do `rag.py`, que hoje nunca dispara.
 2. **Voltar às marcações `VERIFICAÇÃO HUMANA NECESSÁRIA`** — 46 em 37 arquivos
    de `content/`, o grosso em Farmacologia. Método que está funcionando: bula do
    detentor do registro no Brasil, baixada com `curl` e User-Agent de browser
@@ -473,9 +474,50 @@ em produção. As demais pendências são trabalho novo ou decisão do Rafael.
      tela é o `statement`, que é texto longo, não um título.
    - Todas as quatro filtram por `published`, então a busca precisa filtrar
      igual — senão expõe o que está retido esperando aval.
-   - `services/rag.py` também consulta `search_vector` de `documents` (linhas
-     146-147). Ampliar a busca não muda o RAG automaticamente; decidir se a IA
-     clínica também deve enxergar as quatro frentes é pergunta à parte.
+   - **O RAG entra na mesma tarefa — decisão do Rafael em 29/07/2026:** o
+     Assistente clínico também precisa enxergar galeria, exames, evidências e
+     estudos, não só documentos. `services/rag.py` faz busca híbrida (léxica
+     pelo `search_vector` de `documents`, linhas 146-147, mais semântica por
+     embedding), então ampliar só a busca textual deixaria a IA cega para as
+     quatro frentes.
+
+     **Isto é maior que ampliar a busca, e por um motivo estrutural:**
+     `document_chunks.document_id` é FK para `documents.id` com
+     `ON DELETE CASCADE` (`models/rag.py`). A tabela de trechos está amarrada a
+     uma única tabela de origem. Indexar as quatro frentes exige decidir entre
+     origem polimórfica (`source_type` + `source_id`, perdendo a integridade
+     referencial), tabela de trechos por frente, ou documento-sombra. É decisão
+     de esquema, não ajuste de consulta — decidir com o Rafael antes de escrever.
+
+     Outros três pontos medidos:
+     - `indexar_documento()` divide `doc.body_md`, que é markdown com seções
+       `##`. As quatro frentes **não têm corpo em markdown** — são campos
+       estruturados. `dividir()` não se aplica; cada frente precisa da própria
+       composição de texto. Boa parte dos itens vira **um único trecho** (um
+       `statement` de evidência é um parágrafo — fatiar não faz sentido).
+     - `indexar_tudo()` percorre só `Document`. Custo de embedding para as quatro
+       frentes é pequeno perto do que já existe: 103 itens contra 1328 trechos
+       já indexados.
+     - `montar_contexto()` monta a citação a partir de `slug` + `titulo`. Como
+       **evidências não tem título**, a IA não teria como citar a fonte no
+       formato atual. Mesmo obstáculo de esquema da busca, agora afetando o que
+       o médico lê como referência.
+
+   - **DEFEITO ENCONTRADO em 29/07/2026, corrigir junto: o aviso de conteúdo não
+     verificado do RAG nunca dispara.** `rag.py` linha 205 compara
+     `doc.review_status == "verificacao_humana_necessaria"` para acrescentar
+     "(ATENÇÃO: documento pendente de verificação humana)" ao cabeçalho do
+     trecho. Esse valor **não existe** no vocabulário de `documents.review_status`
+     — medido no banco: só `pendente_revisao` (145) e `revisado` (118). O valor
+     pertence a outro domínio, o de calculadoras (`services/calculators.py`),
+     onde é status de cálculo, não de revisão de documento.
+     O sinal real está em **`documents.gaps`**, o array que o importador
+     preenche com o texto literal `VERIFICAÇÃO HUMANA NECESSÁRIA` — **38
+     documentos** o têm hoje —, e `rag.py` **nunca lê `gaps`**.
+     Consequência: a IA clínica pode citar documento que carrega marcação
+     explícita de verificação **sem nenhum aviso**. A correção é trocar a
+     condição por `if t["gaps"]:` e trazer `gaps` no dicionário do trecho em
+     `recuperar()`.
 
 ### Recado entre sessões (29/07/2026)
 Há **duas sessões trabalhando neste repositório ao mesmo tempo**, com divisão
