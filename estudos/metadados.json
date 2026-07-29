@@ -930,5 +930,55 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "early-tavr-troca-valvar-precoce-na-estenose-aortica-grave-assintomatica",
+    "title": "EARLY TAVR — Troca valvar aórtica transcateter precoce versus vigilância na estenose aórtica grave assintomática",
+    "study_type": "ensaio_clinico",
+    "authors": "Généreux P, Schwartz A, Oldemeyer JB, et al.",
+    "journal": "New England Journal of Medicine",
+    "year": 2025,
+    "doi": "10.1056/NEJMoa2405880",
+    "pmid": "39466903",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39466903/",
+    "summary": "Ensaio randomizado em 75 centros dos Estados Unidos e Canadá, com 901 pacientes com estenose aórtica grave **assintomática** — idade média de 76 anos, 83,6% de baixo risco cirúrgico. Comparou TAVI transfemoral precoce com válvula expansível por balão (455 pacientes) contra vigilância clínica (446). Seguimento mediano de 3,8 anos.",
+    "key_findings": "Desfecho primário composto de morte, AVC ou hospitalização não programada por causa cardiovascular: 26,8% (122) com TAVI precoce contra 45,3% (202) com vigilância. Por componente: morte 8,4% contra 9,2%; AVC 4,2% contra 6,7%; e hospitalização cardiovascular não programada 20,9% contra 41,7% — é este último que carrega quase toda a diferença. **87% do braço de vigilância acabou sendo submetido a troca valvar** ao longo do seguimento.",
+    "clinical_implications": "Desloca a decisão na estenose aórtica grave assintomática de 'esperar o sintoma' para 'intervir antes dele', num paciente de baixo risco cirúrgico. Mas o número que mais orienta a conversa com o paciente é o 87%: em quase todos, a vigilância adiou a operação, não a evitou — e o adiamento veio ao custo de dobrar a hospitalização cardiovascular. A mortalidade, no entanto, não diferiu de forma expressiva no período.",
+    "limitations": "O ganho é dirigido pela hospitalização não programada, componente mais sujeito a viés em ensaio sem cego — saber-se sob vigilância pode alterar o limiar de internar. Mortalidade e AVC não mostraram diferença expressiva em 3,8 anos. População de baixo risco cirúrgico e anatomia adequada a TAVI transfemoral, o que não se estende a alto risco nem a indicação cirúrgica convencional. HAZARD RATIO E VALOR DE P DO DESFECHO PRIMÁRIO: VERIFICAÇÃO HUMANA NECESSÁRIA — os percentuais e o n foram obtidos em fontes secundárias concordantes e a citação foi confirmada no PubMed, mas o HR com intervalo de confiança não estava disponível nas fontes consultadas.",
+    "theme": "Valvopatias",
+    "tags": [
+      "estenose aórtica",
+      "assintomática",
+      "TAVI",
+      "intervenção precoce",
+      "EARLY TAVR"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "manage-dabigatrana-apos-lesao-miocardica-em-cirurgia-nao-cardiaca",
+    "title": "MANAGE — Dabigatrana após lesão miocárdica em cirurgia não cardíaca",
+    "study_type": "ensaio_clinico",
+    "authors": "Devereaux PJ, Duceppe E, Guyatt G, et al.",
+    "journal": "The Lancet",
+    "year": 2018,
+    "doi": "10.1016/S0140-6736(18)30832-8",
+    "pmid": "29900874",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29900874/",
+    "summary": "Ensaio internacional, randomizado e controlado por placebo, com 1.754 pacientes que apresentaram **lesão miocárdica após cirurgia não cardíaca** — a condição que o VISION caracterizou e que é assintomática na maioria dos casos. Dabigatrana 110 mg por via oral duas vezes ao dia contra placebo: 877 em cada braço.",
+    "key_findings": "Desfecho primário composto de complicação vascular maior — morte vascular, infarto não fatal, AVC não hemorrágico, trombose arterial periférica, amputação e tromboembolismo venoso sintomático: 11% (97 de 877) com dabigatrana contra 15% (133 de 877) com placebo — HR 0,72; IC 95% 0,55–0,93; p = 0,01. Sangramento: 3% (29) contra 4% (31) — HR 0,92; IC 95% 0,55–1,53; p = 0,76, sem diferença.",
+    "clinical_implications": "É o complemento terapêutico do VISION: aquele caracterizou a lesão miocárdica pós-operatória como entidade prognóstica, este mostra que ela é **acionável**. Dá base à recomendação, na diretriz ESC 2022, de considerar dabigatrana 110 mg duas vezes ao dia em paciente com lesão miocárdica pós-operatória e baixo risco de sangramento, a partir de cerca de uma semana da cirurgia. Detectar a lesão deixa de ser exercício prognóstico e passa a abrir uma conduta.",
+    "limitations": "Alta taxa de descontinuação do fármaco em ambos os braços, o que atenua o efeito estimado e é a principal fragilidade apontada. O desfecho é composto e inclui componentes de peso clínico desigual. Dose de 110 mg duas vezes ao dia, inferior à usada na fibrilação atrial — o resultado não se estende a outras doses nem a outros anticoagulantes. Não define por quanto tempo manter o tratamento.",
+    "theme": "Perioperatório",
+    "tags": [
+      "lesão miocárdica pós-operatória",
+      "MINS",
+      "dabigatrana",
+      "MANAGE",
+      "perioperatório"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
