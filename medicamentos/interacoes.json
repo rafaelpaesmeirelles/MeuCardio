@@ -490,5 +490,65 @@
     "conduta": "Administrar concomitantemente apenas sob supervisão médica, com monitoração dos níveis séricos de lítio. Se houver tiazídico associado, o risco é maior, porque as tiazidas reduzem a depuração renal do lítio.",
     "fonte": "Bula profissional do MICARDIS HCT (telmisartana + hidroclorotiazida, Boehringer Ingelheim), seção de interações medicamentosas.",
     "review_status": "revisado"
+  },
+  {
+    "slug": "bosentana-contraceptivo-hormonal",
+    "farmacos": [
+      "bosentana"
+    ],
+    "classe_oposta": "contraceptivo hormonal (oral, injetável, transdérmico ou implantável)",
+    "gravidade": "grave",
+    "efeito": "Por interação farmacocinética, a bosentana pode tornar o contraceptivo hormonal ineficaz — em qualquer via de administração. Como a bosentana é teratogênica e contraindicada na gravidez, a falha contraceptiva é a via mais provável de exposição fetal.",
+    "conduta": "O contraceptivo hormonal não pode ser o único método. Usar método fiável adicional ou alternativo, e realizar teste de gravidez mensal durante o tratamento. Em caso de dúvida sobre o aconselhamento, a fonte recomenda consulta com ginecologista.",
+    "fonte": "Resumo das Características do Medicamento (RCM) da EMA, em português do TRACLEER (bosentano, Janssen-Cilag), secções 4.5 e 4.6.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "bosentana-ciclosporina",
+    "farmacos": [
+      "bosentana"
+    ],
+    "classe_oposta": "ciclosporina A",
+    "gravidade": "contraindicada",
+    "efeito": "O uso concomitante de ciclosporina A está entre as contraindicações formais da bosentana.",
+    "conduta": "Não associar.",
+    "fonte": "Resumo das Características do Medicamento (RCM) da EMA, em português do TRACLEER (bosentano, Janssen-Cilag), secção 4.3 (Contraindicações).",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "acido-bempedoico-sinvastatina",
+    "farmacos": [
+      "acido-bempedoico"
+    ],
+    "classe_oposta": "sinvastatina acima de 40 mg por dia",
+    "gravidade": "contraindicada",
+    "efeito": "O ácido bempedoico aumenta a exposição à sinvastatina, e com ela o risco de toxicidade muscular.",
+    "conduta": "Contraindicado acima de 40 mg de sinvastatina por dia. Abaixo desse teto a associação é permitida. Vale igualmente para o ácido bempedoico isolado e para a associação com ezetimiba.",
+    "fonte": "Resumo das Características do Medicamento (RCM) da EMA, em português do NILEMDO (ácido bempedoico) e do NUSTENDI (ácido bempedoico + ezetimiba), secção 4.3 em ambos — os dois trazem a mesma contraindicação.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "edoxabana-outro-anticoagulante",
+    "farmacos": [
+      "edoxabana"
+    ],
+    "classe_oposta": "qualquer outro anticoagulante (HNF, HBPM como enoxaparina ou dalteparina, derivados da heparina como fondaparinux, e anticoagulantes orais como varfarina, dabigatrana, rivaroxabana ou apixabana)",
+    "gravidade": "contraindicada",
+    "efeito": "Anticoagulação somada, com risco hemorrágico aditivo.",
+    "conduta": "Contraindicado, exceto na circunstância específica de troca de terapêutica anticoagulante, quando as duas podem coexistir pelo tempo previsto para a transição.",
+    "fonte": "Resumo das Características do Medicamento (RCM) da EMA, em português do LIXIANA (edoxabano, Daiichi Sankyo), secção 4.3 (Contraindicações).",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "mavacamten-inibidor-cyp2c19",
+    "farmacos": [
+      "mavacamten"
+    ],
+    "classe_oposta": "inibidor do CYP2C19 (e o próprio genótipo de metabolizador fraco)",
+    "gravidade": "grave",
+    "efeito": "A eliminação do mavacamteno depende do CYP2C19: a semivida se prolonga de tal forma que a depuração completa passa de cerca de 45 dias no metabolizador normal para cerca de 115 dias no metabolizador fraco.",
+    "conduta": "Consequência prática registrada na própria rotulagem: a contracepção deve ser mantida por 6 meses após a descontinuação, prazo dimensionado pelo pior cenário metabólico. Considerar o estado do CYP2C19 ao planejar interrupção ou gravidez.",
+    "fonte": "Resumo das Características do Medicamento (RCM) da EMA, em português do CAMZYOS (mavacamten, Bristol-Myers Squibb), secções 4.4, 4.6 e 5.2.",
+    "review_status": "revisado"
   }
 ]

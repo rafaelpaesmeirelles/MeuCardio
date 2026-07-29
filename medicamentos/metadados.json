@@ -76,7 +76,9 @@
     },
     "references": [
       "Bula NUSTENDI (ácido bempedoico + ezetimiba) · ANVISA/Medpedia · https://www.medpedia.com.br/wp-content/uploads/2025/06/Bula-Nustendi.pdf"
-    ]
+    ],
+    "pregnancy": "**Contraindicado na gravidez.** O mecanismo é o motivo declarado: o ácido bempedoico **diminui a síntese de colesterol** e possivelmente de outros derivados necessários ao desenvolvimento normal do feto, podendo causar dano fetal. Dados em grávidas são limitados ou inexistentes, e os estudos em animais revelaram toxicidade reprodutiva. Deve ser **descontinuado antes da concepção**, ou assim que a gravidez for planejada ou reconhecida; mulher com potencial para engravidar deve usar contracepção eficaz durante o tratamento. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do NILEMDO (ácido bempedoico, Daiichi Sankyo). Fonte europeia, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil disponível nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer.",
+    "lactation": "**Amamentação pode ser considerada — exceção real dentro dos hipolipemiantes, e sustentada por número.** O ácido bempedoico e seu metabólito ativo são excretados no leite humano em quantidades **muito baixas**, com dose relativa do lactente (*relative infant dose*, RID) de **cerca de 0,5%**; em doses terapêuticas, **não são esperados efeitos** no lactente. A fonte admite o uso durante a amamentação, ponderando o benefício para a criança contra o benefício da terapêutica para a mulher. Contraste que vale registrar: as estatinas do acervo vão de restrição ampla a **categoria X**, e o ácido bempedoico — contraindicado na gravidez pelo mesmo mecanismo — é liberado com ressalva na lactação. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do NILEMDO (ácido bempedoico, Daiichi Sankyo). Fonte europeia, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil disponível nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer."
   },
   {
     "slug": "adenosina",
@@ -531,7 +533,9 @@
       "Bosentan — rótulo aprovado pelo FDA, DailyMed SPL setid 8444da17-6c31-492b-8842-93740f083d9d",
       "Rubin LJ et al. Bosentan Therapy for Pulmonary Arterial Hypertension (BREATHE-1). N Engl J Med. 2002;346(12):896-903.",
       "Safety and tolerability of bosentan — PMC review"
-    ]
+    ],
+    "pregnancy": "**Contraindicada na gravidez**, com o programa de prevenção mais elaborado do acervo. Os estudos em animais demonstraram **teratogenicidade e embriotoxicidade**; não há dados confiáveis em gestantes. Antes de iniciar em mulher com potencial para engravidar: confirmar a ausência de gravidez, aconselhar sobre contracepção fiável e iniciá-la. **O ponto que mais escapa na prática:** a bosentana pode **tornar ineficazes os contraceptivos hormonais** por interação farmacocinética — oral, injetável, transdérmico ou implantável —, de modo que o hormonal **não pode ser o único método**; é preciso um método adicional ou alternativo, e a fonte recomenda consulta com ginecologista em caso de dúvida. Exige ainda **testes de gravidez mensais durante o tratamento**, tanto pela possível falha da contracepção quanto porque a **hipertensão pulmonar se deteriora gravemente com a gravidez**. Registro à parte, da mesma secção: em estudo clínico de função testicular na HAP, **6 de 24 homens (25%) tiveram queda de pelo menos 50% na concentração de espermatozoides aos 6 meses**, e não se pode excluir efeito prejudicial sobre a espermatogênese. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do TRACLEER (bosentano, Janssen-Cilag). Fonte europeia, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil disponível nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer.",
+    "lactation": "**Amamentação não recomendada.** Um relato de caso descreve a presença de bosentana no leite humano **em concentração baixa**, mas a informação sobre efeitos no lactente é insuficiente e o risco não pode ser excluído. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do TRACLEER (bosentano, Janssen-Cilag). Fonte europeia, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil disponível nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer."
   },
   {
     "slug": "candesartana-cilexetila",
@@ -1153,7 +1157,9 @@
       "toranja": "**Não tomar suco de toranja** junto com a dronedarona.",
       "dose esquecida": "Tomar a próxima dose no horário habitual, **sem duplicar**.",
       "fonte": "MULTAQ (dronedarona) — Resumo das Características do Medicamento aprovado pela **EMA**, versão em português, seções de posologia e composição, conferidas na íntegra. **Rotulagem europeia, não brasileira.** A dose de 400 mg foi confirmada na seção de descrição da substância ativa do próprio documento, não presumida."
-    }
+    },
+    "pregnancy": "**Não recomendada na gravidez, nem em mulher com potencial para engravidar que não use contracepção.** Não há dados, ou são limitados, sobre uso em gestantes; os estudos em animais revelaram toxicidade reprodutiva. Exige **confirmar que a paciente não está grávida antes de iniciar**, e contracepção eficaz durante o tratamento **e por 7 dias após a última dose**. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do MULTAQ (dronedarona, Sanofi). Fonte europeia, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil disponível nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer.",
+    "lactation": "**Não amamentar durante o tratamento e por 7 dias — cerca de 5 semividas — após a última dose.** Desconhece-se se a dronedarona e seus metabólitos são excretados no leite humano; os dados em animais **revelaram excreção da dronedarona e de seus metabólitos no leite**, e o risco para o recém-nascido não pode ser excluído. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do MULTAQ (dronedarona, Sanofi). Fonte europeia, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil disponível nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer."
   },
   {
     "slug": "edoxabana",
@@ -1196,7 +1202,9 @@
       "Edoxaban tablets (SAVAYSA) — rótulo aprovado pelo FDA",
       "Giugliano RP, Ruff CT, Braunwald E, et al. Edoxaban versus warfarin in patients with atrial fibrillation (ENGAGE AF-TIMI 48). N Engl J Med. 2013;369(22):2093-2104. DOI: 10.1056/NEJMoa1310907",
       "Bula profissional de LIXIANA (edoxabana), Daiichi Sankyo Brasil Farmacêutica Ltda., seção 8 — Posologia e modo de usar. Documento obtido no site do detentor do registro."
-    ]
+    ],
+    "pregnancy": "**Contraindicada na gravidez** — três motivos somados e declarados: toxicidade reprodutiva potencial (vista em animais), o **risco intrínseco de hemorragia**, e a **evidência de que a edoxabana atravessa a placenta**. Segurança e eficácia não foram estabelecidas em gestantes, e a mulher com potencial para engravidar deve evitar engravidar durante o tratamento. Comparação útil dentro da classe: a **apixabana é categoria B e apenas \"não recomendada\"**, enquanto a edoxabana é contraindicada — os anticoagulantes orais diretos não têm rotulagem uniforme na gestação. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do LIXIANA (edoxabano, Daiichi Sankyo). Fonte europeia, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil disponível nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer.",
+    "lactation": "**Contraindicada na amamentação.** Os dados em animais indicam que a edoxabana **é excretada no leite**, e a segurança em lactantes não foi estabelecida. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do LIXIANA (edoxabano, Daiichi Sankyo). Fonte europeia, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil disponível nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer."
   },
   {
     "slug": "empagliflozina",
@@ -1833,7 +1841,9 @@
       "Idarucizumab in dabigatran-treated patients with acute stroke: a review and clinical update · Frontiers in Neurology · https://pmc.ncbi.nlm.nih.gov/articles/PMC11137220/",
       "Pollack CV Jr et al. Idarucizumab for Dabigatran Reversal — Full Cohort Analysis. N Engl J Med. 2017;377(5):431-441.",
       "Bula de PRAXBIND (idarucizumabe, solução injetável 50 mg/mL), Boehringer Ingelheim do Brasil Química e Farmacêutica Ltda. — apresentação, indicações e posologia."
-    ]
+    ],
+    "pregnancy": "**Pode ser utilizado na gravidez se o benefício clínico esperado superar o risco potencial** — é o único fármaco deste lote cuja rotulagem é permissiva, e o motivo é o uso a que se destina: **não foram realizados estudos de toxicidade reprodutiva e do desenvolvimento**, justamente pela natureza do produto e pela sua utilização clínica pretendida, a reversão de emergência da dabigatrana. Não há dados em grávidas. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do PRAXBIND (idarucizumab, Boehringer Ingelheim). Fonte europeia, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil disponível nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer.",
+    "lactation": "**Dado ausente, sem recomendação.** A fonte registra apenas que **se desconhece** se o idarucizumabe ou seus metabólitos são excretados no leite humano — não orienta suspender nem liberar a amamentação. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do PRAXBIND (idarucizumab, Boehringer Ingelheim). Fonte europeia, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil disponível nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer."
   },
   {
     "slug": "inclisirana",
@@ -1859,7 +1869,9 @@
       "Long-term efficacy and safety of inclisiran in patients with high cardiovascular risk and elevated LDL cholesterol (ORION-3) · The Lancet Diabetes & Endocrinology · https://www.thelancet.com/journals/landia/article/PIIS2213-8587(22)00353-9/fulltext",
       "Effects of Renal Impairment on the Pharmacokinetics, Efficacy, and Safety of Inclisiran: An Analysis of the ORION-7 and ORION-1 Studies · Mayo Clinic Proceedings · https://www.mayoclinicproceedings.org/article/S0025-6196(19)30756-6/abstract",
       "Bula de SYBRAVA (inclisirana, solução injetável em seringa preenchida), Novartis Biociências S.A. — apresentação, posologia e modo de usar. Versão brasileira."
-    ]
+    ],
+    "pregnancy": "**Preferível evitar, como medida de precaução** — é a formulação mais branda deste lote, e o motivo está no dado: os estudos em animais **não indicam efeitos nefastos diretos ou indiretos** quanto à toxicidade reprodutiva; o que falta é dado humano, inexistente ou limitado. Não é contraindicação. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do LEQVIO (inclisiran, Novartis). Fonte europeia, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil disponível nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer.",
+    "lactation": "**Decisão entre suspender a amamentação ou o tratamento.** Desconhece-se se a inclisirana ou seus metabólitos são excretados no leite humano; os dados em animais **mostraram excreção no leite**, e o risco para o recém-nascido não pode ser excluído. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do LEQVIO (inclisiran, Novartis). Fonte europeia, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil disponível nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer."
   },
   {
     "slug": "indapamida",
@@ -2093,7 +2105,9 @@
       "Mavacamten for Obstructive HCM: Key Points · American College of Cardiology · https://www.acc.org/latest-in-cardiology/ten-points-to-remember/2023/12/07/15/59/mavacamten-a-first-in-class",
       "Mavacamten for Obstructive Hypertrophic Cardiomyopathy: Rationale for Clinically Guided Dose Titration to Optimize Individual Response · Journal of the American Heart Association · https://www.ahajournals.org/doi/10.1161/JAHA.124.033767",
       "Mavacamten for Obstructive Hypertrophic Cardiomyopathy: Targeting Sarcomeric Hypercontractility with Demonstrated Long-Term Safety and Efficacy · PMC · https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12693540/"
-    ]
+    ],
+    "pregnancy": "**Contraindicado na gravidez — e também em mulher com potencial para engravidar que não use contracepção eficaz.** É o regime mais estrito do acervo, e a razão é farmacocinética: a eliminação após a suspensão leva cerca de **5 semividas — aproximadamente 45 dias no metabolizador normal do CYP2C19 e 115 dias no metabolizador fraco**. Daí as exigências: **teste de gravidez negativo antes de iniciar**, aconselhamento sobre risco grave para o feto, contracepção eficaz durante o tratamento **e por 6 meses após a descontinuação**, e interrupção **6 meses antes** de uma gravidez planejada. Se a paciente engravidar, o mavacamteno tem de ser descontinuado, com aconselhamento e ecografias. Suspeita-se de toxicidade embriofetal; os estudos em animais revelaram toxicidade reprodutiva. **Advertência que não é obstétrica e sim cardiológica:** ao interromper para planejar gravidez, contar com o possível **retorno da obstrução da via de saída do ventrículo esquerdo e da carga sintomática**. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do CAMZYOS (mavacamten, Bristol-Myers Squibb). Fonte europeia, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil disponível nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer.",
+    "lactation": "**Não amamentar durante o tratamento.** A fonte é categórica, e sobre base de ignorância total: desconhece-se se o mavacamteno ou seus metabólitos são excretados no leite humano, e **não existe sequer informação sobre excreção no leite animal**. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do CAMZYOS (mavacamten, Bristol-Myers Squibb). Fonte europeia, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil disponível nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer."
   },
   {
     "slug": "metformina-cloridrato",
@@ -3068,7 +3082,9 @@
       "Guia de Dosagem de Semaglutida: Titulação, Técnica de Injeção · Weight Index · 2026 · https://weight-index.com/pt/articles/semaglutide-dosing-guide",
       "Wegovy (semaglutida) · ANVISA · https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/novos-medicamentos-e-indicacoes/wegovy-semaglutida",
       "Ozempic — Bula Paciente · Novo Nordisk · https://www.novonordisk.com.br/content/dam/nncorp/br/pt/pdfs/bulas/patient/Ozempic_3mL_1mg_Paciente.pdf"
-    ]
+    ],
+    "pregnancy": "**Não deve ser utilizada durante a gravidez.** Os estudos em animais revelaram toxicidade reprodutiva e os dados em grávidas são limitados. Se a paciente pretender engravidar ou a gravidez ocorrer, a semaglutida deve ser descontinuada — e, pela **semivida longa**, a descontinuação deve anteceder em **pelo menos 2 meses** uma gravidez planejada. Recomenda-se contracepção durante o tratamento. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do OZEMPIC (semaglutido, Novo Nordisk). Fonte europeia, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil disponível nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer.",
+    "lactation": "**Não deve ser utilizada durante a amamentação.** A semaglutida **foi excretada no leite de ratas lactantes** e o risco para a criança amamentada não pode ser excluído. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do OZEMPIC (semaglutido, Novo Nordisk). Fonte europeia, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil disponível nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer."
   },
   {
     "slug": "sildenafila-citrato",
@@ -3190,7 +3206,9 @@
       "Tafamidis Treatment for Patients with Transthyretin Amyloid Cardiomyopathy · New England Journal of Medicine · https://www.nejm.org/doi/full/10.1056/NEJMoa1805689",
       "Tafamidis in Transthyretin Cardiomyopathy Clinical Trial · American College of Cardiology · https://www.acc.org/latest-in-cardiology/clinical-trials/2018/08/25/23/02/attr-act",
       "Current and Future Treatment Landscape of Transthyretin Amyloid Cardiomyopathy · PMC · https://pmc.ncbi.nlm.nih.gov/articles/PMC12379670/"
-    ]
+    ],
+    "pregnancy": "**Não recomendado na gravidez, nem em mulher com potencial para engravidar que não use contracepção.** Não há dados em gestantes e os estudos em animais revelaram **toxicidade no desenvolvimento**. A contracepção eficaz deve durar o tratamento **e mais um mês depois dele**, por causa da **semivida prolongada**. Recorte da fonte: o texto é o da **meglumina de tafamidis**. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do VYNDAQEL (meglumina de tafamidis, Pfizer). Fonte europeia, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil disponível nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer.",
+    "lactation": "**Não deve ser utilizado durante a amamentação.** Os dados em animais **mostraram excreção de tafamidis no leite**, e o risco para o recém-nascido não pode ser excluído. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do VYNDAQEL (meglumina de tafamidis, Pfizer). Fonte europeia, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil disponível nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer."
   },
   {
     "slug": "telmisartana",
@@ -3587,6 +3605,8 @@
       "The Role of Vericiguat in the Expanding Realm of Heart Failure Pharmacotherapy: An Overview of the VICTORIA Trial · American College of Cardiology · https://www.acc.org/latest-in-cardiology/articles/2020/07/08/08/49/the-role-of-vericiguat-in-the-expanding-realm-of-hf-pharmacotherapy",
       "Vericiguat · StatPearls (NCBI Bookshelf) · https://www.ncbi.nlm.nih.gov/books/NBK574528/",
       "Renal function and vericiguat in heart failure patients: light at the end of the tunnel! · European Journal of Heart Failure · 2021 · https://onlinelibrary.wiley.com/doi/full/10.1002/ejhf.2280"
-    ]
+    ],
+    "pregnancy": "**Não usar na gravidez, nem em mulher com potencial para engravidar que não use contracepção.** A restrição é declarada como **medida de precaução**, não como dano demonstrado em humanos: a quantidade de dados em grávidas é **inexistente**, e os estudos em animais revelaram toxicidade reprodutiva **na presença de toxicidade materna** — ressalva que a própria fonte faz questão de registrar. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do VERQUVO (vericiguat, Bayer). Fonte europeia, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil disponível nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer.",
+    "lactation": "**Decisão entre suspender a amamentação ou o tratamento.** Não há informação sobre a presença de vericiguate no leite humano, sobre efeitos no lactente ou sobre a produção de leite; o fármaco **está presente no leite de ratas lactantes** e o risco para a criança amamentada não pode ser excluído. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do VERQUVO (vericiguat, Bayer). Fonte europeia, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil disponível nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer."
   }
 ]
