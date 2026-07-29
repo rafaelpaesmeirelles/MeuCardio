@@ -315,6 +315,66 @@
 }
 .painel__funcao--destaque { border-left-color: var(--acao); }
 
+/* Função ainda não construída: fica visível, mas declaradamente inerte — não
+   é link, não recebe hover e a borda perde a cor de ação. */
+.painel__funcao--breve {
+  border-left-color: var(--borda);
+  cursor: default;
+}
+.painel__funcao--breve strong { color: var(--texto-secundario); }
+.painel__breve {
+  font-family: var(--fonte-texto);
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.1rem 0.4rem;
+  border: 1px solid var(--borda);
+  border-radius: 999px;
+  color: var(--texto-secundario);
+  vertical-align: middle;
+}
+
+/* Agrupamento por finalidade. O subtítulo existe para o grupo dizer para que
+   serve sem que o médico precise ler os seis cartões. */
+.painel__grupo { margin-top: 1.8rem; }
+.painel__grupo h2 { margin-bottom: 0.1rem; }
+.painel__grupo-sub {
+  margin: 0 0 0.7rem;
+  font-size: 0.85rem;
+  color: var(--texto-secundario);
+}
+
+/* Os dois modos de uso: destaque próprio, fora dos grupos. */
+.painel__modos {
+  display: grid;
+  gap: 0.7rem;
+  grid-template-columns: 1fr;
+  margin-top: 1.4rem;
+}
+@media (min-width: 760px) { .painel__modos { grid-template-columns: repeat(2, 1fr); } }
+.painel__modo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  border-left: 3px solid var(--acento);
+  color: inherit;
+  text-decoration: none;
+  transition: box-shadow 0.12s;
+}
+.painel__modo:hover {
+  text-decoration: none;
+  box-shadow: 0 2px 4px rgba(11, 46, 69, 0.08), 0 12px 28px -18px rgba(11, 46, 69, 0.4);
+}
+.painel__modo strong {
+  font-family: var(--fonte-display);
+  font-size: 1.05rem;
+  color: var(--primaria);
+}
+.painel__modo span { font-size: 0.84rem; color: var(--texto-secundario); line-height: 1.45; }
+.painel__modo--emergencia { border-left-color: var(--acao); }
+.painel__modo--emergencia strong { color: var(--acao); }
+
 .painel__temas { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 .painel__tema {
   display: inline-flex;

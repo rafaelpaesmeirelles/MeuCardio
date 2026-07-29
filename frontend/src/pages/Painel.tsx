@@ -8,93 +8,169 @@ type Tema = { theme: string; count: number };
 type Paciente = { id: number };
 type ListaComTotal = { total?: number };
 
-/** Funções do sistema, na ordem em que fazem sentido no dia a dia.
- *  `destaque` marca as três de uso mais frequente no ponto de cuidado — elas
- *  recebem a borda em vermelho da marca; o resto fica em teal.
- *  As descrições dizem o que a função resolve, não o nome técnico dela. */
-const FUNCOES: { to: string; nome: string; descricao: string; destaque?: boolean }[] = [
+/** Uma função do sistema no Painel.
+ *  `to` ausente = função ainda não construída: vira cartão "em breve", sem link.
+ *  `destaque` reserva a borda vermelha da marca para o que se usa sob pressão. */
+type Funcao = { to?: string; nome: string; descricao: string; destaque?: boolean };
+type Grupo = { titulo: string; descricao: string; funcoes: Funcao[] };
+
+/** Agrupado por finalidade, não por ordem de construção — o médico procura pelo
+ *  problema que tem ("preciso decidir", "preciso estudar"), não pelo nome do
+ *  módulo. As descrições dizem o que a função resolve, não o que ela é. */
+const GRUPOS: Grupo[] = [
   {
-    to: "/assistente",
-    nome: "Assistente clínico",
-    descricao: "Pergunte em linguagem natural e receba a resposta ancorada nos documentos da biblioteca, com a fonte citada.",
-    destaque: true,
+    titulo: "Apoio à decisão clínica",
+    descricao: "Para usar com o paciente na frente.",
+    funcoes: [
+      {
+        to: "/assistente",
+        nome: "Assistente clínico",
+        descricao: "Pergunte em linguagem natural e receba a resposta ancorada nos documentos da biblioteca, com a fonte citada.",
+        destaque: true,
+      },
+      {
+        to: "/fluxogramas",
+        nome: "Fluxogramas clínicos",
+        descricao: "Árvores de decisão fundamentadas em diretriz vigente (ESC, AHA/ACC, SBC) — cada ramo termina numa conduta.",
+        destaque: true,
+      },
+      {
+        to: "/calculadoras",
+        nome: "Calculadoras",
+        descricao: "Escores validados — GRACE, HEART, CHA₂DS₂-VASc, HAS-BLED, CKD-EPI — prontos para uso no leito, com a fórmula à vista.",
+        destaque: true,
+      },
+      {
+        to: "/medicamentos",
+        nome: "Medicamentos",
+        descricao: "Comparador lado a lado: dose, apresentação, ajuste renal, contraindicação e interação, com a bula de origem declarada.",
+      },
+      {
+        nome: "Checador de interação",
+        descricao: "Monte a lista do que o paciente já usa e do que você vai prescrever, e veja as interações com gravidade e fonte.",
+      },
+      {
+        nome: "Alerta por condição especial",
+        descricao: "Cruza o que vai ser prescrito ou pedido com gestação, doença renal crônica, hepatopatia e outras condições.",
+      },
+    ],
   },
   {
-    to: "/fluxogramas",
-    nome: "Fluxogramas clínicos",
-    descricao: "Árvores de decisão fundamentadas em diretriz vigente (ESC, AHA/ACC, SBC) — cada ramo termina numa conduta.",
-    destaque: true,
+    titulo: "Ciência e atualização",
+    descricao: "A base que sustenta a conduta, com referência verificável.",
+    funcoes: [
+      {
+        to: "/biblioteca",
+        nome: "Biblioteca científica",
+        descricao: "Documentos organizados por tema, cada um com referência completa e verificável.",
+      },
+      {
+        to: "/busca",
+        nome: "Busca",
+        descricao: "Busca em texto completo nos documentos, com o trecho relevante destacado no resultado.",
+      },
+      {
+        to: "/evidencias",
+        nome: "Evidências",
+        descricao: "A recomendação pontual, com classe, nível, sociedade e ano — não o documento inteiro.",
+      },
+      {
+        to: "/estudos",
+        nome: "Trabalhos científicos",
+        descricao: "Ensaios, revisões e metanálises com os números reais do estudo e a implicação clínica.",
+      },
+      {
+        to: "/galeria",
+        nome: "Galeria de imagens",
+        descricao: "Achados de ECG, eco, TC, radiografia e angiografia, com o achado descrito e os pontos de ensino.",
+      },
+      {
+        to: "/exames",
+        nome: "Exames e marcadores",
+        descricao: "O que cada exame mede, valor de referência, quando pedir e o que limita a interpretação.",
+      },
+      {
+        nome: "Alerta de diretriz revisada",
+        descricao: "Avisa quando sai versão nova da diretriz que embasa um conteúdo que você usa.",
+      },
+    ],
   },
   {
-    to: "/calculadoras",
-    nome: "Calculadoras",
-    descricao: "Escores validados — GRACE, HEART, CHA₂DS₂-VASc, HAS-BLED, CKD-EPI — prontos para uso no leito, com a fórmula à vista.",
-    destaque: true,
+    titulo: "Beira do leito e documentos",
+    descricao: "O que acompanha o paciente do round à alta.",
+    funcoes: [
+      {
+        to: "/telediagnostico",
+        nome: "Laudo e consultoria",
+        descricao: "Envie ECG, MAPA, Holter ou teste ergométrico e receba interpretação ou laudo, com prazo definido.",
+      },
+      {
+        to: "/round",
+        nome: "Round hospitalar",
+        descricao: "Pacientes internados, evolução, prescrição e linha do tempo de cada caso.",
+      },
+      {
+        to: "/checklists",
+        nome: "Checklist de alta",
+        descricao: "O que não pode faltar na alta pós-evento cardiovascular, marcado item a item antes de liberar.",
+      },
+      {
+        to: "/documentos",
+        nome: "Modelos de documento",
+        descricao: "Templates que geram o documento já preenchido com os dados do paciente.",
+      },
+      {
+        to: "/material-paciente",
+        nome: "Material para o paciente",
+        descricao: "Explicação da condição em linguagem acessível, em PDF, para entregar na consulta.",
+      },
+      {
+        to: "/agenda",
+        nome: "Agenda",
+        descricao: "Compromissos, retornos e o que está marcado para os próximos dias.",
+      },
+    ],
   },
   {
-    to: "/biblioteca",
-    nome: "Biblioteca científica",
-    descricao: "Documentos organizados por tema, cada um com referência completa e verificável.",
+    titulo: "Educação continuada",
+    descricao: "Para estudar e para ensinar.",
+    funcoes: [
+      {
+        to: "/trilhas",
+        nome: "Trilhas de estudo",
+        descricao: "Sequência guiada por tema: o protocolo, a farmacologia, os estudos pivotais e as calculadoras, nessa ordem.",
+      },
+      {
+        to: "/cursos",
+        nome: "Cursos parceiros",
+        descricao: "Preparação para o Título de Especialista, com material de apoio arquivado aqui.",
+      },
+      {
+        nome: "Casos clínicos interativos",
+        descricao: "Um caso, a sua decisão, e depois a conduta correta com a evidência que a sustenta.",
+      },
+    ],
   },
   {
-    to: "/busca",
-    nome: "Busca",
-    descricao: "Busca em texto completo nos documentos, com o trecho relevante destacado no resultado.",
-  },
-  {
-    to: "/medicamentos",
-    nome: "Medicamentos",
-    descricao: "Comparador lado a lado: dose, apresentação, ajuste renal, contraindicação e interação.",
-  },
-  {
-    to: "/galeria",
-    nome: "Galeria de imagens",
-    descricao: "Achados de ECG, eco, TC, radiografia e angiografia, com o achado descrito e os pontos de ensino.",
-  },
-  {
-    to: "/exames",
-    nome: "Exames e marcadores",
-    descricao: "O que cada exame mede, valor de referência, quando pedir e o que limita a interpretação.",
-  },
-  {
-    to: "/evidencias",
-    nome: "Evidências",
-    descricao: "A recomendação pontual, com classe, nível, sociedade e ano — não o documento inteiro.",
-  },
-  {
-    to: "/estudos",
-    nome: "Trabalhos científicos",
-    descricao: "Ensaios, revisões e metanálises com os números reais do estudo e a implicação clínica.",
-  },
-  {
-    to: "/telediagnostico",
-    nome: "Laudo e consultoria",
-    descricao: "Envie ECG, MAPA, Holter ou teste ergométrico e receba interpretação ou laudo assinado, com prazo definido.",
-  },
-  {
-    to: "/round",
-    nome: "Round hospitalar",
-    descricao: "Pacientes internados, evolução, prescrição e linha do tempo de cada caso.",
-  },
-  {
-    to: "/agenda",
-    nome: "Agenda",
-    descricao: "Compromissos, retornos e o que está marcado para os próximos dias.",
-  },
-  {
-    to: "/documentos",
-    nome: "Modelos de documento",
-    descricao: "Templates que geram o documento já preenchido com os dados do paciente.",
-  },
-  {
-    to: "/favoritos",
-    nome: "Favoritos",
-    descricao: "O que você marcou para reencontrar sem procurar de novo.",
-  },
-  {
-    to: "/minha-conta",
-    nome: "Minha conta",
-    descricao: "Dados pessoais, troca de senha e gestão da assinatura.",
+    titulo: "Sua conta",
+    descricao: "O que é seu e só você vê.",
+    funcoes: [
+      {
+        to: "/indicadores",
+        nome: "Meus indicadores",
+        descricao: "Laudos emitidos, tempo de resposta frente ao SLA e receita do telediagnóstico no período.",
+      },
+      {
+        to: "/favoritos",
+        nome: "Favoritos",
+        descricao: "O que você marcou para reencontrar sem procurar de novo.",
+      },
+      {
+        to: "/minha-conta",
+        nome: "Minha conta",
+        descricao: "Dados pessoais, troca de senha e gestão da assinatura.",
+      },
+    ],
   },
 ];
 
@@ -103,6 +179,31 @@ function Numero({ rotulo, valor, to }: { rotulo: string; valor: number | null; t
     <Link to={to} className="painel__numero">
       <span className="dado">{valor === null ? "—" : valor}</span>
       <span>{rotulo}</span>
+    </Link>
+  );
+}
+
+function Cartao({ f }: { f: Funcao }) {
+  const classe = `cartao painel__funcao${f.destaque ? " painel__funcao--destaque" : ""}`;
+
+  // Sem rota: a função ainda não existe. Vira cartão inerte, com o selo dizendo
+  // isso — melhor do que link que leva a lugar nenhum ou do que esconder o que
+  // está por vir.
+  if (!f.to) {
+    return (
+      <div className={`${classe} painel__funcao--breve`}>
+        <strong>
+          {f.nome} <span className="painel__breve">em breve</span>
+        </strong>
+        <span>{f.descricao}</span>
+      </div>
+    );
+  }
+
+  return (
+    <Link to={f.to} className={classe}>
+      <strong>{f.nome}</strong>
+      <span>{f.descricao}</span>
     </Link>
   );
 }
@@ -153,23 +254,41 @@ export default function Painel() {
 
       <CursoDestaque />
 
-      <h2 style={{ marginTop: "1.6rem" }}>Acesso rápido</h2>
-      <div className="painel__funcoes">
-        {FUNCOES.map((f) => (
-          <Link
-            key={f.to}
-            to={f.to}
-            className={`cartao painel__funcao${f.destaque ? " painel__funcao--destaque" : ""}`}
-          >
-            <strong>{f.nome}</strong>
-            <span>{f.descricao}</span>
-          </Link>
-        ))}
+      {/* Os dois modos de uso ficam fora dos grupos porque não são "mais uma
+          função": mudam a forma de usar o sistema inteiro. */}
+      <div className="painel__modos">
+        <Link to="/emergencia" className="cartao painel__modo painel__modo--emergencia">
+          <strong>● Modo Emergência</strong>
+          <span>
+            Protocolos de risco imediato de vida, em fonte grande e alto contraste,
+            com cópia local que abre mesmo sem conexão.
+          </span>
+        </Link>
+        <Link to="/biblioteca" className="cartao painel__modo">
+          <strong>▣ Modo Apresentação</strong>
+          <span>
+            Exporte qualquer documento ou fluxograma em PDF pronto para projetar em
+            aula ou round — o botão fica dentro de cada documento, com espaço para a
+            sua anotação.
+          </span>
+        </Link>
       </div>
 
+      {GRUPOS.map((g) => (
+        <section key={g.titulo} className="painel__grupo">
+          <h2>{g.titulo}</h2>
+          <p className="painel__grupo-sub">{g.descricao}</p>
+          <div className="painel__funcoes">
+            {g.funcoes.map((f) => (
+              <Cartao key={f.nome} f={f} />
+            ))}
+          </div>
+        </section>
+      ))}
+
       {temas !== null && temas.length > 0 && (
-        <>
-          <h2 style={{ marginTop: "1.8rem" }}>Temas da biblioteca</h2>
+        <section className="painel__grupo">
+          <h2>Temas da biblioteca</h2>
           <div className="painel__temas">
             {temas.map((t) => (
               <Link key={t.theme} to={`/biblioteca?tema=${encodeURIComponent(t.theme)}`} className="painel__tema">
@@ -178,9 +297,8 @@ export default function Painel() {
               </Link>
             ))}
           </div>
-        </>
+        </section>
       )}
-
     </>
   );
 }
