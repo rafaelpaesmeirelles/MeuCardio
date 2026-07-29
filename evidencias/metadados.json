@@ -1241,5 +1241,157 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "nao-usar-doac-na-fibrilacao-atrial-com-estenose-mitral-moderada-a-grave",
+    "statement": "Anticoagulante oral direto **não** é recomendado em paciente com fibrilação atrial e estenose mitral moderada a grave — nesse cenário o antagonista da vitamina K é que se aplica. A contrapartida está na mesma tabela: nas demais valvopatias, incluindo estenose aórtica e regurgitação aórtica ou mitral, o DOAC é recomendado **preferencialmente** ao AVK (Classe I, nível A). É a distinção que a expressão 'fibrilação atrial valvar' costuma embaralhar.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "ESC/EACTS",
+    "year": 2021,
+    "guideline_title": "2021 ESC/EACTS Guidelines for the management of valvular heart disease",
+    "reference": "Vahanian A, Beyersdorf F, Praz F, et al. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. DOI: 10.1093/eurheartj/ehab395 — classe e nível conferidos em contexto no texto original",
+    "theme": "Valvopatias",
+    "tags": [
+      "estenose mitral",
+      "fibrilação atrial",
+      "DOAC",
+      "antagonista da vitamina K",
+      "anticoagulação"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "doac-preferido-ao-avk-na-fibrilacao-atrial-com-valvopatia-que-nao-estenose-mitral",
+    "statement": "Em paciente com fibrilação atrial e indicação de anticoagulação oral, o anticoagulante oral direto é recomendado preferencialmente ao antagonista da vitamina K quando a valvopatia é estenose aórtica, regurgitação aórtica ou regurgitação mitral. A exceção é a estenose mitral moderada a grave, onde o DOAC não é recomendado.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC/EACTS",
+    "year": 2021,
+    "guideline_title": "2021 ESC/EACTS Guidelines for the management of valvular heart disease",
+    "reference": "Vahanian A, Beyersdorf F, Praz F, et al. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. DOI: 10.1093/eurheartj/ehab395 — classe e nível conferidos em contexto no texto original",
+    "theme": "Valvopatias",
+    "tags": [
+      "valvopatia",
+      "fibrilação atrial",
+      "DOAC",
+      "anticoagulação"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "reparo-e-a-tecnica-cirurgica-recomendada-na-regurgitacao-mitral-primaria",
+    "statement": "Na regurgitação mitral primária grave, o reparo valvar é a técnica cirúrgica recomendada sempre que se espera resultado durável. A troca fica como alternativa, não como equivalente — a durabilidade esperada do reparo é o critério, e ela depende da anatomia e da experiência do centro.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC/EACTS",
+    "year": 2021,
+    "guideline_title": "2021 ESC/EACTS Guidelines for the management of valvular heart disease",
+    "reference": "Vahanian A, Beyersdorf F, Praz F, et al. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. DOI: 10.1093/eurheartj/ehab395 — classe e nível conferidos em contexto no texto original",
+    "theme": "Valvopatias",
+    "tags": [
+      "regurgitação mitral",
+      "reparo valvar",
+      "cirurgia",
+      "valvopatia primária"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cirurgia-na-regurgitacao-aortica-grave-sintomatica-independentemente-da-funcao-ventricular",
+    "statement": "Na regurgitação aórtica grave, a cirurgia é recomendada no paciente sintomático **independentemente da função ventricular esquerda**. O sintoma basta — esperar deterioração da fração de ejeção para operar inverte a ordem da indicação.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC/EACTS",
+    "year": 2021,
+    "guideline_title": "2021 ESC/EACTS Guidelines for the management of valvular heart disease",
+    "reference": "Vahanian A, Beyersdorf F, Praz F, et al. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. DOI: 10.1093/eurheartj/ehab395 — classe e nível conferidos em contexto no texto original",
+    "theme": "Valvopatias",
+    "tags": [
+      "regurgitação aórtica",
+      "cirurgia valvar",
+      "indicação",
+      "função ventricular"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "comissurotomia-mitral-percutanea-na-estenose-mitral-sintomatica-sem-caracteristicas-desfavoraveis",
+    "statement": "Na estenose mitral clinicamente significativa — moderada ou grave, com área valvar de 1,5 cm² ou menos —, a comissurotomia mitral percutânea é recomendada no paciente sintomático sem características desfavoráveis ao procedimento. Também é recomendada em qualquer paciente sintomático com contraindicação ou alto risco para cirurgia; e a cirurgia valvar mitral é a recomendada quando o paciente sintomático não é candidato à comissurotomia, na ausência de futilidade.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC/EACTS",
+    "year": 2021,
+    "guideline_title": "2021 ESC/EACTS Guidelines for the management of valvular heart disease",
+    "reference": "Vahanian A, Beyersdorf F, Praz F, et al. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. DOI: 10.1093/eurheartj/ehab395 — classe e nível conferidos em contexto no texto original",
+    "theme": "Valvopatias",
+    "tags": [
+      "estenose mitral",
+      "comissurotomia mitral percutânea",
+      "valvoplastia",
+      "cirurgia valvar"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "coronariografia-na-avaliacao-da-regurgitacao-mitral-secundaria-grave",
+    "statement": "A coronariografia é recomendada na avaliação da regurgitação mitral secundária grave. A regurgitação secundária é, por definição, consequência de doença do ventrículo ou do átrio — e definir se há doença coronariana tratável muda tanto o prognóstico quanto a estratégia de intervenção.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC/EACTS",
+    "year": 2021,
+    "guideline_title": "2021 ESC/EACTS Guidelines for the management of valvular heart disease",
+    "reference": "Vahanian A, Beyersdorf F, Praz F, et al. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. DOI: 10.1093/eurheartj/ehab395 — classe e nível conferidos em contexto no texto original",
+    "theme": "Valvopatias",
+    "tags": [
+      "regurgitação mitral secundária",
+      "coronariografia",
+      "avaliação",
+      "doença coronariana"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cirurgia-valvar-no-paciente-que-ja-vai-para-revascularizacao-ou-outra-cirurgia-cardiaca",
+    "statement": "A cirurgia valvar é recomendada em pacientes que já serão submetidos a revascularização miocárdica ou a outra cirurgia cardíaca. A oportunidade cirúrgica já aberta muda o limiar da indicação — o cálculo de risco de uma segunda operação futura não se repete.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC/EACTS",
+    "year": 2021,
+    "guideline_title": "2021 ESC/EACTS Guidelines for the management of valvular heart disease",
+    "reference": "Vahanian A, Beyersdorf F, Praz F, et al. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. DOI: 10.1093/eurheartj/ehab395 — classe e nível conferidos em contexto no texto original",
+    "theme": "Valvopatias",
+    "tags": [
+      "valvopatia",
+      "cirurgia combinada",
+      "revascularização miocárdica",
+      "indicação"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cirurgia-na-estenose-tricuspide-grave-sintomatica",
+    "statement": "A cirurgia é recomendada no paciente sintomático com estenose tricúspide grave.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC/EACTS",
+    "year": 2021,
+    "guideline_title": "2021 ESC/EACTS Guidelines for the management of valvular heart disease",
+    "reference": "Vahanian A, Beyersdorf F, Praz F, et al. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. DOI: 10.1093/eurheartj/ehab395 — classe e nível conferidos em contexto no texto original",
+    "theme": "Valvopatias",
+    "tags": [
+      "estenose tricúspide",
+      "cirurgia valvar",
+      "valva tricúspide"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
