@@ -5,7 +5,7 @@ theme: "Perioperatório"
 kind: protocolo
 summary: "O que a diretriz brasileira de 2024 traz e a europeia não: RCRI e AUB-HAS2 lado a lado com suas variáveis, o VSG-CRI recomendado especificamente para cirurgia vascular arterial com pontuação e classes completas, o índice EMAPO desenvolvido e validado no Brasil, e o registro explícito de que nenhum algoritmo demonstrou superioridade na população brasileira."
 review_status: revisado
-source_refs: ["Diretriz de Avaliação Cardiovascular Perioperatória da Sociedade Brasileira de Cardiologia – 2024 · Arquivos Brasileiros de Cardiologia · DOI: 10.36660/abc.20240590 — texto integral em acesso aberto no PubMed Central (PMC12094288)", "Lee TH, Marcantonio ER, Mangione CM, et al. Derivation and prospective validation of a simple index for prediction of cardiac risk of major noncardiac surgery (RCRI). Circulation. 1999;100(10):1043-1049", "Pinho C, Grandini PC, Gualandro DM, et al. Multicenter Study of Perioperative Evaluation for Noncardiac Surgeries in Brazil (EMAPO). Clinics. 2007;62(1):17-22. DOI: 10.1590/s1807-59322007000100004"]
+source_refs: ["Diretriz de Avaliação Cardiovascular Perioperatória da Sociedade Brasileira de Cardiologia – 2024 · Arquivos Brasileiros de Cardiologia · DOI: 10.36660/abc.20240590 — texto integral em acesso aberto no PubMed Central (PMC12094288)", "Lee TH, Marcantonio ER, Mangione CM, et al. Derivation and prospective validation of a simple index for prediction of cardiac risk of major noncardiac surgery (RCRI). Circulation. 1999;100(10):1043-1049", "Pinho C, Grandini PC, Gualandro DM, et al. Multicenter Study of Perioperative Evaluation for Noncardiac Surgeries in Brazil (EMAPO). Clinics. 2007;62(1):17-22. DOI: 10.1590/s1807-59322007000100004", "POISE Study Group. Effects of extended-release metoprolol succinate in patients undergoing non-cardiac surgery (POISE trial): a randomised controlled trial. Lancet. 2008;371(9627):1839-1847. DOI: 10.1016/S0140-6736(08)60601-7. PMID: 18479744"]
 ---
 
 # Estratificação de risco perioperatório na diretriz brasileira (SBC 2024)
@@ -149,6 +149,28 @@ Fried, Clinical Frailty Scale — estão naquele documento, e não neste.
 Convergência entre diretrizes independentes reforça a conduta; é diferente de
 repetição da mesma fonte.
 
+## Manejo farmacológico perioperatório na diretriz brasileira
+
+Três recomendações da diretriz, conferidas contra o texto: **betabloqueador em
+uso crônico deve ser mantido no perioperatório** (Classe I) — não suspender por
+rotina, o risco de rebote (taquicardia, isquemia) supera o argumento de
+"simplificar" o intraoperatório; **antagonista do sistema renina-angiotensina-
+aldosterona (IECA/BRA) em uso crônico pode ser mantido no perioperatório, com
+suspensão permitida em casos selecionados** (Classe I) — ao contrário do que a
+prática de suspender IECA/BRA na véspera por rotina sugere, a diretriz não
+recomenda suspensão universal, só a permite caso a caso; e **estatina deve ser
+considerada em operação não vascular, no paciente com indicação clínica por
+doença associada** (DAC, doença cerebrovascular, doença arterial periférica,
+diabetes) — Classe IIa. As três estão na Tabela 1 (novas recomendações de 2024),
+a mesma tabela que já traz a capacidade funcional e a fragilidade citadas acima.
+
+A diretriz **não traz recomendação própria, com classe e nível, sobre iniciar
+betabloqueador de novo antes da cirurgia** em paciente que não o usa
+previamente — ausência que vale registrar, porque é justamente o cenário em que
+o POISE (2008) mostrou risco: início de novo de betabloqueador reduziu infarto
+mas aumentou AVC e mortalidade geral, achado que já motivou cautela nas
+diretrizes internacionais.
+
 ## O que este documento não cobre
 
 **A conduta que decorre da estratificação** — quais exames pedir, quando pedir
@@ -157,8 +179,10 @@ cardiovascular pela ESC 2022 e no fluxograma correspondente. Este documento é
 sobre **como estimar o risco**, que é o passo anterior.
 
 **As demais recomendações da diretriz brasileira.** Ela tem **34 quadros** de
-recomendação; extraí aqui a estratificação de risco, que é onde ela difere da
-europeia. O restante do documento não foi transcrito, e não deve ser presumido
-como equivalente ao da ESC — **VERIFICAÇÃO HUMANA NECESSÁRIA** para quem
-precisar de recomendação brasileira específica sobre manejo farmacológico
-perioperatório, que não está aqui.
+recomendação; extraí aqui a estratificação de risco e as três recomendações
+farmacológicas mais perguntadas (betabloqueador, IECA/BRA, estatina) — o que é
+onde a diretriz difere da europeia ou preenche lacuna dela. O restante do
+documento (antiplaquetário/anticoagulante perioperatório, manejo de
+dispositivo cardíaco implantável, entre outros) não foi transcrito, e não deve
+ser presumido como equivalente ao da ESC — **VERIFICAÇÃO HUMANA NECESSÁRIA**
+para quem precisar dessas recomendações específicas, que não estão aqui.
