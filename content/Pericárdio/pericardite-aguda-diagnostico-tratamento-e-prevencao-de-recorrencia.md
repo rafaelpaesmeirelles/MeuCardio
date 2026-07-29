@@ -14,7 +14,7 @@ legacy_source: "Protocolo de Pericardite Aguda (Aprofundado)"
 Responsável por aproximadamente 5% das apresentações de dor torácica aguda; mais comum em homens de 20-50 anos; tuberculose é causa importante em países em desenvolvimento, enquanto na maioria dos contextos desenvolvidos etiologia idiopática/viral predomina
 
 ## Apresentacao clinica
-Dor torácica aguda, pleurítica, retroesternal, aliviada ao sentar-se e inclinar-se para frente; atrito pericárdico presente em até 85% dos pacientes; ECG classicamente mostra elevação difusa do segmento ST com concavidade para cima, sem inversão de onda T reciprocal ou ondas Q
+Dor torácica aguda, pleurítica, retroesternal, aliviada ao sentar-se e inclinar-se para frente, presente em cerca de 80 a 90% dos casos; atrito pericárdico presente em até um terço dos pacientes, podendo desaparecer quando surge derrame (ESC 2025); ECG classicamente mostra elevação difusa do segmento ST com concavidade para cima, sem inversão de onda T reciprocal ou ondas Q
 
 ## Terapia primeira linha
 - **aines altas doses**: Aspirina 800 mg a 2-4 g/dia divididos, ou ibuprofeno 600-3200 mg/dia dividido a cada 8h por 7-10 dias, com desmame gradual em 3-4 semanas; indometacina 75-250 mg/dia é alternativa
