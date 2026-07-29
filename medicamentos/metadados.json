@@ -1725,7 +1725,9 @@
     "references": [
       "Furosemide injection — rótulo aprovado pelo FDA, DailyMed SPL setid 75d5611a-f9e0-1841-e053-2991aa0af415",
       "Bula de LASIX (furosemida), Sanofi Medley Farmacêutica Ltda. — seção de posologia, versão brasileira."
-    ]
+    ],
+    "pregnancy": "A furosemida **atravessa a barreira placentária**. Não deve ser administrada na gravidez **a menos que estritamente indicada, e por curtos períodos**. O tratamento durante a gravidez exige **controle periódico do crescimento fetal**. Fonte: bula do LASIX (Sanofi-Aventis).",
+    "lactation": "A furosemida **passa para o leite materno**. Quando o uso for considerado necessário na amamentação, isso deve ser levado em conta. Fonte: bula do LASIX (Sanofi-Aventis)."
   },
   {
     "slug": "heparina-nao-fracionada",
@@ -2259,7 +2261,9 @@
       "Bula de SELOZOK (succinato de metoprolol), AstraZeneca do Brasil Ltda. — seção Apresentações e Composição. Documento obtido no site do detentor do registro.",
       "Bula de SELOKEN (tartarato de metoprolol) comprimidos 100 mg, AstraZeneca do Brasil Ltda. — apresentações e composição.",
       "Bula profissional de SELOKEN injetável (tartarato de metoprolol) 5 mg/5 mL, AstraZeneca do Brasil Ltda. — apresentações, indicações e interações medicamentosas."
-    ]
+    ],
+    "pregnancy": "**Categoria de risco C.** Só deve ser usado na gravidez se **absolutamente necessário**. Betabloqueadores podem causar efeitos adversos como **bradicardia no feto, no recém-nascido e em crianças sob aleitamento materno**. Fonte: bula do SELOZOK (succinato de metoprolol, AstraZeneca).",
+    "lactation": "Só usar se absolutamente necessário. O risco descrito é o mesmo da gravidez — **bradicardia no lactente** —, embora a bula registre que a quantidade de metoprolol que chega ao lactente pelo leite parece pequena. Fonte: bula do SELOZOK (succinato de metoprolol, AstraZeneca)."
   },
   {
     "slug": "milrinona",
@@ -3465,7 +3469,8 @@
       "Otto CM, Nishimura RA, Bonow RO, et al. 2020 ACC/AHA Guideline for the Management of Patients With Valvular Heart Disease. Circulation. 2021;143(5):e72-e227. DOI: 10.1161/CIR.0000000000000923",
       "Holbrook A, Schulman S, Witt DM, et al. Evidence-based management of anticoagulant therapy: Antithrombotic Therapy and Prevention of Thrombosis, 9th ed: American College of Chest Physicians Evidence-Based Clinical Practice Guidelines. Chest. 2012;141(2 Suppl):e152S-e184S. DOI: 10.1378/chest.11-2295. PMID: 22315259",
       "Tarasoutchi F, Montera MW, Ramos AIO, et al. Atualização das Diretrizes Brasileiras de Valvopatias — 2020. Arq Bras Cardiol. 2020;115(4):720-775. DOI: 10.36660/abc.20201047. PMID: 33111877"
-    ]
+    ],
+    "pregnancy": "**Contraindicada na gravidez** — consta na lista de contraindicações formais da bula, ao lado de aneurisma cerebral ou aórtico, hemofilia e ameaça de aborto. Fonte: bula do MAREVAN (varfarina sódica)."
   },
   {
     "slug": "vasopressina",
