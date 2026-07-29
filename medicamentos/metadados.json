@@ -3665,5 +3665,51 @@
     ],
     "pregnancy": "**Não usar na gravidez, nem em mulher com potencial para engravidar que não use contracepção.** A restrição é declarada como **medida de precaução**, não como dano demonstrado em humanos: a quantidade de dados em grávidas é **inexistente**, e os estudos em animais revelaram toxicidade reprodutiva **na presença de toxicidade materna** — ressalva que a própria fonte faz questão de registrar. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do VERQUVO (vericiguat, Bayer). Fonte europeia, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil disponível nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer.",
     "lactation": "**Decisão entre suspender a amamentação ou o tratamento.** Não há informação sobre a presença de vericiguate no leite humano, sobre efeitos no lactente ou sobre a produção de leite; o fármaco **está presente no leite de ratas lactantes** e o risco para a criança amamentada não pode ser excluído. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do VERQUVO (vericiguat, Bayer). Fonte europeia, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil disponível nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer."
+  },
+  {
+    "slug": "esmolol",
+    "review_status": "revisado",
+    "generic_name": "Esmolol (cloridrato)",
+    "drug_class": "Betabloqueador cardiosseletivo beta-1 de ação ultracurta, uso exclusivamente intravenoso",
+    "mechanism": "Bloqueio competitivo e seletivo de receptores beta-1 adrenérgicos cardíacos, reduzindo frequência cardíaca, contratilidade e condução atrioventricular. Meia-vida de eliminação de aproximadamente 9 minutos, por hidrólise rápida via esterases nos eritrócitos — é essa farmacocinética, não o mecanismo, que define o uso clínico: titulável minuto a minuto, com reversão quase completa do efeito poucos minutos após suspender a infusão.",
+    "presentations": [
+      "Solução injetável para infusão intravenosa contínua. Uso exclusivamente hospitalar, sob monitorização — não existe apresentação oral."
+    ],
+    "renal_adjustment": "VERIFICAÇÃO HUMANA NECESSÁRIA — não localizado no rótulo consultado nesta sessão.",
+    "hepatic_adjustment": "VERIFICAÇÃO HUMANA NECESSÁRIA — não localizado no rótulo consultado nesta sessão.",
+    "indications": [
+      "Taquicardia supraventricular e taquicardia sinusal não compensatória que exigem controle agudo de frequência; taquicardia e hipertensão no período perioperatório. Uso frequente fora de bula, amparado por diretriz e prática consolidada, em controle de frequência na síndrome aórtica aguda (dissecção) antes de vasodilatador, pela reversibilidade rápida em caso de hipotensão."
+    ],
+    "interactions": [
+      "VERIFICAÇÃO HUMANA NECESSÁRIA — interações específicas não conferidas nesta sessão contra o rótulo."
+    ],
+    "adverse_effects": [
+      "Hipotensão (mais comum, dose-dependente), bradicardia, broncoespasmo, isquemia mesentérica, cianose periférica, hiperpotassemia e hipoglicemia (descrita especialmente em crianças, população em que segurança e eficácia não estão estabelecidas)."
+    ],
+    "contraindications": [
+      "Bradicardia sinusal grave",
+      "Bloqueio atrioventricular de 2º ou 3º grau (acima de 1º grau)",
+      "Síndrome do nó sinusal",
+      "Insuficiência cardíaca descompensada",
+      "Choque cardiogênico"
+    ],
+    "dosing": {
+      "tsvp ou sinusal nao compensatoria": "Dose de ataque opcional de 500 mcg/kg em 1 minuto, seguida de manutenção de 50 mcg/kg/min por 4 minutos; se resposta insuficiente, repetir a dose de ataque e escalonar a manutenção em degraus (100, depois 150, depois 200 mcg/kg/min).",
+      "manutencao eficaz": "50 a 200 mcg/kg/min, embora 25 mcg/kg/min já tenha sido suficiente em alguns pacientes. Acima de 200 mcg/kg/min o ganho adicional é pequeno e a taxa de efeitos adversos aumenta.",
+      "tempo ate equilibrio": "Sem dose de ataque, cerca de 30 minutos em infusão contínua de concentração única.",
+      "duracao maxima da infusao": "Até 48 horas.",
+      "perioperatorio controle gradual": "Dose de ataque de 500 mcg/kg em 1 minuto, seguida de 50 mcg/kg/min.",
+      "perioperatorio controle imediato": "Dose de ataque de 1 mg/kg em 30 segundos, seguida de 150 mcg/kg/min, ajustável até 200 mcg/kg/min (taquicardia) ou 300 mcg/kg/min (hipertensão).",
+      "titulacao": "Ajustar por frequência ventricular ou pressão arterial, a intervalos de pelo menos 4 minutos.",
+      "manejo de toxicidade": "Suspender a infusão é o primeiro passo — a meia-vida curta costuma reverter o efeito antes de qualquer antídoto. Bradicardia persistente: considerar atropina/anticolinérgico ou marca-passo. Falência cardíaca por contratilidade inadequada: considerar dobutamina ou dopamina.",
+      "fonte": "BREVIBLOC (esmolol hydrochloride) injection — rótulo aprovado pelo FDA, DailyMed SPL setid 220a07b8-5c68-41a3-8705-fd91f14c50b4"
+    },
+    "outcomes": [],
+    "notes": "Fármaco cadastrado em 29/07/2026, ausente da base estruturada até então (havia apenas o documento de prosa em content/Farmacologia/esmolol.md, criado na mesma sessão). Campos de ajuste renal/hepático e interações específicas ficam marcados para verificação — o rótulo consultado não os detalha.",
+    "references": [
+      "BREVIBLOC (esmolol hydrochloride) injection — rótulo aprovado pelo FDA, DailyMed SPL setid 220a07b8-5c68-41a3-8705-fd91f14c50b4"
+    ],
+    "pregnancy": "Estudos em coelhos mostraram aumento de reabsorção fetal com dose cerca de 8 vezes a dose máxima de manutenção em humanos (300 mcg/kg/min), com toxicidade materna mínima; estudos de teratogenicidade em ratos não mostraram o mesmo achado nas doses testadas. Não há estudos adequados e controlados em gestantes — usar só se o benefício justificar o risco ao feto.",
+    "lactation": "Não se sabe se é excretado no leite humano. Pela possibilidade de reação adversa grave no lactente, decidir entre suspender a amamentação ou suspender o fármaco, considerando a importância do tratamento para a mãe."
   }
 ]
