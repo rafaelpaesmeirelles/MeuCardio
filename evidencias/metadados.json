@@ -1970,5 +1970,25 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "isrs-na-depressao-maior-moderada-a-grave-em-doenca-coronariana",
+    "statement": "Paciente com doença coronariana e depressão maior moderada a grave deve ser considerado para tratamento antidepressivo com inibidor seletivo de recaptação de serotonina (ISRS). Em contraste, paciente com insuficiência cardíaca e depressão maior — ISRS, inibidor de recaptação de serotonina-noradrenalina (IRSN) e antidepressivo tricíclico não são recomendados (Classe III, Nível B), pelo risco de morte súbita cardíaca associado a muitos psicofármacos e pelo risco aumentado de mortalidade cardíaca e por qualquer causa com antidepressivo na IC especificamente.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice",
+    "reference": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice. Eur Heart J. 2021;42(34):3227-3337. DOI: 10.1093/eurheartj/ehab484 — seção 4.4 (Mental healthcare and psychosocial interventions), tabela de recomendações. Ensaios citados: escitalopram pós-SCA reduziu o desfecho composto de óbito, infarto ou ICP (HR 0,69); ISRS reduziu readmissão por doença coronariana (RR 0,63) e mortalidade por qualquer causa (RR 0,56) em metanálise.",
+    "theme": "Saúde mental e cardiologia",
+    "tags": [
+      "depressão",
+      "isrs",
+      "doença coronariana",
+      "antidepressivo",
+      "insuficiência cardíaca"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
