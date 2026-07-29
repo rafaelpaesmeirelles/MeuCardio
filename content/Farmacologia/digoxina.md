@@ -53,7 +53,12 @@ O rótulo aprovado contraindica a digoxina em apenas duas situações:
 - Idade avançada, baixo peso, disfunção renal e distúrbio eletrolítico predispõem à toxicidade
 
 ## Situacoes de cautela clinica reconhecida
-Cardiomiopatia hipertrófica obstrutiva (o inotropismo positivo agrava o gradiente da via de saída), pré-excitação/WPW com fibrilação atrial (risco de condução acelerada pela via acessória) e bloqueio atrioventricular de alto grau ou bradicardia sinusal grave sem marca-passo. VERIFICAÇÃO HUMANA NECESSÁRIA para o estatuto formal de cada uma — são cautelas consagradas na prática, mas não constam da seção de contraindicações do rótulo consultado.
+Cardiomiopatia hipertrófica obstrutiva (o inotropismo positivo agrava o gradiente da via de saída), pré-excitação/WPW com fibrilação atrial (risco de condução acelerada pela via acessória) e bloqueio atrioventricular de alto grau ou bradicardia sinusal grave sem marca-passo.
+
+**Resolvido em 29/07/2026: nenhuma das três é contraindicação formal no rótulo do FDA — a seção 4 (Contraindicações) só lista fibrilação ventricular e hipersensibilidade conhecida à digoxina/digitálicos.** As três constam como Advertências e Precauções, com nível de restrição diferente entre si:
+- **WPW com fibrilação atrial** (seção 5.1): risco descrito como de **fibrilação ventricular** em quem desenvolve FA sobre a via acessória — a mais grave das três, mas ainda listada como advertência, não como proibição absoluta.
+- **Doença do nó sinusal com bloqueio AV** (seção 5.2): risco de bloqueio AV avançado ou completo.
+- **Estenose subaórtica hipertrófica idiopática** — nome usado pelo rótulo para a cardiomiopatia hipertrófica obstrutiva (seção 5.7, "Decreased Cardiac Output..."): o rótulo diz que a digoxina **"deve geralmente ser evitada"** nesses pacientes pelo agravamento da obstrução da via de saída, mas registra explicitamente que **já foi usada para controle de frequência no subgrupo com fibrilação atrial associada** — ou seja, mesmo aqui a cautela não é absoluta.
 
 ## Interacoes criticas
 Amiodarona e verapamil aumentam níveis sanguíneos de digoxina, exigindo redução de dose e monitorização
