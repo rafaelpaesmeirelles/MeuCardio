@@ -72,10 +72,43 @@ canal — não há outro.
 exato. Ao terminar, marque como livre. Quem chegar depois lê primeiro e escolhe
 uma frente livre em vez de negociar no meio do commit.
 
+> **DIVISÃO DE `content/` POR TEMA — decidida pelo Rafael em 29/07/2026.**
+> Os 27 temas da biblioteca foram partidos ao meio entre a **sessão de
+> Medicamentos** e a **sessão da Biblioteca**. A tabela de caminhos abaixo
+> continua valendo para tudo que não é `content/`; para `content/`, vale a
+> divisão por tema logo a seguir. Cada sessão escreve **só nos seus temas**.
+>
+> **Temas da sessão de MEDICAMENTOS (13 temas, 61 docs):** Farmacologia,
+> Gravidez, Terapia intensiva, Tromboembolismo, Fibrilação atrial, Arritmias,
+> Dispositivos, Prevenção e lipídios, Diabetes e cardiologia, Insuficiência
+> cardíaca, Hipertensão, Hipertensão pulmonar, Calculadoras.
+> *Critério:* todos encostam em farmacologia, anticoagulação, gestação ou
+> cuidado crítico — frentes que essa sessão já percorreu lendo bula.
+>
+> **Temas da sessão da BIBLIOTECA (14 temas, 84 docs):** Doença coronariana,
+> Cardiomiopatias, Valvopatias, Pericárdio, Endocardite, Aorta e doença
+> arterial periférica, Cardiopatias congênitas, Cardio-oncologia, Febre
+> reumática, Síncope, Perioperatório, Saúde mental e cardiologia, Comunicação
+> clínica, Geral.
+> *Inclui* os três fluxogramas ainda pendentes — cardiopatia congênita do
+> adulto, cardio-oncologia e febre reumática — e respeita o que essa sessão já
+> entregou (dislipidemia, amiloidose e perioperatório).
+>
+> **Dois achados da medição de 29/07/2026, para quem pegar cada metade:**
+> 1. **Farmacologia tem 96 documentos e 96 pendentes de revisão** — nenhum
+>    revisado. É 40% da biblioteca sem uma única fonte confirmada, e o maior
+>    débito isolado do sistema. Ficou com a sessão de Medicamentos porque é ela
+>    que está lendo as bulas.
+> 2. **Tromboembolismo caiu de 6 para 3 documentos** entre o `COBERTURA.md` e a
+>    contagem real. Ou houve fusão de duplicatas, ou algo saiu. TEP e TVP não
+>    podem ficar com três documentos — conferir antes de escrever por cima.
+
 | Caminho | Sessão | Estado |
 |---|---|---|
-| `medicamentos/metadados.json` | **outra sessão** (verbetes contra bula brasileira) | **ocupado — não tocar** |
-| `content/Farmacologia/*.md` | sessão da biblioteca | ocupado em rodízio, ver abaixo |
+| `medicamentos/metadados.json` e `medicamentos/interacoes.json` | sessão de **Medicamentos** | **ocupado — não tocar** |
+| `content/<temas da lista de Medicamentos, acima>` | sessão de **Medicamentos** | **ocupado a partir de 29/07/2026** |
+| `content/<temas da lista da Biblioteca, acima>` | sessão da **Biblioteca** | ocupado |
+| `content/Farmacologia/*.md` | sessão de **Medicamentos** | ocupado — a regra de rodízio abaixo fica **suspensa** para este tema |
 | `content/<demais temas>/*.md` | sessão da biblioteca | livre |
 | `evidencias/`, `estudos/`, `galeria/`, `exames/` | sessão da biblioteca | livre |
 | `controlados/`, `backend/app/**/receituario*`, `backend/app/services/classificacao_*` | sessão do receituário (Tarefa 27) | ocupado |
