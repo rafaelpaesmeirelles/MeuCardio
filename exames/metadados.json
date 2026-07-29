@@ -822,5 +822,29 @@
       "gestação",
       "hipertensão pulmonar tromboembólica crônica"
     ]
+  },
+  {
+    "slug": "teste-farmacologico-com-bloqueador-de-canal-de-sodio-na-sindrome-de-brugada",
+    "name": "Teste farmacológico com bloqueador de canal de sódio na síndrome de Brugada",
+    "category": "metodo_grafico",
+    "theme": "Arritmias",
+    "what_it_measures": "ECG de 12 derivações — com eletrodos precordiais direitos posicionados também no segundo e terceiro espaços intercostais, além da posição padrão — registrado durante infusão de um bloqueador de canal de sódio (ajmalina, flecainida, procainamida ou pilsicainida), usado para tentar induzir o padrão eletrocardiográfico tipo 1 de Brugada em paciente sem o padrão espontâneo no ECG basal.",
+    "reference_range": "Padrão tipo 1 de Brugada: supradesnivelamento do ponto J >2 mm com segmento ST em coved (convexo) e inversão de onda T, em pelo menos uma derivação precordial direita (V1 ou V2) nas posições padrão, no segundo, terceiro ou quarto espaço intercostal.",
+    "indications": "Pela Recommendation Table 43 da diretriz ESC 2022 de arritmias ventriculares e morte súbita: BrS é diagnosticada (Classe I, Nível C) em paciente sem outra cardiopatia que sobreviveu a parada cardíaca por fibrilação ventricular ou taquicardia ventricular polimórfica e exibe padrão tipo 1 induzido por bloqueador de canal de sódio ou durante febre. Em paciente sem outra cardiopatia com padrão tipo 1 induzido (mas não espontâneo), BrS deve ser considerada (Classe IIa, Nível C) apenas se houver pelo menos um entre: síncope arrítmica ou respiração agônica noturna, história familiar de BrS, ou história familiar de morte súbita antes dos 45 anos com autópsia negativa e circunstância suspeita de BrS.",
+    "interpretation": "Um padrão tipo 1 induzido, isolado, sem nenhum dos critérios clínicos ou familiares acima, não fecha diagnóstico de BrS — é achado eletrocardiográfico que exige correlação clínica antes de qualquer conduta, incluindo indicação de CDI. Antes de assumir BrS, é obrigatório excluir as chamadas fenocópias — outras condições que reproduzem o padrão tipo 1 sem ser o canalopatia genética.",
+    "limitations": "A diretriz registra explicitamente que a indução do padrão por fármaco ou febre é menos específica do que se pensava antes: ocorre em 2-4% de indivíduos saudáveis, e com prevalência ainda maior em quem tem taquicardia por reentrada nodal atrioventricular ou via acessória. É exatamente por isso que o painel de especialistas exige um critério clínico ou familiar adicional para diagnosticar BrS diante de um padrão apenas induzido — ao contrário do padrão espontâneo, que sozinho já é suficiente (Classe I) independentemente de sintoma. O rendimento do teste genético para SCN5A em paciente com BrS é de apenas 20%, e é o único gene com evidência de associação suficiente para uso clínico.",
+    "source_refs": [
+      "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262 — seção 7.2.4 (Brugada syndrome) e Recommendation Table 43 (Recommendations for management of patients with Brugada syndrome)."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "síndrome de brugada",
+      "ajmalina",
+      "flecainida",
+      "bloqueador de canal de sódio",
+      "morte súbita",
+      "scn5a"
+    ]
   }
 ]
