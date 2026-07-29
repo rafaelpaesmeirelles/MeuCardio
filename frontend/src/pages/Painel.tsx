@@ -51,6 +51,7 @@ const GRUPOS: Grupo[] = [
         descricao: "Monte a lista do que o paciente já usa e do que você vai prescrever, e veja as interações com gravidade e fonte.",
       },
       {
+        to: "/condicoes",
         nome: "Alerta por condição especial",
         descricao: "Cruza o que vai ser prescrito ou pedido com gestação, doença renal crônica, hepatopatia e outras condições.",
       },

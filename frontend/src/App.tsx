@@ -24,6 +24,7 @@ import Calculadoras from "./pages/Calculadoras";
 import Calculadora from "./pages/Calculadora";
 import Medicamentos from "./pages/Medicamentos";
 import Interacoes from "./pages/Interacoes";
+import Condicoes from "./pages/Condicoes";
 import Round from "./pages/Round";
 import Assistente from "./pages/Assistente";
 import Admin from "./pages/Admin";
@@ -73,6 +74,7 @@ export default function App() {
         <Route path="calculadoras/:slug" element={<Calculadora />} />
         <Route path="medicamentos" element={<Medicamentos />} />
         <Route path="interacoes" element={<Interacoes />} />
+        <Route path="condicoes" element={<Condicoes />} />
         <Route path="galeria" element={<Galeria />} />
         <Route path="galeria/:slug" element={<ImagemGaleria />} />
         <Route path="exames" element={<Exames />} />
