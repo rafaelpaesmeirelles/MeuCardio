@@ -151,15 +151,12 @@ cobre**. Fluxograma tem formato obrigatório de árvore de decisão: ver
 `CLAUDE.md` e validar com os dois scripts de `.claude/ferramentas/`.
 
 ## Por onde continuar
-0. **PENDENTE COM O RAFAEL, e é o item mais urgente:** duas correções em
-   `content/Farmacologia/` estão **commitadas mas ainda não no ar**, porque a
-   única rota que as sobe é `POST /api/admin/import`, que **reimporta
-   `content/` inteiro** e por isso alcança a faixa da outra sessão. Enquanto
-   não rodar, o documento publicado da **apixabana continua listando
-   "Gravidez" e "Insuficiência hepática grave" como contraindicações** — o
-   que a bula profissional Rev0515, citada no próprio arquivo, não faz
-   (categoria B, "não recomendada"). Conferido no ar em 29/07/2026 pela
-   `/api/library/documents/apixabana`.
+0. ~~Correções de `content/Farmacologia` fora do ar~~ — **RESOLVIDO em
+   29/07/2026.** As três subiram e estão publicadas: apixabana, lisinopril e
+   ácido bempedoico. Conferido depois do import: documentos publicados
+   seguiram em **246**, e os retidos foram de 22 para 24 — os dois que
+   entraram são da sessão da Biblioteca e chegaram como `published = false`.
+   Nada foi publicado indevidamente.
 1. **Gestação e lactação** nos fármacos que ainda não têm — as duas listas
    exatas estão na seção "Estado atual" acima. **Comece pela EMA**, e só depois
    pelos espelhos brasileiros: foi assim que 10 fármacos dados como perdidos
