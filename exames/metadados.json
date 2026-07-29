@@ -699,5 +699,31 @@
       "whf",
       "regurgitação mitral patológica"
     ]
+  },
+  {
+    "slug": "bnp-e-troponina-no-diagnostico-diferencial-da-sindrome-de-takotsubo",
+    "name": "BNP/NT-proBNP e troponina no diagnóstico diferencial da síndrome de takotsubo",
+    "category": "laboratorial",
+    "theme": "Saúde mental e cardiologia",
+    "what_it_measures": "Peptídeo natriurético (BNP ou NT-proBNP) e troponina cardíaca, dosados em conjunto — não isoladamente — porque é a relação entre os dois que ajuda a diferenciar a síndrome de takotsubo (cardiomiopatia de estresse, tipicamente desencadeada por estresse emocional ou físico agudo) da síndrome coronariana aguda, dois quadros que se apresentam de forma clínica e eletrocardiográfica semelhante.",
+    "reference_range": "Não há corte numérico validado e consensual para a relação BNP/troponina — o achado é qualitativo: no critério diagnóstico internacional (InterTAK), o padrão típico da takotsubo é troponina e CK-MB apenas discretamente a moderadamente elevadas, desproporcionalmente baixas em relação à extensão da disfunção ventricular observada na imagem, enquanto o BNP/NT-proBNP costuma estar significativamente elevado.",
+    "indications": "O International Expert Consensus Document on Takotsubo Syndrome (Part I) lista o padrão de biomarcadores como um dos oito critérios diagnósticos (InterTAK Diagnostic Criteria), ao lado de: disfunção ventricular esquerda transitória com padrão de discinesia apical ('apical ballooning'), medioventricular, basal ou focal; gatilho emocional, físico, combinado ou ausente; possível gatilho neurológico (incluindo hemorragia subaracnóidea) ou feocromocitoma; alteração eletrocardiográfica nova (supradesnivelamento de ST, inversão de onda T ou prolongamento de QTc), com raras exceções; coexistência de doença arterial coronariana significativa, que **não** exclui o diagnóstico; ausência de evidência de miocardite infecciosa; e predomínio em mulheres na pós-menopausa.",
+    "interpretation": "O descompasso entre uma troponina discretamente elevada e uma área extensa de disfunção contrátil ao ecocardiograma ou à ventriculografia — o oposto do que se espera num infarto de território correspondente, onde a troponina tende a acompanhar a extensão da lesão — é o achado que aponta para takotsubo em vez de síndrome coronariana aguda. O BNP/NT-proBNP elevado reforça a suspeita, mas nenhum biomarcador isolado fecha o diagnóstico: os oito critérios do InterTAK são avaliados em conjunto, e cateterismo ou angiotomografia coronária costuma ser necessário para excluir obstrução coronariana concomitante, já que sua presença não descarta takotsubo.",
+    "limitations": "Não existe corte numérico único de BNP, NT-proBNP ou troponina validado como discriminador isolado entre takotsubo e síndrome coronariana aguda — a interpretação é sempre em conjunto com ECG, imagem e coronariografia, nunca por biomarcador isolado. Recorte deste verbete: cobre o padrão de biomarcadores nos critérios diagnósticos do InterTAK; não cobre o algoritmo de tratamento nem o prognóstico da takotsubo, que estão na Parte II do mesmo consenso (Diagnostic Workup, Outcome, and Management).",
+    "source_refs": [
+      "Ghadri JR, Wittstein IS, Prasad A, et al. International Expert Consensus Document on Takotsubo Syndrome (Part I): Clinical Characteristics, Diagnostic Criteria, and Pathophysiology. Eur Heart J. 2018;39(22):2032-2046. DOI: 10.1093/eurheartj/ehy076 — Tabela 1 (InterTAK Diagnostic Criteria).",
+      "2025 ESC Clinical Consensus Statement on mental health and cardiovascular disease. Eur Heart J. 2025;46(41):4156-4225. DOI: 10.1093/eurheartj/ehaf191 · PMID 40878270 — seção 8.1.4 (Sex and gender differences in mental health in people with takotsubo syndrome), sobre o gatilho de estresse emocional agudo e a maior recorrência em quem já tem transtorno psiquiátrico prévio."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "bnp",
+      "nt-probnp",
+      "troponina",
+      "takotsubo",
+      "cardiomiopatia de estresse",
+      "intertak",
+      "diagnóstico diferencial"
+    ]
   }
 ]
