@@ -894,5 +894,29 @@
       "diabetes",
       "kdigo"
     ]
+  },
+  {
+    "slug": "relacao-aldosterona-renina-arr-no-rastreio-de-hiperaldosteronismo-primario",
+    "name": "Relação aldosterona-renina (ARR) no rastreio de hiperaldosteronismo primário",
+    "category": "laboratorial",
+    "theme": "Hipertensão",
+    "what_it_measures": "Razão entre aldosterona plasmática e renina (atividade de renina plasmática ou renina direta), teste de rastreio para hiperaldosteronismo primário — causa mais comum de hipertensão secundária, presente em até 12% dos pacientes com pressão arterial acima de 180/110 mmHg. Hipopotassemia espontânea ou induzida por diurético sugere fortemente o diagnóstico, mas a maioria dos pacientes diagnosticados **não** tem histórico de hipopotassemia — não esperar esse achado para suspeitar.",
+    "reference_range": "Não há corte único universal — a diretriz registra explicitamente que os pontos de corte da ARR variam conforme a unidade de medida e o laboratório local, e remete às diretrizes específicas de hiperaldosteronismo primário para o valor exato a usar.",
+    "indications": "A diretriz ESC 2024 de hipertensão recomenda (Classe IIa, Nível B) rastrear hiperaldosteronismo primário com a ARR em todo adulto com hipertensão confirmada — mudança relevante em relação a diretrizes anteriores, que restringiam o rastreio a hipertensão resistente. Apesar disso, as taxas de rastreio mesmo em grupos de alto risco — hipertensão resistente e hipopotassemia — seguem baixas, em torno de 2% e 4% dos pacientes elegíveis, respectivamente.",
+    "interpretation": "O teste pode ser feito em paciente virgem de tratamento ou já em uso de anti-hipertensivo, mas o resultado precisa ser interpretado no contexto da medicação em uso — a diretriz lista o efeito de cada classe sobre aldosterona, renina e ARR: betabloqueador, IECA, BRA, diurético poupador e não poupador de potássio, agonista alfa-2 (clonidina, metildopa), AINE e anticoncepcional com drospirenona alteram o resultado, cada um numa direção diferente (falso positivo ou falso negativo), enquanto bloqueador de canal de cálcio diidropiridínico de ação longa e antagonista alfa não interferem e podem substituir a medicação interferente antes do teste, quando for preciso 'limpar' o rastreio. Também avaliar status de potássio e ingestão de sódio (sódio urinário de 24h ou relação sódio-creatinina na urina matinal), porque ambos afetam a leitura.",
+    "limitations": "Quando antagonista de receptor mineralocorticoide não pode ser suspenso por segurança (hipopotassemia grave ou hiperaldosteronismo florido com hipertensão grave), evidência recente sugere que a acurácia da ARR sob esse tratamento é só marginalmente afetada — ou seja, a droga mais problemática para o teste nem sempre precisa ser retirada. Resultado positivo não fecha diagnóstico: exige teste confirmatório antes de tratamento definitivo, e o papel dos testes de supressão de aldosterona (salina, fludrocortisona, sobrecarga oral de sódio) ainda é debatido academicamente, sem consenso sobre qual usar em cada cenário.",
+    "source_refs": [
+      "2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178 — seção 7.6.2 (Primary aldosteronism) e Tabela 12 (Drugs and conditions that affect aldosterone, renin, and aldosterone-to-renin ratio)."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "aldosterona",
+      "renina",
+      "arr",
+      "hiperaldosteronismo primário",
+      "hipertensão secundária",
+      "esc 2024"
+    ]
   }
 ]
