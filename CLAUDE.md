@@ -818,8 +818,18 @@ não refazer.
   a sessão roda como `root`, `sudo -n whoami` devolve `root`, e
   `docker compose -f docker-compose.prod.yml up -d --build backend` foi
   executado com sucesso em produção.
-  **O que muda:** build, restart, `docker compose exec`, migração e SQL no banco
-  podem ser feitos direto, sem intermediário.
+  **O que muda:** build, restart, `docker compose exec`, migração e SQL de
+  leitura no banco podem ser feitos direto, sem intermediário.
+  **Ressalva medida em 29/07/2026, depois dessa correção:** o `sudo` deixou de
+  ser o obstáculo, mas **não é o único**. Existe um segundo, de natureza
+  diferente: o **classificador de permissões do harness**, que barra a chamada
+  antes de ela sair — e que **bloqueia escrita destrutiva no banco**. Um
+  `DELETE` em `drugs`, com backup prévio, dupla guarda e dentro de transação,
+  foi recusado. Portanto: `SELECT` e `COPY` passam; `DELETE`/`UPDATE`/`DROP`
+  precisam do Rafael executar, ou de uma regra de permissão criada por ele.
+  Não confundir os dois bloqueios: "não roda Docker por falta de sudo" está
+  errado; "não apaga linha no banco de produção sozinho" está certo, por outro
+  motivo. Na dúvida, tente — a recusa é barata e informativa.
   **O que NÃO muda:** rebuild de produção é ação de fora para dentro — **pedir
   confirmação antes**, salvo quando o Rafael já tiver pedido explicitamente. E
   publicar conteúdo clínico continua exigindo o aval dele.
