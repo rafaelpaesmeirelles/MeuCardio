@@ -1195,10 +1195,13 @@
       "Insuficiência cardíaca com fração de ejeção reduzida ou preservada, com ou sem diabetes tipo 2 — parte dos quatro pilares farmacológicos da ICFEr e recomendação classe I para todo o espectro de fração de ejeção conforme atualização focada ESC 2023"
     ],
     "contraindications": [
-      "- **contraindicada**: TFGe <30 mL/min/1,73m², doença renal terminal ou diálise - **nao recomendada**: TFGe persistentemente <45 mL/min/1,73m² para indicação de controle glicêmico (indicação de insuficiência cardíaca mantém benefício em TFGe mais baixa, conforme dados do EMPEROR-Preserved) - **precaucao**: cautela em hipotensão ou depleção de volume, pelo risco de contração do volume intravascular - **fonte**: Drugs.com (guia de dosagem)"
+      "Hipersensibilidade à empagliflozina ou a qualquer componente da fórmula",
+      "Doenças hereditárias raras incompatíveis com os componentes da fórmula (ex.: intolerância à galactose)",
+      "Diabetes mellitus tipo 1 — bula restringe a indicação a diabetes tipo 2",
+      "**Divergência de fonte, nomeada**: o campo trazia \"contraindicada com TFGe <30\" citando Drugs.com. A bula brasileira registrada **não lista TFGe entre as contraindicações formais**; trata como recomendação de uso — \"JARDIANCE não é recomendado para uso em pacientes com TFG <30 mL/min/1,73m²\" — e não exige ajuste de dose para TFGe ≥30. Fonte: bula do JARDIANCE (empagliflozina, Boehringer Ingelheim do Brasil)."
     ],
     "dosing": {
-      "dose_e_apresentacao": "10 mg, 1 vez ao dia, independentemente da presença de diabetes — mesma dose testada em ambos os ensaios EMPEROR"
+      "dose_e_apresentacao": "Dose inicial de 10 mg VO 1x/dia (com ou sem alimentos), individualizada por eficácia e tolerabilidade; dose máxima de 25 mg/dia, sem exceder. Comprimidos revestidos de 10 mg ou 25 mg, embalagens com 10 ou 30 comprimidos. **Sem ajuste de dose** para TFGe ≥30 mL/min/1,73m², insuficiência hepática ou idosos; **não recomendado** com TFGe <30, em pediatria/adolescentes <18 anos e em ≥85 anos, por falta de dados de segurança e eficácia. Comprimido não deve ser partido nem mastigado. Fonte: bula do JARDIANCE (empagliflozina, Boehringer Ingelheim do Brasil)."
     },
     "outcomes": {
       "Evidencia pivotal — EMPEROR-Reduced e EMPEROR-Preserved": "- **EMPEROR-Reduced**: benefício cardiovascular e renal consistente em pacientes com ICFEr, independentemente da presença de diabetes no basal - **EMPEROR-Preserved**: melhora de desfechos em ICFEp independentemente do nível de pressão arterial basal; benefício e segurança mantidos em ampla faixa de função renal, até TFGe basal de 20 mL/min/1,73m² - **efeito renal**: reduziu a taxa de declínio da TFGe; benefício em eventos maiores de IC não foi influenciado pela categoria KDIGO de doença renal - **fonte**: PubMed (EMPEROR-Reduced); European Heart Journal (EMPEROR-Preserved)"
@@ -1207,7 +1210,9 @@
       "Effect of Empagliflozin on Cardiovascular and Renal Outcomes in Patients With Heart Failure by Baseline Diabetes Status: Results From the EMPEROR-Reduced Trial · PubMed · https://pubmed.ncbi.nlm.nih.gov/33175585/",
       "Empagliflozin, irrespective of blood pressure, improves outcomes in heart failure with preserved ejection fraction: the EMPEROR-Preserved trial · European Heart Journal · 2023 · https://academic.oup.com/eurheartj/article/44/5/396/6881121",
       "Empagliflozin Dosage Guide + Max Dose, Adjustments · Drugs.com · https://www.drugs.com/dosage/empagliflozin.html"
-    ]
+    ],
+    "pregnancy": "**Não recomendado na gravidez** como medida de precaução, \"a menos que seja claramente necessário\", e a bula reforça que \"não deve ser utilizado por mulheres grávidas sem orientação médica\". **Não especifica dado de teratogenicidade animal nem trimestre** — VERIFICAÇÃO HUMANA NECESSÁRIA para esses pontos. Fonte: bula do JARDIANCE (empagliflozina, Boehringer Ingelheim do Brasil), seção \"Gravidez e Amamentação\".",
+    "lactation": "**Recomenda-se descontinuar a amamentação durante o tratamento.** A bula afirma que \"dados de estudos disponíveis em animais mostraram a excreção da empagliflozina no leite\" e que \"não se sabe se JARDIANCE é excretado no leite humano\". Fonte: bula do JARDIANCE (empagliflozina, Boehringer Ingelheim do Brasil), seção \"Gravidez e Amamentação\"."
   },
   {
     "slug": "enalapril-maleato",
@@ -2983,7 +2988,9 @@
     },
     "references": [
       "Sacubitril/valsartan (ENTRESTO) — rótulo aprovado pelo FDA, DailyMed SPL setid 000dc81d-ab91-450c-8eae-8eb74e72296f"
-    ]
+    ],
+    "pregnancy": "**Contraindicado na gravidez** — a bula é direta: \"você não deve tomar Entresto se você está grávida\", e orienta suspender o tratamento e avisar o médico em caso de gravidez durante o uso. **Mulheres em idade fértil devem usar contracepção durante o tratamento e por 1 semana após a última dose.** Consistente com a contraindicação já registrada no campo `contraindications` (fonte FDA/DailyMed). Fonte adicional: bula do Entresto (sacubitril valsartana sódica hidratada, Novartis Biociências), seção \"Gravidez e amamentação\".",
+    "lactation": "**Amamentação não recomendada durante o tratamento** com Entresto, segundo a bula brasileira. Não há detalhe adicional (excreção no leite, dado animal) — VERIFICAÇÃO HUMANA NECESSÁRIA para esses pontos. Fonte: bula do Entresto (sacubitril valsartana sódica hidratada, Novartis Biociências), seção \"Gravidez e amamentação\"."
   },
   {
     "slug": "semaglutida",

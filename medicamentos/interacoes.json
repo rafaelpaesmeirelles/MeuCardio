@@ -334,5 +334,29 @@
     "conduta": "Redução de dose e monitorização da digoxina quando associada ao verapamil.",
     "fonte": "Bula de digoxina (versão brasileira, seção de contraindicações/interações, consultada em duas apresentações independentes — Digoxina® GSK e DIGOXINA_VP/Pharlab), citada no próprio verbete de digoxina em medicamentos/metadados.json.",
     "review_status": "revisado"
+  },
+  {
+    "slug": "empagliflozina-diuretico-tiazidico-ou-de-alca",
+    "farmacos": [
+      "empagliflozina"
+    ],
+    "classe_oposta": "diurético tiazídico (ex.: hidroclorotiazida) ou de alça (ex.: furosemida)",
+    "gravidade": "moderada",
+    "efeito": "A empagliflozina pode aumentar o efeito diurético desses medicamentos, elevando o risco de desidratação e queda de pressão arterial.",
+    "conduta": "Monitorar volemia e pressão arterial ao associar; a bula não especifica ajuste de dose formal, apenas o risco.",
+    "fonte": "Bula do JARDIANCE (empagliflozina, Boehringer Ingelheim do Brasil), seção de interações medicamentosas.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sacubitrilvalsartana-ieca",
+    "farmacos": [
+      "sacubitrilvalsartana"
+    ],
+    "classe_oposta": "inibidor da ECA (qualquer — ex.: enalapril, lisinopril, captopril, ramipril)",
+    "gravidade": "contraindicada",
+    "efeito": "Uso concomitante ou dentro de 36 horas de um IECA aumenta o risco de angioedema, pela dupla inibição de peptídeos que a neprilisina degrada (incluindo bradicinina) somada ao bloqueio da ECA.",
+    "conduta": "Não usar concomitantemente. Aguardar 36 horas após a última dose de IECA antes de iniciar sacubitril/valsartana, e o mesmo intervalo no sentido inverso, se um IECA for reintroduzido.",
+    "fonte": "Bula do Entresto (sacubitril valsartana sódica hidratada, Novartis Biociências) e rótulo do sacubitril-valsartana aprovado pelo FDA (DailyMed), já citados no verbete de sacubitrilvalsartana em medicamentos/metadados.json — os dois concordam na janela de 36 horas.",
+    "review_status": "revisado"
   }
 ]
