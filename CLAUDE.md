@@ -131,6 +131,31 @@ uma frente livre em vez de negociar no meio do commit.
 5. **Publicar continua sendo decisão do Rafael**, para as duas sessões, sem
    exceção.
 
+### Entrega da sessão de Conteúdo para a de Medicamentos — Calculadoras
+Ao ler a divisão por tema de 29/07/2026, eu já havia começado a resolver as
+marcações de `content/Calculadoras/`, que passou a ser **tema de Medicamentos**.
+Não continuo. Entrego o que foi conferido, para não se perder nem ser refeito:
+
+- **TIMI (Morrow DA et al., Circulation 2000;102(17):2031-2037, PMID 11044416)**
+  — citação confirmada, e o documento já foi corrigido: 10 variáveis basais
+  respondem por 97% da capacidade preditiva, escores de 0 a mais de 8,
+  mortalidade média em 30 dias de 6,7%, menos de 1% no escore 0, e aumento
+  graduado de mais de 40 vezes. **A tabela escore a escore NÃO está no resumo
+  indexado** — só no texto completo. A marcação segue aberta só nesse ponto.
+- **GRACE 2.0 (Fox KAA et al., BMJ Open 2014;4(2):e004425, PMID 24561498)** —
+  conferido e **ainda não escrito no documento**, porque o arquivo é de vocês.
+  O que o artigo diz: o 2.0 substitui associações lineares por **não lineares**
+  para idade, pressão sistólica, pulso e creatinina; usa idade, PAS, pulso,
+  creatinina e classe Killip, com substituições previstas quando creatinina ou
+  Killip faltam; estima morte a curto e longo prazo e o composto morte/IAM; e o
+  índice c para morte passa de **0,82** em 1 e 3 anos na coorte FAST-MI 2005,
+  caindo para **0,78** no composto. Isso resolve a marcação que pedia separar o
+  que é GRACE original do que é 2.0 — as tabelas de pontos por faixa são do
+  original, e o 2.0 não usa soma de pontos.
+- **Framingham** — a marcação continua aberta e **não investiguei**: a suspeita
+  registrada no arquivo é que as tabelas em mmol/L venham da adaptação canadense
+  e não do modelo de D'Agostino 2008.
+
 ### O que a sessão de Conteúdo está fazendo agora (29/07/2026, à tarde)
 Confirmado pelo Rafael. Duas frentes, ambas **fora** da faixa da sessão de
 Medicamentos, e escolhidas justamente por isso.

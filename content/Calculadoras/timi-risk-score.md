@@ -24,7 +24,7 @@ Estimativa de risco em síndrome coronariana aguda, com versões distintas para 
 ## Versao stemi
 - **variaveis**: ['Idade 65-74/>75 anos (2/3 pontos)', 'Diabetes, hipertensão ou angina prévia', 'PAS <100 mmHg', 'FC >100 bpm', 'Classe Killip ≥2', 'Peso <67 kg', 'IAM anterior ou BRE', 'Tempo até tratamento >4h']
 - **pontuacao**: Soma ponderada (escore de 0 a 14)
-- **interpretacao**: mortalidade em 30 dias cresce de forma contínua com o escore. As faixas de baixo/intermediário/alto que circulavam aqui não vieram do artigo de derivação — VERIFICAÇÃO HUMANA NECESSÁRIA para conferir a tabela de mortalidade por escore em Morrow DA et al., Circulation 2000;102:2031-2037
+- **interpretacao**: mortalidade em 30 dias cresce de forma contínua com o escore, e o artigo de derivação **não define faixas de baixo/intermediário/alto** — foi por isso que as que circulavam aqui saíram. O que o resumo indexado afirma, conferido em 29/07/2026: dez variáveis basais respondem por **97% da capacidade preditiva** do modelo multivariado; os escores relatados vão de **0 a mais de 8**; a mortalidade média em 30 dias na coorte foi de **6,7%**, com **menos de 1%** no escore 0; e há **aumento graduado de mais de 40 vezes** ao longo da faixa. VERIFICAÇÃO HUMANA NECESSÁRIA, agora num ponto estreito: **a tabela de mortalidade escore a escore não está no resumo**, só no texto completo de Morrow DA et al., Circulation 2000;102(17):2031-2037. Até que ela seja lida, use o gradiente — não um corte
 
 ## Aplicacao pratica
 Utilizado para orientar decisões sobre estratégia invasiva precoce vs. conservadora em SCA, e mais recentemente para triagem de candidatos à alta precoce em pacientes de baixo risco
