@@ -4,7 +4,7 @@ slug: dinitrato-de-isossorbida
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["Isosorbide dinitrate tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 5f585259-59ed-4648-b562-164f3746c821"]
+source_refs: ["Bula do ISORDIL (dinitrato de isossorbida), seções de posologia e superdosagem, conferida em 29/07/2026", "Isosorbide dinitrate tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 5f585259-59ed-4648-b562-164f3746c821"]
 legacy_source: "medicamentos/banco-de-medicamentos-item-17.md"
 ---
 
@@ -29,11 +29,17 @@ Conversão em óxido nítrico no músculo liso vascular, ativando guanilato cicl
 - **fonte**: rótulo do dinitrato de isossorbida aprovado pelo FDA (DailyMed)
 
 ## Dose
-- **angina sublingual**: 5-10 mg a cada 2-3 horas, conforme necessidade
-- **angina oral regular**: 10-30 mg, 4x/dia (a cada 6 horas), preferencialmente em jejum; posologia usual de 20-40 mg 4x/dia
-- **oral acao prolongada**: 20-80 mg a cada 8-12 horas
-- **icc adjuvante**: Sublingual 5-10 mg a cada 2 horas ajustado conforme resposta; oral dose inicial 10-40 mg a cada 6 horas
-- **fonte**: VERIFICAÇÃO HUMANA NECESSÁRIA — as faixas desta seção vinham de sites comerciais de medicamento. Conferir contra a bula registrada na ANVISA. O esquema sublingual e o oral conferem com a prática consagrada, mas o intervalo livre de nitrato para evitar tolerância precisa aparecer na própria posologia, não só na seção de particularidades
+
+**Resolvido em 29/07/2026** pela bula brasileira do ISORDIL (dinitrato de isossorbida). A dose inicial, em qualquer indicação, **não deve exceder 5 mg**, pelo risco ocasional de resposta hipotensora intensa.
+
+- **angina, ataque sublingual**: **2,5 a 5 mg a cada 2 a 3 horas** — a bula usa esta faixa, mais estreita que a de 5-10 mg que constava aqui
+- **angina, profilaxia sublingual**: 2,5 a 5 mg antes de situação que costume desencadear a crise
+- **angina, oral regular**: **5 a 30 mg, 4x/dia**, preferencialmente em jejum — os comprimidos orais **não são indicados para tratar a crise**, só para profilaxia
+- **angina, ação prolongada (cápsulas AP)**: dose inicial de **40 mg**; manutenção de **40 a 80 mg a cada 8 ou 12 horas**
+- **icc aguda e crônica**: sublingual **5 a 10 mg a cada 2 a 3 horas**; oral **10 a 40 mg, 4x/dia, com dose máxima de 240 mg/dia** — a bula orienta iniciar pela via sublingual para estabilizar sintomas ou aferir a resposta hemodinâmica, depois manter com a via oral
+- **fonte**: bula do ISORDIL (dinitrato de isossorbida), seções de posologia, conferida em 29/07/2026
+
+VERIFICAÇÃO HUMANA NECESSÁRIA para o **intervalo livre de nitrato** contra tolerância: a bula brasileira registra que a tolerância ao Isordil e a tolerância cruzada com outros nitratos **podem ocorrer**, mas não numera um intervalo livre recomendado — esse número, quando existe, costuma vir de diretriz de angina estável, não de bula, e não foi conferido nesta sessão.
 
 ## Farmacocinetica
 Via sublingual atinge concentração plasmática máxima em aproximadamente 6 minutos, com meia-vida curta (~45 min); metabólitos ativos (2-mononitrato e 5-mononitrato) têm meia-vida mais prolongada e contribuem significativamente para o efeito terapêutico

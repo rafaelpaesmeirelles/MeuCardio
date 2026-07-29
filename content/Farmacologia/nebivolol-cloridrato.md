@@ -4,7 +4,7 @@ slug: nebivolol-cloridrato
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["Nebivolol (BYSTOLIC) tablets — rótulo aprovado pelo FDA, indicação de hipertensão arterial"]
+source_refs: ["Nebivolol (BYSTOLIC) tablets — rótulo aprovado pelo FDA, indicação de hipertensão arterial", "Flather MD, Shibata MC, Coats AJS, et al. Randomized trial to determine the effect of nebivolol on mortality and cardiovascular hospital admission in elderly patients with heart failure (SENIORS). Eur Heart J. 2005;26(3):215-225. DOI: 10.1093/eurheartj/ehi115. PMID: 15642700"]
 legacy_source: "medicamentos/banco-de-medicamentos-nebivolol.md"
 ---
 
@@ -26,7 +26,7 @@ Metabolizado via CYP2D6 com polimorfismo genético significativo; biodisponibili
 - **hipertensao adulto**: 5 mg (1 comprimido) 1x/dia; efeito evidente em 1-2 semanas, ótimo em até 4 semanas
 - **hipertensao idoso maior 65 anos**: Dose inicial 2,5 mg/dia, podendo aumentar para 5mg/dia
 - **hipertensao insuficiencia renal**: Dose inicial 2,5 mg/dia, podendo aumentar até 5mg/dia
-- **icfer indicacao especifica**: aprovado para insuficiência cardíaca em associação à terapia padrão, em idosos a partir de 70 anos. VERIFICAÇÃO HUMANA NECESSÁRIA para o critério de FEVE ≤35% escrito aqui: ele **contradiz a própria seção de evidência deste documento**, que descreve o SENIORS como estudo em idosos com IC independentemente da fração de ejeção. Uma das duas afirmações está errada e é preciso decidir qual contra a bula e o artigo original
+- **icfer indicacao especifica**: aprovado para insuficiência cardíaca em associação à terapia padrão, em idosos a partir de 70 anos. **Contradição resolvida em 29/07/2026, e o critério real não é nenhum dos dois que constavam aqui — é um "ou".** O artigo original do SENIORS (Flather MD et al., Eur Heart J. 2005;26(3):215-225) inclui idosos ≥70 anos com história de IC definida como **hospitalização por IC no ano anterior OU fração de ejeção conhecida ≤35%** — os dois critérios são alternativos, não é preciso ter os dois. O próprio artigo mostra o efeito disso: FEVE média de 36%, e **35% dos pacientes tinham FEVE acima de 35%**. Ou seja, "FEVE ≤35%" sozinho superestimava a restrição (é só uma das duas portas de entrada), e "independentemente da FEVE" subestimava (o critério de entrada não dispensa FEVE — dispensa **quando** houve hospitalização recente)
 - **icfer titulacao**: 1,25mg 1x/dia → 2,5mg 1x/dia → 5mg 1x/dia → 10mg 1x/dia, com intervalos de 1-2 semanas conforme tolerabilidade; monitorização de pelo menos 2h a cada início/aumento de dose
 - **icfer dose maxima**: 10 mg 1x/dia
 - **insuficiencia hepatica**: Contraindicado — dados limitados
@@ -34,7 +34,7 @@ Metabolizado via CYP2D6 com polimorfismo genético significativo; biodisponibili
 - **fonte**: VERIFICAÇÃO HUMANA NECESSÁRIA — a indicação em insuficiência cardíaca **não existe na rotulagem norte-americana**, onde o nebivolol é aprovado apenas para hipertensão; ela vem da rotulagem europeia e brasileira. Conferir a bula registrada na ANVISA para a indicação, a faixa etária e a titulação
 
 ## Evidencia pivotal seniors
-Estudo SENIORS avaliou nebivolol em pacientes idosos com IC independentemente da FEVI, demonstrando prolongamento significativo do tempo até morte ou hospitalização cardiovascular
+2.128 pacientes ≥70 anos (média 76 anos) com história de IC — hospitalização por IC no ano anterior **ou** FEVE conhecida ≤35% —, randomizados para nebivolol titulado de 1,25 mg a 10 mg 1x/dia (1.067) ou placebo (1.061), com seguimento médio de 21 meses. FEVE média de 36%, com **35% dos pacientes com FEVE acima de 35%**. Desfecho composto de morte por qualquer causa ou internação cardiovascular: **31,1% com nebivolol vs. 35,3% com placebo — HR 0,86 (IC95% 0,74-0,99)**
 
 ## Efeitos adversos ic
 Bradicardia e tontura (~11% cada, vs. ~2% e 7% no placebo); agravamento de IC (5,8% vs. 5,2%); hipotensão postural (2,1% vs. 1,0%); BAV 1º grau (1,4% vs. 0,9%); edema de membros inferiores (1,0% vs. 0,2%)
