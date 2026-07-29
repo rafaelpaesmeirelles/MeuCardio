@@ -178,5 +178,65 @@
     "conduta": "A bula determina que fluoroquinolonas devem ser EVITADAS em quem recebe amiodarona.",
     "fonte": "Bula do profissional de saúde do cloridrato de amiodarona (Fresenius Kabi Brasil), item 5 — Advertências e Precauções — e item 6 — Interações Medicamentosas.",
     "review_status": "revisado"
+  },
+  {
+    "slug": "bisoprolol-verapamil",
+    "farmacos": [
+      "bisoprolol-hemifumarato",
+      "verapamil-cloridrato"
+    ],
+    "gravidade": "grave",
+    "efeito": "Contratilidade miocárdica reduzida e condução atrioventricular retardada. **O verapamil INTRAVENOSO em paciente já em uso de betabloqueador pode causar hipotensão profunda e bloqueio atrioventricular** — é a forma mais perigosa desta associação.",
+    "conduta": "Evitar a associação, e em especial não administrar verapamil endovenoso a quem está betabloqueado. Se houver indicação inescapável, exige monitorização de frequência, pressão e condução.",
+    "fonte": "Bula do profissional de saúde do Concor (fumarato de bisoprolol, Merck S.A.), seção de interações medicamentosas.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "bisoprolol-diltiazem",
+    "farmacos": [
+      "bisoprolol-hemifumarato",
+      "diltiazem-cloridrato"
+    ],
+    "gravidade": "moderada",
+    "efeito": "Mesmo efeito do verapamil — contratilidade reduzida e condução AV retardada — porém, nas palavras da bula, **em menor extensão**.",
+    "conduta": "Usar com cautela, com vigilância de frequência cardíaca e condução.",
+    "fonte": "Bula do profissional de saúde do Concor (fumarato de bisoprolol, Merck S.A.), seção de interações medicamentosas.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "bisoprolol-antiarritmico-classe-i",
+    "farmacos": [
+      "bisoprolol-hemifumarato"
+    ],
+    "classe_oposta": "antiarrítmico de classe I (quinidina, disopiramida, lidocaína, fenitoína, flecainida, propafenona)",
+    "gravidade": "moderada",
+    "efeito": "Aumento do efeito depressivo do bisoprolol sobre a condução atrioventricular e a contratilidade.",
+    "conduta": "Vigiar condução e função ventricular na associação.",
+    "fonte": "Bula do profissional de saúde do Concor (fumarato de bisoprolol, Merck S.A.), seção de interações medicamentosas.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "valsartana-ieca-duplo-bloqueio",
+    "farmacos": [
+      "valsartana",
+      "captopril"
+    ],
+    "gravidade": "grave",
+    "efeito": "Duplo bloqueio do sistema renina-angiotensina. Associado a **maior incidência de hipotensão, hipercalemia e alteração da função renal** em comparação com a monoterapia.",
+    "conduta": "A bula não proíbe a associação de BRA com IECA, mas exige **monitoração de pressão arterial, função renal e eletrólitos**. O benefício adicional precisa justificar esses três riscos — na maioria dos cenários, não justifica.",
+    "fonte": "Bula para o profissional de saúde da valsartana (Brainfarma Indústria Química e Farmacêutica S.A.), seções de contraindicações e de interações medicamentosas — 'Duplo bloqueio do Sistema Renina-Angiotensina'.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "valsartana-alisquireno",
+    "farmacos": [
+      "valsartana"
+    ],
+    "classe_oposta": "alisquireno",
+    "gravidade": "contraindicada",
+    "efeito": "Duplo bloqueio do SRA com risco somado de hipotensão, hipercalemia e piora de função renal.",
+    "conduta": "**Contraindicado em paciente com diabetes tipo 2.** Deve ser **evitado** na insuficiência renal grave (TFG abaixo de 30 mL/min). A mesma regra vale para IECA associado a alisquireno.",
+    "fonte": "Bula para o profissional de saúde da valsartana (Brainfarma Indústria Química e Farmacêutica S.A.), seções de contraindicações e de interações medicamentosas — 'Duplo bloqueio do Sistema Renina-Angiotensina'.",
+    "review_status": "revisado"
   }
 ]

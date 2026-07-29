@@ -19,19 +19,35 @@ def _objetos(b):
 
 
 def _fluxo(corpo):
-    m = re.search(rb"stream\r?\n(.*?)\r?\nendstream", corpo, re.S)
+    # A quebra de linha ANTES de `endstream` é opcional na prática: há PDF em
+    # que o fluxo termina colado nele. Exigi-la aqui fazia o casamento falhar e
+    # o objeto ser descartado em silêncio — 16 dos 17 blocos de texto de uma
+    # bula sumiam assim, e o resultado era arquivo vazio em vez de erro.
+    m = re.search(rb"stream\r?\n(.*?)endstream", corpo, re.S)
     if not m:
         return b""
     d = m.group(1)
-    if b"/FlateDecode" in corpo:
+    if b"/FlateDecode" not in corpo:
+        return d
+    # A captura pode ter levado junto o EOL que separa o fluxo do `endstream`.
+    # Tenta o dado como veio e depois sem o terminador — nesta ordem, sem
+    # adivinhar nada: ou o zlib descomprime, ou não.
+    for dado in (d, d[:-2] if d.endswith(b"\r\n") else None,
+                 d[:-1] if d[-1:] in (b"\n", b"\r") else None):
+        if dado is None:
+            continue
         try:
-            return zlib.decompress(d)
+            return zlib.decompress(dado)
         except zlib.error:
             try:
-                return zlib.decompressobj().decompress(d)
-            except Exception:
-                return b""
-    return d
+                # Fluxo truncado ainda rende o que já foi lido — melhor do que
+                # perder a página inteira.
+                parcial = zlib.decompressobj().decompress(dado)
+                if parcial:
+                    return parcial
+            except zlib.error:
+                pass
+    return b""
 
 
 def _cmaps(objs):
