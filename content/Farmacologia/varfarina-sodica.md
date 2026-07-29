@@ -4,7 +4,7 @@ slug: varfarina-sodica
 theme: "Farmacologia"
 kind: farmacologia
 review_status: revisado
-source_refs: ["Warfarin sodium tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 541c9a70-adaf-4ef3-94ba-ad4e70dfa057", "Bula do MAREVAN (varfarina sódica) — seção de contraindicações, conferida em 29/07/2026", "Otto CM, Nishimura RA, Bonow RO, et al. 2020 ACC/AHA Guideline for the Management of Patients With Valvular Heart Disease. Circulation. 2021;143(5):e72-e227. DOI: 10.1161/CIR.0000000000000923"]
+source_refs: ["COUMADIN (warfarin sodium) — rótulo aprovado pelo FDA, via DailyMed, SPL setid 91fa852c-b43d-4a55-983b-74aa6827125d, seção 2 (Dosage and Administration), com a tabela de metas de INR por indicação · consultado em 29/07/2026", "Warfarin sodium tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 541c9a70-adaf-4ef3-94ba-ad4e70dfa057", "Bula do MAREVAN (varfarina sódica) — seção de contraindicações, conferida em 29/07/2026", "Otto CM, Nishimura RA, Bonow RO, et al. 2020 ACC/AHA Guideline for the Management of Patients With Valvular Heart Disease. Circulation. 2021;143(5):e72-e227. DOI: 10.1161/CIR.0000000000000923"]
 legacy_source: "Fusão de dois documentos do mesmo fármaco em grafias diferentes: warfarina.md (do banco de medicamentos, itens 12-13) e varfarina-sodica.md. Mantido o slug varfarina-sodica porque VARFARINA SÓDICA é a denominação usada no registro brasileiro e na lista de preços da CMED. O primeiro trazia farmacogenética, nomes comerciais, dose inicial e efeitos adversos específicos da classe; o segundo, metas de INR por indicação, manejo do INR supraterapêutico, contraindicações e uso na gravidez."
 ---
 
@@ -33,12 +33,22 @@ Fibrilação atrial, sobretudo a valvar e a de portador de prótese mecânica, o
 INR, com alvo variável conforme a indicação. Acima de 4,0 não há benefício terapêutico adicional na maioria dos pacientes, só aumento de risco de sangramento.
 
 ## Dose e meta inr por indicacao
-- **tev e fibrilacao atrial**: INR 2,0-3,0
-- **pos infarto do miocardio**: iniciar 2 a 4 semanas após o infarto, mantendo INR 2,5-3,5 por tempo prolongado
-- **protese valvar mecanica**: profilaxia de longo prazo com INR 2,5-3,5
-- **protese valvar biologica**: 12 semanas após o implante, com INR 2,0-3,0
-- **embolia sistemica recorrente de alto risco**: pode exigir alvo mais elevado
-- **fonte**: VERIFICAÇÃO HUMANA NECESSÁRIA — as metas por indicação, sobretudo o alvo de prótese mecânica (que varia conforme posição da prótese, modelo e fatores de risco do paciente), devem ser conferidas na tabela de recomendações da diretriz de valvopatia vigente. A referência de valvopatia citada acima foi incluída para essa conferência, não como confirmação do que está escrito aqui.
+
+**Resolvido em 29/07/2026** pelo rótulo do COUMADIN (varfarina sódica) aprovado pelo FDA, seção de indicações — o mesmo que a versão anterior deste documento pedia para conferir, e que trouxe uma correção real, não só confirmação.
+
+- **tev (tvp/tep) e fibrilação atrial não valvar**: alvo **INR 2,5 (faixa 2,0-3,0)**
+- **prótese mecânica em posição AÓRTICA** (bivalva ou disco basculante Medtronic Hall), em ritmo sinusal e sem aumento de átrio esquerdo: alvo **INR 2,5 (faixa 2,0-3,0)** — **mais baixo** do que a prótese em posição mitral
+- **prótese mecânica em posição MITRAL** (disco basculante ou bivalva), ou **qualquer prótese de bola ou disco engaiolado** (independentemente da posição): alvo **INR 3,0 (faixa 2,5-3,5)**
+- **prótese biológica em posição mitral**: alvo **INR 2,5 (faixa 2,0-3,0)** nos primeiros 3 meses após o implante; o mesmo alvo de 2,5 (2,0-3,0) é mantido mesmo com fator de risco adicional (FA, tromboembolismo prévio, disfunção de VE) — o rótulo **não** manda subir a meta nesse caso
+- **pós-infarto de alto risco** (grande IAM anterior, IC significativa, trombo intracavitário visto ao ecocardiograma, FA, ou evento tromboembólico prévio): varfarina de **intensidade moderada — INR 2,0-3,0** — combinada com AAS em dose baixa (≤100 mg/dia), por pelo menos 3 meses
+- **embolia sistêmica recorrente e outras indicações não plenamente estudadas** (valvopatia associada a FA, estenose mitral, embolia sistêmica de etiologia desconhecida): **dose moderada, INR 2,0-3,0** — **não** um alvo mais elevado
+- **fonte**: rótulo do COUMADIN (varfarina sódica) aprovado pelo FDA, seção 2 (Dosage and Administration — Indications), conferido em 29/07/2026
+
+**Duas correções de conteúdo, não só de procedência, achadas ao conferir:**
+1. **Pós-infarto**: este documento dizia manter INR **2,5-3,5**; o rótulo determina **2,0-3,0** (intensidade moderada, com AAS), não a faixa mais alta que constava aqui.
+2. **Embolia sistêmica recorrente**: este documento dizia que "pode exigir alvo mais elevado"; o rótulo diz o oposto — dose **moderada** (2,0-3,0), pela mesma razão de que a evidência controlada é limitada nessa população.
+
+**O que continua correto**: a prótese mecânica de fato tem alvo variável por posição, exatamente como a marcação anterior desconfiava — só que a variável não é "modelo e fatores de risco do paciente" de forma difusa, é especificamente a **posição** (aórtica vs. mitral) e o **tipo de prótese** (bola/disco engaiolado sempre no alvo mais alto, independente da posição).
 
 ## Dose inicial
 Sem informação de genótipo, 2 a 5 mg 1x/dia, ajustando conforme a resposta do INR. Não existe dose inicial fixa correta: a variabilidade entre indivíduos chega a 20 vezes. Considerar dose menor em idoso e em pessoas de ascendência asiática.
