@@ -411,5 +411,99 @@
       "fibrose miocárdica",
       "morte súbita cardíaca"
     ]
+  },
+  {
+    "slug": "teste-de-inclinacao-tilt-test",
+    "name": "Teste de inclinação (tilt test)",
+    "category": "metodo_grafico",
+    "theme": "Síncope",
+    "what_it_measures": "Suscetibilidade do paciente à hipotensão — a tendência a reproduzir, sob inclinação passiva prolongada, o padrão circulatório da síncope reflexa, da hipotensão ortostática, da síndrome de taquicardia postural ortostática (POTS) ou da pseudossíncope psicogênica. A ESC 2018 é explícita em que o teste demonstra **suscetibilidade hipotensiva**, e não faz diagnóstico de causa: essa suscetibilidade existe na síncope reflexa, mas também em algumas formas de síncope cardíaca.",
+    "reference_range": "Não há valor de referência numérico — o desfecho é a reprodução dos sintomas junto com o padrão circulatório característico da condição suspeitada. Para dimensionar o que o exame separa: na revisão sistemática citada pela ESC 2018, a taxa de positividade em pacientes com síncope foi de 66% no protocolo com trinitrato de glicerila e 61% no protocolo com isoproterenol, contra 11–14% em controles sem síncope, com odds ratio de 12 entre os dois grupos.",
+    "indications": "Suspeita de síncope reflexa, hipotensão ortostática, POTS ou pseudossíncope psicogênica — classe IIa, nível B na ESC 2018. Também classe IIa, nível B como critério diagnóstico quando o teste reproduz os sintomas com o padrão circulatório correspondente. Uma segunda indicação, classe IIb, nível B: educar o paciente a reconhecer os sintomas prodrômicos e aprender as manobras físicas de contrapressão.",
+    "interpretation": "Uma resposta cardioinibitória positiva prediz com alta probabilidade que a síncope espontânea daquele paciente seja assistólica — achado que importa quando se cogita marca-passo. A recíproca não vale: resposta vasodepressora, mista ou até negativa **não exclui** assistolia durante a síncope espontânea. Na suspeita de pseudossíncope psicogênica, o teste deve de preferência ser feito com monitorização eletroencefalográfica, porque um EEG normal durante o evento é o que confirma o diagnóstico; sem EEG, a gravação em vídeo ajuda.",
+    "limitations": "Teste negativo **não exclui** síncope reflexa. A ESC 2018 registra que sensibilidade e especificidade são aceitáveis quando medidas entre pacientes com síncope vasovagal e controles saudáveis, mas que no cenário clínico real — síncope de origem indeterminada — o que o teste indica é suscetibilidade hipotensiva, não a causa. E é explícita numa proibição de uso: **o tilt test não deve ser usado para avaliar a eficácia de tratamento medicamentoso**. Sobre os protocolos farmacológicos, os dois mais usados são o trinitrato de glicerila sublingual após fase inicial sem medicação e o isoproterenol intravenoso em dose baixa, titulado para elevar a frequência cardíaca em cerca de 20–25% acima da basal; VERIFICAÇÃO HUMANA NECESSÁRIA para as doses exatas — o PDF da diretriz renderiza o prefixo micro como \"m\", o que faria a dose ser lida mil vezes maior do que é.",
+    "source_refs": [
+      "Brignole M, Moya A, de Lange FJ, et al. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948. DOI: 10.1093/eurheartj/ehy037 — seção 4.2.2.2 (Tilt testing) e sua tabela de recomendações"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "tilt test",
+      "teste de inclinação",
+      "síncope reflexa",
+      "hipotensão ortostática",
+      "pots",
+      "pseudossíncope"
+    ]
+  },
+  {
+    "slug": "massagem-do-seio-carotideo",
+    "name": "Massagem do seio carotídeo (MSC)",
+    "category": "metodo_grafico",
+    "theme": "Síncope",
+    "what_it_measures": "Resposta reflexa do seio carotídeo à compressão, medida por eletrocardiograma contínuo e pressão arterial batimento a batimento. Separa dois achados que não são sinônimos: **hipersensibilidade do seio carotídeo**, que é a resposta anormal isolada, e **síndrome do seio carotídeo**, que exige a resposta anormal *mais* a reprodução dos sintomas espontâneos.",
+    "reference_range": "Resposta anormal — a hipersensibilidade do seio carotídeo — é definida por pausa ventricular maior que 3 segundos e/ou queda da pressão arterial sistólica maior que 50 mmHg.",
+    "indications": "Classe I, nível B na ESC 2018: indicada em pacientes **acima de 40 anos** com síncope de origem indeterminada compatível com mecanismo reflexo. A diretriz registra que a hipersensibilidade do seio carotídeo é excepcional abaixo dos 40 anos.",
+    "interpretation": "O diagnóstico de síndrome do seio carotídeo é classe I, nível B e exige as duas coisas ao mesmo tempo: que a massagem provoque bradicardia (assistolia) e/ou hipotensão **que reproduzam os sintomas espontâneos**, e que o quadro clínico da síncope seja compatível com mecanismo reflexo. Resposta positiva sem história de síncope define apenas hipersensibilidade do seio carotídeo. A massagem deve ser feita nas posições supina e ortostática, com monitorização contínua da pressão batimento a batimento — o que na prática é mais fácil no próprio laboratório de tilt test.",
+    "limitations": "A armadilha central é tomar hipersensibilidade por diagnóstico: respostas anormais aparecem em até 40% de populações idosas sem síncope, e são achado comum em homens idosos sem sintoma nenhum. A ESC 2018 diz literalmente que, em paciente com síncope inexplicada, a hipersensibilidade pode ser achado inespecífico e deve ser usada com cautela. A especificidade sobe quando a síncope espontânea é reproduzida durante a massagem — em pessoas assintomáticas acima de 65 anos, síncope foi induzida em apenas 5%. Complicações neurológicas são muito raras (em uma série, acidente isquêmico transitório ou AVC em 0,24%), mas o risco justifica cautela em quem teve AIT ou AVC prévio ou tem estenose carotídea conhecida acima de 70%.",
+    "source_refs": [
+      "Brignole M, Moya A, de Lange FJ, et al. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948. DOI: 10.1093/eurheartj/ehy037 — seção 4.2.1 (Carotid sinus massage) e sua tabela de recomendações"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "massagem do seio carotídeo",
+      "síndrome do seio carotídeo",
+      "hipersensibilidade",
+      "síncope reflexa",
+      "assistolia"
+    ]
+  },
+  {
+    "slug": "ecocardiograma-transtoracico-pre-operatorio",
+    "name": "Ecocardiograma transtorácico no pré-operatório",
+    "category": "imagem",
+    "theme": "Perioperatório",
+    "what_it_measures": "Função ventricular, anatomia valvar e função de prótese antes de cirurgia não cardíaca. Não é exame de rotina pré-operatória: a diretriz brasileira de 2024 define cenários específicos, e reserva uma recomendação classe III justamente para o uso indiscriminado.",
+    "reference_range": "Não se aplica um corte único — o exame é qualitativo e por cenário. O que a diretriz define não é valor de referência, e sim **janela de validade**: 1 ano para reavaliação em insuficiência cardíaca e em portador de prótese assintomático, e 6 a 12 meses na suspeita ou confirmação de alteração valvar moderada a importante.",
+    "indications": "Segundo o Quadro 4 da diretriz SBC 2024, com classe e nível: insuficiência cardíaca ou sintomas sugestivos, em cirurgia de risco intermediário ou alto, sem avaliação no último ano ou com piora clínica — **I, B**; alteração valvar moderada/importante suspeita ou confirmada, em cirurgia de risco intermediário ou alto, sem avaliação nos últimos 6 a 12 meses ou com piora clínica — **I, C**; transplante hepático — **I, B**; portador de prótese valvar intracardíaca sintomático, em cirurgia de risco intermediário ou alto — **I, C**; portador de prótese sem avaliação no último ano, mesmo cenário cirúrgico — **IIa, C**; assintomático em cirurgia de alto risco — **IIb, C**.",
+    "interpretation": "Além do risco perioperatório, a diretriz aponta um segundo uso do resultado em quem tem valvopatia conhecida ou suspeita, prótese ou dispositivo intracardíaco: orientar a profilaxia de endocardite infecciosa. Ou seja, o exame responde a duas perguntas na mesma aquisição, e o laudo deve permitir as duas leituras.",
+    "limitations": "**Rotina em indivíduo assintomático, sem suspeita clínica de insuficiência cardíaca nem de doença valvar moderada a grave, submetido a cirurgia de risco intermediário ou baixo, é classe III, nível C** — ou seja, não deve ser feito. Essa é a linha mais útil do quadro na prática, porque é o pedido reflexo que mais aparece. Recorte deste verbete: ele cobre o ecocardiograma no pré-operatório pela diretriz brasileira de 2024. Não cobre os testes de detecção de isquemia (ergométrico, cintilografia, eco sob estresse), que têm quadros próprios na mesma diretriz.",
+    "source_refs": [
+      "Diretriz de Avaliação Cardiovascular Perioperatória da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. DOI: 10.36660/abc.20240590 — seção 2.3 e Quadro 4 (Recomendações para realização do ecocardiograma pré-operatório), texto integral em acesso aberto no PubMed Central (PMC12094288)"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ecocardiograma",
+      "pré-operatório",
+      "cirurgia não cardíaca",
+      "sbc 2024",
+      "profilaxia de endocardite"
+    ]
+  },
+  {
+    "slug": "intervalo-qtc-monitorizacao-de-psicofarmacos",
+    "name": "Intervalo QTc no ECG de 12 derivações (monitorização de psicofármacos)",
+    "category": "metodo_grafico",
+    "theme": "Saúde mental e cardiologia",
+    "what_it_measures": "Duração da repolarização ventricular corrigida para a frequência cardíaca, medida em ECG de 12 derivações. No contexto de saúde mental é o exame que vigia o efeito de antipsicóticos e antidepressivos sobre o QT — prolongamento aumenta o risco de torsades de pointes e de morte súbita cardíaca.",
+    "reference_range": "O consenso ESC 2025 trabalha com três patamares, e eles não são intercambiáveis: **>470 ms em homens e >480 ms em mulheres** definem prolongamento intermediário; **>500 ms** define a faixa de síndrome do QT longo adquirida; e um **aumento >60–70 ms em relação ao basal** conta como prolongamento induzido por fármaco independentemente do valor absoluto. Em taquicardia, use a **fórmula de Fridericia** para a correção, não a de Bazett.",
+    "indications": "Antes de iniciar antipsicótico e depois de iniciá-lo. A Tabela 7 do consenso ESC 2025 define o calendário: ECG de 12 derivações com QTc **no basal e após 1, 6 e 12 semanas** do início do fármaco, com ECG mais frequente se houver prolongamento, e controles anuais no seguimento de longo prazo. Cautela especial com sertindol, amissulprida, ziprasidona, iloperidona, risperidona, olanzapina e quetiapina. A investigação inclui dosar potássio, cálcio e magnésio, monitorização ambulatorial do ECG em quem tem sintomas, e excluir síndrome do QT longo hereditária.",
+    "interpretation": "**QTc >500 ms**: suspender o antipsicótico e qualquer outra medicação com potencial de prolongar o QT, trocar por alternativa com menor efeito, e encaminhar ao cardiologista para avaliar condição genética subjacente — o consenso pede consulta urgente. **Aumento >60–70 ms sobre o basal**: mesma conduta de suspensão. **Prolongamento intermediário (≥470 ms em homens, ≥480 ms em mulheres)**: considerar redução de dose ou troca de antipsicótico, com ECGs repetidos e avaliação individualizada de risco-benefício. **QTc já >470 ms no basal**: em geral não se inicia o tratamento, e a decisão deve ser individualizada. O efeito é dose-dependente, então a dose eficaz mais baixa é sempre o alvo.",
+    "limitations": "Medir QT é operador-dependente e fica difícil quando a onda T é anormal — o próprio consenso registra que a medição pode ser complicada por morfologia anormal da onda T. O prolongamento pode ser mais comum em mulheres, por diferenças de perfil farmacocinético. Antes de atribuir o achado ao psicofármaco, corrigir o que é reversível: distúrbio eletrolítico, bradicardia, hipotireoidismo, jejum prolongado e transtorno alimentar, álcool e outras substâncias, isquemia miocárdica. E registrar os fatores **não** reversíveis que também prolongam: insuficiência cardíaca, hipertrofia ventricular, cardioversão recente de fibrilação atrial, disfunção hepática ou renal, sexo feminino e idade acima de 65 anos.",
+    "source_refs": [
+      "2025 ESC Clinical Consensus Statement on mental health and cardiovascular disease. Eur Heart J. 2025. DOI: 10.1093/eurheartj/ehaf191 · PMID 40878270 — seção 7.6.1.1 (QTc interval prolongation) e Tabela 7 (Management of psychotropic drugs with QT interval prolongation properties)"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "qtc",
+      "qt longo",
+      "antipsicótico",
+      "torsades de pointes",
+      "fridericia",
+      "psicofármaco"
+    ]
   }
 ]
