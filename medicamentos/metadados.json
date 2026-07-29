@@ -127,9 +127,17 @@
       "Hemorragia intracraniana, hemorragia subaracnóidea, sangramento interno ativo, AVC nos últimos 3 meses, cirurgia intracraniana ou intraespinhal nos últimos 3 meses, trauma craniano grave nos últimos 3 meses, neoplasia intracraniana, malformação arteriovenosa ou aneurisma intracraniano, hipertensão grave não controlada no momento da administração - **fonte**: StatPearls"
     ],
     "dosing": {
-      "peso >67 kg": "bolus IV de 15 mg, seguido de 50 mg em 30 minutos, seguido de 35 mg em 60 minutos — dose total máxima de 100 mg",
-      "peso ≤67 kg": "bolus IV de 15 mg, seguido de 0,75 mg/kg em 30 minutos, seguido de 0,5 mg/kg em 60 minutos — dose total máxima de 100 mg",
-      "fonte": "StatPearls\n\nVERIFICAÇÃO HUMANA NECESSÁRIA quanto à **procedência**: a posologia acima se apoia em StatPearls — agregador ou portal de conteúdo, não documento primário. Isso **não afirma que os números estejam errados**; afirma que não são rastreáveis à bula registrada nem a diretriz, que é o critério deste acervo. Substituir a fonte e reconferir os valores antes de publicar."
+      "avc isquemico agudo": "**0,9 mg/kg, dose máxima de 90 mg.** **10% da dose total em bolus intravenoso em 1 a 2 minutos**, e os **90% restantes infundidos em 60 minutos**. O efeito é tempo-dependente: quanto mais precoce, maior a chance de evolução favorável.",
+      "iam esquema acelerado a partir de 65 kg": "Até 6 horas do início dos sintomas, **dose total de 100 mg**: **15 mg em bolus intravenoso em 1 a 2 minutos**, depois **50 mg infundidos em 30 minutos**, depois **35 mg infundidos em 60 minutos**.",
+      "teto absoluto": "**Não administrar mais de 100 mg de alteplase.**",
+      "pressao arterial no avc": "Monitorizar a pressão **durante e até 24 horas** após o tratamento. **Se a sistólica passar de 180 mmHg ou a diastólica de 105 mmHg, iniciar anti-hipertensivo intravenoso.**",
+      "antitrombotico apos tromboliseno avc": "**Evitar heparina intravenosa e AAS nas primeiras 24 horas** após o Actilyse — a segurança e a eficácia do uso concomitante nesse período não foram suficientemente investigadas. Se for preciso heparina subcutânea para outra indicação, como profilaxia de trombose venosa profunda, **não exceder 10.000 UI por dia**.",
+      "reconstituicao": "Diluir o frasco (10, 20 ou 50 mg) com o volume correspondente de água para injetáveis (10, 20 ou 50 mL), obtendo **1 mg/mL**. Agitar **levemente** até dissolver, evitando espuma. Pode ser diluído depois em cloreto de sódio 0,9% até a **concentração mínima de 0,2 mg/mL**.",
+      "cuidados de administracao": "**Não administrar com nenhum outro fármaco no mesmo frasco de infusão nem no mesmo acesso venoso — nem mesmo heparina.** Evitar cateteres rígidos, **evitar injeção intramuscular durante o tratamento** e evitar manipulação desnecessária do paciente.",
+      "arritmia de reperfusao": "A trombólise coronariana pode gerar **arritmia de reperfusão**, que pode levar a parada cardíaca, ser fatal e exigir tratamento antiarrítmico convencional. Manter monitorização de alterações hemodinâmicas, hipotensão, progressão da insuficiência cardíaca e dor torácica.",
+      "janela do avc": "VERIFICAÇÃO HUMANA NECESSÁRIA — esta bula, de **2012**, determina **não iniciar o tratamento do AVC isquêmico após 3 horas** do início dos sintomas. **A prática atual trabalha com janela maior**, e a diretriz vigente deve prevalecer sobre este ponto. A **dose** acima não mudou; o que está superado é o limite de tempo. Não o corrigi por conta própria porque exige a diretriz na mão.",
+      "esquema abaixo de 65 kg e regime de 6 a 12 horas": "VERIFICAÇÃO HUMANA NECESSÁRIA — a bula traz esquema **ajustado ao peso para pacientes abaixo de 65 kg** e um regime mais longo (bolus seguido de infusão em 120 minutos) para apresentação tardia, mas as tabelas correspondentes **não saíram legíveis na extração** e não foram transcritas de memória.",
+      "fonte": "Bula do profissional de saúde do ACTILYSE (alteplase, Boehringer Ingelheim), seção de posologia e modo de usar, conferida na íntegra. **Versão do documento: 04/09/2012**, declarada porque dois pontos dependem dela — a janela do AVC, superada, e as tabelas ilegíveis, ambos marcados acima. **A marcação de procedência está resolvida** para a dose no AVC e para o esquema acelerado do IAM a partir de 65 kg. O site do fabricante está atrás de proteção que bloqueia download automatizado; o documento veio de bulário que republica o original."
     },
     "references": [
       "Alteplase · StatPearls (NCBI Bookshelf) · https://www.ncbi.nlm.nih.gov/books/NBK499977/",
@@ -739,12 +747,15 @@
     ],
     "pregnancy": "Categoria B — estudos em animais não mostram evidência de prejuízo à fertilidade ou toxicidade fetal; dados limitados em mulheres; segurança desconhecida na lactação",
     "dosing": {
-      "prevencao secundaria aterotrombotica": "75 mg 1x/dia (estudo CAPRIE — Classe I, Nível B), como alternativa ao AAS em pacientes com IAM, AVC ou doença arterial periférica prévios",
-      "angina instavel iamssst": "300 mg VO de ataque, seguido de 75 mg 1x/dia, associado ao AAS, por 12 meses (estudo CURE — Classe IA)",
-      "iam com supra st": "300 mg VO de ataque, seguido de 75 mg 1x/dia, associado ao AAS (estudos CLARITY e COMMIT — Classe IA); em pacientes >75 anos, não administrar dose de ataque",
-      "angioplastia alto risco isquemico": "600 mg VO de ataque, seguido de 150 mg/dia por 7 dias, e depois 75 mg 1x/dia, associado ao AAS (estudo CURRENT OASIS 7 — Classe IIa-B), em pacientes com alto risco isquêmico e baixo risco de sangramento",
-      "fibrilacao atrial com contraindicacao anticoagulacao": "Em combinação com AAS 81-100 mg/dia para prevenção de AVC (estudo ACTIVE-A — Classe IIa, Nível B)",
-      "fonte": "Afya Cardiologia — Bulário Clopidogrel\n\nVERIFICAÇÃO HUMANA NECESSÁRIA quanto à **procedência**: a posologia acima se apoia em Afya — agregador ou portal de conteúdo, não documento primário. Isso **não afirma que os números estejam errados**; afirma que não são rastreáveis à bula registrada nem a diretriz, que é o critério deste acervo. Substituir a fonte e reconferir os valores antes de publicar."
+      "prevencao secundaria": "**75 mg em dose única diária** no infarto agudo do miocárdio ou AVC isquêmico recentes e na doença arterial periférica estabelecida.",
+      "sca sem supra de st": "Angina instável ou IAM sem onda Q: **dose única de ataque de 300 mg**, seguida de **75 mg uma vez ao dia**. O **AAS, 75 a 325 mg em dose única diária, deve ser iniciado e mantido em associação**. No CURE a maioria dos pacientes também recebeu heparina.",
+      "iam com supra de st": "**75 mg uma vez ao dia**, associado ao AAS, **com ou sem trombolítico**. Pode ser iniciado **com ou sem dose de ataque** — os 300 mg foram os usados no CLARITY.",
+      "farmacogenetica": "**Metabolizador lento da CYP2C19 tem resposta diminuída ao clopidogrel**, e a bula declara que **a posologia ideal para esses pacientes ainda não foi determinada**. É o ponto que separa o clopidogrel do ticagrelor na escolha entre inibidores de P2Y12.",
+      "idosos": "Sem ajuste de dose.",
+      "alimentos": "Pode ser administrado com ou sem alimentos.",
+      "reversao": "Não há antídoto para a atividade farmacológica. Se for preciso corrigir imediatamente o prolongamento do tempo de sangramento, **a transfusão de plaquetas pode reverter o efeito**.",
+      "sobre a idade no iam com supra": "VERIFICAÇÃO HUMANA NECESSÁRIA — a regra de **não usar dose de ataque acima de 75 anos** no IAM com supra de ST aparece em versões mais recentes da bula de clopidogrel e **não consta desta**, que é de 2009. Não a apliquei nem a descartei.",
+      "fonte": "Bula do ISCOVER (bissulfato de clopidogrel 75 mg, Bristol-Myers Squibb Farmacêutica S.A.), seção de posologia, conferida na íntegra. **Data do documento: 01/06/2009**, declarada aqui porque importa. **A marcação de procedência está resolvida**: a fonte anterior era portal de conteúdo, e uma tentativa anterior com um modelo de bula do Plavix foi recusada por ser ainda mais antiga — não trazia o IAM com supra de ST. Esta traz as três indicações e a nota de farmacogenética; o único ponto que a idade do documento deixa em aberto está marcado acima."
     },
     "notes": {
       "Farmacocinetica": "Início de ação em 2 a 4 horas; duração do efeito de 3 a 10 dias; deve ser suspenso 5 dias antes de procedimentos cirúrgicos"
