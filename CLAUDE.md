@@ -153,7 +153,9 @@ Processo, igual para as seis:
 
 ## O que nunca fazer sem perguntar
 - Nunca alterar código de backend/frontend na rotina de expansão de biblioteca
-  (só content/ e os JSON das seis frentes).
+  (só content/ e os JSON das seis frentes). **Exceção vigente:** a tarefa de
+  ampliar a busca para galeria, exames, evidências e estudos foi autorizada
+  pelo Rafael em 29/07/2026 — ver item 7 de "Trabalho novo".
 - Nunca reescrever ou apagar documento já existente sem justificativa clara.
 
 ## Stack técnica
@@ -344,6 +346,17 @@ ainda não publicado**, esperando o aval do Rafael — 6 fluxogramas e o registr
 da colchicina. Todo o resto que foi construído está commitado, no ar e testado
 em produção. As demais pendências são trabalho novo ou decisão do Rafael.
 
+### Fila, na ordem definida pelo Rafael em 29/07/2026
+1. **Ampliar a busca para as quatro frentes JSON** — item 7 de "Trabalho novo".
+   Backend autorizado para esta tarefa.
+2. **Voltar às marcações `VERIFICAÇÃO HUMANA NECESSÁRIA`** — 46 em 37 arquivos
+   de `content/`, o grosso em Farmacologia. Método que está funcionando: bula do
+   detentor do registro no Brasil, baixada com `curl` e User-Agent de browser
+   (`WebFetch` toma 403 na maioria dos sites de laboratório). Primeira da fila:
+   a bula do Pradaxa que cobre **fibrilação atrial**, que fecha a única marcação
+   restante da dabigatrana.
+3. Só então voltar a ampliar conteúdo.
+
 ### Bloqueado, esperando o Rafael
 1. **Colchicina na pericardite aguda — RESOLVIDO em 29/07/2026, aguardando só a
    publicação.** (`evidencias`, slug `colchicina-adjuvante-na-pericardite-aguda`.)
@@ -425,9 +438,44 @@ em produção. As demais pendências são trabalho novo ou decisão do Rafael.
    nem assinatura. Receita de controle especial (Portaria 344/98) tem regra
    própria de numeração, via, validade e retenção — decidir o formato com o
    Rafael antes de implementar, como o próprio briefing pede.
-7. **A busca não cobre as frentes novas.** `app/api/search.py` consulta só a
-   tabela `documents`. Galeria, exames, evidências e estudos são invisíveis
-   para a busca — 88 itens publicados que ninguém encontra pesquisando.
+7. **A busca não cobre as frentes novas — PRÓXIMA TAREFA, prioridade definida
+   pelo Rafael em 29/07/2026.** `app/api/search.py` consulta só a tabela
+   `documents`. Galeria, exames, evidências e estudos seguem invisíveis para
+   quem pesquisa — hoje são **103 itens publicados** (36 + 17 + 32 + 18), e o
+   número cresce a cada lote. Decisão dele, textual: *conteúdo publicado e
+   invisível é mais urgente que ampliar mais conteúdo agora*. Só depois disso
+   voltar às marcações de verificação.
+
+   **Isto é código de backend, e está explicitamente autorizado** — vence a
+   regra "nunca alterar código de backend na rotina de expansão de biblioteca"
+   da seção "O que nunca fazer sem perguntar", para esta tarefa.
+
+   Levantamento já feito em 29/07/2026, não refazer:
+   - **A busca funciona.** Testada em produção: `amiloidose` 7 resultados,
+     `colchicina` 7, `dislipidemia` 11. O problema é cobertura, não defeito.
+   - **Só `documents` tem coluna `search_vector`** (TSVECTOR, em
+     `models/content.py`). As quatro frentes não têm nenhuma.
+   - **O padrão a replicar está em `services/bootstrap.py`**, não numa migração:
+     função de trigger `documents_search_vector_update()` com `setweight` em
+     quatro faixas (título A, resumo e tags B, corpo C), trigger `BEFORE INSERT
+     OR UPDATE`, e índice GIN. Roda no startup do backend, então basta
+     acrescentar as novas tabelas ao mesmo SQL — **não precisa de migração
+     Alembic para a trigger e o índice, mas precisa para a coluna**.
+   - **O obstáculo real é que as quatro frentes não têm esquema comum**, e o
+     resultado unificado exige mapeamento por frente:
+     | frente | título | texto principal |
+     |---|---|---|
+     | galeria | `title` | `findings`, `teaching_points` |
+     | exames | **`name`**, não `title` | `what_it_measures`, `indications`, `interpretation`, `limitations` |
+     | evidências | **não tem título** | `statement`, `guideline_title`, `reference` |
+     | estudos | `title` | `summary`, `key_findings`, `clinical_implications` |
+     A evidência é o caso que quebra qualquer solução ingênua: o que aparece na
+     tela é o `statement`, que é texto longo, não um título.
+   - Todas as quatro filtram por `published`, então a busca precisa filtrar
+     igual — senão expõe o que está retido esperando aval.
+   - `services/rag.py` também consulta `search_vector` de `documents` (linhas
+     146-147). Ampliar a busca não muda o RAG automaticamente; decidir se a IA
+     clínica também deve enxergar as quatro frentes é pergunta à parte.
 
 ### Recado entre sessões (29/07/2026)
 Há **duas sessões trabalhando neste repositório ao mesmo tempo**, com divisão
