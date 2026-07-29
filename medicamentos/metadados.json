@@ -234,7 +234,8 @@
     },
     "references": [
       "Amlodipine besylate tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 27b0c628-820a-48bf-a411-86c0ebd4cc8d"
-    ]
+    ],
+    "lactation": "**A segurança na amamentação não está estabelecida.** Fonte: bula do NORVASC (anlodipino)."
   },
   {
     "slug": "apixabana",
@@ -323,7 +324,8 @@
     },
     "references": [
       "Atenolol tablets — rótulo aprovado pelo FDA, DailyMed SPL setid c58e12ad-d705-4643-91ac-ff079e9eb28e"
-    ]
+    ],
+    "pregnancy": "**Categoria de risco D.** O atenolol **atravessa a barreira placentária**. Não usar na gravidez sem orientação médica, com aviso imediato em caso de suspeita. Fonte: bula do ATENOL (atenolol). Note a diferença dentro da própria classe: metoprolol é categoria C e atenolol é D — betabloqueador não é bloco homogêneo na gestação."
   },
   {
     "slug": "atorvastatina-calcica",
@@ -370,7 +372,9 @@
     "references": [
       "Atorvastatin calcium tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 86841382-4229-4e03-958e-3ac22639efd4",
       "Bula profissional de CITALOR (atorvastatina cálcica), Viatris Farmacêutica do Brasil Ltda. — seções de identificação, indicações e posologia. Documento obtido no site do detentor do registro."
-    ]
+    ],
+    "pregnancy": "**Contraindicada na gravidez.** A bula vai além: só deve ser administrada a adolescentes e **mulheres em idade fértil quando a gravidez for altamente improvável** e a paciente estiver usando **contracepção eficaz**. Fonte: bula do LÍPITOR (atorvastatina). É a restrição mais ampla do acervo — alcança quem não está grávida.",
+    "lactation": "**Contraindicada na amamentação.** Não se sabe se é excretada no leite materno, e pelo risco potencial ao lactente a bula determina que mulheres em uso **não devem amamentar**. Fonte: bula do LÍPITOR (atorvastatina)."
   },
   {
     "slug": "atropina",
@@ -691,7 +695,8 @@
     "references": [
       "Carvedilol tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 574c419f-3b9e-2171-e063-6394a90a0e90",
       "Packer M, Coats AJS, Fowler MB, et al. Effect of carvedilol on survival in severe chronic heart failure (COPERNICUS). N Engl J Med. 2001;344(22):1651-1658. DOI: 10.1056/NEJM200105313442201. PMID: 11386263"
-    ]
+    ],
+    "pregnancy": "Não usar na gravidez sem orientação médica; havendo gravidez durante ou logo após o tratamento, informar o médico imediatamente. A bula **não traz categoria de risco nem dado específico** — registrado como está. Fonte: bula do COREG (carvedilol, Roche)."
   },
   {
     "slug": "clonidina",
@@ -1268,7 +1273,8 @@
       "Enalapril maleate — rótulo aprovado pelo FDA, DailyMed SPL setid b31372f7-cda3-4ead-a481-4cde62e843fd",
       "Enalapril: o que é, para que serve, efeitos e contraindicações · UOL VivaBem · 2022 · https://www.uol.com.br/vivabem/noticias/redacao/2022/11/22/enalapril-o-que-e-para-que-serve-efeitos-e-contraindicacoes.htm",
       "Vasotec (enalapril maleate) — bula FDA · accessdata.fda.gov"
-    ]
+    ],
+    "pregnancy": "**Os inibidores da ECA podem prejudicar o desenvolvimento e até causar MORTE DO FETO** se usados no segundo e no terceiro trimestres. Fonte: bula do RENITEC (maleato de enalapril, MSD). Coerente com o captopril, que é categoria D pela mesma razão de classe."
   },
   {
     "slug": "enoxaparina-sodica",
@@ -1418,7 +1424,8 @@
       "Pitt B, Zannad F, Remme WJ, et al. The effect of spironolactone on morbidity and mortality in patients with severe heart failure (RALES). N Engl J Med. 1999;341(10):709-717. DOI: 10.1056/NEJM199909023411001. PMID: 10471456",
       "Pitt B, Pfeffer MA, Assmann SF, et al. Spironolactone for heart failure with preserved ejection fraction (TOPCAT). N Engl J Med. 2014;370(15):1383-1392. DOI: 10.1056/NEJMoa1313731. PMID: 24716680",
       "Bula de ALDACTONE (espironolactona), Wyeth Indústria Farmacêutica Ltda. — seções de composição e posologia, versão brasileira."
-    ]
+    ],
+    "lactation": "Se o uso na amamentação for considerado essencial, **deve-se instituir método alternativo de alimentação para a criança** — ou seja, a bula resolve pela suspensão do aleitamento, não pela suspensão do fármaco. Fonte: bula do ALDACTONE (espironolactona)."
   },
   {
     "slug": "evinacumabe",
@@ -2087,7 +2094,9 @@
       "Dahlöf B et al. Cardiovascular morbidity and mortality in the Losartan Intervention For Endpoint reduction in hypertension study (LIFE). The Lancet. 2002;359:995-1003. DOI: 10.1016/S0140-6736(02)08089-3",
       "Brenner BM et al. Effects of Losartan on Renal and Cardiovascular Outcomes in Patients with Type 2 Diabetes and Nephropathy (RENAAL). N Engl J Med. 2001;345:861-869. DOI: 10.1056/NEJMoa011161",
       "Bula profissional de losartana potássica — Agência Nacional de Vigilância Sanitária (ANVISA)"
-    ]
+    ],
+    "pregnancy": "A bula manda **parar o medicamento se a paciente estiver grávida ou engravidar durante o tratamento**, e procurar o médico o mais rápido possível. Fonte: bula do COZAAR (losartana potássica, MSD). Vale a leitura em conjunto com a valsartana: **bloqueador do receptor de angiotensina é classe de risco reconhecido na gravidez** — a orientação de suspender é imediata, não condicional.",
+    "lactation": "A bula orienta informar o médico se estiver amamentando; não traz conduta mais específica nem dado de excreção no leite. Fonte: bula do COZAAR (MSD)."
   },
   {
     "slug": "mavacamten",
