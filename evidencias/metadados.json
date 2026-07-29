@@ -1071,5 +1071,175 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "ecocardiograma-transtoracico-como-primeira-imagem-na-suspeita-de-endocardite",
+    "statement": "O ecocardiograma transtorácico é recomendado como primeira modalidade de imagem na suspeita de endocardite infecciosa. É o exame que abre a investigação — e não o que a encerra, porque transtorácico normal não afasta o diagnóstico.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 ESC Guidelines for the management of endocarditis",
+    "reference": "Delgado V, Ajmone Marsan N, de Waha S, et al. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI: 10.1093/eurheartj/ehad193 — classe e nível conferidos em contexto no texto original",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite infecciosa",
+      "ecocardiograma transtorácico",
+      "diagnóstico",
+      "imagem"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ecocardiograma-transesofagico-quando-o-transtoracico-e-negativo-ou-inconclusivo",
+    "statement": "O ecocardiograma transesofágico é recomendado em todo paciente com suspeita clínica de endocardite infecciosa e transtorácico negativo ou não diagnóstico. É a recomendação que impede o erro mais comum da investigação: tratar transtorácico normal como exclusão.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 ESC Guidelines for the management of endocarditis",
+    "reference": "Delgado V, Ajmone Marsan N, de Waha S, et al. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI: 10.1093/eurheartj/ehad193 — classe e nível conferidos em contexto no texto original",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite infecciosa",
+      "ecocardiograma transesofágico",
+      "diagnóstico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "transesofagico-obrigatorio-com-protese-valvar-ou-dispositivo-intracardiaco",
+    "statement": "O ecocardiograma transesofágico é recomendado em paciente com suspeita clínica de endocardite quando há prótese valvar ou dispositivo intracardíaco. Nesses casos ele não é a segunda linha: a sombra acústica da prótese e do eletrodo limita o transtorácico de saída.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 ESC Guidelines for the management of endocarditis",
+    "reference": "Delgado V, Ajmone Marsan N, de Waha S, et al. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI: 10.1093/eurheartj/ehad193 — classe e nível conferidos em contexto no texto original",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite infecciosa",
+      "prótese valvar",
+      "dispositivo intracardíaco",
+      "transesofágico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "profilaxia-antibiotica-em-paciente-com-endocardite-previa",
+    "statement": "A profilaxia antibiótica é recomendada em paciente com endocardite infecciosa prévia, antes de procedimento odontológico de risco. Endocardite prévia é, isoladamente, condição de alto risco — não depende de haver valvopatia residual.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 ESC Guidelines for the management of endocarditis",
+    "reference": "Delgado V, Ajmone Marsan N, de Waha S, et al. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI: 10.1093/eurheartj/ehad193 — classe e nível conferidos em contexto no texto original",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite infecciosa",
+      "profilaxia antibiótica",
+      "endocardite prévia",
+      "procedimento odontológico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "profilaxia-antibiotica-em-protese-valvar-implantada-por-cateter",
+    "statement": "A profilaxia antibiótica é recomendada em pacientes com prótese valvar aórtica ou pulmonar implantada por cateter. A recomendação equipara a prótese transcateter à cirúrgica para fins de profilaxia, o que nem sempre é assumido na prática.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 ESC Guidelines for the management of endocarditis",
+    "reference": "Delgado V, Ajmone Marsan N, de Waha S, et al. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI: 10.1093/eurheartj/ehad193 — classe e nível conferidos em contexto no texto original",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite infecciosa",
+      "profilaxia antibiótica",
+      "TAVI",
+      "prótese transcateter"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "profilaxia-antibiotica-em-portador-de-dispositivo-de-assistencia-ventricular",
+    "statement": "A profilaxia antibiótica é recomendada em pacientes com dispositivo de assistência ventricular.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 ESC Guidelines for the management of endocarditis",
+    "reference": "Delgado V, Ajmone Marsan N, de Waha S, et al. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI: 10.1093/eurheartj/ehad193 — classe e nível conferidos em contexto no texto original",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite infecciosa",
+      "profilaxia antibiótica",
+      "assistência ventricular",
+      "DAV"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "nao-fazer-profilaxia-antibiotica-em-paciente-de-baixo-risco-de-endocardite",
+    "statement": "A profilaxia antibiótica **não** é recomendada nos demais pacientes, de baixo risco de endocardite infecciosa. É recomendação contra, e delimita o alcance da profilaxia: ela é para o grupo de alto risco nomeado, não para todo portador de valvopatia.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 ESC Guidelines for the management of endocarditis",
+    "reference": "Delgado V, Ajmone Marsan N, de Waha S, et al. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI: 10.1093/eurheartj/ehad193 — classe e nível conferidos em contexto no texto original",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite infecciosa",
+      "profilaxia antibiótica",
+      "baixo risco",
+      "não recomendado"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "profilaxia-antibiotica-perioperatoria-antes-do-implante-de-dispositivo-cardiaco",
+    "statement": "A profilaxia antibiótica perioperatória é recomendada antes do implante de dispositivo cardíaco eletrônico implantável. Nível A — é das poucas recomendações de profilaxia com esse grau de evidência nesta diretriz. Somam-se a ela medidas assépticas pré-procedimento otimizadas no sítio de implante, recomendadas para prevenir infecção do dispositivo.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 ESC Guidelines for the management of endocarditis",
+    "reference": "Delgado V, Ajmone Marsan N, de Waha S, et al. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI: 10.1093/eurheartj/ehad193 — classe e nível conferidos em contexto no texto original",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite infecciosa",
+      "dispositivo cardíaco implantável",
+      "profilaxia perioperatória",
+      "CIED"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "nao-descolonizar-pele-ou-nasal-sem-rastreamento-para-s-aureus",
+    "statement": "A descolonização sistemática de pele ou nasal **sem rastreamento** para Staphylococcus aureus não é recomendada. A descolonização tem lugar, mas dirigida ao portador identificado — aplicá-la a todos é o que a recomendação exclui.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 ESC Guidelines for the management of endocarditis",
+    "reference": "Delgado V, Ajmone Marsan N, de Waha S, et al. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI: 10.1093/eurheartj/ehad193 — classe e nível conferidos em contexto no texto original",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite infecciosa",
+      "Staphylococcus aureus",
+      "descolonização",
+      "não recomendado"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
