@@ -15,6 +15,8 @@ discordar, corrige com motivo registrado — que é o que permite descobrir depo
 que uma regra está errada.
 """
 from fastapi import APIRouter, Depends, HTTPException
+from fastapi.responses import Response
+from datetime import datetime, timezone
 from pydantic import BaseModel, Field
 from sqlalchemy.orm import Session
 
@@ -309,8 +311,38 @@ def emitir(documento_id: int, db: Session = Depends(get_db), user=Depends(curren
             "nada_foi_simulado": True,
         })
 
-    # Caminho ainda não alcançável — geração do PDF em ReportLab é a próxima fase.
-    raise HTTPException(status_code=501, detail={
-        "erro": "Geração do documento ainda não implementada.",
-        "proxima_fase": "PDF em ReportLab, decidido em 29/07/2026.",
-    })
+    # Só o receituário comum é desenhado. Notificação de Receita e Receita de
+    # Controle Especial têm modelo oficial de layout fixo publicado pela Anvisa,
+    # e reproduzi-lo de memória geraria formulário parecido e inválido.
+    if doc.tipo_codigo != "COMUM":
+        raise HTTPException(status_code=501, detail={
+            "erro": f"O modelo oficial do tipo {doc.tipo_codigo} ainda não foi reproduzido.",
+            "motivo": "Layout fixo publicado pela Anvisa; desenhar de memória "
+                      "produziria documento inválido com aparência de válido.",
+        })
+
+    from app.services.pdf_documento import receituario_comum
+
+    dest = db.query(PrescriptionRecipient).filter(
+        PrescriptionRecipient.prescription_id == presc.id).first()
+    destinatario = {}
+    if dest:
+        destinatario["nome"] = cofre.decifrar_campo(dest.nome_cifrado, presc.id)
+        if dest.endereco_cifrado:
+            destinatario["endereco"] = cofre.decifrar_campo(dest.endereco_cifrado, presc.id)
+
+    pdf = receituario_comum(
+        destinatario=destinatario, itens=doc.itens, observacoes=presc.notes or "",
+        medico={"full_name": user.full_name, "council_name": user.council_name,
+                "council_number": user.council_number, "council_state": user.council_state,
+                "rqe": user.rqe, "specialty": user.specialty},
+    )
+
+    doc.status = "emitido"
+    doc.emitido_em = datetime.now(timezone.utc)
+    db.add(AuditLog(user_id=user.id, action="emitir_documento_receita",
+                    entity="prescription_document", entity_id=str(doc.id),
+                    detail={"tipo": doc.tipo_codigo, "bytes": len(pdf)}))
+    db.commit()
+    return Response(content=pdf, media_type="application/pdf", headers={
+        "Content-Disposition": f'inline; filename="receituario-{doc.id}.pdf"'})

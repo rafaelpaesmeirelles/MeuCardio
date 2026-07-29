@@ -22,3 +22,7 @@ httpx==0.28.1
 stripe==15.3.1
 cryptography==44.0.0
 tzdata==2024.2
+# Geração de PDF de todos os documentos do sistema (receita, atestado, laudo).
+# Escolhido pelo Rafael em 29/07/2026: python puro, sem lib de sistema, e
+# controle de coordenada preciso — que é o que formulário regulado exige.
+reportlab==4.2.5

@@ -16,7 +16,12 @@ class Prescription(Base):
     __tablename__ = "prescriptions"
 
     id: Mapped[int] = mapped_column(primary_key=True)
-    patient_id: Mapped[int] = mapped_column(ForeignKey("patients.id", ondelete="CASCADE"), index=True)
+    # Opcional: o receituário tem destinatário próprio e cifrado, em
+    # `prescription_recipients`. Exigir paciente de round para emitir receita
+    # obrigaria a criar registro de internação para paciente de ambulatório.
+    patient_id: Mapped[int | None] = mapped_column(
+        ForeignKey("patients.id", ondelete="CASCADE"), nullable=True, index=True
+    )
     created_by: Mapped[int] = mapped_column(ForeignKey("users.id"), index=True)
 
     items: Mapped[list] = mapped_column(JSONB, default=list)
