@@ -72,4 +72,4 @@ Estudo em 1.010 pacientes ≥65 anos comparou início de tratamento com bisoprol
 Verapamil IV pode causar hipotensão profunda e bloqueio AV; agentes anti-hipertensivos de ação central (clonidina) podem causar hipertensão rebote na suspensão abrupta; mascara sintomas de hipoglicemia em diabéticos
 
 ## Gravidez lactacao
-Categoria C — não recomendado a menos que estritamente necessário; contraindicado na lactação
+Categoria C. **Na gravidez**, recomendado somente após avaliação cuidadosa da relação risco-benefício: betabloqueadores reduzem o fluxo sanguíneo placentário e podem afetar o desenvolvimento fetal, então fluxo placentário e uterino e crescimento do feto devem ser monitorados, e o recém-nascido acompanhado. **Na lactação**, a bula do Concor diz **não recomendado** — não "contraindicado", como constava aqui. O motivo declarado é ausência de dados: não se sabe se o bisoprolol é excretado no leite humano nem qual a segurança da exposição em crianças. Fonte: bula do profissional do Concor (Merck S.A.), conferida em 29/07/2026.
