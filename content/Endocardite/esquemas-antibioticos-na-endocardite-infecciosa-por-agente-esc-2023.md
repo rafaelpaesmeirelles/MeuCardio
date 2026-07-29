@@ -3,9 +3,9 @@ title: "Esquemas antibióticos na endocardite infecciosa, por agente (ESC 2023)"
 slug: esquemas-antibioticos-na-endocardite-infecciosa-por-agente-esc-2023
 theme: "Endocardite"
 kind: protocolo
-summary: "As tabelas de dose da diretriz ESC 2023, por agente e por tipo de valva: estreptococos orais, estafilococos sensíveis e resistentes à meticilina, e enterococos. Fecha uma lacuna que o documento geral de endocardite declarava explicitamente — os esquemas estavam ausentes por falta de acesso ao texto integral."
+summary: "As tabelas de dose da diretriz ESC 2023, por agente e por tipo de valva — estreptococos orais, estafilococos sensíveis e resistentes à meticilina, enterococos — e o esquema empírico antes da identificação do agente. Fecha uma lacuna que o documento geral de endocardite declarava explicitamente: os esquemas estavam ausentes por falta de acesso ao texto integral."
 review_status: revisado
-source_refs: ["Delgado V, Ajmone Marsan N, de Waha S, et al. 2023 ESC Guidelines for the management of endocarditis · European Heart Journal · 2023 · 44(39):3948-4042 · DOI: 10.1093/eurheartj/ehad193 — Tabelas de Recomendação 7, 8 e 9 (estreptococos, estafilococos e enterococos), lidas no texto integral"]
+source_refs: ["Delgado V, Ajmone Marsan N, de Waha S, et al. 2023 ESC Guidelines for the management of endocarditis · European Heart Journal · 2023 · 44(39):3948-4042 · DOI: 10.1093/eurheartj/ehad193 — Tabelas de Recomendação 7, 8, 9 e 10 (estreptococos, estafilococos, enterococos e tratamento empírico), lidas no texto integral"]
 ---
 
 # Esquemas antibióticos na endocardite infecciosa, por agente (ESC 2023)
@@ -134,8 +134,6 @@ ampliar o espectro para esses patógenos. Havendo indicação cirúrgica, o
 diagnóstico molecular pode ser feito no material operatório.
 
 ## O que este documento não traz
-
-**Ajuste renal e monitorização sérica** — ver abaixo.
 
 **Agentes de cultura negativa e patógenos incomuns.** A diretriz traz tabela
 própria com *Legionella*, *Bartonella*, *Coxiella*, *Brucella* e fungos, com
