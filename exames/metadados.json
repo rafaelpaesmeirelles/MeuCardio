@@ -725,5 +725,30 @@
       "intertak",
       "diagnóstico diferencial"
     ]
+  },
+  {
+    "slug": "oximetria-de-pulso-na-triagem-neonatal-de-cardiopatia-congenita-critica",
+    "name": "Oximetria de pulso na triagem neonatal de cardiopatia congênita crítica ('teste do coraçãozinho')",
+    "category": "metodo_grafico",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Saturação periférica de oxigênio (SpO2), medida por oximetria de pulso na mão direita (pré-ductal) e em um dos pés (pós-ductal), em paralelo ou em sequência — protocolo desenvolvido para detectar cardiopatia congênita crítica (CCC) em recém-nascido assintomático antes da alta da maternidade, quando a fisiologia ainda depende de shunt pelo canal arterial.",
+    "reference_range": "Resultado normal ('passa'): SpO2 ≥95% em qualquer uma das duas extremidades, com diferença absoluta ≤3% entre mão direita e pé. Resultado positivo ('falha'), qualquer um dos três critérios: (1) qualquer medida de SpO2 <90%; (2) SpO2 <95% em ambas as extremidades em três medidas, cada uma separada por 1 hora; ou (3) diferença absoluta ≥3% entre mão e pé em três medidas, cada uma separada por 1 hora.",
+    "indications": "Triagem universal do recém-nascido aparentemente saudável, recomendada pelo grupo de trabalho da American Academy of Pediatrics (AAP): não iniciar antes de 24 horas de vida — ou o mais tarde possível se a alta estiver planejada antes disso —, com a triagem completa até o segundo dia de vida. Início precoce (<24h) aumenta falso-positivo, porque a transição da circulação fetal para a neonatal ainda não se completou; início tardio pode perder a janela de intervenção antes do fechamento do canal arterial.",
+    "interpretation": "Recém-nascido com SpO2 ≥95% em qualquer extremidade e diferença ≤3% entre mão e pé passa no primeiro exame, e a triagem termina. Resultado limítrofe (95% em uma extremidade só, ou SpO2 entre 90% e 95%, ou diferença ≥3%) exige repetição a cada 1 hora, até três medidas — só a persistência do critério positivo nas três medidas caracteriza falha. Qualquer medida isolada <90%, em qualquer momento, já é falha direta, sem necessidade de repetir. Falha confirmada indica avaliação diagnóstica adicional imediata, incluindo ecocardiograma.",
+    "limitations": "Sensibilidade de 76,3% e especificidade de 99,9% (revisão sistemática de 2020 do próprio grupo da AAP) — a triagem não substitui o exame físico neonatal nem o ultrassom obstétrico morfológico, e uma cardiopatia crítica com fisiologia que não depende de shunt ductal pode não gerar dessaturação detectável neste protocolo. O teste também detecta, como achado incidental frequente, outras causas de hipoxemia neonatal (sepse, pneumonia) que também se beneficiam de identificação precoce — para cada caso de cardiopatia crítica detectado, o próprio grupo de trabalho estima 4 a 5 casos de causa infecciosa ou respiratória.",
+    "source_refs": [
+      "Kemper AR, Mahle WT, Martin GR, et al. Strategies for Implementing Screening for Critical Congenital Heart Disease. Pediatrics. 2011;128(5):e1259-e1267. DOI: 10.1542/peds.2011-1317 — protocolo original de triagem (Figura 1) endossado pela AAP, AHA e ACC.",
+      "de-Wahl Granelli A, et al., citado na American Academy of Pediatrics. Updated Strategies for Pulse Oximetry Screening for Critical Congenital Heart Disease. Pediatrics. 2020;146(1):e20191650. DOI: 10.1542/peds.2019-1650 — sensibilidade e especificidade agregadas e atualização do algoritmo (uma repetição em vez de duas)."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "oximetria de pulso",
+      "teste do coraçãozinho",
+      "triagem neonatal",
+      "cardiopatia congênita crítica",
+      "spo2",
+      "canal arterial"
+    ]
   }
 ]
