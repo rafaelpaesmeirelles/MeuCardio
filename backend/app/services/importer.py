@@ -34,12 +34,34 @@ from app.models.content import Document, DocumentRevision
 # bula, guia interno de outra instituição, wiki, material de estudante,
 # agregador e calculadora. A Fase B já removeu sete delas do acervo à mão; esta
 # lista existe para o importador reconhecer o resto sozinho.
+#
+# Ampliada em 29/07/2026, depois de `droracle.ai` — site de respostas geradas
+# por IA — ser encontrado sustentando dose de milrinona e de colchicina em
+# quatro documentos JÁ PUBLICADOS, sem que nada no sistema o apontasse. Foram
+# 15 ocorrências. As categorias acrescentadas são as que faltavam: resposta
+# gerada por IA, conteúdo de saúde para leigo, fórum e material de estudante.
+#
+# LIMITE CONHECIDO, e ele é grande: esta lista só influencia `derivar_tier()`,
+# que devolve "C" apenas quando TODAS as referências são fracas. Uma referência
+# boa ao lado — um DOI, um nome de sociedade — devolve "A" e a fonte fraca
+# passa sem ser vista. Foi exatamente o que aconteceu na colchicina, que citava
+# uma revisão do JACC com DOI e o site de IA no mesmo campo. Para varrer o
+# acervo independentemente do tier existe `.claude/ferramentas/varre_fontes_fracas.py`,
+# que não depende deste caminho e encontra também os casos de fonte misturada.
 FONTES_FRACAS = (
     "consultaremedios", "consulta remédios", "guiafarmaceutico", "hsl.org.br",
     "sírio-libanês", "sirio-libanes", "health.ucsd.edu", "medscape", "mdcalc",
     "drugs.com", "wikipedia", "wikipédia", "wikidoc", "sanarmed", "sanar",
     "pebmed", "medicinanet", "tuasaude", "youtube", "empendium", "rdocumentation",
     "doccheck", "flexikon", "slideshare", "scribd", "conduta.med.br", "medicpulse",
+    # resposta gerada por IA
+    "droracle", "perplexity.ai", "chat.openai", "chatgpt", "copilot.microsoft",
+    # conteúdo de saúde para leigo
+    "healthline", "webmd", "medicalnewstoday", "minutosaudavel",
+    # fórum e conteúdo de usuário
+    "quora", "reddit", "brainly",
+    # material de estudante
+    "passeidireto", "studocu", "docsity",
 )
 
 # Marcadores de fonte primária: diretriz de sociedade ou artigo com
