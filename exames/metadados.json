@@ -942,5 +942,30 @@
       "dispneia aguda",
       "eacvi"
     ]
+  },
+  {
+    "slug": "escore-de-calcio-da-valva-aortica-na-estenose-aortica-de-baixo-fluxo-baixo-gradiente",
+    "name": "Escore de cálcio da valva aórtica (Agatston) na estenose aórtica de baixo fluxo/baixo gradiente",
+    "category": "imagem",
+    "theme": "Valvopatias",
+    "what_it_measures": "Quantificação da calcificação da valva aórtica por tomografia computadorizada sem contraste, em unidades Agatston — usada como critério auxiliar quando ecocardiograma e gradiente transvalvar são discordantes na estenose aórtica, situação em que a área valvar sozinha não permite concluir se a estenose é de fato grave.",
+    "reference_range": "Pela diretriz ESC/EACTS 2021 de valvopatias: escore muito sugestivo de estenose grave é >3000 unidades Agatston em homens e >1600 em mulheres; sugestivo (provável) é >2000 em homens e >1200 em mulheres; e torna a estenose grave improvável um escore <1600 em homens e <800 em mulheres. Os cortes são diferentes por sexo porque a massa valvar calcificada tende a ser maior no homem para o mesmo grau de estenose.",
+    "indications": "Indicado especificamente nos cenários de estenose aórtica de baixo fluxo/baixo gradiente, todos definidos por área valvar aórtica ≤1 cm² e gradiente médio <40 mmHg: baixo fluxo com disfunção ventricular (índice de volume sistólico ≤35 mL/m² e FEVE <50%), baixo fluxo com FEVE preservada (mesmo índice de volume sistólico, FEVE ≥50%) e fluxo normal com gradiente baixo (índice de volume sistólico >35 mL/m², FEVE ≥50%). Nessas três situações, a combinação clássica de área valvar e gradiente não basta para confirmar gravidade, e o escore de cálcio entra como critério de apoio.",
+    "interpretation": "Escore acima do corte de 'muito provável' sustenta o diagnóstico de estenose aórtica grave mesmo com gradiente discordantemente baixo, e orienta a indicação de intervenção (troca valvar cirúrgica ou transcateter) nesse cenário de incerteza. Escore abaixo do corte de 'improvável' aponta na direção contrária — a estenose provavelmente não é grave, e a causa dos sintomas ou da disfunção ventricular deve ser buscada em outro lugar.",
+    "limitations": "O escore não substitui a avaliação integrada — segue sendo um critério auxiliar dentro de um algoritmo que também considera FEVE, resposta ao eco de estresse com dobutamina em baixo fluxo com disfunção ventricular, e condições de carga hemodinâmica. Nenhum corte isolado é absoluto nos casos intermediários (entre os valores de 'improvável' e 'provável'), e a decisão final costuma exigir avaliação em Heart Team.",
+    "source_refs": [
+      "2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2021;43(7):561-632. — seção 2.5 (Cardiac computed tomography), critérios de escore de cálcio na estenose aórtica de baixo fluxo/baixo gradiente.",
+      "Aortic Valve Stenosis: Diagnostic Approaches and Recommendations of the 2021 ESC/EACTS Guidelines for the Management of Valvular Heart Disease – A Review of the Literature. PMC9410571."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "escore de cálcio",
+      "agatston",
+      "estenose aórtica",
+      "baixo fluxo baixo gradiente",
+      "tomografia computadorizada",
+      "valvopatia"
+    ]
   }
 ]
