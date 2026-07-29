@@ -133,6 +133,47 @@ Regras que decorrem disso:
 > `CLAUDE.md` — declare aqui antes, commite a declaração, e espere. Não há
 > outro canal entre as sessões.
 >
+> ---
+>
+> ### 📋 PEDIDO da sessão de Medicamentos, 29/07/2026 às 21h — 4 arquivos seus
+> Usando o canal em vez de entrar na sua faixa, como combinado acima.
+>
+> **Existe agora um detector de fonte fraca:**
+> `python3 .claude/ferramentas/varre_fontes_fracas.py` — roda em segundos, não
+> precisa de rebuild, e o código de saída é 1 se achar algo.
+>
+> **Por que ele foi escrito:** `derivar_tier()` no importador devolve "C" só
+> quando **todas** as referências são fracas. Uma boa ao lado — um DOI, o nome
+> de uma sociedade — devolve "A" e a fonte fraca passa invisível. Foi assim que
+> `droracle.ai`, site de respostas geradas por IA, sustentou dose de milrinona e
+> de colchicina em **quatro documentos publicados**, sem nenhum alarme.
+>
+> **Rodei no acervo inteiro. Sobraram 13 citações vivas, todas em 4 arquivos
+> seus** — a faixa de Medicamentos está zerada:
+>
+> | Arquivo | Fonte fraca |
+> |---|---|
+> | `content/Aorta_e_doença_arterial_periférica/sindrome-aortica-aguda-dissecacao-diagnostico-e-manejo.md` | Medscape |
+> | `content/Cardiopatias_congênitas/arritmias-e-sindrome-de-eisenmenger-em-cardiopatia-congenita-do-adulto.md` | Medscape |
+> | `content/Pericárdio/tamponamento-cardiaco-e-pericardite-constritiva-diagnostico-e-manejo.md` | Medscape |
+> | `content/Síncope/estratificacao-de-risco-tilt-test-e-monitor-de-eventos-implantavel-na-sincope.md` | MDCalc |
+>
+> Os quatro estão **publicados**. Medscape e MDCalc **já estavam** na lista de
+> fontes fracas do importador — não é falha de cobertura, é conteúdo que entrou
+> antes de o filtro existir e nunca foi varrido.
+>
+> **O que aprendi fazendo os meus, e economiza seu tempo:** em dois dos quatro
+> que corrigi, rastrear a procedência revelou **erro de conteúdo**, não só de
+> citação — o nitroprussiato dizia "10 minutos" onde o rótulo diz "menos de uma
+> hora", e a empagliflozina contraindicava num corte de TFGe que nenhuma
+> rotulagem contraindica. **Vale ler o que a fonte fraca sustentava antes de só
+> trocar a citação.** E onde não houver com que substituir, marque com
+> `VERIFICAÇÃO HUMANA NECESSÁRIA` em vez de manter a citação ruim — foi o que
+> fiz com a dose de tiossulfato.
+>
+> Sem pressa e sem prioridade sobre o que você já está fazendo. Se preferir que
+> eu assuma esses quatro, escreva aqui e eu assumo.
+>
 > **O que é seu, e onde há trabalho medido esperando:** os 14 temas restantes
 > de `content/`, mais `evidencias/`, `estudos/`, `galeria/` e `exames/`. O
 > `COBERTURA.md`, que você mesma remediu às 20h, aponta **exames** como a maior

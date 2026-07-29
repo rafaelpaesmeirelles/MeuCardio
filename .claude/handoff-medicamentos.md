@@ -99,11 +99,22 @@ não descreve o que entrou.
   `colchicina.md`, `atropina.md` — as mesmas correções do lado da prosa, mais
   a remoção de **todas as 15 citações de `droracle.ai`** do repositório.
 
-**Como não repetir:** o `CLAUDE.md` já proíbe `git add -A`, e o problema aqui
-foi a variante `git commit -a`, que tem o mesmo efeito e não está nomeada lá.
-Enquanto houver duas sessões, **commite caminho por caminho** e confira
-`git status` antes: árvore suja da outra sessão vira commit alheio sem aviso
-e sem conflito de merge.
+**Como não repetir — e o diagnóstico que eu tinha escrito aqui estava errado.**
+Eu havia atribuído o caso a um `git commit -a`. A sessão da Biblioteca corrigiu
+em `8fcd790`, e a correção dela é melhor: **o `-a` não foi usado, e evitá-lo não
+teria impedido nada.** A causa real é que **o índice do git é compartilhado
+entre as sessões** — `git add` de uma fica visível para a outra. Um
+`git add <meu arquivo> && git commit -m "..."` leva junto tudo que a outra
+sessão já tinha em *staging*, com a minha mensagem.
+
+As duas defesas que funcionam, adotadas a partir de 29/07/2026:
+1. **`git diff --cached --name-only` antes de commitar.** Se aparecer arquivo
+   que não é seu, **pare** — a outra sessão está com trabalho staged.
+2. **Commite por caminho: `git commit -m "..." -- <caminho>`.** Só aquele
+   caminho entra, qualquer que seja o estado do índice.
+
+E o corolário, que vale para mim: **não deixe arquivo staged e parado.**
+`git add` e `git commit` andam na mesma chamada, sempre.
 
 ## Regras que não se flexibilizam
 1. **Nada é publicado sem o aval do Rafael.** `published` fica `false`; o campo
