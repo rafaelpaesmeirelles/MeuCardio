@@ -1031,5 +1031,56 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "breathe-5-bosentana-sindrome-de-eisenmenger",
+    "title": "BREATHE-5 — Bosentana na síndrome de Eisenmenger",
+    "study_type": "ensaio_clinico",
+    "authors": "Galiè N et al.",
+    "journal": "Circulation",
+    "year": 2006,
+    "doi": "10.1161/CIRCULATIONAHA.106.630715",
+    "pmid": "16801459",
+    "url": "https://www.ahajournals.org/doi/10.1161/circulationaha.106.630715",
+    "summary": "Ensaio randomizado, duplo-cego, controlado por placebo, multicêntrico, de 16 semanas, com 54 pacientes em classe funcional OMS III por síndrome de Eisenmenger (comunicação interatrial ou interventricular com shunt revertido por hipertensão arterial pulmonar). Randomização 2:1 para bosentana (n=37) ou placebo (n=17). Desfecho primário de segurança: oximetria de pulso sistêmica — checar se o antagonista do receptor de endotelina pioraria a hipoxemia ao reduzir a resistência vascular pulmonar mais que a sistêmica. Desfecho primário de eficácia: resistência vascular pulmonar.",
+    "key_findings": "Bosentana reduziu o índice de resistência vascular pulmonar em -472,0 dyn.s.cm⁻⁵ em relação ao placebo (p=0,0383), reduziu a pressão arterial pulmonar média em -5,5 mmHg (p=0,0363) e aumentou a distância no teste de caminhada de 6 minutos em 53,1 metros (p=0,0079) — sem redução da saturação periférica de oxigênio, ou seja, sem o efeito adverso que o desenho do estudo temia.",
+    "clinical_implications": "Primeiro ensaio controlado por placebo em síndrome de Eisenmenger, e o que sustenta o uso de bosentana nessa população: melhora hemodinâmica e de capacidade funcional sem comprometer a saturação sistêmica, que era a preocupação central antes do estudo, dado o shunt já revertido direita-esquerda desses pacientes.",
+    "limitations": "Amostra pequena (54 pacientes) e seguimento curto (16 semanas) — não avalia desfecho de mortalidade nem de eventos clínicos maiores a longo prazo, só hemodinâmica e capacidade de exercício. Extensão aberta subsequente do próprio estudo sustentou o benefício funcional em prazo mais longo, mas sem grupo placebo concorrente.",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "breathe-5",
+      "bosentana",
+      "síndrome de eisenmenger",
+      "hipertensão arterial pulmonar",
+      "cardiopatia congênita do adulto",
+      "ensaio clínico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "lue-1994-profilaxia-secundaria-febre-reumatica-3-vs-4-semanas",
+    "title": "Profilaxia secundária da febre reumática: penicilina benzatina a cada 3 semanas versus a cada 4 semanas",
+    "study_type": "ensaio_clinico",
+    "authors": "Lue HC, Wu MH, Wang JK, Wu FF, Wu YN",
+    "journal": "The Journal of Pediatrics",
+    "year": 1994,
+    "doi": "10.1016/S0022-3476(94)70082-6",
+    "pmid": "7965439",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/7965439/",
+    "summary": "Ensaio randomizado com 249 pacientes com febre reumática prévia, comparando penicilina G benzatina 1,2 milhão de unidades por via intramuscular a cada 3 semanas contra o esquema padrão a cada 4 semanas, para profilaxia secundária de recorrência. Seguimento acumulado de 794 pacientes-ano no grupo de 3 semanas e 775 pacientes-ano no grupo de 4 semanas.",
+    "key_findings": "Infecção estreptocócica documentada foi menos frequente no grupo de 3 semanas: 7,5 por 100 pacientes-ano contra 12,6 por 100 pacientes-ano no grupo de 4 semanas. Falha da profilaxia (recorrência de febre reumática) ocorreu em 2 pacientes no grupo de 3 semanas (0,25 por 100 pacientes-ano) contra 10 pacientes no grupo de 4 semanas (1,29 por 100 pacientes-ano) — p=0,015.",
+    "clinical_implications": "Um dos estudos que sustenta a recomendação de encurtar o intervalo da penicilina benzatina para 3 semanas em vez de 4 no paciente de maior risco de recorrência — a diferença de falha profilática (0,25 vs. 1,29 por 100 pacientes-ano) é a base numérica citada por diretrizes que preferem o intervalo mais curto em cardite reumática moderada a grave ou doença valvar residual.",
+    "limitations": "População pediátrica e adolescente de área de alta prevalência de febre reumática (Taiwan) — a generalização para outros contextos epidemiológicos e faixas etárias exige cautela. Injeção mais frequente tem custo de adesão e desconforto que o estudo não quantifica em termos de qualidade de vida.",
+    "theme": "Febre reumática",
+    "tags": [
+      "febre reumática",
+      "profilaxia secundária",
+      "penicilina benzatina",
+      "recorrência",
+      "ensaio clínico"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
