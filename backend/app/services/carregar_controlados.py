@@ -21,6 +21,7 @@ from sqlalchemy.orm import Session
 
 from app.models.receituario import ControlledSubstance, PrescriptionRule, PrescriptionType
 from app.services.classificacao_receituario import normalizar
+from app.services.codificacao_regras_344 import CODIFICACAO, chave_do_texto
 
 CAMINHO_PADRAO = "/controlados/listas-344-98.json"
 
@@ -110,15 +111,27 @@ def carregar_listas(db: Session, caminho: str = CAMINHO_PADRAO) -> dict:
             subs += 1
 
         for texto in lista.get("regras_condicionais", []):
+            # A codificação é dado sobre a norma e vive versionada junto dela:
+            # aplicada aqui, uma recarga nunca perde o trabalho de leitura.
+            cod = CODIFICACAO.get(chave_do_texto(lista["lista"], texto) or ("", ""), {})
+            condicao = dict(cod.get("condicao") or {})
+            condicao["substancias"] = cod.get("substancias") or []
+            if cod.get("motivo"):
+                condicao["motivo_da_decisao"] = cod["motivo"]
             db.add(PrescriptionRule(
                 lista=lista["lista"], texto_normativo=texto,
-                tipo_resultante=None,      # só depois de alguém codificar a regra
-                codificada=False, condicao={}, fonte_versao=versao,
+                tipo_resultante=cod.get("tipo_resultante"),
+                codificada=bool(cod.get("codificada")), condicao=condicao,
+                fonte_versao=versao,
             ))
             regras += 1
 
     db.commit()
+    codificadas = db.query(PrescriptionRule).filter(
+        PrescriptionRule.fonte_versao == versao, PrescriptionRule.codificada.is_(True)).count()
     return {"versao": versao, "substancias": subs, "regras_condicionais": regras,
+            "regras_codificadas": codificadas,
+            "regras_em_revisao_humana": regras - codificadas,
             "aviso": dados.get("aviso")}
 
 

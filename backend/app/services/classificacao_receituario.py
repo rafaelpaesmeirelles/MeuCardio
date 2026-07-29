@@ -61,12 +61,25 @@ class Substancia:
 
 @dataclass
 class Regra:
-    """Projeção de `PrescriptionRule`."""
+    """Projeção de `PrescriptionRule`.
+
+    `condicao["substancias"]` delimita o ALCANCE da regra e é preenchida mesmo
+    quando `codificada` é falso. Sem isso, uma regra crua sobre codeína faria
+    todo item da Lista A2 cair em revisão — inclusive os que ela não menciona —,
+    e a pendência viraria ruído permanente que o médico aprende a ignorar. Lista
+    vazia significa alcance desconhecido, e aí a regra vale para toda a lista,
+    que é o lado conservador."""
     lista: str
     texto_normativo: str
     tipo_resultante: str | None
     codificada: bool = False
     condicao: dict = field(default_factory=dict)
+
+    def alcanca(self, substancia_normalizada: str) -> bool:
+        alvos = self.condicao.get("substancias") or []
+        if not alvos:
+            return True
+        return any(normalizar(a) == substancia_normalizada for a in alvos)
 
 
 @dataclass
@@ -97,12 +110,20 @@ def _condicao_casa(condicao: dict, item: ItemPrescrito) -> bool:
     """Avalia uma condição já codificada por humano. Conservadora: se qualquer
     critério não puder ser avaliado, não casa — e o item cai em pendência pela
     regra do chamador, em vez de ser classificado por engano."""
+    forma = condicao.get("forma")
+    teto = condicao.get("mg_por_unidade_max")
+    # Regra incondicional sobre a substância — "os medicamentos que contenham
+    # fenobarbital ficam sujeitos a Receita de Controle Especial" não depende de
+    # dose nem de forma. Exigir apresentação aqui mandaria para revisão humana um
+    # caso que a norma decide sozinha.
+    if forma is None and teto is None:
+        return True
     apres = normalizar(item.apresentacao or "")
     if not apres:
         return False
-    if (forma := condicao.get("forma")) and normalizar(forma) not in apres:
+    if forma and normalizar(forma) not in apres:
         return False
-    if (teto := condicao.get("mg_por_unidade_max")) is not None:
+    if teto is not None:
         achados = re.findall(r"(\d+(?:[.,]\d+)?)\s*mg", apres)
         if not achados:
             return False
@@ -149,7 +170,8 @@ def classificar(
             ))
             continue
 
-        aplicaveis = [r for r in regras if r.lista == sub.lista]
+        chave_sub = normalizar(sub.nome)
+        aplicaveis = [r for r in regras if r.lista == sub.lista and r.alcanca(chave_sub)]
         codificada_que_casa = next(
             (r for r in aplicaveis if r.codificada and _condicao_casa(r.condicao, item)), None
         )
