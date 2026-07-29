@@ -4,7 +4,7 @@ slug: sotalol
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["SOTALOL — Farmacon · Misodor · https://www.misodor.com.br/FARMACON/SOTALOL.html", "Sotalol Hydrochloride Injection — bula FDA/accessdata.fda.gov, 2025", "Sotalol — StatPearls, NCBI Bookshelf", "Sotalol — Medcentral/ASHP Monograph"]
+source_refs: ["SOTALOL — Farmacon · Misodor · https://www.misodor.com.br/FARMACON/SOTALOL.html", "Sotalol Hydrochloride Injection — bula FDA/accessdata.fda.gov, 2025", "Sotalol — StatPearls, NCBI Bookshelf"]
 legacy_source: "medicamentos/banco-de-medicamentos-sotalol.md"
 ---
 

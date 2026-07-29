@@ -22,7 +22,7 @@ Bloqueia seletivamente o receptor mineralocorticoide, com maior seletividade e m
 - **populacao**: pacientes com diabetes tipo 2 e doença renal crônica
 - **reducao de albuminuria**: redução relativa corrigida por placebo na razão albumina-creatinina urinária de 31% (FIDELIO-DKD) e 32% (FIGARO-DKD) no mês 4
 - **desfechos cardiovasculares e renais**: análise agrupada (FIDELITY) confirma redução significativa de desfechos cardiovasculares e renais compostos
-- **fonte**: NEJM (FIDELIO-DKD); MedCentral
+- **fonte**: NEJM (FIDELIO-DKD) e Resumo das Características do Medicamento (RCM) da EMA do KERENDIA (finerenona, Bayer), em português, secção 5.1, conferido em 29/07/2026 — os números de 31% e 32% estão textuais no RCM. Substituiu um agregador comercial em 29/07/2026
 
 ## Indicacoes cardiologicas
 Diabetes tipo 2 com doença renal crônica (TFGe ≥25 mL/min/1,73m²), para redução de eventos cardiovasculares e risco de falência renal — recomendação classe I, nível de evidência A na diretriz ESC 2023 de diabetes e doença cardiovascular

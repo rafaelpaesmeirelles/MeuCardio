@@ -41,11 +41,16 @@ FONTES_FRACAS = (
     "healthline", "webmd", "medicalnewstoday", "minutosaudavel",
     "quora", "reddit", "brainly",
     "passeidireto", "studocu", "docsity",
-    # portal comercial de educação médica — achado em 29/07/2026 sustentando a
-    # posologia do "pill in the pocket" da propafenona, num documento publicado.
-    # AINDA NÃO ESTÁ em backend/app/services/importer.py: acrescentar lá no
-    # próximo rebuild, porque a lista de lá só vale depois de reconstruir a imagem.
-    "afya", "portal.afya", "medcentral", "sanarflix", "jaleko", "medway",
+    # portal comercial de educação médica — achado em 29/07/2026 sustentando
+    # posologia em documentos publicados. AINDA NÃO ESTÁ em
+    # backend/app/services/importer.py: acrescentar lá no próximo rebuild.
+    #
+    # "afya" e "portal.afya" foram incluídos aqui e REMOVIDOS no mesmo dia:
+    # o Rafael confirmou Afya Cardiologia como fonte confiável — é conteúdo de
+    # prática clínica escrito por cardiologistas ("como eu uso"), não agregador
+    # nem resposta gerada por IA, e não sofre a restrição que se aplica a
+    # `droracle.ai` e similares. NÃO reincluir sem nova decisão do Rafael.
+    "medcentral", "sanarflix", "jaleko", "medway",
     "estrategiamed", "aristo.com.br",
 )
 
@@ -56,14 +61,26 @@ ALVOS = ("content", "medicamentos", "evidencias", "estudos", "galeria",
 IGNORAR_DIR = {".git", "node_modules", "__pycache__", ".venv", "dist", "build"}
 
 
+# termo -> texto que, se vier logo antes, torna a ocorrência um falso positivo.
+# "medcentral" casa dentro de "biomedcentral.com" — a BioMed Central (BMC) é
+# editora acadêmica legítima (Cardio-Oncology, Cardiovascular Diabetology),
+# nada a ver com o agregador de monografia de fármaco que o termo mira. Achado
+# em 29/07/2026 varrendo Cardio-oncologia e Diabetes e cardiologia.
+GUARDA_PREFIXO = {"medcentral": "bio"}
+
+
 def _ocorrencias(texto: str):
     baixo = texto.lower()
     for f in FONTES_FRACAS:
+        prefixo_ruim = GUARDA_PREFIXO.get(f)
         inicio = 0
         while True:
             i = baixo.find(f, inicio)
             if i < 0:
                 break
+            if prefixo_ruim and baixo[max(0, i - len(prefixo_ruim)):i] == prefixo_ruim:
+                inicio = i + len(f)
+                continue
             yield f, i
             inicio = i + len(f)
 

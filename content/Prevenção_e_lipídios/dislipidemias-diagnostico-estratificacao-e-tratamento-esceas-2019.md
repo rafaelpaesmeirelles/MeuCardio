@@ -26,7 +26,7 @@ legacy_source: "protocolos/protocolo-clinico-dislipidemias-esc-eas-2019.md"
 - **risco moderado**: Meta <100 mg/dL
 - **baixo risco**: Meta <116 mg/dL (Classe IIb, considerar)
 - **regra geral**: Em risco alto/muito alto, meta é reduzir LDL em >50% E atingir o valor absoluto da tabela, o que for mais exigente
-- **fonte**: Voz Médica ; Medway
+- **fonte**: 2019 ESC/EAS Guidelines for the management of dyslipidaemias, Eur Heart J. 2020;41(1):111-188, DOI 10.1093/eurheartj/ehz455 — já citada no source_refs deste documento. Substituiu um portal comercial de educação médica em 29/07/2026: as metas por categoria de risco são conteúdo central dessa diretriz, e não precisavam de intermediário
 
 ## Estratificacao complementar risco intermediario
 Para pacientes de risco intermediário com dúvida sobre benefício de estatina, opções complementares incluem ultrassom de espessura intimal carotídea/femoral, albuminúria, proteína C reativa, lipoproteína(a) e ApoB; escore de cálcio coronário é o mais validado e é a recomendação preferencial
