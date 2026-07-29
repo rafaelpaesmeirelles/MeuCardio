@@ -1756,5 +1756,159 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "nao-desescalar-antiagregante-nos-primeiros-30-dias-apos-sca",
+    "statement": "A desescalada da terapia antiagregante nos primeiros 30 dias após uma síndrome coronariana aguda **não** é recomendada. É recomendação contra, e delimita no tempo uma estratégia que é aceitável depois — trocar de inibidor potente para clopidogrel cedo demais expõe o paciente no período de maior risco isquêmico.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 ESC Guidelines for the management of acute coronary syndromes",
+    "reference": "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191 — classe e nível conferidos em contexto no texto original",
+    "theme": "Doença coronariana",
+    "tags": [
+      "síndrome coronariana aguda",
+      "dupla antiagregação",
+      "desescalada",
+      "clopidogrel"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "aas-nao-recomendado-no-paciente-oncologico-com-plaquetas-abaixo-de-10-mil",
+    "statement": "O AAS **não** é recomendado em paciente oncológico com contagem de plaquetas abaixo de 10.000/µL. É um dos três cortes plaquetários que a diretriz fixa, e o mais permissivo deles — o que significa que o AAS é o antiagregante que se mantém por mais tempo na plaquetopenia.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 ESC Guidelines for the management of acute coronary syndromes",
+    "reference": "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191 — classe e nível conferidos em contexto no texto original",
+    "theme": "Doença coronariana",
+    "tags": [
+      "síndrome coronariana aguda",
+      "cardio-oncologia",
+      "plaquetopenia",
+      "AAS",
+      "antiagregação"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "clopidogrel-nao-recomendado-no-paciente-oncologico-com-plaquetas-abaixo-de-30-mil",
+    "statement": "O clopidogrel **não** é recomendado em paciente oncológico com contagem de plaquetas abaixo de 30.000/µL.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 ESC Guidelines for the management of acute coronary syndromes",
+    "reference": "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191 — classe e nível conferidos em contexto no texto original",
+    "theme": "Doença coronariana",
+    "tags": [
+      "síndrome coronariana aguda",
+      "cardio-oncologia",
+      "plaquetopenia",
+      "clopidogrel"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "prasugrel-e-ticagrelor-nao-recomendados-com-plaquetas-abaixo-de-50-mil",
+    "statement": "Em paciente com síndrome coronariana aguda e câncer com contagem de plaquetas abaixo de 50.000/µL, prasugrel e ticagrelor **não** são recomendados. Os três cortes formam uma escada que orienta a escolha na plaquetopenia: abaixo de 50.000 saem os inibidores potentes, abaixo de 30.000 sai o clopidogrel, e abaixo de 10.000 sai também o AAS.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 ESC Guidelines for the management of acute coronary syndromes",
+    "reference": "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191 — classe e nível conferidos em contexto no texto original",
+    "theme": "Doença coronariana",
+    "tags": [
+      "síndrome coronariana aguda",
+      "cardio-oncologia",
+      "plaquetopenia",
+      "prasugrel",
+      "ticagrelor"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "estrategia-invasiva-no-paciente-oncologico-com-sca-de-alto-risco",
+    "statement": "A estratégia invasiva é recomendada em paciente oncológico que se apresenta com síndrome coronariana aguda de alto risco e expectativa de sobrevida de 6 meses ou mais. O câncer não exclui a abordagem invasiva — o que a condiciona é a expectativa de sobrevida, declarada em número.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 ESC Guidelines for the management of acute coronary syndromes",
+    "reference": "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191 — classe e nível conferidos em contexto no texto original",
+    "theme": "Doença coronariana",
+    "tags": [
+      "síndrome coronariana aguda",
+      "cardio-oncologia",
+      "estratégia invasiva",
+      "expectativa de sobrevida"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "avaliacao-de-prognostico-neurologico-nao-antes-de-72-horas-apos-parada",
+    "statement": "A avaliação de prognóstico neurológico é recomendada em todos os sobreviventes comatosos de parada cardíaca — e **não antes de 72 horas** da admissão. O prazo faz parte da recomendação: prognosticar cedo demais produz decisão de limitação de suporte sobre informação que ainda não é confiável.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 ESC Guidelines for the management of acute coronary syndromes",
+    "reference": "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191 — classe e nível conferidos em contexto no texto original",
+    "theme": "Doença coronariana",
+    "tags": [
+      "parada cardiorrespiratória",
+      "prognóstico neurológico",
+      "coma",
+      "cuidados pós-parada"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "icp-de-arteria-nao-culpada-guiada-pela-gravidade-angiografica-no-stemi",
+    "statement": "Em paciente com infarto com supradesnível de ST e doença multiarterial, hemodinamicamente estável, submetido a angioplastia primária, é recomendado que a intervenção da artéria não culpada seja baseada na **gravidade angiográfica**. A avaliação funcional invasiva de segmentos não culpados da própria artéria culpada, durante o procedimento índice, não é recomendada (Classe III, nível C).",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 ESC Guidelines for the management of acute coronary syndromes",
+    "reference": "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191 — classe e nível conferidos em contexto no texto original",
+    "theme": "Doença coronariana",
+    "tags": [
+      "STEMI",
+      "doença multiarterial",
+      "angioplastia",
+      "artéria não culpada"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "avaliar-sintomas-com-metodo-que-ajude-o-paciente-a-descrever-a-experiencia",
+    "statement": "É recomendado avaliar os sintomas por métodos que ajudem o paciente a descrever a própria experiência. Parece óbvio até se lembrar de que a apresentação atípica é justamente a que atrasa diagnóstico em mulheres, idosos e diabéticos — e que a pergunta fechada do examinador é parte do problema.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 ESC Guidelines for the management of acute coronary syndromes",
+    "reference": "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191 — classe e nível conferidos em contexto no texto original",
+    "theme": "Doença coronariana",
+    "tags": [
+      "síndrome coronariana aguda",
+      "anamnese",
+      "sintomas",
+      "apresentação atípica"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
