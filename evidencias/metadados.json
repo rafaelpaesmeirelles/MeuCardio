@@ -918,5 +918,158 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "ecocardiograma-com-doppler-em-todo-caso-suspeito-ou-confirmado-de-febre-reumatica",
+    "statement": "Ecocardiograma com Doppler deve ser realizado em todos os casos confirmados e suspeitos de febre reumática aguda. É o exame que transformou a cardite em achado detectável sem sopro — e a recomendação alcança o caso apenas suspeito, não só o confirmado.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "AHA",
+    "year": 2015,
+    "guideline_title": "Revision of the Jones Criteria for the Diagnosis of Acute Rheumatic Fever in the Era of Doppler Echocardiography (AHA 2015)",
+    "reference": "Gewitz MH, Baltimore RS, Tani LY, et al. Revision of the Jones Criteria for the Diagnosis of Acute Rheumatic Fever in the Era of Doppler Echocardiography: A Scientific Statement From the American Heart Association. Circulation. 2015;131(20):1806-1818. DOI: 10.1161/CIR.0000000000000205 — classe e nível transcritos das próprias recomendações do texto",
+    "theme": "Febre reumática",
+    "tags": [
+      "febre reumática",
+      "ecocardiograma",
+      "Doppler",
+      "cardite",
+      "critérios de Jones"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ecocardiograma-para-detectar-cardite-sem-sopro-na-febre-reumatica",
+    "statement": "O ecocardiograma com Doppler deve ser realizado, cumprindo estritamente os critérios de valvulite das tabelas da própria declaração, para avaliar se há cardite na ausência de achados à ausculta — particularmente em populações de risco moderado a alto e quando a febre reumática é considerada provável. É a base da cardite subclínica como manifestação maior.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "AHA",
+    "year": 2015,
+    "guideline_title": "Revision of the Jones Criteria for the Diagnosis of Acute Rheumatic Fever in the Era of Doppler Echocardiography (AHA 2015)",
+    "reference": "Gewitz MH, Baltimore RS, Tani LY, et al. Revision of the Jones Criteria for the Diagnosis of Acute Rheumatic Fever in the Era of Doppler Echocardiography: A Scientific Statement From the American Heart Association. Circulation. 2015;131(20):1806-1818. DOI: 10.1161/CIR.0000000000000205 — classe e nível transcritos das próprias recomendações do texto",
+    "theme": "Febre reumática",
+    "tags": [
+      "febre reumática",
+      "cardite subclínica",
+      "ecocardiograma",
+      "população de alto risco"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "doppler-sem-criterio-de-valvulite-exclui-cardite-reumatica",
+    "statement": "Achados de ecocardiograma com Doppler que não sejam consistentes com valvulite devem **excluir** o diagnóstico de cardite em paciente com sopro atribuído a cardite reumática. A recomendação é de exclusão, não de dúvida: o exame serve tanto para achar cardite sem sopro quanto para afastar cardite com sopro — e é esse segundo uso que evita o sobrediagnóstico e a profilaxia desnecessária por anos.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "AHA",
+    "year": 2015,
+    "guideline_title": "Revision of the Jones Criteria for the Diagnosis of Acute Rheumatic Fever in the Era of Doppler Echocardiography (AHA 2015)",
+    "reference": "Gewitz MH, Baltimore RS, Tani LY, et al. Revision of the Jones Criteria for the Diagnosis of Acute Rheumatic Fever in the Era of Doppler Echocardiography: A Scientific Statement From the American Heart Association. Circulation. 2015;131(20):1806-1818. DOI: 10.1161/CIR.0000000000000205 — classe e nível transcritos das próprias recomendações do texto",
+    "theme": "Febre reumática",
+    "tags": [
+      "febre reumática",
+      "cardite",
+      "ecocardiograma",
+      "diagnóstico diferencial",
+      "sobrediagnóstico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "quem-nao-e-claramente-de-baixo-risco-esta-em-risco-moderado-a-alto",
+    "statement": "Criança que não seja claramente de população de baixo risco está em risco moderado a alto, conforme sua população de referência. A regra decide qual coluna dos critérios de Jones se aplica — e a falta de dado epidemiológico não classifica ninguém como de baixo risco, o que é a leitura invertida que causa subdiagnóstico.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "AHA",
+    "year": 2015,
+    "guideline_title": "Revision of the Jones Criteria for the Diagnosis of Acute Rheumatic Fever in the Era of Doppler Echocardiography (AHA 2015)",
+    "reference": "Gewitz MH, Baltimore RS, Tani LY, et al. Revision of the Jones Criteria for the Diagnosis of Acute Rheumatic Fever in the Era of Doppler Echocardiography: A Scientific Statement From the American Heart Association. Circulation. 2015;131(20):1806-1818. DOI: 10.1161/CIR.0000000000000205 — classe e nível transcritos das próprias recomendações do texto",
+    "theme": "Febre reumática",
+    "tags": [
+      "febre reumática",
+      "critérios de Jones",
+      "estratificação de risco populacional"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "definicao-epidemiologica-de-populacao-de-baixo-risco-para-febre-reumatica",
+    "statement": "Onde houver dado epidemiológico confiável, é razoável definir baixo risco como incidência de febre reumática aguda de até 2 por 100.000 crianças em idade escolar — geralmente de 5 a 14 anos — por ano, ou prevalência de cardiopatia reumática, em todas as idades, de até 1 por 1.000 habitantes por ano.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "AHA",
+    "year": 2015,
+    "guideline_title": "Revision of the Jones Criteria for the Diagnosis of Acute Rheumatic Fever in the Era of Doppler Echocardiography (AHA 2015)",
+    "reference": "Gewitz MH, Baltimore RS, Tani LY, et al. Revision of the Jones Criteria for the Diagnosis of Acute Rheumatic Fever in the Era of Doppler Echocardiography: A Scientific Statement From the American Heart Association. Circulation. 2015;131(20):1806-1818. DOI: 10.1161/CIR.0000000000000205 — classe e nível transcritos das próprias recomendações do texto",
+    "theme": "Febre reumática",
+    "tags": [
+      "febre reumática",
+      "epidemiologia",
+      "baixo risco",
+      "critérios de Jones"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "monoartrite-como-manifestacao-de-febre-reumatica-so-em-populacao-de-risco",
+    "statement": "Considerar que a monoartrite possa fazer parte do espectro da febre reumática aguda deve ficar restrito a pacientes de populações de risco moderado a alto. Em população de baixo risco, a manifestação articular maior continua sendo apenas a poliartrite.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "AHA",
+    "year": 2015,
+    "guideline_title": "Revision of the Jones Criteria for the Diagnosis of Acute Rheumatic Fever in the Era of Doppler Echocardiography (AHA 2015)",
+    "reference": "Gewitz MH, Baltimore RS, Tani LY, et al. Revision of the Jones Criteria for the Diagnosis of Acute Rheumatic Fever in the Era of Doppler Echocardiography: A Scientific Statement From the American Heart Association. Circulation. 2015;131(20):1806-1818. DOI: 10.1161/CIR.0000000000000205 — classe e nível transcritos das próprias recomendações do texto",
+    "theme": "Febre reumática",
+    "tags": [
+      "febre reumática",
+      "monoartrite",
+      "critérios de Jones",
+      "população de alto risco"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "poliartralgia-como-criterio-maior-tem-uso-restrito-e-condicionado",
+    "statement": "A inclusão da poliartralgia como manifestação maior aplica-se somente a populações de incidência moderada ou alta, e apenas após consideração cuidadosa e exclusão de outras causas de artralgia — autoimune, viral ou artropatia reativa. É a manifestação maior de menor especificidade, e a própria declaração a cerca de condições.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "AHA",
+    "year": 2015,
+    "guideline_title": "Revision of the Jones Criteria for the Diagnosis of Acute Rheumatic Fever in the Era of Doppler Echocardiography (AHA 2015)",
+    "reference": "Gewitz MH, Baltimore RS, Tani LY, et al. Revision of the Jones Criteria for the Diagnosis of Acute Rheumatic Fever in the Era of Doppler Echocardiography: A Scientific Statement From the American Heart Association. Circulation. 2015;131(20):1806-1818. DOI: 10.1161/CIR.0000000000000205 — classe e nível transcritos das próprias recomendações do texto",
+    "theme": "Febre reumática",
+    "tags": [
+      "febre reumática",
+      "poliartralgia",
+      "critérios de Jones",
+      "diagnóstico diferencial"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "doze-meses-de-profilaxia-secundaria-na-incerteza-diagnostica-de-febre-reumatica",
+    "statement": "Havendo incerteza genuína sobre o diagnóstico, é razoável considerar 12 meses de profilaxia secundária seguidos de reavaliação, que deve incluir história e exame físico cuidadosos e ecocardiograma repetido. É a conduta prevista para a 'febre reumática possível' — trata sob dúvida por prazo definido, em vez de comprometer o paciente a décadas de profilaxia ou deixá-lo sem nenhuma.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "AHA",
+    "year": 2015,
+    "guideline_title": "Revision of the Jones Criteria for the Diagnosis of Acute Rheumatic Fever in the Era of Doppler Echocardiography (AHA 2015)",
+    "reference": "Gewitz MH, Baltimore RS, Tani LY, et al. Revision of the Jones Criteria for the Diagnosis of Acute Rheumatic Fever in the Era of Doppler Echocardiography: A Scientific Statement From the American Heart Association. Circulation. 2015;131(20):1806-1818. DOI: 10.1161/CIR.0000000000000205 — classe e nível transcritos das próprias recomendações do texto",
+    "theme": "Febre reumática",
+    "tags": [
+      "febre reumática",
+      "profilaxia secundária",
+      "incerteza diagnóstica",
+      "reavaliação"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
