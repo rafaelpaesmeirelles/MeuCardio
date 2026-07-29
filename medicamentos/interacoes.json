@@ -322,5 +322,17 @@
     "conduta": "Nenhum ajuste. Registrado como interação ausente porque a suposição contrária é frequente — 'os dois passam pela gp-P, logo interagem' — e levaria a reduzir dose sem motivo.",
     "fonte": "Bula do profissional do XARELTO (rivaroxabana, Bayer S.A.), seção de interações medicamentosas, consultada no bulário BulasMed, que republica o texto registrado. O PDF do fabricante é cifrado e não pôde ser lido diretamente — ver limites documentados em .claude/ferramentas/ler_pdf.py.",
     "review_status": "revisado"
+  },
+  {
+    "slug": "verapamil-digoxina",
+    "farmacos": [
+      "verapamil-cloridrato",
+      "digoxina"
+    ],
+    "gravidade": "moderada",
+    "efeito": "O verapamil aumenta os níveis sanguíneos de digoxina.",
+    "conduta": "Redução de dose e monitorização da digoxina quando associada ao verapamil.",
+    "fonte": "Bula de digoxina (versão brasileira, seção de contraindicações/interações, consultada em duas apresentações independentes — Digoxina® GSK e DIGOXINA_VP/Pharlab), citada no próprio verbete de digoxina em medicamentos/metadados.json.",
+    "review_status": "revisado"
   }
 ]
