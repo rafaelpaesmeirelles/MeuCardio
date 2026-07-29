@@ -238,5 +238,53 @@
     "conduta": "**Contraindicado em paciente com diabetes tipo 2.** Deve ser **evitado** na insuficiência renal grave (TFG abaixo de 30 mL/min). A mesma regra vale para IECA associado a alisquireno.",
     "fonte": "Bula para o profissional de saúde da valsartana (Brainfarma Indústria Química e Farmacêutica S.A.), seções de contraindicações e de interações medicamentosas — 'Duplo bloqueio do Sistema Renina-Angiotensina'.",
     "review_status": "revisado"
+  },
+  {
+    "slug": "apixabana-amiodarona",
+    "farmacos": [
+      "apixabana",
+      "amiodarona-cloridrato"
+    ],
+    "gravidade": "leve",
+    "efeito": "A amiodarona, o verapamil, o diltiazem e a quinidina são inibidores MODERADOS ou pouco potentes da CYP3A4 e/ou da glicoproteína P. A exposição à apixabana sobe pouco.",
+    "conduta": "A bula é explícita: **nenhum ajuste de dose da apixabana é necessário** nessa associação. Registrado justamente porque o reflexo comum é reduzir a dose do anticoagulante — e reduzir sem indicação subanticoagula o paciente.",
+    "fonte": "Bula do ELIQUIS (apixabana, Bristol-Myers Squibb Farmacêutica S.A.), seção de interações medicamentosas. É a bula do PACIENTE — a do profissional não foi obtida.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "apixabana-verapamil",
+    "farmacos": [
+      "apixabana",
+      "verapamil-cloridrato"
+    ],
+    "gravidade": "leve",
+    "efeito": "A amiodarona, o verapamil, o diltiazem e a quinidina são inibidores MODERADOS ou pouco potentes da CYP3A4 e/ou da glicoproteína P. A exposição à apixabana sobe pouco.",
+    "conduta": "A bula é explícita: **nenhum ajuste de dose da apixabana é necessário** nessa associação. Registrado justamente porque o reflexo comum é reduzir a dose do anticoagulante — e reduzir sem indicação subanticoagula o paciente.",
+    "fonte": "Bula do ELIQUIS (apixabana, Bristol-Myers Squibb Farmacêutica S.A.), seção de interações medicamentosas. É a bula do PACIENTE — a do profissional não foi obtida.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "apixabana-diltiazem",
+    "farmacos": [
+      "apixabana",
+      "diltiazem-cloridrato"
+    ],
+    "gravidade": "leve",
+    "efeito": "A amiodarona, o verapamil, o diltiazem e a quinidina são inibidores MODERADOS ou pouco potentes da CYP3A4 e/ou da glicoproteína P. A exposição à apixabana sobe pouco.",
+    "conduta": "A bula é explícita: **nenhum ajuste de dose da apixabana é necessário** nessa associação. Registrado justamente porque o reflexo comum é reduzir a dose do anticoagulante — e reduzir sem indicação subanticoagula o paciente.",
+    "fonte": "Bula do ELIQUIS (apixabana, Bristol-Myers Squibb Farmacêutica S.A.), seção de interações medicamentosas. É a bula do PACIENTE — a do profissional não foi obtida.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "apixabana-inibidor-potente-cyp3a4-e-pgp",
+    "farmacos": [
+      "apixabana"
+    ],
+    "classe_oposta": "inibidor potente da CYP3A4 E da glicoproteína P (antifúngico azólico — cetoconazol, itraconazol, voriconazol, posaconazol — e inibidor da protease do HIV, como ritonavir)",
+    "gravidade": "grave",
+    "efeito": "Aumento da concentração plasmática da apixabana, com risco de sangramento.",
+    "conduta": "A bula desaconselha o uso concomitante. Diferente dos inibidores moderados, aqui a associação importa.",
+    "fonte": "Bula do ELIQUIS (apixabana, Bristol-Myers Squibb Farmacêutica S.A.), seção de interações medicamentosas. É a bula do PACIENTE — a do profissional não foi obtida.",
+    "review_status": "revisado"
   }
 ]
