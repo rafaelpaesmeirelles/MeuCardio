@@ -786,5 +786,137 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "dispositivo-e-o-metodo-de-escolha-no-fechamento-de-cia-ostium-secundum",
+    "statement": "O fechamento por dispositivo é o método de escolha na comunicação interatrial do tipo ostium secundum, quando tecnicamente adequado. A cirurgia fica para o defeito de outro tipo — seio venoso, ostium primum, seio coronário — ou para anatomia inadequada ao dispositivo, e no idoso não candidato ao dispositivo é recomendado pesar com cuidado o risco cirúrgico contra o benefício do fechamento.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines for the management of adult congenital heart disease",
+    "reference": "Baumgartner H, De Backer J, Babu-Narayan SV, et al. 2020 ESC Guidelines for the management of adult congenital heart disease. Eur Heart J. 2021;42(6):563-645. DOI: 10.1093/eurheartj/ehaa554 — classe e nível conferidos no texto original",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "comunicação interatrial",
+      "fechamento percutâneo",
+      "dispositivo",
+      "ostium secundum"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "medida-invasiva-da-rvp-e-obrigatoria-com-sinal-de-pap-elevada",
+    "statement": "Em paciente com shunt e sinais não invasivos de pressão arterial pulmonar elevada, a medida invasiva da resistência vascular pulmonar é obrigatória. Decidir fechar o defeito apenas pelo ecocardiograma nesse cenário pula uma recomendação Classe I — e a resistência é justamente o número que separa fechar, fechar com fenestração e não fechar.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines for the management of adult congenital heart disease",
+    "reference": "Baumgartner H, De Backer J, Babu-Narayan SV, et al. 2020 ESC Guidelines for the management of adult congenital heart disease. Eur Heart J. 2021;42(6):563-645. DOI: 10.1093/eurheartj/ehaa554 — classe e nível conferidos no texto original",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "shunt",
+      "resistência vascular pulmonar",
+      "cateterismo",
+      "hipertensão pulmonar"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "valvuloplastia-por-balao-e-a-intervencao-de-escolha-na-estenose-pulmonar-valvar",
+    "statement": "Na estenose pulmonar valvar, a valvuloplastia por balão é a intervenção de escolha quando a anatomia é adequada. É uma das poucas lesões congênitas em que o tratamento percutâneo é a primeira opção declarada, e não alternativa à cirurgia.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines for the management of adult congenital heart disease",
+    "reference": "Baumgartner H, De Backer J, Babu-Narayan SV, et al. 2020 ESC Guidelines for the management of adult congenital heart disease. Eur Heart J. 2021;42(6):563-645. DOI: 10.1093/eurheartj/ehaa554 — classe e nível conferidos no texto original",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "estenose pulmonar",
+      "valvuloplastia por balão",
+      "intervenção percutânea"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "troca-valvar-pulmonar-na-tetralogia-de-fallot-operada-com-sintomas",
+    "statement": "Após correção de tetralogia de Fallot, a troca valvar pulmonar é recomendada no paciente sintomático com regurgitação pulmonar grave e/ou obstrução de via de saída do ventrículo direito ao menos moderada. Quando não há via de saída nativa, o implante valvar pulmonar por cateter deve ser preferido, se anatomicamente viável.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines for the management of adult congenital heart disease",
+    "reference": "Baumgartner H, De Backer J, Babu-Narayan SV, et al. 2020 ESC Guidelines for the management of adult congenital heart disease. Eur Heart J. 2021;42(6):563-645. DOI: 10.1093/eurheartj/ehaa554 — classe e nível conferidos no texto original",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "tetralogia de Fallot",
+      "regurgitação pulmonar",
+      "troca valvar pulmonar",
+      "TPVI"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cirurgia-de-ebstein-so-por-cirurgiao-com-experiencia-especifica",
+    "statement": "O reparo cirúrgico da anomalia de Ebstein é recomendado apenas por cirurgião de cardiopatia congênita com experiência específica nessa operação. É recomendação sobre quem opera, não sobre o que se opera — e vem junto da indicação de reparo na regurgitação tricúspide grave com sintomas ou deterioração objetiva da capacidade de exercício.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines for the management of adult congenital heart disease",
+    "reference": "Baumgartner H, De Backer J, Babu-Narayan SV, et al. 2020 ESC Guidelines for the management of adult congenital heart disease. Eur Heart J. 2021;42(6):563-645. DOI: 10.1093/eurheartj/ehaa554 — classe e nível conferidos no texto original",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "anomalia de Ebstein",
+      "regurgitação tricúspide",
+      "cirurgia",
+      "centro de referência"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "contraindicar-gravidez-na-cardiopatia-congenita-com-hipertensao-pulmonar-pre-capilar",
+    "statement": "É recomendado que a paciente com cardiopatia congênita e hipertensão pulmonar pré-capilar confirmada seja aconselhada contra engravidar. A recomendação é de aconselhamento explícito, não de vigilância — e vale para a hipertensão pré-capilar confirmada, o que torna a caracterização hemodinâmica parte da conversa sobre gestação.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines for the management of adult congenital heart disease",
+    "reference": "Baumgartner H, De Backer J, Babu-Narayan SV, et al. 2020 ESC Guidelines for the management of adult congenital heart disease. Eur Heart J. 2021;42(6):563-645. DOI: 10.1093/eurheartj/ehaa554 — classe e nível conferidos no texto original",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "cardiopatia congênita",
+      "hipertensão pulmonar",
+      "gestação",
+      "aconselhamento"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "estratificacao-de-risco-em-todo-paciente-com-hipertensao-pulmonar-associada-a-cardiopatia-congenita",
+    "statement": "A estratificação de risco é recomendada em todos os pacientes com hipertensão arterial pulmonar associada a cardiopatia congênita. É o passo que organiza a decisão terapêutica nesse grupo, em que a fisiologia varia da síndrome de Eisenmenger ao shunt corrigido com hipertensão residual.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines for the management of adult congenital heart disease",
+    "reference": "Baumgartner H, De Backer J, Babu-Narayan SV, et al. 2020 ESC Guidelines for the management of adult congenital heart disease. Eur Heart J. 2021;42(6):563-645. DOI: 10.1093/eurheartj/ehaa554 — classe e nível conferidos no texto original",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "hipertensão arterial pulmonar",
+      "cardiopatia congênita",
+      "estratificação de risco",
+      "PAH-CHD"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
