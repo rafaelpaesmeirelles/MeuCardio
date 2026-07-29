@@ -3,8 +3,8 @@ title: "Enoxaparina (sódica)"
 slug: enoxaparina-sodica
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
-source_refs: ["Heparinização Plena na Sala de Emergência · HCRP/USP · https://hcrp.usp.br/revistaqualidade/uploads/Artigos/186/186.pdf"]
+review_status: revisado
+source_refs: ["Bula da CLEXANE (enoxaparina sódica, Sanofi-Aventis Farmacêutica Ltda.) — seções de posologia, precauções, gravidez e amamentação, conferida na íntegra em 29/07/2026", "Heparinização Plena na Sala de Emergência · HCRP/USP · https://hcrp.usp.br/revistaqualidade/uploads/Artigos/186/186.pdf — protocolo assistencial local, mantido como fonte secundária dos esquemas de dose"]
 legacy_source: "medicamentos/banco-de-medicamentos-enoxaparina.md"
 ---
 
@@ -48,3 +48,45 @@ Menor incidência de plaquetopenia e osteoporose comparado à HNF
 - AVC isquêmico (fase aguda) ou hemorrágico
 - Trombocitopenia induzida por heparina prévia
 - Insuficiência renal grave (ClCr<10-30mL/min, preferir HNF)
+
+## O que a bula registrada diz, e onde ela diverge do protocolo
+
+As doses da seção anterior vêm de **protocolo assistencial do HCRP/USP**, não da
+bula. São plausíveis e de origem acadêmica, mas não são texto registrado — e em
+três pontos a bula da Clexane, conferida na íntegra, **não confirma** o que o
+protocolo afirma. As duas versões ficam aqui, cada uma com o seu rótulo.
+
+**Função renal.** A bula recomenda ajuste posológico — terapêutico e profilático
+— na **insuficiência renal grave, com clearance de creatinina abaixo de
+30 mL/min**. Na moderada (30 a 50) e na leve (50 a 80) **não recomenda ajuste**,
+mas aconselha monitorização clínica cuidadosa. O protocolo, por sua vez, propõe
+1 mg/kg uma vez ao dia entre 10 e 30 mL/min e evitar abaixo de 10 — **nenhum
+desses dois cortes está na bula**.
+
+**Idade.** A bula **não traz o corte de 75 anos** nem a dose de 0,75 mg/kg. O que
+ela registra é outra coisa: não houve aumento de hemorragia em idosos com doses
+**profiláticas**, mas pacientes **a partir de 80 anos** podem ter risco
+aumentado de complicação hemorrágica com doses **terapêuticas**, e idosos podem
+apresentar eliminação reduzida — daí a recomendação de monitorização clínica
+cuidadosa. O esquema de 0,75 mg/kg acima de 75 anos vem da literatura de
+síndrome coronariana, não desta bula.
+
+**Peso baixo.** Item ausente do documento e presente na bula: em **mulheres com
+menos de 45 kg e homens com menos de 57 kg**, doses profiláticas não ajustadas
+ao peso aumentam a exposição, com maior risco de sangramento.
+
+**Pediatria.** Segurança e eficácia **não estabelecidas** em crianças.
+
+## Gravidez e lactação
+
+**Gravidez.** Estudos em animais não demonstraram toxicidade fetal nem
+malformação, e em ratas prenhes a passagem placentária é mínima. **Em humanos
+não há evidência de passagem da enoxaparina pela placenta** no segundo
+trimestre. É esse perfil que sustenta a heparina de baixo peso molecular como o
+anticoagulante da gestação — em contraste com a varfarina, **contraindicada** na
+gravidez e na lactação pela bula do Marevan.
+
+**Lactação.** Em ratas lactantes a concentração no leite é muito baixa; **não se
+sabe se a enoxaparina inalterada é excretada no leite humano**. A absorção oral
+é improvável, mas **a bula orienta não amamentar** durante o tratamento por
+precaução.
