@@ -5,7 +5,7 @@ theme: "Cardiomiopatias"
 kind: protocolo
 summary: "As causas de miocardite que nenhuma diretriz europeia ou americana cobre: doença de Chagas aguda — hoje transmitida sobretudo por via oral, não pelo barbeiro — e as miocardites por malária, dengue, Chikungunya, Zika e febre amarela. Com o diagnóstico parasitológico correto por janela de tempo, a reativação pós-transplante e o que investigar em área endêmica."
 review_status: revisado
-source_refs: ["Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022 · Arquivos Brasileiros de Cardiologia · seções 6.4 (Miocardite chagásica aguda e reagudização) e 6.5 (Miocardite por Doenças Tropicais), Tabelas 27 e 28 — texto integral em acesso aberto no PubMed Central"]
+source_refs: ["Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022 · Arquivos Brasileiros de Cardiologia · seções 6.4 (Miocardite chagásica aguda e reagudização) e 6.5 (Miocardite por Doenças Tropicais), Tabelas 27 e 28 — texto integral em acesso aberto no PubMed Central", "Diretriz da SBC sobre Diagnóstico e Tratamento de Pacientes com Cardiomiopatia da Doença de Chagas – 2023. Arq Bras Cardiol. 2023;120(6). DOI: 10.36660/abc.20230269 — posologia do benznidazol no adulto (dose, duração de 60 dias, teto de 300 mg/dia, esquema alternativo por peso em dias e apresentações disponíveis no SUS); texto integral em acesso aberto no PubMed Central (PMC10344417)"]
 ---
 
 # Miocardite chagásica aguda e miocardites tropicais (SBC 2022)
@@ -98,21 +98,49 @@ extracardíaco, a biópsia deve ser realizada.**
 
 O **benznidazol** é o fármaco disponível.
 
-| População | Dose | Duração |
-|---|---|---|
-| Crianças | 5 a 10 mg/kg/dia, em 2 tomadas | 60 dias |
-| Adultos | 5 mg/kg/dia | **não declarada** |
+| População | Dose | Duração | Teto diário |
+|---|---|---|---|
+| Crianças | 5 a 10 mg/kg/dia, em 2 tomadas | 60 dias | 300 mg/dia |
+| Adultos, doença crônica | 5 mg/kg/dia, em 2 ou 3 tomadas | 60 dias | 300 mg/dia |
+| Adultos, doença **aguda** | **até 10 mg/kg/dia** | 60 dias\* | 300 mg/dia |
 
-**Duas ressalvas sobre estes números, e as duas são da fonte, não da transcrição.**
+\* **Leitura, não citação.** A diretriz de 2023 declara os 60 dias na frase da
+forma **crônica** e, na frase seguinte, diz apenas que *"para casos de DC aguda,
+essa dose pode ser de até 10mg/kg/dia"* — ou seja, altera a dose diária e não
+repete a duração. Ler os 60 dias como mantidos é o entendimento natural da
+construção, mas é entendimento, não texto. Quem for prescrever confira no
+protocolo do Ministério da Saúde.
 
-A primeira: **a diretriz dá a dose adulta sem a duração**. Diz apenas *"em
-adultos, a dose é de 5 mg/kg"*, enquanto para crianças especifica os 60 dias.
-Dose sem duração não se prescreve, e não se completa por analogia com a dose
-pediátrica — **VERIFICAÇÃO HUMANA NECESSÁRIA** para a duração no adulto, que
-deve vir da bula do benznidazol ou do protocolo do Ministério da Saúde, não
-daqui.
+**A lacuna da duração no adulto está fechada — e a fonte que a fecha é outra
+diretriz da própria SBC.** A Diretriz de Miocardites de 2022 realmente dá a dose
+adulta sem a duração; quem a declara é a **Diretriz da SBC sobre Diagnóstico e
+Tratamento de Pacientes com Cardiomiopatia da Doença de Chagas – 2023**, com
+texto literal: *"Em adultos com DC crônica, o benznidazol é utilizado por via
+oral na dose de 5mg/kg/dia dividida em duas ou três tomadas, durante 60 dias,
+com dose máxima recomendada de 300mg/dia. Para casos de DC aguda, essa dose pode
+ser de até 10mg/kg/dia."* Como este documento trata da forma **aguda**, é a
+segunda frase que vale aqui — a dose pode chegar ao dobro, com o mesmo teto
+diário de 300 mg.
 
-A segunda: a diretriz registra **reações adversas em aproximadamente 30% dos
+**Três detalhes da diretriz de 2023 que mudam a prescrição na prática, e que a
+tabela sozinha não mostra:**
+
+- **Acima de 60 kg, estende-se o tempo em vez de subir a dose.** A diretriz diz
+  que pessoas com mais de 60 kg podem estender o esquema para alcançar a
+  dose-alvo, mantendo 300 mg como limite diário, justamente para prevenir evento
+  adverso. Mesma lógica na criança: quando a dose calculada ultrapassa 300 mg/dia,
+  estende-se o tratamento até completar a dose total dos 60 dias.
+- **Existe um esquema alternativo, por peso em dias.** 300 mg/dia pelo número de
+  dias equivalente ao peso da pessoa em quilos, **limitado a 80 dias** mesmo acima
+  de 80 kg. A diretriz o descreve como aparentemente mais bem tolerado, atribui a
+  proposta ao Prof. Anis Rassi e registra que foi adotado na segunda metade do
+  recrutamento do estudo BENEFIT.
+- **Apresentações no Brasil.** O benznidazol existe em comprimidos de 100 mg e
+  50 mg (adulto) e 12,5 mg e 50 mg (criança), mas **só as de 100 mg e 12,5 mg
+  estão disponíveis na rede do SUS** — o de 100 mg distribuído pelas Secretarias
+  Estaduais, e o de 12,5 mg centralizado no Ministério da Saúde.
+
+A segunda ressalva, que **continua aberta**: a diretriz de 2022 registra **reações adversas em aproximadamente 30% dos
 pacientes**, sendo as mais frequentes **dermatite alérgica (30%)** e **neuropatia
 sensitiva periférica (10%)**. Os dois "30%" não fecham entre si — se 30% têm
 reação adversa, a dermatite não pode ser 30% do total *e* a mais frequente entre
