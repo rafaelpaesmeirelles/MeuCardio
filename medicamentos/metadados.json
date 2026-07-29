@@ -1046,7 +1046,7 @@
   },
   {
     "slug": "disopiramida",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Disopiramida",
     "drug_class": "Antiarrítmico classe Ia (classificação de Vaughan Williams), com efeito inotrópico negativo e ação anticolinérgica",
     "mechanism": "Bloqueio de canais de sódio associado a efeito inotrópico negativo direto sobre o miocárdio e ação anticolinérgica — no contexto da cardiomiopatia hipertrófica obstrutiva, o efeito inotrópico negativo reduz a contratilidade septal e, consequentemente, o grau de obstrução dinâmica da via de saída do ventrículo esquerdo - **fonte**: European Heart Journal — Cardiovascular Pharmacotherapy (revisão sistemática e metanálise)",
@@ -1057,9 +1057,15 @@
       "Prolonga o intervalo QT, aumentando o risco de arritmias — requer monitorização eletrocardiográfica. Efeitos colaterais anticolinérgicos gastrointestinais (boca seca, constipação, retenção urinária) são frequentes e podem limitar a tolerabilidade - **fonte**: European Heart Journal — Cardiovascular Pharmacotherapy (Awad K et al., 2025)"
     ],
     "dosing": {
-      "disponibilidade no brasil": "**Sem produto comercializado no Brasil até onde foi possível apurar.** A disopiramida está ausente da lista de preços da CMED, que cobre os medicamentos com preço regulado comercializados no país — ausência que é evidência forte, ainda que indireta, de que não há apresentação disponível. Isso importa na leitura de diretriz europeia, em que a disopiramida aparece com papel definido.",
-      "posologia": "VERIFICAÇÃO HUMANA NECESSÁRIA para a dose — e a razão de ela não estar preenchida é parte da informação: **não foi localizada apresentação da disopiramida registrada e comercializada no Brasil, e a ausência na CMED sustenta isso.**\n\nSem produto registrado, não há bula brasileira de onde extrair posologia. A dose de referência existe na rotulagem estrangeira, e **não foi transcrita aqui de memória** — quem precisar dela deve buscá-la na fonte, ciente de que se aplica a um produto sem registro no Brasil.",
-      "fonte": "Ausência conferida contra a lista de preços da CMED. Confirmar no cadastro de medicamentos da ANVISA antes de tratar como definitivo."
+      "origem da informacao": "⚠️ **Rotulagem estrangeira — não há bula brasileira.** Este fármaco **não tem produto comercializado no Brasil** (ausência confirmada na lista de preços da CMED). A posologia abaixo vem de **da rotulagem do FDA (NORPACE e NORPACE CR, fosfato de disopiramida; versão de 19/03/2026 no DailyMed)** e **não foi aprovada pela ANVISA**. Serve para ler diretriz internacional e para o caso de acesso por importação; **não corresponde a nenhuma apresentação disponível em farmácia brasileira**.",
+      "dose usual do adulto": "**400 a 800 mg por dia em doses divididas.** Para a maioria dos adultos, **600 mg/dia**: **150 mg a cada 6 horas** na formulação de liberação imediata, ou **300 mg a cada 12 horas** na de liberação controlada.",
+      "abaixo de 50 kg": "**400 mg/dia** em doses divididas — 100 mg a cada 6 horas na liberação imediata, ou 200 mg a cada 12 horas na controlada.",
+      "cardiomiopatia ou possivel descompensacao": "**Não dar dose de ataque**, e limitar a dose inicial a **100 mg de liberação imediata a cada 6 a 8 horas**. Ajustes graduais, com vigilância de **hipotensão e insuficiência cardíaca**.",
+      "insuficiencia renal moderada ou hepatica": "Depuração de creatinina **acima de 40 mL/min**, ou insuficiência hepática: **400 mg/dia** em doses divididas.",
+      "insuficiencia renal grave": "Depuração de **40 mL/min ou menos**: **100 mg de liberação imediata**, com intervalo conforme a depuração — **40 a 30 → a cada 8 horas; 30 a 15 → a cada 12 horas; abaixo de 15 → a cada 24 horas** —, com ou sem dose de ataque inicial de 150 mg. **A formulação de liberação controlada não é recomendada na insuficiência renal grave.**",
+      "dose de ataque quando o controle rapido e essencial": "**300 mg de liberação imediata** (**200 mg** abaixo de 50 kg), seguidos da manutenção apropriada. O efeito terapêutico costuma aparecer **30 minutos a 3 horas** após a dose de ataque de 300 mg.",
+      "efeitos anticolinergicos": "Se aumentarem, **monitorar o nível plasmático** e ajustar. Reduzir a dose em **um terço** — de 600 para 400 mg/dia — **sem mudar o intervalo** é o ajuste indicado.",
+      "fonte": "Rotulagem do **FDA** para NORPACE e NORPACE CR (fosfato de disopiramida), seção *Dosage and Administration*, obtida no **DailyMed** (versão publicada em 19/03/2026), conferida na íntegra. **Rotulagem norte-americana, não brasileira.**"
     },
     "notes": {
       "Eficacia": "Em metanálise de terapias farmacológicas para cardiomiopatia hipertrófica obstrutiva, a disopiramida apresentou a maior redução de gradiente de via de saída em repouso entre os agentes estudados: diferença média de -43,5 mmHg (IC95% -51,6 a -35,3; n=482). Para gradientes provocados, a redução também foi substancial: diferença média de -38,0 mmHg (IC95% -64,7 a -11,3; n=7, análise de sensibilidade excluindo estudos agudos) - **fonte**: European Heart Journal — Cardiovascular Pharmacotherapy (Awad K et al., 2025)"
@@ -1112,7 +1118,7 @@
   },
   {
     "slug": "dronedarona",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Dronedarona",
     "drug_class": "Antiarrítmico classe III (análogo não iodado da amiodarona)",
     "mechanism": "Bloqueia múltiplos canais iônicos (potássio, sódio, cálcio) e tem atividade antiadrenérgica, de forma semelhante à amiodarona, mas sem o átomo de iodo — desenhada para reduzir toxicidade tireoidiana e pulmonar associada à amiodarona, ao custo de eficácia antiarrítmica um pouco menor",
@@ -1137,10 +1143,14 @@
       "Dronedarone · LiverTox (NCBI Bookshelf) · https://www.ncbi.nlm.nih.gov/books/NBK548208/"
     ],
     "dosing": {
-      "disponibilidade no brasil": "**Não é comercializada no Brasil**: o registro sanitário na ANVISA está cancelado/caduco. O fármaco aparece nas diretrizes europeias e norte-americanas como opção de manutenção de ritmo, mas não é prescritível aqui.",
-      "posologia": "VERIFICAÇÃO HUMANA NECESSÁRIA para a dose — e a razão de ela não estar preenchida é parte da informação: **a dronedarona não tem registro vigente no Brasil.**\n\nSem produto registrado, não há bula brasileira de onde extrair posologia. A dose de referência existe na rotulagem estrangeira, e **não foi transcrita aqui de memória** — quem precisar dela deve buscá-la na fonte, ciente de que se aplica a um produto sem registro no Brasil.",
-      "dose usada no ensaio pivotal": "No ATHENA, o esquema estudado foi de **400 mg duas vezes ao dia**, associado à terapia de base. Está registrado aqui como dado do ensaio, não como recomendação posológica.",
-      "fonte": "Situação de registro conferida em julho de 2026. A dose do ATHENA vem do próprio ensaio, não de bula."
+      "origem da informacao": "⚠️ **Rotulagem estrangeira — não há bula brasileira.** Este fármaco **não tem produto comercializado no Brasil** (ausência confirmada na lista de preços da CMED). A posologia abaixo vem de **da informação do produto aprovada pela EMA (MULTAQ, sanofi-aventis), em português** e **não foi aprovada pela ANVISA**. Serve para ler diretriz internacional e para o caso de acesso por importação; **não corresponde a nenhuma apresentação disponível em farmácia brasileira**.",
+      "dose": "**400 mg duas vezes ao dia** — um comprimido com a refeição da manhã e outro com a refeição da noite. Cada comprimido revestido contém 400 mg de dronedarona, na forma de cloridrato.",
+      "quem inicia": "O tratamento **deve ser iniciado e monitorizado apenas sob supervisão de um especialista**, mas **pode ser iniciado em regime de ambulatório**.",
+      "o que suspender antes": "**Antiarrítmicos de classe I ou III têm de ser interrompidos antes de iniciar a dronedarona** — a rotulagem nomeia flecainida, propafenona, quinidina, disopiramida, dofetilida, sotalol e amiodarona.",
+      "troca a partir da amiodarona": "A informação sobre o momento ideal da troca é **limitada**. Deve-se considerar que **a amiodarona pode manter ação por longo tempo após a descontinuação**, pela meia-vida longa. Se a troca for planejada, deve ser feita **sob supervisão de especialista**.",
+      "toranja": "**Não tomar suco de toranja** junto com a dronedarona.",
+      "dose esquecida": "Tomar a próxima dose no horário habitual, **sem duplicar**.",
+      "fonte": "MULTAQ (dronedarona) — Resumo das Características do Medicamento aprovado pela **EMA**, versão em português, seções de posologia e composição, conferidas na íntegra. **Rotulagem europeia, não brasileira.** A dose de 400 mg foi confirmada na seção de descrição da substância ativa do próprio documento, não presumida."
     }
   },
   {
@@ -1593,7 +1603,7 @@
   },
   {
     "slug": "flecainida",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Flecainida (acetato de flecainida)",
     "drug_class": "Antiarrítmico classe IC (classificação de Vaughan Williams)",
     "mechanism": "Inibição potente do canal de sódio Nav1.5, responsável pelo influxo rápido de sódio na fase 0 do potencial de ação — reduz a velocidade de condução cardíaca sem prolongar significativamente a repolarização - **fonte**: Cardiology Journal (revisão sobre flecainida)",
@@ -1607,9 +1617,16 @@
       "Contraindicada em pacientes com doença cardíaca estrutural, incluindo doença arterial coronariana — o estudo CAST demonstrou aumento de mortalidade e morte súbita cardíaca no grupo flecainida em pacientes pós-infarto do miocárdio com arritmia ventricular assintomática ou pouco sintomática, levando às restrições atuais de uso apesar de segurança demonstrada em populações selecionadas sem cardiopatia estrutural - **fonte**: Cardiology Journal (revisão sobre flecainida, referência ao estudo CAST)"
     ],
     "dosing": {
-      "disponibilidade no brasil": "**Sem produto comercializado no Brasil até onde foi possível apurar.** A flecainida está ausente da lista de preços da CMED, que cobre os medicamentos com preço regulado comercializados no país — ausência que é evidência forte, ainda que indireta, de que não há apresentação disponível. Isso importa na leitura de diretriz europeia, em que a flecainida aparece com papel definido.",
-      "posologia": "VERIFICAÇÃO HUMANA NECESSÁRIA para a dose — e a razão de ela não estar preenchida é parte da informação: **não foi localizada apresentação da flecainida registrada e comercializada no Brasil, e a ausência na CMED sustenta isso.**\n\nSem produto registrado, não há bula brasileira de onde extrair posologia. A dose de referência existe na rotulagem estrangeira, e **não foi transcrita aqui de memória** — quem precisar dela deve buscá-la na fonte, ciente de que se aplica a um produto sem registro no Brasil.",
-      "fonte": "Ausência conferida contra a lista de preços da CMED. Confirmar no cadastro de medicamentos da ANVISA antes de tratar como definitivo."
+      "origem da informacao": "⚠️ **Rotulagem estrangeira — não há bula brasileira.** Este fármaco **não tem produto comercializado no Brasil** (ausência confirmada na lista de preços da CMED). A posologia abaixo vem de **da rotulagem do FDA (acetato de flecainida, comprimidos USP; versão de 01/06/2026 no DailyMed)** e **não foi aprovada pela ANVISA**. Serve para ler diretriz internacional e para o caso de acesso por importação; **não corresponde a nenhuma apresentação disponível em farmácia brasileira**.",
+      "indicacao na rotulagem americana": "**Apenas em pacientes sem cardiopatia estrutural**, para prevenção de taquicardias supraventriculares paroxísticas (incluindo reentrada nodal e reentrada atrioventricular) e de fibrilação/flutter atrial paroxísticos.",
+      "tsv paroxistica e fa paroxistica": "Início de **50 mg a cada 12 horas**, com aumentos de **50 mg duas vezes ao dia a cada 4 dias** até a eficácia. **Máximo de 300 mg/dia.** Na FA paroxística, subir de 50 para 100 mg duas vezes ao dia dá **ganho substancial de eficácia sem aumento substancial de descontinuações por efeito adverso**.",
+      "tv sustentada": "Início de **100 mg a cada 12 horas**, com aumentos de 50 mg duas vezes ao dia a cada 4 dias. A maioria **não precisa de mais que 150 mg a cada 12 horas (300 mg/dia)**; o **máximo é 400 mg/dia**.",
+      "sem dose de ataque": "**Dose de ataque não é recomendada.** Na TV sustentada, doses iniciais mais altas e ajustes mais rápidos aumentaram a incidência de proarritmia e de insuficiência cardíaca, sobretudo nos primeiros dias.",
+      "por que os aumentos sao de 4 em 4 dias": "A meia-vida é de **12 a 27 horas**, e o estado de equilíbrio pode não ser atingido antes de **3 a 5 dias** na mesma dose. Por isso a rotulagem determina **não aumentar mais de uma vez a cada quatro dias** — nos primeiros 2 a 3 dias o efeito da dose ainda não apareceu por inteiro.",
+      "onde iniciar": "Na **TV sustentada**, iniciar **em ambiente hospitalar com monitorização de ritmo**, qualquer que seja a condição cardíaca.",
+      "intervalo alternativo": "Paciente não controlado ou intolerante ao intervalo de 12 horas pode, ocasionalmente, ser tratado **a cada 8 horas**.",
+      "criancas": "Qualquer uso em crianças deve ser **diretamente supervisionado por cardiologista** com experiência em arritmias pediátricas.",
+      "fonte": "Rotulagem do **FDA** para acetato de flecainida comprimidos USP, seção *Dosage and Administration*, obtida no **DailyMed** (versão publicada em 01/06/2026), conferida na íntegra. **Rotulagem norte-americana, não brasileira.**"
     },
     "notes": {
       "Outras contraindicacoes": "Doença hepática ou renal significativa - **fonte**: Cardiology Journal (revisão sobre flecainida)"
