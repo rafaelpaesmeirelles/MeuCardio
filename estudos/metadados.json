@@ -980,5 +980,56 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "sadhart-sertralina-na-depressao-apos-sindrome-coronariana-aguda",
+    "title": "SADHART — Sertralina no tratamento da depressão maior após infarto ou angina instável",
+    "study_type": "ensaio_clinico",
+    "authors": "Glassman AH, O'Connor CM, Califf RM, et al.",
+    "journal": "JAMA",
+    "year": 2002,
+    "doi": "10.1001/jama.288.6.701",
+    "pmid": "12169073",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/12169073/",
+    "summary": "Ensaio randomizado, duplo-cego e controlado por placebo com 369 pacientes com depressão maior após infarto agudo do miocárdio ou angina instável — 186 para sertralina, 183 para placebo. Idade média de 57,1 anos, 64% homens, HAM-D inicial de 19,6. Sertralina de 50 a 200 mg por dia, por 24 semanas. O desfecho primário era de **segurança cardiovascular**, não de eficácia: a pergunta que o ensaio nasceu para responder era se o antidepressivo era seguro nesse paciente.",
+    "key_findings": "Segurança confirmada: a sertralina não teve efeito significativo sobre a fração de ejeção — 54% no início e 54% na semana 16 no braço ativo, contra 52% e 53% no placebo. Eventos adversos cardiovasculares graves: 14,5% com sertralina contra 22,4% com placebo. Eficácia antidepressiva pela impressão clínica global de melhora: 67% contra 53% (p = 0,01), com efeito maior nos subgrupos de depressão recorrente (72% contra 51%; p = 0,003) e depressão grave (78% contra 45%; p = 0,001).",
+    "clinical_implications": "É o ensaio que tornou aceitável tratar depressão maior com ISRS logo após uma síndrome coronariana aguda, quebrando o receio herdado dos tricíclicos, que são arritmogênicos. Leia-se junto do MOOD-HF: aqui o alvo era segurança e eficácia antidepressiva, e ambas apareceram; lá o alvo era desfecho cardiovascular na insuficiência cardíaca, e não apareceu. Tratar a depressão do cardiopata é justificável pelo benefício psiquiátrico — não pela promessa de reduzir evento cardiovascular.",
+    "limitations": "Não foi desenhado nem dimensionado para desfecho cardiovascular duro: a diferença de eventos graves (14,5% contra 22,4%) é exploratória e não deve ser lida como benefício comprovado. O ganho antidepressivo concentrou-se em depressão recorrente e grave; no conjunto da amostra, a diferença foi mais modesta. Vinte e quatro semanas de seguimento.",
+    "theme": "Saúde mental e cardiologia",
+    "tags": [
+      "depressão",
+      "síndrome coronariana aguda",
+      "sertralina",
+      "ISRS",
+      "SADHART"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "prada-candesartana-e-metoprolol-na-prevencao-da-cardiotoxicidade-por-antraciclina",
+    "title": "PRADA — Candesartana e metoprolol na prevenção de disfunção cardíaca durante quimioterapia adjuvante do câncer de mama",
+    "study_type": "ensaio_clinico",
+    "authors": "Gulati G, Heck SL, Ree AH, et al.",
+    "journal": "European Heart Journal",
+    "year": 2016,
+    "doi": "10.1093/eurheartj/ehw022",
+    "pmid": "26903532",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/26903532/",
+    "summary": "Ensaio fatorial 2 × 2, randomizado, duplo-cego e controlado por placebo, com 130 mulheres com câncer de mama inicial em quimioterapia adjuvante contendo antraciclina, com ou sem trastuzumabe e radioterapia. Os braços receberam candesartana cilexetila, succinato de metoprolol, ambos ou placebo, em paralelo ao tratamento oncológico. O desfecho primário foi a variação da fração de ejeção medida por **ressonância magnética cardíaca** — método menos sujeito a variabilidade que o ecocardiograma.",
+    "key_findings": "Queda da fração de ejeção na análise por intenção de tratar: 2,6 pontos percentuais (IC 95% 1,5–3,8) no grupo placebo contra 0,8 ponto (IC 95% −0,4 a 1,9) no grupo candesartana — p = 0,026 para a diferença entre grupos. **O metoprolol não mostrou efeito protetor**; o benefício foi do bloqueio do receptor de angiotensina.",
+    "clinical_implications": "Sustenta o bloqueio do receptor de angiotensina como cardioproteção durante antraciclina, e mostra que 'cardioproteção' não é propriedade de classe: no mesmo ensaio, com o mesmo desenho, o betabloqueador não replicou o efeito. Compõe com o STOP-CA, que demonstrou proteção com atorvastatina em linfoma — as duas estratégias atuam por vias diferentes e foram testadas em populações oncológicas distintas.",
+    "limitations": "Amostra pequena (130 mulheres) e desfecho de variação de fração de ejeção, não de insuficiência cardíaca clínica nem de mortalidade — e a queda no braço placebo foi de apenas 2,6 pontos, ou seja, o efeito absoluto protegido é pequeno em termos numéricos. População restrita a câncer de mama inicial em mulheres. O seguimento estendido, publicado depois, atenuou parte da diferença observada na fase inicial.",
+    "theme": "Cardio-oncologia",
+    "tags": [
+      "cardio-oncologia",
+      "antraciclina",
+      "candesartana",
+      "metoprolol",
+      "cardioproteção",
+      "PRADA"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
