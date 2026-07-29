@@ -824,5 +824,26 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "derrame-pericardico-volumoso-com-tamponamento",
+    "title": "Ecocardiograma — Derrame pericárdico volumoso com tamponamento",
+    "modality": "Ecocardiograma",
+    "theme": "Pericárdio",
+    "file_path": "ecocardiograma/derrame-pericardico-volumoso-com-tamponamento.jpg",
+    "findings": "Quadro estático extraído de um loop de cinema (cine loop) em plano apical, mostrando espaço anecoico volumoso circundando o coração — derrame pericárdico de grande monta. O quadro isolado mostra o derrame com clareza; o colapso diastólico de câmara direita, que caracteriza fisiologia de tamponamento, só é visível no vídeo dinâmico original, não neste quadro único.",
+    "teaching_points": "Derrame pericárdico volumoso não é sinônimo de tamponamento — o diagnóstico de tamponamento é hemodinâmico e ecocardiográfico dinâmico, não dependente só do volume de líquido: derrame de instalação rápida tamponará com volume bem menor que um derrame crônico de instalação lenta, porque o pericárdio não teve tempo de se distender. Os sinais ecocardiográficos clássicos de tamponamento — colapso diastólico de ventrículo direito, colapso de átrio direito no fim da diástole/início da sístole, variação respiratória exagerada do fluxo mitral/tricúspide e veia cava inferior pletórica sem colapso inspiratório — exigem avaliação em tempo real, não uma imagem estática isolada.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Pericardial_effusion_with_tamponade.gif",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Jer5150, via Wikimedia Commons — CC BY-SA 3.0. Quadro estático extraído do GIF animado original pela sessão da Biblioteca (frame 15 de 30).",
+    "tags": [
+      "derrame pericárdico",
+      "tamponamento cardíaco",
+      "ecocardiograma",
+      "pericárdio"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
