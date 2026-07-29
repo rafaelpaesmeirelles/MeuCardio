@@ -75,7 +75,11 @@ def _contexto(texto: str, i: int, largura: int = 90) -> str:
 # justamente o registro que este projeto pede que se preserve.
 NARRATIVA = ("trocado", "trocados", "removido", "removida", "substituíd",
              "substituid", "apoiava-se", "se apoiava", "constava", "vinha do",
-             "vinha da", "não deve ser", "deixou de", "saiu", "corrigido")
+             "vinha da", "não deve ser", "deixou de", "saiu", "corrigido",
+             # acrescentados depois de a primeira rodada classificar como viva
+             # uma nota que dizia "o campo trazia … citando Drugs.com"
+             "trazia", "perdeu a fonte", "divergência de fonte",
+             "correção de", "monografia comercial", "guia comercial")
 
 
 def _e_citacao_viva(texto: str, i: int) -> bool:

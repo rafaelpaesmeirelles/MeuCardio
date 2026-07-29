@@ -4,7 +4,7 @@ slug: milrinona
 theme: "Farmacologia"
 kind: farmacologia
 review_status: revisado
-source_refs: ["Milrinone · StatPearls (NCBI Bookshelf) · https://www.ncbi.nlm.nih.gov/books/NBK532943/", "Milrinone Dosage Guide + Max Dose, Adjustments · Drugs.com · https://www.drugs.com/dosage/milrinone.html", "Dose regimen adjustment for milrinone in congestive heart failure patients with moderate and severe renal failure · PubMed · https://pubmed.ncbi.nlm.nih.gov/8583366/"]
+source_refs: ["Bula do profissional do PRIMACOR IV (lactato de milrinona, Sanofi), seção POSOLOGIA · conferida em 29/07/2026", "Milrinone · StatPearls (NCBI Bookshelf) · https://www.ncbi.nlm.nih.gov/books/NBK532943/", "Dose regimen adjustment for milrinone in congestive heart failure patients with moderate and severe renal failure · PubMed · https://pubmed.ncbi.nlm.nih.gov/8583366/"]
 ---
 
 # Milrinona

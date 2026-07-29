@@ -4,7 +4,7 @@ slug: empagliflozina
 theme: "Farmacologia"
 kind: farmacologia
 review_status: revisado
-source_refs: ["Effect of Empagliflozin on Cardiovascular and Renal Outcomes in Patients With Heart Failure by Baseline Diabetes Status: Results From the EMPEROR-Reduced Trial · PubMed · https://pubmed.ncbi.nlm.nih.gov/33175585/", "Empagliflozin, irrespective of blood pressure, improves outcomes in heart failure with preserved ejection fraction: the EMPEROR-Preserved trial · European Heart Journal · 2023 · https://academic.oup.com/eurheartj/article/44/5/396/6881121", "Empagliflozin Dosage Guide + Max Dose, Adjustments · Drugs.com · https://www.drugs.com/dosage/empagliflozin.html"]
+source_refs: ["JARDIANCE (empagliflozina, Boehringer Ingelheim) — Resumo das Características do Medicamento, EMA, em português, secção 4.2 · https://www.ema.europa.eu/pt/documents/product-information/jardiance-epar-product-information_pt.pdf · consultado em 29/07/2026", "Effect of Empagliflozin on Cardiovascular and Renal Outcomes in Patients With Heart Failure by Baseline Diabetes Status: Results From the EMPEROR-Reduced Trial · PubMed · https://pubmed.ncbi.nlm.nih.gov/33175585/", "Empagliflozin, irrespective of blood pressure, improves outcomes in heart failure with preserved ejection fraction: the EMPEROR-Preserved trial · European Heart Journal · 2023 · https://academic.oup.com/eurheartj/article/44/5/396/6881121"]
 ---
 
 # Empagliflozina
@@ -30,8 +30,19 @@ Insuficiência cardíaca com fração de ejeção reduzida ou preservada, com ou
 ## Dose e apresentacao
 10 mg, 1 vez ao dia, independentemente da presença de diabetes — mesma dose testada em ambos os ensaios EMPEROR
 
+## Dose por indicacao
+- **diabetes tipo 2**: iniciar com **10 mg uma vez ao dia**; em quem tolera 10 mg, tem **TFGe ≥ 60 mL/min/1,73 m²** e precisa de melhor controle glicêmico, pode subir para **25 mg/dia**, que é a dose máxima
+- **insuficiência cardíaca**: **10 mg uma vez ao dia**
+- **doença renal crônica**: **10 mg uma vez ao dia**
+- as duas indicações cardiológicas **não usam 25 mg**
+- **com sulfonilureia ou insulina**: considerar reduzir a dose delas, para diminuir o risco de hipoglicemia
+- **fonte**: Resumo das Características do Medicamento (RCM) da EMA do JARDIANCE (empagliflozina, Boehringer Ingelheim), em português, secção 4.2, conferido em 29/07/2026
+
 ## Contraindicacoes e ajuste renal
-- **contraindicada**: TFGe <30 mL/min/1,73m², doença renal terminal ou diálise
-- **nao recomendada**: TFGe persistentemente <45 mL/min/1,73m² para indicação de controle glicêmico (indicação de insuficiência cardíaca mantém benefício em TFGe mais baixa, conforme dados do EMPEROR-Preserved)
+- **com TFGe < 60 mL/min/1,73 m²**: a dose diária é **10 mg**
+- **não iniciar com TFGe < 20 mL/min/1,73 m²**, por experiência limitada
+- **eficácia glicêmica cai abaixo de TFGe 45** e provavelmente é ausente abaixo disso — o que **não retira o benefício cardiorrenal**, que é a razão de manter o fármaco
 - **precaucao**: cautela em hipotensão ou depleção de volume, pelo risco de contração do volume intravascular
-- **fonte**: Drugs.com (guia de dosagem)
+- **fonte**: RCM da EMA do JARDIANCE, secção 4.2, conferido em 29/07/2026
+
+> **Correção de 29/07/2026.** Constava aqui "**contraindicada**: TFGe <30 mL/min/1,73m², doença renal terminal ou diálise", citando um guia comercial de dosagem. Nem a bula brasileira registrada lista TFGe entre as contraindicações formais — ponto que o verbete estruturado da empagliflozina já havia corrigido —, nem o RCM europeu contraindica: ele **não recomenda iniciar** abaixo de TFGe 20, que é coisa diferente e num corte diferente. Era contradição entre esta página e o dado estruturado, esperando alguém comparar as duas.

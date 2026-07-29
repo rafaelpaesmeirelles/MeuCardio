@@ -4,7 +4,7 @@ slug: finerenona
 theme: "Farmacologia"
 kind: farmacologia
 review_status: revisado
-source_refs: ["Cardiovascular Events with Finerenone in Kidney Disease and Type 2 Diabetes · New England Journal of Medicine · https://www.nejm.org/doi/full/10.1056/NEJMoa2110956", "Finerenone: uses, dosing, warnings, adverse events, interactions · MedCentral · https://www.medcentral.com/drugs/monograph/181910-321044/finerenone-oral", "Finerenone Dosage Guide + Max Dose, Adjustments · Drugs.com · https://www.drugs.com/dosage/finerenone.html", "2023 ESC Guidelines for the management of cardiovascular disease in patients with diabetes · Eur Heart J · 2023;44(39):4043-4140"]
+source_refs: ["KERENDIA (finerenona, Bayer) — Resumo das Características do Medicamento, EMA, em português, secções 4.2, 4.5 e 5.1 · https://www.ema.europa.eu/pt/documents/product-information/kerendia-epar-product-information_pt.pdf · consultado em 29/07/2026", "Cardiovascular Events with Finerenone in Kidney Disease and Type 2 Diabetes · New England Journal of Medicine · https://www.nejm.org/doi/full/10.1056/NEJMoa2110956", "2023 ESC Guidelines for the management of cardiovascular disease in patients with diabetes · Eur Heart J · 2023;44(39):4043-4140"]
 ---
 
 # Finerenona
@@ -30,11 +30,13 @@ Diabetes tipo 2 com doença renal crônica (TFGe ≥25 mL/min/1,73m²), para red
 ## Dose e titulacao por TFGe
 - **TFGe 25 a <60 mL/min/1,73m²**: iniciar com 10 mg 1x/dia
 - **TFGe >=60 mL/min/1,73m²**: iniciar com 20 mg 1x/dia
-- **dose alvo**: 20 mg 1x/dia, titulada conforme potássio sérico e TFGe
-- **fonte**: MedCentral; Drugs.com
+- **TFGe < 25 mL/min/1,73m²**: **não recomendada**
+- **dose alvo e dose máxima**: ambas **20 mg 1x/dia**, tituladas conforme potássio sérico e TFGe
+- **fonte**: Resumo das Características do Medicamento (RCM) da EMA do KERENDIA (finerenona, Bayer), em português, secção 4.2, conferido em 29/07/2026 — substituiu um agregador e um guia comercial; os cortes de TFGe que já constavam **conferem** com o RCM
 
 ## Monitorizacao e contraindicacoes de potassio
 - **contraindicacao de inicio**: não iniciar se potássio sérico >5 mEq/L
 - **monitorizacao**: medir potássio sérico e TFGe 4 semanas após início e periodicamente durante o tratamento, ajustando dose conforme necessário
-- **limiar para titulacao para 20 mg em FIDELIO-DKD**: potássio ≤4,8 mmol/L
-- **fonte**: MedCentral; Drugs.com
+- **faixa intermediária que faltava aqui**: com potássio **> 4,8 a 5,0 mmol/L**, pode-se **considerar iniciar**, com monitoração adicional nas primeiras 4 semanas, conforme as características do paciente — não é nem liberação nem proibição
+- **limiar para iniciar sem ressalva**: potássio **≤ 4,8 mmol/L**
+- **fonte**: RCM da EMA do KERENDIA, secção 4.2, conferido em 29/07/2026 — o conteúdo que já estava aqui (não iniciar acima de 5, remedir em 4 semanas) **confere**; o que faltava era a procedência e a faixa intermediária
