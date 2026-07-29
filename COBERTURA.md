@@ -1,6 +1,6 @@
 # Cobertura da base científica — Corvia
 
-Estado em 28/07/2026. Todos os números são medidos diretamente sobre os arquivos do
+Estado em 29/07/2026. Todos os números são medidos diretamente sobre os arquivos do
 repositório — `theme:` do front matter em `content/`, e os `metadados.json` das outras
 quatro frentes. Nenhum número é estimado.
 
@@ -8,46 +8,54 @@ quatro frentes. Nenhum número é estimado.
 
 | Frente | Itens | Publicados | Situação |
 |---|---:|---:|---|
-| `content/` — biblioteca científica | 250 | 249 | 26 temas cobertos; 16 são fluxogramas |
+| `content/` — biblioteca científica | 241 | 235 | 27 temas cobertos; 29 são fluxogramas, 23 publicados |
 | `galeria/` — achados de imagem | 36 | 36 | ✅ verificada item a item |
 | `exames/` — marcadores e exames | 17 | 17 | ✅ verificada item a item |
-| `evidencias/` — recomendações pontuais | 20 | 19 | ✅ verificada item a item |
-| `estudos/` — ensaios e metanálises | 15 | 15 | ✅ verificada item a item |
-| **Medicamentos** (tabela `drugs`) | **0** | **0** | **zerada — sem fonte de dados** |
+| `evidencias/` — recomendações pontuais | 32 | 32 | 20 verificadas item a item; 12 novas em 29/07 |
+| `estudos/` — ensaios e metanálises | 18 | 18 | 15 verificados item a item; 3 novos em 29/07 |
+| **Medicamentos** (tabela `drugs`) | **100** | **88** | reconstruída de `content/Farmacologia`; em conferência contra bula brasileira |
 
-## `content/` — 250 documentos
+## `content/` — 241 documentos
 
 | Tema | Docs | Pend. revisão |
 |---|---:|---:|
-| Farmacologia | 100 | 78 |
-| Calculadoras | 10 | 10 |
-| Cardiomiopatias | 10 | 9 |
-| Doença coronariana | 9 | 8 |
-| Fibrilação atrial | 8 | 7 |
+| Farmacologia | 96 | 68 |
+| Cardiomiopatias | 11 | 8 |
+| Calculadoras | 8 | 3 |
 | Aorta e doença arterial periférica | 7 | 1 |
+| Dispositivos | 7 | 2 |
+| Doença coronariana | 7 | 5 |
 | Gravidez | 7 | 0 |
-| Terapia intensiva | 7 | 6 |
-| Dispositivos | 6 | 2 |
-| Endocardite | 6 | 3 |
-| Hipertensão | 6 | 4 |
-| Hipertensão pulmonar | 6 | 2 |
-| Insuficiência cardíaca | 6 | 4 |
+| Terapia intensiva | 7 | 4 |
+| Arritmias | 6 | 1 |
+| Cardio-oncologia | 6 | 1 |
+| Febre reumática | 6 | 1 |
+| Pericárdio | 6 | 2 |
+| Prevenção e lipídios | 6 | 4 |
 | Síncope | 6 | 2 |
-| Tromboembolismo | 6 | 5 |
-| Valvopatias | 6 | 5 |
-| Arritmias | 5 | 1 |
-| Cardio-oncologia | 5 | 1 |
+| Valvopatias | 6 | 4 |
+| Cardiopatias congênitas | 5 | 1 |
 | Diabetes e cardiologia | 5 | 0 |
-| Febre reumática | 5 | 1 |
-| Pericárdio | 5 | 2 |
-| Prevenção e lipídios | 5 | 4 |
-| Cardiopatias congênitas | 4 | 1 |
-| Perioperatório | 4 | 1 |
+| Endocardite | 5 | 2 |
+| Fibrilação atrial | 5 | 2 |
+| Hipertensão | 5 | 3 |
+| Hipertensão pulmonar | 5 | 1 |
+| Insuficiência cardíaca | 5 | 3 |
+| Perioperatório | 5 | 1 |
 | Saúde mental e cardiologia | 4 | 1 |
-| Geral | 2 | 2 |
+| Tromboembolismo | 3 | 2 |
+| Comunicação clínica | 1 | 0 |
+| Geral | 1 | 1 |
 
-**Total: 250 documentos, 160 pendentes de revisão** — 78 deles em Farmacologia, que
-concentra quase metade da fila.
+**Total: 241 documentos, 123 pendentes de revisão** — 68 deles em Farmacologia, que
+concentra mais da metade da fila.
+
+A queda de 250 para 241 não é perda de conteúdo: são as **11 fusões de pares
+complementares** descritas no fim deste arquivo, mais as duplicatas de metoprolol,
+varfarina e HAS-BLED, menos os 6 fluxogramas escritos em 29/07. Todo documento
+removido do disco foi **despublicado** no banco — conferido em 29/07/2026 comparando
+os 235 slugs publicados contra os 241 arquivos: **nenhum órfão publicado**. Os 22
+registros que sobram no banco sem arquivo estão todos fora do ar.
 
 "Pend. revisão" conta documentos com `review_status` diferente de `revisado`. Não
 significa que estejam errados: significa que ninguém confirmou a fonte. A Fase B mostrou
@@ -59,8 +67,8 @@ que essa distinção importa — ver abaixo.
 |---|---:|---|
 | `galeria/` | 36 | 23 |
 | `exames/` | 17 | 16 |
-| `evidencias/` | 20 | 17 |
-| `estudos/` | 15 | 14 |
+| `evidencias/` | 32 | 18 |
+| `estudos/` | 18 | 15 |
 
 As quatro cobrem os temas clínicos com pelo menos 1 item cada, exceto lacunas pontuais
 (ex.: `estudos/` não tem item de Cardio-oncologia nem de Cardiopatias congênitas). A
@@ -97,27 +105,34 @@ conteúdo. É preciso abrir e conferir se o artigo é o que o registro descreve.
 
 ## Lacunas conhecidas
 
-1. **Medicamentos é a única seção zerada.** Não é falta de importação: **não existe
-   fonte de dados**. O `popular_drugs.py` lê de `knowledge/medicamentos/*.md`, formato
-   do ZIP original que não está mais no repositório, e os 100 documentos de
-   `content/Farmacologia/` são prosa — o comparador precisa de campos estruturados
-   (`dosing` como dict, contraindicações como lista). Exige JSON escrito do zero.
+1. **Medicamentos saiu do zero, mas não está conferida.** A base foi reconstruída de
+   `content/Farmacologia` pelo `extrair_drugs_de_markdown.py` — **100 registros, 88
+   publicados** em 29/07/2026. O que falta é conferência contra bula brasileira, em
+   andamento, e resolver o `drug_class` com quase um valor distinto por fármaco, que
+   serve para ler e é inútil como filtro — e é por ele que a API filtra.
 2. **A busca não cobre as quatro frentes JSON.** `app/api/search.py` consulta só a
-   tabela `documents`. Os 88 itens de galeria, exames, evidências e estudos são
-   invisíveis para quem pesquisa.
-3. **Farmacologia concentra 78 dos 160 pendentes** de revisão. É o maior bloco de
-   conteúdo não verificado do sistema.
-4. **"Geral" (2 documentos) segue mal classificado** — são "Doença Cardiovascular e
-   Gestação (ESC 2025)" e "Doença Cardiovascular em Pacientes com Diabetes (ESC 2023)",
-   que deveriam estar em Gravidez e Diabetes e cardiologia. O de gestação usa uma
-   diretriz mais recente que a dos documentos atuais de Gravidez, então reclassificar
-   exige conciliar conteúdo, não só mover arquivo.
-5. **Colchicina na pericardite aguda** (`evidencias`) é o único item fora do ar,
-   aguardando conferência de classe e nível na tabela da ESC 2015 — ver `CLAUDE.md`.
-6. **Fluxogramas:** 16 publicados. Ainda sem fluxograma: regurgitação mitral,
-   miocardite, amiloidose cardíaca, bradiarritmia e marcapasso, taquicardia de QRS
-   largo e TV, síndrome coronariana crônica, pericardite, cardiopatia congênita do
-   adulto, cardio-oncologia, avaliação perioperatória, febre reumática, dislipidemia.
+   tabela `documents`. Os 103 itens de galeria, exames, evidências e estudos são
+   invisíveis para quem pesquisa. A lacuna cresceu junto com o conteúdo.
+3. **Farmacologia concentra 68 dos 123 pendentes** de revisão. Segue sendo o maior bloco
+   de conteúdo não verificado do sistema. O método que funciona: bula do detentor do
+   registro no Brasil, baixada com `curl` e User-Agent de browser — o `WebFetch` toma
+   403 na maioria dos sites de laboratório.
+4. **"Geral" (1 documento) segue mal classificado.** Era 2; o de diabetes foi movido na
+   fusão de pares. Resta o de gestação, que usa diretriz mais recente que a dos
+   documentos atuais de Gravidez — reclassificar exige conciliar conteúdo, não só mover
+   arquivo.
+5. **Marcações de verificação: 47, em 38 arquivos de `content/`.** Cada uma é uma
+   pergunta específica e respondível, não incerteza genérica. Zero nas quatro frentes
+   JSON.
+6. **Fluxogramas: 29 escritos, 23 publicados.** Os 6 temas que faltavam foram cobertos
+   em 29/07/2026 — dislipidemia, amiloidose cardíaca, avaliação perioperatória,
+   cardio-oncologia, febre reumática e cardiopatia congênita do adulto. **Os 6 que
+   seguem fora do ar** são os escritos na sessão anterior e ainda sem aval do Rafael:
+   síndrome coronariana crônica, regurgitação mitral, bradiarritmia e marcapasso,
+   taquicardia de QRS largo, pericardite aguda e miocardite aguda.
+7. **Profundidade, não amplitude, é o gargalo das frentes JSON.** `estudos` cobre 15
+   temas dos 27 de `content/`; `evidencias`, 18. Cardiopatias congênitas, febre
+   reumática e comunicação clínica não têm estudo nenhum.
 
 ## Como carregar e publicar conteúdo
 
@@ -158,7 +173,11 @@ dois temas). Documentos que existem em um único tema mas foram classificados er
 sem duplicado para revelar o erro — podem não ter sido pegos. O caso do
 `Febre_reumática` com underscore, encontrado agora, é exemplo disso.
 
-## Duplicatas de tema: 11 pares complementares (achado de 28/07/2026)
+## Duplicatas de tema: 11 pares complementares — RESOLVIDO em 29/07/2026
+
+Os 11 pares abaixo **foram fundidos**, e os documentos absorvidos foram removidos do
+disco e despublicados no banco. A tabela fica como registro do que foi feito e do
+critério usado — é a mesma varredura que vale repetir quando a base crescer.
 
 Varredura por sobreposição de assunto entre todos os documentos, filtrada por
 `kind` para não confundir fluxograma com protocolo do mesmo tema — esse par é
