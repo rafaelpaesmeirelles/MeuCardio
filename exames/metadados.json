@@ -750,5 +750,29 @@
       "spo2",
       "canal arterial"
     ]
+  },
+  {
+    "slug": "ferritina-e-saturacao-de-transferrina-no-rastreio-de-deficiencia-de-ferro-na-ic",
+    "name": "Ferritina sérica e saturação de transferrina no rastreio de deficiência de ferro na insuficiência cardíaca",
+    "category": "laboratorial",
+    "theme": "Insuficiência cardíaca",
+    "what_it_measures": "Ferritina sérica (reserva de ferro) e saturação de transferrina — TSAT (ferro sérico dividido pela capacidade total de ligação de ferro) —, dosadas em conjunto porque nenhuma das duas isoladamente define deficiência de ferro na insuficiência cardíaca: a ferritina é reagente de fase aguda e pode estar normal ou alta mesmo com estoque de ferro insuficiente, um padrão comum na própria IC e em outras condições inflamatórias.",
+    "reference_range": "Deficiência de ferro definida por ferritina <100 ng/mL (deficiência absoluta), OU ferritina entre 100 e 299 ng/mL associada a TSAT <20% (deficiência funcional). Fora dessas duas combinações, não se considera deficiência de ferro para fins de indicação de reposição intravenosa.",
+    "indications": "Pela atualização focada ESC 2023 de insuficiência cardíaca: reposição de ferro intravenoso é recomendada (Classe I, Nível A) em paciente sintomático com IC de fração de ejeção reduzida (ICFEr) ou levemente reduzida (ICFEmr) e deficiência de ferro, para aliviar sintomas e melhorar qualidade de vida. Reposição com carboximaltose férrica ou derisomaltose férrica deve ser considerada (Classe IIa, Nível A) no mesmo perfil de paciente para reduzir o risco de hospitalização por IC.",
+    "interpretation": "O resultado só orienta conduta quando os dois exames são lidos em conjunto pela definição acima — ferritina isolada, mesmo baixa-normal, não basta, e TSAT isolada também não. Uma vez confirmada a deficiência de ferro no paciente sintomático com ICFEr/ICFEmr, a via intravenosa é a recomendada nos estudos que sustentam a evidência — a suplementação oral de ferro não tem o mesmo respaldo nessa população.",
+    "limitations": "A própria diretriz reconhece que o desfecho de redução de hospitalização tem consistência menor entre os estudos do que o desfecho de sintoma/qualidade de vida — por isso as duas recomendações têm classes diferentes (I vs. IIa) apesar de ambas terem nível de evidência A. O rastreio deve ser feito rotineiramente em todo paciente com IC, independente de haver anemia associada — deficiência de ferro e anemia são condições distintas, que podem coexistir ou ocorrer isoladamente.",
+    "source_refs": [
+      "2023 Focused Update of the 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2023;44(37):3627-3639. DOI: 10.1093/eurheartj/ehad195 — recomendações sobre reposição de ferro intravenoso em IC sintomática com deficiência de ferro."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ferritina",
+      "saturação de transferrina",
+      "tsat",
+      "deficiência de ferro",
+      "insuficiência cardíaca",
+      "carboximaltose férrica"
+    ]
   }
 ]
