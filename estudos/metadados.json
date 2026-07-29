@@ -1082,5 +1082,31 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "ambition-ambrisentana-tadalafila-hipertensao-arterial-pulmonar",
+    "title": "AMBITION — Terapia combinada inicial com ambrisentana e tadalafila na hipertensão arterial pulmonar",
+    "study_type": "ensaio_clinico",
+    "authors": "Galiè N et al.",
+    "journal": "New England Journal of Medicine",
+    "year": 2015,
+    "doi": "10.1056/NEJMoa1413687",
+    "pmid": "26308684",
+    "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1413687",
+    "summary": "Ensaio de fase 3b/4, randomizado, duplo-cego, com 500 pacientes com hipertensão arterial pulmonar (HAP) em classe funcional OMS/NYHA II-III, virgens de tratamento específico. Randomização 2:1:1 para terapia combinada inicial (ambrisentana + tadalafila, n=253), monoterapia com ambrisentana (n=126) ou monoterapia com tadalafila (n=121). Desfecho primário: falha clínica (composto de morte, hospitalização por piora da HAP, progressão de doença ou resposta clínica de longo prazo insatisfatória).",
+    "key_findings": "Falha clínica ocorreu em 18% do grupo de terapia combinada contra 31% da monoterapia agrupada (34% com ambrisentana isolada, 28% com tadalafila isolada) — razão de risco de 0,50 (IC95% 0,35-0,72; p<0,001) da combinação contra a monoterapia agrupada. Distância no teste de caminhada de 6 minutos na semana 24: aumento mediano de 48,98 m na combinação contra 23,80 m na monoterapia agrupada (p<0,001). Redução média geométrica de NT-proBNP na semana 24: -67,2% na combinação contra -50,4% na monoterapia (p<0,001). Edema periférico foi mais frequente na combinação (45%) que em ambrisentana isolada (33%) ou tadalafila isolada (28%).",
+    "clinical_implications": "Primeiro grande ensaio a mostrar que iniciar a HAP já com dois fármacos de classes diferentes (antagonista do receptor de endotelina + inibidor da fosfodiesterase-5), em vez de monoterapia sequencial, reduz falha clínica pela metade — resultado que mudou a prática e sustenta a recomendação de terapia combinada inicial nas diretrizes ESC/ERS de hipertensão pulmonar em paciente de baixo a intermediário risco.",
+    "limitations": "Excluiu pacientes de alto risco/classe funcional IV, que podem precisar de terapia tripla ou parenteral desde o início — os achados não se estendem automaticamente a esse subgrupo mais grave. Edema periférico mais frequente na combinação é um efeito colateral relevante a monitorar, especialmente em paciente com disfunção de ventrículo direito.",
+    "theme": "Hipertensão pulmonar",
+    "tags": [
+      "ambition",
+      "ambrisentana",
+      "tadalafila",
+      "hipertensão arterial pulmonar",
+      "terapia combinada",
+      "ensaio clínico"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
