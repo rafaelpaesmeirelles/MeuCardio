@@ -31,8 +31,12 @@ Confira `ls .git/index.lock` antes de commitar.
 
 ## Estado atual (29/07/2026, fim da 2ª sessão)
 - **88 fármacos** em `medicamentos/metadados.json`.
-  `pregnancy` em **59/88**, `lactation` em **44/88**, **41 interações**.
+  `pregnancy` em **69/88**, `lactation` em **54/88**, **46 interações**.
   (Números da 1ª sessão, para comparar: 42 e 30, com 32 interações.)
+
+**Sem `pregnancy` (19):** bivalirudina, cangrelor, disopiramida, dobutamina, epinefrina-adrenalina, eplerenona, felodipino, flecainida, heparina-nao-fracionada, levosimendana, milrinona, mononitrato-de-isossorbida, nitroglicerina-trinitrato-de-glicerila, nitroprussiato-de-sodio, perindopril-argininaerbumina, protamina, ranolazina, sildenafila-citrato, vasopressina
+
+**Sem `lactation` (34):** adenosina, amiodarona-cloridrato, atenolol, benazepril-cloridrato, bivalirudina, cangrelor, carvedilol, clonidina, disopiramida, dobutamina, enalapril-maleato, epinefrina-adrenalina, eplerenona, felodipino, finerenona, flecainida, heparina-nao-fracionada, hidralazina, hidroclorotiazida, indapamida, ivabradina-cloridrato, levosimendana, milrinona, mononitrato-de-isossorbida, nitroglicerina-trinitrato-de-glicerila, nitroprussiato-de-sodio, noradrenalina-norepinefrina, perindopril-argininaerbumina, prasugrel, protamina, ramipril, sildenafila-citrato, tenecteplase, vasopressina
 - **Login da API é form OAuth2, não JSON** — custou uma tentativa. Use
   `curl -X POST .../api/auth/login --data-urlencode "username=$EMAIL"
   --data-urlencode "password=$PASS"`. Mandar `{"email":...}` devolve 422.
@@ -86,7 +90,33 @@ Confira `ls .git/index.lock` antes de commitar.
 5. Nunca invente dose, corte, DOI, PMID ou licença de imagem.
 
 ## Método que funciona para obter bula
-Buscar **pelo nome comercial**, em dois espelhos:
+
+### Primeiro: a EMA publica em PORTUGUÊS — comece por aqui nos fármacos modernos
+Descoberto em 29/07/2026, e é o maior ganho de rendimento da sessão. Padrão:
+
+```
+https://www.ema.europa.eu/pt/documents/product-information/<nome>-epar-product-information_pt.pdf
+```
+
+Baixa com `curl -sL -A "<UA de browser>"`, abre com `pdftotext -layout` e **não
+precisa do decodificador de CID**. A secção **4.6 é sempre "Fertilidade,
+gravidez e aleitamento"**, e a **4.3 é "Contraindicações"** — as duas rendem
+campo e interação de uma vez. Extraia com
+`awk '/4\.6[ \t]+Fertilidade/{f=1} f{print} /^4\.7/{if(f)exit}'`.
+
+**Funcionaram:** `verquvo`, `camzyos`, `leqvio`, `nilemdo`, `nustendi`,
+`vyndaqel`, `lixiana`, `ozempic`, `tracleer`, `praxbind`, `multaq`, `entresto`,
+`forxiga`, `jardiance`. **Não existem lá:** `inspra` (eplerenona).
+
+Isto resolve exatamente a lista que as duas sessões anteriores tinham dado por
+perdida — Forxiga, Jardiance e Entresto estavam marcados como "não saíram em
+espelho nenhum" e estão na EMA.
+
+**Ressalva que precisa continuar aparecendo no campo:** é rotulagem europeia,
+não bula da ANVISA. Escreva a origem dentro do próprio texto do campo, como
+está feito nos dez que entraram, para o revisor saber o que está lendo.
+
+### Depois: os espelhos brasileiros, pelo nome comercial
 - `https://www.saudedireta.com.br/catinc/drugs/bulas/<marca>.pdf`
 - `https://img.drogasil.com.br/raiadrogasil_bula/<Marca>.pdf`
 
@@ -130,9 +160,14 @@ cobre**. Fluxograma tem formato obrigatório de árvore de decisão: ver
    que a bula profissional Rev0515, citada no próprio arquivo, não faz
    (categoria B, "não recomendada"). Conferido no ar em 29/07/2026 pela
    `/api/library/documents/apixabana`.
-1. **Gestação e lactação** nos fármacos que ainda não têm — 29 sem `pregnancy`
-   e 44 sem `lactation`. A lista de quem não tem espelho de bula está na
-   seção "Estado atual" acima; comece pelos que ainda não foram tentados.
+1. **Gestação e lactação** nos fármacos que ainda não têm — as duas listas
+   exatas estão na seção "Estado atual" acima. **Comece pela EMA**, e só depois
+   pelos espelhos brasileiros: foi assim que 10 fármacos dados como perdidos
+   entraram numa tarde. Os que sobraram são, na maioria, **fármacos de uso
+   hospitalar antigos** (dobutamina, milrinona, vasopressina, protamina,
+   heparina não fracionada, nitroglicerina) — esses não têm EPAR na EMA, porque
+   são anteriores ao procedimento centralizado; o caminho para eles é bula de
+   genérico brasileiro ou DailyMed.
 2. **Base de interações** — cresce de graça: cada bula lida rende par com
    gravidade e fonte. Há 33 candidatos já sinalizados pelo texto do acervo.
 3. **Conteúdo novo nos seus 13 temas.** Os que precisam de diretriz nova
