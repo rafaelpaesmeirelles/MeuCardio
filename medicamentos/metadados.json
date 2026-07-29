@@ -2423,7 +2423,7 @@
   },
   {
     "slug": "nitroprussiato-de-sodio",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Nitroprussiato de sódio",
     "drug_class": "Vasodilatador de ação direta (doador de óxido nítrico), arterial e venoso",
     "mechanism": "Libera óxido nítrico que ativa guanilato ciclase no músculo liso vascular, aumentando GMPc e promovendo vasodilatação arterial e venosa balanceada — reduz pré-carga e pós-carga simultaneamente",
@@ -2434,9 +2434,18 @@
       "- **limitacao dos exames**: equilíbrio acidobásico e concentração venosa de oxigênio devem ser monitorizados, mas fornecem orientação imperfeita para toxicidade por cianeto - **tratamento/prevencao**: infusão de tiossulfato (150-200 mg/kg em 15 minutos) pode prevenir ou tratar toxicidade por cianeto - **controversia**: uso profilático de tiossulfato permanece controverso, pois pode causar acúmulo de tiocianato, particularmente em pacientes com função renal reduzida - **fonte**: Drugs.com (monografia)"
     ],
     "dosing": {
-      "faixa usual": "0,5-10 mcg/kg/min, em infusão contínua intravenosa, titulada conforme resposta pressórica",
-      "limite de tempo na dose maxima": "infusão na dose máxima nunca deve durar mais de 10 minutos; se a pressão não for controlada adequadamente após 10 minutos na dose máxima, a administração deve ser interrompida imediatamente",
-      "fonte": "Drugs.com (monografia)\n\nVERIFICAÇÃO HUMANA NECESSÁRIA quanto à **procedência**: a posologia acima se apoia em Drugs.com — agregador ou portal de conteúdo, não documento primário. Isso **não afirma que os números estejam errados**; afirma que não são rastreáveis à bula registrada nem a diretriz, que é o critério deste acervo. Substituir a fonte e reconferir os valores antes de publicar."
+      "faixa padrao ate 3 horas": "Para infusão de até 3 horas: **dose inicial 0,3 a 1 mcg/kg/min**, **dose média 3 mcg/kg/min**, **dose máxima 8 mcg/kg/min em adultos e 10 mcg/kg/min em crianças**.",
+      "atencao ao teto brasileiro": "**O teto de adulto na bula brasileira é 8 mcg/kg/min, não 10.** O valor de 10 mcg/kg/min que constava aqui — e a regra de \"nunca mais de 10 minutos na dose máxima\" — vêm da rotulagem norte-americana, não da bula registrada no Brasil. Mesma situação já encontrada na furosemida: teto estrangeiro apresentado como se fosse limite regulatório daqui.",
+      "efeito esperado na dose media": "A 3 mcg/kg/min costuma-se reduzir a pressão a **60 a 70% do nível pré-tratamento** e mantê-la nessa faixa.",
+      "infusao prolongada": "Em terapêutica de longa duração (dias a semanas), **não ultrapassar a velocidade média de 2,5 mcg/kg/min**, equivalente a 3,6 mg/kg/dia.",
+      "anestesia ou anti-hipertensivo concomitante": "Sob anestesia ou com anti-hipertensivo concomitante, **menos de 1 mg/kg administrado ao longo de 3 horas** costuma bastar para a hipotensão desejada.",
+      "espasmo por ergotamina": "Doses no limite inferior da faixa — **0,3 a 2,5 mcg/kg/min** —, com infusão em geral de **10 a 30 horas**.",
+      "como suspender": "**Nunca interromper subitamente.** Retirar ao longo de **10 a 30 minutos** para evitar o efeito rebote de elevação excessiva da pressão. Ao interromper, a pressão volta imediatamente aos valores prévios.",
+      "titulacao": "Aumentar a dose lentamente até o efeito desejado. Administrar com **microrregulador de gotas ou bomba de infusão**, ajustando por medidas frequentes da pressão arterial.",
+      "diluicao e equivalencia": "50 mg diluídos em glicose 5% (1 mL = 17 gotas = 50 microgotas): em **1000 mL**, 1 mL = 50 mcg e 1 gota ≈ 3 mcg; em **500 mL**, 1 mL = 100 mcg e 1 gota ≈ 6 mcg; em **250 mL**, 1 mL = 200 mcg e 1 gota ≈ 12 mcg.",
+      "monitorizacao do cianeto": "Em infusão lenta, controlar cianeto: limites de tolerância de **100 mcg/100 mL no sangue** e **8 mcg/100 mL no plasma**. Acima de 3 dias de infusão, controlar também **tiocianato no soro, que não deve exceder 6 mg/100 mL** — níveis muito altos são reduzidos rapidamente por hemodiálise.",
+      "idosos": "Quanto maior a idade, **menor a dose necessária** para a mesma redução pressórica; idosos podem ser mais sensíveis ao efeito hipotensor.",
+      "fonte": "Bula do Nitroprus (nitroprusseto de sódio, Cristália), seção de posologia, conferida na íntegra. **A marcação de procedência está resolvida**: a posologia vinha do Drugs.com e agora vem da bula registrada — com divergência relevante no teto de adulto (8 e não 10 mcg/kg/min)."
     },
     "notes": {
       "Risco de toxicidade por cianeto": "- **limiar de risco**: taxas de infusão acima de 2 mcg/kg/min podem gerar níveis clinicamente importantes de cianeto, podendo atingir concentrações tóxicas ou potencialmente letais - **tempo ate exceder capacidade de tamponamento**: infusão na dose máxima de 10 mcg/kg/min excede a capacidade do paciente de tamponar cianeto em 10 minutos - **fonte**: Drugs.com (monografia)"
@@ -2661,21 +2670,15 @@
       "DPOC/broncoespasmo"
     ],
     "dosing": {
-      "vo manutencao inicial": "150 mg 2-3x/dia",
-      "vo manutencao maxima": "300 mg 3x/dia",
-      "vo dose minima alternativa": "450 mg/dia (½ comprimido 3x/dia)",
-      "vo dose media alternativa": "600 mg/dia (1 comprimido 2x/dia)",
-      "vo dose maxima absoluta": "900 mg/dia",
-      "pediatria": "10-20 mg/kg/dia, fracionadas em 3-4 doses",
-      "pill in the pocket ataque": "600 mg VO (ou 450mg se peso <70kg), dose única",
-      "pill in the pocket criterio sucesso": "Reversão ao ritmo sinusal em até 6h após administração",
-      "pill in the pocket pre requisito": "Estratégia extra-hospitalar só deve ser indicada após pelo menos 1 uso prévio supervisionado em pronto-socorro, comprovando segurança",
-      "ev dose": "1-2 mg/kg em 10 minutos, repetível após 90-120min se necessário; duração do efeito 2-4h",
-      "protecao flutter 1 1": "Administrar betabloqueador ou verapamil/diltiazem 30min antes da propafenona na emergência, para prevenir resposta ventricular elevada caso ocorra conversão para flutter 1:1 (incidência 3,5-5,0%)",
-      "ajuste renal": "Uso com cautela",
-      "ajuste hepatico": "Reduzir dose em 70-80%",
-      "acompanhamento": "Repetir ECG em 1-2 semanas após início/ajuste de dose crônica",
-      "fonte": "Afya Cardiologia — Como eu uso Propafenona ; Protocolo SES-SP\n\nVERIFICAÇÃO HUMANA NECESSÁRIA quanto à **procedência**: a posologia acima se apoia em Afya e protocolo estadual — agregador ou portal de conteúdo, não documento primário. Isso **não afirma que os números estejam errados**; afirma que não são rastreáveis à bula registrada nem a diretriz, que é o critério deste acervo. Substituir a fonte e reconferir os valores antes de publicar."
+      "vo faixa diaria": "**300 a 900 mg por dia.** Dose média de **600 mg divididos em 2 tomadas** (300 mg a cada 12 h); dose máxima recomendada de **900 mg divididos em 3 tomadas** (300 mg a cada 8 h). O limite máximo diário é de **3 comprimidos de 300 mg**.",
+      "abaixo de 70 kg": "Considerar **dose menor** em quem pesa menos de 70 kg, principalmente no início do tratamento.",
+      "titulacao": "O aumento da dose na fase inicial é **escalonado e só depois de 3 a 4 dias** de tratamento. A dose individual de manutenção é definida **sob supervisão cardiológica, com monitorização eletrocardiográfica e medidas repetidas da pressão arterial**.",
+      "idosos": "Qualquer aumento de dose **só após 5 a 8 dias**. A bula recomenda **iniciar o tratamento com o paciente hospitalizado**, sob controle médico, pelo risco aumentado de efeito pró-arrítmico.",
+      "quando reduzir": "Considerar redução de dose em quem apresentar **alargamento significativo do QRS** ou **bloqueio atrioventricular de segundo ou terceiro grau**.",
+      "modo de usar": "Deglutir **inteiro, com pouco líquido, sem mastigar** — o sabor é amargo e a substância tem efeito anestésico superficial na mucosa.",
+      "ev e pill in the pocket": "VERIFICAÇÃO HUMANA NECESSÁRIA — **a bula brasileira conferida não cobre nenhum dos dois**. Ela é da apresentação **oral de 300 mg** e trata de terapia contínua. Os esquemas que constavam aqui — propafenona endovenosa 1 a 2 mg/kg em 10 min, e a dose única de 600 mg (450 mg abaixo de 70 kg) da estratégia \"pill in the pocket\", com betabloqueador ou bloqueador de canal de cálcio antes para evitar flutter 1:1 — vêm de diretriz, não desta bula, e a fonte não foi confirmada nesta sessão. O pré-requisito de uso supervisionado prévio antes de liberar a estratégia domiciliar continua valendo e é o ponto mais importante deles.",
+      "pediatria": "VERIFICAÇÃO HUMANA NECESSÁRIA — a bula conferida **não traz posologia pediátrica**. O valor de 10 a 20 mg/kg/dia que constava aqui não tem fonte confirmada.",
+      "fonte": "Bula profissional brasileira do RITMONORM (cloridrato de propafenona, Abbott Laboratórios do Brasil Ltda., comprimido revestido de 300 mg), seção Posologia e Modo de Usar, conferida na íntegra. **A procedência está resolvida para a terapia oral no adulto**; seguem marcados o uso endovenoso, o \"pill in the pocket\" e a pediatria, que esta bula não cobre."
     },
     "notes": {
       "Restricao critica uso": "Não deve ser utilizada em pacientes com doença arterial coronariana, hipertrofia ventricular esquerda, disfunção ventricular, DPOC ou IC — restrita a coração estruturalmente normal",
