@@ -15,6 +15,7 @@ import Cursos from "./pages/Cursos";
 import Curso from "./pages/Curso";
 import Biblioteca from "./pages/Biblioteca";
 import Fluxogramas from "./pages/Fluxogramas";
+import Diretrizes from "./pages/Diretrizes";
 import Galeria from "./pages/Galeria";
 import ImagemGaleria from "./pages/ImagemGaleria";
 import Documento from "./pages/Documento";
@@ -65,6 +66,7 @@ export default function App() {
         <Route path="biblioteca" element={<Biblioteca />} />
         <Route path="biblioteca/:slug" element={<Documento />} />
         <Route path="fluxogramas" element={<Fluxogramas />} />
+        <Route path="diretrizes" element={<Diretrizes />} />
         <Route path="busca" element={<Busca />} />
         <Route path="calculadoras" element={<Calculadoras />} />
         <Route path="calculadoras/:slug" element={<Calculadora />} />

@@ -90,8 +90,9 @@ const GRUPOS: Grupo[] = [
         descricao: "O que cada exame mede, valor de referência, quando pedir e o que limita a interpretação.",
       },
       {
-        nome: "Alerta de diretriz revisada",
-        descricao: "Avisa quando sai versão nova da diretriz que embasa um conteúdo que você usa.",
+        to: "/diretrizes",
+        nome: "Alertas de diretriz",
+        descricao: "Avisa quando sai versão nova da diretriz que embasa um documento que você favoritou.",
       },
     ],
   },
