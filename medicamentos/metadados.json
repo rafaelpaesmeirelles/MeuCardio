@@ -117,7 +117,8 @@
       "Adenosine injection (taquicardia supraventricular paroxística) — rótulo aprovado pelo FDA, DailyMed SPL setid d28ff4f3-baf4-4640-ae00-f0eb065417be, Henry Schein",
       "Bula de adenosina solução injetável 3 mg/mL, Fresenius Kabi Brasil Ltda. — seção de interações medicamentosas."
     ],
-    "pregnancy": "**Categoria de risco C. Só administrar quando estritamente necessário.** A bula registra ausência de dados dos dois lados — **não existem estudos de reprodução animal com adenosina nem estudos em mulheres grávidas**. Justifica a cautela pelo fato de a adenosina ser **amplamente distribuída pelo organismo**, o que impede prever o efeito fetal. Fonte: bula do ADENOCARD (adenosina), seções \"Grupos de risco\" e \"Gravidez e lactação\"."
+    "pregnancy": "**Categoria de risco C. Só administrar quando estritamente necessário.** A bula registra ausência de dados dos dois lados — **não existem estudos de reprodução animal com adenosina nem estudos em mulheres grávidas**. Justifica a cautela pelo fato de a adenosina ser **amplamente distribuída pelo organismo**, o que impede prever o efeito fetal. Fonte: bula do ADENOCARD (adenosina), seções \"Grupos de risco\" e \"Gravidez e lactação\".",
+    "lactation": "VERIFICAÇÃO HUMANA NECESSÁRIA — a bula do ADENOCARD (adenosina) foi lida nesta sessão e **não afirma nada sobre lactação**. O cabeçalho da seção diz \"Gravidez e lactação\", mas o corpo trata só da gravidez e atribui categoria C; não há frase sobre excreção no leite, efeito no lactente ou conduta. Não é campo por preencher: é fonte consultada e silente. Próximo passo sugerido: rótulo do FDA para a adenosina injetável, ou outra bula brasileira do mesmo princípio."
   },
   {
     "slug": "alteplase",
@@ -1087,7 +1088,9 @@
     },
     "references": [
       "Awad K et al. Efficacy of pharmacological therapies in reducing outflow tract obstruction in patients with obstructive hypertrophic cardiomyopathy: a systematic review and meta-analysis. Eur Heart J Cardiovasc Pharmacother. 2025;11(5):469-482."
-    ]
+    ],
+    "pregnancy": "**Só se o benefício justificar o risco fetal.** Não há estudo adequado e bem controlado em gestantes. **Dois achados específicos, que não são de classe:** a disopiramida **estimula contrações do útero gravídico** e **já foi encontrada no sangue fetal humano**. Em animais: menos sítios de implantação e menor crescimento e sobrevida das crias em ratas a 250 mg/kg/dia (20 vezes ou mais a dose humana usual de 12 mg/kg), num nível em que o ganho de peso e o consumo alimentar das mães também caíram; e aumento da reabsorção em coelhas a 60 mg/kg/dia (5 vezes ou mais a dose usual). Fonte: rótulo aprovado pelo FDA (DailyMed) para o fosfato de disopiramida. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer.",
+    "lactation": "**Decidir entre suspender a amamentação ou o fármaco**, pelo risco de reação adversa grave no lactente. Os números estão no rótulo: em ratas, a concentração da disopiramida e de seus metabólitos no leite é de **uma a três vezes** a do plasma; no leite humano, a disopiramida foi detectada em concentração **que não excede a do plasma**. Fonte: rótulo aprovado pelo FDA (DailyMed) para o fosfato de disopiramida. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer."
   },
   {
     "slug": "dobutamina",
@@ -1129,7 +1132,9 @@
       "Vasopressores e inotrópicos na Sala de Urgência · Revista Qualidade HC — USP · https://hcrp.usp.br/revistaqualidade/uploads/Artigos/197/197.pdf",
       "Dobutamina: Uso Clínico · Guia TdC · 2025 · https://www.tadeclinicagem.com.br/guia/396/dobutamina-uso-clinico/",
       "Resumo sobre Dobutamina: indicações, farmacologia e mais! · Estratégia MED · 2024 · https://med.estrategia.com/portal/conteudos-gratis/farmacos/resumo-sobre-dobutamina-indicacoes-farmacologia-e-mais/"
-    ]
+    ],
+    "pregnancy": "**Sem evidência de dano em animais; sem uso estudado em gestantes.** Os estudos de reprodução em ratas e coelhas **não revelaram evidência de dano ao feto** atribuível à dobutamina. O fármaco, porém, **não foi administrado a mulheres grávidas**, e deve ser usado apenas quando os benefícios esperados superarem claramente os riscos potenciais ao feto. Fonte: rótulo aprovado pelo FDA (DailyMed) para a dobutamina injetável. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer.",
+    "lactation": "VERIFICAÇÃO HUMANA NECESSÁRIA — o rótulo aprovado pelo FDA (DailyMed) para a dobutamina injetável foi lido nesta sessão e **não traz seção de lactação** (\"Nursing Mothers\" ausente do documento). A gravidez está coberta pela mesma fonte. Não é campo por preencher: é fonte consultada e silente. Próximo passo sugerido: bula brasileira do detentor do registro."
   },
   {
     "slug": "dronedarona",
@@ -1355,7 +1360,9 @@
       "Não há contraindicação absoluta na parada cardiorrespiratória nem na anafilaxia — nas duas, o risco de não administrar supera qualquer outro. As cautelas abaixo valem para as demais indicações.",
       "Cautela em hipertensão grave, doença coronariana, arritmia ventricular, hipertireoidismo e feocromocitoma.",
       "Interação relevante: em uso de betabloqueador não seletivo, o bloqueio beta deixa o efeito alfa sem oposição, podendo produzir hipertensão grave com bradicardia reflexa."
-    ]
+    ],
+    "pregnancy": "**Décadas de uso sem sinal de risco, com uma ressalva no parto.** A experiência prolongada com adrenalina em gestantes, na literatura publicada, **não identifica risco** de malformação maior, aborto ou desfecho materno-fetal adverso. Há, porém, **riscos para mãe e feto associados ao uso durante o trabalho de parto e o parto**. Em animais, a administração subcutânea a coelhas, camundongas e hamsters durante a organogênese **produziu efeitos adversos de desenvolvimento**, incluindo gastrosquise. Fonte: rótulo aprovado pelo FDA (DailyMed) para a epinefrina injetável. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer.",
+    "lactation": "**Compatível — e o rótulo diz isso de forma incomum, tomando partido.** Não há informação sobre presença da adrenalina no leite humano, mas pela **baixa biodisponibilidade oral e meia-vida curta** espera-se exposição **muito baixa** no lactente. E vai além do usual: a adrenalina é o **medicamento de primeira linha na anafilaxia**, e **deve ser usada da mesma maneira em quem amamenta e em quem não amamenta**. É a afirmação mais assertiva de compatibilidade do acervo. Fonte: rótulo aprovado pelo FDA (DailyMed) para a epinefrina injetável. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer."
   },
   {
     "slug": "eplerenona",
@@ -1383,7 +1390,9 @@
       "Nota: módulo requer complementação com fonte primária de bula brasileira (ANVISA) para dose completa",
       "Inspra (eplerenone) — bula FDA/DailyMed",
       "EPHESUS trial — dosagem usada no estudo pivotal"
-    ]
+    ],
+    "pregnancy": "**Dados humanos insuficientes; dado animal tranquilizador.** Os relatos de caso publicados **não bastam** para estabelecer risco de malformação maior, aborto ou desfecho materno-fetal adverso. Nos estudos em animais, **nenhum efeito adverso sobre o desenvolvimento** foi observado em ratas e coelhas tratadas durante a organogênese, em exposições **32 e 31 vezes** a humana na dose terapêutica de 100 mg/dia. Fonte: rótulo aprovado pelo FDA (DailyMed) para a eplerenona. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer.",
+    "lactation": "**Sem dado humano, com presunção declarada no rótulo.** Não há dado sobre presença da eplerenona no leite humano, efeito no lactente ou na produção de leite. A eplerenona **estava presente no leite de ratas lactantes**, e o rótulo enuncia a regra que usa para decidir: *quando um fármaco está presente no leite animal, é provável que esteja presente no leite humano*. Registro à parte, da secção seguinte: com base em dado animal, a eplerenona **pode comprometer a fertilidade masculina** — em ratos maduros a fertilidade caiu com exposição 17 vezes a dose humana de 100 mg/dia, e a reversibilidade não foi avaliada. Fonte: rótulo aprovado pelo FDA (DailyMed) para a eplerenona. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer."
   },
   {
     "slug": "espironolactona",
@@ -1600,7 +1609,8 @@
       "Finerenone Dosage Guide + Max Dose, Adjustments · Drugs.com · https://www.drugs.com/dosage/finerenone.html",
       "2023 ESC Guidelines for the management of cardiovascular disease in patients with diabetes · Eur Heart J · 2023;44(39):4043-4140"
     ],
-    "pregnancy": "**Não deve ser tomado durante a gravidez, a menos que estritamente necessário.** Fonte: bula do Firialta (finerenona, Bayer S.A.)."
+    "pregnancy": "**Não deve ser tomado durante a gravidez, a menos que estritamente necessário.** Fonte: bula do Firialta (finerenona, Bayer S.A.).",
+    "lactation": "**Decidir entre suspender a amamentação ou o tratamento — e aqui o dado animal não é neutro.** Desconhece-se se a finerenona ou seus metabólitos são excretados no leite humano. Os dados em animais mostraram **excreção da finerenona e de seus metabólitos no leite**, e **crias de rato expostas por essa via apresentaram reações adversas** — não apenas presença do fármaco, mas efeito observado. O risco para o recém-nascido não pode ser excluído. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do KERENDIA (finerenona, Bayer). Fonte europeia, não a bula da ANVISA. Conferir contra a bula brasileira quando ela aparecer."
   },
   {
     "slug": "flecainida",
@@ -1635,7 +1645,9 @@
     "references": [
       "Flecainide in clinical practice · Cardiology Journal · https://pmc.ncbi.nlm.nih.gov/articles/PMC10287070/",
       "Real-world utilization of the pill-in-the-pocket method for terminating episodes of atrial fibrillation · Europace · https://pmc.ncbi.nlm.nih.gov/articles/PMC10290490/"
-    ]
+    ],
+    "pregnancy": "**Só se o benefício justificar o risco fetal.** O dado animal é mais interessante do que o habitual porque **depende da linhagem**: a flecainida foi **teratogênica em coelhos da linhagem New Zealand White** a 30 e 35 mg/kg/dia — patas em clava, anormalidades de esternébras e vértebras, corações pálidos com septo ventricular contraído — e **embriotóxica** (mais reabsorções), mas **não** em coelhos Dutch Belted com até 30 mg/kg/dia. Em ratos e camundongos, até 50 e 80 mg/kg/dia, não houve efeito teratogênico, apenas **ossificação esternebral e vertebral retardada** na dose alta em ratos. Não há estudo adequado e bem controlado em gestantes. Fonte: rótulo aprovado pelo FDA (DailyMed) para o acetato de flecainida. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer.",
+    "lactation": "**Excreção alta e quantificada — o rótulo faz a conta.** A flecainida é excretada no leite humano em concentrações de **até 4 vezes** a plasmática, com média em torno de **2,5 vezes**. Assumindo concentração plasmática materna no topo da faixa terapêutica (1 mcg/mL) e cerca de 700 mL de leite em 24 horas, a **dose diária calculada para o lactente fica abaixo de 3 mg**. O rótulo apresenta o cálculo e não converte em proibição — a decisão fica com quem prescreve. Fonte: rótulo aprovado pelo FDA (DailyMed) para o acetato de flecainida. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer."
   },
   {
     "slug": "fondaparinux-sodico",
@@ -1752,7 +1764,9 @@
     },
     "references": [
       "Heparinização Plena na Sala de Emergência · HCRP/USP · https://hcrp.usp.br/revistaqualidade/uploads/Artigos/186/186.pdf"
-    ]
+    ],
+    "pregnancy": "**Sem sinal de dano nos relatos publicados — é o anticoagulante com a rotulagem mais favorável na gestação.** Não há dado formal em gestantes, mas os relatos publicados **não mostraram risco aumentado** de desfecho materno ou fetal adverso. Em animais **não houve teratogenicidade**, embora tenha sido observada **morte embriofetal precoce** em ratas e coelhas na organogênese, em doses cerca de **10 vezes** a máxima recomendada em humanos (45.000 unidades/dia). O rótulo pede que se pesem benefícios e riscos e, quando disponível, que se **prefira a apresentação sem conservante**. Fonte: rótulo aprovado pelo FDA (DailyMed) para a heparina sódica injetável. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer.",
+    "lactation": "**Compatível, e com a razão farmacológica explícita.** Pelo seu **alto peso molecular**, a heparina **não tende a ser excretada no leite humano**, e a fração que porventura estivesse no leite **não seria absorvida por via oral** pelo lactente. A ressalva não é da heparina e sim do veículo: o **álcool benzílico** presente no soro materno provavelmente passa ao leite e **pode ser absorvido por via oral** pelo lactente — por isso o rótulo recomenda a apresentação **sem conservante** quando a heparina for necessária durante a lactação. Fonte: rótulo aprovado pelo FDA (DailyMed) para a heparina sódica injetável. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer."
   },
   {
     "slug": "hidralazina",
@@ -1927,7 +1941,8 @@
       "INDAPAMIDA — Nova Literatura · Purifarma · http://purifarma.com.br/Arquivos/Produto/INDAPAMIDA_Nova%20Literatura.pdf",
       "Lozol/Indapamide — bula FDA/DailyMed (múltiplas versões consultadas)"
     ],
-    "pregnancy": "**Evitar prescrever na gravidez.** A bula não atribui letra de categoria e registra que **nenhum efeito teratogênico foi observado nas experiências em animais** — a orientação de evitar vem da ausência de dados clínicos, não de dano demonstrado. Ressalva sobre a fonte, para quem for revisar: o texto disponível é o da bula em formato resumido, e a redação (\"como para toda molécula nova\") indica documento antigo; a seção de lactação não existe nesse texto. Fonte: bula do NATRILIX SR (indapamida, Servier), seção de gravidez."
+    "pregnancy": "**Evitar prescrever na gravidez.** A bula não atribui letra de categoria e registra que **nenhum efeito teratogênico foi observado nas experiências em animais** — a orientação de evitar vem da ausência de dados clínicos, não de dano demonstrado. Ressalva sobre a fonte, para quem for revisar: o texto disponível é o da bula em formato resumido, e a redação (\"como para toda molécula nova\") indica documento antigo; a seção de lactação não existe nesse texto. Fonte: bula do NATRILIX SR (indapamida, Servier), seção de gravidez.",
+    "lactation": "VERIFICAÇÃO HUMANA NECESSÁRIA — a bula do NATRILIX SR (indapamida, Servier) foi lida nesta sessão e **não tem seção de lactação**; o texto disponível é o de bula em formato resumido, e cobre apenas a gravidez. Não é campo por preencher: é fonte consultada e silente. Próximo passo sugerido: bula profissional completa da indapamida, ou o rótulo do FDA."
   },
   {
     "slug": "ivabradina-cloridrato",
@@ -2347,7 +2362,9 @@
     "references": [
       "Isossorbida — Farmácia Dose Certa · Secretaria de Estado da Saúde de SP · https://www.saude.sp.gov.br/resources/ses/perfil/gestor/assistencia-farmaceutica/medicamentos-das-unidades-farmacia-dose-certa/",
       "Isosorbida, mononitrato de · FACMED-UNAM · https://www.facmed.unam.mx/bmd/gi_2k8/prods/PRODS/Isosorbida.htm"
-    ]
+    ],
+    "pregnancy": "**Usar apenas se claramente necessário.** Os estudos de reprodução em ratas e coelhas, em doses de até **540 e 810 mg/kg/dia**, **não revelaram evidência de dano ao feto**; não há, porém, estudo adequado e bem controlado em gestantes, e o rótulo lembra que estudo animal nem sempre prevê a resposta humana. Fonte: rótulo aprovado pelo FDA (DailyMed) para o mononitrato de isossorbida. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer.",
+    "lactation": "**Cautela.** Não se sabe se o mononitrato de isossorbida é excretado no leite humano; como muitos fármacos o são, o rótulo pede cuidado ao administrar a lactante. Fonte: rótulo aprovado pelo FDA (DailyMed) para o mononitrato de isossorbida. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer."
   },
   {
     "slug": "nebivolol-cloridrato",
@@ -2489,7 +2506,9 @@
     },
     "references": [
       "Nitroglycerin sublingual tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 562d2e03-dfed-41ff-8e7f-ec4169141983"
-    ]
+    ],
+    "pregnancy": "**Usar apenas se claramente necessário.** **Não foram conduzidos estudos de teratologia animal com a nitroglicerina injetável** — os estudos existentes usaram a **pomada** aplicada topicamente em ratas e coelhas, em doses de até 80 e 240 mg/kg/dia, sem efeito tóxico sobre mães ou fetos. Não há estudo adequado e bem controlado em gestantes. Fonte: rótulo aprovado pelo FDA (DailyMed) para a nitroglicerina injetável. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer.",
+    "lactation": "**Dado ausente; decisão por balanço de benefícios.** Não se sabe se a nitroglicerina está presente no leite humano nem se afeta a produção de leite. O rótulo pede que os **benefícios da amamentação para o desenvolvimento e a saúde da criança** sejam pesados contra a necessidade clínica materna e contra o potencial de efeito adverso no lactente — inclusive o decorrente da doença materna de base. Fonte: rótulo aprovado pelo FDA (DailyMed) para a nitroglicerina injetável. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer."
   },
   {
     "slug": "nitroprussiato-de-sodio",
@@ -2524,7 +2543,9 @@
       "Sodium Nitroprusside Monograph for Professionals · Drugs.com · https://www.drugs.com/monograph/sodium-nitroprusside.html",
       "Sodium Nitroprusside · StatPearls (NCBI Bookshelf) · https://www.ncbi.nlm.nih.gov/books/NBK557487/",
       "Sodium Nitroprusside Injection · FDA prescribing information · https://www.accessdata.fda.gov/drugsatfda_docs/label/2016/207426Orig1s000lbl.pdf"
-    ]
+    ],
+    "pregnancy": "**O achado mais grave desta frente, e é dose-dependente e quantificado.** Não há estudo adequado e bem controlado nem em animais de laboratório nem em gestantes. Mas em **três estudos em ovelhas prenhes** o nitroprussiato **atravessou a barreira placentária**, e os **níveis fetais de cianeto mostraram-se proporcionais aos níveis maternos** de nitroprussiato: a transformação metabólica levou a **níveis fatais de cianeto nos fetos**. Os números são explícitos — a infusão de **25 mcg/kg/min por uma hora matou todos os fetos**, enquanto **1 mcg/kg/min por uma hora** resultou em cordeiros normais. Ler junto com o teto de adulto da bula brasileira, de **8 mcg/kg/min**: o intervalo entre a dose inócua e a letal, no modelo animal, é estreito e cai dentro da faixa de uso humano. Fonte: rótulo aprovado pelo FDA (DailyMed) para o nitroprussiato de sódio injetável. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer.",
+    "lactation": "**Decidir entre suspender a amamentação ou o fármaco**, pelo potencial de reação adversa grave no lactente. Não se sabe se o nitroprussiato e seus metabólitos são excretados no leite humano. Fonte: rótulo aprovado pelo FDA (DailyMed) para o nitroprussiato de sódio injetável. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer."
   },
   {
     "slug": "noradrenalina-norepinefrina",
@@ -2550,7 +2571,7 @@
     "adverse_effects": [
       "Arritmias, bradicardia reflexa, isquemia periférica, ansiedade, cefaleia transitória, necrose de pele por extravasamento, dispneia; contém metabissulfito que pode causar reações alérgicas incluindo sintomas anafiláticos e episódios asmáticos"
     ],
-    "pregnancy": "Categoria C — dados insuficientes para avaliar segurança na gravidez; usar apenas se benefício potencial justificar o risco",
+    "pregnancy": "**Dados publicados limitados que NÃO identificaram risco aumentado.** É o que diz o rótulo citado neste verbete: relatos de caso e pequenos ensaios com noradrenalina em gestantes **no momento do parto** não identificaram risco aumentado de malformação maior, aborto ou desfecho materno-fetal adverso. O rótulo faz questão de pôr o outro lado da balança: **há risco para mãe e feto decorrente da própria hipotensão** do choque séptico, do infarto e do AVC — emergências médicas na gravidez que **podem ser fatais se não tratadas**. Em animais, doses intravenosas altas reduziram o fluxo sanguíneo placentário materno, mas a relevância clínica é desconhecida, porque a **dose média de manutenção é dez vezes menor**.\n\n**Correção registrada em 29/07/2026:** este campo afirmava \"Categoria C — dados insuficientes para avaliar segurança na gravidez\". Nenhuma das duas metades se sustenta contra a fonte citada no próprio verbete (rótulo do FDA, DailyMed SPL e375a0b9-4d26-4749-bbc3-43d63a7cf65a, relido nesta data): o documento está no formato **PLLR**, que **aboliu as categorias por letra** e não atribui nenhuma à noradrenalina; e, longe de registrar \"dados insuficientes\", ele conclui que os dados limitados **não identificaram risco aumentado**. Fonte: rótulo aprovado pelo FDA (DailyMed) para o bitartarato de norepinefrina. Fonte norte-americana, não a bula da ANVISA.",
     "dosing": {
       "choque hipotensao aguda inicial": "8-12 mcg/min (se diluído para 16 mcg/mL, equivale a 0,5-0,75 mL da solução/min)",
       "choque hipotensao aguda manutencao": "2-4 mcg/min (se diluído para 16 mcg/mL, equivale a 0,125-0,25 mL/min)",
@@ -2569,7 +2590,8 @@
       "Norepinephrine bitartrate injection — rótulo aprovado pelo FDA, DailyMed SPL setid e375a0b9-4d26-4749-bbc3-43d63a7cf65a",
       "Incidence of Adverse Events in Peripheral Intravenous Vasopressor Use: A Systematic Review and Meta-Analysis. JAMA Netw Open. 2026;9(3):e260710. DOI: 10.1001/jamanetworkopen.2026.0710. PMID: 41838001",
       "Owen VS, Rosgen BK, Cherak SJ, et al. Adverse events associated with administration of vasopressor medications through a peripheral intravenous catheter: a systematic review and meta-analysis. Crit Care. 2021;25(1):146. DOI: 10.1186/s13054-021-03553-1. PMID: 33863361"
-    ]
+    ],
+    "lactation": "**Exposição clinicamente relevante não é esperada.** Não há dado sobre presença da noradrenalina no leite humano ou animal, nem sobre efeito no lactente ou na produção de leite — mas o rótulo conclui pela segurança com base em farmacocinética: **meia-vida curta e baixa biodisponibilidade oral**. Fonte: rótulo aprovado pelo FDA (DailyMed) para o bitartarato de norepinefrina. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer."
   },
   {
     "slug": "olmesartana-medoxomila",
@@ -2662,7 +2684,9 @@
       "Coversyl 4mg — Bula Profissional · Servier · https://static-webv8.jet.com.br/drogaosuper/Bulas/7898029551046.pdf",
       "Coversyl — Bula Profissional · A Nossa Drogaria · http://institucional.anossadrogaria.com.br/bula/924166.pdf",
       "Sandoz Perindopril Erbumine Product Monograph"
-    ]
+    ],
+    "pregnancy": "**Categoria D, com advertência em tarja preta.** O uso de fármacos que agem no sistema renina-angiotensina no **segundo e terceiro trimestres** reduz a função renal fetal e aumenta a morbidade e a mortalidade fetal e neonatal. O **oligoidrâmnio** resultante pode se associar a **hipoplasia pulmonar fetal e deformações esqueléticas**. Os efeitos adversos neonatais possíveis são **hipoplasia do crânio, anúria, hipotensão, insuficiência renal e morte**. Detectada a gravidez, descontinuar o perindopril **assim que possível**. O perindopril atravessa a placenta e, em tese, pode ser removido da circulação neonatal por exsanguineotransfusão ou diálise — mas a experiência limitada não demonstrou que isso traga benefício. Fonte: rótulo aprovado pelo FDA (DailyMed) para o perindopril erbumina. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer.",
+    "lactation": "**Cautela.** O leite de ratas lactantes continha radioatividade após administração de perindopril marcado com carbono-14; **não se sabe** se o perindopril é secretado no leite humano. Como muitos fármacos o são, o rótulo pede cuidado ao administrar a lactantes — sem contraindicar. Fonte: rótulo aprovado pelo FDA (DailyMed) para o perindopril erbumina. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer."
   },
   {
     "slug": "prasugrel",
@@ -2722,7 +2746,8 @@
     "pregnancy": "Categoria B — estudos em animais não mostram evidência de prejuízo à fertilidade ou toxicidade fetal; poucos dados em mulheres; desconhecido se é excretado no leite",
     "outcomes": {
       "Evidencia pivotal triton timi38": "Reduziu desfechos compostos isquêmicos comparado a clopidogrel, porém aumentou o risco de sangramento. Análises post-hoc identificaram grupos de maior risco de sangramento: idade ≥75 anos, peso <60 kg, e AVC ou AIT prévios"
-    }
+    },
+    "lactation": "**Não recomendado durante a amamentação.** Desconhece-se se o prasugrel é excretado no leite humano; os **estudos em animais demonstraram excreção no leite materno**. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do EFIENT (prasugrel, Daiichi Sankyo/Lilly). Fonte europeia, não a bula da ANVISA. Conferir contra a bula brasileira quando ela aparecer."
   },
   {
     "slug": "propafenona-cloridrato",
@@ -2829,7 +2854,9 @@
       "Hipersensibilidade conhecida à protamina.",
       "Atenção ao risco de reação anafilactoide, que pode afetar até 1 em cada 10 pacientes. São fatores de risco: alergia a proteína de peixe, diabetes em uso de insulina contendo protamina (NPH ou zinco-protamina), exposição prévia à protamina, angioplastia coronariana ou circulação extracorpórea prévias, e vasectomia ou infertilidade.",
       "Dose excessiva produz **efeito anticoagulante paradoxal**, dose-dependente, por disfunção plaquetária e aumento da fibrinólise — piorando o sangramento que se queria tratar."
-    ]
+    ],
+    "pregnancy": "**Categoria C. Só administrar se claramente necessário.** O rótulo é franco quanto à extensão da lacuna: **não foram conduzidos estudos de reprodução animal** com o sulfato de protamina, e não se sabe se ele pode causar dano fetal ou afetar a capacidade reprodutiva. Fonte: rótulo aprovado pelo FDA (DailyMed) para o sulfato de protamina. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer.",
+    "lactation": "**Cautela.** Não se sabe se a protamina é excretada no leite humano; como muitos fármacos o são, o rótulo pede cuidado ao administrar a lactante. Fonte: rótulo aprovado pelo FDA (DailyMed) para o sulfato de protamina. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer."
   },
   {
     "slug": "ramipril",
@@ -3143,7 +3170,9 @@
     "references": [
       "Sildenafil (REVATIO) — rótulo aprovado pelo FDA para hipertensão arterial pulmonar, DailyMed SPL setid 3bb9363e-b28d-4019-8aae-539233dca214",
       "Bula do profissional de saúde de REVATIO (citrato de sildenafila), Viatris Farmacêutica do Brasil Ltda. — seções 1, 4 e 8. Documento obtido no site do detentor do registro."
-    ]
+    ],
+    "pregnancy": "**Atenção ao recorte, porque aqui ele muda a leitura.** O rótulo do FDA consultado é o da **sildenafila na disfunção erétil**, e por isso abre com \"não é indicada para uso em mulheres\" — o que **não** se aplica à indicação cardiológica: na **hipertensão arterial pulmonar** (Revatio) a mulher é tratada. Dos dados que valem para as duas indicações: **não há dados em gestantes**; os estudos de reprodução animal **não mostraram desfecho adverso de desenvolvimento** quando administrada durante a organogênese em ratas e coelhas, em doses orais de até **16 e 32 vezes** a máxima recomendada em humanos (100 mg/dia, base mg/m²), sem evidência de teratogenicidade, embriotoxicidade ou fetotoxicidade. A bula brasileira do Revatio, mais lacônica, apenas registra que o medicamento não deve ser usado por gestantes sem orientação médica. Fontes: rótulo aprovado pelo FDA (DailyMed) para a sildenafila, e bula do REVATIO (citrato de sildenafila, Pfizer). Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer.",
+    "lactation": "**Presente no leite humano, sem dado sobre efeito.** Dados limitados indicam que a **sildenafila e seu metabólito ativo estão presentes no leite humano**; não há informação sobre efeito no lactente nem sobre a produção de leite. A bula brasileira do Revatio pede **cautela** ao administrar a lactante. Mesmo recorte da seção de gravidez: o rótulo americano é o da indicação de disfunção erétil. Fontes: rótulo aprovado pelo FDA (DailyMed) para a sildenafila, e bula do REVATIO (citrato de sildenafila, Pfizer). Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer."
   },
   {
     "slug": "sotalol",
@@ -3550,7 +3579,9 @@
       "Gordon AC et al. Effect of Early Vasopressin vs Norepinephrine on Kidney Failure in Patients with Septic Shock: The VANISH Randomized Clinical Trial. JAMA. 2016;316(5):509-518.",
       "Bula profissional de vasopressina (Encrise, solução injetável 20 U/mL), Biolab — seções 1, 2 e 8. Versão brasileira.",
       "Bernoche C, Timerman S, Polastri TF, et al. Atualização da Diretriz de Ressuscitação Cardiopulmonar e Cuidados Cardiovasculares de Emergência da Sociedade Brasileira de Cardiologia — 2019. Arq Bras Cardiol. 2019;113(3):449-663. PMID: 31621787"
-    ]
+    ],
+    "pregnancy": "**Sem dados — e com um ajuste de dose que é próprio da gestação.** Não há dado disponível em gestantes, e **não foram conduzidos estudos de reprodução animal**. O ponto prático que não aparece em outros verbetes: pelo **aumento da depuração da vasopressina no segundo e terceiro trimestres**, a dose **pode precisar ser aumentada**. Fonte: rótulo aprovado pelo FDA (DailyMed) para a vasopressina injetável. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer.",
+    "lactation": "**Sem dado algum.** Não há informação sobre a presença da vasopressina no leite humano ou animal, nem sobre efeito no lactente ou na produção de leite. O rótulo não emite recomendação. Fonte: rótulo aprovado pelo FDA (DailyMed) para a vasopressina injetável. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer."
   },
   {
     "slug": "verapamil-cloridrato",

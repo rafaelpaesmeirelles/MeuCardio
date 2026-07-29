@@ -48,7 +48,7 @@ Estudo EUROPA (>12.000 pacientes com DAC estável) demonstrou redução signific
 Hipertensão arterial, insuficiência cardíaca, prevenção de AVC secundário, redução de risco CV em DAC estável
 
 ## Contraindicacoes
-- Gravidez
+- **Gravidez — as duas rotulagens tratam isso de formas diferentes.** O rótulo do FDA citado neste arquivo **não** lista a gravidez entre as contraindicações: atribui **categoria D** e a trata como *boxed warning* de toxicidade fetal, mandando descontinuar assim que a gravidez for detectada. Manter aqui como contraindicação segue a linha das bulas brasileiras de IECA já conferidas (Zestril contraindica o 2º e o 3º trimestres; Lotensin contraindica de forma ampla), mas **a bula brasileira do Coversyl não pôde ser rebaixada em 29/07/2026** — os dois espelhos devolveram 404. Reconferir quando ela abrir
 - Angioedema prévio por IECA
 - Estenose bilateral de artéria renal
 - Hipersensibilidade

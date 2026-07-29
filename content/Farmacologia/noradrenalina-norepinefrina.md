@@ -56,4 +56,6 @@ Extrema cautela em pacientes em uso de inibidores da MAO ou antidepressivos tric
 Arritmias, bradicardia reflexa, isquemia periférica, ansiedade, cefaleia transitória, necrose de pele por extravasamento, dispneia; contém metabissulfito que pode causar reações alérgicas incluindo sintomas anafiláticos e episódios asmáticos
 
 ## Gravidez
-Categoria C — dados insuficientes para avaliar segurança na gravidez; usar apenas se benefício potencial justificar o risco
+**Dados publicados limitados que não identificaram risco aumentado** de malformação maior, aborto ou desfecho materno-fetal adverso — relatos de caso e pequenos ensaios com uso no momento do parto. O rótulo põe explicitamente o outro lado da balança: a **hipotensão** do choque séptico, do infarto e do AVC é emergência médica na gravidez e **pode ser fatal se não tratada**. Em animais, doses intravenosas altas reduziram o fluxo placentário materno, com relevância clínica desconhecida porque a dose média de manutenção é **dez vezes menor**.
+
+**Correção registrada em 29/07/2026:** esta seção dizia "Categoria C — dados insuficientes para avaliar segurança na gravidez". Nenhuma das duas metades se sustenta contra o rótulo do FDA citado no `source_refs` deste arquivo (DailyMed SPL `e375a0b9-4d26-4749-bbc3-43d63a7cf65a`, relido nesta data): o documento está no formato **PLLR**, que **aboliu as categorias por letra** e não atribui nenhuma à noradrenalina; e ele conclui que os dados limitados **não identificaram risco aumentado**, e não que sejam insuficientes.
