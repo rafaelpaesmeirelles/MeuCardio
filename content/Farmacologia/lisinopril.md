@@ -4,7 +4,7 @@ slug: lisinopril
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["Lisinopril tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 0e6364a4-6d66-4151-8197-d45e2a762895"]
+source_refs: ["Lisinopril tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 0e6364a4-6d66-4151-8197-d45e2a762895", "Bula do ZESTRIL (lisinopril), AstraZeneca do Brasil — detentora do registro no Brasil; seções de contra-indicações e \"Uso durante a gravidez e lactação\" · consultada em 29/07/2026"]
 legacy_source: "medicamentos/banco-de-medicamentos-lisinopril.md"
 ---
 
@@ -43,7 +43,7 @@ Função renal periodicamente. Potássio sérico (aumento médio de ~0,1 mEq/L e
 Precaução com risco de hipotensão em pacientes em uso concomitante de diuréticos; se diurético não puder ser descontinuado, iniciar lisinopril com 5mg
 
 ## Contraindicacoes
-- Gravidez
+- **Gravidez — as duas rotulagens divergem, e a diferença é de natureza, não de grau.** O rótulo do FDA citado neste documento **não** lista a gravidez entre as contraindicações: trata-a como *boxed warning* de toxicidade fetal — "quando a gravidez for detectada, descontinuar o lisinopril assim que possível", porque os fármacos que agem diretamente no sistema renina-angiotensina podem causar lesão e morte do feto, e o uso no segundo e terceiro trimestres reduz a função renal fetal e aumenta a morbidade e a mortalidade fetal e neonatal. Já a **bula brasileira do ZESTRIL contraindica formalmente o segundo e o terceiro trimestres**, atribui **categoria de risco D** e considera o uso no primeiro trimestre "não recomendado". Registrado em 29/07/2026: antes constava só "Gravidez", sem fonte nem recorte de trimestre. Na prática as duas convergem na conduta — suspender assim que a gravidez for detectada —, mas só a brasileira transforma isso em contraindicação formal
 - Angioedema prévio relacionado a tratamento com IECA
 - **Angioedema hereditário ou idiopático** — contraindicação do rótulo que não constava aqui
 - **Uso dentro de 36 horas da troca de ou para sacubitril-valsartana.** Ausência grave num produto de Cardiologia: o inibidor de neprilisina e o IECA somam risco de angioedema, e a janela de 36 horas existe justamente para evitar a sobreposição. Quem migra de IECA para sacubitril-valsartana na insuficiência cardíaca passa exatamente por essa transição

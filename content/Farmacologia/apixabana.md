@@ -81,8 +81,8 @@ Por que a bula do ELIQUIS consultada aqui diz que não há antídoto: a revisão
 Comprimidos podem ser triturados e suspensos em água, D5W ou suco de maçã, estáveis por até 4h; administráveis por sonda nasogástrica
 
 ## Contraindicacoes
-- Hipersensibilidade
-- Sangramento ativo clinicamente relevante
-- Doença hepática associada a coagulopatia
-- Gravidez
-- Insuficiência hepática grave
+- Hipersensibilidade à apixabana ou a qualquer componente da fórmula
+- Sangramento ativo clinicamente significativo
+- Doença hepática associada a coagulopatia e a risco de sangramento clinicamente relevante
+- **Gravidez não é contraindicação nesta bula** — corrigido em 29/07/2026, quando constava como tal. O item 4 (Contraindicações) da bula profissional Rev0515, que é a fonte citada neste documento, lista apenas os três pontos acima. Sobre gestação, a bula diz que a apixabana **"não é recomendada durante a gravidez"** e lhe atribui **categoria de risco B**: há dados limitados em gestantes, e os estudos em animais não indicam efeito nocivo direto ou indireto quanto à toxicidade reprodutiva. Contraindicar aqui contradizia a própria fonte
+- **Insuficiência hepática grave também não é contraindicação, e sim "não recomendado"** — mesma correção e mesma data. A apixabana não foi estudada nessa população, e a bula usa "não é recomendado" nos três pontos em que trata do assunto, sem incluí-la no item 4. Insuficiência hepática leve a moderada admite uso com cautela

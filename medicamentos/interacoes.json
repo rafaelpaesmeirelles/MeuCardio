@@ -382,5 +382,113 @@
     "conduta": "Associação deve ser avaliada com cautela pelo médico.",
     "fonte": "Bula do bissulfato de clopidogrel (Novartis Biociências/Sandoz do Brasil), seção de interações medicamentosas.",
     "review_status": "revisado"
+  },
+  {
+    "slug": "propranolol-verapamil",
+    "farmacos": [
+      "propranolol",
+      "verapamil-cloridrato"
+    ],
+    "gravidade": "grave",
+    "efeito": "Somam-se os efeitos inotrópicos negativos do betabloqueador e do bloqueador do canal de cálcio não di-hidropiridínico, podendo resultar em hipotensão grave, bradicardia e insuficiência cardíaca — particularmente em paciente com função ventricular prejudicada ou anormalidade de condução sinoatrial ou atrioventricular.",
+    "conduta": "Nenhum dos dois deve ser administrado por via intravenosa antes de a outra droga ter sido descontinuada por 48 horas.",
+    "fonte": "Bula do INDERAL (cloridrato de propranolol, AstraZeneca), seção de interações medicamentosas — o verapamil está nomeado no texto. A bula do DILACORON (verapamil, Abbott) nomeia os betabloqueadores no sentido inverso.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "propranolol-diltiazem",
+    "farmacos": [
+      "propranolol",
+      "diltiazem-cloridrato"
+    ],
+    "gravidade": "grave",
+    "efeito": "Somam-se os efeitos inotrópicos negativos, com risco de hipotensão grave, bradicardia e insuficiência cardíaca, sobretudo com função ventricular prejudicada ou distúrbio de condução sinoatrial ou atrioventricular.",
+    "conduta": "Nenhum dos dois deve ser administrado por via intravenosa antes de a outra droga ter sido descontinuada por 48 horas.",
+    "fonte": "Bula do INDERAL (cloridrato de propranolol, AstraZeneca), seção de interações — o diltiazem está nomeado. A bula profissional do CARDIZEM (diltiazem) nomeia o propranolol no sentido inverso, descrevendo bradicardia, insuficiência cardíaca, hipotensão severa e bloqueio atrioventricular.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "propranolol-nifedipina",
+    "farmacos": [
+      "propranolol",
+      "nifedipina"
+    ],
+    "gravidade": "moderada",
+    "efeito": "A associação com bloqueador do canal de cálcio di-hidropiridínico aumenta o risco de hipotensão; em paciente com insuficiência cardíaca latente pode precipitar insuficiência cardíaca manifesta.",
+    "conduta": "Associar com monitoração da pressão arterial e atenção a sinais de descompensação, especialmente em quem já tem disfunção ventricular.",
+    "fonte": "Bula do INDERAL (cloridrato de propranolol, AstraZeneca), seção de interações medicamentosas — o nifedipino está nomeado como exemplo do grupo.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "propranolol-epinefrina",
+    "farmacos": [
+      "propranolol",
+      "epinefrina-adrenalina"
+    ],
+    "gravidade": "grave",
+    "efeito": "A adrenalina pode neutralizar o efeito do betabloqueador; na administração parenteral a pacientes betabloqueados, a estimulação alfa sem oposição pode, em casos raros, resultar em vasoconstrição, hipertensão e bradicardia.",
+    "conduta": "Cautela na administração parenteral de preparações que contenham adrenalina a paciente em uso de betabloqueador, com monitoração de pressão arterial e frequência cardíaca.",
+    "fonte": "Bula do INDERAL (cloridrato de propranolol, AstraZeneca), seção de interações medicamentosas — a adrenalina está nomeada no texto.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "propranolol-insulina",
+    "farmacos": [
+      "propranolol"
+    ],
+    "classe_oposta": "insulina e demais hipoglicemiantes",
+    "gravidade": "moderada",
+    "efeito": "O propranolol modifica a taquicardia da hipoglicemia — mascara o sinal de alarme adrenérgico — e pode prolongar a resposta hipoglicêmica à insulina.",
+    "conduta": "Cautela ao instituir propranolol em paciente diabético em tratamento hipoglicemiante; reforçar a monitoração glicêmica, ciente de que a taquicardia deixa de servir como aviso.",
+    "fonte": "Bula do INDERAL (cloridrato de propranolol, AstraZeneca), seção de interações medicamentosas.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "verapamil-colchicina",
+    "farmacos": [
+      "verapamil-cloridrato",
+      "colchicina"
+    ],
+    "gravidade": "grave",
+    "efeito": "O verapamil é inibidor da CYP3A4 e da glicoproteína P, as duas vias de eliminação da colchicina; a associação eleva a exposição à colchicina, cuja janela terapêutica é estreita.",
+    "conduta": "A bula do verapamil não recomenda a combinação.",
+    "fonte": "Bula do DILACORON (cloridrato de verapamil, Abbott) — a colchicina está nomeada: \"Não é recomendado o uso de DILACORON em combinação com colchicina\". A mesma bula registra o verapamil como inibidor de CYP3A4 e P-glicoproteína.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "verapamil-metoprolol",
+    "farmacos": [
+      "verapamil-cloridrato",
+      "metoprolol"
+    ],
+    "gravidade": "moderada",
+    "efeito": "O verapamil aumenta a exposição ao metoprolol em pacientes com angina — AUC cerca de 32,5% maior e Cmax cerca de 41% maior —, além do efeito inotrópico e cronotrópico negativo somado das duas classes.",
+    "conduta": "Monitorar frequência cardíaca e pressão arterial; considerar dose menor de metoprolol enquanto durar a associação.",
+    "fonte": "Bula do DILACORON (cloridrato de verapamil, Abbott), tabela \"Possíveis interações medicamentosas associadas ao verapamil\", linha dos betabloqueadores.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "nifedipina-rifampicina",
+    "farmacos": [
+      "nifedipina"
+    ],
+    "classe_oposta": "rifampicina",
+    "gravidade": "contraindicada",
+    "efeito": "A rifampicina induz acentuadamente a CYP3A4; a biodisponibilidade do nifedipino cai e o fármaco pode não atingir níveis plasmáticos eficazes.",
+    "conduta": "Associação contraindicada pela bula. Fenitoína, carbamazepina e fenobarbital também reduzem a eficácia do nifedipino, mas nessas a bula não chega a contraindicar.",
+    "fonte": "Bula do ADALAT (nifedipino, Bayer), item de contraindicações e seção de interações medicamentosas.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "telmisartana-litio",
+    "farmacos": [
+      "telmisartana"
+    ],
+    "classe_oposta": "lítio",
+    "gravidade": "grave",
+    "efeito": "Aumento reversível das concentrações séricas de lítio, com toxicidade — descrito com inibidores da ECA e também relatado com bloqueadores do receptor de angiotensina, incluindo a telmisartana.",
+    "conduta": "Administrar concomitantemente apenas sob supervisão médica, com monitoração dos níveis séricos de lítio. Se houver tiazídico associado, o risco é maior, porque as tiazidas reduzem a depuração renal do lítio.",
+    "fonte": "Bula profissional do MICARDIS HCT (telmisartana + hidroclorotiazida, Boehringer Ingelheim), seção de interações medicamentosas.",
+    "review_status": "revisado"
   }
 ]

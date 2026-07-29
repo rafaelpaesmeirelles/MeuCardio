@@ -114,7 +114,8 @@
       "Adenosine injection (agente de estresse farmacológico) — rótulo aprovado pelo FDA, DailyMed SPL setid b6851256-6cef-4f23-8129-19bb64380cd5, Meitheal Pharmaceuticals",
       "Adenosine injection (taquicardia supraventricular paroxística) — rótulo aprovado pelo FDA, DailyMed SPL setid d28ff4f3-baf4-4640-ae00-f0eb065417be, Henry Schein",
       "Bula de adenosina solução injetável 3 mg/mL, Fresenius Kabi Brasil Ltda. — seção de interações medicamentosas."
-    ]
+    ],
+    "pregnancy": "**Categoria de risco C. Só administrar quando estritamente necessário.** A bula registra ausência de dados dos dois lados — **não existem estudos de reprodução animal com adenosina nem estudos em mulheres grávidas**. Justifica a cautela pelo fato de a adenosina ser **amplamente distribuída pelo organismo**, o que impede prever o efeito fetal. Fonte: bula do ADENOCARD (adenosina), seções \"Grupos de risco\" e \"Gravidez e lactação\"."
   },
   {
     "slug": "alteplase",
@@ -292,7 +293,8 @@
       "Agnelli G, Buller HR, Cohen A, et al. Apixaban for extended treatment of venous thromboembolism (AMPLIFY-EXT). N Engl J Med. 2013;368(8):699-708. DOI: 10.1056/NEJMoa1207541. PMID: 23216615",
       "Bula profissional de ELIQUIS (apixabana), Bristol-Myers Squibb Farmacêutica Ltda. — posologia em insuficiência renal, advertências e propriedades farmacocinéticas, versão brasileira."
     ],
-    "lactation": "A bula determina **decidir entre interromper a amamentação ou descontinuar a apixabana** — é escolha binária, não uso com cautela. Fonte: bula do ELIQUIS (Bristol-Myers Squibb), bula do paciente."
+    "lactation": "A bula determina **decidir entre interromper a amamentação ou descontinuar a apixabana** — é escolha binária, não uso com cautela. O texto profissional acrescenta o motivo: **não se sabe** se a apixabana ou seus metabólitos são excretados no leite humano, os dados em animais **revelaram excreção no leite**, e o risco para recém-nascidos e lactentes **não pode ser excluído**. Fontes: bula para o profissional de saúde do ELIQUIS (apixabana, Bristol-Myers Squibb), Rev0515, e bula do paciente.",
+    "pregnancy": "**Categoria de risco B, mas \"não recomendada durante a gravidez\".** A combinação é incomum e vale ser lida com atenção: a letra B vem de os estudos em animais **não indicarem efeito nocivo direto ou indireto quanto à toxicidade reprodutiva**; a recomendação contrária vem de haver **dados limitados em mulheres grávidas**. Ou seja, o que restringe é a ausência de dado humano, não um sinal de dano. A gravidez **não** consta do item 4 (Contraindicações) desta bula, que lista apenas hipersensibilidade, sangramento ativo clinicamente significativo e doença hepática com coagulopatia. Fonte: bula para o profissional de saúde do ELIQUIS (apixabana, Bristol-Myers Squibb), Rev0515, itens 4 e 5."
   },
   {
     "slug": "atenolol",
@@ -559,7 +561,9 @@
       "Candesartán: evidencia y práctica clínica · CardioTeca · 2026 · https://www.cardioteca.com/tratamientos/8238-candesartan-practica-clinica-guia-especialista.html",
       "Atacand (candesartan cilexetil) — bula FDA",
       "Candesartan cilexetil: a new, long-acting, effective angiotensin II type 1 receptor blocker — revisão farmacocinética"
-    ]
+    ],
+    "pregnancy": "**Contraindicada — categoria de risco D.** A gravidez está na lista de contraindicações da bula. Quando a gravidez é diagnosticada, o tratamento **deve ser interrompido imediatamente** e substituído. Os fármacos que agem diretamente no sistema renina-angiotensina podem causar **lesão e morte fetal e neonatal**; a exposição a BRA induz fetotoxicidade humana (redução da função renal, oligoâmnio, retardo da ossificação do crânio) e toxicidade neonatal (insuficiência renal, hipotensão, hipercalemia). A bula orienta discutir alternativas **antes** de a paciente considerar engravidar. Fonte: bula do ATACAND (candesartana cilexetila, AstraZeneca), itens 4 e 5.",
+    "lactation": "**Descontinuar o aleitamento se o tratamento for essencial.** A lactação consta das contraindicações. Não se sabe se a candesartana é excretada no leite humano, mas **é excretada no leite de ratas**, e a bula decide pelo desmame em razão do potencial de efeitos adversos no lactente. Fonte: bula do ATACAND (candesartana cilexetila, AstraZeneca)."
   },
   {
     "slug": "cangrelor",
@@ -788,7 +792,9 @@
     "references": [
       "Chlorthalidone — rótulo aprovado pelo FDA, DailyMed SPL setid da0fe4da-a4f3-4aa8-84f4-4d31c5cbdb0e",
       "Chlorthalidone/THALITONE — bula FDA/DailyMed (múltiplas versões consultadas)"
-    ]
+    ],
+    "pregnancy": "**Categoria de risco B, mas com contraindicação explícita para hipertensão na gravidez** — a bula lista \"hipertensão durante a gravidez\" entre as contraindicações e, na seção de gravidez, determina que não seja usada na gestação **a menos que não haja alternativa mais segura**. Motivo declarado: como outros diuréticos, pode causar **hipoperfusão placentária**; os tiazídicos entram na circulação fetal e podem causar distúrbios eletrolíticos, e já foi relatada **trombocitopenia neonatal** com tiazídicos e diuréticos correlatos. A letra B, isolada, subestima essa restrição — as duas leituras estão registradas aqui de propósito. Fonte: bula do HIGROTON (clortalidona), seções de contraindicações e \"Gravidez e lactação\".",
+    "lactation": "**Evitar.** A clortalidona **passa para o leite materno**, e a bula determina evitar o uso em lactantes por razões de segurança. Fonte: bula do HIGROTON (clortalidona)."
   },
   {
     "slug": "colchicina",
@@ -809,7 +815,9 @@
       "Low-Dose Colchicine for Secondary Prevention of Coronary Artery Disease: JACC Review Topic of the Week · JACC · https://www.jacc.org/doi/10.1016/j.jacc.2023.05.055",
       "Colchicine's Role in Cardiovascular Disease Management · Arteriosclerosis, Thrombosis, and Vascular Biology · https://www.ahajournals.org/doi/10.1161/ATVBAHA.124.319851",
       "What is the recommended dosage of colchicine for pericarditis in patients with End-Stage Renal Disease (ESRD)? · droracle · https://www.droracle.ai/articles/171950/what-is-the-recommended-dosage-of-colchicine-colchicine-for"
-    ]
+    ],
+    "pregnancy": "**Contraindicada na gravidez** — consta nominalmente das contraindicações, ao lado das insuficiências renal, hepática e cardíaca graves. O motivo declarado é o mecanismo: a colchicina **detém a divisão celular**, pode ser **teratogênica em humanos** segundo estudos em animais, e há relatos de diminuição da espermatogênese em humanos. A bula vai além da gestante e orienta que **as pacientes não engravidem durante o tratamento**, cabendo ao médico avaliar risco-benefício. Fonte: bula do COLCHIS (colchicina, Apsen), seções de contraindicações e \"Reprodução / Gravidez\".",
+    "lactation": "**Contraindicada na lactação** — a bula diz que o produto não deve ser usado durante a gravidez e a lactação. Na seção específica, registra que **não se sabe se a droga é excretada no leite materno** e devolve a decisão ao médico, por risco-benefício. Fonte: bula do COLCHIS (colchicina, Apsen)."
   },
   {
     "slug": "dabigatrana-etexilato",
@@ -975,7 +983,9 @@
     "notes": {
       "Diferenca para os diidropiridinicos": "Inibem influxo de cálcio em células musculares lisas vasculares E em tecido cardíaco (nó sinusal, nó AV, miocárdio), diferente dos dihidropiridínicos (anlodipino) que agem quase exclusivamente sobre vasculatura; efeito combinado: redução de FC, retardo de condução AV e depressão discreta de contratilidade",
       "Particularidade em insuficiencia cardiaca": "Contraindicados em ICFER com FE reduzida devido ao efeito inotrópico negativo — diferente dos dihidropiridínicos, que são relativamente seguros em IC quando necessários para controle pressórico"
-    }
+    },
+    "pregnancy": "**Contraindicado na gravidez** — a bula traz a frase \"Este medicamento é contraindicado na gravidez\" no próprio item 4 (Contraindicações). Não recomendado também para mulheres que possam engravidar, por não haver estudos suficientes nessa população; estudos em animais mostraram **teratogenicidade em camundongos** (anormalidades esqueléticas) e embriotoxicidade fatal em camundongos e ratos. **Divergência dentro da própria bula, registrada e não resolvida:** o mesmo documento classifica o diltiazem na **categoria de risco C**, que descreve risco possível, e não a contraindicação absoluta do item 4. Fonte: bula profissional do CARDIZEM (cloridrato de diltiazem), itens 4 e 5.",
+    "lactation": "**Não recomendado; se o tratamento for essencial, interromper a lactação.** A bula afirma que o diltiazem **é excretado no leite materno humano**. Fonte: bula profissional do CARDIZEM (cloridrato de diltiazem), item 5."
   },
   {
     "slug": "dinitrato-de-isossorbida",
@@ -1032,7 +1042,9 @@
     "references": [
       "Isosorbide dinitrate tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 5f585259-59ed-4648-b562-164f3746c821",
       "Bula de ISORDIL (dinitrato de isossorbida), EMS Sigma Pharma Ltda. — apresentações, posologia e advertências, versão brasileira."
-    ]
+    ],
+    "pregnancy": "**Só se o benefício superar o risco fetal.** A bula não atribui letra de categoria. Registra **embriotoxicidade dose-dependente em coelhos** (aumento de filhotes mumificados) em doses orais de **35 a 150 vezes a dose humana máxima diária recomendada**, e ausência de estudos bem controlados em gestantes. Fonte: bula do ISORDIL (dinitrato de isossorbida), seção \"Uso durante a gravidez\".",
+    "lactation": "**Decisão caso a caso — a excreção no leite nunca foi estudada.** A bula é explícita quanto à lacuna: não se estudou a excreção do dinitrato de isossorbida no leite materno. Como muitos fármacos são excretados por essa via, a escolha entre interromper a amamentação ou o tratamento deve pesar a importância do medicamento para a mãe contra o risco potencial para a criança. Fonte: bula do ISORDIL (dinitrato de isossorbida)."
   },
   {
     "slug": "disopiramida",
@@ -1888,7 +1900,8 @@
       "Indapamide — rótulo aprovado pelo FDA, DailyMed SPL setid 59cd3331-7afe-432a-8b50-39533fd5f392",
       "INDAPAMIDA — Nova Literatura · Purifarma · http://purifarma.com.br/Arquivos/Produto/INDAPAMIDA_Nova%20Literatura.pdf",
       "Lozol/Indapamide — bula FDA/DailyMed (múltiplas versões consultadas)"
-    ]
+    ],
+    "pregnancy": "**Evitar prescrever na gravidez.** A bula não atribui letra de categoria e registra que **nenhum efeito teratogênico foi observado nas experiências em animais** — a orientação de evitar vem da ausência de dados clínicos, não de dano demonstrado. Ressalva sobre a fonte, para quem for revisar: o texto disponível é o da bula em formato resumido, e a redação (\"como para toda molécula nova\") indica documento antigo; a seção de lactação não existe nesse texto. Fonte: bula do NATRILIX SR (indapamida, Servier), seção de gravidez."
   },
   {
     "slug": "ivabradina-cloridrato",
@@ -1999,7 +2012,9 @@
     },
     "references": [
       "Lisinopril tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 0e6364a4-6d66-4151-8197-d45e2a762895"
-    ]
+    ],
+    "pregnancy": "**Categoria de risco D. Contraindicado no segundo e terceiro trimestres**; no primeiro trimestre o uso **não é recomendado**, e diagnosticada a gravidez o lisinopril deve ser descontinuado o mais rápido possível. Os inibidores da ECA causam morbidade e mortalidade fetal e neonatal no segundo e terceiro trimestres: hipotensão, disfunção renal, hipercalemia e hipoplasia do crânio no recém-nascido; o **oligoidrâmnio** materno pode resultar em contratura de membros, deformação craniofacial e hipoplasia pulmonar. A bula adverte que o oligoidrâmnio **pode só aparecer depois de o dano fetal ser irreversível**. Recém-nascidos expostos devem ser observados quanto a hipotensão, oligúria e hipercalemia — o lisinopril atravessa a placenta e já foi removido da circulação neonatal por diálise peritoneal. Para o **primeiro trimestre**, cita estudo epidemiológico retrospectivo sugerindo aumento do risco de má-formação, particularmente cardiovascular e do SNC. Fonte: bula do ZESTRIL (lisinopril, AstraZeneca), seção \"Uso durante a gravidez e lactação\".",
+    "lactation": "**Cautela — dado ausente, não segurança demonstrada.** A bula afirma que **não se sabe** se o lisinopril é excretado no leite humano, e pede cuidado ao prescrever a lactantes. Não contraindica. Fonte: bula do ZESTRIL (lisinopril, AstraZeneca)."
   },
   {
     "slug": "losartana-potassica",
@@ -2122,7 +2137,9 @@
     },
     "references": [
       "Metformin hydrochloride tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 4d3dbf6f-1c8a-4daa-8343-8cd8f64a65cd"
-    ]
+    ],
+    "pregnancy": "**Contraindicada na gravidez pela bula brasileira** — \"gravidez e lactação\" aparece como o primeiro item da lista de contraindicações, e o texto ao paciente repete que o medicamento não deve ser usado durante a gravidez. Registro deliberado do recorte: esta é a **posição da bula registrada no Brasil**, não uma leitura de diretriz; a conduta obstétrica em diabetes gestacional segue fonte própria e não foi consultada aqui. Fonte: bula do GLIFAGE (cloridrato de metformina, Merck), seções de contraindicações.",
+    "lactation": "**Contraindicada na amamentação pela bula brasileira** — o texto é categórico: \"este medicamento é contra-indicado a pacientes que estão amamentando\", e a lactação também consta da lista formal de contraindicações. Mesma ressalva de recorte da seção de gravidez. Fonte: bula do GLIFAGE (cloridrato de metformina, Merck)."
   },
   {
     "slug": "metildopa-alfa-metildopa",
@@ -2388,7 +2405,9 @@
       "Nifedipine — rótulo aprovado pelo FDA, DailyMed SPL setid acb493a3-b8f2-41a9-8ab2-550d97c4592a",
       "Nifedipina — Bula · Farmacam · 2019 · https://institucional.farmacam.com.br/wp-content/uploads/2023/12/Nifedipina-farmacam-2019-1.pdf",
       "Procardia XL (nifedipine) — bula FDA/DailyMed (múltiplas versões consultadas)"
-    ]
+    ],
+    "pregnancy": "**Contraindicada antes da 20ª semana** — o corte é explícito e consta das Contraindicações, não de uma advertência genérica. Depois da 20ª semana a bula não libera o uso: exige **avaliação individual muito cuidadosa do risco-benefício**, e só o considera se nenhuma outra opção estiver indicada ou se as demais foram ineficazes. Estudos em animais mostraram efeitos embriotóxicos, fetotóxicos e teratogênicos. Há relatos de aumento de asfixia perinatal, cesárea, prematuridade e retardo de crescimento intrauterino, sem que a bula consiga separar o efeito do fármaco do da hipertensão de base. **Alerta específico:** ao administrar nifedipino junto com **sulfato de magnésio intravenoso**, monitorar a pressão arterial pela possibilidade de queda excessiva, prejudicial à mãe e ao feto. Fonte: bula do ADALAT (nifedipino, Bayer), seções \"Contra-Indicações\", \"Advertências\" e \"Gravidez e Lactação\".",
+    "lactation": "**Suspender a amamentação se o tratamento for necessário.** O nifedipino **é eliminado no leite materno** e não há experiência sobre seus efeitos no lactente. A amamentação também aparece nominalmente entre as contraindicações do texto ao paciente. Fonte: bula do ADALAT (nifedipino, Bayer)."
   },
   {
     "slug": "nitroglicerina-trinitrato-de-glicerila",
@@ -2558,7 +2577,9 @@
       "Olmesartana para Hipertensão: como funciona e como prescrever · WeMeds · 2025 · https://portal.wemeds.com.br/olmesartana-para-hipertensao-como-prescrever/",
       "Bula para Profissionais - Olmesartana medoxomila · Accord Farma · https://accordfarma.com.br/bulas/bula_Olmesartana_medoxomila_Profissional.pdf",
       "Olmesartan medoxomil — bula FDA/DailyMed (múltiplas versões consultadas)"
-    ]
+    ],
+    "pregnancy": "**Contraindicada na gravidez, com categoria dupla: C no primeiro trimestre e D no segundo e terceiro.** A bula não tem experiência clínica em gestantes. O uso de fármacos que agem diretamente no sistema renina-angiotensina no **segundo e terceiro trimestres** foi associado a dano fetal e até morte. Determina que **mulheres em idade fértil sejam informadas** das consequências da exposição nesses trimestres e orientadas a relatar gravidez imediatamente; diagnosticada a gravidez, descontinuar o mais breve possível e substituir a medicação. Fonte: bula do BENICAR (olmesartana medoxomila, Daiichi Sankyo), itens 4 e 5.",
+    "lactation": "**Decisão do médico entre suspender a amamentação ou o fármaco.** A olmesartana é secretada em baixa concentração no leite de ratas lactantes; **não se sabe se é excretada no leite humano**. A bula pede que se pese a importância do medicamento para a mãe contra o potencial de eventos adversos no lactente. Fonte: bula do BENICAR (olmesartana medoxomila, Daiichi Sankyo)."
   },
   {
     "slug": "perindopril-argininaerbumina",
@@ -2741,7 +2762,9 @@
       "Resumo sobre Propranolol: indicações, farmacologia e mais · Estratégia MED · 2022 · https://med.estrategia.com/portal/conteudos-gratis/doencas/resumo-sobre-propranolol-indicacoes-farmacologia-e-mais/",
       "Bula Propranolol · Droga Raia · https://www.drogaraia.com.br/bulas/propranolol",
       "Inderal (propranolol) — bula FDA"
-    ]
+    ],
+    "pregnancy": "**Só usar se for essencial.** A bula não atribui letra de categoria de risco. Diz que não há evidência de teratogenicidade, mas que **os betabloqueadores reduzem a perfusão placentária**, o que pode resultar em morte fetal intrauterina, parto imaturo e parto prematuro. Descreve ainda **hipoglicemia e bradicardia no neonato e bradicardia no feto**, e risco aumentado de complicações cardíacas e pulmonares no neonato no período pós-natal. Fonte: bula do INDERAL (cloridrato de propranolol, AstraZeneca), seção \"Uso durante a gravidez e lactação\".",
+    "lactation": "**Amamentação não recomendada.** A bula generaliza para a classe: a maioria dos betabloqueadores, **principalmente os compostos lipofílicos** — o que inclui o propranolol —, passa para o leite materno, em quantidades variáveis; por isso a amamentação não é recomendada após a administração desses compostos. Fonte: bula do INDERAL (cloridrato de propranolol, AstraZeneca)."
   },
   {
     "slug": "protamina",
@@ -2949,7 +2972,9 @@
     },
     "references": [
       "Bula Rosuvastatina Cálcica · Novartis/ANVISA · https://portal.novartis.com.br/medicamentos/wp-content/uploads/2022/11/Bula-ROSUVASTATINA-CALCICA-Comprimido-revestido-Medico.pd"
-    ]
+    ],
+    "pregnancy": "**Categoria de risco X — contraindicada.** É a atribuição mais restritiva do acervo, e a bula estende a contraindicação para além da gestante: alcança **mulheres com potencial de engravidar que não estejam usando método contraceptivo apropriado**. A segurança na gravidez não foi estabelecida. Duas bulas independentes concordam. Comparação útil: a atorvastatina restringe a mulher em idade fértil por texto, mas **sem atribuir letra**; a rosuvastatina traz o X explícito. Fontes: bula profissional do ROSUCOR (rosuvastatina cálcica), item 4, e bula do CRESTOR (rosuvastatina cálcica, AstraZeneca).",
+    "lactation": "**Contraindicada na amamentação** — a lactação está nomeada na própria contraindicação do item 4, junto com a gravidez, e a segurança durante a lactação não foi estabelecida. Fontes: bula profissional do ROSUCOR (rosuvastatina cálcica) e bula do CRESTOR (rosuvastatina cálcica, AstraZeneca)."
   },
   {
     "slug": "sacubitrilvalsartana",
@@ -3138,7 +3163,9 @@
     "outcomes": {
       "Evidencia esvem": "Estudo ESVEM avaliou eficácia antiarrítmica de sotalol comparado a outros agentes em arritmias ventriculares, contribuindo para posicionamento atual na hierarquia terapêutica",
       "Evidencia sword alerta": "Estudo SWORD (d-sotalol puro, pós-IAM com disfunção de VE) foi interrompido precocemente por aumento de mortalidade — reforça que sotalol deve ser reservado a populações selecionadas e sob monitorização eletrocardiográfica rigorosa, evitando uso amplo pós-IAM"
-    }
+    },
+    "pregnancy": "**Categoria de risco B** — a mais permissiva entre os betabloqueadores do acervo, contra **D do atenolol** e C do metoprolol: betabloqueador não é classe homogênea na gestação. Ainda assim a bula não libera: não há estudos adequados e bem controlados, o sotalol **atravessa a placenta e é encontrado no líquido amniótico**, e só deve ser usado se o benefício potencial superar o risco potencial. Fonte: bula do SOTACOR (cloridrato de sotalol), seção de gravidez.",
+    "lactation": "**Decidir entre suspender a amamentação ou o fármaco.** O sotalol é excretado no leite de animais de laboratório e **sua presença no leite humano já foi relatada**. A bula pede que a decisão pese a importância do medicamento para a mãe contra o potencial de reações adversas no lactente. Fonte: bula do SOTACOR (cloridrato de sotalol)."
   },
   {
     "slug": "tafamidis",
@@ -3207,7 +3234,9 @@
       "Telmisartan tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 5743c58e-deab-ac93-e063-6294a90ac1eb",
       "Telmisartan — resumo das características do produto (EMA), consultado para a orientação europeia de ajuste renal",
       "ONTARGET Investigators. Telmisartan, ramipril, or both in patients at high risk for vascular events. N Engl J Med. 2008;358(15):1547-1559. DOI: 10.1056/NEJMoa0801317"
-    ]
+    ],
+    "pregnancy": "**Não iniciar na gravidez; não recomendada no primeiro trimestre e contraindicada no segundo e terceiro** — categoria de risco **C no primeiro trimestre e D no segundo e terceiro**. Diagnosticada a gravidez, interromper imediatamente e iniciar terapia alternativa. Estudos pré-clínicos com telmisartana **não indicaram efeito teratogênico**, mas em doses tóxicas demonstraram fetotoxicidade e risco ao desenvolvimento pós-natal da prole. Em humanos, a exposição a BRA no segundo e terceiro trimestres induz **fetotoxicidade** (redução da função renal, oligodrâmnio, retardo da ossificação) e **toxicidade neonatal** (falência renal, hipotensão, hipercalemia). Pacientes que planejem engravidar devem ter o tratamento substituído por anti-hipertensivo com perfil de segurança estabelecido na gestação. Ressalva de fonte, deliberada: o texto profissional obtido é o da **associação fixa telmisartana + hidroclorotiazida**, que separa os parágrafos por componente — o trecho acima é o do componente telmisartana; as letras C e D são atribuídas à associação. A bula da telmisartana isolada, em formato resumido, apenas registra a gravidez como contraindicada. Fontes: bula profissional do MICARDIS HCT (telmisartana + hidroclorotiazida, Boehringer Ingelheim), itens 4 e 5, e bula do MICARDIS (telmisartana).",
+    "lactation": "**Contraindicada.** Não se sabe se a telmisartana é excretada no leite materno humano; **estudos em animais mostraram excreção no leite**. Mesma ressalva de fonte da seção de gravidez: o texto profissional é o da associação com hidroclorotiazida, e nela pesa também o fato de **as tiazidas serem excretadas no leite humano e poderem inibir a lactação** — esse segundo motivo é do componente diurético, não da telmisartana. Fontes: bula profissional do MICARDIS HCT (telmisartana + hidroclorotiazida, Boehringer Ingelheim) e bula do MICARDIS (telmisartana)."
   },
   {
     "slug": "tenecteplase",
@@ -3531,7 +3560,9 @@
       "Verapamil hydrochloride — rótulo aprovado pelo FDA, DailyMed SPL setid df79ee3a-f0ed-1cc7-e053-2995a90af97f",
       "Bula do profissional de saúde de DILACORON (cloridrato de verapamil) 80 mg, Abbott Laboratórios do Brasil Ltda. — seção de posologia. Documento obtido no site do detentor do registro.",
       "Bula de DILACORON (cloridrato de verapamil), solução injetável — posologia endovenosa e uso pediátrico, versão brasileira."
-    ]
+    ],
+    "pregnancy": "**Só quando absolutamente necessário.** A bula registra que **não há dados adequados** do uso na gravidez e que o verapamil **atravessa a barreira placentária — pode ser medido no cordão umbilical**. Não atribui letra de categoria de risco. Fonte: bula do DILACORON (cloridrato de verapamil, Abbott), seção \"Uso em idosos, crianças e outros grupos de risco\".",
+    "lactation": "**Interromper a amamentação.** A bula é afirmativa, não condicional: o verapamil **é excretado no leite humano** e a amamentação deve ser interrompida durante a terapia. Fonte: bula do DILACORON (cloridrato de verapamil, Abbott)."
   },
   {
     "slug": "vericiguate",
