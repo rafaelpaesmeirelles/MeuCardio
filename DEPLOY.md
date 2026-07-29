@@ -1,11 +1,21 @@
-# Colocar o MeuCardio no ar
+# Colocar a Corvia no ar
 
 Guia para o seu servidor já contratado, com o domínio já registrado.
+
+> **Sobre o nome `meucardio` que aparece adiante neste arquivo.** Ele sobrou do
+> nome anterior do produto em lugares onde **não é texto de marca, e sim
+> identificador real em uso**: o diretório do projeto no servidor
+> (`/opt/meucardio`), o usuário e o banco do PostgreSQL (`POSTGRES_USER` e
+> `POSTGRES_DB`) e o prefixo dos dumps gerados por `infra/backup/backup.sh`.
+> **Trocar esses valores aqui quebra os comandos** — renomear o banco é migração
+> de dado, não edição de documentação. Estão listados como resíduo conhecido no
+> `CLAUDE.md`; enquanto não forem migrados de fato, este arquivo tem de
+> descrevê-los como são.
 
 ## 1. Antes de começar
 
 - **DNS**: crie um registro **A** apontando seu domínio (ou subdomínio, ex.
-  `meucardio.med.br`) para o **IP do servidor**. Sem isso o
+  `corvia.med.br`) para o **IP do servidor**. Sem isso o
   Caddy não consegue emitir o certificado HTTPS.
 - **Portas 80 e 443 liberadas** no firewall do servidor/provedor.
 - **Chave da OpenAI** em mãos, se for ligar a IA clínica agora.

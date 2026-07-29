@@ -1,4 +1,4 @@
-# MeuCardio — API
+# Corvia — API
 
 FastAPI + PostgreSQL + Redis.
 

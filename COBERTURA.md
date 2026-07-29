@@ -1,4 +1,4 @@
-# Cobertura da base científica — MeuCardio
+# Cobertura da base científica — Corvia
 
 Estado em 28/07/2026. Todos os números são medidos diretamente sobre os arquivos do
 repositório — `theme:` do front matter em `content/`, e os `metadados.json` das outras

@@ -1,7 +1,9 @@
-# MeuCardio — Serviço de Cardiologia
+# Corvia — Guia de Cardiologia
 
-Plataforma clínica do Serviço de Cardiologia da [hospital não vinculado — remover ou ajustar].
-Responsável técnico: Dr. Rafael Paes Meirelles — CRM-SP 138266 · RQE 134798.
+Plataforma independente de apoio à decisão clínica em Cardiologia, **sem vínculo
+institucional com nenhum hospital ou serviço**. https://corvia.med.br
+Idealizador, desenvolvedor e responsável técnico: Dr. Rafael Paes Meirelles —
+CRM-SP 138266 · RQE 134798.
 
 ## O que já roda
 

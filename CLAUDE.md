@@ -338,21 +338,28 @@ Processo, igual para as seis:
   descreve.
 
 ## O que falta fazer
-Nada está pela metade: tudo que foi construído está commitado, no ar e testado
-em produção. As pendências abaixo são trabalho novo ou decisão do Rafael.
+Quase nada está pela metade, e as exceções estão nomeadas: a **Tarefa 9** tem
+backend sem nenhuma tela que o consuma, e há conteúdo **carregado no banco e
+ainda não publicado**, esperando o aval do Rafael — 6 fluxogramas e o registro
+da colchicina. Todo o resto que foi construído está commitado, no ar e testado
+em produção. As demais pendências são trabalho novo ou decisão do Rafael.
 
 ### Bloqueado, esperando o Rafael
-1. **Colchicina na pericardite aguda** (`evidencias`, slug
-   `colchicina-adjuvante-na-pericardite-aguda`) — **único item fora do ar.**
-   O registro se apoia na diretriz brasileira de 2013 e classifica como IIa
-   ("pode ser considerada"). A ESC 2015 de doenças do pericárdio, posterior,
-   usa linguagem de Classe I: colchicina em primeira linha como adjuvante a
-   AAS/AINE, 0,5 mg/dia abaixo de 70 kg ou 0,5 mg 2x/dia a partir de 70 kg, por
-   3 meses. Duas fontes independentes convergem na classe, mas a extração do
-   texto integral devolveu IIb/B, conflitando — por isso não registrei nem
-   classe nem nível. **Falta conferir na tabela de recomendações da diretriz.**
-   O erro atual é clinicamente relevante na direção ruim: subestimar leva a não
-   prescrever colchicina onde ela reduz recorrência.
+1. **Colchicina na pericardite aguda — RESOLVIDO em 29/07/2026, aguardando só a
+   publicação.** (`evidencias`, slug `colchicina-adjuvante-na-pericardite-aguda`.)
+   O bloqueio era a classe: o registro vinha da diretriz brasileira de 2013 com
+   IIa/B, e a extração da ESC 2015 devolvia resultado conflitante. A **ESC 2025
+   de miocardite e pericardite** substitui a de 2015 e encerra a dúvida —
+   Recommendation Table 10: *"Colchicine is recommended as first-line therapy in
+   patients with pericarditis as an adjunct to aspirin/NSAID or corticosteroid
+   therapy to reduce subsequent recurrences"*, **Classe I, nível A**. O registro
+   está atualizado e `revisado`, com `published = false` esperando o aval.
+   **Como a tabela foi lida, porque vale para as próximas diretrizes:** o PDF do
+   Oxford Academic usa fonte subset **sem `/ToUnicode`**, e o `ler_pdf.py` avisa
+   que o texto é ilegível — corretamente. O mapa glifo→caractere é um
+   deslocamento constante de 27, e `.claude/ferramentas/decodifica_cid_offset.py`
+   converte só os trechos cifrados. Confirmar o offset contra um texto conhecido
+   antes de confiar na saída: offset errado produz texto plausível e errado.
 2. **Credencial VIDAAS de homologação/API** — pedida, sem retorno até
    28/07/2026. Bloqueia a assinatura digital do telediagnóstico e a Tarefa 4
    inteira. Regra que não se flexibiliza: **nunca simular a assinatura.** A rota
@@ -365,10 +372,29 @@ em produção. As pendências abaixo são trabalho novo ou decisão do Rafael.
    live, e vice-versa.
 
 ### Trabalho novo
-4. **Medicamentos — 99 carregados, nenhum publicado.** A seção deixou de ser
-   zerada: `extrair_drugs_de_markdown.py` reconstruiu os campos estruturados a
-   partir dos 100 documentos de `content/Farmacologia`, e os 99 estão no banco
-   com `review_status: pendente_revisao` e `published: false`. O ZIP original
+4. **Medicamentos — 90 no ar, todos `pendente_revisao`, 17 com marcação de
+   verificação.** Conferido item a item em 29/07/2026 contra o banco:
+   `total 100 · publicados 90 · não publicados 10`, e o conjunto publicado é
+   **exatamente** o dos 90 slugs do `medicamentos/metadados.json`. Ou seja, não
+   há sobra da base antiga no ar — os órfãos são justamente os 10 que **não**
+   estão publicados.
+   - **`/api/drugs`, `/compare` e `/{slug}` filtram por `published`, não por
+     `review_status`.** Por isso os 17 verbetes que carregam
+     `VERIFICAÇÃO HUMANA NECESSÁRIA` estão visíveis a qualquer assinante hoje.
+     Verificado buscando os slugs marcados pela rota pública — ela devolve 200
+     para os 17. **Decisão pendente do Rafael:** despublicar só esses 17,
+     despublicar os 90, ou manter e priorizar a verificação.
+   - **Os carregadores fazem upsert por slug e nunca apagam.** Verbete removido
+     do JSON continua no banco como linha órfã despublicada — é a origem exata
+     dos 10: `metoprolol-succinato`, `metoprolol-succinato-de-liberacao-prolongada`,
+     `metoprolol-succinato-e-tartrato`, `nitratos-nitroglicerina-dinitratomononitrato-de-isossorbida`,
+     `nitroglicerina-dinitrato-de-isossorbida`, `prasugrel-cloridrato`,
+     `sotalol-cloridrato`, `trimetazidina-dicloridrato`, `verapamil-diltiazem` e
+     `warfarina`, todos duplicatas fundidas. **Risco latente:** qualquer rotina
+     que publique "tudo" ressuscita esses fantasmas, com apresentações que não
+     conferem. Falta uma varredura de órfãos, e ela não existe hoje.
+   `extrair_drugs_de_markdown.py` reconstruiu os campos estruturados a
+   partir dos 100 documentos de `content/Farmacologia`. O ZIP original
    (`knowledge/medicamentos/*.md`, que o `popular_drugs.py` lê) **não existe
    mais neste servidor** — procurado em todo o sistema de arquivos, dentro de
    todo zip/tar e no histórico completo do git. Não procurar de novo.
@@ -382,13 +408,17 @@ em produção. As pendências abaixo são trabalho novo ou decisão do Rafael.
    `sbp/dbp_reduction_mmhg` e `commercial_presentations` — os três exigem
    escolha de revisor ou bula/ANVISA, e um extrator que os adivinhasse
    produziria o dado sem procedência que a Fase B passou semanas removendo.
-5. **Ampliar os fluxogramas.** 16 publicados (SCA, FA, IC, HP, síncope, TEP,
+5. **Ampliar os fluxogramas.** **17 publicados** (SCA, FA, IC, HP, síncope, TEP,
    estenose aórtica, diabetes, gravidez, DAP, CDI, choque cardiogênico,
    endocardite, síndrome aórtica aguda, cardiomiopatia hipertrófica, hipertensão
-   arterial), todos em árvore de decisão. Formato obrigatório: ver seção acima.
-   Ainda sem fluxograma: regurgitação mitral, miocardite, amiloidose cardíaca,
-   bradiarritmia e marcapasso, taquicardia de QRS largo e TV, síndrome
-   coronariana crônica, pericardite, cardiopatia congênita do adulto,
+   arterial, parada cardiorrespiratória), todos em árvore de decisão. Formato
+   obrigatório: ver seção acima.
+   **Mais 6 escritos, validados e carregados no banco em 29/07/2026, ainda
+   `published = false` esperando o aval**: síndrome coronariana crônica (ESC
+   2024), regurgitação mitral (ESC/EACTS 2025), bradiarritmia e marcapasso
+   (ESC 2021), taquicardia de QRS largo (ESC 2019), pericardite aguda e
+   miocardite aguda (ESC 2025).
+   Ainda sem fluxograma: amiloidose cardíaca, cardiopatia congênita do adulto,
    cardio-oncologia, avaliação perioperatória, febre reumática, dislipidemia.
 6. **Tarefa 4 do briefing — documentos com assinatura digital.** Existe base
    parcial (`prescriptions.py`, `documents.py`), mas **não há geração de PDF**
@@ -398,6 +428,37 @@ em produção. As pendências abaixo são trabalho novo ou decisão do Rafael.
 7. **A busca não cobre as frentes novas.** `app/api/search.py` consulta só a
    tabela `documents`. Galeria, exames, evidências e estudos são invisíveis
    para a busca — 88 itens publicados que ninguém encontra pesquisando.
+
+### Estado das tarefas 8 a 26 do briefing 2
+Medido em 29/07/2026 direto sobre o código e o `git log`, não sobre o que este
+arquivo dizia antes. **Concluída** aqui significa "existe rota + tela + conteúdo
+e responde"; não significa auditada.
+
+| # | Tarefa | Estado |
+|---|---|---|
+| 8 | Checador de interação medicamentosa | **Não começou.** Só o campo `interactions` em `models/drug.py` e a aba no comparador — não há cruzamento fármaco × fármaco. |
+| 9 | Alerta de atualização de diretriz | **Backend pronto, sem tela.** `api/guidelines.py` tem entidade, `/impacto`, marcar substituída, `/meus-alertas` e envio. **Nada no frontend consome `/meus-alertas`** — o alerta existe e o médico não vê. |
+| 10 | Indicadores pessoais | **Concluída.** `/api/indicadores/meus` + `Indicadores.tsx`. |
+| 11a | Casos clínicos interativos | **Não começou.** |
+| 11b | Trilhas de estudo | **Concluída.** 3 trilhas, `/api/trilhas` com progresso, `Trilhas.tsx`/`Trilha.tsx`. |
+| 12 | Material educativo para o paciente | **Concluída.** 4 itens, `/api/material-paciente` com PDF. |
+| 13 | Leitura assistida de ECG (v1) | **Não começou.** |
+| 13b | Notificação ANVISA | **Não começou.** Sem dossiê, sem arquivo de gerenciamento de risco (ISO 14971), sem IFU/rotulagem. |
+| 15 | Modo Emergência | **Concluída**, inclusive o offline: cache em `localStorage` com aviso "cópia de \<data\>". 10 protocolos. |
+| 16 | Modo Apresentação/Ensino | **Concluída.** `ExportarApresentacao` + `/api/biblioteca/{slug}/apresentacao`, com anotação do médico. |
+| 18 | Checklist de alta | **Concluída.** 3 checklists, aplicações com marcação item a item. |
+| 19 | Contraindicação por condição especial | **Não começou.** |
+| 20 | Roteiro de conversa difícil | **Concluída** como conteúdo, em `content/Comunicação_clínica/`. |
+| 21 | Painel — segunda passada | **Não começou.** `Painel.tsx` ainda é lista plana de 16 funções, sem agrupamento por tema e sem Emergência, Apresentação, Checklist, Trilhas, Indicadores, Cursos e Material do paciente. |
+| 22 | Verificação com mais autonomia | **Em andamento.** Restam **66 marcações**: 48 em `content/` e 18 em `medicamentos/` (17 registros). Zero nas quatro frentes JSON. |
+| 23 | Procurar o arquivo antigo de Medicamentos | **Concluída, resultado negativo.** Não existe. Base reconstruída de `content/Farmacologia` — ver item 4. |
+| 24 | Cursos parceiros | **Concluída no código.** `partner_course`, `/api/cursos` (assinar, material, admin, resumo financeiro), volume `cursofiles`. Sem parceiro real cadastrado. |
+| 25 | — | **Não existe** em nenhum briefing nem em nota. |
+| 26 | Destaque de curso no Painel | **Concluída.** `CursoDestaque` no Painel + `/api/cursos/destaque`. |
+
+**Gargalo comum a 8 e 19:** as duas dependem da base de Medicamentos, que está
+no ar mas não revisada (item 4). Construir o checador antes disso é cruzar dados
+que ninguém conferiu.
 
 ### No fim da fila: preço, marca e relatório de prescrição
 Três tarefas pedidas pelo Rafael em 28/07/2026, aprovadas para o **fim** da
@@ -514,9 +575,11 @@ não refazer.
        também é `mode: "subscription"` e cairia no mesmo caminho da assinatura
        da Corvia, sobrescrevendo o estado dela. Precisa de discriminação por
        metadata, não por `mode`.
-    3. **Trilhas de estudo e casos clínicos não existem** — a Tarefa 11 não foi
-       construída. O vínculo pedido depende dela, então ou a 24 entra depois da
-       11, ou o vínculo nasce como referência opcional que fica inerte até lá.
+    3. **Metade da Tarefa 11 existe agora.** As trilhas de estudo (11b) foram
+       construídas — 3 trilhas, `/api/trilhas`, com progresso. **Casos clínicos
+       interativos (11a) continuam não existindo.** Então o vínculo curso →
+       trilha já pode ser real; o vínculo curso → caso clínico segue como
+       referência opcional, inerte até a 11a.
     Régua que vale aqui como no resto do produto: **índice de aprovação é
     afirmação de terceiro.** Ou o parceiro fornece por escrito e o número
     aparece atribuído a ele, ou não aparece. Não inventar, não arredondar, não
