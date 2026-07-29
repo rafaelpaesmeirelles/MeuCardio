@@ -164,15 +164,21 @@
     ],
     "pregnancy": "Classe D — uso apenas em casos refratários",
     "dosing": {
-      "ataque ev": "1 ampola (150mg) em 100mL SG5%, infundida em 10-30 min",
-      "manutencao ev primeiras 6h": "1 mg/min",
-      "manutencao ev 18h seguintes": "0,5 mg/min",
-      "diluicao pratica": "SG5% 250mL com 6 ampolas (900mg) — infusão de 16,6 mL/h nas primeiras 6h, seguida de 8,3 mL/h nas 18h seguintes",
-      "dose impregnacao total": "8-10g de amiodarona no total; dose máxima diária de 1200-1800 mg/dia exigiria 1 semana de infusão contínua para impregnação completa por via EV, mas geralmente combina-se com dose oral elevada seguida de redução para manutenção",
-      "criancas ataque": "10-15 mg/kg/dia VO, em 1-2 doses, por 4-14 dias",
-      "gravidez uso refratario": "Dose máxima de 200 mg/dia, com monitorização tireoidiana materna e neonatal frequente",
-      "administracao": "Sempre em frascos de vidro ou poliolefina; preferencialmente acesso central (risco de flebite periférica)",
-      "fonte": "Afya Cardiologia — Como eu uso Amiodarona ; Manual Farmacêutico Einstein\n\nVERIFICAÇÃO HUMANA NECESSÁRIA quanto à **procedência**: a posologia acima se apoia em Afya e manual farmacêutico — agregador ou portal de conteúdo, não documento primário. Isso **não afirma que os números estejam errados**; afirma que não são rastreáveis à bula registrada nem a diretriz, que é o critério deste acervo. Substituir a fonte e reconferir os valores antes de publicar."
+      "ev ataque": "**5 mg/kg em 250 mL de glicose 5%**, infundidos em **20 minutos a 2 horas**. Pode ser repetido **2 a 3 vezes em 24 horas**, com a velocidade ajustada à evolução clínica.",
+      "ev por que a infusao continua e obrigatoria": "O efeito terapêutico aparece **nos primeiros minutos e decresce progressivamente** — por isso a bula determina instituir infusão contínua depois do ataque, e não tratar a dose de ataque como suficiente.",
+      "ev manutencao": "**10 a 20 mg/kg/dia** (geralmente 600 a 800 mg/24 h, até 1200 mg/24 h) em 250 mL de glicose 5%, por alguns dias. **O tratamento oral de manutenção deve ser iniciado já no primeiro dia da infusão.**",
+      "ev em bolus": "**5 mg/kg**, com a injeção **nunca em menos de 3 minutos**. Não misturar com outra preparação na mesma seringa.",
+      "fibrilacao ventricular resistente": "Na FV resistente à ressuscitação cardiopulmonar por choque: primeira dose de **300 mg (ou 5 mg/kg)** diluída em **20 mL de glicose 5%**, em bolus IV. Dose adicional de **150 mg (ou 2,5 mg/kg)** IV pode ser considerada se a FV persistir.",
+      "diluicao regras que nao sao detalhe": "**Não usar concentração inferior a 600 mg/L.** Diluir **exclusivamente em glicose 5%** — não em salina. Conservar a solução diluída em temperatura ambiente (15 a 30 °C), ao abrigo da luz, e administrar **dentro de 24 horas**. **Não misturar nenhum outro produto** no líquido de infusão.",
+      "equipo": "Equipos com plastificante DEHP liberam o plastificante na solução em presença de amiodarona. A diluição final deve ser administrada **preferencialmente por sistemas sem DEHP**.",
+      "via": "**Somente intravenosa** na apresentação injetável; **somente oral** na apresentação em comprimido. A bula registra que não há estudos por vias não recomendadas.",
+      "oral ataque": "**600 a 1000 mg ao dia durante 8 a 10 dias.**",
+      "oral manutencao": "**Determinar a menor dose eficaz, entre 100 e 400 mg ao dia.** Pela meia-vida longa, a bula admite **dias alternados** (200 mg em dias alternados quando a dose recomendada seria 100 mg/dia) e o esquema de **\"janela terapêutica\"** — 5 dias de uso com 2 dias de intervalo.",
+      "oral modo de usar": "Comprimidos inteiros, com líquido suficiente, **durante ou após as refeições**. **Não partir.**",
+      "dose esquecida": "Administrar assim que possível; se estiver perto do horário seguinte, esperar e manter o intervalo. **Nunca administrar duas doses juntas.**",
+      "pediatria e gravidez": "VERIFICAÇÃO HUMANA NECESSÁRIA — **nenhuma das duas bulas brasileiras conferidas cobre estes usos**: a injetável não traz posologia pediátrica, e a do comprimido é declaradamente **USO ADULTO**. Os valores que constavam aqui (ataque de 10 a 15 mg/kg/dia por via oral em crianças, e teto de 200 mg/dia na gravidez) **não têm fonte confirmada** e não devem ser prescritos por este verbete até virem de diretriz pediátrica ou de bula que os registre.",
+      "sobre o esquema de 1 mg min": "O esquema que constava aqui — 150 mg em 100 mL em 10 a 30 min, seguido de 1 mg/min por 6 h e 0,5 mg/min por 18 h, com a diluição prática de 6 ampolas em 250 mL — **não consta de nenhuma das bulas brasileiras conferidas**. É o esquema de protocolo de emergência, e sua procedência não foi confirmada nesta sessão. Fica registrado aqui como nota, **não como posologia deste verbete**: o que a bula registra está nos campos acima.",
+      "fonte": "Duas bulas brasileiras conferidas na íntegra: **injetável** — cloridrato de amiodarona, Fresenius Kabi Brasil Ltda., solução injetável, bula do profissional de saúde, item 8; **oral** — ATLANSIL (Sanofi-Aventis Farmacêutica Ltda.), comprimidos de 100 mg e 200 mg, seção de posologia. **A marcação de procedência está resolvida para as vias EV e oral no adulto**; segue marcado apenas o uso pediátrico e na gravidez, que nenhuma das duas bulas cobre."
     },
     "notes": {
       "Farmacocinetica": "Altamente lipofílica, exigindo dose de ataque; meia-vida média de 58 dias (variação 15-142 dias); início de ação EV em 1-2h, VO em 2-3 dias"
