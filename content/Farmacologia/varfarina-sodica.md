@@ -3,8 +3,8 @@ title: "Varfarina sódica"
 slug: varfarina-sodica
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
-source_refs: ["Warfarin sodium tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 541c9a70-adaf-4ef3-94ba-ad4e70dfa057", "Otto CM, Nishimura RA, Bonow RO, et al. 2020 ACC/AHA Guideline for the Management of Patients With Valvular Heart Disease. Circulation. 2021;143(5):e72-e227. DOI: 10.1161/CIR.0000000000000923"]
+review_status: revisado
+source_refs: ["Warfarin sodium tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 541c9a70-adaf-4ef3-94ba-ad4e70dfa057", "Bula do MAREVAN (varfarina sódica) — seção de contraindicações, conferida em 29/07/2026", "Otto CM, Nishimura RA, Bonow RO, et al. 2020 ACC/AHA Guideline for the Management of Patients With Valvular Heart Disease. Circulation. 2021;143(5):e72-e227. DOI: 10.1161/CIR.0000000000000923"]
 legacy_source: "Fusão de dois documentos do mesmo fármaco em grafias diferentes: warfarina.md (do banco de medicamentos, itens 12-13) e varfarina-sodica.md. Mantido o slug varfarina-sodica porque VARFARINA SÓDICA é a denominação usada no registro brasileiro e na lista de preços da CMED. O primeiro trazia farmacogenética, nomes comerciais, dose inicial e efeitos adversos específicos da classe; o segundo, metas de INR por indicação, manejo do INR supraterapêutico, contraindicações e uso na gravidez."
 ---
 
@@ -86,7 +86,23 @@ O sangramento é o risco principal, da equimose leve à hemorragia grave, intrac
 Gestante com prótese valvar mecânica e alto risco tromboembólico pode usar varfarina quando o benefício supera claramente o risco — decisão individual, tomada com a paciente informada do risco fetal.
 
 ## Lactacao
-Não é excretada no leite materno, sendo compatível com a amamentação.
+**Duas fontes registradas discordam, e a diferença muda a conduta — por isso as
+duas estão aqui, atribuídas.**
+
+**Rótulo do FDA e literatura internacional:** a varfarina **não é excretada no
+leite materno**, e o aleitamento é considerado compatível com o tratamento.
+
+**Bula brasileira do MAREVAN:** a **lactação consta entre as contraindicações
+formais**, na mesma lista que gravidez, hemofilia e aneurisma cerebral ou
+aórtico — sem ressalva nem justificativa no texto.
+
+**Como ler isso.** Não é erro de transcrição de nenhum dos lados: é divergência
+real entre a rotulagem brasileira e a internacional. O verbete de Medicamentos
+desta plataforma registra a contraindicação da bula brasileira, porque é o
+documento que vale para quem prescreve no Brasil; este documento registra as
+duas. Quem for decidir sobre uma puérpera anticoagulada precisa saber que a
+bula do produto que ela vai comprar **contraindica**, mesmo que a evidência
+farmacocinética internacional aponte para compatibilidade.
 
 ## Desafios praticos
 Monitorização laboratorial frequente, muitas interações medicamentosas e alimentares (alimentos ricos em vitamina K) e grande variabilidade individual de resposta.
