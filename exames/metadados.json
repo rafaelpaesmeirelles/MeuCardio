@@ -870,5 +870,29 @@
       "anticoagulação",
       "esc 2024"
     ]
+  },
+  {
+    "slug": "uacr-e-tfge-no-rastreio-de-doenca-renal-cronica-no-diabetes",
+    "name": "UACR e TFGe no rastreio de doença renal crônica em paciente com diabetes",
+    "category": "laboratorial",
+    "theme": "Diabetes e cardiologia",
+    "what_it_measures": "Razão albumina-creatinina em amostra isolada de urina (UACR) e taxa de filtração glomerular estimada por creatinina (TFGe, equação CKD-EPI) — dosadas em conjunto porque a classificação de risco da doença renal crônica (DRC) exige as duas dimensões, não uma isolada: TFGe ≥60 mL/min/1,73m² só configura DRC se houver albuminúria ou outra evidência de dano renal; TFGe <60 mL/min/1,73m² (estágios G3-G5) já basta para confirmar DRC.",
+    "reference_range": "Tabela de estadiamento KDIGO (Tabela 11 da diretriz), por TFGe: G1 ≥90, G2 60-89, G3a 45-59, G3b 30-44, G4 15-29, G5 <15 mL/min/1,73m² — TFGe <15 é chamado de 'falência renal'. Por UACR: A1 <3 mg/mmol (<30 mg/g), A2 3-30 mg/mmol (30-300 mg/g), A3 >30 mg/mmol (>300 mg/g). O cruzamento das duas classificações numa grade colorida define o risco de precisar de terapia renal substitutiva: verde é risco baixo, amarelo é risco moderadamente aumentado (~5x), laranja é alto (~20x) e vermelho é muito alto (~150x), sempre em relação ao risco basal de 0,04 por 1000 pacientes-ano.",
+    "indications": "Rastreio de DRC é recomendado pelo menos anualmente em todo paciente com diabetes (tipo 1 ou tipo 2), por amostra de urina isolada medindo UACR mais TFGe por CKD-EPI. Pela Recommendation Table 24 da diretriz ESC 2023 de doença cardiovascular em diabetes, uma vez diagnosticada a DRC: meta de pressão arterial ≤130/80 mmHg é recomendada (Classe I, Nível A) para reduzir risco cardiovascular e albuminúria; meta individualizada de HbA1c entre 6,5% e 8,0%, com alvo <7,0% quando possível, é recomendada (Classe I, Nível A); a dose máxima tolerada de IECA ou BRA é recomendada (Classe I, Nível A); e inibidor de SGLT2 é recomendado (Classe I, Nível A) no paciente com diabetes tipo 2 e DRC com TFGe ≥20 mL/min/1,73m², para reduzir risco cardiovascular e de falência renal.",
+    "interpretation": "UACR é marcador precoce de nefropatia e prediz risco de falência renal e de doença cardiovascular de forma independente da TFGe — por isso os dois exames respondem perguntas diferentes e não substituem um ao outro. Mudança na UACR é usada como desfecho substituto em ensaios de nefroproteção, mas evidência mais definitiva de redução do risco de falência renal geralmente exige desfecho categórico baseado em queda sustentada de pelo menos 40% na TFGe.",
+    "limitations": "TFGe isolada ≥60 mL/min/1,73m² não configura DRC na ausência de albuminúria ou outra evidência de dano renal — um erro comum é interpretar TFGe normal como exclusão de DRC sem checar a UACR. Em DRC avançada (TFGe <30 mL/min/1,73m²), a própria HbA1c fica menos confiável, e automonitorização ou monitorização contínua de glicose passam a ajudar mais no controle glicêmico seguro. Metformina, quando usada, exige ajuste de dose acima de TFGe 30 mL/min/1,73m² e em geral deve ser suspensa abaixo desse valor, pelo risco de acidose láctica por acúmulo do fármaco.",
+    "source_refs": [
+      "2023 ESC Guidelines for the management of cardiovascular disease in patients with diabetes. Eur Heart J. 2023;44(39):4043-4140. DOI: 10.1093/eurheartj/ehad192 — seção 9.1 (Chronic kidney disease definitions, staging, and screening), Tabela 11 (KDIGO staging by glomerular filtration rate and urinary albumin-to-creatinine ratio categories) e Recommendation Table 24 (Recommendations for patients with chronic kidney disease and diabetes)."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "uacr",
+      "albuminúria",
+      "tfge",
+      "doença renal crônica",
+      "diabetes",
+      "kdigo"
+    ]
   }
 ]
