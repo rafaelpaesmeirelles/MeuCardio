@@ -286,5 +286,41 @@
     "conduta": "A bula desaconselha o uso concomitante. Diferente dos inibidores moderados, aqui a associação importa.",
     "fonte": "Bula do ELIQUIS (apixabana, Bristol-Myers Squibb Farmacêutica S.A.), seção de interações medicamentosas. É a bula do PACIENTE — a do profissional não foi obtida.",
     "review_status": "revisado"
+  },
+  {
+    "slug": "rivaroxabana-inibidor-potente-cyp3a4-e-pgp",
+    "farmacos": [
+      "rivaroxabana"
+    ],
+    "classe_oposta": "inibidor potente de CYP3A4 E de glicoproteína P — antimicótico azólico sistêmico (cetoconazol) ou inibidor de protease do HIV (ritonavir)",
+    "gravidade": "grave",
+    "efeito": "Redução da depuração hepática e renal, com aumento significativo da exposição. Medido: cetoconazol 400 mg/dia elevou a AUC da rivaroxabana em **2,6 vezes** e a Cmáx em 1,7; ritonavir 600 mg 2x/dia elevou a AUC em **2,5 vezes** e a Cmáx em 1,6 — ambos com elevação significativa do efeito farmacodinâmico.",
+    "conduta": "A bula declara que a rivaroxabana **não é recomendada** em quem recebe tratamento sistêmico com azólico ou inibidor de protease do HIV.",
+    "fonte": "Bula do profissional do XARELTO (rivaroxabana, Bayer S.A.), seção de interações medicamentosas, consultada no bulário BulasMed, que republica o texto registrado. O PDF do fabricante é cifrado e não pôde ser lido diretamente — ver limites documentados em .claude/ferramentas/ler_pdf.py.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rivaroxabana-inibidor-de-uma-via-so",
+    "farmacos": [
+      "rivaroxabana"
+    ],
+    "classe_oposta": "inibidor potente de apenas UMA das vias (CYP3A4 ou glicoproteína P) — claritromicina, eritromicina",
+    "gravidade": "leve",
+    "efeito": "Aumento de menor extensão. Medido: claritromicina 500 mg 2x/dia elevou a AUC em 1,5 vez e a Cmáx em 1,4 — aumento **próximo da variabilidade normal e considerado clinicamente irrelevante** pela bula; eritromicina 500 mg 3x/dia elevou AUC e Cmáx em 1,3 vez.",
+    "conduta": "Sem conduta específica na bula. O contraste com o registro acima é o ponto: **inibir as duas vias importa; inibir uma só, não**.",
+    "fonte": "Bula do profissional do XARELTO (rivaroxabana, Bayer S.A.), seção de interações medicamentosas, consultada no bulário BulasMed, que republica o texto registrado. O PDF do fabricante é cifrado e não pôde ser lido diretamente — ver limites documentados em .claude/ferramentas/ler_pdf.py.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rivaroxabana-digoxina",
+    "farmacos": [
+      "rivaroxabana",
+      "digoxina"
+    ],
+    "gravidade": "leve",
+    "efeito": "**Nenhuma interação farmacocinética mútua**, apesar de a digoxina ser substrato de glicoproteína P. O mesmo vale, pela bula, para midazolam e atorvastatina.",
+    "conduta": "Nenhum ajuste. Registrado como interação ausente porque a suposição contrária é frequente — 'os dois passam pela gp-P, logo interagem' — e levaria a reduzir dose sem motivo.",
+    "fonte": "Bula do profissional do XARELTO (rivaroxabana, Bayer S.A.), seção de interações medicamentosas, consultada no bulário BulasMed, que republica o texto registrado. O PDF do fabricante é cifrado e não pôde ser lido diretamente — ver limites documentados em .claude/ferramentas/ler_pdf.py.",
+    "review_status": "revisado"
   }
 ]
