@@ -529,5 +529,30 @@
       "comunicação interatrial",
       "shunt"
     ]
+  },
+  {
+    "slug": "teste-genetico-em-cardiomiopatias",
+    "name": "Teste genético (painel de sequenciamento de próxima geração)",
+    "category": "laboratorial",
+    "theme": "Cardiomiopatias",
+    "what_it_measures": "Sequenciamento de próxima geração (NGS) de painel de genes associados a cardiomiopatias, à procura de variante patogênica ou provavelmente patogênica (P/LP) — sobretudo genes sarcoméricos, mas também genes de doença de depósito, mitocondriais e de síndromes malformativas, conforme o fenótipo. Na cardiomiopatia hipertrófica, cerca de metade dos casos tem padrão de herança autossômica dominante por variante sarcomérica, e a variante é identificada em 40-60% dos pacientes — proporção maior em jovens com história familiar positiva (fonte: slide oficial ESC 2023, seção \"Hypertrophic Cardiomyopathy and Genetics\").",
+    "reference_range": "Não se aplica valor de referência numérico — resultado é qualitativo: variante patogênica/provavelmente patogênica (P/LP), variante de significado incerto (VUS) ou negativo. A classificação de patogenicidade exige equipe multidisciplinar especializada em genética cardíaca — reclassificação da mesma variante ao longo do tempo é esperada à medida que surgem novos dados.",
+    "indications": "Recomendado (Classe I, Nível B) em todo paciente que preenche critérios diagnósticos de cardiomiopatia, quando o resultado possibilita diagnóstico, prognóstico, estratificação terapêutica ou manejo reprodutivo, ou quando possibilita teste em cascata de familiares que de outra forma entrariam em vigilância clínica prolongada. Também recomendado (Classe I, Nível B) para indivíduo falecido com diagnóstico de cardiomiopatia em necropsia, se o diagnóstico genético facilitar o manejo de familiares sobreviventes. Aconselhamento genético pré- e pós-teste é recomendado em todo indivíduo submetido ao exame, independentemente do resultado.",
+    "interpretation": "Uma vez identificada variante P/LP confirmada no caso índice, o teste em cascata está recomendado (Classe I, Nível B) em familiares adultos de primeiro grau em risco, com aconselhamento pré- e pós-teste, e deve ser considerado (Classe IIa, Nível B) em familiares pediátricos em risco, ponderando a cardiomiopatia de base, a idade esperada de início e a repercussão clínica/legal. Familiar com fenótipo negativo e sem a variante familiar é liberado do seguimento clínico programado; sem uma variante P/LP confirmada na família, teste genético diagnóstico não é recomendado no familiar assintomático — a investigação nesse caso é clínica (ECG e imagem multimodal), não genética.",
+    "limitations": "Variante identificada em menos de 5% dos adultos (até 25% das crianças) representa fenocópia, não cardiomiopatia sarcomérica primária — doenças de depósito lisossômico (Fabry-Anderson), glicogenoses (Pompe, Danon, PRKAG2), amiloidose, sarcoidose, síndromes malformativas (Noonan) e doenças neuromusculares (ataxia de Friedreich) exigem painel genético dirigido, diferente do painel sarcomérico padrão. Variante de significado incerto (VUS) não deve ser usada para excluir ou confirmar diagnóstico, nem para orientar teste em cascata na família, até ser reclassificada. Uso inadequado do teste em uma família pode gerar preocupação desnecessária e dano por má interpretação — a diretriz recomenda que a interpretação de variantes seja sempre feita por equipe multidisciplinar especializada.",
+    "source_refs": [
+      "Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. PMID 37622657. DOI 10.1093/eurheartj/ehad194 — Recommendation Table 8 (Recommendations for genetic counselling and testing in cardiomyopathies) e Recommendations for family screening and follow-up evaluation of relatives.",
+      "2023 ESC Guidelines for the management of cardiomyopathies — official ESC Guidelines slide set, seção \"Hypertrophic Cardiomyopathy and Genetics\". www.escardio.org/guidelines"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "teste genetico",
+      "ngs",
+      "cardiomiopatia",
+      "teste em cascata",
+      "cardiomiopatia hipertrofica",
+      "aconselhamento genetico"
+    ]
   }
 ]
