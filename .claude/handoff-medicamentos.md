@@ -104,3 +104,95 @@ cobre**. Fluxograma tem formato obrigatório de árvore de decisão: ver
 Ler `CLAUDE.md`, rodar `git log --oneline -15` para ver o que as outras sessões
 fizeram, e conferir o estado real com
 `GET /api/admin/conteudo/pendentes` antes de escrever qualquer coisa.
+
+---
+
+# Anexo — estado detalhado ao encerrar a sessão de 29/07/2026
+
+## Pendências que dependem do Rafael
+1. **12 linhas mortas no banco `drugs`** — 10 duplicatas fundidas mais atropina e
+   evinacumabe, todas despublicadas e invisíveis ao produto. Já saíram do
+   arquivo-fonte, então não voltam num `carregar`. Falta só o `DELETE`, que o
+   classificador de permissões bloqueia para a sessão:
+   ```
+   docker compose -f docker-compose.prod.yml exec -T db psql -U meucardio -d meucardio -c "DELETE FROM drugs WHERE published = false AND slug IN ('metoprolol-succinato','metoprolol-succinato-de-liberacao-prolongada','metoprolol-succinato-e-tartrato','nitratos-nitroglicerina-dinitratomononitrato-de-isossorbida','nitroglicerina-dinitrato-de-isossorbida','prasugrel-cloridrato','sotalol-cloridrato','trimetazidina-dicloridrato','verapamil-diltiazem','warfarina','atropina','evinacumabe')"
+   ```
+   Esperar `DELETE 12`. Depois: 88 registros, todos publicados.
+2. **Nome do repositório no GitHub** ainda é a marca abandonada por risco
+   jurídico. Renomear e depois `git remote set-url origin <nova URL>`.
+3. **Bula injetável da atropina** e **bula do Evkeeza (evinacumabe)** — os dois
+   verbetes foram removidos por não terem posologia. O conteúdo (mecanismo,
+   indicações, contraindicações, efeitos adversos) está recuperável em
+   `git show ff6c303~1:medicamentos/metadados.json`. Reinserir quando a bula
+   aparecer. Evkeeza tem registro ANVISA 1.3964.0004 (Ultragenyx).
+
+## Detalhe operacional que custou três tentativas
+Nesta interface, comando de terminal colado como mensagem **não executa** — vai
+como texto para o assistente. Para rodar no servidor é preciso **prefixar com
+`!`**. Comandos do próprio Claude Code (`/clear`, `/compact`) vão sem prefixo.
+
+## Bulas já obtidas — URLs que funcionaram
+Os PDFs ficavam no scratchpad de `/tmp` e **se perdem ao limpar a sessão**.
+Baixar de novo é barato com estas URLs, todas com `curl -sL -A "<UA de browser>"`.
+
+`https://www.saudedireta.com.br/catinc/drugs/bulas/<nome>.pdf` — funcionou para:
+`concor` (bisoprolol), `cozaar` (losartana), `renitec` (enalapril),
+`aldactone` (espironolactona), `atenol` (atenolol), `norvasc` (anlodipino),
+`lipitor` (atorvastatina), `coreg` (carvedilol), `aldomet` (metildopa),
+`atensina` (clonidina), `apresolina` (hidralazina), `procoralan` (ivabradina),
+`zetia` (ezetimiba), `selozok` e `seloken` (metoprolol), `lasix` (furosemida),
+`marevan` (varfarina), `clexane` (enoxaparina), `iscover` e `plavix`
+(clopidogrel — **modelo antigo, recusado**), `metalyse` (tenecteplase),
+`actilyse` (alteplase), `vastarelmr` (trimetazidina), `eliquis` (apixabana),
+`pradaxa` (dabigatrana), `atropina` (**é a OFTÁLMICA — não serve**).
+
+Outras fontes que funcionaram:
+- `img.drogasil.com.br/raiadrogasil_bula/<Marca>.pdf` — `Atlansil`,
+  `Riscard-Biolab`, `Praluent`, `CaptoprilMedley`, `Aspirina`
+- `far.fiocruz.br/.../Farmanguinhos-captopril_Bula_Prof-Saude.pdf` (captopril)
+- `amgen.com.br/.../Repatha_Bula_Profissional.pdf` (evolocumabe)
+- `abbottbrasil.com.br/.../BU-13-Ritmonorm-bula-profissional-FINAL.pdf`
+- `cristalia.com.br/index.php/produto/138/bula-profissional` (nitroprussiato)
+- `drogariaspacheco.vteximg.com.br/arquivos/firialta-10mg-...pdf` (finerenona)
+- `azmed.com.br/.../Brilinta_Bula_Profissional.pdf` (ticagrelor)
+- `bulas.med.br/p/detalhamento-das-bulas/1296088/...xarelto.htm` — **HTML**,
+  contorna o PDF cifrado do Xarelto
+- DailyMed (FDA): `dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?drug_name=X`
+  e depois `.../spls/<setid>.xml` — usado em flecainida e disopiramida
+- EMA em português: `ema.europa.eu/pt/documents/product-information/<x>_pt.pdf`
+  — usado no Multaq (dronedarona); precisa do decodificador com **offset 29**
+
+**Não saíram em espelho nenhum:** digoxina, Forxiga (dapagliflozina),
+Jardiance (empagliflozina), Entresto (sacubitril-valsartana), atropina
+injetável, Evkeeza.
+
+## Lacunas de conteúdo, medidas ao encerrar
+- **88 fármacos**; `pregnancy` faltando em **46**, `lactation` em **58**.
+- Sem gestação: ácido bempedoico, adenosina, apixabana, bivalirudina, bosentana,
+  candesartana, cangrelor, clortalidona, colchicina, diltiazem, dinitrato de
+  isossorbida, disopiramida, dobutamina, dronedarona, edoxabana, epinefrina,
+  eplerenona, felodipino, flecainida, heparina não fracionada, idarucizumabe,
+  inclisirana, indapamida, levosimendana, lisinopril, mavacamteno, metformina,
+  milrinona, mononitrato de isossorbida, nifedipina, nitroglicerina,
+  nitroprussiato, olmesartana, perindopril, propranolol, protamina, ranolazina,
+  rosuvastatina, semaglutida, sildenafila, sotalol, tafamidis, telmisartana,
+  vasopressina, verapamil, vericiguate.
+- **Marcações `VERIFICAÇÃO HUMANA NECESSÁRIA` restantes (4 verbetes):**
+  amiodarona (pediatria e gravidez), propafenona (EV, *pill in the pocket*,
+  pediatria), alteplase (janela do AVC — a de 2012 diz 3 h, a prática usa 4,5),
+  tenecteplase (uso no AVC isquêmico). As quatro dependem de **diretriz**, não
+  de bula.
+
+## Achados clínicos desta sessão que valem como precedente
+Todos vieram de comparar a bula registrada com o que já estava escrito:
+- **Nitroprussiato**: teto de adulto é **8** mcg/kg/min na bula brasileira; os
+  10 que circulam são o teto **pediátrico**.
+- **Varfarina**: FDA trata o aleitamento como compatível; **Marevan
+  contraindica**. Divergência entre rotulagens, registrada nos dois lados.
+- **Clopidogrel**: acima de 75 anos a dose de ataque **não é suprimida, é
+  reduzida a 75 mg** (ESC 2023, Tabela S10).
+- **Atenolol é categoria D e metoprolol é C** — betabloqueador não é classe
+  homogênea na gestação.
+- **Atorvastatina** restringe **mulher em idade fértil**, não só gestante.
+- **Hidralazina oral** manda interromper na gravidez, enquanto a **parenteral**
+  é usada na emergência hipertensiva — recorte precisa estar declarado.
