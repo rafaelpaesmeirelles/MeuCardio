@@ -4,7 +4,7 @@ slug: digoxina
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["Digoxin tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 5886e233-b2da-4acb-be05-9bf40fb8e7f4"]
+source_refs: ["Ahmed A, Rich MW, Love TE, et al. Digoxin and reduction in mortality and hospitalization in heart failure: a comprehensive post hoc analysis of the DIG trial. Eur Heart J. 2006;27(2):178-186. DOI: 10.1093/eurheartj/ehi687. PMID: 16339157", "Digitalis Investigation Group; Ahmed A, Waagstein F, Pitt B, et al. Effectiveness of digoxin in reducing one-year mortality in chronic heart failure in the Digitalis Investigation Group trial. Am J Cardiol. 2009;103(1):82-87. DOI: 10.1016/j.amjcard.2008.06.068. PMID: 19101235", "Digoxin tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 5886e233-b2da-4acb-be05-9bf40fb8e7f4"]
 legacy_source: "medicamentos/banco-de-medicamentos-digoxina.md"
 ---
 
@@ -23,9 +23,9 @@ Inibe parcialmente a bomba de sódio-potássio (Na-K-ATPase) na membrana do card
 - **manutencao adulto**: 0,125-0,250 mg/dia, individualizada
 - **ajuste populacoes especiais**: Reduzir em insuficiência renal e idosos (eliminação reduzida)
 ## Monitorizacao niveis sericos
-- **faixa terapeutica alvo ic**: 0,5-0,8 ng/mL
-- **risco mortalidade acima**: ≥1,2 ng/mL — associado a aumento de mortalidade, deve ser evitado
-- **procedencia dos dois cortes**: VERIFICAÇÃO HUMANA NECESSÁRIA — a faixa-alvo de 0,5-0,8 ng/mL e o corte de 1,2 ng/mL vêm de análises post hoc do ensaio DIG e estavam apoiados aqui em material de estudante. Não consegui confirmar a referência do DIG no PubMed nesta sessão
+- **faixa terapeutica alvo ic**: **0,5 a 0,9 ng/mL** — corrigido em 29/07/2026; o valor de 0,8 que constava aqui como teto era ligeiramente baixo
+- **acima da faixa alvo**: **≥1,0 ng/mL** — o benefício de mortalidade **desaparece** (não necessariamente vira dano provado); a bula do teto pediátrico é distinto, ver adiante
+- **procedencia dos dois cortes**: **resolvido em 29/07/2026**, com dois artigos de análise post hoc do ensaio DIG (Digitalis Investigation Group), ambos por Ahmed A et al.: Ahmed A, Rich MW, Love TE, et al. *Digoxin and reduction in mortality and hospitalization in heart failure: a comprehensive post hoc analysis of the DIG trial.* Eur Heart J. 2006;27(2):178-186. DOI: 10.1093/eurheartj/ehi687. PMID: 16339157 — mostra que SDC (concentração sérica de digoxina) de **0,5 a 0,9 ng/mL** associou-se a **menor mortalidade** (29% vs. 33% com placebo; HR ajustado 0,77; IC95% 0,67-0,89) e menor hospitalização por IC (23% vs. 33%; HR 0,62), **sem interação com FEVE >45% nem com sexo**; SDC **≥1,0 ng/mL** ainda reduziu hospitalização por IC, mas **sem efeito sobre mortalidade**. O segundo artigo, do mesmo grupo (Ahmed A et al., Am J Cardiol. 2009;103(1):82-87, PMID 19101235), reforça: a **dose-alvo original do DIG (0,25 mg/dia, visando SDC 0,8-2,5 ng/mL) era mais alta que o hoje recomendado**, e isso explica em parte por que o ensaio original não mostrou benefício de mortalidade a longo prazo — dose baixa (≤0,125 mg/dia) é o que costuma produzir a SDC baixa (0,5-0,9) associada a benefício. **Não confirmei um corte específico de "1,2 ng/mL = aumento de mortalidade"** em nenhum dos dois artigos — o que os dados sustentam é perda de benefício acima de 1,0, não um limiar de dano comprovado em outro valor
 - **observacao**: Toxicidade pode ocorrer mesmo dentro da faixa terapêutica — diagnóstico deve combinar laboratório com avaliação clínica
 - **fonte**: rótulo da digoxina aprovado pelo FDA (DailyMed)
 

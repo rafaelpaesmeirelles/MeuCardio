@@ -4,7 +4,7 @@ slug: espironolactona
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["Pitt B, Zannad F, Remme WJ, et al. The effect of spironolactone on morbidity and mortality in patients with severe heart failure (RALES). N Engl J Med. 1999;341(10):709-717. DOI: 10.1056/NEJM199909023411001. PMID: 10471456", "Pitt B, Pfeffer MA, Assmann SF, et al. Spironolactone for heart failure with preserved ejection fraction (TOPCAT). N Engl J Med. 2014;370(15):1383-1392. DOI: 10.1056/NEJMoa1313731. PMID: 24716680"]
+source_refs: ["Bula do ALDACTONE (espironolactona), seção de posologia e administração, conferida em 29/07/2026", "Pitt B, Zannad F, Remme WJ, et al. The effect of spironolactone on morbidity and mortality in patients with severe heart failure (RALES). N Engl J Med. 1999;341(10):709-717. DOI: 10.1056/NEJM199909023411001. PMID: 10471456", "Pitt B, Pfeffer MA, Assmann SF, et al. Spironolactone for heart failure with preserved ejection fraction (TOPCAT). N Engl J Med. 2014;370(15):1383-1392. DOI: 10.1056/NEJMoa1313731. PMID: 24716680"]
 legacy_source: "medicamentos/banco-de-medicamentos-espironolactona.md"
 ---
 
@@ -29,13 +29,20 @@ Espironolactona e seus metabólitos são mais de 90% ligados a proteínas plasm�
 Comprimidos de 25, 50 e 100 mg
 
 ## Dose
-- **hipertensao essencial e edema**: 50-100 mg/dia, em dose única ou fracionada; pode ser aumentada gradualmente em intervalos de 2 semanas até 200 mg/dia
-- **ic congestiva dose inicial diuretica**: 100 mg/dia (dose única ou fracionada), podendo variar entre 25-200 mg/dia
-- **icfer dose alvo**: 25-50 mg/dia, associado a IECA/BRA/INRA + betabloqueador, para redução de morbimortalidade
-- **hipertensao resistente 4a droga**: 50-100 mg, podendo chegar a 200 mg/dia, como quarta droga quando paciente permanece hipertenso apesar de tríplice terapia (ex.: IECA/BRA + anlodipina + hidroclorotiazida)
-- **dose maxima adulto**: 400 mg/dia
-- **dose maxima pediatrica**: 3,3 mg/kg/dia
-- **fonte**: VERIFICAÇÃO HUMANA NECESSÁRIA — as faixas de dose desta seção vinham de guia farmacêutico de outra instituição e de material de curso. As doses-alvo em IC (25-50 mg/dia) correspondem ao RALES; as demais precisam de conferência contra a bula registrada na ANVISA
+**Resolvido em 29/07/2026** pela bula do ALDACTONE (espironolactona), lida na íntegra — a maioria dos números que já constavam aqui **confere**; a correção real está no teto de adulto.
+
+- **hipertensão essencial**: dose usual de **50 a 100 mg/dia**; nos casos resistentes ou graves, aumento gradual a cada 2 semanas até **200 mg/dia**. Manter por pelo menos 2 semanas antes de julgar a resposta
+- **insuficiência cardíaca congestiva (edema)**: dose usual **100 mg/dia**; em casos resistentes ou graves, até **200 mg/dia**
+- **cirrose hepática**: se relação Na⁺/K⁺ urinário > 1, dose usual **100 mg/dia**; se ≤ 1, **200 a 400 mg/dia** — é aqui, e só aqui, que a bula chega a 400 mg
+- **síndrome nefrótica**: habitualmente **100 a 200 mg/dia**
+- **edema idiopático**: dose habitual de **100 mg/dia**
+- **edema em crianças**: dose diária **inicial** de aproximadamente **3,3 mg/kg**, fracionada, ajustada pela resposta — a bula descreve como dose de partida, não como teto
+- **icfer dose alvo (RALES)**: 25-50 mg/dia, associado a IECA/BRA/INRA + betabloqueador, para redução de morbimortalidade — não vem desta bula, vem do ensaio RALES, já referenciado
+- **fonte**: bula do ALDACTONE (espironolactona), seção de posologia, conferida em 29/07/2026
+
+**Correção de conteúdo**: o "teto de adulto de 400 mg/dia" que constava aqui, sem recorte, era impreciso — 400 mg/dia é o teto da **cirrose hepática com relação Na⁺/K⁺ baixa especificamente**, não um teto geral de adulto. Em hipertensão e em IC congestiva, o teto que a bula sustenta é 200 mg/dia.
+
+VERIFICAÇÃO HUMANA NECESSÁRIA para a **quarta droga em hipertensão resistente**: essa indicação não vem da bula (que não cobre hipertensão resistente como categoria própria) — é recomendação de diretriz de hipertensão, provavelmente apoiada no PATHWAY-2, que não foi lida nesta sessão.
 
 ## Ajuste renal
 - **clcr 30 50**: 12,5 mg 1x/dia ou em dias alternados; manutenção pode aumentar para 12,5-25 mg/dia

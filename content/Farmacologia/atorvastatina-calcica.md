@@ -4,7 +4,7 @@ slug: atorvastatina-calcica
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["Atorvastatin calcium tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 86841382-4229-4e03-958e-3ac22639efd4"]
+source_refs: ["LIPITOR (atorvastatin calcium) — rótulo aprovado pelo FDA, via DailyMed, SPL setid a60cc18b-0631-4cf0-b021-9f52224ece65, seções 2.3 (HeFH pediátrica) e 2.4 (HoFH pediátrica) · consultado em 29/07/2026", "Atorvastatin calcium tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 86841382-4229-4e03-958e-3ac22639efd4"]
 legacy_source: "medicamentos/banco-de-medicamentos-item-21.md"
 ---
 
@@ -29,9 +29,10 @@ Comprimidos de 10, 20, 40 e 80 mg
 ## Dose
 - **inicial usual**: 10 mg 1x/dia
 - **sca alto risco**: Até 80 mg/dia, individualizada conforme meta de LDL-C
-- **pediatria 10 17 anos**: 20 mg/dia (dose máxima)
+- **pediatria ≥10 anos, hipercolesterolemia familiar HETEROZIGÓTICA**: início com 10 mg/dia; faixa de **10 a 20 mg/dia** — aqui o teto de 20 mg estava certo
+- **pediatria ≥10 anos, hipercolesterolemia familiar HOMOZIGÓTICA**: início com 10 a 20 mg/dia; faixa de **10 a 80 mg/dia** — **o mesmo teto do adulto**, não 20 mg
 - **via administracao**: Via oral, pode ser tomada em qualquer horário do dia, independente de refeições
-- **fonte**: rótulo da atorvastatina aprovado pelo FDA (DailyMed). VERIFICAÇÃO HUMANA NECESSÁRIA para a dose pediátrica de 20 mg/dia como máximo, que deve ser conferida contra a bula registrada na ANVISA
+- **fonte**: rótulo da atorvastatina aprovado pelo FDA (DailyMed, marca LIPITOR), seções 2.3 e 2.4, conferido em 29/07/2026. **Correção de conteúdo, não só de procedência**: o "20 mg/dia como máximo" que constava aqui era o teto da forma **heterozigótica**; a forma **homozigótica** vai a **80 mg/dia**, e tratar as duas como uma dose pediátrica única sub-tratava a forma mais grave
 
 ## Ajuste renal
 Não é necessário ajuste de dose em insuficiência renal, incluindo pacientes em hemodiálise — diferencia-se de outras estatinas que requerem ajuste
