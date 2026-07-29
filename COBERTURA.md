@@ -151,12 +151,16 @@ conteúdo. É preciso abrir e conferir se o artigo é o que o registro descreve.
    fusão de pares. Resta o de gestação, que usa diretriz mais recente que a dos
    documentos atuais de Gravidez — reclassificar exige conciliar conteúdo, não só mover
    arquivo.
-5. **Marcações de verificação: 47, em 38 arquivos de `content/`.** Cada uma é uma
-   pergunta específica e respondível, não incerteza genérica. Zero nas quatro frentes
-   JSON. Distribuição medida às 20h: **24 em Farmacologia**, 3 em Calculadoras, 2 em
-   Terapia intensiva, 2 em Fibrilação atrial, e 1 em cada um de Valvopatias, Prevenção
-   e lipídios, Perioperatório, Insuficiência cardíaca, Doença coronariana,
-   Cardiomiopatias e Arritmias.
+5. **Marcações de verificação: caíram para 24, em 18 arquivos de `content/`**, medido
+   às 23h de 29/07 (eram 47 em 38 arquivos às 20h). Zero nas quatro frentes JSON.
+   Distribuição atual: 7 em Farmacologia, 3 em Calculadoras, 2 em Terapia intensiva,
+   2 em Fibrilação atrial, e 1 em cada um de Prevenção e lipídios, Insuficiência
+   cardíaca e Arritmias — **todos temas da faixa de Medicamentos**. **A faixa da
+   Biblioteca está com uma marcação só**, em Perioperatório, e é um recorte de
+   escopo (manejo farmacológico já cobre betabloqueador/IECA-BRA/estatina; falta só
+   antiplaquetário/anticoagulante e dispositivo implantável), não uma dúvida aberta.
+   Doença coronariana (GRACE, 6 meses) e Valvopatias (M-TEER sem DAC) foram
+   resolvidas nesta sessão.
 6. **Fluxogramas: 29 escritos, 29 publicados — frente zerada.** Os 6 temas que faltavam
    foram cobertos em 29/07/2026 (dislipidemia, amiloidose cardíaca, avaliação
    perioperatória, cardio-oncologia, febre reumática e cardiopatia congênita do adulto)
