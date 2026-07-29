@@ -4,7 +4,7 @@ slug: edoxabana
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["Edoxaban tablets (SAVAYSA) — rótulo aprovado pelo FDA", "Giugliano RP, Ruff CT, Braunwald E, et al. Edoxaban versus warfarin in patients with atrial fibrillation (ENGAGE AF-TIMI 48). N Engl J Med. 2013;369(22):2093-2104. DOI: 10.1056/NEJMoa1310907"]
+source_refs: ["Edoxaban tablets (SAVAYSA) — rótulo aprovado pelo FDA", "Giugliano RP, Ruff CT, Braunwald E, et al. Edoxaban versus warfarin in patients with atrial fibrillation (ENGAGE AF-TIMI 48). N Engl J Med. 2013;369(22):2093-2104. DOI: 10.1056/NEJMoa1310907", "Anvisa. Ondexxya (alfa-andexanete): novo registro. Publicado em 04/09/2023 · https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/novos-medicamentos-e-indicacoes/ondexxya-alfa-andexanete-novo-registro — indicação registrada nomeia apenas apixabana e rivaroxabana"]
 legacy_source: "medicamentos/banco-de-medicamentos-edoxabana.md"
 ---
 
@@ -40,6 +40,11 @@ Sangramento é o principal risco (comum, ≥5% no tratamento de FA) e anemia. No
 
 ## Monitorizacao
 Sinais de sangramento. Função renal periodicamente (a dose depende diretamente do ClCr). Não requer monitorização de coagulograma de rotina (diferente da varfarina).
+
+## Antidoto
+**Não há antídoto específico com indicação registrada no Brasil para a edoxabana** — e isso não é omissão do texto, é o que o registro determina. O alfa-andexanete (ONDEXXYA, AstraZeneca do Brasil), registrado na Anvisa em 04/09/2023, é o reversor específico dos inibidores do fator Xa, mas sua indicação registrada nomeia **apixabana ou rivaroxabana**, e o próprio registro delimita que o produto não é indicado para sangramento relacionado a outros inibidores do fator Xa.
+
+É uma diferença prática entre fármacos da mesma classe: quem prescreve edoxabana precisa saber que a reversão específica disponível para os outros dois inibidores de fator Xa não se aplica aqui.
 
 ## Interacoes
 - **Inibidores potentes de glicoproteína-P** (ciclosporina, dronedarona, eritromicina, cetoconazol): exigem redução de dose para 30 mg/dia

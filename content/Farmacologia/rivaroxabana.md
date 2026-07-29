@@ -4,7 +4,7 @@ slug: rivaroxabana
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["Rivaroxaban tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 481b7802-5093-43e7-bbd9-1532197eb6e6", "Patel MR, Mahaffey KW, Garg J, et al. Rivaroxaban versus warfarin in nonvalvular atrial fibrillation (ROCKET AF). N Engl J Med. 2011;365(10):883-891. DOI: 10.1056/NEJMoa1009638. PMID: 21830957"]
+source_refs: ["Rivaroxaban tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 481b7802-5093-43e7-bbd9-1532197eb6e6", "Patel MR, Mahaffey KW, Garg J, et al. Rivaroxaban versus warfarin in nonvalvular atrial fibrillation (ROCKET AF). N Engl J Med. 2011;365(10):883-891. DOI: 10.1056/NEJMoa1009638. PMID: 21830957", "Anvisa. Ondexxya (alfa-andexanete): novo registro. Publicado em 04/09/2023 · https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/novos-medicamentos-e-indicacoes/ondexxya-alfa-andexanete-novo-registro"]
 legacy_source: "medicamentos/banco-de-medicamentos-rivaroxabana-completo.md"
 ---
 
@@ -54,6 +54,14 @@ Cateter epidural não deve ser removido antes de 18h após última dose; rivarox
 
 ## Cirurgia procedimentos
 Interromper pelo menos 24h antes de procedimento invasivo, se possível
+
+## Antidoto
+**Há antídoto específico registrado no Brasil.** O **alfa-andexanete** (ONDEXXYA, AstraZeneca do Brasil) teve o registro publicado pela Anvisa em 04/09/2023, com indicação literal para *"pacientes tratados com inibidores do FXa (apixabana ou rivaroxabana) quando a reversão da anticoagulação for necessária em razão de sangramento com risco à vida ou não controlada"*. O registro foi classificado como prioritário pela RDC 204/2017.
+
+Duas delimitações que a indicação registrada impõe, e que importam na urgência:
+
+- o gatilho é **sangramento com risco à vida ou não controlado** — não é reversão para procedimento eletivo;
+- a indicação **não cobre** inibidores do fator Xa que não sejam apixabana ou rivaroxabana. Para a edoxabana, portanto, não há antídoto específico com indicação registrada no Brasil.
 
 ## Contraindicacoes
 - Hipersensibilidade
