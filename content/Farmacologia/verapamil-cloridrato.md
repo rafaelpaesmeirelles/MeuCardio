@@ -26,8 +26,8 @@ Metabolização hepática extensa (principal metabólito ativo: norverapamil); i
 - **vo isquemia taquisupraventricular flutter fa adulto maior 50kg**: 120-480 mg/dia, divididos em 3-4 tomas (a cada 6-8h)
 - **vo hipertensao adulto**: 120-480 mg/dia, divididos em 3 tomas (a cada 8h)
 - **ev taquiarritmia supraventricular adulto**: 5-10 mg (0,075-0,15 mg/kg) em injeção IV lenta, 2-3 min; se resposta insuficiente, repetir 10mg (0,15mg/kg) após 30min
-- **pediatria**: VERIFICAÇÃO HUMANA NECESSÁRIA — as faixas que constavam aqui (80-120 mg/dia abaixo de 6 anos e 80-360 mg/dia dos 6 aos 14) vinham de material de estudante e de wiki. Dose pediátrica de verapamil exige fonte própria, e o uso endovenoso em lactente tem alerta de colapso hemodinâmico; não prescrever por este verbete até a conferência
-- **fonte**: rótulo do cloridrato de verapamil aprovado pelo FDA (DailyMed)
+- **pediatria**: **resolvido em 29/07/2026** — os números batem com a bula brasileira, só faltava a fonte. Indicação restrita a **distúrbios do ritmo cardíaco** (a bula não estende a dose pediátrica à hipertensão): formas de liberação imediata, **até 6 anos: 80 a 120 mg/dia, em 2 a 3 doses**; **de 6 a 14 anos: 80 a 360 mg/dia, em 2 a 4 doses**. VERIFICAÇÃO HUMANA NECESSÁRIA para a via **endovenosa** em criança: a bula brasileira não traz posologia pediátrica para a via EV, e o uso endovenoso em lactente tem alerta de colapso hemodinâmico na literatura — não prescrever por este verbete até a bula ou diretriz confirmar
+- **fonte**: bula do DILACORON (cloridrato de verapamil, Abbott), seção de posologia, conferida em 29/07/2026, para a pediatria oral; rótulo do cloridrato de verapamil aprovado pelo FDA (DailyMed), para o restante
 
 ## Indicacoes
 Isquemia miocárdica (com/sem angina, em repouso ou pós-esforço, incluindo angina de Prinzmetal), hipertensão leve-moderada (vantajoso em pacientes com asma, DM, depressão, disfunção erétil concomitantes), prevenção de taquicardias supraventriculares/flutter/FA

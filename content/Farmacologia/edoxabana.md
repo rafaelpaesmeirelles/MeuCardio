@@ -4,7 +4,7 @@ slug: edoxabana
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["Edoxaban tablets (SAVAYSA) — rótulo aprovado pelo FDA", "Giugliano RP, Ruff CT, Braunwald E, et al. Edoxaban versus warfarin in patients with atrial fibrillation (ENGAGE AF-TIMI 48). N Engl J Med. 2013;369(22):2093-2104. DOI: 10.1056/NEJMoa1310907", "Anvisa. Ondexxya (alfa-andexanete): novo registro. Publicado em 04/09/2023 · https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/novos-medicamentos-e-indicacoes/ondexxya-alfa-andexanete-novo-registro — indicação registrada nomeia apenas apixabana e rivaroxabana"]
+source_refs: ["LIXIANA (edoxabano, Daiichi Sankyo) — Resumo das Características do Medicamento, EMA, em português, secção 4.2 · https://www.ema.europa.eu/pt/documents/product-information/lixiana-epar-product-information_pt.pdf · consultado em 29/07/2026", "Edoxaban tablets (SAVAYSA) — rótulo aprovado pelo FDA", "Giugliano RP, Ruff CT, Braunwald E, et al. Edoxaban versus warfarin in patients with atrial fibrillation (ENGAGE AF-TIMI 48). N Engl J Med. 2013;369(22):2093-2104. DOI: 10.1056/NEJMoa1310907", "Anvisa. Ondexxya (alfa-andexanete): novo registro. Publicado em 04/09/2023 · https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/novos-medicamentos-e-indicacoes/ondexxya-alfa-andexanete-novo-registro — indicação registrada nomeia apenas apixabana e rivaroxabana"]
 legacy_source: "medicamentos/banco-de-medicamentos-edoxabana.md"
 ---
 
@@ -27,7 +27,7 @@ Inibe diretamente e seletivamente o fator Xa, tanto livre quanto ligado ao compl
 - **fa ajuste dose reduzida**: 30 mg VO 1x/dia se ≥1 dos seguintes: ClCr 15-50 mL/min, peso ≤60 kg, uso concomitante de inibidores potentes de P-gp
 - **tev tvp tep**: 60 mg VO 1x/dia (ou 30mg com fatores de redução), após 5-10 dias de anticoagulante parenteral inicial
 - **evidencia base**: Esquema sustentado pelo estudo ENGAGE AF-TIMI 48
-- **fonte**: rótulo da edoxabana aprovado pelo FDA. VERIFICAÇÃO HUMANA NECESSÁRIA — os critérios de redução para 30 mg por **peso ≤60 kg** e por **inibidor de P-gp** constam da rotulagem europeia; a norte-americana reduz por função renal. Conferir qual conjunto vale na bula registrada na ANVISA antes de prescrever pelos três critérios
+- **fonte**: rótulo da edoxabana aprovado pelo FDA, para a dose padrão; e o Resumo das Características do Medicamento (RCM) da EMA do LIXIANA (edoxabano, Daiichi Sankyo — mesmo fabricante e mesma marca comercializada no Brasil), em português, secção 4.2, conferido em 29/07/2026. **Resolvido**: o RCM confirma os **três critérios combinados** para a redução a 30 mg — clearance de creatinina 15 a 50 mL/min, peso ≤60 kg, **ou** uso concomitante de inibidor da glicoproteína P (ciclosporina, dronedarona, eritromicina ou cetoconazol) —, qualquer um isolado já basta. Não é "peso e P-gp na Europa, só renal nos EUA": os três critérios coexistem na rotulagem que acompanha a marca vendida no Brasil
 
 ## Particularidade farmacologica
 Único entre os DOACs de fator Xa com recomendação explícita de dose reduzida por múltiplos critérios combinados (peso, função renal, interação medicamentosa), refletindo maior sensibilidade farmacocinética a estes fatores

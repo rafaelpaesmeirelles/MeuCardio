@@ -49,7 +49,7 @@ Sinais de hipotensão ao iniciar o tratamento, especialmente em paciente com dep
 ## Relacao com sacubitril-valsartana
 Não associar. O sacubitril-valsartana **já contém valsartana**, de modo que somar um BRA a ele é duplicar o bloqueio do receptor de angiotensina, sem ganho e com mais hipotensão, hipercalemia e disfunção renal. Ao migrar de um BRA para o sacubitril-valsartana, o BRA é substituído, não somado.
 
-A janela obrigatória de 36 horas do rótulo se aplica à troca com **IECA**, não com BRA — a diferença está no risco de angioedema, que é o que a janela previne. VERIFICAÇÃO HUMANA NECESSÁRIA para a conduta de intervalo ao trocar de BRA para sacubitril-valsartana, que o rótulo consultado não especifica.
+A janela obrigatória de 36 horas do rótulo se aplica à troca com **IECA**, não com BRA — a diferença está no risco de angioedema, que é o que a janela previne. **Resolvido em 29/07/2026:** o mesmo rótulo do sacubitril-valsartana **não exige intervalo nenhum** ao trocar de um BRA. A seção de ajuste de dose (2.6) trata "sem uso prévio de IECA ou BRA" como uma única categoria para decidir a dose inicial, e o requisito de washout de 36 horas aparece **só** nas seções de contraindicação e de interação medicamentosa do IECA — nunca do BRA. A troca de BRA para sacubitril-valsartana pode ser feita diretamente, sem intervalo.
 
 Além disso, história de angioedema por IECA **ou por BRA** contraindica o sacubitril-valsartana.
 

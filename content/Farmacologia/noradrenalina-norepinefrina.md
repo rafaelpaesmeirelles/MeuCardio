@@ -38,7 +38,12 @@ Diluir em SG 5%, SF 0,9%, soro glicofisiológico ou Ringer lactato; 1 ampola (4 
 Não administrar solução de bicarbonato ou outra solução alcalina simultaneamente no mesmo acesso venoso, sob risco de inativação do efeito da noradrenalina
 
 ## Acesso venoso
-Medicamento vesicante: o extravasamento causa ulceração e necrose, e a via de escolha é o cateter venoso central. VERIFICAÇÃO HUMANA NECESSÁRIA para a formulação "exclusivamente central" que constava aqui — há prática difundida de infusão periférica por tempo limitado e sob vigilância, em veia calibrosa, enquanto o acesso central é obtido. Definir a conduta do serviço com fonte própria, em vez de proibir de forma absoluta o que se faz na sala de emergência ou permitir sem critério
+
+**Parcialmente resolvido em 29/07/2026.** O rótulo aprovado pelo FDA **não determina via exclusivamente central**: instrui infundir em **veia calibrosa** ("large vein") e evitar veias de perna em idosos ou doença vascular oclusiva — sem mencionar cateter central como exigência. A afirmação anterior deste verbete ("via de escolha é o cateter venoso central, exclusivamente") ia além do que a fonte sustenta.
+
+**Extravasamento — tratamento, agora com a fonte:** é vesicante, e o extravasamento pode causar necrose e esfacelamento por vasoconstrição local. O rótulo prescreve tratamento de emergência: infiltrar a área isquêmica **o quanto antes** com **5 a 10 mg de mesilato de fentolamina em 10 a 15 mL de solução salina 0,9%**, usando seringa com agulha hipodérmica fina — o bloqueio simpático produz hiperemia local evidente se infiltrado dentro de **12 horas**.
+
+VERIFICAÇÃO HUMANA NECESSÁRIA para o **protocolo institucional** de infusão periférica (tempo limite, calibre mínimo, frequência de checagem do sítio): o rótulo não desce a esse nível de detalhe, e essa é matéria de protocolo de serviço, não de bula — definir com fonte própria em vez de proibir de forma absoluta o que se faz na sala de emergência ou permitir sem critério.
 
 ## Indicacoes cardiologicas
 Vasopressor de primeira linha em choque séptico e outros estados de choque distributivo; suporte hemodinâmico pós-parada cardíaca; hipotensão aguda refratária a volume
