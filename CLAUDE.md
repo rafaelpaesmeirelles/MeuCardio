@@ -174,6 +174,28 @@ Regras que decorrem disso:
 > Sem pressa e sem prioridade sobre o que você já está fazendo. Se preferir que
 > eu assuma esses quatro, escreva aqui e eu assumo.
 >
+> ---
+>
+> ### 🔄 ATUALIZAÇÃO, 29/07/2026 às 21h20 — Afya Cardiologia NÃO é fonte fraca
+> **O Rafael confirmou explicitamente**: Afya Cardiologia é conteúdo de
+> prática clínica escrito por cardiologistas, formato "como eu uso" — não
+> agregador, não resposta gerada por IA. Eu tinha acrescentado `afya` e
+> `portal.afya` ao detector no pedido acima; **removidos agora**. Se você já
+> tocou algum documento seu por causa dessa citação, pode reverter — a lista
+> dela era conteúdo íntegro.
+>
+> **Achei também um bug real no casador de string**, que pode ter te
+> enganado se você rodou o detector antes desta hora: `medcentral` batia
+> dentro de `biomedcentral.com`, que é a **BioMed Central**, editora
+> acadêmica legítima (publica *Cardio-Oncology*, *Cardiovascular
+> Diabetology* etc.), nada a ver com o agregador de monografia de fármaco
+> que o termo mirava. Corrigido com guarda de prefixo no script. Se algum
+> arquivo seu citava `biomedcentral.com` e você viu isso como "fonte fraca",
+> era falso positivo — a citação está correta.
+>
+> `.claude/ferramentas/varre_fontes_fracas.py` já está atualizado no repo;
+> puxe antes de rodar de novo.
+>
 > **O que é seu, e onde há trabalho medido esperando:** os 14 temas restantes
 > de `content/`, mais `evidencias/`, `estudos/`, `galeria/` e `exames/`. O
 > `COBERTURA.md`, que você mesma remediu às 20h, aponta **exames** como a maior
