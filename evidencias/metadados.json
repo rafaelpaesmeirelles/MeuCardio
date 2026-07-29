@@ -1910,5 +1910,25 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "anti-il-1-anakinra-ou-rilonacepte-na-pericardite-recorrente",
+    "statement": "Agentes anti-IL-1 (anacinra ou rilonacepte) são recomendados em paciente com pericardite recorrente após falha das terapias de primeira linha e de corticoide, com elevação de proteína C-reativa, para reduzir recorrências e permitir a suspensão do corticoide. Numa segunda situação — pericardite incessante/recorrente com evidência de inflamação pericárdica à ressonância cardíaca, após falha, contraindicação ou intolerância às terapias de primeira linha e ao corticoide, independentemente do nível de PCR — o mesmo anti-IL-1 deve ser considerado (Classe IIa, Nível C), critério distinto do primeiro por não exigir PCR elevada. Dose de anacinra: 1-2 mg/kg/dia, até 100 mg/dia no adulto, por pelo menos 6 meses. Rilonacepte: 320 mg de ataque seguido de 160 mg semanais — registrado nos EUA, não disponível na Europa.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2025,
+    "guideline_title": "2025 ESC Guidelines for the management of myocarditis and pericarditis",
+    "reference": "Schulz-Menger J, Collini V, Gröschel J, Adler Y, et al. 2025 ESC Guidelines for the management of myocarditis and pericarditis. Eur Heart J. 2025;46(40):3952-4041. DOI: 10.1093/eurheartj/ehaf192. PMID: 40878297 — Recommendation Table 10 (linha do anti-IL-1 condicionada a PCR elevada, Classe I/A, e linha do anti-IL-1 guiada por ressonância independente de PCR, Classe IIa/C) e Tabela 13 (dosing).",
+    "theme": "Pericárdio",
+    "tags": [
+      "pericardite recorrente",
+      "anti-il-1",
+      "anacinra",
+      "rilonacepte",
+      "corticoide"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
