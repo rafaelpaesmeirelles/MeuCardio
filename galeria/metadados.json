@@ -1270,5 +1270,28 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "hemorragia-subungueal-em-estilhaco-endocardite",
+    "title": "Hemorragia subungueal em estilhaço (splinter hemorrhage)",
+    "modality": "Fotografia clínica",
+    "theme": "Endocardite",
+    "file_path": "clinico/hemorragia-subungueal-em-estilhaco-endocardite.jpg",
+    "findings": "Fotografia clínica de unha mostrando duas pequenas hemorragias lineares subungueais, escuras, orientadas longitudinalmente (paralelas ao eixo do leito ungueal), localizadas próximo ao terço distal/borda livre da unha — aspecto clássico de hemorragia em estilhaço (splinter hemorrhage).",
+    "teaching_points": "A localização importa mais que a presença isolada do achado: hemorragias no terço distal da unha são frequentes e em geral por trauma (esporte, microtrauma ocupacional, unha postiça) — é o padrão desta fotografia específica, cuja etiologia exata não é documentada pela fonte, e por isso o achado aqui deve ser lido como demonstração do sinal físico, não como caso confirmado de endocardite. Hemorragias no terço proximal ou médio, especialmente múltiplas e em vários dedos, sugerem doença sistêmica — êmbolo séptico e fragilidade vascular por sepse na endocardite infecciosa, entre outras causas (vasculite, anemia, triquinose, psoríase). Comparar com as entradas `nodulos-de-osler-endocardite` e `lesoes-de-janeway-endocardite` desta galeria — os três compõem, junto de manchas de Roth e fator reumatoide, os fenômenos vasculíticos/imunológicos que entram nos critérios diagnósticos modificados de Duke.",
+    "source_name": "Wikimedia Commons, corroborado por DermNet NZ para o padrão de localização proximal vs. distal",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Splinter_hemorrhage.jpg",
+    "license": "Domínio público (PD-self)",
+    "attribution": "Usuário Splarka (Wikimedia Commons), obra própria liberada em domínio público — licença conferida na página do arquivo em 30/07/2026.",
+    "tags": [
+      "hemorragia em estilhaço",
+      "splinter hemorrhage",
+      "endocardite infecciosa",
+      "achado clínico",
+      "critérios de duke",
+      "fenômeno vasculítico"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
