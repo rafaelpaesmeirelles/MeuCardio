@@ -9,7 +9,7 @@ do banco. Nenhum número é estimado.
 
 | Frente | Itens | Publicados | Situação |
 |---|---:|---:|---|
-| `content/` — biblioteca científica | 264 (medido no disco) | não remedido | 27 temas cobertos; 29 são fluxogramas, **todos publicados**; contagem de publicados desatualizada — várias sessões escreveram content/ desde a última medição no banco |
+| `content/` — biblioteca científica | 269 (medido no disco em 30/07/2026) | não remedido | 27 temas cobertos; 29 são fluxogramas, **todos publicados**; contagem de publicados desatualizada — várias sessões escreveram content/ desde a última medição no banco |
 | `galeria/` — achados de imagem | 43 | 36 | 7 novas, licença conferida uma a uma; **zero temas da faixa da Biblioteca com 1 item só**; ainda `published: false` |
 | `exames/` — marcadores e exames | 40 | 0 | crescida de 17 para 40 pela sessão da Biblioteca em 29/07 à noite; **zero temas com 1 item só**; aguardando publicação |
 | `evidencias/` — recomendações pontuais | 104 | 100 | 4 novas (anti-IL-1 na pericardite, ILR na síncope, rastreio de AAA, ISRS na depressão em DAC); ainda `published: false` |
@@ -24,38 +24,42 @@ Nenhum órfão está no ar.
 
 | Tema | Docs | Pend. revisão |
 |---|---:|---:|
-| Farmacologia | 96 | 66 |
+| Farmacologia | 97 | 66 |
 | Cardiomiopatias | 12 | 8 |
-| Calculadoras | 8 | 3 |
-| Doença coronariana | 8 | 5 |
+| Calculadoras | 9 | 3 |
+| Terapia intensiva | 9 | 4 |
 | Gravidez | 8 | 0 |
-| Terapia intensiva | 8 | 4 |
-| Aorta e doença arterial periférica | 7 | 1 |
+| Doença coronariana | 8 | 5 |
+| Hipertensão | 7 | 3 |
 | Arritmias | 7 | 1 |
+| Aorta e doença arterial periférica | 7 | 1 |
+| Prevenção e lipídios | 7 | 4 |
+| Fibrilação atrial | 7 | 3 |
+| Insuficiência cardíaca | 7 | 3 |
+| Diabetes e cardiologia | 7 | 0 |
 | Dispositivos | 7 | 2 |
 | Febre reumática | 7 | 1 |
-| Prevenção e lipídios | 7 | 4 |
 | Cardio-oncologia | 6 | 1 |
-| Cardiopatias congênitas | 6 | 1 |
-| Endocardite | 6 | 2 |
-| Hipertensão | 6 | 3 |
-| Pericárdio | 6 | 2 |
-| Perioperatório | 6 | 1 |
 | Síncope | 6 | 2 |
+| Hipertensão pulmonar | 6 | 1 |
+| Tromboembolismo | 6 | 2 |
+| Pericárdio | 6 | 2 |
+| Endocardite | 6 | 2 |
+| Cardiopatias congênitas | 6 | 1 |
+| Perioperatório | 6 | 1 |
 | Valvopatias | 6 | 4 |
-| Diabetes e cardiologia | 5 | 0 |
-| Fibrilação atrial | 5 | 2 |
-| Hipertensão pulmonar | 5 | 1 |
-| Insuficiência cardíaca | 5 | 3 |
-| Saúde mental e cardiologia | 4 | 1 |
-| Tromboembolismo | 4 | 2 |
+| Saúde mental e cardiologia | 5 | 1 |
 | Comunicação clínica | 3 | 0 |
 | Geral | 1 | 1 |
 
-**Total: 255 documentos, 121 pendentes de revisão** — 66 deles em Farmacologia, que
-concentra mais da metade da fila. Cardiopatias congênitas (valva aórtica bicúspide,
-ESC 2024) e Comunicação clínica (desativação de CDI/marca-passo, HRS/EHRA 2010)
-ganharam um documento cada nesta sessão, ambos já `revisado`.
+**Total: 269 documentos, 122 pendentes de revisão** (medido em 30/07/2026, direto no
+disco) — 66 deles em Farmacologia, que concentra mais da metade da fila. Desde a
+medição anterior, a sessão da Biblioteca acrescentou valva aórtica bicúspide (ESC
+2024, Cardiopatias congênitas), desativação de CDI/marca-passo (HRS/EHRA 2010,
+Comunicação clínica) e holiday heart syndrome / FA induzida por álcool (Cureus 2025 +
+ESC 2024 AF-CARE, Saúde mental e cardiologia) — os três já `revisado`. O restante do
+crescimento veio de outra sessão em temas fora da minha faixa (Fibrilação atrial,
+Calculadoras, Terapia intensiva etc.).
 
 A queda de 250 para 241, registrada na medição anterior, não foi perda de conteúdo:
 foram as **11 fusões de pares complementares** descritas no fim deste arquivo, mais as
