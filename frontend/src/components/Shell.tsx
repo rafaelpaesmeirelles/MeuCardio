@@ -31,6 +31,7 @@ const NAV_BASE: ItemNav[] = [
   { to: "/indicadores", rotulo: "Meus indicadores", curto: "Indicadores" },
   { to: "/cursos", rotulo: "Cursos parceiros", curto: "Cursos" },
   { to: "/telediagnostico", rotulo: "Laudo e consultoria", curto: "Laudo" },
+  { to: "/caixa-de-email", rotulo: "Caixa de e-mail", curto: "E-mail" },
 ];
 
 export default function Shell() {

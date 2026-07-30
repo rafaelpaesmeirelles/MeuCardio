@@ -44,6 +44,7 @@ import Assinatura from "./pages/Assinatura";
 import MinhaConta from "./pages/MinhaConta";
 import Telediagnostico from "./pages/Telediagnostico";
 import FilaTelediagnostico from "./pages/FilaTelediagnostico";
+import CaixaDeEmail from "./pages/CaixaDeEmail";
 
 export default function App() {
   const { usuario, carregando } = useAuth();
@@ -103,6 +104,7 @@ export default function App() {
         <Route path="assinatura" element={<Assinatura />} />
         <Route path="minha-conta" element={<MinhaConta />} />
         <Route path="telediagnostico" element={<Telediagnostico />} />
+        <Route path="caixa-de-email" element={<CaixaDeEmail />} />
         {usuario.role === "admin" && (
           <Route path="admin" element={<Admin />} />
         )}
