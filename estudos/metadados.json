@@ -578,6 +578,32 @@
     "published": false
   },
   {
+    "slug": "clever-exercicio-supervisionado-versus-stent-na-claudicacao-aortoiliaca",
+    "title": "CLEVER — Exercício supervisionado versus stent na claudicação por doença aortoilíaca",
+    "study_type": "ensaio_clinico",
+    "authors": "Murphy TP, Cutlip DE, Regensteiner JG, et al.",
+    "journal": "Circulation",
+    "year": 2012,
+    "doi": "10.1161/CIRCULATIONAHA.111.075770",
+    "pmid": "22090168",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/22090168/",
+    "summary": "Ensaio randomizado com 111 pacientes com claudicação intermitente por doença arterial aortoilíaca, comparando três estratégias: tratamento clínico otimizado isolado (TCO), TCO associado a exercício supervisionado, e TCO associado a implante de stent. Desfecho primário: variação no tempo de caminhada de pico em esteira aos 6 meses.",
+    "key_findings": "Ganho no tempo de caminhada de pico aos 6 meses: exercício supervisionado +5,8 ± 4,6 minutos, stent +3,7 ± 4,9 minutos, TCO isolado +1,2 ± 2,6 minutos. Exercício supervisionado superou TCO (p<0,001) e superou stent (p=0,04); stent também superou TCO (p=0,02). Qualidade de vida específica da doença (questionários WIQ e PAQ) melhorou com as duas intervenções ativas em relação ao TCO isolado, mas a melhora foi numericamente maior com stent do que com exercício na maioria das escalas.",
+    "clinical_implications": "Mostra que exercício supervisionado, uma intervenção não invasiva e de baixo custo, produz ganho funcional objetivo (caminhada) superior ao stent na claudicação aortoilíaca — sustentando a recomendação de oferecer exercício supervisionado antes ou junto da revascularização, não só depois dela falhar. O contraste entre melhor desempenho funcional com exercício e melhor qualidade de vida percebida com stent é um achado genuíno, não um artefato, e deve ser discutido com o paciente ao escolher a estratégia inicial.",
+    "limitations": "Amostra pequena (111 pacientes) dividida em três braços, reduzindo o poder para desfechos secundários. Exercício supervisionado exige estrutura e adesão do paciente que nem todo serviço oferece, o que limita a aplicabilidade fora de centros com programa estruturado. Não testou a combinação de exercício mais stent como estratégia única, e o seguimento de 6 meses não informa sobre durabilidade do ganho a longo prazo.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "doença arterial periférica",
+      "claudicação intermitente",
+      "exercício supervisionado",
+      "stent",
+      "doença aortoilíaca",
+      "CLEVER"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
     "slug": "stop-ca-atorvastatina-na-prevencao-de-cardiotoxicidade-por-antraciclina",
     "title": "STOP-CA — Atorvastatina para prevenir disfunção cardíaca por antraciclina no linfoma",
     "study_type": "ensaio_clinico",
@@ -954,6 +980,31 @@
       "morte súbita",
       "DANISH",
       "ensaio negativo"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "attr-act-tafamidis-na-cardiomiopatia-amiloide-por-transtirretina",
+    "title": "ATTR-ACT — Tafamidis na cardiomiopatia amiloide por transtirretina",
+    "study_type": "ensaio_clinico",
+    "authors": "Maurer MS, Schwartz JH, Gundapaneni B, et al.",
+    "journal": "New England Journal of Medicine",
+    "year": 2018,
+    "doi": "10.1056/NEJMoa1805689",
+    "pmid": "30145929",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/30145929/",
+    "summary": "Ensaio internacional, multicêntrico, duplo-cego, controlado por placebo, com 441 pacientes com cardiomiopatia amiloide por transtirretina (hereditária ou selvagem), randomizados 2:1:2 para tafamidis 80 mg (161), tafamidis 20 mg (103) ou placebo (177), por 30 meses. Análise primária hierárquica pelo método de Finkelstein-Schoenfeld, combinando mortalidade por qualquer causa e frequência de hospitalização cardiovascular.",
+    "key_findings": "Análise hierárquica primária favoreceu tafamidis (p<0,001). Mortalidade por qualquer causa: 29,5% (78/264) com tafamidis contra 42,9% (76/177) com placebo — HR 0,70; IC95% 0,51-0,96. Taxa de hospitalização cardiovascular: razão de risco relativo 0,68 (0,48 versus 0,70 por ano; IC95% 0,56-0,81). Declínio no teste de caminhada de 6 minutos e no escore KCCQ-OS (qualidade de vida) foi menor com tafamidis em ambos (p<0,001). Incidência e tipos de eventos adversos foram semelhantes entre os grupos.",
+    "clinical_implications": "Primeiro ensaio randomizado a mostrar redução de mortalidade num tratamento específico para cardiomiopatia amiloide por transtirretina, abrindo a era da terapia estabilizadora de tetrâmero nessa doença antes tratada só com suporte. É a base regulatória e de diretriz para o uso de tafamidis na ATTR-CM sintomática, tanto na forma hereditária quanto na selvagem (wild-type).",
+    "limitations": "Excluiu pacientes em classe funcional NYHA IV e com doença muito avançada, população em que o benefício não foi testado. Custo elevado do fármaco limita acesso fora de sistemas com cobertura específica. Seguimento de 30 meses — não responde sobre efeito a prazo muito mais longo, embora extensões abertas subsequentes tenham sustentado o achado.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "amiloidose cardíaca",
+      "transtirretina",
+      "tafamidis",
+      "ATTR-CM",
+      "ensaio clínico"
     ],
     "review_status": "revisado",
     "published": false
