@@ -151,6 +151,32 @@
     "published": false
   },
   {
+    "slug": "post-metoprolol-sincope-vasovagal-efeito-dependente-da-idade",
+    "title": "POST — Metoprolol para prevenção de síncope vasovagal, com efeito dependente da idade",
+    "study_type": "ensaio_clinico",
+    "authors": "Sheldon RS, Morillo CA, Klingenheben T, et al.",
+    "journal": "Circulation",
+    "year": 2006,
+    "doi": "10.1161/CIRCULATIONAHA.105.535161",
+    "pmid": "16505178",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/16505178/",
+    "summary": "Ensaio multicêntrico, randomizado, duplo-cego, controlado por placebo, com 208 pacientes (idade média 42±18 anos, mediana de 9 episódios de síncope ao longo de 11 anos) com síncope vasovagal, tratados com metoprolol (108 pacientes, dose de 25 a 200 mg/dia conforme tolerância) ou placebo (100 pacientes) por 1 ano. Desfecho primário: primeira recorrência de síncope.",
+    "key_findings": "Resultado primário negativo: a probabilidade de recorrência de síncope não foi significativamente diferente entre os grupos metoprolol e placebo. Nem idade nem resposta ao isoproterenol no teste de inclinação previram qual paciente se beneficiaria do fármaco isoladamente — mas análise estratificada por idade mostrou efeito heterogêneo: em pacientes ≥42 anos, o metoprolol associou-se a redução relativa de risco de 59% na recorrência; já em pacientes <42 anos, o desempenho com metoprolol foi pior do que com placebo na mesma faixa etária.",
+    "clinical_implications": "O resultado primário negativo não deveria, sozinho, encerrar a discussão sobre betabloqueador na síncope vasovagal: o achado de efeito oposto por faixa etária (benéfico no paciente mais velho, potencialmente deletério no mais jovem) é a razão pela qual betabloqueador não é terapia de primeira linha genérica para síncope vasovagal, mas pode ser considerado especificamente no paciente mais velho refratário a medidas não farmacológicas — achado que motivou o desenho do ensaio de seguimento POST5, dedicado a testar metoprolol especificamente em população mais velha.",
+    "limitations": "A análise por faixa etária foi post hoc, não pré-especificada como desfecho primário — hipótese gerada pelo próprio estudo, não confirmada de forma independente por ele. Amostra relativamente pequena para sustentar conclusão definitiva num subgrupo etário. Resultado primário do estudo como um todo é neutro, e essa é a informação que deve vir em primeiro lugar em qualquer resumo do ensaio.",
+    "theme": "Síncope",
+    "tags": [
+      "síncope vasovagal",
+      "metoprolol",
+      "betabloqueador",
+      "POST",
+      "ensaio negativo",
+      "efeito dependente da idade"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
     "slug": "derivacao-cha2ds2-vasc-euro-heart-survey",
     "title": "Derivação do escore CHA₂DS₂-VASc — Euro Heart Survey on Atrial Fibrillation",
     "study_type": "estudo_de_coorte",
