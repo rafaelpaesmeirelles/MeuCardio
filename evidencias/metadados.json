@@ -1990,5 +1990,101 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "combinacao-inicial-de-dois-farmacos-no-tratamento-da-hipertensao",
+    "statement": "Na maioria dos pacientes com hipertensão confirmada (PA ≥140/90 mmHg), iniciar o tratamento com combinação de dois fármacos — preferencialmente um bloqueador do sistema renina-angiotensina (IECA ou BRA) associado a um bloqueador de canal de cálcio diidropiridínico ou a um diurético — é recomendado em vez de monoterapia, dada a evidência de melhor controle pressórico; quando a combinação for usada, um comprimido único de dose fixa é recomendado.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+    "reference": "McEvoy JW, Touyz RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "combinação de fármacos",
+      "comprimido único",
+      "has 2024"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "trombolise-sistemica-no-tromboembolismo-pulmonar-de-alto-risco",
+    "statement": "Terapia trombolítica sistêmica é recomendada em pacientes com tromboembolismo pulmonar agudo hemodinamicamente instável (alto risco).",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2019,
+    "guideline_title": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism developed in collaboration with the European Respiratory Society (ERS)",
+    "reference": "Konstantinides SV, Meyer G, Becattini C, et al. 2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism developed in collaboration with the European Respiratory Society (ERS). Eur Heart J. 2020;41(4):543-603. DOI: 10.1093/eurheartj/ehz405. PMID: 31504429.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "tromboembolismo pulmonar",
+      "trombólise",
+      "alto risco",
+      "instabilidade hemodinâmica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "isglt2-na-insuficiencia-cardiaca-com-fracao-de-ejecao-reduzida-independente-do-diabetes",
+    "statement": "Em insuficiência cardíaca crônica sintomática com fração de ejeção reduzida, inibidores de SGLT2 são recomendados para reduzir hospitalização por insuficiência cardíaca e mortalidade cardiovascular, independentemente da presença de diabetes tipo 2.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "AHA/ACC/HFSA",
+    "year": 2022,
+    "guideline_title": "2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure",
+    "reference": "Heidenreich PA, Bozkurt B, Aguilar D, et al. 2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure. Circulation. 2022;145(18):e895-e1032. DOI: 10.1161/CIR.0000000000001063. PMID: 35363499.",
+    "theme": "Farmacologia",
+    "tags": [
+      "isglt2",
+      "insuficiência cardíaca",
+      "fração de ejeção reduzida",
+      "icfer"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cdi-prevencao-secundaria-fv-ou-tv-nao-tolerada-sem-causa-reversivel",
+    "statement": "Implante de CDI é recomendado em pacientes com fibrilação ventricular documentada ou taquicardia ventricular hemodinamicamente não tolerada, na ausência de causa reversível — prevenção secundária de morte súbita cardíaca.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+    "theme": "Arritmias",
+    "tags": [
+      "cdi",
+      "prevenção secundária",
+      "morte súbita",
+      "fibrilação ventricular",
+      "taquicardia ventricular"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ressincronizacao-cardiaca-em-ritmo-sinusal-com-bre-e-qrs-150ms-ou-mais",
+    "statement": "Terapia de ressincronização cardíaca (CRT) é recomendada em pacientes sintomáticos com insuficiência cardíaca em ritmo sinusal, FEVE ≤35%, duração do QRS ≥150 ms e morfologia de bloqueio de ramo esquerdo (BRE), apesar de terapia médica otimizada, para melhorar sintomas e reduzir morbimortalidade.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines on cardiac pacing and cardiac resynchronization therapy",
+    "reference": "Glikson M, Nielsen JC, Kronborg MB, et al. 2021 ESC Guidelines on cardiac pacing and cardiac resynchronization therapy. Eur Heart J. 2021;42(35):3427-3520. DOI: 10.1093/eurheartj/ehab364. PMID: 34455430.",
+    "theme": "Dispositivos",
+    "tags": [
+      "ressincronização cardíaca",
+      "crt",
+      "bloqueio de ramo esquerdo",
+      "insuficiência cardíaca"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
