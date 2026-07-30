@@ -14,6 +14,8 @@ type ContaEmail = {
   lgpd_aceite_versao?: string | null; lgpd_versao_atual?: string;
 };
 type TermoLgpd = { versao: string; texto: string };
+type SugestaoEndereco = { local_part: string; dominio: string; editavel: boolean };
+type VerificacaoEndereco = { disponivel: boolean; motivo: string | null; endereco: string };
 
 const ROTULOS: Record<string, string> = {
   ativo: "Ativa", teste: "Período de teste", inativo: "Inativa", pendente: "Pendente",
@@ -26,6 +28,54 @@ function reais(centavos: number) {
   return (centavos / 100).toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 }
 
+/** Campo de escolha do endereço — tela de cadastro do novo e-mail pedida
+ * pelo Rafael em 30/07/2026: antes disso o endereço era gerado sozinho
+ * (nome.sobrenome@corvia.med.br) sem o médico ver ou poder trocar antes de
+ * confirmar. Sugestão pré-preenchida vem de `GET /email/sugestao-endereco`;
+ * cada edição dispara `GET /email/verificar-endereco` com debounce — mesmas
+ * regras de formato que `POST /email/conta` vai validar de novo no
+ * servidor (nunca confiar só na checagem do cliente). */
+function EscolhaDeEndereco({ valor, onChange, onValidadeMudou }: {
+  valor: string; onChange: (v: string) => void; onValidadeMudou: (valido: boolean) => void;
+}) {
+  const [verificacao, setVerificacao] = useState<VerificacaoEndereco | null>(null);
+  const [verificando, setVerificando] = useState(false);
+
+  useEffect(() => {
+    if (!valor) { setVerificacao(null); onValidadeMudou(false); return; }
+    setVerificando(true);
+    const timer = setTimeout(() => {
+      api.get<VerificacaoEndereco>(`/email/verificar-endereco?local=${encodeURIComponent(valor)}`)
+        .then((r) => { setVerificacao(r); onValidadeMudou(r.disponivel); })
+        .catch(() => { setVerificacao(null); onValidadeMudou(false); })
+        .finally(() => setVerificando(false));
+    }, 500);
+    return () => clearTimeout(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [valor]);
+
+  return (
+    <div style={{ marginTop: "0.8rem" }}>
+      <label htmlFor="local-part">Escolha o endereço da sua caixa</label>
+      <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
+        <input id="local-part" value={valor} style={{ flex: 1 }}
+               onChange={(e) => onChange(e.target.value.toLowerCase())} />
+        <span className="eyebrow" style={{ margin: 0, whiteSpace: "nowrap" }}>@corvia.med.br</span>
+      </div>
+      <p className="eyebrow" style={{ margin: "0.3rem 0 0", minHeight: "1.1em" }}>
+        {verificando && "verificando…"}
+        {!verificando && verificacao?.disponivel && (
+          <span style={{ color: "var(--sucesso)" }}>✓ {verificacao.endereco} está disponível</span>
+        )}
+        {!verificando && verificacao && !verificacao.disponivel && (
+          <span style={{ color: "var(--alerta)" }}>{verificacao.motivo}</span>
+        )}
+        {!verificando && !verificacao && "letras minúsculas, números, ponto, hífen ou underscore — 3 a 30 caracteres"}
+      </p>
+    </div>
+  );
+}
+
 /** Aba de assinatura — só faz sentido pra quem já está logado na conta
  * Corvia (decisão do Rafael: CorvIA Mail exige conta Corvia aprovada). */
 function AbaAssinar() {
@@ -34,6 +84,8 @@ function AbaAssinar() {
   const [termo, setTermo] = useState<TermoLgpd | null>(null);
   const [carregando, setCarregando] = useState(true);
   const [processando, setProcessando] = useState(false);
+  const [localPart, setLocalPart] = useState("");
+  const [enderecoValido, setEnderecoValido] = useState(false);
   const [senhaInicial, setSenhaInicial] = useState("");
   const [aceiteLgpd, setAceiteLgpd] = useState(false);
   const [ativando, setAtivando] = useState(false);
@@ -45,7 +97,16 @@ function AbaAssinar() {
       api.get<ContaEmail>("/email/conta"),
       api.get<TermoLgpd>("/email/termo-lgpd"),
     ])
-      .then(([s, c, t]) => { setStatus(s); setContaEmail(c); setTermo(t); })
+      .then(([s, c, t]) => {
+        setStatus(s); setContaEmail(c); setTermo(t);
+        // Só busca sugestão pra quem ainda não tem caixa — quem já tem, o
+        // endereço já está fixado no Mail360 e não dá pra reescolher aqui.
+        if (!c.ativa) {
+          api.get<SugestaoEndereco>("/email/sugestao-endereco")
+            .then((sug) => setLocalPart(sug.local_part))
+            .catch(() => { /* sugestão é conveniência, não bloqueia o formulário */ });
+        }
+      })
       .catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível carregar seu CorvIA Mail."))
       .finally(() => setCarregando(false));
   }, []);
@@ -85,7 +146,7 @@ function AbaAssinar() {
     setErro("");
     try {
       const resultado = await api.post<ContaEmail>("/email/conta", {
-        senha: senhaInicial, aceite_lgpd: aceiteLgpd,
+        senha: senhaInicial, aceite_lgpd: aceiteLgpd, local_part: localPart,
       });
       setContaEmail(resultado);
     } catch (e) {
@@ -135,7 +196,11 @@ function AbaAssinar() {
               : "Assinatura ativa — falta só criar sua caixa."}
           </p>
 
-          <label htmlFor="senha-inicial">
+          {!contaEmail?.ativa && !precisaReconsentir && (
+            <EscolhaDeEndereco valor={localPart} onChange={setLocalPart} onValidadeMudou={setEnderecoValido} />
+          )}
+
+          <label htmlFor="senha-inicial" style={{ marginTop: "0.8rem", display: "block" }}>
             {precisaReconsentir ? "Confirme a senha da sua caixa de e-mail" : "Crie uma senha para sua caixa de e-mail"}
           </label>
           <input id="senha-inicial" type="password" value={senhaInicial}
@@ -167,7 +232,10 @@ function AbaAssinar() {
 
           <button className="botao" style={{ width: "100%", marginTop: "0.8rem" }}
                   onClick={ativarCaixa}
-                  disabled={ativando || !aceiteLgpd || senhaInicial.length < 8}>
+                  disabled={
+                    ativando || !aceiteLgpd || senhaInicial.length < 8 ||
+                    (!contaEmail?.ativa && !precisaReconsentir && !enderecoValido)
+                  }>
             {ativando ? "Ativando…" : precisaReconsentir ? "Confirmar novo aceite" : "Ativar minha caixa de e-mail"}
           </button>
         </div>
