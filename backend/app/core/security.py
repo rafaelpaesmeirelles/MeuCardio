@@ -106,7 +106,7 @@ def assinante_ativo(user=Depends(current_user), db: Session = Depends(get_db)):
     return user
 
 
-def assinatura_email_ativa(db: Session, user_id: int) -> bool:
+def assinatura_email_ativa(db: Session, user) -> bool:
     """CorvIA Mail (Tarefa 28) é add-on cobrado à parte — não usa
     `assinante_ativo`, que é sobre a assinatura principal. Usada na ativação
     da caixa (`POST /api/email/conta`), não como dependência de rota: a
@@ -114,16 +114,24 @@ def assinatura_email_ativa(db: Session, user_id: int) -> bool:
     `lib/api.ts` do frontend redireciona para `/assinatura`, a página errada
     aqui, que é `/corvia-mail`).
 
+    Admin sempre tem acesso, mesmo skip do Stripe — mesmo padrão de
+    `assinante_ativo` acima. Decisão do Rafael em 31/07/2026, quando o preço
+    do add-on ainda não estava definido e nem o dono da plataforma conseguia
+    ativar a própria caixa para testar.
+
     Duas formas de ter acesso, desde o plano "completo" (30/07/2026): o add-on
     avulso de sempre (kind='email'), ou o plano da plataforma que já inclui
     CorvIA Mail (kind='meucardio', plano='completo') — sem essa segunda
     checagem, quem pagasse o plano completo continuaria vendo a caixa como não
     assinada."""
+    if user.role == "admin":
+        return True
+
     from app.models.subscription import PLANO_COMPLETO, TIPO_EMAIL, TIPO_MEUCARDIO, Subscription
 
     sub_email = (
         db.query(Subscription)
-        .filter(Subscription.user_id == user_id, Subscription.kind == TIPO_EMAIL)
+        .filter(Subscription.user_id == user.id, Subscription.kind == TIPO_EMAIL)
         .order_by(Subscription.id)
         .first()
     )
@@ -132,7 +140,7 @@ def assinatura_email_ativa(db: Session, user_id: int) -> bool:
 
     sub_principal = (
         db.query(Subscription)
-        .filter(Subscription.user_id == user_id, Subscription.kind == TIPO_MEUCARDIO)
+        .filter(Subscription.user_id == user.id, Subscription.kind == TIPO_MEUCARDIO)
         .order_by(Subscription.id)
         .first()
     )

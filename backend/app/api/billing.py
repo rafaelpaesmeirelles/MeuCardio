@@ -271,6 +271,18 @@ def criar_checkout(
 
 @router.get("/status-email")
 def status_email(db: Session = Depends(get_db), user: User = Depends(current_user)):
+    # Admin sempre com acesso, mesmo skip do Stripe — mesmo bypass de
+    # `assinatura_email_ativa` (core/security.py), aqui refletido na resposta
+    # que a tela usa pra decidir entre mostrar "Assinar" ou o formulário de
+    # ativação. Decisão do Rafael em 31/07/2026.
+    if user.role == "admin":
+        return {
+            "status": "ativo", "current_period_end": None,
+            "preco_definido": settings.corvia_mail_preco_definido,
+            "preco_centavos": settings.corvia_mail_preco_centavos,
+            "incluido_no_plano": True,
+        }
+
     sub = _assinatura_email(db, user.id)
     if sub and sub.status in ACESSO_LIBERADO:
         return {

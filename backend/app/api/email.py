@@ -121,7 +121,7 @@ def _obter_conta(db: Session, user: User) -> EmailAccount | None:
 def minha_conta(db: Session = Depends(get_db), user: User = Depends(current_user)):
     conta = _obter_conta(db, user)
     if not conta:
-        return {"ativa": False, "assinatura_ativa": assinatura_email_ativa(db, user.id)}
+        return {"ativa": False, "assinatura_ativa": assinatura_email_ativa(db, user)}
     return {
         "ativa": True, "email_address": conta.email_address, "status": conta.status,
         "senha_definida": conta.password_hash is not None,
@@ -196,7 +196,7 @@ def ativar_conta(dados: AtivarConta, db: Session = Depends(get_db), user: User =
     Mail360 e não dá pra trocar sem apagar e recriar a conta lá, fora do
     escopo desta rota."""
     _exigir_configurado()
-    if not assinatura_email_ativa(db, user.id):
+    if not assinatura_email_ativa(db, user):
         raise HTTPException(
             status_code=409,
             detail="Assine o CorvIA Mail antes de ativar sua caixa de e-mail.",
