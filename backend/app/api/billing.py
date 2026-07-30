@@ -1,15 +1,23 @@
 from datetime import datetime, timezone
 
 import stripe
-from fastapi import APIRouter, Depends, HTTPException, Request
+from fastapi import APIRouter, Depends, HTTPException, Query, Request
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
 from app.core.config import settings
 from app.core.db import get_db
 from app.core.security import ACESSO_LIBERADO, current_user
-from app.models.subscription import TIPO_CURSO, TIPO_EMAIL, TIPO_MEUCARDIO, Subscription
+from app.models.subscription import (
+    PLANO_BASICO, PLANO_COMPLETO, TIPO_CURSO, TIPO_EMAIL, TIPO_MEUCARDIO, Subscription,
+)
 from app.models.user import User
+
+PLANOS_VALIDOS = {PLANO_BASICO, PLANO_COMPLETO}
+# Preço do plano completo cobrado inline (price_data), no mesmo padrão já usado
+# no checkout do CorvIA Mail avulso — evita depender de um segundo Price
+# pré-criado no painel do Stripe só para este plano.
+PRECO_COMPLETO_CENTAVOS = 3000
 
 # O prefixo precisa incluir /api: o Caddy usa `handle /api/*` (que, ao contrário
 # de `handle_path`, não remove o prefixo antes de repassar ao backend).
@@ -210,19 +218,51 @@ def _sincronizar_caixa_de_email(db: Session, sub: Subscription) -> None:
 
 
 @router.post("/checkout")
-def criar_checkout(db: Session = Depends(get_db), user: User = Depends(current_user)):
+def criar_checkout(
+    plano: str = Query(PLANO_BASICO),
+    db: Session = Depends(get_db),
+    user: User = Depends(current_user),
+):
+    if plano not in PLANOS_VALIDOS:
+        raise HTTPException(status_code=400, detail="Plano inválido.")
+
     sub = _obter_ou_criar_assinatura(db, user)
+
+    if sub.status in ACESSO_LIBERADO:
+        raise HTTPException(
+            status_code=409,
+            detail="Você já tem uma assinatura ativa. Para trocar de plano, cancele a atual pelo portal de assinatura e assine o novo plano.",
+        )
 
     if not sub.stripe_customer_id:
         customer = stripe.Customer.create(email=user.email, name=user.full_name)
         sub.stripe_customer_id = customer["id"]
-        db.commit()
+
+    # Gravado aqui, não deduzido do webhook: o webhook só confirma status e
+    # data de renovação, quem decide o plano é esta chamada, antes de existir
+    # qualquer evento do Stripe para esta assinatura.
+    sub.plano = plano
+    db.commit()
+
+    if plano == PLANO_COMPLETO:
+        line_items = [{
+            "price_data": {
+                "currency": "brl",
+                "unit_amount": PRECO_COMPLETO_CENTAVOS,
+                "recurring": {"interval": "month"},
+                "product_data": {"name": "Corvia — Acesso Completo à Plataforma + CorvIA Mail"},
+            },
+            "quantity": 1,
+        }]
+    else:
+        line_items = [{"price": settings.stripe_price_id, "quantity": 1}]
 
     session = stripe.checkout.Session.create(
         customer=sub.stripe_customer_id,
         mode="subscription",
         payment_method_types=["card"],
-        line_items=[{"price": settings.stripe_price_id, "quantity": 1}],
+        line_items=line_items,
+        subscription_data={"metadata": {"tipo": "meucardio", "plano": plano, "user_id": str(user.id)}},
         success_url=f"{settings.public_url}/assinatura?status=sucesso",
         cancel_url=f"{settings.public_url}/assinatura?status=cancelado",
     )
@@ -232,16 +272,32 @@ def criar_checkout(db: Session = Depends(get_db), user: User = Depends(current_u
 @router.get("/status-email")
 def status_email(db: Session = Depends(get_db), user: User = Depends(current_user)):
     sub = _assinatura_email(db, user.id)
-    if not sub:
+    if sub and sub.status in ACESSO_LIBERADO:
         return {
-            "status": "inativo", "current_period_end": None,
+            "status": sub.status, "current_period_end": sub.current_period_end,
             "preco_definido": settings.corvia_mail_preco_definido,
             "preco_centavos": settings.corvia_mail_preco_centavos,
+            "incluido_no_plano": False,
         }
+
+    # Sem add-on avulso ativo — mas o plano completo já inclui CorvIA Mail.
+    # Sem esta checagem, quem pagou o plano completo veria "Assinar o CorvIA
+    # Mail" na tela, e um clique nele seria recusado pelo checkout (409).
+    principal = _assinatura_meucardio(db, user.id)
+    if principal and principal.status in ACESSO_LIBERADO and principal.plano == PLANO_COMPLETO:
+        return {
+            "status": principal.status, "current_period_end": principal.current_period_end,
+            "preco_definido": settings.corvia_mail_preco_definido,
+            "preco_centavos": settings.corvia_mail_preco_centavos,
+            "incluido_no_plano": True,
+        }
+
     return {
-        "status": sub.status, "current_period_end": sub.current_period_end,
+        "status": sub.status if sub else "inativo",
+        "current_period_end": sub.current_period_end if sub else None,
         "preco_definido": settings.corvia_mail_preco_definido,
         "preco_centavos": settings.corvia_mail_preco_centavos,
+        "incluido_no_plano": False,
     }
 
 
@@ -256,6 +312,13 @@ def criar_checkout_email(db: Session = Depends(get_db), user: User = Depends(cur
         raise HTTPException(
             status_code=409,
             detail="O preço do CorvIA Mail ainda não foi definido. Assinatura indisponível no momento.",
+        )
+
+    principal = _assinatura_meucardio(db, user.id)
+    if principal and principal.status in ACESSO_LIBERADO and principal.plano == PLANO_COMPLETO:
+        raise HTTPException(
+            status_code=409,
+            detail="Seu plano atual (Acesso Completo + CorvIA Mail) já inclui o CorvIA Mail — não é preciso assinar separadamente.",
         )
 
     sub = _obter_ou_criar_assinatura_email(db, user)
@@ -408,8 +471,8 @@ def listar_faturas(db: Session = Depends(get_db), user: User = Depends(current_u
 def status_assinatura(db: Session = Depends(get_db), user: User = Depends(current_user)):
     sub = _assinatura_meucardio(db, user.id)
     if not sub:
-        return {"status": "inativo", "current_period_end": None}
-    return {"status": sub.status, "current_period_end": sub.current_period_end}
+        return {"status": "inativo", "current_period_end": None, "plano": None}
+    return {"status": sub.status, "current_period_end": sub.current_period_end, "plano": sub.plano}
 
 
 @router.post("/webhook")

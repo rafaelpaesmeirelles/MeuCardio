@@ -112,16 +112,35 @@ def assinatura_email_ativa(db: Session, user_id: int) -> bool:
     da caixa (`POST /api/email/conta`), não como dependência de rota: a
     própria rota já decide o que fazer quando falso (409, não 402 — 402 no
     `lib/api.ts` do frontend redireciona para `/assinatura`, a página errada
-    aqui, que é `/corvia-mail`)."""
-    from app.models.subscription import TIPO_EMAIL, Subscription
+    aqui, que é `/corvia-mail`).
 
-    sub = (
+    Duas formas de ter acesso, desde o plano "completo" (30/07/2026): o add-on
+    avulso de sempre (kind='email'), ou o plano da plataforma que já inclui
+    CorvIA Mail (kind='meucardio', plano='completo') — sem essa segunda
+    checagem, quem pagasse o plano completo continuaria vendo a caixa como não
+    assinada."""
+    from app.models.subscription import PLANO_COMPLETO, TIPO_EMAIL, TIPO_MEUCARDIO, Subscription
+
+    sub_email = (
         db.query(Subscription)
         .filter(Subscription.user_id == user_id, Subscription.kind == TIPO_EMAIL)
         .order_by(Subscription.id)
         .first()
     )
-    return sub is not None and sub.status in ACESSO_LIBERADO
+    if sub_email is not None and sub_email.status in ACESSO_LIBERADO:
+        return True
+
+    sub_principal = (
+        db.query(Subscription)
+        .filter(Subscription.user_id == user_id, Subscription.kind == TIPO_MEUCARDIO)
+        .order_by(Subscription.id)
+        .first()
+    )
+    return (
+        sub_principal is not None
+        and sub_principal.status in ACESSO_LIBERADO
+        and sub_principal.plano == PLANO_COMPLETO
+    )
 
 
 def current_email_account(token: str = Depends(oauth2_scheme), db: Session = Depends(get_db)):
