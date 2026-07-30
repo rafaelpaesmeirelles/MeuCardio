@@ -171,6 +171,37 @@ o POISE (2008) mostrou risco: início de novo de betabloqueador reduziu infarto
 mas aumentou AVC e mortalidade geral, achado que já motivou cautela nas
 diretrizes internacionais.
 
+## Dupla antiagregação plaquetária: o tempo mínimo antes de operar
+
+A diretriz também trata do cenário do paciente com stent coronário recente que
+precisa de cirurgia não cardíaca antes do fim do curso planejado de dupla
+antiagregação plaquetária (DAPT). A Tabela 1 estratifica o intervalo desde a
+intervenção coronária por classe de recomendação, e o corte muda conforme o
+cenário clínico que motivou o stent:
+
+| Tempo decorrido desde a intervenção | Cenário eletivo | Síndrome coronariana aguda |
+|---|---|---|
+| Acima do limite superior da faixa seguinte | Classe I | Classe I |
+| 3–6 meses (eletivo) / 6–12 meses (SCA) | Classe IIa | Classe IIa |
+| 30 dias–3 meses (eletivo) / 30 dias–6 meses (SCA) | Classe IIb | Classe IIb |
+| Menos de 30 dias | Classe III | Classe III |
+
+Ou seja: **operar com menos de 30 dias de DAPT após o stent é Classe III** —
+contraindicado — em qualquer cenário, eletivo ou pós-síndrome coronariana
+aguda; o tempo "ideal" pleno (Classe I) é de 6 meses no implante eletivo e de
+12 meses após síndrome coronariana aguda, com as faixas intermediárias em
+IIa/IIb conforme a tabela.
+
+Quando a suspensão da DAPT antes do tempo mínimo ideal é inevitável, a
+diretriz recomenda **realizar a cirurgia não cardíaca em centro com suporte
+multidisciplinar e retaguarda hemodinâmica** — Classe I, Nível C. O uso de
+**teste de agregabilidade plaquetária para abreviar o tempo de suspensão** do
+inibidor de P2Y12 é Classe IIb, Nível C — ferramenta auxiliar, não rotina. E
+para o caso de risco trombótico muito elevado (menos de 1 mês desde a
+intervenção coronária percutânea) que precisa mesmo assim suspender a DAPT, a
+diretriz admite **tirofibana como terapia de ponte** — também Classe IIb,
+Nível C.
+
 ## O que este documento não cobre
 
 **A conduta que decorre da estratificação** — quais exames pedir, quando pedir
@@ -179,10 +210,12 @@ cardiovascular pela ESC 2022 e no fluxograma correspondente. Este documento é
 sobre **como estimar o risco**, que é o passo anterior.
 
 **As demais recomendações da diretriz brasileira.** Ela tem **34 quadros** de
-recomendação; extraí aqui a estratificação de risco e as três recomendações
-farmacológicas mais perguntadas (betabloqueador, IECA/BRA, estatina) — o que é
-onde a diretriz difere da europeia ou preenche lacuna dela. O restante do
-documento (antiplaquetário/anticoagulante perioperatório, manejo de
-dispositivo cardíaco implantável, entre outros) não foi transcrito, e não deve
-ser presumido como equivalente ao da ESC — **VERIFICAÇÃO HUMANA NECESSÁRIA**
-para quem precisar dessas recomendações específicas, que não estão aqui.
+recomendação; extraí aqui a estratificação de risco, as três recomendações
+farmacológicas mais perguntadas (betabloqueador, IECA/BRA, estatina) e o
+tempo mínimo de dupla antiagregação plaquetária antes de cirurgia — o que é
+onde a diretriz difere da europeia ou preenche lacuna dela. **O manejo
+perioperatório de anticoagulante oral (varfarina, DOAC) e de dispositivo
+cardíaco eletrônico implantável (marca-passo, CDI)** não foi transcrito, e não
+deve ser presumido como equivalente ao da ESC — **VERIFICAÇÃO HUMANA
+NECESSÁRIA** para quem precisar dessas duas recomendações específicas, que não
+estão aqui.
