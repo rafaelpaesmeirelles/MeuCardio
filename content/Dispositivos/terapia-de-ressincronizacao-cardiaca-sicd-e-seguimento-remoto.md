@@ -4,7 +4,7 @@ slug: terapia-de-ressincronizacao-cardiaca-sicd-e-seguimento-remoto
 theme: "Dispositivos"
 kind: protocolo
 review_status: revisado
-source_refs: ["2021 ESC Guidelines on cardiac pacing and cardiac resynchronization therapy · European Heart Journal · 2021 · 42(35):3427-3520 · https://academic.oup.com/eurheartj/article/42/35/3427/6358547", "2021 ESC Guidelines on Cardiac Pacing and CRT: Key Points · American College of Cardiology · 2021 · https://www.acc.org/latest-in-cardiology/ten-points-to-remember/2021/08/31/18/37/2021-esc-guidelines-on-cardiac-pacing-esc-2021", "Subcutaneous defibrillator (S-ICD) · PMC · https://pmc.ncbi.nlm.nih.gov/articles/PMC12660433/"]
+source_refs: ["2021 ESC Guidelines on cardiac pacing and cardiac resynchronization therapy · European Heart Journal · 2021 · 42(35):3427-3520 · https://academic.oup.com/eurheartj/article/42/35/3427/6358547", "2021 ESC Guidelines on Cardiac Pacing and CRT: Key Points · American College of Cardiology · 2021 · https://www.acc.org/latest-in-cardiology/ten-points-to-remember/2021/08/31/18/37/2021-esc-guidelines-on-cardiac-pacing-esc-2021", "Subcutaneous defibrillator (S-ICD) · PMC · https://pmc.ncbi.nlm.nih.gov/articles/PMC12660433/", "Cleland JGF, Daubert JC, Erdmann E, et al; Cardiac Resynchronization-Heart Failure (CARE-HF) Study Investigators. The effect of cardiac resynchronization on morbidity and mortality in heart failure. N Engl J Med. 2005;352(15):1539-1549. DOI: 10.1056/NEJMoa050496. PMID: 15753115", "Tang ASL, Wells GA, Talajic M, et al; Resynchronization-Defibrillation for Ambulatory Heart Failure Trial (RAFT) Investigators. Cardiac-resynchronization therapy for mild-to-moderate heart failure. N Engl J Med. 2010;363(25):2385-2395. DOI: 10.1056/NEJMoa1009540. PMID: 21073365"]
 ---
 
 # Terapia de Ressincronização Cardíaca, CDI Subcutâneo (S-ICD) e Seguimento Remoto
@@ -17,6 +17,13 @@ Complementa os documentos já existentes sobre CDI (prevenção secundária) e m
 - **alinhamento com diretriz de IC**: indicações de TRC alinhadas com a diretriz de insuficiência cardíaca da ESC publicada simultaneamente
 - **implante precoce**: nova recomendação para implante precoce de dispositivo (CRT-D ou CRT-P) em pacientes selecionados com IAM anterior e insuficiência cardíaca aguda
 - **fonte**: ESC 2021
+
+## Evidencia pivotal de mortalidade — care-hf e raft
+**Acrescentado em 30/07/2026** — o critério de indicação acima não trazia nenhum ensaio com número real de mortalidade/hospitalização.
+
+- **CARE-HF** (Cleland JGF et al., N Engl J Med. 2005;352(15):1539-1549, PMID 15753115): 813 pacientes com IC NYHA III/IV por disfunção sistólica e dissincronia cardíaca, randomizados para TRC + terapia otimizada vs. terapia otimizada isolada, seguimento médio de 29,4 meses. Desfecho primário (morte por qualquer causa ou hospitalização não planejada por evento cardiovascular maior): **39% vs. 55%** (HR 0,63; IC95% 0,51-0,77; p<0,001). **Mortalidade por qualquer causa isolada, também positiva**: 20% vs. 30% (HR 0,64; IC95% 0,48-0,85; p=0,002) — diferente de vários outros ensaios registrados nesta biblioteca, aqui o benefício de mortalidade isolada foi estatisticamente significativo, não só o composto.
+- **RAFT** (Tang ASL et al., N Engl J Med. 2010;363(25):2385-2395, PMID 21073365): 1.798 pacientes com IC NYHA II/III, FEVE ≤30%, QRS ≥120ms (ou ≥200ms se estimulado), randomizados para CDI+TRC vs. CDI isolado, seguimento médio de 40 meses. Desfecho primário (morte por qualquer causa ou hospitalização por IC): **33,2% vs. 40,3%** (HR 0,75; IC95% 0,64-0,87; p<0,001). Mortalidade isolada: HR 0,75 (IC95% 0,62-0,91; p=0,003). Hospitalização por IC isolada: HR 0,68 (IC95% 0,56-0,83; p<0,001). **Ressalva de segurança que o próprio ensaio registra**: mais eventos adversos em 30 dias pós-implante no grupo CDI+TRC (124 vs. 58 pacientes, p<0,001) — o benefício de médio/longo prazo vem acompanhado de mais complicações precoces do implante.
+- **O que os dois ensaios juntos demonstram**: CARE-HF estabelece o benefício em NYHA III/IV; RAFT estende o benefício, com magnitude menor, a NYHA II/III — é essa dupla base, não um ensaio isolado, que sustenta a indicação de TRC ao longo do espectro de gravidade sintomática hoje reconhecido pela diretriz.
 
 ## CDI subcutaneo (S-ICD)
 - **racional**: todo o material do dispositivo fica fora da cavidade torácica, eliminando complicações intravasculares do sistema transvenoso — indicado para pacientes com indicação de desfibrilador e sem necessidade de estimulação (pacing)
