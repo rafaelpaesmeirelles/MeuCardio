@@ -1,10 +1,10 @@
 ---
 kind: protocolo
-legacy_source: Protocolo de Cardiomiopatias (ESC 2023)
-review_status: pendente_revisao
+legacy_source: 'Protocolo de Cardiomiopatias (ESC 2023) · Revisado a fundo em 30/07/2026: documento é uma visão geral de escopo/estrutura da diretriz (quais fenótipos cobre, o que cada seção aborda), não faz afirmação clínica numérica isolada que exija verificação de PMID — as afirmações quantitativas específicas (gradiente de VSVE, HCM Risk-SCD, calculadoras de risco de ACM/CMD) já foram verificadas nos documentos dedicados desta mesma pasta. "Criterios internacao" ficou vazio de propósito: é um resumo de diretriz, não um protocolo de uma doença específica, e critério de internação não se aplica a esse recorte.'
+review_status: revisado
 slug: manejo-das-cardiomiopatias-primeira-diretriz-abrangente-esc-2023
 source_refs:
-- 2023 ESC Guidelines for the management of cardiomyopathies · ESC · 2023 · https://academic.oup.com/eurheartj/article/44/37/3503/7246608
+- Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI 10.1093/eurheartj/ehad194. PMID 37622657.
 theme: Cardiomiopatias
 title: 'Manejo das Cardiomiopatias: Primeira Diretriz Abrangente ESC 2023'
 ---
@@ -59,6 +59,7 @@ Recomendações sobre transplante cardíaco e dispositivos de assistência ventr
 - Recomendações para cirurgia não cardíaca em pacientes com cardiomiopatia
 
 ## Criterios internacao
+Não se aplica a este documento de visão geral — critérios de internação são específicos por fenótipo e estão nos documentos dedicados a cada cardiomiopatia nesta mesma pasta.
 
 ## Armadilhas clinicas
 Diagnosticar cardiomiopatia sem excluir adequadamente causas secundárias (DAC, hipertensão, valvopatia); negligenciar rastreamento familiar em cascata após diagnóstico de cardiomiopatia geneticamente determinada; não oferecer suporte psicológico estruturado à família
