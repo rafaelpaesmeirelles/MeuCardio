@@ -867,5 +867,27 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "fibrilacao-atrial-pos-operatoria",
+    "title": "ECG — Fibrilação atrial no pós-operatório",
+    "modality": "ECG",
+    "theme": "Perioperatório",
+    "file_path": "ecg/fibrilacao-atrial-pos-operatoria.jpg",
+    "findings": "Duas derivações (aVL e aVF) de um ECG de 12 derivações mostrando ritmo irregularmente irregular, sem onda P discernível — substituída por ondulação fibrilatória da linha de base, mais visível em aVF —, achado compatível com fibrilação atrial.",
+    "teaching_points": "Fibrilação atrial é a arritmia mais comum no pós-operatório, mas a incidência varia muito conforme o tipo de cirurgia: cerca de 35% após cirurgia cardíaca — mais frequente ainda acima de 72 anos, com risco cerca de 5 vezes maior que abaixo de 55 — contra 5-10% em cirurgia não cardíaca (variação relatada de 0,4% a 26%, dependendo de idade, cardiopatia estrutural prévia e tipo de operação). No paciente assintomático, nos primeiros 1 a 3 dias pós-operatórios, controle de frequência (betabloqueador, pela alta atividade adrenérgica típica desse período) é suficiente — controle de ritmo fica reservado para instabilidade hemodinâmica. Anticoagulação é decisão individualizada: as diretrizes AHA/ACC de 2023 recomendam considerar pelo menos 60 dias de anticoagulação oral em quem desenvolve FA pós-operatória, mas a evidência de benefício é menos robusta que na FA não valvar em geral, e o risco de sangramento no período perioperatório pesa contra a extensão automática do tratamento.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Atrial_Fibrillation_in_two_leads.jpg",
+    "license": "CC BY-SA 4.0",
+    "attribution": "PeaBrainC, via Wikimedia Commons — CC BY-SA 4.0.",
+    "tags": [
+      "fibrilação atrial",
+      "pós-operatório",
+      "arritmia",
+      "ecg",
+      "cirurgia cardíaca"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
