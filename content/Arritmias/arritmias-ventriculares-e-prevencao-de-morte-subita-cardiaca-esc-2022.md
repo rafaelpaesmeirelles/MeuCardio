@@ -4,7 +4,7 @@ slug: arritmias-ventriculares-e-prevencao-de-morte-subita-cardiaca-esc-2022
 theme: "Arritmias"
 kind: protocolo
 review_status: pendente_revisao
-source_refs: ["2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death · ESC · 2022 · 10.1093/eurheartj/ehac262 · 36017572 · https://guardheart.ern-net.eu/wp-content/uploads/sites/4/2023/02/PMID-36017572_ESCGuideline_Zeppenfeld.pdf"]
+source_refs: ["2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death · ESC · 2022 · 10.1093/eurheartj/ehac262 · 36017572 · https://guardheart.ern-net.eu/wp-content/uploads/sites/4/2023/02/PMID-36017572_ESCGuideline_Zeppenfeld.pdf", "Sapp JL, Wells GA, Parkash R, et al. Ventricular tachycardia ablation versus escalation of antiarrhythmic drugs (VANISH). N Engl J Med. 2016;375(2):111-121. DOI: 10.1056/NEJMoa1513614. PMID: 27149033"]
 legacy_source: "protocolos/protocolo-de-arritmias-ventriculares-e-morte-subita-cardiaca.md"
 ---
 
@@ -27,7 +27,7 @@ Atualização da diretriz de 2015, com maior relevância prática por meio de al
 - **cardiomiopatia isquemica**: Ablação por catéter elevada de categoria especialmente para pacientes com taquicardia ventricular recorrente; critérios de terapia com CDI primária preventiva incorporam estimulação elétrica programada para estratificação de risco
 - **cardiomiopatia dilatada**: Além da função de VE, fatores de imagem (RM com realce tardio), genéticos e clínicos ganham peso nas recomendações de CDI primário-preventivo
 - **vt idiopatica**: Ablação por catéter torna-se terapia de primeira linha para arritmias ventriculares idiopáticas originadas da via de saída de VD e fascículo esquerdo, além de casos de cardiomiopatia agravada/induzida por extrassístoles ventriculares
-- **estudo vanish**: Resultados modificam recomendações de ablação por catéter em TV recorrente
+- **estudo vanish**: **Resolvido em 30/07/2026** (Sapp JL et al., N Engl J Med. 2016;375(2):111-121, PMID 27149033) — 259 pacientes com cardiomiopatia isquêmica, CDI e TV recorrente **apesar de antiarrítmico**, randomizados para ablação por cateter mantendo o antiarrítmico basal (132) ou escalonamento da terapia antiarrítmica (introdução/aumento de amiodarona, ou associação de mexiletina, 127). Seguimento médio de 27,9±17,1 meses. Desfecho primário composto (morte, tempestade elétrica com ≥3 episódios de TV em 24h, ou choque apropriado do CDI): **59,1% com ablação vs. 68,5% com escalonamento farmacológico** (HR 0,72; IC95% 0,53-0,98; p=0,04) — favorece ablação, sem diferença de mortalidade isolada entre os grupos. Segurança: 2 perfurações cardíacas e 3 sangramentos maiores no grupo ablação; 2 óbitos por toxicidade pulmonar e 1 por disfunção hepática no grupo escalonamento farmacológico — a toxicidade de órgão da amiodarona em dose alta tem peso real nesse resultado
 - **doencas eletricas primarias**: Critérios diagnósticos revisados para numerosas condições (síndrome de Brugada, QT longo, etc.), com múltiplas novas recomendações de teste genético
 - **fonte**: Dtsch Med Wochenschr
 
