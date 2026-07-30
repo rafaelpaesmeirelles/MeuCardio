@@ -46,6 +46,7 @@ import Telediagnostico from "./pages/Telediagnostico";
 import FilaTelediagnostico from "./pages/FilaTelediagnostico";
 import CaixaDeEmail from "./pages/CaixaDeEmail";
 import CorviaMail from "./pages/CorviaMail";
+import Receituario from "./pages/Receituario";
 
 export default function App() {
   const { usuario, carregando } = useAuth();
@@ -107,6 +108,7 @@ export default function App() {
         <Route path="round" element={<Round />} />
         <Route path="agenda" element={<Agenda />} />
         <Route path="documentos" element={<Templates />} />
+        <Route path="receituario" element={<Receituario />} />
         <Route path="assinatura" element={<Assinatura />} />
         <Route path="minha-conta" element={<MinhaConta />} />
         <Route path="telediagnostico" element={<Telediagnostico />} />
