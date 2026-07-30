@@ -41,12 +41,29 @@
 		header Cache-Control "public, max-age=300"
 	}
 
-	# PWA: arquivos estáticos, com fallback para index.html (rotas do React Router)
+	# Arquivos com hash no nome (Vite): podem ser cacheados por muito tempo,
+	# porque qualquer mudança de conteúdo já vem com um nome de arquivo novo.
+	# Bloco à parte, e não `header /assets/* ...` dentro do handle abaixo,
+	# porque testado que o matcher de path embutido no `header` não se impõe
+	# sobre um `header` sem matcher no mesmo bloco — o padrão geral vencia
+	# mesmo para requisição de asset.
+	handle_path /assets/* {
+		root * /site/assets
+		file_server
+		header Cache-Control "public, max-age=31536000, immutable"
+	}
+
+	# PWA: arquivos estáticos, com fallback para index.html (rotas do React
+	# Router). Cache-Control "no-cache" é o que corrige a raiz do problema:
+	# index.html, sw.js e o manifest não tinham Cache-Control nenhum (só
+	# ETag/Last-Modified), e o navegador podia aplicar cache heurístico e
+	# continuar rodando o bundle antigo por um tempo mesmo após um rebuild,
+	# porque nunca chegava a revalidar.
 	handle {
 		root * /site
+		header Cache-Control "no-cache"
 		try_files {path} /index.html
 		file_server
-		header /assets/* Cache-Control "public, max-age=31536000, immutable"
 	}
 
 	header {
