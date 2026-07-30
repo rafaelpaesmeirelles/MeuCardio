@@ -64,6 +64,44 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### 🌙 FIM DE SESSÃO em 30/07/2026, à noite — sessão de Medicamentos, tudo publicado
+> Escrito a pedido do Rafael antes de dormir, para o caso de a conexão cair e
+> uma sessão nova precisar retomar sem contexto. **Se você é uma sessão nova
+> lendo isto: rode `/clear` se ainda não rodou, e leia
+> `.claude/handoff-medicamentos.md` inteiro antes de escrever qualquer coisa**
+> — este bloco é só o resumo; o handoff tem o detalhe técnico (comandos,
+> mirrors de PDF que funcionaram, ciclo de publicação usado).
+>
+> **Estado ao fechar, medido, não de memória**: as seis frentes estão em
+> **100% publicado, zero pendência** — 312/312 documentos, 101/101 fármacos,
+> 53/53 estudos, 40/40 exames, 109/109 evidências, 44/44 imagens. **Zero
+> ocorrências de `VERIFICAÇÃO HUMANA NECESSÁRIA` em todo o acervo** (conferido
+> por grep no repositório inteiro) — as últimas marcas foram removidas nesta
+> sessão, por decisão do Rafael após revisão manual dele, não porque toda
+> marca ganhou fonte nova. Onde a fonte não apareceu, o texto explicativo da
+> limitação ficou no documento, só o sinalizador literal saiu.
+>
+> **O que a sessão de Medicamentos fez em 30/07/2026**: resolveu 9 marcações
+> de verificação com fonte real, criou cerca de 18 documentos novos (todos
+> verificados contra fonte primária — PubMed/PMC/EMA/DailyMed/diretriz), e
+> enriqueceu vários documentos existentes com ensaios pivotais que faltavam
+> (CDI ganhou os 4 ensaios que faltavam mais o VEST; TRC ganhou CARE-HF e
+> RAFT; marca-passo leadless ganhou o AVEIR DR i2i). Detalhe completo, com
+> nomes de arquivo e PMID de cada fonte, em `.claude/handoff-medicamentos.md`.
+>
+> **Por onde continuar amanhã, na faixa de Medicamentos** (13 temas de
+> `content/` + `medicamentos/*.json` + `backend/app/api/drugs.py` — ver tabela
+> abaixo): **Dispositivos é o tema mais raso agora, com 8 documentos** —
+> candidatos ainda não pesquisados citados no handoff (CardioMEMS/GUIDE-HF,
+> extração de eletrodo a laser). Nenhum documento, fármaco, estudo, exame ou
+> imagem está travado esperando aval do Rafael nesta faixa — qualquer trabalho
+> novo começa do zero, seguindo a regra permanente de autonomia mais abaixo
+> neste arquivo (achar lacuna real, verificar contra fonte primária, escrever,
+> validar, commitar por caminho, importar, e esperar autorização explícita
+> antes de publicar).
+>
+> ---
+>
 > ### ✅ REATIVADA em 29/07/2026, às 20h — duas sessões de novo
 > O Rafael reatachou a sessão do tmux e vai recolocá-la para trabalhar. **A
 > suspensão abaixo durou cerca de dez minutos e não vale mais.** Divisão em
