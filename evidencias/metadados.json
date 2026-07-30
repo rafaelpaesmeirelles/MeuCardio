@@ -2086,5 +2086,250 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "cuidado-centrado-no-paciente-informando-todas-as-decisoes-clinicas",
+    "statement": "É recomendado avaliar e respeitar as preferências, necessidades e crenças individuais do paciente, garantindo que os valores dele informem todas as decisões clínicas — não apenas as decisões consideradas difíceis.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 ESC Guidelines for the management of acute coronary syndromes",
+    "reference": "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191 — Capítulo 14 (Patient perspectives), classe e nível conferidos em contexto no texto original",
+    "theme": "Comunicação clínica",
+    "tags": [
+      "cuidado centrado no paciente",
+      "decisão clínica",
+      "valores do paciente"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "incluir-o-paciente-na-decisao-com-recursos-de-apoio",
+    "statement": "É recomendado incluir o paciente na decisão, tanto quanto sua condição permita, e informá-lo sobre risco de eventos adversos, exposição à radiação e opções alternativas — usando recursos de apoio à decisão para facilitar a conversa.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 ESC Guidelines for the management of acute coronary syndromes",
+    "reference": "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191 — Capítulo 14 (Patient perspectives), classe e nível conferidos em contexto no texto original",
+    "theme": "Comunicação clínica",
+    "tags": [
+      "decisão compartilhada",
+      "consentimento informado",
+      "exposição à radiação",
+      "recurso de apoio à decisão"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "teach-back-como-apoio-ao-consentimento-informado",
+    "statement": "O uso da técnica de teach back — pedir ao paciente que diga, com as próprias palavras, o que precisa saber ou fazer sobre sua saúde — deve ser considerado como apoio à decisão durante a obtenção do consentimento informado.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 ESC Guidelines for the management of acute coronary syndromes",
+    "reference": "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191 — Capítulo 14 (Patient perspectives), classe e nível conferidos em contexto no texto original",
+    "theme": "Comunicação clínica",
+    "tags": [
+      "teach back",
+      "consentimento informado",
+      "técnica de comunicação"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "informacao-de-alta-escrita-e-verbal-com-teach-back",
+    "statement": "Deve ser considerada a informação de alta em formato escrito e verbal, com preparo e educação usando teach back e/ou entrevista motivacional, dando a informação em blocos e checando o entendimento do paciente.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 ESC Guidelines for the management of acute coronary syndromes",
+    "reference": "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191 — Capítulo 14 (Patient perspectives), classe e nível conferidos em contexto no texto original",
+    "theme": "Comunicação clínica",
+    "tags": [
+      "alta hospitalar",
+      "teach back",
+      "entrevista motivacional",
+      "educação do paciente"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "avaliar-bem-estar-mental-com-instrumento-validado-apos-sca",
+    "statement": "Deve ser considerada a avaliação do bem-estar mental com instrumento validado, com encaminhamento para acompanhamento psicológico quando apropriado — ansiedade e depressão após a síndrome coronariana aguda associam-se a risco aumentado de não adesão, MACE subsequente e morte.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 ESC Guidelines for the management of acute coronary syndromes",
+    "reference": "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191 — Capítulo 14 (Patient perspectives), classe e nível conferidos em contexto no texto original",
+    "theme": "Comunicação clínica",
+    "tags": [
+      "saúde mental",
+      "ansiedade",
+      "depressão",
+      "adesão ao tratamento",
+      "rastreio"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "classificacao-mwho-2-0-em-toda-mulher-em-idade-fertil-com-dcv",
+    "statement": "É recomendado que toda mulher em idade fértil com doença cardiovascular tenha o risco gestacional estimado pela classificação mWHO 2.0 (modified World Health Organization, versão atualizada), que organiza o restante do fluxo de cuidado, incluindo o critério de encaminhamento ao Pregnancy Heart Team.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2025,
+    "guideline_title": "2025 ESC Guidelines for the management of cardiovascular disease and pregnancy",
+    "reference": "2025 ESC Guidelines for the management of cardiovascular disease and pregnancy: Developed by the task force on the management of cardiovascular disease and pregnancy of the European Society of Cardiology (ESC), endorsed by the European Society of Gynecology (ESG). Eur Heart J. 2025;46(43):4462-4568. DOI: 10.1093/eurheartj/ehaf193. PMID: 40878294.",
+    "theme": "Geral",
+    "tags": [
+      "mwho",
+      "gestação",
+      "estratificação de risco",
+      "cardiopatia e gravidez"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "encaminhamento-ao-pregnancy-heart-team-em-mwho-classe-ii-iii-ou-superior",
+    "statement": "É recomendado que mulheres com doença cardiovascular de mWHO 2.0 classe II-III ou superior sejam avaliadas e acompanhadas por um Pregnancy Heart Team desde o período pré-gestacional, ao longo da gestação e no pós-parto.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2025,
+    "guideline_title": "2025 ESC Guidelines for the management of cardiovascular disease and pregnancy",
+    "reference": "2025 ESC Guidelines for the management of cardiovascular disease and pregnancy: Developed by the task force on the management of cardiovascular disease and pregnancy of the European Society of Cardiology (ESC), endorsed by the European Society of Gynecology (ESG). Eur Heart J. 2025;46(43):4462-4568. DOI: 10.1093/eurheartj/ehaf193. PMID: 40878294.",
+    "theme": "Geral",
+    "tags": [
+      "pregnancy heart team",
+      "mwho",
+      "equipe multidisciplinar",
+      "gestação"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "decisao-compartilhada-com-apoio-psicologico-em-mwho-classe-iv",
+    "statement": "É recomendada discussão pelo Pregnancy Heart Team sobre o alto risco de mortalidade e morbidade materna e o correspondente alto risco fetal para mulheres com condições mWHO 2.0 classe IV, incluindo processo de decisão compartilhada sobre a interrupção da gestação, com apoio psicológico — substitui a orientação de 2018, que tratava mWHO IV como contraindicação formal à gestação.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2025,
+    "guideline_title": "2025 ESC Guidelines for the management of cardiovascular disease and pregnancy",
+    "reference": "2025 ESC Guidelines for the management of cardiovascular disease and pregnancy: Developed by the task force on the management of cardiovascular disease and pregnancy of the European Society of Cardiology (ESC), endorsed by the European Society of Gynecology (ESG). Eur Heart J. 2025;46(43):4462-4568. DOI: 10.1093/eurheartj/ehaf193. PMID: 40878294.",
+    "theme": "Geral",
+    "tags": [
+      "mwho",
+      "decisão compartilhada",
+      "alto risco",
+      "apoio psicológico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "bnp-pre-gestacional-em-mulher-com-insuficiencia-cardiaca-previa",
+    "statement": "Deve ser considerada a dosagem de BNP ou NT-proBNP antes da gestação em mulher com insuficiência cardíaca de qualquer etiologia — incluindo cardiomiopatia periparto prévia, cardiomiopatia estrutural, cardiopatia congênita do adulto ou hipertensão arterial pulmonar —, com monitorização durante a gestação conforme a doença de base e o surgimento ou piora de sintomas.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2025,
+    "guideline_title": "2025 ESC Guidelines for the management of cardiovascular disease and pregnancy",
+    "reference": "2025 ESC Guidelines for the management of cardiovascular disease and pregnancy: Developed by the task force on the management of cardiovascular disease and pregnancy of the European Society of Cardiology (ESC), endorsed by the European Society of Gynecology (ESG). Eur Heart J. 2025;46(43):4462-4568. DOI: 10.1093/eurheartj/ehaf193. PMID: 40878294.",
+    "theme": "Geral",
+    "tags": [
+      "bnp",
+      "nt-probnp",
+      "insuficiência cardíaca",
+      "pré-concepção"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "postergar-gestacao-por-1-ano-apos-transplante-cardiaco",
+    "statement": "É recomendado postergar a gestação por pelo menos 1 ano após o transplante cardíaco, considerando os fatores de risco individuais da paciente.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2025,
+    "guideline_title": "2025 ESC Guidelines for the management of cardiovascular disease and pregnancy",
+    "reference": "2025 ESC Guidelines for the management of cardiovascular disease and pregnancy: Developed by the task force on the management of cardiovascular disease and pregnancy of the European Society of Cardiology (ESC), endorsed by the European Society of Gynecology (ESG). Eur Heart J. 2025;46(43):4462-4568. DOI: 10.1093/eurheartj/ehaf193. PMID: 40878294.",
+    "theme": "Geral",
+    "tags": [
+      "transplante cardíaco",
+      "gestação",
+      "planejamento reprodutivo"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "avaliacao-diagnostica-imediata-de-tev-em-gestante-ou-puerpera",
+    "statement": "Em gestante ou puérpera com suspeita de tromboembolismo venoso (TVP e/ou TEP), é recomendada avaliação diagnóstica formal imediata por método validado, sem adiamento.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2025,
+    "guideline_title": "2025 ESC Guidelines for the management of cardiovascular disease and pregnancy",
+    "reference": "2025 ESC Guidelines for the management of cardiovascular disease and pregnancy: Developed by the task force on the management of cardiovascular disease and pregnancy of the European Society of Cardiology (ESC), endorsed by the European Society of Gynecology (ESG). Eur Heart J. 2025;46(43):4462-4568. DOI: 10.1093/eurheartj/ehaf193. PMID: 40878294.",
+    "theme": "Geral",
+    "tags": [
+      "tromboembolismo venoso",
+      "gestação",
+      "puerpério",
+      "diagnóstico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "avaliacao-de-risco-cardiovascular-apos-desfecho-gestacional-adverso",
+    "statement": "É recomendado realizar avaliação de risco cardiovascular em mulher com história de desfecho gestacional adverso (APO — distúrbio hipertensivo gestacional, pré-eclâmpsia, diabetes gestacional, recém-nascido pequeno ou grande para a idade gestacional, parto pré-termo, perda gestacional ou descolamento prematuro de placenta), reconhecer e documentar o APO na avaliação de risco, e orientar sobre estilo de vida que otimize a saúde cardiovascular.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2025,
+    "guideline_title": "2025 ESC Guidelines for the management of cardiovascular disease and pregnancy",
+    "reference": "2025 ESC Guidelines for the management of cardiovascular disease and pregnancy: Developed by the task force on the management of cardiovascular disease and pregnancy of the European Society of Cardiology (ESC), endorsed by the European Society of Gynecology (ESG). Eur Heart J. 2025;46(43):4462-4568. DOI: 10.1093/eurheartj/ehaf193. PMID: 40878294.",
+    "theme": "Geral",
+    "tags": [
+      "desfecho gestacional adverso",
+      "apo",
+      "risco cardiovascular futuro",
+      "pré-eclâmpsia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "totg-pos-parto-em-mulher-com-diabetes-gestacional-previo",
+    "statement": "Em mulher com diabetes gestacional prévio, é recomendado teste oral de tolerância à glicose (TOTG) formal 6 a 12 semanas pós-parto, com reavaliação em 6 a 12 meses e seguimento anual regular para rastreio de diabetes.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2025,
+    "guideline_title": "2025 ESC Guidelines for the management of cardiovascular disease and pregnancy",
+    "reference": "2025 ESC Guidelines for the management of cardiovascular disease and pregnancy: Developed by the task force on the management of cardiovascular disease and pregnancy of the European Society of Cardiology (ESC), endorsed by the European Society of Gynecology (ESG). Eur Heart J. 2025;46(43):4462-4568. DOI: 10.1093/eurheartj/ehaf193. PMID: 40878294.",
+    "theme": "Geral",
+    "tags": [
+      "diabetes gestacional",
+      "totg",
+      "rastreio de diabetes",
+      "pós-parto"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
