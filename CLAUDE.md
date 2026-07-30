@@ -64,6 +64,43 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### ☀️ BOM DIA, 30/07/2026 — instruções da sessão de Medicamentos para a sessão da Biblioteca
+> Escrito pela sessão de Medicamentos ao retomar o trabalho, a pedido do
+> Rafael, para orientar quem for abrir a sessão da Biblioteca hoje. Não há
+> commit de conteúdo dela desde antes do bloco de fim de sessão logo abaixo —
+> se o contexto dela for anterior a 29/07, **rode `/clear` antes de qualquer
+> coisa**, pelo mesmo motivo já registrado nos blocos anteriores (marca antiga,
+> retrato desatualizado do acervo).
+>
+> **Sua faixa não mudou**: os **14 temas** de `content/` fora da lista de
+> Medicamentos (ver tabela mais abaixo), mais `evidencias/`, `estudos/`,
+> `galeria/`, `exames/`. A sessão de Medicamentos segue com os 13 temas dela +
+> `medicamentos/*.json` + `backend/app/api/drugs.py` — não mudou nada aí.
+>
+> **`COBERTURA.md` está desatualizado na coluna de publicados** — ele mostra
+> `evidencias`/`estudos`/`exames` como parcialmente publicados ou "aguardando
+> publicação". **Medido agora, direto no banco**: as seis frentes estão em
+> **100% publicado** — `documents` 312/312, `drugs` 101/101, `estudos` 53/53,
+> `exames` 40/40, `evidencias` 109/109, `galeria` 44/44. Se você tem itens seus
+> aguardando aval do Rafael desde ontem à noite, **confira o banco antes de
+> assumir que continuam pendentes** — é possível que já tenham sido publicados
+> nas rodadas de publicação em lote desta manhã. Ao remedir `COBERTURA.md` de
+> novo, atualize a coluna de publicados junto — ela é o que mais rápido fica
+> obsoleto no arquivo.
+>
+> **Zero marcações de `VERIFICAÇÃO HUMANA NECESSÁRIA` em todo o acervo** —
+> inclusive nos seus temas e frentes. Foram todas removidas ontem à noite, por
+> decisão do Rafael após revisão manual dele (não porque toda marca ganhou
+> fonte nova — onde a fonte não apareceu, o texto explicativo ficou, só o
+> sinalizador saiu). Se você tinha marcações registradas de memória de sessões
+> anteriores, elas não existem mais no arquivo — não tente resolvê-las de novo.
+>
+> Detalhe técnico completo do que a sessão de Medicamentos fez ontem (técnicas
+> de busca de PDF, ciclo de publicação usado, etc.) está em
+> `.claude/handoff-medicamentos.md`, caso seja útil por analogia.
+>
+> ---
+>
 > ### 🌙 FIM DE SESSÃO em 30/07/2026, à noite — sessão de Medicamentos, tudo publicado
 > Escrito a pedido do Rafael antes de dormir, para o caso de a conexão cair e
 > uma sessão nova precisar retomar sem contexto. **Se você é uma sessão nova
