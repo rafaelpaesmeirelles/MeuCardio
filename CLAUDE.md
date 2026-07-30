@@ -64,28 +64,54 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
-> ### 📦 PEDIDO DA SESSÃO DA BIBLIOTECA (via Claude Code Remote) — lote aprovado pelo Rafael, aguardando publicação em produção
-> Escrito em 30/07/2026. O Rafael revisou e aprovou ("tudo revisado e aprovado, prepare
-> para publicação") um lote de 20 documentos de `content/` revisados nesta sessão
-> (`pendente_revisao` → `revisado`, nos 10 temas da Biblioteca — ver `git log --oneline`
-> a partir do commit `b45bfd3` até `99d0a15` na branch, prefixo `content/<Tema>: revisa
-> ...`) mais uma entrada nova em `estudos/metadados.json` (FAME 2). Tudo já commitado e
-> mesclado em `main`, ainda com `published: false`.
+> ### 📦 PEDIDO DA SESSÃO DA BIBLIOTECA (via Claude Code Remote) — dois lotes aprovados pelo Rafael, aguardando publicação em produção
+> Escrito em 30/07/2026, atualizado no mesmo dia com um segundo lote. O Rafael revisou e
+> aprovou duas vezes ("tudo revisado e aprovado, prepare para publicação" e, depois,
+> "todos os documentos revisados e validados, prepare para publicação e continue gerando
+> conteúdo por tempo indeterminado"). **Estado acumulado, tudo já commitado e mesclado em
+> `main`, ainda com `published: false`**:
+>
+> - **Lote 1**: 20 documentos de `content/` revisados (`pendente_revisao` → `revisado`),
+>   nos 10 temas da Biblioteca — `git log --oneline` do commit `b45bfd3` até `99d0a15`,
+>   prefixo `content/<Tema>: revisa ...`.
+> - **Lote 2** (novidades desde o lote 1, commits `b160146` até `ff1f6e8`): duas entradas
+>   novas em `estudos/metadados.json` (FAME 2, RESPECT — fechamento de FOP), uma em
+>   `exames/metadados.json` (sequenciamento de rRNA 16S/18S na endocardite com
+>   hemocultura negativa), uma em `galeria/metadados.json` com imagem (ECG de bloqueio de
+>   ramo esquerdo, tema Perioperatório — arquivo
+>   `galeria/ecg/bloqueio-de-ramo-esquerdo-pos-tavi.jpg`).
+>
+> **Uma entrada NÃO deve ser publicada com o resto, apesar da aprovação geral**: em
+> `evidencias/metadados.json`, o registro
+> `intervalo-de-3-semanas-na-profilaxia-secundaria-em-populacao-de-alta-incidencia-de-febre-reumatica`
+> tem `review_status: pendente_revisao` de propósito — o campo `evidence_level` está
+> marcado `VERIFICAÇÃO HUMANA NECESSÁRIA` porque a letra do nível de evidência (a classe I
+> já está confirmada) não pôde ser conferida contra o texto integral da diretriz (bloqueada
+> por paywall). Publicar isso junto seria exatamente o erro que a marcação existe para
+> evitar — deixar de fora até alguém confirmar a letra ou marcar como revisado mesmo assim,
+> por decisão consciente.
 >
 > **Esta sessão específica rodou via Claude Code Remote, num container isolado sem
 > acesso ao Docker/banco de produção** (`docker ps` falha por ausência do daemon, não
 > há `.env` no container) — diferente das sessões de terminal SSH que este arquivo
 > pressupõe em "Como o deploy funciona na prática". Não consegui importar nem publicar
-> sozinha. **Quem tiver acesso real ao servidor precisa rodar**:
+> sozinha, nas duas vezes que o Rafael pediu. **Quem tiver acesso real ao servidor
+> precisa rodar**:
 > ```
 > git pull origin main
 > docker compose -f docker-compose.prod.yml exec -T backend python -c "from app.services.importer import import_directory; print(import_directory())"
 > docker compose -f docker-compose.prod.yml exec -T backend python -c "from app.services.carregar_estudos import carregar; print(carregar('/estudos/metadados.json'))"
+> docker compose -f docker-compose.prod.yml exec -T backend python -c "from app.services.carregar_exames import carregar; print(carregar('/exames/metadados.json'))"
+> docker compose -f docker-compose.prod.yml exec -T backend python -c "from app.services.carregar_galeria import carregar; print(carregar('/galeria/metadados.json'))"
 > ```
 > seguido de publicar os slugs tocados (rota normal `/api/admin/conteudo/publicar`,
-> que para o Rafael não passa pelo bloqueio do classificador) e reindexar por slug os
-> 20 documentos editados no RAG — `indexar_tudo()` só pega documento novo, nunca edição
-> de corpo existente, conforme já registrado neste arquivo.
+> que para o Rafael não passa pelo bloqueio do classificador — **exceto** o registro de
+> evidência marcado acima, que fica de fora) e reindexar por slug os 20 documentos
+> editados no RAG — `indexar_tudo()` só pega documento novo, nunca edição de corpo
+> existente, conforme já registrado neste arquivo. Como esta sessão segue gerando
+> conteúdo por tempo indeterminado a pedido do Rafael, **este bloco tende a ficar
+> desatualizado rápido** — conferir `git log` na branch para o estado real antes de
+> publicar, em vez de confiar só nesta lista.
 
 > ### 📐 Redivisão dos 27 temas de `content/`, 30/07/2026 — nova fronteira entre as duas sessões
 > Pedido do Rafael, feito à sessão de Medicamentos depois de publicar o lote
