@@ -4,7 +4,7 @@ slug: marcapasso-definitivo-indicacoes-estimulacao-sistema-conducao
 theme: "Dispositivos"
 kind: protocolo
 review_status: pendente_revisao
-source_refs: ["Glikson M et al. 2021 ESC Guidelines on cardiac pacing and cardiac resynchronization therapy. Eur Heart J. 2021;42(35):3427-3520.", "ESC Clinical Consensus Statement on Conduction System Pacing. EP Europace. 2025 (apresentado no EHRA 2025, Viena)."]
+source_refs: ["Glikson M et al. 2021 ESC Guidelines on cardiac pacing and cardiac resynchronization therapy. Eur Heart J. 2021;42(35):3427-3520.", "ESC Clinical Consensus Statement on Conduction System Pacing. EP Europace. 2025 (apresentado no EHRA 2025, Viena).", "Curtis AB, Worley SJ, Adamson PB, et al; BLOCK HF Investigators. Biventricular Pacing for Atrioventricular Block and Systolic Dysfunction. N Engl J Med. 2013;368(17):1585-1593. DOI: 10.1056/NEJMoa1210356. PMID: 23614585"]
 legacy_source: "Pesquisado e redigido para preencher lacuna identificada em COBERTURA.md — tema tinha apenas 1 documento (CDI)."
 ---
 
@@ -28,6 +28,8 @@ A diretriz de 2021 já havia incorporado a estimulação do feixe de His e do ra
 **Por que isso importa**: a estimulação convencional do VD (posição clássica no ápice ou via de saída do VD) ativa o ventrículo de forma não fisiológica — o estímulo se propaga célula a célula em vez de usar o sistema de condução nativo. Em pacientes que dependem de estimulação frequente, isso pode induzir dissincronia ventricular e, ao longo do tempo, cardiomiopatia induzida por marcapasso — queda de FEVE atribuível ao próprio padrão de estimulação, não à doença de base.
 
 **Estimulação do sistema de condução** (feixe de His ou ramo esquerdo) ativa o ventrículo pela via fisiológica nativa, preservando a sincronia. O consenso de 2025 orienta considerar essa abordagem preferencialmente sobre a estimulação convencional de VD, especialmente em pacientes com expectativa de alta porcentagem de estimulação ventricular.
+
+**Evidência que sustenta essa mudança — acrescentado em 30/07/2026**: Curtis AB et al.; BLOCK HF Investigators. N Engl J Med. 2013;368(17):1585-1593. DOI: 10.1056/NEJMoa1210356. PMID 23614585. Embora seja um ensaio de estimulação **biventricular** (não de sistema de condução propriamente dito), é a evidência randomizada que comprova o dano da estimulação convencional de VD citado no parágrafo acima: **691 pacientes** com indicação de marcapasso por BAV, IC classe NYHA I-III e FEVE ≤50%, randomizados para estimulação de VD convencional ou biventricular. **Desfecho primário** (composto de morte, atendimento de urgência por IC com terapia IV, ou aumento ≥15% do volume sistólico final de VE), seguimento médio de 37 meses: **55,6% (VD) vs. 45,8% (biventricular)** (HR 0,74; intervalo de credibilidade 95% 0,60-0,90) — **estimulação biventricular superior**, com resultado semelhante nos subgrupos de marcapasso e CDI. Complicação relacionada ao eletrodo de VE em 6,4%. É o ensaio que estabeleceu, por randomização, que a estimulação de VD convencional prejudica pacientes com FEVE já reduzida que precisam de estimulação frequente — o mesmo raciocínio fisiopatológico que hoje justifica preferir estimulação do sistema de condução.
 
 ## Escolha entre unicameral e bicameral
 
