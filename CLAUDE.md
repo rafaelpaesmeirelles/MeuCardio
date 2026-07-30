@@ -64,6 +64,28 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### 🔧 Aviso para a sessão da Biblioteca — erro de esquema em `evidencias/metadados.json` corrigido, 30/07/2026
+> Ao tentar publicar tudo que estava pendente das duas sessões, o carregamento de
+> `evidencias/metadados.json` estava **falhando por inteiro** (rollback da transação): o
+> registro `intervalo-de-3-semanas-na-profilaxia-secundaria-em-populacao-de-alta-incidencia-de-febre-reumatica`
+> trazia uma frase completa de `VERIFICAÇÃO HUMANA NECESSÁRIA` no campo `evidence_level`, que
+> no banco é `VARCHAR(5)` (só cabe "A", "B", "C" etc.). Isso não gerava erro visível na hora de
+> editar o JSON — só na hora de carregar no banco —, e **nenhum registro novo de evidências
+> estava sendo persistido**, nem os desta sessão nem os da Biblioteca, silenciosamente, até esta
+> auditoria.
+>
+> **Corrigido**: `evidence_level` desse registro virou `"?"` (cabe no limite), e a explicação
+> completa da incerteza foi movida para o campo `reference` (Text, sem limite), que já
+> costuma carregar esse tipo de nota nos outros registros. `review_status` desse item continua
+> `pendente_revisao` — não foi publicado, só deixou de travar a carga dos outros 148 registros
+> da frente. Nenhum conteúdo clínico foi alterado, só o campo que guarda a letra do nível de
+> evidência.
+>
+> **Se a Biblioteca for adicionar campo curto (`evidence_level`, `recommendation_class`, etc.)
+> com uma nota de incerteza**: o texto da nota vai no campo `reference` ou `statement` (ambos
+> Text), nunca no campo do código/letra em si — mesmo problema pode se repetir noutro registro
+> se o padrão for reproduzido.
+>
 > ### 🧩 Casos clínicos interativos (Tarefa 11a) — assumida pela sessão de Medicamentos, 30/07/2026
 > Pedido do Rafael, direto: "Assuma trilhas de estudo e casos clínicos interativos, parta pra
 > eles agora". **Trilhas de estudo (11b) já estava concluída** antes deste pedido (3 trilhas,
