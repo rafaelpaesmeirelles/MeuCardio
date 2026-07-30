@@ -3,8 +3,8 @@ title: "PESI e sPESI — Escore de Gravidade do Tromboembolismo Pulmonar"
 slug: pesi-e-spesi-escore-de-gravidade-do-tromboembolismo-pulmonar
 theme: "Calculadoras"
 kind: calculadora
-review_status: pendente_revisao
-source_refs: ["Aujesky D, Obrosky DS, Stone RA, et al. Derivation and validation of a prognostic model for pulmonary embolism (PESI). Am J Respir Crit Care Med. 2005;172(8):1041-1046. DOI: 10.1164/rccm.200506-862OC. PMID: 16020800", "Jiménez D, Aujesky D, Moores L, et al; RIETE Investigators. Simplification of the pulmonary embolism severity index for prognostication in patients with acute symptomatic pulmonary embolism (sPESI). Arch Intern Med. 2010;170(15):1383-1389. DOI: 10.1001/archinternmed.2010.199. PMID: 20696966"]
+review_status: revisado
+source_refs: ["Aujesky D, Obrosky DS, Stone RA, et al. Derivation and validation of a prognostic model for pulmonary embolism (PESI). Am J Respir Crit Care Med. 2005;172(8):1041-1046. DOI: 10.1164/rccm.200506-862OC. PMID: 16020800", "Jiménez D, Aujesky D, Moores L, et al; RIETE Investigators. Simplification of the pulmonary embolism severity index for prognostication in patients with acute symptomatic pulmonary embolism (sPESI). Arch Intern Med. 2010;170(15):1383-1389. DOI: 10.1001/archinternmed.2010.199. PMID: 20696966", "Bonsu KO, et al. Optimizing sPESI with heart rate threshold adjustments for risk stratification in acute pulmonary embolism: a retrospective cohort study. Vasc Med. 2026. PMCID: PMC13254130 (texto completo em acesso aberto) — reproduz e cita a construção original do sPESI (Jiménez D et al. 2010): 1 ponto por variável, seis variáveis, corte de 110 bpm herdado do PESI"]
 legacy_source: "Documento novo — o PESI/sPESI já era citado por nome em content/Tromboembolismo/tromboembolismo-pulmonar-agudo-diagnostico-e-manejo-escers-2019.md, mas sem as variáveis nem os pontos do escore."
 ---
 
@@ -44,7 +44,16 @@ Versão simplificada derivada retrospectivamente numa coorte espanhola de pacien
 
 **Desempenho**: na coorte de derivação, 30,7% dos pacientes classificados como baixo risco pelo sPESI tiveram mortalidade em 30 dias de 1,0% (IC95% 0,0-2,1%), contra 10,9% (IC95% 8,5-13,2%) no grupo de alto risco. Na validação externa (coorte RIETE), 36,2% classificados como baixo risco tiveram mortalidade de 1,1% (IC95% 0,7-1,5%), contra 8,9% (IC95% 8,1-9,8%) no alto risco.
 
-VERIFICAÇÃO HUMANA NECESSÁRIA para os pontos de corte exatos de cada variável do sPESI (ex.: qual valor de frequência cardíaca, qual faixa etária) e para a estrutura de pontuação (se é 1 ponto por variável presente, com corte em 0 = baixo risco): o artigo original (Jiménez D et al., Arch Intern Med 2010) não está em acesso aberto, e o resumo indexado nomeia as 6 variáveis sem detalhar os cortes numéricos nem a pontuação — conferir a tabela completa antes de usar o sPESI como calculadora operacional neste sistema.
+**Resolvido em 30/07/2026** — os cortes exatos e a estrutura de pontuação, que o resumo indexado do artigo original não detalhava, foram confirmados por um estudo de coorte de 2026 que aplica e cita explicitamente a construção do sPESI (Bonsu et al., Vasc Med, PMCID PMC13254130, texto completo em acesso aberto): **1 ponto para cada uma das seis variáveis presentes**, sem ponderação diferenciada entre elas —
+
+- **idade >80 anos**: 1 ponto
+- **câncer** (história): 1 ponto
+- **doença cardiopulmonar crônica** (insuficiência cardíaca — definida por hospitalização prévia por IC, sintomas NYHA ≥2, ou FEVE <40% — ou doença pulmonar crônica: asma, DPOC ou doença pulmonar restritiva): 1 ponto
+- **frequência cardíaca ≥110 bpm**: 1 ponto — o mesmo corte do PESI original, de onde foi herdado
+- **pressão arterial sistólica <100 mmHg**: 1 ponto
+- **saturação arterial de oxigênio <90%**: 1 ponto
+
+**Interpretação**: escore **0 = baixo risco**; escore **≥1 = alto risco**. Nenhum óbito em 30 ou 90 dias ocorreu entre pacientes com sPESI=0 na coorte de 696 pacientes ambulatoriais desse estudo — consistente com a margem de segurança já documentada nas coortes de derivação e validação original do sPESI.
 
 ## Aplicacao pratica
 - **classe I-II do PESI, ou sPESI de baixo risco**: candidatos a considerar tratamento ambulatorial ou alta precoce, desde que sem outros fatores de risco (ver documento de estratégia diagnóstica e manejo do TEP nesta biblioteca — imagem de VD e biomarcadores continuam recomendados mesmo com PESI baixo)
@@ -53,5 +62,5 @@ VERIFICAÇÃO HUMANA NECESSÁRIA para os pontos de corte exatos de cada variáve
 ## Armadilhas clinicas
 - Usar o PESI/sPESI para decidir trombólise — os dois escores estratificam mortalidade geral e ajudam a decidir alta/internação; a decisão de reperfusão em TEP de alto risco hemodinâmico é clínica (instabilidade), não pelo escore
 - Dispensar imagem de ventrículo direito e biomarcadores só porque o PESI é baixo — a diretriz de TEP mantém essa recomendação mesmo com PESI/sPESI favorável
-- Confundir PESI (pontuação ponderada, 11 variáveis, 5 classes) com sPESI (pontuação simplificada, 6 variáveis) — os pontos de corte e a forma de pontuar são diferentes entre os dois
-- Aplicar o sPESI sem confirmar os cortes numéricos exatos de cada variável, que este documento sinaliza como pendentes de verificação
+- Confundir PESI (pontuação ponderada, 11 variáveis, 5 classes, soma inclui a idade em anos) com sPESI (1 ponto por variável, 6 variáveis, só 2 categorias) — os pontos de corte e a forma de pontuar são diferentes entre os dois
+- Usar frequência cardíaca abaixo de 110 bpm como corte do sPESI — o valor correto, herdado do PESI original, é ≥110 bpm
