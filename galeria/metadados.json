@@ -1338,5 +1338,27 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "placa-aterosclerotica-endarterectomia-de-carotida",
+    "title": "Placa aterosclerótica — espécime de endarterectomia de carótida",
+    "modality": "Anatomia patológica",
+    "theme": "Aorta e doença arterial periférica",
+    "file_path": "patologia/placa-aterosclerotica-endarterectomia-de-carotida.jpg",
+    "findings": "Peça cirúrgica aberta de endarterectomia de carótida, mostrando a bifurcação da carótida comum nas carótidas interna e externa. No local da bifurcação, placa aterosclerótica complexa e heterogênea — núcleo lipídico amarelado, área hemorrágica escura e material calcificado/friável — estreitando significativamente o lúmen.",
+    "teaching_points": "A bifurcação carotídea é o sítio clássico de formação de placa aterosclerótica por fluxo turbulento e baixo shear stress na parede — mesmo local que a endarterectomia (CEA) trata cirurgicamente. A heterogeneidade da placa (hemorragia intraplaca, núcleo lipídico grande, calcificação irregular) é o substrato morfológico da instabilidade que gera evento embólico — placa \"complexa\" como esta tem risco maior de sintoma que placa homogênea e fibrosa, achado relevante para a decisão de revascularizar mesmo em estenose limítrofe. Complementa o documento `estenose-de-carotida-diagnostico-e-indicacao-de-revascularizacao-esc-2024.md` desta biblioteca, dando a correlação anatômica ao que o Doppler e os critérios NASCET/ECST medem indiretamente.",
+    "source_name": "Wikimedia Commons (via Flickr, revisado por FlickreviewR)",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Carotid_Plaque.jpg",
+    "license": "CC BY 2.0",
+    "attribution": "Ed Uthman, MD, via Wikimedia Commons — CC BY 2.0. Licença conferida na página do arquivo e revisão FlickreviewR em 30/07/2026.",
+    "tags": [
+      "placa aterosclerótica",
+      "endarterectomia de carótida",
+      "anatomia patológica",
+      "estenose carotídea",
+      "aterosclerose"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
