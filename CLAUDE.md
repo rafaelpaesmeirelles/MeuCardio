@@ -64,6 +64,132 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### 🌙 FIM DE SESSÃO em 30/07/2026, à noite — sessão de Documentos/Receituário (Tarefa 29→30), COMMITADO MAS **NÃO PUBLICADO**
+> Escrito a pedido do Rafael antes de dormir. **Se você é uma sessão nova
+> lendo isto: rode `/clear` se ainda não rodou.** Este bloco é sobre uma
+> frente diferente das outras duas abaixo (Medicamentos e Biblioteca) —
+> receituário, documentos e papel timbrado — e tem uma pendência real que
+> as outras duas não têm: **o código está pronto e testado, mas não foi
+> implantado em produção.**
+>
+> **Por que não foi publicado, apesar de o Rafael ter pedido:** esta sessão
+> rodou num ambiente remoto (Claude Code on the web / GitHub) **sem Docker,
+> sem acesso ao banco de produção e sem os segredos do `.env`** — só o
+> clone do repositório. Confirmado nesta sessão: `docker ps` falha
+> ("no such file or directory" no socket), não existe `.env` no clone
+> (só `.env.example`, como já esperado — segredo nunca é commitado), e uma
+> chamada `curl` a `https://corvia.med.br/api/health` até responde 200, mas
+> sem credencial de admin não dá para autenticar. Ou seja: **não é
+> preguiça nem esquecimento, é impossibilidade técnica deste ambiente.**
+> Não confunda com o bloco "Como o deploy funciona na prática" mais abaixo
+> neste arquivo — aquela seção descreve a sessão de terminal SSH do
+> Rafael, que É root e TEM Docker; esta sessão era outra, sem esse acesso.
+>
+> **O que foi feito, testado localmente (Postgres local, migração
+> aplicada/revertida/reaplicada, `TestClient` fim a fim) e committado —
+> commit `bca054d`, branch `claude/biblioteca-session-recovery-gnft29`,
+> já mesclado com o `main` mais recente via rebase:**
+> 1. **Papel timbrado (Tarefa 29), concluído em sessão anterior** — logo
+>    Corvia + dados da empresa (canto superior esquerdo), dados completos
+>    do profissional + logo pessoal opcional (canto superior direito),
+>    bloco de assinatura no rodapé (Dr./Dra. + especialidade + registro +
+>    local/data + campo de assinatura), escolha de endereço
+>    residencial/profissional por documento emitido. Verificado
+>    visualmente (`pdftoppm`) nesta sessão ao renderizar o PDF da
+>    avaliação pré-operatória — layout correto.
+> 2. **Tarefa 30 — modelos de documento do sistema**, nova migração
+>    `a1c8e4f92b6d` (`document_templates.owner_id` fica opcional +
+>    coluna `slug_sistema` única): quatro modelos prontos para qualquer
+>    médico usar, sem precisar criar — atestado médico (Resolução CFM
+>    2.381/2024), declaração de acompanhante, atestado de aptidão física
+>    (diretriz SBC/SBME 2019, DOI 10.5935/abc.20190048; posicionamento
+>    pós-Covid SBC 2021, PMID 34133609) e documento em branco (título e
+>    corpo livres). Semeados por `app/services/semear_document_templates.py`,
+>    upsert por `slug_sistema` — idempotente.
+> 3. **Tarefa 30 — avaliação cardiológica de risco cirúrgico
+>    (pré-operatória)**: pedido do Rafael foi "quanto mais escores de
+>    risco melhor". Entregue: **RCRI** (Lee et al., Circulation
+>    1999;100(10):1043-1049, PMID 10477528 — tabela de risco ORIGINAL,
+>    não a reestimativa de Duceppe 2017) e **DASI** (Hlatky et al., Am J
+>    Cardiol 1989;64(10):651-654, PMID 2782256, 12 itens conferidos por
+>    duas fontes independentes) como calculadoras reais em
+>    `app/services/calculators.py`. **Gupta MICA entra só com as 5
+>    variáveis registradas, SEM cálculo de probabilidade** — os
+>    coeficientes da regressão logística publicada (Gupta PK et al.,
+>    Circulation 2011;124(4):381-387) estão atrás de paywall e só foram
+>    encontrados em calculadoras de terceiro, nunca conferidos contra a
+>    Tabela do artigo original; marcado `VERIFICAÇÃO HUMANA NECESSÁRIA`
+>    em vez de estimado. `app/services/preop.py` monta um RASCUNHO
+>    (risco cirúrgico do procedimento pela Tabela 5 da ESC/ESAIC 2022,
+>    RCRI, DASI/capacidade funcional, Gupta, citações de ESC/ESAIC 2022 —
+>    PMID 36017553 —, ACC/AHA 2024 — PMID 39316661 — e SBC 2024 — PMID
+>    39442131) que o médico revisa e edita ANTES de confirmar — dois
+>    endpoints novos (`/avaliacao-preoperatoria/rascunho`, que não grava
+>    nada, e `/avaliacao-preoperatoria`, que grava só o texto já
+>    revisado). Dois bugs reais pegos e corrigidos durante o teste: frase
+>    do RCRI duplicada no rascunho, e a seção do Gupta aparecendo mesmo
+>    sem nenhum dado preenchido (o campo booleano `gupta_creatinina_elevada`
+>    tinha padrão `False`, indistinguível de "resposta real: não elevada").
+> 4. **Frontend** (`Templates.tsx`, `tsc -b` limpo): modelos do sistema
+>    aparecem com selo "Modelo do sistema" e sem botão Editar/Apagar;
+>    documento em branco ganhou campo de título customizado; formulário
+>    dedicado novo para a avaliação pré-operatória (RCRI em checkboxes,
+>    questionário DASI opcional, campos do Gupta, rascunho editável antes
+>    de confirmar).
+> 5. **Registrado no `controlados/DESENHO.md`** (sessão anterior, ainda
+>    válido): duas exigências legais pendentes só de implementação no PDF
+>    de Receita de Controle Especial — 2 vias (paciente/farmácia) e os
+>    campos extras de hormônios/anabolizantes (CPF do prescritor, telefone
+>    profissional, CID), Lei nº 9.965/2000 conferida na fonte. RCE
+>    continua bloqueada (HTTP 501) esperando o layout oficial da Anvisa —
+>    não mude isso sem o layout real.
+>
+> **O que falta para "publicar" de verdade — ninguém fez ainda, nem eu:**
+> nenhum destes itens tem gate de `published` como documento/evidência/
+> estudo/galeria/exame (`DocumentTemplate` e `GeneratedDocument` não têm
+> esse campo) — "publicar" aqui significa **implantar o código em
+> produção**, não apertar um botão de aprovação. Passos, na ordem, a
+> rodar de uma sessão com Docker e acesso root (a sessão de terminal SSH
+> do Rafael, como descrito em "Como o deploy funciona na prática" mais
+> abaixo neste arquivo):
+> 1. `git fetch origin claude/biblioteca-session-recovery-gnft29 && git log origin/claude/biblioteca-session-recovery-gnft29 -3` —
+>    conferir que o commit `bca054d` (ou o que vier depois dele) está lá.
+>    Se este branch ainda não foi mesclado ao `main` que a produção
+>    implanta, mesclar primeiro (`git pull --rebase origin main`, resolver
+>    o que houver, e então trazer estas mudanças para o `main`).
+> 2. Migração ANTES do rebuild (regra permanente deste arquivo):
+>    `docker compose -f docker-compose.prod.yml exec -T backend alembic upgrade head`
+>    — a migração nova é `a1c8e4f92b6d`, idempotente, já testada localmente
+>    (upgrade/downgrade/upgrade round-trip limpo).
+> 3. Rebuild do backend (e do frontend, que também mudou):
+>    `docker compose -f docker-compose.prod.yml up -d --build backend frontend-build`
+>    (avisar o Rafael antes — rebuild de produção pede confirmação, regra
+>    já registrada abaixo).
+> 4. Semear os modelos do sistema — rota HTTP normal, sem bloqueio de
+>    classificador conhecido (é `POST`, autenticado como admin, sem efeito
+>    colateral fora do próprio carregamento):
+>    `POST /api/admin/document-templates/semear` (com o token do admin) —
+>    ou, se a rota HTTP travar como já aconteceu com `/import`, o caminho
+>    alternativo documentado mais abaixo (`docker compose exec` chamando
+>    `app.services.semear_document_templates.semear` direto no container).
+> 5. Conferir na tela **Documentos**: os 4 modelos do sistema aparecem com
+>    o selo, e "Avaliação cardiológica de risco cirúrgico" aparece como
+>    card próprio com o botão "Preencher avaliação". Gerar um rascunho de
+>    teste (RCRI + DASI) e conferir que o PDF sai com o timbrado correto.
+>
+> **Sobre "publique tudo" — não é só isto.** O Rafael pediu para publicar
+> tudo que está revisado e autorizado, e este arquivo tem OUTRAS
+> pendências de publicação registradas por outras sessões — os 6
+> fluxogramas e o registro da colchicina citados em "O que falta fazer" /
+> "Bloqueado, esperando o Rafael" mais abaixo, e qualquer coisa que a
+> sessão de Medicamentos ou a da Biblioteca tenham deixado pronta hoje.
+> **Esta sessão não tocou nelas e não verificou o estado atual** — quem
+> retomar amanhã de uma sessão com acesso real ao banco de produção deve
+> conferir `SELECT slug, published FROM documents WHERE published = false`
+> (e o equivalente nas outras frentes) antes de publicar em lote, para não
+> publicar algo que ficou pela metade ou que nenhuma sessão desta noite
+> chegou a revisar de fato.
+
 > ### 🌙 FIM DE SESSÃO em 30/07/2026, à noite — sessão de Medicamentos, tudo publicado
 > Escrito a pedido do Rafael antes de dormir, para o caso de a conexão cair e
 > uma sessão nova precisar retomar sem contexto. **Se você é uma sessão nova
