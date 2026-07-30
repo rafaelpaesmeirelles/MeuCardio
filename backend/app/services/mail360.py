@@ -1,19 +1,43 @@
 """Cliente da API do Zoho Mail360 — caixa de e-mail do assinante (Tarefa 28).
 
-Referência verificada em 30/07/2026 direto na documentação pública
-(zoho.com/mail360/help/api/*), sem conta de parceiro ainda ativa — os
-endpoints e formatos abaixo batem com o que está documentado publicamente,
-mas não foram testados contra a API real. Confirmar contra uma chamada de
-verdade assim que o Rafael tiver as credenciais de parceiro, especialmente:
-o formato exato da resposta de `criar_conta` (qual campo é a account_key) e
-o formato exato de `listar_mensagens`/`obter_mensagem` — a documentação
-pública não detalha o corpo das respostas, só os endpoints e os campos de
-entrada.
+Testado em 30/07/2026 contra a API real, com credencial do Rafael (troca de
+token, listar contas, tentativa de criar conta nativa — as três chamadas que
+dava pra fazer sem um domínio já cadastrado dentro do Mail360, ver abaixo).
+Três coisas que a documentação pública não deixava claro, e que só a resposta
+real revelou:
+
+1. **Toda resposta vem embrulhada em `{"status": {...}, "data": ...}`** —
+   confirmado em /access-token, POST /accounts, GET /accounts, GET /folders e
+   GET /messages. `_chamar()` já desembrulha isso na origem agora, então quem
+   chama não repete essa checagem.
+2. **`/access-token` exige corpo em JSON**, não form-encoded como um endpoint
+   OAuth comum — mandar `data=` (form) devolve 400 `JSON_PARSE_ERROR`. Bug
+   real que existia aqui antes desta correção e teria quebrado a autenticação
+   inteira em produção.
+3. **`expires_in` não é uma duração em segundos** (como a doc pública sugere)
+   — é um timestamp absoluto em milissegundos (`1785414750629` ≈
+   2026-07-30T12:32:30Z, ~59min depois da chamada). Não dá pra confiar nesse
+   valor literal para calcular o cache; ver `_obter_access_token`.
+
+**Bloqueio real encontrado, não é bug de código**: `POST /accounts` para
+criar conta nativa devolveu `MailServerException: Local domain does not
+exists corvia.med.br`. Mail360 tem uma seção de Domínios PRÓPRIA, separada
+do domínio já verificado no Zoho Mail/Workspace — sem adicionar e verificar
+`corvia.med.br` especificamente ali (zoho.com/mail360/help/domain-addition.html:
+CNAME/SPF/DKIM/MX próprios do Mail360), nenhuma conta nativa é criada.
+`criar_conta_nativa` segue sem teste de ponta a ponta até isso ser resolvido.
+
+`obter_mensagem` mudou de forma: o endpoint de metadado
+(`/messages/{id}`) e o de conteúdo (`/messages/{id}/content`) são
+DOIS endpoints diferentes — o de metadado não traz `content`/`htmlContent`,
+e o de conteúdo só traz `messageId` e `content`. A função agora chama os
+dois e funde o resultado.
 
 Autenticação: OAuth de três camadas do Zoho. O client_id/secret/refresh_token
-são fixos, gerados uma vez no console de developer do Mail360 e guardados no
-`.env` (nunca commitados) — o access_token, sim, é de curta duração (3600s) e
-renovado aqui, em memória, sem persistir em banco.
+são fixos, gerados uma vez no painel do próprio Mail360 (Authentication, não
+o console genérico de developer da Zoho) e guardados no `.env` (nunca
+commitados) — o access_token, sim, é de curta duração (~1h) e renovado aqui,
+em memória, sem persistir em banco.
 """
 from __future__ import annotations
 
@@ -32,8 +56,13 @@ TIMEOUT = 10.0
 
 # Cache do access token em memória do processo — não precisa sobreviver a um
 # restart do backend, só evitar pedir token novo a cada chamada dentro da
-# mesma vida do processo. Ver ressalva no topo do arquivo: TTL de 3600s vem
-# da documentação, não de teste real.
+# mesma vida do processo. TTL fixo de 55min por decisão deliberada, não pelo
+# `expires_in` da resposta: esse campo veio, na prática, como timestamp
+# absoluto em milissegundos (época Unix), não como duração em segundos — não
+# dá pra converter isso num prazo relativo a `time.monotonic()` com confiança,
+# e o comportamento real da Zoho pode mudar. 55min fica com margem folgada
+# sobre a validade observada (~59min).
+_TTL_TOKEN_SEGUNDOS = 55 * 60
 _token_cache: dict[str, float | str] = {"token": "", "expira_em": 0.0}
 
 
@@ -49,21 +78,22 @@ def _obter_access_token() -> str:
         return str(_token_cache["token"])
 
     with httpx.Client(timeout=TIMEOUT) as cliente:
-        resp = cliente.post(TOKEN_URL, data={
+        # JSON, não form-encoded — `/access-token` devolve 400
+        # `JSON_PARSE_ERROR` com `data=` (confirmado em 30/07/2026 contra a
+        # API real). Diferente da maioria dos endpoints OAuth por aí.
+        resp = cliente.post(TOKEN_URL, json={
             "client_id": settings.mail360_client_id,
             "client_secret": settings.mail360_client_secret,
             "refresh_token": settings.mail360_refresh_token,
         })
         resp.raise_for_status()
-        dados = resp.json()
+        dados = (resp.json() or {}).get("data") or {}
 
     token = dados.get("access_token")
     if not token:
         raise Mail360Error("Mail360 não devolveu access_token na troca do refresh_token.")
-    # Margem de 60s antes do vencimento real (3600s), para não correr risco de
-    # usar um token que expira no meio de uma chamada em andamento.
     _token_cache["token"] = token
-    _token_cache["expira_em"] = agora + 3600 - 60
+    _token_cache["expira_em"] = agora + _TTL_TOKEN_SEGUNDOS
     return token
 
 
@@ -71,13 +101,20 @@ def _cabecalho() -> dict[str, str]:
     return {"Authorization": f"Zoho-oauthtoken {_obter_access_token()}"}
 
 
-def _chamar(metodo: str, caminho: str, headers_extra: dict[str, str] | None = None, **kwargs) -> dict:
+def _chamar(metodo: str, caminho: str, headers_extra: dict[str, str] | None = None, **kwargs):
+    """Desembrulha `{"status": {...}, "data": ...}` — confirmado em
+    30/07/2026 contra a API real que TODA resposta do Mail360 tem esse
+    envelope, inclusive as que devolvem lista (a lista fica em `data`
+    diretamente, não `data.items` nem nada aninhado). Quem chama recebe já
+    o conteúdo útil: um dict para endpoint de objeto único, uma lista para
+    endpoint de coleção."""
     headers = {**_cabecalho(), **(headers_extra or {})}
     try:
         with httpx.Client(timeout=TIMEOUT) as cliente:
             resp = cliente.request(metodo, f"{BASE}{caminho}", headers=headers, **kwargs)
             resp.raise_for_status()
-            return resp.json() if resp.content else {}
+            corpo = resp.json() if resp.content else {}
+            return corpo.get("data", corpo) if isinstance(corpo, dict) else corpo
     except httpx.HTTPStatusError as e:
         log.error("Mail360 %s %s devolveu %s: %s", metodo, caminho, e.response.status_code, e.response.text[:300])
         raise Mail360Error(f"Mail360 devolveu erro {e.response.status_code}.") from e
@@ -91,36 +128,55 @@ def criar_conta_nativa(email_address: str, nome_exibicao: str) -> str:
 
     `accountType: "1"` é o valor documentado para conta nativa (hospedada
     pelo próprio Mail360), em oposição a conta de sincronização (linkar
-    provedor externo) — não confundir os dois no futuro."""
+    provedor externo) — não confundir os dois no futuro.
+
+    Campo confirmado contra a doc oficial com exemplo de resposta real
+    (zoho.com/mail360/help/api/add-native-account-api.html) em 30/07/2026:
+    é `account_key`, snake_case — os outros dois nomes ficam como
+    salvaguarda barata, não como suposição igualmente provável."""
     dados = _chamar("POST", "/accounts", json={
         "emailid": email_address,
         "accountType": "1",
         "displayName": nome_exibicao,
     })
-    # Nome do campo da account_key não confirmado contra resposta real — most
-    # likely "accountId"/"account_key" conforme o padrão do restante da API
-    # (accounts/{account_key}/...). Ajustar aqui assim que houver acesso real.
-    account_key = dados.get("accountKey") or dados.get("account_key") or dados.get("accountId")
+    account_key = dados.get("account_key") or dados.get("accountKey") or dados.get("accountId")
     if not account_key:
         raise Mail360Error("Mail360 criou a conta mas não devolveu a account_key esperada — conferir payload real.")
     return str(account_key)
 
 
 def listar_pastas(account_key: str) -> list[dict]:
-    dados = _chamar("GET", f"/accounts/{account_key}/folders")
-    return dados.get("data", dados.get("folders", []))
+    """Campos confirmados contra a doc oficial com exemplo de resposta real
+    (get-all-folders-api.html) em 30/07/2026: `folderId`, `folderName`."""
+    return _chamar("GET", f"/accounts/{account_key}/folders")
 
 
 def listar_mensagens(account_key: str, pasta: str | None = None, limite: int = 50) -> list[dict]:
+    """Campos confirmados contra a doc oficial com exemplo de resposta real
+    (list-emails-messages-api.html) em 30/07/2026: `messageId`, `subject`,
+    `fromAddress`, `receivedTime` (epoch ms), `summary` — batem com o que
+    `frontend/src/pages/CaixaDeEmail.tsx` já espera, sem mudança lá."""
     params = {"limit": limite}
     if pasta:
         params["folder"] = pasta
-    dados = _chamar("GET", f"/accounts/{account_key}/messages", params=params)
-    return dados.get("data", dados.get("messages", []))
+    return _chamar("GET", f"/accounts/{account_key}/messages", params=params)
 
 
 def obter_mensagem(account_key: str, message_id: str) -> dict:
-    return _chamar("GET", f"/accounts/{account_key}/messages/{message_id}")
+    """Metadado e conteúdo são DOIS endpoints diferentes na API real —
+    confirmado em 30/07/2026 contra a doc oficial com exemplo de resposta:
+    `/messages/{id}` traz `subject`/`fromAddress`/`receivedTime`/etc. mas
+    NÃO `content`; `/messages/{id}/content` traz só `messageId` e `content`
+    (HTML). Sem essa segunda chamada, a mensagem abria sem corpo nenhum."""
+    metadado = _chamar("GET", f"/accounts/{account_key}/messages/{message_id}")
+    try:
+        conteudo = _chamar("GET", f"/accounts/{account_key}/messages/{message_id}/content")
+    except Mail360Error:
+        # Falha ao buscar o corpo não deve esconder o resto da mensagem —
+        # o assunto/remetente ainda são úteis mesmo sem o texto.
+        log.warning("Mail360: metadado da mensagem %s ok, conteúdo falhou.", message_id)
+        conteudo = {}
+    return {**metadado, "content": conteudo.get("content")}
 
 
 def upload_anexo(account_key: str, nome_arquivo: str, conteudo: bytes) -> str:
@@ -129,15 +185,17 @@ def upload_anexo(account_key: str, nome_arquivo: str, conteudo: bytes) -> str:
     na documentação oficial (zoho.com/mail360/help/api/upload-attachment.html):
     upload é POST separado, corpo é o binário puro (`application/octet-stream`,
     sem multipart), a URL leva o nome do arquivo em query string, e a
-    resposta traz o id em `data.fileId`. Não testado contra a API real —
-    mesma ressalva do resto do arquivo, ver cabeçalho."""
+    resposta traz o id em `data.fileId` — já desembrulhado por `_chamar`.
+    Ainda não testado contra uma chamada real (sem domínio verificado no
+    Mail360 não há account_key para testar upload de verdade — ver cabeçalho
+    do módulo)."""
     dados = _chamar(
         "POST", f"/accounts/{account_key}/attachments",
         params={"fileName": nome_arquivo},
         headers_extra={"Content-Type": "application/octet-stream"},
         content=conteudo,
     )
-    file_id = (dados.get("data") or {}).get("fileId")
+    file_id = dados.get("fileId")
     if not file_id:
         raise Mail360Error("Mail360 fez upload do anexo mas não devolveu o fileId esperado.")
     return str(file_id)
