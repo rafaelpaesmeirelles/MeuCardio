@@ -5,7 +5,7 @@ theme: "Prevenção e lipídios"
 kind: protocolo
 summary: "O que a rotulagem brasileira afirma sobre estatina, ezetimiba e inibidores de PCSK9 na gravidez e na amamentação — incluindo a única restrição do acervo que alcança quem não está grávida."
 review_status: revisado
-source_refs: ["Bula do LÍPITOR (atorvastatina cálcica), seções de contraindicações e de gravidez e amamentação, conferida em 29/07/2026", "Bula do ZETIA (ezetimiba), seção de gravidez e amamentação, conferida em 29/07/2026", "Bula do REPATHA (evolocumabe, Amgen Biotecnologia do Brasil Ltda.), bula do profissional, conferida em 29/07/2026", "Bula do PRALUENT (alirocumabe, Sanofi), conferida em 29/07/2026"]
+source_refs: ["Bula do LÍPITOR (atorvastatina cálcica), seções de contraindicações e de gravidez e amamentação, conferida em 29/07/2026", "Bula do ZETIA (ezetimiba), seção de gravidez e amamentação, conferida em 29/07/2026", "Bula do REPATHA (evolocumabe, Amgen Biotecnologia do Brasil Ltda.), bula do profissional, conferida em 29/07/2026", "Bula do PRALUENT (alirocumabe, Sanofi), conferida em 29/07/2026", "Rached FH, Miname MH, Rocha VZ, Sposito AC, et al. Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose – 2025. Arq Bras Cardiol. 2025;122(9):e20250640. DOI: 10.36660/abc.20250640 — seção de recomendações para o manejo da dislipidemia em gestantes, conferida na íntegra"]
 ---
 
 # Hipolipemiantes na mulher em idade fértil, na gestação e na lactação
@@ -74,11 +74,38 @@ Vale nomear, porque muda como se lê cada bula isolada:
 - Em **qualquer associação com estatina**, a restrição da estatina é a que vale.
   Nenhuma das bulas dos associados suaviza isso; todas o confirmam.
 
+## Quando suspender e reintroduzir — resolvido em 30/07/2026 pela diretriz brasileira
+
+A pergunta que este documento deixava em aberto — quando suspender e quando
+reintroduzir o hipolipemiante ao redor de uma gestação planejada — tem resposta
+na Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose 2025
+(Rached FH, Miname MH, Rocha VZ, Sposito AC, et al. Arq Bras Cardiol.
+2025;122(9):e20250640), seção de gestantes:
+
+- **Planejamento de gravidez**: suspender estatina **60 dias antes da
+  concepção** — recomendação forte, certeza moderada
+- **Gravidez não planejada, em uso de estatina**: suspensão **imediata** ao
+  confirmar a gestação, com reinício **após o término da amamentação** —
+  recomendação forte, certeza moderada
+- **Muito alto risco cardiovascular**: reintrodução no **terceiro trimestre**
+  pode ser considerada de forma individualizada — recomendação condicional,
+  certeza moderada; não é conduta padrão, é exceção pesada caso a caso. Se a
+  decisão for manter alguma estatina ao longo da gestação nesse cenário de
+  exceção, a diretriz nomeia a **pravastatina** como a de maior evidência de
+  segurança entre as disponíveis — o que não equivale a aprovar seu uso rotineiro
+- **Resinas de troca aniônica** são aceitáveis na gestação — recomendação
+  condicional, certeza baixa (perfil de segurança mais favorável que os
+  hipolipemiantes cobertos acima, por não serem absorvidos sistemicamente)
+- **Fenofibrato ou ômega-3** no segundo trimestre, especificamente se
+  triglicerídeos **>880 mg/dL** (risco de pancreatite aguda) — recomendação
+  condicional, certeza baixa
+- **Contraindicação formal**, nesta mesma diretriz, a ezetimiba, inibidores de
+  PCSK9, inibidores de ANGPTL3 (evinacumabe), ácido bempedoico e lomitapida em
+  gestantes e lactantes — recomendação forte, certeza moderada, reforçando
+  pela via da diretriz o que as bulas individuais já registravam acima
+
 ## O que este documento não cobre
 
 Metas de LDL-C, escolha de esquema, potência relativa e indicação de terapia
-combinada estão nos demais documentos deste tema, incluindo os registros de
-evidência com classe e nível. **Quando suspender e quando reintroduzir** o
-hipolipemiante ao redor de uma gestação planejada é decisão clínica que depende
-do risco cardiovascular basal da paciente, e não está afirmada por nenhuma das
-bulas aqui conferidas.
+combinada fora do contexto gestacional estão nos demais documentos deste tema,
+incluindo os registros de evidência com classe e nível.
