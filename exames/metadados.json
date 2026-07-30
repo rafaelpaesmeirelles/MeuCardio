@@ -197,6 +197,29 @@
     ]
   },
   {
+    "slug": "angiotomografia-de-coronarias",
+    "name": "Angiotomografia computadorizada de coronárias (angio-TC de coronárias, CCTA)",
+    "category": "imagem",
+    "theme": "Doença coronariana",
+    "what_it_measures": "Anatomia luminal das artérias coronárias por tomografia computadorizada com contraste iodado endovenoso — presença, localização e grau de estenose de placa aterosclerótica, calcificada ou não calcificada, além de escore de cálcio quando adquirido na mesma sessão.",
+    "reference_range": "Não se aplica valor numérico único — resultado é descritivo por segmento coronariano, tipicamente classificado por sistema CAD-RADS (0 = ausência de placa; 1-2 = doença leve, <50%; 3 = moderada, 50-69%; 4 = grave, 70-99%; 5 = oclusão total).",
+    "indications": "Recomendada (Classe I, Nível A) como teste inicial para diagnosticar doença arterial coronariana obstrutiva e estimar risco de eventos cardiovasculares maiores em paciente com probabilidade pré-teste baixa a intermediária de DAC obstrutiva (aproximadamente 5% a 50%), segundo a diretriz ESC 2024 de síndromes coronarianas crônicas.",
+    "interpretation": "Estenose ≥50% no CAD-RADS 3 ou mais é considerada potencialmente obstrutiva e costuma motivar teste funcional complementar (isquemia) ou encaminhamento para avaliação invasiva, conforme o quadro clínico. Alto valor preditivo negativo — exame normal (CAD-RADS 0) tem excelente capacidade de excluir DAC obstrutiva significativa nesse espectro de probabilidade pré-teste.",
+    "limitations": "Acurácia reduzida com calcificação intensa (artefato de blooming) e em frequência cardíaca elevada ou irregular (fibrilação atrial), que prejudicam a qualidade da imagem. Exige contraste iodado (risco em disfunção renal) e radiação ionizante, embora doses tenham caído muito com os equipamentos modernos. Superestima a gravidade da estenose em relação à angiografia invasiva com mais frequência do que subestima.",
+    "source_refs": [
+      "Vrints C, Andreotti F, Koskinas KC, et al. 2024 ESC Guidelines for the management of chronic coronary syndromes. Eur Heart J. 2024;45(36):3415-3537. DOI: 10.1093/eurheartj/ehae177. PMID: 39210710 — recomendação de angiotomografia de coronárias como teste diagnóstico inicial em probabilidade pré-teste baixa a intermediária."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "angiotomografia de coronárias",
+      "CCTA",
+      "CAD-RADS",
+      "doença coronariana",
+      "teste anatômico"
+    ]
+  },
+  {
     "slug": "holter-24h",
     "name": "Holter — monitorização eletrocardiográfica ambulatorial",
     "category": "metodo_grafico",
@@ -749,6 +772,30 @@
       "cardiopatia congênita crítica",
       "spo2",
       "canal arterial"
+    ]
+  },
+  {
+    "slug": "cateterismo-cardiaco-direito-com-qp-qs",
+    "name": "Cateterismo cardíaco direito com cálculo de Qp:Qs (relação fluxo pulmonar/sistêmico)",
+    "category": "imagem",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Pressões intracardíacas e saturações de oxigênio coletadas em múltiplos sítios (veia cava, átrio direito, ventrículo direito, artéria pulmonar, veia pulmonar/átrio esquerdo quando acessível) para calcular o fluxo pulmonar (Qp) e o fluxo sistêmico (Qs) pelo princípio de Fick, e a resistência vascular pulmonar (RVP) em unidades Wood — a avaliação hemodinâmica invasiva de referência para quantificar shunt esquerda-direita.",
+    "reference_range": "Qp:Qs normal é próximo de 1:1 (sem shunt significativo). Shunt esquerda-direita hemodinamicamente significativo é definido como Qp:Qs >1,5:1. RVP normal é inferior a 2-3 unidades Wood.",
+    "indications": "Medida invasiva de RVP é obrigatória (Classe I, Nível C) em paciente com comunicação interatrial e sinais não invasivos de elevação da pressão arterial pulmonar, segundo a diretriz ESC 2020 de cardiopatia congênita do adulto — a decisão de fechar o defeito depende do valor de RVP encontrado, não só do tamanho anatômico do defeito.",
+    "interpretation": "Com RVP <3 unidades Wood, o fechamento do defeito é recomendado (Classe I) na presença de sobrecarga de volume de ventrículo direito, independentemente de sintomas. Com RVP entre 3 e 5 unidades Wood, o fechamento deve ser considerado (Classe IIa) se houver shunt esquerda-direita significativo (Qp:Qs >1,5). Com RVP ≥5 unidades Wood, o fechamento não é recomendado (Classe III) em paciente com fisiologia de Eisenmenger, hipertensão arterial pulmonar com RVP ≥5 unidades Wood apesar de tratamento direcionado, ou dessaturação ao esforço — fechar o defeito nesse cenário retira a válvula de escape do shunt e piora o prognóstico.",
+    "limitations": "É um procedimento invasivo, com os riscos inerentes a cateterismo (sangramento, arritmia, raramente perfuração). O cálculo de Qp:Qs pelo princípio de Fick tem imprecisão maior quando o shunt é pequeno (Qp:Qs próximo de 1) ou quando há shunt bidirecional. Teste de vasorreatividade não é recomendado para decidir fechamento em paciente com RVP ≥5 unidades Wood — nesse patamar, a conduta é tratar a hipertensão pulmonar e reavaliar a hemodinâmica no seguimento, não repetir o teste agudo.",
+    "source_refs": [
+      "Baumgartner H, De Backer J, Babu-Narayan SV, et al. 2020 ESC Guidelines for the management of adult congenital heart disease. Eur Heart J. 2021;42(6):563-645. DOI: 10.1093/eurheartj/ehaa554. PMID: 32860028 — tabela de recomendações ajustadas de fechamento de CIA segundo a RVP calculada."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "cateterismo cardíaco direito",
+      "Qp:Qs",
+      "resistência vascular pulmonar",
+      "shunt",
+      "comunicação interatrial",
+      "hemodinâmica invasiva"
     ]
   },
   {
