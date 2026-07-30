@@ -64,6 +64,66 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### 📐 Redivisão dos 27 temas de `content/`, 30/07/2026 — nova fronteira entre as duas sessões
+> Pedido do Rafael, feito à sessão de Medicamentos depois de publicar o lote
+> pendente dela. Medido nesta data, contagem real de `.md` por pasta de
+> `content/`:
+>
+> | Tema | Docs | Tema | Docs |
+> |---|---|---|---|
+> | Geral | 1 | Aorta e doença arterial periférica | 7 |
+> | Comunicação clínica | 4 | Febre reumática | 7 |
+> | Saúde mental e cardiologia | 5 | Doença coronariana | 8 |
+> | Cardio-oncologia | 6 | Arritmias | 11 |
+> | Cardiopatias congênitas | 6 | Dispositivos | 11 |
+> | Endocardite | 6 | Gravidez | 11 |
+> | Pericárdio | 6 | Hipertensão | 11 |
+> | Perioperatório | 6 | Hipertensão pulmonar | 11 |
+> | Síncope | 6 | Prevenção e lipídios | 11 |
+> | Valvopatias | 6 | Tromboembolismo | 11 |
+> | | | Calculadoras | 12 |
+> | | | Cardiomiopatias | 12 |
+> | | | Diabetes e cardiologia | 12 |
+> | | | Fibrilação atrial | 12 |
+> | | | Insuficiência cardíaca | 12 |
+> | | | Terapia intensiva | 12 |
+>
+> **O que a medição revelou**: os 13 temas então da sessão de Medicamentos
+> estavam todos entre 11 e 12 documentos — bloco maduro e equilibrado. Os 14
+> então da Biblioteca variavam de **1 a 12**, com nove deles ainda em 6
+> documentos ou menos. A lacuna real da biblioteca inteira está concentrada
+> ali, não nos temas já maduros dos dois lados.
+>
+> **Decisão, para atacar a lacuna sem tirar de ninguém o que já domina**: a
+> sessão de Medicamentos **mantém os 13 temas que já tinha** (estavam
+> equilibrados, não havia motivo para mexer) e **passa a cobrir também os
+> quatro temas mais vazios** da lista da Biblioteca — exatamente os que
+> tinham menos documentos, onde o ganho por hora de trabalho é maior. A
+> Biblioteca mantém os dez restantes, incluindo o que já estava mais maduro
+> (Cardiomiopatias, 12) e o segundo grupo intermediário (Doença coronariana,
+> Febre reumática, Aorta e doença arterial periférica — 7-8).
+>
+> **Tabela de faixa, em vigor a partir de agora — substitui a tabela de 27
+> temas dos blocos anteriores nesta seção**:
+>
+> | Sessão | Temas de `content/` |
+> |---|---|
+> | **Medicamentos** (17 temas + Farmacologia) | Farmacologia, Gravidez, Terapia intensiva, Tromboembolismo, Fibrilação atrial, Arritmias, Dispositivos, Prevenção e lipídios, Diabetes e cardiologia, Insuficiência cardíaca, Hipertensão, Hipertensão pulmonar, Calculadoras, **Geral, Comunicação clínica, Saúde mental e cardiologia, Cardio-oncologia** |
+> | **Biblioteca** (10 temas) | Doença coronariana, Cardiomiopatias, Valvopatias, Pericárdio, Endocardite, Aorta e doença arterial periférica, Cardiopatias congênitas, Febre reumática, Síncope, Perioperatório |
+>
+> **O que não muda**: `medicamentos/*.json`, `backend/app/api/drugs.py` e os
+> arquivos `.tsx` de Medicamentos continuam só dela; `evidencias/`,
+> `estudos/`, `galeria/`, `exames/`, `controlados/`,
+> `backend/app/**/receituario*` e CorvIA Mail continuam só da Biblioteca,
+> como já registrado nos blocos abaixo. Só a fronteira de `content/` mudou.
+>
+> **Se a sessão da Biblioteca estiver com trabalho em andamento nos quatro
+> temas que mudaram de mão** (Geral, Comunicação clínica, Saúde mental e
+> cardiologia, Cardio-oncologia), ela termina o que já começou antes de
+> soltar — a régua de sempre: nunca abandonar edição pela metade.
+>
+> ---
+>
 > ### 📬 CorvIA Mail e receituário (Tarefas 28 e 29) — passados para a sessão da Biblioteca
 > Registrado em 30/07/2026. Depois de descobrir que o trabalho estava pronto
 > localmente mas não em produção (ver briefing), **o Rafael decidiu passar
