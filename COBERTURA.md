@@ -5,61 +5,73 @@ são medidos diretamente sobre os arquivos do repositório — `theme:` do front
 `content/`, e os `metadados.json` das outras quatro frentes; a coluna "Publicados" vem
 do banco. Nenhum número é estimado.
 
+> **Atualização de 30/07/2026, manhã, pela sessão da Biblioteca.** A coluna de
+> publicados estava desatualizada — medido direto no banco pela sessão de
+> Medicamentos ao fechar a noite anterior: **as seis frentes em 100% publicado**
+> (`documents` 312/312, `drugs` 101/101, `estudos` 53/53, `exames` 40/40,
+> `evidencias` 109/109, `galeria` 44/44). Nenhuma marcação
+> `VERIFICAÇÃO HUMANA NECESSÁRIA` resta no acervo (removidas na revisão manual
+> do Rafael na noite de 29/07). Esta sessão então acrescentou **13 evidências e
+> 4 estudos** nos dois temas que estavam zerados nas quatro frentes JSON
+> (Comunicação clínica e Geral) — ver "As quatro frentes JSON" abaixo. Esses
+> itens novos ainda não foram carregados no banco, então a coluna abaixo mistura
+> "publicado" (o que já estava no ar) com "no disco" (o que só existe no
+> repositório) — marcado item a item.
+
 ## Resumo
 
-| Frente | Itens | Publicados | Situação |
+| Frente | Itens (disco) | Publicados (banco) | Situação |
 |---|---:|---:|---|
-| `content/` — biblioteca científica | 269 (medido no disco em 30/07/2026) | não remedido | 27 temas cobertos; 29 são fluxogramas, **todos publicados**; contagem de publicados desatualizada — várias sessões escreveram content/ desde a última medição no banco |
-| `galeria/` — achados de imagem | 43 | 36 | 7 novas, licença conferida uma a uma; **zero temas da faixa da Biblioteca com 1 item só**; ainda `published: false` |
-| `exames/` — marcadores e exames | 40 | 0 | crescida de 17 para 40 pela sessão da Biblioteca em 29/07 à noite; **zero temas com 1 item só**; aguardando publicação |
-| `evidencias/` — recomendações pontuais | 109 | 100 | 5 novas em 30/07 (combinação inicial na HAS 2024, trombólise na TEP de alto risco, iSGLT2 na ICFEr independente de diabetes, CDI prevenção secundária, CRT em BRE/QRS≥150ms) além das 4 anteriores; **zerou todos os temas com 1 item só**; ainda `published: false` |
-| `estudos/` — ensaios e metanálises | 53 | 41 | 7 novos em 30/07 (EAST-AFNET 4, CHIPS, HAS-BLED, MADIT-CRT, VANISH, DECLARE-TIMI 58, ACCORD-BP) além dos 5 anteriores; **zerou o último tema com 1 item só** (Hipertensão); ainda `published: false` |
-| **Medicamentos** (tabela `drugs`) | **100** | **88** | reconstruída de `content/Farmacologia`; gestação e lactação fechadas em 88/88 |
+| `content/` — biblioteca científica | 290 (medido no disco em 30/07/2026 de manhã) | 312 (banco, medido na noite de 29/07) | 27 temas cobertos; 29 fluxogramas, todos publicados; disco cresceu desde a última carga — diferença para o banco é o de sempre (registros de fusão/duplicata despublicados) mais o que ainda não foi importado |
+| `galeria/` — achados de imagem | 44 | 44 | **100% publicado**, medido na noite de 29/07; sem alteração desta sessão |
+| `exames/` — marcadores e exames | 40 | 40 | **100% publicado**, medido na noite de 29/07; sem alteração desta sessão |
+| `evidencias/` — recomendações pontuais | 122 | 109 | 109 publicadas (medido 29/07 à noite) + **13 novas desta sessão** (Comunicação clínica e Geral, ver abaixo), ainda `published: false` no disco, aguardando carga e aval |
+| `estudos/` — ensaios e metanálises | 57 | 53 | 53 publicados (medido 29/07 à noite) + **4 novos desta sessão** (Comunicação clínica e Geral, ver abaixo), ainda `published: false` no disco, aguardando carga e aval |
+| **Medicamentos** (tabela `drugs`) | **101** | **101** | **100% publicado**, medido na noite de 29/07; faixa da sessão de Medicamentos, não tocada aqui |
 
-O banco tem **275 registros** em `documents` contra 253 arquivos no disco: os 22
-excedentes são as fusões e duplicatas já removidas do disco, todas despublicadas.
-Nenhum órfão está no ar.
+O banco teve historicamente mais registros em `documents` do que arquivos no disco —
+fusões e duplicatas já removidas do disco, despublicadas. Nenhum órfão publicado,
+pela última verificação registrada (29/07).
 
-## `content/` — 253 documentos
+## `content/` — 290 documentos (medido em 30/07/2026 de manhã, direto no disco)
 
-| Tema | Docs | Pend. revisão |
-|---|---:|---:|
-| Farmacologia | 97 | 66 |
-| Cardiomiopatias | 12 | 8 |
-| Calculadoras | 9 | 3 |
-| Terapia intensiva | 9 | 4 |
-| Gravidez | 8 | 0 |
-| Doença coronariana | 8 | 5 |
-| Hipertensão | 7 | 3 |
-| Arritmias | 7 | 1 |
-| Aorta e doença arterial periférica | 7 | 1 |
-| Prevenção e lipídios | 7 | 4 |
-| Fibrilação atrial | 7 | 3 |
-| Insuficiência cardíaca | 7 | 3 |
-| Diabetes e cardiologia | 7 | 0 |
-| Dispositivos | 7 | 2 |
-| Febre reumática | 7 | 1 |
-| Cardio-oncologia | 6 | 1 |
-| Síncope | 6 | 2 |
-| Hipertensão pulmonar | 6 | 1 |
-| Tromboembolismo | 6 | 2 |
-| Pericárdio | 6 | 2 |
-| Endocardite | 6 | 2 |
-| Cardiopatias congênitas | 6 | 1 |
-| Perioperatório | 6 | 1 |
-| Valvopatias | 6 | 4 |
-| Saúde mental e cardiologia | 5 | 1 |
-| Comunicação clínica | 3 | 0 |
-| Geral | 1 | 1 |
+| Tema | Docs |
+|---|---:|
+| Farmacologia | 97 |
+| Cardiomiopatias | 12 |
+| Terapia intensiva | 10 |
+| Tromboembolismo | 9 |
+| Prevenção e lipídios | 9 |
+| Insuficiência cardíaca | 9 |
+| Hipertensão pulmonar | 9 |
+| Hipertensão | 9 |
+| Gravidez | 9 |
+| Fibrilação atrial | 9 |
+| Diabetes e cardiologia | 9 |
+| Calculadoras | 9 |
+| Arritmias | 9 |
+| Doença coronariana | 8 |
+| Dispositivos | 8 |
+| Febre reumática | 7 |
+| Aorta e doença arterial periférica | 7 |
+| Valvopatias | 6 |
+| Síncope | 6 |
+| Perioperatório | 6 |
+| Pericárdio | 6 |
+| Endocardite | 6 |
+| Cardiopatias congênitas | 6 |
+| Cardio-oncologia | 6 |
+| Saúde mental e cardiologia | 5 |
+| Comunicação clínica | 3 |
+| Geral | 1 |
 
-**Total: 269 documentos, 122 pendentes de revisão** (medido em 30/07/2026, direto no
-disco) — 66 deles em Farmacologia, que concentra mais da metade da fila. Desde a
-medição anterior, a sessão da Biblioteca acrescentou valva aórtica bicúspide (ESC
-2024, Cardiopatias congênitas), desativação de CDI/marca-passo (HRS/EHRA 2010,
-Comunicação clínica) e holiday heart syndrome / FA induzida por álcool (Cureus 2025 +
-ESC 2024 AF-CARE, Saúde mental e cardiologia) — os três já `revisado`. O restante do
-crescimento veio de outra sessão em temas fora da minha faixa (Fibrilação atrial,
-Calculadoras, Terapia intensiva etc.).
+**Total: 290 documentos** — contagem de "pendentes de revisão" por tema não
+foi remedida nesta rodada (a última medição completa, 122 pendentes em
+30/07 de manhã anterior, está desatualizada porque várias sessões escreveram
+`content/` desde então; ver `review_status` no front matter de cada arquivo
+para o estado atual de um tema específico). Comunicação clínica (3) e Geral
+(1) seguem os temas mais rasos em documentos de texto — mas ganharam
+cobertura nova nas frentes JSON nesta sessão, ver abaixo.
 
 A queda de 250 para 241, registrada na medição anterior, não foi perda de conteúdo:
 foram as **11 fusões de pares complementares** descritas no fim deste arquivo, mais as
@@ -77,20 +89,40 @@ que essa distinção importa — ver abaixo.
 
 | Frente | Itens | Temas cobertos (de 27) | Temas com 1 item só |
 |---|---:|---:|---:|
-| `galeria/` | 43 | 24 | 7 |
+| `galeria/` | 44 | 24 | 6 (todos da faixa de Medicamentos) |
 | `exames/` | 40 | 20 | **0** |
-| `evidencias/` | 109 | 19 | **0** |
-| `estudos/` | 53 | 24 | **0** |
+| `evidencias/` | 122 | **21** | **0** |
+| `estudos/` | 57 | **26** | **0** |
 
-**Atualização de 30/07/2026:** `evidencias/` e `estudos/` zeraram todos os temas
-com 1 item só nesta sessão — a primeira com 5 novas recomendações (combinação
-inicial de dois fármacos na HAS 2024, trombólise sistêmica na TEP de alto risco,
-iSGLT2 na ICFEr independente de diabetes, CDI em prevenção secundária e CRT em
-BRE com QRS ≥150ms, cada uma com classe/nível conferido contra o PDF integral da
-diretriz, não resumo de terceiro), a segunda com 7 novos ensaios (EAST-AFNET 4,
-CHIPS, HAS-BLED, MADIT-CRT, VANISH, DECLARE-TIMI 58, ACCORD-BP). Só `galeria/`
-ainda tem temas com 1 item — são os 7 da faixa de Medicamentos, não tocados por
-essa regra de fronteira.
+**Atualização de 30/07/2026 de manhã, sessão da Biblioteca:** `evidencias/` e
+`estudos/` cobriam 19 e 24 temas, respectivamente, com **Comunicação clínica e
+Geral zerados nos quatro frentes JSON** — os dois únicos temas da minha faixa
+ainda sem nenhum item em nenhuma das quatro. Resolvido para duas das quatro:
+
+- **`evidencias/` +13**: 5 em Comunicação clínica (as recomendações do
+  capítulo 14 da ESC 2023 de SCA que faltavam — cuidado centrado no paciente,
+  decisão compartilhada, *teach back* no consentimento e na alta, avaliação de
+  bem-estar mental; a sexta recomendação da tabela, sobre descrição de
+  sintomas, já estava cadastrada em Doença coronariana) e 8 em Geral (extraídas
+  da ESC 2025 de doença cardiovascular e gestação, já publicada em
+  `content/Geral/`: mWHO 2.0, encaminhamento ao Pregnancy Heart Team, decisão
+  compartilhada em mWHO IV, BNP pré-gestacional, transplante cardíaco, TEV em
+  gestante/puérpera, avaliação de risco pós-desfecho gestacional adverso e TOTG
+  pós-parto em diabetes gestacional prévio).
+- **`estudos/` +4**: DECIDE-LVAD e um ensaio de *teach back* na alta de IC
+  (Comunicação clínica); ROPAC e CARPREG II (Geral) — os quatro verificados
+  contra PubMed nesta sessão (não só resolução de DOI/PMID: título, autores,
+  ano, volume/página e os números do resultado conferidos contra o resumo
+  oficial).
+- Nenhum dos dois entrou em `exames/` nem `galeria/`, **de propósito, não por
+  esquecimento**: não existe exame diagnóstico nem achado de imagem que
+  pertença ao tema "Comunicação clínica" em si, e forçar um item em "Geral"
+  só para preencher a célula aprofundaria a mistura com o tema Gravidez que o
+  item 4 de "Lacunas conhecidas" já registra como pendência de reclassificação
+  — não é este o lugar de resolver isso.
+
+`galeria/` segue com 6 temas com 1 item, todos da faixa de Medicamentos — não
+tocada por esta sessão.
 
 A prioridade segue sendo **profundidade**. Leituras da rodada anterior (29/07),
 mantidas como histórico:
