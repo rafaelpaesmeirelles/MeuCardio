@@ -1179,5 +1179,28 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "anomalia-de-ebstein-correlacao-anatomo-ecocardiografica",
+    "title": "Anomalia de Ebstein — correlação anatomo-ecocardiográfica (tethering grau I)",
+    "modality": "Peça anatômica e ecocardiograma",
+    "theme": "Cardiopatias congênitas",
+    "file_path": "eco/anomalia-de-ebstein-correlacao-anatomo-ecocardiografica.jpg",
+    "findings": "Painel duplo: à esquerda, vista interna das câmaras direitas de coração com anomalia de Ebstein, mostrando tethering leve (grau I) do folheto septal (asterisco) com espessamento da porção livre do folheto (seta); a linha pontilhada marca a junção atrioventricular verdadeira, onde está o anel fibroso tricúspide — a porção atrializada do ventrículo direito é pequena, e há comunicação interatrial tipo forame oval patente. À direita, imagem ecocardiográfica em 4 câmaras do mesmo tipo de achado, com a mesma linha pontilhada indicando o plano da junção atrioventricular — a maior parte do ventrículo direito é funcional. Siglas: RA/AD átrio direito, ARV/VD atrializado, FRV/VD funcional, AL folheto anterior, PL folheto posterior, SL folheto septal, ASD/CIA comunicação interatrial, LA/AE átrio esquerdo, LV/VE ventrículo esquerdo.",
+    "teaching_points": "Ilustra diretamente o espectro de gravidade da anomalia de Ebstein graduado pelo índice de Celermajer (razão entre área do AD + VD atrializado e área do VD funcional + câmaras esquerdas) — este espécime e a imagem ecocardiográfica correspondente representam o extremo mais leve do espectro (tethering grau I), com boa correlação entre achado anatômico e ecocardiográfico, reforçando por que a ecocardiografia é o exame de escolha para graduar a anomalia in vivo. Complementa o documento `anomalia-de-ebstein-diagnostico-e-manejo-esc-2020.md` e a entrada de exame `indice-de-celermajer-na-anomalia-de-ebstein`.",
+    "source_name": "Cardiovascular Ultrasound (BioMed Central, acesso aberto), via Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Ebstein1.jpg",
+    "license": "CC BY 2.0",
+    "attribution": "Muñoz-Castellanos L, Espinola-Zavaleta N, Kuri-Nivón M, Keirns C. Ebstein's Anomaly: anatomo-echocardiographic correlation. Cardiovasc Ultrasound. 2007;5:43. DOI: 10.1186/1476-7120-5-43. PMID: 18034907 — CC BY 2.0, via Wikimedia Commons. Licença conferida diretamente na página do arquivo em 30/07/2026.",
+    "tags": [
+      "anomalia de ebstein",
+      "ecocardiograma",
+      "valva tricúspide",
+      "cardiopatia congênita",
+      "índice de celermajer",
+      "correlação anatomo-ecocardiográfica"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
