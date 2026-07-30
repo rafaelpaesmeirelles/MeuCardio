@@ -1304,5 +1304,28 @@
       "doença coronariana",
       "escore de estresse somado"
     ]
+  },
+  {
+    "slug": "planimetria-da-area-valvar-mitral",
+    "name": "Planimetria da área valvar mitral (ecocardiografia)",
+    "category": "imagem",
+    "theme": "Valvopatias",
+    "what_it_measures": "Medida direta da área do orifício mitral por planimetria bidimensional, traçando o contorno interno do orifício mitral na visão de eixo curto paraesternal — método mais usado para quantificar gravidade de estenose mitral (EM), sobretudo reumática.",
+    "reference_range": "Área valvar mitral (AVM) ≤1,5 cm², associada a fatores clínicos (sintomas, alto risco de tromboembolismo ou descompensação hemodinâmica), indica EM clinicamente grave — corte central que orienta a decisão de intervenção (comissurotomia percutânea ou cirurgia). Em EM degenerativa por calcificação do anel mitral, a planimetria é menos confiável do que na EM reumática, pela sombra acústica da calcificação.",
+    "indications": "Suspeita ou EM já confirmada, para quantificar gravidade e decidir necessidade e tipo de intervenção. Também usada em conjunto com escore de morfologia valvar (Wilkins) para avaliar adequação à comissurotomia mitral percutânea (CMP) em EM reumática.",
+    "interpretation": "AVM >1,5 cm² geralmente não indica intervenção, salvo sintoma não explicado por outra causa com anatomia favorável. AVM ≤1,5 cm² com sintomas, alto risco tromboembólico ou de descompensação hemodinâmica orienta CMP ou cirurgia, conforme características anatômicas e clínicas do paciente (ver documento de estenose mitral desta biblioteca para a tabela completa de indicação). Gradiente transvalvar médio e pressão pulmonar complementam a planimetria, refletindo a repercussão hemodinâmica da estenose e agregando valor prognóstico.",
+    "limitations": "Ecocardiografia 3D e transesofágica agregam valor diagnóstico adicional em relação à planimetria 2D isolada, sobretudo quando a janela acústica transtorácica é inadequada ou há dúvida quanto à gravidade. Em EM de baixo fluxo/baixo gradiente (AVM <1,5 cm², gradiente médio <10 mmHg), o quadro é mais desafiador de quantificar e interpretar — população tipicamente mais idosa e com anatomia menos favorável.",
+    "source_refs": [
+      "Praz F, Borger MA, Lanz J, et al. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2025;46(44):4635-4747. DOI: 10.1093/eurheartj/ehaf194. PMID: 40878295 — seção 10.2.1 (Rheumatic mitral stenosis, Evaluation), texto integral já obtido nesta sessão para o documento de estenose mitral desta mesma pasta, conferido diretamente em 30/07/2026."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "estenose mitral",
+      "planimetria",
+      "área valvar mitral",
+      "ecocardiografia",
+      "valvopatias"
+    ]
   }
 ]
