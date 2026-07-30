@@ -3,8 +3,8 @@ title: "Ácido bempedoico"
 slug: acido-bempedoico
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
-source_refs: ["Bula NUSTENDI (ácido bempedoico + ezetimiba) · ANVISA/Medpedia · https://www.medpedia.com.br/wp-content/uploads/2025/06/Bula-Nustendi.pdf · o servidor devolveu 403 em 29/07/2026 e o documento não pôde ser reconferido", "NILEMDO (ácido bempedoico) — Resumo das Características do Medicamento, EMA, em português, secções 4.3 e 4.6 · https://www.ema.europa.eu/pt/documents/product-information/nilemdo-epar-product-information_pt.pdf · consultado em 29/07/2026", "NUSTENDI (ácido bempedoico + ezetimiba) — Resumo das Características do Medicamento, EMA, em português, secções 4.3 e 4.6 · https://www.ema.europa.eu/pt/documents/product-information/nustendi-epar-product-information_pt.pdf · consultado em 29/07/2026"]
+review_status: revisado
+source_refs: ["Bula NUSTENDI (ácido bempedoico + ezetimiba) · ANVISA/Medpedia · https://www.medpedia.com.br/wp-content/uploads/2025/06/Bula-Nustendi.pdf · o servidor devolveu 403 em 29/07/2026 e o documento não pôde ser reconferido", "NILEMDO (ácido bempedoico) — Resumo das Características do Medicamento, EMA, em português, secções 4.3 e 4.6 · https://www.ema.europa.eu/pt/documents/product-information/nilemdo-epar-product-information_pt.pdf · consultado em 29/07/2026", "NUSTENDI (ácido bempedoico + ezetimiba) — Resumo das Características do Medicamento, EMA, em português, secções 4.3 e 4.6 · https://www.ema.europa.eu/pt/documents/product-information/nustendi-epar-product-information_pt.pdf · consultado em 29/07/2026", "Nissen SE, Lincoff AM, Brennan D, et al. Bempedoic Acid and Cardiovascular Outcomes in Statin-Intolerant Patients. N Engl J Med. 2023;388(15):1353-1364. DOI: 10.1056/NEJMoa2215024. Ensaio CLEAR Outcomes, verificado no PubMed em 30/07/2026"]
 legacy_source: "medicamentos/banco-de-medicamentos-item-25.md"
 ---
 
@@ -46,3 +46,15 @@ Hiperuricemia (pode desencadear crises de gota), elevação de creatinina, anemi
 
 ## Populacao alvo preferencial
 Pacientes com intolerância documentada a estatinas ou que necessitam de redução adicional de LDL-C além do que estatina em dose máxima tolerada proporciona
+
+## Evidencia pivotal clear outcomes
+**Acrescentado em 30/07/2026** — até então este verbete não trazia nenhum dado de desfecho cardiovascular, só farmacologia e perfil de segurança. Fonte: **CLEAR Outcomes** (Nissen SE, Lincoff AM, Brennan D, et al. Bempedoic Acid and Cardiovascular Outcomes in Statin-Intolerant Patients. N Engl J Med. 2023;388(15):1353-1364. DOI: 10.1056/NEJMoa2215024), verificado diretamente no PubMed/abstract original.
+
+- **Desenho**: 13.970 pacientes randomizados (6.992 ácido bempedoico vs. 6.978 placebo), estatina-intolerantes, seguimento mediano de 40,6 meses. LDL-C basal 139,0 mg/dL em ambos os grupos; redução adicional de **29,2 mg/dL** com ácido bempedoico (diferença percentual de 21,1 pontos frente a placebo).
+- **Desfecho primário (MACE composto de 4 componentes — morte cardiovascular, IAM não fatal, AVC não fatal, revascularização coronária)**: **11,7% vs. 13,3%** (HR 0,87; IC95% 0,79-0,96; p=0,004).
+- **Desfecho secundário-chave (morte cardiovascular, AVC não fatal, IAM não fatal)**: **8,2% vs. 9,5%** (HR 0,85; IC95% 0,76-0,96; p=0,006).
+- **Componentes individuais com significância própria**: IAM **3,7% vs. 4,8%** (HR 0,77; p=0,002); revascularização coronária **6,2% vs. 7,6%** (HR 0,81; p=0,001).
+- **Sem efeito estatisticamente significativo isolado**: AVC isolado, morte cardiovascular isolada e mortalidade por todas as causas isolada — **nenhum dos três** atingiu significância como desfecho individual, apesar do resultado positivo no composto. Não generalizar o benefício do MACE composto para esses três desfechos isolados.
+- **Segurança, com números do próprio ensaio**: mais gota (3,1% vs. 2,1%) e mais colelitíase (2,2% vs. 1,2%) com ácido bempedoico, além de pequenas elevações de creatinina, ácido úrico e enzimas hepáticas — consistente com o perfil de efeitos adversos já descrito acima neste documento, agora com incidência real de ensaio controlado, não só descrição qualitativa.
+
+**Relevância clínica**: é o primeiro ensaio de desfecho cardiovascular do ácido bempedoico, e foi conduzido especificamente em população intolerante a estatina — exatamente a "população alvo preferencial" já descrita neste verbete —, o que fortalece a indicação nesse subgrupo em vez de extrapolá-la de ensaios com estatina.
