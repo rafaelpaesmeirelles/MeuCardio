@@ -936,6 +936,28 @@
     "published": false
   },
   {
+    "slug": "aschoff-body-miocardite-reumatica",
+    "title": "Histopatologia — Corpo de Aschoff na miocardite reumática",
+    "modality": "Anatomia patológica",
+    "theme": "Febre reumática",
+    "file_path": "patologia/aschoff-body-miocardite-reumatica.jpg",
+    "findings": "Corte histológico em grande aumento (coloração hematoxilina-eosina) mostrando células de Anitschkow dentro de um corpo de Aschoff — núcleos alongados com cromatina em padrão característico ('em lagarta'/'olho de coruja'), o achado histopatológico patognomônico da miocardite reumática aguda.",
+    "teaching_points": "O corpo de Aschoff é a lesão histológica que define a miocardite reumática: um foco de necrose fibrinoide circundado por linfócitos, macrófagos e as células de Anitschkow — macrófagos modificados com o núcleo característico. Com o tempo, o corpo de Aschoff evolui para cicatriz fibrosa. Esse achado é encontrado no miocárdio, mas o mesmo processo inflamatório-cicatricial nas valvas (sobretudo mitral e aórtica) é o que produz, ao longo dos anos, a fusão comissural que caracteriza a valvopatia reumática crônica.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Anitschkow_Myocytes_in_an_Aschoff_Body,_Rheumatic_Myocarditis.jpg",
+    "license": "CC BY-SA 2.0",
+    "attribution": "Ed Uthman, MD, via Wikimedia Commons — CC BY-SA 2.0.",
+    "tags": [
+      "corpo de aschoff",
+      "célula de anitschkow",
+      "miocardite reumática",
+      "febre reumática",
+      "histopatologia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
     "slug": "derrame-pericardico-volumoso-com-tamponamento",
     "title": "Ecocardiograma — Derrame pericárdico volumoso com tamponamento",
     "modality": "Ecocardiograma",
@@ -994,6 +1016,28 @@
       "qt longo",
       "síncope",
       "taquicardia ventricular polimórfica",
+      "ecg"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ecg-brugada-tipo-1",
+    "title": "ECG — Padrão de Brugada tipo 1",
+    "modality": "ECG",
+    "theme": "Síncope",
+    "file_path": "ecg/ecg-brugada-tipo-1.jpg",
+    "findings": "Derivações precordiais direitas V1-V3 mostrando o padrão 'em abóbada' (coved-type): supradesnivelamento do ponto J e do segmento ST ≥2 mm com descenso progressivo seguido de onda T invertida — o padrão eletrocardiográfico tipo 1 de Brugada, o único dos três padrões descritos que é, isoladamente, diagnóstico da síndrome.",
+    "teaching_points": "A síndrome de Brugada é canalopatia (mutação mais comum no gene SCN5A, canal de sódio) que predispõe a arritmia ventricular polimórfica e morte súbita em coração estruturalmente normal — causa relevante de síncope e de morte súbita em jovens, sobretudo durante o sono ou febre. O padrão tipo 1 espontâneo, ou desmascarado por teste farmacológico com bloqueador de canal de sódio (ajmalina ou flecainida) em paciente com padrão tipo 2 basal, associado a síncope, parada cardíaca abortada ou história familiar de morte súbita, indica avaliação para cardiodesfibrilador implantável.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Brugada_syndrome_ECGs.jpg",
+    "license": "CC BY-SA 4.0",
+    "attribution": "PeaBrainC, via Wikimedia Commons — CC BY-SA 4.0.",
+    "tags": [
+      "síndrome de brugada",
+      "morte súbita",
+      "canalopatia",
+      "síncope",
       "ecg"
     ],
     "review_status": "revisado",
