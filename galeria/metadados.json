@@ -1293,5 +1293,28 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "coreia-de-sydenham-danse-de-saint-guy",
+    "title": "Coreia de Sydenham — ilustração histórica (\"Danse de Saint-Guy\")",
+    "modality": "Ilustração médica histórica",
+    "theme": "Febre reumática",
+    "file_path": "clinico/coreia-de-sydenham-danse-de-saint-guy.jpg",
+    "findings": "Gravura do século XIX (circa 1880) mostrando três meninos em posturas assimétricas, irregulares e não sustentadas — braços semifletidos, mãos em posição variável, um deles suspenso num apoio unipodal instável — representação clássica dos movimentos coreiformes, involuntários e migratórios, da coreia de Sydenham, historicamente chamada \"dança de São Vito\" (Saint-Guy/St. Vitus).",
+    "teaching_points": "Ilustra o achado central da coreia de Sydenham: movimentos involuntários, arrítmicos, sem propósito, que pioram com estresse e desaparecem no sono — e que, diferente de tremor ou tique, migram de um grupo muscular para outro sem padrão fixo, o que a arte capta ao mostrar três posturas distintas e não sincronizadas na mesma cena. Complementa o documento `coreia-de-sydenham-diagnostico-e-tratamento.md` desta biblioteca. É a única manifestação neurológica entre os critérios maiores de Jones e pode ser a única manifestação da febre reumática aguda, aparecendo isoladamente após latência mais longa que artrite ou cardite.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Boys_afflicted_with_rheumatic_chorea.jpg",
+    "license": "Domínio público (obra de autor desconhecido, circa 1880 — PD-old-70)",
+    "attribution": "Autor não identificado, circa 1880, via Wikimedia Commons — domínio público. Licença conferida na página do arquivo em 30/07/2026.",
+    "tags": [
+      "coreia de sydenham",
+      "dança de são vito",
+      "febre reumática",
+      "critérios de jones",
+      "ilustração histórica",
+      "movimento coreiforme"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
