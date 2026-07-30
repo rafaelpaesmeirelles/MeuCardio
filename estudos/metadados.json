@@ -1811,5 +1811,30 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "coral-stent-renal-versus-terapia-medica-na-estenose-aterosclerotica-de-arteria-renal",
+    "title": "CORAL — Stent renal versus terapia médica isolada na estenose aterosclerótica de artéria renal",
+    "study_type": "ensaio_clinico",
+    "authors": "Cooper CJ, Murphy TP, Cutlip DE, et al. (CORAL Investigators)",
+    "journal": "New England Journal of Medicine",
+    "year": 2014,
+    "doi": "10.1056/NEJMoa1310753",
+    "pmid": "24245566",
+    "url": "https://www.nejm.org/doi/full/10.1056/nejmoa1310753",
+    "summary": "Ensaio randomizado, 947 participantes com estenose aterosclerótica de artéria renal e hipertensão sistólica em uso de 2 ou mais anti-hipertensivos, ou doença renal crônica. Randomizados para terapia médica associada a implante de stent na artéria renal, ou terapia médica isolada. Seguimento mediano de 43 meses (IQR 31-55). Desfecho primário composto: morte cardiovascular ou renal, infarto do miocárdio, AVC, hospitalização por insuficiência cardíaca congestiva, insuficiência renal progressiva ou necessidade de terapia renal substitutiva.",
+    "key_findings": "Desfecho primário composto: 35,1% no grupo stent contra 35,8% no grupo terapia médica isolada — razão de risco 0,94 (IC95% 0,76-1,17; p=0,58), sem diferença significativa. Também sem diferença significativa nos componentes individuais do desfecho primário nem na mortalidade por todas as causas. Diferença modesta e consistente de PA sistólica favorecendo o grupo stent (-2,3 mmHg; IC95% -4,4 a -0,2; p=0,03) — estatisticamente significativa, mas de magnitude clinicamente marginal.",
+    "clinical_implications": "Principal ensaio negativo que sustenta a recomendação Classe III/Nível A da ESC 2024 contra revascularização de rotina em estenose de artéria renal aterosclerótica unilateral (documento próprio desta biblioteca, `doenca-renovascular-diagnostico-e-tratamento-esc-2024.md`) — stent renal não reduziu eventos cardiovasculares/renais maiores quando adicionado a terapia médica multifatorial abrangente, em população já otimizada clinicamente.",
+    "limitations": "A diferença pressórica pequena, embora estatisticamente significativa, não se traduziu em benefício clínico duro — reforça que o desfecho substituto (PA) não deve ser usado isoladamente para justificar o procedimento. População do estudo já recebia terapia médica multifatorial contemporânea, o que pode ter reduzido a margem de benefício adicional do stent.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "coral",
+      "estenose de artéria renal",
+      "stent renal",
+      "hipertensão renovascular",
+      "ensaio clínico"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
