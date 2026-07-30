@@ -4,7 +4,7 @@ slug: clortalidona
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["Chlorthalidone — rótulo aprovado pelo FDA, DailyMed SPL setid da0fe4da-a4f3-4aa8-84f4-4d31c5cbdb0e", "Chlorthalidone/THALITONE — bula FDA/DailyMed (múltiplas versões consultadas)", "Chlorthalidone — StatPearls, NCBI Bookshelf"]
+source_refs: ["Chlorthalidone — rótulo aprovado pelo FDA, DailyMed SPL setid da0fe4da-a4f3-4aa8-84f4-4d31c5cbdb0e", "Chlorthalidone/THALITONE — bula FDA/DailyMed (múltiplas versões consultadas)", "Chlorthalidone — StatPearls, NCBI Bookshelf", "Ishani A, Cushman WC, Leatherman SM, et al; Diuretic Comparison Project Writing Group. Chlorthalidone vs. Hydrochlorothiazide for Hypertension-Cardiovascular Events. N Engl J Med. 2022;387(26):2401-2410. DOI: 10.1056/NEJMoa2212270. PMID: 36516076"]
 legacy_source: "medicamentos/banco-de-medicamentos-clortalidona.md"
 ---
 
@@ -54,3 +54,17 @@ Hipertensão essencial/nefrogênica/sistólica isolada, ICC estável leve-modera
 
 ## Efeitos adversos
 Hipocalemia, hiponatremia, hiperuricemia, hiperglicemia
+
+## Evidencia comparativa vs hidroclorotiazida — diuretic comparison project
+**Acrescentado em 30/07/2026.** A crença de que clortalidona é superior à hidroclorotiazida para desfecho cardiovascular — apoiada em análises de subgrupo de ensaios mais antigos — foi testada diretamente pelo **Diuretic Comparison Project** (Ishani A et al., N Engl J Med. 2022;387(26):2401-2410, DOI: 10.1056/NEJMoa2212270, PMID: 36516076): ensaio pragmático, sistema de saúde dos veteranos americanos (VA):
+- **13.523 pacientes** ≥65 anos, já em uso de hidroclorotiazida 25 ou 50mg/dia, randomizados para manter hidroclorotiazida ou trocar para clortalidona 12,5 ou 25mg/dia
+- Seguimento mediano de **2,4 anos**
+- **Desfecho primário** (composto de IAM não fatal, AVC, IC com hospitalização, revascularização coronária urgente por angina instável, e morte não relacionada a câncer): **10,4% com clortalidona vs. 10,0% com hidroclorotiazida** (HR 1,04; IC95% 0,94-1,16; p=0,45) — **sem diferença**, e nenhum componente isolado do composto diferiu entre os grupos
+- **Segurança**: **mais hipopotassemia com clortalidona** (6,0% vs. 4,4%; p<0,001)
+
+**Conclusão dos próprios autores**: neste grande ensaio pragmático, com as doses usadas na prática clínica, clortalidona **não** reduziu eventos cardiovasculares maiores nem mortalidade não relacionada a câncer, comparada à hidroclorotiazida — e causou mais hipopotassemia.
+
+## Armadilhas clinicas
+- Trocar hidroclorotiazida por clortalidona rotineiramente por suposta superioridade cardiovascular — o maior ensaio pragmático dedicado à pergunta não encontrou diferença no desfecho composto
+- Ignorar a maior incidência de hipopotassemia com clortalidona ao fazer essa troca, sobretudo em paciente já com outro fator de risco para hipopotassemia (uso concomitante de digitálico, por exemplo)
+- Extrapolar o resultado do Diuretic Comparison Project (pacientes ≥65 anos, VA, doses de 12,5-25mg de clortalidona) para doses maiores ou população mais jovem sem essa ressalva
