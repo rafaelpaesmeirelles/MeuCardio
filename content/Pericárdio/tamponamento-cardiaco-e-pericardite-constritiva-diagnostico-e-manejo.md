@@ -4,7 +4,8 @@ slug: tamponamento-cardiaco-e-pericardite-constritiva-diagnostico-e-manejo
 theme: "Pericárdio"
 kind: protocolo
 review_status: revisado
-source_refs: ["Pericardial tamponade: A comprehensive emergency medicine and echocardiography review · PubMed · 2022 · https://pubmed.ncbi.nlm.nih.gov/35696801/", "Pericardiocentesis: Overview, Indications, Contraindications · Medscape · https://emedicine.medscape.com/article/80602-overview", "Echocardiographic Diagnosis of Constrictive Pericarditis · Circulation: Cardiovascular Imaging · https://www.ahajournals.org/doi/10.1161/circimaging.113.001613", "Short term clinical and echocardiography outcomes of pericardiectomy in constrictive pericarditis · PMC · https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8302898/"]
+source_refs: ["Pericardial tamponade: A comprehensive emergency medicine and echocardiography review · PubMed · 2022 · https://pubmed.ncbi.nlm.nih.gov/35696801/", "Pericardiocentesis: Overview, Indications, Contraindications · Medscape · https://emedicine.medscape.com/article/80602-overview", "Echocardiographic Diagnosis of Constrictive Pericarditis · Circulation: Cardiovascular Imaging · https://www.ahajournals.org/doi/10.1161/circimaging.113.001613", "Short term clinical and echocardiography outcomes of pericardiectomy in constrictive pericarditis · PMC · https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8302898/", "2025 ESC Guidelines for the management of myocarditis and pericarditis. Eur Heart J. 2025;46(40):3952-4041. DOI: 10.1093/eurheartj/ehaf192. PMID: 40878297 — Recommendation Table 24 (pericardite constritiva), texto integral conferido em 30/07/2026.", "Feng D, Glockner J, Kim K, et al. Cardiac magnetic resonance imaging pericardial late gadolinium enhancement and elevated inflammatory markers can predict the reversibility of constrictive pericarditis after antiinflammatory medical therapy: a pilot study. Circulation. 2011;124(17):1830-1837. DOI: 10.1161/CIRCULATIONAHA.111.026070. PMID: 21969014 — texto integral conferido em 30/07/2026."]
+legacy_source: "Enriquecido em 30/07/2026 — acrescentada a seção 'transitória versus permanente', ausente na versão anterior: o documento tratava pericardite constritiva só como indicação cirúrgica, sem registrar que a constrição pode ser reversível com terapia anti-inflamatória quando há inflamação ativa. Conteúdo anterior preservado integralmente, nada removido."
 ---
 
 # Tamponamento Cardíaco e Pericardite Constritiva: Diagnóstico e Manejo
@@ -31,7 +32,20 @@ Complementa os dois documentos já existentes sobre pericárdio (pericardite agu
 - **criterio ecocardiografico combinado**: desvio do septo ventricular associado a velocidade e' do anel mitral medial ≥9 cm/s OU razão de reversão diastólica expiratória da veia hepática ≥0,79 — sensibilidade de 87% e especificidade de 91%; quando os três fatores coexistem, especificidade de 97%
 - **fonte**: Circulation: Cardiovascular Imaging
 
-## Pericardite constritiva — tratamento
-- **pericardiectomia completa**: capaz de restaurar enchimento diastólico satisfatório ao remover o pericárdio constritivo
+## Pericardite constritiva — transitória versus permanente
+- **por que a distinção vem antes da decisão cirúrgica**: nem toda constrição é definitiva. Quando há inflamação pericárdica ativa concomitante, a constrição pode regredir com tratamento clínico, evitando a pericardiectomia — decisão errada nesse ponto expõe o paciente a uma cirurgia de alto risco que a terapia clínica poderia ter evitado.
+- **terapia anti-inflamatória na constrição transitória**: recomendada (Classe I, Nível C) em paciente hemodinamicamente estável com constrição transitória ou recém-diagnosticada, com evidência concomitante de inflamação pericárdica, para prevenir a progressão à constrição definitiva.
+- **pericardiectomia na constrição permanente**: recomendada (Classe I, Nível C) quando não há inflamação ativa, ou quando a terapia anti-inflamatória não teve sucesso após 3 a 6 meses — o prazo de 3-6 meses é o que define "tentativa clínica adequada" antes de concluir que a constrição é permanente.
+- **imagem multimodal para o diagnóstico**: recomendada (Classe I, Nível C) em todo paciente com suspeita de pericardite constritiva, para avaliar espessamento pericárdico, calcificação e inflamação ativa — é essa avaliação que orienta qual dos dois caminhos acima seguir.
+- **fonte**: 2025 ESC Guidelines for the management of myocarditis and pericarditis, Recommendation Table 24.
+
+## Pericardite constritiva — predizendo reversibilidade por ressonância cardíaca
+- **o que a ressonância acrescenta à imagem multimodal**: realce tardio pericárdico ao gadolínio é marcador de inflamação ativa, distinto do espessamento/calcificação (que refletem cronicidade/fibrose) — é o achado que melhor prediz se a constrição vai responder à terapia anti-inflamatória.
+- **estudo pivotal**: 29 pacientes (14 com constrição reversível, 15 com constrição persistente após terapia). Espessura basal do realce tardio: 4±1 mm no grupo reversível contra 2±1 mm no persistente (p=0,001); intensidade moderada/grave em 93% do grupo reversível contra 33% do persistente (p=0,002). Corte de espessura ≥3 mm teve sensibilidade de 86% e especificidade de 80% para prever reversibilidade.
+- **marcadores sistêmicos acompanham o achado de imagem**: PCR 59±52 mg/L (reversível) versus 12±14 mg/L (persistente), p=0,04; VHS 49±25 mm/h versus 15±16 mm/h, p=0,04.
+- **fonte**: Feng D et al., Circulation 2011;124:1830-1837.
+
+## Pericardite constritiva — tratamento cirúrgico
+- **pericardiectomia completa**: capaz de restaurar enchimento diastólico satisfatório ao remover o pericárdio constritivo — indicada especificamente na constrição permanente, conforme a seção acima, não como primeira conduta em toda pericardite constritiva.
 - **pericardiectomia subtotal com reconstrucao pericardica**: pacientes submetidos a essa técnica apresentaram melhora pós-operatória rápida, com resolução de sintomas de insuficiência cardíaca e normalização da função do ventrículo direito
 - **fonte**: PMC (desfechos de pericardiectomia)
