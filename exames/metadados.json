@@ -1233,5 +1233,29 @@
       "diagnóstico microbiológico",
       "endocardite"
     ]
+  },
+  {
+    "slug": "cintilografia-ossea-no-diagnostico-nao-invasivo-de-amiloidose-cardiaca-attr",
+    "name": "Cintilografia óssea (traçador de tecnécio) no diagnóstico não invasivo de amiloidose cardíaca ATTR",
+    "category": "imagem",
+    "theme": "Cardiomiopatias",
+    "what_it_measures": "Captação miocárdica de traçador ósseo marcado com tecnécio-99m (PYP, DPD ou HMDP, a depender do país) — os depósitos de amiloide por transtirretina (ATTR) captam esses traçadores, permitindo diagnóstico por imagem sem biópsia endomiocárdica na maioria dos casos.",
+    "reference_range": "Captação graduada visualmente em 4 graus: 0 (ausente), 1 (leve, menor que a captação óssea nas costelas), 2 (moderada, igual à captação óssea), 3 (intensa, maior que a captação óssea, com atenuação do sinal ósseo). Grau 2 ou 3 é considerado positivo para o algoritmo diagnóstico.",
+    "indications": "Suspeita de cardiomiopatia amiloide por transtirretina (ATTR-CM), forma hereditária (ATTRv) ou tipo selvagem (ATTRwt) — tipicamente em paciente com hipertrofia ventricular esquerda desproporcional à história de hipertensão, estenose aórtica de baixo fluxo/baixo gradiente, ou insuficiência cardíaca com fração de ejeção preservada em paciente idoso.",
+    "interpretation": "Achado central do algoritmo não invasivo: captação miocárdica grau 2 ou 3, associada à ausência de proteína monoclonal no soro ou na urina (eletroforese com imunofixação e relação de cadeias leves livres), tem especificidade e valor preditivo positivo de 100% (IC do VPP: 98,0-100) para amiloidose ATTR cardíaca — permite fechar o diagnóstico sem biópsia na maioria dos pacientes. A exigência de excluir proteína monoclonal é central: captação isolada do traçador tem sensibilidade >99% mas especificidade de só 86% para ATTR, porque também capta em amiloidose AL cardíaca — a causa quase exclusiva dos falsos positivos.",
+    "limitations": "Não distingue ATTR hereditária de tipo selvagem — isso exige teste genético complementar. Paciente com proteína monoclonal presente (achado inespecífico, pode coexistir por acaso com ATTR) não pode ter o diagnóstico fechado só pela cintilografia — precisa de investigação adicional para excluir amiloidose AL concomitante, incluindo biópsia se necessário, porque tratar AL como se fosse ATTR (ou vice-versa) muda completamente a terapia.",
+    "source_refs": [
+      "Gillmore JD, Maurer MS, Falk RH, et al. Nonbiopsy Diagnosis of Cardiac Transthyretin Amyloidosis. Circulation. 2016;133(24):2404-2412. DOI 10.1161/CIRCULATIONAHA.116.021612. PMID 27143678 — estudo pivotal (1217 pacientes), números conferidos contra o abstract indexado (Europe PMC) em 30/07/2026, já usado nesta sessão no documento de diagnóstico de amiloidose cardíaca desta mesma pasta."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "amiloidose cardíaca",
+      "attr",
+      "cintilografia óssea",
+      "medicina nuclear",
+      "diagnóstico não invasivo",
+      "cardiomiopatias"
+    ]
   }
 ]
