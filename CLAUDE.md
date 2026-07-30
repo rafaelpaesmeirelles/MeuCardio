@@ -1802,6 +1802,16 @@ não refazer.
    Se o texto mudar depois, `VERSAO` muda junto (ver comentário no arquivo) —
    quem já aceitou a versão antiga é identificado por
    `email_accounts.lgpd_aceite_versao` e a tela pede novo aceite.
+   **Credenciais de API do Mail360 (`MAIL360_CLIENT_ID`, `MAIL360_CLIENT_SECRET`,
+   `MAIL360_REFRESH_TOKEN`), testadas de ponta a ponta em 30/07/2026 na
+   montagem do serviço**: vivem **só no `.env` do servidor de produção**, nunca
+   neste arquivo nem em nenhum arquivo versionado — mesma regra das chaves do
+   Stripe e do `STORAGE_ENCRYPTION_KEY` já registrada acima. Sessão que
+   precisar delas e tiver acesso real ao servidor as lê direto de lá; sessão
+   sandboxada (como esta, sem `.env` neste container) não tem e não deve
+   receber o valor por este canal — pedir ao Rafael para passar fora do
+   `CLAUDE.md`. `backend/tests/conftest.py` só define valores de teste
+   (`"id-de-teste"` etc.) para essas três variáveis, nunca os reais.
 15. **Prazo de retenção** de exame e laudo: segue regra de guarda de prontuário,
    sem exclusão automática (decisão do Rafael); o prazo exato ele confirma com
    o jurídico. **Pedido abandonado** — com exame e dados de paciente gravados
