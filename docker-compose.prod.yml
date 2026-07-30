@@ -50,6 +50,7 @@ services:
       # demais frentes de conteudo: o backend le, nunca escreve.
       - ./material-paciente:/material-paciente:ro
       - ./emergencia:/emergencia:ro
+      - ./casos-clinicos:/casos-clinicos:ro
       # Listas da Portaria 344/98 e regras de adendo (Tarefa 27).
       - ./controlados:/controlados:ro
       - ./backend/migrations/versions:/app/migrations/versions
