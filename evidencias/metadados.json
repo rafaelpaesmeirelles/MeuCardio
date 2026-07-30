@@ -2331,5 +2331,45 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "reducao-do-consumo-de-alcool-para-prevenir-recorrencia-de-fa",
+    "statement": "Reduzir o consumo de álcool para no máximo 3 doses-padrão (≤30 g de álcool) por semana é recomendado como parte do controle abrangente de fatores de risco, para reduzir a recorrência de fibrilação atrial — a diretriz ESC 2024 eleva essa recomendação de Classe IIa (2020) para Classe I.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of atrial fibrillation",
+    "reference": "2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS). Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176 — Tabela 4 (recomendações revisadas) e seção 10.5 (prevenção primária), classe e nível conferidos direto no PDF integral da diretriz.",
+    "theme": "Saúde mental e cardiologia",
+    "tags": [
+      "álcool",
+      "fibrilação atrial",
+      "af-care",
+      "prevenção de recorrência",
+      "holiday heart syndrome"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "evitar-consumo-excessivo-episodico-de-alcool-na-prevencao-primaria-de-fa",
+    "statement": "Evitar consumo excessivo episódico de álcool (binge drinking) é recomendado na população geral para prevenir fibrilação atrial.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of atrial fibrillation",
+    "reference": "2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS). Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176 — Tabela 4 (recomendações revisadas) e seção 10.5 (prevenção primária), classe e nível conferidos direto no PDF integral da diretriz.",
+    "theme": "Saúde mental e cardiologia",
+    "tags": [
+      "álcool",
+      "binge drinking",
+      "fibrilação atrial",
+      "prevenção primária",
+      "holiday heart syndrome"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
