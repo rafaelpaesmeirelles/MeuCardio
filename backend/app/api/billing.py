@@ -314,19 +314,49 @@ def criar_checkout_email(db: Session = Depends(get_db), user: User = Depends(cur
     return {"checkout_url": session["url"]}
 
 
+def _customer_id_do_usuario(db: Session, user_id: int) -> str | None:
+    """O primeiro `stripe_customer_id` não nulo entre as assinaturas do
+    médico — plataforma, CorvIA Mail ou curso, nessa ordem.
+
+    Existe porque `abrir_portal`/`listar_faturas` olhavam só para
+    `_assinatura_meucardio`: um médico que assina SÓ o CorvIA Mail (o
+    add-on foi desenhado em 30/07/2026 para não depender da assinatura
+    principal — ver Tarefa 28) nunca teria `sub.stripe_customer_id` ali, e
+    o botão "Gerenciar assinatura" da Minha Conta devolvia 404 sempre,
+    mesmo com uma assinatura de e-mail paga e ativa. `criar_checkout_email`
+    já reaproveita o cliente Stripe da assinatura principal quando ela
+    existe, então na prática quem tem as duas continua caindo no mesmo
+    `customer_id` — o portal do Stripe lista todas as assinaturas ativas de
+    um cliente na mesma tela, então um único portal já basta para gerenciar
+    as duas."""
+    for kind in (TIPO_MEUCARDIO, TIPO_EMAIL, TIPO_CURSO):
+        sub = (
+            db.query(Subscription)
+            .filter(
+                Subscription.user_id == user_id, Subscription.kind == kind,
+                Subscription.stripe_customer_id.isnot(None),
+            )
+            .order_by(Subscription.id)
+            .first()
+        )
+        if sub:
+            return sub.stripe_customer_id
+    return None
+
+
 @router.post("/portal")
 def abrir_portal(db: Session = Depends(get_db), user: User = Depends(current_user)):
     """Customer Portal do Stripe: é por ele que o assinante troca o cartão,
     baixa recibo e cancela. Diferente do Checkout, que só serve pra assinar."""
-    sub = _assinatura_meucardio(db, user.id)
-    if not sub or not sub.stripe_customer_id:
+    customer_id = _customer_id_do_usuario(db, user.id)
+    if not customer_id:
         raise HTTPException(
             status_code=404,
             detail="Você ainda não tem uma assinatura para gerenciar.",
         )
     try:
         session = stripe.billing_portal.Session.create(
-            customer=sub.stripe_customer_id,
+            customer=customer_id,
             return_url=f"{settings.public_url}/minha-conta",
         )
     except stripe.error.InvalidRequestError:
@@ -344,12 +374,12 @@ def listar_faturas(db: Session = Depends(get_db), user: User = Depends(current_u
     """Histórico de cobranças. Lê direto do Stripe em vez de espelhar faturas no
     banco: o Stripe é a fonte da verdade sobre cobrança, e espelhar criaria uma
     segunda versão que sai de sincronia no primeiro estorno ou ajuste."""
-    sub = _assinatura_meucardio(db, user.id)
-    if not sub or not sub.stripe_customer_id:
+    customer_id = _customer_id_do_usuario(db, user.id)
+    if not customer_id:
         return {"faturas": []}
 
     try:
-        faturas = stripe.Invoice.list(customer=sub.stripe_customer_id, limit=24)
+        faturas = stripe.Invoice.list(customer=customer_id, limit=24)
     except stripe.error.StripeError:
         raise HTTPException(
             status_code=503,
