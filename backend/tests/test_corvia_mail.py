@@ -19,12 +19,15 @@ def _dar_assinatura_email_ativa(db, user, status="ativo"):
     return sub
 
 
-def _ativar_caixa(client, db, user, monkeypatch_mail360, senha="senha-caixa-123"):
+def _ativar_caixa(client, db, user, monkeypatch_mail360, senha="senha-caixa-123", local_part=None):
     _dar_assinatura_email_ativa(db, user)
     token = create_access_token(user.email, scope="app")
+    if local_part is None:
+        sugestao = client.get("/api/email/sugestao-endereco", headers={"Authorization": f"Bearer {token}"})
+        local_part = sugestao.json()["local_part"]
     resp = client.post(
         "/api/email/conta",
-        json={"senha": senha, "aceite_lgpd": True},
+        json={"senha": senha, "aceite_lgpd": True, "local_part": local_part},
         headers={"Authorization": f"Bearer {token}"},
     )
     assert resp.status_code == 201, resp.text
@@ -119,6 +122,111 @@ class TestStatusEAtivacao:
         assert corpo["ativa"] is True
         assert corpo["status"] == "ativa"
         assert corpo["senha_definida"] is True
+
+    def test_ativar_sem_local_part_devolve_422(self, client, db, criar_usuario):
+        user, token = criar_usuario()
+        _dar_assinatura_email_ativa(db, user)
+        resp = client.post(
+            "/api/email/conta",
+            json={"senha": "senha-longa-123", "aceite_lgpd": True},
+            headers={"Authorization": f"Bearer {token}"},
+        )
+        assert resp.status_code == 422
+
+    def test_ativar_com_local_part_invalido_devolve_422(self, client, db, criar_usuario):
+        user, token = criar_usuario()
+        _dar_assinatura_email_ativa(db, user)
+        # "MAIUSCULO" não entra aqui: maiúscula é normalizada para minúscula
+        # (mesmo padrão de POST /entrar), não é formato inválido — ver
+        # test_ativar_normaliza_maiusculas_no_local_part.
+        for invalido in ["ab", "-comeca-com-hifen", "tem espaço", "ponto.no.fim."]:
+            resp = client.post(
+                "/api/email/conta",
+                json={"senha": "senha-longa-123", "aceite_lgpd": True, "local_part": invalido},
+                headers={"Authorization": f"Bearer {token}"},
+            )
+            assert resp.status_code == 422, f"'{invalido}' deveria ter sido rejeitado"
+
+    def test_ativar_normaliza_maiusculas_no_local_part(self, client, db, criar_usuario, monkeypatch_mail360):
+        user, token = criar_usuario(full_name="Ana Souza")
+        corpo = _ativar_caixa(client, db, user, monkeypatch_mail360, local_part="ANA.CUSTOM")
+        assert corpo["email_address"] == "ana.custom@corvia.med.br"
+
+    def test_ativar_com_local_part_ja_em_uso_devolve_422(self, client, db, criar_usuario, monkeypatch_mail360):
+        u1, _ = criar_usuario(email="a@teste.local")
+        u2, token2 = criar_usuario(email="b@teste.local")
+        _ativar_caixa(client, db, u1, monkeypatch_mail360, local_part="caixa-compartilhada")
+        _dar_assinatura_email_ativa(db, u2)
+        resp = client.post(
+            "/api/email/conta",
+            json={"senha": "senha-longa-123", "aceite_lgpd": True, "local_part": "caixa-compartilhada"},
+            headers={"Authorization": f"Bearer {token2}"},
+        )
+        assert resp.status_code == 422
+        assert "em uso" in resp.json()["detail"]
+
+
+class TestTelaDeCadastroDoEndereco:
+    def test_sugestao_antes_de_ativar(self, client, criar_usuario):
+        user, token = criar_usuario(full_name="Rafael Paes Meirelles")
+        resp = client.get("/api/email/sugestao-endereco", headers={"Authorization": f"Bearer {token}"})
+        assert resp.status_code == 200
+        corpo = resp.json()
+        assert corpo["local_part"] == "rafael.paes"
+        assert corpo["dominio"] == "corvia.med.br"
+        assert corpo["editavel"] is True
+
+    def test_sugestao_apos_ativar_devolve_endereco_real_nao_editavel(
+        self, client, db, criar_usuario, monkeypatch_mail360,
+    ):
+        user, token = criar_usuario(full_name="Rafael Paes Meirelles")
+        _ativar_caixa(client, db, user, monkeypatch_mail360, local_part="rafael.custom")
+        resp = client.get("/api/email/sugestao-endereco", headers={"Authorization": f"Bearer {token}"})
+        corpo = resp.json()
+        assert corpo["local_part"] == "rafael.custom"
+        assert corpo["editavel"] is False
+
+    def test_verificar_endereco_disponivel(self, client, criar_usuario):
+        user, token = criar_usuario()
+        resp = client.get(
+            "/api/email/verificar-endereco", params={"local": "endereco.livre"},
+            headers={"Authorization": f"Bearer {token}"},
+        )
+        assert resp.status_code == 200
+        corpo = resp.json()
+        assert corpo["disponivel"] is True
+        assert corpo["motivo"] is None
+        assert corpo["endereco"] == "endereco.livre@corvia.med.br"
+
+    def test_verificar_endereco_formato_invalido(self, client, criar_usuario):
+        user, token = criar_usuario()
+        resp = client.get(
+            "/api/email/verificar-endereco", params={"local": "ab"},
+            headers={"Authorization": f"Bearer {token}"},
+        )
+        corpo = resp.json()
+        assert corpo["disponivel"] is False
+        assert corpo["motivo"] is not None
+
+    def test_verificar_endereco_ja_em_uso(self, client, db, criar_usuario, monkeypatch_mail360):
+        user, token1 = criar_usuario(email="a@teste.local")
+        _, token2 = criar_usuario(email="b@teste.local")
+        _ativar_caixa(client, db, user, monkeypatch_mail360, local_part="endereco.tomado")
+        resp = client.get(
+            "/api/email/verificar-endereco", params={"local": "endereco.tomado"},
+            headers={"Authorization": f"Bearer {token2}"},
+        )
+        corpo = resp.json()
+        assert corpo["disponivel"] is False
+        assert "em uso" in corpo["motivo"]
+
+    def test_verificar_endereco_normaliza_maiusculas(self, client, criar_usuario):
+        user, token = criar_usuario()
+        resp = client.get(
+            "/api/email/verificar-endereco", params={"local": "Endereco.Livre"},
+            headers={"Authorization": f"Bearer {token}"},
+        )
+        assert resp.json()["endereco"] == "endereco.livre@corvia.med.br"
 
 
 # ---------------------------------------------------------------------------
