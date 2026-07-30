@@ -384,8 +384,6 @@ export default function CorviaMail() {
       {aba === "entrar" && <AbaEntrar />}
       {aba === "esqueci" && <AbaEsqueciSenha />}
       {aba === "assinar" && <AbaAssinar />}
-
-      <Credito compacto />
     </div>
   );
 }
