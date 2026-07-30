@@ -64,22 +64,34 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
-> ### 📦 PEDIDO DA SESSÃO DA BIBLIOTECA (via Claude Code Remote) — dois lotes aprovados pelo Rafael, aguardando publicação em produção
-> Escrito em 30/07/2026, atualizado no mesmo dia com um segundo lote. O Rafael revisou e
-> aprovou duas vezes ("tudo revisado e aprovado, prepare para publicação" e, depois,
-> "todos os documentos revisados e validados, prepare para publicação e continue gerando
-> conteúdo por tempo indeterminado"). **Estado acumulado, tudo já commitado e mesclado em
-> `main`, ainda com `published: false`**:
+> ### 📦 PEDIDO DA SESSÃO DA BIBLIOTECA (via Claude Code Remote) — três lotes aprovados pelo Rafael, aguardando publicação em produção
+> Escrito em 30/07/2026, atualizado no mesmo dia com um segundo e um terceiro lote. O Rafael
+> revisou e aprovou três vezes ("tudo revisado e aprovado, prepare para publicação"; "todos
+> os documentos revisados e validados, prepare para publicação e continue gerando conteúdo
+> por tempo indeterminado"; e de novo "tudo revisado e validado, prepare para publicação e
+> continue gerando conteúdo"). **Estado acumulado, tudo já commitado e mesclado em `main`,
+> ainda com `published: false`**:
 >
 > - **Lote 1**: 20 documentos de `content/` revisados (`pendente_revisao` → `revisado`),
 >   nos 10 temas da Biblioteca — `git log --oneline` do commit `b45bfd3` até `99d0a15`,
 >   prefixo `content/<Tema>: revisa ...`.
-> - **Lote 2** (novidades desde o lote 1, commits `b160146` até `ff1f6e8`): duas entradas
->   novas em `estudos/metadados.json` (FAME 2, RESPECT — fechamento de FOP), uma em
+> - **Lote 2** (commits `b160146` até `ff1f6e8`): duas entradas novas em
+>   `estudos/metadados.json` (FAME 2, RESPECT — fechamento de FOP), uma em
 >   `exames/metadados.json` (sequenciamento de rRNA 16S/18S na endocardite com
 >   hemocultura negativa), uma em `galeria/metadados.json` com imagem (ECG de bloqueio de
 >   ramo esquerdo, tema Perioperatório — arquivo
 >   `galeria/ecg/bloqueio-de-ramo-esquerdo-pos-tavi.jpg`).
+> - **Lote 3** (commits `4e63518` até `689a22c`): 7 documentos novos de `content/` — estenose
+>   mitral (Valvopatias), NBTE/endocardite trombótica não bacteriana (Endocardite),
+>   diagnóstico/risco/biópsia de miocardite (Pericárdio), RM em portador de marca-passo/CDI
+>   — registro MagnaSafe (Perioperatório), doença renovascular (Aorta e DAP), anomalia de
+>   Ebstein (Cardiopatias congênitas) e coreia de Sydenham (Febre reumática); mais 2
+>   entradas novas em `evidencias/metadados.json` (cirurgia de estenose tricúspide
+>   concomitante a intervenção de valva esquerda; autópsia abrangente em morte súbita
+>   cardíaca <50 anos); mais enriquecimento de dois documentos já existentes — tamponamento
+>   cardíaco (Pericárdio), com escore de triagem de progressão e tabela de causas; e
+>   diagnóstico/manejo de síncope (Síncope), preenchendo lacuna de testes autonômicos,
+>   estudo eletrofisiológico e Escore de Calgary.
 >
 > **Uma entrada NÃO deve ser publicada com o resto, apesar da aprovação geral**: em
 > `evidencias/metadados.json`, o registro
@@ -103,10 +115,11 @@ Regras que decorrem disso:
 > docker compose -f docker-compose.prod.yml exec -T backend python -c "from app.services.carregar_estudos import carregar; print(carregar('/estudos/metadados.json'))"
 > docker compose -f docker-compose.prod.yml exec -T backend python -c "from app.services.carregar_exames import carregar; print(carregar('/exames/metadados.json'))"
 > docker compose -f docker-compose.prod.yml exec -T backend python -c "from app.services.carregar_galeria import carregar; print(carregar('/galeria/metadados.json'))"
+> docker compose -f docker-compose.prod.yml exec -T backend python -c "from app.services.carregar_evidencias import carregar; print(carregar('/evidencias/metadados.json'))"
 > ```
 > seguido de publicar os slugs tocados (rota normal `/api/admin/conteudo/publicar`,
 > que para o Rafael não passa pelo bloqueio do classificador — **exceto** o registro de
-> evidência marcado acima, que fica de fora) e reindexar por slug os 20 documentos
+> evidência marcado acima, que fica de fora) e reindexar por slug os documentos novos e
 > editados no RAG — `indexar_tudo()` só pega documento novo, nunca edição de corpo
 > existente, conforme já registrado neste arquivo. Como esta sessão segue gerando
 > conteúdo por tempo indeterminado a pedido do Rafael, **este bloco tende a ficar
