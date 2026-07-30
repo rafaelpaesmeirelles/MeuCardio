@@ -1760,5 +1760,30 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "midodrina-versus-placebo-na-hipotensao-ortostatica-neurogenica",
+    "title": "Midodrina versus placebo na hipotensão ortostática neurogênica",
+    "study_type": "ensaio_clinico",
+    "authors": "Low PA, Gilden JL, Freeman R, Sheng KN, McElligott MA (Midodrine Study Group)",
+    "journal": "JAMA",
+    "year": 1997,
+    "doi": "10.1001/jama.1997.03540370036033",
+    "pmid": "9091692",
+    "url": "https://jamanetwork.com/journals/jama/article-abstract/414918",
+    "summary": "Ensaio randomizado, duplo-cego, controlado por placebo, multicêntrico (25 centros) — 171 pacientes com hipotensão ortostática neurogênica, randomizados para midodrina 10 mg 3x/dia ou placebo, em estudo de 6 semanas (rodagem simples-cego na semana 1, período duplo-cego nas semanas 2-4, washout nas semanas 5-6). Desfechos primários: melhora da PA sistólica em pé, sintomas de tontura/atordoamento e escore global de alívio de sintomas (avaliado separadamente por investigador e paciente).",
+    "key_findings": "Midodrina melhorou a PA sistólica em pé em todos os pontos de avaliação (p<0,001 nas visitas 2, 3, 4 e 5), os sintomas relatados já ao final da segunda semana de tratamento (p=0,001), e o escore global de alívio de sintomas tanto pela avaliação do paciente (p=0,03) quanto do investigador (p<0,001). Sem efeito diferencial por centro, gravidade da hipotensão ortostática, uso concomitante de fludrocortisona/meias de compressão, ou diagnóstico de base. Principais efeitos adversos: reação pilomotora, retenção urinária e hipertensão em decúbito. **O abstract consultado não traz a magnitude numérica exata da variação de PA (mmHg) — apenas os valores de significância estatística** — portanto o dado quantitativo de mudança pressórica fica como lacuna desta entrada, não preenchida por suposição.",
+    "clinical_implications": "Ensaio pivotal que estabeleceu a eficácia e segurança da midodrina no tratamento da hipotensão ortostática neurogênica — base regulatória e de diretriz para o uso do fármaco nessa indicação, incluindo quando a hipotensão ortostática é causa de síncope.",
+    "limitations": "Estudo de curto prazo (6 semanas) — não avalia eficácia/segurança de uso crônico. Hipertensão em decúbito é efeito adverso mecanicamente esperado (o mesmo mecanismo que eleva a PA em pé eleva a PA deitado) e relevante para orientação prática (evitar dose próxima ao horário de deitar).",
+    "theme": "Síncope",
+    "tags": [
+      "midodrina",
+      "hipotensão ortostática",
+      "síncope ortostática",
+      "disautonomia",
+      "ensaio clínico"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
