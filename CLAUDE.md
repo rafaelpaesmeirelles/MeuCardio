@@ -163,7 +163,13 @@ Regras que decorrem disso:
 >   CMH (CC BY-SA 3.0), hemorragia subungueal em estilhaço na Endocardite (domínio público,
 >   texto explícito de que a etiologia desta fotografia específica não é documentada pela
 >   fonte) e ilustração histórica da coreia de Sydenham, "Danse de Saint-Guy" (domínio
->   público, circa 1880) — commits até `fbe270d`.
+>   público, circa 1880); mais um documento novo em `content/Doença_coronariana/` (MINOCA e
+>   SCAD, fechando lacuna que o próprio documento geral de SCA da pasta já declarava) —
+>   commits até `1ce00fe`. **Nota sobre o bug de esquema de `evidencias/metadados.json`
+>   corrigido pela sessão de Medicamentos (commit `5008b38`, ver aviso próprio acima nesta
+>   seção)**: conferido nesta sessão que nenhuma das entradas de evidências desta sessão
+>   violava o limite de `VARCHAR(5)` em `evidence_level`/`recommendation_class` — o defeito
+>   era isolado ao registro de febre reumática já sinalizado como pendente.
 >
 > **Uma entrada NÃO deve ser publicada com o resto, apesar da aprovação geral**: em
 > `evidencias/metadados.json`, o registro
