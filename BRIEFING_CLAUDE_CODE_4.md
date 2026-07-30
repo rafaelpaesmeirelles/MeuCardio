@@ -290,9 +290,60 @@ fazer:**
    há datacenter da Zoho no Brasil, dado de assinante brasileiro trafegaria
    para fora do país; vale levantar isso formalmente antes de fechar.
 
-Nenhum código de modelo de dados ou interface foi escrito para esta tarefa.
-O próximo passo natural — desenhar a arquitetura técnica (rotas do backend,
-modelo de dados de conta/mensagem, componentes de interface do webmail) —
-ainda não foi iniciado, para não presumir que as duas pendências acima serão
-resolvidas a favor da Corvia antes de o Rafael confirmar com o comercial da
-Zoho.
+### Esboço técnico entregue em 30/07/2026, a pedido do Rafael ("já comece a esboçar")
+
+Com a decisão de arquitetura já tomada, o Rafael pediu para começar o desenho
+técnico em paralelo à confirmação comercial das duas pendências acima — não
+esperar por elas para começar a esboçar. O que foi construído:
+
+- **`backend/app/models/email_account.py`** — tabela `email_accounts`
+  (user_id único, email_address, mail360_account_key, status). Não guarda
+  mensagem nenhuma: a caixa vive inteiramente no Mail360, esta tabela só
+  mapeia usuário da Corvia → conta no Mail360.
+- **Migração `4ee4b695fa49_caixa_de_email_do_assinante.py`**, idempotente,
+  encadeada a partir do head real do banco (`f1c93d47b8e2`).
+- **`backend/app/core/config.py`** — `mail360_client_id`/`_secret`/
+  `_refresh_token`/`_dominio`, com `mail360_configurado` no mesmo padrão do
+  `smtp_configurado`: em branco, o recurso fica indisponível (503), nunca
+  simulado.
+- **`backend/app/services/mail360.py`** — cliente da API do Mail360 (troca de
+  refresh_token por access_token, criação de conta nativa, listar
+  pastas/mensagens, obter mensagem, enviar, excluir). Endpoints e formato de
+  autenticação (`Authorization: Zoho-oauthtoken`, base
+  `https://mail360.zoho.com/api`) confirmados na documentação pública durante
+  a pesquisa — **mas sem conta de parceiro ativa para testar de verdade**.
+  Dois pontos marcados no próprio código como pendentes de confirmação contra
+  uma chamada real: o nome exato do campo que devolve a account_key na
+  criação da conta, e o formato exato da resposta de mensagens (a
+  documentação pública não detalha o corpo da resposta, só os endpoints).
+- **`backend/app/api/email.py`** — rotas em `/api/email` (`conta`, `pastas`,
+  `mensagens`), registradas em `ROUTERS_ASSINANTES` no `main.py` (exige
+  assinatura ativa, mesmo padrão do resto do sistema). Provisionamento é
+  **sob demanda**, não automático no cadastro: o médico ativa quando quiser,
+  decisão deliberada para não gerar custo por caixa que ninguém usaria
+  enquanto o preço de produção não está confirmado. Endereço gerado a partir
+  do nome (`rafael.paes@corvia.med.br`), com desambiguação por número em
+  caso de colisão.
+- **`frontend/src/pages/CaixaDeEmail.tsx`** — webmail próprio: tela de
+  ativação quando a caixa ainda não existe, e depois pastas + lista de
+  mensagens + leitor + composição, tudo dentro da própria Corvia, sem
+  segundo login. Rota `/caixa-de-email` e item de menu "Caixa de e-mail"
+  registrados em `App.tsx`/`Shell.tsx`.
+- **Validado nesta sessão**: `python3 -m py_compile` em todos os arquivos
+  Python novos: sem erro. Import real do `app.main` com as dependências
+  instaladas localmente (sem banco de verdade, só validando que o grafo de
+  imports monta): as 7 rotas de `/api/email/*` aparecem registradas
+  corretamente. `npx tsc -b --noEmit` e `npm run build` no frontend: sem
+  erro, build completo gerado. **Não testado**: nenhuma chamada real à API do
+  Mail360 (não há credencial), nem o fluxo fim a fim num navegador.
+
+**O que ainda falta, e por que não foi além disso nesta sessão:**
+1. Confirmar as duas pendências comerciais (preço de produção, LGPD/
+   localização de dados) com a Zoho — meu preencher `.env` com credencial de
+   teste não substitui essa confirmação.
+2. Quando houver credencial real, testar as chamadas de verdade e corrigir
+   os dois pontos marcados como não confirmados no `mail360.py` (nome do
+   campo da account_key, formato da resposta de mensagens).
+3. Migração ainda não foi rodada em produção — como sempre, migração vem
+   antes do rebuild, e rebuild pede confirmação antes.
+4. Nenhum teste automatizado foi escrito para as rotas novas.
