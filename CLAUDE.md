@@ -64,6 +64,29 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### 📦 PEDIDO DA SESSÃO DA BIBLIOTECA (via Claude Code Remote) — lote aprovado pelo Rafael, aguardando publicação em produção
+> Escrito em 30/07/2026. O Rafael revisou e aprovou ("tudo revisado e aprovado, prepare
+> para publicação") um lote de 20 documentos de `content/` revisados nesta sessão
+> (`pendente_revisao` → `revisado`, nos 10 temas da Biblioteca — ver `git log --oneline`
+> a partir do commit `b45bfd3` até `99d0a15` na branch, prefixo `content/<Tema>: revisa
+> ...`) mais uma entrada nova em `estudos/metadados.json` (FAME 2). Tudo já commitado e
+> mesclado em `main`, ainda com `published: false`.
+>
+> **Esta sessão específica rodou via Claude Code Remote, num container isolado sem
+> acesso ao Docker/banco de produção** (`docker ps` falha por ausência do daemon, não
+> há `.env` no container) — diferente das sessões de terminal SSH que este arquivo
+> pressupõe em "Como o deploy funciona na prática". Não consegui importar nem publicar
+> sozinha. **Quem tiver acesso real ao servidor precisa rodar**:
+> ```
+> git pull origin main
+> docker compose -f docker-compose.prod.yml exec -T backend python -c "from app.services.importer import import_directory; print(import_directory())"
+> docker compose -f docker-compose.prod.yml exec -T backend python -c "from app.services.carregar_estudos import carregar; print(carregar('/estudos/metadados.json'))"
+> ```
+> seguido de publicar os slugs tocados (rota normal `/api/admin/conteudo/publicar`,
+> que para o Rafael não passa pelo bloqueio do classificador) e reindexar por slug os
+> 20 documentos editados no RAG — `indexar_tudo()` só pega documento novo, nunca edição
+> de corpo existente, conforme já registrado neste arquivo.
+
 > ### 📐 Redivisão dos 27 temas de `content/`, 30/07/2026 — nova fronteira entre as duas sessões
 > Pedido do Rafael, feito à sessão de Medicamentos depois de publicar o lote
 > pendente dela. Medido nesta data, contagem real de `.md` por pasta de
