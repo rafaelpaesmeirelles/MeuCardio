@@ -308,6 +308,48 @@
     "published": false
   },
   {
+    "slug": "rivaroxabana-em-dose-vascular-com-aas-em-doenca-arterial-periferica-de-alto-risco-isquemico",
+    "statement": "Tratamento combinado de rivaroxabana 2,5 mg 2x/dia (dose vascular) com AAS 100 mg/dia deve ser considerado em paciente com doença arterial periférica e alto risco isquêmico, com risco de sangramento não alto.",
+    "recommendation_class": "IIa",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722 — Recommendation Table de terapia antitrombótica em doença arterial periférica, base COMPASS, conferida direto no PDF integral em 30/07/2026.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "doença arterial periférica",
+      "rivaroxabana",
+      "aas",
+      "dose vascular",
+      "alto risco isquêmico",
+      "antitrombótico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "rivaroxabana-em-dose-vascular-com-aas-apos-revascularizacao-de-membro-inferior",
+    "statement": "Tratamento combinado de rivaroxabana 2,5 mg 2x/dia (dose vascular) com AAS 100 mg/dia deve ser considerado após revascularização de membro inferior em paciente com doença arterial periférica e risco de sangramento não alto, independentemente do nível de risco isquêmico basal.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722 — Recommendation Table de terapia antitrombótica em doença arterial periférica, base VOYAGER PAD, conferida direto no PDF integral em 30/07/2026.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "doença arterial periférica",
+      "rivaroxabana",
+      "aas",
+      "dose vascular",
+      "revascularização",
+      "antitrombótico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
     "slug": "tavi-indicado-em-alto-risco-cirurgico-estenose-aortica",
     "statement": "Implante de válvula aórtica transcateter (TAVI) é indicado como alternativa à cirurgia convencional em pacientes com estenose aórtica grave e alto risco cirúrgico.",
     "recommendation_class": "I",
@@ -2013,11 +2055,11 @@
     "slug": "correcao-eletiva-de-aaa-por-diametro-sexo-especifico",
     "statement": "Correção eletiva do aneurisma de aorta abdominal (AAA) é recomendada a partir de diâmetro máximo ≥55 mm no homem e ≥50 mm na mulher. Abaixo desse limiar, o seguimento por ultrassom duplex é a cada 6 meses na faixa de 50-55 mm no homem e 45-50 mm na mulher — o limiar de correção, não só o de rastreio, é diferente por sexo.",
     "recommendation_class": "I",
-    "evidence_level": "B",
+    "evidence_level": "A",
     "society": "ESC",
     "year": 2024,
     "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
-    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722 — Recommendation Table 41 (manejo do AAA). Nesta sessão o PDF integral da diretriz não pôde ser reacessado (bloqueios de acesso em 30/07/2026, diferente de quando o rastreio de AAA foi conferido linha a linha nesta mesma diretriz); o limiar 55 mm/50 mm foi cruzado contra três fontes secundárias independentes (ACC, resumo de diretriz e cobertura de congresso), todas concordantes, mas fica sinalizado aqui que não houve conferência direta do texto integral desta vez.",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722 — Recommendation Table 41 (manejo do AAA): 'Elective repair is recommended if AAA diameter is ≥55 mm in men or ≥50 mm in women', Classe I, Nível A. Reconferido direto no PDF integral em 30/07/2026 — correção: o registro anterior havia marcado Nível B por só ter cruzado fontes secundárias; o texto integral, agora acessado, confirma Nível A.",
     "theme": "Aorta e doença arterial periférica",
     "tags": [
       "aneurisma de aorta abdominal",
@@ -2564,6 +2606,26 @@
       "aine",
       "primeira linha",
       "gastroproteção"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "corticosteroide-nao-e-primeira-linha-na-pericardite",
+    "statement": "Corticosteroide não é recomendado como primeira opção terapêutica na pericardite sem uma indicação específica — deve ficar reservado para quando AAS/AINE e colchicina não são adequados (por exemplo, contraindicação, intolerância) ou para etiologias que exigem corticoide por indicação própria (autoimune, urêmica).",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2025,
+    "guideline_title": "2025 ESC Guidelines for the management of myocarditis and pericarditis",
+    "reference": "Schulz-Menger J, Collini V, Gröschel J, Adler Y, et al. 2025 ESC Guidelines for the management of myocarditis and pericarditis. Eur Heart J. 2025;46(40):3952-4041. DOI: 10.1093/eurheartj/ehaf192. PMID: 40878297 — Recommendation Table 10 (terapia medicamentosa da pericardite), classe e nível conferidos direto no PDF integral.",
+    "theme": "Pericárdio",
+    "tags": [
+      "pericardite aguda",
+      "corticosteroide",
+      "contraindicação",
+      "terapia de primeira linha",
+      "recomendação classe III"
     ],
     "review_status": "revisado",
     "published": false
