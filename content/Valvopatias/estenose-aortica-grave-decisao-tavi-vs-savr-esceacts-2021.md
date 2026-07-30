@@ -1,7 +1,7 @@
 ---
 kind: protocolo
-legacy_source: protocolos/protocolo-detalhado-estenose-aortica-grave-tavi-vs-savr.md
-review_status: pendente_revisao
+legacy_source: 'protocolos/protocolo-detalhado-estenose-aortica-grave-tavi-vs-savr.md · Revisado a fundo em 30/07/2026: acrescentado aviso explícito de que os cortes etários deste documento (ESC/EACTS 2021) foram substituídos pela diretriz 2025, já revisada nesta mesma pasta — o corte de TAVI caiu de 75 para 70 anos. Documento mantido como registro histórico da diretriz 2021, não apagado, seguindo a regra do projeto de nunca reescrever/apagar sem justificativa.'
+review_status: revisado
 slug: estenose-aortica-grave-decisao-tavi-vs-savr-esceacts-2021
 source_refs:
 - 2021 ESC/EACTS Guidelines for the management of valvular heart disease · ESC/EACTS
@@ -15,6 +15,8 @@ title: 'Estenose Aórtica Grave: Decisão TAVI vs. SAVR (ESC/EACTS 2021)'
 
 ## Definicao
 Decisão de tratar EA grave com SAVR ou TAVI deve considerar fatores do paciente (idade, comorbidades, expectativa de vida, preferência), fatores procedimentais (risco perioperatório antecipado, anatomia, experiência do operador/instituição) e fatores da prótese (mecânica vs. biológica, durabilidade)
+
+**Atenção — este documento reflete a diretriz ESC/EACTS 2021. Os cortes etários abaixo foram substituídos pela diretriz 2025**: o corte de TAVI preferencial caiu de 75 para 70 anos (Classe I, Nível A, em valva tricúspide, independente do risco cirúrgico) — ver `valvopatias-atualizacao-diretriz-esceacts-2025.md`, nesta mesma pasta, para a conduta atual.
 
 ## Referenciamento obrigatorio
 Todos os pacientes com EA grave sintomática com indicação de tratamento devem ser referenciados ao Heart Team para avaliação individualizada
