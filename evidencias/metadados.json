@@ -2371,5 +2371,44 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "alta-do-departamento-de-emergencia-em-sincope-de-baixo-risco",
+    "statement": "É recomendado que pacientes com características de baixo risco, com provável síncope reflexa, situacional ou por hipotensão ortostática, recebam alta do departamento de emergência.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2018,
+    "guideline_title": "2018 ESC Guidelines for the diagnosis and management of syncope",
+    "reference": "Brignole M, Moya A, de Lange FJ, et al. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948. DOI: 10.1093/eurheartj/ehy037. PMID: 29562304 — Tabela de recomendações do manejo no departamento de emergência, classe e nível conferidos direto no texto integral da diretriz.",
+    "theme": "Síncope",
+    "tags": [
+      "departamento de emergência",
+      "estratificação de risco",
+      "alta hospitalar",
+      "baixo risco"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "internacao-ou-unidade-de-sincope-para-caracteristicas-de-alto-risco",
+    "statement": "É recomendado que pacientes com características de alto risco recebam avaliação precoce, intensiva e imediata numa unidade de síncope ou unidade de observação do departamento de emergência (quando disponível), ou sejam hospitalizados.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2018,
+    "guideline_title": "2018 ESC Guidelines for the diagnosis and management of syncope",
+    "reference": "Brignole M, Moya A, de Lange FJ, et al. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948. DOI: 10.1093/eurheartj/ehy037. PMID: 29562304 — Tabela de recomendações do manejo no departamento de emergência, classe e nível conferidos direto no texto integral da diretriz.",
+    "theme": "Síncope",
+    "tags": [
+      "departamento de emergência",
+      "estratificação de risco",
+      "internação",
+      "alto risco",
+      "unidade de síncope"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
