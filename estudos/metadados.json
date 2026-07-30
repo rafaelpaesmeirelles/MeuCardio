@@ -733,6 +733,32 @@
     "published": false
   },
   {
+    "slug": "maestro-macitentana-na-sindrome-de-eisenmenger",
+    "title": "MAESTRO — Macitentana na síndrome de Eisenmenger",
+    "study_type": "ensaio_clinico",
+    "authors": "Gatzoulis MA, Landzberg MJ, Beghetti M, et al. (MAESTRO Study Investigators)",
+    "journal": "Circulation",
+    "year": 2019,
+    "doi": "10.1161/CIRCULATIONAHA.118.033575",
+    "pmid": "30586694",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/30586694/",
+    "summary": "Ensaio de fase 3, multicêntrico, duplo-cego, randomizado e controlado por placebo, de 16 semanas, com 226 pacientes (≥12 anos, classe funcional OMS II-III) com síndrome de Eisenmenger — incluindo defeitos cardíacos complexos, síndrome de Down e uso concomitante de terapia de base para hipertensão pulmonar. Randomização 1:1 para macitentana 10 mg/dia (114 pacientes) ou placebo (112). Desfecho primário: variação na distância percorrida no teste de caminhada de 6 minutos.",
+    "key_findings": "Desfecho primário negativo: variação de +18,3 m com macitentana contra +19,7 m com placebo — diferença de -4,7 m (IC95% -22,8 a 13,5; p=0,612), sem superioridade da macitentana. NT-proBNP caiu mais com macitentana (razão de médias geométricas 0,80; IC95% 0,68-0,94). No subestudo hemodinâmico (39 pacientes), a macitentana reduziu o índice de resistência vascular pulmonar (razão de médias geométricas 0,87; IC95% 0,73-1,03).",
+    "clinical_implications": "Resultado negativo relevante: ao contrário do bosentana no BREATHE-5 (que mostrou ganho hemodinâmico e funcional consistente), a macitentana não superou placebo no desfecho funcional primário na síndrome de Eisenmenger, apesar de sinal favorável em biomarcador (NT-proBNP) e hemodinâmica pulmonar em subestudo menor. Reforça que benefício hemodinâmico/bioquímico de um antagonista do receptor de endotelina não se traduz automaticamente em ganho de capacidade funcional mensurável em 16 semanas, e que a classe terapêutica não deve ser tratada como efeito uniforme entre diferentes fármacos.",
+    "limitations": "Seguimento curto (16 semanas) para uma doença crônica progressiva. O subestudo hemodinâmico teve apenas 39 pacientes, poder limitado. População heterogênea (defeitos complexos, síndrome de Down, uso variável de terapia de base), o que pode ter diluído um eventual efeito real.",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "síndrome de Eisenmenger",
+      "macitentana",
+      "cardiopatia congênita do adulto",
+      "hipertensão pulmonar",
+      "ensaio negativo",
+      "MAESTRO"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
     "slug": "mood-hf-escitalopram-na-depressao-com-insuficiencia-cardiaca",
     "title": "MOOD-HF — Escitalopram na depressão associada à insuficiência cardíaca sistólica",
     "study_type": "ensaio_clinico",
