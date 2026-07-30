@@ -606,6 +606,27 @@
     "published": false
   },
   {
+    "slug": "ventriculografia-takotsubo-balonamento-apical",
+    "title": "Ventriculografia esquerda — Balonamento apical na cardiomiopatia de Takotsubo",
+    "modality": "Ventriculografia",
+    "theme": "Cardiomiopatias",
+    "file_path": "ventriculografia/ventriculografia-takotsubo-balonamento-apical.jpg",
+    "findings": "Ventriculograma esquerdo em sístole mostrando o balonamento apical característico — acinesia/hipocinesia dos segmentos médio e apical com hipercinesia compensatória dos segmentos basais, produzindo o contorno de 'vaso de polvo' (base estreita, ápice dilatado) que dá nome à síndrome.",
+    "teaching_points": "A variante apical clássica ocorre em cerca de 80% dos casos do International Takotsubo Registry. O diagnóstico exige ausência de doença coronariana obstrutiva que explique a disfunção regional — a angiografia coronária normal ou não-obstrutiva, junto deste padrão de contração, é o que distingue Takotsubo do infarto do miocárdio com supra de ST, que a apresentação clínica inicial pode mimetizar de forma quase indistinguível (dor torácica, alteração de ST, elevação de troponina).",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Takotsubo_left_ventriculogram.jpg",
+    "license": "CC BY 2.0",
+    "attribution": "Akinwande O, Hamirani Y, Chopra A — Cases Journal 2008;1:8, DOI: 10.1186/1757-1626-1-8, via Wikimedia Commons — CC BY 2.0.",
+    "tags": [
+      "cardiomiopatia de takotsubo",
+      "balonamento apical",
+      "ventriculografia",
+      "cardiomiopatia induzida por estresse"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
     "slug": "ecg-taquicardia-ventricular-monomorfica",
     "title": "ECG — Taquicardia ventricular monomórfica",
     "modality": "ECG",
@@ -885,6 +906,27 @@
       "derrame pericárdico",
       "tamponamento cardíaco",
       "ecocardiograma",
+      "pericárdio"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "rx-pericardite-constritiva-calcificacao",
+    "title": "Radiografia — Pericardite constritiva com calcificação maciça",
+    "modality": "Radiografia",
+    "theme": "Pericárdio",
+    "file_path": "radiografia/rx-pericardite-constritiva-calcificacao.jpg",
+    "findings": "Composição de três incidências radiográficas (PA de tórax à esquerda; duas incidências oblíquas/laterais ao centro e à direita) de paciente de 73 anos, mostrando calcificação curvilínea densa contornando a silhueta cardíaca — achado clássico, ainda que presente em menos de 25% dos casos de pericardite constritiva.",
+    "teaching_points": "A calcificação pericárdica na radiografia simples é sugestiva mas não obrigatória para o diagnóstico de pericardite constritiva — sua ausência não exclui a doença. Quando presente, tipicamente acompanha o sulco atrioventricular e a superfície diafragmática do ventrículo. A tomografia computadorizada é o método mais sensível para detectar e caracterizar a calcificação pericárdica, e a diretriz ESC 2025 de miocardite e pericardite recomenda imagem multimodal (Classe I) em todo paciente com suspeita de pericardite constritiva, precisamente porque a radiografia isolada pode não mostrar o achado mesmo quando a constrição está presente.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Pericarditis_constrictiva_mit_massiven_Verkalkungen_73W_-_CR_-_001.jpg",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Hellerhoff, via Wikimedia Commons — CC BY-SA 4.0.",
+    "tags": [
+      "pericardite constritiva",
+      "calcificação pericárdica",
+      "radiografia de tórax",
       "pericárdio"
     ],
     "review_status": "revisado",
