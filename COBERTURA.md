@@ -10,7 +10,7 @@ do banco. Nenhum número é estimado.
 | Frente | Itens | Publicados | Situação |
 |---|---:|---:|---|
 | `content/` — biblioteca científica | 264 (medido no disco) | não remedido | 27 temas cobertos; 29 são fluxogramas, **todos publicados**; contagem de publicados desatualizada — várias sessões escreveram content/ desde a última medição no banco |
-| `galeria/` — achados de imagem | 39 | 36 | 3 novas (artefato de GLS em cardio-oncologia, estenose aórtica reumática, derrame pericárdico com tamponamento), com licença conferida uma a uma; ainda `published: false` |
+| `galeria/` — achados de imagem | 43 | 36 | 7 novas, licença conferida uma a uma; **zero temas da faixa da Biblioteca com 1 item só**; ainda `published: false` |
 | `exames/` — marcadores e exames | 40 | 0 | crescida de 17 para 40 pela sessão da Biblioteca em 29/07 à noite; **zero temas com 1 item só**; aguardando publicação |
 | `evidencias/` — recomendações pontuais | 104 | 100 | 4 novas (anti-IL-1 na pericardite, ILR na síncope, rastreio de AAA, ISRS na depressão em DAC); ainda `published: false` |
 | `estudos/` — ensaios e metanálises | 46 | 41 | 5 novos (BREATHE-5, profilaxia da febre reumática, AMBITION, EINSTEIN-PE, TTM2); ainda `published: false` |
@@ -73,7 +73,7 @@ que essa distinção importa — ver abaixo.
 
 | Frente | Itens | Temas cobertos (de 27) | Temas com 1 item só |
 |---|---:|---:|---:|
-| `galeria/` | 39 | 24 | 11 |
+| `galeria/` | 43 | 24 | 7 |
 | `exames/` | 40 | 20 | **0** |
 | `evidencias/` | 104 | 19 | 5 |
 | `estudos/` | 46 | 24 | 8 |
@@ -106,14 +106,15 @@ leituras que a tabela deixa explícitas:
   dois primeiros são de baixo rendimento por hora para este formato (ensaio
   clínico), o terceiro é turno da sessão de Medicamentos.
 - **`galeria/` foi tocada pela primeira vez nesta rodada** (estava intocada desde
-  a medição de 20h). Cardio-oncologia, que não tinha nenhuma imagem, ganhou uma
-  (artefato de strain longitudinal global, com licença CC BY 4.0 de artigo aberto
-  — não Wikimedia). Febre reumática e Pericárdio, que tinham 1 item cada, ganharam
-  uma segunda (estenose aórtica reumática em peça anatômica, e derrame pericárdico
-  com tamponamento). Um quase-duplicado foi evitado no processo: a imagem de ECG
-  de pericardite mais óbvia de se buscar já estava cadastrada — checar o tamanho
-  do arquivo contra o `metadados.json` antes de salvar evita gravar a mesma
-  imagem duas vezes com slugs diferentes.
+  a medição de 20h), com 36 → 43 itens. **Zerou os temas com 1 item da faixa da
+  Biblioteca**: Cardio-oncologia (que não tinha nenhuma imagem, ganhou duas —
+  artefato de strain longitudinal global e ressonância multimodal de
+  cardiotoxicidade actínica), Febre reumática, Pericárdio, Síncope, Perioperatório
+  e Saúde mental e cardiologia (cada uma foi de 1 para 2). Restam só os 7 temas
+  da faixa de Medicamentos com 1 item. Um quase-duplicado foi evitado no
+  processo: a imagem de ECG de pericardite mais óbvia de se buscar já estava
+  cadastrada — checar o tamanho do arquivo contra o `metadados.json` antes de
+  salvar evita gravar a mesma imagem duas vezes com slugs diferentes.
 
 ## Verificação (Fase B) — concluída nas quatro frentes JSON
 
