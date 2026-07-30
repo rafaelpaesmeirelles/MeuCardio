@@ -1656,5 +1656,31 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "poise-2-aspirina-perioperatoria-em-cirurgia-nao-cardiaca",
+    "title": "POISE-2 (braço aspirina) — Aspirina perioperatória em cirurgia não cardíaca",
+    "study_type": "ensaio_clinico",
+    "authors": "Devereaux PJ, Mrkobrada M, Sessler DI, et al. (POISE-2 Investigators)",
+    "journal": "New England Journal of Medicine",
+    "year": 2014,
+    "doi": "10.1056/NEJMoa1401105",
+    "pmid": "24679062",
+    "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1401105",
+    "summary": "Ensaio randomizado, desenho fatorial 2x2 (braço aspirina relatado aqui; braço clonidina publicado em separado), 10.010 pacientes com risco de complicação vascular submetidos a cirurgia não cardíaca. Estratificados em quem nunca usava aspirina (estrato de iniciação, 5628 pacientes — recebiam 200 mg antes da cirurgia e 100 mg/dia por 30 dias) e quem já usava aspirina cronicamente (estrato de continuação, 4382 pacientes — recebiam 100 mg/dia por 7 dias, depois retomavam o esquema habitual). Desfecho primário: composto de morte ou infarto não fatal em 30 dias.",
+    "key_findings": "Desfecho primário: 7,0% no grupo aspirina (351/4998) contra 7,1% no grupo placebo (355/5012) — razão de risco 0,99 (IC95% 0,86-1,15; p=0,92), sem diferença. Sangramento maior foi mais comum com aspirina: 4,6% (230/4998) contra 3,8% (188/5012) — razão de risco 1,23 (IC95% 1,01-1,49; p=0,04). Resultados semelhantes nos dois estratos (iniciação e continuação).",
+    "clinical_implications": "Aspirina perioperatória, iniciada ou continuada no período de cirurgia não cardíaca em paciente de risco vascular, não reduz morte ou infarto não fatal em 30 dias e aumenta sangramento maior — resultado que sustenta a prática de suspender aspirina antes de cirurgia não cardíaca na maioria dos cenários, mesmo em paciente que já a usava cronicamente, exceto quando há indicação cardiovascular específica que justifique o risco de sangramento (ex.: stent coronariano recente).",
+    "limitations": "Seguimento curto (30 dias) — não avalia efeito de prazo mais longo. Excluiu cirurgia intracraniana e alguns cenários de altíssimo risco hemorrágico. O ensaio não testou suspensão de aspirina em paciente com indicação cardiovascular forte e recente (ex.: síndrome coronariana aguda recente ou stent farmacológico recente), população em que a decisão de suspender segue sendo individualizada.",
+    "theme": "Perioperatório",
+    "tags": [
+      "poise-2",
+      "aspirina",
+      "cirurgia não cardíaca",
+      "sangramento",
+      "perioperatório",
+      "ensaio clínico"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
