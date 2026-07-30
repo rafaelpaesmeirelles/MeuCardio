@@ -1,0 +1,92 @@
+[
+  {
+    "slug": "fa-incidental-cha2ds2-va-decisao-de-anticoagular",
+    "titulo": "Fibrilação atrial incidental: anticoagular ou não?",
+    "tema": "Fibrilação atrial",
+    "nivel": "básico",
+    "enunciado": "Mulher, 68 anos, hipertensão controlada e diabetes tipo 2, sem histórico de AVC, insuficiência cardíaca ou doença vascular. Função renal normal. Fibrilação atrial paroxística é achado incidental num ECG de rotina — a paciente está assintomática e nunca havia sido diagnosticada antes.",
+    "pergunta": "Qual a conduta quanto à anticoagulação?",
+    "opcoes": [
+      "Não anticoagular: é o primeiro episódio, é paroxística e ela está assintomática",
+      "Calcular o CHA2DS2-VA — idade 65-74 (1 ponto), hipertensão (1 ponto) e diabetes (1 ponto) somam 3, indicação clara de anticoagulação oral",
+      "Prescrever AAS como profilaxia de AVC, já que é opção mais simples que anticoagulante oral",
+      "Aguardar recorrência sintomática da arritmia antes de decidir sobre anticoagulação"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O padrão da fibrilação atrial (paroxística, persistente ou permanente) não altera a indicação de anticoagulação — o risco tromboembólico é avaliado pelo CHA2DS2-VA, não pela duração ou frequência dos episódios, e um único episódio documentado já basta para calcular o escore e decidir. Nesta paciente: hipertensão (1 ponto) + diabetes (1 ponto) + idade 65-74 anos (1 ponto) = 3 pontos, escore que indica benefício líquido de anticoagulação oral segundo a diretriz ESC 2024. AAS isolado não tem indicação para profilaxia de AVC em FA — é inferior ao anticoagulante oral e não substitui a decisão baseada no escore de risco.",
+    "source_refs": ["Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the EACTS. Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176. PMID: 39210723"],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "icfer-inicio-rapido-dos-quatro-pilares",
+    "titulo": "IC com fração de ejeção reduzida: por onde começar o tratamento?",
+    "tema": "Insuficiência cardíaca",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 58 anos, diagnóstico recente de insuficiência cardíaca com FEVE de 30%, classe funcional NYHA II. TFGe 65mL/min/1,73m², potássio 4,2mEq/L, PA 118/76mmHg, FC 78bpm. Ainda não iniciou nenhuma medicação para insuficiência cardíaca.",
+    "pergunta": "Qual a estratégia de início de tratamento modificador de doença mais alinhada com a evidência atual?",
+    "opcoes": [
+      "Iniciar apenas IECA e titular até a dose máxima tolerada antes de acrescentar qualquer outra classe",
+      "Iniciar as quatro classes (IECA/BRA ou sacubitril-valsartana, betabloqueador, antagonista mineralocorticoide, inibidor de SGLT2) em sequência rápida, sem esperar a titulação máxima de uma antes de começar a próxima",
+      "Aguardar 3 meses de estabilização clínica antes de iniciar qualquer fármaco modificador de doença",
+      "Iniciar apenas diurético de alça e reavaliar em 30 dias antes de considerar outras classes"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A evidência atual (incluindo o ensaio STRONG-HF) sustenta início rápido e mais simultâneo das quatro classes de terapia modificadora de doença na ICFEr, em vez do modelo antigo de titular uma classe até a dose máxima antes de iniciar a próxima — essa abordagem sequencial lenta atrasa o benefício comprovado das outras três classes por semanas ou meses. Neste paciente, sem contraindicação evidente (função renal e potássio normais, sem hipotensão), não há motivo para adiar o início de qualquer uma das quatro classes.",
+    "source_refs": ["McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726.", "2023 Focused Update of the 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2023;44(37):3627-3639."],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hipertensao-resistente-proxima-etapa-terapeutica",
+    "titulo": "Hipertensão resistente: qual o próximo passo depois da terapia tripla?",
+    "tema": "Hipertensão",
+    "nivel": "intermediário",
+    "enunciado": "Paciente em uso de IECA, bloqueador de canal de cálcio e diurético tiazídico em doses adequadas, com adesão confirmada. PA de consultório 158/96mmHg, e MAPA confirma hipertensão persistente, sem efeito do avental branco.",
+    "pergunta": "Qual a conduta mais apropriada nesta etapa?",
+    "opcoes": [
+      "Trocar o IECA por outro fármaco da mesma classe (outro IECA)",
+      "Acrescentar espironolactona como quarto agente antes de considerar procedimentos invasivos",
+      "Encaminhar diretamente para denervação renal, sem otimizar mais a terapia medicamentosa",
+      "Reduzir a dose do diurético tiazídico para minimizar efeitos colaterais, mesmo com a PA não controlada"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Diante de hipertensão resistente confirmada (adesão verificada, três classes em dose adequada, MAPA excluindo efeito do avental branco), a recomendação de diretriz é acrescentar um quarto agente — a espironolactona é a escolha preferencial nessa etapa. Trocar dentro da mesma classe não agrega mecanismo de ação novo. Denervação renal é considerada apenas depois de otimização farmacológica esgotada, não antes dela.",
+    "source_refs": ["2023 ESH Guidelines for the management of arterial hypertension. J Hypertens. 2023;41(12):1874-2071."],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "herdoo2-suspender-anticoagulacao-apos-tev-nao-provocado",
+    "titulo": "TEV não provocado: suspender a anticoagulação depois de 6 meses?",
+    "tema": "Tromboembolismo",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 45 anos, primeiro episódio de trombose venosa profunda proximal não provocada, completou 6 meses de anticoagulação oral. Ao exame: sem hiperpigmentação, edema ou rubor nas pernas; IMC 24; D-dímero dosado em uso do anticoagulante: 180µg/L (abaixo de 250).",
+    "pergunta": "Segundo a regra HERDOO2, qual a conduta quanto à continuidade da anticoagulação?",
+    "opcoes": [
+      "Continuar a anticoagulação indefinidamente — todo TEV não provocado exige isso, sem exceção",
+      "Ela pontua 0 no HERDOO2 (nenhum critério presente) e está classificada como baixo risco — pode suspender a anticoagulação com segurança",
+      "Repetir o D-dímero fora do uso de anticoagulante antes de decidir, independentemente do resultado atual",
+      "A regra HERDOO2 não deveria ser usada aqui — ela foi desenvolvida e validada só para determinar diagnóstico agudo de TEV, não duração de tratamento"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A paciente não apresenta nenhum dos 4 critérios do HERDOO2 (Hiperpigmentação/Edema/Rubor em perna, D-dímero ≥250µg/L em uso de anticoagulante, Obesidade com IMC≥30, idade ≥65 anos) — pontuação 0, classificada como baixo risco. No estudo de validação prospectiva (BMJ 2017), mulheres de baixo risco HERDOO2 que suspenderam a anticoagulação tiveram recorrência de apenas 3,0% ao ano (dado do próprio ensaio), risco considerado baixo o suficiente para justificar suspender o tratamento após o curso padrão, evitando o risco hemorrágico da anticoagulação indefinida sem necessidade.",
+    "source_refs": ["Rodger MA, Le Gal G, Anderson DR, et al; REVERSE II Study Investigators. Validating the HERDOO2 rule to guide treatment duration for women with unprovoked venous thrombosis: multinational prospective cohort management study. BMJ. 2017;356:j1065. DOI: 10.1136/bmj.j1065. PMID: 28314711"],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sglt2i-em-diabetes-com-doenca-coronariana-e-controle-glicemico-ja-adequado",
+    "titulo": "SGLT2i em diabético com doença coronariana, mesmo com HbA1c já controlada?",
+    "tema": "Diabetes e cardiologia",
+    "nivel": "básico",
+    "enunciado": "Homem, 62 anos, diabetes tipo 2 há 8 anos em uso de metformina, HbA1c atual de 6,8% (dentro da meta). Doença coronariana estabelecida — infarto do miocárdio há 3 anos. FEVE preservada, TFGe 70mL/min/1,73m².",
+    "pergunta": "Há indicação de acrescentar um inibidor de SGLT2 mesmo com o controle glicêmico já adequado?",
+    "opcoes": [
+      "Não — o objetivo do inibidor de SGLT2 é controle glicêmico, e a HbA1c já está na meta",
+      "Sim — a indicação de inibidor de SGLT2 em diabetes tipo 2 com doença cardiovascular aterosclerótica estabelecida é para redução de risco cardiovascular, independente do controle glicêmico atual",
+      "Só se a HbA1c subir acima de 8% no seguimento",
+      "Não — inibidor de SGLT2 é contraindicado em paciente com infarto do miocárdio prévio"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Inibidores de SGLT2 têm indicação de redução de risco cardiovascular em diabetes tipo 2 com doença cardiovascular aterosclerótica estabelecida (incluindo infarto prévio), independentemente do nível de HbA1c — o benefício demonstrado em ensaios como EMPA-REG OUTCOME e DECLARE-TIMI 58 é sobre desfecho cardiovascular (morte cardiovascular, hospitalização por insuficiência cardíaca), não sobre controle glicêmico adicional. Negar o fármaco por a HbA1c já estar controlada ignora essa indicação independente, já incorporada às diretrizes de manejo cardiovascular no diabetes.",
+    "source_refs": ["Marx N, Federici M, Schütt K, et al. 2023 ESC Guidelines for the management of cardiovascular disease in patients with diabetes. Eur Heart J. 2023;44(39):4043-4140. DOI: 10.1093/eurheartj/ehad192. PMID: 37622663"],
+    "review_status": "revisado"
+  }
+]

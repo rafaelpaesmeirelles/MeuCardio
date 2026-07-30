@@ -28,6 +28,7 @@ const NAV_BASE: ItemNav[] = [
   { to: "/receituario", rotulo: "Prescrição Eletrônica", curto: "Prescrição" },
   { to: "/documentos", rotulo: "Emissão de Documentos Online", curto: "Documentos" },
   { to: "/trilhas", rotulo: "Trilhas de estudo", curto: "Trilhas" },
+  { to: "/casos-clinicos", rotulo: "Casos clínicos interativos", curto: "Casos" },
   { to: "/checklists", rotulo: "Checklist de alta", curto: "Alta" },
   { to: "/indicadores", rotulo: "Meus indicadores", curto: "Indicadores" },
   { to: "/cursos", rotulo: "Cursos parceiros", curto: "Cursos" },

@@ -64,6 +64,31 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### 🧩 Casos clínicos interativos (Tarefa 11a) — assumida pela sessão de Medicamentos, 30/07/2026
+> Pedido do Rafael, direto: "Assuma trilhas de estudo e casos clínicos interativos, parta pra
+> eles agora". **Trilhas de estudo (11b) já estava concluída** antes deste pedido (3 trilhas,
+> `/api/trilhas`, progresso) — nada a fazer aí além de manutenção eventual. **Casos clínicos
+> interativos (11a) nunca tinha sido começado por nenhuma sessão** — não havia dono registrado
+> neste arquivo, porque a divisão de trabalho aqui é só sobre `content/` e as frentes JSON, não
+> sobre features de produto.
+>
+> **Construído nesta sessão, backend e frontend completos**: modelo `ClinicalCase` +
+> `ClinicalCaseAttempt` (`backend/app/models/clinical_case.py`), migração
+> `b1e5f92cd837_casos_clinicos_interativos.py`, carregador
+> `app/services/carregar_casos_clinicos.py`, rota `app/api/clinical_cases.py`
+> (`/api/casos-clinicos`), registrado em `main.py` e como frente nova em `admin.py`
+> (`"casos_clinicos"`, mesmo padrão de `galeria`/`exames`/etc.). Conteúdo em
+> `casos-clinicos/metadados.json` (nova pasta, paralela a `evidencias/`/`estudos/`), 5 casos
+> escritos e verificados contra diretriz/estudo original — mesma régua de qualquer conteúdo
+> clínico deste produto, nunca fabricado. Frontend: `CasosClinicos.tsx` (lista) e
+> `CasoClinico.tsx` (interativo — escolhe opção, confirma, só depois revela a conduta correta
+> e a explicação com a fonte), rotas em `App.tsx`, item no menu (`Shell.tsx`) e cartão do Painel
+> ligado (`to: "/casos-clinicos"`, deixou de ser "em breve").
+>
+> **Consequência prática**: `casos-clinicos/metadados.json` e os quatro arquivos de backend
+> acima passam a ser desta sessão — se a Biblioteca também tiver recebido pedido parecido,
+> declarar aqui antes de mexer, mesma regra de sempre.
+>
 > ### 📦 PEDIDO DA SESSÃO DA BIBLIOTECA (via Claude Code Remote) — três lotes aprovados pelo Rafael, aguardando publicação em produção
 > Escrito em 30/07/2026, atualizado no mesmo dia com um segundo e um terceiro lote. O Rafael
 > revisou e aprovou três vezes ("tudo revisado e aprovado, prepare para publicação"; "todos

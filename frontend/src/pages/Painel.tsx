@@ -158,6 +158,7 @@ const GRUPOS: Grupo[] = [
         descricao: "Preparação para o Título de Especialista, com material de apoio arquivado aqui.",
       },
       {
+        to: "/casos-clinicos",
         nome: "Casos clínicos interativos",
         descricao: "Um caso, a sua decisão, e depois a conduta correta com a evidência que a sustenta.",
       },

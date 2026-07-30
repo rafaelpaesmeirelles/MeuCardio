@@ -8,6 +8,8 @@ import Trilhas from "./pages/Trilhas";
 import MaterialPaciente from "./pages/MaterialPaciente";
 import Emergencia from "./pages/Emergencia";
 import Trilha from "./pages/Trilha";
+import CasosClinicos from "./pages/CasosClinicos";
+import CasoClinico from "./pages/CasoClinico";
 import Checklists from "./pages/Checklists";
 import ChecklistAlta from "./pages/ChecklistAlta";
 import Indicadores from "./pages/Indicadores";
@@ -98,6 +100,8 @@ export default function App() {
 
         <Route path="emergencia" element={<Emergencia />} />
         <Route path="trilhas/:slug" element={<Trilha />} />
+        <Route path="casos-clinicos" element={<CasosClinicos />} />
+        <Route path="casos-clinicos/:slug" element={<CasoClinico />} />
         <Route path="checklists" element={<Checklists />} />
         <Route path="checklists/alta/:id" element={<ChecklistAlta />} />
         <Route path="indicadores" element={<Indicadores />} />
