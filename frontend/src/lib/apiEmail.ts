@@ -24,7 +24,9 @@ async function request<T>(path: string, init: RequestInit = {}): Promise<T> {
   const headers = new Headers(init.headers);
   const t = tokenEmail.get();
   if (t) headers.set("Authorization", `Bearer ${t}`);
-  if (init.body && !headers.has("Content-Type")) {
+  // FormData fica de fora: o browser precisa gerar o boundary do multipart
+  // sozinho (mesma regra de lib/api.ts) — usado no upload de anexo.
+  if (init.body && !(init.body instanceof FormData) && !headers.has("Content-Type")) {
     headers.set("Content-Type", "application/json");
   }
 
@@ -45,6 +47,16 @@ export const apiEmail = {
   post: <T>(p: string, body?: unknown) =>
     request<T>(p, { method: "POST", body: body ? JSON.stringify(body) : undefined }),
   delete: <T>(p: string) => request<T>(p, { method: "DELETE" }),
+
+  /** Upload de anexo, em duas etapas — o Mail360 exige subir o arquivo
+   *  primeiro e só depois referenciar o `file_id` no envio da mensagem. */
+  uploadAnexo: (arquivo: File) => {
+    const form = new FormData();
+    form.append("arquivo", arquivo);
+    return request<{ file_id: string; nome: string }>("/email/mensagens/anexos", {
+      method: "POST", body: form,
+    });
+  },
 
   async entrar(endereco: string, senha: string) {
     const dados = await request<{ access_token: string }>("/email/entrar", {

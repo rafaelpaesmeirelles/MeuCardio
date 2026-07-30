@@ -61,6 +61,8 @@ export default function CaixaDeEmail() {
   const [compondo, setCompondo] = useState(false);
   const [novaMsg, setNovaMsg] = useState({ para: "", assunto: "", corpo_html: "" });
   const [enviando, setEnviando] = useState(false);
+  const [anexos, setAnexos] = useState<{ file_id: string; nome: string }[]>([]);
+  const [enviandoAnexo, setEnviandoAnexo] = useState(false);
 
   useEffect(() => {
     if (semSessao) return;
@@ -92,12 +94,25 @@ export default function CaixaDeEmail() {
     setMensagemAberta(completa);
   }
 
+  async function anexar(arquivo: File) {
+    setEnviandoAnexo(true);
+    try {
+      const resultado = await apiEmail.uploadAnexo(arquivo);
+      setAnexos((a) => [...a, resultado]);
+    } catch (e) {
+      setErro(e instanceof ApiEmailError ? e.message : "Não foi possível anexar o arquivo.");
+    } finally {
+      setEnviandoAnexo(false);
+    }
+  }
+
   async function enviar() {
     setEnviando(true);
     try {
-      await apiEmail.post("/email/mensagens", novaMsg);
+      await apiEmail.post("/email/mensagens", { ...novaMsg, anexos: anexos.map((a) => a.file_id) });
       setCompondo(false);
       setNovaMsg({ para: "", assunto: "", corpo_html: "" });
+      setAnexos([]);
     } catch (e) {
       setErro(e instanceof ApiEmailError ? e.message : "Não foi possível enviar a mensagem.");
     } finally {
@@ -148,11 +163,33 @@ export default function CaixaDeEmail() {
           <label style={{ marginTop: "0.5rem" }}>Mensagem</label>
           <textarea rows={6} value={novaMsg.corpo_html}
                     onChange={(e) => setNovaMsg({ ...novaMsg, corpo_html: e.target.value })} />
+
+          <label style={{ marginTop: "0.5rem" }}>Anexo</label>
+          <input type="file" disabled={enviandoAnexo}
+                 onChange={(e) => { const f = e.target.files?.[0]; if (f) anexar(f); e.target.value = ""; }} />
+          {anexos.length > 0 && (
+            <ul style={{ margin: "0.4rem 0 0", paddingLeft: "1.2rem", fontSize: "0.86rem" }}>
+              {anexos.map((a) => (
+                <li key={a.file_id}>
+                  {a.nome}{" "}
+                  <button type="button" className="botao botao--secundario" style={{ padding: "0 0.4rem", fontSize: "0.78rem" }}
+                          onClick={() => setAnexos((lista) => lista.filter((x) => x.file_id !== a.file_id))}>
+                    remover
+                  </button>
+                </li>
+              ))}
+            </ul>
+          )}
+          {enviandoAnexo && <p className="eyebrow" style={{ margin: "0.3rem 0 0" }}>Enviando anexo…</p>}
+
           <div style={{ display: "flex", gap: 8, marginTop: "0.6rem" }}>
-            <button className="botao" onClick={enviar} disabled={enviando || !novaMsg.para || !novaMsg.assunto}>
+            <button className="botao" onClick={enviar}
+                    disabled={enviando || enviandoAnexo || !novaMsg.para || !novaMsg.assunto}>
               {enviando ? "Enviando…" : "Enviar"}
             </button>
-            <button className="botao botao--secundario" onClick={() => setCompondo(false)}>Cancelar</button>
+            <button className="botao botao--secundario" onClick={() => { setCompondo(false); setAnexos([]); }}>
+              Cancelar
+            </button>
           </div>
         </div>
       )}
