@@ -279,7 +279,8 @@ def enviar(dados: NovaMensagem, conta: EmailAccount = Depends(current_email_acco
     _exigir_configurado()
     try:
         return mail360.enviar_mensagem(
-            conta.mail360_account_key, dados.para, dados.assunto, dados.corpo_html, anexos=dados.anexos,
+            conta.mail360_account_key, conta.email_address, dados.para, dados.assunto, dados.corpo_html,
+            anexos=dados.anexos,
         )
     except Mail360Error as e:
         raise HTTPException(status_code=502, detail=str(e)) from e

@@ -126,8 +126,11 @@ def monkeypatch_mail360(monkeypatch):
         estado["anexos"].append((account_key, nome_arquivo, len(conteudo)))
         return f"file-id-{len(estado['anexos'])}"
 
-    def _enviar_mensagem(account_key, para, assunto, corpo_html, anexos=None):
-        registro = {"account_key": account_key, "para": para, "assunto": assunto, "anexos": anexos or []}
+    def _enviar_mensagem(account_key, remetente, para, assunto, corpo_html, anexos=None):
+        registro = {
+            "account_key": account_key, "remetente": remetente, "para": para,
+            "assunto": assunto, "anexos": anexos or [],
+        }
         estado["mensagens_enviadas"].append(registro)
         return {"messageId": "msg-enviada-1"}
 

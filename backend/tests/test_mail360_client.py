@@ -153,6 +153,25 @@ class TestFuncoesDeAltoNivel:
         file_id = mail360.upload_anexo("acc-1", "doc.pdf", b"conteudo")
         assert file_id == "file-abc"
 
+    def test_enviar_mensagem_inclui_fromaddress(self, monkeypatch):
+        """Regressão de bug real, confirmado contra a API em 30/07/2026:
+        POST /messages sem `fromAddress` devolve 500 'Given FromAddress not
+        exists!' -- o Mail360 não deriva o remetente do account_key sozinho."""
+        chamadas = self._mockar_chamar(monkeypatch, {"messageId": "m1"})
+        mail360.enviar_mensagem("acc-1", "eu@corvia.med.br", "dest@x.com", "Assunto", "<p>Oi</p>")
+        _, caminho, kwargs = chamadas[0]
+        assert caminho == "/accounts/acc-1/messages"
+        assert kwargs["json"]["fromAddress"] == "eu@corvia.med.br"
+        assert kwargs["json"]["toAddress"] == "dest@x.com"
+
+    def test_enviar_mensagem_com_anexo_monta_lista_de_fileid(self, monkeypatch):
+        chamadas = self._mockar_chamar(monkeypatch, {"messageId": "m1"})
+        mail360.enviar_mensagem(
+            "acc-1", "eu@corvia.med.br", "dest@x.com", "Assunto", "<p>Oi</p>", anexos=["file-1", "file-2"],
+        )
+        _, _, kwargs = chamadas[0]
+        assert kwargs["json"]["attachments"] == [{"fileId": "file-1"}, {"fileId": "file-2"}]
+
     def test_obter_mensagem_funde_metadado_e_conteudo(self, monkeypatch):
         chamadas = self._mockar_chamar(monkeypatch, [
             {"messageId": "m1", "subject": "Oi", "fromAddress": "a@x.com"},

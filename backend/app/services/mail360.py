@@ -1,37 +1,32 @@
 """Cliente da API do Zoho Mail360 — caixa de e-mail do assinante (Tarefa 28).
 
-Testado em 30/07/2026 contra a API real, com credencial do Rafael (troca de
-token, listar contas, tentativa de criar conta nativa — as três chamadas que
-dava pra fazer sem um domínio já cadastrado dentro do Mail360, ver abaixo).
-Três coisas que a documentação pública não deixava claro, e que só a resposta
-real revelou:
+**Testado de ponta a ponta contra a API real em 30/07/2026**, com credencial
+do Rafael e domínio `corvia.med.br` já verificado dentro do Mail360 (o
+bloqueio de "Local domain does not exists", registrado antes nesta mesma
+sessão, foi resolvido do lado da Zoho — Domains → Add domain → verificar).
+Conta de teste criada (`teste-api@corvia.med.br`), e todas as sete funções
+deste módulo confirmadas: criar conta, listar pastas, enviar mensagem com e
+sem anexo, listar mensagens, ler mensagem (metadado + conteúdo), subir
+anexo, excluir mensagem. Quatro coisas que só a resposta real revelou, e que
+a documentação pública não deixava claro:
 
 1. **Toda resposta vem embrulhada em `{"status": {...}, "data": ...}`** —
-   confirmado em /access-token, POST /accounts, GET /accounts, GET /folders e
-   GET /messages. `_chamar()` já desembrulha isso na origem agora, então quem
+   inclusive listas. `_chamar()` desembrulha isso na origem, então quem
    chama não repete essa checagem.
 2. **`/access-token` exige corpo em JSON**, não form-encoded como um endpoint
-   OAuth comum — mandar `data=` (form) devolve 400 `JSON_PARSE_ERROR`. Bug
-   real que existia aqui antes desta correção e teria quebrado a autenticação
-   inteira em produção.
+   OAuth comum — mandar `data=` (form) devolve 400 `JSON_PARSE_ERROR`.
 3. **`expires_in` não é uma duração em segundos** (como a doc pública sugere)
-   — é um timestamp absoluto em milissegundos (`1785414750629` ≈
-   2026-07-30T12:32:30Z, ~59min depois da chamada). Não dá pra confiar nesse
+   — é um timestamp absoluto em milissegundos. Não dá pra confiar nesse
    valor literal para calcular o cache; ver `_obter_access_token`.
+4. **`POST /messages` exige `fromAddress`** — sem ele, devolve 500 `"Given
+   FromAddress not exists!"`. A API não deriva o remetente do `account_key`
+   sozinha; `enviar_mensagem()` agora recebe o endereço da caixa como
+   parâmetro explícito.
 
-**Bloqueio real encontrado, não é bug de código**: `POST /accounts` para
-criar conta nativa devolveu `MailServerException: Local domain does not
-exists corvia.med.br`. Mail360 tem uma seção de Domínios PRÓPRIA, separada
-do domínio já verificado no Zoho Mail/Workspace — sem adicionar e verificar
-`corvia.med.br` especificamente ali (zoho.com/mail360/help/domain-addition.html:
-CNAME/SPF/DKIM/MX próprios do Mail360), nenhuma conta nativa é criada.
-`criar_conta_nativa` segue sem teste de ponta a ponta até isso ser resolvido.
-
-`obter_mensagem` mudou de forma: o endpoint de metadado
-(`/messages/{id}`) e o de conteúdo (`/messages/{id}/content`) são
-DOIS endpoints diferentes — o de metadado não traz `content`/`htmlContent`,
-e o de conteúdo só traz `messageId` e `content`. A função agora chama os
-dois e funde o resultado.
+`obter_mensagem` chama dois endpoints e funde o resultado: metadado
+(`/messages/{id}` — subject/fromAddress/receivedTime, sem `content`) e
+conteúdo (`/messages/{id}/content` — só `messageId` e `content`),
+confirmado com uma mensagem real enviada e lida de volta.
 
 Autenticação: OAuth de três camadas do Zoho. O client_id/secret/refresh_token
 são fixos, gerados uma vez no painel do próprio Mail360 (Authentication, não
@@ -186,9 +181,7 @@ def upload_anexo(account_key: str, nome_arquivo: str, conteudo: bytes) -> str:
     upload é POST separado, corpo é o binário puro (`application/octet-stream`,
     sem multipart), a URL leva o nome do arquivo em query string, e a
     resposta traz o id em `data.fileId` — já desembrulhado por `_chamar`.
-    Ainda não testado contra uma chamada real (sem domínio verificado no
-    Mail360 não há account_key para testar upload de verdade — ver cabeçalho
-    do módulo)."""
+    Testado contra a API real em 30/07/2026 (ver cabeçalho do módulo)."""
     dados = _chamar(
         "POST", f"/accounts/{account_key}/attachments",
         params={"fileName": nome_arquivo},
@@ -202,9 +195,15 @@ def upload_anexo(account_key: str, nome_arquivo: str, conteudo: bytes) -> str:
 
 
 def enviar_mensagem(
-    account_key: str, para: str, assunto: str, corpo_html: str, anexos: list[str] | None = None,
+    account_key: str, remetente: str, para: str, assunto: str, corpo_html: str,
+    anexos: list[str] | None = None,
 ) -> dict:
+    """`fromAddress` é obrigatório — confirmado em 30/07/2026 contra a API
+    real: sem ele, `/messages` devolve 500 "Given FromAddress not exists!".
+    A API não deriva o remetente do `account_key` sozinha, então quem chama
+    precisa passar o endereço da própria caixa (`conta.email_address`)."""
     corpo: dict = {
+        "fromAddress": remetente,
         "toAddress": para,
         "subject": assunto,
         "content": corpo_html,
