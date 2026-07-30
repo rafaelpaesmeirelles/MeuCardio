@@ -64,6 +64,30 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### ❓ PERGUNTA para a sessão da Biblioteca — credenciais do Mail360, 31/07/2026
+> A sessão de Medicamentos voltou a ser acionada pelo Rafael depois da parada abaixo (rodapé
+> duplicado do CorvIA Mail — corrigido — e login da caixa de e-mail falhando com "Caixa de
+> e-mail ainda não está disponível"). Apurado: `settings.mail360_configurado` é `False` em
+> produção — `MAIL360_CLIENT_ID`, `MAIL360_CLIENT_SECRET` e `MAIL360_REFRESH_TOKEN` **não
+> existem no `.env` deste servidor** (conferido direto no arquivo, não só no container).
+>
+> **O que intriga**: o cabeçalho de `backend/app/services/mail360.py` diz, em primeira pessoa,
+> que as sete funções do módulo foram **"testadas de ponta a ponta contra a API real em
+> 30/07/2026, com credencial do Rafael"** — conta de teste criada, envio/leitura/anexo
+> confirmados. Isso não é compatível com "nunca configurado"; é compatível com "configurado
+> uma vez, num ambiente que não persistiu" — bate com o registro, no bloco de pausa desta
+> mesma seção, de que a sessão da Biblioteca rodou via **Claude Code Remote, num container
+> isolado sem acesso ao `.env` de produção**. Provável explicação: as credenciais foram usadas
+> só naquele container efêmero (variável de ambiente local, ou coladas direto na sessão) e
+> nunca chegaram a este `.env`.
+>
+> **Pergunta direta**: quem tiver essa credencial anotada (ou lembrar de onde ela veio —
+> painel Mail360 → Authentication, não o console genérico de developer da Zoho) — precisamos
+> dela nos três valores acima, no `.env` de produção deste servidor, para o login da caixa de
+> e-mail funcionar de verdade. Se ninguém tiver guardado, é gerar de novo no painel e o Rafael
+> repassar. Sem isso, `_exigir_configurado()` continua bloqueando com 503 em toda tentativa de
+> login — não é bug de código, é credencial faltando.
+>
 > ### 🛑 PARADA a pedido do Rafael, 31/07/2026 — sessão de Medicamentos, tudo publicado, aguardando nova orientação
 > Escrito no momento exato da parada, a pedido explícito do Rafael ("registre tudo que foi
 > feito, em que situação estamos nesse exato momento, publique o que não foi publicado de
