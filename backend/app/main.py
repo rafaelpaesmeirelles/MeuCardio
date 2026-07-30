@@ -37,9 +37,16 @@ app.add_middleware(
 # propósito: laudo e consultoria são serviço avulso pago por fora — exigir
 # assinatura vigente para comprá-los fecharia a porta justamente para o médico
 # que ainda não assina e chegou pelo telediagnóstico.
+# `email_api` também entra aqui, e pelo mesmo motivo estrutural: CorvIA Mail
+# (Tarefa 28) é add-on cobrado à parte, não benefício da assinatura
+# principal — aplicar `assinante_ativo` (que checa kind='meucardio') a este
+# router bloquearia justo quem assina só o e-mail. Cada rota do router
+# decide sua própria autorização (`current_user` + `assinatura_email_ativa`
+# para status/ativação; `current_email_account`, com login e token
+# próprios, para pastas e mensagens).
 ROUTERS_LIVRES = (
     health.router, auth.router, password_reset.router, billing.router, admin.router,
-    service_orders.router, partner_courses.router,
+    service_orders.router, partner_courses.router, email_api.router,
 )
 
 ROUTERS_ASSINANTES = (
@@ -47,7 +54,7 @@ ROUTERS_ASSINANTES = (
     ai.router, gallery.router, favorites.router, lab_tests.router, evidence.router,
     studies.router, prescriptions.router, documents.router, appointments.router,
     timeline.router, guidelines.router, indicadores.router, checklists.router, study_tracks.router,
-    exportacao.router, emergencia.router, receituario.router, email_api.router,
+    exportacao.router, emergencia.router, receituario.router,
 )
 
 for r in ROUTERS_LIVRES:

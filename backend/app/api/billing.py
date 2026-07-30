@@ -7,8 +7,8 @@ from sqlalchemy.orm import Session
 
 from app.core.config import settings
 from app.core.db import get_db
-from app.core.security import current_user
-from app.models.subscription import TIPO_CURSO, TIPO_MEUCARDIO, Subscription
+from app.core.security import ACESSO_LIBERADO, current_user
+from app.models.subscription import TIPO_CURSO, TIPO_EMAIL, TIPO_MEUCARDIO, Subscription
 from app.models.user import User
 
 # O prefixo precisa incluir /api: o Caddy usa `handle /api/*` (que, ao contrário
@@ -98,6 +98,40 @@ def _obter_ou_criar_assinatura(db: Session, user: User) -> Subscription:
     return sub
 
 
+def _assinatura_email(db: Session, user_id: int) -> Subscription | None:
+    """A assinatura de CorvIA Mail (Tarefa 28), e só ela — mesmo cuidado de
+    `_assinatura_meucardio`: sem filtrar por `kind`, `.first()` devolveria
+    qualquer assinatura do médico, inclusive a da plataforma ou de um curso."""
+    return (
+        db.query(Subscription)
+        .filter(Subscription.user_id == user_id, Subscription.kind == TIPO_EMAIL)
+        .order_by(Subscription.id)
+        .first()
+    )
+
+
+def _obter_ou_criar_assinatura_email(db: Session, user: User) -> Subscription:
+    """Espelha `_obter_ou_criar_assinatura`, para o kind='email' — função
+    própria em vez de generalizar a original: a original está em produção há
+    meses sustentando a assinatura principal, e não vale o risco de alterar
+    seu comportamento para acomodar um caminho novo."""
+    sub = _assinatura_email(db, user.id)
+    if sub:
+        return sub
+    sub = Subscription(user_id=user.id, kind=TIPO_EMAIL)
+    db.add(sub)
+    try:
+        db.commit()
+    except IntegrityError:
+        db.rollback()
+        sub = _assinatura_email(db, user.id)
+        if sub is None:
+            raise
+        return sub
+    db.refresh(sub)
+    return sub
+
+
 def _aplicar_evento(db: Session, obj, quando: datetime, alteracoes) -> None:
     """Grava as alterações se o evento for mais novo que o último já aplicado.
 
@@ -137,6 +171,14 @@ def _aplicar_evento(db: Session, obj, quando: datetime, alteracoes) -> None:
                 Subscription.kind == TIPO_CURSO,
                 Subscription.course_id == (int(curso_id) if curso_id else None),
             )
+        elif tipo_assinatura == "email":
+            # Sem este ramo, o primeiro evento de uma assinatura de CorvIA
+            # Mail cairia no `else` abaixo e seria tratado como assinatura da
+            # PLATAFORMA — corrompendo o estado de quem já é assinante do
+            # MeuCardio e comprou o e-mail depois. É o mesmo bug que o
+            # CLAUDE.md já documenta ter acontecido com `mode` em vez de
+            # metadata para os pedidos avulsos de telediagnóstico.
+            consulta = consulta.filter(Subscription.kind == TIPO_EMAIL)
         else:
             consulta = consulta.filter(Subscription.kind == TIPO_MEUCARDIO)
         sub = consulta.order_by(Subscription.id.desc()).first()
@@ -147,6 +189,24 @@ def _aplicar_evento(db: Session, obj, quando: datetime, alteracoes) -> None:
     alteracoes(sub)
     sub.last_event_at = quando
     db.commit()
+    if sub.kind == TIPO_EMAIL:
+        _sincronizar_caixa_de_email(db, sub)
+
+
+def _sincronizar_caixa_de_email(db: Session, sub: Subscription) -> None:
+    """Quando a assinatura de CorvIA Mail muda de estado (cancelamento,
+    inadimplência, reativação), a caixa em `email_accounts` precisa
+    acompanhar — senão um médico que cancelou continua lendo e-mail de
+    graça, sem que a assinatura vencida bloqueie nada."""
+    from app.models.email_account import EmailAccount
+
+    conta = db.query(EmailAccount).filter(EmailAccount.user_id == sub.user_id).first()
+    if not conta:
+        return
+    novo_status = "ativa" if sub.status in ACESSO_LIBERADO else "suspensa"
+    if conta.status != novo_status:
+        conta.status = novo_status
+        db.commit()
 
 
 @router.post("/checkout")
@@ -165,6 +225,68 @@ def criar_checkout(db: Session = Depends(get_db), user: User = Depends(current_u
         line_items=[{"price": settings.stripe_price_id, "quantity": 1}],
         success_url=f"{settings.public_url}/assinatura?status=sucesso",
         cancel_url=f"{settings.public_url}/assinatura?status=cancelado",
+    )
+    return {"checkout_url": session["url"]}
+
+
+@router.get("/status-email")
+def status_email(db: Session = Depends(get_db), user: User = Depends(current_user)):
+    sub = _assinatura_email(db, user.id)
+    if not sub:
+        return {"status": "inativo", "current_period_end": None, "preco_definido": settings.corvia_mail_preco_definido}
+    return {
+        "status": sub.status, "current_period_end": sub.current_period_end,
+        "preco_definido": settings.corvia_mail_preco_definido,
+    }
+
+
+@router.post("/checkout-email")
+def criar_checkout_email(db: Session = Depends(get_db), user: User = Depends(current_user)):
+    """Checkout do CorvIA Mail — add-on cobrado à parte da assinatura
+    principal (decisão do Rafael, 30/07/2026). Preço inline (`price_data`),
+    não um Price pré-criado no painel: enquanto `corvia_mail_preco_centavos`
+    for 0 ("em branco"), a rota recusa em vez de cobrar um valor inventado —
+    nunca simular um preço que ainda não foi decidido."""
+    if not settings.corvia_mail_preco_definido:
+        raise HTTPException(
+            status_code=409,
+            detail="O preço do CorvIA Mail ainda não foi definido. Assinatura indisponível no momento.",
+        )
+
+    sub = _obter_ou_criar_assinatura_email(db, user)
+    if sub.status in ACESSO_LIBERADO:
+        raise HTTPException(status_code=409, detail="Você já assina o CorvIA Mail.")
+
+    # Reaproveita o cliente Stripe da assinatura principal quando existir —
+    # dois clientes para a mesma pessoa quebram o portal de cobrança e o
+    # histórico de faturas (mesmo cuidado já tomado nos cursos parceiros).
+    if not sub.stripe_customer_id:
+        principal = _assinatura_meucardio(db, user.id)
+        sub.stripe_customer_id = (
+            principal.stripe_customer_id if principal and principal.stripe_customer_id
+            else stripe.Customer.create(email=user.email, name=user.full_name)["id"]
+        )
+        db.commit()
+
+    session = stripe.checkout.Session.create(
+        customer=sub.stripe_customer_id,
+        mode="subscription",
+        payment_method_types=["card"],
+        line_items=[{
+            "price_data": {
+                "currency": "brl",
+                "unit_amount": settings.corvia_mail_preco_centavos,
+                "recurring": {"interval": "month"},
+                "product_data": {"name": "CorvIA Mail"},
+            },
+            "quantity": 1,
+        }],
+        subscription_data={"metadata": {"tipo": "email", "user_id": str(user.id)}},
+        # O metadata da sessão e o da assinatura são campos diferentes; o
+        # webhook de customer.subscription.* só enxerga o da assinatura.
+        metadata={"tipo": "email", "user_id": str(user.id)},
+        success_url=f"{settings.public_url}/corvia-mail?status=sucesso",
+        cancel_url=f"{settings.public_url}/corvia-mail?status=cancelado",
     )
     return {"checkout_url": session["url"]}
 

@@ -14,12 +14,22 @@ def gerar_token() -> str:
 class PasswordResetToken(Base):
     """Token de redefinição de senha. Sem envio de e-mail configurado ainda —
     o link fica visível para um admin no painel, que repassa por um canal
-    seguro (mesma lógica de confiança já usada na criação manual de conta)."""
+    seguro (mesma lógica de confiança já usada na criação manual de conta).
+
+    `alvo` — reaproveitado a partir de 30/07/2026 para a senha da caixa de
+    e-mail (Tarefa 28), que é distinta da senha da conta Corvia: 'conta'
+    redefine `users.password_hash` (comportamento original, único que existia
+    antes), 'email' redefine `email_accounts.password_hash`. O link de
+    recuperação SEMPRE vai para o e-mail principal do médico (`users.email`),
+    nunca para o próprio endereço @corvia.med.br — pedir para redefinir a
+    senha de uma caixa mandando o link para dentro dela mesma trancaria quem
+    esqueceu a senha para sempre."""
 
     __tablename__ = "password_reset_tokens"
 
     id: Mapped[int] = mapped_column(primary_key=True)
     user_id: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), index=True)
+    alvo: Mapped[str] = mapped_column(String(20), default="conta")  # conta | email
     token: Mapped[str] = mapped_column(String(64), unique=True, index=True, default=gerar_token)
     expires_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=lambda: datetime.now(timezone.utc) + timedelta(hours=2)

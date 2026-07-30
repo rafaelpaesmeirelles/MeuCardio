@@ -87,6 +87,21 @@ class Settings(BaseSettings):
     def mail360_configurado(self) -> bool:
         return bool(self.mail360_client_id and self.mail360_client_secret and self.mail360_refresh_token)
 
+    # CorvIA Mail é cobrado à parte da assinatura principal (decisão do
+    # Rafael, 30/07/2026). Preço em centavos, de propósito deixado em 0
+    # ("em branco") — o Rafael define depois. Diferente do `stripe_price_id`
+    # da assinatura principal (que aponta pra um Price pré-criado no painel
+    # do Stripe), aqui o valor vira `price_data` inline no checkout, no mesmo
+    # padrão já usado pelos cursos parceiros — assim, quando o preço for
+    # definido, basta pôr o número no `.env`, sem precisar criar nada no
+    # painel do Stripe antes. Enquanto for 0, o checkout de e-mail recusa com
+    # 409 em vez de cobrar um valor inventado.
+    corvia_mail_preco_centavos: int = 0
+
+    @property
+    def corvia_mail_preco_definido(self) -> bool:
+        return self.corvia_mail_preco_centavos > 0
+
     # --- Stripe / Assinatura -----------------------------------------------
     stripe_publishable_key: str = ""
     stripe_secret_key: str = ""

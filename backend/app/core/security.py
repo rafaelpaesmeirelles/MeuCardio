@@ -21,11 +21,35 @@ def verify_password(raw: str, hashed: str) -> bool:
     return pwd_context.verify(raw, hashed)
 
 
-def create_access_token(subject: str) -> str:
+def create_access_token(subject: str, scope: str = "app") -> str:
+    """`scope` separa o token da conta Corvia ('app', valor padrão — mesmo
+    token de sempre, sem mudança de comportamento pra quem já está logado)
+    do token da "sessão email" ('email', emitido só por
+    `POST /api/email/entrar`). Sem essa marca, um token roubado de um dos
+    dois sistemas serviria no outro — a senha própria da caixa de e-mail
+    (decisão do Rafael, 30/07/2026) perderia o sentido se o token da conta
+    principal também abrisse a caixa."""
     expire = datetime.now(timezone.utc) + timedelta(minutes=settings.jwt_expire_minutes)
     return jwt.encode(
-        {"sub": subject, "exp": expire}, settings.jwt_secret, algorithm=settings.jwt_algorithm
+        {"sub": subject, "scope": scope, "exp": expire}, settings.jwt_secret, algorithm=settings.jwt_algorithm
     )
+
+
+def _decodificar(token: str, escopo_exigido: str, erro: HTTPException):
+    try:
+        payload = jwt.decode(token, settings.jwt_secret, algorithms=[settings.jwt_algorithm])
+    except JWTError:
+        raise erro
+    # Token emitido antes desta mudança não tem "scope" — trata como "app"
+    # (comportamento anterior), pra não deslogar quem já estava com sessão
+    # aberta no momento do deploy.
+    escopo = payload.get("scope", "app")
+    if escopo != escopo_exigido:
+        raise erro
+    email = payload.get("sub")
+    if not email:
+        raise erro
+    return email
 
 
 def current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(get_db)):
@@ -36,11 +60,7 @@ def current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(get_
         detail="Sessão inválida ou expirada. Entre novamente.",
         headers={"WWW-Authenticate": "Bearer"},
     )
-    try:
-        payload = jwt.decode(token, settings.jwt_secret, algorithms=[settings.jwt_algorithm])
-        email = payload.get("sub")
-    except JWTError:
-        raise credentials_error
+    email = _decodificar(token, "app", credentials_error)
     user = db.query(User).filter(User.email == email, User.is_active.is_(True)).first()
     if not user:
         raise credentials_error
@@ -84,3 +104,40 @@ def assinante_ativo(user=Depends(current_user), db: Session = Depends(get_db)):
             detail="Assinatura necessária para acessar este conteúdo.",
         )
     return user
+
+
+def assinatura_email_ativa(db: Session, user_id: int) -> bool:
+    """CorvIA Mail (Tarefa 28) é add-on cobrado à parte — não usa
+    `assinante_ativo`, que é sobre a assinatura principal. Usada na ativação
+    da caixa (`POST /api/email/conta`), não como dependência de rota: a
+    própria rota já decide o que fazer quando falso (409, não 402 — 402 no
+    `lib/api.ts` do frontend redireciona para `/assinatura`, a página errada
+    aqui, que é `/corvia-mail`)."""
+    from app.models.subscription import TIPO_EMAIL, Subscription
+
+    sub = (
+        db.query(Subscription)
+        .filter(Subscription.user_id == user_id, Subscription.kind == TIPO_EMAIL)
+        .order_by(Subscription.id)
+        .first()
+    )
+    return sub is not None and sub.status in ACESSO_LIBERADO
+
+
+def current_email_account(token: str = Depends(oauth2_scheme), db: Session = Depends(get_db)):
+    """Identidade da "sessão email" — só aceita token emitido por
+    `POST /api/email/entrar` (scope="email"), nunca o token da conta Corvia.
+    É o equivalente, para a caixa de e-mail, do que `current_user` é para o
+    resto do sistema: gate de toda rota que lê ou envia mensagem."""
+    from app.models.email_account import EmailAccount
+
+    credentials_error = HTTPException(
+        status_code=status.HTTP_401_UNAUTHORIZED,
+        detail="Sessão da caixa de e-mail inválida ou expirada. Entre novamente.",
+        headers={"WWW-Authenticate": "Bearer"},
+    )
+    email_address = _decodificar(token, "email", credentials_error)
+    conta = db.query(EmailAccount).filter(EmailAccount.email_address == email_address).first()
+    if not conta or conta.status != "ativa":
+        raise credentials_error
+    return conta

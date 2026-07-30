@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { api, ApiError } from "../lib/api";
+import { Navigate } from "react-router-dom";
+import { apiEmail, ApiEmailError, tokenEmail } from "../lib/apiEmail";
 import { Carregando, Erro, Vazio } from "../components/Estado";
 
-type ContaEmail = { ativa: boolean; email_address?: string; status?: string };
 type Pasta = { folderId?: string; id?: string; folderName?: string; name?: string };
 type Mensagem = {
   messageId?: string; id?: string;
@@ -34,8 +34,7 @@ function dataMensagem(m: Mensagem): string {
 /** Ressalva permanente, decidida pelo Rafael em 30/07/2026: esta caixa é para
  * uso administrativo/profissional geral, não tem a cifragem de dado de saúde
  * do Cofre do telediagnóstico — não deve receber dado identificável de
- * paciente. Aparece nas duas telas (ativação e caixa já ativa), não é
- * dispensável nem lembrada só uma vez. */
+ * paciente. Não é dispensável nem lembrada só uma vez. */
 function RessalvaClinica() {
   return (
     <div className="cartao" style={{ marginTop: "0.8rem", borderLeft: "3px solid var(--acento)" }} role="note">
@@ -51,9 +50,9 @@ function RessalvaClinica() {
 }
 
 export default function CaixaDeEmail() {
-  const [conta, setConta] = useState<ContaEmail | null>(null);
+  const [semSessao, setSemSessao] = useState(!tokenEmail.get());
+  const [enderecoAtual, setEnderecoAtual] = useState<string | null>(null);
   const [erro, setErro] = useState<string | null>(null);
-  const [ativando, setAtivando] = useState(false);
 
   const [pastas, setPastas] = useState<Pasta[] | null>(null);
   const [pastaAtual, setPastaAtual] = useState<string | undefined>(undefined);
@@ -64,92 +63,68 @@ export default function CaixaDeEmail() {
   const [enviando, setEnviando] = useState(false);
 
   useEffect(() => {
-    api.get<ContaEmail>("/email/conta")
-      .then(setConta)
-      .catch((e: ApiError) => setErro(e.status === 503 ? "Caixa de e-mail ainda não está disponível." : e.message));
-  }, []);
+    if (semSessao) return;
+    apiEmail.get<{ email_address: string }>("/email/eu")
+      .then((r) => setEnderecoAtual(r.email_address))
+      .catch((e) => {
+        if (e instanceof ApiEmailError && e.status === 401) { setSemSessao(true); return; }
+        setErro(e instanceof ApiEmailError ? e.message : "Não foi possível carregar sua caixa de e-mail.");
+      });
+  }, [semSessao]);
 
   useEffect(() => {
-    if (!conta?.ativa) return;
-    api.get<Pasta[]>("/email/pastas").then(setPastas).catch(() => setPastas([]));
-  }, [conta]);
+    if (semSessao || !enderecoAtual) return;
+    apiEmail.get<Pasta[]>("/email/pastas").then(setPastas).catch(() => setPastas([]));
+  }, [semSessao, enderecoAtual]);
 
   useEffect(() => {
-    if (!conta?.ativa) return;
+    if (semSessao || !enderecoAtual) return;
     setMensagens(null);
     setMensagemAberta(null);
     const params = pastaAtual ? `?pasta=${encodeURIComponent(pastaAtual)}` : "";
-    api.get<Mensagem[]>(`/email/mensagens${params}`).then(setMensagens).catch(() => setMensagens([]));
-  }, [conta, pastaAtual]);
-
-  async function ativar() {
-    setAtivando(true);
-    try {
-      const resultado = await api.post<ContaEmail>("/email/conta");
-      setConta(resultado);
-    } catch (e) {
-      setErro(e instanceof ApiError ? e.message : "Não foi possível ativar a caixa de e-mail.");
-    } finally {
-      setAtivando(false);
-    }
-  }
+    apiEmail.get<Mensagem[]>(`/email/mensagens${params}`).then(setMensagens).catch(() => setMensagens([]));
+  }, [semSessao, enderecoAtual, pastaAtual]);
 
   async function abrirMensagem(m: Mensagem) {
     const id = idDaMensagem(m);
     if (!id) return;
-    const completa = await api.get<MensagemCompleta>(`/email/mensagens/${encodeURIComponent(id)}`);
+    const completa = await apiEmail.get<MensagemCompleta>(`/email/mensagens/${encodeURIComponent(id)}`);
     setMensagemAberta(completa);
   }
 
   async function enviar() {
     setEnviando(true);
     try {
-      await api.post("/email/mensagens", novaMsg);
+      await apiEmail.post("/email/mensagens", novaMsg);
       setCompondo(false);
       setNovaMsg({ para: "", assunto: "", corpo_html: "" });
     } catch (e) {
-      setErro(e instanceof ApiError ? e.message : "Não foi possível enviar a mensagem.");
+      setErro(e instanceof ApiEmailError ? e.message : "Não foi possível enviar a mensagem.");
     } finally {
       setEnviando(false);
     }
+  }
+
+  if (semSessao) {
+    return <Navigate to="/corvia-mail" replace />;
   }
 
   if (erro) {
     return (
       <>
         <p className="eyebrow">Caixa de e-mail</p>
-        <h1>nome@corvia.med.br</h1>
+        <h1>CorvIA Mail</h1>
         <Erro mensagem={erro} />
       </>
     );
   }
 
-  if (conta === null) {
+  if (!enderecoAtual) {
     return (
       <>
         <p className="eyebrow">Caixa de e-mail</p>
-        <h1>nome@corvia.med.br</h1>
+        <h1>CorvIA Mail</h1>
         <Carregando />
-      </>
-    );
-  }
-
-  if (!conta.ativa) {
-    return (
-      <>
-        <p className="eyebrow">Caixa de e-mail</p>
-        <h1>Sua caixa de e-mail própria</h1>
-        <div className="cartao" style={{ marginTop: "0.8rem" }}>
-          <p>
-            Todo assinante da Corvia tem direito a um endereço de e-mail próprio no
-            domínio <strong>@corvia.med.br</strong>, incluído na assinatura — sem
-            senha separada, o acesso é o mesmo login de sempre.
-          </p>
-          <button className="botao" onClick={ativar} disabled={ativando}>
-            {ativando ? "Ativando…" : "Ativar minha caixa de e-mail"}
-          </button>
-        </div>
-        <RessalvaClinica />
       </>
     );
   }
@@ -157,7 +132,7 @@ export default function CaixaDeEmail() {
   return (
     <>
       <p className="eyebrow">Caixa de e-mail</p>
-      <h1>{conta.email_address}</h1>
+      <h1>{enderecoAtual}</h1>
       <RessalvaClinica />
 
       <button className="botao" style={{ marginTop: "0.8rem" }} onClick={() => setCompondo(true)}>

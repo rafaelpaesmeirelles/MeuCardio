@@ -46,15 +46,29 @@ class RedefinirSenha(BaseModel):
 
 @router.post("/redefinir-senha")
 def redefinir_senha(dados: RedefinirSenha, db: Session = Depends(get_db)):
+    """`registro.alvo` decide QUAL senha muda: 'conta' é o comportamento
+    original (senha da conta Corvia); 'email' é a senha própria da caixa
+    de e-mail (Tarefa 28) — reaproveita o mesmo token e o mesmo formulário
+    de redefinição em vez de duplicar a peça inteira."""
     if len(dados.nova_senha) < 8:
         raise HTTPException(status_code=422, detail="A senha precisa ter ao menos 8 caracteres.")
     registro = db.query(PasswordResetToken).filter(PasswordResetToken.token == dados.token).first()
     if not registro or not registro.valido:
         raise HTTPException(status_code=400, detail="Link inválido ou expirado. Solicite um novo.")
-    user = db.get(User, registro.user_id)
-    if not user:
-        raise HTTPException(status_code=400, detail="Link inválido.")
-    user.password_hash = hash_password(dados.nova_senha)
+
+    if registro.alvo == "email":
+        from app.models.email_account import EmailAccount
+
+        conta = db.query(EmailAccount).filter(EmailAccount.user_id == registro.user_id).first()
+        if not conta:
+            raise HTTPException(status_code=400, detail="Link inválido.")
+        conta.password_hash = hash_password(dados.nova_senha)
+    else:
+        user = db.get(User, registro.user_id)
+        if not user:
+            raise HTTPException(status_code=400, detail="Link inválido.")
+        user.password_hash = hash_password(dados.nova_senha)
+
     registro.used = True
     db.commit()
     return {"nota": "Senha redefinida. Você já pode entrar com a nova senha."}
@@ -76,8 +90,8 @@ def listar_resets_pendentes(db: Session = Depends(get_db), admin: User = Depends
     )
     return [
         {
-            "email": u.email, "full_name": u.full_name,
-            "link": f"/redefinir-senha?token={t.token}",
+            "email": u.email, "full_name": u.full_name, "alvo": t.alvo,
+            "link": f"/redefinir-senha?token={t.token}" + ("&alvo=email" if t.alvo == "email" else ""),
             "expira_em": t.expires_at, "solicitado_em": t.created_at,
         }
         for t, u in pendentes

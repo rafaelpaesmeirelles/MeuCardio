@@ -7,6 +7,7 @@ from app.core.db import Base
 
 TIPO_MEUCARDIO = "meucardio"
 TIPO_CURSO = "curso"
+TIPO_EMAIL = "email"  # CorvIA Mail (Tarefa 28) — add-on cobrado à parte, não substitui a assinatura principal
 
 
 class Subscription(Base):
@@ -32,6 +33,15 @@ class Subscription(Base):
             "course_id",
             unique=True,
             postgresql_where=text("kind = 'curso' AND status <> 'cancelado'"),
+        ),
+        # Mesma lógica da assinatura do MeuCardio: uma única assinatura viva de
+        # CorvIA Mail por médico. Sem isso, dupla submissão do checkout de
+        # e-mail criaria duas cobranças para o mesmo add-on.
+        Index(
+            "uq_assinatura_email_por_usuario",
+            "user_id",
+            unique=True,
+            postgresql_where=text("kind = 'email' AND status <> 'cancelado'"),
         ),
     )
 
