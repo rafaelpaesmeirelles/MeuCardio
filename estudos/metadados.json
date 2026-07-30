@@ -655,6 +655,32 @@
     "published": false
   },
   {
+    "slug": "fuel-udenafil-na-circulacao-de-fontan",
+    "title": "FUEL — Udenafil na circulação de Fontan",
+    "study_type": "ensaio_clinico",
+    "authors": "Goldberg DJ, Zak V, Goldstein BH, et al. (Pediatric Heart Network Investigators)",
+    "journal": "Circulation",
+    "year": 2020,
+    "doi": "10.1161/CIRCULATIONAHA.119.044352",
+    "pmid": "31736357",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/31736357/",
+    "summary": "Ensaio de fase 3, multicêntrico (30 centros), randomizado, duplo-cego e controlado por placebo, em 400 pacientes com circulação de Fontan (idade média 15,5 ± 2 anos, 60% do sexo masculino). Randomização 1:1 para udenafil 87,5 mg 2x/dia (inibidor da fosfodiesterase-5) ou placebo. Desfecho primário: diferença entre grupos na variação do consumo de oxigênio (VO2) no pico do exercício, num teste cardiopulmonar de esforço.",
+    "key_findings": "Desfecho primário não atingiu significância: VO2 de pico variou +44 ± 245 mL/min (+2,8%) com udenafil contra −3,7 ± 228 mL/min (−0,2%) com placebo (p = 0,071). No limiar anaeróbico ventilatório (desfecho secundário), o efeito foi significativo: VO2 +33 ± 185 mL/min (+3,2%) versus −9 ± 193 mL/min (−0,9%) (p = 0,012); equivalente ventilatório de CO2 −0,8 versus −0,06 (p = 0,014); carga de trabalho +3,8 W versus +0,34 W (p = 0,021). Sem diferença entre grupos no índice de performance miocárdica, no logaritmo natural do índice de hiperemia reativa nem no BNP sérico — nenhum sinal de toxicidade cardíaca ou vascular associado ao fármaco.",
+    "clinical_implications": "O desfecho primário negativo (VO2 de pico) contrasta com o ganho consistente em desfechos submáximos (limiar anaeróbico, carga de trabalho) — relevante porque o paciente de Fontan tipicamente não atinge esforço máximo verdadeiro no teste, tornando o limiar anaeróbico um marcador mais fidedigno da capacidade funcional do dia a dia nessa população. É o maior ensaio randomizado já conduzido em circulação de Fontan e referência de segurança para o uso de inibidor de PDE-5 nesse grupo, ainda que não sustente sozinho indicação rotineira baseada no desfecho primário.",
+    "limitations": "População pediátrica/adolescente (idade média 15,5 anos), não adulta — extrapolação para o adulto com Fontan tardio deve ser cautelosa. Desfecho primário sem significância estatística formal (p = 0,071), o que limita a força da recomendação. Seguimento de curto prazo, sem dado sobre desfecho clínico duro (transplante, mortalidade, enteropatia perdedora de proteína).",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "circulação de Fontan",
+      "udenafil",
+      "inibidor de PDE-5",
+      "cardiopatia congênita",
+      "teste cardiopulmonar de esforço",
+      "FUEL"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
     "slug": "mood-hf-escitalopram-na-depressao-com-insuficiencia-cardiaca",
     "title": "MOOD-HF — Escitalopram na depressão associada à insuficiência cardíaca sistólica",
     "study_type": "ensaio_clinico",
