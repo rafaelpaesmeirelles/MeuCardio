@@ -2864,5 +2864,84 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "tratamento-antibiotico-da-faringite-estreptococica-como-prevencao-primaria-da-febre-reumatica",
+    "statement": "Criança, adolescente ou adulto com dor de garganta e teste diagnóstico positivo para Streptococcus pyogenes (grupo A) deve ser tratado com antibiótico para prevenir febre reumática/cardiopatia reumática (OR 0,51; IC95% 0,28-0,96). Em população de risco moderado a alto onde teste diagnóstico não estiver disponível, criança e adolescente com faringite clinicamente suspeita de etiologia estreptocócica também devem ser tratados — não há evidência que sustente essa mesma conduta em adulto sem confirmação diagnóstica. Penicilina (intramuscular ou oral) é o antibiótico de primeira linha recomendado, por espectro estreito, ausência de resistência conhecida do grupo A e menor risco de gerar resistência antimicrobiana na comunidade — recomendação de força condicional, evidência de baixa certeza, distinta em força das duas recomendações anteriores (força forte).",
+    "recommendation_class": "Forte",
+    "evidence_level": "Mod",
+    "society": "WHO",
+    "year": 2024,
+    "guideline_title": "WHO guideline on the prevention and diagnosis of rheumatic fever and rheumatic heart disease",
+    "reference": "World Health Organization. WHO guideline on the prevention and diagnosis of rheumatic fever and rheumatic heart disease. Geneva: WHO; 2024. Seção 4.3 (Treatment of group A streptococcal pharyngitis), texto integral obtido e conferido em 30/07/2026. NOTA DE ESQUEMA: a OMS usa força de recomendação (forte/condicional) e certeza da evidência (alta/moderada/baixa/muito baixa) — sistema GRADE —, não a escala Classe I-III / Nível A-C da ESC/AHA usada nos demais registros desta base. Os campos recommendation_class/evidence_level aqui carregam essa força/certeza abreviada (Forte=força forte da Recomendação 1, Mod=certeza moderada), não uma classe/nível ESC/AHA — a Recomendação 3 (escolha de penicilina) é condicional/baixa certeza e está descrita em prosa no campo statement, não nos campos estruturados, para não misturar duas forças diferentes num só par de campos curtos.",
+    "theme": "Febre reumática",
+    "tags": [
+      "febre reumática",
+      "faringite estreptocócica",
+      "prevenção primária",
+      "penicilina",
+      "who 2024"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "biopsia-endomiocardica-em-miocardite-de-alto-risco-ou-instabilidade-hemodinamica",
+    "statement": "Biópsia endomiocárdica (EMB) é recomendada em paciente com miocardite de alto risco e/ou instabilidade hemodinâmica, e/ou em paciente com miocardite de risco intermediário sem resposta à terapia convencional — para detectar o subtipo histológico específico e avaliar a presença de genoma viral, com implicação direta de tratamento.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2025,
+    "guideline_title": "2025 ESC Guidelines for the management of myocarditis and pericarditis",
+    "reference": "2025 ESC Guidelines for the management of myocarditis and pericarditis. Eur Heart J. 2025. PMID: 40878297 — classe e nível conferidos no texto integral da diretriz em 30/07/2026, quadro de recomendações para avaliação clínica de miocardite e pericardite.",
+    "theme": "Pericárdio",
+    "tags": [
+      "miocardite",
+      "biópsia endomiocárdica",
+      "emb",
+      "risco",
+      "esc 2025"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "revascularizacao-endovascular-na-isquemia-mesenterica-aguda-por-oclusao-da-ams",
+    "statement": "Em paciente com isquemia mesentérica aguda por oclusão aguda da artéria mesentérica superior (AMS), revascularização endovascular é recomendada. Angiotomografia é recomendada em toda suspeita de isquemia mesentérica aguda ou crônica, e avaliação por equipe vascular é recomendada em ambas as apresentações. Revascularização de estenose de artéria visceral aterosclerótica assintomática não é recomendada.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. PMID: 39210722 — classe e nível conferidos no texto integral da diretriz em 30/07/2026, quadro de recomendações para estenose de artéria visceral.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "isquemia mesentérica aguda",
+      "artéria mesentérica superior",
+      "revascularização endovascular",
+      "esc 2024"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "fechamento-de-cia-contraindicado-em-fisiologia-de-eisenmenger",
+    "statement": "Fechamento de comunicação interatrial NÃO é recomendado em paciente com fisiologia de Eisenmenger, com hipertensão arterial pulmonar e resistência vascular pulmonar ≥5 unidades Wood apesar de terapia-alvo para HAP, ou com dessaturação ao esforço — o shunt funciona como válvula de escape que mantém o débito sistêmico; fechá-lo nessas condições remove essa via de descompressão do ventrículo direito sobrecarregado.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines for the management of adult congenital heart disease",
+    "reference": "Baumgartner H, De Backer J, Babu-Narayan SV, et al. 2020 ESC Guidelines for the management of adult congenital heart disease. Eur Heart J. 2021;42(6):563-645. DOI: 10.1093/eurheartj/ehaa554. PMID: 32860028 — classe e nível conferidos no texto integral da diretriz em 30/07/2026, quadro de recomendações para comunicação interatrial.",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "eisenmenger",
+      "comunicação interatrial",
+      "hipertensão arterial pulmonar",
+      "contraindicação",
+      "esc 2020"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
