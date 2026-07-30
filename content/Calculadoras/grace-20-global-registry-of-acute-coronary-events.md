@@ -43,9 +43,11 @@ Soma direta de todos os pontos das 8 variáveis clínicas
 - **pontuacao**: ≥285; **risco**: 99%
 
 ## Modelo alternativo nao linear
-- **descricao**: Versão GRACE 2.0 (2014) usa modelo de regressão logística não linear em vez de soma de pontos por faixa, com equação: xb = -7,7035 + (0,0531×idade) + (0,0087×FC) - (0,0168×PAS) + (0,1823×Killip) + (0,6931×parada cardíaca) + (1,4586×desvio ST) + (0,4700×enzimas) + (0,8755×creatinina)
-- **probabilidade**: p = exp(xb) / (1 + exp(xb)), representando probabilidade de óbito da admissão até 6 meses
-- **fonte**: VERIFICAÇÃO HUMANA NECESSÁRIA — os coeficientes desta equação vieram da documentação de um pacote de software, não do artigo. Conferir contra Fox KAA et al., BMJ Open 2014;4:e004425 antes de usar para cálculo
+**Esclarecido em 30/07/2026, lendo o próprio artigo (Fox KAA et al., BMJ Open. 2014;4(2):e004425, PMID 24561498, texto completo verificado via PMC):**
+
+- **O que o GRACE 2.0 muda de fato**: em vez de somar pontos por faixa como o escore original, o 2.0 usa diretamente as estimativas do modelo (regressão logística) para computar o risco cumulativo — o artigo é explícito que **não converte as estimativas em sistema de pontos**. Associações **não lineares** foram encontradas para as **quatro medidas contínuas** — pressão arterial sistólica, pulso, idade e creatinina (p<0,001 vs. modelo linear) — usa as mesmas 8 variáveis do escore original (idade, FC, PAS, creatinina, classe Killip, parada cardíaca na admissão, desvio de segmento ST, biomarcador cardíaco positivo).
+- **Os coeficientes explícitos NÃO estão no artigo.** O próprio texto remete a um arquivo externo do grupo GRACE (`outcomes-umassmed.org/grace/files/GRACE_RiskModel_Coefficients.pdf`) em vez de publicar a equação — e esse endereço está **fora do ar** (conexão recusada, testado em 30/07/2026). **A equação com os coeficientes específicos que constava antes neste documento (xb = -7,7035 + 0,0531×idade + ...) não pôde ser confirmada contra o artigo original nem contra a fonte que o artigo cita, porque essa fonte não está mais acessível — permanece como VERIFICAÇÃO HUMANA NECESSÁRIA especificamente para os valores numéricos dos coeficientes**, mesmo com a descrição qualitativa do método já resolvida acima.
+- **Discriminação (c-estatística), na coorte de validação FAST-MI 2005, citada diretamente do texto do artigo**: para óbito, **c>0,82 em 1 ano** e **c=0,82 em 3 anos**; para o composto óbito/IAM, discriminação um pouco menor — **c=0,78 em 1 ano** e **c=0,75 em 3 anos**.
 
 ## Aplicacao pratica
 Amplamente recomendado sobre TIMI para estratificação de risco em SCA devido à melhor discriminação prognóstica; orienta decisão sobre timing de estratégia invasiva (urgente vs. precoce vs. eletiva)
@@ -54,4 +56,4 @@ Amplamente recomendado sobre TIMI para estratificação de risco em SCA devido �
 Requer 8 variáveis para cálculo completo, mais complexo de aplicar à beira do leito sem calculadora eletrônica em comparação a escores mais simples como TIMI
 
 ## Fonte
-Fox KAA et al. BMJ Open. 2014;4(2):e004425 (GRACE 2.0). Atenção: as tabelas de pontos por faixa acima são do GRACE original, não do 2.0, que substitui a soma de pontos por regressão não linear — VERIFICAÇÃO HUMANA NECESSÁRIA para separar o que pertence a cada versão
+Fox KAA et al. BMJ Open. 2014;4(2):e004425 (GRACE 2.0). **As tabelas de pontos por faixa na seção "Variaveis pontuacao" acima são do GRACE original — o 2.0 não usa soma de pontos, usa regressão logística não linear direta, como esclarecido na seção "Modelo alternativo nao linear".**
