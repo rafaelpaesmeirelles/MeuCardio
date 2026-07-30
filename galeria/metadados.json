@@ -1316,5 +1316,27 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "derrame-pericardico-silhueta-em-moringa-rx-e-tc",
+    "title": "Derrame pericárdico volumoso — silhueta cardíaca em \"moringa\" (radiografia e TC correlacionadas)",
+    "modality": "Radiografia e TC",
+    "theme": "Pericárdio",
+    "file_path": "radiografia/derrame-pericardico-bocksbeutel-rx-e-tc.jpg",
+    "findings": "Painel triplo: radiografia de tórax PA (esquerda) mostrando silhueta cardíaca globosa, alargada e simétrica, com contorno liso — o sinal clássico \"em moringa\" (garrafa d'água); TC de tórax em corte coronal (centro) e axial (direita) do mesmo paciente confirmando volumoso derrame pericárdico circundando as câmaras cardíacas, com marca-passo/eletrodos visíveis no painel coronal.",
+    "teaching_points": "O sinal da silhueta \"em moringa\" é sugestivo de derrame pericárdico volumoso (tipicamente >250 mL) mas inespecífico — cardiomegalia por outras causas (miocardiopatia dilatada, múltiplas valvopatias) pode produzir contorno globoso semelhante, e a radiografia não distingue derrame de dilatação de câmara. A TC (como os dois painéis centrais e à direita desta mesma fonte mostram) confirma o diagnóstico com atenuação do conteúdo pericárdico, permite estimar o volume e caracterizar septações ou espessamento — mesmo raciocínio de complementaridade radiografia-TC já registrado na entrada `rx-pericardite-constritiva-calcificacao` desta galeria para a calcificação pericárdica. Complementa a entrada `derrame-pericardico-volumoso-com-tamponamento` (modalidade ecocardiograma) desta galeria, dando a correlação com os métodos de imagem transversal.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Perikarderguss_mit_typischer_Bocksbeutelform_des_Herzschattens_85W_-_CR_und_CT_koronar_und_axial_nativ_-_001.jpg",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Hellerhoff, via Wikimedia Commons — CC BY-SA 4.0. Licença conferida na página do arquivo em 30/07/2026.",
+    "tags": [
+      "derrame pericárdico",
+      "silhueta em moringa",
+      "radiografia de tórax",
+      "tomografia computadorizada",
+      "pericárdio"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
