@@ -271,7 +271,25 @@ def criar_checkout_email(db: Session = Depends(get_db), user: User = Depends(cur
     session = stripe.checkout.Session.create(
         customer=sub.stripe_customer_id,
         mode="subscription",
-        payment_method_types=["card"],
+        # Pedido do Rafael em 30/07/2026: cobrar em Pix OU cartão. Pix
+        # recorrente no Stripe (Pix Automático) exige mandate_options com
+        # amount_type="fixed" — sem isso, o padrão é "maximum" (um TETO de
+        # cobrança variável, não o valor fixo mensal que queremos). O mandato
+        # do Pix leva alguns dias pra ser autorizado pelo banco do assinante
+        # antes da primeira cobrança recorrente valer — diferente do cartão,
+        # que cobra na hora. Depende também de o Pix estar habilitado nas
+        # configurações de pagamento da conta Stripe (fora do código).
+        payment_method_types=["card", "pix"],
+        payment_method_options={
+            "pix": {
+                "mandate_options": {
+                    "amount_type": "fixed",
+                    "amount": settings.corvia_mail_preco_centavos,
+                    "payment_schedule": "monthly",
+                    "reference": "CorvIA Mail",
+                },
+            },
+        },
         line_items=[{
             "price_data": {
                 "currency": "brl",
