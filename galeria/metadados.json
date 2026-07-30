@@ -1202,5 +1202,28 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "ecg-stemi-anterior-extenso",
+    "title": "ECG — Infarto agudo do miocárdio com supra de ST (parede anterior extensa)",
+    "modality": "ECG",
+    "theme": "Doença coronariana",
+    "file_path": "ecg/stemi-anterior-extenso.jpg",
+    "findings": "Supradesnivelamento do segmento ST em V2–V5 (destacado em laranja no traçado), com depressão recíproca do segmento ST nas derivações inferiores II, III e aVF (destacado em azul) — padrão clássico de oclusão proximal da artéria descendente anterior, comprometendo parede anterior extensa (septal, anterior e lateral).",
+    "teaching_points": "As alterações recíprocas (infra de ST inferior espelhando o supra anterior) não são um achado incidental — reforçam a especificidade do diagnóstico de STEMI e, quando ausentes num supra de ST dúbio, devem levantar suspeita de repolarização precoce ou pericardite em vez de infarto. Comparar com a entrada `ecg-stemi-inferior` desta galeria: nesse território a extensão diagnóstica relevante são as derivações direitas/posteriores (V4R, V7-V8); no anterior extenso, o achado recíproco já está nas derivações inferiores padrão, sem precisar de derivação adicional.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:12_Lead_EKG_ST_Elevation_tracing_color_coded.jpg",
+    "license": "Domínio público (PD-self)",
+    "attribution": "Usuário Displaced (Wikimedia Commons), obra própria liberada em domínio público — licença conferida na página do arquivo em 30/07/2026.",
+    "tags": [
+      "ecg",
+      "stemi",
+      "infarto",
+      "parede anterior",
+      "descendente anterior",
+      "alteração recíproca"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
