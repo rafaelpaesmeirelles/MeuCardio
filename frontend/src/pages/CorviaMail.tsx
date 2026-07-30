@@ -5,8 +5,15 @@ import { api, ApiError } from "../lib/api";
 import { apiEmail, ApiEmailError } from "../lib/apiEmail";
 import Credito from "../components/Credito";
 
-type StatusEmail = { status: string; current_period_end: string | null; preco_definido: boolean };
-type ContaEmail = { ativa: boolean; email_address?: string };
+type StatusEmail = {
+  status: string; current_period_end: string | null;
+  preco_definido: boolean; preco_centavos: number;
+};
+type ContaEmail = {
+  ativa: boolean; email_address?: string;
+  lgpd_aceite_versao?: string | null; lgpd_versao_atual?: string;
+};
+type TermoLgpd = { versao: string; texto: string };
 
 const ROTULOS: Record<string, string> = {
   ativo: "Ativa", teste: "Período de teste", inativo: "Inativa", pendente: "Pendente",
@@ -24,9 +31,11 @@ function reais(centavos: number) {
 function AbaAssinar() {
   const [status, setStatus] = useState<StatusEmail | null>(null);
   const [contaEmail, setContaEmail] = useState<ContaEmail | null>(null);
+  const [termo, setTermo] = useState<TermoLgpd | null>(null);
   const [carregando, setCarregando] = useState(true);
   const [processando, setProcessando] = useState(false);
   const [senhaInicial, setSenhaInicial] = useState("");
+  const [aceiteLgpd, setAceiteLgpd] = useState(false);
   const [ativando, setAtivando] = useState(false);
   const [erro, setErro] = useState("");
 
@@ -34,8 +43,9 @@ function AbaAssinar() {
     Promise.all([
       api.get<StatusEmail>("/billing/status-email"),
       api.get<ContaEmail>("/email/conta"),
+      api.get<TermoLgpd>("/email/termo-lgpd"),
     ])
-      .then(([s, c]) => { setStatus(s); setContaEmail(c); })
+      .then(([s, c, t]) => { setStatus(s); setContaEmail(c); setTermo(t); })
       .catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível carregar seu CorvIA Mail."))
       .finally(() => setCarregando(false));
   }, []);
@@ -56,7 +66,9 @@ function AbaAssinar() {
     setAtivando(true);
     setErro("");
     try {
-      const resultado = await api.post<ContaEmail>("/email/conta", { senha: senhaInicial });
+      const resultado = await api.post<ContaEmail>("/email/conta", {
+        senha: senhaInicial, aceite_lgpd: aceiteLgpd,
+      });
       setContaEmail(resultado);
     } catch (e) {
       setErro(e instanceof ApiError ? e.message : "Não foi possível ativar sua caixa.");
@@ -68,6 +80,12 @@ function AbaAssinar() {
   if (carregando) return <p className="eyebrow">Carregando…</p>;
 
   const ativa = status ? STATUS_COM_ACESSO.includes(status.status) : false;
+  // Reconsentimento pedido de novo se o termo mudou de versão desde o último
+  // aceite — nasce como caso raro, mas é o próprio motivo de existir a versão.
+  const precisaReconsentir = !!(
+    contaEmail?.lgpd_aceite_versao && contaEmail?.lgpd_versao_atual &&
+    contaEmail.lgpd_aceite_versao !== contaEmail.lgpd_versao_atual
+  );
 
   return (
     <div className="cartao" style={{ marginTop: "1rem" }}>
@@ -77,8 +95,9 @@ function AbaAssinar() {
       </p>
 
       <p>
-        <strong>{status?.preco_definido ? "valor sob consulta" : "Em breve"}</strong>
+        <strong>{status?.preco_definido ? `${reais(status.preco_centavos)}/mês` : "Em breve"}</strong>
         {!status?.preco_definido && " — o valor ainda está sendo definido."}
+        {status?.preco_definido && " — pagamento em Pix ou cartão."}
       </p>
 
       {erro && <p role="alert" style={{ color: "var(--alerta)", fontSize: "0.86rem" }}>{erro}</p>}
@@ -90,23 +109,53 @@ function AbaAssinar() {
         </button>
       )}
 
-      {ativa && !contaEmail?.ativa && (
+      {ativa && (!contaEmail?.ativa || precisaReconsentir) && (
         <div style={{ marginTop: "1rem" }}>
-          <p style={{ color: "var(--sucesso)" }}>Assinatura ativa — falta só criar sua caixa.</p>
-          <label htmlFor="senha-inicial">Crie uma senha para sua caixa de e-mail</label>
+          <p style={{ color: "var(--sucesso)" }}>
+            {precisaReconsentir
+              ? "O termo de transferência internacional de dados foi atualizado — é preciso ler e aceitar de novo."
+              : "Assinatura ativa — falta só criar sua caixa."}
+          </p>
+
+          <label htmlFor="senha-inicial">
+            {precisaReconsentir ? "Confirme a senha da sua caixa de e-mail" : "Crie uma senha para sua caixa de e-mail"}
+          </label>
           <input id="senha-inicial" type="password" value={senhaInicial}
                  onChange={(e) => setSenhaInicial(e.target.value)} />
           <p className="eyebrow" style={{ margin: "0.3rem 0 0" }}>
-            Senha própria, diferente da senha da sua conta Corvia.
+            {precisaReconsentir
+              ? "Digite a senha atual da caixa (ou defina uma nova, se preferir)."
+              : "Senha própria, diferente da senha da sua conta Corvia."}
           </p>
+
+          {termo && (
+            <div style={{ marginTop: "0.8rem" }}>
+              <p className="eyebrow" style={{ margin: 0 }}>
+                Termo de transferência internacional de dados (versão {termo.versao})
+              </p>
+              <div style={{
+                whiteSpace: "pre-wrap", fontSize: "0.82rem", maxHeight: 220, overflowY: "auto",
+                border: "1px solid var(--linha)", borderRadius: 6, padding: "0.6rem", marginTop: "0.4rem",
+              }}>
+                {termo.texto}
+              </div>
+              <label style={{ display: "flex", gap: 8, alignItems: "flex-start", marginTop: "0.6rem", fontSize: "0.86rem" }}>
+                <input type="checkbox" checked={aceiteLgpd} style={{ width: "auto", marginTop: 3 }}
+                       onChange={(e) => setAceiteLgpd(e.target.checked)} />
+                Li e concordo com este termo.
+              </label>
+            </div>
+          )}
+
           <button className="botao" style={{ width: "100%", marginTop: "0.8rem" }}
-                  onClick={ativarCaixa} disabled={ativando || senhaInicial.length < 8}>
-            {ativando ? "Ativando…" : "Ativar minha caixa de e-mail"}
+                  onClick={ativarCaixa}
+                  disabled={ativando || !aceiteLgpd || senhaInicial.length < 8}>
+            {ativando ? "Ativando…" : precisaReconsentir ? "Confirmar novo aceite" : "Ativar minha caixa de e-mail"}
           </button>
         </div>
       )}
 
-      {ativa && contaEmail?.ativa && (
+      {ativa && contaEmail?.ativa && !precisaReconsentir && (
         <p style={{ color: "var(--sucesso)", marginTop: "1rem" }}>
           Sua caixa <strong>{contaEmail.email_address}</strong> está pronta — entre na aba "Entrar" ao lado.
         </p>

@@ -21,11 +21,13 @@ Escopo do conteúdo continua administrativo/profissional, não clínico
 """
 import re
 import unicodedata
+from datetime import datetime, timezone
 
 from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
 
+from app.content import termo_lgpd_email
 from app.core.config import settings
 from app.core.db import get_db
 from app.core.security import (
@@ -85,11 +87,25 @@ def minha_conta(db: Session = Depends(get_db), user: User = Depends(current_user
     return {
         "ativa": True, "email_address": conta.email_address, "status": conta.status,
         "senha_definida": conta.password_hash is not None,
+        "lgpd_aceite_versao": conta.lgpd_aceite_versao,
+        "lgpd_versao_atual": termo_lgpd_email.VERSAO,
     }
+
+
+@router.get("/termo-lgpd")
+def termo_lgpd(user: User = Depends(current_user)):
+    """Texto do termo de consentimento para transferência internacional de
+    dado (Zoho Mail360 não tem data center no Brasil — CLAUDE.md, item 14b).
+    Exibido antes do checkbox de aceite em `POST /conta`; não pode ser
+    embutido no aceite geral de termos de uso da Corvia, porque a base legal
+    escolhida (art. 33, VIII da LGPD) exige consentimento específico e
+    destacado, distinto de qualquer outro."""
+    return {"versao": termo_lgpd_email.VERSAO, "texto": termo_lgpd_email.texto(settings.admin_email)}
 
 
 class AtivarConta(BaseModel):
     senha: str
+    aceite_lgpd: bool = False
 
 
 @router.post("/conta", status_code=201)
@@ -97,7 +113,12 @@ def ativar_conta(dados: AtivarConta, db: Session = Depends(get_db), user: User =
     """Provisiona a caixa e define a senha própria da "sessão email" — as
     duas coisas juntas, porque uma caixa sem senha não serve pra nada (não
     tem como logar em `/entrar`). Exige a assinatura de CorvIA Mail ativa —
-    não a assinatura principal, que é benefício diferente."""
+    não a assinatura principal, que é benefício diferente.
+
+    `aceite_lgpd` é obrigatório em toda chamada (criação OU atualização de
+    senha): é aqui, no momento em que a caixa é de fato provisionada no
+    Mail360, que a transferência internacional acontece — sem aceite
+    registrado, não ativa. Ver `app/content/termo_lgpd_email.py`."""
     _exigir_configurado()
     if not assinatura_email_ativa(db, user.id):
         raise HTTPException(
@@ -106,10 +127,17 @@ def ativar_conta(dados: AtivarConta, db: Session = Depends(get_db), user: User =
         )
     if len(dados.senha) < 8:
         raise HTTPException(status_code=422, detail="A senha precisa ter ao menos 8 caracteres.")
+    if not dados.aceite_lgpd:
+        raise HTTPException(
+            status_code=422,
+            detail="É preciso aceitar o termo de transferência internacional de dados para ativar a caixa.",
+        )
 
     existente = _obter_conta(db, user)
     if existente:
         existente.password_hash = hash_password(dados.senha)
+        existente.lgpd_aceite_em = datetime.now(timezone.utc)
+        existente.lgpd_aceite_versao = termo_lgpd_email.VERSAO
         db.commit()
         return {"ativa": True, "email_address": existente.email_address, "ja_existia": True}
 
@@ -122,6 +150,7 @@ def ativar_conta(dados: AtivarConta, db: Session = Depends(get_db), user: User =
     conta = EmailAccount(
         user_id=user.id, email_address=endereco, mail360_account_key=account_key,
         password_hash=hash_password(dados.senha),
+        lgpd_aceite_em=datetime.now(timezone.utc), lgpd_aceite_versao=termo_lgpd_email.VERSAO,
     )
     db.add(conta)
     db.commit()

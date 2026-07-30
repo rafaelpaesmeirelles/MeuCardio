@@ -233,10 +233,15 @@ def criar_checkout(db: Session = Depends(get_db), user: User = Depends(current_u
 def status_email(db: Session = Depends(get_db), user: User = Depends(current_user)):
     sub = _assinatura_email(db, user.id)
     if not sub:
-        return {"status": "inativo", "current_period_end": None, "preco_definido": settings.corvia_mail_preco_definido}
+        return {
+            "status": "inativo", "current_period_end": None,
+            "preco_definido": settings.corvia_mail_preco_definido,
+            "preco_centavos": settings.corvia_mail_preco_centavos,
+        }
     return {
         "status": sub.status, "current_period_end": sub.current_period_end,
         "preco_definido": settings.corvia_mail_preco_definido,
+        "preco_centavos": settings.corvia_mail_preco_centavos,
     }
 
 
