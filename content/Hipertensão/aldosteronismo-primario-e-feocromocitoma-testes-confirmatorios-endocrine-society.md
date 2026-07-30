@@ -44,9 +44,18 @@ Para resultado limítrofe (nem claramente normal, nem claramente elevado o sufic
 ## Teste genetico
 Recomendação de 2014: **todo** paciente com diagnóstico de feocromocitoma ou paraganglioma deve ser engajado em decisão compartilhada sobre teste genético — **pelo menos um terço** de todos os casos tem mutação germinativa causadora de doença identificável.
 
+## Preparo cirurgico do feocromocitoma — bloqueio alfa pre-operatorio
+**Acrescentado em 30/07/2026**, mesma diretriz (Lenders JWM et al. 2014):
+- **Primeira escolha**: bloqueador alfa-adrenérgico — recomendação condicional, qualidade de evidência baixa (2, ⊕⊕○○). Agentes específicos (Tabela 9): **fenoxibenzamina**, 10mg 2x/dia inicialmente, titulada até 1mg/kg/dia; **doxazosina**, 2mg/dia inicialmente, titulada até no máximo 32mg/dia
+- **Duração do preparo**: **7 a 14 dias** antes da cirurgia — recomendação forte, qualidade de evidência baixa (1, ⊕⊕○○)
+- **Dieta hiperssódica e hidratação** também fazem parte do preparo — reverter a contração de volume induzida por catecolamina antes da cirurgia, para prevenir hipotensão grave após a retirada do tumor (mesma recomendação forte)
+- **Betabloqueador só depois do bloqueio alfa**, e não antes: regra de segurança explícita da diretriz — **"o uso de betabloqueador sem bloqueador alfa não é recomendado, pelo potencial de crise hipertensiva"**. Quando indicado (para controlar taquicardia), entra **após pelo menos 3-4 dias** de bloqueio alfa já em curso (Tabela 9)
+- A diretriz **não estabelece corte numérico** de pressão arterial ou frequência cardíaca-alvo para liberar a cirurgia — o preparo é guiado pela duração e pela dose, não por um valor-limite explícito
+
 ## Armadilhas clinicas
 - Rastrear aldosteronismo primário sem corrigir potássio ou sem suspender antagonista mineralocorticoide por 4 semanas antes — o resultado da ARR fica falseado
 - Tratar o corte de ARR de 30 (ou 750 SI) como universal — a própria diretriz reconhece variação por laboratório e método, e cada serviço deve conferir seu próprio corte de referência
 - Exigir teste confirmatório em paciente que já preenche a exceção (hipopotassemia espontânea + renina indetectável + PAC>20ng/dL) — a diretriz permite diagnóstico direto nesse cenário
 - Colher metanefrinas com o paciente sentado sem repetir em decúbito dorsal diante de resultado levemente alterado — a diferença de falso-positivo (2,8x) é grande o bastante para mudar a interpretação
 - Achar que existe corte numérico único (ex.: "4x o limite superior") para diagnóstico bioquímico direto de feocromocitoma — a diretriz de 2014 não estabelece esse corte; usa magnitude/padrão de alteração e, em caso limítrofe, o teste de supressão com clonidina
+- **Iniciar betabloqueador antes do bloqueio alfa** em paciente com feocromocitoma, mesmo para controlar taquicardia isolada — risco de crise hipertensiva por vasoconstrição alfa sem oposição, regra de segurança explícita da diretriz
