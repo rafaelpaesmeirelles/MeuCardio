@@ -3,8 +3,8 @@ title: "Verapamil (cloridrato)"
 slug: verapamil-cloridrato
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
-source_refs: ["Verapamil hydrochloride — rótulo aprovado pelo FDA, DailyMed SPL setid df79ee3a-f0ed-1cc7-e053-2995a90af97f"]
+review_status: revisado
+source_refs: ["Verapamil hydrochloride — rótulo aprovado pelo FDA, DailyMed SPL setid df79ee3a-f0ed-1cc7-e053-2995a90af97f", "Verapamil hydrochloride injection — rótulo aprovado pelo FDA, DailyMed SPL setid 1c993365-1b62-4524-e781-d307f28f63bc, seção Pediatric Use — dose IV pediátrica a partir de experiência não controlada"]
 legacy_source: "medicamentos/banco-de-medicamentos-verapamil.md"
 ---
 
@@ -26,7 +26,7 @@ Metabolização hepática extensa (principal metabólito ativo: norverapamil); i
 - **vo isquemia taquisupraventricular flutter fa adulto maior 50kg**: 120-480 mg/dia, divididos em 3-4 tomas (a cada 6-8h)
 - **vo hipertensao adulto**: 120-480 mg/dia, divididos em 3 tomas (a cada 8h)
 - **ev taquiarritmia supraventricular adulto**: 5-10 mg (0,075-0,15 mg/kg) em injeção IV lenta, 2-3 min; se resposta insuficiente, repetir 10mg (0,15mg/kg) após 30min
-- **pediatria**: **resolvido em 29/07/2026** — os números batem com a bula brasileira, só faltava a fonte. Indicação restrita a **distúrbios do ritmo cardíaco** (a bula não estende a dose pediátrica à hipertensão): formas de liberação imediata, **até 6 anos: 80 a 120 mg/dia, em 2 a 3 doses**; **de 6 a 14 anos: 80 a 360 mg/dia, em 2 a 4 doses**. VERIFICAÇÃO HUMANA NECESSÁRIA para a via **endovenosa** em criança: a bula brasileira não traz posologia pediátrica para a via EV, e o uso endovenoso em lactente tem alerta de colapso hemodinâmico na literatura — não prescrever por este verbete até a bula ou diretriz confirmar
+- **pediatria**: **resolvido em 29/07/2026** — os números batem com a bula brasileira, só faltava a fonte. Indicação restrita a **distúrbios do ritmo cardíaco** (a bula não estende a dose pediátrica à hipertensão): formas de liberação imediata, **até 6 anos: 80 a 120 mg/dia, em 2 a 3 doses**; **de 6 a 14 anos: 80 a 360 mg/dia, em 2 a 4 doses**. **Resolvido em 30/07/2026** para a via **endovenosa** em criança: a bula brasileira não traz posologia pediátrica para a via EV, mas o rótulo do FDA para o verapamil injetável traz — a partir de experiência não controlada com mais de 250 pacientes (cerca de metade com menos de 12 meses, 25% neonatos), não de ensaio clínico controlado. Dose única mais usada em **até 12 meses: 0,1-0,2 mg/kg**; em **1 a 15 anos: 0,1-0,3 mg/kg** — a maioria recebeu a dose menor (0,1 mg/kg) uma única vez, podendo repetir uma ou duas vezes a cada 10-30 minutos em alguns casos. **O próprio rótulo confirma o alerta que já constava aqui**: efeitos hemodinâmicos graves, alguns fatais, já ocorreram após administração intravenosa em neonatos e lactentes — cautela extra exigida nesse grupo, e a fonte é experiência não controlada, não ensaio randomizado
 - **fonte**: bula do DILACORON (cloridrato de verapamil, Abbott), seção de posologia, conferida em 29/07/2026, para a pediatria oral; rótulo do cloridrato de verapamil aprovado pelo FDA (DailyMed), para o restante
 
 ## Indicacoes
