@@ -2802,5 +2802,67 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "reparo-de-coarctacao-de-aorta-com-gradiente-invasivo-maior-ou-igual-a-20-mmhg",
+    "statement": "O reparo de coartação ou recoartação de aorta (cirúrgico ou por cateter) é indicado em paciente hipertenso com gradiente não invasivo aumentado entre membro superior e inferior, confirmado por medida invasiva (gradiente peak-to-peak ≥20 mmHg) — com preferência pelo tratamento por cateter (stent) quando tecnicamente factível. Em paciente normotenso com estreitamento ≥50% do diâmetro aórtico ao nível do diafragma, o tratamento por cateter deve ser considerado mesmo com gradiente invasivo <20 mmHg.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2020,
+    "guideline_title": "2020 ESC Guidelines for the management of adult congenital heart disease",
+    "reference": "Baumgartner H, De Backer J, Babu-Narayan SV, et al. 2020 ESC Guidelines for the management of adult congenital heart disease. Eur Heart J. 2021;42(6):563-645. DOI: 10.1093/eurheartj/ehaa554. PMID: 32860028 — classe e nível conferidos no texto integral da diretriz em 30/07/2026, seção 4.6.4 (recomendações de intervenção em coartação e recoartação de aorta).",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "coartação de aorta",
+      "recoartação",
+      "gradiente peak-to-peak",
+      "stent",
+      "hipertensão"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "marca-passo-em-sincope-com-bloqueio-de-ramo-e-eef-ou-ilr-positivo",
+    "statement": "Marca-passo é indicado em paciente com síncope, bloqueio de ramo bifascicular, e estudo eletrofisiológico positivo ou bloqueio atrioventricular documentado por monitor de eventos implantável (ILR). Distinto da indicação por bloqueio de ramo bifascicular isolado com síncope inexplicada sem confirmação por EEF/ILR, que é recomendação mais fraca (Classe IIb/B, pode ser considerado).",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2018,
+    "guideline_title": "2018 ESC Guidelines for the diagnosis and management of syncope",
+    "reference": "Brignole M, Moya A, de Lange FJ, et al. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948. DOI: 10.1093/eurheartj/ehy037. PMID: 29562304 — classe e nível conferidos no texto integral da diretriz em 30/07/2026, tabela de tratamento de síncope por arritmia cardíaca, subseção bloqueio de ramo bifascicular.",
+    "theme": "Síncope",
+    "tags": [
+      "marca-passo",
+      "bloqueio de ramo",
+      "bifascicular",
+      "estudo eletrofisiológico",
+      "ilr",
+      "síncope cardíaca"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "bnp-nt-probnp-pre-operatorio-em-risco-cardiovascular-e-contraindicado-rotineiro-em-baixo-risco",
+    "statement": "Em paciente com doença cardiovascular conhecida, fator de risco cardiovascular (incluindo idade ≥65 anos) ou sintoma sugestivo de doença cardiovascular, deve ser considerada a dosagem de BNP ou NT-proBNP antes de cirurgia não cardíaca de risco intermediário ou alto. Em sentido oposto, em paciente de baixo risco submetido a cirurgia de baixo ou médio risco, a diretriz recomenda explicitamente NÃO obter rotineiramente ECG, troponina de alta sensibilidade ou BNP/NT-proBNP pré-operatórios — a mesma diretriz que recomenda o exame num grupo o contraindica rotineiramente no outro.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines on cardiovascular assessment and management of patients undergoing non-cardiac surgery",
+    "reference": "Halvorsen S, Mehilli J, Cassese S, et al. 2022 ESC Guidelines on cardiovascular assessment and management of patients undergoing non-cardiac surgery. Eur Heart J. 2022;43(39):3826-3924. DOI: 10.1093/eurheartj/ehac270. PMID: 36017553 — classe e nível conferidos no texto integral da diretriz em 30/07/2026, seção 4.4. A recomendação Classe III/B contra uso rotineiro em baixo risco está no mesmo quadro de recomendações e é citada aqui em contraste, não como registro próprio.",
+    "theme": "Perioperatório",
+    "tags": [
+      "nt-probnp",
+      "bnp",
+      "peptídeo natriurético",
+      "perioperatório",
+      "risco cardiovascular",
+      "biomarcador"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
