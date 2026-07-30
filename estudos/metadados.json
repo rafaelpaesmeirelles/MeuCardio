@@ -1302,5 +1302,29 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "accord-bp-controle-intensivo-da-pressao-arterial-no-diabetes-tipo-2",
+    "title": "ACCORD-BP — Controle intensivo da pressão arterial no diabetes tipo 2",
+    "study_type": "ensaio_clinico",
+    "authors": "Cushman WC et al. (ACCORD Study Group)",
+    "journal": "New England Journal of Medicine",
+    "year": 2010,
+    "doi": "10.1056/NEJMoa1001286",
+    "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1001286",
+    "summary": "Ensaio randomizado dentro do estudo ACCORD, com pacientes com diabetes tipo 2 de alto risco cardiovascular, comparando meta de pressão arterial sistólica intensiva (<120 mmHg, PAS média alcançada de 119,3 mmHg) versus padrão (<140 mmHg, PAS média alcançada de 133,5 mmHg) — o mesmo desenho do SPRINT, mas numa população só de diabéticos, que o SPRINT excluiu.",
+    "key_findings": "Desfecho composto primário (infarto não fatal, AVC não fatal ou morte cardiovascular) não diferiu entre os grupos: taxa anual de 1,87% no grupo intensivo versus 2,09% no grupo padrão — HR 0,88 (IC 95% 0,73-1,06; p=0,20). O AVC isoladamente, desfecho secundário, foi significativamente menor no grupo intensivo: taxa anual de 0,32% versus 0,53% — HR 0,59 (IC 95% 0,39-0,89; p=0,01).",
+    "clinical_implications": "Contrasta diretamente com o SPRINT: no paciente diabético, controle pressórico intensivo (<120 mmHg) não reduziu o desfecho cardiovascular composto principal, embora tenha reduzido AVC — sugerindo que o benefício de meta pressórica muito baixa observado no SPRINT (população sem diabetes) não se replica da mesma forma no diabético, e reforçando que resultado de um ensaio não deve ser extrapolado automaticamente para população diferente da estudada.",
+    "limitations": "Desenho fatorial 2x2 do ACCORD original (compartilhado com o braço de controle glicêmico e o de lipídios), o que pode introduzir interação entre intervenções; poder estatístico para o desfecho composto principal foi menor que o planejado, o que limita a conclusão de equivalência entre as duas metas.",
+    "theme": "Hipertensão",
+    "tags": [
+      "accord-bp",
+      "hipertensão",
+      "diabetes tipo 2",
+      "meta pressórica",
+      "ensaio clínico"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
