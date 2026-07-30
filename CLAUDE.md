@@ -117,6 +117,20 @@ Regras que decorrem disso:
 >   cardíaco (Pericárdio), com escore de triagem de progressão e tabela de causas; e
 >   diagnóstico/manejo de síncope (Síncope), preenchendo lacuna de testes autonômicos,
 >   estudo eletrofisiológico e Escore de Calgary.
+> - **Lote 4** (commits `710214b` até `941446c`, ainda sem novo aval explícito do Rafael —
+>   apresentado aqui pelo mesmo motivo dos lotes anteriores, para checkpoint antes de
+>   publicar): uma entrada nova em `exames/metadados.json` (índice de Celermajer na anomalia
+>   de Ebstein, com enriquecimento cruzado do documento de Ebstein em
+>   `content/Cardiopatias_congênitas/`); mais três entradas novas em `exames/metadados.json`
+>   fechando o empate de cobertura em Febre reumática, Síncope e Perioperatório (anti-DNase B,
+>   monitor de eventos implantável/ILR na síncope, NT-proBNP pré-operatório); mais três
+>   imagens novas em `galeria/metadados.json`, todas com licença conferida na página do
+>   arquivo antes do download — correlação anatomo-ecocardiográfica da anomalia de Ebstein
+>   (CC BY 2.0, `galeria/eco/anomalia-de-ebstein-correlacao-anatomo-ecocardiografica.jpg`),
+>   ECG de STEMI de parede anterior extensa (domínio público,
+>   `galeria/ecg/stemi-anterior-extenso.jpg`) e traçado hemodinâmico de gradiente pressórico
+>   na estenose aórtica (CC BY-SA 2.0, primeira imagem da pasta nova `galeria/hemodinamica/`,
+>   `estenose-aortica-gradiente-pressorico-ve-aorta.png`).
 >
 > **Uma entrada NÃO deve ser publicada com o resto, apesar da aprovação geral**: em
 > `evidencias/metadados.json`, o registro
