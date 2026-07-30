@@ -3,9 +3,9 @@ title: "Doença Valvar Cardíaca: Diagnóstico e Manejo (ESC/EACTS 2021→2025)"
 slug: doenca-valvar-cardiaca-diagnostico-e-manejo-esceacts-20212025
 theme: "Valvopatias"
 kind: protocolo
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["2025 ESC/EACTS Guidelines for the management of valvular heart disease · ESC/EACTS · 2025 · https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/valvular-heart-disease/", "2021 ESC/EACTS Valvular Heart Disease Guidelines: Key Points · ACC · 2021 · https://www.acc.org/latest-in-cardiology/ten-points-to-remember/2021/08/28/20/58/2021-esc-eacts-guidelines-vhd-esc-2021"]
-legacy_source: "Fusão de dois documentos de valvopatia na mesma pasta, com 13 e 9 seções e 4 em comum."
+legacy_source: "Fusão de dois documentos de valvopatia na mesma pasta, com 13 e 9 seções e 4 em comum. Revisado a fundo em 30/07/2026: o corte etário de TAVI (≥70 anos, valva tricúspide, independente do risco cirúrgico) já estava correto aqui e conferido de forma independente contra múltiplas fontes secundárias concordantes — consistente com os dois outros documentos desta pasta dedicados à mesma mudança, revisados na mesma sessão. Seção 'Criterios internacao', vazia, preenchida."
 ---
 
 # Doença Valvar Cardíaca: Diagnóstico e Manejo (ESC/EACTS 2021→2025)
@@ -46,6 +46,7 @@ NOACs contraindicados em estenose mitral clinicamente significativa ou válvulas
 Refinamento de indicações e timing para opções intervencionistas em todo espectro de VHD; critérios diagnósticos mais claros para estenose aórtica e doença valvar múltipla
 
 ## Criterios internacao
+Descompensação hemodinâmica ou choque cardiogênico secundário a valvopatia grave; edema agudo de pulmão; síncope de esforço em estenose aórtica grave sintomática; endocardite infecciosa sobre prótese ou valva nativa com repercussão hemodinâmica; disfunção protética aguda (trombose ou deiscência); necessidade de intervenção percutânea ou cirúrgica não eletiva. Estenose aórtica grave assintomática, por si só, não é critério de internação — é indicação de seguimento ambulatorial estruturado com Heart Team, salvo critério formal de intervenção precoce.
 
 ## Armadilhas clinicas
 Usar NOAC em estenose mitral significativa ou válvula mecânica; decidir modo de intervenção em estenose aórtica sem envolvimento formal do Heart Team; negligenciar avaliação anual de prótese valvar
