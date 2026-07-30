@@ -169,7 +169,13 @@ Regras que decorrem disso:
 >   corrigido pela sessão de Medicamentos (commit `5008b38`, ver aviso próprio acima nesta
 >   seção)**: conferido nesta sessão que nenhuma das entradas de evidências desta sessão
 >   violava o limite de `VARCHAR(5)` em `evidence_level`/`recommendation_class` — o defeito
->   era isolado ao registro de febre reumática já sinalizado como pendente.
+>   era isolado ao registro de febre reumática já sinalizado como pendente. Mais quatro
+>   entradas novas em `evidencias/metadados.json` (commit `5745f15`), fechando o empate de
+>   cobertura em Febre reumática, Pericárdio, Aorta e DAP e Cardiopatias congênitas —
+>   destaque para o registro de faringite estreptocócica (WHO 2024), que usa força/certeza
+>   GRADE (não a escala Classe/Nível ESC-AHA) e traz nota explícita disso no campo
+>   `reference`, com os campos curtos (`Forte`, `Mod`) checados por script para não repetir
+>   o defeito de esquema que a sessão de Medicamentos corrigiu.
 >
 > **Uma entrada NÃO deve ser publicada com o resto, apesar da aprovação geral**: em
 > `evidencias/metadados.json`, o registro
