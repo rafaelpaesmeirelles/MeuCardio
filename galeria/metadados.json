@@ -1156,5 +1156,28 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "ecg-wolff-parkinson-white-onda-delta",
+    "title": "ECG — Síndrome de Wolff-Parkinson-White, onda delta e PR curto",
+    "modality": "ECG",
+    "theme": "Síncope",
+    "file_path": "ecg/ecg-wolff-parkinson-white-onda-delta.png",
+    "findings": "Traçado de 12 derivações mostrando intervalo PR curto e empastamento no início do QRS (onda delta), visível de forma mais nítida nas derivações precordiais — achado clássico de pré-excitação ventricular por via acessória (feixe de Kent), que despolariza parte do ventrículo antes do estímulo chegar pelo nó AV.",
+    "teaching_points": "A síndrome de Wolff-Parkinson-White é causa cardíaca de síncope por dois mecanismos distintos: taquicardia por reentrada atrioventricular (mais comum, geralmente benigna hemodinamicamente) e, o cenário que importa estratificar, fibrilação atrial pré-excitada — a via acessória pode conduzir o estímulo atrial rapidamente ao ventrículo sem o efeito 'filtro' do nó AV, permitindo frequência ventricular muito alta e risco de degeneração para fibrilação ventricular e morte súbita. **Marcadores clássicos de via acessória de alto risco**, usados para estratificação (síncope inexplicada em portador de pré-excitação deve levantar essa investigação): menor intervalo RR pré-excitado durante FA induzida <250 ms, e período refratário efetivo anterógrado da via acessória <240 ms — quanto mais curtos, maior a capacidade de condução rápida e maior o risco. Esses dois cortes numéricos aparecem de forma consistente nas diretrizes de referência (ACC/AHA/HRS 2015 para taquicardia supraventricular, ESC 2019) como critério para indicar estudo eletrofisiológico e ablação por cateter, mesmo em paciente assintomático jovem. Síncope em portador de padrão de WPW ao ECG nunca deve ser atribuída a vasovagal por exclusão sem essa investigação.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Wolff-Parkinson-White_syndrome_12_lead_EKG.png",
+    "license": "CC BY-SA 3.0 / GFDL 1.2+",
+    "attribution": "Ksheka, via Wikimedia Commons, licenciado sob CC BY-SA 3.0 (dupla licença com GFDL 1.2+). Marcadores de risco de via acessória (SPERRI <250ms, PRE <240ms) conferidos contra múltiplas fontes secundárias concordantes, citando as diretrizes ACC/AHA/HRS 2015 e ESC 2019, em 30/07/2026.",
+    "tags": [
+      "wolff-parkinson-white",
+      "wpw",
+      "onda delta",
+      "pré-excitação",
+      "síncope cardíaca",
+      "ecg"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
