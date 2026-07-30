@@ -261,7 +261,7 @@ export default function Receituario() {
   return (
     <>
       <p className="eyebrow">Documentos</p>
-      <h1>Emitir receita</h1>
+      <h1>Prescrição Eletrônica</h1>
 
       {!criado ? (
         <div className="cartao" style={{ maxWidth: "72ch" }}>

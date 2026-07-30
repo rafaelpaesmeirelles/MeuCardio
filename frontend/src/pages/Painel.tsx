@@ -47,7 +47,7 @@ const GRUPOS: Grupo[] = [
       },
       {
         to: "/interacoes",
-        nome: "Checador de interação",
+        nome: "Checador de Interação Medicamentosa",
         descricao: "Monte a lista do que o paciente já usa e do que você vai prescrever, e veja as interações com gravidade e fonte.",
       },
       {
@@ -99,14 +99,9 @@ const GRUPOS: Grupo[] = [
     ],
   },
   {
-    titulo: "Beira do leito e documentos",
+    titulo: "Beira do leito",
     descricao: "O que acompanha o paciente do round à alta.",
     funcoes: [
-      {
-        to: "/telediagnostico",
-        nome: "Laudo e consultoria",
-        descricao: "Envie ECG, MAPA, Holter ou teste ergométrico e receba interpretação ou laudo, com prazo definido.",
-      },
       {
         to: "/round",
         nome: "Round hospitalar",
@@ -117,9 +112,20 @@ const GRUPOS: Grupo[] = [
         nome: "Checklist de alta",
         descricao: "O que não pode faltar na alta pós-evento cardiovascular, marcado item a item antes de liberar.",
       },
+    ],
+  },
+  {
+    titulo: "Documentos",
+    descricao: "O que sai do consultório — receita, atestado, laudo, material do paciente e agenda.",
+    funcoes: [
+      {
+        to: "/receituario",
+        nome: "Prescrição Eletrônica",
+        descricao: "Monte a receita com os fármacos da base estruturada e emita para o paciente.",
+      },
       {
         to: "/documentos",
-        nome: "Modelos de documento",
+        nome: "Emissão de Documentos Online",
         descricao: "Templates que geram o documento já preenchido com os dados do paciente.",
       },
       {
@@ -131,6 +137,10 @@ const GRUPOS: Grupo[] = [
         to: "/agenda",
         nome: "Agenda",
         descricao: "Compromissos, retornos e o que está marcado para os próximos dias.",
+      },
+      {
+        nome: "Laudo e consultoria",
+        descricao: "Envie ECG, MAPA, Holter ou teste ergométrico e receba interpretação ou laudo, com prazo definido.",
       },
     ],
   },
@@ -144,7 +154,6 @@ const GRUPOS: Grupo[] = [
         descricao: "Sequência guiada por tema: o protocolo, a farmacologia, os estudos pivotais e as calculadoras, nessa ordem.",
       },
       {
-        to: "/cursos",
         nome: "Cursos parceiros",
         descricao: "Preparação para o Título de Especialista, com material de apoio arquivado aqui.",
       },
