@@ -40,13 +40,28 @@ export default defineConfig({
             // única tela que não pode falhar é justamente esta.
             urlPattern: /\/api\/emergencia/,
             handler: "StaleWhileRevalidate",
-            options: { cacheName: "corvia-emergencia", expiration: { maxEntries: 8 } }
+            options: {
+              // Nome novo de propósito: descarta qualquer cache antigo que já
+              // tenha guardado uma resposta de erro, em vez de esperar que ela
+              // expire por conta própria.
+              cacheName: "corvia-emergencia-v2",
+              expiration: { maxEntries: 8 },
+              // Sem isto, uma resposta de erro (401/404 — por exemplo, de antes
+              // de a rota existir em produção) fica presa em cache e a tela
+              // volta a mostrá-la a cada abertura, mesmo com o backend já
+              // corrigido: só uma resposta 200 substitui o cache.
+              cacheableResponse: { statuses: [200] }
+            }
           },
           {
             // Conteúdo científico fica disponível offline após a primeira leitura.
             urlPattern: /\/api\/(library|calculators|drugs|material-paciente)/,
             handler: "StaleWhileRevalidate",
-            options: { cacheName: "corvia-conteudo", expiration: { maxEntries: 500 } }
+            options: {
+              cacheName: "corvia-conteudo",
+              expiration: { maxEntries: 500 },
+              cacheableResponse: { statuses: [200] }
+            }
           },
           {
             // Dados de paciente nunca são cacheados.
