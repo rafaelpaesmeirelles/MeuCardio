@@ -858,6 +858,32 @@
     "published": false
   },
   {
+    "slug": "aspirina-na-endocardite-infecciosa-ensaio-multicentrico",
+    "title": "Aspirina na endocardite infecciosa — ensaio multicêntrico randomizado",
+    "study_type": "ensaio_clinico",
+    "authors": "Chan KL, Dumesnil JG, Cujec B, et al. (Multicenter Aspirin Study in Infective Endocarditis)",
+    "journal": "Journal of the American College of Cardiology",
+    "year": 2003,
+    "doi": "10.1016/S0735-1097(03)00829-5",
+    "pmid": "12957419",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/12957419/",
+    "summary": "Ensaio randomizado, duplo-cego, controlado por placebo, multicêntrico, com 115 pacientes com endocardite infecciosa já em antibioticoterapia. Testou se acrescentar AAS 325 mg/dia por 4 semanas (60 pacientes) reduziria eventos embólicos sistêmicos clínicos, contra placebo (55 pacientes).",
+    "key_findings": "Evento embólico clínico: 28,3% (17/60) com AAS contra 20,0% (11/55) com placebo — razão de chances 1,62 (IC95% 0,68-3,86; p=0,29), sem diferença significativa. Sangramento foi numericamente mais frequente com AAS — razão de chances 1,92 (IC95% 0,76-4,86; p=0,075), tendência a mais sangramento sem benefício embólico compensatório.",
+    "clinical_implications": "Resultado negativo que orienta a conduta pelo lado oposto: não há indicação de acrescentar AAS empiricamente para reduzir embolia na endocardite infecciosa em tratamento antibiótico. Antiagregação não deve ser iniciada ou mantida só por causa da endocardite — decisão sobre AAS deve seguir a indicação cardiovascular de base do paciente, não o diagnóstico de endocardite.",
+    "limitations": "Amostra pequena (115 pacientes) para detectar diferença moderada em eventos embólicos, que já são relativamente raros — o ensaio pode estar subdimensionado (erro tipo II) mais do que ter provado ausência real de efeito. Não avaliou pacientes já em uso crônico de antiagregante antes do diagnóstico.",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite infecciosa",
+      "aspirina",
+      "aas",
+      "embolia",
+      "ensaio clínico",
+      "resultado negativo"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
     "slug": "issue-3-marca-passo-na-sincope-reflexa-com-assistolia-documentada",
     "title": "ISSUE-3 — Marca-passo na síncope reflexa com assistolia documentada por monitor implantável",
     "study_type": "ensaio_clinico",
@@ -1079,6 +1105,31 @@
       "penicilina benzatina",
       "recorrência",
       "ensaio clínico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "rastreio-ecocardiografico-escolar-para-doenca-reumatica-cardiaca-nepal",
+    "title": "Rastreio ecocardiográfico escolar para doença reumática cardíaca — ensaio clínico randomizado por conglomerado no Nepal",
+    "study_type": "ensaio_clinico",
+    "authors": "Karki P, Uranw S, Bastola S, et al.",
+    "journal": "JAMA Cardiology",
+    "year": 2021,
+    "doi": "10.1001/jamacardio.2020.7050",
+    "pmid": "33471029",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/33471029/",
+    "summary": "Ensaio clínico randomizado por conglomerado (cluster) em 35 escolas do Nepal (19 no grupo experimental, 16 controle; 32 escolas concluíram o seguimento). Grupo experimental: rastreio ecocardiográfico sistemático de crianças de 9-16 anos seguido de profilaxia antibiótica secundária (penicilina G benzatina intramuscular) para os casos diagnosticados de doença reumática cardíaca (DRC) latente. Grupo controle: sem rastreio. Desfecho primário: prevalência de DRC definida ou borderline (critérios da World Heart Federation) no seguimento.",
+    "key_findings": "Prevalência de DRC no seguimento: 3,8 por 1.000 crianças no grupo experimental (IC95% 1,5-9,8) contra 10,8 por 1.000 no grupo controle (IC95% 4,7-24,7) — razão de chances 0,34 (IC95% 0,11-1,07; p=0,06), sem atingir significância estatística na comparação entre grupos. Na análise transversal repetida dentro do próprio grupo experimental (basal de 12,9 por 1.000 contra seguimento de 3,8 por 1.000), a redução foi significativa — razão de chances 0,29 (IC95% 0,13-0,65; p=0,008).",
+    "clinical_implications": "Sustenta rastreio ecocardiográfico escolar mais profilaxia secundária como estratégia para reduzir a prevalência de doença reumática cardíaca latente em região de alta endemicidade, com o resultado positivo mais claro na queda observada dentro do próprio grupo rastreado ao longo do tempo do que na comparação direta contra o grupo controle, que não atingiu p<0,05.",
+    "limitations": "Comparação principal entre grupos não atingiu significância estatística formal (p=0,06) — resultado sugestivo, não definitivo. Contexto de altíssima endemicidade (Nepal), o que limita extrapolação direta para populações de baixa prevalência. Desfecho é prevalência de doença estrutural, não desfecho clínico duro (insuficiência cardíaca, cirurgia valvar, mortalidade).",
+    "theme": "Febre reumática",
+    "tags": [
+      "doença reumática cardíaca",
+      "rastreio ecocardiográfico",
+      "profilaxia secundária",
+      "penicilina benzatina",
+      "ensaio clínico por conglomerado"
     ],
     "review_status": "revisado",
     "published": false
