@@ -3,9 +3,9 @@ title: "Pericardite Aguda: Diagnóstico, Tratamento e Prevenção de Recorrênci
 slug: pericardite-aguda-diagnostico-tratamento-e-prevencao-de-recorrencia
 theme: "Pericárdio"
 kind: protocolo
-review_status: pendente_revisao
-source_refs: ["A Randomized Trial of Colchicine for Acute Pericarditis (ICAP) · NEJM · 2013 · https://www.nejm.org/doi/full/10.1056/NEJMoa1208536", "Acute pericarditis: Update on diagnosis and management · PMC · https://pmc.ncbi.nlm.nih.gov/articles/PMC6964178/"]
-legacy_source: "Protocolo de Pericardite Aguda (Aprofundado)"
+review_status: revisado
+source_refs: ["Imazio M, Bobbio M, Cecchi E, et al. Colchicine in addition to conventional therapy for acute pericarditis: results of the COlchicine for acute PEricarditis (COPE) trial. Circulation. 2005;112(13):2012-2016. DOI: 10.1161/CIRCULATIONAHA.105.542738. PMID: 16186437.", "Imazio M, Brucato A, Cemin R, et al. A randomized trial of colchicine for acute pericarditis (ICAP). N Engl J Med. 2013;369(16):1522-1528. DOI: 10.1056/NEJMoa1208536. PMID: 24552335.", "Schulz-Menger J, Collini V, Gröschel J, et al. 2025 ESC Guidelines for the management of myocarditis and pericarditis. Eur Heart J. 2025;46(40):3952-4041. DOI: 10.1093/eurheartj/ehaf192. PMID: 40878297 — Tabela 13 (dosagem), conferida contra o texto integral."]
+legacy_source: "Revisado em 30/07/2026 — os números de COPE e ICAP já estavam corretos na versão anterior, mas sem PMID/DOI (só link do NEJM e de uma revisão secundária da PMC); o desfecho primário do ICAP não estava citado com número, só a metodologia. Corrigido."
 ---
 
 # Pericardite Aguda: Diagnóstico, Tratamento e Prevenção de Recorrência
@@ -24,8 +24,8 @@ Dor torácica aguda, pleurítica, retroesternal, aliviada ao sentar-se e inclina
 
 ## Evidencia pivotal colchicina
 - **cope trial**: 120 pacientes; colchicina + AAS vs. AAS isolado; redução de recorrência em 18 meses de 32,3% para 10,7% (p=0,004, NNT=5); redução de persistência de sintomas em 72h de 36,7% para 11,7% (p=0,003)
-- **icap trial**: Ensaio randomizado, duplo-cego, multicêntrico (NEJM); colchicina 0,5 mg 2x/dia (>70 kg) ou 0,5 mg 1x/dia (≤70 kg) por 3 meses vs. placebo, associada à terapia convencional; desfecho primário foi pericardite incessante ou recorrente
-- **fonte**: COPE/CORE ; ICAP/NEJM
+- **icap trial**: Ensaio randomizado, duplo-cego, multicêntrico, 240 pacientes com primeiro episódio de pericardite aguda; colchicina 0,5 mg 2x/dia (>70 kg) ou 0,5 mg 1x/dia (≤70 kg) por 3 meses vs. placebo, associada à terapia convencional (AAS/AINE). Desfecho primário (pericardite incessante ou recorrente): **16,7% no grupo colchicina vs. 37,5% no grupo placebo** (redução de risco relativo de 56%; IC95% 30-72%; p<0,001). Recorrência isolada: 9,2% vs. 20,8% (p=0,02).
+- **fonte**: Imazio M et al., Circulation 2005;112:2012-2016 (COPE), PMID 16186437; Imazio M et al., N Engl J Med 2013;369:1522-1528 (ICAP), PMID 24552335
 
 ## Corticosteroides
 - **papel restrito**: Não devem ser usados como agentes de primeira linha na pericardite idiopática aguda, mas podem ter papel adjuvante em doença recorrente ou quando há doença reumática autoimune subjacente
