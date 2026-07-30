@@ -181,8 +181,10 @@ Regras que decorrem disso:
 >   `galeria/metadados.json` (derrame pericárdico com silhueta em moringa, RX+TC
 >   correlacionadas, CC BY-SA 4.0, licença conferida na página do arquivo); mais um documento
 >   novo em `content/Aorta_e_doença_arterial_periférica/` (estenose de carótida — NASCET x
->   ECST, indicação de revascularização em assintomático vs sintomático, ESC 2024) — commits
->   até `d03c2af`.
+>   ECST, indicação de revascularização em assintomático vs sintomático, ESC 2024); mais uma
+>   imagem em `galeria/metadados.json` (placa aterosclerótica de endarterectomia de carótida,
+>   CC BY 2.0, licença e revisão FlickreviewR conferidas na página do arquivo) — commits até
+>   `70ca61f`.
 >
 > **Uma entrada NÃO deve ser publicada com o resto, apesar da aprovação geral**: em
 > `evidencias/metadados.json`, o registro
