@@ -579,6 +579,31 @@
     ]
   },
   {
+    "slug": "strain-longitudinal-global-e-poupanca-apical-em-cardiomiopatias",
+    "name": "Strain longitudinal global (GLS) e padrão de poupança apical",
+    "category": "imagem",
+    "theme": "Cardiomiopatias",
+    "what_it_measures": "Deformação miocárdica longitudinal medida por ecocardiografia speckle-tracking bidimensional — quantifica o encurtamento das fibras miocárdicas ao longo do eixo longitudinal do ventrículo esquerdo durante a sístole, expresso em percentual negativo (quanto mais negativo, melhor a função). A razão de poupança apical (relative apical sparing ratio) compara a deformação apical com a basal/média: strain apical médio ÷ (strain basal médio + strain médio médio), destacando o padrão característico de acometimento predominantemente basal/médio com relativa preservação do ápice.",
+    "reference_range": "GLS normal: mais negativo que -18%. Faixa limítrofe: -16% a -18%. GLS anormal (reduzido): menos negativo que -16% — consenso ASE/EACVI de imagem por deformação. Razão de poupança apical ≥1,0 é o corte associado a maior probabilidade de amiloidose cardíaca frente a outras causas de hipertrofia ventricular esquerda.",
+    "indications": "Investigação de cardiomiopatia com hipertrofia ventricular esquerda de causa indeterminada, quando há suspeita de doença infiltrativa (amiloidose) por outros achados (idade, síndrome do túnel do carpo bilateral, baixa voltagem no ECG desproporcional à espessura parietal, disfunção diastólica desproporcional). Também usado de forma mais ampla como marcador precoce e mais reprodutível de disfunção sistólica subclínica do que a fração de ejeção em cardio-oncologia (vigilância de cardiotoxicidade) e em outras cardiomiopatias.",
+    "interpretation": "No estudo que descreveu e validou o padrão (Phelan D et al., Heart 2012; 55 pacientes com amiloidose cardíaca versus 30 controles com hipertrofia ventricular esquerda de outra causa — 15 cardiomiopatia hipertrófica, 15 estenose aórtica): a razão de poupança apical teve sensibilidade de 93%, especificidade de 82% e área sob a curva ROC de 0,94 para diferenciar amiloidose cardíaca das outras causas de hipertrofia. O padrão visual característico — strain reduzido em segmentos basais e médios com relativa preservação do ápice, formando um mapa em 'olho de boi' (bull's-eye) invertido — é reconhecível mesmo antes do cálculo numérico da razão.",
+    "limitations": "O próprio padrão de poupança apical tem limitações reconhecidas por estudos mais recentes: pode ocorrer em outras causas de hipertrofia ventricular esquerda (hipertensão arterial de longa data, estenose aórtica grave, cardiomiopatia hipertrófica), reduzindo a especificidade fora da coorte original de validação — não deve ser interpretado isoladamente, e sim associado a outros marcadores (ECG de baixa voltagem, RM com realce tardio difuso/mapeamento de T1, cintilografia com pirofosfato para ATTR). Medida de strain é dependente de equipamento, software de análise e qualidade da janela acústica — comparação seriada no mesmo paciente deve, sempre que possível, usar o mesmo equipamento/software.",
+    "source_refs": [
+      "Phelan D, Collier P, Thavendiranathan P, et al. Relative apical sparing of longitudinal strain using two-dimensional speckle-tracking echocardiography is both sensitive and specific for the diagnosis of cardiac amyloidosis. Heart. 2012;98(19):1442-1448. DOI: 10.1136/heartjnl-2012-302353. PMID: 22865865 — números de sensibilidade/especificidade conferidos contra o resumo do artigo.",
+      "Voigt JU, Pedrizzetti G, Lysyansky P, et al. Definitions for a common standard for 2D speckle tracking echocardiography: consensus document of the EACVI/ASE/Industry Task Force. Eur Heart J Cardiovasc Imaging. 2015;16(1):1-11 — faixa de referência normal/limítrofe/anormal de GLS."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "strain longitudinal global",
+      "gls",
+      "speckle tracking",
+      "poupança apical",
+      "amiloidose cardíaca",
+      "ecocardiograma"
+    ]
+  },
+  {
     "slug": "proteina-c-reativa-na-pericardite-aguda",
     "name": "Proteína C-reativa (PCR) na pericardite aguda",
     "category": "laboratorial",
@@ -603,6 +628,30 @@
     ]
   },
   {
+    "slug": "realce-tardio-pericardico-por-ressonancia-cardiaca",
+    "name": "Realce tardio pericárdico por ressonância cardíaca (RM)",
+    "category": "imagem",
+    "theme": "Pericárdio",
+    "what_it_measures": "Captação de gadolínio pelo pericárdio em sequências tardias de ressonância cardíaca, marcador de inflamação pericárdica ativa — distinto do espessamento e da calcificação, que indicam fibrose/cronicidade e são vistos por tomografia. É o exame que separa, na pericardite constritiva, o componente potencialmente reversível (inflamatório) do irreversível (fibrótico).",
+    "reference_range": "Achado semiquantitativo: espessura do realce tardio pericárdico em milímetros e intensidade classificada como ausente/leve/moderada/grave. Não há corte único validado por diretriz internacional, mas o estudo pivotal (Feng D et al., Circulation 2011) identificou espessura de realce tardio ≥3 mm como o ponto de corte com melhor desempenho para prever reversibilidade da constrição.",
+    "indications": "Indicado quando a pericardite constritiva é recém-diagnosticada ou considerada potencialmente transitória, para decidir entre tentar terapia anti-inflamatória por 3-6 meses (evitando pericardiectomia) ou encaminhar direto para cirurgia — a mesma decisão sustentada pela Recommendation Table 24 da ESC 2025, que recomenda imagem multimodal (Classe I) em todo paciente com suspeita de pericardite constritiva.",
+    "interpretation": "No estudo pivotal (29 pacientes, 14 com constrição reversível e 15 com constrição persistente após terapia anti-inflamatória): espessura basal do realce tardio pericárdico foi de 4±1 mm no grupo reversível contra 2±1 mm no grupo persistente (p=0,001); intensidade moderada ou grave esteve presente em 93% do grupo reversível contra 33% do persistente (p=0,002). O corte de espessura ≥3 mm teve sensibilidade de 86% e especificidade de 80% para prever reversibilidade. Marcadores inflamatórios sistêmicos acompanharam o achado de imagem: PCR 59±52 mg/L (reversível) versus 12±14 mg/L (persistente), p=0,04; VHS 49±25 mm/h versus 15±16 mm/h, p=0,04 — inflamação sistêmica e pericárdica caminham juntas nesse contexto.",
+    "limitations": "Estudo pivotal pequeno (29 pacientes, unicêntrico) — o corte de 3 mm não foi validado de forma independente em coorte externa maior. Realce tardio pericárdico reflete inflamação ativa, mas sua ausência não exclui constrição estabelecida por outro mecanismo (calcificação densa sem componente inflamatório ativo residual), onde o achado relevante é antes a espessura/calcificação na tomografia do que o realce na RM.",
+    "source_refs": [
+      "Feng D, Glockner J, Kim K, et al. Cardiac magnetic resonance imaging pericardial late gadolinium enhancement and elevated inflammatory markers can predict the reversibility of constrictive pericarditis after antiinflammatory medical therapy: a pilot study. Circulation. 2011;124(17):1830-1837. DOI: 10.1161/CIRCULATIONAHA.111.026070. PMID: 21969014 — números conferidos contra o texto do artigo.",
+      "2025 ESC Guidelines for the management of myocarditis and pericarditis. Eur Heart J. 2025;46(40):3952-4041. PMID 40878297. DOI 10.1093/eurheartj/ehaf192 — Recommendation Table 24, indicação de imagem multimodal na pericardite constritiva, conferida no PDF integral."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ressonância cardíaca",
+      "realce tardio",
+      "pericardite constritiva",
+      "inflamação pericárdica",
+      "reversibilidade"
+    ]
+  },
+  {
     "slug": "ecocardiograma-transesofagico-na-endocardite-infecciosa",
     "name": "Ecocardiograma transesofágico (ETE) na endocardite infecciosa",
     "category": "imagem",
@@ -624,6 +673,31 @@
       "vegetacao",
       "abscesso perivalvular",
       "duke-iscvid"
+    ]
+  },
+  {
+    "slug": "pet-ct-com-fdg-na-endocardite-de-protese-valvar",
+    "name": "PET-CT com ¹⁸F-FDG na endocardite de prótese valvar",
+    "category": "imagem",
+    "theme": "Endocardite",
+    "what_it_measures": "Tomografia por emissão de pósitrons com ¹⁸F-fluordesoxiglicose (¹⁸F-FDG) associada a tomografia computadorizada, detectando atividade metabólica anormal (captação de glicose por células inflamatórias/infecciosas) em torno de válvula protética, enxerto de aorta ascendente, eletrodo de dispositivo intracardíaco ou outro material protético — achado incorporado como critério de imagem maior nos critérios de Duke-ISCVID 2023.",
+    "reference_range": "Achado qualitativo/semiquantitativo — captação focal anormal ao redor do anel protético, distinta do padrão difuso e homogêneo esperado no pós-operatório normal. Não há valor de SUV (standardized uptake value) de corte único endossado pela diretriz como critério diagnóstico formal; a leitura exige comparação com o padrão de captação típico versus atípico, o que demanda interpretação por observador experiente.",
+    "indications": "Classe I, Nível B pela diretriz ESC 2023, para casos de suspeita de endocardite de prótese valvar (EPV) — tanto para detectar a lesão quanto para confirmar o diagnóstico. É especificamente na prótese valvar, não na valva nativa, que o exame tem seu melhor desempenho: a inflamação cicatricial pós-cirúrgica normal do tecido nativo reduz a especificidade do método nesse cenário. Por isso a diretriz restringe a indicação de maior força à prótese, dispositivo ou enxerto — material estranho, onde a captação de fundo é mais previsível.",
+    "interpretation": "Em coorte de validação (Primus CP et al., J Nucl Cardiol 2021), o PET-CT teve sensibilidade de 87% e especificidade de 86% especificamente para endocardite de prótese valvar. O impacto sobre a classificação diagnóstica foi grande: de 19 casos classificados como 'possível' EPV pelos critérios de Duke modificados isoladamente, apenas 3 permaneceram 'possível' após o PET — 13 foram descartados e 21 confirmados como 'definitivo' (índice de reclassificação líquida de 0,90). A área sob a curva ROC para o diagnóstico de EPV subiu de 0,633 (critérios de Duke modificados isolados) para 0,877 com a incorporação do PET — ou seja, o exame não é só mais um dado, é o que resolve a maioria dos casos que ficariam presos na categoria intermediária 'possível', clinicamente inútil para decisão.",
+    "limitations": "Exige janela de pelo menos 3 meses após a cirurgia valvar para reduzir falso-positivo por inflamação pós-operatória normal — PET-CT realizado antes desse prazo tem interpretação prejudicada e não deve ser usado para descartar ou confirmar EPV nesse período. Requer preparo dietético específico (dieta cetogênica/jejum prolongado) para suprimir captação miocárdica fisiológica de glicose antes do exame, e sua ausência invalida a leitura. Disponibilidade limitada fora de centros terciários com medicina nuclear cardíaca dedicada. Desempenho pior e menos estudado na endocardite de valva nativa, onde não é a indicação de maior força.",
+    "source_refs": [
+      "2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. PMID 37622656. DOI 10.1093/eurheartj/ehad193 — critério de imagem maior dos critérios de Duke-ISCVID 2023, indicação Classe I/B em suspeita de endocardite de prótese valvar.",
+      "Primus CP, Clay TA, McCue MS, et al. 18F-FDG PET/CT improves diagnostic certainty in native and prosthetic valve Infective Endocarditis over the modified Duke Criteria. J Nucl Cardiol. 2021;29(5):2119-2128. DOI: 10.1007/s12350-021-02689-5. PMID: 34169473 — sensibilidade/especificidade e índice de reclassificação para EPV, conferidos contra o texto do artigo."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "pet-ct",
+      "fdg",
+      "endocardite de prótese valvar",
+      "duke-iscvid",
+      "medicina nuclear",
+      "critério de imagem maior"
     ]
   },
   {
@@ -672,6 +746,31 @@
       "add-rs",
       "ecg-gated",
       "hematoma intramural"
+    ]
+  },
+  {
+    "slug": "d-dimero-na-sindrome-aortica-aguda",
+    "name": "D-dímero na síndrome aórtica aguda",
+    "category": "laboratorial",
+    "theme": "Aorta e doença arterial periférica",
+    "what_it_measures": "Produto de degradação da fibrina, dosado no sangue periférico como teste de exclusão (não de confirmação) na suspeita de síndrome aórtica aguda (SAA) — dissecção, hematoma intramural ou úlcera penetrante geram exposição de trombo e ativação da coagulação, elevando o D-dímero na maioria dos casos verdadeiros.",
+    "reference_range": "Limiar mais estudado e mais usado nas estratégias de descarte: 500 ng/mL (0,5 μg/mL). Resultado abaixo desse valor, combinado a baixa probabilidade clínica pré-teste (ADD-RS), reduz de forma importante a probabilidade de SAA.",
+    "indications": "Não deve ser solicitado isoladamente, e sim como segundo passo de um algoritmo que começa pelo ADD-RS (Aortic Dissection Detection Risk Score) — a estratégia combinada é o que a Recommendation Table 44 da diretriz ESC 2024 recomenda (Classe I, Nível B), não o D-dímero isolado. Nunca solicitar em paciente hemodinamicamente instável com apresentação de alta probabilidade — nesse cenário o paciente vai direto para imagem, sem esperar resultado de laboratório.",
+    "interpretation": "Meta-análise de 22 estudos e 5.000 sujeitos (Watanabe H et al., Sci Rep 2016), no subgrupo de 12 estudos com corte de 500 ng/mL (833 casos de dissecção aórtica aguda e 1.994 controles): sensibilidade de 95,2% (IC95% 90,1-97,8%), especificidade de 60,4% (IC95% 48,5-71,2%) e razão de verossimilhança negativa de 0,079 (IC95% 0,036-0,172) — 'ótima acurácia geral' para descartar quando negativo. Meta-análise mais recente (Ren S et al., PLOS ONE 2024) comparou estratégias combinadas: ADD-RS>0 isolado teve sensibilidade de 94,6% e especificidade de 34,7%; ADD-RS>0 OU D-dímero>500 ng/mL elevou a sensibilidade para 99,8% (IC95% 98,7-100%) às custas de especificidade de apenas 21,8%; a estratégia da diretriz canadense (ADD-RS>1, ou ADD-RS=1 com D-dímero>500 ng/L) teve sensibilidade de 93,1% e especificidade de 67,1% — o equilíbrio mais usado na prática, sensível o bastante para triagem sem gerar tomografia em todo paciente com dor torácica.",
+    "limitations": "Especificidade baixa em qualquer estratégia (34-67%) — o exame serve para descartar em baixa probabilidade clínica, não para confirmar; resultado positivo não substitui a angiotomografia. Sensibilidade cai em subtipos específicos: hematoma intramural e dissecção trombosada/localizada tendem a gerar D-dímero mais baixo que dissecção com luz falsa patente extensa, o que pode gerar falso-negativo justamente nas apresentações menos óbvias clinicamente. Nunca deve atrasar a imagem em paciente instável ou de alta probabilidade clínica pré-teste.",
+    "source_refs": [
+      "Watanabe H, Horita N, Shibata Y, et al. Diagnostic test accuracy of D-dimer for acute aortic syndrome: systematic review and meta-analysis of 22 studies with 5000 subjects. Sci Rep. 2016;6:26893. DOI: 10.1038/srep26893. PMID: 27230962.",
+      "Ren S, Essat M, Pandor A, et al. Diagnostic accuracy of the aortic dissection detection risk score alone or with D-dimer for acute aortic syndromes: systematic review and meta-analysis. PLoS One. 2024;19(6):e0304401. DOI: 10.1371/journal.pone.0304401.",
+      "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. PMID 39210722. DOI 10.1093/eurheartj/ehae179 — Recommendation Table 44."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "d-dímero",
+      "síndrome aórtica aguda",
+      "add-rs",
+      "dissecção aórtica",
+      "exame de exclusão"
     ]
   },
   {
