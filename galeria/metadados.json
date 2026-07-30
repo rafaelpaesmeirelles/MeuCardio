@@ -912,5 +912,29 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "cardiotoxicidade-actinica-ressonancia-multimodal",
+    "title": "Ressonância cardíaca multimodal — cardiotoxicidade por radioterapia",
+    "modality": "Ressonância cardíaca",
+    "theme": "Cardio-oncologia",
+    "file_path": "rm/cardiotoxicidade-actinica-ressonancia-multimodal.jpg",
+    "findings": "Composição de quatro sequências de ressonância cardíaca no mesmo paciente com câncer de mama tratado com radioterapia: (A) cine em estado estacionário livre de precessão balanceada, mostrando derrame pericárdico volumoso adjacente à parede lateral do ventrículo esquerdo (seta amarela); (B) realce tardio por gadolínio, mostrando fibrose miocárdica linear na parede médio-ventricular (pontas de seta amarelas) e fibrose no ponto de inserção do ventrículo direito (pontas de seta vermelhas), padrão compatível com cardiomiopatia dilatada não isquêmica; (C) mapeamento de T1 nativo, com T1 = 981 ms na região de interesse demarcada — acima do normal, sugerindo expansão do interstício miocárdico; (D) mapa de strain miocárdico segmentar, com heterogeneidade regional.",
+    "teaching_points": "A radioterapia torácica é causa reconhecida de cardiotoxicidade tardia, com espectro que inclui derrame e constrição pericárdica, fibrose miocárdica, doença valvar e coronariana e distúrbio de condução — mecanismos distintos dos da cardiotoxicidade por antraciclina, ainda que os dois possam coexistir no mesmo paciente oncológico. A ressonância cardíaca é a modalidade que melhor integra as múltiplas facetas dessa cardiotoxicidade numa única aquisição: função e derrame pericárdico pelo cine, fibrose focal pelo realce tardio, fibrose difusa/expansão intersticial pelo mapeamento de T1 nativo (sem necessidade de contraste), e função regional pelo strain — nenhuma dessas quatro informações isoladamente conta a história completa.",
+    "source_name": "Frontiers in Cardiovascular Medicine (acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9366112/",
+    "license": "CC BY 4.0",
+    "attribution": "Podlesnikar T, Berlot B, Dolenc J, Goričar K, Marinko T. Radiotherapy-Induced Cardiotoxicity: The Role of Multimodality Cardiovascular Imaging. Front Cardiovasc Med. 2022;9:887705. DOI: 10.3389/fcvm.2022.887705. PMID: 35966531 — Figura 5, licenciada sob CC BY 4.0 (Creative Commons Attribution 4.0 International).",
+    "tags": [
+      "cardio-oncologia",
+      "radioterapia",
+      "cardiotoxicidade",
+      "ressonância cardíaca",
+      "derrame pericárdico",
+      "mapeamento t1",
+      "realce tardio"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
