@@ -1351,5 +1351,29 @@
       "colapso diastólico de vd",
       "pericárdio"
     ]
+  },
+  {
+    "slug": "indice-de-celermajer-na-anomalia-de-ebstein",
+    "name": "Índice de Celermajer (ecocardiografia) na anomalia de Ebstein",
+    "category": "imagem",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Razão entre a área do átrio direito somada à área do ventrículo direito atrializado, e a área do ventrículo direito funcional somada às câmaras esquerdas (VE + AE) — quantifica o grau de deslocamento apical e disfunção do coração direito na anomalia de Ebstein.",
+    "reference_range": "Grau 1: razão <0,5. Grau 2: razão 0,5-0,99. Grau 3: razão 1,0-1,49. Grau 4: razão ≥1,5 — gravidade crescente do grau 1 ao 4.",
+    "indications": "Estratificação prognóstica em neonato e criança com anomalia de Ebstein diagnosticada — orienta expectativa de desfecho e decisão terapêutica precoce, incluindo indicação cirúrgica.",
+    "interpretation": "Coorte original (50 neonatos com anomalia de Ebstein, 1961-1990): óbito cardíaco em 0 de 4 pacientes com grau 1, 1 de 10 (10%) com grau 2, 4 de 9 (44%) com grau 3 e 5 de 5 (100%) com grau 4. Em análise multivariada de características clínicas e de investigação na apresentação, o grau ecocardiográfico de gravidade foi o melhor preditor independente de óbito — sobrevida atuarial global em 10 anos de 61% na coorte. Em estudos posteriores, cada aumento de grau associou-se a risco relativo de óbito aumentado em 2,7 vezes.",
+    "limitations": "Concordância entre avaliação ecocardiográfica e por ressonância magnética cardíaca é, na melhor das hipóteses, moderada — a ecocardiografia costuma superestimar (raramente subestimar) a gravidade da anomalia de Ebstein. O índice por ressonância magnética parece mais valioso por se associar a marcadores de insuficiência cardíaca, mas a coorte original de validação prognóstica (com os cortes de risco de óbito por grau) foi feita por ecocardiografia, em neonatos — extrapolação para outras faixas etárias deve ser cautelosa.",
+    "source_refs": [
+      "Celermajer DS, Cullen S, Sullivan ID, Spiegelhalter DJ, Wyse RK, Deanfield JE. Outcome in neonates with Ebstein's anomaly. J Am Coll Cardiol. 1992;19(5):1041-1046. PMID 1552092 — números conferidos contra o abstract indexado (Europe PMC) em 30/07/2026.",
+      "Severity Scores for Ebstein Anomaly: Credibility and Usefulness of Echocardiographic vs Magnetic Resonance Assessments of the Celermajer Index. Can J Cardiol. PMID 31711824 — comparação eco vs. RM, conferida contra múltiplas fontes secundárias concordantes."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "índice de celermajer",
+      "anomalia de ebstein",
+      "ecocardiografia",
+      "escore prognóstico",
+      "cardiopatias congênitas"
+    ]
   }
 ]
