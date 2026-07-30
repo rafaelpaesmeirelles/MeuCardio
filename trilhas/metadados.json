@@ -262,5 +262,167 @@
       {"ordem": 7, "item_type": "documento", "item_slug": "reabilitacao-cardiaca-e-prescricao-de-exercicio-na-prevencao-secundaria",
        "por_que": "Fecha a trilha lembrando que prevenção secundária não é só hipolipemiante — reabilitação cardíaca estruturada tem evidência própria de benefício."}
     ]
+  },
+  {
+    "slug": "trilha-choque-cardiogenico",
+    "titulo": "Choque cardiogênico — classificação e suporte",
+    "tema": "Terapia intensiva",
+    "objetivo": "Sair sabendo classificar o estágio SCAI, escolher droga vasoativa e situar o suporte circulatório mecânico com a evidência real de cada dispositivo.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {"ordem": 1, "item_type": "documento", "item_slug": "classificacao-scai-de-estagios-do-choque-cardiogenico",
+       "por_que": "A classificação por estágio (A a E) é a linguagem comum de toda a trilha — sem ela, 'choque cardiogênico' vira rótulo único para quadros de gravidade muito diferente."},
+      {"ordem": 2, "item_type": "documento", "item_slug": "fluxograma-choque-cardiogenico-estagios-scai",
+       "por_que": "O mesmo raciocínio em árvore de decisão, do estágio à conduta."},
+      {"ordem": 3, "item_type": "documento", "item_slug": "choque-cardiogenico-diagnostico-e-manejo-com-drogas-vasoativas",
+       "por_que": "Antes de qualquer dispositivo, a escolha e a titulação de droga vasoativa já definem boa parte do desfecho."},
+      {"ordem": 4, "item_type": "documento", "item_slug": "balao-intra-aortico-no-choque-cardiogenico-o-ensaio-iabp-shock-ii",
+       "por_que": "O dispositivo mais simples e mais disponível — e o ensaio que mostrou ausência de benefício de mortalidade, resultado que ainda surpreende quem não leu o estudo original."},
+      {"ordem": 5, "item_type": "documento", "item_slug": "impella-cp-no-choque-cardiogenico-do-iamcst-o-ensaio-danger-shock",
+       "por_que": "Contraste direto com o anterior: aqui há redução de mortalidade, mas às custas de risco de evento adverso grave quase 5 vezes maior — decisão de trade-off explícito, não escolha óbvia."},
+      {"ordem": 6, "item_type": "documento", "item_slug": "choque-cardiogenico-suporte-circulatorio-mecanico-temporario",
+       "por_que": "Visão geral de todos os dispositivos (balão, Impella, ECMO), para situar os dois ensaios anteriores dentro do arsenal completo."},
+      {"ordem": 7, "item_type": "documento", "item_slug": "cardiomiopatia-septica-prevalencia-reversibilidade-e-impacto-na-mortalidade",
+       "por_que": "Fecha com o diagnóstico diferencial que muda tudo: disfunção miocárdica séptica é reversível em 7-10 dias e não deve ser manejada como choque cardiogênico estrutural."}
+    ]
+  },
+  {
+    "slug": "trilha-parada-cardiorrespiratoria-e-cuidados-pos-parada",
+    "titulo": "Parada cardiorrespiratória e cuidados pós-parada",
+    "tema": "Terapia intensiva",
+    "objetivo": "Sair sabendo conduzir o suporte avançado de vida, decidir controle de temperatura pós-parada e situar a RCP extracorpórea na parada refratária.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {"ordem": 1, "item_type": "documento", "item_slug": "fluxograma-parada-cardiorrespiratoria-ritmo-inicial",
+       "por_que": "O ritmo inicial (chocável ou não) é a primeira bifurcação de toda a reanimação — determina o algoritmo inteiro a partir daqui."},
+      {"ordem": 2, "item_type": "documento", "item_slug": "parada-cardiorrespiratoria-no-adulto-suporte-avancado-sbc-2019",
+       "por_que": "O protocolo completo de suporte avançado de vida, com o detalhe que o fluxograma resume."},
+      {"ordem": 3, "item_type": "documento", "item_slug": "controle-de-temperatura-pos-parada-cardiorrespiratoria-ttm-e-ttm2",
+       "por_que": "Retorno da circulação espontânea não é o fim do cuidado — o manejo de temperatura no pós-parada mudou de recomendação entre o TTM e o TTM2, e é isso que este documento resolve."},
+      {"ordem": 4, "item_type": "documento", "item_slug": "rcp-extracorporea-ecpr-na-parada-refrataria-arrest-e-inception",
+       "por_que": "Fecha com a parada refratária às medidas convencionais — quando considerar ECMO durante a própria reanimação, e o que os ensaios ARREST e INCEPTION mostraram sobre isso."}
+    ]
+  },
+  {
+    "slug": "trilha-canalopatias-e-morte-subita",
+    "titulo": "Canalopatias e prevenção de morte súbita",
+    "tema": "Arritmias",
+    "objetivo": "Sair sabendo reconhecer síndrome do QT longo, Brugada e repolarização precoce, manejar torsades agudo e situar a prevenção de morte súbita nesse contexto.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {"ordem": 1, "item_type": "documento", "item_slug": "canalopatias-sindrome-do-qt-longo-e-sindrome-de-brugada-diagnostico-e-manejo",
+       "por_que": "As duas canalopatias mais estabelecidas, diagnóstico e manejo lado a lado — é a base de toda a trilha."},
+      {"ordem": 2, "item_type": "documento", "item_slug": "escore-de-sieira-na-sindrome-de-brugada-e-o-fracasso-na-validacao-externa",
+       "por_que": "Um lembrete importante de leitura crítica: um escore de estratificação de risco em Brugada que não se sustentou na validação externa — nem toda ferramenta publicada resiste ao teste em população diferente."},
+      {"ordem": 3, "item_type": "documento", "item_slug": "repolarizacao-precoce-e-fibrilacao-ventricular-idiopatica-o-estudo-de-haissaguerre",
+       "por_que": "Um achado eletrocardiográfico comum e geralmente benigno, mas associado a maior risco especificamente em quem já sobreviveu a uma fibrilação ventricular idiopática — o contexto muda tudo."},
+      {"ordem": 4, "item_type": "documento", "item_slug": "torsades-de-pointes-e-qt-longo-adquirido-escore-de-tisdale-e-manejo-agudo",
+       "por_que": "A forma adquirida (não genética) de QT longo é a mais comum na prática — geralmente por fármaco — e o manejo agudo de torsades tem passos próprios."},
+      {"ordem": 5, "item_type": "documento", "item_slug": "arritmias-ventriculares-e-prevencao-de-morte-subita-cardiaca-esc-2022",
+       "por_que": "Fecha ligando as canalopatias anteriores à decisão mais concreta: quando essas condições justificam CDI para prevenção de morte súbita."}
+    ]
+  },
+  {
+    "slug": "trilha-cardiotoxicidade-do-tratamento-oncologico",
+    "titulo": "Cardiotoxicidade do tratamento oncológico",
+    "tema": "Cardio-oncologia",
+    "objetivo": "Sair sabendo prevenir, rastrear e manejar a toxicidade cardiovascular das classes de quimioterapia mais associadas a ela.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {"ordem": 1, "item_type": "documento", "item_slug": "cardio-oncologia-prevencao-e-manejo-de-toxicidade-cardiovascular-relacionada-ao-cancer",
+       "por_que": "Visão geral da cardio-oncologia como especialidade — prevenção e manejo antes de entrar em cada classe específica."},
+      {"ordem": 2, "item_type": "documento", "item_slug": "fluxograma-disfuncao-cardiaca-por-antraciclina-e-anti-her2-esc-2022",
+       "por_que": "As duas classes mais associadas a disfunção ventricular, em árvore de decisão."},
+      {"ordem": 3, "item_type": "documento", "item_slug": "cardiotoxicidade-por-terapia-anti-her2-trastuzumabe",
+       "por_que": "Detalhe da toxicidade por anti-HER2 — reversível na maioria dos casos, diferente da antraciclina."},
+      {"ordem": 4, "item_type": "documento", "item_slug": "atorvastatina-como-cardioprotecao-durante-antraciclina-o-ensaio-stop-ca",
+       "por_que": "Uma das duas estratégias de cardioproteção farmacológica com evidência randomizada nesta biblioteca — mecanismo distinto do dexrazoxano."},
+      {"ordem": 5, "item_type": "documento", "item_slug": "cardiotoxicidade-tardia-por-radioterapia-e-cardioprotecao-com-dexrazoxano",
+       "por_que": "A outra estratégia de cardioproteção, e a cardiotoxicidade tardia por radioterapia — que se manifesta anos depois do tratamento, não durante ele."},
+      {"ordem": 6, "item_type": "documento", "item_slug": "estratificacao-de-risco-basal-hfa-icos-e-miocardite-por-inibidor-de-checkpoint",
+       "por_que": "Muda de mecanismo: imunoterapia por inibidor de checkpoint tem toxicidade cardíaca própria, e a estratificação de risco basal é o que orienta a vigilância."},
+      {"ordem": 7, "item_type": "documento", "item_slug": "miocardite-fulminante-por-inibidor-de-checkpoint-mortalidade-real",
+       "por_que": "Fecha com a manifestação mais grave dessa classe — miocardite fulminante, com mortalidade real que justifica a vigilância do documento anterior."}
+    ]
+  },
+  {
+    "slug": "trilha-cardiopatia-e-gestacao",
+    "titulo": "Cardiopatia e gestação",
+    "tema": "Gravidez",
+    "objetivo": "Sair sabendo estratificar risco pela mWHO 2.0, ajustar anti-hipertensivo e anticoagulante para a gestação, e reconhecer a cardiomiopatia periparto.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {"ordem": 1, "item_type": "documento", "item_slug": "classificacao-de-risco-mwho-2-0-na-gravidez-esc-2025",
+       "por_que": "A estratificação de risco materno é o primeiro passo de qualquer cardiopatia na gestação — determina o nível de acompanhamento e o próprio risco de aceitar ou não a gestação."},
+      {"ordem": 2, "item_type": "documento", "item_slug": "fluxograma-doenca-cardiovascular-e-gravidez-esc-2025",
+       "por_que": "O mesmo raciocínio em árvore de decisão."},
+      {"ordem": 3, "item_type": "documento", "item_slug": "doenca-cardiovascular-na-gravidez-estratificacao-de-risco-e-manejo-esc-2018-sbc-2020",
+       "por_que": "O protocolo completo, com o detalhe que o fluxograma resume."},
+      {"ordem": 4, "item_type": "documento", "item_slug": "anti-hipertensivos-na-gestacao-o-que-a-bula-registrada-diz-de-cada-um",
+       "por_que": "Na prática, a primeira pergunta é sempre 'que anti-hipertensivo posso usar' — direto da bula registrada, não de memória."},
+      {"ordem": 5, "item_type": "documento", "item_slug": "pre-eclampsia-grave-hellp-e-arritmias-supraventriculares-na-gestacao",
+       "por_que": "A intercorrência hipertensiva mais grave e mais comum da gestação, com a arritmia associada que costuma ser esquecida na abordagem."},
+      {"ordem": 6, "item_type": "documento", "item_slug": "anticoagulacao-em-valva-mecanica-e-cardiomiopatia-periparto-na-gestacao",
+       "por_que": "A decisão de anticoagulação mais difícil da cardiologia obstétrica — valva mecânica em gestante — ao lado da cardiomiopatia periparto."},
+      {"ordem": 7, "item_type": "documento", "item_slug": "base-genetica-da-cardiomiopatia-periparto-variantes-truncantes-de-ttn",
+       "por_que": "A cardiomiopatia periparto não é só hormonal — cerca de 1 em 6-7 mulheres afetadas carrega variante genética, com implicação de prognóstico e rastreio familiar."},
+      {"ordem": 8, "item_type": "documento", "item_slug": "cesarea-perimortem-a-regra-dos-4-minutos-e-a-revisao-de-katz",
+       "por_que": "Fecha com a emergência mais extrema — parada cardíaca materna — e a evidência real por trás da regra dos 4 minutos."}
+    ]
+  },
+  {
+    "slug": "trilha-fator-psicossocial-e-prognostico-cardiovascular",
+    "titulo": "Fator psicossocial e prognóstico cardiovascular",
+    "tema": "Saúde mental e cardiologia",
+    "objetivo": "Sair sabendo reconhecer os fatores psicossociais com evidência real de impacto cardiovascular — não como observação genérica, mas com números e mecanismo.",
+    "nivel": "básico",
+    "review_status": "revisado",
+    "etapas": [
+      {"ordem": 1, "item_type": "documento", "item_slug": "fator-psicossocial-como-risco-de-infarto-o-estudo-interheart",
+       "por_que": "O estudo que quantificou, pela primeira vez em escala global, o peso do fator psicossocial como risco de infarto — ao lado dos fatores de risco tradicionais."},
+      {"ordem": 2, "item_type": "documento", "item_slug": "depressao-pos-infarto-como-fator-de-risco-cardiovascular-van-melle-e-enrichd",
+       "por_que": "Depressão após infarto não é só comorbidade psiquiátrica — é fator de risco cardiovascular independente, com magnitude mensurada."},
+      {"ordem": 3, "item_type": "documento", "item_slug": "personalidade-tipo-d-e-prognostico-cardiovascular-metanalise-de-grande",
+       "por_que": "Um construto distinto de depressão — e uma lição sobre qualidade de evidência: o tamanho do efeito estimado caiu bastante entre os estudos antigos e os mais recentes."},
+      {"ordem": 4, "item_type": "documento", "item_slug": "solidao-e-isolamento-social-como-fator-de-risco-cardiovascular",
+       "por_que": "Isolamento social como fator de risco mensurável, distinto de depressão clínica."},
+      {"ordem": 5, "item_type": "documento", "item_slug": "luto-e-risco-agudo-de-infarto-o-estudo-determinants-of-mi-onset",
+       "por_que": "O extremo agudo do espectro — luto como gatilho transitório de infarto nas primeiras 24 horas, não fator crônico como os anteriores."},
+      {"ordem": 6, "item_type": "documento", "item_slug": "insonia-e-risco-cardiovascular-metanalise-de-sofi",
+       "por_que": "Um sintoma, não um diagnóstico psiquiátrico — e ainda assim com associação robusta e consistente ao risco cardiovascular."},
+      {"ordem": 7, "item_type": "documento", "item_slug": "saude-mental-e-doenca-cardiovascular-consenso-clinico-esc-2025",
+       "por_que": "Fecha reunindo tudo isso na posição oficial mais recente de uma sociedade de cardiologia sobre saúde mental como parte do cuidado cardiovascular."}
+    ]
+  },
+  {
+    "slug": "trilha-farmacologia-da-emergencia-cardiovascular",
+    "titulo": "Farmacologia essencial da emergência cardiovascular",
+    "tema": "Farmacologia",
+    "objetivo": "Sair sabendo a dose e a indicação dos fármacos que mais se usa sob pressão — vasopressor, inotrópico e antiarrítmico de emergência.",
+    "nivel": "básico",
+    "review_status": "revisado",
+    "etapas": [
+      {"ordem": 1, "item_type": "medicamento", "item_slug": "epinefrina-adrenalina",
+       "por_que": "O vasopressor da própria parada cardiorrespiratória — o primeiro fármaco que qualquer protocolo de emergência cardiovascular exige de cor."},
+      {"ordem": 2, "item_type": "medicamento", "item_slug": "noradrenalina-norepinefrina",
+       "por_que": "O vasopressor de primeira linha no choque, distinto da epinefrina em perfil de uso."},
+      {"ordem": 3, "item_type": "medicamento", "item_slug": "vasopressina",
+       "por_que": "Vasopressor de segunda linha, com mecanismo de ação independente de receptor adrenérgico — relevante quando a resposta aos dois anteriores é insuficiente."},
+      {"ordem": 4, "item_type": "medicamento", "item_slug": "dobutamina",
+       "por_que": "O inotrópico mais usado no choque cardiogênico com função predominantemente inotrópica, não vasopressora."},
+      {"ordem": 5, "item_type": "medicamento", "item_slug": "milrinona",
+       "por_que": "Segunda opção inotrópica, mecanismo distinto (inibidor de fosfodiesterase-3), útil quando a resposta à dobutamina não é suficiente ou há uso concomitante de betabloqueador."},
+      {"ordem": 6, "item_type": "medicamento", "item_slug": "atropina",
+       "por_que": "O fármaco de primeira linha na bradicardia sintomática — antes de considerar marca-passo transcutâneo."},
+      {"ordem": 7, "item_type": "medicamento", "item_slug": "adenosina",
+       "por_que": "Diagnóstico e terapêutico ao mesmo tempo — interrompe taquicardia supraventricular por reentrada nodal e ajuda a revelar o ritmo de base em taquicardias de origem incerta."},
+      {"ordem": 8, "item_type": "medicamento", "item_slug": "amiodarona-cloridrato",
+       "por_que": "Fecha a trilha com o antiarrítmico mais versátil da emergência — usado tanto na parada com ritmo chocável refratário quanto em taquiarritmias fora da parada."}
+    ]
   }
 ]
