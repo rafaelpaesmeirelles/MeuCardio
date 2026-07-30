@@ -520,6 +520,28 @@
     "published": false
   },
   {
+    "slug": "ecg-wellens-sindrome-lad-critica",
+    "title": "ECG — Síndrome de Wellens (estenose crítica de descendente anterior)",
+    "modality": "Eletrocardiograma",
+    "theme": "Doença coronariana",
+    "file_path": "ecg/ecg-wellens-sindrome-lad-critica.png",
+    "findings": "Traçado de 12 derivações com ondas T profundamente invertidas e bifásicas, predominando em V2-V4, em paciente assintomático ou pauci-sintomático no momento do registro — padrão de síndrome de Wellens.",
+    "teaching_points": "A síndrome de Wellens identifica estenose crítica proximal da artéria descendente anterior mesmo na ausência de supradesnivelamento de ST ou dor torácica ativa — as alterações de onda T aparecem tipicamente no intervalo livre de dor, depois que o episódio isquêmico agudo já passou. Tipo A (25% dos casos): T bifásica em V2-V3. Tipo B (75%): T simetricamente invertida e profunda nas mesmas derivações. Reconhecer o padrão é crítico porque o paciente não deve ser submetido a teste de esforço — o risco é de infarto anterior extenso; a conduta é cinecoronariografia precoce.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Wellens%27_Syndrome.png",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Jer5150, via Wikimedia Commons — CC BY-SA 3.0.",
+    "tags": [
+      "síndrome de Wellens",
+      "eletrocardiograma",
+      "descendente anterior",
+      "doença coronariana",
+      "onda T bifásica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
     "slug": "oclusor-apendice-atrial-esquerdo",
     "title": "Dispositivo de oclusão do apêndice atrial esquerdo",
     "modality": "Fotografia de dispositivo",
