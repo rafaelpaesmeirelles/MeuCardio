@@ -146,6 +146,30 @@
     ]
   },
   {
+    "slug": "vhs-e-pcr-como-criterio-menor-de-jones-na-febre-reumatica",
+    "name": "VHS e PCR como critério menor de Jones na febre reumática aguda",
+    "category": "laboratorial",
+    "theme": "Febre reumática",
+    "what_it_measures": "Velocidade de hemossedimentação (VHS) e proteína C-reativa (PCR), reagentes de fase aguda inespecíficos, usados em conjunto como um único critério menor dos critérios de Jones revisados (2015) para o diagnóstico de febre reumática aguda — refletem atividade inflamatória sistêmica, não são específicos para a doença.",
+    "reference_range": "O corte depende da população de risco. Em população de baixo risco (incidência de febre reumática aguda ≤2/100.000 crianças em idade escolar, ou prevalência de doença reumática cardíaca ≤1/1.000 habitantes/ano): VHS ≥60 mm na primeira hora e/ou PCR ≥3,0 mg/dL. Em população de risco moderado a alto (a maior parte do Brasil): VHS ≥30 mm/h e/ou PCR ≥3,0 mg/dL — o corte de VHS é metade do exigido em população de baixo risco, refletindo maior probabilidade pré-teste. O valor de PCR exigido (≥3,0 mg/dL) é o mesmo nas duas populações e deve ser maior que o limite superior de normalidade do laboratório.",
+    "indications": "Contabiliza como um único critério menor (VHS elevada e/ou PCR elevada não somam dois critérios) dentro do algoritmo de Jones, que exige 2 critérios maiores, ou 1 maior + 2 menores, associados a evidência de infecção estreptocócica do grupo A prévia, para o diagnóstico de episódio inicial de febre reumática aguda. Febre (com corte também diferente por população: ≥38,5°C no baixo risco, ≥38°C no risco moderado/alto) e intervalo PR prolongado, ajustado por idade, completam a lista de critérios menores.",
+    "interpretation": "Porque a VHS pode variar ao longo da evolução da febre reumática aguda, a diretriz orienta usar o valor de pico (o mais alto observado), não uma medida isolada precoce que ainda não tenha atingido o platô inflamatório — um VHS colhido cedo demais pode subestimar a atividade inflamatória real e fazer perder o critério menor por medição em momento inadequado, não por ausência real de inflamação.",
+    "limitations": "Marcadores inespecíficos — não distinguem febre reumática de outras causas de inflamação sistêmica, e por isso só valem como critério menor, nunca maior, e nunca isoladamente diagnósticos. Artrite/artralgia só pode ser contabilizada como maior OU menor no mesmo paciente, nunca as duas — regra que se aplica ao conjunto de critérios articulares, relevante para não inflar a contagem ao lado de VHS/PCR.",
+    "source_refs": [
+      "Gewitz MH, Baltimore RS, Tani LY, et al. Revision of the Jones Criteria for the Diagnosis of Acute Rheumatic Fever in the Era of Doppler Echocardiography: A Scientific Statement From the American Heart Association. Circulation. 2015;131(20):1806-1818. DOI: 10.1161/CIR.0000000000000205 — Tabela de critérios menores por população de risco, conferida direto no PDF integral do documento em 30/07/2026."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "vhs",
+      "pcr",
+      "critérios de jones",
+      "febre reumática aguda",
+      "critério menor",
+      "reagente de fase aguda"
+    ]
+  },
+  {
     "slug": "strain-longitudinal-global-gls",
     "name": "Strain longitudinal global (GLS) ao ecocardiograma",
     "category": "imagem",
@@ -335,6 +359,30 @@
       "gradiente transvalvar",
       "ecocardiograma",
       "valvopatia"
+    ]
+  },
+  {
+    "slug": "peptideo-natriuretico-na-estenose-aortica-grave-assintomatica",
+    "name": "Peptídeo natriurético (BNP/NT-proBNP) na estenose aórtica grave assintomática",
+    "category": "laboratorial",
+    "theme": "Valvopatias",
+    "what_it_measures": "BNP ou NT-proBNP sérico, corrigido por idade e sexo, usado como um dos marcadores de risco no paciente com estenose aórtica grave que se declara assintomático — sinaliza sobrecarga hemodinâmica subclínica antes que o paciente relate sintoma, situação em que a percepção do próprio paciente costuma ser um marcador tardio e pouco confiável de gravidade.",
+    "reference_range": "O corte clinicamente acionável citado pela diretriz de valvopatias não é um valor absoluto único, e sim relativo: peptídeo natriurético acentuadamente elevado, definido como mais de 3 vezes o valor normal corrigido por idade e sexo, confirmado em medidas repetidas e sem outra explicação para a elevação.",
+    "indications": "Em paciente com estenose aórtica grave (área valvar ≤1,0 cm²) que se declara sem sintomas, à intervenção cirúrgica ou transcateter deve ser considerada quando presente pelo menos um marcador de alto risco — entre eles, peptídeo natriurético >3x o normal ajustado por idade/sexo, ao lado de velocidade de pico muito alta (>5 m/s), queda de pressão arterial no teste ergométrico, disfunção de VE (FEVE <55%) sem outra causa, ou progressão hemodinâmica rápida.",
+    "interpretation": "Valor >3x o normal corrigido, confirmado em nova dosagem e sem outra causa plausível para a elevação (fibrilação atrial, disfunção renal, outra cardiopatia concomitante), soma-se aos demais marcadores de alto risco para justificar intervenção precoce em vez de conduta expectante com reavaliação periódica — decisão que, na prática, antecipa a cirurgia/TAVI para antes do primeiro sintoma relatado, no paciente de baixo risco cirúrgico.",
+    "limitations": "Não é um corte numérico absoluto, e sim relativo ao valor normal de referência do próprio laboratório para idade e sexo — não existe um número único em pg/mL válido para todo paciente. Elevação por causa concorrente (fibrilação atrial, disfunção renal, insuficiência cardíaca de outra etiologia) invalida o critério, e a diretriz exige excluir essas causas antes de usar o achado para decidir intervenção. Nesta sessão o PDF integral da diretriz mais atual (ESC/EACTS 2025, que atualiza a de 2021) não pôde ser acessado (bloqueio de acesso) para conferir se o critério permanece exatamente igual — o valor citado é o da diretriz de 2021, corroborado por múltiplas fontes secundárias independentes, mas sem conferência direta do texto integral da versão mais recente desta vez.",
+    "source_refs": [
+      "2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. DOI: 10.1093/eurheartj/ehab395 — critério de peptídeo natriurético >3x normal ajustado por idade/sexo entre os marcadores de alto risco para intervenção precoce na estenose aórtica grave assintomática, cruzado contra múltiplas fontes secundárias independentes."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "bnp",
+      "nt-probnp",
+      "estenose aórtica",
+      "assintomático",
+      "peptídeo natriurético",
+      "marcador de risco"
     ]
   },
   {
