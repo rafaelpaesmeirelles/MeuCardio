@@ -23,7 +23,7 @@ import re
 import unicodedata
 from datetime import datetime, timezone
 
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, UploadFile
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
 
@@ -252,13 +252,35 @@ class NovaMensagem(BaseModel):
     para: str
     assunto: str
     corpo_html: str
+    anexos: list[str] = []  # fileIds já devolvidos por POST /mensagens/anexos
+
+
+TAMANHO_MAXIMO_ANEXO = 15 * 1024 * 1024  # 15 MB — anexo de e-mail comum, não exame
+
+
+@router.post("/mensagens/anexos", status_code=201)
+async def enviar_anexo(arquivo: UploadFile, conta: EmailAccount = Depends(current_email_account)):
+    """Upload em duas etapas, espelhando a própria API do Mail360: sobe o
+    arquivo aqui, recebe um `file_id`, e usa esse id em `POST /mensagens`
+    (campo `anexos`) — o Mail360 não aceita o binário direto no envio."""
+    _exigir_configurado()
+    conteudo = await arquivo.read()
+    if len(conteudo) > TAMANHO_MAXIMO_ANEXO:
+        raise HTTPException(status_code=413, detail="O anexo precisa ter no máximo 15 MB.")
+    try:
+        file_id = mail360.upload_anexo(conta.mail360_account_key, arquivo.filename or "anexo", conteudo)
+    except Mail360Error as e:
+        raise HTTPException(status_code=502, detail=str(e)) from e
+    return {"file_id": file_id, "nome": arquivo.filename}
 
 
 @router.post("/mensagens", status_code=201)
 def enviar(dados: NovaMensagem, conta: EmailAccount = Depends(current_email_account)):
     _exigir_configurado()
     try:
-        return mail360.enviar_mensagem(conta.mail360_account_key, dados.para, dados.assunto, dados.corpo_html)
+        return mail360.enviar_mensagem(
+            conta.mail360_account_key, dados.para, dados.assunto, dados.corpo_html, anexos=dados.anexos,
+        )
     except Mail360Error as e:
         raise HTTPException(status_code=502, detail=str(e)) from e
 

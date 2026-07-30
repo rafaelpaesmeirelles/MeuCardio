@@ -71,10 +71,11 @@ def _cabecalho() -> dict[str, str]:
     return {"Authorization": f"Zoho-oauthtoken {_obter_access_token()}"}
 
 
-def _chamar(metodo: str, caminho: str, **kwargs) -> dict:
+def _chamar(metodo: str, caminho: str, headers_extra: dict[str, str] | None = None, **kwargs) -> dict:
+    headers = {**_cabecalho(), **(headers_extra or {})}
     try:
         with httpx.Client(timeout=TIMEOUT) as cliente:
-            resp = cliente.request(metodo, f"{BASE}{caminho}", headers=_cabecalho(), **kwargs)
+            resp = cliente.request(metodo, f"{BASE}{caminho}", headers=headers, **kwargs)
             resp.raise_for_status()
             return resp.json() if resp.content else {}
     except httpx.HTTPStatusError as e:
@@ -122,12 +123,39 @@ def obter_mensagem(account_key: str, message_id: str) -> dict:
     return _chamar("GET", f"/accounts/{account_key}/messages/{message_id}")
 
 
-def enviar_mensagem(account_key: str, para: str, assunto: str, corpo_html: str) -> dict:
-    return _chamar("POST", f"/accounts/{account_key}/messages", json={
+def upload_anexo(account_key: str, nome_arquivo: str, conteudo: bytes) -> str:
+    """Sobe o arquivo pro Mail360 e devolve o `fileId` — é ele, não o
+    binário, que entra no envio da mensagem. Confirmado em 30/07/2026 direto
+    na documentação oficial (zoho.com/mail360/help/api/upload-attachment.html):
+    upload é POST separado, corpo é o binário puro (`application/octet-stream`,
+    sem multipart), a URL leva o nome do arquivo em query string, e a
+    resposta traz o id em `data.fileId`. Não testado contra a API real —
+    mesma ressalva do resto do arquivo, ver cabeçalho."""
+    dados = _chamar(
+        "POST", f"/accounts/{account_key}/attachments",
+        params={"fileName": nome_arquivo},
+        headers_extra={"Content-Type": "application/octet-stream"},
+        content=conteudo,
+    )
+    file_id = (dados.get("data") or {}).get("fileId")
+    if not file_id:
+        raise Mail360Error("Mail360 fez upload do anexo mas não devolveu o fileId esperado.")
+    return str(file_id)
+
+
+def enviar_mensagem(
+    account_key: str, para: str, assunto: str, corpo_html: str, anexos: list[str] | None = None,
+) -> dict:
+    corpo: dict = {
         "toAddress": para,
         "subject": assunto,
         "content": corpo_html,
-    })
+    }
+    if anexos:
+        # Cada item é o fileId devolvido por upload_anexo — a API não aceita
+        # o binário direto aqui, só a referência ao upload já feito.
+        corpo["attachments"] = [{"fileId": file_id} for file_id in anexos]
+    return _chamar("POST", f"/accounts/{account_key}/messages", json=corpo)
 
 
 def excluir_mensagem(account_key: str, message_id: str) -> None:
