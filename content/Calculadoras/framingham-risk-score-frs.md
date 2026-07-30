@@ -4,7 +4,7 @@ slug: framingham-risk-score-frs
 theme: "Calculadoras"
 kind: calculadora
 review_status: pendente_revisao
-source_refs: ["D'Agostino RB Sr, Vasan RS, Pencina MJ, et al. General cardiovascular risk profile for use in primary care: the Framingham Heart Study. Circulation. 2008;117(6):743-753. DOI: 10.1161/CIRCULATIONAHA.107.699579. PMID: 18212285"]
+source_refs: ["D'Agostino RB Sr, Vasan RS, Pencina MJ, et al. General cardiovascular risk profile for use in primary care: the Framingham Heart Study. Circulation. 2008;117(6):743-753. DOI: 10.1161/CIRCULATIONAHA.107.699579. PMID: 18212285", "Fontenelle LF, Sarti TD, Quinte GC, Almeida APSC, Mill JG. Agreement between Framingham, Pooled Cohort Equations, and Globorisk-LAC in the Estimation of Cardiovascular Risk in Brazil, 2013. Arq Bras Cardiol. 2025;122(6):e20240405. DOI: 10.36660/abc.20240405. PMID: 40736124"]
 legacy_source: "calculadoras/calculadora-framingham-risk-score.md"
 ---
 
@@ -59,6 +59,8 @@ Ferramenta também calcula 'idade cardíaca' (heart age), um conceito de comunic
 
 ## Limitacoes
 Desenvolvido em coorte predominantemente branca americana; desempenho pode ser inferior a escores mais contemporâneos (SCORE2) em populações europeias ou não caucasianas
+
+**Desempenho medido especificamente na população brasileira — acrescentado em 30/07/2026** (Fontenelle LF, Sarti TD, Quinte GC, Almeida APSC, Mill JG. Agreement between Framingham, Pooled Cohort Equations, and Globorisk-LAC in the Estimation of Cardiovascular Risk in Brazil, 2013. Arq Bras Cardiol. 2025;122(6):e20240405. DOI: 10.36660/abc.20240405. PMID: 40736124): estudo transversal com 4.416 participantes de 40-74 anos, sem doença cardiovascular prévia, dados da Pesquisa Nacional de Saúde (PNS) 2013. **O Framingham nunca foi recalibrado para a população brasileira** — nem o Pooled Cohort Equations (PCE); só o Globorisk-LAC foi recalibrado para a América Latina. Risco mediano estimado em 10 anos: **9,2% pelo Framingham vs. 3,6% pelo PCE vs. 4,7% pelo Globorisk-LAC** — o Framingham estimou risco sistematicamente mais alto que os outros dois nesta amostra brasileira. Concordância (razão entre 0,80 e 1,25x): Framingham com Globorisk-LAC em apenas **6,4%** dos casos, com PCE em **1,8%** — enquanto PCE e Globorisk-LAC concordaram em 34,7%. Coeficiente de concordância por categoria de risco (Gwet AC1): Framingham×Globorisk-LAC 0,454, Framingham×PCE 0,489, PCE×Globorisk-LAC 0,874 — **os três escores concordam pouco entre si**, e o Framingham é o mais discrepante dos três. Conclusão dos próprios autores: o Globorisk-LAC é forte candidato a substituir o Framingham nas diretrizes brasileiras de dislipidemia.
 
 ## Fonte
 Canadian Cardiovascular Society — pista importante sobre a procedência: as tabelas de pontos em mmol/L acima provavelmente vêm da adaptação canadense do escore, não do modelo de D'Agostino RB Sr et al., Circulation 2008;117:743-753, que é a referência do FRS geral. VERIFICAÇÃO HUMANA NECESSÁRIA para confirmar a origem e decidir qual das duas versões o documento descreve.
