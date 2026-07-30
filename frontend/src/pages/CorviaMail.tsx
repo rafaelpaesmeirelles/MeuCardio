@@ -4,6 +4,7 @@ import { useAuth } from "../lib/auth";
 import { api, ApiError } from "../lib/api";
 import { apiEmail, ApiEmailError } from "../lib/apiEmail";
 import Credito from "../components/Credito";
+import LogoCorviaMail from "../components/LogoCorviaMail";
 
 type StatusEmail = {
   status: string; current_period_end: string | null;
@@ -341,7 +342,7 @@ export default function CorviaMail() {
       <div className="login">
         <div className="login__cartao">
           <div className="login__brasao">
-            <h1 style={{ fontSize: "1.4rem", marginTop: 14 }}>CorvIA Mail</h1>
+            <LogoCorviaMail />
           </div>
           <p className="aviso">
             O CorvIA Mail é um add-on da Corvia — é preciso ter conta aprovada na plataforma
@@ -363,7 +364,7 @@ export default function CorviaMail() {
     <div className="login">
       <div className="login__cartao">
         <div className="login__brasao">
-          <h1 style={{ fontSize: "1.4rem", marginTop: 14 }}>CorvIA Mail</h1>
+          <LogoCorviaMail />
         </div>
 
         <div style={{ display: "flex", gap: 6, justifyContent: "center", marginTop: "0.6rem" }}>

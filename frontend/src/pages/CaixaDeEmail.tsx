@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import { apiEmail, ApiEmailError, tokenEmail } from "../lib/apiEmail";
 import { Carregando, Erro, Vazio } from "../components/Estado";
+import LogoCorviaMail from "../components/LogoCorviaMail";
 
 type Pasta = { folderId?: string; id?: string; folderName?: string; name?: string };
 type Mensagem = {
@@ -151,7 +152,7 @@ export default function CaixaDeEmail() {
     return (
       <>
         <p className="eyebrow">Caixa de e-mail</p>
-        <h1>CorvIA Mail</h1>
+        <LogoCorviaMail tamanho="compacto" />
         <Erro mensagem={erro} />
       </>
     );
@@ -161,7 +162,7 @@ export default function CaixaDeEmail() {
     return (
       <>
         <p className="eyebrow">Caixa de e-mail</p>
-        <h1>CorvIA Mail</h1>
+        <LogoCorviaMail tamanho="compacto" />
         <Carregando />
       </>
     );
@@ -169,10 +170,13 @@ export default function CaixaDeEmail() {
 
   return (
     <>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: "1rem" }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "1rem" }}>
         <div>
           <p className="eyebrow" style={{ margin: 0 }}>Caixa de e-mail</p>
-          <h1 style={{ margin: 0 }}>{enderecoAtual}</h1>
+          <div style={{ margin: "0.2rem 0 0.3rem", display: "flex", justifyContent: "flex-start" }}>
+            <LogoCorviaMail tamanho="compacto" />
+          </div>
+          <h1 style={{ margin: 0, fontSize: "1.05rem", fontWeight: 500 }}>{enderecoAtual}</h1>
         </div>
         <button className="botao botao--secundario" onClick={sair}>Sair da caixa</button>
       </div>
