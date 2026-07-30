@@ -169,15 +169,100 @@ spam que não dá para desligar, suporte difícil de alcançar, e um caso relata
 de corte imediato de acesso IMAP ao trocar MX, sem aviso, deixando histórico
 de e-mail de 18 funcionários inacessível durante migração.
 
-**Síntese:** a recomendação anterior de Titan Email como melhor opção de embed
-foi baseada numa primeira leitura da documentação, que sugeria SSO/iframe
-funcionando de forma genérica. A leitura mais profunda mostra que o mecanismo
-documentado publicamente **não cobre o caso de uso central que a Corvia
-precisa** (webmail embutido, SSO recorrente). Antes de investir mais tempo
-nessa via, o próximo passo tem que ser esclarecer isso direto com a Titan
-pelo canal de parceria — e vale reconsiderar em paralelo a OpenSRS (embed só
-por subdomínio com marca, não confirmado dentro da própria Corvia, mas sem
-essa limitação específica documentada) ou aprofundar a mesma pergunta nos
-outros fornecedores antes de comprometer a arquitetura a um único caminho.
+**Síntese parcial (antes de aprofundar os outros dois):** a recomendação
+anterior de Titan Email como melhor opção de embed foi baseada numa primeira
+leitura da documentação, que sugeria SSO/iframe funcionando de forma
+genérica. A leitura mais profunda mostra que o mecanismo documentado
+publicamente **não cobre o caso de uso central que a Corvia precisa**
+(webmail embutido, SSO recorrente).
+
+### Pesquisa aprofundada de OpenSRS e Zoho Mail360, 30/07/2026 — o mesmo problema se repete, de duas formas diferentes
+
+**Achado central: nenhum dos três candidatos investigados (Titan, OpenSRS,
+Zoho Mail360) confirma, com garantia documentada do próprio fornecedor, um
+SSO recorrente para uma caixa de entrada pronta.** Cada um falha nisso de um
+jeito diferente:
+
+**OpenSRS** — a API de e-mail (`email.opensrs.guide`) tem três tipos de
+token: `oma` (só painel admin), `sso` (webmail/IMAP/SMTP, mas **de uso
+único**, mesmo defeito da Titan) e `session` (reutilizável durante sua
+validade, 1-24h configurável). O `session` token **tecnicamente permitiria**
+SSO recorrente — bastaria a Corvia chamar a API a cada login do assinante e
+gerar um token novo de curta duração —, mas a própria documentação da OpenSRS
+descreve esse token como ferramenta de **suporte técnico/diagnóstico**
+("permitir que a equipe de suporte entre nas caixas de usuários finais sem
+saber a senha, para diagnosticar problemas"), nunca como mecanismo de login
+de produto para usuário final. Usá-lo para esse fim funcionaria na prática,
+mas sem garantia contratual do fornecedor de que esse uso é suportado ou
+continuará funcionando. Além disso, o webmail em si é servido por
+**subdomínio real** (ex.: `webmail.corvia.med.br` com CNAME + certificado
+próprio) — não há confirmação de que aceita ser embutido via iframe dentro
+da aplicação da Corvia (nenhuma menção a `X-Frame-Options`/CSP na
+documentação, o que significa que teria que ser testado na prática, não
+presumido).
+Onboarding: self-service, mas com depósito mínimo de US$95.
+Red flag relevante: **Trustpilot com TrustScore 1,5/5** (20 avaliações),
+reclamações recorrentes de queda de serviço, suporte ruim e blocklist
+"amadora" bloqueando e-mail de grandes provedores — risco real para uma
+plataforma que promete e-mail confiável a médicos.
+Fonte: https://email.opensrs.guide/docs/generate_token ,
+https://support.opensrs.com/support/solutions/articles/201000063536 ,
+https://support.opensrs.com/support/solutions/articles/201000063116 ,
+https://www.trustpilot.com/review/opensrs.com
+
+**Zoho Mail360** — achado mais importante: **não é um produto de webmail,
+é uma API de dados pura** (contas, mensagens, pastas, labels, rascunhos,
+anexos, threads via OAuth). Não existe UI de webmail fornecida pela Zoho para
+embutir, logo **a pergunta "existe SSO para a caixa de entrada deles" não se
+aplica** — não há caixa de entrada deles. Isso muda a natureza da escolha:
+se for este o caminho, a Corvia **constrói o webmail inteiro do zero** (lista
+de mensagens, leitor, composição, pastas, anexos) por cima da API REST do
+Mail360, e a autenticação do usuário final nunca sai da própria sessão já
+existente da Corvia — o backend guarda as credenciais OAuth do Mail360 e
+nunca expõe login a um sistema externo. Isso elimina estruturalmente o
+problema de SSO (não há segundo sistema de login para sincronizar), ao custo
+de mais trabalho de engenharia (não tem nada pronto de interface).
+Onboarding: self-service, com free tier de até 10 caixas.
+Preço das faixas pagas: **não encontrado** valor numérico público, mesmo em
+fontes de terceiros.
+Data center: nenhum no Brasil (EUA/UE/Índia/Austrália/Japão/Canadá/Arábia
+Saudita); GDPR compliance confirmada para o Zoho Mail geral, **nenhuma
+declaração específica de LGPD ou de conformidade do Mail360 em particular**
+— precisaria ser levantado formalmente com o comercial antes de fechar,
+principalmente porque dado de assinante brasileiro trafegaria por servidor
+fora do país.
+Fonte: https://www.zoho.com/mail360/help/introduction-to-mail360.html ,
+https://www.zoho.com/mail360/help/api-in-mail360.html ,
+https://www.zoho.com/mail360/help/api/oauth.html ,
+https://www.zoho.com/mail360/pricing.html
+
+### Quadro comparativo final
+
+| | Titan | OpenSRS | Zoho Mail360 |
+|---|---|---|---|
+| SSO recorrente p/ webmail pronto | Não confirmado (token único, só na criação) | Não confirmado como caso de uso oficial (token `sso` de uso único; `session` reutilizável mas documentado como suporte técnico, não login de produto) | Não se aplica — não há webmail deles; a Corvia constrói a UI e controla a própria sessão |
+| Webmail embutível via iframe | Só painel admin, não a caixa de entrada | Subdomínio real, embed/CORS não confirmado | N/A (sem UI própria) |
+| Onboarding | Contato comercial, sem self-service | Self-service, depósito mínimo US$95 | Self-service, free tier até 10 caixas |
+| Maior risco | Requisito central não confirmado | Instabilidade/suporte (Trustpilot 1,5/5) | Mais trabalho de engenharia; preço opaco; sem LGPD declarada |
+
+### Síntese final e os dois caminhos tecnicamente realistas
+
+**Nenhum dos três fornecedores garante, em documentação pública, o requisito
+exato do briefing** ("webmail embutido, mesmo login, toda vez que o
+assinante entra"). Restam dois caminhos tecnicamente viáveis, com trade-offs
+diferentes:
+
+1. **Usar o `session token` da OpenSRS como SSO de fato** — funciona na
+   prática (gerar um token novo a cada login da Corvia), é o caminho de
+   menor esforço de engenharia, mas depende de um uso não documentado
+   oficialmente para esse fim, com um fornecedor que tem histórico de
+   reclamação de instabilidade.
+2. **Construir o webmail próprio sobre a API de dados do Zoho Mail360** —
+   elimina de vez a pergunta de SSO externo (nunca existe login de terceiro
+   para sincronizar), mas exige construir toda a interface de webmail do
+   zero, e o preço de produção ainda não está confirmado.
+
+Isso é uma decisão de arquitetura, não só de fornecedor — vale ser decidida
+por você antes de qualquer código de modelo de dados ou interface.
 
 Nenhum código de modelo de dados ou interface foi escrito para esta tarefa.
