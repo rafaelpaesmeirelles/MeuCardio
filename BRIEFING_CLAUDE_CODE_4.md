@@ -519,9 +519,32 @@ Postgres 16 real nesta própria sessão (`apt-get install postgresql-16-pgvector
    mitigar com ressalva na tela, não bloquear por isso, mas a credencial de
    parceiro real ainda não existe, então nada disto foi testado contra a
    API de verdade.
-2. **Preço do CorvIA Mail**: `corvia_mail_preco_centavos` está em 0 no
-   `.env` — o Rafael define quando decidir, e o checkout já está pronto
-   para usar esse valor sem mudança de código.
+2. **Preço do CorvIA Mail definido pelo Rafael em 30/07/2026: R$10,00/mês**
+   (custo do Zoho é R$65,50/ano, cerca de R$5,46/mês). **Falta só aplicar em
+   produção** — esta sessão não tem acesso ao `.env` do servidor (roda num
+   container isolado, sem socket do Docker), então o Rafael precisa:
+   1. Definir `CORVIA_MAIL_PRECO_CENTAVOS=1000` no `.env` de produção.
+   2. Rebuildar o backend (variável só é lida na subida do processo).
+   Enquanto isso não acontecer, `corvia_mail_preco_definido` continua falso
+   e o checkout recusa com 409 — comportamento correto e testado, não é bug.
+   **Pix acrescentado ao checkout** (pedido do Rafael, mesma mensagem):
+   `payment_method_types` ganhou `"pix"` ao lado de `"card"`, com
+   `payment_method_options.pix.mandate_options` (`amount_type: "fixed"`,
+   `payment_schedule: "monthly"`) — é o recurso "Pix Automático" do Stripe,
+   que autoriza cobrança recorrente via mandato bancário, não Pix avulso.
+   Confirmado o formato exato direto no SDK instalado (`stripe==15.4.0`
+   localmente; produção fixa `15.3.1`, mas o corpo da requisição é só um
+   dict serializado — a validação de tipo do SDK não afeta o que trafega) e
+   testado com a rede do Stripe interceptada (sem custo, sem chamada real):
+   a rota `/api/billing/checkout-email` monta exatamente o payload esperado.
+   **Duas coisas que esta sessão não tem como confirmar sem acesso à conta
+   real**: (a) se Pix está habilitado nas configurações de pagamento do
+   painel Stripe (é toggle do painel, não API) — sem isso o `pix` some do
+   checkout em silêncio, sem erro; (b) o fluxo real de autorização do
+   mandato pelo banco do assinante (o primeiro ciclo recorrente só passa a
+   valer alguns dias depois da autorização — diferente do cartão, que cobra
+   na hora). Vale testar um checkout de verdade em modo teste antes de
+   confiar no Pix em produção.
 3. **Migração ainda não rodou em produção.** Precisa ir antes do rebuild,
    como sempre.
 4. **E-mail de recuperação de senha depende de SMTP configurado** —
