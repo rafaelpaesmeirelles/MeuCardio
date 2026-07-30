@@ -1,0 +1,4 @@
+# Dependências só de teste — não entram na imagem de produção
+# (Dockerfile instala apenas requirements.txt).
+-r requirements.txt
+pytest==8.3.4

@@ -17,6 +17,7 @@ frontend/android/.gradle/
 frontend/android/capacitor-cordova-android-plugins/build/
 backend/**/__pycache__/
 backend/migrations/versions/__pycache__/
+backend/.pytest_cache/
 *.pyc
 
 # artefatos de build Android (arquivo grande, regenerado pelo gradlew)
