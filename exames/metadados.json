@@ -1375,5 +1375,79 @@
       "escore prognóstico",
       "cardiopatias congênitas"
     ]
+  },
+  {
+    "slug": "anti-dnase-b-antideoxirribonuclease-b",
+    "name": "Anti-DNase B (antideoxirribonuclease B)",
+    "category": "laboratorial",
+    "theme": "Febre reumática",
+    "what_it_measures": "Anticorpo contra a desoxirribonuclease B, enzima extracelular produzida pelo Streptococcus pyogenes (grupo A) — segundo marcador sorológico clássico de infecção estreptocócica recente, complementar ao ASLO e com cinética de resposta distinta.",
+    "reference_range": "Limite superior de normalidade (percentil 80 da população pediátrica saudável, EUA): 240 unidades Todd para ASLO e 640 unidades para anti-DNase B, ambos crescentes com a idade — valores de corte fixos sem ajuste etário superestimam positividade em crianças pequenas e subestimam em adolescentes.",
+    "indications": "Evidência de infecção estreptocócica do grupo A antecedente nos critérios de Jones revisados (AHA 2015) para febre reumática aguda — recomendado dosar ASLO e anti-DNase B em conjunto (títulos pareados agudo/convalescença, com aumento de pelo menos duas vezes em 2-4 semanas), não isoladamente.",
+    "interpretation": "Título de anti-DNase B atinge pico mais tardio que o ASLO — 6 a 8 semanas após faringite estreptocócica, contra 3 a 6 semanas do ASLO — o que o torna mais sensível quando a coleta ocorre tardiamente em relação ao evento infeccioso, situação comum na febre reumática aguda por causa do intervalo de latência entre a infecção faríngea e o início dos sintomas articulares/cardíacos. Sensibilidade combinada de ASLO com anti-DNase B (ou anti-hialuronidase) chega a 90%, superior a qualquer um dos dois isoladamente.",
+    "limitations": "Como o ASLO, é marcador de exposição estreptocócica, não de infecção ativa — não distingue colonização/infecção recente de evento remoto sem correlação clínica. Título único elevado tem valor diagnóstico limitado; a evidência mais robusta é o aumento seriado entre amostra aguda e convalescente. Reatividade cruzada e variação de método entre laboratórios limitam comparação direta de valores absolutos entre diferentes ensaios.",
+    "source_refs": [
+      "Gewitz MH, Baltimore RS, Tani LY, et al. Revision of the Jones Criteria for the diagnosis of acute rheumatic fever in the era of Doppler echocardiography: a scientific statement from the American Heart Association. Circulation. 2015;131(20):1806-1818. DOI: 10.1161/CIR.0000000000000205. PMID: 25908771.",
+      "Kaplan EL, Rothermel CD, Johnson DR. Antistreptolysin O and anti-deoxyribonuclease B titers: normal values for children ages 2 to 12 in the United States. Pediatrics. 1998;101(1):86-88. DOI: 10.1542/peds.101.1.86. PMID: 9417157 — valores de referência (GMT e limite superior de normalidade) conferidos contra o abstract indexado (Europe PMC) em 30/07/2026."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "anti-dnase b",
+      "antideoxirribonuclease b",
+      "febre reumática",
+      "estreptococo",
+      "biomarcador",
+      "critérios de jones"
+    ]
+  },
+  {
+    "slug": "monitor-de-eventos-implantavel-ilr-na-sincope",
+    "name": "Monitor de eventos implantável (ILR) na síncope de origem indeterminada",
+    "category": "metodo_grafico",
+    "theme": "Síncope",
+    "what_it_measures": "Dispositivo subcutâneo de registro contínuo de ECG (implante cirúrgico simples, geralmente na região paraesternal esquerda), com autonomia de bateria de anos — captura o traçado no momento de um evento sincopal espontâneo, permitindo correlação direta entre sintoma e ritmo cardíaco em pacientes cujo padrão de recorrência é baixo demais para monitores externos de curta duração.",
+    "reference_range": "Não aplicável — exame de correlação sintoma-ritmo, não de valor numérico de referência.",
+    "indications": "ESC 2018: indicado (Classe I/Nível A) em fase precoce de investigação em síncope recorrente de origem indeterminada, sem critérios de alto risco (Tabela 6 da diretriz) e com alta probabilidade de recorrência dentro da vida útil da bateria; também indicado (Classe I/Nível A) em paciente com critérios de alto risco cuja avaliação completa não identificou causa nem indicação convencional de CDI/marca-passo. Deve ser considerado (Classe IIa/B) em síncope reflexa suspeita ou confirmada com episódios frequentes ou graves, e pode ser considerado (Classe IIb/B) em suspeita de epilepsia refratária a tratamento ou em quedas inexplicadas.",
+    "interpretation": "Metanálise de 5 ensaios randomizados (660 pacientes com síncope inexplicada) mostrou que a estratégia inicial com ILR aumentou em 3,7 vezes (IC95% 2,7-5,0) a probabilidade relativa de chegar a um diagnóstico, comparada à estratégia convencional (monitor externo + tilt test + estudo eletrofisiológico), além de ser mais custo-efetiva. Em dados agrupados de 9 estudos (506 pacientes com investigação completa previamente negativa), houve correlação entre síncope e achado no ECG em 35% (176/506) — dessa fração, 56% assistolia/bradicardia, 11% taquicardia, 33% sem arritmia documentada no momento do evento.",
+    "limitations": "Síncope é imprevisível — a diretriz recomenda estar preparado para aguardar até 4 anos ou mais pela correlação sintoma-ritmo. Ausência de arritmia durante um episódio sincopal exclui causa arrítmica para aquele episódio, mas não exclui reflexo hipotensivo com bradicardia/assistolia como evento secundário tardio, já que o dispositivo registra ECG, não pressão arterial simultânea. Pré-síncope não pode ser considerada substituta de síncope na interpretação, exceto quando o achado eletrocardiográfico já é por si diagnóstico.",
+    "source_refs": [
+      "Brignole M, Moya A, de Lange FJ, et al. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948. DOI: 10.1093/eurheartj/ehy037. PMID: 29562304 — seção 4.2.4.7 (Implantable loop recorders) e tabela de recomendações de monitorização eletrocardiográfica, texto integral obtido e conferido em 30/07/2026."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ilr",
+      "monitor de eventos implantável",
+      "síncope",
+      "holter implantável",
+      "arritmia",
+      "esc 2018"
+    ]
+  },
+  {
+    "slug": "nt-probnp-bnp-pre-operatorio",
+    "name": "NT-proBNP/BNP pré-operatório na avaliação de risco cardiovascular",
+    "category": "laboratorial",
+    "theme": "Perioperatório",
+    "what_it_measures": "Peptídeos natriuréticos liberados por estresse de parede miocárdica — marcadores quantitativos de disfunção cardíaca/insuficiência cardíaca, usados no pré-operatório de cirurgia não cardíaca como complemento à avaliação clínica e ao ECG na estratificação de risco de complicação cardíaca perioperatória.",
+    "reference_range": "BNP anormal: ≥35 pg/mL. NT-proBNP anormal: ≥125 pg/mL. Idade, disfunção renal e obesidade são fatores de confusão importantes na faixa etária em que a dosagem é recomendada — sexo tem menor impacto na interpretação.",
+    "indications": "ESC 2022 (avaliação cardiovascular para cirurgia não cardíaca): deve ser considerada (Classe IIa/Nível B) a dosagem de BNP ou NT-proBNP antes de cirurgia de risco intermediário ou alto em paciente com doença cardiovascular conhecida, fator de risco cardiovascular (incluindo idade ≥65 anos) ou sintoma sugestivo de doença cardiovascular. Em paciente de baixo risco submetido a cirurgia de baixo ou médio risco, a diretriz recomenda explicitamente NÃO obter rotineiramente ECG, troponina de alta sensibilidade ou BNP/NT-proBNP pré-operatórios (Classe III/B).",
+    "interpretation": "Em coorte prospectiva de 10.402 pacientes (16 centros), o NT-proBNP melhorou a predição de risco além do RCRI (Revised Cardiac Risk Index) isolado. Em subgrupo de 1.923 pacientes, o NT-proBNP superou tanto o RCRI quanto parâmetros ecocardiográficos na predição de eventos cardiovasculares perioperatórios. Elevado, justifica ecocardiograma transtorácico pré-operatório e monitorização intraoperatória mais intensiva; se BNP/NT-proBNP não estiver disponível, a diretriz recomenda considerar ecocardiograma transtorácico como alternativa.",
+    "limitations": "Menos amplamente disponível e mais caro que troponina de alta sensibilidade, que tem acurácia comparável na predição de complicações cardíacas perioperatórias e, adicionalmente, permite diagnóstico de lesão miocárdica perioperatória (PMI) no pós-operatório — por isso a diretriz não recomenda os dois marcadores de forma intercambiável, e sim troponina como Classe I e BNP/NT-proBNP como Classe IIa. Insuficiência cardíaca é condição frequentemente subdiagnosticada no idoso, população em que a dosagem é mais indicada, mas os pontos de corte de \"rule-in\" ainda estão em evolução.",
+    "source_refs": [
+      "Halvorsen S, Mehilli J, Cassese S, et al. 2022 ESC Guidelines on cardiovascular assessment and management of patients undergoing non-cardiac surgery. Eur Heart J. 2022;43(39):3826-3924. DOI: 10.1093/eurheartj/ehac270. PMID: 36017553 — seção 4.4, texto integral obtido e conferido em 30/07/2026, incluindo tabela de recomendações e valores de corte (Figura 4 e texto associado)."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "nt-probnp",
+      "bnp",
+      "peptídeo natriurético",
+      "perioperatório",
+      "esc 2022",
+      "risco cardiovascular",
+      "biomarcador"
+    ]
   }
 ]
