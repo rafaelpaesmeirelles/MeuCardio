@@ -1248,5 +1248,27 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "cardiomiopatia-hipertrofica-septo-assimetrico-diagrama",
+    "title": "Cardiomiopatia hipertrófica — hipertrofia septal assimétrica (comparação com coração normal)",
+    "modality": "Diagrama",
+    "theme": "Cardiomiopatias",
+    "file_path": "diagrama/cardiomiopatia-hipertrofica-septo-assimetrico.png",
+    "findings": "Ilustração esquemática comparando corte de quatro câmaras de coração normal (painel superior) com coração com cardiomiopatia hipertrófica (painel inferior) — o septo interventricular está visivelmente espessado de forma assimétrica no painel inferior, reduzindo a cavidade do ventrículo esquerdo e estreitando a via de saída, o substrato anatômico da obstrução dinâmica.",
+    "teaching_points": "Complementa o documento `cardiomiopatia-hipertrofica-obstrutiva-terapia-com-inibidores-de-miosina-cardiaca.md` desta biblioteca, que descreve o mecanismo fisiopatológico (obstrução dinâmica da via de saída do VE) em texto — esta imagem dá a correspondência visual direta entre hipertrofia septal assimétrica e a redução de cavidade que gera o gradiente. É diagrama esquemático, não substitui ecocardiograma ou ressonância magnética real para avaliar espessura miocárdica, que exige medida quantitativa (ponto de corte ≥15 mm, ou ≥13 mm com história familiar positiva).",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Hypertrophic_obstructive_cardiomyopathy.png",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Npatchett e BruceBlaus, via Wikimedia Commons — CC BY-SA 3.0 (também disponível sob GFDL). Licença conferida na página do arquivo em 30/07/2026.",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "hipertrofia septal assimétrica",
+      "diagrama",
+      "via de saída do ve",
+      "obstrução dinâmica"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
