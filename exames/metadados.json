@@ -1327,5 +1327,29 @@
       "ecocardiografia",
       "valvopatias"
     ]
+  },
+  {
+    "slug": "ecocardiografia-no-diagnostico-de-tamponamento-cardiaco",
+    "name": "Ecocardiografia no diagnóstico de tamponamento cardíaco",
+    "category": "imagem",
+    "theme": "Pericárdio",
+    "what_it_measures": "Repercussão hemodinâmica de derrame pericárdico sobre o enchimento das câmaras cardíacas — modalidade de imagem padrão-ouro para avaliação de derrame pericárdico e achados compatíveis com tamponamento.",
+    "reference_range": "Não é exame de valor numérico único — a interpretação combina achados estruturais (presença e tamanho do derrame) com achados funcionais de repercussão hemodinâmica, descritos em 'interpretation'.",
+    "indications": "Suspeita clínica de tamponamento cardíaco (dispneia, hipotensão, tríade de Beck); triagem de todo derrame pericárdico quanto ao risco de progressão para tamponamento — ver escore de triagem no documento de tamponamento desta pasta, que combina achados de imagem com etiologia e apresentação clínica.",
+    "interpretation": "Achados ecocardiográficos de tamponamento, em ordem aproximada de especificidade/sensibilidade: colapso diastólico do ventrículo direito (achado específico), colapso sistólico do átrio direito (achado sensível), veia cava inferior pletórica e não colapsável (achado sensível), variação respiratória exagerada do fluxo mitral/tricúspide, e 'coração oscilante' (swinging heart) em derrame volumoso. Nenhum achado isolado é definitivo — o diagnóstico é clínico-ecocardiográfico combinado, e por isso a diretriz ESC 2025 propõe um escore de triagem somando pontos de imagem com etiologia e apresentação clínica (detalhado no documento de tamponamento desta pasta), não um critério ecocardiográfico isolado.",
+    "limitations": "Achados podem ser sutis ou ausentes em tamponamento de instalação lenta com adaptação pericárdica, e mais evidentes em derrame de instalação rápida mesmo com volume menor — o tempo de instalação importa tanto quanto o volume do derrame. Interpretação sempre no contexto clínico (sinais vitais, tríade de Beck), nunca pelo achado de imagem isolado.",
+    "source_refs": [
+      "Pericardial tamponade: A comprehensive emergency medicine and echocardiography review · PubMed · 2022 · https://pubmed.ncbi.nlm.nih.gov/35696801/",
+      "Schulz-Menger J, Collini V, Gröschel J, et al. 2025 ESC Guidelines for the management of myocarditis and pericarditis. Eur Heart J. 2025;46(40):3952-4041. DOI: 10.1093/eurheartj/ehaf192. PMID: 40878297 — Figura 12 e critérios de triagem associados, texto integral já obtido nesta sessão para o documento de tamponamento desta mesma pasta, conferido diretamente em 30/07/2026."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "tamponamento cardíaco",
+      "derrame pericárdico",
+      "ecocardiografia",
+      "colapso diastólico de vd",
+      "pericárdio"
+    ]
   }
 ]
