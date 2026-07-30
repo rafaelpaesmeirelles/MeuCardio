@@ -101,8 +101,83 @@ Os riscos que o briefing já apontava (reputação de domínio novo, SPF/DKIM/DM
    briefing de "acesso só de dentro da plataforma, mesmo login" depende
    diretamente disso.
 
-Pesquisa técnica mais profunda sobre a Titan Email (onboarding real, endpoints da
-API além de `createMailOrder`, mecanismo exato do token de auto-login, se o embed
-é do webmail do usuário final ou só do painel de admin, preço, red flags) está em
-andamento e será acrescentada a este arquivo antes de qualquer código de modelo de
-dados ou interface.
+### Pesquisa aprofundada da Titan Email, 30/07/2026 — achado que muda a recomendação anterior
+
+**Ressalva de método:** a documentação de `apidocs.titan.email` é renderizada via
+JS/Apiary; não consegui abrir o HTML bruto, só uma leitura resumida por
+ferramenta de fetch. É a melhor fonte disponível nesta sessão, mas é fonte
+única, sem segunda leitura independente do texto verbatim — trato como
+confiança moderada, não como citação garantida.
+
+**Onboarding não é self-service.** Não existe "criar conta → pegar API key →
+começar a chamar". O caminho público é `titan.email/partners` → formulário de
+contato → aprovação comercial humana, que só então libera API URL, Partner ID
+e API Secret Key. Não há um "Titan Email Reseller Program" com portal de
+developer/sandbox aberto. Não encontrado: prazo de resposta, critério de
+elegibilidade ou volume mínimo exigido.
+
+**Endpoints confirmados além de `createMailOrder`:** existe, sim, criação de
+caixa individual dentro de domínio já existente (`createEmailAccount`), além
+de suspender/deletar/trocar senha (`suspendEmailAccount`, `deleteEmailAccount`,
+`changeEmailAccountPassword`) — a API é mais completa do que a pesquisa
+inicial sugeria.
+
+**O ponto que muda tudo — mecanismo de SSO/embed, examinado em detalhe:**
+
+- `webmailAutoLoginToken` **só é emitido no momento da criação da caixa**,
+  como parte da resposta do `createEmailAccount` — não é um endpoint que se
+  chama de novo a cada acesso. A própria documentação diz que o token **não
+  deve ser persistido e não pode ser reutilizado depois** para logar de novo.
+  TTL exato não encontrado, mas é descrito como de uso imediato e único.
+  Quando usado, leva à caixa de entrada real em `app.titan.email` — isso é
+  positivo, é o webmail de verdade, não um painel.
+- O iframe `cpWidget` (`manage.titan.email/partner/cpWidget`), esse sim
+  reemitível quantas vezes o parceiro quiser (JWT assinado pelo próprio
+  backend do parceiro) — mas os valores documentados de `section` são todos
+  administrativos (`home`, `email-accounts`, `billing-and-subscription`,
+  `domain-verification` etc.). **Nenhum mostra a caixa de entrada do usuário
+  final.** É um painel de administração de conta, não o cliente de e-mail.
+
+**Conclusão prática:** dá para embutir um painel de *administração* de
+contas via iframe, reemitível. Dá para mandar o usuário ao webmail real, mas
+só **uma vez**, no instante em que a caixa é criada, com token de uso único.
+**Não há confirmação, na documentação pública, de que dá para embutir o
+webmail (a caixa de entrada) dentro da Corvia com SSO recorrente a cada
+sessão** — que é exatamente o requisito central do briefing ("acesso só de
+dentro da plataforma, mesmo login, toda vez que entra"). Isso precisaria ser
+esclarecido diretamente com o time comercial/técnico da Titan, pelo mesmo
+formulário de parceria que é o único canal de onboarding — **antes de
+qualquer decisão de seguir com esse fornecedor**, porque a documentação
+pública não sustenta esse fluxo.
+
+**Preço:** não há tabela pública do valor de atacado (o que a Titan cobraria
+da Corvia) — só o preço final ao consumidor que cada revendedor pratica
+(US$1,49-7,99/caixa/mês conforme o revendedor). Modelo de negócio é B2B2C via
+grandes distribuidores (GoDaddy — que fechou parceria em 2025 mirando
+justamente o Brasil como mercado emergente —, Automattic/WordPress.com,
+Hostinger, HostGator Brasil, Name.com). Isso é inferência, não regra
+publicada, mas o padrão de parceiros é de grandes distribuidores com volume
+agregado — uma operação nova e pequena como a Corvia pode não ser o perfil
+que a Titan prioriza; só o contato comercial esclarece isso.
+
+**Red flags apuradas:** a empresa em si parece financeiramente sólida
+(fundada em 2018 por Bhavin Turakhia, aporte Série A de US$30 milhões liderado
+pela Automattic em 2021, avaliação de US$300 milhões) — não tem o perfil do
+susto de preço da Rackspace. Mas o Trustpilot mostra nota ~4,0/5 com 380
+avaliações e **21% de 1 estrela**, com reclamações recorrentes de filtro de
+spam que não dá para desligar, suporte difícil de alcançar, e um caso relatado
+de corte imediato de acesso IMAP ao trocar MX, sem aviso, deixando histórico
+de e-mail de 18 funcionários inacessível durante migração.
+
+**Síntese:** a recomendação anterior de Titan Email como melhor opção de embed
+foi baseada numa primeira leitura da documentação, que sugeria SSO/iframe
+funcionando de forma genérica. A leitura mais profunda mostra que o mecanismo
+documentado publicamente **não cobre o caso de uso central que a Corvia
+precisa** (webmail embutido, SSO recorrente). Antes de investir mais tempo
+nessa via, o próximo passo tem que ser esclarecer isso direto com a Titan
+pelo canal de parceria — e vale reconsiderar em paralelo a OpenSRS (embed só
+por subdomínio com marca, não confirmado dentro da própria Corvia, mas sem
+essa limitação específica documentada) ou aprofundar a mesma pergunta nos
+outros fornecedores antes de comprometer a arquitetura a um único caminho.
+
+Nenhum código de modelo de dados ou interface foi escrito para esta tarefa.
