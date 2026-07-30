@@ -1360,5 +1360,27 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "marca-passo-temporario-posicionamento-perioperatorio",
+    "title": "Marca-passo temporário — radiografia de posicionamento (eletrodo em ventrículo direito)",
+    "modality": "Radiografia",
+    "theme": "Perioperatório",
+    "file_path": "radiografia/marca-passo-temporario-posicionamento-perioperatorio.jpg",
+    "findings": "Radiografia de tórax AP de leito (\"Thorax auf Station\"), anotada por cores: eletrodo de marca-passo temporário (laranja) com a ponta projetada sobre o assoalho do ventrículo direito, mostrando a transição entre a bainha introdutora e o cabo mais fino do eletrodo; cabo adicional (vermelho) de ECG/desfibrilação externa colado à borda cardíaca direita.",
+    "teaching_points": "Marca-passo temporário transvenoso é usado como ponte no perioperatório em paciente com bloqueio atrioventricular de alto grau, disfunção de nó sinusal sintomática, ou como cobertura durante procedimento com risco de bradiarritmia — inclusive em paciente com CDI/marca-passo definitivo que terá o dispositivo reprogramado ou desligado durante cirurgia com eletrocautério (ver documento `manejo-perioperatorio-de-marca-passo-e-cdi-em-cirurgia-nao-cardiaca.md` desta pasta). A radiografia de controle pós-implante confirma a posição da ponta do eletrodo (idealmente no ápice ou via de saída do VD) e exclui as duas complicações mais temidas do procedimento à beira do leito: perfuração miocárdica e pneumotórax pela punção venosa central usada para o acesso.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Temporaerer_Herzschrittmacher_82M_-_CR_ap_-_001_-_Annotation.jpg",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Hellerhoff, via Wikimedia Commons — CC BY-SA 4.0. Licença conferida na página do arquivo em 30/07/2026.",
+    "tags": [
+      "marca-passo temporário",
+      "radiografia de tórax",
+      "perioperatório",
+      "bradiarritmia",
+      "eletrodo ventricular"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
