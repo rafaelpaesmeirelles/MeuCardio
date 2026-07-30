@@ -105,9 +105,8 @@ export default function Entrar() {
         </Link>
 
         <p className="aviso">
-          Biblioteca científica, calculadoras validadas, comparador de medicamentos e
-          um assistente de IA treinado na sua base — tudo em um só lugar para agilizar
-          a decisão clínica em cardiologia.
+          Todo o caminho da Cardiologia, num só lugar — da evidência à decisão,
+          ao lado do paciente.
         </p>
         <Credito compacto />
       </div>

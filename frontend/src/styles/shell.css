@@ -5,7 +5,12 @@
   background: var(--primaria);
   color: var(--superficie);
   padding: 0.7rem 1rem calc(0.7rem);
-  display: flex;
+  display: grid;
+  /* 3 colunas: esquerda (menu/logo) e direita (usuário) no tamanho do próprio
+     conteúdo, meio elástico. Funciona nos dois breakpoints porque o item que
+     não aparece (busca no mobile, botão de menu no desktop) some do fluxo via
+     display:none — sempre sobram exatamente 3 itens visíveis para 3 colunas. */
+  grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 0.75rem;
 }
@@ -42,7 +47,10 @@
    telas estreitas, onde esse espaço nem existe e a gaveta já tem o item. */
 .topo__busca {
   display: none;
-  flex: 1 1 auto;
+  /* justify-self:center é o que de fato centraliza — a coluna 1fr por si só
+     só estica o item até o max-width e o ancora à esquerda da coluna. */
+  justify-self: center;
+  width: 100%;
   max-width: 480px;
   margin: 0 1rem;
 }

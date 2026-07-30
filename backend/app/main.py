@@ -16,7 +16,7 @@ from app.services.bootstrap import init_db
 app = FastAPI(
     title="Corvia — API",
     description=(
-        "Idealizador, desenvolvedor, revisor e responsável técnico: "
+        "Idealizador, Desenvolvedor e Revisor: "
         "Dr. Rafael Paes Meirelles — CRM-SP 138266 · RQE 134798 em Cardiologia"
     ),
     version="0.1.0",
