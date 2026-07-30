@@ -175,7 +175,9 @@ Regras que decorrem disso:
 >   destaque para o registro de faringite estreptocócica (WHO 2024), que usa força/certeza
 >   GRADE (não a escala Classe/Nível ESC-AHA) e traz nota explícita disso no campo
 >   `reference`, com os campos curtos (`Forte`, `Mod`) checados por script para não repetir
->   o defeito de esquema que a sessão de Medicamentos corrigiu.
+>   o defeito de esquema que a sessão de Medicamentos corrigiu; e mais um documento novo em
+>   `content/Perioperatório/` (valvopatia e cirurgia não cardíaca — estenose aórtica, estenose
+>   mitral, regurgitação aórtica e mitral, prótese valvar, ESC 2022) — commit `c7fe5a6`.
 >
 > **Uma entrada NÃO deve ser publicada com o resto, apesar da aprovação geral**: em
 > `evidencias/metadados.json`, o registro
