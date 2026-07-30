@@ -3,7 +3,7 @@ title: "GRACE 2.0 (Global Registry of Acute Coronary Events)"
 slug: grace-20-global-registry-of-acute-coronary-events
 theme: "Calculadoras"
 kind: calculadora
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Fox KAA, Fitzgerald G, Puymirat E, et al. Should patients with acute coronary disease be stratified for management according to their risk? Derivation, external validation and outcomes using the updated GRACE risk score. BMJ Open. 2014;4(2):e004425. DOI: 10.1136/bmjopen-2013-004425. PMID: 24561498"]
 legacy_source: "calculadoras/calculadora-grace-2-0-completa.md"
 ---
@@ -46,7 +46,7 @@ Soma direta de todos os pontos das 8 variáveis clínicas
 **Esclarecido em 30/07/2026, lendo o próprio artigo (Fox KAA et al., BMJ Open. 2014;4(2):e004425, PMID 24561498, texto completo verificado via PMC):**
 
 - **O que o GRACE 2.0 muda de fato**: em vez de somar pontos por faixa como o escore original, o 2.0 usa diretamente as estimativas do modelo (regressão logística) para computar o risco cumulativo — o artigo é explícito que **não converte as estimativas em sistema de pontos**. Associações **não lineares** foram encontradas para as **quatro medidas contínuas** — pressão arterial sistólica, pulso, idade e creatinina (p<0,001 vs. modelo linear) — usa as mesmas 8 variáveis do escore original (idade, FC, PAS, creatinina, classe Killip, parada cardíaca na admissão, desvio de segmento ST, biomarcador cardíaco positivo).
-- **Os coeficientes explícitos NÃO estão no artigo.** O próprio texto remete a um arquivo externo do grupo GRACE (`outcomes-umassmed.org/grace/files/GRACE_RiskModel_Coefficients.pdf`) em vez de publicar a equação — e esse endereço está **fora do ar** (conexão recusada, testado em 30/07/2026). **A equação com os coeficientes específicos que constava antes neste documento (xb = -7,7035 + 0,0531×idade + ...) não pôde ser confirmada contra o artigo original nem contra a fonte que o artigo cita, porque essa fonte não está mais acessível — permanece como VERIFICAÇÃO HUMANA NECESSÁRIA especificamente para os valores numéricos dos coeficientes**, mesmo com a descrição qualitativa do método já resolvida acima.
+- **Os coeficientes explícitos NÃO estão no artigo.** O próprio texto remete a um arquivo externo do grupo GRACE (`outcomes-umassmed.org/grace/files/GRACE_RiskModel_Coefficients.pdf`) em vez de publicar a equação — e esse endereço está **fora do ar** (conexão recusada, testado em 30/07/2026). **Revisado pelo Rafael em 30/07/2026**: a equação com coeficientes específicos que constava antes neste documento (xb = -7,7035 + 0,0531×idade + ...) foi removida por não poder ser confirmada contra o artigo original nem contra a fonte que ele cita — o cálculo do GRACE 2.0 deve ser feito pela calculadora eletrônica oficial do grupo, não por reconstrução manual da equação a partir desta página.
 - **Discriminação (c-estatística), na coorte de validação FAST-MI 2005, citada diretamente do texto do artigo**: para óbito, **c>0,82 em 1 ano** e **c=0,82 em 3 anos**; para o composto óbito/IAM, discriminação um pouco menor — **c=0,78 em 1 ano** e **c=0,75 em 3 anos**.
 
 ## Aplicacao pratica

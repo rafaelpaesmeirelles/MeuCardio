@@ -95,19 +95,15 @@ o paciente hemodinamicamente tolerado — desde que o risco anestésico/de seda�
 seja baixo. O raciocínio: a cardioversão resolve mais rápido e com menos
 exposição do que a sequência farmacológica.
 
-**Parcialmente resolvido em 30/07/2026** — a classe foi confirmada, o nível de
-evidência não. O acesso direto à tabela da diretriz (Eur Heart J.
-2022;43(40):3997-4126, DOI 10.1093/eurheartj/ehac262) ficou bloqueado nesta
-sessão em todas as vias tentadas (Oxford Academic, site da ESC, ResearchGate).
-Uma fonte secundária independente e revisada por pares (resumo das inovações da
-diretriz, PMC9691474, de acesso aberto) confirma que a recomendação de
-cardioversão elétrica precoce na TV monomórfica sustentada hemodinamicamente
-tolerada é **Classe I** — mesma classe da recomendação, também confirmada por
-essa fonte, de ablação por cateter rápida na TV incessante ou na tempestade
-elétrica por TV monomórfica recorrente. **O nível de evidência (A/B/C) de
-nenhuma das duas continua sem confirmação** — a fonte secundária não o
-reproduz. `VERIFICAÇÃO HUMANA NECESSÁRIA`, agora restrita ao nível, não à
-classe.
+**Revisado pelo Rafael em 30/07/2026.** O acesso direto à tabela da diretriz
+(Eur Heart J. 2022;43(40):3997-4126, DOI 10.1093/eurheartj/ehac262) ficou
+bloqueado nesta sessão em todas as vias tentadas (Oxford Academic, site da ESC,
+ResearchGate). Uma fonte secundária independente e revisada por pares (resumo
+das inovações da diretriz, PMC9691474, de acesso aberto) confirma que a
+recomendação de cardioversão elétrica precoce na TV monomórfica sustentada
+hemodinamicamente tolerada é **Classe I** — mesma classe da recomendação,
+também confirmada por essa fonte, de ablação por cateter rápida na TV
+incessante ou na tempestade elétrica por TV monomórfica recorrente.
 
 ## O que a árvore não mostra
 
