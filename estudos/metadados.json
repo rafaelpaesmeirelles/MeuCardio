@@ -1734,5 +1734,31 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "daptomicina-versus-terapia-padrao-na-bacteremia-e-endocardite-por-s-aureus",
+    "title": "Daptomicina versus terapia padrão na bacteremia e endocardite por Staphylococcus aureus",
+    "study_type": "ensaio_clinico",
+    "authors": "Fowler VG Jr, Boucher HW, Corey GR, et al. (S. aureus Endocarditis and Bacteremia Study Group)",
+    "journal": "New England Journal of Medicine",
+    "year": 2006,
+    "doi": "10.1056/NEJMoa053783",
+    "pmid": "16914701",
+    "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa053783",
+    "summary": "Ensaio randomizado, aberto, de não inferioridade — 124 pacientes com bacteremia por S. aureus, com ou sem endocardite, receberam daptomicina 6 mg/kg IV/dia; 122 receberam terapia padrão (gentamicina em dose baixa inicial associada a penicilina antiestafilocócica ou vancomicina). Desfecho primário de eficácia: sucesso terapêutico 42 dias após o fim do tratamento.",
+    "key_findings": "Sucesso terapêutico (análise por intenção de tratar modificada): 53 de 120 pacientes com daptomicina (44,2%) contra 48 de 115 com terapia padrão (41,7%) — diferença absoluta de 2,4% (IC95% -10,2% a 15,1%), atendendo ao critério pré-especificado de não inferioridade. Taxas semelhantes entre os grupos nos subgrupos de bacteremia complicada, endocardite direita e MRSA. Falha microbiológica foi numericamente maior com daptomicina (19 vs. 11 pacientes; p=0,17) — em 6 dos 19 casos de falha no grupo daptomicina, surgiram isolados com sensibilidade reduzida ao fármaco. Disfunção renal clinicamente significativa: 11,0% com daptomicina contra 26,3% com terapia padrão (p=0,004) — diferença de segurança relevante a favor da daptomicina.",
+    "clinical_implications": "Estabeleceu a daptomicina como alternativa não inferior à terapia padrão para bacteremia por S. aureus e endocardite de câmaras direitas, com perfil renal mais favorável — base do uso da daptomicina como opção terapêutica nos esquemas antibióticos para endocardite por Staphylococcus, hoje incorporada às diretrizes (ESC 2023).",
+    "limitations": "Não avaliou endocardite de valva esquerda de forma robusta (subgrupo pequeno) — a extrapolação para essa população é mais cautelosa. Emergência de isolados com sensibilidade reduzida à daptomicina durante o tratamento é achado de segurança que exige monitorização microbiológica em caso de falha terapêutica.",
+    "theme": "Endocardite",
+    "tags": [
+      "daptomicina",
+      "staphylococcus aureus",
+      "bacteremia",
+      "endocardite direita",
+      "não inferioridade",
+      "ensaio clínico"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
