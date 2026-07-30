@@ -1235,33 +1235,37 @@ não refazer.
 ### Decisões pendentes de terceiros
 14. **Revisão jurídica do TCLE** e definição de encarregado de dados (DPO). O
    próprio modelo diz que precisa disso antes do uso em produção.
-14b. **LGPD do Zoho Mail360 (CorvIA Mail) — pergunta ficou mais precisa em
-   30/07/2026, não resolvida.** O Rafael mandou 5 links do blog e da busca da
-   Zoho sobre LGPD; nenhum tinha informação técnica — são posts educativos
+14b. **LGPD do Zoho Mail360 (CorvIA Mail) — APROVADO pelo Rafael em
+   30/07/2026, via consentimento específico, não via cláusula da ANPD.**
+   Histórico da apuração: o Rafael mandou 5 links do blog e da busca da Zoho
+   sobre LGPD; nenhum tinha informação técnica — são posts educativos
    genéricos, nenhum menciona Mail360 ou Zoho Mail, e a página de busca do
    site é renderizada por JavaScript (não retorna nada pra quem só lê o HTML
    estático). A página oficial de GDPR do Zoho Mail (`zoho.com/mail/gdpr.html`)
-   é que tem informação real: data centers só em EUA, UE (Amsterdã e Dublin),
-   China, Índia e Austrália — **nenhum no Brasil** —, certificações ISO/IEC
-   27001 e SOC 2 Type 2, e DPA disponível sob pedido (`legal@zohocorp.com`,
-   informando o data center escolhido) baseado nas **"Model Contractual
-   Clauses" da União Europeia** — o instrumento do GDPR.
-   **O ponto que falta resolver:** a ANPD tem cláusula-padrão contratual
-   PRÓPRIA (Resolução CD/ANPD nº 19/2024), que o próprio regulamento exige
-   ser adotada "em sua integralidade, sem alterações" para servir de base
-   legal de transferência internacional pelo art. 33 da LGPD. A cláusula
-   europeia que a Zoho oferece de cara resolve GDPR — **não confirma, por si
-   só, conformidade com a LGPD**. Usar o Mail360 é transferência
-   internacional de dado pessoal (mesmo só administrativo — nome, e-mail já
-   é dado pessoal), e isso não está coberto até alguém confirmar se a Zoho
-   aceita incorporar a cláusula da ANPD em vez de, ou além de, a europeia.
-   A ressalva já embutida no produto (proibir dado clínico/identificação de
-   paciente na caixa, em `CaixaDeEmail.tsx`) reduz a exposição, mas não
-   resolve a questão de transferência internacional em si.
-   **Pergunta específica para levar ao jurídico/DPO, junto com o item 14:**
-   a Zoho aceita incorporar a cláusula-padrão da ANPD (Resolução 19/2024) no
-   DPA, ou só oferece a cláusula europeia? Sem essa resposta, o item segue
-   pendente — não é decisão técnica, não deve ser resolvida por código.
+   é que tinha informação real: data centers só em EUA, UE (Amsterdã e
+   Dublin), China, Índia e Austrália — **nenhum no Brasil** —, certificações
+   ISO/IEC 27001 e SOC 2 Type 2, e DPA disponível sob pedido baseado nas
+   **"Model Contractual Clauses" da União Europeia** (o instrumento do
+   GDPR) — que não confirma, por si só, conformidade com a cláusula-padrão
+   própria da ANPD (Resolução CD/ANPD nº 19/2024, exigida "em sua
+   integralidade, sem alterações" pelo art. 33 da LGPD).
+   **Decisão do Rafael:** em vez de esperar a Zoho confirmar a adoção da
+   cláusula da ANPD, optou pela outra via que o próprio art. 33 da LGPD
+   prevê — o inciso VIII: consentimento específico e destacado do titular,
+   com informação prévia do caráter internacional da operação, distinto de
+   qualquer outro consentimento da plataforma. Implementado em 30/07/2026:
+   `backend/app/content/termo_lgpd_email.py` (texto versionado — minuta
+   redigida por esta sessão, **não revisada por advogado**, mesma pendência
+   do item 14) e `email_accounts.lgpd_aceite_em`/`lgpd_aceite_versao`,
+   gravados só quando o médico marca o aceite na ativação da caixa
+   (`POST /api/email/conta`, 422 sem `aceite_lgpd: true`). A ressalva já
+   embutida no produto (proibir dado clínico/identificação de paciente na
+   caixa) continua valendo, e agora também está escrita no próprio termo,
+   como algo que o titular reconhece ao aceitar.
+   **O que continua pendente:** revisão jurídica do texto do termo (mesmo
+   guarda-chuva do item 14) — o Rafael aprovou o mecanismo e decidiu seguir
+   por este caminho, não substituiu a revisão de um advogado sobre o texto
+   em si.
 15. **Prazo de retenção** de exame e laudo: segue regra de guarda de prontuário,
    sem exclusão automática (decisão do Rafael); o prazo exato ele confirma com
    o jurídico. **Pedido abandonado** — com exame e dados de paciente gravados
