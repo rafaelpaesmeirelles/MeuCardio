@@ -8,7 +8,7 @@ import LogoCorviaMail from "../components/LogoCorviaMail";
 
 type StatusEmail = {
   status: string; current_period_end: string | null;
-  preco_definido: boolean; preco_centavos: number;
+  preco_definido: boolean; preco_centavos: number; incluido_no_plano: boolean;
 };
 type ContaEmail = {
   ativa: boolean; email_address?: string;
@@ -174,15 +174,21 @@ function AbaAssinar() {
         webmail integrado — add-on separado da assinatura principal da Corvia, cobrado à parte.
       </p>
 
-      <p>
-        <strong>{status?.preco_definido ? `${reais(status.preco_centavos)}/mês` : "Em breve"}</strong>
-        {!status?.preco_definido && " — o valor ainda está sendo definido."}
-        {status?.preco_definido && " — pagamento em Pix ou cartão."}
-      </p>
+      {status?.incluido_no_plano ? (
+        <p style={{ color: "var(--sucesso)" }}>
+          Incluído no seu plano <strong>Acesso Completo + CorvIA Mail</strong> — nenhuma cobrança adicional.
+        </p>
+      ) : (
+        <p>
+          <strong>{status?.preco_definido ? `${reais(status.preco_centavos)}/mês` : "Em breve"}</strong>
+          {!status?.preco_definido && " — o valor ainda está sendo definido."}
+          {status?.preco_definido && " — pagamento em Pix ou cartão."}
+        </p>
+      )}
 
       {erro && <p role="alert" style={{ color: "var(--alerta)", fontSize: "0.86rem" }}>{erro}</p>}
 
-      {!ativa && (
+      {!ativa && !status?.incluido_no_plano && (
         <button className="botao" style={{ width: "100%", marginTop: "1rem" }}
                 onClick={assinar} disabled={processando || !status?.preco_definido}>
           {processando ? "Redirecionando…" : status?.preco_definido ? "Assinar o CorvIA Mail" : "Em breve"}

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import { NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "../lib/auth";
 import { api } from "../lib/api";
@@ -46,11 +46,20 @@ export default function Shell() {
   const naEmergencia = useLocation().pathname.startsWith("/emergencia");
   const [pendentes, setPendentes] = useState(0);
   const [menuAberto, setMenuAberto] = useState(false);
+  const [buscaTopo, setBuscaTopo] = useState("");
 
   useEffect(() => {
     if (usuario?.role !== "admin") return;
     api.get<any[]>("/admin/users?status=pendente").then((l) => setPendentes(l.length)).catch(() => {});
   }, [usuario]);
+
+  function buscarDaFaixa(e: FormEvent) {
+    e.preventDefault();
+    const termo = buscaTopo.trim();
+    if (termo.length < 2) return;
+    navigate(`/busca?q=${encodeURIComponent(termo)}`);
+    setBuscaTopo("");
+  }
 
   const CONTA: ItemNav = { to: "/minha-conta", rotulo: "Minha conta", curto: "Conta" };
 
@@ -85,6 +94,17 @@ export default function Shell() {
           </span>
           <span className="topo__servico">O caminho do coração</span>
         </div>
+
+        <form className="topo__busca" onSubmit={buscarDaFaixa} role="search">
+          <input
+            value={buscaTopo}
+            onChange={(e) => setBuscaTopo(e.target.value)}
+            placeholder="Buscar em toda a Corvia — condição, fármaco, escore…"
+            aria-label="Buscar em toda a Corvia"
+          />
+          <button type="submit" aria-label="Buscar">🔍</button>
+        </form>
+
         <div className="topo__usuario">
           <NavLink to="/minha-conta" style={{ color: "inherit" }}>
             {usuario?.full_name}

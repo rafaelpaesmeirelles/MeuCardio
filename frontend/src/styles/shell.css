@@ -36,6 +36,46 @@
 }
 .topo__usuario { margin-left: auto; font-size: 0.82rem; color: var(--acento-claro); }
 
+/* Busca global na faixa superior — preenche o espaço entre a logo e o nome do
+   médico com algo funcional, não decorativo: pesquisar em toda a Corvia de
+   qualquer tela, sem precisar abrir o menu e entrar em Busca antes. Some em
+   telas estreitas, onde esse espaço nem existe e a gaveta já tem o item. */
+.topo__busca {
+  display: none;
+  flex: 1 1 auto;
+  max-width: 480px;
+  margin: 0 1rem;
+}
+@media (min-width: 900px) {
+  .topo__busca { display: flex; }
+}
+.topo__busca input {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--superficie);
+  border-radius: var(--r) 0 0 var(--r);
+  padding: 0.45rem 0.8rem;
+  font-size: 0.86rem;
+}
+.topo__busca input::placeholder { color: rgba(255, 255, 255, 0.62); }
+.topo__busca input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.18);
+  border-color: var(--acento-claro);
+}
+.topo__busca button {
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-left: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--superficie);
+  border-radius: 0 var(--r) var(--r) 0;
+  padding: 0 0.9rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.topo__busca button:hover { background: rgba(255, 255, 255, 0.2); }
+
 /* Navegação lateral (desktop) --------------------------------------------- */
 .lateral {
   width: 232px;

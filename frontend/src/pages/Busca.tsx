@@ -1,25 +1,34 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import { api } from "../lib/api";
 import { Carregando, Vazio } from "../components/Estado";
 
 type Res = { slug: string; title: string; kind: string; theme: string; snippet: string };
 
 export default function Busca() {
-  const [q, setQ] = useState("");
+  const [params] = useSearchParams();
+  const [q, setQ] = useState(params.get("q") ?? "");
   const [res, setRes] = useState<Res[] | null>(null);
   const [buscando, setBuscando] = useState(false);
 
-  async function buscar() {
-    if (q.trim().length < 2) return;
+  async function buscar(termo: string) {
+    if (termo.trim().length < 2) return;
     setBuscando(true);
     try {
-      const r = await api.get<{ results: Res[] }>(`/search?q=${encodeURIComponent(q)}`);
+      const r = await api.get<{ results: Res[] }>(`/search?q=${encodeURIComponent(termo)}`);
       setRes(r.results);
     } finally {
       setBuscando(false);
     }
   }
+
+  // Permite chegar aqui já com o termo pronto (ex.: busca da faixa superior)
+  // e disparar a pesquisa sem exigir um segundo clique.
+  useEffect(() => {
+    const inicial = params.get("q");
+    if (inicial && inicial.trim().length >= 2) buscar(inicial);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <>
@@ -30,11 +39,11 @@ export default function Busca() {
         <input
           value={q}
           onChange={(e) => setQ(e.target.value)}
-          onKeyDown={(e) => e.key === "Enter" && buscar()}
+          onKeyDown={(e) => e.key === "Enter" && buscar(q)}
           placeholder="anticoagulação em FA, choque cardiogênico, ATP no CDI…"
           aria-label="Termo de busca"
         />
-        <button className="botao" onClick={buscar} disabled={q.trim().length < 2}>Buscar</button>
+        <button className="botao" onClick={() => buscar(q)} disabled={q.trim().length < 2}>Buscar</button>
       </div>
 
       {buscando && <Carregando texto="Procurando…" />}
