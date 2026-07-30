@@ -4,7 +4,7 @@ slug: wolff-parkinson-white-assintomatico-e-cardiomiopatia-induzida-por-extrassi
 theme: "Arritmias"
 kind: protocolo
 review_status: revisado
-source_refs: ["Sudden Cardiac Death: The Most Feared but Potentially Preventable Presentation of Wolff-Parkinson-White Syndrome · PMC · https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8616676/", "A Randomized Study of Prophylactic Catheter Ablation in Asymptomatic Patients with the Wolff–Parkinson–White Syndrome · New England Journal of Medicine · https://www.nejm.org/doi/full/10.1056/NEJMoa035345", "Burden of Premature Ventricular Complexes and Risk of Cardiomyopathy: A Cross-Sectional Study · JACC: Clinical Electrophysiology · 2025 · https://www.jacc.org/doi/10.1016/j.jacep.2025.01.004", "Premature Ventricular Contraction-Induced Cardiomyopathy: Contemporary Evidence from Risk Stratification, Pathophysiology, and Management · PMC · https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11084868/"]
+source_refs: ["Sudden Cardiac Death: The Most Feared but Potentially Preventable Presentation of Wolff-Parkinson-White Syndrome · PMC · https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8616676/", "A Randomized Study of Prophylactic Catheter Ablation in Asymptomatic Patients with the Wolff–Parkinson–White Syndrome · New England Journal of Medicine · https://www.nejm.org/doi/full/10.1056/NEJMoa035345", "Burden of Premature Ventricular Complexes and Risk of Cardiomyopathy: A Cross-Sectional Study · JACC: Clinical Electrophysiology · 2025 · https://www.jacc.org/doi/10.1016/j.jacep.2025.01.004", "Premature Ventricular Contraction-Induced Cardiomyopathy: Contemporary Evidence from Risk Stratification, Pathophysiology, and Management · PMC · https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11084868/", "Wolff-Parkinson-White Syndrome. StatPearls, NCBI Bookshelf, NBK554437 — seção de manejo da fibrilação atrial pré-excitada, consultada em 30/07/2026"]
 ---
 
 # Wolff-Parkinson-White Assintomático e Cardiomiopatia Induzida por Extrassístoles Ventriculares
@@ -30,6 +30,15 @@ Complementa os três documentos já existentes sobre arritmias (arritmias ventri
 - **limiar de maior sensibilidade/especificidade**: carga >24% associada de forma independente a PIC, com sensibilidade e especificidade de aproximadamente 80%
 - **limitacao**: não há corte claro na carga de extrassístoles que separe risco alto de baixo para PIC
 - **fonte**: JACC: Clinical Electrophysiology 2025; PMC (evidência contemporânea sobre PIC)
+
+## Fibrilacao atrial pre-excitada — emergencia com farmaco contraindicado
+**Acrescentado em 30/07/2026.** Cenário distinto do WPW assintomático: paciente com via acessória e fibrilação atrial conduzindo pela via (não pelo nó AV), reconhecida por QRS largo e irregular com frequência ventricular muito alta.
+
+- **Paciente instável**: cardioversão sincronizada (ou desfibrilação) é a conduta
+- **Paciente estável**: procainamida ou ibutilida são os fármacos de escolha
+- **Bloqueadores do nó atrioventricular são CONTRAINDICADOS** — adenosina, verapamil, diltiazem, betabloqueador e digoxina. Mecanismo: esses fármacos bloqueiam o nó AV mas não a via acessória, favorecendo condução preferencial pela via acessória e podendo precipitar fibrilação ventricular
+- **Amiodarona intravenosa também deve ser evitada** nesse cenário específico — há relatos de indução de fibrilação ventricular quando usada em FA associada a WPW
+- **Princípio de segurança**: havendo qualquer dúvida sobre o diagnóstico diante de taquicardia de QRS largo, tratar como suspeita de taquicardia ventricular
 
 ## Indicacao de ablacao de extrassistoles ventriculares
 - **principais indicacoes**: presença de sintomas, cardiomiopatia suspeita de ser causada ou agravada por extrassístoles frequentes, e fibrilação ventricular deflagrada por extrassístole
