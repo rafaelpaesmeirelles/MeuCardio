@@ -56,14 +56,17 @@ coração estruturalmente normal, sem histórico prévio de arritmia.
 
 A diretriz europeia de FA de 2024 introduziu o framework **AF-CARE**, cujo
 pilar "Avoid triggers/factors" eleva a redução do consumo de álcool de
-recomendação Classe IIa (diretriz 2020) para **Classe I**: reduzir a ingestão
-para no máximo 3 doses-padrão (≈ 30 g de álcool) por semana é recomendado como
-parte do controle de fatores de risco e prevenção de recorrência de FA.
+recomendação Classe IIa, Nível B (diretriz 2020: *"advice and management to
+avoid alcohol excess should be considered for AF prevention and in AF
+patients considered for OAC therapy"*) para **Classe I, Nível B** em 2024:
+*"reducing alcohol consumption to ≤3 standard drinks (≤30 grams of alcohol)
+per week is recommended as part of comprehensive risk factor management to
+reduce AF recurrence"* — Tabela 4 (recomendações revisadas) da diretriz.
 
-*(O nível de evidência — A, B ou C — não pôde ser confirmado com segurança a
-partir das fontes primárias consultadas nesta revisão; **VERIFICAÇÃO HUMANA
-NECESSÁRIA** para essa letra específica antes de citá-la em material que exija
-o par completo classe/nível.)*
+Uma segunda recomendação, na seção de prevenção primária (10.5), reforça o
+mesmo par classe/nível para a população geral, não só para quem já tem FA:
+*"avoidance of binge drinking and alcohol excess is recommended in the
+general population to prevent AF"* — também **Classe I, Nível B**.
 
 ## A evidência por trás da recomendação: o ensaio de abstinência
 
