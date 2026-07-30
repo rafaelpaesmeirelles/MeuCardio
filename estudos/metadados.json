@@ -1604,5 +1604,31 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "fame-2-desfechos-em-5-anos-icp-guiada-por-ffr",
+    "title": "FAME 2 — Desfechos em 5 anos da ICP guiada por reserva de fluxo fracionada (FFR)",
+    "study_type": "ensaio_clinico",
+    "authors": "Xaplanteris P, Fournier S, Pijls NHJ, et al. (FAME 2 Investigators)",
+    "journal": "New England Journal of Medicine",
+    "year": 2018,
+    "doi": "10.1056/NEJMoa1803538",
+    "pmid": "29785878",
+    "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1803538",
+    "summary": "Ensaio randomizado, multicêntrico, com 1220 pacientes com doença arterial coronariana estável e estenose angiograficamente significativa. Quem tinha pelo menos uma estenose hemodinamicamente significativa (FFR ≤0,80) foi randomizado entre ICP guiada por FFR + terapia médica (n=447) ou terapia médica isolada (n=441); quem tinha todas as estenoses com FFR >0,80 recebeu terapia médica e entrou num registro observacional à parte. Seguimento de 5 anos.",
+    "key_findings": "Desfecho primário (composto de morte, infarto ou revascularização urgente) em 5 anos: 13,9% no grupo ICP contra 27,0% no grupo terapia médica (razão de risco 0,46; IC95% 0,34-0,63; p<0,001) — diferença explicada sobretudo por revascularização urgente (6,3% vs. 21,1%; razão de risco 0,27; IC95% 0,18-0,41). Sem diferença significativa isolada em morte (5,1% vs. 5,2%) nem em infarto (8,1% vs. 12,0%). Alívio de angina foi mais pronunciado com ICP. Quem tinha todas as estenoses com FFR >0,80 (grupo registro, só terapia médica) teve desfecho comparável ao grupo ICP (15,7% vs. 13,9%), reforçando que a decisão de revascularizar deve ser guiada pela significância hemodinâmica, não só pela imagem angiográfica.",
+    "clinical_implications": "Consolidou a FFR como ferramenta de decisão para revascularização em doença coronariana estável — estenose sem significância hemodinâmica (FFR >0,80) tem bom prognóstico com terapia médica isolada, mesmo com aparência angiográfica significativa; estenose com FFR ≤0,80 se beneficia de ICP, com redução robusta e sustentada de revascularização urgente ao longo de 5 anos.",
+    "limitations": "O componente 'revascularização urgente' do desfecho composto pode favorecer o grupo ICP por desenho (paciente do grupo terapia médica com sintoma tem via mais direta para ser revascularizado 'com urgência'); sem diferença de mortalidade isolada entre os grupos.",
+    "theme": "Doença coronariana",
+    "tags": [
+      "fame 2",
+      "ffr",
+      "reserva de fluxo fracionada",
+      "icp",
+      "doença coronariana estável",
+      "ensaio clínico"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
