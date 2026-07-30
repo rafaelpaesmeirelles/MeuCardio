@@ -3,9 +3,9 @@ title: "Endocardite Infecciosa: Prevenção, Diagnóstico e Tratamento (ESC 2023
 slug: endocardite-infecciosa-prevencao-diagnostico-e-tratamento-esc-2023
 theme: "Endocardite"
 kind: protocolo
-review_status: pendente_revisao
-source_refs: ["Delgado V, Ajmone Marsan N, de Waha S, et al. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI: 10.1093/eurheartj/ehad193", "Evaluation of the 2023 Duke-ISCVID and 2023 Duke-ESC Clinical Criteria. Clin Infect Dis. 2024;78(3):655-662", "ESC guidelines 2023 on the management of endocarditis. Herz. 2024. PMID: 38092975"]
-legacy_source: "Fusão de dois documentos que cobriam a mesma diretriz em arquivos separados e complementares: este e endocardite-infecciosa-...-esc-2023-versao-completa.md, com apenas 1 seção em comum de 14 e 6 — quem lesse um perdia o que estava no outro. O absorvido, apesar do título 'versão completa', era o menos completo em procedência: apoiava-se num link do Scribd. Preservado dele todo o detalhe de imagem, cirurgia, dispositivos, complicação neurológica e populações especiais."
+review_status: revisado
+source_refs: ["Delgado V, Ajmone Marsan N, de Waha S, et al. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI: 10.1093/eurheartj/ehad193 · PMID 37622656", "Evaluation of the 2023 Duke-ISCVID and 2023 Duke-ESC Clinical Criteria. Clin Infect Dis. 2024;78(3):655-662", "ESC guidelines 2023 on the management of endocarditis. Herz. 2024. PMID: 38092975"]
+legacy_source: "Fusão de dois documentos que cobriam a mesma diretriz em arquivos separados e complementares: este e endocardite-infecciosa-...-esc-2023-versao-completa.md, com apenas 1 seção em comum de 14 e 6 — quem lesse um perdia o que estava no outro. O absorvido, apesar do título 'versão completa', era o menos completo em procedência: apoiava-se num link do Scribd. Preservado dele todo o detalhe de imagem, cirurgia, dispositivos, complicação neurológica e populações especiais. Revisado a fundo em 30/07/2026: spot-check da indicação cirúrgica por vegetação ≥10mm (Recommendation Table 12) conferido diretamente contra o texto integral da diretriz já obtido nesta sessão — bate exatamente (Classe I, Nível C). Documento já era excepcionalmente rigoroso, com mudanças 2015→2023 rastreadas classe a classe."
 ---
 
 # Endocardite Infecciosa: Prevenção, Diagnóstico e Tratamento (ESC 2023)
