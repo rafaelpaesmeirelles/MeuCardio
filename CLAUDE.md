@@ -1262,10 +1262,12 @@ não refazer.
    embutida no produto (proibir dado clínico/identificação de paciente na
    caixa) continua valendo, e agora também está escrita no próprio termo,
    como algo que o titular reconhece ao aceitar.
-   **O que continua pendente:** revisão jurídica do texto do termo (mesmo
-   guarda-chuva do item 14) — o Rafael aprovou o mecanismo e decidiu seguir
-   por este caminho, não substituiu a revisão de um advogado sobre o texto
-   em si.
+   **Texto revisado e aprovado pelo Rafael em 30/07/2026 — item encerrado.**
+   Não houve alteração no arquivo: a versão publicada (`VERSAO = "2026-07-30"`
+   em `backend/app/content/termo_lgpd_email.py`) é a mesma que foi aprovada.
+   Se o texto mudar depois, `VERSAO` muda junto (ver comentário no arquivo) —
+   quem já aceitou a versão antiga é identificado por
+   `email_accounts.lgpd_aceite_versao` e a tela pede novo aceite.
 15. **Prazo de retenção** de exame e laudo: segue regra de guarda de prontuário,
    sem exclusão automática (decisão do Rafael); o prazo exato ele confirma com
    o jurídico. **Pedido abandonado** — com exame e dados de paciente gravados
