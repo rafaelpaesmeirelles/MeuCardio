@@ -11,12 +11,25 @@ do banco. Nenhum número é estimado.
 > (`documents` 312/312, `drugs` 101/101, `estudos` 53/53, `exames` 40/40,
 > `evidencias` 109/109, `galeria` 44/44). Nenhuma marcação
 > `VERIFICAÇÃO HUMANA NECESSÁRIA` resta no acervo (removidas na revisão manual
-> do Rafael na noite de 29/07). Esta sessão então acrescentou **13 evidências e
-> 4 estudos** nos dois temas que estavam zerados nas quatro frentes JSON
-> (Comunicação clínica e Geral) — ver "As quatro frentes JSON" abaixo. Esses
-> itens novos ainda não foram carregados no banco, então a coluna abaixo mistura
-> "publicado" (o que já estava no ar) com "no disco" (o que só existe no
-> repositório) — marcado item a item.
+> do Rafael na noite de 29/07).
+>
+> **Segunda atualização, mesma manhã.** `evidencias/` foi de 109 para **126**
+> no disco (17 novas, todas verificadas contra PDF integral da fonte, não
+> resumo de terceiro): as 13 já registradas abaixo (Comunicação clínica e
+> Geral) mais 4 em Saúde mental e cardiologia/Síncope, ligadas às duas
+> reescritas de conteúdo desta sessão. `estudos/` foi de 53 para **57** (os 4
+> já registrados abaixo). Dois documentos de `content/` foram **reescritos por
+> inteiro**, não só ajustados — ambos herdados de migração de corpus legado,
+> com `review_status: pendente_revisao` e lacuna que o próprio arquivo
+> confessava: `saude-mental-e-doenca-cardiovascular-consenso-clinico-esc-2025.md`
+> (citação errada — PMID que não existe — e prosa fragmentada em rótulo solto)
+> e `sincope-diagnostico-e-manejo-esc-2018.md` (admitia "critérios de
+> admissão não detalhados" e "classes de marca-passo/CDI não extraídas").
+> Os dois estão `revisado` agora, com tabela de classe/nível conferida contra
+> o PDF integral. Mais um documento novo em Comunicação clínica (decisão
+> compartilhada no esporte competitivo, ESC 2020) — tema foi de 3 para 4
+> documentos. Nenhum item novo foi publicado (`published` continua decisão do
+> Rafael); tudo isso é `published: false` no disco, aguardando carga e aval.
 
 ## Resumo
 
@@ -25,7 +38,7 @@ do banco. Nenhum número é estimado.
 | `content/` — biblioteca científica | 290 (medido no disco em 30/07/2026 de manhã) | 312 (banco, medido na noite de 29/07) | 27 temas cobertos; 29 fluxogramas, todos publicados; disco cresceu desde a última carga — diferença para o banco é o de sempre (registros de fusão/duplicata despublicados) mais o que ainda não foi importado |
 | `galeria/` — achados de imagem | 44 | 44 | **100% publicado**, medido na noite de 29/07; sem alteração desta sessão |
 | `exames/` — marcadores e exames | 40 | 40 | **100% publicado**, medido na noite de 29/07; sem alteração desta sessão |
-| `evidencias/` — recomendações pontuais | 122 | 109 | 109 publicadas (medido 29/07 à noite) + **13 novas desta sessão** (Comunicação clínica e Geral, ver abaixo), ainda `published: false` no disco, aguardando carga e aval |
+| `evidencias/` — recomendações pontuais | 126 | 109 | 109 publicadas (medido 29/07 à noite) + **17 novas desta sessão** (Comunicação clínica, Geral, Saúde mental e cardiologia, Síncope — ver abaixo), ainda `published: false` no disco, aguardando carga e aval |
 | `estudos/` — ensaios e metanálises | 57 | 53 | 53 publicados (medido 29/07 à noite) + **4 novos desta sessão** (Comunicação clínica e Geral, ver abaixo), ainda `published: false` no disco, aguardando carga e aval |
 | **Medicamentos** (tabela `drugs`) | **101** | **101** | **100% publicado**, medido na noite de 29/07; faixa da sessão de Medicamentos, não tocada aqui |
 
@@ -91,7 +104,7 @@ que essa distinção importa — ver abaixo.
 |---|---:|---:|---:|
 | `galeria/` | 44 | 24 | 6 (todos da faixa de Medicamentos) |
 | `exames/` | 40 | 20 | **0** |
-| `evidencias/` | 122 | **21** | **0** |
+| `evidencias/` | 126 | **21** | **0** |
 | `estudos/` | 57 | **26** | **0** |
 
 **Atualização de 30/07/2026 de manhã, sessão da Biblioteca:** `evidencias/` e
