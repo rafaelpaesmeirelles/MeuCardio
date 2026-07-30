@@ -4,7 +4,7 @@ slug: sacubitrilvalsartana
 theme: "Farmacologia"
 kind: farmacologia
 review_status: pendente_revisao
-source_refs: ["Sacubitril/valsartan (ENTRESTO) — rótulo aprovado pelo FDA, DailyMed SPL setid 000dc81d-ab91-450c-8eae-8eb74e72296f"]
+source_refs: ["Sacubitril/valsartan (ENTRESTO) — rótulo aprovado pelo FDA, DailyMed SPL setid 000dc81d-ab91-450c-8eae-8eb74e72296f", "McMurray JJ, Packer M, Desai AS, et al; PARADIGM-HF Investigators and Committees. Angiotensin-Neprilysin Inhibition versus Enalapril in Heart Failure. N Engl J Med. 2014;371(11):993-1004. DOI: 10.1056/NEJMoa1409077. PMID: 25176015"]
 legacy_source: "Sacubitril/Valsartana (substitui versão anterior incompleta)"
 ---
 
@@ -50,7 +50,14 @@ Via oral, com ou sem alimentos; armazenar em temperatura ambiente
 IC crônica sintomática avançada (NYHA II-IV) com fração de ejeção reduzida, substituindo IECA/BRA no esquema terapêutico
 
 ## Evidencia pivotal paradigm hf
-Estudo PARADIGM-HF demonstrou superioridade sobre enalapril em ICFER, com redução significativa de mortalidade cardiovascular e hospitalização, consolidando posição como um dos quatro pilares farmacológicos de ICFER
+**Números reais acrescentados em 30/07/2026** (McMurray JJ et al., N Engl J Med. 2014;371(11):993-1004, PMID 25176015): **8.442 pacientes** com IC classe funcional NYHA II-IV e FEVE ≤40%, randomizados para LCZ696 (sacubitril/valsartana, 200mg 2x/dia) ou enalapril (10mg 2x/dia), além da terapia recomendada — **ensaio interrompido precocemente** após seguimento mediano de 27 meses, por benefício avassalador já evidente:
+- **Desfecho primário** (composto de morte cardiovascular ou hospitalização por IC): **21,8% (sacubitril/valsartana) vs. 26,5% (enalapril)** (HR 0,80; IC95% 0,73-0,87; **p<0,001**)
+- **Mortalidade por qualquer causa**: 17,0% vs. 19,8% (HR 0,84; IC95% 0,76-0,93; p<0,001)
+- **Morte cardiovascular isolada**: 13,3% vs. 16,5% (HR 0,80; IC95% 0,71-0,89; p<0,001)
+- **Hospitalização por IC**: redução de 21% frente a enalapril (p<0,001), com melhora de sintomas e limitação física (p=0,001)
+- **Segurança**: mais hipotensão e angioedema não sério com sacubitril/valsartana; menos disfunção renal, hiperpotassemia e tosse que com enalapril
+- **Conclusão do próprio ensaio**: superioridade sobre enalapril na redução de morte e de hospitalização por IC, consolidando a posição como um dos quatro pilares farmacológicos de ICFEr
+- **fonte**: NEJM (PARADIGM-HF, PMID 25176015)
 
 ## Criterios etarios pcdt brasileiro
 Conforme PCDT nacional, início de tratamento requer idade mínima de 18 anos e máxima de 75 anos; pacientes que iniciaram antes dos 75 anos mantêm tratamento continuamente
