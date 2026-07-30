@@ -31,6 +31,25 @@ function dataMensagem(m: Mensagem): string {
   return Number.isNaN(d.getTime()) ? "" : d.toLocaleString("pt-BR");
 }
 
+/** Ressalva permanente, decidida pelo Rafael em 30/07/2026: esta caixa é para
+ * uso administrativo/profissional geral, não tem a cifragem de dado de saúde
+ * do Cofre do telediagnóstico — não deve receber dado identificável de
+ * paciente. Aparece nas duas telas (ativação e caixa já ativa), não é
+ * dispensável nem lembrada só uma vez. */
+function RessalvaClinica() {
+  return (
+    <div className="cartao" style={{ marginTop: "0.8rem", borderLeft: "3px solid var(--acento)" }} role="note">
+      <p style={{ margin: 0, fontSize: "0.86rem" }}>
+        <strong>Esta caixa é para uso administrativo e profissional geral</strong> — agenda,
+        contato com paciente sobre assunto administrativo, avisos do próprio sistema Corvia.
+        Ela não tem o mesmo padrão de proteção do Cofre do telediagnóstico (cifragem específica
+        de dado de saúde). <strong>Não envie aqui nome, CPF ou qualquer dado que identifique
+        um paciente junto de informação clínica.</strong>
+      </p>
+    </div>
+  );
+}
+
 export default function CaixaDeEmail() {
   const [conta, setConta] = useState<ContaEmail | null>(null);
   const [erro, setErro] = useState<string | null>(null);
@@ -130,6 +149,7 @@ export default function CaixaDeEmail() {
             {ativando ? "Ativando…" : "Ativar minha caixa de e-mail"}
           </button>
         </div>
+        <RessalvaClinica />
       </>
     );
   }
@@ -138,8 +158,9 @@ export default function CaixaDeEmail() {
     <>
       <p className="eyebrow">Caixa de e-mail</p>
       <h1>{conta.email_address}</h1>
+      <RessalvaClinica />
 
-      <button className="botao" style={{ marginTop: "0.5rem" }} onClick={() => setCompondo(true)}>
+      <button className="botao" style={{ marginTop: "0.8rem" }} onClick={() => setCompondo(true)}>
         + Escrever
       </button>
 
