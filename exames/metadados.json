@@ -1280,5 +1280,29 @@
       "eco-doppler",
       "aorta e doença arterial periférica"
     ]
+  },
+  {
+    "slug": "cintilografia-miocardica-de-perfusao-spect",
+    "name": "Cintilografia miocárdica de perfusão (SPECT-MPI)",
+    "category": "imagem",
+    "theme": "Doença coronariana",
+    "what_it_measures": "Distribuição do fluxo sanguíneo miocárdico por meio de radiotraçador captado proporcionalmente à perfusão, adquirida em repouso e sob estresse (físico ou farmacológico) — identifica áreas de isquemia (defeito reversível, presente só no estresse) e de infarto prévio (defeito fixo, presente em repouso e estresse).",
+    "reference_range": "Interpretação pelo escore de estresse somado (summed stress score, SSS), no modelo de 17 segmentos, cada um pontuado de 0 (perfusão normal) a 4 (atividade ausente): SSS <4 é normal; 4-7 é anormalidade leve; 8-12 é anormalidade moderada; ≥13 é anormalidade grave. A diferença entre o escore de estresse e o de repouso (escore de diferença somado) estima o grau de isquemia induzível, distinguindo-a de cicatriz fixa.",
+    "indications": "Investigação de doença arterial coronariana obstrutiva em paciente com probabilidade pré-teste intermediária, estratificação de risco em coronariopatia já conhecida, e orientação de decisão terapêutica (revascularização vs. tratamento clínico) guiada pela extensão da isquemia induzível.",
+    "interpretation": "Sensibilidade e especificidade variam pelo tipo de estresse: estresse físico (esteira/bicicleta) tem sensibilidade de 82-88% e especificidade de 70-88%; estresse farmacológico (vasodilatador) tem sensibilidade de 88-91% e especificidade de 75-90% — desempenho geral em torno de 85% de sensibilidade e 70% de especificidade. Escore de estresse elevado (isquemia extensa) favorece estratégia invasiva; escore baixo com sintomas persistentes sugere buscar causa alternativa antes de intensificar investigação coronariana.",
+    "limitations": "Cintilografia em repouso isolada (sem estresse) tem sensibilidade baixa para doença obstrutiva — cerca de 30%, subindo para até 46,8% com acréscimo de análise de motilidade parietal — não deve ser usada isoladamente para excluir doença coronariana. Radiação ionizante é inerente ao método. Comparada à angiotomografia coronariana, o SPECT tende a ter maior especificidade (94% vs. 60% em comparação direta), com acurácia global semelhante entre os dois métodos.",
+    "source_refs": [
+      "Dados de sensibilidade/especificidade por tipo de estresse e do escore de estresse somado (SSS): conferidos contra múltiplas fontes secundárias concordantes em 30/07/2026 — não foi possível localizar nesta revisão um único artigo/diretriz primário específico para os cortes exatos do SSS, que variam ligeiramente entre fontes (algumas usam <4 como corte de normalidade, outras <3); os valores aqui seguem o sistema mais amplamente replicado nas fontes consultadas."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "spect",
+      "cintilografia miocárdica",
+      "medicina nuclear",
+      "isquemia miocárdica",
+      "doença coronariana",
+      "escore de estresse somado"
+    ]
   }
 ]
