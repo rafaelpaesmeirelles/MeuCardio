@@ -1785,5 +1785,31 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "manejo-e-tratamento-da-coreia-de-sydenham-revisao-sistematica",
+    "title": "Manejo e tratamento da coreia de Sydenham: revisão sistemática",
+    "study_type": "revisao_sistematica",
+    "authors": "Tariq S, Niaz F, Waseem S, Shaikh TG, Ahmed SH, Irfan M, Nashwan AJ, Ullah I",
+    "journal": "Brain and Behavior",
+    "year": 2023,
+    "doi": "10.1002/brb3.3035",
+    "pmid": "37150977",
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10275551/",
+    "summary": "Revisão sistemática com busca em PubMed, Cochrane Library, Google Scholar e ClinicalTrials.gov, desde o início das bases até julho de 2022, sobre manejo da coreia de Sydenham. 11 artigos incluídos, totalizando 579 pacientes — excluindo um estudo de 229 pacientes, dos 550 restantes 61,5% eram do sexo feminino. Avaliação de risco de viés pela ferramenta Cochrane RoB-1 (ensaios randomizados) e ROBINS-I (estudos não randomizados).",
+    "key_findings": "Tratamentos avaliados: antagonista dopaminérgico em 118 pacientes, antiepiléptico em 198, corticosteroide em 134, imunoglobulina intravenosa em 7, plasmaférese em 8. Antagonista dopaminérgico (sobretudo haloperidol) foi a opção terapêutica primária mais frequente nos estudos incluídos; ácido valproico foi o antiepiléptico preferido. Prednisolona (corticosteroide) mostrou resultado promissor, com ganho de peso como único efeito colateral relatado nos estudos incluídos.",
+    "clinical_implications": "Apesar das limitações dos estudos disponíveis, a revisão conclui que antagonista dopaminérgico pode servir como agente de primeira linha no manejo da coreia de Sydenham, seguido de antiepiléptico — e destaca que o papel dos imunomoduladores (corticosteroide, IVIG, plasmaférese) merece mais investigação, contrariando em parte a literatura anterior que dava menos peso a essa classe.",
+    "limitations": "Ausência de diretrizes sistemáticas de diagnóstico e tratamento para a coreia de Sydenham é o próprio problema que motivou a revisão — os estudos incluídos são heterogêneos em desenho, com amostras pequenas na maioria dos braços terapêuticos (IVIG e plasmaférese com apenas 7 e 8 pacientes, respectivamente).",
+    "theme": "Febre reumática",
+    "tags": [
+      "coreia de sydenham",
+      "revisão sistemática",
+      "antagonista dopaminérgico",
+      "ácido valproico",
+      "haloperidol",
+      "febre reumática"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
