@@ -4,8 +4,8 @@ slug: sincope-diagnostico-e-manejo-esc-2018
 theme: "Síncope"
 kind: protocolo
 review_status: revisado
-source_refs: ["Brignole M, Moya A, de Lange FJ, et al. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948. DOI: 10.1093/eurheartj/ehy037. PMID: 29562304 — seções sobre manejo no departamento de emergência (Tabelas 5, 6 e 7) e tratamento da síncope reflexa (marca-passo), lidas no texto integral, incluindo as tabelas de recomendação."]
-legacy_source: "Reescrito em 30/07/2026 — a versão anterior (migração de corpus legado, review_status: pendente_revisao) tinha os critérios de admissão e as classes de recomendação de marca-passo/CDI marcados como 'não extraídos nesta rodada'; ambos resolvidos contra o texto integral da diretriz."
+source_refs: ["Brignole M, Moya A, de Lange FJ, et al. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948. DOI: 10.1093/eurheartj/ehy037. PMID: 29562304 — seções sobre manejo no departamento de emergência (Tabelas 5, 6 e 7), tratamento da síncope reflexa (marca-passo), testes de função autonômica (seção 4.2.3) e estudo eletrofisiológico (seção 4.2.6), lidas no texto integral, incluindo as tabelas de recomendação.", "Sheldon RS, Sharma J, Koshman ML, et al. Diagnostic criteria for vasovagal syncope based on a quantitative history. Eur Heart J. 2006;27(3):344-350. PMID 16223744 — Escore de Sintomas de Calgary, números conferidos contra o abstract indexado em 30/07/2026."]
+legacy_source: "Reescrito em 30/07/2026 — a versão anterior (migração de corpus legado, review_status: pendente_revisao) tinha os critérios de admissão e as classes de recomendação de marca-passo/CDI marcados como 'não extraídos nesta rodada'; ambos resolvidos contra o texto integral da diretriz. Enriquecido novamente no mesmo dia: acrescentados testes de função autonômica (Valsalva, respiração profunda, MAPA), estudo eletrofisiológico (indicações e terapia guiada) e o Escore de Calgary — lacuna declarada no documento de classificação etiológica desta mesma pasta, fechada com texto integral da diretriz já obtido nesta sessão mais o artigo de derivação do escore."
 ---
 
 # Síncope: diagnóstico e manejo (ESC 2018)
@@ -139,6 +139,69 @@ multidisciplinar dedicada, não um leito qualquer do hospital — como forma de
 concentrar a avaliação intensiva de quem tem características de alto risco
 sem precisar de internação plena, e de reduzir a variação de 12% a 86% que a
 própria diretriz registra entre serviços na taxa de internação por síncope.
+
+## Testes de função autonômica — preenchido em 30/07/2026
+
+Avaliação autonômica ajuda a identificar falência autonômica como causa
+subjacente da síncope. Recomendações da diretriz, com classe e nível:
+
+| Teste | Recomendação | Classe | Nível |
+|---|---|---|---|
+| Manobra de Valsalva | Considerar para avaliar função autonômica em suspeita de hipotensão ortostática (HO) neurogênica | IIa | B |
+| Manobra de Valsalva | Pode ser considerada para confirmar tendência hipotensiva em síncope situacional (tosse, tocar instrumento de sopro, cantar, levantamento de peso) | IIb | C |
+| Teste de respiração profunda | Considerar para avaliar função autonômica em suspeita de HO neurogênica | IIa | B |
+| Outros testes (razão 30:15, teste do frio, *handgrip* sustentado, aritmética mental) | Podem ser considerados para avaliar função autonômica em suspeita de HO neurogênica | IIb | C |
+| MAPA (monitorização ambulatorial da pressão arterial) | Recomendada para detectar hipertensão noturna em falência autonômica | I | B |
+| MAPA | Considerar para detectar e monitorar grau de HO e hipertensão supina no dia a dia, em falência autonômica | IIa | C |
+| MAPA e MRPA (residencial) | Podem ser consideradas para detectar se a PA está anormalmente baixa durante episódio sugestivo de intolerância ortostática | IIb | C |
+
+**Interpretação prática da manobra de Valsalva**: ausência de *overshoot* de PA e ausência de aumento de FC durante a manobra é achado patognomônico de HO neurogênica (falência autonômica primária ou secundária) — o grau de hipotensão/falta de compensação costuma se correlacionar com o grau de disfunção autonômica. Já uma queda de PA pronunciada além do esperado na expiração forçada, mas com resposta cronotrópica normal, sugere síncope situacional (tosse, canto, instrumento de sopro, levantamento de peso), não falência autonômica primária.
+
+**Teste de respiração profunda**: em condição fisiológica, a FC sobe na inspiração e cai na expiração — a variabilidade (índice E/I, expiratório/inspiratório) é ≥15 bpm em indivíduo saudável >50 anos. Variação embotada ou abolida sugere disfunção parassimpática.
+
+**Ressalvas práticas**: efeito de idade e sexo deve ser considerado na interpretação; adesão pode ser limitada em paciente com demência; tremor ou parkinsonismo podem impedir o *handgrip* sustentado; o teste do frio pode ser desconfortável em fenômeno de Raynaud.
+
+- **fonte**: 2018 ESC Guidelines for the diagnosis and management of syncope, Eur Heart J 2018;39(21):1883-1948, DOI 10.1093/eurheartj/ehy037, seção 4.2.3, texto integral conferido em 30/07/2026.
+
+## Estudo eletrofisiológico (EPS) — preenchido em 30/07/2026
+
+O desenvolvimento de métodos não invasivos potentes (monitorização
+eletrocardiográfica prolongada) reduziu a importância do EPS como teste
+diagnóstico — na prática, cerca de 3% dos pacientes com síncope inexplicada
+avaliados por cardiologista são submetidos a EPS, e menos ainda quando
+avaliados por outros especialistas. Ainda assim, o EPS continua útil em
+situações clínicas específicas.
+
+| Recomendação | Classe | Nível |
+|---|---|---|
+| Em síncope com infarto do miocárdio prévio ou outra condição com cicatriz miocárdica, EPS é indicado quando a síncope permanece inexplicada após avaliação não invasiva | I | B |
+| Em síncope com bloqueio de ramo bifascicular, EPS deve ser considerado quando a síncope permanece inexplicada após avaliação não invasiva | IIa | B |
+| Em síncope com bradicardia sinusal assintomática, EPS pode ser considerado nos poucos casos em que o teste não invasivo (ex.: monitorização de ECG) falhou em mostrar correlação entre síncope e bradicardia | IIb | B |
+| Em síncope precedida por palpitação súbita e breve, EPS pode ser considerado quando a síncope permanece inexplicada após avaliação não invasiva | IIb | C |
+
+**Terapia guiada por EPS**:
+
+| Recomendação | Classe | Nível |
+|---|---|---|
+| Em síncope inexplicada com bloqueio de ramo bifascicular, marca-passo é indicado na presença de intervalo H-V basal ≥70 ms, bloqueio His-Purkinje de 2º/3º grau com estimulação atrial incremental, ou com desafio farmacológico | I | B |
+| Em síncope inexplicada com infarto prévio ou outra cicatriz miocárdica, indução de TV monomórfica sustentada deve ser manejada conforme a diretriz ESC vigente de arritmia ventricular | I | B |
+| Sem cardiopatia estrutural, com síncope precedida por palpitação súbita e breve, indução de TSV ou TV rápida que reproduza sintoma hipotensivo/espontâneo deve ser manejada com terapia apropriada conforme diretriz ESC vigente | I | C |
+| Em síncope com bradicardia sinusal assintomática, marca-passo deve ser considerado se houver tempo de recuperação do nó sinusal corrigido prolongado | IIa | B |
+
+**Achados-chave de interpretação**: em paciente com infarto prévio e FEVE preservada, indução de TV monomórfica sustentada é fortemente preditiva da causa da síncope; já indução de fibrilação ventricular é achado inespecífico. Ausência de indução de arritmia ventricular identifica grupo de menor risco de síncope arrítmica — mas **EPS positivo prediz a causa; EPS negativo não exclui síncope arrítmica**, e segue sendo necessária avaliação adicional. EPS geralmente não é útil em paciente com síncope, ECG normal, sem cardiopatia e sem palpitação.
+
+- **fonte**: 2018 ESC Guidelines for the diagnosis and management of syncope, seção 4.2.6, texto integral conferido em 30/07/2026.
+
+## Escore de sintomas de Calgary (síncope vasovagal) — preenchido em 30/07/2026
+
+Não é citado na diretriz ESC 2018 (que remete apenas aos critérios clínicos
+clássicos de síncope reflexa) — vem de artigo de derivação independente,
+amplamente usado na prática e citado como pendência nesta biblioteca.
+
+- **desenho**: questionário histórico quantitativo de 118 itens aplicado a 418 pacientes com síncope sem cardiopatia estrutural aparente; prevalência de cada item comparada entre paciente com tilt test positivo e paciente com síncope de outras causas conhecidas (bloqueio cardíaco completo, taquicardia supraventricular); contribuição de cada sintoma estimada por regressão logística, gerando um escore de pontos.
+- **desempenho**: o escore de pontos classificou corretamente 90% dos pacientes, com sensibilidade de 89% e especificidade de 91% para diagnosticar síncope vasovagal. Em paciente adicional com síncope de causa desconhecida e tilt test negativo, a regra sugeriu que 68% tinham síncope vasovagal.
+- **o que não foi reproduzido aqui**: os itens individuais do questionário e a pontuação específica de cada um não puderam ser confirmados com certeza suficiente nesta revisão — quem precisar aplicar o escore deve consultar a publicação original.
+- **fonte**: Sheldon RS et al. Diagnostic criteria for vasovagal syncope based on a quantitative history. Eur Heart J. 2006;27(3):344-350. PMID 16223744 — números conferidos contra o abstract indexado em 30/07/2026.
 
 ## O que este documento não cobre
 
