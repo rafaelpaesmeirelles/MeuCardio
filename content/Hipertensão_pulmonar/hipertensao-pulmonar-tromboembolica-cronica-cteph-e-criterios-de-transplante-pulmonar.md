@@ -4,7 +4,7 @@ slug: hipertensao-pulmonar-tromboembolica-cronica-cteph-e-criterios-de-transplan
 theme: "Hipertensão pulmonar"
 kind: protocolo
 review_status: revisado
-source_refs: ["Pulmonary Endarterectomy for Chronic Thromboembolic Pulmonary Hypertension: A Systematic Review of the Most Updated Literature · PMC · https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9738233/", "Chronic Thromboembolic Pulmonary Hypertension: An Update · PMC · https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8871284/", "Approach to Lung Transplantation in Pulmonary Arterial Hypertension: A Delphi Consensus on Behalf of the Transplant Task Force of the Pulmonary Vascular Research Institute · PMC · https://pmc.ncbi.nlm.nih.gov/articles/PMC12018530/", "Recipient selection, timing of referral, and listing for lung transplantation · PMC · https://pmc.ncbi.nlm.nih.gov/articles/PMC8918587/"]
+source_refs: ["Pulmonary Endarterectomy for Chronic Thromboembolic Pulmonary Hypertension: A Systematic Review of the Most Updated Literature · PMC · https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9738233/", "Chronic Thromboembolic Pulmonary Hypertension: An Update · PMC · https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8871284/", "Approach to Lung Transplantation in Pulmonary Arterial Hypertension: A Delphi Consensus on Behalf of the Transplant Task Force of the Pulmonary Vascular Research Institute · PMC · https://pmc.ncbi.nlm.nih.gov/articles/PMC12018530/", "Recipient selection, timing of referral, and listing for lung transplantation · PMC · https://pmc.ncbi.nlm.nih.gov/articles/PMC8918587/", "Kawakami T, Matsubara H, Shinke T, et al. Balloon pulmonary angioplasty versus riociguat in inoperable chronic thromboembolic pulmonary hypertension (MR BPA): an open-label, randomised controlled trial. Lancet Respir Med. 2022;10(10):949-960. DOI: 10.1016/S2213-2600(22)00171-0. PMID: 35926544"]
 ---
 
 # Hipertensão Pulmonar Tromboembólica Crônica (CTEPH) e Critérios de Transplante Pulmonar
@@ -26,7 +26,15 @@ Complementa os quatro documentos já existentes sobre hipertensão pulmonar (ESC
 
 ## Angioplastia pulmonar por balao (APB)
 Tratamento emergente, especialmente para CTEPH em nível segmentar, com bons resultados nos últimos anos
-- **fonte**: PMC (revisão sistemática sobre endarterectomia pulmonar)
+
+**Acrescentado em 30/07/2026 — primeiro ensaio prospectivo cabeça a cabeça**: Kawakami T et al. (MR BPA trial), Lancet Respir Med. 2022;10(10):949-960 (PMID 35926544). Ensaio randomizado aberto, 4 centros de alto volume no Japão, **61 pacientes** com CTEPH inoperável (PAPm ≥25 e <60mmHg, pressão de oclusão ≤15mmHg), randomizados para APB (32, média de 4,7 procedimentos) ou riociguate (29, dose de manutenção média 7,0mg/dia):
+- **Desfecho primário** (variação da PAPm do basal aos 12 meses): **-16,3mmHg com APB vs. -7,0mmHg com riociguate** (diferença de -9,3mmHg; IC95% -12,7 a -5,9; p<0,0001) — **melhora maior com APB**
+- **Piora clínica de hipertensão pulmonar**: 0 casos com APB vs. 1 caso com riociguate
+- **Evento adverso mais comum**: hemoptise/hemorragia pulmonar — **44% (14 pacientes) com APB vs. 4% (1 paciente) com riociguate**
+- **Complicações relacionadas ao procedimento**: em 147 procedimentos de APB realizados em 31 pacientes, houve complicação em 17 procedimentos (12%), em 8 pacientes (26%)
+
+**Conclusão dos próprios autores**: comparado ao riociguate, APB associou-se a maior melhora da PAPm em 12 meses, mas com complicações relacionadas ao procedimento — os achados sustentam APB como opção razoável para CTEPH inoperável, em centros com operadores experientes, com atenção às complicações do procedimento.
+- **fonte**: PMC (revisão sistemática sobre endarterectomia pulmonar); Kawakami T et al., Lancet Respir Med. 2022;10(10):949-960, PMID 35926544
 
 ## Abordagem combinada
 Anticoagulação vitalícia e fármacos direcionados à hipertensão pulmonar, associados a EAP (pacientes operáveis) ou APB (pacientes inoperáveis) — ambas recomendadas fortemente, com melhora sintomática/prognóstica importante e baixa mortalidade aguda
