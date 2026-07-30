@@ -3,9 +3,9 @@ title: "Cardiomiopatia Dilatada (CMD): Diagnóstico Genético e Manejo (ESC 2023
 slug: cardiomiopatia-dilatada-cmd-diagnostico-genetico-e-manejo-esc-2023
 theme: "Cardiomiopatias"
 kind: protocolo
-review_status: pendente_revisao
-source_refs: ["Genetic counselling implementation in dilated cardiomyopathy · European Heart Journal · 2026 · https://academic.oup.com/eurheartj/article/47/24/3040/8529603", "2023 ESC Guidelines for the management of cardiomyopathies · ESC · 2023 · 37622657 · https://academic.oup.com/eurheartj/article/44/37/3503/7246608"]
-legacy_source: "protocolos/protocolo-de-cardiomiopatia-dilatada-fenotipo-detalhado.md"
+review_status: revisado
+source_refs: ["Genetic counselling implementation in dilated cardiomyopathy · European Heart Journal · 2026 · https://academic.oup.com/eurheartj/article/47/24/3040/8529603", "2023 ESC Guidelines for the management of cardiomyopathies · ESC · 2023 · 37622657 · https://academic.oup.com/eurheartj/article/44/37/3503/7246608", "Wahbi K, Ben Yaou R, Gandjbakhch E, et al. Development and Validation of a New Risk Prediction Score for Life-Threatening Ventricular Tachyarrhythmias in Laminopathies. Circulation. 2019;140(4):293-302. DOI 10.1161/CIRCULATIONAHA.118.039410. PMID 31155932 — números conferidos contra o abstract indexado (Europe PMC) em 30/07/2026."]
+legacy_source: "protocolos/protocolo-de-cardiomiopatia-dilatada-fenotipo-detalhado.md · Revisado a fundo em 30/07/2026: a seção de estratificação de risco de morte súbita citava LMNA/FLNC só como conceito, sem nenhuma calculadora nem número — acrescentada a calculadora de risco validada para laminopatia (Wahbi et al., Circulation 2019), verificada contra o abstract indexado. Nada foi removido do texto original nesta revisão."
 ---
 
 # Cardiomiopatia Dilatada (CMD): Diagnóstico Genético e Manejo (ESC 2023)
@@ -27,6 +27,10 @@ Após identificação do fenótipo de apresentação (geralmente IC ou arritmia)
 
 ## Estratificacao risco morte subita
 Novas recomendações sobre estratificação de risco de morte súbita cardíaca são fornecidas especificamente para o fenótipo de CMD, destacando papel importante do genótipo (variantes de alto risco, como em LMNA, FLNC, e filamina C) na avaliação de risco
+- **calculadora de risco lmna (2019)**: modelo derivado de 839 pacientes adultos com mutação em LMNA (660 na coorte de desenvolvimento, registro nacional francês; 179 na coorte de validação, 5 centros terciários de cardiomiopatia) — preditores retidos: sexo masculino, mutação não missense, BAV de primeiro grau ou mais avançado, TV não sustentada e FEVE.
+- **desempenho**: índice C de 0,776 (IC95% 0,711-0,842) na amostra de desenvolvimento; limiar de risco estimado em 5 anos ≥7% identificou 96,2% dos eventos arrítmicos com risco de vida e reclassificou corretamente 28,8% dos pacientes em relação à abordagem baseada só em diretriz.
+- **uso pratico**: calculadora disponível em lmna-risk-vta.fr, para individualizar a indicação de CDI no portador de mutação LMNA — é o mesmo racional da calculadora de ARVC citada no documento de cardiomiopatia arritmogênica desta pasta, aplicado ao genótipo de maior risco em CMD.
+- **fonte**: Wahbi K et al., Circulation 2019;140(4):293-302, PMID 31155932.
 
 ## Abordagem ciclo vida
 Documento considera cardiomiopatia dilatada ao longo de todo o curso de vida, desde idade pediátrica até adulta (incluindo período de transição), e considera diferentes fases clínicas (oculta, manifesta, estágio terminal)
