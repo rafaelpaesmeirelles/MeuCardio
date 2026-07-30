@@ -197,6 +197,11 @@ Regras que decorrem disso:
 >   nível, graduação de gravidade e indicação de intervenção, ESC 2020) — commits até
 >   `9a6f1bb`.
 >
+> **Pausa a pedido do Rafael em 30/07/2026**: todo o Lote 4 acima está revisado
+> (`review_status: revisado` em cada entrada/documento tocado) e commitado em `main`, ainda
+> com `published: false` em toda entrada JSON — nada foi publicado sem aval. Sessão pausada
+> aqui; retomar a fila normal de expansão quando houver novo pedido.
+>
 > **Uma entrada NÃO deve ser publicada com o resto, apesar da aprovação geral**: em
 > `evidencias/metadados.json`, o registro
 > `intervalo-de-3-semanas-na-profilaxia-secundaria-em-populacao-de-alta-incidencia-de-febre-reumatica`
