@@ -889,5 +889,28 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "qtc-prolongado-monitorizacao-de-psicofarmacos",
+    "title": "ECG — QTc prolongado",
+    "modality": "ECG",
+    "theme": "Saúde mental e cardiologia",
+    "file_path": "ecg/qtc-prolongado-monitorizacao-de-psicofarmacos.jpg",
+    "findings": "ECG de 12 derivações com medida automática do aparelho: frequência cardíaca 105 bpm, intervalo QT de 358 ms e QTc calculado de 477 ms — acima do limite superior normal e dentro da faixa de prolongamento intermediário.",
+    "teaching_points": "Este QTc de 477 ms ilustra, com número real, a faixa intermediária descrita no consenso ESC 2025 sobre monitorização de QTc em uso de antipsicótico: prolongamento intermediário é definido como QTc acima de 470 ms em homens ou 480 ms em mulheres, faixa em que a conduta é considerar redução de dose ou troca de antipsicótico, com ECGs repetidos e avaliação individualizada de risco-benefício — diferente do corte de QTc acima de 500 ms, que pede suspensão do fármaco e avaliação cardiológica urgente. Antes de atribuir o achado a psicofármaco, é preciso excluir causas reversíveis: distúrbio eletrolítico, bradicardia, hipotireoidismo, e registrar fatores não reversíveis que também prolongam QTc, como sexo feminino e idade acima de 65 anos. A frequência cardíaca de 105 bpm neste traçado é o motivo pelo qual a correção de Fridericia (não a de Bazett) é a recomendada em taquicardia — Bazett superestima o QTc em frequências altas.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:ECG_long-QT_bionerd.jpg",
+    "license": "CC BY 3.0",
+    "attribution": "Bionerd, via Wikimedia Commons — CC BY 3.0.",
+    "tags": [
+      "qtc",
+      "qt longo",
+      "psicofármaco",
+      "antipsicótico",
+      "ecg",
+      "saúde mental"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
