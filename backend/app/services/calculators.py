@@ -238,7 +238,150 @@ def _grace_txt(r: dict) -> str:
 
 
 
+# ------------------------------------------------------------------- RCRI
+# Índice de Lee — Lee TH et al. Circulation. 1999;100(10):1043-1049.
+# PMID 10477528, DOI 10.1161/01.CIR.100.10.1043. Tabela de risco ORIGINAL do
+# artigo (conferida contra o abstract em 30/07/2026) — não confundir com a
+# reestimativa de Duceppe et al. 2017 (diretriz canadense), que usa outros
+# percentuais e não é o escore de Lee na sua forma original.
+_RCRI_FAIXAS = [
+    (0, "0,5%", "0,4%"),
+    (1, "1,3%", "0,9%"),
+    (2, "4%", "7%"),
+]
+_RCRI_FAIXA_3_OU_MAIS = ("≥3", "9%", "11%")
+
+
+def _rcri(d: dict) -> dict:
+    criterios = [
+        "cirurgia_alto_risco", "doenca_arterial_coronariana",
+        "insuficiencia_cardiaca_congestiva", "doenca_cerebrovascular",
+        "diabetes_insulinodependente", "creatinina_maior_2",
+    ]
+    score = sum(1 for c in criterios if d.get(c))
+    if score <= 2:
+        _, risco_derivacao, risco_validacao = _RCRI_FAIXAS[score]
+        rotulo = str(score)
+    else:
+        rotulo, risco_derivacao, risco_validacao = _RCRI_FAIXA_3_OU_MAIS
+    return {
+        "score": score, "max": 6, "faixa": rotulo,
+        "risco_coorte_derivacao": risco_derivacao,
+        "risco_coorte_validacao": risco_validacao,
+    }
+
+
+def _rcri_txt(r: dict) -> str:
+    return (
+        f"{r['score']}/6 critérios (faixa {r['faixa']}). Risco de complicação cardíaca maior "
+        f"(IAM, edema pulmonar, fibrilação ventricular/parada cardíaca, bloqueio "
+        f"atrioventricular total): {r['risco_coorte_derivacao']} na coorte de derivação e "
+        f"{r['risco_coorte_validacao']} na coorte de validação do artigo original de Lee et al. "
+        "1999. O RCRI segue citado como ferramenta válida pelas diretrizes ESC/ESA 2022 e "
+        "ACC/AHA 2024, que desde 2024 não elegem mais um único escore como referência — "
+        "convive em pé de igualdade com o Gupta MICA e outras calculadoras validadas."
+    )
+
+
+# --------------------------------------------------------------------- DASI
+# Duke Activity Status Index — Hlatky MA et al. Am J Cardiol. 1989;64(10):
+# 651-654. PMID 2782256, DOI 10.1016/0002-9149(89)90496-7. Os 12 itens e pesos
+# conferidos por duas fontes independentes (soma bate em 58,2, o máximo
+# publicado do índice). Corte de 34 pontos: Wijeysundera DN et al. Br J
+# Anaesth. 2020;124(3):261-270, PMID 31864719 (estudo METS) — não é do artigo
+# de 1989, é o que a diretriz ACC/AHA 2024 usa para as três faixas abaixo.
+_DASI_ITENS = [
+    ("cuidar_de_si", "Cuidar de si mesmo (comer, vestir-se, tomar banho, usar o banheiro)", 2.75),
+    ("caminhar_dentro_de_casa", "Caminhar dentro de casa", 1.75),
+    ("caminhar_200m_plano", "Caminhar um ou dois quarteirões (~200 m) em terreno plano", 2.75),
+    ("subir_um_lance_escada", "Subir um lance de escada ou caminhar em aclive", 5.50),
+    ("correr_curta_distancia", "Correr uma curta distância", 8.00),
+    ("trabalho_domestico_leve", "Trabalho doméstico leve (tirar pó, lavar louça)", 2.70),
+    ("trabalho_domestico_moderado", "Trabalho doméstico moderado (aspirar, varrer, "
+     "carregar compras)", 3.50),
+    ("trabalho_domestico_pesado", "Trabalho doméstico pesado (esfregar chão, mover móveis)", 8.00),
+    ("jardinagem", "Jardinagem, ancinho, capinar ou caminhar a 6,4 km/h", 4.50),
+    ("relacoes_sexuais", "Relações sexuais", 5.25),
+    ("recreacao_moderada", "Atividade recreativa moderada (golfe, boliche, dançar, "
+     "duplas de tênis)", 6.00),
+    ("esporte_extenuante", "Participar de esportes extenuantes (natação, tênis de "
+     "simples, futebol, basquete, esqui)", 7.50),
+]
+_DASI_MAX = round(sum(peso for _, _, peso in _DASI_ITENS), 1)  # 58,2
+DASI_CAMPOS = [chave for chave, _, _ in _DASI_ITENS]  # exportado p/ app/services/preop.py
+
+
+def _dasi(d: dict) -> dict:
+    score = round(sum(peso for chave, _, peso in _DASI_ITENS if d.get(chave)), 2)
+    vo2_pico = 0.43 * score + 9.6
+    mets = round(vo2_pico / 3.5, 1)
+    faixa = "boa (>34)" if score > 34 else ("intermediária (25–34)" if score >= 25 else "reduzida (<25)")
+    return {"score": score, "max": _DASI_MAX, "vo2_pico": round(vo2_pico, 1), "mets": mets, "faixa": faixa}
+
+
+def _dasi_txt(r: dict) -> str:
+    return (
+        f"DASI {r['score']}/{r['max']} — capacidade funcional {r['faixa']}. VO2 de pico "
+        f"estimado {r['vo2_pico']} mL/kg/min (~{r['mets']} METs), pela conversão "
+        "VO2pico = 0,43 × DASI + 9,6 (usada por Wijeysundera et al. 2020/estudo METS — "
+        "atribuição da fórmula ao artigo original de 1989 não confirmada em texto primário). "
+        "As três faixas (<25 / 25–34 / >34) seguem o corte adotado pela diretriz ACC/AHA 2024, "
+        "que passou a preferir o DASI estruturado à estimativa clínica subjetiva de METs — "
+        "o mesmo caminho da ESC/ESAIC 2022."
+    )
+
+
 REGISTRY: dict[str, Calculator] = {
+    "dasi": Calculator(
+        slug="dasi",
+        name="DASI (Duke Activity Status Index)",
+        theme="Avaliação pré-operatória",
+        purpose="Estimativa estruturada de capacidade funcional (substitui a estimativa "
+                "clínica subjetiva de METs).",
+        fields=[Field(chave, rotulo, "boolean") for chave, rotulo, _ in _DASI_ITENS],
+        compute=_dasi,
+        interpret=_dasi_txt,
+        reference="Hlatky MA et al. Am J Cardiol. 1989;64(10):651-654. PMID 2782256.",
+        limitations=[
+            "A fórmula de conversão para VO2/METs vem de uso corrente na literatura "
+            "perioperatória (estudo METS, Wijeysundera et al. 2020), não confirmada linha a "
+            "linha contra o texto completo do artigo original de 1989.",
+            "Autorrelato — não substitui teste de esforço quando este já está indicado por "
+            "outro motivo clínico.",
+        ],
+    ),
+    "rcri": Calculator(
+        slug="rcri",
+        name="RCRI (Índice de Lee)",
+        theme="Avaliação pré-operatória",
+        purpose="Risco de complicação cardíaca maior em cirurgia não-cardíaca eletiva.",
+        fields=[
+            Field("cirurgia_alto_risco", "Cirurgia de alto risco", "boolean",
+                  help="Intraperitoneal, intratorácica ou vascular suprainguinal."),
+            Field("doenca_arterial_coronariana", "História de doença arterial coronariana",
+                  "boolean"),
+            Field("insuficiencia_cardiaca_congestiva", "História de insuficiência cardíaca "
+                  "congestiva", "boolean"),
+            Field("doenca_cerebrovascular", "História de doença cerebrovascular (AVC ou AIT)",
+                  "boolean"),
+            Field("diabetes_insulinodependente", "Diabetes em tratamento pré-operatório com "
+                  "insulina", "boolean"),
+            Field("creatinina_maior_2", "Creatinina sérica pré-operatória > 2,0 mg/dL",
+                  "boolean"),
+        ],
+        compute=_rcri,
+        interpret=_rcri_txt,
+        reference="Lee TH et al. Circulation. 1999;100(10):1043-1049. PMID 10477528.",
+        limitations=[
+            "Validado em pacientes ≥50 anos submetidos a cirurgia não-cardíaca eletiva maior; "
+            "não valida cirurgia de emergência.",
+            "A definição de \"cirurgia de alto risco\" do artigo original (intraperitoneal, "
+            "intratorácica ou vascular suprainguinal) é a convenção consagrada na literatura "
+            "subsequente — o abstract do artigo não a detalha por extenso.",
+            "Desde a diretriz ACC/AHA 2024, o RCRI não é mais apresentado como escore único de "
+            "referência — convive com o Gupta MICA e outras ferramentas validadas.",
+        ],
+    ),
     "cha2ds2-vasc": Calculator(
         slug="cha2ds2-vasc",
         name="CHA₂DS₂-VASc",

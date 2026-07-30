@@ -35,15 +35,23 @@ class Prescription(Base):
 
 class DocumentTemplate(Base):
     """Modelo reutilizável de atestado/laudo, com variáveis {{nome}} que
-    o médico preenche na hora de gerar. Cada usuário cria e mantém os seus."""
+    o médico preenche na hora de gerar. Cada usuário cria e mantém os seus —
+    exceto os modelos do sistema (`owner_id IS NULL`, acrescentado em
+    30/07/2026, Tarefa 30): pesquisados de fonte confiável e disponíveis
+    para qualquer médico usar, sem poder editar nem apagar (a checagem de
+    posse já existente, `owner_id == user.id`, nunca casa com `None` — não
+    precisou de exceção nova no código de edição/exclusão)."""
 
     __tablename__ = "document_templates"
 
     id: Mapped[int] = mapped_column(primary_key=True)
-    owner_id: Mapped[int] = mapped_column(ForeignKey("users.id"), index=True)
+    owner_id: Mapped[int | None] = mapped_column(ForeignKey("users.id"), nullable=True, index=True)
     title: Mapped[str] = mapped_column(String(200))
     doc_type: Mapped[str] = mapped_column(String(30))  # atestado | laudo | outro
     body: Mapped[str] = mapped_column(Text)  # texto com {{variaveis}}
+    # Slug estável só para os modelos do sistema, usado no upsert do
+    # semeador (para não duplicar a cada rodada). Nulo em modelo de médico.
+    slug_sistema: Mapped[str | None] = mapped_column(String(80), nullable=True, unique=True)
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
     )

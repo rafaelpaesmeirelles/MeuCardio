@@ -27,12 +27,23 @@ class TemplateIn(BaseModel):
 
 
 def _dump_template(t: DocumentTemplate) -> dict:
-    return {"id": t.id, "title": t.title, "doc_type": t.doc_type, "body": t.body}
+    return {
+        "id": t.id, "title": t.title, "doc_type": t.doc_type, "body": t.body,
+        "slug_sistema": t.slug_sistema, "sistema": t.owner_id is None,
+    }
 
 
 @router.get("")
 def listar_templates(db: Session = Depends(get_db), user=Depends(current_user)):
-    rows = db.query(DocumentTemplate).filter(DocumentTemplate.owner_id == user.id).order_by(DocumentTemplate.title).all()
+    """Modelos do sistema (owner_id nulo — pesquisados de fonte confiável,
+    disponíveis a qualquer médico, Tarefa 30) mais os que o próprio médico
+    criou. Sistema primeiro, depois os próprios por título."""
+    rows = (
+        db.query(DocumentTemplate)
+        .filter((DocumentTemplate.owner_id == user.id) | (DocumentTemplate.owner_id.is_(None)))
+        .order_by(DocumentTemplate.owner_id.is_not(None), DocumentTemplate.title)
+        .all()
+    )
     return [_dump_template(t) for t in rows]
 
 
@@ -71,13 +82,26 @@ class GerarDocumentoIn(BaseModel):
     # (Tarefa 29), gravada aqui porque o PDF é gerado sob demanda depois
     # (GET .../pdf, ou pelo link público) e precisa sair sempre igual.
     endereco: str | None = None
+    # Só para o modelo do sistema "documento em branco" (Tarefa 30) — título
+    # livre por geração, já que o do template ("Documento em branco") não
+    # serve como título final impresso.
+    titulo_customizado: str | None = None
 
 
 @router.post("/gerar", status_code=201)
 def gerar_documento(dados: GerarDocumentoIn, db: Session = Depends(get_db), user=Depends(current_user)):
     t = db.get(DocumentTemplate, dados.template_id)
-    if not t or t.owner_id != user.id:
+    # Modelo do sistema (owner_id nulo, Tarefa 30) é liberado pra qualquer
+    # médico; modelo próprio continua exigindo posse.
+    if not t or (t.owner_id is not None and t.owner_id != user.id):
         raise HTTPException(status_code=404, detail="Template não encontrado.")
+
+    if t.slug_sistema == "avaliacao-risco-cirurgico":
+        raise HTTPException(
+            status_code=422,
+            detail="Use POST /document-templates/avaliacao-preoperatoria para este modelo — "
+                   "ele calcula o risco a partir dos dados clínicos, não substitui variáveis.",
+        )
 
     if dados.patient_id is not None:
         p = db.get(Patient, dados.patient_id)
@@ -98,9 +122,13 @@ def gerar_documento(dados: GerarDocumentoIn, db: Session = Depends(get_db), user
     if faltando:
         raise HTTPException(status_code=422, detail=f"Faltam variáveis: {', '.join(faltando)}")
 
+    titulo = t.title
+    if t.slug_sistema == "documento-em-branco" and dados.titulo_customizado:
+        titulo = dados.titulo_customizado
+
     gerado = GeneratedDocument(
         patient_id=dados.patient_id, template_id=t.id, created_by=user.id,
-        doc_type=t.doc_type, title=t.title, rendered_body=corpo,
+        doc_type=t.doc_type, title=titulo, rendered_body=corpo,
         endereco_exibido=dados.endereco,
     )
     db.add(gerado)
@@ -113,6 +141,102 @@ def gerar_documento(dados: GerarDocumentoIn, db: Session = Depends(get_db), user
                    "council_number": user.council_number, "council_state": user.council_state,
                    "rqe": user.rqe, "specialty": user.specialty},
     }
+
+
+class AvaliacaoPreOpIn(BaseModel):
+    """Dados clínicos da avaliação de risco cirúrgico (Tarefa 30). Nenhum campo
+    é obrigatório sozinho — o rascunho é montado com o que estiver preenchido,
+    e o médico completa/corrige antes de emitir."""
+    # Procedimento planejado — usado para classificar o risco cirúrgico
+    # pela Tabela 5 da ESC/ESAIC 2022.
+    procedimento_planejado: str = ""
+    categoria_risco_cirurgico: str | None = None  # baixo | intermediario | alto
+
+    # RCRI — os 6 critérios do Índice de Lee.
+    cirurgia_alto_risco: bool = False
+    doenca_arterial_coronariana: bool = False
+    insuficiencia_cardiaca_congestiva: bool = False
+    doenca_cerebrovascular: bool = False
+    diabetes_insulinodependente: bool = False
+    creatinina_maior_2: bool = False
+
+    # Capacidade funcional: se algum item do DASI abaixo vier marcado, ele
+    # prevalece (é o método estruturado que ESC/ESAIC 2022 e ACC/AHA 2024
+    # preferem); senão cai na seleção simples.
+    capacidade_funcional: str = "indeterminada"  # boa | reduzida | indeterminada
+    cuidar_de_si: bool = False
+    caminhar_dentro_de_casa: bool = False
+    caminhar_200m_plano: bool = False
+    subir_um_lance_escada: bool = False
+    correr_curta_distancia: bool = False
+    trabalho_domestico_leve: bool = False
+    trabalho_domestico_moderado: bool = False
+    trabalho_domestico_pesado: bool = False
+    jardinagem: bool = False
+    relacoes_sexuais: bool = False
+    recreacao_moderada: bool = False
+    esporte_extenuante: bool = False
+
+    # Gupta MICA — coletadas, sem cálculo automático (ver app/services/preop.py).
+    gupta_idade: str | None = None
+    gupta_status_funcional: str | None = None
+    gupta_asa: str | None = None
+    gupta_creatinina_elevada: bool = False
+    gupta_tipo_procedimento: str | None = None
+
+    observacoes_adicionais: str | None = None
+
+
+@router.post("/avaliacao-preoperatoria/rascunho")
+def rascunho_avaliacao_preoperatoria(dados: AvaliacaoPreOpIn, user=Depends(current_user)):
+    """Só calcula e monta o texto — não grava nada. O médico revisa/edita no
+    frontend antes de confirmar a emissão (endpoint abaixo)."""
+    from app.services import preop
+
+    if dados.categoria_risco_cirurgico not in (None, "baixo", "intermediario", "alto"):
+        raise HTTPException(status_code=422, detail="categoria_risco_cirurgico inválida.")
+    if dados.capacidade_funcional not in ("boa", "reduzida", "indeterminada"):
+        raise HTTPException(status_code=422, detail="capacidade_funcional inválida.")
+
+    texto, resultado_rcri = preop.montar_rascunho(dados.model_dump())
+    return {"rascunho": texto, "rcri": resultado_rcri["result"]}
+
+
+class ConfirmarAvaliacaoPreOpIn(BaseModel):
+    corpo: str = Field(min_length=1)
+    patient_id: int | None = None
+    endereco: str | None = None
+
+
+@router.post("/avaliacao-preoperatoria", status_code=201)
+def confirmar_avaliacao_preoperatoria(
+    dados: ConfirmarAvaliacaoPreOpIn, db: Session = Depends(get_db), user=Depends(current_user)
+):
+    """Grava a avaliação com o texto JÁ revisado pelo médico (`corpo` é o que
+    veio do rascunho, editado ou não) — mesmo modelo de `GeneratedDocument`
+    usado pelos outros documentos, então PDF/e-mail/link público reaproveitam
+    tudo que já existe para atestado e laudo."""
+    if dados.patient_id is not None:
+        p = db.get(Patient, dados.patient_id)
+        if not p or (p.created_by != user.id and user.role != "admin"):
+            raise HTTPException(status_code=404, detail="Paciente não encontrado.")
+
+    if dados.endereco not in (None, "residencial", "profissional"):
+        raise HTTPException(status_code=422, detail="endereco precisa ser 'residencial', 'profissional' ou omitido.")
+
+    template = db.query(DocumentTemplate).filter(
+        DocumentTemplate.slug_sistema == "avaliacao-risco-cirurgico").first()
+
+    gerado = GeneratedDocument(
+        patient_id=dados.patient_id, template_id=template.id if template else None,
+        created_by=user.id, doc_type="laudo",
+        title="Avaliação cardiológica de risco cirúrgico", rendered_body=dados.corpo,
+        endereco_exibido=dados.endereco,
+    )
+    db.add(gerado)
+    db.commit()
+    db.refresh(gerado)
+    return {"id": gerado.id, "title": gerado.title, "created_at": gerado.created_at}
 
 
 def _obter_gerado(gid: int, db: Session, user) -> GeneratedDocument:

@@ -431,3 +431,20 @@ def carregar_listas_controladas(db: Session = Depends(get_db), user=Depends(requ
                     entity="receituario", detail=resultado))
     db.commit()
     return resultado
+
+
+# ------------------------------------------------- modelos de documento (T30) --
+@router.post("/document-templates/semear")
+def semear_document_templates(db: Session = Depends(get_db), user=Depends(require_admin)):
+    """Semeia os modelos de documento do sistema (atestado, declaração de
+    acompanhante, atestado de atividade física, documento em branco e o
+    registro de listagem da avaliação de risco cirúrgico). Upsert por
+    `slug_sistema` — idempotente, pode rodar de novo a cada atualização de
+    texto."""
+    from app.services.semear_document_templates import semear
+
+    resultado = semear(db)
+    db.add(AuditLog(user_id=user.id, action="semear_document_templates",
+                    entity="document_templates", detail=resultado))
+    db.commit()
+    return resultado
