@@ -82,8 +82,27 @@ Os riscos que o briefing já apontava (reputação de domínio novo, SPF/DKIM/DM
 
 **Minha leitura, não uma decisão feita por mim:** Titan Email é o único com o mecanismo de webmail embutido que o briefing pede ("acesso só de dentro da plataforma, mesmo login") já documentado e testável hoje; OpenSRS parece o modelo comercial mais alinhado (nasceu para revenda) mas sem embed confirmado, só subdomínio com marca; Migadu é o mais simples e barato mas sem embed nem ToS de revenda esclarecidos; Forward Email tem uma armadilha contratual real que descartaria os planos baratos.
 
-### Pergunta pendente — não decidida, registrada conforme pedido
+### Decisões do Rafael, em 30/07/2026
 
-**A pergunta sobre escopo de conteúdo clínico (comunicação administrativa geral vs. possível troca de dado de saúde de paciente) segue em aberto, sem resposta assumida.** A resposta determina se a caixa precisa do mesmo padrão de proteção do Cofre do telediagnóstico (cifragem em repouso, log de acesso, retenção definida) ou de um nível mais próximo de um provedor de e-mail comum — e também pesa na avaliação de LGPD/transferência internacional acima.
+1. **Escopo de conteúdo: só administrativo/geral.** A caixa não se destina a troca de
+   informação clínica sobre paciente — nível de exigência de segurança mais próximo
+   de um provedor de e-mail comum, sem o padrão do Cofre do telediagnóstico
+   (cifragem em repouso específica, log de acesso, retenção definida). Se essa
+   premissa mudar no futuro (médico começar a usar a caixa para falar de paciente
+   na prática, ainda que fora do que a plataforma pretende), a decisão de segurança
+   precisa ser revisitada — não presumir que "administrativo no papel" continua
+   "administrativo na prática" para sempre.
+2. **Opção B — fornecedor terceiro**, não self-hosted. Motivo, nas palavras do
+   próprio Rafael ao escolher: entrega confiável desde o primeiro dia pesa mais que
+   controle total, dado que a Corvia não tem hoje nenhuma experiência operacional
+   rodando servidor de e-mail.
+3. **Fornecedor para aprofundar: Titan Email**, por ser o único dos sete
+   pesquisados com SSO/embed de webmail tecnicamente confirmado — o requisito do
+   briefing de "acesso só de dentro da plataforma, mesmo login" depende
+   diretamente disso.
 
-### Nada de código de modelo de dados ou interface foi escrito para esta tarefa, conforme pedido.
+Pesquisa técnica mais profunda sobre a Titan Email (onboarding real, endpoints da
+API além de `createMailOrder`, mecanismo exato do token de auto-login, se o embed
+é do webmail do usuário final ou só do painel de admin, preço, red flags) está em
+andamento e será acrescentada a este arquivo antes de qualquer código de modelo de
+dados ou interface.
