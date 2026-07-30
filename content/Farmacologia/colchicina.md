@@ -4,7 +4,7 @@ slug: colchicina
 theme: "Farmacologia"
 kind: farmacologia
 review_status: revisado
-source_refs: ["Low-Dose Colchicine for Secondary Prevention of Coronary Artery Disease: JACC Review Topic of the Week · JACC · https://www.jacc.org/doi/10.1016/j.jacc.2023.05.055", "Colchicine's Role in Cardiovascular Disease Management · Arteriosclerosis, Thrombosis, and Vascular Biology · https://www.ahajournals.org/doi/10.1161/ATVBAHA.124.319851", "Bula do COLCHIS (colchicina, Apsen Farmacêutica), seções de posologia, precauções e advertências · conferida em 29/07/2026 · é bula da indicação de gota, e não cobre pericardite", "Colchicine tablets — rótulo aprovado pelo FDA, indicação de febre familiar do Mediterrâneo, DailyMed SPL setid 5c1ceff7-8f00-48cc-8ea4-678106455ff1, seção 2.5 Dose Modification in Renal Impairment"]
+source_refs: ["Low-Dose Colchicine for Secondary Prevention of Coronary Artery Disease: JACC Review Topic of the Week · JACC · https://www.jacc.org/doi/10.1016/j.jacc.2023.05.055", "Colchicine's Role in Cardiovascular Disease Management · Arteriosclerosis, Thrombosis, and Vascular Biology · https://www.ahajournals.org/doi/10.1161/ATVBAHA.124.319851", "Bula do COLCHIS (colchicina, Apsen Farmacêutica), seções de posologia, precauções e advertências · conferida em 29/07/2026 · é bula da indicação de gota, e não cobre pericardite", "Colchicine tablets — rótulo aprovado pelo FDA, indicação de febre familiar do Mediterrâneo, DailyMed SPL setid 5c1ceff7-8f00-48cc-8ea4-678106455ff1, seção 2.5 Dose Modification in Renal Impairment", "2025 ESC Guidelines for the management of myocarditis and pericarditis. Eur Heart J. 2025;46(40):3952-4032. DOI: 10.1093/eurheartj/ehaf192 — Tabela 13, lida na íntegra em 30/07/2026"]
 ---
 
 # Colchicina
@@ -23,11 +23,9 @@ Inibe a polimerização de tubulina em microtúbulos, interferindo na ativação
 - **prevencao secundaria de doenca coronariana**: aprovada pelo FDA para redução de eventos cardiovasculares em baixa dose — recomendação classe IIa da ESC 2023, embora ensaio CLEAR-SYNERGY (2024) mais recente e maior não tenha confirmado benefício (ver documento de estudos desta biblioteca)
 
 ## Dose e apresentacao
-- **pericardite aguda**: 0,5 mg 1x/dia (peso <70 kg) ou 0,5 mg 2x/dia (peso ≥70 kg), por 3 meses
+- **pericardite aguda e recorrente — resolvido em 30/07/2026**: **0,5 mg 1x/dia** (peso <70 kg **ou** insuficiência renal grave) **ou 0,5 mg 2x/dia** (demais casos), por **3 a 6 meses** — sem necessidade de desmame ao final. Fonte: 2025 ESC Guidelines for the management of myocarditis and pericarditis. Eur Heart J. 2025;46(40):3952-4032. DOI: 10.1093/eurheartj/ehaf192, **Tabela 13** ("Specific initial dosing and duration of therapy for acute and recurrent pericarditis"), lida na íntegra. O esquema que já estava aqui (0,5mg 1x/dia <70kg ou 2x/dia ≥70kg) **confere quase exatamente** com a diretriz — a diferença real é que a ESC acrescenta insuficiência renal grave como segundo critério para a dose menor, além do peso, e a duração correta é **3 a 6 meses**, não só 3 meses.
 - **prevencao cardiovascular (baixa dose)**: 0,5 mg 1x/dia — reduz eventos cardiovasculares em 25-30% em pacientes com aterosclerose coronariana nos ensaios que mostraram benefício
-- **fonte**: para a prevenção cardiovascular em baixa dose, a revisão do JACC citada nas referências. **Para a pericardite, sem fonte verificável** — ver a marcação abaixo
-
-VERIFICAÇÃO HUMANA NECESSÁRIA para o esquema da **pericardite aguda**: ele estava apoiado num site de respostas geradas por IA, categoria que a Fase B removeu do acervo, e a bula brasileira conferida (COLCHIS, Apsen) é da indicação de **gota** e não cobre pericardite. O esquema **não foi alterado**, porque corresponde à prática corrente e mudá-lo sem fonte trocaria um problema por outro — mas está aqui **sem procedência verificável**. Próximo passo: ESC 2025 de miocardite e pericardite, seção de tratamento, que é a mesma diretriz que já sustenta o registro de evidência da colchicina na pericardite (classe I, nível A) nesta biblioteca.
+- **fonte**: para a prevenção cardiovascular em baixa dose, a revisão do JACC citada nas referências; para a pericardite, a diretriz ESC 2025 citada acima
 
 ## Ajuste renal e hepatico
 
