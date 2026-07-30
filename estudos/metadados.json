@@ -1708,5 +1708,31 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "sequoia-hcm-aficamteno-na-cardiomiopatia-hipertrofica-obstrutiva",
+    "title": "SEQUOIA-HCM — Aficamteno na cardiomiopatia hipertrófica obstrutiva sintomática",
+    "study_type": "ensaio_clinico",
+    "authors": "Maron MS, Masri A, Nassif ME, et al. (SEQUOIA-HCM Investigators)",
+    "journal": "New England Journal of Medicine",
+    "year": 2024,
+    "doi": "10.1056/NEJMoa2401424",
+    "pmid": "38739079",
+    "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2401424",
+    "summary": "Ensaio de fase 3, duplo-cego, 282 pacientes adultos com CMH obstrutiva sintomática, randomizados para aficamteno (dose inicial 5 mg, máxima 20 mg, com ajuste guiado por ecocardiograma) ou placebo por 24 semanas. Idade média 59,1 anos, 59,2% homens, gradiente de via de saída de VE em repouso basal médio de 55,1 mmHg, FEVE basal média de 74,8%. Desfecho primário: variação do pico de consumo de oxigênio (pVO2) por teste cardiopulmonar de esforço, do início ao fim da semana 24. Dez desfechos secundários pré-especificados, testados hierarquicamente (KCCQ, classe funcional NYHA, gradiente pós-Valsalva, elegibilidade para redução septal, carga de trabalho total).",
+    "key_findings": "Variação de pVO2 em 24 semanas: +1,8 mL/kg/min com aficamteno contra 0,0 mL/kg/min com placebo — diferença de médias ajustadas de 1,7 mL/kg/min (IC95% 1,0-2,4; p<0,001). Melhora de pelo menos 1 classe NYHA em 58,5% (aficamteno) contra 24,3% (placebo). Redução do gradiente de VSVE pós-Valsalva 50 mmHg maior com aficamteno; gradiente pós-Valsalva <30 mmHg alcançado por 49,3% (aficamteno) contra 3,6% (placebo). Todos os 10 desfechos secundários pré-especificados foram significativamente melhores com aficamteno. Incidência de eventos adversos semelhante entre os grupos.",
+    "clinical_implications": "Segundo inibidor de miosina cardíaca (após mavacamten/EXPLORER-HCM, já coberto nesta biblioteca) com ensaio de fase 3 positivo em CMH obstrutiva sintomática — resultado consistente em desfecho funcional objetivo (pVO2) e em todos os desfechos secundários, incluindo redução de elegibilidade para redução septal invasiva. Amplia a classe terapêutica de inibidores de miosina como alternativa aos betabloqueadores/verapamil/disopiramida tradicionais.",
+    "limitations": "Seguimento de 24 semanas — não avalia segurança/eficácia de longo prazo. FEVE basal alta (74,8%) reflete a fisiopatologia hipercontrátil da doença, mas segurança de queda de FEVE com uso prolongado exige monitorização ecocardiográfica seriada, como já ocorre com mavacamten.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "sequoia-hcm",
+      "aficamteno",
+      "cardiomiopatia hipertrófica",
+      "inibidor de miosina cardíaca",
+      "cmh obstrutiva",
+      "ensaio clínico"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]

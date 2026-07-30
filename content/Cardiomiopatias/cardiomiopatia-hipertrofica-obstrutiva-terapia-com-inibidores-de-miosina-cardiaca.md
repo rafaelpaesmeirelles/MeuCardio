@@ -7,6 +7,7 @@ source_refs:
 - Mavacamten-A Targeted Therapy for Hypertrophic Cardiomyopathy · JACC · 2023 · 36878205
 - New Evidence, Guidelines Support Mavacamten Use in HCM · HCPLive · 2023 · https://www.hcplive.com/view/new-evidence-guidelines-support-mavacamten-use-in-hypertrophic-cardiomyopathy
 - Olivotto I, Oreziak A, Barriales-Villa R, et al. Mavacamten for treatment of symptomatic obstructive hypertrophic cardiomyopathy (EXPLORER-HCM). Lancet. 2020;396(10253):759-769. DOI 10.1016/S0140-6736(20)31792-X. PMID 32871100 — números conferidos contra o texto do artigo em 30/07/2026.
+- Maron MS, Masri A, Nassif ME, et al. Aficamten for Symptomatic Obstructive Hypertrophic Cardiomyopathy (SEQUOIA-HCM). N Engl J Med. 2024;390(20):1849-1861. DOI 10.1056/NEJMoa2401424. PMID 38739079 — números conferidos contra o abstract indexado (Europe PMC) em 30/07/2026.
 theme: Cardiomiopatias
 title: 'Cardiomiopatia Hipertrófica Obstrutiva: Terapia com Inibidores de Miosina
   Cardíaca'
@@ -45,8 +46,9 @@ Foco tradicional em alívio sintomático através de otimização de pré-carga 
 ## Seguranca monitorizacao
 Risco de insuficiência cardíaca por disfunção sistólica excessiva; seleção cuidadosa de pacientes e monitorização estreita (incluindo ecocardiografia seriada de FEVE) são fundamentais para implementação segura na prática clínica
 
-## Novidade classe terapeutica
-Aficamten (segundo inibidor de miosina cardíaca) também emergiu como opção terapêutica na mesma classe farmacológica, ampliando arsenal terapêutico de precisão para CMH obstrutiva
+## Novidade classe terapeutica — números do ensaio pivotal acrescentados em 30/07/2026
+Aficamteno (segundo inibidor de miosina cardíaca) também emergiu como opção terapêutica na mesma classe farmacológica, ampliando arsenal terapêutico de precisão para CMH obstrutiva. Ensaio pivotal SEQUOIA-HCM (fase 3, 282 pacientes, 24 semanas): pVO2 +1,8 mL/kg/min com aficamteno contra 0,0 mL/kg/min com placebo (diferença 1,7 mL/kg/min; IC95% 1,0-2,4; p<0,001); melhora de pelo menos 1 classe NYHA em 58,5% contra 24,3%; todos os 10 desfechos secundários pré-especificados significativamente melhores. Detalhamento completo em `estudos/metadados.json`, entrada `sequoia-hcm-aficamteno-na-cardiomiopatia-hipertrofica-obstrutiva`.
+- **fonte**: Maron MS et al., N Engl J Med 2024;390(20):1849-1861, PMID 38739079 — números conferidos contra o abstract indexado (Europe PMC) em 30/07/2026.
 
 ## Atualizacao 2026
 Consenso de especialistas EJHF publicado sobre diagnóstico e manejo de CMH reflete evolução contínua e rápida do campo desde a diretriz ESC 2023
