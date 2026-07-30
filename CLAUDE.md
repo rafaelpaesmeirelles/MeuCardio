@@ -191,8 +191,11 @@ Regras que decorrem disso:
 >   valvar aórtica antes de cirurgia eletiva, Perioperatório), ambas com referência cruzada
 >   aos documentos de texto já escritos nesta sessão para os mesmos temas; e mais um
 >   documento novo em `content/Valvopatias/` (escolha de prótese valvar mecânica vs.
->   biológica, cortes de idade e tabela de alvo de INR por tipo/posição, ESC/EACTS 2025) —
->   commits até `ed58f78`.
+>   biológica, cortes de idade e tabela de alvo de INR por tipo/posição, ESC/EACTS 2025); e
+>   mais um documento novo em `content/Cardiopatias_congênitas/` (estenose pulmonar — a
+>   lesão congênita isolada mais comum, sem documento próprio até agora — classificação por
+>   nível, graduação de gravidade e indicação de intervenção, ESC 2020) — commits até
+>   `9a6f1bb`.
 >
 > **Uma entrada NÃO deve ser publicada com o resto, apesar da aprovação geral**: em
 > `evidencias/metadados.json`, o registro
