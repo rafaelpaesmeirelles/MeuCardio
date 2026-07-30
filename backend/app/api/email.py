@@ -51,7 +51,8 @@ def _exigir_configurado():
 
 def _localpart_base(nome_completo: str) -> str:
     """'Rafael Paes Meirelles' -> 'rafael.paes'. Usa nome + primeiro
-    sobrenome; se colidir, `_gerar_endereco_unico` acrescenta um número."""
+    sobrenome; se colidir, `_sugerir_local_part` acrescenta um número. É só
+    a SUGESTÃO inicial — o médico pode editar antes de confirmar."""
     sem_acento = unicodedata.normalize("NFKD", nome_completo).encode("ascii", "ignore").decode()
     partes = [p.lower() for p in re.sub(r"[^a-zA-Z ]", "", sem_acento).split() if p]
     if not partes:
@@ -61,14 +62,51 @@ def _localpart_base(nome_completo: str) -> str:
     return f"{partes[0]}.{partes[1]}"
 
 
-def _gerar_endereco_unico(db: Session, nome_completo: str) -> str:
+def _sugerir_local_part(db: Session, nome_completo: str) -> str:
+    """Sugestão de local-part livre — acrescenta número só se a base colidir
+    com endereço já existente. Separado de `_gerar_endereco_unico` porque
+    agora o médico pode editar a sugestão antes de confirmar (Tarefa 28,
+    tela de cadastro do endereço); a versão anterior gerava e usava direto,
+    sem dar ao médico chance de escolher."""
     base = _localpart_base(nome_completo)
-    candidato = f"{base}@{settings.mail360_dominio}"
+    candidato = base
     n = 1
-    while db.query(EmailAccount).filter(EmailAccount.email_address == candidato).first():
+    while db.query(EmailAccount).filter(
+        EmailAccount.email_address == f"{candidato}@{settings.mail360_dominio}"
+    ).first():
         n += 1
-        candidato = f"{base}{n}@{settings.mail360_dominio}"
+        candidato = f"{base}{n}"
     return candidato
+
+
+# RFC 5321 permite local-part bem mais exótico que isto, mas o Mail360 não
+# documenta publicamente as regras que aceita (pesquisado em 30/07/2026 —
+# só um relato de comunidade sobre o caractere "+" causar inconsistência
+# entre app e API, nada sobre o restante). Em vez de inventar um limite,
+# aplicamos aqui o subconjunto universalmente seguro que qualquer provedor de
+# e-mail aceita — minúsculo, dígito, ponto, hífen, underscore, começando e
+# terminando em letra/dígito — e deixamos a resposta REAL do Mail360 ser a
+# palavra final: se algo passar daqui e for rejeitado lá, o erro do
+# `criar_conta_nativa` chega ao médico do mesmo jeito, via 502.
+_LOCAL_PART_RE = re.compile(r"^[a-z0-9]([a-z0-9._-]{1,28}[a-z0-9])?$")
+
+
+def _validar_local_part(db: Session, local: str) -> str | None:
+    """Devolve a mensagem de erro, ou None se o endereço passa no formato e
+    está livre. Checagem de disponibilidade é case-insensitive porque o
+    Mail360 trata o domínio como case-insensitive na prática (confirmado
+    indiretamente: `POST /entrar` já normaliza para minúsculo)."""
+    if not local:
+        return "Escolha um endereço para sua caixa de e-mail."
+    if not _LOCAL_PART_RE.match(local):
+        return (
+            "Use só letras minúsculas, números, ponto, hífen ou underscore, "
+            "começando e terminando em letra ou número (3 a 30 caracteres)."
+        )
+    candidato = f"{local}@{settings.mail360_dominio}"
+    if db.query(EmailAccount).filter(EmailAccount.email_address == candidato).first():
+        return "Este endereço já está em uso. Escolha outro."
+    return None
 
 
 def _obter_conta(db: Session, user: User) -> EmailAccount | None:
@@ -103,9 +141,41 @@ def termo_lgpd(user: User = Depends(current_user)):
     return {"versao": termo_lgpd_email.VERSAO, "texto": termo_lgpd_email.texto(settings.admin_email)}
 
 
+@router.get("/sugestao-endereco")
+def sugestao_endereco(db: Session = Depends(get_db), user: User = Depends(current_user)):
+    """Sugestão inicial pra tela de cadastro do endereço — o médico ainda
+    pode editar antes de confirmar em `POST /conta`. Se a caixa já existe,
+    devolve o endereço real (não dá mais pra escolher, já foi criado no
+    Mail360)."""
+    existente = _obter_conta(db, user)
+    if existente:
+        local, _, dominio = existente.email_address.partition("@")
+        return {"local_part": local, "dominio": dominio, "editavel": False}
+    return {
+        "local_part": _sugerir_local_part(db, user.full_name),
+        "dominio": settings.mail360_dominio,
+        "editavel": True,
+    }
+
+
+@router.get("/verificar-endereco")
+def verificar_endereco(local: str, db: Session = Depends(get_db), _=Depends(current_user)):
+    """Validação em tempo real pra tela de cadastro — formato e
+    disponibilidade, sem reservar nada (a reserva de fato só acontece em
+    `POST /conta`, que cria a conta no Mail360 na mesma chamada)."""
+    local_normalizado = local.strip().lower()
+    erro = _validar_local_part(db, local_normalizado)
+    return {
+        "disponivel": erro is None,
+        "motivo": erro,
+        "endereco": f"{local_normalizado}@{settings.mail360_dominio}",
+    }
+
+
 class AtivarConta(BaseModel):
     senha: str
     aceite_lgpd: bool = False
+    local_part: str | None = None  # obrigatório só na primeira ativação
 
 
 @router.post("/conta", status_code=201)
@@ -118,7 +188,13 @@ def ativar_conta(dados: AtivarConta, db: Session = Depends(get_db), user: User =
     `aceite_lgpd` é obrigatório em toda chamada (criação OU atualização de
     senha): é aqui, no momento em que a caixa é de fato provisionada no
     Mail360, que a transferência internacional acontece — sem aceite
-    registrado, não ativa. Ver `app/content/termo_lgpd_email.py`."""
+    registrado, não ativa. Ver `app/content/termo_lgpd_email.py`.
+
+    `local_part` é o endereço escolhido na tela de cadastro (Tarefa 28,
+    30/07/2026) — obrigatório só na criação; numa reativação (senha nova
+    numa caixa que já existe) é ignorado, porque o endereço já foi criado no
+    Mail360 e não dá pra trocar sem apagar e recriar a conta lá, fora do
+    escopo desta rota."""
     _exigir_configurado()
     if not assinatura_email_ativa(db, user.id):
         raise HTTPException(
@@ -141,7 +217,12 @@ def ativar_conta(dados: AtivarConta, db: Session = Depends(get_db), user: User =
         db.commit()
         return {"ativa": True, "email_address": existente.email_address, "ja_existia": True}
 
-    endereco = _gerar_endereco_unico(db, user.full_name)
+    local_normalizado = (dados.local_part or "").strip().lower()
+    erro = _validar_local_part(db, local_normalizado)
+    if erro:
+        raise HTTPException(status_code=422, detail=erro)
+
+    endereco = f"{local_normalizado}@{settings.mail360_dominio}"
     try:
         account_key = mail360.criar_conta_nativa(endereco, user.full_name)
     except Mail360Error as e:
