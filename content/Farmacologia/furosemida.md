@@ -3,8 +3,8 @@ title: "Furosemida"
 slug: furosemida
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
-source_refs: ["Furosemide injection — rótulo aprovado pelo FDA, DailyMed SPL setid 75d5611a-f9e0-1841-e053-2991aa0af415"]
+review_status: revisado
+source_refs: ["Furosemide injection — rótulo aprovado pelo FDA, DailyMed SPL setid 75d5611a-f9e0-1841-e053-2991aa0af415", "Gerlag PG, van Meijel JJ. High-dose furosemide in the treatment of refractory congestive heart failure. Arch Intern Med. 1988;148(2):286-291. PMID: 3341836", "Wilczynski JA, Decaro MV, Marhefka GD, et al. Very High-Dose Furosemide Continuous Infusions: A Case Series. J Card Fail. 2020;26(9):794-797. DOI: 10.1016/j.cardfail.2020.05.022. PMID: 32505817"]
 legacy_source: "medicamentos/banco-de-medicamentos-furosemida.md"
 ---
 
@@ -32,7 +32,8 @@ Comprimidos orais; solução injetável (10 mg/mL) para uso EV ou IM
 - **diurese forcada**: 20-40 mg associados a infusão de eletrólitos; posologia total de 100-300 mg/dia por período máximo de 48 horas
 - **pediatria oral**: Lactentes e crianças menores de 15 anos: 1-2 mg/kg/dose a cada 6-8 horas
 - **pediatria injetavel**: 1 mg/kg/dose EV ou IM; não repetir antes de 2h; manutenção 1 mg/kg/dose a cada 6-12h
-- **dose maxima adulto**: **600 mg/dia** — é a dose humana máxima a que o rótulo se refere, e vale como teto de referência para as duas vias. A versão anterior deste verbete trazia "EV em infusão: 6 gramas/dia", **dez vezes** esse valor, num diurético de alça cujo risco de ototoxicidade cresce justamente com dose alta e infusão rápida. VERIFICAÇÃO HUMANA NECESSÁRIA para doses acima de 600 mg/dia em congestão refratária, que existem na prática de terapia intensiva mas precisam de fonte própria — não de um teto herdado sem procedência
+- **dose maxima adulto (rotulo)**: **600 mg/dia** — é a dose humana máxima a que o rótulo se refere, e vale como teto de referência para as duas vias. A versão anterior deste verbete trazia "EV em infusão: 6 gramas/dia", **dez vezes** esse valor, num diurético de alça cujo risco de ototoxicidade cresce justamente com dose alta e infusão rápida.
+- **doses acima de 600mg/dia em congestão refratária — resolvido em 30/07/2026**: existem na prática, com fonte própria. Série de casos clássica (Gerlag PG, van Meijel JJ. High-dose furosemide in the treatment of refractory congestive heart failure. Arch Intern Med. 1988;148(2):286-291. PMID: 3341836): 35 pacientes com IC crônica grave refratária e função renal reduzida (clearance de creatinina endógena médio de 32 mL/min/1,73m²) receberam furosemida em doses de **250 a 4.000 mg/dia**, com natriurese e redução de peso (média de 11 kg) em todos, sobrevida média de 11,3 meses após início da dose alta. Dado mais recente, de infusão contínua (Wilczynski JA, Decaro MV, Marhefka GD, et al. Very High-Dose Furosemide Continuous Infusions: A Case Series. J Card Fail. 2020;26(9):794-797. DOI: 10.1016/j.cardfail.2020.05.022. PMID: 32505817): 22 pacientes em infusão de **≥40 mg/h, até 240 mg/h**, com aumento de diurese (mediana de 1.193 mL para 3.518 mL em 24h, p<0,01), sem piora sustentada de função renal, sem distúrbio eletrolítico e sem ototoxicidade relatada — só 2 de 22 tiveram hipotensão. **Ambas são séries de casos retrospectivas, não ensaio randomizado** — a decisão de ultrapassar a dose de bula exige julgamento clínico individualizado, não é protocolo padronizado
 - **dose maxima pediatrica**: Oral: 40 mg/dia ou 6 mg/kg/dose; injetável: 20 mg/dia ou 6 mg/kg/dose
 - **velocidade infusao**: Adulto: não exceder 4 mg/min; pediatria: 0,5 mg/kg/min
 - **fonte**: rótulo da furosemida injetável aprovado pelo FDA (DailyMed)
