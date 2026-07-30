@@ -1225,5 +1225,28 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "estenose-aortica-gradiente-pressorico-cateterismo",
+    "title": "Estenose aórtica — gradiente pressórico entre VE e aorta ao cateterismo",
+    "modality": "Hemodinâmica invasiva",
+    "theme": "Valvopatias",
+    "file_path": "hemodinamica/estenose-aortica-gradiente-pressorico-ve-aorta.png",
+    "findings": "Registro simultâneo de pressão intraventricular esquerda (VE) e aórtica (AO), com traçado de ECG de referência. A área sombreada em verde, entre as duas curvas de pressão durante a sístole, representa o gradiente pressórico transvalvar — achado hemodinâmico direto de obstrução na via de saída do VE por estenose da valva aórtica.",
+    "teaching_points": "O gradiente medido por cateterismo (peak-to-peak, diferença entre o pico da pressão de VE e o pico da pressão aórtica, não simultâneos) é sistematicamente menor que o gradiente de pico instantâneo medido por Doppler — os dois números não são intercambiáveis, e comparar um relatório de cateterismo com um de ecocardiograma sem essa ressalva é erro comum. A gravidade da estenose aórtica é definida pelo gradiente médio (não peak-to-peak) ao Doppler: ≥40 mmHg (junto com Vmáx ≥4,0 m/s e área valvar reduzida) caracteriza estenose aórtica grave de alto gradiente. Conforme a diretriz ESC/EACTS 2025, cateterismo de VE não é recomendado rotineiramente — reservado a paciente com sintomas e sinais de estenose grave quando a investigação não invasiva for inconclusiva.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Aortic_Stenosis_-_Hemodynamic_Pressure_Tracing.png",
+    "license": "CC BY-SA 2.0",
+    "attribution": "Ksheka, via Wikimedia Commons — CC BY-SA 2.0 (também disponível sob GFDL). Licença conferida na página do arquivo em 30/07/2026.",
+    "tags": [
+      "estenose aórtica",
+      "cateterismo cardíaco",
+      "hemodinâmica",
+      "gradiente pressórico",
+      "valvopatia",
+      "peak-to-peak"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
