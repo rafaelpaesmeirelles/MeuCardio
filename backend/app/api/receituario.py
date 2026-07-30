@@ -16,25 +16,32 @@ que uma regra está errada.
 """
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import Response
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pydantic import BaseModel, Field
 from sqlalchemy.orm import Session
 
+from app.core.config import settings
 from app.core.db import get_db
 from app.core.security import current_user
 from app.models.audit import AuditLog
 from app.models.clinical_docs import Prescription
+from app.models.compartilhamento import DocumentShareLink
 from app.models.drug import Drug
 from app.models.receituario import (
-    ControlledSubstance, PrescriptionDocument, PrescriptionRecipient, PrescriptionRule,
-    PrescriptionType,
+    ControlledSubstance, PrescriptionDocument, PrescriptionRecipient,
+    PrescriptionRule, PrescriptionType,
 )
 from app.services import cofre
 from app.services.classificacao_receituario import (
     ItemPrescrito, Regra, Substancia, classificar, normalizar,
 )
+from app.services.notificar import tentar_enviar_email
 
 router = APIRouter(prefix="/api/receituario", tags=["receituário"])
+
+# Validade do link enviado ao paciente. Não é uso único de propósito (ver
+# DocumentShareLink) — só a janela de tempo controla o acesso.
+VALIDADE_LINK_DIAS = 7
 
 
 # ------------------------------------------------------------------ schemas --
@@ -346,3 +353,62 @@ def emitir(documento_id: int, db: Session = Depends(get_db), user=Depends(curren
     db.commit()
     return Response(content=pdf, media_type="application/pdf", headers={
         "Content-Disposition": f'inline; filename="receituario-{doc.id}.pdf"'})
+
+
+class EnviarEmailIn(BaseModel):
+    email: str = Field(min_length=5)
+
+
+@router.post("/documentos/{documento_id}/enviar-email")
+def enviar_email(documento_id: int, dados: EnviarEmailIn, db: Session = Depends(get_db),
+                 user=Depends(current_user)):
+    """Manda ao paciente um LINK, nunca o PDF anexado — decisão do Rafael em
+    30/07/2026: a receita é dado clínico, e a caixa de e-mail (CorvIA Mail)
+    tem termo LGPD que proíbe justamente isso. O link é servido por
+    `app/api/documentos_publicos.py`, sem passar pela Zoho em nenhum ponto.
+    """
+    doc = db.get(PrescriptionDocument, documento_id)
+    if not doc:
+        raise HTTPException(status_code=404, detail="Documento não encontrado.")
+    presc = db.get(Prescription, doc.prescription_id)
+    if not presc or presc.created_by != user.id:
+        raise HTTPException(status_code=404, detail="Documento não encontrado.")
+    if doc.status != "emitido":
+        raise HTTPException(status_code=409, detail="Só é possível enviar um documento já emitido.")
+
+    dest = db.query(PrescriptionRecipient).filter(
+        PrescriptionRecipient.prescription_id == presc.id).first()
+    if not dest:
+        raise HTTPException(status_code=409, detail="Destinatário da receita não encontrado.")
+    dest.email_cifrado = cofre.cifrar_campo(dados.email, presc.id)
+
+    link = DocumentShareLink(
+        tipo="prescription_document", referencia_id=doc.id, criado_por=user.id,
+        expires_at=datetime.now(timezone.utc) + timedelta(days=VALIDADE_LINK_DIAS),
+    )
+    db.add(link)
+    db.commit()
+    db.refresh(link)
+
+    url = f"{settings.public_url}/api/documentos-publicos/{link.token}"
+    enviado = tentar_enviar_email(
+        destinatario=dados.email,
+        assunto="Corvia — documento do seu médico disponível",
+        corpo=(
+            f"Dr(a). {user.full_name} disponibilizou um documento para você na Corvia.\n\n"
+            f"Acesse pelo link abaixo (válido por {VALIDADE_LINK_DIAS} dias): {url}\n\n"
+            f"Este link é pessoal — não compartilhe."
+        ),
+    )
+
+    db.add(AuditLog(user_id=user.id, action="enviar_email_documento_receita",
+                    entity="prescription_document", entity_id=str(doc.id),
+                    detail={"enviado": enviado}))
+    db.commit()
+
+    # Sem SMTP configurado, `enviado` vem falso — mesma situação já tratada
+    # em `esqueci_senha` (password_reset.py). Ali um admin repassa o link de
+    # reset manualmente; aqui é o próprio médico quem tem essa autoridade
+    # sobre o paciente dele, então devolvemos o link pra ele copiar e mandar
+    # por outro canal (WhatsApp, telefone), em vez de só um erro sem saída.
+    return {"enviado": enviado, "link": None if enviado else url}

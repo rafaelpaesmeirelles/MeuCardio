@@ -1,6 +1,6 @@
 from datetime import datetime, timezone
 
-from sqlalchemy import Boolean, DateTime, ForeignKey, Integer, String, Text
+from sqlalchemy import Boolean, DateTime, ForeignKey, Integer, LargeBinary, String, Text
 from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.orm import Mapped, mapped_column
 
@@ -62,6 +62,11 @@ class GeneratedDocument(Base):
     doc_type: Mapped[str] = mapped_column(String(30))
     title: Mapped[str] = mapped_column(String(200))
     rendered_body: Mapped[str] = mapped_column(Text)
+    # Acrescentado em 30/07/2026 (Tarefa 29 — enviar documento por e-mail).
+    # Cifrado com o mesmo cofre do receituário — sem entidade "Recipient"
+    # própria aqui porque este documento já não tem paciente identificável
+    # em nenhum outro campo (`patient_id` aponta pro Patient anonimizado).
+    destinatario_email_cifrado: Mapped[bytes | None] = mapped_column(LargeBinary, nullable=True)
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
     )

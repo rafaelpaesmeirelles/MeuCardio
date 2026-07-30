@@ -156,6 +156,40 @@ def _rodape(c: canvas.Canvas, medico: dict, via: str | None, aviso: str | None) 
         c.drawString(MARGEM, 16 * mm, aviso)
 
 
+def documento_generico(titulo: str, corpo: str, medico: dict) -> bytes:
+    """PDF de atestado/laudo gerado a partir de `DocumentTemplate` (Tarefa 29).
+
+    Ao contrário do receituário, o corpo já chega pronto — as variáveis
+    `{{...}}` já foram substituídas em `app/api/documents.py:gerar_documento`
+    antes de chegar aqui. Este renderizador só formata como documento, com o
+    mesmo cabeçalho/rodapé do receituário, para manter a mesma identidade
+    visual em todo PDF clínico que a Corvia emite."""
+    buf = io.BytesIO()
+    c = canvas.Canvas(buf, pagesize=A4)
+    c.setTitle(titulo)
+
+    y = _cabecalho(c, medico, titulo)
+
+    util = LARGURA - 2 * MARGEM
+    c.setFillColorRGB(0, 0, 0)
+    c.setFont("Helvetica", 10.5)
+    for paragrafo in corpo.split("\n"):
+        if not paragrafo.strip():
+            y -= 4 * mm
+            continue
+        if y < 55 * mm:
+            c.showPage()
+            y = ALTURA - MARGEM
+        for linha in _quebrar(c, paragrafo, "Helvetica", 10.5, util):
+            c.drawString(MARGEM, y, linha)
+            y -= 5 * mm
+
+    _rodape(c, medico, None, "Documento sem assinatura digital — requer assinatura do emissor.")
+    c.showPage()
+    c.save()
+    return buf.getvalue()
+
+
 def receituario_comum(destinatario: dict, itens: list[dict], medico: dict,
                       observacoes: str = "") -> bytes:
     """Receituário comum, uma via. Retorna os bytes do PDF.

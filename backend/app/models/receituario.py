@@ -136,6 +136,10 @@ class PrescriptionRecipient(Base):
     nome_cifrado: Mapped[bytes] = mapped_column(LargeBinary)
     endereco_cifrado: Mapped[bytes | None] = mapped_column(LargeBinary, nullable=True)
     documento_cifrado: Mapped[bytes | None] = mapped_column(LargeBinary, nullable=True)
+    # Acrescentado em 30/07/2026 (Tarefa 29 — enviar receita por e-mail).
+    # Opcional: só existe se o médico decidir enviar a receita por e-mail; a
+    # receita em si não exige e-mail do paciente.
+    email_cifrado: Mapped[bytes | None] = mapped_column(LargeBinary, nullable=True)
 
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)

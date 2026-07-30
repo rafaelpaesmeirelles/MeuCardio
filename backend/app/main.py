@@ -2,7 +2,8 @@ from fastapi import Depends, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.api import (
-    admin, ai, appointments, auth, calculators, documents, drugs, email as email_api, evidence,
+    admin, ai, appointments, auth, calculators, documents, documentos_publicos, drugs,
+    email as email_api, evidence,
     favorites, gallery, health, lab_tests, library, password_reset,
     prescriptions, round as round_api, search, service_orders, studies,
     timeline, billing, partner_courses, guidelines, indicadores, checklists, study_tracks,
@@ -44,9 +45,13 @@ app.add_middleware(
 # decide sua própria autorização (`current_user` + `assinatura_email_ativa`
 # para status/ativação; `current_email_account`, com login e token
 # próprios, para pastas e mensagens).
+# `documentos_publicos` também entra aqui, mas por um motivo diferente dos
+# outros: não é "sem assinatura vigente", é sem conta nenhuma — quem acessa
+# é o PACIENTE (Tarefa 29), que nunca terá login na Corvia. A única defesa
+# é o token de alta entropia na própria URL, não uma dependência de rota.
 ROUTERS_LIVRES = (
     health.router, auth.router, password_reset.router, billing.router, admin.router,
-    service_orders.router, partner_courses.router, email_api.router,
+    service_orders.router, partner_courses.router, email_api.router, documentos_publicos.router,
 )
 
 ROUTERS_ASSINANTES = (
