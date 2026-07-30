@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Navigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import { apiEmail, ApiEmailError, tokenEmail } from "../lib/apiEmail";
 import { Carregando, Erro, Vazio } from "../components/Estado";
 
@@ -50,6 +50,7 @@ function RessalvaClinica() {
 }
 
 export default function CaixaDeEmail() {
+  const navigate = useNavigate();
   const [semSessao, setSemSessao] = useState(!tokenEmail.get());
   const [enderecoAtual, setEnderecoAtual] = useState<string | null>(null);
   const [erro, setErro] = useState<string | null>(null);
@@ -63,6 +64,12 @@ export default function CaixaDeEmail() {
   const [enviando, setEnviando] = useState(false);
   const [anexos, setAnexos] = useState<{ file_id: string; nome: string }[]>([]);
   const [enviandoAnexo, setEnviandoAnexo] = useState(false);
+  const [excluindo, setExcluindo] = useState(false);
+
+  function sair() {
+    tokenEmail.clear();
+    navigate("/corvia-mail");
+  }
 
   useEffect(() => {
     if (semSessao) return;
@@ -92,6 +99,22 @@ export default function CaixaDeEmail() {
     if (!id) return;
     const completa = await apiEmail.get<MensagemCompleta>(`/email/mensagens/${encodeURIComponent(id)}`);
     setMensagemAberta(completa);
+  }
+
+  async function excluirMensagemAberta() {
+    const id = mensagemAberta ? idDaMensagem(mensagemAberta) : "";
+    if (!id) return;
+    if (!window.confirm("Excluir esta mensagem?")) return;
+    setExcluindo(true);
+    try {
+      await apiEmail.delete(`/email/mensagens/${encodeURIComponent(id)}`);
+      setMensagens((lista) => (lista ?? []).filter((m) => idDaMensagem(m) !== id));
+      setMensagemAberta(null);
+    } catch (e) {
+      setErro(e instanceof ApiEmailError ? e.message : "Não foi possível excluir a mensagem.");
+    } finally {
+      setExcluindo(false);
+    }
   }
 
   async function anexar(arquivo: File) {
@@ -146,8 +169,13 @@ export default function CaixaDeEmail() {
 
   return (
     <>
-      <p className="eyebrow">Caixa de e-mail</p>
-      <h1>{enderecoAtual}</h1>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: "1rem" }}>
+        <div>
+          <p className="eyebrow" style={{ margin: 0 }}>Caixa de e-mail</p>
+          <h1 style={{ margin: 0 }}>{enderecoAtual}</h1>
+        </div>
+        <button className="botao botao--secundario" onClick={sair}>Sair da caixa</button>
+      </div>
       <RessalvaClinica />
 
       <button className="botao" style={{ marginTop: "0.8rem" }} onClick={() => setCompondo(true)}>
@@ -242,7 +270,13 @@ export default function CaixaDeEmail() {
             <Vazio titulo="Selecione uma mensagem" />
           ) : (
             <>
-              <h3 style={{ marginTop: 0 }}>{mensagemAberta.subject ?? "(sem assunto)"}</h3>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "0.6rem" }}>
+                <h3 style={{ marginTop: 0 }}>{mensagemAberta.subject ?? "(sem assunto)"}</h3>
+                <button className="botao botao--secundario" style={{ fontSize: "0.8rem", flexShrink: 0 }}
+                        onClick={excluirMensagemAberta} disabled={excluindo}>
+                  {excluindo ? "Excluindo…" : "Excluir"}
+                </button>
+              </div>
               <p className="eyebrow">
                 {remetente(mensagemAberta)} · {dataMensagem(mensagemAberta)}
               </p>

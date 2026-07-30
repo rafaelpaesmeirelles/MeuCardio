@@ -62,6 +62,24 @@ function AbaAssinar() {
     }
   }
 
+  async function abrirPortal() {
+    setProcessando(true);
+    setErro("");
+    try {
+      // Mesma rota que a Minha Conta usa para a assinatura principal — o
+      // portal do Stripe lista todas as assinaturas ativas de um cliente
+      // (plataforma, CorvIA Mail, curso) na mesma tela, então um médico que
+      // assina só o e-mail cai direto na assinatura certa. Backend resolve
+      // o `customer_id` mesmo sem assinatura principal (ver
+      // `_customer_id_do_usuario` em `app/api/billing.py`).
+      const { portal_url } = await api.post<{ portal_url: string }>("/billing/portal");
+      window.location.assign(portal_url);
+    } catch (e) {
+      setErro(e instanceof ApiError ? e.message : "Não foi possível abrir o portal de assinatura.");
+      setProcessando(false);
+    }
+  }
+
   async function ativarCaixa() {
     setAtivando(true);
     setErro("");
@@ -159,6 +177,13 @@ function AbaAssinar() {
         <p style={{ color: "var(--sucesso)", marginTop: "1rem" }}>
           Sua caixa <strong>{contaEmail.email_address}</strong> está pronta — entre na aba "Entrar" ao lado.
         </p>
+      )}
+
+      {ativa && (
+        <button className="botao botao--secundario" style={{ width: "100%", marginTop: "0.8rem" }}
+                onClick={abrirPortal} disabled={processando}>
+          {processando ? "Abrindo…" : "Gerenciar assinatura (cartão, Pix, cancelar)"}
+        </button>
       )}
     </div>
   );
