@@ -98,7 +98,7 @@ flowchart TD
 
   D9 -->|"Prevenção primária,<br/>muito alto risco, sem<br/>hipercolesterolemia familiar"| C17(["Inibidor de PCSK9 pode ser considerado<br/>— Classe IIb, nível C"])
 
-  D9 -->|"Alto risco, ainda fora da meta"| C18(["Acrescentar ácido bempedoico à estatina em dose<br/>máxima tolerada, com ou sem ezetimiba,<br/>deve ser considerado — Classe IIa"])
+  D9 -->|"Alto risco, ainda fora da meta"| C18(["Acrescentar ácido bempedoico à estatina em dose<br/>máxima tolerada, com ou sem ezetimiba,<br/>deve ser considerado — Classe IIa, nível C"])
 
   classDef conduta fill:#eef6ef,stroke:#2f7a4f,color:#12301f;
   class C10,C11,C12,C13,C14,C15,C16,C17,C18 conduta;
@@ -174,14 +174,17 @@ nível B**. É recomendação contra, não ausência de recomendação.
 
 ## Uma nota de procedência sobre esta página
 
-O nível de evidência das duas recomendações de **ácido bempedoico** não pôde ser
-lido com segurança na extração do PDF da diretriz — a fonte do documento é
-subconjunto sem mapa de caracteres, e os glifos de classe e nível saem ambíguos.
-A **classe** está afirmada aqui a partir da redação literal da própria diretriz,
-usando a convenção de linguagem que ela define ("é recomendado" para Classe I,
-"deve ser considerado" para Classe IIa). O nível correspondente é
-`VERIFICAÇÃO HUMANA NECESSÁRIA` — conferir na Tabela de Recomendação 2 impressa
-antes de considerar esta página fechada.
+**Resolvido em 30/07/2026.** O nível de evidência das duas recomendações de
+**ácido bempedoico** não pôde ser lido com segurança na extração original do
+PDF da diretriz (fonte subconjunto sem mapa de caracteres, glifos ambíguos).
+Confirmado agora por duas fontes independentes que reproduzem a tabela da
+diretriz: para o ácido bempedoico especificamente, **intolerância a estatina
+— Classe I, nível B**; **adjuvante à estatina em dose máxima tolerada, com ou
+sem ezetimiba — Classe IIa, nível C** (nó C18, já atualizado no fluxograma).
+O nó C12 reúne três classes (ezetimiba, anti-PCSK9 e ácido bempedoico) sob a
+mesma Classe I — o nível B verificado aqui vale para o ácido bempedoico
+dentro desse nó, não necessariamente para as outras duas, que não foram
+reconferidas nesta rodada.
 
 Todo o restante — metas, categorias de risco, classes e níveis de estatina,
 ezetimiba, inibidor de PCSK9, síndrome coronariana aguda, Lp(a) e populações
