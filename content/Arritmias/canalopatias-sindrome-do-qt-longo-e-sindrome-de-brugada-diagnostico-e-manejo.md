@@ -1,17 +1,17 @@
 ---
-title: "Canalopatias: Síndrome do QT Longo e Síndrome de Brugada — Diagnóstico e Manejo"
+title: "Canalopatias: Síndrome do QT Longo, Síndrome de Brugada e TVPC — Diagnóstico e Manejo"
 slug: canalopatias-sindrome-do-qt-longo-e-sindrome-de-brugada-diagnostico-e-manejo
 theme: "Arritmias"
 kind: protocolo
 review_status: pendente_revisao
-source_refs: ["Schwartz PJ, Moss AJ, Vincent GM, Crampton RS. Diagnostic criteria for the long QT syndrome. An update. Circulation. 1993;88(2):782-784. PMID: 8339437", "Antzelevitch C, Yan GX, Ackerman MJ, et al. J-Wave syndromes expert consensus conference report: Emerging concepts and gaps in knowledge. Heart Rhythm. 2016;13(10):e295-324. DOI: 10.1016/j.hrthm.2016.05.024. PMID: 27423412", "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572 — recomendações de manejo conferidas via revisão secundária publicada em PMC9691474, por bloqueio de acesso ao texto completo original nesta sessão"]
+source_refs: ["Schwartz PJ, Moss AJ, Vincent GM, Crampton RS. Diagnostic criteria for the long QT syndrome. An update. Circulation. 1993;88(2):782-784. PMID: 8339437", "Antzelevitch C, Yan GX, Ackerman MJ, et al. J-Wave syndromes expert consensus conference report: Emerging concepts and gaps in knowledge. Heart Rhythm. 2016;13(10):e295-324. DOI: 10.1016/j.hrthm.2016.05.024. PMID: 27423412", "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572 — recomendações de manejo conferidas via revisão secundária publicada em PMC9691474, por bloqueio de acesso ao texto completo original nesta sessão", "Przybylski R, Abrams DJ. Current management of inherited arrhythmia syndromes associated with the cardiac ryanodine receptor. Curr Opin Cardiol. 2023;38(4):390-395. DOI: 10.1097/HCO.0000000000001051. PMID: 37016946"]
 legacy_source: "Documento novo — as duas canalopatias eram só citadas de passagem ('critérios diagnósticos revisados para numerosas condições, síndrome de Brugada, QT longo, etc.') em arritmias-ventriculares-e-prevencao-de-morte-subita-cardiaca-esc-2022.md, sem nenhum critério diagnóstico nem conduta."
 ---
 
-# Canalopatias: Síndrome do QT Longo e Síndrome de Brugada — Diagnóstico e Manejo
+# Canalopatias: Síndrome do QT Longo, Síndrome de Brugada e TVPC — Diagnóstico e Manejo
 
 ## Definicao
-Doenças elétricas primárias do coração estruturalmente normal, causadas por mutação em canal iônico cardíaco, que predispõem a arritmia ventricular maligna e morte súbita em jovens. Complementa `arritmias-ventriculares-e-prevencao-de-morte-subita-cardiaca-esc-2022.md`, que citava as duas condições sem trazer critério diagnóstico nem conduta.
+Doenças elétricas primárias do coração estruturalmente normal, causadas por mutação em canal iônico ou em proteína de manejo de cálcio intracelular, que predispõem a arritmia ventricular maligna e morte súbita em jovens. Complementa `arritmias-ventriculares-e-prevencao-de-morte-subita-cardiaca-esc-2022.md`, que citava as condições sem trazer critério diagnóstico nem conduta. **Acrescentada em 30/07/2026 a taquicardia ventricular polimórfica catecolaminérgica (TVPC)**, terceira canalopatia importante ausente do documento original.
 
 ## Escore de Schwartz — probabilidade de sindrome do qt longo
 Publicado originalmente em 1993 e ainda em uso. Pontuação por três categorias — eletrocardiograma, história clínica e história familiar:
@@ -29,6 +29,17 @@ Publicado em 2016 pelo consenso de especialistas em síndromes de onda J (HRS/EH
 - **ECG**: padrão tipo 1 espontâneo (3,5 pontos); padrão tipo 1 induzido por febre (3 pontos); parada cardíaca inexplicada ou FV/TV polimórfica documentada (3 pontos); padrão tipo 2 ou 3 que converte para tipo 1 com fármaco provocativo, respiração agônica noturna, síncope suspeita de origem arrítmica, ou parente de 1º/2º grau com Brugada definido (2 pontos cada); síncope de causa indeterminada, morte súbita suspeita em parente (1 ponto cada); fibrilação/flutter atrial antes dos 30 anos, morte súbita inexplicada antes dos 45 anos em parente com autópsia negativa (0,5 ponto cada)
 - **Teste genético**: mutação provavelmente patogênica (0,5 ponto)
 - **Interpretação**: ≥3,5 pontos = Brugada provável/definido; 2-3 pontos = Brugada possível; <2 pontos = não diagnóstico
+
+## Taquicardia ventricular polimorfica catecolaminergica (tvpc) — diagnostico
+**Acrescentada em 30/07/2026.** Causada por mutação de ganho de função no gene do receptor de rianodina cardíaco (**RYR2**), responsável por **mais da metade dos casos** — estimativas na literatura variam de cerca de 50% a mais de 80%, a depender da população estudada; **CASQ2** é a segunda causa mais frequente. Apresentação clássica: síncope induzida por esforço físico ou emoção, podendo a primeira manifestação ser morte súbita.
+
+**Achado diagnóstico clássico no teste ergométrico**: extrassístoles ventriculares que aparecem tipicamente com frequência cardíaca sinusal de **110-120bpm**, progredindo para ectopia de grau mais alto — pares, e TV não sustentada ou sustentada **bidirecional ou polimórfica** — a marca registrada da doença.
+
+## Manejo da tvpc
+- **Betabloqueador não seletivo é primeira linha** — **nadolol é o mais eficaz**: uso de betabloqueador **beta-1 seletivo** associou-se a **risco duas vezes maior** de evento arrítmico com risco de vida, comparado ao nadolol
+- **Flecainida e denervação simpática cardíaca esquerda (DSCE)** entram como segunda linha, para sintomas ou arritmia persistentes apesar do betabloqueador
+- **Terapia dupla (betabloqueador + flecainida e/ou DSCE) reduz o risco de evento de forma expressiva** frente à monoterapia: taxa de evento de **10% vs. 48%**
+- **CDI exige cautela específica nesta doença**: cerca de **um terço** dos pacientes com CDI tiveram complicação relacionada ao dispositivo, com relatos de **tempestade elétrica desencadeada por terapia inapropriada do próprio CDI**, implicada em múltiplas mortes — o choque do dispositivo gera descarga catecolaminérgica que pode retroalimentar a arritmia que o CDI deveria tratar
 
 ## Manejo da sindrome do qt longo
 A partir da diretriz ESC 2022 de arritmias ventriculares (conferida via revisão secundária, por bloqueio de acesso ao texto completo original nesta sessão — reconferir contra a tabela oficial quando possível):
@@ -48,3 +59,6 @@ A partir da diretriz ESC 2022 de arritmias ventriculares (conferida via revisão
 - Tratar mutação genética positiva como suficiente isoladamente para diagnóstico de Brugada sem nenhum achado clínico ou de ECG — no escore de Shanghai, teste genético isolado soma só 0,5 ponto, longe do corte de 2 para "possível"
 - Prescrever CDI de rotina em Brugada assintomático sem evento documentado — a indicação padrão é para prevenção secundária, após parada cardíaca ou arritmia documentada
 - Escolher betabloqueador seletivo (ex.: metoprolol) como primeira linha no QT longo sem considerar os não seletivos preferidos pela diretriz (nadolol, propranolol)
+- Escolher betabloqueador beta-1 seletivo na TVPC por familiaridade, quando o nadolol (não seletivo) é o de eficácia documentada — a diferença de risco de evento arrítmico grave é de duas vezes
+- Indicar CDI como conduta isenta de risco na TVPC — a taxa de complicação relacionada ao dispositivo é alta (~1/3), e há relato de tempestade elétrica desencadeada pelo próprio choque, por retroalimentação catecolaminérgica
+- Tratar TVPC com betabloqueador isolado quando o paciente já teve evento apesar do tratamento — a terapia dupla (betabloqueador + flecainida e/ou denervação simpática) reduz o risco de forma expressiva (10% vs. 48%) frente à monoterapia
