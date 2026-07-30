@@ -87,14 +87,18 @@ corte de 50 mm com fator agravante.
 
 A diretriz tem 16+ tabelas de recomendação, cobrindo isquemia mesentérica,
 síndrome aórtica aguda (hematoma intramural, úlcera aterosclerótica
-penetrante), doença carotídea, doença renovascular, treino físico
-supervisionado em claudicação, e seguimento pós-reparo endovascular vs.
-aberto. Esta revisão verificou em profundidade só as seções de maior impacto
-de prescrição direta (pressão, lipídio, rastreio de AAA, corte cirúrgico de
-aorta ascendente) contra o texto integral. As demais permanecem como estavam
-na versão anterior deste documento — plausíveis, mas **não reconferidas
-nesta rodada** contra o PDF primário, e não devem ser tratadas com o mesmo
-grau de confiança até que sejam.
+penetrante), doença carotídea, treino físico supervisionado em claudicação,
+e seguimento pós-reparo endovascular vs. aberto. Esta revisão verificou em
+profundidade só as seções de maior impacto de prescrição direta (pressão,
+lipídio, rastreio de AAA, corte cirúrgico de aorta ascendente) contra o
+texto integral. As demais permanecem como estavam na versão anterior deste
+documento — plausíveis, mas **não reconferidas nesta rodada** contra o PDF
+primário, e não devem ser tratadas com o mesmo grau de confiança até que
+sejam.
+
+**Doença renovascular foi verificada e ganhou documento próprio em
+30/07/2026**: `doenca-renovascular-diagnostico-e-tratamento-esc-2024.md`,
+nesta mesma pasta — removida da lista de lacunas acima.
 
 **Síndrome aórtica aguda e dissecação** têm documento próprio nesta
 biblioteca, com o fluxograma dedicado — mais indicado para a decisão aguda
