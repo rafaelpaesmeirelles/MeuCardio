@@ -4,7 +4,7 @@ slug: insuficiencia-tricuspide-grave-triluminate-e-reparo-transcateter-borda-a-b
 theme: "Valvopatias"
 kind: protocolo
 review_status: revisado
-source_refs: ["Sorajja P, Whisenant B, Hamid N, et al. Transcatheter Repair for Patients with Tricuspid Regurgitation. N Engl J Med. 2023;388(20):1833-1842. DOI: 10.1056/NEJMoa2300525. PMID: 36876753 — texto integral conferido em 30/07/2026.", "2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2025;46(44):4635. DOI 10.1093/eurheartj/ehaf194 — Recommendation Table 9, texto integral obtido e conferido diretamente em 30/07/2026."]
+source_refs: ["Sorajja P, Whisenant B, Hamid N, et al. Transcatheter Repair for Patients with Tricuspid Regurgitation. N Engl J Med. 2023;388(20):1833-1842. DOI: 10.1056/NEJMoa2300525. PMID: 36876753 — texto integral conferido em 30/07/2026.", "Praz F, Borger MA, Lanz J, et al. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2025;46(44):4635-4747. DOI 10.1093/eurheartj/ehaf194. PMID 40878295 — Recommendation Table 9, texto integral obtido e conferido diretamente em 30/07/2026."]
 ---
 
 # Insuficiência Tricúspide Grave: TRILUMINATE e o Reparo Transcateter Borda a Borda
