@@ -45,6 +45,7 @@ import MinhaConta from "./pages/MinhaConta";
 import Telediagnostico from "./pages/Telediagnostico";
 import FilaTelediagnostico from "./pages/FilaTelediagnostico";
 import CaixaDeEmail from "./pages/CaixaDeEmail";
+import CorviaMail from "./pages/CorviaMail";
 
 export default function App() {
   const { usuario, carregando } = useAuth();
@@ -57,6 +58,11 @@ export default function App() {
         <Route path="/solicitar-acesso" element={<SolicitarAcesso />} />
         <Route path="/esqueci-senha" element={<EsqueciSenha />} />
         <Route path="/redefinir-senha" element={<RedefinirSenha />} />
+        {/* Fora do Shell de propósito: CorvIA Mail precisa ser alcançável por
+            quem ainda não tem sessão da Corvia aberta (a própria tela orienta
+            a entrar/cadastrar primeiro — exigir conta aprovada é decisão do
+            Rafael, não impede a página de existir sem login). */}
+        <Route path="/corvia-mail" element={<CorviaMail />} />
         <Route path="*" element={<Navigate to="/entrar" replace />} />
       </Routes>
     );
@@ -105,6 +111,7 @@ export default function App() {
         <Route path="minha-conta" element={<MinhaConta />} />
         <Route path="telediagnostico" element={<Telediagnostico />} />
         <Route path="caixa-de-email" element={<CaixaDeEmail />} />
+        <Route path="corvia-mail" element={<CorviaMail />} />
         {usuario.role === "admin" && (
           <Route path="admin" element={<Admin />} />
         )}

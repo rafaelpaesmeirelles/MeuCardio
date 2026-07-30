@@ -31,7 +31,10 @@ const NAV_BASE: ItemNav[] = [
   { to: "/indicadores", rotulo: "Meus indicadores", curto: "Indicadores" },
   { to: "/cursos", rotulo: "Cursos parceiros", curto: "Cursos" },
   { to: "/telediagnostico", rotulo: "Laudo e consultoria", curto: "Laudo" },
-  { to: "/caixa-de-email", rotulo: "Caixa de e-mail", curto: "E-mail" },
+  // Aponta para /corvia-mail (login/assinatura próprios do add-on), não
+  // direto pra /caixa-de-email — o e-mail tem senha separada da conta
+  // Corvia desde 30/07/2026, então precisa passar pelo login dele primeiro.
+  { to: "/corvia-mail", rotulo: "CorvIA Mail", curto: "Mail" },
 ];
 
 export default function Shell() {
