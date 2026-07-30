@@ -363,3 +363,171 @@ esperar por elas para começar a esboçar. O que foi construído:
 3. Migração ainda não foi rodada em produção — como sempre, migração vem
    antes do rebuild, e rebuild pede confirmação antes.
 4. Nenhum teste automatizado foi escrito para as rotas novas.
+
+---
+
+## Reinício em 30/07/2026 — CorvIA Mail vira add-on cobrado à parte
+
+Pedido do Rafael: "reinicie o trabalho e prepare toda sessão email para ser
+publicado". Duas decisões novas, que mudam o desenho acima:
+
+1. **E-mail deixa de ser incluído na assinatura principal.** Passa a ser um
+   serviço cobrado à parte, com preço a definir — "deixe o valor em branco
+   por enquanto".
+2. **A caixa ganha tela de login própria**, com três opções: entrar, esqueci
+   a senha (com recuperação e troca) e assine o CorvIA Mail — mais uma
+   página nova ("site") para assinar o serviço.
+
+Perguntas de esclarecimento ficaram sem resposta duas vezes (a primeira
+pergunta foi interrompida pelo próprio Rafael, a segunda ele confirmou não
+ter respondido e pediu para refazer); refeitas uma terceira vez, essas
+foram as respostas:
+
+| Pergunta | Decisão do Rafael |
+|---|---|
+| Quem pode assinar? | Só quem já tem conta aprovada na Corvia — mesmo modelo de add-on dos cursos parceiros, não um cadastro novo tipo telediagnóstico |
+| Onde vive o "site" de assinatura? | Nova página dentro do app atual (mesma SPA), não subdomínio separado |
+| Senha da caixa: mesmo login de sempre ou senha própria? | **Senha própria** — inverteu a decisão anterior desta mesma sessão (que evitava segundo login de propósito) |
+
+A terceira resposta é a que mais mexeu na arquitetura: a Tarefa 28 tinha sido
+desenhada explicitamente para NUNCA precisar de um segundo login (foi por
+isso que Zoho Mail360 + webmail próprio venceu OpenSRS/Titan). Com senha
+própria decidida, o "nunca duplicar login" deixou de valer — o desenho
+abaixo cria esse segundo sistema de propósito, de forma isolada do primeiro.
+
+### O que foi construído (esboço completo, validado com testes reais)
+
+**Banco de dados** — segunda migração, `c0410068d7f3`, encadeada depois da
+`4ee4b695fa49`:
+- `email_accounts.password_hash` — nasce nula, definida na ativação.
+- `password_reset_tokens.alvo` (`'conta'` | `'email'`) — o mesmo mecanismo de
+  token e o mesmo formulário de redefinição (`/redefinir-senha`) atende os
+  dois casos; o backend decide qual senha muda pelo `alvo` gravado no
+  token, não por parâmetro vindo do cliente.
+- Índice parcial `uq_assinatura_email_por_usuario` em `subscriptions`, mesma
+  lógica do índice do MeuCardio, para o novo `Subscription.kind == "email"`
+  (`TIPO_EMAIL`, em `models/subscription.py`).
+
+**Autenticação com dois escopos** (`core/security.py`): `create_access_token`
+ganhou um campo `scope` (`"app"` por padrão — token de sempre, sem quebrar
+sessão de quem já estava logado; `"email"` só emitido por
+`POST /api/email/entrar`). `current_user` só aceita `scope="app"`;
+`current_email_account` (novo) só aceita `scope="email"` e resolve a
+`EmailAccount` pelo endereço — um token roubado de um sistema não abre o
+outro. `assinatura_email_ativa(db, user_id)` é o helper que checa
+`Subscription.kind == "email"` com status liberado, usado na ativação (não é
+dependência de rota, porque a rota decide 409 e não 402 — 402 no
+`lib/api.ts` do frontend redireciona pra `/assinatura`, a página errada aqui).
+
+**`backend/app/api/email.py`, reescrito** — duas famílias de rota:
+- `GET/POST /conta` — vistas de dentro da conta Corvia normal
+  (`current_user`): status e ativação (que agora também recebe `{senha}` no
+  corpo e a grava). Exige `assinatura_email_ativa`, não `assinante_ativo`.
+- `POST /entrar` (login com endereço+senha próprios, devolve token
+  `scope=email`), `POST /esqueci-senha` (público, manda o link para o
+  e-mail PRINCIPAL do médico — nunca para dentro da própria caixa
+  @corvia.med.br, o que trancaria quem esqueceu a senha) e
+  `GET /pastas`, `GET/POST/DELETE /mensagens*`, `GET /eu` — todas atrás de
+  `current_email_account`.
+- Router saiu de `ROUTERS_ASSINANTES` e foi para `ROUTERS_LIVRES` no
+  `main.py`: aplicar `assinante_ativo` (que checa `kind='meucardio'`)
+  bloquearia justo quem assina só o e-mail. Cada rota autoriza a si mesma.
+
+**`backend/app/api/billing.py`, estendido com cuidado redobrado** (é código
+de pagamento real em produção):
+- `_assinatura_email`/`_obter_ou_criar_assinatura_email` — funções PRÓPRIAS,
+  não uma generalização das existentes: a função original sustenta a
+  assinatura principal há meses, e não valia o risco de mudar seu
+  comportamento pra acomodar o caminho novo.
+- `_aplicar_evento` ganhou o ramo `tipo_assinatura == "email"` — **sem ele**,
+  o primeiro evento de webhook de uma assinatura de e-mail cairia no `else`
+  e seria tratado como assinatura da PLATAFORMA, corrompendo o estado de um
+  assinante pagante. É a mesma classe de bug que o `CLAUDE.md` já documenta
+  ter acontecido com `mode` em vez de metadata nos pedidos avulsos de
+  telediagnóstico — path testado explicitamente (ver testes abaixo).
+- `_sincronizar_caixa_de_email` — quando a assinatura de e-mail muda de
+  status (cancelamento, inadimplência, reativação), a `EmailAccount.status`
+  acompanha. Sem isso, cancelar a assinatura não bloquearia o acesso à caixa.
+- `POST /checkout-email` — preço **inline** (`price_data`), não um Price
+  pré-criado no painel do Stripe, ao contrário da assinatura principal —
+  decisão deliberada: com `corvia_mail_preco_centavos` (novo campo,
+  `config.py`) em 0 por padrão ("em branco"), a rota recusa com 409 em vez
+  de cobrar valor inventado; quando o Rafael definir o preço, basta pôr o
+  número no `.env`, sem precisar criar nada no painel do Stripe antes.
+- `GET /status-email` — inclui `preco_definido`, pro frontend saber se
+  mostra "Assine" ou "Em breve".
+
+**Frontend:**
+- `frontend/src/lib/apiEmail.ts` (novo) — cliente de API isolado do
+  `api.ts` principal: token próprio (`corviamail.token` no localStorage),
+  401 não redireciona pra `/entrar` (seria a tela errada).
+- `frontend/src/pages/CorviaMail.tsx` (novo) — o "site" pedido, em três
+  abas: Entrar (login da caixa), Esqueci a senha, Assine já (mostra preço
+  ou "em breve", inicia checkout, e depois de pago mostra o passo de criar
+  a senha inicial da caixa). Funciona tanto para quem não tem sessão Corvia
+  aberta (mostra só "entre na Corvia primeiro", com link) quanto para quem
+  já está logado (`useAuth()` decide, já que `AuthProvider` envolve o app
+  inteiro em `main.tsx` — a mesma página serve os dois casos sem duplicar
+  nada). Rota `/corvia-mail` registrada **nos dois ramos** de `App.tsx`
+  (logado e deslogado).
+- `frontend/src/pages/CaixaDeEmail.tsx`, reescrito — não pede mais senha
+  inline (isso migrou pra aba "Assine já" do `CorviaMail.tsx`); em vez
+  disso, se não há `corviamail.token` válido, redireciona para
+  `/corvia-mail` (`<Navigate>`). Ressalva clínica (`RessalvaClinica`)
+  mantida, sem mudança.
+- `frontend/src/pages/RedefinirSenha.tsx` — passou a ler `?alvo=email` da
+  URL só para mensagem/redirecionamento (o backend já decide tudo pelo
+  token); nenhuma mudança na chamada de API em si.
+- `Shell.tsx` — item de menu renomeado para "CorvIA Mail", apontando para
+  `/corvia-mail` (não mais direto para `/caixa-de-email` — precisa passar
+  pelo login próprio primeiro).
+
+### Validação — mais extensa que o esboço anterior, com Postgres real
+
+Diferente da rodada anterior (só `py_compile` e import), desta vez rodei a
+cadeia inteira de migrações e um teste funcional de ponta a ponta contra um
+Postgres 16 real nesta própria sessão (`apt-get install postgresql-16-pgvector`
++ banco `meucardio_test` local, descartado ao final):
+
+- `alembic upgrade head` — as 21 migrações da cadeia inteira rodam sem erro,
+  incluindo as duas novas desta tarefa. `alembic downgrade -2` e
+  `upgrade head` de volta também testados — reversível.
+- Esquema real conferido no `\d` do Postgres: `email_accounts.password_hash`,
+  `password_reset_tokens.alvo` e o índice `uq_assinatura_email_por_usuario`
+  existem exatamente como desenhado.
+- Teste funcional com `TestClient` do FastAPI (Mail360 simulado por
+  monkeypatch, já que não há credencial de parceiro): criação de usuário,
+  tentativa de ativar sem assinatura (409), assinatura simulada como ativa,
+  ativação da caixa com senha, `GET /conta` refletindo o estado, **token da
+  conta principal barrado em `/pastas` (401)**, login na sessão e-mail,
+  senha errada barrada, **token de e-mail barrado em `/api/auth/me` (401)**,
+  leitura de pastas/mensagens, fluxo completo de esqueci-senha→redefinir
+  (com `alvo=email` gravado e lido corretamente, senha antiga invalidada,
+  senha da conta principal comprovadamente intocada), e cancelamento da
+  assinatura suspendendo a caixa (login volta 403). 19 verificações, todas
+  passaram.
+- `checkout-email` com preço em 0 testado isoladamente: recusa com 409, sem
+  tentar cobrar nada — `status-email` reporta `preco_definido: false`
+  corretamente.
+- Frontend: `npx tsc -b --noEmit` e `npm run build` sem erro, com todas as
+  páginas novas/alteradas.
+
+### O que ainda falta para publicar de verdade
+
+1. **As duas pendências comerciais da Zoho continuam abertas** (preço de
+   produção, LGPD do Mail360 especificamente) — decisão do Rafael foi
+   mitigar com ressalva na tela, não bloquear por isso, mas a credencial de
+   parceiro real ainda não existe, então nada disto foi testado contra a
+   API de verdade.
+2. **Preço do CorvIA Mail**: `corvia_mail_preco_centavos` está em 0 no
+   `.env` — o Rafael define quando decidir, e o checkout já está pronto
+   para usar esse valor sem mudança de código.
+3. **Migração ainda não rodou em produção.** Precisa ir antes do rebuild,
+   como sempre.
+4. **E-mail de recuperação de senha depende de SMTP configurado** —
+   `tentar_enviar_email` já existe e falha graciosamente (loga e não envia)
+   se `smtp_configurado` for falso; sem SMTP, o link de redefinição só
+   aparece pra um admin repassar manualmente, mesmo caminho que já existe
+   pra recuperação da conta principal (`GET /api/auth/reset-pendentes`).
+5. **Nenhum teste automatizado foi commitado** — a validação desta sessão
+   foi um script manual, descartado ao final (não faz parte do repositório).
