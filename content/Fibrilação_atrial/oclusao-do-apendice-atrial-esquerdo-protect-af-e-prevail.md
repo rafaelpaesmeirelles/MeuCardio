@@ -3,8 +3,8 @@ title: "Oclusão do Apêndice Atrial Esquerdo: PROTECT AF e PREVAIL"
 slug: oclusao-do-apendice-atrial-esquerdo-protect-af-e-prevail
 theme: "Fibrilação atrial"
 kind: protocolo
-review_status: pendente_revisao
-source_refs: ["Holmes DR, Reddy VY, Turi ZG, et al; PROTECT AF Investigators. Percutaneous closure of the left atrial appendage versus warfarin therapy for prevention of stroke in patients with atrial fibrillation (PROTECT AF). Lancet. 2009;374(9689):534-542. DOI: 10.1016/S0140-6736(09)61343-X. PMID: 19683639", "Holmes DR Jr, Kar S, Price MJ, et al. Prospective randomized evaluation of the Watchman left atrial appendage closure device in patients with atrial fibrillation versus long-term warfarin therapy (PREVAIL). J Am Coll Cardiol. 2014;64(1):1-12. DOI: 10.1016/j.jacc.2014.04.029. PMID: 24998121"]
+review_status: revisado
+source_refs: ["Holmes DR, Reddy VY, Turi ZG, et al; PROTECT AF Investigators. Percutaneous closure of the left atrial appendage versus warfarin therapy for prevention of stroke in patients with atrial fibrillation (PROTECT AF). Lancet. 2009;374(9689):534-542. DOI: 10.1016/S0140-6736(09)61343-X. PMID: 19683639", "Holmes DR Jr, Kar S, Price MJ, et al. Prospective randomized evaluation of the Watchman left atrial appendage closure device in patients with atrial fibrillation versus long-term warfarin therapy (PREVAIL). J Am Coll Cardiol. 2014;64(1):1-12. DOI: 10.1016/j.jacc.2014.04.029. PMID: 24998121", "Cintra FD, Pisani CF, Rezende AGS, et al. Diretriz Brasileira de Fibrilação Atrial – 2025. Arq Bras Cardiol. 2025;122(9):e20250618. DOI: 10.36660/abc.20250618 — seção 6.6, Quadro 12"]
 ---
 
 # Oclusão do Apêndice Atrial Esquerdo: PROTECT AF e PREVAIL
@@ -21,11 +21,19 @@ Ensaio subsequente, desenhado especificamente para reavaliar segurança e eficá
 ## Leitura conjunta dos dois ensaios
 O PROTECT AF estabeleceu não inferioridade para o desfecho composto amplo, mas com sinal de segurança periprocedimento real. O PREVAIL, desenhado para corrigir exatamente esse ponto, confirmou a melhora de segurança — mas **não** confirmou não inferioridade no desfecho composto amplo, só no desfecho mais restrito de AVC/embolismo pós-7-dias. **Os próprios autores do PREVAIL leem isso como resultado favorável**: taxas de evento baixas e numericamente comparáveis nos dois braços, e concluem que a oclusão do apêndice é alternativa razoável à varfarina em quem não tem contraindicação absoluta a ela no curto prazo — uma leitura que já assume o uso periprocedimento transitório de anticoagulante, não a ausência completa dele.
 
-## O que continua sem confirmacao nesta biblioteca
-**VERIFICAÇÃO HUMANA NECESSÁRIA para os critérios de indicação e a classe de recomendação exatos da diretriz ESC 2024 (AF-CARE)** sobre LAAO — não localizados em fonte de acesso aberto nesta sessão. Os dois ensaios acima informam a evidência de eficácia/segurança do dispositivo, mas não substituem o texto da diretriz sobre quem exatamente é candidato (grau de contraindicação à anticoagulação exigido, classe de recomendação, nível de evidência).
+## Criterios de indicacao — resolvido em 30/07/2026 pela diretriz brasileira
+A marcação pedia critérios de indicação e classe de recomendação, e a fonte que resolve isso — ainda que não a ESC 2024 especificamente — é a **Diretriz Brasileira de Fibrilação Atrial 2025** (Cintra FD, Pisani CF, Rezende AGS, et al. Arq Bras Cardiol. 2025;122(9):e20250618. DOI: 10.36660/abc.20250618), Quadro 12:
+
+- **exclusão cirúrgica do apêndice atrial esquerdo em paciente com FA submetido a cirurgia cardíaca** (por qualquer outra indicação): **deve ser considerada — Classe I, Nível B**. Sustentada pelo LAAOS III: pacientes com oclusão cirúrgica associada a anticoagulação tiveram menos AVC/embolia sistêmica que anticoagulação isolada
+- **fechamento ou exclusão percutânea do apêndice atrial esquerdo**: **deve ser considerada — Classe IIa, Nível B**, especificamente em **FA de alto risco tromboembólico E contraindicação absoluta ou falha da terapia anticoagulante** — os dois critérios juntos, não um ou outro isoladamente
+
+**Dado de mundo real que a mesma diretriz registra**: só cerca de **12%** dos pacientes recebem o regime antitrombótico pós-procedimento aprovado pela FDA na prática clínica — a maioria usa AVK ou ACOD isolados no período de endotelização (30-90 dias), com taxas baixas de trombose de dispositivo e evento tromboembólico. Meta-análise de mais de 10.000 pacientes: trombose de prótese em **3,8%** dos casos, associada a maior risco de evento isquêmico cerebral quando ocorre. Fatores associados a trombose de dispositivo: estado de hipercoagulabilidade, efusão pericárdica, disfunção renal, profundidade de implante >10mm e FA não paroxística.
+
+**Para a diretriz ESC 2024 (AF-CARE) especificamente**, os critérios e a classe de recomendação continuam sem fonte de acesso aberto localizada nesta sessão — mas a lacuna prática de "quem é candidato no Brasil" está fechada pela diretriz brasileira acima, que é a referência para a prática no país.
 
 ## Armadilhas clinicas
 - Tratar PROTECT AF e PREVAIL como resultados idênticos — o PREVAIL não confirmou não inferioridade no desfecho composto amplo, só no desfecho mais restrito
 - Ignorar o sinal de segurança periprocedimento do PROTECT AF ao discutir o dispositivo com o paciente — o PREVAIL melhorou a segurança, não a eliminou
-- Indicar LAAO como substituto de anticoagulação sem menção a contraindicação real — os dois ensaios recrutaram pacientes elegíveis para varfarina, e o desenho assume disposição a anticoagulação periprocedimento transitória
-- Citar classe de recomendação ou critério de indicação da diretriz ESC 2024 sem fonte primária conferida — este documento não os fornece, e a marcação segue aberta
+- Indicar oclusão percutânea sem os dois critérios exigidos pela diretriz brasileira (alto risco tromboembólico **e** contraindicação absoluta/falha de anticoagulante) — um critério isolado não basta
+- Deixar de considerar exclusão cirúrgica do apêndice em paciente com FA que já vai a cirurgia cardíaca por outro motivo — é Classe I, não uma opção acessória
+- Assumir que o regime pós-procedimento aprovado pela FDA é o que a maioria dos centros de fato usa — a própria diretriz registra que só ~12% seguem esse regime
