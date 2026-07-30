@@ -133,9 +133,15 @@ Regras que decorrem disso:
 >   `estenose-aortica-gradiente-pressorico-ve-aorta.png`); mais três entradas novas em
 >   `evidencias/metadados.json` fechando o empate de cobertura em Cardiopatias congênitas,
 >   Síncope e Perioperatório (reparo de coartação de aorta, marca-passo em síncope com
->   bloqueio de ramo e EEF/ILR positivo, BNP/NT-proBNP pré-operatório); e duas entradas novas
->   em `estudos/metadados.json` (CORP-2, Pericárdio; ARREST, Endocardite) — commits até
->   `5013bac`.
+>   bloqueio de ramo e EEF/ILR positivo, BNP/NT-proBNP pré-operatório); duas entradas novas
+>   em `estudos/metadados.json` (CORP-2, Pericárdio; ARREST, Endocardite); um documento novo
+>   em `content/Síncope/` (hipotensão ortostática e POTS, com os três subtipos de OH por
+>   tempo de instalação); e mais três imagens em `galeria/metadados.json`, licença conferida
+>   na página do arquivo antes do download — diagrama de hipertrofia septal assimétrica na
+>   CMH (CC BY-SA 3.0), hemorragia subungueal em estilhaço na Endocardite (domínio público,
+>   texto explícito de que a etiologia desta fotografia específica não é documentada pela
+>   fonte) e ilustração histórica da coreia de Sydenham, "Danse de Saint-Guy" (domínio
+>   público, circa 1880) — commits até `fbe270d`.
 >
 > **Uma entrada NÃO deve ser publicada com o resto, apesar da aprovação geral**: em
 > `evidencias/metadados.json`, o registro
