@@ -1425,5 +1425,30 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "cope-colchicina-como-adjuvante-no-primeiro-episodio-de-pericardite",
+    "title": "COPE — Colchicina associada ao AAS no primeiro episódio de pericardite aguda",
+    "study_type": "ensaio_clinico",
+    "authors": "Imazio M, Bobbio M, Cecchi E, et al.",
+    "journal": "Circulation",
+    "year": 2005,
+    "doi": "10.1161/CIRCULATIONAHA.105.542738",
+    "pmid": "16186437",
+    "url": "https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.105.542738",
+    "summary": "Ensaio randomizado, aberto, com 120 pacientes no primeiro episódio de pericardite aguda, comparando colchicina (1-2 mg no primeiro dia, depois 0,5-1,0 mg/dia por 3 meses) associada ao AAS contra AAS isolado.",
+    "key_findings": "Recorrência de pericardite em 18 meses: 32,3% no grupo AAS isolado contra 10,7% no grupo colchicina + AAS (p=0,004; NNT=5). Persistência de sintomas em 72 horas: 36,7% contra 11,7% (p=0,003).",
+    "clinical_implications": "Foi o primeiro ensaio a mostrar, com desfecho clínico direto, que colchicina associada à terapia convencional reduz recorrência já no primeiro episódio de pericardite — não só em pericardite recorrente. Precursor direto do ICAP (2013, já publicado nesta biblioteca), que confirmou o achado em amostra maior e desenho duplo-cego.",
+    "limitations": "Desenho aberto (sem cegamento), amostra pequena (120 pacientes) e monocêntrico — limitações que o ICAP, desenhado depois, corrigiu.",
+    "theme": "Pericárdio",
+    "tags": [
+      "pericardite aguda",
+      "colchicina",
+      "cope",
+      "recorrência",
+      "ensaio clínico"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
