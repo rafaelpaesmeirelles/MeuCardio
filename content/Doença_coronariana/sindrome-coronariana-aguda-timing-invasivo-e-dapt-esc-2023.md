@@ -3,9 +3,9 @@ title: "Síndrome Coronariana Aguda — Timing da Estratégia Invasiva e Duraç�
 slug: sindrome-coronariana-aguda-timing-invasivo-e-dapt-esc-2023
 theme: "Doença coronariana"
 kind: protocolo
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826.", "Jobs A, Collet JP, Thiele H. Timing of invasive coronary angiography in non-ST-elevation acute coronary syndrome — an updated individual patient data meta-analysis. Eur Heart J Acute Cardiovasc Care. 2023;12(6):374-375.", "PCRonline. 2023 ESC Guidelines for the management of acute coronary syndromes — summary.", "Netherlands Heart Journal. 2023 ESC guidelines for ACS: Statement of endorsement by the NVVC. 2024."]
-legacy_source: "Consolida e substitui o dado numérico que estava marcado como pendente em sindrome-coronariana-aguda-diagnostico-e-tratamento-esc-2023.md e arquivos correlatos — pesquisado e validado contra múltiplas fontes a pedido do usuário."
+legacy_source: "Consolida e substitui o dado numérico que estava marcado como pendente em sindrome-coronariana-aguda-diagnostico-e-tratamento-esc-2023.md e arquivos correlatos — pesquisado e validado contra múltiplas fontes a pedido do usuário. Revisado a fundo em 30/07/2026: os critérios de GRACE>140 e PRECISE-DAPT≥25 são consistentes com o que já foi verificado de forma independente nos outros dois documentos desta pasta dedicados a GRACE e a duração de DAPT, revisados na mesma sessão. Nenhuma divergência encontrada."
 ---
 
 # Síndrome Coronariana Aguda — Timing da Estratégia Invasiva e Duração de DAPT (ESC 2023)
