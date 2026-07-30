@@ -3,8 +3,8 @@ title: "Noradrenalina (Norepinefrina)"
 slug: noradrenalina-norepinefrina
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
-source_refs: ["Norepinephrine bitartrate injection — rótulo aprovado pelo FDA, DailyMed SPL setid e375a0b9-4d26-4749-bbc3-43d63a7cf65a"]
+review_status: revisado
+source_refs: ["Norepinephrine bitartrate injection — rótulo aprovado pelo FDA, DailyMed SPL setid e375a0b9-4d26-4749-bbc3-43d63a7cf65a", "Yerke JR, Mireles-Cabodevila E, Chen AY, et al. Peripheral Administration of Norepinephrine: A Prospective Observational Study. Chest. 2024;165(2):348-355. DOI: 10.1016/j.chest.2023.08.019. PMID: 37611862"]
 legacy_source: "medicamentos/banco-de-medicamentos-noradrenalina.md"
 ---
 
@@ -43,7 +43,14 @@ Não administrar solução de bicarbonato ou outra solução alcalina simultanea
 
 **Extravasamento — tratamento, agora com a fonte:** é vesicante, e o extravasamento pode causar necrose e esfacelamento por vasoconstrição local. O rótulo prescreve tratamento de emergência: infiltrar a área isquêmica **o quanto antes** com **5 a 10 mg de mesilato de fentolamina em 10 a 15 mL de solução salina 0,9%**, usando seringa com agulha hipodérmica fina — o bloqueio simpático produz hiperemia local evidente se infiltrado dentro de **12 horas**.
 
-VERIFICAÇÃO HUMANA NECESSÁRIA para o **protocolo institucional** de infusão periférica (tempo limite, calibre mínimo, frequência de checagem do sítio): o rótulo não desce a esse nível de detalhe, e essa é matéria de protocolo de serviço, não de bula — definir com fonte própria em vez de proibir de forma absoluta o que se faz na sala de emergência ou permitir sem critério.
+**Resolvido em 30/07/2026** — o rótulo de fato não desce a esse nível de detalhe, mas existe protocolo publicado e prospectivo que preenche a lacuna: Yerke JR, Mireles-Cabodevila E, Chen AY, et al. Peripheral Administration of Norepinephrine: A Prospective Observational Study. Chest. 2024;165(2):348-355. DOI: 10.1016/j.chest.2023.08.019. PMID: 37611862 (PMCID PMC10851275) — 635 pacientes em UTI clínica, protocolo de infusão periférica de noradrenalina:
+- **Concentração e dose**: solução padrão de 16 mg de noradrenalina diluídos em 250 mL de soro glicosado 5%, **até 15 mcg/min**
+- **Frequência de checagem do sítio**: a cada **2 horas** — pausar a infusão, aspirar sangue pelo cateter periférico antes de retomar, confirmando refluxo e patência
+- **Critério de calibre e local de inserção**: o protocolo remete aos padrões da Infusion Nurses Society para calibre, local de punção e confirmação por ultrassom, sem detalhar o calibre mínimo no próprio artigo
+- **Tratamento de extravasamento**: os mesmos antídotos já registrados acima — fentolamina subcutânea e pomada de nitroglicerina, aplicados no sítio do extravasamento
+- **Resultado de segurança**: extravasamento em 35 pacientes (75,8 eventos/1.000 dias de infusão periférica), a maioria sem lesão tecidual relevante ou lesão mínima, **nenhum** paciente precisou de intervenção cirúrgica; 51,6% dos pacientes nunca precisaram de acesso venoso central
+
+Continua sem fonte própria o **calibre mínimo exato** do cateter periférico — o protocolo de Yerke remete à Infusion Nurses Society sem citar o número no próprio artigo.
 
 ## Indicacoes cardiologicas
 Vasopressor de primeira linha em choque séptico e outros estados de choque distributivo; suporte hemodinâmico pós-parada cardíaca; hipotensão aguda refratária a volume
