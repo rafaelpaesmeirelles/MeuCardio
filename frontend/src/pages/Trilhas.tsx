@@ -17,7 +17,7 @@ export default function Trilhas() {
   const [ts, setTs] = useState<Trilha[] | null>(null);
 
   useEffect(() => {
-    api.get<Trilha[]>("/api/trilhas").then(setTs).catch(() => setTs([]));
+    api.get<Trilha[]>("/trilhas").then(setTs).catch(() => setTs([]));
   }, []);
 
   if (ts === null) return <p>Carregando…</p>;

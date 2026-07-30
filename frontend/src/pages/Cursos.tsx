@@ -18,7 +18,7 @@ export default function Cursos() {
 
   useEffect(() => {
     api
-      .get<Curso[]>("/api/cursos")
+      .get<Curso[]>("/cursos")
       .then(setCursos)
       .catch(() => setCursos([]));
   }, []);

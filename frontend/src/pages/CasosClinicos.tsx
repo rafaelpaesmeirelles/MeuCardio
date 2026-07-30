@@ -15,7 +15,7 @@ export default function CasosClinicos() {
   const [casos, setCasos] = useState<Caso[] | null>(null);
 
   useEffect(() => {
-    api.get<Caso[]>("/api/casos-clinicos").then(setCasos).catch(() => setCasos([]));
+    api.get<Caso[]>("/casos-clinicos").then(setCasos).catch(() => setCasos([]));
   }, []);
 
   if (casos === null) return <p>Carregando…</p>;

@@ -33,7 +33,7 @@ export default function CasoClinico() {
     setResultado(null);
     setErro("");
     api
-      .get<Caso>(`/api/casos-clinicos/${slug}`)
+      .get<Caso>(`/casos-clinicos/${slug}`)
       .then(setCaso)
       .catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível carregar o caso."));
   }, [slug]);
@@ -42,7 +42,7 @@ export default function CasoClinico() {
     if (escolhida === null) return;
     setEnviando(true);
     try {
-      const r = await api.post<Resultado>(`/api/casos-clinicos/${slug}/responder`, {
+      const r = await api.post<Resultado>(`/casos-clinicos/${slug}/responder`, {
         opcao_escolhida: escolhida,
       });
       setResultado(r);

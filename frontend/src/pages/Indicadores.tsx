@@ -87,7 +87,7 @@ export default function Indicadores() {
   useEffect(() => {
     setD(null);
     api
-      .get<Indicadores>(`/api/indicadores/meus?dias=${dias}`)
+      .get<Indicadores>(`/indicadores/meus?dias=${dias}`)
       .then(setD)
       .catch((e) => setErro(e?.message || "Não foi possível carregar os indicadores."));
   }, [dias]);

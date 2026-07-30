@@ -27,7 +27,7 @@ export default function ExportarApresentacao({ slug, titulo }: {
     setErro("");
     try {
       const blob = await api.blobPost(
-        `/api/biblioteca/${slug}/apresentacao`,
+        `/biblioteca/${slug}/apresentacao`,
         { anotacao }
       );
       const url = URL.createObjectURL(blob);

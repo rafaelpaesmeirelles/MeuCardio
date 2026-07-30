@@ -92,7 +92,7 @@ export default function Emergencia() {
       setDeCache(local.em);
     }
     api
-      .get<Pacote>("/api/emergencia")
+      .get<Pacote>("/emergencia")
       .then((p) => {
         setPacote(p);
         setDeCache(null);

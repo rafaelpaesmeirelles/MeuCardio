@@ -39,7 +39,7 @@ export default function ChecklistAlta() {
 
   useEffect(() => {
     api
-      .get<Aplicacao>(`/api/checklists/aplicacoes/${id}`)
+      .get<Aplicacao>(`/checklists/aplicacoes/${id}`)
       .then((r) => {
         setA(r);
         setMarcados(r.marcados || []);
@@ -52,12 +52,12 @@ export default function ChecklistAlta() {
     setSalvando(true);
     setErro("");
     try {
-      await api.patch(`/api/checklists/aplicacoes/${id}`, {
+      await api.patch(`/checklists/aplicacoes/${id}`, {
         marcados,
         observacoes: obs,
         finalizar,
       });
-      const r = await api.get<Aplicacao>(`/api/checklists/aplicacoes/${id}`);
+      const r = await api.get<Aplicacao>(`/checklists/aplicacoes/${id}`);
       setA(r);
     } catch (e: any) {
       setErro(e?.message || "Não foi possível salvar.");

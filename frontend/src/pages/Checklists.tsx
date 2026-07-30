@@ -29,8 +29,8 @@ export default function Checklists() {
   const [erro, setErro] = useState("");
 
   useEffect(() => {
-    api.get<Resumo[]>("/api/checklists").then(setModelos).catch(() => setModelos([]));
-    api.get<Aplicacao[]>("/api/checklists/aplicacoes/minhas").then(setMinhas).catch(() => setMinhas([]));
+    api.get<Resumo[]>("/checklists").then(setModelos).catch(() => setModelos([]));
+    api.get<Aplicacao[]>("/checklists/aplicacoes/minhas").then(setMinhas).catch(() => setMinhas([]));
   }, []);
 
   async function iniciar(slug: string) {
@@ -39,7 +39,7 @@ export default function Checklists() {
     );
     if (identificacao === null) return;
     try {
-      const r = await api.post<{ id: number }>("/api/checklists/aplicacoes", {
+      const r = await api.post<{ id: number }>("/checklists/aplicacoes", {
         checklist_slug: slug,
         identificacao_livre: identificacao || null,
       });

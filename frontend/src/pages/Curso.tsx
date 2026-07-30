@@ -35,7 +35,7 @@ export default function Curso() {
 
   useEffect(() => {
     api
-      .get<Curso>(`/api/cursos/${slug}`)
+      .get<Curso>(`/cursos/${slug}`)
       .then(setCurso)
       .catch((e) => setErro(e?.message || "Não foi possível carregar o curso."));
   }, [slug]);
@@ -44,7 +44,7 @@ export default function Curso() {
     setAssinando(true);
     setErro("");
     try {
-      const r = await api.post<{ checkout_url: string }>(`/api/cursos/${slug}/assinar`, {});
+      const r = await api.post<{ checkout_url: string }>(`/cursos/${slug}/assinar`, {});
       window.location.href = r.checkout_url;
     } catch (e: any) {
       setErro(e?.message || "Não foi possível iniciar a assinatura.");
@@ -54,7 +54,7 @@ export default function Curso() {
 
   async function baixar(m: Material) {
     try {
-      const blob = await api.blob(`/api/cursos/${slug}/material/${m.id}`);
+      const blob = await api.blob(`/cursos/${slug}/material/${m.id}`);
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;

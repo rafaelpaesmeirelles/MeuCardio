@@ -37,12 +37,12 @@ export default function Trilha() {
   const [erro, setErro] = useState("");
 
   useEffect(() => {
-    api.get<Detalhe>(`/api/trilhas/${slug}`).then(setD).catch((e) => setErro(e?.message || "Erro"));
+    api.get<Detalhe>(`/trilhas/${slug}`).then(setD).catch((e) => setErro(e?.message || "Erro"));
   }, [slug]);
 
   async function alternar(e: Etapa) {
     try {
-      const r = await api.post<Detalhe>(`/api/trilhas/${slug}/progresso`, {
+      const r = await api.post<Detalhe>(`/trilhas/${slug}/progresso`, {
         item_slug: e.item_slug,
         concluida: !e.concluida,
       });

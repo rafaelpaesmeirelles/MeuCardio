@@ -26,7 +26,7 @@ export default function MaterialPaciente() {
 
   useEffect(() => {
     api
-      .get<Material[]>("/api/material-paciente")
+      .get<Material[]>("/material-paciente")
       .then(setItens)
       .catch((e) => setErro(e?.message || "Não foi possível carregar."));
   }, []);
@@ -35,7 +35,7 @@ export default function MaterialPaciente() {
     setBaixando(m.slug);
     setErro("");
     try {
-      const blob = await api.blob(`/api/material-paciente/${m.slug}/pdf`);
+      const blob = await api.blob(`/material-paciente/${m.slug}/pdf`);
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;

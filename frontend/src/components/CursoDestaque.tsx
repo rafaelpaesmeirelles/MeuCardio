@@ -30,7 +30,7 @@ export default function CursoDestaque() {
 
   useEffect(() => {
     api
-      .get<{ curso: Curso | null }>("/api/cursos/destaque")
+      .get<{ curso: Curso | null }>("/cursos/destaque")
       .then((r) => setCurso(r.curso))
       .catch(() => setCurso(null))
       .finally(() => setCarregou(true));
