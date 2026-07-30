@@ -283,12 +283,28 @@ fazer:**
    original exige que o custo real seja levado em conta na sustentabilidade
    da assinatura de R$20/mês, não escondido — isso só se resolve com contato
    comercial da Zoho, que precisa ser feito por fora desta sessão.
-2. **LGPD/localização de dados não declarada especificamente para o
-   Mail360.** A Zoho declara conformidade GDPR para o Zoho Mail geral, mas
-   nenhuma fonte encontrada confirma isso — nem localização de dados —
-   especificamente para o Mail360, produto tecnicamente separado. Como não
-   há datacenter da Zoho no Brasil, dado de assinante brasileiro trafegaria
-   para fora do país; vale levantar isso formalmente antes de fechar.
+2. **LGPD/localização de dados — resolvido por decisão do Rafael, não por
+   declaração formal da Zoho.** Ele optou por não exigir declaração
+   específica de LGPD do fornecedor, com base em dois pontos: nenhuma
+   informação confidencial de paciente será arquivada ali, e o uso é
+   estritamente pessoal/administrativo do médico. Registrei a ressalva
+   técnica antes de aceitar isso de bandeja: mesmo em uso administrativo, (a)
+   o e-mail do próprio médico já é dado pessoal sob a LGPD, e a transferência
+   internacional (Zoho sem datacenter no Brasil) tem exigência própria no
+   art. 33 mesmo para dado não-sensível; e (b) "uso administrativo" é a
+   intenção do produto, não garantia de conteúdo — nada impede um médico de
+   mencionar nome ou CPF de paciente numa mensagem administrativa.
+   **Decisão final do Rafael, diante disso: não bloquear o lançamento
+   esperando declaração formal da Zoho, e em vez disso colocar uma ressalva
+   visível na própria interface.** Implementada em
+   `frontend/src/pages/CaixaDeEmail.tsx` (componente `RessalvaClinica`):
+   aparece tanto na tela de ativação quanto na caixa já ativa, avisando que
+   o e-mail não tem o padrão de cifragem do Cofre e que não deve receber
+   nome/CPF de paciente junto de informação clínica. Não é dispensável nem
+   mostrada só uma vez — permanece visível toda vez que o médico abre a
+   página. **Isto não substitui uma eventual revisão jurídica do TCLE/termos
+   de uso já registrada como pendência no `BRIEFING_CLAUDE_CODE_2.md`** — é
+   uma mitigação de produto, não uma opinião jurídica.
 
 ### Esboço técnico entregue em 30/07/2026, a pedido do Rafael ("já comece a esboçar")
 
