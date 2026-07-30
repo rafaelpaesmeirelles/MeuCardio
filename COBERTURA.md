@@ -12,8 +12,8 @@ do banco. Nenhum número é estimado.
 | `content/` — biblioteca científica | 269 (medido no disco em 30/07/2026) | não remedido | 27 temas cobertos; 29 são fluxogramas, **todos publicados**; contagem de publicados desatualizada — várias sessões escreveram content/ desde a última medição no banco |
 | `galeria/` — achados de imagem | 43 | 36 | 7 novas, licença conferida uma a uma; **zero temas da faixa da Biblioteca com 1 item só**; ainda `published: false` |
 | `exames/` — marcadores e exames | 40 | 0 | crescida de 17 para 40 pela sessão da Biblioteca em 29/07 à noite; **zero temas com 1 item só**; aguardando publicação |
-| `evidencias/` — recomendações pontuais | 104 | 100 | 4 novas (anti-IL-1 na pericardite, ILR na síncope, rastreio de AAA, ISRS na depressão em DAC); ainda `published: false` |
-| `estudos/` — ensaios e metanálises | 46 | 41 | 5 novos (BREATHE-5, profilaxia da febre reumática, AMBITION, EINSTEIN-PE, TTM2); ainda `published: false` |
+| `evidencias/` — recomendações pontuais | 109 | 100 | 5 novas em 30/07 (combinação inicial na HAS 2024, trombólise na TEP de alto risco, iSGLT2 na ICFEr independente de diabetes, CDI prevenção secundária, CRT em BRE/QRS≥150ms) além das 4 anteriores; **zerou todos os temas com 1 item só**; ainda `published: false` |
+| `estudos/` — ensaios e metanálises | 53 | 41 | 7 novos em 30/07 (EAST-AFNET 4, CHIPS, HAS-BLED, MADIT-CRT, VANISH, DECLARE-TIMI 58, ACCORD-BP) além dos 5 anteriores; **zerou o último tema com 1 item só** (Hipertensão); ainda `published: false` |
 | **Medicamentos** (tabela `drugs`) | **100** | **88** | reconstruída de `content/Farmacologia`; gestação e lactação fechadas em 88/88 |
 
 O banco tem **275 registros** em `documents` contra 253 arquivos no disco: os 22
@@ -79,11 +79,21 @@ que essa distinção importa — ver abaixo.
 |---|---:|---:|---:|
 | `galeria/` | 43 | 24 | 7 |
 | `exames/` | 40 | 20 | **0** |
-| `evidencias/` | 104 | 19 | 5 |
-| `estudos/` | 46 | 24 | 8 |
+| `evidencias/` | 109 | 19 | **0** |
+| `estudos/` | 53 | 24 | **0** |
 
-A prioridade é **profundidade** — temas com 1 item só —, não mais zerar temas. Duas
-leituras que a tabela deixa explícitas:
+**Atualização de 30/07/2026:** `evidencias/` e `estudos/` zeraram todos os temas
+com 1 item só nesta sessão — a primeira com 5 novas recomendações (combinação
+inicial de dois fármacos na HAS 2024, trombólise sistêmica na TEP de alto risco,
+iSGLT2 na ICFEr independente de diabetes, CDI em prevenção secundária e CRT em
+BRE com QRS ≥150ms, cada uma com classe/nível conferido contra o PDF integral da
+diretriz, não resumo de terceiro), a segunda com 7 novos ensaios (EAST-AFNET 4,
+CHIPS, HAS-BLED, MADIT-CRT, VANISH, DECLARE-TIMI 58, ACCORD-BP). Só `galeria/`
+ainda tem temas com 1 item — são os 7 da faixa de Medicamentos, não tocados por
+essa regra de fronteira.
+
+A prioridade segue sendo **profundidade**. Leituras da rodada anterior (29/07),
+mantidas como histórico:
 
 - **`exames/` cresceu de 17 para 40 na noite de 29/07**, pela sessão da Biblioteca,
   ainda com `published: false` em todo o lote — falta o aval do Rafael para publicar.
