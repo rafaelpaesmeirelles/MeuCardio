@@ -868,6 +868,29 @@
     "published": false
   },
   {
+    "slug": "coarctacao-aorta-multimodalidade",
+    "title": "Coarctação da aorta — avaliação multimodalidade após correção",
+    "modality": "Ressonância magnética e angiotomografia",
+    "theme": "Cardiopatias congênitas",
+    "file_path": "rm/rm-coarctacao-aorta-multimodalidade.png",
+    "findings": "Composição de 4 painéis mostrando coarctação da aorta e suas correções por diferentes técnicas de imagem: (A) ressonância magnética 'black-blood', corte sagital oblíquo, seta apontando o ponto de coarctação; (B) angiotomografia 3D com contraste mostrando stent metálico no local da correção; (C) angiorressonância 3D mostrando enxerto (bypass) cirúrgico; (D) angiorressonância 3D mostrando pseudoaneurisma pós-correção.",
+    "teaching_points": "A coarctação da aorta no adulto frequentemente já foi corrigida na infância — cirurgicamente (com risco de recoarctação, aneurisma na linha de sutura, ou aneurisma quando enxerto foi usado) ou por stent percutâneo (com risco de fratura ou migração do dispositivo, e de pseudoaneurisma). Por isso, o seguimento do adulto com coarctação corrigida não é uma foto única: exige imagem seriada, tipicamente ressonância ou angiotomografia, específica para procurar essas complicações tardias — o painel D deste conjunto mostra exatamente esse cenário, um pseudoaneurisma detectado no seguimento pós-correção.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Coarctation_of_the_aorta.tiff",
+    "license": "CC BY 2.0",
+    "attribution": "Ntsinjana HN, Hughes ML, Taylor AM — Journal of Cardiovascular Magnetic Resonance, via Wikimedia Commons — CC BY 2.0.",
+    "tags": [
+      "coarctação da aorta",
+      "cardiopatia congênita",
+      "ressonância magnética",
+      "angiotomografia",
+      "pseudoaneurisma",
+      "stent aórtico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
     "slug": "artefato-de-strain-longitudinal-global-em-cardio-oncologia",
     "title": "Strain longitudinal global — reconhecendo artefato de rastreamento",
     "modality": "Ecocardiograma",
