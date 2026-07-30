@@ -177,7 +177,9 @@ Regras que decorrem disso:
 >   `reference`, com os campos curtos (`Forte`, `Mod`) checados por script para não repetir
 >   o defeito de esquema que a sessão de Medicamentos corrigiu; e mais um documento novo em
 >   `content/Perioperatório/` (valvopatia e cirurgia não cardíaca — estenose aórtica, estenose
->   mitral, regurgitação aórtica e mitral, prótese valvar, ESC 2022) — commit `c7fe5a6`.
+>   mitral, regurgitação aórtica e mitral, prótese valvar, ESC 2022); e mais uma imagem em
+>   `galeria/metadados.json` (derrame pericárdico com silhueta em moringa, RX+TC
+>   correlacionadas, CC BY-SA 4.0, licença conferida na página do arquivo) — commit `f40dcbf`.
 >
 > **Uma entrada NÃO deve ser publicada com o resto, apesar da aprovação geral**: em
 > `evidencias/metadados.json`, o registro
