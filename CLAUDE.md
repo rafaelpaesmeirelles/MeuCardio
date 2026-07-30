@@ -183,8 +183,10 @@ Regras que decorrem disso:
 >   novo em `content/Aorta_e_doença_arterial_periférica/` (estenose de carótida — NASCET x
 >   ECST, indicação de revascularização em assintomático vs sintomático, ESC 2024); mais uma
 >   imagem em `galeria/metadados.json` (placa aterosclerótica de endarterectomia de carótida,
->   CC BY 2.0, licença e revisão FlickreviewR conferidas na página do arquivo) — commits até
->   `70ca61f`.
+>   CC BY 2.0, licença e revisão FlickreviewR conferidas na página do arquivo); e mais uma
+>   imagem (marca-passo temporário, radiografia anotada, CC BY-SA 4.0) que fechou o último
+>   tema empatado em 3 na galeria — **os 10 temas desta sessão estão agora em 4 itens de
+>   galeria cada, nenhum mais fraco que o outro** — commits até `8787a3d`.
 >
 > **Uma entrada NÃO deve ser publicada com o resto, apesar da aprovação geral**: em
 > `evidencias/metadados.json`, o registro
