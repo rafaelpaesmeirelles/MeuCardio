@@ -1682,5 +1682,31 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "airtrip-anakinra-na-pericardite-recorrente-colchicina-resistente",
+    "title": "AIRTRIP — Anakinra na pericardite recorrente resistente à colchicina e dependente de corticosteroide",
+    "study_type": "ensaio_clinico",
+    "authors": "Brucato A, Imazio M, Gattorno M, et al. (AIRTRIP Investigators)",
+    "journal": "JAMA",
+    "year": 2016,
+    "doi": "10.1001/jama.2016.15826",
+    "pmid": "27825009",
+    "url": "https://jamanetwork.com/journals/jama/fullarticle/2579869",
+    "summary": "Ensaio de retirada (withdrawal), randomizado, duplo-cego, controlado por placebo — fase aberta com anakinra seguida de etapa duplo-cega de retirada (anakinra ou placebo) até recorrência da pericardite. 21 pacientes consecutivos, 3 centros de referência italianos (junho a novembro de 2014), com pericardite recorrente (≥3 recorrências prévias), PCR elevada, resistência à colchicina e dependência de corticosteroide. Anakinra 2 mg/kg/dia (máximo 100 mg) por 2 meses; quem respondeu com resolução foi randomizado para continuar anakinra (n=11) ou trocar por placebo (n=10) por 6 meses ou até recorrência.",
+    "key_findings": "Recorrência de pericardite: 9 de 10 pacientes (90%; taxa de incidência 2,06%/paciente-ano) no grupo placebo contra 2 de 11 (18,2%; taxa de incidência 0,11%/paciente-ano) no grupo anakinra — diferença de taxa de incidência de -1,95% (IC95% -3,3% a -0,6%). Sobrevida livre de crise (tempo até recorrência): mediana de 72 dias (IQR 64-150) no grupo placebo, não alcançada no grupo anakinra (p<0,001). Durante o tratamento com anakinra: 20 de 21 pacientes (95,2%) tiveram reação cutânea local transitória, 1 (4,8%) herpes-zóster, 3 (14,3%) elevação de transaminases, 1 (4,8%) neuropatia óptica isquêmica — nenhum paciente descontinuou permanentemente o fármaco ativo. Nenhum evento adverso durante o placebo.",
+    "clinical_implications": "Estudo pequeno, mas com efeito grande e estatisticamente robusto — reduziu recorrência de 90% para 18% em população já resistente a colchicina e dependente de corticosteroide, cenário terapeuticamente difícil. Base do uso de anakinra como opção após falha de primeira linha, citada nas diretrizes de pericardite (ESC 2025).",
+    "limitations": "Amostra muito pequena (21 pacientes, 11 vs. 10 no braço randomizado) — os próprios autores pedem estudos maiores para replicar o achado e avaliar segurança e eficácia de longo prazo. Reação cutânea local foi quase universal (95,2%), relevante para adesão embora não tenha levado a descontinuação permanente na amostra.",
+    "theme": "Pericárdio",
+    "tags": [
+      "airtrip",
+      "anakinra",
+      "pericardite recorrente",
+      "resistência à colchicina",
+      "inibidor de il-1",
+      "ensaio clínico"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
