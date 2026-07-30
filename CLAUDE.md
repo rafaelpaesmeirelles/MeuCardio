@@ -64,7 +64,125 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### 🛑 PARADA a pedido do Rafael, 31/07/2026 — sessão de Medicamentos, tudo publicado, aguardando nova orientação
+> Escrito no momento exato da parada, a pedido explícito do Rafael ("registre tudo que foi
+> feito, em que situação estamos nesse exato momento, publique o que não foi publicado de
+> ambas as sessões e pare o trabalho até nova orientação"). **Esta sessão não deve retomar
+> trabalho nenhum sozinha** — nem geração de conteúdo, nem código — até o Rafael dar
+> instrução nova.
+>
+> **O que esta sessão fez, do início ao fim, nesta passagem** (ordem cronológica):
+> 1. **Frontend/UX, a pedido do Rafael**: buscador do topo do Painel recentralizado
+>    (`.topo` virou CSS grid — um `flex:1` com `max-width` não se autocentra sozinho, precisa
+>    de `justify-self: center`); rodapé padronizado em `Credito.tsx` (marca, "Todos os Direitos
+>    Reservados", crédito do Rafael como "Idealizador, Desenvolvedor e Revisor" — **removido**
+>    "responsável técnico" — e "Fale Conosco: contato@corvia.med.br"), replicado também na
+>    descrição da API (`main.py`) e nas páginas de auth fora do Shell; frase de impacto nova
+>    abaixo de "Esqueci minha senha" em `Entrar.tsx` ("Todo o caminho da Cardiologia, num só
+>    lugar — da evidência à decisão, ao lado do paciente"), escolhida pelo Rafael entre 4
+>    opções; reorganização do Painel — "Checador de Interação" → "Checador de Interação
+>    Medicamentosa"; "Modelos de documento" → "Emissão de Documentos Online"; "Emitir receita"
+>    → "Prescrição Eletrônica"; nova seção "Documentos" (Prescrição Eletrônica, Emissão de
+>    Documentos Online, Material para o paciente, Agenda, Laudo e consultoria) separada de
+>    "Beira do leito" (Round + Checklist de alta); "Cursos parceiros" e "Laudo e consultoria"
+>    marcados "em breve" (sem `to`).
+> 2. **Casos clínicos interativos (Tarefa 11a) construído do zero** — nunca tinha sido
+>    começado por nenhuma sessão. Modelo `ClinicalCase`+`ClinicalCaseAttempt`, migração,
+>    carregador, rota `/api/casos-clinicos`, frente nova no admin, 5 casos escritos e
+>    verificados contra fonte primária (FA/CHA2DS2-VA, ICFEr/GDMT, hipertensão
+>    resistente/espironolactona, HERDOO2, SGLT2i em diabetes com DAC), telas
+>    `CasosClinicos.tsx`/`CasoClinico.tsx`, rotas, menu e cartão do Painel. **Publicados nesta
+>    parada**, com aval do Rafael.
+> 3. **Trilhas de estudo — de 3 para 17, todas publicadas**: Rafael reportou "conteúdo
+>    zerado"; apurado que as 3 trilhas antigas estavam saudáveis (era cache de PWA desatualizado,
+>    tema recorrente nesta sessão — ver item 6). Escritas e verificadas (toda etapa conferida
+>    contra `_disponivel()` antes do commit) 14 trilhas novas em dois lotes aprovados pelo
+>    Rafael, cobrindo hipertensão, TEV, diabetes, hipertensão pulmonar, dispositivos,
+>    prevenção/dislipidemia, ICFEp, choque cardiogênico, PCR, canalopatias, cardio-oncologia,
+>    gestação, fator psicossocial e farmacologia da emergência.
+> 4. **Bug real encontrado e corrigido em Farmacologia**: 4 pares de documentos duplicados
+>    descrevendo o mesmo fármaco, **todos publicados ao mesmo tempo** — exatamente a
+>    "contradição entre telas" que a Fase B já tinha combatido. Um par (trimetazidina) tinha
+>    **contradição numérica real** (ClCr<15 vs. <30 para contraindicação renal, mesma fonte
+>    citada nos dois) — mesclado preservando o melhor de cada lado e sinalizado com
+>    `VERIFICAÇÃO HUMANA NECESSÁRIA` em vez de escolher um número por adivinhação. Os 4 slugs
+>    órfãos (`sotalol-cloridrato`, `trimetazidina`, `nitroglicerina-dinitrato-de-isossorbida`,
+>    `prasugrel`) foram despublicados e **devem continuar excluídos de qualquer publicação em
+>    lote futura** — o importador nunca apaga registro cujo arquivo sumiu do disco.
+> 5. **Bug real encontrado e corrigido em `evidencias/metadados.json` (cross-session)**: campo
+>    `evidence_level` é `VARCHAR(5)` no banco; um registro da Biblioteca trazia frase inteira
+>    ali, travando a carga da frente **inteira**, para as duas sessões, silenciosamente, por
+>    múltiplos ciclos. Corrigido (nota movida para `reference`, que é Text); regra documentada
+>    para as duas sessões: nota de incerteza em campo curto/enum nunca, só em campo Text.
+> 6. **Bug real, sério, encontrado e corrigido — a causa de Modo Emergência/Trilhas/Casos
+>    clínicos aparecerem "sem conteúdo" para o Rafael, mesmo com o banco 100% publicado.**
+>    Vale registro detalhado porque não era cache (hipótese natural, e a primeira que este
+>    arquivo já tinha usado outras vezes) — era bug de código, em dois lugares:
+>    - **Causa principal**: `frontend/src/lib/api.ts` já prefixa toda chamada com
+>      `BASE = "/api"` (`fetch(\`${BASE}${path}\`)`). Nove arquivos passavam o `path` já com
+>      `"/api/..."` embutido, dobrando o prefixo — a requisição real ia para
+>      `/api/api/trilhas`, `/api/api/emergencia` etc., e o FastAPI devolvia 404 genuíno (nenhuma
+>      rota corresponde). **Confirmado só depois de ver o Network tab do navegador do Rafael**
+>      — until then, backend/banco testados de toda forma possível (dependency override,
+>      TestClient, curl real com token real pela URL pública) sempre voltavam 200, porque
+>      nenhum desses testes reproduzia o bug do FRONTEND. **Lição para a próxima vez que algo
+>      "funciona no teste mas não no navegador": pedir a aba Network do DevTools cedo, não como
+>      último recurso** — teria poupado várias rodadas de teste de servidor que nunca iam achar
+>      nada, porque o servidor estava certo o tempo todo.
+>      Arquivos corrigidos (removido o `/api` redundante — `path sem prefixo, BASE resolve
+>      sozinho): `Trilhas.tsx`, `Trilha.tsx`, `Emergencia.tsx`, `CasosClinicos.tsx`,
+>      `CasoClinico.tsx`, `Cursos.tsx`, `Curso.tsx`, `CursoDestaque.tsx`, `Checklists.tsx`,
+>      `ChecklistAlta.tsx`, `MaterialPaciente.tsx`, `Indicadores.tsx`,
+>      `ExportarApresentacao.tsx` — commit `7ea7b7f`. **Padrão a seguir daqui pra frente: toda
+>      chamada `api.get/post/patch/put/delete/upload/blob/blobPost` leva o path SEM `/api`** —
+>      a maioria do app já seguia isso (por isso a maior parte do site nunca teve o bug); só
+>      estes 9 arquivos, provavelmente escritos por analogia direta com a rota do backend em
+>      vez de com as outras chamadas do próprio frontend, tinham o prefixo a mais.
+>    - **Causa secundária, que escondeu o primeiro fix por um tempo**: depois de corrigido o
+>      `/api/api`, o navegador do Rafael continuou preso no bundle JS antigo mesmo após rebuild
+>      e reload — `index.html`, `sw.js` e `manifest.webmanifest` não tinham **nenhum**
+>      `Cache-Control` (só `ETag`/`Last-Modified`), então o navegador podia aplicar cache
+>      heurístico e nunca revalidar. Corrigido no `infra/Caddyfile` (commit `19551e4`): bloco do
+>      app shell agora manda `Cache-Control: no-cache` por padrão; só `/assets/*` (nome com
+>      hash, muda a cada build) mantém cache longo — precisou de `handle_path` próprio, porque
+>      testado que `header /assets/* ...` dentro do mesmo bloco de um `header` sem matcher **não
+>      se impõe** sobre o padrão geral (o geral vencia mesmo pra requisição de asset).
+>    **Se um recurso aparecer "vazio" ou com erro estranho de novo**: comparar a contagem
+>    `published` no banco primeiro (rápido, descarta ou confirma conteúdo de verdade); se o
+>    banco estiver certo, pedir o Network tab do DevTools **antes** de qualquer teste de
+>    servidor — a lição do item acima.
+> 7. **Publicação final desta parada, ambas as sessões, tudo o que estava com
+>    `review_status: revisado` e `published: false`** (mais os 4 lotes recentes da Biblioteca
+>    que chegaram por `git pull --rebase` durante esta sessão): 3 documentos
+>    (`mortalidade-cardiaca-na-anorexia-nervosa-metanalise-de-lai`, meu;
+>    `obstrucao-da-via-de-saida-do-ventriculo-direito-estenose-pulmonar-esc-2020` e
+>    `protese-valvar-escolha-mecanica-vs-biologica-e-alvo-de-inr-esc-eacts-2025`, da
+>    Biblioteca), 2 evidências (`criterio-diagnostico-de-hipotensao-ortostatica-confirmada-versus-provavel`,
+>    `troca-valvar-aortica-em-estenose-grave-sintomatica-antes-de-cirurgia-nao-cardiaca-eletiva`)
+>    e 2 imagens de galeria (`marca-passo-temporario-posicionamento-perioperatorio`,
+>    `placa-aterosclerotica-endarterectomia-de-carotida`) — todos da Biblioteca. Documentos
+>    novos reindexados no RAG. **Excluídos de propósito, como sempre**: os 4 slugs órfãos do
+>    item 4 e o registro de febre reumática do item 5 (`review_status: pendente_revisao`
+>    deliberado, letra do nível de evidência não confirmada).
+>
+> **Estado exato agora, medido, não de memória** — todas as nove frentes:
+> `documents` 446/450 · `evidencias` 155/156 · `estudos` 76/76 · `galeria` 63/63 ·
+> `exames` 60/60 · `drugs` 101/101 · `emergencia` 10/10 · `trilhas` 17/17 ·
+> `casos_clinicos` 5/5. As únicas pendências restantes são as duas exclusões deliberadas do
+> item 7 acima — nenhuma outra pendência de publicação em nenhuma das duas sessões.
+>
+> **Esta sessão para aqui.** Não retomar geração de conteúdo nem mexer em código até o
+> Rafael orientar de novo.
+>
 > ### ⏸️ PAUSADA a pedido do Rafael em 30/07/2026, à noite — sessão da Biblioteca, aguardando nova orientação
+> **Publicada pela sessão de Medicamentos no bloco acima, em 31/07/2026** — os itens que
+> este bloco abaixo lista como pendentes de publicação (12 documentos, +46 evidências, +19
+> galeria, +22 estudos, +20 exames, todos `revisado`/`published: false`) já estavam
+> publicados **antes** desta parada, em ciclos anteriores da sessão de Medicamentos; o que
+> restava — 2 documentos, 2 evidências e 2 imagens de galeria que chegaram por commit **depois**
+> do último ciclo de publicação — foi publicado agora, no item 7 acima. Não há mais nada
+> pendente deste lote. O resto deste bloco fica como registro histórico do que a sessão da
+> Biblioteca fez nesta passagem.
 > Registrado no momento exato da pausa, para retomada sem perda de contexto. Esta sessão
 > específica rodou inteira via **Claude Code Remote**, num container isolado **sem acesso ao
 > Docker de produção nem ao `.env`** — confirmado de novo agora (`docker ps` falha por
