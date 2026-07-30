@@ -3,7 +3,7 @@ title: "TIMI Risk Score"
 slug: timi-risk-score
 theme: "Calculadoras"
 kind: calculadora
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Antman EM, Cohen M, Bernink PJLM, McCabe CH, Horacek T, Papuchis G, Mautner B, Corbalan R, Radley D, Braunwald E. The TIMI risk score for unstable angina/non-ST elevation MI: a method for prognostication and therapeutic decision making. JAMA. 2000;284(7):835-842. DOI: 10.1001/jama.284.7.835. PMID: 10938172", "Morrow DA, Antman EM, Charlesworth A, et al. TIMI risk score for ST-elevation myocardial infarction: a convenient, bedside, clinical score for risk assessment at presentation. Circulation. 2000;102(17):2031-2037. DOI: 10.1161/01.cir.102.17.2031. PMID: 11044416"]
 legacy_source: "calculadoras/calculadora-timi-risk-score.md"
 ---
@@ -24,7 +24,8 @@ Estimativa de risco em síndrome coronariana aguda, com versões distintas para 
 ## Versao stemi
 - **variaveis**: ['Idade 65-74/>75 anos (2/3 pontos)', 'Diabetes, hipertensão ou angina prévia', 'PAS <100 mmHg', 'FC >100 bpm', 'Classe Killip ≥2', 'Peso <67 kg', 'IAM anterior ou BRE', 'Tempo até tratamento >4h']
 - **pontuacao**: Soma ponderada (escore de 0 a 14)
-- **interpretacao**: mortalidade em 30 dias cresce de forma contínua com o escore, e o artigo de derivação **não define faixas de baixo/intermediário/alto** — foi por isso que as que circulavam aqui saíram. O que o resumo indexado afirma, conferido em 29/07/2026: dez variáveis basais respondem por **97% da capacidade preditiva** do modelo multivariado; os escores relatados vão de **0 a mais de 8**; a mortalidade média em 30 dias na coorte foi de **6,7%**, com **menos de 1%** no escore 0; e há **aumento graduado de mais de 40 vezes** ao longo da faixa. VERIFICAÇÃO HUMANA NECESSÁRIA, agora num ponto estreito: **a tabela de mortalidade escore a escore não está no resumo**, só no texto completo de Morrow DA et al., Circulation 2000;102(17):2031-2037. Até que ela seja lida, use o gradiente — não um corte
+- **interpretacao**: mortalidade em 30 dias cresce de forma contínua com o escore, e o artigo de derivação **não define faixas de baixo/intermediário/alto** — foi por isso que as que circulavam aqui saíram. O que o resumo indexado afirma, conferido em 29/07/2026: dez variáveis basais respondem por **97% da capacidade preditiva** do modelo multivariado; os escores relatados vão de **0 a mais de 8**; a mortalidade média em 30 dias na coorte foi de **6,7%**, com **menos de 1%** no escore 0; e há **aumento graduado de mais de 40 vezes** ao longo da faixa.
+- **tabela escore a escore — resolvido em 30/07/2026**: o PDF do texto completo (Morrow DA et al., Circulation 2000;102(17):2031-2037, AHA Journals) ficou bloqueado para acesso direto nesta sessão; a tabela foi reconstruída cruzando duas reproduções independentes que citam o mesmo artigo (mdapp.co e o resumo do estudo no site do American College of Cardiology, ambas batendo entre si e com os extremos já confirmados no resumo indexado — <1% no escore 0, 35,9% no agrupamento >8, aumento de 40 vezes): mortalidade em 30 dias de **0,8% (escore 0)**, **1,6% (1)**, **2,2% (2)**, **4,4% (3)**, **7,3% (4)**, **12,4% (5)**, **16,1% (6)**, **23,4% (7)**, **26,8% (8)**, e **35,9% (9 a 14, agrupados)** — o próprio artigo não desagrega mortalidade por escore individual acima de 8
 
 ## Aplicacao pratica
 Utilizado para orientar decisões sobre estratégia invasiva precoce vs. conservadora em SCA, e mais recentemente para triagem de candidatos à alta precoce em pacientes de baixo risco
