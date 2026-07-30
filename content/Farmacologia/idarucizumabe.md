@@ -31,5 +31,9 @@ Reversão completa e imediata do efeito anticoagulante da dabigatrana em minutos
 - **fonte**: Frontiers in Neurology (revisão sobre idarucizumabe)
 
 ## Evidencia pivotal — RE-VERSE AD
-Ensaio prospectivo, sem grupo controle, que avaliou idarucizumabe em pacientes em uso de dabigatrana com sangramento sério ou necessidade de procedimento urgente, demonstrando reversão completa e sustentada do efeito anticoagulante na grande maioria dos pacientes
-- **fonte**: Pollack CV Jr et al., NEJM 2017 (RE-VERSE AD — full cohort analysis)
+Ensaio prospectivo, aberto, sem grupo controle, multicêntrico — **503 pacientes**: 301 no grupo A (sangramento não controlado) e 202 no grupo B (necessidade de procedimento urgente):
+- **Reversão do efeito anticoagulante**: mediana de **100%** (IC95% 100-100), pelo tempo de trombina diluído ou tempo de coagulação por ecarina
+- **Grupo A**: 45,5% com sangramento gastrointestinal, 32,6% com hemorragia intracraniana; **tempo mediano até cessação do sangramento de 2,5 horas**
+- **Grupo B**: tempo mediano até início do procedimento pretendido de 1,6 hora; hemostasia periprocedimento normal em 93,4%, levemente anormal em 5,1%, moderadamente anormal em 1,5%
+- **Segurança em 90 dias**: evento trombótico em 6,3% (grupo A) e 7,4% (grupo B); mortalidade de 18,8% e 18,9%, respectivamente — sem sinal de segurança grave adicional
+- **fonte**: Pollack CV Jr et al. Idarucizumab for Dabigatran Reversal — Full Cohort Analysis. N Engl J Med. 2017;377(5):431-441. DOI: 10.1056/NEJMoa1707278. PMID: 28693366
