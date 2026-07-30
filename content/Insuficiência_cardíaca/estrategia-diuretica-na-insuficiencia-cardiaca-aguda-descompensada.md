@@ -106,9 +106,14 @@ escalonada falha**, não como primeira alternativa à falta de resposta.
 
 ## O que este documento não cobre
 
-**Vasodilatadores e suporte inotrópico na fase aguda** — a frase que motivou
-este documento também os mencionava, e eles não foram pesquisados aqui. Ficam
-para complemento futuro, com o mesmo padrão de ensaio nomeado e número real.
+**Vasodilatadores na fase aguda** — a frase que motivou este documento também
+os mencionava, e eles não foram pesquisados aqui. Ficam para complemento
+futuro, com o mesmo padrão de ensaio nomeado e número real.
+
+**Suporte inotrópico — resolvido em 30/07/2026**, em documento próprio
+(`suporte-inotropico-na-ic-aguda-descompensada-optime-chf-e-o-sinal-na-etiologia-isquemica.md`):
+OPTIME-CHF (milrinone) não demonstrou benefício no desfecho primário e
+mostrou sinal de pior desfecho em etiologia isquêmica.
 
 **Dose exata do algoritmo escalonado do CARRESS-HF** — o resumo indexado do
 ensaio descreve "terapia farmacológica escalonada" sem detalhar os degraus do
