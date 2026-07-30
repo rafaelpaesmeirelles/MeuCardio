@@ -531,6 +531,30 @@
     ]
   },
   {
+    "slug": "holter-e-monitor-de-eventos-externo-na-sincope",
+    "name": "Holter e monitor de eventos externo (looper) na síncope",
+    "category": "metodo_grafico",
+    "theme": "Síncope",
+    "what_it_measures": "Registro ambulatorial do ritmo cardíaco por período limitado (24h a 7 dias no Holter; semanas no monitor de eventos externo/looper, ativado pelo paciente ou automaticamente por algoritmo), à procura de correlação entre sintoma e arritmia — degrau anterior ao monitor cardíaco implantável (ILR) na investigação de síncope de causa arrítmica suspeita.",
+    "reference_range": "Não se aplica valor numérico de referência — o achado é a correlação temporal entre o sintoma relatado (ou episódio espontâneo) e o traçado eletrocardiográfico registrado no mesmo intervalo.",
+    "indications": "Monitorização por Holter deve ser considerada (Classe IIa, Nível B) em paciente com síncope ou pré-síncope frequente — pelo menos 1 episódio por semana, frequência rara nessa condição, que é o que torna o Holter útil apenas num subgrupo pequeno de pacientes. Monitor de eventos externo deve ser considerado (Classe IIa, Nível B) logo após o evento índice em paciente com intervalo entre episódios de 4 semanas ou menos — acima desse intervalo, a chance de captar o próximo episódio dentro da autonomia do dispositivo cai, e a indicação passa a ser de monitor implantável.",
+    "interpretation": "Monitor de eventos externo tem rendimento diagnóstico mais alto que o Holter em dados agrupados da literatura, exatamente pela maior janela de observação. Nenhum dos dois substitui o ILR (Classe I, Nível A) no paciente com síncope recorrente de origem indeterminada e alta probabilidade de recorrência que exceda o intervalo entre episódios que Holter/looper conseguem cobrir — a escolha entre monitorização externa e implantável é definida pelo intervalo entre episódios, não por preferência arbitrária.",
+    "limitations": "Rendimento diretamente limitado pela frequência dos episódios do próprio paciente — em síncope esporádica, com intervalo entre episódios maior que algumas semanas, tanto Holter quanto monitor externo tendem a não capturar nenhum evento, e a indicação correta nesse cenário é o ILR, não a repetição de monitorização externa por tempo mais longo. Adesão do paciente (manter o dispositivo, ativar corretamente o gatilho no monitor de eventos) é fator prático que reduz o rendimento na vida real em relação ao desempenho relatado em estudo controlado.",
+    "source_refs": [
+      "Brignole M, Moya A, de Lange FJ, et al. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948. DOI: 10.1093/eurheartj/ehy037 — seção 4.2.4 (Electrocardiographic monitoring) e sua tabela de recomendações, conferida direto no PDF integral da diretriz."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "holter",
+      "monitor de eventos",
+      "looper",
+      "síncope",
+      "monitorização eletrocardiográfica",
+      "arritmia"
+    ]
+  },
+  {
     "slug": "ecocardiograma-transtoracico-pre-operatorio",
     "name": "Ecocardiograma transtorácico no pré-operatório",
     "category": "imagem",
@@ -551,6 +575,30 @@
       "cirurgia não cardíaca",
       "sbc 2024",
       "profilaxia de endocardite"
+    ]
+  },
+  {
+    "slug": "eletrocardiograma-de-repouso-pre-operatorio",
+    "name": "Eletrocardiograma de repouso no pré-operatório",
+    "category": "metodo_grafico",
+    "theme": "Perioperatório",
+    "what_it_measures": "ECG de 12 derivações antes de cirurgia não cardíaca, à procura de arritmia, distúrbio de condução, isquemia miocárdica ou infarto prévio, sobrecarga ventricular e alteração eletrolítica/medicamentosa — e, tão importante quanto o achado agudo, um traçado basal de referência para comparação caso surja suspeita de evento cardiovascular no pós-operatório.",
+    "reference_range": "Não se aplica valor de referência numérico — achado descritivo, interpretado à luz da história clínica, do tipo de cirurgia e das comorbidades do paciente, não isoladamente.",
+    "indications": "Pela diretriz brasileira de 2024 (Figura 1, algoritmo de exames complementares no pré-operatório): Classe I em história e/ou exame físico sugestivos de doença cardiovascular, cirurgia de risco intermediário/alto, paciente de risco cardiovascular intermediário/alto, ou diabetes mellitus. Classe IIa em obesidade e em idade acima de 40 anos, mesmo sem os critérios anteriores.",
+    "interpretation": "O papel central do ECG pré-operatório, segundo a diretriz, não é predizer risco isoladamente — em cirurgia de risco baixo a moderado, o ECG pré-operatório tem valor prognóstico limitado —, e sim fornecer o traçado basal para comparação diante de suspeita de evento cardiovascular no pós-operatório. Em coorte retrospectiva com mais de 23.000 pacientes, alteração eletrocardiográfica pré-operatória associou-se a maior mortalidade cardíaca em 30 dias, achado replicado em dois estudos prospectivos posteriores — mas a força dessa associação depende do risco cardiovascular de base do paciente, não é uniforme. QT corrigido entre 480 e 519 ms foi preditor independente de mortalidade pós-operatória em cirurgia não cardíaca num estudo retrospectivo citado pela diretriz.",
+    "limitations": "Não deve ser pedido de forma reflexa em todo paciente — a própria diretriz orienta que a indicação seja criteriosa, conforme história clínica, tipo de cirurgia e doenças de base, não rotina universal. Alterações eletrocardiográficas tendem a aumentar com a idade e com comorbidades, mas têm baixo poder preditivo isolado de complicação perioperatória — achado presente não deve, sozinho, adiar ou cancelar cirurgia sem contextualização clínica.",
+    "source_refs": [
+      "Diretriz de Avaliação Cardiovascular Perioperatória da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. DOI: 10.36660/abc.20240590 — seção 2.2 (Eletrocardiograma) e Figura 1 (Indicações de exames complementares no pré-operatório), conferida direto no PDF integral em acesso aberto (PMC12094288)."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "eletrocardiograma",
+      "ecg",
+      "pré-operatório",
+      "cirurgia não cardíaca",
+      "sbc 2024",
+      "traçado basal"
     ]
   },
   {
