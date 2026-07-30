@@ -64,22 +64,21 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
-> ### 📬 CorvIA Mail e receituário (Tarefas 28 e 29) — não é faixa de Medicamentos nem da Biblioteca
-> Registrado em 30/07/2026 a pedido do Rafael, depois de ele perguntar à sessão
-> de Medicamentos sobre o andamento do CorvIA Mail — **ela não é a autora**
-> desse trabalho, só leu o briefing para responder. Deixando registrado para
-> evitar a mesma confusão de novo: **CorvIA Mail (Tarefa 28) e a integração
-> dele com emissão de receita/atestado (Tarefa 29) são de uma sessão própria**,
-> separada tanto da de Medicamentos quanto da da Biblioteca. Detalhe técnico
-> completo do que já foi construído e do que falta para ir ao ar está em
-> `BRIEFING_CLAUDE_CODE_4.md`, seções 28 e 29.
+> ### 📬 CorvIA Mail e receituário (Tarefas 28 e 29) — passados para a sessão da Biblioteca
+> Registrado em 30/07/2026. Depois de descobrir que o trabalho estava pronto
+> localmente mas não em produção (ver briefing), **o Rafael decidiu passar
+> CorvIA Mail (Tarefa 28) e a integração com emissão de receita/atestado
+> (Tarefa 29) para a sessão da Biblioteca**, que assume dali para frente.
+> Detalhe técnico completo do que já foi construído e do que falta para ir ao
+> ar (migração de produção, preço no `.env`, toggle do Pix no Stripe, teste
+> real da API do Mail360) está em `BRIEFING_CLAUDE_CODE_4.md`, seções 28 e 29
+> — leia antes de mexer em qualquer arquivo dessa frente.
 >
-> **O Rafael vai avisar diretamente a sessão responsável sobre o papel dela a
-> partir daqui** — isto não é uma instrução de trabalho para ela, é só o
-> registro de que a pergunta foi feita à sessão errada uma vez, para não
-> repetir. Se você é a sessão de Medicamentos ou da Biblioteca e alguém
-> perguntar sobre CorvIA Mail/receituário, aponte para
-> `BRIEFING_CLAUDE_CODE_4.md` em vez de tentar responder por conta própria.
+> **Consequência prática**: a faixa da sessão da Biblioteca passa a incluir
+> também `backend/app/**/receituario*`, `controlados/`, e os arquivos de
+> backend/frontend do CorvIA Mail listados no briefing — além dos 14 temas de
+> `content/` e das quatro frentes JSON que já eram dela. A sessão de
+> Medicamentos não tem e não teve nenhum trabalho nessa frente.
 >
 > ---
 >
@@ -419,7 +418,7 @@ uma frente livre em vez de negociar no meio do commit.
 | `content/Farmacologia/*.md` | sessão de **Medicamentos** | ocupado — a regra de rodízio abaixo fica **suspensa** para este tema |
 | `content/<demais temas>/*.md` | sessão da biblioteca | livre |
 | `evidencias/`, `estudos/`, `galeria/`, `exames/` | sessão da biblioteca | livre |
-| `controlados/`, `backend/app/**/receituario*`, `backend/app/services/classificacao_*` | sessão do receituário (Tarefa 27) | ocupado |
+| `controlados/`, `backend/app/**/receituario*`, `backend/app/services/classificacao_*`, CorvIA Mail (backend/frontend) | sessão da **Biblioteca** (passado pelo Rafael em 30/07/2026 — ver bloco no topo desta seção) | ocupado |
 | `CLAUDE.md`, `COBERTURA.md` | ambas | **editar só a própria seção**, e `git pull --rebase` antes |
 
 **Regras que evitam colisão, todas aprendidas apanhando aqui:**
