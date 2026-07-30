@@ -265,4 +265,34 @@ diferentes:
 Isso é uma decisão de arquitetura, não só de fornecedor — vale ser decidida
 por você antes de qualquer código de modelo de dados ou interface.
 
+### Decisão do Rafael, em 30/07/2026
+
+**Zoho Mail360 + webmail próprio.** A Corvia constrói a interface de webmail
+inteira (lista de mensagens, leitor, composição, pastas, anexos) por cima da
+API de dados do Mail360, e a autenticação do assinante nunca sai da sessão já
+existente da Corvia — o backend guarda as credenciais OAuth do Mail360 e
+nunca expõe login a um sistema externo. Isso elimina estruturalmente o
+problema de SSO recorrente que nenhum dos três fornecedores garantia.
+
+**Duas pendências que ficam explícitas antes de comprometer arquitetura em
+produção, e que dependem de contato comercial que esta sessão não pode
+fazer:**
+1. **Preço de produção não confirmado.** A pesquisa não encontrou valor
+   numérico público para as faixas pagas do Mail360 (11-50, 51-1000, 5000+
+   caixas) — só o free tier de até 10 caixas está confirmado. O briefing
+   original exige que o custo real seja levado em conta na sustentabilidade
+   da assinatura de R$20/mês, não escondido — isso só se resolve com contato
+   comercial da Zoho, que precisa ser feito por fora desta sessão.
+2. **LGPD/localização de dados não declarada especificamente para o
+   Mail360.** A Zoho declara conformidade GDPR para o Zoho Mail geral, mas
+   nenhuma fonte encontrada confirma isso — nem localização de dados —
+   especificamente para o Mail360, produto tecnicamente separado. Como não
+   há datacenter da Zoho no Brasil, dado de assinante brasileiro trafegaria
+   para fora do país; vale levantar isso formalmente antes de fechar.
+
 Nenhum código de modelo de dados ou interface foi escrito para esta tarefa.
+O próximo passo natural — desenhar a arquitetura técnica (rotas do backend,
+modelo de dados de conta/mensagem, componentes de interface do webmail) —
+ainda não foi iniciado, para não presumir que as duas pendências acima serão
+resolvidas a favor da Corvia antes de o Rafael confirmar com o comercial da
+Zoho.
