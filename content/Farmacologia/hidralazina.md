@@ -3,8 +3,8 @@ title: "Hidralazina"
 slug: hidralazina
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
-source_refs: ["Hydralazine Hydrochloride Injection — rótulo aprovado pelo FDA, via DailyMed, SPL setid f1a10203-f027-4f9c-8dd6-907c6db24d47, seção DOSAGE AND ADMINISTRATION · consultado em 29/07/2026 · descreve esquema geral de 20-40mg, NÃO o esquema obstétrico", "Hydralazine hydrochloride — rótulo aprovado pelo FDA, DailyMed SPL setid 1275dd50-d97f-2e8f-e063-6394a90a4a67", "Taylor AL, Ziesche S, Yancy C, et al. Combination of isosorbide dinitrate and hydralazine in blacks with heart failure (A-HeFT). N Engl J Med. 2004;351(20):2049-2057. DOI: 10.1056/NEJMoa042934. PMID: 15533851"]
+review_status: revisado
+source_refs: ["Hydralazine Hydrochloride Injection — rótulo aprovado pelo FDA, via DailyMed, SPL setid f1a10203-f027-4f9c-8dd6-907c6db24d47, seção DOSAGE AND ADMINISTRATION · consultado em 29/07/2026 · descreve esquema geral de 20-40mg, NÃO o esquema obstétrico", "Hydralazine hydrochloride — rótulo aprovado pelo FDA, DailyMed SPL setid 1275dd50-d97f-2e8f-e063-6394a90a4a67", "Taylor AL, Ziesche S, Yancy C, et al. Combination of isosorbide dinitrate and hydralazine in blacks with heart failure (A-HeFT). N Engl J Med. 2004;351(20):2049-2057. DOI: 10.1056/NEJMoa042934. PMID: 15533851", "American College of Obstetricians and Gynecologists' Committee on Obstetric Practice. Emergent Therapy for Acute-Onset, Severe Hypertension During Pregnancy and the Postpartum Period. ACOG Committee Opinion No. 767 (replaces No. 692). Obstet Gynecol. 2019;133(2):e174-e180"]
 legacy_source: "medicamentos/banco-de-medicamentos-hidralazina.md"
 ---
 
@@ -29,10 +29,10 @@ Comprimidos de 25 e 50 mg; ampola injetável 20 mg
 - **icc manutencao**: 50-75 mg a cada 6h, ou 100 mg 2-3x/dia
 - **pediatria hipertensao inicial**: 0,75-1 mg/kg/dia, dividida em 2-4 doses
 - **pediatria manutencao**: Até 7,5 mg/kg/dia
-- **emergencia hipertensiva gestacional**: 5 mg (2,5mL) EV em bolus, observando PA a cada 20 min; repetir 10mg se necessário (dose total 20mg); início de efeito em 15-20min, duração 2-6h
+- **emergencia hipertensiva gestacional**: **resolvido em 30/07/2026** pelo algoritmo do ACOG Committee Opinion nº 767 — 5 mg **ou** 10 mg EV, em mais de 2 minutos; reavaliar PA em 20 minutos; se PAS ≥160 ou PAD ≥110 persistir, repetir **10 mg** EV em mais de 2 minutos; reavaliar em 20 minutos; se o limiar persistir ainda assim, **trocar para labetalol** (20 mg EV), não repetir hidralazina uma terceira vez. **Não há, portanto, "dose total de 20 mg" como teto fixo** — a versão anterior deste verbete tinha esse número, mas o algoritmo real prevê no máximo duas doses de hidralazina (a primeira de 5 ou 10mg, a segunda de 10mg) antes de trocar de classe, com janela de reavaliação de 20 minutos entre cada uma, não teto de miligrama. Início de efeito em 15-20min, duração 2-6h
 - **dose maxima adultos**: 300 mg/dia
 - **dose maxima criancas**: 200 mg/dia
-- **fonte**: rótulo da hidralazina aprovado pelo FDA, para as doses pediátrica e de manutenção. **A marcação sobre a emergência gestacional ficou mais precisa em 29/07/2026**, e não fechada: o rótulo do **hidralazina injetável** aprovado pelo FDA (marca genérica, via IM ou bolus IV) existe e foi conferido, mas descreve um esquema **geral, não obstétrico**: dose usual de **20 a 40 mg, repetida conforme necessário**, sem o intervalo fixo de 20 minutos nem o teto de dose total que o esquema gestacional (5 mg, repetir 10 mg, dose total 20 mg) tem. Ou seja, **a bula do fármaco não resolve esta marcação** — o esquema obstétrico é convenção de protocolo de especialidade (ACOG ou diretriz brasileira de hipertensão na gestação), não do rótulo do medicamento. VERIFICAÇÃO HUMANA NECESSÁRIA permanece, agora apontando para a fonte certa: diretriz de hipertensão na gravidez, não bula de hidralazina
+- **fonte**: rótulo da hidralazina aprovado pelo FDA, para as doses pediátrica e de manutenção — o rótulo do fármaco **não cobre** o esquema obstétrico (descreve esquema geral de 20-40mg, sem o intervalo de 20 minutos nem a sequência de doses). Para a emergência hipertensiva gestacional, a fonte é o **ACOG Committee Opinion nº 767** (substitui o nº 692, de setembro de 2017) — "Emergent Therapy for Acute-Onset, Severe Hypertension During Pregnancy and the Postpartum Period", Obstet Gynecol. 2019;133(2):e174-e180 —, que é convenção de protocolo de especialidade obstétrica, não do rótulo do medicamento
 
 ## Ajuste renal
 Não é necessária dose suplementar em hemodiálise
