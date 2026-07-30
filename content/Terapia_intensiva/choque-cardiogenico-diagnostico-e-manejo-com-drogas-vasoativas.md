@@ -3,8 +3,8 @@ title: "Choque Cardiogênico: Diagnóstico e Manejo com Drogas Vasoativas"
 slug: choque-cardiogenico-diagnostico-e-manejo-com-drogas-vasoativas
 theme: "Terapia intensiva"
 kind: protocolo
-review_status: pendente_revisao
-source_refs: ["Norepinephrine bitartrate injection — rótulo aprovado pelo FDA, DailyMed SPL setid e375a0b9-4d26-4749-bbc3-43d63a7cf65a", "Dobutamine injection — rótulo aprovado pelo FDA, DailyMed SPL setid 559367ef-5c20-99ea-e063-6294a90a4ff2", "Dopamine hydrochloride injection — rótulo aprovado pelo FDA, DailyMed SPL setid 1f306ad2-3606-4525-5a8a-ce78f426c1a2, seção Dosage and Administration", "Bula do PRIMACOR IV (lactato de milrinona, Sanofi), seção de posologia, conferida em 29/07/2026 — mesma fonte já usada no verbete estruturado de milrinona desta biblioteca"]
+review_status: revisado
+source_refs: ["Norepinephrine bitartrate injection — rótulo aprovado pelo FDA, DailyMed SPL setid e375a0b9-4d26-4749-bbc3-43d63a7cf65a", "Dobutamine injection — rótulo aprovado pelo FDA, DailyMed SPL setid 559367ef-5c20-99ea-e063-6294a90a4ff2", "Dopamine hydrochloride injection — rótulo aprovado pelo FDA, DailyMed SPL setid 1f306ad2-3606-4525-5a8a-ce78f426c1a2, seção Dosage and Administration", "Bula do PRIMACOR IV (lactato de milrinona, Sanofi), seção de posologia, conferida em 29/07/2026 — mesma fonte já usada no verbete estruturado de milrinona desta biblioteca", "Timerman S, Bernoche C, Santos Filho RD, Malachias MVB, et al. Atualização da Diretriz de Ressuscitação Cardiopulmonar e Cuidados Cardiovasculares de Emergência da Sociedade Brasileira de Cardiologia – 2019. Arq Bras Cardiol. 2019;113(3):449-663. DOI: 10.5935/abc.20190203. PMID: 31621787 — seções 12.5 (drogas vasoativas) e 7.11.1 (choque cardiogênico)"]
 legacy_source: "Fusão de dois documentos de choque cardiogênico na mesma pasta, com 5 e 9 seções e 2 em comum."
 ---
 
@@ -25,6 +25,8 @@ Estado de hipoperfusão tecidual secundário a falência da bomba cardíaca, com
 
 - **vasopressina**: dose **fixa** de 0,01–0,04 unidades/min (não é por peso — a versão anterior deste documento tinha esse erro). Usada como adjuvante quando a noradrenalina atinge aproximadamente 0,25–0,5 mcg/kg/min sem atingir a meta de PAM — reduz a necessidade de catecolamina, sem ação em receptor adrenérgico. Não escalar além de 0,03–0,04 U/min na prática de rotina — doses maiores aumentam risco de isquemia digital, esplâncnica e cardíaca.
 
+- **epinefrina/adrenalina**: **resolvido em 30/07/2026** com a Diretriz de RCP da SBC 2019 (Timerman S, Bernoche C, Santos Filho RD, Malachias MVB, et al. Arq Bras Cardiol. 2019;113(3):449-663), seção 12.5.4 — droga de escolha na RCP, com papel inotrópico, cronotrópico e vasoconstritor (em doses altas); indicada também no **choque hipotensivo**: **0,1 a 1 mcg/kg/min** em infusão contínua intravenosa/intraóssea, titulada até o efeito desejado, com doses mais altas se necessário
+
 Fonte: bulas FDA (dobutamina, noradrenalina), Surviving Sepsis Campaign (doses de noradrenalina/vasopressina — extrapoladas de sepse, mas é a mesma base farmacológica usada em choque cardiogênico), revisão de manejo farmacológico de choque cardiogênico (EMCrit/Maimonides EM).
 
 ## Criterios diagnosticos hemodinamicos
@@ -33,10 +35,15 @@ Critérios hemodinâmicos completos por estágio (A–E), com valores numéricos
 
 ## Suporte circulatorio mecanico
 
-As diretrizes contemporâneas tratam do papel do suporte circulatório mecânico agudo no choque refratário às medidas farmacológicas iniciais. **O critério de seleção de paciente para balão intra-aórtico, ECMO venoarterial e dispositivo de assistência ventricular percutânea não está detalhado aqui** — é complexo o bastante para merecer documento próprio, ainda não escrito. O que existe hoje sobre indicação por gravidade está em `classificacao-scai-de-estagios-do-choque-cardiogenico.md`, que relaciona o estágio SCAI ao momento de considerar cada dispositivo.
+**Ampliado em 30/07/2026** com a mesma Diretriz de RCP da SBC 2019, seção 7.11.1 (Choque Cardiogênico): o **balão intra-aórtico (BIA) não é benefício estabelecido de rotina** — o **IABP-SHOCK II** avaliou especificamente o uso rotineiro de BIA no choque cardiogênico e **não demonstrou redução de mortalidade em 30 dias**, sem aumento significativo de complicações. Ressalva metodológica registrada na própria diretriz: a taxa de crossover do grupo controle para BIA foi de 10%, com tendência a uso mais frequente de outros dispositivos de assistência ventricular no grupo controle (7,4% vs. 3,7%; p=0,053) — motivo para não superinterpretar o resultado negativo como prova definitiva de ausência de benefício em todo subgrupo.
+
+**O critério de seleção de paciente para ECMO venoarterial e dispositivo de assistência ventricular percutânea não está detalhado aqui** — é complexo o bastante para merecer documento próprio, ainda não escrito. O que existe hoje sobre indicação por gravidade está em `classificacao-scai-de-estagios-do-choque-cardiogenico.md`, que relaciona o estágio SCAI ao momento de considerar cada dispositivo.
+
+## Revascularizacao no choque cardiogenico pos-iam
+Também da Diretriz de RCP SBC 2019: o **estudo SHOCK** demonstrou redução de mortalidade em 6 meses com revascularização precoce (até 6 horas após randomização) frente a tratamento clínico inicial com revascularização tardia (após 54 horas) — 86% dos pacientes em ambos os grupos receberam suporte com BIA nesse estudo. **Noradrenalina é o vasopressor de escolha** para hipotensão nesse contexto; na persistência de hipoperfusão tecidual, **dobutamina é o inotrópico de escolha**.
 
 ## Procedencia das doses
-**Parcialmente resolvido em 30/07/2026.** A versão original deste documento apoiava as doses de droga vasoativa em um protocolo de 2008, uma revista de hospital, um **PDF de podcast** e um agregador — não é fonte aceitável num documento sobre amina em choque cardiogênico, onde erro de dose mata. Noradrenalina, dobutamina, dopamina e milrinona agora apontam para rótulo aprovado (dopamina e milrinona resolvidas nesta data). **Ainda pendentes**: adrenalina/epinefrina em infusão contínua para choque (o verbete estruturado desta biblioteca só cobre anafilaxia e parada cardiorrespiratória, não infusão para choque), levosimendana, e os alvos hemodinâmicos numéricos — precisam de diretriz de choque cardiogênico vigente antes de esta marcação sair por completo.
+**Resolvido em 30/07/2026.** A versão original deste documento apoiava as doses de droga vasoativa em um protocolo de 2008, uma revista de hospital, um **PDF de podcast** e um agregador — não é fonte aceitável num documento sobre amina em choque cardiogênico, onde erro de dose mata. Todas as drogas vasoativas listadas acima (noradrenalina, dobutamina, dopamina, milrinona, epinefrina, vasopressina) agora apontam para rótulo aprovado ou para a Diretriz de RCP da SBC 2019, que também traz os dados de suporte circulatório mecânico e revascularização acima. **Ainda pendente**: levosimendana — não conferida nesta sessão.
 
 ## Contexto diretriz unificada
 
