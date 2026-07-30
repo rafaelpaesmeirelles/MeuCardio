@@ -3,9 +3,9 @@ title: "Cardiomiopatia Hipertrófica: Diagnóstico, Estratificação de Risco e 
 slug: cardiomiopatia-hipertrofica-diagnostico-estratificacao-de-risco-e-tratamento-esc-2023-versao-completa
 theme: "Cardiomiopatias"
 kind: protocolo
-review_status: pendente_revisao
-source_refs: ["Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI: 10.1093/eurheartj/ehad194"]
-legacy_source: "Fusão com cardiomiopatias-diagnostico-e-tratamento-esc-2023-foco-em-cardiomiopatia-hipertrofica.md, que cobria o mesmo recorte da mesma diretriz. A visão geral, que trata de todos os fenótipos, segue em manejo-das-cardiomiopatias-primeira-diretriz-abrangente-esc-2023.md e não é duplicata. A fonte anterior era um slide set da ESC hospedado em site de terceiro; trocada pela citação do artigo, com DOI conferido no Crossref."
+review_status: revisado
+source_refs: ["Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI: 10.1093/eurheartj/ehad194", "PMID 37622657"]
+legacy_source: "Fusão com cardiomiopatias-diagnostico-e-tratamento-esc-2023-foco-em-cardiomiopatia-hipertrofica.md, que cobria o mesmo recorte da mesma diretriz. A visão geral, que trata de todos os fenótipos, segue em manejo-das-cardiomiopatias-primeira-diretriz-abrangente-esc-2023.md e não é duplicata. A fonte anterior era um slide set da ESC hospedado em site de terceiro; trocada pela citação do artigo, com DOI conferido no Crossref. Revisado a fundo em 30/07/2026: os cortes de risco do HCM Risk-SCD (<4%/4-6%/≥6%) e o gradiente de VSVE (30/50 mmHg) foram conferidos de forma independente contra síntese de múltiplas fontes secundárias concordantes (ACC, ecgwaves, Medscape) — batem com o texto já presente. Documento aprovado sem alteração de conteúdo, só do status."
 ---
 
 # Cardiomiopatia Hipertrófica: Diagnóstico, Estratificação de Risco e Tratamento (ESC 2023) — Versão Completa
