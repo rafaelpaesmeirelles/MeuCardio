@@ -1209,5 +1209,29 @@
       "tomografia computadorizada",
       "valvopatia"
     ]
+  },
+  {
+    "slug": "sequenciamento-de-rrna-16s-18s-na-endocardite-com-hemocultura-negativa",
+    "name": "Sequenciamento de RNA ribossômico 16S/18S em tecido (endocardite com hemocultura negativa)",
+    "category": "laboratorial",
+    "theme": "Endocardite",
+    "what_it_measures": "Amplificação e sequenciamento de RNA ribossômico 16S (bactérias) ou 18S (fungos) a partir de tecido valvar ou material protético ressecado em cirurgia — identifica o microrganismo causador por material genético, quando a cultura convencional falha em crescer o agente.",
+    "reference_range": "Não aplicável — exame qualitativo de identificação microbiológica, não numérico.",
+    "indications": "Endocardite com hemocultura negativa (BCNIE), a partir de tecido obtido em cirurgia valvar — parte do algoritmo de investigação de causas raras quando a sorologia dirigida (Coxiella burnetii, Bartonella spp., Legionella spp., Brucella spp., Mycoplasma spp.) e a cultura de tecido não identificam o agente. Também indicado nas suspeitas de Tropheryma whipplei e fungos (Candida spp., Aspergillus spp.), por PCR específica associada.",
+    "interpretation": "Resultado positivo identifica o gênero/espécie do patógeno mesmo sem crescimento em cultura — em endocardite de prótese valvar com hemocultura negativa, a combinação de hibridização in situ por fluorescência com PCR e sequenciamento de 16S rRNA melhorou o diagnóstico microbiológico convencional em 30% dos casos. Resultado negativo, com toda a investigação sorológica e cultural também negativa, deve levar a considerar sistematicamente endocardite não bacteriana (marântica, associada a doença autoimune) — e, nesse cenário, testar fator reumatoide, anticorpos antifosfolípide (anticardiolipina IgG, anti-β2-glicoproteína 1 IgG/IgM) e antinucleares.",
+    "limitations": "Exige tecido obtido em cirurgia — não se aplica a paciente tratado só clinicamente, sem indicação cirúrgica. Sequenciamento de DNA microbiano livre em plasma por sequenciamento de nova geração é técnica emergente que pode acelerar o diagnóstico no futuro, mas ainda não é padrão de prática.",
+    "source_refs": [
+      "Delgado V, Ajmone Marsan N, de Waha S, et al. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI 10.1093/eurheartj/ehad193. PMID 37622656 — seção 5.3.1 e Tabela 9 (Investigation of rare causes of blood culture-negative infective endocarditis), texto integral conferido diretamente em 30/07/2026."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "16s rrna",
+      "endocardite hemocultura negativa",
+      "bcnie",
+      "sequenciamento",
+      "diagnóstico microbiológico",
+      "endocardite"
+    ]
   }
 ]
