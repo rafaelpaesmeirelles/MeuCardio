@@ -179,7 +179,10 @@ Regras que decorrem disso:
 >   `content/Perioperatório/` (valvopatia e cirurgia não cardíaca — estenose aórtica, estenose
 >   mitral, regurgitação aórtica e mitral, prótese valvar, ESC 2022); e mais uma imagem em
 >   `galeria/metadados.json` (derrame pericárdico com silhueta em moringa, RX+TC
->   correlacionadas, CC BY-SA 4.0, licença conferida na página do arquivo) — commit `f40dcbf`.
+>   correlacionadas, CC BY-SA 4.0, licença conferida na página do arquivo); mais um documento
+>   novo em `content/Aorta_e_doença_arterial_periférica/` (estenose de carótida — NASCET x
+>   ECST, indicação de revascularização em assintomático vs sintomático, ESC 2024) — commits
+>   até `d03c2af`.
 >
 > **Uma entrada NÃO deve ser publicada com o resto, apesar da aprovação geral**: em
 > `evidencias/metadados.json`, o registro
