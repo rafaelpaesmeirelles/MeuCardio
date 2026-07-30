@@ -1630,5 +1630,31 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "respect-fechamento-de-fop-versus-terapia-medica-em-avc-criptogenico-seguimento-estendido",
+    "title": "RESPECT — Fechamento de forame oval patente versus terapia médica em AVC criptogênico (seguimento estendido)",
+    "study_type": "ensaio_clinico",
+    "authors": "Saver JL, Carroll JD, Thaler DE, et al. (RESPECT Investigators)",
+    "journal": "New England Journal of Medicine",
+    "year": 2017,
+    "doi": "10.1056/NEJMoa1610057",
+    "pmid": "28902590",
+    "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1610057",
+    "summary": "Ensaio randomizado, aberto, multicêntrico, com adjudicação cega de desfechos, 980 pacientes (idade média 45,9 anos) de 18-60 anos com forame oval patente (FOP) e AVC isquêmico criptogênico prévio. Randomizados entre fechamento percutâneo do FOP ou terapia médica isolada (AAS, varfarina, clopidogrel ou AAS + dipiridamol de liberação prolongada). Seguimento mediano de 5,9 anos — análise de seguimento estendido, exploratória, complementando o resultado primário já publicado do período original do ensaio.",
+    "key_findings": "AVC isquêmico recorrente: 18 pacientes no grupo fechamento contra 28 no grupo terapia médica — 0,58 versus 1,07 eventos por 100 pacientes-ano (razão de risco 0,55; IC95% 0,31-0,999; p=0,046). Ao restringir a AVC de causa indeterminada (mais provável de ser atribuível ao FOP): 10 versus 23 eventos, razão de risco 0,38 (IC95% 0,18-0,79; p=0,007) — efeito mais robusto quando a análise foca no subgrupo mecanisticamente mais plausível. Tromboembolismo venoso (embolia pulmonar e TVP) foi mais comum no grupo fechamento.",
+    "clinical_implications": "Estabeleceu, em seguimento de longo prazo, que o fechamento percutâneo do FOP reduz recorrência de AVC isquêmico em paciente jovem com AVC criptogênico prévio — parte do corpo de evidência (junto com CLOSE e REDUCE) que mudou a prática de manejo conservador isolado para considerar fechamento em paciente selecionado. O aumento de tromboembolismo venoso é o contraponto de segurança a discutir na decisão compartilhada.",
+    "limitations": "Exposição ao tratamento desigual entre os grupos (mais abandono no grupo terapia médica); intervalo de confiança do desfecho primário geral toca 0,999, no limite da significância; população jovem (18-60 anos) — resultado não se estende automaticamente a FOP incidental em faixa etária mais avançada.",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "respect",
+      "forame oval patente",
+      "fop",
+      "avc criptogênico",
+      "fechamento percutâneo",
+      "ensaio clínico"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
