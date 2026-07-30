@@ -2943,5 +2943,44 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "criterio-diagnostico-de-hipotensao-ortostatica-confirmada-versus-provavel",
+    "statement": "Síncope por hipotensão ortostática (OH) é confirmada quando há queda da pressão arterial sistólica basal ≥20 mmHg, ou diastólica ≥10 mmHg, ou queda da sistólica para <90 mmHg, reproduzindo os sintomas espontâneos do paciente. Quando a queda pressórica é assintomática mas os sintomas relatados na história são consistentes com OH, o diagnóstico deve ser considerado provável, não confirmado — distinção que muda o peso da evidência, não o critério pressórico em si, que é o mesmo nos dois casos.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2018,
+    "guideline_title": "2018 ESC Guidelines for the diagnosis and management of syncope",
+    "reference": "Brignole M, Moya A, de Lange FJ, et al. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948. DOI: 10.1093/eurheartj/ehy037. PMID: 29562304 — classe e nível conferidos no texto integral da diretriz em 30/07/2026, seção 4.2.2 (Orthostatic challenge), tabela de critérios diagnósticos. Detalhamento completo em `content/Síncope/hipotensao-ortostatica-e-sindrome-de-taquicardia-postural-pots-diagnostico-diferencial.md` desta biblioteca.",
+    "theme": "Síncope",
+    "tags": [
+      "hipotensão ortostática",
+      "critério diagnóstico",
+      "síncope",
+      "esc 2018"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "troca-valvar-aortica-em-estenose-grave-sintomatica-antes-de-cirurgia-nao-cardiaca-eletiva",
+    "statement": "Troca valvar aórtica (cirúrgica ou transcateter) é recomendada em paciente sintomático com estenose aórtica grave agendado para cirurgia não cardíaca eletiva de risco intermediário ou alto — tratar a valva antes é preferido, quando a cirurgia puder ser adiada, porque deslocamento de volume e arritmia no perioperatório são mal tolerados por via de saída fixa e obstruída, e a estenose aórtica grave sintomática é preditor independente de infarto, insuficiência cardíaca e mortalidade pós-operatória.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines on cardiovascular assessment and management of patients undergoing non-cardiac surgery",
+    "reference": "Halvorsen S, Mehilli J, Cassese S, et al. 2022 ESC Guidelines on cardiovascular assessment and management of patients undergoing non-cardiac surgery. Eur Heart J. 2022;43(39):3826-3924. DOI: 10.1093/eurheartj/ehac270. PMID: 36017553 — classe e nível conferidos no texto integral da diretriz em 30/07/2026, seção 6.3.2.1 e Recommendation Table 21. Detalhamento completo em `content/Perioperatório/valvopatia-e-cirurgia-nao-cardiaca-avaliacao-e-manejo-esc-2022.md` desta biblioteca.",
+    "theme": "Perioperatório",
+    "tags": [
+      "estenose aórtica",
+      "troca valvar",
+      "perioperatório",
+      "cirurgia não cardíaca",
+      "esc 2022"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
