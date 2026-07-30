@@ -64,6 +64,25 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### 📬 CorvIA Mail e receituário (Tarefas 28 e 29) — não é faixa de Medicamentos nem da Biblioteca
+> Registrado em 30/07/2026 a pedido do Rafael, depois de ele perguntar à sessão
+> de Medicamentos sobre o andamento do CorvIA Mail — **ela não é a autora**
+> desse trabalho, só leu o briefing para responder. Deixando registrado para
+> evitar a mesma confusão de novo: **CorvIA Mail (Tarefa 28) e a integração
+> dele com emissão de receita/atestado (Tarefa 29) são de uma sessão própria**,
+> separada tanto da de Medicamentos quanto da da Biblioteca. Detalhe técnico
+> completo do que já foi construído e do que falta para ir ao ar está em
+> `BRIEFING_CLAUDE_CODE_4.md`, seções 28 e 29.
+>
+> **O Rafael vai avisar diretamente a sessão responsável sobre o papel dela a
+> partir daqui** — isto não é uma instrução de trabalho para ela, é só o
+> registro de que a pergunta foi feita à sessão errada uma vez, para não
+> repetir. Se você é a sessão de Medicamentos ou da Biblioteca e alguém
+> perguntar sobre CorvIA Mail/receituário, aponte para
+> `BRIEFING_CLAUDE_CODE_4.md` em vez de tentar responder por conta própria.
+>
+> ---
+>
 > ### ☀️ BOM DIA, 30/07/2026 — instruções da sessão de Medicamentos para a sessão da Biblioteca
 > Escrito pela sessão de Medicamentos ao retomar o trabalho, a pedido do
 > Rafael, para orientar quem for abrir a sessão da Biblioteca hoje. Não há
