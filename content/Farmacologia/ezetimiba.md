@@ -43,7 +43,12 @@ A versão anterior listava **apenas** a hipercolesterolemia familiar homozigóti
 Associação com estatina de alta potência proporciona incremento de aproximadamente 15-20% na redução adicional de LDL-C além do efeito já obtido pela estatina isolada (efeito aditivo, não sinérgico exponencial)
 
 ## Evidencia pivotal improve it
-Estudo IMPROVE-IT demonstrou que adição de ezetimiba à sinvastatina reduz eventos cardiovasculares comparado à sinvastatina isolada em pacientes pós-síndrome coronariana aguda, sendo o primeiro estudo a comprovar benefício clínico de reduzir LDL por mecanismo não-estatina, sustentando a hipótese 'quanto mais baixo, melhor' independente da via farmacológica
+**Números reais acrescentados em 30/07/2026** (Cannon CP et al., N Engl J Med. 2015;372(25):2387-2397, PMID 26039521): **18.144 pacientes** hospitalizados por síndrome coronariana aguda nos 10 dias anteriores, com LDL-C entre 50-100mg/dL (em uso de hipolipemiante) ou 50-125mg/dL (sem uso), randomizados para **sinvastatina 40mg + ezetimiba 10mg** ou **sinvastatina 40mg + placebo**, seguimento mediano de 6 anos:
+- **LDL-C médio ponderado no tempo**: **53,7mg/dL** (sinvastatina-ezetimiba) vs. **69,5mg/dL** (sinvastatina isolada) (p<0,001)
+- **Desfecho primário** (composto de morte cardiovascular, IAM não fatal, angina instável com reinternação, revascularização coronariana ≥30 dias após randomização, ou AVC não fatal) em 7 anos: **32,7% vs. 34,7%** (diferença absoluta de risco de 2,0 pontos percentuais; HR 0,936; IC95% 0,89-0,99; **p=0,016**)
+- **Sem diferença** nas taxas pré-especificadas de efeito adverso muscular, biliar, hepático ou câncer entre os grupos
+- **Conclusão do próprio ensaio**: foi o **primeiro estudo a comprovar benefício clínico de reduzir LDL por mecanismo não-estatina**, sustentando a hipótese "quanto mais baixo, melhor" independente da via farmacológica — inclusive abaixo das metas de LDL então vigentes
+- **fonte**: NEJM (IMPROVE-IT, PMID 26039521)
 
 ## Posicao nas diretrizes
 Segunda linha terapêutica após estatina em dose máxima tolerada, quando meta de LDL-C não é atingida (conforme diretriz ESC/EAS de dislipidemias)
