@@ -3,9 +3,9 @@ title: "Tafamidis Treatment for Patients with Transthyretin Amyloid Cardiomyopat
 slug: tafamidis-treatment-for-patients-with-transthyretin-amyloid-cardiomyopathy-attr-act
 theme: "Cardiomiopatias"
 kind: estudo
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Maurer MS, Schwartz JH, Gundapaneni B, et al. Tafamidis treatment for patients with transthyretin amyloid cardiomyopathy (ATTR-ACT). N Engl J Med. 2018;379(11):1007-1016. DOI: 10.1056/NEJMoa1805689. PMID: 30145929", "Elliott P, Drachman BM, Gottlieb SS, et al. Long-Term Survival With Tafamidis in Patients With Transthyretin Amyloid Cardiomyopathy. Circ Heart Fail. 2022;15(1):e008193. DOI: 10.1161/CIRCHEARTFAILURE.120.008193. PMID: 34923848 — fonte da seção de extensão de longo prazo"]
-legacy_source: "estudos/biblioteca-cientifica-attr-act.md"
+legacy_source: "estudos/biblioteca-cientifica-attr-act.md · Revisado a fundo em 30/07/2026: a seção 'Subgrupos' citava HR 0,64 (ATTRwt) e HR 0,66 (ATTRm), números que não encontrei em nenhuma fonte consultada (abstract do PubMed, Wiki Journal Club) — removidos por não terem procedência confirmável, não substituídos por suposição. No lugar, entrou um achado real que a versão anterior omitia por completo: em NYHA III, a hospitalização cardiovascular foi MAIOR com tafamidis do que com placebo — o oposto do resultado geral do ensaio, e um dado clinicamente mais importante do que o subgrupo por genótipo que estava lá."
 ---
 
 # Tafamidis Treatment for Patients with Transthyretin Amyloid Cardiomyopathy (ATTR-ACT)
@@ -48,13 +48,14 @@ Tafamidis 80 mg ou 20 mg 1x/dia (doses combinadas na análise, n=264) vs. placeb
 A leitura clínica que o desenho impõe, e que é o achado central: a comparação **não é tafamidis contra placebo**. Os dois braços receberam tafamidis na extensão; o que os separa é **quando começaram**. Quem só iniciou depois do período de placebo nunca alcançou a sobrevida de quem começou cedo — o benefício perdido no atraso não foi recuperado. É o argumento mais forte a favor do diagnóstico precoce da amiloidose por transtirretina.
 
 ## Subgrupos
-Redução significativa de mortalidade tanto no subgrupo ATTRwt (HR 0,64) quanto tendência de benefício em ATTRm (HR 0,66), embora este último sem significância estatística devido ao menor tamanho amostral
+A randomização foi estratificada por genótipo (variante hereditária vs. tipo selvagem) e por classe funcional NYHA basal. Em praticamente todos os subgrupos pré-especificados, tanto a mortalidade quanto a hospitalização cardiovascular favoreceram o tafamidis — **com uma exceção relevante**: em pacientes NYHA classe III, a taxa de hospitalização cardiovascular foi **maior** no grupo tafamidis do que no grupo placebo — o oposto do resultado geral do ensaio. Não há razão fisiopatológica bem estabelecida publicada pelos autores para esse achado; a leitura mais cautelosa é que o benefício do fármaco pode ser menor, ou a resposta menos previsível, no paciente já em estágio funcional mais avançado — reforçando o argumento de diagnóstico e tratamento precoces já central neste documento.
+- **fonte**: Maurer MS et al., N Engl J Med 2018;379:1007-1016 — achado por NYHA III conferido contra resumo estruturado do ensaio (Wiki Journal Club, cotejado com o abstract indexado no PubMed). HR específico por genótipo ou por classe NYHA **não está disponível no abstract nem no resumo estruturado consultados** — quem precisar do número exato deve ler a Tabela 2 do texto integral (PMID 30145929), não reproduzido aqui por falta de acesso a essa tabela nesta revisão.
 
 ## Implicacoes clinicas
-Ensaio pivotal que estabeleceu tafamidis como primeira terapia farmacológica eficaz para ATTR-CM, destacando importância crítica de diagnóstico precoce (maior benefício em estágios funcionais menos avançados)
+Ensaio pivotal que estabeleceu tafamidis como primeira terapia farmacológica eficaz para ATTR-CM, destacando importância crítica de diagnóstico precoce (maior benefício em estágios funcionais menos avançados) — reforçado pelo próprio sinal de NYHA III acima, e pela extensão de longo prazo (seção anterior): quem começa tafamidis mais tarde nunca alcança a sobrevida de quem começa cedo.
 
 ## Fonte
-NEJM ; Nature Reviews Cardiology ; ACC
+Maurer MS et al., N Engl J Med 2018;379(11):1007-1016, DOI 10.1056/NEJMoa1805689, PMID 30145929; Elliott P et al., Circ Heart Fail 2022;15(1):e008193, DOI 10.1161/CIRCHEARTFAILURE.120.008193, PMID 34923848 (ver source_refs)
 
 ## Palavras chave
 - amiloidose
