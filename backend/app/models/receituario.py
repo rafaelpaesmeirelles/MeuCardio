@@ -187,3 +187,16 @@ class PrescriptionDocument(Base):
         DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
     )
     emitido_em: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    # Acrescentado em 30/07/2026 (Tarefa 29 — letterhead). 'residencial' |
+    # 'profissional' | nulo (nenhum endereço no PDF). Gravado na emissão, não
+    # recalculado depois: o link público reabre este PDF mais tarde e ele
+    # precisa sair idêntico, mesmo que o médico troque o cadastro entretanto.
+    endereco_exibido: Mapped[str | None] = mapped_column(String(20), nullable=True)
+    # Acrescentado em 30/07/2026 — exigido por lei especificamente para
+    # anabolizantes/hormônios (Lei nº 9.965/2000, art. 1º, parágrafo único),
+    # verificado direto na fonte: "...o número do Código Internacional de
+    # Doenças (CID)...". Opcional aqui porque nem todo PrescriptionDocument
+    # é desse grupo — ver `itens[].lista == "C5"`. A EMISSÃO de RCE segue
+    # bloqueada (layout oficial não reproduzido); este campo só existe para
+    # não perder o requisito quando ela for desbloqueada.
+    cid: Mapped[str | None] = mapped_column(String(10), nullable=True)

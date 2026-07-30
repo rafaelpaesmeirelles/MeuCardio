@@ -98,3 +98,48 @@ da norma que a proscreve.
   nada é simulado.
 - **Dado identificável do paciente** — decidido em 29/07/2026: entidade separada
   e cifrada com o padrão do Cofre. O `Patient` do round segue anonimizado.
+- **Geração de PDF** — atualizada em 29/07/2026: **passou a existir**, só para
+  o receituário comum (`pdf_documento.receituario_comum`, ReportLab). NRA,
+  RCE e demais tipos continuam sem layout, pelo mesmo motivo de sempre:
+  formato oficial fixo da Anvisa, não reproduzível de memória.
+
+## Pendências registradas em 30/07/2026, para quando RCE for desbloqueada
+
+Duas exigências que o Rafael trouxe nesta data, verificadas contra fonte
+primária mas **ainda não implementadas no PDF** — RCE continua bloqueada
+(HTTP 501) esperando o layout oficial. Registradas aqui para não se perder.
+
+1. **Duas vias, identificadas por destino.** Toda Receita de Controle
+   Especial (inclusive hormônios/anabolizantes) precisa sair em 2 vias
+   impressas, uma rotulada "via do paciente" e outra "via da farmácia" —
+   pedido do Rafael em 30/07/2026. `PrescriptionType.vias`/`destinacao_vias`
+   já modelam isso (`RCE` já está semeado com `vias=2`, ver
+   `carregar_controlados.py`), mas o renderizador (`pdf_documento.py`) só
+   sabe desenhar uma via — o parâmetro `via` de `_rodape()` existe e nunca
+   foi usado. Falta, quando a Anvisa liberar o layout: desenhar as duas
+   vias (ou duas páginas) com o rótulo de destino de cada uma.
+
+2. **Hormônios/anabolizantes (Lista C5) exigem campos extras — Lei nº
+   9.965/2000, art. 1º, parágrafo único, conferida direto na fonte
+   (planalto.gov.br) em 30/07/2026, texto literal:**
+   > "A receita de que trata este artigo deverá conter a identificação do
+   > profissional, o número de registro no respectivo conselho profissional
+   > (CRM ou CRO), o número do Cadastro da Pessoa Física (CPF), o endereço e
+   > telefone profissionais, além do nome, do endereço do paciente e do
+   > número do Código Internacional de Doenças (CID), devendo a mesma ficar
+   > retida no estabelecimento farmacêutico por cinco anos."
+
+   Ou seja, além do que RCE já exige: **CPF do prescritor**, **telefone
+   profissional** (`users.practice_phone`, já existe) e **CID** que
+   justifica a prescrição (`prescription_documents.cid`, já existe — os dois
+   campos foram criados em 30/07/2026 especificamente para isto). O que
+   falta: (a) a classificação já sabe dizer quando um item é da Lista C5 —
+   `itens[].lista` no snapshot do `PrescriptionDocument`, corrigido em
+   30/07/2026 (antes se perdia no agrupamento) —, mas nada hoje **exige**
+   CID nem CPF do prescritor quando isso acontece; (b) o CPF do prescritor
+   (`users.cpf`) já existe no cadastro, mas nunca foi pensado para aparecer
+   impresso num documento — conferir se `users.cpf` (usado hoje só para
+   login/identificação interna) é apropriado para isso ou se merece campo
+   próprio; (c) retenção de 5 anos é regra de arquivo da farmácia, fora do
+   alcance do sistema — não é algo a implementar, só a mencionar no
+   documento impresso.

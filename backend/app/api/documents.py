@@ -67,6 +67,10 @@ class GerarDocumentoIn(BaseModel):
     template_id: int
     patient_id: int | None = None
     variables: dict[str, str] = {}
+    # 'residencial' | 'profissional' | None — mesma escolha do receituário
+    # (Tarefa 29), gravada aqui porque o PDF é gerado sob demanda depois
+    # (GET .../pdf, ou pelo link público) e precisa sair sempre igual.
+    endereco: str | None = None
 
 
 @router.post("/gerar", status_code=201)
@@ -79,6 +83,9 @@ def gerar_documento(dados: GerarDocumentoIn, db: Session = Depends(get_db), user
         p = db.get(Patient, dados.patient_id)
         if not p or (p.created_by != user.id and user.role != "admin"):
             raise HTTPException(status_code=404, detail="Paciente não encontrado.")
+
+    if dados.endereco not in (None, "residencial", "profissional"):
+        raise HTTPException(status_code=422, detail="endereco precisa ser 'residencial', 'profissional' ou omitido.")
 
     corpo = t.body
     faltando = []
@@ -94,6 +101,7 @@ def gerar_documento(dados: GerarDocumentoIn, db: Session = Depends(get_db), user
     gerado = GeneratedDocument(
         patient_id=dados.patient_id, template_id=t.id, created_by=user.id,
         doc_type=t.doc_type, title=t.title, rendered_body=corpo,
+        endereco_exibido=dados.endereco,
     )
     db.add(gerado)
     db.commit()
@@ -142,7 +150,7 @@ def obter_gerado(gid: int, db: Session = Depends(get_db), user=Depends(current_u
 @router.get("/gerados/{gid}/pdf")
 def baixar_pdf_gerado(gid: int, db: Session = Depends(get_db), user=Depends(current_user)):
     from app.models.user import User
-    from app.services.pdf_documento import documento_generico
+    from app.services.pdf_documento import documento_generico, resolver_endereco
 
     g = _obter_gerado(gid, db, user)
     # O cabeçalho do PDF tem que trazer o médico que EMITIU o documento, não
@@ -154,7 +162,9 @@ def baixar_pdf_gerado(gid: int, db: Session = Depends(get_db), user=Depends(curr
         titulo=titulo, corpo=g.rendered_body,
         medico={"full_name": emissor.full_name, "council_name": emissor.council_name,
                 "council_number": emissor.council_number, "council_state": emissor.council_state,
-                "rqe": emissor.rqe, "specialty": emissor.specialty},
+                "rqe": emissor.rqe, "specialty": emissor.specialty,
+                "document_logo_url": emissor.document_logo_url},
+        endereco=resolver_endereco(emissor, g.endereco_exibido),
     )
     return Response(content=pdf, media_type="application/pdf", headers={
         "Content-Disposition": f'inline; filename="documento-{g.id}.pdf"'})

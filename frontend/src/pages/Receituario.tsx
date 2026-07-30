@@ -44,6 +44,7 @@ function baixarBlob(blob: Blob, nomeArquivo: string) {
 function CartaoDocumento({ doc, onAtualizado }: { doc: Documento; onAtualizado: (d: Documento) => void }) {
   const [revisando, setRevisando] = useState(false);
   const [emitindo, setEmitindo] = useState(false);
+  const [endereco, setEndereco] = useState<"" | "residencial" | "profissional">("");
   const [erro, setErro] = useState("");
   const [email, setEmail] = useState("");
   const [enviando, setEnviando] = useState(false);
@@ -66,7 +67,10 @@ function CartaoDocumento({ doc, onAtualizado }: { doc: Documento; onAtualizado: 
     setEmitindo(true);
     setErro("");
     try {
-      const blob = await api.blob(`/receituario/documentos/${doc.id}/emitir`);
+      const blob = await api.blob(`/receituario/documentos/${doc.id}/emitir`, {
+        method: "POST",
+        body: JSON.stringify({ endereco: endereco || null }),
+      });
       baixarBlob(blob, `receituario-${doc.id}.pdf`);
       onAtualizado({ ...doc, status: "emitido" });
     } catch (e) {
@@ -112,6 +116,20 @@ function CartaoDocumento({ doc, onAtualizado }: { doc: Documento; onAtualizado: 
       )}
 
       {erro && <p role="alert" style={{ color: "var(--alerta)", fontSize: "0.86rem" }}>{erro}</p>}
+
+      {doc.status === "revisado" && doc.tipo_ativo && (
+        <div style={{ marginTop: "0.6rem" }}>
+          <label>Endereço no cabeçalho/rodapé (opcional)</label>
+          <select value={endereco} onChange={(e) => setEndereco(e.target.value as typeof endereco)}>
+            <option value="">Nenhum</option>
+            <option value="profissional">Profissional (consultório)</option>
+            <option value="residencial">Residencial</option>
+          </select>
+          <p className="eyebrow" style={{ margin: "0.3rem 0 0" }}>
+            Preencha em Minha Conta antes, se ainda não tiver cadastrado.
+          </p>
+        </div>
+      )}
 
       <div style={{ display: "flex", gap: 8, marginTop: "0.6rem", flexWrap: "wrap" }}>
         {doc.status === "rascunho" && (

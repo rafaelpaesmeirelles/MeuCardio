@@ -30,7 +30,7 @@ router = APIRouter(prefix="/api/documentos-publicos", tags=["documentos público
 
 
 def _pdf_receita(db: Session, referencia_id: int) -> tuple[bytes, str]:
-    from app.services.pdf_documento import receituario_comum
+    from app.services.pdf_documento import receituario_comum, resolver_endereco
 
     doc = db.get(PrescriptionDocument, referencia_id)
     if not doc or doc.status != "emitido":
@@ -61,13 +61,15 @@ def _pdf_receita(db: Session, referencia_id: int) -> tuple[bytes, str]:
             "council_state": medico.council_state if medico else None,
             "rqe": medico.rqe if medico else None,
             "specialty": medico.specialty if medico else None,
+            "document_logo_url": medico.document_logo_url if medico else None,
         },
+        endereco=resolver_endereco(medico, doc.endereco_exibido) if medico else None,
     )
     return pdf, f"receituario-{doc.id}.pdf"
 
 
 def _pdf_documento(db: Session, referencia_id: int) -> tuple[bytes, str]:
-    from app.services.pdf_documento import documento_generico
+    from app.services.pdf_documento import documento_generico, resolver_endereco
 
     g = db.get(GeneratedDocument, referencia_id)
     if not g:
@@ -83,7 +85,9 @@ def _pdf_documento(db: Session, referencia_id: int) -> tuple[bytes, str]:
             "council_state": emissor.council_state if emissor else None,
             "rqe": emissor.rqe if emissor else None,
             "specialty": emissor.specialty if emissor else None,
+            "document_logo_url": emissor.document_logo_url if emissor else None,
         },
+        endereco=resolver_endereco(emissor, g.endereco_exibido) if emissor else None,
     )
     return pdf, f"documento-{g.id}.pdf"
 

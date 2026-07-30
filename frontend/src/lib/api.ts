@@ -65,12 +65,17 @@ export const api = {
 
   /** Baixa um arquivo protegido. Precisa existir porque a API autentica por
    *  header Bearer, não por cookie: um <a href="/api/..."> abriria a URL sem
-   *  o token e tomaria 401. Aqui o fetch leva o header e devolve o conteúdo. */
-  async blob(p: string): Promise<Blob> {
-    const headers = new Headers();
+   *  o token e tomaria 401. Aqui o fetch leva o header e devolve o conteúdo.
+   *  `init` permite POST quando o próprio ato de baixar tem efeito colateral
+   *  (ex.: emitir um documento) — sem isso, toda chamada seria GET. */
+  async blob(p: string, init: RequestInit = {}): Promise<Blob> {
+    const headers = new Headers(init.headers);
     const t = token.get();
     if (t) headers.set("Authorization", `Bearer ${t}`);
-    const res = await fetch(`${BASE}${p}`, { headers });
+    if (init.body && !(init.body instanceof FormData) && !headers.has("Content-Type")) {
+      headers.set("Content-Type", "application/json");
+    }
+    const res = await fetch(`${BASE}${p}`, { ...init, headers });
     if (res.status === 401) {
       token.clear();
       window.location.assign("/entrar");
@@ -139,4 +144,20 @@ export type Usuario = {
   cpf_mascarado: string | null;
   birth_date: string | null;
   created_at: string;
+  home_street: string | null;
+  home_number: string | null;
+  home_complement: string | null;
+  home_neighborhood: string | null;
+  home_city: string | null;
+  home_state: string | null;
+  home_zip: string | null;
+  practice_street: string | null;
+  practice_number: string | null;
+  practice_complement: string | null;
+  practice_neighborhood: string | null;
+  practice_city: string | null;
+  practice_state: string | null;
+  practice_zip: string | null;
+  practice_phone: string | null;
+  document_logo_url: string | null;
 };

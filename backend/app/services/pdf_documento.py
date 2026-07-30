@@ -20,16 +20,34 @@ O que este módulo **não** faz hoje, e a razão:
   for lido do documento oficial, só o receituário comum é gerado.
 - **Não imprime numeração.** Ela vem do SNCR, e o prescritor ainda não está
   cadastrado.
+
+Cabeçalho/rodapé (Tarefa 29, 30/07/2026, pedido do Rafael): logo da Corvia +
+dados da empresa no canto superior esquerdo, dados completos do profissional
+no canto superior direito, e bloco de assinatura no rodapé (identificação do
+profissional + local/data + campo para assinatura digital ou carimbo). O
+endereço do médico que aparece — residencial ou profissional — é escolha
+feita na hora de emitir, não um padrão fixo (ver `endereco_exibido` em
+`models/receituario.py`/`models/clinical_docs.py`): por isso este módulo
+recebe um `endereco: dict | None` já resolvido pelo chamador, e nunca decide
+sozinho qual dos dois usar.
 """
 from __future__ import annotations
 
 import io
+import logging
 from datetime import datetime
+from pathlib import Path
 from zoneinfo import ZoneInfo
 
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.units import mm
+from reportlab.lib.utils import ImageReader
 from reportlab.pdfgen import canvas
+
+from app.core.config import settings
+from app.services.pdf.marca import LOGO, logo_disponivel
+
+log = logging.getLogger("meucardio.pdf_documento")
 
 FUSO = ZoneInfo("America/Sao_Paulo")
 
@@ -42,39 +60,198 @@ LINHA = (0.80, 0.80, 0.80)
 
 MARGEM = 20 * mm
 LARGURA, ALTURA = A4
+LARGURA_LOGO = 34 * mm
+
+# Dados da empresa que opera a Corvia — fixos, aparecem em todo documento
+# emitido pela plataforma, independente de qual médico emite (é o emissor
+# legal do serviço, não o consultório de cada médico). Fornecidos pelo
+# Rafael em 30/07/2026; nunca editar sem instrução dele.
+EMPRESA = {
+    "razao_social": "Meirelles e Maluf Serviços Médicos e Biomédicos Ltda.",
+    "cnpj": "53.382.596/0001-06",
+    "logradouro": "Av. 11",
+    "numero": "423",
+    "bairro": "Centro",
+    "cidade": "Itapagipe",
+    "uf": "MG",
+    "cep": "38240-000",
+}
 
 
-def _cabecalho(c: canvas.Canvas, medico: dict, titulo: str) -> float:
-    y = ALTURA - MARGEM
-    c.setFillColorRGB(*NAVY)
-    c.setFont("Helvetica-Bold", 15)
-    c.drawString(MARGEM, y, titulo)
+def _endereco_linhas(end: dict) -> list[str]:
+    """Formata um endereço (residencial/profissional do médico, ou o da
+    empresa) em até duas linhas legíveis."""
+    linha1 = end.get("logradouro") or ""
+    if end.get("numero"):
+        linha1 = f"{linha1}, {end['numero']}" if linha1 else end["numero"]
+    if end.get("complemento"):
+        linha1 = f"{linha1} — {end['complemento']}" if linha1 else end["complemento"]
+    if end.get("bairro"):
+        linha1 = f"{linha1} — {end['bairro']}" if linha1 else end["bairro"]
 
-    y -= 7 * mm
-    c.setFillColorRGB(0, 0, 0)
-    c.setFont("Helvetica-Bold", 11)
-    c.drawString(MARGEM, y, medico.get("full_name") or "")
+    partes2 = []
+    if end.get("cidade"):
+        partes2.append(f"{end['cidade']}/{end['uf']}" if end.get("uf") else end["cidade"])
+    if end.get("cep"):
+        partes2.append(f"CEP {end['cep']}")
+    linha2 = " — ".join(partes2)
 
-    y -= 5 * mm
-    c.setFillColorRGB(*CINZA)
-    c.setFont("Helvetica", 9)
-    # Conselho e RQE dão peso ao documento fora da plataforma — é o registro do
-    # especialista, e o médico já o preencheu em Minha Conta.
+    linha3 = f"Tel. {end['telefone']}" if end.get("telefone") else ""
+
+    return [linha for linha in (linha1, linha2, linha3) if linha]
+
+
+def _local(endereco: dict | None) -> str | None:
+    if not endereco or not endereco.get("cidade"):
+        return None
+    return f"{endereco['cidade']}/{endereco['uf']}" if endereco.get("uf") else endereco["cidade"]
+
+
+def resolver_endereco(user, escolha: str | None) -> dict | None:
+    """Resolve o dict de endereço a partir da escolha do médico na hora de
+    emitir ('residencial' | 'profissional' | None) — usado pelos três
+    lugares que montam PDF (emissão de receita, geração de documento a
+    partir de modelo, e o link público que reabre os dois depois).
+    Telefone só entra no endereço profissional: é o único que a Lei
+    9.965/2000 exige, e endereço residencial não tem telefone cadastrado."""
+    if escolha == "residencial":
+        if not user.home_street and not user.home_city:
+            return None
+        return {
+            "logradouro": user.home_street, "numero": user.home_number,
+            "complemento": user.home_complement, "bairro": user.home_neighborhood,
+            "cidade": user.home_city, "uf": user.home_state, "cep": user.home_zip,
+        }
+    if escolha == "profissional":
+        if not user.practice_street and not user.practice_city:
+            return None
+        return {
+            "logradouro": user.practice_street, "numero": user.practice_number,
+            "complemento": user.practice_complement, "bairro": user.practice_neighborhood,
+            "cidade": user.practice_city, "uf": user.practice_state, "cep": user.practice_zip,
+            "telefone": user.practice_phone,
+        }
+    return None
+
+
+def _registro(medico: dict) -> str:
     partes = []
     if medico.get("council_name"):
         partes.append(f"{medico['council_name']}-{medico.get('council_state', '')} "
                       f"{medico.get('council_number', '')}".strip())
     if medico.get("rqe"):
         partes.append(f"RQE {medico['rqe']}")
-    if medico.get("specialty"):
-        partes.append(medico["specialty"])
-    if partes:
-        c.drawString(MARGEM, y, "  ·  ".join(partes))
+    return "  ·  ".join(partes)
 
-    y -= 4 * mm
+
+def _logo(c: canvas.Canvas, x: float, y_topo: float) -> float:
+    """Desenha a logo no canto superior esquerdo e devolve a altura ocupada
+    (0 se o arquivo não existir — ausência de logo não derruba a geração de
+    um documento clínico, só o deixa sem a marca no topo)."""
+    if not logo_disponivel():
+        return 0.0
+    img = ImageReader(str(LOGO))
+    largura_px, altura_px = img.getSize()
+    altura = LARGURA_LOGO * altura_px / largura_px
+    c.drawImage(img, x, y_topo - altura, width=LARGURA_LOGO, height=altura,
+                mask="auto", preserveAspectRatio=True)
+    return altura
+
+
+def _bloco_empresa(c: canvas.Canvas, x: float, y: float) -> float:
+    c.setFillColorRGB(*CINZA)
+    c.setFont("Helvetica-Bold", 7.5)
+    for linha in _quebrar(c, EMPRESA["razao_social"], "Helvetica-Bold", 7.5, 75 * mm):
+        c.drawString(x, y, linha)
+        y -= 3.6 * mm
+    c.setFont("Helvetica", 7.5)
+    c.drawString(x, y, f"CNPJ {EMPRESA['cnpj']}")
+    y -= 3.6 * mm
+    for linha in _endereco_linhas(EMPRESA):
+        c.drawString(x, y, linha)
+        y -= 3.6 * mm
+    return y
+
+
+LARGURA_LOGO_PESSOAL = 24 * mm
+
+
+def _caminho_logo_pessoal(document_logo_url: str | None) -> Path | None:
+    """`document_logo_url` é sempre '/logos/<arquivo>' (ver `POST /api/auth/
+    me/logo`). Resolve pro caminho de disco real — não passa por HTTP,
+    porque quem lê aqui é o próprio processo do backend, no mesmo volume que
+    o Caddy serve pro navegador."""
+    if not document_logo_url or not document_logo_url.startswith("/logos/"):
+        return None
+    nome = document_logo_url.removeprefix("/logos/")
+    caminho = Path(settings.uploads_dir) / "logos" / nome
+    return caminho if caminho.is_file() else None
+
+
+def _logo_pessoal(c: canvas.Canvas, x_direita: float, y: float, medico: dict) -> float:
+    """Logo pessoal/do consultório do médico (Tarefa 29, pedido do Rafael em
+    30/07/2026) — desenhada JUNTO da logo da Corvia, no bloco profissional,
+    não em vez dela. Ausência ou arquivo ilegível não derruba a geração do
+    documento, mesma filosofia da logo da Corvia."""
+    caminho = _caminho_logo_pessoal(medico.get("document_logo_url"))
+    if not caminho:
+        return y
+    try:
+        img = ImageReader(str(caminho))
+        largura_px, altura_px = img.getSize()
+        altura = LARGURA_LOGO_PESSOAL * altura_px / largura_px
+        c.drawImage(img, x_direita - LARGURA_LOGO_PESSOAL, y - altura,
+                    width=LARGURA_LOGO_PESSOAL, height=altura, mask="auto", preserveAspectRatio=True)
+        return y - altura - 3 * mm
+    except OSError:
+        log.warning("Logo pessoal em %s não pôde ser lida — documento seguiu sem ela.", caminho)
+        return y
+
+
+def _bloco_profissional(c: canvas.Canvas, x_direita: float, y: float, medico: dict,
+                        endereco: dict | None) -> float:
+    y = _logo_pessoal(c, x_direita, y, medico)
+
+    c.setFillColorRGB(0, 0, 0)
+    c.setFont("Helvetica-Bold", 10.5)
+    c.drawRightString(x_direita, y, medico.get("full_name") or "")
+    y -= 4.6 * mm
+
+    c.setFont("Helvetica", 8.5)
+    c.setFillColorRGB(*CINZA)
+    if medico.get("specialty"):
+        c.drawRightString(x_direita, y, medico["specialty"])
+        y -= 3.8 * mm
+
+    registro = _registro(medico)
+    if registro:
+        c.drawRightString(x_direita, y, registro)
+        y -= 3.8 * mm
+
+    if endereco:
+        for linha in _endereco_linhas(endereco):
+            c.drawRightString(x_direita, y, linha)
+            y -= 3.6 * mm
+
+    return y
+
+
+def _cabecalho(c: canvas.Canvas, medico: dict, titulo: str, endereco: dict | None = None) -> float:
+    topo = ALTURA - MARGEM
+
+    altura_logo = _logo(c, MARGEM, topo)
+    y_empresa = _bloco_empresa(c, MARGEM, topo - altura_logo - 4 * mm)
+    y_profissional = _bloco_profissional(c, LARGURA - MARGEM, topo, medico, endereco)
+
+    y = min(y_empresa, y_profissional) - 4 * mm
     c.setStrokeColorRGB(*LINHA)
     c.setLineWidth(0.7)
     c.line(MARGEM, y, LARGURA - MARGEM, y)
+    y -= 8 * mm
+
+    c.setFillColorRGB(*NAVY)
+    c.setFont("Helvetica-Bold", 14)
+    c.drawCentredString(LARGURA / 2, y, titulo)
     return y - 9 * mm
 
 
@@ -114,7 +291,7 @@ def _quebrar(c: canvas.Canvas, texto: str, fonte: str, tam: float, largura: floa
 def _itens(c: canvas.Canvas, y: float, itens: list[dict]) -> float:
     util = LARGURA - 2 * MARGEM
     for n, item in enumerate(itens, start=1):
-        if y < 55 * mm:                       # não deixa o item colar no rodapé
+        if y < 62 * mm:                       # não deixa o item colar no rodapé (mais alto desde a Tarefa 29)
             c.showPage()
             y = ALTURA - MARGEM
         c.setFillColorRGB(0, 0, 0)
@@ -135,28 +312,52 @@ def _itens(c: canvas.Canvas, y: float, itens: list[dict]) -> float:
     return y
 
 
-def _rodape(c: canvas.Canvas, medico: dict, via: str | None, aviso: str | None) -> None:
-    y = 40 * mm
+def _rodape(c: canvas.Canvas, medico: dict, endereco: dict | None, via: str | None, aviso: str | None) -> None:
+    """Bloco de assinatura (Tarefa 29): identificação do profissional, local
+    e data, e — algumas linhas abaixo — o campo para assinatura digital ou
+    para carimbo e assinatura manual. Nessa ordem porque foi assim que o
+    Rafael descreveu o pedido, e é a convenção de documento formal
+    brasileiro (identificação primeiro, assinatura por último)."""
+    y = 52 * mm
+
+    c.setFillColorRGB(0, 0, 0)
+    c.setFont("Helvetica-Bold", 9.5)
+    nome = medico.get("full_name") or ""
+    c.drawCentredString(LARGURA / 2, y, f"Dr. {nome}" if nome else "")
+    y -= 4.4 * mm
+
+    c.setFont("Helvetica", 8.5)
+    c.setFillColorRGB(*CINZA)
+    if medico.get("specialty"):
+        c.drawCentredString(LARGURA / 2, y, medico["specialty"])
+        y -= 4 * mm
+
+    registro = _registro(medico)
+    if registro:
+        c.drawCentredString(LARGURA / 2, y, registro)
+        y -= 4 * mm
+
+    local = _local(endereco)
+    data = datetime.now(FUSO).strftime("%d/%m/%Y")
+    c.drawCentredString(LARGURA / 2, y, f"{local}, {data}" if local else data)
+    y -= 10 * mm  # "algumas linhas abaixo", antes do campo de assinatura
+
     c.setStrokeColorRGB(*LINHA)
     c.line(LARGURA / 2 - 35 * mm, y, LARGURA / 2 + 35 * mm, y)
-    c.setFillColorRGB(*CINZA)
-    c.setFont("Helvetica", 8.5)
-    c.drawCentredString(LARGURA / 2, y - 5 * mm, medico.get("full_name") or "")
-    c.drawCentredString(LARGURA / 2, y - 9.5 * mm,
-                        "Assinatura do prescritor")
-
     c.setFont("Helvetica", 7.5)
-    c.drawString(MARGEM, 22 * mm,
-                 datetime.now(FUSO).strftime("Emitido em %d/%m/%Y às %H:%M"))
+    c.setFillColorRGB(*CINZA)
+    c.drawCentredString(LARGURA / 2, y - 4 * mm, "Assinatura digital ou carimbo e assinatura do profissional")
+
     if via:
-        c.drawRightString(LARGURA - MARGEM, 22 * mm, via)
+        c.setFont("Helvetica", 7.5)
+        c.drawRightString(LARGURA - MARGEM, 10 * mm, via)
     if aviso:
         c.setFillColorRGB(0.55, 0.15, 0.15)
         c.setFont("Helvetica-Bold", 7.5)
-        c.drawString(MARGEM, 16 * mm, aviso)
+        c.drawString(MARGEM, 6 * mm, aviso)
 
 
-def documento_generico(titulo: str, corpo: str, medico: dict) -> bytes:
+def documento_generico(titulo: str, corpo: str, medico: dict, endereco: dict | None = None) -> bytes:
     """PDF de atestado/laudo gerado a partir de `DocumentTemplate` (Tarefa 29).
 
     Ao contrário do receituário, o corpo já chega pronto — as variáveis
@@ -168,7 +369,7 @@ def documento_generico(titulo: str, corpo: str, medico: dict) -> bytes:
     c = canvas.Canvas(buf, pagesize=A4)
     c.setTitle(titulo)
 
-    y = _cabecalho(c, medico, titulo)
+    y = _cabecalho(c, medico, titulo, endereco)
 
     util = LARGURA - 2 * MARGEM
     c.setFillColorRGB(0, 0, 0)
@@ -177,21 +378,21 @@ def documento_generico(titulo: str, corpo: str, medico: dict) -> bytes:
         if not paragrafo.strip():
             y -= 4 * mm
             continue
-        if y < 55 * mm:
+        if y < 62 * mm:
             c.showPage()
             y = ALTURA - MARGEM
         for linha in _quebrar(c, paragrafo, "Helvetica", 10.5, util):
             c.drawString(MARGEM, y, linha)
             y -= 5 * mm
 
-    _rodape(c, medico, None, "Documento sem assinatura digital — requer assinatura do emissor.")
+    _rodape(c, medico, endereco, None, "Documento sem assinatura digital — requer assinatura do emissor.")
     c.showPage()
     c.save()
     return buf.getvalue()
 
 
 def receituario_comum(destinatario: dict, itens: list[dict], medico: dict,
-                      observacoes: str = "") -> bytes:
+                      observacoes: str = "", endereco: dict | None = None) -> bytes:
     """Receituário comum, uma via. Retorna os bytes do PDF.
 
     O aviso de rodapé é deliberado e não deve ser removido enquanto a assinatura
@@ -202,7 +403,7 @@ def receituario_comum(destinatario: dict, itens: list[dict], medico: dict,
     c = canvas.Canvas(buf, pagesize=A4)
     c.setTitle("Receituário")
 
-    y = _cabecalho(c, medico, "Receituário")
+    y = _cabecalho(c, medico, "Receituário", endereco)
     y = _bloco_paciente(c, y, destinatario)
     y = _itens(c, y, itens)
 
@@ -218,7 +419,7 @@ def receituario_comum(destinatario: dict, itens: list[dict], medico: dict,
             c.drawString(MARGEM, y, linha)
             y -= 4.6 * mm
 
-    _rodape(c, medico, None,
+    _rodape(c, medico, endereco, None,
             "Documento sem assinatura digital — requer assinatura do prescritor.")
     c.showPage()
     c.save()

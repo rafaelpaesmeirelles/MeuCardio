@@ -67,6 +67,10 @@ class GeneratedDocument(Base):
     # própria aqui porque este documento já não tem paciente identificável
     # em nenhum outro campo (`patient_id` aponta pro Patient anonimizado).
     destinatario_email_cifrado: Mapped[bytes | None] = mapped_column(LargeBinary, nullable=True)
+    # Acrescentado em 30/07/2026 (Tarefa 29 — letterhead). Mesma lógica do
+    # campo homônimo em PrescriptionDocument: gravado na geração, não
+    # recalculado depois, para o PDF sair idêntico toda vez que for reaberto.
+    endereco_exibido: Mapped[str | None] = mapped_column(String(20), nullable=True)
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
     )

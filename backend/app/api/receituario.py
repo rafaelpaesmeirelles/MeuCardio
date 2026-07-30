@@ -202,7 +202,14 @@ def criar(dados: ReceituarioIn, db: Session = Depends(get_db), user=Depends(curr
         doc = PrescriptionDocument(
             prescription_id=presc.id, tipo_codigo=plano.tipo,
             itens=[{"descricao": i.descricao, "substancia": i.substancia,
-                    "apresentacao": i.apresentacao, "posologia": i.posologia}
+                    "apresentacao": i.apresentacao, "posologia": i.posologia,
+                    # `lista` (ex.: "C5") não é usado hoje — a emissão de RCE
+                    # continua bloqueada — mas é dado que já existe em
+                    # `ItemClassificado` sem custo de consulta extra, e vai
+                    # ser exatamente o que a Lei 9.965/2000 (anabolizantes)
+                    # precisa pra saber quando exigir CPF/telefone/CID do
+                    # prescritor. Ver CLAUDE.md/DESENHO.md.
+                    "lista": i.lista}
                    for i in plano.itens],
             pendencias=plano.pendencias, fonte_versao_listas=versao,
         )
@@ -283,8 +290,17 @@ def revisar(documento_id: int, dados: RevisaoIn, db: Session = Depends(get_db),
     return _doc_json(doc, _tipos(db).get(doc.tipo_codigo))
 
 
+class EmitirIn(BaseModel):
+    # 'residencial' | 'profissional' | None (nenhum endereço no PDF) —
+    # escolha do médico a cada emissão (Tarefa 29, decisão do Rafael em
+    # 30/07/2026: privacidade, nem todo médico quer endereço de casa
+    # impresso num papel que o paciente leva embora).
+    endereco: str | None = None
+
+
 @router.post("/documentos/{documento_id}/emitir")
-def emitir(documento_id: int, db: Session = Depends(get_db), user=Depends(current_user)):
+def emitir(documento_id: int, dados: EmitirIn = EmitirIn(), db: Session = Depends(get_db),
+          user=Depends(current_user)):
     """Recusa e explica, em vez de simular.
 
     Emitir exige três coisas que ainda não existem: o tipo ligado, a numeração
@@ -328,7 +344,10 @@ def emitir(documento_id: int, db: Session = Depends(get_db), user=Depends(curren
                       "produziria documento inválido com aparência de válido.",
         })
 
-    from app.services.pdf_documento import receituario_comum
+    if dados.endereco not in (None, "residencial", "profissional"):
+        raise HTTPException(status_code=422, detail="endereco precisa ser 'residencial', 'profissional' ou omitido.")
+
+    from app.services.pdf_documento import receituario_comum, resolver_endereco
 
     dest = db.query(PrescriptionRecipient).filter(
         PrescriptionRecipient.prescription_id == presc.id).first()
@@ -338,15 +357,19 @@ def emitir(documento_id: int, db: Session = Depends(get_db), user=Depends(curren
         if dest.endereco_cifrado:
             destinatario["endereco"] = cofre.decifrar_campo(dest.endereco_cifrado, presc.id)
 
+    endereco_medico = resolver_endereco(user, dados.endereco)
     pdf = receituario_comum(
         destinatario=destinatario, itens=doc.itens, observacoes=presc.notes or "",
         medico={"full_name": user.full_name, "council_name": user.council_name,
                 "council_number": user.council_number, "council_state": user.council_state,
-                "rqe": user.rqe, "specialty": user.specialty},
+                "rqe": user.rqe, "specialty": user.specialty,
+                "document_logo_url": user.document_logo_url},
+        endereco=endereco_medico,
     )
 
     doc.status = "emitido"
     doc.emitido_em = datetime.now(timezone.utc)
+    doc.endereco_exibido = dados.endereco if endereco_medico else None
     db.add(AuditLog(user_id=user.id, action="emitir_documento_receita",
                     entity="prescription_document", entity_id=str(doc.id),
                     detail={"tipo": doc.tipo_codigo, "bytes": len(pdf)}))

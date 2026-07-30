@@ -42,12 +42,20 @@ def normalizar(nome: str) -> str:
 @dataclass
 class ItemPrescrito:
     """O que o médico escolheu. `substancia` vem da base estruturada de
-    medicamentos — nunca do que ele digitou livremente."""
+    medicamentos — nunca do que ele digitou livremente.
+
+    `lista` nasce vazia (o médico não escolhe lista) e é preenchida por
+    `classificar()`, na hora de agrupar por `DocumentoPlanejado` — é o único
+    lugar em que a lista da substância (ex.: "C5") fica associada ao item
+    depois do agrupamento, e sem ela `app/api/receituario.py` não teria como
+    saber, ao montar o snapshot de `PrescriptionDocument.itens`, quais itens
+    de uma Receita de Controle Especial são anabolizantes (Lei 9.965/2000)."""
     descricao: str
     substancia: str | None = None
     apresentacao: str | None = None
     quantidade: str | None = None
     posologia: str | None = None
+    lista: str | None = None
 
 
 @dataclass
@@ -210,6 +218,7 @@ def classificar(
         # Item indecidível não entra em documento nenhum: entra como pendência
         # do documento comum, para o médico resolver antes de emitir.
         tipo = c.tipo or TIPO_COMUM
+        c.item.lista = c.lista
         doc = por_tipo.setdefault(tipo, DocumentoPlanejado(tipo=tipo, itens=[]))
         doc.itens.append(c.item)
         if c.pendencia:

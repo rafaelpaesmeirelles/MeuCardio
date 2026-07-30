@@ -30,6 +30,7 @@ function GerarDocumento({ template, onFechar, onGerado }: {
 }) {
   const variaveis = variaveisDoModelo(template.body);
   const [valores, setValores] = useState<Record<string, string>>({});
+  const [endereco, setEndereco] = useState<"" | "residencial" | "profissional">("");
   const [gerando, setGerando] = useState(false);
   const [erro, setErro] = useState("");
   const [geradoId, setGeradoId] = useState<number | null>(null);
@@ -44,7 +45,7 @@ function GerarDocumento({ template, onFechar, onGerado }: {
     setErro("");
     try {
       const r = await api.post<{ id: number }>("/document-templates/gerar", {
-        template_id: template.id, variables: valores,
+        template_id: template.id, variables: valores, endereco: endereco || null,
       });
       setGeradoId(r.id);
       onGerado();
@@ -94,6 +95,14 @@ function GerarDocumento({ template, onFechar, onGerado }: {
               <input value={valores[v] ?? ""} onChange={(e) => setValores({ ...valores, [v]: e.target.value })} />
             </div>
           ))}
+          <div style={{ marginTop: "0.6rem" }}>
+            <label>Endereço no cabeçalho/rodapé (opcional)</label>
+            <select value={endereco} onChange={(e) => setEndereco(e.target.value as typeof endereco)}>
+              <option value="">Nenhum</option>
+              <option value="profissional">Profissional (consultório)</option>
+              <option value="residencial">Residencial</option>
+            </select>
+          </div>
           {erro && <p role="alert" style={{ color: "var(--alerta)", fontSize: "0.86rem" }}>{erro}</p>}
           <div style={{ display: "flex", gap: 8, marginTop: "0.8rem" }}>
             <button className="botao" onClick={gerar} disabled={gerando || faltando.length > 0}>

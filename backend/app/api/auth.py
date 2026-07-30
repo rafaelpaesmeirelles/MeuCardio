@@ -65,6 +65,16 @@ def _perfil(user: User) -> dict:
         "cpf_mascarado": _cpf_mascarado(user.cpf),
         "birth_date": user.birth_date,
         "created_at": user.created_at,
+        # Endereços completos (Tarefa 29) — usados no cabeçalho/rodapé de
+        # receita e documento, à escolha do médico na hora de emitir.
+        "home_street": user.home_street, "home_number": user.home_number,
+        "home_complement": user.home_complement, "home_neighborhood": user.home_neighborhood,
+        "home_city": user.home_city, "home_state": user.home_state, "home_zip": user.home_zip,
+        "practice_street": user.practice_street, "practice_number": user.practice_number,
+        "practice_complement": user.practice_complement, "practice_neighborhood": user.practice_neighborhood,
+        "practice_city": user.practice_city, "practice_state": user.practice_state,
+        "practice_zip": user.practice_zip, "practice_phone": user.practice_phone,
+        "document_logo_url": user.document_logo_url,
     }
 
 
@@ -86,6 +96,27 @@ class DadosPessoais(BaseModel):
     specialty: str | None = None
     rqe: str | None = None
 
+    # Endereços completos (Tarefa 29) — residencial e profissional, os dois
+    # opcionais. `practice_phone` é exigido por lei para receita de
+    # anabolizantes (Lei nº 9.965/2000); os demais servem para o
+    # cabeçalho/rodapé de qualquer receita ou documento, à escolha do médico.
+    home_street: str | None = None
+    home_number: str | None = None
+    home_complement: str | None = None
+    home_neighborhood: str | None = None
+    home_city: str | None = None
+    home_state: str | None = None
+    home_zip: str | None = None
+
+    practice_street: str | None = None
+    practice_number: str | None = None
+    practice_complement: str | None = None
+    practice_neighborhood: str | None = None
+    practice_city: str | None = None
+    practice_state: str | None = None
+    practice_zip: str | None = None
+    practice_phone: str | None = None
+
     @field_validator("full_name")
     @classmethod
     def _nome(cls, v: str) -> str:
@@ -93,14 +124,14 @@ class DadosPessoais(BaseModel):
             raise ValueError("Informe nome completo.")
         return v.strip()
 
-    @field_validator("council_state")
+    @field_validator("council_state", "home_state", "practice_state")
     @classmethod
     def _uf(cls, v: str | None) -> str | None:
         if v is None or not v.strip():
             return None
         v = v.strip().upper()
         if v not in UFS:
-            raise ValueError("Estado do conselho inválido — use a sigla (ex.: SP).")
+            raise ValueError("Estado inválido — use a sigla (ex.: SP).")
         return v
 
 
@@ -114,6 +145,24 @@ def atualizar_me(dados: DadosPessoais, db: Session = Depends(get_db),
     user.council_state = dados.council_state
     user.specialty = (dados.specialty or "").strip() or None
     user.rqe = (dados.rqe or "").strip() or None
+
+    user.home_street = (dados.home_street or "").strip() or None
+    user.home_number = (dados.home_number or "").strip() or None
+    user.home_complement = (dados.home_complement or "").strip() or None
+    user.home_neighborhood = (dados.home_neighborhood or "").strip() or None
+    user.home_city = (dados.home_city or "").strip() or None
+    user.home_state = dados.home_state
+    user.home_zip = (dados.home_zip or "").strip() or None
+
+    user.practice_street = (dados.practice_street or "").strip() or None
+    user.practice_number = (dados.practice_number or "").strip() or None
+    user.practice_complement = (dados.practice_complement or "").strip() or None
+    user.practice_neighborhood = (dados.practice_neighborhood or "").strip() or None
+    user.practice_city = (dados.practice_city or "").strip() or None
+    user.practice_state = dados.practice_state
+    user.practice_zip = (dados.practice_zip or "").strip() or None
+    user.practice_phone = (dados.practice_phone or "").strip() or None
+
     db.commit()
     db.refresh(user)
     return _perfil(user)
@@ -178,6 +227,50 @@ def remover_foto(db: Session = Depends(get_db), user: User = Depends(current_use
     for antigo in destino.glob(f"{user.id}-*"):
         antigo.unlink(missing_ok=True)
     user.photo_url = None
+    db.commit()
+    db.refresh(user)
+    return _perfil(user)
+
+
+# --- logo pessoal/do consultório, para receita e documento (Tarefa 29) -----
+# Mesmo padrão de validação e armazenamento da foto de perfil acima — conceito
+# diferente (vai impresso no papel timbrado, não aparece na interface).
+@router.post("/me/logo")
+async def enviar_logo(
+    arquivo: UploadFile = File(...),
+    db: Session = Depends(get_db),
+    user: User = Depends(current_user),
+):
+    conteudo = await arquivo.read(TAMANHO_MAXIMO + 1)
+    if len(conteudo) > TAMANHO_MAXIMO:
+        raise HTTPException(status_code=413, detail="A imagem precisa ter no máximo 3 MB.")
+    if not conteudo:
+        raise HTTPException(status_code=422, detail="Arquivo vazio.")
+
+    extensao = _extensao_valida(conteudo)
+    if extensao is None:
+        raise HTTPException(status_code=422, detail="Envie uma imagem JPEG, PNG ou WEBP.")
+
+    destino = Path(settings.uploads_dir) / "logos"
+    destino.mkdir(parents=True, exist_ok=True)
+
+    for antigo in destino.glob(f"{user.id}-*"):
+        antigo.unlink(missing_ok=True)
+    nome = f"{user.id}-{secrets.token_hex(4)}{extensao}"
+    (destino / nome).write_bytes(conteudo)
+
+    user.document_logo_url = f"/logos/{nome}"
+    db.commit()
+    db.refresh(user)
+    return _perfil(user)
+
+
+@router.delete("/me/logo")
+def remover_logo(db: Session = Depends(get_db), user: User = Depends(current_user)):
+    destino = Path(settings.uploads_dir) / "logos"
+    for antigo in destino.glob(f"{user.id}-*"):
+        antigo.unlink(missing_ok=True)
+    user.document_logo_url = None
     db.commit()
     db.refresh(user)
     return _perfil(user)

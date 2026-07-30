@@ -33,6 +33,14 @@
 		header Cache-Control "public, max-age=300"
 	}
 
+	# Logo pessoal do médico (Tarefa 29), usado no cabeçalho de receita e
+	# documento além da logo da Corvia — mesmo padrão de /fotos acima.
+	handle_path /logos/* {
+		root * /uploads/logos
+		file_server
+		header Cache-Control "public, max-age=300"
+	}
+
 	# PWA: arquivos estáticos, com fallback para index.html (rotas do React Router)
 	handle {
 		root * /site

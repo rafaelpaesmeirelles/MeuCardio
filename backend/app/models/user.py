@@ -29,6 +29,42 @@ class User(Base):
     rqe: Mapped[str | None] = mapped_column(String(40), nullable=True)  # registro de qualificação de especialista
     photo_url: Mapped[str | None] = mapped_column(String(255), nullable=True)
     crm: Mapped[str | None] = mapped_column(String(40), nullable=True)  # mantido por compatibilidade
+    # Logo pessoal/do consultório do médico (Tarefa 29, pedido do Rafael em
+    # 30/07/2026) — usado JUNTO da logo da Corvia no cabeçalho de receita e
+    # documento, não em vez dela. Mesmo padrão de armazenamento de `photo_url`
+    # (volume /uploads, servido pelo Caddy em /logos/*), mas endpoint e pasta
+    # próprios: são conceitos diferentes (foto de perfil da conta x logo que
+    # vai impresso no papel timbrado).
+    document_logo_url: Mapped[str | None] = mapped_column(String(255), nullable=True)
+
+    # --- endereços, acrescentados em 30/07/2026 (Tarefa 29) -------------------
+    # Dois endereços completos, não um: decisão do Rafael foi deixar o médico
+    # escolher, a cada receita/documento emitido, se o cabeçalho/rodapé mostra
+    # o residencial ou o profissional (privacidade — nem todo médico quer o
+    # endereço de casa impresso num papel que o paciente leva embora). Os dois
+    # nascem vazios; nada aparece no PDF até o médico preencher em Minha Conta
+    # e escolher qual usar na hora de emitir.
+    home_street: Mapped[str | None] = mapped_column(String(200), nullable=True)
+    home_number: Mapped[str | None] = mapped_column(String(20), nullable=True)
+    home_complement: Mapped[str | None] = mapped_column(String(100), nullable=True)
+    home_neighborhood: Mapped[str | None] = mapped_column(String(100), nullable=True)
+    home_city: Mapped[str | None] = mapped_column(String(120), nullable=True)
+    home_state: Mapped[str | None] = mapped_column(String(2), nullable=True)
+    home_zip: Mapped[str | None] = mapped_column(String(10), nullable=True)
+
+    practice_street: Mapped[str | None] = mapped_column(String(200), nullable=True)
+    practice_number: Mapped[str | None] = mapped_column(String(20), nullable=True)
+    practice_complement: Mapped[str | None] = mapped_column(String(100), nullable=True)
+    practice_neighborhood: Mapped[str | None] = mapped_column(String(100), nullable=True)
+    practice_city: Mapped[str | None] = mapped_column(String(120), nullable=True)
+    practice_state: Mapped[str | None] = mapped_column(String(2), nullable=True)
+    practice_zip: Mapped[str | None] = mapped_column(String(10), nullable=True)
+    # Exigido por lei especificamente para receita de anabolizantes/hormônios
+    # (Lei nº 9.965/2000, art. 1º, parágrafo único: "...o endereço e telefone
+    # profissionais..."), verificado direto na fonte em 30/07/2026. Só o
+    # profissional — a lei não menciona telefone residencial, e não há
+    # necessidade de guardar um.
+    practice_phone: Mapped[str | None] = mapped_column(String(20), nullable=True)
 
     # --- fila de aprovação -----------------------------------------------
     status: Mapped[str] = mapped_column(String(20), default="aprovado")
