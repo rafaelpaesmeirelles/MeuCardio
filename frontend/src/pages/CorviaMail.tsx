@@ -367,27 +367,25 @@ export default function CorviaMail() {
   }
 
   return (
-    <div className="login">
-      <div className="login__cartao">
-        <div className="login__brasao">
-          <LogoCorviaMail />
-        </div>
-
-        <div style={{ display: "flex", gap: 6, justifyContent: "center", marginTop: "0.6rem" }}>
-          <button className={aba === "entrar" ? "botao" : "botao botao--secundario"}
-                  style={{ flex: 1 }} onClick={() => setAba("entrar")}>Entrar</button>
-          <button className={aba === "esqueci" ? "botao" : "botao botao--secundario"}
-                  style={{ flex: 1 }} onClick={() => setAba("esqueci")}>Esqueci a senha</button>
-          <button className={aba === "assinar" ? "botao" : "botao botao--secundario"}
-                  style={{ flex: 1 }} onClick={() => setAba("assinar")}>Assine já</button>
-        </div>
-
-        {aba === "entrar" && <AbaEntrar />}
-        {aba === "esqueci" && <AbaEsqueciSenha />}
-        {aba === "assinar" && <AbaAssinar />}
-
-        <Credito compacto />
+    <div className="pagina" style={{ maxWidth: "560px" }}>
+      <div style={{ marginBottom: "1rem" }}>
+        <LogoCorviaMail tamanho="compacto" />
       </div>
+
+      <div style={{ display: "flex", gap: 6 }}>
+        <button className={aba === "entrar" ? "botao" : "botao botao--secundario"}
+                style={{ flex: 1 }} onClick={() => setAba("entrar")}>Entrar</button>
+        <button className={aba === "esqueci" ? "botao" : "botao botao--secundario"}
+                style={{ flex: 1 }} onClick={() => setAba("esqueci")}>Esqueci a senha</button>
+        <button className={aba === "assinar" ? "botao" : "botao botao--secundario"}
+                style={{ flex: 1 }} onClick={() => setAba("assinar")}>Assine já</button>
+      </div>
+
+      {aba === "entrar" && <AbaEntrar />}
+      {aba === "esqueci" && <AbaEsqueciSenha />}
+      {aba === "assinar" && <AbaAssinar />}
+
+      <Credito compacto />
     </div>
   );
 }
