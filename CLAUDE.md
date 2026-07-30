@@ -130,7 +130,12 @@ Regras que decorrem disso:
 >   ECG de STEMI de parede anterior extensa (domínio público,
 >   `galeria/ecg/stemi-anterior-extenso.jpg`) e traçado hemodinâmico de gradiente pressórico
 >   na estenose aórtica (CC BY-SA 2.0, primeira imagem da pasta nova `galeria/hemodinamica/`,
->   `estenose-aortica-gradiente-pressorico-ve-aorta.png`).
+>   `estenose-aortica-gradiente-pressorico-ve-aorta.png`); mais três entradas novas em
+>   `evidencias/metadados.json` fechando o empate de cobertura em Cardiopatias congênitas,
+>   Síncope e Perioperatório (reparo de coartação de aorta, marca-passo em síncope com
+>   bloqueio de ramo e EEF/ILR positivo, BNP/NT-proBNP pré-operatório); e duas entradas novas
+>   em `estudos/metadados.json` (CORP-2, Pericárdio; ARREST, Endocardite) — commits até
+>   `5013bac`.
 >
 > **Uma entrada NÃO deve ser publicada com o resto, apesar da aprovação geral**: em
 > `evidencias/metadados.json`, o registro
