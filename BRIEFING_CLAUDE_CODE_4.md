@@ -554,3 +554,135 @@ Postgres 16 real nesta própria sessão (`apt-get install postgresql-16-pgvector
    pra recuperação da conta principal (`GET /api/auth/reset-pendentes`).
 5. **Nenhum teste automatizado foi commitado** — a validação desta sessão
    foi um script manual, descartado ao final (não faz parte do repositório).
+
+---
+
+## Tarefa 29 — Unir CorvIA Mail à emissão de receita e documento (30/07/2026)
+
+Pedido do Rafael: emitir receita e/ou atestado/laudo com opção de mandar por
+e-mail ao paciente, escolhendo entre o CorvIA Mail do médico ou o e-mail
+pessoal de cadastro dele.
+
+### Dois achados que mudaram o desenho antes de escrever código
+
+1. **A escolha "CorvIA Mail ou e-mail pessoal" colidia com o termo LGPD que
+   o próprio Rafael tinha acabado de aprovar** (item 14b do CLAUDE.md): a
+   caixa do CorvIA Mail proíbe explicitamente "nome, CPF ou qualquer dado
+   que identifique um paciente em conjunto com informação clínica" — e
+   receita/atestado é exatamente isso. Rafael escolheu **não anexar o PDF a
+   e-mail nenhum**: o paciente recebe um LINK seguro, o conteúdo clínico
+   nunca passa pela Zoho. Isso também resolveu sozinho a pergunta do "e-mail
+   pessoal": como só um LINK viaja (sem conteúdo clínico), o envio da
+   notificação é sempre pelo SMTP da própria Corvia
+   (`services/notificar.tentar_enviar_email`, o mesmo da recuperação de
+   senha) — nunca pela Zoho, então "CorvIA Mail ou e-mail pessoal" deixou de
+   ser uma escolha técnica que o médico precisa fazer.
+2. **Não existia NENHUMA tela de emissão** — nem de receituário (nem o
+   sistema legado `prescriptions.py`, nem o novo regulatório da Tarefa 27),
+   nem de "gerar documento" a partir de modelo (`Templates.tsx` só geria
+   modelo, o passo de preencher e gerar nunca tinha frontend). Perguntei ao
+   Rafael antes de seguir; ele pediu para construir as duas telas completas
+   nesta rodada, não só o botão de e-mail.
+
+### O que foi construído
+
+**Zoho Mail360 ganhou suporte a anexo** (pedido à parte do Rafael, para o
+webmail em geral — não para receita, que vai por link): confirmado o
+formato exato direto na documentação oficial
+(`zoho.com/mail360/help/api/upload-attachment.html` e
+`.../sending-email-messages.html`, ambas lidas nesta sessão): upload é
+POST separado (`/accounts/{key}/attachments?fileName=...`, corpo é o
+binário puro, resposta traz `data.fileId`), e o envio referencia esse
+`fileId` num array `attachments`. `mail360.py` ganhou `upload_anexo()` e
+`enviar_mensagem()` passou a aceitar `anexos`. `POST /api/email/mensagens/
+anexos` (multipart, limite 15 MB) + `NovaMensagem.anexos` no schema.
+`CaixaDeEmail.tsx` ganhou input de arquivo no compose.
+
+**Banco** — migração `425d4a2318d7`, encadeada depois de `b55dd7126ced`:
+- `prescription_recipients.email_cifrado` — mesmo padrão de cifra de
+  nome/endereço/documento (AES-256-GCM, `cofre.cifrar_campo`).
+- `generated_documents.destinatario_email_cifrado` — idem, para
+  atestado/laudo (que não tinha nenhuma entidade de destinatário
+  identificável antes).
+- Tabela nova `document_share_links` (modelo em `app/models/
+  compartilhamento.py`, arquivo próprio — não é conceito de receituário,
+  é infraestrutura compartilhada entre os dois fluxos): token de 32 bytes
+  (mesmo gerador do `password_reset_tokens`), `tipo`/`referencia_id` no
+  mesmo padrão genérico do `AuditLog.entity`/`entity_id`, validade de 7
+  dias, **não é uso único** (só a validade controla acesso — um paciente
+  pode querer abrir o PDF mais de uma vez, em aparelhos diferentes).
+
+**PDF de atestado/laudo, do zero** — `pdf_documento.documento_generico()`,
+reaproveitando o cabeçalho/rodapé do receituário comum (mesma identidade
+visual). O receituário comum já tinha PDF (`receituario_comum`, decidido em
+29/07/2026 — o CLAUDE.md/briefing anterior estava desatualizado ao dizer
+que "não existe geração de PDF no sistema").
+
+**Rotas novas:**
+- `POST /api/receituario/documentos/{id}/enviar-email` — só funciona com
+  documento já `emitido` (ou seja, só tipo `COMUM` hoje; os demais
+  continuam bloqueados por HTTP 501 esperando SNCR/assinatura, sem
+  mudança). Cifra e grava o e-mail, cria o `DocumentShareLink`, manda a
+  notificação. Se o SMTP não estiver configurado, devolve o link em vez de
+  só erro — mesma filosofia do `esqueci_senha`, mas aqui é o próprio médico
+  quem tem autoridade sobre o dado do paciente dele, não um admin.
+- `GET/POST /api/document-templates/gerados`, `.../{id}`, `.../{id}/pdf`,
+  `.../{id}/enviar-email` — o CRUD de "documento gerado" que faltava
+  inteiro (só existia `POST /gerar`, sem listar nem baixar PDF).
+- `GET /api/documentos-publicos/{token}` — **rota pública, sem
+  autenticação nenhuma**, registrada em `ROUTERS_LIVRES` com comentário
+  explicando por quê: quem acessa é o paciente, que nunca terá conta na
+  Corvia. A única defesa é o token de alta entropia. Gera o PDF na hora
+  (não guarda cópia em disco), confere expiração, e no caso da receita
+  reconfirma `status == "emitido"` (não confia só no que valia quando o
+  link foi criado).
+
+**Bug pego e corrigido durante a implementação**: `GET /gerados/{id}/pdf`
+inicialmente montava o cabeçalho do PDF com o médico que está BAIXANDO,
+não o que EMITIU — um admin abrindo o documento de outro médico apareceria
+como se fosse o autor. Corrigido buscando `User` por `g.created_by`.
+Análoga: `enviar_email_gerado` propositalmente **não** usa o mesmo
+`_obter_gerado` que permite acesso de admin — mandar e-mail a um paciente
+em nome de outro médico não é ação que um admin deva poder disparar, só
+visualizar é.
+
+**Frontend, as duas telas que não existiam:**
+- `Receituario.tsx` (nova, rota `/receituario`, menu "Emitir receita"):
+  formulário de destinatário + itens (busca de fármaco em `/drugs`,
+  mesmo padrão de carregar lista inteira e filtrar no cliente já usado em
+  `Interacoes.tsx`) + prévia de classificação + criar + por documento:
+  revisar, emitir (baixa PDF via `api.blob`), enviar por e-mail.
+- `Templates.tsx`, estendida: botão "Usar" em cada modelo abre formulário
+  de variáveis (extraídas do próprio corpo do modelo via regex, no
+  cliente) → gerar → baixar PDF / enviar por e-mail. Nova seção
+  "Documentos gerados" lista o histórico.
+
+**Achado à parte, não corrigido (fora do escopo desta tarefa)**: dois
+call sites existentes de `api.blob()` (`Curso.tsx`, `MaterialPaciente.tsx`)
+passam o caminho com prefixo `/api/...` duplicado (`BASE` já é `/api`),
+inconsistente com o terceiro uso (`Telediagnostico.tsx`, sem o prefixo) e
+com todo o resto do `api.get`/`post`. Parece bug latente pré-existente;
+meu código novo usa o padrão sem prefixo duplicado, consistente com a
+maioria.
+
+### Validado nesta sessão, contra Postgres real
+
+Cadeia de migrações completa (`alembic upgrade head`, mais uma vez com
+`postgresql-16-pgvector` instalado localmente para o teste). Teste
+funcional de ponta a ponta com `TestClient`, 14 verificações: criar
+receituário → revisar → emitir (PDF real, ReportLab instalado para o
+teste) → enviar-email (SMTP não configurado → devolve link) → baixar pelo
+link público → link expirado devolve 410 → mesmo fluxo completo para
+atestado (template → gerar → listar → PDF → enviar-email → baixar pelo
+link) → token inexistente devolve 404. `npx tsc -b --noEmit` e `npm run
+build` sem erro nas duas vezes que rodei (antes e depois de ligar as rotas
+no `App.tsx`/`Shell.tsx`).
+
+### O que falta para publicar
+
+1. **Migração `425d4a2318d7` ainda não rodou em produção.**
+2. **Nenhum teste real do upload de anexo do Mail360** — mesma ressalva de
+   sempre: sem credencial de parceiro, o formato foi confirmado só contra a
+   documentação pública, não contra uma chamada de verdade.
+3. Publicação de conteúdo não se aplica aqui (é código, não `content/`),
+   mas rebuild pede confirmação do Rafael, como sempre.
