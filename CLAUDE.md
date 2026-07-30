@@ -189,8 +189,10 @@ Regras que decorrem disso:
 >   galeria cada, nenhum mais fraco que o outro**; mais duas entradas novas em
 >   `evidencias/metadados.json` (critério de OH confirmada vs. provável, Síncope; troca
 >   valvar aórtica antes de cirurgia eletiva, Perioperatório), ambas com referência cruzada
->   aos documentos de texto já escritos nesta sessão para os mesmos temas — commits até
->   `808e16a`.
+>   aos documentos de texto já escritos nesta sessão para os mesmos temas; e mais um
+>   documento novo em `content/Valvopatias/` (escolha de prótese valvar mecânica vs.
+>   biológica, cortes de idade e tabela de alvo de INR por tipo/posição, ESC/EACTS 2025) —
+>   commits até `ed58f78`.
 >
 > **Uma entrada NÃO deve ser publicada com o resto, apesar da aprovação geral**: em
 > `evidencias/metadados.json`, o registro
