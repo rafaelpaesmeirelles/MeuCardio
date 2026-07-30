@@ -64,6 +64,74 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### ⏸️ PAUSADA a pedido do Rafael em 30/07/2026, à noite — sessão da Biblioteca, aguardando nova orientação
+> Registrado no momento exato da pausa, para retomada sem perda de contexto. Esta sessão
+> específica rodou inteira via **Claude Code Remote**, num container isolado **sem acesso ao
+> Docker de produção nem ao `.env`** — confirmado de novo agora (`docker ps` falha por
+> ausência do daemon; `.env` não existe neste container). **Não publicou nada sozinha, nas
+> três vezes em que tentou nesta sessão** — só o Rafael, ou uma sessão com acesso real ao
+> servidor (terminal SSH), pode rodar os comandos de importação/publicação abaixo.
+>
+> **O que esta sessão fez, do início ao fim, medido agora**:
+> - Revisão de backlog: ~20 documentos de `content/` corrigidos (`pendente_revisao` →
+>   `revisado`) nos 10 temas da Biblioteca, com defeitos reais encontrados e corrigidos (não
+>   só citação — números errados, contraindicação invertida, atribuição errada de fonte;
+>   detalhe completo nos commits `b45bfd3` a `99d0a15`).
+> - **7 documentos novos** em `content/`: estenose mitral, NBTE/endocardite trombótica não
+>   bacteriana, diagnóstico/risco/biópsia de miocardite, RM em portador de marca-passo/CDI
+>   (registro MagnaSafe), doença renovascular, anomalia de Ebstein, coreia de Sydenham
+>   (commits `4e63518` a `689a22c`) — mais **5 documentos novos** depois: MINOCA/SCAD,
+>   hipotensão ortostática e POTS, valvopatia e cirurgia não cardíaca, estenose de carótida,
+>   escolha de prótese valvar e alvo de INR, estenose pulmonar (commits `1ce00fe` a
+>   `9a6f1bb`) — **12 documentos novos ao todo**.
+> - **estudos/metadados.json**: de 53 para 75 registros (+22) — FAME 2, RESPECT, POISE-2
+>   aspirina, AIRTRIP, SEQUOIA-HCM, daptomicina, midodrina, revisão sistemática de coreia de
+>   Sydenham, CORAL, CORP-2, ARREST, entre outros.
+> - **exames/metadados.json**: de 40 para 60 registros (+20) — sequenciamento de rRNA
+>   16S/18S, cintilografia SPECT-MPI, planimetria de área valvar mitral, eco no tamponamento,
+>   Doppler renal, índice de Celermajer, anti-DNase B, monitor de eventos implantável, NT-
+>   proBNP pré-operatório, entre outros.
+> - **galeria/metadados.json**: de 44 para 63 registros (+19), todas com licença conferida na
+>   página do arquivo do Wikimedia Commons **antes** do download — bloqueio de ramo esquerdo,
+>   WPW, correlação anatomo-ecocardiográfica de Ebstein, STEMI anterior extenso, gradiente
+>   hemodinâmico da estenose aórtica, hipertrofia septal na CMH, hemorragia em estilhaço,
+>   ilustração histórica da coreia de Sydenham, derrame pericárdico com silhueta em moringa,
+>   placa de endarterectomia de carótida, marca-passo temporário, entre outras. **Os 10 temas
+>   da sessão terminaram equilibrados em 4 imagens cada, nenhum mais fraco que o outro.**
+> - **evidencias/metadados.json**: de 109 para 155 registros (+46), cobrindo os 10 temas.
+> - Corrigido, em conjunto com a sessão de Medicamentos: bug de esquema em
+>   `evidencias/metadados.json` (`evidence_level` é `VARCHAR(5)` no banco; um registro trazia
+>   frase inteira nesse campo e travava a carga de TODA a frente, silenciosamente — ver aviso
+>   próprio logo abaixo nesta seção, commit `5008b38`, da sessão de Medicamentos).
+>
+> **Estado exato agora**: branch `claude/biblioteca-30-07-morning-orcq0g` idêntica a `main`
+> (mesmo commit, `81d1109`), árvore de trabalho limpa, nada pendente de commit. **Toda** entrada
+> tocada nesta sessão está `review_status: revisado` e `published: false` — nada foi publicado
+> sem aval. **Uma única exceção deliberada, que deve continuar fora mesmo quando o resto for
+> publicado**: em `evidencias/metadados.json`, o registro
+> `intervalo-de-3-semanas-na-profilaxia-secundaria-em-populacao-de-alta-incidencia-de-febre-reumatica`
+> está com `review_status: pendente_revisao` de propósito (ver detalhe na nota "Uma entrada
+> NÃO deve ser publicada..." logo abaixo).
+>
+> **Para publicar, os comandos exatos** (rodar num terminal com acesso real ao Docker de
+> produção — não funcionam nesta sessão):
+> ```
+> git pull origin main
+> docker compose -f docker-compose.prod.yml exec -T backend python -c "from app.services.importer import import_directory; print(import_directory())"
+> docker compose -f docker-compose.prod.yml exec -T backend python -c "from app.services.carregar_estudos import carregar; print(carregar('/estudos/metadados.json'))"
+> docker compose -f docker-compose.prod.yml exec -T backend python -c "from app.services.carregar_exames import carregar; print(carregar('/exames/metadados.json'))"
+> docker compose -f docker-compose.prod.yml exec -T backend python -c "from app.services.carregar_galeria import carregar; print(carregar('/galeria/metadados.json'))"
+> docker compose -f docker-compose.prod.yml exec -T backend python -c "from app.services.carregar_evidencias import carregar; print(carregar('/evidencias/metadados.json'))"
+> ```
+> seguido de publicar pela rota normal `/api/admin/conteudo/publicar` (não passa pelo bloqueio
+> do classificador quando o Rafael executa) — todos os slugs tocados, **exceto** o registro de
+> febre reumática acima —, e depois reindexar por slug no RAG os documentos novos/editados
+> (`indexar_tudo()` só pega documento novo, nunca edição de corpo existente).
+>
+> **Ao retomar**: continuar a fila normal de expansão (seis frentes, dez temas desta sessão),
+> priorizando por `COBERTURA.md` — mas medir de novo antes de confiar no número do arquivo,
+> que fica desatualizado rápido, como já registrado várias vezes nesta seção.
+>
 > ### 🔧 Aviso para a sessão da Biblioteca — erro de esquema em `evidencias/metadados.json` corrigido, 30/07/2026
 > Ao tentar publicar tudo que estava pendente das duas sessões, o carregamento de
 > `evidencias/metadados.json` estava **falhando por inteiro** (rollback da transação): o
