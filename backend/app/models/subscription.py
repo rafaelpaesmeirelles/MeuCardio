@@ -9,6 +9,9 @@ TIPO_MEUCARDIO = "meucardio"
 TIPO_CURSO = "curso"
 TIPO_EMAIL = "email"  # CorvIA Mail (Tarefa 28) — add-on cobrado à parte, não substitui a assinatura principal
 
+PLANO_BASICO = "basico"     # R$20/mês, acesso completo à plataforma, sem CorvIA Mail
+PLANO_COMPLETO = "completo"  # R$30/mês, acesso completo à plataforma + CorvIA Mail incluso
+
 
 class Subscription(Base):
     __tablename__ = "subscriptions"
@@ -54,6 +57,9 @@ class Subscription(Base):
     course_id: Mapped[int | None] = mapped_column(
         ForeignKey("partner_courses.id"), nullable=True, index=True
     )
+    # Só tem sentido para kind='meucardio' — nas linhas de curso e de CorvIA
+    # Mail o campo existe (coluna única na tabela) mas não é lido.
+    plano: Mapped[str] = mapped_column(String(20), default=PLANO_BASICO)
     stripe_customer_id: Mapped[str | None] = mapped_column(String(255), nullable=True, index=True)
     stripe_subscription_id: Mapped[str | None] = mapped_column(String(255), nullable=True, unique=True, index=True)
     status: Mapped[str] = mapped_column(String(30), default="inativo")
