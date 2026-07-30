@@ -3,7 +3,7 @@ title: "Classificação SCAI de Estágios do Choque Cardiogênico"
 slug: classificacao-scai-de-estagios-do-choque-cardiogenico
 theme: "Terapia intensiva"
 kind: protocolo
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["SCAI clinical expert consensus statement on the classification of cardiogenic shock · SCAI/ACC/AHA/SCCM/STS · 2019 · 10.1002/ccd.28329", "Criteria for Defining Stages of Cardiogenic Shock Severity · JACC · 2022 · 10.1016/j.jacc.2022.04.049", "2026 SCAI SHOCK Classification Expert Consensus Update · SCAI · 2026", "SCAI SHOCK Bedside Checklist 2022 — scai.org, endossado por ACC/ACEP/AHA/ESC-ACVC/ISHLT/SCCM/STS", "Naidu SS et al. SCAI SHOCK Stage Classification Expert Consensus Update. J Soc Cardiovasc Angiogr Interv. 2022."]
 legacy_source: "Fusão de dois documentos sobre a mesma classificação, na mesma pasta, com zero seções em comum entre 7 e 11: este e choque-cardiogenico-classificacao-scai-shock-complemento.md. O absorvido trazia dois defeitos de forma que o desqualificavam como base: dicionário de Python serializado vazado no corpo do texto, em vez de markdown, e uma referência a 'thai source' deixada dentro de um critério clínico. O conteúdo clínico dele foi preservado aqui."
 ---
@@ -75,7 +75,7 @@ Balão intra-aórtico, dispositivo percutâneo de fluxo axial e ECMO venoarteria
 ## Aplicacao em cirurgia cardiaca
 Nos pacientes cirúrgicos, os estágios A a D concentram 66 a 78% de procedimentos eletivos, contra apenas 31% no estágio E — o choque extremo se associa a proporção muito maior de cirurgia de urgência ou emergência.
 
-## Divergencia a resolver no criterio bioquimico do estagio C
-VERIFICAÇÃO HUMANA NECESSÁRIA — os dois documentos consolidados aqui **discordavam do corte de creatinina** que define o estágio C: um exigia **creatinina dobrada**, o outro **1,5 vez o basal**. A tabela acima registra 1,5×, que veio do documento melhor referenciado, mas a divergência precisa ser resolvida contra o checklist oficial SCAI SHOCK de 2022 antes de esta marcação sair. A diferença muda a fronteira entre pré-choque e choque estabelecido, que é justamente onde a classificação decide conduta.
+## Divergencia resolvida no criterio bioquimico do estagio C
+**Resolvido em 30/07/2026, conferindo diretamente o checklist oficial** (SCAI SHOCK Bedside Checklist 2022, scai.org, texto completo lido). Os dois documentos consolidados aqui discordavam do corte de creatinina do estágio C: um exigia creatinina dobrada, o outro 1,5 vez o basal. **O checklist oficial confirma 1,5× o basal (ou queda de TFG > 50%)** — a tabela acima já estava certa, a divergência era do documento fundido que exigia dobrada, não da tabela publicada.
 
-O mesmo par divergia no lactato do estágio E, com um deles registrando "≥8 mmol/L" e anotando entre parênteses que outra fonte citava ≥5 — anotação de conferência que ficou publicada como se fosse conteúdo.
+O mesmo par divergia no lactato do estágio E, com um deles registrando "≥8 mmol/L" e anotando entre parênteses que outra fonte citava ≥5. **O checklist oficial confirma lactato > 8 mmol/L no estágio E** — a anotação entre parênteses sobre "≥5" não corresponde a nenhum critério oficial de nenhum estágio (o lactato > 2 mmol/L pertence ao estágio C, não é alternativa ao > 8 do estágio E) e foi removida.
