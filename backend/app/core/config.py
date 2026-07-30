@@ -73,6 +73,20 @@ class Settings(BaseSettings):
     smtp_from: str = "Corvia <nao-responda@corvia.med.br>"
     public_url: str = "https://corvia.med.br"
 
+    # --- Caixa de e-mail do assinante — Zoho Mail360 (Tarefa 28) ------------
+    # Mesma filosofia do SMTP acima: em branco, o recurso fica indisponível
+    # (a rota devolve 503 em vez de tentar chamar uma API sem credencial) —
+    # nunca simulado. `mail360_dominio` é o domínio dentro do qual o Mail360
+    # cria cada caixa nativa (precisa estar previamente verificado lá).
+    mail360_client_id: str = ""
+    mail360_client_secret: str = ""
+    mail360_refresh_token: str = ""
+    mail360_dominio: str = "corvia.med.br"
+
+    @property
+    def mail360_configurado(self) -> bool:
+        return bool(self.mail360_client_id and self.mail360_client_secret and self.mail360_refresh_token)
+
     # --- Stripe / Assinatura -----------------------------------------------
     stripe_publishable_key: str = ""
     stripe_secret_key: str = ""
