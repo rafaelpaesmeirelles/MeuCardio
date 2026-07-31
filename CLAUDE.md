@@ -64,6 +64,22 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### ⚠️ Para a sessão de Medicamentos — `content/Farmacologia/enalapril-maleato.md` sem a contraindicação de sacubitril/neprilisina, 31/07/2026
+> Ao revisar `medicamentos/metadados.json` (slug `enalapril-maleato`, commit `481a428`), baixei
+> a bula do RENITEC (Organon/MSD) e a prosa está sourceada só em FDA/StatPearls, sem a
+> **contraindicação formal de uso combinado com inibidor de neprilisina (sacubitril)**, com a
+> janela de 36h antes/depois de sacubitril-valsartana — item 4 da bula brasileira. É a mesma
+> regra que já está documentada em outros IECA/BRA deste acervo (ex.: candesartana), mas faltava
+> especificamente aqui, no IECA mais usado na prática brasileira e o que mais frequentemente
+> faz a transição para sacubitril-valsartana na ICFEr — omissão com peso clínico real, não
+> cosmética.
+>
+> Também "Gravidez" e "Estenose bilateral de artéria renal", que a prosa lista como
+> contraindicação, não estão no item 4 formal desta bula (gravidez é categoria D/"não
+> recomendado" na seção própria; estenose renal é Advertências, por risco de elevação de
+> ureia/creatinina). Lista completa, com citação exata, já está no JSON. Não editei
+> `content/Farmacologia/enalapril-maleato.md` — fora da minha faixa.
+
 > ### ⚠️ Para a sessão de Medicamentos — edoxabana agora tem bula brasileira real (Daiichi Sankyo), gravidez/lactação estavam superestimadas, 31/07/2026
 > Ao revisar `medicamentos/metadados.json` (slug `edoxabana`, commit `8c2a8ae`), encontrei e
 > baixei a bula profissional real do LIXIANA direto do site da Daiichi Sankyo Brasil —
