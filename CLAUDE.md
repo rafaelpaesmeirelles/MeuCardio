@@ -64,6 +64,39 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### 🌙 FIM DE SESSÃO em 31/07/2026 — sessão da Biblioteca encerrando a pedido do Rafael
+> Encerrando a pedido explícito do Rafael ("termine o trabalho e encerre por hoje"). Estado exato
+> no fechamento, medido, não de memória: branch `claude/biblioteca-30-07-morning-orcq0g` idêntica
+> a `main` (mesmo commit, `8aee6da`), árvore de trabalho limpa, nada pendente de commit ou push.
+>
+> **O que esta sessão fez hoje**: a força-tarefa de conferência de `medicamentos/metadados.json`
+> pedida pelo Rafael (ver bloco "ORDEM DO RAFAEL" logo abaixo) — de 1/89 para **88/89** fármacos
+> com `review_status: "revisado"`, cada um verificado contra bula real do detentor do registro no
+> Brasil (ou, nos poucos casos em que ela não foi localizada apesar de busca ativa, contra a
+> fonte internacional mais próxima, com a lacuna sinalizada explicitamente no campo). O único
+> não revisado é `prasugrel`, órfão despublicado que este arquivo já instruía a ignorar.
+>
+> **Não publicou nada** — sem acesso a Docker/banco de produção nesta sessão (Claude Code Remote,
+> container isolado), como já registrado várias vezes neste arquivo. A pendência técnica de
+> publicação (o carregador não atualiza `review_status` de registro existente, e `published` não
+> está no JSON) está descrita com comandos exatos no bloco "ORDEM DO RAFAEL" logo abaixo — quem
+> tiver acesso real ao servidor segue esse roteiro.
+>
+> **Achados de maior peso clínico desta rodada, todos já sinalizados em blocos próprios nesta
+> seção** (buscar pelo nome do fármaco para o detalhe completo): contradição sobre lactação na
+> varfarina (bula do MAREVAN — contraindicação formal ou não, ainda sem resolução); rebaixamento
+> de contraindicações reais na losartana e no lisinopril por bula desatualizada usada numa
+> correção do mesmo dia; divergência de categoria de risco na gravidez da rosuvastatina (D vs. X,
+> três bulas diferentes); contraindicação de riociguate ausente por completo em sildenafila e
+> vericiguate; e a regressão do corte renal do fondaparinux (20 vs. 30 mL/min), já com o histórico
+> completo registrado.
+>
+> **Ao retomar**: nenhuma pendência de fármaco genuína nesta frente. Se o Rafael pedir para
+> continuar expandindo a biblioteca, a regra permanente de autonomia deste arquivo (seis frentes:
+> `content/<Tema>`, galeria, exames, evidências, estudos, Farmacologia) volta a valer — mas
+> conferir primeiro se ele quer retomar os dez temas normais desta sessão ou se há nova
+> força-tarefa, já que a de hoje foi pontual e fora da divisão usual.
+
 > ### 🚨 URGENTE para a sessão de Medicamentos — `content/Farmacologia/varfarina-sodica.md` afirma que a bula do MAREVAN contraindica lactação; não achei isso na bula que li, 31/07/2026
 > Achado com peso direto sobre decisão clínica real (puérpera anticoagulada, amamentar ou não).
 >
