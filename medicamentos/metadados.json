@@ -3159,7 +3159,7 @@
   },
   {
     "slug": "propranolol",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Propranolol",
     "drug_class": "Betabloqueador não seletivo (bloqueia beta-1 e beta-2)",
     "mechanism": "Antagonista competitivo não seletivo de receptores beta-adrenérgicos, reduzindo frequência cardíaca, contratilidade miocárdica e liberação de renina; por bloquear também receptores beta-2, tem maior propensão a broncoespasmo comparado a betabloqueadores cardiosseletivos",
@@ -3168,11 +3168,19 @@
       "Tremor essencial, profilaxia de enxaqueca, ansiedade situacional (uso off-label), hemangiomas infantis"
     ],
     "contraindications": [
-      "Asma/DPOC grave (bloqueio beta-2 pode precipitar broncoespasmo)",
-      "Bradicardia sinusal grave",
-      "Bloqueio AV 2º/3º grau",
+      "Hipersensibilidade ao propranolol ou a outro componente da fórmula",
+      "Hipotensão",
+      "Bradicardia",
+      "Distúrbio grave da circulação arterial periférica",
+      "Síndrome do nó sinoatrial",
+      "Feocromocitoma não tratado (sem antagonista do receptor alfa-adrenérgico associado)",
+      "Insuficiência cardíaca descompensada",
+      "Angina de Prinzmetal",
       "Choque cardiogênico",
-      "IC descompensada aguda"
+      "Acidose metabólica",
+      "Jejum prolongado — predisposição à hipoglicemia",
+      "Bloqueio cardíaco de 2º ou 3º grau",
+      "Histórico de asma brônquica ou broncoespasmo"
     ],
     "adverse_effects": [
       "Bradicardia, broncoespasmo (risco maior que betabloqueadores seletivos), fadiga, extremidades frias, disfunção erétil, mascaramento de sintomas de hipoglicemia em diabéticos"
@@ -3181,13 +3189,12 @@
       "dose_especifica_por_indicacao": "**Hipertensão** (liberação prolongada): dose inicial 80 mg 1x/dia, titular até manutenção de 120–160 mg/dia. Máximo de bula: 640 mg/dia, raramente usado nessa faixa na prática. **Angina estável**: 80–320 mg/dia, em 2–3 tomadas (formulação de liberação imediata) ou 1x/dia (liberação prolongada). **Pós-infarto** (redução de mortalidade cardiovascular em paciente hemodinamicamente estável): 180–240 mg/dia, em doses divididas; manter por 1–3 anos na ausência de contraindicação. **Ajuste renal**: não é rotineiramente necessário em insuficiência renal leve a moderada — o propranolol é metabolizado principalmente no fígado, e a fração não ligada às proteínas plasmáticas não é significativamente removida por diálise (diferente do atenolol). Em insuficiência renal grave, titular com cautela e monitorização clínica. **Retirada**: nunca suspender abruptamente — reduzir gradualmente ao longo de 1–2 semanas, pelo risco de piora de angina ou infarto de rebote. Fonte: rótulo aprovado pelo FDA (DailyMed), setid c751ee54-27b4-4ed7-829a-ced735c41312"
     },
     "notes": {
-      "Particularidade farmacologica": "Alta lipossolubilidade permite atravessar barreira hematoencefálica com facilidade, explicando eficácia em tremor essencial e enxaqueca, mas também maior risco de efeitos adversos no SNC (fadiga, pesadelos, depressão) comparado a betabloqueadores hidrofílicos (atenolol)"
+      "Particularidade farmacologica": "Alta lipossolubilidade permite atravessar barreira hematoencefálica com facilidade, explicando eficácia em tremor essencial e enxaqueca, mas também maior risco de efeitos adversos no SNC (fadiga, pesadelos, depressão) comparado a betabloqueadores hidrofílicos (atenolol)",
+      "Manejo de broncoespasmo se ocorrer": "A bula, apesar de contraindicar formalmente histórico de asma/broncoespasmo (item mais restritivo que o de betabloqueadores cardiosseletivos como metoprolol/nebivolol, cujas bulas permitem uso cauteloso em asmático sem alternativa), descreve conduta caso o broncoespasmo ocorra: broncodilatador agonista beta-2 (ex.: salbutamol) em dose alta, IV ou inalatório; aminofilina IV e/ou ipratrópio nebulizado; glucagon 1-2mg IV também descrito com efeito broncodilatador; oxigênio ou ventilação artificial em caso grave."
     },
     "references": [
-      "Propranolol hydrochloride — rótulo aprovado pelo FDA, DailyMed SPL setid c751ee54-27b4-4ed7-829a-ced735c41312",
-      "Resumo sobre Propranolol: indicações, farmacologia e mais · Estratégia MED · 2022 · https://med.estrategia.com/portal/conteudos-gratis/doencas/resumo-sobre-propranolol-indicacoes-farmacologia-e-mais/",
-      "Bula Propranolol · Droga Raia · https://www.drogaraia.com.br/bulas/propranolol",
-      "Inderal (propranolol) — bula FDA"
+      "Bula profissional do INDERAL (cloridrato de propranolol), AstraZeneca do Brasil Ltda. — via consultaremedios.com.br, item 4. CONTRAINDICAÇÕES",
+      "Propranolol hydrochloride — rótulo aprovado pelo FDA, DailyMed SPL setid c751ee54-27b4-4ed7-829a-ced735c41312"
     ],
     "pregnancy": "**Só usar se for essencial.** A bula não atribui letra de categoria de risco. Diz que não há evidência de teratogenicidade, mas que **os betabloqueadores reduzem a perfusão placentária**, o que pode resultar em morte fetal intrauterina, parto imaturo e parto prematuro. Descreve ainda **hipoglicemia e bradicardia no neonato e bradicardia no feto**, e risco aumentado de complicações cardíacas e pulmonares no neonato no período pós-natal. Fonte: bula do INDERAL (cloridrato de propranolol, AstraZeneca), seção \"Uso durante a gravidez e lactação\".",
     "lactation": "**Amamentação não recomendada.** A bula generaliza para a classe: a maioria dos betabloqueadores, **principalmente os compostos lipofílicos** — o que inclui o propranolol —, passa para o leite materno, em quantidades variáveis; por isso a amamentação não é recomendada após a administração desses compostos. Fonte: bula do INDERAL (cloridrato de propranolol, AstraZeneca)."
