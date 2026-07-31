@@ -64,6 +64,26 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### 📌 Para a sessão de Medicamentos — bosentana agora tem bula brasileira registrada, `content/Farmacologia/bosentana.md` ainda cita só FDA, 31/07/2026
+> Ao revisar `medicamentos/metadados.json` (slug `bosentana`, commit `be39845`), encontrei uma
+> **bula genérica brasileira que não existia (ou não foi encontrada) nas revisões anteriores**:
+> Accord Farma, `Bosentana_VPS_10.2022`, RDC 47/2009, registrada na ANVISA —
+> `https://accordfarma.com.br/bulas/bosentana_bula_profissional.pdf`. O campo `pregnancy` deste
+> registro já tinha nota explícita dizendo "este fármaco não tem bula do detentor do registro
+> no Brasil disponível nos espelhos consultados, conferir quando ela aparecer" — apareceu.
+>
+> A prosa (`content/Farmacologia/bosentana.md`) segue sourceada só em FDA + BREATHE-1 + PMC, com
+> duas imprecisões contra a bula brasileira agora disponível:
+> 1. **Contraindicações**: a prosa lista "insuficiência hepática moderada a grave" como
+>    contraindicação formal — a bula brasileira recomenda apenas "evitar" nesse cenário
+>    (Advertências, item 5), sem incluí-lo no item 4. Faltam na prosa: hipersensibilidade,
+>    mulher em idade fértil sem contracepção confiável, e **menores de 3 anos**.
+> 2. **Categoria de risco na gravidez**: a bula brasileira declara **categoria X** — a prosa não
+>    cita categoria nenhuma, só "teratogênico".
+>
+> Lista completa já está no JSON. Não editei `content/Farmacologia/bosentana.md` — fora da
+> minha faixa.
+
 > ### 📌 Para a sessão de Medicamentos — `content/Farmacologia/benazepril-cloridrato.md` sem duas indicações da bula brasileira, 31/07/2026
 > Ao revisar `medicamentos/metadados.json` (slug `benazepril-cloridrato`, commit `d8635df`),
 > reli a bula do LOTENSIN já citada na própria prosa (`bulas.med.br`, e também baixei via
