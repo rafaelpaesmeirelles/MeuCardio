@@ -4032,7 +4032,7 @@
   },
   {
     "slug": "verapamil-cloridrato",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Verapamil (cloridrato)",
     "drug_class": "Bloqueador de canal de cálcio não-diidropiridínico (fenilalquilamina), antiarrítmico classe IV (Vaughan-Williams)",
     "mechanism": "Bloqueia parcialmente a entrada de cálcio extracelular através das membranas celulares do miocárdio e músculo liso vascular, deformando canais de cálcio e reduzindo velocidade de contração; interfere também na liberação de depósitos intracelulares de cálcio do retículo sarcoplasmático nos miócitos; atua com destaque nos nódulos AV e SA, prolongando o tempo de condução atrioventricular — propriedade que o distingue das diidropiridinas (anlodipino/felodipino), que possuem seletividade vascular e mínimo efeito na condução cardíaca",
@@ -4040,18 +4040,13 @@
       "Isquemia miocárdica (com/sem angina, em repouso ou pós-esforço, incluindo angina de Prinzmetal), hipertensão leve-moderada (vantajoso em pacientes com asma, DM, depressão, disfunção erétil concomitantes), prevenção de taquicardias supraventriculares/flutter/FA"
     ],
     "contraindications": [
-      "Hipersensibilidade",
+      "Hipersensibilidade ao cloridrato de verapamil ou a outro componente da fórmula",
       "Choque cardiogênico",
-      "BAV 2º/3º grau (exceto com marca-passo funcionante)",
-      "Síndrome do nódulo sinusal (exceto com marca-passo)",
-      "Insuficiência cardíaca congestiva",
-      "Flutter/FA com via acessória (WPW, Lown-Ganong-Levine) — risco de FV",
-      "Uso concomitante com ivabradina",
-      "Não devem ser usados em combinação com betabloqueador por via IV (risco de bloqueio AV grave/assistolia) e uso combinado oral requer cautela extrema",
-      "Disfunção sistólica de VE grave (FE reduzida)",
-      "Bloqueio AV 2º/3º grau sem marcapasso",
-      "Doença do nó sinusal",
-      "Síndrome de Wolff-Parkinson-White com FA (risco de condução preferencial pela via acessória)"
+      "BAV 2º/3º grau, exceto com marca-passo artificial funcionante",
+      "Síndrome do nódulo sinusal, exceto com marca-passo artificial funcionante",
+      "Insuficiência cardíaca com FEVE <35% e/ou pressão pulmonar >20mmHg — exceto quando secundária a taquicardia supraventricular sensível ao verapamil",
+      "Flutter ou fibrilação atrial na presença de via de condução acessória (WPW, Lown-Ganong-Levine) — risco de taquicardia, incluindo fibrilação ventricular",
+      "Uso concomitante de ivabradina"
     ],
     "adverse_effects": [
       "Cefaleia e tontura (comuns); constipação (7%, o mais frequente) e náusea (3%); bradicardia (comum); edema periférico (comum); parestesia, tremor, sonolência (raros); hipotensão (3%)"
@@ -4072,12 +4067,15 @@
     "notes": {
       "Farmacocinetica": "Metabolização hepática extensa (principal metabólito ativo: norverapamil); início de ação VO 1-2h, IV 1-5min (efeitos antiarrítmicos) ou 3-5min (efeitos hemodinâmicos)",
       "Diferenca para os diidropiridinicos": "Inibem influxo de cálcio em células musculares lisas vasculares E em tecido cardíaco (nó sinusal, nó AV, miocárdio), diferente dos dihidropiridínicos (anlodipino) que agem quase exclusivamente sobre vasculatura; efeito combinado: redução de FC, retardo de condução AV e depressão discreta de contratilidade",
-      "Particularidade em insuficiencia cardiaca": "Contraindicados em ICFER com FE reduzida devido ao efeito inotrópico negativo — diferente dos dihidropiridínicos, que são relativamente seguros em IC quando necessários para controle pressórico"
+      "Particularidade em insuficiencia cardiaca": "Contraindicados em ICFER com FE reduzida devido ao efeito inotrópico negativo — diferente dos dihidropiridínicos, que são relativamente seguros em IC quando necessários para controle pressórico",
+      "Betabloqueador IV — cautela extrema, nao contraindicacao formal do item 4": "Mantida a cautela já registrada (risco de BAV grave/assistolia com betabloqueador IV, uso oral combinado exige cautela extrema), mas isso não é item textual do item 4. CONTRAINDICAÇÕES da bula do DILACORON — é orientação de segurança amplamente reconhecida na prática, tratada como advertência.",
+      "Bloqueio de ramo — descontinuar, nao e contraindicacao de inicio": "A bula pede descontinuação do verapamil se surgir bloqueio de ramo uni/bi/trifascicular durante o tratamento, com terapia adequada se necessário — não é item da lista de contraindicações de início."
     },
     "references": [
       "Verapamil hydrochloride — rótulo aprovado pelo FDA, DailyMed SPL setid df79ee3a-f0ed-1cc7-e053-2995a90af97f",
       "Bula do profissional de saúde de DILACORON (cloridrato de verapamil) 80 mg, Abbott Laboratórios do Brasil Ltda. — seção de posologia. Documento obtido no site do detentor do registro.",
-      "Bula de DILACORON (cloridrato de verapamil), solução injetável — posologia endovenosa e uso pediátrico, versão brasileira."
+      "Bula de DILACORON (cloridrato de verapamil), solução injetável — posologia endovenosa e uso pediátrico, versão brasileira.",
+      "Bula profissional do DILACORON (cloridrato de verapamil), Abbott Laboratórios do Brasil Ltda. — via consultaremedios.com.br, item 4. CONTRAINDICAÇÕES conferido linha a linha"
     ],
     "pregnancy": "**Só quando absolutamente necessário.** A bula registra que **não há dados adequados** do uso na gravidez e que o verapamil **atravessa a barreira placentária — pode ser medido no cordão umbilical**. Não atribui letra de categoria de risco. Fonte: bula do DILACORON (cloridrato de verapamil, Abbott), seção \"Uso em idosos, crianças e outros grupos de risco\".",
     "lactation": "**Interromper a amamentação.** A bula é afirmativa, não condicional: o verapamil **é excretado no leite humano** e a amamentação deve ser interrompida durante a terapia. Fonte: bula do DILACORON (cloridrato de verapamil, Abbott)."
