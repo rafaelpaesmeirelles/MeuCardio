@@ -264,10 +264,54 @@ contra o `git log` do dia.
 > **Nota de faixa:** `evidencias/` e Febre reumática são da Biblioteca. Entrei porque o Rafael pediu
 > explicitamente, alterei **um campo de um registro** e commitei na mesma ação.
 >
-> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **59 documentos novos, todos publicados**
-> `content/*.md` de **424 para 491**; `documents` **491 total = 491 publicados**. **Acervo total:
-> 1.088** — **faltam 912 para os 2.000**. (Os números das frentes JSON e parte dos documentos
-> incluem o que a sessão da Biblioteca entregou no mesmo dia; os 59 acima são só desta sessão.)
+> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **65 documentos novos, todos publicados**
+> `content/*.md` de **424 para 497**; `documents` **497 total = 497 publicados**. **Acervo total:
+> 1.094** — **faltam 906 para os 2.000**. (Os números das frentes JSON e parte dos documentos
+> incluem o que a sessão da Biblioteca entregou no mesmo dia; os 65 acima são só desta sessão.)
+>
+> **36º lote — 1 documento**: espironolactona como quarta droga na hipertensão resistente
+> (**PATHWAY-2**, PMID 26414968, em Hipertensão). O ensaio já existia no repositório, mas **só dentro
+> do verbete de Farmacologia da espironolactona**, como evidência do fármaco. Faltava o documento do
+> ponto de vista da **doença**, que é como a pergunta chega ao consultório ("qual é a quarta droga?").
+> **Critério novo que este caso deixa: um ensaio já citado num verbete de fármaco NÃO significa que o
+> tema clínico esteja coberto** — vale procurar, nos verbetes de Farmacologia, ensaios pivotais que
+> nunca ganharam o documento da doença correspondente. Cuidado registrado no texto: a renina basal
+> **gradua a expectativa, não seleciona candidatos** — a espironolactona foi superior em toda a
+> distribuição.
+>
+> **35º lote — 1 documento**: coronariografia imediata após parada cardíaca sem supra de ST
+> (**COACT**, PMID 30883057, e **TOMAHAWK**, PMID 34459570, em Terapia intensiva). Nenhum dos dois
+> era citado em lugar nenhum do repositório. O documento é explícito sobre **como ler um resultado
+> que fica exatamente na fronteira**: o TOMAHAWK teve HR 1,28 com IC95% 1,00-1,63 e p=0,06, e o
+> composto RR 1,16 com IC 1,00-1,34. Não é "neutro tranquilo" nem "dano comprovado" — é **ausência
+> de benefício com sinal desfavorável que não se pode descartar**. O COACT dá o mecanismo plausível:
+> a estratégia imediata **atrasou o controle de temperatura** (5,4h vs. 4,7h).
+>
+> **34º lote — 1 documento**: interrupção do anticoagulante para procedimento eletivo na FA
+> (**BRIDGE**, PMID 26095867, e **PAUSE**, PMID 31380891). Pergunta de consultório semanal que a
+> biblioteca só cobria para cardioversão e ablação. A ponte com heparina **triplicou o sangramento
+> maior** (3,2% vs. 1,3%) sem ganho tromboembólico, em ensaio randomizado **duplo-cego** — desenho
+> raro nesse tipo de pergunta.
+>
+> **33º lote — 1 documento**: reiniciar anticoagulação na FA após hemorragia intracraniana
+> (**SoSTART**, PMID 34487722; **COCROACH**, PMID 37839434; **PRESTIGE-AF**, PMID 40023176).
+> Aplicação direta da regra do 30º lote — **três fontes que divergem, e o documento não escolhe
+> vencedor**: convergem na redução do evento isquêmico (HR 0,27 e 0,05), divergem no tamanho do
+> preço hemorrágico (HR 1,80 não significativo no COCROACH; HR 10,89 com falha de não inferioridade
+> no PRESTIGE-AF), e **nenhuma demonstrou benefício líquido em desfecho global**. Duas armadilhas
+> registradas: o intervalo do PRESTIGE-AF é **IC90%**, não IC95%; e os ensaios de oclusão de apêndice
+> atrial **não randomizaram** sobreviventes de hemorragia intracraniana.
+>
+> **32º lote — 1 documento**: terapia tripla inicial vs. dupla na HAP (**TRITON**, PMID 34593120).
+> Caso didático de **desfecho substituto que satura**: a RVP caiu 54% e 52%, sem diferença, enquanto
+> progressão (HR 0,59) e óbitos (2 vs. 9) apontavam para o outro lado, sem poder para sustentar.
+> Armadilha registrada: **não confundir com o TRITON-TIMI 38** (prasugrel na SCA), sigla homônima já
+> presente no repositório.
+>
+> **31º lote — 1 documento**: anticoagulação estendida em dose reduzida no TEV do câncer
+> (**API-CAT**, PMID 40162636). Raro caso de **não inferioridade na eficácia E superioridade formal
+> na segurança** no mesmo ensaio (p=0,03 para sangramento) — é isso que torna a dose reduzida
+> preferível, não apenas aceitável.
 >
 > **30º lote — 1 documento**: ADVENT-HF (PMID 38142697), servoventilação na respiração desordenada
 > do sono da ICFEr.
