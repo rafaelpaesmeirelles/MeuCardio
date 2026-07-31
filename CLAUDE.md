@@ -264,20 +264,33 @@ contra o `git log` do dia.
 > **Nota de faixa:** `evidencias/` e Febre reumática são da Biblioteca. Entrei porque o Rafael pediu
 > explicitamente, alterei **um campo de um registro** e commitei na mesma ação.
 >
-> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **54 documentos novos, todos publicados**
-> `content/*.md` de **424 para 485**; `documents` **485 total = 485 publicados**. **Acervo total:
-> 1.068** — **faltam 932 para os 2.000**. (Os números das frentes JSON e parte dos documentos
-> incluem o que a sessão da Biblioteca entregou no mesmo dia; os 54 acima são só desta sessão.)
+> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **55 documentos novos, todos publicados**
+> `content/*.md` de **424 para 486**; `documents` **486 total = 486 publicados**. **Acervo total:
+> 1.069** — **faltam 931 para os 2.000**. (Os números das frentes JSON e parte dos documentos
+> incluem o que a sessão da Biblioteca entregou no mesmo dia; os 55 acima são só desta sessão.)
 >
 > **24º lote — 1 documento**: diagnóstico de TEP na gestante (Artemis/YEARS adaptado, PMID 30893534,
 > e CT-PE-Pregnancy, PMID 30357273, em Gravidez).
 >
-> **Lacunas ainda abertas e MAPEADAS na faixa desta sessão**, para quem continuar não precisar
-> remapear: ~~tromboprofilaxia no puerpério~~ **(feita no 25º lote)**, **estratificação de risco
-> invasiva no WPW** (Arritmias), **escalonamento/transição de terapia na HAP** (Hipertensão
-> pulmonar), **disfunção de VD / IC direita** e **transição hospital-domicílio na IC** (Insuficiência
-> cardíaca), e **commotio cordis** (Arritmias). Nenhuma das restantes foi verificada quanto a fonte
-> ainda — o mapeamento confirmou só que **não existem** hoje na biblioteca.
+> **Fila de lacunas mapeadas — estado atualizado após os lotes 25 e 26:**
+> - ~~tromboprofilaxia no puerpério~~ — **feita** (25º lote, HIGHLOW)
+> - ~~transição hospital-domicílio na IC~~ — **feita** (26º lote, PACT-HF)
+> - ~~estratificação de risco invasiva no WPW~~ — **DESCARTADA por já estar coberta**: o documento
+>   `wolff-parkinson-white-assintomatico-e-cardiomiopatia-induzida-por-extrassistoles.md` já traz
+>   estratificação, conduta, ablação profilática e FA pré-excitada. Verificado antes de escrever
+> - ~~commotio cordis~~ — **DESCARTADA por falta de fonte adequada**: a busca só devolveu relato de
+>   caso e uma errata, sem revisão ou consenso utilizável
+> - 🔒 **disfunção de VD / IC direita** — **BLOQUEADA POR FONTE, a quarta desta sessão.** O
+>   documento adequado existe e é recente — *Diagnosis and treatment of right ventricular failure
+>   secondary to acutely increased right ventricular afterload*, **clinical consensus statement da
+>   ACVC/ESC**, Eur Heart J Acute Cardiovasc Care. 2024;13(3):304-312, **PMID 38135288** — mas **não
+>   tem resumo no PubMed**, só título. Mesma situação do ISHLT (transplante) e da AHA (cardiorrenal).
+>   **Tentar PMC ou o site da ESC antes de escrever**
+> - **escalonamento/transição de terapia na HAP** (Hipertensão pulmonar) — ainda não verificada
+>
+> **Padrão que já apareceu quatro vezes e vale saber de antemão: documento de consenso/declaração de
+> sociedade frequentemente NÃO tem resumo no PubMed** — o registro traz só título e autores. Para
+> esse tipo de fonte, o E-utilities não basta, e é preciso PMC ou o site da sociedade.
 >
 > **25º lote — 1 documento**: tromboprofilaxia na gestação e puerpério (HIGHLOW, PMID 36354038, em
 > Gravidez), que forma par com o de diagnóstico de TEP na gestante do lote anterior — um investiga a
