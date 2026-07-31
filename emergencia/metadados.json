@@ -107,5 +107,124 @@
     "fluxograma_slug": null,
     "relacionados": [],
     "review_status": "revisado"
+  },
+  {
+    "slug": "insuficiencia-cardiaca-aguda-descompensada",
+    "titulo": "Insuficiência cardíaca aguda descompensada",
+    "gatilho": "Dispneia · congestão · ortopneia · ganho de peso rápido",
+    "ordem": 11,
+    "documento_slug": "estrategia-diuretica-na-insuficiencia-cardiaca-aguda-descompensada",
+    "fluxograma_slug": null,
+    "relacionados": [
+      "vasodilatadores-endovenosos-na-ic-aguda-por-que-nesiritida-serelaxina-e-ularitida-falharam",
+      "suporte-inotropico-na-ic-aguda-descompensada-optime-chf-e-o-sinal-na-etiologia-isquemica",
+      "safety-tolerability-and-efficacy-of-up-titration-of-guideline-directed-medical-therapies-for-acute-heart-failure-strong-hf"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "falencia-aguda-de-ventriculo-direito",
+    "titulo": "Falência aguda de ventrículo direito",
+    "gatilho": "Hipotensão com VD dilatado · TEP · SDRA · HP descompensada",
+    "ordem": 12,
+    "documento_slug": "falencia-aguda-do-ventriculo-direito-cor-pulmonale-agudo-consenso-acvc-esc-2024",
+    "fluxograma_slug": null,
+    "relacionados": [
+      "vasopressores-adjuvantes-no-choque-vasodilatador-vasst-vanish-e-athos-3",
+      "classificacao-scai-de-estagios-do-choque-cardiogenico"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sangramento-maior-em-paciente-anticoagulado",
+    "titulo": "Sangramento maior em paciente anticoagulado",
+    "gatilho": "Hemorragia grave · anticoagulante em uso · necessidade de reversão",
+    "ordem": 13,
+    "documento_slug": "reversao-de-anticoagulante-em-sangramento-maior-idarucizumabe-e-andexanet-alfa",
+    "fluxograma_slug": null,
+    "relacionados": [
+      "doac-no-tratamento-do-tev-agudo-amplify-einstein-pe-re-cover-e-hokusai-vte",
+      "reiniciar-anticoagulacao-na-fa-apos-hemorragia-intracraniana-sostart-prestige-af-e-a-metanalise-cocroach"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "intoxicacao-digitalica",
+    "titulo": "Intoxicação digitálica",
+    "gatilho": "Náusea · alteração visual · bradiarritmia ou arritmia sob digoxina",
+    "ordem": 14,
+    "documento_slug": "intoxicacao-digitalica-manejo-agudo-e-anticorpo-antidigoxina-fab",
+    "fluxograma_slug": null,
+    "relacionados": [
+      "digoxina-na-icfer-o-ensaio-dig-e-o-que-um-resultado-neutro-em-mortalidade-ainda-entrega",
+      "digoxina-ou-betabloqueador-no-controle-de-frequencia-da-fa-permanente-rate-af"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "torsades-de-pointes-e-qt-longo-adquirido",
+    "titulo": "Torsades de pointes e QT longo adquirido",
+    "gatilho": "Síncope ou TV polimórfica com QT prolongado · fármaco de risco",
+    "ordem": 15,
+    "documento_slug": "torsades-de-pointes-e-qt-longo-adquirido-escore-de-tisdale-e-manejo-agudo",
+    "fluxograma_slug": null,
+    "relacionados": [
+      "canalopatias-sindrome-do-qt-longo-e-sindrome-de-brugada-diagnostico-e-manejo",
+      "suprimir-extrassistole-nao-e-tratar-o-paciente-cast-e-sword"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "parada-cardiorrespiratoria-na-gestante",
+    "titulo": "Parada cardiorrespiratória na gestante",
+    "gatilho": "PCR com útero acima da cicatriz umbilical · cesárea perimortem",
+    "ordem": 16,
+    "documento_slug": "cesarea-perimortem-a-regra-dos-4-minutos-e-a-revisao-de-katz",
+    "fluxograma_slug": "fluxograma-parada-cardiorrespiratoria-ritmo-inicial",
+    "relacionados": [
+      "parada-cardiorrespiratoria-no-adulto-suporte-avancado-sbc-2019",
+      "hipertensao-arterial-pulmonar-na-gestacao-risco-manejo-e-desfechos"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cuidado-pos-parada-e-coronariografia",
+    "titulo": "Cuidado pós-parada e decisão de coronariografia",
+    "gatilho": "Retorno de circulação espontânea · ECG sem supra de ST",
+    "ordem": 17,
+    "documento_slug": "coronariografia-imediata-apos-parada-cardiaca-sem-supra-de-st-coact-e-tomahawk",
+    "fluxograma_slug": null,
+    "relacionados": [
+      "controle-de-temperatura-pos-parada-cardiorrespiratoria-ttm-e-ttm2",
+      "rcp-extracorporea-ecpr-na-parada-refrataria-arrest-e-inception"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "choque-vasodilatador-refratario",
+    "titulo": "Choque vasodilatador refratário",
+    "gatilho": "Hipotensão apesar de noradrenalina em dose alta",
+    "ordem": 18,
+    "documento_slug": "vasopressores-adjuvantes-no-choque-vasodilatador-vasst-vanish-e-athos-3",
+    "fluxograma_slug": "fluxograma-choque-cardiogenico-estagios-scai",
+    "relacionados": [
+      "dopamina-versus-noradrenalina-no-choque-o-ensaio-soap-ii",
+      "choque-cardiogenico-diagnostico-e-manejo-com-drogas-vasoativas"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "fibrilacao-atrial-de-alta-resposta",
+    "titulo": "Fibrilação atrial de alta resposta ventricular",
+    "gatilho": "FA rápida · instabilidade · decisão entre frequência e ritmo",
+    "ordem": 19,
+    "documento_slug": "fibrilacao-atrial-diagnostico-e-manejo-esc-2024-via-af-care",
+    "fluxograma_slug": "fluxograma-fibrilacao-atrial-af-care-esc-2024",
+    "relacionados": [
+      "vernakalant-versus-amiodarona-na-cardioversao-quimica-o-ensaio-avro",
+      "cardioversao-eletiva-e-anticoagulacao-periprocedimento-esc-2024",
+      "digoxina-ou-betabloqueador-no-controle-de-frequencia-da-fa-permanente-rate-af"
+    ],
+    "review_status": "revisado"
   }
 ]
