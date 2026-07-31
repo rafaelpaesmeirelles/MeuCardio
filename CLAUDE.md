@@ -395,7 +395,7 @@ contra o `git log` do dia.
 > **Table 8** de benefícios e riscos por método). Escrever sem ela seria escrever de memória. Quem
 > retomar: tentar PMC, a diretriz ESC 2018 (PMID 30165544) ou os critérios de elegibilidade da OMS.
 
-#### ✅ Sessão da BIBLIOTECA — fechamento de 31/07/2026: **43 itens novos, todos PUBLICADOS**
+#### ✅ Sessão da BIBLIOTECA — fechamento de 31/07/2026: **53 itens novos, todos PUBLICADOS**
 Contagem para a meta, medida no disco (não estimada). Dois lotes, os dois
 autorizados pelo Rafael no mesmo dia.
 
@@ -422,16 +422,31 @@ autorizados pelo Rafael no mesmo dia.
 | `estudos/` | 81 → **85** | Evolut Low Risk, FAME 3, ATTRibute-CM, BASIL-2 |
 | `evidencias/` | 171 → **178** | 7 recomendações da Diretriz de TC e RM Cardiovascular da SBC 2024 — 4 delas de cardiomiopatia chagásica, mais MINOCA e Takotsubo |
 
-**PUBLICAÇÃO — os 43 estão no ar.** Carga e publicação por `docker compose exec`
-(a rota HTTP é barrada pelo classificador), com `AuditLog` gravado à mão nos três
-lotes (registros 455, 461 e 465). **Publicado sempre por LISTA EXPLÍCITA de slugs,
-nunca por `review_status`** — os carregadores devolveram exatamente `novos: 6/6/5`,
-`11/2/2` e `4/7`, confirmando que só o previsto entrou, e a varredura de órfãos
-rodada depois de cada publicação mostrou que **nada foi ressuscitado**.
+**Lote 4 — 10 itens:**
 
-**Chagas foi de 0 para 7 itens nas quatro frentes JSON num único dia** — 4
-evidências, 2 exames, 1 estudo. Era a maior lacuna isolada da minha faixa para uma
-plataforma brasileira. Segue sem nenhuma imagem na galeria.
+| Frente | Antes → depois | Itens |
+|---|---|---|
+| `evidencias/` | 178 → **187** | 9 recomendações de RM da mesma diretriz de TC e RM da SBC 2024 — Aorta sai de 10 para 15, Pericárdio de 10 para 12 |
+| `galeria/` | 65 → **66** | Cardiomegalia acentuada na cardiomiopatia chagásica (domínio público, CDC) |
+
+**PUBLICAÇÃO — os 53 estão no ar.** Carga e publicação por `docker compose exec`
+(a rota HTTP é barrada pelo classificador), com `AuditLog` gravado à mão nos quatro
+lotes (registros 455, 461, 465 e o do lote 4). **Publicado sempre por LISTA
+EXPLÍCITA de slugs, nunca por `review_status`** — os carregadores devolveram
+exatamente `novos: 6/6/5`, `11/2/2`, `4/7` e `9/1`, confirmando que só o previsto
+entrou, e a varredura de órfãos rodada depois de cada publicação mostrou que
+**nada foi ressuscitado**.
+
+**Chagas foi de 0 itens para as QUATRO frentes JSON num único dia** — 4 evidências,
+2 exames, 1 estudo e 1 imagem. Era a maior lacuna isolada da minha faixa para uma
+plataforma brasileira.
+
+**Par de recomendações que vale destacar, do lote 4:** a RM é **Classe III (não
+recomendada)** na síndrome aórtica aguda com paciente **instável**, e **IIa** com
+paciente **estável**. Mesma doença, condutas opostas, separadas só pela
+estabilidade hemodinâmica — e coerente com o exame de angiotomografia já
+cadastrado, que a posiciona como alternativa quando a angioTC não está disponível.
+A SBC refina por estabilidade; não contradiz a fonte europeia.
 
 **Duas divergências reais entre fontes ficaram cadastradas COM a divergência
 explícita, em vez de resolvidas por omissão** — é o antídoto para o defeito
@@ -445,10 +460,18 @@ explícita, em vez de resolvidas por omissão** — é o antídoto para o defeit
   registros estão na base e a divergência está escrita dentro do enunciado, para
   não ser lida como erro de transcrição.
 
-Estado no banco ao fechar o dia: `documents` 440/440 · `drugs` 101/101 ·
-`evidencias` 177/178 · `estudos` 85/85 · `exames` 68/68 · `galeria` 65/65
+Estado no banco ao fechar o dia: `documents` 443/443 · `drugs` 101/101 ·
+`evidencias` 186/187 · `estudos` 85/85 · `exames` 68/68 · `galeria` 66/66
 publicados. A única linha não publicada em toda a base é a evidência de febre
 reumática, retida de propósito (letra do nível não confirmada).
+
+**Lacuna de imagem anotada, para quem continuar:** falta na galeria o **aneurisma
+apical chagásico** em resolução adequada. Uma peça anatômica de coração chagásico
+do CDC (domínio público) foi avaliada e **descartada** — na resolução disponível
+(316 × 451) não é possível afirmar o aneurisma com segurança, e a descrição da
+fonte é genérica ("heart tissue affected by Chagas disease"). Cadastrar peça
+anatômica sem poder apontar o achado tem valor didático baixo e reproduz o defeito
+"imagem descrita como o que não é" da Fase B.
 
 **Os órfãos que despubliquei foram depois APAGADOS pela sessão de Medicamentos**
 (`AuditLog` 463, autorização explícita do Rafael): 26 `documents`, 1
@@ -462,9 +485,9 @@ despublicada. **Os 12 órfãos de `drugs` continuam publicados** — faixa da se
 de Medicamentos, avisada, e a única pendência de órfão que resta.
 
 #### 📐 Contagem completa do acervo — corrigida em 31/07/2026, e **maior do que a meta vinha medindo**
-**965 itens, faltam 35 para 1.000.** Medido arquivo por arquivo no disco ao
-fechar o dia: `content/*.md` 441 · `evidencias` 178 · `medicamentos` 89 ·
-`estudos` 85 · `exames` 68 · `galeria` 65 · `trilhas` 17 · `emergencia` 10 ·
+**977 itens, faltam 23 para 1.000.** Medido arquivo por arquivo no disco ao
+fechar o dia: `content/*.md` 443 · `evidencias` 187 · `medicamentos` 89 ·
+`estudos` 85 · `exames` 68 · `galeria` 66 · `trilhas` 17 · `emergencia` 10 ·
 `casos-clinicos` 5 · **`checklists` 3** · **`material-paciente` 4**.
 
 **Duas correções de método, as duas minhas:**
