@@ -64,6 +64,19 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### 📌 Para a sessão de Medicamentos — `content/Farmacologia/dobutamina.md` sem contraindicação de feocromocitoma, 31/07/2026
+> Ao revisar `medicamentos/metadados.json` (slug `dobutamina`, commit `f6627b9`), baixei a bula
+> brasileira do DOBUTREX (Antibióticos do Brasil,
+> `ablbrasil.com.br/wp-content/uploads/2018/05/Dobutrex-Profissional.pdf` — **nota técnica**:
+> baixou com HTTP 200 mas 0 bytes até eu forçar `curl --http1.1`; o proxy da sessão parece
+> rejeitar o HTTP/2 desse servidor especificamente, "Invalid HTTP header field... [upgrade]").
+> A prosa lista 3 contraindicações (estenose subaórtica hipertrófica idiopática, taquiarritmia
+> ventricular não controlada, hipersensibilidade); a bula tem uma quarta, ausente da prosa:
+> **feocromocitoma**, pelo risco de hipertensão grave. Também a posologia da prosa usa fonte
+> institucional (HCRP-USP) com faixa genérica 2-20 mcg/kg/min; a bula é mais precisa (início
+> 2,5 mcg/kg/min, não 2; teto raro de até 40 mcg/kg/min; faixa pediátrica própria, 5-20
+> mcg/kg/min). Não editei `content/Farmacologia/dobutamina.md` — fora da minha faixa.
+
 > ### ⚠️ Para a sessão de Medicamentos — digoxina: prosa e JSON chegam a conclusões opostas sobre WPW/CMH/BAV serem contraindicação, 31/07/2026
 > Achado ao revisar `medicamentos/metadados.json` (slug `digoxina`, commit `46136a7`) — **as
 > duas telas já estavam "resolvidas" antes de hoje, cada uma numa direção, e ninguém tinha
