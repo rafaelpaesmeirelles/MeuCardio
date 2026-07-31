@@ -382,7 +382,7 @@ contra o `git log` do dia.
 > **Table 8** de benefícios e riscos por método). Escrever sem ela seria escrever de memória. Quem
 > retomar: tentar PMC, a diretriz ESC 2018 (PMID 30165544) ou os critérios de elegibilidade da OMS.
 
-#### ✅ Sessão da BIBLIOTECA — fechamento de 31/07/2026: **32 itens novos, todos PUBLICADOS**
+#### ✅ Sessão da BIBLIOTECA — fechamento de 31/07/2026: **43 itens novos, todos PUBLICADOS**
 Contagem para a meta, medida no disco (não estimada). Dois lotes, os dois
 autorizados pelo Rafael no mesmo dia.
 
@@ -402,24 +402,56 @@ autorizados pelo Rafael no mesmo dia.
 | `exames/` | 66 → **68** | Eco de estresse com dobutamina (isquemia miocárdica); eco de estresse na doença valvar — a base tinha 7 verbetes de ecocardiograma e nenhum de estresse |
 | `galeria/` | 63 → **65** | TC de aneurisma de aorta abdominal com medidas; vegetação em valva tricúspide (endocardite de câmaras direitas) |
 
-**PUBLICAÇÃO — os 32 estão no ar.** Carga e publicação por `docker compose exec`
-(a rota HTTP é barrada pelo classificador), com `AuditLog` gravado à mão nos dois
-lotes. **Publicado sempre por LISTA EXPLÍCITA de slugs, nunca por
-`review_status`** — os carregadores devolveram exatamente `novos: 6/6/5` no lote 1
-e `11/2/2` no lote 2, confirmando que só o previsto entrou, e a varredura de
-órfãos rodada logo depois de publicar mostrou que **nada foi ressuscitado**
-(zero órfãos no ar em documents, evidencias, estudos, exames e galeria; seguem só
-os 12 de `drugs`, da outra sessão).
+**Lote 3 — 11 itens:**
 
-Estado no banco ao fechar: `documents` 436/462 · `drugs` 101/101 · `evidencias`
-170/172 · `estudos` 81/82 · `exames` 68/68 · `galeria` 65/65 publicados. Os não
-publicados são todos deliberados: os órfãos despublicados hoje, mais a evidência
-de febre reumática retida por letra do nível não confirmada.
+| Frente | Antes → depois | Itens |
+|---|---|---|
+| `estudos/` | 81 → **85** | Evolut Low Risk, FAME 3, ATTRibute-CM, BASIL-2 |
+| `evidencias/` | 171 → **178** | 7 recomendações da Diretriz de TC e RM Cardiovascular da SBC 2024 — 4 delas de cardiomiopatia chagásica, mais MINOCA e Takotsubo |
+
+**PUBLICAÇÃO — os 43 estão no ar.** Carga e publicação por `docker compose exec`
+(a rota HTTP é barrada pelo classificador), com `AuditLog` gravado à mão nos três
+lotes (registros 455, 461 e 465). **Publicado sempre por LISTA EXPLÍCITA de slugs,
+nunca por `review_status`** — os carregadores devolveram exatamente `novos: 6/6/5`,
+`11/2/2` e `4/7`, confirmando que só o previsto entrou, e a varredura de órfãos
+rodada depois de cada publicação mostrou que **nada foi ressuscitado**.
+
+**Chagas foi de 0 para 7 itens nas quatro frentes JSON num único dia** — 4
+evidências, 2 exames, 1 estudo. Era a maior lacuna isolada da minha faixa para uma
+plataforma brasileira. Segue sem nenhuma imagem na galeria.
+
+**Duas divergências reais entre fontes ficaram cadastradas COM a divergência
+explícita, em vez de resolvidas por omissão** — é o antídoto para o defeito
+"contradição entre telas" que a Fase B catalogou:
+- **BASIL-2 × BEST-CLI** (isquemia crítica de membro): apontam para lados opostos.
+  Cada registro cita o outro pelo nome e explica — BASIL-2 exigia revascularização
+  infrapoplítea e favoreceu endovascular; BEST-CLI era infrainguinal em geral e
+  favoreceu cirurgia no coorte com veia safena adequada. O que sustentam juntos é
+  que nível anatômico e conduto decidem, não uma superioridade universal.
+- **BNP pré-operatório**: SBC 2024 dá Classe I, a ESC 2022 dá Classe IIa. Os dois
+  registros estão na base e a divergência está escrita dentro do enunciado, para
+  não ser lida como erro de transcrição.
+
+Estado no banco ao fechar o dia: `documents` 440/440 · `drugs` 101/101 ·
+`evidencias` 177/178 · `estudos` 85/85 · `exames` 68/68 · `galeria` 65/65
+publicados. A única linha não publicada em toda a base é a evidência de febre
+reumática, retida de propósito (letra do nível não confirmada).
+
+**Os órfãos que despubliquei foram depois APAGADOS pela sessão de Medicamentos**
+(`AuditLog` 463, autorização explícita do Rafael): 26 `documents`, 1
+`evidence_records` e 1 `scientific_studies`, mais 157 `document_chunks` e 1
+`document_revisions` por cascade, em transação única com guardas e **backup em
+`/root/backups-corvia/backup_orfaos_31072026.json`**, fora do repositório git. Eu
+havia recomendado despublicar sem apagar; a exclusão foi decisão do Rafael, está
+respaldada por backup e conferida depois (banco e disco batem 1:1). Registrado
+aqui para quem procurar esses slugs no futuro e não os encontrar nem como linha
+despublicada. **Os 12 órfãos de `drugs` continuam publicados** — faixa da sessão
+de Medicamentos, avisada, e a única pendência de órfão que resta.
 
 #### 📐 Contagem completa do acervo — corrigida em 31/07/2026, e **maior do que a meta vinha medindo**
-**949 itens, faltam 51 para 1.000.** Medido arquivo por arquivo no disco ao
-fechar o dia: `content/*.md` 436 · `evidencias` 171 · `medicamentos` 89 ·
-`estudos` 81 · `exames` 68 · `galeria` 65 · `trilhas` 17 · `emergencia` 10 ·
+**965 itens, faltam 35 para 1.000.** Medido arquivo por arquivo no disco ao
+fechar o dia: `content/*.md` 441 · `evidencias` 178 · `medicamentos` 89 ·
+`estudos` 85 · `exames` 68 · `galeria` 65 · `trilhas` 17 · `emergencia` 10 ·
 `casos-clinicos` 5 · **`checklists` 3** · **`material-paciente` 4**.
 
 **Duas correções de método, as duas minhas:**
