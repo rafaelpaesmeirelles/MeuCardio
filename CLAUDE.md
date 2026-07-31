@@ -71,14 +71,20 @@ estimativa): **920 itens** — `content/*.md` 429 · `evidencias` 160 · `medica
 89 · `estudos` 81 · `exames` 66 · `galeria` 63 · `trilhas` 17 · `emergencia` 10 · `casos-clinicos`
 5. **Faltam 1.080 itens.**
 
-> ⚠️ **O prazo NÃO foi redefinido junto com a meta, e a aritmética precisa estar à vista de quem
-> planejar o dia.** A data de lançamento registrada continua sendo **10/08/2026**. 1.080 itens em
-> 10 dias seriam **~108 itens/dia somando as duas sessões** — contra o ritmo real medido em
-> 31/07/2026, o melhor dia até agora: **22 itens** (17 da Biblioteca + 5 de Medicamentos). É um
-> fator de ~5x. **Isto está registrado como fato, não como objeção**: a meta de 2.000 é a régua
-> e vale como pedida. O que precisa de decisão do Rafael é **o que cede** — a data de 10/08, ou o
-> escopo do que entra até lá. Enquanto ele não decidir, as sessões seguem produzindo no máximo
-> ritmo com a régua de qualidade intacta, e o lançamento de 10/08 sai com o que estiver pronto.
+> ✅ **RESOLVIDO pelo Rafael em 31/07/2026: os 2.000 são meta SEM PRAZO FIXO.** A pergunta foi
+> levantada porque os números não fechavam — 1.080 itens em 10 dias dariam **~108/dia somando as
+> duas sessões**, contra o melhor dia real até agora, que foi 31/07: **22 itens** (17 da
+> Biblioteca + 5 de Medicamentos), um fator de ~5x.
+>
+> **Decisão dele:** **o lançamento de 10/08/2026 continua de pé e sai com o que estiver pronto**;
+> os 2.000 passam a ser **meta de médio prazo, sem data**. Consequências práticas, para as duas
+> sessões:
+> - **Não sacrificar verificação para alcançar contagem** — sem prazo atrelado, não existe mais
+>   nenhum argumento de cronograma que justifique afrouxar a régua de qualidade;
+> - **A data de 10/08 não é mais uma meta de volume**, é a data em que o produto abre ao público
+>   com o acervo que houver;
+> - **Não replanejar o dia em cima de "faltam N para 2.000"** — o número serve para medir
+>   progresso, não para ditar ritmo.
 
 **A régua de qualidade não muda com a meta maior.** Nada fabricado, fonte real e verificável, ou
 `VERIFICAÇÃO HUMANA NECESSÁRIA` explícito onde a fonte não confirmar. **Volume nunca justifica
@@ -151,6 +157,27 @@ contra o `git log` do dia.
 > `NOAH-AFNET`, `apneia obstrutiva do sono`, `cateter de artéria pulmonar`). Total de `documents`
 > publicados: **451**. `AuditLog` gravado à mão nas duas operações (importar e publicar), porque a
 > rota HTTP foi contornada.
+>
+> **2º lote do mesmo dia — mais 5 documentos, também PUBLICADOS** (o Rafael autorizou publicação
+> automática para o resto da sessão; ver a exceção registrada na regra 5 da divisão de trabalho,
+> com o escopo estreito que ela tem). `import_directory()`: `novos: 5, atualizados: 0,
+> inalterados: 429`. RAG: 37 trechos. **`content/*.md` em 434; `documents` publicados em 434.**
+>
+> | Tema | Documento | Fontes |
+> |---|---|---|
+> | Insuficiência cardíaca | Revascularização cirúrgica — STICH/STICHES e viabilidade | STICH (21463150), STICHES (27040723), viabilidade (21463153) |
+> | Prevenção e lipídios | Escore de cálcio coronariano | MESA (18367736), CAC zero em LDL≥190 (31604582) |
+> | Calculadoras | Escore MAGGIC | MAGGIC (23095984) |
+> | Arritmias | Disfunção tireoidiana por amiodarona | revisão narrativa (42520855) — **fonte mais fraca, declarada no próprio documento** |
+> | Terapia intensiva | ECMO venoarterial no choque do infarto | ECLS-SHOCK (37634145), ECMO-CS (36335478), metanálise IPD (37643628) |
+>
+> **Padrão que se repetiu em quase todos e vale como método:** o valor do documento esteve menos
+> em relatar o resultado e mais em **desarmar a leitura fácil dele** — o STICH muda de sinal entre
+> 5 e 10 anos e é a mesma coorte; o subestudo de viabilidade derruba a prática consagrada de
+> selecionar cirurgia por viabilidade; o win ratio de 5,01 do PEERLESS some quando o componente de
+> UTI sai; a metanálise favorável do cateter de artéria pulmonar é toda observacional; duas das 13
+> variáveis do MAGGIC são de tratamento e não são alavancas. **Documento que só repete o abstract
+> não acrescenta nada que o médico não obtenha sozinho.**
 >
 > **Duas armadilhas de verificação encontradas aqui, para não custarem tempo de novo:**
 > - **A rota pública de documento é `/api/library/documents/{slug}`** — não `/api/biblioteca/{slug}`,
@@ -578,6 +605,19 @@ uma frente livre em vez de negociar no meio do commit.
    sessão vira conteúdo publicado sem revisão.
 5. **Publicar continua sendo decisão do Rafael**, para as duas sessões, sem
    exceção.
+   > **Exceção pontual concedida em 31/07/2026, com escopo estreito — leia antes de invocá-la.**
+   > O Rafael autorizou a **sessão de Medicamentos** a **publicar automaticamente** os lotes que
+   > ela mesma verificou, **durante aquela sessão específica**, sem parar para pedir aval a cada
+   > lote. Escopo da autorização, para não ser esticada:
+   > - vale **só para aquela sessão de Medicamentos de 31/07/2026**, não para sessões futuras;
+   > - **não** se estende à sessão da Biblioteca, que segue pedindo aval;
+   > - **não** dispensa a verificação item a item — foi concedida justamente porque a verificação
+   >   estava sendo feita e demonstrada, e a condição implícita é essa;
+   > - **não** vale para conteúdo cuja fonte principal seja mais fraca que diretriz ou estudo
+   >   original sem que a fraqueza esteja declarada no próprio documento.
+   >
+   > **Sessão nova NÃO herda isto.** Se você é uma sessão posterior lendo este arquivo, a regra
+   > que vale para você é a linha 5 acima, sem a exceção: pergunte antes de publicar.
 
 ### Entrega da sessão de Conteúdo para a de Medicamentos — Calculadoras
 Ao ler a divisão por tema de 29/07/2026, eu já havia começado a resolver as
