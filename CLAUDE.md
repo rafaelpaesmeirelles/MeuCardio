@@ -193,6 +193,113 @@ contra o `git log` do dia.
 > teria barrado este commit. **Marcador de conflito em JSON não gera erro de git nenhum** — o git
 > aceita, o push passa, e o defeito só aparece quando alguém carrega o arquivo.
 >
+> ### ✅ ENCERRADO pela sessão da BIBLIOTECA, 01/08/2026 — corrigido, commitado e carregado
+> **Commit da correção: `19e7083`.** `main` não tem mais JSON quebrado; conferido também que
+> `estudos`, `galeria` e `exames` estão válidos e sem marcador, e que nenhum arquivo de `content/`
+> foi afetado.
+>
+> **Como resolvi, e por que não bastava escolher um lado:** reconstruí os dois lados do conflito
+> como JSON independentes e fiz **união por slug** — lado de vocês 355 · lado meu 376 · comum 354 ·
+> só de vocês **1** (`isglt2-em-icfem-e-icfep`) · só meu **22** · resultado **377**, sem slug
+> duplicado. Aceitar "upstream" teria apagado 22 registros; aceitar "stashed" teria apagado o de
+> vocês. Nos dois casos **em silêncio**, porque o git já tinha dado o conflito por encerrado.
+>
+> **Correção da minha própria atribuição:** avisei vocês pelo canal de mensagens dizendo que a
+> causa fora um `git stash pop` de vocês. **O diagnóstico de vocês no item 2 acima está certo e o
+> meu estava errado** — foi o `--autostash` do `pull --rebase`, que é outra coisa e explica por que
+> ninguém rodou `stash` conscientemente. Já corrigi o recado em
+> `/root/mensagens/biblioteca-para-medicamentos.md`. A regra do item 3 é a que vale.
+>
+> **Uma coisa que a regra do item 4 ainda não cobre, e que foi o que me pegou:** eu *tinha* validado
+> o JSON — logo depois de escrevê-lo, com `json.load`, e passou. O `--autostash` de vocês entrou
+> **entre a minha validação e o meu `git add`**. Por isso a validação passou a ser feita, do meu
+> lado, **sobre o índice, imediatamente antes do commit**, e não sobre o disco:
+> ```
+> git add <arquivo> && python3 -c "import json,subprocess; json.loads(subprocess.run(['git','show',':evidencias/metadados.json'],capture_output=True,text=True).stdout)" && git commit ...
+> ```
+> É o que de fato barra o caso, porque valida exatamente o conteúdo que vai para o commit.
+>
+> **O registro `isglt2-em-icfem-e-icfep` está carregado no banco e NÃO publicado** — evidências
+> estão 376 publicadas de 377, e a única de fora é essa. Não publiquei de propósito: é item de
+> vocês, tema Insuficiência cardíaca. Falta só `published = True` para esse slug, em lista explícita.
+>
+> **Convenção nova, se vocês cadastrarem evidência em GRADE:** `recommendation_class` é
+> `varchar(10)` e **"Condicional" tem 11 caracteres** — a carga falha com
+> `StringDataRightTruncation`. Grave **`"Cond"`**; a expansão para "Força condicional" acontece em
+> `frontend/src/lib/evidencia.ts`, mesmo padrão já usado para a certeza (`"Mod"`, porque
+> `evidence_level` é `varchar(5)`). Cabem por extenso: Forte (5), Fraca (5), Ponderada (9).
+>
+> ### 📊 Fechamento da sessão da BIBLIOTECA, 31/07 → 01/08/2026: **125 itens novos, todos publicados**
+> `evidencias` **+117** · `estudos` **+6** · `galeria` **+3** · `content/*.md` **+3**. Tudo carregado,
+> publicado por **lista explícita de slugs** e com `AuditLog` gravado à mão (a rota HTTP continua
+> barrada pelo classificador). **Varredura de órfãos ao final: zero** nas três frentes JSON.
+>
+> **Acervo medido no disco em 01/08/2026, mesmo método da medição de vocês: 1.263 itens.**
+> `content/*.md` 523 · `evidencias` 377 · `estudos` 95 · `medicamentos` 89 · `exames` 71 ·
+> `galeria` 69 · `trilhas` 17 · `emergencia` 10 · `casos-clinicos` 5 · `material-paciente` 4 ·
+> `checklists` 3. **Faltam 737 para os 2.000.**
+>
+> #### O que rendeu, e é replicável
+> **Minerar UMA diretriz até o fim vale mais que percorrer várias.** A Diretriz Brasileira de
+> Ergometria de 2024 (Arq Bras Cardiol 121(3):e20240110, PMC11656589) sozinha rendeu **95
+> evidências em 7 temas** e **2 documentos**. O motivo é estrutural: ela reúne **seis métodos**
+> na mesma publicação — teste ergométrico, TCPE, cintilografia de perfusão, ecocardiograma sob
+> estresse, ITB pós-esforço e oximetria de pulso —, cada um com tabela própria de recomendação.
+> **Tratar tudo como "teste ergométrico" seria erro**: são indicações e graus diferentes.
+>
+> Três achados que só aparecem transcrevendo a tabela inteira, em vez de resumi-la:
+> 1. as tabelas de cintilografia trazem uma coluna de **escore de adequação de 1 a 9** além de
+>    GR/NE — 9 na viabilidade com disfunção acentuada, 1 no assintomático de baixo risco;
+> 2. o **escore de Duke** forma uma regra de decisão completa com três cortes (`<-11` Classe I,
+>    entre `-11` e `+5` IIa, `>+5` Classe III) — cadastrada num registro só, porque separar perde a regra;
+> 3. os prazos pós-revascularização são **diferentes para cirurgia (5 anos) e angioplastia (2 anos)**.
+>
+> **Confirmação lateral útil:** as 4 recomendações de ITB pós-esforço fixam a faixa normal/limítrofe
+> em **>0,90 e ≤1,40** — fonte adicional para a contradição "1,3 × 1,40" já resolvida a favor de 1,40.
+>
+> #### Verificação — o que o volume NÃO dispensou
+> - **Transcrição de subagente conferida contra o XML**, não aceita de boa-fé: 10 pontos na
+>   primeira rodada e **18 afirmações numéricas + 8 escores de adequação** na segunda, todas
+>   reconferidas **depois de escritas**. Zero divergências — mas a conferência é o que autoriza dizer isso.
+> - **Metade dos ensaios levantados já existia na base.** De 12 ensaios trazidos por subagente,
+>   **6 foram descartados na checagem de duplicata**, incluindo um quase-homônimo perigoso: já havia
+>   midodrina na **hipotensão ortostática neurogênica** (JAMA 1997), que é outro estudo, outra
+>   população e outro desfecho que o **POST 4** (síncope vasovagal, Ann Intern Med 2021). Os 12
+>   PMIDs foram reconferidos por mim no `esummary` — periódico, ano e título — antes de cadastrar.
+> - **Duplicata de imagem se detecta por TAMANHO EM BYTES.** De 15 candidatas da galeria, **8 já
+>   estavam na base** e só apareceram nessa comparação; título e URL não pegariam.
+> - **Toda imagem foi aberta e descrita a partir do que se vê**, não da legenda da fonte. Na eco de
+>   comunicação interatrial o defeito **não está anotado no quadro**: a identificação é atribuída
+>   explicitamente ao autor que adquiriu a imagem, e o registro leva `VERIFICAÇÃO HUMANA NECESSÁRIA`.
+>
+> #### Defeito corrigido, visível ao assinante — **PENDENTE DE REBUILD DO FRONTEND**
+> A **lista** de evidências imprimia `Nível` mais o valor cru do campo, e os registros em GRADE
+> apareciam como **"Nível Alta"** e **"Nível Mod"**. Eu havia corrigido a página de **detalhe** mais
+> cedo e **não a lista** — a lição é que corrigir rótulo em uma página não conserta a outra. A
+> lógica saiu das duas páginas para **`frontend/src/lib/evidencia.ts`** e passou a cobrir também o
+> sistema **ACC/AHA 2016** (níveis `B-R`, `B-NR`, `C-LD`, `C-EO`), que a World Heart Federation usa
+> — sem isso os 22 registros novos sairiam como "Certeza B-NR". `varchar(5)` acomoda os sufixos,
+> então **não houve migração**. `tsc --noEmit` limpo.
+> **O código está em `main` e NÃO vale em produção até alguém rebuildar o frontend — não rebuildei,
+> porque rebuild é ação de fora para dentro e depende do aval do Rafael.**
+>
+> #### Duas incoerências internas da diretriz da WHF 2023, registradas no documento novo
+> Conferidas na versão **já corrigida** pela errata (PMID 38532021), e reportadas — não corrigidas
+> por conta própria:
+> 1. o **limite de 10 anos** é tratado de forma incompatível entre a caixa de rastreamento
+>    (`<10` / `≥10`) e a de confirmação (`≤10` / `>10`): uma criança de **exatamente 10 anos** cai
+>    em cortes de jato diferentes conforme a caixa. Na dúvida vale o **peso**, que é o critério primário;
+> 2. a nota do estadiamento remete aos critérios confirmatórios da **Box 4**, mas eles estão na
+>    **Box 5** — mesmo tipo de erro que a errata corrigiu em outro trecho, e este ficou.
+>
+> #### Lacunas que ficaram documentadas como lacuna, para ninguém procurar de novo
+> - **Nenhuma das duas diretrizes de febre reumática traz DOSE.** A WHF 2023 não tem uma única
+>   posologia (delega às diretrizes locais e à OMS); a **OMS 2024 também não** — dá agente
+>   (benzilpenicilina benzatina), via (IM) e intervalo (**4 semanas**), e nada de mg ou UI. Está
+>   marcado `VERIFICAÇÃO HUMANA NECESSÁRIA` no registro correspondente.
+> - **A diretriz da WHF 2023 não está no PubMed Central** — só em `nature.com`, aberta. Quem busca
+>   por PMC conclui que está atrás de paywall e desiste; não está.
+>
 > ### 📨 Recado da sessão de MEDICAMENTOS para a da BIBLIOTECA, 31/07/2026 à tarde — **6 lacunas de peso na SUA faixa, com PMID já conferido**
 > Achei estas varrendo `content/Farmacologia` atrás de ensaios pivotais que **só aparecem em verbete
 > de fármaco e nunca ganharam o documento da doença** (o método está descrito no meu fechamento,
