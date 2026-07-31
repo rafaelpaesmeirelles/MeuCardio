@@ -876,7 +876,7 @@
   },
   {
     "slug": "clortalidona",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Clortalidona",
     "drug_class": "Diurético tipo tiazídico (tiazide-like, ftalimidina)",
     "mechanism": "Inibe reabsorção de sódio e cloreto no túbulo contornado distal; meia-vida mais longa que hidroclorotiazida, permitindo efeito anti-hipertensivo sustentado por 24h+ com dose única diária",
@@ -891,8 +891,14 @@
     ],
     "contraindications": [
       "Anúria",
-      "Insuficiência renal grave",
-      "Hipersensibilidade a sulfonamidas"
+      "Insuficiência hepática grave",
+      "Insuficiência renal grave (clearance de creatinina <30 mL/min)",
+      "Hipersensibilidade à clortalidona, a outros derivados sulfonamídicos ou a qualquer excipiente",
+      "Hipocalemia refratária, ou condições que envolvam perda aumentada de potássio",
+      "Hiponatremia e hipercalcemia",
+      "Hiperuricemia sintomática (história de gota ou cálculo de ácido úrico)",
+      "Hipertensão durante a gravidez",
+      "**fonte**: bula do HIGROTON (clortalidona, Novartis Biociências), item 4. **Corrigido em 31/07/2026**: a lista anterior (fonte FDA) tinha só 3 dos 8 itens formais desta bula — faltavam insuficiência hepática grave, hipocalemia refratária/perda de potássio, hiponatremia/hipercalcemia, hiperuricemia sintomática e hipertensão na gravidez. Este último item já estava mencionado no campo `pregnancy` deste registro, mas não constava aqui — inconsistência interna corrigida"
     ],
     "adverse_effects": [
       "Hipocalemia, hiponatremia, hiperuricemia, hiperglicemia"
@@ -915,7 +921,8 @@
     },
     "references": [
       "Chlorthalidone — rótulo aprovado pelo FDA, DailyMed SPL setid da0fe4da-a4f3-4aa8-84f4-4d31c5cbdb0e",
-      "Chlorthalidone/THALITONE — bula FDA/DailyMed (múltiplas versões consultadas)"
+      "Chlorthalidone/THALITONE — bula FDA/DailyMed (múltiplas versões consultadas)",
+      "Bula do HIGROTON (clortalidona, Novartis Biociências S.A.), VPS5, via consultaremedios.com.br — usada para contraindicações completas (item 4); posologia já conferia com o rótulo FDA usado antes"
     ],
     "pregnancy": "**Categoria de risco B, mas com contraindicação explícita para hipertensão na gravidez** — a bula lista \"hipertensão durante a gravidez\" entre as contraindicações e, na seção de gravidez, determina que não seja usada na gestação **a menos que não haja alternativa mais segura**. Motivo declarado: como outros diuréticos, pode causar **hipoperfusão placentária**; os tiazídicos entram na circulação fetal e podem causar distúrbios eletrolíticos, e já foi relatada **trombocitopenia neonatal** com tiazídicos e diuréticos correlatos. A letra B, isolada, subestima essa restrição — as duas leituras estão registradas aqui de propósito. Fonte: bula do HIGROTON (clortalidona), seções de contraindicações e \"Gravidez e lactação\".",
     "lactation": "**Evitar.** A clortalidona **passa para o leite materno**, e a bula determina evitar o uso em lactantes por razões de segurança. Fonte: bula do HIGROTON (clortalidona)."
