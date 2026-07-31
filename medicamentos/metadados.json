@@ -59,39 +59,51 @@
   },
   {
     "slug": "acido-bempedoico",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Ácido bempedoico",
     "brand_names": [
-      "Nustendi (associação com ezetimiba)",
-      "Nilemdo (isolado",
-      "referência internacional)"
+      "Nustendi (associação com ezetimiba, registrado na ANVISA)",
+      "Nilemdo (isolado, referência internacional/EMA — sem registro ANVISA confirmado nesta revisão)"
     ],
     "drug_class": "Hipolipemiante — inibidor da ATP-citrato liase (ACL)",
     "mechanism": "Inibe a enzima ATP-citrato liase, etapa anterior à HMG-CoA redutase na via de biossíntese de colesterol hepático; é um pró-fármaco ativado especificamente no fígado (não no músculo esquelético), o que reduz teoricamente o potencial de miopatia comparado a estatinas; mecanismo complementar à ezetimiba, que atua na absorção intestinal de colesterol",
     "presentations": [
-      "NUSTENDI: comprimidos com ácido bempedoico + ezetimiba, combinando dois mecanismos de redução de LDL-C complementares e não sobrepostos"
+      "NUSTENDI: comprimido revestido por película de 180 mg de ácido bempedoico + 10 mg de ezetimiba (associação de dose fixa) — não deve ser partido nem mastigado."
     ],
     "indications": [
-      "Redução de LDL-C em pacientes que não atingem meta com estatina em dose máxima tolerada, ou em pacientes com intolerância a estatinas (incapazes de usar estatina); recomendado em associação com estatina em dose máxima tolerada, com ou sem ezetimiba, em pacientes de alto/muito alto risco cardiovascular"
+      "Redução de LDL-C em pacientes que não atingem meta com estatina em dose máxima tolerada, ou em pacientes com intolerância a estatinas; recomendado em associação com estatina em dose máxima tolerada, com ou sem ezetimiba, em pacientes de alto/muito alto risco cardiovascular"
     ],
     "adverse_effects": [
-      "Hiperuricemia (pode desencadear crises de gota), elevação de creatinina, anemia, elevação de transaminases"
+      "Reações mais frequentes: hiperuricemia (4,7%) e obstipação (4,7%). Descontinuação por espasmos musculares (0,7% vs. 0,3% placebo), diarreia (0,5% vs. <0,1%), dor nas extremidades (0,4% vs. 0) e náuseas (0,3% vs. 0,2%) — diferenças não significativas estatisticamente. Também: elevação de creatinina, anemia, elevação de transaminases."
     ],
     "contraindications": [
-      "Gravidez e lactação, hipersensibilidade ao fármaco"
+      "Hipersensibilidade às substâncias ativas ou a qualquer excipiente",
+      "Gravidez",
+      "Amamentação",
+      "Uso concomitante com sinvastatina >40 mg/dia",
+      "Coadministração com estatina em paciente com doença hepática ativa ou elevação persistente inexplicada de transaminases"
     ],
     "dosing": {
-      "dose": "180 mg de ácido bempedoico (na associação com ezetimiba 10 mg) 1x/dia; administração independente de horário"
+      "dose padrao": "180 mg de ácido bempedoico / 10 mg de ezetimiba (1 comprimido) uma vez ao dia, com ou sem alimentos — comprimido deve ser engolido inteiro, sem partir ou mastigar.",
+      "sequestrantes de acidos biliares": "Administrar NUSTENDI pelo menos 2 horas antes ou pelo menos 4 horas após um sequestrante de ácidos biliares.",
+      "com sinvastatina": "Limitar sinvastatina a 20 mg/dia (ou 40 mg/dia em hipercolesterolemia grave e alto risco cardiovascular sem meta atingida em dose menor, quando o benefício supera o risco).",
+      "idosos": "Sem necessidade de ajuste posológico.",
+      "insuficiencia renal": "Sem ajuste em comprometimento renal leve a moderado. Dados limitados em TFGe <30 mL/min/1,73m² e não estudado em diálise — considerar monitorização adicional de reações adversas nesses casos.",
+      "insuficiencia hepatica": "Sem ajuste em Child-Pugh A. **Não recomendado** em Child-Pugh B ou C, pelos efeitos desconhecidos do aumento de exposição à ezetimiba.",
+      "pediatria": "Segurança e eficácia não estabelecidas abaixo de 18 anos.",
+      "fonte": "Bula do profissional de saúde, NUSTENDI (ácido bempedoico + ezetimiba), item 8 (Posologia e Modo de Usar) — texto integral obtido e conferido em 31/07/2026."
     },
     "notes": {
       "Seletividade hepatica": "Ativação seletiva no fígado (não no músculo) representa diferencial farmacológico importante, associado a menor incidência de mialgia/miopatia comparado a estatinas — relevante especificamente para população intolerante a estatinas",
-      "Populacao alvo preferencial": "Pacientes com intolerância documentada a estatinas ou que necessitam de redução adicional de LDL-C além do que estatina em dose máxima tolerada proporciona"
+      "Populacao alvo preferencial": "Pacientes com intolerância documentada a estatinas ou que necessitam de redução adicional de LDL-C além do que estatina em dose máxima tolerada proporciona",
+      "interacao fibratos": "Fenofibrato/genfibrozila aumentam moderadamente a concentração de ezetimiba (~1,5x e ~1,7x); risco litogênico (colelitíase) não pode ser descartado — avaliar vesícula biliar se houver suspeita clínica.",
+      "interacao ciclosporina": "Em pacientes pós-transplante renal, dose única de ezetimiba aumentou em 3,4x (2,3-7,9x) a AUC da ezetimiba total comparado a controle saudável — cautela na coadministração."
     },
     "references": [
-      "Bula NUSTENDI (ácido bempedoico + ezetimiba) · ANVISA/Medpedia · https://www.medpedia.com.br/wp-content/uploads/2025/06/Bula-Nustendi.pdf"
+      "Bula do profissional de saúde. NUSTENDI (ácido bempedoico + ezetimiba). ANVISA — via Medpedia, https://www.medpedia.com.br/wp-content/uploads/2025/06/Bula-Nustendi.pdf — texto integral obtido e conferido em 31/07/2026, substituindo a fonte europeia (RCM/EMA) usada na revisão anterior."
     ],
-    "pregnancy": "**Contraindicado na gravidez.** O mecanismo é o motivo declarado: o ácido bempedoico **diminui a síntese de colesterol** e possivelmente de outros derivados necessários ao desenvolvimento normal do feto, podendo causar dano fetal. Dados em grávidas são limitados ou inexistentes, e os estudos em animais revelaram toxicidade reprodutiva. Deve ser **descontinuado antes da concepção**, ou assim que a gravidez for planejada ou reconhecida; mulher com potencial para engravidar deve usar contracepção eficaz durante o tratamento. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do NILEMDO (ácido bempedoico, Daiichi Sankyo). Fonte europeia, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil disponível nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer.",
-    "lactation": "**Amamentação pode ser considerada — exceção real dentro dos hipolipemiantes, e sustentada por número.** O ácido bempedoico e seu metabólito ativo são excretados no leite humano em quantidades **muito baixas**, com dose relativa do lactente (*relative infant dose*, RID) de **cerca de 0,5%**; em doses terapêuticas, **não são esperados efeitos** no lactente. A fonte admite o uso durante a amamentação, ponderando o benefício para a criança contra o benefício da terapêutica para a mulher. Contraste que vale registrar: as estatinas do acervo vão de restrição ampla a **categoria X**, e o ácido bempedoico — contraindicado na gravidez pelo mesmo mecanismo — é liberado com ressalva na lactação. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do NILEMDO (ácido bempedoico, Daiichi Sankyo). Fonte europeia, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil disponível nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer."
+    "pregnancy": "**Contraindicado na gravidez** (categoria de risco C, conforme a bula brasileira — a classificação em C coexiste com a contraindicação explícita no texto). O ácido bempedoico diminui a síntese de colesterol e possivelmente de outros derivados necessários ao desenvolvimento fetal normal, podendo causar dano fetal. Dados em grávidas inexistentes ou limitados; estudos em animais mostraram toxicidade reprodutiva. Deve ser **descontinuado antes da concepção**, ou assim que a gravidez for reconhecida; mulher com potencial para engravidar deve usar contracepção eficaz durante o tratamento. **Fonte**: Bula do profissional de saúde, NUSTENDI, item 5/Uso em populações específicas (Gravidez) — texto integral obtido e conferido em 31/07/2026, substituindo a fonte europeia (RCM/EMA) usada na revisão anterior.",
+    "lactation": "**CORRIGIDO em 31/07/2026 — a revisão anterior estava errada.** A bula brasileira **contraindica** NUSTENDI durante a amamentação — não há dado se ácido bempedoico/metabólitos ou ezetimiba/metabólitos são excretados no leite humano, e pelo potencial de reações adversas graves, mulher em uso de NUSTENDI não deve amamentar. A revisão anterior desta entrada, sourced na EMA/RCM europeu, afirmava o oposto (uso permitido, RID ~0,5%) — número não confirmado na bula brasileira e não reproduzido aqui. **Fonte**: Bula do profissional de saúde, NUSTENDI, item 5/Uso em populações específicas (Lactação) — texto integral obtido e conferido em 31/07/2026."
   },
   {
     "slug": "adenosina",
