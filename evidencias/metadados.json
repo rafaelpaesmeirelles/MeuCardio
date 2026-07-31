@@ -4880,5 +4880,83 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "escores-add-rs-e-aorta-nao-devem-ser-usados-isoladamente-na-sindrome-aortica",
+    "statement": "Os escores ADD-RS e AORTA NÃO devem ser utilizados EXCLUSIVAMENTE na avaliação inicial do paciente com suspeita de síndrome aórtica aguda para excluir ou confirmar o diagnóstico — Classe III, Nível B. Leia junto com a recomendação europeia já cadastrada nesta base, que dá Classe I ao ALGORITMO MULTIPARAMÉTRICO de descarte e confirmação usando o ADD-RS: não há contradição entre as duas. O escore dentro de um algoritmo, somado a D-dímero e imagem, é recomendação forte; o escore sozinho decidindo conduta é formalmente desaconselhado.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Atendimento à Dor Torácica na Unidade de Emergência – 2025 (SBC)",
+    "reference": "Diretriz Brasileira de Atendimento à Dor Torácica na Unidade de Emergência – 2025. Arq Bras Cardiol. 2025 — texto integral em acesso aberto (PMC12981354), tabelas de estratificação de risco na suspeita de síndrome aórtica aguda e dos escores ADD-RS e AORTA, conferidas linha a linha em 31/07/2026",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "add-rs",
+      "escore aorta",
+      "síndrome aórtica aguda",
+      "classe iii",
+      "uso isolado de escore"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "add-rs-na-avaliacao-inicial-da-suspeita-de-sindrome-aortica-aguda",
+    "statement": "O ADD-RS (Aortic Dissection Detection Risk Score) pode ser aplicado como parte da avaliação inicial do paciente com suspeita de síndrome aórtica aguda — Classe IIa, Nível B. O escore combina três blocos: condições predisponentes (síndrome de Marfan ou outra doença do tecido conjuntivo, história familiar de aortopatia, valvopatia aórtica conhecida, manipulação aórtica recente, aneurisma de aorta torácica conhecido), características da dor e achados do exame clínico.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Atendimento à Dor Torácica na Unidade de Emergência – 2025 (SBC)",
+    "reference": "Diretriz Brasileira de Atendimento à Dor Torácica na Unidade de Emergência – 2025. Arq Bras Cardiol. 2025 — texto integral em acesso aberto (PMC12981354), tabelas de estratificação de risco na suspeita de síndrome aórtica aguda e dos escores ADD-RS e AORTA, conferidas linha a linha em 31/07/2026",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "add-rs",
+      "síndrome aórtica aguda",
+      "estratificação de risco",
+      "marfan",
+      "aortopatia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "pocus-somado-ao-add-rs-na-suspeita-de-sindrome-aortica-aguda",
+    "statement": "A ultrassonografia point-of-care (POCUS), realizada por médico capacitado, pode ser aplicada EM ADIÇÃO ao ADD-RS para incrementar a avaliação da probabilidade diagnóstica na suspeita de síndrome aórtica aguda — Classe IIa, Nível B. Note as duas condições do enunciado: o exame soma-se ao escore, não o substitui, e depende de operador capacitado.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Atendimento à Dor Torácica na Unidade de Emergência – 2025 (SBC)",
+    "reference": "Diretriz Brasileira de Atendimento à Dor Torácica na Unidade de Emergência – 2025. Arq Bras Cardiol. 2025 — texto integral em acesso aberto (PMC12981354), tabelas de estratificação de risco na suspeita de síndrome aórtica aguda e dos escores ADD-RS e AORTA, conferidas linha a linha em 31/07/2026",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "pocus",
+      "ultrassonografia point-of-care",
+      "add-rs",
+      "síndrome aórtica aguda"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "escore-aorta-como-alternativa-ou-adicional-ao-add-rs",
+    "statement": "O escore AORTA pode ser aplicado em paciente com suspeita de síndrome aórtica aguda, de forma adicional ou como alternativa ao ADD-RS — Classe IIb, Nível C, portanto mais fraca que a do ADD-RS (IIa, B). Composição do AORTA: hipotensão ou choque vale 2 pontos; aneurisma, déficit de pulso, déficit neurológico, dor severa e dor de início súbito valem 1 ponto cada.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Atendimento à Dor Torácica na Unidade de Emergência – 2025 (SBC)",
+    "reference": "Diretriz Brasileira de Atendimento à Dor Torácica na Unidade de Emergência – 2025. Arq Bras Cardiol. 2025 — texto integral em acesso aberto (PMC12981354), tabelas de estratificação de risco na suspeita de síndrome aórtica aguda e dos escores ADD-RS e AORTA, conferidas linha a linha em 31/07/2026",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "escore aorta",
+      "síndrome aórtica aguda",
+      "probabilidade pré-teste",
+      "déficit de pulso"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
