@@ -2514,7 +2514,7 @@
   },
   {
     "slug": "metildopa-alfa-metildopa",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Metildopa (alfa-metildopa)",
     "brand_names": [
       "Aldomet"
@@ -2534,29 +2534,31 @@
       "Hemograma completo e função hepática no início do tratamento e periodicamente durante o uso crônico — suspender se houver elevação significativa de transaminases ou sinais de hemólise (Coombs positivo isolado, sem hemólise clínica, não exige suspensão)."
     ],
     "contraindications": [
-      "Hipersensibilidade",
-      "Doença hepática ativa",
-      "Uso concomitante com inibidores da MAO",
-      "Anemia hemolítica prévia por metildopa"
+      "Hepatopatia ativa (hepatite aguda, cirrose ativa)",
+      "Hipersensibilidade a qualquer componente do produto, incluindo distúrbio hepático associado a terapia anterior com metildopa",
+      "Uso concomitante de inibidor da monoaminoxidase (IMAO)",
+      "Uso em crianças — contraindicação formal explícita da bula brasileira, item à parte do item 4"
     ],
     "dosing": {
       "hipertensao geral inicial": "250 mg VO 2-3x/dia, aumentando a cada 2 dias conforme necessário até de 6/6h",
       "dose maxima": "3000 mg/dia",
       "hipertensao gestacional": "750-2000 mg/dia, fracionada",
-      "fonte": "APS-BVS ; CAISM-UNICAMP"
+      "fonte": "APS-BVS ; CAISM-UNICAMP, para o esquema de hipertensão gestacional (750-2000mg/dia) — confirmado agora contra a bula profissional brasileira do ALDOMET (MSD, via consultaremedios.com.br) para a posologia geral: 250mg 2-3x/dia nas primeiras 48h, titulação a cada ≥2 dias, máximo 3g/dia; se acrescentada a esquema anti-hipertensivo já em curso, dose inicial limitada a 500mg/dia. A bula do ALDOMET não traz esquema específico de hipertensão gestacional — por isso o protocolo obstétrico brasileiro segue como fonte própria desse campo."
     },
     "notes": {
-      "Farmacocinetica": "Excreção renal; nível plasmático estável em 24h; início de ação farmacológica após 6-8h"
+      "Farmacocinetica": "Excreção renal; nível plasmático estável em 24h; início de ação farmacológica após 6-8h",
+      "Anemia hemolitica previa — nao e contraindicacao formal do item 4": "**Corrigido em 31/07/2026**: o registro anterior listava \"anemia hemolítica prévia por metildopa\" como contraindicação formal — a bula brasileira do ALDOMET (item 4. CONTRAINDICAÇÕES) não traz esse item; trata anemia hemolítica em ADVERTÊNCIAS E PRECAUÇÕES, como motivo para descontinuar se surgir durante o tratamento, não como impedimento a reiniciar. Mantido aqui como cautela clínica razoável (reexposição em paciente com hipersensibilidade documentada cabe no item de hipersensibilidade), não como item textual da bula."
     },
     "references": [
       "Methyldopa — rótulo aprovado pelo FDA, DailyMed SPL setid 9e22e1d8-04ec-4b67-92ea-b09c706f2703",
       "Quais anti-hipertensivos podem ser utilizados na gestação? · APS-BVS · https://aps-repo.bvs.br/aps/quais-anti-hipertensivos-podem-ser-utilizados-na-gestacao/",
       "Hipertensão na Gravidez — Protocolo · CAISM/UNICAMP · https://www.caism.unicamp.br/download/protocolos/obstetricia/Hipertens%C3%A3o%20na%20Gravidez.pdf",
       "Methyldopa — LiverTox, NCBI Bookshelf",
-      "Pregnancy Outcome After First Trimester Use of Methyldopa — Hypertension (AHA journals), 2018"
+      "Pregnancy Outcome After First Trimester Use of Methyldopa — Hypertension (AHA journals), 2018",
+      "Bula profissional do ALDOMET (metildopa), MSD — via consultaremedios.com.br"
     ],
-    "pregnancy": "A bula do produto **não traz restrição nem categoria de risco** — orienta informar o médico se estiver grávida ou pretender engravidar. Fonte: bula do ALDOMET (metildopa, MSD).\n\n**Atenção ao que esta fonte NÃO diz:** o papel da metildopa como anti-hipertensivo de escolha na gestação é recomendação de diretriz obstétrica, e **não está afirmado aqui** — não foi conferido em fonte primária nesta sessão.",
-    "lactation": "**A metildopa é excretada no leite materno.** A bula orienta informar o médico se estiver amamentando ou pretender amamentar, sem determinar suspensão. Fonte: bula do ALDOMET (MSD)."
+    "pregnancy": "**Categoria de risco B** — correção do registro anterior, que afirmava (incorretamente) que a bula \"não traz... categoria de risco\"; ela traz, e é B. ALDOMET foi usado sob supervisão clínica e obstétrica rigorosa no tratamento de hipertensão gestacional: **não houve evidência clínica de anormalidade fetal** nem de efeito no recém-nascido; relatos publicados de uso em todos os trimestres indicam que a possibilidade de dano fetal é remota; em estudos clínicos (a maioria com início no 3º trimestre), o tratamento foi **associado a melhora na evolução fetal**. A metildopa atravessa a placenta e aparece no sangue do cordão umbilical; embora não haja efeito teratogênico evidente relatado, a possibilidade de dano não pode ser excluída, e o uso exige ponderar benefício contra risco. **O papel de primeira escolha na hipertensão gestacional é recomendação de diretriz obstétrica** (protocolo CAISM/UNICAMP, campo `indications`), coerente com o perfil de segurança descrito na própria bula, mas não é frase literal dela. Fonte: bula profissional brasileira do ALDOMET (metildopa, MSD), item \"Gravidez e lactação\".",
+    "lactation": "**A metildopa passa para o leite materno — a bula pede precaução, sem determinar suspensão ou contraindicação.** Fonte: bula profissional brasileira do ALDOMET (metildopa, MSD), mesmo item \"Gravidez e lactação\" acima."
   },
   {
     "slug": "metoprolol",
