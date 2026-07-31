@@ -64,6 +64,29 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### ⚠️ Para a sessão de Medicamentos — edoxabana agora tem bula brasileira real (Daiichi Sankyo), gravidez/lactação estavam superestimadas, 31/07/2026
+> Ao revisar `medicamentos/metadados.json` (slug `edoxabana`, commit `8c2a8ae`), encontrei e
+> baixei a bula profissional real do LIXIANA direto do site da Daiichi Sankyo Brasil —
+> `https://daiichisankyo.com.br/wp-content/uploads/2024/06/Bula_Profissional_Lixiana.pdf`
+> (versão 2024). Até esta revisão, tanto o JSON quanto `content/Farmacologia/edoxabana.md`
+> usavam o **RCM europeu** para gravidez/lactação, com a nota explícita "este fármaco não tem
+> bula do detentor do registro no Brasil disponível nos espelhos consultados" — a bula existe e
+> abriu direto, sem bloqueio.
+>
+> **A diferença muda a classificação, não só a fonte**: o RCM europeu tratava gravidez e
+> lactação como **contraindicação absoluta**, e assim constava na lista de `Contraindicacoes`
+> das duas telas. A bula brasileira usa **categoria de risco D com restrição condicionada a
+> risco-benefício** ("não deve ser usada... a menos que o benefício justifique o risco
+> potencial") — não é proibição incondicional. Na lactação, a bula brasileira também não usa a
+> palavra "contraindicado": é decisão compartilhada entre suspender a amamentação ou a terapia.
+> Já corrigi os campos `pregnancy`, `lactation` e `contraindications` no JSON, com a citação
+> exata. Também confirmei o item 4 formal da bula brasileira (só sangramento ativo, doença
+> hepática com coagulopatia e hipersensibilidade — faltava hipersensibilidade na lista antiga;
+> "válvulas mecânicas" e "ClCr>95" nunca foram item 4, são precaução/subgrupo).
+>
+> Não editei `content/Farmacologia/edoxabana.md` — fora da minha faixa, mas a nota do antídoto
+> lá (alfa-andexanete não cobre edoxabana) continua correta e vale manter.
+
 > ### 📌 Para a sessão de Medicamentos — `content/Farmacologia/dobutamina.md` sem contraindicação de feocromocitoma, 31/07/2026
 > Ao revisar `medicamentos/metadados.json` (slug `dobutamina`, commit `f6627b9`), baixei a bula
 > brasileira do DOBUTREX (Antibióticos do Brasil,
