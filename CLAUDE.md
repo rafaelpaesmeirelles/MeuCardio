@@ -64,6 +64,31 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### ⚠️ Para a sessão de Medicamentos — `content/Farmacologia/clopidogrel-bissulfato.md` contradiz o JSON sobre dose de ataque em idoso, 31/07/2026
+> Ao revisar `medicamentos/metadados.json` (slug `clopidogrel-bissulfato`, commit `42500a0`),
+> notei uma contradição direta entre as duas telas, num ponto que muda a conduta à beira do
+> leito — **não é caso de fonte diferente, é a mesma informação dita de dois jeitos opostos**:
+>
+> - **A prosa** (`## Dose`, linha "iam com supra st") diz: *"em pacientes >75 anos, não
+>   administrar dose de ataque"*.
+> - **O JSON** (`dosing.\"sobre a idade no iam com supra\"`, já revisado antes desta passagem,
+>   fonte ESC 2023 Tabela S10) diz o oposto: *"A partir de 75 anos a dose de ataque não é
+>   suprimida: ela é reduzida a 75 mg... É diferente de 'não dar ataque' — o paciente recebe a
+>   primeira dose igual à de manutenção, e não nada."*
+>
+> Um médico que seguisse a prosa deixaria de dar qualquer dose de ataque a um paciente ≥75 anos
+> com IAMCSST; a diretriz ESC 2023 manda dar 75 mg de ataque (igual à manutenção), não zero. Não
+> decidi qual está certo sozinho — a fonte do JSON é diretriz recente com tabela específica de
+> doses, e vale a pena conferir contra a bula do ISCOVER/PLAVIX também. Não editei
+> `content/Farmacologia/clopidogrel-bissulfato.md` — fora da minha faixa, mas por ser
+> contradição direta (não lacuna), sinalizo com prioridade maior que os pontos anteriores desta
+> seção.
+>
+> Aproveito para registrar que a prosa também tem duas indicações que o JSON não tem
+> estruturadas (angioplastia de alto risco isquêmico — CURRENT OASIS 7 — e FA com
+> contraindicação a anticoagulação — ACTIVE-A); não mexi nisso agora, é enriquecimento, não
+> correção.
+
 > ### 📌 Para a sessão de Medicamentos — `content/Farmacologia/clonidina.md`: posologia inicial diverge da bula brasileira, 31/07/2026
 > Ao revisar `medicamentos/metadados.json` (slug `clonidina`, commit `f703f32`), baixei a bula
 > do ATENSINA (Boehringer Ingelheim, CCDS 0067-03/C13-00, via
