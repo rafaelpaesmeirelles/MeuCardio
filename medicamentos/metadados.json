@@ -2315,7 +2315,7 @@
   },
   {
     "slug": "lisinopril",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Lisinopril",
     "drug_class": "Inibidor da enzima conversora de angiotensina (IECA)",
     "mechanism": "Inibidor direto da ECA, não sendo pró-fármaco (diferente do enalapril) — não requer biotransformação hepática para ativação; reduz angiotensina II, diminuindo pós-carga cardíaca; início gradual, efeito máximo em 6h, duração 24h",
@@ -2326,33 +2326,39 @@
       "- **Diuréticos**: queda excessiva de PA - **AINE**: reduz o efeito anti-hipertensivo e aumenta risco de lesão renal - **Dupla inibição do sistema renina-angiotensina** (BRA, alisquireno): maior risco de lesão renal, hipotensão e hipercalemia"
     ],
     "contraindications": [
-      "Gravidez",
-      "Angioedema prévio relacionado a tratamento com IECA",
-      "Hipersensibilidade"
+      "Hipersensibilidade ao lisinopril ou a outros componentes da fórmula",
+      "Histórico de reação anafilática/anafilactoide ou de angioedema relacionado a tratamento prévio com inibidor da ECA",
+      "Angioedema hereditário ou idiopático",
+      "Segundo e terceiro trimestres de gestação",
+      "Uso concomitante de alisquireno em pacientes com diabetes mellitus (tipo I ou II) ou com insuficiência renal moderada a grave (TFG <60 mL/min/1,73m²)"
     ],
     "adverse_effects": [
-      "Tosse seca, hipotensão, hipercalemia, angioedema (raro mas grave), piora de função renal"
+      "Estudos clínicos — mais frequentes: tontura, cefaleia, diarreia, fadiga, tosse e náuseas; menos frequentes: efeitos ortostáticos (incluindo hipotensão), erupção cutânea, astenia",
+      "Pós-comercialização, por frequência (bula ZESTRIL): comum — tontura, cefaleia, efeitos ortostáticos/hipotensão, tosse, diarreia, vômito; incomum — hipercalemia, alterações do humor/depressão, parestesia, vertigem, distúrbio do paladar, distúrbio do sono, alucinações, IAM ou AVC (possivelmente secundário a hipotensão grave em paciente de alto risco), palpitações, taquicardia, síncope, rinite, náusea, dor abdominal, indigestão, boca seca, erupção cutânea, prurido, angioedema (face/extremidades/lábios/língua/glote/laringe); rara — hiponatremia, confusão mental, distúrbio do olfato, urticária, alopecia, psoríase, secreção inapropriada de hormônio antidiurético; muito rara — depressão de medula óssea, anemia, trombocitopenia, leucopenia, agranulocitose, anemia hemolítica, hipoglicemia, broncoespasmo, sinusite, pancreatite, angioedema intestinal, hepatite (colestática ou hepatocelular)/icterícia/insuficiência hepática, diaforese, pênfigo, necrólise epidérmica tóxica, síndrome de Stevens-Johnson, eritema multiforme",
+      "Descontinuar imediatamente se surgir icterícia ou elevação acentuada de enzimas hepáticas — casos raros já evoluíram para insuficiência hepática"
     ],
     "dosing": {
-      "hipertensao essencial": "Dose inicial 10mg/dia, manutenção usual 20mg/dia",
-      "hipertensao renovascular": "Dose inicial 2,5-5mg",
-      "icc": "Dose inicial 2,5mg/dia, aumentando no máximo 10mg a cada 2 semanas até dose mais alta tolerada, máximo 35mg/dia",
-      "iam agudo": "Primeira dose 5mg, seguida de 5mg em 24h, 10mg em 48h, então 10mg 1x/dia; se PAS ≤120mmHg, iniciar com 2,5mg nos primeiros 3 dias",
-      "complicacoes renais retinianas dm": "10-20mg/dia",
-      "pediatria 6 anos ou mais": "0,07 mg/kg/dia (até 5mg), aumentar a intervalos de 1-2 semanas até máximo 0,61mg/kg ou 40mg/dia",
-      "dose maxima na hipertensao": "40 mg/dia. O rótulo manda iniciar com 10 mg e titular **até 40 mg** conforme a resposta pressórica; a versão anterior deste verbete trazia 80 mg/dia, o dobro",
-      "Ajuste renal — ClCr 10-30 mL/min": "metade da dose inicial usual (hipertensão: 5mg; ICC: 2,5mg; IAM: 2,5mg)",
-      "ajuste hemodialise": "É removido por hemodiálise; dose inicial 2,5mg/dia, máximo 40mg/dia",
-      "fonte": "rótulo do lisinopril aprovado pelo FDA (DailyMed)"
+      "hipertensao inicial": "10 mg 1x/dia",
+      "hipertensao manutencao": "20 mg/dia; dose máxima usada em estudos clínicos controlados por longo prazo: 80 mg/dia — a versão anterior deste verbete havia reduzido este número para 40mg/dia por engano: **40 mg/dia é o teto específico para paciente com insuficiência renal** (ver adiante), não o teto geral de hipertensão. Ambos os números constam da mesma bula, em seções diferentes",
+      "hipertensao pacientes em uso de diuretico": "iniciar com 5 mg (diurético deve ser suspenso 2-3 dias antes, se possível; se não puder suspender, iniciar com 5mg e reintroduzir diurético depois se necessário)",
+      "hipertensao renovascular": "dose inicial 2,5 ou 5 mg (risco de resposta exagerada à primeira dose, sobretudo em estenose bilateral de artéria renal ou estenose em rim único)",
+      "ajuste renal por ClCr": "ClCr <10 mL/min (incluindo diálise): dose inicial 2,5mg/dia; ClCr 10-30 mL/min: 2,5-5mg/dia; ClCr 31-80 mL/min: 5-10mg/dia; titular gradualmente até controle pressórico, com máximo de 40mg/dia nesta população",
+      "icc": "dose inicial 2,5mg/dia, como adjuvante a diurético e, quando apropriado, digitálico; aumentar em incrementos de no máximo 10mg a cada 2 semanas ou mais, até a dose mais alta tolerada, máximo 35mg 1x/dia",
+      "iam agudo": "1ª dose 5mg, depois 5mg em 24h, 10mg em 48h, então 10mg 1x/dia por 6 semanas; se PAS ≤120mmHg, iniciar/manter 2,5mg nos primeiros 3 dias; se PAS ≤100mmHg, manutenção de 5mg com reduções temporárias a 2,5mg se necessário; se hipotensão prolongada (PAS <90mmHg por mais de 1h), descontinuar",
+      "complicacoes renais retinianas dm": "diabético normotensivo insulino-dependente: 10mg/dia, podendo aumentar a 20mg se necessário para PAD sentado <75mmHg; diabético hipertenso não insulino-dependente: mesmo esquema, alvo PAD sentado <90mmHg",
+      "uso pediatrico": "**segurança e eficácia não estabelecidas em crianças, segundo a bula brasileira do ZESTRIL** — divergência do rótulo do FDA, que tem posologia pediátrica própria (0,07mg/kg/dia, até 5mg, titulando a cada 1-2 semanas até máximo 0,61mg/kg ou 40mg/dia). Mantido aqui como registro do que o FDA descreve, mas sinalizado que a bula brasileira não endossa uso pediátrico",
+      "esquecimento de dose": "não tomar dose dobrada; tomar a próxima no horário habitual",
+      "fonte": "bula do ZESTRIL (lisinopril, AstraZeneca do Brasil) via consultaremedios.com.br, bula profissional — confere com o rótulo do FDA (DailyMed SPL setid 0e6364a4-6d66-4151-8197-d45e2a762895) na maior parte dos números, com as duas divergências documentadas nos campos acima (dose máxima de hipertensão e uso pediátrico)"
     },
     "notes": {
       "Particularidade": "Precaução com risco de hipotensão em pacientes em uso concomitante de diuréticos; se diurético não puder ser descontinuado, iniciar lisinopril com 5mg"
     },
     "references": [
+      "Bula do ZESTRIL (lisinopril, AstraZeneca do Brasil Ltda.) — bula profissional, via consultaremedios.com.br",
       "Lisinopril tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 0e6364a4-6d66-4151-8197-d45e2a762895"
     ],
-    "pregnancy": "**Categoria de risco D. Contraindicado no segundo e terceiro trimestres**; no primeiro trimestre o uso **não é recomendado**, e diagnosticada a gravidez o lisinopril deve ser descontinuado o mais rápido possível. Os inibidores da ECA causam morbidade e mortalidade fetal e neonatal no segundo e terceiro trimestres: hipotensão, disfunção renal, hipercalemia e hipoplasia do crânio no recém-nascido; o **oligoidrâmnio** materno pode resultar em contratura de membros, deformação craniofacial e hipoplasia pulmonar. A bula adverte que o oligoidrâmnio **pode só aparecer depois de o dano fetal ser irreversível**. Recém-nascidos expostos devem ser observados quanto a hipotensão, oligúria e hipercalemia — o lisinopril atravessa a placenta e já foi removido da circulação neonatal por diálise peritoneal. Para o **primeiro trimestre**, cita estudo epidemiológico retrospectivo sugerindo aumento do risco de má-formação, particularmente cardiovascular e do SNC. Fonte: bula do ZESTRIL (lisinopril, AstraZeneca), seção \"Uso durante a gravidez e lactação\".",
-    "lactation": "**Cautela — dado ausente, não segurança demonstrada.** A bula afirma que **não se sabe** se o lisinopril é excretado no leite humano, e pede cuidado ao prescrever a lactantes. Não contraindica. Fonte: bula do ZESTRIL (lisinopril, AstraZeneca)."
+    "pregnancy": "**Categoria de risco D. Contraindicado no segundo e terceiro trimestres**; no primeiro trimestre o uso **não é recomendado**, e diagnosticada a gravidez o lisinopril deve ser descontinuado o mais rápido possível. Os inibidores da ECA causam morbidade e mortalidade fetal e neonatal no segundo e terceiro trimestres: hipotensão, disfunção renal, hipercalemia e hipoplasia do crânio no recém-nascido; o **oligoidrâmnio** materno pode resultar em contratura de membros, deformação craniofacial e hipoplasia pulmonar. A bula adverte que o oligoidrâmnio **pode só aparecer depois de o dano fetal ser irreversível**. Recém-nascidos expostos devem ser observados quanto a hipotensão, oligúria e hipercalemia — o lisinopril atravessa a placenta e já foi removido da circulação neonatal por diálise peritoneal. Para o **primeiro trimestre**, cita estudo epidemiológico retrospectivo sugerindo aumento do risco de má-formação, particularmente cardiovascular e do SNC. Fonte: bula profissional brasileira do ZESTRIL (lisinopril, AstraZeneca do Brasil), seção \"Uso durante a gravidez e lactação\" — confirmada agora contra o texto da bula real, não apenas resumo; conteúdo idêntico ao já registrado.",
+    "lactation": "**Cautela — dado ausente, não segurança demonstrada.** A bula afirma que **não se sabe** se o lisinopril é excretado no leite humano, e pede cuidado ao prescrever a lactantes. Não contraindica. Fonte: bula profissional brasileira do ZESTRIL (lisinopril, AstraZeneca do Brasil) — confirmada agora contra o texto da bula real."
   },
   {
     "slug": "losartana-potassica",
