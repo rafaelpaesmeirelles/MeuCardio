@@ -1426,7 +1426,7 @@
   },
   {
     "slug": "enalapril-maleato",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Enalapril (maleato)",
     "drug_class": "Inibidor da enzima conversora de angiotensina (IECA)",
     "mechanism": "Pró-fármaco convertido em enalaprilato (metabólito ativo) por hidrólise hepática; inibe a ECA, bloqueando a conversão de angiotensina I em angiotensina II, reduzindo vasoconstrição e secreção de aldosterona; também reduz degradação de bradicinina, contribuindo para vasodilatação adicional (e explicando efeito adverso de tosse seca)",
@@ -1437,11 +1437,12 @@
       "Hipertensão arterial (isolada ou combinada), insuficiência cardíaca sintomática (todos os graus), disfunção ventricular esquerda assintomática (prevenção de progressão para IC sintomática)"
     ],
     "contraindications": [
-      "Hipersensibilidade a IECA",
-      "Antecedente de angioedema relacionado a IECA prévio",
-      "Gravidez",
-      "Uso concomitante com alisquireno em diabéticos",
-      "Estenose bilateral de artéria renal"
+      "Hipersensibilidade a qualquer componente da fórmula",
+      "Histórico de edema angioneurótico relacionado ao uso de inibidor da ECA",
+      "Angioedema hereditário ou idiopático",
+      "Uso concomitante com alisquireno em pacientes diabéticos",
+      "Uso combinado com inibidor de neprilisina (ex.: sacubitril) — não administrar dentro de 36 horas antes ou depois de sacubitril/valsartana",
+      "**fonte**: bula do RENITEC (maleato de enalapril, Organon/MSD), item 4. **Corrigido em 31/07/2026**: a lista anterior tinha 'Gravidez' e 'Estenose bilateral de artéria renal' como contraindicação formal — nenhum dos dois está no item 4 desta bula (gravidez é categoria D, 'não recomendado' na seção de populações especiais; estenose bilateral é Advertências, por risco de elevação de ureia/creatinina, não proibição). Faltava a contraindicação com inibidor de neprilisina/sacubitril-valsartana (janela de 36h), presente em outros IECA/BRA já revisados neste acervo mas ausente aqui"
     ],
     "adverse_effects": [
       "Tosse seca (mais frequente que com BRA, devido ao acúmulo de bradicinina), hipotensão, hipercalemia, piora de função renal, angioedema (raro, mas potencialmente fatal), disgeusia"
@@ -1463,7 +1464,7 @@
       "Enalapril: o que é, para que serve, efeitos e contraindicações · UOL VivaBem · 2022 · https://www.uol.com.br/vivabem/noticias/redacao/2022/11/22/enalapril-o-que-e-para-que-serve-efeitos-e-contraindicacoes.htm",
       "Vasotec (enalapril maleate) — bula FDA · accessdata.fda.gov"
     ],
-    "pregnancy": "**Os inibidores da ECA podem prejudicar o desenvolvimento e até causar MORTE DO FETO** se usados no segundo e no terceiro trimestres. Fonte: bula do RENITEC (maleato de enalapril, MSD). Coerente com o captopril, que é categoria D pela mesma razão de classe.",
+    "pregnancy": "**Categoria de risco D.** O uso durante a gravidez não é recomendado; suspender o tratamento assim que a gravidez for confirmada, a menos que seja considerado vital para a mãe. **Os inibidores da ECA podem prejudicar o desenvolvimento e até causar MORTE DO FETO** se usados no segundo e no terceiro trimestres; uso no primeiro trimestre foi associado a risco aumentado de malformações importantes em alguns estudos. Fonte: bula do RENITEC (maleato de enalapril, Organon/MSD), seção \"Gravidez e amamentação\". Coerente com o captopril, que é categoria D pela mesma razão de classe.",
     "lactation": "**Cautela, não proibição.** O enalapril e o enalaprilato **são secretados no leite humano em quantidades muito pequenas**, e a bula pede cuidado ao prescrever a lactantes — sem contraindicar, ao contrário do que faz para a gravidez. Fonte: bula do RENITEC (maleato de enalapril, Merck Sharp & Dohme), seções \"Uso na Gravidez e Amamentação\" e \"Amamentação\"."
   },
   {
