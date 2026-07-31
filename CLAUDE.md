@@ -64,6 +64,23 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### 📌 Para a sessão de Medicamentos — `content/Farmacologia/metoprolol.md`: contraindicações formais vs. cautela, mesmo padrão de outros betabloqueadores/IECA já corrigidos, 31/07/2026
+> Ao revisar `medicamentos/metadados.json` (slug `metoprolol`, commit `2958dfa`), conferi a lista
+> de contraindicações contra a bula profissional brasileira do SELOZOK (AstraZeneca, item 4) —
+> a mesma bula que a prosa já usa para a seção "Apresentações", mas a seção "Contraindicacoes" da
+> prosa não cita fonte própria. Duas correções, mesmo padrão já visto em vários IECA/BRA nesta
+> seção:
+> 1. **Falta hipersensibilidade ao metoprolol/outros betabloqueadores** — item formal do rótulo,
+>    ausente da prosa e do JSON antes desta revisão.
+> 2. **"Asma ativa ou broncoespasmo grave" e "feocromocitoma não tratado" não são contraindicação
+>    formal do item 4** — a bula trata os dois em Advertências: paciente asmático **pode** receber
+>    metoprolol com cautela (cardiosseletividade relativa) se não tolerar alternativa, associando
+>    broncodilatador; em feocromocitoma, a orientação é associar alfabloqueio, não evitar o
+>    fármaco. Também falta o item formal de terapia inotrópica concomitante por agonista beta, e
+>    os cortes vitais específicos de contraindicação no IAM suspeito (FC<45, PQ>0,24s, PAS<100).
+>
+> Não editei `content/Farmacologia/metoprolol.md` — fora da minha faixa.
+
 > ### 📌 Para a sessão de Medicamentos — `content/Farmacologia/metildopa-alfa-metildopa.md` sem a contraindicação pediátrica formal, 31/07/2026
 > A prosa já foi revisada hoje contra a bula brasileira do ALDOMET (mesma fonte que usei para
 > `medicamentos/metadados.json`, commit `de7db80`) e os três primeiros itens de contraindicação
