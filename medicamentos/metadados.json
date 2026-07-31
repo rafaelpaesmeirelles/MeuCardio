@@ -1695,7 +1695,7 @@
   },
   {
     "slug": "ezetimiba",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Ezetimiba",
     "brand_names": [
       "Ezetrol"
@@ -1714,16 +1714,21 @@
       "Nota de procedência: a versão anterior deste verbete listava **apenas** a hipercolesterolemia familiar homozigótica como indicação de uso com estatina, o que fazia a ezetimiba parecer fármaco de doença rara e contradizia o próprio documento, que a apresenta como segunda linha após estatina em dose máxima tolerada. O conjunto acima **está conferido** na bula profissional brasileira, seção de Indicações, e inclui duas indicações que não constavam aqui: a combinação com fenofibrato na hiperlipidemia mista e a prevenção cardiovascular na doença renal crônica."
     ],
     "contraindications": [
-      "Hipersensibilidade ao componente",
-      "Doença hepática ativa (quando em associação com estatina)",
-      "Gravidez e lactação (quando em associação com estatina)"
+      "Hipersensibilidade a qualquer componente da fórmula — única contraindicação formal da ezetimiba isolada",
+      "Quando administrado com estatina ou fenofibrato, valem também as contraindicações do medicamento associado (a bula do ZETIA remete explicitamente à bula do parceiro) — é daí que vêm doença hepática ativa e gravidez/lactação, que são restrições da estatina, herdadas pela combinação, não da ezetimiba isolada",
+      "**fonte**: bula do ZETIA (ezetimiba, Organon/MSD), item 4"
     ],
     "adverse_effects": [
       "Geralmente bem tolerado como monoterapia; cefaleia, dor abdominal, diarreia; quando associado a estatina, mesmo perfil de efeitos adversos da estatina (mialgia, elevação de transaminases)"
     ],
     "dosing": {
-      "padrao": "10 mg VO 1x/dia, isolado ou em associação com estatina",
-      "fonte": "rótulo da ezetimiba aprovado pelo FDA (DailyMed)"
+      "padrao": "10 mg VO 1x/dia, isolado ou em associação com estatina ou fenofibrato, a qualquer horário, independente de alimentos, mantendo dieta redutora de lipídeos",
+      "insuficiencia renal monoterapia": "Sem ajuste posológico necessário",
+      "insuficiencia renal combinado com sinvastatina": "TFGe ≥60 mL/min/1,73m²: sem ajuste. TFGe <60 mL/min/1,73m² (doença renal crônica): ezetimiba 10 mg + sinvastatina 20 mg 1x/dia à noite — doses mais altas de sinvastatina não foram estudadas nesse cenário",
+      "idosos": "Sem ajuste posológico",
+      "pediatria acima de 6 anos": "Sem ajuste posológico",
+      "pediatria abaixo de 6 anos": "Tratamento não recomendado",
+      "fonte": "bula do ZETIA (ezetimiba, Organon/MSD), item 8. **Corrigido em 31/07/2026**: a fonte anterior era o rótulo FDA; a bula brasileira acrescenta o esquema específico de combinação com sinvastatina na doença renal crônica (TFGe <60) e as faixas etárias pediátricas"
     },
     "outcomes": {
       "Evidencia pivotal improve it": "Estudo IMPROVE-IT demonstrou que adição de ezetimiba à sinvastatina reduz eventos cardiovasculares comparado à sinvastatina isolada em pacientes pós-síndrome coronariana aguda, sendo o primeiro estudo a comprovar benefício clínico de reduzir LDL por mecanismo não-estatina, sustentando a hipótese 'quanto mais baixo, melhor' independente da via farmacológica"
