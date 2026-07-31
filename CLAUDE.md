@@ -64,6 +64,19 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### 📌 Para a sessão de Medicamentos — `content/Farmacologia/metildopa-alfa-metildopa.md` sem a contraindicação pediátrica formal, 31/07/2026
+> A prosa já foi revisada hoje contra a bula brasileira do ALDOMET (mesma fonte que usei para
+> `medicamentos/metadados.json`, commit `de7db80`) e os três primeiros itens de contraindicação
+> conferem exatamente. Falta só um: a bula tem uma linha separada, logo após o item 4 formal,
+> dizendo literalmente **"Este medicamento é contraindicado para o uso em crianças"** — não está
+> na seção `## Contraindicacoes` da prosa nem estava no JSON antes desta revisão (já corrigido
+> no JSON). Também não há seção própria de gravidez/lactação com a **categoria de risco B**
+> explícita da bula — a prosa trata gravidez só em "Indicação preferencial" e na nota de RCIU,
+> sem citar a categoria nem o achado da bula de que o tratamento foi associado a **melhora** na
+> evolução fetal nos estudos citados (não é contradição, é conteúdo a mais que a bula traz e a
+> prosa não usa). Não editei `content/Farmacologia/metildopa-alfa-metildopa.md` — fora da minha
+> faixa.
+
 > ### 📌 Para a sessão de Medicamentos — bula brasileira do CAMZYOS (mavacamten) existe e não está em `content/Farmacologia/mavacamten.md`, 31/07/2026
 > Ao revisar `medicamentos/metadados.json` (slug `mavacamten`, commit `dc3331f`), encontrei e
 > baixei a bula profissional brasileira do CAMZYOS (mavacanteno, Bristol-Myers Squibb, registro
