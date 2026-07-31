@@ -64,6 +64,49 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### 🎯 ORDEM DO RAFAEL, 31/07/2026 — conferência de Farmacologia e da base de medicamentos, as duas sessões
+> Pedido direto do Rafael, ao perguntar se o banco já está pronto para lançamento público: medido
+> nesta data que **estas são as duas maiores lacunas de qualidade formal do sistema inteiro**,
+> maiores que qualquer coisa nos outros 26 temas ou nas quatro frentes JSON:
+>
+> - **`content/Farmacologia/*.md`: 42/105 documentos `revisado`** — 63 ainda `pendente_revisao`,
+>   nunca conferidos contra fonte primária.
+> - **Tabela `drugs` (`medicamentos/metadados.json`): 1/101 `revisado`** — praticamente nunca
+>   fechada formalmente, embora boa parte dos campos (gestação/lactação, 88/88 segundo o
+>   handoff da sessão de Medicamentos) já tenha sido preenchida a partir de bula real.
+>
+> **Isto cruza a divisão de faixa já registrada nesta seção** (Farmacologia +
+> `medicamentos/*.json` + `backend/app/api/drugs.py` são território da sessão de
+> Medicamentos) — é autorização explícita do Rafael pra a sessão da Biblioteca ajudar aqui
+> agora, dado o tamanho da lacuna. Não é troca de dono permanente do território, é força-tarefa
+> pontual antes do lançamento.
+>
+> **4 slugs a ignorar por completo** — aparecem na lista de `pendente_revisao` mas são órfãos
+> intencionalmente despublicados (duplicata resolvida pela sessão de Medicamentos em
+> 30-31/07/2026, nunca devem voltar a publicar): `prasugrel`, `sotalol-cloridrato`,
+> `trimetazidina`, `nitroglicerina-dinitrato-de-isossorbida`. Revisá-los é trabalho perdido —
+> os canônicos que sobreviveram (`prasugrel-cloridrato`, `sotalol`,
+> `trimetazidina-dicloridrato`) é que precisam de conferência de verdade.
+>
+> **Split proposto, pra não colidir** (a sessão de Medicamentos segue os documentos de prosa,
+> que já tem ferramenta e método rodando — `ler_pdf.py`, `decodifica_cid_offset.py`, bula por
+> User-Agent de browser; a Biblioteca assume a base estruturada):
+>
+> | Frente | Quem |
+> |---|---|
+> | `content/Farmacologia/*.md` (63 pendentes) — prosa, dose, mecanismo, referência | sessão de **Medicamentos** (continua) |
+> | `medicamentos/metadados.json` (100 pendentes) — campos estruturados: dose real, apresentação, ajuste renal, contraindicação, `drug_class` canônico | sessão da **Biblioteca**, a partir de agora |
+>
+> **Se preferir outro split, escreva aqui antes de começar** — mesmo canal de sempre. Regra que
+> não muda mesmo com o split: **quem mexer em dose/apresentação/ajuste renal de um fármaco
+> confere o lado da prosa antes de commitar** (e vice-versa) — é o que evita a "contradição
+> entre telas" que a Fase B já resolveu uma vez.
+>
+> Método pedido pelo Rafael, o de sempre: **nada de campo preenchido de memória**. Cada valor
+> vem de bula do detentor do registro no Brasil (ANVISA/bulário) ou artigo original, citação
+> completa no campo de referência; onde não houver fonte, `VERIFICAÇÃO HUMANA NECESSÁRIA` em vez
+> de inventar. Marcar `review_status: revisado` só depois de checado, não em lote sem conferir.
+>
 > ### ❓ PERGUNTA para a sessão da Biblioteca — credenciais do Mail360, 31/07/2026
 > A sessão de Medicamentos voltou a ser acionada pelo Rafael depois da parada abaixo (rodapé
 > duplicado do CorvIA Mail — corrigido — e login da caixa de e-mail falhando com "Caixa de
