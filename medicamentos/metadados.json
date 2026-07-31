@@ -966,7 +966,7 @@
   },
   {
     "slug": "dabigatrana-etexilato",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Dabigatrana (etexilato)",
     "brand_names": [
       "Pradaxa"
@@ -985,7 +985,7 @@
     ],
     "dosing": {
       "fa nao valvular padrao": "150 mg VO 2x/dia (dose diária total de 300mg)",
-      "fa ajuste idosos ou sangramento": "110 mg VO 2x/dia se idade >80 anos ou risco de sangramento elevado, a critério médico",
+      "fa ajuste idosos ou sangramento": "**Redução obrigatória** para 110 mg VO 2x/dia se idade ≥80 anos **ou** uso concomitante de verapamil — não é discricionária nesses dois casos. **Considerar** (avaliação individual de risco trombótico vs. hemorrágico) em: idade 75-80 anos, insuficiência renal moderada (ClCr 30-50 mL/min), gastrite/esofagite/refluxo, ou outro fator de risco hemorrágico aumentado. **Corrigido em 31/07/2026**: a versão anterior tratava idade >80 anos como discricionária ('a critério médico') e não mencionava verapamil como gatilho de redução obrigatória — corrigido com base no RCM da EMA do PRADAXA, já usado em `content/Farmacologia/dabigatrana-etexilato.md` (mesma marca/fabricante vendida no Brasil).",
       "fa clcr acima de 30": "150 mg VO **2x/dia** — não existe ajuste na faixa de 30 a 50 mL/min pela função renal isolada. A versão anterior deste verbete indicava 150 mg **1x/dia** nessa faixa, ou seja, metade da dose diária, em prevenção de AVC por fibrilação atrial",
       "fa clcr 15 a 30": "75 mg VO 2x/dia (é para isso que serve a cápsula de 75 mg)",
       "fa clcr abaixo de 15 ou dialise": "o rótulo declara que **não há recomendação de dose**",
@@ -1009,7 +1009,13 @@
       "Bula profissional de Pradaxa (etexilato de dabigatrana), Boehringer Ingelheim do Brasil — seções de contraindicações, posologia e características farmacológicas, consultada em republicação por duas fontes independentes em julho de 2026. Reconferir no bulário eletrônico da ANVISA quando acessível."
     ],
     "pregnancy": "Quem tem possibilidade de engravidar **deve evitar a gravidez durante o tratamento**. Grávida só deve ser tratada se o médico considerar que o benefício esperado supera os riscos. Fonte: bula do PRADAXA (Boehringer Ingelheim), bula do paciente.",
-    "lactation": "**Como precaução, a amamentação deve ser interrompida** durante o tratamento. Fonte: bula do PRADAXA (Boehringer Ingelheim), bula do paciente."
+    "lactation": "**Como precaução, a amamentação deve ser interrompida** durante o tratamento. Fonte: bula do PRADAXA (Boehringer Ingelheim), bula do paciente.",
+    "adverse_effects": [
+      "Sangramento é o evento adverso mais relevante. Em profilaxia de TEV ortopédico (curto prazo, até 42 dias): sangramento em cerca de 9% dos pacientes, taxas semelhantes entre 150mg, 220mg e enoxaparina (sangramento importante 0,5-1,8% conforme estudo e dose; qualquer sangramento 8,3-13,8%). Em FA (longo prazo, até 3 anos): média anual de 16,5% dos pacientes com sangramento de qualquer tipo",
+      "Incomuns (>1:1000 e <1:100): anemia, hematoma, lesão hemorrágica, epistaxe, hemorragia GI/retal/hemorroidária, função hepática anormal, hemorragia cutânea, hemartrose, hematúria, secreção sanguinolenta/em ferida, hematoma e hemorragia pós-procedimento",
+      "Raras (>1:10.000 e <1:1000): trombocitopenia, hemorragia (geral), hemorragia no local de injeção/cateter/incisão",
+      "**fonte**: bula do PRADAXA (etexilato de dabigatrana, Boehringer Ingelheim), item Reações Adversas a Medicamentos, dados agrupados dos estudos BISTRO II/RE-MODEL/RE-NOVATE/RE-MOBILIZE — versão da bula consultada (CCDS 0266-02) cobre a indicação de profilaxia de TEV ortopédico; a indicação de FA (RE-LY) tem tabela própria de sangramento não reproduzida aqui, ver `outcomes`/referência RE-LY já citada"
+    ]
   },
   {
     "slug": "dapagliflozina",
