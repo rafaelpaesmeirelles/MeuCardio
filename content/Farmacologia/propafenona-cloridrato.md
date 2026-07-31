@@ -4,7 +4,7 @@ slug: propafenona-cloridrato
 theme: "Farmacologia"
 kind: farmacologia
 review_status: revisado
-source_refs: ["Como eu uso: Propafenona! · Afya Cardiologia · 2021 · https://portal.afya.com.br/cardiologia/como-eu-uso-propafenona · fonte confirmada como confiável pelo Rafael em 29/07/2026 — conteúdo de prática clínica escrito por cardiologistas, não agregador nem resposta gerada por IA", "Alboni P, Botto GL, Baldi N, et al. Outpatient treatment of recent-onset atrial fibrillation with the \"pill-in-the-pocket\" approach. N Engl J Med. 2004;351(23):2384-2391. DOI: 10.1056/NEJMoa041233. PMID: 15575054 — ensaio original da estratégia; resumo indexado lido em 29/07/2026", "Bula do RITMONORM (cloridrato de propafenona, Abbott) · https://www.saudedireta.com.br/catinc/drugs/bulas/ritmonorm.pdf · lida na íntegra em 31/07/2026, item 4 (Contraindicações) — apresentação oral de 300 mg, cobre a terapia contínua, e NÃO cobre dose única nem via endovenosa", "Abordagem da fibrilação atrial na sala de emergência · SOCERJ · 2025 · https://socerj.org.br/abordagem-fibrilacao-atrial-sala-emergencia-visao-pratica-racional/", "PROPAFENONA — Farmácia Dose Certa · Secretaria de Estado da Saúde de SP · https://www.saude.sp.gov.br/resources/ses/perfil/gestor/assistencia-farmaceutica/medicamentos-das-unidades-farmacia-dose-certa/"]
+source_refs: ["Como eu uso: Propafenona! · Afya Cardiologia · 2021 · https://portal.afya.com.br/cardiologia/como-eu-uso-propafenona · fonte confirmada como confiável pelo Rafael em 29/07/2026 — conteúdo de prática clínica escrito por cardiologistas, não agregador nem resposta gerada por IA", "Alboni P, Botto GL, Baldi N, et al. Outpatient treatment of recent-onset atrial fibrillation with the \"pill-in-the-pocket\" approach. N Engl J Med. 2004;351(23):2384-2391. DOI: 10.1056/NEJMoa041233. PMID: 15575054 — ensaio original da estratégia; resumo indexado lido em 29/07/2026", "Bula do RITMONORM (cloridrato de propafenona, Abbott) · https://www.saudedireta.com.br/catinc/drugs/bulas/ritmonorm.pdf · lida na íntegra em 31/07/2026, item 4 (Contraindicações) — apresentação oral de 300 mg, cobre a terapia contínua, e NÃO cobre dose única nem via endovenosa", "Bula do RITMONORM, mesmo produto, mirror consultaremedios.com.br — 4 itens formais adicionais (Brugada, IAM <3 meses, miastenia grave, ritonavir) confirmados pela sessão da Biblioteca em 31/07/2026, complementando o mirror acima", "Abordagem da fibrilação atrial na sala de emergência · SOCERJ · 2025 · https://socerj.org.br/abordagem-fibrilacao-atrial-sala-emergencia-visao-pratica-racional/", "PROPAFENONA — Farmácia Dose Certa · Secretaria de Estado da Saúde de SP · https://www.saude.sp.gov.br/resources/ses/perfil/gestor/assistencia-farmaceutica/medicamentos-das-unidades-farmacia-dose-certa/"]
 legacy_source: "medicamentos/banco-de-medicamentos-propafenona-completo.md"
 ---
 
@@ -62,11 +62,22 @@ normal, pelo risco de efeito pró-arrítmico/aumento de mortalidade nesses pacie
 Eficácia muito reduzida na reversão de flutter atrial e de FA persistente (>7 dias), podendo inclusive organizar a FA em flutter atrial com alta resposta ventricular
 
 ## Contraindicacoes
-**Corrigido em 31/07/2026** — item 4 da bula do RITMONORM, mais específico do que constava aqui:
+**Corrigido em 31/07/2026, e complementado no mesmo dia** — item 4 da bula do RITMONORM, mais
+específico do que constava aqui. A sessão da Biblioteca, revisando o mesmo produto por um mirror
+diferente (consultaremedios.com.br), encontrou 4 itens formais que faltavam nesta lista — meu
+mirror (saudedireta.com.br) não os trazia no mesmo item, mas é a mesma bula, e os 4 têm peso
+clínico real, com destaque para Brugada:
 - Hipersensibilidade ao cloridrato de propafenona ou a qualquer componente da fórmula
 - Insuficiência cardíaca manifesta: (1) IC descompensada com **fração de ejeção do VE <35%**; (2) choque cardiogênico, **exceto quando causado por taquiarritmia**
 - Bradicardia acentuada sintomática (**<50 bpm**)
 - Doença do nó sinusal, transtornos pré-existentes de alto grau da condução sinoatrial, BAV de 2º e 3º graus, bloqueio de ramo ou bloqueio distal — todos **na ausência de marca-passo**
 - Doença pulmonar obstrutiva **grave**
 - Distúrbio eletrolítico não compensado (ex.: alteração de potássio sérico)
-- **Hipotensão arterial acentuada** — ausente de uma leitura anterior deste documento
+- Hipotensão arterial acentuada
+- **Síndrome de Brugada conhecida** — acrescentado; risco de segurança real, não só lacuna: a
+  propafenona é antiarrítmico classe IC, e desmascarar ou agravar Brugada é risco reconhecido da
+  classe
+- **Infarto agudo do miocárdio nos últimos 3 meses** — acrescentado
+- **Miastenia grave** — acrescentado (a bula também registra, em Advertências, que a propafenona
+  pode piorar miastenia gravis mesmo fora dessa janela)
+- **Uso concomitante de ritonavir** — acrescentado
