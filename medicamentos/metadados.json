@@ -254,7 +254,7 @@
   },
   {
     "slug": "anlodipino-besilato",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Anlodipino (besilato)",
     "drug_class": "Bloqueador de canal de cálcio diidropiridínico de longa duração",
     "mechanism": "Inibe o influxo transmembrana de íons cálcio para a musculatura lisa cardíaca e vascular; efeito anti-hipertensivo por relaxamento direto da musculatura vascular lisa (redução de pós-carga); efeito antianginoso por dupla ação — dilatação de arteríolas periféricas (reduz consumo de O2 miocárdico) e dilatação de artérias/arteríolas coronárias (aumenta liberação de O2, útil em angina de Prinzmetal/vasoespástica)",
@@ -265,9 +265,10 @@
       "Cefaleia, tontura, sonolência, palpitações, rubor facial, edema periférico (dose-dependente), fadiga; menos comuns: hiperplasia gengival, ginecomastia, disfunção erétil; raros: hepatite/icterícia colestática, angioedema"
     ],
     "contraindications": [
-      "Hipersensibilidade a diidropiridinas"
+      "Hipersensibilidade conhecida às diidropiridinas (classe do anlodipino) ou a qualquer componente da fórmula",
+      "**fonte**: bula do NORVASC (besilato de anlodipino, Pfizer/Viatris), item 4"
     ],
-    "pregnancy": "Segurança não estabelecida — evitar sem orientação médica específica",
+    "pregnancy": "**Categoria de risco C.** A segurança na gravidez humana não foi estabelecida. Em estudos reprodutivos em animais, não houve toxicidade além de atraso do parto e prolongamento do trabalho de parto em ratos, com dose 50x maior que a máxima humana recomendada — sem efeito sobre fertilidade. Uso na gravidez recomendado **apenas quando não houver alternativa mais segura** e a doença em si represente risco maior à mãe e ao feto. Fonte: bula do NORVASC (besilato de anlodipino), seção \"Fertilidade, Gravidez e Lactação\".",
     "dosing": {
       "hipertensao angina inicial": "5 mg 1x/dia",
       "dose maxima": "10 mg/dia, ajustada conforme resposta individual",
@@ -283,12 +284,14 @@
       "Evidencia praise ic": "Estudos PRAISE e PRAISE-2 (IC classes NYHA III-IV, em uso de IECA/digoxina/diurético): anlodipino não aumentou mortalidade nem morbimortalidade combinada, sendo considerado seguro em IC não isquêmica; porém associado a maior relato de edema pulmonar (sem diferença significativa na piora global de IC)"
     },
     "notes": {
-      "Farmacocinetica": "Biodisponibilidade absoluta 64-80%; pico plasmático em 6-12h; ligação proteica ~97,5%; meia-vida de eliminação 35-50h (permite dose única diária); estado de equilíbrio em 7-8 dias; metabolização hepática extensa em metabólitos inativos; início de ação anti-hipertensiva em 24-96h (lento, sem hipotensão aguda)"
+      "Farmacocinetica": "Biodisponibilidade absoluta 64-80%; pico plasmático em 6-12h; ligação proteica ~97,5%; meia-vida de eliminação 35-50h (permite dose única diária); estado de equilíbrio em 7-8 dias; metabolização hepática extensa em metabólitos inativos; início de ação anti-hipertensiva em 24-96h (lento, sem hipotensão aguda)",
+      "Uso em insuficiencia hepatica": "A meia-vida do anlodipino é prolongada na insuficiência hepática, e as recomendações posológicas nesse cenário **não foram estabelecidas** — administrar com cautela, sem dose fixa definida em bula (mais cauteloso que o campo `dosing.insuficiencia hepatica` atual, que fala só em 'clearance reduzido')."
     },
     "references": [
-      "Amlodipine besylate tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 27b0c628-820a-48bf-a411-86c0ebd4cc8d"
+      "Amlodipine besylate tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 27b0c628-820a-48bf-a411-86c0ebd4cc8d",
+      "Bula do NORVASC (besilato de anlodipino, Pfizer/Viatris Farmacêutica do Brasil), CDS v11.0, 10/03/2017 — usada para contraindicações, gravidez/lactação (categoria C, dado quantitativo de transferência láctea) e insuficiência hepática"
     ],
-    "lactation": "**A segurança na amamentação não está estabelecida.** Fonte: bula do NORVASC (anlodipino)."
+    "lactation": "**O anlodipino é transferido para o leite materno humano** — dado quantitativo, não apenas ausência de estudo. Em 31 lactantes com hipertensão induzida pela gravidez, a razão leite/plasma média foi de **0,85** (dose inicial de 5 mg/dia, ajustada; dose diária média 6 mg / 98,7 mcg/kg). A dose diária estimada no lactente via leite materno foi de **4,17 mcg/kg**. O uso na lactação depende de avaliação e acompanhamento médico — a bula não contraindica, mas também não libera sem ressalva. Fonte: bula do NORVASC (besilato de anlodipino), seção \"Fertilidade, Gravidez e Lactação\"."
   },
   {
     "slug": "apixabana",
