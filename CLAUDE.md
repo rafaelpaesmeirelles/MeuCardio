@@ -64,6 +64,42 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### 🚨 URGENTE para a sessão de Medicamentos — `content/Farmacologia/perindopril-argininaerbumina.md` e o JSON discordam sobre estenose bilateral de artéria renal, duas bulas do COVERSYL divergindo, 31/07/2026
+> Achado no mesmo dia em que a prosa foi revisada, usando fonte diferente da minha — merece
+> atenção rápida porque as duas sessões chegaram a conclusões opostas sobre o mesmo item de
+> contraindicação, cada uma com uma bula do COVERSYL como fonte.
+>
+> **A prosa** (revisada hoje, fonte `static-webv8.jet.com.br/drogaosuper/Bulas/7898029551046.pdf`,
+> "antes tomava 404, agora abriu"): conclui que **estenose bilateral de artéria renal NÃO é
+> contraindicação absoluta** — está em "Precauções", ajustar dose conforme função renal
+> remanescente.
+>
+> **`medicamentos/metadados.json`** (commit `61d60ec`, fonte
+> `consultaremedios.com.br/drug_leaflet/pro/Bula-Coversyl-Profissional-Consulta-Remedios.pdf`):
+> a mesma frase aparece **duas vezes no documento** (uma para cada apresentação, 4mg e 8mg),
+> **dentro da seção "4. CONTRAINDICAÇÕES:"**, texto literal: *"Estenose bilateral significativa da
+> artéria renal ou estenose da artéria renal em rim funcional único (ver item 5)."* — o "(ver item
+> 5)" é cross-reference para mais detalhe em Advertências, não reclassificação; o mesmo padrão de
+> cross-reference aparece em outros itens da mesma lista (ex.: hipersensibilidade "(ver item 5)")
+> sem que ninguém leia isso como não sendo mais contraindicação formal.
+>
+> Não decidi sozinho qual bula prevalece — são dois mirrors que se apresentam como a mesma bula do
+> mesmo produto (COVERSYL 4mg, Servier), mas discordam num ponto formal. Vale conferir as duas
+> lado a lado, ou ir direto ao bulário eletrônico da ANVISA para a versão oficial mais recente,
+> antes de decidir. **Peso clínico real**: um médico que seguisse só a prosa trataria estenose
+> bilateral como precaução relativa (ajustar dose); seguindo só o JSON, como proibição.
+>
+> **Achado relacionado, mesma revisão**: a prosa também classifica a **lactação como
+> "contraindicação absoluta na bula brasileira"**, citando a **bula do paciente**
+> (`institucional.anossadrogaria.com.br/bula/924166.pdf`). A bula **profissional** que usei (mesmo
+> produto, mirror da consultaremedios) diz, no item "Fertilidade, Gravidez e Lactação — Lactação",
+> texto literal: *"COVERSYL® 4mg **não é recomendado** em mulheres que estejam amamentando"* — não
+> usa a palavra "contraindicado". Bula do paciente costuma simplificar a linguagem da bula
+> profissional; a profissional é a referência formal para classificar contraindicação. Corrigi o
+> JSON para "não recomendado — não é contraindicação formal", com essa ressalva.
+>
+> Não editei `content/Farmacologia/perindopril-argininaerbumina.md` — fora da minha faixa.
+
 > ### 🎯 ORDEM DO RAFAEL, 31/07/2026 — publicar `drugs` revisados, aprovado; pendência técnica para quem tiver acesso ao servidor
 > Rafael pediu para preparar o conteúdo revisado de `medicamentos/metadados.json` para publicação
 > ("tudo aprovado"). Esta sessão (Claude Code Remote, container isolado, sem Docker/banco de
