@@ -8663,5 +8663,703 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "cmh-eco-inicial-e-repeticao-a-cada-1-a-2-anos",
+    "statement": "O ecocardiograma transtorácico é RECOMENDADO na avaliação inicial do paciente com suspeita de cardiomiopatia hipertrófica, e deve ser REPETIDO diante de mudança do estado clínico, evento ou complicação (Classe I, B). Mesmo SEM progressão de sintomas, o exame deve ser repetido A CADA 1 OU 2 ANOS, para avaliar grau de hipertrofia, obstrução da via de saída, regurgitação mitral e função sistólica do ventrículo esquerdo (Classe I, C). A ausência de sintomas não dispensa o seguimento por imagem.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024",
+    "reference": "Fernandes F, Simões MV, Correia EB, Marcondes-Braga FG, Coelho OR, et al. Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e202400415. DOI: 10.36660/abc.20240415. PMID: 39082572 — texto integral em acesso aberto (PMC12092053), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "ecocardiograma",
+      "seguimento",
+      "via de saída"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cmh-manobras-provocativas-quando-o-gradiente-e-menor-que-50",
+    "statement": "Nos pacientes com cardiomiopatia hipertrófica e gradiente na via de saída ABAIXO DE 50 mmHg, é recomendado realizar o ecocardiograma com MANOBRAS PROVOCATIVAS — Valsalva e/ou ortostase. O gradiente de repouso normal não afasta a forma obstrutiva: 50 mmHg é o corte que define quem precisa ser provocado.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024",
+    "reference": "Fernandes F, Simões MV, Correia EB, Marcondes-Braga FG, Coelho OR, et al. Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e202400415. DOI: 10.36660/abc.20240415. PMID: 39082572 — texto integral em acesso aberto (PMC12092053), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "manobra de Valsalva",
+      "gradiente",
+      "obstrução dinâmica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cmh-eco-de-esforco-no-sintomatico-sem-gradiente-provocado",
+    "statement": "É RECOMENDADO o ecocardiograma COM ESFORÇO no paciente com cardiomiopatia hipertrófica SINTOMÁTICO que não apresente gradiente de via de saída igual ou maior que 50 mmHg em repouso NEM à manobra provocativa. No ASSINTOMÁTICO nas mesmas condições, o exame de esforço pode ser realizado (Classe IIa, C). É a escada completa: repouso → provocação → esforço.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024",
+    "reference": "Fernandes F, Simões MV, Correia EB, Marcondes-Braga FG, Coelho OR, et al. Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e202400415. DOI: 10.36660/abc.20240415. PMID: 39082572 — texto integral em acesso aberto (PMC12092053), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "ecocardiograma de esforço",
+      "gradiente",
+      "sintomático"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cmh-contraste-ecocardiografico-e-transesofagico",
+    "statement": "O contraste ecocardiográfico deve ser considerado quando o exame sem contraste for inconclusivo para caracterizar a hipertrofia (Classe IIa, C), e o ecocardiograma TRANSESOFÁGICO deve ser considerado quando o transtorácico for inconclusivo, para planejar terapia de redução septal ou avaliar melhor o aparato valvar mitral (Classe IIa, C).",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024",
+    "reference": "Fernandes F, Simões MV, Correia EB, Marcondes-Braga FG, Coelho OR, et al. Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e202400415. DOI: 10.36660/abc.20240415. PMID: 39082572 — texto integral em acesso aberto (PMC12092053), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "contraste ecocardiográfico",
+      "transesofágico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cmh-eco-transesofagico-durante-miectomia-e-alcoolizacao",
+    "statement": "É RECOMENDADO o ecocardiograma transesofágico DURANTE a miectomia cirúrgica; e é recomendado o transesofágico ou o transtorácico COM CONTRASTE durante a alcoolização septal, para avaliar o território de irrigação da artéria septal alvo. Nos dois casos a imagem intraprocedimento não é opcional — é o que define onde a intervenção é feita.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024",
+    "reference": "Fernandes F, Simões MV, Correia EB, Marcondes-Braga FG, Coelho OR, et al. Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e202400415. DOI: 10.36660/abc.20240415. PMID: 39082572 — texto integral em acesso aberto (PMC12092053), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "miectomia",
+      "alcoolização septal",
+      "imagem intraprocedimento"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cmh-reavaliar-por-eco-3-a-6-meses-apos-reducao-septal",
+    "statement": "É RECOMENDADO realizar ecocardiograma transtorácico 3 A 6 MESES após a terapia de redução septal, para avaliar o resultado do procedimento.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024",
+    "reference": "Fernandes F, Simões MV, Correia EB, Marcondes-Braga FG, Coelho OR, et al. Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e202400415. DOI: 10.36660/abc.20240415. PMID: 39082572 — texto integral em acesso aberto (PMC12092053), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "redução septal",
+      "seguimento"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cmh-eco-como-rastreamento-inicial-em-parente-de-primeiro-grau",
+    "statement": "É RECOMENDADO o ecocardiograma transtorácico em PARENTES DE PRIMEIRO GRAU de paciente com cardiomiopatia hipertrófica, como estratégia INICIAL de rastreamento.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024",
+    "reference": "Fernandes F, Simões MV, Correia EB, Marcondes-Braga FG, Coelho OR, et al. Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e202400415. DOI: 10.36660/abc.20240415. PMID: 39082572 — texto integral em acesso aberto (PMC12092053), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "rastreamento familiar",
+      "parentes de primeiro grau"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cmh-ressonancia-para-diagnostico-diferencial-de-fenocopias",
+    "statement": "A ressonância magnética cardíaca é RECOMENDADA para confirmar o diagnóstico quando a ecocardiografia for inconclusiva, e para o diagnóstico diferencial das FENOCÓPIAS de hipertrofia miocárdica — coração de atleta, amiloidose, doença de Fabry e hipertrofia secundária à hipertensão. É essa lista que impede que toda parede espessa vire cardiomiopatia hipertrófica.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024",
+    "reference": "Fernandes F, Simões MV, Correia EB, Marcondes-Braga FG, Coelho OR, et al. Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e202400415. DOI: 10.36660/abc.20240415. PMID: 39082572 — texto integral em acesso aberto (PMC12092053), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "ressonância magnética",
+      "fenocópias",
+      "doença de Fabry",
+      "amiloidose"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cmh-ressonancia-na-estratificacao-de-risco-e-realce-tardio",
+    "statement": "A ressonância magnética cardíaca é RECOMENDADA para aprimorar a estratificação de risco, incluindo a análise de alterações anatômicas e a presença de realce tardio (Classe I, B). E deve ser considerada especificamente para identificar realce tardio e estimar o risco de morte súbita, como CRITÉRIO ADICIONAL na decisão de implantar desfibrilador — sobretudo quando os demais critérios não foram conclusivos (Classe IIa, B).",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024",
+    "reference": "Fernandes F, Simões MV, Correia EB, Marcondes-Braga FG, Coelho OR, et al. Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e202400415. DOI: 10.36660/abc.20240415. PMID: 39082572 — texto integral em acesso aberto (PMC12092053), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "realce tardio",
+      "morte súbita",
+      "CDI"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cmh-tomografia-para-coronarias-e-planejamento-do-tratamento-invasivo",
+    "statement": "A tomografia computadorizada é RECOMENDADA para avaliação não invasiva das artérias coronárias e do seu trajeto no portador de cardiomiopatia hipertrófica, e para a análise das coronárias e dos RAMOS SEPTAIS no planejamento do tratamento invasivo. Pode ainda ser considerada para anatomia e função ventricular, e para identificar e quantificar realce tardio, quando o ecocardiograma é conflitante e há contraindicação ou indisponibilidade de ressonância (Classe IIb, C).",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024",
+    "reference": "Fernandes F, Simões MV, Correia EB, Marcondes-Braga FG, Coelho OR, et al. Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e202400415. DOI: 10.36660/abc.20240415. PMID: 39082572 — texto integral em acesso aberto (PMC12092053), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "tomografia",
+      "ramos septais",
+      "planejamento"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cmh-teste-genetico-para-diferenciar-fenocopias",
+    "statement": "Em paciente com apresentação fenotípica de cardiomiopatia hipertrófica em que se suspeite de OUTRA condição genética, é RECOMENDADA a investigação genética para cardiomiopatia hipertrófica e para outras causas genéticas de espessamento miocárdico inexplicável — as fenocópias.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024",
+    "reference": "Fernandes F, Simões MV, Correia EB, Marcondes-Braga FG, Coelho OR, et al. Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e202400415. DOI: 10.36660/abc.20240415. PMID: 39082572 — texto integral em acesso aberto (PMC12092053), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "teste genético",
+      "fenocópias"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cmh-teste-genetico-para-identificar-familiares-em-risco",
+    "statement": "O teste genético deve ser considerado no paciente com cardiomiopatia hipertrófica para facilitar a identificação de FAMILIARES em risco de desenvolver a doença (Classe IIa, B), assim como a triagem genética de parentes de primeiro grau (Classe IIa, B). Já o uso do teste genético para avaliar risco de MORTE SÚBITA é apenas Classe IIb — a genética identifica quem rastrear, não quem tem risco arrítmico.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024",
+    "reference": "Fernandes F, Simões MV, Correia EB, Marcondes-Braga FG, Coelho OR, et al. Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e202400415. DOI: 10.36660/abc.20240415. PMID: 39082572 — texto integral em acesso aberto (PMC12092053), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "teste genético",
+      "triagem familiar"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cmh-nao-testar-familia-quando-o-caso-indice-nao-tem-variante-patogenica",
+    "statement": "Em paciente com cardiomiopatia hipertrófica que realizou teste genético e NÃO apresentou variantes patogênicas — ou seja, abriga apenas variantes benignas ou provavelmente benignas —, o teste genético FAMILIAR não é recomendado. Sem variante causal identificada no caso-índice, o teste no familiar não tem o que procurar; o rastreamento passa a ser por imagem.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024",
+    "reference": "Fernandes F, Simões MV, Correia EB, Marcondes-Braga FG, Coelho OR, et al. Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e202400415. DOI: 10.36660/abc.20240415. PMID: 39082572 — texto integral em acesso aberto (PMC12092053), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "teste genético",
+      "não recomendado",
+      "caso-índice"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cmh-seguimento-do-portador-genotipo-positivo-fenotipo-negativo",
+    "statement": "No indivíduo geneticamente afetado e ainda sem fenótipo, é RECOMENDADO seguimento clínico, eletrocardiograma e imagem cardíaca A CADA 1 A 2 ANOS em crianças e adolescentes até os 30 ANOS de idade; e A CADA 3 A 5 ANOS a partir da idade adulta — com ressonância nos casos duvidosos. O intervalo TRIPLICA depois dos 30 anos, e é esse o ponto que costuma ser aplicado errado.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024",
+    "reference": "Fernandes F, Simões MV, Correia EB, Marcondes-Braga FG, Coelho OR, et al. Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e202400415. DOI: 10.36660/abc.20240415. PMID: 39082572 — texto integral em acesso aberto (PMC12092053), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "genótipo positivo",
+      "fenótipo negativo",
+      "seguimento"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cmh-esporte-competitivo-no-genotipo-positivo-sem-fenotipo",
+    "statement": "No indivíduo geneticamente afetado SEM fenótipo e SEM história familiar de morte súbita, a liberação para esporte competitivo de qualquer intensidade deve ser considerada (Classe IIa, C). HAVENDO história familiar de morte súbita, a liberação pode ser considerada (Classe IIb, C), mas com avaliação prévia por teste ergométrico e eletrocardiograma de 24 horas A CADA 1 A 2 ANOS.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024",
+    "reference": "Fernandes F, Simões MV, Correia EB, Marcondes-Braga FG, Coelho OR, et al. Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e202400415. DOI: 10.36660/abc.20240415. PMID: 39082572 — texto integral em acesso aberto (PMC12092053), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "esporte competitivo",
+      "genótipo positivo",
+      "morte súbita"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cmh-betabloqueador-e-bloqueador-de-calcio-no-tratamento-sintomatico",
+    "statement": "É RECOMENDADO o uso de BETABLOQUEADORES no paciente sintomático, para redução de sintomas, tanto na forma obstrutiva quanto na NÃO obstrutiva (Classe I, B); e é recomendado o bloqueador de canal de cálcio NÃO di-hidropiridínico em quem é intolerante ao betabloqueador ou quando este é ineficaz, também nas duas formas (Classe I, B). A associação das duas classes para controle de frequência e melhora sintomática deve ser considerada (Classe IIa, C).",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024",
+    "reference": "Fernandes F, Simões MV, Correia EB, Marcondes-Braga FG, Coelho OR, et al. Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e202400415. DOI: 10.36660/abc.20240415. PMID: 39082572 — texto integral em acesso aberto (PMC12092053), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "betabloqueador",
+      "verapamil",
+      "diltiazem"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cmh-mavacanteno-criterios-numericos-de-elegibilidade",
+    "statement": "O MAVACANTENO deve ser considerado em paciente ADULTO com forma OBSTRUTIVA, com gradiente intraventricular ACIMA DE 50 mmHg em repouso ou sob provocação, FRAÇÃO DE EJEÇÃO ACIMA DE 55%, que persista sintomático apesar de betabloqueador ou bloqueador de canal de cálcio. Os três critérios numéricos são cumulativos — e o de fração de ejeção é o que costuma ser esquecido, embora seja o que define a segurança do fármaco.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024",
+    "reference": "Fernandes F, Simões MV, Correia EB, Marcondes-Braga FG, Coelho OR, et al. Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e202400415. DOI: 10.36660/abc.20240415. PMID: 39082572 — texto integral em acesso aberto (PMC12092053), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "mavacanteno",
+      "gradiente",
+      "fração de ejeção"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cmh-evitar-vasodilatadores-na-forma-obstrutiva",
+    "statement": "Deve ser considerado EVITAR o uso de vasodilatadores, especialmente no paciente com a forma OBSTRUTIVA — a redução da pós-carga aumenta o gradiente da via de saída. Já o bloqueador do receptor AT1 pode ser considerado para melhora da capacidade física e controle da hipertensão (Classe IIb, B), o que exige leitura conjunta das duas recomendações.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024",
+    "reference": "Fernandes F, Simões MV, Correia EB, Marcondes-Braga FG, Coelho OR, et al. Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e202400415. DOI: 10.36660/abc.20240415. PMID: 39082572 — texto integral em acesso aberto (PMC12092053), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "vasodilatador",
+      "obstrução",
+      "pós-carga"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cmh-reducao-septal-com-gradiente-acima-de-50-e-classe-iii-iv",
+    "statement": "A terapia de redução septal é RECOMENDADA no paciente com cardiomiopatia hipertrófica obstrutiva com gradiente — em repouso ou provocado — ACIMA DE 50 mmHg na via de saída E classe funcional III ou IV da NYHA, apesar de medicação otimizada. Os dois critérios são cumulativos, e a otimização medicamentosa prévia é condição.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024",
+    "reference": "Fernandes F, Simões MV, Correia EB, Marcondes-Braga FG, Coelho OR, et al. Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e202400415. DOI: 10.36660/abc.20240415. PMID: 39082572 — texto integral em acesso aberto (PMC12092053), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "redução septal",
+      "gradiente",
+      "NYHA"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cmh-reducao-septal-na-sincope-de-esforco",
+    "statement": "A terapia de redução septal é RECOMENDADA no paciente com SÍNCOPE DE ESFORÇO causada por gradiente — de repouso ou provocado — acima de 50 mmHg na via de saída, apesar de terapia médica otimizada. Aqui a indicação NÃO exige classe funcional III-IV: a síncope de esforço basta.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024",
+    "reference": "Fernandes F, Simões MV, Correia EB, Marcondes-Braga FG, Coelho OR, et al. Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e202400415. DOI: 10.36660/abc.20240415. PMID: 39082572 — texto integral em acesso aberto (PMC12092053), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "síncope de esforço",
+      "redução septal"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cmh-miectomia-preferida-a-alcoolizacao-quando-ha-outra-cirurgia-indicada",
+    "statement": "A MIECTOMIA cirúrgica deve ser PREFERIDA à alcoolização septal em paciente com indicação de redução septal que requeira outra intervenção cirúrgica — reparo ou troca mitral, intervenção em músculo papilar, doença coronariana. E a alcoolização é a via recomendada quando a cirurgia é contraindicada ou de alto risco por comorbidades (Classe I, B). A escolha entre as duas técnicas é decidida pelo que MAIS o paciente precisa, não por preferência de serviço.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024",
+    "reference": "Fernandes F, Simões MV, Correia EB, Marcondes-Braga FG, Coelho OR, et al. Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e202400415. DOI: 10.36660/abc.20240415. PMID: 39082572 — texto integral em acesso aberto (PMC12092053), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "miectomia",
+      "alcoolização septal",
+      "escolha de técnica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cmh-reducao-septal-por-equipe-experiente-em-heart-team",
+    "statement": "É RECOMENDADO que a terapia de redução septal seja realizada por operadores EXPERIENTES, dentro de um Heart Team com experiência no manejo de cardiomiopatia hipertrófica. O volume do centro faz parte da indicação, não é detalhe logístico.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024",
+    "reference": "Fernandes F, Simões MV, Correia EB, Marcondes-Braga FG, Coelho OR, et al. Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e202400415. DOI: 10.36660/abc.20240415. PMID: 39082572 — texto integral em acesso aberto (PMC12092053), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "Heart Team",
+      "redução septal",
+      "volume do centro"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cmh-reducao-septal-nao-indicada-em-assintomatico",
+    "statement": "Em paciente com cardiomiopatia hipertrófica obstrutiva ASSINTOMÁTICO e com capacidade normal ao exercício, a terapia de redução septal NÃO está indicada. E em paciente sintomático elegível à redução septal, a TROCA VALVAR MITRAL não deve ser recomendada como opção para aliviar a via de saída (Classe III, C) — as duas recomendações negativas delimitam a indicação por cima e por baixo.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024",
+    "reference": "Fernandes F, Simões MV, Correia EB, Marcondes-Braga FG, Coelho OR, et al. Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e202400415. DOI: 10.36660/abc.20240415. PMID: 39082572 — texto integral em acesso aberto (PMC12092053), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "assintomático",
+      "não indicado",
+      "troca mitral"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cmh-os-seis-fatores-de-risco-a-pesquisar-em-toda-avaliacao",
+    "statement": "Em TODA avaliação clínica do paciente com cardiomiopatia hipertrófica devem ser pesquisados os seguintes fatores de risco de morte súbita: parada cardiorrespiratória abortada, taquicardia ou fibrilação ventricular, síncopes inexplicadas, história familiar de morte súbita antes dos 50 ANOS, hipertrofia acentuada com espessura IGUAL OU MAIOR QUE 28 mm, aneurisma apical e fração de ejeção ABAIXO DE 50%. É uma lista fechada, e a checagem é a cada consulta — não uma vez na vida.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024",
+    "reference": "Fernandes F, Simões MV, Correia EB, Marcondes-Braga FG, Coelho OR, et al. Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e202400415. DOI: 10.36660/abc.20240415. PMID: 39082572 — texto integral em acesso aberto (PMC12092053), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "morte súbita",
+      "fatores de risco",
+      "aneurisma apical"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cmh-na-duvida-sobre-cdi-buscar-tvns-e-realce-tardio",
+    "statement": "Havendo DÚVIDA na indicação de cardiodesfibrilador, são indicadas a pesquisa de taquicardia ventricular não sustentada por monitorização PROLONGADA e a ressonância magnética para pesquisa de REALCE TARDIO e de ANEURISMA APICAL. São os dois exames que desempatam a decisão.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024",
+    "reference": "Fernandes F, Simões MV, Correia EB, Marcondes-Braga FG, Coelho OR, et al. Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e202400415. DOI: 10.36660/abc.20240415. PMID: 39082572 — texto integral em acesso aberto (PMC12092053), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "CDI",
+      "TVNS",
+      "realce tardio"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cmh-cdi-apos-parada-cardiaca-e-calculadora-de-risco-em-5-anos",
+    "statement": "Havendo evidência de parada cardiorrespiratória reanimada por taquicardia ventricular sustentada ou fibrilação ventricular, o implante de cardiodesfibrilador está INDICADO (Classe I, B) — é a prevenção secundária. Para a prevenção primária, o uso da CALCULADORA eletrônica de risco de morte em 5 anos deve ser considerado em pacientes com mais de 16 anos, dentro de decisão compartilhada (Classe IIa, B).",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024",
+    "reference": "Fernandes F, Simões MV, Correia EB, Marcondes-Braga FG, Coelho OR, et al. Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e202400415. DOI: 10.36660/abc.20240415. PMID: 39082572 — texto integral em acesso aberto (PMC12092053), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "CDI",
+      "prevenção secundária",
+      "calculadora de risco"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cmh-indicacao-de-cdi-decai-com-a-idade-para-os-mesmos-fatores",
+    "statement": "Diante dos MESMOS fatores de risco — síncope inexplicada, hipertrofia acentuada com espessura igual ou maior que 28 mm, entre outros —, a força da indicação de cardiodesfibrilador DECAI COM A IDADE: até 40 anos, deve ser considerado (Classe IIa, B); acima de 40 e até 60 anos, deve ser considerado (Classe IIa, B); acima de 60 anos, pode ser considerado (Classe IIb, B). O mesmo achado não vale o mesmo em idades diferentes.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024",
+    "reference": "Fernandes F, Simões MV, Correia EB, Marcondes-Braga FG, Coelho OR, et al. Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e202400415. DOI: 10.36660/abc.20240415. PMID: 39082572 — texto integral em acesso aberto (PMC12092053), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "CDI",
+      "idade",
+      "estratificação"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cmh-tvns-e-o-peso-das-suas-caracteristicas-por-faixa-etaria",
+    "statement": "Na presença de TAQUICARDIA VENTRICULAR NÃO SUSTENTADA, o implante de cardiodesfibrilador deve ser considerado se a idade for MENOR que 40 anos (Classe IIa, nível A — o único nível A desta diretriz) e pode ser considerado a partir dos 40 anos (Classe IIb, B). O peso da arritmia aumenta com múltiplos episódios (mais de 3), episódios mais rápidos (frequência acima de 200) e mais longos (mais de 10 batimentos) — três qualificadores numéricos que a citação costuma omitir.",
+    "recommendation_class": "IIa",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024",
+    "reference": "Fernandes F, Simões MV, Correia EB, Marcondes-Braga FG, Coelho OR, et al. Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e202400415. DOI: 10.36660/abc.20240415. PMID: 39082572 — texto integral em acesso aberto (PMC12092053), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "TVNS",
+      "CDI",
+      "idade"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cmh-escolha-do-dispositivo-e-coil-unico",
+    "statement": "Havendo indicação de cardiodesfibrilador na cardiomiopatia hipertrófica, são recomendados dispositivos transvenosos de câmara única, de câmara dupla ou SUBCUTÂNEOS, com a escolha feita em decisão compartilhada (Classe I, B). Nos que recebem sistema TRANSVENOSO, são recomendados os de COIL ÚNICO (Classe I, B). O de dupla câmara pode ser considerado em quem tem taquicardia atrial paroxística ou fibrilação atrial (Classe IIb, B).",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024",
+    "reference": "Fernandes F, Simões MV, Correia EB, Marcondes-Braga FG, Coelho OR, et al. Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e202400415. DOI: 10.36660/abc.20240415. PMID: 39082572 — texto integral em acesso aberto (PMC12092053), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "CDI",
+      "coil único",
+      "subcutâneo"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cmh-anticoagulacao-na-fa-independe-do-cha2ds2-vasc",
+    "statement": "No portador de cardiomiopatia hipertrófica com fibrilação atrial, a anticoagulação é RECOMENDADA com anticoagulante oral direto em PRIMEIRA linha, ou antagonista da vitamina K em segunda, INDEPENDENTEMENTE do escore CHA2DS2-VASc — e UM ÚNICO episódio sintomático documentado em eletrocardiograma de superfície já é suficiente para indicá-la. É a diferença mais importante em relação à fibrilação atrial não associada a cardiomiopatia hipertrófica: ali o escore decide; aqui não.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024",
+    "reference": "Fernandes F, Simões MV, Correia EB, Marcondes-Braga FG, Coelho OR, et al. Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e202400415. DOI: 10.36660/abc.20240415. PMID: 39082572 — texto integral em acesso aberto (PMC12092053), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "fibrilação atrial",
+      "anticoagulação",
+      "CHA2DS2-VASc"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cmh-anticoagulacao-na-fa-subclinica-por-duracao-do-episodio",
+    "statement": "Na fibrilação atrial ASSINTOMÁTICA detectada por dispositivo implantável ou externo em portador de cardiomiopatia hipertrófica, a duração do episódio decide: ACIMA DE 24 HORAS, a anticoagulação é recomendada (Classe I, C); ENTRE 5 MINUTOS E 24 HORAS, deve ser considerada (Classe IIa, C). Em ambos os casos, independentemente do CHA2DS2-VASc.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024",
+    "reference": "Fernandes F, Simões MV, Correia EB, Marcondes-Braga FG, Coelho OR, et al. Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e202400415. DOI: 10.36660/abc.20240415. PMID: 39082572 — texto integral em acesso aberto (PMC12092053), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "fibrilação atrial subclínica",
+      "anticoagulação",
+      "duração"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cmh-anticoagulacao-no-aneurisma-apical-independe-do-tamanho",
+    "statement": "O anticoagulante oral é RECOMENDADO para profilaxia de eventos embólicos no paciente com cardiomiopatia hipertrófica e ANEURISMA APICAL de ventrículo esquerdo, INDEPENDENTEMENTE DO TAMANHO do aneurisma. Não existe aneurisma apical pequeno demais para dispensar anticoagulação nesta doença.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024",
+    "reference": "Fernandes F, Simões MV, Correia EB, Marcondes-Braga FG, Coelho OR, et al. Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e202400415. DOI: 10.36660/abc.20240415. PMID: 39082572 — texto integral em acesso aberto (PMC12092053), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "aneurisma apical",
+      "anticoagulação",
+      "embolia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cmh-antiplaquetario-nao-substitui-anticoagulante",
+    "statement": "Os agentes ANTIPLAQUETÁRIOS não fornecem prevenção adequada de acidente vascular cerebral no paciente com cardiomiopatia hipertrófica e fibrilação atrial e, portanto, DEVEM SER EVITADOS. É a recomendação que fecha a porta da alternativa mais tentadora em quem se teme sangrar.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024",
+    "reference": "Fernandes F, Simões MV, Correia EB, Marcondes-Braga FG, Coelho OR, et al. Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e202400415. DOI: 10.36660/abc.20240415. PMID: 39082572 — texto integral em acesso aberto (PMC12092053), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "antiplaquetário",
+      "fibrilação atrial",
+      "não recomendado"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cmh-controle-de-frequencia-e-de-ritmo-na-fibrilacao-atrial",
+    "statement": "Na estratégia de controle de FREQUÊNCIA em portador de cardiomiopatia hipertrófica com fibrilação atrial, são recomendados betabloqueador ou bloqueador de canal de cálcio — verapamil ou diltiazem (Classe I, C). Na estratégia de controle de RITMO, devem ser considerados a cardioversão elétrica ou os antiarrítmicos, e também a ABLAÇÃO por cateter no paciente sintomático (ambas Classe IIa, B). Em quem vai à miectomia cirúrgica, a ablação concomitante de fibrilação atrial deve ser considerada (Classe IIa, B).",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024",
+    "reference": "Fernandes F, Simões MV, Correia EB, Marcondes-Braga FG, Coelho OR, et al. Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e202400415. DOI: 10.36660/abc.20240415. PMID: 39082572 — texto integral em acesso aberto (PMC12092053), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "fibrilação atrial",
+      "controle de frequência",
+      "ablação"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cmh-com-disfuncao-ventricular-tratar-como-insuficiencia-cardiaca",
+    "statement": "O paciente com cardiomiopatia hipertrófica que desenvolve DISFUNÇÃO ventricular — fração de ejeção abaixo de 50% — e insuficiência cardíaca avançada deve receber tratamento medicamentoso guiado pelas diretrizes de INSUFICIÊNCIA CARDÍACA. A partir daí, a doença deixa de ser manejada pelo protocolo da hipertrofia e passa a seguir o da disfunção.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024",
+    "reference": "Fernandes F, Simões MV, Correia EB, Marcondes-Braga FG, Coelho OR, et al. Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e202400415. DOI: 10.36660/abc.20240415. PMID: 39082572 — texto integral em acesso aberto (PMC12092053), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "disfunção ventricular",
+      "insuficiência cardíaca",
+      "fase dilatada"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cmh-avaliacao-perioperatoria-eco-biomarcadores-e-betabloqueador",
+    "statement": "No perioperatório de cirurgia não cardíaca do portador de cardiomiopatia hipertrófica: é recomendado ECOCARDIOGRAMA na suspeita da doença, quando o último exame tem mais de 1 ANO ou houve mudança de sintomas; é recomendado MANTER o betabloqueador em todo o perioperatório; e são recomendados eletrocardiograma, BNP ou NT-proBNP e TROPONINA antes de operações de risco intermediário a alto, repetidos no pós-operatório imediato e uma vez ao dia no 1º e no 2º dia. Nas cirurgias de alto risco intrínseco, deve ser considerada monitorização hemodinâmica com pressão invasiva, cateter venoso central e terapia guiada por alvo (Classe IIa, C).",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024",
+    "reference": "Fernandes F, Simões MV, Correia EB, Marcondes-Braga FG, Coelho OR, et al. Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e202400415. DOI: 10.36660/abc.20240415. PMID: 39082572 — texto integral em acesso aberto (PMC12092053), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Perioperatório",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "perioperatório",
+      "troponina",
+      "betabloqueador"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cmh-gravidez-classificacao-da-oms-modificada-e-farmacos",
+    "statement": "Na gestante portadora de cardiomiopatia hipertrófica, é RECOMENDADO o emprego da classificação da OMS MODIFICADA para estratificação do risco da gravidez; e são recomendados betabloqueadores CARDIOSSELETIVOS e antagonistas dos canais de cálcio para controle dos sintomas, com apoio na monitorização do crescimento e da vitalidade FETAL. A escolha do betabloqueador cardiosseletivo e o acompanhamento fetal são partes da mesma recomendação.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024",
+    "reference": "Fernandes F, Simões MV, Correia EB, Marcondes-Braga FG, Coelho OR, et al. Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e202400415. DOI: 10.36660/abc.20240415. PMID: 39082572 — texto integral em acesso aberto (PMC12092053), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "gravidez",
+      "OMS modificada",
+      "betabloqueador cardiosseletivo"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
