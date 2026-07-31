@@ -110,6 +110,40 @@ def orgaos_de_classe(db: Session = Depends(get_db), _: User = Depends(current_us
     return [linha[0] for linha in linhas]
 
 
+@router.get("/suporte")
+def contato_de_suporte(db: Session = Depends(get_db), user: User = Depends(current_user)):
+    """Quem é o "Dr. Rafael" do atalho "Fale com o Dr. Rafael" (pedido dele em
+    31/07/2026).
+
+    O responsável é o **admin de menor id** — mesmo critério que o resto do
+    sistema já usa para identificar o administrador principal (ver as gravações
+    de `AuditLog`). Não há coluna "é o dono do produto" no modelo, e criar uma
+    só para isto seria migração de esquema para um dado que hoje tem uma única
+    resposta possível.
+
+    Devolve `null` em vez de 404 quando o próprio usuário é o responsável: para
+    ele o atalho não faz sentido (conversaria consigo mesmo) e o frontend
+    simplesmente não desenha o botão.
+    """
+    admin = (
+        db.query(User)
+        .filter(User.role == "admin", User.is_active.is_(True))
+        .order_by(User.id)
+        .first()
+    )
+    if admin is None or admin.id == user.id:
+        return None
+    return {
+        **_dump_usuario_busca(admin),
+        # O frontend precisa saber se pode contar com resposta rápida antes de
+        # prometer isso ao assinante na interface.
+        "online": bool(
+            admin.last_seen_at
+            and (datetime.now(timezone.utc) - admin.last_seen_at).total_seconds() <= 300
+        ),
+    }
+
+
 @router.get("/conversas")
 def listar_conversas(db: Session = Depends(get_db), user: User = Depends(current_user)):
     """Uma linha por interlocutor, com a última mensagem e a contagem de não

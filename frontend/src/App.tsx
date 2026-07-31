@@ -49,6 +49,7 @@ import FilaTelediagnostico from "./pages/FilaTelediagnostico";
 import CaixaDeEmail from "./pages/CaixaDeEmail";
 import CorviaMail from "./pages/CorviaMail";
 import Receituario from "./pages/Receituario";
+import UsuariosOnline from "./pages/UsuariosOnline";
 
 export default function App() {
   const { usuario, carregando } = useAuth();
@@ -123,6 +124,9 @@ export default function App() {
         )}
         {usuario.role === "admin" && (
           <Route path="fila-telediagnostico" element={<FilaTelediagnostico />} />
+        )}
+        {usuario.role === "admin" && (
+          <Route path="admin/usuarios-online" element={<UsuariosOnline />} />
         )}
       </Route>
       <Route path="*" element={<Navigate to="/" replace />} />

@@ -4,6 +4,7 @@ import { useAuth } from "../lib/auth";
 import { api } from "../lib/api";
 import Credito from "./Credito";
 import BoasVindas from "./BoasVindas";
+import ChatFlutuante from "./ChatFlutuante";
 
 type ItemNav = { to: string; rotulo: string; curto: string; fim?: boolean };
 
@@ -74,7 +75,8 @@ export default function Shell() {
           to: "/admin",
           rotulo: pendentes > 0 ? `Administração (${pendentes})` : "Administração",
           curto: pendentes > 0 ? `Admin (${pendentes})` : "Admin",
-        }, { to: "/fila-telediagnostico", rotulo: "Fila de telediagnóstico", curto: "Fila" }, CONTA]
+        }, { to: "/fila-telediagnostico", rotulo: "Fila de telediagnóstico", curto: "Fila" },
+        { to: "/admin/usuarios-online", rotulo: "Usuários online", curto: "Online" }, CONTA]
       : [...NAV_BASE, CONTA];
 
   return (
@@ -145,6 +147,12 @@ export default function Shell() {
       </div>
 
       <BoasVindas />
+
+      {/* CorvIA Chat — widget flutuante, disponível de qualquer tela. Fica fora
+          do modo emergência pelo mesmo motivo do atalho vermelho: lá a tela é
+          para uma coisa só. O botão do chat é posicionado acima do atalho de
+          emergência para não cobri-lo. */}
+      {!naEmergencia && <ChatFlutuante />}
 
       {menuAberto && (
         <div className="gaveta-fundo" onClick={() => setMenuAberto(false)} aria-hidden="true" />
