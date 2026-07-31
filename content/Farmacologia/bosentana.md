@@ -4,7 +4,7 @@ slug: bosentana
 theme: "Farmacologia"
 kind: farmacologia
 review_status: revisado
-source_refs: ["Bosentan — rótulo aprovado pelo FDA, DailyMed SPL setid 8444da17-6c31-492b-8842-93740f083d9d", "Rubin LJ et al. Bosentan Therapy for Pulmonary Arterial Hypertension (BREATHE-1). N Engl J Med. 2002;346(12):896-903.", "Safety and tolerability of bosentan — PMC review"]
+source_refs: ["Bosentan — rótulo aprovado pelo FDA, DailyMed SPL setid 8444da17-6c31-492b-8842-93740f083d9d", "Rubin LJ et al. Bosentan Therapy for Pulmonary Arterial Hypertension (BREATHE-1). N Engl J Med. 2002;346(12):896-903.", "Bula brasileira genérica de bosentana (Accord Farma, VPS 10.2022, RDC 47/2009), item 4 (Contraindicações) e secção Gravidez, via accordfarma.com.br/bulas/bosentana_bula_profissional.pdf"]
 legacy_source: "medicamentos/banco-de-medicamentos-bosentana.md"
 ---
 
@@ -29,9 +29,17 @@ Hepatotoxicidade é o efeito adverso mais relevante da classe — monitorizaçã
 Elevação de transaminases hepáticas (efeito de classe), edema periférico, anemia, cefaleia, congestão nasal, teratogenicidade (contraindicado em gravidez)
 
 ## Contraindicacoes
-- Gravidez (teratogênico)
-- Insuficiência hepática moderada a grave
-- Uso concomitante com ciclosporina A
+Segundo o item 4 da bula brasileira genérica (Accord Farma):
+- Hipersensibilidade ao princípio ativo ou a qualquer componente da fórmula
+- Uso concomitante de ciclosporina A
+- Gravidez, ou mulher que possa engravidar durante o tratamento
+- Mulher em idade fértil sem uso de método contraceptivo confiável (contraceptivo hormonal isolado não é eficaz em uso concomitante com bosentana)
+- Menores de 3 anos
+
+Nota de correção: "insuficiência hepática moderada a grave" constava aqui como contraindicação formal — a bula brasileira recomenda apenas "evitar" nesse cenário (item 5, Advertências), sem incluí-lo no item 4.
+
+## Gravidez
+**Contraindicada — categoria de risco X** (bula brasileira genérica, Accord Farma). Estudos em animais demonstraram teratogenicidade e embriotoxicidade; não há dados confiáveis em gestantes. Antes de iniciar em mulher com potencial para engravidar: confirmar ausência de gravidez e aconselhar sobre contracepção fiável. A bosentana pode tornar ineficazes os contraceptivos hormonais (oral, injetável, transdérmico ou implantável) por interação farmacocinética — o hormonal não pode ser o único método, exige-se método adicional ou alternativo. Exige testes de gravidez mensais durante o tratamento, tanto pela possível falha da contracepção quanto porque a hipertensão pulmonar se deteriora gravemente com a gravidez.
 
 ## Dose apresentacoes especificas
 
