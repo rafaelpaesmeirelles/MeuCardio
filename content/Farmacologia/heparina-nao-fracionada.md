@@ -3,7 +3,7 @@ title: "Heparina não fracionada"
 slug: heparina-nao-fracionada
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Heparinização Plena na Sala de Emergência · HCRP/USP · https://hcrp.usp.br/revistaqualidade/uploads/Artigos/186/186.pdf"]
 legacy_source: "medicamentos/banco-de-medicamentos-heparina-nao-fracionada-hnf.md"
 ---

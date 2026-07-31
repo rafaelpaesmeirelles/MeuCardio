@@ -3,8 +3,8 @@ title: "Hidroclorotiazida"
 slug: hidroclorotiazida
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
-source_refs: ["Hidroclorotiazida (diurético): para que serve e posologia · MD Saúde · 2024 · https://www.mdsaude.com/bulas/hidroclorotiazida/", "Resumo sobre hidroclorotiazida: indicações, farmacologia e mais · Estratégia MED · 2023 · https://med.estrategia.com/portal/conteudos-gratis/farmacos/resumo-sobre-hidroclorotiazida-indicacoes-farmacologia-e-mais/"]
+review_status: revisado
+source_refs: ["Hydrochlorothiazide tablets, USP — rótulo aprovado pelo FDA, DailyMed SPL setid 7b38ac8a-4540-4eb2-aedd-9aa966d22190"]
 legacy_source: "medicamentos/banco-de-medicamentos-hidroclorotiazida.md"
 ---
 

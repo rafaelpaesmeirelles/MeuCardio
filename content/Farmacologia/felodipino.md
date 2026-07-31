@@ -3,7 +3,7 @@ title: "Felodipino"
 slug: felodipino
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Felodipine — rótulo aprovado pelo FDA, DailyMed SPL setid 924b2633-74bd-469f-b831-77f09dfebbf7", "SPLENDIL — Bula Profissional · AZMED/AstraZeneca · https://www.azmed.com.br/content/dam/multibrand/br/pt/azmed-2022/home/bulas-profissionais/bulas/Splendil_Bula_Profissional.pdf"]
 legacy_source: "medicamentos/banco-de-medicamentos-felodipino.md"
 ---
