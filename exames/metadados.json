@@ -1449,5 +1449,101 @@
       "risco cardiovascular",
       "biomarcador"
     ]
+  },
+  {
+    "slug": "reserva-de-fluxo-fracionada-ffr-e-ifr-na-avaliacao-funcional-invasiva",
+    "name": "Reserva de fluxo fracionada (FFR) e razão instantânea sem ondas (iFR)",
+    "category": "imagem",
+    "theme": "Doença coronariana",
+    "what_it_measures": "Repercussão funcional de uma estenose coronariana, medida durante o cateterismo por um fio-guia de pressão posicionado além da lesão. A FFR é a razão entre o fluxo sanguíneo máximo na artéria com estenose e o fluxo máximo que existiria sem ela, obtida sob hiperemia induzida (classicamente por adenosina). A iFR é uma medida alternativa, calculada numa janela específica da diástole e que dispensa a indução de hiperemia. Categoria registrada como 'imagem' por coerência com o cateterismo cardíaco direito com Qp/Qs já cadastrado nesta base — em ambos os casos a medida é hemodinâmica, obtida durante um procedimento de imagem invasiva.",
+    "reference_range": "FFR ≤ 0,80 caracteriza a lesão como funcionalmente significativa — foi exatamente esse o corte usado no estudo FAME para indicar o implante de stent no braço guiado por FFR ('underwent stenting of indicated lesions only if the FFR was 0.80 or less'), e a Diretriz de Síndrome Coronariana Crônica da SBC (2025) o reafirma: 'Um valor de FFR ≤ 0,80 é, geralmente, considerado indicativo de isquemia significativa, justificando intervenção para revascularização.' Para a iFR, a mesma diretriz brasileira registra, ao descrever o DEFINE-FLAIR e o iFR-SWEDEHEART, que 'a revascularização foi indicada em ambos os ensaios se a FFR fosse < 0,80 ou se o iFR fosse < 0,89'.",
+    "indications": "Estenose coronariana de gravidade angiográfica intermediária — a diretriz brasileira delimita essa faixa como tipicamente entre 40% e 70% de gravidade angiográfica, sem isquemia demonstrada em teste não invasivo — e doença multiarterial em que é preciso decidir quais lesões tratar. A avaliação fisiológica invasiva também entra na investigação de disfunção microvascular coronariana, em que serve para afastar obstrução epicárdica funcionalmente significativa (FFR > 0,80) antes de atribuir o quadro à microcirculação. No FAME, a estratégia guiada por FFR reduziu o número de stents por paciente (1,9 ± 1,3 contra 2,7 ± 1,2 no grupo guiado só por angiografia; p < 0,001) e a taxa de eventos em 1 ano (13,2% contra 18,3%; p = 0,02).",
+    "interpretation": "Valor de FFR acima do corte indica que a lesão não é responsável por isquemia e que o tratamento clínico é a conduta apropriada, ainda que a estenose pareça importante à angiografia — é justamente essa dissociação entre aparência anatômica e repercussão funcional que o exame existe para resolver. A escolha entre FFR e iFR pode ser feita por conveniência: nos dois ensaios randomizados que as compararam diretamente, a estratégia guiada por iFR foi não inferior à guiada por FFR quanto a eventos cardíacos adversos maiores em 12 meses — no DEFINE-FLAIR, 6,8% (78 de 1148) contra 7,0% (83 de 1182), diferença de -0,2 ponto percentual (IC95% -2,3 a 1,8; p < 0,001 para não inferioridade); no iFR-SWEDEHEART, 6,7% (68 de 1012) contra 6,1% (61 de 1007), diferença de 0,7 ponto percentual (IC95% -1,5 a 2,8; p = 0,007 para não inferioridade).",
+    "limitations": "A FFR exige hiperemia farmacológica, que causa desconforto: no DEFINE-FLAIR, sintomas e sinais adversos durante o procedimento ocorreram em 3,1% (39 pacientes) no grupo iFR contra 30,8% (385 pacientes) no grupo FFR (p < 0,001), e o tempo mediano de procedimento foi menor com iFR (40,5 contra 45,0 minutos; p = 0,001). É medida invasiva, obtida apenas durante cateterismo, e portanto não substitui teste funcional não invasivo na etapa diagnóstica. O corte é um limiar dicotômico aplicado a uma variável contínua — valores próximos da fronteira devem ser lidos com o contexto clínico, não como resposta binária.",
+    "source_refs": [
+      "Tonino PAL, De Bruyne B, Pijls NHJ, et al. Fractional flow reserve versus angiography for guiding percutaneous coronary intervention (FAME). N Engl J Med. 2009;360(3):213-224. DOI: 10.1056/NEJMoa0807611. PMID: 19144937 — corte de FFR ≤ 0,80 e resultados de 1 ano conferidos no resumo oficial do PubMed em 31/07/2026.",
+      "Davies JE, Sen S, Dehbi H-M, et al. Use of the instantaneous wave-free ratio or fractional flow reserve in PCI (DEFINE-FLAIR). N Engl J Med. 2017;376(19):1824-1834. DOI: 10.1056/NEJMoa1700445. PMID: 28317458.",
+      "Götberg M, Christiansen EH, Gudmundsdottir IJ, et al. Instantaneous wave-free ratio versus fractional flow reserve to guide PCI (iFR-SWEDEHEART). N Engl J Med. 2017;376(19):1813-1823. DOI: 10.1056/NEJMoa1616540. PMID: 28317438.",
+      "Cesar LAM, Gowdak LHW, Pavanello R, et al. Diretriz de Síndrome Coronariana Crônica – 2025. Arq Bras Cardiol. 2025;122(9):e20250619. DOI: 10.36660/abc.20250619. PMID: 41294178 — seção de avaliação de estenoses coronárias epicárdicas, texto integral acessado em acesso aberto (PMC13400070) e conferido em 31/07/2026; as passagens entre aspas são citação literal da diretriz."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ffr",
+      "ifr",
+      "avaliação funcional invasiva",
+      "cateterismo",
+      "doença coronariana"
+    ]
+  },
+  {
+    "slug": "mapeamento-t1-nativo-e-volume-extracelular-ecv-por-ressonancia-cardiaca",
+    "name": "Mapeamento T1 nativo e volume extracelular (ECV) por ressonância cardíaca",
+    "category": "imagem",
+    "theme": "Cardiomiopatias",
+    "what_it_measures": "Propriedades magnéticas do miocárdio quantificadas pixel a pixel. O T1 nativo é medido sem contraste e altera-se em direções opostas conforme o processo: sobe no edema e na expansão intersticial, desce na sobrecarga de ferro e no acúmulo de esfingolipídeos da doença de Anderson-Fabry. O volume extracelular (ECV) é calculado a partir do T1 do miocárdio e do sangue antes e depois do gadolínio, corrigido pelo hematócrito, e estima a fração do tecido ocupada pelo interstício — ou seja, quantifica fibrose e infiltração difusas, que o realce tardio isolado não detecta bem por depender de contraste entre regiões.",
+    "reference_range": "Não use faixa de referência de outro serviço. O consenso da SCMR é explícito: 'For native T1 and T2 mapping, local results should be benchmarked against published reported ranges, but a local reference range should be primarily used', e as faixas locais devem sair de dados 'acquired, processed, and analyzed in the same way as the intended application, with the upper and lower range of normal defined by the mean plus and minus 2 standard deviations of the normal data'. O documento vai além e fixa uma conduta: 'If local reference ranges are not available for native T1 and T2 mapping, quantitative results should not be reported clinically.' Valores absolutos de T1 dependem de campo magnético, sequência e fabricante, e não são transferíveis entre serviços — o consenso compara a situação à de outros exames laboratoriais, em que o laboratório informa a própria faixa de referência junto do resultado.",
+    "indications": "Suspeita de cardiomiopatia infiltrativa ou de depósito e caracterização tecidual quando o quadro não se explica pela função e pela anatomia. O consenso cita explicitamente como cenários de grande magnitude de alteração — em que precisão menor da faixa local é aceitável — o T1 para o diagnóstico de amiloidose, sobrecarga de ferro, doença de Anderson-Fabry e lesão miocárdica aguda.",
+    "interpretation": "T1 nativo elevado com ECV elevado aponta para expansão do espaço extracelular, o padrão da amiloidose e da fibrose difusa. T1 nativo reduzido restringe muito o diagnóstico diferencial, porque poucas condições o produzem — sobrecarga de ferro e doença de Anderson-Fabry são as principais. O ECV, por ser razão corrigida pelo hematócrito, é menos dependente do equipamento que o T1 nativo isolado, mas continua exigindo que aquisição e processamento sigam o mesmo método da faixa de referência usada.",
+    "limitations": "O cálculo do ECV depende do hematócrito, que segundo o consenso 'should be obtained immediately before the scan if possible, otherwise within 24 h of scanning' — hematócrito antigo introduz erro. Existe a variante de ECV sintético, em que o hematócrito é estimado a partir do T1 do sangue em vez de medido em laboratório; o consenso a trata como alternativa útil quando a relação entre T1 do sangue e hematócrito é conhecida para aquela sequência e campo, e registra que os dados que a sustentam eram preliminares. O ECV exige gadolínio (doses de 0,1 a 0,2 mmol/kg, com o mapeamento pós-contraste feito entre 10 e 30 minutos após a administração), o que limita o exame em disfunção renal grave. Cobertura de todo o coração aumenta o rendimento diagnóstico, mas alonga o protocolo e cansa o paciente.",
+    "source_refs": [
+      "Messroghli DR, Moon JC, Ferreira VM, et al. Clinical recommendations for cardiovascular magnetic resonance mapping of T1, T2, T2* and extracellular volume: A consensus statement by the Society for Cardiovascular Magnetic Resonance (SCMR) endorsed by the European Association for Cardiovascular Imaging (EACVI). J Cardiovasc Magn Reson. 2017;19(1):75. DOI: 10.1186/s12968-017-0389-8. PMID: 28992817 — texto integral acessado em acesso aberto (PMC5633041) e conferido em 31/07/2026; as passagens entre aspas neste registro são citação literal do documento."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "mapeamento t1",
+      "ecv",
+      "ressonância cardíaca",
+      "caracterização tecidual",
+      "amiloidose",
+      "fabry"
+    ]
+  },
+  {
+    "slug": "ultrassonografia-de-rastreio-de-aneurisma-de-aorta-abdominal",
+    "name": "Ultrassonografia abdominal para rastreio de aneurisma de aorta abdominal",
+    "category": "imagem",
+    "theme": "Aorta e doença arterial periférica",
+    "what_it_measures": "Diâmetro máximo da aorta abdominal por ultrassonografia, exame não invasivo, sem radiação e sem contraste. É o método de rastreio populacional do aneurisma de aorta abdominal (AAA), condição que permanece assintomática até romper.",
+    "reference_range": "O AAA é definido como aumento da aorta com diâmetro de 3,0 cm ou mais ('aortic enlargement with a diameter of 3.0 cm or larger', USPSTF 2019). A faixa de 3,0 a 5,4 cm é tratada pelo USPSTF como AAA pequeno. Os limiares de correção eletiva são diferentes por sexo e estão registrados na frente de Evidências desta plataforma, com a diretriz ESC 2024 de doenças arterial periférica e aórtica como fonte — não repetidos aqui para evitar duas versões do mesmo número em telas diferentes.",
+    "indications": "As recomendações do USPSTF de 2019, com o grau atribuído por ele: rastreio único por ultrassonografia em homens de 65 a 75 anos que já fumaram (grau B); oferta seletiva, e não rastreio de rotina, em homens de 65 a 75 anos que nunca fumaram (grau C); recomendação contrária ao rastreio de rotina em mulheres que nunca fumaram e não têm história familiar de AAA (grau D); e evidência insuficiente para avaliar o balanço entre benefício e dano em mulheres de 65 a 75 anos que já fumaram ou têm história familiar (declaração I). A diretriz ESC 2024 trata a mesma pergunta com estrutura de classe e nível própria, e suas recomendações estão cadastradas em separado na frente de Evidências — as duas fontes têm escopos e sistemas de graduação distintos e não devem ser fundidas numa afirmação só.",
+    "interpretation": "Diâmetro aórtico abaixo de 3,0 cm afasta o aneurisma. Valor de 3,0 cm ou mais estabelece o diagnóstico e transfere a decisão para o seguimento por imagem seriada ou a correção eletiva, conforme o diâmetro, o sexo e a velocidade de crescimento. O rastreio é de dose única na recomendação do USPSTF para o grupo de grau B — não é exame para repetir indefinidamente em quem rastreou negativo nessa faixa etária.",
+    "limitations": "A janela acústica pode ser insuficiente em obesidade e na presença de gás intestinal, o que compromete a medida. O exame avalia a aorta abdominal, não a torácica. O USPSTF registra que a prevalência de AAA vem caindo há duas décadas entre homens rastreados de 65 anos ou mais em vários países europeus, e que a prevalência atual nos Estados Unidos é incerta pela baixa adesão ao rastreio — o rendimento do rastreio depende, portanto, da prevalência local. O mesmo documento registra que o risco de morte associado à ruptura chega a 81%, o que é o que sustenta rastrear uma condição assintomática.",
+    "source_refs": [
+      "US Preventive Services Task Force; Owens DK, Davidson KW, Krist AH, et al. Screening for Abdominal Aortic Aneurysm: US Preventive Services Task Force Recommendation Statement. JAMA. 2019;322(22):2211-2218. DOI: 10.1001/jama.2019.18928. PMID: 31821437 — definição de AAA, graus B/C/D/I e letalidade da ruptura conferidos no resumo estruturado oficial em 31/07/2026."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "aneurisma de aorta abdominal",
+      "rastreio",
+      "ultrassonografia",
+      "uspstf",
+      "prevenção"
+    ]
+  },
+  {
+    "slug": "avaliacao-da-capacidade-funcional-pre-operatoria-dasi-e-cpet",
+    "name": "Avaliação da capacidade funcional pré-operatória (DASI, teste cardiopulmonar de exercício e estimativa subjetiva)",
+    "category": "metodo_grafico",
+    "theme": "Perioperatório",
+    "what_it_measures": "Capacidade funcional antes de cirurgia não cardíaca de grande porte, por três caminhos distintos: a estimativa subjetiva feita pelo médico em equivalentes metabólicos (MET), o questionário estruturado Duke Activity Status Index (DASI) e o teste cardiopulmonar de exercício (CPET), que mede o consumo de oxigênio de pico.",
+    "reference_range": "O limiar tradicional de decisão é 4 MET. No estudo METS, a estimativa subjetiva do anestesiologista foi graduada como ruim (< 4 MET), moderada (4 a 10 MET) ou boa (> 10 MET), e o desfecho de referência para aferir a acurácia dessa estimativa foi a incapacidade de atingir 4 MET no CPET.",
+    "indications": "Avaliação de risco cardiovascular antes de cirurgia não cardíaca eletiva de grande porte em adultos com fator de risco cardíaco ou doença coronariana. O que o estudo METS mostra é que o método importa mais do que a decisão de avaliar: dos três, apenas o DASI se associou ao desfecho.",
+    "interpretation": "Achado central do METS, coorte prospectiva internacional com 1401 pacientes em 25 hospitais: a estimativa subjetiva do médico teve sensibilidade de apenas 19,2% (IC95% 14,2-25) e especificidade de 94,7% (93,2-95,9) para identificar a incapacidade de atingir 4 MET no CPET — ou seja, deixou escapar a maioria dos pacientes com capacidade funcional realmente reduzida. Morreram ou tiveram infarto do miocárdio em 30 dias 28 dos 1401 pacientes (2%). Entre os marcadores avaliados, somente o escore do DASI associou-se ao desfecho primário (razão de chances ajustada 0,96; IC95% 0,83-0,99; p = 0,03). A conclusão dos autores é direta: a capacidade funcional estimada subjetivamente não deve ser usada na avaliação de risco pré-operatória, e o DASI é a alternativa que eles apontam.",
+    "limitations": "O ponto que exige honestidade na leitura: no METS, o consumo de oxigênio de pico medido pelo CPET não se associou ao desfecho primário de morte ou infarto em 30 dias — apenas o DASI se associou. Portanto este registro não sustenta o CPET como preditor desse desfecho nessa população, e sim documenta a falha da estimativa subjetiva e o desempenho do DASI. O número de eventos foi pequeno (28 em 1401), o que limita o poder para detectar associação de qualquer marcador. Trata-se de estudo de coorte prospectivo, não de ensaio randomizado: mede capacidade preditiva, não efeito de conduta — nenhum dos três métodos foi testado como estratégia que muda desfecho.",
+    "source_refs": [
+      "Wijeysundera DN, Pearse RM, Shulman MA, et al. Assessment of functional capacity before major non-cardiac surgery: an international, prospective cohort study (METS). Lancet. 2018;391(10140):2631-2640. DOI: 10.1016/S0140-6736(18)31131-0. PMID: 30070222 — desenho, sensibilidade/especificidade da estimativa subjetiva, número de eventos e razão de chances do DASI conferidos no resumo estruturado oficial em 31/07/2026."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "capacidade funcional",
+      "dasi",
+      "cpet",
+      "met",
+      "avaliação pré-operatória"
+    ]
   }
 ]
