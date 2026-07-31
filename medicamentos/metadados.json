@@ -3113,7 +3113,7 @@
   },
   {
     "slug": "propafenona-cloridrato",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Propafenona (cloridrato)",
     "drug_class": "Antiarrítmico classe IC (Vaughan-Williams)",
     "mechanism": "Bloqueador potente dos canais rápidos de sódio, com efeito estabilizador de membrana no miócito; possui fraca atividade betabloqueadora adicional; retarda condução intracardíaca, prolongando o QRS",
@@ -3121,12 +3121,14 @@
       "Comprimidos de 150mg ou 300mg; ampola de 70mg/20mL (formulação EV)"
     ],
     "contraindications": [
-      "Cardiopatia estrutural significativa/disfunção de VE",
-      "DAC significativa",
-      "BAV 2º/3º grau sem marca-passo",
-      "Síndrome do nó sinusal",
-      "Distúrbios eletrolíticos não corrigidos",
-      "DPOC/broncoespasmo"
+      "Hipersensibilidade ao cloridrato de propafenona ou a qualquer componente da fórmula",
+      "Síndrome de Brugada conhecida",
+      "Infarto agudo do miocárdio nos últimos 3 meses",
+      "Doença cardíaca estrutural significativa — insuficiência cardíaca descompensada; choque cardiogênico (exceto se causado por arritmia); bradicardia sintomática acentuada; distúrbio do ritmo/condução (doença do nó sinusal, distúrbio de condução sinoatrial de alto grau, BAV 2º/3º grau, bloqueio de ramo ou distal sem marca-passo); hipotensão arterial acentuada",
+      "Distúrbio eletrolítico não compensado",
+      "Doença pulmonar obstrutiva grave",
+      "Miastenia grave",
+      "Uso concomitante de ritonavir"
     ],
     "dosing": {
       "vo faixa diaria": "**300 a 900 mg por dia.** Dose média de **600 mg divididos em 2 tomadas** (300 mg a cada 12 h); dose máxima recomendada de **900 mg divididos em 3 tomadas** (300 mg a cada 8 h). O limite máximo diário é de **3 comprimidos de 300 mg**.",
@@ -3141,14 +3143,16 @@
     },
     "notes": {
       "Restricao critica uso": "Não deve ser utilizada em pacientes com doença arterial coronariana, hipertrofia ventricular esquerda, disfunção ventricular, DPOC ou IC — restrita a coração estruturalmente normal",
-      "Limitacao eficacia": "Eficácia muito reduzida na reversão de flutter atrial e de FA persistente (>7 dias), podendo inclusive organizar a FA em flutter atrial com alta resposta ventricular"
+      "Limitacao eficacia": "Eficácia muito reduzida na reversão de flutter atrial e de FA persistente (>7 dias), podendo inclusive organizar a FA em flutter atrial com alta resposta ventricular",
+      "Asma/broncoespasmo — cautela, nao DPOC grave": "A bula distingue: **DPOC grave é contraindicação formal**; obstrução de vias aéreas em geral (ex.: asma) é cautela — \"usar com cautela em pacientes com obstrução das vias aéreas respiratórias, como por exemplo, asma\", não proibição. O registro anterior tratava \"DPOC/broncoespasmo\" como item único; corrigido para refletir a distinção da bula."
     },
     "references": [
       "Como eu uso: Propafenona! · Afya Cardiologia · 2021 · https://portal.afya.com.br/cardiologia/como-eu-uso-propafenona",
       "Abordagem da fibrilação atrial na sala de emergência · SOCERJ · 2025 · https://socerj.org.br/abordagem-fibrilacao-atrial-sala-emergencia-visao-pratica-racional/",
       "PROPAFENONA — Farmácia Dose Certa · Secretaria de Estado da Saúde de SP · https://www.saude.sp.gov.br/resources/ses/perfil/gestor/assistencia-farmaceutica/medicamentos-das-unidades-farmacia-dose-certa/",
       "Alboni P, Botto GL, Baldi N, et al. Outpatient treatment of recent-onset atrial fibrillation with the \"pill-in-the-pocket\" approach. N Engl J Med. 2004;351(23):2384-2391. DOI: 10.1056/NEJMoa041233. PMID: 15575054 — ensaio original da estratégia; resumo indexado lido em 29/07/2026",
-      "Alboni P, Botto GL, Baldi N. Outpatient treatment of recurrent atrial fibrillation with the \"pill-in-the-pocket\" approach: practical aspects. Ital Heart J Suppl. 2005;6(6):335-340. PMID: 16013424 — artigo de aspectos práticos do mesmo grupo, em italiano"
+      "Alboni P, Botto GL, Baldi N. Outpatient treatment of recurrent atrial fibrillation with the \"pill-in-the-pocket\" approach: practical aspects. Ital Heart J Suppl. 2005;6(6):335-340. PMID: 16013424 — artigo de aspectos práticos do mesmo grupo, em italiano",
+      "Bula profissional do RITMONORM (cloridrato de propafenona), Abbott Laboratórios do Brasil Ltda. — via consultaremedios.com.br, item 3. QUANDO NÃO DEVO USAR ESTE MEDICAMENTO conferido linha a linha"
     ],
     "pregnancy": "Não há estudos adequados e bem controlados em gestantes. **Usar na gravidez somente se o benefício potencial justificar o risco ao feto.** A bula registra que a propafenona **atravessa a barreira placentária em humanos**. Fonte: bula do profissional do RITMONORM (Abbott).",
     "lactation": "A excreção no leite materno **não foi estudada**, e dados limitados sugerem que a propafenona **pode ser excretada**. Usar com cuidado em lactantes. Fonte: bula do profissional do RITMONORM (Abbott)."
