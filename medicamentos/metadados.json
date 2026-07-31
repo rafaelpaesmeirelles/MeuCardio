@@ -3990,7 +3990,7 @@
   },
   {
     "slug": "vasopressina",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Vasopressina (hormônio antidiurético, arginina-vasopressina)",
     "drug_class": "Vasopressor não catecolaminérgico",
     "mechanism": "Atua em três subtipos de receptores: V1 no músculo liso vascular, mediando vasoconstrição; V2 nos ductos coletores renais, mediando efeito antidiurético; e V3 (V1b) na hipófise anterior, estimulando liberação de ACTH e cortisol. Potencializa a resposta vascular às catecolaminas e pode bloquear canais de potássio sensíveis a ATP, amplificando o efeito adrenérgico em estados de choque - **fonte**: Journal of Personalized Medicine (revisão sobre vasopressina em choque)",
@@ -4014,10 +4014,21 @@
       "Russell JA et al. Vasopressin versus Norepinephrine Infusion in Patients with Septic Shock (VASST). N Engl J Med. 2008;358(9):877-887.",
       "Gordon AC et al. Effect of Early Vasopressin vs Norepinephrine on Kidney Failure in Patients with Septic Shock: The VANISH Randomized Clinical Trial. JAMA. 2016;316(5):509-518.",
       "Bula profissional de vasopressina (Encrise, solução injetável 20 U/mL), Biolab — seções 1, 2 e 8. Versão brasileira.",
-      "Bernoche C, Timerman S, Polastri TF, et al. Atualização da Diretriz de Ressuscitação Cardiopulmonar e Cuidados Cardiovasculares de Emergência da Sociedade Brasileira de Cardiologia — 2019. Arq Bras Cardiol. 2019;113(3):449-663. PMID: 31621787"
+      "Bernoche C, Timerman S, Polastri TF, et al. Atualização da Diretriz de Ressuscitação Cardiopulmonar e Cuidados Cardiovasculares de Emergência da Sociedade Brasileira de Cardiologia — 2019. Arq Bras Cardiol. 2019;113(3):449-663. PMID: 31621787",
+      "Bula profissional do ENCRISE (vasopressina 20 U/mL), Biolab Sanus Farmacêutica Ltda. — biolabstudio.com.br, itens 4. CONTRA-INDICAÇÕES e 5. ADVERTÊNCIAS E PRECAUÇÕES"
     ],
-    "pregnancy": "**Sem dados — e com um ajuste de dose que é próprio da gestação.** Não há dado disponível em gestantes, e **não foram conduzidos estudos de reprodução animal**. O ponto prático que não aparece em outros verbetes: pelo **aumento da depuração da vasopressina no segundo e terceiro trimestres**, a dose **pode precisar ser aumentada**. Fonte: rótulo aprovado pelo FDA (DailyMed) para a vasopressina injetável. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer.",
-    "lactation": "**Sem dado algum.** Não há informação sobre a presença da vasopressina no leite humano ou animal, nem sobre efeito no lactente ou na produção de leite. O rótulo não emite recomendação. Fonte: rótulo aprovado pelo FDA (DailyMed) para a vasopressina injetável. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer."
+    "pregnancy": "**Categoria de risco C.** Corrige o registro anterior, que dizia não haver bula do detentor do registro no Brasil — localizada agora (mesma bula ENCRISE já usada para a posologia). Não foram realizados estudos de reprodução animal; não se sabe se causa dano fetal ou afeta a capacidade reprodutiva. Só administrar se absolutamente necessário. Dose antidiurética usual normalmente não produz contração uterina tônica capaz de ameaçar a gestação. Fonte: bula profissional brasileira do ENCRISE (Biolab), item 5. ADVERTÊNCIAS E PRECAUÇÕES — Gravidez.",
+    "lactation": "**Usar com cautela durante a amamentação** — a bula não traz mais detalhe que isso (sem dado de excreção no leite ou de efeito no lactente). Fonte: bula profissional brasileira do ENCRISE (Biolab), item 5. ADVERTÊNCIAS E PRECAUÇÕES — Lactação; substitui a fonte norte-americana usada antes.",
+    "contraindications": [
+      "Hipersensibilidade aos componentes da fórmula",
+      "Nefrite crônica com retenção de nitrogênio — até que níveis aceitáveis de nitrogênio sanguíneo sejam atingidos"
+    ],
+    "notes": {
+      "Doenca vascular coronariana — cautela extrema, nao contraindicacao formal": "A bula não contraindica formalmente, mas pede extrema cautela em doença vascular, especialmente coronariana: mesmo pequena dose pode precipitar angina, e dose alta traz possibilidade de infarto do miocárdio.",
+      "Intoxicacao hidrica": "Risco reconhecido da vasopressina — reconhecer sinais precoces (tontura, desatenção, cefaleia) para prevenir coma e convulsão. Usar com cautela em epilepsia, enxaqueca, asma e insuficiência cardíaca, ou outra condição em que a rápida expansão de água extracelular seja arriscada. ECG e eletrólitos periódicos recomendados durante a terapia.",
+      "Via intravenosa — risco de necrose por extravasamento": "Preferir veia central pelo risco de necrose se houver extravasamento.",
+      "Populacoes especiais": "Pediatria e geriatria: cautela pela possibilidade de hiper-hidratação e hiponatremia."
+    }
   },
   {
     "slug": "verapamil-cloridrato",
