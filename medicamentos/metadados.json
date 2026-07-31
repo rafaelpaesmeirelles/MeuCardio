@@ -398,7 +398,7 @@
   },
   {
     "slug": "atorvastatina-calcica",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Atorvastatina (cálcica)",
     "brand_names": [
       "Lipitor",
@@ -415,9 +415,11 @@
       "Redução de colesterol total e LDL-colesterol, síndrome coronariana aguda (dose alta precoce), prevenção primária e secundária de eventos cardiovasculares"
     ],
     "contraindications": [
-      "Hepatopatia ativa",
-      "Gravidez e lactação",
-      "Hipersensibilidade ao fármaco"
+      "Hipersensibilidade a qualquer componente da fórmula",
+      "Doença hepática ativa, ou elevações persistentes e inesperadas das transaminases séricas excedendo em 3 vezes o limite superior da normalidade (ULN)",
+      "Gravidez, amamentação, ou mulher em idade fértil que não esteja utilizando método contraceptivo eficaz",
+      "Menores de 10 anos de idade",
+      "**fonte**: bula do LÍPITOR (atorvastatina cálcica, Pfizer/Viatris), item 4 — acrescenta o corte quantitativo de transaminases (3x ULN) e o corte etário (menores de 10 anos), ausentes da lista anterior"
     ],
     "interactions": [
       "Metabolizada pelo CYP3A4, com interações relevantes com inibidores potentes desta via (ex.: alguns antifúngicos azólicos, inibidores de protease); risco aumentado de miopatia com fibratos, especialmente gemfibrozila"
@@ -431,7 +433,7 @@
     "dosing": {
       "inicial usual": "10 mg 1x/dia",
       "sca alto risco": "Até 80 mg/dia, individualizada conforme meta de LDL-C",
-      "pediatria 10 17 anos": "Hipercolesterolemia familiar heterozigótica, dos 10 aos 17 anos (meninas pós-menarca e meninos): **dose inicial de 10 mg/dia e dose máxima de 20 mg/dia**. A bula brasileira explicita o motivo do teto, que é o que muda a leitura: **doses acima de 20 mg não foram estudadas nessa população** — o limite é ausência de dado, não toxicidade demonstrada.\n\nCoerente com o registro das apresentações: **10 mg e 20 mg são de uso adulto e pediátrico acima de 10 anos; 40 mg e 80 mg são de uso adulto**.",
+      "pediatria 10 17 anos": "Hipercolesterolemia familiar heterozigótica, dos 10 aos 17 anos (meninas pós-menarca e meninos): **dose inicial de 10 mg/dia e dose máxima de 20 mg/dia**. A bula brasileira explicita o motivo do teto, que é o que muda a leitura: **doses acima de 20 mg não foram estudadas nessa população** — o limite é ausência de dado, não toxicidade demonstrada.\n\n**Isto vale para a forma HETEROZIGÓTICA.** Na forma HOMOZIGÓTICA (mais grave), o teto pediátrico não é 20 mg — é o mesmo teto do adulto, **10 a 80 mg/dia**, com início também em 10-20 mg/dia; tratar as duas formas com o mesmo teto de 20 mg sub-trata a homozigótica. Fonte desta distinção: rótulo do LIPITOR aprovado pelo FDA, seções 2.3 (HeFH) e 2.4 (HoFH) — a bula brasileira do CITALOR usada para o restante deste campo não distingue as duas formas.\n\nCoerente com o registro das apresentações: **10 mg e 20 mg são de uso adulto e pediátrico acima de 10 anos; 40 mg e 80 mg são de uso adulto**.",
       "via administracao": "Via oral, pode ser tomada em qualquer horário do dia, independente de refeições",
       "fonte": "Bula profissional brasileira, conferida na íntegra. A dose pediátrica máxima de 20 mg/dia, que estava marcada para conferência, **está confirmada**."
     },
@@ -442,7 +444,7 @@
       "Atorvastatin calcium tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 86841382-4229-4e03-958e-3ac22639efd4",
       "Bula profissional de CITALOR (atorvastatina cálcica), Viatris Farmacêutica do Brasil Ltda. — seções de identificação, indicações e posologia. Documento obtido no site do detentor do registro."
     ],
-    "pregnancy": "**Contraindicada na gravidez.** A bula vai além: só deve ser administrada a adolescentes e **mulheres em idade fértil quando a gravidez for altamente improvável** e a paciente estiver usando **contracepção eficaz**. Fonte: bula do LÍPITOR (atorvastatina). É a restrição mais ampla do acervo — alcança quem não está grávida.",
+    "pregnancy": "**Contraindicada na gravidez — categoria de risco X.** A bula vai além: só deve ser administrada a adolescentes e **mulheres em idade fértil quando a gravidez for altamente improvável** e a paciente estiver usando **contracepção eficaz**. Fonte: bula do LÍPITOR (atorvastatina). É a restrição mais ampla do acervo — alcança quem não está grávida.",
     "lactation": "**Contraindicada na amamentação.** Não se sabe se é excretada no leite materno, e pelo risco potencial ao lactente a bula determina que mulheres em uso **não devem amamentar**. Fonte: bula do LÍPITOR (atorvastatina)."
   },
   {
