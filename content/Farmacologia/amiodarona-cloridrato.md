@@ -3,7 +3,7 @@ title: "Amiodarona (cloridrato)"
 slug: amiodarona-cloridrato
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Como eu uso Amiodarona · Afya Cardiologia · 2021 · https://portal.afya.com.br/cardiologia/como-eu-uso-amiodarona", "Cloridrato de Amiodarona — Bula Profissional · Fresenius Kabi · https://www.fresenius-kabi.com/content/dam/fresenius-kabi/br/documents/bulas/medicamentos/Cloridrato%20de%20Amiodarona"]
 legacy_source: "medicamentos/banco-de-medicamentos-amiodarona.md"
 ---

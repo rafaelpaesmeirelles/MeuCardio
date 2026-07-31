@@ -3,7 +3,7 @@ title: "Adenosina"
 slug: adenosina
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Adenosine injection (agente de estresse farmacológico) — rótulo aprovado pelo FDA, DailyMed SPL setid b6851256-6cef-4f23-8129-19bb64380cd5, Meitheal Pharmaceuticals", "Adenosine injection (taquicardia supraventricular paroxística) — rótulo aprovado pelo FDA, DailyMed SPL setid d28ff4f3-baf4-4640-ae00-f0eb065417be, Henry Schein"]
 legacy_source: "medicamentos/banco-de-medicamentos-adenosina.md"
 ---
