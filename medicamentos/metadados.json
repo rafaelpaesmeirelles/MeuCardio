@@ -3573,27 +3573,24 @@
   },
   {
     "slug": "sotalol",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Sotalol (cloridrato)",
     "drug_class": "Antiarrítmico classe II e III (betabloqueador não seletivo com propriedades de prolongamento do potencial de ação)",
     "mechanism": "Prolonga uniformemente a duração do potencial de ação em todos os tecidos cardíacos (efeito classe III), retardando a repolarização sem afetar a despolarização; efeito betabloqueador não seletivo (classe II) reduz FC e contratilidade; desprovido de atividade simpatomimética intrínseca e de ação estabilizante de membrana",
-    "renal_adjustment": "A bula brasileira ajusta **por creatinina sérica**, não por clearance calculado — o sotalol é excretado predominantemente pela urina e a meia-vida se prolonga muito na insuficiência renal:\n\n- creatinina **< 1,2 mg/dL** (<120 µmol/L): dose normal\n- **1,2 a 2,3 mg/dL** (120-200 µmol/L): **3/4** da dose\n- **2,3 a 3,4 mg/dL** (200-300 µmol/L): **1/2** da dose\n- **3,4 a 5,7 mg/dL** (300-500 µmol/L): **1/4** da dose",
+    "renal_adjustment": "A bula brasileira traz **duas tabelas**, por creatinina sérica e por clearance de creatinina — se as doses recomendadas por cada uma divergirem, prevalece a do clearance de creatinina:\n\nPor creatinina sérica:\n- < 1,2 mg/dL (<120 µmol/L): dose normal\n- 1,2 a 2,3 mg/dL (120-200 µmol/L): 3/4 da dose\n- 2,3 a 3,4 mg/dL (200-300 µmol/L): 1/2 da dose\n- 3,4 a 5,7 mg/dL (300-500 µmol/L): 1/4 da dose\n\nPor clearance de creatinina (mL/min) — **acrescentada em 31/07/2026, faltava aqui**:\n- >60: dose normal\n- 30-60: 1/2 da dose\n- 10-30: 1/4 da dose\n- <10: evitar ou usar com cautela (função renal gravemente diminuída)\n\nFonte: bula profissional brasileira de SOTACOR (cloridrato de sotalol, Bristol-Myers Squibb).",
     "interactions": [
       "- **Outros fármacos que prolongam o QT**: evitar associação — risco somado de torsades de pointes - **Outros cronotrópicos negativos** (verapamil, diltiazem, digoxina): risco aditivo de bradicardia e bloqueio AV"
     ],
     "contraindications": [
-      "Síndrome do QT longo congênita ou adquirida — risco de torsades de pointes por efeito próprio de prolongamento do QT",
-      "Síndrome do QT longo",
-      "Bradicardia sinusal grave",
-      "Bloqueio AV 2º/3º grau",
-      "Asma/broncoespasmo grave",
+      "Asma brônquica ou doença obstrutiva crônica das vias aéreas",
+      "Hipersensibilidade prévia ao sotalol",
       "Choque cardiogênico",
-      "Hipocalemia/hipomagnesemia não corrigidas",
-      "QT longo congênito",
-      "Asma/broncoespasmo grave (efeito beta-bloqueador não seletivo)",
-      "BAV 2º/3º grau sem marca-passo",
-      "Insuficiência renal grave sem ajuste",
-      "Hipocalemia/hipomagnesemia não corrigidas (risco de torsades)"
+      "Anestesia que produza depressão do miocárdio",
+      "Bradicardia sinusal sintomática",
+      "Síndrome da doença do nó sinusal, ou bloqueio atrioventricular de 2º ou 3º grau, salvo com marca-passo funcionante",
+      "Insuficiência cardíaca congestiva não controlada",
+      "Insuficiência renal — ver `renal_adjustment` para as faixas com ajuste de dose; a bula reserva 'evitar ou usar com cautela' apenas para ClCr <10mL/min, não é proibição em toda insuficiência renal",
+      "Síndrome do QT longo congênita ou adquirida"
     ],
     "indications": [
       "Arritmias ventriculares e supraventriculares graves, manutenção de ritmo sinusal em FA/flutter atrial",
@@ -3611,13 +3608,15 @@
     "notes": {
       "Inicio obrigatorio em ambiente hospitalar": "Iniciar (ou reiniciar) sempre internado, no mínimo 3 dias, em local com monitorização contínua de ECG e capacidade de ressuscitação cardíaca — até atingir concentração de equilíbrio. Não é droga pra início ambulatorial. Corrigir hipocalemia e hipomagnesemia **antes** de iniciar, já que ambas aumentam o risco de torsades de pointes.",
       "Limiares de QT que exigem acao": "Não iniciar se QT basal > 450 ms. Durante o tratamento, se o QT prolongar para ≥ 500 ms, reduzir a dose, aumentar o intervalo entre doses, ou suspender o fármaco.",
-      "Efeitos hemodinamicos documentados": "Na dose de 160mg, reduz FC em 21-24% e PA sistólica/diastólica em 8%, mas aumenta fração de ejeção em 6-10% e volume sistólico em 10-20%"
+      "Efeitos hemodinamicos documentados": "Na dose de 160mg, reduz FC em 21-24% e PA sistólica/diastólica em 8%, mas aumenta fração de ejeção em 6-10% e volume sistólico em 10-20%",
+      "Hipocalemia/hipomagnesemia — precaucao, nao item formal do item 4": "**Corrigido em 31/07/2026**: removido da lista formal de contraindicações — a bula não lista hipocalemia/hipomagnesemia no item 4. É fator de risco discutido em Advertências (torsades de pointes) e por isso a orientação de corrigir antes de iniciar, já registrada em \"Inicio obrigatorio em ambiente hospitalar\", continua válida como conduta — só não é item formal do rótulo."
     },
     "references": [
       "Sotalol Hydrochloride Injection — bula FDA/accessdata.fda.gov, 2025",
       "Cloridrato de Sotalol — Bula Profissional · Merck/Saúde Direta · https://www.saudedireta.com.br/catinc/drugs/bulas/cloridratodesotalolmerck.pdf",
       "Sotalol: evidencia y práctica clínica · CardioTeca · 2026 · https://www.cardioteca.com/tratamientos/8221-sotalol-practica-clinica-guia-especialista-arritmias.html",
-      "Bula para o profissional de saúde de SOTACOR (cloridrato de sotalol), Bristol-Myers Squibb — posologia, pacientes com insuficiência renal e advertências."
+      "Bula para o profissional de saúde de SOTACOR (cloridrato de sotalol), Bristol-Myers Squibb — posologia, pacientes com insuficiência renal e advertências.",
+      "Bula profissional do SOTACOR (cloridrato de sotalol), Bristol-Myers Squibb Farmacêutica S.A. — via consultaremedios.com.br, item 4. CONTRAINDICAÇÕES e posologia em insuficiência renal conferidos linha a linha"
     ],
     "adverse_effects": [
       "Fadiga, bradicardia, dispneia, torsades de pointes (dose-dependente), broncoespasmo"
