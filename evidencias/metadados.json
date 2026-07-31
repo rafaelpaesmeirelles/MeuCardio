@@ -3081,5 +3081,219 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "eco-pre-operatorio-em-insuficiencia-cardiaca-ou-sintomas-sugestivos",
+    "statement": "O ecocardiograma pré-operatório é recomendado em paciente com insuficiência cardíaca ou sintomas sugestivos que será submetido a cirurgia de risco intermediário ou alto, quando não houver avaliação no último ano ou quando tiver havido piora clínica. O gatilho é duplo — o quadro clínico e o tempo desde o último exame —, e não a idade ou o porte cirúrgico isoladamente.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Avaliação Cardiovascular Perioperatória da SBC – 2024",
+    "reference": "Gualandro DM, Fornari LS, Caramelli B, et al. Diretriz de Avaliação Cardiovascular Perioperatória da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240590. DOI: 10.36660/abc.20240590. PMID: 39442131 — Tabela 'Recomendações para realização do ecocardiograma pré-operatório', conferida linha a linha no texto integral em acesso aberto (PMC12094288) em 31/07/2026.",
+    "theme": "Perioperatório",
+    "tags": [
+      "perioperatório",
+      "ecocardiograma",
+      "insuficiência cardíaca",
+      "avaliação pré-operatória"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "eco-pre-operatorio-de-rotina-nao-recomendado-em-assintomatico-de-risco-baixo-ou-intermediario",
+    "statement": "Não é recomendado solicitar ecocardiograma de rotina em indivíduo assintomático, sem suspeita clínica de insuficiência cardíaca ou de doença valvar moderada a grave, que será submetido a cirurgia de risco intermediário ou baixo. É recomendação Classe III — o exame nesse cenário não agrega e atrasa o procedimento.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Avaliação Cardiovascular Perioperatória da SBC – 2024",
+    "reference": "Gualandro DM, Fornari LS, Caramelli B, et al. Diretriz de Avaliação Cardiovascular Perioperatória da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240590. DOI: 10.36660/abc.20240590. PMID: 39442131 — Tabela 'Recomendações para realização do ecocardiograma pré-operatório', conferida linha a linha no texto integral em acesso aberto (PMC12094288) em 31/07/2026.",
+    "theme": "Perioperatório",
+    "tags": [
+      "perioperatório",
+      "ecocardiograma",
+      "exame desnecessário",
+      "classe iii",
+      "avaliação pré-operatória"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "tratar-a-valvopatia-com-indicacao-de-intervencao-antes-da-cirurgia-nao-cardiaca",
+    "statement": "Paciente com valvopatia que já tem indicação de tratamento intervencionista valvar deve, prioritariamente, ser submetido ao tratamento cardíaco e só depois à cirurgia não cardíaca proposta. A ordem importa: a indicação valvar preexistente não deve ser adiada pela cirurgia não cardíaca eletiva.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Avaliação Cardiovascular Perioperatória da SBC – 2024",
+    "reference": "Gualandro DM, Fornari LS, Caramelli B, et al. Diretriz de Avaliação Cardiovascular Perioperatória da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240590. DOI: 10.36660/abc.20240590. PMID: 39442131 — Tabela 'Recomendações para pacientes com doenças valvares', conferida linha a linha no texto integral em acesso aberto (PMC12094288) em 31/07/2026.",
+    "theme": "Perioperatório",
+    "tags": [
+      "perioperatório",
+      "valvopatia",
+      "ordem de procedimentos",
+      "intervenção valvar"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "estenose-aortica-importante-assintomatica-intervir-antes-de-cirurgia-nao-cardiaca-eletiva",
+    "statement": "Paciente com estenose aórtica importante ASSINTOMÁTICA, em programação de cirurgia não cardíaca eletiva de risco intermediário ou alto, deve ser submetido ao tratamento intervencionista da valvopatia antes da operação não cardíaca. Note que a ausência de sintomas não dispensa a intervenção neste contexto — é o ponto que distingue esta recomendação da conduta na estenose aórtica assintomática fora do cenário cirúrgico.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Avaliação Cardiovascular Perioperatória da SBC – 2024",
+    "reference": "Gualandro DM, Fornari LS, Caramelli B, et al. Diretriz de Avaliação Cardiovascular Perioperatória da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240590. DOI: 10.36660/abc.20240590. PMID: 39442131 — Tabela 'Recomendações para pacientes com doenças valvares', conferida linha a linha no texto integral em acesso aberto (PMC12094288) em 31/07/2026.",
+    "theme": "Perioperatório",
+    "tags": [
+      "perioperatório",
+      "estenose aórtica",
+      "assintomático",
+      "intervenção valvar"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "estenose-mitral-importante-assintomatica-com-psap-elevada-tratar-antes-da-cirurgia",
+    "statement": "Paciente com estenose mitral importante, assintomática e com complicadores — pressão sistólica na artéria pulmonar (PSAP) ≥ 50 mmHg em repouso ou ≥ 60 mmHg ao esforço — deve ser submetido ao tratamento da valvopatia antes da cirurgia não cardíaca. São os dois cortes de PSAP que definem o complicador, e eles não são intercambiáveis: um é medido em repouso, o outro ao esforço.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Avaliação Cardiovascular Perioperatória da SBC – 2024",
+    "reference": "Gualandro DM, Fornari LS, Caramelli B, et al. Diretriz de Avaliação Cardiovascular Perioperatória da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240590. DOI: 10.36660/abc.20240590. PMID: 39442131 — Tabela 'Recomendações para pacientes com doenças valvares', conferida linha a linha no texto integral em acesso aberto (PMC12094288) em 31/07/2026.",
+    "theme": "Perioperatório",
+    "tags": [
+      "perioperatório",
+      "estenose mitral",
+      "psap",
+      "hipertensão pulmonar",
+      "intervenção valvar"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "valvopatia-regurgitante-importante-assintomatica-pode-seguir-para-cirurgia-nao-cardiaca",
+    "statement": "Paciente com valvopatia regurgitante importante e assintomática pode ser submetido à cirurgia não cardíaca eletiva. É o contraponto às lesões estenóticas: na regurgitação importante sem sintomas, a diretriz brasileira não exige tratar a valva antes da operação.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Avaliação Cardiovascular Perioperatória da SBC – 2024",
+    "reference": "Gualandro DM, Fornari LS, Caramelli B, et al. Diretriz de Avaliação Cardiovascular Perioperatória da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240590. DOI: 10.36660/abc.20240590. PMID: 39442131 — Tabela 'Recomendações para pacientes com doenças valvares', conferida linha a linha no texto integral em acesso aberto (PMC12094288) em 31/07/2026.",
+    "theme": "Perioperatório",
+    "tags": [
+      "perioperatório",
+      "regurgitação valvar",
+      "assintomático",
+      "cirurgia não cardíaca"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "troponina-nao-recomendada-no-perioperatorio-de-baixo-risco",
+    "statement": "Não é recomendada a dosagem de troponina em paciente de baixo risco ou submetido a operação de baixo risco. Recomendação Classe III, Nível B — a triagem indiscriminada gera elevação sem consequência terapêutica definida e investigação em cascata.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Avaliação Cardiovascular Perioperatória da SBC – 2024",
+    "reference": "Gualandro DM, Fornari LS, Caramelli B, et al. Diretriz de Avaliação Cardiovascular Perioperatória da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240590. DOI: 10.36660/abc.20240590. PMID: 39442131 — Tabela 'Recomendações para a monitorização no perioperatório', conferida linha a linha no texto integral em acesso aberto (PMC12094288) em 31/07/2026.",
+    "theme": "Perioperatório",
+    "tags": [
+      "perioperatório",
+      "troponina",
+      "baixo risco",
+      "classe iii",
+      "monitorização"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "pos-operatorio-em-uti-por-48-horas-no-paciente-de-alto-risco",
+    "statement": "É recomendado pós-operatório em unidade de terapia intensiva por 48 horas para o paciente de alto risco de complicações, segundo os algoritmos de estratificação, submetido a cirurgia não cardíaca de risco intermediário ou alto. Para o paciente de risco intermediário nas mesmas condições, a mesma conduta é Classe IIa, Nível C — a diferença de força entre os dois cenários é o que orienta a disputa por leito.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Avaliação Cardiovascular Perioperatória da SBC – 2024",
+    "reference": "Gualandro DM, Fornari LS, Caramelli B, et al. Diretriz de Avaliação Cardiovascular Perioperatória da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240590. DOI: 10.36660/abc.20240590. PMID: 39442131 — Tabela 'Recomendações para a monitorização no perioperatório', conferida linha a linha no texto integral em acesso aberto (PMC12094288) em 31/07/2026.",
+    "theme": "Perioperatório",
+    "tags": [
+      "perioperatório",
+      "uti",
+      "pós-operatório",
+      "estratificação de risco"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "bnp-nt-probnp-pre-operatorio-por-faixa-etaria-e-risco-sbc-2024",
+    "statement": "A diretriz brasileira recomenda a dosagem pré-operatória de BNP/NT-proBNP, para predizer risco de eventos cardiovasculares perioperatórios, em paciente com mais de 65 anos, ou entre 45 e 64 anos com doença cardiovascular estabelecida ou fator de risco cardiovascular, submetido a operação não cardíaca. Atenção ao comparar fontes: aqui a recomendação é Classe I, Nível B, enquanto a diretriz europeia de 2022 trata a mesma dosagem como Classe IIa — as duas estão cadastradas nesta base e a divergência é real, não erro de transcrição.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Avaliação Cardiovascular Perioperatória da SBC – 2024",
+    "reference": "Gualandro DM, Fornari LS, Caramelli B, et al. Diretriz de Avaliação Cardiovascular Perioperatória da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240590. DOI: 10.36660/abc.20240590. PMID: 39442131 — Tabela 'Recomendações da dosagem pré-operatória de BNP/NT-pró-BNP para predizer risco de eventos cardiovasculares', conferida linha a linha no texto integral em acesso aberto (PMC12094288) em 31/07/2026.",
+    "theme": "Perioperatório",
+    "tags": [
+      "perioperatório",
+      "bnp",
+      "nt-probnp",
+      "biomarcador",
+      "estratificação de risco"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "avaliacao-clinica-ecg-e-hemoglobina-na-lesao-miocardica-perioperatoria",
+    "statement": "Diante de lesão miocárdica perioperatória (PMI), é recomendado realizar avaliação clínica, eletrocardiograma e dosagem de hemoglobina. A diretriz define o diagnóstico de PMI pela presença de um delta absoluto maior ou igual ao percentil 99 do valor superior de referência do kit de troponina utilizado, entre o valor pré-operatório e o do primeiro ou segundo dia de pós-operatório; na ausência do valor basal, o delta pode ser considerado entre dois valores pós-operatórios.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Avaliação Cardiovascular Perioperatória da SBC – 2024",
+    "reference": "Gualandro DM, Fornari LS, Caramelli B, et al. Diretriz de Avaliação Cardiovascular Perioperatória da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240590. DOI: 10.36660/abc.20240590. PMID: 39442131 — Tabela 'Recomendações para o diagnóstico e tratamento do PMI', conferida linha a linha no texto integral em acesso aberto (PMC12094288) em 31/07/2026.",
+    "theme": "Perioperatório",
+    "tags": [
+      "perioperatório",
+      "lesão miocárdica perioperatória",
+      "pmi",
+      "troponina",
+      "hemoglobina"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "fragilidade-mensurada-por-instrumento-especifico-no-pre-operatorio",
+    "statement": "A fragilidade deve ser mensurada objetivamente, por instrumento específico, e não estimada por impressão clínica. Complementa a recomendação de avaliar rotineiramente a fragilidade em idosos submetidos a cirurgia de risco intermediário ou alto (Classe IIa, Nível B), já cadastrada nesta base — esta trata de COMO medir, aquela de EM QUEM medir.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Avaliação Cardiovascular Perioperatória da SBC – 2024",
+    "reference": "Gualandro DM, Fornari LS, Caramelli B, et al. Diretriz de Avaliação Cardiovascular Perioperatória da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240590. DOI: 10.36660/abc.20240590. PMID: 39442131 — Tabela 'Recomendações para avaliação de fragilidade no perioperatório de cirurgia não cardíaca', conferida linha a linha no texto integral em acesso aberto (PMC12094288) em 31/07/2026.",
+    "theme": "Perioperatório",
+    "tags": [
+      "perioperatório",
+      "fragilidade",
+      "idoso",
+      "instrumento de avaliação"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
