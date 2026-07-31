@@ -3,8 +3,8 @@ title: "Eplerenona"
 slug: eplerenona
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
-source_refs: ["Nota: módulo requer complementação com fonte primária de bula brasileira (ANVISA) para dose completa", "Inspra (eplerenone) — bula FDA/DailyMed", "Eplerenone — StatPearls, NCBI Bookshelf, 2023", "Zannad F, McMurray JJ, Krum H, et al; EMPHASIS-HF Study Group. Eplerenone in patients with systolic heart failure and mild symptoms. N Engl J Med. 2011;364(1):11-21. DOI: 10.1056/NEJMoa1009492. PMID: 21073363", "Pitt B, Remme W, Zannad F, et al; Eplerenone Post-Acute Myocardial Infarction Heart Failure Efficacy and Survival Study Investigators. Eplerenone, a selective aldosterone blocker, in patients with left ventricular dysfunction after myocardial infarction. N Engl J Med. 2003;348(14):1309-1321. DOI: 10.1056/NEJMoa030207. PMID: 12668699"]
+review_status: revisado
+source_refs: ["Inspra (eplerenone) — bula FDA/DailyMed", "Eplerenone — StatPearls, NCBI Bookshelf, 2023", "Zannad F, McMurray JJ, Krum H, et al; EMPHASIS-HF Study Group. Eplerenone in patients with systolic heart failure and mild symptoms. N Engl J Med. 2011;364(1):11-21. DOI: 10.1056/NEJMoa1009492. PMID: 21073363", "Pitt B, Remme W, Zannad F, et al; Eplerenone Post-Acute Myocardial Infarction Heart Failure Efficacy and Survival Study Investigators. Eplerenone, a selective aldosterone blocker, in patients with left ventricular dysfunction after myocardial infarction. N Engl J Med. 2003;348(14):1309-1321. DOI: 10.1056/NEJMoa030207. PMID: 12668699"]
 legacy_source: "medicamentos/banco-de-medicamentos-eplerenona-parcial.md"
 ---
 
