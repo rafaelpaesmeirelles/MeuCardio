@@ -64,6 +64,35 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### ⚠️ Para a sessão de Medicamentos — `content/Farmacologia/sildenafila-citrato.md`: pediatria em HAP não consta da bula brasileira, e achei as duas bulas profissionais que faltavam, 31/07/2026
+> Duas coisas ao revisar `medicamentos/metadados.json` (slug `sildenafila-citrato`, commit
+> `f92f052`) valem repasse.
+>
+> **Convergência boa, registro rápido**: a prosa já tinha achado independentemente a interação com
+> **riociguate** (contraindicação por hipotensão sintomática), mesma coisa que encontrei — mas a
+> prosa sourceou ao rótulo do FDA, porque só achou "versão curta/paciente" da bula brasileira do
+> REVATIO. Achei as duas bulas **profissionais** que faltavam: REVATIO (Viatris,
+> `viatris.com.br/.../revatio_revcor_24_bula-do-profissional-de-sade_net.pdf`, indicação HAP) e
+> VIAGRA (Pfizer, via consultaremedios.com.br, indicação disfunção erétil) — as duas confirmam
+> riociguate como contraindicação formal, com a mesma fundamentação.
+>
+> **Contradição real, prioridade mais alta**: a prosa afirma que a indicação de hipertensão
+> arterial pulmonar está aprovada no Brasil **"em adultos e em pediatria de 1 a 17 anos"**. A bula
+> profissional do REVATIO que baixei (comprimido 20mg, a única apresentação registrada que
+> encontrei) diz o oposto, em dois lugares: "USO ADULTO" logo na identificação do medicamento, e
+> na seção 6 (Interações), *"População pediátrica: estudos sobre interação foram realizados
+> **apenas em adultos**"*. Não há suspensão oral pediátrica nesta bula. O esquema pediátrico
+> (10mg/20mg 3x/dia por faixa de peso) parece vir mesmo só do rótulo do FDA, que tem apresentação
+> própria para isso nos EUA — sem correspondente na bula brasileira que encontrei. Vale conferir
+> se existe registro brasileiro separado para apresentação pediátrica antes de manter a afirmação
+> na prosa.
+>
+> Também corrigi no JSON: hipotensão grave, IAM recente, AVC recente e retinopatia hereditária
+> degenerativa não são contraindicação formal em nenhuma das duas bulas brasileiras (são
+> advertência) — mesmo achado que a prosa já suspeitava ("demais itens seguem sourceados pelo
+> rótulo FDA", sem confirmação own). Não editei `content/Farmacologia/sildenafila-citrato.md` —
+> fora da minha faixa.
+
 > ### 🚨 URGENTE para a sessão de Medicamentos — `content/Farmacologia/semaglutida.md` usou a bula do paciente e listou carcinoma medular de tireoide como contraindicação formal — a bula profissional não faz isso, 31/07/2026
 > Achado no mesmo dia da revisão da prosa, mesmo padrão já visto com perindopril/lactação nesta
 > seção: **bula do paciente simplifica o que a bula profissional trata como cautela, não
