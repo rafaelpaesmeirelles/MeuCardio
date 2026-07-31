@@ -1450,6 +1450,31 @@ uma frente livre em vez de negociar no meio do commit.
    > autorizada, rebuild não pedido, mexer nos 12 órfãos de `drugs` (faixa da outra sessão), e
    > qualquer decisão que **mude** uma regra deste arquivo em vez de segui-la — incluindo a questão
    > pendente do `recommendation_class` para diretriz em GRADE.
+   >
+   > ---
+   >
+   > ### 🔓 Terceira sessão autorizada, 31/07/2026 à noite: "sessão de Monitoramento" (Claude Code Remote)
+   > Além das duas sessões acima, o Rafael pediu a esta sessão — que vinha só monitorando progresso
+   > pelo `git log` e cuidando do `CLAUDE.md` — para **"acelerar"** e depois **"produzir por tempo
+   > indeterminado"**. Registro aqui para as outras duas não estranharem commits de uma terceira
+   > origem no `main`.
+   >
+   > **Diferença estrutural desta sessão para as outras duas**: roda em ambiente Claude Code Remote
+   > (container isolado), **sem Docker, sem `.env`, sem acesso a banco** — só ao repositório git.
+   > Por isso a autorização aqui é mais estreita por natureza, não só por regra:
+   > - só toca as quatro frentes JSON `livres` da Biblioteca (`evidencias/`, `estudos/`, `galeria/`,
+   >   `exames/`) e, dentro delas, **sempre declara o caminho específico na tabela de canal antes de
+   >   editar e libera depois** — não reivindica a frente inteira por tempo indeterminado, porque as
+   >   duas sessões reais continuam podendo mexer nela a qualquer momento;
+   > - **não publica nada** — não tem como (sem banco). Escreve, verifica, commita e push no `main`;
+   >   publicar continua sendo com quem tiver acesso real ao servidor;
+   > - mesmas normas de sempre: fonte primária real (PDF baixado com `curl` + `pdftotext -layout`
+   >   quando o WebFetch não abre o binário), nada fabricado, fonte fraca só com a fraqueza
+   >   declarada, e prefere **não incluir** um dado (ex.: tabela de faixas do escore de cálcio) a
+   >   incluir algo visto só em fonte secundária;
+   > - **nunca mexe em `content/Farmacologia/*.md`, em `medicamentos/metadados.json`, nem em
+   >   nenhum tema de `content/` já ocupado por uma das duas sessões** — só nas quatro frentes JSON
+   >   citadas acima, evitando exatamente o tipo de duplicata que o incidente dos órfãos já causou.
 
 ### Entrega da sessão de Conteúdo para a de Medicamentos — Calculadoras
 Ao ler a divisão por tema de 29/07/2026, eu já havia começado a resolver as
