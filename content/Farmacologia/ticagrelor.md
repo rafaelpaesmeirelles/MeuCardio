@@ -3,8 +3,8 @@ title: "Ticagrelor"
 slug: ticagrelor
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
-source_refs: ["Guia de medicamentos cardiovasculares: Ticagrelor · Afya Cardiologia · https://portal.afya.com.br/cardiologia/guia-de-medicamentos-cardiovasculares-ticagrelor", "Estudo PLATO — Principais Estudos Publicados em 2009 · Cardiol.br · http://cientifico.cardiol.br/cardiosource2/int_estudo02.asp", "Ticagrelor para prevenção de eventos trombóticos · CONITEC · http://antigo-conitec.saude.gov.br/images/Incorporados/Ticagrelor-final.pdf"]
+review_status: revisado
+source_refs: ["Bula do BRILINTA (ticagrelor, AstraZeneca) · https://www.saudedireta.com.br/catinc/drugs/bulas/brilinta.pdf · lida na íntegra em 31/07/2026, itens de Contraindicações e Populações especiais — corrige diálise e hepatopatia moderada de contraindicação formal para \"sem dados/não estudado\"", "Guia de medicamentos cardiovasculares: Ticagrelor · Afya Cardiologia · https://portal.afya.com.br/cardiologia/guia-de-medicamentos-cardiovasculares-ticagrelor", "Estudo PLATO — Principais Estudos Publicados em 2009 · Cardiol.br · http://cientifico.cardiol.br/cardiosource2/int_estudo02.asp", "Ticagrelor para prevenção de eventos trombóticos · CONITEC · http://antigo-conitec.saude.gov.br/images/Incorporados/Ticagrelor-final.pdf"]
 legacy_source: "medicamentos/banco-de-medicamentos-ticagrelor.md"
 ---
 
@@ -47,13 +47,19 @@ Angina instável de risco intermediário ou alto, IAM sem supra de ST e IAM com 
 Suspender 5 dias antes de procedimento cirúrgico eletivo
 
 ## Contraindicacoes
-- Alergia à medicação
-- Passado de AVC hemorrágico
-- Hemorragia ativa
-- Hepatopatia moderada a grave
-- Pacientes em diálise
-- Uso concomitante de inibidores potentes de CYP3A4 (cetoconazol, claritromicina, ritonavir, atazanavir)
-- Plaquetopenia importante
+**Corrigido em 31/07/2026** — a bula do BRILINTA confirma parte da lista e reclassifica dois itens que estavam superestimados:
+- Hipersensibilidade ao ticagrelor ou a qualquer componente da fórmula
+- Sangramento ativo ou recente causado por doença
+- Histórico de sangramento intracraniano
+- **Hepatopatia grave** (alterações graves no fígado) — a bula contraindica só a forma grave; a moderada não tem ajuste de dose definido, é "não estudada", não contraindicação formal (ver "Populações especiais")
+- Uso concomitante de inibidores potentes de CYP3A4 (cetoconazol, claritromicina, **nefazodona** — acrescentado, ausente de uma leitura anterior —, ritonavir, atazanavir): "não deve iniciar o tratamento" se já em uso desses fármacos
+
+**Reclassificados, não são contraindicação formal da bula**:
+- **Diálise**: a bula diz "não há informações disponíveis referente ao tratamento de pacientes em diálise" — ausência de dado, não proibição; decisão de usar exige mais cautela, não é vedada
+- **Plaquetopenia importante**: não localizada como contraindicação formal na bula consultada; mantida como cautela clínica, não como proibição
+
+## Populacoes especiais
+Idosos: sem ajuste de dose. Insuficiência renal: sem ajuste de dose necessário (sem dado disponível em diálise, ver acima). Insuficiência hepática leve: sem ajuste de dose; moderada ou grave: não estudado (grave é contraindicação formal, ver acima).
 
 ## Efeitos adversos
 Sangramentos, cefaleia, dispneia (efeito mediado por adenosina), aumento de pausas ao Holter, elevação de ácido úrico, elevação transitória de creatinina (efeito de adenosina no aparelho justaglomerular)
