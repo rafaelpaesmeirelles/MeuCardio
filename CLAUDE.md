@@ -232,11 +232,30 @@ contra o `git log` do dia.
 > registro isto aqui porque a contagem antiga ainda aparece em vários pontos deste arquivo, e é
 > fácil confundir qual meta está em vigor.
 >
-> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **47 documentos novos, todos publicados**
-> `content/*.md` de **424 para 476**; `documents` **476 total = 476 publicados**. **Acervo total das
-> nove frentes: 1.040** — **faltam 960 para os 2.000**. (Os números das frentes JSON e parte dos
-> documentos incluem o que a sessão da Biblioteca entregou no mesmo dia; os 47 acima são só desta
+> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **48 documentos novos, todos publicados**
+> `content/*.md` de **424 para 477**; `documents` **477 total = 477 publicados**. **Acervo total das
+> nove frentes: 1.041** — **faltam 959 para os 2.000**. (Os números das frentes JSON e parte dos
+> documentos incluem o que a sessão da Biblioteca entregou no mesmo dia; os 48 acima são só desta
 > sessão.)
+>
+> **20º lote — 1 documento**: CDI profilático na cardiomiopatia não isquêmica (DANISH, PMID
+> 27571011, em Dispositivos). **Lote de um só de propósito** — ver a lacuna bloqueada logo abaixo.
+>
+> **🔒 TERCEIRA lacuna bloqueada por fonte: SÍNDROME CARDIORRENAL** (tema Insuficiência cardíaca).
+> É lacuna real e clinicamente importante. A fonte adequada é a **declaração científica da AHA**
+> — Rangaswami J et al., *Cardiorenal Syndrome: Classification, Pathophysiology, Diagnosis, and
+> Treatment Strategies*, Circulation. 2019;139(16):e840-e878, **PMID 30852913**. O **resumo do
+> PubMed é apenas descritivo** (diz que o documento classifica, mas não traz a classificação), e o
+> texto completo dá **403 em `ahajournals.org`**. **Escrever a classificação em tipos 1 a 5 de
+> memória seria exatamente o erro registrado neste arquivo hoje** — completar com conhecimento de
+> fundo que soa plausível e não foi verificado naquela fonte. **Preferi publicar um documento só
+> neste lote a publicar dois com um deles frouxo.**
+> **Para quem retomar:** tentar PMC, o site da própria AHA (`professional.heart.org`) ou uma
+> diretriz brasileira/ESC que reproduza a classificação com atribuição.
+>
+> Também foi verificado e **descartado por já estar coberto**: acetazolamida na IC aguda (ADVOR) já
+> consta em `estrategia-diuretica-na-insuficiencia-cardiaca-aguda-descompensada.md`, junto com DOSE
+> e CARRESS-HF.
 >
 > **19º lote — 2 documentos em Prevenção**: polipílula em prevenção secundária pós-infarto (SECURE,
 > PMID 36018037) e passos por dia vs. mortalidade (PMID 35247352).
