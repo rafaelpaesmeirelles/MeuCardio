@@ -1860,17 +1860,19 @@
   },
   {
     "slug": "fondaparinux-sodico",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Fondaparinux (sódico)",
     "drug_class": "Anticoagulante parenteral — pentassacarídeo sintético, inibidor indireto seletivo do fator Xa",
     "mechanism": "Liga-se seletivamente à antitrombina, potencializando (~300x) a inibição natural do fator Xa; não inibe a trombina diretamente e não interage com o fator 4 plaquetário — praticamente sem risco de trombocitopenia induzida por heparina (HIT)",
     "contraindications": [
-      "Hipersensibilidade",
+      "Hipersensibilidade conhecida ao fondaparinux ou a qualquer excipiente",
       "Sangramento ativo clinicamente significativo",
-      "Endocardite bacteriana aguda"
+      "Endocardite bacteriana aguda",
+      "Comprometimento renal grave, definido por clearance de creatinina <20 mL/min",
+      "**fonte**: bula do ARIXTRA (fondaparinux sódico), item 3. **Corrigido em 31/07/2026**: a versão anterior (fonte FDA) contraindicava com ClCr <30 mL/min — a bula brasileira usa o corte de <20 mL/min. É a mesma divergência de patamar numérico já vista entre bula americana e brasileira em outros anticoagulantes deste acervo (ex.: dabigatrana, apixabana)"
     ],
-    "pregnancy": "C",
-    "lactation": "Não recomendada durante o tratamento",
+    "pregnancy": "**Categoria de risco C.** Não deve ser prescrito a gestantes a menos que o benefício supere o risco. Fonte: bula do ARIXTRA (fondaparinux sódico), seção de uso na gravidez. **Corrigido em 31/07/2026**: o campo tinha só a letra 'C', sem contexto nem citação.",
+    "lactation": "**Amamentação não recomendada durante o tratamento.** O fondaparinux é excretado no leite de ratas; não se sabe se isso ocorre no leite humano. Fonte: bula do ARIXTRA (fondaparinux sódico), seção de lactação.",
     "dosing": {
       "prevencao tev": "2,5 mg/dia SC, administrado por 6-14 dias",
       "tratamento tvp tep peso menor 50kg": "5 mg SC/dia",
@@ -1879,7 +1881,7 @@
       "tratamento tvp tep duracao": "Pelo menos 5 dias, até anticoagulação oral adequada estabelecida",
       "angina instavel iamsst": "2,5 mg/dia, iniciado ao diagnóstico, por até 8 dias",
       "iamcst": "2,5 mg/dia; primeira dose EV, doses subsequentes SC; iniciado ao diagnóstico, por até 8 dias",
-      "contraindicado clcr menor 30": "**Contraindicado** na insuficiência renal grave, definida como ClCr <30 mL/min, em todas as indicações. A versão anterior deste verbete punha o corte em 20 mL/min e ainda oferecia 2,5 mg em dias alternados entre 20 e 30 — ou seja, autorizava uso numa faixa em que o rótulo contraindica",
+      "contraindicado clcr menor 30": "**Corrigido em 31/07/2026**: o corte de contraindicação da bula brasileira do ARIXTRA é ClCr <20 mL/min, não <30 — ver campo `contraindications` para a citação exata. Entre 20 e 30 mL/min a bula orienta cautela reforçada, sem contraindicar formalmente.",
       "ajuste renal clcr maior 30": "sem ajuste de dose; usar com cautela e vigiar sangramento quando o ClCr estiver entre 30 e 50 mL/min",
       "peso abaixo de 50 kg": "contraindicado na **profilaxia** de TEV (o uso em tratamento, com 5 mg, é indicação distinta)",
       "ajuste hepatico leve moderado": "Sem ajuste necessário",
@@ -1893,7 +1895,17 @@
       "Ausencia antidoto": "Não possui antídoto específico eficaz (protamina não neutraliza fondaparinux)"
     },
     "references": [
-      "Fondaparinux sodium injection — rótulo aprovado pelo FDA, DailyMed SPL setid dffbf7c9-495e-4a33-ac76-57b52f014fc2"
+      "Fondaparinux sodium injection — rótulo aprovado pelo FDA, DailyMed SPL setid dffbf7c9-495e-4a33-ac76-57b52f014fc2",
+      "Bula do ARIXTRA (fondaparinux sódico) — usada para corrigir o corte renal de contraindicação, reações adversas e gravidez/lactação"
+    ],
+    "brand_names": [
+      "Arixtra"
+    ],
+    "adverse_effects": [
+      "Comuns (≥1/100 e <1/10): anemia, sangramento (vários locais, incluindo casos raros de hemorragia intracraniana/intracerebral e retroperitoneal), púrpura",
+      "Incomuns (≥1/1.000 e <1/100): trombocitopenia, trombocitemia, plaquetas anormais, distúrbio de coagulação, cefaleia",
+      "Raros (≥1/10.000 e <1/1.000): infecção de ferida pós-operatória, reação alérgica, hipocalemia, ansiedade, confusão, tontura, sonolência, vertigem, hipotensão, dispneia, tosse",
+      "**fonte**: bula do ARIXTRA (fondaparinux sódico), item 9"
     ]
   },
   {
