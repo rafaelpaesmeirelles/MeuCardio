@@ -232,11 +232,21 @@ contra o `git log` do dia.
 > registro isto aqui porque a contagem antiga ainda aparece em vários pontos deste arquivo, e é
 > fácil confundir qual meta está em vigor.
 >
-> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **35 documentos novos, todos publicados**
-> `content/*.md` de **424 para 463**; `documents` **463 total = 463 publicados**. **Acervo total das
-> nove frentes: 1.003** — **faltam 997 para os 2.000**. (Os números das frentes JSON e parte dos
-> documentos incluem o que a sessão da Biblioteca entregou no mesmo dia; os 35 acima são só desta
+> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **37 documentos novos, todos publicados**
+> `content/*.md` de **424 para 465**; `documents` **465 total = 465 publicados**. **Acervo total das
+> nove frentes: 1.011** — **faltam 989 para os 2.000**. (Os números das frentes JSON e parte dos
+> documentos incluem o que a sessão da Biblioteca entregou no mesmo dia; os 37 acima são só desta
 > sessão.)
+>
+> **14º lote — 2 documentos**: "pill in the pocket", cardioversão química ambulatorial na FA de
+> início recente (PMID 15575054), e exercício supervisionado na ICFEr (HF-ACTION, PMID 19351941 e
+> 19351942).
+>
+> **Padrão que apareceu de novo nos dois, e que virou o critério de escrita desta sessão:** o
+> documento vale pelo que a citação de costume omite. No *pill in the pocket*, a etapa de **teste
+> hospitalar prévio** — que excluiu **22%** dos candidatos e da qual dependem as taxas de sucesso de
+> 94% que todo mundo cita. No HF-ACTION, a **queda de adesão** (95 → 74 min/semana em um ano), que
+> não é nota de rodapé metodológica: é parte do resultado e explica por que o benefício é modesto.
 >
 > **13º lote — 2 documentos, os dois em Insuficiência cardíaca**: servoventilação adaptativa na
 > apneia central (SERVE-HF, PMID 26323938) e restrição de sódio (SODIUM-HF, PMID 35381194).
