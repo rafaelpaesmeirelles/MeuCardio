@@ -3918,7 +3918,7 @@
   },
   {
     "slug": "varfarina-sodica",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Varfarina sódica (grafia alternativa: warfarina)",
     "brand_names": [
       "Marevan",
@@ -3932,7 +3932,7 @@
     "monitoring": [
       "INR, com alvo variável conforme a indicação. Acima de 4,0 não há benefício terapêutico adicional na maioria dos pacientes, só aumento de risco de sangramento."
     ],
-    "renal_adjustment": "Não é necessário ajuste na insuficiência renal. A disfunção hepática potencializa a resposta e exige monitorização mais cuidadosa.",
+    "renal_adjustment": "**Corrigido em 31/07/2026**: a bula brasileira do MAREVAN **contraindica formalmente** doença renal grave (e hepática grave), não trata como caso de ajuste sem restrição. O registro anterior (\"não é necessário ajuste na insuficiência renal\") vinha de fonte não-bula e conflitava com a lista de contraindicações — corrigido; ver `contraindications`. Disfunção hepática (não necessariamente grave) potencializa a resposta e exige monitorização mais cuidadosa, mesmo fora da contraindicação formal.",
     "adverse_effects": [
       "O sangramento é o risco principal, da equimose leve à hemorragia grave, intracraniana ou gastrointestinal. Menos comuns, mas específicos da classe: - **necrose cutânea induzida por varfarina**, em geral nos primeiros dias, mais associada a deficiência de proteína C ou S — é por isso que quem tem essa condição de base precisa de sobreposição com heparina na fase inicial; - **síndrome do dedo roxo**, por embolização de cristais de colesterol, tipicamente 3 a 8 semanas após o início."
     ],
@@ -3940,15 +3940,20 @@
       "- **aumentam o inr**: amiodarona (espera-se reduzir a dose de varfarina em 25 a 50%, com interação lenta ao longo de 6 a 8 semanas), fluconazol, metronidazol, sulfametoxazol-trimetoprima, doxiciclina, fibratos e vacina influenza (efeito variável) - **diminuem o inr**: rifampicina (aumento de 2 a 5 vezes na necessidade de dose), carbamazepina, dicloxacilina em uso acima de 14 dias - **aumentam o risco de sangramento sem alterar o inr**: antiagregantes, AINEs, corticosteroides, outros anticoagulantes, óleo de peixe/ômega-3 e vitamina E"
     ],
     "contraindications": [
-      "Hipersensibilidade ao componente",
-      "Gravidez, pela passagem placentária, com risco de malformação e de hemorragia fetal fatal",
-      "Tendência hemorrágica e discrasia sanguínea",
-      "Cirurgia ocular ou do sistema nervoso central recente ou prevista",
-      "Hipertensão grave não controlada ou maligna",
-      "Pericardite, derrame pericárdico e endocardite bacteriana",
-      "Paciente sem supervisão adequada e com alto risco de uso incorreto"
+      "Primeiras 24 horas antes ou depois de cirurgia ou parto",
+      "Gravidez — especialmente primeiro trimestre (malformação fetal); estágios mais avançados associam-se a hemorragia fetal e aumento de aborto",
+      "Aborto incompleto",
+      "Doença hepática ou renal grave",
+      "Hemorragia (sangramento ativo)",
+      "Hipertensão arterial grave não controlada",
+      "Endocardite bacteriana",
+      "Aneurisma cerebral ou aórtico",
+      "Hemofilia",
+      "Doença ulcerativa ativa do trato gastrointestinal",
+      "Ferida ulcerativa aberta",
+      "Hipersensibilidade a qualquer componente da fórmula"
     ],
-    "lactation": "Não é excretada no leite materno, sendo compatível com a amamentação.",
+    "lactation": "**Não detectada no leite humano em estudo publicado com 15 lactantes, mas com ressalva real — não é \"compatível sem monitorização\" como o registro anterior simplificava.** Dos 15 lactentes avaliados, 6 tiveram tempo de protrombina dentro da faixa esperada; nos outros 9, o tempo de protrombina não foi alcançado. **Os lactentes devem ser monitorados quanto ao aparecimento de hematomas e sangramentos.** Efeito em bebê prematuro não foi avaliado. Fonte: bula profissional brasileira do MAREVAN, item \"Lactação\".",
     "dosing": {
       "tev e fibrilacao atrial": "INR 2,0-3,0",
       "pos infarto do miocardio": "iniciar 2 a 4 semanas após o infarto, mantendo INR 2,5-3,5 por tempo prolongado",
@@ -3969,13 +3974,17 @@
       "Farmacogenetica": "Variantes de **VKORC1** e **CYP2C9** respondem por parte importante da variabilidade da dose. O VKORC1 influencia mais a resposta inicial do INR, ou seja, o tempo até a faixa terapêutica; o CYP2C9, mais o risco de INR supraterapêutico acima de 4 nas primeiras semanas. O teste farmacogenético pode orientar a dose inicial quando disponível, mas não substitui a monitorização do INR.",
       "Manejo inr supraterapeutico": "**A conduta nesta seção mudou em relação ao que estava escrito aqui, e a mudança é de direção, não de detalhe.** O esquema anterior mandava administrar vitamina K a partir de INR 5 — exatamente o que a diretriz recomenda **não** fazer de rotina.\n\n- **INR até 4,5, sem sangramento**: suspender e monitorar; retomar em dose ajustada.\n- **INR entre 4,5 e 10, sem sangramento**: **sugere-se NÃO usar vitamina K de rotina** (recomendação 9.1a, Grade 2B). A conduta é suspender e monitorar. Dar vitamina K nessa faixa expõe o paciente ao risco de resistência à reanticoagulação sem benefício demonstrado em sangramento.\n- **INR acima de 10, sem sangramento**: **sugere-se administrar vitamina K por via oral** (recomendação 9.1b, Grade 2C).\n- **Sangramento maior associado a antagonista da vitamina K**: **concentrado de complexo protrombínico de 4 fatores em vez de plasma**, associado a **vitamina K 5 a 10 mg por injeção endovenosa lenta** (recomendação 9.3, Grade 2C). O esquema anterior deste verbete indicava 10 mg EV e tratava o complexo protrombínico como alternativa ao plasma — a diretriz o coloca à frente do plasma, não ao lado.\n\n**Fonte e limite**: American College of Chest Physicians, 9ª edição (2012), que é a referência ainda amplamente citada para o manejo por faixa de INR. A procedência anterior — guia farmacêutico de outra instituição — está substituída. Ao aplicar, considerar que a conduta em INR entre 5 e 10 foi justamente a que mais mudou entre edições, e conferir se há atualização de sociedade mais recente adotada no serviço.",
       "Excecao gravidas com valvula mecanica": "Gestante com prótese valvar mecânica e alto risco tromboembólico pode usar varfarina quando o benefício supera claramente o risco — decisão individual, tomada com a paciente informada do risco fetal.",
-      "Desafios praticos": "Monitorização laboratorial frequente, muitas interações medicamentosas e alimentares (alimentos ricos em vitamina K) e grande variabilidade individual de resposta."
+      "Desafios praticos": "Monitorização laboratorial frequente, muitas interações medicamentosas e alimentares (alimentos ricos em vitamina K) e grande variabilidade individual de resposta.",
+      "Pericardite e derrame pericardico": "Mantida como cautela clínica reconhecida (risco de hemopericárdio/tamponamento se anticoagulado), mas não é item textual do item 4 da bula do MAREVAN — que lista endocardite bacteriana isoladamente, sem pericardite/derrame pericárdico.",
+      "Cirurgia ocular ou de SNC recente/prevista": "Mantida como cautela reconhecida (mesma lógica de risco hemorrágico em local crítico das outras contraindicações cirúrgicas/perioperatórias), mas não é item textual desta bula brasileira — pode vir de rotulagem norte-americana ou de prática clínica.",
+      "Uso incorreto sem supervisao": "Mantida como cautela de segurança amplamente reconhecida na literatura de anticoagulação oral, mas não é item textual do item 4 desta bula."
     },
     "references": [
       "Warfarin sodium tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 541c9a70-adaf-4ef3-94ba-ad4e70dfa057",
       "Otto CM, Nishimura RA, Bonow RO, et al. 2020 ACC/AHA Guideline for the Management of Patients With Valvular Heart Disease. Circulation. 2021;143(5):e72-e227. DOI: 10.1161/CIR.0000000000000923",
       "Holbrook A, Schulman S, Witt DM, et al. Evidence-based management of anticoagulant therapy: Antithrombotic Therapy and Prevention of Thrombosis, 9th ed: American College of Chest Physicians Evidence-Based Clinical Practice Guidelines. Chest. 2012;141(2 Suppl):e152S-e184S. DOI: 10.1378/chest.11-2295. PMID: 22315259",
-      "Tarasoutchi F, Montera MW, Ramos AIO, et al. Atualização das Diretrizes Brasileiras de Valvopatias — 2020. Arq Bras Cardiol. 2020;115(4):720-775. DOI: 10.36660/abc.20201047. PMID: 33111877"
+      "Tarasoutchi F, Montera MW, Ramos AIO, et al. Atualização das Diretrizes Brasileiras de Valvopatias — 2020. Arq Bras Cardiol. 2020;115(4):720-775. DOI: 10.36660/abc.20201047. PMID: 33111877",
+      "Bula profissional do MAREVAN (varfarina sódica) — via consultaremedios.com.br, item 4. CONTRAINDICAÇÕES e item \"Lactação\" conferidos linha a linha"
     ],
     "pregnancy": "**Contraindicada na gravidez** — consta na lista de contraindicações formais da bula, ao lado de aneurisma cerebral ou aórtico, hemofilia e ameaça de aborto. Fonte: bula do MAREVAN (varfarina sódica)."
   },
