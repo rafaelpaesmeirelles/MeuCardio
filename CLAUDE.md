@@ -254,34 +254,60 @@ Dos 21 itens que entraram hoje, **17 são desta sessão** (a tabela acima) e 4 s
 documentos de `content/` da sessão de Medicamentos — que depois somou o quinto,
 fechando em 429.
 
-#### 🚨 36 registros ÓRFÃOS estão PUBLICADOS — o risco latente já se concretizou
-A varredura de órfãos que este arquivo dizia não existir **foi feita agora**
-(31/07/2026), comparando slug a slug o banco contra o disco, nas seis frentes que
-têm as duas pontas. Resultado — **não é hipótese, é o estado de produção**:
+#### ✅ Órfãos publicados: 36 encontrados, 24 já despublicados, **restam só os 12 de `drugs`**
+A varredura de órfãos que este arquivo dizia não existir **foi feita em
+31/07/2026**, comparando slug a slug o banco contra o disco nas seis frentes que
+têm as duas pontas. Achou **36 registros publicados sem arquivo no disco**.
+Por decisão do Rafael no mesmo dia, **os 24 das frentes da Biblioteca
+(`documents`, `evidencias`, `estudos`) foram despublicados** — `published = False`,
+**sem apagar**, com `AuditLog` gravado. Estado conferido por nova varredura logo
+depois de despublicar:
 
-| Frente | Banco | Disco | Órfãos | **Órfãos NO AR** |
-|---|---:|---:|---:|---:|
-| `documents` | 455 | 429 | 26 | **22** |
-| `drugs` | 101 | 89 | 12 | **12** |
-| `evidencias` | 161 | 160 | 1 | **1** |
-| `estudos` | 82 | 81 | 1 | **1** |
+| Frente | Banco | Disco | Órfãos | Órfãos NO AR (antes → **agora**) |
+|---|---:|---:|---:|---|
+| `documents` | 460 | 434 | 26 | 22 → **0** |
+| `drugs` | 101 | 89 | 12 | 12 → **12 — PENDENTE, faixa de Medicamentos** |
+| `evidencias` | 161 | 160 | 1 | 1 → **0** |
+| `estudos` | 82 | 81 | 1 | 1 → **0** |
 | `exames` | 66 | 66 | 0 | 0 |
 | `galeria` | 63 | 63 | 0 | 0 |
 
-**Isto reverteu, na prática, dois trabalhos que este arquivo dá como concluídos:**
+**Antes de despublicar, conferi um a um que nenhum dos 24 era conteúdo único** —
+todos tinham equivalente publicado no disco, e é por isso que despublicar não
+perde nada. Os casos que mais exigiam cuidado, porque tinham dois órfãos cada:
+SCA (o órfão é `...-diagnostico-e-tratamento-esc-2023`; no disco está
+`...-diagnostico-e-manejo-esc-2023`), TEP (órfão `...-esc-2019`, no disco
+`...-escers-2019`) e TVP (no disco, `trombose-venosa-profunda-diagnostico-e-tratamento`).
+`metoprolol` e `varfarina-sodica` seguem no ar em `content/Farmacologia`.
 
-1. **As 11 fusões de pares complementares voltaram ao ar.** Entre os 22 documentos
+**Os 12 de `drugs` NÃO foram tocados** — é faixa da sessão de Medicamentos, e a
+decisão é dela. Avisada em 31/07/2026 às 16:30 pela caixa
+`/root/mensagens/biblioteca-para-medicamentos.md`, com a lista dos 12 slugs, o
+diagnóstico de causa raiz e a recomendação; notificada também por `tmux send-keys`
+e a mensagem foi recebida. **Ponto que pedi que ela conferisse antes de
+despublicar:** `atropina` e `evinacumabe` **não** constavam da lista de 10 órfãos
+conhecidos deste arquivo — podem ser verbete legítimo que sumiu do
+`medicamentos/metadados.json` por acidente, e nesse caso o certo é o inverso,
+repor no JSON em vez de despublicar.
+
+**Isto tinha revertido, na prática, dois trabalhos que este arquivo dá como
+concluídos — o primeiro já está resolvido, o segundo continua aberto:**
+
+1. **~~As 11 fusões de pares complementares voltaram ao ar.~~ RESOLVIDO em
+   31/07/2026 — os 22 foram despublicados.** Entre os 22 documentos
    órfãos publicados estão `sindrome-coronariana-aguda-...-estrutura-detalhada`,
    `endocardite-infecciosa-...-versao-completa`, `ablacao-por-cateter-em-fibrilacao-atrial-esc-2024`,
    `hipertensao-pulmonar-...-versao-completa`, `insuficiencia-cardiaca-atualizacao-focada-...-complemento`,
    `choque-cardiogenico-classificacao-scai-shock-complemento`, `doenca-valvar-cardiaca-vhd-...`,
    `trombose-venosa-profunda-aguda-...` e `doenca-cardiovascular-em-pacientes-com-diabetes-esc-2023`.
-   O `COBERTURA.md` afirma "nenhum órfão publicado" e "todo documento removido do
-   disco foi despublicado" — **isso não vale mais.** O defeito que a fusão existia
-   para corrigir está de volta: quem procura "endocardite" acha dois documentos e
-   lê um deles, e os critérios de Duke e os esquemas de antibiótico estão em
-   arquivos diferentes.
-2. **Os fantasmas de `drugs` ressuscitaram, e agora são 12.** Este arquivo
+   O defeito que a fusão existia para corrigir tinha voltado — quem procurasse
+   "endocardite" achava dois documentos e lia um deles, com os critérios de Duke
+   num arquivo e os esquemas de antibiótico no outro. **A afirmação do
+   `COBERTURA.md` ("nenhum órfão publicado", "todo documento removido do disco foi
+   despublicado") voltou a ser verdadeira para `documents`, `evidencias` e
+   `estudos` — mas não era entre a publicação em massa de 31/07 de manhã e a
+   despublicação da tarde, e continua falsa para `drugs`.**
+2. **Os fantasmas de `drugs` ressuscitaram, e agora são 12 — AINDA NO AR.** Este arquivo
    registrava 10 órfãos e dizia que eram "justamente os 10 que **não** estão
    publicados". Hoje são 12 e **todos estão no ar**, incluindo
    `metoprolol-succinato` em três variantes, `warfarina`, `nitratos-...`,
@@ -300,13 +326,18 @@ o filtro por critério alcança qualquer órfão, inclusive os que ninguém list
 partir da lista de slugs que está no arquivo, nunca por `review_status`.** Foi
 como os 17 itens desta sessão entraram (lista explícita, conferida item a item).
 
-**Nada foi despublicado por mim.** Mexer no que está em produção é decisão do
-Rafael, e metade disto é faixa da sessão de Medicamentos. Ação recomendada:
-`published = False` nos 36 órfãos — **não apagar**, porque não há perda de
-conteúdo (o texto equivalente segue no ar pelo slug correto), e porque a linha
-órfã é o único registro de que aquele slug já existiu. O comando de varredura que
-produziu esta tabela está descrito acima e pode ser repetido a qualquer momento;
-**vale rodá-lo como conferência final antes do lançamento de 10/08.**
+**O que foi feito e o que falta:** os 24 das frentes da Biblioteca estão
+despublicados (`published = False`, **sem apagar** — não há perda, o conteúdo
+equivalente segue no ar pelo slug correto, e a linha órfã é o único registro de
+que aquele slug existiu). Os **12 de `drugs` seguem no ar**, com a sessão de
+Medicamentos, avisada e com o diagnóstico completo em mãos.
+
+**Repetir a varredura:** para cada frente, comparar o conjunto de slugs do banco
+com o do arquivo no disco (`content/**/*.md` pelo `slug:` do front matter, e o
+`metadados.json` das demais), filtrando por `published == True`. É barato, é só
+leitura, e **vale rodá-la como conferência final antes do lançamento de 10/08** —
+qualquer publicação futura feita por critério em vez de por lista repõe o
+problema.
 
 **Três achados desta rodada que valem para quem continuar:**
 
