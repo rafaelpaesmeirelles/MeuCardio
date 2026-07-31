@@ -3,8 +3,8 @@ title: "Sotalol"
 slug: sotalol
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
-source_refs: ["SOTALOL — Farmacon · Misodor · https://www.misodor.com.br/FARMACON/SOTALOL.html", "Sotalol Hydrochloride Injection — bula FDA/accessdata.fda.gov, 2025", "Sotalol — StatPearls, NCBI Bookshelf", "Cloridrato de Sotalol — Bula Profissional · Merck/Saúde Direta · https://www.saudedireta.com.br/catinc/drugs/bulas/cloridratodesotalolmerck.pdf", "Sotalol: evidencia y práctica clínica · CardioTeca · 2026 · https://www.cardioteca.com/tratamientos/8221-sotalol-practica-clinica-guia-especialista-arritmias.html"]
+review_status: revisado
+source_refs: ["Cloridrato de Sotalol — Bula Profissional · Merck/Saúde Direta · https://www.saudedireta.com.br/catinc/drugs/bulas/cloridratodesotalolmerck.pdf · reconferida na íntegra em 31/07/2026, item Contra-indicações — fonte principal, mais completa que constava aqui", "SOTALOL — Farmacon · Misodor · https://www.misodor.com.br/FARMACON/SOTALOL.html", "Sotalol Hydrochloride Injection — bula FDA/accessdata.fda.gov, 2025", "Sotalol — StatPearls, NCBI Bookshelf", "Sotalol: evidencia y práctica clínica · CardioTeca · 2026 · https://www.cardioteca.com/tratamientos/8221-sotalol-practica-clinica-guia-especialista-arritmias.html"]
 legacy_source: "medicamentos/banco-de-medicamentos-sotalol.md — mesclado em 30/07/2026 com medicamentos/banco-de-medicamentos-sotalol-2.md (slug sotalol-cloridrato, duplicata do mesmo fármaco, removido)"
 ---
 
@@ -70,9 +70,21 @@ Arritmias ventriculares e supraventriculares graves, manutenção de ritmo sinus
 ECG com QTc deve ser monitorado rigorosamente durante titulação — risco proarrítmico inerente à classe III
 
 ## Contraindicacoes
-- Síndrome do QT longo
-- Bradicardia sinusal grave
-- Bloqueio AV 2º/3º grau
-- Asma/broncoespasmo grave
+**Corrigido em 31/07/2026** — item Contra-indicações da bula do cloridrato de sotalol (Merck):
+
+- Asma brônquica ou doença obstrutiva crônica das vias aéreas
+- Hipersensibilidade prévia ao produto
 - Choque cardiogênico
-- Hipocalemia/hipomagnesemia não corrigidas
+- Anestesia que produza depressão do miocárdio, com bradicardia sinusal sintomática
+- Síndrome da doença do nó sinusal, bloqueio atrioventricular de 2º e 3º graus — **salvo em uso de marca-passo**
+- Insuficiência cardíaca congestiva **não controlada**
+- **Insuficiência renal** — item formal de contraindicação nesta bula, ainda que a mesma bula
+  também traga, na seção Posologia, um guia de ajuste de dose por função renal reduzida (ver
+  "Ajuste renal" abaixo); a tensão é da própria bula, registrada aqui em vez de escondida —
+  na prática, a leitura mais segura é reservar sotalol a insuficiência renal leve, com
+  ajuste de dose e monitorização de QT rigorosa, e evitar nas faixas mais graves
+- Síndrome do QT longo congênita ou adquirida
+
+**Hipocalemia/hipomagnesemia não corrigidas** não é item formal deste item 4, mas segue sendo
+pré-requisito de segurança antes de iniciar (ver "Início obrigatório em ambiente hospitalar"
+acima) — corrigir antes de administrar, pelo risco de torsades de pointes.
