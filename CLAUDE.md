@@ -232,11 +232,27 @@ contra o `git log` do dia.
 > registro isto aqui porque a contagem antiga ainda aparece em vários pontos deste arquivo, e é
 > fácil confundir qual meta está em vigor.
 >
-> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **41 documentos novos, todos publicados**
-> `content/*.md` de **424 para 469**; `documents` **469 total = 469 publicados**. **Acervo total das
-> nove frentes: 1.023** — **faltam 977 para os 2.000**. (Os números das frentes JSON e parte dos
-> documentos incluem o que a sessão da Biblioteca entregou no mesmo dia; os 41 acima são só desta
+> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **45 documentos novos, todos publicados**
+> `content/*.md` de **424 para 474**; `documents` **474 total = 474 publicados**. **Acervo total das
+> nove frentes: 1.038** — **faltam 962 para os 2.000**. (Os números das frentes JSON e parte dos
+> documentos incluem o que a sessão da Biblioteca entregou no mesmo dia; os 45 acima são só desta
 > sessão.)
+>
+> **17º e 18º lotes — 4 documentos**: iSGLT2 na doença renal crônica (DAPA-CKD 32970396 e
+> EMPA-KIDNEY 36331190), dieta mediterrânea (PREDIMED 29897866), alopurinol sem gota (ALL-HEART
+> 36216006) e monitoramento remoto na IC (TIM-HF2 30153985).
+>
+> **Dois achados de método que valem para os próximos documentos:**
+> 1. **O PREDIMED tem um artigo RETIRADO.** A publicação de 2013 foi retirada pelos próprios autores
+>    (inclusão de familiares sem randomização, alocação sem randomização em um centro, uso
+>    inconsistente das tabelas em outro) e o estudo foi **republicado em 2018** com análise que não
+>    assume randomização perfeita. **A referência válida é a de 2018** — e a maioria das citações que
+>    circulam ainda aponta para a de 2013, ou seja, para um artigo retirado. **Vale checar retratação
+>    quando o ensaio for muito citado e antigo.**
+> 2. **O ALL-HEART fecha um padrão que já apareceu quatro vezes nesta biblioteca** — RED-HF, EVEREST,
+>    SERVE-HF e agora o ácido úrico: **efeito favorável sobre parâmetro intermediário não prediz
+>    benefício clínico**. E a distinção que o documento faz explícita: marcador de risco (o ácido
+>    úrico continua sendo) **não é** alvo terapêutico.
 >
 > **16º lote — 2 documentos em Farmacologia**: AINE e risco cardiovascular (PRECISION, PMID
 > 27959716) e reposição de testosterona (TRAVERSE, PMID 37326322). Os dois são perguntas que chegam
@@ -1700,6 +1716,39 @@ monta a impressão.
    live, e vice-versa.
 
 ### Trabalho novo
+
+00. **🚨 UMA EVIDÊNCIA NO AR MOSTRA "Classe Forte" AO ASSINANTE — decisão do Rafael,
+    não mexi.** Achado em 31/07/2026 pela sessão da Biblioteca, ao varrer a taxonomia
+    de `recommendation_class`. É a materialização exata do problema de esquema que
+    esta sessão vinha evitando criar — e que já existia no ar sem ninguém notar.
+    - **Item:** `tratamento-antibiotico-da-faringite-estreptococica-como-prevencao-primaria-da-febre-reumatica`,
+      tema Febre reumática, `society: WHO`, ano 2024.
+    - **Valores gravados:** `recommendation_class: "Forte"` e `evidence_level: "Mod"`
+      — vocabulário **GRADE**, não o `I|IIa|IIb|III` que o campo assume.
+    - **O que o assinante vê:** `Evidencia.tsx` renderiza literalmente
+      **"Classe Forte"** e **"Nível Mod"** em selos; e em `Evidencias.tsx` o mapa
+      `COR_CLASSE` não tem a chave `Forte`, então o item cai em `COR_CLASSE_PADRAO` e
+      aparece **sem a cor** que os demais têm. "Classe Forte" não existe nem no
+      sistema da ESC nem no GRADE — é um híbrido que nenhum cardiologista reconhece.
+    - **Divergência disco × banco, que é como passou despercebido:** no
+      `evidencias/metadados.json` o item está `published: false`; **no banco está
+      `published: True`**. Como o campo do JSON é ignorado pelos carregadores (ver o
+      aviso registrado acima), o disco não serve de indicador — só o banco diz o que
+      está no ar.
+    - **Por que NÃO corrigi:** despublicar ou alterar o que já está em produção
+      continua exigindo o Rafael, mesmo com a autorização contínua de publicação — é
+      uma das exceções explicitamente registradas.
+    - **Três saídas possíveis, em ordem de preferência desta sessão:**
+      1. **Reescrever o registro no vocabulário do campo**, se houver fonte com
+         classe/nível para a mesma recomendação (a AHA 2015 de febre reumática, já
+         usada em 8 evidências desta base, é candidata natural) — resolve sem tocar
+         em código;
+      2. **despublicar** o item até que a questão de esquema seja decidida;
+      3. **decidir o esquema** de vez — campo de sistema de graduação ao lado da
+         classe, ou segundo vocabulário aceito com rótulo próprio na interface. É a
+         mesma decisão pendente que barrou a diretriz de Chagas e a de eco de
+         estresse, e este caso mostra que ela **já tem consequência visível**, não é
+         só teórica.
 
 0. **~~🐛 DEFEITO DE INTERFACE~~ — CORRIGIDO E NO AR em 31/07/2026.** O filtro da tela
    de Estudos mostrava ao assinante o nome técnico cru `estudo_de_coorte (7)`. O
