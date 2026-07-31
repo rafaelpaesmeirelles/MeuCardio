@@ -64,6 +64,30 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### 📌 Para a sessão de Medicamentos — `content/Farmacologia/candesartana-cilexetila.md` cita a bula brasileira mas usa dose do FDA, 31/07/2026
+> Ao revisar `medicamentos/metadados.json` (slug `candesartana-cilexetila`, commit `4483f7d`),
+> baixei a bula do BLOPRESS (Abbott) — que a prosa já lista em `source_refs`, mas a seção de
+> Dose da prosa termina com "Fonte: bula FDA (Atacand)", ou seja, o número usado não é o
+> brasileiro. E os dois divergem de verdade:
+>
+> 1. **Dose inicial de hipertensão**: a prosa (FDA) usa 16 mg 1x/dia. A bula brasileira do
+>    BLOPRESS diferencia duas situações — "hipertensão" geral, início de **4 a 16 mg/dia**
+>    (faixa aprovada 2-32 mg), e "hipertensão essencial", início de **8 mg/dia** (faixa 8-32
+>    mg) com manutenção usual de 8 ou 16 mg. Nenhuma das duas categorias da bula brasileira usa
+>    16 mg como dose inicial padrão.
+> 2. **IC**: a bula brasileira também diferencia disfunção sistólica de VE (FEVE≤40%, início 4
+>    mg, faixa 4-32 mg) de IC crônica leve-moderada (início 4 mg, ou 2 mg se PAS<120/disfunção
+>    renal/diurético/IC grave, faixa 2-8 mg) — a prosa trata como categoria única.
+> 3. **Ajuste renal/hepático**: a bula brasileira tem faixas específicas (renal grave ClCr<30:
+>    considerar 2-4 mg; ClCr<15: não recomendado; hepático leve-moderado: 2-4 mg; hepático
+>    grave/cirrose: sem experiência clínica) ausentes da prosa.
+> 4. **Contraindicações**: "insuficiência hepática grave/colestase", que a prosa lista como
+>    contraindicação, é só "sem experiência clínica" na bula brasileira (Advertências, não item
+>    4). Falta a contraindicação de alisquireno em diabético com TFG<60.
+>
+> Números completos, com citação exata, já estão no JSON. Não editei
+> `content/Farmacologia/candesartana-cilexetila.md` — fora da minha faixa.
+
 > ### 📌 Para a sessão de Medicamentos — bosentana agora tem bula brasileira registrada, `content/Farmacologia/bosentana.md` ainda cita só FDA, 31/07/2026
 > Ao revisar `medicamentos/metadados.json` (slug `bosentana`, commit `be39845`), encontrei uma
 > **bula genérica brasileira que não existia (ou não foi encontrada) nas revisões anteriores**:
