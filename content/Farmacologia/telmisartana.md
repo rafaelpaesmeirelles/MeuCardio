@@ -4,7 +4,7 @@ slug: telmisartana
 theme: "Farmacologia"
 kind: farmacologia
 review_status: revisado
-source_refs: ["Bula do MICARDIS (telmisartana, Boehringer Ingelheim) · https://www.saudedireta.com.br/catinc/drugs/bulas/micardis.pdf · lida na íntegra em 31/07/2026, itens Contra-indicações, Precauções e Posologia — diferente de outros BRA já conferidos neste acervo, esta bula lista disfunção hepática/renal grave e obstrução biliar como contraindicação formal, não só precaução", "Telmisartan tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 5743c58e-deab-ac93-e063-6294a90ac1eb", "Telmisartan — resumo das características do produto (EMA), consultado para a orientação europeia de ajuste renal", "ONTARGET Investigators. Telmisartan, ramipril, or both in patients at high risk for vascular events. N Engl J Med. 2008;358(15):1547-1559. DOI: 10.1056/NEJMoa0801317"]
+source_refs: ["Bula do MICARDIS, item 4 (Contraindicações), mirror consultaremedios.com.br — confirmado pela sessão da Biblioteca em 31/07/2026: lista completa de 7 itens, com \"insuficiência renal grave\" isolada ausente; a menção a função renal aparece só condicionada a alisquireno+diabetes/TFG<60. Corrige uma leitura anterior no mesmo dia baseada num mirror mais curto/resumido (saudedireta.com.br), que compactava a seção sem numeração formal, no mesmo padrão de simplificação já visto em outras bulas resumidas desta base", "Bula do MICARDIS (telmisartana, Boehringer Ingelheim), versão resumida · https://www.saudedireta.com.br/catinc/drugs/bulas/micardis.pdf · lida em 31/07/2026 — usada por engano como equivalente à bula completa numerada para classificar contraindicação formal, corrigido", "Telmisartan tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 5743c58e-deab-ac93-e063-6294a90ac1eb", "Telmisartan — resumo das características do produto (EMA), consultado para a orientação europeia de ajuste renal", "ONTARGET Investigators. Telmisartan, ramipril, or both in patients at high risk for vascular events. N Engl J Med. 2008;358(15):1547-1559. DOI: 10.1056/NEJMoa0801317"]
 legacy_source: "medicamentos/banco-de-medicamentos-telmisartana-completo.md"
 ---
 
@@ -27,7 +27,7 @@ Comprimidos de 20, 40 e 80 mg
 - **hipertensao maxima**: 80 mg/dia, ou combinar com hidroclorotiazida se meta não atingida
 - **prevencao cardiovascular**: 80 mg 1x/dia (dose usada em prevenção de eventos CV)
 - **insuficiencia renal leve a moderada**: **corrigido em 31/07/2026** — a bula brasileira do MICARDIS não exige ajuste de dose nesta faixa (a versão anterior deste documento trocava esse teto com o da insuficiência hepática, abaixo); telmisartana não é removida por hemofiltração
-- **insuficiencia renal grave**: **contraindicação formal** na bula brasileira (ver Contraindicações) — diferente da orientação de "dose inicial mais baixa" da bula europeia (EMA), ver nota de divergência abaixo
+- **insuficiencia renal grave — corrigido de novo em 31/07/2026**: **não é contraindicação formal isolada** na bula brasileira completa (item 4) — a única restrição formal envolvendo função renal é o uso concomitante com alisquireno em diabético ou TFG <60 (ver Contraindicações e Interações). Fora desse contexto específico, é situação de cautela/precaução, não proibição
 - **insuficiencia hepatica leve a moderada**: não exceder **40 mg/dia**
 - **idoso**: sem ajuste necessário
 - **crianças e adolescentes**: sem dados de segurança e eficácia
@@ -39,11 +39,12 @@ Estudo ONTARGET comparou telmisartana 80mg/dia ao ramipril 10mg/dia em pacientes
 ## Ajuste hepatico
 A maior parte da eliminação é biliar — em obstrução biliar ou insuficiência hepática, a depuração é reduzida. Iniciar com dose baixa e titular lentamente nesses pacientes.
 
-**Nota sobre divergência entre bulas — atualizada em 31/07/2026**: são três leituras distintas
-para insuficiência renal grave, não duas. A bula europeia (EMA) recomenda dose inicial menor; a
-bula norte-americana (FDA) declara que não é necessário ajuste; **a bula brasileira do MICARDIS
-contraindica formalmente** o uso em disfunção renal grave. Prescrevendo no Brasil, a leitura
-vinculante é a da bula brasileira — contraindicação, não ajuste de dose.
+**Nota sobre divergência entre bulas — corrigida de novo em 31/07/2026**: a bula europeia (EMA)
+recomenda dose inicial menor em insuficiência renal grave; a bula norte-americana (FDA) declara
+que não é necessário ajuste. A bula brasileira completa (item 4) **não contraindica
+formalmente** disfunção renal grave isolada — só no contexto específico de alisquireno em
+diabético/TFG<60. Uma versão anterior deste documento, no mesmo dia, tratou renal grave isolada
+como contraindicação formal a partir de um mirror de bula resumido — corrigido.
 
 ## Efeitos adversos
 Mais comuns (≥1%): dor lombar, sinusite, diarreia. Em estudos de prevenção cardiovascular: claudicação intermitente, úlcera cutânea. Menos comuns, mas relevantes: hipercalemia (mais em insuficiência renal avançada, IC, diálise ou uso de poupador de potássio/suplemento de potássio), alteração de função hepática (mais descrita em pacientes japoneses), rabdomiólise (raro, efeito de classe dos BRA), angioedema (raro, com relato de desfecho fatal), tendinopatia/tendinite, hipoglicemia em diabético.
@@ -56,25 +57,30 @@ Potássio sérico periodicamente, sobretudo em quem tem fator de risco pra hiper
 - **Lítio**: aumento reversível da concentração de lítio, com relato de toxicidade
 - **AINE**: reduz o efeito anti-hipertensivo e aumenta risco de lesão renal
 - **IECA**: associação não recomendada — mesmo mecanismo, sem benefício adicional e mais efeito colateral
-- **Alisquireno**: contraindicado em diabético
+- **Alisquireno**: contraindicado em diabético **ou em paciente com TFG <60 mL/min/1,73m²** — corrigido em 31/07/2026, faixa completa da bula
 
 ## Contraindicacoes
-**Corrigido em 31/07/2026** — a bula brasileira do MICARDIS lista, como contraindicação formal,
-uma lista mais ampla do que constava aqui:
+**CORRIGIDO DE NOVO em 31/07/2026** — a correção anterior (mesmo dia) usou um mirror de bula
+resumido/sem numeração formal (saudedireta.com.br), que compactava a seção de contraindicações
+de um jeito que incluía "disfunção renal grave" como item isolado. A bula completa, numerada
+(item 4, mirror consultaremedios.com.br), tem 7 itens, nenhum deles "insuficiência renal grave"
+isolada:
 
 - Hipersensibilidade ao ingrediente ativo ou a excipientes
-- Gravidez **e lactação**
-- Obstrução biliar
-- Disfunção hepática **ou renal grave** — na bula brasileira do MICARDIS, diferente de outros
-  BRA já conferidos neste acervo, a disfunção renal grave também é contraindicação formal, não
-  só precaução
+- Distúrbios biliares obstrutivos
+- Disfunção hepática grave
 - Intolerância hereditária à frutose (o comprimido contém sorbitol)
+- Uso concomitante com alisquireno em diabético **ou com TFG <60 mL/min/1,73m²** — a menção a
+  função renal no item 4 desta bula está condicionada a essa combinação específica, não é
+  restrição isolada de função renal
+- Gravidez, 2º e 3º trimestres
+- Lactação
 
-**Precauções** (não contraindicação formal, mas relevantes): estenose de artéria renal bilateral
-ou de rim único (risco de hipotensão grave e insuficiência renal); IC congestiva grave;
-hiperaldosteronismo primário (uso não recomendado); estenose valvar aórtica/mitral e
-cardiomiopatia hipertrófica obstrutiva (precaução especial); menor eficácia anti-hipertensiva em
-população negra.
+**"Insuficiência renal grave" isolada não é contraindicação formal** — é Precaução, junto de:
+estenose de artéria renal bilateral ou de rim único (risco de hipotensão grave e insuficiência
+renal); IC congestiva grave; hiperaldosteronismo primário (uso não recomendado); estenose valvar
+aórtica/mitral e cardiomiopatia hipertrófica obstrutiva (precaução especial); menor eficácia
+anti-hipertensiva em população negra.
 
 ## Relacao com sacubitril-valsartana
 Não associar. O sacubitril-valsartana **já contém valsartana**, de modo que somar um BRA a ele é duplicar o bloqueio do receptor de angiotensina, sem ganho e com mais hipotensão, hipercalemia e disfunção renal. Ao migrar de um BRA para o sacubitril-valsartana, o BRA é substituído, não somado.
