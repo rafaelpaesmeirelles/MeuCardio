@@ -558,7 +558,7 @@
   },
   {
     "slug": "bivalirudina",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Bivalirudina",
     "drug_class": "Anticoagulante inibidor direto da trombina, intravenoso",
     "mechanism": "Peptídeo sintético que se liga direta e especificamente tanto à trombina livre quanto à ligada ao coágulo (sítio catalítico e sítio de ligação ao substrato), inibindo a conversão de fibrinogênio em fibrina de forma reversível — não depende de antitrombina como cofator, ao contrário da heparina. Cerca de 80% de seu clearance ocorre por clivagem proteolítica (independente de órgão) e aproximadamente 20% por eliminação renal, resultando em meia-vida curta (cerca de 25 minutos) em pacientes com função renal normal - **fonte**: StatPearls",
@@ -571,8 +571,10 @@
     ],
     "dosing": {
       "bolus": "0,75 mg/kg IV",
-      "infusao de manutencao": "1,75 mg/kg/h durante o procedimento",
-      "fonte": "NEJM (HORIZONS-AMI)"
+      "infusao de manutencao": "1,75 mg/kg/h durante a duração do procedimento",
+      "checagem de act": "5 minutos após o bolus, verificar o tempo de coagulação ativado (ACT) — se insuficiente, administrar bolus adicional de 0,3 mg/kg",
+      "extensao pos icp": "Extensão da infusão a 1,75 mg/kg/h por até 4 horas após a ICP deve ser considerada, a critério clínico",
+      "fonte": "rótulo do ANGIOMAX (bivalirudina) aprovado pelo FDA, item 2 (Dosage and Administration) — mesmo esquema usado no HORIZONS-AMI (NEJM), que era a única fonte citada antes desta revisão"
     },
     "outcomes": {
       "Evidencia pivotal — HORIZONS-AMI": "- **desenho**: 3.602 pacientes com IAM com supra de ST submetidos a ICP primária, randomizados para bivalirudina isolada vs. heparina não fracionada associada a inibidor de glicoproteína IIb/IIIa - **resultado**: bivalirudina reduziu sangramento maior (4,9% vs. 8,3%) e mortalidade por todas as causas em 30 dias, com benefício de mortalidade mantido em 3 anos de seguimento (5,9% vs. 7,7%), às custas de aumento de trombose de stent aguda (nas primeiras 24 horas) - **fonte**: NEJM (HORIZONS-AMI)"
@@ -583,7 +585,14 @@
       "Angiomax (bivalirudin) prescribing information · Pfizer · https://labeling.pfizer.com/ShowLabeling.aspx?id=5411"
     ],
     "pregnancy": "**Não usar, a menos que o estado clínico da mulher exija o tratamento** — a fonte deixa a porta aberta para a indicação urgente, em vez de proibir. Os dados em gestantes são limitados ou inexistentes, e os **estudos em animais são insuficientes** para determinar efeitos sobre a gravidez, o desenvolvimento embriofetal, o parto ou o desenvolvimento pós-natal. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do ANGIOX (bivalirudina, The Medicines Company). Fonte europeia, não a bula da ANVISA: não há bula do detentor do registro no Brasil nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer.",
-    "lactation": "**Administrar com precaução em quem amamenta.** Desconhece-se se a bivalirudina é excretada para o leite materno; a fonte pede precaução e não suspensão. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do ANGIOX (bivalirudina, The Medicines Company). Fonte europeia, não a bula da ANVISA: não há bula do detentor do registro no Brasil nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer."
+    "lactation": "**Administrar com precaução em quem amamenta.** Desconhece-se se a bivalirudina é excretada para o leite materno; a fonte pede precaução e não suspensão. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do ANGIOX (bivalirudina, The Medicines Company). Fonte europeia, não a bula da ANVISA: não há bula do detentor do registro no Brasil nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer.",
+    "adverse_effects": [
+      "Reação adversa mais comum (>2%): sangramento. Em estudos de PCI para angina instável, 3,7% dos pacientes (79/2161) tiveram sangramento maior — hemorragia intracraniana, retroperitoneal, ou sangramento clinicamente evidente com queda de hemoglobina >3 g/dL ou necessidade de transfusão >2 unidades",
+      "Hipotensão — incidência rara (0,1-1%), semelhante à heparina",
+      "Pós-comercialização: sangramento fatal; hipersensibilidade/reações alérgicas incluindo anafilaxia; ausência de efeito anticoagulante; formação de trombo durante ICP (com ou sem braquiterapia intracoronária), incluindo desfechos fatais; hemorragia pulmonar; tamponamento cardíaco; aumento de INR",
+      "Imunogenicidade: potencial, como todo peptídeo — 2 de 494 pacientes testados desenvolveram anticorpo antibivalirudina emergente ao tratamento, sem evidência clínica de reação alérgica/anafilática",
+      "**fonte**: rótulo do ANGIOMAX (bivalirudina) aprovado pelo FDA, item 6 (Adverse Reactions) — não há bula da ANVISA nos espelhos consultados, mesma ressalva já registrada em `pregnancy`/`lactation` deste verbete"
+    ]
   },
   {
     "slug": "bosentana",
