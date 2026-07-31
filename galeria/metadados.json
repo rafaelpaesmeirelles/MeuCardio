@@ -1426,5 +1426,27 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "rx-cardiomegalia-na-cardiomiopatia-chagasica",
+    "title": "Radiografia de tórax — Cardiomegalia acentuada na cardiomiopatia chagásica",
+    "modality": "Radiografia",
+    "theme": "Cardiomiopatias",
+    "file_path": "radiografia/cardiomegalia-na-cardiomiopatia-chagasica.jpg",
+    "findings": "Radiografia de tórax em incidência posteroanterior com aumento global e acentuado da silhueta cardíaca, ocupando grande parte do campo torácico, com índice cardiotorácico claramente elevado. Os campos pulmonares aparecem sem consolidação evidente nesta reprodução. A fonte, o CDC, identifica o caso como doença de Chagas; o que a imagem permite afirmar por si é a cardiomegalia — a etiologia vem da fonte, não do achado radiográfico, que é inespecífico.",
+    "teaching_points": "A cardiomegalia acentuada é a tradução radiográfica da fase avançada da cardiomiopatia chagásica, o estágio C/D da classificação da diretriz brasileira, e um dos itens que a própria diretriz usa no estadiamento (cardiomegalia ausente na forma indeterminada e nos estágios iniciais, presente a partir do B2/C). Duas ressalvas que o médico precisa carregar ao ver esta imagem: primeiro, a radiografia é inespecífica — este mesmo aspecto ocorre em qualquer cardiomiopatia dilatada avançada e não distingue a etiologia chagásica de outras; segundo, e mais importante na prática, radiografia NORMAL não afasta doença de Chagas, porque a forma indeterminada e o estágio B1 cursam com área cardíaca normal, e é o eletrocardiograma — não a radiografia — o exame que separa a forma indeterminada da cardiomiopatia estabelecida. A imagem é uma reprodução de baixa resolução (309 × 437 pixels), adequada ao achado grosseiro que ilustra e não à análise de detalhe.",
+    "source_name": "Wikimedia Commons (imagem do CDC)",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Heart_radiology_Chagas_disease.JPG",
+    "license": "Domínio público",
+    "attribution": "Centers for Disease Control and Prevention (CDC), Estados Unidos — obra de agência do governo federal norte-americano, em domínio público. Disponibilizada via Wikimedia Commons.",
+    "tags": [
+      "doença de chagas",
+      "cardiomiopatia chagásica",
+      "cardiomegalia",
+      "radiografia de tórax",
+      "índice cardiotorácico"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
