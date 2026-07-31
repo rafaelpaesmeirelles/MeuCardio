@@ -14,7 +14,9 @@
     ],
     "resposta_correta": 1,
     "explicacao": "O padrão da fibrilação atrial (paroxística, persistente ou permanente) não altera a indicação de anticoagulação — o risco tromboembólico é avaliado pelo CHA2DS2-VA, não pela duração ou frequência dos episódios, e um único episódio documentado já basta para calcular o escore e decidir. Nesta paciente: hipertensão (1 ponto) + diabetes (1 ponto) + idade 65-74 anos (1 ponto) = 3 pontos, escore que indica benefício líquido de anticoagulação oral segundo a diretriz ESC 2024. AAS isolado não tem indicação para profilaxia de AVC em FA — é inferior ao anticoagulante oral e não substitui a decisão baseada no escore de risco.",
-    "source_refs": ["Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the EACTS. Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176. PMID: 39210723"],
+    "source_refs": [
+      "Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the EACTS. Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176. PMID: 39210723"
+    ],
     "review_status": "revisado"
   },
   {
@@ -32,7 +34,10 @@
     ],
     "resposta_correta": 1,
     "explicacao": "A evidência atual (incluindo o ensaio STRONG-HF) sustenta início rápido e mais simultâneo das quatro classes de terapia modificadora de doença na ICFEr, em vez do modelo antigo de titular uma classe até a dose máxima antes de iniciar a próxima — essa abordagem sequencial lenta atrasa o benefício comprovado das outras três classes por semanas ou meses. Neste paciente, sem contraindicação evidente (função renal e potássio normais, sem hipotensão), não há motivo para adiar o início de qualquer uma das quatro classes.",
-    "source_refs": ["McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726.", "2023 Focused Update of the 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2023;44(37):3627-3639."],
+    "source_refs": [
+      "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726.",
+      "2023 Focused Update of the 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2023;44(37):3627-3639."
+    ],
     "review_status": "revisado"
   },
   {
@@ -50,7 +55,9 @@
     ],
     "resposta_correta": 1,
     "explicacao": "Diante de hipertensão resistente confirmada (adesão verificada, três classes em dose adequada, MAPA excluindo efeito do avental branco), a recomendação de diretriz é acrescentar um quarto agente — a espironolactona é a escolha preferencial nessa etapa. Trocar dentro da mesma classe não agrega mecanismo de ação novo. Denervação renal é considerada apenas depois de otimização farmacológica esgotada, não antes dela.",
-    "source_refs": ["2023 ESH Guidelines for the management of arterial hypertension. J Hypertens. 2023;41(12):1874-2071."],
+    "source_refs": [
+      "2023 ESH Guidelines for the management of arterial hypertension. J Hypertens. 2023;41(12):1874-2071."
+    ],
     "review_status": "revisado"
   },
   {
@@ -68,7 +75,9 @@
     ],
     "resposta_correta": 1,
     "explicacao": "A paciente não apresenta nenhum dos 4 critérios do HERDOO2 (Hiperpigmentação/Edema/Rubor em perna, D-dímero ≥250µg/L em uso de anticoagulante, Obesidade com IMC≥30, idade ≥65 anos) — pontuação 0, classificada como baixo risco. No estudo de validação prospectiva (BMJ 2017), mulheres de baixo risco HERDOO2 que suspenderam a anticoagulação tiveram recorrência de apenas 3,0% ao ano (dado do próprio ensaio), risco considerado baixo o suficiente para justificar suspender o tratamento após o curso padrão, evitando o risco hemorrágico da anticoagulação indefinida sem necessidade.",
-    "source_refs": ["Rodger MA, Le Gal G, Anderson DR, et al; REVERSE II Study Investigators. Validating the HERDOO2 rule to guide treatment duration for women with unprovoked venous thrombosis: multinational prospective cohort management study. BMJ. 2017;356:j1065. DOI: 10.1136/bmj.j1065. PMID: 28314711"],
+    "source_refs": [
+      "Rodger MA, Le Gal G, Anderson DR, et al; REVERSE II Study Investigators. Validating the HERDOO2 rule to guide treatment duration for women with unprovoked venous thrombosis: multinational prospective cohort management study. BMJ. 2017;356:j1065. DOI: 10.1136/bmj.j1065. PMID: 28314711"
+    ],
     "review_status": "revisado"
   },
   {
@@ -86,7 +95,29 @@
     ],
     "resposta_correta": 1,
     "explicacao": "Inibidores de SGLT2 têm indicação de redução de risco cardiovascular em diabetes tipo 2 com doença cardiovascular aterosclerótica estabelecida (incluindo infarto prévio), independentemente do nível de HbA1c — o benefício demonstrado em ensaios como EMPA-REG OUTCOME e DECLARE-TIMI 58 é sobre desfecho cardiovascular (morte cardiovascular, hospitalização por insuficiência cardíaca), não sobre controle glicêmico adicional. Negar o fármaco por a HbA1c já estar controlada ignora essa indicação independente, já incorporada às diretrizes de manejo cardiovascular no diabetes.",
-    "source_refs": ["Marx N, Federici M, Schütt K, et al. 2023 ESC Guidelines for the management of cardiovascular disease in patients with diabetes. Eur Heart J. 2023;44(39):4043-4140. DOI: 10.1093/eurheartj/ehad192. PMID: 37622663"],
+    "source_refs": [
+      "Marx N, Federici M, Schütt K, et al. 2023 ESC Guidelines for the management of cardiovascular disease in patients with diabetes. Eur Heart J. 2023;44(39):4043-4140. DOI: 10.1093/eurheartj/ehad192. PMID: 37622663"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "escore-de-calcio-coronariano-agatston-decisao-de-estatina-em-risco-intermediario",
+    "titulo": "Escore de cálcio coronariano: muda a decisão de estatina no risco intermediário?",
+    "tema": "Prevenção e lipídios",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 56 anos, não tabagista, não diabético, sem doença cardiovascular estabelecida. LDL-colesterol 145mg/dL, PA 128/82mmHg em uso de losartana. Pelo escore de risco tradicional, é classificado como risco cardiovascular intermediário. Ele está relutante em iniciar estatina e pergunta se há como refinar essa decisão antes de começar um medicamento de uso contínuo. É solicitado escore de cálcio coronariano (Agatston) por tomografia sem contraste, que retorna com resultado de 210.",
+    "pergunta": "Diante do resultado do escore de cálcio coronariano, qual a conduta mais apropriada?",
+    "opcoes": [
+      "Manter a conduta do risco intermediário isolado e não iniciar estatina, já que o paciente não tem diabetes, não fuma e não tem doença estabelecida",
+      "O escore de 210 (>100) reclassifica o paciente como alto risco cardiovascular, com indicação de tratamento mais agressivo — iniciar estatina",
+      "Repetir a tomografia de escore de cálcio em 6 meses para confirmar progressão antes de decidir sobre estatina",
+      "O escore de cálcio não deveria ter sido solicitado isoladamente — o exame correto para essa dúvida é a angiotomografia de coronárias, que avalia obstrução"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A Atualização da Diretriz Brasileira de Dislipidemias (2017) usa o corte de escore de CAC > 100 para reclassificar como alto risco cardiovascular o paciente que era intermediário pelos escores clínicos tradicionais, com recomendação de tratamento mais agressivo — que na prática significa indicação de estatina. Foi exatamente para essa decisão que o exame foi solicitado neste paciente: risco intermediário em que o resultado do CAC muda a conduta terapêutica. Manter a conduta do risco intermediário isolado ignora o propósito do exame que já foi feito e seu resultado positivo. Repetir a tomografia em curto intervalo não tem indicação — a progressão do escore não tem, até o momento, protocolo de conduta tão validado quanto a medida basal, segundo a mesma fonte. E a angiotomografia de coronárias responde a uma pergunta diferente (obstrução/estenose); o escore de cálcio é o exame correto quando o objetivo é reestratificação de risco em paciente assintomático, não diagnóstico de obstrução — os dois métodos não são intercambiáveis. Vale notar o contraste, que reforça por que o exame foi pedido antes de decidir: um escore zero tem alto valor preditivo negativo e costuma sustentar o adiamento da estatina nesse mesmo cenário de risco intermediário sem outros agravantes — não foi o que ocorreu aqui.",
+    "source_refs": [
+      "Faludi AA, Izar MCO, Saraiva JFK, et al. Atualização da Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose – 2017. Arq Bras Cardiol. 2017;109(2 supl 1):1-76. DOI 10.5935/abc.20170121."
+    ],
     "review_status": "revisado"
   }
 ]

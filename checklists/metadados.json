@@ -252,5 +252,67 @@
       }
     ],
     "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) em 28/07/2026. Os itens derivam dos protocolos citados em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "alta-pos-tromboembolismo-venoso-agudo",
+    "condicao": "Alta após tromboembolismo venoso agudo (TVP/TEP)",
+    "resumo": "Derivado da diretriz brasileira SBPT 2025 (GRADE) para tratamento farmacológico do TEP: escolha do anticoagulante, corte renal, extensão em TEV não provocado e critério para tratamento domiciliar.",
+    "documento_origem": "tratamento-farmacologico-do-tep-diretriz-brasileira-sbpt-2025-grade",
+    "theme": "Tromboembolismo",
+    "review_status": "pendente_revisao",
+    "source_refs": [
+      "Amado VM, Fernandes CJCDS, Salibe-Filho W, Gazzana MB, Rocha AT, Yoo HHB, Bernardo WM, Tanni S. Brazilian guidelines for the pharmacological treatment of pulmonary embolism. Official document of the Brazilian Thoracic Association based on the GRADE methodology. J Bras Pneumol. 2025;51(2):e20240314. DOI: 10.36416/1806-3756/e20240314. PMCID: PMC12401105 (texto completo em acesso aberto)"
+    ],
+    "itens": [
+      {
+        "id": "tev-doac-escolha",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "DOAC escolhido como anticoagulante de manutenção, preferido sobre o esquema convencional (heparina + varfarina), por no mínimo 3 a 6 meses",
+        "origem_secao": "Escolha do anticoagulante — população geral"
+      },
+      {
+        "id": "tev-doac-renal",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Depuração de creatinina conferida antes de manter o DOAC na alta: evitado se ClCr ≤30 mL/min, exceto apixabana",
+        "origem_secao": "Escolha do anticoagulante — população geral"
+      },
+      {
+        "id": "tev-nao-provocado-extensao",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Se TEV não provocado e tratamento inicial já completo: decisão sobre anticoagulação estendida (DOAC por mais 3-6 meses) registrada, considerando o risco de recorrência de 5,4% a 11% ao ano após suspender",
+        "origem_secao": "Anticoagulação estendida em TEP não provocado"
+      },
+      {
+        "id": "tev-cancer-sitio",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se TEP associado a câncer: escolha do anticoagulante considerou o sítio tumoral, não só a recomendação geral — a diretriz não faz o recorte de sítio que ressalva HBPM sobre DOAC em câncer gastrointestinal/geniturinário",
+        "origem_secao": "Escolha do anticoagulante — TEP associado ao câncer / Armadilhas clínicas"
+      },
+      {
+        "id": "tev-domiciliar",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Se alta precoce/tratamento domiciliar foi indicado: confirmados acesso garantido a serviço de saúde e compreensão do paciente sobre a doença e o uso correto da medicação",
+        "origem_secao": "Tratamento domiciliar em TEP de baixo risco"
+      },
+      {
+        "id": "tev-trombolise-revisao",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Se houve trombólise sistêmica: confirmado que não foi uso rotineiro em risco intermediário-alto sem instabilidade hemodinâmica, cenário em que a recomendação é condicional contra esse uso",
+        "origem_secao": "Trombólise sistêmica — risco intermediário alto"
+      },
+      {
+        "id": "tev-sangramento-mulher-idosa",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Se mulher com mais de 75 anos recebeu trombólise: risco aumentado de sangramento maior registrado e discutido na decisão terapêutica",
+        "origem_secao": "Fator de risco hemorrágico específico mencionado"
+      }
+    ]
   }
 ]

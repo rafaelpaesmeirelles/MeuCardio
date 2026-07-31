@@ -313,5 +313,100 @@
       "Diretriz de síndromes coronarianas agudas da Sociedade Europeia de Cardiologia, 2023",
       "Diretriz brasileira de síndrome coronariana aguda da Sociedade Brasileira de Cardiologia"
     ]
+  },
+  {
+    "slug": "colesterol-alto-e-prevencao-cardiovascular",
+    "titulo": "Colesterol alto",
+    "subtitulo": "Por que baixar o LDL protege as artérias, mesmo sem sintoma nenhum",
+    "tema": "Prevenção e lipídios",
+    "documento_slug": "fluxograma-dislipidemia-meta-de-ldl-e-escalonamento-esc-eas-2025",
+    "review_status": "revisado",
+    "resumo": "Explicação em linguagem simples sobre colesterol alto (dislipidemia), o motivo de tratar mesmo sem sintoma, e as etapas do tratamento segundo a diretriz europeia de 2025.",
+    "secoes": [
+      {
+        "titulo": "O que é o colesterol, e por que ele vira problema",
+        "paragrafos": [
+          "O colesterol é uma gordura que circula no sangue e que o corpo usa para funções normais. O problema não é ter colesterol — é ter LDL-colesterol (o chamado \"colesterol ruim\") em excesso, porque essa é a partícula que tende a se depositar dentro da parede das artérias e formar placas.",
+          "Essas placas são o mesmo processo que, com o tempo, pode estreitar as artérias do coração e levar a um infarto, ou as artérias que irrigam o cérebro e levar a um AVC. Baixar o LDL é, na prática, reduzir a matéria-prima desse depósito."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O problema de não doer",
+        "paragrafos": [
+          "Colesterol alto não dá sintoma. A pessoa se sente bem, e é justamente por isso que o tratamento é fácil de abandonar — não há um mal-estar diário para lembrar de que ele existe.",
+          "O dano, porém, acontece do mesmo jeito, só que devagar e em silêncio, ao longo de anos. Quando aparece o primeiro sinal, às vezes já é o evento que se queria evitar: um infarto, um AVC, ou dor nas pernas ao caminhar por causa de artéria obstruída."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Como o médico decide a sua meta",
+        "paragrafos": [
+          "Não existe uma meta única de LDL para todo mundo — ela depende do seu risco cardiovascular, calculado pelo seu médico."
+        ],
+        "itens": [
+          "Quem já teve infarto, AVC ou tem obstrução conhecida em alguma artéria já entra automaticamente no grupo de risco mais alto, sem precisar de cálculo",
+          "Diabetes com lesão em órgãos, doença renal grave ou colesterol muito alto de causa genética (hipercolesterolemia familiar) também já definem risco alto ou muito alto por conta própria",
+          "Para os demais, o médico calcula o risco de evento cardiovascular nos próximos 10 anos, usando uma ferramenta que leva em conta idade, pressão arterial, colesterol e tabagismo",
+          "Quanto maior o risco calculado, mais baixa precisa ficar a meta de LDL — e em risco alto ou muito alto, a meta não é só um valor: é também reduzir pelo menos metade do valor inicial"
+        ]
+      },
+      {
+        "titulo": "O tratamento, em linhas gerais",
+        "paragrafos": [
+          "Quem define o tratamento é o seu médico, olhando o seu caso. O que ajuda é entender a lógica geral, para acompanhar a conversa da consulta."
+        ],
+        "itens": [
+          "Estatina é o primeiro remédio, na dose mais alta que a pessoa tolerar bem — é a base do tratamento para a maioria",
+          "Se a meta não for atingida só com estatina, o médico pode associar ezetimiba",
+          "Se ainda assim não for suficiente, existem outras opções — como inibidor de PCSK9 ou ácido bempedoico —, reservadas para quando a combinação anterior não bastou ou quando a estatina não é bem tolerada",
+          "Quem sofre um infarto costuma já começar o tratamento mais intenso durante a própria internação, sem esperar a alta"
+        ]
+      },
+      {
+        "titulo": "O que não tem efeito comprovado",
+        "paragrafos": [
+          "A diretriz é explícita quanto a isso: suplementos alimentares e vitaminas não têm indicação para reduzir o LDL nem o risco cardiovascular. Não é falta de estudo — é uma recomendação formal contra o uso com essa finalidade. Vale conversar com o médico antes de trocar ou complementar o remédio prescrito por algum produto vendido com essa promessa."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que ajuda além do remédio",
+        "paragrafos": [],
+        "itens": [
+          "Alimentação com mais alimentos naturais e menos industrializados",
+          "Atividade física regular",
+          "Manter peso adequado",
+          "Parar de fumar",
+          "Tratar outras condições que somam risco, como pressão alta e diabetes"
+        ]
+      },
+      {
+        "titulo": "Sobre tomar o remédio",
+        "paragrafos": [
+          "O tratamento do colesterol costuma ser para o resto da vida, não um curso de algumas semanas. Sentir-se bem não quer dizer que ele deixou de ser necessário — quer dizer que ele está funcionando.",
+          "Se algo incomodar, o caminho é conversar com o médico sobre trocar ou ajustar, e não interromper por conta própria."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Dor ou aperto no peito que dura mais que alguns minutos e não melhora com repouso — chame a emergência",
+      "Fraqueza ou dormência súbita de um lado do corpo, boca torta, dificuldade de falar ou de entender — procure emergência imediatamente, é sinal de derrame",
+      "Dor nas pernas ao caminhar, que obriga a parar e melhora com o repouso, principalmente se for nova",
+      "Falta de ar súbita e intensa",
+      "Dor muscular importante, urina escura ou pele e olhos amarelados enquanto estiver em uso de estatina — não pare por conta própria, mas avise seu médico"
+    ],
+    "perguntas": [
+      "Qual é a minha categoria de risco cardiovascular e qual é a minha meta de LDL?",
+      "Eu preciso de estatina? Por quanto tempo devo usá-la?",
+      "Já vale a pena medir minha lipoproteína(a)?",
+      "O que fazer se eu sentir algum efeito indesejado com o remédio?",
+      "Suplemento ou vitamina tem algum papel no meu caso?"
+    ],
+    "fontes": [
+      "Atualização focada 2025 das diretrizes ESC/EAS para manejo de dislipidemias, Sociedade Europeia de Cardiologia",
+      "Diretriz ESC/EAS 2019 para manejo de dislipidemias, Sociedade Europeia de Cardiologia"
+    ]
   }
 ]

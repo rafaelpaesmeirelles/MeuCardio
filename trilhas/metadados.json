@@ -7,28 +7,72 @@
     "nivel": "intermediario",
     "review_status": "pendente_revisao",
     "etapas": [
-      {"ordem": 1, "item_type": "documento", "item_slug": "icfer-classificacao-diagnostico-quatro-pilares",
-       "por_que": "Começa aqui porque tudo o que vem depois se apoia na classificação por fração de ejeção e nos quatro pilares. Sem esta base, o resto vira lista de fármacos soltos."},
-      {"ordem": 2, "item_type": "documento", "item_slug": "fluxograma-insuficiencia-cardiaca-cronica-por-fracao-de-ejecao-esc-2023",
-       "por_que": "O mesmo conteúdo em árvore de decisão. Ver o protocolo e o fluxograma em sequência fixa o caminho melhor do que ler qualquer um dos dois duas vezes."},
-      {"ordem": 3, "item_type": "estudo", "item_slug": "paradigm-hf-sacubitril-valsartana-icfer",
-       "por_que": "O ensaio que colocou o sacubitril-valsartana à frente do IECA. É o primeiro pilar, e conhecer o desenho do estudo explica por que a substituição é preferencial e não opcional."},
-      {"ordem": 4, "item_type": "medicamento", "item_slug": "sacubitrilvalsartana",
-       "por_que": "Do ensaio para a prescrição: dose, titulação e a janela de 36 horas ao vir de um IECA — o detalhe que mais causa evento adverso evitável nesta troca."},
-      {"ordem": 5, "item_type": "medicamento", "item_slug": "carvedilol",
-       "por_que": "Segundo pilar. Escolhido como representante porque o ponto que importa é que apenas alguns betabloqueadores têm evidência em ICFEr, e não a classe inteira."},
-      {"ordem": 6, "item_type": "medicamento", "item_slug": "espironolactona",
-       "por_que": "Terceiro pilar. Aqui entra também o que limita o uso na prática: função renal e potássio."},
-      {"ordem": 7, "item_type": "estudo", "item_slug": "dapa-hf-dapagliflozina-icfer",
-       "por_que": "O quarto pilar é o mais recente, e o DAPA-HF é o que mostra que o benefício aparece cedo e independe de diabetes — que é a dúvida mais comum de quem está começando a prescrever."},
-      {"ordem": 8, "item_type": "medicamento", "item_slug": "dapagliflozina",
-       "por_que": "Fecha o quarto pilar do lado da prescrição."},
-      {"ordem": 9, "item_type": "documento", "item_slug": "atualizacao-focada-2023-das-diretrizes-esc-2021-de-insuficiencia-cardiaca",
-       "por_que": "O que mudou depois dos quatro pilares: iSGLT2 em todo o espectro de fração de ejeção, ferro endovenoso e a titulação rápida pré-alta."},
-      {"ordem": 10, "item_type": "documento", "item_slug": "safety-tolerability-and-efficacy-of-up-titration-of-guideline-directed-medical-therapies-for-acute-heart-failure-strong-hf",
-       "por_que": "O STRONG-HF é o que transforma 'prescrever certo' em 'titular a tempo'. Termina a trilha porque é onde o conhecimento vira mudança de rotina assistencial."},
-      {"ordem": 11, "item_type": "checklist", "item_slug": "alta-pos-insuficiencia-cardiaca-descompensada",
-       "por_que": "Aplicação prática: o checklist de alta reúne, em forma de conferência, tudo o que a trilha percorreu."}
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "icfer-classificacao-diagnostico-quatro-pilares",
+        "por_que": "Começa aqui porque tudo o que vem depois se apoia na classificação por fração de ejeção e nos quatro pilares. Sem esta base, o resto vira lista de fármacos soltos."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "fluxograma-insuficiencia-cardiaca-cronica-por-fracao-de-ejecao-esc-2023",
+        "por_que": "O mesmo conteúdo em árvore de decisão. Ver o protocolo e o fluxograma em sequência fixa o caminho melhor do que ler qualquer um dos dois duas vezes."
+      },
+      {
+        "ordem": 3,
+        "item_type": "estudo",
+        "item_slug": "paradigm-hf-sacubitril-valsartana-icfer",
+        "por_que": "O ensaio que colocou o sacubitril-valsartana à frente do IECA. É o primeiro pilar, e conhecer o desenho do estudo explica por que a substituição é preferencial e não opcional."
+      },
+      {
+        "ordem": 4,
+        "item_type": "medicamento",
+        "item_slug": "sacubitrilvalsartana",
+        "por_que": "Do ensaio para a prescrição: dose, titulação e a janela de 36 horas ao vir de um IECA — o detalhe que mais causa evento adverso evitável nesta troca."
+      },
+      {
+        "ordem": 5,
+        "item_type": "medicamento",
+        "item_slug": "carvedilol",
+        "por_que": "Segundo pilar. Escolhido como representante porque o ponto que importa é que apenas alguns betabloqueadores têm evidência em ICFEr, e não a classe inteira."
+      },
+      {
+        "ordem": 6,
+        "item_type": "medicamento",
+        "item_slug": "espironolactona",
+        "por_que": "Terceiro pilar. Aqui entra também o que limita o uso na prática: função renal e potássio."
+      },
+      {
+        "ordem": 7,
+        "item_type": "estudo",
+        "item_slug": "dapa-hf-dapagliflozina-icfer",
+        "por_que": "O quarto pilar é o mais recente, e o DAPA-HF é o que mostra que o benefício aparece cedo e independe de diabetes — que é a dúvida mais comum de quem está começando a prescrever."
+      },
+      {
+        "ordem": 8,
+        "item_type": "medicamento",
+        "item_slug": "dapagliflozina",
+        "por_que": "Fecha o quarto pilar do lado da prescrição."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "atualizacao-focada-2023-das-diretrizes-esc-2021-de-insuficiencia-cardiaca",
+        "por_que": "O que mudou depois dos quatro pilares: iSGLT2 em todo o espectro de fração de ejeção, ferro endovenoso e a titulação rápida pré-alta."
+      },
+      {
+        "ordem": 10,
+        "item_type": "documento",
+        "item_slug": "safety-tolerability-and-efficacy-of-up-titration-of-guideline-directed-medical-therapies-for-acute-heart-failure-strong-hf",
+        "por_que": "O STRONG-HF é o que transforma 'prescrever certo' em 'titular a tempo'. Termina a trilha porque é onde o conhecimento vira mudança de rotina assistencial."
+      },
+      {
+        "ordem": 11,
+        "item_type": "checklist",
+        "item_slug": "alta-pos-insuficiencia-cardiaca-descompensada",
+        "por_que": "Aplicação prática: o checklist de alta reúne, em forma de conferência, tudo o que a trilha percorreu."
+      }
     ]
   },
   {
@@ -39,22 +83,54 @@
     "nivel": "intermediario",
     "review_status": "pendente_revisao",
     "etapas": [
-      {"ordem": 1, "item_type": "documento", "item_slug": "fibrilacao-atrial-diagnostico-e-manejo-esc-2024-via-af-care",
-       "por_que": "O AF-CARE inverte a ordem tradicional: comorbidade antes de ritmo. Começar por aqui evita o erro mais comum, que é ir direto para a decisão de anticoagular."},
-      {"ordem": 2, "item_type": "documento", "item_slug": "fluxograma-fibrilacao-atrial-af-care-esc-2024",
-       "por_que": "O mesmo caminho em árvore de decisão."},
-      {"ordem": 3, "item_type": "calculadora", "item_slug": "cha2ds2-vasc",
-       "por_que": "A calculadora disponível hoje. Atenção ao que a diretriz de 2024 mudou: o escore passou a ser CHA₂DS₂-VA, sem o ponto de sexo feminino — ver o documento do escore na Biblioteca."},
-      {"ordem": 4, "item_type": "calculadora", "item_slug": "has-bled",
-       "por_que": "Entra aqui para ser usado do jeito certo: identificar fator modificável, e não para decidir contra anticoagular."},
-      {"ordem": 5, "item_type": "estudo", "item_slug": "re-ly-dabigatrana-fibrilacao-atrial",
-       "por_que": "O ensaio que abriu a era dos anticoagulantes orais diretos em FA, e a referência para entender por que a varfarina deixou de ser primeira escolha fora da prótese mecânica."},
-      {"ordem": 6, "item_type": "medicamento", "item_slug": "dabigatrana-etexilato",
-       "por_que": "Do ensaio para a prescrição, com atenção ao ajuste por função renal — que é onde este verbete tinha erro de dose até a auditoria de julho de 2026."},
-      {"ordem": 7, "item_type": "documento", "item_slug": "ablacao-por-cateter-em-fibrilacao-atrial-indicacoes-e-tecnica",
-       "por_que": "Fecha com a decisão de ritmo, incluindo a divergência ainda em aberto sobre ablação em primeira linha — que é útil ver declarada em vez de escondida."},
-      {"ordem": 8, "item_type": "checklist", "item_slug": "alta-pos-fibrilacao-atrial",
-       "por_que": "Aplicação prática do que a trilha percorreu."}
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "fibrilacao-atrial-diagnostico-e-manejo-esc-2024-via-af-care",
+        "por_que": "O AF-CARE inverte a ordem tradicional: comorbidade antes de ritmo. Começar por aqui evita o erro mais comum, que é ir direto para a decisão de anticoagular."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "fluxograma-fibrilacao-atrial-af-care-esc-2024",
+        "por_que": "O mesmo caminho em árvore de decisão."
+      },
+      {
+        "ordem": 3,
+        "item_type": "calculadora",
+        "item_slug": "cha2ds2-vasc",
+        "por_que": "A calculadora disponível hoje. Atenção ao que a diretriz de 2024 mudou: o escore passou a ser CHA₂DS₂-VA, sem o ponto de sexo feminino — ver o documento do escore na Biblioteca."
+      },
+      {
+        "ordem": 4,
+        "item_type": "calculadora",
+        "item_slug": "has-bled",
+        "por_que": "Entra aqui para ser usado do jeito certo: identificar fator modificável, e não para decidir contra anticoagular."
+      },
+      {
+        "ordem": 5,
+        "item_type": "estudo",
+        "item_slug": "re-ly-dabigatrana-fibrilacao-atrial",
+        "por_que": "O ensaio que abriu a era dos anticoagulantes orais diretos em FA, e a referência para entender por que a varfarina deixou de ser primeira escolha fora da prótese mecânica."
+      },
+      {
+        "ordem": 6,
+        "item_type": "medicamento",
+        "item_slug": "dabigatrana-etexilato",
+        "por_que": "Do ensaio para a prescrição, com atenção ao ajuste por função renal — que é onde este verbete tinha erro de dose até a auditoria de julho de 2026."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "ablacao-por-cateter-em-fibrilacao-atrial-indicacoes-e-tecnica",
+        "por_que": "Fecha com a decisão de ritmo, incluindo a divergência ainda em aberto sobre ablação em primeira linha — que é útil ver declarada em vez de escondida."
+      },
+      {
+        "ordem": 8,
+        "item_type": "checklist",
+        "item_slug": "alta-pos-fibrilacao-atrial",
+        "por_que": "Aplicação prática do que a trilha percorreu."
+      }
     ]
   },
   {
@@ -65,22 +141,54 @@
     "nivel": "intermediario",
     "review_status": "pendente_revisao",
     "etapas": [
-      {"ordem": 1, "item_type": "documento", "item_slug": "sindrome-coronariana-aguda-diagnostico-e-manejo-esc-2023",
-       "por_que": "A visão unificada do espectro. A diretriz de 2023 juntou STEMI e sem supra num documento só, e entender isso muda a forma de raciocinar sobre o caso."},
-      {"ordem": 2, "item_type": "calculadora", "item_slug": "grace",
-       "por_que": "O escore que decide o tempo da angiografia. GRACE acima de 140 é um dos três critérios de alto risco."},
-      {"ordem": 3, "item_type": "calculadora", "item_slug": "heart",
-       "por_que": "Para o outro extremo do problema: a dor torácica no pronto-socorro que ainda não é síndrome coronariana definida."},
-      {"ordem": 4, "item_type": "documento", "item_slug": "sindrome-coronariana-aguda-timing-invasivo-e-dapt-esc-2023",
-       "por_que": "Os três prazos — imediata, precoce e seletiva — com os critérios de cada um. É o núcleo da decisão."},
-      {"ordem": 5, "item_type": "documento", "item_slug": "fluxograma-sindrome-coronariana-aguda-esc-2023",
-       "por_que": "O mesmo raciocínio em árvore de decisão."},
-      {"ordem": 6, "item_type": "documento", "item_slug": "sindrome-coronariana-aguda-duracao-de-dapt-complemento-final",
-       "por_que": "A dupla antiagregação depois do procedimento: duração padrão, quando encurtar e quando desescalonar."},
-      {"ordem": 7, "item_type": "documento", "item_slug": "stemi-estrategia-de-reperfusao-esc-2023",
-       "por_que": "O recorte do supra de ST, onde o tempo é o tratamento."},
-      {"ordem": 8, "item_type": "checklist", "item_slug": "alta-pos-sindrome-coronariana-aguda",
-       "por_que": "Fecha onde a internação termina — inclusive a intensificação do hipolipemiante ainda na internação índice, que é o item mais esquecido."}
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "sindrome-coronariana-aguda-diagnostico-e-manejo-esc-2023",
+        "por_que": "A visão unificada do espectro. A diretriz de 2023 juntou STEMI e sem supra num documento só, e entender isso muda a forma de raciocinar sobre o caso."
+      },
+      {
+        "ordem": 2,
+        "item_type": "calculadora",
+        "item_slug": "grace",
+        "por_que": "O escore que decide o tempo da angiografia. GRACE acima de 140 é um dos três critérios de alto risco."
+      },
+      {
+        "ordem": 3,
+        "item_type": "calculadora",
+        "item_slug": "heart",
+        "por_que": "Para o outro extremo do problema: a dor torácica no pronto-socorro que ainda não é síndrome coronariana definida."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "sindrome-coronariana-aguda-timing-invasivo-e-dapt-esc-2023",
+        "por_que": "Os três prazos — imediata, precoce e seletiva — com os critérios de cada um. É o núcleo da decisão."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "fluxograma-sindrome-coronariana-aguda-esc-2023",
+        "por_que": "O mesmo raciocínio em árvore de decisão."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "sindrome-coronariana-aguda-duracao-de-dapt-complemento-final",
+        "por_que": "A dupla antiagregação depois do procedimento: duração padrão, quando encurtar e quando desescalonar."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "stemi-estrategia-de-reperfusao-esc-2023",
+        "por_que": "O recorte do supra de ST, onde o tempo é o tratamento."
+      },
+      {
+        "ordem": 8,
+        "item_type": "checklist",
+        "item_slug": "alta-pos-sindrome-coronariana-aguda",
+        "por_que": "Fecha onde a internação termina — inclusive a intensificação do hipolipemiante ainda na internação índice, que é o item mais esquecido."
+      }
     ]
   },
   {
@@ -91,28 +199,72 @@
     "nivel": "intermediario",
     "review_status": "pendente_revisao",
     "etapas": [
-      {"ordem": 1, "item_type": "documento", "item_slug": "hipertensao-arterial-diagnostico-e-manejo-esc-2024esh-2023",
-       "por_que": "A base: classificação, diagnóstico e as metas atuais segundo ESC 2024/ESH 2023."},
-      {"ordem": 2, "item_type": "documento", "item_slug": "fluxograma-hipertensao-arterial-esc-2024",
-       "por_que": "O mesmo caminho em árvore de decisão, da medida ao alvo terapêutico."},
-      {"ordem": 3, "item_type": "medicamento", "item_slug": "losartana-potassica",
-       "por_que": "Classe de primeira linha mais usada — dose, apresentação e ajuste renal na prática."},
-      {"ordem": 4, "item_type": "medicamento", "item_slug": "anlodipino-besilato",
-       "por_que": "Segunda classe de primeira linha, frequentemente combinada com a anterior em comprimido único."},
-      {"ordem": 5, "item_type": "documento", "item_slug": "hipertensao-do-avental-branco-nao-tratada-nao-e-inofensiva",
-       "por_que": "A primeira armadilha: hipertensão do avental branco não tratada tem risco cardiovascular real, não é hipertensão 'menos grave'."},
-      {"ordem": 6, "item_type": "documento", "item_slug": "hipertensao-mascarada-prognostico-real-e-por-que-nao-e-hipertensao-leve",
-       "por_que": "A segunda armadilha, do lado oposto: pressão normal no consultório pode esconder hipertensão real fora dele."},
-      {"ordem": 7, "item_type": "documento", "item_slug": "sprint-controle-intensivo-da-pressao-arterial-e-a-armadilha-da-medida-nao-observada",
-       "por_que": "A evidência por trás da meta pressórica mais baixa — e o detalhe metodológico (medida não observada) que muda como interpretar o número do estudo na prática."},
-      {"ordem": 8, "item_type": "documento", "item_slug": "emergencia-hipertensiva-e-triagem-de-hipertensao-secundaria",
-       "por_que": "Quando suspeitar e investigar causa secundária, e como conduzir a emergência hipertensiva."},
-      {"ordem": 9, "item_type": "medicamento", "item_slug": "indapamida",
-       "por_que": "O diurético tiazídico-símile mais usado como terceiro agente na terapia combinada."},
-      {"ordem": 10, "item_type": "documento", "item_slug": "denervacao-renal-na-hipertensao-resistente-symplicity-htn-3-e-spyral-htn-on-med",
-       "por_que": "Hipertensão resistente confirmada: a opção intervencionista e a evidência que a sustenta."},
-      {"ordem": 11, "item_type": "documento", "item_slug": "baxdrostat-inibidor-da-aldosterona-sintase-o-ensaio-brightn",
-       "por_que": "Fecha com a classe farmacológica mais nova em desenvolvimento para o mesmo problema — para saber que a hipertensão resistente não para na espironolactona e na denervação."}
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "hipertensao-arterial-diagnostico-e-manejo-esc-2024esh-2023",
+        "por_que": "A base: classificação, diagnóstico e as metas atuais segundo ESC 2024/ESH 2023."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "fluxograma-hipertensao-arterial-esc-2024",
+        "por_que": "O mesmo caminho em árvore de decisão, da medida ao alvo terapêutico."
+      },
+      {
+        "ordem": 3,
+        "item_type": "medicamento",
+        "item_slug": "losartana-potassica",
+        "por_que": "Classe de primeira linha mais usada — dose, apresentação e ajuste renal na prática."
+      },
+      {
+        "ordem": 4,
+        "item_type": "medicamento",
+        "item_slug": "anlodipino-besilato",
+        "por_que": "Segunda classe de primeira linha, frequentemente combinada com a anterior em comprimido único."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "hipertensao-do-avental-branco-nao-tratada-nao-e-inofensiva",
+        "por_que": "A primeira armadilha: hipertensão do avental branco não tratada tem risco cardiovascular real, não é hipertensão 'menos grave'."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "hipertensao-mascarada-prognostico-real-e-por-que-nao-e-hipertensao-leve",
+        "por_que": "A segunda armadilha, do lado oposto: pressão normal no consultório pode esconder hipertensão real fora dele."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "sprint-controle-intensivo-da-pressao-arterial-e-a-armadilha-da-medida-nao-observada",
+        "por_que": "A evidência por trás da meta pressórica mais baixa — e o detalhe metodológico (medida não observada) que muda como interpretar o número do estudo na prática."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "emergencia-hipertensiva-e-triagem-de-hipertensao-secundaria",
+        "por_que": "Quando suspeitar e investigar causa secundária, e como conduzir a emergência hipertensiva."
+      },
+      {
+        "ordem": 9,
+        "item_type": "medicamento",
+        "item_slug": "indapamida",
+        "por_que": "O diurético tiazídico-símile mais usado como terceiro agente na terapia combinada."
+      },
+      {
+        "ordem": 10,
+        "item_type": "documento",
+        "item_slug": "denervacao-renal-na-hipertensao-resistente-symplicity-htn-3-e-spyral-htn-on-med",
+        "por_que": "Hipertensão resistente confirmada: a opção intervencionista e a evidência que a sustenta."
+      },
+      {
+        "ordem": 11,
+        "item_type": "documento",
+        "item_slug": "baxdrostat-inibidor-da-aldosterona-sintase-o-ensaio-brightn",
+        "por_que": "Fecha com a classe farmacológica mais nova em desenvolvimento para o mesmo problema — para saber que a hipertensão resistente não para na espironolactona e na denervação."
+      }
     ]
   },
   {
@@ -123,16 +275,36 @@
     "nivel": "intermediario",
     "review_status": "pendente_revisao",
     "etapas": [
-      {"ordem": 1, "item_type": "documento", "item_slug": "icfep-diagnostico-e-terapias-avancadas-lvad-e-transplante",
-       "por_que": "O diagnóstico é o passo mais difícil na ICFEp — começa pelos escores H2FPEF/HFA-PEFF, sem os quais o resto da trilha não tem paciente para aplicar."},
-      {"ordem": 2, "item_type": "documento", "item_slug": "inibidores-de-sglt2-na-icfep-empagliflozina-emperor-preserved-e-dapagliflozina-deliver",
-       "por_que": "A primeira classe com evidência de desfecho de mortalidade/hospitalização na ICFEp — diferente da ICFEr, onde o SGLT2i é só um dos quatro pilares."},
-      {"ordem": 3, "item_type": "documento", "item_slug": "finerenona-na-icfep-e-icfelr-o-ensaio-finearts-hf",
-       "por_que": "A segunda classe, mais recente — e a diferença que importa: o benefício veio de reduzir eventos de piora da IC, não de mortalidade cardiovascular isolada."},
-      {"ordem": 4, "item_type": "documento", "item_slug": "tirzepatida-e-icfep-com-obesidade-o-ensaio-summit",
-       "por_que": "O fenótipo de obesidade é subgrupo relevante e cada vez mais reconhecido — aqui entra o tratamento dirigido a ele especificamente."},
-      {"ordem": 5, "item_type": "documento", "item_slug": "fragilidade-na-insuficiencia-cardiaca-metanalise-de-denfeld",
-       "por_que": "Fecha com um lembrete transversal a todo fenótipo de IC: fragilidade afeta quase metade dos pacientes e não se prevê pela idade nem pela classe funcional — informação que muda a decisão sobre terapia avançada."}
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "icfep-diagnostico-e-terapias-avancadas-lvad-e-transplante",
+        "por_que": "O diagnóstico é o passo mais difícil na ICFEp — começa pelos escores H2FPEF/HFA-PEFF, sem os quais o resto da trilha não tem paciente para aplicar."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "inibidores-de-sglt2-na-icfep-empagliflozina-emperor-preserved-e-dapagliflozina-deliver",
+        "por_que": "A primeira classe com evidência de desfecho de mortalidade/hospitalização na ICFEp — diferente da ICFEr, onde o SGLT2i é só um dos quatro pilares."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "finerenona-na-icfep-e-icfelr-o-ensaio-finearts-hf",
+        "por_que": "A segunda classe, mais recente — e a diferença que importa: o benefício veio de reduzir eventos de piora da IC, não de mortalidade cardiovascular isolada."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "tirzepatida-e-icfep-com-obesidade-o-ensaio-summit",
+        "por_que": "O fenótipo de obesidade é subgrupo relevante e cada vez mais reconhecido — aqui entra o tratamento dirigido a ele especificamente."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "fragilidade-na-insuficiencia-cardiaca-metanalise-de-denfeld",
+        "por_que": "Fecha com um lembrete transversal a todo fenótipo de IC: fragilidade afeta quase metade dos pacientes e não se prevê pela idade nem pela classe funcional — informação que muda a decisão sobre terapia avançada."
+      }
     ]
   },
   {
@@ -143,22 +315,54 @@
     "nivel": "intermediario",
     "review_status": "pendente_revisao",
     "etapas": [
-      {"ordem": 1, "item_type": "documento", "item_slug": "escore-de-wells-dvt-e-embolia-pulmonar-criterios-completos",
-       "por_que": "Antes de qualquer exame de imagem, a probabilidade pré-teste é o que decide o próximo passo — e é onde mais se erra por pular direto para o D-dímero."},
-      {"ordem": 2, "item_type": "documento", "item_slug": "trombose-venosa-profunda-diagnostico-e-tratamento",
-       "por_que": "TVP: diagnóstico e tratamento, incluindo quando considerar filtro de veia cava (e quando não)."},
-      {"ordem": 3, "item_type": "documento", "item_slug": "fluxograma-tromboembolismo-pulmonar-diagnostico-esc-2019",
-       "por_que": "TEP em árvore de decisão — o mesmo raciocínio de estratificação aplicado ao pulmão."},
-      {"ordem": 4, "item_type": "documento", "item_slug": "pesi-e-spesi-escore-de-gravidade-do-tromboembolismo-pulmonar",
-       "por_que": "Depois de diagnosticar o TEP, este escore decide gravidade e local de tratamento — ambulatorial ou internado."},
-      {"ordem": 5, "item_type": "documento", "item_slug": "tratamento-farmacologico-do-tep-diretriz-brasileira-sbpt-2025-grade",
-       "por_que": "A diretriz brasileira mais recente sobre qual anticoagulante e por quanto tempo, com o método GRADE explicitado."},
-      {"ordem": 6, "item_type": "documento", "item_slug": "regra-herdoo2-duracao-da-anticoagulacao-apos-tev-nao-provocado-em-mulheres",
-       "por_que": "A pergunta que fica depois do tratamento inicial: dá para suspender? Regra validada especificamente para essa decisão em mulheres com TEV não provocado."},
-      {"ordem": 7, "item_type": "documento", "item_slug": "reversao-de-anticoagulante-em-sangramento-maior-idarucizumabe-e-andexanet-alfa",
-       "por_que": "O lado da segurança: o que fazer quando o paciente anticoagulado sangra."},
-      {"ordem": 8, "item_type": "documento", "item_slug": "trombose-associada-ao-cancer-escore-de-khorana-e-escolha-de-anticoagulante",
-       "por_que": "Fecha com a população especial mais comum na prática — câncer muda tanto o risco quanto a escolha do anticoagulante."}
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "escore-de-wells-dvt-e-embolia-pulmonar-criterios-completos",
+        "por_que": "Antes de qualquer exame de imagem, a probabilidade pré-teste é o que decide o próximo passo — e é onde mais se erra por pular direto para o D-dímero."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "trombose-venosa-profunda-diagnostico-e-tratamento",
+        "por_que": "TVP: diagnóstico e tratamento, incluindo quando considerar filtro de veia cava (e quando não)."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "fluxograma-tromboembolismo-pulmonar-diagnostico-esc-2019",
+        "por_que": "TEP em árvore de decisão — o mesmo raciocínio de estratificação aplicado ao pulmão."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "pesi-e-spesi-escore-de-gravidade-do-tromboembolismo-pulmonar",
+        "por_que": "Depois de diagnosticar o TEP, este escore decide gravidade e local de tratamento — ambulatorial ou internado."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "tratamento-farmacologico-do-tep-diretriz-brasileira-sbpt-2025-grade",
+        "por_que": "A diretriz brasileira mais recente sobre qual anticoagulante e por quanto tempo, com o método GRADE explicitado."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "regra-herdoo2-duracao-da-anticoagulacao-apos-tev-nao-provocado-em-mulheres",
+        "por_que": "A pergunta que fica depois do tratamento inicial: dá para suspender? Regra validada especificamente para essa decisão em mulheres com TEV não provocado."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "reversao-de-anticoagulante-em-sangramento-maior-idarucizumabe-e-andexanet-alfa",
+        "por_que": "O lado da segurança: o que fazer quando o paciente anticoagulado sangra."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "trombose-associada-ao-cancer-escore-de-khorana-e-escolha-de-anticoagulante",
+        "por_que": "Fecha com a população especial mais comum na prática — câncer muda tanto o risco quanto a escolha do anticoagulante."
+      }
     ]
   },
   {
@@ -169,24 +373,60 @@
     "nivel": "intermediario",
     "review_status": "pendente_revisao",
     "etapas": [
-      {"ordem": 1, "item_type": "documento", "item_slug": "doenca-cardiovascular-em-pacientes-com-diabetes-estratificacao-de-risco-e-manejo-esc-2023",
-       "por_que": "A virada conceitual que sustenta toda a trilha: no diabetes tipo 2, a escolha de classe farmacológica passou a ser guiada por proteção cardiovascular, não só por controle glicêmico."},
-      {"ordem": 2, "item_type": "documento", "item_slug": "fluxograma-diabetes-e-doenca-cardiovascular-esc-2023",
-       "por_que": "O mesmo raciocínio em árvore de decisão — da estratificação de risco à escolha de classe."},
-      {"ordem": 3, "item_type": "documento", "item_slug": "inibidores-de-sglt2-e-protecao-cardiovascular-empa-reg-outcome-e-declare-timi-58",
-       "por_que": "A primeira classe com evidência de proteção cardiovascular robusta, independente de HbA1c."},
-      {"ordem": 4, "item_type": "medicamento", "item_slug": "empagliflozina",
-       "por_que": "Do ensaio para a prescrição: dose e ajuste na prática."},
-      {"ordem": 5, "item_type": "documento", "item_slug": "agonistas-do-receptor-de-glp-1-e-protecao-cardiovascular-leader-sustain-6-rewind",
-       "por_que": "A segunda classe com proteção cardiovascular demonstrada — mecanismo distinto do SGLT2i, e não intercambiável com ele na indicação."},
-      {"ordem": 6, "item_type": "medicamento", "item_slug": "semaglutida",
-       "por_que": "Representante da classe GLP-1 na prescrição."},
-      {"ordem": 7, "item_type": "documento", "item_slug": "finerenona-fidelio-dkd-figaro-dkd-e-a-fidelity",
-       "por_que": "A terceira classe, para o subgrupo com doença renal crônica associada — mecanismo e indicação próprios, não substitui as duas anteriores."},
-      {"ordem": 8, "item_type": "medicamento", "item_slug": "finerenona",
-       "por_que": "Fecha o pilar farmacológico com a prescrição da terceira classe."},
-      {"ordem": 9, "item_type": "documento", "item_slug": "diabetes-tipo-1-e-risco-cardiovascular-idade-de-inicio-e-registro-sueco",
-       "por_que": "Fecha a trilha com o diabetes tipo 1 — risco cardiovascular real e fortemente dependente da idade de início, tema que a diretriz de 2023 (majoritariamente sobre tipo 2) não cobre em profundidade."}
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "doenca-cardiovascular-em-pacientes-com-diabetes-estratificacao-de-risco-e-manejo-esc-2023",
+        "por_que": "A virada conceitual que sustenta toda a trilha: no diabetes tipo 2, a escolha de classe farmacológica passou a ser guiada por proteção cardiovascular, não só por controle glicêmico."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "fluxograma-diabetes-e-doenca-cardiovascular-esc-2023",
+        "por_que": "O mesmo raciocínio em árvore de decisão — da estratificação de risco à escolha de classe."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "inibidores-de-sglt2-e-protecao-cardiovascular-empa-reg-outcome-e-declare-timi-58",
+        "por_que": "A primeira classe com evidência de proteção cardiovascular robusta, independente de HbA1c."
+      },
+      {
+        "ordem": 4,
+        "item_type": "medicamento",
+        "item_slug": "empagliflozina",
+        "por_que": "Do ensaio para a prescrição: dose e ajuste na prática."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "agonistas-do-receptor-de-glp-1-e-protecao-cardiovascular-leader-sustain-6-rewind",
+        "por_que": "A segunda classe com proteção cardiovascular demonstrada — mecanismo distinto do SGLT2i, e não intercambiável com ele na indicação."
+      },
+      {
+        "ordem": 6,
+        "item_type": "medicamento",
+        "item_slug": "semaglutida",
+        "por_que": "Representante da classe GLP-1 na prescrição."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "finerenona-fidelio-dkd-figaro-dkd-e-a-fidelity",
+        "por_que": "A terceira classe, para o subgrupo com doença renal crônica associada — mecanismo e indicação próprios, não substitui as duas anteriores."
+      },
+      {
+        "ordem": 8,
+        "item_type": "medicamento",
+        "item_slug": "finerenona",
+        "por_que": "Fecha o pilar farmacológico com a prescrição da terceira classe."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "diabetes-tipo-1-e-risco-cardiovascular-idade-de-inicio-e-registro-sueco",
+        "por_que": "Fecha a trilha com o diabetes tipo 1 — risco cardiovascular real e fortemente dependente da idade de início, tema que a diretriz de 2023 (majoritariamente sobre tipo 2) não cobre em profundidade."
+      }
     ]
   },
   {
@@ -197,22 +437,54 @@
     "nivel": "avançado",
     "review_status": "pendente_revisao",
     "etapas": [
-      {"ordem": 1, "item_type": "documento", "item_slug": "fluxograma-hipertensao-pulmonar-diagnostico-esc-ers-2022",
-       "por_que": "O algoritmo diagnóstico em três passos é o ponto de partida de toda a hipertensão pulmonar — sem ele, a classificação em grupos não tem base."},
-      {"ordem": 2, "item_type": "documento", "item_slug": "hipertensao-pulmonar-diagnostico-e-tratamento-escers-2022-versao-completa",
-       "por_que": "A versão completa do protocolo, para quem passou pelo fluxograma e precisa do detalhe de cada classe de tratamento."},
-      {"ordem": 3, "item_type": "documento", "item_slug": "estratificacao-de-risco-e-terapia-combinada-inicial-na-hipertensao-arterial-pulmonar",
-       "por_que": "Na HAP (grupo 1), a decisão de terapia inicial combinada já na primeira consulta é o que mais mudou na prática recente."},
-      {"ordem": 4, "item_type": "documento", "item_slug": "escore-reveal-2-0-estratificacao-de-risco-e-sobrevida-na-hap",
-       "por_que": "Ferramenta de estratificação de risco alternativa à abordagem ESC/ERS, com desempenho comparativo medido diretamente contra ela."},
-      {"ordem": 5, "item_type": "medicamento", "item_slug": "sildenafila-citrato",
-       "por_que": "Classe farmacológica de uso mais amplo na HAP, incluindo fora da cardiologia — vale saber a dose e a interação crítica com nitrato."},
-      {"ordem": 6, "item_type": "medicamento", "item_slug": "bosentana",
-       "por_que": "Representante da classe de antagonistas do receptor de endotelina, com monitorização hepática própria."},
-      {"ordem": 7, "item_type": "documento", "item_slug": "sotatercepte-o-ensaio-de-fase-3-stellar",
-       "por_que": "A classe mais nova, com mecanismo de ação inteiramente distinto das anteriores — via da ativina, não vasodilatação."},
-      {"ordem": 8, "item_type": "documento", "item_slug": "hipertensao-pulmonar-tromboembolica-cronica-cteph-e-criterios-de-transplante-pulmonar",
-       "por_que": "Fecha com o grupo 4 — a única forma de hipertensão pulmonar potencialmente curável por cirurgia (endarterectomia), o que muda toda a lógica de investigação."}
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "fluxograma-hipertensao-pulmonar-diagnostico-esc-ers-2022",
+        "por_que": "O algoritmo diagnóstico em três passos é o ponto de partida de toda a hipertensão pulmonar — sem ele, a classificação em grupos não tem base."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "hipertensao-pulmonar-diagnostico-e-tratamento-escers-2022-versao-completa",
+        "por_que": "A versão completa do protocolo, para quem passou pelo fluxograma e precisa do detalhe de cada classe de tratamento."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "estratificacao-de-risco-e-terapia-combinada-inicial-na-hipertensao-arterial-pulmonar",
+        "por_que": "Na HAP (grupo 1), a decisão de terapia inicial combinada já na primeira consulta é o que mais mudou na prática recente."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "escore-reveal-2-0-estratificacao-de-risco-e-sobrevida-na-hap",
+        "por_que": "Ferramenta de estratificação de risco alternativa à abordagem ESC/ERS, com desempenho comparativo medido diretamente contra ela."
+      },
+      {
+        "ordem": 5,
+        "item_type": "medicamento",
+        "item_slug": "sildenafila-citrato",
+        "por_que": "Classe farmacológica de uso mais amplo na HAP, incluindo fora da cardiologia — vale saber a dose e a interação crítica com nitrato."
+      },
+      {
+        "ordem": 6,
+        "item_type": "medicamento",
+        "item_slug": "bosentana",
+        "por_que": "Representante da classe de antagonistas do receptor de endotelina, com monitorização hepática própria."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "sotatercepte-o-ensaio-de-fase-3-stellar",
+        "por_que": "A classe mais nova, com mecanismo de ação inteiramente distinto das anteriores — via da ativina, não vasodilatação."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "hipertensao-pulmonar-tromboembolica-cronica-cteph-e-criterios-de-transplante-pulmonar",
+        "por_que": "Fecha com o grupo 4 — a única forma de hipertensão pulmonar potencialmente curável por cirurgia (endarterectomia), o que muda toda a lógica de investigação."
+      }
     ]
   },
   {
@@ -223,20 +495,48 @@
     "nivel": "intermediario",
     "review_status": "pendente_revisao",
     "etapas": [
-      {"ordem": 1, "item_type": "documento", "item_slug": "cardiodesfibrilador-implantavel-fundamentos-prevencao-secundaria",
-       "por_que": "Fundamentos do CDI e a indicação mais antiga e mais sólida: prevenção secundária, em quem já teve o evento."},
-      {"ordem": 2, "item_type": "documento", "item_slug": "fluxograma-cdi-prevencao-primaria-esc-2022",
-       "por_que": "Prevenção primária é a decisão mais difícil — e a diretriz 2022 vai além da fração de ejeção isolada."},
-      {"ordem": 3, "item_type": "documento", "item_slug": "programacao-do-cdi-para-reduzir-terapia-inapropriada-o-ensaio-madit-rit",
-       "por_que": "Ter a indicação certa não basta — a programação do dispositivo decide se o choque que ele vai dar é apropriado."},
-      {"ordem": 4, "item_type": "documento", "item_slug": "fluxograma-bradiarritmia-indicacao-de-marcapasso-esc-2021",
-       "por_que": "Muda de assunto: bradiarritmia e marca-passo têm indicação e lógica de decisão totalmente distintas do CDI."},
-      {"ordem": 5, "item_type": "documento", "item_slug": "marcapasso-definitivo-indicacoes-estimulacao-sistema-conducao",
-       "por_que": "Indicações completas de marca-passo definitivo e a evolução para estimulação do sistema de condução."},
-      {"ordem": 6, "item_type": "documento", "item_slug": "estimulacao-do-ramo-esquerdo-versus-biventricular-o-ensaio-lbbp-resync",
-       "por_que": "A técnica de estimulação de crescimento mais rápido atualmente, comparada de frente com o padrão biventricular estabelecido."},
-      {"ordem": 7, "item_type": "documento", "item_slug": "infeccao-de-dispositivo-cardiaco-extracao-de-eletrodo-e-envelope-antibiotico",
-       "por_que": "Fecha com a complicação mais temida de qualquer dispositivo cardíaco implantado — infecção e a decisão de extrair o sistema inteiro."}
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "cardiodesfibrilador-implantavel-fundamentos-prevencao-secundaria",
+        "por_que": "Fundamentos do CDI e a indicação mais antiga e mais sólida: prevenção secundária, em quem já teve o evento."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "fluxograma-cdi-prevencao-primaria-esc-2022",
+        "por_que": "Prevenção primária é a decisão mais difícil — e a diretriz 2022 vai além da fração de ejeção isolada."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "programacao-do-cdi-para-reduzir-terapia-inapropriada-o-ensaio-madit-rit",
+        "por_que": "Ter a indicação certa não basta — a programação do dispositivo decide se o choque que ele vai dar é apropriado."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "fluxograma-bradiarritmia-indicacao-de-marcapasso-esc-2021",
+        "por_que": "Muda de assunto: bradiarritmia e marca-passo têm indicação e lógica de decisão totalmente distintas do CDI."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "marcapasso-definitivo-indicacoes-estimulacao-sistema-conducao",
+        "por_que": "Indicações completas de marca-passo definitivo e a evolução para estimulação do sistema de condução."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "estimulacao-do-ramo-esquerdo-versus-biventricular-o-ensaio-lbbp-resync",
+        "por_que": "A técnica de estimulação de crescimento mais rápido atualmente, comparada de frente com o padrão biventricular estabelecido."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "infeccao-de-dispositivo-cardiaco-extracao-de-eletrodo-e-envelope-antibiotico",
+        "por_que": "Fecha com a complicação mais temida de qualquer dispositivo cardíaco implantado — infecção e a decisão de extrair o sistema inteiro."
+      }
     ]
   },
   {
@@ -247,20 +547,48 @@
     "nivel": "intermediario",
     "review_status": "pendente_revisao",
     "etapas": [
-      {"ordem": 1, "item_type": "documento", "item_slug": "dislipidemia-metas-ldl-estratificacao-risco-esc-eas-2025",
-       "por_que": "A meta de LDL-C não é fixa — depende da categoria de risco do paciente, e é isso que este documento estabelece antes de qualquer prescrição."},
-      {"ordem": 2, "item_type": "documento", "item_slug": "fluxograma-dislipidemia-meta-de-ldl-e-escalonamento-esc-eas-2025",
-       "por_que": "O mesmo raciocínio em árvore de decisão, incluindo quando escalonar para uma segunda ou terceira classe de hipolipemiante."},
-      {"ordem": 3, "item_type": "documento", "item_slug": "hipercolesterolemia-familiar-hf-diagnostico-e-manejo-atualizado-esceas-2025",
-       "por_que": "A causa genética mais comum de LDL muito elevado — diagnóstico e manejo têm lógica própria, diferente da dislipidemia poligênica comum."},
-      {"ordem": 4, "item_type": "documento", "item_slug": "sintomas-musculares-associados-a-estatina-o-efeito-nocebo-statinwise",
-       "por_que": "A armadilha mais comum na prática: suspender estatina por sintoma muscular sem testar se o sintoma é da estatina mesmo — o ensaio que mediu isso diretamente."},
-      {"ordem": 5, "item_type": "documento", "item_slug": "icosapent-etila-reduce-it-e-o-fracasso-do-omega-3-combinado-strength",
-       "por_que": "Nem todo ômega-3 é igual — o contraste entre um resultado positivo e um neutro na mesma classe de fármaco é a lição central aqui."},
-      {"ordem": 6, "item_type": "documento", "item_slug": "lipoproteina-a-e-olpasirana-o-ensaio-ocean-a-dose",
-       "por_que": "A fronteira mais nova: um fator de risco geneticamente determinado, sem terapia direcionada aprovada ainda, mas com redução de concentração já demonstrada em ensaio de fase 2."},
-      {"ordem": 7, "item_type": "documento", "item_slug": "reabilitacao-cardiaca-e-prescricao-de-exercicio-na-prevencao-secundaria",
-       "por_que": "Fecha a trilha lembrando que prevenção secundária não é só hipolipemiante — reabilitação cardíaca estruturada tem evidência própria de benefício."}
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "dislipidemia-metas-ldl-estratificacao-risco-esc-eas-2025",
+        "por_que": "A meta de LDL-C não é fixa — depende da categoria de risco do paciente, e é isso que este documento estabelece antes de qualquer prescrição."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "fluxograma-dislipidemia-meta-de-ldl-e-escalonamento-esc-eas-2025",
+        "por_que": "O mesmo raciocínio em árvore de decisão, incluindo quando escalonar para uma segunda ou terceira classe de hipolipemiante."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "hipercolesterolemia-familiar-hf-diagnostico-e-manejo-atualizado-esceas-2025",
+        "por_que": "A causa genética mais comum de LDL muito elevado — diagnóstico e manejo têm lógica própria, diferente da dislipidemia poligênica comum."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "sintomas-musculares-associados-a-estatina-o-efeito-nocebo-statinwise",
+        "por_que": "A armadilha mais comum na prática: suspender estatina por sintoma muscular sem testar se o sintoma é da estatina mesmo — o ensaio que mediu isso diretamente."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "icosapent-etila-reduce-it-e-o-fracasso-do-omega-3-combinado-strength",
+        "por_que": "Nem todo ômega-3 é igual — o contraste entre um resultado positivo e um neutro na mesma classe de fármaco é a lição central aqui."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "lipoproteina-a-e-olpasirana-o-ensaio-ocean-a-dose",
+        "por_que": "A fronteira mais nova: um fator de risco geneticamente determinado, sem terapia direcionada aprovada ainda, mas com redução de concentração já demonstrada em ensaio de fase 2."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "reabilitacao-cardiaca-e-prescricao-de-exercicio-na-prevencao-secundaria",
+        "por_que": "Fecha a trilha lembrando que prevenção secundária não é só hipolipemiante — reabilitação cardíaca estruturada tem evidência própria de benefício."
+      }
     ]
   },
   {
@@ -271,20 +599,48 @@
     "nivel": "avançado",
     "review_status": "revisado",
     "etapas": [
-      {"ordem": 1, "item_type": "documento", "item_slug": "classificacao-scai-de-estagios-do-choque-cardiogenico",
-       "por_que": "A classificação por estágio (A a E) é a linguagem comum de toda a trilha — sem ela, 'choque cardiogênico' vira rótulo único para quadros de gravidade muito diferente."},
-      {"ordem": 2, "item_type": "documento", "item_slug": "fluxograma-choque-cardiogenico-estagios-scai",
-       "por_que": "O mesmo raciocínio em árvore de decisão, do estágio à conduta."},
-      {"ordem": 3, "item_type": "documento", "item_slug": "choque-cardiogenico-diagnostico-e-manejo-com-drogas-vasoativas",
-       "por_que": "Antes de qualquer dispositivo, a escolha e a titulação de droga vasoativa já definem boa parte do desfecho."},
-      {"ordem": 4, "item_type": "documento", "item_slug": "balao-intra-aortico-no-choque-cardiogenico-o-ensaio-iabp-shock-ii",
-       "por_que": "O dispositivo mais simples e mais disponível — e o ensaio que mostrou ausência de benefício de mortalidade, resultado que ainda surpreende quem não leu o estudo original."},
-      {"ordem": 5, "item_type": "documento", "item_slug": "impella-cp-no-choque-cardiogenico-do-iamcst-o-ensaio-danger-shock",
-       "por_que": "Contraste direto com o anterior: aqui há redução de mortalidade, mas às custas de risco de evento adverso grave quase 5 vezes maior — decisão de trade-off explícito, não escolha óbvia."},
-      {"ordem": 6, "item_type": "documento", "item_slug": "choque-cardiogenico-suporte-circulatorio-mecanico-temporario",
-       "por_que": "Visão geral de todos os dispositivos (balão, Impella, ECMO), para situar os dois ensaios anteriores dentro do arsenal completo."},
-      {"ordem": 7, "item_type": "documento", "item_slug": "cardiomiopatia-septica-prevalencia-reversibilidade-e-impacto-na-mortalidade",
-       "por_que": "Fecha com o diagnóstico diferencial que muda tudo: disfunção miocárdica séptica é reversível em 7-10 dias e não deve ser manejada como choque cardiogênico estrutural."}
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "classificacao-scai-de-estagios-do-choque-cardiogenico",
+        "por_que": "A classificação por estágio (A a E) é a linguagem comum de toda a trilha — sem ela, 'choque cardiogênico' vira rótulo único para quadros de gravidade muito diferente."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "fluxograma-choque-cardiogenico-estagios-scai",
+        "por_que": "O mesmo raciocínio em árvore de decisão, do estágio à conduta."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "choque-cardiogenico-diagnostico-e-manejo-com-drogas-vasoativas",
+        "por_que": "Antes de qualquer dispositivo, a escolha e a titulação de droga vasoativa já definem boa parte do desfecho."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "balao-intra-aortico-no-choque-cardiogenico-o-ensaio-iabp-shock-ii",
+        "por_que": "O dispositivo mais simples e mais disponível — e o ensaio que mostrou ausência de benefício de mortalidade, resultado que ainda surpreende quem não leu o estudo original."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "impella-cp-no-choque-cardiogenico-do-iamcst-o-ensaio-danger-shock",
+        "por_que": "Contraste direto com o anterior: aqui há redução de mortalidade, mas às custas de risco de evento adverso grave quase 5 vezes maior — decisão de trade-off explícito, não escolha óbvia."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "choque-cardiogenico-suporte-circulatorio-mecanico-temporario",
+        "por_que": "Visão geral de todos os dispositivos (balão, Impella, ECMO), para situar os dois ensaios anteriores dentro do arsenal completo."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "cardiomiopatia-septica-prevalencia-reversibilidade-e-impacto-na-mortalidade",
+        "por_que": "Fecha com o diagnóstico diferencial que muda tudo: disfunção miocárdica séptica é reversível em 7-10 dias e não deve ser manejada como choque cardiogênico estrutural."
+      }
     ]
   },
   {
@@ -295,14 +651,30 @@
     "nivel": "avançado",
     "review_status": "revisado",
     "etapas": [
-      {"ordem": 1, "item_type": "documento", "item_slug": "fluxograma-parada-cardiorrespiratoria-ritmo-inicial",
-       "por_que": "O ritmo inicial (chocável ou não) é a primeira bifurcação de toda a reanimação — determina o algoritmo inteiro a partir daqui."},
-      {"ordem": 2, "item_type": "documento", "item_slug": "parada-cardiorrespiratoria-no-adulto-suporte-avancado-sbc-2019",
-       "por_que": "O protocolo completo de suporte avançado de vida, com o detalhe que o fluxograma resume."},
-      {"ordem": 3, "item_type": "documento", "item_slug": "controle-de-temperatura-pos-parada-cardiorrespiratoria-ttm-e-ttm2",
-       "por_que": "Retorno da circulação espontânea não é o fim do cuidado — o manejo de temperatura no pós-parada mudou de recomendação entre o TTM e o TTM2, e é isso que este documento resolve."},
-      {"ordem": 4, "item_type": "documento", "item_slug": "rcp-extracorporea-ecpr-na-parada-refrataria-arrest-e-inception",
-       "por_que": "Fecha com a parada refratária às medidas convencionais — quando considerar ECMO durante a própria reanimação, e o que os ensaios ARREST e INCEPTION mostraram sobre isso."}
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "fluxograma-parada-cardiorrespiratoria-ritmo-inicial",
+        "por_que": "O ritmo inicial (chocável ou não) é a primeira bifurcação de toda a reanimação — determina o algoritmo inteiro a partir daqui."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "parada-cardiorrespiratoria-no-adulto-suporte-avancado-sbc-2019",
+        "por_que": "O protocolo completo de suporte avançado de vida, com o detalhe que o fluxograma resume."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "controle-de-temperatura-pos-parada-cardiorrespiratoria-ttm-e-ttm2",
+        "por_que": "Retorno da circulação espontânea não é o fim do cuidado — o manejo de temperatura no pós-parada mudou de recomendação entre o TTM e o TTM2, e é isso que este documento resolve."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "rcp-extracorporea-ecpr-na-parada-refrataria-arrest-e-inception",
+        "por_que": "Fecha com a parada refratária às medidas convencionais — quando considerar ECMO durante a própria reanimação, e o que os ensaios ARREST e INCEPTION mostraram sobre isso."
+      }
     ]
   },
   {
@@ -313,16 +685,36 @@
     "nivel": "avançado",
     "review_status": "revisado",
     "etapas": [
-      {"ordem": 1, "item_type": "documento", "item_slug": "canalopatias-sindrome-do-qt-longo-e-sindrome-de-brugada-diagnostico-e-manejo",
-       "por_que": "As duas canalopatias mais estabelecidas, diagnóstico e manejo lado a lado — é a base de toda a trilha."},
-      {"ordem": 2, "item_type": "documento", "item_slug": "escore-de-sieira-na-sindrome-de-brugada-e-o-fracasso-na-validacao-externa",
-       "por_que": "Um lembrete importante de leitura crítica: um escore de estratificação de risco em Brugada que não se sustentou na validação externa — nem toda ferramenta publicada resiste ao teste em população diferente."},
-      {"ordem": 3, "item_type": "documento", "item_slug": "repolarizacao-precoce-e-fibrilacao-ventricular-idiopatica-o-estudo-de-haissaguerre",
-       "por_que": "Um achado eletrocardiográfico comum e geralmente benigno, mas associado a maior risco especificamente em quem já sobreviveu a uma fibrilação ventricular idiopática — o contexto muda tudo."},
-      {"ordem": 4, "item_type": "documento", "item_slug": "torsades-de-pointes-e-qt-longo-adquirido-escore-de-tisdale-e-manejo-agudo",
-       "por_que": "A forma adquirida (não genética) de QT longo é a mais comum na prática — geralmente por fármaco — e o manejo agudo de torsades tem passos próprios."},
-      {"ordem": 5, "item_type": "documento", "item_slug": "arritmias-ventriculares-e-prevencao-de-morte-subita-cardiaca-esc-2022",
-       "por_que": "Fecha ligando as canalopatias anteriores à decisão mais concreta: quando essas condições justificam CDI para prevenção de morte súbita."}
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "canalopatias-sindrome-do-qt-longo-e-sindrome-de-brugada-diagnostico-e-manejo",
+        "por_que": "As duas canalopatias mais estabelecidas, diagnóstico e manejo lado a lado — é a base de toda a trilha."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "escore-de-sieira-na-sindrome-de-brugada-e-o-fracasso-na-validacao-externa",
+        "por_que": "Um lembrete importante de leitura crítica: um escore de estratificação de risco em Brugada que não se sustentou na validação externa — nem toda ferramenta publicada resiste ao teste em população diferente."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "repolarizacao-precoce-e-fibrilacao-ventricular-idiopatica-o-estudo-de-haissaguerre",
+        "por_que": "Um achado eletrocardiográfico comum e geralmente benigno, mas associado a maior risco especificamente em quem já sobreviveu a uma fibrilação ventricular idiopática — o contexto muda tudo."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "torsades-de-pointes-e-qt-longo-adquirido-escore-de-tisdale-e-manejo-agudo",
+        "por_que": "A forma adquirida (não genética) de QT longo é a mais comum na prática — geralmente por fármaco — e o manejo agudo de torsades tem passos próprios."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "arritmias-ventriculares-e-prevencao-de-morte-subita-cardiaca-esc-2022",
+        "por_que": "Fecha ligando as canalopatias anteriores à decisão mais concreta: quando essas condições justificam CDI para prevenção de morte súbita."
+      }
     ]
   },
   {
@@ -333,20 +725,48 @@
     "nivel": "intermediário",
     "review_status": "revisado",
     "etapas": [
-      {"ordem": 1, "item_type": "documento", "item_slug": "cardio-oncologia-prevencao-e-manejo-de-toxicidade-cardiovascular-relacionada-ao-cancer",
-       "por_que": "Visão geral da cardio-oncologia como especialidade — prevenção e manejo antes de entrar em cada classe específica."},
-      {"ordem": 2, "item_type": "documento", "item_slug": "fluxograma-disfuncao-cardiaca-por-antraciclina-e-anti-her2-esc-2022",
-       "por_que": "As duas classes mais associadas a disfunção ventricular, em árvore de decisão."},
-      {"ordem": 3, "item_type": "documento", "item_slug": "cardiotoxicidade-por-terapia-anti-her2-trastuzumabe",
-       "por_que": "Detalhe da toxicidade por anti-HER2 — reversível na maioria dos casos, diferente da antraciclina."},
-      {"ordem": 4, "item_type": "documento", "item_slug": "atorvastatina-como-cardioprotecao-durante-antraciclina-o-ensaio-stop-ca",
-       "por_que": "Uma das duas estratégias de cardioproteção farmacológica com evidência randomizada nesta biblioteca — mecanismo distinto do dexrazoxano."},
-      {"ordem": 5, "item_type": "documento", "item_slug": "cardiotoxicidade-tardia-por-radioterapia-e-cardioprotecao-com-dexrazoxano",
-       "por_que": "A outra estratégia de cardioproteção, e a cardiotoxicidade tardia por radioterapia — que se manifesta anos depois do tratamento, não durante ele."},
-      {"ordem": 6, "item_type": "documento", "item_slug": "estratificacao-de-risco-basal-hfa-icos-e-miocardite-por-inibidor-de-checkpoint",
-       "por_que": "Muda de mecanismo: imunoterapia por inibidor de checkpoint tem toxicidade cardíaca própria, e a estratificação de risco basal é o que orienta a vigilância."},
-      {"ordem": 7, "item_type": "documento", "item_slug": "miocardite-fulminante-por-inibidor-de-checkpoint-mortalidade-real",
-       "por_que": "Fecha com a manifestação mais grave dessa classe — miocardite fulminante, com mortalidade real que justifica a vigilância do documento anterior."}
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "cardio-oncologia-prevencao-e-manejo-de-toxicidade-cardiovascular-relacionada-ao-cancer",
+        "por_que": "Visão geral da cardio-oncologia como especialidade — prevenção e manejo antes de entrar em cada classe específica."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "fluxograma-disfuncao-cardiaca-por-antraciclina-e-anti-her2-esc-2022",
+        "por_que": "As duas classes mais associadas a disfunção ventricular, em árvore de decisão."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "cardiotoxicidade-por-terapia-anti-her2-trastuzumabe",
+        "por_que": "Detalhe da toxicidade por anti-HER2 — reversível na maioria dos casos, diferente da antraciclina."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "atorvastatina-como-cardioprotecao-durante-antraciclina-o-ensaio-stop-ca",
+        "por_que": "Uma das duas estratégias de cardioproteção farmacológica com evidência randomizada nesta biblioteca — mecanismo distinto do dexrazoxano."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "cardiotoxicidade-tardia-por-radioterapia-e-cardioprotecao-com-dexrazoxano",
+        "por_que": "A outra estratégia de cardioproteção, e a cardiotoxicidade tardia por radioterapia — que se manifesta anos depois do tratamento, não durante ele."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "estratificacao-de-risco-basal-hfa-icos-e-miocardite-por-inibidor-de-checkpoint",
+        "por_que": "Muda de mecanismo: imunoterapia por inibidor de checkpoint tem toxicidade cardíaca própria, e a estratificação de risco basal é o que orienta a vigilância."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "miocardite-fulminante-por-inibidor-de-checkpoint-mortalidade-real",
+        "por_que": "Fecha com a manifestação mais grave dessa classe — miocardite fulminante, com mortalidade real que justifica a vigilância do documento anterior."
+      }
     ]
   },
   {
@@ -357,22 +777,54 @@
     "nivel": "avançado",
     "review_status": "revisado",
     "etapas": [
-      {"ordem": 1, "item_type": "documento", "item_slug": "classificacao-de-risco-mwho-2-0-na-gravidez-esc-2025",
-       "por_que": "A estratificação de risco materno é o primeiro passo de qualquer cardiopatia na gestação — determina o nível de acompanhamento e o próprio risco de aceitar ou não a gestação."},
-      {"ordem": 2, "item_type": "documento", "item_slug": "fluxograma-doenca-cardiovascular-e-gravidez-esc-2025",
-       "por_que": "O mesmo raciocínio em árvore de decisão."},
-      {"ordem": 3, "item_type": "documento", "item_slug": "doenca-cardiovascular-na-gravidez-estratificacao-de-risco-e-manejo-esc-2018-sbc-2020",
-       "por_que": "O protocolo completo, com o detalhe que o fluxograma resume."},
-      {"ordem": 4, "item_type": "documento", "item_slug": "anti-hipertensivos-na-gestacao-o-que-a-bula-registrada-diz-de-cada-um",
-       "por_que": "Na prática, a primeira pergunta é sempre 'que anti-hipertensivo posso usar' — direto da bula registrada, não de memória."},
-      {"ordem": 5, "item_type": "documento", "item_slug": "pre-eclampsia-grave-hellp-e-arritmias-supraventriculares-na-gestacao",
-       "por_que": "A intercorrência hipertensiva mais grave e mais comum da gestação, com a arritmia associada que costuma ser esquecida na abordagem."},
-      {"ordem": 6, "item_type": "documento", "item_slug": "anticoagulacao-em-valva-mecanica-e-cardiomiopatia-periparto-na-gestacao",
-       "por_que": "A decisão de anticoagulação mais difícil da cardiologia obstétrica — valva mecânica em gestante — ao lado da cardiomiopatia periparto."},
-      {"ordem": 7, "item_type": "documento", "item_slug": "base-genetica-da-cardiomiopatia-periparto-variantes-truncantes-de-ttn",
-       "por_que": "A cardiomiopatia periparto não é só hormonal — cerca de 1 em 6-7 mulheres afetadas carrega variante genética, com implicação de prognóstico e rastreio familiar."},
-      {"ordem": 8, "item_type": "documento", "item_slug": "cesarea-perimortem-a-regra-dos-4-minutos-e-a-revisao-de-katz",
-       "por_que": "Fecha com a emergência mais extrema — parada cardíaca materna — e a evidência real por trás da regra dos 4 minutos."}
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "classificacao-de-risco-mwho-2-0-na-gravidez-esc-2025",
+        "por_que": "A estratificação de risco materno é o primeiro passo de qualquer cardiopatia na gestação — determina o nível de acompanhamento e o próprio risco de aceitar ou não a gestação."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "fluxograma-doenca-cardiovascular-e-gravidez-esc-2025",
+        "por_que": "O mesmo raciocínio em árvore de decisão."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "doenca-cardiovascular-na-gravidez-estratificacao-de-risco-e-manejo-esc-2018-sbc-2020",
+        "por_que": "O protocolo completo, com o detalhe que o fluxograma resume."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "anti-hipertensivos-na-gestacao-o-que-a-bula-registrada-diz-de-cada-um",
+        "por_que": "Na prática, a primeira pergunta é sempre 'que anti-hipertensivo posso usar' — direto da bula registrada, não de memória."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "pre-eclampsia-grave-hellp-e-arritmias-supraventriculares-na-gestacao",
+        "por_que": "A intercorrência hipertensiva mais grave e mais comum da gestação, com a arritmia associada que costuma ser esquecida na abordagem."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "anticoagulacao-em-valva-mecanica-e-cardiomiopatia-periparto-na-gestacao",
+        "por_que": "A decisão de anticoagulação mais difícil da cardiologia obstétrica — valva mecânica em gestante — ao lado da cardiomiopatia periparto."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "base-genetica-da-cardiomiopatia-periparto-variantes-truncantes-de-ttn",
+        "por_que": "A cardiomiopatia periparto não é só hormonal — cerca de 1 em 6-7 mulheres afetadas carrega variante genética, com implicação de prognóstico e rastreio familiar."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "cesarea-perimortem-a-regra-dos-4-minutos-e-a-revisao-de-katz",
+        "por_que": "Fecha com a emergência mais extrema — parada cardíaca materna — e a evidência real por trás da regra dos 4 minutos."
+      }
     ]
   },
   {
@@ -383,20 +835,48 @@
     "nivel": "básico",
     "review_status": "revisado",
     "etapas": [
-      {"ordem": 1, "item_type": "documento", "item_slug": "fator-psicossocial-como-risco-de-infarto-o-estudo-interheart",
-       "por_que": "O estudo que quantificou, pela primeira vez em escala global, o peso do fator psicossocial como risco de infarto — ao lado dos fatores de risco tradicionais."},
-      {"ordem": 2, "item_type": "documento", "item_slug": "depressao-pos-infarto-como-fator-de-risco-cardiovascular-van-melle-e-enrichd",
-       "por_que": "Depressão após infarto não é só comorbidade psiquiátrica — é fator de risco cardiovascular independente, com magnitude mensurada."},
-      {"ordem": 3, "item_type": "documento", "item_slug": "personalidade-tipo-d-e-prognostico-cardiovascular-metanalise-de-grande",
-       "por_que": "Um construto distinto de depressão — e uma lição sobre qualidade de evidência: o tamanho do efeito estimado caiu bastante entre os estudos antigos e os mais recentes."},
-      {"ordem": 4, "item_type": "documento", "item_slug": "solidao-e-isolamento-social-como-fator-de-risco-cardiovascular",
-       "por_que": "Isolamento social como fator de risco mensurável, distinto de depressão clínica."},
-      {"ordem": 5, "item_type": "documento", "item_slug": "luto-e-risco-agudo-de-infarto-o-estudo-determinants-of-mi-onset",
-       "por_que": "O extremo agudo do espectro — luto como gatilho transitório de infarto nas primeiras 24 horas, não fator crônico como os anteriores."},
-      {"ordem": 6, "item_type": "documento", "item_slug": "insonia-e-risco-cardiovascular-metanalise-de-sofi",
-       "por_que": "Um sintoma, não um diagnóstico psiquiátrico — e ainda assim com associação robusta e consistente ao risco cardiovascular."},
-      {"ordem": 7, "item_type": "documento", "item_slug": "saude-mental-e-doenca-cardiovascular-consenso-clinico-esc-2025",
-       "por_que": "Fecha reunindo tudo isso na posição oficial mais recente de uma sociedade de cardiologia sobre saúde mental como parte do cuidado cardiovascular."}
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "fator-psicossocial-como-risco-de-infarto-o-estudo-interheart",
+        "por_que": "O estudo que quantificou, pela primeira vez em escala global, o peso do fator psicossocial como risco de infarto — ao lado dos fatores de risco tradicionais."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "depressao-pos-infarto-como-fator-de-risco-cardiovascular-van-melle-e-enrichd",
+        "por_que": "Depressão após infarto não é só comorbidade psiquiátrica — é fator de risco cardiovascular independente, com magnitude mensurada."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "personalidade-tipo-d-e-prognostico-cardiovascular-metanalise-de-grande",
+        "por_que": "Um construto distinto de depressão — e uma lição sobre qualidade de evidência: o tamanho do efeito estimado caiu bastante entre os estudos antigos e os mais recentes."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "solidao-e-isolamento-social-como-fator-de-risco-cardiovascular",
+        "por_que": "Isolamento social como fator de risco mensurável, distinto de depressão clínica."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "luto-e-risco-agudo-de-infarto-o-estudo-determinants-of-mi-onset",
+        "por_que": "O extremo agudo do espectro — luto como gatilho transitório de infarto nas primeiras 24 horas, não fator crônico como os anteriores."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "insonia-e-risco-cardiovascular-metanalise-de-sofi",
+        "por_que": "Um sintoma, não um diagnóstico psiquiátrico — e ainda assim com associação robusta e consistente ao risco cardiovascular."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "saude-mental-e-doenca-cardiovascular-consenso-clinico-esc-2025",
+        "por_que": "Fecha reunindo tudo isso na posição oficial mais recente de uma sociedade de cardiologia sobre saúde mental como parte do cuidado cardiovascular."
+      }
     ]
   },
   {
@@ -407,22 +887,100 @@
     "nivel": "básico",
     "review_status": "revisado",
     "etapas": [
-      {"ordem": 1, "item_type": "medicamento", "item_slug": "epinefrina-adrenalina",
-       "por_que": "O vasopressor da própria parada cardiorrespiratória — o primeiro fármaco que qualquer protocolo de emergência cardiovascular exige de cor."},
-      {"ordem": 2, "item_type": "medicamento", "item_slug": "noradrenalina-norepinefrina",
-       "por_que": "O vasopressor de primeira linha no choque, distinto da epinefrina em perfil de uso."},
-      {"ordem": 3, "item_type": "medicamento", "item_slug": "vasopressina",
-       "por_que": "Vasopressor de segunda linha, com mecanismo de ação independente de receptor adrenérgico — relevante quando a resposta aos dois anteriores é insuficiente."},
-      {"ordem": 4, "item_type": "medicamento", "item_slug": "dobutamina",
-       "por_que": "O inotrópico mais usado no choque cardiogênico com função predominantemente inotrópica, não vasopressora."},
-      {"ordem": 5, "item_type": "medicamento", "item_slug": "milrinona",
-       "por_que": "Segunda opção inotrópica, mecanismo distinto (inibidor de fosfodiesterase-3), útil quando a resposta à dobutamina não é suficiente ou há uso concomitante de betabloqueador."},
-      {"ordem": 6, "item_type": "medicamento", "item_slug": "atropina",
-       "por_que": "O fármaco de primeira linha na bradicardia sintomática — antes de considerar marca-passo transcutâneo."},
-      {"ordem": 7, "item_type": "medicamento", "item_slug": "adenosina",
-       "por_que": "Diagnóstico e terapêutico ao mesmo tempo — interrompe taquicardia supraventricular por reentrada nodal e ajuda a revelar o ritmo de base em taquicardias de origem incerta."},
-      {"ordem": 8, "item_type": "medicamento", "item_slug": "amiodarona-cloridrato",
-       "por_que": "Fecha a trilha com o antiarrítmico mais versátil da emergência — usado tanto na parada com ritmo chocável refratário quanto em taquiarritmias fora da parada."}
+      {
+        "ordem": 1,
+        "item_type": "medicamento",
+        "item_slug": "epinefrina-adrenalina",
+        "por_que": "O vasopressor da própria parada cardiorrespiratória — o primeiro fármaco que qualquer protocolo de emergência cardiovascular exige de cor."
+      },
+      {
+        "ordem": 2,
+        "item_type": "medicamento",
+        "item_slug": "noradrenalina-norepinefrina",
+        "por_que": "O vasopressor de primeira linha no choque, distinto da epinefrina em perfil de uso."
+      },
+      {
+        "ordem": 3,
+        "item_type": "medicamento",
+        "item_slug": "vasopressina",
+        "por_que": "Vasopressor de segunda linha, com mecanismo de ação independente de receptor adrenérgico — relevante quando a resposta aos dois anteriores é insuficiente."
+      },
+      {
+        "ordem": 4,
+        "item_type": "medicamento",
+        "item_slug": "dobutamina",
+        "por_que": "O inotrópico mais usado no choque cardiogênico com função predominantemente inotrópica, não vasopressora."
+      },
+      {
+        "ordem": 5,
+        "item_type": "medicamento",
+        "item_slug": "milrinona",
+        "por_que": "Segunda opção inotrópica, mecanismo distinto (inibidor de fosfodiesterase-3), útil quando a resposta à dobutamina não é suficiente ou há uso concomitante de betabloqueador."
+      },
+      {
+        "ordem": 6,
+        "item_type": "medicamento",
+        "item_slug": "atropina",
+        "por_que": "O fármaco de primeira linha na bradicardia sintomática — antes de considerar marca-passo transcutâneo."
+      },
+      {
+        "ordem": 7,
+        "item_type": "medicamento",
+        "item_slug": "adenosina",
+        "por_que": "Diagnóstico e terapêutico ao mesmo tempo — interrompe taquicardia supraventricular por reentrada nodal e ajuda a revelar o ritmo de base em taquicardias de origem incerta."
+      },
+      {
+        "ordem": 8,
+        "item_type": "medicamento",
+        "item_slug": "amiodarona-cloridrato",
+        "por_que": "Fecha a trilha com o antiarrítmico mais versátil da emergência — usado tanto na parada com ritmo chocável refratário quanto em taquiarritmias fora da parada."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-valvopatias-estenose-aortica-e-escolha-de-protese",
+    "titulo": "Valvopatias: da estenose aórtica grave à escolha de prótese",
+    "tema": "Valvopatias",
+    "objetivo": "Sair sabendo classificar a gravidade de uma valvopatia, conduzir a decisão mais frequente do tema — TAVI ou cirurgia na estenose aórtica grave —, entender por que essa fronteira se deslocou nos últimos anos, e completar o percurso até a escolha de prótese e o manejo da anticoagulação quando ela for mecânica.",
+    "nivel": "intermediario",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "doenca-valvar-cardiaca-diagnostico-e-manejo-esceacts-20212025",
+        "por_que": "Começa aqui porque toda a trilha depende de saber classificar a lesão valvar por estágio de gravidade antes de discutir qualquer intervenção. Sem essa base, a etapa seguinte vira decisão sem critério."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "estenose-aortica-grave-decisao-tavi-vs-savr-esceacts-2021",
+        "por_que": "A estenose aórtica é a valvopatia mais prevalente e a decisão TAVI-versus-cirurgia é a que mais aparece no consultório. Este documento detalha os critérios que separam as duas vias — idade, risco cirúrgico, anatomia."
+      },
+      {
+        "ordem": 3,
+        "item_type": "evidencia",
+        "item_slug": "tavi-indicado-em-alto-risco-cirurgico-estenose-aortica",
+        "por_que": "Fixa onde a indicação de TAVI nasceu: Classe I, nível A, mas restrita ao alto risco cirúrgico. É o ponto de partida histórico que a próxima etapa vai deslocar — sem ele, o alcance do PARTNER 3 perde o contraste."
+      },
+      {
+        "ordem": 4,
+        "item_type": "estudo",
+        "item_slug": "partner-3-tavi-baixo-risco",
+        "por_que": "Mostra por que a fronteira de risco da etapa anterior não é mais a de hoje: em pacientes de baixo risco cirúrgico, o desfecho composto em 1 ano favoreceu TAVI (8,5% vs. 15,1%), com convergência das curvas em 5 e 7 anos. É o ensaio que expandiu a indicação para além do que a evidência de 2020 sustentava."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "protese-valvar-escolha-mecanica-vs-biologica-e-alvo-de-inr-esc-eacts-2025",
+        "por_que": "Quando a via escolhida é cirúrgica, a pergunta seguinte é qual prótese implantar — mecânica ou biológica — e a resposta muda o resto do acompanhamento do paciente, inclusive o alvo de INR."
+      },
+      {
+        "ordem": 6,
+        "item_type": "medicamento",
+        "item_slug": "varfarina-sodica",
+        "por_que": "Fecha a trilha na consequência prática de escolher prótese mecânica: anticoagulação para a vida toda, com a janela terapêutica estreita que faz da varfarina, e não de um DOAC, a única opção validada nessa indicação."
+      }
     ]
   }
 ]
