@@ -2058,7 +2058,7 @@
   },
   {
     "slug": "hidroclorotiazida",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Hidroclorotiazida",
     "drug_class": "Diurético tiazídico",
     "mechanism": "Inibe o cotransportador Na+/Cl- no túbulo contornado distal, reduzindo reabsorção de sódio e água; efeito anti-hipertensivo crônico ocorre principalmente por redução da resistência vascular periférica, e não apenas pelo efeito diurético/natriurético inicial",
@@ -2069,27 +2069,36 @@
       "Hipertensão arterial (mono ou combinada, especialmente com bloqueador do SRA), edema associado a IC, cirrose hepática ou uso de corticosteroides"
     ],
     "adverse_effects": [
-      "Hipocalemia, hiponatremia, hipomagnesemia, hipercalcemia (efeito paradoxal), hiperuricemia (pode desencadear crise de gota), hiperglicemia, dislipidemia leve"
+      "Câncer de pele e lábio não melanoma (carcinoma basocelular e de células escamosas) — associação dose-dependente cumulativa observada em estudos epidemiológicos dinamarqueses; frequência não conhecida, mas sinal de segurança relevante para uso crônico",
+      "Discrasias sanguíneas (leucopenia, trombocitopenia, anemia hemolítica/aplástica, agranulocitose) — frequência não conhecida",
+      "Metabólicos: diminuição do apetite, hipocalemia, hiponatremia, hipomagnesemia, alcalose hipoclorêmica, hipercalcemia, hiperglicemia em diabéticos, hiperuricemia, manifestação de diabetes latente",
+      "Neurológicos: síncope (em doses elevadas, por diurese excessiva), cefaleia, tontura, estado confusional",
+      "Oculares: derrame coroidal, glaucoma agudo de ângulo fechado e/ou miopia aguda",
+      "Cardíacos: bradicardia",
+      "**fonte**: bula do CLORANA (hidroclorotiazida, Sanofi), item 9 — substitui a lista genérica anterior; acrescenta o sinal de câncer de pele não melanoma, ausente da versão anterior"
     ],
     "monitoring": [
       "Eletrólitos séricos (sódio, potássio), função renal, glicemia e ácido úrico periodicamente"
     ],
     "contraindications": [
+      "Hipersensibilidade à hidroclorotiazida ou a qualquer excipiente",
+      "Comprometimento renal grave (clearance de creatinina <30 mL/min)",
+      "Distúrbio hepático grave",
+      "Icterícia em crianças",
+      "Distúrbio grave do equilíbrio de eletrólitos",
       "Anúria",
-      "Hipersensibilidade a sulfonamidas",
-      "Hipocalemia grave não corrigida",
-      "Hiponatremia grave não corrigida"
+      "**fonte**: bula do CLORANA (hidroclorotiazida, Sanofi), item 4. **Corrigido em 31/07/2026**: lista anterior citava só 'hipersensibilidade a sulfonamidas' de forma genérica — a bula usa 'hidroclorotiazida' especificamente e acrescenta insuficiência renal grave (<30 mL/min), doença hepática grave, icterícia infantil e distúrbio eletrolítico grave, ausentes antes"
     ],
     "pregnancy": "Uso não recomendado, especialmente no primeiro trimestre; pode reduzir volume plasmático materno e afetar perfusão placentária",
     "dosing": {
       "hipertensao inicial": "25 mg 1x/dia pela manhã",
       "hipertensao manutencao": "12,5-25 mg/dia; doses acima de 25 mg/dia raramente agregam benefício adicional e aumentam risco de efeitos adversos metabólicos",
       "edema": "25-100 mg/dia, em dose única ou fracionada, ajustada conforme resposta",
-      "fonte": "MD Saúde ; Estratégia MED"
+      "fonte": "MD Saúde ; Estratégia MED",
+      "bula brasileira (dose historica, mais alta que a pratica atual)": "**Hipertensão**: dose inicial de 50 a 100 mg/dia (dose única matinal ou fracionada), ajustada após 1 semana. **Edema**: dose inicial 50-100 mg 1-2x/dia até peso seco; manutenção 25-200 mg/dia ou em dias alternados. **Pediatria**: até 2 anos, 12,5-25 mg/dia em 2 tomadas; 2-12 anos, 25-100 mg/dia em 2 tomadas (ou 2-3 mg/kg/dia). Fonte: bula do CLORANA, item 8. **Nota clínica**: esta é a dose registrada em bula (histórica); a prática atual — e o campo `hipertensao inicial`/`hipertensao manutencao` deste registro — usa doses menores (12,5-25 mg/dia), refletindo evidência mais recente de que doses acima de 25 mg/dia agregam pouco benefício pressórico adicional com mais efeito metabólico adverso. As duas informações convivem aqui de propósito, sem que uma apague a outra."
     },
     "references": [
-      "Hidroclorotiazida (diurético): para que serve e posologia · MD Saúde · 2024 · https://www.mdsaude.com/bulas/hidroclorotiazida/",
-      "Resumo sobre hidroclorotiazida: indicações, farmacologia e mais · Estratégia MED · 2023 · https://med.estrategia.com/portal/conteudos-gratis/farmacos/resumo-sobre-hidroclorotiazida-indicacoes-farmacologia-e-mais/"
+      "Bula do CLORANA (hidroclorotiazida, Sanofi Medley Farmacêutica), via consultaremedios.com.br — usada para contraindicações completas, posologia de bula e reações adversas por sistema"
     ],
     "lactation": "**Avaliar benefício contra risco — não há estudo bem controlado.** A bula descreve o comportamento da classe: as tiazidas **atravessam a barreira placentária**, são encontradas no sangue do cordão umbilical e **são excretadas no leite materno**. O uso em lactantes exige que os benefícios sejam pesados contra os possíveis riscos ao lactente, justamente porque faltam estudos controlados. Fonte: bula da CLORANA (hidroclorotiazida, Sanofi), seção de informação técnica."
   },
