@@ -14,9 +14,13 @@ type Detalhe = {
 // brasileiras de Chagas e de eco de estresse, usam GRADE (força forte/condicional,
 // certeza alta/moderada/baixa). Sem esta distinção o selo saía "Classe Forte", que
 // não existe em nenhum dos dois sistemas.
+// Os dois rótulos são decididos de forma independente, porque os sistemas se
+// misturam: a diretriz da SBC de Chagas, por exemplo, usa força "Forte/Ponderada"
+// junto com nível de evidência A/B/C — ali o certo é "Força Forte" + "Nível B".
 const CLASSES_ESC = new Set(["I", "IIa", "IIb", "III"]);
+const NIVEIS_LETRA = new Set(["A", "B", "C"]);
 const rotuloClasse = (c: string) => (CLASSES_ESC.has(c) ? `Classe ${c}` : `Força ${c}`);
-const rotuloNivel = (c: string, n: string) => (CLASSES_ESC.has(c) ? `Nível ${n}` : `Certeza ${n}`);
+const rotuloNivel = (n: string) => (NIVEIS_LETRA.has(n) ? `Nível ${n}` : `Certeza ${n}`);
 
 export default function Evidencia() {
   const { slug } = useParams();
@@ -46,7 +50,7 @@ export default function Evidencia() {
             {rotuloClasse(e.recommendation_class)}
           </span>
           <span className="selo" style={{ background: "var(--acento)", color: "var(--branco)" }}>
-            {rotuloNivel(e.recommendation_class, e.evidence_level)}
+            {rotuloNivel(e.evidence_level)}
           </span>
         </div>
         <p style={{ fontSize: "1.05rem", margin: 0 }}>{e.statement}</p>
