@@ -4367,5 +4367,63 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "eco-de-estresse-na-doenca-isquemica-cronica-conhecida-ou-suspeita",
+    "statement": "A ecocardiografia de estresse tem recomendação FORTE, com certeza ALTA da evidência, em cinco situações da doença isquêmica crônica: no diagnóstico em paciente com probabilidade pré-teste intermediária; diante de sintoma de angina em paciente com stent ou revascularização prévios; na definição do significado funcional de obstrução coronária moderada vista à angiotomografia ou angiografia; na estratificação de risco pós-infarto; e na investigação de dispneia como equivalente anginoso.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Alta",
+    "society": "SBC",
+    "year": 2026,
+    "guideline_title": "Diretriz sobre Ecocardiografia de Estresse – 2026 (Sociedade Brasileira de Cardiologia)",
+    "reference": "Camarozano AC, Spina SV, Souza JRM, Melo MDT, et al. Diretriz sobre Ecocardiografia de Estresse – 2026. Arq Bras Cardiol. 2026;123(4):e20260223. DOI: 10.36660/abc.20260223. PMID: 42307309 — quadro 'ECO ESTRESSE NA DOENÇA ISQUÊMICA CRÔNICA CONHECIDA OU SUSPEITA', conferido no texto integral em acesso aberto (PMC13398863) em 31/07/2026. NOTA DE SISTEMA: esta diretriz usa GRADE — força de recomendação (FORTE/CONDICIONAL) e certeza da evidência (ALTA/MODERADA/BAIXA), não a escala Classe I-III / Nível A-C da ESC/AHA usada na maior parte desta base. A interface exibe \"Força\" e \"Certeza\" em vez de \"Classe\" e \"Nível\" para não confundir os dois sistemas.",
+    "theme": "Doença coronariana",
+    "tags": [
+      "ecocardiografia de estresse",
+      "doença isquêmica crônica",
+      "probabilidade pré-teste",
+      "equivalente anginoso"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "eco-de-estresse-na-dor-toracica-aguda-da-emergencia",
+    "statement": "Na sala de emergência, a ecocardiografia de estresse tem recomendação FORTE, com certeza MODERADA, na dor torácica aguda em paciente de risco intermediário — sem anormalidades no eletrocardiograma e/ou com biomarcadores negativos. Também na estratificação de risco de paciente com suspeita de dor torácica anginosa e troponina negativa ou discretamente aumentada, DESDE QUE não haja alterações eletrocardiográficas nem recorrência da dor. As duas condições finais não são detalhe: elas delimitam quem pode ser submetido ao estresse com segurança.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Moderada",
+    "society": "SBC",
+    "year": 2026,
+    "guideline_title": "Diretriz sobre Ecocardiografia de Estresse – 2026 (Sociedade Brasileira de Cardiologia)",
+    "reference": "Camarozano AC, Spina SV, Souza JRM, Melo MDT, et al. Diretriz sobre Ecocardiografia de Estresse – 2026. Arq Bras Cardiol. 2026;123(4):e20260223. DOI: 10.36660/abc.20260223. PMID: 42307309 — quadro 'ECO ESTRESSE NA SALA DE EMERGÊNCIA: DOR TORÁCICA AGUDA', conferido no texto integral em acesso aberto (PMC13398863) em 31/07/2026. NOTA DE SISTEMA: esta diretriz usa GRADE — força de recomendação (FORTE/CONDICIONAL) e certeza da evidência (ALTA/MODERADA/BAIXA), não a escala Classe I-III / Nível A-C da ESC/AHA usada na maior parte desta base. A interface exibe \"Força\" e \"Certeza\" em vez de \"Classe\" e \"Nível\" para não confundir os dois sistemas.",
+    "theme": "Doença coronariana",
+    "tags": [
+      "ecocardiografia de estresse",
+      "dor torácica aguda",
+      "emergência",
+      "troponina",
+      "estratificação de risco"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "eco-de-estresse-na-estenose-aortica-de-baixo-fluxo-e-na-discrepancia-sintoma-exame",
+    "statement": "Na doença valvar, a ecocardiografia de estresse tem recomendação FORTE, com certeza ALTA, em duas situações: com dobutamina em BAIXA dose, na estenose valvar aórtica de baixo fluxo e baixo gradiente clássica com fração de ejeção abaixo de 50%, para confirmar a gravidade real da estenose; e com EXERCÍCIO, para avaliar a repercussão hemodinâmica da lesão valvar quando há discrepância entre os sintomas e os dados do ecocardiograma de repouso. A modalidade do estresse muda conforme a pergunta — dobutamina para gravidade, exercício para repercussão.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Alta",
+    "society": "SBC",
+    "year": 2026,
+    "guideline_title": "Diretriz sobre Ecocardiografia de Estresse – 2026 (Sociedade Brasileira de Cardiologia)",
+    "reference": "Camarozano AC, Spina SV, Souza JRM, Melo MDT, et al. Diretriz sobre Ecocardiografia de Estresse – 2026. Arq Bras Cardiol. 2026;123(4):e20260223. DOI: 10.36660/abc.20260223. PMID: 42307309 — quadro 'ECO ESTRESSE NA DOENÇA VALVAR', conferido no texto integral em acesso aberto (PMC13398863) em 31/07/2026. NOTA DE SISTEMA: esta diretriz usa GRADE — força de recomendação (FORTE/CONDICIONAL) e certeza da evidência (ALTA/MODERADA/BAIXA), não a escala Classe I-III / Nível A-C da ESC/AHA usada na maior parte desta base. A interface exibe \"Força\" e \"Certeza\" em vez de \"Classe\" e \"Nível\" para não confundir os dois sistemas.",
+    "theme": "Valvopatias",
+    "tags": [
+      "ecocardiografia de estresse",
+      "estenose aórtica de baixo fluxo",
+      "dobutamina",
+      "discrepância sintoma-exame"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
