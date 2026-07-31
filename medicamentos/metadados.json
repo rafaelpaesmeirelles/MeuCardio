@@ -449,7 +449,7 @@
   },
   {
     "slug": "benazepril-cloridrato",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Benazepril (cloridrato)",
     "brand_names": [
       "Lotensin",
@@ -458,7 +458,10 @@
     "drug_class": "Inibidor da enzima conversora de angiotensina (IECA)",
     "mechanism": "Pró-fármaco hidrolisado em benazeprilato ativo; inibição do sistema renina-angiotensina-aldosterona",
     "indications": [
-      "Tratamento da hipertensão arterial sistêmica em pacientes adultos"
+      "Tratamento da hipertensão arterial sistêmica em pacientes adultos",
+      "Tratamento adjuvante da insuficiência cardíaca congestiva, classes II a IV da NYHA",
+      "Insuficiência renal crônica progressiva, com clearance de creatinina entre 30 e 60 mL/min",
+      "**fonte**: bula do LOTENSIN (cloridrato de benazepril, Novartis) — as duas últimas indicações estavam ausentes deste campo, que citava só hipertensão (fonte FDA, que registra o fármaco apenas para essa indicação nos EUA)"
     ],
     "adverse_effects": [
       "Mais comuns levando à descontinuação: cefaleia (0,6%) e tosse seca (0,5% — efeito de classe dos IECA, por acúmulo de bradicinina). Angioedema é raro, mas grave — exige suspensão imediata e definitiva do fármaco (contraindicação a reexposição a qualquer IECA)."
@@ -472,10 +475,11 @@
     ],
     "pregnancy": "Categoria D — contraindicado no 2º e 3º trimestres (risco de hipoplasia de calvária fetal, anúria, hipotensão neonatal, insuficiência renal e óbito). Suspender assim que a gravidez for identificada.",
     "contraindications": [
+      "Hipersensibilidade conhecida ao benazepril, a substâncias relacionadas ou a qualquer componente da formulação",
+      "História de angioedema, com ou sem relação a tratamento anterior com inibidor da ECA",
+      "Crianças / menores de 18 anos",
       "Gravidez",
-      "Angioedema prévio por IECA",
-      "Estenose bilateral de artéria renal",
-      "Hipersensibilidade"
+      "**fonte**: bula do LOTENSIN (cloridrato de benazepril, Novartis), item \"Contra-indicações\". **Corrigido em 31/07/2026**: a lista anterior (fonte FDA) incluía 'Estenose bilateral de artéria renal' — na bula brasileira esse tema aparece só como precaução (Advertências), não como contraindicação formal — e não incluía 'Crianças', que é contraindicação formal explícita nesta bula ('contra-indicado na faixa etária abaixo de 18 anos')"
     ],
     "dosing": {
       "Dose inicial": "10 mg 1x/dia (5 mg 1x/dia se em uso concomitante de diurético, pelo risco de hipotensão excessiva)",
@@ -483,11 +487,16 @@
       "Ajuste renal": "TFG ou ClCr < 30 mL/min (creatinina sérica > 3 mg/dL) — iniciar com 5 mg 1x/dia",
       "combinacao hctz dose mais baixa": "5mg benazepril + 6,25mg HCTZ 1x/dia — controla PA em grande parte dos pacientes",
       "Farmacocinética": "meia-vida efetiva do benazeprilato (metabólito ativo) de 10-11 horas — estado de equilíbrio atingido após 2-3 doses diárias",
-      "fonte": "rótulo aprovado pelo FDA (DailyMed), setid afd616b9-0c75-48be-862d-5ac18364fd9d"
+      "fonte": "rótulo aprovado pelo FDA (DailyMed), setid afd616b9-0c75-48be-862d-5ac18364fd9d",
+      "icc dose inicial": "**2,5 mg/dia.** Pelo risco de queda importante da pressão na primeira dose, manter sob supervisão médica rigorosa. Pode ser aumentada para 5 mg/dia após 2-4 semanas se os sintomas não tiverem sido adequadamente aliviados e não houver hipotensão sintomática, com titulação subsequente até 10 mg e eventualmente 20 mg/dia.",
+      "icc classe iv nyha": "Pacientes com IC mais grave (classe IV) costumam necessitar de doses menores que os com IC leve a moderada (classes II-III).",
+      "icc com clcr abaixo de 30": "Dose inicial 2,5 mg/dia (igual à ICC sem insuficiência renal); a dose diária pode ser aumentada até 10 mg, mas a bula registra que a menor dose inicial (2,5 mg/dia) pode ser a dose ótima nesse subgrupo.",
+      "insuficiencia renal cronica progressiva dose": "10 mg 1x/dia, para reduzir a progressão da doença renal crônica com ou sem hipertensão associada; outro anti-hipertensivo pode ser combinado se necessário para controle pressórico adicional.",
+      "hipertenso com insuficiencia renal": "Menor dose inicial (5 mg) recomendada."
     },
     "references": [
       "Benazepril hydrochloride — rótulo aprovado pelo FDA, DailyMed SPL setid afd616b9-0c75-48be-862d-5ac18364fd9d",
-      "LOTENSIN (Cloridrato de Benazepril) · Bulas.med.br · 2014 · https://www.bulas.med.br/p/bulas-de-medicamentos/bula/3018/lotensin.htm",
+      "Bula do LOTENSIN (cloridrato de benazepril, Novartis do Brasil), via bulário saudedireta.com.br — usada para contraindicações completas, indicações de ICC/insuficiência renal e posologia em ICC",
       "Lotensin H · Saúde Direta · https://www.saudedireta.com.br/catinc/drugs/bulas/lotensinh.pdf",
       "LOTENSIN (benazepril hydrochloride) — bula FDA/DailyMed"
     ],
