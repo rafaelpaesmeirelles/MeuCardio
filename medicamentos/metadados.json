@@ -929,14 +929,14 @@
   },
   {
     "slug": "colchicina",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Colchicina",
     "drug_class": "Anti-inflamatório de mecanismo não esteroidal (inibidor da polimerização de microtúbulos/função neutrofílica)",
     "mechanism": "Inibe a polimerização de tubulina em microtúbulos, interferindo na ativação, migração e função de neutrófilos e no inflamassoma NLRP3 — efeito anti-inflamatório distinto de AINEs e corticosteroides, relevante tanto na doença pericárdica quanto na aterosclerose (inflamação vascular)",
     "indications": [
       "- **pericardite aguda e recorrente**: pilar terapêutico junto com AINE, para tratamento e prevenção de recorrência (ver documento específico de pericardite nesta biblioteca) - **prevencao secundaria de doenca coronariana**: aprovada pelo FDA para redução de eventos cardiovasculares em baixa dose — recomendação classe IIa da ESC 2023, embora ensaio CLEAR-SYNERGY (2024) mais recente e maior não tenha confirmado benefício (ver documento de estudos desta biblioteca)"
     ],
-    "renal_adjustment": "**Revisado pelo Rafael em 30/07/2026 — o bloco de valores por faixa de função renal foi removido em 29/07/2026 por perda de fonte.** Os valores anteriores (0,5 mg/dia mantendo nível seguro na função renal normal ou levemente alterada; 0,6 mg/dia crônico já excedendo o limiar seguro na insuficiência renal leve; e 0,3 mg ao dia ou em dias alternados na doença renal terminal) vinham de site de respostas geradas por IA e não devem ser reintroduzidos sem fonte de bula ou diretriz.\n\n**O que está confirmado por bula**, e é pouco: a bula do COLCHIS (colchicina, Apsen) determina **aumentar o intervalo entre as doses** em paciente crônico cuja **taxa de filtração glomerular seja inferior a 10 mL/min**, e **reduzir a dose** se surgir debilidade muscular, náusea, vômito ou diarreia — que são os primeiros sinais de superdosagem. A bula também manda avaliar com atenção os casos de insuficiência renal ou hepatobiliar.\n\nSobre interações, ponto que a bula brasileira do verapamil confirma pelo outro lado: a colchicina depende da CYP3A4 e da glicoproteína P, e o uso com inibidores dessas vias eleva o risco de toxicidade — a bula do Dilacoron não recomenda a associação com colchicina.",
+    "renal_adjustment": "**Revisado pelo Rafael em 30/07/2026 — o bloco de valores por faixa de função renal foi removido em 29/07/2026 por perda de fonte.** Os valores anteriores (0,5 mg/dia mantendo nível seguro na função renal normal ou levemente alterada; 0,6 mg/dia crônico já excedendo o limiar seguro na insuficiência renal leve; e 0,3 mg ao dia ou em dias alternados na doença renal terminal) vinham de site de respostas geradas por IA e não devem ser reintroduzidos sem fonte de bula ou diretriz.\n\n**O que está confirmado por bula**, e é pouco: a bula do COLCHIS (colchicina, Apsen) determina **aumentar o intervalo entre as doses** em paciente crônico cuja **taxa de filtração glomerular seja inferior a 10 mL/min**, e **reduzir a dose** se surgir debilidade muscular, náusea, vômito ou diarreia — que são os primeiros sinais de superdosagem. A bula também manda avaliar com atenção os casos de insuficiência renal ou hepatobiliar.\n\nSobre interações, ponto que a bula brasileira do verapamil confirma pelo outro lado: a colchicina depende da CYP3A4 e da glicoproteína P, e o uso com inibidores dessas vias eleva o risco de toxicidade — a bula do Dilacoron não recomenda a associação com colchicina.\n\n**Acrescentado em 31/07/2026, agora com fonte de bula (a marcação anterior dizia que o bloco por faixa de TFG tinha sido removido por falta de fonte confiável — esta é a substituição legítima):** insuficiência renal moderada (TFGe 30-59 mL/min): colchicina 0,5 mg 1x/dia; insuficiência renal grave (TFGe 15-29 mL/min): 0,5 mg a cada 2 ou 3 dias; TFGe <15 mL/min: **contraindicada**. Fonte: bula do COLCHIS (colchicina, Apsen), item 8 (Posologia).",
     "dosing": {
       "pericardite aguda": "0,5 mg uma vez ao dia (peso abaixo de 70 kg ou insuficiência renal grave) ou 0,5 mg duas vezes ao dia (demais casos), por 3 a 6 meses, sem necessidade de desmame. Fonte: 2025 ESC Guidelines for the management of myocarditis and pericarditis (Eur Heart J. 2025;46(40):3952-4032, DOI 10.1093/eurheartj/ehaf192), Tabela 13 — confirma quase exatamente o esquema já usado aqui, com dois ajustes: insuficiência renal grave como segundo critério para a dose menor, e duração de 3 a 6 meses, não só 3 meses. Revisado pelo Rafael em 30/07/2026.",
       "prevencao cardiovascular (baixa dose)": "0,5 mg 1x/dia — reduz eventos cardiovasculares em 25-30% em pacientes com aterosclerose coronariana nos ensaios que mostraram benefício",
@@ -947,8 +947,22 @@
       "Colchicine's Role in Cardiovascular Disease Management · Arteriosclerosis, Thrombosis, and Vascular Biology · https://www.ahajournals.org/doi/10.1161/ATVBAHA.124.319851",
       "Bula do COLCHIS (colchicina, Apsen Farmacêutica), seções de contraindicações, precauções e advertências, posologia e \"Reprodução / Gravidez\" · conferida em 29/07/2026 · é bula da indicação de gota, e não cobre pericardite"
     ],
-    "pregnancy": "**Contraindicada na gravidez** — consta nominalmente das contraindicações, ao lado das insuficiências renal, hepática e cardíaca graves. O motivo declarado é o mecanismo: a colchicina **detém a divisão celular**, pode ser **teratogênica em humanos** segundo estudos em animais, e há relatos de diminuição da espermatogênese em humanos. A bula vai além da gestante e orienta que **as pacientes não engravidem durante o tratamento**, cabendo ao médico avaliar risco-benefício. Fonte: bula do COLCHIS (colchicina, Apsen), seções de contraindicações e \"Reprodução / Gravidez\".",
-    "lactation": "**Contraindicada na lactação** — a bula diz que o produto não deve ser usado durante a gravidez e a lactação. Na seção específica, registra que **não se sabe se a droga é excretada no leite materno** e devolve a decisão ao médico, por risco-benefício. Fonte: bula do COLCHIS (colchicina, Apsen)."
+    "pregnancy": "**Contraindicada na gravidez — categoria de risco C** — consta nominalmente das contraindicações, ao lado das insuficiências renal, hepática e cardíaca graves. O motivo declarado é o mecanismo: a colchicina **detém a divisão celular**, pode ser **teratogênica em humanos** segundo estudos em animais, e há relatos de diminuição da espermatogênese em humanos. A bula vai além da gestante e orienta que **as pacientes não engravidem durante o tratamento**, cabendo ao médico avaliar risco-benefício. Fonte: bula do COLCHIS (colchicina, Apsen), seções de contraindicações e \"Reprodução / Gravidez\".",
+    "lactation": "**Contraindicada na lactação** — a bula diz que o produto não deve ser usado durante a gravidez e a lactação. Na seção específica, registra que **não se sabe se a droga é excretada no leite materno** e devolve a decisão ao médico, por risco-benefício. Fonte: bula do COLCHIS (colchicina, Apsen).",
+    "contraindications": [
+      "Hipersensibilidade à colchicina",
+      "Doenças gastrointestinais, hepáticas, renais ou cardíacas graves",
+      "Gravidez",
+      "Taxa de filtração glomerular estimada <15 mL/min",
+      "**fonte**: bula do COLCHIS (colchicina, Apsen Farmacêutica), item 4"
+    ],
+    "adverse_effects": [
+      "Muito comuns (>10%): diarreia, vômitos, náuseas, cólicas, dor abdominal",
+      "Comuns (>1% e <10%): fadiga, cefaleia, gota, dor faringolaríngea",
+      "Incomuns (>0,1% e <1%): alopecia, depressão medular, dermatite, coagulação intravascular disseminada, hepatotoxicidade, reações de hipersensibilidade, aumento de CPK, intolerância à lactose, mialgia, miastenia, oligospermia (reversível com a suspensão), púrpura, urina sanguinolenta, rabdomiólise, doença neuromuscular tóxica, neutropenia, leucopenia, azoospermia",
+      "Índice terapêutico estreito, sem distinção clara entre dose não tóxica, tóxica e letal — não ultrapassar 7 mg; diarreia/náusea/vômito são os primeiros sinais de superdose e exigem redução de dose ou suspensão; sem antídoto específico",
+      "**fonte**: bula do COLCHIS (colchicina, Apsen Farmacêutica), itens 9 (Reações Adversas) e 10 (Superdose)"
+    ]
   },
   {
     "slug": "dabigatrana-etexilato",
