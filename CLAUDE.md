@@ -283,9 +283,44 @@ contra o `git log` do dia.
 > **Nota de faixa:** `evidencias/` e Febre reumática são da Biblioteca. Entrei porque o Rafael pediu
 > explicitamente, alterei **um campo de um registro** e commitei na mesma ação.
 >
-> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **75 documentos novos, todos publicados**
-> `documents` **508 total = 508 publicados**, zero chunks de não publicado na auditoria após cada
-> lote. (Parte dos 508 é da sessão da Biblioteca; os **75** acima são só desta sessão.)
+> ### 📊 Fechamento da sessão de Medicamentos, 31/07 → **01/08/2026** (a sessão atravessou a virada do dia): **87 documentos novos, todos publicados**
+> `documents` **522 total = 522 publicados**, zero chunks de não publicado na auditoria após cada
+> lote. (Parte dos 522 é da sessão da Biblioteca; os **87** acima são só desta sessão.)
+>
+> #### 📐 Acervo medido no disco em 01/08/2026, nas 11 frentes: **1.262 itens — faltam 738 para os 2.000**
+> `content/*.md` **523** · `evidencias` **376** · `estudos` **95** · `medicamentos` 89 ·
+> `exames` **71** · `galeria` **69** · `trilhas` 17 · `emergencia` 10 · `casos-clinicos` 5 ·
+> `checklists` 3 · `material-paciente` 4. Contagem por script, não estimativa, com a pasta
+> `casos-clinicos` grafada **com hífen** (a armadilha já registrada). **São nove dias até 10/08 e
+> ~82 itens/dia somando as duas sessões** — abaixo dos ~102 exigidos na manhã de 31/07 porque as
+> duas sessões produziram bem no intervalo.
+>
+> **Lotes 47 a 56 — mais 12 documentos**, todos da mesma varredura de acrônimos:
+> 47 **escore HEART** (Calculadoras) · 48 **CARPREG/CARPREG II/ZAHARA** (Gravidez) ·
+> 49 **levosimendana** LIDO/SURVIVE/REVIVE (Terapia intensiva) · 50 **TOPCAT + análise regional +
+> CHARM-Preserved** (ICFEp) · 51 **ALLHAT/ASCOT-BPLA/ACCOMPLISH** (Hipertensão) · 52 **4S/WOSCOPS/
+> metanálise CTT** (Prevenção) · além dos já registrados de nefroproteção (RENAAL/IDNT/ONTARGET),
+> AVERROES/ACTIVE, extensão no TEV, alvo intensivo de PA, digoxina (DIG) e COMPANION.
+>
+> **Três casos em que o SUBAGENTE PEGOU ERRO MEU — é a razão de a divisão de trabalho funcionar:**
+> 1. os PMIDs de **RENAAL e IDNT são o inverso** do que a ordem sequencial sugeriria;
+> 2. eu havia **trocado os rótulos ASPIRE e WARFASA** no enunciado do pedido — ele corrigiu pelo
+>    nome do grupo de investigadores em cada registro;
+> 3. o **título do ESPRIT no PubMed não é o que circula na literatura**, e ele confirmou identidade
+>    por NCT, periódico, volume, páginas e desenho antes de extrair.
+> **Isso só acontece porque o subagente NÃO escreve nada** — ele extrai e confere, e a redação é
+> minha. Se ele redigisse, esses três erros teriam entrado como texto plausível.
+>
+> **Quatro documentos deste bloco carregam ERRATA DECLARADA E NÃO LIDA**, em vez de omitir:
+> HOKUSAI-VTE (NEJM 2014;370(4):390), SWORD (Lancet 1996;348(9024):416), o ensaio de implementação
+> do HEART (Ann Intern Med 2017;167(2):144) e o **ALLHAT, que tem duas** (JAMA 2003;289(2):178 e
+> JAMA 2004;291(18):2196).
+>
+> **Um documento verificado e NÃO escrito, de propósito:** MADIT-II e SCD-HeFT. A varredura os
+> apontou, mas eles **já estão cobertos com números completos** em
+> `cardiodesfibrilador-implantavel-fundamentos-prevencao-secundaria.md`. **Conferir antes de
+> escrever evitou uma duplicata** — é o mesmo defeito de "duas telas do mesmo assunto" que a Fase B
+> levou semanas removendo.
 >
 > ### ⚡ Aceleração pedida pelo Rafael, 31/07/2026 à tarde — o que funcionou e o que não se aplicou
 > Ele pediu três táticas. Registro do resultado real, para a próxima sessão não repetir o teste:
