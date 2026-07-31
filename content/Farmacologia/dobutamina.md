@@ -3,8 +3,8 @@ title: "Dobutamina"
 slug: dobutamina
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
-source_refs: ["Vasopressores e inotrópicos na Sala de Urgência · Revista Qualidade HC — USP · https://hcrp.usp.br/revistaqualidade/uploads/Artigos/197/197.pdf", "Dobutamina: Uso Clínico · Guia TdC · 2025 · https://www.tadeclinicagem.com.br/guia/396/dobutamina-uso-clinico/", "Resumo sobre Dobutamina: indicações, farmacologia e mais! · Estratégia MED · 2024 · https://med.estrategia.com/portal/conteudos-gratis/farmacos/resumo-sobre-dobutamina-indicacoes-farmacologia-e-mais/"]
+review_status: revisado
+source_refs: ["Vasopressores e inotrópicos na Sala de Urgência · Revista Qualidade HC — USP · https://hcrp.usp.br/revistaqualidade/uploads/Artigos/197/197.pdf", "Dobutamine injection, solution, concentrate — rótulo aprovado pelo FDA (Hospira), DailyMed SPL setid dc537761-d5f4-488d-24ab-b2bcd2b17b7a — apresentação de 250mg/20mL confirmada"]
 legacy_source: "medicamentos/banco-de-medicamentos-dobutamina.md"
 ---
 

@@ -3,7 +3,7 @@ title: "Edoxabana"
 slug: edoxabana
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["LIXIANA (edoxabano, Daiichi Sankyo) — Resumo das Características do Medicamento, EMA, em português, secção 4.2 · https://www.ema.europa.eu/pt/documents/product-information/lixiana-epar-product-information_pt.pdf · consultado em 29/07/2026", "Edoxaban tablets (SAVAYSA) — rótulo aprovado pelo FDA", "Giugliano RP, Ruff CT, Braunwald E, et al. Edoxaban versus warfarin in patients with atrial fibrillation (ENGAGE AF-TIMI 48). N Engl J Med. 2013;369(22):2093-2104. DOI: 10.1056/NEJMoa1310907", "Anvisa. Ondexxya (alfa-andexanete): novo registro. Publicado em 04/09/2023 · https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/novos-medicamentos-e-indicacoes/ondexxya-alfa-andexanete-novo-registro — indicação registrada nomeia apenas apixabana e rivaroxabana"]
 legacy_source: "medicamentos/banco-de-medicamentos-edoxabana.md"
 ---

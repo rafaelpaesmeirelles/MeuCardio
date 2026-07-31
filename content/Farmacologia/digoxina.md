@@ -3,7 +3,7 @@ title: "Digoxina"
 slug: digoxina
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Ahmed A, Rich MW, Love TE, et al. Digoxin and reduction in mortality and hospitalization in heart failure: a comprehensive post hoc analysis of the DIG trial. Eur Heart J. 2006;27(2):178-186. DOI: 10.1093/eurheartj/ehi687. PMID: 16339157", "Digitalis Investigation Group; Ahmed A, Waagstein F, Pitt B, et al. Effectiveness of digoxin in reducing one-year mortality in chronic heart failure in the Digitalis Investigation Group trial. Am J Cardiol. 2009;103(1):82-87. DOI: 10.1016/j.amjcard.2008.06.068. PMID: 19101235", "Digoxin tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 5886e233-b2da-4acb-be05-9bf40fb8e7f4"]
 legacy_source: "medicamentos/banco-de-medicamentos-digoxina.md"
 ---
