@@ -3,8 +3,8 @@ title: "Olmesartana medoxomila"
 slug: olmesartana-medoxomila
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
-source_refs: ["Olmesartan medoxomil — rótulo aprovado pelo FDA, DailyMed SPL setid 574d2679-c036-fa12-e063-6394a90aef33", "Olmesartana para Hipertensão: como funciona e como prescrever · WeMeds · 2025 · https://portal.wemeds.com.br/olmesartana-para-hipertensao-como-prescrever/", "Bula para Profissionais - Olmesartana medoxomila · Accord Farma · https://accordfarma.com.br/bulas/bula_Olmesartana_medoxomila_Profissional.pdf", "Olmesartan medoxomil — bula FDA/DailyMed (múltiplas versões consultadas)"]
+review_status: revisado
+source_refs: ["Bula para Profissionais - Olmesartana medoxomila (Accord Farmacêutica, genérico, VPS 12.2022, aprovada pela ANVISA em 26/11/2020) · https://accordfarma.com.br/bulas/bula_Olmesartana_medoxomila_Profissional.pdf · conferida na íntegra em 31/07/2026", "Olmesartan medoxomil — rótulo aprovado pelo FDA, DailyMed SPL setid 574d2679-c036-fa12-e063-6394a90aef33"]
 legacy_source: "medicamentos/banco-de-medicamentos-olmesartana-medoxomila.md"
 ---
 
@@ -20,12 +20,12 @@ Bloqueador do receptor de angiotensina II (BRA/ARA-II)
 Antagonista seletivo e competitivo do receptor AT1 de angiotensina II, bloqueando efeitos de vasoconstrição e secreção de aldosterona
 
 ## Dose
-- **hipertensao adulto inicial**: 20 mg 1x/dia
-- **hipertensao dose maxima**: 40 mg 1x/dia, se necessária redução adicional após 2 semanas — doses acima de 40 mg não mostram efeito adicional
-- **pediatria 6 anos ou mais peso maior 35kg**: 20 mg 1x/dia (dose inicial igual à do adulto)
-- **Ajuste renal**: não é necessário ajuste na insuficiência renal leve a moderada (ClCr 30-90 mL/min)
-- **Ajuste hepático**: não é necessário ajuste, mesmo em disfunção hepática grave — cautela, pois alteração de fluidos/eletrólitos pode precipitar coma hepático em hepatopata grave
-- **fonte**: WeMeds — Olmesartana para Hipertensão; bula FDA/DailyMed
+- **hipertensao adulto inicial**: 20 mg 1x/dia, em monoterapia
+- **hipertensao dose maxima**: até 40 mg 1x/dia, se necessária redução adicional da PA após 2 semanas — doses acima de 40 mg não mostram efeito adicional
+- **pediatria 6 anos ou mais, peso maior que 35 kg**: 20 mg 1x/dia (dose inicial igual à do adulto), podendo subir a 40 mg/dia pelo mesmo critério do adulto; **não deve ser utilizada em pacientes com menos de 35 kg**
+- **Ajuste renal — corrigido em 31/07/2026, bula brasileira lida na íntegra**: nenhum ajuste da dose inicial em insuficiência renal leve a moderada. Em **insuficiência renal grave (ClCr <40 mL/min)** ou em paciente com possível depleção de volume intravascular (ex.: uso de diurético, sobretudo com função renal já reduzida), iniciar sob supervisão cuidadosa e considerar dose inicial menor
+- **Ajuste hepático — corrigido em 31/07/2026**: nenhum ajuste da dose inicial em disfunção hepática leve a moderada. Em **insuficiência hepática grave**, iniciar sob supervisão cuidadosa e considerar dose inicial menor — a bula brasileira não traz o racional de "coma hepático por alteração de fluidos/eletrólitos" que uma leitura anterior deste documento atribuía a ela; é recomendação de cautela e dose reduzida, não uma contraindicação com mecanismo declarado
+- **fonte**: bula da Accord Farma (item 8, Posologia e modo de usar)
 
 ## Indicacoes
 Hipertensão arterial sistêmica, em monoterapia ou combinação, como parte da primeira linha de tratamento junto com IECA, BRA, diuréticos tiazídicos e bloqueadores de canal de cálcio
@@ -40,11 +40,15 @@ Sinais de hipotensão ao iniciar o tratamento, especialmente em paciente com dep
 - **Agentes que aumentam potássio** (poupador de potássio, suplemento de potássio): risco de hipercalemia
 - **AINE**: reduz o efeito anti-hipertensivo e aumenta risco de lesão renal
 - **Dupla inibição do sistema renina-angiotensina** (associação com IECA ou alisquireno): maior risco de lesão renal, hipotensão e hipercalemia
+- **Lítio — acrescentado em 31/07/2026, bula brasileira**: relatado aumento da litemia e toxicidade por lítio com uso concomitante de BRA, incluindo olmesartana; monitorar litemia durante o uso conjunto
+- **Colesevelam**: reduz a concentração plasmática e a exposição sistêmica da olmesartana; administrar a olmesartana pelo menos 4 horas antes do colesevelam reduz o efeito
 
 ## Contraindicacoes
-- Gravidez
-- Insuficiência hepática grave/colestase
-- Hipersensibilidade
+**Corrigido em 31/07/2026** — a bula brasileira (item 4) lista como contraindicação formal só três itens; "insuficiência hepática grave/colestase", que constava aqui, **não é contraindicação formal na bula brasileira** — é indicação de dose inicial menor sob supervisão cuidadosa (ver Dose, acima), não proibição de uso:
+
+- Hipersensibilidade aos componentes da fórmula
+- Gravidez (categoria de risco C no 1º trimestre, D no 2º e 3º — uso de fármaco que age no sistema renina-angiotensina nesses trimestres associado a dano fetal e morte; suspender assim que a gravidez for diagnosticada)
+- Coadministração com alisquireno em pacientes diabéticos (maior risco de hipotensão, hipercalemia e piora da função renal, incluindo lesão renal aguda)
 
 ## Relacao com sacubitril-valsartana
 Não associar. O sacubitril-valsartana **já contém valsartana**, de modo que somar um BRA a ele é duplicar o bloqueio do receptor de angiotensina, sem ganho e com mais hipotensão, hipercalemia e disfunção renal. Ao migrar de um BRA para o sacubitril-valsartana, o BRA é substituído, não somado.
