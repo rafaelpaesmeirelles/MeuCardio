@@ -1595,7 +1595,7 @@
   },
   {
     "slug": "espironolactona",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Espironolactona",
     "brand_names": [
       "Aldactone"
@@ -1611,16 +1611,17 @@
       "IC com fração de ejeção reduzida (FEVE <35%), associada a IECA/BRA/INRA e betabloqueador, para redução de morbimortalidade; IC com fração de ejeção preservada (FEVE ≥45%) como indicação IIa para redução de risco de hospitalização; hipertensão arterial resistente verdadeira"
     ],
     "contraindications": [
-      "Insuficiência renal aguda",
-      "Anúria",
-      "Hiperpotassemia",
+      "Insuficiência renal aguda, diminuição significativa da função renal, ou anúria",
       "Doença de Addison",
-      "Diminuição significativa da função renal (conforme critérios abaixo)"
+      "Hipercalemia",
+      "Hipersensibilidade conhecida à espironolactona",
+      "Uso concomitante de eplerenona",
+      "**fonte**: bula do ALDACTONE (espironolactona, Pfizer/Wyeth), item 4"
     ],
     "adverse_effects": [
       "Ginecomastia e mastalgia (9% dos pacientes), piora da função renal, hipercalemia, amenorreia, impotência, diminuição da libido, hiperglicemia, hiperuricemia, hipocalcemia, hipomagnesemia, hiponatremia e redução da volemia"
     ],
-    "pregnancy": "Uso deve ser evitado na gestação devido à ação anti-androgênica; evitar também durante a lactação",
+    "pregnancy": "**Categoria de risco C.** Sem efeito teratogênico em camundongos; em coelhos, taxa de concepção reduzida, mais reabsorção e menos nascidos vivos; em ratos, feminização de genitália externa em fetos machos foi relatada em um estudo. Não há estudos em gestantes — usar na gravidez só se o benefício potencial justificar o risco ao feto. Fonte: bula do ALDACTONE (espironolactona, Pfizer/Wyeth), seção \"Fertilidade, Gravidez e Lactação\". **Corrigido em 31/07/2026**: categoria de risco não estava declarada.",
     "dosing": {
       "hipertensao essencial": "**50 a 100 mg/dia** como dose usual; em casos resistentes ou graves pode ser aumentada gradualmente, **em intervalos de duas semanas, até 200 mg/dia**.",
       "ic congestiva dose usual da bula": "**100 mg/dia**.",
@@ -1643,7 +1644,8 @@
     "references": [
       "Pitt B, Zannad F, Remme WJ, et al. The effect of spironolactone on morbidity and mortality in patients with severe heart failure (RALES). N Engl J Med. 1999;341(10):709-717. DOI: 10.1056/NEJM199909023411001. PMID: 10471456",
       "Pitt B, Pfeffer MA, Assmann SF, et al. Spironolactone for heart failure with preserved ejection fraction (TOPCAT). N Engl J Med. 2014;370(15):1383-1392. DOI: 10.1056/NEJMoa1313731. PMID: 24716680",
-      "Bula de ALDACTONE (espironolactona), Wyeth Indústria Farmacêutica Ltda. — seções de composição e posologia, versão brasileira."
+      "Bula de ALDACTONE (espironolactona), Wyeth Indústria Farmacêutica Ltda. — seções de composição e posologia, versão brasileira.",
+      "Bula do ALDACTONE (espironolactona, Pfizer Brasil), pfizer.com.br — usada para contraindicações completas (item 4) e categoria de risco na gravidez"
     ],
     "lactation": "Se o uso na amamentação for considerado essencial, **deve-se instituir método alternativo de alimentação para a criança** — ou seja, a bula resolve pela suspensão do aleitamento, não pela suspensão do fármaco. Fonte: bula do ALDACTONE (espironolactona)."
   },
