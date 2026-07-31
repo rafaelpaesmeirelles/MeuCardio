@@ -7,33 +7,49 @@ import BoasVindas from "./BoasVindas";
 
 type ItemNav = { to: string; rotulo: string; curto: string; fim?: boolean };
 
+// Agrupado nas mesmas seis categorias do Painel (Painel.tsx), cada bloco em
+// ordem alfabética por rótulo — só Administração e Minha conta, acrescidas
+// mais abaixo fora deste array, ficam de fora da ordenação, sempre por último.
 const NAV_BASE: ItemNav[] = [
   { to: "/", rotulo: "Painel", curto: "Painel", fim: true },
-  { to: "/assistente", rotulo: "Assistente clínico", curto: "Assistente" },
-  { to: "/biblioteca", rotulo: "Biblioteca científica", curto: "Biblioteca" },
-  { to: "/fluxogramas", rotulo: "Fluxogramas clínicos", curto: "Fluxogramas" },
-  { to: "/busca", rotulo: "Busca", curto: "Busca" },
-  { to: "/calculadoras", rotulo: "Calculadoras", curto: "Escores" },
-  { to: "/medicamentos", rotulo: "Medicamentos", curto: "Fármacos" },
-  { to: "/interacoes", rotulo: "Checador de Interação Medicamentosa", curto: "Interações" },
+
+  // Apoio à decisão clínica
   { to: "/condicoes", rotulo: "Alerta por condição", curto: "Condições" },
-  { to: "/galeria", rotulo: "Galeria de imagens", curto: "Galeria" },
-  { to: "/exames", rotulo: "Exames", curto: "Exames" },
-  { to: "/evidencias", rotulo: "Evidências", curto: "Evidências" },
+  { to: "/assistente", rotulo: "Assistente clínico", curto: "Assistente" },
+  { to: "/calculadoras", rotulo: "Calculadoras", curto: "Escores" },
+  { to: "/interacoes", rotulo: "Checador de Interação Medicamentosa", curto: "Interações" },
+  { to: "/fluxogramas", rotulo: "Fluxogramas clínicos", curto: "Fluxogramas" },
+  { to: "/medicamentos", rotulo: "Medicamentos", curto: "Fármacos" },
+
+  // Ciência e atualização
   { to: "/diretrizes", rotulo: "Alertas de diretriz", curto: "Diretrizes" },
+  { to: "/biblioteca", rotulo: "Biblioteca científica", curto: "Biblioteca" },
+  { to: "/busca", rotulo: "Busca", curto: "Busca" },
   { to: "/estudos", rotulo: "Estudos", curto: "Estudos" },
-  { to: "/favoritos", rotulo: "Favoritos", curto: "Favoritos" },
+  { to: "/evidencias", rotulo: "Evidências", curto: "Evidências" },
+  { to: "/exames", rotulo: "Exames", curto: "Exames" },
+  { to: "/galeria", rotulo: "Galeria de imagens", curto: "Galeria" },
+
+  // Beira do leito
+  { to: "/checklists", rotulo: "Checklist de alta", curto: "Alta" },
   { to: "/round", rotulo: "Round hospitalar", curto: "Round" },
+
+  // Documentos
   { to: "/agenda", rotulo: "Agenda", curto: "Agenda" },
+  { to: "/documentos", rotulo: "Emissão de Documentos Online", curto: "Documentos" },
+  { to: "/telediagnostico", rotulo: "Laudo e consultoria", curto: "Laudo" },
   { to: "/material-paciente", rotulo: "Material para o paciente", curto: "Paciente" },
   { to: "/receituario", rotulo: "Prescrição Eletrônica", curto: "Prescrição" },
-  { to: "/documentos", rotulo: "Emissão de Documentos Online", curto: "Documentos" },
-  { to: "/trilhas", rotulo: "Trilhas de estudo", curto: "Trilhas" },
+
+  // Educação continuada
   { to: "/casos-clinicos", rotulo: "Casos clínicos interativos", curto: "Casos" },
-  { to: "/checklists", rotulo: "Checklist de alta", curto: "Alta" },
-  { to: "/indicadores", rotulo: "Meus indicadores", curto: "Indicadores" },
   { to: "/cursos", rotulo: "Cursos parceiros", curto: "Cursos" },
-  { to: "/telediagnostico", rotulo: "Laudo e consultoria", curto: "Laudo" },
+  { to: "/trilhas", rotulo: "Trilhas de estudo", curto: "Trilhas" },
+
+  // Sua conta
+  { to: "/favoritos", rotulo: "Favoritos", curto: "Favoritos" },
+  { to: "/indicadores", rotulo: "Meus indicadores", curto: "Indicadores" },
+
   // Aponta para /corvia-mail (login/assinatura próprios do add-on), não
   // direto pra /caixa-de-email — o e-mail tem senha separada da conta
   // Corvia desde 30/07/2026, então precisa passar pelo login dele primeiro.

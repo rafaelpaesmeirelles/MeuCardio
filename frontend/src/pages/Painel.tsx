@@ -23,15 +23,14 @@ const GRUPOS: Grupo[] = [
     descricao: "Para usar com o paciente na frente.",
     funcoes: [
       {
+        to: "/condicoes",
+        nome: "Alerta por condição especial",
+        descricao: "Cruza o que vai ser prescrito ou pedido com gestação, doença renal crônica, hepatopatia e outras condições.",
+      },
+      {
         to: "/assistente",
         nome: "Assistente clínico",
         descricao: "Pergunte em linguagem natural e receba a resposta ancorada nos documentos da biblioteca, com a fonte citada.",
-        destaque: true,
-      },
-      {
-        to: "/fluxogramas",
-        nome: "Fluxogramas clínicos",
-        descricao: "Árvores de decisão fundamentadas em diretriz vigente (ESC, AHA/ACC, SBC) — cada ramo termina numa conduta.",
         destaque: true,
       },
       {
@@ -41,19 +40,20 @@ const GRUPOS: Grupo[] = [
         destaque: true,
       },
       {
-        to: "/medicamentos",
-        nome: "Medicamentos",
-        descricao: "Comparador lado a lado: dose, apresentação, ajuste renal, contraindicação e interação, com a bula de origem declarada.",
-      },
-      {
         to: "/interacoes",
         nome: "Checador de Interação Medicamentosa",
         descricao: "Monte a lista do que o paciente já usa e do que você vai prescrever, e veja as interações com gravidade e fonte.",
       },
       {
-        to: "/condicoes",
-        nome: "Alerta por condição especial",
-        descricao: "Cruza o que vai ser prescrito ou pedido com gestação, doença renal crônica, hepatopatia e outras condições.",
+        to: "/fluxogramas",
+        nome: "Fluxogramas clínicos",
+        descricao: "Árvores de decisão fundamentadas em diretriz vigente (ESC, AHA/ACC, SBC) — cada ramo termina numa conduta.",
+        destaque: true,
+      },
+      {
+        to: "/medicamentos",
+        nome: "Medicamentos",
+        descricao: "Comparador lado a lado: dose, apresentação, ajuste renal, contraindicação e interação, com a bula de origem declarada.",
       },
     ],
   },
@@ -61,6 +61,11 @@ const GRUPOS: Grupo[] = [
     titulo: "Ciência e atualização",
     descricao: "A base que sustenta a conduta, com referência verificável.",
     funcoes: [
+      {
+        to: "/diretrizes",
+        nome: "Alertas de diretriz",
+        descricao: "Avisa quando sai versão nova da diretriz que embasa um documento que você favoritou.",
+      },
       {
         to: "/biblioteca",
         nome: "Biblioteca científica",
@@ -77,9 +82,9 @@ const GRUPOS: Grupo[] = [
         descricao: "A recomendação pontual, com classe, nível, sociedade e ano — não o documento inteiro.",
       },
       {
-        to: "/estudos",
-        nome: "Trabalhos científicos",
-        descricao: "Ensaios, revisões e metanálises com os números reais do estudo e a implicação clínica.",
+        to: "/exames",
+        nome: "Exames e marcadores",
+        descricao: "O que cada exame mede, valor de referência, quando pedir e o que limita a interpretação.",
       },
       {
         to: "/galeria",
@@ -87,14 +92,9 @@ const GRUPOS: Grupo[] = [
         descricao: "Achados de ECG, eco, TC, radiografia e angiografia, com o achado descrito e os pontos de ensino.",
       },
       {
-        to: "/exames",
-        nome: "Exames e marcadores",
-        descricao: "O que cada exame mede, valor de referência, quando pedir e o que limita a interpretação.",
-      },
-      {
-        to: "/diretrizes",
-        nome: "Alertas de diretriz",
-        descricao: "Avisa quando sai versão nova da diretriz que embasa um documento que você favoritou.",
+        to: "/estudos",
+        nome: "Trabalhos científicos",
+        descricao: "Ensaios, revisões e metanálises com os números reais do estudo e a implicação clínica.",
       },
     ],
   },
@@ -103,14 +103,14 @@ const GRUPOS: Grupo[] = [
     descricao: "O que acompanha o paciente do round à alta.",
     funcoes: [
       {
-        to: "/round",
-        nome: "Round hospitalar",
-        descricao: "Pacientes internados, evolução, prescrição e linha do tempo de cada caso.",
-      },
-      {
         to: "/checklists",
         nome: "Checklist de alta",
         descricao: "O que não pode faltar na alta pós-evento cardiovascular, marcado item a item antes de liberar.",
+      },
+      {
+        to: "/round",
+        nome: "Round hospitalar",
+        descricao: "Pacientes internados, evolução, prescrição e linha do tempo de cada caso.",
       },
     ],
   },
@@ -119,9 +119,9 @@ const GRUPOS: Grupo[] = [
     descricao: "O que sai do consultório — receita, atestado, laudo, material do paciente e agenda.",
     funcoes: [
       {
-        to: "/receituario",
-        nome: "Prescrição Eletrônica",
-        descricao: "Monte a receita com os fármacos da base estruturada e emita para o paciente.",
+        to: "/agenda",
+        nome: "Agenda",
+        descricao: "Compromissos, retornos e o que está marcado para os próximos dias.",
       },
       {
         to: "/documentos",
@@ -129,18 +129,18 @@ const GRUPOS: Grupo[] = [
         descricao: "Templates que geram o documento já preenchido com os dados do paciente.",
       },
       {
+        nome: "Laudo e consultoria",
+        descricao: "Envie ECG, MAPA, Holter ou teste ergométrico e receba interpretação ou laudo, com prazo definido.",
+      },
+      {
         to: "/material-paciente",
         nome: "Material para o paciente",
         descricao: "Explicação da condição em linguagem acessível, em PDF, para entregar na consulta.",
       },
       {
-        to: "/agenda",
-        nome: "Agenda",
-        descricao: "Compromissos, retornos e o que está marcado para os próximos dias.",
-      },
-      {
-        nome: "Laudo e consultoria",
-        descricao: "Envie ECG, MAPA, Holter ou teste ergométrico e receba interpretação ou laudo, com prazo definido.",
+        to: "/receituario",
+        nome: "Prescrição Eletrônica",
+        descricao: "Monte a receita com os fármacos da base estruturada e emita para o paciente.",
       },
     ],
   },
@@ -149,18 +149,18 @@ const GRUPOS: Grupo[] = [
     descricao: "Para estudar e para ensinar.",
     funcoes: [
       {
-        to: "/trilhas",
-        nome: "Trilhas de estudo",
-        descricao: "Sequência guiada por tema: o protocolo, a farmacologia, os estudos pivotais e as calculadoras, nessa ordem.",
+        to: "/casos-clinicos",
+        nome: "Casos clínicos interativos",
+        descricao: "Um caso, a sua decisão, e depois a conduta correta com a evidência que a sustenta.",
       },
       {
         nome: "Cursos parceiros",
         descricao: "Preparação para o Título de Especialista, com material de apoio arquivado aqui.",
       },
       {
-        to: "/casos-clinicos",
-        nome: "Casos clínicos interativos",
-        descricao: "Um caso, a sua decisão, e depois a conduta correta com a evidência que a sustenta.",
+        to: "/trilhas",
+        nome: "Trilhas de estudo",
+        descricao: "Sequência guiada por tema: o protocolo, a farmacologia, os estudos pivotais e as calculadoras, nessa ordem.",
       },
     ],
   },
@@ -169,14 +169,14 @@ const GRUPOS: Grupo[] = [
     descricao: "O que é seu e só você vê.",
     funcoes: [
       {
-        to: "/indicadores",
-        nome: "Meus indicadores",
-        descricao: "Laudos emitidos, tempo de resposta frente ao SLA e receita do telediagnóstico no período.",
-      },
-      {
         to: "/favoritos",
         nome: "Favoritos",
         descricao: "O que você marcou para reencontrar sem procurar de novo.",
+      },
+      {
+        to: "/indicadores",
+        nome: "Meus indicadores",
+        descricao: "Laudos emitidos, tempo de resposta frente ao SLA e receita do telediagnóstico no período.",
       },
       {
         to: "/minha-conta",
