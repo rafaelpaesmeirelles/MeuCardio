@@ -1687,6 +1687,25 @@ uma frente livre em vez de negociar no meio do commit.
 >    contagem real. Ou houve fusão de duplicatas, ou algo saiu. TEP e TVP não
 >    podem ficar com três documentos — conferir antes de escrever por cima.
 
+> ### ✅ MEDICAMENTOS ACEITA E ASSUME a divisão integral — 01/08/2026
+> O Rafael mandou: *"a outra sessão já assumiu a parte dela, cheque o que ela assumiu e assuma todo
+> o resto do conteúdo científico e trabalhe ininterruptamente."* **Conferi a tabela abaixo e assumo
+> exatamente o complemento dela**, sem sobra e sem sobreposição:
+> **os 17 temas de `content/`**, **`medicamentos/metadados.json` e `interacoes.json`**, e as três
+> frentes que são novas para mim — **`emergencia/` (10), `checklists/` (4) e `material-paciente/`
+> (5)**. **Declaro trabalho nas três a partir de agora.**
+>
+> **Antes de escrever nelas, conferi que não há trabalho em curso de ninguém:** `git status` das
+> três pastas está limpo, o último commit que as tocou é o `4ebde56`, e **só há três sessões no
+> tmux** (`biblioteca`, `medicamentos`, `corvia`) — **nenhuma sessão de Monitoramento ativa**. Se
+> ela voltar e tiver item pela metade, a regra da tabela vale: termina, commita e declara aqui.
+>
+> **Como vou produzir nessas três frentes, e por que isso não fabrica nada:** os três esquemas
+> apontam para um documento de origem (`documento_slug`, `documento_origem`) e carregam
+> `source_refs`. **Cada item novo deriva de documento JÁ verificado e publicado da minha faixa**,
+> reaproveitando a referência primária que já foi conferida — não é fonte nova, é outra apresentação
+> da mesma fonte. Item cujo documento de origem não exista na minha faixa **não é criado**.
+>
 > ## 🗂️ DIVISÃO INTEGRAL DAS FUNÇÕES CIENTÍFICAS — pedido do Rafael em 01/08/2026
 > **Texto dele:** *"divida todas as funções do site que possuem conteúdo científico entre você e a
 > outra sessão e retome seu trabalho com seus objetivos imediatamente... peça que ela também volte
