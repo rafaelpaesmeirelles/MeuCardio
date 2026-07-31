@@ -2,7 +2,7 @@ from fastapi import Depends, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.api import (
-    admin, ai, appointments, auth, calculators, documents, documentos_publicos, drugs,
+    admin, ai, appointments, auth, calculators, chat, documents, documentos_publicos, drugs,
     email as email_api, evidence,
     favorites, gallery, health, lab_tests, library, password_reset,
     prescriptions, round as round_api, search, service_orders, studies,
@@ -59,7 +59,7 @@ ROUTERS_ASSINANTES = (
     ai.router, gallery.router, favorites.router, lab_tests.router, evidence.router,
     studies.router, prescriptions.router, documents.router, appointments.router,
     timeline.router, guidelines.router, indicadores.router, checklists.router, study_tracks.router,
-    exportacao.router, emergencia.router, receituario.router, clinical_cases.router,
+    exportacao.router, emergencia.router, receituario.router, clinical_cases.router, chat.router,
 )
 
 for r in ROUTERS_LIVRES:
@@ -67,6 +67,11 @@ for r in ROUTERS_LIVRES:
 
 for r in ROUTERS_ASSINANTES:
     app.include_router(r, dependencies=[Depends(assinante_ativo)])
+
+# Router à parte para o WebSocket do chat: `dependencies=[Depends(assinante_ativo)]`
+# quebra rota de WebSocket (ver comentário em app/api/chat.py). Autenticação e
+# checagem de assinatura são feitas manualmente dentro do próprio handler.
+app.include_router(chat.router_ws)
 
 
 @app.on_event("startup")

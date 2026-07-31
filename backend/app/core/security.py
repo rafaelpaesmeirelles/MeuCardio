@@ -52,6 +52,15 @@ def _decodificar(token: str, escopo_exigido: str, erro: HTTPException):
     return email
 
 
+# Janela de throttle da presença: gravar `last_seen_at` a cada requisição
+# autenticada custaria um UPDATE por chamada de API — no ritmo de uso real do
+# app (várias chamadas por segundo enquanto a tela carrega), isso é ruído no
+# banco sem ganho de precisão. 60s é fino o bastante para o painel de
+# "usuários online" (definido como visto nos últimos 5 minutos, ver
+# `app/api/admin.py`) e grosso o bastante para não gerar um UPDATE a cada GET.
+PRESENCA_THROTTLE_SEGUNDOS = 60
+
+
 def current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(get_db)):
     from app.models.user import User
 
@@ -64,6 +73,12 @@ def current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(get_
     user = db.query(User).filter(User.email == email, User.is_active.is_(True)).first()
     if not user:
         raise credentials_error
+
+    agora = datetime.now(timezone.utc)
+    if user.last_seen_at is None or (agora - user.last_seen_at).total_seconds() > PRESENCA_THROTTLE_SEGUNDOS:
+        user.last_seen_at = agora
+        db.commit()
+
     return user
 
 

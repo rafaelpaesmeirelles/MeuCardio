@@ -433,3 +433,38 @@ def carregar_listas_controladas(db: Session = Depends(get_db), user=Depends(requ
                     entity="receituario", detail=resultado))
     db.commit()
     return resultado
+
+
+# ------------------------------------------------- usuários online (31/07) --
+# "Online" não é um campo gravado — é derivado no momento da consulta a
+# partir de `last_seen_at` (atualizado com throttle em `current_user`, ver
+# core/security.py). Uma janela de 5 minutos: maior que o throttle de 60s
+# (senão todo mundo apareceria offline entre uma requisição e outra), curta o
+# bastante para não mostrar como "online" quem fechou a aba há 20 minutos.
+JANELA_ONLINE_SEGUNDOS = 300
+
+
+@router.get("/usuarios-online")
+def usuarios_online(db: Session = Depends(get_db), _=Depends(require_admin)):
+    from app.models.user import User
+
+    agora = datetime.now(timezone.utc)
+    usuarios = (
+        db.query(User)
+        .filter(User.is_active.is_(True))
+        .order_by(User.last_seen_at.is_(None), User.last_seen_at.desc())
+        .all()
+    )
+    return [
+        {
+            "id": u.id,
+            "full_name": u.full_name,
+            "email": u.email,
+            "role": u.role,
+            "last_seen_at": u.last_seen_at,
+            "online": bool(
+                u.last_seen_at and (agora - u.last_seen_at).total_seconds() <= JANELA_ONLINE_SEGUNDOS
+            ),
+        }
+        for u in usuarios
+    ]

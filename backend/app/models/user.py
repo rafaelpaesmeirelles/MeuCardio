@@ -80,3 +80,9 @@ class User(Base):
     # False assim que a pessoa fecha o popup — não é sistema genérico de
     # avisos, é este recado específico.
     boas_vindas_pendente: Mapped[bool] = mapped_column(Boolean, default=False)
+
+    # Atualizado a cada requisição autenticada (com throttle, ver
+    # `current_user` em core/security.py) — base do painel de "usuários
+    # online" do admin (Tarefa de 31/07/2026). "Online" é derivado no momento
+    # da consulta (últimos 5 minutos), não é um booleano gravado.
+    last_seen_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
