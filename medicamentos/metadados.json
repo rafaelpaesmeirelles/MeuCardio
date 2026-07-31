@@ -1067,26 +1067,36 @@
   },
   {
     "slug": "digoxina",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Digoxina",
     "drug_class": "Glicosídeo cardíaco (digitálico)",
     "mechanism": "Inibe parcialmente a bomba de sódio-potássio (Na-K-ATPase) na membrana do cardiomiócito; o acúmulo de sódio intracelular reduz a eficiência do trocador sódio-cálcio, resultando em aumento do cálcio intracelular; esse cálcio adicional gera efeito inotrópico positivo (contração mais forte); paralelamente, aumenta o tônus vagal, produzindo efeito cronotrópico negativo (redução de FC) e dromotrópico negativo (retarda condução pelo nó AV)",
     "monitoring": [
-      "- **faixa terapeutica alvo ic**: 0,5-0,8 ng/mL\n- **risco de mortalidade acima**: ≥1,2 ng/mL\n- **procedencia dos cortes**: análise post hoc do ensaio DIG, agora conferida no artigo original. Mortalidade bruta por todas as causas em 37 meses subiu conforme a concentração sérica: **29,9% na faixa de 0,5-0,8 ng/mL, 38,8% entre 0,9-1,1 e 48,0% a partir de 1,2** (p=0,006 para tendência). Contra placebo, a faixa de 0,5-0,8 teve mortalidade **6,3 pontos percentuais menor** (IC95% 2,1-10,5), a faixa de 0,9-1,1 não diferiu, e a partir de 1,2 ng/mL a mortalidade foi **11,8 pontos maior** (IC95% 5,7-18,0). Ajustado: HR 0,80 (IC95% 0,68-0,94) para 0,5-0,8 e HR 1,16 (IC95% 0,96-1,39) para ≥1,2.\n- **limitacao que o corte carrega**: a análise principal foi restrita a **homens com FEVE ≤45%** (n=3.782). Aplicar a faixa a mulheres e a fração preservada é extrapolação, não resultado do estudo.\n- **observacao**: toxicidade pode ocorrer dentro da faixa terapêutica — o diagnóstico combina laboratório com avaliação clínica, nunca o valor isolado.\n- **fonte**: rótulo da digoxina aprovado pelo FDA (DailyMed), ensaio DIG e a análise post hoc de concentração sérica."
+      "- **faixa terapeutica alvo ic**: 0,5-0,8 ng/mL\n- **risco de mortalidade acima**: ≥1,2 ng/mL\n- **procedencia dos cortes**: análise post hoc do ensaio DIG, agora conferida no artigo original. Mortalidade bruta por todas as causas em 37 meses subiu conforme a concentração sérica: **29,9% na faixa de 0,5-0,8 ng/mL, 38,8% entre 0,9-1,1 e 48,0% a partir de 1,2** (p=0,006 para tendência). Contra placebo, a faixa de 0,5-0,8 teve mortalidade **6,3 pontos percentuais menor** (IC95% 2,1-10,5), a faixa de 0,9-1,1 não diferiu, e a partir de 1,2 ng/mL a mortalidade foi **11,8 pontos maior** (IC95% 5,7-18,0). Ajustado: HR 0,80 (IC95% 0,68-0,94) para 0,5-0,8 e HR 1,16 (IC95% 0,96-1,39) para ≥1,2.\n- **limitacao que o corte carrega**: a análise principal foi restrita a **homens com FEVE ≤45%** (n=3.782). Aplicar a faixa a mulheres e a fração preservada é extrapolação, não resultado do estudo.\n- **observacao**: toxicidade pode ocorrer dentro da faixa terapêutica — o diagnóstico combina laboratório com avaliação clínica, nunca o valor isolado.\n- **faixa clássica de bula (referência histórica, não o alvo recomendado aqui)**: a bula da DIGOXINA_VP (Pharlab) ainda usa a faixa mais ampla e antiga de 0,8-2,0 ng/mL como referência de baixo risco de toxicidade, com intoxicação provável acima de 3,0 ng/mL — mais larga que a faixa 0,5-0,8 ng/mL baseada em desfecho de mortalidade do estudo DIG citada acima. As duas faixas não são contraditórias tecnicamente (a de bula é sobre limiar de toxicidade; a do DIG é sobre menor mortalidade), mas a prática atual prioriza o alvo mais estreito do DIG, não o teto de 2,0 ng/mL da bula\n- **fonte**: rótulo da digoxina aprovado pelo FDA (DailyMed), ensaio DIG e a análise post hoc de concentração sérica; bula da DIGOXINA_VP (Pharlab) para a faixa clássica."
     ],
     "indications": [
       "ICFEr sintomática apesar de terapia otimizada (IECA/BRA/INRA + betabloqueador + antagonista mineralocorticoide + iSGLT2); ICFEr com FA concomitante (duplo benefício: força contrátil + controle de frequência); adjuvante ao betabloqueador quando este é insuficiente ou limitado por hipotensão no controle de FC em FA"
     ],
     "contraindications": [
-      "Fibrilação ventricular",
-      "Hipersensibilidade conhecida à digoxina ou a outro digitálico"
+      "Hipersensibilidade conhecida à digoxina ou a outro digitálico",
+      "Bloqueio atrioventricular completo ou intermitente, e bloqueio atrioventricular de segundo grau (especialmente com história de síndrome de Stokes-Adams)",
+      "Taquicardia ventricular e fibrilação ventricular",
+      "Arritmia supraventricular associada a via atrioventricular acessória (ex.: síndrome de Wolff-Parkinson-White) — mesmo sem história prévia de arritmia, salvo se as características eletrofisiológicas da via e o possível efeito deletério da digoxina sobre elas já tiverem sido avaliados",
+      "Cardiomiopatia obstrutiva hipertrófica, exceto se houver também fibrilação atrial e insuficiência cardíaca — e mesmo assim com cautela",
+      "Arritmia causada por intoxicação por glicosídeo cardíaco",
+      "**fonte**: bula brasileira de digoxina (consultada em duas apresentações independentes, resultados concordantes) — **corrigido em 31/07/2026**: os itens acima já estavam documentados em `notes.\"Situações de cautela clínica reconhecida\"` como contraindicação formal, mas nunca tinham sido promovidos a este campo — o array de contraindicações estava desatualizado em relação à própria pesquisa já registrada neste mesmo verbete"
     ],
     "interactions": [
       "Amiodarona e verapamil aumentam níveis sanguíneos de digoxina, exigindo redução de dose e monitorização"
     ],
     "dosing": {
-      "manutencao adulto": "0,125-0,250 mg/dia, individualizada",
-      "ajuste populacoes especiais": "Reduzir em insuficiência renal e idosos (eliminação reduzida)"
+      "dose de ataque rapida adulto": "750 a 1500 mcg (0,75-1,5 mg) como dose única — uso reservado a situações que exigem digitalização rápida",
+      "dose de ataque lenta adulto": "250 a 750 mcg (0,25-0,75 mg) ao dia por 1 semana, seguida de dose de manutenção; resposta clínica esperada dentro de 1 semana. Escolha entre ataque rápido e lento depende do estado clínico e urgência",
+      "manutencao adulto": "125-150 mcg/dia (0,125-0,150 mg/dia) na maioria dos pacientes; 62,5 mcg/dia (0,0625 mg) ou menos em quem tem maior sensibilidade a efeitos adversos",
+      "ataque pediatrico por peso": "Neonato prematuro <1,5kg: 25 mcg/kg/24h; 1,5-2,5kg: 30 mcg/kg/24h; neonato termo até 2 anos: 45 mcg/kg/24h; 2-5 anos: 35 mcg/kg/24h; 5-10 anos: 25 mcg/kg/24h — dividida em cerca de metade na primeira tomada e o restante fracionado a cada 4-8h, avaliando resposta clínica antes de cada dose adicional",
+      "manutencao pediatrica": "Neonato prematuro: 20% da dose de ataque de 24h; neonato termo e criança até 10 anos: 25% da dose de ataque de 24h",
+      "ajuste populacoes especiais": "Reduzir em insuficiência renal e idosos — clearance renal reduzido prolonga a meia-vida de eliminação, podendo chegar a cerca de 100 horas em paciente anúrico",
+      "fonte": "bula da DIGOXINA_VP (digoxina, Pharlab Indústria Farmacêutica), item Posologia"
     },
     "notes": {
       "Beneficio clinico": "Reduz hospitalizações por descompensação e melhora sintomas/classe funcional/tolerância ao exercício; NÃO reduz mortalidade — é terapia adjuvante, não modificadora de doença",
