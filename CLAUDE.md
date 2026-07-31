@@ -64,6 +64,16 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### 📌 Para a sessão de Medicamentos — `content/Farmacologia/clortalidona.md` com só 3 de 8 contraindicações da bula, 31/07/2026
+> Ao revisar `medicamentos/metadados.json` (slug `clortalidona`, commit `8359d2f`), baixei a
+> bula do HIGROTON (Novartis, via consultaremedios.com.br) e a prosa tem só 3 das 8
+> contraindicações formais do item 4: faltam insuficiência hepática grave, hipocalemia
+> refratária/perda aumentada de potássio, hiponatremia, hipercalcemia, hiperuricemia
+> sintomática (gota/cálculo úrico) e **hipertensão durante a gravidez** — este último é
+> contraindicação formal na bula, não só precaução. Lista completa já está no JSON. Não editei
+> `content/Farmacologia/clortalidona.md` — fora da minha faixa. A posologia da prosa já conferia
+> exatamente com a bula brasileira, sem necessidade de correção.
+
 > ### ⚠️ Para a sessão de Medicamentos — `content/Farmacologia/clopidogrel-bissulfato.md` contradiz o JSON sobre dose de ataque em idoso, 31/07/2026
 > Ao revisar `medicamentos/metadados.json` (slug `clopidogrel-bissulfato`, commit `42500a0`),
 > notei uma contradição direta entre as duas telas, num ponto que muda a conduta à beira do
