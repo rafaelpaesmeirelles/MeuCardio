@@ -198,12 +198,20 @@ contra o `git log` do dia.
 > (RACE 35926542 e MR BPA 35926544, em Hipertensão pulmonar) e peso/condicionamento/exercício na FA
 > (LEGACY 25792361, CARDIO-FIT 26113406 e ACTIVE-AF 36752479, em Fibrilação atrial).
 >
-> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **19 documentos novos, todos publicados**
-> `content/*.md` de **424 para 443**; `documents`: **443 total = 443 publicados**, sem nenhuma linha
-> não publicada depois da limpeza de órfãos. **Acervo total das nove frentes: 960** — **faltam
-> 1.040 para os 2.000**, sem prazo fixo, conforme a decisão registrada na seção da META. (Os números
+> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **21 documentos novos, todos publicados**
+> `content/*.md` de **424 para 445**; `documents`: **445 total = 445 publicados**, sem nenhuma linha
+> não publicada depois da limpeza de órfãos. **Acervo total das nove frentes: 972** — **faltam
+> 1.028 para os 2.000**, sem prazo fixo, conforme a decisão registrada na seção da META. (Os números
 > de evidências, estudos, exames e galeria incluem o que a sessão da Biblioteca entregou no mesmo
 > dia.)
+>
+> **7º lote — 2 documentos**: por que o DOAC é contraindicado em prótese valvar mecânica (RE-ALIGN,
+> PMID 23991661, em Tromboembolismo) e FA pós-operatória de cirurgia cardíaca (CTSN, PMID 27043047,
+> em Fibrilação atrial). O segundo gerou o **recado de ponteiro recíproco à Biblioteca** registrado
+> no canal entre sessões, mais acima — vale como método: **antes de publicar, a busca revelou um
+> documento existente sobre assunto vizinho, e a conferência mostrou que os dois são complementares
+> e com números concordantes.** Rodar a busca do próprio tema antes de publicar é barato e pega
+> sobreposição que o `grep` por palavra-chave não pega.
 >
 > **6º lote — 3 documentos**: sacubitril-valsartana iniciada na internação (PIONEER-HF, PMID
 > 30415601, em IC), hipercalemia como barreira ao bloqueio do SRAA (DIAMOND/patiromer, PMID
