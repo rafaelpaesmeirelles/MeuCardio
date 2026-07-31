@@ -264,20 +264,30 @@ contra o `git log` do dia.
 > **Nota de faixa:** `evidencias/` e Febre reumática são da Biblioteca. Entrei porque o Rafael pediu
 > explicitamente, alterei **um campo de um registro** e commitei na mesma ação.
 >
-> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **51 documentos novos, todos publicados**
-> `content/*.md` de **424 para 481**; `documents` **481 total = 481 publicados**. **Acervo total:
-> 1.058** — **faltam 942 para os 2.000**. (Os números das frentes JSON e parte dos documentos
-> incluem o que a sessão da Biblioteca entregou no mesmo dia; os 51 acima são só desta sessão.)
+> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **52 documentos novos, todos publicados**
+> `content/*.md` de **424 para 482**; `documents` **482 total = 482 publicados**. **Acervo total:
+> 1.061** — **faltam 939 para os 2.000**. (Os números das frentes JSON e parte dos documentos
+> incluem o que a sessão da Biblioteca entregou no mesmo dia; os 52 acima são só desta sessão.)
 >
 > **22º lote — 1 documento**: escores ABC na FA, de AVC e de sangramento por biomarcadores (PMID
 > 26920728 e 27056738, em Calculadoras).
 >
-> **🔎 Item deixado explicitamente PARA O PRÓXIMO CICLO, e o motivo:** o **VTE-BLEED** (escore de
-> sangramento sob anticoagulação por TEV) ia no mesmo lote. **Não localizei com segurança o artigo
-> original** — a busca por autor+título devolveu validações posteriores e um comentário em holandês,
-> e um PMID que testei era de artigo completamente diferente (neuroimagem de cefaleia). **Não citei
-> PMID incerto.** A referência provável a confirmar: Klok FA et al., *Eur Respir J* 2016, sobre
-> predição de sangramento em TEV sob anticoagulação estável — **conferir antes de escrever**.
+> **🔎 Item deixado para o ciclo seguinte, e o motivo:** o **VTE-BLEED** ia no mesmo lote, mas **não
+> localizei com segurança o artigo original** — a busca devolveu validações posteriores e um
+> comentário em holandês, e um PMID que testei era de artigo completamente diferente (neuroimagem de
+> cefaleia). **Não citei PMID incerto.**
+> **✅ RESOLVIDO no 23º lote:** o original é **Klok FA et al., Eur Respir J 2016;48(5):1369-1376,
+> PMID 27471209** — achado buscando pelo título exato em `[ti]`, e não por autor+palavra-chave.
+>
+> **23º lote — 1 documento**: escore **VTE-BLEED** (em Calculadoras), que completa o par de TEV com
+> o DASH: um estima recorrência (benefício de manter) e o outro sangramento (custo de manter).
+> **Caso instrutivo de procedência mista, e o documento declara isso num aviso destacado:** o artigo
+> original **não tem resumo no PubMed** e o texto completo dá **403** na ERS. A **tabela de pontos
+> veio de fontes secundárias** que reproduzem o escore; o que foi lido em fonte primária é o **corte
+> ≥ 2** e os desfechos da validação COMMAND VTE (PMID 31785073). **O corte das fontes secundárias
+> coincide com o da validação primária — é essa coincidência que dá lastro à tabela**, e o documento
+> instrui a conferir os pesos no original antes de decisão de peso. **Quando a tabela de um escore
+> só existir em fonte secundária, procure um dado independente que a corrobore antes de publicar.**
 >
 > **21º lote — 2 documentos em Calculadoras**: escore de Genebra revisado e simplificado (PMID
 > 16461960 e 18955643) e escore DASH (PMID 22489957).
