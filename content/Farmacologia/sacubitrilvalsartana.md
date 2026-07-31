@@ -4,7 +4,7 @@ slug: sacubitrilvalsartana
 theme: "Farmacologia"
 kind: farmacologia
 review_status: revisado
-source_refs: ["Sacubitril/valsartan (ENTRESTO) — rótulo aprovado pelo FDA, DailyMed SPL setid 000dc81d-ab91-450c-8eae-8eb74e72296f — este fármaco não tem bula do detentor do registro no Brasil disponível nos espelhos consultados em 31/07/2026; conferir quando ela aparecer", "McMurray JJ, Packer M, Desai AS, et al; PARADIGM-HF Investigators and Committees. Angiotensin-Neprilysin Inhibition versus Enalapril in Heart Failure. N Engl J Med. 2014;371(11):993-1004. DOI: 10.1056/NEJMoa1409077. PMID: 25176015"]
+source_refs: ["Bula profissional do ENTRESTO (sacubitril/valsartana, Novartis Biociências do Brasil) — apareceu em 31/07/2026, confirma os números já usados em todo o acervo (janela de 36h, contraindicação de IECA concomitante, alisquireno em diabético); acrescenta angioedema hereditário/idiopático e categoria de risco D na gravidez, ausentes de uma leitura anterior baseada só no rótulo FDA", "Sacubitril/valsartan (ENTRESTO) — rótulo aprovado pelo FDA, DailyMed SPL setid 000dc81d-ab91-450c-8eae-8eb74e72296f", "McMurray JJ, Packer M, Desai AS, et al; PARADIGM-HF Investigators and Committees. Angiotensin-Neprilysin Inhibition versus Enalapril in Heart Failure. N Engl J Med. 2014;371(11):993-1004. DOI: 10.1056/NEJMoa1409077. PMID: 25176015"]
 legacy_source: "Sacubitril/Valsartana (substitui versão anterior incompleta)"
 ---
 
@@ -63,8 +63,13 @@ IC crônica sintomática avançada (NYHA II-IV) com fração de ejeção reduzid
 Conforme PCDT nacional, início de tratamento requer idade mínima de 18 anos e máxima de 75 anos; pacientes que iniciaram antes dos 75 anos mantêm tratamento continuamente
 
 ## Contraindicacoes
+**Acrescentado em 31/07/2026, com a bula brasileira do ENTRESTO, agora disponível** — confirma os
+itens abaixo e acrescenta um que faltava:
 - Uso concomitante ou dentro de 36h de IECA
 - História de angioedema relacionado a IECA/BRA prévio
+- **Angioedema hereditário ou idiopático** — item formal distinto do anterior, ausente de uma
+  leitura anterior deste documento
 - Uso concomitante com alisquireno em diabéticos
-- Gravidez
+- **Gravidez — categoria de risco D**, confirmada pela bula brasileira (a prosa listava
+  "gravidez" sem letra)
 - Insuficiência hepática grave (Child-Pugh C)
