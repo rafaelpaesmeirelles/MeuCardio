@@ -4,7 +4,7 @@ slug: mavacamten
 theme: "Farmacologia"
 kind: farmacologia
 review_status: revisado
-source_refs: ["Mavacamten for treatment of symptomatic obstructive hypertrophic cardiomyopathy (EXPLORER-HCM): a randomised, double-blind, placebo-controlled, phase 3 trial · The Lancet · https://www.thelancet.com/article/S0140-6736(20)31792-X/fulltext", "Mavacamten for Obstructive HCM: Key Points · American College of Cardiology · https://www.acc.org/latest-in-cardiology/ten-points-to-remember/2023/12/07/15/59/mavacamten-a-first-in-class", "Mavacamten for Obstructive Hypertrophic Cardiomyopathy: Rationale for Clinically Guided Dose Titration to Optimize Individual Response · Journal of the American Heart Association · https://www.ahajournals.org/doi/10.1161/JAHA.124.033767", "Mavacamten for Obstructive Hypertrophic Cardiomyopathy: Targeting Sarcomeric Hypercontractility with Demonstrated Long-Term Safety and Efficacy · PMC · https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12693540/"]
+source_refs: ["Bula profissional do CAMZYOS (mavacanteno, Bristol-Myers Squibb Brasil, registro ANVISA MS 1.0180.0413) · https://www.bms.com/assets/bms/brazil/documents/Camzyos_Bula_Profissional.pdf · lida na íntegra em 31/07/2026, itens 4 (Contraindicações) e Uso na gravidez/contracepção", "Mavacamten for treatment of symptomatic obstructive hypertrophic cardiomyopathy (EXPLORER-HCM): a randomised, double-blind, placebo-controlled, phase 3 trial · The Lancet · https://www.thelancet.com/article/S0140-6736(20)31792-X/fulltext", "Mavacamten for Obstructive HCM: Key Points · American College of Cardiology · https://www.acc.org/latest-in-cardiology/ten-points-to-remember/2023/12/07/15/59/mavacamten-a-first-in-class", "Mavacamten for Obstructive Hypertrophic Cardiomyopathy: Rationale for Clinically Guided Dose Titration to Optimize Individual Response · Journal of the American Heart Association · https://www.ahajournals.org/doi/10.1161/JAHA.124.033767", "Mavacamten for Obstructive Hypertrophic Cardiomyopathy: Targeting Sarcomeric Hypercontractility with Demonstrated Long-Term Safety and Efficacy · PMC · https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12693540/"]
 ---
 
 # Mavacamten
@@ -42,3 +42,25 @@ Cardiomiopatia hipertrófica obstrutiva sintomática, classe funcional NYHA II-I
 ## Metabolismo e interacoes
 Extensamente metabolizado por CYP2C19 e CYP3A4, com alta propensão a interações medicamentosas — farmacocinética influenciada por variabilidade do genótipo CYP2C19
 - **fonte**: Mavacamten for Obstructive Hypertrophic Cardiomyopathy: Targeting Sarcomeric Hypercontractility with Demonstrated Long-Term Safety and Efficacy — PMC. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12693540/
+
+## Contraindicacoes — acrescentado em 31/07/2026
+Lacuna maior que o normal para um fármaco teratogênico com REMS: este documento não tinha seção
+própria. Item 4 da bula brasileira do CAMZYOS:
+
+- FEVE <55% no início do tratamento
+- Mulheres grávidas, ou mulheres com potencial de engravidar que não usem método contraceptivo
+  altamente eficaz — mavacanteno é teratogênico em duas espécies animais (ratos e coelhos)
+- Uso concomitante de inibidores moderados a fortes de CYP2C19, ou inibidores fortes de CYP3A4
+- Uso concomitante de indutores moderados a fortes de CYP2C19, ou indutores moderados a fortes de CYP3A4
+- Hipersensibilidade à substância ativa ou a qualquer excipiente
+
+## Gravidez e contracepcao — acrescentado em 31/07/2026
+**Contraindicado na gravidez** — a bula brasileira é categórica, sem ressalva de risco-benefício.
+Mulheres em idade fértil devem usar contracepção altamente eficaz durante o tratamento e por pelo
+menos **4 meses após a última dose**.
+
+**Divergência com o RCM europeu, não resolvida**: o RCM da EMA (fonte usada antes nesta base para
+o campo estruturado do JSON) pede janela de **6 meses**, com racional farmacocinético de
+eliminação de 45-115 dias conforme genótipo CYP2C19. A bula brasileira pede **4 meses**. Os dois
+números ficam registrados aqui — prescrevendo no Brasil, a bula brasileira é a referência
+vinculante, mas a divergência em si não foi resolvida contra uma terceira fonte independente.
