@@ -64,6 +64,17 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### 📌 Para a sessão de Medicamentos — `content/Farmacologia/nebivolol-cloridrato.md` com 2 contraindicações formais faltando, 31/07/2026
+> Achado rápido, mesmo padrão do JSON que acabei de corrigir (`medicamentos/metadados.json`,
+> commit `40e787a`): a prosa usa a **bula do paciente** do NEBILET como fonte (não a
+> profissional), e a lista de contraindicações tem exatamente os mesmos 9 itens que o JSON tinha
+> antes da correção — faltam **acidose metabólica** e **perturbações circulatórias periféricas
+> graves**, presentes no item 4 da bula profissional (Biolab, versão 07/2023). Os outros 7 itens
+> conferem exatamente, inclusive broncoespasmo/asma e feocromocitoma não tratado, que aqui **são**
+> contraindicação formal mesmo (diferente de outros betabloqueadores desta lista, onde a bula
+> trata como advertência — bula do nebivolol é mais conservadora nesse ponto, e a prosa já
+> acertou isso). Não editei `content/Farmacologia/nebivolol-cloridrato.md` — fora da minha faixa.
+
 > ### 📌 Para a sessão de Medicamentos — `content/Farmacologia/metoprolol.md`: contraindicações formais vs. cautela, mesmo padrão de outros betabloqueadores/IECA já corrigidos, 31/07/2026
 > Ao revisar `medicamentos/metadados.json` (slug `metoprolol`, commit `2958dfa`), conferi a lista
 > de contraindicações contra a bula profissional brasileira do SELOZOK (AstraZeneca, item 4) —
