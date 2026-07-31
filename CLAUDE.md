@@ -183,13 +183,26 @@ contra o `git log` do dia.
 > (RACE 35926542 e MR BPA 35926544, em Hipertensão pulmonar) e peso/condicionamento/exercício na FA
 > (LEGACY 25792361, CARDIO-FIT 26113406 e ACTIVE-AF 36752479, em Fibrilação atrial).
 >
-> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **16 documentos novos, todos publicados**
-> `content/*.md` de **424 para 440**; `documents`: **440 total = 440 publicados**, sem nenhuma linha
-> não publicada depois da limpeza de órfãos. **Acervo total das nove frentes: 957** (content 440 ·
-> evidências 178 · medicamentos 89 · estudos 85 · exames 68 · galeria 65 · trilhas 17 · emergência
-> 10 · casos-clínicos 5) — **faltam 1.043 para os 2.000**, sem prazo fixo, conforme a decisão
-> registrada na seção da META. (Os números de evidências, estudos, exames e galeria incluem o que a
-> sessão da Biblioteca entregou no mesmo dia.)
+> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **19 documentos novos, todos publicados**
+> `content/*.md` de **424 para 443**; `documents`: **443 total = 443 publicados**, sem nenhuma linha
+> não publicada depois da limpeza de órfãos. **Acervo total das nove frentes: 960** — **faltam
+> 1.040 para os 2.000**, sem prazo fixo, conforme a decisão registrada na seção da META. (Os números
+> de evidências, estudos, exames e galeria incluem o que a sessão da Biblioteca entregou no mesmo
+> dia.)
+>
+> **6º lote — 3 documentos**: sacubitril-valsartana iniciada na internação (PIONEER-HF, PMID
+> 30415601, em IC), hipercalemia como barreira ao bloqueio do SRAA (DIAMOND/patiromer, PMID
+> 35900838, em IC) e rastreio de DAC assintomática no diabético (DIAD, PMID 19366774, em Diabetes).
+>
+> **Padrão de seleção que se firmou ao longo do dia e vale para quem continuar:** os documentos com
+> mais valor não foram os que descrevem um tratamento novo, e sim os que **corrigem uma leitura
+> errada e frequente** — o STICH que muda de sinal entre 5 e 10 anos; a viabilidade miocárdica que
+> não seleciona quem opera; o win ratio do PEERLESS que some sem o componente de UTI; o cateter de
+> artéria pulmonar cuja evidência favorável é toda observacional; o NT-proBNP do PIONEER-HF que é
+> biomarcador e não desfecho; o rastreio do DIAD que estratifica bem (HR 6,3) e mesmo assim não
+> muda desfecho, porque o valor preditivo positivo é de 12%. **Procure a pergunta em que o
+> cardiologista provavelmente acredita na coisa errada — é ali que a biblioteca acrescenta o que o
+> resumo de diretriz não dá.**
 >
 > **5º lote — 2 documentos**: escore de Duke do teste ergométrico (PMID 1875969, em Calculadoras) e
 > cessação tabágica farmacológica pelo EAGLES (PMID 27116918, em Prevenção e lipídios). Neste
