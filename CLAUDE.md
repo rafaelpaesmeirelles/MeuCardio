@@ -891,13 +891,38 @@ repositório, ao lado deste arquivo.
   (só o órfão `prasugrel`, que nunca deve publicar, fica de fora).
 - **Stripe em produção**, chaves live ativas hoje, dois planos: Assinatura Básica (Acesso ao
   Site) R$49,90/mês, Assinatura Completa (Acesso ao Site + CorvIA Mail) R$59,90/mês.
-- **Chat 1:1 + presença de usuários "online"**: backend pronto e testado de ponta a ponta com
-  tokens reais (busca, envio, histórico, não lidas, entrega em tempo real via WebSocket).
-  **Frontend ainda não começado** — falta a tela admin `/admin/usuarios-online` e o widget de
-  chat flutuante no Shell. Ver no histórico a armadilha real já resolvida sobre WebSocket +
-  `assinante_ativo` (rotas de WS não podem usar o mesmo `dependencies=[Depends(assinante_ativo)]`
-  do router HTTP — precisam de `APIRouter` próprio, sem essa lista, com auth manual por
-  `?token=`).
+- ✅ **CorvIA Chat — COMPLETO E NO AR desde 31/07/2026** (backend + frontend + logo). O backend já
+  estava pronto e testado; a **interface inteira foi feita em 31/07** e o serviço está publicado.
+  - **Widget flutuante** (`components/ChatFlutuante.tsx`), disponível de qualquer tela pelo `Shell`,
+    fora do modo emergência. Botão com contador de não lidas, lista de conversas, busca de
+    profissionais, janela de mensagens e entrega em tempo real.
+  - **"Fale com o Dr. Rafael"** — atalho no topo da lista, com estado "Online agora"/"Responde assim
+    que puder". Novo endpoint **`GET /api/chat/suporte`**, que resolve o responsável pelo **admin de
+    menor id** (mesmo critério que o resto do sistema usa; não foi criada coluna nova para um dado
+    com uma resposta só) e devolve **`null` quando o próprio usuário é o admin** — aí o frontend não
+    desenha o botão.
+  - **Painel de presença** (`pages/UsuariosOnline.tsx`, rota `/admin/usuarios-online`, item no menu
+    só para admin), consumindo o `/api/admin/usuarios-online` que existia sem tela.
+  - **Logo** (`components/LogoChat.tsx`): opção **"balão-coração"**, escolhida pelo Rafael entre
+    quatro direções apresentadas — o coração-ECG da marca com rabinho de balão, mesma raiz visual do
+    CorvIA Mail. **O SVG é inline, não arquivo em `/public` como o do Mail**, porque precisa trocar
+    de cor conforme o fundo: navy sobre claro, vermelho sobre o navy do cabeçalho (coração navy
+    sobre navy desaparece).
+  - **Três decisões de implementação que não são óbvias**, todas comentadas no código: o **envio vai
+    por HTTP e o socket só RECEBE** (é como o backend foi desenhado — mandar pelo socket duplicaria
+    validação e persistência); o **socket só abre quando o widget é aberto pela primeira vez** (não
+    manter uma conexão por aba de todo assinante que talvez nunca converse — o badge vem de um GET
+    barato); e a lista **deduplica mensagens por id**, porque o backend ecoa a própria mensagem de
+    volta pelo socket e sem isso quem envia veria tudo duas vezes.
+  - **Verificado em produção com tokens reais**, não só por build: `/chat/suporte` devolve `null`
+    para o próprio admin e os dados do Rafael para um assinante; `/chat/conversas`, `/chat/nao-lidas`
+    e `/admin/usuarios-online` respondem 200; **o handshake do WebSocket através do Caddy devolve
+    HTTP 101 Switching Protocols** (era o ponto de maior risco da integração); e o fluxo
+    envio → contador de não lidas → lista de conversas foi exercitado ponta a ponta. **A mensagem de
+    teste foi apagada depois** e o contador do Rafael voltou a zero.
+  - Armadilha já resolvida, mantida no histórico: rotas de WS **não** podem usar o mesmo
+    `dependencies=[Depends(assinante_ativo)]` do router HTTP — precisam de `APIRouter` próprio, sem
+    essa lista, com auth manual por `?token=`.
 - **Publicação, as nove frentes** (zero pendência para item `revisado`, exceto exclusões
   deliberadas): `documents` 446/450 · `evidencias` 155/156 · `estudos` 76/76 · `galeria` 63/63 ·
   `exames` 60/60 · `drugs` 101/101 · `emergencia` 10/10 · `trilhas` 17/17 · `casos_clinicos` 5/5.
