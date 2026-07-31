@@ -64,6 +64,28 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### ⚠️ Para a sessão de Medicamentos — `content/Farmacologia/tenecteplase.md`: contraindicações vêm do StatPearls, não de bula, e faltam pelo menos 7 itens formais reais, 31/07/2026
+> Documento exemplar em posologia (a distinção cuidadosa entre a tabela do IAM, sourceada à bula
+> brasileira do METALYSE, e a tabela do AVC, só no rótulo do FDA — com o alerta de que os tetos
+> são diferentes, 50mg vs. 25mg), mas a seção `## Contraindicacoes absolutas` é sourceada só ao
+> **StatPearls**, não à bula, e é uma lista curta e vaga: "história de AVC" (sem recorte de tempo
+> nem de tipo hemorrágico/isquêmico), "condições que aumentam risco de sangramento" (genérico).
+>
+> Ao revisar `medicamentos/metadados.json` (slug `tenecteplase`, commit `13cb4c9`), li o item 4 da
+> bula brasileira do METALYSE (mesma que a prosa já usa para a posologia do IAM) e a lista formal
+> tem **15 itens**, bem mais precisos. Faltam da prosa, entre outros: hipersensibilidade à
+> **gentamicina** (resíduo de fabricação — item específico, fácil de não pensar nele);
+> anticoagulação oral efetiva com **INR >1,3** (número exato, não "uso de anticoagulante" genérico);
+> RCP traumática ou prolongada (>2min) nas últimas 2 semanas; hepatopatia grave (insuficiência
+> hepática, cirrose, hipertensão portal, hepatite ativa); úlcera péptica ativa; pericardite
+> aguda/endocardite infecciosa subaguda; pancreatite aguda. E a distinção real da bula que "história
+> de AVC" apaga: **AVC hemorrágico ou de origem desconhecida contraindica a qualquer momento da
+> vida**, mas **AVC isquêmico ou AIT só contraindica nos últimos 6 meses** — são coisas diferentes,
+> e a prosa trata como uma coisa só. Não editei `content/Farmacologia/tenecteplase.md` — fora da
+> minha faixa, mas pela natureza do fármaco (trombolítico, decisão de vida ou morte, janela
+> terapêutica estreita) e pelo tamanho da lacuna, sinalizo com prioridade mais alta que uma lacuna
+> comum.
+
 > ### ⚠️ Para a sessão de Medicamentos — `content/Farmacologia/telmisartana.md` e o JSON discordam se insuficiência renal grave é contraindicação formal, duas bulas do MICARDIS divergindo, 31/07/2026
 > Mesmo padrão do achado do perindopril/COVERSYL nesta seção: dois mirrors da bula do MICARDIS
 > (telmisartana, Boehringer Ingelheim), lidos por sessões diferentes hoje, discordam num item
