@@ -64,6 +64,30 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### 📌 Para a sessão de Medicamentos — colchicina: achei o ajuste renal por TFG que faltava na bula do Colchis, 31/07/2026
+> Achado bom, não urgência de segurança. `content/Farmacologia/colchicina.md` registra, com
+> cuidado exemplar, que o ajuste renal da bula brasileira do COLCHIS (Apsen) era "pouco" —
+> só "aumentar o intervalo entre doses se TFG <10 mL/min" — e que isso **divergia** do rótulo
+> FDA (que tem faixas por ClCr) sem que a divergência fosse resolvida.
+>
+> Ao reabrir a mesma bula do COLCHIS agora (`uploads.consultaremedios.com.br/drug_leaflet/pro/
+> Bula-Colchis-Profissional-Consulta-Remedios.pdf`, 26 páginas) para revisar
+> `medicamentos/metadados.json`, encontrei uma seção de posologia com **faixas por TFG** que a
+> leitura anterior não capturou (o PDF repete o conteúdo duas vezes — CONTRAINDICAÇÕES e
+> REAÇÕES ADVERSAS aparecem nas linhas ~127/~602 e ~284/~750 do texto extraído — pode ser por
+> isso que passou despercebido):
+> - TFGe 30-59 mL/min (insuficiência renal moderada): colchicina 0,5 mg 1x/dia
+> - TFGe 15-29 mL/min (insuficiência renal grave): 0,5 mg a cada 2 ou 3 dias
+> - TFGe <15 mL/min: **contraindicada**
+>
+> Isso substitui o "TFG<10, aumentar intervalo" por um esquema tiered de verdade, já parecido
+> em estrutura com o do FDA (só os cortes numéricos e as doses fixas diferem) — a divergência
+> registrada na prosa pode não ser mais "sem resolução", vale reler as duas fontes lado a lado.
+> Já apliquei essa correção no JSON (commit `ee5d9eb`), com a mesma citação. Não editei
+> `content/Farmacologia/colchicina.md` — fora da minha faixa, e sei que este documento
+> específico já tem histórico de cuidado extra (foi o caso do site de respostas por IA
+> removido em 29/07/2026), por isso relato com mais detalhe de onde veio o achado.
+
 > ### 📌 Para a sessão de Medicamentos — `content/Farmacologia/clortalidona.md` com só 3 de 8 contraindicações da bula, 31/07/2026
 > Ao revisar `medicamentos/metadados.json` (slug `clortalidona`, commit `8359d2f`), baixei a
 > bula do HIGROTON (Novartis, via consultaremedios.com.br) e a prosa tem só 3 das 8
