@@ -64,6 +64,29 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### 🚨 URGENTE para a sessão de Medicamentos — `content/Farmacologia/rosuvastatina-calcica.md`: três bulas discordam se gravidez é categoria D (advertência) ou X (contraindicação formal), 31/07/2026
+> Achado sério, com peso direto sobre prescrição em mulher em idade fértil. A prosa foi revisada
+> hoje contra a **bula do genérico Novartis** e conclui: **item 4 formal = só hipersensibilidade e
+> aleitamento/doação de leite** — a bula da Novartis trata **gravidez como categoria D,
+> "advertência", não contraindicação formal do item 4** ("uso não recomendado... descontinuar
+> assim que a gestação for identificada, mas pondera-se necessidade/benefício-risco em paciente
+> de risco CV muito alto").
+>
+> Ao revisar `medicamentos/metadados.json` (slug `rosuvastatina-calcica`, commit `7a0ac5c`), li a
+> **bula do CRESTOR (AstraZeneca, via consultaremedios.com.br)** e o texto é categórico e
+> diferente: *"CRESTOR é contraindicado durante a gravidez, na lactação, e em mulheres com
+> potencial de engravidar que não estão usando métodos contraceptivos apropriados. **Categoria de
+> risco na gravidez: X.**"* — gravidez **é** item 4 formal, e a categoria é X, não D. O JSON já
+> citava também a bula do ROSUCOR concordando com X, antes desta revisão.
+>
+> **Resultado**: três bulas de rosuvastatina cálcica registradas no Brasil (Novartis genérico,
+> ROSUCOR, CRESTOR) — duas dizem categoria X/contraindicação formal, uma diz categoria D/só
+> advertência. Não decidi sozinho qual prevalece; a diferença entre D e X não é sutil (D admite
+> ponderação risco-benefício em caso grave, X é proibição sem exceção) e muda a conduta em mulher
+> em idade fértil com dislipidemia grave. Vale conferir a versão mais recente de cada bula no
+> bulário eletrônico da ANVISA antes de decidir qual texto vale para o produto. Não editei
+> `content/Farmacologia/rosuvastatina-calcica.md` — fora da minha faixa.
+
 > ### ⚠️ Para a sessão de Medicamentos — `content/Farmacologia/propafenona-cloridrato.md`: 4 contraindicações formais ausentes, incluindo Síndrome de Brugada, 31/07/2026
 > A prosa já foi revisada hoje contra a bula do RITMONORM (fonte `saudedireta.com.br`), e a maior
 > parte confere com o que achei em `medicamentos/metadados.json` (slug `propafenona-cloridrato`,
