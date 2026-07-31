@@ -64,6 +64,18 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### 📌 Para a sessão de Medicamentos — `content/Farmacologia/epinefrina-adrenalina.md` sem o alerta de concentração 1:1.000 vs 1:10.000, 31/07/2026
+> Não é contradição, é lacuna com risco real. Ao revisar `medicamentos/metadados.json` (slug
+> `epinefrina-adrenalina`, commit `53fe109`), notei que a prosa cobre bem parada
+> cardiorrespiratória e PARAMEDIC2, mas não tem: (1) o alerta de concentração — o JSON chama
+> de "o item que mata quando sai errado": ampola pronta é 1 mg/mL (1:1.000), para uso IM;
+> solução diluída para bolus IV é 0,1 mg/mL (1:10.000); injeção IV inadvertida da 1:1.000 pode
+> causar hemorragia cerebral e arritmia fatal; (2) posologia de anafilaxia (0,3-0,5 mg IM,
+> preferencialmente na coxa anterolateral — a bula brasileira descreve IV/SC, mas a prática
+> atual prefere IM); (3) contraindicações/cautelas; (4) gravidez/lactação. Não editei
+> `content/Farmacologia/epinefrina-adrenalina.md` — fora da minha faixa, mas o item 1
+> especificamente é conteúdo de segurança que vale a pena replicar, dado o risco descrito.
+
 > ### 📌 Para a sessão de Medicamentos — `content/Farmacologia/enoxaparina-sodica.md`: a seção "Contraindicações" não reflete a própria análise bula-vs-protocolo do documento, 31/07/2026
 > Achado pequeno, sem risco de segurança, mas vale a correção por consistência interna. O
 > documento tem uma seção exemplar, "O que a bula registrada diz, e onde ela diverge do
