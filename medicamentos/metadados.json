@@ -3478,7 +3478,7 @@
   },
   {
     "slug": "semaglutida",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Semaglutida",
     "drug_class": "Agonista do receptor de GLP-1 (peptídeo-1 semelhante ao glucagon)",
     "mechanism": "Agonista do receptor de GLP-1, estimulando secreção de insulina glicose-dependente, suprimindo secreção de glucagon, retardando esvaziamento gástrico e promovendo saciedade central",
@@ -3489,9 +3489,7 @@
       "Ozempic — DM2 (melhora de controle glicêmico); Wegovy — controle de peso em IMC≥30, ou IMC 27-30 com comorbidade relacionada ao peso (disglicemia, hipertensão, dislipidemia, apneia do sono, doença cardiovascular)"
     ],
     "contraindications": [
-      "Histórico pessoal/familiar de carcinoma medular de tireoide",
-      "Síndrome de neoplasia endócrina múltipla tipo 2",
-      "Hipersensibilidade"
+      "Hipersensibilidade ao princípio ativo ou a qualquer excipiente — único item formal do rótulo brasileiro"
     ],
     "adverse_effects": [
       "Náusea, vômito, diarreia (mais comuns na fase de titulação, tendem a melhorar em 3-4 dias por etapa), constipação, pancreatite (rara), colelitíase"
@@ -3511,22 +3509,24 @@
       "dose esquecida ate 5 dias": "Tomar assim que lembrar, depois retomar cronograma normal",
       "dose esquecida mais 5 dias": "Pular a dose e tomar a próxima no dia regular programado, sem dobrar",
       "flexibilidade dia aplicacao": "Pode mudar o dia da semana desde que ≥48h tenham passado da última injeção",
-      "fonte": "Guia de Dosagem de Semaglutida — Weight Index"
+      "fonte": "Bula profissional brasileira do OZEMPIC (Novo Nordisk) para a titulação e posologia de Ozempic (0,25→0,5→1,0mg/semana; dose de 2,0mg/semana consta de apresentação/versão de bula mais recente, não confirmada nesta revisão contra a versão específica de 1mg lida). A titulação e as doses do Wegovy seguem sourceadas a Weight Index (portal educacional, não bula) — sinalizado para conferência contra a bula brasileira do Wegovy quando disponível."
     },
     "outcomes": {
       "Evidencia pivotal select": "Estudo SELECT avaliou semaglutida em pacientes com sobrepeso/obesidade e doença cardiovascular estabelecida, demonstrando redução de eventos cardiovasculares maiores independentemente da magnitude de perda de peso alcançada, sugerindo efeito cardioprotetor direto"
     },
     "notes": {
       "Criterio permanencia dose menor": "Considerar prolongar tempo na dose atual se náusea/vômito severos persistirem além da 1ª semana pós-aumento, dificuldade de manter hidratação/alimentação, ou sinais de desidratação — titulação mais lenta favorece adesão sem penalidade clínica",
-      "Sinais alerta busca atendimento": "Dor abdominal severa (suspeita de pancreatite), sinais de reação alérgica, desidratação significativa, alterações visuais (especialmente com retinopatia diabética preexistente)"
+      "Sinais alerta busca atendimento": "Dor abdominal severa (suspeita de pancreatite), sinais de reação alérgica, desidratação significativa, alterações visuais (especialmente com retinopatia diabética preexistente)",
+      "Carcinoma medular de tireoide e NEM2 — cautela, nao contraindicacao formal nesta bula": "**Corrigido em 31/07/2026**: a versão anterior listava histórico pessoal/familiar de carcinoma medular de tireoide (CMT) e Síndrome de Neoplasia Endócrina Múltipla tipo 2 (NEM 2) como contraindicações formais — divergência real do rótulo brasileiro do OZEMPIC (item 4. CONTRAINDICAÇÕES tem só hipersensibilidade). A bula trata CMT/NEM2 em 5. ADVERTÊNCIAS E PRECAUÇÕES: \"Ozempic deve ser usado com **cautela** em pacientes com histórico pessoal ou familiar de carcinoma medular de tireoide (CMT) ou em pacientes com Síndrome da Neoplasia Endócrina Múltipla tipo 2 (NEM 2)\" — não usa a palavra contraindicado. O racional: tumores de célula C de tireoide são efeito de classe em roedores (mecanismo não genotóxico, específico do receptor de GLP-1); relevância para humanos é considerada baixa, mas não pode ser totalmente excluída. **Nota de atenção**: rótulos de outros países (ex. bula/boxed warning do FDA para Ozempic/Wegovy nos EUA) tratam esse mesmo histórico como contraindicação formal — a divergência entre a rotulagem brasileira (cautela) e a norte-americana (contraindicação) é real e vale conferência adicional antes de decidir a conduta prática.",
+      "Uso pediatrico": "Segurança e eficácia não estudadas em menores de 18 anos — sem dados disponíveis. Fonte: bula profissional brasileira do OZEMPIC.",
+      "Ajuste renal e hepatico": "Nenhum ajuste necessário em comprometimento renal leve/moderado/grave, nem em comprometimento hepático — experiência limitada em doença renal terminal e insuficiência hepática grave, usar com cautela nesses casos. Fonte: bula profissional brasileira do OZEMPIC."
     },
     "references": [
-      "Guia de Dosagem de Semaglutida: Titulação, Técnica de Injeção · Weight Index · 2026 · https://weight-index.com/pt/articles/semaglutide-dosing-guide",
-      "Wegovy (semaglutida) · ANVISA · https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/novos-medicamentos-e-indicacoes/wegovy-semaglutida",
-      "Ozempic — Bula Paciente · Novo Nordisk · https://www.novonordisk.com.br/content/dam/nncorp/br/pt/pdfs/bulas/patient/Ozempic_3mL_1mg_Paciente.pdf"
+      "Bula profissional do OZEMPIC (semaglutida), Novo Nordisk Farmacêutica do Brasil Ltda. — novonordisk.com.br, versão EU-PI 20251203 + US-PI 03022025 (apresentação 1mg)",
+      "Wegovy (semaglutida) · ANVISA · https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/novos-medicamentos-e-indicacoes/wegovy-semaglutida"
     ],
-    "pregnancy": "**Não deve ser utilizada durante a gravidez.** Os estudos em animais revelaram toxicidade reprodutiva e os dados em grávidas são limitados. Se a paciente pretender engravidar ou a gravidez ocorrer, a semaglutida deve ser descontinuada — e, pela **semivida longa**, a descontinuação deve anteceder em **pelo menos 2 meses** uma gravidez planejada. Recomenda-se contracepção durante o tratamento. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do OZEMPIC (semaglutido, Novo Nordisk). Fonte europeia, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil disponível nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer.",
-    "lactation": "**Não deve ser utilizada durante a amamentação.** A semaglutida **foi excretada no leite de ratas lactantes** e o risco para a criança amamentada não pode ser excluído. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do OZEMPIC (semaglutido, Novo Nordisk). Fonte europeia, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil disponível nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer."
+    "pregnancy": "**Categoria de risco C. Não deve ser utilizada durante a gravidez.** Estudos em animais mostraram toxicidade reprodutiva; dados limitados em gestante. Se a paciente desejar engravidar ou a gravidez ocorrer, descontinuar — pela meia-vida longa, descontinuar **pelo menos 2 meses antes** de gravidez planejada. Recomenda-se contracepção em mulher em idade fértil durante o tratamento. Fonte: bula profissional brasileira do OZEMPIC (semaglutida, Novo Nordisk), item \"Fertilidade, gravidez e lactação\" — substitui a fonte europeia (RCM EMA) usada antes; conteúdo é equivalente, agora confirmado contra a bula do detentor do registro no Brasil, incluindo a categoria de risco C, ausente antes.",
+    "lactation": "**Não deve ser utilizada durante a amamentação.** Em ratas lactantes, a semaglutida foi excretada no leite; risco para a criança amamentada não pode ser excluído. Fonte: bula profissional brasileira do OZEMPIC (Novo Nordisk) — substitui a fonte europeia usada antes; conteúdo equivalente, agora confirmado contra a bula brasileira."
   },
   {
     "slug": "sildenafila-citrato",
