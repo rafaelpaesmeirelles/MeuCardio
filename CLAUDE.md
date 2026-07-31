@@ -225,11 +225,22 @@ contra o `git log` do dia.
 > (RACE 35926542 e MR BPA 35926544, em Hipertensão pulmonar) e peso/condicionamento/exercício na FA
 > (LEGACY 25792361, CARDIO-FIT 26113406 e ACTIVE-AF 36752479, em Fibrilação atrial).
 >
-> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **31 documentos novos, todos publicados**
-> `content/*.md` de **424 para 459**. **Acervo total das nove frentes: 997** — **faltam 1.003 para
-> os 2.000**, sem prazo fixo, conforme a decisão registrada na seção da META. (Os números das
-> frentes JSON e parte dos documentos incluem o que a sessão da Biblioteca entregou no mesmo dia; os
-> 31 acima são só desta sessão.)
+> ### 🎉 A META ORIGINAL DE 1.000 ITENS FOI ATINGIDA em 31/07/2026 — dez dias antes do prazo
+> **Acervo medido no disco: 1.001 itens.** A meta de 1.000 tinha prazo de **10/08/2026** e, na
+> medição da manhã deste mesmo dia, faltavam **102 itens**. As duas sessões fecharam essa distância
+> em um dia. **A régua que passa a valer é a de 2.000, sem prazo fixo** (ver a seção da META) —
+> registro isto aqui porque a contagem antiga ainda aparece em vários pontos deste arquivo, e é
+> fácil confundir qual meta está em vigor.
+>
+> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **33 documentos novos, todos publicados**
+> `content/*.md` de **424 para 461**; `documents` **461 total = 461 publicados**. **Acervo total das
+> nove frentes: 1.001** — **faltam 999 para os 2.000**. (Os números das frentes JSON e parte dos
+> documentos incluem o que a sessão da Biblioteca entregou no mesmo dia; os 33 acima são só desta
+> sessão.)
+>
+> **12º lote — 2 documentos**: digoxina vs. bisoprolol no controle de frequência da FA permanente
+> (RATE-AF, PMID 33351042) e hipotensão ortostática não é motivo para desescalonar anti-hipertensivo
+> (PMID 32909814, metanálise de dados individuais com 18.466 participantes).
 >
 > **11º lote — 2 documentos**: betabloqueador na DPOC (BLOCK-COPD, PMID 31633896, em Farmacologia) e
 > modo de estimulação na disfunção do nó sinusal (MOST, PMID 12063369, em Dispositivos).
