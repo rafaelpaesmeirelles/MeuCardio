@@ -2219,5 +2219,32 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "biosync-cls-marcapasso-com-estimulacao-em-alca-fechada-na-sincope-reflexa",
+    "title": "BIOSync CLS — Marca-passo com estimulação em alça fechada na síncope reflexa grave com assistolia induzida no tilt",
+    "study_type": "ensaio_clinico",
+    "authors": "Brignole M et al.",
+    "journal": "European Heart Journal",
+    "year": 2021,
+    "doi": "10.1093/eurheartj/ehaa936",
+    "pmid": "33279955",
+    "url": "https://academic.oup.com/eurheartj/article/42/5/508/6017570",
+    "summary": "Ensaio randomizado DUPLO-CEGO com desenho de marca-passo ligado contra desligado. Foram incluídos pacientes de 40 anos ou mais, com pelo menos dois episódios de síncope reflexa grave e imprevisível no último ano e síncope induzida no teste de inclinação com pausa assistólica maior que 3 segundos. Todos receberam marca-passo de dupla câmara com estimulação em alça fechada (closed loop stimulation, CLS), e foram randomizados para o dispositivo ATIVO (pacing ON, 63 pacientes) ou INATIVO (pacing OFF, 64 pacientes). Pacientes e avaliadores independentes de desfecho foram cegados quanto à alocação. O desfecho primário foi o tempo até a primeira recorrência de síncope.",
+    "key_findings": "Após seguimento mediano de 11,2 meses, houve síncope em 10 pacientes (16%) do grupo com marca-passo ativo contra 34 (53%) do grupo controle — razão de risco de 0,23 (p = 0,00005). A taxa estimada de recorrência de síncope foi de 19% com marca-passo e 53% no controle em 1 ano, e de 22% contra 68% em 2 anos. O desfecho combinado de síncope ou pré-síncope ocorreu em 23 pacientes (37%) do grupo ativo contra 40 (63%) do controle — razão de risco 0,44 (p = 0,002). Eventos adversos menores relacionados ao dispositivo foram relatados em 5 pacientes (4%).",
+    "clinical_implications": "Sustenta duas coisas de uma vez. Primeira, a eficácia do marca-passo de dupla câmara com CLS na síncope reflexa grave e recorrente do paciente com 40 anos ou mais e assistolia induzida no tilt. Segunda, e é o que os autores destacam, apoia o TESTE DE INCLINAÇÃO como método útil para selecionar candidatos ao marca-passo — uso que era controverso. Isso dialoga diretamente com o documento de cardioneuroablação desta base: lá, o consenso das sociedades de ritmo define o subgrupo com pausa assistólica documentada acima de 3 segundos como aquele em que há algum dado favorável, e é exatamente a população deste ensaio — a diferença é que aqui a intervenção é o marca-passo, com ensaio randomizado e cegado, e lá é a ablação, com um único ensaio pequeno.",
+    "limitations": "Seguimento mediano curto para uma doença crônica e recorrente (11,2 meses), com as taxas de 2 anos sendo estimativas. Amostra pequena (127 randomizados). Restrito a 40 anos ou mais — a diretriz europeia de estimulação já restringia a seleção escalonada de candidatos a essa faixa etária, e o ensaio não responde sobre o paciente mais jovem, que é justamente onde a cardioneuroablação foi proposta como alternativa. Exige assistolia induzida no tilt: não se aplica a quem tem síncope reflexa com componente vasodepressor dominante. Conduzido com apoio do fabricante do dispositivo.",
+    "theme": "Síncope",
+    "tags": [
+      "biosync cls",
+      "marca-passo",
+      "estimulação em alça fechada",
+      "síncope reflexa",
+      "tilt test",
+      "assistolia",
+      "ensaio clínico"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
