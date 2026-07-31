@@ -2818,7 +2818,7 @@
   },
   {
     "slug": "nitroglicerina-trinitrato-de-glicerila",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Nitroglicerina (trinitrato de glicerila)",
     "drug_class": "Nitrato orgânico — vasodilatador doador de óxido nítrico de ação rápida",
     "mechanism": "Metabolizada em óxido nítrico (NO), ativando guanilato ciclase e aumentando GMPc, promovendo relaxamento da musculatura lisa vascular; predominantemente venodilatadora (reduz pré-carga), com dilatação coronariana adicional em doses maiores",
@@ -2826,26 +2826,23 @@
       "Episódios anginosos agudos, profilaxia de angina antes de atividades desencadeantes conhecidas, edema agudo de pulmão, crise hipertensiva com isquemia associada"
     ],
     "contraindications": [
-      "Uso concomitante com inibidores de fosfodiesterase-5 (sildenafila, tadalafila) — risco de hipotensão grave e fatal",
-      "Hipotensão/hipovolemia",
-      "Anemia grave",
-      "Glaucoma de ângulo estreito",
-      "Hipersensibilidade",
-      "IAM de VD (hipotensão dependente de pré-carga)",
-      "Uso concomitante com inibidores de fosfodiesterase-5 (sildenafila, tadalafila) — risco de hipotensão grave",
-      "Hipersensibilidade a nitratos",
-      "Hipotensão grave (PAS ≤90mmHg)",
-      "Choque/colapso cardiocirculatório",
-      "IAM com redução de enchimento ventricular",
-      "Choque cardiogênico (até estabilização de pressão de enchimento)",
-      "Hipovolemia grave",
-      "Trauma cranioencefálico ou hemorragia cerebral",
-      "Uso concomitante com inibidores de PDE5",
-      "Miocardiopatia hipertrófica obstrutiva (piora obstrução)",
-      "Estenose mitral/aórtica"
+      "Hipersensibilidade à nitroglicerina ou a componentes da fórmula",
+      "Uso concomitante de inibidor de fosfodiesterase-5 (sildenafila, tadalafila, vardenafila, lodenafila) — risco de hipotensão grave",
+      "Glaucoma de ângulo fechado",
+      "Traumatismo craniano ou hemorragia cerebral — risco de elevar pressão intracraniana",
+      "Anemia severa",
+      "Hipotensão",
+      "Hipovolemia não corrigida",
+      "Circulação cerebral inadequada",
+      "Tamponamento pericárdico, cardiomiopatia restritiva ou pericardite constritiva — débito cardíaco dependente do retorno venoso"
     ],
     "adverse_effects": [
-      "Cefaleia (muito comum), hipotensão ortostática, taquicardia reflexa, rubor facial, tolerância"
+      "Comum (1-10%): tontura, cefaleia severa",
+      "Incomum (0,1-1%): hipotensão, hipertensão de rebote, síncope",
+      "Muito rara (<0,01%): metemoglobinemia",
+      "Frequência desconhecida: bradiarritmia, aumento de volume plasmático, taquifilaxia, angina instável, enxaqueca sem aura, reação anafilactoide; relatos de caso incluem acidose lática, trombocitopenia, aumento de pressão intracraniana, doença de Wernicke, AIT",
+      "Eventos adversos graves: reação anafilactoide, aumento de pressão intracraniana, metemoglobinemia",
+      "Pós-comercialização: flebite, urticária"
     ],
     "dosing": {
       "sublingual crise anginosa": "0,4 mg a cada 5 minutos, até total de 3 doses",
@@ -2859,13 +2856,16 @@
     "notes": {
       "Particularidade tolerancia": "Uso contínuo (especialmente EV/transdérmico) desenvolve tolerância em 24-48h — requer intervalo livre de nitrato",
       "Particularidade tolerancia (comum aos nitratos)": "Uso contínuo desenvolve tolerância farmacológica (taquifilaxia) em 24-48h — requer intervalo livre de nitrato de pelo menos 8-12h/dia para manter eficácia em uso crônico",
-      "Fenomeno tolerancia (comum aos nitratos)": "Administração contínua produz tolerância farmacológica; tratamento deve ser intermitente, deixando período livre entre doses de aproximadamente uma semivida plasmática"
+      "Fenomeno tolerancia (comum aos nitratos)": "Administração contínua produz tolerância farmacológica; tratamento deve ser intermitente, deixando período livre entre doses de aproximadamente uma semivida plasmática",
+      "Cardiomiopatia hipertrofica — advertencia, nao contraindicacao formal": "**Corrigido em 31/07/2026**: a versão anterior listava cardiomiopatia hipertrófica obstrutiva e estenose mitral/aórtica entre as contraindicações formais, com vários itens duplicados na lista inteira. A bula brasileira do TRIDIL (item 4. CONTRAINDICAÇÕES) não traz nenhum dos dois — trata a cardiomiopatia hipertrófica em Advertências: a terapia com nitrato pode agravar a angina provocada por ela. Estenose mitral/aórtica não é mencionada nominalmente nesta bula; mantida fora da lista formal por falta de citação específica.",
+      "IAM de VD — nao e item textual desta bula": "A cautela de evitar nitrato no IAM de ventrículo direito (hipotensão dependente de pré-carga) é ensinamento clínico consolidado, mas não é item textual do rótulo brasileiro do TRIDIL — mantida aqui como nota, não como contraindicação formal citável à bula."
     },
     "references": [
+      "Bula profissional do TRIDIL (nitroglicerina injetável 5mg/mL), Cristália Produtos Químicos Farmacêuticos Ltda. — cristalia.com.br, aprovada pela ANVISA em 17/04/2026",
       "Nitroglycerin sublingual tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 562d2e03-dfed-41ff-8e7f-ec4169141983"
     ],
-    "pregnancy": "**Usar apenas se claramente necessário.** **Não foram conduzidos estudos de teratologia animal com a nitroglicerina injetável** — os estudos existentes usaram a **pomada** aplicada topicamente em ratas e coelhas, em doses de até 80 e 240 mg/kg/dia, sem efeito tóxico sobre mães ou fetos. Não há estudo adequado e bem controlado em gestantes. Fonte: rótulo aprovado pelo FDA (DailyMed) para a nitroglicerina injetável. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer.",
-    "lactation": "**Dado ausente; decisão por balanço de benefícios.** Não se sabe se a nitroglicerina está presente no leite humano nem se afeta a produção de leite. O rótulo pede que os **benefícios da amamentação para o desenvolvimento e a saúde da criança** sejam pesados contra a necessidade clínica materna e contra o potencial de efeito adverso no lactente — inclusive o decorrente da doença materna de base. Fonte: rótulo aprovado pelo FDA (DailyMed) para a nitroglicerina injetável. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer."
+    "pregnancy": "**Categoria de risco C.** Corrige o registro anterior, que dizia não haver bula do detentor do registro no Brasil disponível — localizada agora (TRIDIL, Cristália). Estudos de teratogenicidade não foram conduzidos com a injeção; estudos com **pomada** de nitroglicerina em ratos e coelhos, até 80 e 240 mg/kg/dia, não mostraram efeito tóxico materno ou fetal. Não há estudo adequado e controlado em gestante. Administrar apenas se o benefício potencial superar o risco e for claramente necessário; comunicar o médico imediatamente em caso de gravidez durante o uso. Fonte: bula profissional brasileira do TRIDIL, itens 4. CONTRAINDICAÇÕES e 5. ADVERTÊNCIAS E PRECAUÇÕES.",
+    "lactation": "**Dado ausente; cautela, sem proibição.** Não se sabe se a nitroglicerina é excretada no leite humano; como muitos fármacos o são, recomenda-se cautela. Uso no período de lactação depende de avaliação e acompanhamento médico. Fonte: bula profissional brasileira do TRIDIL — confirma o conteúdo já registrado a partir do rótulo do FDA."
   },
   {
     "slug": "nitroprussiato-de-sodio",
