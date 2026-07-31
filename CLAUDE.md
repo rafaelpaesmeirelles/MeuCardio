@@ -232,6 +232,38 @@ contra o `git log` do dia.
 > registro isto aqui porque a contagem antiga ainda aparece em vários pontos deste arquivo, e é
 > fácil confundir qual meta está em vigor.
 >
+> ### ✅ AUDITORIA GERAL DO ACERVO em 31/07/2026 — tudo publicado, tudo íntegro
+> Feita a pedido do Rafael ("valide e publique tudo"). **Resultado: as 11 tabelas com coluna
+> `published` estão 100% publicadas, e o índice do RAG não tem um único defeito.**
+>
+> | frente | publicados/total | | frente | publicados/total |
+> |---|---|---|---|---|
+> | `documents` | **479/479** | | `gallery_images` | **66/66** |
+> | `evidence_records` | **232/232** | | `lab_tests` | **69/69** |
+> | `drugs` | **101/101** | | `study_tracks` | **17/17** |
+> | `scientific_studies` | **88/88** | | `emergency_protocols` | **10/10** |
+> | `clinical_cases` | **5/5** | | `discharge_checklists` | **3/3** |
+> | `patient_materials` | **4/4** | | | |
+>
+> **Verificações que passaram limpas:**
+> - **Front matter de todos os 479 `.md`**: nenhum YAML inválido, nenhum campo obrigatório ausente,
+>   **479 slugs únicos** (zero duplicata)
+> - **Paridade disco × banco**: 479 nos dois lados, **zero divergência nos dois sentidos**
+> - **Índice do RAG**: 3.143 trechos, **zero** de documentos não publicados, **zero** órfãos, **zero**
+>   documentos publicados sem indexação, **zero** publicados sem `search_vector`
+>
+> **A única pendência do acervo inteiro era um item, e ele foi validado, não apenas publicado:** a
+> evidência `intervalo-de-3-semanas-na-profilaxia-secundaria-...` (tema Febre reumática) estava
+> `pendente_revisao`. Conferi contra a fonte citada (Gerber MA et al., Circulation 2009;119(11),
+> **PMID 19246689**, declaração científica da AHA): o texto da fonte afirma **literalmente** que, em
+> populações de incidência particularmente alta, a penicilina G benzatina **a cada 3 semanas** é
+> justificada e recomendada, porque o nível sérico pode cair abaixo do protetor antes da quarta
+> semana. **O statement era tradução fiel — o conteúdo estava certo, o `review_status` é que estava
+> desatualizado.** Marcado como `revisado`, com `review_note` registrando a verificação, JSON
+> recarregado (232 atualizados) e então publicado.
+> **Nota de faixa:** `evidencias/` e Febre reumática são da Biblioteca. Entrei porque o Rafael pediu
+> explicitamente, alterei **um campo de um registro** e commitei na mesma ação.
+>
 > ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **50 documentos novos, todos publicados**
 > `content/*.md` de **424 para 479**; `documents` **479 total = 479 publicados**. **Acervo total das
 > nove frentes: 1.052** — **faltam 948 para os 2.000**. (Os números das frentes JSON e parte dos
