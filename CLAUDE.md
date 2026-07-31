@@ -160,6 +160,24 @@ contra o `git log` do dia.
 > editei o seu arquivo porque é da sua faixa. Se preferir outra divisão entre os dois (por exemplo,
 > concentrar tudo de POAF num só), me diga por aqui — dá para fundir sem perder nada.
 >
+> ### 🚨 Segundo recado, mais urgente: seu documento de endocardite estava sendo entregue pela IA sem estar publicado
+> `endocardite-infecciosa-de-camaras-direitas-e-aspiracao-mecanica-percutanea-aha-2026` (seu, commit
+> `c6f1f68`) chegou até mim por `git pull --rebase`, entrou no meu `import_directory()` de rotina —
+> **import é global, como a regra 4 avisa** — e o `indexar_tudo()` o indexou. **Eu não o publiquei**:
+> não é minha faixa, não fui eu quem verificou, e a autorização que o Rafael me deu vale só para os
+> meus lotes. Ele continua `published = false`, como você o deixou.
+>
+> **Mas ao conferir isso encontrei um defeito do sistema, não seu:** o `recuperar()` do `rag.py`
+> **não filtra por `published`**, então os trechos do seu documento estavam sendo devolvidos ao
+> assistente de IA — conteúdo retido chegando ao assinante. Reproduzi, registrei o detalhe completo
+> na seção do RAG (busque "DEFEITO ABERTO, ENCONTRADO E REPRODUZIDO em 31/07/2026") e **removi os 10
+> trechos dele do índice** como mitigação. **Seu arquivo, seu commit e o registro no banco estão
+> intactos** — só saiu do índice do RAG, e volta sozinho com `indexar_tudo(apenas_pendentes=True)`
+> quando for publicado.
+>
+> **`rag.py` é da sua faixa declarada**, então não corrigi o código. A correção é de uma linha no
+> `where` de `recuperar()`. Combine com o Rafael quem faz.
+>
 > **Nenhuma pressa aqui autoriza pular verificação.** Prazo de 10 dias é apertado, mas errado e
 > rápido é pior que devagar e certo — um dado fabricado descoberto depois do lançamento custa mais
 > caro que um dia de atraso na meta de volume.
@@ -1488,6 +1506,51 @@ monta a impressão.
        **evidências não tem título**, a IA não teria como citar a fonte no
        formato atual. Mesmo obstáculo de esquema da busca, agora afetando o que
        o médico lê como referência.
+
+   - 🚨 **DEFEITO ABERTO, ENCONTRADO E REPRODUZIDO em 31/07/2026 — o RAG entrega
+     conteúdo NÃO PUBLICADO ao assistente de IA. Mitigado nos dados; o código
+     NÃO foi corrigido.**
+     **`recuperar()`, em `app/services/rag.py`, não filtra por `published`.** A
+     consulta faz `join` de `document_chunks` com `documents` e filtra por tema,
+     mas **em nenhum ponto exige `Document.published == True`** (verificado por
+     `inspect.getsource`: a palavra `published` não aparece na função).
+     **Consequência:** qualquer documento retido — aguardando o aval do Rafael,
+     ou `pendente_revisao` — pode ser recuperado e **citado pela IA clínica para
+     um assinante**. Justamente o conteúdo que a regra 5 da divisão de trabalho
+     manda não publicar.
+     **Como foi descoberto:** um `import_directory()` de rotina trouxe um
+     documento da outra sessão (chegou pelo `git pull --rebase`), e o
+     `indexar_tudo()` o indexou — **`indexar_tudo()` também não filtra por
+     `published`**, e é essa combinação que cria o vazamento.
+     **Reprodução, para conferir se a correção funcionou:**
+     ```python
+     from app.core.db import SessionLocal
+     from app.services.rag import recuperar
+     db = SessionLocal()
+     res = recuperar(db, '<termo específico de um documento NÃO publicado>')
+     print([t.get('slug') for t in res])   # o slug não publicado aparecia aqui
+     ```
+     **Mitigação aplicada em 31/07/2026 (dados, não código):** removidos os 10
+     `document_chunks` do único documento não publicado que estava indexado
+     (`endocardite-infecciosa-de-camaras-direitas-e-aspiracao-mecanica-percutanea-aha-2026`,
+     da sessão da Biblioteca). Conferido depois: a mesma consulta deixou de
+     retorná-lo, e os **2.925 trechos de documentos publicados ficaram intactos**.
+     `AuditLog` gravado. **É reversível**: quando o documento for publicado,
+     `indexar_tudo(apenas_pendentes=True)` o reindexa.
+     **O defeito continua aberto.** A mitigação não impede a reincidência —
+     basta indexar outro documento não publicado. **A correção é de uma linha**
+     (acrescentar `Document.published == True` ao `where` de `recuperar()`, e
+     provavelmente também restringir `indexar_tudo()`), mas **`rag.py` é da
+     faixa declarada da sessão da Biblioteca** e mexer em backend fora de tarefa
+     autorizada é vedado pela seção "O que nunca fazer sem perguntar". **Precisa
+     de decisão do Rafael sobre quem corrige.**
+     **Enquanto não for corrigido:** depois de qualquer `indexar_tudo()`, rodar
+     a checagem abaixo e limpar o que aparecer.
+     ```sql
+     SELECT d.slug, count(c.id) FROM documents d
+       JOIN document_chunks c ON c.document_id = d.id
+      WHERE d.published = false GROUP BY d.slug;
+     ```
 
    - **DEFEITO CORRIGIDO em 29/07/2026 — o código está no repositório e
      AGUARDA REBUILD do backend para valer em produção.** Era: o aviso de
