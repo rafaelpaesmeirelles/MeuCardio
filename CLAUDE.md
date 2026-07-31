@@ -64,6 +64,37 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### ⚠️ Para a sessão de Medicamentos — `content/Farmacologia/lisinopril.md`: dose máxima de hipertensão e uso pediátrico, 31/07/2026
+> Ao revisar `medicamentos/metadados.json` (slug `lisinopril`, commits `9ae08a4` e `2232e5f`),
+> baixei a bula profissional brasileira do ZESTRIL (lisinopril, AstraZeneca do Brasil, via
+> consultaremedios.com.br) e encontrei dois pontos que valem conferência — um deles é uma
+> correção anterior que pode ter ido na direção errada, o mesmo padrão do caso do fondaparinux
+> registrado mais abaixo nesta seção.
+>
+> 1. **Dose máxima de hipertensão: a prosa registra 40mg/dia como correção deliberada de uma
+>    versão anterior que tinha 80mg** — linha "dose maxima na hipertensao": *"40 mg/dia... a
+>    versão anterior deste verbete trazia 80 mg/dia, o dobro"*, fonte rótulo FDA. **A bula
+>    brasileira do ZESTRIL tem os dois números, em seções diferentes, e nenhum invalida o
+>    outro**: para hipertensão geral, diz literalmente *"a dose máxima usada por longo prazo em
+>    estudos clínicos controlados foi de 80 mg por dia"*; só na subseção específica de
+>    "Pacientes com Insuficiência Renal" aparece *"o máximo de 40 mg/dia"*. Ou seja, 40mg parece
+>    ser o teto para o paciente renal, não o teto geral — a correção anterior pode ter aplicado
+>    o número certo à população errada. Não decidi sozinho: são duas leituras possíveis da
+>    mesma bula (dose "usada em estudo" vs. dose "recomendada"), e o campo já é delicado por já
+>    ter sido corrigido uma vez. Deixo os dois números documentados no JSON, com a citação
+>    exata de cada seção, para quem for conferir a prosa decidir.
+> 2. **Uso pediátrico**: a prosa tem posologia pediátrica própria (0,07mg/kg/dia, título
+>    "pediatria 6 anos ou mais"), fonte FDA. A bula brasileira do ZESTRIL, seção "Uso em
+>    crianças", diz literalmente: *"A segurança e a eficácia de ZESTRIL em crianças não foram
+>    estabelecidas."* — o registro brasileiro não reconhece uso pediátrico, ao contrário do
+>    rótulo americano. Não editei `content/Farmacologia/lisinopril.md` — fora da minha faixa,
+>    mas é divergência regulatória Brasil/EUA com peso clínico (uso off-label vs. uso
+>    rotulado), do mesmo tipo já registrado para digoxina e dabigatrana nesta seção.
+>
+> Também trouxe para o JSON a contraindicação de janela de 36h com sacubitril-valsartana, que a
+> prosa já tinha e o JSON não — enriquecimento, sem contradição. Contraindicações, efeitos
+> adversos e gravidez/lactação já conferem entre as duas telas.
+
 > ### ⚠️ Para a sessão de Medicamentos — `content/Farmacologia/levosimendana.md` diz "ajuste de dose" onde a bula contraindica, 31/07/2026
 > Ao revisar `medicamentos/metadados.json` (slug `levosimendana`, commit `57e529f`), baixei a
 > bula do SIMDAX (levosimendana, Abbott/Orion) e encontrei duas divergências reais, não só
