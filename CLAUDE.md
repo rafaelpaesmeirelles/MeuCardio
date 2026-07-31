@@ -64,6 +64,42 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### 🚨 URGENTE para a sessão de Medicamentos — `content/Farmacologia/losartana-potassica.md` usou bula desatualizada, rebaixou 3 contraindicações formais reais, 31/07/2026
+> Achado no mesmo dia da correção anterior, então merece prioridade alta: ao revisar
+> `medicamentos/metadados.json` (slug `losartana-potassica`, commit `bd83bfa`), notei que a
+> prosa já tinha sido "corrigida" **hoje, 31/07/2026** (mesma data), citando a bula do COZAAR em
+> `https://www.saudedireta.com.br/catinc/drugs/bulas/cozaar.pdf` — baixei essa mesma URL para
+> conferir e **é uma bula antiga, sem nenhuma menção a alisquireno** (a restrição de bloqueio
+> duplo do SRA só entrou nas bulas depois do estudo ALTITUDE, ~2012) e sem código de versão
+> visível além de "WPC 072002" no rodapé, compatível com bula de ~2002.
+>
+> **Baixei a bula profissional atual, direto do site oficial da detentora**
+> (`https://www.organon.com/brazil/wp-content/uploads/sites/33/2023/06/cozaar_bula_profissional.pdf`,
+> Organon, 2023) e o item **4. CONTRAINDICAÇÕES** tem **4 itens formais**, não 1:
+> hipersensibilidade, **segundo/terceiro trimestre de gestação**, **insuficiência hepática
+> grave**, e **uso concomitante de alisquireno em diabético com TFG <60 mL/min/1,73m²** — os
+> três últimos citados explicitamente como "veja o item 4. CONTRAINDICAÇÕES" em outras partes do
+> mesmo documento, confirmando que são mesmo do item formal, não de advertências.
+>
+> **A prosa, na correção de hoje, rebaixou exatamente esses três para "advertência"** — inclusive
+> a gravidez no segundo/terceiro trimestre, que a bula atual contraindica formalmente, não só
+> recomenda suspender. Só a estenose bilateral de artéria renal está corretamente classificada
+> como advertência nas duas versões da bula (antiga e atual) — isso a prosa acertou. O item de
+> alisquireno, que a prosa presumiu por "regra de classe" sem fonte específica desta bula,
+> **está de fato na bula atual do COZAAR**, só que na versão errada consultada isso não
+> apareceu.
+>
+> `medicamentos/metadados.json` já está corrigido (contraindicações formais = hipersensibilidade
+> + gestação 2º/3º tri + insuficiência hepática grave + alisquireno em diabético com TFG<60;
+> estenose bilateral movida para nota de advertência). Gravidez e lactação também reescritas com
+> o texto completo da bula 2023 — a lactação agora diz "uso não recomendado", mais restritiva do
+> que o resumo anterior. Também achei que a bula atual não reconhece uso pediátrico ("segurança e
+> eficácia em crianças ainda não foram estabelecidas") — a dose pediátrica que já está na prosa
+> e no JSON vem de outra fonte, não desta bula. Não editei `content/Farmacologia/losartana-potassica.md`
+> — fora da minha faixa, mas por ter sido editado hoje com fonte desatualizada, e por rebaixar
+> contraindicação formal real (gestação, insuficiência hepática, alisquireno), sinalizo com
+> prioridade máxima.
+
 > ### ⚠️ Para a sessão de Medicamentos — `content/Farmacologia/lisinopril.md`: dose máxima de hipertensão e uso pediátrico, 31/07/2026
 > Ao revisar `medicamentos/metadados.json` (slug `lisinopril`, commits `9ae08a4` e `2232e5f`),
 > baixei a bula profissional brasileira do ZESTRIL (lisinopril, AstraZeneca do Brasil, via
