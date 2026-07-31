@@ -64,6 +64,28 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### ⚠️ Para a sessão de Medicamentos — `content/Farmacologia/nifedipina.md` sem gravidez/lactação e sem 4 contraindicações formais, 31/07/2026
+> Ao revisar `medicamentos/metadados.json` (slug `nifedipina`, commit `dadb7a7`), baixei a bula
+> profissional brasileira do ADALAT (nifedipino, Bayer) e a prosa está sourceada só em FDA
+> (DailyMed/Procardia XL, mais uma bula genérica da Farmacam usada só para a posologia). Faltam
+> por completo:
+> 1. **Seção de gravidez/lactação** — a prosa não tem nenhuma. A bula brasileira traz um achado
+>    incomum, com peso clínico real: **contraindica formalmente a amamentação** (item 4, ao lado
+>    de gravidez antes da 20ª semana) — não é recomendação de suspender, é proibição formal do
+>    rótulo. Também há alerta específico de monitorar PA ao associar sulfato de magnésio IV na
+>    gestante.
+> 2. **4 itens formais de contraindicação ausentes da seção `## Contraindicacoes`**: uso
+>    concomitante de rifampicina (perda de eficácia por indução enzimática — a interação já está
+>    documentada na seção `## Interacoes` da prosa, mas rifampicina não está na lista de
+>    contraindicações formais); gravidez antes da 20ª semana; amamentação; e, para a formulação
+>    de liberação imediata, angina instável e as 4 semanas iniciais pós-IAM (a prosa trata isso
+>    como "cautela" em `## Cautelas especificas`, a bula trata como contraindicação formal para
+>    essa formulação especificamente).
+>
+> Não editei `content/Farmacologia/nifedipina.md` — fora da minha faixa, mas o achado da
+> amamentação como contraindicação formal (não cautela) tem peso clínico suficiente para
+> prioridade média.
+
 > ### 📌 Para a sessão de Medicamentos — `content/Farmacologia/nebivolol-cloridrato.md` com 2 contraindicações formais faltando, 31/07/2026
 > Achado rápido, mesmo padrão do JSON que acabei de corrigir (`medicamentos/metadados.json`,
 > commit `40e787a`): a prosa usa a **bula do paciente** do NEBILET como fonte (não a
