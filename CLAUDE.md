@@ -64,6 +64,82 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### 🌙 FIM DE SESSÃO em 31/07/2026 — sessão de Medicamentos encerrando a pedido do Rafael
+> Encerrando a pedido explícito do Rafael ("termine esse trabalho e encerre por hoje, amanhã
+> retomamos"). Estado exato no fechamento, medido, não de memória.
+>
+> **Farmacologia: sweep de conferência concluído — 97/97 documentos `revisado`, zero pendentes.**
+> Era o maior débito de qualidade formal do sistema (42/105 no início do dia). Além dos 63
+> originalmente pendentes, mais de 20 correções reativas aos achados da sessão da Biblioteca —
+> destaque para três casos de "correção de uma correção no mesmo dia" por fonte errada (bula do
+> paciente usada como se fosse a profissional, ou bula desatualizada): perindopril, losartana e
+> fondaparinux. Duas correções de segurança de maior peso: **tenecteplase** (trombolítico —
+> contraindicações vinham do StatPearls, genéricas; agora são as 16 da bula do METALYSE, com
+> corte exato de INR e distinção AVC hemorrágico/isquêmico) e **fondaparinux** (corte renal de
+> contraindicação revertido de <30 para <20 mL/min, valor certo da bula brasileira). Nota aberta,
+> não resolvida: varfarina/lactação — verifiquei de forma independente e a prosa está correta
+> (bula lista "Lactantes" como contraindicação formal); a divergência pode estar no lado do JSON,
+> ver bloco próprio acima.
+>
+> **`medicamentos/metadados.json`: publicados 101/101, com 87/89 em `review_status: revisado`**
+> (só o órfão `prasugrel`, que nunca deve publicar, fica de fora) — a sessão da Biblioteca chegou
+> a 88/89 revisado ao longo do dia; publiquei em três lotes (71 → 80 → 87) conforme ela avançava,
+> sempre com o mesmo roteiro (carregar → setar `review_status`/`published` direto no banco →
+> `AuditLog`), documentado na seção "Como carregar e publicar" mais abaixo.
+>
+> **Stripe em produção, ativado hoje.** A conta estava com `charges_enabled: false` por dois
+> campos de KYC faltando (PEP e confirmação de executivo) — resolvidos pelo Rafael no painel,
+> confirmado via API. Chaves trocadas de teste para live no `.env`, webhook e produto recriados
+> em modo live (produto renomeado de "CardioBenê", resíduo de marca antiga, para "Corvia").
+> **Dois planos**: Assinatura Básica (Acesso ao Site) R$49,90/mês, Assinatura Completa (Acesso ao
+> Site + CorvIA Mail) R$59,90/mês — `backend/app/api/billing.py`, `backend/app/models/subscription.py`
+> e `frontend/src/pages/Assinatura.tsx`/`MinhaConta.tsx`/`CorviaMail.tsx` todos atualizados,
+> testados via checkout real (sessão criada, sem completar pagamento) e via consulta direta ao
+> Stripe. Acesso manual (sem Stripe) concedido a wladmir e Lenira, plano Completo, mesmo padrão
+> de sempre (`Subscription` direto no banco, sem `stripe_customer_id`).
+>
+> **Feature nova, pedida pelo Rafael no fim do dia — backend pronto e testado, frontend NÃO
+> começado.** Painel admin de "usuários online" + chat 1:1 em tempo real entre assinantes:
+> - `users.last_seen_at` (migração `c4a1f7e93b6d`), atualizado com throttle de 60s em
+>   `current_user` (`core/security.py`). `GET /api/admin/usuarios-online` deriva "online" da
+>   janela de 5 minutos — não é um campo gravado.
+> - `ChatMessage` (`app/models/chat.py`) — par sender/recipient, sem tabela de conversa própria.
+>   Router `app/api/chat.py`: busca por nome/e-mail/registro profissional com filtro de órgão de
+>   classe (`GET /buscar-usuarios`), lista de conversas com não lidas (`GET /conversas`),
+>   histórico paginado (`GET /mensagens/{id}`), envio (`POST /mensagens/{id}`), marcar como lida
+>   (`POST /mensagens/{id}/marcar-lidas`), e WebSocket `GET /ws?token=` para entrega em tempo real.
+> - **Armadilha real, já resolvida — vale saber antes de mexer de novo**: `main.py` aplica
+>   `dependencies=[Depends(assinante_ativo)]` a cada router de `ROUTERS_ASSINANTES` via
+>   `include_router`. Isso **também se aplica a rotas de WebSocket** dentro do mesmo router — e
+>   `assinante_ativo`/`current_user` dependem de `OAuth2PasswordBearer`, que exige um `Request`
+>   HTTP. Recebendo um `WebSocket` no lugar, estourava `TypeError` e a conexão caía com HTTP 500
+>   no handshake (visto direto no log, não suposto). Solução: o WS mora em `chat.router_ws`, um
+>   `APIRouter` **separado**, registrado em `main.py` com `app.include_router(chat.router_ws)`
+>   **sem** a lista de `dependencies` — autenticação e checagem de assinatura são feitas à mão
+>   dentro do próprio handler (token vem em `?token=`, já que o WebSocket nativo do browser não
+>   permite header `Authorization` customizado).
+> - **Testado de ponta a ponta com tokens reais**, dois usuários (admin + wladmir): busca por
+>   nome, envio, histórico, contagem de não lidas, marcar como lida, e **entrega em tempo real**
+>   confirmada (mensagem enviada por HTTP POST de um usuário chegou via `ws.recv()` no WebSocket
+>   já conectado do outro, em menos de 1 segundo). Mensagens de teste já removidas do banco.
+> - **O que falta, para amanhã**: página admin `/admin/usuarios-online` (tabela com status
+>   online/offline e último acesso — o endpoint já existe e já foi testado, só falta a tela);
+>   widget de chat flutuante — ícone discreto baseado na logo da Corvia, posicionado ao lado do
+>   botão `.emerg-atalho` (`frontend/src/components/Shell.tsx` + `frontend/src/styles/emergencia.css`,
+>   que já é `position: fixed; right: 1rem; bottom: 1rem` — o novo ícone deve ficar ao lado, não
+>   por cima), com busca de usuário, lista de conversas, thread de mensagens, conexão WebSocket no
+>   cliente, e badge de não lidas (`GET /api/chat/nao-lidas` já existe para isso). Nenhum trabalho
+>   de frontend desta feature foi começado ainda — é o próximo passo integral de amanhã.
+>
+> **Publicação final do dia, as nove frentes**: `documents` 446/450 · `evidencias` 155/156 ·
+> `estudos` 76/76 · `galeria` 63/63 · `exames` 60/60 · `drugs` 101/101 · `emergencia` 10/10 ·
+> `trilhas` 17/17 · `casos_clinicos` 5/5 — zero pendência de publicação para item `revisado`; as
+> únicas exclusões são as deliberadas de sempre (4 documentos órfãos de Farmacologia, 1 evidência
+> de febre reumática). RAG reindexado para todos os documentos de Farmacologia editados hoje.
+>
+> **Esta sessão para aqui.** Retomar amanhã pelo frontend do chat/presença (backend já pronto,
+> ver acima), ou pela fila normal de Farmacologia/`content/` se o Rafael pedir outra coisa.
+
 > ### ⚠️ Resposta ao achado sobre varfarina/lactação — verificado de forma independente, a prosa está certa, 31/07/2026
 > Em resposta ao alerta "URGENTE" logo abaixo (varfarina, lactação, bula do MAREVAN). Como o peso
 > clínico é real (decisão de amamentar ou não em anticoagulada), busquei e li a bula eu mesma,
