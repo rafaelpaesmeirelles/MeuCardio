@@ -66,25 +66,27 @@ Regras que decorrem disso:
 **A meta anterior era 1.000 e foi SUBSTITUÍDA — não é acréscimo, é a nova régua.** Vale para as
 duas sessões, e abrange **todas as funções/frentes do produto**, não só `content/`.
 
-**Ponto de partida medido no disco em 31/07/2026, depois que as duas sessões commitaram** (não é
-estimativa): **920 itens** — `content/*.md` 429 · `evidencias` 160 · `medicamentos/metadados.json`
-89 · `estudos` 81 · `exames` 66 · `galeria` 63 · `trilhas` 17 · `emergencia` 10 · `casos-clinicos`
-5. **Faltam 1.080 itens.**
+**Ponto de partida medido no disco em 31/07/2026, à noite** (não é estimativa): **977 itens** —
+`content/*.md` 450 · `evidencias` 187 · `medicamentos/metadados.json` 89 · `estudos` 85 ·
+`exames` 68 · `galeria` 66 · `trilhas` 17 · `emergencia` 10 · `casos-clinicos` 5. **Faltam 1.023
+itens.**
 
-> ✅ **RESOLVIDO pelo Rafael em 31/07/2026: os 2.000 são meta SEM PRAZO FIXO.** A pergunta foi
-> levantada porque os números não fechavam — 1.080 itens em 10 dias dariam **~108/dia somando as
-> duas sessões**, contra o melhor dia real até agora, que foi 31/07: **22 itens** (17 da
-> Biblioteca + 5 de Medicamentos), um fator de ~5x.
+> 🔴 **CORRIGIDO pelo Rafael em 31/07/2026, à noite: 2.000 itens TEM prazo, é 10/08/2026 — reverte
+> o "sem prazo fixo" registrado horas antes nesta mesma seção.** A versão anterior deste bloco
+> dizia que os 2.000 eram meta de médio prazo sem data, com o lançamento de 10/08 saindo "com o
+> que estiver pronto" independente da contagem. **Isso estava errado. O Rafael confirmou
+> diretamente: o prazo para os 2.000 é 10/08/2026, sem ambiguidade.**
 >
-> **Decisão dele:** **o lançamento de 10/08/2026 continua de pé e sai com o que estiver pronto**;
-> os 2.000 passam a ser **meta de médio prazo, sem data**. Consequências práticas, para as duas
-> sessões:
-> - **Não sacrificar verificação para alcançar contagem** — sem prazo atrelado, não existe mais
->   nenhum argumento de cronograma que justifique afrouxar a régua de qualidade;
-> - **A data de 10/08 não é mais uma meta de volume**, é a data em que o produto abre ao público
->   com o acervo que houver;
-> - **Não replanejar o dia em cima de "faltam N para 2.000"** — o número serve para medir
->   progresso, não para ditar ritmo.
+> **A aritmética, para quem planejar os dias que faltam:** 1.023 itens em ~10 dias corridos
+> (contando hoje) são **~102 itens/dia somando as duas sessões** — o melhor dia real até agora
+> (31/07) ficou bem abaixo disso. **Isto está registrado como fato, não como objeção**: é o ritmo
+> necessário, e a régua de qualidade não cede por causa dele.
+> - **Volume nunca justifica pular verificação** — nada fabricado, fonte real e verificável, ou
+>   `VERIFICAÇÃO HUMANA NECESSÁRIA` explícito onde a fonte não confirmar, mesmo no ritmo de ~102/dia;
+> - **Replaneje o dia em cima de "faltam N para 2.000, em D dias"** — ao contrário do que o bloco
+>   anterior instruía, este número **deve** guiar o ritmo diário das duas sessões daqui até 10/08;
+> - Se o ritmo demonstrado ficar muito abaixo do necessário por vários dias seguidos, é matéria
+>   para o Rafael decidir o que cede (escopo ou data) — não para as sessões decidirem sozinhas.
 
 **A régua de qualidade não muda com a meta maior.** Nada fabricado, fonte real e verificável, ou
 `VERIFICAÇÃO HUMANA NECESSÁRIA` explícito onde a fonte não confirmar. **Volume nunca justifica
