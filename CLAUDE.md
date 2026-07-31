@@ -264,10 +264,10 @@ contra o `git log` do dia.
 > **Nota de faixa:** `evidencias/` e Febre reumática são da Biblioteca. Entrei porque o Rafael pediu
 > explicitamente, alterei **um campo de um registro** e commitei na mesma ação.
 >
-> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **55 documentos novos, todos publicados**
-> `content/*.md` de **424 para 486**; `documents` **486 total = 486 publicados**. **Acervo total:
-> 1.069** — **faltam 931 para os 2.000**. (Os números das frentes JSON e parte dos documentos
-> incluem o que a sessão da Biblioteca entregou no mesmo dia; os 55 acima são só desta sessão.)
+> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **56 documentos novos, todos publicados**
+> `content/*.md` de **424 para 487**; `documents` **487 total = 487 publicados**. **Acervo total:
+> 1.079** — **faltam 921 para os 2.000**. (Os números das frentes JSON e parte dos documentos
+> incluem o que a sessão da Biblioteca entregou no mesmo dia; os 56 acima são só desta sessão.)
 >
 > **24º lote — 1 documento**: diagnóstico de TEP na gestante (Artemis/YEARS adaptado, PMID 30893534,
 > e CT-PE-Pregnancy, PMID 30357273, em Gravidez).
@@ -280,17 +280,27 @@ contra o `git log` do dia.
 >   estratificação, conduta, ablação profilática e FA pré-excitada. Verificado antes de escrever
 > - ~~commotio cordis~~ — **DESCARTADA por falta de fonte adequada**: a busca só devolveu relato de
 >   caso e uma errata, sem revisão ou consenso utilizável
-> - 🔒 **disfunção de VD / IC direita** — **BLOQUEADA POR FONTE, a quarta desta sessão.** O
->   documento adequado existe e é recente — *Diagnosis and treatment of right ventricular failure
->   secondary to acutely increased right ventricular afterload*, **clinical consensus statement da
->   ACVC/ESC**, Eur Heart J Acute Cardiovasc Care. 2024;13(3):304-312, **PMID 38135288** — mas **não
->   tem resumo no PubMed**, só título. Mesma situação do ISHLT (transplante) e da AHA (cardiorrenal).
->   **Tentar PMC ou o site da ESC antes de escrever**
+> - ~~disfunção de VD / IC direita~~ — **DESTRAVADA E FEITA no 27º lote.** Estava bloqueada porque o
+>   consenso da ACVC/ESC (PMID 38135288) **não tem resumo no PubMed**. **Resolvido pelo PMC** — ver
+>   o método abaixo
 > - **escalonamento/transição de terapia na HAP** (Hipertensão pulmonar) — ainda não verificada
 >
-> **Padrão que já apareceu quatro vezes e vale saber de antemão: documento de consenso/declaração de
-> sociedade frequentemente NÃO tem resumo no PubMed** — o registro traz só título e autores. Para
-> esse tipo de fonte, o E-utilities não basta, e é preciso PMC ou o site da sociedade.
+> ### 🔑 MÉTODO QUE DESTRAVA CONSENSO DE SOCIEDADE — use antes de declarar lacuna bloqueada
+> **Documento de consenso/declaração de sociedade frequentemente NÃO tem resumo no PubMed** — o
+> registro traz só título e autores, e foi assim quatro vezes nesta sessão. **Mas isso não significa
+> que a fonte esteja inacessível: muitos estão no PMC em texto integral e aberto.**
+>
+> **Como achar o PMC de um PMID, sem adivinhar URL:**
+> ```
+> https://eutils.ncbi.nlm.nih.gov/entrez/eutils/elink.fcgi?dbfrom=pubmed&db=pmc&id=<PMID>&retmode=json
+> ```
+> O campo `linksets[0].linksetdbs` com `linkname: pubmed_pmc` traz o **PMCID**; o texto integral fica
+> em `https://pmc.ncbi.nlm.nih.gov/articles/PMC<id>/` e **é legível por WebFetch**.
+>
+> **Foi assim que o consenso de VD saiu de "bloqueado por dois ciclos" para documento publicado.**
+> **As outras lacunas bloqueadas desta sessão devem ser retentadas por este caminho antes de
+> qualquer outra coisa:** ISHLT/transplante cardíaco (PMID 26776864), AHA/síndrome cardiorrenal
+> (PMID 30852913) e a ESC 2025 de gravidez/contracepção.
 >
 > **25º lote — 1 documento**: tromboprofilaxia na gestação e puerpério (HIGHLOW, PMID 36354038, em
 > Gravidez), que forma par com o de diagnóstico de TEP na gestante do lote anterior — um investiga a
