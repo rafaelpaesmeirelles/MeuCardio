@@ -4,7 +4,7 @@ slug: nebivolol-cloridrato
 theme: "Farmacologia"
 kind: farmacologia
 review_status: revisado
-source_refs: ["Bula do NEBILET (cloridrato de nebivolol), bula do paciente, conferida em 29/07/2026 — texto registrado no Brasil", "Nebivolol (BYSTOLIC) tablets — rótulo aprovado pelo FDA, indicação de hipertensão arterial", "Flather MD, Shibata MC, Coats AJS, et al. Randomized trial to determine the effect of nebivolol on mortality and cardiovascular hospital admission in elderly patients with heart failure (SENIORS). Eur Heart J. 2005;26(3):215-225. DOI: 10.1093/eurheartj/ehi115. PMID: 15642700"]
+source_refs: ["Bula profissional do NEBILET (cloridrato de nebivolol, Biolab, versão 07/2023), item 4 — corrige a leitura anterior que usava a bula do paciente, acrescentando 2 contraindicações formais em 31/07/2026", "Nebivolol (BYSTOLIC) tablets — rótulo aprovado pelo FDA, indicação de hipertensão arterial", "Flather MD, Shibata MC, Coats AJS, et al. Randomized trial to determine the effect of nebivolol on mortality and cardiovascular hospital admission in elderly patients with heart failure (SENIORS). Eur Heart J. 2005;26(3):215-225. DOI: 10.1093/eurheartj/ehi115. PMID: 15642700"]
 legacy_source: "medicamentos/banco-de-medicamentos-nebivolol.md"
 ---
 
@@ -46,6 +46,11 @@ Cefaleia, tontura, parestesia, bradicardia, dispneia, fadiga, edema, impotência
 Não recomendado com verapamil/diltiazem (risco de hipotensão profunda e BAV) e antiarrítmicos classe I; usar com precaução com amiodarona; inibidores de CYP2D6 (paroxetina, fluoxetina, quinidina) aumentam níveis plasmáticos
 
 ## Contraindicacoes
+**Corrigido em 31/07/2026** — os 9 itens abaixo já conferiam contra a bula profissional
+(inclusive broncoespasmo/asma e feocromocitoma não tratado, que **são** contraindicação formal
+aqui — diferente de outros betabloqueadores desta lista, onde a bula trata como advertência; a
+do nebivolol é mais conservadora nesse ponto). Faltavam só dois itens formais do item 4:
+
 - Hipersensibilidade
 - Insuficiência hepática
 - IC aguda/choque cardiogênico/descompensação com necessidade de inotrópico IV
@@ -55,6 +60,8 @@ Não recomendado com verapamil/diltiazem (risco de hipotensão profunda e BAV) e
 - Feocromocitoma não tratado
 - Bradicardia <60bpm pré-tratamento
 - PAS<90mmHg
+- **Acidose metabólica** — acrescentado, ausente de uma leitura anterior baseada na bula do paciente
+- **Perturbações circulatórias periféricas graves** — acrescentado, mesmo motivo
 
 ## Gravidez classificacao
 Categoria C — uso não recomendado exceto se claramente necessário; monitorizar fluxo uteroplacentário
