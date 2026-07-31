@@ -1638,5 +1638,29 @@
       "estenose mitral",
       "insuficiência mitral"
     ]
+  },
+  {
+    "slug": "ressonancia-magnetica-da-aorta-quando-preferir-a-tomografia",
+    "name": "Ressonância magnética da aorta — e quando preferir a tomografia",
+    "category": "imagem",
+    "theme": "Aorta e doença arterial periférica",
+    "what_it_measures": "Anatomia da aorta em todo o seu trajeto — calibre, morfologia da parede e do lúmen, presença de dissecção, hematoma intramural ou úlcera —, sem radiação ionizante e, em várias sequências, sem contraste iodado. É o método que permite seguimento repetido ao longo de anos no paciente jovem com aortopatia, precisamente onde a soma de doses de radiação da tomografia pesa.",
+    "reference_range": "Não há valor de corte próprio do método: a medida relevante é o diâmetro máximo da aorta no segmento avaliado, e os limiares de intervenção são os das diretrizes de doença aórtica, cadastrados na frente de Evidências desta plataforma. A diretriz brasileira de imagem lista a mensuração dos calibres da aorta como indicação da ressonância com Classe I, Nível C.",
+    "indications": "Pela diretriz brasileira, com Classe I: aneurisma da aorta (Nível B), dissecção crônica da aorta (B), hematoma intramural aórtico (B), planejamento de abordagem cirúrgica da aorta (B), planejamento de endoprótese aórtica (B), arterites de grandes e médios vasos (B), úlceras aórticas (C) e mensuração dos calibres da aorta (C). Com Classe IIa: dissecção aguda da aorta (B) e síndrome aórtica aguda em paciente estável (C). Com Classe IIb: avaliação pós-operatória de endoprótese aórtica (B) e lesão traumática da aorta (C).",
+    "interpretation": "A ressonância caracteriza bem o conteúdo da parede — é particularmente boa em identificar e datar sangue, o que a torna útil no hematoma intramural. Nas arterites, permite ver espessamento e edema parietal, isto é, atividade inflamatória, e não apenas a consequência luminal — o que distingue arterite ativa de sequela estenótica estabelecida.",
+    "limitations": "Três limites decidem entre ressonância e tomografia, e todos estão na própria diretriz. Primeiro, a EMERGÊNCIA: na síndrome aórtica aguda com paciente INSTÁVEL a ressonância é formalmente contraindicada (Classe III) e a angiotomografia é o caminho; com paciente estável a ressonância sobe para IIa. Segundo, o SEGUIMENTO de endoprótese: para avaliação pós-implante a ressonância é apenas Classe IIb, enquanto a angiotomografia é Classe I — planejar e acompanhar não seguem o mesmo método. Terceiro, o TRAUMA: na lesão traumática da aorta a ressonância é IIb e a angiotomografia é Classe I. Somam-se as limitações usuais do método — tempo de aquisição longo, menor disponibilidade, incompatibilidade com alguns dispositivos e claustrofobia.",
+    "source_refs": [
+      "Magalhães TA, Carneiro ACC, Moreira VM, Trad HS, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI: 10.36660/abc.20240608. PMID: 39475988 — tabelas 'Indicações da utilização de ressonância magnética no diagnóstico da patologia da aorta' e 'Angiotomografia na avaliação das doenças vasculares', conferidas linha a linha no texto integral em acesso aberto (PMC12094294) em 31/07/2026. As classes citadas para a angiotomografia vêm da segunda tabela, e servem aqui para o contraste entre os dois métodos."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ressonância magnética da aorta",
+      "aneurisma de aorta",
+      "hematoma intramural",
+      "arterite",
+      "síndrome aórtica aguda",
+      "endoprótese"
+    ]
   }
 ]
