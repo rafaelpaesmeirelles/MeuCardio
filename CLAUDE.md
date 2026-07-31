@@ -232,11 +232,21 @@ contra o `git log` do dia.
 > registro isto aqui porque a contagem antiga ainda aparece em vários pontos deste arquivo, e é
 > fácil confundir qual meta está em vigor.
 >
-> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **48 documentos novos, todos publicados**
-> `content/*.md` de **424 para 477**; `documents` **477 total = 477 publicados**. **Acervo total das
-> nove frentes: 1.041** — **faltam 959 para os 2.000**. (Os números das frentes JSON e parte dos
-> documentos incluem o que a sessão da Biblioteca entregou no mesmo dia; os 48 acima são só desta
+> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **50 documentos novos, todos publicados**
+> `content/*.md` de **424 para 479**; `documents` **479 total = 479 publicados**. **Acervo total das
+> nove frentes: 1.052** — **faltam 948 para os 2.000**. (Os números das frentes JSON e parte dos
+> documentos incluem o que a sessão da Biblioteca entregou no mesmo dia; os 50 acima são só desta
 > sessão.)
+>
+> **21º lote — 2 documentos em Calculadoras**: escore de Genebra revisado e simplificado (PMID
+> 16461960 e 18955643) e escore DASH (PMID 22489957).
+>
+> **Frente que ainda rende e estava sendo subaproveitada: Calculadoras.** O mapeamento por escore
+> encontrou vários buracos de uma vez — além destes dois, seguem em aberto **VTE-BLEED** (sangramento
+> sob anticoagulação por TEV) e o **escore ABC** da FA (baseado em biomarcadores). **Escore é um
+> formato que rende bem**: a fonte primária costuma trazer a tabela de pontos e as faixas de risco
+> inteiras no resumo, o que permite verificar tudo sem depender de texto completo — ao contrário de
+> diretriz, que é onde as lacunas desta sessão vêm travando por 403.
 >
 > **20º lote — 1 documento**: CDI profilático na cardiomiopatia não isquêmica (DANISH, PMID
 > 27571011, em Dispositivos). **Lote de um só de propósito** — ver a lacuna bloqueada logo abaixo.
