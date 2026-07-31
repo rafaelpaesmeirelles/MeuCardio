@@ -3431,7 +3431,7 @@
   },
   {
     "slug": "sacubitrilvalsartana",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Sacubitril/Valsartana",
     "brand_names": [
       "Entresto"
@@ -3447,11 +3447,13 @@
       "IC crônica sintomática avançada (NYHA II-IV) com fração de ejeção reduzida, substituindo IECA/BRA no esquema terapêutico"
     ],
     "contraindications": [
-      "Uso concomitante ou dentro de 36h de IECA",
-      "História de angioedema relacionado a IECA/BRA prévio",
-      "Uso concomitante com alisquireno em diabéticos",
-      "Gravidez",
-      "Insuficiência hepática grave (Child-Pugh C)"
+      "Hipersensibilidade ao sacubitril, à valsartana, ou a qualquer excipiente",
+      "Uso concomitante ou dentro de 36h da descontinuação de IECA",
+      "História conhecida de angioedema relacionado a terapia anterior com IECA ou BRA",
+      "Angioedema hereditário ou idiopático",
+      "Uso concomitante de alisquireno em paciente com diabetes tipo 2",
+      "Insuficiência hepática grave, cirrose biliar, colestase (Child-Pugh C)",
+      "Gravidez"
     ],
     "dosing": {
       "sem uso previo ieca bra": "24mg/26mg 2x/dia; se bem tolerado, aumentar após 2-4 semanas até dose alvo de 97mg/103mg 2x/dia",
@@ -3468,9 +3470,10 @@
       "Criterios etarios pcdt brasileiro": "Conforme PCDT nacional, início de tratamento requer idade mínima de 18 anos e máxima de 75 anos; pacientes que iniciaram antes dos 75 anos mantêm tratamento continuamente"
     },
     "references": [
-      "Sacubitril/valsartan (ENTRESTO) — rótulo aprovado pelo FDA, DailyMed SPL setid 000dc81d-ab91-450c-8eae-8eb74e72296f"
+      "Sacubitril/valsartan (ENTRESTO) — rótulo aprovado pelo FDA, DailyMed SPL setid 000dc81d-ab91-450c-8eae-8eb74e72296f",
+      "Bula profissional do ENTRESTO (sacubitril/valsartana), Novartis Biociências S.A. — via consultaremedios.com.br, item 4. CONTRAINDICAÇÕES conferido linha a linha"
     ],
-    "pregnancy": "**Contraindicado na gravidez** — a bula é direta: \"você não deve tomar Entresto se você está grávida\", e orienta suspender o tratamento e avisar o médico em caso de gravidez durante o uso. **Mulheres em idade fértil devem usar contracepção durante o tratamento e por 1 semana após a última dose.** Consistente com a contraindicação já registrada no campo `contraindications` (fonte FDA/DailyMed). Fonte adicional: bula do Entresto (sacubitril valsartana sódica hidratada, Novartis Biociências), seção \"Gravidez e amamentação\".",
+    "pregnancy": "**Categoria de risco D. Contraindicado na gravidez.** A bula é direta: \"você não deve tomar Entresto se você está grávida\", orienta suspender o tratamento e avisar o médico em caso de gravidez durante o uso. **Mulheres em idade fértil devem usar contracepção durante o tratamento e por 1 semana após a última dose.** Fonte: bula profissional brasileira do ENTRESTO (Novartis), itens 4. CONTRAINDICAÇÕES e \"Gravidez e amamentação\" — categoria D confirmada agora contra o texto real, ausente do registro anterior deste campo.",
     "lactation": "**Amamentação não recomendada durante o tratamento** com Entresto, segundo a bula brasileira. Não há detalhe adicional (excreção no leite, dado animal). Fonte: bula do Entresto (sacubitril valsartana sódica hidratada, Novartis Biociências), seção \"Gravidez e amamentação\". Revisado pelo Rafael em 30/07/2026."
   },
   {
