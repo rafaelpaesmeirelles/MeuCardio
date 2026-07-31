@@ -2193,5 +2193,31 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "tendencias-da-febre-reumatica-aguda-no-brasil-2008-2022-datasus",
+    "title": "Tendências temporais da febre reumática aguda no Brasil, 2008-2022 — análise nacional do SIH/SUS",
+    "study_type": "estudo_de_coorte",
+    "authors": "Mutarelli A, Armelin L, Pantaleão AN, Nogueira A, et al.",
+    "journal": "Arquivos Brasileiros de Cardiologia",
+    "year": 2025,
+    "doi": "10.36660/abc.20240763",
+    "pmid": "40834210",
+    "url": "https://abccardiol.org/article/10-36660-abc-20240763/",
+    "summary": "Estudo TRANSVERSAL de base nacional (registrado aqui sob o rótulo de estudo observacional já usado nesta base, por não haver categoria própria para desenho transversal) analisando internações e óbitos por febre reumática aguda no Brasil entre 2008 e 2022, a partir do Sistema de Informações Hospitalares do SUS (SIH/SUS, DATASUS). Os dados foram estratificados por região geográfica (Norte, Nordeste, Centro-Oeste, Sudeste e Sul), faixa etária (5-9, 10-14 e 15-19 anos), raça/etnia autodeclarada (branca, não branca e ignorada) e tipo de atendimento (eletivo ou urgente), com modelos lineares generalizados autorregressivos de médias móveis para avaliar o efeito de idade, sexo e raça.",
+    "key_findings": "Foram registradas 11.061 internações e 65 óbitos por febre reumática aguda no período. Dos internados, 53% eram homens e 16% eram brancos. A faixa etária de 10 a 14 anos concentrou as maiores taxas de internação, enquanto a de 15 a 19 anos concentrou mais óbitos. As internações foram mais frequentes entre indivíduos não brancos e se concentraram no NORDESTE do país. Ao longo do período houve declínio das internações em todas as regiões e faixas demográficas, com convergência gradual entre as taxas de homens e mulheres até 2022 — sem diferença significativa entre os sexos.",
+    "clinical_implications": "É a fotografia epidemiológica brasileira que as diretrizes estrangeiras não fornecem, e ela tem duas consequências práticas. Primeira, o alvo etário: a doença interna sobretudo entre 10 e 14 anos, mas mata mais entre 15 e 19 — a idade de maior letalidade não coincide com a de maior incidência, o que desloca a atenção para o adolescente mais velho que já chega com acometimento cardíaco. Segunda, a distribuição: a concentração no Nordeste e entre pessoas não brancas confirma que a febre reumática no Brasil é doença de determinação socioeconômica, e que programas de prevenção primária e de profilaxia secundária devem ser dimensionados por região, não uniformemente.",
+    "limitations": "Baseia-se em dados administrativos de internação do SIH/SUS, que dependem da codificação registrada e não capturam casos tratados fora do ambiente hospitalar — o que subestima a incidência real e favorece os casos mais graves. A variável raça/etnia é autodeclarada e tem categoria 'ignorada', o que limita a precisão das comparações. Estudo transversal de tendência: descreve associação entre fatores socioeconômicos e carga de doença, não estabelece causalidade. O declínio observado nas internações pode refletir mudança real de incidência, mudança de padrão de internação ou de codificação, e o desenho não separa essas explicações.",
+    "theme": "Febre reumática",
+    "tags": [
+      "febre reumática aguda",
+      "epidemiologia brasileira",
+      "datasus",
+      "sih/sus",
+      "desigualdade regional",
+      "nordeste"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
