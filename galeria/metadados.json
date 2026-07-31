@@ -1382,5 +1382,49 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "tc-aneurisma-de-aorta-abdominal-infrarrenal",
+    "title": "TC — Aneurisma de aorta abdominal com medida do diâmetro máximo",
+    "modality": "TC",
+    "theme": "Aorta e doença arterial periférica",
+    "file_path": "tc/aneurisma-de-aorta-abdominal-tc-contrastada.jpg",
+    "findings": "Tomografia computadorizada abdominal axial com contraste, no nível dos rins. A aorta abdominal aparece acentuadamente dilatada, com luz opacificada pelo contraste, e traz as medidas feitas no próprio exame e sobrepostas ao corte: 48,5 mm no maior eixo e 38,3 mm no eixo perpendicular. Rins contrastados de ambos os lados e corpo vertebral posterior servem de referência anatômica. A imagem é um registro fotográfico da tela do equipamento, o que explica a granulação — não compromete a leitura do achado nem das medidas.",
+    "teaching_points": "Serve para fixar dois cortes numéricos que decidem conduta e são frequentemente confundidos. Primeiro, o diagnóstico: aneurisma de aorta abdominal é definido por diâmetro de 3,0 cm ou mais, de modo que estes 48,5 mm estabelecem o diagnóstico com folga. Segundo, o limiar de intervenção: 48,5 mm ainda NÃO alcança o critério de correção eletiva no homem, e este caso ilustra bem a faixa em que a conduta é seguimento por imagem, não operação — o AAA de 3,0 a 5,4 cm é tratado como AAA pequeno. Note também que a medida relevante é o maior diâmetro, e que medir num eixo só subestima o aneurisma: aqui os dois eixos diferem em 1 cm. Os limiares de correção eletiva são diferentes por sexo e estão registrados na frente de Evidências desta plataforma, com a diretriz ESC 2024 como fonte.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Contrast-enhanced_CT_scan_demonstrating_abdominal_aortic_aneurysm.jpg",
+    "license": "CC BY-SA 3.0",
+    "attribution": "James Heilman, MD, via Wikimedia Commons — CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0). Trabalho próprio do autor.",
+    "tags": [
+      "aneurisma de aorta abdominal",
+      "tomografia computadorizada",
+      "diâmetro máximo",
+      "rastreio",
+      "aorta"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "eco-endocardite-vegetacao-em-valva-tricuspide",
+    "title": "Ecocardiograma — Vegetação em valva tricúspide (endocardite de câmaras direitas)",
+    "modality": "Ecocardiograma",
+    "theme": "Endocardite",
+    "file_path": "ecocardiograma/endocardite-vegetacao-tricuspide.jpg",
+    "findings": "Ecocardiograma bidimensional apresentado em dois quadros lado a lado, cada um com traçado eletrocardiográfico simultâneo na base. No quadro da direita, uma seta branca aponta para massa ecogênica de contornos irregulares aderida ao aparelho valvar; o quadro da esquerda mostra a mesma janela sem a marcação. A fonte original identifica o achado como vegetação em valva tricúspide — a identificação da valva é da publicação de origem, não uma leitura independente feita a partir desta imagem isolada.",
+    "teaching_points": "A endocardite de câmaras direitas tem perfil clínico próprio e é a exceção mais importante ao raciocínio construído em torno das valvas esquerdas. Acomete tipicamente a valva tricúspide, e sua embolização é PULMONAR, não sistêmica — a apresentação costuma ser respiratória, com infiltrados pulmonares múltiplos, e não com os fenômenos embólicos periféricos que a galeria ilustra nos nódulos de Osler, nas lesões de Janeway e nas hemorragias subungueais. Uma consequência prática importante: como o ecocardiograma transtorácico tem melhor acesso às estruturas direitas do que às esquerdas, o rendimento do transtorácico na suspeita de endocardite tricúspide é maior do que na endocardite de valva esquerda, em que o transesofágico costuma ser necessário. A imagem é antiga, de qualidade de filme, e serve como ilustração do achado — não como referência de qualidade de imagem atual.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Endocarditis_ultrasound.JPG",
+    "license": "CC BY 2.0",
+    "attribution": "Koya D, Shibuya K, Kikkawa R, Haneda M. Successful recovery of infective endocarditis-induced rapidly progressive glomerulonephritis by steroid therapy combined with antibiotics: a case report. BMC Nephrology. 2004;5:18. DOI: 10.1186/1471-2369-5-18 — via Wikimedia Commons (obra derivada de Endocarditis_ultrasound.gif por Materialscientist), CC BY 2.0 (https://creativecommons.org/licenses/by/2.0).",
+    "tags": [
+      "endocardite infecciosa",
+      "valva tricúspide",
+      "vegetação",
+      "ecocardiograma",
+      "câmaras direitas"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
