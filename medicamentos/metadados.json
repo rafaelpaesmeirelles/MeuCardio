@@ -3210,7 +3210,7 @@
   },
   {
     "slug": "protamina",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Protamina (sulfato de protamina)",
     "drug_class": "Agente reversor específico da heparina",
     "mechanism": "Proteína fortemente catiônica que se liga ionicamente à heparina (fortemente aniônica), dissociando o complexo heparina-antitrombina III e formando um complexo heparina-protamina inativo — a protamina tem maior afinidade pela heparina do que a antitrombina III, revertendo seu efeito anticoagulante - **fonte**: Annals of Cardiac Anaesthesia (revisão sobre interação protamina-heparina)",
@@ -3228,19 +3228,21 @@
     },
     "notes": {
       "Reacoes de hipersensibilidade": "Reações anafilactoides podem afetar até 1 em cada 10 pacientes. Fatores de risco incluem alergia a proteína de peixe, diabetes insulino-dependente (particularmente uso de insulina protamina neutra de Hagedorn — NPH — ou insulina zinco-protamina humana recombinante), exposição prévia à protamina, e história de vasectomia. Manifestações variam de urticária e angioedema a choque vasodilatador, disfunção cardiopulmonar aguda, hipertensão pulmonar aguda e bradicardia - **fonte**: Annals of Cardiac Anaesthesia (revisão sobre interação protamina-heparina)",
-      "Efeito anticoagulante paradoxal": "Doses excessivas de protamina podem causar efeito anticoagulante paradoxal dose-dependente, por disfunção plaquetária, inibição da interação glicoproteína Ib-fator de von Willebrand, atividade de serino-protease e aumento da fibrinólise — piorando, paradoxalmente, o sangramento - **fonte**: Annals of Cardiac Anaesthesia (revisão sobre interação protamina-heparina)"
+      "Efeito anticoagulante paradoxal": "Doses excessivas de protamina podem causar efeito anticoagulante paradoxal dose-dependente, por disfunção plaquetária, inibição da interação glicoproteína Ib-fator de von Willebrand, atividade de serino-protease e aumento da fibrinólise — piorando, paradoxalmente, o sangramento - **fonte**: Annals of Cardiac Anaesthesia (revisão sobre interação protamina-heparina)",
+      "Sal comercializado no Brasil": "O produto de referência brasileiro (PROTAMINA 1000®, Valeant Farmacêutica do Brasil, MS 1.0575.0040) é **cloridrato de protamina**, não sulfato de protamina — o `generic_name` deste registro segue a nomenclatura usada pelo rótulo do FDA (sulfato), mas o produto efetivamente registrado e vendido no Brasil é outro sal. Farmacologicamente equivalentes para o efeito de neutralização da heparina; a diferença de sal não muda dose nem contraindicações."
     },
     "references": [
       "Crivellari M et al. Protamine and Heparin Interactions: A Narrative Review. Ann Card Anaesth. 2024;27(3):202-212.",
-      "Bula profissional de PROTAMINA 1000 (sulfato de protamina, solução injetável 10 mg/mL) — seção 8, Posologia e Modo de Usar, e seção 9, Reações Adversas. Versão brasileira."
+      "Bula profissional de PROTAMINA 1000 (sulfato de protamina, solução injetável 10 mg/mL) — seção 8, Posologia e Modo de Usar, e seção 9, Reações Adversas. Versão brasileira.",
+      "Bula profissional do PROTAMINA 1000 (cloridrato de protamina, solução injetável 10mg/mL), Valeant Farmacêutica do Brasil Ltda., MS 1.0575.0040, aprovada pela ANVISA em 20/04/2015 — via cellerafarma.com.br"
     ],
     "contraindications": [
       "Hipersensibilidade conhecida à protamina.",
       "Atenção ao risco de reação anafilactoide, que pode afetar até 1 em cada 10 pacientes. São fatores de risco: alergia a proteína de peixe, diabetes em uso de insulina contendo protamina (NPH ou zinco-protamina), exposição prévia à protamina, angioplastia coronariana ou circulação extracorpórea prévias, e vasectomia ou infertilidade.",
       "Dose excessiva produz **efeito anticoagulante paradoxal**, dose-dependente, por disfunção plaquetária e aumento da fibrinólise — piorando o sangramento que se queria tratar."
     ],
-    "pregnancy": "**Categoria C. Só administrar se claramente necessário.** O rótulo é franco quanto à extensão da lacuna: **não foram conduzidos estudos de reprodução animal** com o sulfato de protamina, e não se sabe se ele pode causar dano fetal ou afetar a capacidade reprodutiva. Fonte: rótulo aprovado pelo FDA (DailyMed) para o sulfato de protamina. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer.",
-    "lactation": "**Cautela.** Não se sabe se a protamina é excretada no leite humano; como muitos fármacos o são, o rótulo pede cuidado ao administrar a lactante. Fonte: rótulo aprovado pelo FDA (DailyMed) para o sulfato de protamina. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer."
+    "pregnancy": "**Categoria C. Só administrar se claramente necessário.** Corrige o registro anterior, que dizia não haver bula do detentor do registro no Brasil — localizada agora (PROTAMINA 1000, Valeant). A bula brasileira confirma a mesma categoria C já registrada a partir do rótulo do FDA, sem acrescentar dado novo sobre estudo de reprodução animal. Não foram conduzidos estudos de reprodução animal com o sulfato/cloridrato de protamina, e não se sabe se pode causar dano fetal ou afetar a capacidade reprodutiva. Fonte: bula profissional brasileira do PROTAMINA 1000, item 4. CONTRAINDICAÇÕES; rótulo aprovado pelo FDA (DailyMed), para o detalhe de ausência de estudo reprodutivo animal.",
+    "lactation": "**Cautela — a bula brasileira não aborda especificamente a lactação.** A bula profissional do PROTAMINA 1000 não tem seção própria sobre amamentação. Mantida a orientação do rótulo do FDA: não se sabe se a protamina é excretada no leite humano; como muitos fármacos o são, recomenda-se cautela ao administrar a lactante. Fonte: rótulo aprovado pelo FDA (DailyMed) para o sulfato de protamina — a bula brasileira, agora localizada, não contradiz nem complementa este ponto."
   },
   {
     "slug": "ramipril",
