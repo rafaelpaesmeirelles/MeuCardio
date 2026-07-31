@@ -4,7 +4,7 @@ slug: furosemida
 theme: "Farmacologia"
 kind: farmacologia
 review_status: revisado
-source_refs: ["Furosemide injection — rótulo aprovado pelo FDA, DailyMed SPL setid 75d5611a-f9e0-1841-e053-2991aa0af415", "Gerlag PG, van Meijel JJ. High-dose furosemide in the treatment of refractory congestive heart failure. Arch Intern Med. 1988;148(2):286-291. PMID: 3341836", "Wilczynski JA, Decaro MV, Marhefka GD, et al. Very High-Dose Furosemide Continuous Infusions: A Case Series. J Card Fail. 2020;26(9):794-797. DOI: 10.1016/j.cardfail.2020.05.022. PMID: 32505817"]
+source_refs: ["Bula do LASIX comprimido 40mg (furosemida, Sanofi Medley), item 3 (Contraindicações) — contraindicação formal de lactação e reatividade cruzada com sulfonamidas, acrescentadas em 31/07/2026", "Furosemide injection — rótulo aprovado pelo FDA, DailyMed SPL setid 75d5611a-f9e0-1841-e053-2991aa0af415", "Gerlag PG, van Meijel JJ. High-dose furosemide in the treatment of refractory congestive heart failure. Arch Intern Med. 1988;148(2):286-291. PMID: 3341836", "Wilczynski JA, Decaro MV, Marhefka GD, et al. Very High-Dose Furosemide Continuous Infusions: A Case Series. J Card Fail. 2020;26(9):794-797. DOI: 10.1016/j.cardfail.2020.05.022. PMID: 32505817"]
 legacy_source: "medicamentos/banco-de-medicamentos-furosemida.md"
 ---
 
@@ -55,7 +55,12 @@ Edema associado a insuficiência cardíaca, edema agudo de pulmão, congestão e
 - Pré-coma ou coma associado a encefalopatia hepática
 - Hipocalemia ou hiponatremia severa
 - Hipovolemia ou desidratação
-- Hipersensibilidade à medicação
+- Hipersensibilidade à furosemida, **às sulfonamidas** (reatividade cruzada — acrescentado em 31/07/2026, ausente de uma leitura anterior) ou a qualquer componente da fórmula
+
+## Gravidez e lactacao — acrescentado em 31/07/2026
+**Lactação: contraindicação formal.** A bula do LASIX é categórica, texto literal: "Este
+medicamento é contraindicado para uso por lactantes." Não é recomendação de cautela — é
+proibição de uso.
 
 ## Monitorizacao
 Monitorizar níveis de creatinina, sódio e potássio regularmente durante o tratamento
