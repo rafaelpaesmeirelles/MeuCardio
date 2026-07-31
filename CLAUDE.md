@@ -62,7 +62,67 @@ Regras que decorrem disso:
    (dose, corte de escore, valor de referência, número real do estudo).
    Lacuna de cobertura é dívida do produto, não detalhe.
 
+### 🎯 Meta concreta, definida pelo Rafael em 31/07/2026 — vale para as duas sessões
+**1.000 arquivos de conteúdo, lançamento público em 10/08/2026.** Faltam 10 dias a partir de
+hoje. Medido no disco em 31/07/2026 (não é estimativa): **898 itens** somando as nove frentes —
+`content/*.md` 424, `medicamentos/metadados.json` 89, `evidencias` 155, `estudos` 75, `galeria`
+63, `exames` 60, `emergencia` 10, `trilhas` 17, `casos_clinicos` 5. **Faltam 102 itens** para a
+meta, em 10 dias — cerca de **10 itens/dia somando as duas sessões** para chegar com folga, sem
+contar o que a meta de qualidade (seção acima) já exige de cada item novo: nada fabricado, fonte
+real e verificável, ou `VERIFICAÇÃO HUMANA NECESSÁRIA` explícito onde a fonte não confirmar.
+**Volume nunca justifica pular a verificação** — a régua de qualidade da meta 1 continua valendo
+peça por peça, mesmo com o prazo apertado.
+
 ## Divisão de trabalho entre sessões simultâneas
+
+> ### 🚀 NOVA SESSÃO DA BIBLIOTECA — comece por aqui, 31/07/2026
+> Você é uma sessão nova, substituindo a que rodava via Claude Code Remote (arquivada pelo
+> Rafael). Antes de qualquer coisa:
+>
+> 1. **Rode `/clear` se este terminal carregar contexto de conversa anterior.** Este arquivo é a
+>    fonte da verdade sobre o estado do projeto, não a sua memória de conversa.
+> 2. **Confirme que você tem acesso real ao servidor** — isso só funciona se o Rafael abriu você
+>    num terminal/conexão SSH direto ao servidor de produção, não no modo "Remote" (sandbox
+>    isolado, sem Docker nem `.env`). Rode estes três comandos e confira o resultado:
+>    ```
+>    whoami
+>    sudo -n whoami
+>    docker compose -f docker-compose.prod.yml ps
+>    ```
+>    Se `sudo -n whoami` não devolver `root`, ou o `docker compose ps` falhar, **pare e avise o
+>    Rafael** — você está no ambiente errado, e nenhum comando de carga/publicação abaixo vai
+>    funcionar. Isso não é um limite do Claude Code: é uma diferença de qual terminal foi aberto.
+> 3. **Leia a seção "Meta concreta" logo acima** (1.000 arquivos, lançamento 10/08/2026, 898 já
+>    medidos hoje, faltam 102) — é o que rege a prioridade de tudo daqui até o lançamento.
+> 4. **Leia "Regra permanente de autonomia" e "Como carregar e publicar" mais abaixo neste
+>    arquivo** — são o método de trabalho (nunca fabricar dado, sempre fonte real, carregar/publicar
+>    via container exec porque a rota HTTP é barrada pelo classificador) e não mudaram.
+>
+> **Sua faixa, sem mudança da divisão já registrada neste arquivo**: os 10 temas de `content/`
+> (Doença coronariana, Cardiomiopatias, Valvopatias, Pericárdio, Endocardite, Aorta e doença
+> arterial periférica, Cardiopatias congênitas, Febre reumática, Síncope, Perioperatório) +
+> `evidencias/`, `estudos/`, `galeria/`, `exames/` + `medicamentos/metadados.json` (dado
+> estruturado — a prosa de Farmacologia continua sendo da sessão de Medicamentos). Não escreva em
+> `content/Farmacologia/*.md` nem nos 17 temas da sessão de Medicamentos (lista completa mais
+> abaixo, em "Redivisão dos 27 temas").
+>
+> ### Divisão de tarefas de HOJE, 31/07/2026 — dia de empenho máximo, pedido direto do Rafael
+> Hoje o objetivo é volume com velocidade, sem abrir mão da régua de qualidade. Proposta de
+> divisão para as duas sessões trabalharem em paralelo sem colidir:
+>
+> | Sessão | Foco de hoje |
+> |---|---|
+> | **Biblioteca** (esta sessão) | Volume nas seis frentes de sempre, priorizando por `COBERTURA.md`: documentos novos nos 10 temas, e principalmente as quatro frentes JSON (evidências, estudos, galeria, exames), que escalam mais rápido que documento de texto inteiro. Meta pessoal sugerida: pelo menos 5-6 itens novos hoje, verificados um a um. |
+> | **Medicamentos** (a outra sessão, este arquivo) | Fecha os 30 fármacos que restam em `medicamentos/metadados.json` se ainda houver algum pendente ao seu critério, e depois volume nos 17 temas de Farmacologia/Medicamentos (documentos novos, não só revisão — Farmacologia já fechou 97/97 revisado, então hoje é ampliar, não corrigir) |
+>
+> Isso não é rígido — se uma frente estiver mais fácil de avançar rápido num momento, mude, mas
+> **declare aqui antes de trocar de frente com a outra sessão**, mesma regra de sempre. Ao final
+> do dia, cada sessão deve deixar registrado neste arquivo quantos itens novos entraram, para
+> medir contra a meta de 102 sem depender de memória.
+>
+> **Nenhuma pressa aqui autoriza pular verificação.** Prazo de 10 dias é apertado, mas errado e
+> rápido é pior que devagar e certo — um dado fabricado descoberto depois do lançamento custa mais
+> caro que um dia de atraso na meta de volume.
 
 > ### 🌙 FIM DE SESSÃO em 31/07/2026 — sessão de Medicamentos encerrando a pedido do Rafael
 > Encerrando a pedido explícito do Rafael ("termine esse trabalho e encerre por hoje, amanhã
