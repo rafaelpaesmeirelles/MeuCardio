@@ -1686,5 +1686,30 @@
       "imuno-histoquímica",
       "genoma viral"
     ]
+  },
+  {
+    "slug": "escore-de-calcio-coronariano",
+    "name": "Escore de Cálcio Coronariano (Agatston)",
+    "category": "imagem",
+    "theme": "Prevenção e lipídios",
+    "what_it_measures": "Quantifica, por tomografia computadorizada sem contraste, a extensão de cálcio nas placas ateroscleróticas coronarianas — método de Agatston. É um marcador de aterosclerose subclínica, não de estenose ou isquemia: não substitui a angiotomografia de coronárias quando a dúvida é obstrução.",
+    "reference_range": "Escore 0 (ausência de cálcio detectável) até valores de centenas ou milhares — não existe teto biológico. A diretriz brasileira de dislipidemias (2017) usa dois cortes com peso clínico direto: escore de CAC > 100 classifica o paciente como alto risco cardiovascular em prevenção primária; escore de CAC > 10 é um dos critérios de doença aterosclerótica subclínica (DASC) que reclassifica diabéticos sem outros estratificadores de risco.",
+    "indications": "Reestratificação de risco cardiovascular em paciente assintomático de risco intermediário pelos escores clínicos tradicionais (ou com história familiar de doença coronariana precoce), quando o resultado for mudar a decisão terapêutica — sobretudo a indicação de estatina. Não é exame de rastreio populacional nem indicado em paciente já classificado como alto risco ou muito alto risco (que já tem indicação de estatina independente do resultado).",
+    "interpretation": "Escore de CAC > 100 (ou percentil ≥ 75 para idade/sexo/etnia) reclassifica o paciente para alto risco, com recomendação de tratamento mais agressivo. Escore zero tem valor preditivo negativo alto para eventos coronarianos a curto/médio prazo e costuma sustentar o adiamento do início de estatina em paciente de risco intermediário sem outros agravantes — mas não afasta doença em paciente jovem com forte carga genética, tabagista ou diabético, grupos em que placa não calcificada ainda predomina.",
+    "limitations": "Detecta só a fração calcificada da placa — não exclui placa aterosclerótica não calcificada, que pode ser a causa de um evento agudo mesmo com escore zero. Envolve radiação ionizante (aproximadamente 1 mSv na técnica atual). Não deve ser repetido em intervalo curto: a progressão do escore não tem, até o momento, protocolo de conduta tão validado quanto a medida basal. Não é ferramenta diagnóstica de síndrome coronariana aguda.",
+    "source_refs": [
+      "Faludi AA, Izar MCO, Saraiva JFK, et al. Atualização da Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose – 2017. Arq Bras Cardiol. 2017;109(2 supl 1):1-76. DOI 10.5935/abc.20170121.",
+      "Magalhães TA, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da Sociedade Brasileira de Cardiologia e do Colégio Brasileiro de Radiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. PMID 39475988. DOI 10.36660/abc.20240608."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "escore de calcio",
+      "agatston",
+      "CAC",
+      "prevencao primaria",
+      "risco cardiovascular",
+      "tomografia"
+    ]
   }
 ]
