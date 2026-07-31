@@ -232,11 +232,24 @@ contra o `git log` do dia.
 > registro isto aqui porque a contagem antiga ainda aparece em vários pontos deste arquivo, e é
 > fácil confundir qual meta está em vigor.
 >
-> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **39 documentos novos, todos publicados**
-> `content/*.md` de **424 para 467**; `documents` **467 total = 467 publicados**. **Acervo total das
-> nove frentes: 1.014** — **faltam 986 para os 2.000**. (Os números das frentes JSON e parte dos
-> documentos incluem o que a sessão da Biblioteca entregou no mesmo dia; os 39 acima são só desta
+> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **41 documentos novos, todos publicados**
+> `content/*.md` de **424 para 469**; `documents` **469 total = 469 publicados**. **Acervo total das
+> nove frentes: 1.023** — **faltam 977 para os 2.000**. (Os números das frentes JSON e parte dos
+> documentos incluem o que a sessão da Biblioteca entregou no mesmo dia; os 41 acima são só desta
 > sessão.)
+>
+> **16º lote — 2 documentos em Farmacologia**: AINE e risco cardiovascular (PRECISION, PMID
+> 27959716) e reposição de testosterona (TRAVERSE, PMID 37326322). Os dois são perguntas que chegam
+> ao cardiologista **de fora do consultório dele** — "posso tomar para a dor no joelho?" e "o
+> urologista quer repor, pode?" — e nenhuma existia na biblioteca.
+>
+> **Os dois são ensaios de NÃO INFERIORIDADE, e isso pede um cuidado próprio de escrita**, aplicado
+> nos dois documentos: não inferioridade **não é ausência de risco**, e o desenho já tende
+> estruturalmente à conclusão de equivalência. No PRECISION, o abandono de 68,8% empurra o resultado
+> para "não há diferença" — e os três braços eram AINE, então ele **não** diz que AINE é seguro no
+> cardiopata. No TRAVERSE, o "não inferior" convive com **excesso de fibrilação atrial, lesão renal
+> aguda e embolia pulmonar**. **Quando o próximo documento for de não inferioridade, procure essas
+> duas coisas: a taxa de abandono e o que ficou fora do desfecho primário.**
 >
 > **15º lote — 2 documentos**, o primeiro sob a autorização contínua: tratar hipertensão crônica
 > leve na gestação (CHAP, PMID 35363951, em Gravidez) e ivabradina na ICFEr (SHIFT, PMID 20801500).
