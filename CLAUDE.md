@@ -128,7 +128,16 @@ peça por peça, mesmo com o prazo apertado.
 > Medido, não estimado: `import_directory()` devolveu **`novos: 5, atualizados: 3, inalterados: 421`**.
 > Os cinco entraram com `published = false`, **aguardando o aval do Rafael** (regra 5 da divisão de
 > trabalho). `AuditLog` gravado à mão, porque a rota HTTP foi contornada. Contagem de `content/*.md`
-> passa de **424 para 429**; total das nove frentes vai de 898 para **903** — faltam **97** para a meta.
+> passa de **424 para 429**.
+>
+> **Acervo somado das duas sessões no fechamento de 31/07/2026: 920 itens — faltam 80 para a meta
+> de 1.000.** Medido no disco depois que as duas sessões commitaram, não estimado: `content/*.md`
+> 429 · `evidencias` 160 · `medicamentos` 89 · `estudos` 81 · `exames` 66 · `galeria` 63 · `trilhas`
+> 17 · `emergencia` 10 · `casos-clinicos` 5. O fechamento da Biblioteca registra **919** porque foi
+> medido antes do quinto documento desta sessão entrar (commit `5f4bd18`, posterior ao `0abf18e`);
+> 919 + 1 = 920, os dois números estão certos em momentos diferentes. **Atenção de quem for
+> recontar:** a pasta é `casos-clinicos` **com hífen** — um script que procure `casos_clinicos`
+> com underscore acha zero e fecha a conta 5 itens abaixo do real.
 >
 > | Tema | Documento novo | Fontes (todas conferidas no registro do PubMed, não de memória) |
 > |---|---|---|
