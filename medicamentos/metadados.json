@@ -1019,7 +1019,7 @@
   },
   {
     "slug": "dapagliflozina",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Dapagliflozina",
     "drug_class": "Inibidor do cotransportador sódio-glicose tipo 2 (iSGLT2)",
     "mechanism": "Inibe o cotransportador SGLT2 nos túbulos renais proximais, reduzindo reabsorção de glicose e sódio, promovendo glicosúria, natriurese osmótica discreta e redução de pré-carga; em IC, os benefícios cardiovasculares parecem ser independentes do efeito glicêmico",
@@ -1027,25 +1027,32 @@
       "IC com fração de ejeção reduzida (com ou sem diabetes tipo 2), como parte da terapia quádrupla padrão junto com betabloqueador, IECA/BRA/INRA e antagonista mineralocorticoide"
     ],
     "contraindications": [
-      "Hipersensibilidade à dapagliflozina ou a qualquer componente da fórmula",
-      "Diabetes mellitus tipo 1 — bula restringe a indicação a diabetes tipo 2",
-      "História ou risco de cetoacidose diabética",
-      "Insuficiência renal grave ou doença renal em fase terminal — não estudado nessas condições"
+      "Hipersensibilidade conhecida à dapagliflozina ou a qualquer componente da fórmula",
+      "Lactação — a bula usa o termo literal \"contraindicado\" no aleitamento ou doação de leite humano, na seção de Gravidez e Lactação (fora do item 4 numerado, mas com essa palavra)",
+      "**fonte**: bula do FORXIGA (dapagliflozina, AstraZeneca do Brasil), item 4 (Contraindicações) + seção de Lactação. **Corrigido em 31/07/2026**: a lista anterior tinha 'diabetes mellitus tipo 1', 'história ou risco de cetoacidose diabética' e 'insuficiência renal grave/DRT' como contraindicações — nenhum dos três está no item 4 formal desta bula (DM1 é restrição de indicação, não contraindicação; cetoacidose e função renal são Advertências e Precauções, item 5). A bula atual tem só hipersensibilidade no item 4, e a DRC agora é indicação própria (DAPA-CKD cobriu até TFGe 25, com continuidade de tratamento mesmo abaixo disso) — 'insuficiência renal grave, não estudado' está desatualizado"
     ],
     "dosing": {
       "dose_apresentacao": "10 mg VO 1x/dia, a qualquer hora do dia, independente das refeições; comprimido não deve ser partido, aberto ou mastigado. Em risco de depleção de volume, dose inicial de 5 mg pode ser apropriada. Apresentações: comprimidos revestidos de 5 mg (caixa com 30) e 10 mg (caixa com 14 ou 30). **Sem ajuste por função hepática** (leve, moderada ou grave). Fonte: bula do FORXIGA (dapagliflozina, AstraZeneca do Brasil) — a própria bula trata do ajuste renal apenas no contexto da indicação em diabetes; para IC e DRC, conferir o corte de TFGe da bula/diretriz específica antes de aplicar clinicamente. Revisado pelo Rafael em 30/07/2026."
     },
     "outcomes": {
-      "Evidencia pivotal dapa hf": "- **desenho**: Ensaio incluiu 4.744 pacientes com ICFER (IC sintomática, FE ≤40%, NT-proBNP ≥600 pg/mL), excluindo pacientes com TFGe <30 mL/min/1,73m², hipotensão sintomática, PAS <95 mmHg ou diabetes tipo 1 - **dose estudada**: Dapagliflozina 10 mg ou placebo, adicionados a terapia otimizada já incluindo betabloqueadores, diuréticos, IECA e, em parte da coorte, sacubitril/valsartana - **desfecho primario**: Redução do desfecho composto de morte cardiovascular e piora do evento de IC: HR 0,74 (IC 95% 0,65-0,85; p=0,00001; NNT=21) - **mortalidade geral**: Morte por todas as causas reduzida no grupo dapagliflozina: HR 0,83 (IC 95% 0,71-0,97; p=0,022) - **seguranca**: Sem excesso de hipoglicemia significativa comparado ao placebo, mesmo em pacientes sem diabetes - **duracao seguimento**: Mediana de pouco mais de 18 meses, com redução de risco relativo de 22% no desfecho primário - **fonte**: GPnotebook — resumo clínico DAPA-HF"
+      "Evidencia pivotal dapa hf": "- **desenho**: Ensaio incluiu 4.744 pacientes com ICFER (IC sintomática, FE ≤40%, NT-proBNP ≥600 pg/mL), excluindo pacientes com TFGe <30 mL/min/1,73m², hipotensão sintomática, PAS <95 mmHg ou diabetes tipo 1 - **dose estudada**: Dapagliflozina 10 mg ou placebo, adicionados a terapia otimizada já incluindo betabloqueadores, diuréticos, IECA e, em parte da coorte, sacubitril/valsartana - **desfecho primario**: Redução do desfecho composto de morte cardiovascular e piora do evento de IC: HR 0,74 (IC 95% 0,65-0,85; p=0,00001; NNT=21) - **mortalidade geral**: Morte por todas as causas reduzida no grupo dapagliflozina: HR 0,83 (IC 95% 0,71-0,97; p=0,022) - **seguranca**: Sem excesso de hipoglicemia significativa comparado ao placebo, mesmo em pacientes sem diabetes - **duracao seguimento**: Mediana de pouco mais de 18 meses, com redução de risco relativo de 22% no desfecho primário - **fonte**: McMurray JJV, Solomon SD, Inzucchi SE, et al; DAPA-HF Trial Committees and Investigators. Dapagliflozin in Patients with Heart Failure and Reduced Ejection Fraction. N Engl J Med. 2019;381(21):1995-2008. DOI: 10.1056/NEJMoa1911303. PMID: 31535829 — artigo original, verificado no PubMed em 31/07/2026. **Corrigido nesta revisão**: a citação anterior era o resumo secundário do GPnotebook; os números conferem com o artigo original"
     },
     "notes": {
       "Significado clinico": "Resultado descrito como potencialmente transformador ('tectônico') na forma como afeta o tratamento de pacientes com IC, com ou sem diabetes, consolidando iSGLT2 como um dos quatro pilares farmacológicos da ICFER"
     },
     "references": [
-      "Dapagliflozina em doentes com insuficiência cardíaca e fração de ejeção reduzida — resumo DAPA-HF · GPnotebook · 2025 · https://gpnotebook.com/pt/pages/medicina-cardiovascular/dapagliflozina-em-doentes-com-insuficiencia-cardiaca-e-fracao-de-ejecao-"
+      "Dapagliflozina em doentes com insuficiência cardíaca e fração de ejeção reduzida — resumo DAPA-HF · GPnotebook · 2025 · https://gpnotebook.com/pt/pages/medicina-cardiovascular/dapagliflozina-em-doentes-com-insuficiencia-cardiaca-e-fracao-de-ejecao-",
+      "McMurray JJV, Solomon SD, Inzucchi SE, et al. Dapagliflozin in Patients with Heart Failure and Reduced Ejection Fraction (DAPA-HF). N Engl J Med. 2019;381(21):1995-2008. DOI: 10.1056/NEJMoa1911303. PMID: 31535829"
     ],
-    "pregnancy": "**Contraindicado no segundo e terceiro trimestres** — a bula orienta que FORXIGA \"não deve ser usado no segundo e terceiro trimestres de gravidez\" e que \"não deve ser utilizado por mulheres grávidas sem orientação médica\". A bula não se pronuncia especificamente sobre o primeiro trimestre. Fonte: bula do FORXIGA (dapagliflozina, AstraZeneca do Brasil). Revisado pelo Rafael em 30/07/2026.",
-    "lactation": "**Não deve ser utilizado durante a amamentação** — a bula afirma que \"não se sabe se FORXIGA pode passar para o leite materno\". Fonte: bula do FORXIGA (dapagliflozina, AstraZeneca do Brasil)."
+    "pregnancy": "**Categoria de risco C. Contraindicado no segundo e terceiro trimestres** — a bula orienta que FORXIGA \"não deve ser usado no segundo e terceiro trimestres de gravidez\" e que \"não deve ser utilizado por mulheres grávidas sem orientação médica\". A bula não se pronuncia especificamente sobre o primeiro trimestre. Fonte: bula do FORXIGA (dapagliflozina, AstraZeneca do Brasil). Revisado pelo Rafael em 30/07/2026.",
+    "lactation": "**Não deve ser utilizado durante a amamentação** — a bula afirma que \"não se sabe se FORXIGA pode passar para o leite materno\". Fonte: bula do FORXIGA (dapagliflozina, AstraZeneca do Brasil).",
+    "adverse_effects": [
+      "Comuns (≥1/100 e <1/10): vulvovaginite, balanite e infecções genitais relacionadas; infecção do trato urinário; dor nas costas; disúria; poliúria; hipoglicemia (quando associado a sulfonilureia ou insulina)",
+      "Incomuns (≥1/1.000 e <1/100): infecção fúngica; constipação; boca seca; noctúria; depleção de volume; sede; irritação na pele",
+      "Raros (≥1/10.000 e <1/1.000): fasceíte necrosante do períneo (gangrena de Fournier); nefrite tubulointersticial; cetoacidose diabética (quando usado em diabetes mellitus tipo 2)",
+      "Muito raros (<1/10.000): angioedema",
+      "**fonte**: bula do FORXIGA (dapagliflozina, AstraZeneca do Brasil), item 9 (Reações Adversas), Tabela 15 — dados agregados de DECLARE, DAPA-HF, DELIVER e DAPA-CKD"
+    ]
   },
   {
     "slug": "digoxina",
