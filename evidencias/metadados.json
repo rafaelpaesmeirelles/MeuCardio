@@ -6790,5 +6790,26 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "isglt2-em-icfem-e-icfep",
+    "statement": "Um inibidor de SGLT2 (dapagliflozina ou empagliflozina) é recomendado em pacientes com insuficiência cardíaca com fração de ejeção levemente reduzida (ICFEm) ou preservada (ICFEp) para reduzir o risco de hospitalização por insuficiência cardíaca ou morte cardiovascular.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2023,
+    "guideline_title": "2023 Focused Update of the 2021 ESC Guidelines for the Diagnosis and Treatment of Acute and Chronic Heart Failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. Eur Heart J. 2023;44(37):3627-3639. PMID 37622666. DOI 10.1093/eurheartj/ehad195.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "icfem",
+      "icfep",
+      "isglt2",
+      "dapagliflozina",
+      "empagliflozina",
+      "quatro pilares"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
