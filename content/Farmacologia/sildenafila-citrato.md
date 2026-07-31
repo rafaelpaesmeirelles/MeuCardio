@@ -3,8 +3,8 @@ title: "Sildenafila (citrato)"
 slug: sildenafila-citrato
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
-source_refs: ["Sildenafil (REVATIO) — rótulo aprovado pelo FDA para hipertensão arterial pulmonar, DailyMed SPL setid 3bb9363e-b28d-4019-8aae-539233dca214", "Galiè N, Ghofrani HA, Torbicki A, et al; Sildenafil Use in Pulmonary Arterial Hypertension (SUPER) Study Group. Sildenafil citrate therapy for pulmonary arterial hypertension. N Engl J Med. 2005;353(20):2148-2157. DOI: 10.1056/NEJMoa050010. PMID: 16291984"]
+review_status: revisado
+source_refs: ["Sildenafil (REVATIO) — rótulo aprovado pelo FDA para hipertensão arterial pulmonar, DailyMed SPL setid 3bb9363e-b28d-4019-8aae-539233dca214", "Galiè N, Ghofrani HA, Torbicki A, et al; Sildenafil Use in Pulmonary Arterial Hypertension (SUPER) Study Group. Sildenafil citrate therapy for pulmonary arterial hypertension. N Engl J Med. 2005;353(20):2148-2157. DOI: 10.1056/NEJMoa050010. PMID: 16291984", "Bula do REVATIO (sildenafila, Pfizer) · https://www.saudedireta.com.br/catinc/drugs/bulas/revatio.pdf · consultada em 31/07/2026 — versão curta/paciente, confirma hipersensibilidade; demais itens seguem sourceados pelo rótulo FDA"]
 legacy_source: "medicamentos/banco-de-medicamentos-sildenafila.md"
 ---
 
@@ -40,10 +40,12 @@ Potencializa significativamente o efeito hipotensor de nitratos (uso agudo ou cr
 ## Contraindicacoes
 - Uso concomitante com nitratos
 - Uso concomitante com doadores de óxido nítrico
+- **Uso concomitante com riociguat** (estimulador da guanilato ciclase solúvel, usado em hipertensão pulmonar tromboembólica crônica) — **acrescentado em 31/07/2026**: os dois potencializam a via do GMPc por mecanismos diferentes, com risco somado de hipotensão sintomática; combinação contraindicada pelo rótulo do FDA
 - Hipotensão grave
 - IAM recente
 - AVC recente
 - Retinopatia hereditária degenerativa
+- Hipersensibilidade à sildenafila
 
 ## Efeitos adversos
 Cefaleia, rubor facial, dispepsia, congestão nasal, distúrbios visuais transitórios (visão azulada), priapismo (raro)
