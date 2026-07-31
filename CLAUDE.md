@@ -183,11 +183,23 @@ contra o `git log` do dia.
 > (RACE 35926542 e MR BPA 35926544, em Hipertensão pulmonar) e peso/condicionamento/exercício na FA
 > (LEGACY 25792361, CARDIO-FIT 26113406 e ACTIVE-AF 36752479, em Fibrilação atrial).
 >
-> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **12 documentos novos, todos publicados**
-> `content/*.md` de **424 para 436**. **Acervo total das nove frentes: 940** (content 436 ·
-> evidências 171 · medicamentos 89 · estudos 81 · exames 68 · galeria 63 · trilhas 17 · emergência
-> 10 · casos-clínicos 5) — **faltam 1.060 para os 2.000**, sem prazo fixo, conforme a decisão
-> registrada na seção da META.
+> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **14 documentos novos, todos publicados**
+> `content/*.md` de **424 para 438**; `documents` publicados: **438**. **Acervo total das nove
+> frentes: 944** (content 438 · evidências 171 · medicamentos 89 · estudos 81 · exames 68 · galeria
+> 65 · trilhas 17 · emergência 10 · casos-clínicos 5) — **faltam 1.056 para os 2.000**, sem prazo
+> fixo, conforme a decisão registrada na seção da META.
+>
+> **4º lote — 2 documentos**: HYVET, tratamento da hipertensão aos 80 anos ou mais (PMID 18378519,
+> em Hipertensão) e estatina × diabetes de novo (Sattar 20167359 e Preiss 21693744, em Prevenção e
+> lipídios).
+>
+> **Um erro meu, pego antes de commitar, que vale como aviso permanente:** eu havia escrito que o
+> HYVET foi interrompido precocemente por recomendação do comitê de monitorização. É informação
+> que eu "sabia", e **o resumo do NEJM não a traz** — conferi com `grep` no próprio abstract antes
+> de deixar passar. Troquei pela explicação que os dados sustentam. **O risco não é só inventar
+> número: é completar o texto com conhecimento de fundo que soa plausível e não foi verificado
+> naquela fonte.** Conferir a afirmação contra o texto lido, não contra a memória, vale também para
+> frases de contexto — não só para dose, PMID e DOI.
 >
 > **Duas lacunas ficaram BLOQUEADAS POR FONTE, e as duas valem a pena — não são desinteresse:**
 > 1. **Contracepção na mulher com cardiopatia** (Gravidez). Seção **4.2.4** da ESC 2025, com a
