@@ -48,9 +48,17 @@ Eletrólitos séricos periodicamente — hipopotassemia, hiponatremia, alcalose 
 Hipertensão essencial/nefrogênica/sistólica isolada, ICC estável leve-moderada, edema (insuficiência venosa, ascite cirrótica, síndrome nefrótica), profilaxia de cálculo de oxalato de cálcio recorrente
 
 ## Contraindicacoes
+Segundo o item 4 da bula do HIGROTON (Novartis Biociências):
 - Anúria
-- Insuficiência renal grave
-- Hipersensibilidade a sulfonamidas
+- Insuficiência hepática grave
+- Insuficiência renal grave (ClCr <30 mL/min)
+- Hipersensibilidade à clortalidona, a outros derivados sulfonamídicos ou a qualquer excipiente
+- Hipocalemia refratária, ou condições que envolvam perda aumentada de potássio
+- Hiponatremia e hipercalcemia
+- Hiperuricemia sintomática (história de gota ou cálculo de ácido úrico)
+- Hipertensão durante a gravidez
+
+Nota de correção: a lista anterior (fonte FDA) trazia só 3 destes 8 itens formais da bula brasileira.
 
 ## Efeitos adversos
 Hipocalemia, hiponatremia, hiperuricemia, hiperglicemia
