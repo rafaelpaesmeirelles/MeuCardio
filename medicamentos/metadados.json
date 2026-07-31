@@ -2769,7 +2769,7 @@
   },
   {
     "slug": "nifedipina",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Nifedipina",
     "drug_class": "Bloqueador de canal de cálcio dihidropiridínico",
     "mechanism": "Inibe especificamente o influxo transmembrana de cálcio (canal lento) no músculo cardíaco e músculo liso vascular, sem bloquear influxo de sódio (canal rápido); reduz pós-carga por vasodilatação arterial predominante",
@@ -2788,9 +2788,13 @@
       "Pressão arterial e frequência cardíaca, especialmente no início e em ajuste de dose. Sinais de piora de angina na introdução ou na troca de esquema com betabloqueador. Em liberação prolongada, atenção a sintomas obstrutivos gastrointestinais em quem já tem estenose de trato GI conhecida (raro, mas descrito)."
     ],
     "contraindications": [
-      "Hipersensibilidade a dihidropiridínicos",
-      "Choque cardiogênico",
-      "Uso sublingual em crise hipertensiva (risco de isquemia por queda abrupta de PA)"
+      "Hipersensibilidade ao nifedipino ou a qualquer excipiente",
+      "Choque cardiovascular/cardiogênico",
+      "Uso concomitante de rifampicina — indução enzimática pode impedir que o nifedipino atinja nível plasmático eficaz",
+      "Gravidez antes da 20ª semana",
+      "Amamentação — item formal do rótulo, não apenas recomendação de suspender (ver campo `lactation`)",
+      "Cápsula de liberação imediata: angina do peito instável",
+      "Cápsula de liberação imediata: quatro semanas iniciais após infarto agudo do miocárdio"
     ],
     "dosing": {
       "hipertensao": "10-40 mg VO 2x/dia, ou 20-90 mg VO 1x/dia (formulações de liberação prolongada); prescrições de 20-100mg 1x/dia também descritas",
@@ -2800,15 +2804,17 @@
     },
     "notes": {
       "Cautelas especificas": "Usar com cautela em: infarto do miocárdio recente (≤4 semanas), insuficiência cardíaca congestiva, estenose aórtica avançada, edema periférico já presente, hipotensão sintomática, angina instável, uso concomitante de betabloqueador (risco de piora de angina na introdução, no aumento de dose, ou na retirada do betabloqueador). Idoso tem depuração reduzida (~33% menor) — cautela na dose.",
-      "Particularidade versus anlodipino": "Formulação de liberação imediata (sublingual/cápsula) tem sido historicamente associada a maior risco de eventos isquêmicos por taquicardia reflexa e queda abrupta de PA — atualmente contraindicada em crise hipertensiva; formulações de liberação prolongada mitigam esse risco"
+      "Particularidade versus anlodipino": "Formulação de liberação imediata (sublingual/cápsula) tem sido historicamente associada a maior risco de eventos isquêmicos por taquicardia reflexa e queda abrupta de PA — atualmente contraindicada em crise hipertensiva; formulações de liberação prolongada mitigam esse risco",
+      "Sublingual em crise hipertensiva": "Mantida a cautela já registrada: uso sublingual em crise hipertensiva associa-se a queda abrupta de PA e risco de isquemia — a bula do ADALAT trata a formulação de liberação imediata de forma geral (angina instável, IAM recente), sem citar \"sublingual\" nominalmente; a via sublingual specificamente é desaconselhada pela prática clínica e por alertas regulatórios internacionais (FDA), não é item textual desta bula brasileira."
     },
     "references": [
       "Nifedipine — rótulo aprovado pelo FDA, DailyMed SPL setid acb493a3-b8f2-41a9-8ab2-550d97c4592a",
       "Nifedipina — Bula · Farmacam · 2019 · https://institucional.farmacam.com.br/wp-content/uploads/2023/12/Nifedipina-farmacam-2019-1.pdf",
-      "Procardia XL (nifedipine) — bula FDA/DailyMed (múltiplas versões consultadas)"
+      "Procardia XL (nifedipine) — bula FDA/DailyMed (múltiplas versões consultadas)",
+      "Bula profissional do ADALAT (nifedipino), Bayer S.A. — via consultaremedios.com.br, item 4. CONTRAINDICAÇÕES conferido linha a linha"
     ],
     "pregnancy": "**Contraindicada antes da 20ª semana** — o corte é explícito e consta das Contraindicações, não de uma advertência genérica. Depois da 20ª semana a bula não libera o uso: exige **avaliação individual muito cuidadosa do risco-benefício**, e só o considera se nenhuma outra opção estiver indicada ou se as demais foram ineficazes. Estudos em animais mostraram efeitos embriotóxicos, fetotóxicos e teratogênicos. Há relatos de aumento de asfixia perinatal, cesárea, prematuridade e retardo de crescimento intrauterino, sem que a bula consiga separar o efeito do fármaco do da hipertensão de base. **Alerta específico:** ao administrar nifedipino junto com **sulfato de magnésio intravenoso**, monitorar a pressão arterial pela possibilidade de queda excessiva, prejudicial à mãe e ao feto. Fonte: bula do ADALAT (nifedipino, Bayer), seções \"Contra-Indicações\", \"Advertências\" e \"Gravidez e Lactação\".",
-    "lactation": "**Suspender a amamentação se o tratamento for necessário.** O nifedipino **é eliminado no leite materno** e não há experiência sobre seus efeitos no lactente. A amamentação também aparece nominalmente entre as contraindicações do texto ao paciente. Fonte: bula do ADALAT (nifedipino, Bayer)."
+    "lactation": "**Contraindicado durante a amamentação — item formal do rótulo (item 4. CONTRAINDICAÇÕES), não apenas recomendação de suspender.** Corrige o registro anterior deste campo, que enquadrava como \"suspender a amamentação se o tratamento for necessário\" — a bula vai além: lista amamentação entre as contraindicações formais, ao lado de gravidez antes da 20ª semana. O nifedipino é eliminado no leite materno e não há experiência sobre efeito no lactente. Fonte: bula profissional brasileira do ADALAT (nifedipino, Bayer), itens 4. CONTRAINDICAÇÕES e 5. ADVERTÊNCIAS E PRECAUÇÕES."
   },
   {
     "slug": "nitroglicerina-trinitrato-de-glicerila",
