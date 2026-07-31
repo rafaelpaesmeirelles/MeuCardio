@@ -264,20 +264,31 @@ contra o `git log` do dia.
 > **Nota de faixa:** `evidencias/` e Febre reumática são da Biblioteca. Entrei porque o Rafael pediu
 > explicitamente, alterei **um campo de um registro** e commitei na mesma ação.
 >
-> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **53 documentos novos, todos publicados**
-> `content/*.md` de **424 para 483**; `documents` **483 total = 483 publicados**. **Acervo total:
-> 1.065** — **faltam 935 para os 2.000**. (Os números das frentes JSON e parte dos documentos
-> incluem o que a sessão da Biblioteca entregou no mesmo dia; os 53 acima são só desta sessão.)
+> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **54 documentos novos, todos publicados**
+> `content/*.md` de **424 para 485**; `documents` **485 total = 485 publicados**. **Acervo total:
+> 1.068** — **faltam 932 para os 2.000**. (Os números das frentes JSON e parte dos documentos
+> incluem o que a sessão da Biblioteca entregou no mesmo dia; os 54 acima são só desta sessão.)
 >
 > **24º lote — 1 documento**: diagnóstico de TEP na gestante (Artemis/YEARS adaptado, PMID 30893534,
 > e CT-PE-Pregnancy, PMID 30357273, em Gravidez).
 >
 > **Lacunas ainda abertas e MAPEADAS na faixa desta sessão**, para quem continuar não precisar
->remapear: **tromboprofilaxia no puerpério** (Gravidez), **estratificação de risco invasiva no WPW**
-> (Arritmias), **escalonamento/transição de terapia na HAP** (Hipertensão pulmonar), **disfunção de
-> VD / IC direita** e **transição hospital-domicílio na IC** (Insuficiência cardíaca), e
-> **commotio cordis** (Arritmias). Nenhuma foi verificada quanto a fonte ainda — o mapeamento
-> confirmou só que **não existem** hoje na biblioteca.
+> remapear: ~~tromboprofilaxia no puerpério~~ **(feita no 25º lote)**, **estratificação de risco
+> invasiva no WPW** (Arritmias), **escalonamento/transição de terapia na HAP** (Hipertensão
+> pulmonar), **disfunção de VD / IC direita** e **transição hospital-domicílio na IC** (Insuficiência
+> cardíaca), e **commotio cordis** (Arritmias). Nenhuma das restantes foi verificada quanto a fonte
+> ainda — o mapeamento confirmou só que **não existem** hoje na biblioteca.
+>
+> **25º lote — 1 documento**: tromboprofilaxia na gestação e puerpério (HIGHLOW, PMID 36354038, em
+> Gravidez), que forma par com o de diagnóstico de TEP na gestante do lote anterior — um investiga a
+> suspeita, o outro previne a recorrência.
+>
+> **Padrão de valor que vale registrar: ensaio "negativo" que resolve variação de prática.** O
+> HIGHLOW não mostrou diferença entre dose intermediária e dose baixa (RR 0,69; p=0,33) — e é
+> justamente por isso que ele é útil: havia condutas diferentes entre serviços sem base, e a
+> ausência de superioridade da dose maior **vira argumento a favor da menor**, num contexto em que
+> sangrar é risco concreto. **Quando um ensaio de não superioridade encerra uma divergência de
+> conduta, o documento vale tanto quanto um que mostra benefício.**
 >
 > **22º lote — 1 documento**: escores ABC na FA, de AVC e de sangramento por biomarcadores (PMID
 > 26920728 e 27056738, em Calculadoras).
