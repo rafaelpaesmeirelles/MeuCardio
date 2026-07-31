@@ -2104,7 +2104,7 @@
   },
   {
     "slug": "idarucizumabe",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Idarucizumabe",
     "drug_class": "Agente reversor específico de anticoagulante — fragmento de anticorpo monoclonal humanizado",
     "mechanism": "Fragmento de anticorpo (Fab) com alta afinidade de ligação à dabigatrana, neutralizando diretamente sua atividade anticoagulante ao se ligar à molécula livre e à ligada à trombina, sem atividade agonista ou antagonista sobre outros alvos de coagulação - **fonte**: Frontiers in Neurology (revisão sobre idarucizumabe)",
@@ -2130,8 +2130,8 @@
       "Pollack CV Jr et al. Idarucizumab for Dabigatran Reversal — Full Cohort Analysis. N Engl J Med. 2017;377(5):431-441.",
       "Bula de PRAXBIND (idarucizumabe, solução injetável 50 mg/mL), Boehringer Ingelheim do Brasil Química e Farmacêutica Ltda. — apresentação, indicações e posologia."
     ],
-    "pregnancy": "**Pode ser utilizado na gravidez se o benefício clínico esperado superar o risco potencial** — é o único fármaco deste lote cuja rotulagem é permissiva, e o motivo é o uso a que se destina: **não foram realizados estudos de toxicidade reprodutiva e do desenvolvimento**, justamente pela natureza do produto e pela sua utilização clínica pretendida, a reversão de emergência da dabigatrana. Não há dados em grávidas. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do PRAXBIND (idarucizumab, Boehringer Ingelheim). Fonte europeia, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil disponível nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer.",
-    "lactation": "**Dado ausente, sem recomendação.** A fonte registra apenas que **se desconhece** se o idarucizumabe ou seus metabólitos são excretados no leite humano — não orienta suspender nem liberar a amamentação. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do PRAXBIND (idarucizumab, Boehringer Ingelheim). Fonte europeia, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil disponível nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer."
+    "pregnancy": "**Categoria de risco C. Pode ser utilizado na gravidez se o benefício clínico esperado superar o risco potencial.** Não há dados de uso em gestantes; não foram realizados estudos de toxicidade reprodutiva e do desenvolvimento, dada a natureza do produto e sua indicação de reversão de emergência. Fonte: bula do PRAXBIND (idarucizumabe, Boehringer Ingelheim do Brasil) — **corrigido em 31/07/2026**: a bula brasileira existe e confirma o mesmo conteúdo da fonte europeia (RCM/EMA) usada antes, com a categoria de risco C, ausente da versão anterior deste campo. O campo `dosing` deste registro já citava a bula brasileira.",
+    "lactation": "**Dado ausente, sem recomendação.** Desconhece-se se o idarucizumabe ou seus metabólitos são excretados no leite humano. Fonte: bula do PRAXBIND (idarucizumabe, Boehringer Ingelheim do Brasil) — mesma ressalva do campo `pregnancy`: a bula brasileira existe e confirma o mesmo conteúdo da fonte europeia usada antes."
   },
   {
     "slug": "inclisirana",
