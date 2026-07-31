@@ -3722,5 +3722,104 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "rm-nao-recomendada-para-vegetacao-valvar-no-diferencial-de-endocardite",
+    "statement": "A ressonância magnética cardíaca NÃO é recomendada para avaliação de massas ou vegetações suspeitas em folhetos valvares no diagnóstico diferencial de endocardite infecciosa — é recomendação Classe III. O método para essa pergunta é o ecocardiograma, com o transesofágico como exame de escolha quando o transtorácico não resolve, ambos já cadastrados nesta base. Vale contrastar com a mesma diretriz, que dá Classe I à ressonância para detecção e caracterização de tumores cardíacos e pericárdicos: a ressonância caracteriza massa, mas não é o caminho para vegetação valvar.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC – 2024",
+    "reference": "Magalhães TA, Carneiro ACC, Moreira VM, Trad HS, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI: 10.36660/abc.20240608. PMID: 39475988 — Tabela 'Emprego da ressonância magnética cardíaca na avaliação de doenças valvares', conferida linha a linha no texto integral em acesso aberto (PMC12094294) em 31/07/2026.",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite infecciosa",
+      "vegetação",
+      "ressonância magnética",
+      "classe iii",
+      "ecocardiograma transesofágico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "rm-para-anatomia-e-funcao-ventricular-na-doenca-valvar",
+    "statement": "A ressonância magnética cardíaca é recomendada para avaliação da anatomia e da função ventricular na doença valvar. É a única recomendação de Nível A entre as indicações de ressonância em valvopatia nesta diretriz — e é justamente a medida que decide o momento cirúrgico em várias lesões, quando o ecocardiograma deixa dúvida sobre volumes e função.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC – 2024",
+    "reference": "Magalhães TA, Carneiro ACC, Moreira VM, Trad HS, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI: 10.36660/abc.20240608. PMID: 39475988 — Tabela 'Emprego da ressonância magnética cardíaca na avaliação de doenças valvares', conferida linha a linha no texto integral em acesso aberto (PMC12094294) em 31/07/2026.",
+    "theme": "Valvopatias",
+    "tags": [
+      "valvopatia",
+      "ressonância magnética cardíaca",
+      "função ventricular",
+      "volumes ventriculares"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "rm-para-fibrose-miocardica-no-prognostico-da-estenose-aortica",
+    "statement": "A pesquisa de fibrose miocárdica por ressonância deve ser considerada na avaliação PROGNÓSTICA da estenose valvar aórtica. Não é sobre graduar a estenose — é sobre o que já aconteceu com o miocárdio: a fibrose acumulada informa o risco e ajuda a discutir o momento da intervenção em paciente cuja valva ainda não preenche critério clássico.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC – 2024",
+    "reference": "Magalhães TA, Carneiro ACC, Moreira VM, Trad HS, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI: 10.36660/abc.20240608. PMID: 39475988 — Tabela 'Emprego da ressonância magnética cardíaca na avaliação de doenças valvares', conferida linha a linha no texto integral em acesso aberto (PMC12094294) em 31/07/2026.",
+    "theme": "Valvopatias",
+    "tags": [
+      "estenose aórtica",
+      "fibrose miocárdica",
+      "ressonância magnética cardíaca",
+      "prognóstico",
+      "momento cirúrgico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "angiotomografia-na-avaliacao-pos-implante-de-endoprotese-aortica",
+    "statement": "A angiotomografia é recomendada na avaliação pós-implante de endopróteses aórticas. Contraste importante, dentro da MESMA diretriz: para esse mesmo cenário a ressonância é apenas Classe IIb, Nível B — enquanto no PLANEJAMENTO da endoprótese a ressonância é Classe I. Ou seja, planejar e acompanhar não seguem o mesmo método, e a tomografia é a que sustenta o seguimento.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC – 2024",
+    "reference": "Magalhães TA, Carneiro ACC, Moreira VM, Trad HS, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI: 10.36660/abc.20240608. PMID: 39475988 — Tabela 'Angiotomografia na avaliação das doenças vasculares', conferida linha a linha no texto integral em acesso aberto (PMC12094294) em 31/07/2026.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "endoprótese aórtica",
+      "seguimento",
+      "angiotomografia",
+      "endoleak",
+      "aorta"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "angiotomografia-nas-sindromes-aorticas-agudas",
+    "statement": "A angiotomografia é recomendada na avaliação das síndromes aórticas agudas — dissecção, úlcera, hematoma e ruptura. É a contrapartida positiva da recomendação Classe III contra a ressonância no paciente instável, também cadastrada nesta base: na emergência aórtica, a tomografia é o caminho, e a ressonância fica reservada ao paciente estável.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC – 2024",
+    "reference": "Magalhães TA, Carneiro ACC, Moreira VM, Trad HS, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI: 10.36660/abc.20240608. PMID: 39475988 — Tabela 'Angiotomografia na avaliação das doenças vasculares', conferida linha a linha no texto integral em acesso aberto (PMC12094294) em 31/07/2026.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "síndrome aórtica aguda",
+      "dissecção de aorta",
+      "hematoma intramural",
+      "angiotomografia",
+      "emergência"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
