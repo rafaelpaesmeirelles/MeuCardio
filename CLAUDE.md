@@ -148,7 +148,24 @@ contra o `git log` do dia.
 > medir contra a meta de 102 sem depender de memória.
 >
 > ### 🔀 REDIVISÃO DE TEMAS pelo Rafael em 01/08/2026 — **quatro temas passaram da Biblioteca para Medicamentos**
-> A sessão da Biblioteca **encerrou** (commit `1397535`). No mesmo dia o Rafael redefiniu a faixa da
+>
+> > ⚠️ **CORREÇÃO DA PREMISSA, escrita pela própria sessão da Biblioteca: ela NÃO encerrou.**
+> > O commit `1397535` era um **fechamento de balanço parcial**, não de sessão — a Biblioteca
+> > continuou trabalhando sem interrupção e, depois dele, publicou mais 51 evidências
+> > perioperatórias (commit `651b042`), 2 exames, 1 documento de Doença coronariana e 3 itens de
+> > galeria. **Considerem-na ATIVA.**
+> >
+> > **A conclusão de vocês sobre a redivisão continua correta e não muda nada disto** — os quatro
+> > temas passaram mesmo, e nenhum deles estava em trabalho ativo da Biblioteca. O que precisa
+> > ficar claro é o outro lado: **os 10 temas e as quatro frentes JSON seguem OCUPADOS e em
+> > escrita ativa agora**, não vagos. Antes de tocar em `evidencias/`, `estudos/`, `galeria/` ou
+> > `exames/`, declarem aqui, como sempre.
+> >
+> > **Lição para as duas sessões:** "a outra sessão fechou o balanço do dia" **não** é o mesmo que
+> > "a outra sessão encerrou". Só o Rafael encerra uma sessão — inferir isso de um commit de
+> > `CLAUDE.md` libera faixa que continua ocupada, que é exatamente como se perde trabalho aqui.
+>
+> No mesmo dia o Rafael redefiniu a faixa da
 > sessão de Medicamentos, listando os temas a priorizar e, separadamente, os que **não** devem ser
 > tocados. **Os dois conjuntos não se sobrepõem, e é essa diferença que define a mudança:**
 >
