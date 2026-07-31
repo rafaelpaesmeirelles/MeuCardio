@@ -596,7 +596,7 @@
   },
   {
     "slug": "bosentana",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Bosentana",
     "drug_class": "Antagonista de receptor de endotelina (ERA) — antagonista duplo (ETA e ETB)",
     "mechanism": "Bloqueia a ligação da endotelina-1 (vasoconstritor endógeno mais potente conhecido) aos seus receptores ETA e ETB nas células musculares lisas vasculares e endoteliais pulmonares, revertendo a vasoconstrição e o remodelamento vascular patológico característicos da hipertensão arterial pulmonar",
@@ -610,9 +610,12 @@
       "Elevação de transaminases hepáticas (efeito de classe), edema periférico, anemia, cefaleia, congestão nasal, teratogenicidade (contraindicado em gravidez)"
     ],
     "contraindications": [
-      "Gravidez (teratogênico)",
-      "Insuficiência hepática moderada a grave",
-      "Uso concomitante com ciclosporina A"
+      "Hipersensibilidade ao princípio ativo ou a qualquer componente da fórmula",
+      "Uso concomitante de ciclosporina A",
+      "Gravidez, ou mulher que possa engravidar durante o tratamento",
+      "Mulher em idade fértil sem uso de método contraceptivo confiável (contraceptivo hormonal isolado não é eficaz em uso concomitante com bosentana)",
+      "Menores de 3 anos",
+      "**fonte**: bula brasileira genérica de bosentana (Accord Farma, VPS 10.2022, RDC 47/2009), item 4. **Corrigido em 31/07/2026**: agora existe bula registrada no Brasil (não havia nos espelhos consultados nas revisões anteriores). 'Insuficiência hepática moderada a grave' foi removida como contraindicação formal — a bula brasileira recomenda 'evitar' nesse cenário (item 5, Advertências), sem listá-lo no item 4"
     ],
     "dosing": {
       "dose_apresentacoes_especificas": "**Hipertensão arterial pulmonar (adulto, > 40 kg)**: dose inicial 62,5 mg 2x/dia por 4 semanas, depois aumentar para dose de manutenção de 125 mg 2x/dia. Doses acima de 125 mg 2x/dia não mostraram benefício adicional suficiente para compensar o aumento de risco de hepatotoxicidade. **Apresentações**: comprimidos de 62,5 mg e 125 mg; comprimido dispersível de 32 mg (uso pediátrico). **Sem ajuste necessário** por sexo, idade, peso corporal ou disfunção hepática leve. **Monitorização obrigatória**: função hepática (transaminases) mensalmente durante todo o tratamento — hepatotoxicidade é o risco principal da classe (antagonistas do receptor de endotelina). Interromper progressão de dose ou suspender conforme elevação de transaminases. **Suspensão**: não interromper abruptamente — retirada súbita pode piorar a hipertensão pulmonar. Se precisar suspender, considerar redução para 62,5 mg 2x/dia por alguns dias antes de parar. Fonte: bula FDA (Tracleer), estudo BREATHE-1 (NEJM 2002) e revisão de segurança em PMC — dados convergentes."
@@ -620,10 +623,11 @@
     "references": [
       "Bosentan — rótulo aprovado pelo FDA, DailyMed SPL setid 8444da17-6c31-492b-8842-93740f083d9d",
       "Rubin LJ et al. Bosentan Therapy for Pulmonary Arterial Hypertension (BREATHE-1). N Engl J Med. 2002;346(12):896-903.",
-      "Safety and tolerability of bosentan — PMC review"
+      "Safety and tolerability of bosentan — PMC review",
+      "Bula brasileira genérica de bosentana (Accord Farma Ltda.), Bosentana_VPS_10.2022, RDC 47/2009 — usada para contraindicações completas (item 4), categoria de risco na gravidez (X) e lactação"
     ],
-    "pregnancy": "**Contraindicada na gravidez**, com o programa de prevenção mais elaborado do acervo. Os estudos em animais demonstraram **teratogenicidade e embriotoxicidade**; não há dados confiáveis em gestantes. Antes de iniciar em mulher com potencial para engravidar: confirmar a ausência de gravidez, aconselhar sobre contracepção fiável e iniciá-la. **O ponto que mais escapa na prática:** a bosentana pode **tornar ineficazes os contraceptivos hormonais** por interação farmacocinética — oral, injetável, transdérmico ou implantável —, de modo que o hormonal **não pode ser o único método**; é preciso um método adicional ou alternativo, e a fonte recomenda consulta com ginecologista em caso de dúvida. Exige ainda **testes de gravidez mensais durante o tratamento**, tanto pela possível falha da contracepção quanto porque a **hipertensão pulmonar se deteriora gravemente com a gravidez**. Registro à parte, da mesma secção: em estudo clínico de função testicular na HAP, **6 de 24 homens (25%) tiveram queda de pelo menos 50% na concentração de espermatozoides aos 6 meses**, e não se pode excluir efeito prejudicial sobre a espermatogênese. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do TRACLEER (bosentano, Janssen-Cilag). Fonte europeia, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil disponível nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer.",
-    "lactation": "**Amamentação não recomendada.** Um relato de caso descreve a presença de bosentana no leite humano **em concentração baixa**, mas a informação sobre efeitos no lactente é insuficiente e o risco não pode ser excluído. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do TRACLEER (bosentano, Janssen-Cilag). Fonte europeia, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil disponível nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer."
+    "pregnancy": "**Contraindicada na gravidez — categoria de risco X.** Programa de prevenção mais elaborado do acervo. Os estudos em animais demonstraram **teratogenicidade e embriotoxicidade**; não há dados confiáveis em gestantes. Antes de iniciar em mulher com potencial para engravidar: confirmar a ausência de gravidez, aconselhar sobre contracepção fiável e iniciá-la. **O ponto que mais escapa na prática:** a bosentana pode **tornar ineficazes os contraceptivos hormonais** por interação farmacocinética — oral, injetável, transdérmico ou implantável —, de modo que o hormonal **não pode ser o único método**; é preciso um método adicional ou alternativo, e a fonte recomenda consulta com ginecologista em caso de dúvida. Exige ainda **testes de gravidez mensais durante o tratamento**, tanto pela possível falha da contracepção quanto porque a **hipertensão pulmonar se deteriora gravemente com a gravidez**. Registro à parte, da mesma secção: em estudo clínico de função testicular na HAP, **6 de 24 homens (25%) tiveram queda de pelo menos 50% na concentração de espermatozoides aos 6 meses**, e não se pode excluir efeito prejudicial sobre a espermatogênese. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do TRACLEER (bosentano, Janssen-Cilag). **Atualização de 31/07/2026**: agora existe bula genérica brasileira (Accord Farma, VPS 10.2022), que confirma o mesmo conteúdo e acrescenta a categoria de risco X, ausente da fonte europeia usada antes.",
+    "lactation": "**Amamentação não recomendada.** Não se sabe se a bosentana é excretada no leite humano. Fonte: bula brasileira genérica de bosentana (Accord Farma, VPS 10.2022), seção \"Uso durante a lactação\" — confirma o mesmo conteúdo da fonte europeia (RCM do TRACLEER) usada antes desta revisão; o relato de caso de baixa concentração láctea citado no RCM europeu não consta da bula brasileira, que é mais sucinta neste ponto."
   },
   {
     "slug": "candesartana-cilexetila",
