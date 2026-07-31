@@ -676,7 +676,7 @@
   },
   {
     "slug": "cangrelor",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Cangrelor",
     "drug_class": "Antiplaquetário inibidor do receptor P2Y12, intravenoso",
     "mechanism": "Análogo de ATP que inibe direta e reversivelmente a ligação de ADP ao receptor P2Y12, de forma dose-dependente — início de ação imediato (dentro de 2 minutos) e término rápido de efeito (meia-vida plasmática de 3-6 minutos, com retorno da função plaquetária ao basal em cerca de 1 hora após suspensão), inativado por desfosforilação por ectonucleotidase. Diferente dos inibidores orais de P2Y12 (clopidogrel, prasugrel, ticagrelor), que têm início de ação mais lento e efeito mais prolongado",
@@ -686,7 +686,8 @@
     "dosing": {
       "bolus": "30 mcg/kg IV",
       "infusao de manutencao": "4 mcg/kg/min, por pelo menos 2 horas ou pela duração do procedimento, o que for mais longo",
-      "fonte": "PMC (ponte de cangrelor em cardio-oncologia)"
+      "fonte": "rótulo do KENGREAL (cangrelor) aprovado pelo FDA, itens 2.1 e 2.2 — substitui a fonte anterior (PMC, revisão de ponte em cardio-oncologia), que era uma fonte secundária e estreita para a posologia central do fármaco",
+      "transicao para p2y12 oral": "Para manter a inibição plaquetária após suspender a infusão de cangrelor, administrar inibidor P2Y12 oral: **ticagrelor 180 mg**, a qualquer momento durante a infusão ou imediatamente após suspendê-la; **prasugrel 60 mg** ou **clopidogrel 600 mg**, só **imediatamente após** suspender a infusão — administrar clopidogrel ou prasugrel durante a infusão de cangrelor resulta em inibição plaquetária inadequada, por interação farmacodinâmica"
     },
     "outcomes": {
       "Evidencia pivotal — CHAMPION PHOENIX": "- **desenho**: 10.942 pacientes submetidos a ICP urgente ou eletiva, randomizados para cangrelor ou clopidogrel - **resultado**: cangrelor reduziu significativamente o desfecho primário (4,7% vs. 5,9%; razão de chances 0,78; IC95% 0,66-0,93; NNT 83) - **fonte**: NEJM (CHAMPION PHOENIX)"
@@ -697,7 +698,17 @@
       "Cangrelor · StatPearls (NCBI Bookshelf) · https://www.ncbi.nlm.nih.gov/books/NBK594269/"
     ],
     "pregnancy": "**Não recomendado durante a gravidez.** Os dados em gestantes são limitados ou inexistentes, e os estudos em animais revelaram **toxicidade reprodutiva**. Registro à parte, da mesma secção: observou-se **efeito reversível sobre a fertilidade em ratos machos**, sem efeito sobre a fertilidade em fêmeas. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do KENGREXAL (cangrelor, Chiesi). Fonte europeia, não a bula da ANVISA: não há bula do detentor do registro no Brasil nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer.",
-    "lactation": "**Dado ausente, com risco não excluído.** Desconhece-se se o cangrelor é excretado no leite humano, e a fonte registra que **não pode ser excluído qualquer risco** para o recém-nascido — mas não chega a orientar suspender a amamentação. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do KENGREXAL (cangrelor, Chiesi). Fonte europeia, não a bula da ANVISA: não há bula do detentor do registro no Brasil nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer."
+    "lactation": "**Dado ausente, com risco não excluído.** Desconhece-se se o cangrelor é excretado no leite humano, e a fonte registra que **não pode ser excluído qualquer risco** para o recém-nascido — mas não chega a orientar suspender a amamentação. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do KENGREXAL (cangrelor, Chiesi). Fonte europeia, não a bula da ANVISA: não há bula do detentor do registro no Brasil nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer.",
+    "contraindications": [
+      "Sangramento ativo clinicamente significativo",
+      "Hipersensibilidade conhecida (ex.: anafilaxia) ao cangrelor ou a qualquer componente do produto",
+      "**fonte**: rótulo do KENGREAL (cangrelor) aprovado pelo FDA, item 4 — não há bula da ANVISA nos espelhos consultados, mesma ressalva já registrada em `pregnancy`/`lactation` deste verbete"
+    ],
+    "adverse_effects": [
+      "Sangramento é a reação adversa mais relevante — maior incidência com cangrelor que com clopidogrel no CHAMPION PHOENIX (n=5.529 vs. 5.527): qualquer sangramento GUSTO 15,5% vs. 10,9% (grave/risco de vida 0,2% vs. 0,1%; moderado 0,4% vs. 0,3%; leve 14,9% vs. 10,5%); qualquer sangramento TIMI 0,8% vs. 0,3% (maior 0,2% vs. 0,1%; menor 0,6% vs. 0,2%)",
+      "Nenhum fator demográfico basal alterou o risco relativo de sangramento com cangrelor",
+      "**fonte**: rótulo do KENGREAL (cangrelor) aprovado pelo FDA, item 6.1 (Clinical Trials Experience), Tabela 1"
+    ]
   },
   {
     "slug": "captopril",
