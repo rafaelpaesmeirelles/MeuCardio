@@ -1104,6 +1104,34 @@ uma frente livre em vez de negociar no meio do commit.
    >
    > **Sessão nova NÃO herda isto.** Se você é uma sessão posterior lendo este arquivo, a regra
    > que vale para você é a linha 5 acima, sem a exceção: pergunte antes de publicar.
+   >
+   > ---
+   >
+   > ### 🔓 A MESMA autorização contínua foi concedida à sessão da BIBLIOTECA, no fim de 31/07/2026
+   > O bloco acima registra, corretamente para o momento em que foi escrito, que a exceção **não**
+   > se estendia à Biblioteca. **Isso mudou no mesmo dia.** Texto do Rafael à sessão da Biblioteca:
+   > *"autorizo publicar e ir prosseguindo automaticamente sem ficar dependendo da minha autorização
+   > se estiver tudo dentro das normas definidas, prossiga como achar mais produtivo por tempo
+   > indeterminado"*.
+   >
+   > Portanto, em 31/07/2026, **as duas sessões passaram a ter a mesma autorização contínua**, com
+   > **as mesmas condições** listadas acima — que são as normas deste arquivo e seguem valendo
+   > integralmente. Para a Biblioteca, em concreto, cada lote publicado automaticamente exige:
+   > 1. `review_status: revisado` e **zero** ocorrências de `VERIFICAÇÃO HUMANA NECESSÁRIA` no item;
+   > 2. **fonte primária conferida nesta sessão** — PMID/DOI batidos contra o registro, tabela lida
+   >    linha a linha; fonte mais fraca que diretriz ou estudo original só entra com a fraqueza
+   >    **declarada no próprio item** (foi o caso do documento de agenesia pericárdica);
+   > 3. **publicação por LISTA EXPLÍCITA de slugs**, nunca por `review_status` — a regra que nasceu
+   >    do incidente dos órfãos;
+   > 4. **varredura de órfãos depois de publicar**, confirmando que nada foi ressuscitado;
+   > 5. **indexação no RAG** quando o item for documento de `content/`;
+   > 6. **nada fora da faixa da Biblioteca**, e nada de publicar item de outra sessão.
+   >
+   > **O que continua exigindo o Rafael, mesmo com a autorização contínua:** despublicar ou apagar
+   > o que está no ar, ação destrutiva em banco (`DELETE`, `DROP`), alterar backend fora de tarefa
+   > autorizada, rebuild não pedido, mexer nos 12 órfãos de `drugs` (faixa da outra sessão), e
+   > qualquer decisão que **mude** uma regra deste arquivo em vez de segui-la — incluindo a questão
+   > pendente do `recommendation_class` para diretriz em GRADE.
 
 ### Entrega da sessão de Conteúdo para a de Medicamentos — Calculadoras
 Ao ler a divisão por tema de 29/07/2026, eu já havia começado a resolver as
