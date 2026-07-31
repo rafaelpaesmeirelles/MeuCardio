@@ -3,7 +3,7 @@ title: "Benazepril (cloridrato)"
 slug: benazepril-cloridrato
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Benazepril hydrochloride — rótulo aprovado pelo FDA, DailyMed SPL setid afd616b9-0c75-48be-862d-5ac18364fd9d", "LOTENSIN (Cloridrato de Benazepril) · Bulas.med.br · 2014 · https://www.bulas.med.br/p/bulas-de-medicamentos/bula/3018/lotensin.htm", "Lotensin H · Saúde Direta · https://www.saudedireta.com.br/catinc/drugs/bulas/lotensinh.pdf", "LOTENSIN (benazepril hydrochloride) — bula FDA/DailyMed", "Benazepril — StatPearls, NCBI Bookshelf, 2024"]
 legacy_source: "medicamentos/banco-de-medicamentos-benazepril-completo.md"
 ---

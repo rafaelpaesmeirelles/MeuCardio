@@ -3,7 +3,7 @@ title: "Bisoprolol (hemifumarato)"
 slug: bisoprolol-hemifumarato
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Bizo (hemifumarato de bisoprolol) — Bula para Profissional da Saúde · Eurofarma/Sanofi Medley · 2025 · https://bulas-hm.eurofarma.com.br/storage/media/15850/EZaC1XBYfNGjKPvrFofyImmf7HKyOoRDoFTGr2GE.pdf", "CIBIS-II Investigators and Committees · 1999 · 353:9-13"]
 legacy_source: "medicamentos/banco-de-medicamentos-bisoprolol.md"
 ---
