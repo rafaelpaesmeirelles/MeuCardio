@@ -2275,18 +2275,20 @@
   },
   {
     "slug": "levosimendana",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Levosimendana",
     "drug_class": "Sensibilizador de cálcio (inodilatador)",
     "mechanism": "Estabiliza o complexo cálcio-troponina C no miócito cardíaco, aumentando a contratilidade sem elevar o cálcio intracelular nem o consumo miocárdico de oxigênio; também abre canais de potássio dependentes de ATP, promovendo vasodilatação. Atua de forma independente do receptor beta-adrenérgico — mecanismo distinto de dobutamina (agonista beta) e de milrinona (inibidor de PDE3, também eleva cálcio intracelular)",
     "indications": [
       "Insuficiência cardíaca crônica grave agudamente descompensada, particularmente quando suporte inotrópico é necessário em paciente já em uso crônico de beta-bloqueador — mecanismo independente do receptor beta mantém eficácia nesse cenário, com efeito mínimo sobre frequência cardíaca"
     ],
-    "hepatic_adjustment": "Necessita ajuste de dose em disfunção hepática ou renal grave - **fonte**: PubMed (revisão sobre levosimendana em IC descompensada)",
+    "hepatic_adjustment": "**Contraindicado em comprometimento hepático grave** (ver `contraindications`) — não é caso de 'ajuste de dose', é proibição formal. Fonte: bula do SIMDAX (levosimendana, Abbott/Orion). Idem para comprometimento renal grave (ClCr <30 mL/min): contraindicado, não ajustado.",
     "dosing": {
-      "esquema classico": "infusão contínua de 24 horas, com ou sem dose de ataque",
-      "titulacao (estudo de referencia)": "início em 0,1 mcg/kg/min, aumentada ao longo de 4 horas até taxa máxima de 0,4 mcg/kg/min, mantida na taxa máxima tolerada por mais 2 horas",
-      "fonte": "PubMed (efeitos hemodinâmicos agudos)"
+      "esquema padrao": "Dose inicial (ataque) de 6 a 12 mcg/kg, infundidos em 10 minutos, seguida de infusão contínua de 0,1 mcg/kg/min. Dose de ataque mais baixa (6 mcg/kg) recomendada em quem já usa vasodilatador IV e/ou inotrópico no início da infusão",
+      "ajuste conforme resposta": "Avaliar resposta na dose de ataque ou em 30-60 minutos após ajuste. Se resposta excessiva (hipotensão, taquicardia): reduzir infusão para 0,05 mcg/kg/min ou descontinuar. Se dose inicial bem tolerada e maior efeito hemodinâmico necessário: aumentar para 0,2 mcg/kg/min",
+      "duracao": "24 horas na descompensação aguda de IC crônica grave — sem sinal de tolerância ou rebote após descontinuação; efeito hemodinâmico persiste por pelo menos 24h, podendo durar até 9 dias após infusão de 24h",
+      "diluicao": "10 mL de SIMDAX (2,5 mg/mL) + 500 mL de SG 5% = concentração de 0,05 mg/mL",
+      "fonte": "bula do SIMDAX (levosimendana, Abbott/Orion), item Posologia. **Corrigido em 31/07/2026**: a fonte anterior (PubMed, estudo de efeitos hemodinâmicos agudos) descrevia esquema de titulação até 0,4 mcg/kg/min ao longo de 4h, que não é o esquema da bula registrada — a bula usa ataque 6-12 mcg/kg + manutenção 0,1 mcg/kg/min, ajustável entre 0,05 e 0,2 mcg/kg/min"
     },
     "notes": {
       "Efeito hemodinamico": "Aumenta débito cardíaco e reduz pressão capilar pulmonar de forma dose-dependente",
@@ -2295,10 +2297,21 @@
     "references": [
       "Levosimendan: a calcium-sensitizing agent for the treatment of patients with decompensated heart failure · PubMed · https://pubmed.ncbi.nlm.nih.gov/16036037/",
       "Levosimendan: Uses, Interactions, Mechanism of Action · DrugBank · https://go.drugbank.com/drugs/DB00922",
-      "Acute hemodynamic and clinical effects of levosimendan in patients with severe heart failure · PubMed · https://pubmed.ncbi.nlm.nih.gov/11056096/"
+      "Acute hemodynamic and clinical effects of levosimendan in patients with severe heart failure · PubMed · https://pubmed.ncbi.nlm.nih.gov/11056096/",
+      "Bula do SIMDAX (levosimendana, Abbott Laboratórios do Brasil), BU 08_Simdax_FEV.13, via saudedireta.com.br — usada para contraindicações completas e posologia oficial"
     ],
     "pregnancy": "**Só se o benefício justificar o risco fetal.** Não há experiência de uso em mulheres grávidas, e os **estudos em animais demonstraram efeitos tóxicos sobre a reprodução**. A bula não atribui letra de categoria. Fonte: bula do SIMDAX (levosimendana, Orion/Abbott), seção \"Uso em idosos, crianças e outros grupos de risco\".",
-    "lactation": "**Não amamentar.** A bula converte a incerteza em proibição explícita: não se sabe se a levosimendana é excretada no leite humano, **portanto** mulheres em uso não devem amamentar. Comparação útil dentro do mesmo lote: diante de lacuna idêntica, a milrinona recebeu \"cautela\" e a levosimendana recebeu \"não amamentar\". Fonte: bula do SIMDAX (levosimendana, Orion/Abbott), seção \"Lactação\"."
+    "lactation": "**Não amamentar.** A bula converte a incerteza em proibição explícita: não se sabe se a levosimendana é excretada no leite humano, **portanto** mulheres em uso não devem amamentar. Comparação útil dentro do mesmo lote: diante de lacuna idêntica, a milrinona recebeu \"cautela\" e a levosimendana recebeu \"não amamentar\". Fonte: bula do SIMDAX (levosimendana, Orion/Abbott), seção \"Lactação\".",
+    "contraindications": [
+      "Hipersensibilidade à levosimendana ou a qualquer excipiente da fórmula",
+      "Hipotensão grave",
+      "Taquicardia",
+      "Obstruções mecânicas importantes que afetem o preenchimento e/ou esvaziamento ventricular",
+      "Comprometimento renal grave (clearance de creatinina <30 mL/min)",
+      "Comprometimento hepático grave",
+      "Histórico de Torsades de Pointes",
+      "**fonte**: bula do SIMDAX (levosimendana, Abbott/Orion), item Contra-indicações"
+    ]
   },
   {
     "slug": "lisinopril",
