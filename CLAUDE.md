@@ -653,10 +653,25 @@ ressuscitado**. Os 6 documentos foram **indexados no RAG** logo após publicar
 para o assistente clínico — e esse passo não aparece em nenhuma contagem, então é
 o mais fácil de esquecer.
 
-**Estado final do banco:** `documents` 457/457 · `drugs` 101/101 · `evidencias`
-197/198 · `estudos` 85/85 · `exames` 68/68 · `galeria` 66/66. **A única linha não
+**Estado final do banco:** `documents` 465/465 · `drugs` 101/101 · `evidencias`
+209/210 · `estudos` 87/87 · `exames` 69/69 · `galeria` 66/66. **A única linha não
 publicada em toda a base** é a evidência de febre reumática, retida de propósito
 (letra do nível de evidência não confirmada).
+
+> **Sobre essa única pendência — NÃO REPITA A BUSCA, já foi tentada em 31/07/2026.**
+> O item é `intervalo-de-3-semanas-na-profilaxia-secundaria-em-populacao-de-alta-incidencia-de-febre-reumatica`,
+> com `evidence_level: "?"`. A Classe I está confirmada; falta só a LETRA do nível,
+> que está no texto integral da diretriz da AHA de 2009 (Gerber MA et al.,
+> Circulation 2009;119(11):1541-1551, PMID 19246689). Vias já tentadas e fechadas:
+> **não está no PMC** (busca por PMID não retorna nada) e **`ahajournals.org` devolve
+> 403 por Cloudflare**, mesmo com User-Agent de browser — o mesmo bloqueio do Oxford
+> Academic. Também não há diretriz brasileira de febre reumática em acesso aberto nos
+> Arquivos Brasileiros de Cardiologia que resolvesse o ponto (a busca no PMC devolve
+> só artigos originais, não a diretriz).
+> **Resolver isso exige acesso pago ao Circulation, ou o Rafael abrir o PDF.** Até lá,
+> a conduta correta é a atual: manter `pendente_revisao`, não publicar, e não
+> preencher a letra por analogia — é o único registro do acervo inteiro nessa
+> situação, e ele está assim porque a régua funcionou, não porque foi esquecido.
 
 **Armadilha do `import_directory` observada três vezes hoje:** ele devolveu
 `novos: 2` para 3 documentos, `novos: 1` para 2 e `novos: 0` para 1 — porque a
