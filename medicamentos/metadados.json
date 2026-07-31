@@ -631,7 +631,7 @@
   },
   {
     "slug": "candesartana-cilexetila",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Candesartana (cilexetila)",
     "drug_class": "Bloqueador do receptor de angiotensina II (BRA/ARA-II)",
     "mechanism": "Pró-fármaco hidrolisado durante absorção GI em candesartana ativa, antagonista seletivo e potente do receptor AT1, com dissociação mais lenta do receptor comparado a outros BRAs, conferindo efeito anti-hipertensivo prolongado",
@@ -639,12 +639,25 @@
       "Hipertensão arterial, insuficiência cardíaca (alternativa a IECA ou em adição a este em casos selecionados)"
     ],
     "contraindications": [
-      "Gravidez",
-      "Insuficiência hepática grave/colestase",
-      "Hipersensibilidade"
+      "Hipersensibilidade conhecida à candesartana cilexetila ou a qualquer componente da fórmula",
+      "Gravidez e lactação",
+      "Combinação com medicamentos à base de alisquireno, em pacientes com diabetes mellitus e comprometimento renal moderado a grave (TFG <60 mL/min/1,73m²)",
+      "**fonte**: bula do BLOPRESS (candesartana cilexetila, Abbott Laboratórios do Brasil), item 4. **Corrigido em 31/07/2026**: a lista anterior (fonte FDA/Atacand) incluía 'Insuficiência hepática grave/colestase' como contraindicação — na bula brasileira esse cenário é só 'sem experiência clínica' (Advertências), não contraindicação formal do item 4. A combinação com alisquireno em diabético/renal, ausente da lista anterior, é acrescentada aqui"
     ],
     "dosing": {
-      "dose_especifica": "**Hipertensão**: dose inicial 16 mg 1x/dia (paciente sem depleção de volume). Titular até 32 mg/dia conforme resposta — doses acima de 32 mg não mostram benefício adicional de PA. Faixa de uso: 8–32 mg/dia, em 1 ou 2 tomadas. **Insuficiência cardíaca (ICFEr)**: dose inicial 4 mg 1x/dia, com titulação gradual até a dose-alvo de 32 mg 1x/dia, conforme tolerância. Fonte: bula FDA (Atacand) e revisão de farmacocinética clínica — dados convergentes."
+      "hipertensao dose inicial": "4 a 16 mg 1x/dia (faixa aprovada: 2 a 32 mg/dia)",
+      "hipertensao essencial dose inicial": "8 mg 1x/dia (faixa aprovada: 8 a 32 mg/dia) — dose de manutenção usual de 8 ou 16 mg 1x/dia",
+      "ic disfuncao sistolica ve feve 40 ou menos": "Dose inicial 4 mg 1x/dia (meio comprimido de 8 mg); faixa aprovada de 4 a 32 mg/dia",
+      "ic cronica leve a moderada": "Dose inicial 4 mg 1x/dia (meio comprimido de 8 mg); reduzir para 2 mg 1x/dia (um quarto do comprimido de 8 mg) se PAS <120 mmHg, disfunção renal, uso de diurético ou IC grave; faixa aprovada de 2 a 8 mg/dia",
+      "depletion volume intravascular": "Considerar a menor dose inicial",
+      "idosos": "Sem necessidade de ajuste de dose inicial",
+      "insuficiencia renal leve a moderada clcr acima de 30": "Sem ajuste de dose inicial necessário",
+      "insuficiencia renal grave clcr abaixo de 30": "Experiência clínica limitada — considerar dose inicial de 2 a 4 mg, ajustando conforme resposta",
+      "insuficiencia renal terminal clcr abaixo de 15": "Não recomendado",
+      "insuficiencia hepatica leve a moderada": "Dose inicial recomendada de 2 a 4 mg 1x/dia, ajustada conforme resposta",
+      "insuficiencia hepatica grave cirrose": "Sem experiência clínica — bula não recomenda",
+      "pediatria": "Segurança e eficácia não estabelecidas",
+      "fonte": "bula do BLOPRESS (candesartana cilexetila, Abbott Laboratórios do Brasil), item 8. **Corrigido em 31/07/2026**: a versão anterior (fonte FDA/Atacand) usava 16 mg como dose inicial única para hipertensão — a bula brasileira diferencia 'hipertensão' geral (início 4-16 mg) de 'hipertensão essencial' (início 8 mg), e detalha ajuste renal/hepático que a versão anterior não tinha"
     },
     "outcomes": {
       "Evidencia pivotal charm": "Programa CHARM avaliou candesartana em amplo espectro de IC (FEVI reduzida e preservada, tolerantes e intolerantes a IECA), demonstrando redução de mortalidade cardiovascular e hospitalizações por IC, sendo um dos BRAs com maior corpo de evidência em insuficiência cardíaca"
