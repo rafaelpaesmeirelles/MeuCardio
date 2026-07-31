@@ -3,7 +3,7 @@ title: "Nifedipina"
 slug: nifedipina
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Nifedipine — rótulo aprovado pelo FDA, DailyMed SPL setid acb493a3-b8f2-41a9-8ab2-550d97c4592a", "Nifedipina — Bula · Farmacam · 2019 · https://institucional.farmacam.com.br/wp-content/uploads/2023/12/Nifedipina-farmacam-2019-1.pdf", "Procardia XL (nifedipine) — bula FDA/DailyMed (múltiplas versões consultadas)"]
 legacy_source: "medicamentos/banco-de-medicamentos-nifedipina.md"
 ---

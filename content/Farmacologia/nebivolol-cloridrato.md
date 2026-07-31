@@ -3,7 +3,7 @@ title: "Nebivolol (cloridrato)"
 slug: nebivolol-cloridrato
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Bula do NEBILET (cloridrato de nebivolol), bula do paciente, conferida em 29/07/2026 — texto registrado no Brasil", "Nebivolol (BYSTOLIC) tablets — rótulo aprovado pelo FDA, indicação de hipertensão arterial", "Flather MD, Shibata MC, Coats AJS, et al. Randomized trial to determine the effect of nebivolol on mortality and cardiovascular hospital admission in elderly patients with heart failure (SENIORS). Eur Heart J. 2005;26(3):215-225. DOI: 10.1093/eurheartj/ehi115. PMID: 15642700"]
 legacy_source: "medicamentos/banco-de-medicamentos-nebivolol.md"
 ---
