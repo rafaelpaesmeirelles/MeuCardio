@@ -134,7 +134,14 @@ Contagem para a meta de 102, medida no disco (não estimada). Todos com
 | `exames/` | 60 → **66** | FFR/iFR, mapeamento T1 e ECV, US de rastreio de AAA, capacidade funcional pré-operatória (DASI/CPET), sorologia para T. cruzi, ECG na doença de Chagas |
 | `evidencias/` | 155 → **160** | 5 recomendações da Diretriz de Síndrome Coronariana Crônica da SBC 2025 |
 
-**Total do acervo: 898 → 915.** Faltam 85 para a meta de 1.000.
+**Total do acervo: 898 → 919, faltam 81 para a meta de 1.000.** Remedido no disco
+ao fechar, não estimado: `content/` 428 · `medicamentos` 89 · `evidencias` 160 ·
+`estudos` 81 · `galeria` 63 · `exames` 66 · `emergencia` 10 · `trilhas` 17 ·
+`casos_clinicos` 5. Dos 21 itens que entraram hoje, **17 são desta sessão** (a
+tabela acima) e 4 são documentos de `content/` da sessão de Medicamentos.
+*Cuidado ao remedir:* `casos_clinicos` **não tem arquivo no disco** — os 5
+existem apenas na tabela `clinical_cases` do banco, então um `find` nas pastas
+devolve 914 e parece que sumiram 5.
 
 **Três achados desta rodada que valem para quem continuar:**
 
