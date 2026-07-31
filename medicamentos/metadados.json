@@ -1910,7 +1910,7 @@
   },
   {
     "slug": "furosemida",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Furosemida",
     "brand_names": [
       "Lasix"
@@ -1928,9 +1928,12 @@
     "contraindications": [
       "Insuficiência renal com anúria",
       "Pré-coma ou coma associado a encefalopatia hepática",
-      "Hipocalemia ou hiponatremia severa",
-      "Hipovolemia ou desidratação",
-      "Hipersensibilidade à medicação"
+      "Hipopotassemia severa",
+      "Hiponatremia severa",
+      "Desidratação ou hipovolemia, com ou sem queda de pressão arterial",
+      "Alergia à furosemida, a sulfonamidas, ou a qualquer componente da fórmula",
+      "Lactação",
+      "**fonte**: bula do LASIX (furosemida, Sanofi Medley), item 3 (\"Quando não devo usar este medicamento\"). **Corrigido em 31/07/2026**: acrescentada a reatividade cruzada com sulfonamidas, ausente da lista anterior; 'lactação' promovida para contraindicação formal — ver correção em `lactation`"
     ],
     "monitoring": [
       "Monitorizar níveis de creatinina, sódio e potássio regularmente durante o tratamento"
@@ -1956,7 +1959,7 @@
       "Bula de LASIX (furosemida), Sanofi Medley Farmacêutica Ltda. — seção de posologia, versão brasileira."
     ],
     "pregnancy": "A furosemida **atravessa a barreira placentária**. Não deve ser administrada na gravidez **a menos que estritamente indicada, e por curtos períodos**. O tratamento durante a gravidez exige **controle periódico do crescimento fetal**. Fonte: bula do LASIX (Sanofi-Aventis).",
-    "lactation": "A furosemida **passa para o leite materno**. Quando o uso for considerado necessário na amamentação, isso deve ser levado em conta. Fonte: bula do LASIX (Sanofi-Aventis)."
+    "lactation": "**Contraindicada na lactação** — a bula usa o termo literal \"contraindicado para uso por lactantes\", não apenas advertência de passagem para o leite. **Corrigido em 31/07/2026**: a versão anterior deste campo dizia só que a furosemida 'passa para o leite materno... deve ser levado em conta', sem declarar a contraindicação formal — a bula do comprimido de 40 mg do LASIX (Sanofi Medley), item 3, é explícita. Fonte: bula do LASIX (furosemida, Sanofi Medley Farmacêutica)."
   },
   {
     "slug": "heparina-nao-fracionada",
