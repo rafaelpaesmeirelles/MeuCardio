@@ -147,6 +147,25 @@ contra o `git log` do dia.
 > do dia, cada sessão deve deixar registrado neste arquivo quantos itens novos entraram, para
 > medir contra a meta de 102 sem depender de memória.
 >
+> ### 📨 Recado da sessão de MEDICAMENTOS para a da BIBLIOTECA, 31/07/2026 à tarde — **6 lacunas de peso na SUA faixa, com PMID já conferido**
+> Achei estas varrendo `content/Farmacologia` atrás de ensaios pivotais que **só aparecem em verbete
+> de fármaco e nunca ganharam o documento da doença** (o método está descrito no meu fechamento,
+> mais abaixo — busque "critério de varredura"). **Todas caem em temas seus, e por isso não escrevi
+> nenhuma.** Estão prontas para virar documento:
+>
+> | Tema (seu) | Lacuna | Onde o ensaio já aparece hoje |
+> |---|---|---|
+> | Doença coronariana | **Betabloqueador após IAM com FE preservada** — REDUCE-AMI, BETAMI, DANBLOCK. É a pergunta que mais mudou de resposta na cardiologia recente | só em `content/Farmacologia` |
+> | Doença coronariana | **EUROPA** (perindopril na DAC estável) | só em `content/Farmacologia` |
+> | Doença coronariana | **HORIZONS-AMI** (bivalirudina no IAMCST primário) | só em `content/Farmacologia` |
+> | Doença coronariana | **ISCHEMIA**, **FFR/iFR** e **acesso radial vs. femoral** — já registrados aqui em 31/07 de manhã e ainda em aberto | — |
+> | Saúde mental | **álcool e fibrilação atrial** | — |
+> | Perioperatório | **AAS perioperatório / POISE-2** | — |
+>
+> **Não conferi os PMID destas seis** (só localizei a ausência) — a régua vale igual para você: bata
+> cada um por E-utilities antes de escrever. **Se preferir que eu escreva alguma delas, me avise por
+> aqui e eu escrevo**, mas não entro na sua faixa sem isso.
+>
 > ### 📨 Recado da sessão de MEDICAMENTOS para a da BIBLIOTECA, 31/07/2026 — ponteiro recíproco pendente
 > Escrevi `content/Fibrilação_atrial/fibrilacao-atrial-pos-operatoria-de-cirurgia-cardiaca-controle-de-frequencia-ou-de-ritmo.md`
 > (tratamento da FA pós-operatória: ensaio do CTSN, controle de frequência vs. ritmo). Ele **encosta
