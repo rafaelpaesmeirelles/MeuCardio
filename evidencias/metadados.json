@@ -4545,5 +4545,64 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "imagem-intracoronaria-para-guiar-icp-complexa",
+    "statement": "A imagem intracoronária (ultrassom intravascular ou tomografia de coerência óptica) DEVE ser utilizada para guiar intervenções coronárias percutâneas COMPLEXAS — Classe I, Nível A. É a recomendação mais forte da diretriz brasileira nesta área. Para intervenções de BAIXA complexidade, a mesma diretriz é bem mais reservada: pode ser considerada, com Classe IIb e Nível B. A complexidade do procedimento, e não a disponibilidade do equipamento, é o que define a indicação.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2025,
+    "guideline_title": "Diretriz de Síndrome Coronariana Crônica – 2025 (Sociedade Brasileira de Cardiologia)",
+    "reference": "Cesar LAM, Gowdak LHW, Pavanello R, et al. Diretriz de Síndrome Coronariana Crônica – 2025. Arq Bras Cardiol. 2025;122(9):e20250619. DOI: 10.36660/abc.20250619. PMID: 41294178 — Tabela 'Recomendações para a Utilização de Imagens Intravasculares no Planejamento e na Condução da Intervenção Coronária', conferida no texto integral em acesso aberto (PMC13400070) em 31/07/2026.",
+    "theme": "Doença coronariana",
+    "tags": [
+      "ivus",
+      "oct",
+      "imagem intracoronária",
+      "icp complexa",
+      "guia de procedimento"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "imagem-intracoronaria-em-estenose-intermediaria-e-mais-fraca-que-a-avaliacao-funcional",
+    "statement": "Para avaliar estenoses coronárias INTERMEDIÁRIAS, o uso de imagem intracoronária (IVUS ou OCT) pode ser considerado, com Classe IIb e Nível B. Compare com a avaliação FUNCIONAL invasiva no mesmo cenário, também cadastrada nesta base a partir da mesma diretriz: ali a recomendação é Classe I, Nível A. Ou seja, diante da estenose de gravidade duvidosa, a pergunta que a diretriz manda responder é FISIOLÓGICA (a lesão causa isquemia?), não anatômica (quanto ela estreita?) — e os dois métodos não são intercambiáveis nesse cenário.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2025,
+    "guideline_title": "Diretriz de Síndrome Coronariana Crônica – 2025 (Sociedade Brasileira de Cardiologia)",
+    "reference": "Cesar LAM, Gowdak LHW, Pavanello R, et al. Diretriz de Síndrome Coronariana Crônica – 2025. Arq Bras Cardiol. 2025;122(9):e20250619. DOI: 10.36660/abc.20250619. PMID: 41294178 — Tabela 'Recomendações para o Uso de Imagens Intravasculares no Diagnóstico e na Avaliação de Estenoses Coronárias', conferida no texto integral em acesso aberto (PMC13400070) em 31/07/2026.",
+    "theme": "Doença coronariana",
+    "tags": [
+      "ivus",
+      "oct",
+      "estenose intermediária",
+      "avaliação funcional",
+      "ffr"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ultrassom-intracoronario-na-avaliacao-do-tronco-de-coronaria-esquerda",
+    "statement": "O ultrassom intracoronário deve ser considerado para avaliar a gravidade de estenoses do TRONCO DE CORONÁRIA ESQUERDA — Classe IIa, Nível B. É a exceção anatômica relevante: no tronco, a imagem intravascular tem recomendação mais forte do que nas demais estenoses intermediárias (IIb), porque a angiografia é particularmente limitada nessa localização e a decisão que dela decorre é de grande porte.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2025,
+    "guideline_title": "Diretriz de Síndrome Coronariana Crônica – 2025 (Sociedade Brasileira de Cardiologia)",
+    "reference": "Cesar LAM, Gowdak LHW, Pavanello R, et al. Diretriz de Síndrome Coronariana Crônica – 2025. Arq Bras Cardiol. 2025;122(9):e20250619. DOI: 10.36660/abc.20250619. PMID: 41294178 — Tabela 'Recomendações para o Uso de Imagens Intravasculares no Diagnóstico e na Avaliação de Estenoses Coronárias', conferida no texto integral em acesso aberto (PMC13400070) em 31/07/2026.",
+    "theme": "Doença coronariana",
+    "tags": [
+      "ivus",
+      "tronco de coronária esquerda",
+      "estenose",
+      "imagem intracoronária"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
