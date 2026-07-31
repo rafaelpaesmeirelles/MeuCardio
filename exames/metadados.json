@@ -1662,5 +1662,29 @@
       "síndrome aórtica aguda",
       "endoprótese"
     ]
+  },
+  {
+    "slug": "biopsia-endomiocardica-indicacoes-e-analise",
+    "name": "Biópsia endomiocárdica (BEM)",
+    "category": "laboratorial",
+    "theme": "Pericárdio",
+    "what_it_measures": "Fragmentos de miocárdio obtidos por cateter, analisados por histologia, imuno-histoquímica e biologia molecular (pesquisa de genoma viral por RT-PCR). É o único exame que dá diagnóstico ETIOLÓGICO em miocardite. Categoria registrada como laboratorial por coerência com os demais exames desta base cujo produto é a análise de uma amostra (hemocultura, teste genético, sequenciamento de rRNA) — embora a coleta seja feita por procedimento invasivo, durante cateterismo.",
+    "reference_range": "Não há faixa numérica. O resultado é qualitativo: presença ou ausência de infiltrado inflamatório, necrose de miócitos, fibrose, granuloma não caseoso (sarcoidose), células gigantes multinucleadas ou infiltrado eosinofílico, além da detecção ou não de genoma viral. A diretriz brasileira registra que os marcadores imuno-histoquímicos e a análise de genoma viral são SUPERIORES aos critérios de Dallas e, portanto, mais úteis no diagnóstico etiológico.",
+    "indications": "Indicações Classe I: insuficiência cardíaca de início recente, com menos de 2 semanas, sem causa definida, não responsiva ao tratamento usual e com deterioração hemodinâmica; insuficiência cardíaca de 2 semanas a 3 meses, sem causa definida, associada a arritmias ventriculares ou bloqueio atrioventricular de segundo ou terceiro grau; e suspeita clínica de miocardite linfocítica grave, de células gigantes ou eosinofílica necrosante. Classe IIa: insuficiência cardíaca de 3 a 12 meses sem causa definida e não responsiva à terapia otimizada; e cardiomiopatia dilatada de qualquer duração com suspeita de reação alérgica e/ou eosinofilia. Classe IIb: arritmias ventriculares frequentes sem causa definida; e suspeita de miocardite apoiada APENAS por métodos não invasivos. Na miocardite de células gigantes, a análise de coração explantado no transplante ou de fragmento obtido no implante de assistência mecânica também é Classe I.",
+    "interpretation": "O rendimento depende do que se procura e de onde se colhe. O ecocardiograma tem recomendação Classe IIa para GUIAR a biópsia, tanto na escolha do sítio ideal quanto na prevenção de complicações. Resultado NEGATIVO não exclui doença: na sarcoidose cardíaca o acometimento é focal e a amostra pode não pegar o granuloma — é por isso que existe um grupo de diagnóstico clínico ao lado do histológico, como detalhado no documento de sarcoidose desta biblioteca. O achado de granuloma não caseoso fecha sarcoidose; o de células gigantes multinucleadas define a miocardite de células gigantes, cujo tratamento imunossupressor e a indicação de transplante são Classe I.",
+    "limitations": "A diretriz registra que a taxa de complicações da biópsia endomiocárdica é BAIXA, mas o procedimento é invasivo e depende de equipe experiente. Amostragem focal é a principal limitação diagnóstica. Em cardite reumática o exame tem indicação fraca (Classe IIb, Nível C) — a doença é resposta imune tardia e o diagnóstico é clínico, pelos critérios de Jones. A diretriz também classifica como Classe III o uso de sorologias virais na investigação de rotina de todos os casos de miocardite: a pesquisa etiológica viral se faz no tecido, não no soro.",
+    "source_refs": [
+      "Montera MW, Marcondes-Braga FG, Simões MV, Moura LAZ, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID: 35830116 — tabelas de indicação de biópsia endomiocárdica (geral e na miocardite de células gigantes), de exames diagnósticos para cardite reumática e a seção de análise histológica e pesquisa viral; texto integral em acesso aberto (PMC9352123), conferido em 31/07/2026."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "biópsia endomiocárdica",
+      "miocardite",
+      "células gigantes",
+      "sarcoidose",
+      "imuno-histoquímica",
+      "genoma viral"
+    ]
   }
 ]
