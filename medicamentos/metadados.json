@@ -1341,7 +1341,7 @@
   },
   {
     "slug": "edoxabana",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Edoxabana",
     "brand_names": [
       "Lixiana"
@@ -1360,10 +1360,10 @@
     ],
     "contraindications": [
       "Sangramento ativo clinicamente significativo",
-      "Doença hepática associada a coagulopatia",
-      "Gravidez e lactação",
-      "Válvulas cardíacas mecânicas",
-      "ClCr >95 mL/min em FA (redução de eficácia observada no ENGAGE AF-TIMI 48, contraindicação relativa)"
+      "Doença hepática associada a coagulopatia e a risco de hemorragia clinicamente relevante",
+      "Hipersensibilidade à edoxabana ou aos componentes da fórmula",
+      "**fonte**: bula do LIXIANA (edoxabana, Daiichi Sankyo Brasil), item 4 — lista formal, só 3 itens. **Corrigido em 31/07/2026**: a versão anterior tinha 'Gravidez e lactação' (não é contraindicação formal desta bula — ver `pregnancy`/`lactation`), 'Válvulas cardíacas mecânicas' e 'ClCr>95 mL/min em FA' (nenhum dos dois está no item 4; são precaução/subgrupo de eficácia reduzida do ENGAGE AF-TIMI 48, não proibição). 'Hipersensibilidade', que faltava, foi acrescentada",
+      "**Precauções relevantes, não contraindicação formal**: válvulas cardíacas mecânicas (fora do desenho dos ensaios pivotais de DOAC); ClCr >95 mL/min em fibrilação atrial (redução de eficácia observada no ENGAGE AF-TIMI 48 — considerar avaliar outra opção terapêutica)"
     ],
     "dosing": {
       "fa nao valvular padrao": "60 mg VO 1x/dia",
@@ -1379,10 +1379,11 @@
     "references": [
       "Edoxaban tablets (SAVAYSA) — rótulo aprovado pelo FDA",
       "Giugliano RP, Ruff CT, Braunwald E, et al. Edoxaban versus warfarin in patients with atrial fibrillation (ENGAGE AF-TIMI 48). N Engl J Med. 2013;369(22):2093-2104. DOI: 10.1056/NEJMoa1310907",
-      "Bula profissional de LIXIANA (edoxabana), Daiichi Sankyo Brasil Farmacêutica Ltda., seção 8 — Posologia e modo de usar. Documento obtido no site do detentor do registro."
+      "Bula profissional de LIXIANA (edoxabana), Daiichi Sankyo Brasil Farmacêutica Ltda., seção 8 — Posologia e modo de usar. Documento obtido no site do detentor do registro.",
+      "Bula do LIXIANA (edoxabana, Daiichi Sankyo Brasil Farmacêutica Ltda.), versão 2024, seções de Contraindicações e Uso em Populações Específicas — usada para corrigir gravidez/lactação, antes sourceadas só no RCM europeu"
     ],
-    "pregnancy": "**Contraindicada na gravidez** — três motivos somados e declarados: toxicidade reprodutiva potencial (vista em animais), o **risco intrínseco de hemorragia**, e a **evidência de que a edoxabana atravessa a placenta**. Segurança e eficácia não foram estabelecidas em gestantes, e a mulher com potencial para engravidar deve evitar engravidar durante o tratamento. Comparação útil dentro da classe: a **apixabana é categoria B e apenas \"não recomendada\"**, enquanto a edoxabana é contraindicada — os anticoagulantes orais diretos não têm rotulagem uniforme na gestação. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do LIXIANA (edoxabano, Daiichi Sankyo). Fonte europeia, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil disponível nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer.",
-    "lactation": "**Contraindicada na amamentação.** Os dados em animais indicam que a edoxabana **é excretada no leite**, e a segurança em lactantes não foi estabelecida. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do LIXIANA (edoxabano, Daiichi Sankyo). Fonte europeia, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil disponível nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer."
+    "pregnancy": "**Categoria de risco D.** Dados limitados em gestantes, sem estudos adequados e bem controlados. **Não deve ser usada durante a gravidez a menos que o benefício justifique o risco potencial para a mãe e o feto** — não é contraindicação absoluta, é restrição condicionada a risco-benefício. O risco de hemorragia relacionada à gravidez/parto é maior com anticoagulante que não é prontamente reversível, e o efeito da edoxabana não pode ser monitorado de forma adequada por exames laboratoriais disponíveis. Segurança e eficácia no trabalho de parto e parto não foram avaliadas. **Corrigido em 31/07/2026**: a bula brasileira do LIXIANA (Daiichi Sankyo, versão 2024) foi localizada — a revisão anterior usava o RCM europeu e classificava como 'contraindicada'; a bula brasileira usa a formulação mais branda de categoria D condicionada a risco-benefício, não proibição absoluta. Fonte: bula do LIXIANA (edoxabana, Daiichi Sankyo Brasil Farmacêutica), seção \"Uso em populações específicas — Gravidez\".",
+    "lactation": "**Decisão compartilhada entre descontinuar a amamentação ou a terapia com edoxabana**, considerando a importância do medicamento para a mãe — não é contraindicação absoluta. Não se sabe se a edoxabana ou seus metabólitos são excretados no leite humano; em estudo não clínico, foi excretada no leite materno de ratas. **Corrigido em 31/07/2026**: a bula brasileira do LIXIANA foi localizada, substituindo a fonte europeia usada antes, que classificava como 'contraindicada' — a bula brasileira não usa esse termo, trata como decisão risco-benefício. Fonte: bula do LIXIANA (edoxabana, Daiichi Sankyo Brasil Farmacêutica), seção \"Uso em populações específicas — Mulheres Lactantes\"."
   },
   {
     "slug": "empagliflozina",
