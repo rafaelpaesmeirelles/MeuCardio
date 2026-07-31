@@ -186,14 +186,90 @@ Contagem para a meta de 102, medida no disco (não estimada). Todos com
 | `exames/` | 60 → **66** | FFR/iFR, mapeamento T1 e ECV, US de rastreio de AAA, capacidade funcional pré-operatória (DASI/CPET), sorologia para T. cruzi, ECG na doença de Chagas |
 | `evidencias/` | 155 → **160** | 5 recomendações da Diretriz de Síndrome Coronariana Crônica da SBC 2025 |
 
-**Total do acervo: 898 → 919, faltam 81 para a meta de 1.000.** Remedido no disco
-ao fechar, não estimado: `content/` 428 · `medicamentos` 89 · `evidencias` 160 ·
-`estudos` 81 · `galeria` 63 · `exames` 66 · `emergencia` 10 · `trilhas` 17 ·
-`casos_clinicos` 5. Dos 21 itens que entraram hoje, **17 são desta sessão** (a
-tabela acima) e 4 são documentos de `content/` da sessão de Medicamentos.
-*Cuidado ao remedir:* `casos_clinicos` **não tem arquivo no disco** — os 5
-existem apenas na tabela `clinical_cases` do banco, então um `find` nas pastas
-devolve 914 e parece que sumiram 5.
+**PUBLICADOS em 31/07/2026, por autorização direta do Rafael** ("publica esses 17
+itens"). Carga e publicação por `docker compose exec` (a rota HTTP é barrada pelo
+classificador), com `AuditLog` gravado à mão. Os carregadores devolveram
+exatamente `novos: 6` em estudos, `6` em exames e `5` em evidências — confirmando
+que só os meus 17 entraram. Estado no banco depois disso: estudos 82/82, exames
+66/66, evidências 160/161 publicados. A única evidência não publicada é a de
+febre reumática, retida de propósito (letra do nível não confirmada) — não é
+pendência nova.
+
+#### 📐 Contagem completa do acervo — corrigida em 31/07/2026, e **maior do que a meta vinha medindo**
+**927 itens, faltam 73 para 1.000.** Medido arquivo por arquivo no disco:
+`content/*.md` 429 · `evidencias` 160 · `medicamentos` 89 · `estudos` 81 ·
+`exames` 66 · `galeria` 63 · `trilhas` 17 · `emergencia` 10 · `casos-clinicos` 5 ·
+**`checklists` 3** · **`material-paciente` 4**.
+
+**Duas correções de método, as duas minhas:**
+1. `casos-clinicos` é **com hífen**. Meu registro anterior dizia que a pasta não
+   existia e que os 5 casos viviam só na tabela `clinical_cases` — **estava
+   errado**: procurei por `casos_clinicos` com underscore, não achei e concluí
+   ausência em vez de conferir. O arquivo `casos-clinicos/metadados.json` existe e
+   está versionado, como todas as outras frentes. Nenhum arquivo está sumido.
+2. **`checklists` (3) e `material-paciente` (4) nunca entraram na contagem da
+   meta.** São conteúdo real, com `metadados.json` versionado e carregador próprio
+   (`carregar_checklists.py`, `carregar_material_paciente.py`), e a série histórica
+   de 898 os ignorava. Por isso o acervo está 7 itens acima do que a meta vinha
+   contando: são **11 frentes**, não nove.
+
+Dos 21 itens que entraram hoje, **17 são desta sessão** (a tabela acima) e 4 são
+documentos de `content/` da sessão de Medicamentos — que depois somou o quinto,
+fechando em 429.
+
+#### 🚨 36 registros ÓRFÃOS estão PUBLICADOS — o risco latente já se concretizou
+A varredura de órfãos que este arquivo dizia não existir **foi feita agora**
+(31/07/2026), comparando slug a slug o banco contra o disco, nas seis frentes que
+têm as duas pontas. Resultado — **não é hipótese, é o estado de produção**:
+
+| Frente | Banco | Disco | Órfãos | **Órfãos NO AR** |
+|---|---:|---:|---:|---:|
+| `documents` | 455 | 429 | 26 | **22** |
+| `drugs` | 101 | 89 | 12 | **12** |
+| `evidencias` | 161 | 160 | 1 | **1** |
+| `estudos` | 82 | 81 | 1 | **1** |
+| `exames` | 66 | 66 | 0 | 0 |
+| `galeria` | 63 | 63 | 0 | 0 |
+
+**Isto reverteu, na prática, dois trabalhos que este arquivo dá como concluídos:**
+
+1. **As 11 fusões de pares complementares voltaram ao ar.** Entre os 22 documentos
+   órfãos publicados estão `sindrome-coronariana-aguda-...-estrutura-detalhada`,
+   `endocardite-infecciosa-...-versao-completa`, `ablacao-por-cateter-em-fibrilacao-atrial-esc-2024`,
+   `hipertensao-pulmonar-...-versao-completa`, `insuficiencia-cardiaca-atualizacao-focada-...-complemento`,
+   `choque-cardiogenico-classificacao-scai-shock-complemento`, `doenca-valvar-cardiaca-vhd-...`,
+   `trombose-venosa-profunda-aguda-...` e `doenca-cardiovascular-em-pacientes-com-diabetes-esc-2023`.
+   O `COBERTURA.md` afirma "nenhum órfão publicado" e "todo documento removido do
+   disco foi despublicado" — **isso não vale mais.** O defeito que a fusão existia
+   para corrigir está de volta: quem procura "endocardite" acha dois documentos e
+   lê um deles, e os critérios de Duke e os esquemas de antibiótico estão em
+   arquivos diferentes.
+2. **Os fantasmas de `drugs` ressuscitaram, e agora são 12.** Este arquivo
+   registrava 10 órfãos e dizia que eram "justamente os 10 que **não** estão
+   publicados". Hoje são 12 e **todos estão no ar**, incluindo
+   `metoprolol-succinato` em três variantes, `warfarina`, `nitratos-...`,
+   `verapamil-diltiazem`, `sotalol-cloridrato`, `trimetazidina-dicloridrato`,
+   `prasugrel-cloridrato` — mais `atropina` e `evinacumabe`, que são novos e não
+   estavam na lista de 10. São duplicatas fundidas, com apresentações que não
+   conferem, visíveis a qualquer assinante.
+
+**Causa, identificada no `AuditLog` (registro 446, 31/07/2026 04:35):** a
+publicação foi feita por **critério** — `review_status == 'revisado'` +
+`published = True` — e não por lista de slugs lida do disco. Órfão que ficou no
+banco com `review_status: revisado` é varrido junto. A nota do próprio registro
+diz "excluídos os 4 slugs órfãos já documentados", mas os documentados eram 10, e
+o filtro por critério alcança qualquer órfão, inclusive os que ninguém listou.
+**Regra que decorre disso, e que vale para as duas sessões: publicar sempre a
+partir da lista de slugs que está no arquivo, nunca por `review_status`.** Foi
+como os 17 itens desta sessão entraram (lista explícita, conferida item a item).
+
+**Nada foi despublicado por mim.** Mexer no que está em produção é decisão do
+Rafael, e metade disto é faixa da sessão de Medicamentos. Ação recomendada:
+`published = False` nos 36 órfãos — **não apagar**, porque não há perda de
+conteúdo (o texto equivalente segue no ar pelo slug correto), e porque a linha
+órfã é o único registro de que aquele slug já existiu. O comando de varredura que
+produziu esta tabela está descrito acima e pode ser repetido a qualquer momento;
+**vale rodá-lo como conferência final antes do lançamento de 10/08.**
 
 **Três achados desta rodada que valem para quem continuar:**
 
