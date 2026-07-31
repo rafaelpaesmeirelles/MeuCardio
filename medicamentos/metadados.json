@@ -3530,7 +3530,7 @@
   },
   {
     "slug": "sildenafila-citrato",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Sildenafila (citrato)",
     "drug_class": "Inibidor da fosfodiesterase-5 (PDE5)",
     "mechanism": "Inibe seletivamente a fosfodiesterase tipo 5, enzima responsável pela degradação do GMP cíclico; no leito vascular pulmonar, o acúmulo de GMPc promove relaxamento da musculatura lisa vascular e vasodilatação, reduzindo a resistência vascular pulmonar; na disfunção erétil, potencializa o efeito vasodilatador do óxido nítrico no corpo cavernoso",
@@ -3543,12 +3543,10 @@
       "Potencializa significativamente o efeito hipotensor de nitratos (uso agudo ou crônico) — contraindicação absoluta de uso concomitante, com risco de hipotensão grave e potencialmente fatal"
     ],
     "contraindications": [
-      "Uso concomitante com nitratos",
-      "Uso concomitante com doadores de óxido nítrico",
-      "Hipotensão grave",
-      "IAM recente",
-      "AVC recente",
-      "Retinopatia hereditária degenerativa"
+      "Hipersensibilidade à sildenafila ou a qualquer componente da fórmula",
+      "Uso concomitante de nitratos ou qualquer doador de óxido nítrico, de uso agudo ou crônico",
+      "Uso concomitante de estimulador da guanilato ciclase solúvel (ex.: riociguate) — risco de hipotensão sintomática",
+      "Indicação de disfunção erétil (VIAGRA): contraindicado para mulheres e para menores de 18 anos"
     ],
     "adverse_effects": [
       "Cefaleia, rubor facial, dispepsia, congestão nasal, distúrbios visuais transitórios (visão azulada), priapismo (raro)"
@@ -3562,11 +3560,16 @@
       "populacao pediatrica": "**Não há posologia pediátrica no registro brasileiro deste produto.** A bula declara expressamente **uso adulto** na apresentação, e registra que os estudos de interação foram conduzidos apenas em adultos.\n\nO esquema de **1 a 17 anos — 10 mg 3x/dia até 20 kg e 20 mg 3x/dia acima de 20 kg — é da rotulagem norte-americana**, e não tem correspondente aqui. Usar sildenafila em criança com hipertensão arterial pulmonar no Brasil é decisão fora de bula, e o verbete passa a dizer isso em vez de importar a posologia estrangeira como se fosse local."
     },
     "references": [
-      "Sildenafil (REVATIO) — rótulo aprovado pelo FDA para hipertensão arterial pulmonar, DailyMed SPL setid 3bb9363e-b28d-4019-8aae-539233dca214",
-      "Bula do profissional de saúde de REVATIO (citrato de sildenafila), Viatris Farmacêutica do Brasil Ltda. — seções 1, 4 e 8. Documento obtido no site do detentor do registro."
+      "Bula profissional do REVATIO (citrato de sildenafila, indicação hipertensão arterial pulmonar), Viatris Farmacêutica do Brasil Ltda. — via viatris.com.br",
+      "Bula profissional do VIAGRA (citrato de sildenafila, indicação disfunção erétil), Pfizer — via consultaremedios.com.br",
+      "Sildenafil (REVATIO) — rótulo aprovado pelo FDA para hipertensão arterial pulmonar, DailyMed SPL setid 3bb9363e-b28d-4019-8aae-539233dca214"
     ],
-    "pregnancy": "**Atenção ao recorte, porque aqui ele muda a leitura.** O rótulo do FDA consultado é o da **sildenafila na disfunção erétil**, e por isso abre com \"não é indicada para uso em mulheres\" — o que **não** se aplica à indicação cardiológica: na **hipertensão arterial pulmonar** (Revatio) a mulher é tratada. Dos dados que valem para as duas indicações: **não há dados em gestantes**; os estudos de reprodução animal **não mostraram desfecho adverso de desenvolvimento** quando administrada durante a organogênese em ratas e coelhas, em doses orais de até **16 e 32 vezes** a máxima recomendada em humanos (100 mg/dia, base mg/m²), sem evidência de teratogenicidade, embriotoxicidade ou fetotoxicidade. A bula brasileira do Revatio, mais lacônica, apenas registra que o medicamento não deve ser usado por gestantes sem orientação médica. Fontes: rótulo aprovado pelo FDA (DailyMed) para a sildenafila, e bula do REVATIO (citrato de sildenafila, Pfizer). Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer.",
-    "lactation": "**Presente no leite humano, sem dado sobre efeito.** Dados limitados indicam que a **sildenafila e seu metabólito ativo estão presentes no leite humano**; não há informação sobre efeito no lactente nem sobre a produção de leite. A bula brasileira do Revatio pede **cautela** ao administrar a lactante. Mesmo recorte da seção de gravidez: o rótulo americano é o da indicação de disfunção erétil. Fontes: rótulo aprovado pelo FDA (DailyMed) para a sildenafila, e bula do REVATIO (citrato de sildenafila, Pfizer). Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer."
+    "pregnancy": "**Categoria de risco B na indicação de hipertensão arterial pulmonar (bula do REVATIO).** Corrige o registro anterior, que dizia não haver bula do detentor do registro no Brasil — localizada agora. Não há dados prejudiciais diretos ou indiretos sobre gravidez e desenvolvimento embrionário/fetal nos estudos em animais. **Atenção ao recorte**: a indicação de disfunção erétil (VIAGRA) é formalmente contraindicada para mulheres (ver `contraindications`), então a classificação de gravidez só se aplica à indicação cardiológica (Revatio), onde a mulher é tratada. Fonte: bula profissional brasileira do REVATIO (Viatris), item \"Fertilidade, Gravidez e Lactação\".",
+    "lactation": "**Presente no leite humano em níveis muito baixos, sem efeito adverso esperado — a bula não contraindica.** Dados limitados indicam que a sildenafila e o metabólito ativo N-desmetil são excretados no leite materno; a dose relativa estimada ao lactente é baixa o suficiente para não se esperar efeito adverso, mas o prescritor deve avaliar cuidadosamente a necessidade clínica do fármaco para a mãe contra o risco potencial ao lactente. Fonte: bula profissional brasileira do REVATIO (Viatris), mesmo item da gravidez — substitui a fonte norte-americana usada antes; conteúdo mais preciso (a bula brasileira detalha o mecanismo de baixo risco, algo que a nota anterior não trazia).",
+    "notes": {
+      "Hipotensao grave, IAM/AVC recente, retinopatia — advertencia, nao contraindicacao formal": "**Corrigido em 31/07/2026**: a versão anterior listava hipotensão grave, IAM recente, AVC recente e retinopatia hereditária degenerativa como contraindicações formais. Nem a bula brasileira do REVATIO (HAP, Viatris) nem a do VIAGRA (disfunção erétil, Pfizer) trazem esses itens no item 4. CONTRAINDICAÇÕES — são tratados em 5. ADVERTÊNCIAS E PRECAUÇÕES: cautela em hipotensão de repouso (PA <90/50mmHg), depleção hídrica, obstrução grave de via de saída do VE ou disfunção autonômica; eventos cardiovasculares graves pós-comercialização (IAM, morte súbita, arritmia, AVC) relatados em associação temporal ao uso, a maioria em paciente com fator de risco CV pré-existente, sem que os ensaios controlados mostrem diferença de incidência de IAM/mortalidade CV vs. placebo; retinite pigmentosa hereditária — minoria dos pacientes tem alteração genética de fosfodiesterase retiniana, administrar com precaução, não proibição. Estes itens parecem ter vindo do rótulo do FDA (que os trata de forma mais restritiva em alguma versão), não das bulas brasileiras.",
+      "Riociguate — interacao critica ausente antes": "**Adicionado em 31/07/2026**: a coadministração de sildenafila com estimulador da guanilato ciclase solúvel (riociguate, também usado em hipertensão pulmonar) é contraindicação formal nas duas bulas brasileiras conferidas — risco de hipotensão sintomática. Faltava por completo no registro anterior, apesar de ser risco relevante justamente na população que mais usa sildenafila para indicação cardiológica (HAP), onde troca ou associação com riociguate é cenário real."
+    }
   },
   {
     "slug": "sotalol",
