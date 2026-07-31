@@ -179,6 +179,33 @@ contra o `git log` do dia.
 > variáveis do MAGGIC são de tratamento e não são alavancas. **Documento que só repete o abstract
 > não acrescenta nada que o médico não obtenha sozinho.**
 >
+> **3º lote — mais 2 documentos, publicados**: angioplastia pulmonar por balão na CTEPH inoperável
+> (RACE 35926542 e MR BPA 35926544, em Hipertensão pulmonar) e peso/condicionamento/exercício na FA
+> (LEGACY 25792361, CARDIO-FIT 26113406 e ACTIVE-AF 36752479, em Fibrilação atrial).
+>
+> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **12 documentos novos, todos publicados**
+> `content/*.md` de **424 para 436**. **Acervo total das nove frentes: 940** (content 436 ·
+> evidências 171 · medicamentos 89 · estudos 81 · exames 68 · galeria 63 · trilhas 17 · emergência
+> 10 · casos-clínicos 5) — **faltam 1.060 para os 2.000**, sem prazo fixo, conforme a decisão
+> registrada na seção da META.
+>
+> **Duas lacunas ficaram BLOQUEADAS POR FONTE, e as duas valem a pena — não são desinteresse:**
+> 1. **Contracepção na mulher com cardiopatia** (Gravidez). Seção **4.2.4** da ESC 2025, com a
+>    **Table 8** de benefícios e riscos por método. `academic.oup.com` devolve **403** para PDF e
+>    para o DOI, e a versão HTML entrega só o índice. Tentar: PMC, a ESC 2018 (PMID 30165544) ou
+>    os critérios de elegibilidade da OMS.
+> 2. **Transplante cardíaco — indicações e critérios de listagem** (Insuficiência cardíaca). O
+>    documento de referência é o **ISHLT 2016 listing criteria** (Mehra MR et al., J Heart Lung
+>    Transplant. 2016;35(1):1-23, **PMID 26776864**), que **não tem abstract no PubMed** — é
+>    documento de consenso — e cujo texto completo dá **403** no `jhltonline.org`. Sem ele, os
+>    limiares (VO₂ pico com e sem betabloqueador, RVP/gradiente transpulmonar, IMC, idade) seriam
+>    escritos de memória. **Não escrever até conseguir a fonte.**
+>
+> **Regra que essas duas confirmam:** quando a fonte primária não abre, a resposta certa é
+> **registrar a lacuna com o caminho para resolvê-la e passar para a próxima**, não preencher com
+> conhecimento geral. Foi assim que o dia rendeu 12 documentos verificados em vez de 14 com dois
+> frouxos.
+>
 > **Duas armadilhas de verificação encontradas aqui, para não custarem tempo de novo:**
 > - **A rota pública de documento é `/api/library/documents/{slug}`** — não `/api/biblioteca/{slug}`,
 >   que não existe e devolve **404** para qualquer slug, inclusive os que estão no ar. Um 404 aí
