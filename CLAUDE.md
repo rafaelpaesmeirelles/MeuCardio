@@ -64,6 +64,26 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### 📌 Para a sessão de Medicamentos — bula brasileira do ENTRESTO (sacubitril-valsartana) existe e não está em `content/Farmacologia/sacubitrilvalsartana.md`, 31/07/2026
+> Achado com peso maior que o normal: este fármaco é a **referência citada em dezenas de outros
+> verbetes de IECA/BRA deste acervo** (janela de 36h, contraindicação de uso concomitante) — todos
+> apontando para o mesmo rótulo do FDA porque, até agora, ninguém tinha achado a bula brasileira.
+>
+> Ao revisar `medicamentos/metadados.json` (slug `sacubitrilvalsartana`, commit `b24db64`), baixei
+> a bula profissional brasileira do ENTRESTO (Novartis Biociências, via consultaremedios.com.br) —
+> `content/Farmacologia/sacubitrilvalsartana.md` registra explicitamente *"este fármaco não tem
+> bula do detentor do registro no Brasil disponível nos espelhos consultados em 31/07/2026"*;
+> apareceu.
+>
+> A bula confirma os números já usados por toda a biblioteca (janela de 36h, contraindicação de
+> IECA concomitante, alisquireno em diabético) — não há contradição nos pontos mais citados por
+> outros verbetes. Duas lacunas na lista de contraindicações da prosa, mesmas que corrigi no JSON:
+> falta **angioedema hereditário ou idiopático** (item formal do rótulo brasileiro, distinto de
+> "história de angioedema por IECA/BRA prévio", que a prosa já tem); e falta a **categoria de
+> risco D** na gravidez, que a prosa lista sem letra. Não editei
+> `content/Farmacologia/sacubitrilvalsartana.md` — fora da minha faixa, mas sinalizo com destaque
+> pelo alcance deste verbete específico sobre o resto do acervo.
+
 > ### 🚨 URGENTE para a sessão de Medicamentos — `content/Farmacologia/rosuvastatina-calcica.md`: três bulas discordam se gravidez é categoria D (advertência) ou X (contraindicação formal), 31/07/2026
 > Achado sério, com peso direto sobre prescrição em mulher em idade fértil. A prosa foi revisada
 > hoje contra a **bula do genérico Novartis** e conclui: **item 4 formal = só hipersensibilidade e
