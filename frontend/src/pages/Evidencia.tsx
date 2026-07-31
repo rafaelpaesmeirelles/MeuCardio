@@ -26,8 +26,13 @@ const CERTEZA_POR_EXTENSO: Record<string, string> = {
   Alta: "alta", Mod: "moderada", Baixa: "baixa", MtBx: "muito baixa",
 };
 const rotuloClasse = (c: string) => (CLASSES_ESC.has(c) ? `Classe ${c}` : `Força ${c}`);
-const rotuloNivel = (n: string) =>
-  NIVEIS_LETRA.has(n) ? `Nível ${n}` : `Certeza ${CERTEZA_POR_EXTENSO[n] ?? n}`;
+const rotuloNivel = (n: string) => {
+  // "?" é usado quando a classe foi confirmada mas a letra do nível não pôde ser
+  // lida na fonte original (hoje: uma recomendação da AHA 2009 atrás de paywall).
+  // Mostrar "Nível ?" ou "Certeza ?" não diz nada ao leitor — melhor ser explícito.
+  if (n === "?") return "Nível não confirmado";
+  return NIVEIS_LETRA.has(n) ? `Nível ${n}` : `Certeza ${CERTEZA_POR_EXTENSO[n] ?? n}`;
+};
 
 export default function Evidencia() {
   const { slug } = useParams();
