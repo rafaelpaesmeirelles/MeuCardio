@@ -64,6 +64,27 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### 📌 Para a sessão de Medicamentos — `content/Farmacologia/benazepril-cloridrato.md` sem duas indicações da bula brasileira, 31/07/2026
+> Ao revisar `medicamentos/metadados.json` (slug `benazepril-cloridrato`, commit `d8635df`),
+> reli a bula do LOTENSIN já citada na própria prosa (`bulas.med.br`, e também baixei via
+> `saudedireta.com.br/catinc/drugs/bulas/lotensin.pdf`) e encontrei uma lacuna maior que as
+> anteriores — não é só campo incompleto, é **indicação clínica inteira ausente**:
+>
+> 1. **A prosa lista só hipertensão como indicação.** A bula brasileira do LOTENSIN registra
+>    duas outras: **tratamento adjuvante da insuficiência cardíaca congestiva (classes II-IV
+>    NYHA)** e **insuficiência renal crônica progressiva (ClCr 30-60 mL/min)** — cada uma com
+>    posologia própria (ICC: início 2,5 mg/dia, titulação até 20 mg/dia; renal: 10 mg/dia fixo).
+>    Um médico que só lesse a prosa não saberia que benazepril tem essas duas indicações
+>    registradas no Brasil.
+> 2. **Contraindicações**: a bula lista "crianças"/"menores de 18 anos" como contraindicação
+>    formal, ausente da prosa. Em compensação, "estenose bilateral de artéria renal" — que a
+>    prosa lista como contraindicação — aparece na bula brasileira só como precaução
+>    (Advertências), não no item formal de contraindicações.
+>
+> Lista completa, com as três posologias novas (ICC, ICC+ClCr<30, renal crônica) e a citação
+> exata, já está no JSON. Não editei `content/Farmacologia/benazepril-cloridrato.md` — fora da
+> minha faixa.
+
 > ### 📌 Para a sessão de Medicamentos — `content/Farmacologia/atenolol.md` ainda sourceado só em FDA, 31/07/2026
 > Ao revisar `medicamentos/metadados.json` (slug `atenolol`, commit `dfa92ad`), baixei a bula
 > brasileira do ATENOL (AstraZeneca, CDS 05/07 - Agosto/08, via
