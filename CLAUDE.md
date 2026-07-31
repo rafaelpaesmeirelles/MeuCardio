@@ -807,10 +807,30 @@ publicada em toda a base** é a evidência de febre reumática, retida de propó
 > Academic. Também não há diretriz brasileira de febre reumática em acesso aberto nos
 > Arquivos Brasileiros de Cardiologia que resolvesse o ponto (a busca no PMC devolve
 > só artigos originais, não a diretriz).
-> **Resolver isso exige acesso pago ao Circulation, ou o Rafael abrir o PDF.** Até lá,
-> a conduta correta é a atual: manter `pendente_revisao`, não publicar, e não
-> preencher a letra por analogia — é o único registro do acervo inteiro nessa
-> situação, e ele está assim porque a régua funcionou, não porque foi esquecido.
+> **Resolver isso exige acesso pago ao Circulation, ou o Rafael abrir o PDF.**
+>
+> **ATUALIZAÇÃO — o statement foi validado, a LETRA continua pendente.** Em 31/07/2026
+> a sessão de Medicamentos conseguiu acessar o Circulation 2009 e conferiu o **texto**
+> da recomendação contra a fonte, marcando o registro como `revisado` com `review_note`
+> detalhada, e publicou. O `evidence_level` segue `"?"`, e a marcação de
+> `VERIFICAÇÃO HUMANA NECESSÁRIA` na `reference` **continua válida** — o que falta é a
+> letra, não o conteúdo. Para o assinante, a tela agora mostra **"Nível não
+> confirmado"** em vez de "Certeza ?", ajuste feito em `Evidencia.tsx`.
+>
+> #### 📕 A diretriz brasileira de febre reumática EXISTE — e está inacessível
+> Buscada a pedido do Rafael em 31/07/2026. **Referência completa, para quem tiver
+> acesso:** *Diretrizes brasileiras para o diagnóstico, tratamento e prevenção da febre
+> reumática* (SBC/SBP/SBR). **Arq Bras Cardiol. 2009;93(3 supl. 4):3-18. PMID 20976376.
+> PII SciELO S0066-782X2009002100001.**
+> **Vias tentadas e todas fechadas:** não está no PMC (busca por PMID não retorna);
+> `scielo.br` devolve **403 com desafio de segurança**, tanto por `curl` com
+> User-Agent de browser quanto por WebFetch; `publicacoes.cardiol.br` **redireciona
+> para a home** (o link direto do PDF não existe mais); e `abccardiol.org` não tem o
+> artigo, por ser anterior à plataforma atual.
+> **Consequência:** o exame de diagnóstico laboratorial da faringite estreptocócica
+> (cultura de orofaringe e teste rápido de antígeno) **segue sem cadastrar**, por falta
+> de fonte primária acessível — não por esquecimento. Quem conseguir o PDF resolve
+> duas coisas de uma vez: esse exame e, possivelmente, a letra do nível acima.
 
 **Armadilha do `import_directory` observada três vezes hoje:** ele devolveu
 `novos: 2` para 3 documentos, `novos: 1` para 2 e `novos: 0` para 1 — porque a
