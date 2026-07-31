@@ -29,9 +29,16 @@ Inibe a polimerização de tubulina em microtúbulos, interferindo na ativação
 
 ## Ajuste renal e hepatico
 
-**O que está confirmado por bula, e é pouco:** aumentar o **intervalo entre as doses** em paciente crônico cuja **taxa de filtração glomerular seja inferior a 10 mL/min**; **reduzir a dose** se surgir debilidade muscular, náusea, vômito ou diarreia, que são os primeiros sinais de superdosagem; e avaliar com atenção os casos de insuficiência renal ou hepatobiliar.
-- **fonte**: bula do COLCHIS (colchicina, Apsen), seções de posologia e de precauções e advertências, conferida em 29/07/2026
+**Atualizado em 31/07/2026** — a mesma bula do COLCHIS (colchicina, Apsen) tem uma seção de posologia com faixas por TFG que uma leitura anterior não havia capturado (o documento repete parte do conteúdo duas vezes ao longo das 26 páginas, o que provavelmente explica a lacuna):
+
+- **TFGe 30-59 mL/min (insuficiência renal moderada)**: 0,5 mg 1x/dia
+- **TFGe 15-29 mL/min (insuficiência renal grave)**: 0,5 mg a cada 2 ou 3 dias
+- **TFGe <15 mL/min**: contraindicada
+- **reduzir a dose** se surgir debilidade muscular, náusea, vômito ou diarreia — primeiros sinais de superdosagem
+- **fonte**: bula do COLCHIS (colchicina, Apsen), seção de posologia, conferida na íntegra em 31/07/2026 (uploads.consultaremedios.com.br/drug_leaflet/pro/Bula-Colchis-Profissional-Consulta-Remedios.pdf)
+
+Isto substitui a leitura anterior deste documento ("aumentar o intervalo entre doses só abaixo de TFG 10 mL/min"), que capturava só parte da seção de posologia da mesma bula.
 
 **Interações:** a colchicina depende da CYP3A4 e da glicoproteína P, e o uso com inibidores dessas vias eleva o risco de toxicidade. Confirmado pelo outro lado: a bula brasileira do DILACORON (verapamil) **não recomenda** a associação com colchicina.
 
-**Resolvido parcialmente em 29/07/2026** com o rótulo da colchicina aprovado pelo FDA (indicação de febre familiar do Mediterrâneo, que é a que traz o ajuste renal detalhado por faixa): os valores de 0,5 mg/dia e 0,6 mg/dia que circulavam aqui, vindos de site de respostas geradas por IA, **não foram confirmados** — o rótulo não fixa número para insuficiência renal leve (ClCr 50-80 mL/min) nem moderada (ClCr 30-50 mL/min), só manda monitorar de perto e reduzir a dose se necessário, sem quantificar. O valor de **0,3 mg/dia confere, mas com recorte diferente do que constava aqui**: o rótulo do FDA usa esse número como **dose inicial na insuficiência renal grave (ClCr <30 mL/min) e em diálise** — não como dose fixa da "doença renal terminal" em dias alternados. A bula brasileira do COLCHIS usa um critério próprio e mais simples (intervalo maior entre doses só abaixo de ClCr 10 mL/min), que **diverge** do corte por faixas do rótulo americano — as duas fontes não descrevem o mesmo esquema, e essa divergência fica registrada, não resolvida por escolha de uma sobre a outra.
+**Comparação com o rótulo do FDA** (indicação de febre familiar do Mediterrâneo, que traz ajuste renal por ClCr): a estrutura agora é semelhante entre as duas fontes — esquema em faixas por função renal, mais restritivo nas faixas piores —, mas os cortes numéricos e as doses fixas ainda diferem (o FDA usa ClCr <30 mL/min e diálise como corte para 0,3 mg/dia inicial; a bula brasileira usa TFGe 15-29 para 0,5 mg a cada 2-3 dias e contraindica abaixo de 15). Não é mais divergência sem nenhuma estrutura comum, mas os números não são intercambiáveis entre as duas bulas — usar a que corresponde à indicação/registro em uso.
