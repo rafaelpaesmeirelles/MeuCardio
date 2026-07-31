@@ -4782,5 +4782,103 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "teste-ergometrico-na-doenca-arterial-periferica-para-quantificar-isquemia",
+    "statement": "Na doença arterial periférica, o teste ergométrico é RECOMENDADO para avaliar a claudicação, quantificar a isquemia, estratificar o risco e apoiar a decisão terapêutica. Junto com a indicação de capacidade funcional e prescrição de exercício, é uma das DUAS ÚNICAS recomendações Classe I entre as várias condições clínicas dessa tabela — um uso do teste que costuma ser esquecido, porque se associa o exame à investigação coronariana.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024 (Sociedade Brasileira de Cardiologia)",
+    "reference": "Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024 — texto integral em acesso aberto (PMC11656589), tabela de indicações do teste ergométrico em outras condições clínicas reconhecidas, conferida linha a linha em 31/07/2026",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "teste ergométrico",
+      "doença arterial periférica",
+      "claudicação",
+      "quantificação de isquemia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "teste-ergometrico-na-dap-para-capacidade-funcional-e-prescricao-de-exercicio",
+    "statement": "Na doença arterial periférica, o teste ergométrico é RECOMENDADO (Classe I, Nível B) para avaliar a capacidade funcional e para prescrever e adequar programa de exercícios físicos. Isso dá suporte objetivo ao exercício supervisionado, que o ensaio CLEVER — cadastrado na frente de Estudos desta base — comparou ao stent na claudicação aortoilíaca.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024 (Sociedade Brasileira de Cardiologia)",
+    "reference": "Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024 — texto integral em acesso aberto (PMC11656589), tabela de indicações do teste ergométrico em outras condições clínicas reconhecidas, conferida linha a linha em 31/07/2026",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "teste ergométrico",
+      "doença arterial periférica",
+      "exercício supervisionado",
+      "capacidade funcional",
+      "clever"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "teste-ergometrico-no-aneurisma-de-aorta-assintomatico-sem-criterio-de-intervencao",
+    "statement": "No aneurisma de aorta ou de outras artérias, ASSINTOMÁTICO e SEM critérios para intervenção, o teste ergométrico deve ser considerado para ajustes terapêuticos — por exemplo, otimização do tratamento anti-hipertensivo — e para liberação e prescrição de exercícios, incluindo reabilitação. As duas condições do enunciado são o que torna a indicação aceitável: aneurisma com indicação de intervenção figura entre as CONTRAINDICAÇÕES ABSOLUTAS do teste nesta mesma diretriz.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024 (Sociedade Brasileira de Cardiologia)",
+    "reference": "Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024 — texto integral em acesso aberto (PMC11656589), tabela de indicações do teste ergométrico em outras condições clínicas reconhecidas, conferida linha a linha em 31/07/2026",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "teste ergométrico",
+      "aneurisma de aorta",
+      "assintomático",
+      "prescrição de exercício",
+      "contraindicação"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "teste-ergometrico-na-coronaria-de-origem-anomala",
+    "statement": "Em assintomático com artéria coronária de ORIGEM ANÔMALA, o teste ergométrico deve ser considerado para estratificação de risco, definição de conduta terapêutica e liberação de exercícios físicos e atividades esportivas. Após correção cirúrgica, e permanecendo assintomático, a diretriz o considera 3 MESES depois para liberação de exercício (IIa, C) — o prazo faz parte da recomendação.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024 (Sociedade Brasileira de Cardiologia)",
+    "reference": "Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024 — texto integral em acesso aberto (PMC11656589), tabela de indicações do teste ergométrico em outras condições clínicas reconhecidas, conferida linha a linha em 31/07/2026",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "teste ergométrico",
+      "anomalia coronariana",
+      "origem anômala",
+      "liberação esportiva",
+      "estratificação de risco"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "teste-ergometrico-no-adulto-com-cardiopatia-congenita-estavel",
+    "statement": "No adulto com cardiopatia congênita clinicamente estável, em classe funcional I ou II, o teste ergométrico pode ser considerado para prescrição e adequação de programa de exercícios — Classe IIb, Nível B. Note a diferença de finalidade em relação ao teste cardiopulmonar nessa mesma população, cadastrado como documento nesta base: o TCPE serve para interpretar capacidade funcional e prognóstico ao longo da vida, enquanto aqui a indicação é especificamente prescrever exercício em quem está estável.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024 (Sociedade Brasileira de Cardiologia)",
+    "reference": "Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024 — texto integral em acesso aberto (PMC11656589), tabela de indicações do teste ergométrico em outras condições clínicas reconhecidas, conferida linha a linha em 31/07/2026",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "teste ergométrico",
+      "cardiopatia congênita do adulto",
+      "prescrição de exercício",
+      "classe funcional"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
