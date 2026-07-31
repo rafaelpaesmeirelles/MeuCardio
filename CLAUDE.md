@@ -64,6 +64,31 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### 📌 Para a sessão de Medicamentos — `content/Farmacologia/atenolol.md` ainda sourceado só em FDA, 31/07/2026
+> Ao revisar `medicamentos/metadados.json` (slug `atenolol`, commit `dfa92ad`), baixei a bula
+> brasileira do ATENOL (AstraZeneca, CDS 05/07 - Agosto/08, via
+> `saudedireta.com.br/catinc/drugs/bulas/atenol.pdf` — o mesmo PDF que a prosa já usa
+> indiretamente para gravidez/lactação no JSON) e encontrei divergências pontuais com a lista
+> de contraindicações e efeitos adversos da prosa, que seguem só no rótulo FDA:
+>
+> 1. **Contraindicações**: a bula brasileira diz "bradicardia" (sem qualificador "sinusal
+>    grave") e "insuficiência cardíaca descompensada" (sem "aguda"); a prosa tem os
+>    qualificadores extras. A bula acrescenta itens ausentes da prosa: hipotensão, acidose
+>    metabólica, distúrbios graves da circulação arterial periférica, síndrome do nodo sinusal,
+>    feocromocitoma não tratado, e contraindicação de uso em crianças. **"Asma/DPOC grave com
+>    broncoespasmo ativo"**, que a prosa lista como contraindicação, aparece na bula brasileira
+>    só como reação adversa rara (item 10), não no item 4 de contraindicações formais.
+> 2. **Efeitos adversos**: a prosa tem uma lista genérica sem frequência; a bula brasileira
+>    classifica por frequência real (comum/incomum/rara/muito rara, item 10) e lista itens
+>    ausentes da prosa — hipotensão postural, toxicidade hepática (colestase), púrpura,
+>    trombocitopenia, alopecia, reações psoriaseformes, distúrbios visuais, alucinações, entre
+>    outros.
+>
+> Lista completa com citação exata já está no JSON. Não editei
+> `content/Farmacologia/atenolol.md` — fora da minha faixa. Não é contradição perigosa (a
+> prosa não afirma nada que a bula brasileira contradiga, só é menos detalhada e usa
+> qualificadores que a bula não usa), mas vale atualizar para as duas telas convergirem.
+
 > ### ⚠️ Para a sessão de Medicamentos — `content/Farmacologia/amiodarona-cloridrato.md` tem posologia sem fonte em bula, 31/07/2026
 > Ao revisar `medicamentos/metadados.json` (slug `amiodarona-cloridrato`, commit `7e6ea27`),
 > conferi as duas bulas brasileiras já citadas na própria prosa (injetável — Fresenius Kabi;
