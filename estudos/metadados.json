@@ -2390,5 +2390,32 @@
     "review_status": "revisado",
     "published": false,
     "url": "https://doi.org/10.1016/j.jacc.2017.08.026"
+  },
+  {
+    "slug": "purcell-aspiracao-mecanica-percutanea-versus-cirurgia-na-endocardite-tricuspide-associada-a-drogas",
+    "title": "Purcell et al. — Aspiração mecânica percutânea versus cirurgia valvar na endocardite tricúspide associada ao uso de drogas injetáveis",
+    "study_type": "estudo_de_coorte",
+    "authors": "Purcell M, Gnilopyat S, Makwana B, Narayanan S",
+    "journal": "Open Forum Infectious Diseases",
+    "year": 2025,
+    "doi": "10.1093/ofid/ofaf259",
+    "pmid": "40376191",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40376191/",
+    "summary": "Coorte retrospectiva multicêntrica construída a partir do TriNetX, rede federada de dados desidentificados de prontuário eletrônico: 97 organizações de saúde foram consultadas, 26 responderam com dados de pacientes, com período de retrospecto de 8 anos (2016 a 2024). Reuniu 1.081 pacientes com endocardite de valva tricúspide associada ao uso de droga injetável — 129 submetidos a aspiração mecânica percutânea (PMA, sistema de trombectomia por vácuo) e 952 a cirurgia valvar — e comparou desfechos em 30 dias e em 1 ano entre as duas estratégias, antes e depois de pareamento 1:1 por escore de propensão (nove características, incluindo idade, sexo, raça e comorbidades).",
+    "key_findings": "Antes do pareamento, a cirurgia teve menor mortalidade/parada cardíaca em 30 dias (2,5% contra 7,9% na PMA; p = 0,001), enquanto a PMA teve menos bloqueio atrioventricular/necessidade de marca-passo (0% contra 4%; p = 0,02) e menos infecção pós-procedimento (4,1% contra 8,3%; p = 0,04). Depois do pareamento por escore de propensão, a diferença de mortalidade/parada cardíaca em 30 dias deixou de ser significativa (8,5% na PMA contra 8,8% na cirurgia; p = 0,95), e a PMA manteve a vantagem de nenhum caso de bloqueio atrioventricular/marca-passo contra 11,2% na cirurgia. Em 1 ano, insuficiência cardíaca (14,4% contra 14,8%), regurgitação tricúspide (19,8% contra 20%) e oferta de tratamento para transtorno por uso de opioide (44,3% contra 41%) foram semelhantes entre os grupos.",
+    "clinical_implications": "É o dado comparativo mais robusto hoje disponível para posicionar a aspiração mecânica percutânea na endocardite tricúspide associada a drogas — citado, sem nome dos autores, no science advisory da AHA 2026 sobre a técnica como \"análise pareada por escore de propensão\" com desfechos comparáveis à cirurgia. Sustenta a PMA como alternativa razoável ao paciente de alto risco cirúrgico ou com resposta insuficiente ao antimicrobiano, mas não substitui ensaio randomizado: é estudo observacional retrospectivo, e a própria AHA 2026 reafirma que não existe nenhum ensaio clínico controlado sobre o tema.",
+    "limitations": "Delineamento observacional retrospectivo com dados administrativos de prontuário eletrônico (TriNetX), sujeito a viés de indicação e a confusão residual não capturada pelas nove variáveis do pareamento — pacientes encaminhados a cada estratégia podem diferir em características clínicas não mensuradas (gravidade da infecção, risco cirúrgico, adesão). Apenas 26 das 97 organizações consultadas responderam com dados, sem detalhamento do algoritmo de PMA usado em cada centro. Sem cegamento nem randomização; a vantagem da PMA em bloqueio atrioventricular é esperada pela própria natureza percutânea versus cirúrgica do procedimento, não necessariamente um ganho independente de eficácia terapêutica.",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite",
+      "valva tricúspide",
+      "aspiração mecânica percutânea",
+      "uso de droga injetável",
+      "cirurgia cardíaca",
+      "escore de propensão",
+      "coorte retrospectiva"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
