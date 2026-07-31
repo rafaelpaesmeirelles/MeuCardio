@@ -264,10 +264,60 @@ contra o `git log` do dia.
 > **Nota de faixa:** `evidencias/` e Febre reumática são da Biblioteca. Entrei porque o Rafael pediu
 > explicitamente, alterei **um campo de um registro** e commitei na mesma ação.
 >
-> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **65 documentos novos, todos publicados**
-> `content/*.md` de **424 para 497**; `documents` **497 total = 497 publicados**. **Acervo total:
-> 1.094** — **faltam 906 para os 2.000**. (Os números das frentes JSON e parte dos documentos
-> incluem o que a sessão da Biblioteca entregou no mesmo dia; os 65 acima são só desta sessão.)
+> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **75 documentos novos, todos publicados**
+> `documents` **508 total = 508 publicados**, zero chunks de não publicado na auditoria após cada
+> lote. (Parte dos 508 é da sessão da Biblioteca; os **75** acima são só desta sessão.)
+>
+> ### ⚡ Aceleração pedida pelo Rafael, 31/07/2026 à tarde — o que funcionou e o que não se aplicou
+> Ele pediu três táticas. Registro do resultado real, para a próxima sessão não repetir o teste:
+> 1. **Paralelizar com subagentes: FUNCIONOU MUITO BEM, com uma regra.** O subagente **só extrai
+>    fonte** — recebe a lista de ensaios, roda `esearch`/`efetch`/`esummary` e devolve o **abstract
+>    verbatim** mais autoria/revista/páginas. **Ele não escreve, não resume e não interpreta**; a
+>    verificação e a redação continuam sendo minhas. Com essa divisão o gargalo (I/O do PubMed)
+>    paraleliza sem abrir brecha na régua de qualidade — 3 agentes por rodada renderam material
+>    para 3-5 documentos de uma vez. **O prompt precisa dizer explicitamente "se o título retornado
+>    não bater com o ensaio pedido, responda NÃO ENCONTRADO em vez de chutar"** — sem isso, o risco
+>    de PMID errado volta pela porta dos fundos.
+> 2. **Minerar a fonte até o fim: já era o padrão** — cada documento aqui nasce de 2 a 4 ensaios
+>    lidos na mesma passada, e não se volta à mesma fonte depois.
+> 3. **`pdftotext -layout`: já instalado** (`/usr/bin/pdftotext`), nada a fazer.
+>
+> **Duas frentes do pedido NÃO são desta sessão e por isso não foram tocadas:** `galeria`,
+> `evidencias` e `estudos`, e os temas **Pericárdio** e **Febre reumática**, todos da faixa da
+> sessão da Biblioteca pela divisão de 29/07/2026. Escrever lá sobrescreveria o trabalho delas —
+> os JSON são reescritos inteiros a cada gravação.
+>
+> ### 🔎 O critério de varredura que rendeu os 10 últimos documentos — vale continuar usando
+> Nasceu no lote 36 e virou método. **Procure ensaios pivotais que só aparecem em
+> `content/Farmacologia/*.md`** (verbete de fármaco) e **nunca ganharam o documento da doença**.
+> Script que faz isso: extrair acrônimos em maiúsculas dos arquivos de Farmacologia e testar quais
+> não aparecem em nenhum outro arquivo de `content/`. A varredura de 31/07 devolveu **204
+> acrônimos** nessa condição e produziu, direto dela, os documentos de PCSK9, dronedarona,
+> betabloqueadores/RALES/SRAA na ICFEr, DOAC no TEV agudo, riociguate, CAST/SWORD, DPP-4 e
+> hipolipemiantes não estatínicos. **A lacuna era estrutural, não de detalhe**: a biblioteca
+> descrevia a conduta dos quatro pilares da ICFEr sem citar em lugar nenhum CIBIS-II, MERIT-HF,
+> COPERNICUS, RALES, EMPHASIS-HF, CONSENSUS, SOLVD ou PARADIGM-HF. **Ainda há acrônimos na fila**
+> — MADIT-II, SCD-HeFT, COMPANION, DIG, ACCORD, VASST entre eles.
+>
+> **Lotes 37 a 46 — 10 documentos**, todos com números conferidos por E-utilities (`efetch` para o
+> resumo, `esummary` para autoria/páginas) e referências cruzadas conferidas no disco:
+> 37 **PCSK9** (FOURIER + ODYSSEY OUTCOMES) · 38 **dronedarona** (ATHENA/ANDROMEDA/PALLAS) ·
+> 39 **betabloqueadores na ICFEr** (CIBIS-II/MERIT-HF/COPERNICUS) · 40 **antagonistas
+> mineralocorticoides** (RALES/EMPHASIS-HF) · 41 **inibição do SRAA** (CONSENSUS/SOLVD/PARADIGM-HF)
+> · 42 **DOAC no TEV agudo** (AMPLIFY/EINSTEIN-PE/RE-COVER/HOKUSAI-VTE) · 43 **riociguate**
+> (PATENT-1/CHEST-1) · 44 **CAST e SWORD** · 45 **DPP-4** (SAVOR-TIMI 53/EXAMINE/TECOS) ·
+> 46 **hipolipemiantes não estatínicos** (IMPROVE-IT/CLEAR Outcomes/ORION).
+>
+> **Três regras de honestidade que estes lotes acrescentaram, e que valem para os próximos:**
+> - **Distinguir o tipo de desfecho, não só o resultado.** Os ORION reduzem LDL em ~50%, e os
+>   coprimários deles **são o LDL** — não evento cardiovascular. Isso foi para o corpo do texto **e
+>   para o `source_refs`**, porque a lista de opções de escalonamento esconde essa diferença.
+> - **Errata existente e não lida entra declarada.** HOKUSAI-VTE (NEJM 2014;370(4):390) e SWORD
+>   (Lancet 1996;348(9024):416) têm errata; nenhuma foi lida nesta redação, e os dois documentos
+>   dizem isso em vez de omitir.
+> - **Sinal de um ensaio não vira efeito de classe nem é descartado por conveniência.** A
+>   internação por IC da saxagliptina (HR 1,27, p=0,007) não foi reproduzida pelo TECOS (HR 1,00) —
+>   o documento afirma as duas coisas e não escolhe uma.
 >
 > **36º lote — 1 documento**: espironolactona como quarta droga na hipertensão resistente
 > (**PATHWAY-2**, PMID 26414968, em Hipertensão). O ensaio já existia no repositório, mas **só dentro
