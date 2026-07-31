@@ -2632,7 +2632,7 @@
   },
   {
     "slug": "milrinona",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Milrinona (lactato de milrinona)",
     "drug_class": "Inibidor da fosfodiesterase tipo 3 (inodilatador)",
     "mechanism": "Inibe a enzima PDE3, responsável pela degradação do AMPc em cardiomiócitos e músculo liso vascular; o acúmulo de AMPc aumenta a atividade da proteína quinase A, fosforilando canais de cálcio no retículo sarcoplasmático e aumentando a disponibilidade de cálcio no sarcômero — efeito inotrópico positivo. A maior recaptação de cálcio para o retículo sarcoplasmático também melhora o relaxamento miocárdico (efeito lusitrópico). Em vasos, causa vasodilatação (inodilatador), reduzindo pós-carga",
@@ -2651,10 +2651,26 @@
     },
     "references": [
       "Bula do profissional do PRIMACOR IV (lactato de milrinona, Sanofi), seção POSOLOGIA, conferida na íntegra em 29/07/2026",
-      "Muller-Beissenhirtz H et al. Dose regimen adjustment for milrinone in congestive heart failure patients with moderate and severe renal failure · PubMed 8583366 · https://pubmed.ncbi.nlm.nih.gov/8583366/"
+      "Muller-Beissenhirtz H et al. Dose regimen adjustment for milrinone in congestive heart failure patients with moderate and severe renal failure · PubMed 8583366 · https://pubmed.ncbi.nlm.nih.gov/8583366/",
+      "Bula profissional do PRIMACOR IV (lactato de milrinona), Sanofi — via saudedireta.com.br, seções CONTRAINDICAÇÕES, PRECAUÇÕES E ADVERTÊNCIAS e REAÇÕES ADVERSAS"
     ],
     "pregnancy": "**Só se o benefício justificar o risco fetal.** Não existem estudos adequadamente controlados em mulheres grávidas, e a bula não atribui letra de categoria. Fonte: bula do PRIMACOR IV (lactato de milrinona, Sanofi), seção \"Gravidez e lactação\".",
-    "lactation": "**Cautela — a excreção no leite não está bem estudada.** A bula é explícita quanto à lacuna, e não converte a incerteza em proibição: recomenda cautela na administração a lactantes. Fonte: bula do PRIMACOR IV (lactato de milrinona, Sanofi), seção \"Gravidez e lactação\"."
+    "lactation": "**Cautela — a excreção no leite não está bem estudada.** A bula é explícita quanto à lacuna, e não converte a incerteza em proibição: recomenda cautela na administração a lactantes. Fonte: bula do PRIMACOR IV (lactato de milrinona, Sanofi), seção \"Gravidez e lactação\".",
+    "contraindications": [
+      "Hipersensibilidade à milrinona ou a qualquer componente da formulação — único item formal do rótulo"
+    ],
+    "notes": {
+      "Precaucoes — nao contraindicacao formal": "A bula trata os itens abaixo como precaução/advertência, não proibição do item de contraindicações: (1) não substitui correção cirúrgica em valvulopatia obstrutiva aórtica ou pulmonar grave, ou estenose subaórtica hipertrófica — como outros inotrópicos/vasodilatadores, pode agravar a obstrução de fluxo; (2) uso na fase aguda pós-IAM não é recomendado (sem estudo controlado nesse cenário; risco de aumentar consumo miocárdico de O2) — não é proibição formal; (3) corrigir hipopotassemia antes ou durante o uso, pela associação com arritmia em paciente digitalizado; (4) monitorar de perto ritmo cardíaco, ECG, balanço hídrico, eletrólitos e função renal — potencial de arritmia supraventricular/ventricular, inclusive taquicardia ventricular não sustentada; (5) discreta redução do tempo de condução do nó AV — risco de aumentar resposta ventricular em flutter/FA não controlados; (6) sem experiência controlada além de 48h de infusão contínua (a bula ainda assim descreve uso de até 5 dias na prática, já registrado no campo `dosing`).",
+      "Uso pediatrico": "Segurança e eficácia não estabelecidas em menores de 18 anos — usar somente se o benefício potencial superar o risco. Trombocitopenia é mais comum em criança do que em adulto, e o risco aumenta com a duração da infusão. Fonte: bula profissional brasileira do PRIMACOR IV.",
+      "Ajuste renal — reforco": "A bula reforça explicitamente que é necessário ajuste de dose em dano renal — ver tabela completa no campo `renal_adjustment`."
+    },
+    "adverse_effects": [
+      "Comuns: cefaleia; atividade ectópica ventricular; taquicardia ventricular sustentada ou não sustentada; arritmia supraventricular; hipotensão",
+      "Pouco comuns: trombocitopenia; hipocalemia; tremor; fibrilação ventricular; angina/dor torácica; alteração de teste de função hepática",
+      "Muito raros: Torsades de Pointes; broncoespasmo; reação cutânea (rash); choque anafilático",
+      "Reação no local de infusão — monitorar para evitar extravasamento",
+      "A incidência de arritmia supra/ventricular não se relaciona com a dose nem com o nível plasmático de milrinona; arritmias com risco de vida associam-se a fatores de base como arritmia pré-existente, hipocalemia, nível anormal de digoxina e cateterização"
+    ]
   },
   {
     "slug": "mononitrato-de-isossorbida",
