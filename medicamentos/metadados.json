@@ -1747,18 +1747,24 @@
   },
   {
     "slug": "felodipino",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Felodipino",
     "drug_class": "Bloqueador de canal de cálcio diidropiridínico, geração intermediária, formulação de liberação prolongada",
     "mechanism": "Inibe a entrada transmembrana de íons cálcio extracelulares através das membranas do músculo liso vascular e miocárdico, sem alterar concentrações séricas de cálcio; resulta em inibição da contração do músculo liso cardíaco e vascular, dilatando artérias coronárias e sistêmicas principais, com consequente vasodilatação e redução de resistência periférica",
     "indications": [
-      "Hipertensão arterial (mono ou combinada), incluindo hipertensão sistólica isolada"
+      "Hipertensão arterial (mono ou combinada), incluindo hipertensão sistólica isolada",
+      "Angina do peito estável",
+      "**fonte**: bula do SPLENDIL (felodipino, AstraZeneca), item 1 — 'angina do peito estável' estava ausente deste campo, apesar de a posologia de angina já constar em `dosing`"
     ],
     "contraindications": [
-      "Hipersensibilidade a diidropiridinas",
-      "Insuficiência cardíaca descompensada aguda",
-      "IAM recente (<1 mês)",
-      "Angina instável"
+      "Hipersensibilidade ao felodipino ou a outros componentes da fórmula",
+      "Gravidez",
+      "Insuficiência cardíaca descompensada",
+      "Infarto agudo do miocárdio",
+      "Angina do peito instável",
+      "Obstrução hemodinamicamente significativa de valva cardíaca",
+      "Obstrução dinâmica do fluxo de saída do ventrículo esquerdo (ex.: cardiomiopatia hipertrófica obstrutiva)",
+      "**fonte**: bula do SPLENDIL (felodipino, AstraZeneca), item 4. **Corrigido em 31/07/2026**: 'IAM recente (<1 mês)' foi ajustado para 'infarto agudo do miocárdio' (redação literal da bula, sem o corte de tempo específico); acrescentadas obstrução valvar e obstrução dinâmica de via de saída (CMH obstrutiva), ausentes da lista anterior. A divergência sobre gravidez ser contraindicação formal (item 4) coexistindo com 'categoria C' no mesmo documento é da própria bula, já registrada em `pregnancy`"
     ],
     "adverse_effects": [
       "Cefaleia, rubor facial, edema periférico (dose-dependente, mais frequente que outros diidropiridínicos devido a maior seletividade vascular), palpitações, tontura, hiperplasia gengival (raro)"
