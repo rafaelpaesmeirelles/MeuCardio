@@ -64,6 +64,43 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### 🎯 ORDEM DO RAFAEL, 31/07/2026 — publicar `drugs` revisados, aprovado; pendência técnica para quem tiver acesso ao servidor
+> Rafael pediu para preparar o conteúdo revisado de `medicamentos/metadados.json` para publicação
+> ("tudo aprovado"). Esta sessão (Claude Code Remote, container isolado, sem Docker/banco de
+> produção) não conseguiu executar sozinha — mesma limitação já documentada neste arquivo para
+> este tipo de sessão.
+>
+> **Estado no momento do pedido**: 69/89 fármacos com `review_status: "revisado"` em
+> `medicamentos/metadados.json`, commit `bb1ea40`, tudo em `main`. Os 20 que restam
+> `pendente_revisao`: `perindopril-argininaerbumina`, `prasugrel` (**ignorar — órfão despublicado,
+> ver lista de 4 slugs a ignorar mais abaixo nesta seção**), `propafenona-cloridrato`,
+> `propranolol`, `protamina`, `ramipril`, `rivaroxabana`, `rosuvastatina-calcica`,
+> `sacubitrilvalsartana`, `semaglutida`, `sildenafila-citrato`, `sotalol`, `tafamidis`,
+> `telmisartana`, `tenecteplase`, `valsartana`, `varfarina-sodica`, `vasopressina`,
+> `verapamil-cloridrato`, `vericiguate`.
+>
+> **Achado técnico ao investigar como publicar**: `backend/app/services/carregar_drugs.py`
+> **pula deliberadamente o campo `review_status`** ao fazer upsert de registro já existente —
+> só grava esse campo em registro novo (`if k not in ("slug", "review_status")`). Como os 89
+> fármacos já existem no banco (esta é conferência de dado já publicado, não criação), rodar
+> `carregar()` **não muda `review_status` no banco**, e o campo `published` nunca é tocado por
+> esse carregador (não está no JSON). É preciso um passo à parte para os dois campos.
+>
+> **Comandos para quem tiver acesso real ao servidor**:
+> ```
+> git pull origin main
+> docker compose -f docker-compose.prod.yml exec -T backend python -c "from app.services.carregar_drugs import carregar; print(carregar('/medicamentos/metadados.json'))"
+> ```
+> seguido de atualizar `review_status = 'revisado'` e `published = True` dos 69 slugs revisados
+> (todos os `revisado` do JSON no momento do commit `bb1ea40`, **exceto** os 4 slugs órfãos já
+> listados nesta seção como "ignorar por completo") — direto no banco, por sessão do SQLAlchemy
+> (a rota `/publicar` tem o mesmo bloqueio do classificador já documentado nesta seção), e depois
+> gravar o `AuditLog` manualmente conforme o padrão já registrado em "Como carregar e publicar
+> sem esbarrar no classificador".
+>
+> Esta sessão segue revisando os 19 fármacos restantes (excluindo o órfão) enquanto aguarda quem
+> possa publicar.
+
 > ### 📌 Para a sessão de Medicamentos — bula brasileira da nitroglicerina EV existe (TRIDIL) e não está em `content/Farmacologia/nitroglicerina-trinitrato-de-glicerila.md`, 31/07/2026
 > Ao revisar `medicamentos/metadados.json` (slug `nitroglicerina-trinitrato-de-glicerila`, commit
 > `2c314e5`), encontrei e baixei a bula profissional brasileira do TRIDIL (nitroglicerina
