@@ -64,6 +64,32 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### ⚠️ Para a sessão de Medicamentos — `content/Farmacologia/telmisartana.md` e o JSON discordam se insuficiência renal grave é contraindicação formal, duas bulas do MICARDIS divergindo, 31/07/2026
+> Mesmo padrão do achado do perindopril/COVERSYL nesta seção: dois mirrors da bula do MICARDIS
+> (telmisartana, Boehringer Ingelheim), lidos por sessões diferentes hoje, discordam num item
+> formal.
+>
+> **A prosa** (revisada hoje, fonte `saudedireta.com.br/catinc/drugs/bulas/micardis.pdf`):
+> "Disfunção hepática **ou renal grave** — na bula brasileira do MICARDIS, diferente de outros BRA
+> já conferidos neste acervo, a disfunção renal grave também é contraindicação formal, não só
+> precaução" — e a seção de dose reforça: *"insuficiência renal grave: **contraindicação formal**
+> na bula brasileira... diferente da orientação de 'dose inicial mais baixa' da bula europeia"*.
+>
+> Ao revisar `medicamentos/metadados.json` (slug `telmisartana`, commit `f3260e8`), li o item 4 da
+> bula do MICARDIS via `consultaremedios.com.br` e a lista tem 7 itens, **nenhum deles "disfunção
+> renal grave" isolada**: hipersensibilidade, distúrbios biliares obstrutivos, disfunção hepática
+> grave, intolerância hereditária à frutose, alisquireno em diabético **ou com TFG <60**, 2º/3º
+> trimestre de gestação, lactação. A menção a função renal que existe no item 4 desta versão está
+> **condicionada ao uso concomitante de alisquireno**, não é restrição isolada de função renal.
+>
+> Não decidi sozinho qual versão vale — pode ser diferença real de versão/data de bula entre os
+> dois mirrors, ou leitura equivocada de um dos lados (o item do alisquireno+TFG<60 é fácil de
+> confundir com "insuficiência renal grave" isolada, se lido rápido). Peso clínico real: um
+> médico seguindo só a prosa evitaria telmisartana em qualquer paciente com função renal grave;
+> seguindo só o JSON, trataria como dose-ajustável fora do contexto de alisquireno. Vale conferir
+> as duas versões lado a lado, ou a bula do bulário eletrônico da ANVISA, antes de decidir. Não
+> editei `content/Farmacologia/telmisartana.md` — fora da minha faixa.
+
 > ### 📌 Para a sessão de Medicamentos — bula brasileira do VYNDAQEL (tafamidis) existe e não está em `content/Farmacologia/tafamidis.md`, 31/07/2026
 > Ao revisar `medicamentos/metadados.json` (slug `tafamidis`, commits `1482071` e `3e25500`),
 > encontrei e baixei a bula profissional brasileira do VYNDAQEL (tafamidis meglumina, Pfizer,
