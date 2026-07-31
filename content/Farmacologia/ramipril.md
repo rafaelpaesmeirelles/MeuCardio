@@ -3,8 +3,8 @@ title: "Ramipril"
 slug: ramipril
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
-source_refs: ["Ramipril — Bula Profissional Completa · Biosintética/Saúde Direta · https://www.saudedireta.com.br/catinc/drugs/bulas/ramiprilbiosintetica.pdf"]
+review_status: revisado
+source_refs: ["Ramipril — Bula Profissional Completa · Biosintética/Saúde Direta · https://www.saudedireta.com.br/catinc/drugs/bulas/ramiprilbiosintetica.pdf · reconferida na íntegra em 31/07/2026 — contraindicações e posologia por indicação confirmadas exatas"]
 legacy_source: "medicamentos/banco-de-medicamentos-ramipril-completo.md"
 ---
 

@@ -3,8 +3,8 @@ title: "Valsartana"
 slug: valsartana
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
-source_refs: ["Valsartana — Bula Profissional Completa · Medley/Sanofi-Aventis · https://www.saudedireta.com.br/catinc/drugs/bulas/valsartanamedley.pdf"]
+review_status: revisado
+source_refs: ["Valsartana — Bula Profissional Completa · Medley/Sanofi-Aventis · https://www.saudedireta.com.br/catinc/drugs/bulas/valsartanamedley.pdf · reconferida na íntegra em 31/07/2026, item Contraindicações — confirma exatamente hipersensibilidade e gravidez (bula do paciente acrescenta lactação)"]
 legacy_source: "medicamentos/banco-de-medicamentos-valsartana.md"
 ---
 
@@ -41,8 +41,13 @@ Comprimidos revestidos de 80, 160 e 320 mg
 14.703 pacientes pós-IAM com disfunção ventricular/IC; valsartana foi tão eficaz quanto captopril na redução de mortalidade por todas as causas (19,9% vs. 19,5%); combinação valsartana+captopril não agregou benefício e aumentou efeitos adversos
 
 ## Contraindicacoes
-- Hipersensibilidade
+**Confirmado em 31/07/2026 contra a bula da Medley** — o item técnico Contraindicações lista só
+dois itens:
+- Hipersensibilidade a valsartana ou a qualquer excipiente da formulação
 - Gravidez
+
+A bula do paciente (seção "Contraindicações e precauções", linguagem mais ampla) também
+contraindica o uso durante a **amamentação**, ainda que o item técnico formal não repita isso.
 
 ## Efeitos adversos
 Tontura postural/hipotensão ortostática, hipercalemia, neutropenia, disfunção renal (mais comum em IC), fadiga, edema
