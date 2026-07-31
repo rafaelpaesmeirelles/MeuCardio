@@ -1628,6 +1628,7 @@ uma frente livre em vez de negociar no meio do commit.
 | `evidencias/`, `estudos/`, `galeria/`, `exames/` | sessão da biblioteca | livre |
 | `controlados/`, `backend/app/**/receituario*`, `backend/app/services/classificacao_*`, CorvIA Mail (backend/frontend) | sessão da **Biblioteca** (passado pelo Rafael em 30/07/2026 — ver bloco no topo desta seção) | ocupado |
 | `CLAUDE.md`, `COBERTURA.md` | ambas | **editar só a própria seção**, e `git pull --rebase` antes |
+| `emergencia/`, `trilhas/`, `casos-clinicos/`, `checklists/`, `material-paciente/` | **sessão de Monitoramento** (esta sessão, pedido do Rafael em 01/08/2026 — "produza para todas as funções científicas do site") | **ocupado, 01/08/2026 — as cinco frentes estavam sem dono e sem nenhum item novo o dia inteiro** |
 
 **Regras que evitam colisão, todas aprendidas apanhando aqui:**
 
