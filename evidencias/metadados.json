@@ -4604,5 +4604,103 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "rm-cardiaca-em-troponina-elevada-com-coronarias-normais-na-suspeita-de-miocardite",
+    "statement": "A ressonância magnética cardíaca é recomendada na avaliação de paciente com elevação dos marcadores de necrose miocárdica e coronárias NORMAIS à angiografia. É a situação em que a coronariografia negativa deixa o caso sem diagnóstico, e a ressonância é o exame que o resolve — mesma lógica da recomendação de MINOCA já cadastrada nesta base a partir da diretriz de imagem cardiovascular.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, Moura LAZ, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID: 35830116 — Tabela 'Recomendações para o uso da ressonância magnética cardíaca na avaliação diagnóstica dos pacientes com suspeita de miocardite', conferida linha a linha no texto integral em acesso aberto (PMC9352123) em 31/07/2026.",
+    "theme": "Pericárdio",
+    "tags": [
+      "miocardite",
+      "ressonância magnética cardíaca",
+      "troponina elevada",
+      "coronárias normais",
+      "minoca"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "rm-cardiaca-na-cardiomiopatia-dilatada-com-suspeita-de-miocardite-cronica",
+    "statement": "A ressonância magnética cardíaca é recomendada em portador de cardiomiopatia dilatada com suspeita de miocardite de mais de 6 meses de evolução, com três objetivos declarados: auxiliar na investigação etiológica, excluir diagnósticos diferenciais e fornecer informação prognóstica. A miocardite não deixa de ser hipótese só porque o quadro deixou de ser agudo.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, Moura LAZ, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID: 35830116 — Tabela 'Recomendações para o uso da ressonância magnética cardíaca na avaliação diagnóstica dos pacientes com suspeita de miocardite', conferida linha a linha no texto integral em acesso aberto (PMC9352123) em 31/07/2026.",
+    "theme": "Pericárdio",
+    "tags": [
+      "miocardite crônica",
+      "cardiomiopatia dilatada",
+      "ressonância magnética cardíaca",
+      "investigação etiológica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "reavaliacao-por-rm-em-ate-4-semanas-apos-miocardite-de-risco-intermediario-ou-alto",
+    "statement": "Após o episódio agudo de miocardite, a reavaliação por ressonância magnética em ATÉ 4 SEMANAS deve ser considerada nos pacientes de risco prognóstico intermediário ou alto, com o objetivo de diferenciar uma evolução não complicada de um curso complicado. O prazo faz parte da recomendação — reavaliar tarde demais responde a outra pergunta.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, Moura LAZ, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID: 35830116 — Tabela 'Recomendações para o uso da ressonância magnética cardíaca na avaliação diagnóstica dos pacientes com suspeita de miocardite', conferida linha a linha no texto integral em acesso aberto (PMC9352123) em 31/07/2026.",
+    "theme": "Pericárdio",
+    "tags": [
+      "miocardite",
+      "reavaliação",
+      "ressonância magnética cardíaca",
+      "prognóstico",
+      "4 semanas"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "pet-fdg-e-galio-67-na-miocardite-tem-forcas-diferentes",
+    "statement": "Na avaliação diagnóstica da miocardite, o PET com 18F-FDG deve ser considerado (Classe IIa, Nível B), enquanto a cintilografia com Gálio-67 tem recomendação mais fraca (Classe IIb, Nível B). Os dois métodos de medicina nuclear não se equivalem nessa indicação, e nenhum deles alcança a força da ressonância magnética, que é Classe I nos cenários de troponina elevada com coronárias normais e de cardiomiopatia dilatada com suspeita de miocardite crônica.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, Moura LAZ, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID: 35830116 — Tabela 'Recomendações para o uso dos exames de medicina nuclear na avaliação diagnóstica dos pacientes com suspeita de miocardite', conferida linha a linha no texto integral em acesso aberto (PMC9352123) em 31/07/2026.",
+    "theme": "Pericárdio",
+    "tags": [
+      "miocardite",
+      "pet-fdg",
+      "cintilografia com gálio",
+      "medicina nuclear"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "sorologia-viral-de-rotina-nao-e-recomendada-na-miocardite",
+    "statement": "A investigação sorológica viral NÃO é recomendada na avaliação de rotina de todos os casos de miocardite — Classe III, Nível C. A pesquisa etiológica viral se faz no TECIDO, por biópsia endomiocárdica com análise de genoma viral, e não no soro. A diretriz abre exceção para situações específicas: investigação de Covid-19 em casos suspeitos é Classe I (Nível B), e a pesquisa dirigida em suspeita de etiologias específicas é Classe IIa (Nível C).",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, Moura LAZ, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID: 35830116 — Tabela 'Recomendações na avaliação laboratorial inicial da miocardite', conferida linha a linha no texto integral em acesso aberto (PMC9352123) em 31/07/2026.",
+    "theme": "Pericárdio",
+    "tags": [
+      "miocardite",
+      "sorologia viral",
+      "classe iii",
+      "biópsia endomiocárdica",
+      "covid-19"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
