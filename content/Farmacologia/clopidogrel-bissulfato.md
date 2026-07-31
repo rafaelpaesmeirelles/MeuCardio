@@ -4,7 +4,7 @@ slug: clopidogrel-bissulfato
 theme: "Farmacologia"
 kind: farmacologia
 review_status: revisado
-source_refs: ["Guia de medicamentos cardiovasculares: clopidogrel · Afya Cardiologia · https://portal.afya.com.br/cardiologia/bulario-clopidogrel", "Protocolo de uso de Clopidogrel · Secretaria de Saúde do DF · https://www.saude.df.gov.br/documents/37101/90213/Protocolo+de+Uso+de+Clopidogrel.pdf"]
+source_refs: ["Guia de medicamentos cardiovasculares: clopidogrel · Afya Cardiologia · https://portal.afya.com.br/cardiologia/bulario-clopidogrel", "Protocolo de uso de Clopidogrel · Secretaria de Saúde do DF · https://www.saude.df.gov.br/documents/37101/90213/Protocolo+de+Uso+de+Clopidogrel.pdf", "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826, Tabela S10 do material suplementar. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654"]
 legacy_source: "medicamentos/banco-de-medicamentos-clopidogrel.md"
 ---
 
@@ -28,7 +28,7 @@ Comprimidos de 75 mg
 ## Dose
 - **prevencao secundaria aterotrombotica**: 75 mg 1x/dia (estudo CAPRIE — Classe I, Nível B), como alternativa ao AAS em pacientes com IAM, AVC ou doença arterial periférica prévios
 - **angina instavel iamssst**: 300 mg VO de ataque, seguido de 75 mg 1x/dia, associado ao AAS, por 12 meses (estudo CURE — Classe IA)
-- **iam com supra st**: 300 mg VO de ataque, seguido de 75 mg 1x/dia, associado ao AAS (estudos CLARITY e COMMIT — Classe IA); em pacientes >75 anos, não administrar dose de ataque
+- **iam com supra st**: 300 mg VO de ataque, seguido de 75 mg 1x/dia, associado ao AAS (estudos CLARITY e COMMIT — Classe IA). **Em pacientes ≥75 anos, a dose de ataque não é suprimida — é reduzida a 75 mg**, seguida da manutenção habitual de 75 mg/dia: a primeira dose é igual à de manutenção, não é ausência de dose. É diferente de "não dar ataque nenhum". Fonte: diretriz ESC 2023 de síndromes coronarianas agudas, Tabela S10 do material suplementar (Byrne RA et al., PMID 37622654) — corrige a formulação anterior deste documento ("não administrar dose de ataque"), que podia ser lida como "não dar nada", quando na prática o paciente recebe 75 mg imediatamente
 - **angioplastia alto risco isquemico**: 600 mg VO de ataque, seguido de 150 mg/dia por 7 dias, e depois 75 mg 1x/dia, associado ao AAS (estudo CURRENT OASIS 7 — Classe IIa-B), em pacientes com alto risco isquêmico e baixo risco de sangramento
 - **fibrilacao atrial com contraindicacao anticoagulacao**: Em combinação com AAS 81-100 mg/dia para prevenção de AVC (estudo ACTIVE-A — Classe IIa, Nível B)
 - **fonte**: Afya Cardiologia — Bulário Clopidogrel
