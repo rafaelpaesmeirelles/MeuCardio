@@ -3665,7 +3665,7 @@
   },
   {
     "slug": "telmisartana",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Telmisartana",
     "drug_class": "Bloqueador do receptor de angiotensina II (BRA/ARA-II)",
     "mechanism": "Antagonista seletivo do receptor AT1 de angiotensina II; dose de 80mg inibe quase completamente os aumentos de PA induzidos pela angiotensina II",
@@ -3683,9 +3683,13 @@
       "- **Digoxina**: aumenta a concentração plasmática de digoxina (pico +49%, vale +20%) — monitorizar nível de digoxina ao iniciar, ajustar ou suspender a telmisartana - **Lítio**: aumento reversível da concentração de lítio, com relato de toxicidade - **AINE**: reduz o efeito anti-hipertensivo e aumenta risco de lesão renal - **IECA**: associação não recomendada — mesmo mecanismo, sem benefício adicional e mais efeito colateral - **Alisquireno**: contraindicado em diabético"
     ],
     "contraindications": [
-      "Gravidez",
-      "Insuficiência hepática grave/colestase biliar",
-      "Hipersensibilidade"
+      "Hipersensibilidade à telmisartana ou a excipiente da fórmula",
+      "Distúrbio biliar obstrutivo",
+      "Disfunção hepática grave",
+      "Intolerância hereditária rara à frutose",
+      "Uso concomitante de alisquireno em paciente diabético ou com TFG <60mL/min/1,73m²",
+      "Segundo e terceiro trimestres de gravidez",
+      "Lactação"
     ],
     "dosing": {
       "hipertensao habitual": "40 mg 1x/dia; em alguns pacientes 20mg pode ser eficaz",
@@ -3704,7 +3708,8 @@
     "references": [
       "Telmisartan tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 5743c58e-deab-ac93-e063-6294a90ac1eb",
       "Telmisartan — resumo das características do produto (EMA), consultado para a orientação europeia de ajuste renal",
-      "ONTARGET Investigators. Telmisartan, ramipril, or both in patients at high risk for vascular events. N Engl J Med. 2008;358(15):1547-1559. DOI: 10.1056/NEJMoa0801317"
+      "ONTARGET Investigators. Telmisartan, ramipril, or both in patients at high risk for vascular events. N Engl J Med. 2008;358(15):1547-1559. DOI: 10.1056/NEJMoa0801317",
+      "Bula profissional do MICARDIS (telmisartana), Boehringer Ingelheim do Brasil — via consultaremedios.com.br, item 4. CONTRAINDICAÇÕES conferido linha a linha"
     ],
     "pregnancy": "**Não iniciar na gravidez; não recomendada no primeiro trimestre e contraindicada no segundo e terceiro** — categoria de risco **C no primeiro trimestre e D no segundo e terceiro**. Diagnosticada a gravidez, interromper imediatamente e iniciar terapia alternativa. Estudos pré-clínicos com telmisartana **não indicaram efeito teratogênico**, mas em doses tóxicas demonstraram fetotoxicidade e risco ao desenvolvimento pós-natal da prole. Em humanos, a exposição a BRA no segundo e terceiro trimestres induz **fetotoxicidade** (redução da função renal, oligodrâmnio, retardo da ossificação) e **toxicidade neonatal** (falência renal, hipotensão, hipercalemia). Pacientes que planejem engravidar devem ter o tratamento substituído por anti-hipertensivo com perfil de segurança estabelecido na gestação. Ressalva de fonte, deliberada: o texto profissional obtido é o da **associação fixa telmisartana + hidroclorotiazida**, que separa os parágrafos por componente — o trecho acima é o do componente telmisartana; as letras C e D são atribuídas à associação. A bula da telmisartana isolada, em formato resumido, apenas registra a gravidez como contraindicada. Fontes: bula profissional do MICARDIS HCT (telmisartana + hidroclorotiazida, Boehringer Ingelheim), itens 4 e 5, e bula do MICARDIS (telmisartana).",
     "lactation": "**Contraindicada.** Não se sabe se a telmisartana é excretada no leite materno humano; **estudos em animais mostraram excreção no leite**. Mesma ressalva de fonte da seção de gravidez: o texto profissional é o da associação com hidroclorotiazida, e nela pesa também o fato de **as tiazidas serem excretadas no leite humano e poderem inibir a lactação** — esse segundo motivo é do componente diurético, não da telmisartana. Fontes: bula profissional do MICARDIS HCT (telmisartana + hidroclorotiazida, Boehringer Ingelheim) e bula do MICARDIS (telmisartana)."
