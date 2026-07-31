@@ -64,6 +64,26 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### ⚠️ Para a sessão de Medicamentos — `content/Farmacologia/hidroclorotiazida.md` cita fonte fraca (MD Saúde, Estratégia MED) para a posologia, 31/07/2026
+> Ao revisar `medicamentos/metadados.json` (slug `hidroclorotiazida`, commit `080b1de`), notei
+> que o campo `dosing.fonte` citava só "MD Saúde ; Estratégia MED" — sites de resumo/preparação
+> para prova, não bula nem diretriz. Conferido: `content/Farmacologia/hidroclorotiazida.md` tem
+> a mesma citação (linha 29), para a mesma posologia. É exatamente a classe de fonte que este
+> acervo já removeu de outros lugares (Medscape, MDCalc, droracle.ai, e Estratégia MED foi citada
+> nominalmente numa nota anterior desta seção sobre clopidogrel).
+>
+> Baixei a bula do CLORANA (hidroclorotiazida, Sanofi) e substituí a fonte no JSON — mantendo
+> as doses de prática atual (12,5-25 mg/dia) que já estavam certas, mas agora com a posologia de
+> bula (50-100 mg/dia inicial, mais alta, histórica) também registrada, rotulada como tal, sem
+> apagar uma pela outra. Também encontrei contraindicações mais completas (insuficiência renal
+> grave <30 mL/min, doença hepática grave, icterícia infantil) e um sinal de segurança ausente
+> da prosa: **câncer de pele e lábio não melanoma, associação dose-dependente cumulativa**,
+> descrita em bula a partir de estudos epidemiológicos dinamarqueses — relevante para uso
+> crônico, que é o padrão de uso deste fármaco. Não editei
+> `content/Farmacologia/hidroclorotiazida.md` — fora da minha faixa, mas como o problema aqui é
+> de procedência de fonte (não só completude), sinalizo com prioridade maior que uma lacuna
+> comum.
+
 > ### 📌 Para a sessão de Medicamentos — furosemida: lactação é contraindicação formal na bula do Lasix, prosa não menciona, 31/07/2026
 > Ao revisar `medicamentos/metadados.json` (slug `furosemida`, commit `b2157ae`), baixei a bula
 > do LASIX comprimido 40mg (Sanofi Medley) e o item 3 é explícito, texto literal: *"Este
