@@ -123,6 +123,49 @@ peça por peça, mesmo com o prazo apertado.
 > **Nenhuma pressa aqui autoriza pular verificação.** Prazo de 10 dias é apertado, mas errado e
 > rápido é pior que devagar e certo — um dado fabricado descoberto depois do lançamento custa mais
 > caro que um dia de atraso na meta de volume.
+>
+> ### ✅ Registro da sessão de MEDICAMENTOS, 31/07/2026 — 5 documentos novos, contra a meta de 102
+> Medido, não estimado: `import_directory()` devolveu **`novos: 5, atualizados: 3, inalterados: 421`**.
+> Os cinco entraram com `published = false`, **aguardando o aval do Rafael** (regra 5 da divisão de
+> trabalho). `AuditLog` gravado à mão, porque a rota HTTP foi contornada. Contagem de `content/*.md`
+> passa de **424 para 429**; total das nove frentes vai de 898 para **903** — faltam **97** para a meta.
+>
+> | Tema | Documento novo | Fontes (todas conferidas no registro do PubMed, não de memória) |
+> |---|---|---|
+> | Fibrilação atrial | FA subclínica detectada por dispositivo | NOAH-AFNET 6 (37622677), ARTESiA (37952132), metanálise de McIntyre (37952187) |
+> | Tromboembolismo | Terapia por cateter no TEP | PEERLESS (39470698), PEERLESS II (39132600), HI-PEITHO (35588898) |
+> | Arritmias | Ablação de TV — quando encaminhar | VANISH (27149033), VANISH2 (39555820), SURVIVE-VT (35422240), PARTITA (35369700) |
+> | Terapia intensiva | Cateter de artéria pulmonar no choque | ESCAPE (16204662), metanálise de Ortega-Hernández (41894663) |
+> | Hipertensão | AOS e hipertensão — quanto o CPAP baixa a pressão | HIPARCO (24327037), Bratton (26624827), SAVE (27571048) |
+>
+> **Método que rendeu, e vale repetir:** as buscas foram feitas pela **API E-utilities do PubMed**
+> (`esearch`/`efetch`/`esummary`), não por busca web. Ela devolve o registro canônico — título,
+> revista, volume, páginas, DOI, PMID, autores e resumo estruturado —, não é bloqueada, e permite
+> **conferir cada autor e cada número antes de escrever**. Dois erros reais foram pegos assim, e
+> ambos teriam virado fabricação publicada: um PMID chutado que era de outro ensaio (ECLS-SHOCK em
+> vez de NOAH-AFNET 6) e a autoria do PEERLESS II (é Giri J et al., não quem eu havia escrito).
+> **Nunca escrever PMID, DOI ou autoria de memória — custa uma chamada conferir.**
+>
+> **Três documentos existentes foram editados e reindexados no RAG** (`indexar_tudo()` não detecta
+> corpo editado, só documento novo — armadilha já registrada neste arquivo): `varfarina-sodica`,
+> `fibrilacao-atrial-diagnostico-e-manejo-esc-2024-via-af-care` e
+> `arritmias-ventriculares-e-prevencao-de-morte-subita-cardiaca-esc-2022`. Os três **já estavam
+> publicados**, então sem a reindexação a IA clínica continuaria citando o corpo antigo — no caso
+> da varfarina, uma contraindicação de lactação que não existe na bula vigente.
+>
+> **Duas lacunas foram descartadas de propósito, e é bom não refazê-las:** documento de **PCSK9**
+> (já coberto por `evolocumabe-e-alirocumabe-inibidores-de-pcsk9.md`, `inclisirana.md` e os dois
+> documentos de dislipidemia ESC/EAS 2025) e documento de **trombólise sistêmica no TEP** (o PEITHO
+> já está em profundidade dentro do documento da diretriz ESC 2019 do tema). Duplicar teria criado
+> duas versões do mesmo dado — o defeito "contradição entre telas" que a Fase B passou semanas
+> removendo.
+>
+> **Uma lacuna ficou BLOQUEADA por fonte, e continua valendo a pena:** **contracepção na mulher com
+> cardiopatia**, em Gravidez. É lacuna real (nenhum documento cobre) e de alto valor clínico, mas o
+> texto completo da ESC 2025 está inacessível — `academic.oup.com` devolve **403** tanto para o PDF
+> quanto para o DOI, e a versão HTML só entrega o índice (a seção é a **4.2.4 Contraception**, com a
+> **Table 8** de benefícios e riscos por método). Escrever sem ela seria escrever de memória. Quem
+> retomar: tentar PMC, a diretriz ESC 2018 (PMID 30165544) ou os critérios de elegibilidade da OMS.
 
 #### ✅ Sessão da BIBLIOTECA — fechamento de 31/07/2026: **17 itens novos**
 Contagem para a meta de 102, medida no disco (não estimada). Todos com
@@ -206,17 +249,34 @@ repositório, ao lado deste arquivo.
   deliberadas): `documents` 446/450 · `evidencias` 155/156 · `estudos` 76/76 · `galeria` 63/63 ·
   `exames` 60/60 · `drugs` 101/101 · `emergencia` 10/10 · `trilhas` 17/17 · `casos_clinicos` 5/5.
 
-**Três itens que continuam genuinamente em aberto — não tratar como resolvido nem arquivar:**
-1. **Varfarina/lactação.** O campo `lactation` de `medicamentos/metadados.json` (slug
-   `varfarina-sodica`) e a prosa (`content/Farmacologia/varfarina-sodica.md`) divergem sobre se
-   a bula do MAREVAN contraindica formalmente a lactação. Duas leituras independentes da mesma
-   bula (mirrors diferentes) chegaram a conclusões opostas; ninguém decidiu qual prevalece.
-   Reconferir contra o bulário eletrônico da ANVISA antes de publicar qualquer uma das duas
-   versões — os dois lados, com trecho citado de cada bula, estão no histórico.
-2. **Ácido bempedoico/Nustendi, lactação.** O JSON já foi corrigido para contraindicação formal
-   (bula brasileira do Nustendi confirma). Não está confirmado se
-   `content/Farmacologia/acido-bempedoico.md` foi atualizado para refletir isso — conferir antes
-   de assumir que está feito.
+**Dos três itens que estavam em aberto, dois foram FECHADOS em 31/07/2026 pela sessão de
+Medicamentos. Só o terceiro (Mail360) continua pendente.**
+
+1. ~~**Varfarina/lactação.**~~ **RESOLVIDO em 31/07/2026 — a prosa estava errada e foi
+   corrigida (commit `33836e6`).** A divergência era **versão de documento**, não erro de leitura
+   de nenhum dos dois lados. O mirror que sustentava a prosa (`saudedireta.com.br`) é uma bula
+   **anterior à RDC 47/2009** — seção grafada "Contra-indicações", bibliografia parada em
+   2000-2003, formato "Informações ao Paciente" — e **essa versão de fato lista "Lactantes"
+   entre as contraindicações formais**. A **versão vigente não lista**: carimbo de documento
+   `Marevan_AR070825`, FQM Farmoquímica, MS 1.0390.0147, com 12 contraindicações (nenhuma delas
+   lactação) e seção própria "Lactação (amamentação)" que orienta **monitorizar o lactente para
+   hematomas e sangramento**, não proibir. Conferido em **quatro mirrors independentes** do
+   documento atual (pharmadb, farmaindex, bula.com.br, cliquefarma), todos convergentes — a API
+   do bulário da ANVISA está atrás de Cloudflare e devolve 403, por isso a confirmação foi por
+   redundância de mirrors da versão vigente.
+   **O `medicamentos/metadados.json` já estava correto** (a correção da Biblioteca em 31/07
+   acertou) — nenhuma alteração foi necessária no JSON, e as duas telas agora concordam.
+   **Consequência clínica, que era o peso do item:** puérpera anticoagulada com varfarina **pode
+   amamentar**, com o lactente monitorizado. A prosa dizia o contrário.
+   **Lição que vale para as próximas bulas:** quando duas leituras da "mesma bula" discordarem,
+   **suspeite primeiro de versão fora de vigência** — o formato denuncia (numeração de itens
+   1-9 = RDC 47/2009, vigente; "Contra-indicações" com hífen e "Informações ao Paciente" =
+   anterior, não usar).
+2. ~~**Ácido bempedoico/Nustendi, lactação.**~~ **VERIFICADO em 31/07/2026 — já estava feito,
+   nada a fazer.** `content/Farmacologia/acido-bempedoico.md` (linha 45) **já** registra a
+   contraindicação formal na lactação, com o texto literal da bula brasileira do NUSTENDI e a
+   nota explícita de que isso reverte a leitura anterior baseada no RCM europeu. Prosa e JSON
+   concordam. O item pode sair da lista.
 3. **Credenciais do Mail360** (`MAIL360_CLIENT_ID`, `MAIL360_CLIENT_SECRET`,
    `MAIL360_REFRESH_TOKEN`). Testadas uma vez com sucesso contra a API real, mas não persistiram
    no `.env` de produção deste servidor. O login da caixa do CorvIA Mail continua bloqueado com
