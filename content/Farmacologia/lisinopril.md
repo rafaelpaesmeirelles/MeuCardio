@@ -25,11 +25,22 @@ Inibidor direto da ECA, não sendo pró-fármaco (diferente do enalapril) — n�
 - **icc**: Dose inicial 2,5mg/dia, aumentando no máximo 10mg a cada 2 semanas até dose mais alta tolerada, máximo 35mg/dia
 - **iam agudo**: Primeira dose 5mg, seguida de 5mg em 24h, 10mg em 48h, então 10mg 1x/dia; se PAS ≤120mmHg, iniciar com 2,5mg nos primeiros 3 dias
 - **complicacoes renais retinianas dm**: 10-20mg/dia
-- **pediatria 6 anos ou mais**: 0,07 mg/kg/dia (até 5mg), aumentar a intervalos de 1-2 semanas até máximo 0,61mg/kg ou 40mg/dia
-- **dose maxima na hipertensao**: 40 mg/dia. O rótulo manda iniciar com 10 mg e titular **até 40 mg** conforme a resposta pressórica; a versão anterior deste verbete trazia 80 mg/dia, o dobro
-- **Ajuste renal — ClCr 10-30 mL/min**: metade da dose inicial usual (hipertensão: 5mg; ICC: 2,5mg; IAM: 2,5mg)
-- **ajuste hemodialise**: É removido por hemodiálise; dose inicial 2,5mg/dia, máximo 40mg/dia
-- **fonte**: rótulo do lisinopril aprovado pelo FDA (DailyMed)
+- **pediatria 6 anos ou mais — divergência Brasil/EUA, registrada em 31/07/2026**: dose do rótulo do FDA, que reconhece uso pediátrico: 0,07 mg/kg/dia (até 5mg), aumentar a intervalos de 1-2 semanas até máximo 0,61mg/kg ou 40mg/dia. **A bula brasileira do ZESTRIL não reconhece uso pediátrico** — texto literal: "a segurança e a eficácia de ZESTRIL em crianças não foram estabelecidas". Uso em criança no Brasil, com este número, é off-label
+- **dose maxima na hipertensao, população geral — corrigido de novo em 31/07/2026**: a bula
+  brasileira do ZESTRIL tem os dois números, em seções diferentes, e nenhum invalida o outro —
+  a correção anterior (que trocou 80 por 40 mg/dia) aplicou o teto certo à população errada. Para
+  hipertensão geral: início 10 mg 1x/dia, manutenção usual 20 mg/dia, podendo titular até a
+  **dose máxima usada por longo prazo em estudos clínicos controlados de 80 mg/dia** (texto
+  literal da bula). Doses iniciais menores são necessárias em comprometimento renal, terapia
+  diurética não descontinuável, depleção de volume/sal e hipertensão renovascular
+- **Ajuste renal por ClCr (dose inicial, hipertensão)**: <10 mL/min (inclusive diálise) — 2,5
+  mg/dia; 10-30 mL/min — 2,5-5 mg/dia; 31-80 mL/min — 5-10 mg/dia. **Nesses pacientes** (função
+  renal reduzida), a titulação tem teto próprio de **40 mg/dia** — é este o número de 40 mg que
+  uma correção anterior havia generalizado para toda a população, por engano
+- **ajuste hemodialise**: É removido por hemodiálise; dose inicial 2,5mg/dia, dentro do teto de
+  40mg/dia da população renal
+- **fonte**: bula do ZESTRIL (item 6, Posologia), reconferida em 31/07/2026; rótulo do
+  lisinopril aprovado pelo FDA (DailyMed), para as demais indicações abaixo
 
 ## Monitorizacao
 Função renal periodicamente. Potássio sérico (aumento médio de ~0,1 mEq/L em monoterapia, mas até 15% dos pacientes tem elevação > 0,5 mEq/L). Pressão arterial após o início, sobretudo em quem já usa diurético. Sinais de icterícia ou disfunção hepática (rara, mas grave — colestase e falência hepática já descritas).
