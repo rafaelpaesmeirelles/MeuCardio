@@ -225,11 +225,21 @@ contra o `git log` do dia.
 > (RACE 35926542 e MR BPA 35926544, em Hipertensão pulmonar) e peso/condicionamento/exercício na FA
 > (LEGACY 25792361, CARDIO-FIT 26113406 e ACTIVE-AF 36752479, em Fibrilação atrial).
 >
-> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **27 documentos novos, todos publicados**
-> `content/*.md` de **424 para 453**. **Acervo total das nove frentes: 980** — **faltam 1.020 para
+> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **29 documentos novos, todos publicados**
+> `content/*.md` de **424 para 457**. **Acervo total das nove frentes: 990** — **faltam 1.010 para
 > os 2.000**, sem prazo fixo, conforme a decisão registrada na seção da META. (Os números das
 > frentes JSON e parte dos documentos incluem o que a sessão da Biblioteca entregou no mesmo dia; os
-> 27 acima são só desta sessão.)
+> 29 acima são só desta sessão.)
+>
+> **10º lote — 2 documentos**: anticoagulação no trombo de ventrículo esquerdo (metanálise em rede,
+> PMID 39297938, em Tromboembolismo) e controle pressórico na DRC estágios 3 a 5 (PMID 28873137,
+> em Hipertensão).
+>
+> **A correção do RAG segue se confirmando a cada lote:** neste, o `import_directory()` trouxe de
+> novo um documento da outra sessão junto com os meus dois; publiquei **só os meus**, o
+> `indexar_tudo()` indexou **2** (não 3), e a auditoria de trechos de não publicados deu **zero**.
+> Esse passou a ser o padrão de fechamento de lote desta sessão: importar, publicar apenas o que é
+> meu e verificado, indexar, e conferir a contagem de trechos órfãos de publicação.
 >
 > **8º lote — 2 documentos**: semaglutida na ICFEp com obesidade (STEP-HFpEF, PMID 37622681) e
 > tolvaptana na IC descompensada (EVEREST, PMID 17384437), escolhidos para o mesmo lote pelo
