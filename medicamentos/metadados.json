@@ -1,48 +1,61 @@
 [
   {
     "slug": "acido-acetilsalicilico-aas",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Ácido Acetilsalicílico (AAS)",
     "brand_names": [
       "Aspirina",
       "AAS",
+      "Aspirina Prevent",
       "Cardio AAS"
     ],
     "drug_class": "Antiplaquetário — inibidor irreversível da ciclo-oxigenase (mais antigo AINE em uso clínico)",
     "mechanism": "Inibição irreversível da ciclo-oxigenase-1 (COX-1) plaquetária por acetilação, bloqueando a síntese de tromboxano A2, um potente agonista de agregação plaquetária e vasoconstritor; efeito dura toda a vida útil da plaqueta (~7-10 dias), já que plaquetas não possuem núcleo para resintetizar a enzima",
     "presentations": [
-      "- **aas convencional**: 100 mg, 500 mg (comprimidos) - **cardio aas enterico**: 100 mg, 200 mg (revestimento entérico, redução de irritação gástrica) - **fonte**: DrConsulta ; SaudeDireta"
+      "**Aspirina Prevent (Bayer) — a apresentação de interesse cardiológico**: comprimidos revestidos com revestimento entérico (gastrorresistente), 100 mg (embalagens com 30 ou 100 comprimidos) e 300 mg (embalagem com 30 comprimidos). Não devem ser esmagados, quebrados ou mastigados em uso crônico — a exceção é a dose inicial no infarto agudo do miocárdio (ver posologia). **VERIFICAÇÃO HUMANA NECESSÁRIA**: a apresentação convencional (não entérica) de 100/500 mg, citada em fontes secundárias, não foi conferida contra bula própria nesta revisão — só a linha Aspirina Prevent (100 mg e 300 mg) foi verificada.",
+      "**fonte**: Bula do profissional de saúde, Aspirina® Prevent, Bayer S.A. (VE0123-CCDS10, aprovada pela ANVISA em 16/01/2023), seção Apresentações — conferida na íntegra em 31/07/2026."
     ],
     "indications": [
-      "Prevenção secundária pós-IAM/AVC/revascularização, SCA aguda (dose de ataque), dupla antiagregação plaquetária pós-SCA/stent, prevenção primária seletiva em pacientes de alto risco cardiovascular selecionados"
+      "Infarto agudo do miocárdio (dose inicial mastigada/mastigável para absorção rápida), antecedente de infarto do miocárdio, prevenção secundária de AVC, ataques isquêmicos transitórios (AIT), angina pectoris estável e instável, prevenção de tromboembolismo após cirurgia vascular ou intervenções, profilaxia de TVP/TEP, redução do risco de primeiro infarto do miocárdio."
     ],
     "contraindications": [
-      "Hipersensibilidade a salicilatos/AINEs",
-      "Sangramento ativo clinicamente significativo",
-      "Úlcera peptídica ativa",
-      "Asma induzida por AINE (broncoespasmo)",
-      "Crianças com infecção viral (risco de síndrome de Reye)"
+      "Hipersensibilidade ao ácido acetilsalicílico, a outros salicilatos ou a qualquer outro componente do produto",
+      "Histórico de asma induzida por salicilatos ou AINEs",
+      "Úlceras gastrintestinais agudas",
+      "Diátese hemorrágica",
+      "Insuficiência renal grave",
+      "Insuficiência hepática grave",
+      "Insuficiência cardíaca grave",
+      "Combinação com metotrexato em dose ≥15 mg/semana",
+      "Último trimestre de gravidez (categoria de risco D nesse período)"
     ],
     "adverse_effects": [
-      "Irritação/sangramento gastrointestinal (dose-dependente), broncoespasmo em pacientes sensíveis, tinnitus em doses altas (toxicidade salicílica)"
+      "Irritação/sangramento gastrointestinal (dose-dependente), broncoespasmo em pacientes sensíveis (asma preexistente, febre do feno, pólipos nasais ou doença respiratória crônica são fatores de risco), tinnitus em doses altas (toxicidade salicílica), aumento de sangramento perioperatório."
     ],
     "interactions": [
-      "Risco aumentado de sangramento com anticoagulantes, outros antiplaquetários, AINEs; AINEs não seletivos (ibuprofeno) podem interferir na ligação irreversível do AAS à COX-1 se administrados antes"
+      "**Contraindicada**: metotrexato em dose ≥15 mg/semana (aumento da toxicidade hematológica, por redução da depuração renal do metotrexato e deslocamento de sua ligação proteica pelos salicilatos).",
+      "**Requer precaução/monitorização**: metotrexato <15 mg/semana (mesmo mecanismo, risco menor); dipirona e AINEs como ibuprofeno/naproxeno (podem atenuar a inibição plaquetária irreversível do AAS, com possível limitação da proteção cardiovascular em uso simultâneo no mesmo dia); anticoagulantes, trombolíticos e outros inibidores da agregação plaquetária (aumento do risco de sangramento); AINEs (sinergismo para úlcera/sangramento gastrintestinal); ISRS (aumento do risco de sangramento gastrintestinal superior); digoxina (aumento da concentração plasmática por redução da excreção renal); antidiabéticos como insulina e sulfonilureias com AAS em dose alta (aumento do efeito hipoglicêmico); diuréticos com AAS em dose alta (redução da filtração glomerular); glicocorticoides sistêmicos, exceto hidrocortisona de reposição na doença de Addison (redução do salicilato plasmático durante o uso, risco de superdose de salicilato após suspender o corticoide); IECA com AAS em dose alta (redução da filtração glomerular e do efeito anti-hipertensivo); ácido valproico (aumento de toxicidade por deslocamento de ligação proteica); álcool (aumento de dano à mucosa gastrintestinal e do tempo de sangramento); uricosúricos como benzbromarona/probenecida (redução do efeito uricosúrico)."
     ],
     "dosing": {
-      "prevencao secundaria": "75-100 mg/dia (dose baixa) para uso crônico",
-      "sca dose ataque": "162-325 mg (mastigável/não entérico) para absorção rápida no contexto agudo",
-      "observacao": "Formulação com revestimento entérico não é recomendada para dose de ataque devido à absorção retardada"
+      "infarto agudo do miocardio": "Dose inicial de 100 a 300 mg assim que houver suspeita de infarto — por ser comprimido de revestimento entérico, **a dose inicial deve ser esmagada ou mastigada e engolida** para obter absorção rápida. Dose de manutenção de 100 a 300 mg/dia por 30 dias após o infarto; após esse prazo, considerar terapia adicional para prevenção de recorrência.",
+      "prevencao secundaria e demais indicacoes cardiovasculares": "100 a 300 mg por dia — mesma faixa para antecedente de infarto do miocárdio, prevenção secundária de AVC, AIT, angina pectoris estável e instável, e prevenção de tromboembolismo após cirurgia vascular.",
+      "profilaxia de tvp e tep": "100 a 200 mg/dia, ou 300 mg em dias alternados.",
+      "reducao do risco de primeiro infarto": "100 mg/dia, ou 300 mg em dias alternados.",
+      "modo de usar": "Via oral, de preferência pelo menos 30 minutos antes das refeições, com bastante água. Comprimidos gastrorresistentes não devem ser esmagados/mastigados em uso crônico (exceção: dose inicial no IAM, ver acima).",
+      "pediatria": "Segurança e eficácia não estabelecidas abaixo de 18 anos — não recomendado nessa faixa etária.",
+      "insuficiencia hepatica": "Contraindicado em insuficiência hepática grave; usar com cautela em insuficiência hepática não grave.",
+      "insuficiencia renal": "Contraindicado em insuficiência renal grave; usar com cautela em insuficiência renal não grave, pelo risco aumentado de dano renal/insuficiência renal aguda.",
+      "fonte": "Bula do profissional de saúde, Aspirina® Prevent, Bayer S.A. (VE0123-CCDS10, aprovada pela ANVISA em 16/01/2023), itens 4 (Contraindicações), 5 (Advertências e Precauções), 6 (Interações medicamentosas) e 8 (Posologia e Modo de Usar) — texto integral obtido e conferido em 31/07/2026, substituindo a bula do paciente usada na revisão anterior."
     },
     "notes": {
-      "Particularidade farmacocinetica": "Apesar da meia-vida plasmática curta (~20 minutos), o efeito antiplaquetário é prolongado devido à inibição irreversível e à ausência de síntese proteica nas plaquetas"
+      "Particularidade farmacocinetica": "Apesar da meia-vida plasmática curta (~20 minutos), o efeito antiplaquetário é prolongado devido à inibição irreversível e à ausência de síntese proteica nas plaquetas.",
+      "reye": "Não deve ser usado por crianças/adolescentes em quadro de infecção viral (varicela, influenza A/B) sem consulta médica prévia, pelo risco de síndrome de Reye — vômitos persistentes nesse contexto podem ser sinal de alerta."
     },
     "references": [
-      "Resumo de ácido acetilsalicílico (AAS): farmacologia e mais · Estratégia MED · https://med.estrategia.com/portal/conteudos-gratis/doencas/resumo-sobre-acido-acetilsalicilico-indicacoes-farmacologia-e-mais/",
-      "AAS: para que serve, bula, efeitos colaterais · Sara/ANVISA · https://www.sara.com.br/noticias/aas-bula-efeitos-colaterais-e-para-que-serve"
+      "Bula do profissional de saúde. Aspirina® Prevent (ácido acetilsalicílico). Bayer S.A. VE0123-CCDS10, aprovada pela ANVISA em 16/01/2023 — texto integral obtido e conferido em 31/07/2026."
     ],
-    "pregnancy": "**Contraindicado no último trimestre da gravidez** — consta entre as contraindicações formais, não entre as advertências. O motivo está na bula: no terceiro trimestre pode causar prejuízo sério à criança, **com risco especial às funções renal e cardiopulmonar, mesmo após dose única**, e à mãe, com prolongamento do trabalho de parto e aumento do tempo de sangramento.\n\nNo **primeiro e no segundo trimestres**, não deve ser administrado a menos que o médico considere claramente necessário. Em mulher que tenta engravidar ou está grávida há menos de 6 meses, **a dose e a duração devem ser as menores possíveis**.\n\nAtenção ao recorte: esta é a bula do AAS analgésico/anti-inflamatório. O uso cardiológico em dose baixa na pré-eclâmpsia tem recomendação própria de diretriz obstétrica, que **não** vem desta fonte e não está afirmada aqui. Bula da Aspirina (ácido acetilsalicílico, Bayer S.A.), seções de contraindicações e de gravidez e lactação. É a bula do PACIENTE — a do profissional não foi obtida.",
-    "lactation": "A bula orienta **solicitar orientação médica antes de usar** em quem está amamentando, sem trazer conduta mais específica nem dado de excreção no leite. Registrado assim, sem endurecer nem afrouxar o que o texto diz. Bula da Aspirina (ácido acetilsalicílico, Bayer S.A.), seções de contraindicações e de gravidez e lactação. É a bula do PACIENTE — a do profissional não foi obtida."
+    "pregnancy": "**Contraindicado no terceiro trimestre de gravidez** — categoria de risco D nesse período: risco de toxicidade cardiopulmonar fetal (constrição/fechamento prematuro do ducto arterioso, hipertensão pulmonar), disfunção renal fetal com oligoidrâmnios, prolongamento do sangramento materno e inibição das contrações uterinas (atraso/prolongamento do parto).\n\nNo **primeiro e segundo trimestres, categoria de risco C**: uso com cautela, só se realmente necessário, com a menor dose e duração possíveis — dados epidemiológicos não mostram associação com aumento de aborto, mas não excluem aumento de risco de gastrosquise; há relatos de constrição do ducto arterioso após tratamento no segundo trimestre (a maioria resolvida após interrupção), e monitoramento pré-natal da constrição ductal deve ser considerado após exposição a partir da 20ª semana gestacional.\n\n**fonte**: Bula do profissional de saúde, Aspirina® Prevent, Bayer S.A. (VE0123-CCDS10), item 5 (Advertências e Precauções, subitem Gravidez e lactação) — conferida em 31/07/2026, substituindo a bula do paciente usada na revisão anterior.",
+    "lactation": "Salicilatos e metabólitos passam para o leite materno em pequenas quantidades. Não foram observados até o momento efeitos adversos no lactente após uso eventual, e **em geral é desnecessário interromper a amamentação**. Com uso regular ou ingestão de altas doses, a amamentação deve ser **descontinuada precocemente**.\n\n**fonte**: Bula do profissional de saúde, Aspirina® Prevent, Bayer S.A. (VE0123-CCDS10), item 5 (Advertências e Precauções, subitem Gravidez e lactação) — conferida em 31/07/2026, substituindo a bula do paciente usada na revisão anterior."
   },
   {
     "slug": "acido-bempedoico",
