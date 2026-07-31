@@ -22,6 +22,26 @@ Redd RA et al. Leuk Lymphoma. 2023;64(14):2296-2305 (PMID 37798861). Análise co
 - **Hipertensão**: HR **0,40** (IC95% 0,27-0,61; p<0,001)
 - **Infecções**: HR **0,83** (IC95% 0,70-0,98; p=0,032)
 
+## O maior dos tres ensaios agrupados, na fonte primaria — elevate-rr
+*Acrescentado em 01/08/2026, conferido por E-utilities.* Byrd JC, Hillmen P, Ghia P, Kater AP, Chanan-Khan A, et al. **Acalabrutinib Versus Ibrutinib in Previously Treated Chronic Lymphocytic Leukemia: Results of the First Randomized Phase III Trial.** J Clin Oncol. 2021;39(31):3441-3452. DOI: 10.1200/JCO.21.01210. **PMID: 34310172**.
+
+**Por que vale ler a fonte primária do ELEVATE-RR, e não só a análise combinada:** ele é o **primeiro ensaio de fase III randomizado a comparar diretamente** um inibidor de BTK menos seletivo com um mais seletivo, e traz o número absoluto de fibrilação atrial, que a metanálise expressa apenas como razão de risco.
+
+- **Aberto, randomizado, de NÃO INFERIORIDADE**, em leucemia linfocítica crônica **previamente tratada**, com **del(17)(p13.1) ou del(11)(q22.3) confirmadas centralmente**
+- **533 pacientes**: acalabrutinibe 100 mg 2x/dia (n=268) vs. ibrutinibe 420 mg 1x/dia (n=265), até progressão ou toxicidade inaceitável
+- **Desfecho primário: não inferioridade da sobrevida livre de progressão**, avaliada por comitê independente
+- Seguimento mediano de **40,9 meses**
+
+- **Sobrevida livre de progressão: mediana de 38,4 meses nos DOIS braços** — HR **1,00** (IC95% 0,79-1,27). **Não inferioridade demonstrada**
+- **FIBRILAÇÃO ATRIAL/FLUTTER de qualquer grau: 9,4% com acalabrutinibe vs. 16,0% com ibrutinibe** — **p=0,02**
+- **Infecções de grau 3 ou maior: 30,8% vs. 30,0%**; **transformação de Richter: 3,8% vs. 4,9%** — comparáveis
+- **Sobrevida global: mediana não atingida em nenhum braço** — HR 0,82 (IC95% 0,59-1,15), com 63 (23,5%) e 73 (27,5%) óbitos
+- **Suspensão por evento adverso: 14,7% vs. 21,3%**
+
+**Conclusão literal dos autores:** nesta primeira comparação direta entre inibidores de BTK menos e mais seletivos na LLC, o acalabrutinibe demonstrou **sobrevida livre de progressão não inferior com menos eventos adversos cardiovasculares**.
+
+**O número prático:** **a diferença absoluta de fibrilação atrial é de 6,6 pontos percentuais** (16,0% para 9,4%) — cerca de **1 caso evitado a cada 15 pacientes** tratados com o fármaco mais seletivo, com eficácia oncológica equivalente.
+
 ## Conclusao do proprio estudo
 **"Zanubrutinibe e acalabrutinibe têm perfil de segurança favorável entre pacientes com malignidades de células B recidivadas/refratárias. Estes dados sustentam o uso de acalabrutinibe ou zanubrutinibe como inibidores de BTK preferenciais para as indicações aprovadas."**
 
