@@ -232,11 +232,20 @@ contra o `git log` do dia.
 > registro isto aqui porque a contagem antiga ainda aparece em vários pontos deste arquivo, e é
 > fácil confundir qual meta está em vigor.
 >
-> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **37 documentos novos, todos publicados**
-> `content/*.md` de **424 para 465**; `documents` **465 total = 465 publicados**. **Acervo total das
-> nove frentes: 1.011** — **faltam 989 para os 2.000**. (Os números das frentes JSON e parte dos
-> documentos incluem o que a sessão da Biblioteca entregou no mesmo dia; os 37 acima são só desta
+> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **39 documentos novos, todos publicados**
+> `content/*.md` de **424 para 467**; `documents` **467 total = 467 publicados**. **Acervo total das
+> nove frentes: 1.014** — **faltam 986 para os 2.000**. (Os números das frentes JSON e parte dos
+> documentos incluem o que a sessão da Biblioteca entregou no mesmo dia; os 39 acima são só desta
 > sessão.)
+>
+> **15º lote — 2 documentos**, o primeiro sob a autorização contínua: tratar hipertensão crônica
+> leve na gestação (CHAP, PMID 35363951, em Gravidez) e ivabradina na ICFEr (SHIFT, PMID 20801500).
+>
+> **O CHAP merece nota de método:** ele mostra a estrutura de resultado que **desfaz um dogma** — o
+> desfecho de eficácia melhorou **e** o desfecho de segurança que sustentava a conduta anterior
+> (restrição de crescimento fetal) **não se confirmou**. Uma coisa sem a outra não teria mudado a
+> prática. Quando um documento novo contrariar conduta estabelecida, é essa dupla evidência que
+> vale procurar antes de escrever.
 >
 > **14º lote — 2 documentos**: "pill in the pocket", cardioversão química ambulatorial na FA de
 > início recente (PMID 15575054), e exercício supervisionado na ICFEr (HF-ACTION, PMID 19351941 e
