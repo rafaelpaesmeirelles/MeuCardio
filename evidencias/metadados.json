@@ -8171,5 +8171,497 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "saa-angiotomografia-como-imagem-inicial",
+    "statement": "Na suspeita de síndrome aórtica aguda, a ANGIOTOMOGRAFIA é recomendada como imagem diagnóstica inicial, pela disponibilidade ampla, acurácia, rapidez e nível de detalhe anatômico. Ecocardiograma transesofágico e ressonância magnética são alternativas razoáveis (Classe IIa, C-LD).",
+    "recommendation_class": "I",
+    "evidence_level": "C-LD",
+    "society": "ACC/AHA",
+    "year": 2022,
+    "guideline_title": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease",
+    "reference": "Isselbacher EM, Preventza O, Black JH 3rd, Augoustides JG, Beck AW, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease: A Report of the American Heart Association/American College of Cardiology Joint Committee on Clinical Practice Guidelines. Circulation. 2022;146(24):e334-e482. DOI: 10.1161/CIR.0000000000001106. PMID: 36322642 — texto integral em acesso aberto (PMC9876736), tabelas de recomendação conferidas em 01/08/2026. A diretriz usa o sistema ACC/AHA, com classe grafada em algarismo arábico (1, 2a, 2b, 3) — aqui normalizada para I, IIa, IIb e III, que é a mesma escala — e níveis com sufixo (B-R randomizado, B-NR não randomizado, C-LD dados limitados, C-EO opinião de especialista), mantidos como no original.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "síndrome aórtica aguda",
+      "angiotomografia",
+      "diagnóstico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "saa-alvo-de-pressao-e-frequencia-cardiaca",
+    "statement": "Na síndrome aórtica aguda, o paciente deve ser tratado para PRESSÃO SISTÓLICA ABAIXO DE 120 mmHg — ou a menor pressão que mantenha perfusão adequada de órgãos-alvo — e para FREQUÊNCIA CARDÍACA ALVO DE 60 A 80 bpm. São os dois números que definem a terapia anti-impulso, e a ordem importa: o betabloqueador vem antes do vasodilatador.",
+    "recommendation_class": "I",
+    "evidence_level": "C-LD",
+    "society": "ACC/AHA",
+    "year": 2022,
+    "guideline_title": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease",
+    "reference": "Isselbacher EM, Preventza O, Black JH 3rd, Augoustides JG, Beck AW, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease: A Report of the American Heart Association/American College of Cardiology Joint Committee on Clinical Practice Guidelines. Circulation. 2022;146(24):e334-e482. DOI: 10.1161/CIR.0000000000001106. PMID: 36322642 — texto integral em acesso aberto (PMC9876736), tabelas de recomendação conferidas em 01/08/2026. A diretriz usa o sistema ACC/AHA, com classe grafada em algarismo arábico (1, 2a, 2b, 3) — aqui normalizada para I, IIa, IIb e III, que é a mesma escala — e níveis com sufixo (B-R randomizado, B-NR não randomizado, C-LD dados limitados, C-EO opinião de especialista), mantidos como no original.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "síndrome aórtica aguda",
+      "pressão arterial",
+      "frequência cardíaca",
+      "terapia anti-impulso"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "saa-betabloqueador-intravenoso-e-monitorizacao-invasiva",
+    "statement": "Na síndrome aórtica aguda é recomendado tratamento imediato com terapia anti-impulso e MONITORIZAÇÃO INVASIVA da pressão arterial por linha arterial, em ambiente de terapia intensiva, para reduzir o estresse de parede aórtica; o manejo inicial deve incluir BETABLOQUEADOR INTRAVENOSO, exceto se houver contraindicação. Bloqueador de canal de cálcio não di-hidropiridínico intravenoso é a alternativa para controle de frequência (Classe IIa, B-NR), e o vasodilatador intravenoso entra apenas SE a pressão não for controlada depois do betabloqueador (Classe I, C-LD).",
+    "recommendation_class": "I",
+    "evidence_level": "B-NR",
+    "society": "ACC/AHA",
+    "year": 2022,
+    "guideline_title": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease",
+    "reference": "Isselbacher EM, Preventza O, Black JH 3rd, Augoustides JG, Beck AW, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease: A Report of the American Heart Association/American College of Cardiology Joint Committee on Clinical Practice Guidelines. Circulation. 2022;146(24):e334-e482. DOI: 10.1161/CIR.0000000000001106. PMID: 36322642 — texto integral em acesso aberto (PMC9876736), tabelas de recomendação conferidas em 01/08/2026. A diretriz usa o sistema ACC/AHA, com classe grafada em algarismo arábico (1, 2a, 2b, 3) — aqui normalizada para I, IIa, IIb e III, que é a mesma escala — e níveis com sufixo (B-R randomizado, B-NR não randomizado, C-LD dados limitados, C-EO opinião de especialista), mantidos como no original.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "síndrome aórtica aguda",
+      "betabloqueador",
+      "linha arterial",
+      "terapia intensiva"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "him-tipo-a-ou-b-complicado-reparo-urgente",
+    "statement": "Hematoma intramural tipo A, ou tipo B COMPLICADO, deve receber reparo URGENTE. O hematoma tipo A não complicado tem indicação de reparo cirúrgico aberto imediato (Classe I, B-NR); apenas em risco operatório aumentado e sem achados de alto risco o manejo clínico expectante pode ser considerado (Classe IIb, C-LD).",
+    "recommendation_class": "I",
+    "evidence_level": "B-NR",
+    "society": "ACC/AHA",
+    "year": 2022,
+    "guideline_title": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease",
+    "reference": "Isselbacher EM, Preventza O, Black JH 3rd, Augoustides JG, Beck AW, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease: A Report of the American Heart Association/American College of Cardiology Joint Committee on Clinical Practice Guidelines. Circulation. 2022;146(24):e334-e482. DOI: 10.1161/CIR.0000000000001106. PMID: 36322642 — texto integral em acesso aberto (PMC9876736), tabelas de recomendação conferidas em 01/08/2026. A diretriz usa o sistema ACC/AHA, com classe grafada em algarismo arábico (1, 2a, 2b, 3) — aqui normalizada para I, IIa, IIb e III, que é a mesma escala — e níveis com sufixo (B-R randomizado, B-NR não randomizado, C-LD dados limitados, C-EO opinião de especialista), mantidos como no original.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "hematoma intramural",
+      "reparo urgente",
+      "complicado"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "him-tipo-b-nao-complicado-terapia-medica-inicial",
+    "statement": "No hematoma intramural tipo B NÃO COMPLICADO, a terapia médica é recomendada como estratégia inicial. Em zonas 2 a 5 com anatomia favorável, o reparo endovascular é razoável (Classe IIa, C-LD); com anatomia desfavorável, o reparo aberto (também IIa, C-LD); e com achados de imagem de alto risco, a intervenção pode ser razoável (Classe IIb, C-LD).",
+    "recommendation_class": "I",
+    "evidence_level": "B-NR",
+    "society": "ACC/AHA",
+    "year": 2022,
+    "guideline_title": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease",
+    "reference": "Isselbacher EM, Preventza O, Black JH 3rd, Augoustides JG, Beck AW, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease: A Report of the American Heart Association/American College of Cardiology Joint Committee on Clinical Practice Guidelines. Circulation. 2022;146(24):e334-e482. DOI: 10.1161/CIR.0000000000001106. PMID: 36322642 — texto integral em acesso aberto (PMC9876736), tabelas de recomendação conferidas em 01/08/2026. A diretriz usa o sistema ACC/AHA, com classe grafada em algarismo arábico (1, 2a, 2b, 3) — aqui normalizada para I, IIa, IIb e III, que é a mesma escala — e níveis com sufixo (B-R randomizado, B-NR não randomizado, C-LD dados limitados, C-EO opinião de especialista), mantidos como no original.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "hematoma intramural",
+      "tipo B",
+      "terapia médica",
+      "endovascular"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "him-criterios-de-complicacao-e-de-alto-risco-por-imagem",
+    "statement": "O hematoma intramural é considerado COMPLICADO na presença de: malperfusão, hematoma periaórtico, derrame pericárdico com tamponamento, dor persistente/refratária/recorrente ou ruptura. Os achados de imagem de ALTO RISCO têm cortes numéricos DIFERENTES por tipo: diâmetro aórtico máximo acima de 45 a 50 mm no tipo A e acima de 47 a 50 mm no tipo B; espessura do hematoma igual ou maior que 10 mm no tipo A e igual ou maior que 13 mm no tipo B. Para ambos valem ainda: progressão para dissecção, aumento do diâmetro aórtico e aumento da espessura do hematoma.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C-LD",
+    "society": "ACC/AHA",
+    "year": 2022,
+    "guideline_title": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease",
+    "reference": "Isselbacher EM, Preventza O, Black JH 3rd, Augoustides JG, Beck AW, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease: A Report of the American Heart Association/American College of Cardiology Joint Committee on Clinical Practice Guidelines. Circulation. 2022;146(24):e334-e482. DOI: 10.1161/CIR.0000000000001106. PMID: 36322642 — texto integral em acesso aberto (PMC9876736), tabelas de recomendação conferidas em 01/08/2026. A diretriz usa o sistema ACC/AHA, com classe grafada em algarismo arábico (1, 2a, 2b, 3) — aqui normalizada para I, IIa, IIb e III, que é a mesma escala — e níveis com sufixo (B-R randomizado, B-NR não randomizado, C-LD dados limitados, C-EO opinião de especialista), mantidos como no original.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "hematoma intramural",
+      "alto risco",
+      "espessura do hematoma",
+      "diâmetro aórtico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "pau-com-ruptura-ou-em-aorta-ascendente-reparo-urgente",
+    "statement": "A úlcera aterosclerótica penetrante COM RUPTURA deve receber reparo urgente; o mesmo vale para a úlcera da AORTA ASCENDENTE com hematoma intramural associado. Em arco ou aorta torácica descendente com hematoma associado, o reparo urgente é razoável (Classe IIa, C-LD); em aorta abdominal, pode ser considerado (Classe IIb, C-LD).",
+    "recommendation_class": "I",
+    "evidence_level": "B-NR",
+    "society": "ACC/AHA",
+    "year": 2022,
+    "guideline_title": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease",
+    "reference": "Isselbacher EM, Preventza O, Black JH 3rd, Augoustides JG, Beck AW, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease: A Report of the American Heart Association/American College of Cardiology Joint Committee on Clinical Practice Guidelines. Circulation. 2022;146(24):e334-e482. DOI: 10.1161/CIR.0000000000001106. PMID: 36322642 — texto integral em acesso aberto (PMC9876736), tabelas de recomendação conferidas em 01/08/2026. A diretriz usa o sistema ACC/AHA, com classe grafada em algarismo arábico (1, 2a, 2b, 3) — aqui normalizada para I, IIa, IIb e III, que é a mesma escala — e níveis com sufixo (B-R randomizado, B-NR não randomizado, C-LD dados limitados, C-EO opinião de especialista), mantidos como no original.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "úlcera penetrante",
+      "ruptura",
+      "reparo urgente"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "pau-isolada-sintomatica-e-criterios-de-alto-risco",
+    "statement": "A úlcera aterosclerótica penetrante ISOLADA e SINTOMÁTICA, com dor persistente correlacionada à imagem, deve ser reparada. Na assintomática com achados de alto risco, o reparo eletivo pode ser considerado (Classe IIb, C-LD). Os critérios numéricos de alto risco são: diâmetro máximo da úlcera igual ou maior que 13 a 20 mm; profundidade máxima igual ou maior que 10 mm; crescimento significativo de diâmetro ou profundidade; úlcera associada a aneurisma sacular; e derrame pleural crescente.",
+    "recommendation_class": "I",
+    "evidence_level": "B-NR",
+    "society": "ACC/AHA",
+    "year": 2022,
+    "guideline_title": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease",
+    "reference": "Isselbacher EM, Preventza O, Black JH 3rd, Augoustides JG, Beck AW, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease: A Report of the American Heart Association/American College of Cardiology Joint Committee on Clinical Practice Guidelines. Circulation. 2022;146(24):e334-e482. DOI: 10.1161/CIR.0000000000001106. PMID: 36322642 — texto integral em acesso aberto (PMC9876736), tabelas de recomendação conferidas em 01/08/2026. A diretriz usa o sistema ACC/AHA, com classe grafada em algarismo arábico (1, 2a, 2b, 3) — aqui normalizada para I, IIa, IIb e III, que é a mesma escala — e níveis com sufixo (B-R randomizado, B-NR não randomizado, C-LD dados limitados, C-EO opinião de especialista), mantidos como no original.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "úlcera penetrante",
+      "alto risco",
+      "profundidade",
+      "diâmetro"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "pau-escolha-entre-reparo-aberto-e-endovascular-por-zona",
+    "statement": "A escolha da técnica na úlcera aterosclerótica penetrante segue a ZONA aórtica: em zonas 0 e 1 — aorta ascendente e arco proximal — o reparo ABERTO é recomendado; em zonas 2 e 3, na descendente ou na abdominal, aberto ou endovascular conforme anatomia e comorbidades (Classe IIa, C-LD).",
+    "recommendation_class": "I",
+    "evidence_level": "C-LD",
+    "society": "ACC/AHA",
+    "year": 2022,
+    "guideline_title": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease",
+    "reference": "Isselbacher EM, Preventza O, Black JH 3rd, Augoustides JG, Beck AW, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease: A Report of the American Heart Association/American College of Cardiology Joint Committee on Clinical Practice Guidelines. Circulation. 2022;146(24):e334-e482. DOI: 10.1161/CIR.0000000000001106. PMID: 36322642 — texto integral em acesso aberto (PMC9876736), tabelas de recomendação conferidas em 01/08/2026. A diretriz usa o sistema ACC/AHA, com classe grafada em algarismo arábico (1, 2a, 2b, 3) — aqui normalizada para I, IIa, IIb e III, que é a mesma escala — e níveis com sufixo (B-R randomizado, B-NR não randomizado, C-LD dados limitados, C-EO opinião de especialista), mantidos como no original.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "úlcera penetrante",
+      "zona aórtica",
+      "reparo aberto",
+      "endovascular"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "dissecao-tipo-b-aguda-nao-complicada-terapia-medica-inicial",
+    "statement": "Em TODOS os pacientes com dissecção aórtica tipo B AGUDA NÃO COMPLICADA, a terapia médica é recomendada como estratégia inicial de manejo. Com ruptura ou outras complicações, a intervenção é indicada (Classe I, C-LD) — e na ruptura, havendo anatomia adequada, o stent-graft endovascular é recomendado em vez do reparo aberto (Classe I, C-EO). Na não complicada com achados anatômicos de ALTO RISCO, o manejo endovascular pode ser considerado (Classe IIb, B-R).",
+    "recommendation_class": "I",
+    "evidence_level": "B-NR",
+    "society": "ACC/AHA",
+    "year": 2022,
+    "guideline_title": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease",
+    "reference": "Isselbacher EM, Preventza O, Black JH 3rd, Augoustides JG, Beck AW, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease: A Report of the American Heart Association/American College of Cardiology Joint Committee on Clinical Practice Guidelines. Circulation. 2022;146(24):e334-e482. DOI: 10.1161/CIR.0000000000001106. PMID: 36322642 — texto integral em acesso aberto (PMC9876736), tabelas de recomendação conferidas em 01/08/2026. A diretriz usa o sistema ACC/AHA, com classe grafada em algarismo arábico (1, 2a, 2b, 3) — aqui normalizada para I, IIa, IIb e III, que é a mesma escala — e níveis com sufixo (B-R randomizado, B-NR não randomizado, C-LD dados limitados, C-EO opinião de especialista), mantidos como no original.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "dissecção tipo B",
+      "terapia médica",
+      "TEVAR",
+      "não complicada"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "dissecao-tipo-b-criterios-de-complicacao-e-de-alto-risco",
+    "statement": "A dissecção tipo B é COMPLICADA na presença de: ruptura livre ou contida, oclusão de ramo com malperfusão, extensão da dissecção (distal ou retrógrada para tipo A), aumento progressivo do lúmen verdadeiro e/ou falso na fase aguda, dor intratável ou hipertensão não controlada. Os achados de ALTO RISCO na tipo B aguda NÃO complicada são numéricos: diâmetro aórtico máximo acima de 40 mm; falso lúmen acima de 20 a 22 mm; porta de entrada acima de 10 mm ou na curvatura menor; aumento do diâmetro total acima de 5 mm entre exames seriados; derrame pleural sanguinolento; e malperfusão vista apenas na imagem. Os critérios clínicos são hipertensão refratária a mais de 3 classes em dose máxima, dor refratária por mais de 12 horas e necessidade de reinternação.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B-R",
+    "society": "ACC/AHA",
+    "year": 2022,
+    "guideline_title": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease",
+    "reference": "Isselbacher EM, Preventza O, Black JH 3rd, Augoustides JG, Beck AW, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease: A Report of the American Heart Association/American College of Cardiology Joint Committee on Clinical Practice Guidelines. Circulation. 2022;146(24):e334-e482. DOI: 10.1161/CIR.0000000000001106. PMID: 36322642 — texto integral em acesso aberto (PMC9876736), tabelas de recomendação conferidas em 01/08/2026. A diretriz usa o sistema ACC/AHA, com classe grafada em algarismo arábico (1, 2a, 2b, 3) — aqui normalizada para I, IIa, IIb e III, que é a mesma escala — e níveis com sufixo (B-R randomizado, B-NR não randomizado, C-LD dados limitados, C-EO opinião de especialista), mantidos como no original.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "dissecção tipo B",
+      "alto risco",
+      "falso lúmen",
+      "porta de entrada"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "seguimento-por-imagem-apos-sindrome-aortica-aguda",
+    "statement": "Após síndrome aórtica aguda, a vigilância por imagem com angiotomografia ou ressonância é recomendada APÓS 1 MÊS, 6 MESES E 12 MESES e, se estável, ANUALMENTE — tanto nos tratados por reparo aberto ou endovascular com doença residual quanto nos tratados apenas clinicamente. Em dissecção ou hematoma prévios com doença torácica crônica residual e aneurisma de DIÂMETRO TOTAL IGUAL OU MAIOR QUE 5,5 cm, o reparo torácico eletivo é recomendado.",
+    "recommendation_class": "I",
+    "evidence_level": "B-NR",
+    "society": "ACC/AHA",
+    "year": 2022,
+    "guideline_title": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease",
+    "reference": "Isselbacher EM, Preventza O, Black JH 3rd, Augoustides JG, Beck AW, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease: A Report of the American Heart Association/American College of Cardiology Joint Committee on Clinical Practice Guidelines. Circulation. 2022;146(24):e334-e482. DOI: 10.1161/CIR.0000000000001106. PMID: 36322642 — texto integral em acesso aberto (PMC9876736), tabelas de recomendação conferidas em 01/08/2026. A diretriz usa o sistema ACC/AHA, com classe grafada em algarismo arábico (1, 2a, 2b, 3) — aqui normalizada para I, IIa, IIb e III, que é a mesma escala — e níveis com sufixo (B-R randomizado, B-NR não randomizado, C-LD dados limitados, C-EO opinião de especialista), mantidos como no original.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "seguimento",
+      "imagem",
+      "síndrome aórtica aguda",
+      "vigilância"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "aneurisma-de-aorta-ascendente-esporadico-limiar-de-5-5-cm",
+    "statement": "No aneurisma ESPORÁDICO de raiz aórtica ou aorta ascendente, a cirurgia é recomendada no paciente sintomático (Classe I, C-LD) e no assintomático com diâmetro IGUAL OU MAIOR QUE 5,5 cm. Com 5,0 cm ou mais, é razoável operar desde que por cirurgião experiente em equipe aórtica multidisciplinar (Classe IIa, B-NR). E o CRESCIMENTO indica cirurgia mesmo abaixo de 5,5 cm: 0,3 cm por ano em dois anos consecutivos, ou 0,5 cm em um ano (Classe I, C-LD).",
+    "recommendation_class": "I",
+    "evidence_level": "B-NR",
+    "society": "ACC/AHA",
+    "year": 2022,
+    "guideline_title": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease",
+    "reference": "Isselbacher EM, Preventza O, Black JH 3rd, Augoustides JG, Beck AW, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease: A Report of the American Heart Association/American College of Cardiology Joint Committee on Clinical Practice Guidelines. Circulation. 2022;146(24):e334-e482. DOI: 10.1161/CIR.0000000000001106. PMID: 36322642 — texto integral em acesso aberto (PMC9876736), tabelas de recomendação conferidas em 01/08/2026. A diretriz usa o sistema ACC/AHA, com classe grafada em algarismo arábico (1, 2a, 2b, 3) — aqui normalizada para I, IIa, IIb e III, que é a mesma escala — e níveis com sufixo (B-R randomizado, B-NR não randomizado, C-LD dados limitados, C-EO opinião de especialista), mantidos como no original.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "aneurisma de aorta ascendente",
+      "esporádico",
+      "5,5 cm",
+      "taxa de crescimento"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "aneurisma-aortico-na-sindrome-de-marfan-limiar-de-5-0-cm",
+    "statement": "Na síndrome de MARFAN, a cirurgia de raiz e aorta ascendente é recomendada com diâmetro IGUAL OU MAIOR QUE 5,0 cm — meio centímetro abaixo do limiar esporádico. Com 4,5 cm ou mais e achados que aumentem o risco de dissecção, a cirurgia é razoável (Classe IIa, B-NR), assim como a razão área transversal/altura igual ou maior que 10 (Classe IIa, C-LD).",
+    "recommendation_class": "I",
+    "evidence_level": "B-NR",
+    "society": "ACC/AHA",
+    "year": 2022,
+    "guideline_title": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease",
+    "reference": "Isselbacher EM, Preventza O, Black JH 3rd, Augoustides JG, Beck AW, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease: A Report of the American Heart Association/American College of Cardiology Joint Committee on Clinical Practice Guidelines. Circulation. 2022;146(24):e334-e482. DOI: 10.1161/CIR.0000000000001106. PMID: 36322642 — texto integral em acesso aberto (PMC9876736), tabelas de recomendação conferidas em 01/08/2026. A diretriz usa o sistema ACC/AHA, com classe grafada em algarismo arábico (1, 2a, 2b, 3) — aqui normalizada para I, IIa, IIb e III, que é a mesma escala — e níveis com sufixo (B-R randomizado, B-NR não randomizado, C-LD dados limitados, C-EO opinião de especialista), mantidos como no original.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "Marfan",
+      "aneurisma",
+      "5,0 cm",
+      "raiz aórtica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "aneurisma-aortico-na-sindrome-de-loeys-dietz-limiar-por-gene",
+    "statement": "Na síndrome de LOEYS-DIETZ o limiar depende da VARIANTE GENÉTICA, e é aqui que mora o erro clínico. Sem achados de alto risco: TGFBR1 e TGFBR2 operam com 4,5 cm ou mais (Classe I, C-LD); SMAD3 com 4,5 cm (IIa, C-EO); TGFB2 com 4,5 cm (IIb, C-EO); TGFB3 com 5,0 cm (IIb, C-EO). COM achados de alto risco, TGFBR2 desce para 4,0 cm (IIa, C-LD) e TGFBR1 para 4,0 cm (IIb, C-EO). A própria diretriz adverte, em nota literal, que variantes patogênicas no gene TGFB2 são DIFERENTES das do gene TGFBR2 — os nomes são quase idênticos e os limiares não são.",
+    "recommendation_class": "I",
+    "evidence_level": "C-LD",
+    "society": "ACC/AHA",
+    "year": 2022,
+    "guideline_title": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease",
+    "reference": "Isselbacher EM, Preventza O, Black JH 3rd, Augoustides JG, Beck AW, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease: A Report of the American Heart Association/American College of Cardiology Joint Committee on Clinical Practice Guidelines. Circulation. 2022;146(24):e334-e482. DOI: 10.1161/CIR.0000000000001106. PMID: 36322642 — texto integral em acesso aberto (PMC9876736), tabelas de recomendação conferidas em 01/08/2026. A diretriz usa o sistema ACC/AHA, com classe grafada em algarismo arábico (1, 2a, 2b, 3) — aqui normalizada para I, IIa, IIb e III, que é a mesma escala — e níveis com sufixo (B-R randomizado, B-NR não randomizado, C-LD dados limitados, C-EO opinião de especialista), mantidos como no original.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "Loeys-Dietz",
+      "TGFBR1",
+      "TGFBR2",
+      "limiar por gene",
+      "aneurisma"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "aneurisma-aortico-na-valva-aortica-bicuspide",
+    "statement": "Na VALVA AÓRTICA BICÚSPIDE, a cirurgia é recomendada com diâmetro IGUAL OU MAIOR QUE 5,5 cm. Entre 5,0 e 5,4 cm é razoável havendo fator de risco adicional (Classe IIa, B-NR), e pode ser considerada sem fatores de risco em paciente de baixo risco cirúrgico (Classe IIb, B-NR). Em cirurgia valvar aórtica concomitante, o limiar cai para 4,5 cm (Classe IIa, B-NR). Note que a bicúspide NÃO opera mais cedo que o aneurisma esporádico — ao contrário do que a intuição sugere.",
+    "recommendation_class": "I",
+    "evidence_level": "B-NR",
+    "society": "ACC/AHA",
+    "year": 2022,
+    "guideline_title": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease",
+    "reference": "Isselbacher EM, Preventza O, Black JH 3rd, Augoustides JG, Beck AW, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease: A Report of the American Heart Association/American College of Cardiology Joint Committee on Clinical Practice Guidelines. Circulation. 2022;146(24):e334-e482. DOI: 10.1161/CIR.0000000000001106. PMID: 36322642 — texto integral em acesso aberto (PMC9876736), tabelas de recomendação conferidas em 01/08/2026. A diretriz usa o sistema ACC/AHA, com classe grafada em algarismo arábico (1, 2a, 2b, 3) — aqui normalizada para I, IIa, IIb e III, que é a mesma escala — e níveis com sufixo (B-R randomizado, B-NR não randomizado, C-LD dados limitados, C-EO opinião de especialista), mantidos como no original.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "valva aórtica bicúspide",
+      "aneurisma",
+      "5,5 cm",
+      "cirurgia concomitante"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "vigilancia-por-imagem-na-valva-aortica-bicuspide",
+    "statement": "Em portador de valva aórtica bicúspide com raiz ou aorta ascendente IGUAL OU MAIOR QUE 4,0 cm, é recomendada imagem VITALÍCIA por ecocardiograma transtorácico, angiotomografia ou ressonância, com intervalo definido pelo diâmetro e pela taxa de crescimento.",
+    "recommendation_class": "I",
+    "evidence_level": "C-LD",
+    "society": "ACC/AHA",
+    "year": 2022,
+    "guideline_title": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease",
+    "reference": "Isselbacher EM, Preventza O, Black JH 3rd, Augoustides JG, Beck AW, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease: A Report of the American Heart Association/American College of Cardiology Joint Committee on Clinical Practice Guidelines. Circulation. 2022;146(24):e334-e482. DOI: 10.1161/CIR.0000000000001106. PMID: 36322642 — texto integral em acesso aberto (PMC9876736), tabelas de recomendação conferidas em 01/08/2026. A diretriz usa o sistema ACC/AHA, com classe grafada em algarismo arábico (1, 2a, 2b, 3) — aqui normalizada para I, IIa, IIb e III, que é a mesma escala — e níveis com sufixo (B-R randomizado, B-NR não randomizado, C-LD dados limitados, C-EO opinião de especialista), mantidos como no original.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "valva aórtica bicúspide",
+      "vigilância",
+      "4,0 cm",
+      "imagem vitalícia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "aneurisma-de-aorta-toracica-descendente-limiar-e-risco-por-diametro",
+    "statement": "No aneurisma de aorta torácica DESCENDENTE, o reparo é recomendado com diâmetro IGUAL OU MAIOR QUE 5,5 cm; abaixo disso, apenas com fatores de risco de ruptura (Classe IIb, B-NR), e o limiar deve ser ELEVADO em paciente de alto risco perioperatório (Classe IIb, B-NR). A diretriz quantifica o risco de evento aórtico em 1 ano por diâmetro basal: 5,0 cm → 5,5% (eventos definidos) e 8,0% (prováveis); 5,5 cm → 7,2% e 11,2%; 6,0 cm → 9,3% e 15,6%; 7,0 cm → 15,4% e 28,1%.",
+    "recommendation_class": "I",
+    "evidence_level": "B-NR",
+    "society": "ACC/AHA",
+    "year": 2022,
+    "guideline_title": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease",
+    "reference": "Isselbacher EM, Preventza O, Black JH 3rd, Augoustides JG, Beck AW, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease: A Report of the American Heart Association/American College of Cardiology Joint Committee on Clinical Practice Guidelines. Circulation. 2022;146(24):e334-e482. DOI: 10.1161/CIR.0000000000001106. PMID: 36322642 — texto integral em acesso aberto (PMC9876736), tabelas de recomendação conferidas em 01/08/2026. A diretriz usa o sistema ACC/AHA, com classe grafada em algarismo arábico (1, 2a, 2b, 3) — aqui normalizada para I, IIa, IIb e III, que é a mesma escala — e níveis com sufixo (B-R randomizado, B-NR não randomizado, C-LD dados limitados, C-EO opinião de especialista), mantidos como no original.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "aorta torácica descendente",
+      "aneurisma",
+      "risco de ruptura",
+      "5,5 cm"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "rastreamento-de-aneurisma-de-aorta-abdominal-em-homem-fumante",
+    "statement": "O rastreamento por ULTRASSONOGRAFIA é recomendado em HOMENS de 65 anos ou mais que já fumaram — é a ÚNICA recomendação desta frente com nível B-R, ou seja, sustentada por ensaio randomizado. Também é recomendado (C-LD) em homens ou mulheres de 65 anos ou mais que sejam PARENTES DE PRIMEIRO GRAU de portador de aneurisma de aorta abdominal. Em mulheres de 65 anos ou mais que já fumaram, é razoável (Classe IIa, C-EO).",
+    "recommendation_class": "I",
+    "evidence_level": "B-R",
+    "society": "ACC/AHA",
+    "year": 2022,
+    "guideline_title": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease",
+    "reference": "Isselbacher EM, Preventza O, Black JH 3rd, Augoustides JG, Beck AW, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease: A Report of the American Heart Association/American College of Cardiology Joint Committee on Clinical Practice Guidelines. Circulation. 2022;146(24):e334-e482. DOI: 10.1161/CIR.0000000000001106. PMID: 36322642 — texto integral em acesso aberto (PMC9876736), tabelas de recomendação conferidas em 01/08/2026. A diretriz usa o sistema ACC/AHA, com classe grafada em algarismo arábico (1, 2a, 2b, 3) — aqui normalizada para I, IIa, IIb e III, que é a mesma escala — e níveis com sufixo (B-R randomizado, B-NR não randomizado, C-LD dados limitados, C-EO opinião de especialista), mantidos como no original.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "rastreamento",
+      "aneurisma de aorta abdominal",
+      "tabagismo",
+      "ultrassonografia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "nao-repetir-rastreamento-de-aaa-apos-os-75-anos-com-exame-negativo",
+    "statement": "Em homens ou mulheres com MAIS DE 75 ANOS que tiveram ultrassonografia de rastreamento inicial NEGATIVA, repetir o rastreamento para aneurisma de aorta abdominal NÃO é recomendado. A diretriz classifica esta recomendação como Classe 3 do tipo 'sem benefício' — categoria que a escala brasileira de Classe III não distingue da de 'dano', e a diferença importa: aqui não há malefício demonstrado, apenas ausência de ganho.",
+    "recommendation_class": "III",
+    "evidence_level": "B-NR",
+    "society": "ACC/AHA",
+    "year": 2022,
+    "guideline_title": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease",
+    "reference": "Isselbacher EM, Preventza O, Black JH 3rd, Augoustides JG, Beck AW, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease: A Report of the American Heart Association/American College of Cardiology Joint Committee on Clinical Practice Guidelines. Circulation. 2022;146(24):e334-e482. DOI: 10.1161/CIR.0000000000001106. PMID: 36322642 — texto integral em acesso aberto (PMC9876736), tabelas de recomendação conferidas em 01/08/2026. A diretriz usa o sistema ACC/AHA, com classe grafada em algarismo arábico (1, 2a, 2b, 3) — aqui normalizada para I, IIa, IIb e III, que é a mesma escala — e níveis com sufixo (B-R randomizado, B-NR não randomizado, C-LD dados limitados, C-EO opinião de especialista), mantidos como no original.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "rastreamento",
+      "aneurisma de aorta abdominal",
+      "idoso",
+      "sem benefício"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "vigilancia-do-aneurisma-de-aorta-abdominal-por-diametro-e-sexo",
+    "statement": "A vigilância do aneurisma de aorta abdominal por ultrassonografia segue o diâmetro E O SEXO: de 3,0 a 3,9 cm, a cada 3 ANOS; homens de 4,0 a 4,9 cm e MULHERES de 4,0 a 4,4 cm, ANUALMENTE; homens com 5,0 cm ou mais e MULHERES com 4,5 cm ou mais, a cada 6 MESES. Usar os cortes masculinos na mulher atrasa a vigilância em meio centímetro em cada faixa.",
+    "recommendation_class": "I",
+    "evidence_level": "B-NR",
+    "society": "ACC/AHA",
+    "year": 2022,
+    "guideline_title": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease",
+    "reference": "Isselbacher EM, Preventza O, Black JH 3rd, Augoustides JG, Beck AW, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease: A Report of the American Heart Association/American College of Cardiology Joint Committee on Clinical Practice Guidelines. Circulation. 2022;146(24):e334-e482. DOI: 10.1161/CIR.0000000000001106. PMID: 36322642 — texto integral em acesso aberto (PMC9876736), tabelas de recomendação conferidas em 01/08/2026. A diretriz usa o sistema ACC/AHA, com classe grafada em algarismo arábico (1, 2a, 2b, 3) — aqui normalizada para I, IIa, IIb e III, que é a mesma escala — e níveis com sufixo (B-R randomizado, B-NR não randomizado, C-LD dados limitados, C-EO opinião de especialista), mantidos como no original.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "aneurisma de aorta abdominal",
+      "vigilância",
+      "sexo",
+      "ultrassonografia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "limiar-de-reparo-do-aneurisma-de-aorta-abdominal-por-sexo",
+    "statement": "O reparo do aneurisma de aorta abdominal é recomendado com diâmetro máximo IGUAL OU MAIOR QUE 5,5 cm NO HOMEM e IGUAL OU MAIOR QUE 5,0 cm NA MULHER — é a única recomendação de nível A de toda a diretriz nesta frente. O reparo também é indicado no aneurisma sintomático (Classe I, B-NR); o sacular e o crescimento de 0,5 cm em 6 meses podem ser considerados (Classe IIb, C-LD).",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ACC/AHA",
+    "year": 2022,
+    "guideline_title": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease",
+    "reference": "Isselbacher EM, Preventza O, Black JH 3rd, Augoustides JG, Beck AW, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease: A Report of the American Heart Association/American College of Cardiology Joint Committee on Clinical Practice Guidelines. Circulation. 2022;146(24):e334-e482. DOI: 10.1161/CIR.0000000000001106. PMID: 36322642 — texto integral em acesso aberto (PMC9876736), tabelas de recomendação conferidas em 01/08/2026. A diretriz usa o sistema ACC/AHA, com classe grafada em algarismo arábico (1, 2a, 2b, 3) — aqui normalizada para I, IIa, IIb e III, que é a mesma escala — e níveis com sufixo (B-R randomizado, B-NR não randomizado, C-LD dados limitados, C-EO opinião de especialista), mantidos como no original.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "aneurisma de aorta abdominal",
+      "limiar de reparo",
+      "sexo",
+      "5,5 cm"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "alvo-pressorico-na-doenca-aortica",
+    "statement": "Em portador de aneurisma de aorta torácica com pressão sistólica média IGUAL OU MAIOR QUE 130 mmHg ou diastólica IGUAL OU MAIOR QUE 80 mmHg, o anti-hipertensivo é recomendado — e os mesmos cortes valem para o aneurisma de aorta abdominal. O betabloqueador é razoável (Classe IIa, C-LD) e o bloqueador do receptor de angiotensina é razoável como adjuvante (Classe IIa, C-EO).",
+    "recommendation_class": "I",
+    "evidence_level": "B-NR",
+    "society": "ACC/AHA",
+    "year": 2022,
+    "guideline_title": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease",
+    "reference": "Isselbacher EM, Preventza O, Black JH 3rd, Augoustides JG, Beck AW, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease: A Report of the American Heart Association/American College of Cardiology Joint Committee on Clinical Practice Guidelines. Circulation. 2022;146(24):e334-e482. DOI: 10.1161/CIR.0000000000001106. PMID: 36322642 — texto integral em acesso aberto (PMC9876736), tabelas de recomendação conferidas em 01/08/2026. A diretriz usa o sistema ACC/AHA, com classe grafada em algarismo arábico (1, 2a, 2b, 3) — aqui normalizada para I, IIa, IIb e III, que é a mesma escala — e níveis com sufixo (B-R randomizado, B-NR não randomizado, C-LD dados limitados, C-EO opinião de especialista), mantidos como no original.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "aneurisma",
+      "pressão arterial",
+      "130/80 mmHg",
+      "betabloqueador"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "aortite-inflamatoria-avaliacao-de-toda-a-aorta-por-imagem",
+    "statement": "Na vasculite de grandes vasos é recomendada avaliação IMEDIATA de TODA a aorta e de seus ramos por ressonância magnética ou angiotomografia, com ou sem PET com 18F-FDG. O glicocorticoide em alta dose é a terapia inicial recomendada (Classe I, B-NR), e o seguimento deve monitorar proteína C-reativa e VHS somados a imagem e sintomas (Classe I, C-LD).",
+    "recommendation_class": "I",
+    "evidence_level": "C-LD",
+    "society": "ACC/AHA",
+    "year": 2022,
+    "guideline_title": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease",
+    "reference": "Isselbacher EM, Preventza O, Black JH 3rd, Augoustides JG, Beck AW, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease: A Report of the American Heart Association/American College of Cardiology Joint Committee on Clinical Practice Guidelines. Circulation. 2022;146(24):e334-e482. DOI: 10.1161/CIR.0000000000001106. PMID: 36322642 — texto integral em acesso aberto (PMC9876736), tabelas de recomendação conferidas em 01/08/2026. A diretriz usa o sistema ACC/AHA, com classe grafada em algarismo arábico (1, 2a, 2b, 3) — aqui normalizada para I, IIa, IIb e III, que é a mesma escala — e níveis com sufixo (B-R randomizado, B-NR não randomizado, C-LD dados limitados, C-EO opinião de especialista), mantidos como no original.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "aortite",
+      "Takayasu",
+      "arterite de células gigantes",
+      "PET-FDG"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "tocilizumabe-na-arterite-de-celulas-gigantes-com-aortite-ativa",
+    "statement": "Na arterite de células gigantes com AORTITE ATIVA, o TOCILIZUMABE é recomendado como adjuvante ao glicocorticoide, tendo o metotrexato como alternativa — recomendação Classe I com nível B-R, o único nível randomizado da seção de aortite inflamatória. Já na arterite de Takayasu, o recomendado em TODOS os pacientes é um medicamento modificador de doença NÃO biológico combinado ao glicocorticoide (Classe I, C-LD).",
+    "recommendation_class": "I",
+    "evidence_level": "B-R",
+    "society": "ACC/AHA",
+    "year": 2022,
+    "guideline_title": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease",
+    "reference": "Isselbacher EM, Preventza O, Black JH 3rd, Augoustides JG, Beck AW, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease: A Report of the American Heart Association/American College of Cardiology Joint Committee on Clinical Practice Guidelines. Circulation. 2022;146(24):e334-e482. DOI: 10.1161/CIR.0000000000001106. PMID: 36322642 — texto integral em acesso aberto (PMC9876736), tabelas de recomendação conferidas em 01/08/2026. A diretriz usa o sistema ACC/AHA, com classe grafada em algarismo arábico (1, 2a, 2b, 3) — aqui normalizada para I, IIa, IIb e III, que é a mesma escala — e níveis com sufixo (B-R randomizado, B-NR não randomizado, C-LD dados limitados, C-EO opinião de especialista), mantidos como no original.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "arterite de células gigantes",
+      "tocilizumabe",
+      "Takayasu",
+      "aortite"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "intervencao-eletiva-na-aortite-apenas-em-remissao",
+    "statement": "Na aortite inflamatória, a intervenção eletiva — endovascular ou aberta — deve ser realizada preferencialmente em REMISSÃO da doença (Classe IIa, C-LD), e a imagem anual de vigilância é razoável em remissão com acometimento aórtico (Classe IIa, C-EO). Operar vaso inflamado é o erro que esta recomendação existe para evitar.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C-LD",
+    "society": "ACC/AHA",
+    "year": 2022,
+    "guideline_title": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease",
+    "reference": "Isselbacher EM, Preventza O, Black JH 3rd, Augoustides JG, Beck AW, et al. 2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease: A Report of the American Heart Association/American College of Cardiology Joint Committee on Clinical Practice Guidelines. Circulation. 2022;146(24):e334-e482. DOI: 10.1161/CIR.0000000000001106. PMID: 36322642 — texto integral em acesso aberto (PMC9876736), tabelas de recomendação conferidas em 01/08/2026. A diretriz usa o sistema ACC/AHA, com classe grafada em algarismo arábico (1, 2a, 2b, 3) — aqui normalizada para I, IIa, IIb e III, que é a mesma escala — e níveis com sufixo (B-R randomizado, B-NR não randomizado, C-LD dados limitados, C-EO opinião de especialista), mantidos como no original.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "aortite",
+      "remissão",
+      "intervenção eletiva",
+      "vigilância"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
