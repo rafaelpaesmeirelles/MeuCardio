@@ -5,9 +5,15 @@ import { Carregando, Vazio } from "../components/Estado";
 
 type Item = { slug: string; title: string; study_type: string; journal: string; year: number; theme: string };
 
+// `estudo_de_coorte` é o valor que os JSON usam de fato — `coorte` estava no mapa
+// mas não existe nos dados, e sem esta linha o filtro aparecia ao assinante como
+// "estudo_de_coorte", com underscore. O rótulo é "Estudo observacional" porque o
+// grupo reúne coortes e estudos transversais; chamá-lo de "Coorte" classificaria
+// errado os transversais.
 const RÓTULO_TIPO: Record<string, string> = {
   ensaio_clinico: "Ensaio clínico", revisao_sistematica: "Revisão sistemática",
   metanalise: "Metanálise", consenso: "Consenso", coorte: "Coorte", caso_controle: "Caso-controle",
+  estudo_de_coorte: "Estudo observacional",
 };
 
 export default function Estudos() {
