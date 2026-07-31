@@ -800,15 +800,20 @@ foi verificado.
    `.env` de produção** e o backend as enxerga (`settings.mail360_*` presentes). Conferido chamando
    `_exigir_configurado()` de `app/api/email.py` direto no container: **não levanta mais o 503** —
    `settings.mail360_configurado` é verdadeiro, e as rotas do CorvIA Mail estão liberadas.
-   **Ressalva importante, para não superestimar o que foi verificado:** `mail360_configurado`
-   afere **presença** das credenciais, não validade. **Não testei chamada real à API do Zoho**,
-   porque isso é ação contra serviço externo e não foi pedido. Então: o bloqueio de configuração
-   caiu; se as credenciais expiraram ou foram revogadas, o erro aparecerá na primeira operação real
-   da caixa, não neste teste. **Quem for validar de fato:** ativar uma caixa de teste e enviar uma
-   mensagem, ou renovar o `refresh_token` no painel do Mail360 (Authentication) se der erro de
-   autenticação.
-   (Descoberto por acaso ao listar os nomes das variáveis do `.env` a pedido do Rafael — o registro
-   anterior dizia que as credenciais "não persistiram", e estava desatualizado.)
+   **VALIDADO DE PONTA A PONTA em 31/07/2026, contra a API real.** O Rafael repassou credenciais
+   novas no mesmo dia; elas foram gravadas no `.env`, o backend foi **recriado**
+   (`up -d --force-recreate backend` — `env_file` é lido na criação do container, e um `restart`
+   **não** recarrega variável de ambiente), e então:
+   - as três variáveis conferem dentro do container (comparadas por hash, sem exibir valor);
+   - `settings.mail360_configurado` é verdadeiro e `_exigir_configurado()` não levanta 503;
+   - **`_obter_access_token()` trocou o refresh token por um access token válido contra o Zoho** —
+     ou seja, as credenciais não estão apenas presentes: **elas autenticam**.
+   **O que ainda não foi exercitado:** enviar ou receber mensagem de verdade numa caixa. A camada de
+   autenticação está provada; as operações de caixa, não.
+   **Backup do `.env` anterior**, antes da troca: `/root/backups-corvia/.env.bak-31072026-mail360`
+   (permissão 600, fora do repositório).
+   (O item começou a se desfazer por acaso, ao listar os **nomes** das variáveis do `.env` a pedido
+   do Rafael: o registro dizia que as credenciais "não persistiram", e já estava desatualizado.)
 
 > ### 🔑 Como carregar e publicar sem esbarrar no classificador, 29/07/2026 às 22h
 > Pedido do Rafael: garantir que você consiga publicar o que produzir. **Docker
