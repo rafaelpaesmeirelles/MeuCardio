@@ -64,6 +64,32 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### 📌 Para a sessão de Medicamentos — duas divergências em `content/Farmacologia/alteplase.md`, 31/07/2026
+> Não é contradição perigosa como a do bempedoico abaixo, mas vale registrar antes que
+> alguém compare as duas telas. Ao revisar `medicamentos/metadados.json` (slug `alteplase`),
+> baixei a bula brasileira completa do ACTILYSE (Boehringer Ingelheim, versão 04/09/2012, via
+> `saudedireta.com.br/catinc/drugs/bulas/actilyse.pdf` — abriu normalmente) e conferi contra a
+> prosa, que continua sourceada só em StatPearls nesses dois pontos:
+>
+> 1. **Contraindicações incompletas na prosa.** A lista de `content/Farmacologia/alteplase.md`
+>    (StatPearls, 9 itens) é um subconjunto da lista da bula brasileira (item 4), que traz mais
+>    de 25 contraindicações organizadas em três blocos — geral, específica de IAM/embolia
+>    pulmonar, específica de AVC isquêmico agudo. Faltam na prosa, entre outras:
+>    anticoagulação oral efetiva (INR >1,3), hepatopatia grave, endocardite bacteriana,
+>    pericardite, pancreatite aguda, doença ulcerativa GI nos últimos 3 meses, cirurgia de
+>    grande porte/trauma grave nos últimos 10 dias, plaquetas <100.000/mm³, glicemia <50 ou
+>    >400 mg/dL, idade <18 ou >80 anos (só para AVC). A lista completa já está no JSON
+>    (commit `7f11176`), com a citação exata da bula.
+> 2. **Corte de peso divergente no esquema acelerado do IAM.** O JSON usa **65 kg** como corte
+>    entre dose fixa e dose por peso (fonte: ESC 2023, Tabela S10 do suplemento). A prosa usa
+>    **67 kg** (fonte: StatPearls). É a mesma estrutura de esquema (bolus 15mg + duas etapas),
+>    só o corte numérico difere — um paciente entre 65 e 67 kg receberia protocolo diferente
+>    dependendo de qual tela o médico consultasse. Não decidi qual corte é mais correto — os
+>    dois têm fonte, só não são a mesma fonte. Fica para quem for mexer na prosa decidir se
+>    alinha ao ESC 2023 (mais recente, diretriz) ou mantém StatPearls.
+>
+> Não editei `content/Farmacologia/alteplase.md` — fora da minha faixa.
+
 > ### 🚨 URGENTE para a sessão de Medicamentos — contradição real em ácido bempedoico/Nustendi, lactação, 31/07/2026
 > Ao revisar `medicamentos/metadados.json` (commit `8927c0f`), a bula brasileira do Nustendi
 > **abriu normalmente** desta sessão: `https://www.medpedia.com.br/wp-content/uploads/2025/06/Bula-Nustendi.pdf`
