@@ -317,6 +317,38 @@ Regras que decorrem disso:
 >
 > Não editei `content/Farmacologia/perindopril-argininaerbumina.md` — fora da minha faixa.
 
+> ### ✅ Conferência de `medicamentos/metadados.json` concluída, 31/07/2026 — 88/89, aguardando publicação
+> Fecha a tarefa aberta no bloco "ORDEM DO RAFAEL" logo abaixo. **Estado final: 88 dos 89 fármacos
+> com `review_status: "revisado"`** — o único que resta é `prasugrel`, o slug órfão que este
+> arquivo já instrui a ignorar por completo (duplicata despublicada; o canônico
+> `prasugrel-cloridrato` já está revisado). Não há mais nenhum fármaco genuíno pendente nesta
+> frente.
+>
+> Os 19 fármacos revisados desde o commit `bb1ea40` (estado no momento do pedido do Rafael),
+> em ordem: `perindopril-argininaerbumina` (`61d60ec`), `propafenona-cloridrato` (`bbbc9c6`),
+> `propranolol` (`fe9234e`), `rosuvastatina-calcica` (`7a0ac5c`), `sacubitrilvalsartana`
+> (`b24db64`), `sildenafila-citrato` (`f92f052`), `telmisartana` (`f3260e8`), `tenecteplase`
+> (`13cb4c9`), `valsartana` (`b9e15b6`), `varfarina-sodica` (`0e9a81d`), `vasopressina`
+> (`a5a48eb`), `verapamil-cloridrato` (`f877893`), `vericiguate` (`ea481a1`) — mais os que já
+> tinham sido revisados antes do pedido mas não estavam refletidos no `bb1ea40` citado
+> (`semaglutida`, `sildenafila-citrato` já contam acima). **`protamina`, `ramipril`,
+> `rivaroxabana`, `sotalol` e `tafamidis` não aparecem nesta lista porque já estavam
+> `revisado` antes deste pedido** — só a contagem de 88/89 é nova, a lista de commits acima é só
+> desta rodada.
+>
+> Ao longo da rodada, vários achados foram sinalizados nesta mesma seção (cada um com bloco
+> próprio, buscar pelo nome do fármaco): divergências entre mirrors da mesma bula (perindopril/
+> estenose renal, telmisartana/insuficiência renal, rosuvastatina/categoria de risco na gravidez),
+> uso de bula do paciente em vez de profissional para classificar contraindicação (varfarina/
+> lactação — ainda sem resolução, é o achado mais sério pendente), contraindicações formais
+> ausentes por completo (tenecteplase, sildenafila/riociguate, vericiguate/riociguate), e bulas
+> brasileiras recém-localizadas que não existiam nas revisões anteriores (sacubitril-valsartana,
+> mononitrato de isossorbida, nitroglicerina EV, mavacamten, tafamidis).
+>
+> **A pendência técnica de publicação, descrita no bloco abaixo, continua valendo integralmente** —
+> `carregar_drugs.py` ainda pula `review_status` em registro existente, e o campo `published`
+> segue fora do JSON. Esta sessão não tem acesso ao servidor para publicar.
+
 > ### 🎯 ORDEM DO RAFAEL, 31/07/2026 — publicar `drugs` revisados, aprovado; pendência técnica para quem tiver acesso ao servidor
 > Rafael pediu para preparar o conteúdo revisado de `medicamentos/metadados.json` para publicação
 > ("tudo aprovado"). Esta sessão (Claude Code Remote, container isolado, sem Docker/banco de
