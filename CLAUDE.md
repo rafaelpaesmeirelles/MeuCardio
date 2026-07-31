@@ -460,7 +460,7 @@ contra o `git log` do dia.
 > **Table 8** de benefícios e riscos por método). Escrever sem ela seria escrever de memória. Quem
 > retomar: tentar PMC, a diretriz ESC 2018 (PMID 30165544) ou os critérios de elegibilidade da OMS.
 
-#### ✅ Sessão da BIBLIOTECA — fechamento de 31/07/2026: **56 itens novos, todos PUBLICADOS**
+#### ✅ Sessão da BIBLIOTECA — fechamento de 31/07/2026: **58 itens novos, todos PUBLICADOS**
 Contagem para a meta, medida no disco (não estimada). Dois lotes, os dois
 autorizados pelo Rafael no mesmo dia.
 
@@ -511,14 +511,37 @@ congênitas cobria a anatomia lesão a lesão, sem nada sobre acompanhamento
 **funcional** do adulto. Fonte dos três: *Scientific Statements* da AHA em acesso
 aberto no PMC (JAHA), mesma via das diretrizes da SBC.
 
-**PUBLICAÇÃO — os 56 estão no ar.** Carga e publicação por `docker compose exec`
-(a rota HTTP é barrada pelo classificador), com `AuditLog` gravado à mão nos cinco
+**Lote 6 — 2 documentos de `content/`:**
+
+| Tema | Documento | Antes → depois |
+|---|---|---|
+| Síncope | Cardioneuroablação: seleção de paciente e limites da evidência (EHRA/HRS/APHRS/LAHRS 2024) | 8 → **9** |
+| Cardiomiopatias | Massas cardíacas e pericárdicas por TC e ressonância (SBC 2024) | 12 → **13** |
+
+Os dois cobriam lacunas totais, conferidas por `grep` antes de escrever:
+cardioneuroablação não aparecia em nenhum documento, apesar de ser a técnica cujo
+uso mais cresceu na síncope reflexa; e massas cardíacas só apareciam de passagem em
+dois arquivos. **Nota de classificação:** não existe tema "massas/tumores
+cardíacos" na taxonomia e Cardio-oncologia é faixa de Medicamentos (e trata de
+cardiotoxicidade, não de tumor primário) — o documento de massas ficou em
+Cardiomiopatias, onde a base agrupa doença estrutural não valvar e não coronariana.
+
+**PUBLICAÇÃO — os 58 estão no ar.** Carga e publicação por `docker compose exec`
+(a rota HTTP é barrada pelo classificador), com `AuditLog` gravado à mão nos seis
 lotes. **Publicado sempre por LISTA EXPLÍCITA de slugs, nunca por `review_status`**
-— os carregadores devolveram exatamente `novos: 6/6/5`, `11/2/2`, `4/7`, `9/1` e,
-nos documentos, `import_directory` + publicação dos 3 slugs; a varredura de órfãos
-rodada depois de cada publicação mostrou que **nada foi ressuscitado**.
-Os 3 documentos foram **indexados no RAG** logo após publicar (27 trechos), porque
-documento publicado e não indexado é invisível para o assistente clínico.
+— os carregadores devolveram exatamente `novos: 6/6/5`, `11/2/2`, `4/7` e `9/1`, e
+nos documentos foi `import_directory` + publicação dos slugs previstos; a varredura
+de órfãos rodada depois de cada publicação mostrou que **nada foi ressuscitado**.
+Os 5 documentos foram **indexados no RAG** logo após publicar (27 + 19 = 46
+trechos), porque documento publicado e não indexado é invisível para o assistente
+clínico — e esse passo não aparece em nenhuma contagem, então é o mais fácil de
+esquecer.
+
+**Armadilha do `import_directory` observada duas vezes hoje:** ele devolveu
+`novos: 2` para 3 documentos e `novos: 1` para 2 — porque a sessão de Medicamentos
+roda o mesmo import periodicamente e já havia trazido parte deles. **O número de
+`novos` não serve para conferir se o seu lote entrou**; confira slug a slug no
+banco antes de publicar, que foi o que evitou publicar um conjunto incompleto.
 
 **Chagas foi de 0 itens para as QUATRO frentes JSON num único dia** — 4 evidências,
 2 exames, 1 estudo e 1 imagem. Era a maior lacuna isolada da minha faixa para uma
@@ -737,8 +760,10 @@ repositório, ao lado deste arquivo.
   deliberadas): `documents` 446/450 · `evidencias` 155/156 · `estudos` 76/76 · `galeria` 63/63 ·
   `exames` 60/60 · `drugs` 101/101 · `emergencia` 10/10 · `trilhas` 17/17 · `casos_clinicos` 5/5.
 
-**Dos três itens que estavam em aberto, dois foram FECHADOS em 31/07/2026 pela sessão de
-Medicamentos. Só o terceiro (Mail360) continua pendente.**
+**Os TRÊS itens que estavam em aberto foram fechados em 31/07/2026.** Os dois primeiros (varfarina
+e ácido bempedoico) pela sessão de Medicamentos; o terceiro (Mail360) já estava resolvido no
+servidor e o registro é que estava desatualizado — ver a ressalva no item 3 sobre o que exatamente
+foi verificado.
 
 1. ~~**Varfarina/lactação.**~~ **RESOLVIDO em 31/07/2026 — a prosa estava errada e foi
    corrigida (commit `33836e6`).** A divergência era **versão de documento**, não erro de leitura
@@ -765,11 +790,20 @@ Medicamentos. Só o terceiro (Mail360) continua pendente.**
    contraindicação formal na lactação, com o texto literal da bula brasileira do NUSTENDI e a
    nota explícita de que isso reverte a leitura anterior baseada no RCM europeu. Prosa e JSON
    concordam. O item pode sair da lista.
-3. **Credenciais do Mail360** (`MAIL360_CLIENT_ID`, `MAIL360_CLIENT_SECRET`,
-   `MAIL360_REFRESH_TOKEN`). Testadas uma vez com sucesso contra a API real, mas não persistiram
-   no `.env` de produção deste servidor. O login da caixa do CorvIA Mail continua bloqueado com
-   503 (`_exigir_configurado()`) até alguém repassar essas três credenciais, ou gerá-las de novo
-   no painel do Mail360 (Authentication) e o Rafael configurar no `.env`.
+3. ~~**Credenciais do Mail360**~~ — **DESBLOQUEADO, verificado em 31/07/2026.** As três variáveis
+   (`MAIL360_CLIENT_ID`, `MAIL360_CLIENT_SECRET`, `MAIL360_REFRESH_TOKEN`) **estão preenchidas no
+   `.env` de produção** e o backend as enxerga (`settings.mail360_*` presentes). Conferido chamando
+   `_exigir_configurado()` de `app/api/email.py` direto no container: **não levanta mais o 503** —
+   `settings.mail360_configurado` é verdadeiro, e as rotas do CorvIA Mail estão liberadas.
+   **Ressalva importante, para não superestimar o que foi verificado:** `mail360_configurado`
+   afere **presença** das credenciais, não validade. **Não testei chamada real à API do Zoho**,
+   porque isso é ação contra serviço externo e não foi pedido. Então: o bloqueio de configuração
+   caiu; se as credenciais expiraram ou foram revogadas, o erro aparecerá na primeira operação real
+   da caixa, não neste teste. **Quem for validar de fato:** ativar uma caixa de teste e enviar uma
+   mensagem, ou renovar o `refresh_token` no painel do Mail360 (Authentication) se der erro de
+   autenticação.
+   (Descoberto por acaso ao listar os nomes das variáveis do `.env` a pedido do Rafael — o registro
+   anterior dizia que as credenciais "não persistiram", e estava desatualizado.)
 
 > ### 🔑 Como carregar e publicar sem esbarrar no classificador, 29/07/2026 às 22h
 > Pedido do Rafael: garantir que você consiga publicar o que produzir. **Docker
