@@ -739,7 +739,7 @@
   },
   {
     "slug": "carvedilol",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Carvedilol",
     "drug_class": "Betabloqueador não seletivo com atividade alfa-1 bloqueadora adicional",
     "mechanism": "Bloqueia receptores beta-1, beta-2 e alfa-1 adrenérgicos, combinando redução de frequência cardíaca/contratilidade com vasodilatação periférica (via bloqueio alfa-1), diferentemente dos betabloqueadores cardiosseletivos (bisoprolol, metoprolol)",
@@ -777,8 +777,8 @@
       "Carvedilol tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 574c419f-3b9e-2171-e063-6394a90a0e90",
       "Packer M, Coats AJS, Fowler MB, et al. Effect of carvedilol on survival in severe chronic heart failure (COPERNICUS). N Engl J Med. 2001;344(22):1651-1658. DOI: 10.1056/NEJM200105313442201. PMID: 11386263"
     ],
-    "pregnancy": "Não usar na gravidez sem orientação médica; havendo gravidez durante ou logo após o tratamento, informar o médico imediatamente. A bula **não traz categoria de risco nem dado específico** — registrado como está. Fonte: bula do COREG (carvedilol, Roche).",
-    "lactation": "**Amamentação não recomendada.** A bula distingue com cuidado o que sabe do que não sabe: o carvedilol e seus metabólitos **são excretados no leite** em estudos animais, e **desconhece-se se o carvedilol é excretado no leite humano** — mesmo assim a recomendação é não amamentar durante o uso. Fonte: bula do COREG (carvedilol, GlaxoSmithKline), seção \"Gestação e Lactação\"."
+    "pregnancy": "**Categoria de risco C.** Não deve ser usado na gravidez a menos que os benefícios potenciais justifiquem o risco potencial. Não há experiência clínica adequada em gestantes; estudos em animais não mostraram efeito teratogênico. Betabloqueadores reduzem a perfusão placentária, podendo causar morte fetal intrauterina e parto prematuro; hipoglicemia e bradicardia podem ocorrer no feto/recém-nascido, com risco aumentado de complicações cardíacas e pulmonares neonatais. **Corrigido em 31/07/2026**: a versão anterior deste campo dizia que a bula 'não traz categoria de risco' — traz, no item Gestação e Lactação da bula profissional, que não havia sido consultado antes (só a bula do paciente, mais curta, tinha sido lida). Fonte: bula do COREG (carvedilol, Roche), seção \"Gestação e Lactação\".",
+    "lactation": "**Amamentação não recomendada durante o uso.** O carvedilol e seus metabólitos são excretados no leite (dado de estudo animal); desconhece-se se é excretado no leite humano. Fonte: bula do COREG (carvedilol, Roche), seção \"Gestação e Lactação\". **Corrigido em 31/07/2026**: o fabricante citado antes era 'GlaxoSmithKline' — no Brasil o Coreg é da Roche, mesma titular já citada corretamente no campo `pregnancy` deste registro; a atribuição a GSK era inconsistência interna do próprio verbete."
   },
   {
     "slug": "clonidina",
