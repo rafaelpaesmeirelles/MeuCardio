@@ -4958,5 +4958,65 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "confirmar-que-e-mesmo-tinoca-antes-de-aceitar-o-diagnostico",
+    "statement": "Diante de injúria miocárdica com angiografia normal ou com lesões coronárias não obstrutivas, o primeiro passo recomendado é CONFIRMAR que se trata mesmo de TINOCA: rever a imagem da angiografia em busca de obstrução, dissecção, embolia ou trombo coronário, e checar outros exames à procura de diagnósticos diferenciais como o Takotsubo. É Classe I — antes de rotular o caso como \"coronárias normais\", a diretriz manda duvidar do próprio exame que gerou o rótulo.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Atendimento à Dor Torácica na Unidade de Emergência – 2025 (SBC)",
+    "reference": "Diretriz Brasileira de Atendimento à Dor Torácica na Unidade de Emergência – 2025. Arq Bras Cardiol. 2025 — texto integral em acesso aberto (PMC12981354), conferido em 31/07/2026 — Tabela 'Investigação adicional de pacientes com injúria miocárdica e angiografia normal ou com lesões coronárias não obstrutivas'",
+    "theme": "Doença coronariana",
+    "tags": [
+      "tinoca",
+      "minoca",
+      "angiografia",
+      "dissecção coronária",
+      "takotsubo",
+      "revisão de imagem"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "rm-e-exames-adicionais-na-investigacao-do-tinoca",
+    "statement": "Confirmado o quadro de injúria miocárdica com coronárias não obstrutivas, deve-se considerar a ressonância magnética cardíaca e outros exames adicionais conforme a suspeita clínica — por exemplo, imagem intracoronária e testes para avaliação de espasmo ou de doença microvascular. Complementa a recomendação Classe I de ressonância no diferencial de troponina elevada com coronárias não obstrutivas, já cadastrada nesta base a partir da diretriz de imagem cardiovascular.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Atendimento à Dor Torácica na Unidade de Emergência – 2025 (SBC)",
+    "reference": "Diretriz Brasileira de Atendimento à Dor Torácica na Unidade de Emergência – 2025. Arq Bras Cardiol. 2025 — texto integral em acesso aberto (PMC12981354), conferido em 31/07/2026 — Tabela 'Investigação adicional de pacientes com injúria miocárdica e angiografia normal ou com lesões coronárias não obstrutivas'",
+    "theme": "Doença coronariana",
+    "tags": [
+      "tinoca",
+      "ressonância magnética cardíaca",
+      "espasmo coronário",
+      "doença microvascular",
+      "imagem intracoronária"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "unidades-de-dor-toracica-implementacao-e-indicadores",
+    "statement": "As Unidades de Dor Torácica devem ser implementadas em centros de emergência de alto volume e/ou de referência cardiovascular (Classe I, Nível A) e devem coletar indicadores de qualidade de forma SISTEMÁTICA, com avaliação contínua de melhorias baseadas nas métricas identificadas (Classe I, Nível A). A diretriz lista ainda, como Classe I, que a unidade disponha de profissionais habilitados na interpretação de ECG, de troponina preferencialmente de alta sensibilidade, de acesso a ecocardiograma de urgência, de laboratório de hemodinâmica 24/7 — próprio ou por sistema integrado de referência — e de protocolos para as principais síndromes de dor torácica potencialmente fatais.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2025,
+    "guideline_title": "Diretriz Brasileira de Atendimento à Dor Torácica na Unidade de Emergência – 2025 (SBC)",
+    "reference": "Diretriz Brasileira de Atendimento à Dor Torácica na Unidade de Emergência – 2025. Arq Bras Cardiol. 2025 — texto integral em acesso aberto (PMC12981354), conferido em 31/07/2026 — Tabela 'Recomendações para implementação de unidades de dor torácica'",
+    "theme": "Doença coronariana",
+    "tags": [
+      "unidade de dor torácica",
+      "indicadores de qualidade",
+      "organização de serviço",
+      "hemodinâmica 24/7"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
