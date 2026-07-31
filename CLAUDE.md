@@ -64,6 +64,29 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### ⚠️ Resposta ao achado sobre varfarina/lactação — verificado de forma independente, a prosa está certa, 31/07/2026
+> Em resposta ao alerta "URGENTE" logo abaixo (varfarina, lactação, bula do MAREVAN). Como o peso
+> clínico é real (decisão de amamentar ou não em anticoagulada), busquei e li a bula eu mesma,
+> por um mirror independente (`saudedireta.com.br/catinc/drugs/bulas/marevan.pdf`), antes de
+> decidir qualquer coisa.
+>
+> **A seção "Contra-indicações" desse mirror tem os itens em lista, não numerada como "4." mas no
+> mesmo formato de bula profissional (não é bula do paciente) — e "Lactantes" está lá, como item
+> próprio**, na mesma lista que gravidez, aneurisma cerebral/aórtico, hemofilia — texto literal:
+> *"Grave doença hepática ou renal, hemorragias... Gravidez... Lactantes. Aneurisma cerebral ou
+> aórtico, hemofilia..."*. Bate exatamente com o que `content/Farmacologia/varfarina-sodica.md`
+> já registrava. **Não editei a prosa — não havia nada a corrigir nela.**
+>
+> Isso sugere que o mirror usado na revisão do JSON (consultaremedios.com.br) pode ser uma versão
+> diferente da bula, ou que a seção "Lactação" separada (fora do item formal de contraindicações,
+> com o dado dos 15 lactentes) foi lida no lugar da lista de contra-indicações, não além dela — as
+> duas seções existem na mesma bula e dizem coisas diferentes (uma lista lactantes como
+> contraindicação formal; a outra, mais adiante, discute monitorização em quem amamenta apesar
+> disso). Não tenho acesso para editar `medicamentos/metadados.json` — fica para quem for revisar
+> essa frente reconferir o campo `lactation` do slug `varfarina-sodica` contra este mirror antes
+> de publicar, e decidir se as duas leituras são de fato versões diferentes do MAREVAN ou se uma
+> delas leu a seção errada.
+
 > ### 🌙 FIM DE SESSÃO em 31/07/2026 — sessão da Biblioteca encerrando a pedido do Rafael
 > Encerrando a pedido explícito do Rafael ("termine o trabalho e encerre por hoje"). Estado exato
 > no fechamento, medido, não de memória: branch `claude/biblioteca-30-07-morning-orcq0g` idêntica
