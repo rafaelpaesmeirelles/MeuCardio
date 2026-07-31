@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../lib/api";
 import { Carregando, Vazio } from "../components/Estado";
-import { rotuloNivel } from "../lib/evidencia";
+import { rotuloClasseCurto, rotuloNivel } from "../lib/evidencia";
 
 type Item = {
   slug: string; statement: string; recommendation_class: string;
@@ -78,7 +78,7 @@ export default function Evidencias() {
                 color: (COR_CLASSE[e.recommendation_class] ?? COR_CLASSE_PADRAO).texto,
                 minWidth: 46, textAlign: "center", flexShrink: 0,
               }}>
-                {e.recommendation_class}
+                {rotuloClasseCurto(e.recommendation_class)}
               </span>
               <div>
                 <p className="eyebrow" style={{ margin: 0 }}>

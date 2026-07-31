@@ -40,8 +40,18 @@ const CERTEZA_POR_EXTENSO: Record<string, string> = {
   MtBx: "muito baixa",
 };
 
+// `recommendation_class` é varchar(10), e "Condicional" tem 11 caracteres — não
+// cabe por um caractere. Gravado abreviado e expandido aqui, pela mesma razão e
+// da mesma forma que a certeza GRADE acima. As demais forças ("Forte", "Fraca",
+// "Ponderada") cabem e são gravadas por extenso.
+const FORCA_POR_EXTENSO: Record<string, string> = { Cond: "condicional" };
+
 export const rotuloClasse = (c: string) =>
-  CLASSES_ESC.has(c) ? `Classe ${c}` : `Força ${c}`;
+  CLASSES_ESC.has(c) ? `Classe ${c}` : `Força ${FORCA_POR_EXTENSO[c] ?? c}`;
+
+// Versão curta, para o selo da listagem, onde não cabe a palavra inteira.
+export const rotuloClasseCurto = (c: string) =>
+  CLASSES_ESC.has(c) ? c : (FORCA_POR_EXTENSO[c] ? "Condic." : c);
 
 export const rotuloNivel = (n: string) => {
   // "?" é usado quando a classe foi confirmada mas a letra do nível não pôde
