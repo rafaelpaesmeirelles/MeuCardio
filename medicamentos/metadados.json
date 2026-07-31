@@ -2995,7 +2995,7 @@
   },
   {
     "slug": "perindopril-argininaerbumina",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Perindopril (arginina/erbumina)",
     "drug_class": "Inibidor da enzima conversora de angiotensina (IECA)",
     "mechanism": "Pró-fármaco convertido em perindoprilato ativo, inibidor da ECA de longa duração de ação, permitindo dose única diária",
@@ -3012,10 +3012,15 @@
       "Hipertensão arterial, insuficiência cardíaca, prevenção de AVC secundário, redução de risco CV em DAC estável"
     ],
     "contraindications": [
-      "Gravidez",
-      "Angioedema prévio por IECA",
-      "Estenose bilateral de artéria renal",
-      "Hipersensibilidade"
+      "Hipersensibilidade à substância ativa, a componente da fórmula, ou a qualquer outro inibidor da ECA",
+      "História de angioedema associado a tratamento prévio com IECA",
+      "Angioedema hereditário ou idiopático",
+      "Segundo e terceiro trimestres de gestação",
+      "Uso concomitante de alisquireno em paciente diabético ou com TFG <60 mL/min/1,73m²",
+      "Uso concomitante de sacubitril-valsartana — não iniciar perindopril antes de 36h após a última dose de sacubitril-valsartana",
+      "Tratamento extracorpóreo com contato do sangue com superfície carregada negativamente (ex.: certas membranas de diálise/aférese)",
+      "Estenose bilateral significativa de artéria renal, ou estenose de artéria renal em rim funcional único",
+      "Uso em menores de 18 anos"
     ],
     "interactions": [
       "**Contraindicado o uso concomitante**, e é preciso respeitar uma **janela de 36 horas** ao trocar de ou para o sacubitril-valsartana. O inibidor de neprilisina e o IECA somam risco de angioedema, e a janela existe para evitar a sobreposição dos dois efeitos. Isto não é detalhe teórico em Cardiologia: a migração de IECA para sacubitril-valsartana é justamente o caminho recomendado na insuficiência cardíaca com fração de ejeção reduzida, então essa transição acontece na prática rotineira. Também não se deve coadministrar alisquireno a paciente diabético. Fonte: rótulo do sacubitril-valsartana aprovado pelo FDA (DailyMed SPL setid 000dc81d-ab91-450c-8eae-8eb74e72296f)."
@@ -3034,16 +3039,16 @@
       "Evidencia pivotal europa": "Estudo EUROPA (>12.000 pacientes com DAC estável) demonstrou redução significativa do desfecho composto (morte CV, IAM não fatal, parada cardíaca ressuscitada) com perindopril 8mg/dia vs. placebo, estabelecendo benefício de IECA em prevenção mesmo sem IC obrigatória"
     },
     "notes": {
-      "Nota sobre equivalencia entre sais": "Perindopril arginina e perindopril erbumina não são equivalentes dose a dose — aproximadamente, arginina 10 mg ≈ erbumina 8 mg. Ao trocar de apresentação, não assumir conversão 1:1."
+      "Nota sobre equivalencia entre sais": "Perindopril arginina e perindopril erbumina não são equivalentes dose a dose — aproximadamente, arginina 10 mg ≈ erbumina 8 mg. Ao trocar de apresentação, não assumir conversão 1:1.",
+      "Estenose de valva mitral/aortica e CMH — precaucao, nao contraindicacao": "A bula pede precaução (não proibição) em paciente com estenose de válvula mitral e obstrução do trato de saída do VE, como estenose aórtica ou cardiomiopatia hipertrófica — mesmo racional de outros IECA/vasodilatadores."
     },
     "references": [
+      "Bula profissional do COVERSYL 4mg (perindopril erbumina), Servier do Brasil — via consultaremedios.com.br",
       "Perindopril — rótulo aprovado pelo FDA, DailyMed SPL setid 87768fbf-7c63-47da-8925-0316f343d6ef",
-      "Coversyl 4mg — Bula Profissional · Servier · https://static-webv8.jet.com.br/drogaosuper/Bulas/7898029551046.pdf",
-      "Coversyl — Bula Profissional · A Nossa Drogaria · http://institucional.anossadrogaria.com.br/bula/924166.pdf",
       "Sandoz Perindopril Erbumine Product Monograph"
     ],
-    "pregnancy": "**Categoria D, com advertência em tarja preta.** O uso de fármacos que agem no sistema renina-angiotensina no **segundo e terceiro trimestres** reduz a função renal fetal e aumenta a morbidade e a mortalidade fetal e neonatal. O **oligoidrâmnio** resultante pode se associar a **hipoplasia pulmonar fetal e deformações esqueléticas**. Os efeitos adversos neonatais possíveis são **hipoplasia do crânio, anúria, hipotensão, insuficiência renal e morte**. Detectada a gravidez, descontinuar o perindopril **assim que possível**. O perindopril atravessa a placenta e, em tese, pode ser removido da circulação neonatal por exsanguineotransfusão ou diálise — mas a experiência limitada não demonstrou que isso traga benefício. Fonte: rótulo aprovado pelo FDA (DailyMed) para o perindopril erbumina. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer.",
-    "lactation": "**Cautela.** O leite de ratas lactantes continha radioatividade após administração de perindopril marcado com carbono-14; **não se sabe** se o perindopril é secretado no leite humano. Como muitos fármacos o são, o rótulo pede cuidado ao administrar a lactantes — sem contraindicar. Fonte: rótulo aprovado pelo FDA (DailyMed) para o perindopril erbumina. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer."
+    "pregnancy": "**Categoria D.** Corrige o registro anterior, que dizia não haver bula do detentor do registro no Brasil — localizada agora (COVERSYL, Servier do Brasil), mesma bula já usada para a posologia neste registro. IECA não deve ser iniciado na gravidez; a menos que a manutenção seja considerada essencial, trocar para anti-hipertensivo com perfil de segurança gestacional estabelecido antes de gravidez planejada. **Contraindicado formalmente no segundo e terceiro trimestres** (item 4); no primeiro trimestre o uso **não é recomendado** — evidência epidemiológica de risco de malformação nesse período não é conclusiva, mas um ligeiro aumento de risco não pode ser excluído. Diagnosticada a gravidez, interromper imediatamente. Exposição no segundo/terceiro trimestre associa-se a nefrotoxicidade e ototoxicidade fetal; recomenda-se ultrassonografia de função renal e crânio após exposição além do primeiro trimestre. Fonte: bula profissional brasileira do COVERSYL 4mg, itens 4. CONTRAINDICAÇÕES e 5. ADVERTÊNCIAS E PRECAUÇÕES — \"Fertilidade, Gravidez e Lactação\".",
+    "lactation": "**Não recomendado — não é contraindicação formal.** Não há informação disponível sobre uso durante a amamentação; a bula recomenda tratamento alternativo com perfil de segurança melhor estabelecido, **especialmente em recém-nascido ou prematuro**. Corrige o registro anterior, que dizia não haver bula brasileira disponível. Fonte: bula profissional brasileira do COVERSYL 4mg, item \"Fertilidade, Gravidez e Lactação — Lactação\"."
   },
   {
     "slug": "prasugrel",
