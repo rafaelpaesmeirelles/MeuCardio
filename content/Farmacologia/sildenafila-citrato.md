@@ -4,7 +4,7 @@ slug: sildenafila-citrato
 theme: "Farmacologia"
 kind: farmacologia
 review_status: revisado
-source_refs: ["Sildenafil (REVATIO) — rótulo aprovado pelo FDA para hipertensão arterial pulmonar, DailyMed SPL setid 3bb9363e-b28d-4019-8aae-539233dca214", "Galiè N, Ghofrani HA, Torbicki A, et al; Sildenafil Use in Pulmonary Arterial Hypertension (SUPER) Study Group. Sildenafil citrate therapy for pulmonary arterial hypertension. N Engl J Med. 2005;353(20):2148-2157. DOI: 10.1056/NEJMoa050010. PMID: 16291984", "Bula do REVATIO (sildenafila, Pfizer) · https://www.saudedireta.com.br/catinc/drugs/bulas/revatio.pdf · consultada em 31/07/2026 — versão curta/paciente, confirma hipersensibilidade; demais itens seguem sourceados pelo rótulo FDA"]
+source_refs: ["Bula profissional do REVATIO (sildenafila, comprimido 20mg, Viatris), indicação HAP — encontrada em 31/07/2026: \"USO ADULTO\", sem apresentação pediátrica registrada no Brasil", "Bula profissional do VIAGRA (sildenafila, Pfizer, via consultaremedios.com.br), indicação disfunção erétil — confirma riociguate como contraindicação formal, mesmo racional do REVATIO", "Sildenafil (REVATIO) — rótulo aprovado pelo FDA para hipertensão arterial pulmonar, DailyMed SPL setid 3bb9363e-b28d-4019-8aae-539233dca214 — única fonte para a apresentação/esquema pediátrico, sem correspondente na bula brasileira encontrada", "Galiè N, Ghofrani HA, Torbicki A, et al; Sildenafil Use in Pulmonary Arterial Hypertension (SUPER) Study Group. Sildenafil citrate therapy for pulmonary arterial hypertension. N Engl J Med. 2005;353(20):2148-2157. DOI: 10.1056/NEJMoa050010. PMID: 16291984"]
 legacy_source: "medicamentos/banco-de-medicamentos-sildenafila.md"
 ---
 
@@ -24,7 +24,8 @@ Comprimidos de 25, 50 e 100 mg
 
 ## Dose
 - **disfuncao eretil**: 50 mg VO, 1h antes da relação sexual; ajuste de 25-100 mg conforme tolerabilidade; dose máxima de 100 mg/dia
-- **hipertensao arterial pulmonar**: **20 mg por via oral, 3x/dia** — e a indicação **não é off-label**: existe produto especificamente aprovado para hipertensão arterial pulmonar do grupo I da OMS, em adultos e em pediatria de 1 a 17 anos, para melhorar a capacidade de exercício e retardar a piora clínica. A versão anterior deste verbete chamava o uso de off-label e dava a faixa de 5-20 mg 3x/dia com máximo de 80 mg/dia, que não corresponde à posologia aprovada.
+- **hipertensao arterial pulmonar, adulto**: **20 mg por via oral, 3x/dia** — e a indicação **não é off-label no adulto**: existe produto especificamente aprovado para hipertensão arterial pulmonar do grupo I da OMS, para melhorar a capacidade de exercício e retardar a piora clínica. A versão anterior deste verbete chamava o uso de off-label e dava a faixa de 5-20 mg 3x/dia com máximo de 80 mg/dia, que não corresponde à posologia aprovada.
+- **pediatria — corrigido em 31/07/2026, divergência Brasil/EUA real**: a bula profissional brasileira do REVATIO (comprimido 20mg, única apresentação encontrada) diz **"USO ADULTO"** já na identificação do medicamento, e na seção de Interações registra que "estudos sobre interação foram realizados apenas em adultos" — **não há reconhecimento de uso pediátrico nem suspensão oral pediátrica registrada no Brasil** que se tenha encontrado. O rótulo do FDA tem esquema e apresentação próprios para uso pediátrico em HAP (aprovado nos EUA em 1-17 anos), sem correspondente brasileiro encontrado — uso pediátrico no Brasil, com o esquema do FDA, é off-label, ao contrário do que uma versão anterior deste documento afirmava
 - **doses acima de 20 mg 3x/dia**: **resolvido em 29/07/2026** com o SUPER-1 (Galiè N et al., N Engl J Med. 2005;353(20):2148-2157, PMID 16291984), o próprio ensaio pivotal que originou a aprovação — 278 pacientes randomizados para placebo ou sildenafila 20, 40 ou 80 mg 3x/dia por 12 semanas. As três doses aumentaram a distância no teste de caminhada de 6 minutos de forma semelhante (45m, 46m e 50m vs. placebo, respectivamente; p<0,001 nas três comparações), sem diferença significativa na incidência de piora clínica entre as doses. **É exatamente essa ausência de ganho incremental relevante acima de 20mg que fez a dose aprovada e rotulada ser 20mg 3x/dia** — doses maiores existiram no próprio desenho do ensaio, mas o resultado não sustentou usá-las rotineiramente, então "dose acima da aprovada" não é uma lacuna de bula a preencher: é uma prática sem respaldo do próprio estudo que a testou
 - **fonte**: rótulo do sildenafila para hipertensão arterial pulmonar aprovado pelo FDA (DailyMed)
 
@@ -38,14 +39,16 @@ Iniciar com 25 mg/dose
 Potencializa significativamente o efeito hipotensor de nitratos (uso agudo ou crônico) — contraindicação absoluta de uso concomitante, com risco de hipotensão grave e potencialmente fatal
 
 ## Contraindicacoes
+**Corrigido em 31/07/2026** — confirmado contra as duas bulas profissionais brasileiras
+(REVATIO/HAP e VIAGRA/disfunção erétil), que convergem:
 - Uso concomitante com nitratos
 - Uso concomitante com doadores de óxido nítrico
-- **Uso concomitante com riociguat** (estimulador da guanilato ciclase solúvel, usado em hipertensão pulmonar tromboembólica crônica) — **acrescentado em 31/07/2026**: os dois potencializam a via do GMPc por mecanismos diferentes, com risco somado de hipotensão sintomática; combinação contraindicada pelo rótulo do FDA
-- Hipotensão grave
-- IAM recente
-- AVC recente
-- Retinopatia hereditária degenerativa
+- **Uso concomitante com riociguat** (estimulador da guanilato ciclase solúvel, usado em hipertensão pulmonar tromboembólica crônica) — confirmado nas duas bulas brasileiras: os dois potencializam a via do GMPc por mecanismos diferentes, com risco somado de hipotensão sintomática
 - Hipersensibilidade à sildenafila
+
+**Hipotensão grave, IAM recente, AVC recente e retinopatia hereditária degenerativa não são
+contraindicação formal em nenhuma das duas bulas brasileiras conferidas** — são Advertência, não
+proibição. Mantidas como cautela clínica relevante, não como item formal de bula.
 
 ## Efeitos adversos
 Cefaleia, rubor facial, dispepsia, congestão nasal, distúrbios visuais transitórios (visão azulada), priapismo (raro)
