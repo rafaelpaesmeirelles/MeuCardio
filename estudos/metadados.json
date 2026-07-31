@@ -2141,5 +2141,57 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "goal-post-profilaxia-secundaria-na-cardiopatia-reumatica-latente-em-5-anos",
+    "title": "GOAL-Post — Profilaxia antibiótica secundária na cardiopatia reumática latente em 5 anos",
+    "study_type": "ensaio_clinico",
+    "authors": "Grobler AC et al.",
+    "journal": "Journal of the American Heart Association",
+    "year": 2026,
+    "doi": "10.1161/JAHA.125.049544",
+    "pmid": "42179243",
+    "url": "https://www.ahajournals.org/doi/10.1161/JAHA.125.049544",
+    "summary": "Extensão do ensaio GOAL, já cadastrado nesta base, reconstruída como uma comparação randomizada única de 5 anos. No GOAL, 916 crianças ugandenses de 5 a 17 anos com cardiopatia reumática precoce detectada por rastreio foram randomizadas 1:1 para 2 anos de profilaxia secundária com penicilina G benzatina intramuscular ou nenhum tratamento; após revisão ecocardiográfica por especialista, 98 foram excluídas por reclassificação, restando 818 na população por intenção de tratar modificada (409 por braço), com idade média de 12,6 e 12,5 anos. No GOAL-Post os participantes foram estratificados pelo resultado do ecocardiograma de 2 anos: quem mantinha cardiopatia reumática precoce recebeu penicilina benzatina por mais 3 anos, e quem normalizou passou a ser apenas observado — a mesma regra valeu para os dois braços originais. O desfecho primário em 5 anos foi progressão ecocardiográfica pelos critérios da World Heart Federation de 2012 (piora de regurgitação valvar, surgimento de regurgitação patológica nova ou aumento de anormalidades morfológicas, incluindo mudança de categoria).",
+    "key_findings": "Aderência e retenção foram altas (98%): 799 participantes (97,7%) completaram o GOAL e 687 (86,0%) entraram no GOAL-Post. Trinta e seis haviam progredido para cardiopatia reumática durante o GOAL — 3 no braço com profilaxia e 33 no controle —, foram encaminhados para tratamento e mantidos na análise de 5 anos. Dados de desfecho disponíveis para 340 (83,2%) no braço de profilaxia e 332 (81,2%) no controle. Aos 5 anos, a progressão ecocardiográfica foi significativamente menor com profilaxia: 15 de 340 (4,4%) contra 47 de 332 (14,2%) — diferença de risco de -9,8 pontos percentuais (IC95% -14,1 a -5,4; p < 0,001), com razão de risco de 0,31 (IC95% 0,18 a 0,55). A imputação múltipla produziu resultado semelhante: 4,9% contra 14,3%, diferença de -9,5 pontos percentuais (IC95% -14,0 a -5,0; p < 0,001) e razão de risco de 0,34.",
+    "clinical_implications": "O GOAL mostrou que a profilaxia secundária interrompe a progressão da cardiopatia reumática precoce em 2 anos (risco de 8,2% para 0,8%); o GOAL-Post mostra que a diferença persiste em 5 anos, mesmo depois que ambos os braços passaram a receber conduta adaptada pelo ecocardiograma. Isso importa porque a dúvida clínica não era se a profilaxia funciona, e sim se o ganho se sustenta e por quanto tempo tratar — as recomendações de duração vigentes têm décadas e não foram feitas para criança com doença precoce detectada por rastreio.",
+    "limitations": "A comparação de 5 anos é uma reconstrução: dois estudos (GOAL e GOAL-Post) analisados como se um único ensaio de 5 anos tivesse sido planejado desde o início. Houve perda de dados de desfecho em cerca de 17% a 19% de cada braço, tratada por imputação múltipla, com resultado concordante. O desfecho é ecocardiográfico — progressão de imagem, não evento clínico como insuficiência cardíaca, cirurgia valvar ou morte. Publicado como *research letter*, formato com menor detalhamento metodológico. População ugandense de alta prevalência, o que limita a extrapolação direta para cenários de baixa incidência.",
+    "theme": "Febre reumática",
+    "tags": [
+      "goal-post",
+      "goal",
+      "profilaxia secundária",
+      "penicilina benzatina",
+      "cardiopatia reumática latente",
+      "ensaio clínico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "desempenho-operacional-dos-criterios-de-rastreio-whf-2023-para-cardiopatia-reumatica",
+    "title": "Desempenho operacional dos critérios de rastreio da World Heart Federation 2023 para cardiopatia reumática",
+    "study_type": "estudo_de_coorte",
+    "authors": "Rwebembera J et al.",
+    "journal": "Open Heart",
+    "year": 2026,
+    "doi": "10.1136/openhrt-2026-004196",
+    "pmid": "42419874",
+    "url": "https://openheart.bmj.com/content/13/2/e004196",
+    "summary": "Estudo transversal de acurácia diagnóstica em programa de rastreio escolar no distrito de Lira, norte de Uganda, com 11.198 crianças de 5 a 17 anos rastreadas entre setembro e novembro de 2024. Todas as crianças com rastreio positivo (522) e uma amostra aleatória estratificada das negativas (3.301) foram submetidas a ecocardiograma confirmatório. O teste índice foi ecocardiografia portátil realizada por ENFERMEIRO, com protocolo padronizado de três planos; o padrão de referência foi ecocardiograma completo interpretado por painel de especialistas cegado, usando os critérios completos da World Heart Federation. O viés de verificação parcial foi tratado por imputação múltipla. Os critérios de rastreio da WHF de 2023 foram desenhados justamente para permitir a delegação da tarefa a não especialistas, e faltavam dados de desempenho no mundo real.",
+    "key_findings": "Entre 3.802 participantes com o teste de referência e sem diagnóstico cardíaco alternativo, foram identificados 122 casos de cardiopatia reumática. Após correção do viés de verificação parcial, a sensibilidade foi de 60,0% (IC95% 46,6 a 73,5) e a especificidade de 96,3% (IC95% 96,0 a 96,7). O valor preditivo positivo foi de 19,5% e o negativo, de 99,4%. A análise apenas dos casos completos SUPERESTIMOU a sensibilidade (80,3%) e SUBESTIMOU a especificidade (89,0%) — diferença que mostra o tamanho do viés quando não se corrige a verificação parcial. Os casos não detectados foram predominantemente de estágio precoce ou de doença da valva aórtica, e NENHUM caso avançado deixou de ser identificado. Análise exploratória com interpretação por especialista único rendeu desempenho comparável.",
+    "clinical_implications": "Sustenta o rastreio delegado a enfermeiro com equipamento portátil como estratégia escalável em cenário de alta prevalência e poucos recursos: a especificidade alta e o valor preditivo negativo de 99,4% tornam o rastreio negativo confiável, e nenhum caso avançado escapou. Ao mesmo tempo, delimita a expectativa — com sensibilidade de 60%, o método perde parte da doença precoce e da valvopatia aórtica, de modo que rastreio negativo em criança sintomática ou de risco não substitui avaliação especializada. O valor preditivo positivo de 19,5% significa que a maioria dos rastreios positivos não se confirma, e a confirmação por ecocardiograma completo é parte obrigatória do programa, não etapa opcional.",
+    "limitations": "Estudo de acurácia diagnóstica, não de desfecho clínico: mede detecção, não impacto sobre progressão da doença ou mortalidade. Realizado em uma única região de alta prevalência, o que afeta diretamente os valores preditivos — em cenário de baixa prevalência, o valor preditivo positivo cairia ainda mais. Verificação parcial por desenho (apenas amostra dos negativos fez o padrão de referência), corrigida estatisticamente, mas ainda assim uma correção e não uma verificação completa.",
+    "theme": "Febre reumática",
+    "tags": [
+      "critérios whf 2023",
+      "rastreio ecocardiográfico",
+      "acurácia diagnóstica",
+      "cardiopatia reumática",
+      "delegação de tarefa",
+      "uganda"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
