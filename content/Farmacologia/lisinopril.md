@@ -3,7 +3,7 @@ title: "Lisinopril"
 slug: lisinopril
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Lisinopril tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 0e6364a4-6d66-4151-8197-d45e2a762895", "Bula do ZESTRIL (lisinopril), AstraZeneca do Brasil — detentora do registro no Brasil; seções de contra-indicações e \"Uso durante a gravidez e lactação\" · consultada em 29/07/2026"]
 legacy_source: "medicamentos/banco-de-medicamentos-lisinopril.md"
 ---

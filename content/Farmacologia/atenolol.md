@@ -4,7 +4,7 @@ slug: atenolol
 theme: "Farmacologia"
 kind: farmacologia
 review_status: revisado
-source_refs: ["Atenolol tablets — rótulo aprovado pelo FDA, DailyMed SPL setid c58e12ad-d705-4643-91ac-ff079e9eb28e"]
+source_refs: ["Atenolol tablets — rótulo aprovado pelo FDA, DailyMed SPL setid c58e12ad-d705-4643-91ac-ff079e9eb28e", "Bula do ATENOL (atenolol, AstraZeneca do Brasil) — itens 4 (Contraindicações) e 10 (Reações Adversas), via saudedireta.com.br/catinc/drugs/bulas/atenol.pdf"]
 legacy_source: "medicamentos/banco-de-medicamentos-atenolol.md"
 ---
 
@@ -29,14 +29,28 @@ Hipertensão arterial, angina do peito, arritmias cardíacas, prevenção secund
 Diferente do metoprolol succinato, atenolol não possui evidência robusta de redução de mortalidade em insuficiência cardíaca crônica, não sendo recomendado como opção de primeira linha entre os betabloqueadores baseados em evidência para ICFER (bisoprolol, carvedilol, metoprolol succinato)
 
 ## Contraindicacoes
-- Bradicardia sinusal grave
-- Bloqueio AV de 2º/3º grau
+Segundo o item 4 da bula do ATENOL:
+- Hipersensibilidade conhecida ao atenolol ou a qualquer componente da fórmula
+- Bradicardia (sem qualificador de gravidade na bula brasileira)
 - Choque cardiogênico
-- IC descompensada aguda
-- Asma/DPOC grave com broncoespasmo ativo
+- Hipotensão
+- Acidose metabólica
+- Distúrbios graves da circulação arterial periférica
+- Bloqueio cardíaco de segundo ou terceiro grau
+- Síndrome do nodo sinusal
+- Feocromocitoma não tratado
+- Insuficiência cardíaca descompensada (sem qualificador "aguda" na bula brasileira)
+- Uso em crianças (a bula não recomenda)
+
+Nota de correção: a versão anterior deste documento (fonte FDA/DailyMed) trazia "bradicardia sinusal grave" e "IC descompensada aguda" — a bula brasileira não usa esses qualificadores. "Asma/DPOC grave com broncoespasmo ativo" também constava aqui como contraindicação; na bula brasileira o broncoespasmo aparece como reação adversa rara (item 10), não como contraindicação formal.
 
 ## Efeitos adversos
-Bradicardia, fadiga, extremidades frias, broncoespasmo (menos frequente que betabloqueadores não seletivos), disfunção erétil, mascaramento de sintomas de hipoglicemia em diabéticos
+Segundo o item 10 da bula (classificados por frequência real):
+- **Comuns (1-9,9%)**: bradicardia, extremidades frias, distúrbios gastrointestinais, fadiga
+- **Incomuns (0,1-0,9%)**: distúrbios do sono, elevação de transaminases
+- **Raras (0,01-0,09%)**: piora de insuficiência cardíaca, desencadeamento de bloqueio cardíaco, hipotensão postural (pode associar-se a síncope), agravamento de claudicação intermitente/fenômeno de Raynaud, tontura, cefaleia, parestesia, alterações do humor, pesadelos, confusão, psicoses, alucinações, boca seca, toxicidade hepática (incluindo colestase intra-hepática), púrpura, trombocitopenia, alopecia, reações psoriaseformes/exacerbação de psoríase, erupções cutâneas, olhos secos, distúrbios visuais, impotência, broncoespasmo em asma brônquica ou histórico de queixas asmáticas
+- **Muito raras (<0,01%)**: aumento de ANA (anticorpos antinucleares), relevância clínica não estabelecida
+- Também descrito: mascaramento de sintomas de hipoglicemia em diabéticos
 
 ## Dose ajuste renal especifico
 

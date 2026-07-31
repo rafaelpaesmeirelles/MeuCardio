@@ -3,7 +3,7 @@ title: "Indapamida"
 slug: indapamida
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Indapamide — rótulo aprovado pelo FDA, DailyMed SPL setid 59cd3331-7afe-432a-8b50-39533fd5f392", "INDAPAMIDA — Nova Literatura · Purifarma · http://purifarma.com.br/Arquivos/Produto/INDAPAMIDA_Nova%20Literatura.pdf", "Lozol/Indapamide — bula FDA/DailyMed (múltiplas versões consultadas)"]
 legacy_source: "medicamentos/banco-de-medicamentos-indapamida.md"
 ---

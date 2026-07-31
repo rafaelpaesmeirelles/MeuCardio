@@ -3,7 +3,7 @@ title: "Ivabradina (cloridrato)"
 slug: ivabradina-cloridrato
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["PROCORALAN (ivabradina, Servier) — Resumo das Características do Medicamento, EMA, em português, secção 4.2 · https://www.ema.europa.eu/pt/documents/product-information/procoralan-epar-product-information_pt.pdf · consultado em 29/07/2026", "Swedberg K, Komajda M, Böhm M, et al. Ivabradine and outcomes in chronic heart failure (SHIFT): a randomised placebo-controlled study. Lancet. 2010;376(9744):875-885. DOI: 10.1016/S0140-6736(10)61198-1. PMID: 20801500"]
 legacy_source: "medicamentos/banco-de-medicamentos-ivabradina-2.md"
 ---
