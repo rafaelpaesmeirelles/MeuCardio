@@ -264,10 +264,19 @@ contra o `git log` do dia.
 > **Nota de faixa:** `evidencias/` e Febre reumática são da Biblioteca. Entrei porque o Rafael pediu
 > explicitamente, alterei **um campo de um registro** e commitei na mesma ação.
 >
-> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **56 documentos novos, todos publicados**
-> `content/*.md` de **424 para 487**; `documents` **487 total = 487 publicados**. **Acervo total:
-> 1.079** — **faltam 921 para os 2.000**. (Os números das frentes JSON e parte dos documentos
-> incluem o que a sessão da Biblioteca entregou no mesmo dia; os 56 acima são só desta sessão.)
+> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **57 documentos novos, todos publicados**
+> `content/*.md` de **424 para 488**; `documents` **488 total = 488 publicados**. **Acervo total:
+> 1.085** — **faltam 915 para os 2.000**. (Os números das frentes JSON e parte dos documentos
+> incluem o que a sessão da Biblioteca entregou no mesmo dia; os 57 acima são só desta sessão.)
+>
+> **28º lote — 1 documento**: horário do anti-hipertensivo, manhã ou noite (TIME, PMID 36240838, em
+> Hipertensão) — pergunta frequente de consultório, com 21.104 pacientes e resultado que **transfere
+> a decisão do horário para a conveniência e a adesão do paciente**.
+>
+> **Lacunas novas mapeadas e ainda não escritas** (fonte não verificada): **ferro oral vs.
+> endovenoso na IC** (IRONOUT-HF, PMID 28510680 — abstract já lido, pronto para escrever),
+> **CPAP na ICFEr**, **duração da anticoagulação no TEV associado a câncer** e **ablação de TV
+> endocárdica vs. epicárdica**.
 >
 > **24º lote — 1 documento**: diagnóstico de TEP na gestante (Artemis/YEARS adaptado, PMID 30893534,
 > e CT-PE-Pregnancy, PMID 30357273, em Gravidez).
@@ -298,9 +307,17 @@ contra o `git log` do dia.
 > em `https://pmc.ncbi.nlm.nih.gov/articles/PMC<id>/` e **é legível por WebFetch**.
 >
 > **Foi assim que o consenso de VD saiu de "bloqueado por dois ciclos" para documento publicado.**
-> **As outras lacunas bloqueadas desta sessão devem ser retentadas por este caminho antes de
-> qualquer outra coisa:** ISHLT/transplante cardíaco (PMID 26776864), AHA/síndrome cardiorrenal
-> (PMID 30852913) e a ESC 2025 de gravidez/contracepção.
+>
+> **⚠️ MAS o método foi testado nas outras três lacunas e NÃO resolveu — não repita a tentativa:**
+> - **ISHLT / transplante cardíaco** (PMID 26776864) — **sem texto integral no PMC**
+> - **AHA / síndrome cardiorrenal** (PMID 30852913) — **sem texto integral no PMC**
+> - **ESC 2025 de gravidez/contracepção** — o PMID correto da diretriz é **40878294**
+>   (*2025 ESC Guidelines for the management of cardiovascular disease and pregnancy*, Eur Heart J
+>   2025) e ele **também não tem PMC**
+>
+> **Essas três seguem bloqueadas por acesso, e o caminho do PMC já foi descartado.** Para elas,
+> restam: assinatura institucional, o site da própria sociedade, ou uma diretriz brasileira/outra
+> que reproduza o conteúdo com atribuição.
 >
 > **25º lote — 1 documento**: tromboprofilaxia na gestação e puerpério (HIGHLOW, PMID 36354038, em
 > Gravidez), que forma par com o de diagnóstico de TEP na gestante do lote anterior — um investiga a
