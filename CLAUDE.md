@@ -1348,7 +1348,6 @@ uma frente livre em vez de negociar no meio do commit.
 | `content/Farmacologia/*.md` | sessão de **Medicamentos** | ocupado — a regra de rodízio abaixo fica **suspensa** para este tema |
 | `content/<demais temas>/*.md` | sessão da biblioteca | livre |
 | `evidencias/`, `estudos/`, `galeria/`, `exames/` | sessão da biblioteca | livre |
-| `exames/metadados.json` | **sessão de Monitoramento** (esta sessão, Claude Code Remote, acionada pelo Rafael para acelerar) | **ocupado, 31/07/2026 22h40 — adicionando 1 item (escore de cálcio coronariano), libero em seguida** |
 | `controlados/`, `backend/app/**/receituario*`, `backend/app/services/classificacao_*`, CorvIA Mail (backend/frontend) | sessão da **Biblioteca** (passado pelo Rafael em 30/07/2026 — ver bloco no topo desta seção) | ocupado |
 | `CLAUDE.md`, `COBERTURA.md` | ambas | **editar só a própria seção**, e `git pull --rebase` antes |
 
