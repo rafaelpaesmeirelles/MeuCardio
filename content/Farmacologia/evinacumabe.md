@@ -3,7 +3,7 @@ title: "Evinacumabe"
 slug: evinacumabe
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Evkeeza, INN-evinacumab · EMA · https://www.ema.europa.eu/en/documents/product-information/evkeeza-epar-product-information_en.pdf", "Evinacumab: Mechanism of action, clinical, and translational science · PMC · 2024 · https://pmc.ncbi.nlm.nih.gov/articles/PMC11157145/", "Evkeeza (evinacumab) — bula FDA/prescriberpoint, 2025", "Evinacumab — StatPearls, NCBI Bookshelf", "FDA approves add-on therapy for patients with genetic form of severely high cholesterol — FDA.gov, 2021"]
 legacy_source: "medicamentos/banco-de-medicamentos-item-26.md"
 ---

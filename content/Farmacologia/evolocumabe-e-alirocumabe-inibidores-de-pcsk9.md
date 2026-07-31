@@ -3,7 +3,7 @@ title: "Evolocumabe e Alirocumabe (inibidores de PCSK9)"
 slug: evolocumabe-e-alirocumabe-inibidores-de-pcsk9
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Inibidores da PCSK9: manual de instruções · Afya Endocrinologia · 2025 · https://portal.afya.com.br/endocrinologia/inibidores-da-pcsk9-manual-de-instrucoes", "REPATHA (evolocumabe) — Bula Profissional · Amgen · https://www.amgen.com.br/~/media/Themes/CorporateAffairs/amgen-com-br/amgen-com-br/PDF/Products/2022.06.08_Repatha_Bula_Profissional.pdf", "Sabatine MS, Giugliano RP, Keech AC, et al; FOURIER Steering Committee and Investigators. Evolocumab and clinical outcomes in patients with cardiovascular disease (FOURIER). N Engl J Med. 2017;376(18):1713-1722. DOI: 10.1056/NEJMoa1615664. PMID: 28304224", "Schwartz GG, Steg PG, Szarek M, et al; ODYSSEY OUTCOMES Committees and Investigators. Alirocumab and cardiovascular outcomes after acute coronary syndrome (ODYSSEY OUTCOMES). N Engl J Med. 2018;379(22):2097-2107. DOI: 10.1056/NEJMoa1801174. PMID: 30403574"]
 legacy_source: "medicamentos/banco-de-medicamentos-inibidores-de-pcsk9-evolocumabe-alirocumabe.md"
 ---

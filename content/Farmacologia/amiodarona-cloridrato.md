@@ -4,7 +4,7 @@ slug: amiodarona-cloridrato
 theme: "Farmacologia"
 kind: farmacologia
 review_status: revisado
-source_refs: ["Como eu uso Amiodarona · Afya Cardiologia · 2021 · https://portal.afya.com.br/cardiologia/como-eu-uso-amiodarona", "Cloridrato de Amiodarona — Bula Profissional · Fresenius Kabi · https://www.fresenius-kabi.com/content/dam/fresenius-kabi/br/documents/bulas/medicamentos/Cloridrato%20de%20Amiodarona"]
+source_refs: ["Cloridrato de Amiodarona — Bula do Profissional de Saúde (injetável), Fresenius Kabi Brasil Ltda., item 8 (Posologia). https://www.fresenius-kabi.com/content/dam/fresenius-kabi/br/documents/bulas/medicamentos/Cloridrato%20de%20Amiodarona", "ATLANSIL (cloridrato de amiodarona, comprimidos), Sanofi-Aventis Farmacêutica Ltda. — itens 4 (Contraindicações), Posologia e Gravidez/Amamentação."]
 legacy_source: "medicamentos/banco-de-medicamentos-amiodarona.md"
 ---
 
@@ -22,16 +22,25 @@ Efeito predominante de bloqueio de canal de potássio, prolongando duração do 
 ## Farmacocinetica
 Altamente lipofílica, exigindo dose de ataque; meia-vida média de 58 dias (variação 15-142 dias); início de ação EV em 1-2h, VO em 2-3 dias
 
-## Dose
-- **ataque ev**: 1 ampola (150mg) em 100mL SG5%, infundida em 10-30 min
-- **manutencao ev primeiras 6h**: 1 mg/min
-- **manutencao ev 18h seguintes**: 0,5 mg/min
-- **diluicao pratica**: SG5% 250mL com 6 ampolas (900mg) — infusão de 16,6 mL/h nas primeiras 6h, seguida de 8,3 mL/h nas 18h seguintes
-- **dose impregnacao total**: 8-10g de amiodarona no total; dose máxima diária de 1200-1800 mg/dia exigiria 1 semana de infusão contínua para impregnação completa por via EV, mas geralmente combina-se com dose oral elevada seguida de redução para manutenção
-- **criancas ataque**: 10-15 mg/kg/dia VO, em 1-2 doses, por 4-14 dias
-- **gravidez uso refratario**: Dose máxima de 200 mg/dia, com monitorização tireoidiana materna e neonatal frequente
-- **administracao**: Sempre em frascos de vidro ou poliolefina; preferencialmente acesso central (risco de flebite periférica)
-- **fonte**: Afya Cardiologia — Como eu uso Amiodarona ; Manual Farmacêutico Einstein
+## Dose — via intravenosa (segundo a bula injetável, Fresenius Kabi)
+- **ataque**: 5 mg/kg em 250 mL de glicose 5%, infundidos em 20 minutos a 2 horas — pode ser repetido 2 a 3 vezes em 24 horas, com velocidade ajustada à evolução clínica
+- **por que a infusão contínua é obrigatória**: o efeito terapêutico aparece nos primeiros minutos e decresce progressivamente — a dose de ataque isolada não é suficiente, exige-se infusão contínua na sequência
+- **manutenção**: 10 a 20 mg/kg/dia (geralmente 600 a 800 mg/24h, até 1200 mg/24h) em 250 mL de glicose 5%, por alguns dias; o tratamento oral de manutenção deve ser iniciado já no primeiro dia da infusão
+- **bolus**: 5 mg/kg, injeção nunca em menos de 3 minutos; não misturar com outra preparação na mesma seringa
+- **fibrilação ventricular resistente à RCP por choque**: primeira dose de 300 mg (ou 5 mg/kg) diluída em 20 mL de glicose 5%, em bolus IV; dose adicional de 150 mg (ou 2,5 mg/kg) IV pode ser considerada se a FV persistir
+- **regras de diluição**: não usar concentração inferior a 600 mg/L; diluir exclusivamente em glicose 5% (nunca em salina); conservar a solução diluída em temperatura ambiente (15-30°C), ao abrigo da luz, e administrar dentro de 24 horas; não misturar nenhum outro produto no líquido de infusão; equipos com plastificante DEHP liberam o plastificante na presença de amiodarona — preferir sistema sem DEHP
+
+## Dose — via oral (segundo a bula ATLANSIL, comprimidos)
+- **ataque**: 600 a 1000 mg/dia durante 8 a 10 dias
+- **manutenção**: determinar a menor dose eficaz, entre 100 e 400 mg/dia; pela meia-vida longa, a bula admite dias alternados (ex.: 200 mg em dias alternados quando a dose recomendada seria 100 mg/dia) ou esquema de "janela terapêutica" — 5 dias de uso com 2 dias de intervalo
+- **modo de usar**: comprimidos inteiros, com líquido suficiente, durante ou após as refeições; não partir
+- **dose esquecida**: administrar assim que possível; se estiver perto do horário seguinte, esperar e manter o intervalo — nunca administrar duas doses juntas
+
+## Uso pediatrico e na gravidez — sem posologia de bula
+Nenhuma das duas bulas brasileiras (injetável Fresenius Kabi, oral ATLANSIL) cobre estes usos: a injetável não traz posologia pediátrica, e a de comprimido é declaradamente **uso adulto**. Valores de dose pediátrica ou de teto na gravidez não devem ser prescritos a partir deste verbete — exigem diretriz pediátrica específica ou bula que os registre, nenhuma das quais foi confirmada nesta revisão.
+
+## Administracao
+Sempre em frascos de vidro ou poliolefina; preferencialmente acesso central (risco de flebite periférica) — via somente intravenosa na apresentação injetável, somente oral na apresentação em comprimido; a bula registra que não há estudos por vias não recomendadas
 
 ## Indicacoes
 Arritmias atriais e ventriculares, agudas e de manutenção; boa eficácia para reversão de ritmo em FA; útil em arritmias ventriculares com cardiopatia estrutural
@@ -46,12 +55,16 @@ T: TSH a cada 6 meses (disfunção tireoidiana); R: radiografia de tórax anual 
 Prevalência de efeitos colaterais até 15% no primeiro ano e 50% a longo prazo; toxicidade pulmonar (pneumonite/fibrose), exacerbação de arritmias, lesão hepática grave (rara), tremor extrapiramidal, distúrbios do sono, microdepósitos corneanos, fotossensibilidade, coloração azulada da pele; 20% dos pacientes descontinuam por efeitos adversos
 
 ## Contraindicacoes
-- Hipersensibilidade a iodo ou amiodarona
-- BAV de alto grau
-- Bradicardia sinusal grave
-- Bloqueio sinoatrial
-- Doença do nó sinusal sem marcapasso
-- **Lactação** — acrescentada em 29/07/2026, por constar da lista formal de contraindicações da bula brasileira e faltar aqui. A amiodarona é excretada no leite materno **em quantidades significantes**, e por isso a bula a contraindica em lactantes (bula do ATLANSIL, cloridrato de amiodarona, Sanofi)
+Segundo o item 4 da bula do ATLANSIL:
+- Hipersensibilidade (alergia) conhecida ao iodo, à amiodarona ou a qualquer componente da fórmula
+- Bradicardia sinusal, bloqueio sinoatrial ou doença do nó sinusal — exceto em paciente com marca-passo implantado
+- Associação com medicamentos que podem induzir torsade de pointes
+- Disfunção da tireoide
+- Gravidez, exceto em circunstâncias excepcionais a critério médico
+- Lactação (amamentação) — a amiodarona é excretada no leite materno em quantidades significantes
+- **Exceção da própria bula**: nenhuma destas contraindicações se aplica ao uso em sala de emergência, em fibrilação ventricular resistente a ressuscitação cardiopulmonar por choque (desfibrilador)
 
-## Gravidez classificacao
-Classe D — uso apenas em casos refratários
+Nota de correção: a formulação anterior deste documento listava "BAV de alto grau" e "bradicardia sinusal grave" como contraindicação de início — a bula não traz essa formulação exata; bloqueio AV de 2º/3º grau surgido **durante** o tratamento é motivo de descontinuação (advertência), não contraindicação prévia listada no item 4.
+
+## Gravidez
+**Contraindicada na gravidez**, em razão dos efeitos sobre a tireoide fetal — **exceto em circunstâncias excepcionais, a critério médico, quando o benefício supera o risco ao feto**. A bula brasileira não usa a nomenclatura de categoria de risco (A/B/C/D/X) do rótulo norte-americano.

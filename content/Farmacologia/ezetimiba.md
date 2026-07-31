@@ -3,8 +3,8 @@ title: "Ezetimiba"
 slug: ezetimiba
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
-source_refs: ["Ezetimibe tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 090776cf-f211-49a3-a993-ff5d707311f2", "Cannon CP, Blazing MA, Giugliano RP, et al. Ezetimibe added to statin therapy after acute coronary syndromes (IMPROVE-IT). N Engl J Med. 2015;372(25):2387-2397. DOI: 10.1056/NEJMoa1410489", "Bula do EZETROL (ezetimiba), MSD, registrada na ANVISA — seção de Indicações, conferida em 29/07/2026"]
+review_status: revisado
+source_refs: ["Ezetimibe tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 090776cf-f211-49a3-a993-ff5d707311f2", "Cannon CP, Blazing MA, Giugliano RP, et al. Ezetimibe added to statin therapy after acute coronary syndromes (IMPROVE-IT). N Engl J Med. 2015;372(25):2387-2397. DOI: 10.1056/NEJMoa1410489. PMID: 26039521", "Bula do EZETROL (ezetimiba), MSD, registrada na ANVISA — seção de Indicações, conferida em 29/07/2026"]
 legacy_source: "medicamentos/banco-de-medicamentos-ezetimiba.md"
 ---
 
