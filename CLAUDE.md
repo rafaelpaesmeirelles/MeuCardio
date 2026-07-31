@@ -506,7 +506,31 @@ profundidade continuam mapeadas mais abaixo — Pericárdio e Febre reumática s
 com 8-9 documentos, a galeria não tem aneurisma apical chagásico, e a decisão de
 esquema do `recommendation_class` ainda barra diretriz brasileira em GRADE.
 
-#### ✅ Sessão da BIBLIOTECA — fechamento de 31/07/2026: **70 itens novos, TODOS PUBLICADOS**
+#### ⚠️ NÃO tente "consertar" o campo `published` dos JSON — ele é ignorado de propósito
+Registrado em 31/07/2026 depois de a dúvida surgir na prática. Estado real, medido:
+**`published: true` aparece em ZERO itens no disco** — 0 de 198 em `evidencias`,
+0 de 87 em `estudos`, 0 de 68 em `exames`, 0 de 66 em `galeria`, 0 de 89 em
+`medicamentos` — e ao mesmo tempo quase tudo está publicado no banco.
+
+**Isso não é inconsistência a corrigir.** Os carregadores descartam o campo antes de
+gravar (`item = {k: v for k, v in item.items() if k != "published"}`, ver
+`carregar_estudos.py:29` e equivalentes), e o motivo está escrito no topo de cada
+arquivo: antes dessa guarda, qualquer recarga copiava `published: false` por cima do
+banco e **tirava do ar tudo que já estava publicado** — aconteceu de verdade com
+evidências e estudos.
+
+Consequências práticas, para não perder tempo:
+- **o banco é a fonte da verdade** sobre o que está no ar; o campo no JSON é vestigial;
+- marcar `true` no arquivo **não publica nada** e ainda deixaria aquele item
+  inconsistente com os outros 500+;
+- fazer o JSON voltar a controlar a publicação exigiria **remover a guarda**, que é
+  mudança de política de backend e reintroduz exatamente o incidente que a guarda
+  existe para impedir.
+
+Decisão do Rafael em 31/07/2026, ao ser apresentado às três opções: **deixar como
+está** — nada a mexer no disco nem no carregador.
+
+#### ✅ Sessão da BIBLIOTECA — fechamento de 31/07/2026: **72 itens novos, TODOS PUBLICADOS**
 Contagem para a meta, medida no disco (não estimada). Dois lotes, os dois
 autorizados pelo Rafael no mesmo dia.
 
@@ -660,10 +684,10 @@ despublicada. **Os 12 órfãos de `drugs` continuam publicados** — faixa da se
 de Medicamentos, avisada, e a única pendência de órfão que resta.
 
 #### 📐 Contagem completa do acervo — corrigida em 31/07/2026, e **maior do que a meta vinha medindo**
-**1.002 itens — META ATINGIDA.** Medido arquivo por arquivo no disco ao
-fechar o dia: `content/*.md` 455 · `evidencias` 198 · `medicamentos` 89 ·
-`estudos` 85 · `exames` 68 · `galeria` 66 · `trilhas` 17 · `emergencia` 10 ·
-`casos-clinicos` 5 · **`checklists` 3** · **`material-paciente` 4**.
+**1.010 itens — META ATINGIDA e ultrapassada.** Medido arquivo por arquivo no disco
+ao fechar o dia (as duas sessões somadas): `content/*.md` 463 · `evidencias` 198 ·
+`medicamentos` 89 · `estudos` 87 · `exames` 68 · `galeria` 66 · `trilhas` 17 ·
+`emergencia` 10 · `casos-clinicos` 5 · **`checklists` 3** · **`material-paciente` 4**.
 
 **Estado da faixa da Biblioteca em `content/` ao fechar** — os dois próximos alvos
 naturais são os que seguem mais baixo: Cardiomiopatias 13 · Endocardite 10 · Cardiopatias
