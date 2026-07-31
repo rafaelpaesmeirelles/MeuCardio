@@ -1662,6 +1662,33 @@ monta a impressão.
    live, e vice-versa.
 
 ### Trabalho novo
+
+0. **🐛 DEFEITO DE INTERFACE ENCONTRADO em 31/07/2026 — filtro da tela de Estudos
+   mostra nome técnico cru ao assinante.** Achado pela sessão da Biblioteca ao
+   cadastrar um estudo observacional. **Não corrigido de propósito** — a correção tem
+   um trade-off que é decisão do Rafael, explicado abaixo.
+   - **O que o assinante vê:** na página de Estudos, o botão de filtro aparece como
+     **`estudo_de_coorte (7)`** — com underscore e sem acento —, ao lado de "Ensaio
+     clínico (80)" e "Revisão sistemática (1)", que aparecem certos.
+   - **Causa:** `frontend/src/pages/Estudos.tsx` tem o mapa `RÓTULO_TIPO` com seis
+     chaves (`ensaio_clinico`, `revisao_sistematica`, `metanalise`, `consenso`,
+     **`coorte`**, `caso_controle`) e cai no `?? t.study_type` quando não encontra a
+     chave. Os dados, porém, usam **`estudo_de_coorte`** — valor que **não existe em
+     nenhum lugar do código**, só nos JSON (conferido com `grep` em `backend/` e
+     `frontend/src/`).
+   - **Por que NÃO corrigi trocando o dado**, que seria o caminho dentro da minha
+     faixa: dos 7 registros com esse valor, nem todos são coorte. Os dois de Febre
+     reumática são de desenho **transversal** — renomeá-los para `coorte` trocaria um
+     rótulo feio por uma **classificação errada**, que é pior.
+   - **Correção recomendada (código, 1 linha):** acrescentar `estudo_de_coorte:
+     "Coorte"` ao mapa `RÓTULO_TIPO`, ou melhor, `"Estudo observacional"`, que cobre
+     honestamente coorte e transversal. Se o Rafael preferir taxonomia mais fina, o
+     caminho é acrescentar também um valor `transversal` ao mapa **e** reclassificar
+     só os dois registros que de fato são transversais.
+   - Enquanto não se decide, o novo estudo brasileiro entrou com o valor já existente
+     e o desenho transversal **declarado no próprio `summary`**, para não fragmentar a
+     taxonomia nem enganar o leitor.
+
 4. **Medicamentos — 90 no ar, todos `pendente_revisao`, 17 com marcação de
    verificação.** Conferido item a item em 29/07/2026 contra o banco:
    `total 100 · publicados 90 · não publicados 10`, e o conjunto publicado é
