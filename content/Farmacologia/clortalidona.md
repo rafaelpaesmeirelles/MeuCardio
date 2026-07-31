@@ -3,7 +3,7 @@ title: "Clortalidona"
 slug: clortalidona
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Chlorthalidone — rótulo aprovado pelo FDA, DailyMed SPL setid da0fe4da-a4f3-4aa8-84f4-4d31c5cbdb0e", "Chlorthalidone/THALITONE — bula FDA/DailyMed (múltiplas versões consultadas)", "Chlorthalidone — StatPearls, NCBI Bookshelf", "Ishani A, Cushman WC, Leatherman SM, et al; Diuretic Comparison Project Writing Group. Chlorthalidone vs. Hydrochlorothiazide for Hypertension-Cardiovascular Events. N Engl J Med. 2022;387(26):2401-2410. DOI: 10.1056/NEJMoa2212270. PMID: 36516076"]
 legacy_source: "medicamentos/banco-de-medicamentos-clortalidona.md"
 ---

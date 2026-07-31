@@ -3,7 +3,7 @@ title: "Clopidogrel (bissulfato)"
 slug: clopidogrel-bissulfato
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Guia de medicamentos cardiovasculares: clopidogrel · Afya Cardiologia · https://portal.afya.com.br/cardiologia/bulario-clopidogrel", "Protocolo de uso de Clopidogrel · Secretaria de Saúde do DF · https://www.saude.df.gov.br/documents/37101/90213/Protocolo+de+Uso+de+Clopidogrel.pdf"]
 legacy_source: "medicamentos/banco-de-medicamentos-clopidogrel.md"
 ---

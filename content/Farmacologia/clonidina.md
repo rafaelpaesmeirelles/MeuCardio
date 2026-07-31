@@ -3,7 +3,7 @@ title: "Clonidina"
 slug: clonidina
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Clonidine hydrochloride tablets — rótulo aprovado pelo FDA, DailyMed SPL setid e96ab74c-eedf-4d71-8a35-d5ec3daa7592"]
 legacy_source: "Clonidina (dose completa, fecha lacuna anterior)"
 ---
