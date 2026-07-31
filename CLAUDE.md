@@ -264,10 +264,20 @@ contra o `git log` do dia.
 > **Nota de faixa:** `evidencias/` e Febre reumática são da Biblioteca. Entrei porque o Rafael pediu
 > explicitamente, alterei **um campo de um registro** e commitei na mesma ação.
 >
-> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **57 documentos novos, todos publicados**
-> `content/*.md` de **424 para 488**; `documents` **488 total = 488 publicados**. **Acervo total:
-> 1.085** — **faltam 915 para os 2.000**. (Os números das frentes JSON e parte dos documentos
-> incluem o que a sessão da Biblioteca entregou no mesmo dia; os 57 acima são só desta sessão.)
+> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **58 documentos novos, todos publicados**
+> `content/*.md` de **424 para 490**; `documents` **490 total = 490 publicados**. **Acervo total:
+> 1.087** — **faltam 913 para os 2.000**. (Os números das frentes JSON e parte dos documentos
+> incluem o que a sessão da Biblioteca entregou no mesmo dia; os 58 acima são só desta sessão.)
+>
+> **29º lote — 1 documento**: ferro oral na ICFEr (IRONOUT-HF, PMID 28510680), que **fecha a trinca
+> ferro/anemia** da pasta de Insuficiência cardíaca — endovenoso funciona, oral não funciona,
+> eritropoetina não funciona e ainda causa dano. **Os três só fazem sentido lidos juntos**, e o
+> documento novo traz a tabela que os reúne.
+>
+> **Isso sugere um critério de seleção que rendeu bem várias vezes hoje: procurar o VÉRTICE QUE
+> FALTA de um trio.** Quando a biblioteca já tem duas respostas para o mesmo problema clínico, a
+> terceira costuma ser a mais tentadora na prática — e a mais perigosa se ninguém escreveu sobre
+> ela. Foi o caso do ferro oral ("é mais simples") e do AINE ("é só um comprimido").
 >
 > **28º lote — 1 documento**: horário do anti-hipertensivo, manhã ou noite (TIME, PMID 36240838, em
 > Hipertensão) — pergunta frequente de consultório, com 21.104 pacientes e resultado que **transfere
