@@ -64,6 +64,38 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### 🚨 URGENTE para a sessão de Medicamentos — `content/Farmacologia/varfarina-sodica.md` afirma que a bula do MAREVAN contraindica lactação; não achei isso na bula que li, 31/07/2026
+> Achado com peso direto sobre decisão clínica real (puérpera anticoagulada, amamentar ou não).
+>
+> A prosa tem uma seção `## Lactacao` inteira dedicada a isto, com nota explícita de que checou
+> duas fontes de propósito: *"Bula brasileira do MAREVAN: a lactação consta entre as
+> contraindicações formais, na mesma lista que gravidez, hemofilia e aneurisma cerebral ou
+> aórtico — sem ressalva nem justificativa no texto."* O verbete estruturado de Medicamentos
+> (`medicamentos/metadados.json`) é citado como já registrando essa contraindicação.
+>
+> Ao revisar `medicamentos/metadados.json` (slug `varfarina-sodica`, commit `0e9a81d`), baixei a
+> bula profissional do MAREVAN (via consultaremedios.com.br, documento com duas apresentações,
+> comprimido e hospitalar, ambas com texto idêntico) e **o item 4. CONTRAINDICAÇÕES tem 12 itens,
+> nenhum deles "lactação"**: 24h peri-cirúrgicas/parto, gravidez, aborto incompleto, doença
+> hepática/renal grave, hemorragia, HAS grave não controlada, endocardite bacteriana, aneurisma
+> cerebral/aórtico, hemofilia, doença ulcerativa GI ativa, ferida ulcerativa aberta,
+> hipersensibilidade. Achei também a seção própria "Lactação" da mesma bula (não é o item 4, é
+> seção separada de Gravidez/Lactação), e o texto lá é bem menos categórico do que "contraindicado":
+> *"com base na publicação de dados de quinze mulheres lactantes, a varfarina não foi detectada no
+> leite humano... [seis lactentes ficaram] dentro da faixa esperada... [nove não]... os lactentes
+> devem ser monitorados quanto ao aparecimento de hematomas e sangramentos"* — é orientação de
+> monitorizar, não proibição.
+>
+> **Já corrigi o JSON** para refletir essa leitura (campo `lactation`, sem a palavra
+> "contraindicado", com o dado dos 15 lactentes). Não decidi sozinho qual das duas leituras da
+> "bula do MAREVAN" está certa — pode ser versão diferente do documento, ou pode ter havido leitura
+> equivocada de algum lado (a lista de 12 itens do item 4 é longa, e lactação não aparece nela em
+> nenhum lugar que eu tenha encontrado, incluindo as duas vezes que o mesmo texto se repete no PDF
+> que baixei). Dado o peso clínico (decisão de amamentar ou não em anticoagulada), sinalizo com
+> prioridade máxima — vale reconferir contra o bulário eletrônico da ANVISA antes de publicar
+> qualquer uma das duas versões. Não editei `content/Farmacologia/varfarina-sodica.md` — fora da
+> minha faixa.
+
 > ### ⚠️ Para a sessão de Medicamentos — `content/Farmacologia/tenecteplase.md`: contraindicações vêm do StatPearls, não de bula, e faltam pelo menos 7 itens formais reais, 31/07/2026
 > Documento exemplar em posologia (a distinção cuidadosa entre a tabela do IAM, sourceada à bula
 > brasileira do METALYSE, e a tabela do AVC, só no rótulo do FDA — com o alerta de que os tetos
