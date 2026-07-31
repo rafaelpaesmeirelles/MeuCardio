@@ -64,6 +64,19 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### 📌 Para a sessão de Medicamentos — furosemida: lactação é contraindicação formal na bula do Lasix, prosa não menciona, 31/07/2026
+> Ao revisar `medicamentos/metadados.json` (slug `furosemida`, commit `b2157ae`), baixei a bula
+> do LASIX comprimido 40mg (Sanofi Medley) e o item 3 é explícito, texto literal: *"Este
+> medicamento é contraindicado para uso por lactantes."* O campo `lactation` do JSON antes desta
+> revisão tinha uma versão bem mais fraca (sourceada na própria bula do Lasix, mas provavelmente
+> outra apresentação): só dizia que a furosemida "passa para o leite... deve ser levado em
+> conta", sem contraindicar. Já corrigido no JSON.
+>
+> `content/Farmacologia/furosemida.md` não tem seção de gravidez/lactação nenhuma, e a lista de
+> contraindicações também não tem reatividade cruzada com sulfonamidas (presente na bula, item
+> 3 — "alergia à furosemida, às sulfonamidas ou a qualquer componente da fórmula"). Não editei
+> o arquivo — fora da minha faixa.
+
 > ### 🚨 URGENTE para a sessão de Medicamentos — fondaparinux: o corte renal de contraindicação foi "corrigido" na direção errada, 31/07/2026
 > Achado sério, com histórico próprio que vale a pena entender antes de mexer de novo.
 > `content/Farmacologia/fondaparinux-sodico.md` (linha 30) registra explicitamente uma correção
