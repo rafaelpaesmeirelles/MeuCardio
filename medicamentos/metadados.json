@@ -1117,7 +1117,7 @@
   },
   {
     "slug": "diltiazem-cloridrato",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Diltiazem (cloridrato)",
     "drug_class": "Bloqueador de canal de cálcio não-diidropiridínico (benzotiazepina), antiarrítmico classe IV",
     "mechanism": "Bloqueia canais de cálcio tipo L no músculo liso vascular e miocárdio, promovendo vasodilatação coronariana/sistêmica e redução da condução no nó AV; em doença isquêmica coronariana, reduz o produto frequência cardíaca x pressão arterial durante o exercício, aumentando a capacidade de exercício sem induzir aumento reflexo de FC (posição intermediária entre verapamil, com maior efeito na condução AV, e as diidropiridinas, com maior seletividade vascular)",
@@ -1125,17 +1125,15 @@
       "Angina, coronariopatias, hipertensão arterial (VO); fibrilação/flutter atrial, taquicardia supraventricular paroxística (EV)"
     ],
     "contraindications": [
-      "Hipersensibilidade",
-      "Choque cardiogênico",
-      "BAV 2º/3º grau sem marca-passo",
-      "Síndrome do nódulo sinusal sem marca-passo",
-      "IC descompensada",
-      "Flutter/FA com via acessória",
-      "Não devem ser usados em combinação com betabloqueador por via IV (risco de bloqueio AV grave/assistolia) e uso combinado oral requer cautela extrema",
-      "Disfunção sistólica de VE grave (FE reduzida)",
-      "Bloqueio AV 2º/3º grau sem marcapasso",
-      "Doença do nó sinusal",
-      "Síndrome de Wolff-Parkinson-White com FA (risco de condução preferencial pela via acessória)"
+      "Bloqueio sinoatrial",
+      "Bloqueio AV de 2º ou 3º grau e síndrome do nó sinusal (bradicardia sinusal persistente <50 bpm, parada sinusal, bloqueio sinoatrial) — exceto em paciente com marca-passo",
+      "Insuficiência cardíaca grave descompensada, com PA sistólica <90 mmHg",
+      "Bradicardia acentuada (pulso <55 bpm)",
+      "Hipersensibilidade ao cloridrato de diltiazem ou a qualquer componente da fórmula",
+      "Infarto agudo do miocárdio com congestão pulmonar",
+      "Gravidez",
+      "Específico da apresentação injetável: uso combinado com betabloqueador IV (risco de bloqueio AV grave/assistolia); flutter/fibrilação atrial associada a via acessória (síndrome de Wolff-Parkinson-White) — risco de condução preferencial pela via acessória",
+      "**fonte**: bula do CARDIZEM (cloridrato de diltiazem, via bulário saudedireta.com.br), item 4, para a apresentação oral; rótulo FDA do diltiazem injetável para os itens específicos da via EV. **Corrigido em 31/07/2026**: a lista anterior tinha itens duplicados (bloqueio AV, doença do nó sinusal e WPW apareciam cada um duas vezes, com redação levemente diferente) e não citava a bula brasileira para os itens orais"
     ],
     "adverse_effects": [
       "Cefaleia, edema periférico, bradicardia, hipotensão, constipação, tontura"
@@ -1157,7 +1155,8 @@
       "fonte": "rótulo do cloridrato de diltiazem injetável aprovado pelo FDA (DailyMed). As doses endovenosas foram conferidas linha a linha; a infusão contínua é indicada para redução de frequência por até 24 horas em fibrilação ou flutter atrial"
     },
     "references": [
-      "Diltiazem hydrochloride injection — rótulo aprovado pelo FDA, DailyMed SPL setid bba03666-ff4f-4bf6-fa92-78e1ec2d9073"
+      "Diltiazem hydrochloride injection — rótulo aprovado pelo FDA, DailyMed SPL setid bba03666-ff4f-4bf6-fa92-78e1ec2d9073",
+      "Bula do CARDIZEM (cloridrato de diltiazem), via bulário saudedireta.com.br — usada para contraindicações completas da apresentação oral (item 4)"
     ],
     "notes": {
       "Diferenca para os diidropiridinicos": "Inibem influxo de cálcio em células musculares lisas vasculares E em tecido cardíaco (nó sinusal, nó AV, miocárdio), diferente dos dihidropiridínicos (anlodipino) que agem quase exclusivamente sobre vasculatura; efeito combinado: redução de FC, retardo de condução AV e depressão discreta de contratilidade",
