@@ -80,10 +80,23 @@ Efeito aditivo sobre a condução, com risco de bradicardia sinusal e bloqueio a
 Bradicardia sinusal, hipotensão, fadiga (em geral transitória, mais comum nos primeiros 2 a 3 meses), extremidades frias, insônia e pesadelos (ligados à lipofilia), bloqueio atrioventricular, broncoespasmo dose-dependente e mascaramento dos sinais de hipoglicemia em diabético insulinizado.
 
 ## Contraindicacoes
-- Bloqueio atrioventricular de 2º ou 3º grau sem marca-passo
-- Doença do nó sinusal sem marca-passo
-- Bradicardia sinusal sintomática
-- Insuficiência cardíaca descompensada e choque cardiogênico
-- Doença arterial periférica grave
-- Asma ativa ou broncoespasmo grave
-- Feocromocitoma não tratado
+**Corrigido em 31/07/2026** — item 4 da bula do SELOZOK, mais preciso do que constava aqui:
+
+- **Hipersensibilidade ao metoprolol, a outros componentes da fórmula ou a outros
+  betabloqueadores** — ausente de uma leitura anterior deste documento
+- Bloqueio atrioventricular de grau II ou III (sem qualificar "sem marca-passo" — a bula não faz
+  essa ressalva)
+- Doença do nó sinoatrial
+- Bradicardia sinusal clinicamente relevante
+- Insuficiência cardíaca não compensada instável (edema pulmonar, hipoperfusão ou hipotensão) e
+  choque cardiogênico
+- **Terapia inotrópica contínua ou intermitente por agonista do receptor beta** — item formal
+  próprio, ausente de uma leitura anterior
+- Arteriopatia periférica grave
+- **No IAM suspeito**: não administrar enquanto FC <45 bpm, intervalo PQ >0,24s ou PAS <100 mmHg
+  — cortes vitais específicos que não constavam aqui
+
+**"Asma ativa ou broncoespasmo grave" e "feocromocitoma não tratado" não são contraindicação
+formal do item 4** — são Advertências: paciente asmático pode receber metoprolol com cautela
+(cardiosseletividade relativa) se não tolerar alternativa, associando broncodilatador; em
+feocromocitoma, a orientação é associar alfabloqueio antes, não evitar o fármaco.

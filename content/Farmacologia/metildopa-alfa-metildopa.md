@@ -49,6 +49,12 @@ Comuns: sedação/sonolência (mais intensa no início do tratamento), boca seca
 ## Monitorizacao
 Hemograma completo e função hepática no início do tratamento e periodicamente durante o uso crônico — suspender se houver elevação significativa de transaminases ou sinais de hemólise (Coombs positivo isolado, sem hemólise clínica, não exige suspensão).
 
+## Gravidez e lactacao
+**Acrescentado em 31/07/2026, bula do ALDOMET.** Categoria de risco na gravidez: **B**. A bula
+cita estudos em que o tratamento com metildopa foi associado a **melhora** na evolução fetal —
+achado a mais, e não contradiz a nota acima sobre RCIU/prematuridade (que já esclarece que o
+excesso aparente vem da gravidade da hipertensão de base, não do fármaco).
+
 ## Contraindicacoes
 **Confirmado em 31/07/2026 contra a bula brasileira do ALDOMET** — os três primeiros itens
 batem exatamente com o item Contra-Indicações:
@@ -58,6 +64,8 @@ batem exatamente com o item Contra-Indicações:
   a terapia anterior com metildopa**, que a bula trata como forma de hipersensibilidade, não
   como item separado
 - Uso concomitante com inibidores da MAO
+- **Uso em crianças — acrescentado em 31/07/2026**: linha própria da bula, logo após o item 4
+  formal, texto literal "Este medicamento é contraindicado para o uso em crianças"
 
 **Anemia hemolítica prévia por metildopa** não é item formal de contraindicação na bula — está em
 Precauções: evidência de hemólise (não só teste de Coombs direto positivo isolado, que ocorre em
