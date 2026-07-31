@@ -206,6 +206,67 @@ contra o `git log` do dia.
 > conhecimento geral. Foi assim que o dia rendeu 12 documentos verificados em vez de 14 com dois
 > frouxos.
 >
+> ### 🧹 VARREDURA DE ÓRFÃOS EXECUTADA em 31/07/2026 — a que este arquivo dizia que "falta, e não existe hoje"
+> **Motivo:** o Rafael pediu "publique tudo". Antes de executar, fiz o levantamento — e o resultado
+> é que **executar ao pé da letra teria causado dano concreto**, exatamente o risco que a seção
+> "Trabalho novo", item 4, já previa: *"qualquer rotina que publique 'tudo' ressuscita esses
+> fantasmas, com apresentações que não conferem."*
+>
+> **Estado medido em todas as 11 tabelas com coluna `published`:** `drugs` 101/101 · `documents`
+> 436/462 · `evidence_records` 170/172 · `lab_tests` 68/68 · `scientific_studies` 81/82 ·
+> `study_tracks` 17/17 · `gallery_images` 65/65 · `emergency_protocols` 10/10 · `clinical_cases`
+> 5/5 · `discharge_checklists` 3/3 · `patient_materials` 4/4.
+>
+> **Conclusão: NÃO HÁ NADA LEGÍTIMO PENDENTE DE PUBLICAÇÃO.** As 29 linhas não publicadas são:
+> - **26 em `documents`, TODAS órfãs** — nenhuma tem arquivo `.md` correspondente em `content/`
+>   (método: extrair o `slug:` do front matter dos 436 arquivos e comparar com o banco). São restos
+>   de fusão de duplicatas e de versões antigas de documentos de diretriz;
+> - **2 em `evidence_records`**: uma órfã (`rastreio-de-aneurisma-de-aorta-abdominal-por-ultrassom-duplex`,
+>   não está no JSON do disco) e uma que está no disco mas é `pendente_revisao`
+>   (`intervalo-de-3-semanas-na-profilaxia-secundaria-...`) — conteúdo clínico não revisado não se
+>   publica;
+> - **1 em `scientific_studies`**: órfã (`breathe-5-bosentana-sindrome-de-eisenmenger`).
+>
+> **Cada órfão tem substituto vivo e publicado** — conferido par a par:
+> `warfarina` → `varfarina-sodica` · `sotalol-cloridrato` → `sotalol` · `trimetazidina` →
+> `trimetazidina-dicloridrato` · `prasugrel` → `prasugrel-cloridrato` · os três `metoprolol-*` →
+> `metoprolol` · `nitroglicerina-dinitrato-de-isossorbida` → `nitroglicerina-trinitrato-de-glicerila` ·
+> `has-bled-escore-de-risco-...` → `has-bled` · `tromboembolismo-...-esc-2019` →
+> `tromboembolismo-...-escers-2019`.
+>
+> **O caso mais grave, para dimensionar o risco:** publicar o órfão `warfarina` colocaria no ar uma
+> segunda página do mesmo fármaco, `pendente_revisao`, ao lado de `varfarina-sodica` — cuja seção de
+> lactação foi **corrigida hoje** justamente por afirmar uma contraindicação que a bula vigente não
+> traz. Seriam duas telas do mesmo medicamento, potencialmente contraditórias no mesmo ponto
+> clínico. É a "contradição entre telas" que a Fase B levou semanas removendo.
+>
+> **⚠️ CORREÇÃO A ESTE ARQUIVO:** a seção "Trabalho novo", item 4, lista `prasugrel-cloridrato`
+> entre os 10 órfãos e diz que ele "nunca deve publicar". **Está invertido** — medido em
+> 31/07/2026: `prasugrel-cloridrato` é o registro **vivo e publicado**, e `prasugrel` é o órfão.
+> O mesmo vale para `sotalol-cloridrato` (órfão; o vivo é `sotalol`) e `trimetazidina-dicloridrato`
+> (vivo; o órfão é `trimetazidina`). Quem for usar aquela lista para uma limpeza, **remeça pela
+> medição, não pelos nomes de lá**.
+>
+> **Método reproduzível da varredura** (roda em segundos, não precisa de rota nova):
+> ```python
+> # dentro do container: compara slug do front matter dos .md com o banco
+> import os, re
+> from app.core.db import SessionLocal
+> from app.models.content import Document
+> arquivos = {}
+> for root, _, fs in os.walk('/content'):
+>     for f in fs:
+>         if f.endswith('.md'):
+>             t = open(os.path.join(root, f), encoding='utf-8', errors='ignore').read()
+>             m = re.search(r'^slug:\s*(\S+)', t, re.M)
+>             if m: arquivos[m.group(1).strip().strip('"')] = f
+> db = SessionLocal()
+> orfaos = [d.slug for d in db.query(Document).all() if d.slug not in arquivos]
+> ```
+> **Apagar os órfãos continua exigindo o Rafael** — `DELETE` no banco de produção é barrado pelo
+> classificador do harness (ver "Como o deploy funciona na prática"). Enquanto não forem apagados,
+> eles são inertes: estão despublicados e as rotas públicas filtram por `published`.
+>
 > **Duas armadilhas de verificação encontradas aqui, para não custarem tempo de novo:**
 > - **A rota pública de documento é `/api/library/documents/{slug}`** — não `/api/biblioteca/{slug}`,
 >   que não existe e devolve **404** para qualquer slug, inclusive os que estão no ar. Um 404 aí
