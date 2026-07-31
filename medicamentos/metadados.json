@@ -2562,7 +2562,7 @@
   },
   {
     "slug": "metoprolol",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Metoprolol — succinato (liberação prolongada) e tartarato (liberação imediata)",
     "drug_class": "Betabloqueador cardiosseletivo beta-1, de segunda geração, sem atividade simpaticomimética intrínseca",
     "mechanism": "Bloqueio competitivo e reversível de receptores beta-1 adrenérgicos cardíacos, com seletividade beta1:beta2 de 10 a 20 vezes, reduzindo frequência cardíaca, contratilidade, condução atrioventricular e liberação de renina. Metabolismo hepático via CYP2D6: metabolizadores lentos, 5 a 10% da população, atingem níveis plasmáticos várias vezes maiores. A lipofilia explica a penetração no sistema nervoso central e os efeitos de insônia e pesadelos.",
@@ -2583,13 +2583,15 @@
       "Bradicardia sinusal, hipotensão, fadiga (em geral transitória, mais comum nos primeiros 2 a 3 meses), extremidades frias, insônia e pesadelos (ligados à lipofilia), bloqueio atrioventricular, broncoespasmo dose-dependente e mascaramento dos sinais de hipoglicemia em diabético insulinizado."
     ],
     "contraindications": [
-      "Bloqueio atrioventricular de 2º ou 3º grau sem marca-passo",
-      "Doença do nó sinusal sem marca-passo",
-      "Bradicardia sinusal sintomática",
-      "Insuficiência cardíaca descompensada e choque cardiogênico",
-      "Doença arterial periférica grave",
-      "Asma ativa ou broncoespasmo grave",
-      "Feocromocitoma não tratado"
+      "Hipersensibilidade ao metoprolol, aos demais componentes da fórmula, ou a outros betabloqueadores",
+      "Bloqueio atrioventricular de 2º ou 3º grau",
+      "Insuficiência cardíaca não compensada instável (edema pulmonar, hipoperfusão ou hipotensão)",
+      "Uso concomitante de terapia inotrópica contínua ou intermitente por agonista do receptor beta",
+      "Bradicardia sinusal clinicamente relevante",
+      "Síndrome do nó sinoatrial, a não ser que haja marca-passo permanente em uso",
+      "Choque cardiogênico",
+      "Arteriopatia periférica grave",
+      "Suspeita de infarto agudo do miocárdio, enquanto FC <45bpm, intervalo PQ >0,24s, ou PAS <100mmHg"
     ],
     "dosing": {
       "hipertensao": "50 mg/dia em hipertensão leve a moderada; aumentar para 100-200 mg/dia ou associar outro anti-hipertensivo se a resposta for insuficiente",
@@ -2610,7 +2612,9 @@
     },
     "notes": {
       "Formulacoes distintas": "Distinção que muda conduta, não é detalhe farmacêutico: - **Succinato** — liberação prolongada, dose única diária, concentração plasmática estável. É a **única formulação com evidência em insuficiência cardíaca** (MERIT-HF). - **Tartarato** — liberação imediata, 2 a 3 vezes ao dia, sem evidência equivalente em IC, mas com apresentação endovenosa para urgência (arritmia, fase aguda do IAM). Trocar um pelo outro em paciente com IC-FEr não é equivalência terapêutica.",
-      "Combinacao ic pilares": "Compõe o quarteto terapêutico da IC-FEr junto com IECA/BRA ou sacubitril-valsartana, antagonista do receptor mineralocorticoide e inibidor de SGLT2."
+      "Combinacao ic pilares": "Compõe o quarteto terapêutico da IC-FEr junto com IECA/BRA ou sacubitril-valsartana, antagonista do receptor mineralocorticoide e inibidor de SGLT2.",
+      "Asma e broncoespasmo — cautela, nao contraindicacao formal": "**Corrigido em 31/07/2026**: a versão anterior listava \"asma ativa ou broncoespasmo grave\" entre as contraindicações formais. A bula brasileira do SELOZOK trata doença broncoespástica em ADVERTÊNCIAS, não no item 4: pacientes com doença broncoespástica em geral não devem receber betabloqueador, mas, pela seletividade beta-1 relativa, o metoprolol **pode ser usado com cautela** em quem não responde ou não tolera outros anti-hipertensivos — em paciente asmático, associar terapia broncodilatadora concomitante. É contraindicação relativa de classe, flexibilizada pela cardiosseletividade, não proibição absoluta.",
+      "Feocromocitoma — nao e contraindicacao formal nesta bula": "A bula não lista feocromocitoma entre as contraindicações nem qualifica \"não tratado\" — o texto de Advertências diz apenas que, se usado em paciente com feocromocitoma, deve-se associar alfabloqueador concomitante. Removido do campo `contraindications`, mantido aqui como cautela."
     },
     "references": [
       "MERIT-HF Study Group. Effect of metoprolol CR/XL in chronic heart failure: Metoprolol CR/XL Randomised Intervention Trial in Congestive Heart Failure (MERIT-HF). Lancet. 1999;353(9169):2001-2007. PMID: 10376614",
@@ -2620,7 +2624,8 @@
       "Kristensen AMD, Rossello X, Atar D, et al.; Beta-Blocker Trialists' Collaboration. Beta-Blockers after Myocardial Infarction with Normal Ejection Fraction. N Engl J Med. 2026;394(6):540-550. DOI: 10.1056/NEJMoa2512686. PMID: 41211954",
       "Bula de SELOZOK (succinato de metoprolol), AstraZeneca do Brasil Ltda. — seção Apresentações e Composição. Documento obtido no site do detentor do registro.",
       "Bula de SELOKEN (tartarato de metoprolol) comprimidos 100 mg, AstraZeneca do Brasil Ltda. — apresentações e composição.",
-      "Bula profissional de SELOKEN injetável (tartarato de metoprolol) 5 mg/5 mL, AstraZeneca do Brasil Ltda. — apresentações, indicações e interações medicamentosas."
+      "Bula profissional de SELOKEN injetável (tartarato de metoprolol) 5 mg/5 mL, AstraZeneca do Brasil Ltda. — apresentações, indicações e interações medicamentosas.",
+      "Bula profissional do SELOZOK (succinato de metoprolol), AstraZeneca do Brasil Ltda. — via consultaremedios.com.br"
     ],
     "pregnancy": "**Categoria de risco C.** Só deve ser usado na gravidez se **absolutamente necessário**. Betabloqueadores podem causar efeitos adversos como **bradicardia no feto, no recém-nascido e em crianças sob aleitamento materno**. Fonte: bula do SELOZOK (succinato de metoprolol, AstraZeneca).",
     "lactation": "Só usar se absolutamente necessário. O risco descrito é o mesmo da gravidez — **bradicardia no lactente** —, embora a bula registre que a quantidade de metoprolol que chega ao lactente pelo leite parece pequena. Fonte: bula do SELOZOK (succinato de metoprolol, AstraZeneca)."
