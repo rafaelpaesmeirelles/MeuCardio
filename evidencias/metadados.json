@@ -3432,5 +3432,179 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "rm-nao-recomendada-na-sindrome-aortica-aguda-com-paciente-instavel",
+    "statement": "A ressonância magnética NÃO é recomendada na síndrome aórtica aguda quando o paciente está instável — é recomendação Classe III. O tempo de aquisição e o ambiente do exame são incompatíveis com o paciente que precisa de monitorização e intervenção imediatas; nesse cenário o caminho é a angiotomografia, cadastrada em separado na frente de Exames desta plataforma como técnica de primeira linha. A mesma diretriz trata o paciente ESTÁVEL de forma diferente (Classe IIa, Nível C) — a estabilidade hemodinâmica é o que separa as duas condutas, e confundi-las custa tempo em uma emergência com letalidade hora a hora.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC – 2024",
+    "reference": "Magalhães TA, Carneiro ACC, Moreira VM, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI: 10.36660/abc.20240608. PMID: 39475988 — Tabela 'Indicações da utilização de ressonância magnética no diagnóstico da patologia da aorta', conferida linha a linha no texto integral em acesso aberto (PMC12094294) em 31/07/2026.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "síndrome aórtica aguda",
+      "ressonância magnética",
+      "paciente instável",
+      "classe iii",
+      "emergência"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "rm-na-sindrome-aortica-aguda-com-paciente-estavel",
+    "statement": "A ressonância magnética deve ser considerada na síndrome aórtica aguda quando o paciente está estável. Note o contraste com o paciente instável, em que a mesma diretriz a contraindica formalmente (Classe III) — e note também que isso é compatível com a orientação europeia já cadastrada nesta base, que posiciona a ressonância como alternativa quando a angiotomografia não está disponível, e não como primeira linha.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC – 2024",
+    "reference": "Magalhães TA, Carneiro ACC, Moreira VM, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI: 10.36660/abc.20240608. PMID: 39475988 — Tabela 'Indicações da utilização de ressonância magnética no diagnóstico da patologia da aorta', conferida linha a linha no texto integral em acesso aberto (PMC12094294) em 31/07/2026.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "síndrome aórtica aguda",
+      "ressonância magnética",
+      "paciente estável",
+      "diagnóstico por imagem"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "rm-no-hematoma-intramural-aortico",
+    "statement": "A ressonância magnética é recomendada no diagnóstico do hematoma intramural aórtico. É a variante da síndrome aórtica aguda em que a caracterização do sangue na parede do vaso, e não de uma luz falsa, define o diagnóstico — e a ressonância é particularmente boa em datar e caracterizar conteúdo hemático.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC – 2024",
+    "reference": "Magalhães TA, Carneiro ACC, Moreira VM, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI: 10.36660/abc.20240608. PMID: 39475988 — Tabela 'Indicações da utilização de ressonância magnética no diagnóstico da patologia da aorta', conferida linha a linha no texto integral em acesso aberto (PMC12094294) em 31/07/2026.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "hematoma intramural",
+      "síndrome aórtica aguda",
+      "ressonância magnética",
+      "aorta"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "rm-no-planejamento-de-endoprotese-aortica",
+    "statement": "A ressonância magnética é recomendada no planejamento de endoprótese aórtica. Para a avaliação PÓS-operatória da endoprótese, a mesma diretriz é bem mais reservada (Classe IIb, Nível B) — planejar e acompanhar não têm a mesma força de recomendação, e o material da prótese é parte do motivo.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC – 2024",
+    "reference": "Magalhães TA, Carneiro ACC, Moreira VM, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI: 10.36660/abc.20240608. PMID: 39475988 — Tabela 'Indicações da utilização de ressonância magnética no diagnóstico da patologia da aorta', conferida linha a linha no texto integral em acesso aberto (PMC12094294) em 31/07/2026.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "endoprótese aórtica",
+      "planejamento",
+      "ressonância magnética",
+      "aorta"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "rm-nas-arterites-de-grandes-e-medios-vasos",
+    "statement": "A ressonância magnética é recomendada na avaliação das arterites de grandes e médios vasos. Permite caracterizar espessamento e edema da parede arterial — atividade inflamatória, e não apenas a consequência luminal —, que é o que distingue a arterite ativa da sequela estenótica já estabelecida.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC – 2024",
+    "reference": "Magalhães TA, Carneiro ACC, Moreira VM, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI: 10.36660/abc.20240608. PMID: 39475988 — Tabela 'Indicações da utilização de ressonância magnética no diagnóstico da patologia da aorta', conferida linha a linha no texto integral em acesso aberto (PMC12094294) em 31/07/2026.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "arterite",
+      "takayasu",
+      "arterite de células gigantes",
+      "ressonância magnética",
+      "vasculite"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "rm-na-suspeita-de-endomiocardiofibrose",
+    "statement": "A ressonância magnética cardíaca é recomendada na suspeita de endomiocardiofibrose. A doença tem importância particular no Brasil e em outras regiões tropicais, e a ressonância demonstra a obliteração apical por trombo e fibrose endomiocárdica que o ecocardiograma pode subestimar — em especial quando o ápice está preenchido e a cavidade parece apenas pequena.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC – 2024",
+    "reference": "Magalhães TA, Carneiro ACC, Moreira VM, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI: 10.36660/abc.20240608. PMID: 39475988 — Tabela 'Utilização da ressonância magnética cardíaca na avaliação de pacientes com suspeita de endomiocardiofibrose', conferida linha a linha no texto integral em acesso aberto (PMC12094294) em 31/07/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "endomiocardiofibrose",
+      "cardiomiopatia restritiva",
+      "ressonância magnética cardíaca",
+      "doença tropical",
+      "obliteração apical"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "rm-no-diagnostico-diferencial-de-hipertrofia-apical",
+    "statement": "A ressonância magnética cardíaca é recomendada no diagnóstico diferencial da hipertrofia apical. O ápice é justamente a região de pior definição no ecocardiograma, e é ali que se decide entre cardiomiopatia hipertrófica apical, endomiocardiofibrose com obliteração e trombo apical — três diagnósticos com conduta completamente distinta.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC – 2024",
+    "reference": "Magalhães TA, Carneiro ACC, Moreira VM, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI: 10.36660/abc.20240608. PMID: 39475988 — Tabela 'Utilização da ressonância magnética cardíaca na avaliação de pacientes com suspeita de endomiocardiofibrose', conferida linha a linha no texto integral em acesso aberto (PMC12094294) em 31/07/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "hipertrofia apical",
+      "cardiomiopatia hipertrófica apical",
+      "diagnóstico diferencial",
+      "ressonância magnética cardíaca"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "rm-na-pesquisa-de-anomalias-congenitas-do-pericardio",
+    "statement": "A ressonância magnética cardíaca é recomendada na pesquisa de anomalias congênitas do pericárdio, como a ausência congênita — total ou parcial — do pericárdio. É a ÚNICA indicação Classe I entre as recomendações de pericárdio desta diretriz: todas as demais, incluindo pericardite aguda, crônica e constritiva, são Classe IIa.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC – 2024",
+    "reference": "Magalhães TA, Carneiro ACC, Moreira VM, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI: 10.36660/abc.20240608. PMID: 39475988 — Tabela 'Indicações da RMC na avaliação do pericárdio', conferida linha a linha no texto integral em acesso aberto (PMC12094294) em 31/07/2026.",
+    "theme": "Pericárdio",
+    "tags": [
+      "pericárdio",
+      "anomalia congênita",
+      "agenesia pericárdica",
+      "ressonância magnética cardíaca"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "rm-na-pericardite-constritiva-sem-suspeita-de-calcificacao",
+    "statement": "A ressonância magnética cardíaca deve ser considerada na pericardite constritiva sem suspeita de calcificação pericárdica associada (Classe IIa, Nível B). Quando há suspeita de calcificação, a mesma diretriz mantém a indicação, mas com nível de evidência menor (IIa, C) — e vale lembrar que a calcificação é justamente o achado que a tomografia demonstra melhor que a ressonância, o que explica a distinção entre os dois cenários.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC – 2024",
+    "reference": "Magalhães TA, Carneiro ACC, Moreira VM, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI: 10.36660/abc.20240608. PMID: 39475988 — Tabela 'Indicações da RMC na avaliação do pericárdio', conferida linha a linha no texto integral em acesso aberto (PMC12094294) em 31/07/2026.",
+    "theme": "Pericárdio",
+    "tags": [
+      "pericardite constritiva",
+      "calcificação pericárdica",
+      "ressonância magnética cardíaca",
+      "pericárdio"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
