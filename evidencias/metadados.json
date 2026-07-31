@@ -4173,5 +4173,81 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "prednisona-na-sarcoidose-cardiaca",
+    "statement": "Na sarcoidose cardíaca, a prednisona em dose de 30 a 40 mg por dia, por 4 a 6 meses, deve ser considerada como terapia imunossupressora. Os demais imunossupressores citados pela diretriz para o caso de uso de corticosteroide — azatioprina 50 a 200 mg/dia, metotrexato 10 a 20 mg por semana, leflunomida 10 a 20 mg/dia e infliximabe (este nas formas pulmonar, cutânea, ocular, neurológica e multissistêmica) — têm recomendação mais fraca, Classe IIb, Nível C.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, Moura LAZ, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID: 35830116 — Tabela 'Recomendações de terapia imunossupressora na sarcoidose', conferida linha a linha no texto integral em acesso aberto (PMC9352123) em 31/07/2026.",
+    "theme": "Pericárdio",
+    "tags": [
+      "sarcoidose cardíaca",
+      "prednisona",
+      "imunossupressão",
+      "corticosteroide"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "imunossupressao-inicial-na-miocardite-de-celulas-gigantes",
+    "statement": "Na miocardite de células gigantes, é recomendado corticosteroide em doses altas combinado com anticorpos antilinfocitários e/ou inibidores de calcineurina (ciclosporina ou tacrolimo) e/ou antiproliferativos (azatioprina ou micofenolato). Note a diferença de força em relação à sarcoidose cardíaca, tratada pela mesma diretriz: aqui a imunossupressão é Classe I, lá é Classe IIa — são doenças granulomatosas distintas, com urgência terapêutica distinta.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, Moura LAZ, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID: 35830116 — Tabela 'Recomendações da terapêutica na miocardite de células gigantes', conferida linha a linha no texto integral em acesso aberto (PMC9352123) em 31/07/2026.",
+    "theme": "Pericárdio",
+    "tags": [
+      "miocardite de células gigantes",
+      "imunossupressão",
+      "ciclosporina",
+      "tacrolimo",
+      "corticosteroide"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "imunossupressao-de-manutencao-na-miocardite-de-celulas-gigantes",
+    "statement": "Na miocardite de células gigantes, é recomendada imunossupressão de MANUTENÇÃO com corticosteroide e inibidor de calcineurina (ciclosporina ou tacrolimo), ou esquema tríplice acrescentando antiproliferativo (azatioprina ou micofenolato). O tratamento não termina com a fase aguda — a manutenção tem a mesma força de recomendação (Classe I, Nível B) da indução.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, Moura LAZ, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID: 35830116 — Tabela 'Recomendações da terapêutica na miocardite de células gigantes', conferida linha a linha no texto integral em acesso aberto (PMC9352123) em 31/07/2026.",
+    "theme": "Pericárdio",
+    "tags": [
+      "miocardite de células gigantes",
+      "imunossupressão de manutenção",
+      "inibidor de calcineurina",
+      "antiproliferativo"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "transplante-cardiaco-na-miocardite-de-celulas-gigantes",
+    "statement": "O transplante cardíaco é recomendado na miocardite de células gigantes (Classe I, Nível B). É a única das miocardites em que o transplante aparece como recomendação de primeira classe na diretriz brasileira, e isso diz muito sobre o prognóstico da doença sem tratamento — o que reforça por que a biópsia endomiocárdica é Classe I diante dessa suspeita, e por que esperar a evolução é a conduta errada.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, Moura LAZ, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID: 35830116 — Tabela 'Recomendações da terapêutica na miocardite de células gigantes', conferida linha a linha no texto integral em acesso aberto (PMC9352123) em 31/07/2026.",
+    "theme": "Pericárdio",
+    "tags": [
+      "miocardite de células gigantes",
+      "transplante cardíaco",
+      "prognóstico"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
