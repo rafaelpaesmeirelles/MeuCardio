@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../lib/api";
 import CursoDestaque from "../components/CursoDestaque";
+import LogoCorviaMail from "../components/LogoCorviaMail";
 import { useAuth } from "../lib/auth";
 
 type Tema = { theme: string; count: number };
@@ -283,6 +284,13 @@ export default function Painel() {
             Exporte qualquer documento ou fluxograma em PDF pronto para projetar em
             aula ou round — o botão fica dentro de cada documento, com espaço para a
             sua anotação.
+          </span>
+        </Link>
+        <Link to="/corvia-mail" className="cartao painel__modo painel__modo--mail">
+          <LogoCorviaMail tamanho="compacto" />
+          <span>
+            Sua caixa de e-mail própria @corvia.med.br, com webmail integrado —
+            entre ou assine em um clique.
           </span>
         </Link>
       </div>

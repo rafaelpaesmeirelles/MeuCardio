@@ -393,7 +393,7 @@
   color: var(--texto-secundario);
 }
 
-/* Os dois modos de uso: destaque próprio, fora dos grupos. */
+/* Os três modos de uso: destaque próprio, fora dos grupos. */
 .painel__modos {
   display: grid;
   gap: 0.7rem;
@@ -401,6 +401,7 @@
   margin-top: 1.4rem;
 }
 @media (min-width: 760px) { .painel__modos { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1080px) { .painel__modos { grid-template-columns: repeat(3, 1fr); } }
 .painel__modo {
   display: flex;
   flex-direction: column;
@@ -408,7 +409,7 @@
   border-left: 3px solid var(--acento);
   color: inherit;
   text-decoration: none;
-  transition: box-shadow 0.12s;
+  transition: box-shadow 0.12s, transform 0.12s;
 }
 .painel__modo:hover {
   text-decoration: none;
@@ -422,6 +423,15 @@
 .painel__modo span { font-size: 0.84rem; color: var(--texto-secundario); line-height: 1.45; }
 .painel__modo--emergencia { border-left-color: var(--acao); }
 .painel__modo--emergencia strong { color: var(--acao); }
+
+/* CorvIA Mail: fundo com leve gradiente em vez de só a borda — é a própria
+   logo (navy/vermelho/teal) que ocupa o lugar do <strong>, então o destaque
+   vem da superfície, não de outro texto colorido competindo com a marca. */
+.painel__modo--mail {
+  background: linear-gradient(135deg, var(--acento-tinta) 0%, var(--superficie) 70%);
+  align-items: flex-start;
+}
+.painel__modo--mail:hover { transform: translateY(-1px); }
 
 .painel__temas { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 .painel__tema {
