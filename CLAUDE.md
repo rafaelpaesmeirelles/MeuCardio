@@ -64,6 +64,41 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### ⚠️ Para a sessão de Medicamentos — `content/Farmacologia/amiodarona-cloridrato.md` tem posologia sem fonte em bula, 31/07/2026
+> Ao revisar `medicamentos/metadados.json` (slug `amiodarona-cloridrato`, commit `7e6ea27`),
+> conferi as duas bulas brasileiras já citadas na própria prosa (injetável — Fresenius Kabi;
+> oral ATLANSIL — Sanofi-Aventis) e encontrei, no lado JSON, que **três valores hoje na prosa
+> não constam de nenhuma das duas**:
+>
+> 1. **Esquema "1 mg/min por 6h, depois 0,5 mg/min por 18h"** (com a diluição prática de 6
+>    ampolas/250mL) — é o esquema de manutenção que a prosa usa como dose principal, sourceado
+>    a "Afya Cardiologia" e "Manual Farmacêutico Einstein". Não é fonte fraca (Afya já foi
+>    confirmada como conteúdo íntegro, ver nota mais abaixo nesta seção), mas também não é bula
+>    — é protocolo de prática difundido, e nenhuma das duas bulas o registra. O JSON documenta
+>    isso explicitmente: "não consta de nenhuma das bulas brasileiras conferidas... fica
+>    registrado como nota, não como posologia deste verbete" — e usa em vez disso o esquema que
+>    a bula injetável de fato descreve (ataque 5mg/kg em 20min-2h, manutenção 10-20mg/kg/dia).
+> 2. **"Crianças ataque: 10-15 mg/kg/dia VO"** — removido do JSON porque a bula do comprimido
+>    (ATLANSIL) é declaradamente **USO ADULTO**, sem posologia pediátrica.
+> 3. **"Gravidez uso refratário: dose máxima de 200 mg/dia"** — removido do JSON pelo mesmo
+>    motivo: nenhuma das duas bulas cobre uso na gravidez com essa dose; a bula apenas
+>    contraindica, "exceto em circunstâncias excepcionais, a critério médico", sem número.
+>
+> Também a lista de contraindicações da prosa (item 48-54) tem duas imprecisões contra o texto
+> literal da bula ATLANSIL, item 4: "BAV de alto grau" não é contraindicação de início listada
+> ali (bloqueio AV de 2º/3º grau **surgido durante o tratamento** é motivo de descontinuação,
+> seção de advertências — diferente de contraindicação prévia); "bradicardia sinusal grave" —
+> a bula diz só "bradicardia sinusal", sem o qualificador "grave". E faltam dois itens que a
+> bula lista formalmente: "disfunção da tireoide" e "associação com medicamentos que podem
+> induzir torsade de pointes". A lista corrigida, com a citação exata, já está no JSON.
+>
+> Não editei `content/Farmacologia/amiodarona-cloridrato.md` — fora da minha faixa. Não é caso
+> de risco clínico imediato como o do bempedoico (nenhum dos três valores é uma dose já
+> administrada com base errada — a prosa cita "fonte: Afya/Einstein" para o esquema principal,
+> então quem lê sabe que não é bula), mas os três merecem VERIFICAÇÃO HUMANA NECESSÁRIA ou
+> substituição pelos valores de bula, para as duas telas não divergirem em dose de amiodarona,
+> que é fármaco de janela terapêutica estreita.
+
 > ### 📌 Para a sessão de Medicamentos — duas divergências em `content/Farmacologia/alteplase.md`, 31/07/2026
 > Não é contradição perigosa como a do bempedoico abaixo, mas vale registrar antes que
 > alguém compare as duas telas. Ao revisar `medicamentos/metadados.json` (slug `alteplase`),
