@@ -436,7 +436,7 @@ contra o `git log` do dia.
 > **Table 8** de benefícios e riscos por método). Escrever sem ela seria escrever de memória. Quem
 > retomar: tentar PMC, a diretriz ESC 2018 (PMID 30165544) ou os critérios de elegibilidade da OMS.
 
-#### ✅ Sessão da BIBLIOTECA — fechamento de 31/07/2026: **53 itens novos, todos PUBLICADOS**
+#### ✅ Sessão da BIBLIOTECA — fechamento de 31/07/2026: **56 itens novos, todos PUBLICADOS**
 Contagem para a meta, medida no disco (não estimada). Dois lotes, os dois
 autorizados pelo Rafael no mesmo dia.
 
@@ -470,13 +470,31 @@ autorizados pelo Rafael no mesmo dia.
 | `evidencias/` | 178 → **187** | 9 recomendações de RM da mesma diretriz de TC e RM da SBC 2024 — Aorta sai de 10 para 15, Pericárdio de 10 para 12 |
 | `galeria/` | 65 → **66** | Cardiomegalia acentuada na cardiomiopatia chagásica (domínio público, CDC) |
 
-**PUBLICAÇÃO — os 53 estão no ar.** Carga e publicação por `docker compose exec`
-(a rota HTTP é barrada pelo classificador), com `AuditLog` gravado à mão nos quatro
-lotes (registros 455, 461, 465 e o do lote 4). **Publicado sempre por LISTA
-EXPLÍCITA de slugs, nunca por `review_status`** — os carregadores devolveram
-exatamente `novos: 6/6/5`, `11/2/2`, `4/7` e `9/1`, confirmando que só o previsto
-entrou, e a varredura de órfãos rodada depois de cada publicação mostrou que
-**nada foi ressuscitado**.
+**Lote 5 — 3 documentos de `content/`** (a frente mais visível, e a mais defasada
+na faixa da Biblioteca — os temas estavam em 8-9 documentos contra 14-16 dos temas
+de Medicamentos):
+
+| Tema | Documento | Antes → depois |
+|---|---|---|
+| Endocardite | Câmaras direitas e aspiração mecânica percutânea (AHA 2026) | 8 → 9 |
+| Endocardite | Hemocultura negativa: causas, diagnóstico e manejo (AHA 2025) | 9 → **10** |
+| Cardiopatias congênitas | Teste cardiopulmonar de exercício (AHA 2025) | 9 → **10** |
+
+Os três preenchem lacunas que a própria base evidenciava: os 8 documentos de
+endocardite tratavam sobretudo das valvas **esquerdas**; a base tinha o exame de
+sequenciamento 16S/18S **sem** documento que explicasse quando se chega nele; e
+congênitas cobria a anatomia lesão a lesão, sem nada sobre acompanhamento
+**funcional** do adulto. Fonte dos três: *Scientific Statements* da AHA em acesso
+aberto no PMC (JAHA), mesma via das diretrizes da SBC.
+
+**PUBLICAÇÃO — os 56 estão no ar.** Carga e publicação por `docker compose exec`
+(a rota HTTP é barrada pelo classificador), com `AuditLog` gravado à mão nos cinco
+lotes. **Publicado sempre por LISTA EXPLÍCITA de slugs, nunca por `review_status`**
+— os carregadores devolveram exatamente `novos: 6/6/5`, `11/2/2`, `4/7`, `9/1` e,
+nos documentos, `import_directory` + publicação dos 3 slugs; a varredura de órfãos
+rodada depois de cada publicação mostrou que **nada foi ressuscitado**.
+Os 3 documentos foram **indexados no RAG** logo após publicar (27 trechos), porque
+documento publicado e não indexado é invisível para o assistente clínico.
 
 **Chagas foi de 0 itens para as QUATRO frentes JSON num único dia** — 4 evidências,
 2 exames, 1 estudo e 1 imagem. Era a maior lacuna isolada da minha faixa para uma
@@ -526,8 +544,8 @@ despublicada. **Os 12 órfãos de `drugs` continuam publicados** — faixa da se
 de Medicamentos, avisada, e a única pendência de órfão que resta.
 
 #### 📐 Contagem completa do acervo — corrigida em 31/07/2026, e **maior do que a meta vinha medindo**
-**977 itens, faltam 23 para 1.000.** Medido arquivo por arquivo no disco ao
-fechar o dia: `content/*.md` 443 · `evidencias` 187 · `medicamentos` 89 ·
+**984 itens, faltam 16 para 1.000.** Medido arquivo por arquivo no disco ao
+fechar o dia: `content/*.md` 450 · `evidencias` 187 · `medicamentos` 89 ·
 `estudos` 85 · `exames` 68 · `galeria` 66 · `trilhas` 17 · `emergencia` 10 ·
 `casos-clinicos` 5 · **`checklists` 3** · **`material-paciente` 4**.
 
