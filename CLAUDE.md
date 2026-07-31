@@ -62,16 +62,33 @@ Regras que decorrem disso:
    (dose, corte de escore, valor de referência, número real do estudo).
    Lacuna de cobertura é dívida do produto, não detalhe.
 
-### 🎯 Meta concreta, definida pelo Rafael em 31/07/2026 — vale para as duas sessões
-**1.000 arquivos de conteúdo, lançamento público em 10/08/2026.** Faltam 10 dias a partir de
-hoje. Medido no disco em 31/07/2026 (não é estimativa): **898 itens** somando as nove frentes —
-`content/*.md` 424, `medicamentos/metadados.json` 89, `evidencias` 155, `estudos` 75, `galeria`
-63, `exames` 60, `emergencia` 10, `trilhas` 17, `casos_clinicos` 5. **Faltam 102 itens** para a
-meta, em 10 dias — cerca de **10 itens/dia somando as duas sessões** para chegar com folga, sem
-contar o que a meta de qualidade (seção acima) já exige de cada item novo: nada fabricado, fonte
-real e verificável, ou `VERIFICAÇÃO HUMANA NECESSÁRIA` explícito onde a fonte não confirmar.
-**Volume nunca justifica pular a verificação** — a régua de qualidade da meta 1 continua valendo
-peça por peça, mesmo com o prazo apertado.
+### 🎯 META ATUALIZADA pelo Rafael em 31/07/2026 (fim do dia): **2.000 itens no total de todas as frentes**
+**A meta anterior era 1.000 e foi SUBSTITUÍDA — não é acréscimo, é a nova régua.** Vale para as
+duas sessões, e abrange **todas as funções/frentes do produto**, não só `content/`.
+
+**Ponto de partida medido no disco em 31/07/2026, depois que as duas sessões commitaram** (não é
+estimativa): **920 itens** — `content/*.md` 429 · `evidencias` 160 · `medicamentos/metadados.json`
+89 · `estudos` 81 · `exames` 66 · `galeria` 63 · `trilhas` 17 · `emergencia` 10 · `casos-clinicos`
+5. **Faltam 1.080 itens.**
+
+> ⚠️ **O prazo NÃO foi redefinido junto com a meta, e a aritmética precisa estar à vista de quem
+> planejar o dia.** A data de lançamento registrada continua sendo **10/08/2026**. 1.080 itens em
+> 10 dias seriam **~108 itens/dia somando as duas sessões** — contra o ritmo real medido em
+> 31/07/2026, o melhor dia até agora: **22 itens** (17 da Biblioteca + 5 de Medicamentos). É um
+> fator de ~5x. **Isto está registrado como fato, não como objeção**: a meta de 2.000 é a régua
+> e vale como pedida. O que precisa de decisão do Rafael é **o que cede** — a data de 10/08, ou o
+> escopo do que entra até lá. Enquanto ele não decidir, as sessões seguem produzindo no máximo
+> ritmo com a régua de qualidade intacta, e o lançamento de 10/08 sai com o que estiver pronto.
+
+**A régua de qualidade não muda com a meta maior.** Nada fabricado, fonte real e verificável, ou
+`VERIFICAÇÃO HUMANA NECESSÁRIA` explícito onde a fonte não confirmar. **Volume nunca justifica
+pular a verificação** — dobrar a meta multiplica a chance de um dado errado entrar, e um dado
+fabricado descoberto depois do lançamento custa mais caro que qualquer atraso de contagem.
+
+**Como contar sem errar** (armadilha real, já cometida em 31/07/2026): a pasta é `casos-clinicos`
+**com hífen**; script que procure `casos_clinicos` com underscore devolve zero em silêncio e fecha
+a conta 5 itens abaixo. Contar sempre depois de as duas sessões commitarem, e conferir o total
+contra o `git log` do dia.
 
 ## Divisão de trabalho entre sessões simultâneas
 
@@ -92,8 +109,10 @@ peça por peça, mesmo com o prazo apertado.
 >    Se `sudo -n whoami` não devolver `root`, ou o `docker compose ps` falhar, **pare e avise o
 >    Rafael** — você está no ambiente errado, e nenhum comando de carga/publicação abaixo vai
 >    funcionar. Isso não é um limite do Claude Code: é uma diferença de qual terminal foi aberto.
-> 3. **Leia a seção "Meta concreta" logo acima** (1.000 arquivos, lançamento 10/08/2026, 898 já
->    medidos hoje, faltam 102) — é o que rege a prioridade de tudo daqui até o lançamento.
+> 3. **Leia a seção da META logo acima — ela mudou no fim de 31/07/2026: são 2.000 itens no total
+>    de todas as frentes, não mais 1.000.** Acervo medido em 920, faltam 1.080, e o prazo de
+>    10/08/2026 não foi redefinido junto (a aritmética disso está escrita lá, e é decisão do
+>    Rafael). É o que rege a prioridade de tudo daqui até o lançamento.
 > 4. **Leia "Regra permanente de autonomia" e "Como carregar e publicar" mais abaixo neste
 >    arquivo** — são o método de trabalho (nunca fabricar dado, sempre fonte real, carregar/publicar
 >    via container exec porque a rota HTTP é barrada pelo classificador) e não mudaram.
@@ -126,12 +145,30 @@ peça por peça, mesmo com o prazo apertado.
 >
 > ### ✅ Registro da sessão de MEDICAMENTOS, 31/07/2026 — 5 documentos novos, contra a meta de 102
 > Medido, não estimado: `import_directory()` devolveu **`novos: 5, atualizados: 3, inalterados: 421`**.
-> Os cinco entraram com `published = false`, **aguardando o aval do Rafael** (regra 5 da divisão de
-> trabalho). `AuditLog` gravado à mão, porque a rota HTTP foi contornada. Contagem de `content/*.md`
+> Os cinco entraram com `published = false` e **o Rafael autorizou a publicação no mesmo dia — os
+> 5 estão PUBLICADOS**, indexados no RAG (40 trechos) e com `search_vector` preenchido; a busca
+> devolve cada um em primeiro lugar para o seu termo (`PEERLESS`, `VANISH2`, `ARTESiA`,
+> `NOAH-AFNET`, `apneia obstrutiva do sono`, `cateter de artéria pulmonar`). Total de `documents`
+> publicados: **451**. `AuditLog` gravado à mão nas duas operações (importar e publicar), porque a
+> rota HTTP foi contornada.
+>
+> **Duas armadilhas de verificação encontradas aqui, para não custarem tempo de novo:**
+> - **A rota pública de documento é `/api/library/documents/{slug}`** — não `/api/biblioteca/{slug}`,
+>   que não existe e devolve **404** para qualquer slug, inclusive os que estão no ar. Um 404 aí
+>   parece falha de publicação e não é.
+> - **A busca da API usa `plainto_tsquery('portuguese', :q)` SEM `unaccent`**, e o `search_vector`
+>   também é construído sem — os dois lados casam, e a busca funciona. Testar com `unaccent(:q)`
+>   por fora dá **zero resultado** e simula um defeito que não existe. Se for testar a busca por
+>   SQL direto, reproduza a query do `search.py`, não uma variante.
+> - **A senha de admin do `.env` NÃO confere com a do banco** (o login por
+>   `POST /api/auth/login` devolve 401 com ela; a rota é `form-urlencoded` com `username`, não
+>   JSON com `email`). Foi trocada em algum momento depois do bootstrap. Para verificar conteúdo
+>   publicado, use o banco direto por container exec, que é mais rápido e não depende disso. Contagem de `content/*.md`
 > passa de **424 para 429**.
 >
-> **Acervo somado das duas sessões no fechamento de 31/07/2026: 920 itens — faltam 80 para a meta
-> de 1.000.** Medido no disco depois que as duas sessões commitaram, não estimado: `content/*.md`
+> **Acervo somado das duas sessões no fechamento de 31/07/2026: 920 itens.** (Contra a meta de
+> 1.000 vigente na hora em que isto foi escrito, faltavam 80; a meta foi elevada a **2.000** pelo
+> Rafael no fim do mesmo dia — ver a seção da META no topo deste arquivo, que é a régua atual.) Medido no disco depois que as duas sessões commitaram, não estimado: `content/*.md`
 > 429 · `evidencias` 160 · `medicamentos` 89 · `estudos` 81 · `exames` 66 · `galeria` 63 · `trilhas`
 > 17 · `emergencia` 10 · `casos-clinicos` 5. O fechamento da Biblioteca registra **919** porque foi
 > medido antes do quinto documento desta sessão entrar (commit `5f4bd18`, posterior ao `0abf18e`);
