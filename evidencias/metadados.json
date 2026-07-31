@@ -2982,5 +2982,104 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "avaliacao-funcional-invasiva-antes-de-icp-em-estenose-intermediaria",
+    "statement": "Em paciente com doença coronariana crônica que apresenta angina ou equivalente anginoso, sem avaliação prévia de isquemia e com estenose angiograficamente intermediária, recomenda-se avaliação funcional invasiva antes de prosseguir com a intervenção coronária percutânea. Na prática, é a medida que decide se a lesão de aparência duvidosa à angiografia deve ou não ser tratada.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2025,
+    "guideline_title": "Diretriz de Síndrome Coronariana Crônica – 2025 (Sociedade Brasileira de Cardiologia)",
+    "reference": "Cesar LAM, Gowdak LHW, Pavanello R, et al. Diretriz de Síndrome Coronariana Crônica – 2025. Arq Bras Cardiol. 2025;122(9):e20250619. DOI: 10.36660/abc.20250619. PMID: 41294178 — Tabela 'Recomendações para o Uso de Avaliação Funcional Invasiva na Doença Coronariana Crônica', conferida no texto integral em acesso aberto (PMC13400070) em 31/07/2026.",
+    "theme": "Doença coronariana",
+    "tags": [
+      "avaliação funcional invasiva",
+      "ffr",
+      "ifr",
+      "estenose intermediária",
+      "icp",
+      "síndrome coronariana crônica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "medida-de-resistencia-microcirculatoria-na-angina-com-coronarias-sem-obstrucao",
+    "statement": "A medição da resistência microcirculatória deve ser considerada em paciente com sintomas persistentes cujas artérias coronárias sejam angiograficamente normais, ou que tenham estenoses moderadas com reserva fracionada de fluxo e índices não hiperêmicos preservados. É o passo que dá nome ao quadro quando a angiografia não explica a angina.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2025,
+    "guideline_title": "Diretriz de Síndrome Coronariana Crônica – 2025 (Sociedade Brasileira de Cardiologia)",
+    "reference": "Cesar LAM, Gowdak LHW, Pavanello R, et al. Diretriz de Síndrome Coronariana Crônica – 2025. Arq Bras Cardiol. 2025;122(9):e20250619. DOI: 10.36660/abc.20250619. PMID: 41294178 — Tabela 'Recomendações para o Uso de Avaliação Funcional Invasiva na Doença Coronariana Crônica', conferida no texto integral em acesso aberto (PMC13400070) em 31/07/2026.",
+    "theme": "Doença coronariana",
+    "tags": [
+      "disfunção microvascular",
+      "resistência microcirculatória",
+      "imr",
+      "angina sem obstrução coronariana",
+      "avaliação funcional invasiva"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "icp-para-controle-de-sintomas-na-angina-limitante-sob-terapia-otimizada",
+    "statement": "A intervenção coronária percutânea é recomendada para controle de sintomas em paciente com estenose coronariana significativa e angina típica limitante apesar de terapia otimizada. A indicação aqui é de alívio sintomático — a terapia otimizada é pré-requisito, não alternativa descartada.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2025,
+    "guideline_title": "Diretriz de Síndrome Coronariana Crônica – 2025 (Sociedade Brasileira de Cardiologia)",
+    "reference": "Cesar LAM, Gowdak LHW, Pavanello R, et al. Diretriz de Síndrome Coronariana Crônica – 2025. Arq Bras Cardiol. 2025;122(9):e20250619. DOI: 10.36660/abc.20250619. PMID: 41294178 — Tabela 'Indicações de tratamento percutâneo para controle de sintomas e melhora prognóstica', conferida no texto integral em acesso aberto (PMC13400070) em 31/07/2026.",
+    "theme": "Doença coronariana",
+    "tags": [
+      "icp",
+      "angina refratária",
+      "terapia otimizada",
+      "controle de sintomas",
+      "síndrome coronariana crônica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "icp-no-tronco-da-coronaria-esquerda-com-anatomia-favoravel",
+    "statement": "A intervenção coronária percutânea deve ser considerada na doença coronariana com acometimento significativo do tronco da coronária esquerda quando a morfologia for apropriada para tratamento percutâneo — por exemplo, complexidade anatômica menor ou moderada. A condição anatômica é parte da recomendação, não um detalhe técnico: fora dela, a recomendação não se aplica.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2025,
+    "guideline_title": "Diretriz de Síndrome Coronariana Crônica – 2025 (Sociedade Brasileira de Cardiologia)",
+    "reference": "Cesar LAM, Gowdak LHW, Pavanello R, et al. Diretriz de Síndrome Coronariana Crônica – 2025. Arq Bras Cardiol. 2025;122(9):e20250619. DOI: 10.36660/abc.20250619. PMID: 41294178 — Tabela 'Indicações de tratamento percutâneo para controle de sintomas e melhora prognóstica', conferida no texto integral em acesso aberto (PMC13400070) em 31/07/2026.",
+    "theme": "Doença coronariana",
+    "tags": [
+      "tronco de coronária esquerda",
+      "icp",
+      "revascularização",
+      "complexidade anatômica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "escore-syntax-para-estimar-complexidade-angiografica-na-dac-multiarterial",
+    "statement": "Em paciente com doença arterial coronariana multiarterial, a avaliação da complexidade anatômica por um escore como o SYNTAX pode ser útil para estimar o risco de eventos e orientar a estratégia de revascularização. A força da recomendação é baixa (Classe IIb, Nível B) — o escore informa a decisão, não a substitui.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2025,
+    "guideline_title": "Diretriz de Síndrome Coronariana Crônica – 2025 (Sociedade Brasileira de Cardiologia)",
+    "reference": "Cesar LAM, Gowdak LHW, Pavanello R, et al. Diretriz de Síndrome Coronariana Crônica – 2025. Arq Bras Cardiol. 2025;122(9):e20250619. DOI: 10.36660/abc.20250619. PMID: 41294178 — Tabela 'Recomendação de utilização do escore SYNTAX para estimar a complexidade angiográfica', conferida no texto integral em acesso aberto (PMC13400070) em 31/07/2026.",
+    "theme": "Doença coronariana",
+    "tags": [
+      "escore syntax",
+      "dac multiarterial",
+      "complexidade angiográfica",
+      "revascularização"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
