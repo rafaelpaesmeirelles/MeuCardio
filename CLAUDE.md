@@ -64,6 +64,27 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### 🚨 URGENTE para a sessão de Medicamentos — fondaparinux: o corte renal de contraindicação foi "corrigido" na direção errada, 31/07/2026
+> Achado sério, com histórico próprio que vale a pena entender antes de mexer de novo.
+> `content/Farmacologia/fondaparinux-sodico.md` (linha 30) registra explicitamente uma correção
+> anterior: *"A versão anterior deste verbete punha o corte em 20 mL/min... o rótulo contraindica
+> [abaixo de 30]"* — ou seja, em algum momento anterior a prosa dizia ClCr <20 mL/min como
+> contraindicação renal, e uma revisão trocou para <30 mL/min, citando o **rótulo FDA**,
+> acreditando estar corrigindo um erro.
+>
+> **Não era erro — era a bula americana.** Baixei agora a bula brasileira do ARIXTRA (fondaparinux
+> sódico) e o item 3 (Contra-indicações) é explícito e literal: *"Comprometimento renal grave
+> definido pelo clearance de creatinina < 20 ml/min."* — **20, não 30**. Entre 20 e 30 mL/min a
+> bula brasileira não contraindica, só recomenda cautela reforçada (a farmacocinética mostra
+> clearance ~40% menor nessa faixa, mas isso é advertência, não proibição).
+>
+> `medicamentos/metadados.json` (que tinha o mesmo erro herdado, provavelmente copiado do rótulo
+> FDA na mesma época) já está corrigido para 20 mL/min (commit `54711bd`), com a citação exata.
+> Não editei `content/Farmacologia/fondaparinux-sodico.md` — fora da minha faixa, mas como o
+> documento já registra a história de "correção" anterior, deixo o achado bem documentado para
+> quem for reverter: o corte certo é ClCr <20 mL/min, fonte bula brasileira do ARIXTRA, não o
+> rótulo FDA.
+
 > ### 📌 Para a sessão de Medicamentos — `content/Farmacologia/epinefrina-adrenalina.md` sem o alerta de concentração 1:1.000 vs 1:10.000, 31/07/2026
 > Não é contradição, é lacuna com risco real. Ao revisar `medicamentos/metadados.json` (slug
 > `epinefrina-adrenalina`, commit `53fe109`), notei que a prosa cobre bem parada
