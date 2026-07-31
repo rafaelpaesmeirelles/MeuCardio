@@ -107,7 +107,7 @@
   },
   {
     "slug": "adenosina",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Adenosina",
     "drug_class": "Antiarrítmico — nucleosídeo endógeno, agonista de receptores de adenosina",
     "mechanism": "Ativa receptores A1 de adenosina no nódulo AV, causando hiperpolarização transitória e bloqueio da condução nodal, interrompendo circuitos de reentrada que dependem do nó AV; meia-vida ultracurta (segundos), pois é rapidamente captada por eritrócitos e células endoteliais",
@@ -143,7 +143,12 @@
       "Bula de adenosina solução injetável 3 mg/mL, Fresenius Kabi Brasil Ltda. — seção de interações medicamentosas."
     ],
     "pregnancy": "**Categoria de risco C. Só administrar quando estritamente necessário.** A bula registra ausência de dados dos dois lados — **não existem estudos de reprodução animal com adenosina nem estudos em mulheres grávidas**. Justifica a cautela pelo fato de a adenosina ser **amplamente distribuída pelo organismo**, o que impede prever o efeito fetal. Fonte: bula do ADENOCARD (adenosina), seções \"Grupos de risco\" e \"Gravidez e lactação\".",
-    "lactation": "Revisado pelo Rafael em 30/07/2026 — a bula do ADENOCARD (adenosina) foi lida nesta sessão e **não afirma nada sobre lactação**. O cabeçalho da seção diz \"Gravidez e lactação\", mas o corpo trata só da gravidez e atribui categoria C; não há frase sobre excreção no leite, efeito no lactente ou conduta. Fonte consultada e silente sobre o campo."
+    "lactation": "Revisado pelo Rafael em 30/07/2026 — a bula do ADENOCARD (adenosina) foi lida nesta sessão e **não afirma nada sobre lactação**. O cabeçalho da seção diz \"Gravidez e lactação\", mas o corpo trata só da gravidez e atribui categoria C; não há frase sobre excreção no leite, efeito no lactente ou conduta. Fonte consultada e silente sobre o campo.",
+    "contraindications": [
+      "Bloqueio atrioventricular de segundo ou terceiro grau (exceto em paciente com marca-passo artificial funcionante)",
+      "Doença do nó sinusal, como síndrome do nó sinusal ou bradicardia sintomática (exceto em paciente com marca-passo artificial funcionante)",
+      "Hipersensibilidade conhecida à adenosina"
+    ]
   },
   {
     "slug": "alteplase",
