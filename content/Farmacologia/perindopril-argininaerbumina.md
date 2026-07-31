@@ -4,7 +4,7 @@ slug: perindopril-argininaerbumina
 theme: "Farmacologia"
 kind: farmacologia
 review_status: revisado
-source_refs: ["Perindopril — rótulo aprovado pelo FDA, DailyMed SPL setid 87768fbf-7c63-47da-8925-0316f343d6ef", "Bula do COVERSYL 4mg (perindopril erbumina, Laboratórios Servier do Brasil, MS 1.1278.0051) · https://static-webv8.jet.com.br/drogaosuper/Bulas/7898029551046.pdf · aberta e lida em 31/07/2026, antes tomava 404", "Bula do paciente do COVERSYL 4mg/8mg (perindopril terc-butilamina/erbumina, Servier) · http://institucional.anossadrogaria.com.br/bula/924166.pdf · conferida em 31/07/2026, seção Gravidez e Lactação"]
+source_refs: ["Bula PROFISSIONAL do COVERSYL (perindopril, Servier), item 4 (Contraindicações), mirror consultaremedios.com.br — citação literal confirmada pela sessão da Biblioteca em 31/07/2026 (tentativa de reabrir nesta sessão tomou 403); é a referência que prevalece sobre a bula do paciente para classificar contraindicação formal, usada numa correção anterior no mesmo dia", "Perindopril — rótulo aprovado pelo FDA, DailyMed SPL setid 87768fbf-7c63-47da-8925-0316f343d6ef", "Bula do COVERSYL 4mg, versão paciente (perindopril erbumina, Laboratórios Servier do Brasil, MS 1.1278.0051) · https://static-webv8.jet.com.br/drogaosuper/Bulas/7898029551046.pdf · aberta e lida em 31/07/2026 — usada por engano como se fosse equivalente à bula profissional, corrigido", "Bula do paciente do COVERSYL 4mg/8mg (perindopril terc-butilamina/erbumina, Servier) · http://institucional.anossadrogaria.com.br/bula/924166.pdf"]
 legacy_source: "medicamentos/banco-de-medicamentos-perindopril-completo.md"
 ---
 
@@ -27,7 +27,7 @@ Comprimidos de 4 mg (erbumina) e equivalentes de arginina 5mg/10mg
 - **insuficiencia cardiaca inicial**: Meio comprimido (2mg) 1x/dia
 - **insuficiencia cardiaca manutencao**: Aumentar após 2 semanas para 4mg 1x/dia, dose usual de manutenção
 - **doenca arterial coronaria estavel**: 8 mg 1x/dia (dose utilizada no estudo EUROPA)
-- **hipertensao renovascular**: Iniciar com dose pequena de 2mg
+- **hipertensao renovascular**: Iniciar com dose pequena de 2mg — vale para estenose **unilateral** com rim contralateral funcionante; estenose **bilateral** ou em rim único é contraindicação formal (ver Contraindicações)
 - **Ajuste renal (erbumina)**: ClCr ≥ 30 mL/min — dose inicial 2 mg/dia, máximo 8 mg/dia. ClCr < 30 mL/min — não recomendado
 - **Idoso**: sempre iniciar com 2 mg/dia, independentemente da função renal, com monitorização próxima no início
 - **fonte**: rótulo aprovado pelo FDA (DailyMed), setid 87768fbf-7c63-47da-8925-0316f343d6ef
@@ -54,15 +54,37 @@ Estudo EUROPA (>12.000 pacientes com DAC estável) demonstrou redução signific
 Hipertensão arterial, insuficiência cardíaca, prevenção de AVC secundário, redução de risco CV em DAC estável
 
 ## Contraindicacoes
-**Resolvido em 31/07/2026** — a bula brasileira do COVERSYL (Servier) abriu (antes tomava 404) e traz uma seção literal de "Contraindicações absolutas":
+**CORRIGIDO DE NOVO em 31/07/2026 — a correção anterior (mesmo dia) usou fonte mais fraca do que
+devia.** A fonte usada horas atrás era uma bula curta, de orientação ao paciente
+(static-webv8.jet.com.br), que lista os itens sob um resumo informal de "Contraindicações
+absolutas" sem numeração formal. A sessão da Biblioteca, revisando `medicamentos/metadados.json`
+no mesmo dia, usou a **bula profissional** (mirror da consultaremedios.com.br, mesmo produto
+COVERSYL/Servier), com a seção numerada "4. CONTRAINDICAÇÕES" — texto literal, repetido nas duas
+apresentações (4mg e 8mg): *"Estenose bilateral significativa da artéria renal ou estenose da
+artéria renal em rim funcional único (ver item 5)."* O "(ver item 5)" é referência cruzada para
+mais detalhe em Advertências, não reclassificação — o mesmo padrão de cross-reference aparece em
+outros itens da mesma lista (ex.: hipersensibilidade "(ver item 5)") sem que isso os tire da
+condição de contraindicação formal. **A bula profissional é a referência correta aqui: bula do
+paciente simplifica e, neste caso, simplificou a ponto de mudar a classificação.**
 
+Lista corrigida, conforme item 4 da bula profissional do COVERSYL:
+
+- **Estenose bilateral significativa da artéria renal, ou estenose da artéria renal em rim
+  funcional único** — reclassificado de volta a contraindicação formal, revertendo a correção de
+  horas atrás
 - Crianças (uso pediátrico não estabelecido)
-- Gravidez — a bula do paciente detalha: não recomendado no início da gestação e **não deve ser usado a partir do 3º mês**, por risco grave ao feto; suspender assim que a gravidez for identificada. O rótulo do FDA trata do mesmo risco como *boxed warning* de toxicidade fetal (categoria D) em vez de contraindicação absoluta — convergem na conduta (suspender ao diagnosticar gravidez), divergem só na rotulagem formal
-- **Aleitamento/lactação** — contraindicação absoluta na bula brasileira; o rótulo do FDA não é tão categórico (recomenda decidir entre suspender a amamentação ou o fármaco). Prevalece a bula brasileira
+- Gravidez — não deve ser usado a partir do 3º mês, por risco grave ao feto; suspender assim que
+  a gravidez for identificada. O rótulo do FDA trata do mesmo risco como *boxed warning* de
+  toxicidade fetal (categoria D) em vez de contraindicação absoluta — convergem na conduta
+  (suspender ao diagnosticar gravidez), divergem só na rotulagem formal
 - Angioedema prévio relacionado a uso de IECA
 - Hipersensibilidade ao perindopril ou a outro IECA
 
-**Estenose bilateral de artéria renal (hipertensão renovascular) não é contraindicação absoluta na bula brasileira** — é listada em "Precauções", junto da orientação de ajustar a dose conforme a função renal remanescente e dosar creatinina com regularidade. Documento corrigido para refletir isso, alinhado ao mesmo padrão já encontrado em outros IECA/BRA desta biblioteca (candesartana, benazepril).
+**Lactação — também corrigido.** A bula profissional, seção "Fertilidade, Gravidez e Lactação —
+Lactação", usa texto mais brando do que a bula do paciente usada na correção anterior: *"COVERSYL
+4mg não é recomendado em mulheres que estejam amamentando"* — não usa a palavra "contraindicado".
+**Não é contraindicação formal**, é recomendação de evitar. A bula do paciente, que simplifica a
+linguagem, havia levado à leitura mais forte de "contraindicação absoluta".
 
 ## Interacao com sacubitril-valsartana
 **Contraindicado o uso concomitante**, e é preciso respeitar uma **janela de 36 horas** ao trocar de ou para o sacubitril-valsartana. O inibidor de neprilisina e o IECA somam risco de angioedema, e a janela existe para evitar a sobreposição dos dois efeitos.
