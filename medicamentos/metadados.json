@@ -1387,7 +1387,7 @@
   },
   {
     "slug": "empagliflozina",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Empagliflozina",
     "drug_class": "Inibidor do cotransportador sódio-glicose tipo 2 (iSGLT2)",
     "mechanism": "Inibe o cotransportador SGLT2 nos túbulos renais proximais, reduzindo reabsorção de glicose e sódio, com natriurese osmótica e redução de pré-carga; benefício cardiovascular em insuficiência cardíaca parece independente do efeito glicêmico, de forma análoga à dapagliflozina",
@@ -1405,15 +1405,24 @@
       "posologia por indicacao": "**Diabetes tipo 2:** início com **10 mg uma vez ao dia**; em quem tolera 10 mg, tem **TFGe ≥ 60 mL/min/1,73 m²** e precisa de melhor controle glicêmico, pode subir para **25 mg/dia**, que é a dose máxima diária. **Insuficiência cardíaca: 10 mg uma vez ao dia. Doença renal crônica: 10 mg uma vez ao dia.** As duas indicações cardiológicas não usam 25 mg.\n\n**Função renal:** com **TFGe < 60**, a dose diária é **10 mg**. **Não se recomenda iniciar com TFGe < 20 mL/min/1,73 m²**, por experiência limitada. No diabetes tipo 2 a eficácia hipoglicemiante **cai abaixo de TFGe 45** e provavelmente é ausente abaixo disso — o que não retira o benefício cardiorrenal, que é a razão de manter o fármaco.\n\n**Associação com sulfonilureia ou insulina:** considerar reduzir a dose delas, para diminuir o risco de hipoglicemia. Dose esquecida: tomar ao lembrar, **sem dobrar** no mesmo dia.\n\nFonte: Resumo das Características do Medicamento (RCM) da EMA, em português do JARDIANCE (empagliflozina, Boehringer Ingelheim), secção 4.2. Substituiu em 29/07/2026 um guia comercial de dosagem, que não sustenta conteúdo clínico neste produto."
     },
     "outcomes": {
-      "Evidencia pivotal — EMPEROR-Reduced e EMPEROR-Preserved": "- **EMPEROR-Reduced**: benefício cardiovascular e renal consistente em pacientes com ICFEr, independentemente da presença de diabetes no basal - **EMPEROR-Preserved**: melhora de desfechos em ICFEp independentemente do nível de pressão arterial basal; benefício e segurança mantidos em ampla faixa de função renal, até TFGe basal de 20 mL/min/1,73m² - **efeito renal**: reduziu a taxa de declínio da TFGe; benefício em eventos maiores de IC não foi influenciado pela categoria KDIGO de doença renal - **fonte**: PubMed (EMPEROR-Reduced); European Heart Journal (EMPEROR-Preserved)"
+      "Evidencia pivotal — EMPEROR-Reduced e EMPEROR-Preserved": "- **EMPEROR-Reduced**: benefício cardiovascular e renal consistente em pacientes com ICFEr, independentemente da presença de diabetes no basal - **EMPEROR-Preserved**: melhora de desfechos em ICFEp independentemente do nível de pressão arterial basal; benefício e segurança mantidos em ampla faixa de função renal, até TFGe basal de 20 mL/min/1,73m² - **efeito renal**: reduziu a taxa de declínio da TFGe; benefício em eventos maiores de IC não foi influenciado pela categoria KDIGO de doença renal - **fonte**: Packer M, Anker SD, Butler J, et al. Cardiovascular and Renal Outcomes with Empagliflozin in Heart Failure (EMPEROR-Reduced). N Engl J Med. 2020;383(15):1413-1424. DOI: 10.1056/NEJMoa2022190. PMID: 32865377 — verificado no PubMed em 31/07/2026. Anker SD, Butler J, Filippatos G, et al. Empagliflozin in Heart Failure with a Preserved Ejection Fraction (EMPEROR-Preserved). N Engl J Med. 2021;385(16):1451-1461. DOI: 10.1056/NEJMoa2107038. PMID: 34449189 — verificado no PubMed em 31/07/2026. **Corrigido nesta revisão**: as citações anteriores eram genéricas (\"PubMed\", \"European Heart Journal\"), sem autor/DOI/PMID"
     },
     "references": [
       "JARDIANCE (empagliflozina, Boehringer Ingelheim) — Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.2 (posologia e populações especiais) · https://www.ema.europa.eu/pt/documents/product-information/jardiance-epar-product-information_pt.pdf · consultado em 29/07/2026",
       "Effect of Empagliflozin on Cardiovascular and Renal Outcomes in Patients With Heart Failure by Baseline Diabetes Status: Results From the EMPEROR-Reduced Trial · PubMed · https://pubmed.ncbi.nlm.nih.gov/33175585/",
-      "Empagliflozin, irrespective of blood pressure, improves outcomes in heart failure with preserved ejection fraction: the EMPEROR-Preserved trial · European Heart Journal · 2023 · https://academic.oup.com/eurheartj/article/44/5/396/6881121"
+      "Empagliflozin, irrespective of blood pressure, improves outcomes in heart failure with preserved ejection fraction: the EMPEROR-Preserved trial · European Heart Journal · 2023 · https://academic.oup.com/eurheartj/article/44/5/396/6881121",
+      "Packer M, Anker SD, Butler J, et al. Cardiovascular and Renal Outcomes with Empagliflozin in Heart Failure (EMPEROR-Reduced). N Engl J Med. 2020;383(15):1413-1424. DOI: 10.1056/NEJMoa2022190. PMID: 32865377",
+      "Anker SD, Butler J, Filippatos G, et al. Empagliflozin in Heart Failure with a Preserved Ejection Fraction (EMPEROR-Preserved). N Engl J Med. 2021;385(16):1451-1461. DOI: 10.1056/NEJMoa2107038. PMID: 34449189"
     ],
     "pregnancy": "**Não recomendado na gravidez** como medida de precaução, \"a menos que seja claramente necessário\", e a bula reforça que \"não deve ser utilizado por mulheres grávidas sem orientação médica\". A bula não especifica dado de teratogenicidade animal nem trimestre. Fonte: bula do JARDIANCE (empagliflozina, Boehringer Ingelheim do Brasil), seção \"Gravidez e Amamentação\". Revisado pelo Rafael em 30/07/2026.",
-    "lactation": "**Recomenda-se descontinuar a amamentação durante o tratamento.** A bula afirma que \"dados de estudos disponíveis em animais mostraram a excreção da empagliflozina no leite\" e que \"não se sabe se JARDIANCE é excretado no leite humano\". Fonte: bula do JARDIANCE (empagliflozina, Boehringer Ingelheim do Brasil), seção \"Gravidez e Amamentação\"."
+    "lactation": "**Recomenda-se descontinuar a amamentação durante o tratamento.** A bula afirma que \"dados de estudos disponíveis em animais mostraram a excreção da empagliflozina no leite\" e que \"não se sabe se JARDIANCE é excretado no leite humano\". Fonte: bula do JARDIANCE (empagliflozina, Boehringer Ingelheim do Brasil), seção \"Gravidez e Amamentação\".",
+    "adverse_effects": [
+      "Muito comum: hipoglicemia (quando associada a sulfonilureia ou insulina)",
+      "Comuns: candidíase vaginal e outras infecções genitais fúngicas, vulvovaginite, balanite; aumento da micção; prurido; reações cutâneas alérgicas; infecção do trato urinário; sede; aumento de lipídios sanguíneos; constipação",
+      "Incomuns: hipovolemia, disúria, aumento de creatinina, cetoacidose",
+      "Cetoacidose: quadro grave, risco de vida, exigindo hospitalização urgente, com casos fatais relatados em pacientes com diabetes tratados com empagliflozina — em parte dos casos, apresentação atípica com glicemia pouco elevada (<250 mg/dL)",
+      "**fonte**: bula do JARDIANCE (empagliflozina, Boehringer Ingelheim do Brasil), item Reações Adversas"
+    ]
   },
   {
     "slug": "enalapril-maleato",
