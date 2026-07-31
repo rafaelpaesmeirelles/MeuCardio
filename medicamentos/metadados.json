@@ -3186,7 +3186,16 @@
       "Bradicardia, broncoespasmo (risco maior que betabloqueadores seletivos), fadiga, extremidades frias, disfunção erétil, mascaramento de sintomas de hipoglicemia em diabéticos"
     ],
     "dosing": {
-      "dose_especifica_por_indicacao": "**Hipertensão** (liberação prolongada): dose inicial 80 mg 1x/dia, titular até manutenção de 120–160 mg/dia. Máximo de bula: 640 mg/dia, raramente usado nessa faixa na prática. **Angina estável**: 80–320 mg/dia, em 2–3 tomadas (formulação de liberação imediata) ou 1x/dia (liberação prolongada). **Pós-infarto** (redução de mortalidade cardiovascular em paciente hemodinamicamente estável): 180–240 mg/dia, em doses divididas; manter por 1–3 anos na ausência de contraindicação. **Ajuste renal**: não é rotineiramente necessário em insuficiência renal leve a moderada — o propranolol é metabolizado principalmente no fígado, e a fração não ligada às proteínas plasmáticas não é significativamente removida por diálise (diferente do atenolol). Em insuficiência renal grave, titular com cautela e monitorização clínica. **Retirada**: nunca suspender abruptamente — reduzir gradualmente ao longo de 1–2 semanas, pelo risco de piora de angina ou infarto de rebote. Fonte: rótulo aprovado pelo FDA (DailyMed), setid c751ee54-27b4-4ed7-829a-ced735c41312"
+      "hipertensao": "dose inicial 80mg 2x/dia, aumentada em intervalos semanais conforme resposta; faixa usual 160-320mg/dia; dose máxima diária 640mg",
+      "angina estavel": "dose inicial 40mg 2-3x/dia, aumentada em intervalos semanais; resposta adequada geralmente em 120-240mg/dia; dose máxima diária 480mg",
+      "arritmia taquicardia por ansiedade cmh obstrutiva tireotoxicose": "10-40mg 3-4x/dia; dose máxima 240mg/dia",
+      "enxaqueca e tremor essencial": "dose usual 80-160mg/dia; máximo 240mg/dia para enxaqueca",
+      "feocromocitoma": "só com bloqueio alfa efetivo já em curso: pré-operatório 60mg/dia por 3 dias; casos malignos inoperáveis, 30mg/dia de manutenção",
+      "pos infarto": "180-240mg/dia, em doses divididas; manter por 1-3 anos na ausência de contraindicação (redução de mortalidade CV em paciente hemodinamicamente estável)",
+      "criancas": "arritmias/feocromocitoma/tireotoxicose: 0,25-0,50mg/kg 3-4x/dia; enxaqueca: 20mg 2-3x/dia abaixo de 12 anos, dose de adulto acima disso",
+      "ajuste renal e hepatico": "a bula orienta cautela ao iniciar e ao selecionar a dose inicial em insuficiência hepática ou renal significativa, pela possível meia-vida prolongada, sem tabela numérica própria de ajuste; o rótulo do FDA acrescenta que a fração não ligada às proteínas plasmáticas não é significativamente removida por diálise (diferente do atenolol)",
+      "retirada": "nunca suspender abruptamente — reduzir gradualmente ao longo de 1-2 semanas, pelo risco de piora de angina ou infarto de rebote",
+      "fonte": "Bula profissional brasileira do INDERAL (item Posologia e Modo de Usar); rótulo aprovado pelo FDA (DailyMed, setid c751ee54-27b4-4ed7-829a-ced735c41312) para pós-infarto e detalhe de diálise"
     },
     "notes": {
       "Particularidade farmacologica": "Alta lipossolubilidade permite atravessar barreira hematoencefálica com facilidade, explicando eficácia em tremor essencial e enxaqueca, mas também maior risco de efeitos adversos no SNC (fadiga, pesadelos, depressão) comparado a betabloqueadores hidrofílicos (atenolol)",
