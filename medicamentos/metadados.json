@@ -3630,7 +3630,7 @@
   },
   {
     "slug": "tafamidis",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Tafamidis (meglumina ou ácido livre)",
     "drug_class": "Estabilizador de transtirretina (TTR)",
     "mechanism": "Liga-se ao sítio de ligação da tiroxina na transtirretina, estabilizando sua estrutura tetramérica e prevenindo a dissociação em monômeros que se agregam como fibrilas amiloides — mecanismo que retarda a progressão da deposição amiloide no miocárdio, distinto de tratamento sintomático de insuficiência cardíaca",
@@ -3650,10 +3650,18 @@
     "references": [
       "Tafamidis Treatment for Patients with Transthyretin Amyloid Cardiomyopathy · New England Journal of Medicine · https://www.nejm.org/doi/full/10.1056/NEJMoa1805689",
       "Tafamidis in Transthyretin Cardiomyopathy Clinical Trial · American College of Cardiology · https://www.acc.org/latest-in-cardiology/clinical-trials/2018/08/25/23/02/attr-act",
-      "Current and Future Treatment Landscape of Transthyretin Amyloid Cardiomyopathy · PMC · https://pmc.ncbi.nlm.nih.gov/articles/PMC12379670/"
+      "Current and Future Treatment Landscape of Transthyretin Amyloid Cardiomyopathy · PMC · https://pmc.ncbi.nlm.nih.gov/articles/PMC12379670/",
+      "Bula profissional do VYNDAQEL (tafamidis meglumina), Pfizer Brasil Ltda. — pfizer.com.br, aprovada pela ANVISA em 22/10/2025"
     ],
-    "pregnancy": "**Não recomendado na gravidez, nem em mulher com potencial para engravidar que não use contracepção.** Não há dados em gestantes e os estudos em animais revelaram **toxicidade no desenvolvimento**. A contracepção eficaz deve durar o tratamento **e mais um mês depois dele**, por causa da **semivida prolongada**. Recorte da fonte: o texto é o da **meglumina de tafamidis**. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do VYNDAQEL (meglumina de tafamidis, Pfizer). Fonte europeia, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil disponível nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer.",
-    "lactation": "**Não deve ser utilizado durante a amamentação.** Os dados em animais **mostraram excreção de tafamidis no leite**, e o risco para o recém-nascido não pode ser excluído. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do VYNDAQEL (meglumina de tafamidis, Pfizer). Fonte europeia, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil disponível nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer."
+    "pregnancy": "**Categoria de risco C. Não recomendado na gravidez.** Estudos em animais mostraram toxicidade no desenvolvimento (doses de 5, 15 ou 30mg/kg/dia da meglumina, do 7º dia de gestação ao 20º dia de lactação); o risco potencial para humanos é desconhecido. Mulher em idade fértil deve usar contracepção apropriada durante o tratamento e por **1 mês** após o fim — corrige o registro anterior, que dizia 'mais um mês' sem especificar a fonte brasileira e citava só o RCM europeu. Se a paciente engravidar, encoraja-se relatar o caso à empresa detentora do registro. Fonte: bula profissional brasileira do VYNDAQEL (Pfizer), itens 4. CONTRAINDICAÇÕES, 5. ADVERTÊNCIAS E PRECAUÇÕES e \"Fertilidade, Gravidez e Lactação\" — resolve a nota anterior de que não havia bula do detentor do registro no Brasil.",
+    "lactation": "**Contraindicado no aleitamento ou na doação de leite humano — contraindicação formal do item 4, não apenas cautela.** Corrige o registro anterior, que enquadrava só como 'não deve ser utilizado' a partir do RCM europeu — a bula brasileira é categórica: \"este medicamento é contraindicado durante o aleitamento ou doação de leite, pois é excretado no leite\". Fonte: bula profissional brasileira do VYNDAQEL (Pfizer), item \"Fertilidade, Gravidez e Lactação — Amamentação\".",
+    "contraindications": [
+      "Hipersensibilidade conhecida ao tafamidis meglumina/ácido livre ou a qualquer excipiente da fórmula",
+      "Aleitamento ou doação de leite humano — contraindicação formal (ver campo `lactation`)"
+    ],
+    "notes": {
+      "Pos-transplante de orgao": "Eficácia e segurança não estabelecidas em paciente pós-transplante de órgão — sem estudo conduzido nessa população; a bula orienta descontinuar o tafamidis em quem realizar transplante."
+    }
   },
   {
     "slug": "telmisartana",
