@@ -1592,5 +1592,51 @@
       "estadiamento",
       "bloqueio de ramo direito"
     ]
+  },
+  {
+    "slug": "ecocardiografia-de-estresse-com-dobutamina-na-isquemia-miocardica",
+    "name": "Ecocardiografia de estresse com dobutamina na isquemia miocárdica",
+    "category": "imagem",
+    "theme": "Doença coronariana",
+    "what_it_measures": "Contratilidade segmentar do ventrículo esquerdo em repouso e sob estresse induzido por dobutamina, comparando os mesmos segmentos nas duas condições. O que o exame procura é a alteração de espessamento segmentar que aparece com o estresse e não existia em repouso — o marcador ecocardiográfico de isquemia induzível.",
+    "reference_range": "A leitura é por padrão de resposta, não por número. Resposta normal segmentar: hipercinesia com aumento da força de contração. Resposta isquêmica segmentar: hipocinesia com diminuição da força de contração. Resposta normal global: redução dos volumes diastólico e sistólico finais com aumento acentuado da fração de ejeção. Resposta isquêmica global: queda da fração de ejeção com dilatação da cavidade ventricular.",
+    "indications": "A diretriz brasileira lista seis: diagnóstico de doença arterial coronariana com probabilidade pré-teste intermediária; dor torácica aguda em paciente de risco intermediário, sem alteração eletrocardiográfica e com biomarcadores negativos; sintoma de angina em paciente com stent ou revascularização prévios; definição do significado funcional de obstrução coronária moderada vista à angiotomografia ou à angiografia; estratificação de risco após infarto do miocárdio; e investigação da etiologia de dispneia.",
+    "interpretation": "A combinação entre repouso e estresse define quatro conclusões distintas, e é aqui que o exame se diferencia de um teste isquêmico comum. Repouso normal com hipercinesia ao estresse: normal. Repouso normal ou hipocinético com hipocinesia ou acinesia ao estresse: isquemia. Repouso acinético que MELHORA em baixa dose e PIORA em alta dose: viabilidade e isquemia — é a chamada resposta bifásica, o padrão que identifica miocárdio viável em território isquêmico. Repouso acinético que permanece acinético ou discinético ao estresse: cicatriz/fibrose. Ou seja, o mesmo segmento acinético em repouso pode significar músculo recuperável ou fibrose estabelecida, e o que separa os dois é o comportamento entre baixa e alta dose.",
+    "limitations": "Contraindicações absolutas segundo a diretriz brasileira: infarto agudo do miocárdio até 3 a 5 dias; angina instável; arritmia não controlada com sintomas e instabilidade; estenose valvar aórtica grave sintomática; miocardite e pericardite aguda; hipertensão arterial grave em repouso (pressão arterial acima de 200/110 mmHg); endocardite ativa; tromboembolismo pulmonar ou infarto pulmonar; cardiomiopatia hipertrófica obstrutiva; e trombo ventricular recente ou móvel. Relativas: hipertireoidismo, anemia importante, acidente vascular cerebral recente, aneurisma intracraniano ou de aorta torácica maior que 40 mm, e estenose valvar aórtica moderada. Como todo método ecocardiográfico, depende de janela acústica adequada e da experiência de quem executa e interpreta.",
+    "source_refs": [
+      "Camarozano AC, Spina SV, Souza JRM, et al. Diretriz sobre Ecocardiografia de Estresse – 2026. Arq Bras Cardiol. 2026;123(4):e20260223. DOI: 10.36660/abc.20260223. PMID: 42307309 — tabelas de indicações, contraindicações, tipos de resposta e interpretação do espessamento segmentar; texto integral acessado em acesso aberto (PMC13398863) e conferido linha a linha em 31/07/2026."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ecocardiografia de estresse",
+      "dobutamina",
+      "isquemia miocárdica",
+      "viabilidade miocárdica",
+      "resposta bifásica"
+    ]
+  },
+  {
+    "slug": "ecocardiografia-de-estresse-na-doenca-valvar",
+    "name": "Ecocardiografia de estresse na doença valvar",
+    "category": "imagem",
+    "theme": "Valvopatias",
+    "what_it_measures": "Comportamento hemodinâmico de uma valvopatia sob estresse — exercício físico ou dobutamina — quando a avaliação em repouso não explica os sintomas ou não define a gravidade. Mede gradiente transvalvar, pressão sistólica da artéria pulmonar (PSAP), reserva contrátil e resposta sintomática durante o esforço.",
+    "reference_range": "Estenose mitral, com exercício físico (modalidade preferida): aumento do gradiente médio acima de 15 mmHg no pico do esforço — ou acima de 18 mmHg com dobutamina — é o critério estabelecido em diretriz; aumento da PSAP acima de 60 mmHg é critério vindo de estudos clínicos. Insuficiência mitral primária, com exercício físico: PSAP induzida pelo exercício acima de 60 mmHg e presença de reserva contrátil, ambos oriundos de estudos clínicos e não de critério formal de diretriz. A mesma tabela lista ainda o aumento da área efetiva do orifício regurgitante (EROA) induzido pelo exercício, publicado literalmente como '> 10 mm' — sem a unidade de área completa, tanto na versão em português quanto na inglesa do documento. Como EROA é uma área, a unidade impressa está incompleta na fonte; o número foi reproduzido aqui como publicado, e a unidade deve ser conferida antes de aplicar à beira do leito, em vez de assumida.",
+    "indications": "Estenose aórtica de baixo fluxo e baixo gradiente clássica, com fração de ejeção abaixo de 50%: a diretriz brasileira recomenda ecocardiograma de estresse com dobutamina em BAIXA dose para confirmar a gravidade real da estenose — é a situação em que o gradiente baixo pode refletir falência ventricular e não estenose leve. Na mesma doença, o eco de estresse com exercício pode ser usado para avaliar a repercussão hemodinâmica. Nas valvopatias mitrais, serve para explicar sintoma desproporcional ao achado de repouso e para documentar hipertensão pulmonar induzida pelo esforço.",
+    "interpretation": "O exame responde a duas perguntas diferentes conforme a lesão. Na estenose aórtica de baixo fluxo e baixo gradiente, a dobutamina em baixa dose separa estenose verdadeiramente grave de pseudoestenose, ao recrutar fluxo e mostrar como o gradiente se comporta. Nas lesões mitrais, o estresse revela a repercussão que o repouso esconde: gradiente que sobe além do corte, PSAP que dispara, aparecimento de sintoma ou de nova alteração de contratilidade segmentar. A modalidade preferida na estenose mitral é o exercício físico, não a dobutamina — os dois têm cortes de gradiente diferentes e não são intercambiáveis.",
+    "limitations": "Boa parte dos parâmetros mitrais vem de estudos clínicos, e não de critério consagrado em diretriz — a própria tabela da diretriz brasileira faz essa distinção coluna a coluna, e ela deve ser respeitada ao citar um corte como se fosse recomendação formal. Depende de janela acústica e de operador experiente, e o exercício exige capacidade funcional para atingir estresse adequado. Na estenose aórtica de baixo fluxo e baixo gradiente, o exame é complementar ao escore de cálcio da valva aórtica por tomografia, já cadastrado nesta base — os dois respondem à mesma dúvida por caminhos independentes, e divergência entre eles é motivo para reavaliar, não para escolher o resultado mais conveniente.",
+    "source_refs": [
+      "Camarozano AC, Spina SV, Souza JRM, et al. Diretriz sobre Ecocardiografia de Estresse – 2026. Arq Bras Cardiol. 2026;123(4):e20260223. DOI: 10.36660/abc.20260223. PMID: 42307309 — tabela 'Uso da ecocardiografia de estresse na avaliação das patologias valvares mitrais' e quadro de recomendações 'ECO ESTRESSE NA DOENÇA VALVAR'; texto integral acessado em acesso aberto (PMC13398863) e conferido em 31/07/2026. Nota: o quadro de recomendações desta diretriz usa 'Força de Recomendação' e 'Certeza da Evidência' (GRADE), e não Classe/Nível — por isso o conteúdo entra aqui como exame e não foi convertido em registro de evidência."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ecocardiografia de estresse",
+      "valvopatia",
+      "estenose aórtica de baixo fluxo",
+      "estenose mitral",
+      "insuficiência mitral"
+    ]
   }
 ]
