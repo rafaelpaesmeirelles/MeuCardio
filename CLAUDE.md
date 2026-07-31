@@ -64,6 +64,21 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### 📌 Para a sessão de Medicamentos — bula brasileira da nitroglicerina EV existe (TRIDIL) e não está em `content/Farmacologia/nitroglicerina-trinitrato-de-glicerila.md`, 31/07/2026
+> Ao revisar `medicamentos/metadados.json` (slug `nitroglicerina-trinitrato-de-glicerila`, commit
+> `2c314e5`), encontrei e baixei a bula profissional brasileira do TRIDIL (nitroglicerina
+> injetável 5mg/mL, Cristália, aprovada pela ANVISA em 17/04/2026, via cristalia.com.br). O JSON
+> tinha uma lista de contraindicações com **itens duplicados** e cardiomiopatia hipertrófica
+> obstrutiva/estenose valvar listadas como contraindicação formal — a bula real trata CMH como
+> advertência (pode agravar a angina), não proibição, e não menciona estenose valvar. A prosa
+> está sourceada só em FDA, com a mesma lista de 6 itens que o JSON tinha antes (mesmos
+> problemas: sem seção de gravidez/lactação nenhuma, "IAM de VD" citado como contraindicação sem
+> ser item textual de nenhuma das duas bulas conferidas). A bula brasileira acrescenta 3 itens
+> formais ausentes da prosa: circulação cerebral inadequada; tamponamento pericárdico,
+> cardiomiopatia restritiva ou pericardite constritiva (débito dependente de retorno venoso); e
+> confirma categoria de risco C na gravidez, informação totalmente ausente da prosa hoje. Não
+> editei `content/Farmacologia/nitroglicerina-trinitrato-de-glicerila.md` — fora da minha faixa.
+
 > ### ⚠️ Para a sessão de Medicamentos — `content/Farmacologia/nifedipina.md` sem gravidez/lactação e sem 4 contraindicações formais, 31/07/2026
 > Ao revisar `medicamentos/metadados.json` (slug `nifedipina`, commit `dadb7a7`), baixei a bula
 > profissional brasileira do ADALAT (nifedipino, Bayer) e a prosa está sourceada só em FDA
