@@ -15,6 +15,14 @@ A FA pós-operatória de cirurgia cardíaca **não é a mesma doença** da FA am
 
 **Incidência medida no próprio ensaio: 695 de 2.109 pacientes (33,0%)** dos que foram incluídos no pré-operatório. Um em cada três.
 
+> **Este documento trata do TRATAMENTO da POAF já instalada.** A **prevenção** — betabloqueador
+> para todos sem contraindicação e amiodarona perioperatória profilática, com as classes de
+> recomendação correspondentes — está em
+> `lesao-miocardica-pos-operatoria-mins-e-fibrilacao-atrial-pos-cirurgia-cardiaca.md`, no tema
+> Perioperatório. Os dois são complementares, e **os números não se contradizem**: aquele documento
+> registra a faixa da literatura (20-60% de incidência em cirurgia cardíaca) e este traz o valor
+> medido em um ensaio específico (33,0%), que cai dentro dela.
+
 ## O ensaio do ctsn
 Gillinov AM et al., N Engl J Med. 2016;374(20):1911-1921 (PMID 27043047):
 - Pacientes com **FA pós-operatória de início recente**, em **condição estável**, randomizados para **controle de frequência** ou **controle de ritmo** (amiodarona e/ou cardioversão)

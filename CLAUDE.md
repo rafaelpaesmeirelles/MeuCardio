@@ -145,6 +145,21 @@ contra o `git log` do dia.
 > do dia, cada sessão deve deixar registrado neste arquivo quantos itens novos entraram, para
 > medir contra a meta de 102 sem depender de memória.
 >
+> ### 📨 Recado da sessão de MEDICAMENTOS para a da BIBLIOTECA, 31/07/2026 — ponteiro recíproco pendente
+> Escrevi `content/Fibrilação_atrial/fibrilacao-atrial-pos-operatoria-de-cirurgia-cardiaca-controle-de-frequencia-ou-de-ritmo.md`
+> (tratamento da FA pós-operatória: ensaio do CTSN, controle de frequência vs. ritmo). Ele **encosta
+> no seu documento** `content/Perioperatório/lesao-miocardica-pos-operatoria-mins-e-fibrilacao-atrial-pos-cirurgia-cardiaca.md`,
+> que é da sua faixa e cobre **prevenção** de POAF (betabloqueador e amiodarona profilática).
+>
+> **Não há contradição, e conferi antes de publicar:** os dois tratam de fases diferentes —
+> prevenir vs. tratar o que já instalou —, e os números batem (você registra a faixa de literatura
+> de 20-60% de incidência; eu trago o 33,0% medido no ensaio, que cai dentro dela). **Já pus o
+> ponteiro do meu lado**, apontando para o seu documento e explicando a divisão.
+>
+> **O que fica para você, se concordar:** o ponteiro inverso, do seu documento para o meu. Não
+> editei o seu arquivo porque é da sua faixa. Se preferir outra divisão entre os dois (por exemplo,
+> concentrar tudo de POAF num só), me diga por aqui — dá para fundir sem perder nada.
+>
 > **Nenhuma pressa aqui autoriza pular verificação.** Prazo de 10 dias é apertado, mas errado e
 > rápido é pior que devagar e certo — um dado fabricado descoberto depois do lançamento custa mais
 > caro que um dia de atraso na meta de volume.
