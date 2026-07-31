@@ -264,10 +264,26 @@ contra o `git log` do dia.
 > **Nota de faixa:** `evidencias/` e Febre reumática são da Biblioteca. Entrei porque o Rafael pediu
 > explicitamente, alterei **um campo de um registro** e commitei na mesma ação.
 >
-> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **58 documentos novos, todos publicados**
-> `content/*.md` de **424 para 490**; `documents` **490 total = 490 publicados**. **Acervo total:
-> 1.087** — **faltam 913 para os 2.000**. (Os números das frentes JSON e parte dos documentos
-> incluem o que a sessão da Biblioteca entregou no mesmo dia; os 58 acima são só desta sessão.)
+> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **59 documentos novos, todos publicados**
+> `content/*.md` de **424 para 491**; `documents` **491 total = 491 publicados**. **Acervo total:
+> 1.088** — **faltam 912 para os 2.000**. (Os números das frentes JSON e parte dos documentos
+> incluem o que a sessão da Biblioteca entregou no mesmo dia; os 59 acima são só desta sessão.)
+>
+> **30º lote — 1 documento**: ADVENT-HF (PMID 38142697), servoventilação na respiração desordenada
+> do sono da ICFEr.
+>
+> ⚠️ **Este é o documento mais delicado da sessão, e o motivo importa para quem for citá-lo.** A
+> biblioteca já tinha o **SERVE-HF**, em que a servoventilação **aumentou a mortalidade** na apneia
+> central da ICFEr. O ADVENT-HF, na mesma classe de terapia e população parcialmente sobreposta,
+> **não reproduziu o dano** — e no subgrupo de apneia central deu HR **0,74**, direção oposta.
+> **Quem conhece só um dos dois sai com a conclusão errada.** O documento confronta os dois numa
+> tabela e é explícito sobre o limite: **o ADVENT-HF NÃO refuta o SERVE-HF** — não reproduzir dano
+> em população e dispositivo diferentes não é o mesmo que provar que o dano não existe. As
+> explicações possíveis (algoritmo de disparo do aparelho, composição da coorte, evolução do
+> tratamento de base) entraram **como hipóteses declaradas**, não como conclusão.
+>
+> **Regra que este caso deixa:** quando dois ensaios da mesma terapia divergem, **o documento não
+> escolhe um vencedor** — ele mostra em que diferem e diz o que cada um autoriza concluir.
 >
 > **29º lote — 1 documento**: ferro oral na ICFEr (IRONOUT-HF, PMID 28510680), que **fecha a trinca
 > ferro/anemia** da pasta de Insuficiência cardíaca — endovenoso funciona, oral não funciona,
