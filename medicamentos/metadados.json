@@ -1963,7 +1963,7 @@
   },
   {
     "slug": "heparina-nao-fracionada",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Heparina não fracionada",
     "drug_class": "Anticoagulante parenteral — inibidor indireto da trombina",
     "mechanism": "Liga-se à antitrombina, convertendo este cofator em rápido inativador de trombina, fator Xa e, em menor extensão, fatores XIIa, XIa e IXa; peso molecular médio de 15.000 daltons",
@@ -1971,10 +1971,18 @@
       "Tromboembolismo venoso (Classe 1A), síndrome coronariana aguda (Classe 1A); trombose de prótese valvar (Classe 2C, preferível a HBPM)"
     ],
     "contraindications": [
-      "Sangramento ativo",
-      "AVC isquêmico (fase aguda) ou hemorrágico",
-      "Hipersensibilidade a heparina/produtos porcinos",
-      "Trombocitopenia induzida por heparina prévia"
+      "Tendência a sangramento/hemorragia (ex.: hemofilia)",
+      "Trombocitopenia grave, incluindo trombocitopenia induzida por heparina prévia",
+      "Icterícia/doença hepática grave",
+      "Ameaça de aborto",
+      "Úlcera gástrica ou duodenal ativa",
+      "Hipertensão arterial grave não controlada",
+      "Insuficiência renal grave, ou pós-operatório de cirurgia renal",
+      "Pós-operatório de cirurgia cerebral, medular ou oftalmológica",
+      "Hipersensibilidade/alergia conhecida à heparina",
+      "AVC hemorrágico",
+      "Endocardite bacteriana",
+      "**fonte**: bula brasileira de heparina sódica (HEPAMAX-S, uso em hemodiálise — mesma substância, mesma classe de restrição farmacológica) e resumo de múltiplas bulas genéricas registradas na ANVISA. **Corrigido em 31/07/2026**: lista anterior (4 itens, fonte não declarada) tinha 'AVC isquêmico (fase aguda)' junto com o hemorrágico — mantido aqui só o hemorrágico como contraindicação de sangramento intracraniano ativo/recente, consistente com o padrão já corrigido em enoxaparina neste mesmo acervo; AVC isquêmico agudo é decisão de risco-benefício, não proibição"
     ],
     "dosing": {
       "diluicao padrao": "7.500 UI em 150mL SF 0,9% (50 UI/mL)",
@@ -1987,10 +1995,19 @@
       "Vantagem pratica": "Meia-vida curta permite reversibilidade rápida — preferível a HBPM em insuficiência renal grave e situações de alto risco hemorrágico com necessidade de suspensão rápida"
     },
     "references": [
-      "Heparinização Plena na Sala de Emergência · HCRP/USP · https://hcrp.usp.br/revistaqualidade/uploads/Artigos/186/186.pdf"
+      "Heparinização Plena na Sala de Emergência · HCRP/USP · https://hcrp.usp.br/revistaqualidade/uploads/Artigos/186/186.pdf",
+      "Bula brasileira de heparina sódica (HEPAMAX-S, uso hospitalar) — usada para contraindicações completas e reações adversas"
     ],
     "pregnancy": "**Sem sinal de dano nos relatos publicados — é o anticoagulante com a rotulagem mais favorável na gestação.** Não há dado formal em gestantes, mas os relatos publicados **não mostraram risco aumentado** de desfecho materno ou fetal adverso. Em animais **não houve teratogenicidade**, embora tenha sido observada **morte embriofetal precoce** em ratas e coelhas na organogênese, em doses cerca de **10 vezes** a máxima recomendada em humanos (45.000 unidades/dia). O rótulo pede que se pesem benefícios e riscos e, quando disponível, que se **prefira a apresentação sem conservante**. Fonte: rótulo aprovado pelo FDA (DailyMed) para a heparina sódica injetável. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer.",
-    "lactation": "**Compatível, e com a razão farmacológica explícita.** Pelo seu **alto peso molecular**, a heparina **não tende a ser excretada no leite humano**, e a fração que porventura estivesse no leite **não seria absorvida por via oral** pelo lactente. A ressalva não é da heparina e sim do veículo: o **álcool benzílico** presente no soro materno provavelmente passa ao leite e **pode ser absorvido por via oral** pelo lactente — por isso o rótulo recomenda a apresentação **sem conservante** quando a heparina for necessária durante a lactação. Fonte: rótulo aprovado pelo FDA (DailyMed) para a heparina sódica injetável. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer."
+    "lactation": "**Compatível, e com a razão farmacológica explícita.** Pelo seu **alto peso molecular**, a heparina **não tende a ser excretada no leite humano**, e a fração que porventura estivesse no leite **não seria absorvida por via oral** pelo lactente. A ressalva não é da heparina e sim do veículo: o **álcool benzílico** presente no soro materno provavelmente passa ao leite e **pode ser absorvido por via oral** pelo lactente — por isso o rótulo recomenda a apresentação **sem conservante** quando a heparina for necessária durante a lactação. Fonte: rótulo aprovado pelo FDA (DailyMed) para a heparina sódica injetável. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer.",
+    "adverse_effects": [
+      "Sangramento (mais comum): hematúria, sangramento subcutâneo/equimose em pontos de injeção; sangramentos insignificantes não exigem interrupção obrigatória; sangramento de importância média exige cessar a heparina e aguardar o efeito passar; casos excepcionais exigem protamina",
+      "Trombocitopenia induzida por heparina (HIT) — ver notas próprias deste registro",
+      "Alopecia reversível após o tratamento",
+      "Sangramento gastrointestinal ou urinário",
+      "Raras: reações de hipersensibilidade/alergia (vermelhidão cutânea, asma brônquica, febre medicamentosa, colapso e espasmo vascular)",
+      "**fonte**: bula brasileira de heparina sódica (HEPAMAX-S)"
+    ]
   },
   {
     "slug": "hidralazina",
