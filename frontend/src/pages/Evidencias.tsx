@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../lib/api";
 import { Carregando, Vazio } from "../components/Estado";
+import { rotuloNivel } from "../lib/evidencia";
 
 type Item = {
   slug: string; statement: string; recommendation_class: string;
@@ -81,7 +82,7 @@ export default function Evidencias() {
               </span>
               <div>
                 <p className="eyebrow" style={{ margin: 0 }}>
-                  {e.society} {e.year} · Nível {e.evidence_level} · {e.theme}
+                  {e.society} {e.year} · {rotuloNivel(e.evidence_level)} · {e.theme}
                 </p>
                 <span>{e.statement}</span>
               </div>

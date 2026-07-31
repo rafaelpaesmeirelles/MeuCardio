@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { api, ApiError } from "../lib/api";
 import { Carregando, Erro } from "../components/Estado";
 import BotaoFavorito from "../components/BotaoFavorito";
+import { rotuloClasse, rotuloNivel } from "../lib/evidencia";
 
 type Detalhe = {
   id: number; slug: string; statement: string; recommendation_class: string;
@@ -10,29 +11,9 @@ type Detalhe = {
   guideline_title: string; reference: string; document_slug: string | null; tags: string[];
 };
 
-// Nem toda diretriz usa a escala Classe I-III / Nível A-C da ESC/AHA: OMS, e as
-// brasileiras de Chagas e de eco de estresse, usam GRADE (força forte/condicional,
-// certeza alta/moderada/baixa). Sem esta distinção o selo saía "Classe Forte", que
-// não existe em nenhum dos dois sistemas.
-// Os dois rótulos são decididos de forma independente, porque os sistemas se
-// misturam: a diretriz da SBC de Chagas, por exemplo, usa força "Forte/Ponderada"
-// junto com nível de evidência A/B/C — ali o certo é "Força Forte" + "Nível B".
-const CLASSES_ESC = new Set(["I", "IIa", "IIb", "III"]);
-const NIVEIS_LETRA = new Set(["A", "B", "C"]);
-// `evidence_level` é varchar(5) no banco, então a certeza GRADE é gravada abreviada
-// ("Mod" não cabe como "Moderada"). A expansão é feita aqui, na exibição, para o
-// assinante ler a palavra inteira sem exigir migração de schema.
-const CERTEZA_POR_EXTENSO: Record<string, string> = {
-  Alta: "alta", Mod: "moderada", Baixa: "baixa", MtBx: "muito baixa",
-};
-const rotuloClasse = (c: string) => (CLASSES_ESC.has(c) ? `Classe ${c}` : `Força ${c}`);
-const rotuloNivel = (n: string) => {
-  // "?" é usado quando a classe foi confirmada mas a letra do nível não pôde ser
-  // lida na fonte original (hoje: uma recomendação da AHA 2009 atrás de paywall).
-  // Mostrar "Nível ?" ou "Certeza ?" não diz nada ao leitor — melhor ser explícito.
-  if (n === "?") return "Nível não confirmado";
-  return NIVEIS_LETRA.has(n) ? `Nível ${n}` : `Certeza ${CERTEZA_POR_EXTENSO[n] ?? n}`;
-};
+// Os rótulos de classe/força e nível/certeza vivem em ../lib/evidencia porque a
+// mesma regra vale na lista de evidências. Ver os três sistemas de graduação
+// que a base concilia no comentário daquele arquivo.
 
 export default function Evidencia() {
   const { slug } = useParams();

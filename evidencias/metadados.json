@@ -6792,6 +6792,7 @@
     "published": false
   },
   {
+<<<<<<< Updated upstream
     "slug": "isglt2-em-icfem-e-icfep",
     "statement": "Um inibidor de SGLT2 (dapagliflozina ou empagliflozina) é recomendado em pacientes com insuficiência cardíaca com fração de ejeção levemente reduzida (ICFEm) ou preservada (ICFEp) para reduzir o risco de hospitalização por insuficiência cardíaca ou morte cardiovascular.",
     "recommendation_class": "I",
@@ -6808,6 +6809,420 @@
       "dapagliflozina",
       "empagliflozina",
       "quatro pilares"
+=======
+    "slug": "whf-rastreio-positivo-encaminhar-para-eco-confirmatorio",
+    "statement": "Diante de critérios de RASTREAMENTO positivos para cardiopatia reumática, o paciente deve ser encaminhado para ecocardiograma CONFIRMATÓRIO. Em circunstâncias especiais, pode ser razoável inscrevê-lo no registro de cardiopatia reumática e/ou iniciar profilaxia secundária enquanto aguarda o exame confirmatório — mantendo-a até que ele seja obtido.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C-EO",
+    "society": "WHF",
+    "year": 2023,
+    "guideline_title": "2023 World Heart Federation guidelines for the echocardiographic diagnosis of rheumatic heart disease",
+    "reference": "Rwebembera J, Marangou J, Mwita JC, Mocumbi AO, Mota C, et al. 2023 World Heart Federation guidelines for the echocardiographic diagnosis of rheumatic heart disease. Nat Rev Cardiol. 2024 Apr;21(4):250-263. DOI: 10.1038/s41569-023-00940-9. PMID: 37914787 — texto integral livre em nature.com (o artigo NÃO está no PMC), conferido em 31/07/2026 na versão já corrigida pela errata Nat Rev Cardiol. 2024;21(5):347 (PMID 38532021). A diretriz declara usar o sistema de graduação ACC/AHA 2016 e grafa a classe em algarismo arábico (1, 2A, 2B); aqui foi normalizada para I, IIa e IIb, que é a mesma escala. Os níveis mantêm os sufixos do sistema ACC/AHA 2016 (B-R = randomizado, B-NR = não randomizado, C-EO = opinião de especialista).",
+    "theme": "Febre reumática",
+    "tags": [
+      "rastreamento",
+      "cardiopatia reumática",
+      "ecocardiograma confirmatório",
+      "profilaxia secundária"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "whf-estagio-a-conduta-e-reavaliacao-em-1-a-2-anos",
+    "statement": "No ESTÁGIO A (achados ecocardiográficos mínimos, aplicável apenas a indivíduos de até 20 anos), recomenda-se inscrição no registro de cardiopatia reumática; a profilaxia secundária PODE ser iniciada, e é recomendada nova avaliação com ecocardiograma completo em 1 a 2 anos. A suspensão da profilaxia pode ser considerada se os achados ecocardiográficos forem normais após esse intervalo.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B-R",
+    "society": "WHF",
+    "year": 2023,
+    "guideline_title": "2023 World Heart Federation guidelines for the echocardiographic diagnosis of rheumatic heart disease",
+    "reference": "Rwebembera J, Marangou J, Mwita JC, Mocumbi AO, Mota C, et al. 2023 World Heart Federation guidelines for the echocardiographic diagnosis of rheumatic heart disease. Nat Rev Cardiol. 2024 Apr;21(4):250-263. DOI: 10.1038/s41569-023-00940-9. PMID: 37914787 — texto integral livre em nature.com (o artigo NÃO está no PMC), conferido em 31/07/2026 na versão já corrigida pela errata Nat Rev Cardiol. 2024;21(5):347 (PMID 38532021). A diretriz declara usar o sistema de graduação ACC/AHA 2016 e grafa a classe em algarismo arábico (1, 2A, 2B); aqui foi normalizada para I, IIa e IIb, que é a mesma escala. Os níveis mantêm os sufixos do sistema ACC/AHA 2016 (B-R = randomizado, B-NR = não randomizado, C-EO = opinião de especialista).",
+    "theme": "Febre reumática",
+    "tags": [
+      "estágio A",
+      "cardiopatia reumática",
+      "profilaxia secundária",
+      "reavaliação"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "whf-estagio-b-profilaxia-secundaria-recomendada",
+    "statement": "No ESTÁGIO B (cardiopatia reumática LEVE), são recomendadas a inscrição no registro e a profilaxia secundária, com duração conforme as diretrizes locais ou, na ausência delas, as recomendações da OMS para cardiopatia reumática leve. É a ÚNICA linha da tabela de rotas de cuidado com Classe I e nível A.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "WHF",
+    "year": 2023,
+    "guideline_title": "2023 World Heart Federation guidelines for the echocardiographic diagnosis of rheumatic heart disease",
+    "reference": "Rwebembera J, Marangou J, Mwita JC, Mocumbi AO, Mota C, et al. 2023 World Heart Federation guidelines for the echocardiographic diagnosis of rheumatic heart disease. Nat Rev Cardiol. 2024 Apr;21(4):250-263. DOI: 10.1038/s41569-023-00940-9. PMID: 37914787 — texto integral livre em nature.com (o artigo NÃO está no PMC), conferido em 31/07/2026 na versão já corrigida pela errata Nat Rev Cardiol. 2024;21(5):347 (PMID 38532021). A diretriz declara usar o sistema de graduação ACC/AHA 2016 e grafa a classe em algarismo arábico (1, 2A, 2B); aqui foi normalizada para I, IIa e IIb, que é a mesma escala. Os níveis mantêm os sufixos do sistema ACC/AHA 2016 (B-R = randomizado, B-NR = não randomizado, C-EO = opinião de especialista).",
+    "theme": "Febre reumática",
+    "tags": [
+      "estágio B",
+      "cardiopatia reumática leve",
+      "profilaxia secundária",
+      "registro"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "whf-estagios-c-e-d-cuidado-especializado",
+    "statement": "Nos ESTÁGIOS C (cardiopatia reumática avançada com risco de complicações clínicas) e D (avançada COM complicações já estabelecidas), a recomendação é idêntica: inscrição no registro, profilaxia secundária conforme as recomendações locais e implementação de cuidado ESPECIALIZADO segundo recomendações locais, regionais ou internacionais. A duração da profilaxia segue as diretrizes locais ou, na falta delas, as da OMS para cardiopatia reumática moderada a grave.",
+    "recommendation_class": "I",
+    "evidence_level": "B-NR",
+    "society": "WHF",
+    "year": 2023,
+    "guideline_title": "2023 World Heart Federation guidelines for the echocardiographic diagnosis of rheumatic heart disease",
+    "reference": "Rwebembera J, Marangou J, Mwita JC, Mocumbi AO, Mota C, et al. 2023 World Heart Federation guidelines for the echocardiographic diagnosis of rheumatic heart disease. Nat Rev Cardiol. 2024 Apr;21(4):250-263. DOI: 10.1038/s41569-023-00940-9. PMID: 37914787 — texto integral livre em nature.com (o artigo NÃO está no PMC), conferido em 31/07/2026 na versão já corrigida pela errata Nat Rev Cardiol. 2024;21(5):347 (PMID 38532021). A diretriz declara usar o sistema de graduação ACC/AHA 2016 e grafa a classe em algarismo arábico (1, 2A, 2B); aqui foi normalizada para I, IIa e IIb, que é a mesma escala. Os níveis mantêm os sufixos do sistema ACC/AHA 2016 (B-R = randomizado, B-NR = não randomizado, C-EO = opinião de especialista).",
+    "theme": "Febre reumática",
+    "tags": [
+      "estágio C",
+      "estágio D",
+      "cardiopatia reumática avançada",
+      "cuidado especializado"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "whf-rastreio-ecocardiografico-em-criancas-e-jovens-de-5-a-20-anos",
+    "statement": "Deve ser considerada a busca ativa de casos de cardiopatia reumática por ecocardiograma em crianças e adultos jovens de 5 a 20 ANOS que vivam em regiões endêmicas.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "WHF",
+    "year": 2023,
+    "guideline_title": "2023 World Heart Federation guidelines for the echocardiographic diagnosis of rheumatic heart disease",
+    "reference": "Rwebembera J, Marangou J, Mwita JC, Mocumbi AO, Mota C, et al. 2023 World Heart Federation guidelines for the echocardiographic diagnosis of rheumatic heart disease. Nat Rev Cardiol. 2024 Apr;21(4):250-263. DOI: 10.1038/s41569-023-00940-9. PMID: 37914787 — texto integral livre em nature.com (o artigo NÃO está no PMC), conferido em 31/07/2026 na versão já corrigida pela errata Nat Rev Cardiol. 2024;21(5):347 (PMID 38532021). A diretriz declara usar o sistema de graduação ACC/AHA 2016 e grafa a classe em algarismo arábico (1, 2A, 2B); aqui foi normalizada para I, IIa e IIb, que é a mesma escala. Os níveis mantêm os sufixos do sistema ACC/AHA 2016 (B-R = randomizado, B-NR = não randomizado, C-EO = opinião de especialista).",
+    "theme": "Febre reumática",
+    "tags": [
+      "rastreamento",
+      "busca ativa",
+      "região endêmica",
+      "ecocardiograma"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "whf-rastreio-ecocardiografico-em-parentes-de-primeiro-grau",
+    "statement": "Deve ser considerada a busca ativa de casos de cardiopatia reumática por ecocardiograma em PARENTES DE PRIMEIRO GRAU de casos-índice.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "WHF",
+    "year": 2023,
+    "guideline_title": "2023 World Heart Federation guidelines for the echocardiographic diagnosis of rheumatic heart disease",
+    "reference": "Rwebembera J, Marangou J, Mwita JC, Mocumbi AO, Mota C, et al. 2023 World Heart Federation guidelines for the echocardiographic diagnosis of rheumatic heart disease. Nat Rev Cardiol. 2024 Apr;21(4):250-263. DOI: 10.1038/s41569-023-00940-9. PMID: 37914787 — texto integral livre em nature.com (o artigo NÃO está no PMC), conferido em 31/07/2026 na versão já corrigida pela errata Nat Rev Cardiol. 2024;21(5):347 (PMID 38532021). A diretriz declara usar o sistema de graduação ACC/AHA 2016 e grafa a classe em algarismo arábico (1, 2A, 2B); aqui foi normalizada para I, IIa e IIb, que é a mesma escala. Os níveis mantêm os sufixos do sistema ACC/AHA 2016 (B-R = randomizado, B-NR = não randomizado, C-EO = opinião de especialista).",
+    "theme": "Febre reumática",
+    "tags": [
+      "rastreamento",
+      "parentes de primeiro grau",
+      "caso-índice",
+      "ecocardiograma"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "whf-rastreio-em-gestantes-e-adultos-jovens-de-21-a-39-anos",
+    "statement": "A busca ativa de casos por ecocardiograma PODE ser considerada em GESTANTES e em adultos jovens de 21 a 39 anos que vivam em regiões endêmicas — recomendação mais fraca do que a da faixa de 5 a 20 anos.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "WHF",
+    "year": 2023,
+    "guideline_title": "2023 World Heart Federation guidelines for the echocardiographic diagnosis of rheumatic heart disease",
+    "reference": "Rwebembera J, Marangou J, Mwita JC, Mocumbi AO, Mota C, et al. 2023 World Heart Federation guidelines for the echocardiographic diagnosis of rheumatic heart disease. Nat Rev Cardiol. 2024 Apr;21(4):250-263. DOI: 10.1038/s41569-023-00940-9. PMID: 37914787 — texto integral livre em nature.com (o artigo NÃO está no PMC), conferido em 31/07/2026 na versão já corrigida pela errata Nat Rev Cardiol. 2024;21(5):347 (PMID 38532021). A diretriz declara usar o sistema de graduação ACC/AHA 2016 e grafa a classe em algarismo arábico (1, 2A, 2B); aqui foi normalizada para I, IIa e IIb, que é a mesma escala. Os níveis mantêm os sufixos do sistema ACC/AHA 2016 (B-R = randomizado, B-NR = não randomizado, C-EO = opinião de especialista).",
+    "theme": "Febre reumática",
+    "tags": [
+      "rastreamento",
+      "gestante",
+      "adulto jovem",
+      "região endêmica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "whf-criterios-confirmatorios-obrigatorios-acima-de-20-anos",
+    "statement": "Na busca ativa de casos em indivíduos com MAIS DE 20 ANOS, devem ser aplicados os critérios CONFIRMATÓRIOS, e não os de rastreamento — porque a evidência que sustenta os critérios de rastreamento nessa população é limitada. É o ponto que impede transportar para o adulto o protocolo usado em escolares.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "WHF",
+    "year": 2023,
+    "guideline_title": "2023 World Heart Federation guidelines for the echocardiographic diagnosis of rheumatic heart disease",
+    "reference": "Rwebembera J, Marangou J, Mwita JC, Mocumbi AO, Mota C, et al. 2023 World Heart Federation guidelines for the echocardiographic diagnosis of rheumatic heart disease. Nat Rev Cardiol. 2024 Apr;21(4):250-263. DOI: 10.1038/s41569-023-00940-9. PMID: 37914787 — texto integral livre em nature.com (o artigo NÃO está no PMC), conferido em 31/07/2026 na versão já corrigida pela errata Nat Rev Cardiol. 2024;21(5):347 (PMID 38532021). A diretriz declara usar o sistema de graduação ACC/AHA 2016 e grafa a classe em algarismo arábico (1, 2A, 2B); aqui foi normalizada para I, IIa e IIb, que é a mesma escala. Os níveis mantêm os sufixos do sistema ACC/AHA 2016 (B-R = randomizado, B-NR = não randomizado, C-EO = opinião de especialista).",
+    "theme": "Febre reumática",
+    "tags": [
+      "critérios confirmatórios",
+      "adulto",
+      "rastreamento",
+      "cardiopatia reumática"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "whf-ecocardiografo-portatil-como-alternativa-no-rastreamento",
+    "statement": "O ecocardiógrafo PORTÁTIL (hand-held) é uma alternativa razoável para o rastreamento ecocardiográfico de cardiopatia reumática.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B-NR",
+    "society": "WHF",
+    "year": 2023,
+    "guideline_title": "2023 World Heart Federation guidelines for the echocardiographic diagnosis of rheumatic heart disease",
+    "reference": "Rwebembera J, Marangou J, Mwita JC, Mocumbi AO, Mota C, et al. 2023 World Heart Federation guidelines for the echocardiographic diagnosis of rheumatic heart disease. Nat Rev Cardiol. 2024 Apr;21(4):250-263. DOI: 10.1038/s41569-023-00940-9. PMID: 37914787 — texto integral livre em nature.com (o artigo NÃO está no PMC), conferido em 31/07/2026 na versão já corrigida pela errata Nat Rev Cardiol. 2024;21(5):347 (PMID 38532021). A diretriz declara usar o sistema de graduação ACC/AHA 2016 e grafa a classe em algarismo arábico (1, 2A, 2B); aqui foi normalizada para I, IIa e IIb, que é a mesma escala. Os níveis mantêm os sufixos do sistema ACC/AHA 2016 (B-R = randomizado, B-NR = não randomizado, C-EO = opinião de especialista).",
+    "theme": "Febre reumática",
+    "tags": [
+      "ecocardiógrafo portátil",
+      "rastreamento",
+      "hand-held"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "whf-programa-estruturado-de-treinamento-para-nao-especialistas",
+    "statement": "É RECOMENDADO um programa ESTRUTURADO de treinamento para capacitar não especialistas a realizar rastreamento ecocardiográfico, viabilizando o compartilhamento de tarefas (task sharing) em regiões endêmicas.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "WHF",
+    "year": 2023,
+    "guideline_title": "2023 World Heart Federation guidelines for the echocardiographic diagnosis of rheumatic heart disease",
+    "reference": "Rwebembera J, Marangou J, Mwita JC, Mocumbi AO, Mota C, et al. 2023 World Heart Federation guidelines for the echocardiographic diagnosis of rheumatic heart disease. Nat Rev Cardiol. 2024 Apr;21(4):250-263. DOI: 10.1038/s41569-023-00940-9. PMID: 37914787 — texto integral livre em nature.com (o artigo NÃO está no PMC), conferido em 31/07/2026 na versão já corrigida pela errata Nat Rev Cardiol. 2024;21(5):347 (PMID 38532021). A diretriz declara usar o sistema de graduação ACC/AHA 2016 e grafa a classe em algarismo arábico (1, 2A, 2B); aqui foi normalizada para I, IIa e IIb, que é a mesma escala. Os níveis mantêm os sufixos do sistema ACC/AHA 2016 (B-R = randomizado, B-NR = não randomizado, C-EO = opinião de especialista).",
+    "theme": "Febre reumática",
+    "tags": [
+      "task sharing",
+      "treinamento",
+      "não especialista",
+      "rastreamento"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "whf-criterios-abreviados-e-supervisao-de-especialista-no-task-sharing",
+    "statement": "No compartilhamento de tarefas, devem ser considerados critérios diagnósticos e protocolos de ecocardiografia ABREVIADOS (Classe IIa, nível B); e a supervisão por especialista, com revisão das imagens obtidas por não especialistas, deve ser realizada ANTES de firmar o diagnóstico (Classe IIa, nível B/C). A segunda condição é o que torna a primeira aceitável — critério abreviado sem revisão de especialista não está previsto na diretriz.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "WHF",
+    "year": 2023,
+    "guideline_title": "2023 World Heart Federation guidelines for the echocardiographic diagnosis of rheumatic heart disease",
+    "reference": "Rwebembera J, Marangou J, Mwita JC, Mocumbi AO, Mota C, et al. 2023 World Heart Federation guidelines for the echocardiographic diagnosis of rheumatic heart disease. Nat Rev Cardiol. 2024 Apr;21(4):250-263. DOI: 10.1038/s41569-023-00940-9. PMID: 37914787 — texto integral livre em nature.com (o artigo NÃO está no PMC), conferido em 31/07/2026 na versão já corrigida pela errata Nat Rev Cardiol. 2024;21(5):347 (PMID 38532021). A diretriz declara usar o sistema de graduação ACC/AHA 2016 e grafa a classe em algarismo arábico (1, 2A, 2B); aqui foi normalizada para I, IIa e IIb, que é a mesma escala. Os níveis mantêm os sufixos do sistema ACC/AHA 2016 (B-R = randomizado, B-NR = não randomizado, C-EO = opinião de especialista).",
+    "theme": "Febre reumática",
+    "tags": [
+      "task sharing",
+      "critérios abreviados",
+      "supervisão",
+      "não especialista"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "whf-telemedicina-na-educacao-e-no-armazenamento-de-imagens",
+    "statement": "A telemedicina é RECOMENDADA para melhorar a educação sobre cardiopatia reumática de profissionais de saúde, equipes escolares, equipes de rastreamento e população em geral; e sistemas dedicados de computação em nuvem são recomendados para envio remoto, armazenamento e interpretação de imagens e exames — ambos Classe I, nível C. Já a tele-ecocardiografia como apoio ao compartilhamento de tarefas na busca ativa PODE ser considerada (Classe IIb, nível C).",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "WHF",
+    "year": 2023,
+    "guideline_title": "2023 World Heart Federation guidelines for the echocardiographic diagnosis of rheumatic heart disease",
+    "reference": "Rwebembera J, Marangou J, Mwita JC, Mocumbi AO, Mota C, et al. 2023 World Heart Federation guidelines for the echocardiographic diagnosis of rheumatic heart disease. Nat Rev Cardiol. 2024 Apr;21(4):250-263. DOI: 10.1038/s41569-023-00940-9. PMID: 37914787 — texto integral livre em nature.com (o artigo NÃO está no PMC), conferido em 31/07/2026 na versão já corrigida pela errata Nat Rev Cardiol. 2024;21(5):347 (PMID 38532021). A diretriz declara usar o sistema de graduação ACC/AHA 2016 e grafa a classe em algarismo arábico (1, 2A, 2B); aqui foi normalizada para I, IIa e IIb, que é a mesma escala. Os níveis mantêm os sufixos do sistema ACC/AHA 2016 (B-R = randomizado, B-NR = não randomizado, C-EO = opinião de especialista).",
+    "theme": "Febre reumática",
+    "tags": [
+      "telemedicina",
+      "tele-ecocardiografia",
+      "nuvem",
+      "educação"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "oms-criterios-de-jones-para-diagnostico-de-febre-reumatica",
+    "statement": "Os CRITÉRIOS DE JONES devem ser usados para o diagnóstico de febre reumática em crianças, adolescentes e adultos com suspeita da doença. Recomendação FORTE, com certeza BAIXA da evidência — a combinação é deliberada: a força vem da ausência de alternativa validada, não da qualidade dos estudos.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Baixa",
+    "society": "OMS",
+    "year": 2024,
+    "guideline_title": "Diretriz da OMS para prevenção e diagnóstico da febre reumática e da cardiopatia reumática – 2024",
+    "reference": "WHO guideline on the prevention and diagnosis of rheumatic fever and rheumatic heart disease. Genebra: Organização Mundial da Saúde; 2024. ISBN 9789240100077. PMID: 39631006 · NCBI Bookshelf NBK609707 — texto integral livre, licença CC BY-NC-SA 3.0 IGO, capítulo de recomendações conferido em 31/07/2026. A OMS usa GRADE (força forte/condicional + certeza da evidência), e não a escala de classe I-III da ESC/AHA.",
+    "theme": "Febre reumática",
+    "tags": [
+      "critérios de Jones",
+      "diagnóstico",
+      "febre reumática",
+      "GRADE"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "oms-ecocardiografo-portatil-no-diagnostico-de-cardite-e-cardiopatia-reumatica",
+    "statement": "Em contextos onde a ecocardiografia convencional não está disponível, o ecocardiógrafo PORTÁTIL pode ser usado para o diagnóstico de cardite reumática e de cardiopatia reumática. Recomendação FORTE, com certeza MUITO BAIXA para cardite reumática e MODERADA para cardiopatia reumática — a mesma recomendação carrega duas certezas distintas conforme o desfecho.",
+    "recommendation_class": "Forte",
+    "evidence_level": "MtBx",
+    "society": "OMS",
+    "year": 2024,
+    "guideline_title": "Diretriz da OMS para prevenção e diagnóstico da febre reumática e da cardiopatia reumática – 2024",
+    "reference": "WHO guideline on the prevention and diagnosis of rheumatic fever and rheumatic heart disease. Genebra: Organização Mundial da Saúde; 2024. ISBN 9789240100077. PMID: 39631006 · NCBI Bookshelf NBK609707 — texto integral livre, licença CC BY-NC-SA 3.0 IGO, capítulo de recomendações conferido em 31/07/2026. A OMS usa GRADE (força forte/condicional + certeza da evidência), e não a escala de classe I-III da ESC/AHA.",
+    "theme": "Febre reumática",
+    "tags": [
+      "ecocardiógrafo portátil",
+      "cardite reumática",
+      "diagnóstico",
+      "GRADE"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "oms-rastreamento-ecocardiografico-de-5-a-19-anos-em-area-de-alta-prevalencia",
+    "statement": "Em populações com prevalência moderada a alta de cardiopatia reumática, o rastreamento ecocardiográfico PODE ser implementado para detecção precoce em crianças e adolescentes de 5 a 19 ANOS. Recomendação FORTE, com certeza ALTA da evidência — a única recomendação de certeza ALTA de toda a diretriz da OMS sobre o tema.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Alta",
+    "society": "OMS",
+    "year": 2024,
+    "guideline_title": "Diretriz da OMS para prevenção e diagnóstico da febre reumática e da cardiopatia reumática – 2024",
+    "reference": "WHO guideline on the prevention and diagnosis of rheumatic fever and rheumatic heart disease. Genebra: Organização Mundial da Saúde; 2024. ISBN 9789240100077. PMID: 39631006 · NCBI Bookshelf NBK609707 — texto integral livre, licença CC BY-NC-SA 3.0 IGO, capítulo de recomendações conferido em 31/07/2026. A OMS usa GRADE (força forte/condicional + certeza da evidência), e não a escala de classe I-III da ESC/AHA.",
+    "theme": "Febre reumática",
+    "tags": [
+      "rastreamento",
+      "ecocardiograma",
+      "5 a 19 anos",
+      "alta prevalência"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "oms-rastreamento-ecocardiografico-em-gestante-no-pre-natal",
+    "statement": "Em populações ou contextos de risco moderado a alto de cardiopatia reumática, o rastreamento ecocardiográfico PODE ser considerado para melhorar a detecção precoce entre GESTANTES durante o pré-natal. Recomendação CONDICIONAL, com certeza MUITO BAIXA.",
+    "recommendation_class": "Condicional",
+    "evidence_level": "MtBx",
+    "society": "OMS",
+    "year": 2024,
+    "guideline_title": "Diretriz da OMS para prevenção e diagnóstico da febre reumática e da cardiopatia reumática – 2024",
+    "reference": "WHO guideline on the prevention and diagnosis of rheumatic fever and rheumatic heart disease. Genebra: Organização Mundial da Saúde; 2024. ISBN 9789240100077. PMID: 39631006 · NCBI Bookshelf NBK609707 — texto integral livre, licença CC BY-NC-SA 3.0 IGO, capítulo de recomendações conferido em 31/07/2026. A OMS usa GRADE (força forte/condicional + certeza da evidência), e não a escala de classe I-III da ESC/AHA.",
+    "theme": "Febre reumática",
+    "tags": [
+      "rastreamento",
+      "gestante",
+      "pré-natal",
+      "GRADE"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "oms-profilaxia-antibiotica-apos-diagnostico-de-febre-reumatica-ou-cardiopatia-reumatica",
+    "statement": "Crianças, adolescentes e adultos com diagnóstico de febre reumática ou cardiopatia reumática DEVEM receber profilaxia antibiótica para prevenir recorrência da febre reumática. Recomendação FORTE, com certeza MODERADA.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Mod",
+    "society": "OMS",
+    "year": 2024,
+    "guideline_title": "Diretriz da OMS para prevenção e diagnóstico da febre reumática e da cardiopatia reumática – 2024",
+    "reference": "WHO guideline on the prevention and diagnosis of rheumatic fever and rheumatic heart disease. Genebra: Organização Mundial da Saúde; 2024. ISBN 9789240100077. PMID: 39631006 · NCBI Bookshelf NBK609707 — texto integral livre, licença CC BY-NC-SA 3.0 IGO, capítulo de recomendações conferido em 31/07/2026. A OMS usa GRADE (força forte/condicional + certeza da evidência), e não a escala de classe I-III da ESC/AHA.",
+    "theme": "Febre reumática",
+    "tags": [
+      "profilaxia secundária",
+      "recorrência",
+      "febre reumática",
+      "GRADE"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "oms-profilaxia-apos-rastreamento-positivo-diferenca-entre-menores-e-maiores-de-20-anos",
+    "statement": "A profilaxia antibiótica DEVE ser prescrita a crianças e adolescentes que preencham os critérios mínimos de cardiopatia reumática no rastreamento ecocardiográfico, para prevenir progressão da doença (recomendação FORTE, certeza MODERADA). Para ADULTOS de 20 anos ou mais nas mesmas condições, a profilaxia PODE ser prescrita (recomendação CONDICIONAL, certeza MUITO BAIXA). A idade de 20 anos separa duas condutas de força bem diferente diante do mesmo achado ecocardiográfico.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Mod",
+    "society": "OMS",
+    "year": 2024,
+    "guideline_title": "Diretriz da OMS para prevenção e diagnóstico da febre reumática e da cardiopatia reumática – 2024",
+    "reference": "WHO guideline on the prevention and diagnosis of rheumatic fever and rheumatic heart disease. Genebra: Organização Mundial da Saúde; 2024. ISBN 9789240100077. PMID: 39631006 · NCBI Bookshelf NBK609707 — texto integral livre, licença CC BY-NC-SA 3.0 IGO, capítulo de recomendações conferido em 31/07/2026. A OMS usa GRADE (força forte/condicional + certeza da evidência), e não a escala de classe I-III da ESC/AHA.",
+    "theme": "Febre reumática",
+    "tags": [
+      "profilaxia secundária",
+      "rastreamento",
+      "idade",
+      "progressão"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "oms-benzilpenicilina-benzatina-intramuscular-como-primeira-linha-na-profilaxia-secundaria",
+    "statement": "A BENZILPENICILINA BENZATINA por via INTRAMUSCULAR é a abordagem de primeira linha preferida para prevenir recorrência de febre reumática em pacientes com febre reumática ou cardiopatia reumática prévia — recomendação FORTE, certeza MODERADA. O intervalo descrito pela diretriz é de uma aplicação A CADA 4 SEMANAS, apontada como superior à profilaxia oral. Se for necessária alternativa, a penicilina ORAL é aceitável (recomendação CONDICIONAL, certeza MODERADA). ATENÇÃO: a diretriz da OMS de 2024 NÃO especifica dose em miligramas ou unidades internacionais, e a diretriz da WHF de 2023 não traz dose alguma — para a posologia, VERIFICAÇÃO HUMANA NECESSÁRIA contra protocolo nacional.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Mod",
+    "society": "OMS",
+    "year": 2024,
+    "guideline_title": "Diretriz da OMS para prevenção e diagnóstico da febre reumática e da cardiopatia reumática – 2024",
+    "reference": "WHO guideline on the prevention and diagnosis of rheumatic fever and rheumatic heart disease. Genebra: Organização Mundial da Saúde; 2024. ISBN 9789240100077. PMID: 39631006 · NCBI Bookshelf NBK609707 — texto integral livre, licença CC BY-NC-SA 3.0 IGO, capítulo de recomendações conferido em 31/07/2026. A OMS usa GRADE (força forte/condicional + certeza da evidência), e não a escala de classe I-III da ESC/AHA.",
+    "theme": "Febre reumática",
+    "tags": [
+      "benzilpenicilina benzatina",
+      "profilaxia secundária",
+      "intramuscular",
+      "4 semanas"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "oms-teste-de-dose-oral-antes-da-penicilina-benzatina-em-alergia-leve",
+    "statement": "Uma dose-teste de penicilina ORAL PODE ser administrada antes da aplicação intramuscular de benzilpenicilina benzatina em pacientes com história de alergia LEVE à penicilina — isto é, sem história prévia de anafilaxia, angioedema, síndrome de Stevens-Johnson ou necrólise epidérmica tóxica. Recomendação CONDICIONAL, com certeza BAIXA para alergia imediata e anafilaxia, e MUITO BAIXA para alergia tardia.",
+    "recommendation_class": "Condicional",
+    "evidence_level": "Baixa",
+    "society": "OMS",
+    "year": 2024,
+    "guideline_title": "Diretriz da OMS para prevenção e diagnóstico da febre reumática e da cardiopatia reumática – 2024",
+    "reference": "WHO guideline on the prevention and diagnosis of rheumatic fever and rheumatic heart disease. Genebra: Organização Mundial da Saúde; 2024. ISBN 9789240100077. PMID: 39631006 · NCBI Bookshelf NBK609707 — texto integral livre, licença CC BY-NC-SA 3.0 IGO, capítulo de recomendações conferido em 31/07/2026. A OMS usa GRADE (força forte/condicional + certeza da evidência), e não a escala de classe I-III da ESC/AHA.",
+    "theme": "Febre reumática",
+    "tags": [
+      "alergia à penicilina",
+      "dose-teste",
+      "benzilpenicilina benzatina",
+      "anafilaxia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "oms-apoio-a-adesao-na-profilaxia-secundaria",
+    "statement": "Pacientes em uso de antibiótico para profilaxia secundária de febre reumática ou cardiopatia reumática DEVEM receber apoio para melhorar a adesão ao tratamento. Recomendação FORTE, com certeza BAIXA. A diretriz registra que adesão acima de 80% das injeções se associa a menor mortalidade — o que transforma a adesão em desfecho clínico, não em questão administrativa.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Baixa",
+    "society": "OMS",
+    "year": 2024,
+    "guideline_title": "Diretriz da OMS para prevenção e diagnóstico da febre reumática e da cardiopatia reumática – 2024",
+    "reference": "WHO guideline on the prevention and diagnosis of rheumatic fever and rheumatic heart disease. Genebra: Organização Mundial da Saúde; 2024. ISBN 9789240100077. PMID: 39631006 · NCBI Bookshelf NBK609707 — texto integral livre, licença CC BY-NC-SA 3.0 IGO, capítulo de recomendações conferido em 31/07/2026. A OMS usa GRADE (força forte/condicional + certeza da evidência), e não a escala de classe I-III da ESC/AHA.",
+    "theme": "Febre reumática",
+    "tags": [
+      "adesão",
+      "profilaxia secundária",
+      "mortalidade",
+      "GRADE"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "oms-anestesico-local-para-reduzir-dor-da-injecao-de-penicilina-benzatina",
+    "statement": "Um anestésico LOCAL pode ser acrescentado à solução injetável para reduzir a dor da aplicação em pacientes que recebem benzilpenicilina benzatina intramuscular na prevenção secundária da cardiopatia reumática. Recomendação CONDICIONAL, com certeza BAIXA. A dor da injeção é causa reconhecida de abandono, e é por isso que a diretriz a trata como item próprio.",
+    "recommendation_class": "Condicional",
+    "evidence_level": "Baixa",
+    "society": "OMS",
+    "year": 2024,
+    "guideline_title": "Diretriz da OMS para prevenção e diagnóstico da febre reumática e da cardiopatia reumática – 2024",
+    "reference": "WHO guideline on the prevention and diagnosis of rheumatic fever and rheumatic heart disease. Genebra: Organização Mundial da Saúde; 2024. ISBN 9789240100077. PMID: 39631006 · NCBI Bookshelf NBK609707 — texto integral livre, licença CC BY-NC-SA 3.0 IGO, capítulo de recomendações conferido em 31/07/2026. A OMS usa GRADE (força forte/condicional + certeza da evidência), e não a escala de classe I-III da ESC/AHA.",
+    "theme": "Febre reumática",
+    "tags": [
+      "anestésico local",
+      "benzilpenicilina benzatina",
+      "dor",
+      "adesão"
+>>>>>>> Stashed changes
     ],
     "review_status": "revisado",
     "published": false
