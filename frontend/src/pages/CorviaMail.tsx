@@ -176,7 +176,7 @@ function AbaAssinar() {
 
       {status?.incluido_no_plano ? (
         <p style={{ color: "var(--sucesso)" }}>
-          Incluído no seu plano <strong>Acesso Completo + CorvIA Mail</strong> — nenhuma cobrança adicional.
+          Incluído no seu plano <strong>Assinatura Completa</strong> — nenhuma cobrança adicional.
         </p>
       ) : (
         <p>

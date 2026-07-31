@@ -18,9 +18,9 @@ type Plano = {
 const PLANOS: Plano[] = [
   {
     id: "basico",
-    nome: "Acesso Completo à Plataforma",
-    preco: "R$ 20,00/mês",
-    descricao: "sem CorvIA Mail",
+    nome: "Assinatura Básica",
+    preco: "R$ 49,90/mês",
+    descricao: "Acesso ao Site — sem CorvIA Mail",
     itens: [
       "Biblioteca científica, fluxogramas e calculadoras completos",
       "Assistente de IA clínica",
@@ -29,11 +29,11 @@ const PLANOS: Plano[] = [
   },
   {
     id: "completo",
-    nome: "Acesso Completo + CorvIA Mail",
-    preco: "R$ 30,00/mês",
-    descricao: "com CorvIA Mail incluso",
+    nome: "Assinatura Completa",
+    preco: "R$ 59,90/mês",
+    descricao: "Acesso ao Site + CorvIA Mail",
     itens: [
-      "Tudo do plano Acesso Completo à Plataforma",
+      "Tudo da Assinatura Básica",
       "Caixa de e-mail própria @corvia.med.br com webmail integrado",
       "Sem cobrança adicional pelo CorvIA Mail",
     ],

@@ -9,8 +9,8 @@ TIPO_MEUCARDIO = "meucardio"
 TIPO_CURSO = "curso"
 TIPO_EMAIL = "email"  # CorvIA Mail (Tarefa 28) — add-on cobrado à parte, não substitui a assinatura principal
 
-PLANO_BASICO = "basico"     # R$20/mês, acesso completo à plataforma, sem CorvIA Mail
-PLANO_COMPLETO = "completo"  # R$30/mês, acesso completo à plataforma + CorvIA Mail incluso
+PLANO_BASICO = "basico"     # R$49,90/mês, acesso completo à plataforma, sem CorvIA Mail
+PLANO_COMPLETO = "completo"  # R$59,90/mês, acesso completo à plataforma + CorvIA Mail incluso
 
 
 class Subscription(Base):

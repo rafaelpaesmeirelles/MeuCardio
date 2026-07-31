@@ -17,7 +17,7 @@ PLANOS_VALIDOS = {PLANO_BASICO, PLANO_COMPLETO}
 # Preço do plano completo cobrado inline (price_data), no mesmo padrão já usado
 # no checkout do CorvIA Mail avulso — evita depender de um segundo Price
 # pré-criado no painel do Stripe só para este plano.
-PRECO_COMPLETO_CENTAVOS = 3000
+PRECO_COMPLETO_CENTAVOS = 5990
 
 # O prefixo precisa incluir /api: o Caddy usa `handle /api/*` (que, ao contrário
 # de `handle_path`, não remove o prefixo antes de repassar ao backend).
@@ -250,7 +250,7 @@ def criar_checkout(
                 "currency": "brl",
                 "unit_amount": PRECO_COMPLETO_CENTAVOS,
                 "recurring": {"interval": "month"},
-                "product_data": {"name": "Corvia — Acesso Completo à Plataforma + CorvIA Mail"},
+                "product_data": {"name": "Corvia — Assinatura Completa (Acesso ao Site + CorvIA Mail)"},
             },
             "quantity": 1,
         }]
@@ -330,7 +330,7 @@ def criar_checkout_email(db: Session = Depends(get_db), user: User = Depends(cur
     if principal and principal.status in ACESSO_LIBERADO and principal.plano == PLANO_COMPLETO:
         raise HTTPException(
             status_code=409,
-            detail="Seu plano atual (Acesso Completo + CorvIA Mail) já inclui o CorvIA Mail — não é preciso assinar separadamente.",
+            detail="Seu plano atual (Assinatura Completa) já inclui o CorvIA Mail — não é preciso assinar separadamente.",
         )
 
     sub = _obter_ou_criar_assinatura_email(db, user)

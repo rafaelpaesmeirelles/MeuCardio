@@ -11,6 +11,12 @@ const UFS = [
 type StatusAssinatura = {
   status: string;
   current_period_end: string | null;
+  plano: string | null;
+};
+
+const PRECO_POR_PLANO: Record<string, string> = {
+  basico: "R$ 49,90/mês — Assinatura Básica (Acesso ao Site).",
+  completo: "R$ 59,90/mês — Assinatura Completa (Acesso ao Site + CorvIA Mail).",
 };
 
 const ROTULOS: Record<string, string> = {
@@ -594,7 +600,11 @@ function Assinatura() {
           )}
 
 
-          <p><strong>R$ 20,00/mês</strong> — acesso completo à plataforma.</p>
+          <p>
+            <strong>
+              {status?.plano ? PRECO_POR_PLANO[status.plano] ?? PRECO_POR_PLANO.basico : PRECO_POR_PLANO.basico}
+            </strong>
+          </p>
 
           {erro && <p role="alert" style={{ color: "var(--alerta)", fontSize: "0.86rem" }}>{erro}</p>}
 
