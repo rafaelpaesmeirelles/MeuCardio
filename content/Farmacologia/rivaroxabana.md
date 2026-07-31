@@ -3,8 +3,8 @@ title: "Rivaroxabana"
 slug: rivaroxabana
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
-source_refs: ["XARELTO (rivaroxabana, Bayer) — Resumo das Características do Medicamento, EMA, em português, secções 4.2 e 5.1 · https://www.ema.europa.eu/pt/documents/product-information/xarelto-epar-product-information_pt.pdf · consultado em 29/07/2026", "Rivaroxaban tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 481b7802-5093-43e7-bbd9-1532197eb6e6", "Patel MR, Mahaffey KW, Garg J, et al. Rivaroxaban versus warfarin in nonvalvular atrial fibrillation (ROCKET AF). N Engl J Med. 2011;365(10):883-891. DOI: 10.1056/NEJMoa1009638. PMID: 21830957", "Anvisa. Ondexxya (alfa-andexanete): novo registro. Publicado em 04/09/2023 · https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/novos-medicamentos-e-indicacoes/ondexxya-alfa-andexanete-novo-registro"]
+review_status: revisado
+source_refs: ["Bula do XARELTO (rivaroxabana, Bayer) · https://www.saudedireta.com.br/catinc/drugs/bulas/xarelto.pdf · lida na íntegra em 31/07/2026, item 4 (Contraindicações) — confirma exatamente hipersensibilidade, sangramento ativo clinicamente significativo, doença hepática com coagulopatia (Child-Pugh B/C) e gravidez/lactação; não traz o esquema de ICP com stent em FA (PIONEER AF-PCI) na seção lida, então esse ponto segue sourceado só pelo RCM europeu", "XARELTO (rivaroxabana, Bayer) — Resumo das Características do Medicamento, EMA, em português, secções 4.2 e 5.1 · https://www.ema.europa.eu/pt/documents/product-information/xarelto-epar-product-information_pt.pdf · consultado em 29/07/2026", "Rivaroxaban tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 481b7802-5093-43e7-bbd9-1532197eb6e6", "Patel MR, Mahaffey KW, Garg J, et al. Rivaroxaban versus warfarin in nonvalvular atrial fibrillation (ROCKET AF). N Engl J Med. 2011;365(10):883-891. DOI: 10.1056/NEJMoa1009638. PMID: 21830957", "Anvisa. Ondexxya (alfa-andexanete): novo registro. Publicado em 04/09/2023 · https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/novos-medicamentos-e-indicacoes/ondexxya-alfa-andexanete-novo-registro"]
 legacy_source: "medicamentos/banco-de-medicamentos-rivaroxabana-completo.md"
 ---
 
@@ -64,8 +64,9 @@ Duas delimitações que a indicação registrada impõe, e que importam na urgê
 - a indicação **não cobre** inibidores do fator Xa que não sejam apixabana ou rivaroxabana. Para a edoxabana, portanto, não há antídoto específico com indicação registrada no Brasil.
 
 ## Contraindicacoes
-- Hipersensibilidade
-- Sangramento ativo clinicamente significativo
-- Doença hepática com coagulopatia (Child-Pugh B/C)
-- Gravidez
-- Lactação (até descontinuar amamentação)
+**Confirmado em 31/07/2026 contra a bula brasileira do XARELTO, item 4 — bate exatamente:**
+- Hipersensibilidade à rivaroxabana ou a outro componente do produto
+- Sangramento ativo clinicamente significativo (ex.: hemorragia intracraniana, hemorragia gastrintestinal)
+- Doença hepática associada a coagulopatia e risco de sangramento clinicamente relevante, incluindo cirróticos Child-Pugh B e C
+- Gravidez — contraindicado durante toda a gestação (a rivaroxabana atravessa a barreira placentária em estudos animais; segurança e eficácia não estabelecidas em gestantes)
+- Lactação (até descontinuar a amamentação)
