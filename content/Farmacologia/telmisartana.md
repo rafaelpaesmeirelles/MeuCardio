@@ -3,8 +3,8 @@ title: "Telmisartana"
 slug: telmisartana
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
-source_refs: ["Telmisartan tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 5743c58e-deab-ac93-e063-6294a90ac1eb", "Telmisartan — resumo das características do produto (EMA), consultado para a orientação europeia de ajuste renal", "ONTARGET Investigators. Telmisartan, ramipril, or both in patients at high risk for vascular events. N Engl J Med. 2008;358(15):1547-1559. DOI: 10.1056/NEJMoa0801317"]
+review_status: revisado
+source_refs: ["Bula do MICARDIS (telmisartana, Boehringer Ingelheim) · https://www.saudedireta.com.br/catinc/drugs/bulas/micardis.pdf · lida na íntegra em 31/07/2026, itens Contra-indicações, Precauções e Posologia — diferente de outros BRA já conferidos neste acervo, esta bula lista disfunção hepática/renal grave e obstrução biliar como contraindicação formal, não só precaução", "Telmisartan tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 5743c58e-deab-ac93-e063-6294a90ac1eb", "Telmisartan — resumo das características do produto (EMA), consultado para a orientação europeia de ajuste renal", "ONTARGET Investigators. Telmisartan, ramipril, or both in patients at high risk for vascular events. N Engl J Med. 2008;358(15):1547-1559. DOI: 10.1056/NEJMoa0801317"]
 legacy_source: "medicamentos/banco-de-medicamentos-telmisartana-completo.md"
 ---
 
@@ -26,9 +26,12 @@ Comprimidos de 20, 40 e 80 mg
 - **hipertensao habitual**: 40 mg 1x/dia; em alguns pacientes 20mg pode ser eficaz
 - **hipertensao maxima**: 80 mg/dia, ou combinar com hidroclorotiazida se meta não atingida
 - **prevencao cardiovascular**: 80 mg 1x/dia (dose usada em prevenção de eventos CV)
-- **insuficiencia renal grave**: Dose inicial mais baixa: 20 mg 1x/dia
-- **insuficiencia renal leve moderada**: Não exceder 40 mg/dia
-- **fonte**: EMA — Telmisartan Teva Pharma
+- **insuficiencia renal leve a moderada**: **corrigido em 31/07/2026** — a bula brasileira do MICARDIS não exige ajuste de dose nesta faixa (a versão anterior deste documento trocava esse teto com o da insuficiência hepática, abaixo); telmisartana não é removida por hemofiltração
+- **insuficiencia renal grave**: **contraindicação formal** na bula brasileira (ver Contraindicações) — diferente da orientação de "dose inicial mais baixa" da bula europeia (EMA), ver nota de divergência abaixo
+- **insuficiencia hepatica leve a moderada**: não exceder **40 mg/dia**
+- **idoso**: sem ajuste necessário
+- **crianças e adolescentes**: sem dados de segurança e eficácia
+- **fonte**: bula do MICARDIS (item Posologia)
 
 ## Evidencia pivotal ontarget
 Estudo ONTARGET comparou telmisartana 80mg/dia ao ramipril 10mg/dia em pacientes de alto risco cardiovascular, estabelecendo eficácia comparável com melhor tolerabilidade (menor tosse e angioedema) que IECA
@@ -36,7 +39,11 @@ Estudo ONTARGET comparou telmisartana 80mg/dia ao ramipril 10mg/dia em pacientes
 ## Ajuste hepatico
 A maior parte da eliminação é biliar — em obstrução biliar ou insuficiência hepática, a depuração é reduzida. Iniciar com dose baixa e titular lentamente nesses pacientes.
 
-**Nota sobre divergência entre bulas**: a bula européia (EMA, citada acima) recomenda dose inicial menor em insuficiência renal grave; já a bula norte-americana (FDA) declara que **não é necessário ajuste de dose por função renal reduzida**. As duas orientações coexistem em bulas vigentes — na dúvida, seguir a bula do produto realmente dispensado e individualizar pelo quadro clínico.
+**Nota sobre divergência entre bulas — atualizada em 31/07/2026**: são três leituras distintas
+para insuficiência renal grave, não duas. A bula europeia (EMA) recomenda dose inicial menor; a
+bula norte-americana (FDA) declara que não é necessário ajuste; **a bula brasileira do MICARDIS
+contraindica formalmente** o uso em disfunção renal grave. Prescrevendo no Brasil, a leitura
+vinculante é a da bula brasileira — contraindicação, não ajuste de dose.
 
 ## Efeitos adversos
 Mais comuns (≥1%): dor lombar, sinusite, diarreia. Em estudos de prevenção cardiovascular: claudicação intermitente, úlcera cutânea. Menos comuns, mas relevantes: hipercalemia (mais em insuficiência renal avançada, IC, diálise ou uso de poupador de potássio/suplemento de potássio), alteração de função hepática (mais descrita em pacientes japoneses), rabdomiólise (raro, efeito de classe dos BRA), angioedema (raro, com relato de desfecho fatal), tendinopatia/tendinite, hipoglicemia em diabético.
@@ -52,9 +59,22 @@ Potássio sérico periodicamente, sobretudo em quem tem fator de risco pra hiper
 - **Alisquireno**: contraindicado em diabético
 
 ## Contraindicacoes
-- Gravidez
-- Insuficiência hepática grave/colestase biliar
-- Hipersensibilidade
+**Corrigido em 31/07/2026** — a bula brasileira do MICARDIS lista, como contraindicação formal,
+uma lista mais ampla do que constava aqui:
+
+- Hipersensibilidade ao ingrediente ativo ou a excipientes
+- Gravidez **e lactação**
+- Obstrução biliar
+- Disfunção hepática **ou renal grave** — na bula brasileira do MICARDIS, diferente de outros
+  BRA já conferidos neste acervo, a disfunção renal grave também é contraindicação formal, não
+  só precaução
+- Intolerância hereditária à frutose (o comprimido contém sorbitol)
+
+**Precauções** (não contraindicação formal, mas relevantes): estenose de artéria renal bilateral
+ou de rim único (risco de hipotensão grave e insuficiência renal); IC congestiva grave;
+hiperaldosteronismo primário (uso não recomendado); estenose valvar aórtica/mitral e
+cardiomiopatia hipertrófica obstrutiva (precaução especial); menor eficácia anti-hipertensiva em
+população negra.
 
 ## Relacao com sacubitril-valsartana
 Não associar. O sacubitril-valsartana **já contém valsartana**, de modo que somar um BRA a ele é duplicar o bloqueio do receptor de angiotensina, sem ganho e com mais hipotensão, hipercalemia e disfunção renal. Ao migrar de um BRA para o sacubitril-valsartana, o BRA é substituído, não somado.
