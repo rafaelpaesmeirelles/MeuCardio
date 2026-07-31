@@ -3716,7 +3716,7 @@
   },
   {
     "slug": "tenecteplase",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Tenecteplase (TNK-tPA)",
     "drug_class": "Trombolítico/fibrinolítico — variante geneticamente modificada do ativador do plasminogênio tecidual (alteplase)",
     "mechanism": "Converte plasminogênio em plasmina de forma seletiva na superfície da fibrina — apresenta especificidade por fibrina cerca de 15 vezes maior que a alteplase, o que reduz a ativação sistêmica de plasminogênio e a degradação de fibrinogênio circulante, diminuindo teoricamente o risco de sangramento sistêmico comparado à molécula original",
@@ -3724,7 +3724,21 @@
       "IAMCSST dentro de 12 horas do início dos sintomas, quando ICP primária não está disponível em tempo hábil"
     ],
     "contraindications": [
-      "Sangramento interno ativo, hipertensão grave não controlada, história de AVC, história de aneurisma ou malformação arteriovenosa, história de neoplasia intracraniana, cirurgia intracraniana ou intraespinhal nos últimos 2 meses, trauma craniano ou espinhal nos últimos 2 meses, condições que aumentam risco de sangramento - **contraindicacao relativa**: gestação — requer avaliação cuidadosa de risco-benefício, não é contraindicação absoluta - **fonte**: StatPearls"
+      "Hipersensibilidade conhecida à tenecteplase, à gentamicina (resíduo do processo de fabricação) ou a qualquer componente da fórmula",
+      "Distúrbio hemorrágico significativo atual ou nos últimos 6 meses, diátese hemorrágica conhecida",
+      "Anticoagulação oral efetiva (ex.: varfarina; INR >1,3)",
+      "Lesão prévia do sistema nervoso central — neoplasia, aneurisma, cirurgia intracraniana ou espinhal",
+      "Hipertensão arterial grave não controlada",
+      "Cirurgia de grande porte, biópsia de órgão parenquimatoso ou trauma grave nos últimos 2 meses (inclui trauma associado ao próprio IAM), trauma recente de cabeça ou crânio",
+      "Ressuscitação cardiopulmonar traumática ou prolongada (>2 minutos) nas últimas 2 semanas",
+      "Hepatopatia grave — insuficiência hepática, cirrose, hipertensão portal (varizes esofagianas), hepatite ativa",
+      "Úlcera péptica ativa",
+      "Aneurisma arterial e malformação arteriovenosa conhecida",
+      "Neoplasia com risco aumentado de sangramento",
+      "Pericardite aguda e/ou endocardite infecciosa subaguda",
+      "Pancreatite aguda",
+      "AVC hemorrágico, ou AVC de origem desconhecida, a qualquer momento da vida",
+      "AVC isquêmico ou AIT nos últimos 6 meses"
     ],
     "dosing": {
       "dose por peso": "Dose única, calculada pelo peso, com **máximo de 10.000 U (50 mg)**: **abaixo de 60 kg** → 6.000 U (30 mg, 6 mL); **60 a menos de 70 kg** → 7.000 U (35 mg, 7 mL); **70 a menos de 80 kg** → 8.000 U (40 mg, 8 mL); **80 a menos de 90 kg** → 9.000 U (45 mg, 9 mL); **90 kg ou mais** → 10.000 U (50 mg, 10 mL).",
@@ -3739,10 +3753,14 @@
     },
     "references": [
       "Tenecteplase · StatPearls (NCBI Bookshelf) · https://www.ncbi.nlm.nih.gov/books/NBK592420/",
-      "TNKASE (tenecteplase, Genentech) — rótulo aprovado pelo FDA, via DailyMed, SPL setid e647640d-c395-4b4b-a0be-1162f9c21d84, seções atualizadas em 02/2025; itens 1.1 (indicações), 2.1 (posologia no AVC isquêmico) e 14 (estudos clínicos) · consultado em 29/07/2026"
+      "TNKASE (tenecteplase, Genentech) — rótulo aprovado pelo FDA, via DailyMed, SPL setid e647640d-c395-4b4b-a0be-1162f9c21d84, seções atualizadas em 02/2025; itens 1.1 (indicações), 2.1 (posologia no AVC isquêmico) e 14 (estudos clínicos) · consultado em 29/07/2026",
+      "Bula profissional do METALYSE (tenecteplase, Boehringer Ingelheim do Brasil) — via consultaremedios.com.br, item 4. CONTRAINDICAÇÕES conferido linha a linha, substitui a fonte anterior (StatPearls, não é bula)"
     ],
     "pregnancy": "**Não há experiência com o uso em gestantes.** No infarto agudo do miocárdio durante a gravidez, os benefícios do tratamento devem ser avaliados contra os riscos potenciais — a bula coloca a decisão como ponderação caso a caso, não como proibição. Fonte: bula do profissional do METALYSE (Boehringer Ingelheim), versão de 2009.",
-    "lactation": "**Dado ausente, sem recomendação.** A bula registra apenas que **não se sabe** se a tenecteplase é excretada no leite materno; não orienta suspender nem manter a amamentação. Na gestação, o mesmo documento atribui **categoria C** e pede que, no infarto do miocárdio durante a gravidez, os benefícios do tratamento sejam pesados contra os riscos potenciais. Fonte: bula profissional do METALYSE (tenecteplase, Boehringer Ingelheim), seção \"Gravidez e lactação\"."
+    "lactation": "**Dado ausente, sem recomendação.** A bula registra apenas que **não se sabe** se a tenecteplase é excretada no leite materno; não orienta suspender nem manter a amamentação. Na gestação, o mesmo documento atribui **categoria C** e pede que, no infarto do miocárdio durante a gravidez, os benefícios do tratamento sejam pesados contra os riscos potenciais. Fonte: bula profissional do METALYSE (tenecteplase, Boehringer Ingelheim), seção \"Gravidez e lactação\".",
+    "notes": {
+      "Gestacao — nao e contraindicacao formal do item 4": "A gravidez não consta do item 4. CONTRAINDICAÇÕES da bula brasileira do METALYSE — o campo `pregnancy` já reflete isso corretamente (ponderação risco-benefício, não proibição absoluta). Mantido aqui como reforço: a lista de contraindicações acima é exaustiva do item 4 real, e gravidez não está nela."
+    }
   },
   {
     "slug": "ticagrelor",
