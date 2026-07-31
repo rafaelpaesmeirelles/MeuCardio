@@ -1701,10 +1701,19 @@ monta a impressão.
 
 ### Trabalho novo
 
-0. **🐛 DEFEITO DE INTERFACE ENCONTRADO em 31/07/2026 — filtro da tela de Estudos
-   mostra nome técnico cru ao assinante.** Achado pela sessão da Biblioteca ao
-   cadastrar um estudo observacional. **Não corrigido de propósito** — a correção tem
-   um trade-off que é decisão do Rafael, explicado abaixo.
+0. **~~🐛 DEFEITO DE INTERFACE~~ — CORRIGIDO E NO AR em 31/07/2026.** O filtro da tela
+   de Estudos mostrava ao assinante o nome técnico cru `estudo_de_coorte (7)`. O
+   Rafael autorizou a correção ("acrescentar e prosseguir"); acrescentei
+   `estudo_de_coorte: "Estudo observacional"` ao mapa `RÓTULO_TIPO` de
+   `frontend/src/pages/Estudos.tsx` (commit `2f0f502`), `tsc --noEmit` passou, e o
+   **frontend foi rebuildado e verificado**: o bundle servido pelo Caddy
+   (`/site/assets/index-DnDCcLa7.js`) contém `estudo_de_coorte:"Estudo observacional"`.
+   Rótulo escolhido **"Estudo observacional", não "Coorte"**, porque o grupo reúne
+   coortes e transversais — chamar todos de "Coorte" trocaria rótulo feio por
+   classificação errada. Antes de rebuildar, conferi que a árvore de `frontend/`
+   estava limpa e que a sessão de Medicamentos já havia rebuildado o CorvIA Chat às
+   18:08, de modo que o rebuild das 18:22 não subiu trabalho de ninguém pela metade.
+   O diagnóstico original fica abaixo, como registro de método.
    - **O que o assinante vê:** na página de Estudos, o botão de filtro aparece como
      **`estudo_de_coorte (7)`** — com underscore e sem acento —, ao lado de "Ensaio
      clínico (80)" e "Revisão sistemática (1)", que aparecem certos.
