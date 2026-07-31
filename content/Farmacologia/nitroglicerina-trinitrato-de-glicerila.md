@@ -3,7 +3,7 @@ title: "Nitroglicerina (trinitrato de glicerila)"
 slug: nitroglicerina-trinitrato-de-glicerila
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Nitroglycerin sublingual tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 562d2e03-dfed-41ff-8e7f-ec4169141983"]
 legacy_source: "medicamentos/banco-de-medicamentos-nitroglicerina.md"
 ---

@@ -3,7 +3,7 @@ title: "Nitratos (nitroglicerina, dinitrato/mononitrato de isossorbida)"
 slug: nitratos-nitroglicerina-dinitratomononitrato-de-isossorbida
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Nitratos: Farmacologia Clínica e Aplicações · Arquivos Brasileiros de Cardiologia · 1986 · http://cardiol.br/portal-publicacoes/Pdfs/ABC/1986/v47n5/47050012.pdf"]
 legacy_source: "medicamentos/banco-de-medicamentos-nitratos-nitroglicerina-isossorbida.md"
 ---
