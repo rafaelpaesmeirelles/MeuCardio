@@ -1549,7 +1549,7 @@
   },
   {
     "slug": "eplerenona",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Eplerenona",
     "drug_class": "Antagonista seletivo do receptor mineralocorticoide (ARM de segunda geração)",
     "mechanism": "Antagonista seletivo do receptor mineralocorticoide, com maior seletividade para o receptor de aldosterona e menor afinidade por receptores de progesterona e andrógenos comparado à espironolactona, reduzindo significativamente incidência de ginecomastia/mastalgia",
@@ -1570,12 +1570,28 @@
       "Vantagem sobre espironolactona": "Menor incidência de efeitos antiandrogênicos (ginecomastia, mastalgia, disfunção erétil), tornando-a preferível em pacientes que não toleram espironolactona por estes efeitos"
     },
     "references": [
-      "Nota: módulo requer complementação com fonte primária de bula brasileira (ANVISA) para dose completa",
       "Inspra (eplerenone) — bula FDA/DailyMed",
-      "EPHESUS trial — dosagem usada no estudo pivotal"
+      "EPHESUS trial — dosagem usada no estudo pivotal",
+      "Bula do INSPRA (eplerenona, Viatris Farmacêutica do Brasil), CDS v9.0 — usada para contraindicações completas (item 4) e reações adversas (item 9)"
     ],
     "pregnancy": "**Dados humanos insuficientes; dado animal tranquilizador.** Os relatos de caso publicados **não bastam** para estabelecer risco de malformação maior, aborto ou desfecho materno-fetal adverso. Nos estudos em animais, **nenhum efeito adverso sobre o desenvolvimento** foi observado em ratas e coelhas tratadas durante a organogênese, em exposições **32 e 31 vezes** a humana na dose terapêutica de 100 mg/dia. Fonte: rótulo aprovado pelo FDA (DailyMed) para a eplerenona. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer.",
-    "lactation": "**Sem dado humano, com presunção declarada no rótulo.** Não há dado sobre presença da eplerenona no leite humano, efeito no lactente ou na produção de leite. A eplerenona **estava presente no leite de ratas lactantes**, e o rótulo enuncia a regra que usa para decidir: *quando um fármaco está presente no leite animal, é provável que esteja presente no leite humano*. Registro à parte, da secção seguinte: com base em dado animal, a eplerenona **pode comprometer a fertilidade masculina** — em ratos maduros a fertilidade caiu com exposição 17 vezes a dose humana de 100 mg/dia, e a reversibilidade não foi avaliada. Fonte: rótulo aprovado pelo FDA (DailyMed) para a eplerenona. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer."
+    "lactation": "**Sem dado humano, com presunção declarada no rótulo.** Não há dado sobre presença da eplerenona no leite humano, efeito no lactente ou na produção de leite. A eplerenona **estava presente no leite de ratas lactantes**, e o rótulo enuncia a regra que usa para decidir: *quando um fármaco está presente no leite animal, é provável que esteja presente no leite humano*. Registro à parte, da secção seguinte: com base em dado animal, a eplerenona **pode comprometer a fertilidade masculina** — em ratos maduros a fertilidade caiu com exposição 17 vezes a dose humana de 100 mg/dia, e a reversibilidade não foi avaliada. Fonte: rótulo aprovado pelo FDA (DailyMed) para a eplerenona. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer.",
+    "contraindications": [
+      "Hipersensibilidade à eplerenona ou a qualquer componente da fórmula",
+      "Hipercalemia clinicamente significativa, ou condições associadas a hipercalemia",
+      "Potássio sérico >5,0 mEq/L no início do tratamento",
+      "Insuficiência renal grave (ClCr <30 mL/min) — na IC pós-IAM (EPHESUS) e na IC classe II NYHA crônica (EMPHASIS-HF)",
+      "Insuficiência hepática grave (Child-Pugh C)",
+      "Uso concomitante com diurético poupador de potássio ou inibidor potente de CYP3A4 (ex.: cetoconazol, itraconazol, ritonavir)",
+      "Específico do tratamento de hipertensão: diabetes tipo 2 com microalbuminúria; creatinina sérica >2,0 mg/dL (homem) ou >1,8 mg/dL (mulher); uso concomitante de suplemento de potássio; insuficiência renal moderada a grave (ClCr <50 mL/min)",
+      "**fonte**: bula do INSPRA (eplerenona, Viatris/Pfizer), item 4 — completa a lacuna registrada nas referências anteriores, que pediam bula brasileira"
+    ],
+    "adverse_effects": [
+      "Hipertensão (estudos placebo-controlados, 25-400mg): comuns (≥1% e <10%) — sintomas gripais, hipercalemia, hipertrigliceridemia, hipercolesterolemia, tontura, tosse, dor abdominal, diarreia, aumento de GGT/ALT, albuminúria, fadiga",
+      "IC pós-IAM (EPHESUS) e IC classe II NYHA (EMPHASIS-HF): incidência geral de eventos adversos e taxa de descontinuação semelhantes ao placebo. Evento mais frequente: hipercalemia — 3,4% (EPHESUS) e 8,7% (EMPHASIS-HF)",
+      "Comuns na IC: hipercalemia. Incomuns: faringite, eosinofilia, hipotireoidismo, hipertrigliceridemia",
+      "**fonte**: bula do INSPRA (eplerenona, Viatris/Pfizer), item 9"
+    ]
   },
   {
     "slug": "espironolactona",
