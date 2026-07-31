@@ -4702,5 +4702,85 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "teste-ergometrico-na-valvopatia-leve-e-moderada",
+    "statement": "O teste ergométrico é recomendado na valvopatia LEVE e MODERADA para confirmar a ausência de sintomas, esclarecer sintomas, avaliar a capacidade funcional e prescrever exercício físico. É a única indicação Classe I entre as recomendações de ergometria em valvopatia desta diretriz — todas as demais são IIa, IIb ou III.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024 (Sociedade Brasileira de Cardiologia)",
+    "reference": "Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024 — texto integral em acesso aberto (PMC11656589), tabela de indicações do teste ergométrico em valvopatias e tabela de contraindicações absolutas, conferidas linha a linha em 31/07/2026",
+    "theme": "Valvopatias",
+    "tags": [
+      "teste ergométrico",
+      "valvopatia leve",
+      "valvopatia moderada",
+      "capacidade funcional",
+      "prescrição de exercício"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "teste-ergometrico-no-seguimento-da-estenose-aortica-grave-assintomatica",
+    "statement": "Na estenose aórtica grave ASSINTOMÁTICA, o teste ergométrico deve ser considerado no seguimento, pelo menos A CADA 6 MESES, para detecção precoce de sintomas, avaliação funcional e indicação de intervenção. A mesma diretriz também o considera (IIa, A) na estenose aórtica moderada e grave assintomática para avaliar marcadores de mau prognóstico, e (IIa, B) na estenose aórtica grave assintomática com fração de ejeção normal em planejamento de gestação.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024 (Sociedade Brasileira de Cardiologia)",
+    "reference": "Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024 — texto integral em acesso aberto (PMC11656589), tabela de indicações do teste ergométrico em valvopatias e tabela de contraindicações absolutas, conferidas linha a linha em 31/07/2026",
+    "theme": "Valvopatias",
+    "tags": [
+      "teste ergométrico",
+      "estenose aórtica grave",
+      "assintomático",
+      "seguimento semestral",
+      "indicação de intervenção"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "teste-ergometrico-contraindicado-na-estenose-aortica-ou-mitral-grave-sintomatica",
+    "statement": "O teste ergométrico é CONTRAINDICADO na estenose aórtica ou mitral grave SINTOMÁTICA — Classe III. Note o par com a recomendação anterior, da mesma tabela: na estenose aórtica grave ASSINTOMÁTICA o teste é indicado (IIa) e serve justamente para desmascarar sintomas; uma vez que os sintomas existem, ele deixa de acrescentar e passa a expor o paciente a risco. A estenose aórtica grave sintomática figura também entre as CONTRAINDICAÇÕES ABSOLUTAS do teste ergométrico e do teste cardiopulmonar nesta diretriz.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024 (Sociedade Brasileira de Cardiologia)",
+    "reference": "Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024 — texto integral em acesso aberto (PMC11656589), tabela de indicações do teste ergométrico em valvopatias e tabela de contraindicações absolutas, conferidas linha a linha em 31/07/2026",
+    "theme": "Valvopatias",
+    "tags": [
+      "teste ergométrico",
+      "contraindicação",
+      "estenose aórtica sintomática",
+      "estenose mitral",
+      "classe iii"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "teste-ergometrico-nao-serve-para-investigar-dac-em-valvopatia-grave",
+    "statement": "O teste ergométrico NÃO é recomendado para investigação de doença arterial coronariana em paciente com valvopatia GRAVE — Classe III, Nível B. A valvopatia grave altera a resposta hemodinâmica ao esforço e compromete a interpretação isquêmica do exame; a pesquisa de doença coronariana nesse paciente segue outro caminho, e a diretriz de síndrome coronariana crônica cadastrada nesta base indica a angiotomografia de coronárias em candidatos selecionados ao TAVI justamente por isso.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024 (Sociedade Brasileira de Cardiologia)",
+    "reference": "Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024 — texto integral em acesso aberto (PMC11656589), tabela de indicações do teste ergométrico em valvopatias e tabela de contraindicações absolutas, conferidas linha a linha em 31/07/2026",
+    "theme": "Valvopatias",
+    "tags": [
+      "teste ergométrico",
+      "valvopatia grave",
+      "investigação de dac",
+      "classe iii",
+      "limitação de método"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
