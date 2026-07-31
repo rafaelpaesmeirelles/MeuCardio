@@ -3246,7 +3246,7 @@
   },
   {
     "slug": "ramipril",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Ramipril",
     "drug_class": "Inibidor da enzima conversora de angiotensina (IECA) de longa duração",
     "mechanism": "Pró-fármaco hidrolisado no fígado em ramiprilato, metabólito ativo que inibe a ECA (cininase II); resulta em vasodilatação e redução da PA supina e ereta; início de ação 1-2h, pico 3-6h, duração 24h",
@@ -3267,7 +3267,7 @@
       "Membranas de diálise de poliacrilonitrila (risco de reação anafilactoide) — evitar ou trocar terapia; sais de potássio/diuréticos poupadores de K+/heparina (hipercalemia); lítio (intoxicação); AINEs (redução do efeito hipotensor); álcool (potencialização)",
       "**Contraindicado o uso concomitante**, e é preciso respeitar uma **janela de 36 horas** ao trocar de ou para o sacubitril-valsartana. O inibidor de neprilisina e o IECA somam risco de angioedema, e a janela existe para evitar a sobreposição dos dois efeitos. Isto não é detalhe teórico em Cardiologia: a migração de IECA para sacubitril-valsartana é justamente o caminho recomendado na insuficiência cardíaca com fração de ejeção reduzida, então essa transição acontece na prática rotineira. Também não se deve coadministrar alisquireno a paciente diabético. Fonte: rótulo do sacubitril-valsartana aprovado pelo FDA (DailyMed SPL setid 000dc81d-ab91-450c-8eae-8eb74e72296f)."
     ],
-    "pregnancy": "C (1º trimestre) e D (2º/3º trimestre) — contraindicado, notificar médico imediatamente se suspeita de gravidez",
+    "pregnancy": "**Categoria de risco C no primeiro trimestre e D no segundo e terceiro trimestres.** Gravidez não é item formal da lista de CONTRA-INDICAÇÕES da bula (diferente de estenose renal/valvar e hipotensão, que são); a orientação é não usar sem orientação médica e notificar o médico imediatamente em caso de suspeita de gravidez — mesmo padrão de outros IECA já revisados neste acervo (a conduta prática de suspender assim que diagnosticada é a mesma, mas a bula não a trata como proibição formal do item 4). Fonte: bula profissional do Ramipril Biosintética, item Gravidez e Lactação.",
     "adverse_effects": [
       "Tosse seca irritativa (mais comum em mulheres/não fumantes, pior à noite), hipotensão/tontura no início, hipercalemia, alteração/perda do paladar, angioedema (raro, risco de vida), disfunção renal, leucopenia/plaquetopenia (raras), impotência, tosse"
     ],
@@ -3282,7 +3282,7 @@
       "insuficiencia hepatica": "Dose máxima diária 2,5mg, apenas sob intensa supervisão médica (resposta pode estar aumentada ou diminuída)",
       "diureticos previos": "Descontinuar diurético 2-3 dias antes ou reduzir gradualmente; dose inicial usual nesses pacientes é 1,25mg",
       "insuficiencia renal grave clcr menor 20 ou dialise": "Não recomendado — segurança e eficácia não estabelecidas",
-      "pediatria": "Contraindicado na faixa etária de 0-18 anos — segurança/eficácia não estabelecidas",
+      "pediatria": "**Segurança e eficácia não estabelecidas em pacientes pediátricos — a bula não usa a palavra \"contraindicado\" para esse grupo**, ao contrário do registro anterior deste campo. É recomendação de não uso por falta de dado, mesmo padrão de outros IECA (lisinopril, losartana) já revisados neste acervo.",
       "administracao": "Comprimido inteiro, sem mastigar, com meio copo de água; antes, durante ou após refeições",
       "fonte": "Bula Profissional Ramipril Biosintética/Saúde Direta"
     },
@@ -3292,7 +3292,10 @@
     "references": [
       "Ramipril — Bula Profissional Completa · Biosintética/Saúde Direta · https://www.saudedireta.com.br/catinc/drugs/bulas/ramiprilbiosintetica.pdf"
     ],
-    "lactation": "**Não amamentar durante o tratamento** — a amamentação consta da lista de contraindicações da bula. O raciocínio está escrito: estudos em animais demonstraram que o ramipril **passa para o leite materno**, e a orientação é não amamentar para evitar que a criança receba mesmo pequenas quantidades. Fonte: bula do TRIATEC (ramipril, Sanofi), seções de contraindicações e \"Amamentação\"."
+    "lactation": "**Não amamentar durante o tratamento** — a amamentação consta da lista de contraindicações da bula. O raciocínio está escrito: estudos em animais demonstraram que o ramipril **passa para o leite materno**, e a orientação é não amamentar para evitar que a criança receba mesmo pequenas quantidades. Fonte: bula do TRIATEC (ramipril, Sanofi), seções de contraindicações e \"Amamentação\".",
+    "notes": {
+      "Confirmacao das contraindicacoes formais": "Conferido linha a linha contra o item CONTRA-INDICAÇÕES da bula profissional do Ramipril Biosintética — os 5 itens já registrados aqui (hipersensibilidade, edema angioneurótico prévio, estenose bilateral de artéria renal ou unilateral em rim único, redução hemodinamicamente relevante do influxo/obstrução de saída do VE como estenose mitral/aórtica, hipotensão/condição circulatória lábil) conferem exatamente com o texto da bula — diferente de vários outros IECA/BRA revisados nesta sessão, aqui estenose renal e valvar SÃO contraindicação formal mesmo, com razão explícita de bula (\"risco de vida decorrente da diminuição da pressão arterial e de insuficiência renal\")."
+    }
   },
   {
     "slug": "ranolazina",
