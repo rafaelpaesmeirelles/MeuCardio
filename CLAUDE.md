@@ -232,11 +232,20 @@ contra o `git log` do dia.
 > registro isto aqui porque a contagem antiga ainda aparece em vários pontos deste arquivo, e é
 > fácil confundir qual meta está em vigor.
 >
-> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **45 documentos novos, todos publicados**
-> `content/*.md` de **424 para 474**; `documents` **474 total = 474 publicados**. **Acervo total das
-> nove frentes: 1.038** — **faltam 962 para os 2.000**. (Os números das frentes JSON e parte dos
-> documentos incluem o que a sessão da Biblioteca entregou no mesmo dia; os 45 acima são só desta
+> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **47 documentos novos, todos publicados**
+> `content/*.md` de **424 para 476**; `documents` **476 total = 476 publicados**. **Acervo total das
+> nove frentes: 1.040** — **faltam 960 para os 2.000**. (Os números das frentes JSON e parte dos
+> documentos incluem o que a sessão da Biblioteca entregou no mesmo dia; os 47 acima são só desta
 > sessão.)
+>
+> **19º lote — 2 documentos em Prevenção**: polipílula em prevenção secundária pós-infarto (SECURE,
+> PMID 36018037) e passos por dia vs. mortalidade (PMID 35247352).
+>
+> ⚠️ **Limite de faixa respeitado neste lote, e vale anotar:** o mapeamento de lacunas apontou
+> **ISCHEMIA, FFR/iFR e acesso radial vs. femoral** como buracos reais — mas os três são do tema
+> **Doença coronariana, que é da sessão da Biblioteca**, e por isso **não foram escritos**. Ficam
+> aqui como sugestão para ela, já que são lacunas de peso num tema central. O mesmo vale para
+> **álcool e FA** (tema Saúde mental) e **AAS perioperatório/POISE-2** (tema Perioperatório).
 >
 > **17º e 18º lotes — 4 documentos**: iSGLT2 na doença renal crônica (DAPA-CKD 32970396 e
 > EMPA-KIDNEY 36331190), dieta mediterrânea (PREDIMED 29897866), alopurinol sem gota (ALL-HEART
