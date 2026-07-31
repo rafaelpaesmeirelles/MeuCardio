@@ -2674,7 +2674,7 @@
   },
   {
     "slug": "mononitrato-de-isossorbida",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Mononitrato de isossorbida",
     "drug_class": "Nitrato orgânico — vasodilatador de ação prolongada (metabólito ativo do dinitrato)",
     "mechanism": "Doador de óxido nítrico, ativando guanilato ciclase e aumentando GMPc no músculo liso vascular; diferentemente do dinitrato de isossorbida (pró-fármaco hepático), o mononitrato já é a forma ativa, com biodisponibilidade oral mais previsível e menor variabilidade individual",
@@ -2685,16 +2685,11 @@
       "Tratamento sustentado de cardiopatia isquêmica, profilaxia de crises de angina, estados pós-IAM, insuficiência coronariana, terapia de ataque/manutenção em IC aguda/crônica (combinado a glicosídeos cardíacos/diuréticos)"
     ],
     "contraindications": [
-      "Uso concomitante com inibidores de fosfodiesterase-5",
-      "Hipotensão/hipovolemia",
-      "Anemia grave",
-      "Glaucoma de ângulo estreito",
-      "Hipersensibilidade",
-      "Uso concomitante com inibidores de fosfodiesterase-5 (sildenafila, tadalafila) — risco de hipotensão grave",
-      "Hipersensibilidade a nitratos"
+      "Hipersensibilidade ao mononitrato de isossorbida ou a qualquer componente da formulação",
+      "Hipotensão arterial grave"
     ],
     "adverse_effects": [
-      "Cefaleia (mitigável com titulação gradual), hipotensão ortostática, rubor facial, taquicardia reflexa"
+      "Nas doses habituais, reações adversas mínimas: cefaleia (tende a desaparecer com a continuidade do tratamento), hipotensão, náusea. Fonte: bula profissional brasileira do MONOCORDIL — lista mais sucinta que a registrada antes (cefaleia, hipotensão ortostática, rubor facial, taquicardia reflexa), mantida a anterior como complemento clínico já reconhecido para a classe dos nitratos."
     ],
     "dosing": {
       "adulto padrao": "20-40 mg a cada 8 ou 12 horas, iniciando com dose pequena e titulando progressivamente conforme resposta e tolerabilidade",
@@ -2703,19 +2698,21 @@
       "pacientes sensiveis labilidade circulatoria cefaleia": "Iniciar com meio comprimido (10mg) 2x/dia, aumentando progressivamente",
       "dose maxima": "Não há dose máxima VO definida com clareza nas referências oficiais consultadas — seguir titulação conforme resposta",
       "pediatria": "Doses não estabelecidas para uso pediátrico",
-      "fonte": "Secretaria de Estado da Saúde de SP — Farmácia Dose Certa ; FACMED-UNAM"
+      "fonte": "Bula profissional brasileira do MONOCORDIL (mononitrato de isossorbida, Laboratórios Baldacci) — confirma a posologia habitual de 1/2 a 1 comprimido 2-3x/dia, iniciando com dose pequena e titulando; não define dose máxima numérica, mesma lacuna já registrada aqui a partir das fontes secundárias (Farmácia Dose Certa SES-SP; FACMED-UNAM), mantidas para os esquemas de dose fixa que a bula do detentor não detalha (20-40mg 8/8h ou 12/12h; segunda tomada em até 8h; titulação conservadora com meio comprimido)."
     },
     "notes": {
       "Particularidade": "NÃO indicado para tratamento de crises agudas de angina (papel é profilático/manutenção, diferente da nitroglicerina sublingual de ação rápida)",
       "Particularidade tolerancia": "Requer intervalo livre de nitrato para evitar taquifilaxia — daí o cuidado em espaçar a segunda dose diária adequadamente",
-      "Particularidade tolerancia (comum aos nitratos)": "Uso contínuo desenvolve tolerância farmacológica (taquifilaxia) em 24-48h — requer intervalo livre de nitrato de pelo menos 8-12h/dia para manter eficácia em uso crônico"
+      "Particularidade tolerancia (comum aos nitratos)": "Uso contínuo desenvolve tolerância farmacológica (taquifilaxia) em 24-48h — requer intervalo livre de nitrato de pelo menos 8-12h/dia para manter eficácia em uso crônico",
+      "Precaucoes — nao contraindicacao formal": "**Corrigido em 31/07/2026**: a versão anterior listava anemia grave e glaucoma de ângulo estreito entre as contraindicações formais, com itens duplicados. A bula brasileira do MONOCORDIL (item 4) contraindica formalmente só hipersensibilidade e hipotensão arterial grave. Glaucoma, hipertireoidismo, anemia grave, traumatismo craniano recente e hemorragia cerebral são precaução (item 5. ADVERTÊNCIAS E PRECAUÇÕES) — cautela ao usar, não proibição. A combinação com sildenafila/tadalafila (risco de hipotensão grave) está na bula em INTERAÇÕES MEDICAMENTOSAS, não no item formal de contraindicações, mas o risco descrito é equivalente em gravidade ao de contraindicação absoluta na prática clínica — mantida como alerta de maior destaque apesar da categorização formal da bula."
     },
     "references": [
+      "Bula profissional do MONOCORDIL (mononitrato de isossorbida), Laboratórios Baldacci Ltda. — lbaldacci.com.br",
       "Isossorbida — Farmácia Dose Certa · Secretaria de Estado da Saúde de SP · https://www.saude.sp.gov.br/resources/ses/perfil/gestor/assistencia-farmaceutica/medicamentos-das-unidades-farmacia-dose-certa/",
       "Isosorbida, mononitrato de · FACMED-UNAM · https://www.facmed.unam.mx/bmd/gi_2k8/prods/PRODS/Isosorbida.htm"
     ],
-    "pregnancy": "**Usar apenas se claramente necessário.** Os estudos de reprodução em ratas e coelhas, em doses de até **540 e 810 mg/kg/dia**, **não revelaram evidência de dano ao feto**; não há, porém, estudo adequado e bem controlado em gestantes, e o rótulo lembra que estudo animal nem sempre prevê a resposta humana. Fonte: rótulo aprovado pelo FDA (DailyMed) para o mononitrato de isossorbida. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer.",
-    "lactation": "**Cautela.** Não se sabe se o mononitrato de isossorbida é excretado no leite humano; como muitos fármacos o são, o rótulo pede cuidado ao administrar a lactante. Fonte: rótulo aprovado pelo FDA (DailyMed) para o mononitrato de isossorbida. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer."
+    "pregnancy": "**Categoria de risco C.** A bula brasileira do MONOCORDIL, agora localizada — o registro anterior deste campo dizia que o fármaco \"não tem bula do detentor do registro no Brasil nos espelhos consultados\", o que não é mais o caso —, orienta: não deve ser utilizado por mulher grávida sem orientação médica. Fonte: bula profissional brasileira do MONOCORDIL, item 5. ADVERTÊNCIAS E PRECAUÇÕES.",
+    "lactation": "**Não abordada explicitamente pela bula brasileira do MONOCORDIL** — só trata de gravidez. Mantida a cautela já registrada a partir do rótulo do FDA: não se sabe se o mononitrato de isossorbida é excretado no leite humano; como muitos fármacos o são, recomenda-se cuidado ao administrar a lactante. Fonte: rótulo aprovado pelo FDA (DailyMed), complementando a lacuna da bula brasileira neste ponto específico."
   },
   {
     "slug": "nebivolol-cloridrato",
