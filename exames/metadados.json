@@ -1711,5 +1711,53 @@
       "risco cardiovascular",
       "tomografia"
     ]
+  },
+  {
+    "slug": "teste-cardiopulmonar-de-exercicio-tcpe",
+    "name": "Teste cardiopulmonar de exercício (TCPE, ergoespirometria)",
+    "category": "metodo_grafico",
+    "theme": "Cardiomiopatias",
+    "what_it_measures": "Teste ergométrico acrescido da análise dos gases expirados, batimento a batimento. Mede diretamente o consumo de oxigênio (VO₂) e a produção de gás carbônico (VCO₂), e deles derivam as variáveis que o teste ergométrico convencional não fornece: consumo de oxigênio de pico, limiares ventilatórios (LV1, o limiar anaeróbio, e LV2, o ponto de compensação respiratória), equivalente ventilatório de CO₂ (VE/VCO₂), quociente respiratório, pulso de oxigênio (VO₂ dividido pela frequência cardíaca, em mL/kg/min/bpm, que reflete o volume sistólico) e pressões parciais expiratórias de O₂ e CO₂.",
+    "reference_range": "O consumo de oxigênio só deve ser chamado de VO₂ MÁXIMO quando o esforço preencher critérios de esforço máximo; fora disso, chama-se VO₂ de PICO — a distinção não é semântica, e um dos critérios de esforço máximo da diretriz é a escala de Borg ≥ 18. Classificação de Weber pelo VO₂ máximo/pico, com taxas de mortalidade crescentes: A acima de 20 mL/kg/min · B de 16 a 20 · C de 10 a 15 · D abaixo de 10 mL/kg/min. Relação VE/VCO₂ igual ou maior que 34 indica pior prognóstico na insuficiência cardíaca, e é preditor independente de mortalidade e hospitalização.",
+    "indications": "No adulto com cardiopatia congênita, a diretriz brasileira dá ao TCPE recomendação de Classe I, nível B, para avaliação de sintomas, decisões terapêuticas, estratificação de risco e liberação/prescrição de exercício — a mais forte de toda a tabela de indicações específicas do método. Na cardiomiopatia hipertrófica, na doença valvar estável e na estenose aórtica grave assintomática, a recomendação é Classe IIa. No pré-operatório de cirurgia não cardíaca, deve ser considerado em paciente com baixa capacidade funcional (menos de 4 METs) e/ou alto risco cardiovascular — Classe IIa, nível B. Na seleção de paciente com insuficiência cardíaca terminal para transplante cardíaco, é indicação clássica, Classe I, nível B.",
+    "interpretation": "Os cortes que efetivamente mudam conduta são poucos e vale memorizá-los. Para seleção de candidato a transplante cardíaco: VO₂ de pico abaixo de 12,0 mL/kg/min em paciente EM USO de betabloqueador, ou abaixo de 14,0 mL/kg/min no INTOLERANTE a betabloqueador — o corte muda conforme a terapia em uso, e aplicar o de 14 a quem está betabloqueado superestima a gravidade. Para prognóstico na insuficiência cardíaca, VE/VCO₂ igual ou acima de 34. O pulso de oxigênio tem relação direta com o volume sistólico e permite avaliar a função ventricular esquerda durante o esforço. Os limiares ventilatórios são o que permite prescrever exercício aeróbico com intensidade individualizada, particularmente na reabilitação.",
+    "limitations": "Exige equipamento de análise de gases e equipe treinada, o que restringe a disponibilidade; onde não houver TCPE, a própria diretriz autoriza o teste ergométrico convencional como substituto para prescrição de exercício, em nota de rodapé explícita. As contraindicações são as mesmas do teste ergométrico. O VO₂ de pico depende do esforço realizado: teste submáximo subestima a capacidade, e por isso a distinção entre VO₂ máximo e de pico precisa constar do laudo. A classificação de Weber e o corte de VE/VCO₂ foram validados sobretudo em insuficiência cardíaca — extrapolá-los para outras cardiopatias não está sustentado pela diretriz.",
+    "source_refs": [
+      "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581 — texto integral em acesso aberto (PMC11656589); seções do teste cardiopulmonar de exercício (limiares ventilatórios, equivalentes ventilatórios, pulso de oxigênio e realização em situações específicas) conferidas em 31/07/2026."
+    ],
+    "tags": [
+      "TCPE",
+      "ergoespirometria",
+      "VO2 de pico",
+      "VE/VCO2",
+      "classificação de Weber",
+      "transplante cardíaco"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ecocardiografo-portatil-no-rastreamento-de-cardiopatia-reumatica",
+    "name": "Ecocardiógrafo portátil (hand-held) no rastreamento de cardiopatia reumática",
+    "category": "imagem",
+    "theme": "Febre reumática",
+    "what_it_measures": "Ecocardiografia bidimensional com Doppler colorido feita em aparelho de bolso, para busca ativa de casos de cardiopatia reumática em população de área endêmica. Procura os três achados que definem rastreio positivo: regurgitação mitral com jato de comprimento mínimo, qualquer regurgitação aórtica, e movimento restrito dos folhetos mitrais com redução da abertura.",
+    "reference_range": "Critérios de RASTREAMENTO da World Heart Federation de 2023, para indivíduos de até 20 anos. Regurgitação mitral, exigindo os três: jato de 1,5 cm ou mais em quem pesa MENOS de 30 kg, ou de 2,0 cm ou mais em quem pesa 30 kg ou mais; observado em ao menos uma incidência; e em ao menos dois quadros consecutivos. Regurgitação aórtica: qualquer regurgitação, com as mesmas duas exigências de incidência e de quadros. Estenose mitral: movimento restrito dos folhetos com redução da abertura valvar. Rastreio positivo é a presença de qualquer um dos três. Se o peso não estiver disponível, a diretriz autoriza usar a idade de 10 anos como substituto do corte de 30 kg.",
+    "indications": "A World Heart Federation considera o ecocardiógrafo portátil alternativa razoável para o rastreamento (Classe IIa, nível B-NR). A OMS de 2024 vai além e faz recomendação FORTE, com certeza muito baixa para cardite reumática e moderada para cardiopatia reumática, para uso do aparelho portátil no diagnóstico onde a ecocardiografia convencional não estiver disponível. O rastreamento populacional é indicado em crianças e adultos jovens de 5 a 20 anos de área endêmica e em parentes de primeiro grau de casos-índice (Classe IIa), e pode ser considerado em gestantes e adultos de 21 a 39 anos (Classe IIb). O limiar declarado para rastrear uma população é prevalência acima de 2 casos por 1.000 pessoas, ou incidência de febre reumática aguda acima de 30 casos por 100.000 pessoas de 5 a 14 anos por ano.",
+    "interpretation": "Rastreio positivo NÃO é diagnóstico: obriga encaminhamento para ecocardiograma CONFIRMATÓRIO, que exige critérios mais estritos — dois planos, velocidade de 3,0 m/s, jato pansistólico ou pandiastólico, e gradiente médio de pico de 4,0 mmHg para estenose mitral. Acima de 20 anos os critérios de rastreamento NÃO devem ser usados: aplicam-se diretamente os confirmatórios, porque a evidência do rastreio nessa faixa é limitada. O desempenho do critério de jato mitral de 1,5 a 2,0 cm é de sensibilidade 73% a 81% e especificidade 75% a 100%.",
+    "limitations": "O rastreamento por não especialista só está previsto dentro de um programa estruturado de treinamento (Classe I) e com supervisão de especialista revisando as imagens ANTES de firmar o diagnóstico (Classe IIa) — critério abreviado sem essa revisão não está previsto na diretriz. E há uma limitação de interpretação que a própria fonte registra: metade dos casos limítrofes e cerca de 30% dos leves regridem espontaneamente, de modo que um rastreio positivo isolado não estabelece doença progressiva. O ensaio GOAL, que sustenta a profilaxia no caso rastreado, tem NNT de 13.",
+    "source_refs": [
+      "Rwebembera J, Marangou J, Mwita JC, Mocumbi AO, Mota C, et al. 2023 World Heart Federation guidelines for the echocardiographic diagnosis of rheumatic heart disease. Nat Rev Cardiol. 2024;21(4):250-263. DOI: 10.1038/s41569-023-00940-9. PMID: 37914787 — texto integral livre em nature.com; o artigo não está no PMC. Conferido em 31/07/2026 na versão já corrigida pela errata (Nat Rev Cardiol. 2024;21(5):347, PMID 38532021).",
+      "WHO guideline on the prevention and diagnosis of rheumatic fever and rheumatic heart disease. Genebra: Organização Mundial da Saúde; 2024. ISBN 9789240100077. PMID: 39631006 · NCBI Bookshelf NBK609707 — texto integral livre, licença CC BY-NC-SA 3.0 IGO, conferido em 31/07/2026."
+    ],
+    "tags": [
+      "ecocardiógrafo portátil",
+      "cardiopatia reumática",
+      "rastreamento",
+      "hand-held",
+      "World Heart Federation"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
