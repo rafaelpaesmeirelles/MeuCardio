@@ -4,7 +4,7 @@ slug: edoxabana
 theme: "Farmacologia"
 kind: farmacologia
 review_status: revisado
-source_refs: ["LIXIANA (edoxabano, Daiichi Sankyo) — Resumo das Características do Medicamento, EMA, em português, secção 4.2 · https://www.ema.europa.eu/pt/documents/product-information/lixiana-epar-product-information_pt.pdf · consultado em 29/07/2026", "Edoxaban tablets (SAVAYSA) — rótulo aprovado pelo FDA", "Giugliano RP, Ruff CT, Braunwald E, et al. Edoxaban versus warfarin in patients with atrial fibrillation (ENGAGE AF-TIMI 48). N Engl J Med. 2013;369(22):2093-2104. DOI: 10.1056/NEJMoa1310907", "Anvisa. Ondexxya (alfa-andexanete): novo registro. Publicado em 04/09/2023 · https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/novos-medicamentos-e-indicacoes/ondexxya-alfa-andexanete-novo-registro — indicação registrada nomeia apenas apixabana e rivaroxabana"]
+source_refs: ["Bula profissional do LIXIANA (edoxabano, Daiichi Sankyo Brasil), versão 2024 · https://daiichisankyo.com.br/wp-content/uploads/2024/06/Bula_Profissional_Lixiana.pdf · lida na íntegra em 31/07/2026, itens 4 (Contraindicações) e Uso em populações específicas", "LIXIANA (edoxabano, Daiichi Sankyo) — Resumo das Características do Medicamento, EMA, em português, secção 4.2 · https://www.ema.europa.eu/pt/documents/product-information/lixiana-epar-product-information_pt.pdf · consultado em 29/07/2026", "Edoxaban tablets (SAVAYSA) — rótulo aprovado pelo FDA", "Giugliano RP, Ruff CT, Braunwald E, et al. Edoxaban versus warfarin in patients with atrial fibrillation (ENGAGE AF-TIMI 48). N Engl J Med. 2013;369(22):2093-2104. DOI: 10.1056/NEJMoa1310907", "Anvisa. Ondexxya (alfa-andexanete): novo registro. Publicado em 04/09/2023 · https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/novos-medicamentos-e-indicacoes/ondexxya-alfa-andexanete-novo-registro — indicação registrada nomeia apenas apixabana e rivaroxabana"]
 legacy_source: "medicamentos/banco-de-medicamentos-edoxabana.md"
 ---
 
@@ -52,8 +52,23 @@ Sinais de sangramento. Função renal periodicamente (a dose depende diretamente
 - **Outros anticoagulantes/antiagregantes**: risco aditivo de sangramento
 
 ## Contraindicacoes
+**Corrigido em 31/07/2026** — a bula brasileira do LIXIANA abriu direto (antes só o RCM europeu
+estava acessível) e o item 4 formal traz só três contraindicações, mais restrito do que a lista
+que constava aqui:
+
 - Sangramento ativo clinicamente significativo
-- Doença hepática associada a coagulopatia
-- Gravidez e lactação
-- Válvulas cardíacas mecânicas
-- ClCr >95 mL/min em FA (redução de eficácia observada no ENGAGE AF-TIMI 48, contraindicação relativa)
+- Doença hepática associada a coagulopatia e a risco de hemorragia clinicamente relevante
+- Hipersensibilidade à edoxabana ou a componentes da fórmula
+
+**Gravidez e lactação deixam de ser contraindicação absoluta.** A bula brasileira usa
+**categoria de risco D**, com a mesma ressalva do RCM europeu — "não deve ser usada durante a
+gravidez a menos que o benefício justifique o risco potencial para a mãe e o feto" — ou seja,
+restrição condicionada a risco-benefício, não proibição incondicional. Na lactação, a bula não
+usa a palavra "contraindicado": não se sabe se a edoxabana é excretada no leite humano, e a
+conduta é decidir entre suspender a amamentação ou a terapia, considerando a importância do
+fármaco para a mãe.
+
+**Válvulas cardíacas mecânicas e ClCr >95 mL/min em FA não são item 4 formal** — continuam
+merecendo nota clínica (ver "Particularidade farmacológica" e a redução de eficácia observada no
+ENGAGE AF-TIMI 48 acima), mas como precaução/subgrupo de eficácia reduzida, não como
+contraindicação formal da bula.
