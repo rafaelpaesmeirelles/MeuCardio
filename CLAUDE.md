@@ -175,8 +175,15 @@ contra o `git log` do dia.
 > intactos** — só saiu do índice do RAG, e volta sozinho com `indexar_tudo(apenas_pendentes=True)`
 > quando for publicado.
 >
-> **`rag.py` é da sua faixa declarada**, então não corrigi o código. A correção é de uma linha no
-> `where` de `recuperar()`. Combine com o Rafael quem faz.
+> **ATUALIZAÇÃO, ainda em 31/07/2026 — o Rafael me autorizou e eu corrigi o `rag.py`** (commit
+> `4994a8f`, backend já rebuildado e verificado em produção). **Entrei na sua faixa com autorização
+> dele, não por conta própria** — e o aviso importante é que **eram três pontos de vazamento, não
+> um**: o `join` do lado semântico só existia quando havia filtro por tema; o `SQL_LEXICO` da metade
+> léxica não filtrava nada; e o `indexar_tudo()` indexava não publicado. Se você tinha começado a
+> mexer nisso em paralelo, **dê `git pull` antes** — e confira, porque foi alteração no seu arquivo.
+>
+> Seu documento de endocardite, que motivou o achado, **você já publicou** (AuditLog 471) e ele
+> está indexado normalmente. Nada seu ficou retido por causa disto.
 >
 > **Nenhuma pressa aqui autoriza pular verificação.** Prazo de 10 dias é apertado, mas errado e
 > rápido é pior que devagar e certo — um dado fabricado descoberto depois do lançamento custa mais
@@ -1525,9 +1532,36 @@ monta a impressão.
        formato atual. Mesmo obstáculo de esquema da busca, agora afetando o que
        o médico lê como referência.
 
-   - 🚨 **DEFEITO ABERTO, ENCONTRADO E REPRODUZIDO em 31/07/2026 — o RAG entrega
-     conteúdo NÃO PUBLICADO ao assistente de IA. Mitigado nos dados; o código
-     NÃO foi corrigido.**
+   - ✅ **CORRIGIDO, REBUILDADO E VERIFICADO EM PRODUÇÃO em 31/07/2026** (commit
+     `4994a8f`), com autorização do Rafael. **Eram TRÊS pontos de vazamento, e o
+     levantamento inicial só tinha achado um** — vale a lição: ao encontrar um
+     filtro faltando, procure todos os caminhos que chegam ao mesmo dado.
+     1. **`recuperar()`, lado semântico** — o `join` com `Document` só existia
+        **quando havia filtro por tema**; pergunta sem tema não tinha join nem
+        filtro. Agora o join é incondicional e carrega o `published`.
+     2. **`SQL_LEXICO`** — a metade **léxica** da busca híbrida fazia join com
+        `documents` mas não filtrava. Sem corrigir aqui, bastaria a pergunta
+        casar por texto para o documento retido voltar ao contexto, **mesmo com
+        o lado vetorial já filtrado**.
+     3. **`indexar_tudo()`** — indexava documento não publicado; agora só indexa
+        publicado. `indexar_documento()` ficou **sem** o filtro de propósito
+        (é a função de reindexar um documento específico cujo corpo mudou).
+     **Verificação em produção, com caso de teste controlado** (despubliquei um
+     documento meu, testei e republiquei): despublicado sem tema não é devolvido;
+     despublicado com tema não é devolvido; `indexar_tudo()` não o reindexa;
+     republicado volta a ser indexado e recuperado, **fluxo normal intacto**.
+     Índice depois: 450 documentos, 450 publicados, 2.952 trechos, **zero**
+     trechos de não publicados e **zero** publicados sem indexação.
+     **Armadilha de teste que me custou uma rodada:** o primeiro caso de teste
+     usou o documento não publicado da outra sessão — que a Biblioteca **publicou
+     nesse meio-tempo** (AuditLog 471). O teste passou a acusar "ainda vaza"
+     quando na verdade o documento havia virado legítimo. **Num repositório com
+     duas sessões ativas, o estado muda sob os seus pés: crie o próprio caso de
+     teste em vez de depender de um achado do ambiente.**
+
+     O histórico do defeito, para quem precisar auditar:
+     🚨 **ENCONTRADO E REPRODUZIDO em 31/07/2026 — o RAG entregava
+     conteúdo NÃO PUBLICADO ao assistente de IA.**
      **`recuperar()`, em `app/services/rag.py`, não filtra por `published`.** A
      consulta faz `join` de `document_chunks` com `documents` e filtra por tema,
      mas **em nenhum ponto exige `Document.published == True`** (verificado por
@@ -1555,15 +1589,13 @@ monta a impressão.
      retorná-lo, e os **2.925 trechos de documentos publicados ficaram intactos**.
      `AuditLog` gravado. **É reversível**: quando o documento for publicado,
      `indexar_tudo(apenas_pendentes=True)` o reindexa.
-     **O defeito continua aberto.** A mitigação não impede a reincidência —
-     basta indexar outro documento não publicado. **A correção é de uma linha**
-     (acrescentar `Document.published == True` ao `where` de `recuperar()`, e
-     provavelmente também restringir `indexar_tudo()`), mas **`rag.py` é da
-     faixa declarada da sessão da Biblioteca** e mexer em backend fora de tarefa
-     autorizada é vedado pela seção "O que nunca fazer sem perguntar". **Precisa
-     de decisão do Rafael sobre quem corrige.**
-     **Enquanto não for corrigido:** depois de qualquer `indexar_tudo()`, rodar
-     a checagem abaixo e limpar o que aparecer.
+     *(Situação naquele momento, mantida como histórico: a mitigação de dados
+     não impedia a reincidência — bastava indexar outro documento não publicado
+     —, e a correção de código dependia de decisão do Rafael, porque `rag.py` é
+     da faixa declarada da sessão da Biblioteca. **Ele autorizou no mesmo dia, e
+     a correção está aplicada, rebuildada e verificada — ver o bloco ✅ acima.**)*
+     **Consulta de checagem, que continua útil como auditoria periódica** — com
+     o código corrigido ela deve devolver sempre vazio:
      ```sql
      SELECT d.slug, count(c.id) FROM documents d
        JOIN document_chunks c ON c.document_id = d.id
