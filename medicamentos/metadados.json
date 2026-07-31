@@ -2463,7 +2463,7 @@
   },
   {
     "slug": "metformina-cloridrato",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Metformina (cloridrato)",
     "drug_class": "Biguanida — sensibilizador de insulina",
     "mechanism": "Reduz a produção hepática de glicose (gliconeogênese) e aumenta a sensibilidade periférica à insulina no músculo esquelético, com discreta redução de absorção intestinal de glicose; não estimula secreção pancreática de insulina, portanto não causa hipoglicemia em monoterapia",
@@ -2472,11 +2472,12 @@
     ],
     "renal_adjustment": "A avaliação é por **taxa de filtração glomerular estimada (eGFR)**, não por clearance de creatinina, e os cortes atuais do rótulo são: - **eGFR abaixo de 30 mL/min/1,73 m²**: contraindicado; suspender se a função cair abaixo disso - **eGFR entre 30 e 45**: não iniciar; se o paciente já usa, reavaliar risco e benefício de continuar - **eGFR acima de 45**: sem restrição por função renal - Avaliar a função renal **antes de iniciar** e periodicamente A versão anterior deste verbete contraindicava com ClCr abaixo de 60, critério de uma geração anterior de bula, e relegava a regra vigente a um parêntese. Isso nega o fármaco de primeira linha do diabetes tipo 2 a toda a faixa de eGFR entre 45 e 60, que deve recebê-lo.",
     "contraindications": [
-      "Insuficiência renal grave, definida como **eGFR abaixo de 30 mL/min/1,73 m²** — e não ClCr abaixo de 60, que era o critério de uma geração anterior de bula e constava aqui. Ver a seção de ajuste renal para as faixas intermediárias, que não são contraindicação e sim decisão de iniciar ou manter",
-      "Acidose metabólica aguda/crônica",
-      "Insuficiência hepática grave",
-      "Alcoolismo",
-      "Condições hipóxicas agudas (sepse, choque, IC descompensada aguda) — risco de acidose lática"
+      "Hipersensibilidade ao cloridrato de metformina ou a qualquer excipiente da formulação",
+      "Qualquer tipo de acidose metabólica (acidose lática, cetoacidose diabética) e pré-coma diabético",
+      "Distúrbio capaz de provocar hipóxia tecidual — insuficiência cardíaca congestiva instável, insuficiência respiratória, infarto do miocárdio recente ou choque",
+      "Insuficiência renal grave — ClCr <30 mL/min ou eGFR <30 mL/min/1,73m². Ver a seção de ajuste renal para as faixas intermediárias, que não são contraindicação e sim decisão de iniciar ou manter",
+      "Condição aguda com potencial de alterar a função renal — desidratação, infecção grave, choque",
+      "Insuficiência hepática, intoxicação alcoólica aguda, alcoolismo"
     ],
     "adverse_effects": [
       "Náusea, diarreia, desconforto abdominal, gosto metálico (mais comuns no início, mitigáveis com titulação lenta e ingestão de alimentos); deficiência de vitamina B12 (uso prolongado); acidose lática (rara, mas grave)"
@@ -2499,13 +2500,17 @@
       "Evidencia pivotal ukpds": "Estudo UKPDS demonstrou redução significativa de eventos macrovasculares (incluindo IAM) e mortalidade por todas as causas em pacientes com DM2 e sobrepeso tratados com metformina, estabelecendo-a como terapia de primeira linha com benefício cardiovascular adicional ao controle glicêmico"
     },
     "notes": {
-      "Suspensao perioperatoria contraste": "Interromper 48h antes de cirurgias eletivas de grande porte ou exames com contraste iodado (urografia, angiografia); reiniciar somente após 48h do procedimento e confirmação de função renal normal — risco de acidose lática"
+      "Suspensao perioperatoria contraste": "Interromper 48h antes de cirurgias eletivas de grande porte ou exames com contraste iodado (urografia, angiografia); reiniciar somente após 48h do procedimento e confirmação de função renal normal — risco de acidose lática",
+      "MELAS/DSHM — doença mitocondrial": "Uso de metformina não recomendado em paciente com suspeita ou diagnóstico de Síndrome Encefalomiopatia Mitocondrial com Acidose Láctica e Episódios Semelhantes a AVC (MELAS) ou Diabetes e Surdez Herdados Maternalmente (DSHM) — risco aumentado de acidose lática e piora neurológica. Suspender imediatamente se surgirem sinais dessas síndromes durante o tratamento.",
+      "Interação com NRTI": "Uso concomitante de inibidores nucleosídeos da transcriptase reversa (NRTI, terapia anti-HIV) aumenta o risco de acidose lática — mesmo mecanismo de outros fatores que comprometem a função renal aguda listados na bula (AINE/COX-2, IECA, BRA, diurético de alça).",
+      "Contraste iodado — protocolo mais preciso da bula": "A bula distingue por via de administração e função renal: suspender a metformina 48h antes do exame se ClCr <45 (ou TFGe <45) para contraste **intravenoso**, ou se ClCr <60 (ou TFGe <60) para contraste **intra-arterial** — a nota já registrada aqui (\"interromper 48h antes\") generalizava sem esses cortes específicos. Retomar só após 48h e função renal reavaliada e estável, em qualquer caso."
     },
     "references": [
-      "Metformin hydrochloride tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 4d3dbf6f-1c8a-4daa-8343-8cd8f64a65cd"
+      "Metformin hydrochloride tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 4d3dbf6f-1c8a-4daa-8343-8cd8f64a65cd",
+      "Bula profissional do GLIFAGE/GLIFAGE XR (cloridrato de metformina), Merck S.A. — via consultaremedios.com.br, formatada conforme RDC 60/2012"
     ],
-    "pregnancy": "**Contraindicada na gravidez pela bula brasileira** — \"gravidez e lactação\" aparece como o primeiro item da lista de contraindicações, e o texto ao paciente repete que o medicamento não deve ser usado durante a gravidez. Registro deliberado do recorte: esta é a **posição da bula registrada no Brasil**, não uma leitura de diretriz; a conduta obstétrica em diabetes gestacional segue fonte própria e não foi consultada aqui. Fonte: bula do GLIFAGE (cloridrato de metformina, Merck), seções de contraindicações.",
-    "lactation": "**Contraindicada na amamentação pela bula brasileira** — o texto é categórico: \"este medicamento é contra-indicado a pacientes que estão amamentando\", e a lactação também consta da lista formal de contraindicações. Mesma ressalva de recorte da seção de gravidez. Fonte: bula do GLIFAGE (cloridrato de metformina, Merck)."
+    "pregnancy": "**Categoria de risco B — não é contraindicação formal.** Achado que corrige o registro anterior deste campo (que afirmava contraindicação formal com base numa versão mais antiga ou mal lida da bula): a bula profissional atual do GLIFAGE, item \"Gravidez e lactação\", não lista gravidez nem lactação no item 4. CONTRAINDICAÇÕES formal — trata do tema em seção própria. Texto: diabetes descontrolado na gravidez (gestacional ou permanente) aumenta risco de anomalia congênita e mortalidade perinatal; dados limitados de uso de metformina em gestantes **não indicam** aumento de risco de anomalia congênita, e estudos em animais não mostram dano à gestação, ao desenvolvimento embrionário/fetal, ao parto ou ao desenvolvimento pós-natal. **Apesar disso, a bula recomenda que o pré-diabetes e o diabetes não sejam tratados com metformina ao planejar gravidez e durante a gestação** — a insulina é a preferida, para manter glicemia o mais próxima do normal e reduzir risco de malformação fetal associada a glicemia anormal. É recomendação de conduta preferencial, não proibição formal. Fonte: bula profissional brasileira do GLIFAGE (cloridrato de metformina, Merck), item \"Gravidez e lactação — Gravidez\".",
+    "lactation": "**Não é contraindicação formal — recomendação de evitar, por cautela com dado limitado.** Corrige o registro anterior deste campo, que afirmava contraindicação formal. A bula registra: metformina é excretada no leite humano em quantidades muito pequenas, nenhum efeito adverso foi observado em recém-nascidos amamentados nos dados disponíveis — mas, como os dados são limitados, **a amamentação não é recomendada** durante o tratamento. Decisão compartilhada entre interromper a lactação ou descontinuar a metformina, ponderando benefício do aleitamento, importância do fármaco para a mãe e risco potencial ao lactente. Fonte: bula profissional brasileira do GLIFAGE (cloridrato de metformina, Merck), item \"Gravidez e lactação — Lactação\"."
   },
   {
     "slug": "metildopa-alfa-metildopa",
