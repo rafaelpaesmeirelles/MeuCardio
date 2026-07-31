@@ -124,6 +124,54 @@ peça por peça, mesmo com o prazo apertado.
 > rápido é pior que devagar e certo — um dado fabricado descoberto depois do lançamento custa mais
 > caro que um dia de atraso na meta de volume.
 
+#### ✅ Sessão da BIBLIOTECA — fechamento de 31/07/2026: **17 itens novos**
+Contagem para a meta de 102, medida no disco (não estimada). Todos com
+`published: false`, aguardando o aval do Rafael.
+
+| Frente | Antes → depois | Itens |
+|---|---|---|
+| `estudos/` | 75 → **81** | REVIVED-BCIS2, BEST-CLI, TRILUMINATE Pivotal, HELIOS-B, POISE-3, BENEFIT |
+| `exames/` | 60 → **66** | FFR/iFR, mapeamento T1 e ECV, US de rastreio de AAA, capacidade funcional pré-operatória (DASI/CPET), sorologia para T. cruzi, ECG na doença de Chagas |
+| `evidencias/` | 155 → **160** | 5 recomendações da Diretriz de Síndrome Coronariana Crônica da SBC 2025 |
+
+**Total do acervo: 898 → 915.** Faltam 85 para a meta de 1.000.
+
+**Três achados desta rodada que valem para quem continuar:**
+
+1. **Os Arquivos Brasileiros de Cardiologia estão em acesso aberto no PMC, e as
+   diretrizes da SBC saem inteiras por ali** — texto integral, tabelas de
+   recomendação incluídas, sem o bloqueio de Cloudflare que barra o Oxford
+   Academic (`academic.oup.com` devolve 403 mesmo com User-Agent de browser, então
+   diretriz da ESC continua difícil). Busca que funciona:
+   `esearch db=pmc term="Arquivos brasileiros de cardiologia"[journal] AND diretriz[title]`,
+   e depois `efetch db=pmc id=<PMCID> retmode=xml`, extraindo `<table-wrap>`.
+   Já localizadas e disponíveis, além das duas usadas hoje: eco de estresse (2026),
+   avaliação perioperatória da SBC (2024), TC e RM cardiovascular (2024), dor
+   torácica na emergência (2025), miocardite (2022) e teste ergométrico (2024).
+   Isso importa além da conveniência: a base de evidências estava **muito**
+   dependente da ESC (111 registros contra 14 da SBC), e o leitor do produto é o
+   cardiologista brasileiro.
+2. **Doença de Chagas tinha ZERO itens nas quatro frentes JSON** — só 2 documentos
+   em `content/`. Foi aberta agora com 3 itens; ainda cabe muito mais (galeria de
+   ECG e de realce tardio, escore de Rassi como exame, evidências quando resolvida
+   a questão de esquema do item 3). Para uma plataforma brasileira, é das lacunas
+   mais caras que restam.
+3. **Decisão de esquema pendente, do Rafael — não é esquecimento.** A diretriz da
+   SBC de Chagas usa graduação GRADE (**Forte / Ponderada**), não Classe
+   I/IIa/IIb/III. O campo `recommendation_class` é tipado como `I|IIa|IIb|III`
+   (`models/evidence.py:21`) e o frontend renderiza literalmente "Classe {x}" com
+   cor por classe (`Evidencias.tsx`). Cadastrar "Forte" ali mostraria **"Classe
+   Forte"** na tela; converter "Forte" em "I" seria inventar equivalência que a
+   fonte não faz. Por isso as recomendações dessa diretriz **não** entraram como
+   evidências. Resolver exige escolher: campo de sistema de graduação ao lado da
+   classe, ou um segundo vocabulário aceito. Vale para qualquer diretriz brasileira
+   que use GRADE — não é caso isolado do Chagas.
+   *(Não confundir com a Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos
+   Implantáveis 2023, fonte do documento de CDI na cardiopatia chagásica em
+   `content/Dispositivos/`: essa usa Classe/Nível normalmente. São duas diretrizes
+   brasileiras distintas, ambas de 2023, sobre a mesma doença — conferido hoje, não
+   há defeito no documento existente.)*
+
 ### 📖 Histórico detalhado desta seção — movido para `CLAUDE_HISTORICO.md`, 31/07/2026
 Este arquivo passou do limite de contexto do Claude Code (150k caracteres, estava em 216,9k) por
 causa do acúmulo de blocos de log de sessão e de achados individuais por fármaco, registrados dia
