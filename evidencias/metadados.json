@@ -4486,5 +4486,64 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "gradiente-de-tempo-entre-icp-eletiva-e-cirurgia-nao-cardiaca",
+    "statement": "Após intervenção coronária percutânea ELETIVA, o intervalo recomendado até a cirurgia não cardíaca é de 6 meses ou mais (Classe I, Nível A). A diretriz brasileira gradua o que acontece quando não se pode esperar — e é isso que a torna útil na prática: entre 3 e 6 meses, Classe IIa (Nível B); entre 30 dias e 3 meses, Classe IIb (Nível B); e MENOS de 30 dias, Classe III (Nível B), ou seja, formalmente não recomendado. Complementa a recomendação da ESC 2022 já cadastrada nesta base, que fixa os 6 meses sem detalhar o gradiente.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Avaliação Cardiovascular Perioperatória da SBC – 2024",
+    "reference": "Gualandro DM, Fornari LS, Caramelli B, Abizaid AAC, et al. Diretriz de Avaliação Cardiovascular Perioperatória da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240590. DOI: 10.36660/abc.20240590. PMID: 39442131 — Tabela 'Recomendações para o intervalo entre a revascularização miocárdica e a operação não cardíaca em pacientes submetidos a intervenções coronárias percutâneas eletivas', conferida linha a linha no texto integral em acesso aberto (PMC12094288) em 31/07/2026.",
+    "theme": "Perioperatório",
+    "tags": [
+      "intervalo pós-icp",
+      "cirurgia não cardíaca",
+      "icp eletiva",
+      "adiamento cirúrgico",
+      "stent"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "gradiente-de-tempo-entre-icp-por-sindrome-coronariana-aguda-e-cirurgia-nao-cardiaca",
+    "statement": "Após intervenção coronária percutânea realizada por SÍNDROME CORONARIANA AGUDA, o intervalo recomendado até a cirurgia não cardíaca é de 12 meses ou mais (Classe I, Nível A) — o dobro do exigido após ICP eletiva. O gradiente da diretriz brasileira: entre 6 e 12 meses, Classe IIa (Nível B); entre 30 dias e 6 meses, Classe IIb (Nível B); e MENOS de 30 dias, Classe III (Nível B). Note que o limite de 30 dias é Classe III nos dois cenários — abaixo disso, a contraindicação formal independe de a intervenção ter sido eletiva ou por evento agudo.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Avaliação Cardiovascular Perioperatória da SBC – 2024",
+    "reference": "Gualandro DM, Fornari LS, Caramelli B, Abizaid AAC, et al. Diretriz de Avaliação Cardiovascular Perioperatória da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240590. DOI: 10.36660/abc.20240590. PMID: 39442131 — Tabela 'Recomendações para o intervalo entre a revascularização miocárdica e a operação não cardíaca em pacientes submetidos a intervenções coronárias percutâneas devido a síndromes coronarianas agudas', conferida linha a linha no texto integral em acesso aberto (PMC12094288) em 31/07/2026.",
+    "theme": "Perioperatório",
+    "tags": [
+      "intervalo pós-icp",
+      "síndrome coronariana aguda",
+      "cirurgia não cardíaca",
+      "adiamento cirúrgico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "teste-ergometrico-pre-operatorio-indicacao-restrita-e-duas-classe-iii",
+    "statement": "O teste ergométrico pré-operatório tem indicação RESTRITA: pode ser considerado (Classe IIb, Nível C) em paciente com baixa capacidade funcional, de risco intermediário ou alto, que fará cirurgia não cardíaca eletiva de risco intermediário ou alto, E somente quando o teste puder potencialmente alterar a conduta. A diretriz é explícita em duas situações de Classe III: paciente que será submetido a cirurgia de BAIXO risco, e paciente de baixo risco de complicações que fará cirurgia de risco baixo ou intermediário. Nenhuma das indicações do teste é Classe I ou IIa.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Avaliação Cardiovascular Perioperatória da SBC – 2024",
+    "reference": "Gualandro DM, Fornari LS, Caramelli B, Abizaid AAC, et al. Diretriz de Avaliação Cardiovascular Perioperatória da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240590. DOI: 10.36660/abc.20240590. PMID: 39442131 — Tabela 'Recomendações para a realização do teste ergométrico no pré-operatório', conferida linha a linha no texto integral em acesso aberto (PMC12094288) em 31/07/2026.",
+    "theme": "Perioperatório",
+    "tags": [
+      "teste ergométrico",
+      "pré-operatório",
+      "indicação restrita",
+      "classe iii",
+      "capacidade funcional"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
