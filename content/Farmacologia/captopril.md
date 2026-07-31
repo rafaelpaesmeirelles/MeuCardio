@@ -3,8 +3,8 @@ title: "Captopril"
 slug: captopril
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
-source_refs: ["RCM Captopril · Infarmed · 2016 · https://www.infarmed.pt/documents/15786/1577857/Captopril_RCM_jul2016.doc", "Resumo sobre captopril: indicações, farmacologia e mais · Estratégia MED · 2023 · https://med.estrategia.com/portal/conteudos-gratis/farmacos/resumo-sobre-captopril-indicacoes-farmacologia-e-mais/"]
+review_status: revisado
+source_refs: ["RCM Captopril · Infarmed · 2016 · https://www.infarmed.pt/documents/15786/1577857/Captopril_RCM_jul2016.doc", "Pfeffer MA et al. Effect of captopril on mortality and morbidity in patients with left ventricular dysfunction after myocardial infarction (SAVE). N Engl J Med. 1992;327(10):669-677.", "Bulário eletrônico de captopril (fabricantes genéricos registrados na ANVISA — dose de IC/pós-IAM 6,25-12,5mg 2-3x/dia, máximo 150mg/dia, confirmada em 31/07/2026 contra bulário consolidado)"]
 legacy_source: "medicamentos/banco-de-medicamentos-captopril-completo.md"
 ---
 

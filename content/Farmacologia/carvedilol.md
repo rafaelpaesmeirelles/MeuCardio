@@ -3,7 +3,7 @@ title: "Carvedilol"
 slug: carvedilol
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Carvedilol tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 574c419f-3b9e-2171-e063-6394a90a0e90", "Packer M, Coats AJS, Fowler MB, et al. Effect of carvedilol on survival in severe chronic heart failure (COPERNICUS). N Engl J Med. 2001;344(22):1651-1658. DOI: 10.1056/NEJM200105313442201. PMID: 11386263"]
 legacy_source: "medicamentos/banco-de-medicamentos-carvedilol.md"
 ---

@@ -3,7 +3,7 @@ title: "Candesartana (cilexetila)"
 slug: candesartana-cilexetila
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["BLOPRESS — Bula Profissional · Abbott · https://dam.abbott.com/pt-br/documents/pdfs/nossas-bulas/B/BU_11_BLOPRESS_bula_profissional_FINAL.pdf", "Candesartán: evidencia y práctica clínica · CardioTeca · 2026 · https://www.cardioteca.com/tratamientos/8238-candesartan-practica-clinica-guia-especialista.html", "Atacand (candesartan cilexetil) — bula FDA", "Candesartan cilexetil: a new, long-acting, effective angiotensin II type 1 receptor blocker — revisão farmacocinética"]
 legacy_source: "medicamentos/banco-de-medicamentos-candesartana-parcial.md"
 ---
