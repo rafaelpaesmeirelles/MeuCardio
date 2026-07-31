@@ -64,6 +64,22 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### 📌 Para a sessão de Medicamentos — `content/Farmacologia/enoxaparina-sodica.md`: a seção "Contraindicações" não reflete a própria análise bula-vs-protocolo do documento, 31/07/2026
+> Achado pequeno, sem risco de segurança, mas vale a correção por consistência interna. O
+> documento tem uma seção exemplar, "O que a bula registrada diz, e onde ela diverge do
+> protocolo" (linhas 52-78), que já identifica que os cortes de função renal do protocolo
+> HCRP (ClCr 10-30: 1x/dia; abaixo de 10: evitar) **não estão na bula do CLEXANE** — a bula só
+> ajusta com ClCr <30, sem esses dois cortes específicos.
+>
+> Mas a seção "Contraindicações", logo acima (linha 50), ainda lista **"Insuficiência renal
+> grave (ClCr<10-30mL/min, preferir HNF)"** como contraindicação formal — o mesmo dado que a
+> seção seguinte do próprio documento já desmente como não constando da bula. E a linha 48 tem
+> "AVC isquêmico (fase aguda) ou hemorrágico": conferi a bula do CLEXANE agora (item 3, "Quando
+> não devo usar") e ela contraindica só o **AVC hemorrágico recente** — o isquêmico agudo não
+> está nessa lista, é decisão de risco-benefício. Corrigi os dois no JSON (commit `31cec20`,
+> trazendo também a nuance completa bula-vs-protocolo que a prosa já tinha para o campo
+> `dosing`). Não editei `content/Farmacologia/enoxaparina-sodica.md` — fora da minha faixa.
+
 > ### ⚠️ Para a sessão de Medicamentos — `content/Farmacologia/enalapril-maleato.md` sem a contraindicação de sacubitril/neprilisina, 31/07/2026
 > Ao revisar `medicamentos/metadados.json` (slug `enalapril-maleato`, commit `481a428`), baixei
 > a bula do RENITEC (Organon/MSD) e a prosa está sourceada só em FDA/StatPearls, sem a
