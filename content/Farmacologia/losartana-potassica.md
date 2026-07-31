@@ -3,8 +3,8 @@ title: "Losartana potássica"
 slug: losartana-potassica
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
-source_refs: ["Dahlöf B et al. Cardiovascular morbidity and mortality in the Losartan Intervention For Endpoint reduction in hypertension study (LIFE). The Lancet. 2002;359:995-1003. DOI: 10.1016/S0140-6736(02)08089-3", "Brenner BM et al. Effects of Losartan on Renal and Cardiovascular Outcomes in Patients with Type 2 Diabetes and Nephropathy (RENAAL). N Engl J Med. 2001;345:861-869. DOI: 10.1056/NEJMoa011161", "Bula profissional de losartana potássica — Agência Nacional de Vigilância Sanitária (ANVISA)"]
+review_status: revisado
+source_refs: ["Dahlöf B et al. Cardiovascular morbidity and mortality in the Losartan Intervention For Endpoint reduction in hypertension study (LIFE). The Lancet. 2002;359:995-1003. DOI: 10.1016/S0140-6736(02)08089-3", "Brenner BM et al. Effects of Losartan on Renal and Cardiovascular Outcomes in Patients with Type 2 Diabetes and Nephropathy (RENAAL). N Engl J Med. 2001;345:861-869. DOI: 10.1056/NEJMoa011161", "Bula do COZAAR (losartana potássica, Merck Sharp & Dohme) · https://www.saudedireta.com.br/catinc/drugs/bulas/cozaar.pdf · lida na íntegra em 31/07/2026, itens Contra-indicações, Advertências e Posologia"]
 legacy_source: "Fusão de dois documentos que colidiam no mesmo slug: medicamentos/banco-de-medicamentos-losartana-potassica.md (theme Farmacologia) e protocolos/modulo-atualizado-losartana-dose-completa-fecha-lacuna-anterior.md (theme Hipertensão). O segundo era descartado silenciosamente pelo importador a cada execução, então apresentações, farmacocinética, dose pediátrica e a contraindicação de estenose bilateral de artéria renal nunca chegaram a ficar disponíveis."
 ---
 
@@ -44,11 +44,34 @@ Estudo LIFE, com 9.193 pacientes hipertensos com hipertrofia ventricular esquerd
 Estudo RENAAL, com 1.513 pacientes com diabetes tipo 2 e nefropatia: a losartana reduziu o desfecho renal composto em 16,1% em relação ao placebo, com redução de 28,6% no risco de doença renal terminal.
 
 ## Contraindicacoes
-- Gravidez, em qualquer trimestre. No segundo e terceiro trimestres, o bloqueio do sistema renina-angiotensina reduz a perfusão renal fetal e associa-se a oligoidrâmnio, insuficiência renal fetal, hipoplasia pulmonar, deformidades de crânio e esqueleto e morte fetal; no primeiro trimestre há risco aumentado de malformação congênita. Suspender imediatamente ao confirmar a gravidez, e discutir a substituição em aconselhamento pré-concepcional
-- Estenose bilateral de artéria renal
-- Insuficiência hepática grave
-- Uso concomitante com alisquireno em pacientes diabéticos ou com taxa de filtração glomerular abaixo de 60 mL/min/1,73 m²
-- Hipersensibilidade ao componente
+**Corrigido em 31/07/2026** — a bula brasileira do COZAAR (item Contra-Indicações) lista, como
+contraindicação formal, só a hipersensibilidade a qualquer componente do produto. Os demais
+itens abaixo, que já constavam aqui, são reais e clinicamente relevantes, mas a bula os trata
+como **Advertências**, não como proibição formal:
+
+- Hipersensibilidade a qualquer componente do produto — único item do rótulo formal
+
+**Gravidez, em qualquer trimestre** — Advertência na bula brasileira ("pare de tomar COZAAR se
+estiver grávida ou engravidar durante o tratamento"), mas a conduta é a mesma de uma
+contraindicação: no segundo e terceiro trimestres, o bloqueio do sistema renina-angiotensina
+reduz a perfusão renal fetal e associa-se a oligoidrâmnio, insuficiência renal fetal, hipoplasia
+pulmonar, deformidades de crânio e esqueleto e morte fetal; no primeiro trimestre há risco
+aumentado de malformação congênita. Suspender imediatamente ao confirmar a gravidez, e discutir
+a substituição em aconselhamento pré-concepcional.
+
+**Estenose bilateral de artéria renal (ou de rim único)** — Advertência: outros fármacos que
+afetam o sistema renina-angiotensina podem elevar ureia e creatinina séricas nesses pacientes;
+efeito semelhante já foi relatado com losartana, reversível com a descontinuação.
+
+**Insuficiência hepática** — a bula não contraindica formalmente, mas recomenda considerar dose
+inicial mais baixa em histórico de disfunção hepática, com base em concentrações plasmáticas
+significativamente maiores observadas em pacientes com cirrose.
+
+**Uso concomitante com alisquireno em pacientes diabéticos ou com TFG <60 mL/min/1,73 m²** —
+regra de classe dos IECA/BRA (não consta desta edição específica da bula do COZAAR, mas está
+presente nas bulas mais recentes de outros BRA já conferidas neste acervo — candesartana,
+olmesartana) — mantida por prudência, já que o risco de hipercalemia/lesão renal com bloqueio
+duplo do SRA é bem estabelecido para a classe.
 
 ## Efeitos adversos
 Tontura (o mais frequente), hipercalemia, hipotensão sintomática — sobretudo em depleção de volume —, angioedema (raro) e discreta redução de hemoglobina e hematócrito.
