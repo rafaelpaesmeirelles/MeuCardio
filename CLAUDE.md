@@ -1687,6 +1687,53 @@ uma frente livre em vez de negociar no meio do commit.
 >    contagem real. Ou houve fusão de duplicatas, ou algo saiu. TEP e TVP não
 >    podem ficar com três documentos — conferir antes de escrever por cima.
 
+> ## 🗂️ DIVISÃO INTEGRAL DAS FUNÇÕES CIENTÍFICAS — pedido do Rafael em 01/08/2026
+> **Texto dele:** *"divida todas as funções do site que possuem conteúdo científico entre você e a
+> outra sessão e retome seu trabalho com seus objetivos imediatamente... peça que ela também volte
+> a trabalhar a todo vapor sem interrupção."*
+>
+> Esta tabela **substitui** as divisões parciais anteriores e cobre **todas as onze frentes de
+> conteúdo científico do produto**, sem sobra. Ninguém precisa mais perguntar de quem é uma frente.
+>
+> | Frente | Itens hoje | Dono |
+> |---|---:|---|
+> | `content/` — **10 temas**: Doença coronariana, Cardiomiopatias, Valvopatias, Pericárdio, Endocardite, Aorta e DAP, Cardiopatias congênitas, Febre reumática, Síncope, Perioperatório | — | **BIBLIOTECA** |
+> | `content/` — **17 temas**: Farmacologia, Gravidez, Terapia intensiva, Tromboembolismo, Fibrilação atrial, Arritmias, Dispositivos, Prevenção e lipídios, Diabetes e cardiologia, Insuficiência cardíaca, Hipertensão, Hipertensão pulmonar, Calculadoras, Cardio-oncologia, Comunicação clínica, Geral, Saúde mental e cardiologia | — | **MEDICAMENTOS** |
+> | `evidencias/` | 454 | **BIBLIOTECA** |
+> | `estudos/` | 96 | **BIBLIOTECA** |
+> | `galeria/` | 69 | **BIBLIOTECA** |
+> | `exames/` | 73 | **BIBLIOTECA** |
+> | `casos-clinicos/` | 6 | **BIBLIOTECA** |
+> | `trilhas/` | 18 | **BIBLIOTECA** |
+> | `medicamentos/metadados.json` e `interacoes.json` | 89 | **MEDICAMENTOS** |
+> | `emergencia/` | 10 | **MEDICAMENTOS** |
+> | `checklists/` | 4 | **MEDICAMENTOS** |
+> | `material-paciente/` | 5 | **MEDICAMENTOS** |
+>
+> **Critério da divisão, para que ela se sustente sozinha:** a Biblioteca fica com o que é
+> **diagnóstico, imagem e evidência** — as quatro frentes JSON de referência, mais casos clínicos e
+> trilhas, que são montados a partir do que já existe na biblioteca. Medicamentos fica com o que é
+> **fármaco, dose e protocolo à beira do leito** — a base de medicamentos, os protocolos de
+> emergência, os checklists de alta e o material do paciente, que dependem de posologia e de
+> linguagem de orientação, exatamente o que aquela sessão já vinha fazendo.
+>
+> **Fluxogramas e calculadoras não são frente separada:** vivem dentro de `content/` e seguem o dono
+> do tema. Fluxograma de valvopatia é da Biblioteca; de fibrilação atrial, de Medicamentos.
+>
+> **Sobre a sessão de Monitoramento:** ela havia assumido `emergencia/`, `trilhas/`,
+> `casos-clinicos/`, `checklists/` e `material-paciente/` em 01/08 por estarem sem dono. O Rafael
+> agora pediu divisão entre **duas** sessões, e essas cinco frentes passam a ter dono fixo acima.
+> **Se a sessão de Monitoramento estiver com trabalho em curso numa delas, ela termina o item, faz o
+> commit e declara aqui** — ninguém descarta trabalho já feito. Depois disso, a frente segue com o
+> dono da tabela.
+>
+> **Regime de trabalho, também pedido do Rafael no mesmo texto: as duas sessões produzem a todo
+> vapor, sem interrupção e sem parar para pedir autorização**, dentro das normas deste arquivo — a
+> autorização contínua de publicação concedida em 31/07/2026 vale para as duas e segue em vigor. O
+> que continua exigindo o Rafael está listado na regra 5: despublicar ou apagar o que está no ar,
+> ação destrutiva em banco, alterar backend fora de tarefa autorizada, rebuild não pedido, e mudar
+> uma regra deste arquivo em vez de segui-la.
+
 | Caminho | Sessão | Estado |
 |---|---|---|
 | `medicamentos/metadados.json` e `medicamentos/interacoes.json` | sessão de **Medicamentos** | **ocupado — não tocar** |
