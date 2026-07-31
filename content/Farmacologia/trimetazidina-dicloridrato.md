@@ -3,8 +3,8 @@ title: "Trimetazidina (dicloridrato)"
 slug: trimetazidina-dicloridrato
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
-source_refs: ["RCM Trimetazidina 20mg · Infarmed · https://www.infarmed.pt/documents/15786/1577857/RCM_Trimetazidina20mgcomprevestidos/eb5df257-ef62-4618-8ab7-c6cfafc96bde", "Trimetazidine Article 31 Annex III · EMA · https://www.ema.europa.eu/en/documents/referral/trimetazidine-article-31-annex-iii_en.pdf", "Restricted indications and new contraindication for trimetazidine — EMA/CHMP review 2012, via HSA Singapore", "Parecer Trimetazidina · Secretaria de Estado da Saúde de MG · 2022 · https://www.saude.mg.gov.br/wp-content/uploads/2025/01/Parecer-Trimetazidina.pdf"]
+review_status: revisado
+source_refs: ["RCM Trimetazidina 20mg · Infarmed · https://www.infarmed.pt/documents/15786/1577857/RCM_Trimetazidina20mgcomprevestidos/eb5df257-ef62-4618-8ab7-c6cfafc96bde · reaberto em 31/07/2026 (arquivo .doc, extraído via strings) — item 4.3 Contraindicações confirma ClCr <30 mL/min para \"compromisso renal grave\", resolvendo a marcação de verificação humana desta fusão", "Trimetazidine Article 31 Annex III · EMA · https://www.ema.europa.eu/en/documents/referral/trimetazidine-article-31-annex-iii_en.pdf", "Restricted indications and new contraindication for trimetazidine — EMA/CHMP review 2012, via HSA Singapore", "Parecer Trimetazidina · Secretaria de Estado da Saúde de MG · 2022 · https://www.saude.mg.gov.br/wp-content/uploads/2025/01/Parecer-Trimetazidina.pdf"]
 legacy_source: "medicamentos/banco-de-medicamentos-trimetazidina-completo.md — mesclado em 30/07/2026 com medicamentos/banco-de-medicamentos-trimetazidina-parcial.md (slug trimetazidina, duplicata do mesmo fármaco, removido)"
 ---
 
@@ -37,7 +37,7 @@ Uso restrito pela EMA devido a risco de sintomas parkinsonianos e outros distúr
 - Doença de Parkinson
 - Tremor essencial e outros distúrbios do movimento
 - Síndrome das pernas inquietas e outros distúrbios do movimento
-- Insuficiência renal grave — **VERIFICAÇÃO HUMANA NECESSÁRIA**: os dois registros fundidos neste verbete (ambos citando o mesmo RCM da Infarmed) davam corte divergente para "insuficiência renal grave" — um dizia ClCr<15mL/min, o outro ClCr<30mL/min. Não resolvido nesta fusão; conferir a seção de posologia/contraindicações do RCM diretamente antes de usar este corte na prática
+- **Insuficiência renal grave (ClCr <30 mL/min) — resolvido em 31/07/2026**: reaberto o RCM da Infarmed (item 4.3 Contraindicações), que registra literalmente "Compromisso renal grave (depuração da creatinina < 30 ml/min)". O corte de ClCr<15 mL/min que um dos dois registros fundidos neste verbete trazia **não confere** com o texto do RCM — a marcação de verificação humana está resolvida a favor de <30 mL/min
 - Hipersensibilidade
 
 ## Efeitos adversos
