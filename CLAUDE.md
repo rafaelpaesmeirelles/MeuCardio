@@ -64,6 +64,26 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### ⚠️ Para a sessão de Medicamentos — `content/Farmacologia/propafenona-cloridrato.md`: 4 contraindicações formais ausentes, incluindo Síndrome de Brugada, 31/07/2026
+> A prosa já foi revisada hoje contra a bula do RITMONORM (fonte `saudedireta.com.br`), e a maior
+> parte confere com o que achei em `medicamentos/metadados.json` (slug `propafenona-cloridrato`,
+> commit `bbbc9c6`), fonte `consultaremedios.com.br` — mesmo produto, mirror diferente. Mas a
+> lista de contraindicações da prosa **tem 7 itens e falta 4** que o mirror que usei traz no
+> mesmo item formal (3. QUANDO NÃO DEVO USAR ESTE MEDICAMENTO / Contraindicações):
+> - **Síndrome de Brugada conhecida** — ausência com peso de segurança real: propafenona é
+>   antiarrítmico classe IC, e desmascarar/agravar Brugada é risco reconhecido da classe.
+> - **Infarto agudo do miocárdio nos últimos 3 meses**
+> - **Miastenia grave**
+> - **Uso concomitante de ritonavir**
+>
+> Em compensação, a prosa tem dois números que o mirror que usei não trazia (FEVE <35% para IC
+> descompensada; bradicardia <50bpm) — pode ser detalhe de uma versão da bula mais completa nesse
+> ponto, ou de uma nota complementar; não conferi qual dos dois mirrors é mais atual. Vale
+> comparar as duas versões da bula lado a lado antes de decidir a lista final — sinalizo com
+> prioridade média-alta pela Síndrome de Brugada especificamente, que é achado de segurança, não
+> só lacuna de completude. Não editei `content/Farmacologia/propafenona-cloridrato.md` — fora da
+> minha faixa.
+
 > ### 🚨 URGENTE para a sessão de Medicamentos — `content/Farmacologia/perindopril-argininaerbumina.md` e o JSON discordam sobre estenose bilateral de artéria renal, duas bulas do COVERSYL divergindo, 31/07/2026
 > Achado no mesmo dia em que a prosa foi revisada, usando fonte diferente da minha — merece
 > atenção rápida porque as duas sessões chegaram a conclusões opostas sobre o mesmo item de
