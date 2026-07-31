@@ -470,7 +470,21 @@ contra o `git log` do dia.
 > **Table 8** de benefícios e riscos por método). Escrever sem ela seria escrever de memória. Quem
 > retomar: tentar PMC, a diretriz ESC 2018 (PMID 30165544) ou os critérios de elegibilidade da OMS.
 
-#### ✅ Sessão da BIBLIOTECA — fechamento de 31/07/2026: **58 itens novos, todos PUBLICADOS**
+#### 🎯 META DE 1.000 ATINGIDA EM 31/07/2026 — acervo em **1.002 itens**, dez dias antes do lançamento
+Medido arquivo por arquivo no disco, nas 11 frentes: `content/*.md` 455 ·
+`evidencias` 198 · `medicamentos` 89 · `estudos` 85 · `exames` 68 · `galeria` 66 ·
+`trilhas` 17 · `emergencia` 10 · `casos-clinicos` 5 · `checklists` 3 ·
+`material-paciente` 4. **Não é estimativa** — é `find`/contagem de JSON, com a
+ressalva já registrada de que a série histórica de 898 ignorava `checklists` e
+`material-paciente`, e de que `casos-clinicos` é com hífen.
+
+**Ressalva honesta sobre o número:** bater 1.000 não significa que a Cardiologia
+esteja coberta. Significa que a meta de volume foi cumprida. As lacunas de
+profundidade continuam mapeadas mais abaixo — Pericárdio e Febre reumática seguem
+com 8-9 documentos, a galeria não tem aneurisma apical chagásico, e a decisão de
+esquema do `recommendation_class` ainda barra diretriz brasileira em GRADE.
+
+#### ✅ Sessão da BIBLIOTECA — fechamento de 31/07/2026: **70 itens novos** (58 publicados, 12 aguardando aval)
 Contagem para a meta, medida no disco (não estimada). Dois lotes, os dois
 autorizados pelo Rafael no mesmo dia.
 
@@ -601,13 +615,13 @@ despublicada. **Os 12 órfãos de `drugs` continuam publicados** — faixa da se
 de Medicamentos, avisada, e a única pendência de órfão que resta.
 
 #### 📐 Contagem completa do acervo — corrigida em 31/07/2026, e **maior do que a meta vinha medindo**
-**988 itens, faltam 12 para 1.000.** Medido arquivo por arquivo no disco ao
-fechar o dia: `content/*.md` 454 · `evidencias` 187 · `medicamentos` 89 ·
+**1.002 itens — META ATINGIDA.** Medido arquivo por arquivo no disco ao
+fechar o dia: `content/*.md` 455 · `evidencias` 198 · `medicamentos` 89 ·
 `estudos` 85 · `exames` 68 · `galeria` 66 · `trilhas` 17 · `emergencia` 10 ·
 `casos-clinicos` 5 · **`checklists` 3** · **`material-paciente` 4**.
 
 **Estado da faixa da Biblioteca em `content/` ao fechar** — os dois próximos alvos
-naturais são os que seguem em 8: Cardiomiopatias 13 · Endocardite 10 · Cardiopatias
+naturais são os que seguem mais baixo: Cardiomiopatias 13 · Endocardite 10 · Cardiopatias
 congênitas 10 · Valvopatias 9 · Síncope 9 · Perioperatório 9 · Doença coronariana 9
 · Aorta e DAP 9 · **Pericárdio 8** · **Febre reumática 8**.
 
