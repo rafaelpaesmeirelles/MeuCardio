@@ -9399,8 +9399,8 @@
     "published": false
   },
   {
-    "slug": "cc-adulto-eco-no-seguimento-com-defeito-residual",
-    "statement": "O ecocardiograma é RECOMENDADO no acompanhamento PERIÓDICO do adulto com cardiopatia congênita, operada ou não, quando é necessária a avaliação da função contrátil, valvar e de condutos; e ANUALMENTE no pós-operatório de correção total, parcial ou paliativa que tenha DEFEITOS RESIDUAIS ou sequelas capazes de comprometer a evolução.",
+    "slug": "cc-adulto-eco-anual-no-pos-operatorio-com-defeito-residual",
+    "statement": "No adulto com cardiopatia congênita em pós-operatório de correção TOTAL, PARCIAL ou PALIATIVA que apresente DEFEITOS RESIDUAIS ou sequelas capazes de comprometer a evolução clínica, o ecocardiograma é recomendado ANUALMENTE. É o intervalo fixo que distingue esse paciente daquele com acompanhamento apenas periódico — cadastrado à parte nesta base — e daquele operado SEM defeito residual, em quem o exame periódico é Classe III.",
     "recommendation_class": "I",
     "evidence_level": "C",
     "society": "SBC",
@@ -9410,9 +9410,9 @@
     "theme": "Cardiopatias congênitas",
     "tags": [
       "cardiopatia congênita do adulto",
-      "seguimento",
+      "pós-operatório",
       "defeito residual",
-      "condutos"
+      "seguimento anual"
     ],
     "review_status": "revisado",
     "published": false
