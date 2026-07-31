@@ -3,8 +3,8 @@ title: "Prasugrel (cloridrato)"
 slug: prasugrel-cloridrato
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
-source_refs: ["Guia de medicamentos cardiovasculares: prasugrel · Afya Cardiologia · https://portal.afya.com.br/cardiologia/guia-de-medicamentos-cardiovasculares-prasugrel", "EFFIENT — Bula Profissional · Daiichi Sankyo · https://daiichisankyo.com.br/wp-content/uploads/2022/09/100625-bula-effient-profissional.pdf", "EFFIENT — Dossiê CONITEC · CONITEC · 2020 · https://www.gov.br/conitec/pt-br/midias/consultas/dossie/2020/20200914_dossie_prasugrel_cp48_conitec.pdf"]
+review_status: revisado
+source_refs: ["Guia de medicamentos cardiovasculares: prasugrel · Afya Cardiologia · https://portal.afya.com.br/cardiologia/guia-de-medicamentos-cardiovasculares-prasugrel", "EFFIENT — Bula Profissional · Daiichi Sankyo · https://daiichisankyo.com.br/wp-content/uploads/2022/09/100625-bula-effient-profissional.pdf · reconferida na íntegra em 31/07/2026, item 4 (Contraindicações) e posologia do TRITON-TIMI 38 — dose de ataque/manutenção e contraindicações confirmadas exatas", "EFFIENT — Dossiê CONITEC · CONITEC · 2020 · https://www.gov.br/conitec/pt-br/midias/consultas/dossie/2020/20200914_dossie_prasugrel_cp48_conitec.pdf"]
 legacy_source: "medicamentos/banco-de-medicamentos-prasugrel.md"
 ---
 

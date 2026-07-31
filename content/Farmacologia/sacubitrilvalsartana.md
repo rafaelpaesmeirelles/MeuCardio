@@ -3,8 +3,8 @@ title: "Sacubitril/Valsartana"
 slug: sacubitrilvalsartana
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
-source_refs: ["Sacubitril/valsartan (ENTRESTO) — rótulo aprovado pelo FDA, DailyMed SPL setid 000dc81d-ab91-450c-8eae-8eb74e72296f", "McMurray JJ, Packer M, Desai AS, et al; PARADIGM-HF Investigators and Committees. Angiotensin-Neprilysin Inhibition versus Enalapril in Heart Failure. N Engl J Med. 2014;371(11):993-1004. DOI: 10.1056/NEJMoa1409077. PMID: 25176015"]
+review_status: revisado
+source_refs: ["Sacubitril/valsartan (ENTRESTO) — rótulo aprovado pelo FDA, DailyMed SPL setid 000dc81d-ab91-450c-8eae-8eb74e72296f — este fármaco não tem bula do detentor do registro no Brasil disponível nos espelhos consultados em 31/07/2026; conferir quando ela aparecer", "McMurray JJ, Packer M, Desai AS, et al; PARADIGM-HF Investigators and Committees. Angiotensin-Neprilysin Inhibition versus Enalapril in Heart Failure. N Engl J Med. 2014;371(11):993-1004. DOI: 10.1056/NEJMoa1409077. PMID: 25176015"]
 legacy_source: "Sacubitril/Valsartana (substitui versão anterior incompleta)"
 ---
 
