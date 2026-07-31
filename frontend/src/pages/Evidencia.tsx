@@ -10,6 +10,14 @@ type Detalhe = {
   guideline_title: string; reference: string; document_slug: string | null; tags: string[];
 };
 
+// Nem toda diretriz usa a escala Classe I-III / Nível A-C da ESC/AHA: OMS, e as
+// brasileiras de Chagas e de eco de estresse, usam GRADE (força forte/condicional,
+// certeza alta/moderada/baixa). Sem esta distinção o selo saía "Classe Forte", que
+// não existe em nenhum dos dois sistemas.
+const CLASSES_ESC = new Set(["I", "IIa", "IIb", "III"]);
+const rotuloClasse = (c: string) => (CLASSES_ESC.has(c) ? `Classe ${c}` : `Força ${c}`);
+const rotuloNivel = (c: string, n: string) => (CLASSES_ESC.has(c) ? `Nível ${n}` : `Certeza ${n}`);
+
 export default function Evidencia() {
   const { slug } = useParams();
   const [e, setE] = useState<Detalhe | null>(null);
@@ -35,10 +43,10 @@ export default function Evidencia() {
       <div className="cartao" style={{ marginTop: "0.4rem" }}>
         <div style={{ display: "flex", gap: 10, marginBottom: "0.6rem" }}>
           <span className="selo" style={{ background: "var(--acento)", color: "var(--branco)" }}>
-            Classe {e.recommendation_class}
+            {rotuloClasse(e.recommendation_class)}
           </span>
           <span className="selo" style={{ background: "var(--acento)", color: "var(--branco)" }}>
-            Nível {e.evidence_level}
+            {rotuloNivel(e.recommendation_class, e.evidence_level)}
           </span>
         </div>
         <p style={{ fontSize: "1.05rem", margin: 0 }}>{e.statement}</p>

@@ -43,8 +43,12 @@ def _resumo_item(db: Session, item_type: str, item_id: int) -> dict | None:
         d = db.get(EvidenceRecord, item_id)
         if not d:
             return None
+        # Diretriz em GRADE (OMS, e as brasileiras de Chagas e eco de estresse) usa
+        # forca forte/condicional, nao Classe I-III — "Classe Forte" nao existe em
+        # nenhum dos dois sistemas. Mesma distincao feita em Evidencia.tsx.
+        rotulo = ("Classe" if d.recommendation_class in ("I", "IIa", "IIb", "III") else "Força")
         return {"title": d.statement[:80], "slug": d.slug, "url": f"/evidencias/{d.slug}",
-                "meta": f"Classe {d.recommendation_class}"}
+                "meta": f"{rotulo} {d.recommendation_class}"}
     if item_type == "estudo":
         d = db.get(ScientificStudy, item_id)
         if not d:
