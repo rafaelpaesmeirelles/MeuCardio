@@ -3,7 +3,7 @@ title: "Dabigatrana (etexilato)"
 slug: dabigatrana-etexilato
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["PRADAXA (dabigatrana etexilato, Boehringer Ingelheim) — Resumo das Características do Medicamento, EMA, em português, secções 4.2 e 4.3, com as tabelas de dose para prevenção de AVC na FA e para TVP/EP · https://www.ema.europa.eu/pt/documents/product-information/pradaxa-epar-product-information_pt.pdf · consultado em 29/07/2026", "Bula do Pradaxa (etexilato de dabigatrana), Boehringer Ingelheim, documento CCDS 0266-02 — seções Contra-indicações, Advertências e Precauções, e Populações especiais. Cobre a indicação de profilaxia de tromboembolismo venoso após artroplastia de quadril ou joelho. Consultada em 29/07/2026", "Dabigatran etexilate capsules — rótulo aprovado pelo FDA, DailyMed SPL setid f7ea7e2c-ca54-4ecc-9fc7-bd3571b0ebc2 (usado para marcar onde o rótulo americano diverge do brasileiro)", "Connolly SJ, Ezekowitz MD, Yusuf S, et al. Dabigatran versus warfarin in patients with atrial fibrillation (RE-LY). N Engl J Med. 2009;361(12):1139-1151. DOI: 10.1056/NEJMoa0905561. PMID: 19717844", "ANDEXXA (andexanete alfa) — rótulo aprovado pelo FDA, DailyMed SPL setid 2d9d90a6-63e6-46ef-96ff-dd6519ae7b6c"]
 legacy_source: "Dabigatrana (dose completa, fecha lacuna anterior)"
 ---
