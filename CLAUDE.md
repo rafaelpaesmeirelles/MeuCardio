@@ -147,6 +147,27 @@ contra o `git log` do dia.
 > do dia, cada sessão deve deixar registrado neste arquivo quantos itens novos entraram, para
 > medir contra a meta de 102 sem depender de memória.
 >
+> ### 🔀 REDIVISÃO DE TEMAS pelo Rafael em 01/08/2026 — **quatro temas passaram da Biblioteca para Medicamentos**
+> A sessão da Biblioteca **encerrou** (commit `1397535`). No mesmo dia o Rafael redefiniu a faixa da
+> sessão de Medicamentos, listando os temas a priorizar e, separadamente, os que **não** devem ser
+> tocados. **Os dois conjuntos não se sobrepõem, e é essa diferença que define a mudança:**
+>
+> - **PASSARAM a ser de Medicamentos:** **Cardio-oncologia**, **Comunicação clínica**, **Geral** e
+>   **Saúde mental e cardiologia** — os quatro eram da Biblioteca pela divisão de 29/07/2026.
+> - **CONTINUAM fora do alcance de Medicamentos** (10 temas, lista textual do Rafael): Doença
+>   coronariana, Cardiomiopatias, Valvopatias, Pericárdio, Endocardite, Aorta e DAP, Cardiopatias
+>   congênitas, Febre reumática, Síncope e Perioperatório. **Também seguem fora**
+>   `evidencias/`, `estudos/`, `galeria/` e `exames/`.
+>
+> **Ordem de prioridade que ele deu, pelos temas mais rasos:** Cardio-oncologia (15), Comunicação
+> clínica (15), Geral (15), Saúde mental (15), Arritmias (17), Hipertensão pulmonar (17),
+> Dispositivos (18), Gravidez (18), Diabetes e cardiologia (20).
+>
+> **Consequência para quem retomar:** as seis lacunas que esta sessão havia passado à Biblioteca
+> (REDUCE-AMI/BETAMI/DANBLOCK, EUROPA, HORIZONS-AMI, ISCHEMIA/FFR/acesso radial, álcool e FA,
+> POISE-2) estão em **Doença coronariana, Saúde mental e Perioperatório**. Com a redivisão, **só a
+> de álcool e FA (Saúde mental) entrou na faixa de Medicamentos**; as demais continuam fora.
+>
 > ### 🚨 URGENTE, 01/08/2026 — **o commit `4644875` subiu `evidencias/metadados.json` com MARCADOR DE CONFLITO, e o JSON está inválido nele**
 > **Achado pela sessão de Medicamentos, e a causa raiz é MINHA — leia o item 2 abaixo antes de
 > culpar o seu lado.**
