@@ -352,7 +352,7 @@
   },
   {
     "slug": "atenolol",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Atenolol",
     "drug_class": "Betabloqueador cardiosseletivo (beta-1 seletivo, sem atividade simpatomimética intrínseca)",
     "mechanism": "Antagonista competitivo seletivo de receptores beta-1 adrenérgicos, reduzindo frequência cardíaca, contratilidade miocárdica e liberação de renina, com menor afinidade por receptores beta-2 (efeito broncoconstritor reduzido comparado a betabloqueadores não seletivos)",
@@ -363,14 +363,25 @@
       "Hipertensão arterial, angina do peito, arritmias cardíacas, prevenção secundária pós-infarto do miocárdio"
     ],
     "contraindications": [
-      "Bradicardia sinusal grave",
-      "Bloqueio AV de 2º/3º grau",
+      "Hipersensibilidade conhecida ao atenolol ou a qualquer componente da fórmula",
+      "Bradicardia",
       "Choque cardiogênico",
-      "IC descompensada aguda",
-      "Asma/DPOC grave com broncoespasmo ativo"
+      "Hipotensão",
+      "Acidose metabólica",
+      "Distúrbios graves da circulação arterial periférica",
+      "Bloqueio cardíaco de segundo ou terceiro grau",
+      "Síndrome do nodo sinusal",
+      "Feocromocitoma não tratado",
+      "Insuficiência cardíaca descompensada",
+      "Uso em crianças (bula não recomenda)",
+      "**fonte**: bula do ATENOL (atenolol, AstraZeneca), item 4. **Corrigido em 31/07/2026**: a lista anterior (fonte FDA/DailyMed) dizia 'bradicardia sinusal grave' e 'IC descompensada aguda' — a bula brasileira não qualifica a bradicardia como 'sinusal' nem 'grave' (é contraindicação sem qualificador), e usa 'insuficiência cardíaca descompensada' sem 'aguda'. 'Asma/DPOC grave com broncoespasmo ativo' foi removido daqui — na bula brasileira o broncoespasmo aparece como reação adversa rara, não como contraindicação formal do item 4; ficou registrado em `adverse_effects`"
     ],
     "adverse_effects": [
-      "Bradicardia, fadiga, extremidades frias, broncoespasmo (menos frequente que betabloqueadores não seletivos), disfunção erétil, mascaramento de sintomas de hipoglicemia em diabéticos"
+      "Comuns (1-9,9%): bradicardia, extremidades frias, distúrbios gastrointestinais, fadiga",
+      "Incomuns (0,1-0,9%): distúrbios do sono, elevação de transaminases",
+      "Raras (0,01-0,09%): piora de insuficiência cardíaca, desencadeamento de bloqueio cardíaco, hipotensão postural (pode associar-se a síncope), agravamento de claudicação intermitente/fenômeno de Raynaud, tontura, cefaleia, parestesia, alterações do humor, pesadelos, confusão, psicoses, alucinações, boca seca, toxicidade hepática (incluindo colestase intra-hepática), púrpura, trombocitopenia, alopecia, reações psoriaseformes/exacerbação de psoríase, erupções cutâneas, olhos secos, distúrbios visuais, impotência, broncoespasmo em asma brônquica ou histórico de queixas asmáticas",
+      "Muito raras (<0,01%): aumento de ANA (anticorpos antinucleares), relevância clínica não estabelecida",
+      "**fonte**: bula do ATENOL (atenolol, AstraZeneca), item 10 — substitui a lista genérica anterior (FDA), que não trazia frequência real"
     ],
     "dosing": {
       "dose_ajuste_renal_especifico": "**Hipertensão, sem disfunção renal**: dose inicial 50 mg 1x/dia, titular até 100 mg/dia após 1–2 semanas se resposta insuficiente. Doses acima de 100 mg/dia não trazem benefício adicional de PA e aumentam efeito colateral (fadiga). **Ajuste renal** (atenolol tem eliminação predominantemente renal, diferente de metoprolol/carvedilol que são majoritariamente hepáticos): - ClCr 15–35 mL/min/1,73m²: dose máxima 50 mg/dia - ClCr < 15 mL/min/1,73m²: dose máxima 25 mg/dia - Hemodiálise: 25–50 mg após cada sessão, sob supervisão hospitalar (o fármaco é dialisável, diferente do propranolol) **Idosos**: considerar iniciar com 25 mg/dia. Fonte: rótulo do atenolol aprovado pelo FDA (DailyMed). A versão anterior citava convergência com três fontes independentes sem nomeá-las, o que não é rastreável — a referência agora é o rótulo, com identificador."
@@ -379,7 +390,8 @@
       "Particularidade diferenca metoprolol": "Diferente do metoprolol succinato, atenolol não possui evidência robusta de redução de mortalidade em insuficiência cardíaca crônica, não sendo recomendado como opção de primeira linha entre os betabloqueadores baseados em evidência para ICFER (bisoprolol, carvedilol, metoprolol succinato)"
     },
     "references": [
-      "Atenolol tablets — rótulo aprovado pelo FDA, DailyMed SPL setid c58e12ad-d705-4643-91ac-ff079e9eb28e"
+      "Atenolol tablets — rótulo aprovado pelo FDA, DailyMed SPL setid c58e12ad-d705-4643-91ac-ff079e9eb28e",
+      "Bula do ATENOL (atenolol, AstraZeneca do Brasil), CDS 05/07 - Agosto/08, via bulário saudedireta.com.br — usada para contraindicações completas (item 4) e reações adversas por frequência (item 10)"
     ],
     "pregnancy": "**Categoria de risco D.** O atenolol **atravessa a barreira placentária**. Não usar na gravidez sem orientação médica, com aviso imediato em caso de suspeita. Fonte: bula do ATENOL (atenolol). Note a diferença dentro da própria classe: metoprolol é categoria C e atenolol é D — betabloqueador não é bloco homogêneo na gestação.",
     "lactation": "**Cautela, com risco nomeado no recém-nascido.** A bula é específica onde a maioria é vaga: há **acúmulo significativo de atenolol no leite materno**. Os neonatos de mães que usaram atenolol na gravidez ou na amamentação **podem apresentar hipoglicemia e bradicardia**. Coerente com a categoria D atribuída na gestação, e em contraste com o metoprolol, categoria C — a rotulagem trata os betabloqueadores de forma desigual também na lactação. Fonte: bula do ATENOL (atenolol, AstraZeneca), seção \"Uso durante a gravidez e lactação\"."
