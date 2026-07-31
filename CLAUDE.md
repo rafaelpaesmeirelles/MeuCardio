@@ -225,11 +225,22 @@ contra o `git log` do dia.
 > (RACE 35926542 e MR BPA 35926544, em Hipertensão pulmonar) e peso/condicionamento/exercício na FA
 > (LEGACY 25792361, CARDIO-FIT 26113406 e ACTIVE-AF 36752479, em Fibrilação atrial).
 >
-> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **29 documentos novos, todos publicados**
-> `content/*.md` de **424 para 457**. **Acervo total das nove frentes: 990** — **faltam 1.010 para
+> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **31 documentos novos, todos publicados**
+> `content/*.md` de **424 para 459**. **Acervo total das nove frentes: 997** — **faltam 1.003 para
 > os 2.000**, sem prazo fixo, conforme a decisão registrada na seção da META. (Os números das
 > frentes JSON e parte dos documentos incluem o que a sessão da Biblioteca entregou no mesmo dia; os
-> 29 acima são só desta sessão.)
+> 31 acima são só desta sessão.)
+>
+> **11º lote — 2 documentos**: betabloqueador na DPOC (BLOCK-COPD, PMID 31633896, em Farmacologia) e
+> modo de estimulação na disfunção do nó sinusal (MOST, PMID 12063369, em Dispositivos).
+>
+> **Os dois são exemplos do padrão de maior rendimento, e por caminhos opostos:** o BLOCK-COPD é um
+> ensaio **negativo citado ao contrário** — usado para não prescrever betabloqueador a cardiopata
+> com DPOC, quando essa população foi **explicitamente excluída** dele; o MOST é um ensaio
+> **negativo no desfecho primário que mudou a prática**, porque o modo de estimulação alterou
+> justamente o que dele se esperava (FA, escores de IC, qualidade de vida) e não a mortalidade.
+> **Nos dois casos o valor do documento está em separar o que o ensaio respondeu do que ele não
+> respondeu** — que é onde o resumo de diretriz não ajuda.
 >
 > **10º lote — 2 documentos**: anticoagulação no trombo de ventrículo esquerdo (metanálise em rede,
 > PMID 39297938, em Tromboembolismo) e controle pressórico na DRC estágios 3 a 5 (PMID 28873137,
