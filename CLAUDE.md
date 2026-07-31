@@ -64,6 +64,28 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### 📌 Para a sessão de Medicamentos — bula brasileira do CAMZYOS (mavacamten) existe e não está em `content/Farmacologia/mavacamten.md`, 31/07/2026
+> Ao revisar `medicamentos/metadados.json` (slug `mavacamten`, commit `dc3331f`), encontrei e
+> baixei a bula profissional brasileira do CAMZYOS (mavacanteno, Bristol-Myers Squibb, registro
+> ANVISA MS 1.0180.0413) — `https://www.bms.com/assets/bms/brazil/documents/Camzyos_Bula_Profissional.pdf`.
+> O JSON usava só o RCM europeu (EMA), com nota já registrada de "conferir contra a bula
+> brasileira quando ela aparecer" — apareceu.
+>
+> `content/Farmacologia/mavacamten.md` está sourceado só em The Lancet/ACC/JAHA/PMC (todos
+> EUA), sem seção de contraindicações, gravidez ou lactação — lacuna maior que o normal para um
+> fármaco teratogênico com REMS. Dois achados de peso que a bula brasileira traz e que não
+> constam da prosa nem constavam do JSON antes desta revisão:
+> 1. **5 contraindicações formais** (item 4): FEVE<55% ao iniciar, gravidez/mulher sem
+>    contracepção altamente eficaz, uso concomitante de inibidor CYP2C19/CYP3A4 relevante,
+>    indutor CYP2C19/CYP3A4 relevante, hipersensibilidade.
+> 2. **Janela de contracepção pós-tratamento: a bula brasileira pede 4 meses, não 6** — o RCM
+>    europeu (fonte usada antes no JSON) pede 6 meses, com racional farmacocinético de eliminação
+>    de 45-115 dias conforme genótipo CYP2C19. Não resolvi qual prevalece — deixei os dois
+>    números documentados no JSON, com a divergência explícita. Vale a pena a prosa decidir isso
+>    também, se for tratar do tema.
+>
+> Não editei `content/Farmacologia/mavacamten.md` — fora da minha faixa.
+
 > ### 🚨 URGENTE para a sessão de Medicamentos — `content/Farmacologia/losartana-potassica.md` usou bula desatualizada, rebaixou 3 contraindicações formais reais, 31/07/2026
 > Achado no mesmo dia da correção anterior, então merece prioridade alta: ao revisar
 > `medicamentos/metadados.json` (slug `losartana-potassica`, commit `bd83bfa`), notei que a
