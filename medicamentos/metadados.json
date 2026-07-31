@@ -831,7 +831,7 @@
   },
   {
     "slug": "clopidogrel-bissulfato",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Clopidogrel (bissulfato)",
     "drug_class": "Antiagregante plaquetário — derivado tienopiridínico, inibidor do receptor P2Y12",
     "mechanism": "Pró-fármaco que requer metabolização hepática pelas enzimas do citocromo P450 (especialmente CYP2C19) para formar metabólito ativo. Este metabólito age como inibidor irreversível do receptor de ADP plaquetário, inibindo seletivamente a ligação de ADP ao receptor P2Y12, e consequentemente a ativação do complexo glicoproteico GPIIb/IIIa mediado por ADP",
@@ -847,7 +847,11 @@
       "Intolerância à galactose (contém lactose no excipiente)"
     ],
     "adverse_effects": [
-      "Hemorragias, dispepsia, dor abdominal, diarreia, aumento do tempo de sangramento, leucopenia e plaquetopenia (raros)"
+      "Sangramento (efeito adverso mais relevante): incidência global de hemorragia em CAPRIE foi 9,3% com clopidogrel, igual ao AAS 325mg; sangramento grave 1,4% (clopidogrel) vs. 1,6% (AAS); hemorragia gastrointestinal 2,0% vs. 2,7%; hemorragia intracraniana 0,4% vs. 0,5%. Em CURE (clopidogrel+AAS vs. AAS+placebo), sangramento maior 3,7% vs. 2,7% e menor 5,1% vs. 2,4%, sem diferença em sangramento fatal (0,2% em ambos)",
+      "Frequência CIOMS (Comum ≥1% e <10%; Incomum ≥0,1% e <1%; Raro ≥0,01% e <0,1%): Sistema nervoso — incomum: cefaleia, tontura, parestesia; raro: vertigem. Gastrointestinais — comum: dispepsia, dor abdominal, diarreia; incomum: náusea, gastrite, flatulência, constipação, vômito, úlcera gástrica/duodenal. Plaquetas/coagulação — incomum: aumento do tempo de sangramento, decréscimo de plaquetas. Pele — incomum: rash, prurido. Hematológico — incomum: leucopenia, diminuição de neutrófilos, eosinofilia",
+      "Hematológicos de estudo (CAPRIE): neutropenia grave (<0,450 g/L) em 0,04% (clopidogrel) vs. 0,02% (AAS); trombocitopenia grave (<80 g/L) em 0,2% vs. 0,1%; um caso de anemia aplástica durante o tratamento",
+      "Pós-comercialização (muito raro): sangramentos graves (pele, sistema musculoesquelético, olhos, trato respiratório, hematúria, ferida operatória), casos fatais (especialmente hemorragia intracraniana, GI e retroperitoneal), agranulocitose, anemia aplástica/pancitopenia, púrpura trombocitopênica trombótica (PTT)",
+      "**fonte**: bula do ISCOVER (bissulfato de clopidogrel, Bristol-Myers Squibb), item Reações Adversas — dados reais de CAPRIE/CURE/CLARITY/COMMIT, substituindo a lista genérica anterior (Afya/protocolo DF)"
     ],
     "pregnancy": "Categoria B — estudos em animais não mostram evidência de prejuízo à fertilidade ou toxicidade fetal; dados limitados em mulheres; segurança desconhecida na lactação",
     "dosing": {
