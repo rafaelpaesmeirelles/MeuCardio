@@ -591,10 +591,15 @@ despublicada. **Os 12 órfãos de `drugs` continuam publicados** — faixa da se
 de Medicamentos, avisada, e a única pendência de órfão que resta.
 
 #### 📐 Contagem completa do acervo — corrigida em 31/07/2026, e **maior do que a meta vinha medindo**
-**984 itens, faltam 16 para 1.000.** Medido arquivo por arquivo no disco ao
-fechar o dia: `content/*.md` 450 · `evidencias` 187 · `medicamentos` 89 ·
+**988 itens, faltam 12 para 1.000.** Medido arquivo por arquivo no disco ao
+fechar o dia: `content/*.md` 454 · `evidencias` 187 · `medicamentos` 89 ·
 `estudos` 85 · `exames` 68 · `galeria` 66 · `trilhas` 17 · `emergencia` 10 ·
 `casos-clinicos` 5 · **`checklists` 3** · **`material-paciente` 4**.
+
+**Estado da faixa da Biblioteca em `content/` ao fechar** — os dois próximos alvos
+naturais são os que seguem em 8: Cardiomiopatias 13 · Endocardite 10 · Cardiopatias
+congênitas 10 · Valvopatias 9 · Síncope 9 · Perioperatório 9 · Doença coronariana 9
+· Aorta e DAP 9 · **Pericárdio 8** · **Febre reumática 8**.
 
 **Duas correções de método, as duas minhas:**
 1. `casos-clinicos` é **com hífen**. Meu registro anterior dizia que a pasta não
