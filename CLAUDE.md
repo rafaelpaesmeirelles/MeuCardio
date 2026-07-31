@@ -1081,6 +1081,27 @@ uma frente livre em vez de negociar no meio do commit.
    > - **não** vale para conteúdo cuja fonte principal seja mais fraca que diretriz ou estudo
    >   original sem que a fraqueza esteja declarada no próprio documento.
    >
+   > **AMPLIADA pelo Rafael no fim de 31/07/2026**, em texto dele: autorizou *"publicar e ir
+   > prosseguindo automaticamente sem ficar dependendo da minha autorização se estiver tudo dentro
+   > das normas definidas"*, e a trabalhar *"por tempo indeterminado"*. Ou seja, a exceção deixou de
+   > ser por lote e passou a ser **contínua** para a sessão de Medicamentos.
+   >
+   > **"Dentro das normas definidas" é a condição, e ela é o que segura a autorização.** As normas
+   > são as deste arquivo, e continuam valendo integralmente:
+   > - **verificação item a item contra fonte primária**, sem exceção por pressa ou volume;
+   > - **nada fabricado** — nenhum PMID, DOI, autoria, dose ou número escrito de memória;
+   > - **fonte mais fraca que diretriz ou estudo original só entra com a fraqueza declarada** no
+   >   próprio documento (como no de amiodarona/tireoide e no de trombo de VE);
+   > - **não escrever fora da faixa** desta sessão, e **não publicar conteúdo de outra sessão** —
+   >   isso aconteceu várias vezes, com o import global trazendo documento da Biblioteca, e a
+   >   conduta correta é publicar só o que é meu e verificado;
+   > - **conferir a auditoria depois de cada lote**: `documents` publicados, e **zero** trechos de
+   >   não publicados no índice do RAG.
+   >
+   > **O que a ampliação NÃO cobre**, e onde continuo perguntando: alterar backend fora de tarefa
+   > autorizada, ação destrutiva em produção (`DELETE`, `DROP`), rebuild não relacionado a uma
+   > correção pedida, e qualquer decisão que mude regra deste arquivo em vez de segui-la.
+   >
    > **Sessão nova NÃO herda isto.** Se você é uma sessão posterior lendo este arquivo, a regra
    > que vale para você é a linha 5 acima, sem a exceção: pergunte antes de publicar.
 
