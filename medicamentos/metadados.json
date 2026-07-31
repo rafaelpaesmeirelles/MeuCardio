@@ -2135,7 +2135,7 @@
   },
   {
     "slug": "inclisirana",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Inclisirana",
     "drug_class": "RNA de interferência pequeno (siRNA) direcionado a PCSK9",
     "mechanism": "Conjugado a GalNAc, é captado seletivamente por hepatócitos via receptor de asialoglicoproteína, ativando o complexo RISC (RNA-induced silencing complex) e silenciando o RNAm de PCSK9 dentro do hepatócito, antes da síntese da proteína — mecanismo distinto dos anticorpos monoclonais anti-PCSK9 (evolocumabe/alirocumabe), que bloqueiam a proteína já circulante. Por atuar na síntese, o efeito de redução de LDL-C persiste muito além da meia-vida plasmática do fármaco",
@@ -2158,8 +2158,18 @@
       "Effects of Renal Impairment on the Pharmacokinetics, Efficacy, and Safety of Inclisiran: An Analysis of the ORION-7 and ORION-1 Studies · Mayo Clinic Proceedings · https://www.mayoclinicproceedings.org/article/S0025-6196(19)30756-6/abstract",
       "Bula de SYBRAVA (inclisirana, solução injetável em seringa preenchida), Novartis Biociências S.A. — apresentação, posologia e modo de usar. Versão brasileira."
     ],
-    "pregnancy": "**Preferível evitar, como medida de precaução** — é a formulação mais branda deste lote, e o motivo está no dado: os estudos em animais **não indicam efeitos nefastos diretos ou indiretos** quanto à toxicidade reprodutiva; o que falta é dado humano, inexistente ou limitado. Não é contraindicação. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do LEQVIO (inclisiran, Novartis). Fonte europeia, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil disponível nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer.",
-    "lactation": "**Decisão entre suspender a amamentação ou o tratamento.** Desconhece-se se a inclisirana ou seus metabólitos são excretados no leite humano; os dados em animais **mostraram excreção no leite**, e o risco para o recém-nascido não pode ser excluído. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do LEQVIO (inclisiran, Novartis). Fonte europeia, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil disponível nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer."
+    "pregnancy": "**Categoria de risco B.** Não há dados de uso em gestantes. Estudos de reprodução animal (ratos e coelhos) não mostraram risco de anormalidades fetais, morte embriofetal, fetotoxicidade ou teratogenicidade, em doses 16-39 vezes a dose humana máxima recomendada (por AUC); inclisirana detectada no plasma fetal de ratos em concentrações 65-154 vezes menores que as maternas, não detectada no fígado fetal; sem toxicidade materna nem efeito na prole em estudo de desenvolvimento pré/pós-natal. Não deve ser usada por mulher grávida sem orientação médica. **Corrigido em 31/07/2026**: a bula brasileira do SYBRAVA existe e confirma o mesmo conteúdo já registrado (via EMA), acrescentando a categoria de risco B, que faltava. Fonte: bula do SYBRAVA (inclisirana, Novartis Biociências), item 5.",
+    "lactation": "**Cautela — o desenvolvimento e os benefícios da amamentação devem ser considerados contra o efeito adverso potencial na criança**, não é decisão binária de suspensão. Não se sabe se a inclisirana é transferida ao leite humano; em ratas, a inclisirana esteve presente no leite, mas sem evidência de absorção sistêmica em filhotes lactentes. **Corrigido em 31/07/2026**: a versão anterior (fonte EMA) enquadrava como decisão entre suspender amamentação ou tratamento — a bula brasileira do SYBRAVA, agora localizada, usa framing mais brando, de ponderação, sem essa dicotomia explícita. Fonte: bula do SYBRAVA (inclisirana, Novartis Biociências), item 5.",
+    "contraindications": [
+      "Hipersensibilidade à substância ativa ou a qualquer componente da fórmula",
+      "**fonte**: bula do SYBRAVA (inclisirana, Novartis Biociências), item 4 — única contraindicação formal"
+    ],
+    "adverse_effects": [
+      "Segurança avaliada em 3 ensaios fase III controlados por placebo (3.655 pacientes, 1.833 expostos à inclisirana por até 18 meses, duração média 526 dias)",
+      "Incidência de eventos adversos semelhante entre inclisirana e placebo; maioria leve e não relacionada ao fármaco",
+      "Única reação adversa associada ao fármaco nos ensaios principais: evento no local da injeção (comum — 8,2% com inclisirana vs. 1,8% com placebo)",
+      "**fonte**: bula do SYBRAVA (inclisirana, Novartis Biociências), item 9, Tabela 4"
+    ]
   },
   {
     "slug": "indapamida",
