@@ -1752,6 +1752,37 @@ uma frente livre em vez de negociar no meio do commit.
 > que continua exigindo o Rafael está listado na regra 5: despublicar ou apagar o que está no ar,
 > ação destrutiva em banco, alterar backend fora de tarefa autorizada, rebuild não pedido, e mudar
 > uma regra deste arquivo em vez de segui-la.
+>
+> ### ✅ A Biblioteca ACUSOU O RECEBIMENTO e soltou os quatro temas, 01/08/2026
+> Conferido antes de responder, não de memória: **árvore de trabalho limpa em Cardio-oncologia,
+> Comunicação clínica, Geral e Saúde mental e cardiologia** — nenhum arquivo da Biblioteca editado e
+> não commitado nos quatro, nada pela metade que a sessão de Medicamentos precise esperar. A faixa
+> muda de dono sem transição pendente.
+>
+> **Guarda de marcador de conflito, forma correta** (a substring solta `'<<<<<<<'` dá falso positivo
+> em qualquer arquivo que *documente* o incidente — travou o commit do próprio `CLAUDE.md` uma vez).
+> Ancorar no início da linha e validar o **ÍNDICE**, não o disco:
+> ```python
+> import re, subprocess
+> t = subprocess.run(['git','show',':CAMINHO'], capture_output=True, text=True).stdout
+> assert not [i+1 for i,l in enumerate(t.split('\n')) if re.match(r'^(<{7}|={7}$|>{7})', l)]
+> ```
+>
+> ### 🚫 Duas lacunas queimadas por fonte inacessível — não gastar busca de novo
+> 1. **Guidance da ISTH sobre anticoagulação com trombocitopenia no câncer** (Samuelson Bannow BT et
+>    al., J Thromb Haemost 2018;16(6):1246-1249, **PMID 29737593**). Não tem abstract no PubMed, e
+>    **medido por `elink` em 01/08/2026: não tem texto integral no PMC** — só `pubmed_pmc_refs`, os
+>    artigos que o citam. As faixas de plaquetas só existem no texto completo, que está fechado.
+>    **Saída de acesso aberto, verificada**: Patell R, Zwicker JI. Hematology Am Soc Hematol Educ
+>    Program. 2022;2022(1):312-315, PMID 36485075, **PMC9821225** — dose plena com plaquetas
+>    ≥50.000/µL, dose modificada entre 25.000 e 50.000/µL, suspender abaixo de 25.000/µL.
+>    **Ressalva que muda a atribuição:** o artigo diz que suas recomendações são *"similar to those
+>    published by the ISTH"* — cadastrar os cortes **como de Patell & Zwicker 2022**, nunca como
+>    texto da ISTH. Pista não verificada: Held et al., Res Pract Thromb Haemost 2022,
+>    doi:10.1002/rth2.12726 (RPTH é aberta, e o artigo trata do próprio guidance).
+> 2. **Consenso dedicado a FA no paciente com câncer: não existe** no EHJ nem na Europace a partir de
+>    2021. O mais próximo é um Clinical Consensus Statement da ACVC/ESC em Eur Heart J Acute
+>    Cardiovasc Care (**PMID 36226746**), sobre arritmias agudas — não é diretriz de FA em câncer.
 
 | Caminho | Sessão | Estado |
 |---|---|---|
