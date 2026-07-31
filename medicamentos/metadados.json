@@ -2173,7 +2173,7 @@
   },
   {
     "slug": "indapamida",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Indapamida",
     "drug_class": "Diurético tiazida-like, derivado indólico da clorossulfonamida",
     "mechanism": "Efeito anti-hipertensivo por ação vascular direta — inibição da hiperreatividade a aminas vasopressoras, inibição da síntese de tromboxano A2 e inibição do fluxo de cálcio na musculatura lisa vascular, reduzindo resistência periférica; no rim, age no túbulo contornado distal, inibindo reabsorção de sódio",
@@ -2190,10 +2190,12 @@
       "- **AINE**: reduz o efeito anti-hipertensivo e aumenta risco de lesão renal - **Dupla inibição do sistema renina-angiotensina** (associação com alisquireno): evitar em diabético - **Outros fármacos que prolongam o QT**: risco somado de arritmia — monitorização de ECG recomendada - **Simvastatina** (em combinação fixa com telmisartana/anlodipino/indapamida): não exceder 20 mg/dia de simvastatina"
     ],
     "contraindications": [
-      "Insuficiência renal grave (anúria)",
-      "Encefalopatia hepática",
+      "Hipersensibilidade à substância ativa, a outras sulfonamidas, ou a qualquer componente da fórmula",
+      "Falência renal grave",
+      "Encefalopatia hepática ou insuficiência hepática grave",
       "Hipopotassemia",
-      "Hipersensibilidade a sulfonamidas"
+      "Uso em crianças",
+      "**fonte**: bula do NATRILIX SR (indapamida, Servier), item 4. **Corrigido em 31/07/2026**: acrescentada a contraindicação formal em crianças, ausente da lista anterior"
     ],
     "dosing": {
       "hipertensao todos os tipos": "2,5 mg em tomada única diária (bula brasileira consultada)",
@@ -2209,10 +2211,11 @@
     "references": [
       "Indapamide — rótulo aprovado pelo FDA, DailyMed SPL setid 59cd3331-7afe-432a-8b50-39533fd5f392",
       "INDAPAMIDA — Nova Literatura · Purifarma · http://purifarma.com.br/Arquivos/Produto/INDAPAMIDA_Nova%20Literatura.pdf",
-      "Lozol/Indapamide — bula FDA/DailyMed (múltiplas versões consultadas)"
+      "Lozol/Indapamide — bula FDA/DailyMed (múltiplas versões consultadas)",
+      "Bula do NATRILIX SR (indapamida, Servier do Brasil), versão 2026, servier.com.br — usada para contraindicações completas, categoria de risco na gravidez (B) e lactação"
     ],
-    "pregnancy": "**Evitar prescrever na gravidez.** A bula não atribui letra de categoria e registra que **nenhum efeito teratogênico foi observado nas experiências em animais** — a orientação de evitar vem da ausência de dados clínicos, não de dano demonstrado. Ressalva sobre a fonte, para quem for revisar: o texto disponível é o da bula em formato resumido, e a redação (\"como para toda molécula nova\") indica documento antigo; a seção de lactação não existe nesse texto. Fonte: bula do NATRILIX SR (indapamida, Servier), seção de gravidez.",
-    "lactation": "Revisado pelo Rafael em 30/07/2026 — a bula do NATRILIX SR (indapamida, Servier) foi lida nesta sessão e **não tem seção de lactação**; o texto disponível é o de bula em formato resumido, e cobre apenas a gravidez. Fonte consultada e silente sobre o campo."
+    "pregnancy": "**Categoria de risco B.** Estudos em animais não indicam efeito nocivo direto ou indireto sobre toxicidade reprodutiva. Como medida de precaução, é preferível evitar o uso na gravidez; não deve ser usada sem orientação médica. **Corrigido em 31/07/2026**: localizada versão atual (2026) da bula do NATRILIX SR, que declara a categoria B — a versão consultada antes era um resumo antigo, sem a letra de categoria. Fonte: bula do NATRILIX SR (indapamida, Servier do Brasil), item 5.",
+    "lactation": "**Não recomendada durante a amamentação.** Não há informação suficiente sobre a excreção da indapamida e seus metabólitos no leite humano; hipersensibilidade a sulfonamidas e hipopotassemia podem ocorrer no lactente, e o risco não pode ser excluído. Como diurético tiazida-like, a indapamida está relacionada a fármacos associados à diminuição ou supressão da lactação. **Corrigido em 31/07/2026**: a versão da bula consultada antes não tinha seção de lactação (era um resumo antigo); a versão atual (2026) do NATRILIX SR tem seção completa. Fonte: bula do NATRILIX SR (indapamida, Servier do Brasil), item 5."
   },
   {
     "slug": "ivabradina-cloridrato",
