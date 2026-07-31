@@ -19,8 +19,15 @@ type Detalhe = {
 // junto com nível de evidência A/B/C — ali o certo é "Força Forte" + "Nível B".
 const CLASSES_ESC = new Set(["I", "IIa", "IIb", "III"]);
 const NIVEIS_LETRA = new Set(["A", "B", "C"]);
+// `evidence_level` é varchar(5) no banco, então a certeza GRADE é gravada abreviada
+// ("Mod" não cabe como "Moderada"). A expansão é feita aqui, na exibição, para o
+// assinante ler a palavra inteira sem exigir migração de schema.
+const CERTEZA_POR_EXTENSO: Record<string, string> = {
+  Alta: "alta", Mod: "moderada", Baixa: "baixa", MtBx: "muito baixa",
+};
 const rotuloClasse = (c: string) => (CLASSES_ESC.has(c) ? `Classe ${c}` : `Força ${c}`);
-const rotuloNivel = (n: string) => (NIVEIS_LETRA.has(n) ? `Nível ${n}` : `Certeza ${n}`);
+const rotuloNivel = (n: string) =>
+  NIVEIS_LETRA.has(n) ? `Nível ${n}` : `Certeza ${CERTEZA_POR_EXTENSO[n] ?? n}`;
 
 export default function Evidencia() {
   const { slug } = useParams();
