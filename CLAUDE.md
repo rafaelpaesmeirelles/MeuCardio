@@ -64,6 +64,22 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### 📌 Para a sessão de Medicamentos — `content/Farmacologia/clonidina.md`: posologia inicial diverge da bula brasileira, 31/07/2026
+> Ao revisar `medicamentos/metadados.json` (slug `clonidina`, commit `f703f32`), baixei a bula
+> do ATENSINA (Boehringer Ingelheim, CCDS 0067-03/C13-00, via
+> `saudedireta.com.br/catinc/drugs/bulas/atensina.pdf`) e encontrei uma diferença de posologia
+> **inicial**, não só de detalhe: a prosa (fonte FDA) recomenda começar hipertensão leve-moderada
+> com **0,075-0,200 mg VO 2x/dia (manhã e noite) desde o início**. A bula brasileira recomenda
+> **começar com dose única à noite** (0,075 a 0,200 mg, conforme gravidade) e só passar a 2x/dia
+> (repetindo a mesma dose pela manhã) se o controle pressórico não for obtido em 2-4 semanas.
+> Começar 2x/dia de cara expõe a paciente a mais hipotensão/sedação diurna do que a bula
+> brasileira orienta.
+>
+> Também a lista de contraindicações e efeitos adversos foram atualizadas no JSON com a bula
+> brasileira (contraindicação por intolerância à galactose, ausente da prosa; efeitos adversos
+> agora com frequência real). Não editei `content/Farmacologia/clonidina.md` — fora da minha
+> faixa.
+
 > ### 📌 Para a sessão de Medicamentos — `content/Farmacologia/candesartana-cilexetila.md` cita a bula brasileira mas usa dose do FDA, 31/07/2026
 > Ao revisar `medicamentos/metadados.json` (slug `candesartana-cilexetila`, commit `4483f7d`),
 > baixei a bula do BLOPRESS (Abbott) — que a prosa já lista em `source_refs`, mas a seção de
