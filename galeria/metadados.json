@@ -1448,5 +1448,71 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "vegetacao-endocardite-infecciosa-peca-cirurgica",
+    "title": "Peça cirúrgica — Vegetação de endocardite infecciosa (macroscopia)",
+    "modality": "Anatomia patológica",
+    "theme": "Endocardite",
+    "file_path": "patologia/vegetacao-endocardite-peca-cirurgica.jpg",
+    "findings": "Fotografia macroscópica de material valvar ressecado, já fragmentado e acondicionado em cassete de histologia, com régua em centímetros no canto inferior direito servindo de escala. São visíveis seis a sete fragmentos de tecido esbranquiçado a amarelado. Uma seta branca marca o fragmento que apresenta discreta descoloração granular vermelho-acastanhada — é esse o aspecto macroscópico da vegetação, segundo a descrição do autor da imagem. Pela régua, o fragmento apontado mede cerca de 5 mm no maior eixo. Não há valva íntegra na imagem: o que se vê é o produto do desbridamento cirúrgico, já preparado para processamento histológico.",
+    "teaching_points": "O valor didático desta imagem está justamente no contraste com o ecocardiograma. Na tela do eco, a vegetação é a massa móvel e chamativa que fecha um critério maior de Duke; na bancada da patologia, a mesma lesão pode ser apenas uma área granular acastanhada de poucos milímetros num fragmento entre outros — sem nada de dramático a olho nu. Duas consequências práticas decorrem disso. Primeira: a ausência de lesão macroscópica evidente na peça NÃO afasta endocardite, porque o diagnóstico anatomopatológico depende do exame microscópico do material, não da inspeção macroscópica. Segunda: como a peça chega fragmentada, a amostragem importa — o material ressecado deve ser encaminhado para cultura e para pesquisa molecular, e não apenas para histologia em formol, sob pena de se perder a única chance de identificar o agente no paciente já em antibioticoterapia. Esse é exatamente o cenário tratado no documento de endocardite com hemocultura negativa desta biblioteca. Vale notar ainda que o tecido em formol inviabiliza a cultura: a separação das amostras precisa ser combinada com o cirurgião ANTES da ressecção, não depois.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Gross_pathology_of_vegetation_of_infective_endocarditis,_annotated.jpg",
+    "license": "CC0",
+    "attribution": "Mikael Häggström, M.D. — obra própria, dedicada ao domínio público sob CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/), via Wikimedia Commons. Arquivo anotado pelo autor; imagem redimensionada a partir do original de 2017x1849 px. O autor registra na página do arquivo nota de consentimento informando ausência de elementos identificáveis do paciente.",
+    "tags": [
+      "endocardite infecciosa",
+      "vegetação",
+      "anatomia patológica",
+      "peça cirúrgica",
+      "macroscopia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cardiopatia-reumatica-histologia-corpo-de-aschoff-medio-aumento",
+    "title": "Histopatologia — Cardiopatia reumática: corpo de Aschoff em médio aumento (localização intersticial e perivascular)",
+    "modality": "Anatomia patológica",
+    "theme": "Febre reumática",
+    "file_path": "patologia/cardiopatia-reumatica-histologia-medio-aumento.jpg",
+    "findings": "Fotomicrografia de miocárdio em médio aumento, coloração hematoxilina-eosina, com os cardiomiócitos seccionados longitudinalmente — fibras eosinofílicas paralelas, de núcleos ovalados e centrais. Destacam-se do fundo muscular dois focos de tecido intersticial expandido e mais celular: um focal, alongado, entre feixes de fibras no terço central-esquerdo do campo, e outro na faixa vertical à direita, disposto ao redor de um pequeno vaso de parede visível — a distribuição intersticial e perivascular característica do corpo de Aschoff. Neste aumento resolvem-se a localização e o contorno da lesão, mas NÃO os detalhes nucleares: as células de Anitschkow, com cromatina em barra ondulada, só se distinguem em grande aumento, e para isso a galeria já traz imagem específica.",
+    "teaching_points": "Esta imagem responde a uma pergunta que o grande aumento não responde: ONDE o corpo de Aschoff se instala. Ele é uma lesão granulomatosa do interstício, com predileção perivascular — não uma lesão do cardiomiócito. Isso explica por que a miocardite reumática, embora possa causar insuficiência cardíaca na fase aguda, raramente deixa sequela contrátil relevante: o dano permanente da doença é valvar, não miocárdico. O paciente que morre na fase aguda morre de pancardite; o que sobrevive carrega a valvopatia, e é ela que reaparece décadas depois como estenose mitral. Um segundo ponto, de ordem prática: o corpo de Aschoff é a lesão patognomônica da cardite reumática, mas é achado de necropsia ou de peça cirúrgica — o diagnóstico da febre reumática aguda à beira do leito é clínico, pelos critérios de Jones, e biópsia endomiocárdica não faz parte da investigação. Reconhecer a lesão serve para entender a doença, não para diagnosticá-la em vida.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rheumatic_heart_disease_-_intermed_mag.jpg",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Nephron — obra própria, via Wikimedia Commons, CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/). Imagem redimensionada a partir do original de 4272x2848 px; nenhuma outra alteração. A descrição do autor na página do arquivo identifica o material como cardiopatia reumática, coloração H&E.",
+    "tags": [
+      "febre reumática",
+      "cardite reumática",
+      "corpo de Aschoff",
+      "histopatologia",
+      "miocárdio"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "eco-comunicacao-interatrial-ostium-secundum",
+    "title": "Ecocardiograma — Comunicação interatrial do tipo ostium secundum",
+    "modality": "Ecocardiograma",
+    "theme": "Cardiopatias congênitas",
+    "file_path": "ecocardiograma/cia-ostium-secundum-eco.jpg",
+    "findings": "Ecocardiograma bidimensional em setor, sem Doppler colorido e sem marcação sobre a imagem, com traçado eletrocardiográfico e frequência cardíaca de 114 bpm exibidos na margem inferior e escala de profundidade em centímetros à esquerda. O corte mostra câmaras cardíacas e o septo interatrial. A identificação do achado como comunicação interatrial do tipo ostium secundum é da descrição do autor que adquiriu a imagem, na página do arquivo de origem — não é leitura independente feita a partir desta imagem isolada, e o defeito não está anotado no quadro. VERIFICAÇÃO HUMANA NECESSÁRIA para confirmar a solução de continuidade septal e o corte utilizado antes de empregar esta imagem em contexto de ensino formal.",
+    "teaching_points": "O tipo ostium secundum responde pela maioria das comunicações interatriais e situa-se na região da fossa oval, no centro do septo — distinto do ostium primum, que é baixo, junto às valvas atrioventriculares, e integra o espectro do defeito do septo atrioventricular, e do tipo seio venoso, alto, junto à desembocadura da veia cava superior, classicamente associado a drenagem anômala parcial de veias pulmonares. A distinção não é acadêmica: define a técnica de correção, já que apenas o secundum é candidato a fechamento percutâneo com oclusor, enquanto primum e seio venoso são cirúrgicos. Uma armadilha de imagem merece registro: no corte apical de quatro câmaras o septo interatrial fica paralelo ao feixe de ultrassom, e a queda de sinal por essa geometria (dropout) simula defeito onde não há — a suspeita levantada nessa janela deve ser confirmada em corte subcostal, em que o septo fica perpendicular ao feixe, ou por ecocardiograma transesofágico. A imagem também lembra que o transtorácico sem Doppler colorido é insuficiente para caracterizar o shunt: a demonstração do fluxo e a estimativa da relação entre fluxos pulmonar e sistêmico exigem os demais modos.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Echokardiogram_von_Atriumseptumdefekt_(Ostium_secundum).jpg",
+    "license": "Domínio público",
+    "attribution": "Kjetil Lenes — imagem própria, liberada por ele ao domínio público (marcação PD-self na página do arquivo, com anuência do empregador declarada pelo autor), via Wikimedia Commons. Imagem original de 636x434 px, sem alteração.",
+    "tags": [
+      "cardiopatia congênita",
+      "comunicação interatrial",
+      "ostium secundum",
+      "ecocardiograma",
+      "shunt"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]

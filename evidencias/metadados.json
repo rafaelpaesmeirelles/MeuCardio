@@ -5018,5 +5018,694 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "te-contraindicado-na-pericardite-aguda-e-miocardite-sbc-2024",
+    "statement": "O teste ergométrico é CONTRAINDICADO na miocardite, na pericardite aguda e na insuficiência cardíaca descompensada. A contraindicação é formal e independe de o paciente estar oligossintomático: a inflamação miopericárdica em atividade é o próprio substrato de arritmia ventricular e de deterioração hemodinâmica sob esforço, e o teste não deve ser usado para 'testar' se o paciente tolera atividade nessa fase.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581 — texto integral em acesso aberto (PMC11656589), tabela de indicações do teste ergométrico na insuficiência cardíaca e nas cardiomiopatias conferida linha a linha em 31/07/2026.",
+    "theme": "Pericárdio",
+    "tags": [
+      "pericardite aguda",
+      "miocardite",
+      "teste ergométrico",
+      "contraindicação"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "itb-pos-esforco-em-sintomas-de-mmii-com-itb-de-repouso-normal-sbc-2024",
+    "statement": "O índice tornozelo-braquial pós-esforço associado ao teste ergométrico em esteira é RECOMENDADO em pacientes com sintomas esforço-induzidos em membros inferiores — não relacionados às articulações — que tenham ITB de repouso normal ou limítrofe, na faixa acima de 0,90 e até 1,40, para diagnóstico e estratificação de risco. É a situação em que o ITB de repouso normal não afasta doença arterial periférica: a queda de pressão só se manifesta sob demanda.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581 — texto integral em acesso aberto (PMC11656589), tabela de indicações de realização do índice tornozelo-braquial (ITB) pós-esforço associado ao teste ergométrico em esteira conferida linha a linha em 31/07/2026.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "índice tornozelo-braquial",
+      "doença arterial periférica",
+      "claudicação",
+      "teste ergométrico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "itb-pos-esforco-na-dap-com-itb-de-repouso-anormal-sbc-2024",
+    "statement": "Em paciente com doença arterial periférica já estabelecida e ITB de repouso ANORMAL (menor ou igual a 0,90), o ITB pós-esforço deve ser considerado para avaliação do estado funcional e estratificação prognóstica. Aqui o exame não serve para diagnosticar — o diagnóstico já está feito —, mas para medir limitação funcional e risco.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581 — texto integral em acesso aberto (PMC11656589), tabela de indicações de realização do índice tornozelo-braquial (ITB) pós-esforço associado ao teste ergométrico em esteira conferida linha a linha em 31/07/2026.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "índice tornozelo-braquial",
+      "doença arterial periférica",
+      "prognóstico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "itb-pos-esforco-em-diabetico-assintomatico-com-itb-alterado-sbc-2024",
+    "statement": "Em paciente DIABÉTICO ASSINTOMÁTICO com ITB de repouso anormal (menor ou igual a 0,90), o ITB pós-esforço pode ser considerado para avaliação do estado funcional e estratificação prognóstica. A recomendação separada para o diabético reconhece que a neuropatia mascara a claudicação: o paciente não relata sintoma, e a ausência de queixa não equivale a ausência de limitação.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581 — texto integral em acesso aberto (PMC11656589), tabela de indicações de realização do índice tornozelo-braquial (ITB) pós-esforço associado ao teste ergométrico em esteira conferida linha a linha em 31/07/2026.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "índice tornozelo-braquial",
+      "diabetes",
+      "doença arterial periférica",
+      "neuropatia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "itb-pos-esforco-com-pressao-transcutanea-de-oxigenio-sbc-2024",
+    "statement": "O ITB pós-esforço pode ser considerado em associação com a medida da pressão transcutânea de oxigênio no esforço para investigação de estenoses arteriais de membros inferiores.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581 — texto integral em acesso aberto (PMC11656589), tabela de indicações de realização do índice tornozelo-braquial (ITB) pós-esforço associado ao teste ergométrico em esteira conferida linha a linha em 31/07/2026.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "índice tornozelo-braquial",
+      "pressão transcutânea de oxigênio",
+      "estenose arterial"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "tcpe-no-adulto-com-cardiopatia-congenita-sbc-2024",
+    "statement": "O teste cardiopulmonar de exercício é RECOMENDADO no adulto com cardiopatia congênita, para avaliação de sintomas, decisões terapêuticas, estratificação de risco e liberação/prescrição de exercícios físicos, incluindo reabilitação. Note a força da recomendação: no adulto com cardiopatia congênita o TCPE tem Classe I, enquanto na maior parte das demais cardiopatias estruturais a diretriz o situa em IIa.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581 — texto integral em acesso aberto (PMC11656589), tabela de indicações específicas do teste cardiopulmonar de exercício (TCPE) conferida linha a linha em 31/07/2026.",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "cardiopatia congênita do adulto",
+      "TCPE",
+      "capacidade funcional",
+      "reabilitação"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "tcpe-na-avaliacao-pre-participacao-de-atleta-com-cardiopatia-congenita-sbc-2024",
+    "statement": "O teste cardiopulmonar de exercício deve ser considerado na avaliação pré-participação de atleta com cardiopatia congênita.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581 — texto integral em acesso aberto (PMC11656589), tabela de indicações específicas do teste cardiopulmonar de exercício (TCPE) conferida linha a linha em 31/07/2026.",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "cardiopatia congênita",
+      "atleta",
+      "avaliação pré-participação",
+      "TCPE"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "oximetria-no-te-em-crianca-e-adolescente-com-cardiopatia-congenita-sbc-2024",
+    "statement": "A oximetria de pulso associada ao teste ergométrico é RECOMENDADA em crianças e adolescentes com cardiopatia congênita — corrigida ou não corrigida —, cardiomiopatias, insuficiência cardíaca e valvopatias. É a única indicação de oximetria associada ao teste com Classe I na diretriz, e a justificativa é direta: nesses pacientes a dessaturação ao esforço pode ser o primeiro sinal de shunt residual ou de limitação hemodinâmica, e passa despercebida sem a medida.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581 — texto integral em acesso aberto (PMC11656589), tabela de indicações de realização de oximetria de pulso associada ao teste ergométrico conferida linha a linha em 31/07/2026.",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "oximetria de pulso",
+      "cardiopatia congênita",
+      "pediatria",
+      "dessaturação"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "oximetria-no-te-em-adulto-com-cardiopatia-congenita-ou-ic-sbc-2024",
+    "statement": "Em pacientes ADULTOS com insuficiência cardíaca ou cardiopatia congênita, a oximetria de pulso associada ao teste ergométrico pode ser considerada. A recomendação é mais fraca do que a correspondente em crianças e adolescentes, em que a mesma medida tem Classe I.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581 — texto integral em acesso aberto (PMC11656589), tabela de indicações de realização de oximetria de pulso associada ao teste ergométrico conferida linha a linha em 31/07/2026.",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "oximetria de pulso",
+      "cardiopatia congênita do adulto",
+      "insuficiência cardíaca"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "tcpe-na-estenose-aortica-grave-assintomatica-sbc-2024",
+    "statement": "Na estenose aórtica grave ASSINTOMÁTICA, o teste cardiopulmonar de exercício deve ser considerado para orientar a decisão terapêutica. O papel é o de desmascarar limitação em paciente que se declara assintomático apenas porque reduziu a própria atividade — situação em que a decisão de intervir depende de dado objetivo, não do relato.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581 — texto integral em acesso aberto (PMC11656589), tabela de indicações específicas do teste cardiopulmonar de exercício (TCPE) conferida linha a linha em 31/07/2026.",
+    "theme": "Valvopatias",
+    "tags": [
+      "estenose aórtica",
+      "assintomático",
+      "TCPE",
+      "decisão terapêutica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "tcpe-na-doenca-valvar-estavel-sbc-2024",
+    "statement": "Na doença valvar estável, o teste cardiopulmonar de exercício deve ser considerado para determinação da aptidão cardiorrespiratória, ajustes terapêuticos e liberação/prescrição de exercícios físicos, incluindo reabilitação.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581 — texto integral em acesso aberto (PMC11656589), tabela de indicações específicas do teste cardiopulmonar de exercício (TCPE) conferida linha a linha em 31/07/2026.",
+    "theme": "Valvopatias",
+    "tags": [
+      "valvopatia",
+      "TCPE",
+      "reabilitação",
+      "prescrição de exercício"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "tcpe-na-discordancia-entre-clinica-e-ecocardiograma-na-valvopatia-sbc-2024",
+    "statement": "Na doença valvar cujo quadro clínico NÃO corresponde aos achados ecocardiográficos, o teste cardiopulmonar de exercício deve ser considerado — com uma exceção explícita na diretriz: a estenose aórtica, para a qual o esclarecimento dessa discordância segue outra rota.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581 — texto integral em acesso aberto (PMC11656589), tabela de indicações específicas do teste cardiopulmonar de exercício (TCPE) conferida linha a linha em 31/07/2026.",
+    "theme": "Valvopatias",
+    "tags": [
+      "valvopatia",
+      "discordância clínico-ecocardiográfica",
+      "TCPE"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "eco-estresse-na-estenose-mitral-com-discordancia-entre-sintomas-e-area-sbc-2024",
+    "statement": "Na estenose mitral, o ecocardiograma sob estresse é RECOMENDADO quando há discordância entre os sintomas e a área/gradiente valvar, especificamente com área mitral maior que 1,5 cm² — ou seja, quando a valva não parece grave o bastante para explicar a queixa.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581 — texto integral em acesso aberto (PMC11656589), tabela de indicações do ecocardiograma sob estresse conferida linha a linha em 31/07/2026.",
+    "theme": "Valvopatias",
+    "tags": [
+      "estenose mitral",
+      "ecocardiograma de estresse",
+      "área valvar"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "eco-estresse-na-estenose-mitral-assintomatica-com-area-menor-que-1-cm2-sbc-2024",
+    "statement": "Na estenose mitral ASSINTOMÁTICA com área menor que 1 cm², o ecocardiograma sob estresse deve ser considerado. É o espelho da recomendação anterior: aqui a valva é gravíssima e o paciente não se queixa, e o esforço é usado para verificar se o silêncio clínico se sustenta.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581 — texto integral em acesso aberto (PMC11656589), tabela de indicações do ecocardiograma sob estresse conferida linha a linha em 31/07/2026.",
+    "theme": "Valvopatias",
+    "tags": [
+      "estenose mitral",
+      "assintomático",
+      "ecocardiograma de estresse"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "eco-estresse-na-estenose-mitral-antes-de-gravidez-ou-cirurgia-de-grande-porte-sbc-2024",
+    "statement": "Na estenose mitral assintomática com área entre 1 e 1,5 cm², o ecocardiograma sob estresse pode ser considerado quando há programação de GRAVIDEZ ou de cirurgia de maior porte — duas situações em que a sobrecarga hemodinâmica futura é previsível e a tolerância atual, em repouso, não a antecipa.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581 — texto integral em acesso aberto (PMC11656589), tabela de indicações do ecocardiograma sob estresse conferida linha a linha em 31/07/2026.",
+    "theme": "Valvopatias",
+    "tags": [
+      "estenose mitral",
+      "gravidez",
+      "cirurgia não cardíaca",
+      "ecocardiograma de estresse"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "eco-estresse-na-insuficiencia-mitral-com-discrepancia-entre-gravidade-e-sintomas-sbc-2024",
+    "statement": "Na insuficiência mitral, o ecocardiograma sob estresse deve ser considerado para avaliar discrepância entre a gravidade da doença valvar e os sintomas.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581 — texto integral em acesso aberto (PMC11656589), tabela de indicações do ecocardiograma sob estresse conferida linha a linha em 31/07/2026.",
+    "theme": "Valvopatias",
+    "tags": [
+      "insuficiência mitral",
+      "ecocardiograma de estresse",
+      "sintomas"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "eco-estresse-na-insuficiencia-mitral-grave-assintomatica-sbc-2024",
+    "statement": "Na insuficiência mitral GRAVE e ASSINTOMÁTICA, o ecocardiograma sob estresse deve ser considerado para avaliação da tolerância ao esforço e das alterações hemodinâmicas.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581 — texto integral em acesso aberto (PMC11656589), tabela de indicações do ecocardiograma sob estresse conferida linha a linha em 31/07/2026.",
+    "theme": "Valvopatias",
+    "tags": [
+      "insuficiência mitral",
+      "assintomático",
+      "ecocardiograma de estresse"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "eco-estresse-na-estenose-aortica-moderada-a-acentuada-assintomatica-sbc-2024",
+    "statement": "Na estenose aórtica moderada ou acentuada (estágios B e C1) ASSINTOMÁTICA, o ecocardiograma sob estresse deve ser considerado para avaliar sintomas esforço-induzidos, respostas da pressão arterial sistêmica e pulmonar, comportamento dos gradientes e função ventricular esquerda.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581 — texto integral em acesso aberto (PMC11656589), tabela de indicações do ecocardiograma sob estresse conferida linha a linha em 31/07/2026.",
+    "theme": "Valvopatias",
+    "tags": [
+      "estenose aórtica",
+      "assintomático",
+      "ecocardiograma de estresse",
+      "gradiente"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "eco-estresse-na-estenose-aortica-de-baixo-fluxo-e-baixo-gradiente-sbc-2024",
+    "statement": "Na estenose aórtica assintomática ou com sintomas leves/duvidosos, com BAIXO FLUXO e BAIXO GRADIENTE e fração de ejeção PRESERVADA, o ecocardiograma sob estresse pode ser considerado para diferenciar estenose verdadeira de PSEUDOESTENOSE. É a distinção que muda a conduta: a pseudoestenose não se beneficia de troca valvar.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581 — texto integral em acesso aberto (PMC11656589), tabela de indicações do ecocardiograma sob estresse conferida linha a linha em 31/07/2026.",
+    "theme": "Valvopatias",
+    "tags": [
+      "estenose aórtica",
+      "baixo fluxo baixo gradiente",
+      "pseudoestenose",
+      "ecocardiograma de estresse"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "eco-estresse-contraindicado-na-estenose-aortica-grave-sintomatica-sbc-2024",
+    "statement": "O ecocardiograma sob estresse — de esforço ou com dobutamina — NÃO é recomendado na estenose aórtica grave SINTOMÁTICA. O sintoma já define a indicação de intervenção; submeter esse paciente a estresse acrescenta risco sem alterar a conduta.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581 — texto integral em acesso aberto (PMC11656589), tabela de indicações do ecocardiograma sob estresse conferida linha a linha em 31/07/2026.",
+    "theme": "Valvopatias",
+    "tags": [
+      "estenose aórtica",
+      "sintomático",
+      "contraindicação",
+      "ecocardiograma de estresse"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "eco-estresse-na-insuficiencia-aortica-grave-assintomatica-sbc-2024",
+    "statement": "Na insuficiência aórtica GRAVE, assintomática ou com sintomas duvidosos, o ecocardiograma sob estresse deve ser considerado para avaliar sintomas esforço-induzidos e capacidade funcional.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581 — texto integral em acesso aberto (PMC11656589), tabela de indicações do ecocardiograma sob estresse conferida linha a linha em 31/07/2026.",
+    "theme": "Valvopatias",
+    "tags": [
+      "insuficiência aórtica",
+      "assintomático",
+      "ecocardiograma de estresse"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "eco-estresse-nao-recomendado-para-quantificar-insuficiencia-aortica-sbc-2024",
+    "statement": "O ecocardiograma sob estresse — exercício ou dobutamina — NÃO é recomendado para QUANTIFICAR a insuficiência aórtica quando há discordância entre a gravidade da lesão e os sintomas. É uma distinção fina e prática: o estresse serve para avaliar sintoma e capacidade funcional na IAo grave, mas não para medir o grau da regurgitação.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581 — texto integral em acesso aberto (PMC11656589), tabela de indicações do ecocardiograma sob estresse conferida linha a linha em 31/07/2026.",
+    "theme": "Valvopatias",
+    "tags": [
+      "insuficiência aórtica",
+      "quantificação",
+      "ecocardiograma de estresse",
+      "contraindicação"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "eco-estresse-na-avaliacao-de-protese-valvar-com-gradiente-limitrofe-sbc-2024",
+    "statement": "Em portador de prótese aórtica ou mitral, o ecocardiograma sob estresse deve ser considerado para avaliação de sintomas, confirmação de estenose hemodinamicamente significativa e/ou incompatibilidade paciente-prótese, quando o gradiente transprotético EM REPOUSO for leve a moderado — na posição aórtica, entre 20 e 40 mmHg; na posição mitral, entre 5 e 10 mmHg. Fora dessa faixa intermediária o estresse não é o que decide.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581 — texto integral em acesso aberto (PMC11656589), tabela de indicações do ecocardiograma sob estresse conferida linha a linha em 31/07/2026.",
+    "theme": "Valvopatias",
+    "tags": [
+      "prótese valvar",
+      "gradiente transprotético",
+      "mismatch paciente-prótese",
+      "ecocardiograma de estresse"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "te-com-protocolo-atenuado-na-cardiomiopatia-hipertrofica-sbc-2024",
+    "statement": "Na cardiomiopatia hipertrófica e na insuficiência cardíaca compensada, o teste ergométrico em PROTOCOLO ATENUADO deve ser considerado para esclarecimento de sintomas, avaliação da capacidade funcional e obtenção de marcadores prognósticos — sintomas, arritmia ventricular e resposta pressórica. O protocolo atenuado não é detalhe de execução: é o que torna o teste aceitável nessa população.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581 — texto integral em acesso aberto (PMC11656589), tabela de indicações do teste ergométrico na insuficiência cardíaca e nas cardiomiopatias conferida linha a linha em 31/07/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "protocolo atenuado",
+      "teste ergométrico",
+      "resposta pressórica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "te-seriado-na-cardiomiopatia-hipertrofica-para-ajuste-de-exercicio-sbc-2024",
+    "statement": "Na cardiomiopatia hipertrófica, o teste ergométrico SERIADO deve ser considerado para ajustes de programa de exercícios e de atividade esportiva recreacional.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581 — texto integral em acesso aberto (PMC11656589), tabela de indicações do teste ergométrico na insuficiência cardíaca e nas cardiomiopatias conferida linha a linha em 31/07/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "teste ergométrico seriado",
+      "prescrição de exercício"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "te-seriado-para-avaliar-resposta-pressorica-e-intervencoes-na-cmh-sbc-2024",
+    "statement": "Na cardiomiopatia hipertrófica ou na insuficiência cardíaca compensada, o teste ergométrico seriado pode ser considerado para avaliação do comportamento pressórico e do efeito de intervenções terapêuticas.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581 — texto integral em acesso aberto (PMC11656589), tabela de indicações do teste ergométrico na insuficiência cardíaca e nas cardiomiopatias conferida linha a linha em 31/07/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "resposta pressórica",
+      "seguimento"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "te-na-liberacao-de-exercicio-3-a-6-meses-apos-miocardite-sbc-2024",
+    "statement": "Em pacientes recuperados e ASSINTOMÁTICOS, após 3 a 6 meses de quadro agudo de miocardite, o teste ergométrico deve ser considerado para liberação e prescrição de prática de exercícios. Esta recomendação é o instrumento da regra de retorno já registrada nesta base a partir da Diretriz de Miocardites da SBC de 2022 — que exige, cumulativamente, função sistólica normal, biomarcadores normais e ausência de arritmia no Holter e no teste ergométrico.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581 — texto integral em acesso aberto (PMC11656589), tabela de indicações do teste ergométrico na insuficiência cardíaca e nas cardiomiopatias conferida linha a linha em 31/07/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "miocardite",
+      "retorno ao exercício",
+      "teste ergométrico",
+      "liberação"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "te-na-reavaliacao-periodica-nos-dois-primeiros-anos-apos-miocardite-sbc-2024",
+    "statement": "A reavaliação periódica com teste ergométrico após miocardite, nos primeiros 2 ANOS, deve ser considerada para identificar progressão silenciosa da doença e para estratificação de risco. O ponto que costuma escapar: a vigilância não termina na liberação para o exercício aos 3-6 meses — ela se estende por dois anos, justamente porque a progressão pode ser assintomática.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581 — texto integral em acesso aberto (PMC11656589), tabela de indicações do teste ergométrico na insuficiência cardíaca e nas cardiomiopatias conferida linha a linha em 31/07/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "miocardite",
+      "seguimento",
+      "progressão silenciosa",
+      "teste ergométrico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "tcpe-na-cardiomiopatia-hipertrofica-sbc-2024",
+    "statement": "Na cardiomiopatia hipertrófica, o teste cardiopulmonar de exercício deve ser considerado para avaliar aptidão cardiorrespiratória, estratificação de risco e liberação/prescrição de exercícios físicos, incluindo reabilitação.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581 — texto integral em acesso aberto (PMC11656589), tabela de indicações específicas do teste cardiopulmonar de exercício (TCPE) conferida linha a linha em 31/07/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "TCPE",
+      "estratificação de risco"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "eco-estresse-na-cmh-sintomatica-com-gradiente-de-repouso-baixo-sbc-2024",
+    "statement": "Na cardiomiopatia hipertrófica SINTOMÁTICA com gradiente intraventricular de repouso — ou provocável por manobra de Valsalva — MENOR que 50 mmHg, o ecocardiograma sob estresse é RECOMENDADO para avaliação do grau de obstrução dinâmica e do refluxo mitral durante o esforço. É a situação clássica do paciente sintomático cuja obstrução não aparece em repouso nem à Valsalva, e só se revela no exercício.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581 — texto integral em acesso aberto (PMC11656589), tabela de indicações do ecocardiograma sob estresse conferida linha a linha em 31/07/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "obstrução dinâmica",
+      "ecocardiograma de estresse",
+      "Valsalva"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "eco-estresse-na-cmh-assintomatica-sem-obstrucao-em-repouso-sbc-2024",
+    "statement": "Na cardiomiopatia hipertrófica ASSINTOMÁTICA e sem obstrução dinâmica em repouso, o ecocardiograma sob estresse pode ser considerado quando a detecção de gradiente na via de saída do ventrículo esquerdo for relevante para orientar mudança de estilo de vida, mudança profissional ou tomada de decisão terapêutica.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581 — texto integral em acesso aberto (PMC11656589), tabela de indicações do ecocardiograma sob estresse conferida linha a linha em 31/07/2026.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "assintomático",
+      "via de saída do VE",
+      "ecocardiograma de estresse"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "te-no-pre-operatorio-de-paciente-de-risco-intermediario-ou-alto-sbc-2024",
+    "statement": "O teste ergométrico deve ser considerado no pré-operatório de paciente com risco intermediário ou alto de complicações, conforme a classificação do risco intrínseco da cirurgia estabelecida pela Diretriz de Avaliação Cardiovascular Perioperatória da SBC.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581 — texto integral em acesso aberto (PMC11656589), tabela de indicações do teste ergométrico (pré-operatório) conferida linha a linha em 31/07/2026.",
+    "theme": "Perioperatório",
+    "tags": [
+      "pré-operatório",
+      "teste ergométrico",
+      "risco cirúrgico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "te-no-pre-operatorio-com-historia-familiar-de-dac-precoce-sbc-2024",
+    "statement": "O teste ergométrico deve ser considerado no pré-operatório de cirurgia não cardíaca de médio e grande porte em paciente com história familiar de doença arterial coronariana PRECOCE.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581 — texto integral em acesso aberto (PMC11656589), tabela de indicações do teste ergométrico (pré-operatório) conferida linha a linha em 31/07/2026.",
+    "theme": "Perioperatório",
+    "tags": [
+      "pré-operatório",
+      "história familiar",
+      "DAC precoce",
+      "teste ergométrico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "tcpe-no-pre-operatorio-com-baixa-capacidade-funcional-sbc-2024",
+    "statement": "O teste cardiopulmonar de exercício deve ser considerado no pré-operatório de cirurgia não cardíaca em pacientes com BAIXA capacidade funcional (menos de 4 METs) e/ou alto risco cardiovascular. É justamente o paciente em que a estimativa funcional por questionário falha — e em que a medida objetiva do consumo de oxigênio substitui a suposição.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581 — texto integral em acesso aberto (PMC11656589), tabela de indicações específicas do teste cardiopulmonar de exercício (TCPE) conferida linha a linha em 31/07/2026.",
+    "theme": "Perioperatório",
+    "tags": [
+      "pré-operatório",
+      "TCPE",
+      "METs",
+      "capacidade funcional"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "eco-estresse-no-pre-operatorio-de-risco-intermediario-e-alto-sbc-2024",
+    "statement": "O ecocardiograma sob estresse é RECOMENDADO na avaliação pré-operatória de cirurgia não cardíaca em paciente de risco intermediário e alto segundo escores de risco — o Índice de Risco Cardíaco Revisado (RCRI, de Lee), o índice do American College of Physicians (ACP) e o Estudo Multicêntrico de Avaliação Perioperatória (EMAPO).",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581 — texto integral em acesso aberto (PMC11656589), tabela de indicações do ecocardiograma sob estresse conferida linha a linha em 31/07/2026.",
+    "theme": "Perioperatório",
+    "tags": [
+      "pré-operatório",
+      "ecocardiograma de estresse",
+      "RCRI",
+      "EMAPO"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "eco-estresse-no-pre-operatorio-de-risco-intermediario-com-fator-de-risco-sbc-2024",
+    "statement": "Na avaliação pré-operatória de cirurgia não cardíaca de risco INTERMEDIÁRIO, o ecocardiograma sob estresse deve ser considerado em paciente com um ou mais fatores de risco e/ou em baixa classe funcional (menos de 4 METs).",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581 — texto integral em acesso aberto (PMC11656589), tabela de indicações do ecocardiograma sob estresse conferida linha a linha em 31/07/2026.",
+    "theme": "Perioperatório",
+    "tags": [
+      "pré-operatório",
+      "ecocardiograma de estresse",
+      "classe funcional"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "eco-estresse-nao-recomendado-no-pre-operatorio-com-boa-classe-funcional-sbc-2024",
+    "statement": "O ecocardiograma sob estresse NÃO é recomendado no pré-operatório de cirurgia não cardíaca de risco intermediário em paciente com classe funcional igual ou superior a 4 METs. Capacidade funcional preservada dispensa o exame — e é o par indispensável da recomendação Classe I acima: sem essa contrapartida, a estratificação vira rastreamento indiscriminado.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em População Adulta – 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, Hossri CAC, Milani M, et al. Diretriz Brasileira de Ergometria em População Adulta – 2024. Arq Bras Cardiol. 2024;121(3):e20240110. DOI: 10.36660/abc.20240110. PMID: 38896581 — texto integral em acesso aberto (PMC11656589), tabela de indicações do ecocardiograma sob estresse conferida linha a linha em 31/07/2026.",
+    "theme": "Perioperatório",
+    "tags": [
+      "pré-operatório",
+      "ecocardiograma de estresse",
+      "METs",
+      "não recomendado"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
