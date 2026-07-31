@@ -2953,7 +2953,7 @@
   },
   {
     "slug": "olmesartana-medoxomila",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Olmesartana medoxomila",
     "drug_class": "Bloqueador do receptor de angiotensina II (BRA/ARA-II)",
     "mechanism": "Antagonista seletivo e competitivo do receptor AT1 de angiotensina II, bloqueando efeitos de vasoconstrição e secreção de aldosterona",
@@ -2970,9 +2970,9 @@
       "- **Agentes que aumentam potássio** (poupador de potássio, suplemento de potássio): risco de hipercalemia - **AINE**: reduz o efeito anti-hipertensivo e aumenta risco de lesão renal - **Dupla inibição do sistema renina-angiotensina** (associação com IECA ou alisquireno): maior risco de lesão renal, hipotensão e hipercalemia"
     ],
     "contraindications": [
+      "Hipersensibilidade aos componentes da fórmula",
       "Gravidez",
-      "Insuficiência hepática grave/colestase",
-      "Hipersensibilidade"
+      "Uso concomitante de alisquireno em paciente diabético"
     ],
     "dosing": {
       "hipertensao adulto inicial": "20 mg 1x/dia",
@@ -2980,16 +2980,15 @@
       "pediatria 6 anos ou mais peso maior 35kg": "20 mg 1x/dia (dose inicial igual à do adulto)",
       "Ajuste renal": "não é necessário ajuste na insuficiência renal leve a moderada (ClCr 30-90 mL/min)",
       "Ajuste hepático": "não é necessário ajuste, mesmo em disfunção hepática grave — cautela, pois alteração de fluidos/eletrólitos pode precipitar coma hepático em hepatopata grave",
-      "fonte": "WeMeds — Olmesartana para Hipertensão; bula FDA/DailyMed"
+      "fonte": "Bula profissional brasileira da olmesartana medoxomila (Accord Farma, versão VPS 12.2022, RDC 47/2009) — confirma a posologia já registrada (20mg inicial, até 40mg se necessário após 2 semanas, sem efeito adicional acima de 40mg; pediatria ≥6 anos e >35kg com mesma dose inicial do adulto). Substituída a citação anterior ao WeMeds, fonte de blog/portal educacional, não bula — mesma categoria de fonte fraca já removida de outros pontos do acervo."
     },
     "notes": {
-      "Relacao com sacubitril-valsartana": "Não associar. O sacubitril-valsartana **já contém valsartana**, de modo que somar um BRA a ele é duplicar o bloqueio do receptor de angiotensina, sem ganho e com mais hipotensão, hipercalemia e disfunção renal — o rótulo é explícito: evitar o uso conjunto com BRA, porque o produto contém valsartana (seção 7.1).\n\n**Sobre o intervalo de troca**: a janela obrigatória de 36 horas do rótulo se aplica **somente ao IECA** — 'se estiver trocando de um IECA para o ENTRESTO, permita um período de washout de 36 horas entre a administração dos dois medicamentos' (seções 2.1 e 4). Para BRA o rótulo **não impõe intervalo algum**: ele trata do BRA apenas na seção de uso concomitante. A diferença tem motivo mecanístico, e é o que a janela previne: o risco de angioedema vem da inibição simultânea da neprilisina e da ECA, e o BRA não inibe a ECA. Na prática, o BRA é **substituído na dose seguinte**, sem suspensão prévia.\n\nHistória de angioedema por IECA **ou por BRA** contraindica o sacubitril-valsartana.\n\nFonte: rótulo do sacubitril-valsartana aprovado pelo FDA (DailyMed SPL setid 000dc81d-ab91-450c-8eae-8eb74e72296f), seções 2.1, 4 e 7.1."
+      "Relacao com sacubitril-valsartana": "Não associar. O sacubitril-valsartana **já contém valsartana**, de modo que somar um BRA a ele é duplicar o bloqueio do receptor de angiotensina, sem ganho e com mais hipotensão, hipercalemia e disfunção renal — o rótulo é explícito: evitar o uso conjunto com BRA, porque o produto contém valsartana (seção 7.1).\n\n**Sobre o intervalo de troca**: a janela obrigatória de 36 horas do rótulo se aplica **somente ao IECA** — 'se estiver trocando de um IECA para o ENTRESTO, permita um período de washout de 36 horas entre a administração dos dois medicamentos' (seções 2.1 e 4). Para BRA o rótulo **não impõe intervalo algum**: ele trata do BRA apenas na seção de uso concomitante. A diferença tem motivo mecanístico, e é o que a janela previne: o risco de angioedema vem da inibição simultânea da neprilisina e da ECA, e o BRA não inibe a ECA. Na prática, o BRA é **substituído na dose seguinte**, sem suspensão prévia.\n\nHistória de angioedema por IECA **ou por BRA** contraindica o sacubitril-valsartana.\n\nFonte: rótulo do sacubitril-valsartana aprovado pelo FDA (DailyMed SPL setid 000dc81d-ab91-450c-8eae-8eb74e72296f), seções 2.1, 4 e 7.1.",
+      "Insuficiencia hepatica grave — nao e contraindicacao formal": "**Corrigido em 31/07/2026**: a versão anterior listava insuficiência hepática grave/colestase como contraindicação formal. A bula brasileira (Accord Farma, item 4) não traz esse item — trata-o na seção de posologia: disfunção hepática leve a moderada não exige ajuste; em insuficiência hepática **grave** (assim como em insuficiência renal grave, ClCr<40, ou possível depleção de volume), iniciar sob supervisão cuidadosa com dose inicial menor — é precaução reforçada, não proibição."
     },
     "references": [
-      "Olmesartan medoxomil — rótulo aprovado pelo FDA, DailyMed SPL setid 574d2679-c036-fa12-e063-6394a90aef33",
-      "Olmesartana para Hipertensão: como funciona e como prescrever · WeMeds · 2025 · https://portal.wemeds.com.br/olmesartana-para-hipertensao-como-prescrever/",
-      "Bula para Profissionais - Olmesartana medoxomila · Accord Farma · https://accordfarma.com.br/bulas/bula_Olmesartana_medoxomila_Profissional.pdf",
-      "Olmesartan medoxomil — bula FDA/DailyMed (múltiplas versões consultadas)"
+      "Bula profissional da olmesartana medoxomila, Accord Farma — accordfarma.com.br, versão VPS 12.2022, RDC 47/2009",
+      "Olmesartan medoxomil — rótulo aprovado pelo FDA, DailyMed SPL setid 574d2679-c036-fa12-e063-6394a90aef33"
     ],
     "pregnancy": "**Contraindicada na gravidez, com categoria dupla: C no primeiro trimestre e D no segundo e terceiro.** A bula não tem experiência clínica em gestantes. O uso de fármacos que agem diretamente no sistema renina-angiotensina no **segundo e terceiro trimestres** foi associado a dano fetal e até morte. Determina que **mulheres em idade fértil sejam informadas** das consequências da exposição nesses trimestres e orientadas a relatar gravidez imediatamente; diagnosticada a gravidez, descontinuar o mais breve possível e substituir a medicação. Fonte: bula do BENICAR (olmesartana medoxomila, Daiichi Sankyo), itens 4 e 5.",
     "lactation": "**Decisão do médico entre suspender a amamentação ou o fármaco.** A olmesartana é secretada em baixa concentração no leite de ratas lactantes; **não se sabe se é excretada no leite humano**. A bula pede que se pese a importância do medicamento para a mãe contra o potencial de eventos adversos no lactente. Fonte: bula do BENICAR (olmesartana medoxomila, Daiichi Sankyo)."
