@@ -3,7 +3,7 @@ title: "Atropina"
 slug: atropina
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Atropine · StatPearls (NCBI Bookshelf) · https://www.ncbi.nlm.nih.gov/books/NBK470551/", "ATROPINE SULFATE INJECTION — bula FDA", "Atropine (ACLS) — ACLS Certification Institute"]
 ---
 

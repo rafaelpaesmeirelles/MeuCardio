@@ -3,7 +3,7 @@ title: "Atenolol"
 slug: atenolol
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Atenolol tablets — rótulo aprovado pelo FDA, DailyMed SPL setid c58e12ad-d705-4643-91ac-ff079e9eb28e"]
 legacy_source: "medicamentos/banco-de-medicamentos-atenolol.md"
 ---

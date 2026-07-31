@@ -3,7 +3,7 @@ title: "Atorvastatina (cálcica)"
 slug: atorvastatina-calcica
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["LIPITOR (atorvastatin calcium) — rótulo aprovado pelo FDA, via DailyMed, SPL setid a60cc18b-0631-4cf0-b021-9f52224ece65, seções 2.3 (HeFH pediátrica) e 2.4 (HoFH pediátrica) · consultado em 29/07/2026", "Atorvastatin calcium tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 86841382-4229-4e03-958e-3ac22639efd4"]
 legacy_source: "medicamentos/banco-de-medicamentos-item-21.md"
 ---
