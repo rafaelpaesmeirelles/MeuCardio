@@ -225,12 +225,27 @@ contra o `git log` do dia.
 > (RACE 35926542 e MR BPA 35926544, em Hipertensão pulmonar) e peso/condicionamento/exercício na FA
 > (LEGACY 25792361, CARDIO-FIT 26113406 e ACTIVE-AF 36752479, em Fibrilação atrial).
 >
-> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **21 documentos novos, todos publicados**
-> `content/*.md` de **424 para 445**; `documents`: **445 total = 445 publicados**, sem nenhuma linha
-> não publicada depois da limpeza de órfãos. **Acervo total das nove frentes: 972** — **faltam
-> 1.028 para os 2.000**, sem prazo fixo, conforme a decisão registrada na seção da META. (Os números
-> de evidências, estudos, exames e galeria incluem o que a sessão da Biblioteca entregou no mesmo
-> dia.)
+> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **27 documentos novos, todos publicados**
+> `content/*.md` de **424 para 453**. **Acervo total das nove frentes: 980** — **faltam 1.020 para
+> os 2.000**, sem prazo fixo, conforme a decisão registrada na seção da META. (Os números das
+> frentes JSON e parte dos documentos incluem o que a sessão da Biblioteca entregou no mesmo dia; os
+> 27 acima são só desta sessão.)
+>
+> **8º lote — 2 documentos**: semaglutida na ICFEp com obesidade (STEP-HFpEF, PMID 37622681) e
+> tolvaptana na IC descompensada (EVEREST, PMID 17384437), escolhidos para o mesmo lote pelo
+> contraste — um positivo em desfecho centrado no paciente e neutro em desfecho duro, o outro
+> positivo em fisiologia e neutro em prognóstico.
+>
+> **9º lote — 2 documentos**: elevação de creatinina ao iniciar IECA/BRA (Bakris e Weir, PMID
+> 10724055, em Hipertensão) e anemia na IC tratada com agente estimulador da eritropoiese (RED-HF,
+> PMID 23473338).
+>
+> **A correção do RAG se validou em condição real logo depois** — e vale mais que o teste sintético:
+> um `import_directory()` de rotina trouxe um documento novo da outra sessão
+> (`cardioneuroablacao-na-sincope-reflexa-...`), que entrou `published = false`, e o
+> `indexar_tudo()` **não o indexou**. Auditoria no mesmo momento: **zero trechos de documentos não
+> publicados no índice**. Antes da correção, esse documento teria ido parar no contexto da IA
+> clínica sem estar publicado — foi exatamente assim que o defeito apareceu.
 >
 > **7º lote — 2 documentos**: por que o DOAC é contraindicado em prótese valvar mecânica (RE-ALIGN,
 > PMID 23991661, em Tromboembolismo) e FA pós-operatória de cirurgia cardíaca (CTSN, PMID 27043047,
