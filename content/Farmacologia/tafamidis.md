@@ -4,7 +4,7 @@ slug: tafamidis
 theme: "Farmacologia"
 kind: farmacologia
 review_status: revisado
-source_refs: ["Tafamidis Treatment for Patients with Transthyretin Amyloid Cardiomyopathy · New England Journal of Medicine · https://www.nejm.org/doi/full/10.1056/NEJMoa1805689", "Tafamidis in Transthyretin Cardiomyopathy Clinical Trial · American College of Cardiology · https://www.acc.org/latest-in-cardiology/clinical-trials/2018/08/25/23/02/attr-act", "Current and Future Treatment Landscape of Transthyretin Amyloid Cardiomyopathy · PMC · https://pmc.ncbi.nlm.nih.gov/articles/PMC12379670/"]
+source_refs: ["Bula profissional do VYNDAQEL (tafamidis meglumina, Pfizer), aprovada pela ANVISA em 22/10/2025 · https://pfizer.com.br/bulas/vyndaqel · encontrada em 31/07/2026, itens Contraindicações e Uso na gravidez/lactação — antes só havia RCM europeu e revisão PMC citados", "Tafamidis Treatment for Patients with Transthyretin Amyloid Cardiomyopathy · New England Journal of Medicine · https://www.nejm.org/doi/full/10.1056/NEJMoa1805689", "Tafamidis in Transthyretin Cardiomyopathy Clinical Trial · American College of Cardiology · https://www.acc.org/latest-in-cardiology/clinical-trials/2018/08/25/23/02/attr-act", "Current and Future Treatment Landscape of Transthyretin Amyloid Cardiomyopathy · PMC · https://pmc.ncbi.nlm.nih.gov/articles/PMC12379670/"]
 ---
 
 # Tafamidis
@@ -37,3 +37,24 @@ Cardiomiopatia amiloide por transtirretina (ATTR-CM), tanto na forma hereditári
 - **insuficiencia hepatica moderada**: exposição sistêmica reduzida em aproximadamente 40%
 - **administracao com alimentos**: sem diferença farmacocinética relevante
 - **fonte**: PMC (panorama de tratamento de ATTR-CM)
+
+## Contraindicacoes — acrescentado em 31/07/2026
+Nenhuma seção própria existia neste documento. Bula profissional do VYNDAQEL, item 4:
+- Hipersensibilidade ao tafamidis ou a qualquer excipiente
+- **Amamentação — contraindicação formal**, texto literal: "este medicamento é contraindicado
+  durante o aleitamento ou doação de leite, pois é excretado no leite" — não é recomendação de
+  cautela, é proibição. O RCM europeu (fonte anterior deste documento) tratava só como "não
+  recomendado", mais brando; a bula brasileira é categórica
+
+## Gravidez e lactacao — acrescentado em 31/07/2026
+**Gravidez**: categoria de risco **C**, uso "não recomendado" — Advertência, não contraindicação
+formal. Contracepção recomendada por 1 mês após o fim do tratamento.
+
+**Lactação**: ver Contraindicações acima — proibição formal, não Advertência.
+
+## Uso pediatrico e pos-transplante — acrescentado em 31/07/2026
+**Não deve ser usado em população pediátrica** — não é questão de segurança não estabelecida, é
+que a cardiomiopatia amiloide por transtirretina não ocorre nessa faixa etária.
+
+**Sem estudo em pós-transplante de órgão**: descontinuar tafamidis se o paciente for
+transplantado.
