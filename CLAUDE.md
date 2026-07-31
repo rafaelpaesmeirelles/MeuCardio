@@ -1745,8 +1745,33 @@ monta a impressão.
 
 ### Trabalho novo
 
-00. **🚨 UMA EVIDÊNCIA NO AR MOSTRA "Classe Forte" AO ASSINANTE — decisão do Rafael,
-    não mexi.** Achado em 31/07/2026 pela sessão da Biblioteca, ao varrer a taxonomia
+00. **✅ RESOLVIDO em 31/07/2026 — e o desbloqueio vale para toda diretriz em GRADE.**
+    O Rafael autorizou ("reescreva com a diretriz mais recente possível, procure
+    também na SBC"). **A busca mostrou que o problema nunca foi a fonte:** a OMS 2024
+    segue sendo a mais recente e específica sobre prevenção primária da febre
+    reumática; não há diretriz brasileira de febre reumática em acesso aberto no PMC;
+    a AHA 2015 é sobre critérios de Jones e não cobre tratamento de faringite; e a
+    AHA 2009, que cobre, está atrás de paywall. Era o **esquema**, não a diretriz.
+    **Correção aplicada em dois lugares**, porque o defeito estava nos dois:
+    - `frontend/src/pages/Evidencia.tsx`: os rótulos passaram a ser decididos de forma
+      **independente** — `Classe`/`Força` conforme a classe pertença ou não à escala
+      ESC, e `Nível`/`Certeza` conforme o nível seja ou não letra A/B/C. A
+      independência é necessária porque a diretriz da SBC de Chagas usa força "Forte"
+      **junto com** nível A/B/C: ali o certo é "Força Forte" + "Nível B";
+    - `backend/app/api/favorites.py`: a mesma distinção no campo `meta`, que também
+      montava `"Classe {x}"` cru.
+    Frontend e backend rebuildados e verificados no ar (bundle contém `Força`,
+    `Nível` e `Certeza`). **Consequência prática imediata:** as diretrizes brasileiras
+    em GRADE deixaram de estar barradas — a de Chagas entrou no mesmo dia com 5
+    evidências, e a de eco de estresse fica liberada para quem continuar. Cada
+    registro em GRADE carrega uma **nota de sistema** explicando o vocabulário,
+    inclusive que na diretriz de Chagas o nível A significa evidência obtida NA
+    cardiomiopatia chagásica, B evidência extrapolada de outras cardiopatias e C
+    ausência de evidência empírica — definições próprias, diferentes das letras da ESC.
+    *Registro original do achado, mantido como histórico:*
+
+    **🚨 UMA EVIDÊNCIA NO AR MOSTRAVA "Classe Forte" AO ASSINANTE.** Achado em
+    31/07/2026 pela sessão da Biblioteca, ao varrer a taxonomia
     de `recommendation_class`. É a materialização exata do problema de esquema que
     esta sessão vinha evitando criar — e que já existia no ar sem ninguém notar.
     - **Item:** `tratamento-antibiotico-da-faringite-estreptococica-como-prevencao-primaria-da-febre-reumatica`,
