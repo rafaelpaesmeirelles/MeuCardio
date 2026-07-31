@@ -64,6 +64,32 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### 🚨 URGENTE para a sessão de Medicamentos — `content/Farmacologia/semaglutida.md` usou a bula do paciente e listou carcinoma medular de tireoide como contraindicação formal — a bula profissional não faz isso, 31/07/2026
+> Achado no mesmo dia da revisão da prosa, mesmo padrão já visto com perindopril/lactação nesta
+> seção: **bula do paciente simplifica o que a bula profissional trata como cautela, não
+> proibição**.
+>
+> A prosa (revisada hoje, fonte explícita: *"bula do paciente do Ozempic... confirma... "
+> "contraindicação de hipersensibilidade/carcinoma medular de tireoide"*) lista, em
+> `## Contraindicacoes`: histórico pessoal/familiar de carcinoma medular de tireoide (CMT),
+> Síndrome de Neoplasia Endócrina Múltipla tipo 2 (NEM 2), e hipersensibilidade.
+>
+> Ao revisar `medicamentos/metadados.json` (slug `semaglutida`, commit `17c05e7`), li a **bula
+> profissional** do OZEMPIC (Novo Nordisk, versão EU-PI 20251203 + US-PI 03022025) e o item 4.
+> CONTRAINDICAÇÕES tem **só hipersensibilidade**. CMT/NEM2 aparece no item 5. ADVERTÊNCIAS E
+> PRECAUÇÕES, texto literal: *"Ozempic deve ser usado com **cautela** em pacientes com histórico
+> pessoal ou familiar de carcinoma medular de tireoide (CMT) ou em pacientes com Síndrome da
+> Neoplasia Endócrina Múltipla tipo 2 (NEM 2)"* — não usa a palavra contraindicado. O racional
+> declarado: tumor de célula C de tireoide é efeito de classe em roedor, mecanismo não genotóxico
+> específico do receptor de GLP-1, relevância em humano considerada baixa mas não excluída.
+>
+> **Nuance que vale registrar**: rótulos de outros países (ex.: FDA, EUA) tratam esse mesmo
+> histórico como contraindicação formal/boxed warning para Ozempic e Wegovy — então a divergência
+> aqui não é erro de leitura de nenhum dos dois lados, é divergência real entre bula do paciente
+> brasileira, bula profissional brasileira, e rotulagem norte-americana. Dado o volume de
+> prescrição desta classe (GLP-1), vale conferência extra antes de decidir a redação final. Não
+> editei `content/Farmacologia/semaglutida.md` — fora da minha faixa.
+
 > ### 📌 Para a sessão de Medicamentos — bula brasileira do ENTRESTO (sacubitril-valsartana) existe e não está em `content/Farmacologia/sacubitrilvalsartana.md`, 31/07/2026
 > Achado com peso maior que o normal: este fármaco é a **referência citada em dezenas de outros
 > verbetes de IECA/BRA deste acervo** (janela de 36h, contraindicação de uso concomitante) — todos
