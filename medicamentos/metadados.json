@@ -1250,7 +1250,7 @@
   },
   {
     "slug": "dobutamina",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Dobutamina",
     "brand_names": [
       "Dobutrex"
@@ -1267,17 +1267,24 @@
       "Monitorização hemodinâmica contínua (pressão arterial, frequência cardíaca, débito cardíaco quando disponível), ECG contínuo pelo risco de taquiarritmias, e avaliação seriada de perfusão tecidual (lactato, diurese)"
     ],
     "adverse_effects": [
-      "Taquicardia, arritmias ventriculares e supraventriculares, aumento do consumo de oxigênio miocárdico, hipotensão em doses mais baixas (efeito vasodilatador), cefaleia, náusea"
+      "Cardiovasculares comuns (>1% e <10%): aumento de FC, PA e atividade ectópica ventricular — aumento de PAS de 10-20 mmHg e FC de 5-15 bpm na maioria dos pacientes; ~5% dos adultos tiveram aumento de extrassístoles ventriculares durante a infusão (efeitos dose-dependentes). Outras: hipertensão, hipotensão, intensificação de isquemia, taquicardia, palpitações, extrassístole ventricular, taquicardia ventricular; raros casos de ruptura cardíaca fatal durante teste de estresse com dobutamina",
+      "Local de infusão: flebite ocasional, alterações inflamatórias após infiltração inadvertida, casos isolados de necrose cutânea",
+      "Outros comuns (1-3% dos adultos): náusea, cefaleia, dor anginosa, dor torácica inespecífica, palpitações, respiração curta. Erupção cutânea; casos isolados de trombocitopenia; leve redução do potássio sérico, raramente a nível hipocalêmico",
+      "**fonte**: bula do DOBUTREX (cloridrato de dobutamina, Antibióticos do Brasil), item 9"
     ],
     "contraindications": [
-      "Estenose subaórtica hipertrófica idiopática",
-      "Taquiarritmias ventriculares não controladas",
-      "Hipersensibilidade ao fármaco"
+      "Estenose subaórtica hipertrófica idiopática (cardiomiopatia hipertrófica obstrutiva) — a obstrução pode aumentar",
+      "Feocromocitoma — risco de hipertensão grave",
+      "Taquiarritmias ou fibrilação ventricular — risco de exacerbação da arritmia",
+      "Hipersensibilidade à dobutamina",
+      "**fonte**: bula do DOBUTREX (cloridrato de dobutamina, Antibióticos do Brasil), item 4. **Corrigido em 31/07/2026**: 'feocromocitoma' estava ausente da lista anterior"
     ],
     "dosing": {
-      "faixa geral": "2-20 mcg/kg/min, ajustada conforme resposta hemodinâmica (débito cardíaco, pressão arterial, perfusão)",
+      "faixa adulto": "Iniciar com a dose mais baixa (2,5 mcg/kg/min), titulando a intervalos de alguns minutos guiado pela resposta clínica. A maioria dos pacientes situa-se entre 2,5 e 10 mcg/kg/min; frequentemente são necessários até 20 mcg/kg/min para melhora hemodinâmica adequada; em raras ocasiões, doses de até 40 mcg/kg/min foram relatadas",
+      "faixa pediatrica": "Geralmente 5 a 20 mcg/kg/min, considerando particularidades da resposta clínica",
+      "duracao": "Experiência em ensaios controlados não se estende além de 48 horas de administração contínua",
       "efeito dose dependente": "Doses menores que 5 mcg/kg/min podem produzir leve vasodilatação por estimulação beta-2 relativa; doses mais altas predominam efeito inotrópico/cronotrópico via beta-1",
-      "fonte": "HCRP USP — Vasopressores e Inotrópicos"
+      "fonte": "bula do DOBUTREX (cloridrato de dobutamina, Antibióticos do Brasil), item 8. **Corrigido em 31/07/2026**: a fonte anterior era um artigo institucional (HCRP-USP), com faixa mais genérica (2-20 mcg/kg/min); a bula tem dose inicial específica (2,5, não 2), teto raro de 40 mcg/kg/min e faixa pediátrica própria"
     },
     "notes": {
       "Diluicao padrao": "1 ampola (250 mg/20 mL) em 230 mL de SF 0,9% (concentração final de 1 mg/mL)",
@@ -1287,7 +1294,8 @@
     "references": [
       "Vasopressores e inotrópicos na Sala de Urgência · Revista Qualidade HC — USP · https://hcrp.usp.br/revistaqualidade/uploads/Artigos/197/197.pdf",
       "Dobutamina: Uso Clínico · Guia TdC · 2025 · https://www.tadeclinicagem.com.br/guia/396/dobutamina-uso-clinico/",
-      "Resumo sobre Dobutamina: indicações, farmacologia e mais! · Estratégia MED · 2024 · https://med.estrategia.com/portal/conteudos-gratis/farmacos/resumo-sobre-dobutamina-indicacoes-farmacologia-e-mais/"
+      "Resumo sobre Dobutamina: indicações, farmacologia e mais! · Estratégia MED · 2024 · https://med.estrategia.com/portal/conteudos-gratis/farmacos/resumo-sobre-dobutamina-indicacoes-farmacologia-e-mais/",
+      "Bula do DOBUTREX (cloridrato de dobutamina, Antibióticos do Brasil Ltda.), via ablbrasil.com.br — usada para contraindicações completas (item 4), posologia (item 8) e reações adversas (item 9)"
     ],
     "pregnancy": "**Sem evidência de dano em animais; sem uso estudado em gestantes.** Os estudos de reprodução em ratas e coelhas **não revelaram evidência de dano ao feto** atribuível à dobutamina. O fármaco, porém, **não foi administrado a mulheres grávidas**, e deve ser usado apenas quando os benefícios esperados superarem claramente os riscos potenciais ao feto. Fonte: rótulo aprovado pelo FDA (DailyMed) para a dobutamina injetável. Fonte norte-americana, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil nos espelhos consultados, nem EPAR na EMA. Conferir contra a bula brasileira quando ela aparecer.",
     "lactation": "Revisado pelo Rafael em 30/07/2026 — o rótulo aprovado pelo FDA (DailyMed) para a dobutamina injetável foi lido nesta sessão e **não traz seção de lactação** (\"Nursing Mothers\" ausente do documento). A gravidez está coberta pela mesma fonte. Fonte consultada e silente sobre o campo."
