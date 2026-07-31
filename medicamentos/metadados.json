@@ -504,7 +504,7 @@
   },
   {
     "slug": "bisoprolol-hemifumarato",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Bisoprolol (hemifumarato)",
     "brand_names": [
       "Bizo",
@@ -531,7 +531,7 @@
     "interactions": [
       "Verapamil IV pode causar hipotensão profunda e bloqueio AV; agentes anti-hipertensivos de ação central (clonidina) podem causar hipertensão rebote na suspensão abrupta; mascara sintomas de hipoglicemia em diabéticos"
     ],
-    "pregnancy": "Categoria C — não recomendado a menos que estritamente necessário; contraindicado na lactação",
+    "pregnancy": "**Categoria de risco C.** Estudos em animais revelaram risco; não há estudos em gestantes. Betabloqueadores reduzem a perfusão placentária, associada a restrição de crescimento fetal, morte intrauterina, aborto ou parto prematuro; podem ocorrer hipoglicemia e bradicardia no feto/recém-nascido. **Não recomendado na gravidez a menos que estritamente necessário**; se usado, monitorizar fluxo uteroplacentário e crescimento fetal, e vigiar o recém-nascido rigorosamente — hipoglicemia e bradicardia neonatais são esperadas nos primeiros 3 dias. Fonte: bula do BIZO (hemifumarato de bisoprolol, Eurofarma), seção \"Gravidez e lactação\".",
     "dosing": {
       "hipertensao angina": "5 mg 1x/dia; se necessário, aumentar para 10 mg 1x/dia; dose máxima recomendada de 20 mg 1x/dia",
       "icc titulacao semana1": "1,25 mg 1x/dia",
@@ -554,7 +554,7 @@
       "Bizo (hemifumarato de bisoprolol) — Bula para Profissional da Saúde · Eurofarma/Sanofi Medley · 2025 · https://bulas-hm.eurofarma.com.br/storage/media/15850/EZaC1XBYfNGjKPvrFofyImmf7HKyOoRDoFTGr2GE.pdf",
       "CIBIS-II Investigators and Committees · 1999 · 353:9-13"
     ],
-    "lactation": "**Não recomendado durante a amamentação.** Não há dados sobre excreção do bisoprolol no leite humano nem sobre a segurança da exposição em crianças. Fonte: bula do profissional do Concor (Merck S.A.)."
+    "lactation": "**Contraindicado no aleitamento ou doação de leite humano** — a bula usa literalmente 'contraindicado' nesta seção, mesmo sem dado quantitativo de excreção láctea (não há dados disponíveis sobre excreção no leite humano nem sobre segurança da exposição do recém-nascido). Fonte: bula do BIZO (hemifumarato de bisoprolol, Eurofarma), seção \"Gravidez e lactação\" — consistente com a bula do Concor (Merck) já citada aqui antes desta revisão, que usava 'não recomendado'; mantida a redação mais forte ('contraindicado') por ser a literal do item específico de lactação da bula do Bizo."
   },
   {
     "slug": "bivalirudina",
