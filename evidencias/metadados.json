@@ -6792,7 +6792,6 @@
     "published": false
   },
   {
-<<<<<<< Updated upstream
     "slug": "isglt2-em-icfem-e-icfep",
     "statement": "Um inibidor de SGLT2 (dapagliflozina ou empagliflozina) é recomendado em pacientes com insuficiência cardíaca com fração de ejeção levemente reduzida (ICFEm) ou preservada (ICFEp) para reduzir o risco de hospitalização por insuficiência cardíaca ou morte cardiovascular.",
     "recommendation_class": "I",
@@ -6809,7 +6808,11 @@
       "dapagliflozina",
       "empagliflozina",
       "quatro pilares"
-=======
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
     "slug": "whf-rastreio-positivo-encaminhar-para-eco-confirmatorio",
     "statement": "Diante de critérios de RASTREAMENTO positivos para cardiopatia reumática, o paciente deve ser encaminhado para ecocardiograma CONFIRMATÓRIO. Em circunstâncias especiais, pode ser razoável inscrevê-lo no registro de cardiopatia reumática e/ou iniciar profilaxia secundária enquanto aguarda o exame confirmatório — mantendo-a até que ele seja obtido.",
     "recommendation_class": "IIa",
@@ -7222,7 +7225,6 @@
       "benzilpenicilina benzatina",
       "dor",
       "adesão"
->>>>>>> Stashed changes
     ],
     "review_status": "revisado",
     "published": false
