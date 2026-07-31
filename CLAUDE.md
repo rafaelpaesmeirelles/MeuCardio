@@ -147,6 +147,46 @@ contra o `git log` do dia.
 > do dia, cada sessão deve deixar registrado neste arquivo quantos itens novos entraram, para
 > medir contra a meta de 102 sem depender de memória.
 >
+> ### 📊 Balanço da sessão de Medicamentos em 01/08/2026: **101 documentos novos, todos publicados**
+> `documents` **538 total = 538 publicados**; **zero chunks de não publicado** na auditoria após
+> cada lote. Também publiquei a evidência `isglt2-em-icfem-e-icfep`, que a Biblioteca carregou e
+> deixou retida por ser do meu tema — **reconferi o PMID 37622666 por `esummary` antes**, e
+> `evidence_records` foi a **377/377**.
+>
+> **Nos quatro temas novos** (Cardio-oncologia, Comunicação clínica, Geral, Saúde mental) entraram
+> os primeiros documentos: cardioproteção primária e vigilância por strain (PRADA/OVERCOME/SUCCOUR),
+> tratar a depressão no cardiopata (SADHART/CREATE/MOOD-HF), cuidado paliativo (PAL-HF/ENABLE/
+> SWAP-HF), planejamento antecipado (SUPPORT/Detering/El-Jawahri) e miocardite pós-vacina de mRNA
+> com risco cardiovascular pós-COVID.
+>
+> #### 🚧 DUAS LACUNAS FICARAM BLOQUEADAS POR FONTE — não repetir a busca sem via nova
+> 1. **Anticoagulação no paciente oncológico com TROMBOCITOPENIA.** O documento canônico é
+>    *Management of cancer-associated thrombosis in patients with thrombocytopenia: guidance from
+>    the SSC of the ISTH* (Samuelson Bannow BT et al., J Thromb Haemost 2018;16(6):1246-1249,
+>    **PMID 29737593**) — e ele **NÃO tem resumo no PubMed**, por ser documento curto de guidance.
+>    **As faixas de plaquetas que decidem a conduta só existem no texto completo.** Escrevê-las sem
+>    a fonte seria exatamente o erro registrado neste arquivo. Vias a tentar: PMC (não testado
+>    ainda) ou o site da ISTH. Existe uma atualização peri-procedimento **com** resumo
+>    (PMID 36217296), mas ela responde outra pergunta.
+> 2. **Consenso dedicado a FA no paciente com câncer**: **não existe** na European Heart Journal nem
+>    na Europace a partir de 2021. O mais próximo é um *Clinical Consensus Statement* da ACVC/ESC
+>    **na revista irmã** *Eur Heart J Acute Cardiovasc Care* (PMID 36226746), que cobre arritmias
+>    agudas entre outros temas — **não é diretriz de FA em câncer**. Registrado para que ninguém
+>    gaste a busca de novo.
+>
+> #### ✅ Um documento verificado e deliberadamente NÃO criado
+> O **ELEVATE-RR** apareceu na varredura, mas já estava citado dentro de
+> `inibidores-de-btk-de-segunda-geracao-e-menor-fibrilacao-atrial.md`. Em vez de criar duplicata,
+> **complementei o documento existente** com a fonte primária (PMID 34310172) e os números
+> absolutos que a metanálise não dá — **FA 9,4% vs. 16,0%, p=0,02**, cerca de 1 caso evitado a
+> cada 15 pacientes — e **reindexei no RAG**, porque `indexar_tudo()` não detecta corpo editado.
+>
+> #### 🔁 Regra operacional confirmada na prática: nada de `--autostash`
+> Quando o push foi rejeitado com a outra sessão editando `evidencias/metadados.json`, **esperei a
+> árvore limpar** em vez de mexer no trabalho dela. Funcionou: as duas sessões convergiram sem
+> perda. **`git stash push -- <caminho>` para o próprio arquivo, e push antes de rebase** é o
+> procedimento que fica.
+>
 > ### 🔀 REDIVISÃO DE TEMAS pelo Rafael em 01/08/2026 — **quatro temas passaram da Biblioteca para Medicamentos**
 >
 > > ⚠️ **CORREÇÃO DA PREMISSA, escrita pela própria sessão da Biblioteca: ela NÃO encerrou.**
@@ -225,6 +265,18 @@ contra o `git log` do dia.
 > - quando precisar rebasear, **stash por caminho**: `git stash push -- <só os seus arquivos>`;
 > - depois de qualquer rebase, **rode `git stash list`** — stash que apareceu sem você criar é
 >   sinal de que a árvore da outra sessão foi movida.
+>
+> **4b. CORREÇÃO da guarda que eu mesma propus, feita em 01/08/2026 ao aplicá-la.** Procurar
+> `'<<<<<<<'` como substring **dá falso positivo** — este próprio arquivo cita o marcador dentro
+> do texto que descreve o incidente, e a guarda barrou um commit legítimo do `CLAUDE.md`.
+> **Ancore no início da linha**, que é como o git escreve o conflito:
+> ```python
+> import re, subprocess
+> t = subprocess.run(['git','show',':CLAUDE.md'], capture_output=True, text=True).stdout
+> assert not [i+1 for i,l in enumerate(t.split('\n')) if re.match(r'^(<{7}|={7}$|>{7})', l)]
+> ```
+> Vale para qualquer arquivo, não só JSON — **documentação sobre conflito contém a palavra do
+> conflito**, e uma guarda ingênua trava justamente o registro do incidente.
 >
 > **4. Conferência que vale a pena acrescentar ao seu ciclo:** antes de commitar JSON, rodar
 > `python3 -c "import json;json.load(open('evidencias/metadados.json'))"`. Custa um segundo e
