@@ -264,11 +264,20 @@ contra o `git log` do dia.
 > **Nota de faixa:** `evidencias/` e Febre reumática são da Biblioteca. Entrei porque o Rafael pediu
 > explicitamente, alterei **um campo de um registro** e commitei na mesma ação.
 >
-> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **50 documentos novos, todos publicados**
-> `content/*.md` de **424 para 479**; `documents` **479 total = 479 publicados**. **Acervo total das
-> nove frentes: 1.052** — **faltam 948 para os 2.000**. (Os números das frentes JSON e parte dos
-> documentos incluem o que a sessão da Biblioteca entregou no mesmo dia; os 50 acima são só desta
-> sessão.)
+> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **51 documentos novos, todos publicados**
+> `content/*.md` de **424 para 481**; `documents` **481 total = 481 publicados**. **Acervo total:
+> 1.058** — **faltam 942 para os 2.000**. (Os números das frentes JSON e parte dos documentos
+> incluem o que a sessão da Biblioteca entregou no mesmo dia; os 51 acima são só desta sessão.)
+>
+> **22º lote — 1 documento**: escores ABC na FA, de AVC e de sangramento por biomarcadores (PMID
+> 26920728 e 27056738, em Calculadoras).
+>
+> **🔎 Item deixado explicitamente PARA O PRÓXIMO CICLO, e o motivo:** o **VTE-BLEED** (escore de
+> sangramento sob anticoagulação por TEV) ia no mesmo lote. **Não localizei com segurança o artigo
+> original** — a busca por autor+título devolveu validações posteriores e um comentário em holandês,
+> e um PMID que testei era de artigo completamente diferente (neuroimagem de cefaleia). **Não citei
+> PMID incerto.** A referência provável a confirmar: Klok FA et al., *Eur Respir J* 2016, sobre
+> predição de sangramento em TEV sob anticoagulação estável — **conferir antes de escrever**.
 >
 > **21º lote — 2 documentos em Calculadoras**: escore de Genebra revisado e simplificado (PMID
 > 16461960 e 18955643) e escore DASH (PMID 22489957).
