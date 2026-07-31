@@ -2219,7 +2219,7 @@
   },
   {
     "slug": "ivabradina-cloridrato",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Ivabradina (cloridrato)",
     "drug_class": "Inibidor seletivo da corrente If do nódulo sinusal (bradicardizante puro)",
     "mechanism": "Inibe seletivamente e especificamente a corrente If (funny current) no nódulo sinoatrial, reduzindo a frequência cardíaca sem afetar contratilidade, condução intracardíaca ou pressão arterial — mecanismo distinto dos betabloqueadores/BCC, sem efeito inotrópico negativo",
@@ -2253,7 +2253,9 @@
       "idosos": "A partir de **75 anos**, considerar dose inicial mais baixa — 2,5 mg 2x/dia (meio comprimido de 5 mg) — antes de titular.",
       "ajuste renal": "**Sem ajuste com clearance de creatinina acima de 15 mL/min** — a contribuição renal para a eliminação é de cerca de 20%.",
       "criterio indicacao ic": "IC crônica em adulto com frequência cardíaca **≥70 bpm**, associada à terapia padrão. Em angina estável, mesma exigência de FC ≥70 bpm, sobretudo quando betabloqueador não é recomendado ou como complemento a ele.",
-      "fonte": "Bula profissional brasileira, seção de Posologia e Modo de Usar, conferida na íntegra. **A marca anterior está resolvida**: as faixas de dose e os intervalos de titulação vinham de guia farmacêutico de terceiro e agora estão substituídos pelo texto da bula. Os critérios de indicação em IC já conferiam com o SHIFT."
+      "fonte": "Bula profissional brasileira, seção de Posologia e Modo de Usar, conferida na íntegra. **A marca anterior está resolvida**: as faixas de dose e os intervalos de titulação vinham de guia farmacêutico de terceiro e agora estão substituídos pelo texto da bula. Os critérios de indicação em IC já conferiam com o SHIFT.",
+      "ajuste hepatico": "Leve (Child-Pugh A): sem ajuste necessário. Moderado (Child-Pugh B): usar com precaução — diferente do leve, não é 'sem ajuste'. Grave (Child-Pugh C): contraindicado — não estudado nessa população, com grande aumento antecipado da exposição sistêmica. Fonte: RCM da EMA do PROCORALAN, já usado em `content/Farmacologia/ivabradina-cloridrato.md` — trazido para cá em 31/07/2026, ausente deste campo antes",
+      "pediatria": "Eficácia/segurança não estabelecidas em menores de 18 anos, nem para angina nem para IC crônica"
     },
     "outcomes": {
       "Evidencia pivotal shift": "SHIFT (Lancet, 2010): 6.558 pacientes com IC-FEr, frequência cardíaca ≥70 bpm e ritmo sinusal, seguimento mediano de 22,9 meses. O desfecho primário composto de morte cardiovascular ou hospitalização por piora de IC ocorreu em 24% com ivabradina contra 29% com placebo — **HR 0,82; IC95% 0,75-0,90; p<0,0001**. O efeito veio de dois componentes: hospitalização por piora de IC (16% contra 21%; HR 0,74; IC95% 0,66-0,83; p<0,0001) e **morte por insuficiência cardíaca** (3% contra 5%; HR 0,74; IC95% 0,58-0,94; p=0,014). Mortalidade cardiovascular como um todo não figura entre os desfechos reduzidos"
@@ -2263,7 +2265,13 @@
       "Bula profissional de PROCORALAN (cloridrato de ivabradina) 5 mg e 7,5 mg, Laboratórios Servier do Brasil Ltda. — seção 8, Posologia e Modo de Usar. Documento obtido no site do detentor do registro."
     ],
     "pregnancy": "**Não utilizar em caso de gravidez ou suspeita de gravidez.** Havendo gravidez durante o uso, contatar o médico. Fonte: bula do PROCORALAN (cloridrato de ivabradina).",
-    "lactation": "**Não utilizar durante a amamentação.** A bula é categórica e não apresenta dado de excreção que justifique a orientação — o texto se limita à proibição. Fonte: bula do PROCORALAN (cloridrato de ivabradina, Servier), seção \"Lactação\"."
+    "lactation": "**Não utilizar durante a amamentação.** A bula é categórica e não apresenta dado de excreção que justifique a orientação — o texto se limita à proibição. Fonte: bula do PROCORALAN (cloridrato de ivabradina, Servier), seção \"Lactação\".",
+    "adverse_effects": [
+      "Fosfenos (fenômenos luminosos) — aumento transitório de luminosidade em área limitada do campo visual, halo, imagem decomposta (efeito estroboscópico/caleidoscópico), luzes coloridas, imagens múltiplas; geralmente nos primeiros 2 meses de tratamento, podendo recorrer; intensidade leve a moderada na maioria dos casos",
+      "Bradicardia — reportada em 3,3% dos pacientes, particularmente nos primeiros 2-3 meses; bradicardia grave (≤40 bpm) em 0,5% dos pacientes",
+      "Ambos os efeitos são dose-dependentes, relacionados ao mecanismo farmacológico do fármaco",
+      "**fonte**: bula do PROCORALAN (cloridrato de ivabradina, Servier)"
+    ]
   },
   {
     "slug": "levosimendana",
