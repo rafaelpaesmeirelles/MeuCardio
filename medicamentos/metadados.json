@@ -3386,7 +3386,7 @@
   },
   {
     "slug": "rosuvastatina-calcica",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Rosuvastatina (cálcica)",
     "brand_names": [
       "Crestor"
@@ -3403,12 +3403,11 @@
     ],
     "contraindications": [
       "Hepatopatia ativa",
-      "Gravidez e lactação",
-      "Hipersensibilidade ao fármaco",
-      "Miopatia ativa"
+      "Gravidez e lactação, e mulher com potencial de engravidar sem uso de contraceptivo apropriado",
+      "Hipersensibilidade à rosuvastatina cálcica ou a outro componente da fórmula"
     ],
     "interactions": [
-      "Ciclosporina aumenta significativamente níveis plasmáticos de rosuvastatina (contraindicação relativa/ajuste necessário); risco aumentado de miopatia/rabdomiólise com fibratos; anticoagulantes orais podem ter efeito potencializado"
+      "Ciclosporina: aumento de até 7,1x na exposição à rosuvastatina — não é contraindicação formal, mas a dose de CRESTOR não deve exceder 5mg 1x/dia em uso concomitante. Mesmo racional de dose reduzida vale para outros fármacos que dobram ou mais a exposição (ex.: 10mg com ritonavir/atazanavir combinados, aumento de 3,1x; 20mg com genfibrozila, aumento de 1,9x). Risco aumentado de miopatia/rabdomiólise com fibratos. Anticoagulante oral pode ter efeito potencializado."
     ],
     "adverse_effects": [
       "Mialgia, elevação de CK/transaminases, cefaleia, sintomas gastrointestinais; risco raro de rabdomiólise, geralmente dose-dependente"
@@ -3420,10 +3419,11 @@
       "dose": "10-20 mg/dia como dose inicial usual; até 40 mg/dia em pacientes de risco extremo/muito alto sem resposta adequada; não exceder 10 mg/dia se ClCr <30 mL/min (ajuste renal significativo)"
     },
     "notes": {
-      "Particularidade etnica": "Concentrações plasmáticas aumentadas observadas em pacientes de ascendência asiática, podendo justificar dose inicial mais baixa"
+      "Particularidade etnica": "Concentrações plasmáticas aumentadas observadas em pacientes de ascendência asiática, podendo justificar dose inicial mais baixa",
+      "Miopatia — advertencia, nao contraindicacao formal": "**Corrigido em 31/07/2026**: a versão anterior listava miopatia ativa como contraindicação formal. A bula (item 4) não a inclui — trata-a em item 5. ADVERTÊNCIAS E PRECAUÇÕES: medir CK se houver sintoma sugestivo de miopatia, e interromper o tratamento se CK >10x o limite superior de normalidade, ou se houver diagnóstico/suspeita de miopatia. Há relato muito raro de miopatia necrotizante imunomediada, inclusive após a descontinuação da estatina."
     },
     "references": [
-      "Bula Rosuvastatina Cálcica · Novartis/ANVISA · https://portal.novartis.com.br/medicamentos/wp-content/uploads/2022/11/Bula-ROSUVASTATINA-CALCICA-Comprimido-revestido-Medico.pd"
+      "Bula profissional do CRESTOR (rosuvastatina cálcica), AstraZeneca do Brasil Ltda. — via consultaremedios.com.br, item 4. CONTRAINDICAÇÕES e item 6. INTERAÇÕES MEDICAMENTOSAS"
     ],
     "pregnancy": "**Categoria de risco X — contraindicada.** É a atribuição mais restritiva do acervo, e a bula estende a contraindicação para além da gestante: alcança **mulheres com potencial de engravidar que não estejam usando método contraceptivo apropriado**. A segurança na gravidez não foi estabelecida. Duas bulas independentes concordam. Comparação útil: a atorvastatina restringe a mulher em idade fértil por texto, mas **sem atribuir letra**; a rosuvastatina traz o X explícito. Fontes: bula profissional do ROSUCOR (rosuvastatina cálcica), item 4, e bula do CRESTOR (rosuvastatina cálcica, AstraZeneca).",
     "lactation": "**Contraindicada na amamentação** — a lactação está nomeada na própria contraindicação do item 4, junto com a gravidez, e a segurança durante a lactação não foi estabelecida. Fontes: bula profissional do ROSUCOR (rosuvastatina cálcica) e bula do CRESTOR (rosuvastatina cálcica, AstraZeneca)."
