@@ -2716,7 +2716,7 @@
   },
   {
     "slug": "nebivolol-cloridrato",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Nebivolol (cloridrato)",
     "drug_class": "Betabloqueador cardiosseletivo beta-1 de terceira geração, com vasodilatação mediada por óxido nítrico",
     "mechanism": "Racemato de dois enantiômeros: d-nebivolol (bloqueio beta-1 seletivo competitivo, seletividade superior a bisoprolol, metoprolol e carvedilol no miocárdio humano) e l-nebivolol (propriedades vasodilatadoras via interação com via L-arginina/óxido nítrico); sem atividade simpaticomimética intrínseca; sem bloqueio alfa-adrenérgico em doses terapêuticas",
@@ -2736,7 +2736,9 @@
       "Broncoespasmo/asma",
       "Feocromocitoma não tratado",
       "Bradicardia <60bpm pré-tratamento",
-      "PAS<90mmHg"
+      "PAS<90mmHg",
+      "Acidose metabólica",
+      "Perturbações circulatórias periféricas graves"
     ],
     "pregnancy": "Categoria C — uso não recomendado exceto se claramente necessário; monitorizar fluxo uteroplacentário",
     "lactation": "Não recomendada durante uso de nebivolol",
@@ -2761,7 +2763,8 @@
       "Nebivolol (BYSTOLIC) tablets — rótulo aprovado pelo FDA, indicação de hipertensão arterial",
       "Flather MD, Shibata MC, Coats AJS, et al. Randomized trial to determine the effect of nebivolol on mortality and cardiovascular hospital admission in elderly patients with heart failure (SENIORS). Eur Heart J. 2005;26(3):215-225. DOI: 10.1093/eurheartj/ehi115. PMID: 15642700",
       "Bula de NEBILET (cloridrato de nebivolol), Biolab Sanus Farmacêutica Ltda. — indicações e posologia, versão brasileira.",
-      "Bula do profissional de saúde de LOBEAT (cloridrato de nebivolol), Abbott Laboratórios do Brasil Ltda. — posologia em insuficiência cardíaca e advertências. Documento obtido no site do detentor do registro."
+      "Bula do profissional de saúde de LOBEAT (cloridrato de nebivolol), Abbott Laboratórios do Brasil Ltda. — posologia em insuficiência cardíaca e advertências. Documento obtido no site do detentor do registro.",
+      "Bula profissional do NEBILET (cloridrato de nebivolol), Biolab Sanus Farmacêutica Ltda., versão 07/2023 — via consultaremedios.com.br, item 4. CONTRAINDICAÇÕES conferido linha a linha"
     ]
   },
   {
