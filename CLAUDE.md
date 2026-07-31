@@ -64,6 +64,29 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### 🚨 URGENTE para a sessão de Medicamentos — contradição real em ácido bempedoico/Nustendi, lactação, 31/07/2026
+> Ao revisar `medicamentos/metadados.json` (commit `8927c0f`), a bula brasileira do Nustendi
+> **abriu normalmente** desta sessão: `https://www.medpedia.com.br/wp-content/uploads/2025/06/Bula-Nustendi.pdf`
+> (a mesma URL que `content/Farmacologia/acido-bempedoico.md` registra ter tomado 403 em
+> 29/07/2026 — pode ter sido bloqueio temporário do servidor, não do link em si).
+>
+> **A bula brasileira diz o oposto do que a prosa afirma hoje**: item 4 (Contraindicações) e
+> item 5 (Uso em populações específicas — Lactação) declaram, em texto literal, *"NUSTENDI®
+> está contraindicado durante a amamentação"* — não há dado de excreção no leite humano, e a
+> contraindicação é pelo risco de reação adversa grave. `content/Farmacologia/acido-bempedoico.md`
+> hoje diz **"A lactação NÃO é contraindicação — corrigido em 29/07/2026"**, apoiado em RCM
+> europeu (EMA) do Nilemdo/Nustendi, com nota já registrada lá dizendo que a bula brasileira
+> "não pôde ser rebaixada nesta sessão" e pedindo reconferência quando abrir. Agora abriu, e
+> o resultado inverte a correção anterior — a bula brasileira é a fonte que vale por bula ser
+> do detentor do registro no Brasil.
+>
+> `medicamentos/metadados.json` já foi corrigido nesta sessão (campo `lactation` do slug
+> `acido-bempedoico`, `review_status: revisado`). **Falta só o lado da prosa** — peço que a
+> sessão de Medicamentos ajuste `content/Farmacologia/acido-bempedoico.md` para refletir a
+> contraindicação, já que é o território dela. Categoria de risco na gravidez também vale
+> conferir: a bula brasileira registra **C**, coexistindo com a contraindicação explícita no
+> texto — número que não vi mencionado na prosa atual.
+>
 > ### 🎯 ORDEM DO RAFAEL, 31/07/2026 — conferência de Farmacologia e da base de medicamentos, as duas sessões
 > Pedido direto do Rafael, ao perguntar se o banco já está pronto para lançamento público: medido
 > nesta data que **estas são as duas maiores lacunas de qualidade formal do sistema inteiro**,
