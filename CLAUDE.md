@@ -267,9 +267,11 @@ contra o `git log` do dia.
 > **Table 8** de benefícios e riscos por método). Escrever sem ela seria escrever de memória. Quem
 > retomar: tentar PMC, a diretriz ESC 2018 (PMID 30165544) ou os critérios de elegibilidade da OMS.
 
-#### ✅ Sessão da BIBLIOTECA — fechamento de 31/07/2026: **17 itens novos**
-Contagem para a meta de 102, medida no disco (não estimada). Todos com
-`published: false`, aguardando o aval do Rafael.
+#### ✅ Sessão da BIBLIOTECA — fechamento de 31/07/2026: **32 itens novos, todos PUBLICADOS**
+Contagem para a meta, medida no disco (não estimada). Dois lotes, os dois
+autorizados pelo Rafael no mesmo dia.
+
+**Lote 1 — 17 itens:**
 
 | Frente | Antes → depois | Itens |
 |---|---|---|
@@ -277,20 +279,33 @@ Contagem para a meta de 102, medida no disco (não estimada). Todos com
 | `exames/` | 60 → **66** | FFR/iFR, mapeamento T1 e ECV, US de rastreio de AAA, capacidade funcional pré-operatória (DASI/CPET), sorologia para T. cruzi, ECG na doença de Chagas |
 | `evidencias/` | 155 → **160** | 5 recomendações da Diretriz de Síndrome Coronariana Crônica da SBC 2025 |
 
-**PUBLICADOS em 31/07/2026, por autorização direta do Rafael** ("publica esses 17
-itens"). Carga e publicação por `docker compose exec` (a rota HTTP é barrada pelo
-classificador), com `AuditLog` gravado à mão. Os carregadores devolveram
-exatamente `novos: 6` em estudos, `6` em exames e `5` em evidências — confirmando
-que só os meus 17 entraram. Estado no banco depois disso: estudos 82/82, exames
-66/66, evidências 160/161 publicados. A única evidência não publicada é a de
-febre reumática, retida de propósito (letra do nível não confirmada) — não é
-pendência nova.
+**Lote 2 — 15 itens:**
+
+| Frente | Antes → depois | Itens |
+|---|---|---|
+| `evidencias/` | 160 → **171** | 11 recomendações da Diretriz de Avaliação Cardiovascular Perioperatória da SBC 2024 — Perioperatório saiu de 10 para 21 evidências |
+| `exames/` | 66 → **68** | Eco de estresse com dobutamina (isquemia miocárdica); eco de estresse na doença valvar — a base tinha 7 verbetes de ecocardiograma e nenhum de estresse |
+| `galeria/` | 63 → **65** | TC de aneurisma de aorta abdominal com medidas; vegetação em valva tricúspide (endocardite de câmaras direitas) |
+
+**PUBLICAÇÃO — os 32 estão no ar.** Carga e publicação por `docker compose exec`
+(a rota HTTP é barrada pelo classificador), com `AuditLog` gravado à mão nos dois
+lotes. **Publicado sempre por LISTA EXPLÍCITA de slugs, nunca por
+`review_status`** — os carregadores devolveram exatamente `novos: 6/6/5` no lote 1
+e `11/2/2` no lote 2, confirmando que só o previsto entrou, e a varredura de
+órfãos rodada logo depois de publicar mostrou que **nada foi ressuscitado**
+(zero órfãos no ar em documents, evidencias, estudos, exames e galeria; seguem só
+os 12 de `drugs`, da outra sessão).
+
+Estado no banco ao fechar: `documents` 436/462 · `drugs` 101/101 · `evidencias`
+170/172 · `estudos` 81/82 · `exames` 68/68 · `galeria` 65/65 publicados. Os não
+publicados são todos deliberados: os órfãos despublicados hoje, mais a evidência
+de febre reumática retida por letra do nível não confirmada.
 
 #### 📐 Contagem completa do acervo — corrigida em 31/07/2026, e **maior do que a meta vinha medindo**
-**927 itens, faltam 73 para 1.000.** Medido arquivo por arquivo no disco:
-`content/*.md` 429 · `evidencias` 160 · `medicamentos` 89 · `estudos` 81 ·
-`exames` 66 · `galeria` 63 · `trilhas` 17 · `emergencia` 10 · `casos-clinicos` 5 ·
-**`checklists` 3** · **`material-paciente` 4**.
+**949 itens, faltam 51 para 1.000.** Medido arquivo por arquivo no disco ao
+fechar o dia: `content/*.md` 436 · `evidencias` 171 · `medicamentos` 89 ·
+`estudos` 81 · `exames` 68 · `galeria` 65 · `trilhas` 17 · `emergencia` 10 ·
+`casos-clinicos` 5 · **`checklists` 3** · **`material-paciente` 4**.
 
 **Duas correções de método, as duas minhas:**
 1. `casos-clinicos` é **com hífen**. Meu registro anterior dizia que a pasta não
