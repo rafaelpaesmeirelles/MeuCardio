@@ -152,7 +152,7 @@
   },
   {
     "slug": "alteplase",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Alteplase (ativador do plasminogênio tecidual recombinante, rt-PA)",
     "drug_class": "Trombolítico/fibrinolítico",
     "mechanism": "Ativa a conversão de plasminogênio em plasmina de forma seletiva na superfície da fibrina, promovendo a lise do trombo já formado",
@@ -160,7 +160,11 @@
       "Infarto agudo do miocárdio com supra de ST (IAMCSST) quando ICP primária não está disponível em tempo hábil, tromboembolismo pulmonar de alto risco, AVC isquêmico agudo dentro da janela terapêutica, e desobstrução de cateteres ocluídos"
     ],
     "contraindications": [
-      "Hemorragia intracraniana, hemorragia subaracnóidea, sangramento interno ativo, AVC nos últimos 3 meses, cirurgia intracraniana ou intraespinhal nos últimos 3 meses, trauma craniano grave nos últimos 3 meses, neoplasia intracraniana, malformação arteriovenosa ou aneurisma intracraniano, hipertensão grave não controlada no momento da administração - **fonte**: StatPearls"
+      "Hipersensibilidade conhecida ao princípio ativo, à gentamicina (resíduo do processo de fabricação) ou a qualquer componente da fórmula, em qualquer indicação",
+      "Geral (todas as indicações, alto risco de hemorragia): distúrbio hemorrágico significativo no momento ou nos últimos 6 meses, diátese hemorrágica conhecida; anticoagulação oral efetiva (ex.: varfarina, INR >1,3); histórico de dano ao SNC (neoplasia, aneurisma, cirurgia intracraniana/espinhal); histórico, evidência ou suspeita de hemorragia intracraniana (incluindo subaracnóidea); hipertensão arterial grave não controlada; cirurgia de grande porte ou trauma grave nos últimos 10 dias; RCP prolongada/traumática (>2min), parto nos últimos 10 dias, punção recente de vaso não compressível; hepatopatia grave (insuficiência hepática, cirrose, hipertensão portal com varizes esofágicas, hepatite ativa); endocardite bacteriana, pericardite; pancreatite aguda; doença ulcerativa gastrintestinal nos últimos 3 meses; aneurisma arterial, malformação arteriovenosa; neoplasia com alto risco de sangramento",
+      "Específico de IAM e embolia pulmonar: AVC hemorrágico ou de origem desconhecida a qualquer momento; AVC isquêmico ou AIT nos 6 meses anteriores (exceto o próprio AVC isquêmico agudo corrente, dentro de 3 horas)",
+      "Específico de AVC isquêmico agudo: início dos sintomas há mais de 3 horas antes da infusão, ou horário de início desconhecido; sintomas melhorando rapidamente ou apenas leves antes da infusão; AVC grave (ex.: NIHSS >25) clínico e/ou por imagem; convulsão no início do quadro; AVC prévio ou traumatismo craniano grave nos últimos 3 meses; combinação de AVC anterior e diabetes mellitus; heparina nas 48h anteriores com TTPa aumentado; plaquetas <100.000/mm³; PAS >185 mmHg, PAD >110 mmHg ou necessidade de terapia agressiva IV para atingir esses limites; glicemia <50 ou >400 mg/dL; idade <18 ou >80 anos",
+      "**fonte**: Bula do profissional de saúde do ACTILYSE (Boehringer Ingelheim), versão 04/09/2012, item 4 (Contraindicações) — substitui a lista anterior sourceada em StatPearls, que era incompleta"
     ],
     "dosing": {
       "avc isquemico agudo": "**0,9 mg/kg, dose máxima de 90 mg.** **10% da dose total em bolus intravenoso em 1 a 2 minutos**, e os **90% restantes infundidos em 60 minutos**. O efeito é tempo-dependente: quanto mais precoce, maior a chance de evolução favorável.",
@@ -179,10 +183,20 @@
       "Alteplase · StatPearls (NCBI Bookshelf) · https://www.ncbi.nlm.nih.gov/books/NBK499977/",
       "Tissue Plasminogen Activator Therapy · StatPearls (NCBI Bookshelf) · https://www.ncbi.nlm.nih.gov/books/NBK482376/",
       "ACTIVASE (alteplase) for injection · FDA prescribing information · https://www.accessdata.fda.gov/drugsatfda_docs/label/2015/103172s5203lbl.pdf",
-      "ACTIVASE (alteplase, Genentech) — rótulo aprovado pelo FDA, via DailyMed, SPL setid c669f77c-fa48-478b-a14b-80b20a0139c2, itens 1.1 e 2.1 · consultado em 29/07/2026 · usado para confirmar que a janela de 3 horas não é particularidade da bula brasileira de 2012"
+      "ACTIVASE (alteplase, Genentech) — rótulo aprovado pelo FDA, via DailyMed, SPL setid c669f77c-fa48-478b-a14b-80b20a0139c2, itens 1.1 e 2.1 · consultado em 29/07/2026 · usado para confirmar que a janela de 3 horas não é particularidade da bula brasileira de 2012",
+      "Bula do profissional de saúde ACTILYSE (alteplase, Boehringer Ingelheim), versão 04/09/2012, via bulário saudedireta.com.br — usada para contraindicações completas (item 4) e reações adversas por frequência (item 9)"
     ],
     "pregnancy": "**Categoria de risco C.** Dados limitados em gestantes. Estudos pré-clínicos em doses maiores que as humanas mostraram imaturidade fetal e/ou embriotoxicidade, secundárias à atividade farmacológica do fármaco. Fonte: bula do profissional do ACTILYSE (Boehringer Ingelheim), versão de 04/09/2012.",
-    "lactation": "**Não se sabe se o alteplase é excretado no leite humano.** Fonte: bula do profissional do ACTILYSE (Boehringer Ingelheim), versão de 04/09/2012."
+    "lactation": "**Não se sabe se o alteplase é excretado no leite humano.** Fonte: bula do profissional do ACTILYSE (Boehringer Ingelheim), versão de 04/09/2012.",
+    "adverse_effects": [
+      "Reação mais frequente: hemorragia (queda de hematócrito/hemoglobina), de qualquer local ou cavidade corpórea, podendo ser superficial (punção/vaso danificado) ou interna",
+      "Muito comuns (>1/10): hemorragia (ex.: hematoma); no AVC isquêmico agudo especificamente, hemorragia intracraniana (cerebral, subaracnóidea, hematoma intracraniano, transformação hemorrágica do AVC)",
+      "Comuns (>1/100 e <1/10): hemorragia gastrintestinal (gástrica, de úlcera, retal, hematêmese, melena, bucal), equimose; hemorragia urogenital (hematúria); hemorragia no local de injeção/punção; no IAM e embolia pulmonar especificamente, hemorragia intracraniana",
+      "Incomuns (>1/1.000 e <1/100): hemorragia do trato respiratório (faríngea, hemoptise, epistaxe); sangramento gengival; hipotensão; no IAM especificamente, arritmias de reperfusão (extrassístole, FA, BAV de 1º grau a total, bradicardia, taquicardia, arritmia/fibrilação/taquicardia ventricular)",
+      "Raras (>1/10.000 e <1/1.000): reações anafilactoides (geralmente leves, risco de vida em casos isolados — rash, urticária, broncoespasmo, edema angioneurótico, hipotensão, choque; associação relativamente frequente com uso concomitante de IECA); hemorragia ocular, pericárdica; embolia; hemorragia de órgão parenquimatoso (hepática, pulmonar); náusea; hemorragia retroperitoneal",
+      "Frequência desconhecida: vômitos; febre; embolia gordurosa; necessidade de transfusão",
+      "**fonte**: Bula do profissional de saúde do ACTILYSE (Boehringer Ingelheim), versão 04/09/2012, item 9 (Reações Adversas)"
+    ]
   },
   {
     "slug": "amiodarona-cloridrato",
