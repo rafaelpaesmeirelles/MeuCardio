@@ -4,7 +4,7 @@ slug: digoxina
 theme: "Farmacologia"
 kind: farmacologia
 review_status: revisado
-source_refs: ["Ahmed A, Rich MW, Love TE, et al. Digoxin and reduction in mortality and hospitalization in heart failure: a comprehensive post hoc analysis of the DIG trial. Eur Heart J. 2006;27(2):178-186. DOI: 10.1093/eurheartj/ehi687. PMID: 16339157", "Digitalis Investigation Group; Ahmed A, Waagstein F, Pitt B, et al. Effectiveness of digoxin in reducing one-year mortality in chronic heart failure in the Digitalis Investigation Group trial. Am J Cardiol. 2009;103(1):82-87. DOI: 10.1016/j.amjcard.2008.06.068. PMID: 19101235", "Digoxin tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 5886e233-b2da-4acb-be05-9bf40fb8e7f4"]
+source_refs: ["Ahmed A, Rich MW, Love TE, et al. Digoxin and reduction in mortality and hospitalization in heart failure: a comprehensive post hoc analysis of the DIG trial. Eur Heart J. 2006;27(2):178-186. DOI: 10.1093/eurheartj/ehi687. PMID: 16339157", "Digitalis Investigation Group; Ahmed A, Waagstein F, Pitt B, et al. Effectiveness of digoxin in reducing one-year mortality in chronic heart failure in the Digitalis Investigation Group trial. Am J Cardiol. 2009;103(1):82-87. DOI: 10.1016/j.amjcard.2008.06.068. PMID: 19101235", "Digoxin tablets — rótulo aprovado pelo FDA, DailyMed SPL setid 5886e233-b2da-4acb-be05-9bf40fb8e7f4", "Bula de Digoxina (Prati-Donaduzzi, genérico) — item 3 (Contraindicações), conferida em duas apresentações independentes (paciente e profissional), resultados concordantes"]
 legacy_source: "medicamentos/banco-de-medicamentos-digoxina.md"
 ---
 
@@ -39,26 +39,24 @@ Reduz hospitalizações por descompensação e melhora sintomas/classe funcional
 Eficácia reduzida durante esforço físico, pois seu mecanismo depende de estímulo vagal (inibido durante exercício) — mais adequada para pacientes sedentários; betabloqueadores/BCC não-diidropiridínicos são primeira linha para controle de FC na FA por serem mais eficazes ao esforço
 
 ## Contraindicacoes
-O rótulo aprovado contraindica a digoxina em apenas duas situações:
+**Corrigido em 31/07/2026 — divergência real entre rótulo do FDA e bula brasileira, resolvida a favor da bula brasileira** (é a do detentor do registro no Brasil, e foi conferida por mim diretamente em PDF, em duas apresentações independentes e concordantes — paciente e profissional). O rótulo americano lista só fibrilação ventricular e hipersensibilidade no item formal de contraindicações, tratando os itens abaixo como "Advertências e Precauções"; a bula brasileira os lista como **contraindicação formal**:
 
-- Fibrilação ventricular
 - Hipersensibilidade conhecida à digoxina ou a outro digitálico
+- Bloqueio atrioventricular completo ou intermitente, e bloqueio atrioventricular de segundo grau (especialmente com história de síndrome de Stokes-Adams)
+- Taquicardia ventricular e fibrilação ventricular
+- **Arritmia supraventricular associada a via atrioventricular acessória** (ex.: síndrome de Wolff-Parkinson-White) — mesmo sem história prévia de arritmia, **salvo se as características eletrofisiológicas da via e o possível efeito deletério da digoxina sobre elas já tiverem sido avaliados**. O mecanismo que torna isso grave: a digoxina retarda a condução pelo nó AV e pode facilitar a passagem de impulsos rápidos pela via anômala
+- **Cardiomiopatia obstrutiva hipertrófica**, exceto se houver também fibrilação atrial e insuficiência cardíaca — e mesmo assim com cautela (o inotropismo positivo agrava o gradiente da via de saída)
+- Arritmia causada por intoxicação por glicosídeo cardíaco
 
-**Insuficiência renal não é contraindicação — é ajuste de dose.** A versão anterior deste verbete a listava como proibição, o que nega uma terapia indicada a quem mais convive com fibrilação atrial e insuficiência cardíaca. O rótulo é explícito: a meia-vida se prolonga e o risco de toxicidade é alto **se a dose não for reduzida**, e é a redução que resolve. Da mesma forma, ICFEp não é contraindicação: ausência de evidência de benefício é motivo para não indicar, não para proibir — a distinção importa quando existe outra razão para usar o fármaco.
+**Insuficiência renal não é contraindicação — é ajuste de dose**, em ambas as fontes: a meia-vida se prolonga e o risco de toxicidade é alto se a dose não for reduzida, e é a redução que resolve. ICFEp também não é contraindicação: ausência de evidência de benefício é motivo para não indicar, não para proibir.
+
+**Nota sobre a divergência**: o rótulo do FDA trata WPW+FA, bloqueio AV avançado sem marca-passo e CMH obstrutiva como precaução relativa, com nuance caso a caso (inclusive registrando uso de digoxina para controle de frequência em subgrupo selecionado com CMH+FA). A bula brasileira as trata como proibição formal, com as mesmas duas exceções expressas (avaliação eletrofisiológica prévia da via acessória; CMH com FA+IC associadas). Prescrevendo no Brasil, a leitura vinculante é a da bula brasileira.
 
 ## Cautelas do rotulo
 - Não recomendada no infarto agudo do miocárdio
 - Evitar na miocardite
 - Risco de arritmia ventricular durante cardioversão elétrica
 - Idade avançada, baixo peso, disfunção renal e distúrbio eletrolítico predispõem à toxicidade
-
-## Situacoes de cautela clinica reconhecida
-Cardiomiopatia hipertrófica obstrutiva (o inotropismo positivo agrava o gradiente da via de saída), pré-excitação/WPW com fibrilação atrial (risco de condução acelerada pela via acessória) e bloqueio atrioventricular de alto grau ou bradicardia sinusal grave sem marca-passo.
-
-**Resolvido em 29/07/2026: nenhuma das três é contraindicação formal no rótulo do FDA — a seção 4 (Contraindicações) só lista fibrilação ventricular e hipersensibilidade conhecida à digoxina/digitálicos.** As três constam como Advertências e Precauções, com nível de restrição diferente entre si:
-- **WPW com fibrilação atrial** (seção 5.1): risco descrito como de **fibrilação ventricular** em quem desenvolve FA sobre a via acessória — a mais grave das três, mas ainda listada como advertência, não como proibição absoluta.
-- **Doença do nó sinusal com bloqueio AV** (seção 5.2): risco de bloqueio AV avançado ou completo.
-- **Estenose subaórtica hipertrófica idiopática** — nome usado pelo rótulo para a cardiomiopatia hipertrófica obstrutiva (seção 5.7, "Decreased Cardiac Output..."): o rótulo diz que a digoxina **"deve geralmente ser evitada"** nesses pacientes pelo agravamento da obstrução da via de saída, mas registra explicitamente que **já foi usada para controle de frequência no subgrupo com fibrilação atrial associada** — ou seja, mesmo aqui a cautela não é absoluta.
 
 ## Interacoes criticas
 Amiodarona e verapamil aumentam níveis sanguíneos de digoxina, exigindo redução de dose e monitorização
