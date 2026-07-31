@@ -3,8 +3,8 @@ title: "Semaglutida"
 slug: semaglutida
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
-source_refs: ["Guia de Dosagem de Semaglutida: Titulação, Técnica de Injeção · Weight Index · 2026 · https://weight-index.com/pt/articles/semaglutide-dosing-guide", "Wegovy (semaglutida) · ANVISA · https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/novos-medicamentos-e-indicacoes/wegovy-semaglutida", "Ozempic — Bula Paciente · Novo Nordisk · https://www.novonordisk.com.br/content/dam/nncorp/br/pt/pdfs/bulas/patient/Ozempic_3mL_1mg_Paciente.pdf"]
+review_status: revisado
+source_refs: ["Ozempic — Bula do Paciente · Novo Nordisk · https://www.novonordisk.com.br/content/dam/nncorp/br/pt/pdfs/bulas/patient/Ozempic_3mL_1mg_Paciente.pdf · lida na íntegra em 31/07/2026 — confirma titulação 0,25→0,5→1 mg/semana e contraindicação de hipersensibilidade/carcinoma medular de tireoide; substitui fonte de agregador (Weight Index) usada antes para a titulação", "Wegovy (semaglutida) · ANVISA · https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/novos-medicamentos-e-indicacoes/wegovy-semaglutida"]
 legacy_source: "medicamentos/banco-de-medicamentos-semaglutida-completo.md"
 ---
 
@@ -37,7 +37,7 @@ Ozempic (SC, para DM2): canetas de 0,25/0,5mg, 1mg e 2mg; Wegovy (SC, para contr
 - **dose esquecida ate 5 dias**: Tomar assim que lembrar, depois retomar cronograma normal
 - **dose esquecida mais 5 dias**: Pular a dose e tomar a próxima no dia regular programado, sem dobrar
 - **flexibilidade dia aplicacao**: Pode mudar o dia da semana desde que ≥48h tenham passado da última injeção
-- **fonte**: Guia de Dosagem de Semaglutida — Weight Index
+- **fonte**: bula do paciente do Ozempic (Novo Nordisk), reconferida em 31/07/2026 — confirma a titulação do Ozempic (0,25→0,5→1 mg/semana em blocos de 4 semanas, com opção de subir a 2 mg se necessário); esquema do Wegovy mantido conforme registro ANVISA já citado
 
 ## Criterio permanencia dose menor
 Considerar prolongar tempo na dose atual se náusea/vômito severos persistirem além da 1ª semana pós-aumento, dificuldade de manter hidratação/alimentação, ou sinais de desidratação — titulação mais lenta favorece adesão sem penalidade clínica
