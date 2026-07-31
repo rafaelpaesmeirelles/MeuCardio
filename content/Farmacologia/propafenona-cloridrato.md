@@ -3,8 +3,8 @@ title: "Propafenona (cloridrato)"
 slug: propafenona-cloridrato
 theme: "Farmacologia"
 kind: farmacologia
-review_status: pendente_revisao
-source_refs: ["Como eu uso: Propafenona! · Afya Cardiologia · 2021 · https://portal.afya.com.br/cardiologia/como-eu-uso-propafenona · fonte confirmada como confiável pelo Rafael em 29/07/2026 — conteúdo de prática clínica escrito por cardiologistas, não agregador nem resposta gerada por IA", "Alboni P, Botto GL, Baldi N, et al. Outpatient treatment of recent-onset atrial fibrillation with the \"pill-in-the-pocket\" approach. N Engl J Med. 2004;351(23):2384-2391. DOI: 10.1056/NEJMoa041233. PMID: 15575054 — ensaio original da estratégia; resumo indexado lido em 29/07/2026", "Bula do RITMONORM (cloridrato de propafenona, Abbott), apresentação oral de 300 mg — cobre a terapia contínua, e NÃO cobre dose única nem via endovenosa", "Abordagem da fibrilação atrial na sala de emergência · SOCERJ · 2025 · https://socerj.org.br/abordagem-fibrilacao-atrial-sala-emergencia-visao-pratica-racional/", "PROPAFENONA — Farmácia Dose Certa · Secretaria de Estado da Saúde de SP · https://www.saude.sp.gov.br/resources/ses/perfil/gestor/assistencia-farmaceutica/medicamentos-das-unidades-farmacia-dose-certa/"]
+review_status: revisado
+source_refs: ["Como eu uso: Propafenona! · Afya Cardiologia · 2021 · https://portal.afya.com.br/cardiologia/como-eu-uso-propafenona · fonte confirmada como confiável pelo Rafael em 29/07/2026 — conteúdo de prática clínica escrito por cardiologistas, não agregador nem resposta gerada por IA", "Alboni P, Botto GL, Baldi N, et al. Outpatient treatment of recent-onset atrial fibrillation with the \"pill-in-the-pocket\" approach. N Engl J Med. 2004;351(23):2384-2391. DOI: 10.1056/NEJMoa041233. PMID: 15575054 — ensaio original da estratégia; resumo indexado lido em 29/07/2026", "Bula do RITMONORM (cloridrato de propafenona, Abbott) · https://www.saudedireta.com.br/catinc/drugs/bulas/ritmonorm.pdf · lida na íntegra em 31/07/2026, item 4 (Contraindicações) — apresentação oral de 300 mg, cobre a terapia contínua, e NÃO cobre dose única nem via endovenosa", "Abordagem da fibrilação atrial na sala de emergência · SOCERJ · 2025 · https://socerj.org.br/abordagem-fibrilacao-atrial-sala-emergencia-visao-pratica-racional/", "PROPAFENONA — Farmácia Dose Certa · Secretaria de Estado da Saúde de SP · https://www.saude.sp.gov.br/resources/ses/perfil/gestor/assistencia-farmaceutica/medicamentos-das-unidades-farmacia-dose-certa/"]
 legacy_source: "medicamentos/banco-de-medicamentos-propafenona-completo.md"
 ---
 
@@ -53,15 +53,20 @@ Comprimidos de 150mg ou 300mg; ampola de 70mg/20mL (formulação EV)
 Os números exatos de dose (600 mg / 450 mg, EV 1-2 mg/kg, pediatria, critério de 6h, incidência de 3,5-5,0%) permanecem atribuídos à Afya Cardiologia e ao protocolo SES-SP — não estão no resumo indexado do ensaio nem na bula do Ritmonorm, que é da apresentação oral e trata de terapia contínua.
 
 ## Restricao critica uso
-Não deve ser utilizada em pacientes com doença arterial coronariana, hipertrofia ventricular esquerda, disfunção ventricular, DPOC ou IC — restrita a coração estruturalmente normal
+Restrição de **guideline** (pós-CAST), mais ampla que os itens formais da bula: não deve ser
+utilizada em pacientes com doença arterial coronariana, hipertrofia ventricular esquerda,
+disfunção ventricular, DPOC ou IC — antiarrítmico classe IC restrito a coração estruturalmente
+normal, pelo risco de efeito pró-arrítmico/aumento de mortalidade nesses pacientes.
 
 ## Limitacao eficacia
 Eficácia muito reduzida na reversão de flutter atrial e de FA persistente (>7 dias), podendo inclusive organizar a FA em flutter atrial com alta resposta ventricular
 
 ## Contraindicacoes
-- Cardiopatia estrutural significativa/disfunção de VE
-- DAC significativa
-- BAV 2º/3º grau sem marca-passo
-- Síndrome do nó sinusal
-- Distúrbios eletrolíticos não corrigidos
-- DPOC/broncoespasmo
+**Corrigido em 31/07/2026** — item 4 da bula do RITMONORM, mais específico do que constava aqui:
+- Hipersensibilidade ao cloridrato de propafenona ou a qualquer componente da fórmula
+- Insuficiência cardíaca manifesta: (1) IC descompensada com **fração de ejeção do VE <35%**; (2) choque cardiogênico, **exceto quando causado por taquiarritmia**
+- Bradicardia acentuada sintomática (**<50 bpm**)
+- Doença do nó sinusal, transtornos pré-existentes de alto grau da condução sinoatrial, BAV de 2º e 3º graus, bloqueio de ramo ou bloqueio distal — todos **na ausência de marca-passo**
+- Doença pulmonar obstrutiva **grave**
+- Distúrbio eletrolítico não compensado (ex.: alteração de potássio sérico)
+- **Hipotensão arterial acentuada** — ausente de uma leitura anterior deste documento
