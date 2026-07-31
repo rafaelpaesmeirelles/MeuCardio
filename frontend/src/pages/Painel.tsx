@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../lib/api";
-import CursoDestaque from "../components/CursoDestaque";
 import LogoCorviaMail from "../components/LogoCorviaMail";
 import { useAuth } from "../lib/auth";
 
@@ -265,8 +264,6 @@ export default function Painel() {
         <Numero rotulo="estudos" valor={estudos} to="/estudos" />
         <Numero rotulo="no round" valor={pacientes} to="/round" />
       </div>
-
-      <CursoDestaque />
 
       {/* Os dois modos de uso ficam fora dos grupos porque não são "mais uma
           função": mudam a forma de usar o sistema inteiro. */}
