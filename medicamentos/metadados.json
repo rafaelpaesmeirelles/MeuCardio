@@ -200,7 +200,7 @@
   },
   {
     "slug": "amiodarona-cloridrato",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Amiodarona (cloridrato)",
     "drug_class": "Antiarrítmico classe III (Vaughan-Williams), com propriedades adicionais de classes I, II e IV",
     "mechanism": "Efeito predominante de bloqueio de canal de potássio, prolongando duração do potencial de ação; também atua em canais de Na+ e Ca++ e receptores beta e alfa-adrenérgicos; promove vasodilatação coronariana e periférica, podendo causar hipotensão especialmente em dose de ataque",
@@ -217,13 +217,16 @@
       "Prevalência de efeitos colaterais até 15% no primeiro ano e 50% a longo prazo; toxicidade pulmonar (pneumonite/fibrose), exacerbação de arritmias, lesão hepática grave (rara), tremor extrapiramidal, distúrbios do sono, microdepósitos corneanos, fotossensibilidade, coloração azulada da pele; 20% dos pacientes descontinuam por efeitos adversos"
     ],
     "contraindications": [
-      "Hipersensibilidade a iodo ou amiodarona",
-      "BAV de alto grau",
-      "Bradicardia sinusal grave",
-      "Bloqueio sinoatrial",
-      "Doença do nó sinusal sem marcapasso"
+      "Hipersensibilidade (alergia) conhecida ao iodo, à amiodarona ou a qualquer componente da fórmula",
+      "Bradicardia sinusal, bloqueio sinoatrial ou doença do nó sinusal — exceto em paciente com marca-passo implantado",
+      "Associação com medicamentos que podem induzir torsade de pointes",
+      "Disfunção da tireoide",
+      "Gravidez, exceto em circunstâncias excepcionais a critério médico",
+      "Lactação (amamentação)",
+      "**Exceção da própria bula**: nenhuma destas contraindicações se aplica ao uso em sala de emergência, em fibrilação ventricular resistente a ressuscitação cardiopulmonar por choque (desfibrilador)",
+      "**fonte**: bula do ATLANSIL (cloridrato de amiodarona, Sanofi-Aventis), item 4 — substitui a lista anterior, que citava 'BAV de alto grau' e 'bradicardia sinusal grave' sem essa formulação exata na bula (bloqueio AV de 2º/3º grau surgido durante o tratamento é motivo de descontinuação, não contraindicação de início listada no item 4)"
     ],
-    "pregnancy": "Classe D — uso apenas em casos refratários",
+    "pregnancy": "**Contraindicada na gravidez**, em razão dos efeitos sobre a tireoide fetal — **exceto em circunstâncias excepcionais, a critério médico, quando o benefício supera o risco ao feto**. A bula não usa a nomenclatura de categoria de risco (A/B/C/D/X) do rótulo norte-americano; a formulação anterior deste campo (\"Classe D\") não tem essa citação exata na bula brasileira e foi substituída pela redação literal. Fonte: bula do ATLANSIL (cloridrato de amiodarona, Sanofi-Aventis), seção \"Gravidez e amamentação\".",
     "dosing": {
       "ev ataque": "**5 mg/kg em 250 mL de glicose 5%**, infundidos em **20 minutos a 2 horas**. Pode ser repetido **2 a 3 vezes em 24 horas**, com a velocidade ajustada à evolução clínica.",
       "ev por que a infusao continua e obrigatoria": "O efeito terapêutico aparece **nos primeiros minutos e decresce progressivamente** — por isso a bula determina instituir infusão contínua depois do ataque, e não tratar a dose de ataque como suficiente.",
