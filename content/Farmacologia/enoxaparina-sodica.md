@@ -44,10 +44,21 @@ Dosagem de fator anti-Xa não é necessária rotineiramente; indicada em gestant
 Menor incidência de plaquetopenia e osteoporose comparado à HNF
 
 ## Contraindicacoes
+**Corrigido em 31/07/2026** — esta seção contradizia a própria análise bula-vs-protocolo mais
+abaixo neste documento. Conferido de novo na bula do CLEXANE (item "Quando não devo usar este
+medicamento"):
+
 - Sangramento ativo
-- AVC isquêmico (fase aguda) ou hemorrágico
-- Trombocitopenia induzida por heparina prévia
-- Insuficiência renal grave (ClCr<10-30mL/min, preferir HNF)
+- **AVC hemorrágico recente** — a bula contraindica só o hemorrágico; o **AVC isquêmico agudo
+  não está contraindicado pela bula**, é decisão de risco-benefício caso a caso, não proibição
+- Trombocitopenia induzida por heparina prévia (história de TIH nos últimos 100 dias, ou com
+  anticorpo circulante)
+- Hipersensibilidade à enoxaparina, à heparina ou a produtos de origem suína
+
+**Insuficiência renal grave não é contraindicação formal** — é indicação de ajuste posológico
+(ver "O que a bula registrada diz", abaixo), e os cortes ClCr 10-30 e <10 são do protocolo
+HCRP/USP, não da bula, que ajusta a partir de ClCr <30 mL/min sem esses dois degraus
+intermediários.
 
 ## O que a bula registrada diz, e onde ela diverge do protocolo
 
