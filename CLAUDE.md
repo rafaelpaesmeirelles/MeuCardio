@@ -183,11 +183,19 @@ contra o `git log` do dia.
 > (RACE 35926542 e MR BPA 35926544, em Hipertensão pulmonar) e peso/condicionamento/exercício na FA
 > (LEGACY 25792361, CARDIO-FIT 26113406 e ACTIVE-AF 36752479, em Fibrilação atrial).
 >
-> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **14 documentos novos, todos publicados**
-> `content/*.md` de **424 para 438**; `documents` publicados: **438**. **Acervo total das nove
-> frentes: 944** (content 438 · evidências 171 · medicamentos 89 · estudos 81 · exames 68 · galeria
-> 65 · trilhas 17 · emergência 10 · casos-clínicos 5) — **faltam 1.056 para os 2.000**, sem prazo
-> fixo, conforme a decisão registrada na seção da META.
+> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **16 documentos novos, todos publicados**
+> `content/*.md` de **424 para 440**; `documents`: **440 total = 440 publicados**, sem nenhuma linha
+> não publicada depois da limpeza de órfãos. **Acervo total das nove frentes: 957** (content 440 ·
+> evidências 178 · medicamentos 89 · estudos 85 · exames 68 · galeria 65 · trilhas 17 · emergência
+> 10 · casos-clínicos 5) — **faltam 1.043 para os 2.000**, sem prazo fixo, conforme a decisão
+> registrada na seção da META. (Os números de evidências, estudos, exames e galeria incluem o que a
+> sessão da Biblioteca entregou no mesmo dia.)
+>
+> **5º lote — 2 documentos**: escore de Duke do teste ergométrico (PMID 1875969, em Calculadoras) e
+> cessação tabágica farmacológica pelo EAGLES (PMID 27116918, em Prevenção e lipídios). Neste
+> último, o **financiamento por Pfizer e GSK — fabricantes de dois dos três fármacos testados** —
+> está declarado na `source_refs`, em seção própria do documento e nas armadilhas, porque o
+> resultado de eficácia favorece o produto do financiador.
 >
 > **4º lote — 2 documentos**: HYVET, tratamento da hipertensão aos 80 anos ou mais (PMID 18378519,
 > em Hipertensão) e estatina × diabetes de novo (Sattar 20167359 e Preiss 21693744, em Prevenção e
