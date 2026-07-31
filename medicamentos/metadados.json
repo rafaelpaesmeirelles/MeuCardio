@@ -295,7 +295,7 @@
   },
   {
     "slug": "apixabana",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Apixabana",
     "drug_class": "Anticoagulante oral direto (DOAC) — inibidor direto, potente, reversível e altamente seletivo do fator Xa",
     "mechanism": "Inibidor do fator Xa livre e ligado ao coágulo e da atividade da protrombinase, sem necessidade de antitrombina III; não possui efeito direto na agregação plaquetária, mas inibe indiretamente a agregação induzida por trombina; biodisponibilidade absoluta ~50% até 10mg; pico plasmático em 3-4h; meia-vida ~12h; clearance total ~3,3 L/h",
@@ -306,11 +306,10 @@
       "Não recomendado com rifampicina, fenitoína, carbamazepina, fenobarbital ou erva de São João (indutores enzimáticos) no tratamento de TVP/EP; cautela com AINEs/AAS (aumento de risco hemorrágico); não recomendado associar a outros anticoagulantes/antiplaquetários potentes"
     ],
     "contraindications": [
-      "Hipersensibilidade",
+      "Hipersensibilidade à substância ativa ou a qualquer excipiente",
       "Sangramento ativo clinicamente relevante",
-      "Doença hepática associada a coagulopatia",
-      "Gravidez",
-      "Insuficiência hepática grave"
+      "Doença hepática associada a coagulopatia e risco de sangramento clinicamente relevante",
+      "**fonte**: bula do ELIQUIS (apixabana, Bristol-Myers Squibb), item 4. **Corrigido em 31/07/2026**: a lista anterior incluía 'Gravidez' e 'Insuficiência hepática grave' como contraindicações formais — contradizia o próprio campo `pregnancy` deste registro, que já documentava (revisado antes desta correção) que a gravidez NÃO consta do item 4 da bula, e o campo `dosing.ajuste hepatico grave` diz apenas 'não recomendado', não contraindicado. Ambos removidos daqui por não serem contraindicação formal — permanecem como restrição de uso nos campos próprios (`pregnancy`, `dosing`)."
     ],
     "dosing": {
       "profilaxia tev ortopedica": "2,5 mg 2x/dia",
@@ -337,7 +336,7 @@
     },
     "notes": {
       "Populacoes nao recomendadas": "Válvulas cardíacas protéticas (com ou sem FA) — segurança/eficácia não estudadas; síndrome antifosfolípide com histórico de trombose — eficácia/segurança não estabelecidas",
-      "Antidoto": "Não há antídoto específico — carvão ativado pode ser considerado em superdose",
+      "Antidoto": "**Existe antídoto específico, registrado no Brasil.** O alfa-andexanete (ONDEXXYA, AstraZeneca do Brasil) obteve registro na ANVISA (publicado em 04/09/2023, RDC 204/2017 — registro prioritário), indicado para pacientes em uso de inibidores do fator Xa (apixabana ou rivaroxabana) quando a reversão for necessária por sangramento com risco à vida ou não controlado. A bula do ELIQUIS Rev0515 usada como fonte deste registro é anterior a esse registro e orienta carvão ativado em superdose — as duas informações são coerentes com suas datas; a mais recente (existência do antídoto) é a que vale à beira do leito.",
       "Administracao via sonda": "Comprimidos podem ser triturados e suspensos em água, D5W ou suco de maçã, estáveis por até 4h; administráveis por sonda nasogástrica"
     },
     "references": [
