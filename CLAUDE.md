@@ -232,11 +232,21 @@ contra o `git log` do dia.
 > registro isto aqui porque a contagem antiga ainda aparece em vários pontos deste arquivo, e é
 > fácil confundir qual meta está em vigor.
 >
-> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **33 documentos novos, todos publicados**
-> `content/*.md` de **424 para 461**; `documents` **461 total = 461 publicados**. **Acervo total das
-> nove frentes: 1.001** — **faltam 999 para os 2.000**. (Os números das frentes JSON e parte dos
-> documentos incluem o que a sessão da Biblioteca entregou no mesmo dia; os 33 acima são só desta
+> ### 📊 Fechamento da sessão de Medicamentos em 31/07/2026: **35 documentos novos, todos publicados**
+> `content/*.md` de **424 para 463**; `documents` **463 total = 463 publicados**. **Acervo total das
+> nove frentes: 1.003** — **faltam 997 para os 2.000**. (Os números das frentes JSON e parte dos
+> documentos incluem o que a sessão da Biblioteca entregou no mesmo dia; os 35 acima são só desta
 > sessão.)
+>
+> **13º lote — 2 documentos, os dois em Insuficiência cardíaca**: servoventilação adaptativa na
+> apneia central (SERVE-HF, PMID 26323938) e restrição de sódio (SODIUM-HF, PMID 35381194).
+>
+> **O SERVE-HF merece destaque de segurança, não só de conteúdo:** a terapia **funcionou
+> tecnicamente** — o IAH caiu para 6,6 eventos/hora — e **aumentou a mortalidade** (HR 1,28 por
+> qualquer causa, p=0,01; 1,34 cardiovascular, p=0,006), com o desfecho primário neutro. É o
+> exemplo mais duro da biblioteca de que **corrigir o marcador pode matar**, e o documento marca o
+> erro de leitura mais provável: **isto não se aplica à apneia obstrutiva**, que tem tratamento e
+> evidência próprios.
 >
 > **12º lote — 2 documentos**: digoxina vs. bisoprolol no controle de frequência da FA permanente
 > (RATE-AF, PMID 33351042) e hipotensão ortostática não é motivo para desescalonar anti-hipertensivo
