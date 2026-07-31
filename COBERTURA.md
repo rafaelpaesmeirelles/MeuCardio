@@ -5,6 +5,36 @@ são medidos diretamente sobre os arquivos do repositório — `theme:` do front
 `content/`, e os `metadados.json` das outras quatro frentes; a coluna "Publicados" vem
 do banco. Nenhum número é estimado.
 
+> **Atualização de 31/07/2026, pela sessão de Medicamentos** — remedido direto no
+> disco e no banco, a pedido do Rafael ("tudo revisado e aprovado, publique tudo").
+> As tabelas de "Resumo" e de `content/` abaixo estavam com números de 29-30/07,
+> bem desatualizados; substituídas pelas medições de hoje. As seções mais antigas
+> deste arquivo (Fase B, lacunas conhecidas, histórico, duplicatas) **não foram
+> remedidas nesta rodada** — ficam como registro histórico, podem estar
+> desatualizadas em pontos específicos.
+>
+> **Marco da faixa de Medicamentos: Farmacologia fechou em 97/97 `revisado`**,
+> zerando o maior débito de qualidade formal do sistema (era 42/105 em 31/07 pela
+> manhã). Zero marcações de `VERIFICAÇÃO HUMANA NECESSÁRIA` fora de dois casos
+> deliberados (fondaparinux-sódico, hidroclorotiazida — ambos com achado real
+> registrado no próprio arquivo, não lacuna por preguiça). `drugs`
+> (`medicamentos/metadados.json`) foi de 1/101 para **71/101 `revisado` e
+> publicado** — os 30 restantes seguem com a sessão da Biblioteca, que assumiu essa
+> frente por acordo das duas sessões em 31/07/2026.
+>
+> **Todo o resto do acervo — evidências, estudos, galeria, exames — segue
+> 100% publicado** do que está `revisado`; reimportado e reconferido agora,
+> zero pendência revisado-mas-não-publicado em nenhuma das nove frentes. 7
+> documentos que nunca tinham sido indexados no assistente de IA foram
+> indexados nesta rodada.
+>
+> **Onde a lacuna real está agora, para quem for continuar**: os 44 documentos
+> de `content/` ainda `pendente_revisao` estão quase todos nos temas da própria
+> faixa de Medicamentos (42 de 44) — concentrados em Prevenção e lipídios (7),
+> Hipertensão (6), Tromboembolismo (5), Insuficiência cardíaca (4). Os únicos
+> dois fora da faixa de Medicamentos são 1 em Síncope e 1 em Pericárdio, ambos
+> da faixa da Biblioteca.
+
 > **Atualização de 30/07/2026, manhã, pela sessão da Biblioteca.** A coluna de
 > publicados estava desatualizada — medido direto no banco pela sessão de
 > Medicamentos ao fechar a noite anterior: **as seis frentes em 100% publicado**
@@ -33,58 +63,61 @@ do banco. Nenhum número é estimado.
 
 ## Resumo
 
-| Frente | Itens (disco) | Publicados (banco) | Situação |
+**Medido em 31/07/2026, direto no disco (`find`/`grep` em `content/` e nos quatro
+`metadados.json`) e no banco (contagem real via SQLAlchemy).**
+
+| Frente | Itens (disco) | Publicados (banco) | `revisado` (disco) | Situação |
+|---|---:|---:|---:|---|
+| `content/` — biblioteca científica | 424 | 446 | 382 | 44 ainda `pendente_revisao` (42 na faixa de Medicamentos, 2 na da Biblioteca) — banco tem mais registros publicados que arquivos no disco por fusões/duplicatas históricas já despublicadas no disco mas não removidas do banco (órfãos conhecidos, não recentes) |
+| `galeria/` — achados de imagem | 63 | 63 | — | **100% publicado** |
+| `exames/` — marcadores e exames | 60 | 60 | — | **100% publicado** |
+| `evidencias/` — recomendações pontuais | 156 | 155 | — | 1 deliberadamente `pendente_revisao` (febre reumática, letra do nível de evidência não confirmada) |
+| `estudos/` — ensaios e metanálises | 75 | 76 | — | **100% publicado** do que está no disco |
+| **Medicamentos** (tabela `drugs`) | 89 (JSON) | 101 (banco) | 71 | 71 `revisado` e publicado; 30 restantes com a sessão da Biblioteca (frente estrutural, dividida das duas em 31/07/2026) |
+| `emergencia/`, `trilhas/`, `casos_clinicos/` | 10 / 17 / 5 | 10 / 17 / 5 | — | **100% publicado** nas três |
+
+Todo item `revisado` está publicado, nas nove frentes — conferido agora, zero
+pendência de publicação para item já revisado.
+
+## `content/` — 424 documentos (medido em 31/07/2026, direto no disco)
+
+| Tema | Docs | Pendentes de revisão | Faixa |
 |---|---:|---:|---|
-| `content/` — biblioteca científica | 290 (medido no disco em 30/07/2026 de manhã) | 312 (banco, medido na noite de 29/07) | 27 temas cobertos; 29 fluxogramas, todos publicados; disco cresceu desde a última carga — diferença para o banco é o de sempre (registros de fusão/duplicata despublicados) mais o que ainda não foi importado |
-| `galeria/` — achados de imagem | 44 | 44 | **100% publicado**, medido na noite de 29/07; sem alteração desta sessão |
-| `exames/` — marcadores e exames | 40 | 40 | **100% publicado**, medido na noite de 29/07; sem alteração desta sessão |
-| `evidencias/` — recomendações pontuais | 126 | 109 | 109 publicadas (medido 29/07 à noite) + **17 novas desta sessão** (Comunicação clínica, Geral, Saúde mental e cardiologia, Síncope — ver abaixo), ainda `published: false` no disco, aguardando carga e aval |
-| `estudos/` — ensaios e metanálises | 57 | 53 | 53 publicados (medido 29/07 à noite) + **4 novos desta sessão** (Comunicação clínica e Geral, ver abaixo), ainda `published: false` no disco, aguardando carga e aval |
-| **Medicamentos** (tabela `drugs`) | **101** | **101** | **100% publicado**, medido na noite de 29/07; faixa da sessão de Medicamentos, não tocada aqui |
+| Farmacologia | 97 | **0** | Medicamentos |
+| Fibrilação atrial | 16 | 2 | Medicamentos |
+| Calculadoras | 16 | 2 | Medicamentos |
+| Prevenção e lipídios | 15 | 7 | Medicamentos |
+| Tromboembolismo | 15 | 5 | Medicamentos |
+| Terapia intensiva | 15 | 3 | Medicamentos |
+| Dispositivos | 15 | 3 | Medicamentos |
+| Insuficiência cardíaca | 15 | 4 | Medicamentos |
+| Diabetes e cardiologia | 15 | 2 | Medicamentos |
+| Cardio-oncologia | 15 | 1 | Medicamentos |
+| Saúde mental e cardiologia | 15 | 0 | Medicamentos |
+| Geral | 15 | 0 | Medicamentos |
+| Comunicação clínica | 15 | 0 | Medicamentos |
+| Hipertensão | 14 | 6 | Medicamentos |
+| Hipertensão pulmonar | 14 | 3 | Medicamentos |
+| Arritmias | 14 | 3 | Medicamentos |
+| Gravidez | 14 | 1 | Medicamentos |
+| Cardiomiopatias | 12 | 0 | Biblioteca |
+| Valvopatias | 9 | 0 | Biblioteca |
+| Perioperatório | 9 | 0 | Biblioteca |
+| Doença coronariana | 9 | 0 | Biblioteca |
+| Cardiopatias congênitas | 9 | 0 | Biblioteca |
+| Aorta e doença arterial periférica | 9 | 0 | Biblioteca |
+| Síncope | 8 | 1 | Biblioteca |
+| Pericárdio | 8 | 1 | Biblioteca |
+| Febre reumática | 8 | 0 | Biblioteca |
+| Endocardite | 8 | 0 | Biblioteca |
 
-O banco teve historicamente mais registros em `documents` do que arquivos no disco —
-fusões e duplicatas já removidas do disco, despublicadas. Nenhum órfão publicado,
-pela última verificação registrada (29/07).
-
-## `content/` — 290 documentos (medido em 30/07/2026 de manhã, direto no disco)
-
-| Tema | Docs |
-|---|---:|
-| Farmacologia | 97 |
-| Cardiomiopatias | 12 |
-| Terapia intensiva | 10 |
-| Tromboembolismo | 9 |
-| Prevenção e lipídios | 9 |
-| Insuficiência cardíaca | 9 |
-| Hipertensão pulmonar | 9 |
-| Hipertensão | 9 |
-| Gravidez | 9 |
-| Fibrilação atrial | 9 |
-| Diabetes e cardiologia | 9 |
-| Calculadoras | 9 |
-| Arritmias | 9 |
-| Doença coronariana | 8 |
-| Dispositivos | 8 |
-| Febre reumática | 7 |
-| Aorta e doença arterial periférica | 7 |
-| Valvopatias | 6 |
-| Síncope | 6 |
-| Perioperatório | 6 |
-| Pericárdio | 6 |
-| Endocardite | 6 |
-| Cardiopatias congênitas | 6 |
-| Cardio-oncologia | 6 |
-| Saúde mental e cardiologia | 5 |
-| Comunicação clínica | 3 |
-| Geral | 1 |
-
-**Total: 290 documentos** — contagem de "pendentes de revisão" por tema não
-foi remedida nesta rodada (a última medição completa, 122 pendentes em
-30/07 de manhã anterior, está desatualizada porque várias sessões escreveram
-`content/` desde então; ver `review_status` no front matter de cada arquivo
-para o estado atual de um tema específico). Comunicação clínica (3) e Geral
-(1) seguem os temas mais rasos em documentos de texto — mas ganharam
-cobertura nova nas frentes JSON nesta sessão, ver abaixo.
+**Total: 424 documentos, 44 pendentes de revisão (382 revisado).** Farmacologia
+zerou (era o maior débito do sistema, 42/105 revisado em 31/07 pela manhã, hoje
+97/97). Comunicação clínica e Geral, antes os temas mais rasos, estão em 15
+documentos cada — cresceram bastante desde a medição de 29-30/07 registrada
+mais abaixo. A faixa da Biblioteca está quase inteiramente revisada (só 2
+pendentes, em Síncope e Pericárdio); a lacuna de revisão concentrada hoje é
+quase toda da faixa de Medicamentos.
 
 A queda de 250 para 241, registrada na medição anterior, não foi perda de conteúdo:
 foram as **11 fusões de pares complementares** descritas no fim deste arquivo, mais as
