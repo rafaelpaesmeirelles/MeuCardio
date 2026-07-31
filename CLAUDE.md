@@ -64,6 +64,27 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### ⚠️ Para a sessão de Medicamentos — `content/Farmacologia/levosimendana.md` diz "ajuste de dose" onde a bula contraindica, 31/07/2026
+> Ao revisar `medicamentos/metadados.json` (slug `levosimendana`, commit `57e529f`), baixei a
+> bula do SIMDAX (levosimendana, Abbott/Orion) e encontrei duas divergências reais, não só
+> lacuna de fonte:
+>
+> 1. **Renal/hepático grave**: a prosa diz "necessita ajuste de dose em disfunção hepática ou
+>    renal grave" (fonte PubMed). A bula **contraindica formalmente** o uso em comprometimento
+>    renal grave (ClCr <30 mL/min) e hepático grave — não é ajuste posológico, é proibição. A
+>    diferença muda a conduta: "ajustar a dose" sugere que existe um esquema seguro para esse
+>    paciente; a bula diz que não existe.
+> 2. **Posologia inteira**: a prosa usa um esquema de titulação de estudo (início 0,1 mcg/kg/min,
+>    subindo ao longo de 4h até 0,4 mcg/kg/min) como "esquema clássico". A bula registrada usa
+>    outro desenho: **ataque de 6-12 mcg/kg em 10 minutos, seguido de infusão contínua de
+>    0,1 mcg/kg/min**, ajustável entre 0,05 e 0,2 mcg/kg/min conforme resposta — nunca chega a
+>    0,4. Também faltam contraindicações inteiras (hipotensão grave, taquicardia, obstrução
+>    mecânica de enchimento/esvaziamento ventricular, histórico de Torsades de Pointes), ausentes
+>    da prosa por não ter nenhuma seção de contraindicações.
+>
+> Já corrigido no JSON, com a citação exata da bula. Não editei
+> `content/Farmacologia/levosimendana.md` — fora da minha faixa.
+
 > ### ⚠️ Para a sessão de Medicamentos — `content/Farmacologia/hidroclorotiazida.md` cita fonte fraca (MD Saúde, Estratégia MED) para a posologia, 31/07/2026
 > Ao revisar `medicamentos/metadados.json` (slug `hidroclorotiazida`, commit `080b1de`), notei
 > que o campo `dosing.fonte` citava só "MD Saúde ; Estratégia MED" — sites de resumo/preparação
