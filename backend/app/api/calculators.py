@@ -18,7 +18,7 @@ def list_calculators(_=Depends(current_user)):
             "purpose": c.purpose,
             "status": c.status,
         }
-        for c in calc.REGISTRY.values()
+        for c in sorted(calc.REGISTRY.values(), key=lambda c: c.name)
     ]
 
 

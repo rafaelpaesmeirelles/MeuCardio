@@ -18,10 +18,10 @@ type Ausencia = { farmaco: Item; condicao: string; condicao_rotulo: string };
 type Resultado = { achados: Achado[]; sem_informacao: Ausencia[]; aviso: string };
 
 const CONDICOES = [
-  { id: "gestacao", rotulo: "Gestação" },
-  { id: "lactacao", rotulo: "Lactação" },
   { id: "renal", rotulo: "Doença renal crônica" },
+  { id: "gestacao", rotulo: "Gestação" },
   { id: "hepatica", rotulo: "Hepatopatia" },
+  { id: "lactacao", rotulo: "Lactação" },
 ];
 
 export default function Condicoes() {

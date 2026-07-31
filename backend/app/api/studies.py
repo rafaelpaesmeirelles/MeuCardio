@@ -48,7 +48,7 @@ def list_studies(
     if q:
         query = query.filter(ScientificStudy.title.ilike(f"%{q.strip()}%"))
     total = query.count()
-    items = query.order_by(ScientificStudy.year.desc()).offset(offset).limit(limit).all()
+    items = query.order_by(ScientificStudy.title).offset(offset).limit(limit).all()
     return {"total": total, "items": [_card(s) for s in items]}
 
 

@@ -49,7 +49,7 @@ def _documento(d: Document) -> dict:
 def pacote_de_emergencia(db: Session = Depends(get_db), _=Depends(current_user)):
     protocolos = (db.query(EmergencyProtocol)
                     .filter(EmergencyProtocol.published.is_(True))
-                    .order_by(EmergencyProtocol.ordem, EmergencyProtocol.titulo)
+                    .order_by(EmergencyProtocol.titulo)
                     .all())
     if not protocolos:
         return {"protocolos": [], "documentos": {}}

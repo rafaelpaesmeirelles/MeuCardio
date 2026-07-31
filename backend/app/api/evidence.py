@@ -47,7 +47,7 @@ def list_evidence(
     if q:
         query = query.filter(EvidenceRecord.statement.ilike(f"%{q.strip()}%"))
     total = query.count()
-    items = query.order_by(EvidenceRecord.theme, EvidenceRecord.recommendation_class).offset(offset).limit(limit).all()
+    items = query.order_by(EvidenceRecord.theme, EvidenceRecord.statement).offset(offset).limit(limit).all()
     return {"total": total, "items": [_card(e) for e in items]}
 
 
