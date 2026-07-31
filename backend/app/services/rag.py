@@ -130,8 +130,21 @@ def indexar_documento(db: Session, doc: Document, provedor=None) -> int:
 
 
 def indexar_tudo(db: Session, apenas_pendentes: bool = True) -> dict:
+    """Indexa em lote. Só documentos PUBLICADOS entram no índice.
+
+    O filtro por `published` aqui é defesa em profundidade: `recuperar()` já não
+    devolve trecho de documento não publicado, mas manter o retido fora do índice
+    evita gastar embedding com o que não pode ser servido e fecha a porta na
+    origem. Documento publicado depois é pego na chamada seguinte, porque
+    `apenas_pendentes` seleciona quem ainda não tem trecho — o fluxo de trabalho
+    (publicar e então indexar) continua funcionando sem mudança.
+
+    `indexar_documento()` NÃO recebeu esse filtro de propósito: ele é chamado
+    diretamente para reindexar um documento específico cujo corpo mudou, e quem
+    chama já sabe o que está fazendo.
+    """
     provedor = obter_provedor_embeddings()
-    q = db.query(Document)
+    q = db.query(Document).filter(Document.published.is_(True))
     if apenas_pendentes:
         q = q.filter(~Document.id.in_(select(DocumentChunk.document_id).distinct()))
     docs = q.all()
@@ -139,11 +152,15 @@ def indexar_tudo(db: Session, apenas_pendentes: bool = True) -> dict:
     return {"documentos": len(docs), "trechos": total}
 
 
+# A metade léxica da busca híbrida precisa do MESMO filtro de `published` que a
+# semântica — sem ele, bastaria a pergunta casar por texto para um documento
+# retido voltar ao contexto da IA, mesmo com o lado vetorial já filtrado.
 SQL_LEXICO = text("""
 SELECT c.id AS chunk_id
 FROM documents d
 JOIN document_chunks c ON c.document_id = d.id
-WHERE d.search_vector @@ plainto_tsquery('portuguese', :q)
+WHERE d.published = true
+  AND d.search_vector @@ plainto_tsquery('portuguese', :q)
 ORDER BY ts_rank(d.search_vector, plainto_tsquery('portuguese', :q)) DESC, c.ordem ASC
 LIMIT :limite
 """)
@@ -162,11 +179,17 @@ def recuperar(db: Session, pergunta: str, temas: list[str] | None = None) -> lis
     limite = settings.ai_top_k * 3
     vetor = obter_provedor_embeddings().embeddings([pergunta])[0]
 
-    consulta = select(DocumentChunk.id)
+    # O join com Document é INCONDICIONAL, e não só quando há filtro por tema:
+    # é por ele que passa o `published`. Antes de 31/07/2026 o join só existia
+    # no caminho com `temas`, então uma pergunta sem tema recuperava trechos de
+    # documento não publicado — conteúdo retido esperando aval chegava à IA.
+    consulta = (
+        select(DocumentChunk.id)
+        .join(Document, Document.id == DocumentChunk.document_id)
+        .where(Document.published.is_(True))
+    )
     if temas:
-        consulta = consulta.join(Document, Document.id == DocumentChunk.document_id).where(
-            Document.theme.in_(temas)
-        )
+        consulta = consulta.where(Document.theme.in_(temas))
     consulta = consulta.order_by(DocumentChunk.embedding.cosine_distance(vetor)).limit(limite)
     semanticos = [r[0] for r in db.execute(consulta).all()]
     lexicos = [
