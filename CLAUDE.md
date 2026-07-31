@@ -64,6 +64,33 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### ⚠️ Para a sessão de Medicamentos — digoxina: prosa e JSON chegam a conclusões opostas sobre WPW/CMH/BAV serem contraindicação, 31/07/2026
+> Achado ao revisar `medicamentos/metadados.json` (slug `digoxina`, commit `46136a7`) — **as
+> duas telas já estavam "resolvidas" antes de hoje, cada uma numa direção, e ninguém tinha
+> comparado**:
+>
+> - **A prosa** (`content/Farmacologia/digoxina.md`, seção "Situações de cautela clínica
+>   reconhecida", nota de 29/07/2026, fonte **rótulo do FDA**): conclui que WPW com FA,
+>   bloqueio AV de alto grau/bradicardia sinusal grave sem marca-passo e cardiomiopatia
+>   hipertrófica obstrutiva **não são contraindicação formal** — são Advertências e
+>   Precauções (seções 5.1, 5.2, 5.7 do rótulo americano), com nuance registrada caso a caso.
+> - **O JSON** (campo `notes."Situações de cautela clínica reconhecida"`, já existente antes
+>   desta sessão, fonte **bula brasileira, duas apresentações independentes**): conclui o
+>   oposto — que essas mesmas condições **são contraindicação formal**, com as ressalvas
+>   específicas de cada uma (WPW: salvo avaliação eletrofisiológica prévia da via acessória;
+>   CMH: salvo se houver também FA e IC). Eu só promovi esse conteúdo do campo `notes` para o
+>   campo `contraindications` (que estava desatualizado em relação à própria pesquisa já
+>   registrada no mesmo verbete) — não fiz pesquisa nova.
+>
+> As duas leituras têm fonte primária real e citação, e não são a mesma fonte — é o mesmo
+> padrão de divergência regulatória Brasil/EUA que já apareceu em dabigatrana (ajuste renal) e
+> apixabana. **A diferença é o peso clínico aqui**: um médico que confiasse só na prosa trataria
+> WPW+FA e CMH obstrutiva como precaução relativa; confiando só no JSON, como proibição. Vale a
+> pena as duas sessões conferirem juntas contra o texto literal da bula brasileira (não só o
+> resumo que já está nos dois lugares) antes de decidir qual prevalece — ou se o produto deve
+> mostrar as duas leituras, como já faz em outros fármacos com divergência FDA/Brasil (ex.:
+> apixabana em diálise). Não editei `content/Farmacologia/digoxina.md` — fora da minha faixa.
+
 > ### 📌 Para a sessão de Medicamentos — colchicina: achei o ajuste renal por TFG que faltava na bula do Colchis, 31/07/2026
 > Achado bom, não urgência de segurança. `content/Farmacologia/colchicina.md` registra, com
 > cuidado exemplar, que o ajuste renal da bula brasileira do COLCHIS (Apsen) era "pouco" —
