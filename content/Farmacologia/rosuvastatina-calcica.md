@@ -4,7 +4,7 @@ slug: rosuvastatina-calcica
 theme: "Farmacologia"
 kind: farmacologia
 review_status: revisado
-source_refs: ["Bula da rosuvastatina cálcica (Novartis) · https://portal.novartis.com.br/medicamentos/wp-content/uploads/2022/11/Bula-ROSUVASTATINA-CALCICA-Comprimido-revestido-Medico.pdf · lida na íntegra em 31/07/2026, itens 4 (Contraindicações), 5 (Advertências e Precauções) e Uso durante a gravidez e lactação — corrige URL truncada de uma leitura anterior"]
+source_refs: ["Bula do CRESTOR (rosuvastatina, AstraZeneca), bula do paciente · https://www.saudedireta.com.br/catinc/drugs/bulas/crestor.pdf · lida em 31/07/2026, item 3 (\"Quando não devo usar\") — trata gravidez e lactação como proibição, convergindo com a leitura de categoria X já registrada por outra sessão a partir do CRESTOR (mirror consultaremedios.com.br) e do ROSUCOR", "Bula da rosuvastatina cálcica (Novartis, genérico) · https://portal.novartis.com.br/medicamentos/wp-content/uploads/2022/11/Bula-ROSUVASTATINA-CALCICA-Comprimido-revestido-Medico.pdf · lida na íntegra em 31/07/2026, itens 4 (Contraindicações), 5 (Advertências e Precauções) e Uso durante a gravidez e lactação — único dos três produtos conferidos que classifica gravidez como categoria D/advertência, não X/contraindicação formal; divergência registrada, não resolvida contra fonte independente adicional"]
 legacy_source: "medicamentos/banco-de-medicamentos-item-20.md"
 ---
 
@@ -47,17 +47,26 @@ pelo risco de hepatotoxicidade.
 Prevenção primária e secundária de eventos cardiovasculares, dislipidemia (hipercolesterolemia primária, dislipidemia mista), terapia intensiva de LDL-C conforme metas ESC/EAS 2025
 
 ## Contraindicacoes
-**Corrigido em 31/07/2026** — o item 4 formal da bula brasileira lista só dois itens; os demais
-que constavam aqui são reais, mas são Advertências, não proibição formal:
+**CORRIGIDO DE NOVO em 31/07/2026 — divergência real entre três bulas brasileiras de
+rosuvastatina, não resolvida por completo.** A correção anterior (mesmo dia) usou só a bula do
+genérico Novartis, que classifica gravidez como categoria D/Advertência. Ao conferir a bula do
+CRESTOR (marca de referência, AstraZeneca), o texto trata gravidez e lactação como proibição
+("não deve ser utilizado"), convergindo com a leitura de **categoria X/contraindicação formal**
+que outra sessão já havia registrado a partir do CRESTOR e do ROSUCOR — ou seja, **duas marcas
+(CRESTOR, ROSUCOR) dizem X/contraindicação formal, uma (genérico Novartis) diz D/advertência**.
+
+Diante do desempate 2-a-1 e do peso clínico da diferença — X é proibição sem exceção, D admite
+ponderação risco-benefício —, esta prosa adota a leitura mais restritiva (contraindicação
+formal) como conduta padrão, com a divergência registrada explicitamente:
 
 - Hipersensibilidade à rosuvastatina cálcica ou a outro componente da fórmula
-- **Aleitamento ou doação de leite humano** — contraindicação formal e explícita (rosuvastatina é excretada no leite humano); a bula orienta apresentar alternativa de tratamento ou de alimentação do bebê
-
-**Gravidez**: categoria de risco **D**, uso "não recomendado" (Advertência, não item 4) —
-descontinuar assim que a gestação for identificada, mas a bula prevê ponderar
-necessidade/benefício-risco em paciente de risco cardiovascular muito alto. Dados publicados de
-1º trimestre não identificaram risco aumentado de malformação maior após ajuste para fatores de
-confusão, mas o mecanismo de ação mantém risco potencial teórico ao feto.
+- **Gravidez** — contraindicação formal (categoria de risco **X** nas bulas do CRESTOR e do
+  ROSUCOR); a bula do genérico Novartis diverge, classificando como categoria D/advertência
+  ("uso não recomendado", com ponderação de risco-benefício possível em risco CV muito alto).
+  **Divergência não resolvida contra uma quarta fonte independente** — na dúvida sobre qual
+  registro específico está sendo dispensado, tratar como contraindicação formal é a leitura mais
+  segura
+- **Aleitamento ou doação de leite humano** — contraindicação formal e explícita nas três bulas conferidas (rosuvastatina é excretada no leite humano)
 
 **Hepatopatia ativa** e **miopatia ativa** não são item formal de contraindicação — ver "Ajuste
 hepático" acima e "Efeitos adversos"/"Monitorização" abaixo para a conduta de cautela e

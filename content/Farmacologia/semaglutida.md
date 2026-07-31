@@ -4,7 +4,7 @@ slug: semaglutida
 theme: "Farmacologia"
 kind: farmacologia
 review_status: revisado
-source_refs: ["Ozempic — Bula do Paciente · Novo Nordisk · https://www.novonordisk.com.br/content/dam/nncorp/br/pt/pdfs/bulas/patient/Ozempic_3mL_1mg_Paciente.pdf · lida na íntegra em 31/07/2026 — confirma titulação 0,25→0,5→1 mg/semana e contraindicação de hipersensibilidade/carcinoma medular de tireoide; substitui fonte de agregador (Weight Index) usada antes para a titulação", "Wegovy (semaglutida) · ANVISA · https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/novos-medicamentos-e-indicacoes/wegovy-semaglutida"]
+source_refs: ["Bula PROFISSIONAL do OZEMPIC (Novo Nordisk, EU-PI 20251203 + US-PI 03022025), item 4 (Contraindicações) e item 5 (Advertências e Precauções) — confirmado pela sessão da Biblioteca em 31/07/2026 que só hipersensibilidade é contraindicação formal; CMT/NEM2 é cautela (item 5), não proibição — corrige uma leitura anterior no mesmo dia que usou a bula do paciente", "Ozempic — Bula do Paciente · Novo Nordisk · https://www.novonordisk.com.br/content/dam/nncorp/br/pt/pdfs/bulas/patient/Ozempic_3mL_1mg_Paciente.pdf · lida na íntegra em 31/07/2026 — confirma titulação 0,25→0,5→1 mg/semana; usada por engano como equivalente à bula profissional para classificar contraindicação, corrigido", "Wegovy (semaglutida) · ANVISA · https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/novos-medicamentos-e-indicacoes/wegovy-semaglutida"]
 legacy_source: "medicamentos/banco-de-medicamentos-semaglutida-completo.md"
 ---
 
@@ -52,9 +52,25 @@ Estudo SELECT avaliou semaglutida em pacientes com sobrepeso/obesidade e doença
 Dor abdominal severa (suspeita de pancreatite), sinais de reação alérgica, desidratação significativa, alterações visuais (especialmente com retinopatia diabética preexistente)
 
 ## Contraindicacoes
-- Histórico pessoal/familiar de carcinoma medular de tireoide
-- Síndrome de neoplasia endócrina múltipla tipo 2
-- Hipersensibilidade
+**CORRIGIDO DE NOVO em 31/07/2026** — a correção anterior (mesmo dia) usou a bula do *paciente*,
+que simplifica a linguagem da bula profissional; o mesmo padrão já visto em perindopril/lactação
+nesta base. A bula **profissional** do OZEMPIC, item 4. CONTRAINDICAÇÕES, tem **só um item**:
+
+- Hipersensibilidade à semaglutida ou a qualquer excipiente
+
+**Histórico pessoal/familiar de carcinoma medular de tireoide (CMT) e Síndrome de Neoplasia
+Endócrina Múltipla tipo 2 (NEM 2) não são contraindicação formal na bula profissional brasileira**
+— estão no item 5. Advertências e Precauções, texto literal: *"Ozempic deve ser usado com
+**cautela** em pacientes com histórico pessoal ou familiar de CMT ou em pacientes com NEM 2"* —
+não usa a palavra "contraindicado". O racional: tumor de célula C de tireoide é efeito de classe
+observado em roedor, por mecanismo não genotóxico específico do receptor de GLP-1; relevância em
+humano é considerada baixa, mas não excluída — por isso cautela, não proibição.
+
+**Divergência real, não erro de leitura**: o rótulo do FDA (EUA) trata esse mesmo histórico como
+contraindicação formal/*boxed warning* para Ozempic e Wegovy. A bula brasileira profissional não
+acompanha essa classificação. Dado o volume de prescrição da classe GLP-1, um médico que decidir
+por cautela reforçada (tratando como se fosse contraindicação) não está agindo contra nenhuma das
+duas fontes — só está sendo mais conservador que a bula brasileira exige formalmente.
 
 ## Efeitos adversos
 Náusea, vômito, diarreia (mais comuns na fase de titulação, tendem a melhorar em 3-4 dias por etapa), constipação, pancreatite (rara), colelitíase
