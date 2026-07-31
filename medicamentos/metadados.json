@@ -4082,7 +4082,7 @@
   },
   {
     "slug": "vericiguate",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "generic_name": "Vericiguate",
     "drug_class": "Estimulador da guanilato ciclase solúvel (sGC)",
     "mechanism": "Na IC, há disfunção do eixo óxido nítrico-GCs-GMPc. Vericiguate estimula diretamente a guanilato ciclase solúvel e potencializa o efeito do óxido nítrico endógeno, aumentando GMPc — resulta em redução do remodelamento de VE, melhora de função vascular e diastólica, e redução de fibrose e inflamação. Mecanismo distinto dos demais pilares farmacológicos da ICFEr (não é IECA/BRA/INRA, beta-bloqueador, antagonista mineralocorticoide nem iSGLT2)",
@@ -4102,10 +4102,22 @@
     "references": [
       "The Role of Vericiguat in the Expanding Realm of Heart Failure Pharmacotherapy: An Overview of the VICTORIA Trial · American College of Cardiology · https://www.acc.org/latest-in-cardiology/articles/2020/07/08/08/49/the-role-of-vericiguat-in-the-expanding-realm-of-hf-pharmacotherapy",
       "Vericiguat · StatPearls (NCBI Bookshelf) · https://www.ncbi.nlm.nih.gov/books/NBK574528/",
-      "Renal function and vericiguat in heart failure patients: light at the end of the tunnel! · European Journal of Heart Failure · 2021 · https://onlinelibrary.wiley.com/doi/full/10.1002/ejhf.2280"
+      "Renal function and vericiguat in heart failure patients: light at the end of the tunnel! · European Journal of Heart Failure · 2021 · https://onlinelibrary.wiley.com/doi/full/10.1002/ejhf.2280",
+      "Verquvo (vericiguat) — Resumo das Características do Medicamento (RCM/SmPC), EMA, seções 4.3 (Contraindicações) e 4.4 (Advertências) — em inglês, consultado via busca; este fármaco não tem bula do detentor do registro no Brasil disponível nos espelhos consultados em 31/07/2026, mesma pendência já registrada"
     ],
     "pregnancy": "**Não usar na gravidez, nem em mulher com potencial para engravidar que não use contracepção.** A restrição é declarada como **medida de precaução**, não como dano demonstrado em humanos: a quantidade de dados em grávidas é **inexistente**, e os estudos em animais revelaram toxicidade reprodutiva **na presença de toxicidade materna** — ressalva que a própria fonte faz questão de registrar. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do VERQUVO (vericiguat, Bayer). Fonte europeia, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil disponível nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer.",
-    "lactation": "**Decisão entre suspender a amamentação ou o tratamento.** Não há informação sobre a presença de vericiguate no leite humano, sobre efeitos no lactente ou sobre a produção de leite; o fármaco **está presente no leite de ratas lactantes** e o risco para a criança amamentada não pode ser excluído. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do VERQUVO (vericiguat, Bayer). Fonte europeia, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil disponível nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer."
+    "lactation": "**Decisão entre suspender a amamentação ou o tratamento.** Não há informação sobre a presença de vericiguate no leite humano, sobre efeitos no lactente ou sobre a produção de leite; o fármaco **está presente no leite de ratas lactantes** e o risco para a criança amamentada não pode ser excluído. Fonte: Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.6 do VERQUVO (vericiguat, Bayer). Fonte europeia, não a bula da ANVISA: este fármaco não tem bula do detentor do registro no Brasil disponível nos espelhos consultados. Conferir contra a bula brasileira quando ela aparecer.",
+    "contraindications": [
+      "Hipersensibilidade à substância ativa ou a qualquer excipiente",
+      "Uso concomitante de outro estimulador da guanilato ciclase solúvel (sGC), como riociguate"
+    ],
+    "notes": {
+      "Hipotensao e populacoes nao estudadas": "Pacientes com PAS <100mmHg ou hipotensão sintomática ao iniciar o tratamento não foram estudados nos ensaios pivotais — cautela reforçada nesse cenário.",
+      "Insuficiencia hepatica grave": "Não recomendado em insuficiência hepática grave (Child-Pugh C).",
+      "Uso pediatrico": "Segurança e eficácia não estabelecidas em menores de 18 anos — sem dado clínico disponível; estudos não clínicos mostraram efeito indesejável no osso em crescimento.",
+      "Administracao": "Tomar com alimento."
+    },
+    "hepatic_adjustment": "Não recomendado em insuficiência hepática grave (Child-Pugh C); sem informação de ajuste específico para leve/moderada nas fontes consultadas."
   },
   {
     "slug": "esmolol",
