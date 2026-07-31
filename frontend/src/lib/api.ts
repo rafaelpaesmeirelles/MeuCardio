@@ -160,4 +160,5 @@ export type Usuario = {
   practice_zip: string | null;
   practice_phone: string | null;
   document_logo_url: string | null;
+  boas_vindas_pendente: boolean;
 };

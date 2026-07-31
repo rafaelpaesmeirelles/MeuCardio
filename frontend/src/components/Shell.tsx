@@ -3,6 +3,7 @@ import { NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "../lib/auth";
 import { api } from "../lib/api";
 import Credito from "./Credito";
+import BoasVindas from "./BoasVindas";
 
 type ItemNav = { to: string; rotulo: string; curto: string; fim?: boolean };
 
@@ -139,6 +140,8 @@ export default function Shell() {
           <Credito compacto />
         </main>
       </div>
+
+      <BoasVindas />
 
       {menuAberto && (
         <div className="gaveta-fundo" onClick={() => setMenuAberto(false)} aria-hidden="true" />

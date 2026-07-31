@@ -73,3 +73,10 @@ class User(Base):
     reviewed_by: Mapped[int | None] = mapped_column(ForeignKey("users.id"), nullable=True)
     reviewed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
     rejection_note: Mapped[str | None] = mapped_column(String(500), nullable=True)
+
+    # Mensagem de boas-vindas pessoal, mostrada uma vez só no primeiro acesso
+    # (pedido do Rafael, 31/07/2026, para o próprio pai). Nasce False pra todo
+    # mundo; é setada True manualmente só em quem deve recebê-la, e volta a
+    # False assim que a pessoa fecha o popup — não é sistema genérico de
+    # avisos, é este recado específico.
+    boas_vindas_pendente: Mapped[bool] = mapped_column(Boolean, default=False)

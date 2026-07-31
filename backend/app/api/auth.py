@@ -75,6 +75,7 @@ def _perfil(user: User) -> dict:
         "practice_city": user.practice_city, "practice_state": user.practice_state,
         "practice_zip": user.practice_zip, "practice_phone": user.practice_phone,
         "document_logo_url": user.document_logo_url,
+        "boas_vindas_pendente": user.boas_vindas_pendente,
     }
 
 
@@ -166,6 +167,16 @@ def atualizar_me(dados: DadosPessoais, db: Session = Depends(get_db),
     db.commit()
     db.refresh(user)
     return _perfil(user)
+
+
+@router.post("/me/boas-vindas-vista")
+def marcar_boas_vindas_vista(db: Session = Depends(get_db), user: User = Depends(current_user)):
+    """Fecha o popup de boas-vindas pessoal de vez — chamada quando o
+    destinatário fecha o aviso. Não tem corpo nem efeito nenhum além
+    deste: não é sistema genérico de notificação, é um recado único."""
+    user.boas_vindas_pendente = False
+    db.commit()
+    return {"boas_vindas_pendente": False}
 
 
 # --- foto de perfil --------------------------------------------------------

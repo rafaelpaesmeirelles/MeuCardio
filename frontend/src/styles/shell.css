@@ -725,3 +725,41 @@
   .doc-cabecalho__logo { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .doc-cabecalho { border-bottom: 2px solid #0b2e45; }
 }
+
+/* Popup de boas-vindas pessoal (BoasVindas.tsx) ---------------------------- */
+.boasvindas__fundo {
+  position: fixed; inset: 0; z-index: 200;
+  background: rgba(11, 46, 69, 0.55);
+  display: flex; align-items: center; justify-content: center;
+  padding: 1.2rem;
+}
+.boasvindas__cartao {
+  background: var(--superficie);
+  border-radius: var(--r);
+  box-shadow: var(--sombra);
+  max-width: 560px;
+  width: 100%;
+  padding: 2rem 1.8rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.boasvindas__logo { width: 100%; max-width: 260px; height: auto; margin-bottom: 1.2rem; }
+.boasvindas__texto {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--texto);
+  margin: 0 0 1rem;
+  text-align: left;
+}
+.boasvindas__assinatura {
+  font-family: var(--fonte-display);
+  color: var(--primaria);
+  font-weight: 600;
+  align-self: flex-end;
+  margin: 0 0 1.4rem;
+}
+.boasvindas__cartao .botao { min-width: 200px; }
