@@ -2012,5 +2012,30 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "benefit-benznidazol-na-cardiomiopatia-chagasica-cronica",
+    "title": "BENEFIT — Benznidazol na cardiomiopatia chagásica crônica estabelecida",
+    "study_type": "ensaio_clinico",
+    "authors": "Morillo CA et al.",
+    "journal": "New England Journal of Medicine",
+    "year": 2015,
+    "doi": "10.1056/NEJMoa1507574",
+    "pmid": "26323937",
+    "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1507574",
+    "summary": "Ensaio prospectivo, multicêntrico e randomizado com 2854 pacientes com cardiomiopatia chagásica, que receberam benznidazol ou placebo por até 80 dias e foram seguidos por média de 5,4 anos. O desfecho primário, em análise de tempo até o evento, foi o primeiro episódio de qualquer componente do composto de morte, parada cardíaca ressuscitada, taquicardia ventricular sustentada, implante de marca-passo ou cardiodesfibrilador implantável, transplante cardíaco, insuficiência cardíaca nova, acidente vascular cerebral ou outro evento tromboembólico.",
+    "key_findings": "O desfecho primário ocorreu em 394 pacientes (27,5%) do grupo benznidazol e em 414 (29,1%) do grupo placebo — razão de risco 0,93 (IC95% 0,81-1,07; p = 0,31). O efeito parasitológico, ao contrário, foi claro: entre os 1896 pacientes com PCR feita no início, 60,5% tinham resultado positivo para T. cruzi, e as taxas de conversão da PCR para negativa foram de 66,2% com benznidazol contra 33,5% com placebo ao fim do tratamento, 55,4% contra 35,3% em 2 anos e 46,7% contra 33,1% em 5 anos ou mais (p < 0,001 em todas as comparações). O efeito sobre a conversão da PCR variou por região geográfica (p < 0,001 para interação): no Brasil, razão de chances de 3,03 (IC95% 2,12-4,34) em 2 anos e 1,87 (1,33-2,63) em 5 anos ou mais; na Colômbia e em El Salvador, 1,33 (0,90-1,98) e 0,96 (0,63-1,45); na Argentina e na Bolívia, 2,63 (1,89-3,66) e 2,79 (1,99-3,92). Essa variação regional na resposta parasitológica não correspondeu a variação no efeito clínico (p = 0,16 para interação).",
+    "clinical_implications": "É o ensaio que separa duas perguntas que se confundem na prática: o benznidazol reduz de forma significativa a detecção do parasito no sangue, mas não reduziu a deterioração clínica cardíaca em 5 anos de seguimento em quem já tem cardiomiopatia estabelecida. O resultado não deve ser estendido às demais situações de tratamento etiológico — fase aguda, forma indeterminada, reativação e doença congênita têm indicação própria, discutida à parte na diretriz brasileira. Também é um alerta metodológico útil ao leitor: negativação de PCR é desfecho substituto, e aqui ele se dissociou do desfecho clínico.",
+    "limitations": "Testou benznidazol em pacientes com cardiomiopatia já estabelecida — não responde sobre tratamento em estágios mais precoces, que é onde a hipótese de benefício permanece aberta. O seguimento médio de 5,4 anos pode ser curto para uma doença de evolução lenta ao longo de décadas. A duração do tratamento foi de até 80 dias, e a interrupção por efeito adverso é frequente com o fármaco, o que aproxima o resultado de uma análise por intenção de tratar com exposição incompleta.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "benefit",
+      "benznidazol",
+      "doença de chagas",
+      "cardiomiopatia chagásica",
+      "ensaio clínico"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]

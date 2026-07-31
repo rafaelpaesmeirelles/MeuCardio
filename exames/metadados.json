@@ -1545,5 +1545,52 @@
       "met",
       "avaliação pré-operatória"
     ]
+  },
+  {
+    "slug": "sorologia-para-trypanosoma-cruzi-na-fase-cronica",
+    "name": "Sorologia para Trypanosoma cruzi na fase crônica da doença de Chagas",
+    "category": "laboratorial",
+    "theme": "Cardiomiopatias",
+    "what_it_measures": "Anticorpos contra o Trypanosoma cruzi, que é como se estabelece o diagnóstico da infecção na fase crônica — fase em que a parasitemia é baixa e os métodos de detecção direta do parasito perdem sensibilidade. Os testes disponíveis dividem-se em convencionais — imunofluorescência indireta (IFI), hemaglutinação indireta (HAI) e ensaio imunoenzimático (ELISA) — e não convencionais, como quimioluminescência magnética (CMIA), eletroquimioluminescência (ECLIA) em plataforma automatizada e testes rápidos.",
+    "reference_range": "O diagnóstico não se apoia em um exame só. A diretriz brasileira registra que a Organização Mundial da Saúde recomenda solicitar dois testes de princípios diferentes, que podem ser convencionais ou não convencionais. A combinação dos dois resultados classifica o soro como positivo (dois testes reagentes) ou negativo (dois testes não reagentes) — nos dois casos por concordância entre os métodos.",
+    "indications": "Confirmação diagnóstica de infecção por T. cruzi em pessoa com antecedente epidemiológico, com alteração eletrocardiográfica compatível ou com cardiomiopatia de causa não esclarecida. A diretriz também recomenda pesquisar a infecção, com duas técnicas sorológicas distintas, diante de acidente vascular cerebral isquêmico em pessoa com risco epidemiológico identificado.",
+    "interpretation": "Dois testes reagentes de metodologias diferentes significam infecção pelo T. cruzi. Dois testes não reagentes afastam a infecção — nesse cenário costumam faltar antecedentes epidemiológicos, e alterações clínicas eventuais têm outra explicação. Resultado sorológico positivo diagnostica a infecção, não a cardiomiopatia: o acometimento cardíaco é definido pela avaliação complementar, a começar pelo eletrocardiograma.",
+    "limitations": "Em menos de 5% dos casos os dois testes discordam — um reagente e outro não reagente —, e a diretriz prevê para essa situação um terceiro teste, de princípio diferente dos dois primeiros. Há ainda a possibilidade de resultado indeterminado, quando o valor cai na zona limítrofe do ensaio. Tratamento prévio com benznidazol pode reduzir a concentração de anticorpos e tornar a sorologia indeterminada, o que exige conhecer o antecedente terapêutico para interpretar o resultado. Cada laboratório emprega testes diferentes, e os antígenos podem ser produtos purificados ou não purificados — mais uma razão para o resultado ser lido junto com o método empregado.",
+    "source_refs": [
+      "Marin-Neto JA, Rassi A Jr, Oliveira GMM, et al. Diretriz da SBC sobre Diagnóstico e Tratamento de Pacientes com Cardiomiopatia da Doença de Chagas – 2023. Arq Bras Cardiol. 2023;120(6):e20230269. DOI: 10.36660/abc.20230269. PMID: 37377258 — seções de diagnóstico sorológico e interpretação dos resultados, texto integral acessado em acesso aberto (PMC10344417) e conferido em 31/07/2026; as passagens citadas são do próprio documento."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "doença de chagas",
+      "trypanosoma cruzi",
+      "sorologia",
+      "elisa",
+      "diagnóstico",
+      "cardiomiopatia chagásica"
+    ]
+  },
+  {
+    "slug": "eletrocardiograma-de-12-derivacoes-na-doenca-de-chagas",
+    "name": "Eletrocardiograma de 12 derivações na doença de Chagas",
+    "category": "metodo_grafico",
+    "theme": "Cardiomiopatias",
+    "what_it_measures": "Atividade elétrica cardíaca em pessoa com sorologia positiva para doença de Chagas. É o exame que separa a forma indeterminada da cardiomiopatia crônica da doença de Chagas (CCDC): na forma indeterminada, o eletrocardiograma é normal; a partir do estágio B1, é alterado.",
+    "reference_range": "A diretriz brasileira distingue duas categorias de alteração. Definidoras de CCDC: bradicardia sinusal ≤ 40 bpm, extrassistolia ventricular polimórfica, bloqueio completo do ramo direito, alteração primária da repolarização ventricular, bloqueio atrioventricular de 2º e 3º graus, bloqueio completo do ramo esquerdo, zona eletricamente inativa, disfunção do nó sinusal, taquicardia ventricular não sustentada e sustentada, fibrilação atrial, flutter atrial e fibrilação ventricular. Não definidoras, isto é, inespecíficas: bradicardia sinusal > 40 bpm, extrassistolia ventricular isolada, bloqueio incompleto do ramo direito, alteração secundária da repolarização ventricular, bloqueio atrioventricular de 1º grau, bloqueio do ramo esquerdo de 1º grau, desvio do eixo elétrico médio do QRS para a esquerda, arritmia sinusal não respiratória, taquicardia sinusal, bloqueio divisional anterossuperior esquerdo, baixa voltagem de QRS e marca-passo atrial migratório.",
+    "indications": "Avaliação diagnóstica e prognóstica inicial de toda pessoa com sorologia positiva para doença de Chagas — recomendação de grau forte na diretriz brasileira. O seguimento é anual quando o eletrocardiograma tem alterações específicas e bianual quando é normal ou tem alterações inespecíficas, e o exame deve ser repetido a qualquer momento diante de mudança do quadro clínico.",
+    "interpretation": "Eletrocardiograma normal em pessoa com sorologia positiva caracteriza a forma indeterminada (estágio A) — assintomática, sem doença estrutural cardíaca ou digestiva, e com risco de cerca de 30% de evoluir para cardiomiopatia. Alteração eletrocardiográfica com função sistólica global normal e sem sintomas de insuficiência cardíaca corresponde ao estágio B1; com disfunção sistólica global e ainda sem sintomas, ao estágio B2; com sintomas prévios ou atuais de insuficiência cardíaca, ao estágio C. O bloqueio completo do ramo direito, isolado ou associado ao bloqueio divisional anterossuperior esquerdo, é o achado classicamente ligado à doença — mas note que a diretriz classifica o bloqueio divisional anterossuperior esquerdo isolado entre as alterações NÃO definidoras.",
+    "limitations": "O eletrocardiograma define o acometimento elétrico, não a função ventricular: o estadiamento entre B1 e B2 depende da fração de ejeção medida por ecocardiografia (≥ 55% em B1, < 55% em B2, geralmente entre 41% e 54%). Alterações inespecíficas não caracterizam CCDC e não devem ser lidas como tal. A fibrose miocárdica pode estar presente ao realce tardio de ressonância mesmo na forma indeterminada, ou seja, eletrocardiograma normal não exclui acometimento miocárdico incipiente.",
+    "source_refs": [
+      "Marin-Neto JA, Rassi A Jr, Oliveira GMM, et al. Diretriz da SBC sobre Diagnóstico e Tratamento de Pacientes com Cardiomiopatia da Doença de Chagas – 2023. Arq Bras Cardiol. 2023;120(6):e20230269. DOI: 10.36660/abc.20230269. PMID: 37377258 — tabela de alterações eletrocardiográficas da doença de Chagas, tabela de métodos complementares para diagnóstico e prognóstico da CCDC e tabela de classificação em estágios evolutivos; texto integral acessado em acesso aberto (PMC10344417) e conferido linha a linha em 31/07/2026."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "doença de chagas",
+      "eletrocardiograma",
+      "cardiomiopatia chagásica",
+      "estadiamento",
+      "bloqueio de ramo direito"
+    ]
   }
 ]
