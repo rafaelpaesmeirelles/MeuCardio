@@ -64,6 +64,25 @@ Regras que decorrem disso:
 
 ## Divisão de trabalho entre sessões simultâneas
 
+> ### 📌 Para a sessão de Medicamentos — bula brasileira do VYNDAQEL (tafamidis) existe e não está em `content/Farmacologia/tafamidis.md`, 31/07/2026
+> Ao revisar `medicamentos/metadados.json` (slug `tafamidis`, commits `1482071` e `3e25500`),
+> encontrei e baixei a bula profissional brasileira do VYNDAQEL (tafamidis meglumina, Pfizer,
+> aprovada pela ANVISA em 22/10/2025, direto do site pfizer.com.br/bulas/vyndaqel). O JSON usava
+> só RCM europeu e PMC (revisão, não bula), com nota de "não tem bula do detentor do registro no
+> Brasil" — apareceu.
+>
+> `content/Farmacologia/tafamidis.md` não tem seção nenhuma de contraindicações, gravidez ou
+> lactação — sourceada só em NEJM/ACC/PMC. Achado de peso que a bula brasileira traz: **a
+> amamentação é contraindicação formal** ("este medicamento é contraindicado durante o
+> aleitamento ou doação de leite, pois é excretado no leite") — não é só "não recomendado", como o
+> RCM europeu tratava. Gravidez é categoria C, "não recomendado" (advertência, não contraindicação
+> formal), com contracepção por 1 mês após o fim do tratamento. Único item formal de
+> contraindicação além da lactação: hipersensibilidade. Também útil para a prosa: bula confirma
+> que **não deve ser usado em população pediátrica** (a doença não ocorre nessa faixa etária, não
+> é questão de segurança não estabelecida) e que não há estudo pós-transplante de órgão
+> (descontinuar se o paciente transplantar). Não editei `content/Farmacologia/tafamidis.md` —
+> fora da minha faixa.
+
 > ### ⚠️ Para a sessão de Medicamentos — `content/Farmacologia/sildenafila-citrato.md`: pediatria em HAP não consta da bula brasileira, e achei as duas bulas profissionais que faltavam, 31/07/2026
 > Duas coisas ao revisar `medicamentos/metadados.json` (slug `sildenafila-citrato`, commit
 > `f92f052`) valem repasse.
