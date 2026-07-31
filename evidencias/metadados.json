@@ -4425,5 +4425,65 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "arus-para-borda-endocardica-no-eco-de-estresse",
+    "statement": "O uso de agentes de realce ultrassonográfico (ARUS) no ecocardiograma de estresse é recomendação FORTE, com certeza ALTA, quando DOIS OU MAIS segmentos miocárdicos contíguos não são visualizados no plano apical — a finalidade é melhorar a acurácia diagnóstica. O gatilho é objetivo e conta segmentos: não é impressão de janela ruim.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Alta",
+    "society": "SBC",
+    "year": 2026,
+    "guideline_title": "Diretriz sobre Ecocardiografia de Estresse – 2026 (Sociedade Brasileira de Cardiologia)",
+    "reference": "Camarozano AC, Spina SV, Souza JRM, Melo MDT, et al. Diretriz sobre Ecocardiografia de Estresse – 2026. Arq Bras Cardiol. 2026;123(4):e20260223. DOI: 10.36660/abc.20260223. PMID: 42307309 — quadro 'ECO ESTRESSE COM AGENTES DE REALCE ULTRASSONOGRÁFICO (ARUS) PARA ANÁLISE DA BORDA ENDOCÁRDICA', conferido no texto integral em acesso aberto (PMC13398863) em 31/07/2026. NOTA DE SISTEMA: diretriz em GRADE — força FORTE/FRACA e certeza ALTA/MODERADA/BAIXA, não a escala Classe I-III / Nível A-C da ESC/AHA. A interface exibe \"Força\" e \"Certeza\".",
+    "theme": "Doença coronariana",
+    "tags": [
+      "arus",
+      "contraste ecocardiográfico",
+      "borda endocárdica",
+      "janela acústica",
+      "ecocardiografia de estresse"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "arus-para-analise-de-perfusao-tem-recomendacao-fraca",
+    "statement": "Para a análise de PERFUSÃO miocárdica — com o objetivo de aumentar a acurácia na identificação de doença coronariana obstrutiva e de avaliar viabilidade —, o uso de agentes de realce ultrassonográfico tem recomendação FRACA, ainda que a certeza da evidência seja ALTA. Contraste deliberado com a indicação anterior: a MESMA tecnologia é recomendação forte para delinear a borda endocárdica e fraca para avaliar perfusão. A finalidade muda a força, e certeza alta da evidência não implica recomendação forte — são eixos independentes no GRADE.",
+    "recommendation_class": "Fraca",
+    "evidence_level": "Alta",
+    "society": "SBC",
+    "year": 2026,
+    "guideline_title": "Diretriz sobre Ecocardiografia de Estresse – 2026 (Sociedade Brasileira de Cardiologia)",
+    "reference": "Camarozano AC, Spina SV, Souza JRM, Melo MDT, et al. Diretriz sobre Ecocardiografia de Estresse – 2026. Arq Bras Cardiol. 2026;123(4):e20260223. DOI: 10.36660/abc.20260223. PMID: 42307309 — quadro 'ECO ESTRESSE COM AGENTES DE REALCE ULTRASSONOGRÁFICO (ARUS) PARA ANÁLISE DA PERFUSÃO MIOCÁRDICA', conferido no texto integral em acesso aberto (PMC13398863) em 31/07/2026. NOTA DE SISTEMA: diretriz em GRADE — força FORTE/FRACA e certeza ALTA/MODERADA/BAIXA, não a escala Classe I-III / Nível A-C da ESC/AHA. A interface exibe \"Força\" e \"Certeza\".",
+    "theme": "Doença coronariana",
+    "tags": [
+      "arus",
+      "perfusão miocárdica",
+      "viabilidade",
+      "recomendação fraca",
+      "grade"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "eco-de-estresse-em-pediatria-recomendacao-fraca-e-certeza-baixa",
+    "statement": "Em pediatria, o ecocardiograma de estresse tem recomendação FRACA e certeza BAIXA da evidência. A diretriz descreve como potencialmente vantajoso na estenose ou regurgitação valvar, na obstrução dinâmica das vias de saída dos ventrículos esquerdo e direito, na hipertensão arterial pulmonar e na avaliação de isquemia miocárdica — esta última nas anomalias de origem das coronárias, na doença de Kawasaki e em pacientes submetidos a cirurgia cardíaca com manipulação de coronária. O verbo da diretriz é \"parece vantajoso\", e a força da recomendação reflete isso.",
+    "recommendation_class": "Fraca",
+    "evidence_level": "Baixa",
+    "society": "SBC",
+    "year": 2026,
+    "guideline_title": "Diretriz sobre Ecocardiografia de Estresse – 2026 (Sociedade Brasileira de Cardiologia)",
+    "reference": "Camarozano AC, Spina SV, Souza JRM, Melo MDT, et al. Diretriz sobre Ecocardiografia de Estresse – 2026. Arq Bras Cardiol. 2026;123(4):e20260223. DOI: 10.36660/abc.20260223. PMID: 42307309 — quadro 'ECO ESTRESSE EM PEDIATRIA', conferido no texto integral em acesso aberto (PMC13398863) em 31/07/2026. NOTA DE SISTEMA: diretriz em GRADE — força FORTE/FRACA e certeza ALTA/MODERADA/BAIXA, não a escala Classe I-III / Nível A-C da ESC/AHA. A interface exibe \"Força\" e \"Certeza\".",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "ecocardiografia de estresse",
+      "pediatria",
+      "doença de kawasaki",
+      "anomalia coronariana",
+      "hipertensão pulmonar"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
