@@ -484,7 +484,7 @@ profundidade continuam mapeadas mais abaixo — Pericárdio e Febre reumática s
 com 8-9 documentos, a galeria não tem aneurisma apical chagásico, e a decisão de
 esquema do `recommendation_class` ainda barra diretriz brasileira em GRADE.
 
-#### ✅ Sessão da BIBLIOTECA — fechamento de 31/07/2026: **70 itens novos** (58 publicados, 12 aguardando aval)
+#### ✅ Sessão da BIBLIOTECA — fechamento de 31/07/2026: **70 itens novos, TODOS PUBLICADOS**
 Contagem para a meta, medida no disco (não estimada). Dois lotes, os dois
 autorizados pelo Rafael no mesmo dia.
 
@@ -550,20 +550,43 @@ cardíacos" na taxonomia e Cardio-oncologia é faixa de Medicamentos (e trata de
 cardiotoxicidade, não de tumor primário) — o documento de massas ficou em
 Cardiomiopatias, onde a base agrupa doença estrutural não valvar e não coronariana.
 
-**PUBLICAÇÃO — os 58 estão no ar.** Carga e publicação por `docker compose exec`
-(a rota HTTP é barrada pelo classificador), com `AuditLog` gravado à mão nos seis
-lotes. **Publicado sempre por LISTA EXPLÍCITA de slugs, nunca por `review_status`**
-— os carregadores devolveram exatamente `novos: 6/6/5`, `11/2/2`, `4/7` e `9/1`, e
-nos documentos foi `import_directory` + publicação dos slugs previstos; a varredura
-de órfãos rodada depois de cada publicação mostrou que **nada foi ressuscitado**.
-Os 5 documentos foram **indexados no RAG** logo após publicar (27 + 19 = 46
-trechos), porque documento publicado e não indexado é invisível para o assistente
-clínico — e esse passo não aparece em nenhuma contagem, então é o mais fácil de
-esquecer.
+**Lote 7 — 12 itens, o que fechou a meta de 1.000:**
 
-**Armadilha do `import_directory` observada duas vezes hoje:** ele devolveu
-`novos: 2` para 3 documentos e `novos: 1` para 2 — porque a sessão de Medicamentos
-roda o mesmo import periodicamente e já havia trazido parte deles. **O número de
+| Frente | Antes → depois | Itens |
+|---|---|---|
+| `evidencias/` | 187 → **198** | 6 de tomografia em TAVI e anomalia coronária; 5 de RM valvar e angioTC vascular. Valvopatias 10 → 15, Aorta 15 → 17 |
+| `content/` | 454 → **455** | Agenesia congênita do pericárdio (Pericárdio 8 → 9) |
+
+Dois achados de alto valor prático nesse lote, ambos **recomendações negativas ou
+de contraste**, que é o tipo que costuma faltar numa base:
+- **RM é Classe III para vegetação valvar** no diferencial de endocardite — o
+  método é o ecocardiograma. Dentro da MESMA diretriz a RM é Classe I para
+  caracterizar tumor cardíaco: caracterizar massa e investigar endocardite não são
+  a mesma pergunta.
+- **Endoprótese aórtica**: RM é Classe I no PLANEJAMENTO e apenas IIb no
+  SEGUIMENTO, onde a angioTC é Classe I. Planejar e acompanhar não seguem o mesmo
+  método.
+
+**PUBLICAÇÃO — os 70 estão no ar.** Carga e publicação por `docker compose exec`
+(a rota HTTP é barrada pelo classificador), com `AuditLog` gravado à mão nos sete
+lotes. **Publicado sempre por LISTA EXPLÍCITA de slugs, nunca por `review_status`**
+— os carregadores devolveram exatamente `novos: 6/6/5`, `11/2/2`, `4/7`, `9/1` e
+`11`, e nos documentos foi `import_directory` + publicação dos slugs previstos; a
+varredura de órfãos rodada depois de cada publicação mostrou que **nada foi
+ressuscitado**. Os 6 documentos foram **indexados no RAG** logo após publicar
+(27 + 19 + 8 = 54 trechos), porque documento publicado e não indexado é invisível
+para o assistente clínico — e esse passo não aparece em nenhuma contagem, então é
+o mais fácil de esquecer.
+
+**Estado final do banco:** `documents` 457/457 · `drugs` 101/101 · `evidencias`
+197/198 · `estudos` 85/85 · `exames` 68/68 · `galeria` 66/66. **A única linha não
+publicada em toda a base** é a evidência de febre reumática, retida de propósito
+(letra do nível de evidência não confirmada).
+
+**Armadilha do `import_directory` observada três vezes hoje:** ele devolveu
+`novos: 2` para 3 documentos, `novos: 1` para 2 e `novos: 0` para 1 — porque a
+sessão de Medicamentos roda o mesmo import periodicamente e já havia trazido parte
+deles. **O número de
 `novos` não serve para conferir se o seu lote entrou**; confira slug a slug no
 banco antes de publicar, que foi o que evitou publicar um conjunto incompleto.
 
