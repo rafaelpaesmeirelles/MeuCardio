@@ -4,7 +4,7 @@ slug: marcapasso-definitivo-indicacoes-estimulacao-sistema-conducao
 theme: "Dispositivos"
 kind: protocolo
 review_status: pendente_revisao
-source_refs: ["Glikson M et al. 2021 ESC Guidelines on cardiac pacing and cardiac resynchronization therapy. Eur Heart J. 2021;42(35):3427-3520.", "ESC Clinical Consensus Statement on Conduction System Pacing. EP Europace. 2025 (apresentado no EHRA 2025, Viena).", "Curtis AB, Worley SJ, Adamson PB, et al; BLOCK HF Investigators. Biventricular Pacing for Atrioventricular Block and Systolic Dysfunction. N Engl J Med. 2013;368(17):1585-1593. DOI: 10.1056/NEJMoa1210356. PMID: 23614585"]
+source_refs: ["Glikson M et al. 2021 ESC Guidelines on cardiac pacing and cardiac resynchronization therapy. Eur Heart J. 2021;42(35):3427-3520. PMID: 34455430", "Glikson M et al. European Society of Cardiology (ESC) clinical consensus statement on indications for conduction system pacing. Europace. 2025;27(4):euaf050. DOI: 10.1093/europace/euaf050. PMID: 40159278", "Curtis AB, Worley SJ, Adamson PB, et al; BLOCK HF Investigators. Biventricular Pacing for Atrioventricular Block and Systolic Dysfunction. N Engl J Med. 2013;368(17):1585-1593. DOI: 10.1056/NEJMoa1210356. PMID: 23614585"]
 legacy_source: "Pesquisado e redigido para preencher lacuna identificada em COBERTURA.md — tema tinha apenas 1 documento (CDI)."
 ---
 
@@ -23,7 +23,7 @@ Antes de indicar, é obrigatório excluir causa reversível: uso de betabloquead
 
 ## Estimulação do sistema de condução — a mudança mais relevante desde 2021
 
-A diretriz de 2021 já havia incorporado a estimulação do feixe de His e do ramo esquerdo como alternativa à estimulação convencional do ventrículo direito (VD). O consenso de 2025 aprofunda essa recomendação:
+A diretriz de 2021 já havia incorporado a estimulação do feixe de His como alternativa à estimulação convencional do ventrículo direito (VD), com recomendação conservadora ("pode ser considerada" em BAV com expectativa de estimulação ventricular >20%). A estimulação do ramo esquerdo, porém, **não** recebeu recomendação formal em 2021 — a própria diretriz declara que, à época, os dados sobre ela ainda eram limitados demais para sustentar uma recomendação. É o consenso de 2025 que cobre pela primeira vez a estimulação do ramo esquerdo com orientação formal, além de aprofundar a do feixe de His:
 
 **Por que isso importa**: a estimulação convencional do VD (posição clássica no ápice ou via de saída do VD) ativa o ventrículo de forma não fisiológica — o estímulo se propaga célula a célula em vez de usar o sistema de condução nativo. Em pacientes que dependem de estimulação frequente, isso pode induzir dissincronia ventricular e, ao longo do tempo, cardiomiopatia induzida por marcapasso — queda de FEVE atribuível ao próprio padrão de estimulação, não à doença de base.
 

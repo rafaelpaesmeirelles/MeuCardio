@@ -92,19 +92,16 @@ suficiente para aparecer em 25 meses após um evento agudo. O EXSCEL, com a maio
 amostra não substitui efeito real quando o efeito é pequeno.
 
 ## Limites
-- **Os seis ensaios não são comparáveis entre si por desenho** — populações diferentes (pós-SCA
-  recente no ELIXA; mista no EXSCEL; só doença estabelecida no Harmony Outcomes), seguimentos
-  diferentes (1,6 a 6,3 anos) e formulações diferentes (diária vs. semanal)
-- **Nenhum ensaio testou uma molécula contra a outra** — a comparação aqui é indireta, entre ensaios
+- **Os seis ensaios não são comparáveis por desenho** — populações diferentes (pós-SCA recente no
+  ELIXA; mista no EXSCEL; só doença estabelecida no Harmony Outcomes), seguimentos de 1,6 a 6,3
+  anos, e nenhum testou uma molécula contra a outra — a comparação é indireta, entre ensaios
   independentes, não um "ranking" validado estatisticamente
-- **O Harmony Outcomes foi encerrado precocemente**, por atingir o número pré-especificado de
-  desfechos — seguimento mediano de apenas 1,6 ano é o mais curto da classe, o que limita a
-  avaliação de segurança de longo prazo mesmo com resultado de eficácia positivo
-- **A albiglutida não está mais disponível comercialmente** — o dado do Harmony Outcomes tem valor
-  científico (evidência de efeito de classe em subgrupo de moléculas de ação mais curta) mas
-  nenhuma aplicação prescritiva direta hoje
-- **O EXSCEL usou formulação de liberação prolongada semanal**, diferente da exenatida de uso
-  duas vezes ao dia mais antiga — não extrapolar o resultado para a formulação diária
+- **O Harmony Outcomes foi encerrado precocemente**, com o seguimento mais curto da classe (1,6
+  ano), o que limita a avaliação de segurança de longo prazo mesmo com eficácia positiva; e a
+  albiglutida não está mais disponível comercialmente — o dado tem valor científico, não aplicação
+  prescritiva hoje
+- **O EXSCEL usou formulação de liberação prolongada semanal**, diferente da exenatida de uso duas
+  vezes ao dia mais antiga — não extrapolar o resultado para a formulação diária
 
 ## Armadilhas clínicas
 - **Tratar "agonista de GLP-1 reduz evento cardiovascular" como efeito de classe garantido** — três
@@ -114,11 +111,9 @@ amostra não substitui efeito real quando o efeito é pequeno.
 - **Citar Harmony Outcomes como razão para prescrever albiglutida** — a molécula foi descontinuada
   comercialmente em 2017, antes mesmo da publicação do ensaio
 - **Extrapolar o resultado neutro do ELIXA (pós-síndrome coronariana aguda recente) para a
-  prescrição de rotina em prevenção secundária estável** — a janela de tempo e o risco basal da
-  população do ELIXA são diferentes dos ensaios positivos
-- **Confundir a exenatida semanal do EXSCEL com a exenatida de uso duas vezes ao dia** — são a
-  mesma molécula em formulações farmacocinéticas distintas, e só a semanal tem ensaio de desfecho
-  cardiovascular publicado
+  prescrição de rotina em prevenção secundária estável** — janela de tempo e risco basal diferentes
+  dos ensaios positivos
+- **Confundir a exenatida semanal do EXSCEL com a exenatida de uso duas vezes ao dia** — mesma
+  molécula, formulações farmacocinéticas distintas, e só a semanal tem ensaio de desfecho publicado
 - **Omitir os três ensaios neutros/de molécula descontinuada ao apresentar a classe** — é a mesma
-  distorção de seleção que motivou este documento, e se repete sempre que só os ensaios positivos
-  são citados
+  distorção de seleção que motivou este documento

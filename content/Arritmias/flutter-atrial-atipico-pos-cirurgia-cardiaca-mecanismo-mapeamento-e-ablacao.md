@@ -4,7 +4,7 @@ slug: flutter-atrial-atipico-pos-cirurgia-cardiaca-mecanismo-mapeamento-e-ablaca
 theme: "Arritmias"
 kind: protocolo
 review_status: revisado
-source_refs: ["Johner N, Namdar M, Shah DC. Atypical Atrial Flutter: Electrophysiological Characterization and Effective Catheter Ablation. J Cardiovasc Electrophysiol. 2025 Oct;36(10):2692-2711. DOI: 10.1111/jce.16543. PMID: 39821917", "Zhou GB, Hu JQ, Guo XG, et al. Very long-term outcome of catheter ablation of post-incisional atrial tachycardia: Role of incisional and non-incisional scar. Int J Cardiol. 2016 Feb 15;205:72-80. DOI: 10.1016/j.ijcard.2015.12.004. PMID: 26720044", "Ko Ko NL, Sriramoju A, Khetarpal BK, Srivathsan K. Atypical atrial flutter: review of mechanisms, advances in mapping and ablation outcomes. Curr Opin Cardiol. 2022 Jan 1;37(1):36-45. DOI: 10.1097/HCO.0000000000000924. PMID: 34857715"]
+source_refs: ["Johner N, Namdar M, Shah DC. Atypical Atrial Flutter: Electrophysiological Characterization and Effective Catheter Ablation. J Cardiovasc Electrophysiol. 2025 Oct;36(10):2692-2711. DOI: 10.1111/jce.16543. PMID: 39821917", "Zhou GB, Hu JQ, Guo XG, et al. Very long-term outcome of catheter ablation of post-incisional atrial tachycardia: Role of incisional and non-incisional scar. Int J Cardiol. 2016 Feb 15;205:72-80. DOI: 10.1016/j.ijcard.2015.12.004. PMID: 26720044", "Ko Ko NL, Sriramoju A, Khetarpal BK, Srivathsan K. Atypical atrial flutter: review of mechanisms, advances in mapping and ablation outcomes. Curr Opin Cardiol. 2022 Jan 1;37(1):36-45. DOI: 10.1097/HCO.0000000000000924. PMID: 34857715", "Law IH, Alam O, Bove EL, Ohye RG, Bradley DJ, Yu S, Dick M 2nd. Follow-Up of a Prospective Surgical Strategy to Prevent Intra-Atrial Reentrant Tachycardia After the Fontan Operation. Circ Arrhythm Electrophysiol. 2016;9(12):e004478. DOI: 10.1161/CIRCEP.116.004478. PMID: 27979912. PMCID: PMC5166610 — coorte pós-Fontan (ventrículo único), não cirurgia cardíaca do adulto; acrescentada em 01/08/2026 como referência lateral de incidência"]
 legacy_source: "Documento novo, escrito em 01/08/2026. Lacuna: a pasta já tinha flutter atrial TÍPICO (istmo cavotricuspídeo) em documento dedicado, mas nenhum documento cobria o flutter atrial ATÍPICO (não dependente do istmo cavotricuspídeo) — cenário clínico distinto, dominado por pacientes com cirurgia cardíaca ou ablação prévias, com mecanismo de mapeamento e prognóstico próprios."
 ---
 
@@ -93,7 +93,24 @@ grupo heterogêneo, no qual mapeamento repetido (e não a suposição de que "é
 antes") é o que orienta a ablação de redo.
 
 ## O que este documento não resolve
-Nenhuma das fontes usadas fornece uma taxa de incidência populacional (por exemplo, "X% dos pacientes
-submetidos a atriotomia direita desenvolvem flutter atípico em Y anos") — os números disponíveis são de
-coortes de pacientes já referenciados para ablação, não de rastreamento populacional pós-operatório.
-`VERIFICAÇÃO HUMANA NECESSÁRIA` para quem precisar de uma incidência populacional específica.
+Nenhuma das três fontes principais usadas acima fornece uma taxa de incidência populacional para o
+cenário mais comum desta pasta — cirurgia cardíaca do ADULTO (revascularização, valva) com atriotomia —
+os números disponíveis nelas são de coortes de pacientes já referenciados para ablação, não de
+rastreamento populacional pós-operatório.
+
+**Um dado de incidência populacional real foi localizado, mas é de outra população — a criança/adulto
+jovem operado de Fontan (anatomia de ventrículo único), não o adulto revascularizado ou valvopata desta
+pasta**, e por isso entra aqui como referência lateral, não como resposta à pergunta original: Law IH,
+Alam O, Bove EL, Ohye RG, Bradley DJ, Yu S, Dick M 2nd. "Follow-Up of a Prospective Surgical Strategy to
+Prevent Intra-Atrial Reentrant Tachycardia After the Fontan Operation." Circ Arrhythm Electrophysiol.
+2016;9(12):e004478. DOI 10.1161/CIRCEP.116.004478. PMID 27979912, PMCID PMC5166610 (texto integral aberto
+conferido nesta sessão). Achados, verbatim do resumo: **"IART after the Fontan operation had an early
+reported incidence of 10% to 35% during early and intermediate follow-up"** na literatura histórica, e a
+própria coorte contemporânea do estudo (134 pacientes randomizados, 114 com seguimento completo, mediana
+de **8,2 anos**) mostrou **incidência combinada de IART sustentada de 3,5% (4/114)** — número bem menor
+que os 10-35% históricos, refletindo mudança de técnica cirúrgica ao longo do tempo (o próprio estudo
+testou uma incisão específica para reduzir esse risco, sem diferença entre os grupos com e sem ela).
+
+`VERIFICAÇÃO HUMANA NECESSÁRIA` permanece para uma incidência populacional específica no cenário de
+cirurgia cardíaca do ADULTO (não congênita/Fontan) — o dado acima não deve ser extrapolado para essa
+população, que tem anatomia, idade e tipo de cicatriz cirúrgica diferentes.

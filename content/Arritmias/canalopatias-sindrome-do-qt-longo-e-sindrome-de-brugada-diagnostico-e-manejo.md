@@ -24,11 +24,13 @@ Publicado originalmente em 1993 e ainda em uso. Pontuação por três categorias
 Torsades de pointes e síncope com estresse não se somam — são mutuamente exclusivos, conta-se apenas a maior pontuação de cada categoria.
 
 ## Escore de Shanghai — probabilidade de sindrome de brugada
-Publicado em 2016 pelo consenso de especialistas em síndromes de onda J (HRS/EHRA/APHRS/SOLAECE). Pontuação por ECG, história clínica, história familiar e teste genético — usa-se apenas a maior pontuação dentro de cada categoria:
+Publicado em 2016 pelo consenso de especialistas em síndromes de onda J, organizado pela Heart Rhythm Society, pela European Heart Rhythm Association e pela Asia Pacific Heart Rhythm Society (HRS/EHRA/APHRS). Pontuação por ECG, história clínica, história familiar e teste genético — usa-se apenas a maior pontuação dentro de cada categoria, e o diagnóstico exige ao menos um achado de ECG:
 
-- **ECG**: padrão tipo 1 espontâneo (3,5 pontos); padrão tipo 1 induzido por febre (3 pontos); parada cardíaca inexplicada ou FV/TV polimórfica documentada (3 pontos); padrão tipo 2 ou 3 que converte para tipo 1 com fármaco provocativo, respiração agônica noturna, síncope suspeita de origem arrítmica, ou parente de 1º/2º grau com Brugada definido (2 pontos cada); síncope de causa indeterminada, morte súbita suspeita em parente (1 ponto cada); fibrilação/flutter atrial antes dos 30 anos, morte súbita inexplicada antes dos 45 anos em parente com autópsia negativa (0,5 ponto cada)
-- **Teste genético**: mutação provavelmente patogênica (0,5 ponto)
-- **Interpretação**: ≥3,5 pontos = Brugada provável/definido; 2-3 pontos = Brugada possível; <2 pontos = não diagnóstico
+- **ECG**: padrão tipo 1 espontâneo (3,5 pontos); padrão tipo 1 induzido por febre (3 pontos); padrão tipo 2 ou 3 que converte para tipo 1 com fármaco provocativo (2 pontos)
+- **História clínica**: parada cardíaca inexplicada ou FV/TV polimórfica documentada (3 pontos); respiração agônica noturna (2 pontos); síncope suspeita de origem arrítmica (2 pontos); síncope de causa/mecanismo indeterminado (1 ponto); fibrilação/flutter atrial antes dos 30 anos sem etiologia alternativa (0,5 ponto)
+- **História familiar**: parente de 1º ou 2º grau com Brugada definido (2 pontos); morte súbita suspeita (febre, noturna, fármaco agravante de Brugada) em parente de 1º/2º grau (1 ponto); morte súbita inexplicada antes dos 45 anos em parente de 1º/2º grau com autópsia negativa (0,5 ponto)
+- **Teste genético**: mutação provavelmente patogênica em gene de suscetibilidade a Brugada (0,5 ponto)
+- **Interpretação**: >3,5 pontos = Brugada provável/definido; 2-3 pontos = Brugada possível; <2 pontos = não diagnóstico
 
 ## Taquicardia ventricular polimorfica catecolaminergica (tvpc) — diagnostico
 **Acrescentada em 30/07/2026.** Causada por mutação de ganho de função no gene do receptor de rianodina cardíaco (**RYR2**), responsável por **mais da metade dos casos** — estimativas na literatura variam de cerca de 50% a mais de 80%, a depender da população estudada; **CASQ2** é a segunda causa mais frequente. Apresentação clássica: síncope induzida por esforço físico ou emoção, podendo a primeira manifestação ser morte súbita.

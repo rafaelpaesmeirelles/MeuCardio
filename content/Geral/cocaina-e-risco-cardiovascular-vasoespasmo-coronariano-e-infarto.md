@@ -4,7 +4,7 @@ slug: cocaina-e-risco-cardiovascular-vasoespasmo-coronariano-e-infarto
 theme: "Geral"
 kind: estudo
 review_status: revisado
-source_refs: ["Lange RA, Cigarroa RG, Yancy CW Jr, et al. Cocaine-Induced Coronary-Artery Vasoconstriction. N Engl J Med. 1989;321(23):1557-1562. DOI: 10.1056/NEJM198912073212301. PMID: 2573838 — mecanismo, 45 pacientes em cateterismo, cocaína intranasal", "Lange RA, Cigarroa RG, Flores ED, et al. Potentiation of Cocaine-Induced Coronary Vasoconstriction by Beta-Adrenergic Blockade. Ann Intern Med. 1990;112(12):897-903. DOI: 10.7326/0003-4819-112-12-897. PMID: 1971166 — ensaio randomizado, duplo-cego, controlado por placebo, 30 pacientes", "Weber JE, Shofer FS, Larkin GL, Kalaria AS, Hollander JE. Validation of a Brief Observation Period for Patients with Cocaine-Associated Chest Pain. N Engl J Med. 2003;348(6):510-517. DOI: 10.1056/NEJMoa022206. PMID: 12571258 — coorte prospectiva, 302 pacientes, protocolo de observação de 9-12h"]
+source_refs: ["Lange RA, Cigarroa RG, Yancy CW Jr, et al. Cocaine-Induced Coronary-Artery Vasoconstriction. N Engl J Med. 1989;321(23):1557-1562. DOI: 10.1056/NEJM198912073212301. PMID: 2573838 — mecanismo, 45 pacientes em cateterismo, cocaína intranasal", "Lange RA, Cigarroa RG, Flores ED, et al. Potentiation of Cocaine-Induced Coronary Vasoconstriction by Beta-Adrenergic Blockade. Ann Intern Med. 1990;112(12):897-903. DOI: 10.7326/0003-4819-112-12-897. PMID: 1971166 — ensaio randomizado, duplo-cego, controlado por placebo, 30 pacientes", "Weber JE, Shofer FS, Larkin GL, Kalaria AS, Hollander JE. Validation of a Brief Observation Period for Patients with Cocaine-Associated Chest Pain. N Engl J Med. 2003;348(6):510-517. DOI: 10.1056/NEJMoa022206. PMID: 12571258 — coorte prospectiva, 302 pacientes, protocolo de observação de 9-12h", "Richards JR, Garber D, Laurin EG, Albertson TE, Derlet RW, Amsterdam EA, Olson KR, Ramoska EA, Lange RA. Treatment of cocaine cardiovascular toxicity: a systematic review. Clin Toxicol (Phila). 2016;54(5):345-364. DOI: 10.3109/15563650.2016.1142090. PMID: 26919414 — revisão sistemática de manejo farmacológico agudo, graduada por CEBM, lida por abstract em E-utilities, resolve a marcação de verificação humana necessária de 31/07/2026 sobre a conduta farmacológica aguda", "Anderson JL, Adams CD, Antman EM, et al. 2012 ACCF/AHA focused update incorporated into the ACCF/AHA 2007 guidelines for the management of patients with unstable angina/non-ST-elevation myocardial infarction. J Am Coll Cardiol. 2013;61(23):e179-e347. PMID: 23639841 — aprova labetalol para SCA associada a cocaína/metanfetamina, citado via referência 12 do capítulo StatPearls abaixo", "Richards JR, Le JK. Cocaine Toxicity. In: StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; atualizado em 08/06/2023. PMID: 28613695. NCBI Bookshelf NBK430976 — fonte terciária usada só para a síntese prática de classes de fármaco (não para nenhum número), conferida verbatim contra o HTML da página em 01/08/2026"]
 legacy_source: "Documento novo, escrito em 01/08/2026. Lacuna real: nenhum documento do repositório cobria cocaína e risco cardiovascular (vasoespasmo coronariano, dor torácica induzida por cocaína, isquemia/infarto) — confirmado por busca em todo o conteúdo antes de escrever. É uma exposição de anamnese frequentemente omitida pelo paciente e com implicação terapêutica direta e contraintuitiva (contraindicação a betabloqueador)."
 ---
 
@@ -42,7 +42,64 @@ Os três estudos, lidos juntos, sustentam uma linha de raciocínio coerente do m
 - Os dois estudos mecanísticos (Lange 1989 e Lange 1990) usaram **cocaína intranasal em dose baixa** (2mg/kg, próxima à de uso anestésico tópico), não a dose e via do uso recreativo (que costuma ser maior e por via inalatória/fumada ou intravenosa) — os próprios autores assumem que o efeito vasoconstritor tende a ser mais pronunciado nas doses recreativas, mas isso não foi medido diretamente nesses ensaios
 - A coorte de Weber é de **pacientes de risco baixo a intermediário** já triados para uma unidade de observação de dor torácica — não se aplica diretamente a quem chega com alteração isquêmica franca ao ECG, instabilidade hemodinâmica ou troponina já alterada, que são critério de exclusão do protocolo, não de inclusão
 - Nenhum dos três estudos endereça diretamente arritmia, dissecção aórtica ou miocardiopatia induzidas por cocaína — o recorte aqui é vasoespasmo coronariano, dor torácica e infarto
-- A conduta farmacológica de primeira linha mais divulgada na prática clínica para a fase aguda da dor torácica associada à cocaína (benzodiazepínico, nitrato, bloqueador de canal de cálcio) não foi verificada nesta sessão contra uma fonte primária própria — **VERIFICAÇÃO HUMANA NECESSÁRIA** para essa parte do manejo agudo antes de citar doses ou sequência terapêutica; o que está diretamente sustentado pelas fontes aqui é a reversão do espasmo por bloqueio alfa-adrenérgico (fentolamina) e a contraindicação ao betabloqueador
+
+## Manejo farmacológico agudo — resolvido em 01/08/2026
+
+A lacuna registrada nesta sessão (a conduta farmacológica de primeira linha para a fase aguda da
+dor torácica associada à cocaína — benzodiazepínico, nitrato, bloqueador de canal de cálcio — não
+tinha sido verificada contra fonte própria) foi fechada com a revisão sistemática que hoje reúne a
+evidência de tratamento farmacológico da toxicidade cardiovascular por cocaína, e não com
+afirmação de memória:
+
+**Richards JR, Garber D, Laurin EG, Albertson TE, Derlet RW, Amsterdam EA, Olson KR, Ramoska EA,
+Lange RA (o mesmo Lange dos dois primeiros estudos deste documento). "Treatment of cocaine
+cardiovascular toxicity: a systematic review." Clin Toxicol (Phila). 2016;54(5):345-364. DOI:
+10.3109/15563650.2016.1142090. PMID: 26919414.** Metodologia: busca em MEDLINE, PsycINFO, DARE,
+OpenGrey, Google Scholar e Cochrane Library, sem limite de data até novembro de 2015; 120 artigos
+elegíveis com 2.358 sujeitos; evidência graduada pelos critérios do Oxford Centre for
+Evidence-Based Medicine e comparada às diretrizes ACC/AHA vigentes. Achados por classe de fármaco,
+direto do abstract:
+- **Benzodiazepínicos e outros agentes GABAérgicos**: 5 estudos de alta qualidade (nível I/II), 3
+  retrospectivos (nível III) e 25 séries/relatos de caso (nível IV/V), em 234 sujeitos, com 8
+  falhas de tratamento — sustentam o uso, mas **benzodiazepínico nem sempre controla
+  taquicardia, hipertensão e vasoespasmo** de forma suficiente
+- **Bloqueadores de canal de cálcio**: 7 estudos nível I/II, 1 nível III e 7 nível IV/V, em 107
+  sujeitos, 1 falha de tratamento — podem reduzir hipertensão e vasoespasmo coronariano, mas não
+  necessariamente a taquicardia
+- **Vasodilatadores mediados por óxido nítrico (nitratos)**: 6 estudos nível I/II, 1 nível III e
+  25 nível IV/V, em 246 sujeitos, 11 falhas de tratamento e 2 eventos adversos — **nitroglicerina
+  pode causar hipotensão grave e taquicardia reflexa**
+- **Bloqueadores alfa-1-adrenérgicos**: 2 estudos nível I e 3 relatos de caso — podem melhorar
+  hipertensão e vasoespasmo, mas não a taquicardia, com evidência limitada
+- **Betabloqueadores e beta/alfa-bloqueadores combinados**: 9 estudos nível I/II, 7 nível III e 34
+  nível IV/V, em 1.744 sujeitos, 7 eventos adversos e 3 falhas de tratamento com betabloqueador
+  puro — **nenhum evento adverso relatado com beta/alfa-bloqueadores combinados** (labetalol,
+  carvedilol), que foram eficazes tanto para hipertensão quanto para taquicardia
+- **Conclusão literal dos autores**: a evidência de alta qualidade para tratamento farmacológico
+  da toxicidade cardiovascular por cocaína é limitada, mas pode orientar o manejo agudo de
+  taquicardia, disritmia, hipertensão e vasoespasmo coronariano; faltam ensaios randomizados
+  prospectivos para definir o tratamento ótimo
+
+**Consistência com o restante deste documento**: a revisão não contradiz os achados de Lange 1989/
+1990 acima — reforça que betabloqueador **puro** carrega risco (a "unopposed alpha-stimulation"),
+e identifica o **labetalol** (beta/alfa-bloqueador combinado) como a exceção segura dentro da
+classe, já respaldada por diretriz: a atualização focada ACC/AHA de 2012 sobre angina instável/
+IAM sem supra de ST (Anderson JL et al., J Am Coll Cardiol. 2013;61(23):e179-e347, PMID 23639841)
+**aprova o uso de labetalol** especificamente em pacientes com síndrome coronariana associada a
+cocaína ou metanfetamina.
+
+**Fonte tercíária usada só para a síntese prática de dose/classe, não como fonte primária de
+número**: o capítulo "Cocaine Toxicity" do NCBI Bookshelf/StatPearls (Richards JR, Le JK. Treasure
+Island: StatPearls Publishing; atualizado em 08/06/2023. PMID: 28613695. NBK430976), que resume a
+mesma revisão sistemática de 2016 (sua própria referência 11) em linguagem operacional de beira de
+leito: benzodiazepínico como primeira linha para toxicidade cardiovascular e agitação (para reduzir
+o tônus simpático central); bloqueador de canal de cálcio **não di-hidropiridínico** (diltiazem,
+verapamil) para hipertensão, evitando o di-hidropiridínico (nifedipino, risco de taquicardia
+reflexa); nitroglicerina/nitroprussiato eficazes para pressão arterial, com o mesmo risco de
+taquicardia reflexa; e labetalol como a exceção seguindo aprovada pela diretriz ACC/AHA citada
+acima. **Doses específicas não constam nem na revisão sistemática nem no capítulo — nenhuma dose
+numérica foi inventada aqui**; o que este documento sustenta é a ordem de classes e a
+contraindicação ao betabloqueador puro, não um esquema posológico.
 
 ## Armadilhas clinicas
 - Prescrever ou manter betabloqueador em paciente com dor torácica ou isquemia associada à cocaína por reflexo de protocolo de síndrome coronariana — é exatamente a conduta que o ensaio randomizado de Lange 1990 mostra que **piora** o espasmo coronariano, com fluxo sanguíneo coronariano caindo ainda mais e resistência vascular coronariana subindo ainda mais após o betabloqueador

@@ -50,7 +50,11 @@ Modelo de cuidado integrado hospitalar-ambulatorial 3-6 meses após o evento, al
 
 ## Criterios internacao
 
+VERIFICAÇÃO HUMANA NECESSÁRIA — seção sem conteúdo extraído da diretriz ESC 2019 nesta revisão; critérios explícitos de internação hospitalar não foram confirmados contra a fonte.
+
 ## Criterios uti
+
+VERIFICAÇÃO HUMANA NECESSÁRIA — seção sem conteúdo extraído da diretriz ESC 2019 nesta revisão; critérios explícitos de admissão em UTI não foram confirmados contra a fonte.
 
 ## Escore pesi
 Regras de predição clínica validadas (PESI) devem ser usadas para estratificação adicional quando não há alto risco; imagem de VD e biomarcadores devem ser realizados apesar de PESI baixo
@@ -88,7 +92,7 @@ TC de tórax com contraste (angio-TC) não serve apenas para diagnóstico, mas t
 - **indicacao controversa risco intermediario alto — resolvido em 30/07/2026, com os números reais**: PEITHO (Meyer G et al., N Engl J Med. 2014;370(15):1402-1411, PMID 24716681), **1.005 pacientes** normotensos com TEP de risco intermediário (disfunção de VD + lesão miocárdica), tenecteplase+heparina vs. placebo+heparina. Desfecho primário (morte ou descompensação hemodinâmica em 7 dias): **2,6% vs. 5,6%** (OR 0,44; IC95% 0,23-0,87; p=0,02) — reduz descompensação. **Morte isolada em 7 dias, sem diferença**: 1,2% vs. 1,8% (p=0,42); **morte em 30 dias, também sem diferença**: 2,4% vs. 3,2% (p=0,42). **Sangramento extracraniano**: 6,3% vs. 1,2% (p<0,001). **AVC** (majoritariamente hemorrágico): 2,4% vs. 0,2% (p=0,003)
 - **seguranca geral, com os números reais**: metanálise de Chatterjee S et al. (JAMA. 2014;311(23):2414-2421, PMID 24938564), 16 ensaios, 2.115 pacientes: trombólise associada a **menor mortalidade geral** (2,17% vs. 3,89%; OR 0,53; NNT 59) e **mais sangramento maior** (9,24% vs. 3,42%; OR 2,73; NNH 18) e **mais hemorragia intracraniana** (1,46% vs. 0,19%; OR 4,63; NNH 78). **Achado clinicamente acionável**: em pacientes **≤65 anos**, o sangramento maior **não** aumentou significativamente (OR 1,25; IC95% 0,50-3,14) — a idade avançada concentra boa parte do excesso de risco hemorrágico da trombólise
 - **a divergência entre os dois estudos não é contradição**: PEITHO, isoladamente, não mostrou benefício de mortalidade (isolada, em ensaio único); a metanálise, somando estudos e incluindo população de risco mais alto, mostrou benefício de mortalidade geral — a leitura correta é que o benefício de mortalidade da trombólise em TEP de risco intermediário existe na evidência agregada, mas é pequeno e não aparece de forma isolada em cada ensaio individual, ao contrário da redução de descompensação hemodinâmica, que o PEITHO mostrou com clareza
-- **fonte**: Guideline TdC
+- **fonte**: PEITHO (Meyer G et al., NEJM 2014, PMID 24716681) e metanálise de Chatterjee S et al. (JAMA 2014, PMID 24938564), ambos já citados acima e em source_refs
 
 ## Tep subsegmentar
 

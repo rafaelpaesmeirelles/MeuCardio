@@ -4,7 +4,7 @@ slug: trombocitopenia-induzida-por-heparina-hit-escore-4ts-fases-e-anticoagulant
 theme: "Farmacologia"
 kind: estudo
 review_status: revisado
-source_refs: ["Cuker A, Arepally GM, Chong BH, Cines DB, Greinacher A, Gruel Y, et al. American Society of Hematology 2018 guidelines for management of venous thromboembolism: heparin-induced thrombocytopenia. Blood Adv. 2018;2(22):3360-3392. DOI: 10.1182/bloodadvances.2018024489. PMID: 30482768. PMCID: PMC6258919 — texto integral lido no PMC, incluindo a Tabela 1 (as 5 fases da HIT), a tabela de dosagem dos anticoagulantes não heparínicos e a tabela de sensibilidade/especificidade do escore 4Ts", "Lo GK, Juhl D, Warkentin TE, Sigouin CS, Eichler P, Greinacher A. Evaluation of pretest clinical score (4 T's) for the diagnosis of heparin-induced thrombocytopenia in two clinical settings. J Thromb Haemost. 2006;4(4):759-765. DOI: 10.1111/j.1538-7836.2006.01787.x. PMID: 16634744 — validação do escore 4Ts em 2 centros (Hamilton, Canadá, n=100; Greifswald, Alemanha, n=236), abstract lido por E-utilities"]
+source_refs: ["Cuker A, Arepally GM, Chong BH, Cines DB, Greinacher A, Gruel Y, et al. American Society of Hematology 2018 guidelines for management of venous thromboembolism: heparin-induced thrombocytopenia. Blood Adv. 2018;2(22):3360-3392. DOI: 10.1182/bloodadvances.2018024489. PMID: 30482768. PMCID: PMC6258919 — texto integral lido no PMC, incluindo a Tabela 1 (as 5 fases da HIT), a tabela de dosagem dos anticoagulantes não heparínicos e a tabela de sensibilidade/especificidade do escore 4Ts", "Lo GK, Juhl D, Warkentin TE, Sigouin CS, Eichler P, Greinacher A. Evaluation of pretest clinical score (4 T's) for the diagnosis of heparin-induced thrombocytopenia in two clinical settings. J Thromb Haemost. 2006;4(4):759-765. DOI: 10.1111/j.1538-7836.2006.01787.x. PMID: 16634744 — validação do escore 4Ts em 2 centros (Hamilton, Canadá, n=100; Greifswald, Alemanha, n=236), abstract lido por E-utilities", "Capuano I, Riccio E, Buonanno P, Tufano A, Pisani A. Heparin-induced thrombocytopenia: a challenging diagnosis in haemodialysis — state of art and review of the literature. Clin Kidney J. 2026;19(4):sfag062. DOI: 10.1093/ckj/sfag062. PMID: 42111239. PMCID: PMC13153468 — texto integral em acesso aberto lido no PMC, Tabela 1, para os critérios de pontuação linha a linha do escore 4Ts (resolve a marcação de verificação humana necessária de 31/07/2026 sobre essa tabela)"]
 legacy_source: "Documento novo, escrito em 01/08/2026. A HIT aparece hoje só como uma linha de contraindicação em três verbetes da base (heparina-nao-fracionada.md, enoxaparina-sodica.md, fondaparinux-sodico.md) — nenhum documento explica a síndrome em si: quando suspeitar, como estimar a probabilidade pré-teste, as fases da doença e como escolher e dosar o anticoagulante de troca. É lacuna estrutural, não de detalhe: qualquer cardiologista que usa heparina — SCA, angioplastia, cirurgia cardíaca, FA — encontra esse diagnóstico diferencial com frequência."
 ---
 
@@ -78,4 +78,27 @@ A escolha entre os agentes não heparínicos é recomendação **condicional** (
 ## Armadilha de leitura
 Nenhum destes números (incidência, sensibilidade/especificidade, doses) foi extraído de memória — todos vêm do texto integral da diretriz ASH 2018 (PMC6258919) ou do abstract do artigo de validação do 4Ts (PMID 16634744), ambos conferidos nesta sessão por E-utilities/PMC. A diretriz completa tem 33 recomendações, a maioria condicional (baixa a muito baixa certeza de evidência) — o campo é de decisão compartilhada e experiência institucional, não de protocolo único correto para todo paciente.
 
-**VERIFICAÇÃO HUMANA NECESSÁRIA**: os critérios de pontuação linha a linha do escore 4Ts (0, 1 ou 2 pontos em cada uma das quatro categorias — magnitude da queda de plaqueta, momento da queda, presença de trombose/sequela e outras causas de plaquetopenia excluídas) não foram reproduzidos aqui porque a tabela de critérios detalhados não estava disponível no texto extraído nesta sessão; confirmar contra o artigo original (Lo GK et al., 2006) ou uma calculadora validada antes de aplicar o escore à beira do leito.
+## O escore 4Ts, critério por critério
+
+**Resolvido em 01/08/2026.** A tabela de critérios detalhados não estava disponível no texto
+extraído na sessão original (o artigo de validação de Lo GK et al., 2006, PMID 16634744, não tem
+texto integral em acesso aberto no PMC — só o abstract, que traz os dados de desempenho, não a
+tabela de pontuação linha a linha). A tabela abaixo, com os mesmos quatro critérios e a mesma
+pontuação 0/1/2 pontos por categoria descritos originalmente por Lo GK et al. e reafirmados pela
+diretriz ASH 2018 já citada neste documento, foi conferida **verbatim contra o XML de texto
+integral em acesso aberto** de uma revisão recente que a reproduz como Tabela 1: Capuano I,
+Riccio E, Buonanno P, Tufano A, Pisani A. "Heparin-induced thrombocytopenia: a challenging
+diagnosis in haemodialysis — state of art and review of the literature." Clin Kidney J.
+2026;19(4):sfag062. PMID 42111239. PMCID PMC13153468. doi:10.1093/ckj/sfag062.
+
+| Critério | 0 pontos | 1 ponto | 2 pontos |
+|---|---|---|---|
+| **T**rombocitopenia | Queda <30% ou nadir <10 × 10⁹/L | Queda 30-50% ou nadir 10-19 × 10⁹/L | Queda >50% **e** nadir ≥20 × 10⁹/L |
+| **T**iming (momento da queda) | ≤4 dias, sem exposição recente à heparina | Provavelmente 5-10 dias mas não definido, início após o dia 10, ou ≤1 dia com exposição prévia à heparina 30-100 dias antes | 5-10 dias, ou ≤1 dia com exposição prévia à heparina nos últimos 30 dias |
+| **T**rombose ou outra sequela | Nenhuma | Trombose progressiva ou recorrente, trombose suspeita, ou lesão de pele eritematosa não necrosante | Trombose nova confirmada, necrose de pele, ou reação sistêmica aguda após bolus IV de heparina |
+| oT**her** causas de plaquetopenia | Definida (outra causa clara) | Possível | Nenhuma outra causa aparente |
+
+**Interpretação da soma** (mesma fonte, nota de rodapé da Tabela 1): **0-3 pontos** = probabilidade
+baixa (<5%); **4-5 pontos** = probabilidade intermediária (14%); **≥6 pontos** = probabilidade alta
+(64%) — números que batem com os de desempenho do escore já citados acima (validação original de
+Lo GK et al. em Hamilton e Greifswald).

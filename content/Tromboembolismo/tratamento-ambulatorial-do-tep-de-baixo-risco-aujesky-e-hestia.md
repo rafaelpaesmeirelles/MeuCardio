@@ -28,7 +28,20 @@ Aujesky D et al., Lancet. 2011;378(9785):41-48 (PMID 21703676). Ensaio aberto, m
 **Conclusão literal dos autores:** em pacientes selecionados de baixo risco com TEP, o tratamento ambulatorial pode ser usado de forma segura e eficaz no lugar do tratamento hospitalar. Financiamento: Swiss National Science Foundation, Programme Hospitalier de Recherche Clinique e o NHLBI dos EUA; a Sanofi-Aventis forneceu a heparina de baixo peso molecular gratuitamente nos centros europeus — declarado no artigo original, sem envolvimento no desenho ou na análise.
 
 ## O estudo Hestia: coorte prospectiva com critério clínico próprio
-Zondag W et al.; Hestia Study Investigators. J Thromb Haemost. 2011;9(8):1500-1507 (PMID 21645235). Coorte prospectiva, **12 hospitais holandeses, 2008-2010**, sem grupo controle randomizado: pacientes com TEP agudo objetivamente confirmado foram triados por um **conjunto pré-definido de critérios clínicos** (os "critérios de Hestia") para elegibilidade a tratamento domiciliar com heparina de baixo peso molecular (nadroparina) seguida de antagonista de vitamina K. O artigo descreve os critérios como pré-especificados, mas **a lista completa item a item não está no resumo indexado no PubMed** — reproduzi-la exigiria o texto integral, que não foi consultado nesta sessão; portanto, o conteúdo exato de cada item do checklist fica com `VERIFICAÇÃO HUMANA NECESSÁRIA` para quem for aplicá-lo à risca.
+Zondag W et al.; Hestia Study Investigators. J Thromb Haemost. 2011;9(8):1500-1507 (PMID 21645235). Coorte prospectiva, **12 hospitais holandeses, 2008-2010**, sem grupo controle randomizado: pacientes com TEP agudo objetivamente confirmado foram triados por um **conjunto pré-definido de critérios clínicos** (os "critérios de Hestia") para elegibilidade a tratamento domiciliar com heparina de baixo peso molecular (nadroparina) seguida de antagonista de vitamina K.
+
+**A lista completa dos 11 critérios**, reproduzida a partir do texto integral aberto do ensaio HOME-PE (Roy PM et al., "Triaging acute pulmonary embolism for home treatment by Hestia or simplified PESI criteria: the HOME-PE randomized trial", Eur Heart J. 2021;42(33):3146-3157, PMID 34363386, PMCID PMC8408662 — o ensaio usou a regra de Hestia tal como originalmente publicada por Zondag et al. como um dos dois braços de triagem, e a reproduz em tabela própria). O paciente é elegível para tratamento domiciliar quando a resposta é **NÃO** a todas as perguntas abaixo:
+1. Está hemodinamicamente instável?
+2. É necessária trombólise ou embolectomia?
+3. Sangramento ativo ou alto risco de sangramento?
+4. Mais de 24 horas de suplementação de oxigênio para manter saturação > 90%?
+5. O TEP foi diagnosticado durante uso de anticoagulante?
+6. Dor intensa exigindo analgesia intravenosa por mais de 24 horas?
+7. Razão médica ou social para tratamento hospitalar por mais de 24 horas (infecção, malignidade, falta de suporte)?
+8. Clearance de creatinina < 30 mL/min?
+9. Insuficiência hepática grave?
+10. A paciente está grávida?
+11. História documentada de trombocitopenia induzida por heparina?
 
 **297 pacientes incluídos, elegíveis pelos critérios de Hestia, todos com seguimento completo de 3 meses.**
 
