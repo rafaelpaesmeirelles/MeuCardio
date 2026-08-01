@@ -1,5 +1,26 @@
 # Corvia — contexto e instruções permanentes
 
+> ## 🎯 NOVA META pelo Rafael, 01/08/2026: **3.000 itens no total de todas as frentes**
+> **A meta de 2.000 foi SUBSTITUÍDA — não é acréscimo, é a nova régua**, pedida diretamente pelo
+> Rafael assim que a de 2.000 foi confirmada batida (ver bloco logo abaixo). Vale para todas as
+> sessões e abrange as onze frentes já medidas neste arquivo, não só `content/`.
+>
+> **Ponto de partida: 2.004 itens** (contagem no disco em 01/08/2026, mesmo método de sempre —
+> `casos-clinicos` com hífen). **Faltam 996.** Nenhum prazo novo foi comunicado até agora; não
+> presumir o prazo antigo (10/08/2026) nem "sem prazo" — perguntar ao Rafael ou aguardar
+> confirmação explícita antes de planejar ritmo diário em cima de uma data.
+>
+> **A régua de qualidade não muda com a meta maior — vale reafirmar a cada escalada.** Nada
+> fabricado, fonte real e verificável, ou `VERIFICAÇÃO HUMANA NECESSÁRIA` explícito onde a fonte
+> não confirmar. Volume nunca justifica pular a conferência: os lotes de casos clínicos da sessão
+> de `/root` em 01/08 mostraram o padrão que compensa — escrever, e só then submeter a um agente
+> adversarial que tenta encontrar erro contra o PubMed antes de dar por publicável. Dois defeitos
+> reais só apareceram nessa segunda passada (ver "Casos clínicos: corrige três achados").
+>
+> **Padrão já observado nas duas escaladas de meta (1.000→2.000→3.000):** o Rafael eleva a régua
+> assim que a anterior é confirmada batida, no mesmo dia. Não tratar a meta corrente como teto
+> fixo — ao se aproximar dela, é esperado que uma nova vier substituí-la, não somar-se a ela.
+
 > ## 🎉 META DE 2.000 ITENS ATINGIDA em 01/08/2026 — **2.002 itens, oito dias antes do prazo**
 > Medido no disco depois de as sessões commitarem: `content/*.md` 571 · `evidencias` **865** ·
 > `estudos` **166** · `casos-clinicos` 85 · `medicamentos` 89 · `galeria` 74 · `exames` 73 ·
