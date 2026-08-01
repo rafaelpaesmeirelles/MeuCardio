@@ -1,0 +1,51 @@
+---
+title: "Teleconsulta em Cardiologia: o que o Exame Físico à Distância Substitui e o que Não Substitui"
+slug: teleconsulta-em-cardiologia-limites-do-exame-fisico-a-distancia-e-evidencia-de-nao-inferioridade
+theme: "Comunicação clínica"
+kind: estudo
+review_status: revisado
+source_refs: ["Nishizaki Y, Kuroki H, Ishii S, et al. Determining Optimal Intervals for In-Person Visits During Video-Based Telemedicine Among Patients With Hypertension: Cluster Randomized Controlled Trial. JMIR Cardio. 2023;7(1):e45230. DOI: 10.2196/45230. PMID: 37161483", "Eberly LA, Tennison A, Mays D, et al. Telephone-Based Guideline-Directed Medical Therapy Optimization in Navajo Nation: The Hózhó Randomized Clinical Trial. JAMA Intern Med. 2024;184(6):681-690. DOI: 10.1001/jamainternmed.2024.1523. PMID: 38583185", "Omboni S, McManus RJ, Bosworth HB, et al. Evidence and Recommendations on the Use of Telemedicine for the Management of Arterial Hypertension: An International Expert Position Paper. Hypertension. 2020;76(5):1368-1383. DOI: 10.1161/HYPERTENSIONAHA.120.15873. PMID: 32921195"]
+legacy_source: "Documento novo, escrito em 01/08/2026. O documento já existente sobre mHealth/portal do paciente (adesao-ao-tratamento-cardiovascular-com-aplicativos-e-portal-do-paciente-mhealth.md) trata de canal assíncrono (app, mensagem, portal) entre consultas presenciais. Este documento trata de algo distinto: a CONSULTA médico-paciente por VÍDEO em si — o que se perde do exame físico clássico quando ele é feito remotamente, e a evidência (e suas limitações) de que espaçar consultas presenciais com teleconsulta intercalada não piora o controle de condições crônicas estáveis (HAS, IC). Nenhum documento da pasta cobria essa lacuna especificamente."
+---
+
+# Teleconsulta em Cardiologia: o que o Exame Físico à Distância Substitui e o que Não Substitui
+
+## O problema que este documento recorta
+"Telemedicina em cardiologia" é um guarda-chuva amplo — inclui telemonitorização de dispositivo, app de adesão, mensagem assíncrona com a equipe. Este documento é sobre uma fatia mais estreita e mais discutida na prática: a **consulta de seguimento por vídeo, em tempo real, substituindo uma consulta presencial** em paciente com condição crônica **já estável** (hipertensão controlada, insuficiência cardíaca compensada em otimização de terapia). A pergunta clínica não é "telemedicina funciona", é **o que especificamente se perde do exame físico quando ele não pode ser feito com as mãos**, e se essa perda tem consequência mensurável em desfecho.
+
+## O que a consulta por vídeo não reproduz do exame físico cardiovascular
+Nenhuma das fontes lidas nesta sessão testou formalmente a acurácia diagnóstica do exame remoto item a item — é uma lacuna registrada abaixo, não uma omissão. O que segue é a limitação física do canal, não uma medida numérica de sensibilidade:
+- **Ausculta cardíaca fica praticamente inviável em vídeo comum.** Sem estetoscópio digital transmitido em tempo real (que a maioria dos consultórios e domicílios não tem), não há como caracterizar B3, B4, sopro novo ou variação de intensidade com manobra — justamente os achados que mudam conduta na IC (B3 = congestão) e na valvopatia (sopro que piora).
+- **Turgência jugular depende de ângulo de tronco a 45°, iluminação lateral e referência anatômica calibrada** — em vídeo doméstico, com câmera de webcam ou celular segurado pelo próprio paciente, a estimativa é qualitativa na melhor das hipóteses, e não substitui a régua mental treinada do exame presencial.
+- **Edema de membro inferior avaliado só pela imagem não confirma cacifo** — o médico vê inchaço, não sente a fóvea nem discrimina edema linfático de edema cardiogênico agudo por inspeção isolada.
+- **Ictus cordis, frêmito e palpação torácica** não têm substituto remoto — são achados de mão, não de olho.
+- **A pressão arterial medida em casa depende de técnica e de dispositivo validado**, e essa é justamente a ressalva central do posicionamento internacional de Omboni et al. (*Hypertension* 2020, PMID 32921195): o texto trata a telemedicina em hipertensão como modelo que **precisa** incorporar monitorização domiciliar de PA com dispositivo validado e transmissão de dado — vídeo isolado, sem medida objetiva estruturada, não é o desenho que a evidência favorável testa. Telemedicina "funciona" nos estudos que a validam porque ela substitui o exame por **dado quantitativo transmitido**, não porque o olhar da câmera substitua a mão do médico.
+
+## O que a teleconsulta faz bem, e é o que a evidência mede
+Revisão de medicação, ajuste de dose a partir de dado objetivo já coletado (PA domiciliar, peso, sintomas relatados), reforço de adesão, triagem de quem precisa vir presencial com urgência, e educação — nenhuma dessas tarefas depende de auscultar ou palpar. É por isso que os desfechos que os ensaios abaixo escolheram (controle pressórico, otimização de terapia farmacológica) são exatamente os que a teleconsulta consegue endereçar sem o exame físico — e não seria correto generalizar o resultado positivo desses ensaios para uma pergunta que eles não testaram, como detecção de sopro novo ou de estertor pulmonar.
+
+## Evidência de não inferioridade em hipertensão controlada
+Nishizaki Y et al., *JMIR Cardio* 2023 (PMID 37161483), ensaio clínico randomizado por cluster, 8 clínicas japonesas, **64 pacientes** com hipertensão essencial (idade média 54,5 anos, 60,9% homens), comparando **consulta presencial a cada 6 meses** (com teleconsulta por vídeo nos intervalos) contra **consulta presencial a cada 3 meses**, ao longo de 6 meses:
+- Desfecho primário — variação da pressão arterial sistólica entre os dois grupos: **diferença estimada de 1,18 (IC90% -3,68 a 6,04)**. **Nota de fidelidade à fonte**: o próprio resumo do artigo rotula esse número como "odds ratio", o que é incoerente com um intervalo de confiança que inclui valores negativos (razão de chances não assume valor negativo) — é quase certamente uma diferença de médias em mmHg mal rotulada no resumo, mas o registro aqui reproduz a fonte tal como publicada, sem corrigir por conta própria. **Critério de não inferioridade atendido**, segundo os autores.
+- **Satisfação do paciente maior** e **custo indireto por perda de produtividade menor** no grupo com intervalo estendido de 6 meses.
+- **Taxa de continuidade do tratamento e eventos adversos não diferiram** entre os grupos — nenhum evento adverso relatado em nenhum braço.
+- **Limitação central, declarada aqui e não escondida**: **n=64** é amostra pequena para um desenho de não inferioridade, população japonesa de um único conjunto de clínicas, hipertensão **já controlada** na entrada (não é população de diagnóstico novo nem de hipertensão resistente) — a conclusão vale para esse recorte estreito, não para "hipertensão em geral".
+
+## Evidência em insuficiência cardíaca — não é sobre exame físico, é sobre acesso a titulação
+Eberly LA et al. (ensaio **Hózhó**), *JAMA Internal Medicine* 2024 (PMID 38583185), ensaio randomizado tipo *stepped-wedge*, 2 unidades do Indian Health Service na Nação Navajo, **103 pacientes** com insuficiência cardíaca (mediana de idade 65 anos, fração de ejeção mediana de 32%, 40,8% mulheres), testando um modelo de telessaúde **por telefone** com titulação de terapia guiada por diretriz em casa, apoiada por monitorização remota de pressão arterial, contra cuidado ambulatorial usual:
+- Desfecho primário — aumento do número de classes de fármaco guiado por diretriz obtidas na farmácia em 30 dias: **66,2% no grupo de intervenção contra 13,1% no cuidado usual**.
+- **Razão de chances 12,99 (IC95% 6,87-24,53; p<0,001)**, número necessário a tratar de **1,88**.
+- **O que este ensaio prova e o que não prova**: prova que um canal remoto — aqui nem vídeo, só voz — pode **superar** o cuidado presencial usual numa tarefa específica (iniciar e titular droga) quando a barreira real é acesso a cardiologista, não exame físico. **Não testa** se esse mesmo modelo é seguro para detectar descompensação clínica precoce sem exame — a população é de pacientes já vinculados a acompanhamento estruturado com PA monitorada, não pacientes sendo rastreados para sinais de congestão nova.
+
+## Síntese e o limite que nenhuma das três fontes fecha
+As três fontes, lidas juntas, sustentam uma leitura estreita e não uma generalização ampla:
+1. Espaçar consulta presencial com teleconsulta intercalada **não piorou controle pressórico** num ensaio pequeno e específico — é sinal favorável, não é prova robusta para toda a hipertensão.
+2. Um modelo remoto **pode superar** o presencial numa tarefa que não depende de exame físico (titulação de GDMT) quando a alternativa real é acesso limitado ao especialista.
+3. **Nenhuma das fontes lidas mediu a acurácia do exame físico remoto em si** — o que este documento afirma sobre ausculta, palpação e turgência jugular é raciocínio clínico sobre a limitação física do canal, não um dado de sensibilidade/especificidade medido em estudo. Isso é uma lacuna real da literatura consultada, não uma omissão desta sessão: `VERIFICAÇÃO HUMANA NECESSÁRIA` para quem precisar de um número de acurácia diagnóstica comparativa entre exame presencial e remoto.
+
+## Armadilhas clínicas
+- Tratar o resultado do ensaio de Nishizaki (n=64, hipertensão já controlada) como evidência de que teleconsulta pode substituir consulta presencial em qualquer paciente hipertenso — a amostra é pequena e a população, seletiva.
+- Usar o Hózhó como prova de que insuficiência cardíaca pode ser seguida inteiramente por telefone sem exame físico — o ensaio mediu titulação de fármaco, não detecção de descompensação, e a monitorização domiciliar de PA fazia parte do desenho, não é telefone isolado.
+- Assumir que "vídeo" e "monitorização remota com dispositivo validado" são a mesma intervenção — a evidência favorável em hipertensão, segundo o posicionamento de Omboni et al., depende do segundo, não do primeiro isoladamente.
+- Reduzir sopro, B3 ou edema a "o paciente disse que não tem falta de ar" — sintoma referido não é achado de exame, e descompensação subclínica pode preceder sintoma.
+- Confiar em edema visto por câmera para descartar ou confirmar congestão — sem palpação, o julgamento é sobre a imagem, não sobre o sinal clínico.
