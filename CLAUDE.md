@@ -578,6 +578,33 @@ Claude." Especificação já levantada pela monitora (não repetir a pesquisa):
      encerrado) no `finally`.
      **Verificado**: bundle novo confirmado no ar por grep de `__streamAtivo`/`__streamEncerrado`
      no JS servido pelo Caddy, `curl` 200 em `/` e `/api/openapi.json`.
+- **✅ DOIS BUGS DE PRODUÇÃO ENCONTRADOS E CORRIGIDOS EM SEGUIDA, 02/08/2026 ~01h30
+  (commits `67f387d`, `e5cc716`)** — Rafael testou o streaming e recebeu **"O provedor de IA
+  não respondeu (IntegrityError)"**. A monitora foi direto ao log do Postgres (o `except`
+  genérico só devolvia o nome da exceção) e achou a causa real:
+  1. **`_preparar_pergunta()` criava a `AIConversation` com `db.flush()`, não `commit()`.** A
+     linha ficava só numa transação aberta e **ociosa** durante o 1-2 min de streaming — tempo
+     de sobra para o `idle_in_transaction_session_timeout` do Postgres derrubar a transação no
+     meio. O `INSERT` final em `ai_messages` referenciava um `conversation_id` que nunca tinha
+     sido de fato persistido. **Fix**: `db.commit()` da conversa nova acontece imediatamente em
+     `_preparar_pergunta()`, antes de qualquer trabalho longo começar — vale para as duas rotas,
+     que compartilham essa função.
+  2. **Reproduzindo esse fix pela rota real, apareceu um SEGUNDO bug**: `DetachedInstanceError`
+     em `conv.id`. Causa: o **FastAPI encerra a sessão de `Depends(get_db)` assim que a rota
+     RETORNA o `StreamingResponse`** — não quando o generator `eventos()` termina de rodar. Como
+     `eventos()` só executa de fato durante o envio da resposta (streaming), a sessão injetada
+     já estava fechada e os objetos ORM (`conv`, `user`) já detached quando o generator tentava
+     usá-los. **Fix**: captura `conv_id`/`user_id` como **valores simples** (não objetos ORM)
+     antes de retornar o `StreamingResponse`, e o generator abre e fecha a **própria sessão**
+     (`SessionLocal()`) para toda leitura/escrita depois disso — nunca mais a do `Depends`.
+  3. **`log.exception(...)` acrescentado nos dois `except`** (`/perguntar` e
+     `/perguntar/stream`) — antes só chegava ao usuário o nome da exceção, e descobrir a causa
+     exigia ir direto ao log do Postgres, como a monitora precisou fazer desta vez.
+  **Testado pela rota HTTP real, reproduzindo exatamente o cenário que falhou** (conversa nova,
+  sem `conversation_id`, pergunta que exige busca): status 200, evento `final` completo (sem
+  erro), **conferido também no banco** — a `AIConversation`, as 2 `AIMessage` (user + assistant)
+  e o `AuditLog` correspondentes existem, todos com o `conversation_id` correto. Backend
+  rebuildado duas vezes (uma por fix) e verificado em produção antes de cada registro.
 - **✅ IMPLEMENTADO no commit `631b21e`** — mas Rafael testou e pediu 2 ajustes
   (23h42 de 01/08, direto à monitora), registrados aqui pra quem pegar a tarefa:
   1. **Busca na internet não pode depender de opt-in manual.** O checkbox
