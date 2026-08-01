@@ -526,6 +526,30 @@ Claude." Especificação já levantada pela monitora (não repetir a pesquisa):
   pode esgotar o orçamento antes do texto. Não reproduzido de forma limpa (sem
   timeout do PubMed) nesta sessão — fica como possível ajuste futuro de
   `ai_max_output_tokens` ou de prompt, não como bug confirmado desta implementação.
+- **✅ RESOLVIDO E NO AR, 02/08/2026 ~00h50 (commit `e79b056`)** — Rafael testou de novo
+  depois do fix de PWA/service worker: seletor de modelo funcionando, mas **busca na
+  internet continuava sem efeito** (respondia só com a base do site). Causa raiz real,
+  achada só nesta rodada: `PROMPT_SISTEMA` (`rag.py`) **nunca mencionava nem autorizava**
+  a ferramenta `web_search` — ela ia na chamada (`provedor.py` estava correto), mas o
+  modelo simplesmente ignorava porque nada no prompt dizia que podia/devia usá-la. Três
+  correções:
+  1. `PROMPT_SISTEMA` ganhou parágrafo explícito autorizando busca na internet "como uma
+     sessão normal do Claude" — sempre que o contexto institucional/PubMed não cobrir a
+     pergunta, ou quando informação atual ajudar — e o marcador de citação **`[W#]`**,
+     distinto de `[F#]` (institucional) e `[PM#]` (PubMed), com a regra de nunca misturar.
+  2. `ai_max_output_tokens` subiu de `1800` para `4096` — era a suspeita já registrada
+     acima sobre o texto final vazio: blocos de `tool_use`/`tool_result` do `web_search`
+     comem parte do teto antes do texto final.
+  3. `ProvedorAnthropic.responder()` agora trata `stop_reason == "pause_turn"` (ocorre em
+     buscas mais longas): reenvia o `content` do assistente como nova mensagem e continua
+     a chamada em loop (até 5 rodadas), em vez de devolver o que quer que tivesse vindo
+     até ali.
+  **Testado pela rota real** (`app.api.ai.perguntar`, não só a função interna), duas
+  perguntas que só busca na internet resolveria (evento regulatório 2026 da Anvisa;
+  atualização 2025-2026 de finerenona em IC): as duas voltaram com texto substantivo,
+  fontes `[W1]`/`[W2]`/... citadas e claramente separadas de `[F#]`, modelo
+  auto-selecionado (`claude-opus-5`) preenchido na resposta. Backend rebuildado
+  (`docker compose up -d --build backend`) e verificado em produção antes deste registro.
 - **✅ IMPLEMENTADO no commit `631b21e`** — mas Rafael testou e pediu 2 ajustes
   (23h42 de 01/08, direto à monitora), registrados aqui pra quem pegar a tarefa:
   1. **Busca na internet não pode depender de opt-in manual.** O checkbox
