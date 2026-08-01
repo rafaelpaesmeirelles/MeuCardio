@@ -314,5 +314,368 @@
         "origem_secao": "Fator de risco hemorrágico específico mencionado"
       }
     ]
+  },
+  {
+    "slug": "alta-pos-emergencia-hipertensiva",
+    "condicao": "Alta após emergência hipertensiva",
+    "resumo": "O que precisa estar definido na alta de quem internou por emergência hipertensiva — incluindo a triagem de causa secundária, que é o passo mais esquecido.",
+    "documento_origem": "emergencia-hipertensiva-e-triagem-de-hipertensao-secundaria",
+    "theme": "Hipertensão",
+    "review_status": "revisado",
+    "source_refs": [
+      "Hypertensive Emergency · StatPearls (NCBI Bookshelf) · https://www.ncbi.nlm.nih.gov/books/NBK470371/",
+      "CLUE: a randomized comparative effectiveness trial of IV nicardipine versus labetalol use in the emergency department · PMC3219031",
+      "Diagnosis of Secondary Hypertension: An Age-Based Approach · American Family Physician · 2010"
+    ],
+    "itens": [
+      {
+        "id": "eh-alvo",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Esquema anti-hipertensivo oral definido e iniciado antes da alta, com a meta pressórica escrita",
+        "origem_secao": "Transição do endovenoso para o oral"
+      },
+      {
+        "id": "eh-sem-queda-rapida",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Registrado que a redução pressórica é gradual — queda abrupta pode causar isquemia de órgão-alvo",
+        "origem_secao": "Princípios do tratamento agudo"
+      },
+      {
+        "id": "eh-lesao-orgao",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Lesão de órgão-alvo documentada e com plano de reavaliação (função renal, fundo de olho, ECG/eco, neurológico conforme o quadro)",
+        "origem_secao": "Definição de emergência hipertensiva"
+      },
+      {
+        "id": "eh-secundaria",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Investigação de hipertensão secundária iniciada ou agendada — emergência hipertensiva é um dos gatilhos clássicos de rastreio",
+        "origem_secao": "Triagem de hipertensão secundária"
+      },
+      {
+        "id": "eh-aldo",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Se houver hipocalemia espontânea ou resistência, rastreio de aldosteronismo primário considerado",
+        "origem_secao": "Triagem de hipertensão secundária"
+      },
+      {
+        "id": "eh-adesao",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Causa da descompensação investigada e registrada — má adesão e interrupção de medicação são as mais frequentes",
+        "origem_secao": "Fatores precipitantes"
+      },
+      {
+        "id": "eh-retorno",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Retorno ambulatorial agendado em prazo curto, com medida domiciliar orientada",
+        "origem_secao": "Seguimento"
+      },
+      {
+        "id": "eh-drogas",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Uso de simpatomiméticos, anti-inflamatórios ou drogas ilícitas perguntado e registrado",
+        "origem_secao": "Fatores precipitantes"
+      }
+    ],
+    "revisao": "Derivado de documento já verificado e publicado nesta base, com a seção de origem registrada em cada item e a referência primária reaproveitada do documento de origem. Elaborado pela sessão de conteúdo em 01/08/2026 sob a autorização contínua de publicação. ATENÇÃO: diferente dos quatro checklists de 28/07/2026, este ainda NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles — a atestação dele não é presumida."
+  },
+  {
+    "slug": "alta-pos-implante-de-marcapasso-ou-cdi",
+    "condicao": "Alta após implante de marca-passo ou cardiodesfibrilador",
+    "resumo": "O que não pode faltar na alta de quem acabou de receber um dispositivo cardíaco eletrônico implantável.",
+    "documento_origem": "marcapasso-definitivo-indicacoes-estimulacao-sistema-conducao",
+    "theme": "Dispositivos",
+    "review_status": "revisado",
+    "source_refs": [
+      "Glikson M et al. 2021 ESC Guidelines on cardiac pacing and cardiac resynchronization therapy. Eur Heart J. 2021;42(35):3427-3520.",
+      "Curtis AB, Worley SJ, Adamson PB, et al; BLOCK HF Investigators. Biventricular Pacing for Atrioventricular Block and Systolic Dysfunction. N Engl J Med. 2013;368(17):1585-1593."
+    ],
+    "itens": [
+      {
+        "id": "disp-cartao",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Cartão do dispositivo entregue, com marca, modelo, modo de estimulação e data do implante",
+        "origem_secao": "Seguimento do dispositivo"
+      },
+      {
+        "id": "disp-ferida",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Cuidados com a ferida operatória orientados, com os sinais de infecção de loja descritos ao paciente",
+        "origem_secao": "Complicações precoces"
+      },
+      {
+        "id": "disp-braco",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Restrição de elevação e abdução do braço do lado do implante orientada, com o prazo definido",
+        "origem_secao": "Complicações precoces"
+      },
+      {
+        "id": "disp-consulta",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Primeira consulta de checagem do dispositivo agendada antes da alta",
+        "origem_secao": "Seguimento do dispositivo"
+      },
+      {
+        "id": "disp-remoto",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Seguimento remoto ativado quando disponível, com o paciente orientado sobre o que ele detecta e o que não detecta",
+        "origem_secao": "Seguimento do dispositivo"
+      },
+      {
+        "id": "disp-fe",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Se houver disfunção sistólica e previsão de estimulação ventricular frequente, registrada a necessidade de reavaliar a fração de ejeção — estimulação de VD pode piorá-la",
+        "origem_secao": "Estimulação e disfunção ventricular"
+      },
+      {
+        "id": "disp-farmaco",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Terapia farmacológica de base revisada, incluindo o que pode ter contribuído para a bradiarritmia",
+        "origem_secao": "Indicações"
+      },
+      {
+        "id": "disp-choque",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Se for cardiodesfibrilador: orientado o que fazer diante de um choque, isolado ou repetido",
+        "origem_secao": "Orientação ao portador de CDI"
+      },
+      {
+        "id": "disp-eletromag",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Orientações sobre interferência eletromagnética e sobre avisar a equipe do dispositivo antes de cirurgia ou ressonância",
+        "origem_secao": "Manejo perioperatório"
+      }
+    ],
+    "revisao": "Derivado de documento já verificado e publicado nesta base, com a seção de origem registrada em cada item e a referência primária reaproveitada do documento de origem. Elaborado pela sessão de conteúdo em 01/08/2026 sob a autorização contínua de publicação. ATENÇÃO: diferente dos quatro checklists de 28/07/2026, este ainda NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles — a atestação dele não é presumida."
+  },
+  {
+    "slug": "puerperio-da-gestante-cardiopata",
+    "condicao": "Alta do puerpério na mulher com cardiopatia",
+    "resumo": "O que precisa estar definido antes de a puérpera com cardiopatia ir para casa — a janela periparto concentra 31% das descompensações do registro ROPAC.",
+    "documento_origem": "via-de-parto-e-insuficiencia-cardiaca-na-gestante-cardiopata-o-registro-ropac",
+    "theme": "Gravidez",
+    "review_status": "revisado",
+    "source_refs": [
+      "Ruys TP, Roos-Hesselink JW, Hall R, et al. Heart failure in pregnant women with cardiac disease: data from the ROPAC. Heart. 2014;100(3):231-238. PMID: 24293523",
+      "Roos-Hesselink J, Baris L, Johnson M, et al. Pregnancy outcomes in women with cardiovascular disease: evolving trends over 10 years in the ROPAC. Eur Heart J. 2019;40(47):3848-3855. PMID: 30907409"
+    ],
+    "itens": [
+      {
+        "id": "puerp-janela",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Registrado que o periparto é janela de risco — 31% das insuficiências cardíacas do ROPAC ocorreram nessa fase",
+        "origem_secao": "Insuficiência cardíaca na gestação"
+      },
+      {
+        "id": "puerp-sinais",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Sinais de descompensação explicados à puérpera e a quem a acompanha, com o que fazer e onde procurar",
+        "origem_secao": "Insuficiência cardíaca na gestação"
+      },
+      {
+        "id": "puerp-anticoag",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Anticoagulação do puerpério definida quando indicada, com o esquema e a duração escritos",
+        "origem_secao": "Anticoagulação"
+      },
+      {
+        "id": "puerp-lactacao",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Compatibilidade de cada fármaco com a amamentação conferida e registrada, em vez de suspensa por precaução",
+        "origem_secao": "Medicação no puerpério"
+      },
+      {
+        "id": "puerp-preeclampsia",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Se houve pré-eclâmpsia, registrado o risco cardiovascular aumentado e o seguimento correspondente — ela teve OR 7,1 para insuficiência cardíaca no ROPAC",
+        "origem_secao": "Pré-eclâmpsia como preditor"
+      },
+      {
+        "id": "puerp-consulta",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Consulta cardiológica de puerpério agendada, em prazo compatível com o risco da lesão",
+        "origem_secao": "Seguimento"
+      },
+      {
+        "id": "puerp-contracepcao",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Contracepção discutida antes da alta, com encaminhamento definido",
+        "origem_secao": "Planejamento reprodutivo"
+      },
+      {
+        "id": "puerp-proxima",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Aconselhamento sobre gestação futura registrado, incluindo a estratificação de risco aplicável",
+        "origem_secao": "Planejamento reprodutivo"
+      }
+    ],
+    "revisao": "Derivado de documento já verificado e publicado nesta base, com a seção de origem registrada em cada item e a referência primária reaproveitada do documento de origem. Elaborado pela sessão de conteúdo em 01/08/2026 sob a autorização contínua de publicação. ATENÇÃO: diferente dos quatro checklists de 28/07/2026, este ainda NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles — a atestação dele não é presumida."
+  },
+  {
+    "slug": "inicio-de-quimioterapia-cardiotoxica",
+    "condicao": "Antes de iniciar quimioterapia potencialmente cardiotóxica",
+    "resumo": "Checklist de base cardio-oncológica: o que precisa estar feito ANTES da primeira dose, não depois da queda da fração de ejeção.",
+    "documento_origem": "estratificacao-de-risco-basal-hfa-icos-e-miocardite-por-inibidor-de-checkpoint",
+    "theme": "Cardio-oncologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "2022 ESC Guidelines on cardio-oncology · ESC/EHA/ESTRO/IC-OS · https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/cardio-oncology/",
+      "Navigating cardiotoxicity risk in cancer therapy: the importance of the HFA-ICOS score · Eur Heart J · 2025"
+    ],
+    "itens": [
+      {
+        "id": "onco-hfaicos",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Risco basal estratificado pelo escore HFA-ICOS correspondente à classe do antineoplásico previsto",
+        "origem_secao": "Estratificação de risco basal"
+      },
+      {
+        "id": "onco-basal",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Ecocardiograma basal com fração de ejeção e, quando disponível, strain longitudinal global registrados antes da primeira dose",
+        "origem_secao": "Avaliação basal"
+      },
+      {
+        "id": "onco-biomarcador",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Troponina e peptídeo natriurético basais colhidos quando o risco ou a classe de fármaco justificar",
+        "origem_secao": "Avaliação basal"
+      },
+      {
+        "id": "onco-fatores",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Fatores de risco cardiovascular modificáveis identificados e tratados antes do início — é a intervenção com melhor relação custo-benefício",
+        "origem_secao": "Estratificação de risco basal"
+      },
+      {
+        "id": "onco-vigilancia",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Plano de vigilância definido por escrito, com o método e a periodicidade, e com o gatilho que dispara a cardioproteção",
+        "origem_secao": "Vigilância durante o tratamento"
+      },
+      {
+        "id": "onco-checkpoint",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Se houver inibidor de checkpoint: paciente e equipe orientados sobre miocardite, que é precoce, rara e de letalidade alta",
+        "origem_secao": "Miocardite por inibidor de checkpoint"
+      },
+      {
+        "id": "onco-canal",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Canal de comunicação direto entre oncologia e cardiologia estabelecido, com o critério que dispara reavaliação",
+        "origem_secao": "Cuidado compartilhado"
+      },
+      {
+        "id": "onco-nao-suspender",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Registrado que a decisão de interromper o antineoplásico é compartilhada com a oncologia, e não unilateral do cardiologista",
+        "origem_secao": "Cuidado compartilhado"
+      }
+    ],
+    "revisao": "Derivado de documento já verificado e publicado nesta base, com a seção de origem registrada em cada item e a referência primária reaproveitada do documento de origem. Elaborado pela sessão de conteúdo em 01/08/2026 sob a autorização contínua de publicação. ATENÇÃO: diferente dos quatro checklists de 28/07/2026, este ainda NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles — a atestação dele não é presumida."
+  },
+  {
+    "slug": "alta-pos-internacao-por-hipertensao-pulmonar",
+    "condicao": "Alta após internação por hipertensão arterial pulmonar",
+    "resumo": "O que precisa estar definido na alta da HAP — a estratificação de risco no seguimento é o que decide escalonar terapia, e ela é o item mais esquecido.",
+    "documento_origem": "estratificacao-de-risco-e-terapia-combinada-inicial-na-hipertensao-arterial-pulmonar",
+    "theme": "Hipertensão pulmonar",
+    "review_status": "revisado",
+    "source_refs": [
+      "2022 ESC/ERS Guidelines for the diagnosis and treatment of pulmonary hypertension · Eur Respir J · 2022;61(1):2200879",
+      "Galiè N, Barberà JA, Frost AE, et al; AMBITION Investigators. Initial Use of Ambrisentan plus Tadalafil in Pulmonary Arterial Hypertension. N Engl J Med. 2015;373(9):834-844."
+    ],
+    "itens": [
+      {
+        "id": "hap-risco",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Estratificação de risco registrada na alta, com os parâmetros que a compõem — é ela que decide escalonar terapia no seguimento",
+        "origem_secao": "Estratificação de risco"
+      },
+      {
+        "id": "hap-terapia",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Terapia específica definida, com a combinação e as doses escritas, e a data da reavaliação",
+        "origem_secao": "Terapia combinada inicial"
+      },
+      {
+        "id": "hap-grupo",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Grupo da classificação confirmado — terapia específica é para o grupo 1, e usá-la nos grupos 2 e 3 é desaconselhado",
+        "origem_secao": "Classificação"
+      },
+      {
+        "id": "hap-anticoag",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Anticoagulação avaliada conforme a etiologia, e não prescrita por rotina",
+        "origem_secao": "Tratamento de suporte"
+      },
+      {
+        "id": "hap-diuretico",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Diurético ajustado com peso-alvo definido e orientação de automonitoramento",
+        "origem_secao": "Tratamento de suporte"
+      },
+      {
+        "id": "hap-centro",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Seguimento em centro de referência agendado",
+        "origem_secao": "Organização do cuidado"
+      },
+      {
+        "id": "hap-gestacao",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Se mulher em idade fértil: registrado o risco da gestação na HAP e a contracepção discutida",
+        "origem_secao": "Aconselhamento"
+      },
+      {
+        "id": "hap-vacina",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Vacinação e orientação sobre viagem aérea e altitude discutidas",
+        "origem_secao": "Tratamento de suporte"
+      }
+    ],
+    "revisao": "Derivado de documento já verificado e publicado nesta base, com a seção de origem registrada em cada item e a referência primária reaproveitada do documento de origem. Elaborado pela sessão de conteúdo em 01/08/2026 sob a autorização contínua de publicação. ATENÇÃO: diferente dos quatro checklists de 28/07/2026, este ainda NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles — a atestação dele não é presumida."
   }
 ]

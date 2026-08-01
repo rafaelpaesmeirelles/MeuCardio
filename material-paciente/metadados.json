@@ -408,5 +408,317 @@
       "Atualização focada 2025 das diretrizes ESC/EAS para manejo de dislipidemias, Sociedade Europeia de Cardiologia",
       "Diretriz ESC/EAS 2019 para manejo de dislipidemias, Sociedade Europeia de Cardiologia"
     ]
+  },
+  {
+    "slug": "anticoagulacao-oral",
+    "titulo": "Anticoagulante oral",
+    "subtitulo": "Por que você toma, o que muda no dia a dia e quando procurar ajuda",
+    "tema": "Fibrilação atrial",
+    "documento_slug": "interrupcao-do-anticoagulante-para-procedimento-eletivo-na-fa-bridge-e-pause",
+    "review_status": "revisado",
+    "resumo": "Explicação em linguagem simples sobre o remédio que 'afina o sangue', para o paciente levar para casa.",
+    "secoes": [
+      {
+        "titulo": "O que ele faz",
+        "paragrafos": [
+          "O anticoagulante não dissolve coágulos que já existem nem 'limpa' as artérias. Ele torna o sangue menos propenso a formar coágulos novos.",
+          "A expressão 'afinar o sangue' é comum, mas engana: o sangue não fica mais fino nem mais aguado. O que muda é a facilidade com que ele coagula.",
+          "Ele é receitado quando o risco de um coágulo se formar e viajar — para o cérebro, para o pulmão — é maior que o risco de sangrar."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Por que não dá para tomar só quando você se sente mal",
+        "paragrafos": [
+          "Esta é a parte mais importante, e a mais difícil de aceitar: na maioria das situações em que o anticoagulante é receitado, você não sente nada quando o risco está presente.",
+          "O coágulo não avisa. Ele se forma em silêncio e só dá sinal quando já causou o problema. Por isso o remédio é tomado todo dia, na mesma hora, independentemente de como você se sente."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que muda no dia a dia",
+        "paragrafos": [
+          "Algumas coisas mudam, e vale saber quais são de verdade e quais são mito."
+        ],
+        "itens": [
+          "Sangramentos pequenos ficam mais demorados — um corte ao barbear, sangramento de gengiva ao escovar os dentes",
+          "Manchas roxas aparecem com mais facilidade, às vezes sem que você lembre da pancada",
+          "Não é preciso parar de fazer exercício, viajar ou ter vida normal — o que se evita é esporte de contato e situação de trauma",
+          "Antes de qualquer procedimento, mesmo de dentista, avise que você usa anticoagulante"
+        ]
+      },
+      {
+        "titulo": "Antes de cirurgias e procedimentos",
+        "paragrafos": [
+          "Você não deve parar o remédio por conta própria, e também não deve manter por conta própria.",
+          "Existe um plano definido: quantos dias antes parar e quantos dias depois voltar, conforme o procedimento e a sua função dos rins. Quem define isso é a equipe que acompanha você, junto com quem vai fazer o procedimento.",
+          "Uma prática antiga, de substituir o comprimido por injeções nos dias em torno da cirurgia, deixou de ser rotina — em estudo com quase 2 mil pacientes ela triplicou o sangramento importante sem reduzir o risco de coágulo."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Remédios e alimentos",
+        "paragrafos": [
+          "Depende de qual anticoagulante você usa. Alguns têm interação com muitos remédios e com a quantidade de vitamina K da alimentação; outros têm bem menos.",
+          "A regra que vale para todos: qualquer remédio novo, inclusive os de farmácia sem receita, os naturais e os chás, precisa ser conferido antes. Anti-inflamatórios para dor são a interação mais comum e mais perigosa."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Sangramento que não para depois de dez a quinze minutos de compressão",
+      "Sangue nas fezes, fezes pretas como piche, ou vômito com sangue ou com aspecto de borra de café",
+      "Urina avermelhada ou escura como refrigerante de cola",
+      "Dor de cabeça forte e diferente do habitual, principalmente depois de uma batida na cabeça",
+      "Fraqueza súbita de um lado do corpo, boca torta ou dificuldade para falar",
+      "Sangramento menstrual muito mais intenso que o seu normal",
+      "Tontura, palidez e cansaço súbitos, que podem indicar sangramento interno"
+    ],
+    "perguntas": [
+      "Qual é exatamente o meu anticoagulante e qual a dose?",
+      "Por quanto tempo eu vou precisar tomar?",
+      "O que eu faço se esquecer uma dose?",
+      "Preciso fazer exame de sangue de controle? De quanto em quanto tempo?",
+      "Quais remédios eu não posso tomar junto?",
+      "O que eu faço antes de ir ao dentista ou fazer uma cirurgia?",
+      "Existe um antídoto se eu tiver um sangramento grave?"
+    ],
+    "fontes": [
+      "Douketis JD, Spyropoulos AC, Kaatz S, et al; BRIDGE Investigators. Perioperative Bridging Anticoagulation in Patients with Atrial Fibrillation. N Engl J Med. 2015;373(9):823-833. PMID: 26095867",
+      "Douketis JD, Spyropoulos AC, Duncan J, et al. Perioperative Management of Patients With Atrial Fibrillation Receiving a Direct Oral Anticoagulant. JAMA Intern Med. 2019;179(11):1469-1478. PMID: 31380891"
+    ]
+  },
+  {
+    "slug": "diabetes-e-o-coracao",
+    "titulo": "Diabetes e o coração",
+    "subtitulo": "Por que o cardiologista entra no cuidado de quem tem diabetes",
+    "tema": "Diabetes e cardiologia",
+    "documento_slug": "estratificacao-de-risco-cardiovascular-no-diabetes-diretriz-sbd-2025",
+    "review_status": "revisado",
+    "resumo": "Explicação em linguagem simples sobre a ligação entre diabetes e doença do coração, e o que o tratamento moderno mudou.",
+    "secoes": [
+      {
+        "titulo": "Qual é a ligação",
+        "paragrafos": [
+          "O açúcar alto no sangue, mantido por anos, danifica a parede de dentro dos vasos. Esse dano favorece o acúmulo de gordura e o entupimento lento das artérias — inclusive as do coração, do cérebro e das pernas.",
+          "Por isso o diabetes não é só uma questão de glicemia: ele é também uma doença dos vasos. É essa a razão de o cardiologista participar do cuidado."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que mudou no tratamento, e é uma mudança grande",
+        "paragrafos": [
+          "Durante muitos anos, tratar diabetes significava apenas baixar a glicemia. Hoje sabemos que alguns remédios para diabetes fazem mais do que isso: eles reduzem infarto, derrame, internação por insuficiência cardíaca e perda de função dos rins.",
+          "Isso não vale para todos os remédios de diabetes. Alguns baixam o açúcar e não mudam nada disso. É por essa razão que a escolha do remédio deixou de ser apenas uma questão de glicemia — ela leva em conta o seu coração e os seus rins."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Sintoma pode faltar",
+        "paragrafos": [
+          "Uma parte das pessoas com diabetes tem menos sensibilidade à dor por causa do efeito do açúcar alto nos nervos. Isso significa que um problema no coração pode se manifestar de forma diferente do clássico aperto no peito.",
+          "Cansaço novo aos esforços, falta de ar que apareceu, enjoo e suor frio sem explicação merecem atenção — mesmo sem dor."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que mais pesa, além do açúcar",
+        "paragrafos": [
+          "Controlar apenas a glicemia protege menos do que se imaginava. O que mais reduz risco é o conjunto."
+        ],
+        "itens": [
+          "Pressão arterial dentro da meta combinada com o seu médico",
+          "Colesterol LDL tratado, quase sempre com estatina",
+          "Parar de fumar — é a medida isolada de maior impacto",
+          "Atividade física regular, mesmo caminhada",
+          "Peso, quando há excesso",
+          "Avaliação dos rins pelo menos uma vez por ano, com exame de sangue e de urina"
+        ]
+      }
+    ],
+    "sinais_de_alerta": [
+      "Dor, aperto ou queimação no peito, que pode ir para o braço, o pescoço ou a mandíbula",
+      "Falta de ar que apareceu ou piorou, principalmente ao deitar",
+      "Cansaço novo para esforços que antes você fazia sem dificuldade",
+      "Inchaço nas pernas que não melhora",
+      "Enjoo com suor frio sem explicação",
+      "Ferida no pé que não cicatriza",
+      "Fraqueza súbita de um lado do corpo ou dificuldade para falar"
+    ],
+    "perguntas": [
+      "Qual é o meu risco de doença do coração?",
+      "Os remédios que eu tomo para diabetes protegem o coração e os rins, ou só baixam o açúcar?",
+      "Qual é a minha meta de pressão e de colesterol?",
+      "Preciso tomar estatina?",
+      "Meus rins estão sendo avaliados? Com que frequência?",
+      "Existe algum exame do coração que eu deveria fazer?"
+    ],
+    "fontes": [
+      "Diretriz da Sociedade Brasileira de Diabetes — estratificação de risco cardiovascular no diabetes, 2025",
+      "2023 ESC Guidelines for the management of cardiovascular disease in patients with diabetes. Eur Heart J. 2023"
+    ]
+  },
+  {
+    "slug": "marcapasso-e-cardiodesfibrilador",
+    "titulo": "Marca-passo e cardiodesfibrilador",
+    "subtitulo": "O que o aparelho faz, o que ele não faz e como é viver com ele",
+    "tema": "Dispositivos",
+    "documento_slug": "marcapasso-definitivo-indicacoes-estimulacao-sistema-conducao",
+    "review_status": "revisado",
+    "resumo": "Explicação em linguagem simples sobre os dois tipos de dispositivo cardíaco implantável, para o paciente e a família.",
+    "secoes": [
+      {
+        "titulo": "São dois aparelhos diferentes",
+        "paragrafos": [
+          "Eles se parecem por fora e são implantados de forma parecida, mas resolvem problemas opostos.",
+          "O marca-passo trata o coração que bate DEVAGAR demais. Ele fica em silêncio enquanto o seu ritmo está bom, e só entra quando o batimento falha ou fica muito lento.",
+          "O cardiodesfibrilador trata o coração que pode entrar num ritmo RÁPIDO e perigoso. Ele vigia o tempo todo e, se detectar esse ritmo, aplica um choque para reorganizar o batimento. Muitos modelos fazem as duas coisas."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que ele não faz",
+        "paragrafos": [
+          "Vale saber o que não esperar, para não haver frustração.",
+          "O aparelho não trata a causa da doença do coração e não substitui os remédios. Ele resolve o problema elétrico do batimento, e o restante do tratamento continua igual.",
+          "Ele também não impede que você tenha sintomas de outras causas — falta de ar por acúmulo de líquido, por exemplo, continua exigindo o tratamento habitual."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Os primeiros dias",
+        "paragrafos": [
+          "A recuperação da cirurgia costuma ser rápida, mas há cuidados nas primeiras semanas."
+        ],
+        "itens": [
+          "Cuidar do curativo conforme a orientação e observar a ferida",
+          "Não levantar o braço do lado do implante acima do ombro pelo tempo que a equipe indicar",
+          "Evitar esforço e peso com esse braço",
+          "Levar sempre o cartão do aparelho, com marca, modelo e data",
+          "Comparecer à primeira consulta de checagem, que é marcada antes da alta"
+        ]
+      },
+      {
+        "titulo": "Vida normal, com poucas exceções",
+        "paragrafos": [
+          "Aparelho de celular, micro-ondas, controle remoto, computador e portão eletrônico não interferem. Você pode usar tudo isso.",
+          "As exceções são poucas e específicas: solda elétrica, alguns equipamentos industriais e imãs potentes. Nos aeroportos, avise e mostre o cartão.",
+          "Antes de qualquer cirurgia, endoscopia ou exame de ressonância magnética, avise que você tem o dispositivo. Muitos aparelhos modernos permitem ressonância, mas isso precisa ser conferido e programado antes."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Se você tem cardiodesfibrilador e leva um choque",
+        "paragrafos": [
+          "Um choque isolado, com você se sentindo bem depois, significa que o aparelho fez o trabalho dele. Entre em contato com a equipe no mesmo dia ou no dia seguinte para checagem.",
+          "Dois ou mais choques seguidos, ou um choque acompanhado de mal-estar, desmaio ou falta de ar, é situação de emergência — procure atendimento imediatamente.",
+          "Quem estiver perto de você durante um choque não corre risco. Pode encostar em você normalmente."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Vermelhidão, calor, inchaço, secreção ou abertura da ferida do implante",
+      "Febre sem outra explicação depois do implante",
+      "Dois ou mais choques do cardiodesfibrilador em sequência",
+      "Choque acompanhado de desmaio, mal-estar ou falta de ar",
+      "Desmaio ou quase desmaio",
+      "Soluço persistente ou contração muscular no ritmo do batimento",
+      "Volta dos sintomas que existiam antes do implante"
+    ],
+    "perguntas": [
+      "Eu tenho marca-passo, cardiodesfibrilador, ou os dois?",
+      "Qual é a marca e o modelo, e eu posso fazer ressonância magnética?",
+      "De quanto em quanto tempo preciso checar o aparelho?",
+      "Existe acompanhamento à distância disponível para mim?",
+      "Quanto tempo dura a bateria e como eu vou saber que está no fim?",
+      "O que eu faço se levar um choque?",
+      "Posso dirigir? Por quanto tempo não posso?"
+    ],
+    "fontes": [
+      "Glikson M, Nielsen JC, Kronborg MB, et al. 2021 ESC Guidelines on cardiac pacing and cardiac resynchronization therapy. Eur Heart J. 2021;42(35):3427-3520.",
+      "Curtis AB, Worley SJ, Adamson PB, et al; BLOCK HF Investigators. Biventricular Pacing for Atrioventricular Block and Systolic Dysfunction. N Engl J Med. 2013;368(17):1585-1593. PMID: 23614585"
+    ]
+  },
+  {
+    "slug": "trombose-venosa-e-embolia-pulmonar",
+    "titulo": "Trombose venosa e embolia pulmonar",
+    "subtitulo": "O que aconteceu, por quanto tempo tratar e o que fazer para não repetir",
+    "tema": "Tromboembolismo",
+    "documento_slug": "doac-no-tratamento-do-tev-agudo-amplify-einstein-pe-re-cover-e-hokusai-vte",
+    "review_status": "revisado",
+    "resumo": "Explicação em linguagem simples sobre o coágulo na veia da perna e o coágulo que vai para o pulmão, para o paciente levar para casa.",
+    "secoes": [
+      {
+        "titulo": "São o mesmo problema em dois lugares",
+        "paragrafos": [
+          "A trombose venosa profunda é um coágulo que se forma numa veia funda, quase sempre da perna ou da coxa. A embolia pulmonar acontece quando um pedaço desse coágulo se solta, viaja pelo sangue e para nos vasos do pulmão.",
+          "Por isso os dois são tratados como a mesma doença, com o mesmo remédio: o objetivo é impedir que o coágulo cresça e que outro se forme, enquanto o corpo dissolve o que já existe."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Por que aconteceu",
+        "paragrafos": [
+          "Em parte das pessoas há uma causa clara — uma cirurgia, uma fratura, um longo período acamado, uma gestação, o uso de hormônio, um câncer.",
+          "Em outra parte não se encontra causa nenhuma. Isso não significa que a investigação foi malfeita: acontece, e tem nome — trombose não provocada.",
+          "Essa diferença importa por um motivo prático: ela é uma das coisas que decidem por quanto tempo você vai tomar o anticoagulante."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Quanto tempo de tratamento",
+        "paragrafos": [
+          "Não existe um prazo único. O mínimo costuma ser de alguns meses, e a partir daí a decisão é individual.",
+          "De um lado pesa a chance de o coágulo voltar se você parar; do outro, a chance de sangrar se continuar. Seu médico usa a causa do evento, os seus exames e o seu risco de sangramento para equilibrar os dois.",
+          "Quando se decide continuar por mais tempo, muitas vezes é possível usar uma dose menor do que a do início — em estudos grandes ela protegeu igual e sangrou menos."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "A perna depois da trombose",
+        "paragrafos": [
+          "A perna pode continuar inchada, pesada ou dolorida por semanas ou meses. Isso é comum e não significa que o tratamento falhou.",
+          "Andar é bom e recomendado — repouso prolongado não é mais orientado. A meia de compressão pode ser indicada para os sintomas; pergunte se é o seu caso."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Prevenir a próxima",
+        "paragrafos": [
+          "Algumas medidas reduzem o risco de repetir."
+        ],
+        "itens": [
+          "Movimentar-se em viagens longas, levantando e caminhando a cada duas horas",
+          "Hidratar-se bem",
+          "Avisar sempre que você teve trombose antes de qualquer cirurgia ou internação",
+          "Conversar sobre método contraceptivo, se for o caso — alguns hormônios aumentam o risco",
+          "Manter o peso e parar de fumar"
+        ]
+      }
+    ],
+    "sinais_de_alerta": [
+      "Falta de ar que apareceu de repente",
+      "Dor no peito que piora ao respirar fundo",
+      "Tosse com sangue",
+      "Coração disparado com tontura ou desmaio",
+      "Inchaço, dor e vermelhidão numa perna, principalmente se só de um lado",
+      "Sangramento que não para, sangue nas fezes ou na urina, enquanto usa o anticoagulante",
+      "Dor de cabeça forte e diferente, sobretudo após batida na cabeça"
+    ],
+    "perguntas": [
+      "Foi encontrada uma causa para a minha trombose?",
+      "Por quanto tempo eu vou tomar o anticoagulante?",
+      "Depois desse período, existe a opção de dose menor?",
+      "Preciso investigar trombofilia ou outra doença?",
+      "Posso viajar de avião? Preciso de algum cuidado?",
+      "Devo usar meia de compressão?",
+      "Meus familiares têm risco aumentado?"
+    ],
+    "fontes": [
+      "Agnelli G, Buller HR, Cohen A, et al; AMPLIFY Investigators. Oral apixaban for the treatment of acute venous thromboembolism. N Engl J Med. 2013;369(9):799-808. PMID: 23808982",
+      "Agnelli G, Buller HR, Cohen A, et al; AMPLIFY-EXT Investigators. Apixaban for extended treatment of venous thromboembolism. N Engl J Med. 2013;368(8):699-708. PMID: 23216615",
+      "Weitz JI, Lensing AWA, Prins MH, et al; EINSTEIN CHOICE Investigators. Rivaroxaban or aspirin for extended treatment of venous thromboembolism. N Engl J Med. 2017;376(13):1211-1222. PMID: 28316279"
+    ]
   }
 ]
