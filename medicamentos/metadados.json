@@ -4762,5 +4762,189 @@
       "Easterling T, Mundle S, Bracken H, Parvekar S, Mool S, et al. Oral antihypertensive regimens (nifedipine retard, labetalol, and methyldopa) for management of severe hypertension in pregnancy: an open-label, randomised controlled trial. Lancet. 2019;394(10203):1011-1021. PMID: 31378394",
       "Tomasini FS, Curra MD, Lucena ACG, Hentschke MR, Poli-de-Figueiredo CE. Tratamento de hipertensão gestacional grave na urgência: revisão de diretrizes. Acta Med (Porto Alegre). 2014;35(6) — fonte da literatura médica brasileira que declara literalmente \"O labetalol não é disponibilizado no Brasil\"; texto lido na íntegra via docs.bvsalud.org/biblioref/2018/04/882898/"
     ]
+  },
+  {
+    "slug": "liraglutida",
+    "review_status": "pendente_revisao",
+    "generic_name": "Liraglutida",
+    "brand_names": [
+      "Victoza",
+      "Saxenda"
+    ],
+    "drug_class": "Agonista do receptor de GLP-1 (peptídeo-1 semelhante ao glucagon)",
+    "mechanism": "Análogo do GLP-1 humano com 97% de homologia à molécula endógena, resistente à degradação pela DPP-4 e com ligação à albumina que prolonga sua ação (meia-vida plasmática de eliminação de aproximadamente 13 horas, permitindo aplicação 1x/dia). Estimula a secreção de insulina de forma glicose-dependente, suprime a secreção de glucagon, retarda o esvaziamento gástrico e reduz o apetite por ação central. Fonte: bula ao paciente Victoza (Brasil) e rótulo profissional FDA/DailyMed (VICTOZA, Novo Nordisk).",
+    "presentations": [
+      "Victoza: solução injetável de liraglutida 6,0 mg/mL em sistema de aplicação (caneta) pré-preenchido multidose de 3 mL, liberando doses de 0,6 mg, 1,2 mg ou 1,8 mg; embalagem com 2 canetas — via subcutânea, uso adulto acima de 18 anos"
+    ],
+    "commercial_presentations": [
+      {
+        "brand_name": "Victoza",
+        "manufacturer": "Novo Nordisk",
+        "form": "solução injetável em caneta pré-preenchida multidose",
+        "dosage": "6,0 mg/mL (libera doses de 0,6/1,2/1,8 mg)",
+        "pack_sizes": [
+          2
+        ],
+        "generic_available": "VERIFICAÇÃO HUMANA NECESSÁRIA — não confirmado nesta revisão se há apresentação genérica/similar de liraglutida registrada na ANVISA"
+      }
+    ],
+    "dosing": {
+      "titulacao semana1": "0,6 mg 1x/dia via subcutânea, por pelo menos 1 semana (dose de adaptação, não terapêutica — reduz efeitos gastrointestinais da titulação)",
+      "titulacao semana2": "1,2 mg 1x/dia SC, mantida por pelo menos 1 semana antes de nova alteração (primeira dose com efeito terapêutico esperado)",
+      "dose maxima": "1,8 mg 1x/dia SC, se controle glicêmico adicional for necessário após pelo menos 1 semana na dose de 1,2 mg",
+      "via e horario": "Injeção subcutânea em abdômen, coxa ou parte superior do braço; pode ser aplicada em qualquer horário do dia, independente das refeições — preferir horário fixo",
+      "idosos": "Sem ajuste de dose por idade; experiência limitada em ≥75 anos (bula brasileira ao paciente)",
+      "dose esquecida ate 3 dias": "Aplicar assim que possível; não é necessário reiniciar a titulação (fonte: rótulo FDA/DailyMed — a bula brasileira ao paciente consultada não detalha esse ponto)",
+      "dose esquecida mais de 3 dias": "Reiniciar em 0,6 mg 1x/dia para reduzir o risco de efeitos gastrointestinais associados à reintrodução, retitulando a critério médico (fonte: rótulo FDA/DailyMed)",
+      "fonte": "Bula ao paciente Victoza (liraglutida), Novo Nordisk, obtida via saudedireta.com.br — titulação e dose máxima confirmadas nela. Reinício após dose esquecida complementado pelo rótulo profissional do FDA/DailyMed (VICTOZA, Novo Nordisk, setid 5a9ef4ea-c76a-4d34-a604-27c5b505f5a4), por ausência do dado na bula brasileira ao paciente consultada — declarado por não ser a mesma fonte primária."
+    },
+    "renal_adjustment": "Nenhum ajuste de dose formalmente estabelecido. Bula brasileira ao paciente: insuficiência renal leve sem necessidade de ajuste; experiência limitada em insuficiência renal moderada; não recomendado atualmente para insuficiência renal grave, incluindo doença renal terminal. O rótulo profissional do FDA (DailyMed) é mais permissivo — não recomenda ajuste de dose em nenhum grau de insuficiência renal, com experiência limitada apenas em doença renal terminal. Divergência entre as duas fontes registrada aqui, não resolvida por conta própria.",
+    "hepatic_adjustment": "Bula brasileira ao paciente: experiência muito limitada para recomendar o uso em insuficiência hepática leve, moderada ou grave. O rótulo profissional do FDA (DailyMed) não recomenda ajuste de dose específico, mas orienta cautela, com exposição (AUC) 11%, 14% e 42% menor nas formas leve, moderada e grave, respectivamente, comparado a indivíduos saudáveis. Divergência de tom entre as duas fontes registrada, não resolvida por conta própria.",
+    "contraindications": [
+      "Hipersensibilidade à liraglutida ou a qualquer componente da fórmula (bula brasileira ao paciente)",
+      "Contraindicado para menores de 18 anos (bula brasileira ao paciente)",
+      "Histórico pessoal ou familiar de carcinoma medular de tireoide (CMT) ou de Síndrome de Neoplasia Endócrina Múltipla tipo 2 (NEM2) — contraindicação formal no rótulo profissional do FDA/DailyMed (VICTOZA); a bula brasileira ao paciente consultada trata nódulos tireoidianos, aumento de calcitonina e bócio como reação adversa incomum, não como contraindicação explícita. VERIFICAÇÃO HUMANA NECESSÁRIA quanto ao texto exato da bula profissional brasileira (não consultada nesta revisão) para confirmar se a contraindicação formal também consta nela."
+    ],
+    "interactions": [
+      "Sulfonilureia (ex.: glimepirida, glibenclamida) ou insulina: risco aumentado de hipoglicemia — bula brasileira ao paciente orienta considerar redução da dose da sulfonilureia ao iniciar liraglutida",
+      "Medicamentos orais em geral: liraglutida retarda o esvaziamento gástrico e pode, em tese, afetar a absorção de fármacos orais administrados concomitantemente; o rótulo do FDA reporta que, nos estudos de farmacologia clínica realizados, não houve efeito clinicamente relevante sobre os fármacos testados, mas recomenda cautela — fonte: rótulo profissional FDA/DailyMed",
+      "Varfarina e outros anticoagulantes orais: sem interação farmacocinética direta estabelecida nas fontes consultadas nesta revisão. VERIFICAÇÃO HUMANA NECESSÁRIA — a vigilância de INR ao iniciar é prudência clínica geral pelo efeito sobre o esvaziamento gástrico, não um achado específico citado nas bulas revisadas."
+    ],
+    "monitoring": [
+      "Sinais e sintomas de pancreatite aguda (dor abdominal grave e persistente, às vezes irradiando para o dorso, podendo ou não vir acompanhada de náusea/vômito) — suspender o medicamento se suspeitada",
+      "Glicemia capilar, principalmente se em uso concomitante de sulfonilureia ou insulina, pelo risco de hipoglicemia",
+      "Sintomas de nódulo tireoidiano ou massa cervical, rouquidão persistente, disfagia ou dispneia — vigilância por conta da associação com tumor de célula C de tireoide em roedores (relevância em humanos não estabelecida)",
+      "Hidratação e função renal, especialmente em vigência de náusea/vômito/diarreia significativos"
+    ],
+    "indications": [
+      "Diabetes mellitus tipo 2, em complemento a dieta e exercício, isolada ou em associação com metformina, sulfonilureia e/ou glitazona — bula brasileira ao paciente (Victoza)",
+      "Redução de risco cardiovascular em diabetes mellitus tipo 2 com doença cardiovascular estabelecida ou alto risco cardiovascular — evidência do ensaio LEADER (ver 'outcomes'). VERIFICAÇÃO HUMANA NECESSÁRIA quanto à formalização dessa indicação no texto da bula profissional brasileira vigente — não confirmado nesta revisão, que usou a bula ao paciente."
+    ],
+    "adverse_effects": [
+      "Muito comum (≥10%): náusea, diarreia — tendem a diminuir com o tempo",
+      "Comum (1-10%): hipoglicemia (especialmente associada a sulfonilureia), anorexia, redução do apetite, cefaleia, vômito, dispepsia, gastrite, doença do refluxo gastroesofágico, distensão abdominal, dor abdominal alta, constipação, flatulência, eructação, infecção de vias aéreas superiores",
+      "Incomum (0,1-1%): pancreatite, distúrbios de tireoide (nódulos, aumento de calcitonina sérica, bócio)",
+      "Reações no local de aplicação e reações de hipersensibilidade, incluindo anafilaxia e angioedema (fonte complementar: rótulo profissional FDA/DailyMed — não detalhado na bula ao paciente brasileira consultada)"
+    ],
+    "notes": {
+      "Titulação — racional": "A dose inicial de 0,6 mg/dia não tem finalidade de controle glicêmico — existe só para reduzir efeitos gastrointestinais da titulação (fonte: rótulo FDA/DailyMed).",
+      "Saxenda vs. Victoza — mesma molécula, indicação e dose diferentes": "Victoza é aprovado para diabetes tipo 2 (dose máxima 1,8 mg/dia) e foi o produto testado no LEADER; Saxenda é aprovado para controle de peso, com titulação até 3,0 mg/dia — dose mais alta que a de Victoza. Este registro documenta Victoza/liraglutida no contexto de diabetes e proteção cardiovascular; dados específicos de Saxenda não foram revisados aqui. VERIFICAÇÃO HUMANA NECESSÁRIA se for preciso detalhar Saxenda separadamente.",
+      "Nunca compartilhar a caneta entre pacientes": "Mesmo trocando a agulha — risco de transmissão de patógenos de sangue (fonte: rótulo profissional FDA/DailyMed).",
+      "Armazenamento": "Refrigerado (2-8°C) antes de aberto; após aberto, válido por 1 mês em temperatura ambiente (15-30°C) ou refrigerado, sempre protegido da luz e nunca congelado (bula brasileira ao paciente).",
+      "Divergência de rigor entre as duas bulas usadas": "O rótulo profissional do FDA lista carcinoma medular de tireoide/NEM2 como contraindicação formal, junto de reação de hipersensibilidade grave prévia; a bula ao paciente brasileira consultada não tem seção de contraindicações formal equivalente detalhada. Provavelmente reflete diferença entre bula ao paciente e bula profissional, não necessariamente divergência regulatória real — sinalizado para quem revisar com a bula profissional brasileira em mãos."
+    },
+    "pregnancy": "Bula brasileira ao paciente (Victoza) não traz seção detalhada de categoria de risco — orienta que Victoza® não deve ser usado durante a gravidez, sem indicar categoria formal. O rótulo profissional do FDA/DailyMed detalha: estudos em animais mostraram risco ao feto (mortes embrionárias precoces e desequilíbrio em algumas anormalidades fetais em ratas prenhes, em exposições que se aproximam da exposição clínica na dose máxima recomendada), e orienta usar Victoza durante a gravidez somente se o benefício potencial justificar o risco potencial ao feto. VERIFICAÇÃO HUMANA NECESSÁRIA quanto à categoria de risco formal (A/B/C/D/X) atribuída pela ANVISA/bula profissional brasileira — não confirmada nesta revisão.",
+    "lactation": "Bula brasileira ao paciente (Victoza): não se sabe se a liraglutida passa para o leite materno; orienta não usar Victoza® se estiver amamentando. O rótulo profissional do FDA/DailyMed detalha que não há dados sobre presença de liraglutida no leite humano, efeitos no lactente ou na produção de leite; em ratas lactantes, liraglutida esteve presente no leite. As duas fontes convergem na orientação de cautela/não uso; nenhuma delas apresenta dado humano direto.",
+    "outcomes": {
+      "Evidencia pivotal leader": "Ensaio LEADER (Marso SP, Daniels GH, Brown-Frandsen K, et al; LEADER Steering Committee and Investigators. N Engl J Med. 2016;375(4):311-322. PMID 27295427): 9.340 pacientes com diabetes tipo 2 e alto risco cardiovascular, randomizados para liraglutida ou placebo, seguimento mediano de 3,8 anos. Desfecho primário composto (morte cardiovascular, IAM não fatal ou AVC não fatal): 13,0% com liraglutida vs. 14,9% com placebo (HR 0,87; IC95% 0,78-0,97; p<0,001 para não inferioridade, p=0,01 para superioridade). Morte cardiovascular isolada: 4,7% vs. 6,0% (HR 0,78; IC95% 0,66-0,93; p=0,007). Mortalidade por qualquer causa: 8,2% vs. 9,6% (HR 0,85; IC95% 0,74-0,97; p=0,02). IAM não fatal, AVC não fatal e hospitalização por IC foram numericamente menores com liraglutida, sem significância estatística isolada. Foi o primeiro ensaio de desfecho cardiovascular positivo entre os agonistas de GLP-1, sustentando a indicação de redução de risco cardiovascular no diabetes tipo 2. Fonte: documento desta biblioteca 'content/Diabetes_e_cardiologia/agonistas-do-receptor-de-glp-1-e-protecao-cardiovascular-leader-sustain-6-rewind.md'; PMID reconferido por esummary do PubMed nesta sessão (autor, revista, ano e volume/página conferem)."
+    },
+    "cost_reference": null,
+    "half_life_hours": 13,
+    "half_life_note": "Meia-vida plasmática de eliminação de aproximadamente 13 horas após dose subcutânea única, o que permite aplicação uma vez ao dia. Fonte: rótulo profissional FDA/DailyMed (VICTOZA, Novo Nordisk).",
+    "sbp_reduction_mmhg": null,
+    "dbp_reduction_mmhg": null,
+    "bp_evidence_source": null,
+    "references": [
+      "Bula ao paciente Victoza® (liraglutida), Novo Nordisk Farmacêutica do Brasil Ltda., obtida via saudedireta.com.br",
+      "VICTOZA (LIRAGLUTIDE) INJECTION [NOVO NORDISK] — rótulo profissional FDA, DailyMed, SPL version 31, published Nov 17, 2025, setid 5a9ef4ea-c76a-4d34-a604-27c5b505f5a4 — usado de forma complementar, declarado nos campos onde a bula brasileira ao paciente não detalhava (contraindicação formal de CMT/NEM2, farmacocinética/meia-vida, reinício após dose esquecida, interações com fármacos orais)",
+      "Marso SP, Daniels GH, Brown-Frandsen K, et al; LEADER Steering Committee and Investigators. Liraglutide and cardiovascular outcomes in type 2 diabetes (LEADER). N Engl J Med. 2016;375(4):311-322. DOI: 10.1056/NEJMoa1603827. PMID: 27295427"
+    ]
+  },
+  {
+    "slug": "dulaglutida",
+    "review_status": "pendente_revisao",
+    "generic_name": "Dulaglutida",
+    "brand_names": [
+      "Trulicity"
+    ],
+    "drug_class": "Agonista do receptor de GLP-1 (peptídeo-1 semelhante ao glucagon)",
+    "mechanism": "Agonista do receptor de GLP-1. Melhora o controle glicêmico reduzindo a glicose de jejum, pré-prandial e pós-prandial por três mecanismos, nesta ordem descrita na bula: liberação de insulina na presença de alta quantidade de glicose (glicose-dependente), redução da secreção de glucagon, e atraso do esvaziamento gástrico. A melhora do controle glicêmico começa após a primeira administração e se mantém durante uma semana, até a próxima aplicação — coerente com a posologia semanal única.",
+    "presentations": [
+      "Trulicity: solução injetável estéril, límpida e incolor, em caneta pré-preenchida de uso único, SOMENTE via subcutânea. Duas apresentações: 0,75 mg/0,5 mL (embalagem com 4 canetas) e 1,5 mg/0,5 mL (embalagem com 2 canetas). Uso adulto acima de 18 anos."
+    ],
+    "commercial_presentations": [
+      {
+        "brand_name": "Trulicity",
+        "manufacturer": "Eli Lilly do Brasil Ltda.",
+        "form": "caneta pré-preenchida de uso único (solução injetável SC)",
+        "dosage": "0,75 mg/0,5 mL",
+        "pack_sizes": [
+          4
+        ],
+        "generic_available": false
+      },
+      {
+        "brand_name": "Trulicity",
+        "manufacturer": "Eli Lilly do Brasil Ltda.",
+        "form": "caneta pré-preenchida de uso único (solução injetável SC)",
+        "dosage": "1,5 mg/0,5 mL",
+        "pack_sizes": [
+          2
+        ],
+        "generic_available": false
+      }
+    ],
+    "indications": [
+      "Monoterapia: DM2 para melhora do controle glicêmico, junto com dieta e exercício, quando metformina é contraindicada ou inadequada por intolerância",
+      "Terapia de associação: DM2 para melhora do controle glicêmico, junto com dieta e exercício, combinada a metformina, sulfonilureia (com ou sem metformina), inibidor de SGLT2 (com ou sem metformina), tiazolidinediona e metformina, insulina basal (com ou sem metformina) ou insulina prandial (com ou sem metformina)",
+      "Redução do risco de eventos cardiovasculares adversos maiores (morte cardiovascular, IAM não fatal ou AVC não fatal) em adultos com DM2 e múltiplos fatores de risco cardiovascular sem doença cardiovascular estabelecida, OU com doença cardiovascular já estabelecida — indicação sustentada pelo ensaio REWIND, ver 'outcomes'"
+    ],
+    "contraindications": [
+      "Hipersensibilidade à dulaglutida ou a qualquer excipiente da fórmula",
+      "Histórico pessoal ou familiar de Carcinoma Medular de Tireoide (CMT), ou portador de Neoplasia Endócrina Múltipla tipo 2 (NEM 2) — bula brasileira do TRULICITY lista isto na seção de contraindicação formal ('Quando não devo usar'), diferente do que a bula do OZEMPIC faz para a semaglutida (lá é cautela em advertências, não contraindicação formal — ver registro de semaglutida). Não homogeneizar as duas moléculas por serem da mesma classe: a rotulagem brasileira as trata de forma distinta."
+    ],
+    "adverse_effects": [
+      "Muito comum (>10%): náusea, diarreia, vômito, dor abdominal, hipoglicemia quando usado com insulina ou secretagogos (com ou sem metformina), hipoglicemia quando usado sem secretagogos junto com metformina",
+      "Comum (1-10%): diminuição do apetite, dispepsia, constipação, flatulência, distensão abdominal, doença do refluxo gastroesofágico, eructação, fadiga/astenia, taquicardia sinusal, bloqueio atrioventricular de primeiro grau, hipoglicemia sem secretagogos (monoterapia ou com metformina+pioglitazona ou SGLT2i)",
+      "Incomum (0,1-1%): reação no local da injeção (eritema, irritação, prurido, edema, erupção)",
+      "Rara, pós-comercialização (0,01-0,1%): reação anafilática",
+      "Aumento de amilase e/ou lipase pancreáticas em relação ao basal (isolado, sem sinal de pancreatite, não prediz pancreatite aguda); pequenos aumentos na frequência cardíaca; eventos gastrointestinais mais intensos nas 2 primeiras semanas de tratamento, diminuindo nas 4 semanas seguintes"
+    ],
+    "dosing": {
+      "monoterapia_dose_inicial": "0,75 mg 1x/semana SC; pode aumentar para 1,5 mg 1x/semana se necessário controle glicêmico adicional",
+      "terapia_de_associacao": "1,5 mg 1x/semana SC (dose recomendada)",
+      "dose_maxima": "1,5 mg por semana",
+      "populacao_potencialmente_vulneravel": "Pode-se considerar dose inicial de 0,75 mg — bula não detalha critério de quem se enquadra como 'potencialmente vulnerável'",
+      "via_e_tecnica": "Subcutânea, sem diluição, no abdome, coxa ou parte superior do braço; qualquer hora do dia, independente das refeições; caneta de uso único",
+      "mudanca_de_dia_semanal": "Pode mudar o dia de aplicação semanal, desde que a última dose tenha sido aplicada há 3 dias (72h) ou mais",
+      "dose_esquecida_3_dias_ou_mais_ate_a_proxima": "Administrar assim que lembrar, se restarem no mínimo 3 dias (72h) até a próxima dose planejada",
+      "dose_esquecida_menos_de_3_dias": "Pular a dose esquecida e administrar a próxima dose no dia programado, sem dobrar a dose",
+      "associacao_com_sulfonilureia_ou_insulina": "Ao adicionar dulaglutida a uma sulfonilureia ou insulina, considerar redução da dose desses fármacos para diminuir o risco de hipoglicemia",
+      "associacao_com_metformina_pioglitazona_sglt2i": "As doses de metformina e/ou pioglitazona, ou de metformina e/ou SGLT2i (ex.: empagliflozina), podem ser mantidas quando dulaglutida é adicionada",
+      "armazenamento": "Refrigeração de 2-8°C; se necessário, manter fora da geladeira por até 14 dias sem ultrapassar 30°C; nunca congelar; proteger da luz",
+      "fonte": "Bula ao Paciente do TRULICITY (dulaglutida), Eli Lilly do Brasil Ltda., CDS26MAR19, Registro MS 1.1260.0190, obtida via img.drogasil.com.br/raiadrogasil_bula/Trulicity.pdf"
+    },
+    "renal_adjustment": "DIVERGÊNCIA ENTRE FONTES, declarada em vez de resolvida por omissão. Bula brasileira (Bula ao Paciente, CDS26MAR19): 'Não é necessário ajuste de dose em pacientes com insuficiência renal leve, moderada ou grave. A experiência em pacientes com doença renal em fase terminal é muito limitada, e, portanto, não é recomendada a utilização de TRULICITY nesta população.' Rótulo de referência internacional (FDA, DailyMed, TRULICITY prescribing information): 'No dose adjustment is recommended in patients with renal impairment including end-stage renal disease (ESRD)', com recomendação de monitorar função renal em paciente com DRT que apresente reação gastrointestinal grave, pelo risco de depleção de volume. A bula brasileira lida é a Bula ao Paciente (não a Bula Profissional, que não foi localizada em acesso aberto para este fármaco); é possível que a divergência reflita atualização de rótulo em data diferente entre os dois países. VERIFICAÇÃO HUMANA NECESSÁRIA para resolver a divergência antes de orientar uso em doença renal terminal — na dúvida, a bula brasileira é a que rege o uso no Brasil.",
+    "hepatic_adjustment": "Bula brasileira (Bula ao Paciente): 'Geralmente não é necessário ajuste de dose de TRULICITY com base na idade, sexo, raça, etnia, peso corporal ou insuficiência hepática.' Rótulo de referência internacional (FDA, DailyMed) complementa: nenhuma alteração clinicamente relevante na farmacocinética da dulaglutida foi observada em graus variados de insuficiência hepática, mas orienta usar com cautela nessas populações por experiência clínica limitada — bula brasileira lida não faz essa ressalva de cautela explicitamente.",
+    "interactions": [
+      "Dulaglutida retarda o esvaziamento gástrico e pode, em tese, afetar a absorção de medicamentos orais administrados concomitantemente",
+      "Em estudos clínicos, NÃO afetou a ação de: varfarina, metformina, lisinopril, metoprolol, digoxina, paracetamol, norelgestromina, etinilestradiol, sitagliptina e atorvastatina — não é necessário ajuste de dose desses fármacos quando usados com dulaglutida",
+      "Aumenta risco de hipoglicemia quando associada a sulfonilureia ou insulina — orientar cautela ao dirigir ou operar máquinas nessa combinação",
+      "Nenhum estudo formal de interação com plantas medicinais, álcool, nicotina ou exames laboratoriais/não laboratoriais foi conduzido (bula declara ausência de dados, não ausência de interação)"
+    ],
+    "monitoring": [
+      "Sinais de pancreatite aguda (dor abdominal grave) — suspender o tratamento até esclarecer o diagnóstico; descontinuar permanentemente se confirmado",
+      "Amilase e/ou lipase pancreáticas podem estar aumentadas isoladamente sem significar pancreatite — não usar o aumento isolado como critério de suspensão na ausência de sinais/sintomas",
+      "Nódulos tireoidianos identificados ao exame físico ou por imagem de pescoço — avaliação médica adicional (risco de tumor de células C da tireoide é desconhecido em humanos)",
+      "Sinais de desidratação e função renal, especialmente se houver evento gastrointestinal significativo (náusea/vômito/diarreia mais intensos), pelo risco de lesão renal aguda",
+      "Glicemia capilar quando associada a sulfonilureia ou insulina, pelo risco de hipoglicemia"
+    ],
+    "notes": {
+      "cmt_nem2_e_contraindicacao_formal_nesta_bula_nao_apenas_cautela": "Diferente do registro de semaglutida (OZEMPIC), onde histórico de CMT/NEM2 é tratado como cautela em 'Advertências e precauções', a Bula ao Paciente do TRULICITY lista histórico pessoal ou familiar de CMT e a síndrome NEM2 na própria seção 'QUANDO NÃO DEVO USAR ESTE MEDICAMENTO?' — contraindicação formal, não só cautela. Não tratar as duas moléculas como equivalentes neste ponto: a rotulagem brasileira as diferencia.",
+      "diferenca_de_posologia_frente_as_outras_incretinas_da_base": "Dulaglutida é semanal (0,75-1,5 mg SC 1x/semana), como a semaglutida injetável (Ozempic, semanal) — mas diferente da liraglutida (Victoza), que é diária. Entre as duas semanais, dulaglutida tem titulação em 1 único degrau opcional (0,75→1,5 mg), mais simples que a titulação em múltiplos degraus do semaglutida injetável (0,25→0,5→1,0→2,0 mg) e da versão de perda de peso (Wegovy, 0,25→0,5→1,0→1,7→2,4 mg).",
+      "uso_pediatrico": "Segurança e eficácia não estabelecidas em pacientes com menos de 18 anos — sem dados na bula brasileira consultada. Fonte: Bula ao Paciente do TRULICITY.",
+      "gastroparesia_e_doenca_gastrointestinal_grave": "Não recomendado o uso em paciente com doença gastrointestinal grave, incluindo gastroparesia grave — dulaglutida não foi estudada nessa população, segundo a própria bula.",
+      "fonte_da_bula_e_o_que_ela_e": "O documento obtido (img.drogasil.com.br/raiadrogasil_bula/Trulicity.pdf, 24 páginas) é a Bula ao Paciente + Instruções de Uso das duas apresentações de caneta. NÃO é a Bula Profissional/técnica (que traria seção de farmacocinética, categoria de risco gestacional em letra, e possivelmente mais detalhe de ajuste renal/hepático) — busca por essa versão em saudedireta.com.br e consultaremedios.com.br não teve êxito (404/403). Onde a bula do paciente é vaga (gravidez/lactação, ajuste renal), complementei com o rótulo de referência internacional (FDA/DailyMed), declarando a origem em cada campo."
+    },
+    "outcomes": {
+      "rewind_dulaglutida_e_protecao_cardiovascular": "REWIND (Gerstein HC, Colhoun HM, Dagenais GR, et al; REWIND Investigators. Lancet. 2019;394(10193):121-130. DOI: 10.1016/S0140-6736(19)31149-3. PMID 31189511 — reconferido por esummary do PubMed nesta sessão). 9.901 participantes com DM2, idade ≥50 anos, com evento cardiovascular prévio OU apenas múltiplos fatores de risco cardiovascular sem doença estabelecida — critério de entrada mais amplo que o do LEADER (liraglutide) e do SUSTAIN-6 (semaglutida), que recrutaram predominantemente doença cardiovascular já estabelecida. Randomizados para dulaglutida 1,5 mg semanal ou placebo, seguimento mediano de 5,4 anos. Desfecho composto (morte cardiovascular, IAM não fatal ou AVC não fatal): 12,0% com dulaglutida (2,4/100 pacientes-ano) vs. 13,4% com placebo (2,7/100 pacientes-ano) — HR 0,88; IC95% 0,79-0,99; p=0,026. Mortalidade por qualquer causa NÃO diferiu entre os grupos (10,8% vs. 12,0%; HR 0,90; IC95% 0,80-1,01; p=0,067). Evento adverso gastrointestinal foi mais frequente com dulaglutida (47,4% vs. 34,1%; p<0,0001). É, dos três ensaios de agonista de GLP-1 revisados nesta biblioteca (LEADER, SUSTAIN-6, REWIND), o de base de evidência mais ampla para prevenção primária dentro do DM2, por incluir proporção maior de pacientes sem doença cardiovascular estabelecida (ver documento content/Diabetes_e_cardiologia/agonistas-do-receptor-de-glp-1-e-protecao-cardiovascular-leader-sustain-6-rewind.md). Nenhum dos três ensaios foi desenhado nem tem poder estatístico para comparar um agonista de GLP-1 contra outro — a semelhança de magnitude de efeito (HR 0,74 a 0,88 nos três) não deve ser lida como equivalência comprovada entre as moléculas."
+    },
+    "references": [
+      "Bula ao Paciente do TRULICITY (dulaglutida), Eli Lilly do Brasil Ltda., CDS26MAR19, Registro MS 1.1260.0190 — img.drogasil.com.br/raiadrogasil_bula/Trulicity.pdf",
+      "TRULICITY (dulaglutide) prescribing information — FDA/DailyMed (setid 463050bd-2b1c-40f5-b3c3-0a04bb433309), usado como fonte complementar para gravidez, lactação e ajuste renal/hepático onde a bula brasileira do paciente era vaga ou incompleta, declarado em cada campo",
+      "Gerstein HC, Colhoun HM, Dagenais GR, et al; REWIND Investigators. Dulaglutide and cardiovascular outcomes in type 2 diabetes (REWIND): a double-blind, randomised placebo-controlled trial. Lancet. 2019;394(10193):121-130. DOI: 10.1016/S0140-6736(19)31149-3. PMID: 31189511"
+    ],
+    "pregnancy": "Bula ao Paciente brasileira (TRULICITY): 'Caso você esteja grávida ou amamentando, somente utilizar TRULICITY se o benefício do tratamento justificar o risco para o bebê. Este medicamento não deve ser utilizado por mulheres grávidas sem orientação médica ou do cirurgião-dentista.' Não traz categoria de risco gestacional em letra (diferente do registro de semaglutida, que cita 'Categoria C' a partir da Bula Profissional do OZEMPIC — para dulaglutida só se teve acesso à Bula ao Paciente). Complemento do rótulo de referência internacional (FDA/DailyMed): dados limitados em gestantes humanas são insuficientes para determinar risco associado ao medicamento para malformações maiores e aborto espontâneo; estudos em animais mostraram efeitos fetais em exposições superiores às humanas; diabetes mal controlado na gravidez aumenta risco de cetoacidose diabética, pré-eclâmpsia, aborto espontâneo, parto pré-termo, malformações maiores e natimorto — o medicamento só deve ser usado na gravidez quando o benefício potencial superar o risco fetal. VERIFICAÇÃO HUMANA NECESSÁRIA para confirmar se existe categoria de risco em letra na Bula Profissional brasileira (não localizada em acesso aberto nesta sessão).",
+    "lactation": "Bula ao Paciente brasileira (TRULICITY): mesma orientação combinada de gravidez e amamentação — 'somente utilizar TRULICITY se o benefício do tratamento justificar o risco para o bebê', sem detalhamento específico de lactação. Complemento do rótulo de referência internacional (FDA/DailyMed): não há dados sobre a presença de dulaglutida no leite humano, os efeitos no lactente amamentado, ou os efeitos na produção de leite — a decisão deve ponderar os benefícios da amamentação para a criança e da mãe contra a necessidade clínica materna do tratamento e qualquer efeito adverso potencial no lactente. VERIFICAÇÃO HUMANA NECESSÁRIA para orientação mais específica (ex.: se a Bula Profissional brasileira, não localizada, contraindica formalmente como faz a bula do OZEMPIC para semaglutida)."
   }
 ]

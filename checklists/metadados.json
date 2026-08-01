@@ -1158,5 +1158,229 @@
       }
     ],
     "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) em 01/08/2026. Cada item foi conferido contra o texto integral dos três documentos já publicados citados em source_refs (o protocolo, o fluxograma com as classes/níveis de recomendação linha a linha, e o estudo SECURE), sem nenhum dado escrito de memória. Não duplica o checklist alta-pos-sindrome-coronariana-aguda: aquele cobre a alta de SCA como um todo, com um único item genérico sobre hipolipemiante; este aprofunda especificamente a titulação — estatina, ezetimiba, PCSK9, ácido bempedoico, meta extrema pós-recorrência e reavaliação."
+  },
+  {
+    "slug": "inicio-de-agonista-de-glp-1-para-protecao-cardiovascular",
+    "condicao": "Início de agonista do receptor de GLP-1 para proteção cardiovascular no diabetes tipo 2",
+    "resumo": "O que checar antes de iniciar um agonista do receptor de GLP-1 (liraglutida, semaglutida ou dulaglutida) visando redução de risco cardiovascular no diabetes tipo 2, derivado do LEADER, SUSTAIN-6, REWIND e da bula brasileira da semaglutida.",
+    "documento_origem": "agonistas-do-receptor-de-glp-1-e-protecao-cardiovascular-leader-sustain-6-rewind",
+    "theme": "Diabetes e cardiologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Marso SP, Daniels GH, Brown-Frandsen K, et al; LEADER Steering Committee and Investigators. Liraglutide and cardiovascular outcomes in type 2 diabetes (LEADER). N Engl J Med. 2016;375(4):311-322. DOI: 10.1056/NEJMoa1603827. PMID: 27295427",
+      "Marso SP, Bain SC, Consoli A, et al; SUSTAIN-6 Investigators. Semaglutide and cardiovascular outcomes in patients with type 2 diabetes (SUSTAIN-6). N Engl J Med. 2016;375(19):1834-1844. DOI: 10.1056/NEJMoa1607141. PMID: 27633186",
+      "Gerstein HC, Colhoun HM, Dagenais GR, et al; REWIND Investigators. Dulaglutide and cardiovascular outcomes in type 2 diabetes (REWIND): a double-blind, randomised placebo-controlled trial. Lancet. 2019;394(10193):121-130. DOI: 10.1016/S0140-6736(19)31149-3. PMID: 31189511",
+      "Bula profissional brasileira do OZEMPIC (semaglutida), Novo Nordisk Farmacêutica do Brasil Ltda. — campos dosing, contraindications, adverse_effects e a nota sobre carcinoma medular de tireoide/NEM2 já revisados em medicamentos/metadados.json desta base"
+    ],
+    "itens": [
+      {
+        "id": "glp1-indicacao",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Diabetes tipo 2 confirmado com doença cardiovascular aterosclerótica já estabelecida (perfil do LEADER e do SUSTAIN-6), ou apenas fatores de risco cardiovascular sem evento prévio (REWIND amplia a indicação até prevenção primária) — indicação definida por perfil de risco, não prescrição indiscriminada",
+        "origem_secao": "Diferenças que importam na prática — agonistas-do-receptor-de-glp-1-e-protecao-cardiovascular-leader-sustain-6-rewind.md"
+      },
+      {
+        "id": "glp1-titulacao",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Titulação gradual respeitada, sem pular etapa (ex.: semaglutida semanal — 0,25mg nas semanas 1-4, 0,5mg nas semanas 5-8, 1,0mg de manutenção a partir da semana 9, até 2,0mg se necessário) — reduz a intolerância gastrointestinal que motiva a maior parte das descontinuações",
+        "origem_secao": "dosing de semaglutida — medicamentos/metadados.json"
+      },
+      {
+        "id": "glp1-contraindicacao",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Descartada hipersensibilidade ao princípio ativo ou a qualquer excipiente — única contraindicação formal do rótulo brasileiro da semaglutida",
+        "origem_secao": "contraindications de semaglutida — medicamentos/metadados.json"
+      },
+      {
+        "id": "glp1-cmt-nem2",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Histórico pessoal ou familiar de carcinoma medular de tireoide ou de Síndrome de Neoplasia Endócrina Múltipla tipo 2 (NEM 2) investigado — a bula brasileira trata como CAUTELA na prescrição, não como contraindicação formal (diferente do rótulo norte-americano, que contraindica); ponderar risco-benefício individualmente antes de prescrever",
+        "origem_secao": "notes 'Carcinoma medular de tireoide e NEM2 — cautela, não contraindicação formal nesta bula' — medicamentos/metadados.json"
+      },
+      {
+        "id": "glp1-monitorizacao",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Peso corporal e controle glicêmico (HbA1c) monitorizados periodicamente ao longo do tratamento, para acompanhar tanto o efeito metabólico quanto a tolerância",
+        "origem_secao": "indications/outcomes de semaglutida — medicamentos/metadados.json"
+      },
+      {
+        "id": "glp1-orientacao-gi",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente orientado sobre efeitos gastrointestinais esperados (náusea, vômito, diarreia, constipação), mais frequentes na fase de titulação e que tendem a melhorar em 3-4 dias em cada etapa — foi o efeito adverso mais consistente e mais frequente nos três ensaios pivotais (LEADER, SUSTAIN-6, REWIND)",
+        "origem_secao": "O que os três têm em comum — agonistas-do-receptor-de-glp-1-e-protecao-cardiovascular-leader-sustain-6-rewind.md"
+      },
+      {
+        "id": "glp1-retinopatia",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Se a molécula escolhida for semaglutida: reforçar o acompanhamento oftalmológico em quem já tem retinopatia diabética — no SUSTAIN-6, complicações de retinopatia (hemorragia vítrea, cegueira ou necessidade de tratamento intravítreo/fotocoagulação) foram mais frequentes com semaglutida (HR 1,76; IC95% 1,11-2,78; p=0,04)",
+        "origem_secao": "Sustain 6 semaglutida / Diferenças que importam na prática — agonistas-do-receptor-de-glp-1-e-protecao-cardiovascular-leader-sustain-6-rewind.md"
+      },
+      {
+        "id": "glp1-retorno",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Retorno agendado com data definida para reavaliar tolerabilidade, progressão da titulação e resposta glicêmica/ponderal",
+        "origem_secao": "dosing (etapas de titulação) — medicamentos/metadados.json"
+      }
+    ],
+    "revisao": "Verificado item a item em 01/08/2026 contra os documentos de origem citados em source_refs, já publicados nesta base, e contra medicamentos/metadados.json (registro de semaglutida): indicação por perfil de risco (LEADER/SUSTAIN-6 vs. REWIND), esquema de titulação e única contraindicação formal (hipersensibilidade) conferidos em dosing/contraindications; a distinção entre CAUTELA (bula brasileira) e contraindicação formal (rótulo norte-americano) para carcinoma medular de tireoide/NEM2 foi conferida no campo notes do registro de semaglutida, para não afirmar uma contraindicação que a fonte brasileira não faz; o achado de retinopatia do SUSTAIN-6 (HR 1,76) foi conferido contra o número citado no documento de origem. ATENÇÃO: este checklist NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles — mesmo padrão já usado nos checklists de TEV agudo e de DOAC ambulatorial."
+  },
+  {
+    "slug": "acompanhamento-pos-implante-de-lvad",
+    "condicao": "Acompanhamento pós-implante de dispositivo de assistência ventricular esquerda (LVAD)",
+    "resumo": "O que verificar no seguimento pós-implante de LVAD, derivado do relatório final do MOMENTUM 3 (comparação de tecnologia de bomba centrífuga versus axial) e do documento desta base sobre terapias avançadas na IC (classificação INTERMACS e avaliação para transplante) — deliberadamente sem protocolo de anticoagulação específico, porque nenhuma das duas fontes o detalha.",
+    "documento_origem": "lvad-de-fluxo-centrifugo-versus-axial-o-ensaio-momentum-3",
+    "theme": "Insuficiência cardíaca",
+    "review_status": "revisado",
+    "source_refs": [
+      "Mehra MR, Uriel N, Naka Y, et al; MOMENTUM 3 Investigators. A Fully Magnetically Levitated Left Ventricular Assist Device - Final Report. N Engl J Med. 2019;380(17):1618-1627. DOI: 10.1056/NEJMoa1900486. PMID: 30883052",
+      "Mehra MR, Cleveland JC Jr, Uriel N, et al; MOMENTUM 3 Investigators. Primary results of long-term outcomes in the MOMENTUM 3 pivotal trial and continued access protocol study phase: a study of 2200 HeartMate 3 left ventricular assist device implants. Eur J Heart Fail. 2021;23(8):1392-1400. DOI: 10.1002/ejhf.2211. PMCID: PMC8453814. PMID: 33932272",
+      "Current indications for heart transplantation and left ventricular assist device: A practical point of view · ScienceDirect · https://www.sciencedirect.com/science/article/abs/pii/S0953620514000533",
+      "Left ventricular assist device therapy in advanced heart failure: patient selection and outcomes · European Journal of Heart Failure · 2017 · https://onlinelibrary.wiley.com/doi/full/10.1002/ejhf.779"
+    ],
+    "itens": [
+      {
+        "id": "lvad-tipo-dispositivo",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Modelo de dispositivo implantado identificado e registrado no seguimento — bomba de fluxo centrífugo com levitação magnética total (ex. HeartMate 3) tem perfil de complicação mecânica muito menor que a de fluxo axial com mancal mecânico (HeartMate II, descontinuada comercialmente para novo implante desde 2018)",
+        "origem_secao": "O ensaio momentum 3 — relatório final / Armadilhas clínicas"
+      },
+      {
+        "id": "lvad-trombose-bomba",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Vigilância ativa para sinais de malfuncionamento ou trombose de bomba que indiquem necessidade de troca/reoperação — foi o desfecho de maior diferença relativa do MOMENTUM 3 (2,3% com HeartMate 3 vs. 11,3% com HeartMate II em 2 anos), refletindo sobretudo a quase eliminação da trombose de bomba com a levitação magnética total",
+        "origem_secao": "Resultados — desfecho primário / Síntese prática"
+      },
+      {
+        "id": "lvad-avc",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Vigilância para AVC de qualquer gravidade, incapacitante ou não — componente do desfecho primário composto do ensaio (livre de AVC incapacitante ou reoperação em 76,9% com HeartMate 3 vs. 64,8% com HeartMate II em 2 anos)",
+        "origem_secao": "Resultados — desfecho primário"
+      },
+      {
+        "id": "lvad-sangramento",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Vigilância para sangramento maior e hemorragia digestiva — eventos por paciente-ano registrados em ambos os grupos do ensaio, ainda que em menor frequência no dispositivo de fluxo centrífugo",
+        "origem_secao": "Resultados — desfecho primário"
+      },
+      {
+        "id": "lvad-anticoagulacao",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "VERIFICAÇÃO HUMANA NECESSÁRIA — anticoagulação mantida e com monitorização definida: nem o MOMENTUM 3 nem o documento de terapias avançadas desta pasta especificam o fármaco, a via ou o alvo de anticoagulação; as duas fontes registram sangramento e trombose de bomba como desfechos observados, não o esquema terapêutico que os previne. Confirmar por protocolo institucional e bula do anticoagulante usado antes de considerar este ponto resolvido",
+        "origem_secao": "Resultados — desfecho primário (nenhuma das duas fontes desta ficha especifica protocolo de anticoagulação)"
+      },
+      {
+        "id": "lvad-intermacs",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Classificação INTERMACS documentada e reavaliada no seguimento, para orientar a estratégia entre ponte para transplante (bridge to transplant) e terapia de destino (destination therapy)",
+        "origem_secao": "Terapias avançadas — critérios de gravidade / Dispositivo de assistência ventricular esquerda (LVAD)"
+      },
+      {
+        "id": "lvad-reavaliacao-transplante",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Se o implante foi como ponte para transplante: reavaliação periódica de elegibilidade baseada em capacidade funcional e hemodinâmica, não apenas na fração de ejeção isolada",
+        "origem_secao": "Avaliação para transplante cardíaco"
+      },
+      {
+        "id": "lvad-terapia-clinica-maxima",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se candidato a transplante: confirmar que a terapia clínica máxima permanece instituída e mantida, pré-requisito citado pela fonte para a avaliação de transplante",
+        "origem_secao": "Avaliação para transplante cardíaco"
+      }
+    ],
+    "revisao": "Derivado de dois documentos já verificados e publicados nesta base (o estudo do ensaio MOMENTUM 3 sobre tecnologia de bomba e o documento de terapias avançadas na IC, com INTERMACS e avaliação para transplante), com a seção de origem registrada em cada item e as referências primárias reaproveitadas dos dois documentos de origem. Nenhum item afirma protocolo, fármaco ou alvo de anticoagulação, nem sinais de infecção de drive-line, nem seguimento específico de função de ventrículo direito, porque NENHUMA das duas fontes desta ficha menciona esses três pontos — verificado por busca literal nos dois arquivos antes de escrever este checklist. A lacuna de anticoagulação está marcada explicitamente como VERIFICAÇÃO HUMANA NECESSÁRIA em vez de omitida ou preenchida de memória; as de drive-line e função de VD foram deliberadamente deixadas de fora do checklist, por não constarem em nenhuma das fontes. Elaborado pela sessão de conteúdo em 01/08/2026 sob a autorização contínua de publicação. ATENÇÃO: este checklist ainda NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles — a atestação dele não é presumida."
+  },
+  {
+    "slug": "acompanhamento-pos-ablacao-de-fibrilacao-atrial",
+    "condicao": "Acompanhamento pós-ablação por cateter de fibrilação atrial",
+    "resumo": "Foco no período específico pós-procedimento — manutenção obrigatória da anticoagulação independentemente de sintoma, e o que fazer diante de recidiva — distinto do checklist geral de alta por internação por FA.",
+    "documento_origem": "ablacao-por-cateter-em-fibrilacao-atrial-indicacoes-e-tecnica",
+    "theme": "Fibrilação atrial",
+    "review_status": "revisado",
+    "source_refs": [
+      "2024 ESC Guidelines for the management of atrial fibrillation. Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176 — tabela de recomendações de ablação e seção de anticoagulação periprocedimento",
+      "Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the EACTS. Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176. PMID: 39210723 — estratégia de anticoagulação periprocedimento de cardioversão eletiva, reaproveitada para o cenário de recidiva pós-ablação"
+    ],
+    "itens": [
+      {
+        "id": "abl-anticoag-manutencao",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Anticoagulação terapêutica mantida por pelo menos 2 meses após o procedimento, independentemente de sintoma ou do sucesso aparente da ablação",
+        "origem_secao": "Anticoagulação no periprocedimento — depois"
+      },
+      {
+        "id": "abl-doac-nao-interrompido",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Confirmado, na revisão do procedimento, que o anticoagulante oral direto não foi interrompido durante a ablação — é a estratégia recomendada, não a suspensão perioperatória",
+        "origem_secao": "Anticoagulação no periprocedimento — durante"
+      },
+      {
+        "id": "abl-anticoag-decisao-longo-prazo",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Passados os 2 meses, a decisão de manter ou suspender a anticoagulação volta a seguir o escore CHA₂DS₂-VA de risco tromboembólico crônico, e não o resultado da ablação — ablação bem-sucedida não é, por si só, motivo para suspender em quem tem indicação pelo escore",
+        "origem_secao": "Anticoagulação no periprocedimento — longo prazo"
+      },
+      {
+        "id": "abl-complicacao-vascular-tamponamento",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "VERIFICAÇÃO HUMANA NECESSÁRIA: sinais de complicação vascular do acesso (hematoma, sangramento, fístula, isquemia de membro) e de tamponamento cardíaco vigiados no período pós-procedimento imediato — os documentos de origem desta ficha não detalham os sinais específicos a monitorar nem o prazo de observação; confirmar por protocolo institucional e fonte primária de segurança do procedimento antes de considerar este ponto resolvido",
+        "origem_secao": "Os documentos de origem tratam de indicação e técnica da ablação e não descrevem vigilância de complicação do procedimento em si — lacuna não coberta por nenhuma das duas fontes desta ficha"
+      },
+      {
+        "id": "abl-reavaliacao-sucesso-prazo",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "VERIFICAÇÃO HUMANA NECESSÁRIA: reavaliação de sucesso do procedimento (sintomas, Holter ou monitorização prolongada) agendada em prazo definido — o documento de origem discute recidiva tardia e muito tardia como achado clínico relevante, mas não define o prazo padronizado de reavaliação; confirmar por protocolo institucional",
+        "origem_secao": "Recidiva tardia (gatilhos não relacionados a veia pulmonar)"
+      },
+      {
+        "id": "abl-recidiva-conduta",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Se houver recidiva de FA nos meses seguintes: registrado que gatilhos não relacionados a veias pulmonares são alvo relevante de um eventual procedimento de repetição, e que recidiva não é, isoladamente, motivo para suspender a anticoagulação de base",
+        "origem_secao": "Recidiva tardia (gatilhos não relacionados a veia pulmonar)"
+      },
+      {
+        "id": "abl-cardiomiopatia-taquicardia",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Se a indicação de ablação foi por suspeita de cardiomiopatia induzida por taquicardia: reavaliação da fração de ejeção agendada após o procedimento, com expectativa de melhora ou normalização",
+        "origem_secao": "Ablação e insuficiência cardíaca: detalhamento — cardiomiopatia induzida por taquicardia"
+      },
+      {
+        "id": "abl-cardioversao-se-recidiva",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se recidiva pós-ablação exigir cardioversão eletiva: aplicada a mesma regra de anticoagulação da cardioversão eletiva (3 semanas de anticoagulação documentada, ou TEE para excluir trombo, seguidas de 4 semanas de anticoagulação depois, independentemente do CHA₂DS₂-VA)",
+        "origem_secao": "Documento de cardioversão eletiva e anticoagulação periprocedimento (ESC 2024) — anticoagulação antes e depois da cardioversão"
+      },
+      {
+        "id": "abl-trombo-ae-pre-existente",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Registrado que trombo em átrio esquerdo, se detectado antes do procedimento, era a única contraindicação absoluta à ablação — relevante para explicar ao paciente por que o procedimento pode ter sido adiado ou reprogramado",
+        "origem_secao": "Contraindicação absoluta"
+      }
+    ],
+    "revisao": "Derivado de dois documentos já verificados e publicados nesta base (ablacao-por-cateter-em-fibrilacao-atrial-indicacoes-e-tecnica e cardioversao-eletiva-e-anticoagulacao-periprocedimento-esc-2024), com a seção de origem registrada em cada item. Dois itens (vigilância de complicação vascular/tamponamento e prazo padronizado de reavaliação de sucesso) NÃO estão cobertos pelas fontes desta ficha e foram marcados VERIFICAÇÃO HUMANA NECESSÁRIA em vez de completados por conhecimento geral — nenhum sinal clínico nem prazo foi inventado. Elaborado pela sessão de conteúdo em 01/08/2026 sob a autorização contínua de publicação. ATENÇÃO: este checklist ainda NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles — a atestação dele não é presumida."
   }
 ]
