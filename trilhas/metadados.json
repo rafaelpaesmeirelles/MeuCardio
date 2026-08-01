@@ -2676,5 +2676,313 @@
         "por_que": "Fecha olhando para décadas à frente: quem tratou câncer na infância carrega risco cardiovascular que só aparece no seguimento de adulto."
       }
     ]
+  },
+  {
+    "slug": "trilha-diabetes-rastreio-silencioso-e-protecao-renal",
+    "titulo": "Diabetes: rastreio cardiovascular silencioso e proteção renal",
+    "tema": "Diabetes e cardiologia",
+    "objetivo": "Sair sabendo por que rastrear isquemia silenciosa no diabético assintomático não muda desfecho, como hipoglicemia grave e neuropatia autonômica se tornam risco cardiovascular por si sós, e como construir a proteção renal do bloqueio do SRAA aos iSGLT2 — o eixo que a trilha de escolha de classe farmacológica cardiovascular não cobre.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "estratificacao-de-risco-cardiovascular-no-diabetes-diretriz-sbd-2025",
+        "por_que": "Ponto de partida deliberadamente diferente do modelo europeu (SCORE2-Diabetes): a Sociedade Brasileira de Diabetes propõe estratificação própria por idade e estratificadores clínicos, não por calculadora de risco tradicional — é o modelo que o cardiologista brasileiro deve reconhecer primeiro."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "rastreio-de-doenca-coronariana-assintomatica-no-diabetes-o-ensaio-diad",
+        "por_que": "A pergunta central da trilha: já que a isquemia costuma ser silenciosa no diabético, rastrear com cintilografia deveria antecipar diagnóstico e melhorar desfecho — o DIAD testou isso de forma randomizada e a intuição não se confirmou."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "hipoglicemia-arritmia-e-neuropatia-autonomica-cardiaca-no-diabetes",
+        "por_que": "Fecha o ciclo do DIAD por outro ângulo: a neuropatia autonômica cardíaca é preditor de isquemia silenciosa tão forte quanto ou mais forte que ela própria, e a hipoglicemia grave prolonga o QTc e desencadeia arritmia — dois mecanismos de risco cardiovascular que não passam por placa coronariana."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "cardiomiopatia-diabetica-rastreamento-por-strain-e-tratamento",
+        "por_que": "O terceiro alvo de rastreio que a trilha cobre: uma doença miocárdica distinta da coronariopatia e da hipertensão, detectável por strain longitudinal antes de a fração de ejeção cair — o diabético pode ter disfunção sem CAD e sem sintomas."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "nefroprotecao-com-bloqueio-do-sraa-na-nefropatia-diabetica-renaal-idnt-e-o-limite-do-ontarget",
+        "por_que": "Muda de eixo para a segunda metade da trilha, proteção renal: RENAAL e IDNT estabeleceram que o bloqueio do receptor de angiotensina retarda a nefropatia diabética por mecanismo que não se explica só pela queda de pressão — e o ONTARGET mostra por que IECA e BRA nunca se combinam."
+      },
+      {
+        "ordem": 6,
+        "item_type": "medicamento",
+        "item_slug": "losartana-potassica",
+        "por_que": "Do ensaio pivotal (RENAAL) para a prescrição: dose e monitorização do BRA que sustenta a terapia de base da nefropatia diabética."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "inibidores-de-sglt2-na-doenca-renal-cronica-dapa-ckd-e-empa-kidney",
+        "por_que": "A camada que se soma ao bloqueio do SRAA, não a substitui: DAPA-CKD e EMPA-KIDNEY sustentam a indicação de iSGLT2 por proteção renal independente da presença de diabetes — o mesmo fármaco que a outra trilha desta base usa por proteção cardiovascular, aqui pela indicação renal."
+      },
+      {
+        "ordem": 8,
+        "item_type": "medicamento",
+        "item_slug": "dapagliflozina",
+        "por_que": "Fecha o pilar renal com a prescrição do iSGLT2 testado no DAPA-CKD."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "nem-todo-isglt2-e-igual-vertis-cv-e-a-linagliptina-em-carolina-e-carmelina",
+        "por_que": "Ressalva necessária antes de fechar a trilha: o VERTIS CV é o único ensaio de desfecho de um iSGLT2 que NÃO reproduziu benefício de classe — proteção cardiovascular e renal se prescreve pela molécula com o ensaio que a sustenta, nunca por 'iSGLT2' como categoria única."
+      },
+      {
+        "ordem": 10,
+        "item_type": "documento",
+        "item_slug": "inibidores-da-dpp-4-e-seguranca-cardiovascular-savor-timi-53-examine-e-tecos",
+        "por_que": "Encerramento pelo contraste: os inibidores de DPP-4, classe amplamente prescrita no Brasil, são neutros para eventos isquêmicos nos três ensaios — e a saxagliptina carrega sinal específico de aumento de internação por insuficiência cardíaca, não reproduzido pela sitagliptina. Não entregam a proteção cardiovascular ou renal que as classes anteriores desta trilha entregam."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-escores-de-sangramento-e-prognostico-em-tev-e-insuficiencia-cardiaca",
+    "titulo": "Calculadoras: escores de sangramento e prognóstico no TEV e na insuficiência cardíaca",
+    "tema": "Calculadoras",
+    "objetivo": "Sair sabendo escolher o escore certo para estimar a probabilidade pré-teste de TEP/TVP, decidir a duração da anticoagulação pelo equilíbrio entre recorrência e sangramento, e prever mortalidade na insuficiência cardíaca conforme o cenário — ambulatorial, agudo ou de terapia avançada.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "escore-de-wells-dvt-e-embolia-pulmonar-criterios-completos",
+        "por_que": "Ponto de entrada: estima a probabilidade pré-teste de TVP e de TEP a partir de critérios clínicos, decidindo o próximo exame (D-dímero vs. imagem direta) antes de qualquer conduta de anticoagulação."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "escore-de-genebra-revisado-e-simplificado-probabilidade-pre-teste-de-tep",
+        "por_que": "Alternativa ao Wells, inteiramente objetiva (sem o item de julgamento clínico 'diagnóstico alternativo menos provável'), útil quando se quer um escore mais reprodutível entre examinadores para a mesma pergunta de probabilidade pré-teste de TEP."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "pesi-e-spesi-escore-de-gravidade-do-tromboembolismo-pulmonar",
+        "por_que": "Depois de confirmado o TEP, muda a pergunta de 'qual a probabilidade' para 'qual a gravidade': PESI e sPESI estratificam risco de óbito precoce e decidem entre tratamento ambulatorial e internação."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "escore-dash-risco-de-recorrencia-apos-tev-nao-provocado",
+        "por_que": "Resolvida a fase aguda, a pergunta seguinte é a duração da anticoagulação: no TEV não provocado, o DASH estima o risco de recorrência após a suspensão e ajuda a justificar manter ou não o tratamento estendido."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "escore-vte-bleed-risco-de-sangramento-sob-anticoagulacao-por-tev",
+        "por_que": "O DASH mostra só um lado da balança da anticoagulação estendida; o VTE-BLEED mostra o outro — risco de sangramento maior sob anticoagulação contínua —, e a decisão de estender depende de ler os dois juntos."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "crusade-bleeding-score",
+        "por_que": "Muda o cenário do TEV para a síndrome coronariana aguda: o CRUSADE estima sangramento maior intra-hospitalar sob terapia antitrombótica, mostrando que 'escore de sangramento' não é um conceito único — cada contexto clínico tem o seu, com variáveis diferentes."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "escores-abc-na-fibrilacao-atrial-risco-de-avc-e-de-sangramento-por-biomarcadores",
+        "por_que": "Fecha o bloco de sangramento com o refinamento mais recente: os escores ABC usam biomarcadores (troponina, NT-proBNP, GDF-15, hemoglobina) em vez de só variáveis clínicas, para estimar risco de AVC e de sangramento na FA com maior precisão que HAS-BLED e CHA2DS2-VASc isolados."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "escore-maggic-predicao-de-mortalidade-na-insuficiencia-cardiaca",
+        "por_que": "Muda de sangramento para prognóstico: o MAGGIC estima mortalidade em 1 e 3 anos no paciente ambulatorial com IC, com FE reduzida ou preservada, a partir de 13 variáveis simples de coletar em consulta."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "escore-gwtg-hf-mortalidade-intra-hospitalar-na-insuficiencia-cardiaca-aguda",
+        "por_que": "Contraste direto com o MAGGIC: o GWTG-HF responde à mesma pergunta de mortalidade, mas no paciente internado por IC aguda descompensada — outro momento da doença, outras variáveis (PAS, ureia, sódio na admissão) e outro horizonte de tempo."
+      },
+      {
+        "ordem": 10,
+        "item_type": "documento",
+        "item_slug": "seattle-heart-failure-model-predicao-de-sobrevida-na-ic",
+        "por_que": "Fecha a trilha com o modelo mais granular dos três: o Seattle Heart Failure Model projeta curva de sobrevida ano a ano e simula o efeito de adicionar terapia (dispositivo, transplante), útil quando a decisão não é só estimar risco, mas escolher entre intensificar tratamento ou encaminhar para terapia avançada."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-dispositivos-trc-e-terapias-avancadas-na-ic",
+    "titulo": "Ressincronização e terapias avançadas de dispositivo na insuficiência cardíaca",
+    "tema": "Dispositivos",
+    "objetivo": "Sair sabendo quando indicar terapia de ressincronização cardíaca (TRC), escolher entre CRT-P e CRT-D, decidir entre estimulação biventricular convencional e estimulação do sistema de condução, e conhecer as alternativas de dispositivo — modulação da contratilidade cardíaca, ativação barorreflexa e monitorização hemodinâmica implantável — para quem não se qualifica para TRC.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "terapia-de-ressincronizacao-cardiaca-sicd-e-seguimento-remoto",
+        "por_que": "Ponto de partida: os critérios de indicação de TRC pela ESC 2021 (FEVE ≤35%, QRS ≥150ms, morfologia de BRE) e o que a diretriz mudou desde 2013."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "ressincronizacao-com-marcapasso-ou-com-desfibrilador-o-ensaio-companion",
+        "por_que": "Indicada a TRC, a próxima decisão é de dispositivo: CRT-P ou CRT-D. O COMPANION é o único grande ensaio que randomizou as duas modalidades contra a mesma terapia clínica."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "cardiomiopatia-induzida-por-estimulacao-david-block-hf-e-a-estimulacao-do-ramo-esquerdo",
+        "por_que": "Antes de escolher a técnica de estimulação, entender por que estimular o ápice do ventrículo direito pode piorar a função ventricular — é o problema que justifica preferir biventricular ou sistema de condução em quem vai precisar estimular com frequência."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "estimulacao-do-ramo-esquerdo-versus-biventricular-o-ensaio-lbbp-resync",
+        "por_que": "Alternativa à ressincronização biventricular convencional: estimulação do ramo esquerdo comparada de frente com o BiV no LBBP-RESYNC, com diferença de FEVE a favor da estimulação do sistema de condução."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "modulacao-da-contratilidade-cardiaca-ccm-o-ensaio-fix-hf-5c",
+        "por_que": "E quem não se qualifica para TRC por QRS estreito? A modulação da contratilidade cardíaca (CCM) é a terapia de dispositivo pensada exatamente para esse paciente, com mecanismo diferente de ressincronização."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "terapia-de-ativacao-barorreflexa-o-ensaio-beat-hf",
+        "por_que": "Outra opção de dispositivo para ICFEr sem indicação classe I de TRC, com mecanismo distinto de todos os anteriores: neuromodulação do barorreceptor carotídeo, não estimulação elétrica do miocárdio."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "monitorizacao-hemodinamica-pulmonar-implantavel-champion-e-guide-hf",
+        "por_que": "Fecha a trilha com o dispositivo que não trata a dissincronia nem a contração, e sim guia o ajuste da terapia: monitorização hemodinâmica pulmonar implantável para antecipar a descompensação antes dos sintomas."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-hipertensao-e-pre-eclampsia-na-gestacao",
+    "titulo": "Hipertensão e Pré-Eclâmpsia na Gestação: da Prevenção à Eclâmpsia",
+    "tema": "Gravidez",
+    "objetivo": "Sair sabendo decidir a conduta ao longo de todo o espectro hipertensivo da gestação: quem recebe AAS em baixa dose para prevenir pré-eclâmpsia, quando e com qual alvo tratar a hipertensão crônica leve, e como manejar a hipertensão grave e a eclâmpsia — incluindo a escolha do anti-hipertensivo oral e parenteral e o seguimento pós-parto do risco cardiovascular que a pré-eclâmpsia deixa.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "profilaxia-de-pre-eclampsia-com-aas-em-baixa-dose",
+        "por_que": "Abre pela prevenção primária: quem tem indicação de AAS em baixa dose e a partir de quando iniciar, antes de qualquer discussão sobre tratar hipertensão já instalada."
+      },
+      {
+        "ordem": 2,
+        "item_type": "medicamento",
+        "item_slug": "acido-acetilsalicilico-aas",
+        "por_que": "A prescrição concreta que decorre da etapa anterior — dose e apresentação do AAS em baixa dose usado na profilaxia, não a dose antiagregante da doença coronariana."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "tratar-hipertensao-cronica-leve-na-gestacao-o-ensaio-chap",
+        "por_que": "Responde a pergunta que antecede a escolha do fármaco: o CHAP derrubou a conduta de décadas de não tratar hipertensão crônica leve, mostrando queda de 37,0% para 30,2% no desfecho composto sem aumentar restrição de crescimento fetal (11,2% vs. 10,4%, p=0,76)."
+      },
+      {
+        "ordem": 4,
+        "item_type": "medicamento",
+        "item_slug": "metildopa-alfa-metildopa",
+        "por_que": "O anti-hipertensivo oral de primeira linha para sustentar o alvo abaixo de 140/90 mmHg que o CHAP validou — o ensaio decide SE e A QUE ALVO tratar, mas não testa fármaco; aqui entra a dose e o perfil que fazem da metildopa a escolha mais tradicional na gestação."
+      },
+      {
+        "ordem": 5,
+        "item_type": "medicamento",
+        "item_slug": "nifedipina",
+        "por_que": "Segunda opção oral de primeira linha, e a mesma que reaparece na etapa seguinte como um dos três braços do ensaio de Easterling para hipertensão GRAVE — o mesmo fármaco muda de contexto conforme a gravidade."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "hipertensao-grave-e-eclampsia-magpie-chips-e-a-escolha-do-anti-hipertensivo-oral",
+        "por_que": "Sobe um degrau de gravidade: reúne os três ensaios que decidem a conduta na hipertensão GRAVE e na eclâmpsia — Magpie (sulfato de magnésio reduz eclâmpsia à metade), CHIPS (controle rígido não muda desfecho fetal, mas reduz hipertensão grave) e Easterling (via oral aplicável ao Brasil, testada em serviço público)."
+      },
+      {
+        "ordem": 7,
+        "item_type": "medicamento",
+        "item_slug": "hidralazina",
+        "por_que": "A opção parenteral clássica da crise hipertensiva grave e da eclâmpsia, em contraste direto com a alternativa ORAL que o ensaio de Easterling testou na etapa anterior — a etapa mostra quando cada via se aplica."
+      },
+      {
+        "ordem": 8,
+        "item_type": "checklist",
+        "item_slug": "puerperio-da-gestante-cardiopata",
+        "por_que": "Fecha no seguimento pós-parto: o item sobre pré-eclâmpsia lembra, no momento da alta, que ela deixa OR de 7,1 para insuficiência cardíaca no registro ROPAC — a consequência que amarra toda a trilha ao cuidado depois do parto."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-cardioprotecao-primaria-no-paciente-oncologico",
+    "titulo": "Cardioproteção primária no paciente oncológico: quem vigiar, com o quê e quando intervir",
+    "tema": "Cardio-oncologia",
+    "objetivo": "Ir da estratificação de risco basal antes do início da terapia oncológica até a decisão de vigilância por imagem (strain), cardioproteção farmacológica (dexrazoxano, estatina) e o desfecho a longo prazo em sobreviventes — complementando a trilha geral de rastreio e manejo da toxicidade já publicada.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "cardio-oncologia-prevencao-e-manejo-de-toxicidade-cardiovascular-relacionada-ao-cancer",
+        "por_que": "Ponto de partida obrigatório: dá o panorama de prevenção e manejo de toxicidade cardiovascular relacionada ao câncer antes de entrar nos protocolos específicos de cardioproteção primária que a trilha vai detalhar."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "estratificacao-de-risco-basal-hfa-icos-e-miocardite-por-inibidor-de-checkpoint",
+        "por_que": "A cardioproteção começa antes da primeira dose de quimioterapia: o escore HFA-ICOS é o que define, na consulta pré-tratamento, quem entra em vigilância intensiva e quem não precisa dela."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "cardioprotecao-primaria-e-vigilancia-por-strain-prada-overcome-e-succour",
+        "por_que": "Núcleo da trilha: reúne os três ensaios (PRADA, OVERCOME, SUCCOUR) que testam betabloqueador/IECA profilático e vigilância por strain longitudinal global — a resposta baseada em evidência para 'quem tratar antes da queda da fração de ejeção'."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "cardiotoxicidade-por-terapia-anti-her2-trastuzumabe",
+        "por_que": "Aplica a lógica de vigilância e cardioproteção a uma classe concreta e de altíssimo volume prático — o trastuzumabe, cuja cardiotoxicidade costuma ser reversível se detectada e tratada a tempo."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "atorvastatina-como-cardioprotecao-durante-antraciclina-o-ensaio-stop-ca",
+        "por_que": "Mostra a outra frente farmacológica de cardioproteção primária, além do betabloqueador/IECA: o ensaio STOP-CA testa estatina concomitante à antraciclina para reduzir a incidência de disfunção ventricular."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "cardiotoxicidade-tardia-por-radioterapia-e-cardioprotecao-com-dexrazoxano",
+        "por_que": "Estende a cardioproteção para além do fármaco quimioterápico isolado: a radioterapia torácica tem toxicidade tardia própria, e o dexrazoxano é a intervenção farmacológica específica para reduzir o dano por antraciclina nesse contexto."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "fluxograma-disfuncao-cardiaca-por-antraciclina-e-anti-her2-esc-2022",
+        "por_que": "Converte tudo o que foi lido nas etapas anteriores em árvore de decisão prática (ESC 2022): quando rastrear, qual corte de strain ou de fração de ejeção aciona intervenção, e quando encaminhar ao cardio-oncologista."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "risco-cardiovascular-tardio-em-sobreviventes-de-cancer-na-infancia",
+        "por_que": "Fecha a trilha mostrando por que a cardioproteção primária importa a longo prazo: sobreviventes de câncer na infância carregam risco cardiovascular tardio elevado, o desfecho que toda a vigilância e a profilaxia das etapas anteriores tentam evitar."
+      }
+    ]
   }
 ]
