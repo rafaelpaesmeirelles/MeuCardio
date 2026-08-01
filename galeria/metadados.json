@@ -1624,5 +1624,28 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "ecg-arvc-onda-epsilon",
+    "title": "ECG — Displasia arritmogênica de ventrículo direito (onda épsilon)",
+    "modality": "ECG",
+    "theme": "Síncope",
+    "file_path": "ecg/ecg-arvc-onda-epsilon.png",
+    "findings": "Onda épsilon — pequena deflexão de baixa amplitude logo após o complexo QRS, nas derivações precordiais direitas (V1-V3), representando ativação elétrica tardia e fragmentada do miocárdio ventricular direito doente. Achado clássico da displasia arritmogênica/cardiomiopatia arritmogênica de ventrículo direito (ARVD/ACVD), embora presente em minoria dos casos.",
+    "teaching_points": "ARVD/ACVD é doença do desmossomo que substitui progressivamente o miocárdio do ventrículo direito por tecido fibroadiposo, predispondo a taquicardia ventricular e morte súbita — sobretudo em jovens atletas, tipicamente desencadeada por esforço. A onda épsilon é altamente específica quando presente, mas tem sensibilidade baixa — sua ausência não afasta o diagnóstico, que depende de critérios combinados de imagem (RM cardíaca), ECG (incluindo inversão de onda T em V1-V3 sem bloqueio de ramo direito), histologia, arritmia documentada e história familiar (Critérios de Task Force revisados). Síncope em paciente jovem, sobretudo relacionada a esforço, com esse padrão de ECG, deve levantar a suspeita.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:ARVD-Epsilon_wave.png",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Ksheka, via Wikimedia Commons — CC BY-SA 3.0.",
+    "tags": [
+      "displasia arritmogênica de ventrículo direito",
+      "arvd",
+      "onda épsilon",
+      "síncope",
+      "morte súbita",
+      "ecg"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
