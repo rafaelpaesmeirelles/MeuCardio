@@ -20868,5 +20868,2358 @@
       "classificação hemodinâmica"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-rcri-avaliacao-de-risco",
+    "statement": "O uso do RCRI (Revised Cardiac Risk Index) é recomendado para avaliação de risco cardiovascular pré-operatório em cirurgia não cardíaca. Critérios do RCRI: história de doença cardíaca isquêmica, história de insuficiência cardíaca congestiva, história de AVC ou AIT, diabetes mellitus dependente de insulina, creatinina sérica >2 mg/dL, e cirurgia de alto risco (intratorácica, intra-abdominal ou vascular supra-inguinal). Risco de evento por estrato, cirurgia NÃO vascular: 0 itens = 0,91% (IC95% 0,70–1,2%); 1 item = 2,9% (2,5–3,4%); 2 itens = 7,2% (6,0–8,6%); ≥3 itens = 13,7% (10,7–17,4%). Cirurgia VASCULAR: 0 itens = 3,2% (2,7–3,7%); 1 item = 7,7% (6,9–8,5%); 2 itens = 11,9% (10,6–13,4%); ≥3 itens = 19,0% (16,6–21,6%).",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 15-17, RCRI e estratificação de risco",
+    "theme": "Perioperatório",
+    "tags": [
+      "rcri",
+      "risco cirurgico",
+      "avaliacao pre-operatoria"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-rcri-corte-de-baixo-risco-5-porcento",
+    "statement": "Exames cardíacos pré-operatórios adicionais de rotina NÃO são recomendados para pacientes de baixo risco — isto é, cirurgia não vascular com RCRI de 0-1 item e cirurgia vascular com RCRI de 0 item. A diretriz redefiniu o corte de baixo risco de <1% (AHA 2014) para <5%, porque a incidência real de evento com RCRI=0 mostrou-se acima de 1% em ambos os tipos de cirurgia quando considerado o IC95%, e o uso contemporâneo de troponina de alta sensibilidade no Japão sustenta o corte mais alto.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 17, corte de baixo risco redefinido de 1% para 5%",
+    "theme": "Perioperatório",
+    "tags": [
+      "rcri",
+      "baixo risco",
+      "corte de risco"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-mins-vigilancia-por-troponina",
+    "statement": "A vigilância pós-operatória de MINS (lesão miocárdica após cirurgia não cardíaca) por dosagem seriada de troponina pode ser considerada em pacientes de alto risco. MINS é definida como lesão miocárdica de mecanismo isquêmico, intraoperatória ou até 30 dias pós-operatórios, com padrão de elevação/queda de troponina, sem exigir os critérios clássicos de infarto (ECG, alteração de contratilidade segmentar ou achado isquêmico em cintilografia) e após excluir causa não isquêmica (sepse, TEP, FA). Ocorre em 8-18% das cirurgias não cardíacas; 84-93% dos casos são assintomáticos ou sem alteração de ECG.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 54-55, definição operacional de MINS e vigilância por troponina",
+    "theme": "Perioperatório",
+    "tags": [
+      "mins",
+      "lesao miocardica perioperatoria",
+      "troponina"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-mins-vigilancia-por-ecg",
+    "statement": "A vigilância de isquemia miocárdica por ECG de 12 derivações no pós-operatório (48-72h) pode ser considerada em pacientes de alto risco.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 55, vigilância por ECG pós-operatório",
+    "theme": "Perioperatório",
+    "tags": [
+      "mins",
+      "ecg pos-operatorio",
+      "vigilancia"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-equipe-multidisciplinar-condicao-cardiaca-achada-no-pre-operatorio",
+    "statement": "Discussão multidisciplinar entre cirurgião, anestesiologista e cardiologista, com decisão compartilhada com o paciente, é recomendada quando uma condição cardíaca que exigiria procedimento cardíaco invasivo fora do contexto perioperatório é diagnosticada na avaliação pré-operatória.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 7, comunicação e cuidado em equipe no perioperatório",
+    "theme": "Perioperatório",
+    "tags": [
+      "equipe multidisciplinar",
+      "decisao compartilhada"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-dasi-capacidade-funcional",
+    "statement": "O escore DASI (Duke Activity Status Index) deve ser considerado para avaliação da capacidade funcional referida pelo paciente no pré-operatório.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 12, capacidade funcional autorreferida",
+    "theme": "Perioperatório",
+    "tags": [
+      "dasi",
+      "capacidade funcional",
+      "mets"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-dasi-sem-exame-adicional-se-7-mets",
+    "statement": "Exames cardiovasculares pré-operatórios adicionais não são necessários se a capacidade funcional referida pelo paciente for ≥7 METS.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 12, capacidade funcional autorreferida",
+    "theme": "Perioperatório",
+    "tags": [
+      "dasi",
+      "capacidade funcional",
+      "mets"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-dasi-avaliacao-adicional-dispensavel-se-4-mets",
+    "statement": "A avaliação cardiovascular pré-operatória adicional pode não ser necessária se a capacidade funcional referida pelo paciente for ≥4 METS.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 12, capacidade funcional autorreferida",
+    "theme": "Perioperatório",
+    "tags": [
+      "dasi",
+      "capacidade funcional",
+      "mets"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-ecg-de-rotina-nao-recomendado-baixo-risco",
+    "statement": "ECG de 12 derivações pré-operatório de rotina NÃO é recomendado para cirurgia de baixo risco.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 13, ECG pré-operatório de rotina",
+    "theme": "Perioperatório",
+    "tags": [
+      "ecg pre-operatorio",
+      "cirurgia de baixo risco"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-ett-de-rotina-nao-recomendada",
+    "statement": "Ecocardiografia transtorácica pré-operatória de rotina NÃO é recomendada. Pode ser realizada se houver indicação clínica própria, tomando-se cuidado para não atrasar a cirurgia necessária apenas para viabilizar o exame.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 14, ecocardiografia transtorácica pré-operatória de rotina",
+    "theme": "Perioperatório",
+    "tags": [
+      "ecocardiograma",
+      "avaliacao pre-operatoria"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-bnp-nt-probnp-estratificacao-adicional",
+    "statement": "Em pacientes de risco elevado pelo modelo de predição clínica submetidos a cirurgia de risco intermediário/alto (RCRI ≥1 para cirurgia vascular ou ≥2 para não vascular), a adição de BNP ou NT-proBNP pode ser considerada para estratificação de risco adicional.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 18, BNP/NT-proBNP pré-operatório",
+    "theme": "Perioperatório",
+    "tags": [
+      "bnp",
+      "nt-probnp",
+      "estratificacao de risco"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-ecg-de-estresse-nao-recomendado-rotina",
+    "statement": "Eletrocardiografia de estresse pré-operatória para avaliação de risco NÃO deve ser realizada rotineiramente para cirurgia não cardíaca. Pode ser usada especificamente para estimar a capacidade funcional quando esta não é conhecida por relato do paciente.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 20, ECG de estresse e cintilografia de perfusão de estresse pré-operatórios",
+    "theme": "Perioperatório",
+    "tags": [
+      "teste ergometrico",
+      "estratificacao de risco"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-cintilografia-e-eco-de-estresse-nao-recomendados-rotina",
+    "statement": "Cintilografia de perfusão miocárdica de estresse e ecocardiograma de estresse pré-operatórios NÃO devem ser realizados rotineiramente para cirurgia não cardíaca — não há evidência de que melhorem a precisão da estratificação de risco pelo RCRI, embora possam ser usados para estratificação adicional em casos selecionados.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 20, cintilografia de perfusão e eco de estresse pré-operatórios",
+    "theme": "Perioperatório",
+    "tags": [
+      "cintilografia",
+      "eco de estresse",
+      "estratificacao de risco"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-angiotc-coronaria-nao-recomendada-rotina",
+    "statement": "Angiotomografia coronariana pré-operatória de rotina NÃO é recomendada para cirurgia não cardíaca — pode reclassificar inadequadamente para alto risco um número significativo de pacientes de baixo risco pelo RCRI, embora possa ajudar na estratificação adicional de pacientes já classificados como de risco elevado.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 21, angiotomografia coronariana pré-operatória",
+    "theme": "Perioperatório",
+    "tags": [
+      "angiotomografia coronariana",
+      "avaliacao pre-operatoria"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-cineangiocoronariografia-nao-recomendada-rotina",
+    "statement": "Cineangiocoronariografia invasiva NÃO deve ser realizada rotineiramente com o propósito de avaliação pré-operatória para cirurgia não cardíaca.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 22, cineangiocoronariografia pré-operatória",
+    "theme": "Perioperatório",
+    "tags": [
+      "cateterismo cardiaco",
+      "avaliacao pre-operatoria"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-betabloqueador-inicio-24h-antes-nao-recomendado",
+    "statement": "O início de betabloqueador dentro de 24h antes de cirurgia não cardíaca NÃO é recomendado — associado a dano (Classe III, Harm).",
+    "recommendation_class": "III",
+    "evidence_level": "A",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 23, betabloqueador perioperatório — início próximo à cirurgia",
+    "theme": "Perioperatório",
+    "tags": [
+      "betabloqueador",
+      "poise",
+      "dano perioperatorio"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-betabloqueador-continuacao-cronica-recomendada",
+    "statement": "A continuação da terapia crônica com betabloqueador durante o período perioperatório de cirurgia não cardíaca é recomendada.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 23, betabloqueador perioperatório — continuação da terapia crônica",
+    "theme": "Perioperatório",
+    "tags": [
+      "betabloqueador",
+      "terapia cronica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-estatina-inicio-antes-de-cirurgia-vascular",
+    "statement": "Considerar o início de estatina pelo menos 2 semanas (preferencialmente 1 mês) antes de cirurgia vascular.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 24, estatina perioperatória — início antes de cirurgia vascular",
+    "theme": "Perioperatório",
+    "tags": [
+      "estatina",
+      "cirurgia vascular"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-estatina-continuacao-cronica-recomendada",
+    "statement": "A continuação da terapia oral crônica com estatina no período perioperatório de cirurgia não cardíaca é recomendada.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 24, estatina perioperatória — continuação da terapia crônica",
+    "theme": "Perioperatório",
+    "tags": [
+      "estatina",
+      "terapia cronica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-ieca-bra-suspensao-no-dia-da-cirurgia",
+    "statement": "A suspensão de inibidor da ECA/BRA pode ser considerada no dia da cirurgia.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 25, IECA/BRA perioperatório — suspensão no dia da cirurgia",
+    "theme": "Perioperatório",
+    "tags": [
+      "ieca",
+      "bra",
+      "suspensao perioperatoria"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-ieca-bra-reinicio-pos-operatorio-em-icfer",
+    "statement": "IECA/BRA devem ser reiniciados o mais rápido possível após a cirurgia quando usados para ICFEr e tiverem sido descontinuados antes do procedimento.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 25, IECA/BRA perioperatório — reinício pós-operatório em ICFEr",
+    "theme": "Perioperatório",
+    "tags": [
+      "ieca",
+      "bra",
+      "icfer",
+      "reinicio pos-operatorio"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-agonista-alfa2-inicio-nao-recomendado-poise2",
+    "statement": "O início de terapia com agonista alfa-2 (ex.: clonidina) antes de cirurgia não cardíaca NÃO é recomendado. Baseado no ensaio POISE-2: clonidina não reduziu morte por qualquer causa ou infarto em 30 dias e aumentou hipotensão clinicamente significativa e parada cardíaca não fatal.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 26, agonistas alfa-2 perioperatórios — POISE-2",
+    "theme": "Perioperatório",
+    "tags": [
+      "agonista alfa-2",
+      "clonidina",
+      "poise-2"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-aspirina-inicio-prevencao-primaria-nao-recomendado",
+    "statement": "O início de aspirina para prevenção PRIMÁRIA de evento cardiovascular antes de cirurgia não cardíaca NÃO deve ser realizado.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 27, aspirina perioperatória — início para prevenção primária",
+    "theme": "Perioperatório",
+    "tags": [
+      "aspirina",
+      "prevencao primaria",
+      "dano perioperatorio"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-aspirina-manutencao-cronica-decisao-ponderada",
+    "statement": "A decisão de continuar ou descontinuar aspirina como terapia de manutenção crônica no perioperatório deve ponderar os riscos de trombose e de sangramento.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 27, aspirina perioperatória — terapia de manutenção crônica",
+    "theme": "Perioperatório",
+    "tags": [
+      "aspirina",
+      "terapia cronica",
+      "risco de sangramento"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-anticoagulante-continuacao-baixo-risco-sangramento",
+    "statement": "A continuação da terapia anticoagulante é recomendada em procedimentos cirúrgicos de baixo risco de sangramento.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 31, anticoagulante perioperatório por risco de sangramento — baixo risco",
+    "theme": "Perioperatório",
+    "tags": [
+      "anticoagulante",
+      "risco de sangramento"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-anticoagulante-decisao-ponderada-risco-moderado",
+    "statement": "A continuação ou suspensão da terapia anticoagulante em procedimentos de risco MODERADO de sangramento deve ser decidida ponderando risco tromboembólico e risco de sangramento.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 31, anticoagulante perioperatório por risco de sangramento — risco moderado",
+    "theme": "Perioperatório",
+    "tags": [
+      "anticoagulante",
+      "risco de sangramento"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-anticoagulante-suspensao-alto-risco-sangramento",
+    "statement": "A suspensão da terapia anticoagulante é recomendada em procedimentos cirúrgicos de ALTO risco de sangramento.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 31, anticoagulante perioperatório por risco de sangramento — alto risco",
+    "theme": "Perioperatório",
+    "tags": [
+      "anticoagulante",
+      "risco de sangramento"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-bridging-rotineiro-com-heparina-nao-recomendado",
+    "statement": "A ponte (bridging) rotineira com heparina durante a suspensão da varfarina NÃO é recomendada.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 35, bridging com heparina na suspensão de varfarina",
+    "theme": "Perioperatório",
+    "tags": [
+      "bridging",
+      "varfarina",
+      "heparina"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-bridging-considerar-protese-mecanica-ou-fa-valvar",
+    "statement": "A ponte com heparina deve ser considerada durante a suspensão da varfarina em pacientes com prótese valvar mecânica recente ou fibrilação atrial valvar.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 35, bridging com heparina — prótese mecânica recente/FA valvar",
+    "theme": "Perioperatório",
+    "tags": [
+      "bridging",
+      "varfarina",
+      "protese mecanica",
+      "fa valvar"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-bridging-considerar-alto-risco-embolico",
+    "statement": "A ponte com heparina deve ser considerada durante a suspensão da varfarina em pacientes com alto risco de embolia e baixo risco de sangramento.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 35, bridging com heparina — alto risco embólico",
+    "theme": "Perioperatório",
+    "tags": [
+      "bridging",
+      "varfarina",
+      "risco embolico"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-bridging-suspensao-de-doac-nao-recomendado",
+    "statement": "A ponte com heparina durante a suspensão de DOAC (anticoagulante oral direto) NÃO é recomendada.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 35, bridging com heparina na suspensão de DOAC",
+    "theme": "Perioperatório",
+    "tags": [
+      "bridging",
+      "doac",
+      "heparina"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-antitromboticos-e-anestesia-regional-discussao-multidisciplinar",
+    "statement": "Discussão multidisciplinar incluindo anestesiologista é recomendada para decidir continuar ou descontinuar agente antitrombótico em paciente sob terapia antitrombótica candidato a anestesia regional.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 36, antitrombóticos e anestesia regional",
+    "theme": "Perioperatório",
+    "tags": [
+      "antitrombotico",
+      "anestesia regional",
+      "equipe multidisciplinar"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-cirurgia-eletiva-evitar-1-mes-apos-sca",
+    "statement": "Cirurgia não cardíaca eletiva deve ser evitada até 1 mês após o início de síndrome coronariana aguda (SCA).",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 37, cirurgia não cardíaca pós-SCA — intervalo mínimo",
+    "theme": "Perioperatório",
+    "tags": [
+      "sca",
+      "cirurgia eletiva",
+      "intervalo pos-infarto"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-revascularizacao-de-emergencia-se-sca-no-perioperatorio",
+    "statement": "Revascularização de emergência deve ser realizada em pacientes programados para cirurgia não cardíaca que apresentem síndrome coronariana aguda.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 37, cirurgia não cardíaca pós-SCA — revascularização de emergência",
+    "theme": "Perioperatório",
+    "tags": [
+      "sca",
+      "revascularizacao de emergencia"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-revascularizacao-completa-previa-pode-ser-considerada",
+    "statement": "A realização de revascularização completa antes da cirurgia não cardíaca pode ser considerada em pacientes programados para cirurgia não cardíaca que tiveram SCA recente.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 37, cirurgia não cardíaca pós-SCA — revascularização completa prévia",
+    "theme": "Perioperatório",
+    "tags": [
+      "sca",
+      "revascularizacao completa"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-revascularizacao-profilatica-nao-recomendada-dac-estavel-carp",
+    "statement": "Revascularização profilática pré-operatória para reduzir risco cirúrgico NÃO deve ser realizada em pacientes com doença arterial coronariana ESTÁVEL submetidos a cirurgia não cardíaca. Baseada, entre outros, no ensaio CARP (n=510).",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 38, revascularização profilática pré-operatória — doença coronariana estável (CARP)",
+    "theme": "Perioperatório",
+    "tags": [
+      "revascularizacao profilatica",
+      "doenca coronariana estavel",
+      "carp"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-revascularizacao-indicacao-classe-i-decisao-em-equipe",
+    "statement": "Para lesão coronariana com indicação Classe I de revascularização, é recomendado que a decisão de revascularizar antes da cirurgia não cardíaca seja discutida em equipe multidisciplinar (cirurgião, clínico, cardiologista, anestesiologista), com decisão compartilhada com o paciente.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 38, revascularização profilática pré-operatória — indicação Classe I",
+    "theme": "Perioperatório",
+    "tags": [
+      "revascularizacao",
+      "equipe multidisciplinar",
+      "decisao compartilhada"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-cirurgia-eletiva-nao-recomendada-1-a-1-5-mes-pos-stent",
+    "statement": "Cirurgia não cardíaca eletiva NÃO deve ser realizada dentro de 1-1,5 meses da colocação de stent coronariano, pela alta taxa de eventos cardiovasculares perioperatórios nesse intervalo.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 39, timing de cirurgia após implante de stent coronariano",
+    "theme": "Perioperatório",
+    "tags": [
+      "stent coronariano",
+      "cirurgia eletiva",
+      "timing cirurgico"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-adiar-cirurgia-ate-completar-dapt",
+    "statement": "Se a cirurgia sob continuação de DAPT não for viável, deve-se considerar adiar a cirurgia até completar a duração apropriada de DAPT após a colocação do stent.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 39, timing de cirurgia após stent — adiamento por DAPT",
+    "theme": "Perioperatório",
+    "tags": [
+      "dapt",
+      "stent coronariano",
+      "timing cirurgico"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-antiplaquetario-cronico-sem-stent-decisao-ponderada",
+    "statement": "A continuação ou descontinuação perioperatória da terapia antiplaquetária de manutenção crônica em doença coronariana SEM stent deve ser decidida por avaliação cuidadosa dos riscos de trombose e sangramento.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 41, antiplaquetários perioperatórios em DAC sem stent",
+    "theme": "Perioperatório",
+    "tags": [
+      "antiplaquetario",
+      "doenca coronariana",
+      "risco de sangramento"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-novo-antiplaquetario-nao-deve-ser-introduzido-no-perioperatorio",
+    "statement": "A introdução de NOVOS agentes antiplaquetários com o objetivo de reduzir eventos cardiovasculares perioperatórios NÃO deve ser realizada.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 41, introdução de novo antiplaquetário no perioperatório",
+    "theme": "Perioperatório",
+    "tags": [
+      "antiplaquetario",
+      "dano perioperatorio"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-aspirina-em-paciente-com-stent-previo-equipe-multidisciplinar",
+    "statement": "Os riscos de trombose e sangramento em cirurgia de paciente com stent coronariano prévio devem ser discutidos em equipe multidisciplinar; a aspirina deve ser continuada nos pacientes sem alto risco de sangramento, e descontinuada pelo menor tempo possível nos de alto risco de sangramento.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 41, aspirina perioperatória em paciente com stent coronariano prévio",
+    "theme": "Perioperatório",
+    "tags": [
+      "aspirina",
+      "stent coronariano",
+      "equipe multidisciplinar"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-po-bridging-para-antiplaquetario-nao-recomendado",
+    "statement": "Não há evidência de que a ponte (bridging) com heparina durante a suspensão de agentes antiplaquetários reduza eventos cardiovasculares — ao contrário, aumenta o risco de sangramento, e por isso NÃO deve ser realizada.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, Kozuki A, Satomi K, Shiomi H, Shinke T, Nagai T, Manabe S, Mochizuki Y, Inohara T, Ota M, Kawaji T, Kondo Y, Shimada Y, Sotomi Y, Takaya T, Tada A, Taniguchi T, Nagao K, Nakazono K, Nakano Y, Nakayama K, Matsuo Y, Miyamoto T, Yazaki Y, Yahagi K, Yoshida T, Wakabayashi K, Ishii H, Ono M, Kishida A, Kimura T, Sakai T, Morino Y, on behalf of the Japanese Circulation Society Joint Working Group. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circulation Journal. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID: 37558469. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026. Contexto: Tabela 41, bridging com heparina para antiplaquetários",
+    "theme": "Perioperatório",
+    "tags": [
+      "bridging",
+      "antiplaquetario",
+      "heparina"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t25-estreptococo-viridans-valva-protetica-penicilina-gentamicina",
+    "statement": "Na endocardite infecciosa (EI) de VALVA PROTÉTICA por estreptococos do grupo viridans/Streptococcus gallolyticus: penicilina G (2-4 milhões UI, 6x/dia, ou infusão contínua) ou ampicilina (2 g 6x/dia) associada a gentamicina (2-3 mg/kg 1x/dia), por 6 semanas — gentamicina por 2 semanas, ou por 6 semanas se o organismo for penicilino-resistente. Evitar gentamicina concomitante em insuficiência renal ou dano do nervo auditivo.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 25, grupo 1 (estreptococos viridans/gallolyticus), esquema 1",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite de protese",
+      "estreptococo viridans",
+      "penicilina",
+      "gentamicina"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t25-estreptococo-viridans-valva-protetica-ceftriaxona-alergia-leve",
+    "statement": "Alternativa para alergia NÃO grave à penicilina, em EI de valva protética por estreptococo viridans/gallolyticus: ceftriaxona 2 g 1x/dia + gentamicina (2-3 mg/kg 1x/dia por 2 semanas), por 6 semanas.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 25, grupo 1, esquema 2",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite de protese",
+      "estreptococo viridans",
+      "ceftriaxona"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t25-estreptococo-viridans-valva-protetica-vancomicina-alergia-grave",
+    "statement": "Vancomicina (ataque 25-30 mg/kg; manutenção 15-20 mg/kg 2x/dia) ou teicoplanina (dias 1-2: 12 mg/kg 2x/dia; dia 3: 12 mg/kg 1x/dia; dia 4+: 6,7 mg/kg 1x/dia) por 6 semanas, em alergia GRAVE a betalactâmicos, em EI de valva protética por estreptococo viridans/gallolyticus. Terapia combinada com gentamicina não é recomendada com este esquema.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 25, grupo 1, esquema 3",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite de protese",
+      "estreptococo viridans",
+      "vancomicina"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t25-estreptococo-beta-hemolitico-valva-protetica-penicilina",
+    "statement": "Na EI de valva protética por estreptococos beta-hemolíticos (S. pyogenes, S. agalactiae, S. dysgalactiae subsp. equisimilis): penicilina G ou ampicilina por 6 semanas (gentamicina pode ser associada nas primeiras 2 semanas, exceto para S. pyogenes).",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 25, grupo 2 (beta-hemolíticos), esquema 1",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite de protese",
+      "estreptococo beta-hemolitico",
+      "penicilina"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t25-estreptococo-beta-hemolitico-valva-protetica-ceftriaxona",
+    "statement": "Ceftriaxona 2 g 1x/dia por 6 semanas, para alergia não grave à penicilina, em EI de valva protética por estreptococo beta-hemolítico.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 25, grupo 2, esquema 2",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite de protese",
+      "estreptococo beta-hemolitico",
+      "ceftriaxona"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t25-estreptococo-beta-hemolitico-valva-protetica-vancomicina",
+    "statement": "Vancomicina por 6 semanas em caso de alergia a betalactâmicos, em EI de valva protética por estreptococo beta-hemolítico.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 25, grupo 2, esquema 3",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite de protese",
+      "estreptococo beta-hemolitico",
+      "vancomicina"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t25-estreptococo-nutricionalmente-variante-valva-protetica-penicilina",
+    "statement": "Na EI de valva protética por estreptococos nutricionalmente variantes (Abiotrophia spp., Granulicatella spp., Gemella spp.): penicilina G ou ampicilina + gentamicina (2-3 mg/kg 1x/dia, primeiras 2 semanas), por 6 semanas.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 25, grupo 3 (nutricionalmente variantes), esquema 1",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite de protese",
+      "estreptococo nutricionalmente variante"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t25-estreptococo-nutricionalmente-variante-valva-protetica-ceftriaxona",
+    "statement": "Ceftriaxona + gentamicina como alternativa se não houver resposta à penicilina, em EI de valva protética por estreptococo nutricionalmente variante (gentamicina administrada concomitantemente durante todo o tratamento).",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 25, grupo 3, esquema 2",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite de protese",
+      "estreptococo nutricionalmente variante",
+      "ceftriaxona"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t25-estreptococo-nutricionalmente-variante-valva-protetica-vancomicina",
+    "statement": "Vancomicina por 6 semanas quando o organismo não é suscetível a penicilinas ou há alergia a betalactâmicos, em EI de valva protética por estreptococo nutricionalmente variante; terapia combinada com aminoglicosídeo não é recomendada neste esquema.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 25, grupo 3, esquema 3",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite de protese",
+      "estreptococo nutricionalmente variante",
+      "vancomicina"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t25-pneumococo-valva-protetica-penicilina",
+    "statement": "Na EI de valva protética por Streptococcus pneumoniae: penicilina G ou ampicilina por 6 semanas. Sem meningite, penicilina G é utilizável se CIM ≤2 µg/mL; com meningite, CIM ≤0,06 µg/mL.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 25, grupo 4 (S. pneumoniae), esquema 1",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite de protese",
+      "streptococcus pneumoniae",
+      "penicilina"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t25-pneumococo-valva-protetica-ceftriaxona",
+    "statement": "Ceftriaxona por 6 semanas quando resistente à penicilina (cefotaxima como alternativa), em EI de valva protética por S. pneumoniae.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 25, grupo 4, esquema 2",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite de protese",
+      "streptococcus pneumoniae",
+      "ceftriaxona"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t25-pneumococo-valva-protetica-vancomicina",
+    "statement": "Vancomicina por 6 semanas quando resistente à penicilina e à ceftriaxona, ou em alergia a betalactâmicos, em EI de valva protética por S. pneumoniae.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 25, grupo 4, esquema 3",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite de protese",
+      "streptococcus pneumoniae",
+      "vancomicina"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t46-estreptococo-penicilino-suscetivel-pediatrico",
+    "statement": "EI pediátrica por estreptococo penicilino-suscetível: penicilina G, ampicilina ou ceftriaxona por 4 semanas (6 semanas após implante de material protético; associar gentamicina por 2 semanas após implante). Em alergia à penicilina, vancomicina.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 46, linha \"Streptococcus (penicillin-susceptible)\"",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite pediatrica",
+      "estreptococo",
+      "penicilina"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t46-enterococo-pediatrico",
+    "statement": "EI pediátrica por Enterococcus: ampicilina ou vancomicina + gentamicina, por 4-6 semanas (mais longo com material protético). Em alergia à penicilina, vancomicina.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 46, linha \"Enterococcus\"",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite pediatrica",
+      "enterococcus"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t46-staph-meticilino-resistente-pediatrico",
+    "statement": "EI pediátrica por estafilococo meticilino-resistente: vancomicina ou teicoplanina (considerar associar gentamicina) por 6 semanas, ou 6-8 semanas com material protético (gentamicina por ao menos 2 semanas), ou daptomicina.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 46, linha \"Staphylococcus (methicillin-resistant)\"",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite pediatrica",
+      "mrsa",
+      "vancomicina",
+      "daptomicina"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t46-haceck-pediatrico",
+    "statement": "EI pediátrica por bactérias do grupo HACEK: cefalosporina de 3ª geração, ou ampicilina + gentamicina, por 4 semanas.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 46, linha \"HACEK\"",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite pediatrica",
+      "haceck"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t46-fungica-pediatrica",
+    "statement": "EI pediátrica fúngica: anfotericina B lipossomal por 8 semanas.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 46, linha \"Fungi\"",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite pediatrica",
+      "fungica",
+      "anfotericina b"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t46-staph-meticilino-suscetivel-pediatrico",
+    "statement": "EI pediátrica por estafilococo meticilino-suscetível: cefazolina, por 4-6 semanas (mais longo com material protético); vancomicina em alergia.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 46, linha \"Staphylococcus (methicillin-susceptible)\"",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite pediatrica",
+      "mssa",
+      "cefazolina"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t46-gram-negativo-nao-haceck-pediatrico",
+    "statement": "EI pediátrica por bacilo Gram-negativo não-HACEK: tratamento geralmente guiado por suscetibilidade, ou cefalosporina de amplo espectro (cefepima, cefotaxima, ceftazidima, ceftriaxona) + gentamicina, por 6 semanas.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 46, linha \"Gram-negative rods other than HACEK\"",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite pediatrica",
+      "gram-negativo"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t46-hemocultura-negativa-pos-operatoria-pediatrica",
+    "statement": "EI pediátrica com hemocultura negativa, de origem pós-operatória/associada a cuidados de saúde: vancomicina (considerar associar gentamicina) por 6 semanas (combinação por 2 semanas).",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 46, linha \"Blood culture-negative cases (postoperative, healthcare-associated)\"",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite pediatrica",
+      "hemocultura negativa"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t46-hemocultura-negativa-comunitaria-pediatrica",
+    "statement": "EI pediátrica com hemocultura negativa, adquirida na comunidade: ampicilina/sulbactam + gentamicina, por 4-6 semanas (combinação por 2 semanas).",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 46, linha \"Blood culture-negative cases (community-acquired)\"",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite pediatrica",
+      "hemocultura negativa"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t47-equipe-avalia-risco-de-reoperacao-pos-tavi",
+    "statement": "Recomenda-se que a equipe de EI avalie o risco de reoperação e determine as indicações cirúrgicas em endocardite de valva protética após TAVI (TAVI-PVE).",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 47, recomendação 1",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite pos-tavi",
+      "equipe multidisciplinar"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t47-troca-valvar-redo-risco-intermediario-alto-pre-tavi",
+    "statement": "A troca valvar (redo) pode ser considerada em pacientes com TAVI-PVE que, antes do TAVI, pertenciam ao grupo de risco cirúrgico intermediário-alto.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 47, recomendação 2",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite pos-tavi",
+      "reoperacao"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t9-ett-recomendado-todos-suspeita",
+    "statement": "Ecocardiograma transtorácico (ETT) é recomendado para todos os casos suspeitos de endocardite infecciosa (EI).",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 9",
+    "theme": "Endocardite",
+    "tags": [
+      "ecocardiograma",
+      "diagnostico de endocardite"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t9-ete-quando-ett-inadequado",
+    "statement": "Ecocardiograma transesofágico (ETE) é recomendado em casos suspeitos de EI quando imagens adequadas não podem ser obtidas com ETT.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 9",
+    "theme": "Endocardite",
+    "tags": [
+      "ecocardiograma transesofagico",
+      "diagnostico de endocardite"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t9-ete-valva-protetica-ou-dispositivo",
+    "statement": "ETE é recomendado em pacientes com suspeita de EI que tenham valva protética ou qualquer outro dispositivo implantado.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 9",
+    "theme": "Endocardite",
+    "tags": [
+      "ecocardiograma transesofagico",
+      "valva protetica",
+      "dispositivo cardiaco"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t9-ete-apesar-de-ett-negativo",
+    "statement": "ETE é recomendado em pacientes com suspeita clínica de EI apesar de resultado negativo no ETT.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 9",
+    "theme": "Endocardite",
+    "tags": [
+      "ecocardiograma transesofagico",
+      "diagnostico de endocardite"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t9-reexame-3-a-7-dias-se-persistir-suspeita",
+    "statement": "Reexame ecocardiográfico após 3-7 dias é recomendado em pacientes com suspeita clínica de EI apesar de resultado negativo no primeiro ETT/ETE.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 9",
+    "theme": "Endocardite",
+    "tags": [
+      "ecocardiograma",
+      "diagnostico de endocardite",
+      "reavaliacao"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t9-seguimento-apos-nova-complicacao",
+    "statement": "ETT/ETE de seguimento é recomendado após o surgimento de novas complicações.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 9",
+    "theme": "Endocardite",
+    "tags": [
+      "ecocardiograma",
+      "seguimento",
+      "complicacao"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t9-seguimento-para-efeito-terapeutico",
+    "statement": "Ecocardiografia de seguimento é recomendada para avaliar o efeito terapêutico na EI.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 9",
+    "theme": "Endocardite",
+    "tags": [
+      "ecocardiograma",
+      "seguimento terapeutico"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t9-ett-ao-final-do-tratamento",
+    "statement": "ETT é recomendado ao final do tratamento da EI.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 9",
+    "theme": "Endocardite",
+    "tags": [
+      "ecocardiograma",
+      "fim de tratamento"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t9-considerar-em-staph-aureus-enterococo-estreptococo",
+    "statement": "ETT/ETE devem ser considerados em pacientes com EI causada por Staphylococcus aureus, Enterococcus faecalis e bacteremia estreptocócica.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 9",
+    "theme": "Endocardite",
+    "tags": [
+      "ecocardiograma",
+      "staphylococcus aureus",
+      "enterococcus faecalis"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t9-ete-considerar-apos-ett-positivo",
+    "statement": "ETE deve ser considerado em pacientes com resultado positivo no ETT, exceto naqueles com EI restrita à valva cardíaca direita.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 9",
+    "theme": "Endocardite",
+    "tags": [
+      "ecocardiograma transesofagico",
+      "endocardite de camaras direitas"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t9-ett-seguimento-complicacao-assintomatica",
+    "statement": "ETT de seguimento deve ser considerado para avaliar o surgimento de complicações intracardíacas assintomáticas.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 9",
+    "theme": "Endocardite",
+    "tags": [
+      "ecocardiograma",
+      "seguimento",
+      "complicacao assintomatica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t10-tc-de-corpo-inteiro-sintomatico",
+    "statement": "TC de corpo inteiro é recomendada em pacientes sintomáticos com EI de valva nativa ou protética, para investigar embolismo e outros critérios diagnósticos menores.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 10",
+    "theme": "Endocardite",
+    "tags": [
+      "tomografia de corpo inteiro",
+      "embolia",
+      "criterios diagnosticos"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t10-fdg-pet-ct-quando-diagnostico-indefinido",
+    "statement": "18F-FDG PET/CT deve ser considerado quando há suspeita de EI, particularmente em pacientes com valvas protéticas ou dispositivos implantados, e o diagnóstico definitivo não pode ser estabelecido por outros métodos (sem cobertura pelo seguro de saúde japonês para esta indicação).",
+    "recommendation_class": "IIa",
+    "evidence_level": "A para EI de valva protética/CIED; C para EI de valva nativa",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 10",
+    "theme": "Endocardite",
+    "tags": [
+      "pet-ct",
+      "endocardite de protese",
+      "endocardite de dispositivo"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t10-cintilografia-leucocitos-marcados",
+    "statement": "Para pacientes com suspeita de EI cujo diagnóstico definitivo não pode ser obtido por outros métodos, cintilografia com leucócitos marcados ou SPECT/CT pode ser considerada, se disponível.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 10",
+    "theme": "Endocardite",
+    "tags": [
+      "cintilografia com leucocitos marcados",
+      "spect-ct"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t10-angiotc-coronaria-pre-operatoria",
+    "statement": "Em pacientes considerados candidatos cirúrgicos por EI, angiotomografia coronariana pode ser considerada como exame pré-operatório.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 10",
+    "theme": "Endocardite",
+    "tags": [
+      "angiotomografia coronariana",
+      "avaliacao pre-operatoria"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t10-cintilografia-com-galio",
+    "statement": "Em pacientes com suspeita de EI cujo diagnóstico definitivo não pode ser estabelecido por outros métodos, cintilografia com gálio pode ser considerada.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 10",
+    "theme": "Endocardite",
+    "tags": [
+      "cintilografia com galio"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t16-rm-de-cranio-sintomas-focais",
+    "statement": "Em pacientes com suspeita de EI apresentando sintomas neurológicos focais, RM de crânio é recomendada prontamente para avaliar complicações do sistema nervoso central.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 16",
+    "theme": "Endocardite",
+    "tags": [
+      "ressonancia magnetica",
+      "complicacao neurologica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t16-exame-vascular-cerebral-em-hemorragia",
+    "statement": "Em pacientes com suspeita de EI apresentando hemorragia cerebral ou subaracnóidea, exame vascular cerebral (angiografia cerebral, angioTC ou angioRM) é recomendado para investigar aneurismas infecciosos.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 16",
+    "theme": "Endocardite",
+    "tags": [
+      "aneurisma infeccioso",
+      "hemorragia intracraniana"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t16-rm-de-cranio-mesmo-assintomatico",
+    "statement": "Em pacientes com suspeita de EI, RM de crânio é recomendada para avaliar complicações do SNC mesmo na ausência de sintomas neurológicos focais.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 16",
+    "theme": "Endocardite",
+    "tags": [
+      "ressonancia magnetica",
+      "complicacao neurologica assintomatica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t16-tc-simples-quando-rm-indisponivel",
+    "statement": "Quando a RM não pode ser obtida em pacientes com suspeita de EI, ou quando a condição sistêmica do paciente é instável, TC simples de crânio pode ser considerada, podendo-se acrescentar angioTC 3D e TC contrastada de crânio se necessário.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 16",
+    "theme": "Endocardite",
+    "tags": [
+      "tomografia de cranio",
+      "instabilidade clinica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t16-sequencias-de-rm-especificas",
+    "statement": "Como sequências de RM para avaliação de complicações do SNC na EI, DWI, imagens FLAIR, T2*WI ou SWI, e angioRM podem ser consideradas.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 16",
+    "theme": "Endocardite",
+    "tags": [
+      "ressonancia magnetica",
+      "sequencias de rm"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t17-suspensao-de-antitrombotico-em-hemorragia-intracraniana",
+    "statement": "Suspensão imediata de terapia antiplaquetária e anticoagulante é recomendada se a EI for acompanhada de hemorragia intracraniana, exceto microssangramentos cerebrais.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 17",
+    "theme": "Endocardite",
+    "tags": [
+      "hemorragia intracraniana",
+      "antiplaquetario",
+      "anticoagulante"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t17-tratamento-de-aneurisma-infeccioso-roto-ou-em-expansao",
+    "statement": "Tratamento cirúrgico ou endovascular é recomendado para aneurisma infeccioso ROTO, aneurisma não roto GRANDE, ou aneurisma EM EXPANSÃO apesar de terapia antimicrobiana apropriada.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 17",
+    "theme": "Endocardite",
+    "tags": [
+      "aneurisma infeccioso",
+      "tratamento endovascular",
+      "tratamento cirurgico"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t17-tratamento-conservador-aneurisma-pequeno-estavel",
+    "statement": "Tratamento conservador é recomendado para pequenos aneurismas intracranianos infecciosos não rotos que não aumentam sob tratamento antibiótico apropriado.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 17",
+    "theme": "Endocardite",
+    "tags": [
+      "aneurisma infeccioso",
+      "tratamento conservador"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t17-trombectomia-em-oclusao-de-grande-vaso",
+    "statement": "Se a EI for complicada por infarto cerebral devido a oclusão de artéria de grande calibre, trombectomia pode ser considerada prontamente.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 17",
+    "theme": "Endocardite",
+    "tags": [
+      "trombectomia",
+      "infarto cerebral"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t17-antiplaquetario-novo-nao-recomendado-para-prevenir-embolia",
+    "statement": "Não é recomendado iniciar NOVA terapia antiplaquetária com o objetivo de prevenir embolismo em pacientes com EI.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 17",
+    "theme": "Endocardite",
+    "tags": [
+      "antiplaquetario",
+      "prevencao de embolia"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t17-trombolise-iv-nao-recomendada-em-infarto-cerebral-por-ei",
+    "statement": "Terapia trombolítica intravenosa NÃO é recomendada para infarto cerebral agudo associado à EI.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 17",
+    "theme": "Endocardite",
+    "tags": [
+      "trombolise",
+      "infarto cerebral agudo"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t17-anticoagulante-novo-nao-recomendado-para-prevenir-embolia",
+    "statement": "Não é recomendado iniciar NOVA terapia anticoagulante com o objetivo de prevenir embolismo em pacientes com EI.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 17",
+    "theme": "Endocardite",
+    "tags": [
+      "anticoagulante",
+      "prevencao de embolia"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t32-equipe-multidisciplinar-decisao-de-tratamento",
+    "statement": "É recomendado discutir as opções de tratamento, incluindo indicações cirúrgicas, na equipe multidisciplinar de EI (clínicos de cardiologia, doenças infecciosas e neurologia, cirurgiões de cirurgia cardiovascular e neurocirurgia).",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 32",
+    "theme": "Endocardite",
+    "tags": [
+      "equipe multidisciplinar",
+      "endocarditis team"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t35-timing-cirurgico-decidido-em-equipe",
+    "statement": "É recomendado que o momento da cirurgia em pacientes com EI e complicações cerebrais seja determinado pela equipe de EI.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 35",
+    "theme": "Endocardite",
+    "tags": [
+      "timing cirurgico",
+      "complicacao cerebral",
+      "equipe multidisciplinar"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t35-timing-apos-terapia-antimicrobiana-sem-outras-complicacoes",
+    "statement": "É recomendado considerar o momento da cirurgia após terapia antimicrobiana adequada em pacientes com complicações neurológicas sem insuficiência cardíaca, infecção não controlada, abscesso ou risco embólico.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 35",
+    "theme": "Endocardite",
+    "tags": [
+      "timing cirurgico",
+      "complicacao neurologica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t35-cirurgia-sem-atraso-em-infarto-cerebral-nao-hemorragico-leve",
+    "statement": "Quando a cirurgia precoce é indicada em pacientes com infarto cerebral NÃO hemorrágico sem achados neurológicos graves (ex.: coma, herniação cerebral), a cirurgia sem atraso é recomendada.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 35",
+    "theme": "Endocardite",
+    "tags": [
+      "infarto cerebral",
+      "cirurgia precoce"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t35-cirurgia-apos-estabilizacao-em-infarto-extenso",
+    "statement": "Quando a cirurgia precoce é indicada em pacientes com infarto cerebral extenso não hemorrágico sem previsão de mau prognóstico sistêmico, a cirurgia deve ser considerada após estabilização neurológica e terapia antimicrobiana.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 35",
+    "theme": "Endocardite",
+    "tags": [
+      "infarto cerebral extenso",
+      "cirurgia precoce"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t35-cirurgia-em-2-semanas-apos-hemorragia-estavel",
+    "statement": "Quando a cirurgia precoce é indicada em pacientes com hemorragia intracraniana, a cirurgia deve ser considerada dentro de 2 semanas após confirmação de estabilização neurológica e ausência de expansão do hematoma em exame de imagem.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 35",
+    "theme": "Endocardite",
+    "tags": [
+      "hemorragia intracraniana",
+      "cirurgia precoce"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t35-cirurgia-apos-4-semanas-se-hematoma-em-expansao",
+    "statement": "Quando a cirurgia precoce é indicada em pacientes com hemorragia intracraniana e evidência de expansão do hematoma, a cirurgia deve ser considerada após pelo menos 4 semanas de terapia antimicrobiana.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 35",
+    "theme": "Endocardite",
+    "tags": [
+      "hemorragia intracraniana",
+      "hematoma em expansao",
+      "cirurgia precoce"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t42-triagem-de-portador-nasal-de-mrsa",
+    "statement": "Triagem pré-operatória para portador nasal de MRSA é recomendada antes de cirurgia cardíaca eletiva ou implante transcateter de valva.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 42",
+    "theme": "Endocardite",
+    "tags": [
+      "mrsa",
+      "triagem pre-operatoria",
+      "prevencao de endocardite"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t42-medidas-assepticas-em-implante-de-cied",
+    "statement": "Medidas assépticas pré-procedimento ideais no sítio de implante são recomendadas para prevenir infecções de dispositivos cardíacos implantáveis (CIED).",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 42",
+    "theme": "Endocardite",
+    "tags": [
+      "cied",
+      "prevencao de infeccao",
+      "assepsia"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t42-assepsia-padrao-em-hemodinamica",
+    "statement": "Medidas assépticas cirúrgicas padrão são recomendadas durante a inserção e manipulação de cateteres na sala de hemodinâmica.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 42",
+    "theme": "Endocardite",
+    "tags": [
+      "assepsia",
+      "cateterismo cardiaco",
+      "prevencao de infeccao"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t42-tratar-foco-septico-2-semanas-antes-de-implante",
+    "statement": "O tratamento de potenciais focos de sepse (incluindo de origem dentária) deve ser concluído pelo menos 2 semanas antes do implante de valva protética ou outro material intracardíaco/intravascular estranho, exceto em procedimentos urgentes.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 42",
+    "theme": "Endocardite",
+    "tags": [
+      "foco septico",
+      "foco dentario",
+      "prevencao de endocardite"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t48-ete-ett-em-suspeita-de-cdrie",
+    "statement": "ETT/ETE é recomendado em caso de suspeita de endocardite infecciosa relacionada a dispositivo (CDRIE) para identificar vegetações.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 48",
+    "theme": "Endocardite",
+    "tags": [
+      "cdrie",
+      "ecocardiograma",
+      "infeccao de dispositivo"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t48-remocao-completa-do-sistema-em-cdrie",
+    "statement": "Para CDRIE, administração de agentes antimicrobianos e remoção pronta de TODO o sistema, incluindo o eletrodo, são recomendadas.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 48",
+    "theme": "Endocardite",
+    "tags": [
+      "cdrie",
+      "extracao de eletrodo",
+      "infeccao de dispositivo"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t48-antimicrobiano-cobrindo-mrsa-e-gram-negativo-apos-hemoculturas",
+    "statement": "Início de terapia antimicrobiana cobrindo MRSA e bactérias Gram-negativas é recomendado após pelo menos 3 conjuntos de hemoculturas terem sido obtidos, em CDRIE.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 48",
+    "theme": "Endocardite",
+    "tags": [
+      "cdrie",
+      "mrsa",
+      "hemocultura"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t48-reimplante-em-sitio-distante-apos-hemoculturas-negativas",
+    "statement": "Se reimplante de CIED é indicado após extração por CDRIE, é recomendado que o reimplante seja realizado em sítio distante do gerador anterior, o mais tardiamente possível, uma vez que sinais e sintomas de infecção tenham regredido, e não antes de hemoculturas negativas por pelo menos 72h na ausência de vegetações, ou por pelo menos 2 semanas se vegetações foram visualizadas.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 48",
+    "theme": "Endocardite",
+    "tags": [
+      "cdrie",
+      "reimplante de dispositivo"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t48-extracao-completa-mesmo-sem-envolvimento-definido-do-eletrodo",
+    "statement": "Extração completa do eletrodo deve ser considerada em caso de EI valvar, mesmo sem envolvimento definido do eletrodo, levando em conta o patógeno identificado e a necessidade de cirurgia valvar.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 48",
+    "theme": "Endocardite",
+    "tags": [
+      "cdrie",
+      "extracao de eletrodo",
+      "endocardite valvar"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t48-remocao-completa-em-bacteremia-ou-fungemia-persistente",
+    "statement": "Em casos de possível CDRIE com bacteremia Gram-positiva não controlada ou fungemia, remoção completa do sistema deve ser considerada se a bacteremia/fungemia persistir após um curso de terapia antimicrobiana.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 48",
+    "theme": "Endocardite",
+    "tags": [
+      "cdrie",
+      "bacteremia persistente",
+      "fungemia"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t48-extensao-do-antibiotico-para-4-a-6-semanas",
+    "statement": "Extensão do tratamento antibiótico para CDRIE para 4-6 semanas após a extração do dispositivo deve ser considerada na presença de êmbolos sépticos ou valvas protéticas.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 48",
+    "theme": "Endocardite",
+    "tags": [
+      "cdrie",
+      "duracao de antibiotico",
+      "embolia septica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t50-terapia-antimicrobiana-inicial-e-observacao",
+    "statement": "Para EI de câmaras direitas, é recomendado iniciar terapia antimicrobiana apropriada e observar a resposta à terapia.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 50",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite de camaras direitas",
+      "terapia antimicrobiana"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t50-cirurgia-em-insuficiencia-respiratoria-por-embolia-pulmonar-recorrente",
+    "statement": "Cirurgia é recomendada em EI de câmaras direitas com vegetação persistente e insuficiência respiratória exigindo suporte ventilatório após embolias pulmonares sépticas recorrentes.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 50",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite de camaras direitas",
+      "embolia pulmonar septica",
+      "cirurgia"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t50-cirurgia-em-envolvimento-simultaneo-de-camaras-esquerdas",
+    "statement": "Cirurgia é recomendada em EI de câmaras direitas com envolvimento simultâneo de estruturas do coração esquerdo.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 50",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite de camaras direitas",
+      "endocardite biventricular",
+      "cirurgia"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t50-cirurgia-em-ic-direita-por-regurgitacao-tricuspide-refrataria",
+    "statement": "Cirurgia é recomendada para insuficiência cardíaca direita secundária a regurgitação tricúspide grave AGUDA não responsiva a diuréticos, em EI de câmaras direitas.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 50",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite de camaras direitas",
+      "regurgitacao tricuspide",
+      "cirurgia"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t50-cirurgia-considerar-vegetacao-residual-20mm",
+    "statement": "Cirurgia deve ser considerada em EI de câmaras direitas com grandes vegetações tricúspides residuais (≥20 mm) após embolias pulmonares sépticas recorrentes.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 50",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite de camaras direitas",
+      "vegetacao tricuspide",
+      "cirurgia"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t50-cirurgia-considerar-bacteremia-persistente-1-semana",
+    "statement": "Cirurgia deve ser considerada em EI de câmaras direitas sob terapia antimicrobiana apropriada com bacteremia/sepse persistente após pelo menos 1 semana de tratamento.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 50",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite de camaras direitas",
+      "bacteremia persistente",
+      "cirurgia"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t50-reparo-preferivel-a-substituicao-tricuspide",
+    "statement": "Reparo da valva tricúspide deve ser considerado em vez de substituição valvar, quando possível, na EI de câmaras direitas.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 50",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite de camaras direitas",
+      "reparo valvar",
+      "valva tricuspide"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t50-eletrodo-epicardico-profilatico-em-cirurgia-tricuspide",
+    "statement": "Posicionamento profilático de eletrodo de marca-passo epicárdico pode ser considerado no momento de procedimentos cirúrgicos da valva tricúspide, em EI de câmaras direitas.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 50",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite de camaras direitas",
+      "marca-passo epicardico",
+      "valva tricuspide"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "nms-ped2024-hutt-indicacao-para-confirmar-nms-suspeita",
+    "statement": "O teste de inclinação (HUTT) é recomendado para confirmar clinicamente síncope neuromediada (NMS) suspeita, quando não diagnosticável por outros meios. Protocolo: fase basal (BHUT) em supino 10-30 min com FC/PA/ECG monitorados, seguida de inclinação a 60° por até 45 minutos ou até resposta positiva.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "Chinese Pediatric Cardiology Society",
+    "year": 2024,
+    "guideline_title": "Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024)",
+    "reference": "Wang C, Liao Y, Wang S, Tian H, Huang M, Dong XY, Shi L, Li YQ, Sun JH, Du JB, Jin HF; Chinese Pediatric Cardiology Society, et al. Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024). World J Pediatr. 2024;20(10):983-1002. Epub 2024 Aug 7. DOI: 10.1007/s12519-024-00819-w. PMID: 39110332. PMCID: PMC11502568. Acesso aberto, texto integral conferido diretamente (HTML bruto baixado e lido linha a linha) nesta sessão em 01/08/2026, para resolver divergência entre duas extrações automatizadas — os cortes etários de VVS abaixo foram conferidos contra o texto verbatim do artigo. Diretriz de sociedade pediátrica CHINESA (não brasileira/ocidental) — mencionar essa procedência ao citar. Contexto: protocolo do HUTT e indicação de confirmação diagnóstica",
+    "theme": "Síncope",
+    "tags": [
+      "hutt",
+      "teste de inclinacao",
+      "sincope pediatrica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "nms-ped2024-hutt-diferencial-com-pseudossincope",
+    "statement": "O teste de inclinação (HUTT) é indicado para diagnóstico diferencial entre síncope neuromediada e pseudossíncope psicogênica.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "Chinese Pediatric Cardiology Society",
+    "year": 2024,
+    "guideline_title": "Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024)",
+    "reference": "Wang C, Liao Y, Wang S, Tian H, Huang M, Dong XY, Shi L, Li YQ, Sun JH, Du JB, Jin HF; Chinese Pediatric Cardiology Society, et al. Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024). World J Pediatr. 2024;20(10):983-1002. Epub 2024 Aug 7. DOI: 10.1007/s12519-024-00819-w. PMID: 39110332. PMCID: PMC11502568. Acesso aberto, texto integral conferido diretamente (HTML bruto baixado e lido linha a linha) nesta sessão em 01/08/2026, para resolver divergência entre duas extrações automatizadas — os cortes etários de VVS abaixo foram conferidos contra o texto verbatim do artigo. Diretriz de sociedade pediátrica CHINESA (não brasileira/ocidental) — mencionar essa procedência ao citar. Contexto: HUTT no diferencial com pseudossíncope",
+    "theme": "Síncope",
+    "tags": [
+      "hutt",
+      "pseudossincope",
+      "sincope pediatrica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "nms-ped2024-hutt-seguranca-quando-protocolo-padrao",
+    "statement": "O teste de inclinação é seguro quando realizado por protocolo padronizado em população pediátrica.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "Chinese Pediatric Cardiology Society",
+    "year": 2024,
+    "guideline_title": "Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024)",
+    "reference": "Wang C, Liao Y, Wang S, Tian H, Huang M, Dong XY, Shi L, Li YQ, Sun JH, Du JB, Jin HF; Chinese Pediatric Cardiology Society, et al. Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024). World J Pediatr. 2024;20(10):983-1002. Epub 2024 Aug 7. DOI: 10.1007/s12519-024-00819-w. PMID: 39110332. PMCID: PMC11502568. Acesso aberto, texto integral conferido diretamente (HTML bruto baixado e lido linha a linha) nesta sessão em 01/08/2026, para resolver divergência entre duas extrações automatizadas — os cortes etários de VVS abaixo foram conferidos contra o texto verbatim do artigo. Diretriz de sociedade pediátrica CHINESA (não brasileira/ocidental) — mencionar essa procedência ao citar. Contexto: segurança do HUTT em protocolo padrão",
+    "theme": "Síncope",
+    "tags": [
+      "hutt",
+      "seguranca do exame"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "nms-ped2024-snhut-nitroglicerina-se-bhut-negativo",
+    "statement": "Se a fase basal do teste de inclinação (BHUT) for negativa, é sugerido prosseguir para SNHUT (teste potencializado por nitroglicerina sublingual): mesma posição por mais 20 minutos após nitroglicerina sublingual na dose de 4-6 μg/kg (máximo ≤300 μg), com FC/PA/ECG registrados continuamente.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "Chinese Pediatric Cardiology Society",
+    "year": 2024,
+    "guideline_title": "Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024)",
+    "reference": "Wang C, Liao Y, Wang S, Tian H, Huang M, Dong XY, Shi L, Li YQ, Sun JH, Du JB, Jin HF; Chinese Pediatric Cardiology Society, et al. Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024). World J Pediatr. 2024;20(10):983-1002. Epub 2024 Aug 7. DOI: 10.1007/s12519-024-00819-w. PMID: 39110332. PMCID: PMC11502568. Acesso aberto, texto integral conferido diretamente (HTML bruto baixado e lido linha a linha) nesta sessão em 01/08/2026, para resolver divergência entre duas extrações automatizadas — os cortes etários de VVS abaixo foram conferidos contra o texto verbatim do artigo. Diretriz de sociedade pediátrica CHINESA (não brasileira/ocidental) — mencionar essa procedência ao citar. Contexto: protocolo do SNHUT (nitroglicerina sublingual)",
+    "theme": "Síncope",
+    "tags": [
+      "hutt",
+      "snhut",
+      "nitroglicerina",
+      "sincope pediatrica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "nms-ped2024-teste-de-sentar-ativo-triagem",
+    "statement": "O teste de sentar ativo pode ser usado como triagem preliminar de etiologia básica de síncope/intolerância ortostática em crianças e adolescentes.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "Chinese Pediatric Cardiology Society",
+    "year": 2024,
+    "guideline_title": "Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024)",
+    "reference": "Wang C, Liao Y, Wang S, Tian H, Huang M, Dong XY, Shi L, Li YQ, Sun JH, Du JB, Jin HF; Chinese Pediatric Cardiology Society, et al. Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024). World J Pediatr. 2024;20(10):983-1002. Epub 2024 Aug 7. DOI: 10.1007/s12519-024-00819-w. PMID: 39110332. PMCID: PMC11502568. Acesso aberto, texto integral conferido diretamente (HTML bruto baixado e lido linha a linha) nesta sessão em 01/08/2026, para resolver divergência entre duas extrações automatizadas — os cortes etários de VVS abaixo foram conferidos contra o texto verbatim do artigo. Diretriz de sociedade pediátrica CHINESA (não brasileira/ocidental) — mencionar essa procedência ao citar. Contexto: teste de sentar ativo",
+    "theme": "Síncope",
+    "tags": [
+      "teste de sentar ativo",
+      "sincope pediatrica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "nms-ped2024-teste-ortostatismo-ativo-triagem",
+    "statement": "O teste de ortostatismo ativo é indicado para triagem de intolerância ortostática, na ausência de contraindicação absoluta.",
+    "recommendation_class": "IIa",
+    "evidence_level": "A",
+    "society": "Chinese Pediatric Cardiology Society",
+    "year": 2024,
+    "guideline_title": "Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024)",
+    "reference": "Wang C, Liao Y, Wang S, Tian H, Huang M, Dong XY, Shi L, Li YQ, Sun JH, Du JB, Jin HF; Chinese Pediatric Cardiology Society, et al. Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024). World J Pediatr. 2024;20(10):983-1002. Epub 2024 Aug 7. DOI: 10.1007/s12519-024-00819-w. PMID: 39110332. PMCID: PMC11502568. Acesso aberto, texto integral conferido diretamente (HTML bruto baixado e lido linha a linha) nesta sessão em 01/08/2026, para resolver divergência entre duas extrações automatizadas — os cortes etários de VVS abaixo foram conferidos contra o texto verbatim do artigo. Diretriz de sociedade pediátrica CHINESA (não brasileira/ocidental) — mencionar essa procedência ao citar. Contexto: teste de ortostatismo ativo",
+    "theme": "Síncope",
+    "tags": [
+      "teste ortostatico ativo",
+      "sincope pediatrica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "nms-ped2024-pots-criterio-diagnostico-por-idade",
+    "statement": "Critério de positividade para POTS (síndrome de taquicardia postural), durante o ortostatismo ativo ou nos primeiros 10 minutos do HUTT: incremento de frequência cardíaca ≥40 bpm OU FC máxima em pé ≥130 bpm em crianças de 6 a 12 anos; FC máxima em pé ≥125 bpm em adolescentes de 12 a <18 anos. Toda resposta positiva exige excluir queda significativa de pressão arterial (PAS não cai >20 mmHg e/ou PAD não cai >10 mmHg) — senão o quadro é síncope vasovagal, não POTS. Texto verbatim conferido: \"a positive response for POTS is defined as a HR increase of ≥40 bpm or a maximum upright HR ≥130 bpm (in children aged 6 to 12 years old) or ≥125 bpm (in adolescents over 12 years older but under 18)\".",
+    "recommendation_class": "IIa",
+    "evidence_level": "A",
+    "society": "Chinese Pediatric Cardiology Society",
+    "year": 2024,
+    "guideline_title": "Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024)",
+    "reference": "Wang C, Liao Y, Wang S, Tian H, Huang M, Dong XY, Shi L, Li YQ, Sun JH, Du JB, Jin HF; Chinese Pediatric Cardiology Society, et al. Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024). World J Pediatr. 2024;20(10):983-1002. Epub 2024 Aug 7. DOI: 10.1007/s12519-024-00819-w. PMID: 39110332. PMCID: PMC11502568. Acesso aberto, texto integral conferido diretamente (HTML bruto baixado e lido linha a linha) nesta sessão em 01/08/2026, para resolver divergência entre duas extrações automatizadas — os cortes etários de VVS abaixo foram conferidos contra o texto verbatim do artigo. Diretriz de sociedade pediátrica CHINESA (não brasileira/ocidental) — mencionar essa procedência ao citar. Contexto: critérios de positividade para POTS por faixa etária",
+    "theme": "Síncope",
+    "tags": [
+      "pots",
+      "criterio diagnostico",
+      "sincope pediatrica",
+      "taquicardia postural"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "nms-ped2024-pots-diagnostico-completo-quatro-criterios",
+    "statement": "O diagnóstico de POTS exige: (1) duração >1 mês, geralmente associada a fatores desencadeantes semelhantes aos da síncope vasovagal, com fatores de risco descritos — FC basal supina elevada (aumento de 10 bpm no supino eleva o risco de POTS em 1,58x), ingesta hídrica <800 mL/dia (risco 3,88x) e sono <8h/dia (risco 5,91x); (2) sintomas de intolerância ortostática (tontura, cefaleia, fadiga, visão turva, aperto torácico, palpitações, tremor de mãos, intolerância a movimento, podendo chegar a síncope); (3) resultado positivo em HUTT ou teste de ortostatismo ativo; (4) exclusão de outras doenças causadoras de sintomas semelhantes.",
+    "recommendation_class": "IIa",
+    "evidence_level": "A",
+    "society": "Chinese Pediatric Cardiology Society",
+    "year": 2024,
+    "guideline_title": "Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024)",
+    "reference": "Wang C, Liao Y, Wang S, Tian H, Huang M, Dong XY, Shi L, Li YQ, Sun JH, Du JB, Jin HF; Chinese Pediatric Cardiology Society, et al. Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024). World J Pediatr. 2024;20(10):983-1002. Epub 2024 Aug 7. DOI: 10.1007/s12519-024-00819-w. PMID: 39110332. PMCID: PMC11502568. Acesso aberto, texto integral conferido diretamente (HTML bruto baixado e lido linha a linha) nesta sessão em 01/08/2026, para resolver divergência entre duas extrações automatizadas — os cortes etários de VVS abaixo foram conferidos contra o texto verbatim do artigo. Diretriz de sociedade pediátrica CHINESA (não brasileira/ocidental) — mencionar essa procedência ao citar. Contexto: critérios diagnósticos completos de POTS (4 componentes)",
+    "theme": "Síncope",
+    "tags": [
+      "pots",
+      "criterio diagnostico",
+      "fatores de risco",
+      "sincope pediatrica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "nms-ped2024-vvs-criterios-hemodinamicos-e-cortes-por-idade",
+    "statement": "Critérios de positividade para síncope vasovagal (VVS) no HUTT, junto com síncope ou pré-síncope: (1) PA sistólica ≤80 mmHg OU PA diastólica ≤50 mmHg, ou queda da pressão média ≥25%; (2) FC <75 bpm em crianças de 4-6 anos, <65 bpm em crianças >6-8 anos, e <60 bpm em crianças/adolescentes >8 anos; (3) ECG com pausa sinusal ou ritmo de escape juncional; (4) bloqueio atrioventricular (grau II ou III) ou parada cardíaca ≥3 segundos. Classifica-se em VVS vasoinibitória (VVS-VI, queda de PA sem queda importante de FC), cardioinibitória (VVS-CI, queda de FC sem queda importante de PA) ou mista (VVS-M, queda de ambas). Texto verbatim conferido diretamente no PMC (não apenas por resumo automatizado, para resolver divergência entre duas extrações prévias): \"HR <75 bpm for children aged 4 to 6 years, <65 bpm for children aged >6 to 8 years, and <60 bpm for children and adolescents >8 years\".",
+    "recommendation_class": "IIa",
+    "evidence_level": "A",
+    "society": "Chinese Pediatric Cardiology Society",
+    "year": 2024,
+    "guideline_title": "Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024)",
+    "reference": "Wang C, Liao Y, Wang S, Tian H, Huang M, Dong XY, Shi L, Li YQ, Sun JH, Du JB, Jin HF; Chinese Pediatric Cardiology Society, et al. Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024). World J Pediatr. 2024;20(10):983-1002. Epub 2024 Aug 7. DOI: 10.1007/s12519-024-00819-w. PMID: 39110332. PMCID: PMC11502568. Acesso aberto, texto integral conferido diretamente (HTML bruto baixado e lido linha a linha) nesta sessão em 01/08/2026, para resolver divergência entre duas extrações automatizadas — os cortes etários de VVS abaixo foram conferidos contra o texto verbatim do artigo. Diretriz de sociedade pediátrica CHINESA (não brasileira/ocidental) — mencionar essa procedência ao citar. Contexto: critérios hemodinâmicos de síncope vasovagal e cortes de FC por idade",
+    "theme": "Síncope",
+    "tags": [
+      "sincope vasovagal",
+      "criterio diagnostico",
+      "hutt",
+      "sincope pediatrica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "nms-ped2024-vvs-maligna-parada-maior-que-3-segundos",
+    "statement": "Síncope vasovagal maligna é caracterizada por parada cardíaca com duração maior que 3 segundos durante um episódio de síncope espontâneo ou durante o teste de inclinação.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "Chinese Pediatric Cardiology Society",
+    "year": 2024,
+    "guideline_title": "Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024)",
+    "reference": "Wang C, Liao Y, Wang S, Tian H, Huang M, Dong XY, Shi L, Li YQ, Sun JH, Du JB, Jin HF; Chinese Pediatric Cardiology Society, et al. Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024). World J Pediatr. 2024;20(10):983-1002. Epub 2024 Aug 7. DOI: 10.1007/s12519-024-00819-w. PMID: 39110332. PMCID: PMC11502568. Acesso aberto, texto integral conferido diretamente (HTML bruto baixado e lido linha a linha) nesta sessão em 01/08/2026, para resolver divergência entre duas extrações automatizadas — os cortes etários de VVS abaixo foram conferidos contra o texto verbatim do artigo. Diretriz de sociedade pediátrica CHINESA (não brasileira/ocidental) — mencionar essa procedência ao citar. Contexto: definição de síncope vasovagal maligna",
+    "theme": "Síncope",
+    "tags": [
+      "sincope vasovagal maligna",
+      "sincope pediatrica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "nms-ped2024-manejo-nao-farmacologico-educacao-e-contrapressao",
+    "statement": "Educação sobre reconhecimento de gatilhos e manobras físicas de contrapressão são recomendadas como primeira linha no manejo da síncope neuromediada em crianças e adolescentes.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "Chinese Pediatric Cardiology Society",
+    "year": 2024,
+    "guideline_title": "Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024)",
+    "reference": "Wang C, Liao Y, Wang S, Tian H, Huang M, Dong XY, Shi L, Li YQ, Sun JH, Du JB, Jin HF; Chinese Pediatric Cardiology Society, et al. Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024). World J Pediatr. 2024;20(10):983-1002. Epub 2024 Aug 7. DOI: 10.1007/s12519-024-00819-w. PMID: 39110332. PMCID: PMC11502568. Acesso aberto, texto integral conferido diretamente (HTML bruto baixado e lido linha a linha) nesta sessão em 01/08/2026, para resolver divergência entre duas extrações automatizadas — os cortes etários de VVS abaixo foram conferidos contra o texto verbatim do artigo. Diretriz de sociedade pediátrica CHINESA (não brasileira/ocidental) — mencionar essa procedência ao citar. Contexto: educação e manobras de contrapressão física",
+    "theme": "Síncope",
+    "tags": [
+      "manejo nao farmacologico",
+      "manobras de contrapressao",
+      "sincope pediatrica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "nms-ped2024-treinamento-postural-progressivo",
+    "statement": "Treinamento postural (tilt training) é recomendado, iniciando em 5 minutos por sessão, 2x/dia, com progressão até 30 minutos por sessão.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "Chinese Pediatric Cardiology Society",
+    "year": 2024,
+    "guideline_title": "Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024)",
+    "reference": "Wang C, Liao Y, Wang S, Tian H, Huang M, Dong XY, Shi L, Li YQ, Sun JH, Du JB, Jin HF; Chinese Pediatric Cardiology Society, et al. Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024). World J Pediatr. 2024;20(10):983-1002. Epub 2024 Aug 7. DOI: 10.1007/s12519-024-00819-w. PMID: 39110332. PMCID: PMC11502568. Acesso aberto, texto integral conferido diretamente (HTML bruto baixado e lido linha a linha) nesta sessão em 01/08/2026, para resolver divergência entre duas extrações automatizadas — os cortes etários de VVS abaixo foram conferidos contra o texto verbatim do artigo. Diretriz de sociedade pediátrica CHINESA (não brasileira/ocidental) — mencionar essa procedência ao citar. Contexto: treinamento postural progressivo",
+    "theme": "Síncope",
+    "tags": [
+      "treinamento postural",
+      "tilt training",
+      "sincope pediatrica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "nms-ped2024-fricção-com-toalha-seca-dry-towel-wiping",
+    "statement": "A fricção com toalha seca (\"dry towel wiping\"), 5 minutos por segmento corporal, 2x/dia, é recomendada como medida não farmacológica no manejo da síncope neuromediada pediátrica.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "Chinese Pediatric Cardiology Society",
+    "year": 2024,
+    "guideline_title": "Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024)",
+    "reference": "Wang C, Liao Y, Wang S, Tian H, Huang M, Dong XY, Shi L, Li YQ, Sun JH, Du JB, Jin HF; Chinese Pediatric Cardiology Society, et al. Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024). World J Pediatr. 2024;20(10):983-1002. Epub 2024 Aug 7. DOI: 10.1007/s12519-024-00819-w. PMID: 39110332. PMCID: PMC11502568. Acesso aberto, texto integral conferido diretamente (HTML bruto baixado e lido linha a linha) nesta sessão em 01/08/2026, para resolver divergência entre duas extrações automatizadas — os cortes etários de VVS abaixo foram conferidos contra o texto verbatim do artigo. Diretriz de sociedade pediátrica CHINESA (não brasileira/ocidental) — mencionar essa procedência ao citar. Contexto: fricção com toalha seca como treinamento autonômico",
+    "theme": "Síncope",
+    "tags": [
+      "dry towel wiping",
+      "sincope pediatrica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "nms-ped2024-hidratacao-oral-30-a-50-mlkgdia",
+    "statement": "Ingesta hídrica de 30-50 mL/kg/dia (máximo 1.500-1.700 mL) é recomendada no manejo não farmacológico.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "Chinese Pediatric Cardiology Society",
+    "year": 2024,
+    "guideline_title": "Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024)",
+    "reference": "Wang C, Liao Y, Wang S, Tian H, Huang M, Dong XY, Shi L, Li YQ, Sun JH, Du JB, Jin HF; Chinese Pediatric Cardiology Society, et al. Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024). World J Pediatr. 2024;20(10):983-1002. Epub 2024 Aug 7. DOI: 10.1007/s12519-024-00819-w. PMID: 39110332. PMCID: PMC11502568. Acesso aberto, texto integral conferido diretamente (HTML bruto baixado e lido linha a linha) nesta sessão em 01/08/2026, para resolver divergência entre duas extrações automatizadas — os cortes etários de VVS abaixo foram conferidos contra o texto verbatim do artigo. Diretriz de sociedade pediátrica CHINESA (não brasileira/ocidental) — mencionar essa procedência ao citar. Contexto: ingesta hídrica recomendada",
+    "theme": "Síncope",
+    "tags": [
+      "hidratacao oral",
+      "manejo nao farmacologico",
+      "sincope pediatrica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "nms-ped2024-indicacao-de-farmacoterapia",
+    "statement": "Farmacoterapia é indicada quando há síncope recorrente (mais de 2 episódios em 6 meses ou mais de 3 por ano), risco de lesão, e resposta insuficiente ao manejo não farmacológico.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "Chinese Pediatric Cardiology Society",
+    "year": 2024,
+    "guideline_title": "Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024)",
+    "reference": "Wang C, Liao Y, Wang S, Tian H, Huang M, Dong XY, Shi L, Li YQ, Sun JH, Du JB, Jin HF; Chinese Pediatric Cardiology Society, et al. Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024). World J Pediatr. 2024;20(10):983-1002. Epub 2024 Aug 7. DOI: 10.1007/s12519-024-00819-w. PMID: 39110332. PMCID: PMC11502568. Acesso aberto, texto integral conferido diretamente (HTML bruto baixado e lido linha a linha) nesta sessão em 01/08/2026, para resolver divergência entre duas extrações automatizadas — os cortes etários de VVS abaixo foram conferidos contra o texto verbatim do artigo. Diretriz de sociedade pediátrica CHINESA (não brasileira/ocidental) — mencionar essa procedência ao citar. Contexto: critério para iniciar farmacoterapia",
+    "theme": "Síncope",
+    "tags": [
+      "farmacoterapia",
+      "sincope recorrente",
+      "sincope pediatrica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "nms-ped2024-midodrina-posologia-vvs-e-pots",
+    "statement": "Midodrina pode ser recomendada para síncope vasovagal e POTS: dose inicial 1,25-2,5 mg 1-2x/dia, podendo aumentar para 2,5 mg 3x/dia após 2-4 semanas. Monitorar PA supina; reduzir/suspender se PA subir acima do percentil 95. Contraindicada se PA basal já acima do percentil 95 ou em alergia ao fármaco.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "Chinese Pediatric Cardiology Society",
+    "year": 2024,
+    "guideline_title": "Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024)",
+    "reference": "Wang C, Liao Y, Wang S, Tian H, Huang M, Dong XY, Shi L, Li YQ, Sun JH, Du JB, Jin HF; Chinese Pediatric Cardiology Society, et al. Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024). World J Pediatr. 2024;20(10):983-1002. Epub 2024 Aug 7. DOI: 10.1007/s12519-024-00819-w. PMID: 39110332. PMCID: PMC11502568. Acesso aberto, texto integral conferido diretamente (HTML bruto baixado e lido linha a linha) nesta sessão em 01/08/2026, para resolver divergência entre duas extrações automatizadas — os cortes etários de VVS abaixo foram conferidos contra o texto verbatim do artigo. Diretriz de sociedade pediátrica CHINESA (não brasileira/ocidental) — mencionar essa procedência ao citar. Contexto: posologia de midodrina",
+    "theme": "Síncope",
+    "tags": [
+      "midodrina",
+      "sincope vasovagal",
+      "pots",
+      "sincope pediatrica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "nms-ped2024-metoprolol-posologia-em-vvs",
+    "statement": "Metoprolol pode ser recomendado na síncope vasovagal: 0,5 mg/kg/dia VO 2x/dia, até no máximo 2 mg/kg/dia ou a dose máxima do adulto. Contraindicado em bradicardia sinusal significativa, bloqueio AV de 2º/3º grau e asma brônquica.",
+    "recommendation_class": "IIa",
+    "evidence_level": "A",
+    "society": "Chinese Pediatric Cardiology Society",
+    "year": 2024,
+    "guideline_title": "Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024)",
+    "reference": "Wang C, Liao Y, Wang S, Tian H, Huang M, Dong XY, Shi L, Li YQ, Sun JH, Du JB, Jin HF; Chinese Pediatric Cardiology Society, et al. Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024). World J Pediatr. 2024;20(10):983-1002. Epub 2024 Aug 7. DOI: 10.1007/s12519-024-00819-w. PMID: 39110332. PMCID: PMC11502568. Acesso aberto, texto integral conferido diretamente (HTML bruto baixado e lido linha a linha) nesta sessão em 01/08/2026, para resolver divergência entre duas extrações automatizadas — os cortes etários de VVS abaixo foram conferidos contra o texto verbatim do artigo. Diretriz de sociedade pediátrica CHINESA (não brasileira/ocidental) — mencionar essa procedência ao citar. Contexto: posologia de metoprolol na síncope vasovagal",
+    "theme": "Síncope",
+    "tags": [
+      "metoprolol",
+      "sincope vasovagal",
+      "sincope pediatrica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "nms-ped2024-fludrocortisona-e-sertralina-em-vvs-refrataria",
+    "statement": "Fludrocortisona pode reduzir a probabilidade de eventos de síncope vasovagal. Sertralina tem experiência limitada em crianças/adolescentes com VVS e pode ser considerada quando outros fármacos são ineficazes, com monitorização cuidadosa de efeitos colaterais.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "Chinese Pediatric Cardiology Society",
+    "year": 2024,
+    "guideline_title": "Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024)",
+    "reference": "Wang C, Liao Y, Wang S, Tian H, Huang M, Dong XY, Shi L, Li YQ, Sun JH, Du JB, Jin HF; Chinese Pediatric Cardiology Society, et al. Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024). World J Pediatr. 2024;20(10):983-1002. Epub 2024 Aug 7. DOI: 10.1007/s12519-024-00819-w. PMID: 39110332. PMCID: PMC11502568. Acesso aberto, texto integral conferido diretamente (HTML bruto baixado e lido linha a linha) nesta sessão em 01/08/2026, para resolver divergência entre duas extrações automatizadas — os cortes etários de VVS abaixo foram conferidos contra o texto verbatim do artigo. Diretriz de sociedade pediátrica CHINESA (não brasileira/ocidental) — mencionar essa procedência ao citar. Contexto: fludrocortisona e sertralina na síncope vasovagal refratária",
+    "theme": "Síncope",
+    "tags": [
+      "fludrocortisona",
+      "sertralina",
+      "sincope vasovagal",
+      "sincope pediatrica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "nms-ped2024-marca-passo-em-pausa-maior-que-4-segundos-ou-pos-rcp",
+    "statement": "Marca-passo pode ser considerado em síncope recorrente com pausa cardíaca maior que 4 segundos documentada ou em sobreviventes de reanimação cardiopulmonar, com recomendação de especialista pediátrico em eletrofisiologia.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "Chinese Pediatric Cardiology Society",
+    "year": 2024,
+    "guideline_title": "Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024)",
+    "reference": "Wang C, Liao Y, Wang S, Tian H, Huang M, Dong XY, Shi L, Li YQ, Sun JH, Du JB, Jin HF; Chinese Pediatric Cardiology Society, et al. Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024). World J Pediatr. 2024;20(10):983-1002. Epub 2024 Aug 7. DOI: 10.1007/s12519-024-00819-w. PMID: 39110332. PMCID: PMC11502568. Acesso aberto, texto integral conferido diretamente (HTML bruto baixado e lido linha a linha) nesta sessão em 01/08/2026, para resolver divergência entre duas extrações automatizadas — os cortes etários de VVS abaixo foram conferidos contra o texto verbatim do artigo. Diretriz de sociedade pediátrica CHINESA (não brasileira/ocidental) — mencionar essa procedência ao citar. Contexto: indicação de marca-passo na síncope neuromediada pediátrica",
+    "theme": "Síncope",
+    "tags": [
+      "marca-passo",
+      "pausa cardiaca",
+      "sincope pediatrica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "nms-ped2024-pots-manejo-nao-farmacologico",
+    "statement": "No manejo não farmacológico do POTS: roupas de compressão são recomendadas; sono ≥8h/dia e exercício aeróbico 1-2h/dia por ≥5 dias/semana devem ser considerados; aumento de sal e água, e correção de deficiência de ferro/vitaminas devem ser considerados.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "Chinese Pediatric Cardiology Society",
+    "year": 2024,
+    "guideline_title": "Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024)",
+    "reference": "Wang C, Liao Y, Wang S, Tian H, Huang M, Dong XY, Shi L, Li YQ, Sun JH, Du JB, Jin HF; Chinese Pediatric Cardiology Society, et al. Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024). World J Pediatr. 2024;20(10):983-1002. Epub 2024 Aug 7. DOI: 10.1007/s12519-024-00819-w. PMID: 39110332. PMCID: PMC11502568. Acesso aberto, texto integral conferido diretamente (HTML bruto baixado e lido linha a linha) nesta sessão em 01/08/2026, para resolver divergência entre duas extrações automatizadas — os cortes etários de VVS abaixo foram conferidos contra o texto verbatim do artigo. Diretriz de sociedade pediátrica CHINESA (não brasileira/ocidental) — mencionar essa procedência ao citar. Contexto: medidas não farmacológicas no POTS pediátrico",
+    "theme": "Síncope",
+    "tags": [
+      "pots",
+      "manejo nao farmacologico",
+      "sincope pediatrica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "nms-ped2024-pots-manejo-farmacologico-solucao-salina-e-midodrina",
+    "statement": "No manejo farmacológico do POTS: solução salina intravenosa pode aliviar sintomas; midodrina é geralmente mais eficaz que metoprolol ou reidratação oral (ORS) no controle do POTS pediátrico.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "Chinese Pediatric Cardiology Society",
+    "year": 2024,
+    "guideline_title": "Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024)",
+    "reference": "Wang C, Liao Y, Wang S, Tian H, Huang M, Dong XY, Shi L, Li YQ, Sun JH, Du JB, Jin HF; Chinese Pediatric Cardiology Society, et al. Guidelines for the diagnosis and treatment of neurally mediated syncope in children and adolescents (revised 2024). World J Pediatr. 2024;20(10):983-1002. Epub 2024 Aug 7. DOI: 10.1007/s12519-024-00819-w. PMID: 39110332. PMCID: PMC11502568. Acesso aberto, texto integral conferido diretamente (HTML bruto baixado e lido linha a linha) nesta sessão em 01/08/2026, para resolver divergência entre duas extrações automatizadas — os cortes etários de VVS abaixo foram conferidos contra o texto verbatim do artigo. Diretriz de sociedade pediátrica CHINESA (não brasileira/ocidental) — mencionar essa procedência ao citar. Contexto: solução salina IV no POTS pediátrico",
+    "theme": "Síncope",
+    "tags": [
+      "pots",
+      "solucao salina",
+      "midodrina",
+      "sincope pediatrica"
+    ],
+    "review_status": "revisado"
   }
 ]
