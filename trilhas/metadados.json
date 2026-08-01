@@ -2356,5 +2356,165 @@
         "por_que": "Fecha com o degrau terapêutico mais recente para quem já falhou colchicina e corticoide na doença recorrente."
       }
     ]
+  },
+  {
+    "slug": "trilha-endocardite-situacoes-especiais",
+    "titulo": "Endocardite: situações especiais — dispositivo, câmaras direitas, hemocultura negativa e NBTE",
+    "tema": "Endocardite",
+    "objetivo": "Sair sabendo aplicar os critérios Duke-ISCVID 2023 à endocardite de dispositivo, conduzir a endocardite de câmaras direitas, investigar hemocultura negativa, diferenciar a endocardite trombótica não bacteriana, e decidir quando indicar profilaxia antibiótica antes de procedimento odontológico.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "endocardite-fungica-e-criterios-duke-iscvid-2023-para-endocardite-de-dispositivo",
+        "por_que": "Os critérios diagnósticos clássicos foram desenhados para valva nativa — este documento traz a versão adaptada para dispositivo, e o cenário fúngico, que muda o esquema antimicrobiano."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "infeccao-de-dispositivos-cardiovasculares-nao-valvares-aha-2026",
+        "por_que": "Do dispositivo intracardíaco para o vascular — oclusores, stents e enxertos infectados exigem critério próprio de suspeita."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "endocardite-infecciosa-de-camaras-direitas-e-aspiracao-mecanica-percutanea-aha-2026",
+        "por_que": "Um cenário com epidemiologia e conduta diferentes da endocardite esquerda, incluindo uma opção percutânea que evita cirurgia em casos selecionados."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "endocardite-com-hemocultura-negativa-diagnostico-e-manejo-aha-2025",
+        "por_que": "Quando a hemocultura não define o agente, a investigação muda de rota inteiramente — sorologia, PCR e patógenos fastidiosos entram em cena."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "endocardite-trombotica-nao-bacteriana-nbte-diagnostico-e-manejo",
+        "por_que": "Uma vegetação que parece endocardite mas não é infecciosa — tratar como bacteriana aqui é o erro mais custoso da lista."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "profilaxia-antibiotica-de-endocardite-infecciosa-em-procedimentos-odontologicos",
+        "por_que": "Fecha do lado da prevenção: em quem profilaxia antes do dentista realmente muda risco, e em quem é rotina sem sustentação."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-valvopatias-regurgitacao-mitral-e-tricuspide",
+    "titulo": "Valvopatias: regurgitação mitral e insuficiência tricúspide",
+    "tema": "Valvopatias",
+    "objetivo": "Sair sabendo decidir o mecanismo antes da conduta na regurgitação mitral grave, conduzir a estenose mitral remanescente, e situar o reparo transcateter borda a borda na insuficiência tricúspide grave.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "fluxograma-regurgitacao-mitral-esc-eacts-2025",
+        "por_que": "A regra que organiza toda a decisão: mecanismo primário ou secundário decide a via de tratamento antes de qualquer outro critério."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "estenose-mitral-diagnostico-e-manejo-esc-eacts-2025",
+        "por_que": "A valvopatia mitral que ainda tem componente reumático relevante no Brasil, com limiar de intervenção próprio."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "insuficiencia-tricuspide-grave-triluminate-e-reparo-transcateter-borda-a-borda",
+        "por_que": "A valva historicamente negligenciada ganhou opção transcateter com ensaio randomizado — fecha a trilha na fronteira mais nova do tema."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "valvopatias-atualizacao-diretriz-esceacts-2025",
+        "por_que": "Panorama de fechamento: o que mudou na atualização mais recente da diretriz, para não citar recomendação já superada."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-aorta-vasculites-e-doenca-renovascular",
+    "titulo": "Aorta e periférico: vasculite de grandes vasos, doença renovascular e carótida",
+    "tema": "Aorta e doença arterial periférica",
+    "objetivo": "Sair sabendo diagnosticar a doença arterial periférica de membros pelo ITB, reconhecer arterite de Takayasu e de células gigantes como causa de estenose vascular no jovem e no idoso, e decidir investigação e revascularização na doença renovascular e na estenose de carótida.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "fluxograma-doenca-arterial-periferica-diagnostico-esc-2024",
+        "por_que": "Ponto de partida: o rastreamento pelo índice tornozelo-braquial, que decide se a investigação segue adiante."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "doenca-arterial-periferica-de-membros-diagnostico-por-itb-e-isquemia-critica",
+        "por_que": "Aprofunda o passo anterior até o extremo grave da doença: a isquemia crítica, com classificação WIfI."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "arterite-de-takayasu-e-arterite-de-celulas-gigantes-vasculite-de-grandes-vasos",
+        "por_que": "Nem toda estenose arterial é aterosclerótica — nestas duas vasculites a inflamação da parede é a causa, e a idade do paciente é a pista inicial."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "doenca-renovascular-diagnostico-e-tratamento-esc-2024",
+        "por_que": "Outro território em que estenose vascular muda o diagnóstico diferencial — aqui de hipertensão secundária e função renal."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "estenose-de-carotida-diagnostico-e-indicacao-de-revascularizacao-esc-2024",
+        "por_que": "Fecha no território mais perguntado em consultório: quando revascularizar carótida assintomática, e quando só tratar clinicamente."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-cardiopatia-congenita-shunt-valva-bicuspide-e-via-de-saida",
+    "titulo": "Cardiopatia congênita do adulto: shunt residual, valva bicúspide e obstrução da via de saída",
+    "tema": "Cardiopatias congênitas",
+    "objetivo": "Sair sabendo decidir o fechamento de shunt residual no adulto, reconhecer a aortopatia associada à valva aórtica bicúspide, diagnosticar a anomalia de Ebstein e a obstrução da via de saída do ventrículo direito, e usar o teste cardiopulmonar de exercício para acompanhar essas lesões.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "fluxograma-comunicacao-interatrial-e-shunt-esquerda-direita-no-adulto-esc-2020",
+        "por_que": "A lesão congênita mais comum a aparecer pela primeira vez na vida adulta, com critério objetivo de quando fechar."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "valva-aortica-bicuspide-e-aortopatia-associada-esc-2024",
+        "por_que": "Outra lesão frequentemente assintomática até a vida adulta — aqui o risco não é só valvar, é da aorta associada."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "anomalia-de-ebstein-diagnostico-e-manejo-esc-2020",
+        "por_que": "Uma malformação da valva tricúspide com espectro de gravidade amplo, do achado incidental à insuficiência cardíaca direita grave."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "obstrucao-da-via-de-saida-do-ventriculo-direito-estenose-pulmonar-esc-2020",
+        "por_que": "Fecha o bloco de lesões estruturais com a obstrução direita, que compartilha critério de intervenção com as demais lesões residuais do adulto."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "teste-cardiopulmonar-de-exercicio-na-cardiopatia-congenita-aha-2025",
+        "por_que": "A ferramenta que acompanha todas as lesões acima ao longo do tempo — o valor de referência muda por tipo de lesão, não é um número único."
+      }
+    ]
   }
 ]
