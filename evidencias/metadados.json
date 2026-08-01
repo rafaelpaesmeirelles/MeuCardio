@@ -9906,5 +9906,382 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "scassst-triagem-inicial-com-ecg-em-ate-10-minutos",
+    "statement": "A triagem inicial da síndrome coronariana aguda sem supradesnível de ST deve ser feita com base em história clínica, exame físico, ELETROCARDIOGRAMA de 12 derivações EM ATÉ 10 MINUTOS e troponina. Os dez minutos são parte da recomendação, não meta de qualidade.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2021,
+    "guideline_title": "Diretrizes da SBC sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnível do Segmento ST – 2021",
+    "reference": "Nicolau JC, Feitosa GS, Petriz JL, Furtado RHM, Précoma DB, et al. Diretrizes da Sociedade Brasileira de Cardiologia sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnível do Segmento ST – 2021. Arq Bras Cardiol. 2021;117(1):181-264. DOI: 10.36660/abc.20210180. PMID: 34320090 — texto integral em acesso aberto (PMC8294740), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Doença coronariana",
+    "tags": [
+      "SCASSST",
+      "triagem",
+      "ECG",
+      "10 minutos"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "scassst-troponina-e-o-biomarcador-de-escolha",
+    "statement": "As TROPONINAS são os biomarcadores de escolha no diagnóstico de infarto agudo do miocárdio. Os biomarcadores de necrose devem ser mensurados em TODOS os pacientes com suspeita de SCASSST e, havendo troponina ULTRASSENSÍVEL disponível, a dosagem deve ser feita na admissão e reavaliada em seguida (Classe I, C). A CK-MB massa fica reservada a quando a troponina não estiver disponível (Classe I, A).",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2021,
+    "guideline_title": "Diretrizes da SBC sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnível do Segmento ST – 2021",
+    "reference": "Nicolau JC, Feitosa GS, Petriz JL, Furtado RHM, Précoma DB, et al. Diretrizes da Sociedade Brasileira de Cardiologia sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnível do Segmento ST – 2021. Arq Bras Cardiol. 2021;117(1):181-264. DOI: 10.36660/abc.20210180. PMID: 34320090 — texto integral em acesso aberto (PMC8294740), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Doença coronariana",
+    "tags": [
+      "troponina",
+      "CK-MB",
+      "biomarcadores",
+      "diagnóstico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "scassst-mioglobina-so-em-apresentacao-muito-precoce",
+    "statement": "Em paciente que chega à emergência PRECOCEMENTE — antes de 6 horas do início dos sintomas —, mioglobina e troponina ultrassensível PODEM ser consideradas em adição a um marcador mais tardio, como CK-MB ou troponina convencional. É a única situação em que a diretriz ainda admite a mioglobina.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2021,
+    "guideline_title": "Diretrizes da SBC sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnível do Segmento ST – 2021",
+    "reference": "Nicolau JC, Feitosa GS, Petriz JL, Furtado RHM, Précoma DB, et al. Diretrizes da Sociedade Brasileira de Cardiologia sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnível do Segmento ST – 2021. Arq Bras Cardiol. 2021;117(1):181-264. DOI: 10.36660/abc.20210180. PMID: 34320090 — texto integral em acesso aberto (PMC8294740), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Doença coronariana",
+    "tags": [
+      "mioglobina",
+      "apresentação precoce",
+      "6 horas",
+      "biomarcadores"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "scassst-aas-dose-de-ataque-e-manutencao",
+    "statement": "O ácido acetilsalicílico é RECOMENDADO na sala de emergência o MAIS PRECOCE possível em todos os pacientes sem contraindicação, em dose inicial de 150 A 300 mg em quem não vinha em uso, com manutenção de 75 A 100 mg. Outra tabela da mesma diretriz registra ataque de 162 a 300 mg e manutenção de 81 a 100 mg/dia, mantido por TEMPO INDETERMINADO, independentemente da estratégia de tratamento — as duas faixas convivem no documento e cobrem as apresentações disponíveis.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2021,
+    "guideline_title": "Diretrizes da SBC sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnível do Segmento ST – 2021",
+    "reference": "Nicolau JC, Feitosa GS, Petriz JL, Furtado RHM, Précoma DB, et al. Diretrizes da Sociedade Brasileira de Cardiologia sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnível do Segmento ST – 2021. Arq Bras Cardiol. 2021;117(1):181-264. DOI: 10.36660/abc.20210180. PMID: 34320090 — texto integral em acesso aberto (PMC8294740), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Doença coronariana",
+    "tags": [
+      "AAS",
+      "dose de ataque",
+      "dose de manutenção",
+      "SCASSST"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "scassst-inibidor-de-p2y12-associado-ao-aas",
+    "statement": "É RECOMENDADO o uso de um inibidor do receptor P2Y12 em ADIÇÃO ao ácido acetilsalicílico, exceto em caso de contraindicação ou de elevado risco de sangramento.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2021,
+    "guideline_title": "Diretrizes da SBC sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnível do Segmento ST – 2021",
+    "reference": "Nicolau JC, Feitosa GS, Petriz JL, Furtado RHM, Précoma DB, et al. Diretrizes da Sociedade Brasileira de Cardiologia sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnível do Segmento ST – 2021. Arq Bras Cardiol. 2021;117(1):181-264. DOI: 10.36660/abc.20210180. PMID: 34320090 — texto integral em acesso aberto (PMC8294740), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Doença coronariana",
+    "tags": [
+      "P2Y12",
+      "dupla antiagregação",
+      "SCASSST"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "scassst-prasugrel-contraindicado-sem-anatomia-conhecida",
+    "statement": "O PRASUGREL NÃO é recomendado em paciente com histórico de ataque isquêmico transitório ou acidente vascular cerebral prévio, NEM em paciente com SCASSST SEM ANATOMIA CORONÁRIA CONHECIDA. A segunda condição é a mais esquecida: no sem supra, o prasugrel pressupõe cateterismo já realizado.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2021,
+    "guideline_title": "Diretrizes da SBC sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnível do Segmento ST – 2021",
+    "reference": "Nicolau JC, Feitosa GS, Petriz JL, Furtado RHM, Précoma DB, et al. Diretrizes da Sociedade Brasileira de Cardiologia sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnível do Segmento ST – 2021. Arq Bras Cardiol. 2021;117(1):181-264. DOI: 10.36660/abc.20210180. PMID: 34320090 — texto integral em acesso aberto (PMC8294740), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Doença coronariana",
+    "tags": [
+      "prasugrel",
+      "contraindicação",
+      "anatomia coronária",
+      "AVC prévio"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "scassst-enoxaparina-doses-por-idade-e-funcao-renal",
+    "statement": "A ENOXAPARINA é recomendada em paciente sem disfunção renal grave — clearance acima de 15 mL/min/1,73 m² —, até a revascularização, por 8 DIAS ou até a alta hospitalar, na dose de 1 mg/kg a cada 12 horas; 0,75 mg/kg a cada 12 horas se idade IGUAL OU SUPERIOR A 75 ANOS; e 1 mg/kg a cada 24 horas se o clearance estiver entre 15 e 30 mL/min. Os três esquemas são distintos, e trocá-los é erro de dose, não de preferência.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2021,
+    "guideline_title": "Diretrizes da SBC sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnível do Segmento ST – 2021",
+    "reference": "Nicolau JC, Feitosa GS, Petriz JL, Furtado RHM, Précoma DB, et al. Diretrizes da Sociedade Brasileira de Cardiologia sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnível do Segmento ST – 2021. Arq Bras Cardiol. 2021;117(1):181-264. DOI: 10.36660/abc.20210180. PMID: 34320090 — texto integral em acesso aberto (PMC8294740), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Doença coronariana",
+    "tags": [
+      "enoxaparina",
+      "dose",
+      "função renal",
+      "idoso"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "scassst-heparina-nao-fracionada-na-disfuncao-renal-grave-e-obesidade",
+    "statement": "A HEPARINA NÃO FRACIONADA é de uso PREFERENCIAL em paciente com disfunção renal grave — clearance abaixo de 15 mL/min — e em obeso com peso ACIMA DE 150 kg. São as duas situações em que a enoxaparina perde previsibilidade de dose.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2021,
+    "guideline_title": "Diretrizes da SBC sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnível do Segmento ST – 2021",
+    "reference": "Nicolau JC, Feitosa GS, Petriz JL, Furtado RHM, Précoma DB, et al. Diretrizes da Sociedade Brasileira de Cardiologia sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnível do Segmento ST – 2021. Arq Bras Cardiol. 2021;117(1):181-264. DOI: 10.36660/abc.20210180. PMID: 34320090 — texto integral em acesso aberto (PMC8294740), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Doença coronariana",
+    "tags": [
+      "heparina não fracionada",
+      "disfunção renal",
+      "obesidade",
+      "anticoagulação"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "scassst-estrategia-invasiva-imediata-na-instabilidade",
+    "statement": "A estratégia invasiva URGENTE ou IMEDIATA está indicada em paciente com SCASSST que apresente angina REFRATÁRIA e/ou instabilidade HEMODINÂMICA e/ou instabilidade ELÉTRICA — na ausência de comorbidades graves ou contraindicações ao procedimento.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2021,
+    "guideline_title": "Diretrizes da SBC sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnível do Segmento ST – 2021",
+    "reference": "Nicolau JC, Feitosa GS, Petriz JL, Furtado RHM, Précoma DB, et al. Diretrizes da Sociedade Brasileira de Cardiologia sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnível do Segmento ST – 2021. Arq Bras Cardiol. 2021;117(1):181-264. DOI: 10.36660/abc.20210180. PMID: 34320090 — texto integral em acesso aberto (PMC8294740), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Doença coronariana",
+    "tags": [
+      "estratégia invasiva",
+      "angina refratária",
+      "instabilidade hemodinâmica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "scassst-betabloqueador-intravenoso-contraindicado-no-risco-de-choque",
+    "statement": "NÃO administrar betabloqueador INTRAVENOSO em paciente com fatores de risco para CHOQUE CARDIOGÊNICO. É Classe III com nível A — uma das poucas contraindicações desta diretriz sustentada por evidência de ensaio randomizado.",
+    "recommendation_class": "III",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2021,
+    "guideline_title": "Diretrizes da SBC sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnível do Segmento ST – 2021",
+    "reference": "Nicolau JC, Feitosa GS, Petriz JL, Furtado RHM, Précoma DB, et al. Diretrizes da Sociedade Brasileira de Cardiologia sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnível do Segmento ST – 2021. Arq Bras Cardiol. 2021;117(1):181-264. DOI: 10.36660/abc.20210180. PMID: 34320090 — texto integral em acesso aberto (PMC8294740), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Doença coronariana",
+    "tags": [
+      "betabloqueador intravenoso",
+      "choque cardiogênico",
+      "contraindicação"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "scassst-nitrato-contraindicado-apos-inibidor-de-fosfodiesterase",
+    "statement": "O nitrato é CONTRAINDICADO em vigência de hipotensão arterial, de infarto de VENTRÍCULO DIREITO, e após uso de inibidores da fosfodiesterase: SILDENAFILA e VARDENAFILA dentro de 24 HORAS, e TADALAFILA dentro de 48 HORAS na dose de 20 mg. Os prazos são diferentes entre os fármacos, e é isso que a pergunta de plantão costuma errar.",
+    "recommendation_class": "III",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2021,
+    "guideline_title": "Diretrizes da SBC sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnível do Segmento ST – 2021",
+    "reference": "Nicolau JC, Feitosa GS, Petriz JL, Furtado RHM, Précoma DB, et al. Diretrizes da Sociedade Brasileira de Cardiologia sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnível do Segmento ST – 2021. Arq Bras Cardiol. 2021;117(1):181-264. DOI: 10.36660/abc.20210180. PMID: 34320090 — texto integral em acesso aberto (PMC8294740), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Doença coronariana",
+    "tags": [
+      "nitrato",
+      "sildenafila",
+      "tadalafila",
+      "infarto de ventrículo direito"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "scassst-di-hidropiridinico-de-acao-rapida-sem-betabloqueador",
+    "statement": "NÃO usar derivados di-hidropiridínicos de INÍCIO DE AÇÃO RÁPIDA em paciente que não esteja adequadamente betabloqueado — a taquicardia reflexa aumenta o consumo miocárdico de oxigênio.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2021,
+    "guideline_title": "Diretrizes da SBC sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnível do Segmento ST – 2021",
+    "reference": "Nicolau JC, Feitosa GS, Petriz JL, Furtado RHM, Précoma DB, et al. Diretrizes da Sociedade Brasileira de Cardiologia sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnível do Segmento ST – 2021. Arq Bras Cardiol. 2021;117(1):181-264. DOI: 10.36660/abc.20210180. PMID: 34320090 — texto integral em acesso aberto (PMC8294740), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Doença coronariana",
+    "tags": [
+      "di-hidropiridínico",
+      "taquicardia reflexa",
+      "betabloqueador",
+      "contraindicação"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "scassst-nao-associar-aas-a-anti-inflamatorio-nao-esteroidal",
+    "statement": "NÃO combinar ácido acetilsalicílico com outros ANTI-INFLAMATÓRIOS NÃO ESTEROIDAIS na síndrome coronariana aguda sem supradesnível de ST.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2021,
+    "guideline_title": "Diretrizes da SBC sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnível do Segmento ST – 2021",
+    "reference": "Nicolau JC, Feitosa GS, Petriz JL, Furtado RHM, Précoma DB, et al. Diretrizes da Sociedade Brasileira de Cardiologia sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnível do Segmento ST – 2021. Arq Bras Cardiol. 2021;117(1):181-264. DOI: 10.36660/abc.20210180. PMID: 34320090 — texto integral em acesso aberto (PMC8294740), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Doença coronariana",
+    "tags": [
+      "AAS",
+      "AINE",
+      "interação",
+      "contraindicação"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "scassst-nao-fazer-teste-ergometrico-antes-de-48-horas-no-alto-risco",
+    "statement": "NÃO realizar TESTE ERGOMÉTRICO em paciente de ALTO RISCO antes de 48 HORAS. A mesma restrição de 48 horas vale para os demais testes provocativos em paciente de alto risco antes da estabilização, e o ecocardiograma sob estresse com microbolhas também é Classe III nesse cenário.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2021,
+    "guideline_title": "Diretrizes da SBC sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnível do Segmento ST – 2021",
+    "reference": "Nicolau JC, Feitosa GS, Petriz JL, Furtado RHM, Précoma DB, et al. Diretrizes da Sociedade Brasileira de Cardiologia sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnível do Segmento ST – 2021. Arq Bras Cardiol. 2021;117(1):181-264. DOI: 10.36660/abc.20210180. PMID: 34320090 — texto integral em acesso aberto (PMC8294740), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Doença coronariana",
+    "tags": [
+      "teste ergométrico",
+      "alto risco",
+      "48 horas",
+      "contraindicação"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "scassst-nao-revascularizar-lesoes-nao-culpadas-no-choque-cardiogenico",
+    "statement": "NÃO realizar intervenção coronária percutânea de ROTINA em lesões NÃO relacionadas ao infarto no paciente em CHOQUE CARDIOGÊNICO. É a recomendação que traduz o resultado do ensaio que mostrou dano com a revascularização completa nesse cenário específico.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2021,
+    "guideline_title": "Diretrizes da SBC sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnível do Segmento ST – 2021",
+    "reference": "Nicolau JC, Feitosa GS, Petriz JL, Furtado RHM, Précoma DB, et al. Diretrizes da Sociedade Brasileira de Cardiologia sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnível do Segmento ST – 2021. Arq Bras Cardiol. 2021;117(1):181-264. DOI: 10.36660/abc.20210180. PMID: 34320090 — texto integral em acesso aberto (PMC8294740), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Doença coronariana",
+    "tags": [
+      "choque cardiogênico",
+      "lesão não culpada",
+      "revascularização",
+      "contraindicação"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "scassst-nao-usar-angiotc-de-coronaria-isolada-para-estratificar",
+    "statement": "NÃO usar a angiotomografia de coronárias como ROTINA para estratificação isoladamente; e NÃO usar a angiografia coronariana APENAS para estratificação de risco em paciente ASSINTOMÁTICO. As duas Classe III delimitam o que a anatomia sozinha não decide.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2021,
+    "guideline_title": "Diretrizes da SBC sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnível do Segmento ST – 2021",
+    "reference": "Nicolau JC, Feitosa GS, Petriz JL, Furtado RHM, Précoma DB, et al. Diretrizes da Sociedade Brasileira de Cardiologia sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnível do Segmento ST – 2021. Arq Bras Cardiol. 2021;117(1):181-264. DOI: 10.36660/abc.20210180. PMID: 34320090 — texto integral em acesso aberto (PMC8294740), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Doença coronariana",
+    "tags": [
+      "angiotomografia",
+      "angiografia",
+      "estratificação",
+      "não recomendado"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "scassst-cintilografia-em-repouso-na-dor-toracica-com-ecg-nao-diagnostico",
+    "statement": "A cintilografia de perfusão miocárdica EM REPOUSO é recomendada na dor torácica aguda para estratificação de risco em paciente com suspeita clínica de síndrome coronariana aguda e ECG NÃO DIAGNÓSTICO. Também é recomendada na dor torácica aguda de probabilidade BAIXA A INTERMEDIÁRIA de doença coronariana, com ECG não diagnóstico e marcadores de necrose NEGATIVOS.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2021,
+    "guideline_title": "Diretrizes da SBC sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnível do Segmento ST – 2021",
+    "reference": "Nicolau JC, Feitosa GS, Petriz JL, Furtado RHM, Précoma DB, et al. Diretrizes da Sociedade Brasileira de Cardiologia sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnível do Segmento ST – 2021. Arq Bras Cardiol. 2021;117(1):181-264. DOI: 10.36660/abc.20210180. PMID: 34320090 — texto integral em acesso aberto (PMC8294740), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Doença coronariana",
+    "tags": [
+      "cintilografia",
+      "dor torácica",
+      "ECG não diagnóstico",
+      "estratificação"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "scassst-nao-reabilitar-nas-condicoes-de-instabilidade",
+    "statement": "A reabilitação cardiopulmonar NÃO deve ser realizada — a menos que a condição esteja devidamente resolvida — nas seguintes situações: infarto agudo do miocárdio com MENOS DE 72 HORAS; angina instável em curso; arritmias complexas graves não controladas; insuficiência cardíaca descompensada; e lesão de tronco de coronária esquerda. É uma lista fechada de contraindicações, com nível A.",
+    "recommendation_class": "III",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2021,
+    "guideline_title": "Diretrizes da SBC sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnível do Segmento ST – 2021",
+    "reference": "Nicolau JC, Feitosa GS, Petriz JL, Furtado RHM, Précoma DB, et al. Diretrizes da Sociedade Brasileira de Cardiologia sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnível do Segmento ST – 2021. Arq Bras Cardiol. 2021;117(1):181-264. DOI: 10.36660/abc.20210180. PMID: 34320090 — texto integral em acesso aberto (PMC8294740), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Doença coronariana",
+    "tags": [
+      "reabilitação cardiopulmonar",
+      "contraindicação",
+      "72 horas",
+      "angina instável"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "scassst-nao-usar-saxagliptina-e-pioglitazona-no-diabetico-com-ic",
+    "statement": "NÃO usar SAXAGLIPTINA nem PIOGLITAZONA em paciente diabético com INSUFICIÊNCIA CARDÍACA. Classe III com nível A — o controle glicêmico no coronariopata tem fármacos que pioram desfecho, e estes dois estão nomeados.",
+    "recommendation_class": "III",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2021,
+    "guideline_title": "Diretrizes da SBC sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnível do Segmento ST – 2021",
+    "reference": "Nicolau JC, Feitosa GS, Petriz JL, Furtado RHM, Précoma DB, et al. Diretrizes da Sociedade Brasileira de Cardiologia sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnível do Segmento ST – 2021. Arq Bras Cardiol. 2021;117(1):181-264. DOI: 10.36660/abc.20210180. PMID: 34320090 — texto integral em acesso aberto (PMC8294740), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Doença coronariana",
+    "tags": [
+      "saxagliptina",
+      "pioglitazona",
+      "insuficiência cardíaca",
+      "diabetes"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "scassst-nao-usar-cigarro-de-menor-nicotina-nem-vaporizador",
+    "statement": "NÃO usar estratégias de 'controle de danos' no tabagismo, como cigarros com menor concentração de nicotina (Classe III, C); e NÃO usar dispositivos VAPORIZADORES de nicotina como estratégia de abandono do tabagismo em paciente resistente (Classe III, B). As duas recomendações fecham a porta das alternativas que o paciente costuma propor.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2021,
+    "guideline_title": "Diretrizes da SBC sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnível do Segmento ST – 2021",
+    "reference": "Nicolau JC, Feitosa GS, Petriz JL, Furtado RHM, Précoma DB, et al. Diretrizes da Sociedade Brasileira de Cardiologia sobre Angina Instável e Infarto Agudo do Miocárdio sem Supradesnível do Segmento ST – 2021. Arq Bras Cardiol. 2021;117(1):181-264. DOI: 10.36660/abc.20210180. PMID: 34320090 — texto integral em acesso aberto (PMC8294740), tabelas de recomendação conferidas linha a linha em 01/08/2026.",
+    "theme": "Doença coronariana",
+    "tags": [
+      "tabagismo",
+      "vaporizador",
+      "cigarro eletrônico",
+      "cessação"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
