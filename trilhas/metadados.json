@@ -2166,5 +2166,195 @@
         "por_que": "Encerra a trilha com um contraponto didático: o ASPREE testou aspirina em prevenção primária no idoso saudável e não mostrou benefício líquido, com mais sangramento — depois de nove intervenções que ajudam, esta mostra quando acrescentar mais uma medida deixa de compensar."
       }
     ]
+  },
+  {
+    "slug": "trilha-doenca-coronariana-cronica-dor-toracica-e-minoca",
+    "titulo": "Doença coronariana crônica: investigar a dor torácica sem infarto agudo",
+    "tema": "Doença coronariana",
+    "objetivo": "Sair sabendo aplicar o HEART na dor torácica da emergência, seguir o algoritmo da síndrome coronariana crônica, escolher o teste funcional certo por cenário, e reconhecer MINOCA e SCAD quando a angiografia não mostra obstrução.",
+    "nivel": "intermediário",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "protocolo-de-dor-toracica-na-emergencia-escore-heart-e-tempo-porta-ecg-sbc-2025",
+        "por_que": "O primeiro passo é sempre o mesmo: separar quem tem síndrome coronariana aguda de quem não tem, com escore validado e tempo de ECG definido."
+      },
+      {
+        "ordem": 2,
+        "item_type": "calculadora",
+        "item_slug": "heart",
+        "por_que": "Aplicar o escore descrito no passo anterior — é o que decide observação, alta ou investigação adicional."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "fluxograma-sindrome-coronariana-cronica-esc-2024",
+        "por_que": "Quando a dor não é aguda, a pergunta muda: não é mais 'internar ou não', é 'qual a probabilidade pré-teste e qual exame pedir'."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "qual-teste-funcional-pedir-na-doenca-coronariana-te-cintilografia-ou-eco-de-estresse-sbc-2024",
+        "por_que": "O algoritmo do passo anterior aponta 'teste funcional' — aqui está o critério para escolher entre os três disponíveis."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "teste-ergometrico-seguranca-contraindicacoes-e-criterios-de-interrupcao-sbc-2024",
+        "por_que": "O mais acessível dos três testes funcionais também é o que mais gera dúvida de segurança na hora de pedir e de interromper."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "doenca-isquemica-na-mulher-acuracia-dos-testes-por-sexo-minoca-e-desfechos",
+        "por_que": "Os mesmos testes têm acurácia diferente por sexo — ignorar isso é a causa mais comum de investigação incompleta na mulher."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "minoca-e-scad-infarto-sem-doenca-coronariana-obstrutiva-e-dissecção-espontânea",
+        "por_que": "Fecha a trilha no cenário que a investigação padrão não resolve: troponina positiva com coronária angiograficamente normal."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-dispositivos-complicacoes-e-novas-tecnologias",
+    "titulo": "Dispositivos cardíacos: complicações, estimulação do sistema de condução e monitorização remota",
+    "tema": "Dispositivos",
+    "objetivo": "Sair sabendo reconhecer e conduzir infecção de dispositivo, escolher entre estimulação do ramo esquerdo e biventricular, evitar a cardiomiopatia induzida por estimulação, e situar o monitor cardíaco implantável e o CDI subcutâneo na prática.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "infeccao-de-dispositivo-cardiaco-extracao-de-eletrodo-e-envelope-antibiotico",
+        "por_que": "A complicação mais temida de qualquer dispositivo já implantado — reconhecer cedo muda a decisão de extrair."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "extracao-de-eletrodo-transvenoso-seguranca-e-o-efeito-do-volume-do-centro",
+        "por_que": "Decidido que extrair é necessário, o próximo problema é onde e como — o volume do centro muda o risco do procedimento."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "cardiomiopatia-induzida-por-estimulacao-david-block-hf-e-a-estimulacao-do-ramo-esquerdo",
+        "por_que": "Um paciente sem indicação de CDI pode desenvolver disfunção só por causa do próprio marca-passo — reconhecer isso evita esperar demais para agir."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "estimulacao-do-ramo-esquerdo-versus-biventricular-o-ensaio-lbbp-resync",
+        "por_que": "A alternativa mais nova ao problema do passo anterior: estimular o sistema de condução em vez do miocárdio."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "ressincronizacao-com-marcapasso-ou-com-desfibrilador-o-ensaio-companion",
+        "por_que": "Decidida a via de estimulação, resta decidir se o dispositivo ressincronizador vem com ou sem função de desfibrilador."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "terapia-de-ressincronizacao-cardiaca-sicd-e-seguimento-remoto",
+        "por_que": "Fecha com duas tecnologias que mudam o seguimento: o CDI subcutâneo, sem eletrodo intracardíaco, e a monitorização remota do próprio dispositivo."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "monitor-cardiaco-implantavel-rendimento-diagnostico-e-o-que-ele-nao-resolve",
+        "por_que": "Última peça: o dispositivo que só monitora, sem terapia — o que ele de fato resolve, e onde ainda deixa o médico sem resposta."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-cardiomiopatia-dilatada-arritmogenica-e-chagasica",
+    "titulo": "Cardiomiopatia dilatada, arritmogênica e a origem chagásica",
+    "tema": "Cardiomiopatias",
+    "objetivo": "Sair sabendo diagnosticar a cardiomiopatia dilatada por genética, reconhecer a arritmogênica pelos critérios de imagem e ritmo, e situar a miocardite e a cardiomiopatia chagásica como causa regional relevante, do tratamento etiológico ao momento de indicar CDI.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "cardiomiopatia-dilatada-cmd-diagnostico-genetico-e-manejo-esc-2023",
+        "por_que": "A forma mais comum de cardiomiopatia fora da hipertrófica e da amiloide, com investigação genética que muda o aconselhamento familiar."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "cardiomiopatia-arritmogenica-acm-diagnostico-e-manejo-esc-2023",
+        "por_que": "Um fenótipo que se sobrepõe à dilatada em imagem, mas se diferencia pelo padrão elétrico e pelo risco de morte súbita."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "fluxograma-miocardite-aguda-esc-2025",
+        "por_que": "A causa inflamatória aguda que pode evoluir para os dois fenótipos anteriores se não resolver."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "miocardite-chagasica-aguda-e-miocardites-tropicais-sbc-2022",
+        "por_que": "No Brasil, a miocardite tem uma causa regional que a diretriz europeia não cobre — a fase aguda da doença de Chagas."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "tratamento-etiologico-da-doenca-de-chagas-cronica-benznidazol-e-nifurtimox",
+        "por_que": "Da fase aguda para a crônica: quem tratar com antiparasitário, em que dose e com qual monitorização."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "cardiopatia-chagasica-cronica-escore-de-rassi-e-indicacao-de-cdi",
+        "por_que": "Fecha a trilha na decisão que mais pesa na cardiomiopatia chagásica estabelecida: o escore que estratifica risco de morte e indica CDI."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-miocardite-e-sindromes-inflamatorias-miopericardicas",
+    "titulo": "Miocardite e síndromes inflamatórias miopericárdicas: do ESC 2025 à sarcoidose",
+    "tema": "Pericárdio",
+    "objetivo": "Sair sabendo diagnosticar e estratificar risco na miocardite aguda, situar o framework unificado das síndromes inflamatórias miopericárdicas, reconhecer a miopericardite pós-vacina de mRNA, identificar a sarcoidose cardíaca, e escalonar a pericardite recorrente refratária com inibidor de IL-1.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "miocardite-diagnostico-estratificacao-de-risco-e-biopsia-endomiocardica-esc-2025",
+        "por_que": "Ponto de partida: quando suspeitar de miocardite, como estratificar risco e quando a biópsia realmente muda conduta."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "sindromes-inflamatorias-miocardicas-e-pericardicas-imps-framework-unificado-esc-2025",
+        "por_que": "A miocardite não existe isolada do pericárdio — este framework de 2025 trata as duas inflamações como espectro único."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "miopericardite-associada-a-vacina-de-mrna-contra-covid-19",
+        "por_que": "A causa mais perguntada em consultório nos últimos anos, com curso e conduta que precisam de números, não de impressão."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "sarcoidose-cardiaca-criterios-diagnosticos-e-tratamento-sbc-2022",
+        "por_que": "Uma causa infiltrativa que mimetiza miocardite crônica e arritmia ventricular sem explicação — fácil de perder sem procurar."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "inibidores-de-il-1-na-pericardite-recorrente-e-derrame-pericardico-neoplasico",
+        "por_que": "Fecha com o degrau terapêutico mais recente para quem já falhou colchicina e corticoide na doença recorrente."
+      }
+    ]
   }
 ]
