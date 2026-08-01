@@ -2516,5 +2516,165 @@
         "por_que": "A ferramenta que acompanha todas as lesões acima ao longo do tempo — o valor de referência muda por tipo de lesão, não é um número único."
       }
     ]
+  },
+  {
+    "slug": "trilha-febre-reumatica-prevencao-primaria-a-cirurgia",
+    "titulo": "Febre reumática: da prevenção primária à cirurgia da cardiopatia estabelecida",
+    "tema": "Febre reumática",
+    "objetivo": "Sair sabendo situar a prevenção primária pela infecção de pele, reconhecer a coreia de Sydenham, aplicar os critérios ecocardiográficos da WHF 2023 no rastreamento, indicar valvuloplastia por balão na estenose mitral reumática, e decidir entre reparo e substituição na cirurgia valvar reumática.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "carga-global-da-doenca-e-prevencao-primaria-por-infeccao-de-pele",
+        "por_que": "Antes da cardite existe a prevenção primária — e a infecção de pele, não só a faringite, é gatilho reconhecido."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "coreia-de-sydenham-diagnostico-e-tratamento",
+        "por_que": "A manifestação neurológica da febre reumática aguda, que pode aparecer isolada e atrasar o diagnóstico se não for lembrada."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "criterios-ecocardiograficos-whf-2023-rastreamento-confirmacao-e-estadiamento",
+        "por_que": "O instrumento que detecta a cardiopatia reumática latente, antes do sopro se tornar audível."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "rastreamento-ecocardiografico-whf-e-valvuloplastia-por-balao-na-estenose-mitral-reumatica",
+        "por_que": "Do rastreamento à intervenção: quando a estenose mitral reumática ainda permite valvuloplastia por balão em vez de cirurgia."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "cirurgia-de-valvopatia-reumatica-mitral-multivalvar-reparo-versus-substituicao",
+        "por_que": "Fecha no extremo cirúrgico: quando a valva reumática ainda é reparável e quando já exige prótese."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-sincope-situacoes-especiais",
+    "titulo": "Síncope: situações especiais — POTS, seio carotídeo, atleta e o ECG de alto risco",
+    "tema": "Síncope",
+    "objetivo": "Sair sabendo diferenciar hipotensão ortostática de POTS, indicar cardioneuroablação na síncope reflexa refratária, reconhecer hipersensibilidade do seio carotídeo no idoso, distinguir síncope de pseudossíncope no atleta, e aplicar os critérios de alto risco do ECG na emergência.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "sincope-na-emergencia-criterios-de-alto-risco-do-ecg-eusem-2024",
+        "por_que": "Ponto de entrada na emergência: quais achados do ECG mudam a síncope de baixo para alto risco."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "hipotensao-ortostatica-e-sindrome-de-taquicardia-postural-pots-diagnostico-diferencial",
+        "por_que": "Duas causas de pré-síncope postural que se confundem no relato do paciente, mas exigem manejo oposto."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "hipersensibilidade-do-seio-carotideo-no-idoso-e-restricoes-de-direcao-veicular",
+        "por_que": "Uma causa reflexa comum no idoso, com implicação prática que raramente entra na conversa: dirigir ou não."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "cardioneuroablacao-na-sincope-reflexa-posicao-conjunta-ehra-hrs-aphrs-lahrs-2024",
+        "por_que": "A opção terapêutica mais nova para a síncope reflexa recorrente que não respondeu às medidas do tratamento inicial."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "sincope-no-atleta-e-pseudossincope-psicogenica-diagnostico-diferencial",
+        "por_que": "Fecha em dois cenários que pedem cautela redobrada: perda de consciência no atleta, que pode ser cardíaca grave, e a pseudossíncope, que não é."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-perioperatorio-dispositivo-fragilidade-e-antitromboticos",
+    "titulo": "Perioperatório: dispositivo cardíaco, fragilidade e manejo de antitrombóticos",
+    "tema": "Perioperatório",
+    "objetivo": "Sair sabendo manejar marca-passo e CDI na cirurgia não cardíaca, decidir sobre ressonância magnética em portador de dispositivo, avaliar valvopatia antes de cirurgia não cardíaca, aplicar escore de risco cirúrgico e fragilidade no idoso, e ajustar DAPT e anticoagulante no perioperatório.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "manejo-perioperatorio-de-marca-passo-e-cdi-em-cirurgia-nao-cardiaca",
+        "por_que": "O detalhe técnico mais esquecido do pré-operatório: reprogramar ou não o dispositivo antes do bisturi elétrico."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "ressonancia-magnetica-em-portador-de-marca-passo-e-cdi-o-registro-magnasafe",
+        "por_que": "Uma dúvida frequente fora do centro cirúrgico também: quando a ressonância é segura em quem tem dispositivo implantado."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "valvopatia-e-cirurgia-nao-cardiaca-avaliacao-e-manejo-esc-2022",
+        "por_que": "Antes de operar outro órgão, a valvopatia conhecida muda o risco perioperatório e às vezes a ordem dos procedimentos."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "escores-de-risco-cirurgico-cardiaco-e-avaliacao-de-fragilidade-no-idoso",
+        "por_que": "A idade isolada não estratifica risco — a fragilidade, avaliada à parte do escore de risco cirúrgico, é o que geralmente muda a decisão no idoso."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "manejo-perioperatorio-de-antitromboticos-dapt-e-anticoagulantes-orais",
+        "por_que": "Fecha na decisão que mais gera interconsulta: quando suspender, em qual dia, e quando não suspender de jeito nenhum."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-cardio-oncologia-classes-especificas-de-terapia",
+    "titulo": "Cardio-oncologia: cardiotoxicidade por classe de terapia-alvo",
+    "tema": "Cardio-oncologia",
+    "objetivo": "Sair sabendo reconhecer a síndrome de liberação de citocinas na terapia com CAR-T, manejar a fibrilação atrial induzida por ibrutinibe, identificar o vasoespasmo coronariano por fluoropirimidina, interpretar a hipertensão como sinal de eficácia da terapia antiangiogênica, e situar o risco cardiovascular tardio do sobrevivente de câncer na infância.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "cardiotoxicidade-de-car-t-sindrome-de-liberacao-de-citocinas-e-inibidores-de-vegf",
+        "por_que": "A terapia celular mais nova traz uma cardiotoxicidade que se parece com choque séptico e exige reconhecimento rápido."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "ibrutinibe-fibrilacao-atrial-e-sangramento-manejo-da-anticoagulacao",
+        "por_que": "Um inibidor de tirosina-quinase que aumenta fibrilação atrial E sangramento ao mesmo tempo — a escolha do anticoagulante precisa das duas informações juntas."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "vasoespasmo-coronariano-por-fluoropirimidinas-5-fluorouracil-e-capecitabina",
+        "por_que": "Uma dor torácica durante quimioterapia que não é síndrome coronariana aterosclerótica — o mecanismo muda toda a conduta aguda."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "hipertensao-induzida-por-terapia-antineoplasica-e-o-paradoxo-de-ela-ser-sinal-de-eficacia",
+        "por_que": "Um efeito adverso que sinaliza que a droga está funcionando — tratar a hipertensão sem suspender o antineoplásico é a lição central."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "risco-cardiovascular-tardio-em-sobreviventes-de-cancer-na-infancia",
+        "por_que": "Fecha olhando para décadas à frente: quem tratou câncer na infância carrega risco cardiovascular que só aparece no seguimento de adulto."
+      }
+    ]
   }
 ]
