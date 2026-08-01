@@ -29112,5 +29112,379 @@
       "sbc 2025"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "cc-adulto-tc-civ-anatomia-complexa-antes-do-reparo",
+    "statement": "A angiotomografia é recomendada, antes do reparo de comunicação interventricular (CIV), quando a anatomia é complexa e o ecocardiograma não a define por completo.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC – 2024",
+    "reference": "Magalhães TA, Carneiro ACC, Moreira VM, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI: 10.36660/abc.20240608. PMID: 39475988 — Seção 4 (Cardiopatias Congênitas), Tabela 60 (uso da TC na avaliação de comunicação interventricular), conferida linha a linha no texto integral em acesso aberto (PMC12094294) em 01/08/2026.",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "comunicação interventricular",
+      "angiotomografia",
+      "planejamento pré-operatório"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cc-adulto-tc-defeito-do-septo-atrioventricular-com-sinais-de-ic",
+    "statement": "A angiotomografia é indicada no seguimento pós-operatório de defeito do septo atrioventricular (canal atrioventricular) em paciente que evolui com sinais de insuficiência cardíaca.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC – 2024",
+    "reference": "Magalhães TA, Carneiro ACC, Moreira VM, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI: 10.36660/abc.20240608. PMID: 39475988 — Seção 4 (Cardiopatias Congênitas), Tabela 61 (uso da TC na avaliação de defeito do septo atrioventricular), conferida linha a linha no texto integral em acesso aberto (PMC12094294) em 01/08/2026.",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "defeito do septo atrioventricular",
+      "canal atrioventricular",
+      "angiotomografia",
+      "insuficiência cardíaca"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cc-adulto-tc-pca-avaliacao-pos-tratamento-de-complicacao",
+    "statement": "A angiotomografia é recomendada na avaliação pós-tratamento da persistência do canal arterial quando há suspeita de complicação aórtica ou de artéria pulmonar.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC – 2024",
+    "reference": "Magalhães TA, Carneiro ACC, Moreira VM, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI: 10.36660/abc.20240608. PMID: 39475988 — Seção 4 (Cardiopatias Congênitas), Tabela 62 (uso da TC na avaliação de persistência do canal arterial), conferida linha a linha no texto integral em acesso aberto (PMC12094294) em 01/08/2026.",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "persistência do canal arterial",
+      "angiotomografia",
+      "seguimento pós-tratamento"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cc-adulto-tc-conexao-anomala-de-veias-pulmonares-pre-correcao",
+    "statement": "A angiotomografia é recomendada antes da correção cirúrgica da conexão anômala de veias pulmonares, para definição anatômica.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC – 2024",
+    "reference": "Magalhães TA, Carneiro ACC, Moreira VM, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI: 10.36660/abc.20240608. PMID: 39475988 — Seção 4 (Cardiopatias Congênitas), Tabela 63 (uso da TC na avaliação de conexão anômala de veias pulmonares), conferida linha a linha no texto integral em acesso aberto (PMC12094294) em 01/08/2026.",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "conexão anômala de veias pulmonares",
+      "angiotomografia",
+      "planejamento pré-operatório"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cc-adulto-tc-anomalia-de-ebstein-antes-da-correcao",
+    "statement": "A angiotomografia é indicada antes da correção da anomalia de Ebstein, para avaliar a valva tricúspide, o ventrículo direito e a árvore pulmonar.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC – 2024",
+    "reference": "Magalhães TA, Carneiro ACC, Moreira VM, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI: 10.36660/abc.20240608. PMID: 39475988 — Seção 4 (Cardiopatias Congênitas), Tabela 64 (uso da TC na avaliação de valvopatias congênitas), conferida linha a linha no texto integral em acesso aberto (PMC12094294) em 01/08/2026.",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "anomalia de ebstein",
+      "angiotomografia",
+      "planejamento pré-operatório"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cc-adulto-rm-valvar-congenita-lesao-regurgitante-avaliacao-complementar",
+    "statement": "A ressonância magnética cardíaca é recomendada como avaliação complementar de lesões valvares congênitas regurgitantes — indicação de maior força (Classe I, Nível B) entre as recomendações de imagem valvar congênita desta diretriz.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC – 2024",
+    "reference": "Magalhães TA, Carneiro ACC, Moreira VM, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI: 10.36660/abc.20240608. PMID: 39475988 — Seção 4 (Cardiopatias Congênitas), Tabela 79 (uso da RM na avaliação de valvopatias congênitas), conferida linha a linha no texto integral em acesso aberto (PMC12094294) em 01/08/2026.",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "valvopatia congênita",
+      "ressonância magnética cardíaca",
+      "regurgitação valvar"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cc-adulto-tc-tetralogia-de-fallot-vias-de-saida-e-arritmia",
+    "statement": "A angiotomografia é recomendada em paciente com tetralogia de Fallot operada que apresenta obstrução da via de saída do ventrículo direito, estenose pulmonar, arritmia ou suspeita de complicação relacionada ao conduto.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC – 2024",
+    "reference": "Magalhães TA, Carneiro ACC, Moreira VM, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI: 10.36660/abc.20240608. PMID: 39475988 — Seção 4 (Cardiopatias Congênitas), Tabela 65 (uso da TC na avaliação da tetralogia de Fallot), conferida linha a linha no texto integral em acesso aberto (PMC12094294) em 01/08/2026.",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "tetralogia de fallot",
+      "angiotomografia",
+      "via de saída do ventrículo direito",
+      "arritmia"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cc-adulto-tc-planejamento-de-troca-valvar-pulmonar-na-fallot",
+    "statement": "A angiotomografia deve ser considerada no planejamento pré-operatório da troca valvar pulmonar (percutânea ou cirúrgica) em paciente com tetralogia de Fallot operada.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC – 2024",
+    "reference": "Magalhães TA, Carneiro ACC, Moreira VM, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI: 10.36660/abc.20240608. PMID: 39475988 — Seção 4 (Cardiopatias Congênitas), Tabela 65 (uso da TC na avaliação da tetralogia de Fallot), conferida linha a linha no texto integral em acesso aberto (PMC12094294) em 01/08/2026.",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "tetralogia de fallot",
+      "troca valvar pulmonar",
+      "angiotomografia",
+      "planejamento pré-operatório"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cc-adulto-rm-planejamento-de-troca-valvar-pulmonar-na-fallot",
+    "statement": "A ressonância magnética cardíaca é recomendada no planejamento pré-operatório da troca valvar pulmonar (percutânea ou cirúrgica) em paciente com tetralogia de Fallot operada — MESMA indicação da angiotomografia (Tabela 65), mas com NÍVEL DE EVIDÊNCIA MAIS FORTE aqui (B, contra C na TC). A diretriz não faz a TC e a RM concorrentes: a RM tem a preferência quando ambas são exequíveis, por evitar radiação e por medir volume e função ventricular direita com mais precisão — dado central na decisão do momento da troca valvar.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC – 2024",
+    "reference": "Magalhães TA, Carneiro ACC, Moreira VM, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI: 10.36660/abc.20240608. PMID: 39475988 — Seção 4 (Cardiopatias Congênitas), Tabela 80 (uso da RM na avaliação da tetralogia de Fallot), conferida linha a linha no texto integral em acesso aberto (PMC12094294) em 01/08/2026.",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "tetralogia de fallot",
+      "troca valvar pulmonar",
+      "ressonância magnética cardíaca",
+      "função do ventrículo direito"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cc-adulto-tc-dupla-via-de-saida-de-vd-antes-do-reparo",
+    "statement": "A angiotomografia é recomendada, antes do reparo de dupla via de saída do ventrículo direito, para definir a relação da comunicação interventricular com os grandes vasos e a anatomia vascular associada.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC – 2024",
+    "reference": "Magalhães TA, Carneiro ACC, Moreira VM, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI: 10.36660/abc.20240608. PMID: 39475988 — Seção 4 (Cardiopatias Congênitas), Tabela 66 (uso da TC na avaliação de dupla via de saída do ventrículo direito), conferida linha a linha no texto integral em acesso aberto (PMC12094294) em 01/08/2026.",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "dupla via de saída do ventrículo direito",
+      "angiotomografia",
+      "planejamento pré-operatório"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cc-adulto-tc-tronco-arterial-comum-defeito-residual-ou-estenose-de-conduto",
+    "statement": "A angiotomografia é recomendada no pós-operatório de tronco arterial comum (truncus arteriosus) para investigar defeito septal residual conhecido ou estenose do conduto entre ventrículo direito e artéria pulmonar.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC – 2024",
+    "reference": "Magalhães TA, Carneiro ACC, Moreira VM, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI: 10.36660/abc.20240608. PMID: 39475988 — Seção 4 (Cardiopatias Congênitas), Tabela 67 (uso da TC na avaliação de tronco arterial comum), conferida linha a linha no texto integral em acesso aberto (PMC12094294) em 01/08/2026.",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "tronco arterial comum",
+      "truncus arteriosus",
+      "angiotomografia",
+      "seguimento pós-operatório"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cc-adulto-tc-avaliacao-coronaria-apos-cirurgia-de-jatene",
+    "statement": "A angiotomografia de coronárias é recomendada no seguimento de paciente submetido à cirurgia de Jatene (switch arterial) para transposição das grandes artérias, pela translocação coronária inerente à técnica ser fonte reconhecida de complicação tardia.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC – 2024",
+    "reference": "Magalhães TA, Carneiro ACC, Moreira VM, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI: 10.36660/abc.20240608. PMID: 39475988 — Seção 4 (Cardiopatias Congênitas), Tabela 68 (uso da TC na avaliação da transposição das grandes artérias), conferida linha a linha no texto integral em acesso aberto (PMC12094294) em 01/08/2026.",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "transposição das grandes artérias",
+      "cirurgia de jatene",
+      "angiotomografia de coronárias",
+      "seguimento pós-operatório"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cc-adulto-tc-apos-correcao-atrial-mustard-senning-vd-sistemico",
+    "statement": "A angiotomografia é recomendada no seguimento de paciente submetido a correção atrial (cirurgia de Senning ou Mustard) para transposição das grandes artérias, na presença de regurgitação atrioventricular sistêmica, disfunção do ventrículo direito sistêmico, obstrução da via de saída do ventrículo esquerdo, ou arritmia.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC – 2024",
+    "reference": "Magalhães TA, Carneiro ACC, Moreira VM, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI: 10.36660/abc.20240608. PMID: 39475988 — Seção 4 (Cardiopatias Congênitas), Tabela 68 (uso da TC na avaliação da transposição das grandes artérias), conferida linha a linha no texto integral em acesso aberto (PMC12094294) em 01/08/2026.",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "transposição das grandes artérias",
+      "cirurgia de senning",
+      "cirurgia de mustard",
+      "ventrículo direito sistêmico",
+      "angiotomografia"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cc-adulto-rm-raiz-neoaortica-dilatada-apos-jatene",
+    "statement": "A ressonância magnética cardíaca é recomendada na avaliação de dilatação da raiz neoaórtica ou de regurgitação neoaórtica após cirurgia de Jatene (switch arterial) para transposição das grandes artérias — achado tardio da técnica, decorrente da artéria pulmonar nativa assumir a posição sistêmica.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC – 2024",
+    "reference": "Magalhães TA, Carneiro ACC, Moreira VM, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI: 10.36660/abc.20240608. PMID: 39475988 — Seção 4 (Cardiopatias Congênitas), Tabela 83 (uso da RM na avaliação da transposição das grandes artérias), conferida linha a linha no texto integral em acesso aberto (PMC12094294) em 01/08/2026.",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "transposição das grandes artérias",
+      "cirurgia de jatene",
+      "raiz neoaórtica",
+      "ressonância magnética cardíaca"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cc-adulto-tc-transposicao-corrigida-disfuncao-de-conduto-ve-ap",
+    "statement": "A angiotomografia é recomendada no pós-operatório de transposição corrigida congenitamente das grandes artérias, em paciente com disfunção de conduto entre ventrículo esquerdo e artéria pulmonar.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC – 2024",
+    "reference": "Magalhães TA, Carneiro ACC, Moreira VM, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI: 10.36660/abc.20240608. PMID: 39475988 — Seção 4 (Cardiopatias Congênitas), Tabela 69 (uso da TC na avaliação da transposição corrigida congenitamente das grandes artérias), conferida linha a linha no texto integral em acesso aberto (PMC12094294) em 01/08/2026.",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "transposição corrigida congenitamente",
+      "cctga",
+      "conduto ventrículo esquerdo-artéria pulmonar",
+      "angiotomografia"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cc-adulto-rm-transposicao-corrigida-regurgitacao-av-sistemica-ou-disfuncao-de-vd",
+    "statement": "A ressonância magnética cardíaca é recomendada no pós-operatório de transposição corrigida congenitamente das grandes artérias, em paciente com regurgitação atrioventricular sistêmica ou disfunção do ventrículo direito sistêmico — MESMA indicação da angiotomografia (Tabela 69), mas com CLASSE MAIS FORTE aqui (I, contra IIa na TC): para quantificar a função do ventrículo sistêmico morfologicamente direito nesta anatomia, a diretriz prioriza a RM.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC – 2024",
+    "reference": "Magalhães TA, Carneiro ACC, Moreira VM, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI: 10.36660/abc.20240608. PMID: 39475988 — Seção 4 (Cardiopatias Congênitas), Tabela 84 (uso da RM na avaliação da transposição corrigida congenitamente das grandes artérias), conferida linha a linha no texto integral em acesso aberto (PMC12094294) em 01/08/2026.",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "transposição corrigida congenitamente",
+      "cctga",
+      "ventrículo direito sistêmico",
+      "ressonância magnética cardíaca"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cc-adulto-tc-coarctacao-vigilancia-pos-tratamento-de-aneurisma-e-stent",
+    "statement": "A angiotomografia é recomendada, em paciente assintomático tratado de coartação de aorta, para rastrear aneurisma do arco aórtico e complicações relacionadas ao stent — reestenose, fratura do stent ou endoleak.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC – 2024",
+    "reference": "Magalhães TA, Carneiro ACC, Moreira VM, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI: 10.36660/abc.20240608. PMID: 39475988 — Seção 4 (Cardiopatias Congênitas), Tabela 70 (uso da TC na avaliação da coartação de aorta), conferida linha a linha no texto integral em acesso aberto (PMC12094294) em 01/08/2026.",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "coartação de aorta",
+      "angiotomografia",
+      "stent aórtico",
+      "aneurisma de arco aórtico"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cc-adulto-tc-univentricular-fontan-trombose-ou-circulacao-colateral",
+    "statement": "A angiotomografia deve ser considerada, no paciente com coração univentricular após a conexão cavopulmonar total (cirurgia de Fontan), na investigação de disfunção valvar ou ventricular, trombose da conexão, ou circulação colateral.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC – 2024",
+    "reference": "Magalhães TA, Carneiro ACC, Moreira VM, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI: 10.36660/abc.20240608. PMID: 39475988 — Seção 4 (Cardiopatias Congênitas), Tabela 72 (uso da TC na avaliação do coração univentricular), conferida linha a linha no texto integral em acesso aberto (PMC12094294) em 01/08/2026.",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "coração univentricular",
+      "cirurgia de fontan",
+      "trombose",
+      "circulação colateral",
+      "angiotomografia"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cc-adulto-rm-univentricular-fontan-trombose-ou-circulacao-colateral",
+    "statement": "A ressonância magnética cardíaca é recomendada, no paciente com coração univentricular após a conexão cavopulmonar total (cirurgia de Fontan), na investigação de disfunção valvar ou ventricular, trombose da conexão, ou circulação colateral — MESMA indicação da angiotomografia (Tabela 72), mas com CLASSE MAIS FORTE aqui (I, contra IIa na TC): a ausência de radiação ionizante pesa a favor da RM neste seguimento que se repete ao longo de décadas na vida adulta do paciente com Fontan.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC – 2024",
+    "reference": "Magalhães TA, Carneiro ACC, Moreira VM, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI: 10.36660/abc.20240608. PMID: 39475988 — Seção 4 (Cardiopatias Congênitas), Tabela 87 (uso da RM na avaliação do coração univentricular), conferida linha a linha no texto integral em acesso aberto (PMC12094294) em 01/08/2026.",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "coração univentricular",
+      "cirurgia de fontan",
+      "trombose",
+      "circulação colateral",
+      "ressonância magnética cardíaca"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cc-adulto-rm-cia-seio-venoso-e-conexao-anomala-parcial-de-veias-pulmonares",
+    "statement": "A ressonância magnética cardíaca é recomendada no diagnóstico e na avaliação pré-operatória da comunicação interatrial tipo seio venoso e/ou do retorno venoso pulmonar anômalo associado — cenário em que o ecocardiograma transtorácico tem sensibilidade mais baixa pela localização posterior do defeito.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC – 2024",
+    "reference": "Magalhães TA, Carneiro ACC, Moreira VM, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI: 10.36660/abc.20240608. PMID: 39475988 — Seção 4 (Cardiopatias Congênitas), Tabela 74 (uso da RM na avaliação da comunicação interatrial), conferida linha a linha no texto integral em acesso aberto (PMC12094294) em 01/08/2026.",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "comunicação interatrial",
+      "cia seio venoso",
+      "retorno venoso pulmonar anômalo",
+      "ressonância magnética cardíaca"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cc-adulto-rm-forame-oval-patente-nao-e-o-exame-de-avaliacao-inicial",
+    "statement": "A ressonância magnética cardíaca NÃO é recomendada como exame de avaliação INICIAL do forame oval patente — recomendação negativa explícita da diretriz, dentro da mesma tabela que recomenda a RM com força para a CIA tipo seio venoso: são cenários diferentes e a diretriz não trata os dois como equivalentes. O método de escolha para o diagnóstico inicial do forame oval patente é o ecocardiograma (transtorácico com contraste, ou transesofágico).",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da SBC – 2024",
+    "reference": "Magalhães TA, Carneiro ACC, Moreira VM, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI: 10.36660/abc.20240608. PMID: 39475988 — Seção 4 (Cardiopatias Congênitas), Tabela 74 (uso da RM na avaliação da comunicação interatrial), conferida linha a linha no texto integral em acesso aberto (PMC12094294) em 01/08/2026.",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "forame oval patente",
+      "ressonância magnética cardíaca",
+      "recomendação negativa"
+    ],
+    "review_status": "revisado"
   }
 ]
