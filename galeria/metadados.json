@@ -2111,5 +2111,171 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "cardiomegalia-acentuada-na-cardiopatia-reumatica-radiografia",
+    "title": "Cardiomegalia acentuada na cardiopatia reumática — radiografia de tórax PA",
+    "modality": "Radiografia",
+    "theme": "Febre reumática",
+    "file_path": "radiografia/cardiomegalia-na-cardiopatia-reumatica.jpg",
+    "findings": "Radiografia de tórax em incidência posteroanterior (PA) mostrando aumento acentuado e global da área cardíaca em paciente com cardiopatia reumática, ocupando a maior parte do hemitórax.",
+    "teaching_points": "Ilustra a repercussão radiográfica da sobrecarga crônica de câmaras cardíacas na doença reumática valvar avançada — cardiomegalia global costuma refletir acometimento multivalvar ou disfunção ventricular associada, não só uma valva isolada.",
+    "source_name": "PMC (Pan African Medical Journal, acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12065553/",
+    "license": "CC BY 4.0",
+    "attribution": "Aurangabadkar G, Choudhary S. Pan Afr Med J. 2025;50:32. PMID: 40353118 — CC BY 4.0.",
+    "tags": [
+      "cardiopatia reumatica",
+      "cardiomegalia",
+      "radiografia de torax"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "regurgitacao-mitral-na-cardite-reumatica-aguda-doppler",
+    "title": "Regurgitação mitral ao Doppler colorido na cardite reumática aguda",
+    "modality": "Ecocardiograma",
+    "theme": "Febre reumática",
+    "file_path": "ecocardiograma/regurgitacao-mitral-na-cardite-reumatica-aguda.jpg",
+    "findings": "Ecocardiograma com mapeamento de fluxo em cores mostrando jato de regurgitação (fluxo azul) na topografia da valva mitral, com seta amarela indicando o jato regurgitante — imagem do exame de reavaliação de uma criança de 4 anos com cardite reumática, documentando progressão de regurgitação mitral trivial para importante no mesmo episódio.",
+    "teaching_points": "Documenta o critério ecocardiográfico central de cardite reumática aguda — regurgitação mitral patológica, aqui capturada em progressão dentro do mesmo episódio agudo, reforçando por que o eco seriado (não um exame único) é parte do acompanhamento da cardite ativa.",
+    "source_name": "PMC (Cureus, acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12954344/",
+    "license": "CC BY 4.0",
+    "attribution": "Smajlović E, Bolic Alic A, Gasal Gvozdenovic E. Cureus. 2026;18(2):e102784. PMID: 41783876 — CC BY 4.0.",
+    "tags": [
+      "cardite reumatica aguda",
+      "regurgitacao mitral",
+      "doppler colorido",
+      "crianca"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "estenose-de-arteria-renal-angiotomografia-3d",
+    "title": "Estenose de óstio de artéria renal — reconstrução 3D de angiotomografia",
+    "modality": "TC",
+    "theme": "Aorta e doença arterial periférica",
+    "file_path": "tc/estenose-de-arteria-renal-angiotc.jpg",
+    "findings": "Reconstrução tridimensional de angiotomografia da aorta abdominal e seus ramos, com seta amarela apontando um estreitamento focal na origem (óstio) da artéria renal esquerda, destacado em vermelho no ponto da estenose.",
+    "teaching_points": "Ilustra a avaliação anatômica não invasiva da doença renovascular — a angiotomografia com reconstrução 3D permite localizar precisamente o ponto de estenose ostial, relevante na investigação de hipertensão renovascular e de edema pulmonar recorrente atribuído a essa causa.",
+    "source_name": "PMC (Medicine/Wolters Kluwer, acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10519504/",
+    "license": "CC BY 4.0",
+    "attribution": "Cheon JE, Kim HJ. Medicine (Baltimore). 2023;102(38):e35228. PMID: 37747008 — CC BY 4.0.",
+    "tags": [
+      "estenose de arteria renal",
+      "doenca renovascular",
+      "angiotomografia 3d"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "carotid-web-fluxo-turbulento-doppler",
+    "title": "\"Carotid web\" com fluxo turbulento em vórtice — Doppler colorido",
+    "modality": "Ecocardiograma",
+    "theme": "Aorta e doença arterial periférica",
+    "file_path": "ecocardiograma/carotid-web-com-fluxo-turbulento-doppler.jpg",
+    "findings": "Ultrassom Doppler colorido de artéria carótida em corte longitudinal, mostrando padrão de fluxo turbulento com mistura de cores (fluxo anterógrado em laranja e componente retrógrado/turbulento em azul) na topografia de uma membrana intimal focal (\"carotid web\") com placa associada.",
+    "teaching_points": "O achado de base aqui é uma membrana intimal focal (carotid web) — variante estrutural distinta de placa aterosclerótica pura —, mas o padrão de fluxo turbulento em vórtice documentado é o mesmo tipo de alteração hemodinâmica que qualquer lesão obstrutiva focal de carótida pode gerar, e que orienta a suspeita de lesão estrutural relevante ao exame Doppler de rotina.",
+    "source_name": "PMC (Journal of Medical Case Reports, acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7487535/",
+    "license": "CC BY 4.0",
+    "attribution": "Ning B, Zhang D, Sui B, He W. J Med Case Rep. 2020;14:145. PMID: 32895054 — CC BY 4.0.",
+    "tags": [
+      "carotid web",
+      "fluxo turbulento",
+      "doppler de carotida",
+      "doenca carotidea"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "tetralogia-de-fallot-civ-e-cavalgamento-aortico-angiotc",
+    "title": "Tetralogia de Fallot — CIV e cavalgamento aórtico à angiotomografia",
+    "modality": "TC",
+    "theme": "Cardiopatias congênitas",
+    "file_path": "tc/tetralogia-de-fallot-civ-e-cavalgamento-aortico.jpg",
+    "findings": "Quatro painéis de angiotomografia em adolescente de 15 anos com tetralogia de Fallot: (a) corte axial com aorta ascendente dilatada; (b) grande comunicação interventricular (seta); (c) cavalgamento da aorta sobre o septo interventricular (seta tracejada); (d) reconstrução volumétrica 3D. IMPORTANTE: este painel mostra com clareza a CIV e o cavalgamento aórtico, mas NÃO demonstra, nos cortes disponíveis, a estenose pulmonar nem a hipertrofia de ventrículo direito — as outras duas anormalidades clássicas da tétrade não estão evidentes nesta série específica de imagens.",
+    "teaching_points": "Documenta por imagem tomográfica dois dos quatro componentes clássicos da tetralogia de Fallot — CIV e cavalgamento aórtico —, com reconstrução 3D complementar. Para a tétrade completa (incluindo estenose pulmonar e hipertrofia de VD), é preciso complementar com outros cortes ou modalidade, o que este registro não fornece isoladamente.",
+    "source_name": "PMC (Case Reports in Radiology, acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11098604/",
+    "license": "CC BY",
+    "attribution": "Dwivedi A, Sharma A, Sharma R, Awasthi P, Choudhary SS. Case Rep Radiol. 2024;2024:3543906. PMID: 38756334 — CC BY.",
+    "tags": [
+      "tetralogia de fallot",
+      "comunicacao interventricular",
+      "cavalgamento aortico",
+      "angiotomografia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "coarctacao-de-aorta-sinal-do-numero-3-radiografia",
+    "title": "Coarctação de aorta do adulto — sinal do número \"3\" e entalhe de costelas",
+    "modality": "Radiografia",
+    "theme": "Cardiopatias congênitas",
+    "file_path": "radiografia/coarctacao-de-aorta-sinal-do-numero-3.jpg",
+    "findings": "Radiografia de tórax posteroanterior com seta branca apontando entalhe no contorno da aorta torácica (\"sinal do número 3\", por dilatação pré e pós-estenótica ladeando a coarctação focal) e setas amarelas indicando entalhe de costelas bilateral (rib notching) nos arcos costais inferiores — achados em paciente adulto com coarctação de aorta não diagnosticada previamente.",
+    "teaching_points": "Dois achados radiográficos clássicos e nomeados da coarctação de aorta não corrigida, juntos na mesma imagem: o sinal do \"3\" (contorno aórtico) e o entalhe de costelas (erosão óssea por circulação colateral intercostal hipertrofiada) — a combinação é praticamente diagnóstica em radiografia simples, mesmo antes de qualquer exame de imagem transversal.",
+    "source_name": "PMC (Cureus, acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12265983/",
+    "license": "CC BY 4.0",
+    "attribution": "Gutiérrez Rangel VY, et al. Cureus. 2025;17(6):e86128. PMID: 40671984 — CC BY 4.0.",
+    "tags": [
+      "coarctacao de aorta",
+      "sinal do numero 3",
+      "entalhe de costelas",
+      "radiografia de torax"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ete-intraoperatorio-isquemia-e-regurgitacao-mitral-aguda",
+    "title": "ETE intraoperatório — disfunção segmentar nova e regurgitação mitral aguda por isquemia miocárdica intraoperatória",
+    "modality": "Ecocardiograma",
+    "theme": "Perioperatório",
+    "file_path": "ecocardiograma/ete-intraoperatorio-isquemia-e-regurgitacao-mitral-aguda.jpg",
+    "findings": "Três painéis de ecocardiograma transesofágico intraoperatório com traçado de ECG simultâneo: (A) e (B) cortes 2D em momentos diferentes do ciclo cardíaco; (C) mapeamento de fluxo em cores mostrando jato de regurgitação volumoso (mistura de laranja e azul) na topografia da valva mitral. Registrado durante hepatectomia maior (cirurgia NÃO cardíaca), com diagnóstico posterior de infarto por lesão de tronco de coronária esquerda confirmado por cateterismo.",
+    "teaching_points": "Caso raro e bem documentado de isquemia miocárdica aguda detectada em tempo real pelo ETE intraoperatório durante cirurgia não cardíaca — a regurgitação mitral aguda (painel C) é consequência da disfunção isquêmica do músculo papilar/parede ventricular, ilustrando por que alteração nova ao ETE intraoperatório exige investigação imediata de causa cardíaca.",
+    "source_name": "PMC (JA Clinical Reports, acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8907374/",
+    "license": "CC BY 4.0",
+    "attribution": "Yagi Y, Mizunoya K, Mori T, Saito H, Morimoto Y. JA Clin Rep. 2022;8:19. PMID: 35266074 — CC BY 4.0.",
+    "tags": [
+      "ete intraoperatorio",
+      "isquemia miocardica intraoperatoria",
+      "regurgitacao mitral aguda",
+      "cirurgia nao cardiaca"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ete-intraoperatorio-suspeita-de-embolia-gasosa",
+    "title": "ETE intraoperatório — avaliação de câmaras cardíacas em suspeita de embolia gasosa transoperatória",
+    "modality": "Ecocardiograma",
+    "theme": "Perioperatório",
+    "file_path": "ecocardiograma/ete-intraoperatorio-suspeita-de-embolia-gasosa.jpg",
+    "findings": "Dois painéis de ecocardiograma transesofágico (datados de dias diferentes, mesmo caso) durante cirurgia endoscópica, com interface do equipamento em chinês. A legenda da fonte descreve a presença de ar nas câmaras cardíacas nesses registros; na resolução e contraste desta cópia da imagem, não é possível confirmar com segurança o artefato específico de bolhas de ar descrito — o registro se limita a identificar a modalidade e o contexto clínico (avaliação intraoperatória por suspeita de embolia gasosa).",
+    "teaching_points": "Ilustra o uso do ETE intraoperatório para avaliação de complicação súbita e potencialmente grave — a embolia gasosa transoperatória, mais associada a procedimentos endoscópicos/laparoscópicos com insuflação de gás ou cirurgias com campo operatório acima do nível do coração — mesmo com a ressalva de que o artefato específico não pôde ser confirmado visualmente nesta cópia.",
+    "source_name": "PMC (Medicine/Wolters Kluwer, acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8202586/",
+    "license": "CC BY 4.0",
+    "attribution": "Guo JL, et al. Medicine (Baltimore). 2021;100(23):e26304. PMID: 34115039 — CC BY 4.0.",
+    "tags": [
+      "ete intraoperatorio",
+      "embolia gasosa",
+      "complicacao intraoperatoria",
+      "cirurgia endoscopica"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]

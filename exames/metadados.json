@@ -2080,5 +2080,190 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "tempo-de-meia-pressao-na-estenose-mitral",
+    "name": "Tempo de meia-pressão (pressure half-time) na estenose mitral",
+    "category": "imagem",
+    "theme": "Valvopatias",
+    "what_it_measures": "Tempo (ms) para o gradiente de pressão transmitral cair à metade do valor inicial no início da diástole, ao Doppler contínuo — usado para estimar a área valvar mitral (AVM) pela fórmula empírica AVM = 220/PHT.",
+    "reference_range": "VERIFICAÇÃO HUMANA NECESSÁRIA para o corte em milissegundos por grau de gravidade — as fontes de referência primária (Baumgartner et al. EAE/ASE 2009; ESC/EACTS 2021) estão bloqueadas por paywall e sem PMC, não confirmadas nesta sessão. O que foi confirmado é o corte pela ÁREA VALVAR derivada: leve >2,5 cm²; moderada 1,6-2,5 cm²; grave ≤1,5 cm² (fonte secundária, revisão 2026 citando ASE/EACVI e ESC 2025).",
+    "indications": "Quantificação de gravidade da estenose mitral quando a planimetria direta do orifício não é viável tecnicamente.",
+    "interpretation": "PHT mais curto = orifício maior = estenose menos grave; PHT mais longo = orifício menor = estenose mais grave. A área valvar derivada da fórmula é o parâmetro citável com segurança.",
+    "limitations": "Confiabilidade reduzida em padrão de desaceleração \"ski slope\" (curvo/borrado); superestima a área valvar em disfunção diastólica com complacência ventricular reduzida ou regurgitação mitral significativa associada. Abordagem multiparamétrica (não PHT isolado) é recomendada pela literatura.",
+    "source_refs": [
+      "Hatle L, Angelsen B, Tromsdal A. Noninvasive assessment of atrioventricular pressure half-time by Doppler ultrasound. Circulation. 1979;60(5):1096-104. PMID: 487543 — fórmula original.",
+      "Pala B, et al. Mitral Stenosis in the Multimodality Imaging Era. Diagnostics (Basel). 2026;16(14):2285. PMID: 42510148 — cortes de área valvar por gravidade.",
+      "Timmermans F, Argulian E, Soliman-Aboumarie H. Continuous-wave Doppler interrogation in valvular heart disease: pearls and pitfalls. Eur Heart J Imaging Methods Pract. 2026;4(1):qyag096. PMID: 42292499 — limitações do método."
+    ],
+    "tags": [
+      "tempo de meia-pressao",
+      "pressure half-time",
+      "estenose mitral",
+      "area valvar"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "strain-longitudinal-global-em-valvopatia-assintomatica",
+    "name": "Strain longitudinal global (GLS) como marcador precoce de disfunção subclínica em valvopatia assintomática",
+    "category": "imagem",
+    "theme": "Valvopatias",
+    "what_it_measures": "Encurtamento longitudinal médio do miocárdio do ventrículo esquerdo ao longo do ciclo cardíaco (%), medido por speckle-tracking — detecta disfunção contrátil subclínica antes da queda da FEVE.",
+    "reference_range": "Não é valor de referência populacional normal — é o corte usado em coortes de pacientes já com valvopatia significativa para estratificar risco: GLS médio basal de -19,5% em regurgitação aórtica ≥III+ assintomática com FEVE preservada; GLS mediano de -20,7% em regurgitação mitral primária ≥3+ assintomática com FEVE preservada.",
+    "indications": "Estratificação prognóstica em paciente assintomático com regurgitação mitral ou aórtica significativa e FEVE preservada, antes de atingir critério cirúrgico convencional.",
+    "interpretation": "GLS mais positivo (menos negativo, \"pior\") associa-se a maior mortalidade tardia. Em coorte de RA (n=1.063), risco de morte em 5 anos aumentou significativamente com GLS pior que -19% (log-rank p=0,01; estatística C do modelo clínico subiu de 0,61 para 0,77 ao acrescentar GLS e cirurgia). Em coorte de RM (n=448), GLS mais anormal associou-se a pior sobrevida (HR 1,17 por unidade, p<0,01), com utilidade sinérgica ao BNP.",
+    "limitations": "Medido offline com software proprietário nas coortes de origem — variabilidade entre fornecedores é limitação conhecida da técnica; estudos observacionais de centro único, não ensaios randomizados; corte não validado prospectivamente como gatilho formal de indicação cirúrgica.",
+    "source_refs": [
+      "Alashi A, et al. Incremental Prognostic Utility of Left Ventricular Global Longitudinal Strain in Asymptomatic Patients With Significant Chronic Aortic Regurgitation. JACC Cardiovasc Imaging. 2018;11(5):673-682. PMID: 28624411.",
+      "Alashi A, et al. Synergistic Utility of Brain Natriuretic Peptide and Left Ventricular Global Longitudinal Strain in Asymptomatic Patients With Significant Primary Mitral Regurgitation. Circ Cardiovasc Imaging. 2016;9(7):e004451. PMID: 27342145."
+    ],
+    "tags": [
+      "strain longitudinal global",
+      "disfuncao subclinica",
+      "regurgitacao mitral",
+      "regurgitacao aortica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "rm-com-realce-tardio-pericardico-na-avaliacao-de-constricao",
+    "name": "RM cardíaca com realce tardio pericárdico na avaliação de constrição reversível",
+    "category": "imagem",
+    "theme": "Pericárdio",
+    "what_it_measures": "Espessura e intensidade do realce tardio de gadolínio no pericárdio, como marcador de inflamação pericárdica ATIVA, combinada a cine-RM (septal bounce, acoplamento ventricular) para avaliar fisiologia constritiva.",
+    "reference_range": "Espessura de realce tardio pericárdico ≥3 mm: sensibilidade 86% e especificidade 80% para prever reversibilidade da constrição após terapia anti-inflamatória (n=29; espessura basal 4±1 mm no grupo reversível vs. 2±1 mm no persistente, p=0,001). Intensidade qualitativa moderada/intensa em 93% do grupo reversível vs. 33% do persistente (p=0,002).",
+    "indications": "Diferenciar constrição pericárdica REVERSÍVEL (inflamatória, candidata a tratamento clínico) de constrição FIXA (fibrótica, candidata a pericardiectomia), antes de decidir a conduta.",
+    "interpretation": "Realce tardio espesso/intenso, associado a PCR e VHS elevados, prediz resposta à terapia anti-inflamatória. Ausência de realce sugere fibrose já estabelecida, com menor chance de reversão.",
+    "limitations": "Estudo piloto pequeno (n=29, centro único), não validado em coorte maior; contraindicado em disfunção renal grave (gadolínio); não substitui os critérios hemodinâmicos/ecocardiográficos de constrição.",
+    "source_refs": [
+      "Feng D, et al. Cardiac magnetic resonance imaging pericardial late gadolinium enhancement and elevated inflammatory markers can predict the reversibility of constrictive pericarditis after antiinflammatory medical therapy: a pilot study. Circulation. 2011;124(17):1830-7. PMID: 21969014.",
+      "2015 ESC Guidelines for the diagnosis and management of pericardial diseases. Eur Heart J. 2015;36(42):2921-2964. PMID: 26320112 — contexto diagnóstico."
+    ],
+    "tags": [
+      "ressonancia magnetica cardiaca",
+      "realce tardio pericardico",
+      "pericardite constritiva reversivel"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "pcr-como-guia-de-duracao-de-tratamento-na-pericardite-recorrente",
+    "name": "Proteína C-reativa como marcador de atividade e guia de duração de tratamento na pericardite recorrente",
+    "category": "laboratorial",
+    "theme": "Pericárdio",
+    "what_it_measures": "Proteína de fase aguda hepática, marcador inespecífico de inflamação sistêmica, usado para acompanhar atividade da pericardite recorrente.",
+    "reference_range": "Sem corte numérico único validado para \"atividade de pericardite\" — o uso descrito na literatura é a NORMALIZAÇÃO da PCR como gatilho para iniciar o desmame medicamentoso, não um valor-alvo fixo. Referência ilustrativa (não corte diagnóstico): PCR basal 59±52 mg/L em constrição reversível vs. 12±14 mg/L em persistente (p=0,04).",
+    "indications": "Acompanhamento de pericardite aguda recorrente idiopática/pós-lesão cardíaca, para guiar velocidade e momento do desmame de AINE/corticoide/colchicina.",
+    "interpretation": "Manter dose de ataque até normalização da PCR; só então considerar redução gradual. Desmame ANTES da normalização associa-se a maior risco de recidiva.",
+    "limitations": "Inespecífica — eleva-se em qualquer processo inflamatório/infeccioso concomitante; pericardite pode cursar com PCR normal em minoria dos casos; não substitui avaliação clínica e de imagem.",
+    "source_refs": [
+      "Maestroni S, Di Corato PR, Cumetti D, et al. Recurrent pericarditis: autoimmune or autoinflammatory? Autoimmun Rev. 2012;12(1):60-5. PMID: 22884556.",
+      "Imazio M, et al. Efficacy and safety of colchicine for treatment of multiple recurrences of pericarditis (CORP-2). Lancet. 2014;383(9936):2232-7. PMID: 24694983 — contexto de ensaio."
+    ],
+    "tags": [
+      "proteina c-reativa",
+      "pericardite recorrente",
+      "guia de desmame terapeutico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "itb-de-repouso-no-rastreio-de-dap-assintomatica",
+    "name": "Índice tornozelo-braço (ITB) de repouso no rastreio de doença arterial periférica assintomática",
+    "category": "metodo_grafico",
+    "theme": "Aorta e doença arterial periférica",
+    "what_it_measures": "Razão entre a pressão sistólica no tornozelo (artéria tibial posterior/pediosa) e no braço (artéria braquial), medida em repouso.",
+    "reference_range": "Anormal (DAP): ≤0,90. Limítrofe: 0,91-0,99. Normal: 1,00-1,40. Não compressível: >1,40 (calcificação arterial — exige índice dedo-braço).",
+    "indications": "Rastreio em paciente de RISCO AUMENTADO (2024 ACC/AHA, Classe 2a, Nível B-NR): idade ≥65 anos; 50-64 anos com diabetes, tabagismo, dislipidemia, hipertensão, DRC ou história familiar de DAP; <50 anos com diabetes + 1 fator de risco aterosclerótico adicional; doença aterosclerótica conhecida em outro território. Rastreio em quem NÃO tem esses fatores é Classe 3 (sem benefício) — não recomendado.",
+    "interpretation": "ITB ≤0,90 confirma DAP mesmo em paciente assintomático. ITB >1,40 NÃO descarta doença — indica calcificação arterial e exige índice dedo-braço para conclusão diagnóstica.",
+    "limitations": "Artérias não compressíveis (diabetes, DRC avançada, idosos) falseiam o resultado para cima; não localiza a lesão nem define gravidade funcional.",
+    "source_refs": [
+      "2024 ACC/AHA/AACVPR/APMA/ABC/SCAI/SVM/SVN/SVS/SIR/VESS Guideline for the Management of Lower Extremity Peripheral Artery Disease. Circulation. 2024;149(24):e1313-e1410. PMID: 38743805. PMCID: PMC12782132.",
+      "Screening for Peripheral Artery Disease... US Preventive Services Task Force Recommendation Statement. JAMA. 2018;320(2):177-183. PMID: 29998344 — contexto de rastreio populacional geral."
+    ],
+    "tags": [
+      "indice tornozelo-braco",
+      "itb",
+      "rastreio de dap",
+      "doenca arterial periferica assintomatica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "duplex-de-vigilancia-pos-evar",
+    "name": "Ultrassom dúplex de vigilância pós-EVAR",
+    "category": "imagem",
+    "theme": "Aorta e doença arterial periférica",
+    "what_it_measures": "Fluxo residual no saco aneurismático (endoleak) e diâmetro do saco aneurismático, no seguimento após reparo endovascular de aneurisma de aorta abdominal (EVAR).",
+    "reference_range": "Sem corte numérico — protocolo de seguimento. Acurácia diagnóstica para endoleak por metanálise (42 estudos, 4.220 pacientes): dúplex colorido convencional (CDUS) — sensibilidade 0,82 (IC95% 0,66-0,91), especificidade 0,93 (IC95% 0,87-0,96); dúplex com contraste (CE-CDUS) — sensibilidade 0,94 (IC95% 0,85-0,98), especificidade 0,95 (IC95% 0,90-0,98), estatisticamente superior ao CDUS em sensibilidade (p=0,0242).",
+    "indications": "Seguimento pós-EVAR conforme diretriz SVS 2018: TC contrastada + dúplex no 1º mês; sem endoleak/sem crescimento do saco em 1 ano → dúplex anual (ou TC se dúplex inviável); endoleak tipo II com saco estável/reduzindo → dúplex a cada 6 meses por 24 meses, depois anual.",
+    "interpretation": "Dúplex sem contraste tem boa especificidade mas sensibilidade inferior à TC/RM — útil como triagem de rotina; exame positivo ou dúvida clínica exige confirmação por TC. Dúplex com contraste aproxima-se da acurácia da TC.",
+    "limitations": "Operador-dependente; janela acústica limitada (obesidade, gás intestinal); estudos da metanálise de qualidade moderada a baixa (só 3/16 estudos de CDUS preencheram todos os critérios QUADAS).",
+    "source_refs": [
+      "Chaikof EL, et al. The Society for Vascular Surgery practice guidelines on the care of patients with an abdominal aortic aneurysm. J Vasc Surg. 2018;67(1):2-77.e2. PMID: 29268916 — protocolo de vigilância.",
+      "Abraha I, et al. Ultrasonography for endoleak detection after endoluminal abdominal aortic aneurysm repair. Cochrane Database Syst Rev. 2017;6(6):CD010296. PMID: 28598495 — acurácia diagnóstica.",
+      "Zaiem F, et al. A systematic review of surveillance after endovascular aortic repair. J Vasc Surg. 2018;67(1):320-331.e37. PMID: 28662928."
+    ],
+    "tags": [
+      "duplex pos-evar",
+      "endoleak",
+      "vigilancia de aneurisma",
+      "aneurisma de aorta abdominal"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "titulo-de-aso-antiestreptolisina-o",
+    "name": "Título de antiestreptolisina O (ASO)",
+    "category": "laboratorial",
+    "theme": "Febre reumática",
+    "what_it_measures": "Anticorpo IgG contra a estreptolisina O, exotoxina do Streptococcus pyogenes (grupo A) — evidência sorológica de infecção estreptocócica recente ou prévia.",
+    "reference_range": "Limite superior da normalidade (percentil 80) em crianças saudáveis, por faixa etária (coorte australiana, n=66): 4-5 anos: 120 UI/mL; 6-9 anos: 480 UI/mL; 10-14 anos: 320 UI/mL. Amostra pequena de estudo único — o valor absoluto varia por população/laboratório; a AHA recomenda usar o limite de referência do laboratório local, não um número universal.",
+    "indications": "Critério de evidência de infecção estreptocócica prévia dentro dos critérios de Jones revisados (AHA 2015) para diagnóstico de febre reumática aguda — exigido em todos os casos, exceto coreia isolada e cardite indolente de apresentação tardia.",
+    "interpretation": "Título ELEVADO OU EM ASCENSÃO (2 amostras pareadas com intervalo de 2 semanas) é mais informativo que um único valor absoluto acima do limite — um título isolado pode permanecer elevado por meses mesmo sem infecção ativa. Medir 2 anticorpos diferentes (ASO + anti-DNase B) aumenta a acurácia diagnóstica.",
+    "limitations": "Resposta fraca a infecção estreptocócica cutânea (piodermite) comparada à faringite; pode estar normal em infecção muito recente (título ainda não subiu) ou muito tardia (já em declínio); título elevado isolado não distingue infecção ativa de exposição prévia sem relação com o quadro atual.",
+    "source_refs": [
+      "Gewitz MH, et al. Revision of the Jones Criteria for the diagnosis of acute rheumatic fever in the era of Doppler echocardiography. Circulation. 2015;131(20):1806-18. PMID: 25908771.",
+      "Johnson DR, Kurlan R, Leckman J, Kaplan EL. The human immune response to streptococcal extracellular antigens. Clin Infect Dis. 2010;50(4):481-90. PMID: 20067422.",
+      "Danchin MH, Carlin JB, Devenish W, Nolan TM, Carapetis JR. New normal ranges of antistreptolysin O and antideoxyribonuclease B titres for Australian children. J Paediatr Child Health. 2005;41(11):583-6. PMID: 16398843."
+    ],
+    "tags": [
+      "aso",
+      "antiestreptolisina o",
+      "criterios de jones",
+      "evidencia de infeccao estreptococica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "titulo-de-anti-dnase-b",
+    "name": "Título de anti-DNase B (antideoxirribonuclease B)",
+    "category": "laboratorial",
+    "theme": "Febre reumática",
+    "what_it_measures": "Anticorpo IgG contra a desoxirribonuclease B, exoenzima do Streptococcus pyogenes — evidência sorológica complementar de infecção estreptocócica.",
+    "reference_range": "Mesma coorte australiana do ASO, limite superior da normalidade (percentil 80) por faixa etária: 4-5 anos: 100 U/mL; 6-9 anos: 400 U/mL; 10-14 anos: 380 U/mL.",
+    "indications": "Mesma indicação do ASO — critério de evidência de infecção estreptocócica prévia nos critérios de Jones revisados (AHA 2015); particularmente útil quando o ASO está normal e a suspeita clínica persiste.",
+    "interpretation": "Interpretar em conjunto com o ASO — medir os dois anticorpos aumenta a sensibilidade diagnóstica em relação a medir um só. Título elevado OU em ascensão (2 amostras), não valor isolado, é o padrão mais robusto.",
+    "limitations": "Mesmas do ASO — valores de referência dependem de população e método do laboratório; limite superior derivado de amostra pequena de crianças australianas (n=66), não de coorte brasileira ou multicêntrica ampla.",
+    "source_refs": [
+      "Gewitz MH, et al. Revision of the Jones Criteria for the diagnosis of acute rheumatic fever. Circulation. 2015;131(20):1806-18. PMID: 25908771.",
+      "Johnson DR, Kurlan R, Leckman J, Kaplan EL. The human immune response to streptococcal extracellular antigens. Clin Infect Dis. 2010;50(4):481-90. PMID: 20067422.",
+      "Danchin MH, Carlin JB, Devenish W, Nolan TM, Carapetis JR. New normal ranges of antistreptolysin O and antideoxyribonuclease B titres for Australian children. J Paediatr Child Health. 2005;41(11):583-6. PMID: 16398843."
+    ],
+    "tags": [
+      "anti-dnase b",
+      "criterios de jones",
+      "evidencia de infeccao estreptococica"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
