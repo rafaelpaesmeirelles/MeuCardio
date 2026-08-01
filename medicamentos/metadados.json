@@ -4448,5 +4448,80 @@
       "interacoes_detalhe": "Inibidores fortes/moderados de CYP3A4 (cetoconazol, itraconazol, eritromicina, diltiazem) e inibidores de CYP2C19 (ticlopidina, fluconazol, omeprazol) aumentam a exposição ao cilostazol — reduzir para 50 mg 2x/dia. AAS: uso concomitante de curto prazo mostrou potencialização da inibição plaquetária sem aumento significativo de complicações hemorrágicas nos estudos citados pelo rótulo do FDA — não há contraindicação formal à associação, mas cabe cautela clínica. Varfarina: o rótulo do FDA não documenta interação farmacocinética significativa. Anticoagulantes, antiagregantes plaquetários, trombolíticos e prostaglandina E1 (bula brasileira): risco de aumento da tendência hemorrágica com uso concomitante.",
       "drug_class_completo": "Inibidor da fosfodiesterase III (PDE3) — antiagregante plaquetário e vasodilatador arterial, com efeito adicional de inibição da captação de adenosina"
     }
+  },
+  {
+    "slug": "fenofibrato",
+    "review_status": "pendente_revisao",
+    "generic_name": "Fenofibrato",
+    "brand_names": [
+      "Lipanon",
+      "Lipidil"
+    ],
+    "drug_class": "Fibrato — agonista do receptor ativado por proliferador de peroxissoma alfa (PPAR-α)",
+    "mechanism": "Pró-droga rapidamente hidrolisada, após absorção oral, a seu metabólito ativo, o ácido fenofíbrico. Por ativação do PPAR-α, aumenta a atividade da lipase lipoproteica (33-37%), enzima que catalisa a lipólise dos quilomícrons e o catabolismo das VLDL — reduzindo a síntese e aumentando a degradação de triglicerídeos (queda média de 30-50%, podendo chegar a 60% quando o nível basal é muito alto). Interfere também na síntese hepática de colesterol, reduz LDL e VLDL, e eleva HDL-colesterol e as apolipoproteínas A1/A2, com redução de apolipoproteína B — melhorando a relação Apo A1/Apo B, marcador de risco aterogênico. Descrito também efeito uricosúrico (~25%) e redução dos níveis de fibrinogênio. Fonte: bulas de LIPANON (Farmasa) e LIPIDIL (fenofibrato micronizado). **Nota de contexto clínico, cruzada com o documento já existente em `content/Prevenção_e_lipídios/fibratos-e-risco-cardiovascular-residual-...`**: apesar desse efeito lipídico expresso e consistente, nem o fenofibrato (ACCORD-Lipid, 2010) nem o pemafibrato — fibrato seletivo do PPAR-α (PROMINENT, 2022) — reduziram evento cardiovascular maior quando acrescentados à estatina; ver `outcomes` abaixo.",
+    "presentations": [
+      "Cápsulas 250 mg (fenofibrato não micronizado, forma retard) — Lipanon, Farmasa. Posologia: 1 cápsula/dia.",
+      "Cápsulas 200 mg (fenofibrato micronizado) — Lipidil. Posologia: 1 cápsula/dia.",
+      "VERIFICAÇÃO HUMANA NECESSÁRIA: as duas bulas brasileiras consultadas são de apresentações e laboratórios diferentes (250 mg não micronizado × 200 mg micronizado), com posologia de 1 cápsula/dia nas duas — mas **nenhuma das duas bulas lidas afirma que as duas apresentações são bioequivalentes ou intercambiáveis mg-a-mg**; a micronização altera a biodisponibilidade (é o motivo de existir a forma micronizada). Não recomendar troca entre apresentações/marcas sem conferir a bula específica do produto prescrito. O rótulo de referência internacional (DailyMed/FDA, fenofibrate) usa ainda outras dosagens (48 mg e 145 mg, formulação nanocristalina), **não equivalentes em miligramas às apresentações brasileiras** — citado aqui só como referência de mecanismo/farmacologia geral, nunca para conversão de dose."
+    ],
+    "indications": [
+      "Hipercolesterolemia tipos IIa e IIb, isolada ou associada, quando dieta rigorosa foi insuficiente (Lipanon, Lipidil)",
+      "Hipertrigliceridemia endógena tipo IV, isolada ou associada (tipos IIb, III e V) (Lipanon, Lipidil)",
+      "Hiperlipidemia mista, em combinação com ezetimiba, em adultos — indicação registrada do lado da ezetimiba (verbete `ezetimiba` desta base), não descrita nas bulas do fenofibrato consultadas nesta sessão",
+      "Hipertrigliceridemia severa (>10 g/L, risco de pancreatite aguda) é a **única** situação em que o uso é considerado na gestação, quando o risco da hipertrigliceridemia supera o risco do fármaco — não é indicação de rotina (ver `pregnancy`)"
+    ],
+    "contraindications": [
+      "Hipersensibilidade a qualquer componente da fórmula",
+      "Insuficiência hepática, incluindo cirrose biliar primária e anormalidades persistentes nos testes de função hepática (Lipanon)",
+      "Insuficiência renal grave — Lipanon especifica clearance de creatinina <50 mL/min; Lipidil contraindica em \"insuficiência renal grave\" sem valor numérico",
+      "Gravidez, exceto hipertrigliceridemia severa (>10 g/L) com risco de pancreatite aguda superando o risco do fármaco (ver `pregnancy`)",
+      "Lactação (ver `lactation`)",
+      "Associação com outros fibratos ou com inibidores da HMG-CoA redutase (estatina), a não ser sob criteriosa avaliação e prescrição médica, pelo risco de miopatia e rabdomiólise — Lipanon recomenda EVITAR a combinação; se estritamente necessária, monitorar sinais e sintomas de miopatia/rabdomiólise",
+      "VERIFICAÇÃO HUMANA NECESSÁRIA: as duas bulas divergem sobre uso pediátrico — a bula do Lipidil contraindica em crianças de forma absoluta; a do Lipanon permite, a critério médico e só se \"absolutamente necessário\", em crianças acima de 10 anos, na dose de 5 mg/kg/dia sem ultrapassar esse valor. Não há como resolver a divergência com as fontes desta sessão; até confirmação, tratar uso pediátrico como não recomendado."
+    ],
+    "adverse_effects": [
+      "Sistema nervoso central (raras, <1%): cefaleia, insônia, fadiga, tonturas",
+      "Gastrintestinal (frequentes, 3-5%): obstipação ou diarreia, dispepsia, flatulência, náuseas, desconforto gástrico; possível maior propensão a cálculos biliares, ainda não estabelecida",
+      "Hepático: elevação de transaminases (TGO/TGP), geralmente transitória — recomendado controle trimestral no primeiro ano, considerar suspensão se elevação >3x o limite superior da normalidade",
+      "Musculoesquelético: mialgia difusa, sensibilidade dolorosa e fraqueza muscular (pouco frequentes, 1-3%, reversíveis com a suspensão), elevação de CPK, rabdomiólise (muito rara) — risco maior em associação com estatina",
+      "Cutâneo (raras, <1%, exceto rash 3-5%): eritema, prurido, urticária, eczema, fotossensibilização, alopecia, rash cutâneo",
+      "Genitourinário (raras, <1%): disfunção sexual (redução de libido, impotência)"
+    ],
+    "dosing": {
+      "padrao": "1 cápsula ao dia, junto à refeição principal (Lipanon, 250 mg) ou no almoço/jantar (Lipidil, 200 mg micronizado). A absorção do fenofibrato aumenta cerca de 35% na presença de alimento — tomar sempre junto à refeição.",
+      "insuficiencia renal": "Contraindicado em insuficiência renal grave (Lipanon especifica clearance de creatinina <50 mL/min). A mesma bula do Lipanon, na seção farmacocinética, também descreve que \"ajuste de dose (reduzindo a dose ou aumentando o intervalo entre doses) deve ser considerado em pacientes com insuficiência renal severa\" — **há tensão entre contraindicar de forma absoluta e ao mesmo tempo instruir ajuste de dose no mesmo documento**; não resolvida com as fontes consultadas. VERIFICAÇÃO HUMANA NECESSÁRIA: não há, nas bulas brasileiras lidas, uma tabela de redução de dose por faixa de clearance/TFGe. Sem insuficiência renal ou com insuficiência leve, a bula não descreve necessidade de ajuste.",
+      "insuficiencia hepatica": "Contraindicado (insuficiência hepática, incluindo cirrose biliar primária e anormalidades persistentes nos testes de função hepática)",
+      "idosos": "Sem restrição de uso; a bula do Lipanon afirma que a posologia é a mesma recomendada para as demais faixas etárias",
+      "pediatria": "VERIFICAÇÃO HUMANA NECESSÁRIA — ver divergência registrada em `contraindications`. Até confirmação, não recomendado.",
+      "fonte": "Bula de LIPANON (fenofibrato, cápsulas retard 250 mg, Laboratório Americano de Farmacoterapia S.A. — Farmasa, MS 1.0394.0499) e bula de LIPIDIL (fenofibrato micronizado, cápsulas 200 mg), ambas obtidas via saudedireta.com.br em 01/08/2026. Nenhuma das duas traz data de bula recente/RDC 47/2009 explícita nas seções lidas — a do Lipanon é datada de 2005 e usa formato pré-RDC 47/2009 (seção \"Contra-indicações\" com hífen); ambas devem ser conferidas contra a bula vigente mais atual do produto especificamente prescrito antes de uso clínico."
+    },
+    "interactions_notes": {
+      "anticoagulantes_orais": "Acenocumarol, dicumarol, varfarina, femprocumon, fenindiona: o fenofibrato POTENCIALIZA a ação anticoagulante, aumentando risco de sangramento. Lipanon recomenda reduzir a dose do anticoagulante em 30% ao iniciar o fenofibrato; Lipidil recomenda reduzir para 1/3 da dose usual — as duas bulas convergem na necessidade de redução expressiva e monitorização frequente do tempo de protrombina/INR, com ajuste adicional conforme resposta, e revisão quando o fenofibrato for suspenso.",
+      "estatinas": "Inibidores da HMG-CoA redutase: risco aumentado de miopatia e rabdomiólise. Uso combinado deve ser evitado; se estritamente necessário, monitorar sinais e sintomas de miopatia/rabdomiólise.",
+      "colestiramina": "Sequestrante de ácidos biliares: pode reduzir significativamente a absorção do fenofibrato — administrar o fenofibrato 1 hora antes ou 4-6 horas depois da colestiramina.",
+      "ciclosporina": "Sem interação farmacocinética significativa relevante descrita, mas pode ocorrer discreta elevação da creatinina sérica — monitorar níveis séricos de ciclosporina e creatinina.",
+      "hipoglicemiantes_orais": "Metabolizados pelo citocromo P450 CYP3A4 (metformina, tolbutamida, glibenclamida/gliburida): potencial de interação, sem detalhamento adicional na fonte.",
+      "outros_citados_sem_detalhamento": "Eritromicina, derivados imidazólicos, inibidores da MAO, grapefruit (toranja) — citados na bula sem detalhamento de mecanismo ou conduta.",
+      "fonte": "Bulas de LIPANON e LIPIDIL (ver `dosing.fonte`)."
+    },
+    "outcomes": {
+      "accord_lipid_2010": "ACCORD-Lipid (ACCORD Study Group; Ginsberg HN et al., N Engl J Med. 2010;362(17):1563-1574, PMID 20228404): fenofibrato acrescentado a sinvastatina em 5.518 diabéticos tipo 2 de alto risco cardiovascular NÃO reduziu o desfecho composto (IAM não fatal, AVC não fatal, morte cardiovascular) vs. placebo — taxa anual 2,2% vs. 2,4% (HR 0,92; IC95% 0,79-1,08; p=0,32). Análise de subgrupo exploratória sugeriu possível benefício no subgrupo com triglicerídeo alto E HDL-C baixo simultaneamente (p=0,057 para interação), hipótese testada diretamente pelo PROMINENT (ver abaixo) e não confirmada.",
+      "prominent_2022_classe_relacionada": "PROMINENT (Das Pradhan A et al.; PROMINENT Investigators, N Engl J Med. 2022;387(21):1923-1934, PMID 36342113) testou pemafibrato — modulador seletivo do PPAR-α, farmacologicamente distinto do fenofibrato, não o mesmo composto — em 10.497 diabéticos tipo 2 com hipertrigliceridemia leve a moderada e HDL-C/LDL-C baixos. Apesar de reduzir triglicerídeos (-26,2%) e colesterol remanescente (-25,6%), NÃO reduziu o desfecho cardiovascular primário (HR 1,03; IC95% 0,91-1,15) e mostrou sinal de mais eventos renais adversos e tromboembolismo venoso.",
+      "sintese": "Os dois ensaios, lidos juntos (documento completo em `content/Prevenção_e_lipídios/fibratos-e-risco-cardiovascular-residual-o-ensaio-prominent-e-o-precedente-do-accord-lipid.md`), estabelecem que reduzir triglicerídeo e colesterol remanescente com fibrato NÃO se traduziu em menos evento cardiovascular maior em diabético já tratado com estatina — nem com fenofibrato, nem com pemafibrato. Nenhum dos dois ensaios testou a indicação clássica de hipertrigliceridemia grave (>500 mg/dL, prevenção de pancreatite) como desfecho cardiovascular."
+    },
+    "pregnancy": "Contraindicado. Estudos pré-clínicos não demonstraram teratogenicidade, mas os dados em humanos são insuficientes para excluir totalmente o risco fetal — por isso os fibratos NÃO estão indicados na gravidez, EXCETO nos casos em que os riscos associados à hipertrigliceridemia severa (>10 g/L, com risco de pancreatite aguda) superem os riscos potenciais do fármaco. Informar o médico em caso de gravidez durante ou após o tratamento. Fonte: bulas de LIPANON e LIPIDIL.",
+    "lactation": "Não se dispõe de informação sobre a passagem do fenofibrato para o leite materno (Lipanon) — recomenda-se evitar o uso em mulheres amamentando ou suspender a amamentação nos casos em que o uso do fármaco é indispensável. A bula do Lipidil orienta, de forma mais direta, que mulheres que realmente necessitem do medicamento após o parto não amamentem. Fonte: bulas de LIPANON e LIPIDIL.",
+    "references": [
+      "Bula de LIPANON (fenofibrato, cápsulas retard 250 mg), Laboratório Americano de Farmacoterapia S.A. (Farmasa), MS 1.0394.0499. Obtida em saudedireta.com.br em 01/08/2026. Nota de procedência: documento datado de 2005, em formato anterior à RDC 47/2009 (seção \"Contra-indicações\" com hífen) — conferir contra a bula vigente mais recente antes de uso clínico.",
+      "Bula de LIPIDIL (fenofibrato micronizado, cápsulas 200 mg). Obtida em saudedireta.com.br em 01/08/2026. Sem data de bula visível no documento extraído; também em formato pré-RDC 47/2009 (seção \"Contra-indicações\" com hífen).",
+      "Fenofibrate — rótulo aprovado pelo FDA, DailyMed (National Library of Medicine), consultado como referência internacional complementar para contexto farmacológico geral (não usado para dose, por usar apresentações — 48 mg e 145 mg, forma nanocristalina — não equivalentes às brasileiras).",
+      "ACCORD Study Group; Ginsberg HN, Elam MB, Lovato LC, Crouse JR 3rd, et al. Effects of Combination Lipid Therapy in Type 2 Diabetes Mellitus. N Engl J Med. 2010;362(17):1563-1574. DOI: 10.1056/NEJMoa1001282. PMID: 20228404",
+      "Das Pradhan A, Glynn RJ, Fruchart JC, MacFadyen JG, Zaharris ES, et al; PROMINENT Investigators. Triglyceride Lowering with Pemafibrate to Reduce Cardiovascular Risk. N Engl J Med. 2022;387(21):1923-1934. DOI: 10.1056/NEJMoa2210645. PMID: 36342113",
+      "content/Prevenção_e_lipídios/fibratos-e-risco-cardiovascular-residual-o-ensaio-prominent-e-o-precedente-do-accord-lipid.md — documento já publicado na base, cruzado nesta entrada para o contexto de desfecho cardiovascular"
+    ],
+    "notes": {
+      "combinacao_com_ezetimiba": "O verbete `ezetimiba` desta base já registra indicação de uso combinado com fenofibrato na hiperlipidemia mista, com fonte na bula do ZETIA — não confirmado de forma independente na bula do fenofibrato consultada nesta sessão.",
+      "distincao_fenofibrato_x_pemafibrato": "Pemafibrato (testado no PROMINENT) é um modulador seletivo do PPAR-α, quimicamente distinto do fenofibrato (testado no ACCORD-Lipid) — os dois ensaios convergem no resultado neutro para desfecho cardiovascular, mas não são o mesmo fármaco, e o pemafibrato não tem registro nesta base de medicamentos até o momento desta entrada."
+    }
   }
 ]
