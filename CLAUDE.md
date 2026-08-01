@@ -3642,3 +3642,19 @@ não tem esse gate no código (só confere existência do item, não `review_sta
 "revisado antes de publicar" que venho aplicando é **prática desta sessão**, não uma trava do
 sistema — vale para quem for revisar a régua de qualidade de `trilhas/` sem supor que o campo
 sempre significou o que a Documentação geral do produto diz que significa.
+
+### ✅ Trilhas: todos os 27 temas com 2+ trilhas, 01/08/2026 (sessão de /root)
+19 trilhas novas em 4 lotes (`7b9453a`, `d9decdc`, `a58a7ab`, `03ccc5a`) — segunda trilha em cada um
+dos 19 temas que tinham só 1. **Curadoria pura**: todo `item_slug` conferido como documento
+publicado no banco antes de escrever, nenhum reaproveita item já usado na trilha 1 do mesmo tema.
+Disco em **59 trilhas**, carregadas e publicadas pelo painel `corvia` do tmux.
+
+**Auditoria de referência rodada sobre as 59** (não só as novas): **zero referência quebrada, zero
+apontando para item não publicado.** Auditoria geral de publicação nas 11 tabelas, mesmo dia:
+`documents` 575/575 · `scientific_studies` 166/166 · `study_tracks` 59/59 · `clinical_cases` 87/87
+· `emergency_protocols` 24/24 · `discharge_checklists` 9/9 · `patient_materials` 11/11 — todas
+100%. **Duas exceções que não são orfãs conhecidas, achado novo**: `evidence_records` 1009/1011,
+com `chagas-hiv-profilaxia-secundaria-com-benznidazol-com-cd4-abaixo-de-200` (`revisado`,
+não publicado) além do órfão já registrado; e `drugs` 89/101, com 12 não publicados contra os
+4 órfãos que o arquivo já documentava — vale a Biblioteca conferir se os 8 a mais são retenção
+proposital. Avisado por `avisar.sh`.
