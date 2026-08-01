@@ -16,7 +16,7 @@ router = APIRouter(prefix="/api/ai", tags=["ia"])
 
 # IDs corretos dos modelos Claude, sem sufixo de data — mesma allowlist usada
 # para validar `modelo` e para popular o seletor no frontend.
-MODELOS_ANTHROPIC_PERMITIDOS = ["claude-opus-5", "claude-sonnet-5", "claude-haiku-4-5"]
+MODELOS_ANTHROPIC_PERMITIDOS = ["claude-opus-5", "claude-sonnet-5", "claude-haiku-4-5", "claude-fable-5"]
 
 
 class Pergunta(BaseModel):
@@ -24,7 +24,7 @@ class Pergunta(BaseModel):
     conversation_id: int | None = None
     temas: list[str] | None = None
     modelo: str | None = None
-    usar_internet: bool = False
+    usar_internet: bool = True
 
 
 @router.get("/status")
@@ -127,10 +127,17 @@ def perguntar(dados: Pergunta, db: Session = Depends(get_db), user=Depends(curre
     ).scalars().all()
     historico = [{"role": m.papel, "content": m.conteudo} for m in anteriores]
 
+    # Usuário não escolheu modelo manualmente no dropdown ("Automático") — decide
+    # pelo conteúdo da pergunta, em vez de deixar o provider cair no modelo fixo
+    # do .env.
+    modelo_efetivo = dados.modelo
+    if modelo_efetivo is None and settings.ai_provider == "anthropic":
+        modelo_efetivo = rag.escolher_modelo_automatico(dados.pergunta)
+
     try:
         r = rag.perguntar(
             db, dados.pergunta, historico, dados.temas,
-            modelo=dados.modelo, usar_internet=dados.usar_internet,
+            modelo=modelo_efetivo, usar_internet=dados.usar_internet,
         )
     except NotImplementedError as e:
         raise HTTPException(status_code=501, detail=str(e))

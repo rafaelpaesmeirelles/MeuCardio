@@ -35,7 +35,7 @@ class ProvedorIA(ABC):
         sistema: str,
         mensagens: list[dict],
         modelo: str | None = None,
-        usar_internet: bool = False,
+        usar_internet: bool = True,
     ) -> Resposta: ...
 
     @property
@@ -64,7 +64,7 @@ class ProvedorOpenAI(ProvedorIA):
         sistema: str,
         mensagens: list[dict],
         modelo: str | None = None,
-        usar_internet: bool = False,
+        usar_internet: bool = True,
     ) -> Resposta:
         # usar_internet e modelo por chamada não têm efeito no caminho OpenAI —
         # aceitos na assinatura só por paridade de interface com ProvedorAnthropic.
@@ -115,7 +115,7 @@ class ProvedorAnthropic(ProvedorIA):
         sistema: str,
         mensagens: list[dict],
         modelo: str | None = None,
-        usar_internet: bool = False,
+        usar_internet: bool = True,
     ) -> Resposta:
         modelo_efetivo = modelo or self._modelo
         kwargs: dict = {

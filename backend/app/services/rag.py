@@ -471,13 +471,21 @@ def contar_uso_diario(db: Session, user_id: int) -> int:
     ).scalar_one()
 
 
+def escolher_modelo_automatico(pergunta: str) -> str:
+    """Heurística v1 de seleção automática de modelo Claude, por tamanho da
+    pergunta — perguntas longas/complexas tendem a se beneficiar de um modelo
+    com mais capacidade de raciocínio (Fable 5); perguntas curtas/diretas vão
+    para Opus 5. Ajustar o limiar depois com uso real."""
+    return "claude-fable-5" if len(pergunta) >= 600 else "claude-opus-5"
+
+
 def perguntar(
     db: Session,
     pergunta: str,
     historico: list[dict],
     temas: list[str] | None = None,
     modelo: str | None = None,
-    usar_internet: bool = False,
+    usar_internet: bool = True,
 ) -> dict:
     from app.services.pubmed import buscar_pubmed, montar_contexto_pubmed
 

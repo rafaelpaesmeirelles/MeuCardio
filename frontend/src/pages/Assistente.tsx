@@ -25,15 +25,15 @@ export default function Assistente() {
   const [erro, setErro] = useState("");
   const [historico, setHistorico] = useState<ConversaResumo[]>([]);
   const [mostrarHistorico, setMostrarHistorico] = useState(false);
+  // "" = Automático (recomendado) — o backend escolhe o modelo pela pergunta.
   const [modeloEscolhido, setModeloEscolhido] = useState("");
-  const [usarInternet, setUsarInternet] = useState(false);
+  // Precisa nascer ligado: é assim que o assistente se comporta "como uma
+  // sessão do Claude comum" — ninguém liga um checkbox que não sabe que existe.
+  const [usarInternet, setUsarInternet] = useState(true);
   const fim = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    api.get<Status>("/ai/status").then((s) => {
-      setStatus(s);
-      setModeloEscolhido(s.modelo);
-    }).catch(() => setStatus(null));
+    api.get<Status>("/ai/status").then(setStatus).catch(() => setStatus(null));
   }, []);
   useEffect(() => { fim.current?.scrollIntoView({ behavior: "smooth" }); }, [mensagens, pensando]);
 
@@ -77,7 +77,7 @@ export default function Assistente() {
         conversation_id: number; resposta: string; fontes: Fonte[]; fontes_pubmed: FontePubmed[];
       }>("/ai/perguntar", {
         pergunta: texto, conversation_id: conversa,
-        modelo: status?.provedor === "anthropic" ? modeloEscolhido : undefined,
+        modelo: status?.provedor === "anthropic" && modeloEscolhido ? modeloEscolhido : undefined,
         usar_internet: status?.provedor === "anthropic" ? usarInternet : false,
       });
       setConversa(r.conversation_id);
@@ -128,6 +128,7 @@ export default function Assistente() {
                 aria-label="Modelo Claude"
                 style={{ padding: "0.35rem 0.5rem", fontSize: "0.82rem" }}
               >
+                <option value="">Automático (recomendado)</option>
                 {status.modelos_disponiveis.map((m) => (
                   <option key={m} value={m}>{m}</option>
                 ))}
