@@ -1382,5 +1382,169 @@
       }
     ],
     "revisao": "Derivado de dois documentos já verificados e publicados nesta base (ablacao-por-cateter-em-fibrilacao-atrial-indicacoes-e-tecnica e cardioversao-eletiva-e-anticoagulacao-periprocedimento-esc-2024), com a seção de origem registrada em cada item. Dois itens (vigilância de complicação vascular/tamponamento e prazo padronizado de reavaliação de sucesso) NÃO estão cobertos pelas fontes desta ficha e foram marcados VERIFICAÇÃO HUMANA NECESSÁRIA em vez de completados por conhecimento geral — nenhum sinal clínico nem prazo foi inventado. Elaborado pela sessão de conteúdo em 01/08/2026 sob a autorização contínua de publicação. ATENÇÃO: este checklist ainda NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles — a atestação dele não é presumida."
+  },
+  {
+    "slug": "criterios-para-tratamento-ambulatorial-do-tep-de-baixo-risco",
+    "condicao": "Seleção para tratamento ambulatorial (alta precoce) do TEP agudo de baixo risco",
+    "resumo": "Derivado dos ensaios de Aujesky (randomizado, PESI classes I-II) e Hestia (coorte de validação de critério clínico) — checklist de elegibilidade a ser usado ANTES da alta, distinto do checklist geral de alta pós-TEV, que trata da anticoagulação de manutenção após a decisão de tratar em casa já ter sido tomada.",
+    "documento_origem": "tratamento-ambulatorial-do-tep-de-baixo-risco-aujesky-e-hestia",
+    "theme": "Tromboembolismo",
+    "review_status": "revisado",
+    "source_refs": [
+      "Aujesky D, Roy PM, Verschuren F, Righini M, Osterwalder J, Egloff M, Renaud B, Verhamme P, Stone RA, Legall C, Sanchez O, Pugh NA, N'gako A, Cornuz J, Hugli O, Beer HJ, Perrier A, Fine MJ, Yealy DM. Outpatient versus inpatient treatment for patients with acute pulmonary embolism: an international, open-label, randomised, non-inferiority trial. Lancet. 2011;378(9785):41-48. DOI: 10.1016/S0140-6736(11)60824-6. PMID: 21703676. NCT00425542",
+      "Zondag W, Mos IC, Creemers-Schild D, Hoogerbrugge AD, Dekkers OM, Dolsma J, Eijsvogel M, Faber LM, Hofstee HM, Hovens MM, Jonkers GJ, van Kralingen KW, Kruip MJ, Vlasveld T, de Vreede MJ, Huisman MV; Hestia Study Investigators. Outpatient treatment in patients with acute pulmonary embolism: the Hestia Study. J Thromb Haemost. 2011;9(8):1500-1507. DOI: 10.1111/j.1538-7836.2011.04388.x. PMID: 21645235"
+    ],
+    "itens": [
+      {
+        "id": "tep-amb-pesi-classe",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Escore PESI calculado e classificado como classe I ou II (baixo risco de óbito) — foi o critério de elegibilidade usado no ensaio randomizado de Aujesky para selecionar quem poderia ser tratado ambulatorialmente",
+        "origem_secao": "O ensaio de Aujesky: randomizado, controlado, de não inferioridade"
+      },
+      {
+        "id": "tep-amb-tep-sintomatico-confirmado",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "TEP agudo sintomático objetivamente confirmado, com hemodinâmica estável no momento da decisão — população de entrada dos dois estudos que sustentam este checklist",
+        "origem_secao": "O ensaio de Aujesky / O estudo Hestia"
+      },
+      {
+        "id": "tep-amb-criterios-hestia-lista",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "VERIFICAÇÃO HUMANA NECESSÁRIA: aplicar a lista completa, item a item, dos critérios de Hestia (conjunto pré-definido de critérios clínicos de exclusão para tratamento domiciliar) antes de liberar a alta — o documento de origem registra que essa lista não está disponível no resumo indexado no PubMed e que reproduzi-la exigiria o texto integral do artigo, não consultado nesta sessão; não usar esta ficha como substituto da lista original sem conferir o texto completo do estudo",
+        "origem_secao": "O estudo Hestia: coorte prospectiva com critério clínico próprio"
+      },
+      {
+        "id": "tep-amb-avaliacao-vd-biomarcadores",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Avaliação de disfunção de ventrículo direito e de biomarcadores realizada mesmo com PESI baixo — PESI baixo não dispensa essa checagem, segundo o documento de diagnóstico e manejo do TEP agudo desta biblioteca, e nenhum dos dois estudos de base substitui essa avaliação",
+        "origem_secao": "Armadilhas clínicas — PESI baixo não dispensa avaliação de disfunção de ventrículo direito e biomarcadores"
+      },
+      {
+        "id": "tep-amb-populacoes-nao-avaliadas",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Confirmado que o paciente não pertence a grupo não avaliado como população principal nos dois estudos (câncer ativo, gestação, insuficiência renal grave) — extrapolar a alta precoce para esses grupos sem critério adicional não está sustentado pelos números dos dois estudos",
+        "origem_secao": "Armadilhas clínicas — populações não avaliadas explicitamente"
+      },
+      {
+        "id": "tep-amb-anticoagulacao-inicial",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Esquema de anticoagulação inicial definido antes da alta — no ensaio de Aujesky, enoxaparina subcutânea por no mínimo 5 dias seguida de anticoagulante oral por no mínimo 90 dias; no Hestia, heparina de baixo peso molecular (nadroparina) seguida de antagonista de vitamina K",
+        "origem_secao": "O ensaio de Aujesky: randomizado, controlado, de não inferioridade / O estudo Hestia: coorte prospectiva com critério clínico próprio"
+      },
+      {
+        "id": "tep-amb-retaguarda-ambulatorial",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Retaguarda ambulatorial estruturada confirmada antes da alta — reavaliação em poucos dias, acesso garantido a anticoagulante e orientação de sinais de alarme; os dois estudos de base foram conduzidos em serviços com esse suporte já organizado, e reproduzir só o critério de seleção sem a retaguarda não reproduz o resultado observado",
+        "origem_secao": "Armadilhas clínicas — a logística de alta precoce depende de retaguarda ambulatorial estruturada"
+      },
+      {
+        "id": "tep-amb-orientacao-sangramento",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Paciente orientado sobre sinais de sangramento maior antes da alta — no braço ambulatorial do ensaio de Aujesky houve sangramento maior em 1,2% em 14 dias e 1,8% em 90 dias (este último sem não inferioridade formalmente demonstrada frente ao grupo internado), e no Hestia 0,7% dos pacientes tiveram sangramento maior, incluindo um caso fatal de hemorragia intracraniana",
+        "origem_secao": "Armadilhas clínicas — o sinal de sangramento maior aos 90 dias no braço ambulatorial do Aujesky não atingiu o limiar pré-especificado de não inferioridade"
+      }
+    ],
+    "revisao": "Cada item derivado literalmente do corpo do documento `tratamento-ambulatorial-do-tep-de-baixo-risco-aujesky-e-hestia`, publicado nesta base, com a seção de origem registrada por item. O item da lista completa dos critérios de Hestia foi mantido com a MESMA marcação `VERIFICAÇÃO HUMANA NECESSÁRIA` que o documento de origem já registra para esse ponto (a lista item a item não está no resumo indexado no PubMed) — nenhum critério de Hestia foi inventado ou completado por conhecimento geral para preencher este checklist. Este checklist é de ELEGIBILIDADE, aplicado antes da decisão de tratar em casa — distinto do checklist já publicado `alta-pos-tromboembolismo-venoso-agudo`, que trata da anticoagulação de manutenção após a decisão já ter sido tomada, derivado de outra fonte (diretriz brasileira SBPT 2025). Elaborado pela sessão da Biblioteca em 01/08/2026 sob a autorização contínua de publicação. ATENÇÃO: este checklist ainda NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles — a atestação dele não é presumida."
+  },
+  {
+    "slug": "monitorizacao-cardiovascular-ao-iniciar-antipsicotico-de-risco-para-qt-longo",
+    "condicao": "Início ou ajuste de dose de antipsicótico com risco de prolongamento de QT",
+    "resumo": "Estratificação de risco antes e durante o uso de antipsicótico — ECG basal e seriado por fator de risco (não por protocolo fixo por fármaco), correção de eletrólitos e reconhecimento de sintoma de alarme —, sem inventar corte numérico de QTc que as fontes de origem não confirmam.",
+    "documento_origem": "antipsicoticos-e-prolongamento-de-qt-risco-de-morte-subita-cardiaca",
+    "theme": "Saúde mental e cardiologia",
+    "review_status": "revisado",
+    "source_refs": [
+      "Ray WA, Meredith S, Thapa PB, Meador KG, Hall K, Murray KT. Antipsychotics and the risk of sudden cardiac death. Arch Gen Psychiatry. 2001;58(12):1161-1167. DOI: 10.1001/archpsyc.58.12.1161. PMID: 11735845",
+      "Ray WA, Chung CP, Murray KT, Hall K, Stein CM. Atypical antipsychotic drugs and the risk of sudden cardiac death. N Engl J Med. 2009;360(3):225-235. DOI: 10.1056/NEJMoa0806994. PMID: 19144938",
+      "Wenzel-Seifert K, Wittmann M, Haen E. QTc prolongation by psychotropic drugs and the risk of Torsade de Pointes. Dtsch Arztebl Int. 2011;108(41):687-693. DOI: 10.3238/arztebl.2011.0687. PMID: 22114630"
+    ],
+    "itens": [
+      {
+        "id": "qt-ecg-basal-fator-de-risco",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "ECG basal realizado antes de iniciar o antipsicótico em paciente com qualquer fator de risco cardiovascular conhecido (doença cardíaca estrutural, arritmia prévia, QT longo congênito ou adquirido, uso concomitante de outro fármaco prolongador de QT, distúrbio eletrolítico, idade avançada)",
+        "origem_secao": "Recomendação prática de ECG basal e seriado"
+      },
+      {
+        "id": "qt-ecg-basal-farmaco-alto-risco",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Por prudência clínica, ECG basal também considerado antes de iniciar especificamente tioridazina, ziprasidona ou haloperidol intravenoso em dose alta — fármacos/via de maior risco identificados por Wenzel-Seifert et al.",
+        "origem_secao": "Recomendação prática de ECG basal e seriado"
+      },
+      {
+        "id": "qt-fator-risco-identificado",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Fatores de risco somados e registrados antes de decidir a conduta: idade acima de 65 anos, doença cardiovascular preexistente, bradicardia, sexo feminino, hipocalemia e hipomagnesemia — o risco clinicamente relevante costuma exigir a soma de múltiplos fatores, não o fármaco isolado",
+        "origem_secao": "Ranking de risco por fármaco — Wenzel-Seifert et al."
+      },
+      {
+        "id": "qt-eletrolitos-corrigidos",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Potássio e magnésio dosados e corrigidos antes e durante o tratamento — hipocalemia e hipomagnesemia são fatores agravantes explícitos e modificáveis, ao contrário de idade e sexo",
+        "origem_secao": "Recomendação prática de ECG basal e seriado"
+      },
+      {
+        "id": "qt-outros-farmacos-prolongadores",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Restante da farmacoterapia revisado quanto a risco somado de QT longo — a revisão de Wenzel-Seifert et al. cita quetiapina, amisulprida, antidepressivos tricíclicos/tetracíclicos e ISRS (citalopram, fluoxetina, paroxetina) e venlafaxina entre os relatos de prolongamento de QTc; o risco cardíaco do paciente polimedicado é cumulativo, não do antipsicótico isolado",
+        "origem_secao": "Ranking de risco por fármaco — Wenzel-Seifert et al."
+      },
+      {
+        "id": "qt-ecg-seriado-apos-escalonamento",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "ECG seriado repetido após qualquer escalonamento de dose, especialmente com os fármacos de maior risco — o risco é dose-dependente (Ray et al. 2001 e 2009), não fixo por fármaco",
+        "origem_secao": "Recomendação prática de ECG basal e seriado"
+      },
+      {
+        "id": "qt-haloperidol-iv-nao-equivale-vo",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se houver uso de haloperidol intravenoso em alta dose, reconhecido como categoria de risco distinta do haloperidol oral em dose habitual — a via/dose muda o risco, não confiar na reputação do haloperidol oral",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "qt-sintoma-de-alarme",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Paciente e/ou equipe orientados a buscar reavaliação com ECG diante de qualquer sintoma sugestivo de arritmia (síncope, palpitação, quase-síncope) durante o uso do antipsicótico, independentemente do fármaco específico",
+        "origem_secao": "Recomendação prática de ECG basal e seriado"
+      },
+      {
+        "id": "qt-nao-adiar-emergencia-psiquiatrica",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Em paciente psiquiátrico grave com risco iminente de auto ou heteroagressão, tratamento não adiado à espera do ECG quando via de administração e dose puderem ser escolhidas dentro do perfil de menor risco — suspender o antipsicótico por receio cardiovascular tem custo de mortalidade próprio",
+        "origem_secao": "Recomendação prática de ECG basal e seriado"
+      },
+      {
+        "id": "qt-nao-atipico-e-menor-risco",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Registrado que 'atípico' não significa risco cardíaco menor que 'típico' — o NEJM 2009 mediu risco numericamente maior nos atípicos (razão de incidência 2,26 vs. 1,99 dos típicos), sem diferença estatisticamente relevante entre as classes",
+        "origem_secao": "Armadilhas clínicas"
+      },
+      {
+        "id": "qt-corte-numerico-suspensao",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "VERIFICAÇÃO HUMANA NECESSÁRIA: nenhuma das três fontes desta ficha define um valor de corte numérico único de QTc (em ms) acima do qual o antipsicótico deveria ser obrigatoriamente suspenso, nem uma periodicidade fixa e universal de ECG seriado por fármaco — confirmar em fonte primária de psicofarmacologia clínica antes de usar um limiar (como QTc >500 ms ou aumento >60 ms do basal) como conduta",
+        "origem_secao": "VERIFICAÇÃO HUMANA NECESSÁRIA (nota final do documento de origem)"
+      }
+    ],
+    "revisao": "Derivado integralmente do documento já verificado e publicado antipsicoticos-e-prolongamento-de-qt-risco-de-morte-subita-cardiaca.md (tema Saúde mental e cardiologia), com a seção de origem registrada em cada item — nenhum critério numérico de corte de QTc foi inventado: o item qt-corte-numerico-suspensao reproduz literalmente a marcação VERIFICAÇÃO HUMANA NECESSÁRIA já presente no documento de origem, porque nenhuma das três fontes primárias (Ray et al. 2001, Ray et al. 2009, Wenzel-Seifert et al. 2011) define esse corte nem uma periodicidade fixa de ECG seriado. Elaborado pela sessão de conteúdo em 01/08/2026 sob a autorização contínua de publicação. ATENÇÃO: este checklist ainda NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles — a atestação dele não é presumida."
   }
 ]
