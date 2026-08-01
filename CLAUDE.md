@@ -3323,3 +3323,35 @@ produzir só em `trilhas/`** até um dos dois avisar mudança. Confirmação de 
 `clinical_cases` 76/76 publicados, zero órfão — todos os 22 pendentes da sessão de `/root` (18 do
 aviso original + 4 de COMPASS/VOYAGER PAD/EXPLORER-HCM/PIONEER-HF) estão no ar, amostra de 6 PMIDs
 reconferida contra o PubMed.
+
+#### ✅ Fechamento da sessão de `/root`, 01/08/2026: **31 casos clínicos novos, conferidos um a um depois de escritos**
+Commits `dedd987`, `9a22d30`, `b9bbefd`, `a9e0b7e` e `0a193e5`. **Disco em 85 casos**; o painel
+`corvia` do tmux carregou e publicou os 22 primeiros (`clinical_cases` foi de 54 para **76/76
+publicados**) e os 9 do último commit entram na próxima carga dele.
+
+**Cobertura:** só **Saúde mental** e **Comunicação clínica** seguem com 2 casos; os outros 25 temas
+têm 3 ou mais. Ensaios usados: EAST-AFNET 4, EMPEROR-Preserved, SPRINT, PEITHO, IMPROVE-IT,
+RECOVERY, POET, POISE, ISCHEMIA, CASTLE-AF, CORP-2/CORP, POST 4, CULPRIT-SHOCK, AMBITION, COAPT,
+DAPA-CKD, STEP-HFpEF, ARISTOTLE, COMPASS, VOYAGER PAD, EXPLORER-HCM, PIONEER-HF, JUPITER, CANTOS,
+GRACE, MADIT-CRT/RAFT, CLOSE/RESPECT, GOAL, PARADIGM-HF, PRADA e ASPRE.
+
+**A conferência é o que autoriza confiar nos números:** os 22 primeiros passaram por um agente
+adversarial instruído a ENCONTRAR erro, que rebaixou cada número do campo `explicacao` ao abstract
+correspondente no PubMed — **22/22 sem divergência**, incluindo detalhes fáceis de errar (o IC do
+EAST-AFNET 4 é de **96%**, não 95%; o limiar de significância do COMPASS para mortalidade é
+**0,0025**; o VOYAGER PAD tem **duas** definições de sangramento com resultados opostos, TIMI
+não significativo e ISTH significativo).
+
+**Dez fontes foram extraídas e NÃO viraram caso, por já existirem na base** — DANISH, CHAP, ICAP,
+TTM2, PARTNER 3, EARLY TAVR, FIDELIO-DKD e ATTR-ACT entre elas. **Conferir antes de redigir custa
+uma busca; conferir depois custa o texto inteiro.**
+
+**Duas erratas registradas e não lidas entraram declaradas** no `source_refs` e no corpo, em vez de
+omitidas: EXPLORER-HCM (Lancet 2020;396(10253):758) e PIONEER-HF (N Engl J Med 2019;380(11):1090).
+
+**Inventário das "funcionalidades restantes" da faixa CORVIA, para não se procurar de novo:**
+`document_templates`, `appointments`, `patients`, `prescriptions` e `generated_documents` estão
+**todos com 0 registros**, e é assim que devem ficar — são tabelas por usuário ou por paciente
+(`owner_id`/`patient_id` obrigatórios), não biblioteca. **Nenhuma das quatro aceita conteúdo de
+catálogo sem mudança de código**; povoar qualquer uma delas seria fabricar paciente ou usuário. As
+frentes de conteúdo reais desta faixa continuam sendo `casos-clinicos/` e `trilhas/`.
