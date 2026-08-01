@@ -4069,5 +4069,213 @@
       "ccTGA",
       "ressonância magnética cardíaca"
     ]
+  },
+  {
+    "slug": "teste-de-caminhada-de-6-minutos-em-cardiopatia-congenita-biventricular",
+    "name": "Teste de caminhada de 6 minutos em cardiopatia congênita biventricular (fora do contexto de Fontan)",
+    "category": "metodo_grafico",
+    "theme": "Cardiologia pediátrica",
+    "what_it_measures": "Distância percorrida em 6 minutos em ritmo autoescolhido, medida de capacidade funcional submáxima que reflete a integração entre reserva cardiopulmonar, força muscular periférica e motivação — usada em crianças e adolescentes com cardiopatia congênita biventricular (reparada ou não) como alternativa mais simples e barata ao teste cardiopulmonar de esforço (CPET) para o dia a dia do ambulatório.",
+    "reference_range": "Em crianças saudáveis de 3 a 18 anos (coorte de referência caucasiana, Geiger et al. 2007), a distância mediana percorrida (6MWD) sobe dos 3 aos 11 anos em ambos os sexos e segue subindo em meninos (667,3 m aos 3 anos → 727,6 m aos 18 anos), enquanto em meninas ela essencialmente estabiliza (655,8 m → 660,9 m); altura é a variável mais associada à distância após ajuste por idade. Numa coorte de 459 crianças de 6-18 anos com cardiopatia congênita variada (Qu et al. 2022), a distância média foi 578 ± 65 m (590 ± 65 m em meninos, 562 ± 62 m em meninas) — abaixo da referência saudável equivalente. Os cortes de 6MWD equivalentes a 80% do VO2máx previsto (o limiar prático de boa aptidão física) foram 554 m (meninos <130 cm), 617 m (meninos ≥130 cm), 549 m (meninas <130 cm) e 587 m (meninas ≥130 cm), validados numa coorte externa de 102 pacientes.",
+    "indications": "Acompanhamento seriado da capacidade funcional em crianças e adolescentes com cardiopatia congênita biventricular — lesões corrigidas com repercussão residual (ex.: tetralogia de Fallot operada, coarctação reparada), lesões não operadas em vigilância, ou triagem inicial antes de indicar CPET completo. Não é o teste de escolha para fisiologia univentricular/Fontan, contexto em que a literatura pediátrica já tem instrumento próprio cadastrado nesta base.",
+    "interpretation": "A distância percorrida se correlaciona com o VO2máx (r = 0,35) e mais fortemente com o %VO2máx previsto (r = 0,51), e se correlaciona inversamente com o slope VE/VCO2 (r = -0,31) — ou seja, quanto pior a eficiência ventilatória, menor a distância. Existe relação aproximadamente linear entre 6MWD e VO2máx até cerca de 600 m, faixa em que o teste discrimina melhor; acima disso a relação se achata. Distância abaixo do corte específico por sexo e estatura sugere aptidão física reduzida e é gatilho razoável para complementar com CPET formal antes de liberar atividade física mais intensa ou de decidir sobre reintervenção.",
+    "limitations": "A correlação com VO2máx bruto é apenas moderada (r = 0,35) — o 6MWT não substitui o CPET quando a pergunta clínica exige o valor absoluto de consumo de oxigênio, só quando basta estratificar aptidão física em categorias. É influenciado por motivação, comprimento do corredor, calçado e superfície, e a coorte de referência saudável (Geiger et al.) não é uma coorte de cardiopatas — comparar a distância absoluta de uma criança com CHD contra a tabela saudável, sem usar os cortes específicos de Qu et al., pode gerar interpretação enganosa. Não validado como instrumento isolado de decisão terapêutica (indicação de reoperação, por exemplo) — é complementar ao exame clínico e ao CPET.",
+    "source_refs": [
+      "Qu J, Shi H, Guo Y, Chen X, Xiao X, Zheng X, Cui Y. Is the six-minute walk test still reliable compared to cardiopulmonary exercise test for exercise capacity in children with congenital heart disease? Front Pediatr. 2022;10:965739. PMID: 36452347.",
+      "Geiger R, Strasak A, Treml B, Gasser K, Kleinsasser A, Fischer V, Geiger H, Loeckinger A, Stein JI. Six-minute walk test in children and adolescents. J Pediatr. 2007;150(4):395-399. PMID: 17382117."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "teste de caminhada de 6 minutos",
+      "6mwt",
+      "capacidade funcional",
+      "cardiopatia congênita",
+      "pediatria",
+      "teste cardiopulmonar de exercício"
+    ]
+  },
+  {
+    "slug": "avaliacao-nutricional-e-crescimento-no-lactente-cardiopata",
+    "name": "Avaliação nutricional e de crescimento no lactente com cardiopatia congênita",
+    "category": "metodo_grafico",
+    "theme": "Cardiologia pediátrica",
+    "what_it_measures": "Acompanhamento seriado de peso, comprimento/estatura e perímetro cefálico, convertidos em escore-Z pelas curvas da OMS (peso-para-idade, peso-para-comprimento, comprimento-para-idade), somado ao registro da ingesta calórica efetivamente recebida — usado para detectar e quantificar a falha de crescimento (growth failure) que acompanha a cardiopatia congênita hemodinamicamente significativa no primeiro ano de vida.",
+    "reference_range": "Não existe corte único: usa-se o escore-Z das curvas de crescimento da OMS, com déficit definido de forma consensual como escore-Z < -2 para o parâmetro considerado (peso-para-idade indica desnutrição aguda ou crônica combinada; peso-para-comprimento reflete desnutrição aguda/emagrecimento; comprimento-para-idade reflete desnutrição crônica/retardo de crescimento linear). Em coorte retrospectiva de neonatos submetidos a shunt sistêmico-pulmonar modificado, incluindo paliação de Norwood (Nicholson et al. 2013), a ingesta calórica mediana em nutrição parenteral exclusiva foi de apenas 50,4 cal/kg/dia (IQR 41,6-63,6) — abaixo do habitualmente recomendado — e o escore-Z de peso-para-idade caiu, em mediana, -1,3 (IQR -0,7 a -1,7) entre a cirurgia paliativa e a alta hospitalar, terminando em mediana de -2,0 (IQR -2,7 a -1,2), já na faixa de desnutrição.",
+    "indications": "Todo lactente com cardiopatia congênita hemodinamicamente significativa, sobretudo shunt esquerda-direita com hiperfluxo pulmonar, lesões com hipoperfusão sistêmica (fisiologia univentricular pré-Fontan, síndrome do coração esquerdo hipoplásico) e cianose — os três grupos hemodinâmicos que, segundo Chan et al. 2025, determinam a estratégia de alimentação. Também no perioperatório de cirurgia cardíaca neonatal, período identificado como o de maior risco de perda de escore-Z.",
+    "interpretation": "A falha de crescimento é mais pronunciada no primeiro ano de vida e tende a melhorar após a estabilização hemodinâmica cirúrgica ou clínica — mas lesões complexas (fisiologia univentricular, cardiopatias múltiplas) podem manter comprometimento persistente por efeito de doença crônica. Cianose, hipertensão pulmonar e baixo débito cardíaco prejudicam o crescimento por via endócrina e musculoesquelética, além do efeito direto da ingesta calórica insuficiente já demonstrado no período pós-operatório imediato. A queda de escore-Z durante a internação cirúrgica não é \"esperada e inofensiva\" — está associada a maior morbidade, tempo de internação mais longo e pior neurodesenvolvimento.",
+    "limitations": "Não existe ferramenta de triagem nutricional validada e específica para cardiopatia congênita amplamente adotada — a prática se apoia em curvas de crescimento gerais da OMS, que não foram desenhadas para a fisiologia cianótica nem para o hipermetabolismo do lactente em insuficiência cardíaca. A estratégia de alimentação (via, densidade calórica, restrição hídrica) precisa ser individualizada pelo grupo hemodinâmico — hipoperfusão sistêmica, hipóxia global ou hiperfluxo pulmonar — e o que é seguro para um grupo pode ser prejudicial para outro (ex.: maior densidade calórica em hiperfluxo pulmonar pode agravar congestão); a revisão de Chan et al. 2025 é baseada em opinião clínica e reconhece explicitamente a lacuna de estudos controlados nessa individualização.",
+    "source_refs": [
+      "Lee J, Marshall T, Buck H, Pamela M, Daack-Hirsch S. Growth Failure in Children with Congenital Heart Disease. Children (Basel). 2025;12(5):616. PMID: 40426795.",
+      "Chan B, Woodbury A, Hazelwood L, Singh Y. Feeding Approach to Optimizing Nutrition in Infants with Congenital Heart Disease. J Cardiovasc Dev Dis. 2025;12(2):38. PMID: 39997472.",
+      "Nicholson GT, Clabby ML, Kanter KR, Mahle WT. Caloric intake during the perioperative period and growth failure in infants with congenital heart disease. Pediatr Cardiol. 2013;34(2):316-321. PMID: 22890625."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "nutrição",
+      "crescimento",
+      "escore-z",
+      "lactente",
+      "cardiopatia congênita",
+      "pediatria",
+      "desnutrição"
+    ]
+  },
+  {
+    "slug": "ecocardiograma-de-estresse-com-dobutamina-no-idoso",
+    "name": "Ecocardiograma de estresse com dobutamina no idoso",
+    "category": "imagem",
+    "theme": "Cardiologia geriátrica",
+    "what_it_measures": "Avaliação da contratilidade segmentar do ventrículo esquerdo sob estresse farmacológico incremental com dobutamina (associada a atropina quando necessário para atingir a frequência-alvo), usada para detectar isquemia induzível e viabilidade miocárdica em pacientes que não conseguem realizar esforço físico — situação comum no idoso por limitação osteoarticular, claudicação ou descondicionamento, o que torna esta a modalidade de estresse preferida nessa faixa etária em vez do esforço em esteira.",
+    "reference_range": "Não se aplica um \"valor de referência\" único — o resultado é qualitativo (normal, isquemia induzível, viabilidade com disfunção fixa) a partir da análise segmentar comparada entre repouso e pico de estresse. Em coorte de 258 pacientes ≥ 70 anos submetidos a protocolo de atropina precoce (Tsutsui et al. 2005), a dose de dobutamina necessária foi menor que no protocolo convencional (29 ± 7 vs. 38 ± 4 µg/kg/min, p = 0,001), e os idosos atingiram percentual da frequência cardíaca máxima prevista mais alto que pacientes < 70 anos (92 ± 9% vs. 88 ± 10%, p = 0,0001), com menos extrassístoles ventriculares, taquicardia ventricular não sustentada e bradicardia — a única diferença de efeito adverso entre as faixas etárias foi hipotensão mais frequente no idoso (16% vs. 10%, p = 0,004).",
+    "indications": "Investigação de doença arterial coronariana obstrutiva e avaliação de viabilidade miocárdica em idosos com limitação física para esforço; estratificação de risco pré-operatório em cirurgia não cardíaca de risco intermediário/alto quando a capacidade funcional não pode ser estimada clinicamente.",
+    "interpretation": "Em coorte de 1.434 pacientes > 65 anos seguidos por 6,5 anos em média (Biagini et al. 2005), isquemia foi detectada em 47% e associou-se de forma independente tanto à mortalidade total (HR 1,3; IC95% 1,1-1,6) quanto a eventos cardíacos graves (HR 2,1; IC95% 1,5-2,8) em análise multivariada, ao lado de idade, sexo masculino, hipertensão, tabagismo, diabetes e alteração segmentar em repouso — ou seja, o teste agrega informação prognóstica independente das variáveis clínicas habituais também nessa faixa etária, e não é \"menos confiável\" só por o paciente ser idoso.",
+    "limitations": "O idoso tem maior prevalência de janela acústica desfavorável (DPOC, hiperinsuflação, obesidade), o que pode exigir contraste de perfusão miocárdica para qualificar as bordas endocárdicas. Hipotensão é mais frequente que no adulto jovem, reforçando a preferência pelo protocolo de atropina precoce. Comorbidades cardíacas associadas (fibrilação atrial, bloqueios de ramo, marca-passo) podem dificultar a interpretação da resposta cronotrópica e da contratilidade basal, exigindo correlação clínica cuidadosa antes de atribuir uma alteração segmentar a isquemia induzida pelo estresse.",
+    "source_refs": [
+      "Tsutsui JM, Lario FC, Fernandes DR, Kowatsch I, Sbano JC, Franchini Ramires JA, Mathias W Jr. Safety and cardiac chronotropic responsiveness to the early injection of atropine during dobutamine stress echocardiography in the elderly. Heart. 2005;91(12):1563-1567. PMID: 15797935.",
+      "Biagini E, Elhendy A, Schinkel AF, Rizzello V, Bax JJ, Sozzi FB, Kertai MD, van Domburg RT, Krenning BJ, Branzi A, Rapezzi C, Simoons ML, Poldermans D. Long-term prediction of mortality in elderly persons by dobutamine stress echocardiography. J Gerontol A Biol Sci Med Sci. 2005;60(10):1333-1338. PMID: 16282570."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ecocardiograma de estresse",
+      "dobutamina",
+      "isquemia",
+      "viabilidade miocárdica",
+      "idoso",
+      "geriatria"
+    ]
+  },
+  {
+    "slug": "avaliacao-geriatrica-ampla-pre-procedimento-cardiovascular",
+    "name": "Avaliação Geriátrica Ampla (CGA) pré-procedimento cardiovascular",
+    "category": "metodo_grafico",
+    "theme": "Cardiologia geriátrica",
+    "what_it_measures": "Avaliação multidimensional estruturada — funcionalidade física (ex.: Short Physical Performance Battery, SPPB), cognição, comorbidade, estado nutricional e, em alguns protocolos, um índice prognóstico multidimensional combinado (Multidimensional Prognostic Index, MPI) — aplicada antes de procedimentos cardiovasculares de alto risco no idoso, principalmente o implante percutâneo de valva aórtica (TAVI), como complemento aos escores de risco cirúrgico tradicionais, que não capturam fragilidade.",
+    "reference_range": "Não há corte único válido para todos os instrumentos: o resultado é estratificado por risco (ex.: MPI e SPPB em tercis/categorias de risco baixo, intermediário e alto). No registro multicêntrico CGA-TAVI (71 pacientes, idade média 85,4 anos, EuroSCORE I logístico médio 22,5%; Ungar et al. 2018), um MPI mais alto (pior) associou-se a maior chance de óbito e/ou hospitalização em 3 meses (OR 3,34; IC95% 1,39-8,02; p = 0,0068), assim como um SPPB mais baixo (pior).",
+    "indications": "Pacientes idosos candidatos a TAVI, cirurgia valvar ou revascularização miocárdica de alto risco cirúrgico, em que a decisão entre tratamento invasivo, tratamento conservador ou via de acesso (percutânea vs. cirúrgica) depende não só do risco cardíaco isolado, mas da reserva funcional, cognitiva e nutricional do paciente — dimensões que o EuroSCORE II e o STS Score não avaliam diretamente.",
+    "interpretation": "Na extensão de seguimento a 1 ano do mesmo registro CGA-TAVI (van Mourik et al. 2019), 14,1% dos pacientes morreram, 17,4% atingiram o desfecho combinado de morte e/ou AVC não fatal, e 37,7% o desfecho combinado de morte, hospitalização e/ou AVC não fatal — e o risco foi estratificável pelas categorias basais de MPI e SPPB por curva de Kaplan-Meier, confirmando que a informação da CGA feita antes do procedimento carrega valor prognóstico que persiste além do período perioperatório imediato, não só nos primeiros 3 meses.",
+    "limitations": "O registro CGA-TAVI que sustenta os números acima é pequeno (71 pacientes na coorte de 3 meses) e observacional, sem grupo controle randomizado testando se agir sobre o resultado da CGA (por exemplo, otimizar antes do procedimento ou reconsiderar a indicação) muda desfecho — a revisão sistemática de Chin et al. 2024 (Eur Geriatr Med) reforça que intervenções guiadas por CGA em candidatos a TAVI ainda têm evidência limitada e heterogênea entre instrumentos. Não existe um único instrumento de CGA padronizado e universalmente adotado em cardiologia — cada centro combina módulos diferentes (fragilidade física, cognição, nutrição, comorbidade), o que dificulta comparar diretamente os cortes de risco entre estudos.",
+    "source_refs": [
+      "Ungar A, Mannarino G, van der Velde N, Baan J, Thibodeau MP, Masson JB, Santoro G, van Mourik M, Jansen S, Deutsch C, Bramlage P, Kurucova J, Thoenes M, Maggi S, Schoenenberger AW. Comprehensive geriatric assessment in patients undergoing transcatheter aortic valve implantation - results from the CGA-TAVI multicentre registry. BMC Cardiovasc Disord. 2018;18(1):1. PMID: 29301486.",
+      "van Mourik MS, van der Velde N, Mannarino G, Thibodeau MP, Masson JB, Santoro G, Baan J, Jansen S, Kurucova J, Thoenes M, Deutsch C, Schoenenberger AW, Ungar A, Bramlage P, Vis MM. Value of a comprehensive geriatric assessment for predicting one-year outcomes in patients undergoing transcatheter aortic valve implantation: results from the CGA-TAVI multicentre registry. J Geriatr Cardiol. 2019;16(6):468-477. PMID: 31308839."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "avaliação geriátrica ampla",
+      "cga",
+      "fragilidade",
+      "tavi",
+      "idoso",
+      "geriatria",
+      "risco pré-operatório"
+    ]
+  },
+  {
+    "slug": "pet-ct-de-viabilidade-miocardica-no-idoso",
+    "name": "PET-CT de viabilidade miocárdica no idoso",
+    "category": "imagem",
+    "theme": "Cardiologia geriátrica",
+    "what_it_measures": "Tomografia por emissão de pósitrons com F-18-fluordesoxiglicose (18F-FDG), tipicamente combinada com estudo de perfusão de repouso, para identificar miocárdio hibernante (metabolicamente ativo apesar de contrátil disfuncionante) em pacientes com disfunção ventricular esquerda grave e doença arterial coronariana — informação usada para decidir entre revascularizar ou tratar clinicamente, decisão especialmente sensível no idoso, em quem o risco cirúrgico/perioperatório é maior.",
+    "reference_range": "Resultado qualitativo/semiquantitativo por segmento (padrão de mismatch perfusão-metabolismo indicando viabilidade vs. matched defect indicando cicatriz), sem valor numérico único de referência. Na metanálise de Allman et al. 2002 (3.088 pacientes, FE 32 ± 8%, seguimento médio de 25 meses, reunindo estudos com tálio, FDG-PET e ecocardiograma de dobutamina), pacientes com viabilidade detectada e revascularizados tiveram redução de 79,6% na mortalidade anual comparados aos tratados clinicamente (3,2% vs. 16% ao ano; p < 0,0001), enquanto pacientes sem viabilidade não mostraram esse benefício (7,7% vs. 6,2%, sem diferença estatística) — e quanto pior a disfunção ventricular, maior o benefício relativo da revascularização nos pacientes viáveis.",
+    "indications": "Disfunção ventricular esquerda grave com doença coronariana suspeita ou confirmada, quando a decisão entre revascularização, tratamento clínico otimizado ou transplante depende de saber se o miocárdio disfuncionante ainda é recuperável — situação frequente no idoso com múltiplas comorbidades, em que o risco cirúrgico precisa ser justificado por benefício esperado real, não presumido.",
+    "interpretation": "O ensaio randomizado PARR-2 (430 pacientes com disfunção ventricular grave e suspeita de doença coronariana; Beanlands et al. 2007) não mostrou redução significativa do desfecho composto (morte cardíaca, infarto ou reinternação em 1 ano) na comparação direta entre manejo assistido por PET e cuidado padrão (30% vs. 36%; HR 0,78; IC95% 0,58-1,1; p = 0,15) — mas, no subgrupo que de fato aderiu às recomendações do PET (revascularizar, investigar mais ou tratar clinicamente, conforme o resultado), o benefício foi significativo (HR 0,62; IC95% 0,42-0,93; p = 0,019). A leitura clínica correta não é \"o PET não funciona\", e sim que o valor do exame depende de a conduta ser de fato seguida pelo resultado.",
+    "limitations": "O próprio PARR-2 mostra que o exame só agrega valor quando integrado a uma linha de decisão clínica coerente — pedir o PET sem intenção de seguir o resultado não muda desfecho. A metanálise de Allman et al. é formada por estudos observacionais mais antigos (tálio, FDG-PET e dobutamina agrupados), de era anterior à terapia clínica contemporânea otimizada (inibidor de SRAA/neprilisina, betabloqueador, antagonista mineralocorticoide, iSGLT2), o que pode superestimar o benefício absoluto da revascularização guiada por viabilidade nos padrões atuais de tratamento clínico. Não foi identificado, nesta pesquisa, um estudo dedicado a subgrupo exclusivamente geriátrico de PET de viabilidade — a extrapolação para o paciente idoso soma-se ao raciocínio geral de risco-benefício da revascularização nessa faixa etária, não a um corte etário validado especificamente para o exame. VERIFICAÇÃO HUMANA NECESSÁRIA para eventual corte de idade ou ajuste específico de protocolo em pacientes muito idosos (≥ 80 anos), não encontrado em fonte primária nesta busca.",
+    "source_refs": [
+      "Allman KC, Shaw LJ, Hachamovitch R, Udelson JE. Myocardial viability testing and impact of revascularization on prognosis in patients with coronary artery disease and left ventricular dysfunction: a meta-analysis. J Am Coll Cardiol. 2002;39(7):1151-1158. PMID: 11923039.",
+      "Beanlands RS, Nichol G, Huszti E, Humen D, Racine N, Freeman M, Gulenchyn KY, Garrard L, deKemp R, Guo A, Ruddy TD, Benard F, Lamy A, Iwanochko RM; PARR-2 Investigators. F-18-fluorodeoxyglucose positron emission tomography imaging-assisted management of patients with severe left ventricular dysfunction and suspected coronary disease: a randomized, controlled trial (PARR-2). J Am Coll Cardiol. 2007;50(20):2002-2012. PMID: 17996568."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "pet-ct",
+      "viabilidade miocárdica",
+      "miocárdio hibernante",
+      "fdg",
+      "idoso",
+      "geriatria",
+      "revascularização"
+    ]
+  },
+  {
+    "slug": "rastreamento-genetico-pre-natal-nipt-para-cardiopatia-congenita-associada-a-aneuploidia",
+    "name": "Rastreamento genético pré-natal não invasivo (NIPT/cfDNA) para aneuploidia associada a cardiopatia congênita",
+    "category": "laboratorial",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Fragmentos de DNA fetal livre circulante (cfDNA, predominantemente de origem placentária) isolados do sangue materno, analisados por sequenciamento ou genotipagem de polimorfismos de nucleotídeo único (SNP), para rastrear as trissomias do 21, 18 e 13 e, em plataformas ampliadas com algoritmo dedicado, a microdeleção 22q11.2 — a alteração genética isolada mais associada a cardiopatia congênita conotruncal (tetralogia de Fallot, tronco arterial comum, interrupção de arco aórtico, comunicação interventricular subarterial).",
+    "reference_range": "É teste de rastreio, não tem valor de referência numérico — o resultado é 'baixo risco'/'alto risco' por condição. Desempenho populacional medido: para trissomia do 21, taxa de detecção (sensibilidade) de 99,7% (IC95% 99,1–99,9%) com taxa de falso-positivo de 0,04% (IC95% 0,02–0,07%); trissomia do 18, detecção de 97,9% (IC95% 94,9–99,1%), falso-positivo 0,04%; trissomia do 13, detecção de 99,0% (IC95% 65,8–100%), falso-positivo 0,04% (metanálise atualizada de Gil et al., 2017, UOG). Para a deleção 22q11.2 especificamente, o desempenho é bem mais modesto: sensibilidade de 75,0% (9/12 casos confirmados, IC95% 42,8–94,5%) e especificidade de 99,84% (IC95% 99,77–99,89%) com o algoritmo original; um algoritmo atualizado elevou a detecção para 83,3% (10/12, IC95% 51,6–97,9%) com menor taxa de falso-positivo (0,05% vs. 0,16%; p<0,001). Valor preditivo positivo de apenas 23,7% (52,6% com o algoritmo atualizado) — reflexo da baixa prevalência de base (1 em 1.524 na coorte do estudo). 1,5% dos casos teve resultado não informativo ('no call').",
+    "indications": "Achado de cardiopatia congênita ao ecocardiograma fetal ou morfológico obstétrico, sobretudo anomalias conotruncais (associação forte com deleção 22q11.2); idade materna avançada; translucência nucal aumentada ou outros marcadores de risco de aneuploidia; rastreio combinado de primeiro trimestre alterado. Historicamente o NIPT nasceu como rastreio de trissomias em gestação de risco aumentado, mas plataformas atuais oferecem também o módulo específico de 22q11.2, cuja indicação principal em cardiologia fetal é justamente a cardiopatia conotruncal isolada, sem outro marcador de aneuploidia clássica.",
+    "interpretation": "Resultado de 'alto risco' NUNCA é diagnóstico — é rastreio, e exige confirmação por teste diagnóstico invasivo (amniocentese ou biópsia de vilo corial com cariótipo e/ou microarray cromossômico) antes de qualquer decisão clínica irreversível. Resultado de 'baixo risco' reduz a probabilidade pós-teste mas não a zera, principalmente para a deleção 22q11.2: com sensibilidade de 75–83%, um em cada quatro a oito fetos afetados passa despercebido pelo rastreio negativo — diferença importante em relação às trissomias, nas quais a detecção supera 97%. Por isso, achado ecocardiográfico fetal fortemente sugestivo de espectro 22q11.2 (ex. tronco arterial comum, interrupção de arco tipo B) mantém indicação de investigação genética diagnóstica dirigida mesmo com NIPT de baixo risco para a deleção.",
+    "limitations": "Não substitui o ecocardiograma fetal para o diagnóstico anatômico da cardiopatia em si — rastreia etiologia genética, não a malformação estrutural. Resultado 'não informativo'/'no call' ocorre em uma minoria dos casos (1,5% na coorte de validação de 22q11.2) e não deve ser interpretado como baixo risco. Fração fetal de cfDNA insuficiente, mosaicismo confinado à placenta, gestação múltipla com óbito de um gemelar ('vanishing twin') e variantes maternas (incluindo CNV materno de 22q11.2 não suspeitado) são causas conhecidas de resultado falso. Para 22q11.2, o valor preditivo positivo é baixo (23,7% a 52,6% conforme o algoritmo) por se tratar de condição de baixa prevalência — mesmo um resultado de alto risco exige confirmação antes de aconselhamento genético definitivo.",
+    "source_refs": [
+      "Gil MM, Accurti V, Santacruz B, Plana MN, Nicolaides KH. Analysis of cell-free DNA in maternal blood in screening for aneuploidies: updated meta-analysis. Ultrasound Obstet Gynecol. 2017;50(3):302-314. PMID 28397325. doi:10.1002/uog.17484",
+      "Dar P, Jacobsson B, Clifton R, Egbert M, Malone F, Wapner RJ, Roman AS, Khalil A, et al. Cell-free DNA screening for prenatal detection of 22q11.2 deletion syndrome. Am J Obstet Gynecol. 2022;227(1):79.e1-79.e11. PMID 35033576. doi:10.1016/j.ajog.2022.01.002"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "cardiopatia congênita",
+      "cfDNA",
+      "NIPT",
+      "aneuploidia",
+      "22q11.2",
+      "diagnóstico pré-natal",
+      "trissomia",
+      "microdeleção",
+      "conotruncal"
+    ]
+  },
+  {
+    "slug": "avaliacao-hemodinamica-invasiva-pre-fontan-resistencia-vascular-pulmonar",
+    "name": "Avaliação hemodinâmica invasiva (cateterismo) de resistência vascular pulmonar em candidato a cirurgia de Fontan",
+    "category": "imagem",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Pressões intracardíacas e da artéria pulmonar, saturações de oxigênio em múltiplos sítios e cálculo derivado da resistência vascular pulmonar (RVP, em unidades Wood indexadas à superfície corporal), da pressão média de artéria pulmonar, da pressão diastólica final do ventrículo único e da anatomia das artérias pulmonares (tamanho, distorção, estenose de ramo) — o conjunto de dados que define se a circulação de Fontan (derivação cavopulmonar total, sem ventrículo subpulmonar) é hemodinamicamente viável antes da cirurgia de estágio final da paliação univentricular.",
+    "reference_range": "Os critérios clássicos ('Dez Mandamentos' de Choussat et al., 1978) exigiam: idade menor que 4 anos, ritmo sinusal normal, drenagem venosa sistêmica normal, volume atrial direito normal, pressão média de artéria pulmonar ≤15 mmHg, resistência vascular pulmonar ≤4 unidades Wood/m², relação de diâmetro artéria pulmonar:aorta ≥0,75, função ventricular normal (fração de ejeção >0,6), ausência de insuficiência mitral e ausência de efeito residual de shunt prévio. A prática atual (AHA 2019) relaxou boa parte desses critérios como 'modificáveis' — insuficiência atrioventricular moderada a grave pode ser corrigida cirurgicamente, e estenose/hipoplasia de ramo pulmonar pode ser tratada por angioplastia ou stent antes do Fontan —, mas hipertensão pulmonar com doença pulmonar crônica, disfunção ventricular sistólica ou diastólica grave e estenose de veia pulmonar irreversível permanecem contraindicações não modificáveis.",
+    "indications": "Todo candidato a completar a via de Fontan após a etapa de Glenn bidirecional (cavopulmonar superior), tipicamente entre 2 e 4 anos de idade, para confirmar que a RVP é baixa o suficiente para sustentar fluxo pulmonar passivo sem ventrículo subpulmonar. Também indicado na investigação da 'falência de Fontan' já estabelecida, quando RVP elevada é hipótese central do quadro.",
+    "interpretation": "RVP e pressão média de artéria pulmonar dentro da faixa aceitável, função ventricular preservada e ausência de distorção anatômica relevante das artérias pulmonares favorecem a conclusão da via de Fontan. Elevações mesmo discretas da RVP têm impacto desproporcional nessa fisiologia, porque o fluxo pulmonar depende inteiramente do gradiente entre a pressão venosa sistêmica (elevada cronicamente na circulação de Fontan) e o átrio/ventrículo único — não existe bomba subpulmonar para compensar resistência aumentada. Por isso a avaliação pré-operatória pesa mais nesta fisiologia do que na maioria das outras indicações de cateterismo direito em cardiopatia congênita.",
+    "limitations": "Critérios numéricos fixos (como os de Choussat, 1978) foram desenvolvidos numa era cirúrgica distinta e hoje são tratados como orientadores, não como corte absoluto — a decisão é multiparamétrica e depende também de função ventricular, competência valvar atrioventricular e anatomia de retorno venoso, avaliados em conjunto com ressonância/ecocardiograma. Medida de RVP por termodiluição ou Fick pode ser tecnicamente difícil no paciente pós-Glenn, com múltiplas fontes de fluxo pulmonar (veias cavas mais eventual fluxo anterógrado residual) exigindo correção do cálculo. Sedação/anestesia geral, necessárias na maioria das crianças pequenas, podem alterar a resistência vascular pulmonar medida em relação ao estado de vigília.",
+    "source_refs": [
+      "Talwar S, Marathe SP, Choudhary SK, Airan B. Where are we after 50 years of the Fontan operation? Indian J Thorac Cardiovasc Surg. 2021;37(1):45-58. PMID 33584026. doi:10.1007/s12055-019-00906-y (reproduz a Tabela 2 com os critérios originais de Choussat A, Fontan F, Besse P, Vallot F, Chauve A, 1978)",
+      "Rychik J, Atz AM, Celermajer DS, Deal BJ, Gatzoulis MA, Gewillig MH, Hsia TY, Hsu DT, Kovacs AH, McCrindle BW, Newburger JW, Pike NA, Rodefeld M, Rosenthal DN, Schumacher KR, Marino BS, Stout K, Veldtman G, Younoszai AK, d'Udekem Y; American Heart Association Council on Cardiovascular Disease in the Young and Council on Cardiovascular and Stroke Nursing. Evaluation and Management of the Child and Adult With Fontan Circulation: A Scientific Statement From the American Heart Association. Circulation. 2019;140(6):e234-e284. PMID 31256636. doi:10.1161/CIR.0000000000000696"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "cardiopatia congênita",
+      "Fontan",
+      "cateterismo direito",
+      "resistência vascular pulmonar",
+      "ventrículo único",
+      "Glenn",
+      "hemodinâmica invasiva"
+    ]
+  },
+  {
+    "slug": "ecocardiograma-com-contraste-de-bolhas-para-shunt-residual-pos-fechamento-de-cia",
+    "name": "Ecocardiograma com contraste salino agitado (bolhas) para shunt residual após fechamento de comunicação interatrial",
+    "category": "imagem",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Passagem de microbolhas de contraste salino agitado (soro fisiológico agitado, eventualmente com sangue autólogo) do átrio direito para o átrio esquerdo através de defeito residual na margem da prótese/dispositivo, ou de shunt não relacionado ao septo (ex. veia pulmonar anômala) não corrigido pelo fechamento — técnica idêntica à usada para forame oval patente, aplicada aqui ao seguimento pós-procedimento de fechamento cirúrgico ou percutâneo de comunicação interatrial.",
+    "reference_range": "Classificação de gravidade por contagem de microbolhas num único quadro fixo (protocolo da British Society of Echocardiography, 2026): grau 1, até 5 bolhas; grau 2, de 5 a 25 bolhas; grau 3, mais de 25 bolhas contáveis; grau 4, opacificação completa da câmara esquerda (tipicamente mais de 50 bolhas). Shunt intracardíaco caracteriza-se por aparecimento das bolhas no átrio esquerdo em até 3 ciclos cardíacos após a chegada ao átrio direito; aparecimento mais tardio (contraste que se acumula e depois se dissipa ao longo de vários ciclos) sugere via extracardíaca — trajeto transpulmonar ou malformação arteriovenosa pulmonar — e não shunt residual do septo.",
+    "indications": "Seguimento de rotina ou dirigido por sintoma (dessaturação, suspeita de embolia paradoxal) após fechamento cirúrgico com patch ou fechamento percutâneo com dispositivo (oclusor) de comunicação interatrial, para detectar shunt residual pela margem do defeito ou por fechamento incompleto. A indicação listada explicitamente no protocolo de referência é o seguimento pós-fechamento de forame oval patente; o mesmo racional técnico — mesma via de acesso, mesma injeção, mesma classificação por ciclo cardíaco e contagem de bolhas — é o padrão estabelecido na literatura de cardiologia congênita para o seguimento pós-fechamento de comunicação interatrial ostium secundum, ainda que o documento-fonte não trate desse cenário nominalmente.",
+    "interpretation": "Ausência de bolhas no átrio esquerdo mesmo com manobra de Valsalva adequada (elevação transitória da pressão em átrio direito acima da esquerda ao liberar a manobra) indica fechamento completo. Passagem de poucas bolhas (grau 1-2) é achado relativamente comum mesmo em fechamentos tecnicamente satisfatórios, e costuma regredir com o tempo à medida que o dispositivo endoteliza; shunt de maior volume (grau 3-4), persistente ou sintomático, é achado que motiva reavaliação anatômica dirigida (ecocardiograma transesofágico ou tridimensional) e eventual reintervenção.",
+    "limitations": "Depende de manobra de Valsalva tecnicamente adequada — Valsalva mal executada subestima ou deixa de detectar shunt real. Janela acústica transtorácica limitada (paciente obeso, pós-operatório recente de esternotomia) reduz a sensibilidade; nesses casos o ecocardiograma transesofágico com contraste é o método de maior acurácia para localizar e quantificar o defeito residual. A contagem de bolhas em quadro único tem variabilidade interobservador, e a classificação por grau não define isoladamente a necessidade de reintervenção — decisão que depende também do quadro clínico e de outros achados de imagem.",
+    "source_refs": [
+      "Rana B, Robinson S, Ring L, Oxborough D, Belham M, Newton J, Ali A, Sutaria N, Bual N, Swaans M, Wunderlich N, Delgado V, Northridge D, Hildick-Smith D, Ruparelia N, Turner M, Mullen M, Baker C, Clapp B, Spence M, Sievert H, Malik I, Senior R, Siva A. Agitated Saline Contrast Echocardiography in the diagnosis of right to left shunts: Guidance and recommendations from the British Society of Echocardiography. Echo Res Pract. 2026;13(1):16. PMID 42219525. PMCID PMC13224608. doi:10.1186/s44156-026-00117-3"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "cardiopatia congênita",
+      "comunicação interatrial",
+      "shunt residual",
+      "contraste de bolhas",
+      "ecocardiograma",
+      "fechamento percutâneo",
+      "seguimento pós-operatório"
+    ]
   }
 ]

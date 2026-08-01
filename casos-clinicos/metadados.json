@@ -10014,5 +10014,125 @@
       "Shepherd J et al. Pravastatin in elderly individuals at risk of vascular disease (PROSPER): a randomised controlled trial. Lancet. 2002;360(9346):1623-1630. PMID: 12457784"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "tratamento-precoce-versus-conservador-do-canal-arterial-no-prematuro-pda-tolerate",
+    "titulo": "Canal arterial moderado-grande no prematuro extremo: tratar já ou esperar critério? O ensaio PDA-TOLERATE",
+    "tema": "Cardiologia pediátrica",
+    "nivel": "avançado",
+    "enunciado": "Recém-nascido pré-termo de 25 semanas, agora com 8 dias de vida, permanece com suporte respiratório (CPAP) e o ecocardiograma mostra canal arterial moderado-grande com shunt esquerda-direita significativo, sem instabilidade hemodinâmica franca no momento. O neonatologista discute se deve iniciar tratamento farmacológico do canal imediatamente, como rotina, ou aguardar critérios respiratórios e hemodinâmicos pré-especificados antes de tratar.",
+    "pergunta": "Com base no ensaio PDA-TOLERATE, qual conduta tem melhor sustentação de evidência nesse cenário?",
+    "opcoes": [
+      "Tratar farmacologicamente de imediato e como rotina, pois isso reduz a taxa de ligadura cirúrgica e a persistência do canal na alta",
+      "Adotar conduta conservadora, aguardando critérios respiratórios/hemodinâmicos pré-especificados antes de tratar — o tratamento precoce rotineiro não reduziu ligadura nem a persistência do canal na alta, atrasou a alimentação enteral plena e se associou a mais sepse tardia e óbito nos recém-nascidos com 26 semanas ou mais",
+      "Indicar ligadura cirúrgica imediata, independentemente de qualquer tentativa farmacológica prévia",
+      "Não tratar em nenhuma hipótese e não reavaliar, pois o canal arterial do prematuro sempre fecha espontaneamente sem necessidade de qualquer critério de resgate"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O PDA-TOLERATE randomizou 202 recém-nascidos com menos de 28 semanas (idade gestacional média 25,8 ± 1,1 semanas) e canal arterial moderado-grande, entre 6 e 14 dias de vida (média 8,1 ± 2,2 dias), para tratamento farmacológico precoce e rotineiro (ERT) versus conduta conservadora que exigia critérios respiratórios e hemodinâmicos pré-especificados antes de tratar (CT). Não houve diferença no desfecho primário — ligadura ou persistência do canal na alta (ERT 32% vs. CT 39%) — nem nos desfechos secundários pré-especificados: enterocolite necrosante (ERT 16% vs. CT 19%), displasia broncopulmonar (ERT 49% vs. CT 53%) e o composto displasia/óbito (ERT 58% vs. CT 57%). Menos pacientes do grupo ERT chegaram a preencher os critérios de resgate (31% vs. 62%), e o grupo ERT precisou de menos suporte inotrópico (13% vs. 25%). Mas em análises exploratórias restritas aos recém-nascidos com 26 semanas ou mais, o ERT atrasou significativamente o tempo até a alimentação enteral plena (mediana 14 dias vs. 6 dias) e teve incidências maiores de bacteremia tardia por Staphylococcus não coagulase-negativo (24% vs. 6%) e de óbito (16% vs. 2%). Ou seja: tratar cedo e como rotina não encurtou o caminho até fechar o canal nem melhorou os desfechos que a intervenção deveria prevenir, e nos bebês menos extremos (≥26 semanas) esteve associado a mais dano. A conduta que a evidência sustenta é aguardar o critério clínico, não tratar por rotina só porque o canal está aberto e a criança é prematura.",
+    "source_refs": [
+      "Clyman RI, Liebowitz M, Kaempf J, et al.; PDA-TOLERATE Trial Investigators. PDA-TOLERATE Trial: An Exploratory Randomized Controlled Trial of Treatment of Moderate-to-Large Patent Ductus Arteriosus at 1 Week of Age. J Pediatr. 2019;205:41-48.e6. DOI: 10.1016/j.jpeds.2018.09.012. PMID: 30340932."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sacubitril-valsartana-versus-enalapril-na-insuficiencia-cardiaca-pediatrica-panorama-hf",
+    "titulo": "Sacubitril-valsartana na insuficiência cardíaca pediátrica: o benefício do PARADIGM-HF no adulto se repete na criança? O ensaio PANORAMA-HF",
+    "tema": "Cardiologia pediátrica",
+    "nivel": "avançado",
+    "enunciado": "Menino de 9 anos com cardiomiopatia dilatada e disfunção sistólica do ventrículo esquerdo, classe funcional NYHA/Ross II, em uso de enalapril, carvedilol e furosemida. O cardiologista pediátrico assistente considera substituir o enalapril por sacubitril-valsartana, citando a superioridade bem estabelecida dessa combinação sobre o IECA na insuficiência cardíaca do adulto (PARADIGM-HF).",
+    "pergunta": "O que o ensaio PANORAMA-HF, dedicado à população pediátrica, mostrou sobre essa extrapolação do adulto para a criança?",
+    "opcoes": [
+      "Confirmou a mesma superioridade vista no adulto: sacubitril-valsartana reduziu significativamente o desfecho composto de gravidade clínica em relação ao enalapril",
+      "Não houve diferença significativa entre sacubitril-valsartana e enalapril no desfecho primário de ordenação global de gravidade (probabilidade de Mann-Whitney 0,52; IC95% 0,47-0,58; p=0,42), com incidência semelhante de eventos adversos nos dois grupos — o resultado positivo do adulto não se confirmou na criança",
+      "Sacubitril-valsartana aumentou significativamente a mortalidade em relação ao enalapril, contraindicando seu uso pediátrico",
+      "O estudo foi interrompido precocemente por futilidade antes de qualquer análise de eficácia"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O PANORAMA-HF foi um ensaio randomizado, multicêntrico, duplo-cego, com 375 crianças de 1 mês a menos de 18 anos com insuficiência cardíaca por disfunção sistólica de ventrículo esquerdo com fisiologia biventricular, comparando sacubitril-valsartana com enalapril por 52 semanas. O desfecho primário foi um escore de ordenação global (ranking) combinando morte, listagem para transplante urgente, suporte de vida mecânico, piora clínica, classe funcional NYHA/Ross, impressão de gravidade relatada pelo paciente e qualidade de vida — não houve diferença significativa entre os grupos (probabilidade de Mann-Whitney 0,52; IC95% 0,47-0,58; p=0,42). Os dois braços melhoraram de forma clinicamente relevante em classe funcional, impressão de gravidade e NT-proBNP ao longo do seguimento, sem diferença entre eles, e a incidência de eventos adversos foi semelhante (88,8% com sacubitril-valsartana vs. 87,8% com enalapril). O PANORAMA-HF é o primeiro grande ensaio dedicado a testar, na criança, se a superioridade demonstrada no adulto pelo PARADIGM-HF se repete — e a resposta, para o desfecho primário, foi negativa. Isso não significa que o medicamento seja inseguro na criança (o perfil de segurança foi considerado aceitável), mas reforça que benefício farmacológico bem estabelecido no adulto não pode ser assumido como válido na população pediátrica sem ensaio dedicado: a etiologia da disfunção sistólica na criança é heterogênea (cardiomiopatia dilatada primária, miocardite, quimioterapia, entre outras), e o próprio desenho do estudo nasceu dessa cautela.",
+    "source_refs": [
+      "Shaddy R, Burch M, Kantor PF, et al.; PANORAMA-HF Investigators. Sacubitril/Valsartan in Pediatric Heart Failure (PANORAMA-HF): A Randomized, Multicenter, Double-Blind Trial. Circulation. 2024;150(22):1756-1766. DOI: 10.1161/CIRCULATIONAHA.123.066605. PMID: 39319469."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "intervalo-de-profilaxia-secundaria-da-febre-reumatica-em-populacao-de-alta-incidencia",
+    "titulo": "Febre reumática: por que este paciente recebe penicilina benzatina a cada 3 semanas, e não a cada 4?",
+    "tema": "Cardiologia pediátrica",
+    "nivel": "intermediário",
+    "enunciado": "Menina de 10 anos, com diagnóstico prévio de febre reumática aguda com cardite documentada há 2 anos, vive em região de altíssima incidência de febre reumática e retorna ao ambulatório para manutenção da profilaxia secundária. A mãe questiona por que a prescrição é de penicilina G benzatina intramuscular a cada 3 semanas, já que na maioria dos serviços o intervalo padrão é de 4 semanas.",
+    "pergunta": "Qual é a justificativa correta, segundo a diretriz da American Heart Association para prevenção da febre reumática, para encurtar o intervalo para 3 semanas nesse contexto?",
+    "opcoes": [
+      "Não há nenhuma justificativa: o intervalo de 3 semanas é um erro de prescrição e deve ser corrigido para 4 semanas em qualquer paciente",
+      "Em populações de incidência particularmente alta de febre reumática, o nível sérico de penicilina pode cair abaixo do limiar protetor antes de completar a quarta semana, e por isso a diretriz da AHA justifica e recomenda o intervalo de 3 semanas nesses grupos de maior risco de exposição",
+      "O intervalo de 3 semanas é usado exclusivamente em pacientes alérgicos à penicilina, como parte do esquema alternativo com macrolídeo",
+      "A diretriz recomenda 3 semanas para todos os pacientes, independentemente do risco populacional, como novo padrão universal a partir de 2009"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A prevenção primária da febre reumática aguda depende do tratamento adequado da faringite estreptocócica; já estabelecida a doença, o paciente que teve um episódio de febre reumática tem risco muito alto de recorrência após nova faringite estreptocócica, e por isso precisa de profilaxia antimicrobiana contínua (prevenção secundária). O agente de escolha é a penicilina, e o esquema clássico é a penicilina G benzatina intramuscular a cada 4 semanas. A declaração científica da American Heart Association (Gerber et al., 2009), que atualizou o documento de 1995 do mesmo comitê, reconhece que a duração e o intervalo da profilaxia dependem do número de episódios prévios, do tempo desde o último episódio, do risco de exposição ao estreptococo, da idade do paciente e da presença ou ausência de acometimento cardíaco — e que, em populações de incidência particularmente alta, o nível sérico de penicilina pode cair abaixo do limiar protetor antes de completar a quarta semana, justificando e recomendando o intervalo de 3 em 3 semanas nesses grupos de maior risco. Não é uma mudança de padrão universal, e sim um ajuste de intervalo dirigido ao risco populacional de reexposição ao estreptococo — exatamente o cenário desta paciente, que mora em área de altíssima incidência e já teve cardite documentada.",
+    "source_refs": [
+      "Gerber MA, Baltimore RS, Eaton CB, et al. Prevention of Rheumatic Fever and Diagnosis and Treatment of Acute Streptococcal Pharyngitis: A Scientific Statement From the American Heart Association Rheumatic Fever, Endocarditis, and Kawasaki Disease Committee of the Council on Cardiovascular Disease in the Young. Circulation. 2009;119(11):1541-1551. DOI: 10.1161/CIRCULATIONAHA.109.191959. PMID: 19246689."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "dexmedetomidina-versus-propofol-para-prevenir-delirium-pos-operatorio-no-idoso-cirurgia-cardiaca",
+    "titulo": "Delirium após cirurgia cardíaca no idoso: a escolha do sedativo na UTI muda o risco?",
+    "tema": "Cardiologia geriátrica",
+    "nivel": "intermediário",
+    "enunciado": "Paciente de 74 anos, sem demência prévia, é admitido na UTI após revascularização miocárdica cirúrgica eletiva. A equipe da UTI precisa decidir a sedação pós-operatória e discute se a escolha entre dexmedetomidina e propofol tem impacto real sobre o risco de delirium pós-operatório nessa faixa etária.",
+    "pergunta": "Com base em ensaio clínico randomizado dedicado a pacientes de 60 anos ou mais submetidos a cirurgia cardíaca, qual afirmação é correta sobre a escolha do sedativo?",
+    "opcoes": [
+      "A escolha do sedativo não influencia o risco de delirium pós-operatório nessa população — os dois fármacos têm eficácia equivalente",
+      "Comparada ao propofol, a sedação com dexmedetomidina reduziu a incidência de delirium pós-operatório (17,5% vs. 31,5%; odds ratio 0,46; IC95% 0,23-0,92; p=0,028), além de retardar o início e encurtar a duração do quadro quando ele ocorreu",
+      "O propofol reduziu o delirium pós-operatório em comparação à dexmedetomidina, que está associada a maior sedação residual e confusão",
+      "Nenhum dos dois fármacos deve ser usado em pacientes acima de 60 anos por risco inaceitável de delirium; a sedação nessa faixa etária deve ser evitada"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Em ensaio clínico randomizado, single-blind, com pacientes de 60 anos ou mais submetidos a cirurgia cardíaca (excluídos os com demência grave ou doença mental grave prévia), a sedação pós-operatória com dexmedetomidina (bolus de 0,4 μg/kg seguido de infusão de 0,2 a 0,7 μg/kg/h) foi comparada à sedação com propofol (infusão de 25 a 50 μg/kg/min) na UTI, com avaliação de delirium pelo Confusion Assessment Method a cada 12 horas nos 5 primeiros dias de pós-operatório. O delirium pós-operatório ocorreu em 16 de 91 pacientes (17,5%) no grupo dexmedetomidina contra 29 de 92 (31,5%) no grupo propofol (odds ratio 0,46; IC95% 0,23-0,92; p=0,028) — redução absoluta de risco de 14%, com número necessário para tratar de 7,1. Quando o delirium ocorreu, teve início mais tardio (mediana no 2º dia pós-operatório vs. 1º dia, p=0,027) e duração mais curta (mediana de 2 dias vs. 3 dias, p=0,04) no grupo dexmedetomidina. O achado é relevante porque delirium pós-operatório em cirurgia cardíaca no idoso não é evento trivial: associa-se a maior tempo de internação, pior recuperação funcional e, em alguns estudos, a maior mortalidade — e a escolha do sedativo, uma decisão rotineira da UTI que muitas vezes passa despercebida como “decisão cardiovascular”, tem impacto mensurável sobre esse desfecho especificamente na população idosa.",
+    "source_refs": [
+      "Djaiani G, Silverton N, Fedorko L, Carroll J, Styra R, Rao V, Katznelson R. Dexmedetomidine versus Propofol Sedation Reduces Delirium after Cardiac Surgery: A Randomized Controlled Trial. Anesthesiology. 2016;124(2):362-368. DOI: 10.1097/ALN.0000000000000951. PMID: 26575144."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "reducao-de-anti-hipertensivo-no-muito-idoso-ensaio-optimise",
+    "titulo": "Reduzir um anti-hipertensivo em paciente de 84 anos com polifarmácia: é seguro fazer isso na prática?",
+    "tema": "Cardiologia geriátrica",
+    "nivel": "básico",
+    "enunciado": "Mulher de 84 anos, hipertensa há décadas, em uso de 3 anti-hipertensivos, com pressão sistólica habitual em torno de 130-140 mmHg, sem sinais de hipotensão postural franca, mas com histórico de duas quedas no último ano e queixa de tontura ocasional. O médico assistente considera reduzir um dos anti-hipertensivos, mas teme que isso descontrole a pressão arterial.",
+    "pergunta": "O que o ensaio randomizado OPTIMISE mostrou sobre a redução de anti-hipertensivos em pacientes de 80 anos ou mais nessa situação clínica?",
+    "opcoes": [
+      "A redução de medicação sempre piora significativamente o controle pressórico e não deve ser tentada em pacientes muito idosos",
+      "Uma estratégia de redução de um anti-hipertensivo foi não inferior ao cuidado usual quanto ao controle da pressão sistólica (<150 mmHg) em 12 semanas — 86,4% no grupo de redução vs. 87,7% no grupo controle mantiveram esse alvo —, e a redução permaneceu sustentada em dois terços dos pacientes, sem excesso significativo de eventos adversos graves",
+      "O estudo mostrou que reduzir a medicação é seguro apenas em pacientes que já têm pressão sistólica abaixo de 110 mmHg",
+      "A redução de medicação só foi testada em pacientes institucionalizados e não se aplica a idosos que moram sozinhos"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O OPTIMISE foi um ensaio randomizado, não cego, de não inferioridade, conduzido em 69 unidades de atenção primária na Inglaterra, com 569 pacientes de 80 anos ou mais (idade média 84,8 anos), pressão sistólica abaixo de 150 mmHg e em uso de pelo menos 2 anti-hipertensivos, cujo médico considerava apropriados para redução de medicação. Os pacientes foram randomizados para remoção de 1 anti-hipertensivo (n=282) ou cuidado usual sem mudança mandatória (n=287). No desfecho primário — pressão sistólica abaixo de 150 mmHg em 12 semanas —, 86,4% do grupo de redução e 87,7% do grupo controle atingiram a meta, confirmando não inferioridade (risco relativo ajustado 0,98; IC unilateral 97,5% até 0,92 a infinito). A redução de medicação permaneceu sustentada em 187 pacientes (66,3%) na semana 12, e a diferença média de pressão sistólica entre os grupos foi de apenas 3,4 mmHg (IC95% 1,1 a 5,8 mmHg), maior no grupo de redução. Eventos adversos graves ocorreram em 4,3% do grupo de redução contra 2,4% do controle, sem diferença estatisticamente significativa (RR ajustado 1,72; IC95% 0,7-4,3). O ensaio dá lastro objetivo a uma decisão que muitas vezes é feita por intuição clínica: em paciente muito idoso com queda recente e pressão já controlada, reduzir um anti-hipertensivo não compromete de forma relevante o controle pressórico em curto prazo — o que não substitui o acompanhamento clínico continuado, mas mostra que a preocupação de “descontrolar a pressão” não deveria, isoladamente, impedir a tentativa de desprescrição nesse perfil de paciente.",
+    "source_refs": [
+      "Sheppard JP, Burt J, Lown M, et al.; OPTIMISE Investigators. Effect of Antihypertensive Medication Reduction vs Usual Care on Short-term Blood Pressure Control in Patients With Hypertension Aged 80 Years and Older: The OPTIMISE Randomized Clinical Trial. JAMA. 2020;323(20):2039-2051. DOI: 10.1001/jama.2020.4871. PMID: 32453368."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "desativacao-de-marcapasso-e-cdi-em-fim-de-vida-no-idoso-o-que-a-serie-de-casos-mostra",
+    "titulo": "Desativar o CDI de um paciente muito idoso com prognóstico reservado: quem pede, quem decide, e o que acontece depois?",
+    "tema": "Cardiologia geriátrica",
+    "nivel": "intermediário",
+    "enunciado": "Paciente de 81 anos, com cardiodesfibrilador implantável (CDI) há 6 anos por prevenção secundária, agora em fase avançada de doença oncológica com prognóstico de semanas, é internado sob cuidados paliativos. A família pergunta se é possível e apropriado desligar as terapias do dispositivo, e se isso é diferente de “desligar o marca-passo”.",
+    "pergunta": "O que uma série retrospectiva de 150 pacientes com desativação de dispositivo cardíaco implantável mostrou sobre esse cenário?",
+    "opcoes": [
+      "A maioria das desativações envolveu desligar tanto as terapias de choque quanto o suporte de estimulação por marca-passo, tornando o paciente completamente dependente de ritmo próprio",
+      "A grande maioria das solicitações (79%) foi para desativar apenas as terapias de taquiarritmia (choques do CDI), preservando a função de marca-passo quando presente; metade das solicitações partiu de familiares/procuradores, a maioria dos pacientes tinha prognóstico ruim ou terminal, e a maior parte morreu dentro de 1 mês da desativação — mostrando que o pedido geralmente reflete a gravidade da doença de base, não a causa da morte",
+      "Diretivas antecipadas de vontade abordavam explicitamente o manejo do dispositivo na maioria dos pacientes, facilitando a decisão",
+      "A desativação de terapias de choque só pode ser realizada por médico eletrofisiologista, nunca por enfermagem, em qualquer contexto"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Em revisão retrospectiva de prontuários de 150 pacientes (idade mediana de 79 anos; 67% homens) submetidos a desativação de dispositivo cardiovascular implantável em centro terciário, 149 (99%) tinham prognóstico ruim ou terminal no momento da desativação. A grande maioria (118 pacientes, 79%) teve desativadas apenas as terapias de taquiarritmia (os choques do CDI), preservando qualquer suporte de estimulação por marca-passo já presente; 32 pacientes (21%) tiveram também as terapias de bradicardia desativadas, e apenas 6 (4%) eram dependentes de marca-passo. Metade das solicitações de desativação (51%) partiu de procuradores/familiares, e a maioria das desativações (55%) foi realizada por enfermagem. Embora 57% dos pacientes tivessem diretiva antecipada de vontade, apenas 1 mencionava explicitamente o dispositivo cardíaco. Consultas de ética ocorreram em apenas 2% dos casos, e de cuidados paliativos em 43%. A proporção de pacientes que morreram dentro de 1 mês da desativação foi semelhante entre os que tiveram só terapias de taquiarritmia desativadas e os que tiveram também terapias de bradicardia (85% vs. 94%; p=0,37) — ou seja, a decisão de desativar reflete a gravidade da doença de base do paciente, não é ela que determina o desfecho. O achado prático mais importante é que desativar o CDI (choques) não é o mesmo que desligar o marca-passo, que a maioria dos pedidos vem da família e não do próprio paciente, e que diretivas antecipadas raramente contemplam o dispositivo — o que reforça a necessidade de discutir esse ponto especificamente, com antecedência, em pacientes muito idosos com prognóstico limitado.",
+    "source_refs": [
+      "Buchhalter LC, Ottenberg AL, Webster TL, Swetz KM, Hayes DL, Mueller PS. Features and Outcomes of Patients Who Underwent Cardiac Device Deactivation. JAMA Intern Med. 2014;174(1):80-85. DOI: 10.1001/jamainternmed.2013.11564. PMID: 24276835."
+    ],
+    "review_status": "revisado"
   }
 ]

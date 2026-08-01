@@ -20857,5 +20857,153 @@
         "por_que": "Fecha a trilha no outro extremo da decisão: quando a expectativa de vida e o estado cognitivo mudam não a indicação inicial do dispositivo, mas a discussão sobre desativação em cuidado de fim de vida."
       }
     ]
+  },
+  {
+    "slug": "trilha-cardiologia-pediatrica-febre-e-achado-cardiaco-diferencial",
+    "titulo": "Cardiologia pediátrica: febre e achado cardíaco — diferencial entre doença de Kawasaki, febre reumática e endocardite",
+    "tema": "Cardiologia pediátrica",
+    "objetivo": "Organizar o raciocínio diante de uma criança com febre persistente e algum achado cardíaco (sopro novo, alteração ao ecocardiograma, sinais inflamatórios), cobrindo as três grandes causas inflamatórias/infecciosas desse quadro na faixa pediátrica — Kawasaki, febre reumática e endocardite infecciosa — e por que a janela de tratamento de cada uma pesa de forma diferente na decisão.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "doenca-de-kawasaki-criterios-diagnosticos-estratificacao-de-risco-por-z-score-e-tratamento",
+        "por_que": "Começa pela doença de Kawasaki porque é a vasculite febril aguda mais comum da infância e a que tem a janela terapêutica mais estreita — imunoglobulina até o 10º dia de doença para reduzir o risco de aneurisma coronariano."
+      },
+      {
+        "ordem": 2,
+        "item_type": "estudo",
+        "item_slug": "newburger-1991-ivig-dose-unica-versus-quatro-doses-kawasaki",
+        "por_que": "A evidência que definiu o esquema de imunoglobulina em dose única no Kawasaki — o mais tempo-dependente dos três diagnósticos desta trilha."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "febre-reumatica-aguda-na-crianca-criterios-de-jones-2015-e-tratamento-da-fase-aguda",
+        "por_que": "O segundo grande diferencial de febre com acometimento cardíaco na criança: os critérios de Jones 2015 dependem do risco epidemiológico da população, ao contrário dos critérios fixos do Kawasaki."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "endocardite-infecciosa-em-crianca-e-adolescente-fatores-de-risco-microbiologia-e-tratamento",
+        "por_que": "Fecha o diferencial: febre persistente, sopro novo e fator de risco estrutural (cardiopatia congênita prévia, cateter central, prótese) devem deslocar a hipótese para endocardite, com microbiologia e conduta bem diferentes das duas etapas anteriores."
+      },
+      {
+        "ordem": 5,
+        "item_type": "medicamento",
+        "item_slug": "acido-acetilsalicilico-aas",
+        "por_que": "O AAS aparece nos três cenários com papéis distintos — antiagregante/anti-inflamatório no Kawasaki, sintomático na febre reumática —, o que exige saber a dose certa para cada indicação em vez de tratar como um único uso genérico."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-cardiologia-pediatrica-vigilancia-de-risco-cardiotoxicidade-e-coarctacao",
+    "titulo": "Cardiologia pediátrica: vigilância programada de risco — cardiotoxicidade por quimioterapia e coarctação de aorta",
+    "tema": "Cardiologia pediátrica",
+    "objetivo": "Cobrir dois cenários em que a cardiologia pediátrica atua por vigilância programada e estratificação de risco ao longo do tempo, não por emergência aguda: a criança exposta a antraciclina em tratamento oncológico e a criança com coarctação de aorta corrigida que carrega risco de hipertensão residual.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "cardiotoxicidade-por-antraciclina-na-crianca-com-cancer-vigilancia-e-estratificacao-de-risco",
+        "por_que": "Abre pelo cenário mais claro de vigilância programada: a criança que inicia quimioterapia cardiotóxica precisa de estratificação de risco e monitorização cardíaca antes que qualquer sintoma apareça."
+      },
+      {
+        "ordem": 2,
+        "item_type": "checklist",
+        "item_slug": "inicio-de-quimioterapia-cardiotoxica",
+        "por_que": "Transforma a vigilância em rotina prática: o checklist de início de quimioterapia cardiotóxica é o roteiro que operacionaliza a estratificação de risco discutida no documento anterior."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "coarctacao-de-aorta-na-crianca-diagnostico-criterios-de-intervencao-e-hipertensao-residual",
+        "por_que": "Segundo cenário de vigilância de longo prazo: mesmo após correção anatômica bem-sucedida, a coarctação de aorta deixa risco residual de hipertensão que exige acompanhamento continuado, não alta definitiva."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "canal-arterial-patente-no-prematuro-manejo-expectante-farmacologico-e-cirurgico",
+        "por_que": "Liga a hipertensão residual da coarctação a outra lesão do arco/grandes vasos cujo manejo moderno também é mais sobre critério e observação programada do que sobre tratamento imediato — o mesmo raciocínio de vigilância aplicado a um contexto diferente."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-cardiologia-geriatrica-anemia-doenca-arterial-periferica-e-polifarmacia",
+    "titulo": "Cardiologia geriátrica: anemia, doença arterial periférica e o peso da polifarmácia vascular",
+    "tema": "Cardiologia geriátrica",
+    "objetivo": "Reconhecer duas comorbidades vasculares/hematológicas comuns e subtratadas no cardiopata muito idoso — anemia e deficiência de ferro na insuficiência cardíaca, e claudicação por doença arterial periférica — e como a lista de medicamentos cardiovasculares cresce e interage quando cada uma ganha sua própria classe terapêutica.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "anemia-e-deficiencia-de-ferro-na-insuficiencia-cardiaca-do-idoso",
+        "por_que": "Abre pela comorbidade mais comum e mais subdiagnosticada na insuficiência cardíaca do idoso, frequentemente atribuída de forma genérica à 'idade' em vez de investigada e tratada."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "doenca-arterial-periferica-e-claudicacao-no-muito-idoso",
+        "por_que": "Segunda comorbidade vascular comum e subdiagnosticada pelo mesmo motivo — a claudicação é atribuída a artrose ou a 'perda de condicionamento' antes de ser reconhecida como doença arterial periférica."
+      },
+      {
+        "ordem": 3,
+        "item_type": "medicamento",
+        "item_slug": "cilostazol",
+        "por_que": "A classe farmacológica com benefício sintomático estabelecido na claudicação — e com contraindicação formal em qualquer grau de insuficiência cardíaca, o que conecta diretamente de volta à etapa 1 e exige checar a comorbidade antes de prescrever."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "polifarmacia-cardiovascular-no-idoso-cascata-de-prescricao-e-desprescricao",
+        "por_que": "Fecha mostrando o quadro geral: cada nova comorbidade vascular reconhecida tende a somar uma classe terapêutica própria, e a lista de medicamentos do paciente muito idoso cresce assim, etapa por etapa — o que exige revisão periódica deliberada, não só adição."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-cardiologia-geriatrica-choque-cardiogenico-fragilidade-e-futilidade",
+    "titulo": "Cardiologia geriátrica: suporte circulatório mecânico no choque cardiogênico — quando a fragilidade pesa mais que a idade cronológica",
+    "tema": "Cardiologia geriátrica",
+    "objetivo": "Aplicar ao cenário de emergência (choque cardiogênico) o mesmo princípio já visto em intervenção eletiva (TAVI): a decisão de oferecer suporte circulatório mecânico ao paciente muito idoso deve ser guiada por fragilidade e prognóstico funcional, não pela idade isolada — e reconhecer os limites reais dessa decisão sob pressão de tempo.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "choque-cardiogenico-e-suporte-circulatorio-mecanico-no-idoso-idade-cronologica-versus-fragilidade",
+        "por_que": "Abre pelo cenário central da trilha: no choque cardiogênico do muito idoso, a decisão de escalonar para suporte circulatório mecânico precisa separar o que é efeito da idade cronológica do que é efeito real da fragilidade e das comorbidades."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "fragilidade-como-modificador-de-decisao-cardiovascular",
+        "por_que": "Traz o arcabouço geral de como medir fragilidade de forma estruturada, em vez de por impressão clínica — a ferramenta que sustenta a decisão da etapa anterior."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "estenose-aortica-grave-no-idoso-fragil-tavi-e-futilidade",
+        "por_que": "Mostra o mesmo dilema de futilidade em outro cenário — agora eletivo, não emergencial —, o que ajuda a comparar como o tempo disponível para decidir muda (ou não deveria mudar) o peso dado à fragilidade."
+      },
+      {
+        "ordem": 4,
+        "item_type": "estudo",
+        "item_slug": "thourani-2015-nonagenarios-tavi-partner",
+        "por_que": "A evidência de desfecho em nonagenários que sustenta a etapa anterior, com números reais sobre o que 'idade avançada' de fato prediz e o que não prediz em termos de resultado pós-intervenção."
+      },
+      {
+        "ordem": 5,
+        "item_type": "checklist",
+        "item_slug": "alta-pos-choque-cardiogenico",
+        "por_que": "Fecha a trilha no outro extremo do episódio: o paciente que sobreviveu ao choque e ao suporte mecânico ainda precisa de um plano de alta estruturado, que é onde o julgamento sobre fragilidade feito na admissão volta a ser testado na prática."
+      }
+    ]
   }
 ]
