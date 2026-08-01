@@ -70,24 +70,45 @@ export default function Assistente() {
     if (!texto || pensando) return;
     setPergunta("");
     setErro("");
-    setMensagens((m) => [...m, { papel: "user", conteudo: texto }]);
+    setMensagens((m) => [...m, { papel: "user", conteudo: texto }, { papel: "assistant", conteudo: "" }]);
     setPensando(true);
     try {
-      const r = await api.post<{
-        conversation_id: number; resposta: string; fontes: Fonte[]; fontes_pubmed: FontePubmed[];
-      }>("/ai/perguntar", {
+      await api.stream("/ai/perguntar/stream", {
         pergunta: texto, conversation_id: conversa,
         modelo: status?.provedor === "anthropic" && modeloEscolhido ? modeloEscolhido : undefined,
         usar_internet: status?.provedor === "anthropic" ? usarInternet : false,
+      }, (evento) => {
+        if (evento.tipo === "delta") {
+          // Acrescenta o pedaço à última mensagem (a bolha do assistente
+          // criada vazia acima) em vez de esperar o texto inteiro — é o que
+          // faz a resposta aparecer sendo "digitada" e mantém a conexão viva
+          // numa pergunta longa.
+          setMensagens((m) => {
+            const copia = [...m];
+            const ultima = copia[copia.length - 1];
+            copia[copia.length - 1] = { ...ultima, conteudo: ultima.conteudo + evento.texto };
+            return copia;
+          });
+        } else if (evento.tipo === "final") {
+          setConversa(evento.conversation_id);
+          setMensagens((m) => {
+            const copia = [...m];
+            const ultima = copia[copia.length - 1];
+            copia[copia.length - 1] = {
+              ...ultima, fontes: evento.fontes,
+              fontesPubmed: evento.fontes_pubmed?.length ? evento.fontes_pubmed : undefined,
+            };
+            return copia;
+          });
+          setStatus((s) => s && { ...s, usado_hoje: s.usado_hoje + 1, restante_hoje: s.restante_hoje - 1 });
+          recarregarHistorico();
+        } else if (evento.tipo === "erro") {
+          setErro(evento.detalhe ?? "Não foi possível consultar o assistente.");
+          setMensagens((m) => m.slice(0, -1));
+        }
       });
-      setConversa(r.conversation_id);
-      setMensagens((m) => [...m, {
-        papel: "assistant", conteudo: r.resposta, fontes: r.fontes,
-        fontesPubmed: r.fontes_pubmed?.length ? r.fontes_pubmed : undefined,
-      }]);
-      setStatus((s) => s && { ...s, usado_hoje: s.usado_hoje + 1, restante_hoje: s.restante_hoje - 1 });
-      recarregarHistorico();
     } catch (e) {
+      setMensagens((m) => m.slice(0, -1));
       setErro(e instanceof Error ? e.message : "Não foi possível consultar o assistente.");
     } finally {
       setPensando(false);
@@ -211,6 +232,12 @@ export default function Assistente() {
         {mensagens.map((m, i) => (
           <div key={i} className={`ia__msg ia__msg--${m.papel}`}>
             {m.papel === "assistant" ? (
+              // Bolha do assistente nasce vazia (enviar() já a insere antes do
+              // primeiro pedaço chegar) — mostra os três pontinhos nela mesma
+              // em vez de uma bolha extra embaixo, enquanto não há texto.
+              m.conteudo === "" && pensando && i === mensagens.length - 1 ? (
+                <span className="ia__pensando"><span /><span /><span /></span>
+              ) : (
               <>
                 <Markdown remarkPlugins={[remarkGfm]}>{m.conteudo}</Markdown>
                 {m.fontes && m.fontes.length > 0 && (
@@ -239,17 +266,12 @@ export default function Assistente() {
                   </div>
                 )}
               </>
+              )
             ) : (
               m.conteudo
             )}
           </div>
         ))}
-
-        {pensando && (
-          <div className="ia__msg ia__msg--assistant ia__pensando">
-            <span /><span /><span />
-          </div>
-        )}
         <div ref={fim} />
       </div>
 

@@ -1,6 +1,7 @@
 import json
 
 from fastapi import APIRouter, Depends, HTTPException
+from fastapi.responses import StreamingResponse
 from pydantic import BaseModel, Field
 from sqlalchemy import select
 from sqlalchemy.orm import Session
@@ -83,8 +84,9 @@ def apagar_conversa(cid: int, db: Session = Depends(get_db), user=Depends(curren
     db.commit()
 
 
-@router.post("/perguntar")
-def perguntar(dados: Pergunta, db: Session = Depends(get_db), user=Depends(current_user)):
+def _preparar_pergunta(dados: Pergunta, db: Session, user) -> tuple[AIConversation, list[dict], str | None]:
+    """Validações e preparação comuns às duas rotas (normal e streaming) —
+    existir em duas rotas não pode significar duas regras de validação."""
     if not settings.ai_enabled:
         raise HTTPException(status_code=503, detail="A IA clínica está desligada nesta instalação.")
 
@@ -134,6 +136,13 @@ def perguntar(dados: Pergunta, db: Session = Depends(get_db), user=Depends(curre
     if modelo_efetivo is None and settings.ai_provider == "anthropic":
         modelo_efetivo = rag.escolher_modelo_automatico(dados.pergunta)
 
+    return conv, historico, modelo_efetivo
+
+
+@router.post("/perguntar")
+def perguntar(dados: Pergunta, db: Session = Depends(get_db), user=Depends(current_user)):
+    conv, historico, modelo_efetivo = _preparar_pergunta(dados, db, user)
+
     try:
         r = rag.perguntar(
             db, dados.pergunta, historico, dados.temas,
@@ -170,6 +179,57 @@ def perguntar(dados: Pergunta, db: Session = Depends(get_db), user=Depends(curre
         "fontes_pubmed": r["fontes_pubmed"],
         "modelo": r["modelo"],
     }
+
+
+@router.post("/perguntar/stream")
+def perguntar_stream(dados: Pergunta, db: Session = Depends(get_db), user=Depends(current_user)):
+    """Mesma rota de `/perguntar`, em streaming (Server-Sent Events).
+
+    Existe porque uma pergunta com busca na internet ligada podia passar de
+    100s de ponta a ponta — mais do que uma conexão HTTP comum (NAT, proxy,
+    navegador) tolera ociosa — e o front recebia "Failed to fetch" mesmo com
+    a resposta pronta do lado do servidor. Streaming mantém bytes chegando o
+    tempo todo, o que evita esse timeout por inatividade da conexão.
+    """
+    conv, historico, modelo_efetivo = _preparar_pergunta(dados, db, user)
+
+    def eventos():
+        texto_acumulado = []
+        try:
+            for evento in rag.perguntar_stream(
+                db, dados.pergunta, historico, dados.temas,
+                modelo=modelo_efetivo, usar_internet=dados.usar_internet,
+            ):
+                if "delta" in evento:
+                    texto_acumulado.append(evento["delta"])
+                    yield f"data: {json.dumps({'tipo': 'delta', 'texto': evento['delta']}, ensure_ascii=False)}\n\n"
+                else:
+                    r = evento["final"]
+                    db.add(AIMessage(conversation_id=conv.id, papel="user", conteudo=dados.pergunta))
+                    db.add(AIMessage(
+                        conversation_id=conv.id, papel="assistant", conteudo=r["texto"],
+                        fontes=r["fontes_json"],
+                        fontes_pubmed=json.dumps(r["fontes_pubmed"], ensure_ascii=False) if r["fontes_pubmed"] else None,
+                        modelo=r["modelo"],
+                        tokens_entrada=r["tokens_entrada"], tokens_saida=r["tokens_saida"],
+                    ))
+                    db.add(AuditLog(
+                        user_id=user.id, action="perguntar", entity="ia", entity_id=str(conv.id),
+                        detail={"modelo": r["modelo"], "fontes": [f["slug"] for f in r["fontes"]],
+                                "fontes_pubmed": [f["pmid"] for f in r["fontes_pubmed"]],
+                                "tokens": r["tokens_entrada"] + r["tokens_saida"], "via": "stream"},
+                    ))
+                    db.commit()
+                    yield f"data: {json.dumps({'tipo': 'final', 'conversation_id': conv.id, 'fontes': r['fontes'], 'fontes_pubmed': r['fontes_pubmed'], 'modelo': r['modelo']}, ensure_ascii=False)}\n\n"
+        except Exception as e:
+            db.rollback()
+            yield f"data: {json.dumps({'tipo': 'erro', 'detalhe': f'O provedor de IA não respondeu ({type(e).__name__}). Tente novamente.'}, ensure_ascii=False)}\n\n"
+
+    return StreamingResponse(
+        eventos(),
+        media_type="text/event-stream",
+        headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"},
+    )
 
 
 @router.post("/reindexar")

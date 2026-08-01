@@ -528,3 +528,57 @@ def perguntar(
         "tokens_entrada": resposta.tokens_entrada,
         "tokens_saida": resposta.tokens_saida,
     }
+
+
+def perguntar_stream(
+    db: Session,
+    pergunta: str,
+    historico: list[dict],
+    temas: list[str] | None = None,
+    modelo: str | None = None,
+    usar_internet: bool = True,
+):
+    """Mesma lógica de `perguntar`, mas em streaming — existe para manter a
+    conexão HTTP viva em perguntas longas com busca na internet ligada, que
+    em produção passavam de 100s e caíam com "Failed to fetch" antes de a
+    resposta pronta chegar ao navegador (a conexão parecia ociosa; o teto de
+    tempo é do caminho de rede — NAT/proxy/browser —, não deste código).
+
+    Gerador: produz {"delta": str} a cada pedaço de texto do modelo e termina
+    com {"final": {...}} no mesmo formato de retorno de `perguntar`.
+    """
+    from app.services.pubmed import buscar_pubmed, montar_contexto_pubmed
+
+    trechos = recuperar(db, pergunta, temas)
+    contexto, fontes = montar_contexto(trechos)
+    if not contexto:
+        contexto = "[Nenhum trecho da base institucional correspondeu à pergunta.]"
+
+    artigos_pubmed = buscar_pubmed(pergunta)
+    contexto_pubmed = montar_contexto_pubmed(artigos_pubmed)
+    if contexto_pubmed:
+        contexto = f"{contexto}\n\n{contexto_pubmed}"
+
+    gerador = obter_provedor().responder_stream(
+        PROMPT_SISTEMA,
+        [
+            *historico[-8:],
+            {"role": "user", "content": f"CONTEXTO INSTITUCIONAL:\n{contexto}\n\nPERGUNTA:\n{pergunta}"},
+        ],
+        modelo=modelo,
+        usar_internet=usar_internet,
+    )
+    for evento in gerador:
+        if "delta" in evento:
+            yield {"delta": evento["delta"]}
+        else:
+            resposta = evento["final"]
+            yield {"final": {
+                "texto": resposta.texto,
+                "fontes": fontes,
+                "fontes_pubmed": artigos_pubmed,
+                "fontes_json": json.dumps(fontes, ensure_ascii=False),
+                "modelo": resposta.modelo,
+                "tokens_entrada": resposta.tokens_entrada,
+                "tokens_saida": resposta.tokens_saida,
+            }}

@@ -113,6 +113,44 @@ export const api = {
     return res.blob();
   },
 
+  /** POST que consome Server-Sent Events (`text/event-stream`) do backend,
+   *  chamando `aoReceberEvento` para cada objeto JSON de cada linha `data:
+   *  ...`. Existe para o assistente clínico: uma pergunta com busca na
+   *  internet ligada pode passar de 100s de ponta a ponta, mais do que uma
+   *  conexão comum (NAT/proxy/navegador) tolera ociosa — receber a resposta
+   *  em pedaços, à medida que o modelo gera, mantém a conexão viva e evita o
+   *  "Failed to fetch" de uma requisição comum longa demais. */
+  async stream(p: string, body: unknown, aoReceberEvento: (evento: any) => void): Promise<void> {
+    const headers = new Headers({ "Content-Type": "application/json" });
+    const t = token.get();
+    if (t) headers.set("Authorization", `Bearer ${t}`);
+    const res = await fetch(`${BASE}${p}`, { method: "POST", headers, body: JSON.stringify(body) });
+    if (res.status === 401) {
+      token.clear();
+      window.location.assign("/entrar");
+      throw new ApiError(401, "Sessão expirada.");
+    }
+    if (!res.ok || !res.body) {
+      const detail = await res.json().catch(() => null);
+      throw new ApiError(res.status, detail?.detail ?? "Não foi possível consultar o assistente.");
+    }
+    const leitor = res.body.getReader();
+    const decodificador = new TextDecoder();
+    let restante = "";
+    while (true) {
+      const { done, value } = await leitor.read();
+      if (done) break;
+      restante += decodificador.decode(value, { stream: true });
+      const partes = restante.split("\n\n");
+      restante = partes.pop() ?? "";
+      for (const parte of partes) {
+        const linha = parte.split("\n").find((l) => l.startsWith("data: "));
+        if (!linha) continue;
+        aoReceberEvento(JSON.parse(linha.slice(6)));
+      }
+    }
+  },
+
   async login(email: string, password: string) {
     const form = new URLSearchParams({ username: email, password });
     const res = await fetch(`${BASE}/auth/login`, {

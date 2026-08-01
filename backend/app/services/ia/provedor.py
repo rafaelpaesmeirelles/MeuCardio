@@ -38,6 +38,19 @@ class ProvedorIA(ABC):
         usar_internet: bool = True,
     ) -> Resposta: ...
 
+    @abstractmethod
+    def responder_stream(
+        self,
+        sistema: str,
+        mensagens: list[dict],
+        modelo: str | None = None,
+        usar_internet: bool = True,
+    ):
+        """Gerador: produz {"delta": str} a cada pedaço de texto e termina com
+        {"final": Resposta(...)}. Existe para manter a conexão HTTP viva em
+        perguntas longas — ver nota em ProvedorAnthropic.responder_stream."""
+        ...
+
     @property
     @abstractmethod
     def dimensao_embedding(self) -> int: ...
@@ -85,6 +98,38 @@ class ProvedorOpenAI(ProvedorIA):
             modelo=modelo_efetivo,
         )
 
+    def responder_stream(
+        self,
+        sistema: str,
+        mensagens: list[dict],
+        modelo: str | None = None,
+        usar_internet: bool = True,
+    ):
+        modelo_efetivo = self._modelo
+        stream = self._cliente.chat.completions.create(
+            model=modelo_efetivo,
+            messages=[{"role": "system", "content": sistema}, *mensagens],
+            max_tokens=settings.ai_max_output_tokens,
+            temperature=0.2,
+            stream=True,
+            stream_options={"include_usage": True},
+        )
+        textos: list[str] = []
+        tokens_entrada = 0
+        tokens_saida = 0
+        for chunk in stream:
+            if chunk.choices and chunk.choices[0].delta.content:
+                pedaco = chunk.choices[0].delta.content
+                textos.append(pedaco)
+                yield {"delta": pedaco}
+            if chunk.usage:
+                tokens_entrada = chunk.usage.prompt_tokens or 0
+                tokens_saida = chunk.usage.completion_tokens or 0
+        yield {"final": Resposta(
+            texto="".join(textos), tokens_entrada=tokens_entrada,
+            tokens_saida=tokens_saida, modelo=modelo_efetivo,
+        )}
+
 
 class ProvedorAnthropic(ProvedorIA):
     """Preparado para a troca futura.
@@ -110,6 +155,36 @@ class ProvedorAnthropic(ProvedorIA):
             "Configure AI_EMBEDDING_PROVIDER separadamente ao migrar a geração para Claude."
         )
 
+    def _kwargs_base(self, sistema: str, modelo_efetivo: str, usar_internet: bool) -> dict:
+        kwargs: dict = {
+            "model": modelo_efetivo,
+            "system": sistema,
+            "max_tokens": settings.ai_max_output_tokens,
+        }
+        if usar_internet:
+            # max_uses limita quantas vezes o modelo pode chamar a busca DENTRO
+            # da mesma resposta. Sem teto, uma pergunta complexa podia disparar
+            # buscas demais e estourar o tempo que uma conexão HTTP comum
+            # tolera antes de cair — foi o que produziu "Failed to fetch" em
+            # produção mesmo com a resposta pronta do lado do servidor
+            # (medido: ~125s de principio a fim, conexão morrendo ~100s).
+            kwargs["tools"] = [{
+                "type": "web_search_20260209", "name": "web_search", "max_uses": 3,
+            }]
+        return kwargs
+
+    # stop_reason == "pause_turn" acontece em buscas na internet mais longas
+    # (ferramenta server-side): não é erro nem resposta pronta, é o sinal de
+    # que o modelo ainda está no meio do raciocínio/busca e precisa que a
+    # MESMA conversa continue — resposta anterior sem tratar isso chegava com
+    # texto final vazio. O jeito certo, por documentação da Anthropic, é
+    # reenviar o bloco de conteúdo do assistente como nova mensagem
+    # "assistant" e chamar de novo, sem tool_result (quem executa a busca é o
+    # servidor da Anthropic, não este código). Teto de 2 rodadas, não 5: cada
+    # rodada extra soma latência de rede numa conexão que já está no limite
+    # do que navegador/NAT tolera fica ociosa.
+    _MAX_RODADAS_PAUSE_TURN = 2
+
     def responder(
         self,
         sistema: str,
@@ -118,27 +193,13 @@ class ProvedorAnthropic(ProvedorIA):
         usar_internet: bool = True,
     ) -> Resposta:
         modelo_efetivo = modelo or self._modelo
-        kwargs: dict = {
-            "model": modelo_efetivo,
-            "system": sistema,
-            "max_tokens": settings.ai_max_output_tokens,
-        }
-        if usar_internet:
-            kwargs["tools"] = [{"type": "web_search_20260209", "name": "web_search"}]
+        kwargs = self._kwargs_base(sistema, modelo_efetivo, usar_internet)
 
-        # stop_reason == "pause_turn" acontece em buscas na internet mais longas
-        # (ferramenta server-side): não é erro nem resposta pronta, é o sinal de
-        # que o modelo ainda está no meio do raciocínio/busca e precisa que a
-        # MESMA conversa continue — resposta anterior sem tratar isso chegava
-        # com texto final vazio. O jeito certo, por documentação da Anthropic,
-        # é reenviar o bloco de conteúdo do assistente como nova mensagem
-        # "assistant" e chamar de novo, sem tool_result (quem executa a busca é
-        # o servidor da Anthropic, não este código).
         mensagens_turno = list(mensagens)
         textos: list[str] = []
         tokens_entrada = 0
         tokens_saida = 0
-        for _ in range(5):
+        for _ in range(self._MAX_RODADAS_PAUSE_TURN):
             resp = self._cliente.messages.create(messages=mensagens_turno, **kwargs)
             tokens_entrada += resp.usage.input_tokens
             tokens_saida += resp.usage.output_tokens
@@ -156,6 +217,40 @@ class ProvedorAnthropic(ProvedorIA):
             tokens_saida=tokens_saida,
             modelo=modelo_efetivo,
         )
+
+    def responder_stream(
+        self,
+        sistema: str,
+        mensagens: list[dict],
+        modelo: str | None = None,
+        usar_internet: bool = True,
+    ):
+        modelo_efetivo = modelo or self._modelo
+        kwargs = self._kwargs_base(sistema, modelo_efetivo, usar_internet)
+
+        mensagens_turno = list(mensagens)
+        textos: list[str] = []
+        tokens_entrada = 0
+        tokens_saida = 0
+        for _ in range(self._MAX_RODADAS_PAUSE_TURN):
+            with self._cliente.messages.stream(messages=mensagens_turno, **kwargs) as stream:
+                # stream.text_stream só emite pedaços de blocos type == "text",
+                # ignorando automaticamente server_tool_use/web_search_tool_result
+                # — mesmo filtro do caminho não-streaming, aplicado pelo SDK.
+                for pedaco in stream.text_stream:
+                    textos.append(pedaco)
+                    yield {"delta": pedaco}
+                resp = stream.get_final_message()
+            tokens_entrada += resp.usage.input_tokens
+            tokens_saida += resp.usage.output_tokens
+            if resp.stop_reason != "pause_turn":
+                break
+            mensagens_turno = [*mensagens_turno, {"role": "assistant", "content": resp.content}]
+
+        yield {"final": Resposta(
+            texto="".join(textos), tokens_entrada=tokens_entrada,
+            tokens_saida=tokens_saida, modelo=modelo_efetivo,
+        )}
 
 
 _cache: ProvedorIA | None = None
