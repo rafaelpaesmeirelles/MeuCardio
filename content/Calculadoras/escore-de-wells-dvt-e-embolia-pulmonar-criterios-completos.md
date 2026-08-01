@@ -3,7 +3,7 @@ title: "Escore de Wells (TVP e Embolia Pulmonar): Critérios Completos"
 slug: escore-de-wells-dvt-e-embolia-pulmonar-criterios-completos
 theme: "Calculadoras"
 kind: calculadora
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Wells PS, Anderson DR, Bormanis J, et al. Value of assessment of pretest probability of deep-vein thrombosis in clinical management. Lancet. 1997;350(9094):1795-1798. DOI: 10.1016/S0140-6736(97)08140-3. PMID: 9428249", "Wells PS, Anderson DR, Rodger M, et al. Evaluation of D-dimer in the diagnosis of suspected deep-vein thrombosis. N Engl J Med. 2003;349(13):1227-1235. DOI: 10.1056/NEJMoa023153. PMID: 14507948", "Wells PS, Anderson DR, Rodger M, et al. Derivation of a simple clinical model to categorize patients probability of pulmonary embolism: increasing the models utility with the SimpliRED D-dimer. Thromb Haemost. 2000;83(3):416-420. PMID: 10744147"]
 legacy_source: "Documento novo — o escore de Wells era citado pelo nome em documentos de TVP e TEP desta biblioteca, mas nenhum trazia os critérios e pontos completos, só a recomendação de uso."
 ---
