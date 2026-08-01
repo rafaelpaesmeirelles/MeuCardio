@@ -457,11 +457,25 @@ revisão, corvia2 em código de calculadoras).
   `avisar.sh` antes de escrever nessas três frentes desse tema — ou combinar entre si quem fica
   com o quê — para não colidir. `casos-clinicos/`/`trilhas/` de Cardiopatias congênitas já eram da
   corvia3, sem mudança aí.
-- **Casos-clínicos/trilhas dos outros 26 temas ficam sem sessão dedicada** até corvia1/corvia2
-  assumirem ou o Rafael redefinir — registrado aqui para não passar batido.
 - Mesma regra de sempre, sem mudança: sem pausa para confirmação de nenhuma espécie, inclusive
   publicar; nada fabricado, fonte real e verificável, `VERIFICAÇÃO HUMANA NECESSÁRIA` explícito
   onde a fonte não confirmar.
+
+**Casos-clínicos/trilhas dos outros 26 temas — atribuídos a corvia1 e corvia2, pedido do Rafael,
+mesma noite:** cada uma cobre casos-clínicos/trilhas dos temas que já é dona em `content/` (mesmo
+critério de sempre — já conhece a fonte, evita colisão de tópico):
+
+- **corvia1**: casos-clínicos/trilhas dos 9 temas (fora Cardiopatias congênitas, que ficou com
+  corvia3): Doença coronariana, Cardiomiopatias, Valvopatias, Pericárdio, Endocardite, Aorta e DAP,
+  Febre reumática, Síncope, Perioperatório.
+- **corvia2**: casos-clínicos/trilhas dos 17 temas: Farmacologia, Gravidez, Terapia intensiva,
+  Tromboembolismo, Fibrilação atrial, Arritmias, Dispositivos, Prevenção e lipídios, Diabetes e
+  cardiologia, Insuficiência cardíaca, Hipertensão, Hipertensão pulmonar, Calculadoras,
+  Cardio-oncologia, Comunicação clínica, Geral, Saúde mental.
+
+Antes do primeiro item, conferir `casos-clinicos/metadados.json` e `trilhas/metadados.json` no
+disco (slugs e `review_status`) para não colidir com o que corvia3 já escreveu na rodada 13 nesses
+temas antes da redivisão.
 
 > ### 🗄️ Histórico — divisão anterior (biblioteca/medicamentos/corvia), superseded 01/08/2026 tarde
 > Mantido abaixo como referência de como a divisão funcionava antes; não é mais a divisão vigente.
