@@ -1,0 +1,81 @@
+---
+title: "Síndrome de Eisenmenger e Gestação: Mortalidade Materna do Registro Britânico ao ROPAC"
+slug: sindrome-de-eisenmenger-e-gestacao-mortalidade-materna-do-registro-britanico-ao-ropac
+theme: "Gravidez"
+kind: estudo
+review_status: revisado
+source_refs: ["Yentis SM, Steer PJ, Plaat F. Eisenmenger's syndrome in pregnancy: maternal and fetal mortality in the 1990s. Br J Obstet Gynaecol. 1998 Aug;105(8):921-2. doi: 10.1111/j.1471-0528.1998.tb10240.x. PMID: 9746388 — levantamento postal de 225 unidades obstétricas do NHS com UTI neonatal, 15 casos identificados entre 1991-1995", "Bédard E, Dimopoulos K, Gatzoulis MA. Has there been any progress made on pregnancy outcomes among women with pulmonary arterial hypertension? Eur Heart J. 2009 Feb;30(3):256-65. doi: 10.1093/eurheartj/ehn597. PMID: 19147605 — revisão sistemática de 48 relatos/séries de casos, 73 gestantes com HAP publicados entre 1997-2007, comparados com o período 1978-1996", "Sliwa K, van Hagen IM, Budts W, et al.; ROPAC investigators. Pulmonary hypertension and pregnancy outcomes: data from the Registry Of Pregnancy And Cardiac disease (ROPAC) of the European Society of Cardiology. Eur J Heart Fail. 2016 Sep;18(9):1119-28. doi: 10.1002/ejhf.594. PMID: 27384461 (errata: Eur J Heart Fail. 2017 Mar;19(3):439) — 151 gestantes com hipertensão pulmonar no ROPAC, 2007 em diante", "Roos-Hesselink J, Baris L, Johnson M, et al. Pregnancy outcomes in women with cardiovascular disease: evolving trends over 10 years in the ESC Registry Of Pregnancy And Cardiac disease (ROPAC). Eur Heart J. 2019 Dec 14;40(47):3848-3855. doi: 10.1093/eurheartj/ehz136. PMID: 30907409 — 5.739 gestações, 2007-2018"]
+legacy_source: "Documento novo, escrito em 01/08/2026. A síndrome de Eisenmenger só aparecia citada como EXEMPLO dentro da tabela de classificação mWHO IV (documento classificacao-de-risco-mwho-2-0-na-gravidez-esc-2025.md) e como categoria genérica 'cardiopatia cianótica não corrigida' no documento de estratificação ESC 2018/SBC 2020 — nenhum dos 27 documentos existentes de Gravidez trazia dado numérico de mortalidade, fisiopatologia ou evolução histórica específicos da síndrome de Eisenmenger. Lacuna confirmada por grep antes de escrever."
+---
+
+# Síndrome de Eisenmenger e Gestação: Mortalidade Materna do Registro Britânico ao ROPAC
+
+## Por que este documento
+A síndrome de Eisenmenger é citada nesta base só como exemplo dentro da classe mWHO IV (`classificacao-de-risco-mwho-2-0-na-gravidez-esc-2025.md`) e como "cardiopatia cianótica não corrigida" no documento de estratificação geral (ESC 2018/SBC 2020) — nenhum dos dois traz número, fisiopatologia ou a evolução histórica da mortalidade materna nessa condição especificamente. Este documento fecha essa lacuna com quatro fontes que, lidas em sequência, mostram como a mortalidade mudou (ou não) ao longo de três décadas de registro.
+
+## O que é a síndrome de Eisenmenger
+É o estágio final de um shunt esquerda-direita não corrigido e de longa duração (comunicação interventricular, comunicação interatrial, persistência do canal arterial ou defeito do septo atrioventricular) que eleva a resistência vascular pulmonar até torná-la igual ou maior que a resistência sistêmica. Quando isso ocorre, o shunt se inverte — passa a ser direita-esquerda ou bidirecional —, e a paciente desenvolve cianose central crônica, hipoxemia e eritrocitose secundária. A resistência vascular pulmonar nessa condição é **fixa**, ou seja, não cai para acomodar o aumento de débito cardíaco e a queda de resistência vascular sistêmica que a gestação normalmente impõe — é essa incapacidade de adaptação hemodinâmica, e não só a cianose em si, que torna a gestação particularmente perigosa nesta fisiologia especificamente, entre as cardiopatias congênitas.
+
+## Mortalidade materna, levantamento britânico dos anos 1990 (Yentis et al., 1998)
+Questionário postal enviado a **225 unidades obstétricas do NHS** com UTI neonatal, levantando casos de síndrome de Eisenmenger entre 1991 e 1995. Foram identificados **15 casos**:
+- **Mortalidade materna: 40%**.
+- **Perda fetal: 8%**.
+- **Apenas 15% dos nascidos vivos chegaram a termo.**
+- Conclusão literal dos autores: a mortalidade materna associada à síndrome de Eisenmenger permanecia **tão alta quanto vinha sendo nos 50 anos anteriores**.
+
+**fonte**: PMID 9746388 (Yentis et al., Br J Obstet Gynaecol 1998)
+
+## Mortalidade materna, revisão sistemática de 2009 (Bédard et al.) — a primeira queda documentada
+Revisão sistemática de **48 relatos ou séries de caso, reunindo 73 gestantes** com hipertensão arterial pulmonar (HAP) publicados entre 1997 e 2007, comparados com os dados publicados entre 1978 e 1996. As gestantes foram divididas em três subgrupos: HAP idiopática (iHAP), HAP associada a cardiopatia congênita (HAP-CC — grupo em que a síndrome de Eisenmenger é a apresentação mais comum) e HAP de outra etiologia.
+- **Uso de terapia avançada para HAP**: 72% na iHAP, 52% na HAP-CC, 47% na outra etiologia.
+- **Mortalidade materna global caiu de 38% (1978-1996) para 25% (1997-2007)**, diferença estatisticamente significativa (p = 0,047).
+- **Mortalidade por subgrupo no período 1997-2007: 17% na iHAP, 28% na HAP-CC (grupo da síndrome de Eisenmenger), 33% na outra etiologia.**
+- **78% das mortes ocorreram no primeiro mês pós-parto.**
+- **Primigestas tiveram risco de morte 3,70 vezes maior** (IC95% 1,15-12,5; p = 0,03).
+- **Anestesia geral associou-se a risco de morte 4,37 vezes maior** (IC95% 1,28-16,50; p = 0,02).
+- Conclusão dos autores: a mortalidade materna na HAP permanece **proibitivamente alta**, apesar de menor que em décadas anteriores; aconselhamento precoce sobre risco gestacional, incluindo contracepção, continua sendo prioridade máxima.
+
+**fonte**: PMID 19147605 (Bédard et al., Eur Heart J 2009)
+
+## Mortalidade materna, subanálise do ROPAC de hipertensão pulmonar (Sliwa et al., 2016)
+Subanálise do **Registry Of Pregnancy And Cardiac disease (ROPAC)** da Sociedade Europeia de Cardiologia, com **151 gestantes com hipertensão pulmonar** (diagnóstico por cateterismo direito ou suspeita por sinais ecocardiográficos): **26% com HAP** (subdivididas em idiopática, associada a cardiopatia congênita e de outra etiologia) e **74% com hipertensão pulmonar por cardiopatia esquerda** (n=112). Idade materna média 29,2±5,6 anos; 37% nulíparas. Em mais de 75% das pacientes o diagnóstico de HP já era conhecido antes da gestação.
+- **Morte materna até 1 semana após o parto: 5 de 151 (3,3%)**; entre as pacientes com seguimento registrado (78 de 151), **mais 2 óbitos (2,6% desse subgrupo) entre 1 semana e 6 meses pós-parto**.
+- **A maior mortalidade ficou com a HAP idiopática: 3 de 7 pacientes (43%)** — o abstract **não relata** a mortalidade especificamente do subgrupo de HAP associada a cardiopatia congênita (onde está a síndrome de Eisenmenger) separadamente da HAP idiopática ou de outra etiologia.
+- Insuficiência cardíaca durante a gestação: 27%.
+- Cesariana em 63,4% (23,9% em caráter de emergência); interrupção terapêutica da gestação em 4,0%.
+- Complicações: abortamento espontâneo 5,6%, mortalidade fetal 2%, parto prematuro 21,7%, baixo peso ao nascer 19,0%, mortalidade neonatal 0,7%.
+- Conclusão dos autores: a mortalidade neste grupo com várias formas de HP foi **menor que a previamente relatada**, atribuída ao cuidado especializado disponível durante gestação e parto — mas a mortalidade materna e fetal permanece **proibitivamente alta na HAP idiopática**, com a ressalva de que essa conclusão é limitada pelo número pequeno de casos.
+
+**fonte**: PMID 27384461 (Sliwa et al., Eur J Heart Fail 2016; errata Eur J Heart Fail 2017;19(3):439)
+
+## Mortalidade materna, tendência de 10 anos do ROPAC (Roos-Hesselink et al., 2019)
+Coorte prospectiva de **5.739 gestações** em mulheres com cardiopatia, de 2007 a 2018, idade média 29,5 anos. Cardiopatia congênita respondia por 57% dos diagnósticos e cardiopatia valvar por 29%.
+- **Mortalidade global: 0,6%** — mas **mais alta no grupo de hipertensão arterial pulmonar: 9%**, o maior valor entre todos os diagnósticos cardíacos analisados no registro.
+- Insuficiência cardíaca em 11%, arritmias em 2%. Cesariana em 44%.
+- Complicações obstétricas em 17%, complicações fetais em 21%.
+- **Gestações mWHO classe IV** (categoria que inclui a síndrome de Eisenmenger) **aumentaram de 0,7% (2007-2010) para 10,9% (2015-2018)** no registro — mais pacientes de altíssimo risco engravidando ao longo da década, apesar da contraindicação formal.
+- Fatores determinantes de complicação materna: insuficiência cardíaca ou classe funcional NYHA >II antes da gestação, fração de ejeção sistêmica <40%, mWHO classe 4 e uso de anticoagulante.
+- Após aumento entre 2007 e 2009, as taxas de complicação **caíram** de 13,2% (2010) para 9,3% (2017), apesar da inclusão de gestações cada vez mais graves.
+
+**fonte**: PMID 30907409 (Roos-Hesselink et al., Eur Heart J 2019)
+
+## Lendo as quatro fontes juntas — o que converge e o que não se pode concluir
+1. **Há uma trajetória real de queda de mortalidade**, mas ela não é uniforme entre as fontes porque cada uma mede uma população e um recorte temporal diferentes: 40% na síndrome de Eisenmenger especificamente nos anos 1990 (Yentis) → 28% no subgrupo de HAP associada a cardiopatia congênita entre 1997-2007 (Bédard) → 9% no grupo de HAP do ROPAC entre 2007-2018 (Roos-Hesselink). **Nenhuma dessas cifras deve ser lida como "a" mortalidade atual da síndrome de Eisenmenger isoladamente** — a de Yentis é a única das quatro específica da síndrome, e é também a mais antiga.
+2. **A queda de mortalidade é atribuída, nas próprias fontes, ao cuidado especializado e multidisciplinar disponível durante gestação e parto** (texto literal da conclusão de Sliwa et al.) e ao maior uso de terapia avançada para HAP (Bédard et al.) — não a uma mudança na gravidade intrínseca da fisiologia de Eisenmenger, que continua sendo definida pela mesma resistência vascular pulmonar fixa.
+3. **A HAP continua sendo, em toda coorte moderna analisada aqui, o diagnóstico cardíaco de maior mortalidade materna na gestação** — 9% no ROPAC de 10 anos (Roos-Hesselink), o maior valor entre todos os diagnósticos do registro, e 43% especificamente na HAP idiopática na subanálise de 2016 (Sliwa). Mesmo com a queda histórica, o risco absoluto permanece o mais alto entre as cardiopatias cobertas nesta base.
+4. **O aumento de gestações mWHO IV no ROPAC (0,7% para 10,9% em uma década) mostra que a contraindicação formal não impede a gestação de ocorrer na prática** — o que reforça, e não enfraquece, a importância do aconselhamento pré-concepcional e da contracepção eficaz, ponto que as quatro fontes tratam como prioridade.
+5. **Dois fatores de risco de morte têm força estatística e vêm de uma única fonte (Bédard et al.)**: ser primigesta (OR 3,70) e receber anestesia geral em vez de técnica regional (OR 4,37). Nenhuma das outras três fontes testou ou confirmou esses dois fatores especificamente — ficam registrados como achado de uma fonte, não como consenso entre as quatro.
+
+## O que isso significa na prática clínica
+- A síndrome de Eisenmenger está classificada como **mWHO IV**, categoria em que a gestação é **contraindicada** e a interrupção deve ser discutida com a paciente (ver `classificacao-de-risco-mwho-2-0-na-gravidez-esc-2025.md` e `doenca-cardiovascular-na-gravidez-estratificacao-de-risco-e-manejo-esc-2018-sbc-2020.md` desta mesma base, que tratam a contraindicação em nível de classificação geral, sem o dado numérico deste documento).
+- Quando a gestação ocorre apesar da contraindicação — o próprio aumento de mWHO IV no ROPAC mostra que isso acontece com frequência crescente —, o acompanhamento precisa ser em centro de referência com equipe multidisciplinar (cardiologia de cardiopatia congênita do adulto, obstetrícia de alto risco e anestesiologia com experiência específica), dado o padrão de morte concentrado no período periparto e pós-parto imediato (78% das mortes no primeiro mês, em Bédard et al.).
+- **Anestesia geral parece carregar risco maior que técnica regional** (achado isolado de Bédard et al., não confirmado pelas outras três fontes) — é um dado a ponderar na escolha da técnica anestésica, não uma recomendação graduada por diretriz.
+- A via de parto **não** tem recomendação graduada extraída destas quatro fontes especificamente para a síndrome de Eisenmenger: a cesariana foi majoritária nas coortes de HP do ROPAC (63,4% em Sliwa et al., 44% na coorte geral de Roos-Hesselink et al., que inclui todas as cardiopatias, não só HAP), mas nenhuma das fontes aqui reunidas testa via de parto como variável associada a desfecho. **VERIFICAÇÃO HUMANA NECESSÁRIA** para uma recomendação específica de via de parto.
+- Da mesma forma, o **esquema de anticoagulação** na síndrome de Eisenmenger — tensionado entre o risco trombótico da eritrocitose e o risco hemorrágico da coagulopatia associada à hipoxemia crônica, ambos amplamente descritos na literatura de cardiopatia congênita cianótica fora da gestação — **não** tem esquema numérico ou nível de evidência extraído de nenhuma das quatro fontes deste documento. **VERIFICAÇÃO HUMANA NECESSÁRIA** antes de aplicar qualquer protocolo específico; a decisão deve ser individualizada por equipe de cardiopatia congênita do adulto.
+
+## Limitações declaradas nas próprias fontes
+- Yentis et al. (1998) é um levantamento por questionário postal retrospectivo, com apenas 15 casos identificados em 5 anos — número pequeno mesmo reconhecendo a raridade da condição, e sujeito a viés de notificação (unidades que não responderam ao questionário podem ter tido casos não capturados).
+- Bédard et al. (2009) reúne relatos e séries de caso publicados, não uma coorte prospectiva — os próprios autores reconhecem que **viés de publicação não pode ser excluído** (casos com desfecho mais grave, ou mais raro, têm maior chance de ser publicados como relato de caso).
+- Sliwa et al. (2016) não relata a mortalidade do subgrupo específico de HAP associada a cardiopatia congênita separadamente do subgrupo idiopático — o dado de 43% de mortalidade citado no abstract é da HAP idiopática (7 casos), **não** da síndrome de Eisenmenger isoladamente, e a diferenciação entre os subgrupos de HAP não está no resumo consultado nesta verificação.
+- Roos-Hesselink et al. (2019) relata mortalidade de 9% para o grupo de HAP como um todo (não discriminando Eisenmenger de outras causas de HAP dentro do próprio grupo), na coorte geral de cardiopatia e gestação do ROPAC — é a fonte mais recente e com o maior número de gestações, mas o recorte por etiologia específica de HAP não está disponível no resumo consultado.
+- **Nenhuma das quatro fontes fornece esquema de anticoagulação, via de parto preferencial ou protocolo anestésico específico com nível de evidência graduado para a síndrome de Eisenmenger** — ver a marcação de verificação humana necessária acima.

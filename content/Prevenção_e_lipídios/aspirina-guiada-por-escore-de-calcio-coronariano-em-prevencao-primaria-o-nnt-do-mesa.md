@@ -1,0 +1,61 @@
+---
+title: "Aspirina em Prevenção Primária Guiada por Escore de Cálcio Coronariano: o NNT e o NNH do MESA"
+slug: aspirina-guiada-por-escore-de-calcio-coronariano-em-prevencao-primaria-o-nnt-do-mesa
+theme: "Prevenção e lipídios"
+kind: estudo
+review_status: revisado
+source_refs: ["Miedema MD, Duprez DA, Misialek JR, Blaha MJ, Nasir K, Silverman MG, Blankstein R, Budoff MJ, Greenland P, Folsom AR. Use of coronary artery calcium testing to guide aspirin utilization for primary prevention: estimates from the multi-ethnic study of atherosclerosis. Circ Cardiovasc Qual Outcomes. 2014;7(3):453-460. DOI: 10.1161/CIRCOUTCOMES.113.000690. PMID: 24803472 — 4.229 participantes do MESA, seguimento mediano de 7,6 anos", "US Preventive Services Task Force; Davidson KW, Barry MJ, Mangione CM, et al. Aspirin Use to Prevent Cardiovascular Disease: US Preventive Services Task Force Recommendation Statement. JAMA. 2022;327(16):1577-1584. DOI: 10.1001/jama.2022.4983. PMID: 35471505 — recomendação vigente, que substitui a de 2016", "Verghese D, Manubolu S, Budoff MJ. Contemporary use of coronary artery calcium for the allocation of aspirin in light of the 2022 USPSTF guideline recommendations. Am J Prev Cardiol. 2022;12:100427. DOI: 10.1016/j.ajpc.2022.100427. PMID: 36407963. PMCID: PMC9668677 — editorial que concilia o achado do MESA com a queda de recomendação do USPSTF, e a única fonte usada aqui para o que a diretriz ACC/AHA 2019 diz sobre CAC e aspirina (não verificado no texto primário da diretriz, ver nota no corpo)"]
+legacy_source: "Documento novo, escrito em 01/08/2026. A base já tem o escore de cálcio coronariano em profundidade (MESA de Detrano/Sandesara, sobre estratificação de risco e o significado de escore zero) e já tem dois documentos sobre aspirina em prevenção primária sem seleção por exame (ASCEND no diabético, ASPREE no idoso saudável, ambos sem benefício líquido). Faltava a pergunta que une as duas frentes: usar o PRÓPRIO escore de cálcio para decidir em quem a aspirina vale a pena, com números de NNT e NNH por estrato — que é exatamente o que os dois documentos anteriores de aspirina, ao mostrarem resultado neutro/desfavorável em população não selecionada, deixam em aberto."
+---
+
+# Aspirina em Prevenção Primária Guiada por Escore de Cálcio Coronariano: o NNT e o NNH do MESA
+
+## Por que este documento não contradiz os dois já existentes sobre aspirina
+Os dois documentos já publicados nesta pasta sobre aspirina em prevenção primária — `aspirina-em-prevencao-primaria-no-idoso-saudavel-o-ensaio-aspree.md` (idoso saudável) e o que cobre o ASCEND (diabético) — mostram ausência de benefício líquido claro quando a aspirina é dada a uma população **não selecionada** por marcador de aterosclerose subclínica. A pergunta que fica em aberto nos dois é: existe algum subgrupo, dentro dessas populações de risco intermediário, em que a aspirina realmente compensa o risco de sangramento? O escore de cálcio coronariano (CAC), já detalhado no documento `escore-de-calcio-coronariano-o-que-o-mesa-mediu-e-o-que-significa-um-escore-zero.md` desta mesma pasta, é o candidato mais estudado para fazer essa seleção — e é o que Miedema et al. testaram diretamente.
+
+## O estudo: miedema et al., circ cardiovasc qual outcomes 2014
+Miedema MD et al. Circ Cardiovasc Qual Outcomes. 2014;7(3):453-460 (PMID 24803472). Análise do **Multi-Ethnic Study of Atherosclerosis (MESA)**, a mesma coorte do documento de escore de cálcio já existente nesta pasta:
+- **4.229 participantes sem diabetes mellitus e que não usavam aspirina no início do estudo**
+- Seguimento **mediano de 7,6 anos**
+- Método: estimar o **NNT em 5 anos** aplicando uma redução relativa de **18%** no risco de doença coronariana (número extraído de metanálise prévia de aspirina em prevenção primária) sobre as taxas de evento observadas em cada estrato de CAC; contrastar com o **NNH em 5 anos** para sangramento maior, calculado a partir do risco de sangramento relatado em metanálise de aspirina
+- Estratificação adicional pelo **Escore de Risco de Framingham (FRS) em 10 anos**, no corte de **10%**
+
+## Os números, por estrato — o achado central
+**Participantes com CAC ≥ 100** — ganho líquido estimado com aspirina, **independentemente do risco tradicional pelo FRS**:
+- **FRS < 10%**: NNT em 5 anos de **173**
+- **FRS ≥ 10%**: NNT em 5 anos de **92**
+- **NNH em 5 anos para sangramento maior: 442** (o mesmo valor de NNH se aplica aos dois estratos de FRS, porque o risco de sangramento do CAC não entra na estimativa de dano — só a taxa de evento coronariano difere entre estratos)
+
+**Participantes com CAC = 0 (escore zero)** — estimativas desfavoráveis à aspirina:
+- **FRS < 10%**: NNT em 5 anos de **2.036**
+- **FRS ≥ 10%**: NNT em 5 anos de **808**
+- **NNH em 5 anos: 442**, o mesmo número acima
+
+**Leitura direta dos próprios autores:** com CAC ≥ 100, o benefício estimado supera o dano estimado por uma margem grande (NNT de 92 a 173, contra NNH de 442) — a aspirina "compensa" nesse estrato. Com CAC zero, o NNT ultrapassa em muito o NNH (2.036 e 808 contra 442) — a aspirina, nesse estrato, é estimada como **dano líquido**, mesmo em quem tem FRS ≥ 10% (ou seja, mesmo em quem o cálculo de risco tradicional classificaria como candidato à aspirina). Os autores relatam que análises estratificadas por sexo e por faixa etária mostraram resultados semelhantes.
+
+**O que este desenho NÃO é:** é uma **estimativa baseada em modelagem**, cruzando taxas de evento observadas no MESA com uma redução relativa de risco vinda de outra fonte (metanálise) e um risco de sangramento de uma terceira fonte — não é um ensaio clínico randomizado que testou "dar ou não dar aspirina conforme o CAC" e mediu o desfecho diretamente. Os próprios autores descrevem o estudo como geração de estimativas de NNT/NNH para orientar a decisão, não como prova direta de eficácia da estratégia.
+
+## Onde isso se encaixa na diretriz vigente — e a diretriz mudou depois deste estudo
+Este é o ponto que mais precisa de cuidado ao usar o documento na prática, porque o estudo é de **2014** e o cenário de recomendação para aspirina em prevenção primária mudou de forma relevante desde então.
+
+**A recomendação vigente do United States Preventive Services Task Force (USPSTF)**, JAMA 2022;327(16):1577-1584 (PMID 35471505), que **substituiu a de 2016**, é bem mais restritiva do que a prática da época do estudo do MESA:
+- Para adultos de **40 a 59 anos com risco de 10 anos ≥ 10%**: "a decisão de iniciar aspirina em baixa dose deve ser individual... a evidência indica que o benefício líquido é pequeno" — **recomendação C**
+- Para adultos **60 anos ou mais**: **recomenda-se CONTRA** iniciar aspirina em baixa dose para prevenção primária — **recomendação D**
+- A população elegível para a análise do USPSTF já exclui quem tem risco hemorrágico aumentado (história de úlcera gastrointestinal, sangramento recente, outras condições ou medicamentos que aumentem o risco)
+
+Essa recomendação de 2022 incorpora os resultados de três ensaios randomizados grandes publicados **depois** do estudo do MESA (2018): ASPREE, ASCEND e ARRIVE — os dois primeiros já documentados nesta mesma pasta, ambos sem benefício líquido cardiovascular claro em suas respectivas populações (idoso saudável e diabético).
+
+**Como o editorial de Verghese et al. concilia as duas coisas** (Am J Prev Cardiol. 2022;12:100427, PMID 36407963): o argumento central do editorial é que os ensaios randomizados que motivaram a queda de recomendação do USPSTF (ASPREE, ASCEND, ARRIVE) recrutaram populações de risco relativamente **baixo** para doença aterosclerótica e de risco hemorrágico mais alto — o que pode ter contribuído para o resultado neutro/negativo — e que o CAC, por ser um marcador direto de aterosclerose já estabelecida, permitiria personalizar a decisão dentro do espectro de risco em vez de tratar a população inteira da mesma forma. O editorial afirma que **"as diretrizes de prevenção primária do ACC/AHA de 2019 recomendam o uso do CAC para reclassificar risco e guiar a alocação personalizada de estatina e aspirina"** — **esta afirmação sobre o conteúdo da diretriz de 2019 não foi conferida diretamente no texto primário da diretriz nesta sessão**, e está atribuída aqui explicitamente ao editorial de Verghese et al., não a uma leitura direta do documento do ACC/AHA. `VERIFICAÇÃO HUMANA NECESSÁRIA` para quem precisar citar o texto exato e a classe/nível daquela diretriz.
+
+**Síntese que evita a leitura fácil errada:** este documento não autoriza voltar a prescrever aspirina em prevenção primária de forma ampla. Ele documenta uma estratégia de **seleção dentro da população que a diretriz de 2022 já trata com cautela** — usar CAC ≥ 100 como critério adicional de quem, dentro do grupo de risco intermediário-alto, mais provavelmente tem benefício líquido, e usar CAC = 0 como razão adicional para **não** iniciar, mesmo que o FRS tradicional sugerisse fazê-lo. O peso da recomendação D do USPSTF para ≥ 60 anos permanece — o estudo do MESA não incluiu um braço específico testando se CAC alto muda essa recomendação para essa faixa etária especificamente.
+
+## Sintese pratica
+Em paciente de meia-idade sem doença cardiovascular estabelecida, sem aumento de risco hemorrágico, em quem a indicação de aspirina para prevenção primária está em dúvida: um CAC = 0 é argumento forte para **não** iniciar aspirina (NNT de centenas a milhares contra um NNH constante de 442); um CAC ≥ 100 é argumento para considerar iniciar, com estimativa de benefício líquido favorável mesmo em quem tem FRS < 10%. Isso é refinamento de decisão dentro de uma prática já cautelosa por definição da diretriz vigente — não uma reversão dela.
+
+## Armadilhas clinicas
+- **Usar este estudo para justificar aspirina rotineira em prevenção primária** — ele é sobre seleção de subgrupo por CAC, não sobre reverter a recomendação C/D do USPSTF 2022 para a população em geral
+- **Aplicar os números de NNT/NNH deste estudo (2014) sem lembrar que a diretriz mudou depois** — os três ensaios randomizados que embasam o USPSTF 2022 (ASPREE, ASCEND, ARRIVE) são posteriores a esta análise; o estudo do MESA nunca testou aspirina guiada por CAC contra os desfechos desses ensaios diretamente
+- **Confundir estimativa de modelagem (NNT/NNH calculados) com resultado de ensaio randomizado** — ninguém no MESA foi alocado a receber ou não aspirina conforme o CAC; a redução de risco de 18% veio de outra fonte (metanálise), não do próprio MESA
+- **Extrapolar para ≥ 60 anos sem ressalva** — o USPSTF recomenda CONTRA iniciar aspirina nessa faixa etária (recomendação D), e este estudo não isola essa faixa como exceção
+- **Tratar a citação sobre a diretriz ACC/AHA 2019 (via Verghese et al.) como se fosse texto primário conferido** — está marcada como não verificada diretamente nesta sessão, e carece de conferência antes de ser citada como recomendação formal de classe/nível
+- **Ignorar que o NNH (442) é o mesmo nos dois estratos de FRS** — o que muda entre os estratos é só o NNT (risco de evento coronariano), não o risco hemorrágico estimado; é a proporção entre os dois números que decide a direção da recomendação em cada estrato
