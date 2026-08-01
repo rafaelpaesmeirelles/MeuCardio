@@ -3458,3 +3458,13 @@ omitidas: EXPLORER-HCM (Lancet 2020;396(10253):758) e PIONEER-HF (N Engl J Med 2
 (`owner_id`/`patient_id` obrigatórios), não biblioteca. **Nenhuma das quatro aceita conteúdo de
 catálogo sem mudança de código**; povoar qualquer uma delas seria fabricar paciente ou usuário. As
 frentes de conteúdo reais desta faixa continuam sendo `casos-clinicos/` e `trilhas/`.
+
+**✅ Painel `corvia` (tmux): últimos 9 carregados/publicados e a correção do `03a6788` propagada.**
+`carregar_casos_clinicos` rodou de novo depois do commit de correção (upsert por slug sobrescreve o
+texto, não mexe em `published`) — conferido campo a campo no banco que os três trechos corrigidos
+(GRACE: sete fatores, não oito; forame oval: 0,38 é HR, não taxa; PARADIGM-HF: sem afirmar período
+de suspensão que o abstract não sustenta) estão no ar. **`clinical_cases` 85/85, zero órfão.**
+
+**Faixa `casos-clinicos/` devolvida ao painel `corvia`**, por decisão da sessão de `/root` ao
+encerrar (31 casos dela, todos publicados). Volto a produzir nas duas frentes — `trilhas/` e
+`casos-clinicos/` — a partir daqui.
