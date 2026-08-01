@@ -678,5 +678,86 @@
       }
     ],
     "revisao": "Derivado de documento já verificado e publicado nesta base, com a seção de origem registrada em cada item e a referência primária reaproveitada do documento de origem. Elaborado pela sessão de conteúdo em 01/08/2026 sob a autorização contínua de publicação. ATENÇÃO: diferente dos quatro checklists de 28/07/2026, este ainda NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles — a atestação dele não é presumida."
+  },
+  {
+    "slug": "alta-pos-choque-cardiogenico",
+    "condicao": "Alta após internação por choque cardiogênico",
+    "resumo": "Etiologia tratada, estágio SCAI reavaliado, desmame de vasoativo confirmado e o seguimento que a evidência associa a menor recorrência de instabilidade.",
+    "documento_origem": "choque-cardiogenico-diagnostico-e-manejo-com-drogas-vasoativas",
+    "theme": "Terapia intensiva",
+    "review_status": "revisado",
+    "source_refs": [
+      "Norepinephrine bitartrate injection — rótulo aprovado pelo FDA, DailyMed SPL setid e375a0b9-4d26-4749-bbc3-43d63a7cf65a",
+      "Bula do PRIMACOR IV (lactato de milrinona, Sanofi), seção de posologia",
+      "Timerman S, Bernoche C, Santos Filho RD, Malachias MVB, et al. Atualização da Diretriz de Ressuscitação Cardiopulmonar e Cuidados Cardiovasculares de Emergência da Sociedade Brasileira de Cardiologia – 2019. Arq Bras Cardiol. 2019;113(3):449-663. DOI: 10.5935/abc.20190203. PMID: 31621787 — seções 12.5 e 7.11.1 (estudo SHOCK e IABP-SHOCK II)",
+      "SCAI clinical expert consensus statement on the classification of cardiogenic shock · SCAI/ACC/AHA/SCCM/STS · 2019 · 10.1002/ccd.28329",
+      "Naidu SS et al. SCAI SHOCK Stage Classification Expert Consensus Update. J Soc Cardiovasc Angiogr Interv. 2022 (checklist oficial SCAI SHOCK 2022, criterios numericos e coorte de validacao de 3.455 pacientes)"
+    ],
+    "itens": [
+      {
+        "id": "cs-etiologia-tratada",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Causa subjacente do choque identificada e tratada — revascularização precoce (até 6 horas) documentada quando a etiologia foi infarto agudo do miocárdio",
+        "origem_secao": "Revascularização no choque cardiogênico pós-IAM — estudo SHOCK"
+      },
+      {
+        "id": "cs-scai-estagio",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Estágio SCAI (A-E) documentado no momento de maior gravidade e reavaliado ao longo da internação, com o modificador A registrado se houve parada cardiorrespiratória associada",
+        "origem_secao": "Classificação SCAI — Trajetória clínica / Modificador A: parada cardíaca"
+      },
+      {
+        "id": "cs-vasoativo-desmame",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Vasopressor/inotrópico desmamado antes da alta, sem necessidade de suporte contínuo para manter PAM ≥ 65 mmHg",
+        "origem_secao": "Drogas vasoativas por perfil receptor — noradrenalina, meta de PAM"
+      },
+      {
+        "id": "cs-noradrenalina-primeira-escolha",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Quando houve hipotensão associada ao choque (PAS < 70 mmHg) durante a internação, noradrenalina foi usada como vasopressor de escolha, não dobutamina isolada",
+        "origem_secao": "Drogas vasoativas por perfil receptor — noradrenalina; Revascularização no choque pós-IAM"
+      },
+      {
+        "id": "cs-milrinona-ajuste-renal",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se milrinona foi utilizada, ajuste para função renal revisado — evitar ou reduzir dose com clearance de creatinina < 50 mL/min",
+        "origem_secao": "Drogas vasoativas por perfil receptor — milrinona"
+      },
+      {
+        "id": "cs-bia-individualizado",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Se balão intra-aórtico foi utilizado, revisado que o uso rotineiro não tem benefício de mortalidade estabelecido (IABP-SHOCK II) e que a indicação foi individualizada, não protocolar",
+        "origem_secao": "Suporte circulatório mecânico — IABP-SHOCK II"
+      },
+      {
+        "id": "cs-etiologia-base-encaminhada",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Terapia de base da etiologia específica iniciada ou encaminhada antes da alta — por exemplo, terapia guiada por diretriz para insuficiência cardíaca, causa mais frequente (52%) na coorte de validação SCAI",
+        "origem_secao": "Classificação SCAI — Etiologia predominante coorte"
+      },
+      {
+        "id": "cs-orientacao-sinais-hipoperfusao",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente e/ou família orientados sobre sinais de hipoperfusão e baixo débito (extremidades frias, oligúria, alteração do estado mental) e quando procurar atendimento",
+        "origem_secao": "Critérios diagnósticos gerais — hipoperfusão tecidual"
+      },
+      {
+        "id": "cs-seguimento-programado",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Seguimento clínico programado após a alta, dado que estágio basal mais baixo se associou a maior incidência de escalonamento e reforça a importância de reavaliação dinâmica contínua",
+        "origem_secao": "Classificação SCAI — Trajetória clínica"
+      }
+    ],
+    "revisao": "Cada item conferido contra o texto dos dois documentos de origem (ambos já revisado e publicados: choque-cardiogenico-diagnostico-e-manejo-com-drogas-vasoativas e classificacao-scai-de-estagios-do-choque-cardiogenico), sem dado novo ou de memória. Itens marcados obrigatorio:false dependem de o recurso (milrinona, BIA, vasopressor por hipotensão) ter sido de fato usado no caso — não se aplicam a todo paciente com choque cardiogênico."
   }
 ]
