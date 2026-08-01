@@ -9774,5 +9774,125 @@
       "Pizano A, Hirji SA, Nguyen TC. Severe Mitral Annular Calcification and Mitral Valve Surgery: An Algorithmic Approach to Management. Semin Thorac Cardiovasc Surg. 2020;32(4):630-634. DOI: 10.1053/j.semtcvs.2020.05.021. PMID: 32464177."
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "kawasaki-dose-unica-ou-quatro-doses-diarias-de-imunoglobulina",
+    "titulo": "Doença de Kawasaki aguda: imunoglobulina em dose única ou em quatro infusões diárias?",
+    "tema": "Cardiologia pediátrica",
+    "nivel": "intermediário",
+    "enunciado": "Menino de 3 anos, dia 6 de febre, preenche critérios clássicos de doença de Kawasaki (conjuntivite bilateral não exsudativa, exantema polimorfo, alterações de extremidades, língua em framboesa e linfadenopatia cervical). Ecocardiograma inicial sem dilatação coronária. A equipe discute qual esquema de imunoglobulina intravenosa (IVIG) prescrever, associada ao ácido acetilsalicílico.",
+    "pergunta": "Qual esquema de imunoglobulina intravenosa reduz mais a prevalência de anormalidades coronárias na fase aguda da doença de Kawasaki?",
+    "opcoes": [
+      "Dose única de 2 g/kg em infusão de 10 horas, associada a AAS",
+      "Quatro infusões diárias de 400 mg/kg, associada a AAS",
+      "As duas formas têm eficácia idêntica, e a escolha deve ser só por conveniência hospitalar",
+      "Imunoglobulina não deve ser usada de rotina antes do dia 10 de doença"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "No ensaio randomizado multicêntrico de Newburger et al. (NEJM 1991), 549 crianças com doença de Kawasaki aguda foram alocadas para dose única de 2 g/kg de gamaglobulina em infusão de 10 horas ou para quatro infusões diárias de 400 mg/kg, ambos os grupos recebendo AAS (100 mg/kg/dia até o 14º dia, depois 3-5 mg/kg/dia). A prevalência relativa ajustada de anormalidade coronária no grupo de quatro doses em comparação ao de dose única foi 1,94 (IC95% 1,01-3,71) em 2 semanas e 1,84 (IC95% 0,89-3,82) em 7 semanas — ou seja, o esquema fracionado teve quase o dobro do risco de anormalidade coronária. O grupo de dose única também apresentou queda mais rápida da temperatura (dia 2, p<0,001; dia 3, p=0,004), menor duração média da febre (p=0,028) e normalização mais rápida dos marcadores inflamatórios — albumina ajustada (p=0,004), alfa-1-antitripsina (p=0,007) e PCR (p=0,017). Níveis mais baixos de IgG no dia 4 se associaram a maior prevalência de lesão coronária (p=0,005). Efeitos adversos, incluindo insuficiência cardíaca nova ou piora em 9 crianças, ocorreram em 2,7% do total, todos transitórios, sem diferença relevante entre os grupos. Esse ensaio é a base histórica pela qual a dose única de 2 g/kg se consolidou como o esquema padrão no tratamento da doença de Kawasaki aguda.",
+    "source_refs": [
+      "Newburger JW, Takahashi M, Beiser AS, et al. A single intravenous infusion of gamma globulin as compared with four infusions in the treatment of acute Kawasaki syndrome. N Engl J Med. 1991;324(23):1633-1639. DOI: 10.1056/NEJM199106063242305. PMID: 1709446."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cardiomiopatia-hipertrofica-pediatrica-a-etiologia-muda-o-prognostico",
+    "titulo": "Cardiomiopatia hipertrófica na criança: a causa por trás do diagnóstico muda o prognóstico?",
+    "tema": "Cardiologia pediátrica",
+    "nivel": "intermediário",
+    "enunciado": "Lactente de 8 meses é diagnosticado com cardiomiopatia hipertrófica em investigação de sopro cardíaco; a investigação subsequente identifica um erro inato do metabolismo associado (doença de depósito lisossomal). Os pais perguntam se o prognóstico do filho é o mesmo de outra criança que ouviram falar, diagnosticada aos 6 anos com \"o mesmo problema no coração\", sem nenhuma outra doença associada.",
+    "pergunta": "Segundo o Registro Pediátrico de Cardiomiopatia (Colan et al.), o que determina principalmente o prognóstico da cardiomiopatia hipertrófica (CMH) na infância?",
+    "opcoes": [
+      "A causa de base (erro inato do metabolismo, síndrome malformativa ou forma idiopática) e a idade de apresentação — não o rótulo diagnóstico \"cardiomiopatia hipertrófica\" isoladamente",
+      "O grau de hipertrofia septal medido ao ecocardiograma, independentemente da causa associada",
+      "A presença de sopro sistólico ao exame físico no momento do diagnóstico",
+      "Todas as causas de CMH pediátrica têm sobrevida equivalente, uma vez tratada a insuficiência cardíaca"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O Registro Pediátrico de Cardiomiopatia reuniu dados prospectivos e retrospectivos de 855 crianças <18 anos com CMH: 8,7% (n=74) tinham erro inato do metabolismo, 9,0% (n=77) síndrome malformativa, 7,5% (n=64) doença neuromuscular e 74,2% (n=634) eram idiopáticas. Crianças com CMH associada a erro inato do metabolismo ou síndrome malformativa tiveram sobrevida significativamente pior que os outros dois grupos. Entre as formas idiopáticas, o diagnóstico antes de 1 ano de idade (n=227) teve pior sobrevida desde o diagnóstico do que o diagnóstico após 1 ano (n=407); porém, entre as idiopáticas que sobreviveram até pelo menos 1 ano de idade, a mortalidade anual foi de 1%, semelhante independentemente de o diagnóstico ter sido antes ou depois de 1 ano, e muito menor que o relatado previamente em crianças — comparável ao que se descreve em estudos populacionais de adultos. Ou seja: na CMH pediátrica, a causa de base e a idade de apresentação — não o diagnóstico ecocardiográfico isolado — são os determinantes principais de prognóstico, com pior desfecho concentrado em quem tem doença metabólica ou malformativa associada e em quem se apresenta muito cedo.",
+    "source_refs": [
+      "Colan SD, Lipshultz SE, Lowe AM, et al. Epidemiology and cause-specific outcome of hypertrophic cardiomyopathy in children: findings from the Pediatric Cardiomyopathy Registry. Circulation. 2007;115(6):773-781. DOI: 10.1161/CIRCULATIONAHA.106.621185. PMID: 17261650."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "betabloqueador-na-insuficiencia-cardiaca-do-idoso-o-que-o-seniors-mostrou",
+    "titulo": "Betabloqueador na insuficiência cardíaca do paciente muito idoso: o nebivolol muda a decisão?",
+    "tema": "Cardiologia geriátrica",
+    "nivel": "intermediário",
+    "enunciado": "Paciente de 78 anos, com internação por insuficiência cardíaca no último ano, fração de ejeção 38% (faixa intermediária), já em uso de IECA e diurético. Cogita-se iniciar betabloqueador, mas o cardiologista assistente questiona se a evidência clássica de redução de mortalidade — construída sobretudo em pacientes mais jovens com fração de ejeção claramente reduzida — de fato se aplica a essa idade e a essa fração de ejeção intermediária.",
+    "pergunta": "O que o ensaio SENIORS (nebivolol em pacientes ≥70 anos, com espectro amplo de fração de ejeção) demonstrou sobre o uso de betabloqueador nessa população?",
+    "opcoes": [
+      "Reduziu o desfecho composto de morte por qualquer causa ou internação cardiovascular, com efeito consistente independentemente de idade, sexo ou fração de ejeção",
+      "Não teve nenhum efeito estatisticamente significativo em nenhum desfecho avaliado no estudo",
+      "Só foi eficaz no subgrupo com fração de ejeção ≤35%, sem nenhum benefício acima desse corte",
+      "Aumentou de forma estatisticamente significativa a mortalidade por qualquer causa nessa faixa etária"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O SENIORS randomizou 2.128 pacientes com ≥70 anos e história de insuficiência cardíaca (internação por IC no ano anterior ou fração de ejeção conhecida ≤35%) para nebivolol, titulado de 1,25 mg até 10 mg uma vez ao dia, ou placebo. Idade média 76 anos (DP 4,7), 37% mulheres, fração de ejeção média 36% (35% dos pacientes com FE >35%), seguimento médio de 21 meses. O desfecho primário — composto de morte por qualquer causa ou internação cardiovascular — ocorreu em 332 pacientes (31,1%) no grupo nebivolol versus 375 (35,3%) no placebo (HR 0,86; IC95% 0,74-0,99; p=0,039), sem influência significativa de idade, sexo ou fração de ejeção sobre esse efeito. Já a mortalidade por qualquer causa isolada não atingiu significância estatística: 169 óbitos (15,8%) no grupo nebivolol versus 192 (18,1%) no placebo (HR 0,88; IC95% 0,71-1,08; p=0,21) — é o desfecho composto, não a mortalidade isolada, que foi positivo. O SENIORS é o ensaio que estende a evidência de benefício do betabloqueador ao paciente muito idoso com espectro amplo de fração de ejeção, população pouco representada nos grandes ensaios clássicos de betabloqueador na insuficiência cardíaca com fração de ejeção reduzida.",
+    "source_refs": [
+      "Flather MD, Shibata MC, Coats AJ, et al. Randomized trial to determine the effect of nebivolol on mortality and cardiovascular hospital admission in elderly patients with heart failure (SENIORS). Eur Heart J. 2005;26(3):215-225. DOI: 10.1093/eurheartj/ehi115. PMID: 15642700."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sindrome-coronariana-aguda-sem-supra-em-paciente-com-80-anos-ou-mais-invasiva-ou-conservadora",
+    "titulo": "SCA sem supra de ST em paciente com 80 anos ou mais: estratégia invasiva ou conservadora?",
+    "tema": "Cardiologia geriátrica",
+    "nivel": "intermediário",
+    "enunciado": "Mulher de 84 anos, independente para as atividades básicas de vida diária, é admitida com infarto sem supradesnível de ST (troponina elevada e alterações dinâmicas do segmento ST). A equipe discute se a idade avançada, isoladamente, deveria pesar contra a indicação de coronariografia precoce.",
+    "pergunta": "Segundo o ensaio After Eighty, qual estratégia reduziu o desfecho composto (infarto, revascularização urgente, AVC e morte) em pacientes com 80 anos ou mais e NSTEMI ou angina instável?",
+    "opcoes": [
+      "A estratégia invasiva (coronariografia precoce com avaliação para revascularização), sem aumento de sangramento maior em relação à estratégia conservadora",
+      "A estratégia conservadora (tratamento clínico otimizado isolado)",
+      "Nenhuma das duas — o ensaio não encontrou diferença significativa em nenhum componente do desfecho composto",
+      "A estratégia invasiva só foi superior isoladamente no componente mortalidade por qualquer causa"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O After Eighty randomizou 457 pacientes com 80 anos ou mais, internados com NSTEMI ou angina instável em 16 hospitais da Noruega, para estratégia invasiva (coronariografia precoce com avaliação para angioplastia ou cirurgia de revascularização, associada a tratamento clínico otimizado) ou estratégia conservadora (só tratamento clínico otimizado), com seguimento mediano de 1,53 anos. O desfecho primário — composto de infarto do miocárdio, necessidade de revascularização urgente, AVC e morte por qualquer causa — ocorreu em 93 de 229 pacientes (40,6%) do grupo invasivo versus 140 de 228 (61,4%) do grupo conservador (HR 0,53; IC95% 0,41-0,69; p=0,0001). Nos componentes individuais, houve redução significativa de infarto do miocárdio (HR 0,52; IC95% 0,35-0,76; p=0,0010) e de revascularização urgente (HR 0,19; IC95% 0,07-0,52; p=0,0010); AVC (HR 0,60; IC95% 0,25-1,46; p=0,2650) e morte por qualquer causa isolada (HR 0,89; IC95% 0,62-1,28; p=0,5340) não atingiram significância estatística isoladamente. Sangramento maior foi semelhante entre os grupos (4 pacientes, 1,7%, no invasivo vs. 4, 1,8%, no conservador); sangramento menor foi numericamente mais frequente no grupo invasivo (23 pacientes, 10,0%, vs. 16, 7,0%). Os autores destacam que a eficácia da estratégia invasiva se dilui com o aumento da idade após ajuste para creatinina e efeito modificador — mas, na faixa etária estudada como um todo, a idade avançada isolada não foi motivo para negar a coronariografia precoce.",
+    "source_refs": [
+      "Tegn N, Abdelnoor M, Aaberge L, et al. Invasive versus conservative strategy in patients aged 80 years or older with non-ST-elevation myocardial infarction or unstable angina pectoris (After Eighty study): an open-label randomised controlled trial. Lancet. 2016;387(10023):1057-1065. DOI: 10.1016/S0140-6736(15)01166-6. PMID: 26794722."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "tetralogia-de-fallot-existe-uma-idade-ideal-para-a-correcao-primaria",
+    "titulo": "Correção primária da Tetralogia de Fallot: existe uma idade ideal para operar?",
+    "tema": "Cardiopatias congênitas",
+    "nivel": "intermediário",
+    "enunciado": "Lactente de 4 meses com Tetralogia de Fallot, assintomático fora de crises hipoxêmicas leves e autolimitadas, saturação de O2 basal 88%. A equipe cirúrgica discute se deve operar agora ou aguardar mais alguns meses para reduzir o risco da correção em lactente pequeno.",
+    "pergunta": "Segundo a série de Van Arsdell et al. (227 crianças submetidas a correção primária de Tetralogia de Fallot isolada), em que faixa etária a correção eletiva teve os melhores resultados de sobrevida e de desfecho fisiológico?",
+    "opcoes": [
+      "3 a 11 meses de idade",
+      "Sempre antes de 3 meses de idade, independentemente da presença de sintomas",
+      "Só após os 24 meses, para permitir maior crescimento somático do anel pulmonar",
+      "A idade de correção não influenciou nenhum desfecho avaliado nessa série"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "Na série de 227 crianças consecutivas operadas de Tetralogia de Fallot isolada entre janeiro de 1993 e junho de 1998, a mudança de protocolo institucional — de paliação inicial com shunt para reparo primário por volta dos 6 meses de idade — reduziu a idade mediana de correção de 17 para 8 meses (p<0,01) e a necessidade de shunt paliativo prévio de 38% para 0% (p<0,01). A mortalidade global foi de 2,6% (6 óbitos), com melhora ao longo do tempo (p=0,02) e nenhum óbito registrado após a mudança de protocolo (final de 1995/início de 1996). Todos os 6 óbitos ocorreram em crianças cuja correção primária foi realizada com mais de 12 meses de idade. Na análise multivariada para os desfechos fisiológicos (tempo até a depuração do lactato, horas de ventilação mecânica e tempo de internação — mas não para óbito), idade menor que 3 meses se associou de forma independente a prolongamento desses tempos (p<0,03), ou seja, operar cedo demais também tem custo fisiológico mensurável. A conclusão dos autores, com base em mortalidade e nos desfechos fisiológicos: a idade ideal para a correção eletiva da Tetralogia de Fallot é entre 3 e 11 meses, equilibrando o risco da hipoxemia progressiva contra a maior morbidade da cirurgia em lactente muito pequeno.",
+    "source_refs": [
+      "Van Arsdell GS, Maharaj GS, Tom J, et al. What is the optimal age for repair of tetralogy of Fallot? Circulation. 2000;102(19 Suppl 3):III123-III129. DOI: 10.1161/01.cir.102.suppl_3.iii-123. PMID: 11082374."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "transposicao-das-grandes-arterias-operada-por-switch-arterial-o-que-esperar-15-anos-depois",
+    "titulo": "Transposição das grandes artérias operada por switch arterial na infância: o que esperar 15 anos depois?",
+    "tema": "Cardiopatias congênitas",
+    "nivel": "avançado",
+    "enunciado": "Adolescente de 16 anos, operado no período neonatal por switch arterial para transposição das grandes artérias, hoje assintomático e em seguimento ambulatorial anual. A família pergunta o que ainda precisa ser vigiado a longo prazo, já que \"a cirurgia corrigiu o problema há muito tempo\".",
+    "pergunta": "Segundo a série de Losay et al. (1.200 pacientes submetidos a switch arterial para transposição das grandes artérias, com seguimento de até 17 anos), quais são as principais complicações tardias a vigiar no adulto jovem operado?",
+    "opcoes": [
+      "Estenose pulmonar (a causa mais comum de reoperação tardia) e, com menor frequência, regurgitação aórtica e lesão coronária — apesar de mortalidade tardia baixa e função ventricular geralmente preservada",
+      "Nenhuma vigilância adicional é necessária após os 5 anos de pós-operatório, já que o risco de complicação se torna nulo nesse ponto",
+      "Disfunção sistêmica do ventrículo direito é a complicação tardia dominante, como ocorre classicamente no switch atrial",
+      "Bloqueio atrioventricular total é a complicação tardia mais frequente após o switch arterial"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "Na série de 1.200 pacientes submetidos a switch arterial (ASO) para transposição das grandes artérias entre 1982 e 1999, com seguimento prospectivo de 1.095 sobreviventes (mediana de 4,9 anos, faixa até 17 anos), a sobrevida foi de 88% tanto em 10 quanto em 15 anos, com a função de risco de óbito caindo rapidamente e nenhuma morte tardia registrada após os 5 anos de seguimento — a mortalidade tardia se correlacionou com reintervenção e com eventos maiores em UTI. Reoperação foi necessária em 103 pacientes (mais frequente na TGA de anatomia complexa), tendo a estenose pulmonar (PS) como causa predominante; a liberdade de reintervenção foi de 82% tanto em 10 quanto em 15 anos, com a função de risco caindo rapidamente mas voltando a subir lentamente após o terceiro ano. No último seguimento, estenose pulmonar estava presente em 3,9% dos pacientes e regurgitação aórtica grau II ou maior em 3,2% (incidência cumulativa de 9% em 15 anos); entre 278 pacientes submetidos a coronariografia, 8% tinham lesão coronária. Ventrículo esquerdo normal e ritmo sinusal foram observados em 96,4% e 98,1% dos pacientes, respectivamente. Ao contrário do switch atrial (técnica de Mustard/Senning, mais antiga), que deixa o ventrículo direito na posição sistêmica, o switch arterial reposiciona os grandes vasos e preserva o ventrículo morfologicamente esquerdo como ventrículo sistêmico — por isso a disfunção ventricular sistêmica tardia, complicação característica do switch atrial, não é o achado dominante nesse grupo.",
+    "source_refs": [
+      "Losay J, Touchot A, Serraf A, et al. Late outcome after arterial switch operation for transposition of the great arteries. Circulation. 2001;104(12 Suppl 1):I121-I126. DOI: 10.1161/hc37t1.094716. PMID: 11568042."
+    ],
+    "review_status": "revisado"
   }
 ]

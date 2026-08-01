@@ -3496,5 +3496,334 @@
       "pico de vo2",
       "capacidade funcional"
     ]
+  },
+  {
+    "slug": "teste-ergometrico-pediatrico-protocolo-de-bruce-modificado",
+    "name": "Teste ergométrico pediátrico (protocolo de Bruce e Bruce modificado)",
+    "category": "metodo_grafico",
+    "theme": "Cardiologia pediátrica",
+    "what_it_measures": "Avalia a resposta cardiovascular (frequência cardíaca, pressão arterial, traçado eletrocardiográfico, saturação de oxigênio) e, quando associado a analisador metabólico, a resposta pulmonar ao exercício progressivo em esteira ou cicloergômetro. O protocolo de Bruce — originalmente desenhado para doença coronariana no adulto — é usado em cardiologia pediátrica por permitir comparação longitudinal enquanto a criança cresce; a estimativa de VO2max a partir do tempo de exercício tem boa correlação (r=0,88) com a medida direta. Em crianças pequenas, obesas, cronicamente doentes ou pouco condicionadas, os incrementos de carga do Bruce padrão (estágios de 3 minutos, inclinação >18%) costumam ser grandes demais e levam a abandono precoce ou apoio no corrimão — por isso são preferidos protocolos modificados de menor incremento (\"Bruce modificado\", com estágios adicionais de carga baixa no início) ou o protocolo de Balke modificado (velocidade constante de 3,5 mph com aumento progressivo só da inclinação). A meta de qualquer protocolo é levar a criança ao limite de tolerância em cerca de 10±2 minutos (8-10 minutos no Balke).",
+    "reference_range": "A referência primária (AHA 2006, Scientific Statement dedicado a teste de esforço pediátrico) NÃO fornece uma fórmula de frequência cardíaca máxima prevista por idade para a população pediátrica (não usa \"220-idade\" nem equivalente) — VERIFICAÇÃO HUMANA NECESSÁRIA para esse valor específico antes de uso clínico. O documento cita dados normativos de resposta ao exercício e tempo de resistência com o protocolo de Bruce em 327 crianças de 4 a 14 anos (Cumming et al., referência interna não conferida em separado nesta sessão). Para teste submáximo de carga constante, é citada uma frequência cardíaca correspondente a 70%-85% do máximo previsto para a idade como tendo valor preditivo, mas o próprio documento afirma que valores de referência para crianças e adolescentes saudáveis \"não estão prontamente disponíveis para comparação\" nesse contexto.",
+    "indications": "Segundo a Tabela 1 do AHA 2006 (Paridon SM et al., Circulation 2006): (1) avaliar sinais/sintomas induzidos ou agravados por exercício; (2) identificar respostas anormais ao exercício em criança com doença cardíaca, pulmonar ou de outro órgão, incluindo isquemia miocárdica e arritmias; (3) avaliar eficácia de tratamento clínico ou cirúrgico específico; (4) avaliar capacidade funcional para atividades recreativas, atléticas e vocacionais; (5) avaliar prognóstico, com medidas basais e seriadas; (6) estabelecer dado basal para reabilitação cardíaca, pulmonar ou musculoesquelética. Classificadas como \"baixo risco\" (indicação geralmente segura): sintomas em exercício sem cardiopatia estrutural, QTc longo suspeito assintomático, ectopia ventricular assintomática com coração estruturalmente normal, lesões congênitas residuais assintomáticas em repouso, acompanhamento de Kawasaki sem aneurisma gigante, pós-switch arterial, pós-transplante sem rejeição, taquicardia supraventricular hemodinamicamente estável prévia, cardiomiopatia dilatada estável sem ICC/arritmia documentada.",
+    "interpretation": "Não há, na fonte pediátrica primária, um critério numérico isolado de \"teste positivo\" para isquemia miocárdica como existe no adulto — VERIFICAÇÃO HUMANA NECESSÁRIA para esse critério específico. O documento define, em vez disso, critérios de INTERRUPÇÃO do teste, interpretados na prática como resposta anormal: queda ou não elevação da frequência cardíaca com a carga associada a sintomas de débito insuficiente; queda progressiva da pressão sistólica com o esforço; hipertensão severa (>250 mmHg sistólica ou 125 mmHg diastólica); dispneia ou taquicardia sintomática intoleráveis; queda de saturação de O2 a <90% ou de 10 pontos em paciente sintomático; ≥3 mm de infradesnivelamento de ST plano ou descendente; ectopia ventricular crescente com o esforço, incluindo salva >3 batimentos; pedido do paciente para parar. A decisão de interromper deve considerar a totalidade dos dados, não uma regra isolada.",
+    "limitations": "Maior risco (exige médico presente durante o teste, não apenas de sobreaviso): hipertensão pulmonar; síndrome do QTc longo documentada; cardiomiopatia dilatada/restritiva com ICC ou arritmia; arritmia hemodinamicamente instável prévia; cardiomiopatia hipertrófica COM sintomas, obstrução de via de saída maior que leve, ou arritmia documentada (CMH assintomática sem obstrução relevante não entra automaticamente nessa categoria); obstrução importante de via aérea em prova de função pulmonar; Marfan com dor torácica ao esforço quando se suspeita causa não cardíaca; suspeita de isquemia miocárdica ao esforço; síncope inexplicada ao esforço. Doença inflamatória miocárdica/pericárdica aguda ou obstrução grave de via de saída com indicação cirúrgica clara geralmente não devem ser testadas. O documento nota que restam \"muito poucas outras contraindicações absolutas ou relativas\" além dessas, e que o teste é considerado seguro mesmo em grupos de maior risco sob supervisão adequada.",
+    "source_refs": [
+      "Paridon SM, Alpert BS, Boas SR, Cabrera ME, Caldarera LL, Daniels SR, Kimball TR, Knilans TK, Nixon PA, Rhodes J, Yetman AT. Clinical Stress Testing in the Pediatric Age Group: A Statement From the American Heart Association Council on Cardiovascular Disease in the Young, Committee on Atherosclerosis, Hypertension, and Obesity in Youth. Circulation. 2006;113(15):1905-1920. PMID: 16567564. DOI: 10.1161/CIRCULATIONAHA.106.174375"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "teste ergometrico",
+      "pediatria",
+      "protocolo de bruce",
+      "capacidade funcional",
+      "esforco"
+    ]
+  },
+  {
+    "slug": "teste-de-inclinacao-tilt-test-em-criancas-e-adolescentes-com-sincope",
+    "name": "Teste de inclinação (tilt test) em crianças e adolescentes com síncope",
+    "category": "metodo_grafico",
+    "theme": "Cardiologia pediátrica",
+    "what_it_measures": "Avalia a resposta hemodinâmica (frequência cardíaca e pressão arterial) à mudança postural passiva de decúbito para a posição vertical — com ou sem provocação farmacológica —, reproduzindo em ambiente controlado o mecanismo do reflexo vasovagal/neurocardiogênico, para diferenciar síncope reflexa de outras causas e caracterizar hemodinamicamente a intolerância ortostática, incluindo a síndrome de taquicardia postural (POTS).",
+    "reference_range": "Não há um protocolo único universal em pediatria: os estudos variam o ângulo de inclinação (60° a 70°), a duração da fase passiva (20 a 45 minutos) e o agente provocativo. Critério ESPECÍFICO PEDIÁTRICO para POTS (HRS 2015): incremento ortostático da frequência cardíaca de PELO MENOS 40 bpm em crianças/adolescentes — maior que o critério do adulto (≥30 bpm) —, associado a sintomas de intolerância ortostática. Classificação hemodinâmica da resposta positiva (padrão VASIS, usado em estudos pediátricos): vasodepressora (queda de FC <10%), cardioinibitória (pausa ventricular >3 s) ou mista (queda de FC >10% associada a hipotensão). Critério de síncope vasovagal usado em estudo pediátrico contemporâneo: hipotensão (PAS ≤80 mmHg e/ou PAD ≤50 mmHg, ou queda >25% da PA média), bradicardia (FC <75 bpm) ou pausa cardíaca >3 segundos, acompanhada de síncope/pré-síncope reproduzida.",
+    "indications": "Segundo o HRS 2015 (Sheldon RS et al.): \"o teste de inclinação é razoável em pacientes pediátricos altamente selecionados com suspeita de síncope vasovagal\" (Classe IIa, nível de evidência C). O mesmo documento pondera que, como a história clínica costuma fornecer diagnóstico claro e o teste tem sensibilidade e especificidade imperfeitas em pediatria, ele \"geralmente NÃO está indicado\" como rotina — a indicação é seletiva, não de triagem ampla. Na prática, indicado quando a caracterização hemodinâmica (vasodepressora vs. cardioinibitória vs. mista) é necessária para orientar o tratamento.",
+    "interpretation": "Teste considerado positivo quando reproduz síncope/pré-síncope com o padrão hemodinâmico correspondente. Desempenho diagnóstico varia conforme o protocolo: sem isoproterenol, sensibilidade 48,5% e especificidade 93,4%; COM isoproterenol, sensibilidade 76,6% e especificidade 86,7% (Alehan D et al. 1997) — a droga aumenta a sensibilidade sem prejuízo relevante da especificidade. Comparando isoproterenol IV vs. nitroglicerina sublingual (Vlahos AP et al. 2007): sensibilidade comparável entre os dois agentes (~78-79%), mas isoproterenol com especificidade superior; a recuperação foi mais longa após nitroglicerina (8,4±2,7 min) do que após isoproterenol (5,1±1,6 min), e a nitroglicerina produziu mais falsos positivos e sintomas vasovagais mais prolongados — os dados não sustentam uso rotineiro de nitroglicerina nessa faixa etária, segundo essa fonte. Em coorte pediátrica de 2025 com protocolo potencializado por nitroglicerina, sensibilidade de 81,6% (apresentação clássica) e especificidade de 81,3%, com 18,7% de positividade em controles saudáveis.",
+    "limitations": "O HRS 2015 chama atenção para a \"sensibilidade e especificidade imperfeitas\" do teste em pediatria, o que sustenta o uso seletivo e reforça que a história clínica detalhada costuma bastar para o diagnóstico. Limitações práticas específicas da criança: dificuldade de colaboração durante procedimento longo (até 45 minutos) e relutância dos pais por preocupação com segurança. Não foi encontrada, nas fontes consultadas nesta sessão, lista formal de contraindicações específicas ao teste de inclinação em pediatria — VERIFICAÇÃO HUMANA NECESSÁRIA para contraindicações formais (ex.: cardiopatia estrutural grave, obstrução relevante de via de saída).",
+    "source_refs": [
+      "Sheldon RS, Grubb BP 2nd, Olshansky B, Shen WK, Calkins H, Brignole M, et al. 2015 Heart Rhythm Society Expert Consensus Statement on the Diagnosis and Treatment of Postural Tachycardia Syndrome, Inappropriate Sinus Tachycardia, and Vasovagal Syncope. Heart Rhythm. 2015;12(6):e41-e63. PMID: 25980576",
+      "Alehan D, Lenk M, Ozme S, Celiker A, Ozer S. Head-up tilt test: a highly sensitive, specific test for children with unexplained syncope. Pacing Clin Electrophysiol. 1997;20(7):1769-1776. PMID: 9249830",
+      "Vlahos AP, Tzoufi M, Katsouras CS, Barka T, Sionti I, Michalis LK, Siamopoulou A, Kolettis TM. Provocation of neurocardiogenic syncope during head-up tilt testing in children: comparison between isoproterenol and nitroglycerin. Pediatrics. 2007;119(2):e419-e425. PMID: 17224456",
+      "Russo V, et al. Diagnostic yield of nitroglycerin-potentiated head-up tilt test in a pediatric population with suspected reflex syncope. Clin Auton Res. 2025;35(6):799-805. DOI: 10.1007/s10286-025-01145-5"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "tilt test",
+      "sincope",
+      "pediatria",
+      "pots",
+      "intolerancia ortostatica"
+    ]
+  },
+  {
+    "slug": "mapa-pediatrico-diagnostico-de-hipertensao-arterial-na-infancia-e-adolescencia",
+    "name": "MAPA pediátrico — diagnóstico de hipertensão na infância e adolescência",
+    "category": "metodo_grafico",
+    "theme": "Cardiologia pediátrica",
+    "what_it_measures": "Mede a pressão arterial de forma automática e repetida ao longo de 24 horas (leituras a cada 20-30 minutos), captando a PA em múltiplos contextos (casa, escola, sono, vigília) e permitindo avaliar padrão circadiano, além de distinguir a PA \"verdadeira\" da PA de consultório. É mais preditiva de dano de órgão-alvo (massa/hipertrofia de ventrículo esquerdo) do que a PA casual isolada.",
+    "reference_range": "Classificação (Flynn JT et al., Hypertension 2014, Tabela 3, adotada pelo AAP 2017): (1) PA normal — consultório <percentil 90 E média ambulatorial <percentil 95 E \"load\" <25%; (2) hipertensão do jaleco branco — consultório ≥percentil 95 MAS ambulatorial <percentil 95 E load <25%; (3) pré-hipertensão — consultório ≥percentil 90 (ou >120/80 mmHg) COM ambulatorial <percentil 95 MAS load ≥25%; (4) hipertensão mascarada — consultório <percentil 95 MAS ambulatorial >percentil 95 E load ≥25%; (5) hipertensão ambulatorial — consultório >percentil 95 E ambulatorial >percentil 95 COM load 25-50%; (6) hipertensão ambulatorial grave — consultório >percentil 95 E ambulatorial >percentil 95 COM load >50%. \"Load\" é o percentual de leituras ambulatoriais válidas acima do percentil 95 ajustado por idade/sexo/altura. Requisito técnico de interpretabilidade: pelo menos 1 leitura/hora (incluindo sono) e mínimo de 40-50 leituras válidas para um laudo de 24h completo, sempre usando dados normativos pediátricos, nunca do adulto.",
+    "indications": "Segundo o AAP 2017 (Flynn JT et al., Pediatrics 2017): MAPA deve ser realizada para CONFIRMAR hipertensão em criança/adolescente com PA de consultório na categoria \"PA elevada\" por 1 ano ou mais, ou com hipertensão estágio 1 confirmada em 3 consultas. Fortemente recomendada, independentemente da PA de consultório, em populações de alto risco: obesidade, diabetes, prematuridade, doença renal crônica, síndrome de apneia do sono e transplante de órgão sólido. Também indicada na suspeita de hipertensão do jaleco branco ou mascarada. Na prática, tende a ficar restrita a crianças ≥5 anos capazes de tolerar o procedimento, por depender de dados normativos validados — informação obtida de fonte secundária derivada do documento, frase literal não localizada no corpo do AAP 2017 nesta sessão (VERIFICAÇÃO HUMANA NECESSÁRIA para a idade mínima exata).",
+    "interpretation": "A interpretação cruza sempre dois eixos — PA de consultório (percentil <90, ≥90, ≥95) E média ambulatorial (percentil <95 ou >95) E \"load\" — conforme a tabela de classificação acima. Um paciente pode ter PA de consultório normal e ainda assim ter hipertensão real (mascarada) se a média ambulatorial e o load estiverem elevados — cenário que justifica indicar MAPA em populações de alto risco mesmo com PA casual normal.",
+    "limitations": "Medidas de PA obtidas fora do consultório ou da MAPA propriamente dita (ex.: aferição domiciliar isolada) não têm, em estudos pediátricos, confiabilidade suficiente para estabelecer diagnóstico isoladamente — reforçando a MAPA como método confirmatório. Os valores normativos pediátricos de PA são baseados em técnica AUSCULTATÓRIA, mas os dispositivos oscilométricos são os comumente usados na prática, gerando descompasso metodológico potencial. Poucos dispositivos são validados especificamente para uso pediátrico, e o tamanho de manguito adequado é limitante em crianças pequenas.",
+    "source_refs": [
+      "Flynn JT, Kaelber DC, Baker-Smith CM, Blowey D, Carroll AE, Daniels SR, et al; Subcommittee on Screening and Management of High Blood Pressure in Children. Clinical Practice Guideline for Screening and Management of High Blood Pressure in Children and Adolescents. Pediatrics. 2017;140(3):e20171904. PMID: 28827377. DOI: 10.1542/peds.2017-1904",
+      "Flynn JT, Daniels SR, Hayman LL, Maahs DM, McCrindle BW, Mitsnefes M, Zachariah JP, Urbina EM; American Heart Association Atherosclerosis, Hypertension and Obesity in Youth Committee. Update: Ambulatory Blood Pressure Monitoring in Children and Adolescents: A Scientific Statement From the American Heart Association. Hypertension. 2014;63(5):1116-1135. PMID: 24591341"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "mapa",
+      "hipertensao",
+      "pediatria",
+      "hipertensao mascarada",
+      "hipertensao do jaleco branco"
+    ]
+  },
+  {
+    "slug": "troponina-de-alta-sensibilidade-em-criancas-com-suspeita-de-miocardite",
+    "name": "Troponina de alta sensibilidade em crianças com suspeita de miocardite",
+    "category": "laboratorial",
+    "theme": "Cardiologia pediátrica",
+    "what_it_measures": "Marcador de lesão/necrose de miócito cardíaco (troponina I ou T, incluindo ensaios de alta sensibilidade), usado na avaliação laboratorial inicial de suspeita de miocardite pediátrica, ao lado de CK-MB e BNP/NT-proBNP. Reflete injúria miocárdica de forma sensível, mas não é específico de miocardite — eleva-se em qualquer processo que lese o miocárdio (isquemia, sepse, choque, outras cardiomiopatias).",
+    "reference_range": "Valores de referência em crianças SAUDÁVEIS (coorte CALIPER, hs-cTnI): 99º percentil de 55,8 ng/L (IC90% 55,8-69,7) de 0 a <6 meses de idade — concentração neonatal marcadamente mais alta —, caindo para 5,5 ng/L (IC90% 5,0-6,2) dos 6 meses aos <19 anos, sem diferença relevante por sexo em nenhuma das duas faixas: o limite superior em lactentes pequenos é cerca de 10 vezes o valor usado a partir dos 6 meses, e aplicar o corte de criança maior ao lactente gera falso positivo sistemático. Corte diagnóstico PROPOSTO para miocardite (não é valor de referência populacional, é corte de estudo de validação único e ainda não confirmado externamente): hs-cTnT de \"90 ng/dL\", sensibilidade 100% e especificidade 95%, em coorte de 308 crianças previamente hígidas com 8 casos (2,5%) de miocardite confirmada (Degen M et al. 2025); mediana de pico de hs-cTnT 506,5 ng/L (182,0-1184,0) nos casos de miocardite vs. 6,0 ng/L (<6,0-13,5) nos demais diagnósticos (p<0,001). ATENÇÃO: a própria fonte relata o corte em \"ng/dL\" e a mediana de pico em \"ng/L\" (unidades diferentes por um fator de 100) — inconsistência do texto-fonte, não resolvida nesta sessão por falta de acesso ao artigo completo (paywall). VERIFICAÇÃO HUMANA NECESSÁRIA antes de usar esse corte numérico na prática. Para contraste histórico, troponina CONVENCIONAL (não de alta sensibilidade): corte de cTnT 0,052 ng/mL (=52 ng/L), sensibilidade de apenas 71% e especificidade 86% (Soongswang J et al. 2005).",
+    "indications": "A dosagem de troponina (com CK-MB e BNP/NT-proBNP) faz parte da avaliação laboratorial inicial recomendada em toda criança com suspeita clínica de miocardite (Law YM et al., AHA Scientific Statement, Circulation 2021), ao lado de ECG, ecocardiograma e, quando indicada, ressonância magnética cardíaca. O documento da AHA não define um valor de corte para decisão terapêutica — o diagnóstico permanece fundamentalmente clínico, com a troponina como um entre vários achados.",
+    "interpretation": "A elevação de troponina (\"troponin leak\") é comum na miocardite aguda pediátrica e pode ter valor prognóstico — níveis mais altos associados a maior necessidade de ECMO e maior mortalidade —, mas a AHA 2021 é explícita ao afirmar que a troponina \"não parece ser um marcador suficientemente sensível ou específico\" de miocardite comprovada por biópsia, com dados conflitantes sobre o valor prognóstico do pico isolado. Monitorar a TENDÊNCIA do biomarcador ao longo do tempo pode ser mais útil do que uma dosagem isolada. O sistema de graduação diagnóstica da AHA 2021 usa quatro estratos de certeza (nenhum definido por troponina isoladamente): miocardite comprovada por biópsia; clinicamente suspeita confirmada por RM cardíaca; clinicamente suspeita sem confirmação por RM/biópsia; miocardite possível.",
+    "limitations": "TROPONINA NORMAL NÃO EXCLUI MIOCARDITE, especialmente com ensaios convencionais — sensibilidade de 71% (Soongswang et al.) significa que quase 3 em 10 crianças com miocardite confirmada têm troponina convencional normal. O corte de alta sensibilidade de Degen et al. (2025), apesar da sensibilidade relatada de 100%, vem de coorte pequena (8 casos) e unicêntrica, sem validação externa nem endosso de sociedade. A cinética da troponina de alta sensibilidade é fisiologicamente mais alta no período neonatal/lactente — usar o mesmo corte absoluto em toda a faixa pediátrica sem ajuste por idade gera falso positivo em lactentes pequenos. A troponina carece de especificidade: eleva-se em qualquer lesão miocárdica, não apenas em processo inflamatório/miocardítico.",
+    "source_refs": [
+      "Law YM, Lal AK, Chen S, Čiháková D, Cooper LT Jr, Deshpande S, Godown J, Grosse-Wortmann L, Robinson JD, Towbin JA; American Heart Association Pediatric Heart Failure and Transplantation Committee. Diagnosis and Management of Myocarditis in Children: A Scientific Statement From the American Heart Association. Circulation. 2021;144(6):e123-e135. PMID: 34229446",
+      "Degen M, Leviter J, Bradley A, Karnik R, Ferdman D, McCollum S, Faherty E. Association Between High-Sensitivity Troponin (hs-cTnT) and Diagnosis of Myocarditis in Previously Healthy Pediatric Patients. Pediatr Cardiol. 2025;46(8):2207-2213. DOI: 10.1007/s00246-024-03621-7",
+      "Soongswang J, Durongpisitkul K, Nana A, Laohaprasittiporn D, Kangkagate C, Punlee K, Limpimwong N. Cardiac troponin T: a marker in the diagnosis of acute myocarditis in children. Pediatr Cardiol. 2005;26(1):45-49. PMID: 15793653",
+      "Bohn MK, Adeli K. Comprehensive Pediatric Reference Limits for High-Sensitivity Cardiac Troponin I and NT-proBNP in the CALIPER Cohort. J Appl Lab Med. 2023;8(3):443-456. DOI: 10.1093/jalm/jfad012"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "troponina",
+      "miocardite",
+      "pediatria",
+      "biomarcador",
+      "alta sensibilidade"
+    ]
+  },
+  {
+    "slug": "teste-cardiopulmonar-de-esforco-no-idoso-fragil",
+    "name": "Teste cardiopulmonar de esforço (ergoespirometria) no idoso frágil",
+    "category": "metodo_grafico",
+    "theme": "Cardiologia geriátrica",
+    "what_it_measures": "Avalia de forma integrada a resposta cardiovascular, pulmonar e metabólica ao exercício incremental (esteira ou cicloergômetro), medindo simultaneamente consumo de oxigênio (VO2), produção de CO2 (VCO2), ventilação-minuto (VE), o limiar de anaerobiose (AT, ponto em que o metabolismo anaeróbico passa a contribuir de forma mensurável, identificado pelo método V-slope), o VO2 de pico (PVO2) e o pulso de O2 (VO2/FC, substituto do volume sistólico). Em avaliação pré-operatória e de insuficiência cardíaca, AT e VO2 pico são os parâmetros de maior peso prognóstico, por serem menos dependentes do esforço voluntário máximo do que o VO2 pico isolado.",
+    "reference_range": "Não existe protocolo formalmente descrito \"para idoso frágil\" no ATS/ACCP Statement — a adaptação é pragmática (rampa de menor incremento, ou teste submáximo quando o maximal não é factível). Em coorte prospectiva com protocolo submáximo de 6 minutos em pacientes ≥60 anos de baixo risco (mediana 69 anos), o limiar de anaerobiose só pôde ser determinado em 48,5% dos participantes (49/101) — ilustrando a limitação de completude mesmo fora da fragilidade franca (Carr ZJ et al., BJA Open 2025). Referência de VO2 pico por idade/sexo em idosos saudáveis, protocolo de rampa em esteira (n=450): homens 60-64a 37,3±7,1 · 65-69a 30,3±6,6 · 70-74a 24,8±5,4 · ≥75a 21,7±5,8 mL/kg/min; mulheres 60-64a 30,5±4,8 · 65-69a 27,1±5,4 · 70-74a 22,4±3,4 · ≥75a 18,9±4,7 mL/kg/min (Sagat P, Biology 2025). O declínio do VO2 pico com a idade acelera: de 3-6%/década aos 20-30 anos para >20%/década a partir dos 70 anos (Fleg JL et al., Circulation 2005, Baltimore Longitudinal Study of Aging). Classificação de Weber por VO2 pico: A >20 · B 16-20 · C 10-16 · D <10 mL/kg/min, associada a sobrevida livre de transplante/suporte circulatório em 3 anos de 97%/93%/83%/64%, respectivamente.",
+    "indications": "Avaliação pré-operatória de cirurgia de grande porte: AT <11 mL/kg/min identificado como corte associado a maior mortalidade cardiopulmonar pós-operatória em 187 pacientes idosos submetidos a cirurgia abdominal maior (Older P et al., Chest 1993). Revisões sistemáticas posteriores convergem para VO2 pico >15 mL/kg/min e AT >10 mL/kg/min como cortes associados a desfechos pós-operatórios mais favoráveis (Moran J et al., Br J Anaesth 2016). Insuficiência cardíaca: diagnóstico diferencial de dispneia, quantificação objetiva de capacidade funcional, e critério de encaminhamento para transplante — PVO2 <14 mL/kg/min associado a sobrevida de 48% em 1 ano vs. 94% com PVO2 ≥14 mL/kg/min.",
+    "interpretation": "AT <11 mL/kg/min (ou AT <10 e VO2 pico <15 mL/kg/min nas revisões mais recentes) sinaliza reserva cardiopulmonar reduzida e maior risco perioperatório. Diferente do VO2 pico, o AT é objetivo e não depende do esforço voluntário máximo do paciente — vantagem relevante no idoso frágil, que com frequência não atinge exaustão verdadeira. Na insuficiência cardíaca, PVO2 <14 mL/kg/min é o corte clássico de mau prognóstico/indicação de avaliação para transplante.",
+    "limitations": "Contraindicação relativa citada: comprometimento ortopédico que compromete o desempenho do exercício, e comprometimento mental que impede cooperação. Fatores periféricos do músculo esquelético (disfunção endotelial, capacidade vasodilatadora reduzida) frequentemente limitam a capacidade metabólica no idoso, independentemente da reserva cardíaca central. Para quem não consegue exercício de membros inferiores, o cicloergômetro de braço é alternativa, mas o VO2 pico atingido é ~70% do valor obtido em exercício de membros inferiores — não diretamente comparável. Motivação e cooperação afetam diretamente o VO2 pico, não o AT. O protocolo submáximo é factível e seguro no idoso, mas não determina o AT em cerca de metade dos casos, limitando o valor discriminativo individual.",
+    "source_refs": [
+      "Albouaini K, Egred M, Alahmar A, Wright DJ. Cardiopulmonary exercise testing and its application. Heart. 2007;93(10):1285-1292. PMID: 17890705",
+      "Older P, Smith R, Courtney P, Hone R. Preoperative evaluation of cardiac failure and ischemia in elderly patients by cardiopulmonary exercise testing. Chest. 1993;104(3):701-704.",
+      "Moran J, Wilson F, Guinan E, McCormick P, Hussey J, Moriarty J. Role of cardiopulmonary exercise testing as a risk-assessment method in patients undergoing intra-abdominal surgery: a systematic review. Br J Anaesth. 2016;116(2):177-191. PMID: 26787788",
+      "Fleg JL, Morrell CH, Bos AG, Brant LJ, Talbot LA, Wright JG, Lakatta EG. Accelerated longitudinal decline of aerobic capacity in healthy older adults. Circulation. 2005;112(5):674-682. PMID: 16043637",
+      "Sagat P. Reference Data for a Treadmill-Based Peak Oxygen Uptake (VO2peak) in Older Adults. Biology (Basel). 2025;14(2):128. PMID: 40001896",
+      "Carr ZJ, Charchaflieh J, Brenes-Bastos A, et al. Preoperative submaximal cardiopulmonary exercise testing and its association with early postoperative complications. BJA Open. 2025;14:100407. PMID: 40421445"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "cpet",
+      "ergoespirometria",
+      "idoso fragil",
+      "pre-operatorio",
+      "capacidade funcional"
+    ]
+  },
+  {
+    "slug": "mapa-no-idoso-hipotensao-pos-prandial-e-padrao-de-descenso-noturno",
+    "name": "MAPA no idoso — hipotensão pós-prandial e padrão de descenso noturno (dipping)",
+    "category": "metodo_grafico",
+    "theme": "Cardiologia geriátrica",
+    "what_it_measures": "Registra a pressão arterial em intervalos regulares (tipicamente 15-30 min) por 24h em ambiente ambulatorial, permitindo calcular PA média de 24h, diurna e noturna, e a razão de descenso noturno (dipping): [(PA vigília − PA sono) / PA vigília] × 100. Também é usado para capturar quedas pressóricas transitórias pós-prandiais quando programado em torno das refeições.",
+    "reference_range": "Classificação de dipping (Palatini P et al., Hypertension 2020, coorte de 10.868 participantes): dipper (fisiológico) — queda de >10% a 20% da PAS noturna vs. diurna; non-dipper — queda de >0% a 10%; reverse dipper (riser) — PAS noturna ≥ diurna (queda ≤0%); extreme dipper — queda >20%. Hipotensão pós-prandial (HPP): queda ≥20 mmHg da PAS dentro de 2h após uma refeição, OU queda da PAS para <90 mmHg quando o valor pré-prandial era >100 mmHg (Jansen RW, Lipsitz LA, Ann Intern Med 1995). Protocolo diagnóstico: medir a PA a cada ≥10 min por 60 min após o café da manhã é suficiente para diagnosticar a maioria dos casos.",
+    "indications": "Confirmar hipertensão do avental branco/mascarada, avaliar variabilidade pressórica, caracterizar o padrão de dipping (especialmente relevante no idoso, por maior prevalência de non-dipping e reverse dipping) e investigar sintomas sugestivos de hipotensão relacionada a refeições, ortostatismo ou uso de anti-hipertensivo (síncope, quedas, tontura pós-prandial). Prevalência de HPP relatada em subgrupos vulneráveis: 24-33% em idosos institucionalizados, ~50% em idosos com síncope inexplicada, 67% em idosos hospitalizados — números de revisão de literatura sobre HPP em geriatria clínica; atribuição exata desses três percentuais não foi confirmada em texto integral nesta sessão (VERIFICAÇÃO HUMANA NECESSÁRIA).",
+    "interpretation": "Reverse dipping é o padrão de pior prognóstico: associado a eventos cardiovasculares (HR 1,79; IC95% 1,43-2,22), mortalidade cardiovascular (HR 1,84; IC95% 1,08-3,15) e mortalidade total (HR 1,73; IC95% 1,01-2,95) em meta-análise ABC-H (Salles GF et al., Hypertension 2016). A idade é central na interpretação do extreme dipping: em Palatini et al. (2020), extreme dipping não se associou a maior risco em <70 anos (HR 0,99; IC95% 0,73-1,34), mas associou-se a risco significativamente maior em ≥70 anos (HR 1,88; IC95% 1,14-3,11); em octogenários, o risco (vs. dippers) foi HR 2,34 para non-dippers, 3,91 para reverse dippers e 4,12 para extreme dippers — relação em U entre dipping e desfecho adverso após os 70 anos, ou seja, tanto o descenso insuficiente quanto o excessivo carregam risco aumentado nessa faixa etária. HPP é fator de risco independente para síncope, quedas, angina, AVC e mortalidade.",
+    "limitations": "O MAPA convencional (leituras a cada 15-30 min) pode não capturar adequadamente a HPP, evento transitório de minutos após a refeição, exigindo protocolo dedicado com medições mais frequentes no período pós-prandial. A interpretação do extreme dipping é idade-dependente — o mesmo padrão numérico tem significado prognóstico oposto conforme a faixa etária, exigindo cautela ao extrapolar coortes mais jovens para idosos. Reprodutibilidade dia-a-dia da classificação de dipping não foi quantificada com precisão nas fontes consultadas nesta sessão (VERIFICAÇÃO HUMANA NECESSÁRIA).",
+    "source_refs": [
+      "Palatini P, Verdecchia P, Beilin LJ, Eguchi K, Imai Y, Kario K, et al. Association of Extreme Nocturnal Dipping With Cardiovascular Events Strongly Depends on Age. Hypertension. 2020;75(2):324-330.",
+      "Salles GF, Reboldi G, Fagard RH, et al. Prognostic Effect of the Nocturnal Blood Pressure Fall in Hypertensive Patients: The Ambulatory Blood Pressure Collaboration in Patients With Hypertension (ABC-H) Meta-Analysis. Hypertension. 2016;67(4):693-700.",
+      "Jansen RW, Lipsitz LA. Postprandial hypotension: epidemiology, pathophysiology, and clinical management. Ann Intern Med. 1995;122(4):286-295. PMID: 7825766",
+      "Tang KS, et al. Non-Dipping Blood Pressure or Nocturnal Hypertension: Does One Matter More? Curr Hypertens Rep. 2023;26(1):21-30. DOI: 10.1007/s11906-023-01273-1"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "mapa",
+      "idoso",
+      "dipping",
+      "hipotensao pos-prandial",
+      "hipertensao"
+    ]
+  },
+  {
+    "slug": "polissonografia-e-apneia-do-sono-no-idoso-cardiopata",
+    "name": "Polissonografia e apneia do sono no idoso cardiopata",
+    "category": "metodo_grafico",
+    "theme": "Cardiologia geriátrica",
+    "what_it_measures": "Registra eletroencefalograma, eletro-oculograma, eletromiograma, fluxo aéreo, esforço respiratório, oximetria de pulso e ECG durante o sono, identificando apneias (cessação completa de fluxo aéreo ≥10 segundos) e hipopneias (redução de fluxo ≥30% por ≥10 segundos com dessaturação ≥3% ou microdespertar), segundo critérios da American Academy of Sleep Medicine (AASM). O índice de apneia-hipopneia (IAH) é calculado como (nº apneias + nº hipopneias) / horas de sono.",
+    "reference_range": "Classificação de gravidade por IAH (critérios AASM): normal <5/h · leve 5-14/h · moderada 15-29/h · grave ≥30/h.",
+    "indications": "No cardiopata idoso, indicada diante de hipertensão resistente/mal controlada (prevalência de SAOS relatada de até 80% nesse subgrupo), hipertensão pulmonar, fibrilação atrial recorrente após cardioversão ou ablação, e insuficiência cardíaca NYHA II-IV com suspeita de distúrbio respiratório do sono ou sonolência diurna excessiva (resumo derivado do AHA Scientific Statement de 2021; texto integral não acessado diretamente nesta sessão por bloqueio do periódico — VERIFICAÇÃO HUMANA NECESSÁRIA para classe de recomendação e nível de evidência exatos). Prevalência de distúrbio respiratório moderado-grave (IAH≥15) na população geral: 49,7% em homens e 23,4% em mulheres (coorte HypnoLaus, idade mediana 57 anos, 40-85 anos), significativamente maior nos participantes ≥60 anos (quebra numérica exata por década não disponibilizada na extração desta sessão).",
+    "interpretation": "OSA e fibrilação atrial coexistem com frequência e se potencializam: incidência de FA 88% maior em pacientes com OSA vs. sem OSA, com idade avançada e hipertensão fortalecendo essa associação de forma independente. Maior gravidade de OSA correlaciona-se com maior risco cardiovascular incidente e recorrência de FA pós-ablação/cardioversão; CPAP reduz a carga de FA nesses cenários. Em insuficiência cardíaca, OSA associa-se a maior taxa de reinternação, com gradiente de risco cardiovascular acompanhando a gravidade do IAH.",
+    "limitations": "A polissonografia laboratorial (tipo I, com técnico presente) é padrão-ouro, mas dispendiosa, de acesso limitado, e pode ser mal tolerada pelo idoso frágil (ambiente estranho, múltiplos sensores, necessidade de imobilidade). O teste domiciliar (HSAT) é validado apenas para SAOS não complicada com alta pré-probabilidade clínica; a AASM recomenda fortemente a polissonografia laboratorial (não o HSAT) em pacientes com doença cardiorrespiratória significativa, fraqueza muscular respiratória, hipoventilação em vigília, uso crônico de opioides ou história de AVC — cenários frequentes no cardiopata idoso. Pacientes com insuficiência cardíaca congestiva não são candidatos adequados a HSAT, e seus algoritmos automáticos não detectam hipoventilação.",
+    "source_refs": [
+      "American Academy of Sleep Medicine Task Force. Sleep-related breathing disorders in adults: recommendations for syndrome definition and measurement techniques in clinical research. Sleep. 1999;22(5):667-689. PMID: 10450601",
+      "Kapur VK, Auckley DH, Chowdhuri S, Kuhlmann DC, Mehra R, Ramar K, Harrod CG. Clinical Practice Guideline for Diagnostic Testing for Adult Obstructive Sleep Apnea: An American Academy of Sleep Medicine Clinical Practice Guideline. J Clin Sleep Med. 2017;13(3):479-504. PMID: 28162150",
+      "Yeghiazarians Y, Jneid H, Tietjens JR, Redline S, Brown DL, El-Sherif N, Mehra R, Bozkurt B, Ndumele CE, Somers VK. Obstructive Sleep Apnea and Cardiovascular Disease: A Scientific Statement From the American Heart Association. Circulation. 2021;144(3):e56-e67. PMID: 34148375 (correção: PMID 35312385)",
+      "Heinzer R, Vat S, Marques-Vidal P, et al. Prevalence of sleep-disordered breathing in the general population: the HypnoLaus study. Lancet Respir Med. 2015;3(4):310-318. PMID: 25682233"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "polissonografia",
+      "apneia do sono",
+      "idoso",
+      "fibrilacao atrial",
+      "hipertensao resistente"
+    ]
+  },
+  {
+    "slug": "troponina-de-alta-sensibilidade-no-idoso-com-doenca-renal-cronica",
+    "name": "Troponina de alta sensibilidade no idoso com doença renal crônica",
+    "category": "laboratorial",
+    "theme": "Cardiologia geriátrica",
+    "what_it_measures": "Dosagem quantitativa de troponina cardíaca (T ou I) por ensaio de alta sensibilidade, capaz de detectar concentrações no soro de indivíduos saudáveis (abaixo do percentil 99 da população de referência). Reflete lesão de cardiomiócitos, não sendo específica de etiologia isquêmica aguda — eleva-se também por lesão miocárdica crônica (estrutural, inflamatória, por sobrecarga de pressão/volume) ou aguda não coronariana.",
+    "reference_range": "O percentil 99 aumenta com a idade e com a redução da função renal — não há um único limiar universal. Partição por idade (excluindo DRC), hs-cTnT: 18-50 / 51-70 / 71-98 anos — homens 18 / 33 / 66 ng/L; mulheres 16 / 30 / 84 ng/L (Monneret D et al., Clin Chem Lab Med 2018). Em coorte comunitária livre de doença cardiovascular conhecida, o percentil 99 de troponina I subiu de 38,4 ng/L aos 70 anos para 58,0 ng/L aos 75 anos (+51% em 5 anos); em indivíduos com doença cardiovascular estabelecida aos 70 anos, o percentil 99 foi 74,5 ng/L; a coorte total aos 70 anos teve percentil 99 de 55,2 ng/L, mais alto em homens (69,3 ng/L) (Eggers KM et al., Clin Chem 2013). Em DRC estágio 4-5 pré-diálise/em início de diálise, há relato de percentil 99 estimado na faixa de 132-486 ng/L de troponina T — achado de busca não conferido em texto integral nesta sessão (VERIFICAÇÃO HUMANA NECESSÁRIA). Valores de referência de fabricante, não ajustados por idade/DRC: Elecsys Troponin T (Roche) 99º percentil 14 ng/L (válido só para homens <50 anos e mulheres <65 anos); Architect STAT hs-Troponin I (Abbott) 26,2 ng/L.",
+    "indications": "Dosagem seriada indicada em toda suspeita de síndrome coronariana aguda, incluindo idosos com DRC — população em que a interpretação isolada do valor absoluto é particularmente enganosa e a variação seriada (delta) ganha peso maior na decisão diagnóstica.",
+    "interpretation": "Mais de 50% dos pacientes com DRC têm troponina de alta sensibilidade elevada acima do percentil 99 padrão fora de contexto de evento agudo, refletindo lesão miocárdica crônica subclínica (hipertrofia de VE, sobrecarga volêmica, microangiopatia), não necessariamente isquemia aguda. A Quarta Definição Universal de Infarto do Miocárdio (Thygesen K et al., J Am Coll Cardiol 2018) distingue \"lesão miocárdica\" (troponina acima do percentil 99, sem variação obrigatória) de \"infarto agudo do miocárdio\" (lesão aguda, com ascensão e/ou queda, associada a evidência clínica de isquemia). No idoso com DRC, a variação seriada relativa (delta%) supera o valor absoluto isolado em acurácia: valor isolado com AUC de apenas 0,58 (TFG <60 mL/min/1,73m²) e 0,54 (TFG ≥60); variação em 3h com AUC 0,82-0,83 nos dois grupos. Corte ótimo de variação percentual: 16% (sensibilidade 77%, especificidade 84%) em TFG <60 e 12% (sensibilidade 93%, especificidade 62%) em TFG ≥60 (Hsu CK et al., Ren Fail 2020). Critério geral de variação clinicamente significativa citado na literatura: mudança absoluta ≥50% do valor de referência do percentil 99, ou variação relativa de 20%.",
+    "limitations": "Não há um único ponto de corte de percentil 99 válido para todos os idosos com DRC — o valor \"normal\" depende de idade, sexo, kit/assay e função renal; usar o corte genérico do fabricante (ex.: 14 ng/L) super-diagnostica lesão miocárdica nessa população. A TFG reduzida é o preditor independente mais forte de troponina basal elevada, mais forte que a idade isoladamente. Mesmo a variação seriada (delta) tem desempenho reduzido em DRC avançada em comparação a função renal normal (maior corte percentual necessário, menor especificidade no ponto ótimo). Em DRC terminal (diálise), a elevação crônica em platô, sem variação clara, dificulta ainda mais diferenciar lesão crônica de evento agudo sobreposto.",
+    "source_refs": [
+      "Thygesen K, Alpert JS, Jaffe AS, Chaitman BR, Bax JJ, Morrow DA, White HD. Fourth Universal Definition of Myocardial Infarction (2018). J Am Coll Cardiol. 2018;72(18):2231-2264.",
+      "Eggers KM, Lind L, Venge P, Lindahl B. Factors influencing the 99th percentile of cardiac troponin I evaluated in community-dwelling individuals at 70 and 75 years of age. Clin Chem. 2013;59(7):1068-1073. PMID: 23462029",
+      "Monneret D, et al. Determination of age- and sex-specific 99th percentiles for high-sensitive troponin T from patients: an analytical imprecision- and partitioning-based approach. Clin Chem Lab Med. 2018. PMID: 29176015",
+      "Gore MO, Seliger SL, deFilippi CR, et al. Age- and sex-dependent upper reference limits for the high-sensitivity cardiac troponin T assay. J Am Coll Cardiol. 2014;63(14):1441-1448. PMID: 24530665",
+      "Hsu CK, Wu IW, Chen YT, et al. Value of the high-sensitivity troponin T assay for diagnosis of acute myocardial infarction in patients with and without renal insufficiency. Ren Fail. 2020;42(1):1142-1151. PMID: 33183098"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "troponina",
+      "doenca renal cronica",
+      "idoso",
+      "biomarcador",
+      "sindrome coronariana aguda"
+    ]
+  },
+  {
+    "slug": "ergoespirometria-cpet-em-cardiopatia-congenita-cianotica",
+    "name": "Ergoespirometria (teste cardiopulmonar de exercício - CPET) na cardiopatia congênita cianótica",
+    "category": "metodo_grafico",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Consumo de oxigênio de pico (VO2 pico) e no limiar anaeróbio, eficiência ventilatória (inclinação VE/VCO2), resposta cronotrópica, curva de pulso de oxigênio e saturação periférica de oxigênio (SpO2) medida de forma contínua durante esforço incremental — em cardiopatia cianótica, a queda da SpO2 com o esforço é, em si, um dado hemodinâmico (reflete o comportamento do shunt direita-esquerda sob demanda de débito cardíaco aumentada), não apenas um efeito colateral do teste.",
+    "reference_range": "Não existe faixa de referência única — o teste é interpretado contra normas específicas por lesão, idade e fisiologia cirúrgica (biventricular reparada, univentricular paliada tipo Fontan, cianótica não corrigida), nunca contra tabelas de população geral. VO2 pico é habitualmente expresso em % do previsto para idade/sexo/superfície corporal, e a tendência seriada ao longo do seguimento pesa mais que um valor isolado.",
+    "indications": "Avaliação funcional basal e seriada em cardiopatia congênita ao longo da vida — da infância à vida adulta —, incluindo estratificação prognóstica, orientação de liberação para atividade física e esportes, investigação de sintomas desproporcionais ao exame de repouso e detecção de arritmia induzida por esforço. É especialmente informativo na cianótica não corrigida ou paliada (ex.: Fontan, Eisenmenger), em que o comportamento da saturação e da resposta ventilatória sob esforço não é previsível a partir dos dados de repouso.",
+    "interpretation": "Na cardiopatia cianótica, o padrão típico combina VO2 pico reduzido, inclinação VE/VCO2 elevada (ineficiência ventilatória, refletindo o desequilíbrio ventilação-perfusão do shunt) e queda progressiva da SpO2 com a intensidade do exercício — quanto maior a queda, maior tende a ser a magnitude do shunt direita-esquerda recrutado sob esforço. Incompetência cronotrópica é achado frequente em fisiologia de Fontan e após correções que envolvem o nó sinusal (ex.: switch atrial). A interpretação deve sempre relacionar os parâmetros entre si e à lesão de base, não isoladamente.",
+    "limitations": "Exige cooperação e esforço máximo voluntário do paciente — subestima capacidade funcional em teste submáximo. Contraindicado em arritmia instável, obstrução grave de via de saída não avaliada ou insuficiência cardíaca descompensada. Não existe norma populacional única aplicável a todas as fisiologias congênitas; comparar contra referência errada (população geral, ou lesão diferente) gera conclusão equivocada. Recomendado pelo AHA scientific statement de 2025 como abordagem de interpretação ao longo de toda a vida do paciente com cardiopatia congênita.",
+    "source_refs": [
+      "Cifra B, Cordina RL, Gauthier N, Murphy LC, Pham TD, Veldtman GR, Ward K, White DA, Paridon SM, Powell AW; American Heart Association Council on Lifelong Congenital Heart Disease and Heart Health in the Young. Cardiopulmonary Exercise Test Interpretation Across the Lifespan in Congenital Heart Disease: A Scientific Statement From the American Heart Association. J Am Heart Assoc. 2025;14(4):e038200. DOI: 10.1161/JAHA.124.038200. PMID: 39782908."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ergoespirometria",
+      "teste cardiopulmonar de exercicio",
+      "cpet",
+      "cianose",
+      "vo2 pico",
+      "fontan",
+      "cardiopatia congenita do adulto"
+    ]
+  },
+  {
+    "slug": "holter-no-pos-operatorio-de-cirurgia-cardiaca-congenita-risco-de-bloqueio-av-tardio",
+    "name": "Holter (ECG ambulatorial de 24-48h) no seguimento pós-operatório de cirurgia cardíaca congênita — vigilância de bloqueio atrioventricular tardio",
+    "category": "metodo_grafico",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Registro contínuo do ritmo cardíaco por 24 a 48 horas em regime ambulatorial, permitindo detectar bloqueio atrioventricular (BAV) paroxístico ou intermitente, pausas sinusais e bradicardia que um ECG de repouso pontual não captura — usado no seguimento crônico, anos após a cirurgia, não apenas no pós-operatório imediato hospitalar.",
+    "reference_range": "Não há um corte numérico único aplicável a todas as idades; a interpretação compara o traçado contra os valores esperados de frequência cardíaca e duração de pausa por faixa etária pediátrica, e contra o próprio ECG basal do paciente (mudança de PR ou de morfologia de QRS em relação ao registro pré-operatório é, por si, um sinal de alerta).",
+    "indications": "Seguimento crônico de pacientes operados de defeitos que colocam o nó atrioventricular ou o feixe de His em risco anatômico direto — fechamento de comunicação interventricular perimembranosa, correção de defeito do septo atrioventricular, correção de tetralogia de Fallot, troca ou plastia valvar próxima ao septo membranoso — especialmente naqueles com síndrome de Down associada. Indicado também em quem teve BAV transitório com duração maior que 48 horas no pós-operatório imediato, mesmo com reversão completa, pelo risco de recorrência tardia.",
+    "interpretation": "A incidência global de BAV total pós-operatório em cirurgia cardíaca congênita é de 1% a 3%; dentro desse grupo, a apresentação tardia (meses a décadas após a cirurgia, mais tipicamente entre 2 e 6 anos) responde por 0,3% a 0,7% dos casos. Fatores de risco descritos para BAV tardio incluem BAV transitório prolongado (>48h) no pós-operatório imediato, PR prolongado ou alteração de morfologia de QRS em relação ao ECG pré-operatório, síndrome de Down associada a defeito do septo atrioventricular, e cirurgia em topografia adjacente ao nó AV.",
+    "limitations": "Registro de 24-48h pode não capturar um evento paroxístico raro — Holter negativo não exclui BAV intermitente, e a persistência de suspeita clínica (síncope, tontura inexplicada) justifica monitorização prolongada (monitor de eventos ou loop recorder implantável), que não é o mesmo exame. A decisão de implante de marca-passo depende da avaliação conjunta do Holter com sintomas e ECG seriado, não do Holter isoladamente.",
+    "source_refs": [
+      "Nasser BA, Mesned AR, Mohamad T, Kabbani MS. Late-presenting complete heart block after pediatric cardiac surgery. J Saudi Heart Assoc. 2016;28(1):59-62. DOI: 10.1016/j.jsha.2015.06.004. PMID: 26778907.",
+      "Kusumoto FM, Schoenfeld MH, Barrett C, et al. 2018 ACC/AHA/HRS Guideline on the Evaluation and Management of Patients With Bradycardia and Cardiac Conduction Delay: A Report of the American College of Cardiology/American Heart Association Task Force on Clinical Practice Guidelines and the Heart Rhythm Society. Heart Rhythm. 2019;16(9):e128-e226. PMID: 30412778."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "holter",
+      "bloqueio atrioventricular",
+      "pos-operatorio",
+      "marca-passo",
+      "defeito do septo atrioventricular",
+      "tetralogia de fallot",
+      "sindrome de down"
+    ]
+  },
+  {
+    "slug": "ecocardiograma-com-strain-longitudinal-global-em-ventriculo-unico",
+    "name": "Ecocardiograma com strain longitudinal global (GLS) do ventrículo sistêmico único",
+    "category": "imagem",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Deformação miocárdica longitudinal do ventrículo sistêmico único, medida por speckle-tracking bidimensional — parâmetro que detecta disfunção contrátil subclínica antes que a fração de ejeção visual/volumétrica (de interpretação mais difícil na geometria de câmara única) se altere.",
+    "reference_range": "Segundo a categorização usada no estudo de referência: GLS moderadamente reduzido corresponde à faixa aproximada entre -16% e -8%, e GLS gravemente reduzido a valores piores que -8% (ou seja, mais próximos de zero) — VERIFICAÇÃO HUMANA NECESSÁRIA quanto à leitura exata dos limites da faixa, por ambiguidade no resumo indexado no PubMed; conferir a tabela completa no artigo original antes de usar o corte para decisão clínica.",
+    "indications": "Seguimento ecocardiográfico de rotina de pacientes com fisiologia univentricular após a cirurgia de Fontan, como complemento à avaliação de dissincronia de padrão clássico e de enteropatia perdedora de proteína — os três, juntos, compõem a estratificação de risco de eventos adversos tardios nessa população.",
+    "interpretation": "Em coorte retrospectiva de 132 pacientes com Fontan seguidos por 9 anos, GLS moderadamente reduzido associou-se a risco de morte ou transplante com HR 5,8 (IC95% 1,27-26,5; p=0,023), e GLS gravemente reduzido a HR 10,3 (IC95% 2,18-48,6; p=0,003) — magnitude de risco comparável à da dissincronia de padrão clássico (HR 11,5; p=0,002) e à da enteropatia perdedora de proteína (HR 14,9; p<0,001). O GLS foi identificado como o fator independente mais forte para sobrevida livre de transplante nessa coorte.",
+    "limitations": "Estudo unicêntrico, retrospectivo, com coorte histórica (pacientes operados entre 2014 e 2015) — os valores de corte carecem de validação prospectiva multicêntrica antes de guiar decisão terapêutica isolada. A morfologia do ventrículo único (esquerda, direita ou indeterminada) pode limitar a reprodutibilidade da medida entre softwares de fabricantes diferentes, e os valores de referência de GLS validados para ventrículo esquerdo biventricular normal não se aplicam diretamente.",
+    "source_refs": [
+      "Rösner A, Diab SG, Friedberg MK, Lui GK. Association of Global Longitudinal Strain and Long-Term Transplant-Free Survival in Fontan Patients. Echocardiography. 2025;42(9):e70297. DOI: 10.1111/echo.70297. PMID: 40965765."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "strain longitudinal global",
+      "speckle tracking",
+      "fontan",
+      "ventriculo unico",
+      "ecocardiograma",
+      "insuficiencia cardiaca"
+    ]
+  },
+  {
+    "slug": "rm-cardiaca-com-mapeamento-de-fluxo-4d",
+    "name": "Ressonância magnética cardíaca com mapeamento de fluxo 4D (4D flow)",
+    "category": "imagem",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Velocidade do fluxo sanguíneo nas três direções do espaço, resolvida ao longo do ciclo cardíaco, adquirida em um único volume tridimensional — ao contrário da RM de contraste de fase bidimensional convencional (já cadastrada nesta base), que exige um plano de aquisição dedicado por vaso ou valva de interesse, o 4D flow permite quantificar múltiplos fluxos e visualizar o padrão espacial do fluxo (vórtices, jatos, fluxo colateral, fluxo retrógrado) a partir de uma única aquisição.",
+    "reference_range": "Não é exame com faixa de referência única — é técnica quantitativa cujos parâmetros de aquisição recomendados (resolução temporal, resolução espacial) e fluxos derivados são comparados a valores absolutos e a razões entre territórios vasculares (ex.: fluxo pulmonar direito vs. esquerdo), conforme o contexto clínico da cardiopatia congênita investigada.",
+    "indications": "Quantificação de shunt e de fluxo colateral aortopulmonar em cardiopatia congênita complexa; avaliação hemodinâmica da circulação de Fontan e de anastomoses de Glenn, em que múltiplos vasos precisam ser quantificados na mesma aquisição; quantificação de lesões valvares regurgitantes múltiplas ou combinadas, quando o contraste de fase 2D dirigido a um único plano seria insuficiente ou exigiria tempo de exame proibitivo.",
+    "interpretation": "Além da quantificação de fluxo volumétrico já obtida pelo contraste de fase 2D, o 4D flow permite derivar parâmetros hemodinâmicos avançados — energia cinética, estresse de cisalhamento parietal, padrões de vórtice — que ajudam a caracterizar a repercussão de uma lesão sobre a dinâmica de fluxo local, informação não acessível pela técnica bidimensional.",
+    "limitations": "Tempo de aquisição e, sobretudo, de pós-processamento maiores que a RM de fluxo convencional, exigindo software e treinamento dedicados. A padronização de protocolo entre centros e fabricantes ainda está em evolução — é exatamente o motivo de existir um consenso internacional periodicamente atualizado para orientar aquisição, validação e publicação.",
+    "source_refs": [
+      "Bissell MM, Raimondi F, Ait Ali L, et al. 4D Flow cardiovascular magnetic resonance consensus statement: 2023 update. J Cardiovasc Magn Reson. 2023;25(1):40. DOI: 10.1186/s12968-023-00942-z. PMID: 37474977."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ressonancia magnetica cardiaca",
+      "4d flow",
+      "mapeamento de fluxo",
+      "fontan",
+      "shunt",
+      "hemodinamica"
+    ]
+  },
+  {
+    "slug": "cateterismo-intervencionista-balao-e-stent-em-cardiopatia-congenita",
+    "name": "Cateterismo cardíaco intervencionista (angioplastia por balão e implante de stent) em cardiopatia congênita",
+    "category": "imagem",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Procedimento diagnóstico-terapêutico guiado por fluoroscopia e angiografia, realizado na mesma sessão do cateterismo diagnóstico: dilatação por balão e/ou implante de stent em lesões estenóticas (valva pulmonar, coarctação nativa ou recoarctação pós-cirúrgica de aorta, ramos de artéria pulmonar, conduítes cirúrgicos), com medida de gradiente de pressão e diâmetro luminal antes e depois da intervenção, na mesma sessão.",
+    "reference_range": "Não há faixa de referência única — sucesso do procedimento é definido pela redução do gradiente de pressão transestenótico e pelo aumento do diâmetro luminal medidos por angiografia e manometria intraprocedimento, comparados ao valor pré-intervenção do próprio paciente.",
+    "indications": "Valvuloplastia por balão é o tratamento de escolha para estenose valvar pulmonar isolada, em qualquer faixa etária. Angioplastia por balão, com ou sem implante de stent, é modalidade preferida para recoarctação de aorta pós-cirúrgica. Estenose de ramo de artéria pulmonar responde melhor a stent do que a balão isolado — maior diâmetro luminal final e menor taxa de reestenose —, exceto em estenose proximal próxima à valva pulmonar e em lesões de bifurcação, situações em que o implante de stent é tecnicamente mais limitado.",
+    "interpretation": "O procedimento é ao mesmo tempo diagnóstico (confirma e quantifica a lesão por angiografia e manometria) e terapêutico (trata a mesma lesão na mesma sessão) — por isso está descrito nesta base como exame, não apenas como intervenção cirúrgica. A escolha entre balão isolado e stent depende da localização anatômica da estenose, não apenas do seu grau.",
+    "limitations": "A maioria dos balões e stents usados nesses procedimentos foi desenvolvida e aprovada para uso vascular periférico, hemodiálise ou coronariano em adultos, não especificamente para aplicação cardíaca pediátrica — o uso em cardiopatia congênita é predominantemente off-label, o que deve ser explicitado à família antes do procedimento. Stent implantado em criança pequena pode exigir redilatação cirúrgica ou percutânea posterior para acompanhar o crescimento somático. Aos riscos gerais do cateterismo (sangramento, lesão vascular, arritmia, perfuração) somam-se riscos específicos da intervenção, como embolização do stent, ruptura do balão e dissecção vascular.",
+    "source_refs": [
+      "Feltes TF, Bacha E, Beekman RH 3rd, et al. Indications for cardiac catheterization and intervention in pediatric cardiac disease: a scientific statement from the American Heart Association. Circulation. 2011;123(22):2607-2652. DOI: 10.1161/CIR.0b013e31821b1f10. PMID: 21536996."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "cateterismo intervencionista",
+      "angioplastia com balao",
+      "stent",
+      "coarctacao de aorta",
+      "estenose pulmonar",
+      "ramo de arteria pulmonar"
+    ]
   }
 ]

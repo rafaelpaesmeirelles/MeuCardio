@@ -20645,5 +20645,143 @@
         "por_que": "Fecha a trilha no momento em que a sequência farmacológica termina e a prevenção de reinternação começa — o checklist reúne, em forma de conferência, a transição de cuidado que evita o retorno precoce à emergência."
       }
     ]
+  },
+  {
+    "slug": "trilha-cardiologia-pediatrica-insuficiencia-cardiaca-e-hipertensao-pulmonar",
+    "titulo": "Cardiologia pediátrica: farmacoterapia da insuficiência cardíaca e da hipertensão pulmonar crônicas na criança",
+    "tema": "Cardiologia pediátrica",
+    "objetivo": "Sair sabendo classificar a insuficiência cardíaca pediátrica por causa e faixa etária, avaliar criticamente o lugar do betabloqueador nessa população, reconhecer a hipertensão pulmonar de causas específicas da infância e a evidência de sobrevida com sildenafila oral, e fechar entendendo por que a causa de base da cardiomiopatia pediátrica pesa mais no prognóstico do que o rótulo diagnóstico isolado.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "insuficiencia-cardiaca-pediatrica-classificacao-causas-por-faixa-etaria-e-manejo-farmacologico",
+        "por_que": "Ponto de partida: como a insuficiência cardíaca pediátrica se classifica por causa (estrutural, miocárdica, arritmogênica) e por faixa etária, diferente da abordagem por fração de ejeção usada no adulto."
+      },
+      {
+        "ordem": 2,
+        "item_type": "estudo",
+        "item_slug": "pices-carvedilol-insuficiencia-cardiaca-pediatrica",
+        "por_que": "O ensaio que testou diretamente se a extrapolação do betabloqueador — bem estabelecido no adulto com ICFEr — se confirma na criança, com resultado que pede cautela na leitura direta desse racional."
+      },
+      {
+        "ordem": 3,
+        "item_type": "medicamento",
+        "item_slug": "carvedilol",
+        "por_que": "A farmacologia do betabloqueador testado no PICES, para entender dose, titulação e ajuste na faixa etária pediátrica."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "hipertensao-pulmonar-pediatrica-causas-especificas-da-infancia-e-teste-de-vasorreatividade",
+        "por_que": "Muda o eixo, dentro do mesmo espectro de IC crônica: causas exclusivas da infância (displasia broncopulmonar, hérnia diafragmática congênita) e o teste de vasorreatividade, que orienta a escolha entre bloqueador de canal de cálcio e terapia vasodilatadora pulmonar específica."
+      },
+      {
+        "ordem": 5,
+        "item_type": "estudo",
+        "item_slug": "starts-2-sildenafila-sobrevida-hipertensao-pulmonar-pediatrica",
+        "por_que": "O ensaio de sobrevida em longo prazo com sildenafila oral em monoterapia na hipertensão pulmonar pediátrica — inclui o achado de mortalidade dose-dependente que restringiu o uso de dose alta."
+      },
+      {
+        "ordem": 6,
+        "item_type": "medicamento",
+        "item_slug": "sildenafila-citrato",
+        "por_que": "A farmacologia do inibidor de fosfodiesterase-5 testado no STARTS-2, para a prescrição prática na criança com hipertensão pulmonar."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "cardiomiopatia-pediatrica-dilatada-e-hipertrofica-etiologia-genetica-versus-adquirida-e-transplante",
+        "por_que": "Fecha ampliando o espectro da IC crônica pediátrica: cardiomiopatia dilatada e hipertrófica, etiologia genética versus adquirida, e o critério de encaminhamento para transplante quando a farmacoterapia não basta."
+      },
+      {
+        "ordem": 8,
+        "item_type": "estudo",
+        "item_slug": "colan-2007-registro-cardiomiopatia-hipertrofica-pediatrica",
+        "por_que": "O registro que mostra, com números de sobrevida, por que a causa de base da cardiomiopatia hipertrófica — erro inato do metabolismo, síndrome malformativa ou forma idiopática — determina o prognóstico mais do que o diagnóstico ecocardiográfico isolado."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-cardiologia-geriatrica-doenca-valvar-degenerativa-aortica-e-mitral",
+    "titulo": "Cardiologia geriátrica: doença valvar degenerativa do idoso — da estenose aórtica frágil à calcificação anular mitral",
+    "tema": "Cardiologia geriátrica",
+    "objetivo": "Sair sabendo diferenciar a doença valvar degenerativa do idoso — estenose aórtica calcífica e calcificação anular mitral — da forma reumática clássica, reconhecer os desafios diagnósticos próprios dessa fisiopatologia (planimetria pouco confiável na calcificação anular) e comparar as opções percutâneas quando a cirurgia convencional é proibitiva, sempre calibrado pela fragilidade do paciente, não só pela anatomia da valva.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "fragilidade-como-modificador-de-decisao-cardiovascular",
+        "por_que": "Ponto de partida comum a toda decisão valvar no muito idoso: por que a fragilidade — e não a idade cronológica isolada — deve pesar na indicação de intervir."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "estenose-aortica-grave-no-idoso-fragil-tavi-e-futilidade",
+        "por_que": "A valva degenerativa mais estudada no idoso: estenose aórtica calcífica grave, quando o TAVI está indicado e onde fica o limite da futilidade."
+      },
+      {
+        "ordem": 3,
+        "item_type": "estudo",
+        "item_slug": "thourani-2015-nonagenarios-tavi-partner",
+        "por_que": "O subgrupo etário mais extremo dentro do TAVI: desfecho de nonagenários no ensaio PARTNER-I, para ancorar a discussão de futilidade em números reais."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "doenca-valvar-mitral-degenerativa-no-idoso-calcificacao-anular-e-opcoes-percutaneas",
+        "por_que": "Muda de valva, mesma lógica degenerativa: calcificação anular mitral (MAC), por que a planimetria clássica da estenose reumática falha aqui, e as opções percutâneas (valve-in-MAC, reparo borda a borda) quando a troca cirúrgica convencional é proibitiva."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "metas-terapeuticas-cardiovasculares-no-muito-idoso",
+        "por_que": "Fecha ligando a decisão valvar ao contexto terapêutico mais amplo do muito idoso: até onde intensificar investigação e tratamento faz sentido quando a expectativa de vida já é limitada por outras condições, o mesmo raciocínio que baliza o limite da futilidade em TAVI."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-cardiopatia-congenita-momento-cirurgico-e-desfecho-tardio-fallot-e-tga",
+    "titulo": "Cardiopatia congênita: o momento cirúrgico certo e o desfecho décadas depois — Tetralogia de Fallot e transposição das grandes artérias",
+    "tema": "Cardiopatias congênitas",
+    "objetivo": "Sair sabendo em que janela etária a correção primária da Tetralogia de Fallot obtém os melhores resultados, conectar essa decisão neonatal/do lactente ao que precisa ser vigiado décadas depois no adulto operado, e reconhecer — pelo desfecho de até 17 anos do switch arterial na transposição das grandes artérias, em contraste com o switch atrial mais antigo — por que a técnica escolhida na infância determina qual ventrículo carrega a circulação sistêmica pelo resto da vida.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "estudo",
+        "item_slug": "van-arsdell-idade-otima-para-correcao-da-tetralogia-de-fallot",
+        "por_que": "A decisão que abre toda a trajetória: em que janela etária operar a Tetralogia de Fallot, equilibrando a hipoxemia progressiva contra o custo fisiológico de operar um lactente muito pequeno."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "seguimento-tardio-de-tetralogia-de-fallot-e-coarctacao-de-aorta-no-adulto",
+        "por_que": "O que essa decisão cirúrgica precoce deixa para vigiar décadas depois: o adulto operado de Fallot, com a regurgitação pulmonar residual no centro do seguimento tardio."
+      },
+      {
+        "ordem": 3,
+        "item_type": "estudo",
+        "item_slug": "losay-desfecho-tardio-do-switch-arterial-na-transposicao",
+        "por_que": "Muda de lesão e de decisão cirúrgica de época crítica: o switch arterial na transposição das grandes artérias, com seguimento de até 17 anos e as complicações tardias que ele de fato traz — sobretudo estenose pulmonar."
+      },
+      {
+        "ordem": 4,
+        "item_type": "estudo",
+        "item_slug": "broberg-2022-desfecho-de-longo-prazo-apos-switch-atrial-na-tga",
+        "por_que": "O contraste que dá sentido ao passo anterior: a técnica mais antiga (switch atrial, Mustard/Senning) deixa o ventrículo direito na posição sistêmica — e é essa disfunção ventricular sistêmica tardia que o switch arterial, ao reposicionar os grandes vasos, evita."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "teste-cardiopulmonar-de-exercicio-na-cardiopatia-congenita-aha-2025",
+        "por_que": "Fecha com a métrica funcional comum a todo esse seguimento de décadas: como o teste cardiopulmonar de exercício quantifica o impacto residual, seja da regurgitação pulmonar pós-Fallot, seja de qualquer disfunção ventricular residual pós-switch."
+      }
+    ]
   }
 ]
