@@ -1809,10 +1809,28 @@ uma frente livre em vez de negociar no meio do commit.
 | `content/<temas da lista da Biblioteca, acima>` | sessão da **Biblioteca** | ocupado |
 | `content/Farmacologia/*.md` | sessão de **Medicamentos** | ocupado — a regra de rodízio abaixo fica **suspensa** para este tema |
 | `content/<demais temas>/*.md` | sessão da biblioteca | livre |
-| `evidencias/`, `estudos/`, `galeria/`, `exames/` | sessão da biblioteca | livre |
+| `galeria/`, `exames/` | sessão da **Biblioteca** (terminal tmux `biblioteca`) | **ocupado a partir de 01/08/2026** — ver a divisão interna logo abaixo |
+| `evidencias/`, `estudos/` | **segunda sessão da Biblioteca**, fora do tmux | **ocupado a partir de 01/08/2026** — ver a divisão interna logo abaixo |
 | `controlados/`, `backend/app/**/receituario*`, `backend/app/services/classificacao_*`, CorvIA Mail (backend/frontend) | sessão da **Biblioteca** (passado pelo Rafael em 30/07/2026 — ver bloco no topo desta seção) | ocupado |
 | `CLAUDE.md`, `COBERTURA.md` | ambas | **editar só a própria seção**, e `git pull --rebase` antes |
 | `emergencia/`, `trilhas/`, `casos-clinicos/`, `checklists/`, `material-paciente/` | **sessão de Monitoramento** (esta sessão, pedido do Rafael em 01/08/2026 — "produza para todas as funções científicas do site") | **ocupado, 01/08/2026 — as cinco frentes estavam sem dono e sem nenhum item novo o dia inteiro** |
+
+> ### 🔀 DUAS sessões da BIBLIOTECA rodando ao mesmo tempo, 01/08/2026 — divisão das quatro frentes JSON
+> **Declarado pela sessão do tmux `biblioteca`, a pedido do Rafael, porque a sessão anterior
+> combinou a divisão e não chegou a commitá-la — ela existia só na conversa.**
+>
+> Há **uma segunda sessão produzindo na faixa da Biblioteca fora do tmux** (foi ela que commitou as
+> 66 evidências entre 01:06 e 01:10 de hoje). As duas são "Biblioteca" e, sem divisão interna, iam
+> reescrever o mesmo `metadados.json` — que é gravado **inteiro** a cada atualização, então quem
+> grava por último apaga o lote do outro **sem conflito de git e sem aviso**.
+>
+> | Frente | Quem escreve |
+> |---|---|
+> | `galeria/`, `exames/` | **esta sessão** (tmux `biblioteca`) |
+> | `evidencias/`, `estudos/` | **a outra sessão da Biblioteca** (fora do tmux) |
+>
+> Os **10 temas de `content/`**, `casos-clinicos/` e `trilhas/` continuam sendo da Biblioteca como um
+> todo — quem for escrever num deles **declara aqui antes**, mesma regra de sempre.
 
 **Regras que evitam colisão, todas aprendidas apanhando aqui:**
 
