@@ -2851,5 +2851,55 @@
     "review_status": "revisado",
     "published": false,
     "url": "https://doi.org/10.1056/NEJMoa1711818"
+  },
+  {
+    "slug": "rast-monitor-implantavel-versus-testagem-convencional-na-sincope",
+    "title": "RAST — Monitor cardíaco implantável versus testagem diagnóstica convencional na síncope inexplicada",
+    "study_type": "ensaio_clinico",
+    "authors": "Krahn AD, Klein GJ, Yee R, Skanes AC.",
+    "journal": "Circulation",
+    "year": 2001,
+    "doi": "10.1161/01.cir.104.1.46",
+    "pmid": "11435336",
+    "url": "https://www.ahajournals.org/doi/10.1161/01.cir.104.1.46",
+    "summary": "Ensaio randomizado, unicêntrico, com 60 pacientes (66±14 anos, 33 homens) com síncope inexplicada. Comparou a estratégia \"convencional\" — monitor de eventos externo mais teste de inclinação e estudo eletrofisiológico — contra monitoramento prolongado com monitor cardíaco implantável (ILR) por 1 ano. Pacientes sem diagnóstico após a estratégia sorteada podiam cruzar para a outra.",
+    "key_findings": "Diagnóstico obtido em 14 de 27 pacientes do monitoramento prolongado versus 6 de 30 da testagem convencional (52% vs. 20%, p=0,012). Somando o crossover, a taxa global de diagnóstico com monitoramento prolongado chegou a 55% vs. 19% com a convencional (p=0,0014). Bradicardia foi detectada em 40% dos pacientes monitorados versus 8% dos que fizeram testagem convencional (p=0,005).",
+    "clinical_implications": "Um dos ensaios que sustentam o uso mais precoce do monitor cardíaco implantável na síncope inexplicada recorrente, antes de esgotar a bateria de testes convencionais — base da recomendação ESC 2018 já cadastrada nesta biblioteca (evidência \"monitor-cardiaco-implantavel-ilr-na-sincope-inexplicada-recorrente\"). O achado de bradicardia com frequência quatro vezes maior no braço monitorado reforça que boa parte da síncope inexplicada recorrente tem causa bradiarrítmica que só aparece com monitoramento prolongado.",
+    "limitations": "Amostra pequena (n=60), unicêntrico, e o desenho permite crossover — a comparação após o crossover deixa de ser por intenção de tratar pura. Sem cegamento possível dado o tipo de intervenção.",
+    "theme": "Síncope",
+    "tags": [
+      "rast",
+      "monitor cardiaco implantavel",
+      "loop recorder implantavel",
+      "sincope inexplicada",
+      "ensaio clinico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "seeds-unidade-de-sincope-no-departamento-de-emergencia",
+    "title": "SEEDS — Unidade dedicada de síncope no departamento de emergência versus cuidado padrão",
+    "study_type": "ensaio_clinico",
+    "authors": "Shen WK, Decker WW, Smars PA, et al.",
+    "journal": "Circulation",
+    "year": 2004,
+    "doi": "10.1161/01.CIR.0000149236.92822.07",
+    "pmid": "15536093",
+    "url": "https://www.ahajournals.org/doi/10.1161/01.CIR.0000149236.92822.07",
+    "summary": "Ensaio randomizado, unicêntrico, prospectivo, com 103 pacientes consecutivos (53 mulheres, 64±17 anos) com síncope de risco intermediário no departamento de emergência. Comparou avaliação em uma unidade de síncope dedicada e multidisciplinar (51 pacientes) contra o cuidado padrão.",
+    "key_findings": "Diagnóstico presuntivo estabelecido em 67% (34/51) na unidade de síncope versus 10% (5/52) no cuidado padrão (p<0,001). Internação necessária em 43% versus 98% (p<0,001), com dias-paciente de internação caindo de 140 para 64. Em 2 anos, sobrevida livre de síncope recorrente foi semelhante entre os grupos (88% vs. 89%, p=0,72), assim como a sobrevida global (97% vs. 90%, p=0,30) — o ensaio não tinha poder para esses desfechos secundários.",
+    "clinical_implications": "Evidência de que uma via assistencial estruturada para síncope de risco intermediário no pronto-socorro reduz internação e tempo de permanência sem piorar a taxa de recorrência ou a sobrevida em 2 anos — mesma lógica por trás da recomendação ESC 2018 de observação/unidade de síncope para as características de alto risco já cadastrada nesta biblioteca (evidência \"internacao-ou-unidade-de-sincope-para-caracteristicas-de-alto-risco\"), aqui estendida à faixa de risco intermediário.",
+    "limitations": "Unicêntrico, n=103, e não teve poder estatístico para os desfechos de recorrência e mortalidade — o \"sem diferença\" nesses dois pontos não deve ser lido como equivalência comprovada, só como achado não conclusivo.",
+    "theme": "Síncope",
+    "tags": [
+      "seeds",
+      "unidade de sincope",
+      "departamento de emergencia",
+      "risco intermediario",
+      "ensaio clinico"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
