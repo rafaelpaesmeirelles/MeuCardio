@@ -259,7 +259,7 @@
     "resumo": "Derivado da diretriz brasileira SBPT 2025 (GRADE) para tratamento farmacológico do TEP: escolha do anticoagulante, corte renal, extensão em TEV não provocado e critério para tratamento domiciliar.",
     "documento_origem": "tratamento-farmacologico-do-tep-diretriz-brasileira-sbpt-2025-grade",
     "theme": "Tromboembolismo",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "source_refs": [
       "Amado VM, Fernandes CJCDS, Salibe-Filho W, Gazzana MB, Rocha AT, Yoo HHB, Bernardo WM, Tanni S. Brazilian guidelines for the pharmacological treatment of pulmonary embolism. Official document of the Brazilian Thoracic Association based on the GRADE methodology. J Bras Pneumol. 2025;51(2):e20240314. DOI: 10.36416/1806-3756/e20240314. PMCID: PMC12401105 (texto completo em acesso aberto)"
     ],
@@ -313,7 +313,8 @@
         "texto": "Se mulher com mais de 75 anos recebeu trombólise: risco aumentado de sangramento maior registrado e discutido na decisão terapêutica",
         "origem_secao": "Fator de risco hemorrágico específico mencionado"
       }
-    ]
+    ],
+    "revisao": "Verificado item a item em 01/08/2026 contra o documento de origem `tratamento-farmacologico-do-tep-diretriz-brasileira-sbpt-2025-grade`, publicado nesta base: cada um dos 7 itens corresponde a uma recomendação nomeada da diretriz da SBPT 2025, com a força e a certeza GRADE conferidas na fonte (DOAC preferido — forte/moderada; ClCr ≤30 com exceção da apixabana; extensão em TEV não provocado — forte/alta, com recorrência de 5,4% a 11% ao ano; tratamento domiciliar — condicional/muito baixa; trombólise em risco intermediário-alto — condicional CONTRA; risco de sangramento em mulheres acima de 75 anos). ATENÇÃO: este checklist NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles — diferente dos quatro de 28/07/2026, a atestação dele não é presumida aqui."
   },
   {
     "slug": "alta-pos-emergencia-hipertensiva",
