@@ -1831,6 +1831,48 @@ uma frente livre em vez de negociar no meio do commit.
 >
 > Os **10 temas de `content/`**, `casos-clinicos/` e `trilhas/` continuam sendo da Biblioteca como um
 > todo — quem for escrever num deles **declara aqui antes**, mesma regra de sempre.
+>
+> **⚠️ Nota da sessão CORVIA, 01/08/2026: este bloco está desatualizado.** Pela "DIVISÃO EM TRÊS"
+> registrada mais abaixo neste mesmo arquivo (seção "🚨 NOVAS REGRAS DO RAFAEL — 01/08/2026, manhã"),
+> `casos-clinicos/` e `trilhas/` são hoje da sessão **CORVIA**, não da Biblioteca. Não removi o texto
+> acima porque é histórico de quando a divisão era em duas — só sinalizando para quem ler de cima
+> para baixo não seguir a instrução velha.
+
+### ✅ Sessão CORVIA, 01/08/2026 — trilhas e casos clínicos: as 27 lacunas fechadas, 38 itens novos publicados
+Retomando exatamente o ponto descrito no pedido do Rafael: agentes de levantamento já tinham
+terminado e uma leva de 12 trilhas já estava **rascunhada no working tree, não commitada** (a
+"sessão coordenadora" havia extraído e escrito, mas não fechado o ciclo). Conferi cada uma antes de
+aceitar — nada foi commitado às cegas:
+
+- **Trilhas: 18 → 30.** As 11 trilhas que faltavam (Cardiomiopatias, Endocardite, Pericárdio, Aorta
+  e DAP, Perioperatório, Síncope, Cardiopatias congênitas, Febre reumática, Geral, Calculadoras, e
+  Comunicação clínica com 2) foram fechadas. Validação antes de commitar: todos os 108 itens
+  referenciados nas etapas (76 documentos, 23 estudos, 7 medicamentos, 2 checklists, 4
+  calculadoras) checados um a um contra o banco de produção — existência **e** `published=True`.
+- **Casos clínicos: 12 → 44.** Os 16 temas sem nenhum caso (Arritmias, Dispositivos, Doença
+  coronariana, Farmacologia, Cardio-oncologia, Saúde mental, Comunicação clínica, Geral,
+  Cardiopatias congênitas, Febre reumática, Gravidez, Hipertensão pulmonar, Pericárdio, Síncope,
+  Terapia intensiva, Calculadoras) ganharam 2 casos cada, cada um ancorado num único documento/
+  estudo já publicado, com `source_refs` copiado literalmente da fonte — nenhum PMID/DOI escrito de
+  memória. Amostra de 5 PMIDs reconferida por `esummary` do PubMed depois da redação: todos batem
+  autor, revista e ano.
+- **Um achado no meio do caminho, corrigido:** o documento
+  `ferramenta-de-decisao-compartilhada-na-angioplastia-eletiva-o-pci-choice` (tema Comunicação
+  clínica, faixa de Medicamentos) estava `review_status: revisado` mas **ainda não publicado**,
+  bloqueando uma etapa da trilha de Comunicação clínica. Rodei `import_directory()` (global, seguro
+  — nunca publica) e publiquei **só esse slug**, com `AuditLog` registrando o motivo. Não toquei em
+  mais nada de `content/`.
+- **Depois de publicar:** varredura de órfãos nas duas frentes (disco × banco, 1:1 nos dois
+  sentidos, zero órfão) e checagem de `etapas_indisponiveis` simulando a lógica real da API — zero
+  etapa indisponível nas 30 trilhas publicadas.
+- **Inventariei round hospitalar, modelos de documento, comparador de medicamentos e agenda**: os
+  quatro são ferramentas operacionais por usuário (`owner_id`/`created_by` sem seed de conteúdo
+  central) — não há frente de conteúdo curado para preencher ali. Meu trabalho de conteúdo continua
+  só em `trilhas/` e `casos-clinicos/`.
+
+Os 4 subagentes que lancei para as mesmas 11 trilhas (antes de notar o rascunho já pronto no working
+tree) geraram conteúdo redundante nos mesmos temas — descartado, não commitado, para não duplicar
+slug nem sobrepor curadoria já verificada.
 
 **Regras que evitam colisão, todas aprendidas apanhando aqui:**
 
