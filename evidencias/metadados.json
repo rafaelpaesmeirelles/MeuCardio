@@ -19984,5 +19984,647 @@
       "radiação"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-rcri-na-avaliacao-de-risco-pre-operatorio",
+    "statement": "Na avaliação de risco pré-operatório para cirurgia não cardíaca, o uso do Revised Cardiac Risk Index é recomendado (Classe I, Nível B). Os seis itens são: história de doença isquêmica do coração, história de insuficiência cardíaca, história de acidente vascular cerebral ou ataque isquêmico transitório, diabetes em uso de insulina, creatinina sérica acima de 2 mg/dL, e cirurgia de alto risco — definida como intratorácica, intra-abdominal ou vascular suprainguinal.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, et al. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circ J. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID 37558469. SEM PMCID — o texto integral está ABERTO no J-STAGE, que é a via de acesso para as diretrizes da Japanese Circulation Society. Table 17. Sem errata registrada no PubMed. NOTA DE VOCABULÁRIO: a fonte subdivide a Classe III em '(No benefit)' e '(Harm)'; a distinção foi preservada NO TEXTO do enunciado, e o campo de classe recebeu 'III', porque a grafia completa não cabe no esquema. A diretriz usa também GRADE nas Clinical Questions, com algumas condutas aparecendo nas duas escalas com códigos diferentes.",
+    "theme": "Perioperatório",
+    "tags": [
+      "RCRI",
+      "estratificação de risco",
+      "cirurgia não cardíaca"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-o-corte-de-baixo-risco-foi-redefinido-de-1-para-5-por-cento",
+    "statement": "Esta diretriz ABANDONA o corte de 1% da AHA 2014 e define BAIXO RISCO como risco predito abaixo de 5%, e risco elevado como 5% ou mais — justificando que a prática contemporânea usa troponina de alta sensibilidade para diagnosticar infarto. Com esse corte, 0 a 1 item do RCRI é cirurgia não vascular de baixo risco, e apenas 0 item é cirurgia vascular de baixo risco. As taxas medidas com troponina de alta sensibilidade: RCRI 0 dá 0,91% em cirurgia não vascular e 3,2% em vascular; RCRI 1 dá 2,9% e 7,7%; RCRI 2 dá 7,2% e 11,9%; RCRI de 3 ou mais dá 13,7% e 19,0%. É mudança de régua, não de escore: o mesmo paciente muda de categoria conforme a diretriz consultada.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, et al. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circ J. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID 37558469. SEM PMCID — o texto integral está ABERTO no J-STAGE, que é a via de acesso para as diretrizes da Japanese Circulation Society. Table 16 e 17. Sem errata registrada no PubMed. NOTA DE VOCABULÁRIO: a fonte subdivide a Classe III em '(No benefit)' e '(Harm)'; a distinção foi preservada NO TEXTO do enunciado, e o campo de classe recebeu 'III', porque a grafia completa não cabe no esquema. A diretriz usa também GRADE nas Clinical Questions, com algumas condutas aparecendo nas duas escalas com códigos diferentes.",
+    "theme": "Perioperatório",
+    "tags": [
+      "RCRI",
+      "corte de risco",
+      "troponina de alta sensibilidade",
+      "divergência entre diretrizes"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-nao-fazer-exame-cardiaco-de-rotina-no-paciente-de-baixo-risco",
+    "statement": "Exames cardíacos pré-operatórios adicionais de rotina NÃO são recomendados para pacientes de baixo risco — cirurgia não vascular com RCRI de 0 a 1 item, e cirurgia vascular com RCRI de 0 item (Classe III sem benefício, Nível B).",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, et al. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circ J. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID 37558469. SEM PMCID — o texto integral está ABERTO no J-STAGE, que é a via de acesso para as diretrizes da Japanese Circulation Society. Table 17. Sem errata registrada no PubMed. NOTA DE VOCABULÁRIO: a fonte subdivide a Classe III em '(No benefit)' e '(Harm)'; a distinção foi preservada NO TEXTO do enunciado, e o campo de classe recebeu 'III', porque a grafia completa não cabe no esquema. A diretriz usa também GRADE nas Clinical Questions, com algumas condutas aparecendo nas duas escalas com códigos diferentes.",
+    "theme": "Perioperatório",
+    "tags": [
+      "RCRI",
+      "recomendação negativa",
+      "exames de rotina"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-nao-fazer-ecg-de-rotina-antes-de-cirurgia-de-baixo-risco",
+    "statement": "O eletrocardiograma de 12 derivações pré-operatório de ROTINA não é recomendado para cirurgia de baixo risco (Classe III sem benefício, Nível B).",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, et al. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circ J. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID 37558469. SEM PMCID — o texto integral está ABERTO no J-STAGE, que é a via de acesso para as diretrizes da Japanese Circulation Society. Table 13. Sem errata registrada no PubMed. NOTA DE VOCABULÁRIO: a fonte subdivide a Classe III em '(No benefit)' e '(Harm)'; a distinção foi preservada NO TEXTO do enunciado, e o campo de classe recebeu 'III', porque a grafia completa não cabe no esquema. A diretriz usa também GRADE nas Clinical Questions, com algumas condutas aparecendo nas duas escalas com códigos diferentes.",
+    "theme": "Perioperatório",
+    "tags": [
+      "eletrocardiograma",
+      "recomendação negativa",
+      "baixo risco"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-nao-fazer-ecocardiograma-transtoracico-de-rotina",
+    "statement": "O ecocardiograma transtorácico pré-operatório de ROTINA não é recomendado (Classe III sem benefício, Nível C). A diretriz define o que conta como achado anormal ao eco: fração de ejeção abaixo de 55%, hipertrofia ventricular esquerda com espessura septal ou de parede posterior de 13 mm ou mais, regurgitação mitral moderada ou grave, e gradiente de pico de 40 mmHg ou mais na valva aórtica.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, et al. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circ J. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID 37558469. SEM PMCID — o texto integral está ABERTO no J-STAGE, que é a via de acesso para as diretrizes da Japanese Circulation Society. Table 14. Sem errata registrada no PubMed. NOTA DE VOCABULÁRIO: a fonte subdivide a Classe III em '(No benefit)' e '(Harm)'; a distinção foi preservada NO TEXTO do enunciado, e o campo de classe recebeu 'III', porque a grafia completa não cabe no esquema. A diretriz usa também GRADE nas Clinical Questions, com algumas condutas aparecendo nas duas escalas com códigos diferentes.",
+    "theme": "Perioperatório",
+    "tags": [
+      "ecocardiograma",
+      "recomendação negativa",
+      "exames de rotina"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-dasi-para-avaliar-capacidade-funcional-autorreferida",
+    "statement": "O escore DASI deve ser considerado para avaliação da capacidade funcional autorreferida no pré-operatório (Classe IIa, Nível C).",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, et al. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circ J. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID 37558469. SEM PMCID — o texto integral está ABERTO no J-STAGE, que é a via de acesso para as diretrizes da Japanese Circulation Society. Table 12. Sem errata registrada no PubMed. NOTA DE VOCABULÁRIO: a fonte subdivide a Classe III em '(No benefit)' e '(Harm)'; a distinção foi preservada NO TEXTO do enunciado, e o campo de classe recebeu 'III', porque a grafia completa não cabe no esquema. A diretriz usa também GRADE nas Clinical Questions, com algumas condutas aparecendo nas duas escalas com códigos diferentes.",
+    "theme": "Perioperatório",
+    "tags": [
+      "capacidade funcional",
+      "DASI",
+      "MET"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-nao-precisa-mais-exame-com-capacidade-de-7-mets",
+    "statement": "Exames cardiovasculares pré-operatórios adicionais NÃO são necessários se a capacidade funcional autorreferida for de 7 MET ou mais (Classe IIa, Nível C); com 4 MET ou mais, a avaliação adicional PODE não ser necessária (Classe IIb, Nível C). Os dois patamares têm forças diferentes: 7 MET dispensa com recomendação IIa, e 4 MET apenas IIb.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, et al. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circ J. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID 37558469. SEM PMCID — o texto integral está ABERTO no J-STAGE, que é a via de acesso para as diretrizes da Japanese Circulation Society. Table 12. Sem errata registrada no PubMed. NOTA DE VOCABULÁRIO: a fonte subdivide a Classe III em '(No benefit)' e '(Harm)'; a distinção foi preservada NO TEXTO do enunciado, e o campo de classe recebeu 'III', porque a grafia completa não cabe no esquema. A diretriz usa também GRADE nas Clinical Questions, com algumas condutas aparecendo nas duas escalas com códigos diferentes.",
+    "theme": "Perioperatório",
+    "tags": [
+      "capacidade funcional",
+      "MET",
+      "exames de rotina"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-bnp-so-para-estratificar-quem-ja-e-de-risco-elevado",
+    "statement": "Em pacientes já classificados como de risco elevado por modelo clínico e submetidos a cirurgia de risco intermediário ou alto — RCRI de 1 item ou mais em cirurgia vascular, ou 2 itens ou mais em não vascular —, o acréscimo de BNP ou NT-proBNP PODE ser considerado para estratificação adicional (Classe IIb, Nível C). A diretriz registra que há pouca utilidade em dosar BNP no paciente de baixo risco, e que o inibidor da neprilisina altera o BNP, exigindo interpretação cautelosa. ATENÇÃO: esta diretriz NÃO publica corte numérico de BNP ou NT-proBNP — usa 'nível alto ou baixo' sem valor.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, et al. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circ J. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID 37558469. SEM PMCID — o texto integral está ABERTO no J-STAGE, que é a via de acesso para as diretrizes da Japanese Circulation Society. Table 18. Sem errata registrada no PubMed. NOTA DE VOCABULÁRIO: a fonte subdivide a Classe III em '(No benefit)' e '(Harm)'; a distinção foi preservada NO TEXTO do enunciado, e o campo de classe recebeu 'III', porque a grafia completa não cabe no esquema. A diretriz usa também GRADE nas Clinical Questions, com algumas condutas aparecendo nas duas escalas com códigos diferentes.",
+    "theme": "Perioperatório",
+    "tags": [
+      "BNP",
+      "NT-proBNP",
+      "estratificação de risco",
+      "sacubitril-valsartana"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-nao-fazer-teste-de-estresse-de-rotina-no-pre-operatorio",
+    "statement": "A eletrocardiografia de esforço pré-operatória para avaliação de risco NÃO deve ser realizada de rotina antes de cirurgia não cardíaca (Classe III sem benefício, Nível B); e a cintilografia de perfusão sob estresse e o ecocardiograma de estresse também NÃO devem ser realizados de rotina (Classe III sem benefício, Nível B). A tabela de acurácia da própria diretriz explica por quê: o valor preditivo POSITIVO desses testes no pré-operatório vai de 9% a 50%, enquanto o negativo fica entre 83% e 100% — servem para excluir, não para confirmar.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, et al. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circ J. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID 37558469. SEM PMCID — o texto integral está ABERTO no J-STAGE, que é a via de acesso para as diretrizes da Japanese Circulation Society. Table 20. Sem errata registrada no PubMed. NOTA DE VOCABULÁRIO: a fonte subdivide a Classe III em '(No benefit)' e '(Harm)'; a distinção foi preservada NO TEXTO do enunciado, e o campo de classe recebeu 'III', porque a grafia completa não cabe no esquema. A diretriz usa também GRADE nas Clinical Questions, com algumas condutas aparecendo nas duas escalas com códigos diferentes.",
+    "theme": "Perioperatório",
+    "tags": [
+      "teste de estresse",
+      "recomendação negativa",
+      "valor preditivo"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-nao-fazer-angiotc-de-coronarias-de-rotina-no-pre-operatorio",
+    "statement": "A angiotomografia de coronárias pré-operatória de rotina NÃO é recomendada para cirurgia não cardíaca (Classe III sem benefício, Nível C).",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, et al. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circ J. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID 37558469. SEM PMCID — o texto integral está ABERTO no J-STAGE, que é a via de acesso para as diretrizes da Japanese Circulation Society. Table 21. Sem errata registrada no PubMed. NOTA DE VOCABULÁRIO: a fonte subdivide a Classe III em '(No benefit)' e '(Harm)'; a distinção foi preservada NO TEXTO do enunciado, e o campo de classe recebeu 'III', porque a grafia completa não cabe no esquema. A diretriz usa também GRADE nas Clinical Questions, com algumas condutas aparecendo nas duas escalas com códigos diferentes.",
+    "theme": "Perioperatório",
+    "tags": [
+      "angiotomografia de coronárias",
+      "recomendação negativa"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-nao-fazer-coronariografia-de-rotina-no-pre-operatorio",
+    "statement": "A coronariografia NÃO deve ser realizada de rotina com o propósito de avaliação pré-operatória para cirurgia não cardíaca (Classe III sem benefício, Nível C).",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, et al. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circ J. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID 37558469. SEM PMCID — o texto integral está ABERTO no J-STAGE, que é a via de acesso para as diretrizes da Japanese Circulation Society. Table 22. Sem errata registrada no PubMed. NOTA DE VOCABULÁRIO: a fonte subdivide a Classe III em '(No benefit)' e '(Harm)'; a distinção foi preservada NO TEXTO do enunciado, e o campo de classe recebeu 'III', porque a grafia completa não cabe no esquema. A diretriz usa também GRADE nas Clinical Questions, com algumas condutas aparecendo nas duas escalas com códigos diferentes.",
+    "theme": "Perioperatório",
+    "tags": [
+      "coronariografia",
+      "recomendação negativa"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-nao-iniciar-betabloqueador-nas-24-horas-antes-da-cirurgia",
+    "statement": "Iniciar betabloqueador nas 24 HORAS que antecedem a cirurgia não cardíaca NÃO é recomendado (Classe III com DANO, Nível A). É a única Classe III de dano com nível A da diretriz — a mais forte proibição do documento.",
+    "recommendation_class": "III",
+    "evidence_level": "A",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, et al. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circ J. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID 37558469. SEM PMCID — o texto integral está ABERTO no J-STAGE, que é a via de acesso para as diretrizes da Japanese Circulation Society. Table 23. Sem errata registrada no PubMed. NOTA DE VOCABULÁRIO: a fonte subdivide a Classe III em '(No benefit)' e '(Harm)'; a distinção foi preservada NO TEXTO do enunciado, e o campo de classe recebeu 'III', porque a grafia completa não cabe no esquema. A diretriz usa também GRADE nas Clinical Questions, com algumas condutas aparecendo nas duas escalas com códigos diferentes.",
+    "theme": "Perioperatório",
+    "tags": [
+      "betabloqueador",
+      "recomendação negativa",
+      "dano"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-manter-o-betabloqueador-cronico-no-perioperatorio",
+    "statement": "Manter a terapia crônica com betabloqueador durante o período perioperatório de cirurgia não cardíaca é recomendado (Classe I, Nível B). O número que sustenta: descontinuar associou-se a mortalidade em 30 dias com OR 3,93 (IC95% 2,57-6,01) e em 1 ano com OR 1,96 (IC95% 1,49-2,58). Iniciar é proibido, e suspender também — a distinção entre as duas situações é o ponto.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, et al. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circ J. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID 37558469. SEM PMCID — o texto integral está ABERTO no J-STAGE, que é a via de acesso para as diretrizes da Japanese Circulation Society. Table 23. Sem errata registrada no PubMed. NOTA DE VOCABULÁRIO: a fonte subdivide a Classe III em '(No benefit)' e '(Harm)'; a distinção foi preservada NO TEXTO do enunciado, e o campo de classe recebeu 'III', porque a grafia completa não cabe no esquema. A diretriz usa também GRADE nas Clinical Questions, com algumas condutas aparecendo nas duas escalas com códigos diferentes.",
+    "theme": "Perioperatório",
+    "tags": [
+      "betabloqueador",
+      "continuidade",
+      "mortalidade"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-iniciar-estatina-antes-de-cirurgia-vascular",
+    "statement": "Iniciar estatina PELO MENOS 2 SEMANAS — preferencialmente 1 mês — antes de cirurgia vascular deve ser considerado (Classe IIa, Nível B).",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, et al. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circ J. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID 37558469. SEM PMCID — o texto integral está ABERTO no J-STAGE, que é a via de acesso para as diretrizes da Japanese Circulation Society. Table 24. Sem errata registrada no PubMed. NOTA DE VOCABULÁRIO: a fonte subdivide a Classe III em '(No benefit)' e '(Harm)'; a distinção foi preservada NO TEXTO do enunciado, e o campo de classe recebeu 'III', porque a grafia completa não cabe no esquema. A diretriz usa também GRADE nas Clinical Questions, com algumas condutas aparecendo nas duas escalas com códigos diferentes.",
+    "theme": "Perioperatório",
+    "tags": [
+      "estatina",
+      "cirurgia vascular",
+      "prazo"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-manter-a-estatina-cronica-no-perioperatorio",
+    "statement": "Manter a terapia oral crônica com estatina no período perioperatório de cirurgia não cardíaca é recomendado (Classe I, Nível C).",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, et al. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circ J. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID 37558469. SEM PMCID — o texto integral está ABERTO no J-STAGE, que é a via de acesso para as diretrizes da Japanese Circulation Society. Table 24. Sem errata registrada no PubMed. NOTA DE VOCABULÁRIO: a fonte subdivide a Classe III em '(No benefit)' e '(Harm)'; a distinção foi preservada NO TEXTO do enunciado, e o campo de classe recebeu 'III', porque a grafia completa não cabe no esquema. A diretriz usa também GRADE nas Clinical Questions, com algumas condutas aparecendo nas duas escalas com códigos diferentes.",
+    "theme": "Perioperatório",
+    "tags": [
+      "estatina",
+      "continuidade"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-suspender-ieca-ou-bra-no-dia-da-cirurgia",
+    "statement": "Suspender o inibidor da enzima conversora ou o bloqueador do receptor de angiotensina NO DIA da cirurgia PODE ser considerado (Classe IIb, Nível C); e, se foram suspensos e são usados para insuficiência cardíaca com fração de ejeção reduzida, é recomendado reiniciá-los o mais cedo possível no pós-operatório (Classe I, Nível C). Suspender é IIb; reiniciar é Classe I — a assimetria é deliberada.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, et al. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circ J. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID 37558469. SEM PMCID — o texto integral está ABERTO no J-STAGE, que é a via de acesso para as diretrizes da Japanese Circulation Society. Table 25. Sem errata registrada no PubMed. NOTA DE VOCABULÁRIO: a fonte subdivide a Classe III em '(No benefit)' e '(Harm)'; a distinção foi preservada NO TEXTO do enunciado, e o campo de classe recebeu 'III', porque a grafia completa não cabe no esquema. A diretriz usa também GRADE nas Clinical Questions, com algumas condutas aparecendo nas duas escalas com códigos diferentes.",
+    "theme": "Perioperatório",
+    "tags": [
+      "IECA",
+      "BRA",
+      "suspensão",
+      "reintrodução"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-nao-iniciar-alfa-2-agonista-antes-de-cirurgia-nao-cardiaca",
+    "statement": "Iniciar terapia com alfa-2 agonista antes de cirurgia não cardíaca NÃO é recomendado (Classe III sem benefício, Nível B). O POISE-2, com 10.010 pacientes, mostrou clonidina com HR 1,08 (IC95% 0,93-1,26) para morte ou infarto, HR 1,3 (IC95% 1,24-1,4) para hipotensão e HR 3,2 (IC95% 1,17-8,76) para parada cardíaca não fatal — sem benefício e com dano.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, et al. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circ J. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID 37558469. SEM PMCID — o texto integral está ABERTO no J-STAGE, que é a via de acesso para as diretrizes da Japanese Circulation Society. Table 26. Sem errata registrada no PubMed. NOTA DE VOCABULÁRIO: a fonte subdivide a Classe III em '(No benefit)' e '(Harm)'; a distinção foi preservada NO TEXTO do enunciado, e o campo de classe recebeu 'III', porque a grafia completa não cabe no esquema. A diretriz usa também GRADE nas Clinical Questions, com algumas condutas aparecendo nas duas escalas com códigos diferentes.",
+    "theme": "Perioperatório",
+    "tags": [
+      "clonidina",
+      "alfa-2 agonista",
+      "POISE-2",
+      "recomendação negativa"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-nao-iniciar-aas-para-prevencao-primaria-antes-da-cirurgia",
+    "statement": "Iniciar ácido acetilsalicílico para PREVENÇÃO PRIMÁRIA de evento cardiovascular antes de cirurgia não cardíaca NÃO deve ser feito (Classe III com DANO, Nível B).",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, et al. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circ J. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID 37558469. SEM PMCID — o texto integral está ABERTO no J-STAGE, que é a via de acesso para as diretrizes da Japanese Circulation Society. Table 27. Sem errata registrada no PubMed. NOTA DE VOCABULÁRIO: a fonte subdivide a Classe III em '(No benefit)' e '(Harm)'; a distinção foi preservada NO TEXTO do enunciado, e o campo de classe recebeu 'III', porque a grafia completa não cabe no esquema. A diretriz usa também GRADE nas Clinical Questions, com algumas condutas aparecendo nas duas escalas com códigos diferentes.",
+    "theme": "Perioperatório",
+    "tags": [
+      "ácido acetilsalicílico",
+      "prevenção primária",
+      "recomendação negativa",
+      "dano"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-decidir-sobre-o-aas-cronico-pesando-trombose-e-sangramento",
+    "statement": "A decisão de manter ou suspender o ácido acetilsalicílico como terapia crônica de manutenção no perioperatório deve ser tomada PESANDO os riscos de trombose e de sangramento (Classe I, Nível B) — é recomendação Classe I de decisão individualizada, não de conduta fixa.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, et al. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circ J. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID 37558469. SEM PMCID — o texto integral está ABERTO no J-STAGE, que é a via de acesso para as diretrizes da Japanese Circulation Society. Table 27. Sem errata registrada no PubMed. NOTA DE VOCABULÁRIO: a fonte subdivide a Classe III em '(No benefit)' e '(Harm)'; a distinção foi preservada NO TEXTO do enunciado, e o campo de classe recebeu 'III', porque a grafia completa não cabe no esquema. A diretriz usa também GRADE nas Clinical Questions, com algumas condutas aparecendo nas duas escalas com códigos diferentes.",
+    "theme": "Perioperatório",
+    "tags": [
+      "ácido acetilsalicílico",
+      "decisão individualizada",
+      "sangramento"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-nao-usar-cateter-de-arteria-pulmonar-de-rotina",
+    "statement": "O uso rotineiro de cateterização da artéria pulmonar em cirurgia não cardíaca NÃO é recomendado (Classe III sem benefício, Nível A).",
+    "recommendation_class": "III",
+    "evidence_level": "A",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, et al. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circ J. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID 37558469. SEM PMCID — o texto integral está ABERTO no J-STAGE, que é a via de acesso para as diretrizes da Japanese Circulation Society. Table 50. Sem errata registrada no PubMed. NOTA DE VOCABULÁRIO: a fonte subdivide a Classe III em '(No benefit)' e '(Harm)'; a distinção foi preservada NO TEXTO do enunciado, e o campo de classe recebeu 'III', porque a grafia completa não cabe no esquema. A diretriz usa também GRADE nas Clinical Questions, com algumas condutas aparecendo nas duas escalas com códigos diferentes.",
+    "theme": "Perioperatório",
+    "tags": [
+      "cateter de artéria pulmonar",
+      "recomendação negativa",
+      "monitorização"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-manter-anticoagulante-em-procedimento-de-baixo-risco-de-sangramento",
+    "statement": "Em intervenções cirúrgicas com BAIXO risco de sangramento, a manutenção da terapia anticoagulante é recomendada (Classe I, Nível A). Em risco MODERADO, a decisão deve pesar tromboembolismo contra sangramento (Classe I, Nível C); em risco ALTO, a suspensão é recomendada (Classe I, Nível C). Os três patamares formam uma regra única e devem ser lidos juntos.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, et al. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circ J. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID 37558469. SEM PMCID — o texto integral está ABERTO no J-STAGE, que é a via de acesso para as diretrizes da Japanese Circulation Society. Table 31. Sem errata registrada no PubMed. NOTA DE VOCABULÁRIO: a fonte subdivide a Classe III em '(No benefit)' e '(Harm)'; a distinção foi preservada NO TEXTO do enunciado, e o campo de classe recebeu 'III', porque a grafia completa não cabe no esquema. A diretriz usa também GRADE nas Clinical Questions, com algumas condutas aparecendo nas duas escalas com códigos diferentes.",
+    "theme": "Perioperatório",
+    "tags": [
+      "anticoagulação",
+      "risco de sangramento",
+      "procedimento"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-nao-fazer-ponte-de-heparina-de-rotina-com-varfarina",
+    "statement": "A ponte de heparina de ROTINA durante a suspensão da varfarina NÃO é recomendada (Classe III sem benefício, Nível C); ela deve ser considerada em portadores de prótese valvar MECÂNICA ou de fibrilação atrial VALVAR (Classe IIa, Nível C), e em pacientes com alto risco embólico e baixo risco de sangramento (Classe IIa, Nível C). Nas Clinical Questions, em GRADE, a diretriz sugere não fazer ponte na fibrilação atrial sob varfarina quando o CHADS2 é de 4 pontos ou menos (GRADE 2B).",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, et al. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circ J. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID 37558469. SEM PMCID — o texto integral está ABERTO no J-STAGE, que é a via de acesso para as diretrizes da Japanese Circulation Society. Table 35. Sem errata registrada no PubMed. NOTA DE VOCABULÁRIO: a fonte subdivide a Classe III em '(No benefit)' e '(Harm)'; a distinção foi preservada NO TEXTO do enunciado, e o campo de classe recebeu 'III', porque a grafia completa não cabe no esquema. A diretriz usa também GRADE nas Clinical Questions, com algumas condutas aparecendo nas duas escalas com códigos diferentes.",
+    "theme": "Perioperatório",
+    "tags": [
+      "ponte de heparina",
+      "varfarina",
+      "prótese mecânica",
+      "CHADS2"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-nao-fazer-ponte-de-heparina-com-doac",
+    "statement": "A ponte de heparina durante a suspensão de anticoagulante oral direto NÃO é recomendada (Classe III sem benefício, Nível B). O esquema da diretriz para o DOAC em procedimento de baixo risco de sangramento é suspender pelo menos 12 HORAS antes, na véspera, e reiniciar pelo menos 6 a 8 HORAS após a cirurgia.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, et al. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circ J. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID 37558469. SEM PMCID — o texto integral está ABERTO no J-STAGE, que é a via de acesso para as diretrizes da Japanese Circulation Society. Table 35. Sem errata registrada no PubMed. NOTA DE VOCABULÁRIO: a fonte subdivide a Classe III em '(No benefit)' e '(Harm)'; a distinção foi preservada NO TEXTO do enunciado, e o campo de classe recebeu 'III', porque a grafia completa não cabe no esquema. A diretriz usa também GRADE nas Clinical Questions, com algumas condutas aparecendo nas duas escalas com códigos diferentes.",
+    "theme": "Perioperatório",
+    "tags": [
+      "ponte de heparina",
+      "DOAC",
+      "suspensão",
+      "prazo"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-suspensao-da-varfarina-dia-a-dia-com-alvo-de-inr",
+    "statement": "O protocolo de suspensão da varfarina desta diretriz é dia a dia: considerar parar em D−5 e D−4, com laboratório (RNI, hemoglobina, plaquetas, creatinina); parar em D−3, D−2 e D−1; e checar o RNI em D−1 — com RNI ABAIXO DE 1,5 o paciente segue para a cirurgia, e entre 1,5 e 1,8 considera-se reversão com vitamina K oral. A dose de manutenção é retomada na noite do procedimento ou na manhã seguinte.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, et al. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circ J. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID 37558469. SEM PMCID — o texto integral está ABERTO no J-STAGE, que é a via de acesso para as diretrizes da Japanese Circulation Society. Table 32. Sem errata registrada no PubMed. NOTA DE VOCABULÁRIO: a fonte subdivide a Classe III em '(No benefit)' e '(Harm)'; a distinção foi preservada NO TEXTO do enunciado, e o campo de classe recebeu 'III', porque a grafia completa não cabe no esquema. A diretriz usa também GRADE nas Clinical Questions, com algumas condutas aparecendo nas duas escalas com códigos diferentes.",
+    "theme": "Perioperatório",
+    "tags": [
+      "varfarina",
+      "RNI",
+      "suspensão",
+      "vitamina K"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-decisao-multidisciplinar-quando-ha-anestesia-regional",
+    "statement": "Quando o paciente em terapia antitrombótica vai a cirurgia não cardíaca em que a anestesia REGIONAL é uma opção, é recomendada discussão multidisciplinar incluindo o anestesiologista para decidir manter ou suspender o antitrombótico (Classe I, Nível C).",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, et al. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circ J. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID 37558469. SEM PMCID — o texto integral está ABERTO no J-STAGE, que é a via de acesso para as diretrizes da Japanese Circulation Society. Table 36. Sem errata registrada no PubMed. NOTA DE VOCABULÁRIO: a fonte subdivide a Classe III em '(No benefit)' e '(Harm)'; a distinção foi preservada NO TEXTO do enunciado, e o campo de classe recebeu 'III', porque a grafia completa não cabe no esquema. A diretriz usa também GRADE nas Clinical Questions, com algumas condutas aparecendo nas duas escalas com códigos diferentes.",
+    "theme": "Perioperatório",
+    "tags": [
+      "anestesia regional",
+      "antitrombótico",
+      "decisão multidisciplinar"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-adiar-cirurgia-eletiva-por-1-mes-apos-sindrome-coronariana-aguda",
+    "statement": "A cirurgia não cardíaca ELETIVA deve ser evitada até 1 MÊS após o início de uma síndrome coronariana aguda (Classe I, Nível C). No paciente com síndrome coronariana aguda que está programado para cirurgia não cardíaca, a revascularização de emergência é recomendada (Classe I, Nível C); a revascularização COMPLETA antes da cirurgia pode ser considerada (Classe IIb, Nível B).",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, et al. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circ J. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID 37558469. SEM PMCID — o texto integral está ABERTO no J-STAGE, que é a via de acesso para as diretrizes da Japanese Circulation Society. Table 37. Sem errata registrada no PubMed. NOTA DE VOCABULÁRIO: a fonte subdivide a Classe III em '(No benefit)' e '(Harm)'; a distinção foi preservada NO TEXTO do enunciado, e o campo de classe recebeu 'III', porque a grafia completa não cabe no esquema. A diretriz usa também GRADE nas Clinical Questions, com algumas condutas aparecendo nas duas escalas com códigos diferentes.",
+    "theme": "Perioperatório",
+    "tags": [
+      "síndrome coronariana aguda",
+      "cirurgia eletiva",
+      "prazo"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-nao-operar-eletivamente-nas-primeiras-6-semanas-apos-stent",
+    "statement": "A cirurgia não cardíaca eletiva dentro de 1 a 1,5 MÊS do implante de stent coronário NÃO deve ser realizada, pela alta taxa de eventos cardiovasculares perioperatórios (Classe III com DANO, Nível B). Se a cirurgia sob dupla antiagregação não for factível, deve-se considerar adiá-la até completar a duração adequada da dupla antiagregação (Classe IIa, Nível B). A diretriz registra que o risco cardiovascular decresce de forma contínua até 1 ANO, e que a recomendação vale INDEPENDENTEMENTE de o motivo da angioplastia ter sido síndrome aguda ou doença estável, e independentemente do dispositivo usado.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, et al. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circ J. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID 37558469. SEM PMCID — o texto integral está ABERTO no J-STAGE, que é a via de acesso para as diretrizes da Japanese Circulation Society. Table 39. Sem errata registrada no PubMed. NOTA DE VOCABULÁRIO: a fonte subdivide a Classe III em '(No benefit)' e '(Harm)'; a distinção foi preservada NO TEXTO do enunciado, e o campo de classe recebeu 'III', porque a grafia completa não cabe no esquema. A diretriz usa também GRADE nas Clinical Questions, com algumas condutas aparecendo nas duas escalas com códigos diferentes.",
+    "theme": "Perioperatório",
+    "tags": [
+      "stent coronário",
+      "cirurgia eletiva",
+      "dupla antiagregação",
+      "prazo"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-prazos-de-suspensao-do-inibidor-de-p2y12-antes-da-cirurgia",
+    "statement": "Os prazos de suspensão do inibidor de P2Y12 antes de cirurgia não cardíaca, conforme esta diretriz, são: prasugrel 7 DIAS, clopidogrel 5 DIAS e ticagrelor 3 DIAS. A própria diretriz declara que esses dados são estrangeiros e DIVERGEM da bula japonesa. Nas Clinical Questions, em GRADE, ela sugere operar sob manutenção do ácido acetilsalicílico nos pacientes em antiagregação por stent coronário quando o risco de sangramento não for alto (GRADE 2C).",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, et al. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circ J. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID 37558469. SEM PMCID — o texto integral está ABERTO no J-STAGE, que é a via de acesso para as diretrizes da Japanese Circulation Society. Table 39. Sem errata registrada no PubMed. NOTA DE VOCABULÁRIO: a fonte subdivide a Classe III em '(No benefit)' e '(Harm)'; a distinção foi preservada NO TEXTO do enunciado, e o campo de classe recebeu 'III', porque a grafia completa não cabe no esquema. A diretriz usa também GRADE nas Clinical Questions, com algumas condutas aparecendo nas duas escalas com códigos diferentes.",
+    "theme": "Perioperatório",
+    "tags": [
+      "clopidogrel",
+      "prasugrel",
+      "ticagrelor",
+      "suspensão",
+      "prazo"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-nao-revascularizar-profilaticamente-antes-de-cirurgia-nao-cardiaca",
+    "statement": "A revascularização profilática pré-operatória para reduzir o risco cirúrgico NÃO deve ser realizada em pacientes com doença coronariana ESTÁVEL submetidos a cirurgia não cardíaca (Classe III com DANO, Nível B — e também GRADE 1B). Os números do CARP explicam: 17 óbitos (6,6%) no braço revascularizado contra 9 (3,6%) no não revascularizado da randomização ao 30º dia, com 10 de 258 (3,9%) morrendo ANTES da cirurgia não cardíaca no braço revascularizado contra 1 de 252 (0,39%) — porque a mediana entre randomização e cirurgia foi de 54 contra 18 dias. A mortalidade tardia foi 22% contra 23%, RR 0,98 (IC95% 0,70-1,37; p=0,92). RESSALVA DA PRÓPRIA DIRETRIZ: o CARP EXCLUIU tronco de coronária esquerda, estenose aórtica grave e fração de ejeção abaixo de 20%, e a subanálise mostra benefício no tronco.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, et al. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circ J. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID 37558469. SEM PMCID — o texto integral está ABERTO no J-STAGE, que é a via de acesso para as diretrizes da Japanese Circulation Society. Table 38. Sem errata registrada no PubMed. NOTA DE VOCABULÁRIO: a fonte subdivide a Classe III em '(No benefit)' e '(Harm)'; a distinção foi preservada NO TEXTO do enunciado, e o campo de classe recebeu 'III', porque a grafia completa não cabe no esquema. A diretriz usa também GRADE nas Clinical Questions, com algumas condutas aparecendo nas duas escalas com códigos diferentes.",
+    "theme": "Perioperatório",
+    "tags": [
+      "revascularização profilática",
+      "CARP",
+      "recomendação negativa",
+      "dano"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-decidir-em-equipe-a-revascularizacao-com-indicacao-classe-i-propria",
+    "statement": "Em paciente com lesão que TEM indicação Classe I de revascularização por si mesma, é recomendado que a decisão de revascularizar antes da cirurgia não cardíaca seja discutida por equipe multidisciplinar — cirurgião, clínico, cardiologista e anestesiologista — com decisão compartilhada com o paciente (Classe I, Nível C). É o contraponto da proibição anterior: a proibição vale para revascularizar POR CAUSA da cirurgia, não para quem já tinha indicação própria.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, et al. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circ J. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID 37558469. SEM PMCID — o texto integral está ABERTO no J-STAGE, que é a via de acesso para as diretrizes da Japanese Circulation Society. Table 38. Sem errata registrada no PubMed. NOTA DE VOCABULÁRIO: a fonte subdivide a Classe III em '(No benefit)' e '(Harm)'; a distinção foi preservada NO TEXTO do enunciado, e o campo de classe recebeu 'III', porque a grafia completa não cabe no esquema. A diretriz usa também GRADE nas Clinical Questions, com algumas condutas aparecendo nas duas escalas com códigos diferentes.",
+    "theme": "Perioperatório",
+    "tags": [
+      "revascularização",
+      "decisão compartilhada",
+      "equipe multidisciplinar"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-adiar-cirurgia-eletiva-por-3-meses-na-icfer-recem-diagnosticada",
+    "statement": "É recomendado introduzir terapia guiada por diretriz na insuficiência cardíaca com fração de ejeção reduzida recém-diagnosticada na avaliação pré-operatória para cirurgia de risco intermediário ou alto, permitindo titulação de dose e recuperação da função cardíaca antes do procedimento eletivo, SE este puder ser adiado por 3 MESES OU MAIS (Classe I, Nível C).",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, et al. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circ J. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID 37558469. SEM PMCID — o texto integral está ABERTO no J-STAGE, que é a via de acesso para as diretrizes da Japanese Circulation Society. Table 43. Sem errata registrada no PubMed. NOTA DE VOCABULÁRIO: a fonte subdivide a Classe III em '(No benefit)' e '(Harm)'; a distinção foi preservada NO TEXTO do enunciado, e o campo de classe recebeu 'III', porque a grafia completa não cabe no esquema. A diretriz usa também GRADE nas Clinical Questions, com algumas condutas aparecendo nas duas escalas com códigos diferentes.",
+    "theme": "Perioperatório",
+    "tags": [
+      "insuficiência cardíaca",
+      "ICFEr",
+      "adiamento",
+      "titulação"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-nao-suspender-betabloqueador-cronico-na-icfer-no-perioperatorio",
+    "statement": "Os betabloqueadores administrados como terapia crônica de manutenção para insuficiência cardíaca com fração de ejeção reduzida NÃO devem ser descontinuados no período perioperatório (Classe III com DANO, Nível B). A diretriz registra que fração de ejeção abaixo de 30% é fator independente de morte perioperatória E de mortalidade tardia, e que a insuficiência cardíaca com fração preservada também aumenta a mortalidade.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, et al. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circ J. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID 37558469. SEM PMCID — o texto integral está ABERTO no J-STAGE, que é a via de acesso para as diretrizes da Japanese Circulation Society. Table 43. Sem errata registrada no PubMed. NOTA DE VOCABULÁRIO: a fonte subdivide a Classe III em '(No benefit)' e '(Harm)'; a distinção foi preservada NO TEXTO do enunciado, e o campo de classe recebeu 'III', porque a grafia completa não cabe no esquema. A diretriz usa também GRADE nas Clinical Questions, com algumas condutas aparecendo nas duas escalas com códigos diferentes.",
+    "theme": "Perioperatório",
+    "tags": [
+      "betabloqueador",
+      "ICFEr",
+      "recomendação negativa",
+      "dano"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-operar-a-estenose-aortica-grave-assintomatica-sob-monitorizacao",
+    "statement": "Em pacientes com estenose aórtica grave ASSINTOMÁTICA, deve-se considerar realizar a cirurgia não cardíaca sob monitorização hemodinâmica apropriada (Classe IIa, Nível B) — ou seja, a estenose aórtica grave assintomática NÃO contraindica a cirurgia. Nas Clinical Questions, em GRADE, a diretriz sugere operar SEM troca valvar profilática prévia, cirúrgica ou transcateter, se o paciente for assintomático (GRADE 2D). As metanálises citadas não encontraram associação com mortalidade: RR 1,49 (IC95% 0,85-2,61) e OR 0,96 (IC95% 0,40-2,30).",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, et al. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circ J. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID 37558469. SEM PMCID — o texto integral está ABERTO no J-STAGE, que é a via de acesso para as diretrizes da Japanese Circulation Society. Table 48. Sem errata registrada no PubMed. NOTA DE VOCABULÁRIO: a fonte subdivide a Classe III em '(No benefit)' e '(Harm)'; a distinção foi preservada NO TEXTO do enunciado, e o campo de classe recebeu 'III', porque a grafia completa não cabe no esquema. A diretriz usa também GRADE nas Clinical Questions, com algumas condutas aparecendo nas duas escalas com códigos diferentes.",
+    "theme": "Perioperatório",
+    "tags": [
+      "estenose aórtica",
+      "assintomático",
+      "monitorização hemodinâmica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-operar-a-insuficiencia-valvar-grave-assintomatica-com-funcao-preservada",
+    "statement": "Em pacientes com insuficiência aórtica ou mitral grave ASSINTOMÁTICA e função ventricular esquerda preservada, deve-se considerar realizar a cirurgia não cardíaca sob monitorização hemodinâmica apropriada (Classe IIa, Nível C).",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, et al. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circ J. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID 37558469. SEM PMCID — o texto integral está ABERTO no J-STAGE, que é a via de acesso para as diretrizes da Japanese Circulation Society. Table 48. Sem errata registrada no PubMed. NOTA DE VOCABULÁRIO: a fonte subdivide a Classe III em '(No benefit)' e '(Harm)'; a distinção foi preservada NO TEXTO do enunciado, e o campo de classe recebeu 'III', porque a grafia completa não cabe no esquema. A diretriz usa também GRADE nas Clinical Questions, com algumas condutas aparecendo nas duas escalas com códigos diferentes.",
+    "theme": "Perioperatório",
+    "tags": [
+      "insuficiência aórtica",
+      "insuficiência mitral",
+      "assintomático"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-nao-adiar-cirurgia-por-hipertensao-grau-1-ou-2",
+    "statement": "Não adiar a cirurgia pode ser considerado na hipertensão de grau 1 ou 2 — pressão sistólica abaixo de 180 mmHg e diastólica abaixo de 110 mmHg (Classe IIb, Nível B). E deve-se considerar manter a pressão arterial entre 70% e 100% do valor basal no período perioperatório (Classe IIa, Nível B).",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, et al. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circ J. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID 37558469. SEM PMCID — o texto integral está ABERTO no J-STAGE, que é a via de acesso para as diretrizes da Japanese Circulation Society. Table 49. Sem errata registrada no PubMed. NOTA DE VOCABULÁRIO: a fonte subdivide a Classe III em '(No benefit)' e '(Harm)'; a distinção foi preservada NO TEXTO do enunciado, e o campo de classe recebeu 'III', porque a grafia completa não cabe no esquema. A diretriz usa também GRADE nas Clinical Questions, com algumas condutas aparecendo nas duas escalas com códigos diferentes.",
+    "theme": "Perioperatório",
+    "tags": [
+      "hipertensão arterial",
+      "adiamento",
+      "pressão-alvo"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-definicao-e-criterios-de-mins",
+    "statement": "A diretriz define LESÃO MIOCÁRDICA APÓS CIRURGIA NÃO CARDÍACA (MINS) como lesão miocárdica por isquemia ocorrida durante ou dentro de 30 DIAS após a cirurgia não cardíaca. Os critérios são: padrão de ascensão e queda da troponina pós-operatória; ausência de evidência de complicação pós-operatória não isquêmica — sepse, embolia pulmonar, fibrilação atrial; e NÃO se exige nenhum achado isquêmico da definição universal de infarto, isto é, nem alteração de ECG, nem nova alteração segmentar ao ecocardiograma, nem novo achado isquêmico à cintilografia. É essa última cláusula que distingue MINS de infarto perioperatório.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, et al. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circ J. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID 37558469. SEM PMCID — o texto integral está ABERTO no J-STAGE, que é a via de acesso para as diretrizes da Japanese Circulation Society. Table 54. Sem errata registrada no PubMed. NOTA DE VOCABULÁRIO: a fonte subdivide a Classe III em '(No benefit)' e '(Harm)'; a distinção foi preservada NO TEXTO do enunciado, e o campo de classe recebeu 'III', porque a grafia completa não cabe no esquema. A diretriz usa também GRADE nas Clinical Questions, com algumas condutas aparecendo nas duas escalas com códigos diferentes.",
+    "theme": "Perioperatório",
+    "tags": [
+      "MINS",
+      "definição",
+      "troponina",
+      "infarto perioperatório"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2022-vigilancia-de-mins-por-troponina-no-paciente-de-alto-risco",
+    "statement": "A vigilância de lesão miocárdica pós-operatória por troponina PODE ser considerada em pacientes de alto risco (Classe IIb, Nível C), assim como a vigilância de isquemia por eletrocardiograma de 12 derivações pós-operatório (Classe IIb, Nível C), na janela de 48 a 72 horas. Os números que justificam: MINS ocorre em 8% a 18% das cirurgias não cardíacas e 84% a 93% dos casos são ASSINTOMÁTICOS ou sem alteração de eletrocardiograma. No VISION, morte em 30 dias com HR 3,87 (IC95% 2,96-5,08); no BASEL-PMI, 9,8% contra 1,6% em 30 dias (HR 2,73; IC95% 1,54-4,84) e 22,5% contra 9,3% em 1 ano (HR 1,58; IC95% 1,16-2,15).",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2022,
+    "guideline_title": "JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery",
+    "reference": "Hiraoka E, Tanabe K, Izuta S, Kubota T, Kohsaka S, et al. JCS 2022 Guideline on Perioperative Cardiovascular Assessment and Management for Non-Cardiac Surgery. Circ J. 2023;87(9):1253-1337. DOI: 10.1253/circj.CJ-22-0609. PMID 37558469. SEM PMCID — o texto integral está ABERTO no J-STAGE, que é a via de acesso para as diretrizes da Japanese Circulation Society. Table 55. Sem errata registrada no PubMed. NOTA DE VOCABULÁRIO: a fonte subdivide a Classe III em '(No benefit)' e '(Harm)'; a distinção foi preservada NO TEXTO do enunciado, e o campo de classe recebeu 'III', porque a grafia completa não cabe no esquema. A diretriz usa também GRADE nas Clinical Questions, com algumas condutas aparecendo nas duas escalas com códigos diferentes.",
+    "theme": "Perioperatório",
+    "tags": [
+      "MINS",
+      "troponina",
+      "vigilância pós-operatória",
+      "alto risco"
+    ],
+    "review_status": "revisado"
   }
 ]
