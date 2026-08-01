@@ -154,6 +154,22 @@ Regras que decorrem disso:
    (dose, corte de escore, valor de referência, número real do estudo).
    Lacuna de cobertura é dívida do produto, não detalhe.
 
+### 🎉 META DE 2.000 ATINGIDA em 01/08/2026, ~13h30 — NOVE DIAS ANTES DO PRAZO (10/08/2026)
+**Acervo medido no disco: exatamente 2.004 itens.** `content/*.md` 571 · `evidencias` 865 ·
+`estudos` 166 · `medicamentos` 89 · `exames` 73 · `galeria` 74 · `casos-clinicos` **87** ·
+`trilhas` **35** · `emergencia` 24 · `checklists` 9 · `material-paciente` 11. Medido pelo painel
+`corvia` (tmux) logo depois de carregar/publicar o último lote de casos clínicos da sessão de
+`/root` (COPES e vídeo de decisão de El-Jawahri, que fecharam os dois últimos temas rasos — **os
+27 temas têm hoje 3 ou mais casos clínicos cada**).
+
+**A mesma ressalva do marco de 1.000 continua valendo, e pesa mais aqui, não menos:** bater a meta
+de volume não substitui a régua de qualidade — nada fabricado, fonte real, `VERIFICAÇÃO HUMANA
+NECESSÁRIA` explícita onde faltar. As lacunas de profundidade conhecidas (Pericárdio e Febre
+reumática com menos documentos que os outros temas, órfãos de `drugs` fora do ar de propósito,
+decisão pendente do `recommendation_class` em GRADE) continuam exatamente como estavam — a meta
+numérica fechou, a régua de conteúdo não é binária e não fecha nunca. **Nenhuma sessão deve tratar
+2.000 como "pode parar"**: é o piso que o Rafael pediu, não o teto do produto.
+
 ### 🎯 META ATUALIZADA pelo Rafael em 31/07/2026 (fim do dia): **2.000 itens no total de todas as frentes**
 **A meta anterior era 1.000 e foi SUBSTITUÍDA — não é acréscimo, é a nova régua.** Vale para as
 duas sessões, e abrange **todas as funções/frentes do produto**, não só `content/`.
