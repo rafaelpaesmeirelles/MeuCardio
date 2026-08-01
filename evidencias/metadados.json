@@ -24753,5 +24753,289 @@
       "angiotomografia coronariana"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "hrs2015-sincope-tilt-test-em-suspeita-vvs-sem-diagnostico-confiante",
+    "statement": "O teste de inclinação (tilt-table) pode ser útil para avaliar pacientes com suspeita de síncope vasovagal que carecem de diagnóstico confiante após a avaliação inicial.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B-NR",
+    "society": "HRS",
+    "year": 2015,
+    "guideline_title": "2015 Heart Rhythm Society Expert Consensus Statement on the Diagnosis and Treatment of Postural Tachycardia Syndrome, Inappropriate Sinus Tachycardia, and Vasovagal Syncope",
+    "reference": "Sheldon RS, Grubb BP 2nd, Olshansky B, Shen WK, Calkins H, Brignole M, et al. 2015 Heart Rhythm Society Expert Consensus Statement on the Diagnosis and Treatment of Postural Tachycardia Syndrome, Inappropriate Sinus Tachycardia, and Vasovagal Syncope. Heart Rhythm. 2015;12(6):e41-e63. DOI: 10.1016/j.hrthm.2015.03.029. PMID: 25980576. PMCID: PMC5267948. Acesso aberto (NIHPA author manuscript), tabelas conferidas no XML JATS bruto (efetch db=pmc) nesta sessão, não só por resumo automatizado — duas pequenas divergências entre extrações foram resolvidas assim. NOTA DE SISTEMA: usa escala Classe I/IIa/IIb/III + Nível A/B-R/B-NR/C/E — o Nível E é \"opinião de consenso sem evidência publicada credível\" (aprovação por votação do grupo redator, mínimo 76%, média 94%), vocabulário próprio deste consenso, sem equivalente direto na escala A/B/C da ESC. Contexto: Investigação diagnóstica da síncope vasovagal",
+    "theme": "Síncope",
+    "tags": [
+      "teste de inclinacao",
+      "sincope vasovagal",
+      "hrs 2015"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hrs2015-sincope-tilt-test-diferencial-convulsiva-epilepsia-pseudossincope",
+    "statement": "O teste de inclinação é uma opção razoável para diferenciar entre síncope convulsiva e epilepsia, para estabelecer diagnóstico de pseudossíncope, e para testar pacientes com suspeita de síncope vasovagal sem características diagnósticas claras.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B-NR",
+    "society": "HRS",
+    "year": 2015,
+    "guideline_title": "2015 Heart Rhythm Society Expert Consensus Statement on the Diagnosis and Treatment of Postural Tachycardia Syndrome, Inappropriate Sinus Tachycardia, and Vasovagal Syncope",
+    "reference": "Sheldon RS, Grubb BP 2nd, Olshansky B, Shen WK, Calkins H, Brignole M, et al. 2015 Heart Rhythm Society Expert Consensus Statement on the Diagnosis and Treatment of Postural Tachycardia Syndrome, Inappropriate Sinus Tachycardia, and Vasovagal Syncope. Heart Rhythm. 2015;12(6):e41-e63. DOI: 10.1016/j.hrthm.2015.03.029. PMID: 25980576. PMCID: PMC5267948. Acesso aberto (NIHPA author manuscript), tabelas conferidas no XML JATS bruto (efetch db=pmc) nesta sessão, não só por resumo automatizado — duas pequenas divergências entre extrações foram resolvidas assim. NOTA DE SISTEMA: usa escala Classe I/IIa/IIb/III + Nível A/B-R/B-NR/C/E — o Nível E é \"opinião de consenso sem evidência publicada credível\" (aprovação por votação do grupo redator, mínimo 76%, média 94%), vocabulário próprio deste consenso, sem equivalente direto na escala A/B/C da ESC. Contexto: Diagnóstico diferencial por teste de inclinação",
+    "theme": "Síncope",
+    "tags": [
+      "teste de inclinacao",
+      "pseudossincope",
+      "diagnostico diferencial"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hrs2015-sincope-ilr-em-idoso-com-sincope-recorrente-baixo-risco",
+    "statement": "Registradores de eventos implantáveis (ILR) podem ser úteis para avaliar pacientes idosos com síncope recorrente e problemática que carecem de diagnóstico claro e têm baixo risco de desfecho fatal.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B-R",
+    "society": "HRS",
+    "year": 2015,
+    "guideline_title": "2015 Heart Rhythm Society Expert Consensus Statement on the Diagnosis and Treatment of Postural Tachycardia Syndrome, Inappropriate Sinus Tachycardia, and Vasovagal Syncope",
+    "reference": "Sheldon RS, Grubb BP 2nd, Olshansky B, Shen WK, Calkins H, Brignole M, et al. 2015 Heart Rhythm Society Expert Consensus Statement on the Diagnosis and Treatment of Postural Tachycardia Syndrome, Inappropriate Sinus Tachycardia, and Vasovagal Syncope. Heart Rhythm. 2015;12(6):e41-e63. DOI: 10.1016/j.hrthm.2015.03.029. PMID: 25980576. PMCID: PMC5267948. Acesso aberto (NIHPA author manuscript), tabelas conferidas no XML JATS bruto (efetch db=pmc) nesta sessão, não só por resumo automatizado — duas pequenas divergências entre extrações foram resolvidas assim. NOTA DE SISTEMA: usa escala Classe I/IIa/IIb/III + Nível A/B-R/B-NR/C/E — o Nível E é \"opinião de consenso sem evidência publicada credível\" (aprovação por votação do grupo redator, mínimo 76%, média 94%), vocabulário próprio deste consenso, sem equivalente direto na escala A/B/C da ESC. Contexto: Monitorização prolongada no idoso",
+    "theme": "Síncope",
+    "tags": [
+      "monitor de eventos implantavel",
+      "sincope no idoso",
+      "ilr"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hrs2015-sincope-tilt-test-nao-preve-resposta-a-tratamento",
+    "statement": "O teste de inclinação NÃO é recomendado para prever a resposta a tratamentos médicos específicos para síncope vasovagal.",
+    "recommendation_class": "III",
+    "evidence_level": "B-R",
+    "society": "HRS",
+    "year": 2015,
+    "guideline_title": "2015 Heart Rhythm Society Expert Consensus Statement on the Diagnosis and Treatment of Postural Tachycardia Syndrome, Inappropriate Sinus Tachycardia, and Vasovagal Syncope",
+    "reference": "Sheldon RS, Grubb BP 2nd, Olshansky B, Shen WK, Calkins H, Brignole M, et al. 2015 Heart Rhythm Society Expert Consensus Statement on the Diagnosis and Treatment of Postural Tachycardia Syndrome, Inappropriate Sinus Tachycardia, and Vasovagal Syncope. Heart Rhythm. 2015;12(6):e41-e63. DOI: 10.1016/j.hrthm.2015.03.029. PMID: 25980576. PMCID: PMC5267948. Acesso aberto (NIHPA author manuscript), tabelas conferidas no XML JATS bruto (efetch db=pmc) nesta sessão, não só por resumo automatizado — duas pequenas divergências entre extrações foram resolvidas assim. NOTA DE SISTEMA: usa escala Classe I/IIa/IIb/III + Nível A/B-R/B-NR/C/E — o Nível E é \"opinião de consenso sem evidência publicada credível\" (aprovação por votação do grupo redator, mínimo 76%, média 94%), vocabulário próprio deste consenso, sem equivalente direto na escala A/B/C da ESC. Contexto: Uso inadequado do teste de inclinação",
+    "theme": "Síncope",
+    "tags": [
+      "teste de inclinacao",
+      "predicao terapeutica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hrs2015-sincope-educacao-sal-e-liquidos-primeira-linha",
+    "statement": "Educação, reasseguramento e estímulo à ingestão de sal e líquidos estão indicados para pacientes com síncope vasovagal, salvo contraindicação.",
+    "recommendation_class": "I",
+    "evidence_level": "E",
+    "society": "HRS",
+    "year": 2015,
+    "guideline_title": "2015 Heart Rhythm Society Expert Consensus Statement on the Diagnosis and Treatment of Postural Tachycardia Syndrome, Inappropriate Sinus Tachycardia, and Vasovagal Syncope",
+    "reference": "Sheldon RS, Grubb BP 2nd, Olshansky B, Shen WK, Calkins H, Brignole M, et al. 2015 Heart Rhythm Society Expert Consensus Statement on the Diagnosis and Treatment of Postural Tachycardia Syndrome, Inappropriate Sinus Tachycardia, and Vasovagal Syncope. Heart Rhythm. 2015;12(6):e41-e63. DOI: 10.1016/j.hrthm.2015.03.029. PMID: 25980576. PMCID: PMC5267948. Acesso aberto (NIHPA author manuscript), tabelas conferidas no XML JATS bruto (efetch db=pmc) nesta sessão, não só por resumo automatizado — duas pequenas divergências entre extrações foram resolvidas assim. NOTA DE SISTEMA: usa escala Classe I/IIa/IIb/III + Nível A/B-R/B-NR/C/E — o Nível E é \"opinião de consenso sem evidência publicada credível\" (aprovação por votação do grupo redator, mínimo 76%, média 94%), vocabulário próprio deste consenso, sem equivalente direto na escala A/B/C da ESC. Contexto: Medida não farmacológica de primeira linha",
+    "theme": "Síncope",
+    "tags": [
+      "sincope vasovagal",
+      "educacao do paciente",
+      "ingesta de sal"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hrs2015-sincope-reduzir-medicacao-hipotensora-pode-ser-benefico",
+    "statement": "Reduzir ou retirar medicações que podem causar hipotensão pode ser benéfico para pacientes com síncope vasovagal.",
+    "recommendation_class": "IIa",
+    "evidence_level": "E",
+    "society": "HRS",
+    "year": 2015,
+    "guideline_title": "2015 Heart Rhythm Society Expert Consensus Statement on the Diagnosis and Treatment of Postural Tachycardia Syndrome, Inappropriate Sinus Tachycardia, and Vasovagal Syncope",
+    "reference": "Sheldon RS, Grubb BP 2nd, Olshansky B, Shen WK, Calkins H, Brignole M, et al. 2015 Heart Rhythm Society Expert Consensus Statement on the Diagnosis and Treatment of Postural Tachycardia Syndrome, Inappropriate Sinus Tachycardia, and Vasovagal Syncope. Heart Rhythm. 2015;12(6):e41-e63. DOI: 10.1016/j.hrthm.2015.03.029. PMID: 25980576. PMCID: PMC5267948. Acesso aberto (NIHPA author manuscript), tabelas conferidas no XML JATS bruto (efetch db=pmc) nesta sessão, não só por resumo automatizado — duas pequenas divergências entre extrações foram resolvidas assim. NOTA DE SISTEMA: usa escala Classe I/IIa/IIb/III + Nível A/B-R/B-NR/C/E — o Nível E é \"opinião de consenso sem evidência publicada credível\" (aprovação por votação do grupo redator, mínimo 76%, média 94%), vocabulário próprio deste consenso, sem equivalente direto na escala A/B/C da ESC. Contexto: Revisão medicamentosa",
+    "theme": "Síncope",
+    "tags": [
+      "sincope vasovagal",
+      "hipotensao induzida por farmaco",
+      "revisao medicamentosa"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hrs2015-sincope-manobras-de-contrapressao-com-prodromo-longo",
+    "statement": "Manobras de contrapressão física podem ser úteis para pacientes com síncope vasovagal que têm pródromo suficientemente longo.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B-R",
+    "society": "HRS",
+    "year": 2015,
+    "guideline_title": "2015 Heart Rhythm Society Expert Consensus Statement on the Diagnosis and Treatment of Postural Tachycardia Syndrome, Inappropriate Sinus Tachycardia, and Vasovagal Syncope",
+    "reference": "Sheldon RS, Grubb BP 2nd, Olshansky B, Shen WK, Calkins H, Brignole M, et al. 2015 Heart Rhythm Society Expert Consensus Statement on the Diagnosis and Treatment of Postural Tachycardia Syndrome, Inappropriate Sinus Tachycardia, and Vasovagal Syncope. Heart Rhythm. 2015;12(6):e41-e63. DOI: 10.1016/j.hrthm.2015.03.029. PMID: 25980576. PMCID: PMC5267948. Acesso aberto (NIHPA author manuscript), tabelas conferidas no XML JATS bruto (efetch db=pmc) nesta sessão, não só por resumo automatizado — duas pequenas divergências entre extrações foram resolvidas assim. NOTA DE SISTEMA: usa escala Classe I/IIa/IIb/III + Nível A/B-R/B-NR/C/E — o Nível E é \"opinião de consenso sem evidência publicada credível\" (aprovação por votação do grupo redator, mínimo 76%, média 94%), vocabulário próprio deste consenso, sem equivalente direto na escala A/B/C da ESC. Contexto: Manejo comportamental",
+    "theme": "Síncope",
+    "tags": [
+      "manobras de contrapressao",
+      "sincope vasovagal",
+      "prodromo"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hrs2015-sincope-fludrocortisona-em-sincope-vasovagal-frequente",
+    "statement": "O uso de fludrocortisona parece razoável para pacientes com síncope vasovagal frequente sem contraindicação ao seu uso.",
+    "recommendation_class": "IIb",
+    "evidence_level": "E",
+    "society": "HRS",
+    "year": 2015,
+    "guideline_title": "2015 Heart Rhythm Society Expert Consensus Statement on the Diagnosis and Treatment of Postural Tachycardia Syndrome, Inappropriate Sinus Tachycardia, and Vasovagal Syncope",
+    "reference": "Sheldon RS, Grubb BP 2nd, Olshansky B, Shen WK, Calkins H, Brignole M, et al. 2015 Heart Rhythm Society Expert Consensus Statement on the Diagnosis and Treatment of Postural Tachycardia Syndrome, Inappropriate Sinus Tachycardia, and Vasovagal Syncope. Heart Rhythm. 2015;12(6):e41-e63. DOI: 10.1016/j.hrthm.2015.03.029. PMID: 25980576. PMCID: PMC5267948. Acesso aberto (NIHPA author manuscript), tabelas conferidas no XML JATS bruto (efetch db=pmc) nesta sessão, não só por resumo automatizado — duas pequenas divergências entre extrações foram resolvidas assim. NOTA DE SISTEMA: usa escala Classe I/IIa/IIb/III + Nível A/B-R/B-NR/C/E — o Nível E é \"opinião de consenso sem evidência publicada credível\" (aprovação por votação do grupo redator, mínimo 76%, média 94%), vocabulário próprio deste consenso, sem equivalente direto na escala A/B/C da ESC. Contexto: Farmacoterapia da síncope vasovagal",
+    "theme": "Síncope",
+    "tags": [
+      "fludrocortisona",
+      "sincope vasovagal frequente"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hrs2015-sincope-betabloqueador-acima-de-40-anos",
+    "statement": "Betabloqueadores podem ser considerados para pacientes com mais de 40 anos com síncope vasovagal frequente.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B-R",
+    "society": "HRS",
+    "year": 2015,
+    "guideline_title": "2015 Heart Rhythm Society Expert Consensus Statement on the Diagnosis and Treatment of Postural Tachycardia Syndrome, Inappropriate Sinus Tachycardia, and Vasovagal Syncope",
+    "reference": "Sheldon RS, Grubb BP 2nd, Olshansky B, Shen WK, Calkins H, Brignole M, et al. 2015 Heart Rhythm Society Expert Consensus Statement on the Diagnosis and Treatment of Postural Tachycardia Syndrome, Inappropriate Sinus Tachycardia, and Vasovagal Syncope. Heart Rhythm. 2015;12(6):e41-e63. DOI: 10.1016/j.hrthm.2015.03.029. PMID: 25980576. PMCID: PMC5267948. Acesso aberto (NIHPA author manuscript), tabelas conferidas no XML JATS bruto (efetch db=pmc) nesta sessão, não só por resumo automatizado — duas pequenas divergências entre extrações foram resolvidas assim. NOTA DE SISTEMA: usa escala Classe I/IIa/IIb/III + Nível A/B-R/B-NR/C/E — o Nível E é \"opinião de consenso sem evidência publicada credível\" (aprovação por votação do grupo redator, mínimo 76%, média 94%), vocabulário próprio deste consenso, sem equivalente direto na escala A/B/C da ESC. Contexto: Farmacoterapia por faixa etária",
+    "theme": "Síncope",
+    "tags": [
+      "betabloqueador",
+      "sincope vasovagal",
+      "idade"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hrs2015-sincope-midodrina-sem-hipertensao-ou-retencao-urinaria",
+    "statement": "O uso de midodrina parece razoável para pacientes com síncope vasovagal frequente, sem hipertensão ou retenção urinária.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B-R",
+    "society": "HRS",
+    "year": 2015,
+    "guideline_title": "2015 Heart Rhythm Society Expert Consensus Statement on the Diagnosis and Treatment of Postural Tachycardia Syndrome, Inappropriate Sinus Tachycardia, and Vasovagal Syncope",
+    "reference": "Sheldon RS, Grubb BP 2nd, Olshansky B, Shen WK, Calkins H, Brignole M, et al. 2015 Heart Rhythm Society Expert Consensus Statement on the Diagnosis and Treatment of Postural Tachycardia Syndrome, Inappropriate Sinus Tachycardia, and Vasovagal Syncope. Heart Rhythm. 2015;12(6):e41-e63. DOI: 10.1016/j.hrthm.2015.03.029. PMID: 25980576. PMCID: PMC5267948. Acesso aberto (NIHPA author manuscript), tabelas conferidas no XML JATS bruto (efetch db=pmc) nesta sessão, não só por resumo automatizado — duas pequenas divergências entre extrações foram resolvidas assim. NOTA DE SISTEMA: usa escala Classe I/IIa/IIb/III + Nível A/B-R/B-NR/C/E — o Nível E é \"opinião de consenso sem evidência publicada credível\" (aprovação por votação do grupo redator, mínimo 76%, média 94%), vocabulário próprio deste consenso, sem equivalente direto na escala A/B/C da ESC. Contexto: Farmacoterapia da síncope vasovagal",
+    "theme": "Síncope",
+    "tags": [
+      "midodrina",
+      "sincope vasovagal frequente"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hrs2015-sincope-marca-passo-dupla-camara-acima-de-40-anos-com-pausa-documentada",
+    "statement": "A estimulação de dupla câmara pode ser efetiva para pacientes com 40 anos ou mais com síncope recorrente e imprevisível que têm pausa documentada ≥3 segundos durante síncope clínica, ou pausa assintomática ≥6 segundos.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B-R",
+    "society": "HRS",
+    "year": 2015,
+    "guideline_title": "2015 Heart Rhythm Society Expert Consensus Statement on the Diagnosis and Treatment of Postural Tachycardia Syndrome, Inappropriate Sinus Tachycardia, and Vasovagal Syncope",
+    "reference": "Sheldon RS, Grubb BP 2nd, Olshansky B, Shen WK, Calkins H, Brignole M, et al. 2015 Heart Rhythm Society Expert Consensus Statement on the Diagnosis and Treatment of Postural Tachycardia Syndrome, Inappropriate Sinus Tachycardia, and Vasovagal Syncope. Heart Rhythm. 2015;12(6):e41-e63. DOI: 10.1016/j.hrthm.2015.03.029. PMID: 25980576. PMCID: PMC5267948. Acesso aberto (NIHPA author manuscript), tabelas conferidas no XML JATS bruto (efetch db=pmc) nesta sessão, não só por resumo automatizado — duas pequenas divergências entre extrações foram resolvidas assim. NOTA DE SISTEMA: usa escala Classe I/IIa/IIb/III + Nível A/B-R/B-NR/C/E — o Nível E é \"opinião de consenso sem evidência publicada credível\" (aprovação por votação do grupo redator, mínimo 76%, média 94%), vocabulário próprio deste consenso, sem equivalente direto na escala A/B/C da ESC. Contexto: Indicação de marca-passo na síncope vasovagal",
+    "theme": "Síncope",
+    "tags": [
+      "marca-passo",
+      "sincope vasovagal",
+      "pausa cardiaca"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hrs2015-sincope-tilt-test-para-selecionar-candidato-a-marca-passo",
+    "statement": "O teste de inclinação pode ser considerado para identificar pacientes com resposta hipotensiva, que teriam menor probabilidade de responder ao marca-passo permanente.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B-NR",
+    "society": "HRS",
+    "year": 2015,
+    "guideline_title": "2015 Heart Rhythm Society Expert Consensus Statement on the Diagnosis and Treatment of Postural Tachycardia Syndrome, Inappropriate Sinus Tachycardia, and Vasovagal Syncope",
+    "reference": "Sheldon RS, Grubb BP 2nd, Olshansky B, Shen WK, Calkins H, Brignole M, et al. 2015 Heart Rhythm Society Expert Consensus Statement on the Diagnosis and Treatment of Postural Tachycardia Syndrome, Inappropriate Sinus Tachycardia, and Vasovagal Syncope. Heart Rhythm. 2015;12(6):e41-e63. DOI: 10.1016/j.hrthm.2015.03.029. PMID: 25980576. PMCID: PMC5267948. Acesso aberto (NIHPA author manuscript), tabelas conferidas no XML JATS bruto (efetch db=pmc) nesta sessão, não só por resumo automatizado — duas pequenas divergências entre extrações foram resolvidas assim. NOTA DE SISTEMA: usa escala Classe I/IIa/IIb/III + Nível A/B-R/B-NR/C/E — o Nível E é \"opinião de consenso sem evidência publicada credível\" (aprovação por votação do grupo redator, mínimo 76%, média 94%), vocabulário próprio deste consenso, sem equivalente direto na escala A/B/C da ESC. Contexto: Seleção de candidato a marca-passo",
+    "theme": "Síncope",
+    "tags": [
+      "teste de inclinacao",
+      "marca-passo",
+      "resposta hipotensiva"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hrs2015-sincope-marca-passo-pediatrico-com-assistolia-refrataria",
+    "statement": "A estimulação pode ser considerada para pacientes pediátricos com síncope recorrente com assistolia sintomática documentada, refratários à terapia medicamentosa.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B-R",
+    "society": "HRS",
+    "year": 2015,
+    "guideline_title": "2015 Heart Rhythm Society Expert Consensus Statement on the Diagnosis and Treatment of Postural Tachycardia Syndrome, Inappropriate Sinus Tachycardia, and Vasovagal Syncope",
+    "reference": "Sheldon RS, Grubb BP 2nd, Olshansky B, Shen WK, Calkins H, Brignole M, et al. 2015 Heart Rhythm Society Expert Consensus Statement on the Diagnosis and Treatment of Postural Tachycardia Syndrome, Inappropriate Sinus Tachycardia, and Vasovagal Syncope. Heart Rhythm. 2015;12(6):e41-e63. DOI: 10.1016/j.hrthm.2015.03.029. PMID: 25980576. PMCID: PMC5267948. Acesso aberto (NIHPA author manuscript), tabelas conferidas no XML JATS bruto (efetch db=pmc) nesta sessão, não só por resumo automatizado — duas pequenas divergências entre extrações foram resolvidas assim. NOTA DE SISTEMA: usa escala Classe I/IIa/IIb/III + Nível A/B-R/B-NR/C/E — o Nível E é \"opinião de consenso sem evidência publicada credível\" (aprovação por votação do grupo redator, mínimo 76%, média 94%), vocabulário próprio deste consenso, sem equivalente direto na escala A/B/C da ESC. Contexto: Marca-passo em população pediátrica",
+    "theme": "Síncope",
+    "tags": [
+      "marca-passo pediatrico",
+      "assistolia sintomatica",
+      "sincope refrataria"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hrs2015-sincope-marca-passo-em-sincope-adenosina-sensivel-no-idoso",
+    "statement": "A estimulação de dupla câmara pode ser considerada em pacientes idosos adenosina-sensíveis com síncope inexplicada sem pródromo, ECG normal e sem cardiopatia estrutural.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "HRS",
+    "year": 2015,
+    "guideline_title": "2015 Heart Rhythm Society Expert Consensus Statement on the Diagnosis and Treatment of Postural Tachycardia Syndrome, Inappropriate Sinus Tachycardia, and Vasovagal Syncope",
+    "reference": "Sheldon RS, Grubb BP 2nd, Olshansky B, Shen WK, Calkins H, Brignole M, et al. 2015 Heart Rhythm Society Expert Consensus Statement on the Diagnosis and Treatment of Postural Tachycardia Syndrome, Inappropriate Sinus Tachycardia, and Vasovagal Syncope. Heart Rhythm. 2015;12(6):e41-e63. DOI: 10.1016/j.hrthm.2015.03.029. PMID: 25980576. PMCID: PMC5267948. Acesso aberto (NIHPA author manuscript), tabelas conferidas no XML JATS bruto (efetch db=pmc) nesta sessão, não só por resumo automatizado — duas pequenas divergências entre extrações foram resolvidas assim. NOTA DE SISTEMA: usa escala Classe I/IIa/IIb/III + Nível A/B-R/B-NR/C/E — o Nível E é \"opinião de consenso sem evidência publicada credível\" (aprovação por votação do grupo redator, mínimo 76%, média 94%), vocabulário próprio deste consenso, sem equivalente direto na escala A/B/C da ESC. Contexto: Marca-passo em fenótipo de síncope adenosina-sensível",
+    "theme": "Síncope",
+    "tags": [
+      "marca-passo",
+      "sincope adenosina-sensivel",
+      "sincope sem prodromo"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hrs2015-sincope-tilt-test-pediatrico-altamente-selecionado",
+    "statement": "O teste de inclinação é razoável para pacientes pediátricos altamente selecionados com suspeita de síncope vasovagal.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "HRS",
+    "year": 2015,
+    "guideline_title": "2015 Heart Rhythm Society Expert Consensus Statement on the Diagnosis and Treatment of Postural Tachycardia Syndrome, Inappropriate Sinus Tachycardia, and Vasovagal Syncope",
+    "reference": "Sheldon RS, Grubb BP 2nd, Olshansky B, Shen WK, Calkins H, Brignole M, et al. 2015 Heart Rhythm Society Expert Consensus Statement on the Diagnosis and Treatment of Postural Tachycardia Syndrome, Inappropriate Sinus Tachycardia, and Vasovagal Syncope. Heart Rhythm. 2015;12(6):e41-e63. DOI: 10.1016/j.hrthm.2015.03.029. PMID: 25980576. PMCID: PMC5267948. Acesso aberto (NIHPA author manuscript), tabelas conferidas no XML JATS bruto (efetch db=pmc) nesta sessão, não só por resumo automatizado — duas pequenas divergências entre extrações foram resolvidas assim. NOTA DE SISTEMA: usa escala Classe I/IIa/IIb/III + Nível A/B-R/B-NR/C/E — o Nível E é \"opinião de consenso sem evidência publicada credível\" (aprovação por votação do grupo redator, mínimo 76%, média 94%), vocabulário próprio deste consenso, sem equivalente direto na escala A/B/C da ESC. Contexto: Investigação pediátrica seletiva",
+    "theme": "Síncope",
+    "tags": [
+      "teste de inclinacao",
+      "sincope vasovagal pediatrica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hrs2015-sincope-midodrina-em-pediatria-selecionada",
+    "statement": "Parece razoável tratar pacientes pediátricos selecionados com síncope vasovagal com midodrina.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B-R",
+    "society": "HRS",
+    "year": 2015,
+    "guideline_title": "2015 Heart Rhythm Society Expert Consensus Statement on the Diagnosis and Treatment of Postural Tachycardia Syndrome, Inappropriate Sinus Tachycardia, and Vasovagal Syncope",
+    "reference": "Sheldon RS, Grubb BP 2nd, Olshansky B, Shen WK, Calkins H, Brignole M, et al. 2015 Heart Rhythm Society Expert Consensus Statement on the Diagnosis and Treatment of Postural Tachycardia Syndrome, Inappropriate Sinus Tachycardia, and Vasovagal Syncope. Heart Rhythm. 2015;12(6):e41-e63. DOI: 10.1016/j.hrthm.2015.03.029. PMID: 25980576. PMCID: PMC5267948. Acesso aberto (NIHPA author manuscript), tabelas conferidas no XML JATS bruto (efetch db=pmc) nesta sessão, não só por resumo automatizado — duas pequenas divergências entre extrações foram resolvidas assim. NOTA DE SISTEMA: usa escala Classe I/IIa/IIb/III + Nível A/B-R/B-NR/C/E — o Nível E é \"opinião de consenso sem evidência publicada credível\" (aprovação por votação do grupo redator, mínimo 76%, média 94%), vocabulário próprio deste consenso, sem equivalente direto na escala A/B/C da ESC. Contexto: Farmacoterapia pediátrica",
+    "theme": "Síncope",
+    "tags": [
+      "midodrina",
+      "sincope vasovagal pediatrica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hrs2015-sincope-extrapolar-conduta-adulta-para-pediatria-em-vvs-ou-pots",
+    "statement": "Parece razoável tratar pacientes pediátricos com síncope vasovagal ou POTS com as intervenções recomendadas para adultos com esses distúrbios.",
+    "recommendation_class": "IIb",
+    "evidence_level": "E",
+    "society": "HRS",
+    "year": 2015,
+    "guideline_title": "2015 Heart Rhythm Society Expert Consensus Statement on the Diagnosis and Treatment of Postural Tachycardia Syndrome, Inappropriate Sinus Tachycardia, and Vasovagal Syncope",
+    "reference": "Sheldon RS, Grubb BP 2nd, Olshansky B, Shen WK, Calkins H, Brignole M, et al. 2015 Heart Rhythm Society Expert Consensus Statement on the Diagnosis and Treatment of Postural Tachycardia Syndrome, Inappropriate Sinus Tachycardia, and Vasovagal Syncope. Heart Rhythm. 2015;12(6):e41-e63. DOI: 10.1016/j.hrthm.2015.03.029. PMID: 25980576. PMCID: PMC5267948. Acesso aberto (NIHPA author manuscript), tabelas conferidas no XML JATS bruto (efetch db=pmc) nesta sessão, não só por resumo automatizado — duas pequenas divergências entre extrações foram resolvidas assim. NOTA DE SISTEMA: usa escala Classe I/IIa/IIb/III + Nível A/B-R/B-NR/C/E — o Nível E é \"opinião de consenso sem evidência publicada credível\" (aprovação por votação do grupo redator, mínimo 76%, média 94%), vocabulário próprio deste consenso, sem equivalente direto na escala A/B/C da ESC. Contexto: Extrapolação de conduta adulta para pediatria",
+    "theme": "Síncope",
+    "tags": [
+      "sincope vasovagal pediatrica",
+      "pots",
+      "extrapolacao terapeutica"
+    ],
+    "review_status": "revisado"
   }
 ]
