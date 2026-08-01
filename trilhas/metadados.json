@@ -982,5 +982,815 @@
         "por_que": "Fecha a trilha na consequência prática de escolher prótese mecânica: anticoagulação para a vida toda, com a janela terapêutica estreita que faz da varfarina, e não de um DOAC, a única opção validada nessa indicação."
       }
     ]
+  },
+  {
+    "slug": "trilha-aorta-e-doenca-arterial-periferica",
+    "titulo": "Aorta e doença arterial periférica: do índice tornozelo-braquial à emergência aórtica",
+    "tema": "Aorta e doença arterial periférica",
+    "objetivo": "Sair sabendo rastrear e graduar a doença arterial periférica pelo ITB, indicar revascularização pelo estágio clínico, decidir o momento de reparar um aneurisma de aorta abdominal e reconhecer a síndrome aórtica aguda.",
+    "nivel": "intermediário",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "doenca-arterial-periferica-e-aortica-paad-diretriz-combinada-esc-2024",
+        "por_que": "Começa aqui porque é a diretriz que reúne o território aórtico e o periférico num documento só, e é dela que saem as metas de pressão e de LDL que todos os ensaios seguintes chamam genericamente de “terapia médica otimizada”. Sem esses números, o braço controle dos estudos fica sem conteúdo."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "fluxograma-doenca-arterial-periferica-diagnostico-esc-2024",
+        "por_que": "A árvore de decisão do rastreamento pelo ITB, com os dois cortes que decidem tudo o que vem depois: ≤0,90 confirma a doença, >1,40 significa artéria não compressível e exige outro teste. Da etapa seguinte em diante o paciente já é tratado como portador de DAP."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "doenca-arterial-periferica-de-membros-diagnostico-por-itb-e-isquemia-critica",
+        "por_que": "Separa claudicação de isquemia crítica e apresenta o estadiamento WIfI. É o vocabulário de gravidade que define a população dos dois ensaios seguintes — sem ele, CLEVER e BEST-CLI parecem responder à mesma pergunta, e não respondem."
+      },
+      {
+        "ordem": 4,
+        "item_type": "estudo",
+        "item_slug": "clever-exercicio-supervisionado-versus-stent-na-claudicacao-aortoiliaca",
+        "por_que": "Testa a estratégia no grau mais leve do espectro da etapa anterior. Vem antes dos ensaios de isquemia crítica porque estabelece que, na claudicação, exercício supervisionado compete de igual para igual com o stent — conclusão que não se transporta para o membro ameaçado."
+      },
+      {
+        "ordem": 5,
+        "item_type": "estudo",
+        "item_slug": "best-cli-cirurgia-versus-terapia-endovascular-na-isquemia-critica-de-membro",
+        "por_que": "Sobe ao extremo oposto do espectro e mostra que o resultado depende de haver safena magna adequada. Ler este antes do BASIL-2 é o que permite entender por que dois ensaios da mesma pergunta apontam para lados diferentes."
+      },
+      {
+        "ordem": 6,
+        "item_type": "estudo",
+        "item_slug": "basil-2-bypass-venoso-versus-tratamento-endovascular-na-isquemia-critica-infrapoplitea",
+        "por_que": "O contraponto do anterior, restrito à revascularização infrapoplítea. Os dois juntos sustentam a única conclusão que a evidência autoriza: quem decide é o nível anatômico e o conduto disponível, não uma superioridade universal de uma técnica."
+      },
+      {
+        "ordem": 7,
+        "item_type": "medicamento",
+        "item_slug": "clopidogrel-bissulfato",
+        "por_que": "A camada antitrombótica que todos os braços dos ensaios anteriores assumem como pano de fundo, com a posologia na doença arterial periférica estabelecida. Também prepara a dupla antiagregação de curta duração da estenose carotídea sintomática."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "aneurisma-de-aorta-abdominal-rastreamento-seguimento-e-indicacao-de-reparo",
+        "por_que": "Muda o eixo da doença oclusiva para a aneurismática e fixa o limiar de reparo eletivo, que é exatamente o critério de inclusão do ensaio da etapa seguinte."
+      },
+      {
+        "ordem": 9,
+        "item_type": "estudo",
+        "item_slug": "evar-1-quinze-anos-endovascular-versus-aberto-no-aneurisma-de-aorta-abdominal",
+        "por_que": "Só faz sentido depois do limiar de diâmetro, porque randomizou justamente quem o atingiu — e mostra um efeito que inverte de sinal com o tempo de seguimento, o argumento mais forte para não decidir a técnica pela mortalidade precoce."
+      },
+      {
+        "ordem": 10,
+        "item_type": "documento",
+        "item_slug": "fluxograma-sindrome-aortica-aguda-esc-2024",
+        "por_que": "Fecha com a emergência: o escore de risco combinado ao D-dímero para selecionar quem vai à angiotomografia, e a separação de conduta entre tipo A e tipo B. Vem por último porque supõe conhecidos os diâmetros da etapa 8, que são o antecedente da maioria das dissecções."
+      }
+    ],
+    "review_status": "revisado",
+    "revisao": "Curadoria verificada pela sessão CORVIA em 01/08/2026. Cada etapa aponta para item que já existe e está publicado na base — os slugs foram conferidos um a um contra o campo `slug` do front matter dos documentos e contra os JSON de estudos, medicamentos e checklists, e depois contra o banco de produção. A ordem e a justificativa derivam do conteúdo dos próprios itens, lido antes de escrever; a trilha não afirma nada que não esteja no item para o qual aponta."
+  },
+  {
+    "slug": "trilha-pericardio-da-pericardite-aguda-a-constricao",
+    "titulo": "Pericárdio: da pericardite aguda à constrição, com o lugar exato da colchicina",
+    "tema": "Pericárdio",
+    "objetivo": "Sair sabendo diagnosticar e tratar a pericardite aguda em primeira linha, decidir quem interna, escalonar a doença recorrente na ordem que a evidência sustenta e reconhecer tamponamento e constrição.",
+    "nivel": "intermediário",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "sindromes-inflamatorias-miocardicas-e-pericardicas-imps-framework-unificado-esc-2025",
+        "por_que": "Fixa a terminologia que a diretriz de 2025 unificou e a distinção entre miopericardite e pericardite com envolvimento miocárdico. Todas as etapas seguintes usam esses termos sem redefini-los."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "pericardite-aguda-diagnostico-tratamento-e-prevencao-de-recorrencia",
+        "por_que": "Os critérios diagnósticos e a tríade de primeira linha com doses. A etapa seguinte já parte do diagnóstico feito e trata apenas de onde tratar o paciente."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "fluxograma-pericardite-aguda-esc-2025",
+        "por_que": "Acrescenta a decisão que os dois anteriores não tomam: quais características de alto risco indicam internação, e em que ponto o inibidor de interleucina-1 entra antes do corticoide na doença recorrente."
+      },
+      {
+        "ordem": 4,
+        "item_type": "medicamento",
+        "item_slug": "colchicina",
+        "por_que": "Traz a posologia ajustada por peso e a duração de tratamento que os três ensaios seguintes testaram. Sem a prescrição concreta, os números de recorrência não se ligam a nada que se possa fazer no consultório."
+      },
+      {
+        "ordem": 5,
+        "item_type": "estudo",
+        "item_slug": "icap-colchicina-na-pericardite-aguda",
+        "por_que": "O ensaio duplo-cego do primeiro episódio, que é o que sustenta a recomendação de classe I com nível A citada na etapa 1. É a evidência mais forte da trilha, e vem antes das populações mais difíceis."
+      },
+      {
+        "ordem": 6,
+        "item_type": "estudo",
+        "item_slug": "corp-2-colchicina-em-multiplas-recorrencias-de-pericardite",
+        "por_que": "Muda a população para quem já recorreu várias vezes e mostra que a colchicina continua funcionando ali. É a etapa que impede o erro de escalar terapia cedo demais."
+      },
+      {
+        "ordem": 7,
+        "item_type": "estudo",
+        "item_slug": "airtrip-anakinra-na-pericardite-recorrente-colchicina-resistente",
+        "por_que": "A população deste ensaio é definida por falha da colchicina e dependência de corticosteroide — ou seja, ele só é interpretável depois da etapa anterior. É o desenho de retirada randomizada, que vale conhecer pelo método."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "inibidores-de-il-1-na-pericardite-recorrente-e-derrame-pericardico-neoplasico",
+        "por_que": "Consolida os dois ensaios de bloqueio da interleucina-1 lado a lado e compara os agentes entre si, o que pressupõe conhecer pelo menos um deles em detalhe."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "tamponamento-cardiaco-e-pericardite-constritiva-diagnostico-e-manejo",
+        "por_que": "Fecha com as complicações estruturais do derrame e da inflamação crônica, incluindo a constrição transitória, que é reversível e não deve ir para a mesa cirúrgica."
+      },
+      {
+        "ordem": 10,
+        "item_type": "documento",
+        "item_slug": "pericardite-constritiva-e-tamponamento-criterios-numericos-por-imagem-2024",
+        "por_que": "A continuação natural da etapa anterior no nível do laudo: os cortes numéricos de ecocardiograma e de imagem que separam constrição de restrição. Fica por último porque é material de consulta, não de leitura contínua."
+      }
+    ],
+    "review_status": "revisado",
+    "revisao": "Curadoria verificada pela sessão CORVIA em 01/08/2026. Cada etapa aponta para item que já existe e está publicado na base — os slugs foram conferidos um a um contra o campo `slug` do front matter dos documentos e contra os JSON de estudos, medicamentos e checklists, e depois contra o banco de produção. A ordem e a justificativa derivam do conteúdo dos próprios itens, lido antes de escrever; a trilha não afirma nada que não esteja no item para o qual aponta."
+  },
+  {
+    "slug": "trilha-cardiomiopatias-do-fenotipo-a-terapia-dirigida",
+    "titulo": "Cardiomiopatias: do fenótipo à terapia dirigida na hipertrófica e na amiloidose",
+    "tema": "Cardiomiopatias",
+    "objetivo": "Sair sabendo organizar as cardiomiopatias por fenótipo, diagnosticar a forma hipertrófica e estratificar seu risco, reconhecer quando a hipertrofia é infiltração e indicar as terapias específicas que mudaram desfecho.",
+    "nivel": "intermediário",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "manejo-das-cardiomiopatias-primeira-diretriz-abrangente-esc-2023",
+        "por_que": "Estabelece a definição por exclusão e a organização por fenótipo. Todas as etapas seguintes dizem “hipertrófica”, “dilatada” ou “arritmogênica” contando com essa classificação já assentada."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "fluxograma-cardiomiopatia-hipertrofica-esc-2023",
+        "por_que": "Converte o princípio fenotípico no caminho concreto da forma hipertrófica: espessura, busca de sinais de alerta para fenocópias e estratificação de morte súbita. É a árvore que o documento completo detalha em seguida."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "cardiomiopatia-hipertrofica-diagnostico-estratificacao-de-risco-e-tratamento-esc-2023-versao-completa",
+        "por_que": "Detalha os critérios e, sobretudo, o protocolo de imagem — repouso, Valsalva, ortostase e esforço. Sem provocar a obstrução não se identifica quem tem gradiente alto, que é o critério de entrada da terapia das etapas 4 a 6."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "cardiomiopatia-hipertrofica-diagnostico-e-tratamento-diretriz-brasileira-2024",
+        "por_que": "A versão brasileira dos mesmos critérios, com um alerta que muda conduta: a espessura medida por ressonância é sistematicamente maior que a medida por ecocardiograma, e isso pode deslocar o paciente de categoria de risco."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "cardiomiopatia-hipertrofica-obstrutiva-terapia-com-inibidores-de-miosina-cardiaca",
+        "por_que": "Apresenta a terapia convencional e o mecanismo do inibidor de miosina. É onde o problema clínico que o ensaio seguinte testa fica formulado."
+      },
+      {
+        "ordem": 6,
+        "item_type": "estudo",
+        "item_slug": "explorer-hcm-mavacamteno-na-cardiomiopatia-hipertrofica-obstrutiva",
+        "por_que": "O ensaio de fase 3 exatamente na população definida nas etapas 3 e 5 — gradiente alto e sintoma. É a evidência que autoriza a prescrição da etapa seguinte."
+      },
+      {
+        "ordem": 7,
+        "item_type": "medicamento",
+        "item_slug": "mavacamten",
+        "por_que": "Vem depois do ensaio porque a dose, a titulação guiada por fração de ejeção e a monitorização derivam do protocolo dele, não da bula lida isoladamente."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "fluxograma-amiloidose-cardiaca-diagnostico-nao-invasivo",
+        "por_que": "Vira a chave do fenótipo: hipertrofia também pode ser infiltração. Fixa a regra de que a pesquisa de proteína monoclonal valida a cintilografia — sem ela, não se pode afirmar amiloidose por transtirretina nas duas etapas finais."
+      },
+      {
+        "ordem": 9,
+        "item_type": "estudo",
+        "item_slug": "attr-act-tafamidis-na-cardiomiopatia-amiloide-por-transtirretina",
+        "por_que": "O ensaio cuja população é precisamente a definida pelo algoritmo anterior, e o primeiro a mostrar redução de mortalidade nessa doença."
+      },
+      {
+        "ordem": 10,
+        "item_type": "medicamento",
+        "item_slug": "tafamidis",
+        "por_que": "Fecha com o estabilizador de transtirretina, cuja indicação depende de ter excluído a forma de cadeia leve na etapa 8 e de ter o benefício demonstrado na etapa 9."
+      }
+    ],
+    "review_status": "revisado",
+    "revisao": "Curadoria verificada pela sessão CORVIA em 01/08/2026. Cada etapa aponta para item que já existe e está publicado na base — os slugs foram conferidos um a um contra o campo `slug` do front matter dos documentos e contra os JSON de estudos, medicamentos e checklists, e depois contra o banco de produção. A ordem e a justificativa derivam do conteúdo dos próprios itens, lido antes de escrever; a trilha não afirma nada que não esteja no item para o qual aponta."
+  },
+  {
+    "slug": "trilha-endocardite-infecciosa-do-diagnostico-ao-timing-cirurgico",
+    "titulo": "Endocardite infecciosa: do diagnóstico ao momento da cirurgia",
+    "tema": "Endocardite",
+    "objetivo": "Sair sabendo conduzir a suspeita de endocardite na ordem certa de exames, escolher o esquema antibiótico por agente e tipo de valva, reconhecer as três indicações cirúrgicas com seus prazos e decidir o que fazer com o antitrombótico.",
+    "nivel": "intermediário",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "endocardite-infecciosa-prevencao-diagnostico-e-tratamento-esc-2023",
+        "por_que": "O documento de referência da trilha: os critérios diagnósticos revisados, o papel da equipe multidisciplinar e o que mudou em relação à diretriz anterior. Todas as etapas seguintes citam esta base normativa."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "fluxograma-endocardite-infecciosa-esc-2023",
+        "por_que": "Organiza os critérios na sequência operacional — hemoculturas antes do antibiótico, ecocardiograma transtorácico e depois transesofágico mesmo se o primeiro já for positivo. É a ordem que a etapa seguinte pressupõe ter falhado."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "endocardite-com-hemocultura-negativa-diagnostico-e-manejo-aha-2025",
+        "por_que": "Trata do cenário em que o pilar do fluxograma não responde, o que é frequente. É a justificativa clínica para a terapia empírica que a etapa 4 detalha, e traz os testes moleculares e sorológicos que substituem a cultura."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "esquemas-antibioticos-na-endocardite-infecciosa-por-agente-esc-2023",
+        "por_que": "As doses por agente e a diferença de duração entre valva nativa e prótese. É o regime intravenoso padrão que o ensaio da etapa seguinte tenta encurtar."
+      },
+      {
+        "ordem": 5,
+        "item_type": "estudo",
+        "item_slug": "poet-antibiotico-oral-versus-intravenoso-endocardite",
+        "por_que": "Só é interpretável depois da etapa 4, porque testa a troca para via oral em paciente já estabilizado com o esquema intravenoso ali descrito. Mudou a duração de internação em endocardite de câmaras esquerdas."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "indicacoes-e-timing-cirurgico-na-endocardite-infecciosa",
+        "por_que": "Introduz o segundo eixo terapêutico — as três indicações de cirurgia e a classificação de prazo em emergencial, urgente e não urgente. Sem essa régua, o ensaio seguinte não tem categoria de comparação."
+      },
+      {
+        "ordem": 7,
+        "item_type": "estudo",
+        "item_slug": "cirurgia-precoce-na-endocardite-infecciosa-com-vegetacao-grande",
+        "por_que": "Fornece o dado randomizado justamente na faixa em que a indicação não é emergencial, comparando operar em 48 horas com a conduta convencional. É onde a decisão de prazo deixa de ser opinião."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "antiagregacao-e-anticoagulacao-na-endocardite-infecciosa",
+        "por_que": "Vem depois de diagnóstico, antibiótico e cirurgia porque a decisão antitrombótica é sobre o paciente já em tratamento, e depende do risco embólico e hemorrágico estabelecido nas etapas anteriores."
+      },
+      {
+        "ordem": 9,
+        "item_type": "medicamento",
+        "item_slug": "acido-acetilsalicilico-aas",
+        "por_que": "Fecha com o fármaco sobre o qual a etapa anterior emite uma conclusão negativa — não se inicia antiagregante para reduzir embolia na endocardite —, com a duração do efeito plaquetário que explica o risco de sangramento se ele já estiver em uso."
+      }
+    ],
+    "review_status": "revisado",
+    "revisao": "Curadoria verificada pela sessão CORVIA em 01/08/2026. Cada etapa aponta para item que já existe e está publicado na base — os slugs foram conferidos um a um contra o campo `slug` do front matter dos documentos e contra os JSON de estudos, medicamentos e checklists, e depois contra o banco de produção. A ordem e a justificativa derivam do conteúdo dos próprios itens, lido antes de escrever; a trilha não afirma nada que não esteja no item para o qual aponta."
+  },
+  {
+    "slug": "trilha-cardiopatia-congenita-do-adulto-shunt-eisenmenger-e-fontan",
+    "titulo": "Cardiopatia congênita do adulto: shunt, Eisenmenger e circulação de Fontan",
+    "tema": "Cardiopatias congênitas",
+    "objetivo": "Sair sabendo classificar a complexidade e encaminhar, decidir quando um shunt ainda pode ser fechado, reconhecer a fisiologia de Eisenmenger e acompanhar o adulto com circulação de Fontan.",
+    "nivel": "avançado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "cardiopatia-congenita-do-adulto-achd-manejo-abrangente-esc-2020",
+        "por_que": "Estabelece a nomenclatura, a classificação de complexidade e — o que mais muda conduta na prática do cardiologista geral — os critérios de encaminhamento obrigatório ao centro especializado."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "fluxograma-comunicacao-interatrial-e-shunt-esquerda-direita-no-adulto-esc-2020",
+        "por_que": "Fixa a variável que decide o fechamento do shunt, que é a resistência vascular pulmonar, e o valor a partir do qual fechar passa a ser contraindicado. É a etapa que separa o paciente operável do que já não é."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "arritmias-e-sindrome-de-eisenmenger-em-cardiopatia-congenita-do-adulto",
+        "por_que": "Descreve a fisiologia que resulta do shunt não corrigido a tempo — o desfecho da etapa anterior — e é o documento que cita nominalmente os dois ensaios seguintes."
+      },
+      {
+        "ordem": 4,
+        "item_type": "estudo",
+        "item_slug": "breathe-5-bosentana-na-sindrome-de-eisenmenger",
+        "por_que": "O ensaio randomizado positivo que abriu a terapia com antagonista de endotelina nessa população, e cuja limitação de tamanho e duração é o que torna o ensaio seguinte necessário."
+      },
+      {
+        "ordem": 5,
+        "item_type": "estudo",
+        "item_slug": "maestro-macitentana-na-sindrome-de-eisenmenger",
+        "por_que": "O ensaio de fase 3 maior, que não reproduziu o resultado esperado. Ler os dois na ordem é o que impede tomar a extrapolação do primeiro como regra de classe."
+      },
+      {
+        "ordem": 6,
+        "item_type": "medicamento",
+        "item_slug": "bosentana",
+        "por_que": "Dose, monitorização hepática e classe do fármaco cujo benefício acabou de ser delimitado pelos dois ensaios. A prescrição pressupõe saber em qual dos dois cenários a evidência se aplica."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "circulacao-de-fontan-e-transposicao-das-grandes-arterias-no-adulto",
+        "por_que": "Muda de lesão e apresenta a fisiologia de fluxo venoso passivo, com as complicações tardias hepáticas e linfáticas. É o pré-requisito anatômico para entender por que há estase e risco trombótico na etapa seguinte."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "tromboprofilaxia-na-circulacao-de-fontan",
+        "por_que": "Aplica a fisiologia anterior à decisão concreta de profilaxia, comparando as opções em metanálise em rede e usando a doença hepática da etapa 7 como fator de escolha."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "teste-cardiopulmonar-de-exercicio-na-cardiopatia-congenita-aha-2025",
+        "por_que": "Fecha com o seguimento funcional do adulto, que é o que detecta deterioração antes do sintoma — e traz os valores de referência por lesão, incluindo a circulação de Fontan das duas etapas anteriores."
+      }
+    ],
+    "review_status": "revisado",
+    "revisao": "Curadoria verificada pela sessão CORVIA em 01/08/2026. Cada etapa aponta para item que já existe e está publicado na base — os slugs foram conferidos um a um contra o campo `slug` do front matter dos documentos e contra os JSON de estudos, medicamentos e checklists, e depois contra o banco de produção. A ordem e a justificativa derivam do conteúdo dos próprios itens, lido antes de escrever; a trilha não afirma nada que não esteja no item para o qual aponta."
+  },
+  {
+    "slug": "trilha-febre-reumatica-do-diagnostico-a-profilaxia-secundaria",
+    "titulo": "Febre reumática e cardiopatia reumática: do diagnóstico à profilaxia secundária",
+    "tema": "Febre reumática",
+    "objetivo": "Sair sabendo aplicar os critérios de Jones conforme a categoria de risco da população, graduar e tratar a cardite aguda, usar os critérios ecocardiográficos de rastreamento e sustentar a duração da profilaxia secundária.",
+    "nivel": "intermediário",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "carga-global-da-doenca-e-prevencao-primaria-por-infeccao-de-pele",
+        "por_que": "Estabelece a magnitude e a distribuição da doença, que é o que dá sentido ao conceito de categoria de risco populacional usado no diagnóstico — e lembra que a porta de entrada nem sempre é a garganta."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "febre-reumatica-fr-e-cardiopatia-reumatica-cr-prevencao-diagnostico-e-manejo",
+        "por_que": "O documento-base, com a lista de critérios maiores e menores. É o vocabulário sem o qual o fluxograma da etapa seguinte não é legível."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "fluxograma-febre-reumatica-aguda-criterios-de-jones-2015",
+        "por_que": "Transforma a lista em árvore de decisão condicionada ao risco da população e introduz a valvulite subclínica ao Doppler como critério maior — a mudança que mais alterou o diagnóstico no Brasil."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "cardite-reumatica-aguda-graduacao-de-gravidade-e-tratamento-sbc-2022",
+        "por_que": "Começa exatamente onde o fluxograma termina: com o diagnóstico feito, gradua a cardite e define o tratamento de cada faixa de gravidade."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "coreia-de-sydenham-diagnostico-e-tratamento",
+        "por_que": "A única manifestação maior com terapêutica própria e que pode aparecer isolada, meses depois da infecção. É exceção à regra geral das etapas 3 e 4, e por isso vem depois delas."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "criterios-ecocardiograficos-whf-2023-rastreamento-confirmacao-e-estadiamento",
+        "por_que": "Dá os cortes numéricos e o estadiamento que definem operacionalmente a cardiopatia reumática latente — termo que é critério de inclusão do ensaio da etapa 8."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "profilaxia-secundaria-antibiotica-na-febre-reumatica-duracao-por-categoria-de-risco",
+        "por_que": "O esquema e a duração da penicilina benzatina por categoria de risco. É a intervenção cuja eficácia o ensaio seguinte testou formalmente, e a pergunta que mais chega ao consultório é a da duração."
+      },
+      {
+        "ordem": 8,
+        "item_type": "estudo",
+        "item_slug": "goal-profilaxia-secundaria-na-cardiopatia-reumatica-latente",
+        "por_que": "A evidência randomizada da profilaxia na população definida na etapa 6, com o esquema da etapa 7. Sem essas duas, o desenho do ensaio não é interpretável."
+      },
+      {
+        "ordem": 9,
+        "item_type": "estudo",
+        "item_slug": "invictus-rivaroxabana-versus-varfarina-na-fa-da-cardiopatia-reumatica",
+        "por_que": "Fecha na sequela crônica: a fibrilação atrial da cardiopatia reumática estabelecida, cenário em que o anticoagulante direto perdeu para o antagonista da vitamina K."
+      },
+      {
+        "ordem": 10,
+        "item_type": "medicamento",
+        "item_slug": "varfarina-sodica",
+        "por_que": "A prescrição que decorre do ensaio anterior, com o alvo de razão normalizada internacional. É o fármaco cuja indicação nessa população nenhuma alternativa oral substituiu."
+      }
+    ],
+    "review_status": "revisado",
+    "revisao": "Curadoria verificada pela sessão CORVIA em 01/08/2026. Cada etapa aponta para item que já existe e está publicado na base — os slugs foram conferidos um a um contra o campo `slug` do front matter dos documentos e contra os JSON de estudos, medicamentos e checklists, e depois contra o banco de produção. A ordem e a justificativa derivam do conteúdo dos próprios itens, lido antes de escrever; a trilha não afirma nada que não esteja no item para o qual aponta."
+  },
+  {
+    "slug": "trilha-sincope-da-avaliacao-inicial-ao-tratamento-da-vasovagal",
+    "titulo": "Síncope: da avaliação inicial na emergência ao tratamento da forma vasovagal",
+    "tema": "Síncope",
+    "objetivo": "Sair sabendo classificar a síncope nos três grandes grupos, decidir destino do paciente na emergência com base no eletrocardiograma e no risco, indicar tilt test e monitor implantável, e tratar a síncope vasovagal recorrente.",
+    "nivel": "básico",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "sincope-classificacao-etiologica-em-tres-grandes-grupos",
+        "por_que": "Fixa os três grupos etiológicos. Toda decisão seguinte — investigar, internar, tratar — depende de em qual deles o paciente cai, e é o erro de classificação que gera a investigação inútil."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "fluxograma-sincope-avaliacao-inicial-esc-2018",
+        "por_que": "Estabelece que a avaliação inicial tem três componentes obrigatórios e que a decisão imediata é de destino, não de diagnóstico. A etapa seguinte detalha um desses três componentes."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "sincope-na-emergencia-criterios-de-alto-risco-do-ecg-eusem-2024",
+        "por_que": "Detalha o eletrocardiograma em critérios maiores e menores de alto risco e fixa que só o traçado normal é de baixo risco. É o que impede dar alta com um achado que já estava no papel."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "estratificacao-de-risco-tilt-test-e-monitor-de-eventos-implantavel-na-sincope",
+        "por_que": "Reúne o escore de risco, o protocolo do tilt test e as indicações do monitor implantável. O ensaio seguinte é justamente a comparação randomizada entre essas duas estratégias diagnósticas."
+      },
+      {
+        "ordem": 5,
+        "item_type": "estudo",
+        "item_slug": "rast-monitor-implantavel-versus-testagem-convencional-na-sincope",
+        "por_que": "O ensaio que testou o monitor implantável contra a investigação convencional e mostrou a diferença de rendimento diagnóstico. É a evidência por trás da indicação da etapa anterior."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "hipotensao-ortostatica-e-sindrome-de-taquicardia-postural-pots-diagnostico-diferencial",
+        "por_que": "Fecha o segundo grupo da classificação da etapa 1, com os cortes de tempo que separam as formas de hipotensão ortostática. Separar isso da síncope reflexa é pré-requisito para o tratamento da etapa 7, que é específico da forma reflexa."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "tratamento-da-sincope-vasovagal-recorrente-medidas-nao-farmacologicas-e-farmacos",
+        "por_que": "Estabelece a hierarquia terapêutica, em que educação e manobras de contrapressão vêm antes de qualquer fármaco. A etapa seguinte é o ensaio que sustenta o rebaixamento do betabloqueador."
+      },
+      {
+        "ordem": 8,
+        "item_type": "estudo",
+        "item_slug": "post-metoprolol-sincope-vasovagal-efeito-dependente-da-idade",
+        "por_que": "O ensaio duplo-cego cujo resultado depende da idade do paciente — motivo pelo qual o betabloqueador não é tratamento de primeira linha na síncope vasovagal, ao contrário do que a prática antiga fazia."
+      },
+      {
+        "ordem": 9,
+        "item_type": "estudo",
+        "item_slug": "issue-3-marca-passo-na-sincope-reflexa-com-assistolia-documentada",
+        "por_que": "Fecha a trilha com a única indicação de marca-passo na síncope reflexa que a evidência sustenta, e ela pressupõe a assistolia documentada pelo monitor implantável da etapa 5 — não a induzida no tilt."
+      }
+    ],
+    "review_status": "revisado",
+    "revisao": "Curadoria verificada pela sessão CORVIA em 01/08/2026. Cada etapa aponta para item que já existe e está publicado na base — os slugs foram conferidos um a um contra o campo `slug` do front matter dos documentos e contra os JSON de estudos, medicamentos e checklists, e depois contra o banco de produção. A ordem e a justificativa derivam do conteúdo dos próprios itens, lido antes de escrever; a trilha não afirma nada que não esteja no item para o qual aponta."
+  },
+  {
+    "slug": "trilha-perioperatorio-avaliacao-pre-operatoria-e-lesao-miocardica",
+    "titulo": "Perioperatório: avaliação pré-operatória, antitrombóticos e lesão miocárdica",
+    "tema": "Perioperatório",
+    "objetivo": "Sair sabendo decidir quem investigar antes de cirurgia não cardíaca, aplicar os escores de risco e a capacidade funcional, manejar antiagregante e anticoagulante no perioperatório e reconhecer a lesão miocárdica pós-operatória.",
+    "nivel": "intermediário",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "fluxograma-avaliacao-cardiovascular-pre-operatoria-esc-2022",
+        "por_que": "Estabelece a ordem das perguntas — risco do procedimento antes do risco do paciente — e que pedir exame em cirurgia de baixo risco é formalmente não recomendado. Sem isso, o resto vira uma lista de exames sem critério."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "avaliacao-cardiovascular-e-manejo-em-cirurgia-nao-cardiaca-esc-2022",
+        "por_que": "Preenche a árvore anterior com os cortes numéricos de capacidade funcional, biomarcadores e critérios de internação. É a referência europeia que a etapa seguinte compara com a brasileira."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "estratificacao-de-risco-perioperatorio-na-diretriz-brasileira-sbc-2024",
+        "por_que": "Traz os escores lado a lado, incluindo um índice brasileiro, e registra que nenhum se mostrou superior na nossa população — o que muda a leitura de qualquer um deles isoladamente."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "avaliacao-funcional-pre-operatoria-teste-ergometrico-tcpe-e-eco-de-estresse-sbc-2024",
+        "por_que": "Define quando vale testar, partindo do paciente já classificado na etapa 3. É onde aparece o par de recomendações opostas do ecocardiograma sob estresse, que depende só da capacidade funcional."
+      },
+      {
+        "ordem": 5,
+        "item_type": "estudo",
+        "item_slug": "poise-metoprolol-perioperatorio-em-cirurgia-nao-cardiaca",
+        "por_que": "O ensaio de grande porte que sustenta a recomendação de não iniciar betabloqueador às vésperas da cirurgia — a conduta oposta da que se praticava, e o exemplo mais claro de dano por extrapolação fisiológica."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "manejo-perioperatorio-de-antitromboticos-dapt-e-anticoagulantes-orais",
+        "por_que": "Fixa os prazos operacionais entre implante de stent e cirurgia eletiva e a suspensão e reinício de cada classe. É a etapa mais consultada da trilha na prática diária."
+      },
+      {
+        "ordem": 7,
+        "item_type": "medicamento",
+        "item_slug": "clopidogrel-bissulfato",
+        "por_que": "Confirma o prazo de suspensão da etapa anterior e explica por que ele é esse: a inibição plaquetária é irreversível e a recuperação depende da renovação das plaquetas."
+      },
+      {
+        "ordem": 8,
+        "item_type": "estudo",
+        "item_slug": "vision-troponina-de-alta-sensibilidade-e-mortalidade-apos-cirurgia-nao-cardiaca",
+        "por_que": "A coorte que definiu os limiares de troponina do pós-operatório e mostrou que a maioria dos casos é assintomática. Sem ela não se entende por que se dosa troponina em quem não tem dor."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "lesao-miocardica-pos-operatoria-mins-e-fibrilacao-atrial-pos-cirurgia-cardiaca",
+        "por_que": "Transcreve o critério diagnóstico derivado da coorte anterior e acrescenta a fibrilação atrial do pós-operatório de cirurgia cardíaca, com a prevenção farmacológica."
+      },
+      {
+        "ordem": 10,
+        "item_type": "estudo",
+        "item_slug": "manage-dabigatrana-apos-lesao-miocardica-em-cirurgia-nao-cardiaca",
+        "por_que": "O único ensaio randomizado que testou tratamento para a condição caracterizada nas duas etapas anteriores — e por isso só é interpretável depois delas."
+      }
+    ],
+    "review_status": "revisado",
+    "revisao": "Curadoria verificada pela sessão CORVIA em 01/08/2026. Cada etapa aponta para item que já existe e está publicado na base — os slugs foram conferidos um a um contra o campo `slug` do front matter dos documentos e contra os JSON de estudos, medicamentos e checklists, e depois contra o banco de produção. A ordem e a justificativa derivam do conteúdo dos próprios itens, lido antes de escrever; a trilha não afirma nada que não esteja no item para o qual aponta."
+  },
+  {
+    "slug": "trilha-comunicacao-clinica-risco-e-decisao-compartilhada",
+    "titulo": "Comunicação clínica I: comunicar risco e decidir junto com o paciente",
+    "tema": "Comunicação clínica",
+    "objetivo": "Sair sabendo estruturar uma conversa difícil, escolher o formato numérico com que se apresenta risco, usar ferramentas de apoio à decisão onde elas funcionam e reconhecer o limite do que o paciente retém de um consentimento.",
+    "nivel": "básico",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "relacao-medico-paciente-e-desfecho-objetivo-metanalise-de-kelley",
+        "por_que": "Abre a trilha porque é a peça que sustenta todo o resto: a metanálise de ensaios randomizados mostrando que a qualidade da relação altera desfecho objetivo, não apenas satisfação."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "interprete-profissional-versus-informal-erro-de-traducao-com-consequencia-clinica",
+        "por_que": "Vem cedo porque nenhuma técnica das etapas seguintes se aplica sem um canal íntegro. Quantifica o erro de tradução com consequência clínica, que é maior com intérprete improvisado do que sem nenhum."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "roteiro-de-conversa-dificil-em-cardiologia",
+        "por_que": "O único roteiro passo a passo da biblioteca, e o esqueleto que os cenários seguintes preenchem. Traz a etapa de checar entendimento, que é onde a conversa costuma falhar silenciosamente."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "como-apresentar-reducao-de-risco-ao-paciente-relativo-absoluto-ou-frequencia-natural",
+        "por_que": "Entra logo depois do roteiro porque a etapa de informar exige decidir o formato do número — e a decisão do paciente muda conforme o mesmo dado seja dito em risco relativo, absoluto ou frequência natural."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "ferramentas-de-apoio-a-decisao-eficacia-real-revisao-cochrane",
+        "por_que": "A evidência agregada da categoria vem antes de qualquer ferramenta específica, inclusive o dado prático de quanto essas ferramentas custam em tempo de consulta."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "ferramenta-de-decisao-compartilhada-na-angioplastia-eletiva-o-pci-choice",
+        "por_que": "Aplica a categoria anterior ao mal-entendido mais comum do ambulatório de cardiologia — a crença de que a angioplastia eletiva evita infarto e morte na doença estável."
+      },
+      {
+        "ordem": 7,
+        "item_type": "estudo",
+        "item_slug": "decide-lvad-decisao-compartilhada-em-dispositivo-de-assistencia-ventricular",
+        "por_que": "Escala a mesma ferramenta para a decisão de maior risco da cardiologia, mantendo a progressão do eletivo ao terminal. Mostra o efeito sobre conhecimento e sobre a taxa de implante."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "consentimento-informado-em-cateterismo-o-que-o-paciente-realmente-retem",
+        "por_que": "Colocado depois das ferramentas porque mede o teto de tudo o que veio antes: quanto da informação do consentimento o paciente de fato retém horas depois."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "decisao-compartilhada-no-retorno-ao-esporte-competitivo-em-cardiopatia-com-risco-de-morte-subita-esc-2020",
+        "por_que": "Fecha com o cenário em que a decisão compartilhada já está normatizada com classe e nível de recomendação — inclusive a obrigação de documentá-la —, consolidando o método como conduta formal."
+      }
+    ],
+    "review_status": "revisado",
+    "revisao": "Curadoria verificada pela sessão CORVIA em 01/08/2026. Cada etapa aponta para item que já existe e está publicado na base — os slugs foram conferidos um a um contra o campo `slug` do front matter dos documentos e contra os JSON de estudos, medicamentos e checklists, e depois contra o banco de produção. A ordem e a justificativa derivam do conteúdo dos próprios itens, lido antes de escrever; a trilha não afirma nada que não esteja no item para o qual aponta."
+  },
+  {
+    "slug": "trilha-comunicacao-clinica-alta-transicao-de-cuidado-e-adesao",
+    "titulo": "Comunicação clínica II: alta hospitalar, transição de cuidado e adesão",
+    "tema": "Comunicação clínica",
+    "objetivo": "Sair sabendo dar uma alta que o paciente entende e cumpre: recomendação formal de comunicação na alta, técnica de confirmação de entendimento, reconciliação medicamentosa e alinhamento de expectativa de prognóstico.",
+    "nivel": "básico",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "comunicacao-consentimento-e-alta-na-sindrome-coronariana-aguda-esc-2023",
+        "por_que": "Abre porque é o único documento da biblioteca que dá classe e nível de recomendação à comunicação de alta — inclusive a exigência de informação escrita e verbal e de avaliar o estado mental do paciente."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "letramento-em-saude-e-desfechos-cardiovasculares",
+        "por_que": "Quantifica a capacidade de recepção do paciente, que é a variável que determina se a orientação da etapa 1 chega ou não. Letramento baixo é fator de risco independente, não detalhe social."
+      },
+      {
+        "ordem": 3,
+        "item_type": "estudo",
+        "item_slug": "teach-back-em-alta-hospitalar-na-insuficiencia-cardiaca-heart-program",
+        "por_que": "O ensaio randomizado da técnica exata que a diretriz da etapa 1 recomenda: pedir ao paciente que repita com as próprias palavras o que entendeu."
+      },
+      {
+        "ordem": 4,
+        "item_type": "checklist",
+        "item_slug": "alta-pos-sindrome-coronariana-aguda",
+        "por_que": "Operacionaliza as três etapas anteriores no mesmo cenário clínico e a partir da mesma diretriz — é o que se leva para o leito no dia da alta."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "reconciliacao-medicamentosa-e-transicao-de-cuidado-onde-o-erro-acontece",
+        "por_que": "Vem depois do checklist porque mostra onde o erro escapa mesmo com checklist: na lista de medicamentos, no ponto de transição entre níveis de cuidado."
+      },
+      {
+        "ordem": 6,
+        "item_type": "checklist",
+        "item_slug": "alta-pos-insuficiencia-cardiaca-descompensada",
+        "por_que": "Repete o exercício na doença de maior polifarmácia e reintroduz a janela de seguimento precoce, que é quando a reinternação se decide."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "entrevista-motivacional-para-mudanca-de-estilo-de-vida-revisao-sistematica",
+        "por_que": "Passa da alta para a manutenção do comportamento no longo prazo, com resultado misto que calibra a expectativa sobre o que a técnica entrega."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "otimismo-discordante-sobre-prognostico-na-insuficiencia-cardiaca",
+        "por_que": "Mede o desalinhamento entre o que o paciente espera viver e o que o modelo prevê. É o dado que justifica reservar tempo de consulta para prognóstico, e não só para dose."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "cuidado-paliativo-e-comunicacao-de-prognostico-na-ic-avancada-pal-hf-enable-chf-pc-e-swap-hf",
+        "por_que": "Fecha com os ensaios que testaram comunicação e cuidado paliativo como intervenção na doença avançada, incluindo o que foi negativo — o contraste é o que ensina o que funciona."
+      }
+    ],
+    "review_status": "revisado",
+    "revisao": "Curadoria verificada pela sessão CORVIA em 01/08/2026. Cada etapa aponta para item que já existe e está publicado na base — os slugs foram conferidos um a um contra o campo `slug` do front matter dos documentos e contra os JSON de estudos, medicamentos e checklists, e depois contra o banco de produção. A ordem e a justificativa derivam do conteúdo dos próprios itens, lido antes de escrever; a trilha não afirma nada que não esteja no item para o qual aponta."
+  },
+  {
+    "slug": "trilha-geral-ler-evidencia-de-estilo-de-vida-e-ambiente",
+    "titulo": "Hábitos, ambiente e risco cardiovascular: como ler essa evidência sem se enganar",
+    "tema": "Geral",
+    "objetivo": "Sair sabendo distinguir associação observacional de efeito causal em fatores de estilo de vida e ambientais, e responder com números às perguntas de consultório sobre sal, exercício, álcool, suplemento e poluição.",
+    "nivel": "básico",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "adesao-medicamentosa-e-mortalidade-o-efeito-do-bom-aderente",
+        "por_que": "Abre a trilha porque entrega a ferramenta de leitura que todas as etapas seguintes exigem: quem adere bem ao placebo também morre menos, e isso desmonta boa parte da literatura observacional de hábitos."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "alcool-e-doenca-cardiovascular-o-que-a-randomizacao-mendeliana-mostrou",
+        "por_que": "Aplica esse ceticismo ao caso mais citado no consultório e apresenta o desenho que resolve confusão residual — o que sobra do suposto benefício da dose moderada quando o abstêmio doente sai da conta."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "vitamina-d-e-prevencao-cardiovascular-o-ensaio-vital",
+        "por_que": "Fecha o bloco de método com o terceiro degrau, o ensaio randomizado de grande porte: a associação observacional forte não se confirmou quando testada."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "sodio-e-eventos-cardiovasculares-a-relacao-em-u-do-estudo-pure",
+        "por_que": "Abre o bloco de dieta com a relação em U, forma de curva que muda a resposta conforme o paciente seja ou não hipertenso — e que a recomendação genérica de “reduzir o sal” ignora."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "substituto-de-sal-e-eventos-cardiovasculares-o-ensaio-ssass",
+        "por_que": "A contraparte randomizada da etapa anterior: uma intervenção simples de substituição de sal testada em desfecho duro, com a ressalva de segurança em quem tem doença renal."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "tempo-sentado-e-atividade-fisica-a-dose-que-anula-o-risco",
+        "por_que": "Abre o bloco de atividade física estabelecendo a dose diária que compensa o tempo sentado. É o número que a etapa seguinte redistribui."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "atividade-fisica-concentrada-no-fim-de-semana-e-risco-cardiovascular",
+        "por_que": "Só faz sentido depois da dose: a pergunta aqui não é quanto, é como distribuir — e a resposta libera o paciente que só consegue treinar no fim de semana."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "poluicao-do-ar-como-gatilho-de-infarto-a-metanalise-de-mustafic",
+        "por_que": "Abre o bloco ambiental com o gatilho de curto prazo mais bem quantificado, e com a distinção entre risco individual pequeno e impacto populacional grande."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "temperatura-extrema-e-mortalidade-cardiovascular-estudo-de-27-paises",
+        "por_que": "Encerra com o segundo fator ambiental, e com o achado contraintuitivo de que o frio mata mais que o calor — o que orienta o alerta a dar ao cardiopata idoso."
+      }
+    ],
+    "review_status": "revisado",
+    "revisao": "Curadoria verificada pela sessão CORVIA em 01/08/2026. Cada etapa aponta para item que já existe e está publicado na base — os slugs foram conferidos um a um contra o campo `slug` do front matter dos documentos e contra os JSON de estudos, medicamentos e checklists, e depois contra o banco de produção. A ordem e a justificativa derivam do conteúdo dos próprios itens, lido antes de escrever; a trilha não afirma nada que não esteja no item para o qual aponta."
+  },
+  {
+    "slug": "trilha-calculadoras-do-risco-primario-a-balanca-da-anticoagulacao",
+    "titulo": "Escores na prática: do risco em prevenção primária à balança da anticoagulação",
+    "tema": "Calculadoras",
+    "objetivo": "Sair sabendo qual escore responde a qual pergunta, em que ordem eles entram no atendimento e como usar as calculadoras do sistema para estratificar dor torácica, síndrome coronariana aguda e fibrilação atrial.",
+    "nivel": "básico",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "score2-e-score2-op",
+        "por_que": "Abre no cenário mais amplo e anterior a qualquer evento: risco em dez anos no adulto sem doença estabelecida. É o único escore da trilha que se aplica a quem não tem queixa nenhuma."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "escore-heart-dor-toracica-no-pronto-socorro",
+        "por_que": "Avança no tempo clínico: o paciente agora chega com dor torácica e ainda não se sabe se há síndrome coronariana. O próprio documento se posiciona como a pergunta anterior à dos escores de risco na síndrome já diagnosticada."
+      },
+      {
+        "ordem": 3,
+        "item_type": "calculadora",
+        "item_slug": "heart",
+        "por_que": "Aplicar o escore logo depois de aprender as cinco variáveis é o que fixa a diferença entre pontuar bem e pontuar por impressão — sobretudo no item de história, que é o mais subjetivo."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "grace-20-global-registry-of-acute-coronary-events",
+        "por_que": "Sucede o anterior porque só se aplica a quem já tem síndrome coronariana aguda confirmada, e é o escore que decide o momento da estratégia invasiva."
+      },
+      {
+        "ordem": 5,
+        "item_type": "calculadora",
+        "item_slug": "grace",
+        "por_que": "A execução do escore com as variáveis e os horizontes de tempo apresentados na etapa anterior — intra-hospitalar e em seis meses, que não são intercambiáveis."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "cha2ds2-va",
+        "por_que": "Muda de cenário, da síndrome aguda para a fibrilação atrial crônica, e apresenta a família de escores de risco tromboembólico, incluindo a versão que retirou o sexo feminino como fator isolado."
+      },
+      {
+        "ordem": 7,
+        "item_type": "calculadora",
+        "item_slug": "cha2ds2-vasc",
+        "por_que": "Aplica o lado do risco isquêmico da balança da anticoagulação. Vale comparar o resultado com o que a etapa anterior descreve, porque as duas versões do escore não pontuam a mesma coisa."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "has-bled",
+        "por_que": "Vem obrigatoriamente depois do escore de risco de AVC, porque é complemento e nunca substituto da decisão de anticoagular: escore de sangramento alto indica corrigir fator modificável, não deixar de tratar."
+      },
+      {
+        "ordem": 9,
+        "item_type": "calculadora",
+        "item_slug": "has-bled",
+        "por_que": "Fecha a trilha completando a balança sobre o mesmo paciente da etapa 7, que é como a decisão de fato se toma — os dois números juntos, não um deles isolado."
+      }
+    ],
+    "review_status": "revisado",
+    "revisao": "Curadoria verificada pela sessão CORVIA em 01/08/2026. Cada etapa aponta para item que já existe e está publicado na base — os slugs foram conferidos um a um contra o campo `slug` do front matter dos documentos e contra os JSON de estudos, medicamentos e checklists, e depois contra o banco de produção. A ordem e a justificativa derivam do conteúdo dos próprios itens, lido antes de escrever; a trilha não afirma nada que não esteja no item para o qual aponta."
   }
 ]
