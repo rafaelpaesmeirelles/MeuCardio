@@ -1,0 +1,55 @@
+---
+title: "Custo-Efetividade dos DOAC versus Varfarina no Brasil: Duas Análises Brasileiras, Dois Métodos"
+slug: custo-efetividade-doac-versus-varfarina-no-brasil
+theme: "Fibrilação atrial"
+kind: estudo
+review_status: revisado
+source_refs: ["Marcolino MS, Polanczyk CA, Bovendorp AC, Marques NS, Silva LA, Turquia CP, Ribeiro AL. Economic evaluation of the new oral anticoagulants for the prevention of thromboembolic events: a cost-minimization analysis. Sao Paulo Med J. 2016 Jul-Sep;134(4):322-329. DOI: 10.1590/1516-3180.2016.0019260216. PMID: 27581333 — estudo de custo-minimização, clínica de anticoagulação de Belo Horizonte/MG, SEM conflito de interesse declarado", "Pepe Ribeiro de Souza C, Bolzachini Santoni N, Gomes de Melo T, Jansen de Oliveira Figueiredo M, da Costa Darrieux FC, Soares Piegas L, Ouriques Martins S. Cost-Effectiveness and Cost-Utility Analyses of Dabigatran Compared with Warfarin in Patients with Nonvalvular Atrial Fibrillation and Risk Factors for Stroke and Systemic Embolism within Brazilian Private and Public Health Care Systems Perspectives. Value Health Reg Issues. 2015 Dec;8:36-42. DOI: 10.1016/j.vhri.2015.02.003. PMID: 29698169 — modelo de Markov; DOIS dos sete autores são funcionários da Boehringer Ingelheim (fabricante da dabigatrana), conflito de interesse declarado no próprio artigo"]
+legacy_source: "Documento novo, escrito em 01/08/2026. A biblioteca tinha 12 documentos sobre anticoagulação na FA (RE-LY, ROCKET-AF, ARISTOTLE, ENGAGE AF-TIMI 48, AVERROES/ACTIVE, ponte/interrupção periprocedimento, reinício pós-HIC, FA valvar), todos sobre eficácia e segurança clínica — nenhum sobre o que esses fármacos custam ao sistema de saúde brasileiro, pergunta central para adoção em larga escala num país de recursos limitados e coexistência público/privado."
+---
+
+# Custo-Efetividade dos DOAC versus Varfarina no Brasil
+
+## Por que esta pergunta não se resolve com o RE-LY, o ROCKET-AF ou o ARISTOTLE
+
+Os grandes ensaios de não inferioridade/superioridade dos anticoagulantes orais diretos (DOAC) — já cobertos nesta biblioteca — respondem "funciona e é seguro". Não respondem "quanto custa, de fato, tratar um paciente com FA no Brasil, comparando as duas estratégias de ponta a ponta": consulta, exame de INR, deslocamento até a clínica, falta ao trabalho, e o preço do próprio medicamento. Essa é uma pergunta de avaliação econômica, e ela exige fonte própria — os dois estudos abaixo são as avaliações econômicas conduzidas **com dados e sistema de saúde brasileiros** localizadas nesta pesquisa. Nenhuma modelagem internacional (europeia ou norte-americana) foi usada, porque preço de medicamento, custo de consulta e estrutura do sistema de saúde não se transferem entre países.
+
+Os dois PMID abaixo foram confirmados por `esummary`/`efetch` do PubMed antes de escrever este texto: **27581333** é o estudo de custo-minimização (Marcolino et al., São Paulo Medical Journal), e **29698169** é o estudo de custo-efetividade/custo-utilidade da dabigatrana (Ribeiro de Souza et al., Value in Health Regional Issues).
+
+## Estudo 1 — Custo-minimização numa clínica de anticoagulação real (Belo Horizonte, MG)
+
+Marcolino MS et al., Sao Paulo Med J. 2016;134(4):322-329 (PMID 27581333), sem conflito de interesse declarado. Recrutamento entre agosto e outubro de 2011, na Clínica de Anticoagulação do Hospital Municipal Odilon Behrens; custos operacionais e não operacionais corrigidos para 2015. Explicitamente **na perspectiva da sociedade e do sistema público de saúde brasileiros**.
+
+- **633 pacientes** em uso de varfarina acompanhados na clínica, **59% mulheres**, idade mediana **62 anos** (intervalo interquartil 49-73), seguimento médio de **64 ± 28 dias**
+- **Custo total médio por paciente por mês: US$ 54,26**
+- Desse total, **custos diretos = 32,5%**, e destes, **69,5% são de profissionais de saúde** (consulta e ajuste de dose)
+- **Custos indiretos** (os demais **67,5%** do total, por subtração — o artigo não soma o número explicitamente): **52,4%** por **absenteísmo ao trabalho** e **47,6%** por **transporte** do paciente até a clínica
+- Preço de aquisição dos DOAC vendidos a **instituições públicas brasileiras**, em média por paciente por mês: **apixabana US$ 49,87, dabigatrana US$ 51,40, rivaroxabana US$ 52,16** — os três **abaixo** do custo total mensal da varfarina (US$ 54,26)
+
+**A comparação tem uma limitação que o próprio desenho do estudo não resolve, e que precisa ficar explícita:** o número da varfarina (US$ 54,26) é o custo **total** de tratamento — droga (irrisória) + consulta + INR + transporte + falta ao trabalho. O número dos DOAC é **só o preço de aquisição** pago pela instituição pública, sem incluir eventual monitorização laboratorial (função renal, por exemplo) nem consulta de acompanhamento — que existe, ainda que com frequência menor que o ajuste de varfarina por INR. A conclusão do estudo ("DOAC custa menos que varfarina no total") é do próprio artigo, mas a base de comparação é **preço de aquisição de um lado contra custo total do outro**, não custo total dos dois lados. Isso não invalida o achado — o desenho consegue mostrar que a fatia de acompanhamento clínico da varfarina já é, sozinha, comparável ao preço do fármaco mais caro — mas limita quanto se pode extrapolar dele.
+
+## Estudo 2 — Modelo de Markov: dabigatrana versus varfarina, custo-efetividade e custo-utilidade
+
+Ribeiro de Souza CP et al., Value Health Reg Issues. 2015;8:36-42 (PMID 29698169). Modelagem de Markov para estimar custos e desfechos em pacientes com **FA não valvar e risco moderado a alto de AVC isquêmico ou embolia sistêmica**, elegíveis para anticoagulação. Dados epidemiológicos e de eficácia extraídos de revisão crítica da literatura; custos unitários de **bases de dados oficiais brasileiras**; só custos médicos diretos; desconto de **5% ao ano** sobre custos e benefícios. Desfechos em **anos de vida (LY)** e **anos de vida ajustados por qualidade (QALY)**.
+
+- **Limiar de disposição a pagar usado: 3× o PIB per capita de 2010** — **R$ 57.048 / US$ 24.275,74** por LY ou QALY ganho
+- **Dabigatrana foi custo-efetiva dentro desse limiar, nas DUAS perspectivas analisadas** (sistema privado e sistema público de saúde)
+- Conclusão do artigo: dabigatrana melhora sobrevida e qualidade de vida em relação à varfarina, e representa a melhor opção terapêutica em termos de custo e efetividade na prevenção de AVC isquêmico e embolia sistêmica na FA não valvar
+
+**⚠️ Conflito de interesse, declarado no próprio artigo e reproduzido aqui sem omissão:** dos sete autores, **dois são funcionários da Boehringer Ingelheim** — fabricante da dabigatrana — com afiliação explícita ("Boehringer Ingelheim, São Paulo, SP, Brazil"). Isso não invalida a modelagem, mas muda o peso que se deve dar à conclusão: um estudo de custo-efetividade de um fármaco específico, com coautoria do próprio fabricante, pesa menos como evidência independente do que um estudo sem esse vínculo — e é exatamente por isso que este documento também traz o Estudo 1, que é da mesma tradição de pesquisa brasileira em avaliação econômica em saúde, mas sem nenhum vínculo com a indústria.
+
+**O que o resumo do PubMed NÃO traz, e por isso não está aqui:** o valor pontual do ICER (razão de custo-efetividade incremental) da dabigatrana frente à varfarina. O artigo não tem PMC de texto completo localizável por `elink` (só há registros de artigos que o citam, não do próprio texto integral), e o resumo indexado só afirma que o resultado fica **abaixo** do limiar de 3× o PIB per capita — não diz o número exato do ICER. `VERIFICAÇÃO HUMANA NECESSÁRIA` para quem precisar do valor pontual: exige acesso ao texto completo do periódico.
+
+## As duas fontes, lidas juntas
+
+Apesar de métodos diferentes — custo-minimização com dado real de clínica de um lado, modelo de Markov simulado do outro —, **as duas apontam na mesma direção**: no cenário brasileiro, o custo total de tratar FA com varfarina (fármaco barato, mas acompanhamento caro) tende a igualar ou superar o custo de um DOAC (fármaco caro, acompanhamento mais simples), e a diferença de eficácia/segurança a favor dos DOAC — já documentada nos ensaios RE-LY, ROCKET-AF, ARISTOTLE e ENGAGE AF-TIMI 48 desta mesma biblioteca — reforça a direção do resultado em vez de contrariá-la.
+
+**Três ressalvas que limitam a extrapolação para a decisão de hoje, e que ficam explícitas em vez de omitidas:**
+
+1. **Os dados são antigos.** O Estudo 1 coletou custos em 2011 e os corrigiu só até 2015; o Estudo 2 usa o PIB per capita de **2010** como referência de limiar. Preço de medicamento, tabela de procedimento do SUS e câmbio mudaram desde então — os valores absolutos em reais e dólares **não devem ser usados como referência de preço atual**. `VERIFICAÇÃO HUMANA NECESSÁRIA` para quem precisar de números de custo vigentes.
+2. **Nenhum dos dois estudos confirma a situação atual de incorporação dos DOAC ao SUS** (lista RENAME, decisão da CONITEC). Os dois analisam custo **assumindo** que o fármaco está disponível ao sistema público — não é o mesmo que dizer que o SUS hoje dispensa DOAC de rotina para FA não valvar fora de situações específicas. `VERIFICAÇÃO HUMANA NECESSÁRIA` para a situação de cobertura vigente, que não foi pesquisada neste documento.
+3. **O Estudo 2 avalia só a dabigatrana**, não apixabana, rivaroxabana ou edoxabana — o resultado de custo-efetividade não deve ser lido como "efeito de classe dos DOAC" a partir dele sozinho. O Estudo 1 inclui os três, mas só como preço de aquisição, sem modelo de desfecho.
+
+## Implicação prática
+
+Para o cardiologista que decide entre varfarina e um DOAC num paciente com acesso ao sistema público brasileiro, a literatura econômica nacional disponível **não sustenta a crença comum de que DOAC é necessariamente mais caro para o sistema** — quando se soma o custo de manter o paciente em faixa terapêutica (consulta, INR, transporte, falta ao trabalho), a diferença de preço de aquisição parece menor do que aparenta à primeira vista, ou mesmo reverter. Isso é argumento econômico a favor do DOAC nos casos em que a eficácia/segurança clínica já favorece a escolha — não substitui a decisão clínica individual, e não resolve sozinho a questão de acesso e cobertura, que segue dependendo de política de saúde, não de evidência de custo-efetividade isolada.
