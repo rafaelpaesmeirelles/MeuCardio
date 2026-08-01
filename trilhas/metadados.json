@@ -20427,5 +20427,39 @@
         "por_que": "Fecha a trilha com o contraponto necessário: nem todo fármaco cardiovascular deve ser mantido até o fim. O estudo mostra que descontinuar estatina em doença avançada com expectativa de vida limitada não piora sobrevida nem eventos, e melhora qualidade de vida."
       }
     ]
+  },
+  {
+    "slug": "trilha-calculadoras-quatro-decadas-de-escores-de-sangramento-na-fibrilacao-atrial",
+    "titulo": "Calculadoras: quatro décadas de escores de sangramento na fibrilação atrial, comparados lado a lado",
+    "tema": "Calculadoras",
+    "objetivo": "Percorrer, na ordem cronológica em que nasceram, os quatro principais escores de risco de sangramento em fibrilação atrial anticoagulada — HEMORR2HAGES (2006), HAS-BLED (2010), ATRIA-sangramento (2011) e ORBIT (2015) — e sair sabendo por que a prática migrou do mais antigo e mais complexo para os mais recentes e mais simples, sem nunca usar nenhum deles como critério isolado para negar anticoagulação.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "escore-hemorr2hages-risco-de-sangramento-em-fibrilacao-atrial",
+        "por_que": "Começa pelo mais antigo dos quatro (National Registry of Atrial Fibrillation, Gage et al. 2006) — o primeiro esquema desenhado especificamente para estimar sangramento maior em FA anticoagulada, numa época em que a varfarina era praticamente a única opção. Onze componentes, um deles (ressangramento) valendo o dobro dos outros, e uma variável — fatores genéticos (CYP2C9) — que na prática quase nunca é obtida. É o contraponto histórico que explica por que escores mais simples vieram depois."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "has-bled",
+        "por_que": "Quatro anos depois, o HAS-BLED (Pisters et al., Euro Heart Survey, 2010) responde à mesma pergunta com desenho deliberadamente mais simples: nove itens, cada um valendo exatamente 1 ponto, todos clínicos e laboratoriais objetivos — sem a variável genética que tornava o HEMORR2HAGES impraticável à beira do leito. É o escore hoje citado pela diretriz ESC 2024 de fibrilação atrial."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "escores-atria-risco-de-avc-e-de-sangramento-na-fibrilacao-atrial",
+        "por_que": "Em 2011, a coorte ATRIA gera um terceiro escore de sangramento, com apenas 5 variáveis ponderadas por peso desigual (anemia e doença renal grave valendo 3 pontos cada, o dobro da idade avançada) — e o documento avisa para uma armadilha de nome: 'ATRIA' também nomeia um SEGUNDO escore, publicado em 2013 pela mesma coorte, que estima risco de AVC, não de sangramento. Essencial para não confundir os dois ao ler a literatura."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "escore-orbit-risco-de-sangramento-em-fibrilacao-atrial-anticoagulada",
+        "por_que": "Fecha a trilha com o mais recente dos quatro (O'Brien et al., registro ORBIT-AF, 2015) e com a resposta à pergunta que as três etapas anteriores deixam em aberto: qual desses escores é realmente melhor? A discriminação (índice-c) dos quatro é semelhante — nenhum se destaca isoladamente nessa métrica —, mas o ORBIT mostrou calibração superior na validação externa (coorte ROCKET-AF), o que ajuda a entender por que a literatura recente tende a preferir os escores mais novos e mais simples sem que isso signifique um salto de acurácia."
+      }
+    ]
   }
 ]

@@ -9589,5 +9589,26 @@
       "Rochon PA, Gurwitz JH. Optimising drug treatment for elderly people: the prescribing cascade. BMJ. 1997;315(7115):1096-1099. PMID: 9366745."
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "dutch-lipid-clinic-network-xantoma-tendineo-e-arco-corneano-nao-se-somam-hf-definitiva",
+    "titulo": "Xantoma tendíneo e arco corneano no mesmo paciente: os pontos do exame físico se somam no escore da Dutch Lipid Clinic Network?",
+    "tema": "Prevenção e lipídios",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 38 anos, encaminhado pelo clínico por hipercolesterolemia grave. Pai teve infarto do miocárdio aos 46 anos (nenhum outro achado de alta pontuação relatado na família). Ao exame físico, o paciente apresenta xantomas tendíneos bilaterais no tendão de Aquiles e arco corneano visível — este último notado porque o paciente tem apenas 38 anos, idade em que o achado não é esperado como variante do envelhecimento. LDL-C sem tratamento hipolipemiante: 300 mg/dL. O paciente nunca foi submetido a teste genético.",
+    "pergunta": "Aplicando o escore da Dutch Lipid Clinic Network (DLCN) da forma como a diretriz ESC/EAS o define, qual é a pontuação total e a classificação diagnóstica deste paciente?",
+    "opcoes": [
+      "HF definitiva, com 12 pontos: 1 ponto pela história familiar (pai com doença arterial coronariana antes dos 55 anos) + 6 pontos pelo exame físico (xantoma tendíneo, que é a maior pontuação entre os dois achados de exame físico, mutuamente exclusivos — o arco corneano NÃO se soma a ele) + 5 pontos pelo LDL-C de 300 mg/dL, na faixa de 251-325 mg/dL",
+      "HF provável, com 8 pontos: apenas o xantoma tendíneo (6) e o LDL-C (2, por erro de faixa) contam, porque a história familiar não pode ser pontuada sem confirmação genética do parente afetado",
+      "HF definitiva, mas com 16 pontos: soma-se o xantoma tendíneo (6) e o arco corneano (4) como dois achados independentes do exame físico, além da história familiar (1) e do LDL-C (5)",
+      "Não é possível classificar este paciente sem o teste genético, porque o escore DLCN exige confirmação por análise de DNA para fechar qualquer categoria diagnóstica, inclusive a de HF definitiva"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O escore da Dutch Lipid Clinic Network (DLCN), adotado pelas diretrizes ESC/EAS (2019, mantido pela atualização focada de 2025) a partir do consenso de Nordestgaard et al. (Eur Heart J 2013), tem cinco grupos de critérios, e a regra central — a que este caso testa — é que **dentro do grupo 3 (exame físico) apenas a MAIOR pontuação entre xantoma tendíneo (6 pontos) e arco corneano antes dos 45 anos (4 pontos) é contada, porque os dois são mutuamente exclusivos**, com teto de 6 pontos para o grupo inteiro. O paciente deste caso tem os dois achados, mas a pontuação correta usa apenas o maior (6), não a soma (10). Somando os grupos: história familiar 1 ponto (pai com doença arterial coronariana prematura, antes dos 55 anos — grupo 1, primeira linha, que exige apenas a apresentação clínica do parente, não confirmação genética dele) + exame físico 6 pontos (xantoma tendíneo, teto do grupo) + LDL-C sem tratamento 5 pontos (300 mg/dL cai na faixa de 251-325 mg/dL) = **12 pontos**, classificando como **HF definitiva** (>8 pontos). A opção B erra ao exigir confirmação genética do parente para pontuar a história familiar — o critério do grupo 1 é clínico (doença coronariana prematura ou LDL-C acima do percentil 95 no parente de 1º grau), não genético — e também erra a faixa de LDL-C. A opção C reproduz o erro mais comum na aplicação do escore: somar os dois achados de exame físico como se fossem independentes, quando a própria tabela os apresenta como mutuamente exclusivos (\"máximo 6 pontos entre os dois\"). A opção D contraria o texto da diretriz, que recomenda considerar análise de DNA quando disponível (Classe I, Nível C) mas afirma explicitamente que o teste genético reforça o diagnóstico — sua ausência não afasta nem impede a classificação clínica, que já alcança a categoria de HF definitiva neste paciente sem nenhum ponto do grupo 5 (análise de DNA).",
+    "source_refs": [
+      "Nordestgaard BG, Chapman MJ, Humphries SE, et al. Familial hypercholesterolaemia is underdiagnosed and undertreated in the general population: guidance for clinicians to prevent coronary heart disease: consensus statement of the European Atherosclerosis Society. Eur Heart J. 2013;34(45):3478-3490. DOI: 10.1093/eurheartj/eht273. PMID: 23956253.",
+      "Mach F, Koskinas KC, Roeters van Lennep J, et al. 2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias. Eur Heart J. 2025;46(42):4359-4378. DOI: 10.1093/eurheartj/ehaf190. PMID: 40878289."
+    ],
+    "review_status": "revisado"
   }
 ]

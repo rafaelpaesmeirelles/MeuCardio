@@ -2609,6 +2609,93 @@
     "lactation": "**Contraindicada na lactação** — a bula usa o termo literal \"contraindicado para uso por lactantes\", não apenas advertência de passagem para o leite. **Corrigido em 31/07/2026**: a versão anterior deste campo dizia só que a furosemida 'passa para o leite materno... deve ser levado em conta', sem declarar a contraindicação formal — a bula do comprimido de 40 mg do LASIX (Sanofi Medley), item 3, é explícita. Fonte: bula do LASIX (furosemida, Sanofi Medley Farmacêutica)."
   },
   {
+    "slug": "genfibrozila",
+    "review_status": "revisado",
+    "generic_name": "Genfibrozila",
+    "brand_names": [
+      "Lopid"
+    ],
+    "drug_class": "Fibrato (agente regulador de lípides)",
+    "mechanism": "O mecanismo de ação da genfibrozila ainda não está totalmente esclarecido, segundo a própria bula. No ser humano, inibe a lipólise periférica e diminui a captação hepática de ácidos graxos livres; inibe a síntese e eleva o clearance da apolipoproteína B (carregadora de lipoproteínas de densidade muito baixa, VLDL), reduzindo a produção de VLDL. Eleva as subfrações de HDL (HDL2 e HDL3) e as apolipoproteínas A-I e A-II. Estudos em animais sugerem aumento da metabolização e remoção hepática do colesterol. Resultado global: reduz colesterol total, LDL-colesterol, VLDL-colesterol e triglicérides, e eleva o HDL-colesterol. Fonte: bula do LOPID® (genfibrozila, Laboratórios Pfizer Ltda.), seção 3. Características Farmacológicas — Propriedades Farmacodinâmicas.",
+    "presentations": [
+      "Lopid® 600 mg — comprimido revestido, embalagem com 24 comprimidos.",
+      "Lopid® 900 mg — comprimido revestido, embalagem com 10 comprimidos.",
+      "Via oral, uso adulto. O comprimido não deve ser partido ou mastigado."
+    ],
+    "commercial_presentations": [
+      "LOPID® 600 mg — comprimido revestido, embalagem com 24 unidades (Laboratórios Pfizer Ltda., MS nº 1.0216.0098).",
+      "LOPID® 900 mg — comprimido revestido, embalagem com 10 unidades (Laboratórios Pfizer Ltda., MS nº 1.0216.0098)."
+    ],
+    "dosing": {
+      "padrao": "Dose diária recomendada de 900 mg a 1.200 mg, não devendo ultrapassar a dose máxima de 1.500 mg/dia (2,5 comprimidos de 600 mg ou 1,5 comprimido de 900 mg). A dose de 900 mg é administrada em tomada única, meia hora antes do jantar; a dose de 1.200 mg é dividida em duas tomadas diárias, meia hora antes do desjejum e do jantar.",
+      "administracao": "Ingerir com quantidade de líquido suficiente para deglutição, meia hora antes da refeição — o horário em relação à refeição altera significativamente a absorção (a AUC média foi reduzida em 14% a 44% quando administrado após a refeição, comparado à administração 0,5 hora antes).",
+      "reavaliacao_terapeutica": "Antes de iniciar o tratamento, esgotar as tentativas de controle dos lípides séricos por dieta, exercício, redução de álcool, perda de peso em obesos e controle de comorbidades (diabetes, hipotireoidismo). Durante o tratamento, determinações periódicas dos lípides plasmáticos; se a resposta lipídica for inadequada após 3 meses, interromper o tratamento ou instituir esquema coadjuvante.",
+      "dose_esquecida": "Tomar assim que lembrar; se já estiver próximo do horário da próxima dose, desprezar a dose esquecida e seguir o esquema normal — não duplicar a dose para compensar.",
+      "pediatria": "Segurança e eficácia não estabelecidas em crianças.",
+      "idosos": "Seguir as mesmas orientações dadas aos adultos, observando as contraindicações e advertências específicas.",
+      "fonte": "Bula do LOPID® (genfibrozila, Laboratórios Pfizer Ltda., MS nº 1.0216.0098), seção 8. Posologia e Modo de Usar, aprovada pela Anvisa em 27/06/2014 (código LLD_LOPCOR_05, 20/mai/2014)."
+    },
+    "renal_adjustment": "Contraindicado em disfunção renal grave — item formal do rótulo (seção 4. Contraindicações), não apenas recomendação de cautela. A bula não traz esquema de ajuste de dose por faixa de clearance para insuficiência renal leve a moderada; remete apenas à contraindicação na forma grave. Fonte: bula do LOPID®, seções 4. Contraindicações e 5. Advertências e Precauções — Uso em Pacientes com Disfunção Renal.",
+    "hepatic_adjustment": "Contraindicado em disfunção hepática — item formal do rótulo (seção 4. Contraindicações), sem qualificação de gravidade no texto (diferente da renal, que especifica \"grave\"). A bula recomenda exames periódicos da função hepática durante o tratamento em geral, com descontinuação se as anormalidades persistirem. Fonte: bula do LOPID®, seções 4. Contraindicações e 5. Advertências e Precauções — Testes Laboratoriais e Uso em Pacientes com Disfunção Hepática.",
+    "indications": [
+      "Prevenção primária da doença arterial coronária (DAC) e do infarto do miocárdio em pacientes com hipercolesterolemia, dislipidemia mista e hipertrigliceridemia — classificação de Fredrickson tipos IIa, IIb e IV.",
+      "Tratamento de outras dislipidemias: Fredrickson tipos III e V; dislipidemia associada a diabetes; dislipidemia associada a xantoma.",
+      "Tratamento de pacientes adultos com níveis séricos elevados de triglicérides (hiperlipidemia tipos IV e V) com risco de pancreatite, que não respondem adequadamente a esforço dietético para controlá-los.",
+      "fonte: bula do LOPID® (genfibrozila, Laboratórios Pfizer Ltda.), seção 1. Indicações."
+    ],
+    "contraindications": [
+      "Disfunção hepática (contraindicação absoluta, sem qualificação de gravidade no texto do rótulo).",
+      "Disfunção renal grave.",
+      "Problemas na vesícula biliar pré-existentes (colelitíase/colecistopatia).",
+      "Hipersensibilidade à genfibrozila ou a qualquer componente da fórmula.",
+      "Uso concomitante com repaglinida — contraindicação formal, pelo risco de hipoglicemia grave (aumento da concentração plasmática e prolongamento do efeito hipoglicemiante da repaglinida).",
+      "Uso concomitante com sinvastatina — contraindicação formal e nominal; a bula também desaconselha fortemente a associação com outros inibidores da HMG-CoA redutase, como lovastatina, atorvastatina e rosuvastatina (ver `interactions`).",
+      "fonte: bula do LOPID® (genfibrozila, Laboratórios Pfizer Ltda.), seção 4. Contraindicações."
+    ],
+    "interactions": [
+      "**Inibidores da HMG-CoA redutase (estatinas)**: a administração concomitante de genfibrozila e sinvastatina é CONTRAINDICADA (não apenas desaconselhada). Foram relatados casos de miosite grave, elevação acentuada de CK e mioglobinúria (rabdomiólise) com o uso concomitante de genfibrozila e outros inibidores da HMG-CoA redutase (lovastatina, atorvastatina, rosuvastatina) — a bula avalia que o possível benefício da associação não supera o risco de miopatia grave, rabdomiólise e insuficiência renal aguda na maioria dos pacientes com resposta lipídica insatisfatória a cada fármaco isolado.",
+      "**Repaglinida**: CONTRAINDICADA. Em voluntários sadios, a coadministração aumentou a concentração plasmática de repaglinida e prolongou seu efeito hipoglicemiante, elevando o risco de hipoglicemia grave.",
+      "**Varfarina (anticoagulantes)**: usar com cautela. A dose de varfarina deve ser reduzida para manter o tempo de protrombina no nível desejado e evitar complicações de sangramento; recomenda-se determinação frequente do TP até estabilização confirmada.",
+      "**Colchicina**: risco aumentado de toxicidade neuromuscular e rabdomiólise com o uso concomitante — risco maior em idosos e em disfunção renal ou hepática. Os sintomas podem persistir de 1 semana a vários meses após a suspensão da colchicina. Monitoração clínica e biológica recomendada, especialmente no início do tratamento combinado.",
+      "**Resinas sequestradoras de ácidos biliares (ex.: colestipol)**: podem reduzir a biodisponibilidade da genfibrozila — administrar os dois fármacos com intervalo de 2 horas ou mais.",
+      "fonte: bula do LOPID® (genfibrozila, Laboratórios Pfizer Ltda.), seções 5. Advertências e Precauções e 6. Interações Medicamentosas."
+    ],
+    "monitoring": [
+      "Perfil lipídico: determinações periódicas durante o tratamento; se a resposta for inadequada após 3 meses, interromper ou associar tratamento coadjuvante.",
+      "Função hepática (transaminases/TGO-TGP, fosfatase alcalina, LDH, bilirrubina): exames periódicos — elevações são raramente relatadas e geralmente reversíveis com a suspensão; descontinuar se as anormalidades persistirem.",
+      "Hemograma: determinação hematológica periódica durante os primeiros 12 meses de tratamento — podem ocorrer discretas reduções de hemoglobina, hematócrito e leucócitos no início do tratamento (geralmente se estabilizam); raramente anemia grave, leucopenia, trombocitopenia, eosinofilia e hipoplasia de medula óssea.",
+      "Sinais/sintomas de colelitíase: investigar a vesícula biliar se houver suspeita clínica; descontinuar o tratamento se forem encontrados cálculos biliares.",
+      "Tempo de protrombina/INR: determinação frequente em uso concomitante com varfarina, até estabilização confirmada.",
+      "CK (creatinoquinase) e sintomas musculares: atenção a mialgia/fraqueza, sobretudo em uso concomitante (ainda que contraindicado) com estatina, ou em associação com colchicina.",
+      "fonte: bula do LOPID® (genfibrozila, Laboratórios Pfizer Ltda.), seções 5. Advertências e Precauções e 8. Posologia e Modo de Usar."
+    ],
+    "adverse_effects": [
+      "Muito frequentes, com diferença estatística vs. placebo no Estudo Helsinki Heart (n=2.046 genfibrozila vs. n=2.035 placebo, até 5 anos): reações gastrintestinais em geral (34,2% vs. 23,8%), dispepsia (19,6% vs. 11,9%), dor abdominal (9,8% vs. 5,6%), apendicite aguda (1,2% vs. 0,6%), fibrilação atrial (0,7% vs. 0,1%).",
+      "Frequentes (>1% e <10%), sem diferença estatística vs. placebo no mesmo estudo: diarreia, fadiga, náusea/vômitos, eczema, erupção cutânea (rash), vertigem, constipação, cefaleia.",
+      "Incomuns (>1% e <10%, listadas separadamente pela bula por relação causal provável): cefaleia (sistema nervoso), erupção cutânea/rash (pele e tecido subcutâneo).",
+      "Raras (>0,01% e <0,1%): icterícia colestática; pancreatite; tonturas, sonolência, parestesia, neurite periférica; depressão, diminuição da libido; visão turva; impotência; artralgia, sinovite, mialgia, miopatia, miastenia, extremidades dolorosas, rabdomiólise; dermatite esfoliativa, dermatite, prurido, angioedema, urticária; edema de laringe; anemia grave, leucopenia, trombocitopenia, eosinofilia, hipoplasia de medula óssea.",
+      "Adicionais relatadas, sem frequência definida na bula: fotossensibilidade, alopecia, colecistite, colelitíase.",
+      "Superdose: cãibras abdominais, alteração de enzimas hepáticas, diarreia, aumento de CPK, dor muscular e articular, náusea e vômito — nos casos relatados houve recuperação total; tratamento é sintomático e de suporte.",
+      "fonte: bula do LOPID® (genfibrozila, Laboratórios Pfizer Ltda.), seções 9. Reações Adversas e 10. Superdose, com base no Estudo Helsinki Heart."
+    ],
+    "pregnancy": "**Categoria de risco C.** Não há estudos adequados e bem controlados em mulheres grávidas. A bula reserva o uso a pacientes nas quais os benefícios superam claramente os riscos para a paciente ou para o feto, e afirma textualmente que o medicamento \"não deve ser utilizado por mulheres grávidas sem orientação médica ou do cirurgião-dentista\". Em estudos pré-clínicos, dose de aproximadamente 2x a recomendada para humanos (base de área de superfície corpórea) em ratos machos, por 10 semanas, reduziu a fertilidade de forma dose-dependente — efeito revertido após cerca de 8 semanas sem o fármaco e não transmitido à prole; houve também fetotoxicidade reduzida, manifesta como redução do peso ao nascer em doses altas. Fonte: bula do LOPID® (genfibrozila, Laboratórios Pfizer Ltda.), seções 3. Características Farmacológicas — Dados de Segurança Pré-Clínicos e 5. Advertências e Precauções — Fertilidade, Uso durante a Gravidez e a Lactação.",
+    "lactation": "Segurança em lactantes não estabelecida; não se sabe se a genfibrozila é excretada no leite materno. Como muitos fármacos são excretados no leite materno, a bula orienta que a paciente descontinue a amamentação antes de iniciar o tratamento com Lopid® — recomendação direta de suspensão da amamentação, não apenas advertência genérica de cautela. Fonte: bula do LOPID® (genfibrozila, Laboratórios Pfizer Ltda.), seção 5. Advertências e Precauções — Fertilidade, Uso durante a Gravidez e a Lactação.",
+    "outcomes": {
+      "helsinki_heart_study_1987": "Frick MH, Elo O, Haapa K, Heinonen OP, Heinsalmi P, Helo P, Huttunen JK, Kaitaniemi P, Koskinen P, Manninen V, et al. Helsinki Heart Study: primary-prevention trial with gemfibrozil in middle-aged men with dyslipidemia. Safety of treatment, changes in risk factors, and incidence of coronary heart disease. N Engl J Med. 1987;317(20):1237-1245. DOI: 10.1056/NEJM198711123172001. PMID: 3313041 (abstract conferido via efetch em 01-02/08/2026 — corresponde à referência citada na própria bula do LOPID®, item 2. Resultados de Eficácia). Ensaio randomizado, duplo-cego, controlado por placebo, de 5 anos, em 4.081 homens assintomáticos de meia-idade (40-55 anos) com dislipidemia primária (colesterol não-HDL ≥200 mg/dL em duas medidas pré-tratamento consecutivas) e SEM história de doença cardíaca (prevenção primária). Grupo genfibrozila (n=2.051) recebeu 600 mg 2x/dia; grupo placebo (n=2.030). A taxa cumulativa de desfechos cardíacos em 5 anos foi de 27,3 por 1.000 no grupo genfibrozila vs. 41,4 por 1.000 no grupo placebo — redução de 34,0% na incidência de doença arterial coronariana (IC95% 8,2-52,6%; p<0,02, teste bicaudal). Não houve diferença na mortalidade total, nem efeito sobre taxas de câncer. **A bula brasileira cita também que a redução foi superior a 50% no 4º e 5º anos, com 37% de redução de IM não fatal e 26% de redução de morte cardíaca — números do artigo original citados pelo rótulo, não recalculados nesta sessão a partir do abstract indexado no PubMed.**",
+      "va_hit_1999": "Rubins HB, Robins SJ, Collins D, Fye CL, Anderson JW, Elam MB, Faas FH, Linares E, Schaefer EJ, Schectman G, Wilt TJ, Wittes J; Veterans Affairs High-Density Lipoprotein Cholesterol Intervention Trial (VA-HIT) Study Group. Gemfibrozil for the secondary prevention of coronary heart disease in men with low levels of high-density lipoprotein cholesterol. N Engl J Med. 1999;341(6):410-418. DOI: 10.1056/NEJM199908053410604. PMID: 10438259 (abstract conferido via efetch em 01-02/08/2026 — NÃO citado na bula brasileira do LOPID®, que só referencia o Helsinki Heart Study; incluído aqui por ser o ensaio de PREVENÇÃO SECUNDÁRIA de referência da genfibrozila, em população distinta e complementar). Ensaio randomizado, duplo-cego, em 2.531 homens com doença arterial coronariana estabelecida, HDL-colesterol ≤40 mg/dL e LDL-colesterol ≤140 mg/dL — perfil lipídico de HDL baixo isolado, não de LDL elevado. Genfibrozila 1.200 mg/dia vs. placebo, seguimento mediano de 5,1 anos. Aos 12 meses, HDL-colesterol 6% maior, triglicérides 31% menores e colesterol total 4% menor no grupo genfibrozila; LDL-colesterol não diferiu significativamente entre os grupos. O desfecho primário (IAM não fatal ou morte por causa coronariana) ocorreu em 21,7% do grupo placebo vs. 17,3% do grupo genfibrozila — redução de risco relativo de 22% (IC95% 7-35%; p=0,006), com redução de 24% no desfecho combinado de morte coronariana + IAM não fatal + AVC (p<0,001). Sem diferença significativa em revascularização, internação por angina instável, mortalidade total ou câncer.",
+      "sintese": "Os dois ensaios pivotais da genfibrozila testam populações e hipóteses diferentes e SE COMPLEMENTAM, não se sobrepõem. O Helsinki Heart Study (1987) é prevenção PRIMÁRIA, em homens sem doença coronariana prévia, selecionados por colesterol não-HDL elevado — é o estudo citado na bula brasileira, sustentando as indicações de dislipidemia mista/hipercolesterolemia. O VA-HIT (1999) é prevenção SECUNDÁRIA, em homens já com doença coronariana estabelecida, selecionados especificamente por HDL BAIXO com LDL não elevado — testa a hipótese de que elevar HDL/reduzir triglicérides reduz eventos mesmo sem reduzir LDL, e é o ensaio mais citado para essa hipótese na literatura cardiológica, embora não conste na bula nacional. Nenhum dos dois demonstrou redução de mortalidade total isolada."
+    },
+    "notes": {
+      "distincao_das_outras_estatinas_da_base": "A contraindicação de associação com estatina é a mais rígida entre os hipolipemiantes já cadastrados nesta base: enquanto os verbetes de pravastatina e rosuvastatina descrevem a combinação com fibratos como algo \"a ser evitado, em geral\" (risco aumentado mas não contraindicação formal), a bula do LOPID® torna a associação especificamente com sinvastatina CONTRAINDICAÇÃO nominal (seção 4), não apenas advertência — assimetria que vale registrar para quem comparar os dois lados da mesma interação.",
+      "helsinki_gate_study": "A bula referencia também um estudo de seguimento pós-trial (Helsinki Heart Study Gate) não lido nesta sessão para extração de números — os campos `outcomes` desta ficha se limitam ao ensaio randomizado original (1987) e ao VA-HIT (1999), ambos com abstract conferido linha a linha."
+    },
+    "references": [
+      "LOPID® (genfibrozila), Laboratórios Pfizer Ltda., MS nº 1.0216.0098. Comprimidos revestidos de 600 mg e 900 mg. Bula aprovada pela Anvisa em 27/06/2014 (código LLD_LOPCOR_05, 20/mai/2014). Obtida via drogariasp.vteximg.com.br em 01-02/08/2026, lida na íntegra via pdftotext -layout (fonte primária de todos os campos clínicos deste registro, exceto onde indicado em contrário).",
+      "Frick MH, Elo O, Haapa K, Heinonen OP, Heinsalmi P, Helo P, Huttunen JK, Kaitaniemi P, Koskinen P, Manninen V, et al. Helsinki Heart Study: primary-prevention trial with gemfibrozil in middle-aged men with dyslipidemia. N Engl J Med. 1987;317(20):1237-1245. DOI: 10.1056/NEJM198711123172001. PMID: 3313041.",
+      "Rubins HB, Robins SJ, Collins D, Fye CL, Anderson JW, Elam MB, Faas FH, Linares E, Schaefer EJ, Schectman G, Wilt TJ, Wittes J; Veterans Affairs High-Density Lipoprotein Cholesterol Intervention Trial Study Group. Gemfibrozil for the secondary prevention of coronary heart disease in men with low levels of high-density lipoprotein cholesterol. N Engl J Med. 1999;341(6):410-418. DOI: 10.1056/NEJM199908053410604. PMID: 10438259."
+    ]
+  },
+  {
     "slug": "heparina-nao-fracionada",
     "review_status": "revisado",
     "generic_name": "Heparina não fracionada",
