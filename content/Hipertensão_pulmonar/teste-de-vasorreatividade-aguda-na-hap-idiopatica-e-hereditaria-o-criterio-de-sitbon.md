@@ -1,0 +1,57 @@
+---
+title: "Teste de Vasorreatividade Aguda na HAP Idiopática e Hereditária: o Critério de Sitbon e a Resposta ao Bloqueador de Canal de Cálcio"
+slug: teste-de-vasorreatividade-aguda-na-hap-idiopatica-e-hereditaria-o-criterio-de-sitbon
+theme: "Hipertensão pulmonar"
+kind: estudo
+review_status: revisado
+source_refs: ["Sitbon O, Humbert M, Jaïs X, Ioos V, Hamid AM, Provencher S, Garcia G, Parent F, Hervé P, Simonneau G. Long-term response to calcium channel blockers in idiopathic pulmonary arterial hypertension. Circulation. 2005;111(23):3105-3111. DOI: 10.1161/CIRCULATIONAHA.104.488486. PMID: 15939821 — coorte de 557 pacientes com HAP idiopática testados com vasodilatador agudo (epoprostenol ou óxido nítrico) em centro de referência francês, abstract completo conferido via Europe PMC (número de PMID confirmado via NCBI E-utilities esummary; sem depósito de texto integral aberto localizado no PMC)", "Rich S, Kaufmann E, Levy PS. The effect of high doses of calcium-channel blockers on survival in primary pulmonary hypertension. N Engl J Med. 1992;327(2):76-81. PMID: 1603139 — estudo precursor, 64 pacientes, abstract conferido via Europe PMC", "Acute pulmonary vasoreactivity: a simple test revisited in the contemporary era — a narrative review. PMC. https://pmc.ncbi.nlm.nih.gov/articles/PMC12719676/ — revisão narrativa que atribui explicitamente o critério numérico atual ao estudo de Sitbon et al. 2005 e à 3ª Conferência Mundial de Hipertensão Pulmonar, e traz as taxas de prevalência de resposta aguda e sustentada", "2022 ESC/ERS Guidelines for the diagnosis and treatment of pulmonary hypertension. European Heart Journal. 2022 (via European Respiratory Society, publications.ersnet.org/content/erj/61/1/2200879) — reavaliação com cateterismo direito em 3-4 meses após início do bloqueador de canal de cálcio em dose alta"]
+legacy_source: "Documento novo, escrito em 01/08/2026. O tema aparece em `teste-de-vasorreatividade-aguda-e-hipertensao-pulmonar-dos-grupos-2-e-3.md`, mas de forma breve e misturada ao manejo geral dos grupos 2 e 3 (que na verdade é sobre NÃO fazer vasorreatividade nesses grupos) — sem citar Sitbon et al. 2005 por nome, sem os números reais de proporção de respondedores/sobrevida do estudo original, sem a distinção entre resposta AGUDA e resposta SUSTENTADA de longo prazo (o ponto central do próprio Sitbon 2005), e sem o esquema de dose do bloqueador de canal de cálcio. Este documento aprofunda especificamente o recorte da HAP idiopática/hereditária (grupo 1), cruzando com o documento existente em vez de duplicá-lo."
+---
+
+# Teste de Vasorreatividade Aguda na HAP Idiopática e Hereditária: o Critério de Sitbon e a Resposta ao Bloqueador de Canal de Cálcio
+
+## Por que este recorte merece documento próprio
+O documento já existente na pasta (`teste-de-vasorreatividade-aguda-e-hipertensao-pulmonar-dos-grupos-2-e-3.md`) descreve o critério de resposta positiva em poucas linhas e depois muda de assunto para os grupos 2 e 3, onde o teste **não** é indicado. Falta, na base, o que sustenta a prática clínica na HAP idiopática (HAPI) e hereditária (HAPH, mutação BMPR2): a fonte primária que definiu o corte numérico hoje usado universalmente, a proporção real — pequena — de pacientes que respondem, e o que fazer depois de identificar um respondedor agudo, que não é o mesmo que ter um respondedor de longo prazo.
+
+## Quem é testado, e por quê
+O cateterismo cardíaco direito com teste de vasodilatador agudo (óxido nítrico inalado, epoprostenol ou adenosina intravenosos, ou iloprost inalado) é realizado **rotineiramente em pacientes com HAPI ou HAPH virgens de tratamento específico**, no momento do diagnóstico hemodinâmico. O objetivo único do teste é identificar o pequeno subgrupo elegível a tratamento com bloqueador de canal de cálcio (BCC) oral em vez da terapia específica para HAP (antagonista de receptor de endotelina, inibidor de PDE5/riociguate, prostanoide) — fonte: Sitbon et al. 2005; revisão PMC.
+
+## O critério de Sitbon
+O corte hoje adotado internacionalmente — inclusive na diretriz ESC/ERS 2022 — nasceu da análise de Sitbon et al. (Circulation, 2005) e foi incorporado na 3ª Conferência Mundial de Hipertensão Pulmonar: **queda da pressão arterial pulmonar média (PAPm) de pelo menos 10 mmHg, atingindo um valor absoluto de PAPm igual ou inferior a 40 mmHg, com débito cardíaco aumentado ou inalterado** (não reduzido). Os três componentes são obrigatórios juntos — a queda relativa isolada, sem o valor absoluto final ≤40 mmHg, ou com queda concomitante de débito cardíaco, não caracteriza resposta positiva — fonte: Sitbon et al. 2005; revisão PMC.
+
+## Os números do estudo original — por que a resposta é minoria, e dupla minoria
+Sitbon et al. testaram **557 pacientes com HAPI**, num único centro de referência francês, com epoprostenol ou óxido nítrico. O desenho do estudo usou como critério de entrada para receber BCC a definição então vigente (queda de PAPm **e** de resistência vascular pulmonar >20%, ambas), e depois acompanhou quem, entre os respondedores agudos, sustentava benefício clínico ao longo do tempo:
+- **Respondedores agudos**: 70 de 557 (**12,6%**; IC95% 9,8%–15,3%) — já uma minoria
+- **Respondedores de longo prazo** (definidos como classe funcional NYHA I ou II após pelo menos 1 ano em monoterapia com BCC): apenas **38 de 557 (6,8%; IC95% 4,7%–8,9%)** — pouco mais da metade dos respondedores agudos (38/70 ≈ 54%) sustentou o benefício
+- Os respondedores de longo prazo tinham, no teste agudo, queda de PAPm mais pronunciada (**-39±11%** vs. **-26±7%** nos que falharam; p<0,0001) e PAPm final mais baixa (**33±8 mmHg** vs. **46±10 mmHg**; p<0,0001) — a PAPm de 33 mmHg está muito próxima do corte absoluto de 40 mmHg que o critério de Sitbon consagrou
+- Após seguimento médio de **7,0±4,1 anos**, todos os respondedores de longo prazo, exceto um, seguiam vivos em classe funcional I ou II, com melhora hemodinâmica sustentada
+- Nos pacientes que **falharam** ao BCC (respondedores agudos sem resposta sustentada, mais os não respondedores), a **sobrevida em 5 anos foi de 48%**
+- Conclusão dos autores, no próprio resumo: respondedores de longo prazo a BCC representam **menos de 10%** dos pacientes com HAPI avaliados em centro de referência — fonte: Sitbon et al. 2005
+
+Revisões posteriores (PMC12719676) situam a resposta aguda em **13-15%** da HAPI/HAPH/HAP induzida por droga/toxina, e a resposta sustentada em cerca de **54% dos respondedores agudos** (aproximadamente 6-9% do total) — consistente com os números originais de Sitbon.
+
+## O precursor: Rich 1992, e por que ele não bastava
+Antes de Sitbon 2005, Rich, Kaufmann e Levy (N Engl J Med, 1992;327(2):76-81, PMID 1603139) já haviam mostrado, em 64 pacientes com hipertensão pulmonar primária, que **17 (26%)** respondiam agudamente a BCC em dose alta e que, entre esses respondedores, a sobrevida em 5 anos era de **94% (16 de 17)**, contra **55%** nos não respondedores. O estudo estabeleceu o princípio — resposta aguda prediz sobrevida com BCC —, mas usava um critério de resposta menos específico, sem o valor absoluto de PAPm ≤40 mmHg. Foi exatamente essa imprecisão que Sitbon 2005 corrigiu 13 anos depois, com uma coorte quase 9 vezes maior e a distinção explícita entre resposta aguda e resposta sustentada — a mesma distinção que a proporção "26% respondem agudamente" de Rich, isolada, esconderia.
+
+## Implicação terapêutica: bloqueador de canal de cálcio em dose alta
+Pacientes com teste de vasorreatividade aguda positivo pelo critério de Sitbon devem iniciar BCC oral de longa duração, em **dose alta**, sob monitorização — nunca a dose usada em hipertensão arterial sistêmica:
+- **Nifedipino**: titulado até **120-240 mg/dia**
+- **Diltiazem**: titulado até **240-720 mg/dia** (algumas séries chegam a 900 mg/dia)
+- **Amlodipino**: usado sobretudo quando há bradicardia relativa ou distúrbio de condução que desaconselha diltiazem, com doses relatadas até **20 mg/dia**
+- **Verapamil é evitado** pelo efeito inotrópico negativo mais pronunciado, indesejável num ventrículo direito já sobrecarregado
+
+**A reavaliação em 3-4 meses é o passo que separa resposta aguda de resposta sustentada** — reavaliação clínica (classe funcional) e cateterismo direito repetido, conforme a diretriz ESC/ERS 2022. Manter BCC como monoterapia definitiva só se justifica em quem confirma, nessa reavaliação, classe funcional I ou II e melhora hemodinâmica mantida; quem não sustenta a resposta deve migrar para a terapia específica de HAP (combinação de antagonista de endotelina, inibidor de PDE5/riociguate e, conforme risco, prostanoide) — fonte: Sitbon et al. 2005; ESC/ERS 2022.
+
+## Quando o teste NÃO se aplica
+O teste de vasorreatividade tem valor discriminativo **só na HAPI, na HAPH e na HAP induzida por droga/toxina**, virgens de tratamento. Ele **não deve ser realizado por rotina** em: HAP associada a doença do tecido conjuntivo (resposta sustentada rara, mesmo quando agudamente positiva); doença veno-oclusiva pulmonar/hemangiomatose capilar pulmonar (risco de edema pulmonar grave, ver documento específico da pasta); e nos grupos 2 (doença cardíaca esquerda) e 3 (doença pulmonar), onde o teste não orienta conduta e o vasodilatador agudo pode precipitar congestão — ver `teste-de-vasorreatividade-aguda-e-hipertensao-pulmonar-dos-grupos-2-e-3.md`, que detalha esse outro lado da mesma técnica.
+
+## Limites
+- O estudo de Sitbon 2005 é de um único centro de referência francês, com epoprostenol e óxido nítrico como agentes — a generalização para outros agentes (adenosina, iloprost) e outras populações não foi medida na mesma coorte
+- O texto integral do artigo não foi localizado em depósito aberto (PMC não indexa o texto completo deste PMID); os números aqui vêm do resumo estruturado, conferido via Europe PMC e via NCBI E-utilities, não do artigo completo — a tabela de características basais dos respondedores não pôde ser conferida linha a linha
+- O esquema de dose de BCC (nifedipino, diltiazem, amlodipino) foi reunido de fontes secundárias que descrevem a prática clínica corrente, não extraído do protocolo exato de Sitbon 2005 — `VERIFICAÇÃO HUMANA NECESSÁRIA` para confirmar o esquema de titulação contra bula/diretriz antes de uso em protocolo institucional
+
+## Armadilhas clínicas
+- **Confundir resposta aguda com indicação definitiva de BCC** — o próprio Sitbon 2005 mostra que quase metade dos respondedores agudos (46%) não sustenta o benefício; sem a reavaliação em 3-4 meses com cateterismo repetido, um respondedor agudo que na verdade vai falhar fica exposto a BCC em dose alta sem o efeito protetor que justificaria o risco
+- **Aplicar BCC em dose alta sem teste positivo** — fora do subgrupo identificado pelo critério de Sitbon, BCC em dose alta em HAP pode causar hipotensão sistêmica e piora do débito cardíaco, sem qualquer benefício pulmonar específico
+- **Testar vasorreatividade em HAP associada a doença do tecido conjuntivo ou em doença veno-oclusiva/hemangiomatose e tratar como se fosse HAPI** — a prevalência de resposta sustentada nesses grupos é muito menor, e no caso da doença veno-oclusiva o próprio teste carrega risco de edema pulmonar
+- **Tratar "13-15% de resposta aguda" como a cifra clinicamente relevante** — o número que orienta a decisão terapêutica de longo prazo é o de resposta **sustentada** (cerca de 6-9%), sistematicamente menor; comunicar só a taxa de resposta aguda ao paciente superestima a chance real de ficar em monoterapia oral simples
