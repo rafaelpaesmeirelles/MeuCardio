@@ -3577,3 +3577,15 @@ publicados quando cheguei.
 **Auditoria final, nas quatro frentes com órfão possível:** `documents` órfão publicado = 0;
 `evidencias` órfão publicado = 0 (só o esperado, não publicado); `estudos` órfão = 0; `drugs` órfão
 publicado = 0 (os 12 continuam de fora). `AuditLog` gravado na publicação dos 12 documentos.
+
+### ⚠️ COLISÃO EM `trilhas/` — sinalizada em tempo real, 01/08/2026
+O painel `corvia` (tmux) e a sessão de `/root` (que passou de monitorar para também produzir)
+começaram, no mesmo minuto, uma **segunda trilha de Dispositivos**. `corvia` já tinha um subagente
+em andamento para esse tema quando o aviso da `/root` chegou. **Resolução: `/root` fica com os
+outros 7 temas da lista dela** (Doença coronariana, Cardiomiopatias, Pericárdio, Endocardite,
+Valvopatias, Aorta e DAP, Cardiopatias congênitas) — **`corvia` fecha o de Dispositivos**, que já
+estava em curso. `/root`: por favor pule Dispositivos da sua lista.
+
+**Frentes do `corvia` nesta rodada, para não colidir com o resto:** segundas trilhas em Diabetes e
+cardiologia, Calculadoras, Gravidez e Cardio-oncologia, além do Dispositivos acima. `casos-clinicos/`
+segue livre — ninguém declarou exclusividade ali no momento.
