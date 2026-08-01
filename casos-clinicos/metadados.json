@@ -3739,5 +3739,505 @@
       "Mohr FW, Morice MC, Kappetein AP, Feldman TE, Ståhle E, Colombo A, Mack MJ, Holmes DR Jr, Morel MA, Van Dyck N, Houle VM, Dawkins KD, Serruys PW. Coronary artery bypass graft surgery versus percutaneous coronary intervention in patients with three-vessel disease and left main coronary disease: 5-year follow-up of the randomised, clinical SYNTAX trial. Lancet. 2013;381(9867):629-638. PMID: 23439102"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "alta-hospitalar-por-ic-aguda-otimizacao-rapida-e-intensiva-strong-hf",
+    "titulo": "Alta por insuficiência cardíaca aguda: otimizar a terapia devagar ou em ritmo intensivo?",
+    "tema": "Insuficiência cardíaca",
+    "nivel": "intermediário",
+    "enunciado": "Paciente de 61 anos é internado por insuficiência cardíaca aguda descompensada, sem uso prévio de doses plenas de bloqueador do SRAA (ou sacubitril-valsartana), betabloqueador e antagonista mineralocorticoide. Após estabilização clínica, está pronto para receber alta hospitalar, ainda em doses baixas dos quatro pilares.",
+    "pergunta": "Segundo o ensaio STRONG-HF, qual estratégia pós-alta tem melhor evidência para reduzir o desfecho composto de reinternação por insuficiência cardíaca ou morte por qualquer causa em 180 dias?",
+    "opcoes": [
+      "Manter os fármacos nas doses da internação e reavaliar apenas em consulta de rotina em três meses",
+      "Aguardar seis meses de estabilidade ambulatorial antes de iniciar qualquer titulação",
+      "Titular rapidamente até dose plena de todos os fármacos em até duas semanas após a alta, com quatro consultas estruturadas em dois meses monitorando sinais clínicos, peso, pressão arterial e NT-proBNP",
+      "Titular apenas o betabloqueador, mantendo os demais fármacos na dose de internação até a próxima consulta de rotina"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "No STRONG-HF (1.078 pacientes, 87 hospitais, 14 países), a estratégia de alta intensidade — up-titulação para 100% das doses recomendadas em até 2 semanas após a alta, com 4 consultas ambulatoriais estruturadas nos 2 meses seguintes monitorando status clínico, exames laboratoriais e NT-proBNP — reduziu o desfecho composto de reinternação por IC ou morte por qualquer causa até o dia 180: 15,2% (estimativa ajustada de Kaplan-Meier) no grupo de alta intensidade versus 23,3% no cuidado usual (diferença de risco ajustada 8,1%; IC95% 2,9-13,2; p=0,0021; risco relativo 0,66; IC95% 0,50-0,86). O estudo foi interrompido precocemente por recomendação do comitê de monitorização, por diferença maior que a esperada entre os grupos. Mais eventos adversos ocorreram no grupo de alta intensidade (41% vs 29%), mas a incidência de eventos adversos graves (16% vs 17%) e fatais (5% vs 6%) foi semelhante entre os grupos — ou seja, o ganho de eficácia não veio à custa de mais eventos graves ou fatais.",
+    "source_refs": [
+      "Mebazaa A, Davison B, Chioncel O, Cohen-Solal A, Diaz R, Filippatos G, Metra M, Ponikowski P, Sliwa K, Voors AA, et al; STRONG-HF Investigators. Safety, tolerability and efficacy of up-titration of guideline-directed medical therapies for acute heart failure (STRONG-HF): a multinational, open-label, randomised trial. Lancet. 2022;400(10367):1938-1952. DOI: 10.1016/S0140-6736(22)02076-1. PMID: 36356631 — NCT03412201, 1.078 pacientes randomizados entre maio/2018 e setembro/2022, estudo interrompido precocemente por recomendação do comitê de monitorização de segurança. Financiamento: Roche Diagnostics."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "episodios-de-alta-frequencia-atrial-detectados-por-dispositivo-anticoagular-noah-afnet-6",
+    "titulo": "Episódio de alta frequência atrial detectado pelo marca-passo: anticoagular como se fosse fibrilação atrial?",
+    "tema": "Fibrilação atrial",
+    "nivel": "avançado",
+    "enunciado": "Paciente de 76 anos, portador de marca-passo definitivo por bloqueio atrioventricular, sem diagnóstico de fibrilação atrial em nenhum ECG de superfície e com CHA₂DS₂-VASc elevado por idade e hipertensão. Na revisão de rotina do dispositivo, é identificado um episódio de alta frequência atrial (AHRE) com duração de cerca de 45 minutos, confirmado por revisão do eletrograma armazenado.",
+    "pergunta": "Com base no NOAH-AFNET 6, qual conduta é mais consistente com a evidência disponível diante desse achado isolado de AHRE, sem FA documentada em ECG convencional?",
+    "opcoes": [
+      "Iniciar anticoagulação oral plena de imediato, pois o AHRE confere risco tromboembólico equivalente ao da fibrilação atrial documentada em ECG",
+      "Não iniciar anticoagulação de rotina apenas com base no AHRE: no ensaio, o edoxabana não reduziu significativamente o desfecho isquêmico composto e aumentou o desfecho de segurança (morte ou sangramento maior), com incidência de AVC baixa nos dois grupos",
+      "Indicar ablação por cateter de urgência antes de qualquer decisão sobre anticoagulação",
+      "Suspender o acompanhamento remoto do dispositivo, já que o AHRE não tem nenhuma relevância clínica documentada"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O NOAH-AFNET 6 randomizou 2.536 pacientes com AHRE ≥6 minutos e pelo menos um fator de risco adicional para AVC (idade média 78 anos) para edoxabana ou placebo. O desfecho primário de eficácia (morte cardiovascular, AVC ou embolia sistêmica) ocorreu em 3,2%/paciente-ano com edoxabana versus 4,0%/paciente-ano com placebo (HR 0,81; IC95% 0,60-1,08; p=0,15) — sem diferença estatisticamente significativa. A incidência de AVC foi baixa em ambos os grupos (~1%/paciente-ano). O desfecho de segurança (morte por qualquer causa ou sangramento maior) foi maior com edoxabana: 5,9%/paciente-ano versus 4,5%/paciente-ano (HR 1,31; IC95% 1,02-1,67; p=0,03). O estudo foi interrompido precocemente por segurança e por avaliação informal de futilidade. FA diagnosticada por ECG convencional se desenvolveu em 18,2% dos pacientes ao longo do seguimento (8,7%/paciente-ano) — ou seja, uma fração relevante evolui para FA documentada, o que reforça a importância do acompanhamento clínico mesmo sem anticoagular de rotina só pelo AHRE.",
+    "source_refs": [
+      "Kirchhof P, Toennis T, Goette A, Camm AJ, Diener HC, Becher N, Bertaglia E, Blomstrom Lundqvist C, et al; NOAH-AFNET 6 Investigators. Anticoagulation with Edoxaban in Patients with Atrial High-Rate Episodes. N Engl J Med. 2023;389(13):1167-1179. DOI: 10.1056/NEJMoa2303062. PMID: 37622677 — NCT02618577, ISRCTN17309850, 2.536 pacientes, estudo duplo-cego, duplo-simulado, interrompido precocemente por segurança/futilidade. Financiamento: German Center for Cardiovascular Research e outros."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hipertensao-refrataria-em-drc-avancada-estagio-4-clorotalidona-click",
+    "titulo": "Hipertensão mal controlada em doença renal crônica estágio 4: diurético tiazídico ainda funciona?",
+    "tema": "Hipertensão",
+    "nivel": "intermediário",
+    "enunciado": "Paciente com doença renal crônica estágio 4 (TFGe cerca de 23 mL/min/1,73m²) e hipertensão mal controlada confirmada por MAPA de 24 horas, já em uso de três anti-hipertensivos, incluindo diurético de alça. A pressão arterial sistólica ambulatorial de 24h permanece em torno de 142 mmHg.",
+    "pergunta": "De acordo com o ensaio CLICK, o acréscimo de clortalidona (dose inicial 12,5 mg/dia, podendo escalonar até 50 mg/dia) nesse cenário de DRC avançada...",
+    "opcoes": [
+      "Não deve ser tentado, porque diuréticos tiazídicos perdem completamente a eficácia com TFGe abaixo de 30 mL/min/1,73m²",
+      "Reduz a PA sistólica ambulatorial de 24h em cerca de 2 mmHg a mais que o placebo, diferença sem relevância clínica",
+      "Só é eficaz se o diurético de alça for suspenso antes do início da clortalidona",
+      "Reduziu a PA sistólica ambulatorial de 24h em 10,5 mmHg a mais que o placebo em 12 semanas, e também reduziu a relação albumina/creatinina urinária, à custa de mais hipopotassemia, elevação reversível de creatinina, hiperglicemia e hiperuricemia"
+    ],
+    "resposta_correta": 3,
+    "explicacao": "No CLICK, 160 pacientes com DRC estágio 4 (TFGe basal 23,2±4,2 mL/min/1,73m²) e hipertensão mal controlada por MAPA de 24h (76% com diabetes, 60% já em uso de diurético de alça) foram randomizados para clortalidona ou placebo. A alteração ajustada da PA sistólica ambulatorial de 24h da linha de base até 12 semanas foi -11,0 mmHg com clortalidona versus -0,5 mmHg com placebo — diferença entre grupos de -10,5 mmHg (IC95% -14,6 a -6,4; p<0,001). A relação albumina/creatinina urinária também caiu mais no grupo clortalidona, por uma diferença de 50 pontos percentuais. Em contrapartida, hipopotassemia, elevações reversíveis de creatinina, hiperglicemia, tontura e hiperuricemia foram mais frequentes com clortalidona — o benefício pressórico real exige monitorização desses efeitos, não contraindica o uso mesmo em estágio 4.",
+    "source_refs": [
+      "Agarwal R, Sinha AD, Cramer AE, Balmes-Fenwick M, Dickinson JH, Ouyang F, Tu W. Chlorthalidone for Hypertension in Advanced Chronic Kidney Disease. N Engl J Med. 2021;385(27):2507-2519. DOI: 10.1056/NEJMoa2110730. PMID: 34739197. PMCID: PMC9119310 — NCT02841280, 160 pacientes. Financiamento: National Heart, Lung, and Blood Institute e Indiana Institute of Medical Research."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "profilaxia-estendida-de-tev-apos-alta-hospitalar-clinica-mariner",
+    "titulo": "Alta após internação clínica de alto risco para TEV: profilaxia farmacológica estendida ambulatorial reduz eventos?",
+    "tema": "Tromboembolismo",
+    "nivel": "intermediário",
+    "enunciado": "Paciente internado por pneumonia grave, com imobilização prolongada e escore IMPROVE modificado ≥4 (alto risco para tromboembolismo venoso), recebe alta hospitalar clinicamente estável, sem diagnóstico de TEV durante a internação e sem profilaxia estendida prescrita até o momento.",
+    "pergunta": "Com base no MARINER, iniciar rivaroxabana 10 mg/dia por 45 dias a partir da alta hospitalar, nesse perfil de alto risco...",
+    "opcoes": [
+      "Não reduziu significativamente o desfecho primário (TEV sintomático ou morte por TEV) em relação ao placebo, embora tenha reduzido o TEV sintomático não fatal isolado; o sangramento maior foi numericamente mais frequente, sem significância estatística",
+      "Reduziu o desfecho primário em quase 50%, com significância estatística robusta e sem qualquer aumento do sangramento maior",
+      "Só foi eficaz nos pacientes com escore IMPROVE modificado abaixo de 2, população que não corresponde a este caso",
+      "Teve eficácia estatisticamente idêntica à profilaxia mecânica isolada com compressão pneumática intermitente, tornando o anticoagulante dispensável"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "No MARINER, 12.019 pacientes de alto risco (IMPROVE modificado ≥4, ou 2-3 com D-dímero elevado) foram randomizados no momento da alta hospitalar para rivaroxabana 10 mg/dia (ajustada por função renal) ou placebo por 45 dias. O desfecho primário de eficácia (TEV sintomático ou morte por TEV) ocorreu em 0,83% com rivaroxabana versus 1,10% com placebo (HR 0,76; IC95% 0,52-1,09; p=0,14) — sem diferença estatisticamente significativa. O desfecho secundário pré-especificado de TEV sintomático não fatal isolado foi menor com rivaroxabana (0,18% vs 0,42%; HR 0,44; IC95% 0,22-0,89). Sangramento maior ocorreu em 0,28% com rivaroxabana versus 0,15% com placebo (HR 1,88; IC95% 0,84-4,23) — numericamente maior, mas também sem significância estatística. A leitura correta não é 'funciona' nem 'não funciona': o desfecho composto primário não foi atingido, mesmo com sinal de benefício num componente secundário e sem excesso significativo de sangramento — resultado que não sustenta profilaxia estendida de rotina para toda a população de alto risco definida pelo escore.",
+    "source_refs": [
+      "Spyropoulos AC, Ageno W, Albers GW, Elliott CG, Halperin JL, Hiatt WR, Maynard GA, Steg PG, Weitz JI, Suh E, Spiro TE, Barnathan ES, Raskob GE; MARINER Investigators. Rivaroxaban for Thromboprophylaxis after Hospitalization for Medical Illness. N Engl J Med. 2018;379(12):1118-1127. DOI: 10.1056/NEJMoa1805090. PMID: 30145946 — NCT02111564, 12.019 pacientes na análise por intenção de tratar. Financiamento: Janssen Research and Development."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "diabetes-tipo-2-com-drc-estabelecida-semaglutida-reduz-desfecho-renal-e-cardiovascular-flow",
+    "titulo": "Diabetes tipo 2 com doença renal crônica estabelecida: semaglutida protege o rim, além da glicemia?",
+    "tema": "Diabetes e cardiologia",
+    "nivel": "intermediário",
+    "enunciado": "Paciente com diabetes tipo 2, TFGe de 40 mL/min/1,73m² e relação albumina/creatinina urinária elevada, caracterizando doença renal crônica estabelecida, com controle glicêmico razoável em metformina e insulina basal.",
+    "pergunta": "Segundo o FLOW, acrescentar semaglutida subcutânea 1,0 mg semanal nesse paciente, com foco em desfecho renal e cardiovascular, e não apenas glicêmico...",
+    "opcoes": [
+      "Não trouxe benefício renal adicional além do já esperado pelo controle glicêmico, servindo apenas para perda de peso",
+      "Só reduziu eventos cardiovasculares maiores, sem qualquer efeito sobre a progressão da doença renal",
+      "Reduziu em 24% o risco do desfecho composto de eventos renais maiores (falência renal, queda ≥50% da TFGe ou morte de causa renal/cardiovascular), com redução também da mortalidade cardiovascular e por qualquer causa, levando à interrupção precoce do estudo por benefício",
+      "Aumentou significativamente o risco de eventos adversos graves em relação ao placebo, o que limita seu uso nessa população"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "No FLOW, 3.533 pacientes com diabetes tipo 2 e DRC (TFGe 50-75 com relação albumina/creatinina >300, ou TFGe 25-<50 com relação >100) foram randomizados para semaglutida 1,0 mg semanal ou placebo. Com mediana de seguimento de 3,4 anos, o estudo foi interrompido precocemente por recomendação de uma análise interina pré-especificada, por benefício. O desfecho primário (evento renal maior composto) ocorreu em 331 pacientes com semaglutida versus 410 com placebo — risco 24% menor (HR 0,76; IC95% 0,66-0,88; p=0,0003). Os desfechos secundários confirmatórios também favoreceram a semaglutida: inclinação anual da TFGe menos acentuada em 1,16 mL/min/1,73m² (p<0,001), eventos cardiovasculares maiores 18% menores (HR 0,82; IC95% 0,68-0,98; p=0,029) e mortalidade por qualquer causa 20% menor (HR 0,80; IC95% 0,67-0,95; p=0,01). Eventos adversos graves foram, na verdade, menos frequentes com semaglutida (49,6% vs 53,8% com placebo) — não mais frequentes.",
+    "source_refs": [
+      "Perkovic V, Tuttle KR, Rossing P, Mahaffey KW, Mann JFE, Bakris G, Baeres FMM, Idorn T, Bosch-Traberg H, Lausvig NL, Pratley R; FLOW Trial Committees and Investigators. Effects of Semaglutide on Chronic Kidney Disease in Patients with Type 2 Diabetes. N Engl J Med. 2024;391(2):109-121. DOI: 10.1056/NEJMoa2403347. PMID: 38785209 — NCT03819153, 3.533 pacientes, estudo interrompido precocemente por benefício. Financiamento: Novo Nordisk."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "semaglutida-em-obesidade-com-doenca-coronariana-sem-diabetes-reduz-eventos-cardiovasculares-select",
+    "titulo": "Obesidade e coronariopatia estabelecida, sem diabetes: a semaglutida reduz eventos cardiovasculares maiores?",
+    "tema": "Prevenção e lipídios",
+    "nivel": "intermediário",
+    "enunciado": "Homem de 61 anos, com infarto do miocárdio há 3 anos, mantém LDL-colesterol de 62 mg/dL sob estatina de alta intensidade, além de AAS e IECA em doses otimizadas. IMC de 34 kg/m² (obesidade grau I), circunferência abdominal aumentada, HbA1c 5,6% (sem diabetes). Ele pergunta se algum tratamento para a obesidade, além da dieta e da atividade física já orientadas, reduziria seu risco cardiovascular residual.",
+    "pergunta": "Com base no estudo SELECT, qual conduta é respaldada por evidência de redução do desfecho composto de morte cardiovascular, infarto não fatal ou AVC não fatal nesse perfil de paciente?",
+    "opcoes": [
+      "Associar semaglutida 2,4 mg subcutânea semanal, que reduziu o desfecho composto primário em relação ao placebo (6,5% vs. 8,0%; HR 0,80; IC95% 0,72-0,90; p<0,001) em pacientes com sobrepeso/obesidade e doença cardiovascular estabelecida, sem diabetes",
+      "Indicar orlistate, único agente para obesidade com redução comprovada de eventos cardiovasculares maiores em ensaio clínico randomizado",
+      "Não associar nenhum tratamento farmacológico para obesidade, pois nenhum agonista do receptor de GLP-1 foi testado para desfecho cardiovascular em pacientes sem diabetes",
+      "Encaminhar diretamente para cirurgia bariátrica, única intervenção com redução de eventos cardiovasculares maiores comprovada em ensaio randomizado nesse cenário"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O SELECT randomizou 17.604 pacientes com sobrepeso ou obesidade e doença cardiovascular estabelecida, SEM diabetes, para semaglutida 2,4 mg semanal ou placebo. Com seguimento médio de 39,8 meses, o desfecho composto primário ocorreu em 6,5% (569/8.803) do grupo semaglutida vs. 8,0% (701/8.801) do grupo placebo (HR 0,80; IC95% 0,72-0,90; p<0,001). É o primeiro ensaio a demonstrar benefício cardiovascular de um agonista do GLP-1 numa população SEM diabetes.",
+    "source_refs": [
+      "Lincoff AM, Brown-Frandsen K, Colhoun HM, et al.; SELECT Trial Investigators. Semaglutide and Cardiovascular Outcomes in Obesity without Diabetes. N Engl J Med. 2023;389(24):2221-2232. DOI: 10.1056/NEJMoa2307563. PMID: 37952131"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "regurgitacao-mitral-secundaria-grave-reparo-transcateter-nao-reduziu-eventos-mitra-fr",
+    "titulo": "Regurgitação mitral secundária grave em ICFEr: o reparo transcateter borda-a-borda reduz eventos em todo perfil de paciente?",
+    "tema": "Valvopatias",
+    "nivel": "avançado",
+    "enunciado": "Mulher de 68 anos, cardiomiopatia isquêmica com FEVE 28%, ventrículo esquerdo acentuadamente dilatado e regurgitação mitral secundária grave, em classe funcional III apesar de terapia clínica guiada por diretriz otimizada há mais de 3 meses. A equipe discute se o reparo transcateter borda-a-borda reduziria morte ou hospitalização por IC nesse perfil.",
+    "pergunta": "Segundo o estudo MITRA-FR, qual foi o resultado do reparo transcateter borda-a-borda associado à terapia clínica, comparado à terapia clínica isolada, no desfecho composto de morte ou hospitalização não planejada por IC em 12 meses?",
+    "opcoes": [
+      "O reparo reduziu significativamente o desfecho composto, replicando o benefício do estudo COAPT",
+      "Não houve diferença significativa entre os grupos: o desfecho ocorreu em 54,6% no grupo intervenção e 51,3% no grupo controle (OR 1,16; IC95% 0,73-1,84; p=0,53)",
+      "O reparo aumentou significativamente a mortalidade em 12 meses, levando à interrupção precoce",
+      "O reparo reduziu apenas a hospitalização por IC, sem impacto sobre a mortalidade"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O MITRA-FR randomizou 304 pacientes. Em 12 meses, o desfecho composto ocorreu em 54,6% (83/152) no grupo intervenção vs. 51,3% (78/152) no controle (OR 1,16; IC95% 0,73-1,84; p=0,53) — sem diferença. O resultado contrasta com o COAPT; a hipótese aceita é que no MITRA-FR os ventrículos eram mais dilatados e a regurgitação proporcionalmente menor, sugerindo doença miocárdica predominante pouco modificável pela correção isolada da valva.",
+    "source_refs": [
+      "Obadia JF, Messika-Zeitoun D, Leurent G, et al.; MITRA-FR Investigators. Percutaneous Repair or Medical Treatment for Secondary Mitral Regurgitation. N Engl J Med. 2018;379(24):2297-2306. DOI: 10.1056/NEJMoa1805374. PMID: 30145927"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "estenose-de-arteria-renal-aterosclerotica-stent-nao-reduziu-eventos-coral",
+    "titulo": "Estenose aterosclerótica de artéria renal com hipertensão resistente: o stent renal reduz eventos cardiovasculares e renais?",
+    "tema": "Aorta e doença arterial periférica",
+    "nivel": "avançado",
+    "enunciado": "Mulher de 72 anos, hipertensão resistente, função renal em declínio progressivo e estenose de artéria renal de 80% atribuída a doença aterosclerótica. Está em terapia clínica otimizada. O nefrologista pergunta se a angioplastia com stent da artéria renal reduziria eventos cardiovasculares e renais.",
+    "pergunta": "De acordo com o estudo CORAL, qual foi o resultado do stent renal associado à terapia clínica otimizada, comparado à terapia clínica isolada?",
+    "opcoes": [
+      "O stent renal aumentou o risco de AVC isquêmico, levando à interrupção precoce",
+      "O stent renal reduziu o desfecho composto apenas nos pacientes com estenose bilateral",
+      "Não houve diferença significativa no desfecho composto (35,1% vs. 35,8%; HR 0,94; IC95% 0,76-1,17; p=0,58), com apenas modesta diferença na pressão sistólica (-2,3 mmHg)",
+      "O stent renal reduziu significativamente o desfecho composto e a necessidade de diálise"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O CORAL randomizou 947 pacientes. O desfecho composto ocorreu em 35,1% no grupo stent vs. 35,8% no grupo clínico (HR 0,94; IC95% 0,76-1,17; p=0,58) — sem diferença. Houve diferença modesta de pressão sistólica favorecendo o stent (-2,3 mmHg; p=0,03), sem tradução em desfechos clínicos.",
+    "source_refs": [
+      "Cooper CJ, Murphy TP, Cutlip DE, et al.; CORAL Investigators. Stenting and Medical Therapy for Atherosclerotic Renal-Artery Stenosis. N Engl J Med. 2014;370(1):13-22. DOI: 10.1056/NEJMoa1310753. PMID: 24245566"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cmh-obstrutiva-sintomatica-aficamteno-melhora-capacidade-de-exercicio-sequoia-hcm",
+    "titulo": "Cardiomiopatia hipertrófica obstrutiva sintomática apesar de betabloqueador: o aficamteno é uma opção além do mavacamteno?",
+    "tema": "Cardiomiopatias",
+    "nivel": "avançado",
+    "enunciado": "Homem de 47 anos, cardiomiopatia hipertrófica obstrutiva, gradiente de via de saída do VE de 68 mmHg em repouso, classe funcional NYHA II-III apesar de betabloqueador. Recusa redução septal por ora e pergunta sobre alternativas farmacológicas inibidoras da miosina cardíaca.",
+    "pergunta": "Segundo o estudo SEQUOIA-HCM, qual foi o efeito do aficamteno, comparado a placebo, sobre a capacidade de exercício em 24 semanas?",
+    "opcoes": [
+      "Não houve diferença significativa no VO2 de pico, mas houve melhora isolada da classe funcional",
+      "O VO2 de pico aumentou em média 1,8 mL/kg/min no grupo aficamteno vs. 0,0 mL/kg/min no placebo (diferença 1,7 mL/kg/min; p<0,001), e os 10 desfechos secundários favoreceram o aficamteno",
+      "O aficamteno piorou a capacidade de exercício por excesso de disfunção sistólica",
+      "O aficamteno só demonstrou benefício em pacientes já candidatos a miectomia"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O SEQUOIA-HCM randomizou 282 pacientes. O VO2 de pico aumentou 1,8 mL/kg/min com aficamteno e 0,0 com placebo (diferença 1,7 mL/kg/min; p<0,001). Os 10 desfechos secundários pré-especificados favoreceram consistentemente o aficamteno, com incidência de eventos adversos semelhante entre grupos.",
+    "source_refs": [
+      "Maron MS, Masri A, Nassif ME, et al.; SEQUOIA-HCM Investigators. Aficamten for Symptomatic Obstructive Hypertrophic Cardiomyopathy. N Engl J Med. 2024;390(20):1849-1861. DOI: 10.1056/NEJMoa2401424. PMID: 38739079"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "endocardite-por-enterococcus-faecalis-ampicilina-mais-ceftriaxona-ou-ampicilina-mais-gentamicina",
+    "titulo": "Endocardite de valva nativa por Enterococcus faecalis em paciente idoso com função renal limítrofe: ampicilina com gentamicina é a única opção?",
+    "tema": "Endocardite",
+    "nivel": "avançado",
+    "enunciado": "Homem de 76 anos, endocardite de valva nativa por Enterococcus faecalis sensível à ampicilina, sem indicação cirúrgica no momento. Creatinina basal de 1,4 mg/dL e clearance estimado de 48 mL/min. A equipe hesita em associar aminoglicosídeo pelo risco de nefrotoxicidade.",
+    "pergunta": "Com base no estudo de Fernández-Hidalgo et al., que comparou ampicilina + ceftriaxona a ampicilina + gentamicina na endocardite por E. faecalis, qual afirmação é sustentada pelos dados?",
+    "opcoes": [
+      "A combinação ampicilina + ceftriaxona teve mortalidade e falha terapêutica semelhantes à ampicilina + gentamicina, com incidência de insuficiência renal muito menor (0% vs. 23%; p<0,001) e menos interrupção por evento adverso (1% vs. 25%; p<0,001)",
+      "A combinação ampicilina + ceftriaxona teve eficácia inferior, com maior recidiva e mortalidade",
+      "As duas combinações têm eficácia e segurança renal equivalentes",
+      "A ceftriaxona não tem atividade sinérgica contra Enterococcus faecalis"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "No estudo de coorte com 246 pacientes, mortalidade durante o tratamento foi semelhante (22% vs. 21%; p=0,81), assim como falha terapêutica (1% vs. 2%) e recidiva (3% vs. 4%). A diferença foi em segurança: interrupção por evento adverso foi muito mais frequente com ampicilina+gentamicina (25% vs. 1%; p<0,001), sobretudo por insuficiência renal (23% vs. 0%; p<0,001).",
+    "source_refs": [
+      "Fernández-Hidalgo N, Almirante B, Gavaldà J, et al. Ampicillin plus ceftriaxone is as effective as ampicillin plus gentamicin for treating enterococcus faecalis infective endocarditis. Clin Infect Dis. 2013;56(9):1261-1268. DOI: 10.1093/cid/cit052. PMID: 23392394"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "acido-tranexamico-perioperatorio-em-cirurgia-nao-cardiaca-poise-3",
+    "titulo": "Ácido tranexâmico na cirurgia não cardíaca de risco: reduz sangramento sem custo cardiovascular?",
+    "tema": "Perioperatório",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 72 anos, hipertensa e com osteoartrose de quadril, será submetida a artroplastia por fratura de fêmur — cirurgia com risco relevante de sangramento perioperatório. A equipe de anestesia considera administrar ácido tranexâmico intravenoso (1 g em bolus) no início e ao final da cirurgia, para reduzir sangramento, e pergunta se essa estratégia tem algum custo cardiovascular que precise ser pesado antes de generalizar a conduta.",
+    "pergunta": "De acordo com o ensaio POISE-3 (9.535 pacientes submetidos a cirurgia não cardíaca), qual foi o achado sobre o uso rotineiro de ácido tranexâmico nesse cenário?",
+    "opcoes": [
+      "Reduziu significativamente o desfecho composto de sangramento (9,1% vs. 11,7% com placebo; HR 0,76), mas a não inferioridade quanto ao desfecho cardiovascular composto (14,2% vs. 13,9%; HR 1,02) NÃO foi estabelecida, porque o limite superior do IC 97,5% unilateral (1,14) ultrapassou a margem pré-especificada de 1,125 — o risco cardiovascular não pôde ser descartado",
+      "Aumentou o risco de sangramento maior sem qualquer benefício, sendo formalmente contraindicado em cirurgia não cardíaca",
+      "Reduziu tanto o sangramento quanto os eventos cardiovasculares de forma estatisticamente significativa, autorizando uso universal sem ressalva",
+      "Não teve efeito sobre sangramento, mas reduziu eventos tromboembólicos venosos isoladamente"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O POISE-3 randomizou 9.535 pacientes para ácido tranexâmico ou placebo. Para o desfecho de eficácia (sangramento com risco de vida, maior ou em órgão crítico), foi superior: 9,1% vs. 11,7% (HR 0,76; IC95% 0,67-0,87; p<0,001). Para o desfecho de segurança cardiovascular, a diferença absoluta foi pequena (14,2% vs. 13,9%; HR 1,02), mas o limite superior do IC 97,5% unilateral (1,14) ultrapassou a margem de não inferioridade pré-especificada (1,125) — a segurança cardiovascular não foi provada, apenas a redução de sangramento.",
+    "source_refs": [
+      "Devereaux PJ, Marcucci M, Painter TW, et al.; POISE-3 Investigators. Tranexamic Acid in Patients Undergoing Noncardiac Surgery. N Engl J Med. 2022;386(21):1986-1997. DOI: 10.1056/NEJMoa2201171. PMID: 35363452"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "ablacao-por-campo-pulsado-versus-termica-na-fa-paroxistica-advent",
+    "titulo": "Ablação por campo pulsado ou ablação térmica convencional na fibrilação atrial paroxística?",
+    "tema": "Arritmias",
+    "nivel": "avançado",
+    "enunciado": "Homem, 58 anos, com fibrilação atrial paroxística sintomática refratária a dois antiarrítmicos, é encaminhado para ablação por cateter. O eletrofisiologista explica que o serviço dispõe de duas tecnologias: ablação por campo pulsado e ablação térmica convencional (radiofrequência ou criobalão).",
+    "pergunta": "Segundo o ensaio randomizado ADVENT (607 pacientes com FA paroxística refratária a fármaco), como se compararam eficácia e segurança da ablação por campo pulsado em relação à ablação térmica convencional em 1 ano?",
+    "opcoes": [
+      "A ablação por campo pulsado foi inferior em eficácia, ainda que mais segura",
+      "A ablação por campo pulsado foi não inferior à térmica tanto no desfecho de eficácia (73,3% vs. 71,3% livres do desfecho composto) quanto no desfecho de segurança (2,1% vs. 1,5% de eventos adversos graves), com probabilidade posterior de não inferioridade >0,999 nos dois",
+      "A ablação térmica convencional foi abandonada no estudo por excesso de complicações graves",
+      "Não houve diferença estatisticamente avaliável entre as duas técnicas por baixo poder amostral"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O ADVENT randomizou 305 pacientes para campo pulsado e 302 para térmica. No desfecho primário de eficácia, 73,3% do grupo campo pulsado e 71,3% do grupo térmico não tiveram o evento (probabilidade posterior de não inferioridade >0,999). No desfecho primário de segurança, eventos ocorreram em 2,1% vs. 1,5% (probabilidade posterior de não inferioridade >0,999).",
+    "source_refs": [
+      "Reddy VY, Gerstenfeld EP, Natale A, et al.; ADVENT Investigators. Pulsed Field or Conventional Thermal Ablation for Paroxysmal Atrial Fibrillation. N Engl J Med. 2023;389(18):1660-1671. DOI: 10.1056/NEJMoa2307291. PMID: 37634148"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "oclusao-do-apendice-atrial-esquerdo-apos-ablacao-de-fa-option",
+    "titulo": "Após ablação de fibrilação atrial em paciente de alto risco: oclusão do apêndice atrial esquerdo pode substituir o anticoagulante?",
+    "tema": "Dispositivos",
+    "nivel": "avançado",
+    "enunciado": "Homem, 71 anos, CHA₂DS₂-VASc = 4, foi submetido com sucesso a ablação por cateter de fibrilação atrial. Antes do procedimento relatava episódios recorrentes de epistaxe sob anticoagulação oral. A equipe discute se o implante de um dispositivo de oclusão do apêndice atrial esquerdo poderia substituir a manutenção do anticoagulante nesse paciente de risco elevado.",
+    "pergunta": "Segundo o ensaio OPTION (1.600 pacientes), o que se observou ao comparar oclusão do apêndice atrial esquerdo com manutenção do anticoagulante oral, em 36 meses?",
+    "opcoes": [
+      "A oclusão aumentou o risco de sangramento maior sem qualquer benefício",
+      "A oclusão foi associada a menor risco de segurança — sangramento maior (8,5% vs. 18,1%; p<0,001) — e foi não inferior ao anticoagulante em morte/AVC/embolia sistêmica (5,3% vs. 5,8%; p<0,001 não inferioridade)",
+      "Não houve diferença estatística em nenhum dos desfechos",
+      "A oclusão só demonstrou benefício em pacientes com contraindicação absoluta ao anticoagulante"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "No OPTION, 803 pacientes foram randomizados para oclusão e 797 para anticoagulação, após ablação de FA, CHA₂DS₂-VASc médio 3,5. Em 36 meses, o desfecho de segurança ocorreu em 8,5% do grupo dispositivo vs. 18,1% do anticoagulante (p<0,001 superioridade). O desfecho de eficácia (morte/AVC/embolia) ocorreu em 5,3% vs. 5,8% (p<0,001 não inferioridade).",
+    "source_refs": [
+      "Wazni OM, Saliba WI, Nair DG, et al.; OPTION Trial Investigators. Left Atrial Appendage Closure after Ablation for Atrial Fibrillation. N Engl J Med. 2025;392(13):1277-1287. DOI: 10.1056/NEJMoa2408308. PMID: 39555822"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "revascularizacao-completa-guiada-por-fisiologia-no-idoso-com-infarto-fire",
+    "titulo": "Infarto com doença multiarterial no paciente idoso: revascularizar tudo ou só a lesão culpada?",
+    "tema": "Doença coronariana",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 81 anos, admitida com infarto agudo do miocárdio, foi submetida a angioplastia primária bem-sucedida da artéria culpada. A coronariografia revela outras duas lesões não culpadas. A equipe discute se deve complementar com revascularização guiada por fisiologia das lesões não culpadas, ainda na mesma internação.",
+    "pergunta": "Segundo o ensaio FIRE (1.445 pacientes com 75 anos ou mais), o que a revascularização completa guiada por fisiologia mostrou em comparação à revascularização apenas da lesão culpada?",
+    "opcoes": [
+      "Reduziu o desfecho composto de morte, infarto, AVC ou revascularização em 1 ano (15,7% vs. 21,0%; HR 0,73; p=0,01), sem diferença no desfecho de segurança (22,5% vs. 20,4%; p=0,37)",
+      "Aumentou a mortalidade por excesso de lesão renal e sangramento",
+      "Não mostrou diferença em nenhum desfecho",
+      "O benefício só apareceu em subgrupo pré-especificado de FE reduzida"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O FIRE randomizou 1.445 pacientes ≥75 anos para revascularização completa guiada por fisiologia (720) ou apenas culpada (725). O desfecho primário ocorreu em 15,7% vs. 21,0% (HR 0,73; IC95% 0,57-0,93; p=0,01). O desfecho de segurança não diferiu (22,5% vs. 20,4%; p=0,37).",
+    "source_refs": [
+      "Biscaglia S, Guiducci V, Escaned J, et al.; FIRE Trial Investigators. Complete or Culprit-Only PCI in Older Patients with Myocardial Infarction. N Engl J Med. 2023;389(10):889-898. DOI: 10.1056/NEJMoa2300468. PMID: 37634150"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "seguranca-cardiovascular-de-aine-na-artrose-com-risco-cardiovascular-precision",
+    "titulo": "AINE crônico na artrose com risco cardiovascular: celecoxibe é mais seguro que naproxeno ou ibuprofeno?",
+    "tema": "Farmacologia",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 66 anos, hipertenso e com doença coronariana estável, necessita de AINE contínuo para osteoartrite de joelho refratária a analgésicos simples. O ortopedista pergunta ao cardiologista qual AINE apresenta menor risco cardiovascular.",
+    "pergunta": "Segundo o ensaio PRECISION (24.081 pacientes com artrite e risco cardiovascular aumentado), como se comparou a segurança cardiovascular do celecoxibe com naproxeno e ibuprofeno?",
+    "opcoes": [
+      "O celecoxibe foi significativamente inferior aos outros dois",
+      "O celecoxibe foi não inferior tanto ao naproxeno quanto ao ibuprofeno (2,3% vs. 2,5% vs. 2,7%; p<0,001 não inferioridade nas duas comparações), com risco gastrointestinal significativamente menor",
+      "Somente o ibuprofeno mostrou segurança aceitável",
+      "O estudo foi interrompido precocemente por futilidade"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O PRECISION randomizou 24.081 pacientes para celecoxibe, naproxeno ou ibuprofeno. O desfecho composto foi 2,3% vs. 2,5% vs. 2,7% (p<0,001 não inferioridade celecoxibe vs. cada comparador). O celecoxibe teve risco gastrointestinal significativamente menor. Limitação: alta taxa de descontinuação (68,8%) empurra estruturalmente o resultado para equivalência.",
+    "source_refs": [
+      "Nissen SE, Yeomans ND, Solomon DH, et al.; PRECISION Trial Investigators. Cardiovascular Safety of Celecoxib, Naproxen, or Ibuprofen for Arthritis. N Engl J Med. 2016;375(26):2519-2529. DOI: 10.1056/NEJMoa1611593. PMID: 27959716"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "prevencao-de-cardiotoxicidade-por-troponina-i-positiva-apos-quimioterapia-em-altas-doses-com-enalapril",
+    "titulo": "Troponina I positiva após quimioterapia em altas doses: iniciar enalapril antes de qualquer queda da FEVE?",
+    "tema": "Cardio-oncologia",
+    "nivel": "intermediário",
+    "enunciado": "Paciente com linfoma não-Hodgkin, 38 anos, em condicionamento com quimioterapia em altas doses para transplante autólogo de células-tronco. FEVE basal normal (62%). Um mês após a quimioterapia, dosagens seriadas de troponina I mostram elevação persistente, sem sintomas e sem queda da FEVE ao ecocardiograma de controle.",
+    "pergunta": "Com base no ensaio de Cardinale et al. (Circulation 2006), qual é a conduta mais bem fundamentada diante da troponina I positiva neste momento?",
+    "opcoes": [
+      "Aguardar o próximo ecocardiograma trimestral e só iniciar inibidor da ECA se houver queda confirmada da FEVE",
+      "Iniciar enalapril agora, guiado exclusivamente pela troponina I positiva, mesmo com a FEVE ainda normal",
+      "Iniciar a combinação de candesartana com metoprolol independentemente do valor da troponina, pois é a estratégia com maior nível de evidência disponível",
+      "Não intervir farmacologicamente, pois troponina isolada, sem queda de FEVE, não tem valor preditivo estabelecido para cardiotoxicidade tardia"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "No ensaio de Cardinale et al. (Circulation 2006;114(23):2474-2481), 114 dos 473 pacientes avaliados que apresentaram elevação da troponina I logo após quimioterapia em altas doses foram randomizados para receber enalapril 20 mg/dia (n=56) ou nenhum tratamento (n=58), iniciado 1 mês após a quimioterapia — antes de qualquer queda documentada da FEVE. O desfecho primário (queda absoluta de FEVE >10 pontos percentuais com valor abaixo do limite normal) ocorreu em 43% dos controles não tratados contra 0% do grupo tratado com enalapril (P<0,001). O estudo estabelece a troponina I positiva pós-quimioterapia, isoladamente, como gatilho suficiente para iniciar IECA precocemente — antes que a disfunção sistólica se manifeste.",
+    "source_refs": [
+      "Cardinale D, Colombo A, Sandri MT, Lamantia G, Colombo N, Civelli M, Martinelli G, Veglia F, Fiorentini C, Cipolla CM. Prevention of high-dose chemotherapy-induced cardiotoxicity in high-risk patients by angiotensin-converting enzyme inhibition. Circulation. 2006;114(23):2474-2481. DOI: 10.1161/CIRCULATIONAHA.106.635144. PMID: 17101852"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "reducao-de-estresse-psicossocial-com-meditacao-transcendental-na-prevencao-secundaria-da-doenca-coronariana",
+    "titulo": "Estresse psicossocial importante em paciente com DAC estabelecida: um programa estruturado de meditação muda desfechos duros?",
+    "tema": "Saúde mental e cardiologia",
+    "nivel": "intermediário",
+    "enunciado": "Paciente negro, 54 anos, com doença arterial coronariana documentada por cateterismo, já em uso otimizado de estatina, AAS e betabloqueador, relata estresse psicossocial crônico importante (trabalho, finanças) e hostilidade elevada em escala validada. Pergunta se \"técnicas de relaxamento\" têm respaldo científico para reduzir risco cardiovascular, além de bem-estar.",
+    "pergunta": "Segundo o ensaio randomizado de Schneider et al. (Circ Cardiovasc Qual Outcomes 2012) em pacientes negros com doença coronariana, qual foi o efeito do programa estruturado de Meditação Transcendental sobre o desfecho composto de mortalidade por qualquer causa, infarto do miocárdio ou AVC, comparado à educação em saúde?",
+    "opcoes": [
+      "Nenhuma redução estatisticamente significativa do desfecho primário; benefício restrito a escalas subjetivas de qualidade de vida",
+      "Redução significativa apenas da pressão arterial sistólica, sem qualquer efeito sobre eventos cardiovasculares maiores",
+      "Redução de 48% no risco do desfecho primário (HR 0,52; IC95% 0,29-0,92; P=0,025), associada à queda da pressão sistólica e da expressão de raiva",
+      "A evidência do ensaio se aplica só à prevenção primária em hipertensos, não a pacientes com doença coronariana já estabelecida"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "No ensaio (PMID 23149426), 201 homens e mulheres negros com doença coronariana foram randomizados para o programa de Meditação Transcendental ou educação em saúde. Ao longo de um seguimento médio de 5,4 anos, o grupo de meditação teve redução de 48% no desfecho primário — mortalidade por qualquer causa, infarto ou AVC (HR 0,52; IC95% 0,29-0,92; P=0,025) — e redução de 24%, não significativa, no desfecho secundário cardiovascular. Houve também queda de 4,9 mmHg na pressão sistólica e redução da expressão de raiva.",
+    "source_refs": [
+      "Schneider RH, Grim CE, Rainforth MV, Kotchen T, Nidich SI, Gaylord-King C, Salerno JW, Kotchen JM, Alexander CN. Stress reduction in the secondary prevention of cardiovascular disease: randomized, controlled trial of transcendental meditation and health education in Blacks. Circ Cardiovasc Qual Outcomes. 2012;5(6):750-758. DOI: 10.1161/CIRCOUTCOMES.112.967406. PMID: 23149426"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "ferramenta-de-decisao-statin-choice-em-diabetico-indeciso-sobre-iniciar-estatina",
+    "titulo": "Paciente diabético indeciso sobre iniciar estatina: uma ferramenta de decisão estruturada muda o desfecho da consulta?",
+    "tema": "Comunicação clínica",
+    "nivel": "básico",
+    "enunciado": "Paciente com diabetes tipo 2, 58 anos, sem doença cardiovascular estabelecida, está em consulta de acompanhamento metabólico e hesita em iniciar estatina para prevenção primária — diz não entender \"o quanto isso realmente ajuda\" e teme os efeitos colaterais que leu na internet.",
+    "pergunta": "Segundo o ensaio randomizado de Weymiller et al. (Arch Intern Med 2007), que testou a ferramenta de decisão compartilhada \"Statin Choice\" contra um folheto padrão sobre colesterol, qual foi o resultado?",
+    "opcoes": [
+      "Pacientes que usaram a ferramenta tiveram mais conhecimento sobre o risco cardiovascular, menor conflito decisório e maior adesão à estatina em 3 meses, comparados ao folheto padrão",
+      "A ferramenta não alterou o conhecimento do paciente nem a adesão, apenas aumentou a satisfação subjetiva com a consulta",
+      "A ferramenta reduziu a adesão à estatina, porque pacientes mais informados optaram por recusar o tratamento com mais frequência",
+      "O estudo não encontrou diferença em nenhum desfecho avaliado entre os dois grupos"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "No ensaio clínico randomizado por clusters (PMID 17533211), 98 pacientes com diabetes receberam a ferramenta Statin Choice (n=52) ou o folheto institucional padrão (n=46). Os pacientes que usaram a ferramenta souberam mais sobre as opções, estimaram melhor o próprio risco cardiovascular (OR 22,4) e a redução de risco absoluta com a estatina (OR 6,7), e tiveram menor conflito decisório. Em 3 meses, entre os pacientes em uso de estatina, houve menos relatos de dose esquecida no grupo intervenção (2 de 33) do que no controle (6 de 29).",
+    "source_refs": [
+      "Weymiller AJ, Montori VM, Jones LA, Gafni A, Guyatt GH, Bryant SC, Christianson TJ, Mullan RJ, Smith SA. Helping patients with type 2 diabetes mellitus make treatment decisions: statin choice randomized trial. Arch Intern Med. 2007;167(10):1076-1082. DOI: 10.1001/archinte.167.10.1076. PMID: 17533211"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "estresse-emocional-durante-jogos-de-futebol-de-alta-tensao-e-risco-de-eventos-cardiovasculares",
+    "titulo": "\"Meu time jogou a final e tive uma arritmia\": o que o estudo da Copa do Mundo de 2006 mostrou sobre estresse emocional e eventos cardiovasculares",
+    "tema": "Geral",
+    "nivel": "básico",
+    "enunciado": "Paciente do sexo masculino, 61 anos, com doença coronariana conhecida, relata palpitações e dor torácica que começaram cerca de uma hora após o início de uma partida decisiva de futebol de seu time, assistida com grande tensão emocional. Pergunta se existe alguma relação real entre \"emoção forte\" ao assistir a um jogo e eventos cardíacos.",
+    "pergunta": "Segundo o estudo prospectivo de Wilbert-Lampen et al. (NEJM 2008), conduzido em Munique durante a Copa do Mundo de 2006, o que se observou nos dias de jogos da seleção alemã?",
+    "opcoes": [
+      "Nenhum aumento mensurável de emergências cardíacas",
+      "O aumento de eventos cardiovasculares ocorreu apenas em pacientes sem doença coronariana prévia",
+      "O risco aumentado se limitou a arritmias benignas, sem qualquer elevação de infarto agudo do miocárdio",
+      "A incidência de emergências cardíacas agudas foi 2,66 vezes maior nos dias de jogo, chegando a 3,26 vezes em homens, com pico nas primeiras 2 horas após o início da partida"
+    ],
+    "resposta_correta": 3,
+    "explicacao": "No estudo (PMID 18234752), eventos cardiovasculares agudos de 4.279 pacientes na região de Munique foram avaliados durante a Copa do Mundo de 2006. Nos dias de jogo da seleção alemã, a incidência de emergências cardíacas foi 2,66 vezes maior (IC95% 2,33-3,04; P<0,001) — 3,26 vezes em homens. Entre os pacientes com eventos coronarianos nos dias de jogo, 47,0% já tinham doença coronariana conhecida, contra 29,1% no período controle. O pico foi nas primeiras 2 horas, com aumento também de arritmias com sintomas relevantes (3,07 vezes), não restrito a formas benignas.",
+    "source_refs": [
+      "Wilbert-Lampen U, Leistner D, Greven S, Pohl T, Sper S, Völker C, Güthlin D, Plasse A, Knez A, Küchenhoff H, Steinbeck G. Cardiovascular events during World Cup soccer. N Engl J Med. 2008;358(5):475-483. DOI: 10.1056/NEJMoa0707427. PMID: 18234752"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cardiopatia-reumatica-estabelecida-fibrilacao-atrial-como-preditor-de-mortalidade-remedy",
+    "titulo": "Cardiopatia reumática estabelecida: a fibrilação atrial muda o prognóstico?",
+    "tema": "Febre reumática",
+    "nivel": "intermediário",
+    "enunciado": "Mulher de 24 anos, com doença valvar reumática estabelecida (insuficiência mitral moderada a grave), classe funcional NYHA II, em ritmo sinusal e sem sinais de insuficiência cardíaca descompensada. Em consulta ambulatorial de rotina, o ECG mostra novo episódio de fibrilação atrial paroxística, assintomática.",
+    "pergunta": "De acordo com o estudo REMEDY (Zühlke et al., Circulation 2016), que acompanhou por dois anos 3.343 pacientes com cardiopatia reumática em 25 centros de 14 países de baixa e média renda, o surgimento de fibrilação atrial nesta paciente:",
+    "opcoes": [
+      "É um preditor independente de mortalidade em dois anos (HR 1,40; IC95% 1,10-1,78), e deve reforçar a atenção à anticoagulação e a um seguimento clínico mais próximo.",
+      "Não altera o prognóstico, pois no REMEDY apenas a doença valvar grave e a classe funcional III/IV foram preditores independentes de morte.",
+      "É a principal causa de óbito identificada no estudo, respondendo por mais da metade dos 500 óbitos registrados em dois anos.",
+      "Só tem valor prognóstico em pacientes acima de 60 anos, faixa etária predominante da coorte do REMEDY."
+    ],
+    "resposta_correta": 0,
+    "explicacao": "No REMEDY, a mortalidade em 2 anos foi de 16,9% (500 óbitos), com idade mediana de apenas 28 anos. Os preditores independentes de morte foram: doença valvar grave (HR 2,36), insuficiência cardíaca congestiva (HR 2,16), classe funcional NYHA III/IV (HR 1,67), fibrilação atrial (HR 1,40; IC95% 1,10-1,78) e idade mais avançada. Escolaridade pós-primária e sexo feminino associaram-se a menor risco. A FA entra como preditor independente, não subordinado à gravidade valvar.",
+    "source_refs": [
+      "Zühlke L, Karthikeyan G, Engel ME, et al. Clinical Outcomes in 3343 Children and Adults With Rheumatic Heart Disease From 14 Low- and Middle-Income Countries: Two-Year Follow-Up of the Global Rheumatic Heart Disease Registry (the REMEDY Study). Circulation. 2016;134(19):1456-1466. DOI: 10.1161/CIRCULATIONAHA.116.024769. PMID: 27702773"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hap-em-terapia-dupla-oral-adicionar-selexipague-via-da-prostaciclina-griphon",
+    "titulo": "HAP em terapia dupla oral, ainda sintomática: adicionar um agente da via da prostaciclina? O ensaio GRIPHON",
+    "tema": "Hipertensão pulmonar",
+    "nivel": "avançado",
+    "enunciado": "Mulher de 41 anos com hipertensão arterial pulmonar idiopática, classe funcional II-III da OMS, já em combinação de antagonista do receptor de endotelina e inibidor da fosfodiesterase-5 há alguns meses, mantém teste de caminhada de 6 minutos limitado e é candidata a escalonamento terapêutico com agonista oral seletivo do receptor de prostaciclina (IP).",
+    "pergunta": "No ensaio GRIPHON (Sitbon et al., N Engl J Med 2015), que randomizou 1.156 pacientes com HAP para selexipague ou placebo, qual foi o resultado sobre o desfecho primário composto (morte por qualquer causa ou complicação relacionada à HAP)?",
+    "opcoes": [
+      "O evento ocorreu em 41,6% do grupo placebo contra 27,0% do grupo selexipague (HR 0,60; IC99% 0,46-0,78; p<0,001), com efeito semelhante em quem já usava terapia combinada dupla, mas sem diferença significativa de mortalidade isolada.",
+      "Selexipague reduziu significativamente a mortalidade por todas as causas em relação ao placebo, isoladamente.",
+      "O desfecho composto foi neutro entre os grupos, e o benefício ficou restrito a melhora hemodinâmica.",
+      "O efeito do selexipague desapareceu no subgrupo já em terapia combinada dupla."
+    ],
+    "resposta_correta": 0,
+    "explicacao": "No GRIPHON, o desfecho primário ocorreu em 397 pacientes: 41,6% no placebo vs. 27,0% no selexipague (HR 0,60; IC99% 0,46-0,78; p<0,001). O efeito foi semelhante tanto no subgrupo virgem de tratamento quanto no já em tratamento de base. Não houve diferença significativa de mortalidade isolada (105 vs. 100 óbitos).",
+    "source_refs": [
+      "Sitbon O, Channick R, Chin KM, et al.; GRIPHON Investigators. Selexipag for the Treatment of Pulmonary Arterial Hypertension. N Engl J Med. 2015;373(26):2522-2533. DOI: 10.1056/NEJMoa1503184. PMID: 26699168"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "tamponamento-cardiaco-com-pressoes-de-enchimento-persistentes-apos-pericardiocentese-pericardite-efusivo-constritiva",
+    "titulo": "Tamponamento cardíaco tratado, mas a pressão de enchimento não normaliza: pericardite efusivo-constritiva?",
+    "tema": "Pericárdio",
+    "nivel": "avançado",
+    "enunciado": "Paciente com tamponamento cardíaco é submetido a pericardiocentese associada a cateterismo cardíaco. Após a drenagem, a pressão intrapericárdica cai, porém as pressões de átrio direito e de enchimento diastólico final permanecem elevadas, com morfologia em \"dip-plateau\" na curva de pressão.",
+    "pergunta": "Com base na série prospectiva de Sagristà-Sauleda et al. (N Engl J Med 2004), qual é a interpretação e conduta mais adequadas para esse padrão hemodinâmico?",
+    "opcoes": [
+      "O achado define pericardite efusivo-constritiva — constrição pelo pericárdio visceral coexistindo com o derrame —, e a escolha entre observação e pericardiectomia depende da evolução clínica.",
+      "É um artefato hemodinâmico esperado logo após qualquer pericardiocentese, sem relação com constrição.",
+      "Esse padrão é exclusivo de etiologia neoplásica e indica quimioterapia sistêmica imediata.",
+      "A persistência das pressões elevadas contraindica pericardiectomia."
+    ],
+    "resposta_correta": 0,
+    "explicacao": "De 1.184 pacientes com pericardite, 218 tiveram tamponamento e 190 foram submetidos a pericardiocentese combinada com cateterismo; 15 preencheram critério de pericardite efusivo-constritiva. Após a pericardiocentese, a pressão intrapericárdica caiu, mas as pressões de átrio direito e diastólicas finais permaneceram elevadas. Pericardiectomia foi necessária em 7 dos 15 pacientes, todos com acometimento do pericárdio visceral, e funcionou nesses casos; 3 pacientes tiveram resolução espontânea.",
+    "source_refs": [
+      "Sagristà-Sauleda J, Angel J, Sánchez A, Permanyer-Miralda G, Soler-Soler J. Effusive-constrictive pericarditis. N Engl J Med. 2004;350(5):469-475. DOI: 10.1056/NEJMoa035630. PMID: 14749455"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hipotensao-ortostatica-neurogenica-tontura-ao-levantar-midodrina-tem-evidencia",
+    "titulo": "Tontura ao levantar por hipotensão ortostática neurogênica, não síncope reflexa: a midodrina tem respaldo próprio?",
+    "tema": "Síncope",
+    "nivel": "intermediário",
+    "enunciado": "Homem de 68 anos, com disautonomia (neuropatia autonômica por diabetes de longa data), relata tontura e quase-síncope reprodutíveis ao levantar-se, sem pródromos vasovagais típicos. A medida de pressão arterial em pé confirma queda sustentada, compatível com hipotensão ortostática neurogênica, e não com síncope reflexa.",
+    "pergunta": "Qual evidência sustenta especificamente o uso de midodrina neste quadro de hipotensão ortostática NEUROGÊNICA, distinto da síncope vasovagal reflexa (onde a midodrina foi testada no ensaio POST 4)?",
+    "opcoes": [
+      "O ensaio do Midodrine Study Group (JAMA 1997) — dedicado à hipotensão ortostática neurogênica — randomizou 171 pacientes para midodrina ou placebo e mostrou melhora da pressão sistólica em ortostase em todos os tempos (p<0,001) e do escore global de sintomas.",
+      "Não existe ensaio randomizado dedicado à hipotensão ortostática neurogênica; toda evidência é extrapolada do POST 4.",
+      "A midodrina é formalmente contraindicada na hipotensão ortostática neurogênica pelo risco de hipertensão supina.",
+      "O único desfecho positivo do estudo foi um marcador laboratorial, sem melhora dos sintomas."
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O Midodrine Study Group (Low PA et al., JAMA 1997) é ensaio próprio, multicêntrico (25 centros), dedicado à hipotensão ortostática NEUROGÊNICA — população diferente da síncope vasovagal reflexa do POST 4. Dos 171 pacientes randomizados, midodrina 10 mg 3x/dia melhorou a pressão sistólica em ortostase em todas as visitas (p<0,001) e o escore global de alívio de sintomas. Principais eventos adversos: reações pilomotoras, retenção urinária e hipertensão supina, que exige monitorização mas não é contraindicação absoluta.",
+    "source_refs": [
+      "Low PA, Gilden JL, Freeman R, Sheng KN, McElligott MA; Midodrine Study Group. Efficacy of midodrine vs placebo in neurogenic orthostatic hypotension. JAMA. 1997;277(13):1046-1051. PMID: 9091692"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "choque-cardiogenico-grave-ou-em-rapida-deterioracao-ecmo-va-imediata-ou-conservadora-ecmo-cs",
+    "titulo": "Choque cardiogênico grave ou em rápida deterioração: ECMO veno-arterial imediata ou estratégia inicialmente conservadora?",
+    "tema": "Terapia intensiva",
+    "nivel": "avançado",
+    "enunciado": "Paciente admitido em UTI cardiológica com choque cardiogênico classificado como grave ou em rápida deterioração hemodinâmica, de etiologia não restrita a infarto agudo do miocárdio. A equipe discute se a canulação imediata para ECMO veno-arterial deve ser feita de rotina, ou se é possível manter tratamento inicialmente conservador.",
+    "pergunta": "No ensaio ECMO-CS (Ostadal et al., Circulation 2023), que randomizou 117 pacientes com choque cardiogênico grave para VA-ECMO imediata versus estratégia inicial conservadora, qual foi o resultado sobre o desfecho composto em 30 dias?",
+    "opcoes": [
+      "Não houve diferença estatisticamente significativa entre as estratégias (63,8% vs. 71,2%; HR 0,72; p=0,21), e 39% do grupo conservador precisou de ECMO downstream por piora.",
+      "A ECMO imediata reduziu significativamente a mortalidade por todas as causas.",
+      "O ensaio incluiu exclusivamente choque relacionado a infarto agudo, com desenho equivalente ao ECLS-SHOCK.",
+      "A estratégia conservadora foi superior de forma estatisticamente significativa."
+    ],
+    "resposta_correta": 0,
+    "explicacao": "No ECMO-CS, 117 pacientes foram analisados: 58 para VA-ECMO imediata e 59 para conduta inicialmente conservadora. O desfecho composto em 30 dias ocorreu em 63,8% vs. 71,2% (HR 0,72; IC95% 0,46-1,12; p=0,21) — sem significância. VA-ECMO foi usada posteriormente em 23 dos 59 pacientes (39%) do grupo conservador. Diferente do ECLS-SHOCK, o ECMO-CS incluiu etiologias mais amplas, e os dois ensaios convergem para ausência de benefício claro de VA-ECMO precoce de rotina.",
+    "source_refs": [
+      "Ostadal P, Rokyta R, Karasek J, et al.; ECMO-CS Investigators. Extracorporeal Membrane Oxygenation in the Therapy of Cardiogenic Shock: Results of the ECMO-CS Randomized Clinical Trial. Circulation. 2023;147(6):454-464. DOI: 10.1161/CIRCULATIONAHA.122.062949. PMID: 36335478"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "estenose-aortica-grave-idoso-avaliacao-de-risco-cirurgico-euroscore-ii",
+    "titulo": "Estenose aórtica grave em idoso: o EuroSCORE II ajuda a decidir entre TAVI e cirurgia?",
+    "tema": "Calculadoras",
+    "nivel": "básico",
+    "enunciado": "Paciente de 78 anos com estenose aórtica grave sintomática é discutido em heart team para decisão entre troca valvar cirúrgica e TAVI. A equipe utiliza o EuroSCORE II para estimar o risco cirúrgico de mortalidade.",
+    "pergunta": "Sobre o EuroSCORE II (Nashef et al., Eur J Cardiothorac Surg 2012), qual afirmação está correta?",
+    "opcoes": [
+      "Foi derivado de 22.381 pacientes submetidos a cirurgia cardíaca maior em 154 hospitais de 43 países, com boa calibração (mortalidade real 4,18% vs. prevista 3,95%) e discriminação (AUC 0,8095), corrigindo a superestimação do modelo original.",
+      "É validado exclusivamente para cirurgia valvar isolada.",
+      "Foi criado porque o EuroSCORE original subestimava sistematicamente a mortalidade cirúrgica.",
+      "Utiliza apenas variáveis clínicas do paciente, sem variável do procedimento."
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O EuroSCORE II foi derivado de 22.381 pacientes consecutivos em 154 hospitais de 43 países. A mortalidade global observada foi 3,9%. O modelo antigo SUPERESTIMOU a mortalidade atual (prevista 5,8-7,57% vs. real 3,9%). O EuroSCORE II mostrou boa calibração no subconjunto de validação (real 4,18% vs. prevista 3,95%) e discriminação muito boa (AUC 0,8095). Aplica-se a cirurgia cardíaca maior em geral, não só valvar.",
+    "source_refs": [
+      "Nashef SA, Roques F, Sharples LD, Nilsson J, Smith C, Goldstone AR, Lockowandt U. EuroSCORE II. Eur J Cardiothorac Surg. 2012;41(4):734-744. DOI: 10.1093/ejcts/ezs043. PMID: 22378855"
+    ],
+    "review_status": "revisado"
   }
 ]
