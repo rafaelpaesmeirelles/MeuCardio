@@ -22,6 +22,55 @@
 > **Padrão já observado nas duas escaladas de meta (1.000→2.000→3.000):** o Rafael eleva a régua
 > assim que a anterior é confirmada batida, no mesmo dia. Não tratar a meta corrente como teto
 > fixo — ao se aproximar dela, é esperado que uma nova vier substituí-la, não somar-se a ela.
+>
+> ### 🗺️ MAPA DE FONTES JÁ ABERTAS E AINDA NÃO ESCRITAS — acrescentado pela Biblioteca (fora do tmux) em 01/08/2026
+> Estas fontes foram localizadas, abertas e **conferidas por mim contra o original**, e estão
+> **só parcialmente aproveitadas**. Para os próximos lotes **não é preciso procurar fonte nova**:
+> - **JCS 2022 de avaliação perioperatória** (Circ J 2023;87(9):1253-1337, PMID 37558469, PDF
+>   aberto no J-STAGE): ~45 recomendações graduadas, com o RCRI por estrato, o corte de baixo
+>   risco **redefinido de 1% para 5%** e a definição operacional de MINS. Nenhuma escrita ainda.
+> - **RHDAustralia 2020** (guideline em PDF aberto, 21.167 linhas; artigo-resumo PMID 33190309):
+>   critérios de Jones com os cortes por população de risco e a **tabela de duração da profilaxia
+>   secundária por gravidade da cardite** — o dado mais pedido do tema Febre reumática.
+> - **JCS 2026 de endocardite**: 14 de ~37 recomendações escritas. Faltam as Tables 25, 46 e 47.
+> - **DCEI 2023, recorte de SÍNCOPE**: ~25 recomendações graduadas, e é a **única** cobertura
+>   brasileira do tema com Classe/Nível.
+> - **Síncope neuromediada em crianças e adolescentes 2024** (PMC11502568): ~20 recomendações,
+>   com os cortes de teste de inclinação e de POTS por faixa etária.
+> - **Posicionamento SBC de gravidez e planejamento familiar 2020** (PMC8386991): **resolve a
+>   lacuna de contracepção na mulher com cardiopatia**, que este arquivo registrava como bloqueada
+>   por 403 no Oxford Academic desde 29/07. Não usa Classe/Nível — usa a classificação de risco da
+>   OMS modificada e as categorias 1-4 de elegibilidade, e isso precisa ser declarado no registro.
+>
+> ### 🔑 Quatro vias de acesso descobertas em 01/08/2026 — valem mais que qualquer fonte isolada
+> 1. **`esearch db=pmc` NÃO indexa termos em português.** `endocardite[title]` devolve
+>    `phrasesnotfound` — isso **não** prova que a diretriz não exista, prova que a consulta nunca
+>    vai achá-la. Buscar por título em INGLÊS ou por `"Arq Bras Cardiol"[journal]`.
+> 2. **A Circulation Journal (JCS) é integralmente aberta no J-STAGE** e publica diretrizes
+>    completas com COR/LOE — é a **substituta viável da ESC e da AHA sempre que estas derem 403**.
+>    Há diretrizes JCS de valvopatia, FA, IC e dispositivos pelo mesmo caminho.
+> 3. **Tabela depositada como IMAGEM no PMC é legível.** Quando o XML vem sem corpo e o HTML dá
+>    reCAPTCHA, as tabelas podem estar em
+>    `https://pmc.ncbi.nlm.nih.gov/articles/instance/<PMCIDsemPMC>/bin/<prefixo>NN.jpg` — foi assim
+>    que a ESC 2015 de pericárdio rendeu 108 registros. **Exige um PMCID**: sem registro no PMC não
+>    há instância, e aí a via não existe.
+> 4. **Diretriz nacional publicada como LIVRO em PDF rende muito mais que o artigo-resumo
+>    indexado** — o resumo da RHDAustralia no MJA tem 8 páginas; o guideline tem 21.167 linhas.
+>
+> ### 🚫 Lacunas fechadas POR MEDIÇÃO — não repetir estas buscas
+> - **NÃO existe diretriz brasileira dedicada a síncope** (varredura das 79 diretrizes e
+>   posicionamentos da SBC no PMC). A cobertura com Classe/Nível existe só dentro da DCEI 2023.
+> - **NÃO existe diretriz SBC de IAMCSST posterior a 2015**, e a de 2015 (PMID 26375058) não tem
+>   PMC; SciELO dá 403 e `publicacoes.cardiol.br` devolve a home. Prazos porta-agulha e
+>   porta-balão, fibrinólise e estratégia farmacoinvasiva seguem sem fonte brasileira aberta.
+> - **Sem PMC, portanto sem via de imagem: ESC 2018 de síncope · ACC/AHA/HRS 2017 de síncope ·
+>   ESC 2020 de congênitas do adulto · AHA/ACC 2018 de congênitas · ESC 2022 e AHA 2024 de
+>   perioperatório · ESC 2023 e ESC 2025 de pericardite/miocardite.** Não é paywall contornável —
+>   é ausência de registro no PMC.
+> - O consenso de **cardioneuroablação** EHRA/HRS/APHRS/LAHRS 2024 abre (PMC11350289) mas **não é
+>   graduado** — zero ocorrências de classe ou nível. Não serve para registro de evidência.
+> - A diretriz canadense de congênitas (CJC 2010) tem PMCID mas o depósito é **só do resumo**:
+>   XML sem `<body>`, `oa.fcgi` devolve `idIsNotOpenAccess` e o PDF cai em reCAPTCHA.
 
 > ## 🎉 META DE 2.000 ITENS ATINGIDA em 01/08/2026 — **2.002 itens, oito dias antes do prazo**
 > Medido no disco depois de as sessões commitarem: `content/*.md` 571 · `evidencias` **865** ·
@@ -3420,6 +3469,28 @@ achado de ventriculografia) e despublicar a de Saúde mental, ou o inverso, à e
 `gallery_images` foi de 74/74 para **73/74**. `AuditLog` gravado com ação `despublicar`, o MD5 da
 duplicata, o slug que permanece publicado e a autorização nominal do Rafael. **Nenhum arquivo foi
 apagado** — a imagem e a entrada em `galeria/metadados.json` continuam no disco; só saiu do ar.
+
+### 🖼️ SEGUNDA DUPLICATA DE IMAGEM ENCONTRADA, 01/08/2026 à tarde — decisão do Rafael (mesmo padrão do takotsubo)
+Sessão da Biblioteca (tmux), achada por acaso ao conferir MD5 de uma imagem nova contra o acervo
+inteiro antes de baixar (rotina de checagem de duplicata, não busca dirigida). **Dois registros de
+`galeria/metadados.json` apontam para o MESMO arquivo** (MD5 idêntico, `445315e566177d417c97c95fb231150e`),
+os dois `published = True` no banco (conferido agora por container exec, não é suposição):
+- `ecg-fibrilacao-atrial` (tema Fibrilação atrial — faixa de Medicamentos)
+- `fibrilacao-atrial-pos-operatoria` (tema Perioperatório — minha faixa)
+
+**Diferença para o caso do takotsubo:** aqui os dois registros **citam a mesma fonte do Wikimedia
+Commons** (`File:Atrial_Fibrillation_in_two_leads.jpg`) e descrevem o mesmo achado eletrocardiográfico
+com fidelidade — não há erro de identificação como no takotsubo. É reaproveitamento do mesmo ECG
+genérico para dois textos didáticos diferentes (reconhecimento geral de FA vs. FA especificamente
+no pós-operatório), não uma imagem "descrita como o que não é". Ainda assim, um assinante que veja
+os dois temas encontra a mesma foto duas vezes — mesmo problema de fundo do takotsubo.
+
+**Não despubliquei** — ação destrutiva em banco continua exigindo o Rafael, e a frente `galeria/`
+para o tema Fibrilação atrial não é minha (é de Medicamentos), então a escolha de qual registro
+manter também não é só minha. Recomendação: como as duas entradas têm valor didático genuinamente
+diferente (uma é conceito geral, a outra é achado + conduta específicos do contexto perioperatório),
+a saída mais barata pode ser **trocar a imagem de um dos dois** por outra foto de FA de fonte aberta,
+em vez de despublicar qualquer uma — mas fica à escolha do Rafael, como no caso anterior.
 
 **Não precisa de guarda extra contra recarga:** conferi o `carregar_galeria.py` depois de
 despublicar. No ramo de registro já existente ele atualiza por lista explícita de campos
