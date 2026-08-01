@@ -4317,5 +4317,86 @@
       "Descontinuação prematura por evento adverso: 14,3% (selexipague) vs. 7,1% (placebo) no GRIPHON — mais que o dobro em relação ao placebo",
       "fonte: Sitbon O et al.; GRIPHON Investigators. N Engl J Med. 2015;373(26):2522-2533, PMID 26699168; e Chin KM et al., J Am Coll Cardiol. 2021;78(14):1393-1403, PMID 34593120"
     ]
+  },
+  {
+    "slug": "dopamina",
+    "review_status": "pendente_revisao",
+    "generic_name": "Dopamina (cloridrato de dopamina)",
+    "brand_names": [
+      "Revivan"
+    ],
+    "drug_class": "Agente inotrópico/vasopressor — catecolamina endógena, precursora imediata da noradrenalina",
+    "mechanism": "Catecolamina endógena (precursora imediata da noradrenalina) com efeito dose-dependente sobre três classes de receptores: em dose baixa, estimula receptores dopaminérgicos (DA1), produzindo vasodilatação renal, mesentérica e cerebral; em dose intermediária, estimula receptores beta-1 adrenérgicos, aumentando contratilidade e frequência cardíaca; em dose alta, predomina a estimulação de receptores alfa-1 adrenérgicos, produzindo vasoconstrição periférica. **VERIFICAÇÃO HUMANA NECESSÁRIA**: os cortes de mcg/kg/min que demarcam cada faixa de efeito variam entre a bula brasileira e o rótulo norte-americano (ver campo `dosing`) — não há sobreposição farmacológica exata entre os dois receptores numa única dose, a transição é gradual, e a literatura mais recente questiona a robustez clínica da separação em \"dose renal/dose beta/dose alfa\". **fonte**: bula do REVIVAN (cloridrato de dopamina, Zambon) e rótulo da dopamine hydrochloride injection (DailyMed/FDA)",
+    "presentations": [
+      "Ampola de cloridrato de dopamina 50 mg",
+      "Ampola de cloridrato de dopamina 200 mg",
+      "**fonte**: bula do REVIVAN (Zambon). VERIFICAÇÃO HUMANA NECESSÁRIA: volume exato (mL) e concentração (mg/mL) de cada apresentação comercial não confirmados na fonte consultada — conferir bula/rótulo impresso antes de usar em protocolo de diluição"
+    ],
+    "indications": [
+      "Correção do desequilíbrio hemodinâmico presente no choque (cardiogênico, séptico, hipovolêmico após reposição volêmica adequada, anafilático), em traumatismos, hemorragias, septicemias, intoxicações e no período pós-operatório — **fonte**: bula do REVIVAN (Zambon)",
+      "Preparo pré-operatório de pacientes de alto risco — **fonte**: bula do REVIVAN (Zambon)",
+      "Insuficiência renal e estados de retenção hidrossalina de etiologia variada — **fonte**: bula do REVIVAN (Zambon)",
+      "**Ressalva de evidência comparativa, não da bula**: o ensaio SOAP II (De Backer D et al., N Engl J Med. 2010;362(9):779-789, PMID 20200382) mostrou maior taxa de eventos arrítmicos com dopamina que com noradrenalina (24,1% vs. 12,4%, p<0,001) e sinal de maior mortalidade em 28 dias especificamente no subgrupo de choque cardiogênico (p=0,03) — ver campo `outcomes` e o documento `content/Terapia_intensiva/dopamina-versus-noradrenalina-no-choque-o-ensaio-soap-ii.md`. Isso sustenta preferir noradrenalina como vasopressor de primeira linha no choque em geral, e em especial no choque cardiogênico, mesmo com a dopamina permanecendo indicação registrada em bula"
+    ],
+    "monitoring": [
+      "Monitorização hemodinâmica contínua (pressão arterial, frequência cardíaca) e ECG contínuo, pelo risco de taquiarritmias e de eventos ectópicos ventriculares",
+      "Débito urinário e perfusão periférica — dopamina em dose baixa tem sido usada historicamente com intenção de proteção renal, mas essa indicação **não tem sustentação em desfecho clínico robusto** (VERIFICAÇÃO HUMANA NECESSÁRIA quanto à posição atual da bula brasileira sobre isso; a literatura internacional já abandonou o conceito de \"dose renal\" como estratégia de nefroproteção)",
+      "Local de punção venosa — risco de extravasamento com necrose tecidual; via central é preferencial (ver campo `notes`)",
+      "**fonte**: bula do REVIVAN (Zambon) e rótulo DailyMed (dopamine hydrochloride injection)"
+    ],
+    "adverse_effects": [
+      "Náuseas e vômitos",
+      "Batimentos ectópicos (extrassístoles) e taquicardia",
+      "Dispneia",
+      "Hipotensão e, em dose mais alta, hipertensão e vasoconstrição excessiva",
+      "Alterações isquêmicas periféricas em pacientes com doença vascular preexistente",
+      "**fonte**: bula do REVIVAN (Zambon)",
+      "Complementar do rótulo norte-americano (DailyMed): arritmia ventricular, fibrilação atrial, anormalidades de condução (alargamento de QRS), bradicardia, dor anginosa, palpitação, cefaleia, ansiedade, piloereção, azotemia; **gangrena de extremidades** relatada com doses altas por período prolongado ou em doença vascular oclusiva mesmo com dose baixa — **fonte**: rótulo DailyMed (dopamine hydrochloride injection), FDA. VERIFICAÇÃO HUMANA NECESSÁRIA: confirmar se a bula brasileira do REVIVAN também registra gangrena de extremidade como reação adversa listada"
+    ],
+    "contraindications": [
+      "Feocromocitoma",
+      "Taquiarritmias não tratadas ou fibrilação ventricular",
+      "**fonte**: bula do REVIVAN (Zambon)",
+      "Complementar do rótulo DailyMed (não confirmado na bula brasileira consultada — VERIFICAÇÃO HUMANA NECESSÁRIA): hipersensibilidade ao fármaco ou a sulfitos presentes na formulação"
+    ],
+    "interactions": [
+      "**Inibidores da MAO**: risco de crise hipertensiva grave e prolongada — se uso recente (últimas 2-3 semanas) for inevitável, iniciar dopamina em no máximo 1/10 da dose usual. **fonte**: rótulo DailyMed",
+      "**Antidepressivos tricíclicos**: podem potencializar a resposta pressora à dopamina. **fonte**: rótulo DailyMed",
+      "**Anestésicos halogenados** (inalatórios): aumentam a irritabilidade autonômica cardíaca e podem sensibilizar o miocárdio à dopamina, com risco de arritmia ventricular e hipertensão — cautela extrema. **fonte**: rótulo DailyMed e bula do REVIVAN",
+      "**Betabloqueadores**: antagonizam o efeito cardíaco (cronotrópico/inotrópico) da dopamina. **fonte**: rótulo DailyMed e bula do REVIVAN",
+      "**Fenitoína**: relato de hipotensão e bradicardia com uso concomitante — preferir outro anticonvulsivante durante infusão de dopamina. **fonte**: rótulo DailyMed",
+      "**Diuréticos**: efeito aditivo ou potencializador sobre o fluxo urinário. **fonte**: rótulo DailyMed",
+      "**Haloperidol**: suprime a vasodilatação renal e mesentérica mediada por dopamina em infusão de dose baixa. **fonte**: rótulo DailyMed",
+      "**Soluções alcalinas** (ex.: bicarbonato de sódio) na mesma via: incompatibilidade físico-química, inativam a dopamina — não coadministrar na mesma linha. **fonte**: bula do REVIVAN",
+      "**Digitálicos**: risco somado de arritmia. **fonte**: bula do REVIVAN",
+      "**Derivados do ergot**: risco de vasoconstrição excessiva/ergotismo. **fonte**: bula do REVIVAN"
+    ],
+    "dosing": {
+      "faixa dopaminergica (bula brasileira)": "1 a 2 mcg/kg/min — vasodilatação renal, mesentérica e cerebral predominante",
+      "faixa intermediaria/beta (bula brasileira)": "2 a 10 mcg/kg/min — estimulação beta-1 e alfa-adrenérgica, aumento do débito cardíaco",
+      "faixa alfa-adrenergica (bula brasileira)": "acima de 10 mcg/kg/min — vasoconstrição predominante",
+      "dose inicial adulto (bula brasileira)": "2 a 5 mcg/kg/min, com incrementos de 5 em 5 mcg/kg/min conforme resposta clínica e hemodinâmica",
+      "dose pediatrica (bula brasileira)": "2 a 5 mcg/kg/min em normotensos; acima de 5 mcg/kg/min se hipotensão; dose máxima de 20 mcg/kg/min",
+      "faixas equivalentes no rotulo norte-americano — DIVERGEM DA BULA BRASILEIRA, VERIFICAÇÃO HUMANA NECESSÁRIA": "DailyMed descreve: baixa 0,5-2 mcg/kg/min (dopaminérgica renal/mesentérica); intermediária 2-10 mcg/kg/min (beta-1); alta 10-20 mcg/kg/min (surgimento de efeito alfa); muito alta acima de 20 mcg/kg/min (alfa predominante). Dose inicial 2-5 mcg/kg/min em paciente menos grave, 5 mcg/kg/min em paciente mais grave, com incrementos de 5-10 mcg/kg/min até 20-50 mcg/kg/min conforme necessário. **A bula brasileira não registra faixa acima de 20 mcg/kg/min no adulto; o rótulo americano admite titulação até 50 mcg/kg/min** — não usar a dose mais alta sem confirmar contra a bula vigente do REVIVAN, porque os dois documentos não convergem no teto",
+      "diluicao e via (bula brasileira)": "Diluir assepticamente 100 a 250 mg em 100, 250 ou 500 mL de solução fisiológica, glicosada, Ringer ou solução compatível similar. Via exclusivamente intravenosa, em infusão contínua com bomba de infusão para titulação precisa. Via central preferencial pelo risco de extravasamento e necrose tecidual (ver `notes`)",
+      "fonte": "bula do REVIVAN (cloridrato de dopamina, Zambon) para a faixa e dose brasileira; rótulo DailyMed (dopamine hydrochloride injection, FDA) para a faixa e dose norte-americana, citada apenas como comparação — a bula brasileira é a fonte que deve prevalecer na prática clínica no Brasil"
+    },
+    "notes": {
+      "extravasamento e antidoto": "Em caso de extravasamento, infiltrar o tecido afetado o mais rápido possível com 10 a 15 mL de solução salina contendo 5 a 10 mg de mesilato de fentolamina, usando agulha fina, para prevenir necrose e esfacelamento tecidual — mesmo antídoto e mesma técnica já usados para extravasamento de noradrenalina. **fonte**: rótulo DailyMed (dopamine hydrochloride injection, FDA). VERIFICAÇÃO HUMANA NECESSÁRIA: confirmar se a bula brasileira do REVIVAN traz a mesma orientação e a mesma dose de fentolamina",
+      "via de acesso": "Via central é preferencial para infusão contínua, pelo risco de extravasamento e necrose tecidual em veia periférica — mesma lógica de outros vasopressores catecolaminérgicos (noradrenalina, adrenalina)",
+      "superdosagem (rotulo DailyMed)": "Elevação excessiva da pressão arterial: reduzir a velocidade de infusão ou suspender temporariamente a dopamina. Pela meia-vida curta do fármaco, geralmente não são necessárias medidas adicionais; se a pressão não estabilizar, considerar bloqueador alfa-adrenérgico de ação curta (fentolamina). **fonte**: rótulo DailyMed. VERIFICAÇÃO HUMANA NECESSÁRIA: conferir se a bula brasileira do REVIVAN traz conduta de superdosagem própria",
+      "comparacao com noradrenalina no choque — ensaio SOAP II": "Ver campo `outcomes` e o documento já publicado `content/Terapia_intensiva/dopamina-versus-noradrenalina-no-choque-o-ensaio-soap-ii.md`: dopamina associou-se a mais eventos arrítmicos que noradrenalina (24,1% vs. 12,4%, p<0,001) e a sinal de maior mortalidade em 28 dias no subgrupo específico de choque cardiogênico (p=0,03), sem diferença na mortalidade em 28 dias considerando a população geral do estudo (52,5% vs. 48,5%, p=0,10). É a base para preferir noradrenalina como vasopressor de primeira linha no choque, particularmente no cardiogênico",
+      "conceito de \"dose renal\" — abandonado": "O uso histórico de dopamina em dose baixa (\"dose renal\", 1-2 mcg/kg/min) com intenção de proteção ou nefroproteção não tem sustentação em desfecho clínico robusto na literatura contemporânea de terapia intensiva. **VERIFICAÇÃO HUMANA NECESSÁRIA**: esta nota reflete conhecimento consolidado da terapia intensiva geral, não foi extraída literalmente da bula do REVIVAN nem confirmada por diretriz específica nesta sessão — checar contra diretriz de choque/sepse antes de usar como orientação normativa isolada"
+    },
+    "outcomes": {
+      "Evidencia comparativa — SOAP II": "- **desenho**: ensaio multicêntrico randomizado, 1.679 pacientes com choque (858 dopamina, 821 noradrenalina) designados a receber dopamina ou noradrenalina como vasopressor de primeira linha - **resultado**: sem diferença significativa no desfecho primário de mortalidade em 28 dias — 52,5% (dopamina) vs. 48,5% (noradrenalina), razão de chances 1,17 (IC95% 0,97-1,42; p=0,10); **mais eventos arrítmicos com dopamina** — 207 (24,1%) vs. 102 (12,4%), p<0,001; em análise de subgrupo por etiologia, dopamina associou-se a maior mortalidade em 28 dias especificamente nos 280 pacientes com **choque cardiogênico** (p=0,03), sem diferença nos subgrupos de choque séptico (p=0,19) ou hipovolêmico (p=0,84) - **fonte**: De Backer D, Biston P, Devriendt J, et al; SOAP II Investigators. Comparison of dopamine and norepinephrine in the treatment of shock. N Engl J Med. 2010;362(9):779-789. DOI: 10.1056/NEJMoa0907118. PMID: 20200382 (PMID conferido por busca direta nesta sessão: título, periódico, volume, páginas e ano batem)"
+    },
+    "references": [
+      "Bula do REVIVAN (cloridrato de dopamina, Zambon Laboratórios Farmacêuticos Ltda.), consultada via erclinic.com.br/v2/bula/revivan-zambon-2945/detalhes — usada para apresentações, indicações, contraindicações, posologia por faixa, diluição, via e reações adversas",
+      "Dopamine Hydrochloride Injection — rótulo aprovado pelo FDA, DailyMed (setid c901b461-4f98-da0a-e053-2a95a90a106e) — usado para interações medicamentosas, categoria de risco na gravidez, lactação, superdosagem, manejo de extravasamento/antídoto (fentolamina) e reações adversas complementares. Fonte norte-americana, não a bula brasileira — usada só onde a bula do REVIVAN foi silente, e declarada campo a campo",
+      "De Backer D, Biston P, Devriendt J, et al; SOAP II Investigators. Comparison of dopamine and norepinephrine in the treatment of shock. N Engl J Med. 2010;362(9):779-789. DOI: 10.1056/NEJMoa0907118. PMID: 20200382"
+    ],
+    "pregnancy": "**Categoria C (classificação FDA).** Estudos de reprodução animal não mostraram efeito teratogênico, mas um estudo indicou redução da sobrevida neonatal e possível catarata em filhotes de rata. Não há estudos adequados e bem controlados em gestantes humanas. Usar na gravidez apenas se claramente necessário. **fonte**: rótulo DailyMed (dopamine hydrochloride injection), FDA. **VERIFICAÇÃO HUMANA NECESSÁRIA**: a bula brasileira do REVIVAN (Zambon) consultada nesta sessão não trouxe seção específica de gravidez/lactação no texto extraído — este campo usa fonte norte-americana, não a bula do detentor do registro no Brasil. Conferir a bula brasileira integral (bulário eletrônico da ANVISA) antes de firmar orientação clínica",
+    "lactation": "**Não se sabe se a dopamina é excretada no leite humano.** Cautela deve ser exercida ao administrar o fármaco a lactantes. **fonte**: rótulo DailyMed (dopamine hydrochloride injection), FDA. **VERIFICAÇÃO HUMANA NECESSÁRIA**: mesma ressalva do campo `pregnancy` — a bula brasileira do REVIVAN não foi confirmada quanto a este dado nesta sessão; e no contexto clínico real (choque com indicação de vasopressor), a decisão de amamentar durante a infusão é irrelevante na prática — o registro serve para completude do verbete, não para orientação de uso"
   }
 ]
