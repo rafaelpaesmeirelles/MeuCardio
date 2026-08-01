@@ -550,6 +550,34 @@ Claude." Especificação já levantada pela monitora (não repetir a pesquisa):
   fontes `[W1]`/`[W2]`/... citadas e claramente separadas de `[F#]`, modelo
   auto-selecionado (`claude-opus-5`) preenchido na resposta. Backend rebuildado
   (`docker compose up -d --build backend`) e verificado em produção antes deste registro.
+- **✅ RESOLVIDO E NO AR, 02/08/2026 ~01h (commits `a4a9418`, `807aa46` não relacionado, `d8763c7`)**
+  — Rafael testou de novo: a busca funcionava (confirmado pela monitora, medido no container:
+  125s de ponta a ponta, cita `[W#]`), mas a tela ficava "procurando" e terminava em
+  **`Failed to fetch`**. Causa: a conexão HTTP comum (NAT/proxy/navegador) não tolera ~100s
+  ociosa — a resposta ficava pronta no servidor, mas a conexão já tinha morrido antes de
+  chegar. Duas frentes corrigidas:
+  1. **Streaming de ponta a ponta.** `provedor.py` ganhou `responder_stream()` nos dois
+     provedores (Anthropic via `messages.stream()`/`text_stream`, retomando `pause_turn`
+     dentro do próprio stream; OpenAI via `stream=True`). Teto de rodadas de `pause_turn`
+     caiu de 5 para 2, e a tool `web_search` ganhou `max_uses=3` — cada rodada/busca extra
+     soma latência a uma conexão já no limite. `rag.py` ganhou `perguntar_stream()`. `ai.py`
+     ganhou `POST /ai/perguntar/stream` (SSE), com a validação compartilhada com
+     `/ai/perguntar` via `_preparar_pergunta()`. `api.ts` ganhou `api.stream()` (lê o corpo
+     como stream, despacha cada evento `data: ...`). `Assistente.tsx` passou a consumir o
+     stream, renderizando o texto pedaço a pedaço na própria bolha.
+     **Testado pela rota HTTP real** (não só a função interna, via `requests` dentro do
+     container): status 200, primeiro evento em 33s, total 54,6s (bem abaixo do teto de
+     ~100s que derrubava a conexão), 47 eventos, `[W#]` citado corretamente.
+  2. **Achado ao vivo, no mesmo teste do Rafael: a página recarregava no MEIO do
+     streaming.** Causa: dois deploys de frontend em minutos fizeram o listener de
+     `controllerchange` (fix de PWA stale bundle desta mesma sessão, mais acima) recarregar
+     a aba justamente enquanto uma resposta estava em streaming. `main.tsx` agora consulta
+     `window.__streamAtivo` antes de recarregar — se um streaming está em andamento, marca a
+     recarga como pendente e só executa quando `window.__streamEncerrado()` for chamado, nunca
+     no meio. `Assistente.tsx` seta a flag no início de `enviar()` e a baixa (+ dispara o
+     encerrado) no `finally`.
+     **Verificado**: bundle novo confirmado no ar por grep de `__streamAtivo`/`__streamEncerrado`
+     no JS servido pelo Caddy, `curl` 200 em `/` e `/api/openapi.json`.
 - **✅ IMPLEMENTADO no commit `631b21e`** — mas Rafael testou e pediu 2 ajustes
   (23h42 de 01/08, direto à monitora), registrados aqui pra quem pegar a tarefa:
   1. **Busca na internet não pode depender de opt-in manual.** O checkbox
