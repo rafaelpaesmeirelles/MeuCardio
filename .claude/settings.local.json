@@ -25,7 +25,9 @@
       "Bash(curl -s https://meucardio.med.br/)",
       "Bash(timeout 400 docker build --target build -t meucardio-frontend-builder -f Dockerfile.prod .)",
       "Bash(docker rmi *)",
-      "WebFetch(domain:www.acc.org)"
+      "WebFetch(domain:www.acc.org)",
+      "Skill(update-config)",
+      "Skill(update-config:*)"
     ]
   }
 }
