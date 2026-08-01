@@ -2901,5 +2901,55 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "revisao-cochrane-reparo-endovascular-versus-aberto-do-aneurisma-de-arteria-poplitea",
+    "title": "Reparo endovascular versus aberto do aneurisma de artéria poplítea assintomático — revisão Cochrane",
+    "study_type": "revisao_sistematica",
+    "authors": "Joshi D, Gupta Y, Ganai B, Mortensen C",
+    "journal": "Cochrane Database of Systematic Reviews",
+    "year": 2019,
+    "doi": "10.1002/14651858.CD010149.pub3",
+    "pmid": "31868929",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/31868929/",
+    "summary": "Atualização de revisão sistemática Cochrane (primeira versão de 2014) buscando em Cochrane Vascular Specialised Register, CENTRAL, MEDLINE, Embase, CINAHL, WHO ICTRP e ClinicalTrials.gov até 29/01/2019, à procura de ensaios clínicos randomizados comparando endoprótese endovascular versus cirurgia aberta convencional no reparo profilático de aneurisma de artéria poplítea (AAP) assintomático, uni ou bilateral. Nenhum estudo novo foi identificado nesta atualização — um único ECR com 30 AAPs (15 por braço) permanece como toda a evidência direta disponível.",
+    "key_findings": "Patência primária em 1 ano: 93,3% no grupo endovascular vs. 100% no grupo cirúrgico (RR 0,94; IC95% 0,78-1,12; certeza moderada pelo GRADE). Patência assistida em 1 ano: semelhante entre grupos (RR 1,00; IC95% 0,88-1,13). Em 4 anos, sem evidência clara de diferença entre grupos na patência primária ou assistida (13 de 15 enxertos pérvios em cada braço; RR 1,00; IC95% 0,76-1,32) — efeito impreciso, compatível tanto com benefício de qualquer estratégia quanto com ausência de diferença. Internação média: 4,3 dias (endovascular) vs. 7,7 dias (cirúrgico); MD -3,40 dias (IC95% -4,42 a -2,38; p<0,001). Tempo operatório médio: 75,4 min (endovascular) vs. 195,3 min (cirúrgico) — nota: este valor de 195,3 min diverge do tempo relatado no artigo original incluído (155,3 min), divergência não resolvida nesta sessão, ver documento de conteúdo correspondente para detalhe. Salvamento de membro: 100% nos dois grupos. Dados de complicação local de ferida não foram publicados no ensaio original.",
+    "clinical_implications": "A certeza da evidência é rebaixada para moderada apesar do desenho randomizado, só pelo tamanho amostral pequeno (30 AAPs em 5 anos de recrutamento). Os autores concluem que o reparo endovascular pode representar alternativa viável ao reparo aberto, com vantagem processual clara (menor tempo cirúrgico e internação), mas sem evidência robusta de superioridade ou inferioridade na patência a médio/longo prazo. Recomendam ensaio multicêntrico maior, reconhecendo a dificuldade prática de recrutamento fora de uma colaboração internacional.",
+    "limitations": "Evidência direta limitada a um único ECR pequeno, unicêntrico, com dados de 1999-2003 e stent de geração hoje ultrapassada (Hemobahn). Nenhum ECR mais recente foi identificado na busca atualizada até janeiro de 2019.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "aneurisma de artéria poplítea",
+      "revisão sistemática cochrane",
+      "reparo endovascular",
+      "reparo aberto",
+      "patência"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "antonello-2005-ensaio-randomizado-reparo-aberto-versus-endovascular-do-aneurisma-poplitea",
+    "title": "Antonello 2005 — ensaio randomizado unicêntrico de reparo aberto versus endovascular do aneurisma poplíteo assintomático",
+    "study_type": "ensaio_clinico",
+    "authors": "Antonello M, Frigatti P, Battocchio P, Lepidi S, Cognolato D, Dall'Antonia A, Stramanà R, Deriu GP, Grego F",
+    "journal": "Journal of Vascular Surgery",
+    "year": 2005,
+    "doi": "10.1016/j.jvs.2005.04.049",
+    "pmid": "16102611",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/16102611/",
+    "summary": "Ensaio clínico prospectivo, randomizado 1:1, unicêntrico (Universidade de Pádua), janeiro de 1999 a dezembro de 2003. Critério de inclusão: aneurisma de artéria poplítea com diâmetro ≥ 2 cm à angio-TC e colo proximal/distal ≥ 1 cm para fixação segura de endoprótese; excluídos pacientes com menos de 50 anos, leito distal pobre, contraindicação a antiplaquetário/anticoagulante/trombolítico ou sintomas de compressão nervosa/venosa. 30 AAPs tratados: 15 por reparo aberto (bypass com exclusão do aneurisma) e 15 por endoprótese Hemobahn (20 stents implantados nos 15 casos).",
+    "key_findings": "Patência primária por Kaplan-Meier em 12 meses: 100% no reparo aberto vs. 86,7% no endovascular, sem diferença estatística no log-rank. Patência secundária em 12 e 36 meses: 100% no braço endovascular. Trombose de endoprótese no pós-operatório: 1 caso (6,7%). Tempo operatório: 155,3 min (aberto) vs. 75,4 min (endovascular). Internação: 7,7 dias (aberto) vs. 4,3 dias (endovascular) — as duas diferenças com p<0,01. Seguimento médio de 46,1 meses (aberto) e 45,9 meses (endovascular). Nenhuma falha de enxerto perioperatória no braço de reparo aberto.",
+    "clinical_implications": "Primeiro e, até a revisão Cochrane de 2019, único ensaio randomizado comparando diretamente as duas estratégias no AAP assintomático. Os autores concluem que ambas as técnicas podem ser realizadas com segurança, com o endovascular oferecendo recuperação mais rápida e internação mais curta — explicitamente com a ressalva de que o estudo tem poder limitado.",
+    "limitations": "Amostra pequena (n=30), unicêntrico, sem cegamento (não aplicável ao desenho cirúrgico), e usa geração de endoprótese (Hemobahn) já ultrapassada pela evolução tecnológica desde 2005 — resultados de patência endovascular não devem ser extrapolados sem ressalva para os dispositivos atuais.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "aneurisma de artéria poplítea",
+      "ensaio clínico randomizado",
+      "reparo endovascular",
+      "reparo aberto",
+      "hemobahn"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
