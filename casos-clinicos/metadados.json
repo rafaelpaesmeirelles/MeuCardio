@@ -3259,5 +3259,485 @@
       "Subherwal S, Bach RG, Chen AY, Gage BF, Rao SV, Newby LK, Wang TY, Gibler WB, Ohman EM, Roe MT, Pollack CV Jr, Peterson ED, Alexander KP. Baseline risk of major bleeding in non-ST-segment-elevation myocardial infarction: the CRUSADE (Can Rapid risk stratification of Unstable angina patients Suppress ADverse outcomes with Early implementation of the ACC/AHA guidelines) Bleeding Score. Circulation. 2009;119(14):1873-1882. PMID: 19332461"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "fa-nao-valvar-alto-risco-rivaroxabana-versus-varfarina-rocket-af",
+    "titulo": "Fibrilação atrial não valvar de alto risco, com dificuldade de manter o INR: rivaroxabana é alternativa sustentada por evidência?",
+    "tema": "Fibrilação atrial",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 72 anos, fibrilação atrial não valvar permanente, hipertensão, diabetes tipo 2 e AVC isquêmico prévio (CHA2DS2-VASc 6), função renal preservada. Está em uso de varfarina há anos, mas relata dificuldade recorrente de manter o INR na faixa terapêutica e tem faltado às consultas de ajuste de dose.",
+    "pergunta": "Diante do perfil de alto risco tromboembólico e da dificuldade de manejo com varfarina, qual afirmação sobre a rivaroxabana é sustentada por ensaio clínico randomizado?",
+    "opcoes": [
+      "A rivaroxabana reduziu significativamente o risco de sangramento maior comparada à varfarina",
+      "A rivaroxabana não deve ser considerada em pacientes com AVC prévio, por ausência de dados nessa população",
+      "A rivaroxabana foi não inferior à varfarina na prevenção de AVC ou embolia sistêmica, com menos hemorragia intracraniana e sangramento fatal",
+      "A rivaroxabana exige monitorização laboratorial periódica equivalente à do INR para ajuste de dose"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O ROCKET AF (Patel MR et al., N Engl J Med 2011, PMID 21830957) randomizou 14.264 pacientes com FA não valvar e risco aumentado de AVC para rivaroxabana 20 mg/dia ou varfarina ajustada por INR, em desenho duplo-cego de não inferioridade. Na análise por protocolo, o desfecho primário (AVC ou embolia sistêmica) ocorreu em 1,7%/ano com rivaroxabana vs. 2,2%/ano com varfarina (HR 0,79; IC95% 0,66-0,96; p<0,001 para não inferioridade); na análise por intenção de tratar, 2,1%/ano vs. 2,4%/ano (HR 0,88; IC95% 0,74-1,03; p=0,12 para superioridade). Sangramento maior e clinicamente relevante não diferiu entre os grupos (14,9%/ano vs. 14,5%/ano; HR 1,03; p=0,44), mas houve redução significativa de hemorragia intracraniana (0,5% vs. 0,7%; p=0,02) e de sangramento fatal (0,2% vs. 0,5%; p=0,003) com rivaroxabana. Diferentemente da varfarina, a rivaroxabana não exige monitorização rotineira de coagulação para ajuste de dose, o que é justamente a vantagem prática relevante neste caso de INR instável.",
+    "source_refs": [
+      "Patel MR, Mahaffey KW, Garg J, Pan G, Singer DE, Hacke W, Breithardt G, Halperin JL, Hankey GJ, Piccini JP, Becker RC, Nessel CC, Paolini JF, Berkowitz SD, Fox KA, Califf RM; ROCKET AF Investigators. Rivaroxaban versus warfarin in nonvalvular atrial fibrillation. N Engl J Med. 2011;365(10):883-891. DOI: 10.1056/NEJMoa1009638. PMID: 21830957 — NCT00403767, 14.264 pacientes. Financiamento: Johnson & Johnson e Bayer"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hipertensao-em-paciente-com-83-anos-tratar-ou-nao-hyvet",
+    "titulo": "Hipertensão em paciente de 83 anos: tratar farmacologicamente traz mais benefício do que risco?",
+    "tema": "Hipertensão",
+    "nivel": "básico",
+    "enunciado": "Mulher, 83 anos, sem eventos cardiovasculares prévios, pressão arterial de consultório persistentemente ≥160 mmHg de sistólica em três aferições. Familiares questionam se \"tratar a pressão em idade tão avançada\" traz mais risco (hipotensão, quedas) do que benefício.",
+    "pergunta": "Com base em ensaio clínico randomizado dedicado a essa faixa etária, qual é a conduta mais apropriada?",
+    "opcoes": [
+      "Iniciar tratamento com indapamida (associando perindopril se necessário), visando meta pressórica de 150/80 mmHg, pelo benefício demonstrado em redução de AVC, mortalidade total e insuficiência cardíaca",
+      "Não tratar: acima de 80 anos o tratamento anti-hipertensivo aumenta a mortalidade",
+      "Tratar apenas se já houver lesão de órgão-alvo estabelecida",
+      "Postergar o início do tratamento até os 85 anos, quando a evidência de benefício seria mais robusta"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O HYVET (Beckett NS et al., N Engl J Med 2008, PMID 18378519) randomizou 3.845 pacientes com 80 anos ou mais e PA sistólica ≥160 mmHg para indapamida de liberação prolongada 1,5 mg (associando perindopril 2-4 mg se necessário para atingir meta de 150/80 mmHg) ou placebo, com seguimento mediano de 1,8 ano. O tratamento ativo reduziu AVC fatal e não fatal em 30% (IC95% -1 a 51%; p=0,06), morte por AVC em 39% (p=0,05), mortalidade por qualquer causa em 21% (IC95% 4-35%; p=0,02), mortalidade cardiovascular em 23% (p=0,06) e insuficiência cardíaca em 64% (IC95% 42-78%; p<0,001). Eventos adversos graves foram MENOS frequentes no grupo tratado (358 vs. 448; p=0,001) — o que refuta diretamente a premissa de que tratar aumentaria o risco nessa faixa etária. O estudo incluiu pacientes de vários continentes, com PA basal média de 173,0/90,8 mmHg.",
+    "source_refs": [
+      "Beckett NS, Peters R, Fletcher AE, Staessen JA, Liu L, Dumitrascu D, Stoyanovsky V, Antikainen RL, Nikitin Y, Anderson C, Belhani A, Forette F, Rajkumar C, Thijs L, Banya W, Bulpitt CJ; HYVET Study Group. Treatment of hypertension in patients 80 years of age or older. N Engl J Med. 2008;358(18):1887-1898. DOI: 10.1056/NEJMoa0801369. PMID: 18378519 — NCT00122811, 3.845 pacientes"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "tvp-proximal-aguda-trombolise-dirigida-por-cateter-previne-sindrome-pos-trombotica-attract",
+    "titulo": "TVP proximal aguda: acrescentar trombólise farmacomecânica dirigida por cateter previne a síndrome pós-trombótica?",
+    "tema": "Tromboembolismo",
+    "nivel": "avançado",
+    "enunciado": "Homem, 45 anos, trombose venosa profunda proximal aguda extensa (ilíaco-femoral), sem contraindicação a trombólise. A equipe de radiologia intervencionista sugere associar trombólise farmacomecânica dirigida por cateter à anticoagulação, com o argumento de que isso \"dissolveria o trombo e preveniria sequelas crônicas na perna\".",
+    "pergunta": "Segundo o maior ensaio randomizado já conduzido sobre o tema, qual afirmação está correta?",
+    "opcoes": [
+      "A trombólise farmacomecânica associada à anticoagulação reduziu significativamente a incidência geral de síndrome pós-trombótica em relação à anticoagulação isolada",
+      "A trombólise farmacomecânica não reduziu a incidência geral de síndrome pós-trombótica, reduziu apenas a forma moderada a grave, e aumentou o risco de sangramento maior precoce",
+      "A trombólise farmacomecânica deve ser oferecida rotineiramente a todo paciente com TVP proximal, por reduzir a recorrência de TEV",
+      "A trombólise farmacomecânica eliminou completamente o risco de síndrome pós-trombótica em pacientes com trombose ilíaco-femoral"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O ATTRACT (Vedantham S et al., N Engl J Med 2017, PMID 29211671) randomizou 692 pacientes com TVP proximal aguda para anticoagulação isolada ou anticoagulação associada a trombólise farmacomecânica dirigida por cateter. Entre 6 e 24 meses de seguimento, não houve diferença significativa na incidência de síndrome pós-trombótica entre os grupos (47% no grupo trombólise vs. 48% no grupo controle; RR 0,96; IC95% 0,82-1,11; p=0,56). A trombólise farmacomecânica aumentou o sangramento maior em 10 dias (1,7% vs. 0,3%; p=0,049), sem diferença significativa em TEV recorrente aos 24 meses (12% vs. 8%; p=0,09). Por outro lado, a síndrome pós-trombótica moderada a grave foi menor no grupo trombólise (18% vs. 24%; RR 0,73; IC95% 0,54-0,98; p=0,04), e os escores de gravidade de Villalta foram menores no grupo trombólise em todos os pontos de seguimento (p<0,01 em cada), sem diferença significativa na qualidade de vida aos 24 meses. Ou seja: sem benefício no desfecho primário, com custo real de mais sangramento, e um sinal restrito à forma moderada-grave — não há indicação de uso rotineiro.",
+    "source_refs": [
+      "Vedantham S, Goldhaber SZ, Julian JA, Kahn SR, Jaff MR, Cohen DJ, Magnuson E, Razavi MK, Comerota AJ, Gornik HL, Murphy TP, Lewis L, Duncan JR, Nieters P, Derfler MC, Filion M, Gu CS, Kee S, Schneider J, Saad N, Blinder M, Moll S, Sacks D, Lin J, Rundback J, Garcia M, Razdan R, VanderWoude E, Marques V, Kearon C; ATTRACT Trial Investigators. Pharmacomechanical Catheter-Directed Thrombolysis for Deep-Vein Thrombosis. N Engl J Med. 2017;377(23):2240-2252. DOI: 10.1056/NEJMoa1615066. PMID: 29211671. PMCID: PMC5763501 — NCT00790335, 692 pacientes. Financiamento: National Heart, Lung, and Blood Institute (NIH) e outros"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "diabetes-tipo-2-sem-doenca-cardiovascular-estabelecida-dapagliflozina-declare-timi-58",
+    "titulo": "Diabetes tipo 2 com múltiplos fatores de risco, sem doença aterosclerótica estabelecida: dapagliflozina reduz eventos cardiovasculares maiores?",
+    "tema": "Diabetes e cardiologia",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 61 anos, diabetes tipo 2 há 12 anos, hipertensão, dislipidemia e tabagismo ativo — sem infarto, AVC ou revascularização prévios (portanto em prevenção primária). HbA1c 8,1% em uso de metformina. O médico assistente considera iniciar dapagliflozina, citando \"proteção cardiovascular comprovada da classe\".",
+    "pergunta": "Com base no maior ensaio de desfechos cardiovasculares com esse fármaco, que incluiu majoritariamente pacientes em prevenção primária, o que se pode afirmar?",
+    "opcoes": [
+      "A dapagliflozina reduziu a mortalidade cardiovascular isoladamente, de forma estatisticamente significativa",
+      "A dapagliflozina só demonstrou benefício cardiovascular em pacientes com doença aterosclerótica já estabelecida",
+      "A dapagliflozina reduziu significativamente o desfecho composto de eventos cardiovasculares maiores (MACE) em relação ao placebo",
+      "A dapagliflozina não atingiu superioridade para MACE, mas reduziu significativamente o composto de morte cardiovascular ou hospitalização por insuficiência cardíaca, à custa de mais cetoacidose diabética e infecção genital"
+    ],
+    "resposta_correta": 3,
+    "explicacao": "O DECLARE-TIMI 58 (Wiviott SD et al., N Engl J Med 2019, PMID 30415602) randomizou 17.160 pacientes com diabetes tipo 2 — 10.186 deles (a maioria) sem doença aterosclerótica estabelecida, portanto em prevenção primária — para dapagliflozina ou placebo, com seguimento mediano de 4,2 anos. A dapagliflozina atingiu não inferioridade para segurança de MACE, mas NÃO foi superior ao placebo para esse desfecho: MACE em 8,8% vs. 9,4% (HR 0,93; IC95% 0,84-1,03; p=0,17). Por outro lado, reduziu significativamente o composto de morte cardiovascular ou hospitalização por IC: 4,9% vs. 5,8% (HR 0,83; IC95% 0,73-0,95; p=0,005) — resultado que refletiu a redução de hospitalização por IC (HR 0,73; IC95% 0,61-0,88), sem diferença isolada em morte cardiovascular (HR 0,98; IC95% 0,82-1,17). Houve também redução do desfecho renal composto (HR 0,76; IC95% 0,67-0,87). Em contrapartida, cetoacidose diabética foi mais frequente com dapagliflozina (0,3% vs. 0,1%; p=0,02), assim como infecção genital grave ou que levou à descontinuação (0,9% vs. 0,1%; p<0,001). A lição para a vinheta: o benefício documentado é específico para IC e desfecho renal, não para MACE em geral, e vale mesmo numa população majoritariamente de prevenção primária.",
+    "source_refs": [
+      "Wiviott SD, Raz I, Bonaca MP, Mosenzon O, Kato ET, Cahn A, Silverman MG, Zelniker TA, Kuder JF, Murphy SA, Bhatt DL, Leiter LA, McGuire DK, Wilding JPH, Ruff CT, Gause-Nilsson IAM, Fredriksson M, Johansson PA, Langkilde AM, Sabatine MS; DECLARE-TIMI 58 Investigators. Dapagliflozin and Cardiovascular Outcomes in Type 2 Diabetes. N Engl J Med. 2019;380(4):347-357. DOI: 10.1056/NEJMoa1812389. PMID: 30415602 — NCT01730534, 17.160 pacientes. Financiamento: AstraZeneca"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "colchicina-em-baixa-dose-na-doenca-coronariana-cronica-reduz-eventos-lodoco2",
+    "titulo": "Colchicina em baixa dose na doença coronariana crônica: vale acrescentar ao tratamento já otimizado?",
+    "tema": "Prevenção e lipídios",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 68 anos, doença arterial coronariana crônica documentada por cateterismo há 5 anos, com angioplastia prévia de artéria descendente anterior, atualmente assintomático. Em uso de AAS 100 mg/dia, atorvastatina 80 mg/dia (LDL-c 62 mg/dL, já na meta) e losartana, sem outras comorbidades relevantes. Em consulta de rotina, pergunta se existe mais alguma medicação capaz de reduzir seu risco de infarto ou AVC, já que \"fez tudo o que os médicos pediram\".",
+    "pergunta": "Com base no ensaio LoDoCo2, qual conduta está mais bem fundamentada?",
+    "opcoes": [
+      "Não há nenhuma evidência de benefício de terapia anti-inflamatória na doença coronariana crônica estável; manter apenas o tratamento atual",
+      "Acrescentar colchicina 0,5 mg/dia reduziu o desfecho composto de morte cardiovascular, infarto, AVC isquêmico ou revascularização guiada por isquemia, com redução de risco relativo de cerca de 31% (HR 0,69; IC95% 0,57-0,83)",
+      "A colchicina só tem benefício comprovado nas primeiras semanas após um infarto agudo, não na doença coronariana crônica já estabilizada",
+      "A colchicina deve ser evitada em pacientes que já atingiram a meta de LDL, pois seu mecanismo de ação depende do efeito hipolipemiante"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O LoDoCo2 (Nidorf et al., NEJM 2020) randomizou 5.522 pacientes com doença coronariana crônica (após período de run-in de tolerância à colchicina) para colchicina 0,5 mg/dia ou placebo, acrescida ao tratamento padrão já otimizado. Ao longo de mediana de 28,6 meses, o desfecho primário (morte cardiovascular, infarto do miocárdio espontâneo, AVC isquêmico ou revascularização guiada por isquemia) ocorreu em 6,8% do grupo colchicina vs 9,6% do placebo (HR 0,69; IC95% 0,57-0,83; p<0,001). O desfecho secundário-chave (morte cardiovascular, infarto ou AVC) também foi menor: 4,2% vs 5,7% (HR 0,72; IC95% 0,57-0,92; p=0,007). O benefício foi incremental sobre estatina e antiagregante já otimizados e independente do LDL, reforçando a inflamação residual como alvo terapêutico próprio na doença coronariana crônica.",
+    "source_refs": [
+      "Nidorf SM, Fiolet ATL, Mosterd A, et al.; LoDoCo2 Trial Investigators. Colchicine in Patients with Chronic Coronary Disease. N Engl J Med. 2020;383(19):1838-1847. DOI: 10.1056/NEJMoa2021372. PMID: 32865380"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "regurgitacao-mitral-degenerativa-reparo-percutaneo-borda-a-borda-ou-cirurgia-everest-ii",
+    "titulo": "Regurgitação mitral degenerativa moderada a grave: o reparo percutâneo borda-a-borda tem a mesma eficácia da cirurgia?",
+    "tema": "Valvopatias",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 64 anos, prolapso do folheto posterior da valva mitral com regurgitação mitral degenerativa grave, sintomática (classe funcional II), fração de ejeção preservada, sem contraindicação cirúrgica formal, mas com forte receio de cirurgia aberta com circulação extracorpórea. A equipe discute reparo percutâneo borda-a-borda (tipo MitraClip) como alternativa à cirurgia convencional.",
+    "pergunta": "Segundo o ensaio EVEREST II, que comparou reparo percutâneo à cirurgia nesse cenário, qual afirmação é correta?",
+    "opcoes": [
+      "O reparo percutâneo foi superior à cirurgia tanto em eficácia quanto em segurança, tornando-se preferencial para todos os pacientes elegíveis",
+      "Não houve diferença significativa entre os dois grupos em nenhum desfecho avaliado",
+      "A cirurgia teve maior eficácia na correção da regurgitação (73% vs 55% de sucesso composto em 12 meses), mas o reparo percutâneo teve muito menos eventos adversos maiores em 30 dias (15% vs 48%)",
+      "O reparo percutâneo exigiu cirurgia mitral de resgate em mais da metade dos casos, inviabilizando seu uso fora de estudo"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O EVEREST II (Feldman T et al., NEJM 2011) randomizou 279 pacientes com regurgitação mitral moderada a grave (2:1) para reparo percutâneo borda-a-borda ou cirurgia. O desfecho primário de eficácia em 12 meses (ausência de morte, de cirurgia mitral por disfunção da valva e de regurgitação mitral 3+/4+) foi atingido em 55% do grupo percutâneo vs 73% do grupo cirúrgico (p=0,007) — diferença explicada sobretudo pela maior necessidade de reoperação no grupo percutâneo (20% vs 2%); mortalidade (6% em cada grupo) e regurgitação residual grave (21% vs 20%) foram semelhantes entre os grupos. Em contrapartida, eventos adversos maiores em 30 dias foram muito menores com o reparo percutâneo (15% vs 48%; p<0,001), sobretudo às custas de transfusão sanguínea cirúrgica. Ambos os grupos melhoraram classe funcional, tamanho do VE e qualidade de vida em relação ao basal. O perfil resultante — menor eficácia de correção, porém segurança muito superior — embasa o uso preferencial do reparo percutâneo em pacientes de risco cirúrgico maior ou com forte aversão à cirurgia, e não como substituto universal da cirurgia em pacientes de baixo risco.",
+    "source_refs": [
+      "Feldman T, Foster E, Glower DD, et al.; EVEREST II Investigators. Percutaneous Repair or Surgery for Mitral Regurgitation. N Engl J Med. 2011;364(15):1395-1406. DOI: 10.1056/NEJMoa1009355. PMID: 21463154"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "estenose-carotidea-sintomatica-stent-ou-endarterectomia-crest",
+    "titulo": "Estenose carotídea sintomática grave: stent ou endarterectomia — o resultado composto é o mesmo?",
+    "tema": "Aorta e doença arterial periférica",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 66 anos, tabagista, apresentou episódio de amaurose fugaz há 3 semanas. Angiotomografia de carótidas mostra estenose de 75% na carótida interna direita, sintomática. Está sendo avaliado para revascularização carotídea e questiona se a angioplastia com stent é tão segura quanto a cirurgia (endarterectomia).",
+    "pergunta": "De acordo com o ensaio CREST, qual afirmação melhor resume a comparação entre as duas técnicas?",
+    "opcoes": [
+      "A endarterectomia foi claramente superior em todos os desfechos avaliados, e o stent carotídeo não deveria ser oferecido a nenhum paciente sintomático",
+      "Não houve diferença significativa na taxa estimada em 4 anos do desfecho composto de AVC, infarto do miocárdio ou morte entre stent e endarterectomia (7,2% vs 6,8%; HR 1,11; IC95% 0,81-1,51), mas o risco periprocedimento se distribuiu de forma diferente: mais AVC com o stent (4,1% vs 2,3%) e mais infarto com a endarterectomia (2,3% vs 1,1%)",
+      "O stent carotídeo foi superior à endarterectomia porque não depende de anestesia geral, reduzindo a mortalidade cirúrgica em qualquer cenário",
+      "O desfecho composto favoreceu fortemente a endarterectomia, com redução de risco relativo superior a 40% em relação ao stent"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O CREST (Brott TG et al., NEJM 2010) randomizou 2.502 pacientes com estenose carotídea sintomática e assintomática para angioplastia com stent (com proteção embólica) ou endarterectomia. Na taxa estimada em 4 anos do desfecho primário composto (AVC, infarto do miocárdio ou morte por qualquer causa no período periprocedimento, mais AVC ipsilateral no seguimento), não houve diferença significativa entre stent e endarterectomia (7,2% vs 6,8%; HR 1,11; IC95% 0,81-1,51; p=0,51). Os componentes individuais do risco periprocedimento, porém, divergiram de forma clinicamente relevante: o stent associou-se a mais AVC periprocedimento (4,1% vs 2,3%; p=0,01), enquanto a endarterectomia associou-se a mais infarto do miocárdio periprocedimento (2,3% vs 1,1%; p=0,03). No seguimento de longo prazo, as taxas de AVC ipsilateral com as duas técnicas foram igualmente baixas (2,0% vs 2,4%; p=0,85). Na prática, a escolha entre as duas técnicas deve considerar o perfil de risco individual do paciente (coronariano vs neurológico/anatômico), não uma superioridade global de uma técnica sobre a outra.",
+    "source_refs": [
+      "Brott TG, Hobson RW 2nd, Howard G, et al.; CREST Investigators. Stenting versus Endarterectomy for Treatment of Carotid-Artery Stenosis. N Engl J Med. 2010;363(1):11-23. DOI: 10.1056/NEJMoa0912321. PMID: 20505173"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sindrome-de-takotsubo-apresentacao-clinica-e-prognostico-intertak",
+    "titulo": "Síndrome de Takotsubo: ela é realmente mais \"benigna\" que a síndrome coronariana aguda?",
+    "tema": "Cardiomiopatias",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 71 anos, sem antecedentes cardiológicos, é atendida no pronto-socorro poucas horas após receber a notícia do falecimento súbito de um familiar, com dor torácica intensa e dispneia. ECG mostra supradesnivelamento discreto de ST em parede anterior e troponina elevada. A cineangiocoronariografia não mostra lesões obstrutivas; a ventriculografia evidencia acinesia apical extensa com hipercinesia basal compensatória (\"balonamento apical\"), compatível com síndrome de Takotsubo. A equipe assistente comenta que \"é uma condição benigna, sem necessidade de acompanhamento rigoroso\".",
+    "pergunta": "Com base no registro internacional InterTAK (Templin et al.), qual afirmação sobre a síndrome de Takotsubo está correta?",
+    "opcoes": [
+      "É uma condição exclusiva de mulheres jovens, geralmente desencadeada por estresse físico, e a fração de ejeção costuma estar apenas discretamente reduzida",
+      "Apesar da ausência de obstrução coronariana, os pacientes com Takotsubo apresentam fração de ejeção mais baixa que os com síndrome coronariana aguda (40,7% vs 51,5%) e taxas de complicações graves intra-hospitalares (choque, óbito) semelhantes às da SCA — não deve ser tratada como diagnóstico \"tranquilizador\"",
+      "O prognóstico de longo prazo é excelente, com taxas de recorrência e de mortalidade cardiovascular próximas de zero após a alta hospitalar",
+      "Gatilhos emocionais respondem pela grande maioria dos casos, sendo os gatilhos físicos e a ausência de gatilho identificável achados raros"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O registro internacional InterTAK (Templin C et al., NEJM 2015), com 1.750 pacientes, mostrou que 89,8% eram mulheres, com idade média de 66,8 anos. Gatilhos físicos (36,0%) foram mais frequentes que emocionais (27,7%), e 28,5% dos pacientes não tinham gatilho identificável — contrariando a ideia de que o Takotsubo é predominantemente \"a síndrome do coração partido\" por evento emocional. Comparados a pacientes com síndrome coronariana aguda, os pacientes com Takotsubo tinham fração de ejeção de VE mais baixa (40,7±11,2% vs 51,5±12,3%) e maior prevalência de transtornos neurológicos ou psiquiátricos associados (55,8% vs 25,7%), porém as taxas de complicações graves intra-hospitalares, incluindo choque e óbito, foram semelhantes entre os dois grupos. No seguimento, a taxa de eventos cardiovasculares e cerebrovasculares adversos maiores foi de 9,9% ao ano, e a taxa de morte foi de 5,6% ao ano — números que desautorizam tratar o Takotsubo como diagnóstico necessariamente benigno, reforçando a necessidade de acompanhamento cardiológico estruturado, inclusive dos possíveis gatilhos psiquiátricos e neurológicos associados.",
+    "source_refs": [
+      "Templin C, Ghadri JR, Diekmann J, et al. Clinical Features and Outcomes of Takotsubo (Stress) Cardiomyopathy. N Engl J Med. 2015;373(10):929-938. DOI: 10.1056/NEJMoa1406761. PMID: 26332547"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "endocardite-com-vegetacao-grande-cirurgia-precoce-em-48-horas-ou-tratamento-convencional-ease",
+    "titulo": "Endocardite infecciosa com vegetação grande: operar dentro de 48 horas reduz embolia, mesmo sem embolia prévia?",
+    "tema": "Endocardite",
+    "nivel": "avançado",
+    "enunciado": "Homem, 52 anos, endocardite infecciosa de valva mitral nativa por Streptococcus, com estenose mitral grave associada e vegetação de 13 mm ao ecocardiograma transesofágico, sem evento embólico até o momento. Hemoculturas em processo de negativação sob antibioticoterapia adequada há 5 dias. A equipe discute se deve indicar cirurgia dentro de 48 horas ou aguardar a evolução clínica sob tratamento antimicrobiano, operando apenas se houver piora ou complicação.",
+    "pergunta": "Com base no ensaio randomizado de Kang DH et al. (EASE trial), qual conduta tem melhor sustentação?",
+    "opcoes": [
+      "Aguardar a evolução clínica é preferível, pois o ensaio mostrou que a cirurgia precoce aumenta a mortalidade em 6 meses em comparação ao tratamento convencional",
+      "Cirurgia dentro de 48 horas reduziu drasticamente o desfecho composto de morte por qualquer causa ou evento embólico em 6 semanas (3% vs 23%; HR 0,10; IC95% 0,01-0,82), sem diferença de mortalidade em 6 meses entre os grupos",
+      "Não há diferença entre as duas estratégias em nenhum desfecho, sendo a decisão puramente uma questão de preferência do paciente",
+      "O ensaio só avaliou desfechos em 30 dias, sem dados de seguimento além desse período, o que impede qualquer conclusão sobre eventos embólicos"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O ensaio de Kang DH et al. (NEJM 2012) randomizou 76 pacientes com endocardite infecciosa de valva nativa esquerda, vegetação >10 mm e valvopatia grave (estenose ou regurgitação mitral ou aórtica) para cirurgia precoce (dentro de 48 horas da randomização) ou tratamento convencional (antibioticoterapia, com cirurgia indicada apenas se surgisse indicação clínica clássica durante o seguimento). O desfecho composto primário (morte por qualquer causa ou evento embólico em 6 semanas) ocorreu em apenas 1 paciente (3%) no grupo de cirurgia precoce vs 9 pacientes (23%) no grupo convencional (HR 0,10; IC95% 0,01-0,82; p=0,03). A mortalidade em 6 meses foi semelhante entre os grupos (3% vs 5%), mas o desfecho composto mais amplo de morte, embolia ou recorrência de endocardite em 6 meses também favoreceu fortemente a cirurgia precoce (3% vs 28%; HR 0,08; IC95% 0,01-0,65; p=0,02). O achado central do estudo é que a cirurgia precoce reduz o risco de embolia sistêmica — não necessariamente a mortalidade global —, o que sustenta, numa população selecionada com vegetação grande e doença valvar significativa, a cirurgia precoce como estratégia para prevenir a complicação embólica antes que ela ocorra, e não apenas como resposta a uma embolia já instalada.",
+    "source_refs": [
+      "Kang DH, Kim YJ, Kim SH, et al. Early Surgery versus Conventional Treatment for Infective Endocarditis. N Engl J Med. 2012;366(26):2466-2473. DOI: 10.1056/NEJMoa1112843. PMID: 22738096"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "mins-detectado-no-pos-operatorio-anticoagular-com-dabigatrana-manage",
+    "titulo": "Lesão miocárdica pós-operatória (MINS) assintomática: iniciar dabigatrana?",
+    "tema": "Perioperatório",
+    "nivel": "intermediário",
+    "enunciado": "Paciente de 68 anos, hipertenso e diabético, é submetido a artroplastia total de quadril eletiva. No 2º dia de pós-operatório, sem dor torácica, dispneia ou alterações eletrocardiográficas novas, a troponina de rotina vem elevada, sem outra causa identificada além da cirurgia — configurando lesão miocárdica após cirurgia não cardíaca (MINS). O paciente está hemodinamicamente estável, assintomático, e a equipe discute se há alguma intervenção farmacológica com respaldo em ensaio randomizado para esse cenário específico.",
+    "pergunta": "Diante do diagnóstico de MINS assintomática, qual conduta tem sustentação em ensaio clínico randomizado?",
+    "opcoes": [
+      "Não fazer nada além de otimizar estatina e fatores de risco cardiovascular, pois MINS assintomática não tem nenhuma intervenção testada em ensaio clínico",
+      "Iniciar dabigatrana 110 mg por via oral 2x/dia: no ensaio MANAGE essa estratégia reduziu o desfecho composto vascular em pacientes com MINS, sem aumento significativo de sangramento maior",
+      "Iniciar anticoagulação plena com varfarina, alvo de INR 2-3, por 6 meses, com base em extrapolação de estudos de fibrilação atrial",
+      "Solicitar cinecoronariografia de urgência em todos os casos de MINS, independentemente da estabilidade clínica"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O ensaio MANAGE (Devereaux PJ et al., Lancet 2018) randomizou 1.754 pacientes com MINS (troponina elevada após cirurgia não cardíaca, sem etiologia não isquêmica evidente) para dabigatrana 110 mg 2x/dia (n=877) ou placebo (n=877). O desfecho composto vascular primário (morte vascular, infarto não fatal, AVC não fatal, amputação periférica por causa vascular ou trombose venosa profunda/embolia pulmonar sintomáticas) ocorreu em 11% do grupo dabigatrana versus 15% do grupo placebo (HR 0,72; IC95% 0,55-0,93; p=0,0115). O desfecho de segurança (sangramento maior ou em sítio crítico) não diferiu de forma significativa entre os grupos (3% vs 4%; HR 0,92; IC95% 0,55-1,53; p=0,76). É, até hoje, o único ensaio randomizado com resultado positivo para uma intervenção farmacológica dirigida especificamente à MINS assintomática — otimizar estatina isoladamente não foi testado nesse cenário, anticoagulação plena com varfarina não tem essa evidência e expõe a risco de sangramento sem benefício comprovado, e cinecoronariografia de rotina não é indicada só pela troponina elevada assintomática.",
+    "source_refs": [
+      "Devereaux PJ, Duceppe E, Guyatt G, Tandon V, Rodseth R, Biccard BM, et al.; MANAGE Investigators. Dabigatran in patients with myocardial injury after non-cardiac surgery (MANAGE): an international, randomised, placebo-controlled trial. Lancet. 2018;391(10137):2325-2334. DOI: 10.1016/S0140-6736(18)30832-8. PMID: 29900874"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "profilaxia-primaria-com-cdi-pos-infarto-feve-reduzida-madit-ii",
+    "titulo": "CDI em prevenção primária pós-infarto com FEVE de 28%: há indicação sem arritmia documentada?",
+    "tema": "Dispositivos",
+    "nivel": "intermediário",
+    "enunciado": "Paciente de 64 anos, com infarto do miocárdio prévio há 8 meses, em terapia otimizada para insuficiência cardíaca, sem síncope e sem taquicardia ventricular documentada. O ecocardiograma de reavaliação mostra FEVE de 28%. A equipe discute se há indicação de cardiodesfibrilador implantável (CDI) para prevenção primária de morte súbita, mesmo sem nenhum evento arrítmico registrado até o momento.",
+    "pergunta": "Qual evidência de ensaio randomizado sustenta (ou não) a indicação de CDI nesse cenário?",
+    "opcoes": [
+      "O CDI só estaria indicado se a FEVE fosse ≤20%, patamar que teria sido testado nos ensaios de prevenção primária",
+      "Não há evidência randomizada para CDI em prevenção primária pós-infarto; a indicação seria extrapolada de estudos observacionais",
+      "O estudo SCD-HeFT mostrou que apenas a amiodarona, e não o CDI, reduz mortalidade nesse cenário",
+      "O MADIT-II randomizou pacientes pós-infarto com FEVE ≤30% para CDI ou terapia convencional e mostrou redução de mortalidade por qualquer causa de 19,8% para 14,2% (HR 0,69), justificando a indicação de CDI profilático mesmo sem arritmia documentada"
+    ],
+    "resposta_correta": 3,
+    "explicacao": "O MADIT-II (Moss AJ et al., N Engl J Med 2002) randomizou 1.232 pacientes com infarto do miocárdio prévio e FEVE ≤30% (na proporção 3:2) para CDI (n=742) ou terapia convencional (n=490), com seguimento médio de 20 meses. A mortalidade por qualquer causa foi 19,8% no grupo terapia convencional versus 14,2% no grupo CDI (HR 0,69; IC95% 0,51-0,93; p=0,016), com benefício consistente entre subgrupos. Não há corte de FEVE ≤20% no desenho do estudo (o corte testado foi ≤30%), e o SCD-HeFT mostrou o oposto do afirmado: amiodarona foi neutra e o CDI reduziu mortalidade.",
+    "source_refs": [
+      "Moss AJ, Zareba W, Hall WJ, Klein H, Wilber DJ, Cannom DS, et al.; Multicenter Automatic Defibrillator Implantation Trial II Investigators. Prophylactic implantation of a defibrillator in patients with myocardial infarction and reduced ejection fraction. N Engl J Med. 2002;346(12):877-883. DOI: 10.1056/NEJMoa013474. PMID: 11907286"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "escolha-do-inibidor-p2y12-na-sca-ticagrelor-ou-clopidogrel-plato",
+    "titulo": "Dupla antiagregação após NSTEMI com stent: ticagrelor ou clopidogrel?",
+    "tema": "Doença coronariana",
+    "nivel": "intermediário",
+    "enunciado": "Paciente de 58 anos é admitido com infarto agudo do miocárdio sem supra de ST (NSTEMI) e submetido a angioplastia com implante de stent farmacológico. Antes da alta, a equipe discute qual inibidor de P2Y12 associar ao AAS na dupla antiagregação plaquetária, considerando o perfil de eficácia e segurança de cada opção.",
+    "pergunta": "Com base no ensaio PLATO, qual afirmação está correta sobre ticagrelor comparado a clopidogrel na síndrome coronariana aguda?",
+    "opcoes": [
+      "Ticagrelor reduziu o desfecho composto de morte vascular, infarto ou AVC em 12 meses (9,8% vs 11,7%; HR 0,84) e também a mortalidade por qualquer causa, sem aumento significativo do sangramento maior total",
+      "Ticagrelor não trouxe benefício sobre clopidogrel em nenhum desfecho isquêmico, apenas aumentou sangramento",
+      "Ticagrelor reduziu eventos isquêmicos, mas à custa de aumento estatisticamente significativo do sangramento maior total (11,6% vs 11,2%)",
+      "O benefício do ticagrelor no PLATO se limitou à redução de AVC, sem impacto sobre infarto ou mortalidade"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O PLATO (Wallentin L et al., N Engl J Med 2009) randomizou pacientes com síndrome coronariana aguda para ticagrelor ou clopidogrel, além do AAS. Em 12 meses, o desfecho primário composto (morte vascular, infarto ou AVC) ocorreu em 9,8% no grupo ticagrelor versus 11,7% no grupo clopidogrel (HR 0,84; IC95% 0,77-0,92; p<0,001). Houve redução também de infarto isolado (5,8% vs 6,9%; p=0,005), morte vascular (4,0% vs 5,1%; p=0,001) e morte por qualquer causa (4,5% vs 5,9%; p<0,001). NÃO houve diferença significativa na taxa de sangramento maior total entre os grupos (11,6% vs 11,2%; p=0,43), embora o ticagrelor tenha se associado a mais sangramento maior não relacionado a cirurgia de revascularização (4,5% vs 3,8%; p=0,03).",
+    "source_refs": [
+      "Wallentin L, Becker RC, Budaj A, Cannon CP, Emanuelsson H, Held C, et al.; PLATO Investigators. Ticagrelor versus clopidogrel in patients with acute coronary syndromes. N Engl J Med. 2009;361(11):1045-1057. DOI: 10.1056/NEJMoa0904327. PMID: 19717846"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cardiotoxicidade-por-antraciclina-queda-do-strain-longitudinal-global-sem-queda-da-feve-succour",
+    "titulo": "Queda do strain longitudinal global sem queda da FEVE em quimioterapia com antraciclina: iniciar cardioproteção agora?",
+    "tema": "Cardio-oncologia",
+    "nivel": "avançado",
+    "enunciado": "Mulher de 52 anos, em quimioterapia com antraciclina para câncer de mama, sem cardiopatia prévia, mas com hipertensão arterial como fator de risco adicional para insuficiência cardíaca. Eco basal: FEVE 60%, strain longitudinal global (GLS) -21%. No controle aos 3 meses, a FEVE permanece normal (58%), mas o GLS caiu para -18,5% — uma redução relativa de cerca de 12% em relação ao basal. A paciente está assintomática.",
+    "pergunta": "Com base no ensaio SUCCOUR, qual conduta tem melhor sustentação de evidência neste momento?",
+    "opcoes": [
+      "Aguardar a FEVE cair para iniciar cardioproteção, já que só a queda absoluta de FEVE define disfunção cardíaca relacionada ao câncer",
+      "Iniciar terapia cardioprotetora agora, guiada pela queda do GLS, mesmo com a FEVE ainda normal",
+      "Suspender a antraciclina imediatamente, independentemente do estágio do tratamento oncológico",
+      "Repetir o eco em 6 meses sem qualquer conduta adicional, pois o GLS isolado não tem valor prognóstico estabelecido"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "No SUCCOUR (Thavendiranathan et al., JACC 2021), 331 pacientes tratadas com antraciclina e com outro fator de risco para insuficiência cardíaca foram randomizadas para iniciar terapia cardioprotetora guiada por queda relativa de GLS ≥12% (n=166) ou por queda absoluta de FEVE >10% (n=165). Embora a variação média de FEVE ao final de 1 ano não tenha diferido significativamente entre os grupos como um todo, o braço guiado por GLS teve significativamente menos pacientes atingindo critério de disfunção cardíaca relacionada ao câncer (5,8% vs. 13,7%; p=0,02) e FEVE final maior (57±6% vs. 55±7%; p=0,05). Entre as pacientes que efetivamente receberam cardioproteção, a queda de FEVE no seguimento foi bem menor no braço guiado por GLS (2,9±7,4% vs. 9,1±10,9%; p=0,03) — ou seja, esperar a queda da FEVE para agir permite mais dano miocárdico se instalar antes do início do tratamento.",
+    "source_refs": [
+      "Thavendiranathan P, Negishi T, Somerset E, Negishi K, Penicka M, Lemieux J, Aakhus S, Miyazaki S, Shirazi M, Galderisi M, Marwick TH; SUCCOUR Investigators. Strain-Guided Management of Potentially Cardiotoxic Cancer Therapy. J Am Coll Cardiol. 2021;77(4):392-401. DOI: 10.1016/j.jacc.2020.11.020. PMID: 33220426"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "diabetes-doenca-coronariana-e-depressao-mal-controlados-cuidado-colaborativo-coordenado-teamcare",
+    "titulo": "Diabetes, doença coronariana e depressão mal controlados ao mesmo tempo: tratar cada um separadamente, ou coordenar o cuidado?",
+    "tema": "Saúde mental e cardiologia",
+    "nivel": "intermediário",
+    "enunciado": "Homem de 58 anos, com doença arterial coronariana estável e diabetes tipo 2, comparece à consulta com HbA1c 9,1%, LDL 145 mg/dL, PA 152/94 mmHg e escore de depressão elevado (SCL-20), sugerindo depressão maior não tratada. Ele já tem prescrições para as três condições, mas a adesão é baixa e nenhum alvo terapêutico está sendo atingido, apesar de consultas separadas com cardiologista, endocrinologista e psiquiatra.",
+    "pergunta": "O que o ensaio TEAMcare (Katon et al., NEJM 2010) mostrou sobre uma estratégia de manejo coordenado por enfermeira treinada, atuando junto ao médico da atenção primária nas três condições ao mesmo tempo, comparada ao cuidado usual?",
+    "opcoes": [
+      "Não houve diferença em nenhum desfecho clínico, apenas melhora na satisfação do paciente",
+      "Houve melhora estatisticamente significativa e simultânea em HbA1c, LDL, pressão sistólica e escore de depressão, comparado ao cuidado usual",
+      "A intervenção melhorou apenas o escore de depressão, sem impacto nos parâmetros metabólicos",
+      "A intervenção piorou o controle metabólico por sobrecarregar o paciente com mais visitas"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "No TEAMcare (Katon WJ et al., N Engl J Med 2010;363(27):2611-2620, PMID 21190455), 214 pacientes com diabetes e/ou doença coronariana mal controlados e depressão coexistente foram randomizados para cuidado usual ou para manejo colaborativo por enfermeira supervisionada, atuando junto ao médico de atenção primária, com metas baseadas em diretriz para as múltiplas condições simultaneamente. Em 12 meses, o grupo intervenção teve melhora significativamente maior em hemoglobina glicada (diferença de 0,58%), LDL-colesterol (diferença de 6,9 mg/dL), pressão sistólica (diferença de 5,1 mmHg) e escore de depressão SCL-20 (diferença de 0,40 pontos), todos com p<0,001.",
+    "source_refs": [
+      "Katon WJ, Lin EH, Von Korff M, Ciechanowski P, Ludman EJ, Young B, Peterson D, Rutter CM, McGregor M, McCulloch D. Collaborative care for patients with depression and chronic illnesses. N Engl J Med. 2010;363(27):2611-2620. DOI: 10.1056/NEJMoa1003955. PMID: 21190455"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "ferramenta-de-decisao-compartilhada-para-anticoagulacao-em-fa-melhora-a-adesao-sdm4afib",
+    "titulo": "Usar uma ferramenta formal de decisão compartilhada para anticoagulação na FA melhora a adesão ao tratamento escolhido?",
+    "tema": "Comunicação clínica",
+    "nivel": "intermediário",
+    "enunciado": "Um cardiologista lê que ferramentas de decisão compartilhada (SDM) aumentam o envolvimento do paciente e a satisfação do médico na consulta sobre anticoagulação na fibrilação atrial não valvar, e passa a supor que isso também deve aumentar a adesão ao anticoagulante escolhido e reduzir eventos clínicos, em comparação a uma consulta sem a ferramenta.",
+    "pergunta": "O que o ensaio SDM4AFib (Anticoagulation Choice), publicado por Noseworthy et al. em 2022, mostrou sobre adesão e desfechos de segurança ao comparar consultas com e sem a ferramenta de decisão compartilhada?",
+    "opcoes": [
+      "A ferramenta aumentou significativamente a adesão primária e reduziu sangramentos maiores",
+      "A ferramenta reduziu a adesão, porque a discussão de riscos assustou os pacientes e os afastou do tratamento",
+      "Não houve diferença significativa entre os braços na adesão primária (78% vs. 81%), na adesão secundária, nem nos desfechos de segurança (13% vs. 14% de eventos, a maioria sangramentos)",
+      "A ferramenta só funcionou nos pacientes que optaram por varfarina, não nos que optaram por anticoagulante oral direto"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "No SDM4AFib (Noseworthy PA et al., J Am Heart Assoc 2022;11(2):e023048, PMID 35023356), 922 encontros clínicos avaliáveis de pacientes com FA não valvar foram randomizados para uso ou não da ferramenta de conversa Anticoagulation Choice. Não houve diferença significativa entre os braços na adesão primária (78% vs. 81%), na adesão secundária (percentual de dias cobertos com DOAC de 74,1% vs. 71,6%; tempo em faixa terapêutica com varfarina de 66,6% vs. 64,4%) nem nos desfechos de segurança (13% vs. 14% dos participantes). O ganho de processo comunicacional demonstrado em publicação anterior não se traduziu neste ensaio em mais adesão ou mais segurança clínica.",
+    "source_refs": [
+      "Noseworthy PA, Branda ME, Kunneman M, Hargraves IG, Sivly AL, Brito JP, Burnett B, Zeballos-Palacios C, Linzer M, Suzuki T, Lee AT, Gorr H, Jackson EA, Hess E, Brand-McCarthy SR, Shah ND, Montori VM; SDM4AFib Trial Investigators. Effect of Shared Decision-Making for Stroke Prevention on Treatment Adherence and Safety Outcomes in Patients With Atrial Fibrillation: A Randomized Clinical Trial. J Am Heart Assoc. 2022;11(2):e023048. DOI: 10.1161/JAHA.121.023048. PMID: 35023356"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "consumo-de-cafe-e-arritmia-o-que-o-ensaio-crave-realmente-mostrou",
+    "titulo": "\"O café está me dando arritmia\": o que o ensaio randomizado CRAVE realmente mostrou",
+    "tema": "Geral",
+    "nivel": "básico",
+    "enunciado": "Paciente de 41 anos, sem cardiopatia estrutural conhecida, relata que \"sente o coração disparar\" nos dias em que toma café e pergunta se deve parar de vez, temendo que a cafeína esteja causando arritmias perigosas.",
+    "pergunta": "No ensaio randomizado CRAVE (Marcus et al., NEJM 2023), qual foi o efeito do consumo de café cafeinado sobre extrassístoles e outros parâmetros, comparado a evitar cafeína?",
+    "opcoes": [
+      "O café aumentou significativamente as extrassístoles ventriculares diárias, mas não as atriais, além de aumentar os passos diários e reduzir o tempo de sono",
+      "O café aumentou tanto extrassístoles atriais quanto ventriculares, e também reduziu o número de passos diários",
+      "O café não teve efeito sobre nenhum parâmetro medido, confirmando que a queixa do paciente não tem base fisiológica",
+      "O café reduziu as extrassístoles ventriculares e não teve efeito sobre sono ou atividade física"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "No CRAVE (Marcus GM et al., N Engl J Med 2023;388(12):1092-1100, PMID 36947466), ensaio cruzado randomizado com 100 adultos, o consumo de café cafeinado associou-se a 154 vs. 102 extrassístoles ventriculares diárias (razão de taxas 1,51; IC95% 1,18-1,94), enquanto as extrassístoles atriais não diferiram de forma significativa (58 vs. 53/dia; p=0,10). O café também se associou a mais passos diários (10.646 vs. 9.665) e a menos minutos de sono por noite (397 vs. 432).",
+    "source_refs": [
+      "Marcus GM, Rosenthal DG, Nah G, Vittinghoff E, Fang C, Ogomori K, Joyce S, Yilmaz D, Yang V, Kessedjian T, Wilson E, Yang M, Chang K, Wall G, Olgin JE. Acute Effects of Coffee Consumption on Health among Ambulatory Adults. N Engl J Med. 2023;388(12):1092-1100. DOI: 10.1056/NEJMoa2204737. PMID: 36947466"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "triagem-neonatal-com-oximetria-de-pulso-para-cardiopatia-congenita-critica-desempenho-do-teste",
+    "titulo": "Triagem neonatal com oximetria de pulso para cardiopatia congênita crítica: o recém-nascido com teste negativo está livre de cardiopatia grave?",
+    "tema": "Cardiopatias congênitas",
+    "nivel": "básico",
+    "enunciado": "Recém-nascido a termo, assintomático, é submetido à triagem de rotina com oximetria de pulso (SpO2 pré e pós-ductal) antes da alta da maternidade. O resultado vem negativo, dentro da faixa considerada normal, e a equipe de enfermagem pergunta se isso descarta com segurança qualquer cardiopatia congênita crítica.",
+    "pergunta": "Com base na metanálise de Thangaratinam et al. (Lancet, 2012), qual afirmação melhor descreve o desempenho da oximetria de pulso como teste de triagem para cardiopatia congênita crítica em recém-nascidos assintomáticos?",
+    "opcoes": [
+      "A sensibilidade é próxima de 100%, então um resultado negativo descarta cardiopatia congênita crítica com segurança",
+      "A especificidade é baixa, gerando muitos encaminhamentos desnecessários para ecocardiograma",
+      "O teste tem desempenho equivalente ao exame físico isolado, sem valor incremental",
+      "A sensibilidade é de aproximadamente 76,5%, com especificidade de 99,9% e taxa de falso-positivo de apenas 0,14% — um teste negativo reduz a probabilidade de cardiopatia crítica, mas não a exclui por completo"
+    ],
+    "resposta_correta": 3,
+    "explicacao": "Na metanálise de Thangaratinam S et al. (Lancet 2012;379(9835):2459-2464, PMID 22554860), que reuniu 13 estudos elegíveis com dados de 229.421 recém-nascidos, a sensibilidade global da oximetria de pulso para cardiopatia congênita crítica foi de 76,5% (IC95% 67,7-83,5), especificidade de 99,9% (IC95% 99,7-99,9) e taxa de falso-positivo de 0,14% (IC95% 0,06-0,33). Um resultado negativo reduz a probabilidade da doença mas não a exclui, em parte porque lesões ductus-dependentes podem só se manifestar depois da triagem.",
+    "source_refs": [
+      "Thangaratinam S, Brown K, Zamora J, Khan KS, Ewer AK. Pulse oximetry screening for critical congenital heart defects in asymptomatic newborn babies: a systematic review and meta-analysis. Lancet. 2012;379(9835):2459-2464. DOI: 10.1016/S0140-6736(12)60107-X. PMID: 22554860"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "estenose-mitral-reumatica-jovem-valvuloplastia-por-balao-versus-comissurotomia-cirurgica",
+    "titulo": "Estenose mitral reumática em paciente jovem com anatomia favorável: valvuloplastia por balão ou comissurotomia cirúrgica?",
+    "tema": "Febre reumática",
+    "nivel": "intermediário",
+    "enunciado": "Mulher de 24 anos, com sequela de cardite reumática na infância, apresenta dispneia aos moderados esforços (NYHA II). O ecocardiograma mostra estenose mitral grave (área valvar 0,9 cm²), válvula pouco calcificada, aparelho subvalvar preservado, sem trombo em átrio esquerdo e sem insuficiência mitral relevante — anatomia valvar favorável. Ela pergunta se pode evitar a cirurgia aberta.",
+    "pergunta": "Com base no ensaio randomizado que comparou valvuloplastia mitral por balão com comissurotomia cirúrgica aberta em pacientes com anatomia valvar favorável, qual afirmação está correta?",
+    "opcoes": [
+      "A comissurotomia cirúrgica é superior e deve ser sempre preferida em pacientes jovens, independentemente da anatomia valvar",
+      "Os dois procedimentos produzem ganho inicial semelhante de área valvar, mas em 3 anos a área valvar foi maior e mais bem mantida no grupo tratado por balão, com resultado funcional pelo menos equivalente",
+      "A valvuloplastia por balão está associada a maior mortalidade em 3 anos e não deve ser considerada mesmo com anatomia favorável",
+      "Não há diferença em nenhum desfecho entre os dois procedimentos, e a escolha deve se basear exclusivamente na disponibilidade local do serviço"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O ensaio randomizado de Reyes VP et al. (NEJM, 1994) alocou 60 pacientes com estenose mitral grave e anatomia valvar favorável para valvuloplastia por balão (n=30) ou comissurotomia cirúrgica aberta (n=30). A área valvar aumentou de 0,9±0,3 cm² para cerca de 2,0-2,1 cm² nos dois grupos logo após o procedimento. Em 3 anos, porém, a área valvar permaneceu maior no grupo balão (2,4±0,6 cm²) do que no grupo cirúrgico (1,8±0,4 cm², p<0,001), e mais pacientes do grupo balão estavam em classe funcional I da NYHA (72% vs 57%). Restenose ocorreu em proporção semelhante, e as complicações também foram comparáveis entre os grupos.",
+    "source_refs": [
+      "Reyes VP, Raju BS, Wynne J, Stephenson LW, Raju R, Fromm BS, Rajagopal P, Mehta P, Singh S, Rao DP. Percutaneous balloon valvuloplasty compared with open surgical commissurotomy for mitral stenosis. N Engl J Med. 1994;331(15):961-967. PMID: 8084354"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "taquicardia-supraventricular-fetal-com-hidropisia-qual-antiarritmico-transplacentario-de-primeira-linha",
+    "titulo": "Taquicardia supraventricular fetal com hidropisia: qual antiarrítmico transplacentário escolher primeiro?",
+    "tema": "Gravidez",
+    "nivel": "avançado",
+    "enunciado": "Gestante de 29 semanas é encaminhada por taquicardia fetal sustentada (frequência ventricular de 240 bpm) ao ecocardiograma fetal, com sinais iniciais de hidropisia (derrame pericárdico e ascite discretos). O obstetra pergunta qual fármaco transplacentário oferece maior chance de conversão e controle de frequência nesse cenário.",
+    "pergunta": "De acordo com o maior estudo multicêntrico não randomizado que comparou digoxina, flecainida e sotalol no tratamento transplacentário de taquiarritmias fetais, qual afirmação está correta?",
+    "opcoes": [
+      "O sotalol foi superior a flecainida e digoxina tanto para taquicardia supraventricular quanto para flutter atrial fetal, devendo ser sempre a primeira escolha",
+      "Nenhum dos três fármacos reduziu a frequência ventricular fetal de forma consistente, e a conduta expectante é preferível em qualquer cenário",
+      "Para taquicardia supraventricular fetal, flecainida e digoxina obtiveram maior redução da frequência ventricular e melhor conversão do que sotalol; já para flutter atrial fetal, o sotalol converteu mais casos",
+      "A mortalidade relacionada à arritmia fetal foi nula no estudo, tornando irrelevante a escolha do fármaco inicial"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "Jaeggi ET et al. (Circulation, 2011) reuniram 159 encaminhamentos de arritmia fetal tratados por via transplacentária com flecainida, sotalol ou digoxina como fármaco de primeira linha. A cardioversão em 5 e 10 dias ocorreu em 50% e 63% dos casos de SVT, contra apenas 25% e 41% dos casos de flutter atrial. Para arritmias persistentes no dia 5, a redução da frequência ventricular foi maior com flecainida (-22%) e digoxina (-13%) do que com sotalol (-5%); já o sotalol se associou a maior taxa de reversão do flutter atrial fetal. A mortalidade relacionada à arritmia atingiu 5% da coorte.",
+    "source_refs": [
+      "Jaeggi ET, Carvalho JS, De Groot E, Api O, Clur SA, Rammeloo L, McCrindle BW, Ryan G, Manlhiot C, Blom NA. Comparison of transplacental treatment of fetal supraventricular tachyarrhythmias with digoxin, flecainide, and sotalol: results of a nonrandomized multicenter study. Circulation. 2011;124(16):1747-1754. PMID: 21931080"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cteph-inoperavel-angioplastia-pulmonar-por-balao-versus-riociguate-o-ensaio-race",
+    "titulo": "CTEPH inoperável, sem tratamento prévio: angioplastia pulmonar por balão ou riociguate primeiro? O ensaio RACE",
+    "tema": "Hipertensão pulmonar",
+    "nivel": "avançado",
+    "enunciado": "Paciente de 58 anos com hipertensão pulmonar tromboembólica crônica (CTEPH) confirmada por cintilografia V/Q e angiotomografia é avaliado pelo heart team como tecnicamente inoperável (doença distal), ainda virgem de tratamento específico. Resistência vascular pulmonar elevada, classe funcional III.",
+    "pergunta": "No ensaio RACE, que randomizou pacientes com CTEPH inoperável e sem tratamento prévio para angioplastia pulmonar por balão (APB) ou riociguate, qual foi o resultado no desfecho primário (queda da resistência vascular pulmonar em 26 semanas)?",
+    "opcoes": [
+      "Riociguate reduziu a RVP mais do que a APB, e com menos eventos adversos sérios",
+      "Não houve diferença na redução de RVP entre os dois grupos, mas a APB teve mais complicações",
+      "A APB não reduziu significativamente a RVP em relação ao riociguate, tornando o riociguate a opção preferencial nesse cenário",
+      "A APB reduziu a RVP para 39,9% do valor basal, contra 66,7% no grupo riociguate — redução significativamente maior com a angioplastia, à custa de mais eventos adversos sérios relacionados ao procedimento (42% vs 9%), principalmente lesão pulmonar por reperfusão"
+    ],
+    "resposta_correta": 3,
+    "explicacao": "O ensaio RACE (Jaïs X et al., Lancet Respir Med 2022) randomizou 105 pacientes com CTEPH inoperável e virgens de tratamento para APB (n=52) ou riociguate (n=53). No desfecho primário — RVP média geométrica em 26 semanas — a APB reduziu a RVP para 39,9% do basal, contra 66,7% no grupo riociguate (p<0,0001). Eventos adversos sérios relacionados ao tratamento foram mais frequentes com APB — 42% (22/52) contra 9% (5/53), principalmente lesão pulmonar relacionada ao procedimento. Pré-tratar com riociguate antes da APB reduziu a taxa de eventos adversos sérios para 14%.",
+    "source_refs": [
+      "Jaïs X, Brenot P, Bouvaist H, Jevnikar M, Canuet M, Chabanne C, Chaouat A, Cottin V, De Groote P, Favrolt N, Horeau-Langlard D, Magro P, Savale L, Prévot G, Renard S, Sitbon O, Parent F, Trésorier R, Tromeur C, Piedvache C, Grimaldi L, Fadel E, Montani D, Humbert M, Simonneau G; RACE study group. Balloon pulmonary angioplasty versus riociguat for the treatment of inoperable chronic thromboembolic pulmonary hypertension (RACE): a multicentre, phase 3, open-label, randomised controlled trial. Lancet Respir Med. 2022;10(10):961-971. PMID: 35926542"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "prevencao-de-sindrome-pos-pericardiotomia-colchicina-profilatica-apos-cirurgia-cardiaca-copps-2",
+    "titulo": "Prevenção da síndrome pós-pericardiotomia: colchicina profilática de rotina após cirurgia cardíaca? O ensaio COPPS-2",
+    "tema": "Pericárdio",
+    "nivel": "intermediário",
+    "enunciado": "Paciente de 65 anos será submetido a cirurgia valvar eletiva. A equipe discute se deve iniciar colchicina no pré-operatório e mantê-la por semanas após a cirurgia, como profilaxia de rotina contra síndrome pós-pericardiotomia e fibrilação atrial pós-operatória.",
+    "pergunta": "No ensaio COPPS-2, que randomizou candidatos a cirurgia cardíaca para colchicina profilática ou placebo, qual foi o resultado?",
+    "opcoes": [
+      "A colchicina reduziu significativamente a incidência de síndrome pós-pericardiotomia em 3 meses (19,4% vs 29,4%), mas não reduziu fibrilação atrial pós-operatória nem derrame pericárdico/pleural, e aumentou eventos adversos (principalmente gastrointestinais)",
+      "A colchicina reduziu tanto a síndrome pós-pericardiotomia quanto a fibrilação atrial pós-operatória, sem qualquer aumento de eventos adversos",
+      "A colchicina não teve efeito em nenhum desfecho avaliado, incluindo a síndrome pós-pericardiotomia",
+      "A colchicina aumentou a incidência de síndrome pós-pericardiotomia em relação ao placebo, provavelmente por interação com a resposta inflamatória pós-operatória"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O COPPS-2 (Imazio M et al., JAMA 2014) randomizou 360 candidatos a cirurgia cardíaca para colchicina ou placebo. A síndrome pós-pericardiotomia em 3 meses ocorreu em 19,4% do grupo colchicina contra 29,4% do grupo placebo (NNT de 10). Os desfechos secundários não acompanharam esse benefício: fibrilação atrial pós-operatória foi semelhante (33,9% vs 41,7%) e derrame pericárdico/pleural também (57,2% vs 58,9%). Eventos adversos gastrointestinais foram mais frequentes com colchicina (20,0% vs 11,7%).",
+    "source_refs": [
+      "Imazio M, Brucato A, Ferrazzi P, Pullara A, Adler Y, Barosi A, Caforio ALP, Cemin R, Chirillo F, Comoglio C, Cugola D, Cumetti D, Dyrda O, Ferrua S, Finkelstein Y, Flocco R, Gandino A, Hoit B, Innocente F, Maestroni S, Musumeci F, Oh J, Pergolini A, Polizzi V, Ristic A, Simon C, Spodick DH, Tarzia V, Trimboli S, Valenti A, Belli R, Gaita F; COPPS-2 Investigators. Colchicine for prevention of postpericardiotomy syndrome and postoperative atrial fibrillation: the COPPS-2 randomized clinical trial. JAMA. 2014;312(10):1016-1023. PMID: 25172965"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sincope-no-pronto-socorro-estratificacao-de-risco-pelo-escore-canadense-de-sincope",
+    "titulo": "Síncope no pronto-socorro sem causa clara: o Escore Canadense de Síncope muda a decisão de internar?",
+    "tema": "Síncope",
+    "nivel": "intermediário",
+    "enunciado": "Homem de 67 anos, hipertenso, é atendido no pronto-socorro após episódio sincopal precedido por palpitação, sem pródromo vasovagal claro. O ECG mostra QRS de 140 ms com bloqueio de ramo esquerdo; PA de admissão 92x60 mmHg; troponina discretamente elevada. Não há diagnóstico etiológico definido após a avaliação inicial.",
+    "pergunta": "O Escore Canadense de Risco de Síncope foi derivado para prever eventos adversos sérios em 30 dias após avaliação de síncope no pronto-socorro. Qual das afirmações sobre esse escore está correta?",
+    "opcoes": [
+      "O escore usa exclusivamente dados de história clínica, sem nenhuma variável de exame físico ou ECG",
+      "O escore combina predisposição vasovagal, doença cardíaca, pressão sistólica anormal, troponina elevada, eixo de QRS anormal, QRS >130 ms, QTc >480 ms e o diagnóstico do médico assistente na alta do PS, com taxa de evento sério variando de 0,4% no escore mais baixo a 83,6% no mais alto",
+      "O escore foi validado apenas em população pediátrica e não deve ser usado em adultos",
+      "A taxa de eventos adversos sérios em 30 dias na coorte de derivação foi superior a 20%"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Thiruganasambandamoorthy V et al. (CMAJ, 2016) derivaram o Escore Canadense de Risco de Síncope a partir de coorte prospectiva de 4.030 pacientes. O evento adverso sério em 30 dias ocorreu em 3,6% (147/4.030) da coorte. O modelo final combina oito preditores, com risco estimado variando de 0,4% no escore mínimo (-3) a 83,6% no escore máximo (11), com excelente discriminação (estatística C de 0,88).",
+    "source_refs": [
+      "Thiruganasambandamoorthy V, Kwong K, Wells GA, Sivilotti MLA, Mukarram M, Rowe BH, Lang E, Perry JJ, Sheldon R, Stiell IG, Taljaard M. Development of the Canadian Syncope Risk Score to predict serious adverse events after emergency department assessment of syncope. CMAJ. 2016;188(12):E289-E298. PMID: 27378464"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "choque-cardiogenico-por-iam-bomba-de-fluxo-microaxial-versus-tratamento-padrao-o-ensaio-danger-shock",
+    "titulo": "Choque cardiogênico por IAM: bomba de fluxo microaxial de rotina reduz mortalidade? O ensaio DanGer Shock",
+    "tema": "Terapia intensiva",
+    "nivel": "avançado",
+    "enunciado": "Paciente de 61 anos é admitido com IAMCSST anterior extenso complicado por choque cardiogênico (PAS 75 mmHg, lactato elevado, necessidade de duas drogas vasoativas) e é levado à sala de hemodinâmica para angioplastia primária. A equipe discute implantar uma bomba de fluxo microaxial (tipo Impella) antes da revascularização.",
+    "pergunta": "No ensaio DanGer Shock, que randomizou pacientes com choque cardiogênico relacionado a infarto para bomba de fluxo microaxial associada ao tratamento padrão versus tratamento padrão isolado, o que se observou aos 180 dias?",
+    "opcoes": [
+      "A mortalidade por todas as causas foi idêntica entre os grupos, e o dispositivo só aumentou complicações",
+      "O dispositivo reduziu a mortalidade e também reduziu os eventos adversos graves em relação ao tratamento padrão",
+      "O dispositivo reduziu a mortalidade por todas as causas (45,8% vs 58,5%; HR 0,74), mas à custa de mais que o triplo de eventos adversos graves compostos (24,0% vs 6,2%), incluindo maior necessidade de terapia renal substitutiva",
+      "O dispositivo não teve efeito sobre a mortalidade, mas reduziu significativamente a necessidade de terapia renal substitutiva"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O DanGer Shock (Møller JE et al., NEJM 2024) randomizou 360 pacientes com choque cardiogênico relacionado a infarto. A mortalidade em 180 dias foi de 45,8% no grupo dispositivo contra 58,5% no grupo padrão (HR 0,74; IC95% 0,55-0,99; p=0,04). Em contrapartida, o desfecho composto de segurança foi muito mais frequente no grupo dispositivo — 24,0% contra 6,2% (RR 4,74). A necessidade de terapia renal substitutiva também foi maior com o dispositivo — 41,9% vs 26,7%.",
+    "source_refs": [
+      "Møller JE, Engstrøm T, Jensen LO, Eiskjær H, Mangner N, Polzin A, Schulze PC, Skurk C, Nordbeck P, Clemmensen P, Panoulas V, Zimmer S, Schäfer A, Werner N, Frydland M, Holmvang L, Kjærgaard J, Sørensen R, Lønborg J, Lindholm MG, Udesen NLJ, Junker A, Schmidt H, Terkelsen CJ, Christensen S, Christiansen EH, Linke A, Woitek FJ, Westenfeld R, Möbius-Winkler S, Wachtell K, Ravn HB, Lassen JF, Boesgaard S, Gerke O, Hassager C; DanGer Shock Investigators. Microaxial Flow Pump or Standard Care in Infarct-Related Cardiogenic Shock. N Engl J Med. 2024;390(15):1382-1393. PMID: 38587239"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "escore-syntax-doenca-triarterial-decisao-entre-cirurgia-e-angioplastia",
+    "titulo": "Doença coronariana triarterial complexa: o escore SYNTAX muda a escolha entre cirurgia e angioplastia?",
+    "tema": "Calculadoras",
+    "nivel": "avançado",
+    "enunciado": "Paciente de 66 anos, diabético, com angina estável e doença triarterial na cineangiocoronariografia, incluindo lesão longa e complexa na artéria descendente anterior proximal. O heart team calcula o escore SYNTAX antes de decidir entre cirurgia de revascularização miocárdica (CRM) e angioplastia (ICP).",
+    "pergunta": "No seguimento de 5 anos do ensaio SYNTAX, com pacientes estratificados por tercil do escore SYNTAX, qual padrão de resultado foi observado ao comparar CRM com ICP para MACCE?",
+    "opcoes": [
+      "A CRM foi superior à ICP em todos os tercis de escore SYNTAX, inclusive no tercil de escore baixo",
+      "A ICP foi superior à CRM em todos os tercis, com a diferença aumentando conforme a complexidade anatômica",
+      "Não houve diferença entre CRM e ICP em nenhum tercil de escore SYNTAX",
+      "No tercil de escore baixo, CRM e ICP tiveram MACCE semelhante (28,6% vs 32,1%, sem diferença estatística); nos tercis intermediário e alto, a CRM foi superior à ICP, com a maior diferença absoluta no tercil de escore alto (26,8% vs 44,0%)"
+    ],
+    "resposta_correta": 3,
+    "explicacao": "No seguimento de 5 anos do ensaio SYNTAX (Mohr FW et al., Lancet 2013), o MACCE global em 5 anos foi de 26,9% com CRM contra 37,3% com ICP — mas esse resultado agregado esconde interação com o escore SYNTAX em tercis. No tercil baixo, CRM e ICP tiveram desempenho semelhante (28,6% vs 32,1%, p=0,43). No tercil intermediário, a CRM já se mostrou superior (25,8% vs 36,0%, p=0,008), e no tercil alto a diferença foi maior (26,8% vs 44,0%, p<0,0001).",
+    "source_refs": [
+      "Mohr FW, Morice MC, Kappetein AP, Feldman TE, Ståhle E, Colombo A, Mack MJ, Holmes DR Jr, Morel MA, Van Dyck N, Houle VM, Dawkins KD, Serruys PW. Coronary artery bypass graft surgery versus percutaneous coronary intervention in patients with three-vessel disease and left main coronary disease: 5-year follow-up of the randomised, clinical SYNTAX trial. Lancet. 2013;381(9867):629-638. PMID: 23439102"
+    ],
+    "review_status": "revisado"
   }
 ]
