@@ -4,7 +4,7 @@ slug: sulfonilureia-e-risco-cardiovascular-comparado-a-metformina-spread-dimcad-
 theme: "Diabetes e cardiologia"
 kind: estudo
 review_status: revisado
-source_refs: ["Hong J, Zhang Y, Lai S, Lv A, Su Q, Dong Y, Zhou Z, Tang W, Zhao J, Cui L, Zou D, Wang D, Li H, Liu C, Wu G, Shen J, Zhu D, Wang W, Shen W, Ning G; SPREAD-DIMCAD Investigators. Effects of metformin versus glipizide on cardiovascular outcomes in patients with type 2 diabetes and coronary artery disease. Diabetes Care. 2013;36(5):1304-1311. DOI: 10.2337/dc12-0719. PMID: 23230096. PMCID: PMC3631843 — ensaio SPREAD-DIMCAD, multicêntrico, randomizado, duplo-cego, 304 pacientes chineses com diabetes tipo 2 e doença arterial coronariana estabelecida, 3 anos de tratamento e mediana de 5,0 anos de seguimento", "Varvaki Rados D, Catani Pinto L, Reck Remonti L, Bauermann Leitão C, Gross JL. The Association between Sulfonylurea Use and All-Cause and Cardiovascular Mortality: A Meta-Analysis with Trial Sequential Analysis of Randomized Clinical Trials. PLoS Med. 2016;13(4):e1001992. DOI: 10.1371/journal.pmed.1001992. PMID: 27071029. PMCID: PMC4829174 — 47 ensaios clínicos randomizados, 37.650 pacientes, 890 mortes; registro PROSPERO CRD42014004330. NOTA: existe Errata (PLoS Med. 2016;13(6):e1002091, DOI: 10.1371/journal.pmed.1002091, PMID: 27340828), registrada e NÃO lida no detalhe do que foi corrigido — o texto da errata acessado não descreve a alteração numérica"]
+source_refs: ["Hong J, Zhang Y, Lai S, Lv A, Su Q, Dong Y, Zhou Z, Tang W, Zhao J, Cui L, Zou D, Wang D, Li H, Liu C, Wu G, Shen J, Zhu D, Wang W, Shen W, Ning G; SPREAD-DIMCAD Investigators. Effects of metformin versus glipizide on cardiovascular outcomes in patients with type 2 diabetes and coronary artery disease. Diabetes Care. 2013;36(5):1304-1311. DOI: 10.2337/dc12-0719. PMID: 23230096. PMCID: PMC3631843 — ensaio SPREAD-DIMCAD, multicêntrico, randomizado, duplo-cego, 304 pacientes chineses com diabetes tipo 2 e doença arterial coronariana estabelecida, 3 anos de tratamento e mediana de 5,0 anos de seguimento", "Varvaki Rados D, Catani Pinto L, Reck Remonti L, Bauermann Leitão C, Gross JL. The Association between Sulfonylurea Use and All-Cause and Cardiovascular Mortality: A Meta-Analysis with Trial Sequential Analysis of Randomized Clinical Trials. PLoS Med. 2016;13(4):e1001992. DOI: 10.1371/journal.pmed.1001992. PMID: 27071029. PMCID: PMC4829174 — 47 ensaios clínicos randomizados, 37.650 pacientes, 890 mortes; registro PROSPERO CRD42014004330. NOTA: existe Errata/Notice of Republication (PLoS Med. 2016;13(6):e1002091, DOI: 10.1371/journal.pmed.1002091, PMID: 27340828, PMCID: PMC4920361), lida na íntegra em 01/08/2026 — corrige apenas a indexação dos nomes dos quatro primeiros autores (ordem prenome/sobrenome), sem nenhuma alteração de resultado, tabela ou valor de OR/IC do artigo original"]
 legacy_source: "Documento novo, escrito em 01/08/2026. Lacuna: nenhum documento do repositório comparava diretamente sulfonilureia e metformina quanto a risco cardiovascular — o CAROLINA, já citado em 'nem-todo-isglt2-e-igual-vertis-cv-e-a-linagliptina-em-carolina-e-carmelina.md', compara linagliptina (um DPP-4) contra glimepirida, não metformina contra sulfonilureia. É par instrutivo por contraste de desenho: um ensaio pequeno e de alto risco (SPREAD-DIMCAD) mostra diferença grande a favor da metformina; uma metanálise grande de ensaios em geral não desenhados para segurança cardiovascular não mostra diferença. Os dois números foram lidos no resumo estruturado do PubMed, nenhum de memória."
 ---
 
@@ -104,11 +104,15 @@ descuidada em qualquer direção:
 - **Metanálise com TSA**: os autores declaram como limitação principal a inclusão de ensaios **não
   desenhados para avaliar desfecho de segurança** — resultado neutro em desfecho secundário/
   incidental tem menos força do que resultado neutro em desfecho primário pré-especificado.
-- **A errata da metanálise (PLoS Med. 2016;13(6):e1002091, PMID 27340828) está registrada e NÃO foi
-  lida no detalhe do que corrigiu** — o texto acessado desta nota de correção não descreve a
-  alteração; os números citados acima são os do artigo original (PMID 27071029), não confrontados
-  com a errata. **VERIFICAÇÃO HUMANA NECESSÁRIA** se a errata alterar algum dos quatro valores de
-  OR/IC citados.
+- **A errata da metanálise foi lida na íntegra em 01/08/2026 (PMC4920361, acesso aberto) e NÃO
+  altera nenhum valor de OR/IC.** É uma "Notice of Republication" de 14/06/2016, cujo texto
+  completo é: *"This article was republished (...) to correct errors in the article citation. The
+  following authors' names were indexed incorrectly: Dimitris Varvaki Rados, Lana Catani Pinto,
+  Luciana Reck Remonti, Cristiane Bauermann Leitão."* É correção de **indexação dos nomes dos
+  autores** (ordem prenome/sobrenome trocada na indexação do PubMed/PLoS), não do conteúdo
+  científico — nenhum resultado, tabela ou número do artigo original (PMID 27071029) foi alterado.
+  Os quatro valores de OR/IC citados acima permanecem os do artigo original, agora confirmados
+  contra a errata em vez de apenas presumidos como inalterados.
 - Nenhum dos dois estudos avalia glibenclamida/gliburida especificamente de forma isolada, nem
   compara sulfonilureia a outras classes modernas (iSGLT2, GLP-1, DPP-4) — só a metformina, que é o
   recorte deste documento.
