@@ -759,5 +759,231 @@
       }
     ],
     "revisao": "Cada item conferido contra o texto dos dois documentos de origem (ambos já revisado e publicados: choque-cardiogenico-diagnostico-e-manejo-com-drogas-vasoativas e classificacao-scai-de-estagios-do-choque-cardiogenico), sem dado novo ou de memória. Itens marcados obrigatorio:false dependem de o recurso (milrinona, BIA, vasopressor por hipotensão) ter sido de fato usado no caso — não se aplicam a todo paciente com choque cardiogênico."
+  },
+  {
+    "slug": "acompanhamento-pos-terapia-avancada-em-hap-grave-refrataria",
+    "condicao": "Acompanhamento pós-terapia avançada em HAP grave refratária (epoprostenol IV ou septostomia atrial por balão)",
+    "resumo": "O que verificar no seguimento do paciente com HAP grave refratária que recebeu epoprostenol intravenoso contínuo ou foi submetido a septostomia atrial por balão — cuidado com o cateter/bomba de infusão, reconhecimento dos sinais esperados versus os que exigem intervenção, e o gatilho para reavaliar transplante pulmonar. Distinto do checklist geral de alta por HAP, que cobre estratificação de risco e escalonamento terapêutico inicial, não o seguimento de quem já está em terapia parenteral ou pós-procedimento.",
+    "documento_origem": "epoprostenol-intravenoso-na-hap-grave-o-ensaio-de-barst-1996-e-a-sobrevida-em-longo-prazo",
+    "theme": "Hipertensão pulmonar",
+    "review_status": "revisado",
+    "source_refs": [
+      "Barst RJ, Rubin LJ, Long WA, McGoon MD, Rich S, Badesch DB, et al; Primary Pulmonary Hypertension Study Group. A comparison of continuous intravenous epoprostenol (prostacyclin) with conventional therapy for primary pulmonary hypertension. N Engl J Med. 1996;334(5):296-301. DOI: 10.1056/NEJM199602013340504. PMID: 8532025",
+      "McLaughlin VV, Shillington A, Rich S. Survival in primary pulmonary hypertension: the impact of epoprostenol therapy. Circulation. 2002;106(12):1477-1482. DOI: 10.1161/01.cir.0000029100.82385.58. PMID: 12234951",
+      "Sandoval J, Gaspar J, Pulido T, Bautista E, Martínez-Guerra ML, Zeballos M, et al. Graded balloon dilation atrial septostomy in severe primary pulmonary hypertension. J Am Coll Cardiol. 1998;32(2):297-304. DOI: 10.1016/s0735-1097(98)00238-1. PMID: 9708453",
+      "Khan MS, Memon MM, Amin E, Yamani N, Khan SU, Figueredo VM, et al. Use of Balloon Atrial Septostomy in Patients With Advanced Pulmonary Arterial Hypertension: A Systematic Review and Meta-Analysis. Chest. 2019;156(1):53-63. DOI: 10.1016/j.chest.2019.03.003. PMID: 30910639. PMCID: PMC7403752"
+    ],
+    "itens": [
+      {
+        "id": "hap-avancada-cateter-sitio",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Se em epoprostenol IV contínuo: sítio de inserção do cateter venoso central inspecionado e sinais sistêmicos de infecção pesquisados — sepse relacionada ao cateter foi a complicação mais comum no ensaio original (4 episódios entre 41 pacientes em epoprostenol)",
+        "origem_secao": "Resultados, com os números do próprio artigo (Barst 1996)"
+      },
+      {
+        "id": "hap-avancada-bomba-infusao",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Funcionamento da bomba de infusão portátil e da via de acesso central conferidos, com educação estruturada do paciente e/ou cuidador para o manejo domiciliar da infusão contínua — a via de administração exige exatamente essa estrutura, e a decisão de manter epoprostenol pesa esse risco contra o benefício de sobrevida",
+        "origem_secao": "Armadilhas clínicas (epoprostenol)"
+      },
+      {
+        "id": "hap-avancada-trombose",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Se em epoprostenol IV contínuo: sinais de evento trombótico relacionado à via de infusão pesquisados — complicação relatada no ensaio original (1 evento entre 41 pacientes)",
+        "origem_secao": "Resultados, com os números do próprio artigo (Barst 1996)"
+      },
+      {
+        "id": "hap-avancada-resposta-funcional",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Classe funcional da NYHA e teste de caminhada de 6 minutos reavaliados e comparados ao basal, como parâmetro objetivo de resposta à terapia avançada, seja epoprostenol IV seja septostomia",
+        "origem_secao": "Resultados (Barst 1996) e A técnica, descrita no estudo original (Sandoval 1998)"
+      },
+      {
+        "id": "hap-avancada-preditores-1ano",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Se em epoprostenol há mais de 1 ano: reavaliados os preditores de sobrevida pós-primeiro ano — classe funcional, índice cardíaco, pressão média de artéria pulmonar e tolerância ao exercício",
+        "origem_secao": "McLaughlin 2002 — a sobrevida se sustenta além das 12 semanas do ensaio"
+      },
+      {
+        "id": "hap-avancada-septostomia-dessaturacao",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Se submetido a septostomia atrial por balão: saturação arterial de oxigênio monitorizada, reconhecendo que a dessaturação (queda média de 8,45% na metanálise) é o efeito esperado do shunt direita-esquerda, não uma intercorrência a corrigir por si só — mas exige seleção e vigilância de paciente com reserva de oxigenação limitada",
+        "origem_secao": "Efeitos hemodinâmicos agudos (Khan 2019) e Armadilhas clínicas (septostomia)"
+      },
+      {
+        "id": "hap-avancada-septostomia-recorrencia",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Se submetido a septostomia atrial por balão: seguimento clínico para fechamento espontâneo do septo e recorrência de sintomas — situação que exigiu repetição do procedimento em 4 dos 14 sobreviventes no estudo original de Sandoval 1998",
+        "origem_secao": "Resultados agudos, com os números do próprio artigo (Sandoval 1998)"
+      },
+      {
+        "id": "hap-avancada-refratariedade-transplante",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Se resposta insuficiente à terapia avançada (persistência de classe funcional III/IV, sem melhora hemodinâmica ou funcional): reavaliação para listagem de transplante pulmonar — tanto o epoprostenol IV quanto a septostomia têm papel de ponte, não de tratamento definitivo",
+        "origem_secao": "Conclusão dos autores e Armadilhas clínicas, nos dois documentos"
+      },
+      {
+        "id": "hap-avancada-nao-intercambiar",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Registrado que o epoprostenol intravenoso não é intercambiável com análogos orais ou inalados de prostaciclina — são moléculas e vias de administração diferentes, com populações-alvo distintas",
+        "origem_secao": "Armadilhas clínicas (epoprostenol)"
+      },
+      {
+        "id": "hap-avancada-verificacao-diretriz-septostomia",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "VERIFICAÇÃO HUMANA NECESSÁRIA: a classe e o nível de recomendação da diretriz de sociedade (ESC/ERS 2022) especificamente sobre septostomia atrial não foram conferidos em texto completo nesta base — não presumir grau de recomendação sem checar a fonte primária",
+        "origem_secao": "Limites (septostomia)"
+      }
+    ],
+    "revisao": "Derivado de dois documentos já verificados e publicados nesta base (epoprostenol intravenoso na HAP grave e septostomia atrial por balão), com a seção de origem registrada em cada item e as quatro referências primárias reaproveitadas dos documentos de origem. Elaborado pela sessão de conteúdo em 01/08/2026 sob a autorização contínua de publicação. ATENÇÃO: assim como o checklist de HAP já existente, este ainda NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles — a atestação dele não é presumida."
+  },
+  {
+    "slug": "alta-pos-transplante-cardiaco",
+    "condicao": "Alta e seguimento inicial pós-transplante cardíaco",
+    "resumo": "O que o registro internacional ISHLT e o teste cardiopulmonar de exercício pré-transplante permitem verificar no seguimento do paciente já transplantado — deliberadamente limitado ao que as duas fontes desta base cobrem, sem cobrir protocolo de imunossupressão ou de biópsia endomiocárdica de vigilância.",
+    "documento_origem": "transplante-cardiaco-sobrevida-do-enxerto-retransplante-e-fatores-de-risco-registro-ishlt",
+    "theme": "Insuficiência cardíaca",
+    "review_status": "revisado",
+    "source_refs": [
+      "Singh TP, Cherikh WS, Hsich E, Lewis A, Perch M, Kian S, Hayes D Jr, Potena L, Stehlik J, Zuckermann A, Cogswell R; International Society for Heart and Lung Transplantation. Graft survival in primary thoracic organ transplant recipients: A special report from the International Thoracic Organ Transplant Registry of the International Society for Heart and Lung Transplantation. J Heart Lung Transplant. 2023;42(10):1321-1333. DOI: 10.1016/j.healun.2023.07.017. PMCID: PMC10901564. PMID: 37549773",
+      "Mancini DM, Eisen H, Kussmaul W, Mull R, Edmunds LH Jr, Wilson JR. Value of peak exercise oxygen consumption for optimal timing of cardiac transplantation in ambulatory patients with heart failure. Circulation. 1991;83(3):778-786. DOI: 10.1161/01.cir.83.3.778. PMID: 1999029",
+      "Peterson LR, Schechtman KB, Ewald GA, Geltman EM, de las Fuentes L, Meyer T, Krekeler P, Moore ML, Rogers JG. Timing of cardiac transplantation in patients with heart failure receiving beta-adrenergic blockers. J Heart Lung Transplant. 2003;22(10):1141-1148. DOI: 10.1016/s1053-2498(02)01225-1. PMID: 14550824",
+      "Arena R, Myers J, Abella J, Peberdy MA, Bensimhon D, Chase P, Guazzi M. Development of a ventilatory classification system in patients with heart failure. Circulation. 2007;115(18):2410-2417. DOI: 10.1161/CIRCULATIONAHA.107.686576. PMID: 17452607"
+    ],
+    "itens": [
+      {
+        "id": "transp-fatores-risco",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Fatores de risco de perda do enxerto registrados e revisados no prontuário (etiologia de base — valvar, isquêmica, congênita ou restritiva —, suporte com ECMO ou ventilação mecânica no momento do transplante, IMC, idade do doador e tempo de isquemia), para calibrar a intensidade do seguimento ambulatorial",
+        "origem_secao": "Fatores de risco para perda do enxerto em 10 anos — modelo multivariado, adultos (registro ISHLT)"
+      },
+      {
+        "id": "transp-funcao-renal",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Função renal (eGFR) do momento do transplante registrada e programada para monitorização periódica — eGFR < 30 mL/min/1,73 m² associou-se a pelo menos 3 anos a menos de sobrevida do enxerto no registro ISHLT",
+        "origem_secao": "Sobrevida mediana do enxerto em adultos, e a tendência por era (registro ISHLT)"
+      },
+      {
+        "id": "transp-idade-extremos",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Atenção redobrada ao seguimento em receptores nos extremos de idade no momento do transplante (mais jovens e mais idosos), pela relação em U com o risco de perda do enxerto identificada no registro",
+        "origem_secao": "Fatores de risco para perda do enxerto em 10 anos — modelo multivariado, adultos (registro ISHLT)"
+      },
+      {
+        "id": "transp-tcpe-pre-registrado",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "VO2 pico do teste cardiopulmonar de exercício pré-transplante (e, quando o esforço não foi máximo, a inclinação VE/VCO2) registrados no prontuário, como referência para comparar a capacidade funcional no seguimento pós-operatório",
+        "origem_secao": "O corte clássico: Mancini 1991 / O complemento que não depende do esforço máximo: VE/VCO2 slope"
+      },
+      {
+        "id": "transp-orientacao-sobrevida",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Paciente e família orientados sobre a expectativa de sobrevida do enxerto (mediana de 11,3 anos na coorte do registro ISHLT, com tendência de melhora nas eras mais recentes), para calibrar expectativa — não para decidir conduta individual",
+        "origem_secao": "Leitura clínica (registro ISHLT)"
+      },
+      {
+        "id": "transp-orientacao-retransplante",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Paciente orientado sobre a possibilidade de retransplante em caso de falha tardia do enxerto (incidência cumulativa de 1,5% em 10 anos e 2,5% em 20 anos em receptores adultos no registro ISHLT), sem que isso substitua a avaliação clínica de sinais de disfunção do enxerto",
+        "origem_secao": "Retransplante em adultos — incidência cumulativa (registro ISHLT)"
+      },
+      {
+        "id": "transp-lacuna-imunossupressao-biopsia",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "VERIFICAÇÃO HUMANA NECESSÁRIA — esquema de imunossupressão inicial, calendário de biópsia endomiocárdica de vigilância e protocolo de monitorização seriada de rejeição NÃO estão cobertos pelas duas fontes usadas nesta ficha (ambas declaram explicitamente essa lacuna); confirmar por protocolo institucional e fonte primária própria antes de considerar este ponto resolvido",
+        "origem_secao": "Ambos os documentos de origem declaram esta lacuna nas próprias seções finais ('o que este documento deliberadamente não cobre' / 'limitações e o que fica em aberto')"
+      }
+    ],
+    "revisao": "Derivado de dois documentos já verificados e publicados nesta base (registro ISHLT de sobrevida do enxerto e estudos primários de teste cardiopulmonar de exercício na seleção do candidato a transplante), com a seção de origem registrada em cada item e as referências primárias reaproveitadas dos documentos de origem. Nenhum item cobre imunossupressão, biópsia endomiocárdica ou protocolo de rejeição, porque nenhuma das duas fontes traz esse conteúdo — a lacuna está marcada explicitamente em vez de omitida ou preenchida de memória. Elaborado pela sessão de conteúdo em 01/08/2026 sob a autorização contínua de publicação. ATENÇÃO: assim como o checklist de marca-passo/CDI de 01/08/2026, este ainda NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles — a atestação dele não é presumida."
+  },
+  {
+    "slug": "inicio-de-anticoagulacao-oral-doac-ambulatorial",
+    "condicao": "Início de anticoagulação oral com DOAC em ambulatório",
+    "resumo": "O que checar antes de prescrever um anticoagulante oral direto (apixabana, rivaroxabana, dabigatrana ou edoxabana) pela primeira vez em ambulatório, tipicamente para fibrilação atrial — derivado da diretriz ESC 2024/AF-CARE, do RE-ALIGN, do INVICTUS e das bulas brasileiras dos quatro fármacos.",
+    "documento_origem": "fibrilacao-atrial-diagnostico-e-manejo-esc-2024-via-af-care",
+    "theme": "Fibrilação atrial",
+    "review_status": "revisado",
+    "source_refs": [
+      "Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the EACTS. Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176. PMID: 39210723",
+      "Eikelboom JW, Connolly SJ, Brueckmann M, Granger CB, Kappetein AP, Mack MJ, et al; RE-ALIGN Investigators. Dabigatran versus warfarin in patients with mechanical heart valves. N Engl J Med. 2013;369(13):1206-1214. DOI: 10.1056/NEJMoa1300615. PMID: 23991661",
+      "Connolly SJ, Karthikeyan G, Ntsekhe M, Haileamlak A, El Sayed A, El Ghamrawy A, et al; INVICTUS Investigators. Rivaroxaban in Rheumatic Heart Disease-Associated Atrial Fibrillation. N Engl J Med. 2022;387(11):978-988. DOI: 10.1056/NEJMoa2209051. PMID: 36036525",
+      "Bulas profissionais brasileiras de ELIQUIS (apixabana, Bristol-Myers Squibb), PRADAXA (etexilato de dabigatrana, Boehringer Ingelheim do Brasil), XARELTO (rivaroxabana, Bayer S.A.) e LIXIANA (edoxabana, Daiichi Sankyo Brasil) — campos dosing, contraindications, renal_adjustment, interactions e pregnancy já revisados em medicamentos/metadados.json desta base"
+    ],
+    "itens": [
+      {
+        "id": "doac-clcr-inicial",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Depuração de creatinina calculada (Cockcroft-Gault) antes de escolher o fármaco e a dose — cada DOAC tem seu próprio corte de função renal: dabigatrana contraindicada com ClCr <30 mL/min; rivaroxabana e edoxabana não recomendadas com ClCr <15 mL/min (edoxabana reduz a dose entre 15-50 mL/min); apixabana sem dose recomendada em diálise ou ClCr <15 mL/min",
+        "origem_secao": "renal_adjustment/dosing de apixabana, dabigatrana-etexilato, rivaroxabana e edoxabana — medicamentos/metadados.json"
+      },
+      {
+        "id": "doac-protese-mecanica",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Descartada prótese valvar cardíaca mecânica — contraindicação estabelecida pelo RE-ALIGN (dabigatrana: 9 AVC contra zero com varfarina, ensaio interrompido precocemente por dano), estendida na prática regulatória e de diretriz a toda a classe de DOAC",
+        "origem_secao": "anticoagulante-oral-direto-em-protese-valvar-mecanica-por-que-e-contraindicado-re-align.md — Alcance da contraindicação"
+      },
+      {
+        "id": "doac-valva-reumatica",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Descartada doença valvar reumática significativa (tipicamente estenose mitral) — no INVICTUS a rivaroxabana foi inferior ao antagonista da vitamina K nesta população, com maior mortalidade; o antagonista da vitamina K (varfarina) segue sendo a escolha com evidência favorável",
+        "origem_secao": "fibrilacao-atrial-valvar-reumatica-e-escolha-do-anticoagulante-invictus.md — Consequência prática"
+      },
+      {
+        "id": "doac-peso-idade",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Peso corpóreo e idade conferidos como parte dos critérios combinados de redução de dose — apixabana reduz para 2,5 mg 2x/dia se ≥2 de (idade ≥80 anos, peso ≤60 kg, creatinina sérica ≥1,5 mg/dL); edoxabana reduz para 30 mg 1x/dia se peso ≤60 kg (entre outros critérios)",
+        "origem_secao": "dosing de apixabana e edoxabana — medicamentos/metadados.json"
+      },
+      {
+        "id": "doac-interacao",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Lista de medicamentos em uso revisada quanto a interações que reduzem a eficácia do DOAC (indutores enzimáticos como rifampicina, fenitoína, carbamazepina ou erva de São João) ou que exigem redução de dose (inibidores potentes de glicoproteína-P, como cetoconazol, ciclosporina e dronedarona)",
+        "origem_secao": "interactions de apixabana e edoxabana (medicamentos/metadados.json); 'Interações medicamentosas' — fibrilacao-atrial-diagnostico-e-manejo-esc-2024-via-af-care.md"
+      },
+      {
+        "id": "doac-gravidez",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Em mulher com potencial de engravidar: confirmada ausência de gravidez e discutida contracepção — os quatro DOAC restringem (apixabana, edoxabana) ou contraindicam formalmente (dabigatrana, rivaroxabana) o uso na gestação",
+        "origem_secao": "pregnancy de apixabana, dabigatrana-etexilato, rivaroxabana e edoxabana — medicamentos/metadados.json"
+      },
+      {
+        "id": "doac-orientacao-sangramento",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente orientado sobre sinais de sangramento que exigem atendimento imediato, sobre nunca suspender o DOAC por conta própria (descontinuação precoce aumenta o risco de evento trombótico, alerta de tarja preta da edoxabana) e sobre a conduta em caso de esquecimento de dose",
+        "origem_secao": "adverse_effects (alertas de tarja preta) e dosing 'esquecimento de dose' de edoxabana, apixabana, dabigatrana-etexilato e rivaroxabana — medicamentos/metadados.json"
+      },
+      {
+        "id": "doac-retorno",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Retorno agendado com data definida, incluindo reavaliação periódica da função renal (a dose de vários DOAC depende diretamente do ClCr) e do risco tromboembólico e hemorrágico",
+        "origem_secao": "monitoring de edoxabana (medicamentos/metadados.json) e etapa 'E — Evaluation e reavaliação dinâmica' do AF-CARE — fibrilacao-atrial-diagnostico-e-manejo-esc-2024-via-af-care.md"
+      }
+    ],
+    "revisao": "Verificado item a item em 01/08/2026 contra os documentos de origem citados em source_refs, já publicados nesta base: cada um dos 8 itens corresponde a um dado estruturado ou recomendação nomeada dessas fontes (corte renal por fármaco, contraindicação por prótese mecânica pelo RE-ALIGN, contraindicação prática por valva reumática pelo INVICTUS, critérios combinados de redução de dose por peso/idade, interações que alteram eficácia, restrição em gravidez, alerta de tarja preta sobre descontinuação precoce). ATENÇÃO: este checklist NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles — diferente do checklist de alta pós-SCA de 28/07/2026, a atestação dele não é presumida aqui, mesmo padrão já usado no checklist de TEV agudo."
   }
 ]

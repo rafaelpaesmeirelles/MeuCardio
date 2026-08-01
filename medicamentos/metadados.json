@@ -4398,5 +4398,52 @@
     ],
     "pregnancy": "**Categoria C (classificação FDA).** Estudos de reprodução animal não mostraram efeito teratogênico, mas um estudo indicou redução da sobrevida neonatal e possível catarata em filhotes de rata. Não há estudos adequados e bem controlados em gestantes humanas. Usar na gravidez apenas se claramente necessário. **fonte**: rótulo DailyMed (dopamine hydrochloride injection), FDA. **VERIFICAÇÃO HUMANA NECESSÁRIA**: a bula brasileira do REVIVAN (Zambon) consultada nesta sessão não trouxe seção específica de gravidez/lactação no texto extraído — este campo usa fonte norte-americana, não a bula do detentor do registro no Brasil. Conferir a bula brasileira integral (bulário eletrônico da ANVISA) antes de firmar orientação clínica",
     "lactation": "**Não se sabe se a dopamina é excretada no leite humano.** Cautela deve ser exercida ao administrar o fármaco a lactantes. **fonte**: rótulo DailyMed (dopamine hydrochloride injection), FDA. **VERIFICAÇÃO HUMANA NECESSÁRIA**: mesma ressalva do campo `pregnancy` — a bula brasileira do REVIVAN não foi confirmada quanto a este dado nesta sessão; e no contexto clínico real (choque com indicação de vasopressor), a decisão de amamentar durante a infusão é irrelevante na prática — o registro serve para completude do verbete, não para orientação de uso"
+  },
+  {
+    "slug": "cilostazol",
+    "review_status": "pendente_revisao",
+    "generic_name": "Cilostazol",
+    "drug_class": "Inibidor da fosfodiesterase III (PDE3) — antiagregante plaquetário e vasodilatador arterial, com efeito adicional de inibição da captação de adenosina",
+    "mechanism": "Inibe seletivamente a fosfodiesterase III, enzima que degrada o AMP cíclico (AMPc) intracelular. O acúmulo de AMPc nas plaquetas reduz a agregação plaquetária, e o mesmo acúmulo na musculatura lisa vascular produz vasodilatação arterial — dupla ação (antiplaquetária + vasodilatadora) que distingue o cilostazol de um antiagregante puro como AAS ou clopidogrel. É a mesma classe farmacológica da milrinona e da amrinona, inibidores de PDE3 usados por via intravenosa como inotrópicos na insuficiência cardíaca aguda — parentesco de classe que explica a contraindicação formal em insuficiência cardíaca.",
+    "presentations": [
+      "Comprimidos de 50 mg e 100 mg (rótulo do FDA e bulas brasileiras convergem nessas duas dosagens)"
+    ],
+    "contraindications": [
+      "Insuficiência cardíaca de qualquer gravidade — contraindicação absoluta, destacada em boxed warning no rótulo do FDA: \"Cilostazol tablets are contraindicated in patients with heart failure of any severity.\" A bula brasileira do genérico confirma: \"Este medicamento é contraindicado para uso por pacientes com insuficiência cardíaca ou problemas de hemorragia.\"",
+      "Hipersensibilidade ao cilostazol ou a qualquer componente da formulação",
+      "Sangramento ativo ou predisposição hemorrágica (\"problemas de hemorragia\", bula brasileira)"
+    ],
+    "dosing": {
+      "claudicacao_intermitente_dose_padrao": "100 mg VO 2x/dia, tomado com o estômago vazio — pelo menos meia hora antes ou duas horas depois das refeições (rótulo do FDA; a bula brasileira do genérico confirma a mesma orientação de horário em relação ao café da manhã e ao jantar)",
+      "tempo_ate_efeito_e_reavaliacao": "Benefício sintomático pode aparecer em 2 a 4 semanas, mas o rótulo do FDA orienta tratar por até 12 semanas antes de julgar a resposta; suspender se não houver melhora após 3 meses",
+      "ajuste_por_inibidor_cyp3a4": "Reduzir para **50 mg 2x/dia** com uso concomitante de inibidores fortes/moderados de CYP3A4 — cetoconazol, itraconazol, eritromicina e diltiazem citados nominalmente no rótulo do FDA",
+      "ajuste_por_inibidor_cyp2c19": "Reduzir para **50 mg 2x/dia** com uso concomitante de inibidores de CYP2C19 — ticlopidina, fluconazol e omeprazol citados nominalmente no rótulo do FDA",
+      "ajuste_renal": "VERIFICAÇÃO HUMANA NECESSÁRIA — o documento de origem (content/Farmacologia/cilostazol.md) não traz orientação específica de ajuste por clearance de creatinina",
+      "ajuste_hepatico": "VERIFICAÇÃO HUMANA NECESSÁRIA — o documento de origem não traz orientação específica por Child-Pugh",
+      "pediatria": "VERIFICAÇÃO HUMANA NECESSÁRIA — o documento de origem não aborda uso pediátrico",
+      "fonte": "Rótulo do FDA (DailyMed, Cilostazol Tablets, setid dc7c2c25-36a1-e3fd-e053-2995a90adabc, AvKARE) e bula brasileira do genérico (EMS), ambos conferidos em 01/08/2026 no documento content/Farmacologia/cilostazol.md"
+    },
+    "outcomes": {
+      "Ensaio pivotal Dawson et al. 2000": "Ensaio randomizado, duplo-cego, controlado por placebo, multicêntrico, 698 pacientes com claudicação moderada a grave: cilostazol 100 mg VO 2x/dia (n=227), pentoxifilina 400 mg VO 3x/dia (n=232) ou placebo (n=239). Em 24 semanas, a distância máxima de marcha aumentou em média 107 m (54% sobre o basal) com cilostazol, significativamente mais do que 64 m (30%) com pentoxifilina (p<0,001) e 65 m (34%) com placebo. A melhora com pentoxifilina não diferiu do placebo (p=0,82).",
+      "Revisão sistemática Cochrane 2021": "16 ensaios duplo-cegos, 3.972 participantes, cilostazol vs. placebo (5 também vs. pentoxifilina), doses de 100-300 mg/dia, seguimento de 6-26 semanas. Distância inicial de claudicação: diferença média de 26,49 m a favor do cilostazol (IC95% 18,93-34,05 m; 1.722 participantes; 6 estudos; certeza baixa). Distância absoluta de claudicação: diferença média de 39,57 m a favor do cilostazol (IC95% 21,80-57,33 m; 2.360 participantes; 8 estudos; certeza muito baixa). Cefaleia com chance aumentada (OR 2,83; IC95% 2,26-3,55). Dados insuficientes para concluir sobre revascularização, amputação ou eventos cardiovasculares maiores."
+    },
+    "references": [
+      "Cilostazol Tablets — rótulo aprovado pelo FDA, DailyMed SPL setid dc7c2c25-36a1-e3fd-e053-2995a90adabc (AvKARE), seções Boxed Warning, Contraindications, Dosage and Administration e Drug Interactions, consultado em 01/08/2026",
+      "Bula brasileira de cilostazol (EMS, genérico) via bulas.med.br/p/bulas-de-medicamentos/bula/234860/cilostazol.htm — seções Contraindicações, Como usar e Gravidez/lactação, consultada em 01/08/2026",
+      "Dawson DL, Cutler BS, Hiatt WR, Hobson RW 2nd, Martin JD, Bortey EB, Forbes WP, Strandness DE Jr. A comparison of cilostazol and pentoxifylline for treating intermittent claudication. Am J Med. 2000;109(7):523-530. DOI: 10.1016/s0002-9343(00)00569-6. PMID: 11063952",
+      "Brown T, Forster RB, Cleanthis M, Mikhailidis DP, Stansby G, Stewart M. Cilostazol for intermittent claudication. Cochrane Database Syst Rev. 2021;6(6):CD003748. DOI: 10.1002/14651858.CD003748.pub5. PMID: 34192807. PMCID: PMC8245159",
+      "Packer M, Carver JR, Rodeheffer RJ, et al. Effect of oral milrinone on mortality in severe chronic heart failure. The PROMISE Study Research Group. N Engl J Med. 1991;325(21):1468-1475. DOI: 10.1056/NEJM199111213252103. PMID: 1944425 — citado como fundamento mecanístico da contraindicação em IC (efeito de classe dos inibidores da fosfodiesterase III), não como estudo do próprio cilostazol"
+    ],
+    "pregnancy": "VERIFICAÇÃO HUMANA NECESSÁRIA — a bula brasileira do genérico declara: \"Não existem estudos adequados e bem controlados em mulheres grávidas\" e orienta que o medicamento \"não deve ser utilizado por mulheres grávidas sem orientação médica\". As fontes consultadas no documento de origem não trazem a categoria de risco gestacional formal.",
+    "lactation": "VERIFICAÇÃO HUMANA NECESSÁRIA — a bula brasileira do genérico recomenda informar o médico em caso de amamentação, sem orientação específica mais detalhada nas fontes consultadas no documento de origem.",
+    "adverse_effects": [
+      "Cefaleia: 34% vs. 14% no placebo",
+      "Diarreia: 19% vs. 7%",
+      "Fezes anormais: 15% vs. 4%",
+      "Palpitação: 10% vs. 1%",
+      "Eventos graves em farmacovigilância pós-comercialização: agranulocitose, hemorragia intracraniana e síndrome de Stevens-Johnson",
+      "fonte: rótulo do FDA (DailyMed, Cilostazol Tablets), incidência ≥2% e superior ao placebo na dose de 100 mg 2x/dia"
+    ],
+    "interactions_note": "Inibidores fortes/moderados de CYP3A4 (cetoconazol, itraconazol, eritromicina, diltiazem) e inibidores de CYP2C19 (ticlopidina, fluconazol, omeprazol) aumentam a exposição ao cilostazol — reduzir para 50 mg 2x/dia. AAS: uso concomitante de curto prazo mostrou potencialização da inibição plaquetária sem aumento significativo de complicações hemorrágicas nos estudos citados pelo rótulo do FDA — não há contraindicação formal à associação, mas cabe cautela clínica. Varfarina: o rótulo do FDA não documenta interação farmacocinética significativa. Anticoagulantes, antiagregantes plaquetários, trombolíticos e prostaglandina E1 (bula brasileira): risco de aumento da tendência hemorrágica com uso concomitante."
   }
 ]

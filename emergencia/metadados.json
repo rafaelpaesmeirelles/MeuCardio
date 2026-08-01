@@ -290,5 +290,29 @@
       "reversao-de-anticoagulante-em-sangramento-maior-idarucizumabe-e-andexanet-alfa"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "dor-toracica-e-sca-por-vasoespasmo-coronariano-induzido-por-cocaina",
+    "titulo": "Dor torácica e SCA por vasoespasmo coronariano induzido por cocaína",
+    "gatilho": "Dor torácica em paciente com uso recente de cocaína (intranasal, inalada ou intravenosa) — especialmente se jovem, com dor atípica e poucos fatores de risco coronariano clássicos",
+    "ordem": 27,
+    "documento_slug": "cocaina-e-risco-cardiovascular-vasoespasmo-coronariano-e-infarto",
+    "fluxograma_slug": null,
+    "relacionados": [
+      "sindrome-coronariana-aguda"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "crise-hipertensiva-adrenergica-do-feocromocitoma",
+    "titulo": "Crise hipertensiva adrenérgica do feocromocitoma",
+    "gatilho": "Crise hipertensiva paroxística com taquicardia, sudorese e cefaleia, em paciente com feocromocitoma conhecido ou suspeito (massa adrenal) — inclui a crise precipitada por manipulação tumoral, indução anestésica ou início de betabloqueador antes do bloqueio alfa estabelecido",
+    "ordem": 26,
+    "documento_slug": "feocromocitoma-preparo-pre-operatorio-com-bloqueio-alfa-o-ensaio-prescript",
+    "fluxograma_slug": null,
+    "relacionados": [
+      "emergencia-hipertensiva"
+    ],
+    "review_status": "revisado"
   }
 ]
