@@ -26358,5 +26358,430 @@
       "syntax baixo"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-carotida-nascet-metodo-de-quantificacao-recomendado",
+    "statement": "É recomendado usar o método NASCET (ou seu equivalente não invasivo) para avaliar a estenose de carótida interna (ICA).",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Seção 8.2 (doença de carótida e vertebral extracraniana), Recommendation Tables 23-28. Texto integral já em cache desta sessão, reconferido com pdftotext -layout. Contexto: Tabela 23, método de quantificação",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "doenca carotidea",
+      "endarterectomia",
+      "stent de carotida"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-carotida-dus-como-primeira-linha-diagnostica",
+    "statement": "É recomendado usar o ultrassom duplex (DUS) como exame de imagem de primeira linha para diagnosticar estenose de ICA.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Seção 8.2 (doença de carótida e vertebral extracraniana), Recommendation Tables 23-28. Texto integral já em cache desta sessão, reconferido com pdftotext -layout. Contexto: Tabela 23, exame de primeira linha",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "doenca carotidea",
+      "endarterectomia",
+      "stent de carotida"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-carotida-metodo-ecst-nao-recomendado",
+    "statement": "NÃO é recomendado usar o método ECST para avaliação de estenose de ICA — superestima a gravidade em relação ao NASCET (equivalência: 50%↔75%, 70%↔85%, 90%↔97%).",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Seção 8.2 (doença de carótida e vertebral extracraniana), Recommendation Tables 23-28. Texto integral já em cache desta sessão, reconferido com pdftotext -layout. Contexto: Tabela 23, método ECST não recomendado",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "doenca carotidea",
+      "endarterectomia",
+      "stent de carotida"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-carotida-dapt-21-dias-em-sintomatica-nao-revascularizada",
+    "statement": "Em estenose de carótida SINTOMÁTICA sem endarterectomia ou stent, dupla antiagregação (AAS dose baixa + clopidogrel 75mg) é recomendada pelos primeiros 21 dias ou mais, seguida de clopidogrel 75mg isolado ou AAS de longo prazo, para reduzir risco de AVC.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Seção 8.2 (doença de carótida e vertebral extracraniana), Recommendation Tables 23-28. Texto integral já em cache desta sessão, reconferido com pdftotext -layout. Contexto: Tabela 24, antitrombótico em estenose sintomática",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "doenca carotidea",
+      "endarterectomia",
+      "stent de carotida"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-carotida-antiagregante-de-longo-prazo-em-assintomatica-maior-que-50",
+    "statement": "Em estenose de carótida ASSINTOMÁTICA >50%, antiagregação de longo prazo (comumente AAS dose baixa) deve ser considerada se o risco de sangramento for baixo.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Seção 8.2 (doença de carótida e vertebral extracraniana), Recommendation Tables 23-28. Texto integral já em cache desta sessão, reconferido com pdftotext -layout. Contexto: Tabela 24, antitrombótico em estenose assintomática",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "doenca carotidea",
+      "endarterectomia",
+      "stent de carotida"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-carotida-revascularizacao-assintomatica-exige-risco-perioperatorio-menor-que-3-e-expectativa-maior-que-5-anos",
+    "statement": "Quando revascularização de ICA é considerada em estenose assintomática, a taxa documentada de AVC/morte perioperatória deve ser <3%, e a expectativa de vida do paciente deve ser considerada >5 anos, após avaliação cuidadosa de risco-benefício por equipe vascular.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Seção 8.2 (doença de carótida e vertebral extracraniana), Recommendation Tables 23-28. Texto integral já em cache desta sessão, reconferido com pdftotext -layout. Contexto: Tabela 25, pré-requisito para revascularização assintomática",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "doenca carotidea",
+      "endarterectomia",
+      "stent de carotida"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-carotida-cea-considerar-acima-de-75-anos-com-caracteristicas-de-alto-risco",
+    "statement": "Em pacientes de risco cirúrgico médio, acima de 75 anos, com estenose de 60-99% E características de alto risco, a endarterectomia (CEA), além do tratamento clínico otimizado, deve ser considerada.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Seção 8.2 (doença de carótida e vertebral extracraniana), Recommendation Tables 23-28. Texto integral já em cache desta sessão, reconferido com pdftotext -layout. Contexto: Tabela 25, CEA em assintomática de alto risco >75 anos",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "doenca carotidea",
+      "endarterectomia",
+      "stent de carotida"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-carotida-cas-pode-ser-considerado-em-alto-risco-cirurgico-assintomatica",
+    "statement": "Em pacientes de ALTO risco cirúrgico com estenose de 60-99% e características de alto risco, o stent de carótida (CAS), além do tratamento clínico, pode ser considerado.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Seção 8.2 (doença de carótida e vertebral extracraniana), Recommendation Tables 23-28. Texto integral já em cache desta sessão, reconferido com pdftotext -layout. Contexto: Tabela 25, CAS em alto risco cirúrgico assintomático",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "doenca carotidea",
+      "endarterectomia",
+      "stent de carotida"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-carotida-cas-alternativa-em-risco-cirurgico-medio-assintomatica",
+    "statement": "Em pacientes de risco cirúrgico MÉDIO com estenose de 60-99% e características de alto risco, o CAS, além do tratamento clínico, pode ser considerado como alternativa à CEA.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Seção 8.2 (doença de carótida e vertebral extracraniana), Recommendation Tables 23-28. Texto integral já em cache desta sessão, reconferido com pdftotext -layout. Contexto: Tabela 25, CAS como alternativa em risco médio",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "doenca carotidea",
+      "endarterectomia",
+      "stent de carotida"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-carotida-revascularizacao-rotineira-nao-recomendada-sem-caracteristicas-de-alto-risco",
+    "statement": "Em pacientes assintomáticos com estenose de ICA, sem características de alto risco e com expectativa de vida <5 anos, revascularização de rotina NÃO é recomendada.",
+    "recommendation_class": "III",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Seção 8.2 (doença de carótida e vertebral extracraniana), Recommendation Tables 23-28. Texto integral já em cache desta sessão, reconferido com pdftotext -layout. Contexto: Tabela 25, sem indicação de revascularização",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "doenca carotidea",
+      "endarterectomia",
+      "stent de carotida"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-carotida-dapt-precoce-em-avc-menor-sem-revascularizacao",
+    "statement": "Dupla antiagregação é recomendada na fase precoce de AVC menor em pacientes com estenose de ICA não revascularizados, por pelo menos 21 dias, considerando o risco de sangramento.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Seção 8.2 (doença de carótida e vertebral extracraniana), Recommendation Tables 23-28. Texto integral já em cache desta sessão, reconferido com pdftotext -layout. Contexto: Tabela 26, DAPT precoce pós-AVC menor",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "doenca carotidea",
+      "endarterectomia",
+      "stent de carotida"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-carotida-avaliacao-por-equipe-vascular-com-neurologista",
+    "statement": "É recomendado que pacientes com estenose sintomática de ICA sejam avaliados por equipe vascular incluindo neurologista.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Seção 8.2 (doença de carótida e vertebral extracraniana), Recommendation Tables 23-28. Texto integral já em cache desta sessão, reconferido com pdftotext -layout. Contexto: Tabela 26, avaliação multidisciplinar",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "doenca carotidea",
+      "endarterectomia",
+      "stent de carotida"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-carotida-antiagregacao-simples-apos-revascularizacao",
+    "statement": "Tratamento de longo prazo com antiagregação simples (SAPT) deve ser considerado após revascularização de ICA.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Seção 8.2 (doença de carótida e vertebral extracraniana), Recommendation Tables 23-28. Texto integral já em cache desta sessão, reconferido com pdftotext -layout. Contexto: Tabela 26, antiagregação pós-revascularização",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "doenca carotidea",
+      "endarterectomia",
+      "stent de carotida"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-carotida-dapt-pode-estender-ate-90-dias",
+    "statement": "Dupla antiagregação pode ser considerada na fase precoce de AVC menor por até 90 dias em estenose de ICA, considerando o risco de sangramento.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Seção 8.2 (doença de carótida e vertebral extracraniana), Recommendation Tables 23-28. Texto integral já em cache desta sessão, reconferido com pdftotext -layout. Contexto: Tabela 26, DAPT estendida até 90 dias",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "doenca carotidea",
+      "endarterectomia",
+      "stent de carotida"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-carotida-cea-recomendada-em-sintomatica-70-a-99-por-cento",
+    "statement": "É recomendado realizar endarterectomia (CEA) em estenose SINTOMÁTICA de ICA de 70-99%, desde que o risco documentado de morte/AVC em 30 dias seja <6%.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Seção 8.2 (doença de carótida e vertebral extracraniana), Recommendation Tables 23-28. Texto integral já em cache desta sessão, reconferido com pdftotext -layout. Contexto: Tabela 27, CEA em sintomática 70-99%",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "doenca carotidea",
+      "endarterectomia",
+      "stent de carotida"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-carotida-cea-dentro-de-14-dias-quando-indicada",
+    "statement": "Quando indicada, é recomendado realizar a CEA dentro de 14 dias em pacientes com estenose sintomática de ICA.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Seção 8.2 (doença de carótida e vertebral extracraniana), Recommendation Tables 23-28. Texto integral já em cache desta sessão, reconferido com pdftotext -layout. Contexto: Tabela 27, timing da CEA",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "doenca carotidea",
+      "endarterectomia",
+      "stent de carotida"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-carotida-tratamento-clinico-otimizado-recomendado-em-todo-sintomatico",
+    "statement": "Tratamento clínico otimizado é recomendado para todo paciente com estenose sintomática de ICA.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Seção 8.2 (doença de carótida e vertebral extracraniana), Recommendation Tables 23-28. Texto integral já em cache desta sessão, reconferido com pdftotext -layout. Contexto: Tabela 27, tratamento clínico de base",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "doenca carotidea",
+      "endarterectomia",
+      "stent de carotida"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-carotida-cea-considerar-em-sintomatica-50-a-69-por-cento",
+    "statement": "CEA em estenose sintomática de ICA de 50-69% deve ser considerada, desde que o risco documentado de morte/AVC em 30 dias seja <6%.",
+    "recommendation_class": "IIa",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Seção 8.2 (doença de carótida e vertebral extracraniana), Recommendation Tables 23-28. Texto integral já em cache desta sessão, reconferido com pdftotext -layout. Contexto: Tabela 27, CEA em sintomática 50-69%",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "doenca carotidea",
+      "endarterectomia",
+      "stent de carotida"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-carotida-cas-considerar-em-alto-risco-para-cea-sintomatica",
+    "statement": "Em pacientes sintomáticos de alto risco para CEA, com estenose de 70-99%, o CAS deve ser considerado, desde que o risco documentado de morte/AVC em 30 dias seja <6%.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Seção 8.2 (doença de carótida e vertebral extracraniana), Recommendation Tables 23-28. Texto integral já em cache desta sessão, reconferido com pdftotext -layout. Contexto: Tabela 27, CAS em alto risco para CEA",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "doenca carotidea",
+      "endarterectomia",
+      "stent de carotida"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-carotida-cas-pode-ser-considerado-abaixo-de-70-anos-sintomatica",
+    "statement": "Em pacientes sintomáticos com menos de 70 anos e estenose de 70-99%, o CAS pode ser considerado, desde que o risco documentado de morte/AVC em 30 dias seja <6%.",
+    "recommendation_class": "IIb",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Seção 8.2 (doença de carótida e vertebral extracraniana), Recommendation Tables 23-28. Texto integral já em cache desta sessão, reconferido com pdftotext -layout. Contexto: Tabela 27, CAS em <70 anos",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "doenca carotidea",
+      "endarterectomia",
+      "stent de carotida"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-carotida-revascularizacao-nao-recomendada-abaixo-de-50-por-cento",
+    "statement": "Revascularização NÃO é recomendada em lesões de ICA <50%.",
+    "recommendation_class": "III",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Seção 8.2 (doença de carótida e vertebral extracraniana), Recommendation Tables 23-28. Texto integral já em cache desta sessão, reconferido com pdftotext -layout. Contexto: Tabela 27, sem indicação abaixo de 50%",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "doenca carotidea",
+      "endarterectomia",
+      "stent de carotida"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-carotida-seguimento-anual-de-fatores-de-risco",
+    "statement": "Seguimento anual é recomendado para checar fatores de risco cardiovascular e adesão ao tratamento em doença de carótida.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Seção 8.2 (doença de carótida e vertebral extracraniana), Recommendation Tables 23-28. Texto integral já em cache desta sessão, reconferido com pdftotext -layout. Contexto: Tabela 28, seguimento clínico anual",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "doenca carotidea",
+      "endarterectomia",
+      "stent de carotida"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-carotida-dapt-por-1-mes-apos-stent-de-carotida",
+    "statement": "Após implante de stent de ICA, dupla antiagregação (AAS + clopidogrel) é recomendada por pelo menos 1 mês.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Seção 8.2 (doença de carótida e vertebral extracraniana), Recommendation Tables 23-28. Texto integral já em cache desta sessão, reconferido com pdftotext -layout. Contexto: Tabela 28, DAPT pós-stent de carótida",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "doenca carotidea",
+      "endarterectomia",
+      "stent de carotida"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-carotida-antiagregante-de-longo-prazo-apos-revascularizacao",
+    "statement": "Após revascularização de ICA, AAS ou clopidogrel de longo prazo é recomendado.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Seção 8.2 (doença de carótida e vertebral extracraniana), Recommendation Tables 23-28. Texto integral já em cache desta sessão, reconferido com pdftotext -layout. Contexto: Tabela 28, antiagregante de longo prazo pós-revascularização",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "doenca carotidea",
+      "endarterectomia",
+      "stent de carotida"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-carotida-duplex-de-vigilancia-no-primeiro-mes-pos-revascularizacao",
+    "statement": "Após revascularização de ICA, vigilância por ultrassom duplex é recomendada dentro do primeiro mês.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Seção 8.2 (doença de carótida e vertebral extracraniana), Recommendation Tables 23-28. Texto integral já em cache desta sessão, reconferido com pdftotext -layout. Contexto: Tabela 28, vigilância por imagem pós-revascularização",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "doenca carotidea",
+      "endarterectomia",
+      "stent de carotida"
+    ],
+    "review_status": "revisado"
   }
 ]
