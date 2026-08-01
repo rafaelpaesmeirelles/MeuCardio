@@ -5608,5 +5608,187 @@
       "epidemiologia"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "pobble-metoprolol-em-cirurgia-vascular-infrarrenal",
+    "title": "POBBLE — Betabloqueio perioperatório em cirurgia vascular infrarrenal",
+    "study_type": "ensaio_clinico",
+    "authors": "Brady AR, Gibbs JSR, Greenhalgh RM, Powell JT, Sydes MR; POBBLE trial investigators",
+    "journal": "Journal of Vascular Surgery",
+    "year": 2005,
+    "doi": "10.1016/j.jvs.2005.01.048",
+    "pmid": "15874923",
+    "url": "https://doi.org/10.1016/j.jvs.2005.01.048",
+    "summary": "Ensaio randomizado duplo-cego, 103 pacientes submetidos a cirurgia vascular infrarrenal, metoprolol vs. placebo perioperatório.",
+    "key_findings": "NÃO reduziu eventos cardiovasculares maiores nem mortalidade em 30 dias ou 6 meses. Reduziu taquicardia perioperatória.",
+    "clinical_implications": "Um dos ensaios negativos da família de betabloqueio perioperatório em cirurgia vascular, independente e anterior à controvérsia dos ensaios DECREASE (Poldermans) — reforça, junto ao POISE e ao DIPOM, que o benefício do betabloqueador perioperatório iniciado de novo não se sustenta de forma consistente entre estudos independentes.",
+    "limitations": "Amostra pequena (103 pacientes) — poder estatístico limitado para desfechos duros de baixa incidência.",
+    "theme": "Perioperatório",
+    "tags": [
+      "betabloqueador perioperatorio",
+      "cirurgia vascular",
+      "pobble"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "dipom-betabloqueio-perioperatorio-em-diabeticos",
+    "title": "DIPOM — Betabloqueio perioperatório em diabéticos submetidos a cirurgia não cardíaca de grande porte",
+    "study_type": "ensaio_clinico",
+    "authors": "Juul AB, Wetterslev J, Gluud C, Kofoed-Enevoldsen A, Jensen G, et al.; DIPOM Trial Group",
+    "journal": "BMJ",
+    "year": 2006,
+    "doi": "10.1136/bmj.38874.652917.7C",
+    "pmid": "16793810",
+    "url": "https://doi.org/10.1136/bmj.38874.652917.7C",
+    "summary": "Ensaio randomizado multicêntrico dinamarquês, 921 pacientes DIABÉTICOS submetidos a cirurgia não cardíaca de grande porte, metoprolol vs. placebo perioperatório.",
+    "key_findings": "SEM diferença no desfecho composto (morte, IAM, angina instável, insuficiência cardíaca) em 30 dias entre os grupos.",
+    "clinical_implications": "Testa especificamente a população diabética — subgrupo teoricamente de maior risco cardiovascular perioperatório — e ainda assim não encontra benefício do betabloqueador iniciado de novo, reforçando que o resultado negativo do betabloqueio perioperatório (POISE, POBBLE) não se restringe a populações de menor risco.",
+    "limitations": "Desfecho composto pode diluir efeito em componente específico; população exclusivamente diabética, sem generalização automática a não diabéticos.",
+    "theme": "Perioperatório",
+    "tags": [
+      "betabloqueador perioperatorio",
+      "diabetes",
+      "dipom"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "gala-anestesia-geral-versus-local-em-endarterectomia-carotidea",
+    "title": "GALA — Anestesia geral versus local na cirurgia de carótida",
+    "study_type": "ensaio_clinico",
+    "authors": "GALA Trial Collaborative Group; Lewis SC, Warlow CP, Bodenham AR, Colam B, Rothwell PM, et al.",
+    "journal": "The Lancet",
+    "year": 2008,
+    "doi": "10.1016/S0140-6736(08)61699-2",
+    "pmid": "19041130",
+    "url": "https://doi.org/10.1016/S0140-6736(08)61699-2",
+    "summary": "Ensaio randomizado multicêntrico internacional, 3.526 pacientes com estenose carotídea sintomática ou assintomática submetidos a endarterectomia, anestesia geral (n=1.753) vs. anestesia local (n=1.773).",
+    "key_findings": "Desfecho primário (AVC/IAM/morte em 30 dias): 4,8% com anestesia geral vs. 4,5% com anestesia local — SEM diferença significativa (RR 0,94; IC95% 0,70-1,27). Sem diferença em qualidade de vida ou tempo de internação.",
+    "clinical_implications": "Maior ensaio já feito comparando as duas técnicas anestésicas em endarterectomia carotídea — mostra que a escolha entre anestesia geral e local pode ser individualizada por preferência do paciente/experiência do centro, sem impacto cardiovascular ou neurológico esperado de uma técnica sobre a outra.",
+    "limitations": "Desfecho primário combinado pode mascarar diferenças em componentes individuais; resultado específico de endarterectomia carotídea, não generalizável a outras cirurgias vasculares.",
+    "theme": "Perioperatório",
+    "tags": [
+      "anestesia geral",
+      "anestesia local",
+      "endarterectomia carotidea",
+      "gala"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "adam-reparo-imediato-versus-vigilancia-em-aaa-pequeno",
+    "title": "ADAM (VA Cooperative Study) — Reparo imediato vs. vigilância em aneurisma de aorta abdominal pequeno",
+    "study_type": "ensaio_clinico",
+    "authors": "Lederle FA, Wilson SE, Johnson GR, Reinke DB, Littooy FN, Acher CW, et al.; Aneurysm Detection and Management Veterans Affairs Cooperative Study Group",
+    "journal": "New England Journal of Medicine",
+    "year": 2002,
+    "doi": "10.1056/NEJMoa012573",
+    "pmid": "12000813",
+    "url": "https://doi.org/10.1056/NEJMoa012573",
+    "summary": "Ensaio randomizado cooperativo dos Veteran Affairs (EUA), 1.136 pacientes (569 reparo imediato, 567 vigilância) com AAA de 4,0-5,4 cm e risco cirúrgico não elevado.",
+    "key_findings": "SEM diferença de mortalidade por todas as causas (RR 1,21; IC95% 0,95-1,54) nem de mortalidade relacionada ao aneurisma entre reparo imediato e vigilância. Mortalidade operatória baixa (2,7%).",
+    "clinical_implications": "Confirma de forma independente, em população americana de veteranos, a mesma conclusão do UK Small Aneurysm Trial (já cadastrado) — reparo eletivo precoce de AAA pequeno (4,0-5,4 cm) não melhora sobrevida em relação à vigilância ativa. Dois ensaios independentes convergindo é evidência mais robusta que um só.",
+    "limitations": "Cirurgia ABERTA (anterior à era do reparo endovascular disseminado) — resultado não necessariamente generalizável à comparação com EVAR.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "aneurisma de aorta abdominal pequeno",
+      "vigilancia ativa",
+      "reparo imediato",
+      "adam"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "walsh-2008-tevar-versus-cirurgia-aberta-em-aneurisma-toracico-descendente-metanalise",
+    "title": "Reparo endovascular (TEVAR) versus cirurgia aberta em doença de aorta torácica — revisão sistemática e metanálise",
+    "study_type": "metanalise",
+    "authors": "Walsh SR, Tang TY, Sadat U, Naik J, Gaunt ME, Boyle JR, Hayes PD, Varty K",
+    "journal": "Journal of Vascular Surgery",
+    "year": 2008,
+    "doi": "10.1016/j.jvs.2007.11.062",
+    "pmid": "18242941",
+    "url": "https://doi.org/10.1016/j.jvs.2007.11.062",
+    "summary": "Metanálise de 17 séries comparativas (1.109 pacientes, 538 tratados por via endovascular) comparando TEVAR a cirurgia aberta em doença de aorta torácica. NÃO existe ensaio clínico randomizado publicado comparando diretamente as duas técnicas nesse cenário — toda a literatura comparativa é observacional/registro, refletindo a dificuldade prática/ética de randomizar.",
+    "key_findings": "TEVAR reduziu mortalidade perioperatória (OR 0,36; IC95% 0,228-0,578) e lesão neurológica perioperatória (OR 0,39; IC95% 0,25-0,62) em relação à cirurgia aberta, sem diferença em reintervenção maior. Benefício maior em aneurisma estável; sem benefício de mortalidade em ruptura traumática.",
+    "clinical_implications": "Melhor evidência disponível — ainda que observacional — para justificar a preferência por TEVAR sobre cirurgia aberta em doença de aorta torácica descendente eletiva/estável, com a ressalva importante de que ausência de RCT limita a força da conclusão a nível de evidência inferior ao de um ensaio randomizado.",
+    "limitations": "NÃO é ensaio randomizado — metanálise de séries observacionais/comparativas, sujeita a viés de seleção (pacientes mais graves podem ter sido preferencialmente encaminhados a uma técnica).",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "tevar",
+      "cirurgia aberta",
+      "aneurisma toracico descendente",
+      "metanalise"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "mondillo-2003-sinvastatina-em-claudicacao-intermitente",
+    "title": "Sinvastatina e desempenho de marcha na claudicação intermitente por doença arterial periférica",
+    "study_type": "ensaio_clinico",
+    "authors": "Mondillo S, Ballo P, Barbati R, Guerrini F, Ammaturo T, Agricola E, Pastore M, Borrello F, Belcastro M, Picchi A, Nami R",
+    "journal": "American Journal of Medicine",
+    "year": 2003,
+    "doi": "10.1016/s0002-9343(03)00010-x",
+    "pmid": "12714124",
+    "url": "https://doi.org/10.1016/s0002-9343(03)00010-x",
+    "summary": "Ensaio randomizado duplo-cego, 86 pacientes com DAP Fontaine II e colesterol total >220 mg/dL, sinvastatina 40 mg/dia vs. placebo por 6 meses, avaliando desempenho de marcha e índice tornozelo-braço (ITB) — não avalia desfecho duro de progressão (amputação/revascularização/oclusão).",
+    "key_findings": "Distância livre de dor +90m e distância total de caminhada +126m a mais no grupo sinvastatina (p<0,005 e p<0,001). ITB em repouso +0,09 e ITB pós-exercício +0,19 a mais no grupo tratado (p<0,01 e p<0,005).",
+    "clinical_implications": "Sustenta o benefício sintomático/funcional da estatina na claudicação intermitente, com melhora objetiva do ITB — mas é medida de função e perfusão, não de progressão anatômica ou evento maior; não deve ser citado como evidência de que estatina previne amputação ou oclusão nesta população especificamente.",
+    "limitations": "Amostra pequena (86 pacientes); desfecho funcional/hemodinâmico, não desfecho duro de progressão de doença.",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "sinvastatina",
+      "claudicacao intermitente",
+      "indice tornozelo-braco",
+      "doenca arterial periferica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "bertog-2004-sobrevida-apos-pericardiectomia-por-etiologia",
+    "title": "Pericardite constritiva — etiologia e sobrevida específica por causa após pericardiectomia",
+    "study_type": "estudo_de_coorte",
+    "authors": "Bertog SC, Thambidorai SK, Parakh K, Schoenhagen P, Ozduran V, Houghtaling PL, Lytle BW, Blackstone EH, Lauer MS, Klein AL",
+    "journal": "Journal of the American College of Cardiology",
+    "year": 2004,
+    "doi": "10.1016/j.jacc.2003.11.048",
+    "pmid": "15093882",
+    "url": "https://doi.org/10.1016/j.jacc.2003.11.048",
+    "summary": "Coorte de 163 pacientes submetidos a pericardiectomia por pericardite constritiva (Cleveland Clinic, 24 anos de acompanhamento).",
+    "key_findings": "Etiologia: idiopática 46%, pós-cirurgia cardíaca 37%, pós-radiação 9%. Mortalidade perioperatória 6%. Sobrevida em 7 anos por etiologia: idiopática 88%, pós-cirúrgica 66%, pós-radiação 27% — diferença enorme por causa de base. Preditores de pior sobrevida: radiação prévia, função renal, PSAP elevada, disfunção sistólica de VE, hiponatremia, idade avançada. CALCIFICAÇÃO pericárdica NÃO afetou sobrevida.",
+    "clinical_implications": "A etiologia da constrição é o fator prognóstico dominante após pericardiectomia — pericardite constritiva pós-radiação tem sobrevida em 7 anos (27%) drasticamente pior que a idiopática (88%), informação essencial para aconselhar o paciente antes da cirurgia, independentemente da técnica cirúrgica em si.",
+    "limitations": "Coorte de centro único de alto volume (Cleveland Clinic) — resultados de mortalidade perioperatória podem não generalizar a centros de menor experiência.",
+    "theme": "Pericárdio",
+    "tags": [
+      "pericardite constritiva",
+      "pericardiectomia",
+      "etiologia",
+      "sobrevida"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "young-2012-rm-na-diferenciacao-de-doenca-pericardica",
+    "title": "Achados de RM cardíaca em doença pericárdica — diferenciação entre pericardite recorrente, constrição e tumor",
+    "study_type": "estudo_de_coorte",
+    "authors": "Young PM, Glockner JF, Williamson EE, Morris MF, Araoz PA, Julsrud PR, Schaff HV, Edwards WD, Oh JK, Breen JF",
+    "journal": "International Journal of Cardiovascular Imaging",
+    "year": 2012,
+    "doi": "10.1007/s10554-011-9916-0",
+    "pmid": "21735292",
+    "url": "https://doi.org/10.1007/s10554-011-9916-0",
+    "summary": "Revisão retrospectiva de 76 casos com pericardiectomia e RM cardíaca pré-operatória, todos confirmados cirurgicamente (Mayo Clinic), comparando achados de RM entre pericardite recorrente crônica, pericardite constritiva e tumor pericárdico.",
+    "key_findings": "Diâmetro de veia cava inferior maior na constrição (3,1±0,4 cm vs. 2,0±0,4 cm sem constrição). Realce tardio por gadolínio em 94% da pericardite crônica recorrente vs. 76% da constrição. \"Septal bounce\" (movimento septal anormal) em 19% da pericardite recorrente vs. 86% da constrição.",
+    "clinical_implications": "Fornece achados quantitativos de RM que ajudam a diferenciar pericardite recorrente crônica de pericardite constritiva verdadeira — o septal bounce muito mais frequente na constrição (86% vs. 19%) é um discriminador prático relevante à beira do leito na leitura do exame.",
+    "limitations": "Coorte cirúrgica de centro único (viés de seleção — só casos operados); NÃO aborda diferenciação entre pericardite e miocardite, apenas entre subtipos de doença pericárdica.",
+    "theme": "Pericárdio",
+    "tags": [
+      "ressonancia magnetica cardiaca",
+      "pericardite constritiva",
+      "septal bounce",
+      "diagnostico diferencial"
+    ],
+    "review_status": "revisado"
   }
 ]
