@@ -4,7 +4,7 @@ slug: ansiedade-e-sofrimento-psicologico-apos-choque-do-cdi-prevalencia-preditor
 theme: "Comunicação clínica"
 kind: estudo
 review_status: revisado
-source_refs: ["Tripp C, Huber NL, Kuhl EA, Sears SF. Measuring ICD shock anxiety: Status update on the Florida Shock Anxiety Scale after over a decade of use. Pacing Clin Electrophysiol. 2019;42(10):1294-1301. DOI: 10.1111/pace.13793. PMID: 31463949 — revisão focada de 26 artigos publicados com a escala entre 2006 e 2019", "Ladwig KH, Baumert J, Marten-Mittag B, Kolb C, Zrenner B, Schmitt C. Posttraumatic stress symptoms and predicted mortality in patients with implantable cardioverter-defibrillators: results from the prospective living with an implanted cardioverter-defibrillator study. Arch Gen Psychiatry. 2008;65(11):1324-1330. DOI: 10.1001/archpsyc.65.11.1324. PMID: 18981344 — coorte prospectiva, 211 pacientes, German Heart Center Munich, seguimento médio de 5,1 anos", "Habibović M, Denollet J, Pedersen SS; on behalf of the WEBCARE investigators. Posttraumatic stress and anxiety in patients with an implantable cardioverter defibrillator: Trajectories and vulnerability factors. Pacing Clin Electrophysiol. 2017;40(7):817-823. DOI: 10.1111/pace.13090. PMID: 28432794 — 249 pacientes da coorte WEBCARE, análise de classes latentes entre a inclusão e 12 meses", "Habibović M, Denollet J, Cuijpers P, van der Voort PH, Herrman JP, Bouwels L, Valk SD, Alings M, Theuns DA, Pedersen SS. Web-based distress management for implantable cardioverter defibrillator patients: A randomized controlled trial. Health Psychol. 2017;36(4):392-401. DOI: 10.1037/hea0000451. PMID: 28192003 — ensaio clínico randomizado, 289 pacientes, 6 hospitais de referência na Holanda, desfechos em 6 e 12 meses"]
+source_refs: ["Tripp C, Huber NL, Kuhl EA, Sears SF. Measuring ICD shock anxiety: Status update on the Florida Shock Anxiety Scale after over a decade of use. Pacing Clin Electrophysiol. 2019;42(10):1294-1301. DOI: 10.1111/pace.13793. PMID: 31463949 — revisão focada de 26 artigos publicados com a escala entre 2006 e 2019", "Ladwig KH, Baumert J, Marten-Mittag B, Kolb C, Zrenner B, Schmitt C. Posttraumatic stress symptoms and predicted mortality in patients with implantable cardioverter-defibrillators: results from the prospective living with an implanted cardioverter-defibrillator study. Arch Gen Psychiatry. 2008;65(11):1324-1330. DOI: 10.1001/archpsyc.65.11.1324. PMID: 18981344 — coorte prospectiva, 211 pacientes, German Heart Center Munich, seguimento médio de 5,1 anos", "Habibović M, Denollet J, Pedersen SS; on behalf of the WEBCARE investigators. Posttraumatic stress and anxiety in patients with an implantable cardioverter defibrillator: Trajectories and vulnerability factors. Pacing Clin Electrophysiol. 2017;40(7):817-823. DOI: 10.1111/pace.13090. PMID: 28432794 — 249 pacientes da coorte WEBCARE, análise de classes latentes entre a inclusão e 12 meses", "Habibović M, Denollet J, Cuijpers P, van der Voort PH, Herrman JP, Bouwels L, Valk SD, Alings M, Theuns DA, Pedersen SS. Web-based distress management for implantable cardioverter defibrillator patients: A randomized controlled trial. Health Psychol. 2017;36(4):392-401. DOI: 10.1037/hea0000451. PMID: 28192003 — ensaio clínico randomizado, 289 pacientes, 6 hospitais de referência na Holanda, desfechos em 6 e 12 meses", "Russell DC, Smith TL, Krahn DD, Graskamp P, Singh D, Kolden GG, Sigmund H, Zhang Z. Effects of Cognitive Behavioral Stress Management on Negative Mood and Cardiac Autonomic Activity in ICD Recipients. Pacing Clin Electrophysiol. 2015;38(8):951-965. DOI: 10.1111/pace.12668. PMID: 26010524 — ensaio randomizado, 103 portadores de CDI (não restrito a pós-choque), CBSM presencial de 10 semanas vs. educação do paciente"]
 legacy_source: "Documento novo, escrito em 01/08/2026. A pasta já tem `desativacao-de-cdi-e-marca-passo-no-fim-de-vida-consenso-hrs-ehra-2010.md` (a conversa sobre desligar a terapia de choque no paciente terminal) e `decisao-compartilhada-para-implante-de-cdi-de-prevencao-primaria-em-pacientes-negros.md` (a conversa antes do implante). Faltava o momento clínico entre os dois: o paciente ambulatorial, com o CDI ativo e funcionando, que já levou um choque — apropriado ou inadequado — e vive com medo do próximo. É outra pergunta, com outra evidência."
 ---
 
@@ -144,10 +144,23 @@ que é justamente o fator (suporte percebido) que a revisão da FSAS associa a m
   resolvido.** O próprio ensaio randomizado de maior porte nesta área (WEBCARE, n=289) não mostrou
   superioridade sobre o cuidado usual — a ausência de suporte percebido da equipe (achado da FSAS)
   não se corrige por um recurso automatizado sem conversa personalizada.
-  **VERIFICAÇÃO HUMANA NECESSÁRIA**: não foi identificado, nesta sessão, um ensaio randomizado
-  publicado que teste uma intervenção de comunicação **presencial e personalizada** (em vez de
-  automatizada) especificamente após choque do CDI com desfecho de ansiedade/TEPT — a lacuna é
-  registrada aqui para não ser lida como "a única saída é abandonar o suporte estruturado".
+  **Busca adicional nesta sessão encontrou um ensaio de intervenção presencial e personalizada em
+  portador de CDI, mas não restrito à população pós-choque especificamente**: Russell DC, Smith TL,
+  Krahn DD, Graskamp P, Singh D, Kolden GG, Sigmund H, Zhang Z. *Effects of Cognitive Behavioral
+  Stress Management on Negative Mood and Cardiac Autonomic Activity in ICD Recipients*. Pacing Clin
+  Electrophysiol. 2015;38(8):951-965. DOI: 10.1111/pace.12668. PMID: 26010524. Ensaio randomizado,
+  **103 portadores de CDI** (83 concluíram), programa de **10 semanas de terapia de manejo de
+  estresse cognitivo-comportamental (CBSM)** — presencial, personalizada, conduzida por terapeuta —
+  contra educação do paciente (grupo controle ativo). CBSM associou-se a redução de tensão/ansiedade
+  (p=0,010), raiva/hostilidade (p=0,020) e estresse percebido (p=0,037), maior logo após a
+  intervenção, **mas não sustentada em 6 meses de seguimento**; sem efeito demonstrado sobre
+  variabilidade de frequência cardíaca, resposta hemodinâmica ao estresse mental ou arritmia.
+  **Diferença que impede resolver totalmente a lacuna**: a coorte é de portadores de CDI em geral,
+  não especificamente selecionada por ter sofrido um choque — o próprio artigo não usa o choque como
+  critério de inclusão nem como desfecho estratificado. **VERIFICAÇÃO HUMANA NECESSÁRIA** permanece
+  para um ensaio que teste comunicação presencial e personalizada **especificamente desencadeada
+  por/após um episódio de choque do CDI**, com ansiedade ou TEPT como desfecho — essa combinação
+  exata não foi localizada nesta sessão nem na anterior.
 - **Tratar a resposta psicológica ao CDI como fixa desde o implante.** As trajetórias de TEPT e
   ansiedade variam ao longo de 12 meses em até quatro classes distintas — um rastreio único no
   implante não substitui reavaliação após eventos (choque, hospitalização) subsequentes.

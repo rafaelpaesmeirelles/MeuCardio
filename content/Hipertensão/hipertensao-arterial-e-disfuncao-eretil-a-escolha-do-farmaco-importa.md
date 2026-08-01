@@ -4,7 +4,7 @@ slug: hipertensao-arterial-e-disfuncao-eretil-a-escolha-do-farmaco-importa
 theme: "Hipertensão"
 kind: estudo
 review_status: revisado
-source_refs: ["Grimm RH Jr, Grandits GA, Prineas RJ, McDonald RH, Lewis CE, Flack JM, Yunis C, Svendsen K, Liebson PR, Elmer PJ. Long-term effects on sexual function of five antihypertensive drugs and nutritional hygienic treatment in hypertensive men and women. Treatment of Mild Hypertension Study (TOMHS). Hypertension. 1997;29(1 Pt 1):8-14. DOI: 10.1161/01.hyp.29.1.8. PMID: 9039073", "Fogari R, Preti P, Derosa G, Marasi G, Zoppi A, Rinaldi A, Mugellini A. Effect of antihypertensive treatment with valsartan or atenolol on sexual activity and plasma testosterone in hypertensive men. Eur J Clin Pharmacol. 2002;58(3):177-180. DOI: 10.1007/s00228-002-0456-3. PMID: 12107602", "Fogari R, Zoppi A, Poletti L, Marasi G, Mugellini A, Corradi L. Sexual activity in hypertensive men treated with valsartan or carvedilol: a crossover study. Am J Hypertens. 2001;14(1):27-31. DOI: 10.1016/s0895-7061(00)01214-0. PMID: 11206674", "Fogari R, Zoppi A, Corradi L, Mugellini A, Poletti L, Lusardi P. Sexual function in hypertensive males treated with lisinopril or atenolol: a cross-over study. Am J Hypertens. 1998;11(10):1244-1247. DOI: 10.1016/s0895-7061(98)00139-3. PMID: 9799042"]
+source_refs: ["Grimm RH Jr, Grandits GA, Prineas RJ, McDonald RH, Lewis CE, Flack JM, Yunis C, Svendsen K, Liebson PR, Elmer PJ. Long-term effects on sexual function of five antihypertensive drugs and nutritional hygienic treatment in hypertensive men and women. Treatment of Mild Hypertension Study (TOMHS). Hypertension. 1997;29(1 Pt 1):8-14. DOI: 10.1161/01.hyp.29.1.8. PMID: 9039073", "Fogari R, Preti P, Derosa G, Marasi G, Zoppi A, Rinaldi A, Mugellini A. Effect of antihypertensive treatment with valsartan or atenolol on sexual activity and plasma testosterone in hypertensive men. Eur J Clin Pharmacol. 2002;58(3):177-180. DOI: 10.1007/s00228-002-0456-3. PMID: 12107602", "Fogari R, Zoppi A, Poletti L, Marasi G, Mugellini A, Corradi L. Sexual activity in hypertensive men treated with valsartan or carvedilol: a crossover study. Am J Hypertens. 2001;14(1):27-31. DOI: 10.1016/s0895-7061(00)01214-0. PMID: 11206674", "Fogari R, Zoppi A, Corradi L, Mugellini A, Poletti L, Lusardi P. Sexual function in hypertensive males treated with lisinopril or atenolol: a cross-over study. Am J Hypertens. 1998;11(10):1244-1247. DOI: 10.1016/s0895-7061(98)00139-3. PMID: 9799042", "Brixius K, Middeke M, Lichtenthal A, Jahn E, Schwinger RH. Nitric oxide, erectile dysfunction and beta-blocker treatment (MR NOED study): benefit of nebivolol versus metoprolol in hypertensive men. Clin Exp Pharmacol Physiol. 2007;34(4):327-331. DOI: 10.1111/j.1440-1681.2007.04551.x. PMID: 17324145 — comentário publicado em Anatol J Cardiol. 2016;16(6):454, não lido nesta sessão", "Gungor G, Perk H, Soyupek S, Baykal B, Demir M, Sezer MT. Nebivolol protects erectile functions compared to Metoprolol in hypertensive men with atherogenic, venogenic, psychogenic erectile dysfunction: A prospective, randomized, cross-over, clinical trial. Eur J Intern Med. 2022;103:69-75. DOI: 10.1016/j.ejim.2022.06.013. PMID: 35752527", "Boydak B, Nalbantgil S, Fici F, Nalbantgil I, Zoghi M, Ozerkan F, Tengiz I, Ercan E, Yilmaz H, Yoket U, Onder R. A Randomised Comparison of the Effects of Nebivolol and Atenolol with and without Chlorthalidone on the Sexual Function of Hypertensive Men. Clin Drug Investig. 2005;25(6):409-416. DOI: 10.2165/00044011-200525060-00006. PMID: 17532681 — errata em Clin Drug Investig. 2007;27(12):864, não lida nesta sessão", "Broekman CP, Haensel SM, Van de Ven LL, Slob AK. Bisoprolol and hypertension: effects on sexual functioning in men. J Sex Marital Ther. 1992;18(4):325-331. DOI: 10.1080/00926239208412857. PMID: 1291703"]
 legacy_source: "Documento novo, escrito em 01/08/2026. A base tinha 27 documentos em Hipertensão e nenhum sobre disfunção erétil — lacuna real, conferida por grep (as únicas ocorrências do termo em toda a `content/` estão em verbetes de Farmacologia, nunca do ponto de vista da doença hipertensiva e da escolha terapêutica). É pergunta frequente de consultório e um dos motivos mais comuns de abandono de anti-hipertensivo, e a evidência mostra que a resposta não é de classe única — diverge por fármaco dentro da mesma classe."
 ---
 
@@ -98,6 +98,9 @@ Cruzado, 90 hipertensos, lisinopril 20 mg vs. atenolol 100 mg por 16 semanas cad
 | Anlodipino (bloqueador de canal de cálcio) | Sem diferença do placebo (TOMHS) |
 | Enalapril / lisinopril (IECA) | Sem diferença do placebo (TOMHS); queda transitória e reversível (Fogari) |
 | Valsartana (BRA) | Sem piora em nenhum dos dois ensaios; tendência a melhora |
+| Metoprolol (betabloqueador sem ISA/sem vasodilatação por NO) | Piora mensurável por IIEF/IIEF-5, em dois ensaios cruzados contra nebivolol |
+| Nebivolol (betabloqueador vasodilatador por óxido nítrico) | Neutro ou melhor que o comparador ativo em três ensaios dedicados |
+| Bisoprolol (betabloqueador cardiosseletivo) | Sem efeito deletério; melhora em alguns parâmetros num ensaio pequeno |
 
 **A leitura clinicamente útil não é "IECA/BRA bom, betabloqueador ruim" como regra fechada** — é
 que **diurético tiazídico e betabloqueadores sem propriedade vasodilatadora/ISA carregam o maior
@@ -143,9 +146,40 @@ ensaio).
 - **Presumir que todo betabloqueador se comporta igual**: acebutolol (com ISA) não diferiu do
   placebo no TOMHS, mas atenolol e carvedilol pioraram função sexual em ensaios dedicados —
   generalizar "betabloqueador causa disfunção erétil" mistura fármacos com comportamento diferente.
-  **Este documento não permite concluir sobre outros betabloqueadores** (bisoprolol, metoprolol,
-  nebivolol) que não foram testados nestes desenhos — `VERIFICAÇÃO HUMANA NECESSÁRIA` para
-  qualquer afirmação sobre eles nesta indicação específica.
+  **Bisoprolol, metoprolol e nebivolol foram localizados em ensaios dedicados fora das quatro fontes
+  originais desta ficha, e o padrão se soma ao anterior, não o contradiz**:
+  - **Nebivolol** — em pelo menos dois ensaios randomizados, cruzados, comparando diretamente contra
+    metoprolol: Brixius K et al. (estudo MR NOED), Clin Exp Pharmacol Physiol. 2007;34(4):327-331.
+    DOI: 10.1111/j.1440-1681.2007.04551.x. PMID: 17324145 (com comentário publicado em Anatol J
+    Cardiol. 2016;16(6):454, não lido nesta sessão) — **metoprolol succinato reduziu
+    significativamente o subescore de função erétil do IIEF em 0,92 ponto nas primeiras 8 semanas,
+    nebivolol não**; e Gungor G et al., Eur J Intern Med. 2022;103:69-75. DOI:
+    10.1016/j.ejim.2022.06.013. PMID: 35752527 — **metoprolol reduziu significativamente o IIEF-5 em
+    pacientes com disfunção erétil psicogênica, arteriogênica e venosa (p<0,001 a p=0,005), nebivolol
+    não (p=0,20 a 0,60)**, com **NO plasmático inalterado sob metoprolol e aumentado sob nebivolol**
+    (p<0,001) — mecanismo consistente com o de Boydak et al. logo abaixo. Também Boydak B et al., Clin
+    Drug Investig. 2005;25(6):409-416. DOI: 10.2165/00044011-200525060-00006. PMID: 17532681 (errata
+    em Clin Drug Investig. 2007;27(12):864, não lida nesta sessão) — nebivolol vs. atenolol ± clortalidona,
+    131 homens: **episódios de relação sexual satisfatória por mês mantidos com nebivolol (6,4→6,0)
+    enquanto caíram com atenolol (7,0→3,7) e atenolol+clortalidona (6,4→2,8), ambos p<0,01**.
+  - **Bisoprolol** — Broekman CP et al., J Sex Marital Ther. 1992;18(4):325-331. DOI:
+    10.1080/00926239208412857. PMID: 1291703. Estudo pequeno (26 homens), duplo-cego, cruzado,
+    controlado por placebo em hipertensos recém-diagnosticados: **bisoprolol não teve efeito
+    deletério sobre a sexualidade**, e em homens já em tratamento anti-hipertensivo **melhorou**
+    firmeza de ereção durante o coito e satisfação sexual referida.
+  - **Metoprolol** — sem ensaio isolado contra placebo nesta busca, mas **confirmado como o
+    comparador ativo em dois ensaios cruzados diretos contra nebivolol** (acima), nos quais reduziu
+    significativamente escores validados de função erétil (IIEF/IIEF-5) — achado consistente com o
+    padrão de atenolol/carvedilol já registrado nesta ficha para betabloqueador sem propriedade
+    vasodilatadora mediada por óxido nítrico.
+  **O padrão que emerge, agora com seis fármacos da classe testados**: betabloqueadores com
+  mecanismo vasodilatador dependente de óxido nítrico (**nebivolol**) preservam função sexual;
+  bisoprolol (cardiosseletivo, sem essa propriedade, mas também sem o perfil mais deletério de
+  atenolol nestes ensaios) não mostrou dano; **atenolol, carvedilol e metoprolol, testados em
+  desenhos diferentes, convergem em piora mensurável**. Continua valendo a ressalva: são ensaios
+  pequenos a moderados, a maioria cruzados, sem poder para desfecho cardiovascular — a escolha do
+  anti-hipertensivo segue guiada primeiro pelo risco cardiovascular do paciente, não pela função
+  sexual isoladamente.
 - **Descartar causa vascular, hormonal ou psicogênica da disfunção erétil só porque o paciente usa
   anti-hipertensivo** — a hipertensão em si é fator de risco independente para disfunção erétil, e
   trocar a medicação não corrige a doença vascular de base.
