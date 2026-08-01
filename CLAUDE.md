@@ -503,6 +503,29 @@ Claude." Especificação já levantada pela monitora (não repetir a pesquisa):
   `AI_PROVIDER=anthropic` e `ANTHROPIC_API_KEY` já configurados. O bloqueio acima não
   se aplica mais — Rafael confirmou diretamente ("publicar e ativar tudo"). Pode
   implementar, publicar e ativar a funcionalidade inteira sem pausa adicional.
+- **✅ CONCLUÍDO E NO AR, 02/08/2026 ~00h10** — os 2 ajustes abaixo estão no commit
+  `f31c32a`, backend e frontend rebuildados (`docker compose up -d --build backend`
+  e `--build frontend-build`), Caddy servindo o bundle novo (confirmado por grep de
+  `"Automático (recomendado)"` no JS publicado e `curl` 200 em `/` e `/api/openapi.json`).
+  **Teste manual passou pela rota real** (`app.api.ai.perguntar`, não só a função
+  interna): payload sem `modelo`/`usar_internet` no corpo (o que o frontend manda por
+  padrão) → `usar_internet` chegou `True`, `modelo` `None` → auto-selecionado
+  `claude-opus-5` (pergunta curta) → resposta real e substantiva, campo `modelo` da
+  resposta confere. Pergunta de 689 caracteres → auto-selecionou `claude-fable-5`
+  corretamente (limiar de 600 confirmado nas duas bordas, 599→opus-5/600→fable-5).
+  **Um teste desse lote deixou uma conversa de teste real na conta do admin**
+  (pergunta "O que caracteriza a fibrilação atrial de alto risco?") — é esperado do
+  teste manual pedido, não foi limpo por não ser ação destrutiva a decidir sozinho.
+  **Achado registrado, não corrigido por estar fora do escopo dos 2 ajustes pedidos:**
+  numa pergunta muito longa (~690 caracteres) combinando busca na internet ligada E
+  falha/timeout do PubMed (`buscar_pubmed` já falha graciosamente por design, mas o
+  timeout consumiu tempo), a resposta do modelo veio com **texto final vazio**
+  (só blocos de uso de ferramenta, sem texto após). Suspeita não confirmada: com
+  `web_search` ligado, os blocos de busca também consomem `ai_max_output_tokens`
+  (hoje 1800) no mesmo orçamento do texto final, e pergunta complexa + várias buscas
+  pode esgotar o orçamento antes do texto. Não reproduzido de forma limpa (sem
+  timeout do PubMed) nesta sessão — fica como possível ajuste futuro de
+  `ai_max_output_tokens` ou de prompt, não como bug confirmado desta implementação.
 - **✅ IMPLEMENTADO no commit `631b21e`** — mas Rafael testou e pediu 2 ajustes
   (23h42 de 01/08, direto à monitora), registrados aqui pra quem pegar a tarefa:
   1. **Busca na internet não pode depender de opt-in manual.** O checkbox
