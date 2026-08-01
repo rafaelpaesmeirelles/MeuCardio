@@ -3468,3 +3468,42 @@ de suspensão que o abstract não sustenta) estão no ar. **`clinical_cases` 85/
 **Faixa `casos-clinicos/` devolvida ao painel `corvia`**, por decisão da sessão de `/root` ao
 encerrar (31 casos dela, todos publicados). Volto a produzir nas duas frentes — `trilhas/` e
 `casos-clinicos/` — a partir daqui.
+
+### ✅ Resposta ao handoff da sessão `/root` (monitor), `root-monitor-para-sessoes.md`, 01/08/2026
+Lido o arquivo. Ordem do Rafael repassada: **"publique tudo que estiver revisado de uma vez"**. A
+medição do monitor (08:25) já estava defasada — reconferi tudo do zero antes de agir, como ele
+pediu, e a maior parte do trabalho já tinha sido feita por Biblioteca/Medicamentos nesse meio-tempo:
+
+| Frente | Estado às 08:25 (monitor) | Estado agora, reconferido | Ação |
+|---|---:|---:|---|
+| `scientific_studies` | 118/120 | **166/166** | nada a fazer — Biblioteca já publicou |
+| `evidence_records` | 726/727 | **865/866** | nada a fazer — só falta o órfão, corretamente de fora |
+| `documents` | 559/571 | 559/571 (12 pendentes) | **publiquei os 12** |
+| `drugs` | 101/113 | 89/101 (12 pendentes) | **nenhum publicado** — os 12 são `pendente_revisao`, não `revisado` |
+
+**Os 12 `documents` publicados** (conferidos um a um: arquivo existe no disco, `review_status ==
+revisado`, nenhum órfão): `extrassistole-ventricular-frequente-...`, `privacao-androgenica-no-cancer-de-prostata-...-hero`,
+`aneurisma-de-arteria-poplitea-reparo-aberto-versus-endovascular` (publicado **com** a marcação
+`VERIFICAÇÃO HUMANA NECESSÁRIA` visível — é o padrão do produto, marcar e publicar, não omitir),
+`amiloidose-cardiaca-por-cadeia-leve-al-...`, as duas de decisão compartilhada (Comunicação
+clínica), `ruido-de-transporte-urbano-...`, `uso-de-canabis-...`, `burnout-ocupacional-...`,
+`sono-e-risco-cardiovascular-metanalise-de-cappuccio`, `treprostinil-inalado-...-increase` e
+`ansiedade-cronica-...-metanalise-de-roest`. **`documents` agora 571/571.** Indexados no RAG na
+sequência (`indexar_documento` por slug, já que `indexar_tudo()` não pega documento editado) — 6 a
+8 trechos cada, **3.892 trechos totais, zero de documento não publicado** (auditoria rodada depois).
+
+**Os dois `scientific_studies` do aneurisma poplíteo** (Cochrane e Antonello 2005) já estavam
+publicados quando cheguei.
+
+**Confirmação explícita que o monitor pediu:**
+- `cc-adulto-eco-no-seguimento-com-defeito-residual` **continua `published = false`** — não toquei.
+- **Os 12 `drugs`** (`warfarina`, `atropina`, `evinacumabe`, `prasugrel-cloridrato`,
+  `sotalol-cloridrato`, `trimetazidina-dicloridrato`, os três `metoprolol-succinato*`, os dois
+  `nitro*`, `verapamil-diltiazem`) **continuam `published = false`** — todos `pendente_revisao`,
+  fora do escopo de "publicar o que está revisado" por definição, não por exclusão manual.
+- **Nada foi despublicado, apagado ou alterado destrutivamente.** A duplicata de imagem do
+  takotsubo segue aguardando o Rafael, como já registrado.
+
+**Auditoria final, nas quatro frentes com órfão possível:** `documents` órfão publicado = 0;
+`evidencias` órfão publicado = 0 (só o esperado, não publicado); `estudos` órfão = 0; `drugs` órfão
+publicado = 0 (os 12 continuam de fora). `AuditLog` gravado na publicação dos 12 documentos.
