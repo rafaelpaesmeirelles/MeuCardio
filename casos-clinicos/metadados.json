@@ -5319,5 +5319,485 @@
       "O'Connor CM, Jiang W, Kuchibhatla M, Silva SG, Cuffe MS, et al. Safety and efficacy of sertraline for depression in patients with heart failure: results of the SADHART-CHF (Sertraline Against Depression and Heart Disease in Chronic Heart Failure) trial. J Am Coll Cardiol. 2010;56(9):692-699. doi:10.1016/j.jacc.2010.03.068. PMID: 20723799."
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "nste-acs-alto-risco-grace-momento-da-angiografia-verdict",
+    "titulo": "SCA sem supra de ST e GRACE alto: angiografia muito precoce muda o desfecho?",
+    "tema": "Doença coronariana",
+    "nivel": "avançado",
+    "enunciado": "Homem de 68 anos, hipertenso e diabético, é internado com angina em repouso, infradesnivelamento dinâmico de ST e troponina elevada. Está hemodinamicamente estável, sem sinais de insuficiência cardíaca, e o escore GRACE calculado é 155 (alto risco). O hospital tem hemodinâmica disponível no mesmo dia. A equipe discute se vale a pena acionar a cateterização imediatamente (dentro de 12 horas) em vez de seguir o fluxo habitual de 48 a 72 horas.",
+    "pergunta": "Com base no ensaio VERDICT, a estratégia de angiografia muito precoce (<12h) melhora o desfecho composto neste paciente de alto risco (GRACE >140), comparada à estratégia invasiva padrão (48-72h)?",
+    "opcoes": [
+      "Sim, reduziu significativamente o desfecho primário em toda a população do estudo, independentemente do risco basal calculado pelo GRACE",
+      "Não, a estratégia muito precoce aumentou o sangramento maior sem qualquer sinal de benefício isquêmico em nenhum subgrupo",
+      "Sim — em pacientes com GRACE >140 como este, a estratégia muito precoce (mediana de 4,7h até a angiografia) associou-se a melhora do desfecho composto (HR 0,81; IC95% 0,67-1,01; p de interação=0,023), embora sem benefício demonstrado na população geral do estudo (HR 0,92; IC95% 0,78-1,08)",
+      "A diferença de tempo até a angiografia não importa clinicamente, desde que a revascularização final seja completa"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O VERDICT (Kofoed KF et al., Circulation 2018) randomizou 2.147 pacientes com síndrome coronariana aguda sem supra de ST para angiografia coronariana muito precoce (mediana de 4,7 horas após randomização, grupo com 1.075 pacientes) ou cuidado invasivo padrão (mediana de 61,6 horas, grupo com 1.072 pacientes). O desfecho primário composto (morte por qualquer causa, reinfarto não fatal, internação por isquemia refratária ou por insuficiência cardíaca) ocorreu em 27,5% do grupo muito precoce e 29,5% do grupo padrão ao longo de mediana de 4,3 anos de seguimento — HR 0,92 (IC95% 0,78-1,08), sem significância estatística na população geral. Porém, na análise pré-especificada por subgrupo de risco, entre os pacientes com escore GRACE acima de 140 a estratégia muito precoce melhorou o desfecho primário comparada à padrão (HR 0,81; IC95% 0,67-1,01), com p de interação = 0,023, indicando que o efeito do tempo até a angiografia realmente varia conforme o risco basal. A conclusão dos autores é que a angiografia muito precoce não melhora o desfecho de longo prazo na população geral de SCA sem supra, mas melhora nos pacientes de maior risco — exatamente o caso deste paciente com GRACE 155.",
+    "source_refs": [
+      "Kofoed KF, Kelbæk H, Hansen PR, et al. Early Versus Standard Care Invasive Examination and Treatment of Patients With Non-ST-Segment Elevation Acute Coronary Syndrome. Circulation. 2018;138(24):2741-2750. DOI: 10.1161/CIRCULATIONAHA.118.037152. PMID: 30565996 (ensaio VERDICT, ClinicalTrials.gov NCT02061891; possui errata publicada em Circulation. 2018;138(24):e750, DOI: 10.1161/CIR.0000000000000640, PMID: 30608878, não lida nesta sessão)."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cardiomiopatia-dilatada-recuperada-suspender-medicacao-de-ic-tred-hf",
+    "titulo": "Cardiomiopatia dilatada com recuperação completa da FE: dá para suspender a medicação de insuficiência cardíaca?",
+    "tema": "Cardiomiopatias",
+    "nivel": "intermediário",
+    "enunciado": "Mulher de 34 anos, diagnosticada há 3 anos com cardiomiopatia dilatada idiopática e FEVE inicial de 32%, está hoje completamente assintomática. O ecocardiograma atual mostra FEVE de 55% e volume diastólico final normalizado, e o NT-proBNP está em 180 ng/L. Ela usa carvedilol, enalapril e espironolactona em doses otimizadas há mais de um ano e pergunta se, já que está \"curada\", pode suspender as medicações.",
+    "pergunta": "Com base no ensaio TRED-HF, qual é a conduta mais apropriada diante desses critérios de recuperação?",
+    "opcoes": [
+      "Suspender toda a medicação de imediato, já que os critérios ecocardiográficos e bioquímicos de recuperação estão preenchidos",
+      "Manter a medicação indefinidamente — no TRED-HF, pacientes com critérios de recuperação semelhantes tiveram 44% de recidiva em 6 meses após suspensão escalonada, contra 0% no grupo que manteve o tratamento no mesmo período (p=0,0001), e mesmo o grupo controle recidivou em 36% quando depois teve a medicação retirada",
+      "Reduzir apenas o inibidor da ECA, mantendo betabloqueador e antagonista mineralocorticoide em dose plena, sem necessidade de reavaliação posterior",
+      "Suspender a medicação apenas se a ressonância cardíaca mostrar ausência de realce tardio, sem necessidade de seguimento clínico subsequente"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O TRED-HF (Halliday BP et al., Lancet 2019) foi um ensaio piloto aberto e randomizado com 51 pacientes com cardiomiopatia dilatada prévia (FEVE inicial <40%) que haviam recuperado FEVE ≥50%, normalizado o volume diastólico final e apresentavam NT-proBNP <250 ng/L — critérios muito próximos aos desta paciente. Vinte e cinco pacientes foram randomizados para retirada escalonada da medicação e 26 para manter o tratamento. O desfecho primário (recidiva em 6 meses, definida por queda de FEVE >10 pontos e para <50%, aumento de VDF >10% acima do normal, duplicação do NT-proBNP para >400 ng/L, ou insuficiência cardíaca clínica) ocorreu em 11 dos 25 pacientes (44%) do grupo de retirada, contra nenhum dos 26 do grupo que manteve o tratamento nesse período — estimativa de Kaplan-Meier de 45,7% (IC95% 28,5-67,2), p=0,0001. Depois desses 6 meses, 25 dos 26 pacientes do grupo controle também tiveram a medicação retirada, e 9 recidivaram (taxa de 36,0%, IC95% 20,6-57,8). Não houve mortes em nenhum dos dois grupos. A conclusão dos autores é explícita: muitos pacientes considerados \"recuperados\" da cardiomiopatia dilatada recidivam após a suspensão do tratamento, e até que preditores robustos de recidiva sejam definidos, o tratamento deve ser mantido indefinidamente.",
+    "source_refs": [
+      "Halliday BP, Wassall R, Lota AS, et al. Withdrawal of pharmacological treatment for heart failure in patients with recovered dilated cardiomyopathy (TRED-HF): an open-label, pilot, randomised trial. Lancet. 2019;393(10166):61-73. DOI: 10.1016/S0140-6736(18)32484-X. PMID: 30429050."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "regurgitacao-tricuspide-grave-sintomatica-protese-transcateter-triscend-ii",
+    "titulo": "Regurgitação tricúspide grave sintomática, não candidata a reparo borda-a-borda: a prótese transcateter muda o desfecho?",
+    "tema": "Valvopatias",
+    "nivel": "avançado",
+    "enunciado": "Mulher de 76 anos, com regurgitação tricúspide grave secundária, classe funcional NYHA III apesar de diurético otimizado, alto risco cirúrgico e anatomia desfavorável para reparo transcateter borda-a-borda (grande gap de coaptação). É avaliada para prótese tricúspide por via transcateter associada à terapia clínica, em comparação a manter apenas terapia clínica otimizada.",
+    "pergunta": "Segundo o TRISCEND II, a substituição valvar tricúspide por via transcateter associada à terapia clínica muda o desfecho composto em 1 ano, comparada à terapia clínica isolada?",
+    "opcoes": [
+      "Não, o desfecho composto hierárquico foi neutro entre os grupos, sem diferença na razão de vitórias",
+      "Sim, mas o benefício se deveu exclusivamente à redução de mortalidade por todas as causas, sem diferença sintomática entre os grupos",
+      "Não, a prótese aumentou significativamente a taxa de reinternação por insuficiência cardíaca sem qualquer ganho sintomático",
+      "Sim — a razão de vitórias (win ratio) favorável à prótese foi de 2,02 (IC95% 1,56-2,62; p<0,001) para o desfecho composto hierárquico, impulsionada sobretudo por melhora de sintomas e qualidade de vida, à custa de mais sangramento maior (15,4% vs. 5,3%) e mais implante de marca-passo definitivo (17,4% vs. 2,3%)"
+    ],
+    "resposta_correta": 3,
+    "explicacao": "O TRISCEND II (Hahn RT et al., N Engl J Med 2025, publicado online em outubro de 2024) randomizou 400 pacientes com regurgitação tricúspide grave sintomática, na proporção 2:1, para prótese tricúspide transcateter mais terapia clínica (267 pacientes) ou terapia clínica isolada (133 pacientes). O desfecho primário composto hierárquico (morte por qualquer causa, implante de dispositivo de assistência ventricular direita ou transplante, nova intervenção na valva tricúspide, internação por insuficiência cardíaca, melhora ≥10 pontos no KCCQ-OS, melhora ≥1 classe NYHA e melhora ≥30 m no teste de caminhada de 6 minutos) foi analisado por razão de vitórias (win ratio), comparando pares de pacientes: em 1 ano, a razão favorável à prótese foi 2,02 (IC95% 1,56-2,62; p<0,001). Nas comparações pareadas, o grupo da prótese teve mais vitórias quanto a morte por qualquer causa (14,8% vs. 12,5%), nova intervenção valvar (3,2% vs. 0,6%) e melhora no KCCQ-OS (23,1% vs. 6,0%), na classe NYHA (10,2% vs. 0,8%) e na distância de caminhada (1,1% vs. 0,9%); teve menos vitórias quanto à taxa anualizada de internação por insuficiência cardíaca (9,7% vs. 10,0%). Em segurança, sangramento grave ocorreu em 15,4% do grupo da prótese vs. 5,3% do controle (p=0,003), e novo marca-passo definitivo em 17,4% vs. 2,3% (p<0,001). Ensaio financiado pela Edwards Lifesciences.",
+    "source_refs": [
+      "Hahn RT, Makkar R, Thourani VH, et al; TRISCEND II Trial Investigators. Transcatheter Valve Replacement in Severe Tricuspid Regurgitation. N Engl J Med. 2025;392(2):115-126. DOI: 10.1056/NEJMoa2401918. PMID: 39475399."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cirurgia-cardiaca-eletiva-pericardiotomia-posterior-esquerda-previne-fa-palacs",
+    "titulo": "Cirurgia cardíaca eletiva sem história de FA: a pericardiotomia posterior esquerda previne fibrilação atrial pós-operatória?",
+    "tema": "Pericárdio",
+    "nivel": "intermediário",
+    "enunciado": "Homem de 61 anos, sem história de arritmia, CHA2DS2-VASc 2, será submetido a revascularização miocárdica cirúrgica eletiva. O cirurgião considera acrescentar a pericardiotomia posterior esquerda — manobra que drena o espaço pericárdico para a cavidade pleural esquerda — durante a mesma operação, questionando se isso reduz o risco de fibrilação atrial pós-operatória (FAPO), a complicação mais comum após cirurgia cardíaca.",
+    "pergunta": "Segundo o ensaio PALACS, a pericardiotomia posterior esquerda reduz a incidência de fibrilação atrial pós-operatória em cirurgia eletiva de artérias coronárias, valva aórtica ou aorta ascendente?",
+    "opcoes": [
+      "Sim — a incidência de FA pós-operatória foi de 17% no grupo com pericardiotomia posterior vs. 32% no grupo sem intervenção (razão de chances ajustada 0,44; IC95% 0,27-0,70; p=0,0005), sem aumento de eventos adversos maiores",
+      "Não, a incidência de FA foi semelhante nos dois grupos, sem significância estatística",
+      "Sim, mas a manobra aumentou o risco de tamponamento cardíaco tardio por acúmulo de líquido na cavidade pleural",
+      "O benefício só foi demonstrado em cirurgia valvar isolada, não em revascularização miocárdica"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O PALACS (Gaudino M et al., Lancet 2021) randomizou 420 pacientes submetidos a cirurgia eletiva de artérias coronárias, valva aórtica ou aorta ascendente (ou combinação destas), sem história prévia de FA, para pericardiotomia posterior esquerda (212 pacientes) ou nenhuma intervenção (208 pacientes), estratificados por escore CHA2DS2-VASc. O desfecho primário — incidência de FA durante a internação pós-operatória, na população por intenção de tratar — foi significativamente menor no grupo intervenção: 17% (37/212) vs. 32% (66/208), p=0,0007; razão de chances ajustada para a variável de estratificação de 0,44 (IC95% 0,27-0,70; p=0,0005). A incidência de derrame pericárdico pós-operatório também foi menor no grupo intervenção (12% vs. 21%; risco relativo 0,58, IC95% 0,37-0,91). Eventos adversos maiores pós-operatórios ocorreram em proporção semelhante entre os grupos (3% vs. 2%), e nenhuma complicação foi atribuída diretamente à pericardiotomia posterior. A conclusão dos autores é que a manobra é altamente eficaz em reduzir a FA pós-operatória nesse conjunto de cirurgias, sem risco adicional identificado.",
+    "source_refs": [
+      "Gaudino M, Sanna T, Ballman KV, et al; PALACS Investigators. Posterior left pericardiotomy for the prevention of atrial fibrillation after cardiac surgery: an adaptive, single-centre, single-blind, randomised, controlled trial. Lancet. 2021;398(10316):2075-2083. DOI: 10.1016/S0140-6736(21)02490-9. PMID: 34788640."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "endocardite-por-cocos-gram-positivos-terapia-sequencial-com-dalbavancina",
+    "titulo": "Endocardite por cocos Gram-positivos já estabilizada: a dalbavancina em dose semanal como terapia sequencial ambulatorial tem respaldo?",
+    "tema": "Endocardite",
+    "nivel": "intermediário",
+    "enunciado": "Homem de 54 anos, com endocardite de valva nativa por Enterococcus faecalis sensível à ampicilina, está hemodinamicamente estável após 2 semanas de ampicilina associada a ceftriaxona, com hemoculturas de controle negativas e sem indicação cirúrgica. A equipe considera completar o tratamento ambulatorialmente com dalbavancina em dose única semanal, em vez de manter o esquema intravenoso hospitalar padrão até completar 6 semanas.",
+    "pergunta": "Que tipo de evidência sustenta hoje o uso da dalbavancina como terapia sequencial na endocardite infecciosa por Gram-positivos, e qual é a força dessa evidência?",
+    "opcoes": [
+      "Um ensaio clínico randomizado multicêntrico já demonstrou superioridade da dalbavancina sobre o tratamento padrão em endocardite",
+      "Não existe nenhum estudo publicado avaliando a dalbavancina como terapia sequencial na endocardite infecciosa",
+      "Uma coorte retrospectiva multicêntrica (22 pacientes com dalbavancina vs. 47 com tratamento padrão) mostrou eficácia numericamente menor, sem diferença estatística (72% vs. 94%; p=0,198), internação mais curta (22 vs. 37 dias; p=0,001) e menor custo — é evidência observacional, não um ensaio randomizado",
+      "A diretriz da AHA de 2015 já recomenda a dalbavancina como primeira linha para endocardite por Enterococcus"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "Suárez M et al. (Int J Infect Dis 2024) publicaram uma coorte retrospectiva multicêntrica de pacientes adultos com endocardite infecciosa definida por cocos Gram-positivos, comparando dalbavancina como terapia sequencial pré-alta (22 pacientes) com o tratamento padrão intravenoso (47 pacientes). A eficácia — desfecho combinado de cura clínica e ausência de recidiva em 12 meses de seguimento — foi numericamente menor com dalbavancina, sem diferença estatisticamente significativa: 72% (18/22) vs. 94% (44/47), p=0,198. O tempo de internação hospitalar foi significativamente menor no grupo dalbavancina (22 dias [16-34] vs. 37 dias [23-49]; p=0,001), diferença ainda mais acentuada nos casos por E. faecalis (30 dias [20-36] vs. 65 dias [46-74]; p<0,001), com redução de custo associada (12.206 € vs. 16.249 €; p=0,032). É importante que o médico saiba distinguir o tipo de evidência: trata-se de uma coorte observacional retrospectiva, com amostra pequena (sobretudo no braço dalbavancina), não de um ensaio clínico randomizado — a decisão de usar dalbavancina como terapia sequencial deve ser individualizada, reservada a pacientes já estáveis, sem indicação cirúrgica e com controle da fonte obtido, como no caso deste paciente. O artigo tem uma errata publicada (Int J Infect Dis. 2026;170:108901), não lida nesta sessão.",
+    "source_refs": [
+      "Suárez M, Pérez-Landeiro A, Sanjurjo A, et al. Comparison of dalbavancin with standard of care in the management of infective endocarditis: efficacy, safety, and cost analysis. Int J Infect Dis. 2024;138:41-45. DOI: 10.1016/j.ijid.2023.11.003. PMID: 37931892 (errata em Int J Infect Dis. 2026;170:108901, doi: 10.1016/j.ijid.2026.108901, não lida nesta sessão)."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "claudicacao-aortoiliaca-exercicio-supervisionado-ou-stent-clever",
+    "titulo": "Claudicação por doença aortoilíaca: o exercício supervisionado supera o stent na capacidade de caminhada?",
+    "tema": "Aorta e doença arterial periférica",
+    "nivel": "básico",
+    "enunciado": "Homem de 63 anos, com doença arterial periférica aortoilíaca, apresenta claudicação moderada a grave que limita as atividades diárias. Já está em terapia clínica otimizada (estatina, antiagregante, tentativa de cilostazol sem melhora relevante). A equipe discute se deve encaminhá-lo para um programa de exercício supervisionado ou para angioplastia com implante de stent ilíaco.",
+    "pergunta": "Segundo o ensaio CLEVER, comparado ao stent, o exercício supervisionado teve melhor desempenho em qual desfecho aos 6 meses?",
+    "opcoes": [
+      "O stent foi superior ao exercício supervisionado em todos os desfechos avaliados, incluindo o tempo de caminhada em esteira",
+      "O exercício supervisionado produziu o maior ganho no tempo de caminhada em esteira aos 6 meses (+5,8 min vs. +3,7 min com stent vs. +1,2 min com terapia clínica isolada; p=0,04 para exercício vs. stent), embora a qualidade de vida relatada tenha melhorado mais com o stent na maioria das escalas",
+      "Não houve diferença estatisticamente significativa entre nenhum dos três grupos em nenhum desfecho avaliado",
+      "O benefício do exercício supervisionado só foi demonstrado em doença femoropoplítea, não em doença aortoilíaca"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O CLEVER study (Murphy TP et al., Circulation 2012) randomizou 111 pacientes com doença arterial periférica aortoilíaca para terapia clínica otimizada isolada (OMC), OMC associada a exercício supervisionado (SE), ou OMC associada a implante de stent (ST). O desfecho primário — variação do tempo de caminhada em esteira em relação ao basal, aos 6 meses — foi maior no grupo de exercício supervisionado (+5,8±4,6 min), intermediário no grupo stent (+3,7±4,9 min) e menor no grupo terapia clínica isolada (+1,2±2,6 min): p<0,001 para exercício vs. terapia clínica, p=0,02 para stent vs. terapia clínica, e p=0,04 para exercício vs. stent. Por outro lado, a qualidade de vida específica da doença, avaliada pelos questionários WIQ e PAQ, melhorou mais com o stent do que com o exercício na maioria das escalas, e a atividade física na vida diária (contagem de passos) aumentou mais no grupo stent, embora sem significância estatística. A conclusão dos autores é que o exercício supervisionado produz desempenho de caminhada superior ao stent mesmo na doença aortoilíaca, e que o contraste entre o melhor desempenho físico do exercício e a melhor qualidade de vida relatada com o stent merece investigação adicional — ou seja, os dois têm papel, e a escolha depende do desfecho mais valorizado pelo paciente.",
+    "source_refs": [
+      "Murphy TP, Cutlip DE, Regensteiner JG, et al; CLEVER Study Investigators. Supervised exercise versus primary stenting for claudication resulting from aortoiliac peripheral artery disease: six-month outcomes from the claudication: exercise versus endoluminal revascularization (CLEVER) study. Circulation. 2012;125(1):130-139. DOI: 10.1161/CIRCULATIONAHA.111.075770. PMID: 22090168."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rastreio-de-cardiopatia-reumatica-exame-clinico-subestima-a-doenca-marijon-2007",
+    "titulo": "Rastreio de cardiopatia reumática: o exame clínico é suficiente ou subestima a doença?",
+    "tema": "Febre reumática",
+    "nivel": "intermediário",
+    "enunciado": "Em uma campanha de saúde escolar em região de alta endemicidade para febre reumática, uma médica planeja um programa de rastreamento de cardiopatia reumática em crianças de 6 a 17 anos. A equipe de saúde pública debate se basta a ausculta cardíaca de rotina para identificar os casos que precisam de profilaxia secundária, ou se é necessário associar ecocardiograma a todas as crianças, mesmo as assintomáticas e sem sopro audível — o que teria custo e logística muito maiores.",
+    "pergunta": "Segundo o estudo de Marijon E et al. (NEJM 2007), que rastreou sistematicamente escolares no Camboja e em Moçambique com exame clínico e ecocardiograma, qual foi o achado central ao comparar as duas estratégias de rastreamento?",
+    "opcoes": [
+      "O exame clínico e o ecocardiograma tiveram desempenho equivalente, com prevalências semelhantes de cardiopatia reumática nos dois países",
+      "O ecocardiograma detectou uma prevalência de cardiopatia reumática cerca de 10 vezes maior que o exame clínico — 21,5 e 30,4 casos por 1.000 crianças no Camboja e em Moçambique, respectivamente, contra apenas 2,2 e 2,3 por 1.000 pelo exame clínico confirmado por eco —, com a valva mitral acometida na grande maioria dos casos (87,3% no Camboja e 98,4% em Moçambique)",
+      "O ecocardiograma teve sensibilidade inferior ao exame clínico nessa população, subdiagnosticando os casos leves de valvopatia reumática",
+      "Apenas o exame clínico foi validado como estratégia de rastreamento nesse estudo; o ecocardiograma não fez parte do protocolo"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O estudo rastreou 3.677 escolares no Camboja e 2.170 em Moçambique. O exame clínico, com confirmação ecocardiográfica dos casos suspeitos, detectou cardiopatia reumática em 8 crianças no Camboja e 5 em Moçambique — prevalências de 2,2 por 1.000 (IC95% 0,7-3,7) e 2,3 por 1.000 (IC95% 0,3-4,3), respectivamente. Já o rastreamento ecocardiográfico sistemático de TODAS as crianças detectou 79 casos no Camboja e 66 em Moçambique — prevalências de 21,5 por 1.000 (IC95% 16,8-26,2) e 30,4 por 1.000 (IC95% 23,2-37,6), aproximadamente 10 vezes maior que a detectada pelo exame clínico isolado. A valva mitral estava envolvida na grande maioria dos casos (87,3% no Camboja e 98,4% em Moçambique). Os autores concluem que o rastreamento apenas clínico subestima drasticamente a carga real de cardiopatia reumática subclínica, com implicações de saúde pública relevantes, já que a doença tem consequências potencialmente graves e a profilaxia secundária pode ser eficaz quando os casos precoces são identificados corretamente.",
+    "source_refs": [
+      "Marijon E, Ou P, Celermajer DS, Ferreira B, Mocumbi AO, Jani D, Paquet C, Jacob S, Sidi D, Jouven X. Prevalence of rheumatic heart disease detected by echocardiographic screening. N Engl J Med. 2007;357(5):470-476. doi: 10.1056/NEJMoa065085. PMID: 17671255."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sincope-internada-investigar-embolia-pulmonar-de-rotina-pesit",
+    "titulo": "Síncope internada, sem causa óbvia: deve-se investigar embolia pulmonar de rotina?",
+    "tema": "Síncope",
+    "nivel": "intermediário",
+    "enunciado": "Homem de 78 anos é internado após um primeiro episódio de síncope. Ao exame, apresenta discreta queda pressórica ao ortostatismo, considerada pela equipe plantonista uma explicação suficiente para o episódio, e a investigação para embolia pulmonar não é cogitada de rotina. Um residente questiona se a presença dessa explicação alternativa aparente é suficiente para descartar tromboembolismo pulmonar como causa (ou contribuinte) da síncope, lembrando do estudo PESIT.",
+    "pergunta": "Segundo o estudo PESIT (Prandoni P et al., NEJM 2016), que aplicou investigação sistemática para embolia pulmonar (probabilidade clínica pelo escore de Wells + D-dímero, seguidos de angiotomografia ou cintilografia quando indicado) em 560 pacientes internados por um primeiro episódio de síncope, qual foi a prevalência de embolia pulmonar na coorte, e como ela se comportou conforme a presença de explicação alternativa para a síncope?",
+    "opcoes": [
+      "A prevalência de embolia pulmonar foi de 1,7% na coorte total, ocorrendo apenas nos pacientes sem qualquer explicação alternativa para a síncope",
+      "A prevalência de embolia pulmonar na coorte foi de 17,3% (IC95% 14,2-20,5); ela foi identificada em 12,7% dos pacientes que tinham uma explicação alternativa aparente para a síncope (como a hipotensão ortostática) e em 25,4% dos que não tinham nenhuma explicação alternativa",
+      "A investigação foi restrita, por desenho do estudo, a pacientes com menos de 65 anos, o que limita a extrapolação do achado para o idoso",
+      "O estudo concluiu que síncope isolada, sem dispneia ou dor torácica associada, praticamente exclui embolia pulmonar, dispensando qualquer investigação adicional"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "No PESIT, 560 pacientes (idade média de 76 anos) internados por um primeiro episódio de síncope foram sistematicamente investigados para embolia pulmonar, independentemente de haver uma explicação alternativa para o quadro sincopal. O diagnóstico foi descartado em 330 dos 560 pacientes (58,9%) pela combinação de baixa probabilidade clínica pelo escore de Wells com D-dímero negativo; nos 230 restantes, embolia pulmonar foi confirmada em 97 (42,2%) por angiotomografia ou cintilografia. Na coorte inteira, a prevalência de embolia pulmonar foi de 17,3% (IC95% 14,2-20,5) — ou seja, quase 1 em cada 6 pacientes internados por um primeiro episódio de síncope tinha embolia pulmonar. O achado importante para a prática é que a presença de explicação alternativa NÃO afasta o diagnóstico com segurança: embolia pulmonar foi identificada em 45 dos 355 pacientes (12,7%) que tinham explicação alternativa para a síncope e em 52 dos 205 pacientes (25,4%) que não tinham nenhuma. O estudo não restringiu a inclusão por idade (média de 76 anos, mas sem corte etário definido) e a conclusão dos autores foi o oposto do afirmado na alternativa sobre dispensar investigação: a embolia pulmonar deve entrar na investigação de síncope internada, mesmo quando parece haver outra explicação.",
+    "source_refs": [
+      "Prandoni P, Lensing AW, Prins MH, Ciammaichella M, Perlati M, Mumoli N, Bucherini E, Visonà A, Bova C, Imberti D, Campostrini S, Barbar S; PESIT Investigators. Prevalence of Pulmonary Embolism among Patients Hospitalized for Syncope. N Engl J Med. 2016;375(16):1524-1531. doi: 10.1056/NEJMoa1602172. PMID: 27797317."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "revascularizacao-coronariana-antes-de-cirurgia-vascular-eletiva-ensaio-carp",
+    "titulo": "Antes de cirurgia vascular eletiva de grande porte: revascularizar a coronariopatia primeiro?",
+    "tema": "Perioperatório",
+    "nivel": "avançado",
+    "enunciado": "Homem de 68 anos, com aneurisma de aorta abdominal assintomático de 6 cm e indicação de correção cirúrgica eletiva, apresenta doença arterial coronariana estável clinicamente significativa em cateterismo pré-operatório de rotina, em contexto de múltiplos fatores de risco cardiovascular. O cirurgião vascular questiona se deve adiar a cirurgia do aneurisma para revascularizar o miocárdio (angioplastia ou cirurgia de revascularização) antes de operar, na expectativa de reduzir o risco perioperatório e a mortalidade de longo prazo.",
+    "pergunta": "Segundo o ensaio CARP — Coronary Artery Revascularization Prophylaxis (McFalls EO et al., NEJM 2004) —, que randomizou 510 pacientes com risco cardíaco aumentado e doença arterial coronariana clinicamente significativa para revascularização coronariana ou nenhuma revascularização antes de cirurgia vascular eletiva, qual foi o efeito da revascularização pré-operatória na mortalidade de longo prazo e no infarto perioperatório?",
+    "opcoes": [
+      "A revascularização pré-operatória reduziu significativamente a mortalidade em 2,7 anos (de 23% para 12%) e deve ser realizada sempre que houver doença coronariana significativa antes de cirurgia vascular",
+      "A revascularização pré-operatória não alterou significativamente a mortalidade em 2,7 anos (22% no grupo revascularizado vs. 23% no grupo não revascularizado; risco relativo 0,98; IC95% 0,70-1,37; p=0,92) nem a taxa de infarto perioperatório definido por troponina (12% vs. 14%, p=0,37), e atrasou a cirurgia vascular em uma mediana de 36 dias (54 vs. 18 dias, p<0,001)",
+      "O estudo foi interrompido precocemente pelo comitê de monitorização por excesso de mortalidade no grupo revascularizado",
+      "A revascularização só trouxe benefício de mortalidade nos pacientes submetidos a cirurgia de revascularização miocárdica (CRM), efeito não observado com angioplastia — distinção que, na verdade, o estudo não relatou"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "De 5.859 pacientes agendados para cirurgia vascular em 18 centros de Veteranos, 510 (9%) preencheram critérios e foram randomizados — indicação de aneurisma de aorta abdominal em 33% e doença oclusiva arterial de membros em 67%. No grupo revascularização, 59% foram tratados por intervenção coronariana percutânea e 41% por cirurgia de revascularização miocárdica. O tempo mediano entre a randomização e a cirurgia vascular foi de 54 dias no grupo revascularização contra 18 dias no grupo sem revascularização (p<0,001) — uma diferença de 36 dias de espera adicional. Aos 2,7 anos após a randomização, a mortalidade foi de 22% no grupo revascularização e 23% no grupo sem revascularização (risco relativo 0,98; IC95% 0,70-1,37; p=0,92) — sem diferença estatística. Dentro de 30 dias após a cirurgia vascular, infarto do miocárdio pós-operatório definido por elevação de troponina ocorreu em 12% do grupo revascularização e 14% do grupo sem revascularização (p=0,37) — também sem diferença. Os autores concluem que a revascularização coronariana antes de cirurgia vascular eletiva não altera significativamente o desfecho de longo prazo e que essa estratégia, em pacientes com sintomas cardíacos estáveis, não pode ser recomendada de rotina.",
+    "source_refs": [
+      "McFalls EO, Ward HB, Moritz TE, Goldman S, Krupski WC, Littooy F, Pierpont G, Santilli S, Rapp J, Hattler B, Shunk K, Jaenicke C, Thottapurathu L, Ellis N, Reda DJ, Henderson WG. Coronary-artery revascularization before elective major vascular surgery. N Engl J Med. 2004;351(27):2795-2804. doi: 10.1056/NEJMoa041905. PMID: 15625331."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "parada-cardiaca-extra-hospitalar-adrenalina-melhora-sobrevida-mas-a-que-custo-o-ensaio-paramedic2",
+    "titulo": "Parada cardíaca extra-hospitalar: a adrenalina melhora a sobrevida em 30 dias — mas a que custo? O ensaio PARAMEDIC2",
+    "tema": "Terapia intensiva",
+    "nivel": "intermediário",
+    "enunciado": "Paciente de 68 anos sofre parada cardiorrespiratória extra-hospitalar testemunhada, com ritmo inicial não chocável (assistolia). A equipe de suporte avançado de vida inicia manobras de RCP e considera a administração de adrenalina parenteral conforme o protocolo padrão. Um residente questiona se a adrenalina realmente melhora a sobrevida e se há contrapartida neurológica relevante a considerar antes de segui-la de forma automática.",
+    "pergunta": "Com base no ensaio randomizado, duplo-cego, controlado por placebo PARAMEDIC2 (8.014 pacientes com PCR extra-hospitalar no Reino Unido), qual afirmação resume corretamente o balanço risco-benefício da adrenalina parenteral durante a reanimação?",
+    "opcoes": [
+      "A adrenalina não teve efeito em nenhum desfecho, nem sobrevida em 30 dias nem desfecho neurológico — o ensaio foi inteiramente neutro.",
+      "A adrenalina aumentou significativamente a sobrevida em 30 dias (3,2% vs. 2,4%; odds ratio 1,39; IC95% 1,06–1,82; p=0,02), mas não houve diferença significativa na sobrevida com desfecho neurológico favorável (2,2% vs. 1,9%), porque mais sobreviventes do grupo adrenalina apresentaram incapacidade neurológica grave na alta (31,0% vs. 17,8% dos sobreviventes de cada grupo).",
+      "A adrenalina reduziu significativamente a sobrevida em 30 dias em comparação ao placebo, o que levou ao abandono do seu uso rotineiro após o estudo.",
+      "O benefício de sobrevida da adrenalina foi tão grande que o estudo foi interrompido precocemente por eficácia, antes de completar o recrutamento planejado."
+    ],
+    "resposta_correta": 1,
+    "explicacao": "No PARAMEDIC2 (Perkins GD et al., N Engl J Med. 2018;379(8):711-721, PMID 30021076), 8.014 pacientes com PCR extra-hospitalar foram randomizados para epinefrina parenteral (4.015 pacientes) ou placebo salino (3.999 pacientes), além do cuidado padrão. Em 30 dias, 130 pacientes (3,2%) do grupo epinefrina estavam vivos contra 94 (2,4%) do grupo placebo — odds ratio não ajustado de 1,39 (IC95% 1,06–1,82; p=0,02), diferença estatisticamente significativa. Porém não houve diferença significativa na proporção de pacientes que sobreviveram até a alta hospitalar com desfecho neurológico favorável (escore de Rankin modificado ≤3): 87 de 4.007 pacientes (2,2%) no grupo epinefrina vs. 74 de 3.994 (1,9%) no placebo (odds ratio 1,18; IC95% 0,86–1,61). Isso ocorreu porque, entre os sobreviventes até a alta, uma proporção maior do grupo epinefrina apresentou comprometimento neurológico grave (escore de Rankin 4 ou 5): 39 de 126 sobreviventes (31,0%) vs. 16 de 90 (17,8%) no placebo. O estudo não foi interrompido precocemente por eficácia (opção 4 incorreta), não foi neutro (opção 1 incorreta) e não mostrou dano de mortalidade — pelo contrário, a mortalidade em 30 dias foi menor com adrenalina (opção 3 inverte o achado real). O ensaio expõe o dilema prático: a adrenalina resgata mais pacientes da morte precoce, mas parte relevante desses 'resgates extras' sobrevive com sequela neurológica grave.",
+    "source_refs": [
+      "Perkins GD, Ji C, Deakin CD, Quinn T, Nolan JP, Scomparin C, Regan S, Long J, Slowther A, Pocock H, Black JJM, Moore F, Fothergill RT, Rees N, O'Shea L, Docherty M, Gunson I, Han K, Charlton K, Finn J, Petrou S, Stallard N, Gates S, Lall R; PARAMEDIC2 Collaborators. A Randomized Trial of Epinephrine in Out-of-Hospital Cardiac Arrest. N Engl J Med. 2018 Aug 23;379(8):711-721. doi: 10.1056/NEJMoa1806842. PMID: 30021076"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "tev-apos-6-a-12-meses-de-anticoagulacao-continuar-com-rivaroxabana-ou-trocar-por-aas-o-ensaio-einstein-choice",
+    "titulo": "TEV após 6 a 12 meses de anticoagulação, em equilíbrio quanto à necessidade de continuar: rivaroxabana em dose plena, dose reduzida ou AAS? O ensaio EINSTEIN CHOICE",
+    "tema": "Tromboembolismo",
+    "nivel": "intermediário",
+    "enunciado": "Paciente de 54 anos completou 9 meses de anticoagulação com rivaroxabana após TEV não provocado (TVP proximal de membro inferior). Não houve sangramento durante o tratamento, mas também não há fator de risco transitório identificado, e a equipe está em dúvida clínica genuína — em equilíbrio — quanto a manter a anticoagulação por tempo indeterminado ou trocar para antiagregação com AAS na fase de prevenção estendida.",
+    "pergunta": "No ensaio randomizado, duplo-cego, fase 3 EINSTEIN CHOICE (3.396 pacientes em equilíbrio quanto à necessidade de anticoagulação estendida após 6-12 meses de tratamento), qual opção terapêutica reduziu mais o risco de TEV recorrente sintomático em comparação ao AAS 100 mg/dia, sem aumento significativo de sangramento maior?",
+    "opcoes": [
+      "Nenhuma das duas doses de rivaroxabana testadas (20 mg ou 10 mg) foi superior ao AAS — o estudo foi neutro e confirmou que o AAS é suficiente para a prevenção estendida.",
+      "Rivaroxabana 20 mg/dia e rivaroxabana 10 mg/dia reduziram significativamente o TEV recorrente sintomático em relação ao AAS (1,5% e 1,2% vs. 4,4%; HR 0,34 e HR 0,26, respectivamente, ambos p<0,001), com taxas de sangramento maior baixas e semelhantes entre os três grupos (0,5%, 0,4% e 0,3%).",
+      "Só a dose plena de 20 mg foi superior ao AAS; a dose reduzida de 10 mg teve eficácia semelhante à do AAS.",
+      "A rivaroxabana em qualquer dose aumentou significativamente o sangramento maior em relação ao AAS, o que limita seu uso na fase de extensão do tratamento."
+    ],
+    "resposta_correta": 1,
+    "explicacao": "No EINSTEIN CHOICE (Weitz JI et al., N Engl J Med. 2017;376(13):1211-1222, PMID 28316279), 3.396 pacientes que haviam completado 6 a 12 meses de anticoagulação por TEV e estavam em equilíbrio quanto à necessidade de continuar foram randomizados para rivaroxabana 20 mg/dia, rivaroxabana 10 mg/dia ou AAS 100 mg/dia, por até 12 meses. O desfecho primário de eficácia (TEV recorrente sintomático, fatal ou não fatal) ocorreu em 17 de 1.107 pacientes (1,5%) com 20 mg, 13 de 1.127 (1,2%) com 10 mg, e 50 de 1.131 (4,4%) com AAS — hazard ratio de 0,34 (IC95% 0,20–0,59) para 20 mg vs. AAS e de 0,26 (IC95% 0,14–0,47) para 10 mg vs. AAS, ambos p<0,001. As taxas de sangramento maior foram baixas e semelhantes entre os grupos: 0,5% (20 mg), 0,4% (10 mg) e 0,3% (AAS); o sangramento clinicamente relevante não maior foi de 2,7%, 2,0% e 1,8%, respectivamente. Ou seja, tanto a dose de tratamento (20 mg) quanto a dose profilática (10 mg) de rivaroxabana foram superiores ao AAS na prevenção de recorrência, sem aumento significativo de sangramento maior — o que torna a opção 3 incorreta (a dose de 10 mg também foi superior ao AAS) e a opção 4 factualmente invertida em relação ao achado real do estudo.",
+    "source_refs": [
+      "Weitz JI, Lensing AWA, Prins MH, Bauersachs R, Beyer-Westendorf J, Bounameaux H, Brighton TA, Cohen AT, Davidson BL, Decousus H, Freitas MCS, Holberg G, Kakkar AK, Haskell L, van Bellen B, Pap AF, Berkowitz SD, Verhamme P, Wells PS, Prandoni P; EINSTEIN CHOICE Investigators. Rivaroxaban or Aspirin for Extended Treatment of Venous Thromboembolism. N Engl J Med. 2017 Mar 30;376(13):1211-1222. doi: 10.1056/NEJMoa1700518. PMID: 28316279"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "fa-com-contraindicacao-pratica-a-varfarina-apixabana-ou-aas-o-ensaio-averroes",
+    "titulo": "Fibrilação atrial com contraindicação prática à varfarina: apixabana ou AAS? O ensaio AVERROES",
+    "tema": "Fibrilação atrial",
+    "nivel": "básico",
+    "enunciado": "Mulher de 79 anos, com fibrilação atrial permanente e CHA₂DS₂-VASc de 4, mora sozinha em zona rural sem acesso regular a laboratório para monitorização de INR, e já teve duas tentativas fracassadas de anticoagulação com varfarina por instabilidade grave do tempo terapêutico. O cardiologista considera que ela não é candidata prática ao uso de antagonista da vitamina K e discute alternativas para prevenção de AVC.",
+    "pergunta": "No ensaio AVERROES (5.599 pacientes com FA e risco aumentado de AVC, considerados inadequados para terapia com antagonista da vitamina K, randomizados para apixabana 5 mg 2x/dia ou AAS 81–324 mg/dia), qual foi o achado que levou o comitê de monitorização de dados e segurança a recomendar a interrupção precoce do estudo?",
+    "opcoes": [
+      "Excesso de sangramento maior no grupo apixabana, sem nenhum ganho de eficácia.",
+      "Benefício claro de eficácia da apixabana sobre o AAS na redução de AVC ou embolia sistêmica (1,6%/ano vs. 3,7%/ano; HR 0,45; IC95% 0,32–0,62; p<0,001), sem aumento significativo de sangramento maior (1,4%/ano vs. 1,2%/ano; HR 1,13; IC95% 0,74–1,75; p=0,57).",
+      "Ausência de qualquer diferença entre apixabana e AAS em todos os desfechos, o que motivou o encerramento por futilidade.",
+      "Redução estatisticamente significativa da mortalidade por qualquer causa com apixabana, o achado mais determinante para a interrupção."
+    ],
+    "resposta_correta": 1,
+    "explicacao": "No AVERROES (Connolly SJ et al., N Engl J Med. 2011;364(9):806-817, PMID 21309657), 5.599 pacientes com FA e risco aumentado de AVC, para os quais a terapia com antagonista da vitamina K era considerada inadequada (40% já haviam tentado VKA antes de entrar no estudo), foram randomizados para apixabana 5 mg 2x/dia ou AAS 81–324 mg/dia, com seguimento médio de 1,1 ano. O comitê de monitorização de dados e segurança recomendou a interrupção precoce do estudo por benefício claro em favor da apixabana: 51 eventos do desfecho primário — AVC ou embolia sistêmica — no grupo apixabana (1,6%/ano) contra 113 no grupo AAS (3,7%/ano), hazard ratio de 0,45 (IC95% 0,32–0,62; p<0,001), sem aumento significativo de sangramento maior (1,4%/ano com apixabana vs. 1,2%/ano com AAS; HR 1,13; IC95% 0,74–1,75; p=0,57), incluindo taxas semelhantes de sangramento intracraniano (11 casos com apixabana vs. 13 com AAS). A mortalidade por qualquer causa teve tendência favorável à apixabana (3,5%/ano vs. 4,4%/ano; HR 0,79; IC95% 0,62–1,02) mas NÃO atingiu significância estatística (p=0,07) — o que torna a opção 4 incorreta, pois não foi esse o achado determinante para a interrupção. Houve também redução da primeira hospitalização por causa cardiovascular com apixabana (12,6%/ano vs. 15,9%/ano; p<0,001).",
+    "source_refs": [
+      "Connolly SJ, Eikelboom J, Joyner C, Diener HC, Hart R, Golitsyn S, Flaker G, Avezum A, Hohnloser SH, Diaz R, Talajic M, Zhu J, Pais P, Budaj A, Parkhomenko A, Jansky P, Commerford P, Tan RS, Sim KH, Lewis BS, Van Mieghem W, Lip GY, Kim JH, Lanas-Zanetti F, Gonzalez-Hermosillo A, Dans AL, Munawar M, O'Donnell M, Lawrence J, Lewis G, Afzal R, Yusuf S; AVERROES Steering Committee and Investigators. Apixaban in patients with atrial fibrillation. N Engl J Med. 2011 Mar 3;364(9):806-817. doi: 10.1056/NEJMoa1007432. PMID: 21309657"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cdi-de-prevencao-primaria-programacao-convencional-ou-atrasada-para-reduzir-choques-inapropriados-o-ensaio-madit-rit",
+    "titulo": "CDI de prevenção primária recém-implantado: programação convencional ou com corte de frequência mais alto/atraso maior para reduzir choques inapropriados? O ensaio MADIT-RIT",
+    "tema": "Arritmias",
+    "nivel": "avançado",
+    "enunciado": "Paciente de 61 anos, com cardiomiopatia isquêmica e fração de ejeção de 28%, recebe um cardiodesfibrilador implantável (CDI) para prevenção primária de morte súbita. Na programação do dispositivo, a equipe de eletrofisiologia discute se deve manter a configuração convencional de detecção de taquiarritmia ventricular ou adotar um esquema com corte de frequência mais alto para iniciar a terapia, ou um esquema com atraso maior antes de disparar a terapia, com o objetivo de reduzir choques inapropriados sem comprometer a segurança do paciente.",
+    "pergunta": "No MADIT-RIT (1.500 pacientes com indicação de CDI para prevenção primária, randomizados para três configurações de programação), qual foi o resultado ao comparar a terapia de frequência alta (retardo de 2,5 s a partir de 200 bpm) e a terapia atrasada (retardos progressivos entre 170 e 249 bpm) com a programação convencional (retardo de 2,5 s a partir de 170 bpm e 1,0 s a partir de 200 bpm)?",
+    "opcoes": [
+      "Nenhuma das duas estratégias reduziu terapia inapropriada ou mortalidade; a programação convencional permaneceu a mais segura e eficaz nos três desfechos avaliados.",
+      "As programações de frequência alta e atrasada reduziram significativamente a primeira ocorrência de terapia inapropriada (HR 0,21 e HR 0,24, respectivamente, ambos p<0,001 vs. convencional) e também a mortalidade por qualquer causa (HR 0,45, p=0,01, para frequência alta; HR 0,56, p=0,06, para atrasada), sem diferença significativa em eventos adversos relacionados ao procedimento entre os três grupos.",
+      "As duas estratégias reduziram a terapia inapropriada, mas aumentaram significativamente a mortalidade por qualquer causa em comparação à programação convencional.",
+      "Só a programação de frequência alta reduziu a terapia inapropriada; a programação atrasada não mostrou diferença significativa em nenhum desfecho avaliado."
+    ],
+    "resposta_correta": 1,
+    "explicacao": "No MADIT-RIT (Moss AJ et al., N Engl J Med. 2012;367(24):2275-2283, PMID 23131066), 1.500 pacientes com indicação de CDI de prevenção primária foram randomizados para três configurações de programação: convencional (retardo de 2,5 s a partir de 170 bpm e 1,0 s a partir de 200 bpm), frequência alta (retardo de 2,5 s só a partir de 200 bpm) ou atrasada (retardos progressivos: 60 s entre 170-199 bpm, 12 s entre 200-249 bpm, 2,5 s a partir de 250 bpm). Ao longo de um seguimento médio de 1,4 ano, tanto a programação de frequência alta quanto a atrasada, comparadas à convencional, reduziram significativamente a primeira ocorrência de terapia inapropriada — antitaquicardia pacing ou choque (HR 0,21; IC95% 0,13–0,34; p<0,001 para frequência alta; HR 0,24; IC95% 0,15–0,40; p<0,001 para atrasada) — e também a mortalidade por qualquer causa (HR 0,45; IC95% 0,24–0,85; p=0,01 para frequência alta; HR 0,56; IC95% 0,30–1,02; p=0,06 para atrasada — este último resultado no limite da significância estatística, vale registrar com precisão em vez de arredondar para 'significativo'). Não houve diferença significativa em eventos adversos relacionados ao procedimento entre os três grupos. O ensaio, financiado pela Boston Scientific, mudou a prática padrão de programação de CDI em prevenção primária ao mostrar que retardar ou elevar o limiar de disparo da terapia não compromete a segurança e ainda reduz mortalidade.",
+    "source_refs": [
+      "Moss AJ, Schuger C, Beck CA, Brown MW, Cannom DS, Daubert JP, Estes NA 3rd, Greenberg H, Hall WJ, Huang DT, Kautzner J, Klein H, McNitt S, Olshansky B, Shoda M, Wilber D, Zareba W; MADIT-RIT Trial Investigators. Reduction in inappropriate therapy and mortality through ICD programming. N Engl J Med. 2012 Dec 13;367(24):2275-2283. doi: 10.1056/NEJMoa1211107. PMID: 23131066"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "icd-sem-indicacao-de-estimulacao-subcutaneo-ou-transvenoso-praetorian",
+    "titulo": "ICD indicado sem necessidade de estimulação: subcutâneo ou transvenoso?",
+    "tema": "Dispositivos",
+    "nivel": "intermediário",
+    "enunciado": "Homem de 42 anos, sobrevivente de fibrilação ventricular em contexto de cardiomiopatia dilatada não isquêmica (FEVE 30%), tem indicação de CDI em prevenção secundária. QRS estreito (92 ms), ritmo sinusal, sem bloqueio atrioventricular e sem indicação de marca-passo ou de ressincronização. A equipe discute se o implante deve ser de um cardiodesfibrilador subcutâneo ou transvenoso.",
+    "pergunta": "Segundo o ensaio PRAETORIAN (Knops et al., NEJM 2020), que comparou CDI subcutâneo com CDI transvenoso em pacientes com indicação de CDI mas sem indicação de estimulação, qual afirmação está correta sobre o desfecho composto primário (complicações relacionadas ao dispositivo + choques inapropriados)?",
+    "opcoes": [
+      "O CDI subcutâneo foi não inferior ao transvenoso para o desfecho composto primário (HR 0,99; IC95% 0,71–1,39; p=0,01 para não inferioridade), com incidência acumulada em 48 meses semelhante entre os grupos (15,1% vs. 15,7%)",
+      "O CDI subcutâneo foi superior ao transvenoso, reduzindo o desfecho composto primário em quase 50%",
+      "O estudo foi interrompido precocemente por excesso de mortalidade no grupo do CDI subcutâneo",
+      "O CDI subcutâneo só pode ser considerado em pacientes com bloqueio atrioventricular de alto grau, já que substitui a função de estimulação"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O PRAETORIAN randomizou 849 pacientes com indicação de CDI mas SEM indicação de estimulação (426 para CDI subcutâneo, 423 para transvenoso). Com mediana de seguimento de 49,1 meses, o desfecho primário (composto de complicações relacionadas ao dispositivo e choques inapropriados) ocorreu em 68 pacientes de cada grupo — incidência acumulada estimada por Kaplan-Meier em 48 meses de 15,1% (subcutâneo) vs. 15,7% (transvenoso); HR 0,99 (IC95% 0,71–1,39), p=0,01 para não inferioridade e p=0,95 para superioridade (ou seja, não inferior, mas também não superior). Nos desfechos secundários isolados, houve menos complicações relacionadas ao dispositivo com o subcutâneo (31 vs. 44 pacientes; HR 0,69; IC95% 0,44–1,09) e mais choques inapropriados (41 vs. 29; HR 1,43; IC95% 0,89–2,30) — nenhuma das duas diferenças alcançou significância estatística isoladamente. Morte por qualquer causa (83 vs. 68; HR 1,23; IC95% 0,89–1,70) e choques apropriados (83 vs. 57; HR 1,52; IC95% 1,08–2,12) também não mudaram a leitura do desfecho primário, que foi neutro. A opção 3 está errada porque o desenho do estudo é o oposto: só entraram pacientes SEM indicação de pacing, exatamente porque o CDI subcutâneo não oferece estimulação antibradicardia, ATP nem ressincronização.",
+    "source_refs": [
+      "Knops RE, Olde Nordkamp LRA, Delnoy PHM, et al; PRAETORIAN Investigators. Subcutaneous or Transvenous Defibrillator Therapy. N Engl J Med. 2020;383(6):526-536. DOI: 10.1056/NEJMoa1915932. PMID: 32757521"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sca-previa-ldl-ja-baixo-em-estatina-potente-acrescentar-inibidor-de-cetp-reveal",
+    "titulo": "Doença aterosclerótica sob estatina de alta intensidade, com LDL já em 61 mg/dL: vale acrescentar um inibidor da CETP?",
+    "tema": "Prevenção e lipídios",
+    "nivel": "avançado",
+    "enunciado": "Paciente com doença coronariana estabelecida, em uso de atorvastatina de alta intensidade, apresenta LDL médio de 61 mg/dL, colesterol não-HDL de 92 mg/dL e HDL de 40 mg/dL — já dentro das metas usuais. O cardiologista é questionado se acrescentar um inibidor da proteína de transferência de ésteres de colesterol (CETP), classe farmacológica que eleva HDL e reduz ainda mais o LDL, traria redução adicional de eventos coronarianos.",
+    "pergunta": "De acordo com o REVEAL (HPS3/TIMI55, NEJM 2017), com 30.449 pacientes já em estatina de alta intensidade, qual foi o efeito de acrescentar anacetrapibe 100 mg/dia sobre o desfecho primário de eventos coronarianos maiores (morte coronariana, infarto ou revascularização)?",
+    "opcoes": [
+      "Reduziu significativamente o desfecho primário (10,8% vs. 11,8%; razão de taxas 0,91; IC95% 0,85–0,97; p=0,004), à custa de elevação acentuada do HDL (+43 mg/dL, +104%) e redução adicional do colesterol não-HDL (-17 mg/dL, -18%)",
+      "Não teve nenhum efeito sobre o perfil lipídico nem sobre desfechos clínicos",
+      "Aumentou significativamente a mortalidade por todas as causas em comparação com o placebo",
+      "Reduziu o LDL em mais de 50%, mas não alterou o HDL nem os desfechos coronarianos"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O REVEAL randomizou 30.449 adultos com doença aterosclerótica em atorvastatina intensiva (LDL médio basal 61 mg/dL, não-HDL 92 mg/dL, HDL 40 mg/dL) para anacetrapibe 100 mg/dia (n=15.225) ou placebo (n=15.224). Com seguimento mediano de 4,1 anos, o desfecho primário (primeiro evento coronariano maior: morte coronariana, infarto ou revascularização) ocorreu em 1.640/15.225 pacientes (10,8%) no grupo anacetrapibe vs. 1.803/15.224 (11,8%) no placebo — razão de taxas 0,91 (IC95% 0,85–0,97), p=0,004, com diferença relativa consistente entre subgrupos pré-especificados. No meio do estudo, o HDL estava 43 mg/dL mais alto no grupo anacetrapibe (diferença relativa de 104%) e o não-HDL, 17 mg/dL mais baixo (diferença relativa de -18%). Não houve diferença significativa entre os grupos em morte, câncer ou outros eventos adversos graves. O benefício absoluto é modesto (1 ponto percentual) mesmo com efeito lipídico expressivo, o que ilustra que a magnitude da mudança em HDL não se traduz proporcionalmente em redução de eventos.",
+    "source_refs": [
+      "HPS3/TIMI55–REVEAL Collaborative Group; Bowman L, Hopewell JC, Chen F, et al. Effects of Anacetrapib in Patients with Atherosclerotic Vascular Disease. N Engl J Med. 2017;377(13):1217-1227. DOI: 10.1056/NEJMoa1706444. PMID: 28847206"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "diabetes-tipo-2-com-dac-e-amputacao-previa-de-hallux-iniciar-canagliflozina-canvas",
+    "titulo": "Diabetes tipo 2 com doença coronariana e amputação prévia de hálux: cabe iniciar canagliflozina?",
+    "tema": "Diabetes e cardiologia",
+    "nivel": "avançado",
+    "enunciado": "Paciente de 64 anos, diabetes tipo 2 há 14 anos, doença coronariana estabelecida e doença arterial periférica leve, com histórico de amputação de hálux por úlcera prévia. HbA1c 8,2% apesar de metformina em dose máxima. A equipe considera acrescentar canagliflozina, visando tanto controle glicêmico quanto proteção cardiovascular.",
+    "pergunta": "Segundo o Programa CANVAS (Neal B et al., NEJM 2017), que integrou dois ensaios com 10.142 pacientes com diabetes tipo 2 e alto risco cardiovascular, quais foram os efeitos da canagliflozina sobre o desfecho cardiovascular primário e sobre o risco de amputação?",
+    "opcoes": [
+      "Reduziu o composto cardiovascular primário (morte cardiovascular, infarto não fatal ou AVC não fatal: 26,9 vs. 31,5 por 1.000 pacientes-ano; HR 0,86; IC95% 0,75–0,97; p=0,02 para superioridade), mas quase dobrou o risco de amputação (6,3 vs. 3,4 por 1.000 pacientes-ano; HR 1,97; IC95% 1,41–2,75), predominantemente ao nível do artelho ou metatarso",
+      "Reduziu eventos cardiovasculares maiores sem qualquer sinal de risco de amputação nos dois ensaios",
+      "Não teve efeito sobre desfechos cardiovasculares e aumentou a mortalidade renal",
+      "Aumentou o desfecho cardiovascular primário, e por isso o Programa CANVAS foi interrompido precocemente"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O Programa CANVAS integrou dois ensaios com 10.142 participantes com diabetes tipo 2 e alto risco cardiovascular (idade média 63,3 anos, 35,8% mulheres, duração média do diabetes de 13,5 anos, 65,6% com doença cardiovascular prévia), seguidos por média de 188,2 semanas. O desfecho primário (morte cardiovascular, infarto não fatal ou AVC não fatal) foi menor com canagliflozina (26,9 vs. 31,5 eventos por 1.000 pacientes-ano; HR 0,86; IC95% 0,75–0,97; p<0,001 para não inferioridade e p=0,02 para superioridade). Houve sinal favorável em desfechos renais — progressão de albuminúria (HR 0,73; IC95% 0,67–0,79) e composto de queda de 40% do eGFR/terapia renal substitutiva/morte renal (HR 0,60; IC95% 0,47–0,77) —, embora o próprio estudo ressalve que, pela sequência hierárquica de testes pré-especificada, os desfechos renais não podem ser considerados estatisticamente significativos de forma isolada. O achado de segurança mais relevante para este caso é o risco de amputação quase dobrado (6,3 vs. 3,4 por 1.000 pacientes-ano; HR 1,97; IC95% 1,41–2,75), predominantemente de artelho ou metatarso — consistente com os riscos já descritos para a canagliflozina, e que pesa diretamente na decisão deste paciente com amputação prévia e doença arterial periférica.",
+    "source_refs": [
+      "Neal B, Perkovic V, Mahaffey KW, et al; CANVAS Program Collaborative Group. Canagliflozin and Cardiovascular and Renal Events in Type 2 Diabetes. N Engl J Med. 2017;377(7):644-657. DOI: 10.1056/NEJMoa1611925. PMID: 28605608"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "icfep-feve-45-por-cento-em-valsartana-trocar-para-sacubitril-valsartana-paragon-hf",
+    "titulo": "IC com fração de ejeção preservada, já em valsartana: trocar por sacubitril-valsartana muda o desfecho?",
+    "tema": "Insuficiência cardíaca",
+    "nivel": "intermediário",
+    "enunciado": "Paciente com insuficiência cardíaca, NYHA classe III, FEVE 50%, peptídeo natriurético elevado e hipertrofia ventricular esquerda ao ecocardiograma (doença estrutural cardíaca), em uso de valsartana. A equipe considera trocar para sacubitril-valsartana, visando reduzir hospitalizações por IC e mortalidade cardiovascular.",
+    "pergunta": "Segundo o PARAGON-HF (Solomon SD et al., NEJM 2019), com 4.822 pacientes com IC e FEVE ≥45%, qual foi o resultado de trocar valsartana por sacubitril-valsartana para o desfecho composto primário (hospitalizações totais por IC + morte cardiovascular)?",
+    "opcoes": [
+      "Não houve redução estatisticamente significativa do desfecho primário (razão de taxas 0,87; IC95% 0,75–1,01; p=0,06), com sinal de possível benefício nos subgrupos de FEVE mais baixa e em mulheres",
+      "Houve redução robusta e estatisticamente significativa de cerca de 30% no desfecho primário, reproduzindo o efeito visto na IC com fração reduzida",
+      "O estudo foi interrompido precocemente por excesso de angioedema fatal no grupo sacubitril-valsartana",
+      "Sacubitril-valsartana piorou significativamente a função renal em comparação com valsartana isolada"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O PARAGON-HF randomizou 4.822 pacientes com IC NYHA II-IV, FEVE ≥45%, peptídeo natriurético elevado e doença estrutural cardíaca para sacubitril-valsartana (dose-alvo 97/103 mg 2x/dia) ou valsartana (dose-alvo 160 mg 2x/dia). O desfecho primário (hospitalizações totais por IC + morte cardiovascular) ocorreu em 894 eventos em 526 pacientes com sacubitril-valsartana vs. 1.009 eventos em 557 pacientes com valsartana — razão de taxas 0,87 (IC95% 0,75–1,01), p=0,06: NÃO atingiu significância estatística. Morte cardiovascular isolada foi semelhante (8,5% vs. 8,9%; HR 0,95; IC95% 0,79–1,16); hospitalizações totais por IC, 690 vs. 797 (razão de taxas 0,85; IC95% 0,72–1,00). Houve mais melhora de classe NYHA (15,0% vs. 12,6%; OR 1,45; IC95% 1,13–1,86) e menos piora de função renal (1,4% vs. 2,7%; HR 0,50; IC95% 0,33–0,77) com sacubitril-valsartana — ou seja, a função renal melhorou, não piorou, no grupo do sacubitril-valsartana. O escore de sintomas KCCQ foi 1,0 ponto maior (IC95% 0,0–2,1) aos 8 meses. Houve mais hipotensão e angioedema, e menos hiperpotassemia, com sacubitril-valsartana. Entre 12 subgrupos pré-especificados, houve sugestão de heterogeneidade, com possível benefício em pacientes com FEVE mais baixa (dentro da faixa preservada) e em mulheres. A conclusão dos autores é explícita: sacubitril-valsartana NÃO resultou em taxa significativamente menor do desfecho primário nesta população.",
+    "source_refs": [
+      "Solomon SD, McMurray JJV, Anand IS, et al; PARAGON-HF Investigators and Committees. Angiotensin-Neprilysin Inhibition in Heart Failure with Preserved Ejection Fraction. N Engl J Med. 2019;381(17):1609-1620. DOI: 10.1056/NEJMoa1908655. PMID: 31475794"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "risco-cardiovascular-intermediario-sem-hipertensao-franca-tratar-pressao-hope-3",
+    "titulo": "Risco cardiovascular intermediário sem hipertensão franca: tratar a pressão já reduz eventos?",
+    "tema": "Hipertensão",
+    "nivel": "intermediário",
+    "enunciado": "Paciente de 58 anos, sem doença cardiovascular estabelecida, risco cardiovascular calculado como intermediário, pressão arterial de consultório de 136/83 mmHg (abaixo do limiar tradicional de hipertensão). O médico é questionado se vale iniciar terapia anti-hipertensiva combinada apenas com base no risco cardiovascular, mesmo sem hipertensão franca.",
+    "pergunta": "Segundo o HOPE-3 (Lonn EM et al., NEJM 2016), com 12.705 participantes de risco intermediário sem doença cardiovascular prévia, qual foi o efeito de candesartana 16 mg + hidroclorotiazida 12,5 mg/dia, comparado a placebo, sobre o desfecho composto de morte cardiovascular, infarto não fatal ou AVC não fatal na população geral do estudo?",
+    "opcoes": [
+      "Não houve redução significativa no desfecho geral da população (4,1% vs. 4,4%; HR 0,93; IC95% 0,79–1,10; p=0,40), mas houve benefício significativo no subgrupo pré-especificado com pressão sistólica acima de 143,5 mmHg (terço superior)",
+      "Houve redução significativa e uniforme do desfecho composto em toda a população, independentemente da pressão arterial basal",
+      "O tratamento ativo aumentou significativamente o risco de AVC em comparação com placebo",
+      "O esquema ativo não reduziu a pressão arterial em relação ao placebo"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O HOPE-3, um dos braços de um desenho fatorial 2x2, randomizou 12.705 participantes de risco cardiovascular intermediário sem doença cardiovascular estabelecida para candesartana 16 mg + hidroclorotiazida 12,5 mg/dia ou placebo. A pressão arterial basal média era 138,1/81,9 mmHg, e o tratamento ativo reduziu a pressão em 6,0/3,0 mmHg a mais que o placebo. Com seguimento mediano de 5,6 anos, o primeiro desfecho coprimário (morte cardiovascular, infarto não fatal ou AVC não fatal) ocorreu em 260 participantes (4,1%) no grupo ativo vs. 279 (4,4%) no placebo — HR 0,93 (IC95% 0,79–1,10), p=0,40, sem significância. O segundo desfecho coprimário (que soma parada cardíaca ressuscitada, IC e revascularização) ocorreu em 312 (4,9%) vs. 328 (5,2%) — HR 0,95 (IC95% 0,81–1,11), p=0,51, também neutro. Entretanto, em um dos três subgrupos de hipótese pré-especificados, os participantes no terço superior de pressão sistólica basal (>143,5 mmHg) tiveram taxas significativamente menores dos dois desfechos coprimários com o tratamento ativo, com efeito neutro nos terços médio e inferior (p=0,02 e p=0,009 para tendência, respectivamente). Ou seja: tratar a pressão de forma indiscriminada em risco intermediário sem hipertensão franca não reduziu eventos na população geral — o benefício ficou restrito a quem já tinha a pressão mais alta dentro dessa faixa de risco.",
+    "source_refs": [
+      "Lonn EM, Bosch J, López-Jaramillo P, et al; HOPE-3 Investigators. Blood-Pressure Lowering in Intermediate-Risk Persons without Cardiovascular Disease. N Engl J Med. 2016;374(21):2009-2020. DOI: 10.1056/NEJMoa1600175. PMID: 27041480"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hap-classe-funcional-ii-sildenafila-como-monoterapia-inicial-super-1",
+    "titulo": "HAP classe funcional II, virgem de tratamento: sildenafila como monoterapia inicial muda a capacidade de exercício? O ensaio SUPER-1",
+    "tema": "Hipertensão pulmonar",
+    "nivel": "intermediário",
+    "enunciado": "Mulher de 34 anos com hipertensão arterial pulmonar idiopática, classe funcional da OMS II, PAPm de 48 mmHg ao cateterismo direito, sem uso prévio de terapia específica. Teste de caminhada de 6 minutos basal de 380 m. O cardiologista considera iniciar sildenafila 20 mg três vezes ao dia como monoterapia oral inicial.",
+    "pergunta": "Com base no ensaio SUPER-1 (Galiè N et al., NEJM 2005), qual foi o efeito da sildenafila 20 mg 3x/dia, comparada ao placebo, sobre a distância percorrida em 6 minutos após 12 semanas?",
+    "opcoes": [
+      "Aumento médio corrigido pelo placebo de 45 m (+13,0%; p<0,001), com melhora também da classe funcional da OMS (p=0,003) e redução da pressão média de artéria pulmonar (p=0,04)",
+      "Nenhuma diferença estatisticamente significativa na distância caminhada, mas redução de mortalidade em 1 ano de acompanhamento",
+      "Aumento de 86 m, superior ao observado com as doses de 40 mg e 80 mg, tornando a dose de 20 mg a mais eficaz do estudo",
+      "Piora da classe funcional da OMS em 30% dos pacientes tratados, levando à suspensão precoce do braço de 20 mg"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "No SUPER-1, 278 pacientes com HAP sintomática (idiopática ou associada a doença do tecido conjuntivo ou a shunt sistêmico-pulmonar corrigido) foram randomizados para placebo ou sildenafila 20, 40 ou 80 mg 3x/dia por 12 semanas. Na dose de 20 mg, o efeito corrigido pelo placebo na distância percorrida em 6 minutos foi de 45 m (+13,0%; p<0,001) — efeito semelhante ao das doses maiores (46 m com 40 mg e 50 m com 80 mg, todos p<0,001), o que sustenta iniciar pela dose de 20 mg 3x/dia em vez de escalar diretamente. A sildenafila também reduziu a PAPm (p=0,04 na dose de 20 mg; p=0,01 e p<0,001 nas doses maiores) e melhorou a classe funcional da OMS (p=0,003 na dose de 20 mg; p<0,001 nas doses maiores). A incidência de piora clínica não diferiu significativamente entre sildenafila e placebo, e o próprio estudo declara que não tinha poder estatístico para avaliar mortalidade — a alternativa B inventa um desfecho que o artigo explicitamente não avalia nesse desenho. Entre os 222 pacientes que completaram 1 ano de monoterapia com sildenafila na extensão de longo prazo, o ganho na distância percorrida em 6 minutos em relação ao basal foi de 51 m, sustentando o benefício ao longo do tempo. Errata declarada, não lida nesta redação: há uma errata publicada em N Engl J Med. 2006;354(22):2400-2401, referente a este artigo — os números aqui reproduzidos são os do texto original indexado.",
+    "source_refs": [
+      "Galiè N, Ghofrani HA, Torbicki A, Barst RJ, Rubin LJ, Badesch D, et al. Sildenafil citrate therapy for pulmonary arterial hypertension (SUPER-1 Study Group). N Engl J Med. 2005;353(20):2148-2157. DOI: 10.1056/NEJMoa050010. PMID: 16291984. Errata: N Engl J Med. 2006;354(22):2400-2401."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "timi-risk-score-ua-nstemi-escore-0-1-versus-6-7-antman-2000",
+    "titulo": "Escore de risco TIMI na angina instável/IAM sem supra: o que muda entre escore 0/1 e 6/7?",
+    "tema": "Calculadoras",
+    "nivel": "básico",
+    "enunciado": "Homem de 68 anos chega ao pronto-socorro com dor torácica em repouso nas últimas 24 horas, dois episódios anginosos, uso de AAS na última semana, infradesnivelamento do segmento ST ≥0,5 mm e troponina discretamente elevada. Tem histórico de estenose coronariana ≥50% conhecida e mais de 3 fatores de risco para doença coronariana. A equipe calcula o escore de risco TIMI para orientar a estratégia terapêutica.",
+    "pergunta": "De acordo com a derivação original do escore TIMI (Antman EM et al., JAMA 2000), qual foi a taxa observada do desfecho composto (morte, IAM novo/recorrente ou isquemia grave recorrente exigindo revascularização urgente) até 14 dias, comparando um escore de 0/1 com um escore de 6/7, na coorte de teste (grupo heparina não fracionada do TIMI 11B)?",
+    "opcoes": [
+      "4,7% no escore 0/1 contra 40,9% no escore 6/7 (p<0,001 para tendência), com aumento gradual e significativo do risco a cada ponto adicional",
+      "8,3% no escore 0/1 contra 13,2% no escore 6/7, sem diferença estatisticamente significativa entre as faixas",
+      "Cerca de 20% em qualquer faixa do escore, já que o TIMI não discrimina risco em UA/NSTEMI",
+      "1% no escore 0/1 contra 90% no escore 6/7, com todo o risco concentrado apenas no desfecho óbito isolado"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O escore TIMI para UA/NSTEMI foi derivado a partir de duas coortes de ensaios de fase 3 (TIMI 11B e ESSENCE), somando 1 ponto para cada um de 7 preditores independentes identificados por regressão logística multivariada: idade ≥65 anos, ≥3 fatores de risco para DAC, estenose coronariana ≥50% conhecida, desvio do segmento ST à apresentação, ≥2 episódios anginosos nas 24 h prévias, uso de AAS nos 7 dias anteriores e marcadores cardíacos séricos elevados — o paciente do enunciado soma pelo menos 5 desses pontos. Na coorte de teste (grupo heparina não fracionada do TIMI 11B, n=1957), a taxa do desfecho composto (óbito, IAM novo ou recorrente, ou isquemia grave recorrente exigindo revascularização urgente) até 14 dias foi 4,7% para escore 0/1, 8,3% para 2, 13,2% para 3, 19,9% para 4, 26,2% para 5 e 40,9% para 6/7 (p<0,001 pelo qui-quadrado de tendência) — um gradiente de quase 9 vezes entre os extremos. O padrão de aumento progressivo foi confirmado nas 3 coortes de validação independentes (p<0,001 em todas). O escore também mostrou interação significativa com o tratamento: a inclinação do aumento de eventos com o escore foi significativamente menor nos grupos tratados com enoxaparina em comparação à heparina não fracionada, tanto no TIMI 11B (p=0,01) quanto no ESSENCE (p=0,03), com interação global significativa entre escore de risco e tratamento (p=0,02) — sustentando seu uso não só para prognóstico, mas também para orientar a intensidade da terapia antitrombótica.",
+    "source_refs": [
+      "Antman EM, Cohen M, Bernink PJ, McCabe CH, Horacek T, Papuchis G, et al. The TIMI risk score for unstable angina/non-ST elevation MI: A method for prognostication and therapeutic decision making. JAMA. 2000;284(7):835-842. DOI: 10.1001/jama.284.7.835. PMID: 10938172."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cancer-de-mama-antraciclina-carvedilol-profilatico-nao-previne-queda-de-feve-ceccy",
+    "titulo": "Câncer de mama HER2-negativo em antraciclina: carvedilol profilático previne a queda da FEVE? O ensaio CECCY",
+    "tema": "Cardio-oncologia",
+    "nivel": "intermediário",
+    "enunciado": "Mulher de 52 anos, câncer de mama HER2-negativo, FEVE basal normal, será submetida a quimioterapia com antraciclina (240 mg/m²). A equipe de cardio-oncologia discute se deve iniciar carvedilol profilático desde o início da quimioterapia, antes de qualquer sinal de cardiotoxicidade, com o objetivo de prevenir a queda da função ventricular.",
+    "pergunta": "No ensaio CECCY (Avila MS et al., JACC 2018), randomizado, duplo-cego e controlado por placebo com 200 pacientes, qual foi o efeito do carvedilol sobre o desfecho primário — queda ≥10% na FEVE aos 6 meses?",
+    "opcoes": [
+      "Não houve diferença significativa na incidência do desfecho primário (14,5% no grupo carvedilol vs. 13,5% no placebo, p=1,0), mas o carvedilol reduziu significativamente os níveis de troponina I ao longo do tempo (p=0,003) e a incidência de disfunção diastólica (p=0,039)",
+      "O carvedilol reduziu a incidência de queda da FEVE em mais da metade (14,5% vs. 30%, p=0,01), confirmando benefício robusto da cardioproteção primária universal",
+      "O carvedilol aumentou a incidência de queda da FEVE em relação ao placebo, levando à suspensão precoce do estudo por dano",
+      "O desfecho primário não pôde ser analisado, porque nenhuma paciente apresentou queda ≥10% na FEVE em nenhum dos dois grupos"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O CECCY randomizou 200 mulheres com câncer de mama HER2-negativo e FEVE normal para carvedilol ou placebo até o término da quimioterapia com antraciclina (240 mg/m²). O desfecho primário (queda ≥10% na FEVE aos 6 meses) ocorreu em 14 pacientes (14,5%) no grupo carvedilol e 13 (13,5%) no grupo placebo (p=1,0) — sem diferença estatística, e sem diferença também nas variações de FEVE ou de peptídeo natriurético tipo B entre os grupos. Ou seja, a cardioproteção primária universal com betabloqueador, no desenho e na dose desse ensaio, NÃO preveniu a queda precoce da FEVE. Ainda assim, houve diferença significativa em desfechos secundários: níveis de troponina I mais baixos ao longo do tempo no grupo carvedilol (p=0,003) e menor incidência de disfunção diastólica (p=0,039), com uma tendência não significativa a menor aumento do diâmetro diastólico final do VE (44,1±3,64 mm para 45,2±3,2 mm no grupo carvedilol vs. 44,9±3,6 mm para 46,4±4,0 mm no placebo; p=0,057). Os próprios autores descrevem este como o maior ensaio de betabloqueador para prevenção de cardiotoxicidade sob dosagem contemporânea de antraciclina, com incidência de cardiotoxicidade de 13,5-14,5%, e concluem que o carvedilol não impactou a incidência precoce de queda da FEVE apesar dos sinais biomarcadores favoráveis. A decisão de cardioproteção primária universal, portanto, não se sustenta neste desfecho principal — o que distingue esse ensaio dos de estratégia guiada por troponina ou por strain, que respondem outra pergunta.",
+    "source_refs": [
+      "Avila MS, Ayub-Ferreira SM, de Barros Wanderley MR Jr, das Dores Cruz F, Gonçalves Brandão SM, Rigaud VOC, et al. Carvedilol for Prevention of Chemotherapy-Related Cardiotoxicity: The CECCY Trial. J Am Coll Cardiol. 2018;71(20):2281-2290. DOI: 10.1016/j.jacc.2018.02.049. PMID: 29540327."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "reuniao-de-fim-de-vida-estruturada-na-uti-reduz-estresse-pos-traumatico-da-familia-lautrette",
+    "titulo": "Paciente em fase terminal na UTI cardiológica: uma reunião de fim de vida estruturada muda o sofrimento da família?",
+    "tema": "Comunicação clínica",
+    "nivel": "intermediário",
+    "enunciado": "Homem de 74 anos internado em UTI cardiológica por choque cardiogênico refratário, sem possibilidade de reversão, evoluindo para óbito iminente. A família está angustiada, e a equipe precisa conduzir uma conversa sobre prognóstico e fim de vida. A intensivista considera usar um formato estruturado de reunião — com mais tempo dedicado à escuta da família — associado a um folheto informativo sobre luto, em vez da conversa habitual, mais breve.",
+    "pergunta": "Segundo o ensaio randomizado de Lautrette A et al. (NEJM 2007), realizado em 22 UTIs francesas com familiares de pacientes morrendo na UTI, qual foi o efeito dessa estratégia de comunicação proativa e estruturada, associada ao folheto, sobre os sintomas de estresse pós-traumático (escala IES) e de ansiedade/depressão (escala HADS) dos familiares aos 90 dias?",
+    "opcoes": [
+      "Escore de IES mediano menor no grupo intervenção (27 vs. 39, p=0,02), com menor prevalência de sintomas compatíveis com TEPT (45% vs. 69%, p=0,01) e HADS mediano também menor (11 vs. 17, p=0,004), com menos ansiedade (45% vs. 67%, p=0,02) e menos depressão (29% vs. 56%, p=0,003)",
+      "Nenhuma diferença nos escores de IES ou HADS entre os grupos, mas a satisfação da família com a comunicação foi maior no grupo intervenção",
+      "O grupo intervenção teve PIORES escores de estresse pós-traumático, provavelmente por prolongar o sofrimento com uma conversa mais longa",
+      "O desfecho não pôde ser avaliado, porque a maioria das famílias recusou-se a responder à entrevista aos 90 dias"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "Familiares de 126 pacientes morrendo em 22 UTIs francesas foram randomizados para o formato de comunicação habitual ou para uma reunião de fim de vida proativa e estruturada, acompanhada de um folheto sobre luto. As reuniões do grupo intervenção duraram mais (mediana de 30 min [IQ 19-45] vs. 20 min [IQ 15-30], p<0,001), e a família falou por mais tempo (mediana de 14 min [IQ 8-20] vs. 5 min [IQ 5-10]). Aos 90 dias, entre os familiares que responderam à entrevista telefônica (56 no grupo intervenção, 52 no controle), o escore mediano da Impact of Event Scale (IES, que mede sintomas de TEPT, variando de 0 a 75) foi significativamente menor no grupo intervenção (27 vs. 39, p=0,02), com menor prevalência de sintomas compatíveis com TEPT (45% vs. 69%, p=0,01). O escore da Hospital Anxiety and Depression Scale (HADS) também foi menor (11 vs. 17, p=0,004), com menor prevalência de ansiedade (45% vs. 67%, p=0,02) e de depressão (29% vs. 56%, p=0,003). O achado central é clínico e prático: dar mais tempo estruturado para a família falar — não apenas para a equipe informar — reduziu de forma mensurável o sofrimento psicológico do luto, com uma intervenção de comunicação não farmacológica, plenamente aplicável à UTI cardiológica. Errata declarada, não lida nesta redação: há uma errata publicada em N Engl J Med. 2007;357(2):203, referente a este artigo.",
+    "source_refs": [
+      "Lautrette A, Darmon M, Megarbane B, Joly LM, Chevret S, Adrie C, et al. A communication strategy and brochure for relatives of patients dying in the ICU. N Engl J Med. 2007;356(5):469-478. DOI: 10.1056/NEJMoa063446. PMID: 17267907. Errata: N Engl J Med. 2007;357(2):203."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "trabalho-em-turnos-noturnos-e-risco-de-infarto-metanalise-de-vyas",
+    "titulo": "Trabalho em turnos aumenta o risco de infarto? A metanálise de Vyas et al.",
+    "tema": "Geral",
+    "nivel": "básico",
+    "enunciado": "Homem de 45 anos, técnico de enfermagem, trabalha em escala de turnos rotativos (incluindo noturnos) há 15 anos. Pergunta ao cardiologista, em consulta de rotina, se essa rotina de trabalho por si só aumenta seu risco cardiovascular, independentemente de outros fatores de risco já em acompanhamento — é hipertenso controlado e não fumante.",
+    "pergunta": "Segundo a revisão sistemática e metanálise de Vyas MV et al. (BMJ 2012), que reuniu 34 estudos observacionais com mais de 2 milhões de pessoas, qual foi a associação entre trabalho em turnos e infarto agudo do miocárdio?",
+    "opcoes": [
+      "Risco relativo de 1,23 (IC95% 1,15-1,31) para infarto do miocárdio, associação também presente, em menor magnitude, para AVC isquêmico (RR 1,05; IC95% 1,01-1,09), sem aumento de mortalidade geral ou vascular",
+      "Nenhuma associação estatisticamente significativa entre trabalho em turnos e qualquer desfecho vascular, refutando a hipótese",
+      "Risco relativo de 3,5 para infarto do miocárdio, tornando o trabalho em turnos um dos fatores de risco cardiovascular mais potentes já descritos",
+      "Associação significativa apenas com mortalidade cardiovascular, sem relação com infarto ou AVC não fatais"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "A metanálise reuniu 34 estudos observacionais somando 2.011.935 pessoas, com três desfechos primários: infarto do miocárdio, AVC isquêmico e qualquer evento coronariano. O trabalho em turnos associou-se a um risco relativo de 1,23 (IC95% 1,15-1,31; I²=0) para infarto do miocárdio e de 1,05 (IC95% 1,01-1,09; I²=0) para AVC isquêmico — associações consistentes, com baixa heterogeneidade entre estudos. Eventos coronarianos como um todo também estiveram aumentados (RR 1,24; IC95% 1,10-1,39), embora com heterogeneidade significativa entre os estudos (I²=85%). As associações se mantiveram tanto nas análises brutas quanto nas ajustadas para fatores de risco, e a presença ou ausência de ajuste para tabagismo e status socioeconômico não explicou a heterogeneidade encontrada. Todas as escalas de turno, exceto o turno vespertino, associaram-se a risco estatisticamente maior de eventos coronarianos. Importante: NÃO houve aumento de mortalidade — nem vascular específica, nem geral — associado ao trabalho em turnos, o que distingue esse achado de um efeito sobre eventos não fatais. Com base na prevalência canadense de trabalho em turnos (32,8%), os autores estimaram um risco atribuível populacional de 7,0% para infarto do miocárdio, 7,3% para eventos coronarianos e 1,6% para AVC isquêmico — uma fração pequena, mas não desprezível, do risco cardiovascular populacional atribuível a um fator ocupacional que pode ser modificado por política pública e organização do trabalho, não apenas por decisão individual do paciente.",
+    "source_refs": [
+      "Vyas MV, Garg AX, Iansavichus AV, Costella J, Donner A, Laugsand LE, et al. Shift work and vascular events: systematic review and meta-analysis. BMJ. 2012;345:e4800. DOI: 10.1136/bmj.e4800. PMID: 22835925."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "tept-como-fator-de-risco-independente-para-doenca-coronariana-metanalise-de-edmondson",
+    "titulo": "TEPT é fator de risco independente para doença coronariana? A metanálise de Edmondson et al.",
+    "tema": "Saúde mental e cardiologia",
+    "nivel": "intermediário",
+    "enunciado": "Homem de 41 anos, veterano de combate com diagnóstico estabelecido de transtorno de estresse pós-traumático (TEPT) há 8 anos, sem diagnóstico prévio de doença coronariana, comparece à consulta de cardiologia preventiva. Está em acompanhamento psiquiátrico para o TEPT, com sintomas depressivos leves associados, e pergunta se o próprio transtorno — além da depressão que o acompanha — deve ser levado em conta na estratificação de risco cardiovascular.",
+    "pergunta": "Segundo a metanálise de Edmondson D et al. (Am Heart J 2013), que reuniu 6 estudos com 402.274 participantes inicialmente livres de doença coronariana, qual foi a associação entre TEPT e risco de doença coronariana incidente, antes e depois do ajuste para depressão?",
+    "opcoes": [
+      "HR agrupado de 1,55 (IC95% 1,34-1,79) antes do ajuste para depressão, e HR de 1,27 (IC95% 1,08-1,49) nas 5 estimativas ajustadas para depressão — associação que permanece significativa mesmo após o ajuste",
+      "A associação inicial desaparece completamente após ajuste para depressão (HR ajustado de 1,00; IC95% 0,90-1,10), mostrando que o TEPT não é fator de risco independente",
+      "HR de 1,55 apenas em veteranos de combate, sem associação em sobreviventes de trauma civil, o que restringe a aplicabilidade do achado",
+      "A metanálise não pôde estimar um HR agrupado, por heterogeneidade excessiva entre os 6 estudos incluídos"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "A metanálise incluiu 6 estudos (N=402.274) que avaliaram TEPT em participantes inicialmente livres de doença coronariana (DAC) e depois acompanharam a incidência de DAC/mortalidade cardíaca específica; razões de chance foram convertidas em hazard ratios (HR) e agrupadas por modelo de efeitos aleatórios. O HR agrupado para a associação entre TEPT e DAC foi de 1,55 (IC95% 1,34-1,79) antes do ajuste para depressão. Numa análise secundária com as 5 estimativas que ajustaram para depressão (N=362.950), o HR agrupado permaneceu significativo, em 1,27 (IC95% 1,08-1,49) — ou seja, o TEPT continua associado a maior risco de DAC incidente mesmo depois de contabilizado o efeito da depressão comórbida, o que os autores destacam como evidência de que o TEPT é um fator de risco independente, e não apenas um marcador de depressão associada. Os próprios autores apontam que o TEPT é comum tanto em veteranos de combate quanto em sobreviventes de trauma civil (a alternativa que restringe o achado a veteranos não corresponde ao que o estudo mostra) e sugerem que pode ser um fator de risco cardiovascular modificável — pesquisas futuras deveriam esclarecer os mecanismos dessa associação e se o tratamento do TEPT reduz esse risco, pergunta que a própria metanálise deixa em aberto.",
+    "source_refs": [
+      "Edmondson D, Kronish IM, Shaffer JA, Falzon L, Burg MM. Posttraumatic stress disorder and risk for coronary heart disease: a meta-analytic review. Am Heart J. 2013;166(5):806-814. DOI: 10.1016/j.ahj.2013.07.031. PMID: 24176435."
+    ],
+    "review_status": "revisado"
   }
 ]
