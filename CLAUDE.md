@@ -337,6 +337,32 @@ contra o `git log` do dia.
 
 ## Divisão de trabalho entre sessões simultâneas
 
+## 🎯 TAREFA ESPECIAL DA corvia1 — atribuída pelo Rafael em 01/08/2026, 19h50: revisar pendências
+A **corvia1** tem prioridade temporária sobre isto, à frente de produção de conteúdo novo em
+evidencias/estudos/exames/galeria: revisar e fechar duas pendências que o Rafael encontrou no
+painel/banco:
+
+1. **42 documentos publicados que ainda constam como `review_status = 'pendente_revisão'`.**
+   Encontrar cada um (consulta no banco, não grep em arquivo — o status vive no banco, o disco
+   pode estar desatualizado), revisar de verdade contra a fonte já citada (ou uma nova, se a
+   citada não sustentar a afirmação), corrigir o que precisar, e só então atualizar
+   `review_status` para `revisado`.
+2. **86 itens com lacuna declarada** (campo com `VERIFICAÇÃO HUMANA NECESSÁRIA` ou equivalente).
+   Para cada um, pesquisar a fonte real que falta (mesma régua de sempre: diretriz atual/estudo
+   original, nunca preencher de memória) e substituir o aviso pelo dado verificado. Se depois de
+   pesquisar a fonte genuinamente não sustentar um valor específico, deixar o aviso — não remover
+   sem ter encontrado a fonte.
+3. **Depois de revisar/preencher cada item, liberar o documento e retirar o aviso** (desmarcar a
+   pendência/flag correspondente) — é esse retirar-o-aviso que o Rafael pediu, não só editar o
+   texto.
+4. Esta tarefa pode cruzar para itens fora da faixa normal da corvia1 (evidencias/estudos/
+   exames/galeria/content dos 10 temas) — os 42+86 podem estar em qualquer frente, inclusive nas
+   de corvia2/corvia3. Avisar a sessão dona da frente antes de mexer (`/root/mensagens/avisar.sh
+   <sessao> "..."`) para não colidir, mas prosseguir sem esperar resposta (regra de não pausar
+   continua valendo).
+5. Depois de fechar os 42+86, corvia1 volta ao trabalho normal (evidencias/estudos/exames/galeria,
+   rumo à meta vigente).
+
 ## 🚨 NOVO MODELO DE SESSÕES — 01/08/2026, tarde: corvia1, corvia2, corvia3 (substitui biblioteca/medicamentos/corvia)
 
 Decisão do Rafael, transmitida pela sessão `/root` (monitora):
