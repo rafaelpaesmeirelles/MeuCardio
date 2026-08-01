@@ -138,7 +138,14 @@ chegar à síndrome aguda:
 
 - aorta ascendente: cirurgia recomendada com diâmetro máximo ≥ 55 mm
   (Classe I, nível B);
-- valva aórtica bicúspide com aneurisma de aorta ascendente: cirurgia deve
-  ser considerada a partir de ≥ 45 mm (Classe IIa, nível C);
+- valva aórtica bicúspide com aneurisma de aorta ascendente: o corte depende do
+  cenário, e generalizar os 45 mm é erro. Em aortopatia bicúspide **isolada**, em
+  seguimento ambulatorial, a cirurgia é recomendada a partir de **50 mm** (Classe I)
+  no fenótipo de raiz, e deve ser considerada a partir de **52 mm** (Classe IIa,
+  nível B) nos demais. O corte de **≥ 45 mm** (Classe IIa, nível C) vale **apenas**
+  para quem **já vai ao centro cirúrgico** para troca valvar aórtica por outro
+  motivo — ali se opera a aorta no mesmo tempo. Ver, nesta biblioteca, os documentos
+  de valva aórtica bicúspide e aortopatia associada e o da diretriz combinada de
+  doença arterial periférica e aórtica, que detalham os três limiares;
 - a substituição da raiz aórtica com preservação valvar é recomendada em
   centros experientes (Classe I, nível B).
