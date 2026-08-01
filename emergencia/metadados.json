@@ -226,5 +226,69 @@
       "digoxina-ou-betabloqueador-no-controle-de-frequencia-da-fa-permanente-rate-af"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "hipercalemia-grave",
+    "titulo": "Hipercalemia grave",
+    "gatilho": "K elevado · alteração no ECG · bloqueio do SRAA em uso",
+    "ordem": 20,
+    "documento_slug": "hipercalemia-grave-e-intoxicacao-por-betabloqueador-ou-bloqueador-de-canal-de-calcio",
+    "fluxograma_slug": null,
+    "relacionados": [
+      "hipercalemia-como-barreira-ao-bloqueio-do-sraa-o-ensaio-diamond-com-patiromer",
+      "elevacao-de-creatinina-ao-iniciar-ieca-ou-bra-quando-manter-e-quando-suspender"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "intoxicacao-por-betabloqueador-ou-antagonista-de-calcio",
+    "titulo": "Intoxicação por betabloqueador ou antagonista de cálcio",
+    "gatilho": "Bradicardia com hipotensão refratária · ingestão de cardiotóxico",
+    "ordem": 21,
+    "documento_slug": "hipercalemia-grave-e-intoxicacao-por-betabloqueador-ou-bloqueador-de-canal-de-calcio",
+    "fluxograma_slug": null,
+    "relacionados": [
+      "choque-cardiogenico-diagnostico-e-manejo-com-drogas-vasoativas",
+      "intoxicacao-digitalica-manejo-agudo-e-anticorpo-antidigoxina-fab"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "via-aerea-e-adrenalina-na-parada",
+    "titulo": "Via aérea e adrenalina na parada extra-hospitalar",
+    "gatilho": "PCR fora do hospital · decisão de via aérea avançada",
+    "ordem": 22,
+    "documento_slug": "via-aerea-na-parada-extra-hospitalar-airways-2-e-part-e-o-que-o-paramedic2-mediu",
+    "fluxograma_slug": "fluxograma-parada-cardiorrespiratoria-ritmo-inicial",
+    "relacionados": [
+      "parada-cardiorrespiratoria-no-adulto-suporte-avancado-sbc-2019",
+      "controle-de-temperatura-pos-parada-cardiorrespiratoria-ttm-e-ttm2"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "eclampsia-e-hipertensao-grave-na-gestacao",
+    "titulo": "Eclâmpsia e hipertensão grave na gestação",
+    "gatilho": "PA ≥ 160/110 na gestante · convulsão · pré-eclâmpsia",
+    "ordem": 23,
+    "documento_slug": "hipertensao-grave-e-eclampsia-magpie-chips-e-a-escolha-do-anti-hipertensivo-oral",
+    "fluxograma_slug": null,
+    "relacionados": [
+      "pre-eclampsia-grave-hellp-e-arritmias-supraventriculares-na-gestacao",
+      "cesarea-perimortem-a-regra-dos-4-minutos-e-a-revisao-de-katz"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "anemia-e-decisao-de-transfusao-no-infarto",
+    "titulo": "Anemia e decisão de transfusão no infarto",
+    "gatilho": "Hemoglobina baixa com isquemia em curso",
+    "ordem": 24,
+    "documento_slug": "limiar-de-transfusao-no-cardiopata-mint-reality-e-trics-iii",
+    "fluxograma_slug": null,
+    "relacionados": [
+      "reversao-de-anticoagulante-em-sangramento-maior-idarucizumabe-e-andexanet-alfa"
+    ],
+    "review_status": "revisado"
   }
 ]
