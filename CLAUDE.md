@@ -3139,3 +3139,16 @@ sessoes em tempo real e só comece a trabalhar apos informa-las das novas regras
 - Há um arquivo **não commitado** de Comunicação clínica
   (`reconciliacao-medicamentosa-e-transicao-de-cuidado-onde-o-erro-acontece.md`) da sessão de
   Medicamentos anterior ao restart — a sessão nova decide se completa e commita ou descarta.
+
+### 🖼️ DUPLICATA DE IMAGEM ENCONTRADA NO AR, 01/08/2026 — decisão do Rafael (despublicar exige ele)
+Sessão da Biblioteca, ao reiniciar. **Dois registros de `galeria/metadados.json` apontam para o
+MESMO arquivo de imagem** (MD5 idêntico, `6d75e39a54f1ab3ead48d1816ef81c41`), os dois `published =
+True` no banco:
+- `takotsubo-abaulamento-apical-ventriculografia` (tema Saúde mental e cardiologia)
+- `ventriculografia-takotsubo-balonamento-apical` (tema Cardiomiopatias)
+
+Mesma foto do Wikimedia Commons (`Takotsubo_left_ventriculogram.jpg`), duas entradas com título e
+texto diferentes. Um assinante que veja os dois temas encontra a mesma imagem duas vezes. **Não
+despubliquei** — é ação destrutiva em banco e continua exigindo o Rafael, mesmo com a autorização
+contínua de publicação. Recomendação: manter a de Cardiomiopatias (tema mais preciso para
+achado de ventriculografia) e despublicar a de Saúde mental, ou o inverso, à escolha dele.
