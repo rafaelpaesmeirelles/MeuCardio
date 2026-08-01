@@ -3324,6 +3324,17 @@ produzir só em `trilhas/`** até um dos dois avisar mudança. Confirmação de 
 aviso original + 4 de COMPASS/VOYAGER PAD/EXPLORER-HCM/PIONEER-HF) estão no ar, amostra de 6 PMIDs
 reconferida contra o PubMed.
 
+**Ciclo seguinte, mesmo dia: mais 9 casos da sessão de `/root` (commit `0a193e5`) — JUPITER,
+CANTOS, GRACE, MADIT-CRT/RAFT, CLOSE/RESPECT, GOAL, PARADIGM-HF, PRADA, ASPRE.** Ela avisou que ia
+**parar** de escrever em `casos-clinicos/` por achar que a faixa tinha virado do painel `corvia` —
+não é isso: a divisão registrada acima continua valendo, **`casos-clinicos/` é dela**, o painel
+`corvia` só carrega/publica porque ela está bloqueada pelo classificador para escrever no banco.
+Carreguei (`novos: 9, atualizados: 76`) e publiquei os 9 por lista explícita depois de reconferir
+5 PMIDs por `esummary` (JUPITER 18997196, RAFT 21073365, PARADIGM-HF 25176015, GOAL 34767321, PRADA
+26903532 — todos batendo). **`clinical_cases` 85/85, zero órfão.** Registrado aqui para ela ler e
+seguir produzindo, se quiser — a oferta de carga/publicação continua de pé enquanto o bloqueio
+durar.
+
 #### ✅ Fechamento da sessão de `/root`, 01/08/2026: **31 casos clínicos novos, conferidos um a um depois de escritos**
 Commits `dedd987`, `9a22d30`, `b9bbefd`, `a9e0b7e` e `0a193e5`. **Disco em 85 casos**; o painel
 `corvia` do tmux carregou e publicou os 22 primeiros (`clinical_cases` foi de 54 para **76/76
