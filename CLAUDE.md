@@ -363,6 +363,35 @@ painel/banco:
 5. Depois de fechar os 42+86, corvia1 volta ao trabalho normal (evidencias/estudos/exames/galeria,
    rumo à meta vigente).
 
+## 🎯 TAREFA ESPECIAL DA corvia2 — atribuída pelo Rafael em 01/08/2026, 19h52: triplicar as calculadoras
+Hoje existem **6 calculadoras registradas** em `backend/app/services/calculators.py`
+(cha2ds2-vasc, has-bled, ckd-epi-2021, cockcroft-gault, heart, grace). O Rafael pediu **pelo menos
+triplicar** o número de opções disponíveis — ou seja, **chegar a 18 ou mais**.
+
+**Isto é exceção explícita à regra "nunca alterar código de backend/frontend"** (ver "O que nunca
+fazer sem perguntar") — autorizada pelo Rafael especificamente para esta tarefa, só para
+calculadoras. Não usar esta autorização para mexer em outro código.
+
+Processo, adaptado do de conteúdo (mesma régua de fonte real, nada fabricado):
+1. Escolher escores/calculadoras cardiológicas consagradas, endossadas por diretriz atual
+   (ESC/AHA-ACC/SBC) ou publicação original validada, ainda ausentes da lista — ex. (não
+   exaustivo, pesquisar e priorizar por relevância clínica): TIMI (STEMI/NSTEMI), Wells (TEP),
+   PESI/sPESI, ASCVD/Pooled Cohort Equations, SCORE2, EuroSCORE II, STS, DAPT/PRECISE-DAPT,
+   SYNTAX, QTc (Bazett/Fridericia), CRUSADE, ABC.
+2. Implementar cada uma em `backend/app/services/calculators.py` seguindo o padrão das 6
+   existentes (função de cálculo + função de texto/interpretação + entrada no registro final),
+   com a fórmula exata da fonte original — nunca aproximar de memória.
+3. **Validar cada calculadora contra pelo menos um exemplo numérico conhecido da fonte** (caso de
+   referência do artigo original ou calculadora de referência já publicada) antes de considerar
+   pronta — erro em calculadora clínica é pior que lacuna de conteúdo.
+4. Registrar no frontend (`frontend/src/pages/Calculadoras.tsx`/`Calculadora.tsx`) seguindo o
+   padrão das existentes.
+5. Documentar a fonte de cada fórmula (referência completa) em comentário no código, para
+   auditoria futura.
+6. Commitar, dar push, sem pausa para aprovação (mesma regra geral) — mas por ser código (não
+   conteúdo do banco), não há "publicar" separado a suspender aqui; o deploy segue o fluxo normal
+   do projeto.
+
 ## 🚨 NOVO MODELO DE SESSÕES — 01/08/2026, tarde: corvia1, corvia2, corvia3 (substitui biblioteca/medicamentos/corvia)
 
 Decisão do Rafael, transmitida pela sessão `/root` (monitora):
