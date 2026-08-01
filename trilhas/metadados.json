@@ -16501,5 +16501,1133 @@
         "por_que": "Fecha a trilha com o caso mais contraintuitivo — a doença psiquiátrica grave aumenta a mortalidade cardiovascular, mas suspender o antipsicótico piora, não melhora, esse risco."
       }
     ]
+  },
+  {
+    "slug": "trilha-doenca-coronariana-escores-de-risco-na-triagem-e-no-timing-invasivo",
+    "titulo": "Doença coronariana: escores de risco, do primeiro ECG ao timing da estratégia invasiva",
+    "tema": "Doença coronariana",
+    "objetivo": "Sair sabendo aplicar em sequência as ferramentas numéricas que decidem a rota do paciente com dor torácica aguda — o escore HEART na triagem da emergência, o TIMI e o GRACE 2.0 para estimar risco isquêmico, e como esse número se traduz no prazo até a estratégia invasiva.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "protocolo-de-dor-toracica-na-emergencia-escore-heart-e-tempo-porta-ecg-sbc-2025",
+        "por_que": "Define a rota inicial na emergência — tempo porta-ECG e o primeiro corte de risco pelo HEART — antes de qualquer escore específico de síndrome coronariana aguda."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "escore-heart-dor-toracica-no-pronto-socorro",
+        "por_que": "Detalha a calculadora do HEART variável a variável, para aplicar de fato o corte citado no protocolo da etapa anterior."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "timi-risk-score",
+        "por_que": "Segunda camada de risco, já dentro da síndrome coronariana aguda confirmada, complementar à triagem diagnóstica do HEART."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "grace-20-global-registry-of-acute-coronary-events",
+        "por_que": "Substitui o TIMI quando a pergunta muda de 'é síndrome coronariana aguda?' para 'quão urgente precisa ser o cateterismo?'."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "sindrome-coronariana-aguda-estratificacao-de-risco-grace-complemento-numerico",
+        "por_que": "Traz os cortes numéricos do GRACE que separam estratégia imediata, precoce e tardia, faltantes na descrição geral do escore."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "sindrome-coronariana-aguda-timing-invasivo-e-dapt-esc-2023",
+        "por_que": "Fecha o percurso: converte a faixa de risco calculada nas etapas anteriores no prazo real de cateterismo recomendado pela ESC 2023."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-cardiomiopatias-periparto-genetica-tratamento-e-gestacao-subsequente",
+    "titulo": "Cardiomiopatia periparto: base genética, bromocriptina e o risco de uma nova gestação",
+    "tema": "Cardiomiopatias",
+    "objetivo": "Sair sabendo que parte dos casos de cardiomiopatia periparto tem base genética identificável, qual é a evidência real (e os limites dela) por trás do uso de bromocriptina, e como aconselhar sobre uma gestação subsequente conforme a função ventricular residual.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "base-genetica-da-cardiomiopatia-periparto-variantes-truncantes-de-ttn",
+        "por_que": "Ponto de partida: a variante truncante de TTN, a mesma mutação mais associada à cardiomiopatia dilatada idiopática, aparece também numa fração dos casos periparto."
+      },
+      {
+        "ordem": 2,
+        "item_type": "estudo",
+        "item_slug": "bromocriptina-na-cardiomiopatia-periparto",
+        "por_que": "O ensaio randomizado que testou bromocriptina — de desenho voltado à DURAÇÃO do tratamento, não à eficácia isolada, distinção que muda a leitura do resultado."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "bromocriptina-no-tratamento-da-cardiomiopatia-periparto",
+        "por_que": "Traduz o ensaio da etapa anterior em conduta prática: quando prescrever, por quanto tempo, e o cuidado com a anticoagulação concomitante."
+      },
+      {
+        "ordem": 4,
+        "item_type": "estudo",
+        "item_slug": "tred-hf-retirada-do-tratamento-na-cardiomiopatia-dilatada-recuperada",
+        "por_que": "A mesma pergunta que se faz na periparto recuperada — pode suspender o tratamento? — foi testada formalmente na cardiomiopatia dilatada idiopática recuperada, e o resultado adverte contra a suspensão precoce."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "gestacao-subsequente-apos-cardiomiopatia-periparto-risco-por-funcao-ventricular",
+        "por_que": "Fecha o percurso clínico: como a função ventricular residual — não o diagnóstico prévio isolado — estratifica o risco de uma nova gestação."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-valvopatias-anticoagulacao-e-intervencao-valvar-na-gestacao",
+    "titulo": "Valvopatia na gestação: limiares de intervenção, escolha de prótese e o dilema da anticoagulação",
+    "tema": "Valvopatias",
+    "objetivo": "Sair sabendo que a gestação desloca os limiares de intervenção na estenose mitral e aórtica, que a escolha entre prótese mecânica e biológica feita antes da gravidez determina o problema seguinte, e como conduzir a anticoagulação da valva mecânica e o parto na gestante cardiopata.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "estenose-mitral-e-aortica-na-gestacao-limiares-de-intervencao-e-tecnica-percutanea",
+        "por_que": "A gestação é estado de sobrecarga de volume que antecipa o limiar de intervenção nas duas estenoses mais frequentes, com a técnica percutânea como preferência quando indicada."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "protese-valvar-escolha-mecanica-vs-biologica-e-alvo-de-inr-esc-eacts-2025",
+        "por_que": "A decisão que mais pesa na gestação é tomada anos antes dela, na cirurgia índice: prótese mecânica exige anticoagulação plena, e é essa escolha que gera o dilema das próximas etapas."
+      },
+      {
+        "ordem": 3,
+        "item_type": "medicamento",
+        "item_slug": "varfarina-sodica",
+        "por_que": "O anticoagulante-padrão da prótese mecânica, cuja farmacologia (dose-dependente de teratogenicidade, passagem placentária) é a base do dilema entre proteger a mãe e proteger o feto."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "anticoagulacao-em-valva-mecanica-e-cardiomiopatia-periparto-na-gestacao",
+        "por_que": "Aplica a farmacologia da etapa anterior ao caso concreto: como ajustar o esquema de anticoagulação da valva mecânica ao longo dos trimestres."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "via-de-parto-e-insuficiencia-cardiaca-na-gestante-cardiopata-o-registro-ropac",
+        "por_que": "Fecha o percurso no momento de maior risco hemodinâmico — o parto — com o dado do maior registro internacional de gestante cardiopata."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-pericardio-inibidores-de-il-1-comparados-anakinra-rilonacepte-e-goflikicepte",
+    "titulo": "Pericardite recorrente refratária à colchicina: comparando os três inibidores de IL-1 testados em ensaio randomizado",
+    "tema": "Pericárdio",
+    "objetivo": "Sair sabendo comparar, lado a lado, os três inibidores de interleucina-1 testados especificamente na pericardite recorrente refratária à colchicina — o desenho de retirada randomizada comum aos três ensaios, a diferença de frequência de aplicação entre anakinra (diária) e rilonacepte/goflikicepte (semanal), e onde essa classe entra no algoritmo terapêutico.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "sindromes-inflamatorias-miocardicas-e-pericardicas-imps-framework-unificado-esc-2025",
+        "por_que": "Situa a falha terapêutica que leva ao bloqueio de IL-1 dentro do framework atual das síndromes inflamatórias miopericárdicas."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "inibidores-de-il-1-na-pericardite-recorrente-e-derrame-pericardico-neoplasico",
+        "por_que": "Visão geral da classe farmacológica antes de entrar no detalhe de cada ensaio individual."
+      },
+      {
+        "ordem": 3,
+        "item_type": "estudo",
+        "item_slug": "airtrip-anakinra-na-pericardite-recorrente-colchicina-resistente",
+        "por_que": "Primeiro ensaio randomizado da classe, com anakinra em aplicação diária."
+      },
+      {
+        "ordem": 4,
+        "item_type": "estudo",
+        "item_slug": "rhapsody-rilonacepte-na-pericardite-recorrente",
+        "por_que": "Rilonacepte em aplicação semanal, mesmo desenho de retirada randomizada, população maior."
+      },
+      {
+        "ordem": 5,
+        "item_type": "estudo",
+        "item_slug": "goflikicepte-na-pericardite-recorrente-idiopatica",
+        "por_que": "Agente mais recente da mesma classe, testado com o mesmo desenho de retirada — permite comparar os três ensaios pelo mesmo critério metodológico."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "pericardite-aguda-diagnostico-tratamento-e-prevencao-de-recorrencia",
+        "por_que": "Fecha o percurso voltando ao algoritmo geral, mostrando em que ponto da escada terapêutica a falha de colchicina e AAS abre espaço para o bloqueio de IL-1."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-endocardite-profilaxia-odontologica-tres-desenhos-de-evidencia-em-conflito",
+    "titulo": "Endocardite: profilaxia odontológica — três desenhos de estudo, três respostas para a mesma pergunta",
+    "tema": "Endocardite",
+    "objetivo": "Sair sabendo por que a evidência sobre profilaxia antibiótica antes de procedimento dentário parece contraditória — o estudo ecológico britânico após a restrição da profilaxia, o caso-cruzado com resultado invertido e o desenho individual mais recente respondem a perguntas metodologicamente diferentes, e é essa diferença de desenho, não uma diretriz inconsistente, que explica a divergência aparente.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "endocardite-infecciosa-prevencao-diagnostico-e-tratamento-esc-2023",
+        "por_que": "Contextualiza a recomendação de profilaxia dentro da diretriz completa, antes de examinar a evidência que a sustenta."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "profilaxia-antibiotica-de-endocardite-infecciosa-em-procedimentos-odontologicos",
+        "por_que": "Isola a recomendação específica — quem recebe profilaxia e antes de qual procedimento — que os três estudos seguintes tentam validar ou refutar."
+      },
+      {
+        "ordem": 3,
+        "item_type": "estudo",
+        "item_slug": "dayer-2015-incidencia-de-endocardite-apos-a-restricao-da-profilaxia",
+        "por_que": "Desenho ecológico: observa a tendência populacional de incidência de endocardite após a restrição da profilaxia no Reino Unido, sem parear casos individuais."
+      },
+      {
+        "ordem": 4,
+        "item_type": "estudo",
+        "item_slug": "idea-caso-cruzado-britanico-de-procedimento-dentario-e-endocardite",
+        "por_que": "Desenho caso-cruzado, comparando o próprio paciente antes e depois do procedimento — e chegando a um resultado que parece inverter a conclusão ecológica."
+      },
+      {
+        "ordem": 5,
+        "item_type": "estudo",
+        "item_slug": "thornhill-2022-profilaxia-antes-de-procedimento-dentario-invasivo",
+        "por_que": "Desenho individual mais recente, que reaproxima a evidência da recomendação original — o ponto que fecha por que os três estudos não são, de fato, contraditórios."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-aorta-e-dap-aortopatias-geneticas-bicuspide-marfan-e-rastreio-familiar",
+    "titulo": "Aorta: aortopatias genéticas — valva bicúspide, síndrome de Marfan e o rastreio em cascata da família",
+    "tema": "Aorta e doença arterial periférica",
+    "objetivo": "Sair sabendo que a dilatação aórtica na valva bicúspide e na síndrome de Marfan segue limiares de intervenção próprios, diferentes da aorta degenerativa aterosclerótica, que a gestação reduz ainda mais esse limiar na Marfan, e como organizar o rastreio em cascata dos familiares de primeiro grau diante de um diagnóstico de aortopatia hereditária.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "valva-aortica-bicuspide-e-aortopatia-associada-esc-2024",
+        "por_que": "Define os cortes de diâmetro aórtico próprios da valva bicúspide, distintos dos usados na aorta tricúspide degenerativa."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "aneurisma-de-aorta-toracica-cortes-por-etiologia-e-seguimento-esc-2024",
+        "por_que": "Generaliza o princípio da etapa anterior: o corte de seguimento e de reparo do aneurisma torácico muda por etiologia, não é um número único."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "sindrome-de-marfan-na-gestacao-risco-de-dissecao-aortica-e-limiares-de-manejo-pelo-diametro",
+        "por_que": "Mostra como a gestação, estado de maior risco de dissecção por si só, reduz ainda mais o limiar de intervenção já mais baixo da aortopatia genética."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "fluxograma-sindrome-aortica-aguda-esc-2024",
+        "por_que": "Conecta toda a vigilância genética das etapas anteriores ao desfecho que ela existe para evitar: a dissecção aórtica aguda."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "comunicacao-de-risco-genetico-e-rastreio-em-cascata-na-cardiologia-hereditaria",
+        "por_que": "Fecha o percurso com a etapa que a aortopatia genética compartilha com toda cardiopatia hereditária: comunicar o risco e organizar o rastreio em cascata dos familiares."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-cardiopatia-congenita-gestacao-estratificada-por-lesao-aortopatia-coarctacao-e-fontan",
+    "titulo": "Cardiopatia congênita do adulto: gestação estratificada pela lesão de base — aortopatia da bicúspide, coarctação e Fontan",
+    "tema": "Cardiopatias congênitas",
+    "objetivo": "Sair sabendo que o risco gestacional na cardiopatia congênita do adulto não é uniforme e depende da lesão anatômica de base — aconselhar a gestante com valva aórtica bicúspide sobre o risco de dissecção, reconhecer a coarctação de aorta reparada como fonte de hipertensão e risco vascular na gravidez, manter a tromboprofilaxia na fisiologia de Fontan durante a gestação, usar o dado do ROPAC para dimensionar o risco em lesão não corrigida, e organizar a transição de cuidado no puerpério.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "gravidez-e-contracepcao-na-cardiopatia-congenita-do-adulto-ahaacc-2018",
+        "por_que": "estabelece a classificação de risco gestacional e o aconselhamento contraceptivo que serve de base para estratificar por lesão nas etapas seguintes"
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "valva-aortica-bicuspide-e-aortopatia-associada-esc-2024",
+        "por_que": "a aortopatia associada à valva bicúspide muda o risco de dissecção durante a gestação, uma lesão frequentemente subestimada por ser 'só uma valva'"
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "seguimento-tardio-de-tetralogia-de-fallot-e-coarctacao-de-aorta-no-adulto",
+        "por_que": "a coarctação reparada carrega risco vascular e hipertensivo próprio na gravidez, distinto do risco da bicúspide isolada"
+      },
+      {
+        "ordem": 4,
+        "item_type": "estudo",
+        "item_slug": "ropac-gestacao-em-cardiopatia-congenita-nao-corrigida",
+        "por_que": "quantifica, com dado de registro real, o risco de insuficiência cardíaca e mortalidade quando a lesão de base não foi corrigida antes da gestação"
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "tromboprofilaxia-na-circulacao-de-fontan",
+        "por_que": "a fisiologia de Fontan já indica tromboprofilaxia fora da gestação, e o estado de hipercoagulabilidade gravídico reforça essa indicação"
+      },
+      {
+        "ordem": 6,
+        "item_type": "checklist",
+        "item_slug": "puerperio-da-gestante-cardiopata",
+        "por_que": "fecha o ciclo com o roteiro estruturado de alta do puerpério, quando o risco hemodinâmico permanece elevado apesar do parto já ter ocorrido"
+      }
+    ]
+  },
+  {
+    "slug": "trilha-febre-reumatica-do-estadiamento-ecocardiografico-a-escolha-da-via-de-intervencao-valvar",
+    "titulo": "Febre reumática: do estadiamento ecocardiográfico à escolha entre valvoplastia por balão e cirurgia",
+    "tema": "Febre reumática",
+    "objetivo": "Sair sabendo usar o estadiamento A-D da WHF 2023 para classificar a gravidade da cardiopatia reumática, aplicar o rastreamento ecocardiográfico para indicar valvoplastia por balão na estenose mitral, comparar esse resultado à comissurotomia cirúrgica com base no ensaio de Ben Farhat, e decidir entre reparo e substituição quando a doença é multivalvar ou a anatomia não é favorável ao balão.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "criterios-ecocardiograficos-whf-2023-rastreamento-confirmacao-e-estadiamento",
+        "por_que": "define o estadiamento A-D que orienta toda a decisão de intervenção valvar nas etapas seguintes"
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "rastreamento-ecocardiografico-whf-e-valvuloplastia-por-balao-na-estenose-mitral-reumatica",
+        "por_que": "liga o achado ecocardiográfico à indicação prática de valvoplastia por balão na estenose mitral reumática"
+      },
+      {
+        "ordem": 3,
+        "item_type": "estudo",
+        "item_slug": "ben-farhat-valvoplastia-por-balao-versus-comissurotomia-cirurgica-na-estenose-mitral",
+        "por_que": "compara valvoplastia por balão à comissurotomia cirúrgica fechada e aberta com 7 anos de seguimento, sustentando a escolha da via percutânea quando a anatomia permite"
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "cirurgia-de-valvopatia-reumatica-mitral-multivalvar-reparo-versus-substituicao",
+        "por_que": "define quando a doença multivalvar ou a anatomia desfavorável ao balão exige cirurgia, e como decidir entre reparo e substituição"
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "febre-reumatica-fr-e-cardiopatia-reumatica-cr-prevencao-diagnostico-e-manejo",
+        "por_que": "situa a decisão de intervenção valvar dentro do manejo integral da cardiopatia reumática já estabelecida"
+      }
+    ]
+  },
+  {
+    "slug": "trilha-sincope-disposicao-na-emergencia-observacao-alta-e-monitorizacao-prolongada",
+    "titulo": "Síncope na emergência: decidindo entre alta, unidade de observação e monitorização prolongada",
+    "tema": "Síncope",
+    "objetivo": "Sair sabendo usar os critérios de alto risco do ECG e os escores canadenses de risco para decidir a disposição do paciente com síncope na emergência — alta direta, unidade de observação dedicada (SEEDS) ou monitorização eletrocardiográfica prolongada —, evitando tanto a alta precoce de quem tem risco de arritmia quanto a internação desnecessária de quem não tem.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "sincope-na-emergencia-criterios-de-alto-risco-do-ecg-eusem-2024",
+        "por_que": "é o primeiro filtro de risco na emergência, definindo quem precisa de investigação adicional antes de qualquer decisão de disposição"
+      },
+      {
+        "ordem": 2,
+        "item_type": "estudo",
+        "item_slug": "csrs-escore-canadense-de-risco-na-sincope",
+        "por_que": "quantifica objetivamente o risco de evento adverso grave em 30 dias, complementando o julgamento clínico isolado"
+      },
+      {
+        "ordem": 3,
+        "item_type": "estudo",
+        "item_slug": "seeds-unidade-de-sincope-no-departamento-de-emergencia",
+        "por_que": "mostra o ganho de uma unidade de observação dedicada frente ao cuidado padrão no paciente de risco intermediário, entre a alta direta e a internação"
+      },
+      {
+        "ordem": 4,
+        "item_type": "estudo",
+        "item_slug": "csars-escore-canadense-de-risco-de-arritmia-na-sincope",
+        "por_que": "refina a decisão para quem precisa de monitorização de arritmia especificamente, não apenas de risco de evento adverso geral"
+      },
+      {
+        "ordem": 5,
+        "item_type": "estudo",
+        "item_slug": "duracao-de-monitorizacao-ecg-pos-alta-por-estrato-de-risco",
+        "por_que": "converte o estrato de risco em uma decisão prática de por quanto tempo monitorizar o paciente já liberado"
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "estratificacao-de-risco-tilt-test-e-monitor-de-eventos-implantavel-na-sincope",
+        "por_que": "fecha o ciclo para quem permanece sem diagnóstico após a monitorização inicial, indicando tilt test ou monitor de eventos implantável"
+      }
+    ]
+  },
+  {
+    "slug": "trilha-perioperatorio-dispositivo-cardiaco-eletronico-implantavel-do-implante-a-cirurgia-nao-cardiaca",
+    "titulo": "Perioperatório do dispositivo cardíaco eletrônico implantável: da anticoagulação no implante à cirurgia não cardíaca e à ressonância magnética",
+    "tema": "Perioperatório",
+    "objetivo": "Sair sabendo manejar a anticoagulação periprocedimento no próprio implante do dispositivo cardíaco (marca-passo ou CDI), reprogramar e monitorizar esse dispositivo quando o portador for submetido depois a uma cirurgia não cardíaca, decidir com segurança sobre ressonância magnética nesse mesmo paciente, e ajustar a régua de risco cirúrgico e de antitrombóticos ao perfil tipicamente mais idoso e frágil desse portador.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "anticoagulacao-perioperatoria-em-cirurgia-de-dispositivo-cardiaco-a-serie-bruise-control",
+        "por_que": "define o manejo da anticoagulação no momento do próprio implante do dispositivo, reduzindo hematoma de loja sem precisar suspender o anticoagulante"
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "manejo-perioperatorio-de-marca-passo-e-cdi-em-cirurgia-nao-cardiaca",
+        "por_que": "orienta a reprogramação e o manejo do dispositivo já implantado quando esse mesmo paciente precisa de outra cirurgia, meses ou anos depois"
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "ressonancia-magnetica-em-portador-de-marca-passo-e-cdi-o-registro-magnasafe",
+        "por_que": "resolve a dúvida de segurança de ressonância magnética nesse mesmo portador, cenário cada vez mais comum ao longo do seguimento"
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "escores-de-risco-cirurgico-cardiaco-e-avaliacao-de-fragilidade-no-idoso",
+        "por_que": "o portador de dispositivo costuma ser o paciente mais idoso e frágil, o que muda a régua de risco cirúrgico para qualquer procedimento adicional"
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "manejo-perioperatorio-de-antitromboticos-dapt-e-anticoagulantes-orais",
+        "por_que": "generaliza o racional de suspender ou manter antitrombótico para qualquer procedimento além do implante do dispositivo em si"
+      }
+    ]
+  },
+  {
+    "slug": "trilha-farmacologia-escalonamento-do-hipolipemiante-de-estatina-a-inibidor-de-pcsk9",
+    "titulo": "Farmacologia do escalonamento hipolipemiante: da estatina de alta intensidade ao inibidor de PCSK9",
+    "tema": "Farmacologia",
+    "objetivo": "Sair sabendo escalonar a terapia hipolipemiante em prevenção secundária passo a passo — estatina de alta intensidade como primeira linha, ezetimiba quando a meta de LDL não é atingida com estatina isolada, inibidor de PCSK9 injetável (anticorpo monoclonal ou siRNA) quando estatina e ezetimiba não bastam, e ácido bempedoico como alternativa oral para quem não tolera estatina — seguindo o roteiro estruturado de escalonamento usado na prática.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "atorvastatina-calcica",
+        "por_que": "estatina de alta intensidade é a primeira linha de todo escalonamento hipolipemiante em prevenção secundária"
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "ezetimiba",
+        "por_que": "segunda linha quando a estatina isolada não atinge a meta de LDL, com mecanismo complementar de absorção intestinal"
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "evolocumabe-e-alirocumabe-inibidores-de-pcsk9",
+        "por_que": "inibidor de PCSK9 por anticorpo monoclonal entra quando estatina associada a ezetimiba ainda não atinge a meta"
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "inclisirana",
+        "por_que": "siRNA contra PCSK9 oferece a mesma via terapêutica com posologia de menor frequência de aplicação que o anticorpo monoclonal"
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "acido-bempedoico",
+        "por_que": "alternativa oral quando o paciente não tolera estatina, fechando as opções de escalonamento sem depender de injetável"
+      },
+      {
+        "ordem": 6,
+        "item_type": "checklist",
+        "item_slug": "escalonamento-do-hipolipemiante-em-prevencao-secundaria",
+        "por_que": "traduz toda a sequência farmacológica das etapas anteriores em um roteiro estruturado aplicável na consulta de acompanhamento"
+      }
+    ]
+  },
+  {
+    "slug": "trilha-gravidez-risco-cardiovascular-de-longo-prazo-e-trombofilia-hereditaria",
+    "titulo": "Gravidez: risco cardiovascular de longo prazo após pré-eclâmpsia, e trombofilia herdada na decisão de dose",
+    "tema": "Gravidez",
+    "objetivo": "Sair sabendo reconhecer que a pré-eclâmpsia e a hipertensão gestacional são marcadores de risco cardiovascular materno que persistem muito além do puerpério, estratificar o risco trombótico pela trombofilia hereditária para decidir a dose de heparina de baixo peso molecular na gestação, indicar a profilaxia com AAS em quem já teve o evento, e organizar a transição de cuidado no pós-parto que vigia esse risco de longo prazo.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "hipertensao-gestacional-e-pre-eclampsia-risco-cardiovascular-materno-de-longo-prazo",
+        "por_que": "Estabelece o ponto de partida da trilha: pré-eclâmpsia e hipertensão gestacional são janela de risco cardiovascular futuro, não um episódio que se encerra no parto."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "profilaxia-de-pre-eclampsia-com-aas-em-baixa-dose",
+        "por_que": "Decorre diretamente do primeiro item: em quem já teve o evento ou tem fator de risco, a prevenção primária com AAS em baixa dose reduz a recorrência numa gestação futura."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "trombofilia-hereditaria-na-gestacao-estratificacao-de-risco-e-dose-de-hbpm-rcog-37a",
+        "por_que": "Muda o eixo de risco de vascular para trombótico: estratifica por trombofilia hereditária e define a dose de HBPM segundo o RCOG Green-top 37a."
+      },
+      {
+        "ordem": 4,
+        "item_type": "medicamento",
+        "item_slug": "enoxaparina-sodica",
+        "por_que": "É o fármaco concreto por trás da dose que o item anterior estratifica, com apresentação e ajuste renal a conferir antes de prescrever."
+      },
+      {
+        "ordem": 5,
+        "item_type": "checklist",
+        "item_slug": "puerperio-da-gestante-cardiopata",
+        "por_que": "Fecha a trilha organizando a transição de cuidado no puerpério, onde o risco cardiovascular de longo prazo levantado no primeiro item passa a ser vigiado na prática."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-terapia-intensiva-inotropicos-e-escalada-de-suporte-circulatorio-mecanico",
+    "titulo": "Terapia intensiva cardiovascular: inotrópicos e a escalada de suporte circulatório mecânico no choque refratário",
+    "tema": "Terapia intensiva",
+    "objetivo": "Sair sabendo escolher entre levosimendana, milrinona e as drogas vasoativas padrão no choque de baixo débito, decidir quando a farmacologia isolada não basta e é hora de escalar para suporte circulatório mecânico percutâneo, indicar ECMO venoarterial no choque cardiogênico refratário do infarto, e situar a RCP extracorpórea como o limite extremo dessa escalada na parada cardiorrespiratória que não responde às medidas convencionais.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "choque-cardiogenico-diagnostico-e-manejo-com-drogas-vasoativas",
+        "por_que": "Situa o ponto de partida farmacológico do choque cardiogênico antes de qualquer decisão de escalar para suporte mecânico."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "levosimendana-na-ic-aguda-lido-survive-e-revive",
+        "por_que": "Revisa a evidência de um inotrópico sensibilizador de cálcio em três ensaios, alternativa às catecolaminas convencionais."
+      },
+      {
+        "ordem": 3,
+        "item_type": "medicamento",
+        "item_slug": "milrinona",
+        "por_que": "Segundo inotrópico de mecanismo distinto (inibidor de fosfodiesterase), útil quando a resposta a catecolaminas é insuficiente."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "impella-cp-no-choque-cardiogenico-do-iamcst-o-ensaio-danger-shock",
+        "por_que": "Marca o primeiro degrau de escalada quando o suporte farmacológico não estabiliza o choque cardiogênico do IAMCST."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "ecmo-venoarterial-no-choque-cardiogenico-do-infarto-ecls-shock-ecmo-cs-e-a-metanalise-de-dados-individuais",
+        "por_que": "Avança um degrau na escalada de suporte mecânico, com a evidência recente de ECLS-SHOCK e ECMO-CS sobre o benefício real do ECMO-VA."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "rcp-extracorporea-ecpr-na-parada-refrataria-arrest-e-inception",
+        "por_que": "Fecha a trilha no limite extremo da escalada: a RCP extracorpórea quando a parada cardiorrespiratória é refratária às medidas convencionais."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-tromboembolismo-anticoagulacao-na-insuficiencia-renal-grave-e-dialise",
+    "titulo": "Tromboembolismo: anticoagulação na insuficiência renal grave e em diálise, do ajuste de dose ao fármaco de escolha",
+    "tema": "Tromboembolismo",
+    "objetivo": "Sair sabendo calcular o clearance de creatinina que decide a dose de anticoagulante, reconhecer por que o DOAC no TEV com insuficiência renal grave ou diálise foge dos ensaios pivotais que sustentam seu uso, escolher entre heparina não fracionada e fondaparinux quando o clearance exclui o DOAC, e pesar o risco de sangramento com o escore VTE-BLEED antes de qualquer decisão de escalar ou estender a anticoagulação nessa população.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "clearance-de-creatinina-cockcroft-gault-ajuste-de-dose-em-cardiologia",
+        "por_que": "Ponto de partida obrigatório: é o clearance calculado por Cockcroft-Gault que vai decidir toda a escolha de anticoagulante nesta trilha."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "tev-com-insuficiencia-renal-grave-e-dialise-doac-fora-dos-ensaios-pivotais",
+        "por_que": "Mostra o problema central: pacientes com insuficiência renal grave e diálise foram sistematicamente excluídos dos ensaios pivotais dos DOACs."
+      },
+      {
+        "ordem": 3,
+        "item_type": "medicamento",
+        "item_slug": "heparina-nao-fracionada",
+        "por_que": "Alternativa segura quando o clearance exclui o DOAC, por não depender de eliminação renal significativa e ser titulável à beira do leito."
+      },
+      {
+        "ordem": 4,
+        "item_type": "medicamento",
+        "item_slug": "fondaparinux-sodico",
+        "por_que": "Segunda alternativa parenteral, com a ressalva de contraindicação formal em clearance muito baixo que o item anterior calculou."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "escore-vte-bleed-risco-de-sangramento-sob-anticoagulacao-por-tev",
+        "por_que": "Fecha a trilha pesando o risco de sangramento nessa população de função renal comprometida antes de decidir manter, escalar ou reduzir a anticoagulação."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-fibrilacao-atrial-quando-o-doac-nao-e-opcao-valva-mecanica-e-reumatica",
+    "titulo": "Fibrilação atrial: quando o DOAC não é opção — valva mecânica e cardiopatia reumática",
+    "tema": "Fibrilação atrial",
+    "objetivo": "Sair sabendo por que a fibrilação atrial valvar reumática exige antagonista da vitamina K em vez de DOAC segundo o INVICTUS, reconhecer a prótese valvar mecânica como a outra contraindicação formal a qualquer DOAC, e situar as duas situações dentro da análise de custo-efetividade que sustenta a varfarina como escolha correta no sistema de saúde brasileiro nesses casos.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "fibrilacao-atrial-valvar-reumatica-e-escolha-do-anticoagulante-invictus",
+        "por_que": "Abre a trilha na primeira das duas situações em que o algoritmo padrão de DOAC não se aplica: a FA valvar de cardiopatia reumática."
+      },
+      {
+        "ordem": 2,
+        "item_type": "estudo",
+        "item_slug": "invictus-rivaroxabana-versus-varfarina-na-fa-da-cardiopatia-reumatica",
+        "por_que": "Traz o ensaio pivotal que sustenta a recomendação: rivaroxabana foi inferior à varfarina nessa população específica."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "anticoagulante-oral-direto-em-protese-valvar-mecanica-por-que-e-contraindicado-re-align",
+        "por_que": "Traz a segunda situação de contraindicação formal ao DOAC, por mecanismo fisiopatológico distinto do da valvopatia reumática."
+      },
+      {
+        "ordem": 4,
+        "item_type": "medicamento",
+        "item_slug": "varfarina-sodica",
+        "por_que": "É o fármaco comum às duas situações anteriores, com apresentação e monitorização a rever antes de prescrever."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "custo-efetividade-doac-versus-varfarina-no-brasil",
+        "por_que": "Fecha a trilha situando essas duas contraindicações dentro da análise de custo-efetividade que embasa a escolha da varfarina no sistema de saúde real."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-arritmias-taquicardia-atrial-focal-e-o-valor-diagnostico-da-adenosina",
+    "titulo": "Arritmias: taquicardia atrial focal e o valor diagnóstico da adenosina na diferenciação de mecanismo",
+    "tema": "Arritmias",
+    "objetivo": "Sair sabendo localizar a origem de uma taquicardia atrial focal pela morfologia da onda P, usar a resposta à adenosina como ferramenta diagnóstica para diferenciar taquicardia atrial de reentrada nodal ou por via acessória, reconhecer a taquicardia atrial multifocal como entidade à parte que não segue essa lógica de reentrada, e aplicar o algoritmo correto quando o QRS é largo e o mecanismo ainda não está estabelecido.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "taquicardia-supraventricular-diagnostico-e-manejo-esc-2019",
+        "por_que": "Situa a taquicardia atrial focal dentro do espectro mais amplo das taquicardias supraventriculares, como ponto de partida diagnóstico."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "taquicardia-atrial-focal-diagnostico-morfologia-da-onda-p-manejo-e-ablacao-por-cateter",
+        "por_que": "Detalha o diagnóstico e a localização do foco ectópico único pela morfologia da onda P, e a conduta de ablação."
+      },
+      {
+        "ordem": 3,
+        "item_type": "medicamento",
+        "item_slug": "adenosina",
+        "por_que": "Ferramenta diagnóstica e terapêutica que ajuda a diferenciar o mecanismo pela resposta — termina, desmascara a atividade atrial ou não responde."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "taquicardia-atrial-multifocal-causas-e-manejo",
+        "por_que": "Contrasta com o foco único do item anterior: múltiplos focos ectópicos, tipicamente por doença pulmonar descompensada, que não respondem à mesma lógica de reentrada."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "fluxograma-taquicardia-de-qrs-largo-esc-2019",
+        "por_que": "Fecha a trilha no cenário em que o QRS é largo e o mecanismo ainda não está estabelecido, mudando o algoritmo de decisão."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-dispositivos-pontes-de-risco-e-ferramentas-diagnosticas-antes-da-decisao-definitiva",
+    "titulo": "Dispositivos cardíacos: pontes de risco e ferramentas diagnósticas antes da decisão definitiva",
+    "tema": "Dispositivos",
+    "objetivo": "Sair sabendo quando o colete desfibrilador vestível serve de ponte de risco arrítmico antes de uma decisão definitiva de CDI, quando o marca-passo transvenoso temporário sustenta uma bradiarritmia aguda na emergência, e como o monitor cardíaco implantável resolve a investigação diagnóstica tanto na síncope inexplicada quanto na fibrilação atrial pós-AVC criptogênico.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "colete-desfibrilador-vestivel-wcd-ponte-de-risco-arritmico-o-ensaio-vest",
+        "por_que": "Abre pela ferramenta mais temporária: o colete desfibrilador cobre o período de risco arrítmico antes de qualquer decisão definitiva."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "cardiodesfibrilador-implantavel-fundamentos-prevencao-secundaria",
+        "por_que": "Depois da ponte, a decisão que ela antecede: quando o risco se confirma persistente, o CDI definitivo entra."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "marcapasso-temporario-transvenoso-indicacao-acesso-e-complicacoes-na-emergencia",
+        "por_que": "A mesma lógica de ponte temporária, agora para bradiarritmia aguda em vez de risco taquiarrítmico."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "monitor-cardiaco-implantavel-na-sincope-inexplicada-o-registro-picture",
+        "por_que": "Muda o eixo de ponte terapêutica para ferramenta diagnóstica: o monitor implantável resolve a síncope sem causa definida."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "monitor-cardiaco-implantavel-e-deteccao-de-fa-pos-avc-criptogenico-crystal-af",
+        "por_que": "Fecha com a segunda indicação clássica do mesmo dispositivo, agora para detectar FA subclínica após AVC sem causa aparente."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-prevencao-evolucao-historica-da-evidencia-e-da-diretriz-de-estatina",
+    "titulo": "Prevenção e lipídios: a evolução histórica da evidência e da diretriz de estatina",
+    "tema": "Prevenção e lipídios",
+    "objetivo": "Sair sabendo a base histórica que sustenta a prescrição de estatina desde os ensaios fundadores, acompanhar como a diretriz ESC/EAS evoluiu da versão de 2019 para a atualização focada de 2025, e aplicar dois refinamentos que a diretriz atual exige e os ensaios clássicos não respondiam — a segurança do LDL extremamente baixo e o rastreio universal da lipoproteína(a).",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "a-base-de-evidencia-das-estatinas-4s-woscops-e-a-metanalise-do-ctt",
+        "por_que": "Começa pela base histórica: os ensaios fundadores que provaram o benefício da estatina antes de qualquer diretriz formal."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "dislipidemias-diagnostico-estratificacao-e-tratamento-esceas-2019",
+        "por_que": "Situa a diretriz ESC/EAS na versão que consolidou essa evidência em algoritmo de estratificação de risco."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "dislipidemias-avaliacao-de-risco-e-manejo-atualizacao-focada-2025",
+        "por_que": "Mostra o que mudou da versão de 2019 para a atualização focada de 2025."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "fluxograma-dislipidemia-meta-de-ldl-e-escalonamento-esc-eas-2025",
+        "por_que": "Traduz a diretriz atualizada em árvore de decisão prática para a meta de LDL e o escalonamento."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "ldl-muito-baixo-existe-um-piso-seguranca-de-longo-prazo-improve-it-e-sabatine",
+        "por_que": "Primeiro refinamento que os ensaios fundadores não respondiam: até onde é seguro baixar o LDL."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "lipoproteina-a-rastreamento-populacional-ao-menos-uma-vez-na-vida-consenso-eas-2022",
+        "por_que": "Segundo refinamento da diretriz atual: rastrear Lp(a) pelo menos uma vez na vida, marcador que os ensaios de estatina clássicos não mediam."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-diabetes-controle-glicemico-perioperatorio-e-seguranca-de-drogas-mais-antigas",
+    "titulo": "Diabetes e cardiologia: controle glicêmico perioperatório em cirurgia cardíaca e a segurança cardiovascular das drogas mais antigas",
+    "tema": "Diabetes e cardiologia",
+    "objetivo": "Sair sabendo aplicar o controle glicêmico perioperatório em cirurgia cardíaca, do protocolo Portland ao NICE-SUGAR, decidir sobre a segurança cardiovascular da insulina degludeca e da sulfonilureia comparada à metformina, e reconhecer, pela controvérsia histórica da rosiglitazona, por que a exigência regulatória de ensaio de segurança cardiovascular nasceu no diabetes — o pano de fundo que explica por que essas drogas mais antigas hoje pedem cautela extra no perioperatório.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "doenca-cardiovascular-em-pacientes-com-diabetes-estratificacao-de-risco-e-manejo-esc-2023",
+        "por_que": "Abre situando o diabético de risco cardiovascular dentro da diretriz ESC 2023, moldura geral para as decisões perioperatórias e farmacológicas que seguem."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "glicemia-perioperatoria-em-cirurgia-cardiaca-do-protocolo-portland-ao-nice-sugar",
+        "por_que": "Traz a pergunta concreta do centro cirúrgico: como controlar a glicemia perioperatória em cirurgia cardíaca sem repetir o excesso de hipoglicemia do controle intensivo."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "insulina-degludeca-e-seguranca-cardiovascular-o-ensaio-devote",
+        "por_que": "Detalha a segurança cardiovascular de uma insulina basal específica, droga que frequentemente substitui o esquema oral no período perioperatório."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "sulfonilureia-e-risco-cardiovascular-comparado-a-metformina-spread-dimcad-e-metanalise-com-tsa",
+        "por_que": "Compara o risco cardiovascular de uma classe oral antiga, que também costuma ser suspensa ou trocada ao redor de uma cirurgia."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "rosiglitazona-e-a-controversia-cardiovascular-meta-analise-de-nissen-e-o-ensaio-record",
+        "por_que": "Fecha explicando por que toda droga antidiabética nova passou a exigir ensaio de segurança cardiovascular — o episódio que tornou essa cautela regra, não exceção."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-insuficiencia-cardiaca-alem-dos-quatro-pilares-inicio-hospitalar-e-acesso-no-sus",
+    "titulo": "Insuficiência cardíaca: além dos quatro pilares clássicos — início ainda hospitalar, ferro e o quinto mecanismo, dentro do acesso do SUS",
+    "tema": "Insuficiência cardíaca",
+    "objetivo": "Sair sabendo por que iniciar sacubitril-valsartana e iSGLT2 ainda durante a internação antecipa o benefício em vez de esperar a alta, tratar a deficiência de ferro antes de dar alta, reconhecer o vericiguate como quinto mecanismo para o paciente de altíssimo risco já otimizado nos quatro pilares clássicos, e situar essas três escalonadas dentro dos critérios de diagnóstico e de acesso a fármaco do PCDT brasileiro de ICFEr.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "pcdt-icfer-2024-criterios-diagnosticos-e-de-acesso-a-farmaco-no-sus",
+        "por_que": "Abre pelo critério que decide, no sistema público brasileiro, quem tem acesso a cada droga do escalonamento que segue."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "sacubitril-valsartana-iniciada-na-internacao-o-ensaio-pioneer-hf",
+        "por_que": "Primeira ruptura com o hábito de esperar a alta: iniciar sacubitril-valsartana ainda internado já reduz NT-proBNP e antecipa o benefício."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "empagliflozina-iniciada-na-internacao-por-ic-aguda-o-ensaio-empulse",
+        "por_que": "Mesma lógica de início hospitalar, agora para o iSGLT2 — a segunda classe que não precisa esperar a estabilização ambulatorial."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "ferro-endovenoso-na-insuficiencia-cardiaca-confirm-hf-affirm-ahf-e-ironman",
+        "por_que": "Terceira lacuna que a internação é a oportunidade certa de fechar: tratar a deficiência de ferro antes da alta, não depois."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "vericiguate-e-o-ensaio-victoria-quinto-mecanismo-na-icfer-de-alto-risco",
+        "por_que": "Fecha com o quinto mecanismo, reservado para quem já está nos quatro pilares otimizados e continua de altíssimo risco."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-hipertensao-decisoes-farmacologicas-fora-da-escada-padrao",
+    "titulo": "Hipertensão: decisões farmacológicas fora da escada padrão — toxicidade do nitroprussiato, bloqueio alfa no feocromocitoma e desprescrição no idoso",
+    "tema": "Hipertensão",
+    "objetivo": "Sair sabendo reconhecer e evitar a toxicidade do nitroprussiato de sódio, pela bula brasileira, ao tratar a emergência hipertensiva, preparar farmacologicamente o feocromocitoma com bloqueio alfa antes da cirurgia, e decidir quando desprescrever, simplificar ou manter o anti-hipertensivo no idoso polimedicado — três decisões de prescrição que a escada terapêutica padrão da hipertensão não cobre.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "hipertensao-arterial-e-pressao-arterial-elevada-esc-2024",
+        "por_que": "Abre pela diretriz de referência, moldura geral antes de entrar nos três cenários de exceção que seguem."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "nitroprussiato-na-emergencia-hipertensiva-tetos-e-toxicidade-pela-bula-brasileira",
+        "por_que": "Primeiro cenário de exceção: o teto de dose e a toxicidade por tiocianato do nitroprussiato, direto da bula brasileira."
+      },
+      {
+        "ordem": 3,
+        "item_type": "medicamento",
+        "item_slug": "nitroprussiato-de-sodio",
+        "por_que": "Verbete estruturado do próprio fármaco discutido no documento anterior, para consulta rápida de dose e apresentação."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "feocromocitoma-preparo-pre-operatorio-com-bloqueio-alfa-o-ensaio-prescript",
+        "por_que": "Segundo cenário de exceção: o bloqueio alfa pré-operatório que evita a crise hipertensiva intraoperatória no feocromocitoma."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "polifarmacia-anti-hipertensiva-e-adesao-no-idoso-desprescrever-simplificar-ou-manter",
+        "por_que": "Terceiro cenário de exceção, no outro extremo da intensidade terapêutica: quando reduzir em vez de intensificar o tratamento."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-hipertensao-pulmonar-respondedor-ao-bloqueador-de-canal-de-calcio-e-o-resgate-quando-falha",
+    "titulo": "Hipertensão pulmonar: o respondedor ao bloqueador de canal de cálcio, e o resgate quando ele deixa de responder",
+    "tema": "Hipertensão pulmonar",
+    "objetivo": "Sair sabendo aplicar o critério de Sitbon para definir resposta positiva no teste de vasorreatividade aguda, prescrever bloqueador de canal de cálcio em dose alta para o respondedor confirmado, reconhecer a doença veno-oclusiva pulmonar como armadilha que torna o teste perigoso, e escalonar para epoprostenol intravenoso e septostomia atrial por balão quando a resposta inicial se esgota.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "teste-de-vasorreatividade-aguda-na-hap-idiopatica-e-hereditaria-o-criterio-de-sitbon",
+        "por_que": "define o critério que separa quem responde ao bloqueador de canal de cálcio de quem precisa de terapia dirigida"
+      },
+      {
+        "ordem": 2,
+        "item_type": "medicamento",
+        "item_slug": "nifedipina",
+        "por_que": "é o bloqueador de canal de cálcio de escolha em dose alta para o respondedor confirmado"
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "doenca-veno-oclusiva-pulmonar-pvod-diagnostico-diferencial-e-risco-de-edema-com-vasodilatador",
+        "por_que": "mostra por que o mesmo teste de vasorreatividade pode precipitar edema pulmonar quando a causa real é a doença veno-oclusiva, não a HAP idiopática"
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "epoprostenol-intravenoso-na-hap-grave-o-ensaio-de-barst-1996-e-a-sobrevida-em-longo-prazo",
+        "por_que": "é o próximo degrau quando o respondedor ao bloqueador de canal de cálcio deixa de responder e a doença progride"
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "septostomia-atrial-por-balao-na-hap-grave-refrataria-sandoval-1998-e-a-metanalise-de-khan-2019",
+        "por_que": "é o recurso de resgate adicional quando a terapia parenteral isolada não controla a HAP grave refratária"
+      },
+      {
+        "ordem": 6,
+        "item_type": "checklist",
+        "item_slug": "acompanhamento-pos-terapia-avancada-em-hap-grave-refrataria",
+        "por_que": "estrutura o seguimento depois que o paciente passou por epoprostenol IV ou septostomia"
+      }
+    ]
+  },
+  {
+    "slug": "trilha-calculadoras-sequencia-de-escores-no-mesmo-paciente-internado-por-ic-e-fa",
+    "titulo": "Calculadoras em sequência: o mesmo paciente internado por insuficiência cardíaca e fibrilação atrial",
+    "tema": "Calculadoras",
+    "objetivo": "Sair sabendo aplicar, num único paciente internado por insuficiência cardíaca descompensada com fibrilação atrial associada, a sequência de calculadoras que decide prognóstico da internação, risco tromboembólico, ajuste de dose renal do anticoagulante e carga geral de comorbidade — em vez de tratar cada escore como isolado.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "escore-effect-mortalidade-em-30-dias-e-1-ano-na-internacao-por-insuficiencia-cardiaca",
+        "por_que": "estima o prognóstico já na admissão por insuficiência cardíaca descompensada, antes de qualquer outra decisão"
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "chads2-score",
+        "por_que": "é o escore histórico de risco tromboembólico da fibrilação atrial associada, precursor do CHA2DS2-VASc"
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "clearance-de-creatinina-cockcroft-gault-ajuste-de-dose-em-cardiologia",
+        "por_que": "a função renal calculada por Cockcroft-Gault é o que decide a dose do anticoagulante antes de prescrever"
+      },
+      {
+        "ordem": 4,
+        "item_type": "medicamento",
+        "item_slug": "dabigatrana-etexilato",
+        "por_que": "é o anticoagulante cuja dose depende diretamente do clearance de creatinina calculado no passo anterior"
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "indice-de-comorbidade-de-charlson-aplicado-ao-prognostico-cardiovascular",
+        "por_que": "fecha a avaliação com o prognóstico geral do paciente, além da insuficiência cardíaca e da fibrilação atrial isoladas"
+      }
+    ]
+  },
+  {
+    "slug": "trilha-cardio-oncologia-sinais-que-fogem-da-fracao-de-ejecao-strain-qt-e-alem",
+    "titulo": "Cardio-oncologia: os sinais que a vigilância clássica por fração de ejeção não captura cedo",
+    "tema": "Cardio-oncologia",
+    "objetivo": "Sair sabendo usar o strain longitudinal global e seus cortes de queda relativa como marcador mais precoce que a fração de ejeção durante antraciclina/anti-HER2, reconhecer o prolongamento de QT específico dos inibidores de CDK4/6 no câncer de mama hormônio-sensível, e situar o distúrbio eletrolítico da síndrome de lise tumoral e a toxicidade metabólica dos inibidores de mTOR como outras duas fontes de risco cardiovascular que também escapam do modelo clássico de cardiotoxicidade por queda de fração de ejeção.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "strain-longitudinal-global-marcador-precoce-de-cardiotoxicidade-e-os-cortes-de-queda-relativa",
+        "por_que": "detecta disfunção subclínica antes da fração de ejeção cair, com cortes de queda relativa definidos"
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "fluxograma-disfuncao-cardiaca-por-antraciclina-e-anti-her2-esc-2022",
+        "por_que": "situa o strain dentro do algoritmo de decisão completo da ESC para antraciclina e terapia anti-HER2"
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "prolongamento-de-qt-por-inibidores-de-cdk4-6-ribociclibe-palbociclibe-e-abemaciclibe",
+        "por_que": "é um risco elétrico específico dessa classe, que a vigilância de fração de ejeção não rastreia"
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "sindrome-de-lise-tumoral-disturbio-eletrolitico-e-risco-arritmico",
+        "por_que": "mostra outra via de risco arrítmico agudo, pelo distúrbio eletrolítico, que também escapa da vigilância de imagem"
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "toxicidade-cardiovascular-dos-inibidores-de-mtor-everolimo-e-temsirolimo",
+        "por_que": "fecha a trilha com uma toxicidade metabólica e de derrame pericárdico que também não é a cardiotoxicidade direta clássica medida por fração de ejeção"
+      }
+    ]
+  },
+  {
+    "slug": "trilha-comunicacao-clinica-spikes-e-a-lacuna-entre-consenso-e-pratica-no-fim-de-vida",
+    "titulo": "Comunicação clínica: o protocolo SPIKES para más notícias, e por que a conversa recomendada pelo consenso quase não acontece",
+    "tema": "Comunicação clínica",
+    "objetivo": "Sair sabendo estruturar más notícias em cardiologia pelo protocolo SPIKES — insuficiência cardíaca avançada, indicação de CDI e prognóstico pós-infarto —, reconhecer por que a conversa sobre desativação do dispositivo recomendada pelo consenso HRS/EHRA quase nunca acontece na prática, e situar o planejamento antecipado de cuidados e o cuidado paliativo como resposta estrutural a essa lacuna entre o que a diretriz recomenda e o que de fato se conversa com o paciente.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "protocolo-spikes-de-mas-noticias-aplicado-a-ic-avancada-cdi-e-prognostico-pos-iam",
+        "por_que": "dá a estrutura de seis passos para comunicar más notícias, aplicada a três cenários concretos de cardiologia"
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "desativacao-de-cdi-e-marca-passo-no-fim-de-vida-consenso-hrs-ehra-2010",
+        "por_que": "é a recomendação formal de que a conversa sobre desativação do dispositivo aconteça antes do fim de vida"
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "a-lacuna-entre-o-consenso-e-a-pratica-por-que-a-conversa-sobre-desligar-o-cdi-quase-nao-acontece",
+        "por_que": "mostra, com números, que a conversa recomendada no passo anterior raramente acontece na prática real"
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "planejamento-antecipado-de-cuidados-detering-support-e-o-video-de-el-jawahri",
+        "por_que": "é a evidência de que planejar essa conversa com antecedência muda o desfecho de comunicação, não só o de dispositivo"
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "cuidado-paliativo-e-comunicacao-de-prognostico-na-ic-avancada-pal-hf-enable-chf-pc-e-swap-hf",
+        "por_que": "situa o cuidado paliativo como a resposta estrutural, não pontual, à lacuna de comunicação em fim de vida"
+      }
+    ]
+  },
+  {
+    "slug": "trilha-geral-desigualdade-e-exposicao-ocupacional-como-determinantes-do-risco-cardiovascular",
+    "titulo": "Geral: desigualdade socioeconômica e exposição ocupacional como determinantes do risco cardiovascular no Brasil",
+    "tema": "Geral",
+    "objetivo": "Sair sabendo reconhecer os determinantes sociais e ocupacionais do risco cardiovascular que atravessam o consultório brasileiro — desigualdade socioeconômica, ruído ocupacional, exposição a agrotóxico e a fumaça de incêndio florestal no trabalhador ao ar livre —, e a disparidade de sexo no tratamento do infarto como exemplo concreto de que o risco medido não é distribuído de forma igual entre os pacientes.",
+    "nivel": "básico",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "desigualdade-socioeconomica-e-desfechos-cardiovasculares-no-brasil",
+        "por_que": "estabelece o determinante social de base — renda e escolaridade — sobre o desfecho cardiovascular no Brasil"
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "ruido-ocupacional-e-risco-cardiovascular-estimativas-conjuntas-oms-oit",
+        "por_que": "quantifica um risco ocupacional específico, com estimativa conjunta OMS/OIT, que atinge desproporcionalmente o trabalhador exposto"
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "exposicao-a-agrotoxicos-e-risco-cardiovascular",
+        "por_que": "é outra exposição ocupacional comum no Brasil rural, raramente perguntada na anamnese cardiovascular padrão"
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "exposicao-a-fumaca-de-incendio-florestal-e-risco-cardiovascular-agudo",
+        "por_que": "soma-se às exposições ocupacionais e ambientais que atingem de forma desigual o trabalhador ao ar livre"
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "disparidade-de-sexo-no-tratamento-do-iamcst-o-estudo-virgo",
+        "por_que": "fecha a trilha mostrando que a desigualdade no risco cardiovascular não é só de exposição — é também de tratamento recebido"
+      }
+    ]
+  },
+  {
+    "slug": "trilha-saude-mental-substancias-e-evento-cardiovascular-agudo",
+    "titulo": "Saúde mental e cardiologia: substâncias de uso recreativo, de abuso ou automedicação e o evento cardiovascular agudo",
+    "tema": "Saúde mental e cardiologia",
+    "objetivo": "Sair sabendo reconhecer quatro substâncias associadas a uso recreativo, de abuso ou automedicação que desencadeiam evento cardiovascular agudo ou arritmia por mecanismo direto — cocaína e metanfetamina no infarto da primeira hora e na cardiomiopatia reversível, canabinoides medicinais na arritmia, álcool em binge na fibrilação atrial da síndrome do coração em férias, e o esteroide anabolizante andrógeno — o lado agudo e tóxico do consumo de substâncias que a avaliação psicossocial precisa perguntar.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "cocaina-e-metanfetamina-infarto-desencadeado-na-primeira-hora-e-cardiomiopatia-reversivel",
+        "por_que": "mostra o risco máximo de infarto na primeira hora após o uso, e a cardiomiopatia que pode reverter com a abstinência"
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "cocaina-e-risco-cardiovascular-vasoespasmo-coronariano-e-infarto",
+        "por_que": "detalha o mecanismo de vasoespasmo coronariano que sustenta o achado do passo anterior"
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "canabinoides-medicinais-e-risco-de-arritmia",
+        "por_que": "traz o risco de arritmia de uma substância cada vez mais prescrita, não só usada recreativamente"
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "sindrome-do-coracao-em-ferias-e-fibrilacao-atrial-induzida-por-alcool",
+        "por_que": "é o gatilho mais comum de fibrilação atrial aguda por substância, ligado ao consumo de álcool em binge"
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "esteroides-anabolizantes-androgenicos-e-risco-cardiovascular",
+        "por_que": "fecha a trilha com uma substância de uso não recreativo mas de automedicação, com risco cardiovascular próprio e muitas vezes omitida na anamnese"
+      }
+    ]
   }
 ]

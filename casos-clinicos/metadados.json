@@ -7459,5 +7459,565 @@
       "Wyse DG, Waldo AL, DiMarco JP, et al; AFFIRM Investigators. A comparison of rate control and rhythm control in patients with atrial fibrillation. N Engl J Med. 2002;347(23):1825-1833. DOI: 10.1056/NEJMoa021328. PMID: 12466506"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "dapt-abreviada-1-mes-vs-12-meses-apos-icp-stopdapt-2",
+    "titulo": "DAPT de 1 mês seguida de clopidogrel: é seguro abreviar tanto assim após ICP?",
+    "tema": "Doença coronariana",
+    "nivel": "intermediário",
+    "enunciado": "Homem de 68 anos, hipertenso, é submetido a angioplastia coronariana com implante de stent farmacológico por angina estável refratária. Antes da alta, o cardiologista discute com ele a duração da dupla antiagregação plaquetária (DAPT). O paciente, preocupado com sangramento a longo prazo, pergunta se existe evidência de que apenas 1 mês de DAPT seguido de clopidogrel em monoterapia seja seguro.",
+    "pergunta": "De acordo com o ensaio STOPDAPT-2 (3.045 pacientes submetidos a ICP em 90 hospitais japoneses, randomizados para 1 mês de DAPT seguido de clopidogrel em monoterapia ou 12 meses de DAPT padrão), qual foi o resultado para o desfecho primário combinado (morte cardiovascular, IAM, AVC isquêmico ou hemorrágico, trombose de stent definitiva, ou sangramento maior/menor) em 12 meses?",
+    "opcoes": [
+      "A DAPT abreviada foi inferior, com mais eventos isquêmicos e hemorrágicos combinados (3,70% vs 2,36%)",
+      "A DAPT abreviada foi não inferior E superior à DAPT padrão, com o desfecho primário ocorrendo em 2,36% vs 3,70% (HR 0,64; IC95% 0,42-0,98; p=0,04 para superioridade)",
+      "Não houve diferença estatisticamente significativa entre as duas estratégias em nenhum desfecho avaliado",
+      "A DAPT abreviada reduziu sangramento, mas às custas de mais trombose de stent, levando à suspensão precoce do estudo"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "No STOPDAPT-2 (JAMA 2019), 1 mês de DAPT seguido de clopidogrel em monoterapia atingiu não inferioridade (p<0,001) e superioridade (p=0,04) sobre 12 meses de DAPT padrão para o desfecho primário: 2,36% vs 3,70% (diferença absoluta -1,34%; IC95% -2,57% a -0,11%; HR 0,64; IC95% 0,42-0,98). É importante notar ONDE está o benefício: o desfecho cardiovascular secundário maior (morte CV, IAM, AVC ou trombose de stent) ocorreu em 1,96% vs 2,51% (HR 0,79; IC95% 0,49-1,29) — não inferior (p=0,005), mas SEM superioridade (p=0,34), ou seja, a DAPT abreviada não reduziu eventos isquêmicos. Quem carregou a diferença foi o sangramento maior/menor: 0,41% vs 1,54% (HR 0,26; IC95% 0,11-0,64; p=0,004 para superioridade). Limitação relevante, declarada pelos próprios autores: trata-se de população 100% japonesa, ensaio aberto (não cego), e eles afirmam textualmente que 'pesquisa adicional é necessária em outras populações' antes de generalizar o achado.",
+    "source_refs": [
+      "Watanabe H, Domei T, Morimoto T, et al; STOPDAPT-2 Investigators. Effect of 1-Month Dual Antiplatelet Therapy Followed by Clopidogrel vs 12-Month Dual Antiplatelet Therapy on Cardiovascular and Bleeding Events in Patients Receiving PCI: The STOPDAPT-2 Randomized Clinical Trial. JAMA. 2019;321(24):2414-2427. DOI: 10.1001/jama.2019.8145. PMID: 31237644"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "amiloidose-al-cardiaca-daratumumabe-associado-a-cybord-andromeda",
+    "titulo": "Amiloidose de cadeia leve (AL) com acometimento cardíaco: daratumumabe muda a resposta ao tratamento?",
+    "tema": "Cardiomiopatias",
+    "nivel": "avançado",
+    "enunciado": "Mulher de 61 anos é investigada por dispneia progressiva e edema de membros inferiores. O ecocardiograma mostra espessamento biventricular com padrão granular-cintilante e função sistólica preservada. A eletroforese de proteínas séricas identifica componente monoclonal, a relação de cadeias leves livres está alterada, e a biópsia de gordura subcutânea confirma depósitos de amiloide de cadeia leve (AL) — não se trata de amiloidose por transtirretina (ATTR). NT-proBNP está muito elevado. O hematologista propõe iniciar bortezomibe, ciclofosfamida e dexametasona (CyBorD), associados a daratumumabe subcutâneo.",
+    "pergunta": "Segundo o ensaio ANDROMEDA (388 pacientes com amiloidose AL recém-diagnosticada, randomizados para CyBorD isolado ou CyBorD + daratumumabe), qual foi o efeito da adição do daratumumabe sobre a resposta hematológica completa e a sobrevida livre de deterioração de órgão-alvo ou progressão hematológica?",
+    "opcoes": [
+      "O daratumumabe não alterou a taxa de resposta hematológica completa, mas reduziu isoladamente a mortalidade global",
+      "Resposta hematológica completa significativamente maior com daratumumabe (53,3% vs 18,1%; razão de risco relativo 2,9; IC95% 2,1-4,1; p<0,001), com melhora também na sobrevida livre de deterioração de órgão-alvo ou progressão hematológica (HR 0,58; IC95% 0,36-0,93; p=0,02)",
+      "O daratumumabe piorou a resposta cardíaca, apesar de melhorar a resposta hematológica global",
+      "O benefício do daratumumabe se limitou à resposta renal, sem qualquer impacto na resposta cardíaca em 6 meses"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "No ANDROMEDA (NEJM 2021), a resposta hematológica completa foi de 53,3% no grupo daratumumabe vs 18,1% no grupo controle (razão de risco relativo 2,9; IC95% 2,1-4,1; p<0,001). A sobrevida livre de deterioração de órgão-alvo, progressão hematológica ou morte favoreceu o grupo daratumumabe (HR 0,58; IC95% 0,36-0,93; p=0,02). Em 6 meses, houve mais resposta cardíaca (41,5% vs 22,2%) e mais resposta renal (53,0% vs 23,9%) com daratumumabe — portanto o benefício NÃO se limitou à resposta renal, também houve resposta cardíaca. Eventos adversos grau 3/4 mais frequentes com daratumumabe: linfopenia (13,0% vs 10,1%), pneumonia (7,8% vs 4,3%), insuficiência cardíaca (6,2% vs 4,8%) e diarreia (5,7% vs 3,7%). Houve 56 óbitos no total (27 no grupo daratumumabe, 29 no controle), a maioria por cardiomiopatia relacionada à amiloidose — com apenas 11,4 meses de seguimento mediano, o ensaio demonstrou benefício em desfechos hematológicos/de órgão, não uma diferença de mortalidade global madura. Distinção importante para a prática: esta é amiloidose AL (discrasia de plasmócitos, tratada com quimioimunoterapia dirigida ao clone), fisiopatologicamente diferente da amiloidose ATTR (mau dobramento da transtirretina, tratada com estabilizadores como tafamidis/acoramidis ou silenciadores como vutrisiran) — os dois tipos não devem ser confundidos nem tratados da mesma forma.",
+    "source_refs": [
+      "Kastritis E, Palladini G, Minnema MC, et al; ANDROMEDA Trial Investigators. Daratumumab-Based Treatment for Immunoglobulin Light-Chain Amyloidosis. N Engl J Med. 2021;385(1):46-58. DOI: 10.1056/NEJMoa2028631. PMID: 34192431"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "regurgitacao-aortica-grave-sem-estenose-tavi-dedicada-align-ar",
+    "titulo": "Regurgitação aórtica grave nativa, sem estenose, em paciente inoperável: existe TAVI para isso?",
+    "tema": "Valvopatias",
+    "nivel": "avançado",
+    "enunciado": "Homem de 78 anos com regurgitação aórtica grave nativa (sem estenose associada), sintomático (classe funcional III), tem escore de risco cirúrgico elevado por múltiplas comorbidades e fração de ejeção em declínio. A equipe cardiológica considera prótese transcateter, mas sabe que as válvulas transcateter comerciais padrão (desenhadas para estenose aórtica calcificada) têm taxas inaceitáveis de embolização e regurgitação paravalvar quando usadas fora de bula em regurgitação aórtica pura, por falta de ancoragem em cálcio.",
+    "pergunta": "O estudo ALIGN-AR avaliou a válvula transcateter Trilogy (JenaValve), desenhada especificamente para ancoragem em regurgitação aórtica pura, em 180 pacientes sintomáticos de alto risco cirúrgico (de 346 rastreados). Qual foi o desfecho de segurança em 30 dias e de mortalidade em 1 ano, frente às metas de performance pré-especificadas?",
+    "opcoes": [
+      "Sucesso técnico de apenas 60%, com taxas proibitivas de conversão cirúrgica de emergência",
+      "Sucesso técnico em 95% (171/180); desfecho composto de segurança em 30 dias em 27% dos pacientes, atingindo não inferioridade à meta de performance pré-especificada de 40,5% (p<0,0001); mortalidade em 1 ano de 7,8%, também não inferior à meta de 25% (p<0,0001)",
+      "O estudo foi interrompido precocemente por excesso de AVC incapacitante, acima de 15% dos pacientes",
+      "Não houve nenhum caso de implante de marca-passo definitivo, tornando o perfil de segurança superior ao da TAVI convencional em estenose"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "No ALIGN-AR (Lancet 2024), de 346 pacientes rastreados, 180 (52%) foram tratados com a válvula Trilogy (idade média 75,5 anos, DP 10,8; 47% mulheres). O sucesso técnico foi de 95% (171/180). Em 30 dias: 4 óbitos (2%), 2 AVC incapacitante (1%) e 2 AVC não incapacitante (1%). O desfecho composto de segurança em 30 dias (critérios VARC-2) ocorreu em 48 pacientes (27%; IC97,5% 19,2-34,0), atingindo não inferioridade à meta pré-especificada de 40,5% (p<0,0001); novo marcapasso foi necessário em 36 pacientes (24%) — portanto marca-passo NÃO foi zero, e essa é uma taxa relevante a discutir com o paciente. O desfecho primário de eficácia (mortalidade em 1 ano) ocorreu em 14 pacientes (7,8%; IC 3,3-12,3), não inferior à meta de 25% (p<0,0001). Limitações a declarar: é um estudo de braço único (sem comparador randomizado direto), financiado pelo fabricante do dispositivo (JenaValve Technology), e o seguimento de longo prazo ainda é necessário — os próprios autores classificam os resultados como 'promissores', não definitivos.",
+    "source_refs": [
+      "Vahl TP, Thourani VH, Makkar RR, et al. Transcatheter aortic valve implantation in patients with high-risk symptomatic native aortic regurgitation (ALIGN-AR): a prospective, multicentre, single-arm study. Lancet. 2024;403(10435):1451-1459. DOI: 10.1016/S0140-6736(23)02806-4. PMID: 38552656"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "pericardite-constritiva-pos-radioterapia-prognostico-apos-pericardiectomia-bertog",
+    "titulo": "Pericardite constritiva anos após radioterapia mediastinal: o prognóstico após pericardiectomia é o mesmo da forma idiopática?",
+    "tema": "Pericárdio",
+    "nivel": "intermediário",
+    "enunciado": "Mulher de 63 anos, tratada com radioterapia mediastinal há 20 anos por linfoma de Hodgkin, é encaminhada para pericardiectomia por pericardite constritiva confirmada por cateterismo e tomografia. A família pergunta qual é o prognóstico de sobrevida a longo prazo comparado ao de um paciente com pericardite constritiva idiopática que também será operado.",
+    "pergunta": "Segundo a série de 163 pacientes submetidos a pericardiectomia por pericardite constritiva na Cleveland Clinic ao longo de 24 anos (Bertog et al.), qual foi a sobrevida em 7 anos por etiologia, e a calcificação pericárdica influenciou o prognóstico?",
+    "opcoes": [
+      "Sobrevida em 7 anos semelhante entre as etiologias (em torno de 85% em todas); a calcificação pericárdica foi o principal preditor de mortalidade",
+      "Sobrevida em 7 anos de 88% na forma idiopática, 66% na pós-cirúrgica e apenas 27% na pós-radioterapia; a calcificação pericárdica NÃO teve impacto na sobrevida",
+      "A etiologia pós-radioterapia teve a melhor sobrevida (95% em 7 anos), por ausência de aderências extensas",
+      "A mortalidade perioperatória da pericardiectomia foi de 25%, inviabilizando a indicação cirúrgica na maioria dos casos"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Na série de Bertog et al. (JACC 2004), 163 pacientes foram submetidos a pericardiectomia por pericardite constritiva: etiologia idiopática em 75 (46%), pós-cirurgia cardíaca em 60 (37%), pós-radioterapia em 15 (9%) e miscelânea em 13 (8%). A mortalidade perioperatória foi de 6% (não 25%). A sobrevida em 7 anos (Kaplan-Meier) foi de 88% (IC95% 76-94%) na forma idiopática, 66% (IC95% 52-78%) na pós-cirúrgica e apenas 27% (IC95% 9-58%) na pós-radioterapia — a pior de todas, não a melhor. Em análise multivariada com validação por bootstrap, os preditores independentes de pior sobrevida foram: radioterapia prévia, pior função renal, maior pressão sistólica de artéria pulmonar, disfunção sistólica de VE, menor sódio sérico e idade mais avançada. A calcificação pericárdica, ao contrário do que se poderia supor pela gravidade radiológica, NÃO teve impacto na sobrevida. É um estudo observacional retrospectivo de centro único (não um ensaio randomizado), mas segue sendo a referência clássica para estratificar prognóstico por etiologia antes da pericardiectomia, justamente por não existir dado randomizado nessa área.",
+    "source_refs": [
+      "Bertog SC, Thambidorai SK, Parakh K, et al. Constrictive pericarditis: etiology and cause-specific survival after pericardiectomy. J Am Coll Cardiol. 2004;43(8):1445-1452. DOI: 10.1016/j.jacc.2003.11.048. PMID: 15093882"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "endocardite-infecciosa-apos-tavi-fatores-de-risco-e-mortalidade-regueiro",
+    "titulo": "Febre e novo sopro meses após TAVI: quão grave é a endocardite infecciosa nesse contexto?",
+    "tema": "Endocardite",
+    "nivel": "intermediário",
+    "enunciado": "Homem de 79 anos, diabético, submetido a TAVI transfemoral há 5 meses por estenose aórtica grave, é internado com febre, calafrios e hemoculturas positivas para Enterococcus faecalis. O ecocardiograma transesofágico mostra vegetação na prótese valvar, e há regurgitação paravalvar moderada residual desde o procedimento inicial. A equipe discute o prognóstico e os fatores que podem ter contribuído para esse quadro.",
+    "pergunta": "No registro internacional de endocardite infecciosa após TAVR (250 casos em 20.006 pacientes submetidos ao procedimento, Regueiro et al., JAMA 2016), quais fatores se associaram a maior risco de endocardite pós-TAVR, e qual foi a mortalidade hospitalar observada?",
+    "opcoes": [
+      "Somente a idade avançada aumentou o risco; a mortalidade hospitalar foi baixa, em torno de 8%",
+      "Idade mais jovem (HR 0,97 por ano), sexo masculino (HR 1,69), diabetes mellitus (HR 1,52) e regurgitação aórtica residual moderada a grave (HR 2,05) associaram-se a maior risco; a mortalidade hospitalar foi de 36% e a mortalidade em 2 anos de 66,7%",
+      "O principal fator de risco identificado foi o tipo de bioprótese balão-expansível; a mortalidade hospitalar foi desprezível, próxima de 2%",
+      "Não foi identificado nenhum fator de risco consistente; a cirurgia de troca valvar foi realizada na maioria dos pacientes (mais de 80%), com boa evolução"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "No registro de Regueiro et al. (JAMA 2016), ocorreram 250 casos de endocardite infecciosa em 20.006 pacientes submetidos a TAVR (incidência de 1,1%/paciente-ano; IC95% 1,1-1,4%), com tempo mediano entre o TAVR e a endocardite de 5,3 meses (IQR 1,5-13,4 meses) — compatível com o caso descrito. Associaram-se a maior risco: idade mais jovem (HR 0,97 por ano; IC95% 0,94-0,99, ou seja, quanto mais jovem, maior o risco relativo), sexo masculino (62,0% vs 49,7%; HR 1,69; IC95% 1,13-2,52), diabetes mellitus (41,7% vs 30,0%; HR 1,52; IC95% 1,02-2,29) e regurgitação aórtica residual moderada a grave (22,4% vs 14,7%; HR 2,05; IC95% 1,28-3,28) — exatamente o perfil do paciente do caso. Endocardite associada a cuidados de saúde esteve presente em 52,8%. Os micro-organismos mais frequentes foram Enterococcus (24,6%) e Staphylococcus aureus (23,3%). A mortalidade hospitalar foi de 36% (90 óbitos/250 casos), associada a EuroSCORE logístico mais alto, insuficiência cardíaca (OR 3,36) e lesão renal aguda (OR 2,70). Cirurgia foi realizada em apenas 14,8% dos casos (não na maioria). A mortalidade em 2 anos foi de 66,7% — um prognóstico consideravelmente pior do que o da endocardite de valva nativa em geral.",
+    "source_refs": [
+      "Regueiro A, Linke A, Latib A, et al. Association Between Transcatheter Aortic Valve Replacement and Subsequent Infective Endocarditis and In-Hospital Death. JAMA. 2016;316(10):1083-1092. DOI: 10.1001/jama.2016.12347. PMID: 27623462"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "claudicacao-exercicio-domiciliar-de-baixa-vs-alta-intensidade-lite",
+    "titulo": "DAP com claudicação e baixa adesão ao exercício supervisionado: caminhar em ritmo confortável em casa funciona?",
+    "tema": "Aorta e doença arterial periférica",
+    "nivel": "básico",
+    "enunciado": "Mulher de 70 anos, tabagista, com doença arterial periférica sintomática (claudicação intermitente), não tem acesso a programa de reabilitação vascular supervisionada. Ela relata que tenta caminhar em casa, mas para assim que sente a primeira dor na perna, por medo de piorar a doença, e pergunta se caminhar em ritmo confortável, sem provocar sintomas isquêmicos, já traria algum benefício para sua capacidade funcional.",
+    "pergunta": "No ensaio LITE (305 pacientes com DAP, randomizados para exercício domiciliar de baixa intensidade sem sintomas isquêmicos, exercício domiciliar de alta intensidade com sintomas isquêmicos, ou controle sem exercício, por 12 meses, em 4 centros dos EUA), qual foi o efeito sobre a distância percorrida no teste de caminhada de 6 minutos?",
+    "opcoes": [
+      "O exercício de baixa intensidade foi tão eficaz quanto o de alta intensidade, e ambos foram superiores ao grupo controle",
+      "Somente o exercício de alta intensidade (que provoca sintomas isquêmicos) melhorou a distância caminhada (variação de +34,5 m; p<0,001); o de baixa intensidade não diferiu do controle sem exercício (variação de -6,4 m, não significativa) e foi inferior ao de alta intensidade (diferença entre grupos de -40,9 m; p<0,001)",
+      "Ambas as intensidades de exercício pioraram a distância caminhada em relação ao grupo controle sem exercício",
+      "O exercício de baixa intensidade foi superior ao de alta intensidade, por causar significativamente menos eventos adversos graves"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "No ensaio LITE (JAMA 2021), 305 pacientes foram randomizados para exercício domiciliar de baixa intensidade (n=116, ritmo sem sintomas isquêmicos), alta intensidade (n=124, ritmo que provoca sintomas isquêmicos moderados a graves) ou controle sem exercício (n=65), por 12 meses. Na caminhada de 6 minutos, o grupo de baixa intensidade variou de 332,1 m para 327,5 m (variação intragrupo de -6,4 m; IC95% -21,5 a 8,8; p=0,34 — sem diferença significativa dentro do próprio grupo). O grupo de alta intensidade variou de 338,1 m para 371,2 m (variação de +34,5 m; IC95% 20,1-48,9; p<0,001). A comparação entre os dois grupos de exercício mostrou diferença de -40,9 m a favor da alta intensidade (IC97,5% -61,7 a -20,0; p<0,001). O grupo controle variou de 328,1 m para 317,5 m (variação de -15,1 m, não significativa), e a comparação baixa intensidade vs controle não mostrou diferença significativa (+8,7 m; IC97,5% -17,0 a 34,4; p=0,44) — ou seja, caminhar em ritmo confortável, sem provocar sintomas, não foi estatisticamente diferente de não fazer exercício nenhum. As taxas de eventos adversos graves foram semelhantes entre os três grupos (0,64 por participante na baixa intensidade, 0,65 na alta, 0,46 no controle), então a baixa intensidade não se mostrou 'mais segura' — apenas ineficaz para o desfecho funcional. A conclusão dos próprios autores é que os achados NÃO sustentam o uso de exercício domiciliar de baixa intensidade para melhorar o desempenho de caminhada objetivamente medido em pacientes com DAP.",
+    "source_refs": [
+      "McDermott MM, Spring B, Tian L, et al. Effect of Low-Intensity vs High-Intensity Home-Based Walking Exercise on Walk Distance in Patients With Peripheral Artery Disease: The LITE Randomized Clinical Trial. JAMA. 2021;325(13):1266-1276. DOI: 10.1001/jama.2021.2536. PMID: 33821898"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cia-ostium-secundum-em-adulto-acima-de-40-anos-fechar-ou-nao",
+    "titulo": "CIA ostium secundum achada aos 52 anos: ainda vale a pena fechar?",
+    "tema": "Cardiopatias congênitas",
+    "nivel": "intermediário",
+    "enunciado": "Mulher de 52 anos, oligossintomática (dispneia leve aos grandes esforços), tem uma comunicação interatrial (CIA) do tipo ostium secundum ampla achada em ecocardiograma de rotina. O estudo mostra relação Qp/Qs de 1,8, pressão sistólica de artéria pulmonar estimada em 45 mmHg e função do ventrículo direito preservada. Ela pergunta ao cardiologista se, na idade dela, ainda vale a pena fechar o defeito ou se é mais seguro só acompanhar clinicamente.",
+    "pergunta": "Com base no ensaio clínico randomizado de Attie et al. (JACC 2001), que comparou fechamento cirúrgico ao tratamento clínico em pacientes com CIA ostium secundum acima de 40 anos, qual é a conduta mais respaldada para esta paciente?",
+    "opcoes": [
+      "Indicar o fechamento anatômico do defeito, pois no ensaio o tratamento clínico isolado associou-se a risco significativamente maior do desfecho composto de eventos cardiovasculares maiores",
+      "Manter apenas seguimento clínico, pois após os 40 anos o fechamento deixa de trazer benefício demonstrado e expõe a paciente a risco cirúrgico desnecessário",
+      "Iniciar diurético e IECA e reservar o fechamento apenas para quando surgir disfunção do ventrículo direito",
+      "Indicar fechamento somente se houver fibrilação atrial documentada, já que a idade isolada não é critério de decisão"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "No ensaio randomizado de Attie et al. (JACC 2001;38(7):2035-2042), 521 pacientes >40 anos com CIA ostium secundum foram recrutados (48 excluídos) e 473 randomizados para fechamento cirúrgico (n=232) ou tratamento clínico (n=241), com seguimento mediano de 7,3 anos (2 a 13 anos), análise por intenção de tratar. O grupo de tratamento clínico teve risco significativamente maior do desfecho composto primário (morte, embolia pulmonar, evento arrítmico maior, AVC embólico, infecção pulmonar recorrente, piora de classe funcional ou insuficiência cardíaca): razão de risco (HR) univariada de 1,99 (IC95% 1,23-3,22) e multivariada de 1,85 (IC95% 1,08-3,17). A mortalidade global isolada não diferiu na análise de sobrevida bruta (HR 1,71; IC95% 0,76-3,86), mas a análise multivariada ajustada por idade na inclusão, pressão média de artéria pulmonar e índice cardíaco mostrou diferença significativa (HR 4,09; IC95% 1,41-11,89), favorecendo a cirurgia. Os autores recomendam que o fechamento anatômico seja sempre tentado como tratamento inicial em CIA ostium secundum em adultos acima de 40 anos com pressão sistólica de artéria pulmonar <70 mmHg e relação fluxo pulmonar/sistêmico (Qp/Qs) ≥1,7 — exatamente o perfil hemodinâmico da paciente do caso (Qp/Qs 1,8, PSAP estimada 45 mmHg) —, e que a operação deve ser feita o quanto antes, mesmo com sintomas ou impacto hemodinâmico aparentemente mínimos.",
+    "source_refs": [
+      "Attie F, Rosas M, Granados N, Zabal C, Buendía A, Calderón J. Surgical treatment for secundum atrial septal defects in patients >40 years old. A randomized clinical trial. J Am Coll Cardiol. 2001;38(7):2035-2042. DOI: 10.1016/s0735-1097(01)01635-7. PMID: 11738312."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "artrite-da-febre-reumatica-aguda-naproxeno-pode-substituir-o-aas",
+    "titulo": "Artrite da febre reumática aguda com hepatotoxicidade por AAS: trocar por naproxeno tem respaldo?",
+    "tema": "Febre reumática",
+    "nivel": "básico",
+    "enunciado": "Adolescente de 14 anos apresenta febre reumática aguda, com poliartrite migratória de grandes articulações e cardite leve confirmada ao ecocardiograma (critérios de Jones maiores). Foi iniciado ácido acetilsalicílico (AAS) em dose anti-inflamatória. No terceiro dia de tratamento, o exame de controle mostra elevação de transaminases, e a família pergunta se existe alternativa ao AAS para controlar a artrite sem esse efeito colateral.",
+    "pergunta": "Segundo o ensaio randomizado, aberto, de equivalência de Hashkes et al. (J Pediatr 2003), que comparou naproxeno e AAS no tratamento da artrite da febre reumática aguda, qual é a evidência para substituir o AAS por naproxeno neste caso?",
+    "opcoes": [
+      "O naproxeno mostrou tempo de resolução da artrite equivalente ao do AAS, com menor frequência de elevação de enzimas hepáticas — a troca tem respaldo",
+      "O naproxeno foi inferior ao AAS na velocidade de resolução da artrite, e por isso não deve substituí-lo mesmo diante de hepatotoxicidade",
+      "Não existe nenhum estudo comparando os dois fármacos na febre reumática; a troca seria uso off-label sem qualquer respaldo",
+      "O naproxeno é formalmente contraindicado na febre reumática por risco de mascarar a evolução da cardite"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "No ensaio prospectivo, randomizado, aberto, de equivalência conduzido por Hashkes et al. (J Pediatr 2003;143(3):399-401), 33 pacientes com febre reumática foram randomizados para tratamento da artrite com naproxeno ou com AAS. O tempo médio até a resolução da artrite foi de 2,9 ± 2,9 dias em ambos os grupos, sem diferença relevante. Elevações de enzimas hepáticas foram significativamente mais frequentes no grupo tratado com AAS (p=0,002). Os autores concluem que o naproxeno é tão eficaz quanto, mais fácil de usar (posologia menos frequente) e mais seguro que o AAS no tratamento da artrite da febre reumática aguda — o que respalda diretamente a troca no paciente do caso, que já desenvolveu hepatotoxicidade pelo AAS. Ressalva de honestidade: é um estudo pequeno (n=33) e de delineamento aberto (sem cegamento), o que limita a força da conclusão apesar do resultado favorável.",
+    "source_refs": [
+      "Hashkes PJ, Tauber T, Somekh E, Brik R, Barash J, Mukamel M, Harel L, Lorber A, Berkovitch M, Uziel Y; Pediatric Rheumatology Study Group of Israel. Naproxen as an alternative to aspirin for the treatment of arthritis of rheumatic fever: a randomized trial. J Pediatr. 2003;143(3):399-401. DOI: 10.1067/s0022-3476(03)00388-3. PMID: 14517527."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sincope-vasovagal-cardioinibitoria-marca-passo-com-estimulacao-em-malha-fechada-estudo-spain",
+    "titulo": "Síncope vasovagal cardioinibitória grave e refratária: a estimulação em malha fechada (DDD-CLS) reduz a recorrência?",
+    "tema": "Síncope",
+    "nivel": "avançado",
+    "enunciado": "Mulher de 61 anos tem síncope vasovagal recorrente grave — 12 episódios nos últimos dois anos — refratária a medidas não farmacológicas e a manobras físicas de contrapressão. O teste de inclinação (tilt test) reproduz a síncope com padrão cardioinibitório, com assistolia superior a 3 segundos. O cardiologista discute a implantação de um marca-passo, mas menciona que a modalidade convencional de estimulação tem eficácia limitada nesse contexto, e propõe uma tecnologia diferente de detecção e estimulação.",
+    "pergunta": "De acordo com o estudo SPAIN (Baron-Esquivias et al., JACC 2017) — randomizado, duplo-cego, cruzado, comparando marca-passo bicameral com estimulação em malha fechada (DDD-CLS, closed loop stimulation) contra estimulação simulada (sham) em pacientes ≥40 anos com síncope vasovagal cardioinibitória induzida por tilt test —, qual foi o resultado sobre a recorrência de síncope?",
+    "opcoes": [
+      "A DDD-CLS reduziu significativamente a recorrência de síncope em comparação ao sham, com cerca de 7 vezes menos eventos e prolongamento marcante do tempo até a primeira recorrência",
+      "Não houve diferença entre DDD-CLS e sham, confirmando que o marca-passo não tem papel em nenhuma forma de síncope vasovagal cardioinibitória",
+      "A DDD-CLS piorou os desfechos por indução de bradicardia paradoxal, levando à interrupção precoce do estudo por segurança",
+      "O benefício da DDD-CLS só foi demonstrado em pacientes com menos de 40 anos, não se aplicando à faixa etária desta paciente"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O estudo SPAIN (NCT01621464) randomizou, de forma duplo-cega e cruzada, 46 pacientes ≥40 anos (idade média 56,30 ± 10,63 anos) com síncope vasovagal de alta carga (≥5 episódios prévios, ≥2 no último ano; mediana de 12 episódios prévios) e tilt test com padrão cardioinibitório (bradicardia <40 bpm por 10 segundos ou assistolia >3 segundos) para 12 meses de estimulação DDD-CLS seguidos de 12 meses de modo sham DDI a 30 pulsos/min, ou a sequência inversa. A proporção de pacientes com redução ≥50% no número de episódios de síncope foi de 72% (IC95% 47%-90%) com DDD-CLS versus 28% (IC95% 9,7%-53,5%) com sham (p=0,017). Eventos (recorrência de síncope) ocorreram em 4 pacientes (8,7%) durante DDD-CLS e em 21 (45,7%) durante sham — razão de risco de 6,7 (IC95% 2,3-19,8). O tempo até a primeira síncope foi de 29,2 meses (IC95% 15,3-29,2) com DDD-CLS versus 9,3 meses (IC95% 6,21-não estimável) com sham (odds ratio 0,11; IC95% 0,03-0,37; p<0,0001). Os autores concluem que a estimulação DDD-CLS reduziu significativamente a carga de síncope e prolongou em cerca de 7 vezes o tempo até a recorrência em pacientes ≥40 anos com síncope vasovagal cardioinibitória induzida por tilt test, comparada à estimulação simulada — perfil que coincide com o da paciente do caso.",
+    "source_refs": [
+      "Baron-Esquivias G, Morillo CA, Moya-Mitjans A, Martinez-Alday J, Ruiz-Granell R, Lacunza-Ruiz J, Garcia-Civera R, Gutierrez-Carretero E, Romero-Garrido R. Dual-Chamber Pacing With Closed Loop Stimulation in Recurrent Reflex Vasovagal Syncope: The SPAIN Study. J Am Coll Cardiol. 2017;70(14):1720-1728. DOI: 10.1016/j.jacc.2017.08.026. PMID: 28958328."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "precondicionamento-isquemico-remoto-em-cirurgia-cardiaca-eletiva-estudo-ripheart",
+    "titulo": "Precondicionamento isquêmico remoto antes de revascularização miocárdica eletiva: vale a pena fazer?",
+    "tema": "Perioperatório",
+    "nivel": "intermediário",
+    "enunciado": "Homem de 68 anos será submetido a cirurgia de revascularização miocárdica eletiva com circulação extracorpórea, sob anestesia venosa total com propofol. Durante o planejamento anestésico, um residente sugere realizar precondicionamento isquêmico remoto (RIPC) — três a quatro ciclos de insuflação e desinsuflação de manguito no braço antes da cirurgia — como medida adjuvante para reduzir lesão miocárdica, renal e neurológica perioperatória, técnica que ele leu ser barata e sem risco.",
+    "pergunta": "Segundo o ensaio RIPHeart (Meybohm et al., NEJM 2015) — multicêntrico, prospectivo, duplo-cego, em pacientes submetidos a cirurgia cardíaca eletiva com circulação extracorpórea sob anestesia com propofol —, qual foi o efeito do RIPC de membro superior sobre o desfecho composto de morte, infarto do miocárdio, AVC ou insuficiência renal aguda até a alta hospitalar?",
+    "opcoes": [
+      "Não houve diferença significativa no desfecho composto nem em nenhum de seus componentes isolados entre o grupo RIPC e o grupo com procedimento simulado (sham)",
+      "O RIPC reduziu significativamente o desfecho composto em cerca de um terço em comparação ao sham",
+      "O RIPC aumentou significativamente a incidência de AVC, levando à interrupção precoce do estudo por motivo de segurança",
+      "O RIPC reduziu apenas a mortalidade isolada, sem impacto nos demais componentes do desfecho composto"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O RIPHeart randomizou 1.403 pacientes; o conjunto de análise completa teve 1.385 pacientes (692 no grupo RIPC e 693 no grupo sham), submetidos a cirurgia cardíaca eletiva com circulação extracorpórea sob anestesia venosa total com propofol. O desfecho composto primário (morte, infarto do miocárdio, AVC ou insuficiência renal aguda até a alta) ocorreu em 99 pacientes (14,3%) do grupo RIPC e em 101 (14,6%) do grupo sham, sem diferença significativa (p=0,89). Também não houve diferença em nenhum componente isolado: morte (1,3% vs. 0,6%; p=0,21), infarto do miocárdio (6,8% vs. 9,1%; p=0,12), AVC (2,0% vs. 2,2%; p=0,79) e insuficiência renal aguda (6,1% vs. 5,1%; p=0,45). Os resultados foram semelhantes na análise por protocolo, sem efeito de tratamento em nenhuma subanálise, e sem diferença em liberação de troponina, tempo de ventilação mecânica, tempo de internação em UTI/hospital, fibrilação atrial nova ou delirium pós-operatório. Nenhum evento adverso relacionado ao RIPC foi observado. Os autores concluem que o RIPC de membro superior, realizado sob anestesia com propofol, não trouxe benefício relevante nessa população — resultado que não respalda a sugestão do residente no caso, apesar de a técnica ser de fato de baixo risco.",
+    "source_refs": [
+      "Meybohm P, Bein B, Brosteanu O, Cremer J, Gruenewald M, Stoppe C, Coburn M, Schaelte G, Böning A, Niemann B, et al; RIPHeart Study Collaborators. A Multicenter Trial of Remote Ischemic Preconditioning for Heart Surgery. N Engl J Med. 2015;373(15):1397-1407. DOI: 10.1056/NEJMoa1413579. PMID: 26436208."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "mialgia-atribuida-a-estatina-reexposicao-estruturada-estudo-statinwise",
+    "titulo": "Mialgia atribuída à estatina: o StatinWISE respalda a reexposição estruturada antes de abandonar a classe?",
+    "tema": "Farmacologia",
+    "nivel": "intermediário",
+    "enunciado": "Homem de 58 anos, em prevenção secundária após infarto do miocárdio, relata mialgia difusa há duas semanas do início de atorvastatina 20 mg, atribui o sintoma à estatina e pede para suspendê-la definitivamente. A creatinoquinase está normal. Ele já teve queixa muscular semelhante com sinvastatina anos atrás, também sem elevação de CK, e sempre evitou estatina desde então.",
+    "pergunta": "O estudo StatinWISE (Herrett et al., BMJ 2021) — série de ensaios n-of-1 randomizados, duplo-cegos, controlados por placebo, em pacientes que já haviam relatado sintomas musculares com estatina — comparou, no mesmo paciente, ciclos repetidos de atorvastatina 20 mg e de placebo. O que o estudo encontrou sobre a relação entre a estatina e os sintomas musculares nessa população?",
+    "opcoes": [
+      "Não houve diferença no escore de sintomas musculares entre os períodos com estatina e com placebo, achado compatível com efeito nocebo relevante em parte considerável dos casos",
+      "A estatina causou sintomas musculares significativamente piores que o placebo na quase totalidade dos participantes, confirmando a miopatia por estatina como fenômeno predominantemente farmacológico",
+      "O estudo não conseguiu gerar conclusão por falha de adesão ao protocolo em mais de 80% dos participantes",
+      "A diferença entre estatina e placebo só apareceu em doses acima de 40 mg, não se aplicando à dose de 20 mg do caso"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O StatinWISE randomizou 200 participantes que haviam recentemente parado ou estavam considerando parar o uso de estatina por sintomas musculares para uma sequência de seis períodos duplo-cegos de dois meses cada, alternando atorvastatina 20 mg e placebo. Dos 151 participantes que forneceram escores de sintomas em pelo menos um período de estatina e um de placebo (análise primária), não houve diferença no escore de sintomas musculares (escala visual analógica de 0 a 10) entre os períodos com estatina e com placebo: diferença média estatina menos placebo de -0,11 (IC95% -0,36 a 0,14; p=0,40). As retiradas por sintomas musculares intoleráveis foram semelhantes entre os grupos: 18 participantes (9%) durante período de estatina e 13 (7%) durante período de placebo. Dois terços dos que completaram o ensaio pretendiam retomar o tratamento de longo prazo com estatina. Os autores concluem que não houve efeito global da atorvastatina 20 mg sobre sintomas musculares em comparação ao placebo nessa população que já atribuía sintomas graves à estatina, e que ensaios n-of-1 permitem avaliar o efeito do fármaco tanto no nível do grupo quanto para guiar a decisão individual — resultado que respalda propor ao paciente do caso uma reexposição estruturada e cega antes de abandonar definitivamente a classe.",
+    "source_refs": [
+      "Herrett E, Williamson E, Brack K, Beaumont D, Perkins A, Thayne A, Shakur-Still H, Roberts I, Prowse D, Goldacre B, et al; StatinWISE Trial Group. Statin treatment and muscle symptoms: series of randomised, placebo controlled n-of-1 trials. BMJ. 2021;372:n135. DOI: 10.1136/bmj.n135. PMID: 33627334."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "colete-desfibrilador-vestivel-pos-infarto-com-feve-reduzida-vest",
+    "titulo": "Colete cardioversor-desfibrilador após infarto com FEVE reduzida: o VEST resolveu a lacuna dos primeiros 40 dias?",
+    "tema": "Dispositivos",
+    "nivel": "intermediário",
+    "enunciado": "Homem de 58 anos sofre infarto agudo do miocárdio com supra de ST anterior extenso. No ecocardiograma pré-alta, a FEVE está em 30%. Ele está fora da janela de indicação de CDI definitivo, que exige aguardar 40 a 90 dias após o infarto para reavaliar a função ventricular. A equipe discute prescrever um colete cardioversor-desfibrilador vestível (WCD) para uso domiciliar até a reavaliação, associado à terapia farmacológica guiada por diretriz.",
+    "pergunta": "De acordo com o ensaio VEST (Olgin et al., NEJM 2018), qual foi o resultado do colete desfibrilador vestível para o desfecho primário de morte arrítmica, e qual limitação prática do estudo mais compromete a interpretação desse resultado?",
+    "opcoes": [
+      "O colete reduziu significativamente a morte arrítmica (RR 0,67; IC95% 0,37-1,21; p=0,18), confirmando indicação obrigatória em toda a janela pós-infarto",
+      "O desfecho primário de morte arrítmica não atingiu significância estatística (1,6% no grupo dispositivo vs. 2,4% no controle; RR 0,67; IC95% 0,37-1,21; p=0,18); a adesão foi limitada — mediana de 18,0 horas/dia de uso — e, dos 48 óbitos ocorridos no grupo dispositivo, apenas 12 pacientes estavam de fato usando o colete no momento da morte",
+      "O estudo demonstrou aumento importante de choques inadequados (acima de 10% dos pacientes), o que contraindicaria o uso do colete nesta população",
+      "O CDI transvenoso definitivo deveria ser implantado imediatamente após a alta hospitalar, dispensando o período de espera de 40 a 90 dias, com base nos resultados do VEST"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "No VEST (2302 participantes, 1524 no grupo dispositivo e 778 no grupo controle, todos com FEVE ≤35% após IAM), a mediana de uso do colete foi de apenas 18,0 horas/dia (intervalo interquartil 3,8-22,7), evidenciando adesão heterogênea. O desfecho primário — morte arrítmica (súbita ou por taquiarritmia ventricular) em 90 dias — ocorreu em 1,6% do grupo dispositivo vs. 2,4% do grupo controle (RR 0,67; IC95% 0,37-1,21; p=0,18), sem significância estatística. A mortalidade por qualquer causa foi numericamente menor no grupo dispositivo (3,1% vs. 4,9%; RR 0,64; IC95% 0,43-0,98), mas esse foi um desfecho secundário com p não corrigido de 0,04, o que não sustenta conclusão de benefício definitivo. A morte não arrítmica também não diferiu significativamente (1,4% vs. 2,2%; RR 0,63; IC95% 0,33-1,19; p não corrigido =0,15). Dos 48 óbitos no grupo dispositivo, só 12 pacientes estavam de fato vestindo o colete no momento do evento — o que ajuda a explicar por que um dispositivo eficaz em detectar e tratar arritmia (20 pacientes, 1,3%, receberam choque apropriado; 9, 0,6%, choque inapropriado) não se traduziu em redução estatisticamente significativa do desfecho primário: a baixa adesão dilui o efeito potencial. O estudo não respalda indicação obrigatória do colete nem antecipação do CDI definitivo, que continua indicado só após reavaliação da FEVE em 40-90 dias.",
+    "source_refs": [
+      "Olgin JE, Pletcher MJ, Vittinghoff E, et al; VEST Investigators. Wearable Cardioverter-Defibrillator after Myocardial Infarction. N Engl J Med. 2018;379(13):1205-1215. DOI: 10.1056/NEJMoa1800781. PMID: 30280654"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hipertrigliceridemia-em-diabetico-com-ldl-ja-controlado-pemafibrato-prominent",
+    "titulo": "Diabetes tipo 2 com triglicerídeos altos e LDL já controlado: o pemafibrato reduz eventos cardiovasculares? (PROMINENT)",
+    "tema": "Prevenção e lipídios",
+    "nivel": "avançado",
+    "enunciado": "Mulher de 64 anos, diabetes tipo 2 e doença coronariana prévia, está em uso de estatina de alta intensidade com LDL de 76 mg/dL. Os exames mostram triglicerídeos de 280 mg/dL e HDL de 32 mg/dL, persistentemente alterados apesar do LDL já controlado. O cardiologista considera associar pemafibrato, modulador seletivo do PPAR-α, na expectativa de reduzir o risco cardiovascular residual atribuído à hipertrigliceridemia.",
+    "pergunta": "Segundo o ensaio PROMINENT (Das Pradhan et al., NEJM 2022), qual foi o efeito do pemafibrato sobre o desfecho cardiovascular composto, apesar da redução expressiva dos triglicerídeos?",
+    "opcoes": [
+      "O pemafibrato reduziu os triglicerídeos em 26,2% mas não reduziu o desfecho cardiovascular composto (HR 1,03; IC95% 0,91-1,15) e ainda se associou a mais eventos renais adversos e tromboembolismo venoso",
+      "O pemafibrato reduziu tanto os triglicerídeos (26,2%) quanto os eventos cardiovasculares maiores, confirmando a hipótese do risco residual por triglicerídeos",
+      "O estudo foi interrompido precocemente por benefício cardiovascular inequívoco do pemafibrato, de forma semelhante ao observado com icosapente etílico no REDUCE-IT",
+      "O pemafibrato não teve efeito sobre nenhum parâmetro lipídico, alterando apenas a incidência de esteatose hepática não alcoólica"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "No PROMINENT (10.497 pacientes com diabetes tipo 2, hipertrigliceridemia leve a moderada e HDL ≤40 mg/dL, 66,9% com doença cardiovascular prévia; triglicerídeos basais medianos de 271 mg/dL, HDL 33 mg/dL, LDL já em 78 mg/dL sob terapia hipolipemiante guiada por diretriz), o pemafibrato reduziu, aos 4 meses, triglicerídeos em 26,2%, colesterol VLDL em 25,8%, colesterol remanescente em 25,6% e apolipoproteína C-III em 27,6% — mas AUMENTOU apolipoproteína B em 4,8%. Apesar dessa melhora lipídica expressiva, o desfecho primário composto (infarto não fatal, AVC isquêmico, revascularização coronariana ou morte cardiovascular) ocorreu em 572 pacientes do grupo pemafibrato e 560 do grupo placebo, ao longo de mediana de 3,4 anos de seguimento (HR 1,03; IC95% 0,91-1,15), sem qualquer modificação de efeito nos subgrupos pré-especificados. A incidência global de eventos adversos graves não diferiu, mas o pemafibrato se associou a maior incidência de eventos renais adversos e de tromboembolismo venoso, e a menor incidência de doença hepática gordurosa não alcoólica. O caso ilustra que reduzir um biomarcador substituto (triglicerídeos) não garante redução de desfecho clínico duro — a hipótese do risco residual por triglicerídeos não se confirmou neste ensaio.",
+    "source_refs": [
+      "Das Pradhan A, Glynn RJ, Fruchart JC, et al; PROMINENT Investigators. Triglyceride Lowering with Pemafibrate to Reduce Cardiovascular Risk. N Engl J Med. 2022;387(21):1923-1934. DOI: 10.1056/NEJMoa2210645. PMID: 36342113"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "diabetes-tipo-2-em-saxagliptina-internado-por-insuficiencia-cardiaca-savor-timi-53",
+    "titulo": "Diabetes tipo 2 em uso de saxagliptina, internado por insuficiência cardíaca descompensada: há relação com o fármaco? (SAVOR-TIMI 53)",
+    "tema": "Diabetes e cardiologia",
+    "nivel": "intermediário",
+    "enunciado": "Homem de 66 anos, diabetes tipo 2 há 12 anos e doença arterial coronariana estabelecida, em uso de saxagliptina para controle glicêmico, é internado com dispneia, estase jugular e edema de membros inferiores, quadro compatível com insuficiência cardíaca descompensada, sem evento isquêmico agudo associado. A equipe questiona se o inibidor de DPP-4 pode ter contribuído para a descompensação e se deve ser suspenso.",
+    "pergunta": "De acordo com o SAVOR-TIMI 53 (Scirica et al., NEJM 2013), qual foi o efeito da saxagliptina sobre o desfecho isquêmico primário e sobre a hospitalização por insuficiência cardíaca?",
+    "opcoes": [
+      "A saxagliptina não alterou o risco do desfecho isquêmico primário (HR 1,00; IC95% 0,89-1,12) mas aumentou significativamente a hospitalização por insuficiência cardíaca (3,5% vs. 2,8%; HR 1,27; IC95% 1,07-1,51; p=0,007)",
+      "A saxagliptina reduziu significativamente tanto os eventos isquêmicos quanto as hospitalizações por insuficiência cardíaca, configurando benefício de classe para os inibidores de DPP-4",
+      "A saxagliptina aumentou significativamente a incidência de pancreatite aguda, que foi o principal motivo de interrupção precoce do estudo",
+      "O estudo não atingiu o critério de não inferioridade para o desfecho isquêmico primário, o que motivou a retirada do fármaco do mercado"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "No SAVOR-TIMI 53 (16.492 pacientes com diabetes tipo 2 com histórico de evento cardiovascular ou em risco para ele, seguidos por mediana de 2,1 anos), o desfecho primário composto (morte cardiovascular, infarto do miocárdio ou AVC isquêmico) ocorreu em 7,3% do grupo saxagliptina e 7,2% do grupo placebo (HR 1,00; IC95% 0,89-1,12; p=0,99 para superioridade; p<0,001 para não inferioridade) — sem diferença. O desfecho secundário mais amplo (acrescentando hospitalização por angina instável, revascularização coronariana ou insuficiência cardíaca) também não diferiu (12,8% vs. 12,4%; HR 1,02; IC95% 0,94-1,11; p=0,66). Porém, isoladamente, a hospitalização por insuficiência cardíaca foi significativamente maior no grupo saxagliptina: 3,5% vs. 2,8% (HR 1,27; IC95% 1,07-1,51; p=0,007). As taxas de pancreatite aguda e crônica adjudicadas foram semelhantes entre os grupos (aguda: 0,3% vs. 0,2%; crônica: <0,1% vs. 0,1%), então não foi esse o achado de segurança relevante do estudo. A conclusão dos autores é explícita: a inibição de DPP-4 com saxagliptina não aumentou nem diminuiu a taxa de eventos isquêmicos, mas aumentou a hospitalização por insuficiência cardíaca — achado que deve pesar na escolha do agente antidiabético em pacientes com IC ou risco elevado para ela.",
+    "source_refs": [
+      "Scirica BM, Bhatt DL, Braunwald E, et al; SAVOR-TIMI 53 Steering Committee and Investigators. Saxagliptin and Cardiovascular Outcomes in Patients with Type 2 Diabetes Mellitus. N Engl J Med. 2013;369(14):1317-1326. DOI: 10.1056/NEJMoa1307684. PMID: 23992601"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "icfer-alto-risco-titulacao-guiada-por-nt-probnp-guide-it",
+    "titulo": "IC com fração reduzida de alto risco: titular a terapia guiada por NT-proBNP melhora desfechos? (GUIDE-IT)",
+    "tema": "Insuficiência cardíaca",
+    "nivel": "intermediário",
+    "enunciado": "Mulher de 61 anos, IC com FEVE de 28%, internação por descompensação há dois meses e NT-proBNP persistentemente elevado apesar de terapia otimizada. O cardiologista considera adotar uma estratégia de titulação guiada por dosagens seriadas de NT-proBNP, com meta de reduzir o marcador para menos de 1.000 pg/mL, esperando que isso reduza hospitalizações e mortalidade cardiovascular em comparação ao cuidado usual baseado só nas diretrizes.",
+    "pergunta": "De acordo com o GUIDE-IT (Felker et al., JAMA 2017), a estratégia guiada por NT-proBNP reduziu o desfecho composto de hospitalização por IC ou mortalidade cardiovascular em relação ao cuidado usual?",
+    "opcoes": [
+      "Sim: a estratégia guiada por biomarcador reduziu significativamente o desfecho composto, e o estudo foi interrompido precocemente por benefício",
+      "Não: o estudo foi interrompido precocemente por futilidade, com o desfecho primário ocorrendo em 37% dos pacientes em ambos os grupos (HR ajustado 0,98; IC95% 0,79-1,22; p=0,88), sem diferença também na mortalidade cardiovascular isolada",
+      "A titulação guiada por NT-proBNP aumentou significativamente a mortalidade cardiovascular em relação ao cuidado usual, o que motivou a suspensão do protocolo",
+      "O estudo não conseguiu recrutar pacientes suficientes e foi encerrado sem nenhum dado de eficácia analisável"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O GUIDE-IT planejava randomizar 1.100 pacientes com IC e FEVE ≤40%, natriurético elevado nos 30 dias anteriores e evento prévio de IC, para estratégia guiada por NT-proBNP (meta <1.000 pg/mL, n=446) ou cuidado usual conforme diretriz (n=448, sem dosagem seriada estimulada). O comitê de monitorização recomendou interromper o estudo por futilidade após 894 pacientes randomizados (idade mediana 63 anos, 32% mulheres), com seguimento mediano de apenas 15 meses. O desfecho primário — tempo até a primeira hospitalização por IC ou morte cardiovascular — ocorreu em 164 pacientes (37%) no grupo guiado por biomarcador e em 164 pacientes (37%) no grupo de cuidado usual (HR ajustado 0,98; IC95% 0,79-1,22; p=0,88). A mortalidade cardiovascular isolada também não diferiu: 12% (n=53) vs. 13% (n=57) (HR 0,94; IC95% 0,65-1,37; p=0,75). Nenhum dos desfechos secundários, nem a magnitude da queda do NT-proBNP alcançada, diferiu significativamente entre os grupos. A conclusão dos autores é que, em pacientes de alto risco com FEVE reduzida, a estratégia guiada por NT-proBNP não foi mais eficaz que o cuidado usual — reforçando que a titulação da quadriterapia conforme diretriz, sem depender de meta numérica de biomarcador, é a abordagem sustentada por evidência.",
+    "source_refs": [
+      "Felker GM, Anstrom KJ, Adams KF, et al; GUIDE-IT Investigators. Effect of Natriuretic Peptide-Guided Therapy on Hospitalization or Cardiovascular Mortality in High-Risk Patients With Heart Failure and Reduced Ejection Fraction: A Randomized Clinical Trial. JAMA. 2017;318(8):713-720. DOI: 10.1001/jama.2017.10565. PMID: 28829876"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "alto-risco-vascular-em-ieca-associar-arb-para-bloqueio-duplo-do-sraa-ontarget",
+    "titulo": "Paciente de alto risco vascular já em IECA: associar um BRA para bloqueio duplo do SRAA reduz eventos? (ONTARGET)",
+    "tema": "Hipertensão",
+    "nivel": "intermediário",
+    "enunciado": "Homem de 67 anos, diabetes tipo 2 e doença arterial periférica, em uso de ramipril 10 mg/dia, mantém pressão arterial de 148/88 mmHg. Um colega sugere associar telmisartana ao ramipril, argumentando que o bloqueio duplo do sistema renina-angiotensina-aldosterona reduziria mais a pressão e, consequentemente, o risco cardiovascular.",
+    "pergunta": "De acordo com o ONTARGET (Yusuf et al., NEJM 2008), qual foi o resultado da combinação de ramipril e telmisartana em relação ao ramipril isolado, no desfecho cardiovascular composto e na segurança renal?",
+    "opcoes": [
+      "A combinação reduziu significativamente o desfecho cardiovascular composto (RR 0,99; IC95% 0,92-1,07) sem aumento de eventos adversos, o que justifica o bloqueio duplo do SRAA como rotina",
+      "A combinação não reduziu o desfecho composto em relação ao ramipril isolado (16,3% vs. 16,5%; RR 0,99; IC95% 0,92-1,07) e aumentou significativamente hipotensão sintomática (4,8% vs. 1,7%; p<0,001), síncope (0,3% vs. 0,2%; p=0,03) e disfunção renal (13,5% vs. 10,2%; p<0,001)",
+      "A telmisartana isolada foi superior ao ramipril isolado na redução do desfecho cardiovascular composto, tornando-a a primeira escolha nesse perfil de risco",
+      "O estudo não avaliou desfechos renais, apenas o desfecho cardiovascular composto maior"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "No ONTARGET (25.620 pacientes com doença vascular ou diabetes de alto risco, sem insuficiência cardíaca, randomizados após período de run-in em simples-cego, seguidos por mediana de 56 meses), o grupo telmisartana (n=8.542) teve redução pressórica 0,9/0,6 mmHg maior que o ramipril isolado (n=8.576), e o grupo combinação (n=8.502) teve redução 2,4/1,4 mmHg maior. Ainda assim, o desfecho primário composto (morte cardiovascular, infarto, AVC ou hospitalização por insuficiência cardíaca) ocorreu em proporção semelhante nos três grupos: 16,5% com ramipril, 16,7% com telmisartana (RR 1,01; IC95% 0,94-1,09) e 16,3% com a combinação (RR 0,99; IC95% 0,92-1,07 em relação ao ramipril) — nenhuma diferença estatisticamente significativa. A telmisartana isolada foi equivalente ao ramipril, com menos tosse (1,1% vs. 4,2%; p<0,001) e menos angioedema (0,1% vs. 0,3%; p=0,01), mas mais sintomas hipotensivos (2,6% vs. 1,7%; p<0,001); a taxa de síncope foi igual (0,2% nos dois grupos). Já a combinação, apesar de reduzir mais a pressão, não reduziu o desfecho cardiovascular e aumentou significativamente sintomas hipotensivos (4,8% vs. 1,7%; p<0,001), síncope (0,3% vs. 0,2%; p=0,03) e disfunção renal (13,5% vs. 10,2%; p<0,001) em comparação ao ramipril isolado. A conclusão dos autores é direta: a combinação de IECA e BRA aumentou eventos adversos sem ganho de benefício — o bloqueio duplo do SRAA não deve ser adotado como estratégia rotineira de controle pressórico neste perfil de paciente.",
+    "source_refs": [
+      "ONTARGET Investigators, Yusuf S, Teo KK, Pogue J, et al. Telmisartan, Ramipril, or Both in Patients at High Risk for Vascular Events. N Engl J Med. 2008;358(15):1547-1559. DOI: 10.1056/NEJMoa0801317. PMID: 18378520"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hap-recem-diagnosticada-terapia-tripla-inicial-versus-dupla-ensaio-triton",
+    "titulo": "HAP recém-diagnosticada: começar com três drogas orais reduz mais a resistência vascular pulmonar do que duas? O ensaio TRITON",
+    "tema": "Hipertensão pulmonar",
+    "nivel": "avançado",
+    "enunciado": "Mulher de 34 anos com hipertensão arterial pulmonar idiopática recém-diagnosticada, classe funcional III, virgem de qualquer tratamento vasodilatador, com resistência vascular pulmonar (RVP) elevada no cateterismo direito. A equipe multidisciplinar discute se deve iniciar de imediato terapia tripla oral — macitentana, tadalafila e selexipague — ou começar com a dupla oral (macitentana e tadalafila) e reavaliar depois.",
+    "pergunta": "De acordo com o ensaio TRITON (Chin et al., JACC 2021), iniciar terapia tripla oral (macitentana, tadalafila e selexipague) reduziu significativamente mais a resistência vascular pulmonar em 26 semanas, em comparação com a dupla terapia (macitentana, tadalafila e placebo)?",
+    "opcoes": [
+      "Sim — a RVP caiu significativamente mais no grupo triplo (redução de 54% vs. 30%, p<0,01)",
+      "Não — as duas estratégias reduziram a RVP de forma semelhante (54% vs. 52%), sem diferença significativa no desfecho primário (razão de médias geométricas 0,96; IC95% 0,86-1,07; p=0,42)",
+      "Não foi possível avaliar a RVP, porque o desfecho primário do TRITON foi mortalidade em 1 ano",
+      "Sim, mas a diferença de RVP só apareceu após 1 ano de seguimento, não nas 26 semanas do desfecho primário"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O TRITON (NCT02558231) randomizou 247 pacientes com HAP recém-diagnosticada, virgens de tratamento, para terapia tripla inicial (macitentana, tadalafila, selexipague; n=123) ou terapia dupla inicial (macitentana, tadalafila, placebo; n=124). Na semana 26, a RVP caiu 54% no grupo triplo e 52% no grupo duplo, sem diferença significativa entre os grupos (razão de médias geométricas: 0,96; IC95% 0,86-1,07; p=0,42) — o desfecho primário não foi atingido. A distância percorrida em 6 minutos e o NT-proBNP também melhoraram em ambos os grupos, sem diferença. Em análise exploratória, o risco de progressão da doença até o fim do período de observação principal foi numericamente menor com a terapia tripla (razão de risco: 0,59; IC95% 0,32-1,09), e houve 2 óbitos no grupo triplo contra 9 no grupo duplo até o fim do período. Os eventos adversos mais comuns com a terapia tripla foram cefaleia, diarreia e náusea. Conclusão dos autores: as duas estratégias reduzem marcadamente a RVP sem diferença significativa (desfecho primário negativo), mas análises exploratórias sugerem um possível sinal de melhores desfechos a longo prazo com a terapia tripla inicial — um sinal, não uma prova, e não deve ser lido como se o desfecho primário tivesse sido positivo.",
+    "source_refs": [
+      "Chin KM, Sitbon O, Doelberg M, Feldman J, Gibbs JSR, Grünig E, Hoeper MM, Martin N, Mathai SC, McLaughlin VV, Perchenet L, Poch D, Saggar R, Simonneau G, Galiè N. Three- Versus Two-Drug Therapy for Patients With Newly Diagnosed Pulmonary Arterial Hypertension. J Am Coll Cardiol. 2021 Oct 5;78(14):1393-1403. DOI: 10.1016/j.jacc.2021.07.057. PMID: 34593120."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "grace-2-0-versus-grace-original-discriminacao-nao-linear-na-sca",
+    "titulo": "Escore GRACE 2.0: por que ele discrimina melhor do que o GRACE original na síndrome coronariana aguda?",
+    "tema": "Calculadoras",
+    "nivel": "intermediário",
+    "enunciado": "Homem de 68 anos é admitido com síndrome coronariana aguda sem supra de ST. O plantonista calcula o escore GRACE original somando pontos por faixas discretas de idade, pressão arterial sistólica, frequência cardíaca e creatinina, como aprendeu na residência. Um colega sugere usar a calculadora GRACE 2.0 do celular, dizendo apenas que \"ela prediz melhor\", sem saber explicar o motivo.",
+    "pergunta": "O que fundamenta a maior discriminação do GRACE 2.0 em relação ao escore GRACE original, segundo o estudo de derivação e validação externa de Fox et al. (BMJ Open, 2014)?",
+    "opcoes": [
+      "O GRACE 2.0 acrescentou troponina e peptídeo natriurético ao modelo, variáveis ausentes no escore original",
+      "O GRACE 2.0 substituiu as associações lineares por não lineares para idade, pressão arterial sistólica, pulso e creatinina, melhorando a discriminação (índice c acima de 0,82 para óbito na validação externa)",
+      "O GRACE 2.0 é validado só para SCA com supra de ST, por isso discrimina melhor nesse subgrupo específico",
+      "O GRACE 2.0 elimina a necessidade da classe Killip, o que reduz o erro de coleta de dados à beira do leito"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O GRACE risk score 2.0 foi derivado em 32.037 pacientes do registro GRACE (14 países, 94 hospitais) e validado externamente na coorte francesa FAST-MI 2005. Para os principais preditores independentes de óbito em 1 ano, os autores encontraram associações não lineares (em vez de lineares) para idade (p<0,0005), pressão arterial sistólica (p<0,0001), pulso (p<0,0001) e creatinina (p<0,0001). Ao empregar esses algoritmos não lineares, houve melhora na discriminação do modelo, confirmada na validação externa: na coorte FAST-MI 2005, o índice c para óbito ultrapassou 0,82 na população geral tanto em 1 quanto em 3 anos. A discriminação para o composto óbito ou infarto foi um pouco menor (c=0,78). Resultados semelhantes foram obtidos em sobreviventes hospitalares, e o modelo funcionou quase tão bem quando se usaram substituições para creatinina ou classe Killip ausentes. Conclusão dos autores: o GRACE 2.0 tem discriminação melhor e é mais fácil de usar do que o escore anterior baseado em associações lineares, funcionando bem tanto na fase aguda quanto no longo prazo.",
+    "source_refs": [
+      "Fox KA, Fitzgerald G, Puymirat E, Huang W, Carruthers K, Simon T, Coste P, Monsegu J, Gabriel Steg P, Danchin N, Anderson F. Should patients with acute coronary disease be stratified for management according to their risk? Derivation, external validation and outcomes using the updated GRACE risk score. BMJ Open. 2014 Feb 21;4(2):e004425. DOI: 10.1136/bmjopen-2013-004425. PMID: 24561498."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cardioprotecao-com-enalapril-preventiva-ou-guiada-por-troponina-ensaio-icos-one",
+    "titulo": "Cardioproteção com enalapril na quimioterapia com antraciclina: começar em todas as pacientes, ou só quando a troponina subir? O ensaio ICOS-ONE",
+    "tema": "Cardio-oncologia",
+    "nivel": "intermediário",
+    "enunciado": "Mulher de 49 anos, sem hipertensão nem diabetes, inicia quimioterapia adjuvante com epirrubicina para câncer de mama. O oncologista pergunta ao cardio-oncologista se deve prescrever enalapril profilático a todas as pacientes de baixo risco cardiovascular já a partir do primeiro ciclo, ou se é preferível monitorizar a troponina a cada ciclo e só iniciar enalapril em quem apresentar elevação.",
+    "pergunta": "No ensaio ICOS-ONE (Cardinale et al., European Journal of Cancer, 2018), qual estratégia — enalapril iniciado em todas as pacientes antes da quimioterapia (\"prevenção\") ou enalapril iniciado só após elevação de troponina (\"guiado por troponina\") — resultou em menor incidência de elevação de troponina?",
+    "opcoes": [
+      "Enalapril iniciado em todas as pacientes antes da quimioterapia (estratégia de prevenção universal), com incidência de troponina elevada nitidamente menor do que na estratégia guiada",
+      "Nenhuma diferença relevante: a incidência de elevação de troponina foi semelhante entre a estratégia de prevenção (23%) e a guiada por troponina (26%), p=0,50",
+      "A estratégia guiada por troponina, porque reduziu a incidência de troponina elevada para menos de 5%",
+      "O estudo não avaliou troponina como desfecho — só fração de ejeção do ventrículo esquerdo"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O ICOS-ONE foi um ensaio controlado, aberto, com 273 pacientes (88% mulheres, idade média 51±12 anos, 76% com câncer de mama, 3% com hipertensão prévia, 4% diabéticas), tratadas majoritariamente com epirrubicina (dose cumulativa mediana 360 mg/m²) ou doxorrubicina (240 mg/m²). Pacientes foram randomizadas para enalapril iniciado antes da quimioterapia em todas (braço \"prevenção\") ou enalapril iniciado só quando a troponina subisse acima do limiar (braço \"guiado por troponina\"). A incidência de elevação de troponina foi 23% no braço de prevenção e 26% no braço guiado por troponina, sem diferença significativa (p=0,50). Apenas 3 pacientes (1,1% do total) desenvolveram cardiotoxicidade, definida como queda de 10 pontos percentuais na FEVE para valor abaixo de 50% — duas no braço de prevenção e uma no braço guiado por troponina. Interpretação dos autores: em doses cumulativas baixas de antraciclina, em pacientes adultas de baixo risco cardiovascular, as duas estratégias de uso de enalapril tiveram desempenho semelhante quanto à elevação de troponina; considerando o benefício do enalapril na prevenção de disfunção ventricular, uma estratégia guiada por troponina pode ser mais conveniente do que expor todas as pacientes ao fármaco desde o início.",
+    "source_refs": [
+      "Cardinale D, Ciceri F, Latini R, Franzosi MG, Sandri MT, Civelli M, Cucchi G, Menatti E, Mangiavacchi M, Cavina R, Barbieri E, Gori S, Colombo A, Curigliano G, et al; ICOS-ONE Study Investigators. Anthracycline-induced cardiotoxicity: A multicenter randomised trial comparing two strategies for guiding prevention with enalapril: The International CardioOncology Society-one trial. Eur J Cancer. 2018 May;94:126-137. DOI: 10.1016/j.ejca.2018.02.005. PMID: 29567630."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "audiobooklet-de-decisao-sobre-antitrombotico-na-fa-aumenta-o-conhecimento-do-paciente",
+    "titulo": "Um audiobooklet de decisão sobre aspirina versus varfarina na FA muda o quanto o paciente entende sobre o próprio risco?",
+    "tema": "Comunicação clínica",
+    "nivel": "básico",
+    "enunciado": "Paciente de 74 anos, fibrilação atrial de baixo risco, vinha em uso de aspirina dentro do estudo SPAF III e agora, com os resultados do estudo em mãos, precisa decidir junto ao cardiologista se troca para varfarina. O ambulatório está avaliando adotar um material estruturado de apoio à decisão (folheto associado a áudio explicativo) além da orientação verbal habitual, para ajudar nessa conversa.",
+    "pergunta": "No ensaio randomizado de Man-Son-Hing et al. (JAMA, 1999), o uso de um audiobooklet de decisão, comparado aos cuidados habituais isolados, teve qual efeito sobre o conhecimento do paciente a respeito dos riscos de AVC e de hemorragia com cada opção de tratamento?",
+    "opcoes": [
+      "Não mudou o conhecimento — mudou apenas a satisfação relatada com o processo de decisão",
+      "Piorou o conhecimento, porque o volume de informação gerou mais confusão do que clareza",
+      "Aumentou o conhecimento: 53%-80% dos pacientes do grupo audiobooklet estimaram corretamente os diferentes riscos, contra 16%-28% no grupo de cuidados habituais",
+      "Não houve diferença, porque os dois grupos já haviam participado do mesmo estudo clínico (SPAF III) e partiam do mesmo conhecimento prévio"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O ensaio incluiu 287 pacientes da coorte de aspirina do SPAF III, randomizados para receber os resultados do estudo com cuidados habituais mais um audiobooklet (AB) de decisão, ou cuidados habituais isolados (controle). Mais pacientes do grupo AB chegaram a uma decisão definitiva sobre a terapia antitrombótica do que no grupo controle (99% vs. 94%; p=0,02). Quanto ao conhecimento, os pacientes do grupo AB foram mais bem informados e tiveram expectativas mais realistas sobre os riscos de AVC e hemorragia: no grupo AB, entre 53% e 80% estimaram corretamente os diferentes riscos, contra apenas 16% a 28% no grupo controle. O conflito decisório e a satisfação com o processo foram semelhantes entre os grupos. Após 6 meses, uma proporção semelhante de pacientes ainda seguia a escolha inicial de tratamento antitrombótico (95% vs. 93%; p=0,44) — ou seja, o audiobooklet melhorou a compreensão dos riscos e ajudou a chegar a uma decisão, mas não alterou a adesão à escolha feita nem o conflito decisório.",
+    "source_refs": [
+      "Man-Son-Hing M, Laupacis A, O'Connor AM, Biggs J, Drake E, Yetisir E, Hart RG. A patient decision aid regarding antithrombotic therapy for stroke prevention in atrial fibrillation: a randomized controlled trial. JAMA. 1999 Aug 25;282(8):737-743. DOI: 10.1001/jama.282.8.737. PMID: 10463708."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "quantos-passos-por-dia-realmente-reduzem-a-mortalidade-metanalise-de-paluch",
+    "titulo": "\"Preciso mesmo andar 10 mil passos?\" O que a metanálise de 15 coortes internacionais mostrou",
+    "tema": "Geral",
+    "nivel": "básico",
+    "enunciado": "Paciente de 58 anos, sedentário, sem doença cardiovascular estabelecida, pergunta na consulta se precisa necessariamente atingir 10.000 passos por dia — meta que viu num aplicativo de celular — ou se um número menor de passos já traria benefício relevante em termos de mortalidade.",
+    "pergunta": "Segundo a metanálise de dados individuais de Paluch et al. (Lancet Public Health, 2022), reunindo 47.471 adultos de 15 coortes internacionais, o que se observou sobre o número de passos diários e a mortalidade por todas as causas?",
+    "opcoes": [
+      "Só há benefício a partir de exatamente 10.000 passos/dia; abaixo desse valor não houve redução de risco",
+      "O risco de mortalidade caiu progressivamente com mais passos diários, com platô em torno de 6.000-8.000 passos/dia em pessoas com 60 anos ou mais e de 8.000-10.000 em menores de 60 anos; comparado ao quartil mais baixo (mediana 3.553 passos/dia), o risco relativo ajustado no quartil mais alto (mediana 10.901 passos/dia) foi de 0,47 (IC95% 0,39-0,57)",
+      "O número de passos não se associou à mortalidade depois do ajuste para idade e sexo",
+      "Só a velocidade da caminhada (cadência), e não o total de passos, previu mortalidade"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A metanálise reuniu 15 estudos (7 publicados, 8 inéditos), somando 47.471 adultos e 3.013 óbitos, com seguimento mediano de 7,1 anos. Os quartis de passos por dia tiveram mediana de 3.553 (Q1), 5.801 (Q2), 7.842 (Q3) e 10.901 (Q4). Comparado ao quartil mais baixo, o risco relativo ajustado de mortalidade por todas as causas foi 0,60 (IC95% 0,51-0,71) no Q2, 0,55 (0,49-0,62) no Q3 e 0,47 (0,39-0,57) no Q4. Curvas de spline restrita mostraram redução progressiva do risco de mortalidade com mais passos diários, com platô em torno de 6.000-8.000 passos/dia entre os 60 anos ou mais e de 8.000-10.000 passos/dia entre os menores de 60 anos — ou seja, não existe um único corte universal de 10.000 passos, e o platô varia por idade. Quanto ao ritmo da caminhada, ao ajustar para o total de passos, mais tempo caminhando num pico de 30 minutos (RR 0,67; IC95% 0,56-0,83) ou 60 minutos (0,67; 0,50-0,90) ainda se associou a menor mortalidade, mas o tempo gasto caminhando a 40 passos/min ou mais (RR 1,12; 0,96-1,32) ou a 100 passos/min ou mais (0,86; 0,58-1,28) deixou de ser significativo — sugerindo que o total de passos pesa mais do que a cadência isolada.",
+    "source_refs": [
+      "Paluch AE, Bajpai S, Bassett DR, Carnethon MR, Ekelund U, Evenson KR, Galuska DA, Jefferis BJ, Kraus WE, Lee IM, et al; Steps for Health Collaborative. Daily steps and all-cause mortality: a meta-analysis of 15 international cohorts. Lancet Public Health. 2022 Mar;7(3):e219-e228. DOI: 10.1016/S2468-2667(21)00302-9. PMID: 35247352."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "estresse-psicossocial-e-depressao-como-fator-de-risco-de-infarto-interheart",
+    "titulo": "Estresse no trabalho, estresse financeiro e depressão aumentam o risco de infarto? O que o INTERHEART mostrou em 52 países",
+    "tema": "Saúde mental e cardiologia",
+    "nivel": "intermediário",
+    "enunciado": "Homem de 52 anos, sem diagnóstico prévio de doença coronariana, relata na consulta de rotina estresse permanente no trabalho e sintomas depressivos há vários meses, além dos fatores de risco tradicionais (tabagismo e dislipidemia). Ele pergunta se esse \"lado emocional\" realmente pesa tanto quanto colesterol e pressão arterial no risco de ter um infarto.",
+    "pergunta": "No estudo caso-controle INTERHEART (Rosengren et al., Lancet, 2004), com 11.119 casos de primeiro infarto e 13.648 controles pareados por idade e sexo em 52 países, qual foi a associação entre estresse permanente no trabalho e depressão com o risco de infarto, após ajuste para idade, sexo, região geográfica e tabagismo?",
+    "opcoes": [
+      "Nenhuma associação significativa foi encontrada após o ajuste — os fatores psicossociais eram consequência do infarto, não causa",
+      "Estresse permanente no trabalho teve razão de chances (OR) de 2,14 (IC99% 1,73-2,64) e depressão teve OR de 1,55 (IC99% 1,42-1,69) para infarto, ajustados para idade, sexo, região geográfica e tabagismo",
+      "Só o estresse financeiro se associou ao infarto; estresse no trabalho e depressão não atingiram significância estatística",
+      "A associação só foi observada em homens; em mulheres os fatores psicossociais não se associaram ao infarto"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O INTERHEART avaliou 24.767 pessoas em 262 centros de 52 países. Estresse permanente no trabalho no ano anterior esteve presente em 10,0% (540) dos casos contra 5,0% (372) dos controles, com OR de 2,14 (IC99% 1,73-2,64); vários períodos de estresse no trabalho tiveram OR de 1,38 (1,19-1,61). Estresse permanente em casa teve OR de 2,12 (1,68-2,65), e o estresse geral (trabalho, casa ou ambos) teve OR de 2,17 (1,84-2,55) para estresse permanente e 1,45 (1,30-1,61) para vários períodos. Estresse financeiro grave foi mais frequente em casos (14,6% vs. 12,2%; OR 1,33; IC99% 1,19-1,48), assim como eventos de vida estressantes no ano anterior (16,1% vs. 13,0%; OR 1,48; 1,33-1,64). A depressão esteve presente em 24,0% (2.673) dos casos contra 17,6% (2.404) dos controles, com OR de 1,55 (IC99% 1,42-1,69). Os autores destacam explicitamente que essas diferenças foram consistentes entre regiões, grupos étnicos diferentes e em homens e mulheres — não é um achado restrito a um sexo ou a uma população. Conclusão: a presença de estressores psicossociais, incluindo depressão, associa-se a maior risco de infarto agudo do miocárdio, com magnitude de efeito comparável à de fatores de risco tradicionais bem estabelecidos.",
+    "source_refs": [
+      "Rosengren A, Hawken S, Ounpuu S, Sliwa K, Zubaid M, Almahmeed WA, Blackett KN, Sitthi-amorn C, Sato H, Yusuf S; INTERHEART investigators. Association of psychosocial risk factors with risk of acute myocardial infarction in 11119 cases and 13648 controls from 52 countries (the INTERHEART study): case-control study. Lancet. 2004 Sep 11-17;364(9438):953-962. DOI: 10.1016/S0140-6736(04)17019-0. PMID: 15364186."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "obesidade-em-gestante-com-cardiopatia-estrutural-risco-adicional-ao-escore-carpreg-ii",
+    "titulo": "Obesidade em gestante com cardiopatia estrutural: risco adicional ao escore CARPREG II?",
+    "tema": "Gravidez",
+    "nivel": "intermediário",
+    "enunciado": "Gestante de 29 anos, com valvopatia reumática moderada (estenose mitral leve-moderada) diagnosticada na adolescência, comparece à primeira consulta de pré-natal em programa conjunto de obstetrícia e cardiologia. IMC atual: 33 kg/m² (obesidade grau I). Ela pergunta se o excesso de peso, isoladamente, aumenta o risco de complicação cardíaca durante a gestação, já que o escore de risco (CARPREG II) calculado não inclui o IMC entre suas variáveis.",
+    "pergunta": "Segundo o estudo de coorte prospectivo de Pfaller et al. (JACC 2021), que avaliou 790 gestações em mulheres com cardiopatia estrutural, qual afirmação está correta sobre o impacto da obesidade?",
+    "opcoes": [
+      "A obesidade (IMC ≥30 kg/m²) foi um preditor independente de eventos cardíacos na gestação, mesmo após ajuste pelo escore CARPREG II, com odds ratio de 1,7 (IC95% 1,0-2,7)",
+      "A obesidade não teve associação estatisticamente significativa com eventos cardíacos maternos nesta coorte, sendo o CARPREG II suficiente para estimar o risco isoladamente",
+      "A obesidade só aumentou o risco de pré-eclâmpsia, sem qualquer relação com eventos cardíacos maternos compostos",
+      "A obesidade reduziu o risco de eventos cardíacos, possivelmente por maior reserva hemodinâmica, o que reforça que o IMC não precisa ser incorporado à avaliação pré-natal"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "No estudo de coorte prospectivo de Pfaller B et al. (Impact of Obesity on Outcomes of Pregnancy in Women With Heart Disease, JACC 2021;77(10):1317-1326, PMID 33706874), de 790 gestações em mulheres com cardiopatia estrutural, 19% ocorreram em mulheres com obesidade (IMC ≥30 kg/m²). Mulheres obesas tiveram maior risco de eventos cardíacos compostos (morte/parada cardíaca, arritmia, IC, IAM, AVC, dissecção aórtica, TEV) comparadas às de peso normal (23% vs. 14%; p=0,006). Em modelo multivariável, tanto a obesidade (OR 1,7; IC95% 1,0-2,7) quanto o escore CARPREG II mais alto (OR 1,7; IC95% 1,5-1,9) foram preditores independentes de eventos cardíacos — ou seja, a obesidade acrescenta risco além do que o escore já capta. A pré-eclâmpsia também foi mais frequente nas obesas (8% vs. 2%; p=0,001). Os autores concluem que a obesidade é fator de risco modificável que deve ser abordado no aconselhamento pré-concepcional de mulheres com cardiopatia estrutural.",
+    "source_refs": [
+      "Pfaller B, Siu SC, D'Souza R, Wichert-Schmitt B, Kumar Nair GK, Haberer K, Maxwell C, Silversides CK. Impact of Obesity on Outcomes of Pregnancy in Women With Heart Disease. J Am Coll Cardiol. 2021 Mar 16;77(10):1317-1326. DOI: 10.1016/j.jacc.2021.01.010. PMID: 33706874"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sindrome-do-qt-longo-congenito-risco-cardiaco-maior-na-gestacao-ou-no-puerperio",
+    "titulo": "Síndrome do QT longo congênito: o risco de evento cardíaco é maior durante a gestação ou depois dela?",
+    "tema": "Gravidez",
+    "nivel": "intermediário",
+    "enunciado": "Mulher de 26 anos com diagnóstico confirmado de síndrome do QT longo tipo 2 (mutação em KCNH2), em uso de betabloqueador desde a adolescência, está grávida de 32 semanas e pergunta sobre o risco de síncope ou morte súbita nos próximos meses — durante o restante da gestação e depois do parto.",
+    "pergunta": "Com base no estudo de Seth et al. (JACC 2007), que acompanhou 391 mulheres com síndrome do QT longo desde antes da primeira gestação até após o parto, em que período do ciclo gravídico-puerperal o risco de evento cardíaco (síncope, parada cardíaca abortada ou morte súbita) é maior?",
+    "opcoes": [
+      "Durante a gestação propriamente dita, quando o volume circulante e a frequência cardíaca basal estão mais altos",
+      "Nos 9 meses após o parto, período em que o risco aumentou (HR 2,7; IC95% 1,8-4,3) em comparação ao período anterior à primeira gestação",
+      "O risco é uniformemente distribuído entre gestação e puerpério, sem diferença estatística entre os períodos",
+      "O risco só aumenta a partir de 12 meses após o parto, quando a maioria das mulheres já interrompeu o betabloqueador"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "No estudo de Seth R et al. (Long QT syndrome and pregnancy, JACC 2007;49(10):1092-8, PMID 17349890), que analisou 391 primeiras gestações em mulheres com LQTS, o período gestacional em si foi associado a risco REDUZIDO de evento cardíaco comparado ao período pré-concepcional (HR 0,28; IC95% 0,10-0,76; p=0,01), mas os 9 meses de puerpério tiveram risco aumentado (HR 2,7; IC95% 1,8-4,3; p<0,001). Após esse período de 9 meses, o risco voltou a se equiparar ao basal (HR 0,91; IC95% 0,55-1,5; p=0,70). Mulheres com genótipo LQT2 tiveram mais eventos que as com LQT1 ou LQT3. O uso de betabloqueador reduziu o risco no período puerperal de alto risco (HR 0,34; IC95% 0,14-0,84; p=0,02) — reforçando que a medicação deve ser mantida, e a vigilância intensificada, justamente depois do parto, não durante a gestação.",
+    "source_refs": [
+      "Seth R, Moss AJ, McNitt S, Zareba W, Andrews ML, Qi M, Robinson JL, Goldenberg I, Ackerman MJ, Benhorin J, Kaufman ES, Locati EH, Napolitano C, Priori SG, Schwartz PJ, Towbin JA, Vincent GM, Zhang L. Long QT syndrome and pregnancy. J Am Coll Cardiol. 2007 Mar 13;49(10):1092-8. DOI: 10.1016/j.jacc.2006.09.054. PMID: 17349890"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "levosimendana-terapeutica-apos-cirurgia-cardiaca-com-baixo-debito-o-ensaio-cheetah",
+    "titulo": "Baixo débito cardíaco após cirurgia cardíaca: levosimendana terapêutica reduz mortalidade? O ensaio CHEETAH",
+    "tema": "Terapia intensiva",
+    "nivel": "avançado",
+    "enunciado": "Paciente de 68 anos, no 1º dia pós-operatório de revascularização miocárdica, evolui com síndrome de baixo débito cardíaco necessitando suporte hemodinâmico na UTI, apesar de otimização volêmica e inotrópico convencional. A equipe discute associar levosimendana ao tratamento padrão, citando metanálises de estudos pequenos que sugeriam maior sobrevida com o fármaco nesse contexto.",
+    "pergunta": "O ensaio CHEETAH (Landoni et al., NEJM 2017), multicêntrico, randomizado, duplo-cego e controlado por placebo, testou levosimendana em pacientes com necessidade de suporte hemodinâmico perioperatório após cirurgia cardíaca. Qual foi o resultado sobre mortalidade em 30 dias?",
+    "opcoes": [
+      "Levosimendana reduziu significativamente a mortalidade em 30 dias em relação ao placebo, confirmando as metanálises prévias",
+      "O estudo foi interrompido precocemente por futilidade: mortalidade em 30 dias foi 12,9% com levosimendana e 12,8% com placebo (diferença de risco 0,1 ponto percentual; IC95% -5,7 a 5,9; p=0,97), sem benefício",
+      "Levosimendana aumentou significativamente a mortalidade em 30 dias em relação ao placebo, levando à suspensão precoce do fármaco por dano",
+      "O estudo não avaliou mortalidade, apenas tempo de internação em UTI, que foi menor com levosimendana"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O CHEETAH (Landoni G et al., Levosimendan for Hemodynamic Support after Cardiac Surgery, NEJM 2017;376(21):2021-2031, PMID 28320259) randomizou 506 pacientes com necessidade de suporte hemodinâmico perioperatório após cirurgia cardíaca para levosimendana (infusão contínua 0,025-0,2 mcg/kg/min) ou placebo, além do tratamento padrão, e foi interrompido precocemente por futilidade. Mortalidade em 30 dias: 12,9% (32/248) com levosimendana vs. 12,8% (33/258) com placebo — diferença de risco 0,1 ponto percentual (IC95% -5,7 a 5,9; p=0,97). Também não houve diferença em tempo de ventilação mecânica (mediana 19 vs. 21 horas; p=0,48), tempo de UTI (72 vs. 84 horas; p=0,09) ou internação hospitalar (14 vs. 14 dias; p=0,39), nem em hipotensão ou arritmia cardíaca. O resultado contrasta com o uso PROFILÁTICO de levosimendana antes da cirurgia em paciente de alto risco (ensaio LEVO-CTS, já registrado nesta biblioteca) — são cenários diferentes (profilaxia vs. tratamento de baixo débito já instalado), e nenhum dos dois demonstrou benefício de mortalidade com o fármaco.",
+    "source_refs": [
+      "Landoni G, Lomivorotov VV, Alvaro G, Lobreglio R, Pisano A, Guarracino F, et al; CHEETAH Study Group. Levosimendan for Hemodynamic Support after Cardiac Surgery. N Engl J Med. 2017 May 25;376(21):2021-2031. DOI: 10.1056/NEJMoa1616325. PMID: 28320259"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "tev-agudo-apixabana-isolada-oral-versus-enoxaparina-e-varfarina-o-ensaio-amplify",
+    "titulo": "TEV agudo: apixabana oral isolada substitui a terapia convencional com enoxaparina e varfarina? O ensaio AMPLIFY",
+    "tema": "Tromboembolismo",
+    "nivel": "intermediário",
+    "enunciado": "Paciente de 54 anos, sem câncer ativo nem insuficiência renal grave, é diagnosticado com trombose venosa profunda proximal aguda sintomática. A equipe discute iniciar apixabana em esquema de dose alta inicial seguida de dose de manutenção, sem heparina parenteral concomitante, em vez do esquema convencional com enoxaparina em ponte para varfarina.",
+    "pergunta": "No ensaio AMPLIFY (Agnelli et al., NEJM 2013), que comparou apixabana isolada (10 mg 2x/dia por 7 dias, depois 5 mg 2x/dia) com enoxaparina seguida de varfarina em 5.395 pacientes com TEV agudo, qual foi o resultado de eficácia e segurança?",
+    "opcoes": [
+      "Apixabana foi inferior à terapia convencional na prevenção de TEV recorrente, mas com menos sangramento",
+      "Apixabana foi não inferior à terapia convencional para o desfecho primário de eficácia (2,3% vs. 2,7%; RR 0,84; IC95% 0,60-1,18) e associada a menos sangramento maior (0,6% vs. 1,8%; RR 0,31; IC95% 0,17-0,55; p<0,001)",
+      "Apixabana teve eficácia semelhante, mas triplicou o risco de sangramento maior em relação à terapia convencional",
+      "O estudo não atingiu o desfecho de não inferioridade e foi interrompido precocemente por excesso de eventos trombóticos no grupo apixabana"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "No AMPLIFY (Agnelli G et al., Oral Apixaban for the Treatment of Acute Venous Thromboembolism, NEJM 2013;369(9):799-808, PMID 23808982), 5.395 pacientes com TEV agudo foram randomizados para apixabana isolada (10 mg 2x/dia por 7 dias, depois 5 mg 2x/dia por 6 meses) ou terapia convencional (enoxaparina subcutânea seguida de varfarina). O desfecho primário de eficácia (TEV recorrente sintomático ou morte relacionada a TEV) ocorreu em 2,3% (59/2.609) no grupo apixabana vs. 2,7% (71/2.635) no grupo convencional (RR 0,84; IC95% 0,60-1,18; diferença de risco -0,4 pontos percentuais; IC95% -1,3 a 0,4), confirmando não inferioridade (p<0,001) tanto pelo limite de RR quanto pelo de diferença de risco pré-especificados. Sangramento maior ocorreu em 0,6% com apixabana vs. 1,8% com terapia convencional (RR 0,31; IC95% 0,17-0,55; p<0,001 para superioridade), e o composto de sangramento maior + clinicamente relevante não maior foi 4,3% vs. 9,7% (RR 0,44; IC95% 0,36-0,55; p<0,001). O regime de dose fixa oral, sem heparina parenteral inicial, simplifica o tratamento ambulatorial do TEV agudo sem sacrificar segurança.",
+    "source_refs": [
+      "Agnelli G, Buller HR, Cohen A, Curto M, Gallus AS, Johnson M, Masiukiewicz U, Pak R, Thompson J, Raskob GE, Weitz JI; AMPLIFY Investigators. Oral apixaban for the treatment of acute venous thromboembolism. N Engl J Med. 2013 Aug 29;369(9):799-808. DOI: 10.1056/NEJMoa1302507. PMID: 23808982"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "fa-nao-valvar-dabigatrana-em-duas-doses-versus-varfarina-o-ensaio-re-ly",
+    "titulo": "Fibrilação atrial não valvar: dabigatrana em qual dose comparada à varfarina? O ensaio RE-LY",
+    "tema": "Fibrilação atrial",
+    "nivel": "intermediário",
+    "enunciado": "Paciente de 71 anos com fibrilação atrial não valvar e CHA₂DS₂-VASc de 3 pontos está em investigação inicial de anticoagulação oral. A equipe discute as opções de dabigatrana 110 mg e 150 mg duas vezes ao dia frente à varfarina ajustada por INR, e o paciente pergunta se as duas doses de dabigatrana têm o mesmo perfil de eficácia e segurança.",
+    "pergunta": "No ensaio RE-LY (Connolly et al., NEJM 2009), que randomizou 18.113 pacientes com FA e risco de AVC para dabigatrana 110 mg, dabigatrana 150 mg (ambas cegas) ou varfarina ajustada (aberta), qual descreve corretamente os resultados de AVC/embolia sistêmica e sangramento maior?",
+    "opcoes": [
+      "As duas doses de dabigatrana foram idênticas entre si em eficácia e segurança, ambas superiores à varfarina em todos os desfechos",
+      "Dabigatrana 110 mg foi não inferior à varfarina para AVC/embolia sistêmica (1,53%/ano vs. 1,69%/ano) com menos sangramento maior (2,71% vs. 3,36%/ano; p=0,003); dabigatrana 150 mg foi superior à varfarina para AVC/embolia sistêmica (1,11%/ano; RR 0,66; IC95% 0,53-0,82) com sangramento maior semelhante (3,11% vs. 3,36%/ano; p=0,31)",
+      "Ambas as doses de dabigatrana foram inferiores à varfarina para prevenção de AVC/embolia sistêmica, mas com menor taxa de sangramento maior",
+      "O estudo não comparou doses diferentes de dabigatrana, testando apenas uma dose fixa de 150 mg contra varfarina"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O RE-LY (Connolly SJ et al., Dabigatran versus Warfarin in Patients with Atrial Fibrillation, NEJM 2009;361(12):1139-1151, PMID 19717844) randomizou 18.113 pacientes com FA e risco de AVC para dabigatrana 110 mg 2x/dia (cego), dabigatrana 150 mg 2x/dia (cego) ou varfarina ajustada por INR (aberto), com seguimento mediano de 2 anos. O desfecho primário (AVC ou embolia sistêmica) ocorreu em 1,69%/ano com varfarina, 1,53%/ano com dabigatrana 110 mg (RR 0,91; IC95% 0,74-1,11; p<0,001 para não inferioridade) e 1,11%/ano com dabigatrana 150 mg (RR 0,66; IC95% 0,53-0,82; p<0,001 para superioridade). Sangramento maior: 3,36%/ano com varfarina, 2,71%/ano com dabigatrana 110 mg (p=0,003, menor) e 3,11%/ano com dabigatrana 150 mg (p=0,31, semelhante). AVC hemorrágico foi menor com as duas doses de dabigatrana (0,12% e 0,10%/ano) que com varfarina (0,38%/ano; p<0,001 nas duas comparações). Ou seja, as duas doses NÃO são equivalentes entre si: a de 110 mg prioriza segurança (menos sangramento, eficácia não inferior) e a de 150 mg prioriza eficácia (menos AVC isquêmico, sangramento maior comparável à varfarina) — a escolha entre elas depende do perfil de risco hemorrágico versus trombótico do paciente.",
+    "source_refs": [
+      "Connolly SJ, Ezekowitz MD, Yusuf S, Eikelboom J, Oldgren J, Parekh A, Pogue J, Reilly PA, Themeles E, Varrone J, Wang S, Alings M, Xavier D, Zhu J, Diaz R, Lewis BS, Darius H, Diener HC, Joyner CD, Wallentin L; RE-LY Steering Committee and Investigators. Dabigatran versus warfarin in patients with atrial fibrillation. N Engl J Med. 2009 Sep 17;361(12):1139-1151. DOI: 10.1056/NEJMoa0905561. PMID: 19717844"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "fv-refrataria-a-tres-choques-pre-hospitalar-desfibrilacao-sequencial-dupla-ou-troca-de-vetor-o-ensaio-dose-vf",
+    "titulo": "Fibrilação ventricular refratária a três choques no atendimento pré-hospitalar: desfibrilação sequencial dupla ou troca de vetor? O ensaio DOSE VF",
+    "tema": "Arritmias",
+    "nivel": "avançado",
+    "enunciado": "Paciente sofre parada cardiorrespiratória extra-hospitalar em fibrilação ventricular. Após três choques com o desfibrilador padrão (posição ântero-lateral), o ritmo permanece em FV refratária. A equipe de resgate está treinada em duas estratégias alternativas de desfibrilação para essa situação: desfibrilação sequencial dupla (dois desfibriladores em sequência rápida) e troca de vetor (reposicionamento das pás para a posição ântero-posterior).",
+    "pergunta": "No ensaio DOSE VF (Cheskes et al., NEJM 2022), randomizado por clusters com crossover em serviços de paramédicos canadenses, comparando desfibrilação padrão, desfibrilação sequencial dupla (DSED) e troca de vetor (VC) em FV refratária, qual foi o resultado de sobrevida até a alta hospitalar?",
+    "opcoes": [
+      "Nenhuma das duas estratégias alternativas superou a desfibrilação padrão; a sobrevida foi semelhante nos três grupos",
+      "A troca de vetor foi superior à DSED, e a DSED não diferiu da desfibrilação padrão",
+      "Sobrevida até a alta foi maior com DSED (30,4% vs. 13,3%; RR 2,21; IC95% 1,33-3,67) e também maior com troca de vetor (21,7% vs. 13,3%; RR 1,71; IC95% 1,01-2,88), ambas comparadas à desfibrilação padrão",
+      "O estudo foi interrompido por excesso de mortalidade nos grupos de estratégia alternativa, antes de completar o recrutamento planejado"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O DOSE VF (Cheskes S et al., Defibrillation Strategies for Refractory Ventricular Fibrillation, NEJM 2022;387(21):1947-1956, PMID 36342151) foi um ensaio randomizado por clusters com crossover em 6 serviços de paramédicos canadenses, comparando desfibrilação padrão, desfibrilação sequencial dupla (DSED, choques rápidos e sequenciais de dois desfibriladores) e troca de vetor (VC, pás em posição ântero-posterior) em pacientes com FV refratária em parada cardíaca extra-hospitalar. O estudo foi interrompido pelo comitê de segurança após 405 pacientes por causa da pandemia de COVID-19 (não por dano). Sobrevida até a alta hospitalar foi maior com DSED que com desfibrilação padrão (30,4% vs. 13,3%; RR 2,21; IC95% 1,33-3,67) e também maior com VC que com padrão (21,7% vs. 13,3%; RR 1,71; IC95% 1,01-2,88). Bom desfecho neurológico (Rankin modificado ≤2 na alta) foi mais frequente com DSED (RR 2,21; IC95% 1,26-3,88), mas a diferença com VC não atingiu significância robusta (RR 1,48; IC95% 0,81-2,71). O achado motivou a incorporação da DSED como estratégia de resgate em protocolos de FV refratária a três choques.",
+    "source_refs": [
+      "Cheskes S, Verbeek PR, Drennan IR, McLeod SL, Turner L, Pinto R, Feldman M, Davis M, Vaillancourt C, Morrison LJ, Dorian P, Scales DC. Defibrillation Strategies for Refractory Ventricular Fibrillation. N Engl J Med. 2022 Nov 24;387(21):1947-1956. DOI: 10.1056/NEJMoa2207304. PMID: 36342151"
+    ],
+    "review_status": "revisado"
   }
 ]
