@@ -1,0 +1,47 @@
+---
+title: "Hipertensão Pulmonar e Cirurgia Não Cardíaca: Risco Perioperatório e Estratificação"
+slug: hipertensao-pulmonar-e-cirurgia-nao-cardiaca-risco-perioperatorio-e-estratificacao
+theme: "Hipertensão pulmonar"
+kind: protocolo
+review_status: revisado
+source_refs: ["Rajagopal S, Ruetzler K, Ghadimi K, et al; American Heart Association Council on Cardiopulmonary, Critical Care, Perioperative and Resuscitation, and the Council on Cardiovascular and Stroke Nursing. Evaluation and Management of Pulmonary Hypertension in Noncardiac Surgery: A Scientific Statement From the American Heart Association. Circulation. 2023;147(17):1317-1343. DOI: 10.1161/CIR.0000000000001136. PMID: 36924225", "Ramakrishna G, Sprung J, Ravi BS, Chandrasekaran K, McGoon MD. Impact of pulmonary hypertension on the outcomes of noncardiac surgery: predictors of perioperative morbidity and mortality. J Am Coll Cardiol. 2005;45(10):1691-1699. DOI: 10.1016/j.jacc.2005.02.055. PMID: 15893189", "Meyer S, McLaughlin VV, Seyfarth HJ, et al. Outcomes of noncardiac, nonobstetric surgery in patients with PAH: an international prospective survey. Eur Respir J. 2013;41(6):1302-1307. DOI: 10.1183/09031936.00089212. PMID: 23143546"]
+legacy_source: "Documento novo, escrito em 01/08/2026. Fecha lacuna real do tema: a biblioteca já cobre HAP na gestação (outro cenário de alto risco), mas não havia nenhum documento sobre risco cirúrgico não cardíaco/perioperatório — pergunta recorrente quando um paciente com HAP precisa de procedimento eletivo ou de urgência fora do coração."
+---
+
+# Hipertensão Pulmonar e Cirurgia Não Cardíaca: Risco Perioperatório e Estratificação
+
+## Por que este cenário é diferente
+Cirurgia não cardíaca em paciente com hipertensão pulmonar (HP) — sobretudo HAP (grupo 1) e HP tromboembólica crônica (CTEPH, grupo 4) — não é uma variação de risco cardiovascular comum: é um cenário em que anestesia geral, ventilação mecânica, perda sanguínea e resposta inflamatória cirúrgica podem, isolados ou combinados, precipitar **falência aguda de ventrículo direito (VD)** num ventrículo que já opera com reserva limitada contra pós-carga elevada. Ao contrário do risco cardíaco geral (avaliado por escores como o RCRI), **a HP não constava, até recentemente, como fator de risco independente listado nas diretrizes gerais de avaliação perioperatória** — é justamente essa lacuna que levou a American Heart Association (AHA) a publicar, em 2023, a primeira declaração científica dedicada ao tema (Rajagopal et al., Circulation 2023, PMID 36924225).
+
+## A magnitude do risco, com números de coorte
+Dois estudos de coorte, um retrospectivo e um prospectivo internacional, quantificam o que a impressão clínica já sugeria:
+
+- **Ramakrishna et al. (Mayo Clinic, JACC 2005, PMID 15893189)** — coorte retrospectiva de **145 pacientes** com HP confirmada por ecocardiograma (pressão sistólica de VD média de **68 mmHg**) submetidos a cirurgia não cardíaca. **Mortalidade perioperatória precoce: 7% (10 óbitos)**. **Morbidade: 42% (60 pacientes)** com pelo menos uma complicação, média de 1,8 evento por paciente afetado. Preditores independentes de morbidade: história de embolia pulmonar (p=0,01), classe funcional NYHA ≥ II (p=0,02), cirurgia de risco intermediário a alto (p=0,04) e duração da anestesia > 3 horas. Preditores de mortalidade: história de embolia pulmonar, desvio de eixo para a direita e hipertrofia de VD no ECG, índice de performance miocárdica do VD ≥ 0,75, razão PSVD/pressão sistólica sistêmica ≥ 0,66, uso intraoperatório de vasopressor e anestesia sem óxido nitroso.
+- **Meyer et al. (registro internacional prospectivo, 11 centros, Eur Respir J 2013, PMID 23143546)** — **114 pacientes com HAP** (não HP em geral) submetidos a cirurgia maior não cardíaca e não obstétrica entre 2007 e 2010. **Mortalidade perioperatória global: 3,5% (4 óbitos)**, subindo para **15% em cirurgia de urgência** contra **2% em cirurgia eletiva**. Complicações maiores em **6,1%**. Fatores associados a complicação: pressão de átrio direito elevada, distância percorrida no teste de caminhada de 6 minutos **< 399 m** na última avaliação pré-operatória, uso de vasopressor no perioperatório e necessidade de cirurgia de urgência.
+
+**Leitura conjunta, sem escolher um número "oficial":** a mortalidade varia de ~3,5% (HAP especificamente, eletiva, centro de referência) a 7-15% (HP em geral, ou cenário de urgência) — a declaração da AHA sintetiza essa faixa como **2-7% em cirurgia eletiva e até 15% em cirurgia de urgência** para HAP grave. O determinante mais consistente entre os dois estudos não é a gravidade hemodinâmica isolada, é o **caráter de urgência do procedimento**.
+
+## A abordagem em cinco etapas da AHA 2023
+A declaração científica não propõe um escore único validado — e é explícita sobre isso: **nenhum dos escores de risco cirúrgico geral existentes foi validado para estratificação de risco antes de cirurgia não cardíaca em HP**. Em vez de um número, propõe um processo estruturado em cinco etapas:
+
+1. **Classificação do grupo de HP** — a fisiopatologia (pré-capilar vs. pós-capilar, resistência vascular pulmonar fixa vs. reversível) muda o risco e a resposta a intervenção mais do que o valor isolado da pressão pulmonar.
+2. **Avaliação de risco pré-operatória**, orientando a decisão cirúrgica (operar, adiar, ou reconsiderar a via de acesso/porte do procedimento).
+3. **Otimização da HP antes da cirurgia**, incluindo, em casos selecionados, uso transitório de prostaciclina parenteral para reduzir o risco perioperatório.
+4. **Manejo intraoperatório** dirigido a evitar disfunção aguda de VD e manter débito cardíaco — não apenas controlar a pressão pulmonar isoladamente.
+5. **Manejo pós-operatório** por ao menos 24 horas, período em que fluidoterapia, dor, hipóxia e hipercapnia residuais continuam podendo elevar agudamente a resistência vascular pulmonar.
+
+**Avaliação de função de VD é mandatória** — ecocardiograma (e, quando disponível, ressonância cardíaca) antes de qualquer procedimento eletivo em paciente com HP conhecida, porque é a reserva de VD, não a pressão pulmonar isolada, que determina a tolerância ao estresse cirúrgico.
+
+## O que eleva o risco, na prática
+Cruzando os três documentos:
+- **Urgência/emergência é o fator isolado mais consistente** — sem tempo para otimizar volemia, medicação específica e função de VD, o risco medido salta de forma reprodutível nos dois estudos de coorte (2% → 15%; achado paralelo em Ramakrishna).
+- **Classe funcional NYHA/OMS ≥ II** e **capacidade de exercício reduzida** (teste de caminhada de 6 minutos abaixo de ~400 m) sinalizam reserva de VD já comprometida antes mesmo da cirurgia.
+- **Porte cirúrgico intermediário a alto** e **anestesia prolongada (> 3 horas)** aumentam exposição a hipotensão, hipóxia e manipulação de volume — cada um capaz de elevar agudamente a resistência vascular pulmonar.
+- **Necessidade de vasopressor intraoperatório** aparece como preditor em ambos os estudos — mais como marcador de instabilidade hemodinâmica já instalada do que como causa isolada.
+
+## Armadilhas clínicas
+- **Tratar a HP como "mais um fator de risco cardiovascular" no escore geral (RCRI) é o erro estrutural que a própria AHA está corrigindo**: até esta declaração de 2023, a HP não figurava explicitamente nos algoritmos gerais de avaliação perioperatória — um paciente com HAP bem otimizada e classe funcional I pode ter risco cirúrgico menor do que sugere um escore genérico, e o inverso também é verdadeiro.
+- **Não existe escore validado específico para este cenário** — qualquer ferramenta emprestada de outro contexto (RCRI, índice de Lee) subestima o risco por não capturar reserva de VD.
+- **Cirurgia eletiva vale otimização prévia; cirurgia de urgência não permite esse tempo** — é a variável que mais move a mortalidade nos dois estudos de coorte, e deve pesar na decisão de via de acesso (minimamente invasiva vs. aberta) e no nível de monitorização/suporte disponível, não apenas na indicação em si.
+- **O período de risco não termina na sala de cirurgia**: a declaração da AHA estende o manejo ativo por pelo menos 24 horas de pós-operatório — extubação, analgesia e reposição volêmica mal conduzidas nesse intervalo podem precipitar a mesma descompensação de VD que a otimização pré-operatória tentou evitar.
+- **Decisão de operar ou adiar é multidisciplinar por desenho**, não prerrogativa isolada do cirurgião ou do anestesista — a própria declaração nomeia cardiologista/especialista em HP, cirurgião, anestesista e, quando disponível, perfusionista como parte mínima da equipe.
