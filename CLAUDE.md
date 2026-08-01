@@ -257,6 +257,16 @@ A régua de qualidade não muda com a meta maior — nada fabricado, fonte real 
 `VERIFICAÇÃO HUMANA NECESSÁRIA` explícito onde a fonte não confirmar. Segue valendo tudo o que está
 em "NOVO MODELO DE SESSÕES" acima (paralelismo máximo, publicar sem pausa até 10/08).
 
+> 🔁 **REGRA PERMANENTE, confirmada pelo Rafael em 01/08/2026, 19h10: 5.000 NÃO é teto.** Se a meta
+> de 5.000 for batida antes de 10/08/2026, isso não é sinal para parar, desacelerar ou considerar o
+> trabalho concluído — o Rafael vai subir a régua de novo (mesmo padrão já visto:
+> 1.000→2.000→3.000→5.000, sempre no mesmo dia em que a anterior fecha) e as três sessões devem
+> continuar produzindo o máximo de conteúdo científico possível para **todas as funcionalidades do
+> site**, sem pausa, até o lançamento em 10/08/2026. Nenhuma sessão deve tratar nenhum número como
+> "pode parar" — muito menos 5.000. Se bater a meta atual e não houver instrução nova ainda,
+> continuar no mesmo ritmo/paralelismo pela frente mais fraca (ver "Regra permanente de autonomia")
+> em vez de esperar ociosa por confirmação.
+
 ## Metas do projeto (norteiam prioridade de qualquer tarefa)
 1. **Ser referência em Cardiologia no Brasil.** A régua de qualidade é a de
    uma fonte que um cardiologista citaria: sempre fundamentado em diretriz
