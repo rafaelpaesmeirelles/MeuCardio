@@ -1890,6 +1890,32 @@ conferidos: **54 disco = 54 banco = 54 publicados**.
 `medicamentos` 89 · `galeria` 74 · `exames` 73 · `casos-clinicos` **54** · `trilhas` **30** ·
 `emergencia` 24 · `checklists` 9 · `material-paciente` 11. **Faltam 219 para os 2.000.**
 
+**Terceira leva, mesmo dia — trilhas: 30 → 35.** Depois de fechar as 27 lacunas de tema e o 2º caso
+nos 10 temas rasos, olhei para o outro lado da métrica: temas com **muito** documento e só 1
+trilha. Os 5 maiores (Farmacologia 100 docs, Fibrilação atrial 28, Prevenção e lipídios 27,
+Hipertensão 23, Tromboembolismo 21) ganharam uma **segunda trilha com ângulo deliberadamente
+diferente** da primeira — cada subagente leu o `objetivo` da trilha já existente antes de montar a
+nova, para não sobrepor:
+- Farmacologia: emergência (já existia) → **ambulatorial** (classes orais de consultório)
+- Fibrilação atrial: caminho AF-CARE geral → **cenários especiais** (pós-op, diálise, subclínica,
+  periprocedimento, valvar reumática, pós-HIC)
+- Hipertensão: diagnóstico/meta/resistente → **secundária e populações especiais** (aldosteronismo,
+  renovascular, apneia do sono, DRC, gestação, idoso)
+- Tromboembolismo: escores/anticoagulante/duração → **cenários especiais** (câncer, gestação,
+  trombo de VE, periprocedimento)
+- Prevenção e lipídios: risco/LDL/estatina → **além do LDL** (cálcio coronariano, inflamação/
+  colchicina, triglicerídeos, estilo de vida)
+
+Mesma verificação de sempre: todos os 52 itens referenciados (46 documentos, 3 estudos, 2
+medicamentos, 1 checklist) conferidos `published=true` no banco antes de commitar. Depois de
+publicar: **35 disco = 35 banco**, zero órfão, zero etapa indisponível (simulando a lógica real de
+`_disponivel` da API, não só existência).
+
+**Fechamento da sessão CORVIA neste ciclo:** `trilhas` 18→**35** (+17), `casos-clinicos` 12→**54**
+(+42) — **59 itens novos**, todos publicados e auditados, três commits (`d5df51b`, `01f2c00` +
+`97244ae`, `614dbe5`) sem colisão com Biblioteca/Medicamentos (que seguiam commitando em
+`content/`, `evidencias/` e `estudos/` ao mesmo tempo).
+
 **Regras que evitam colisão, todas aprendidas apanhando aqui:**
 
 1. **`git pull --rebase origin main` antes de commitar.** As duas sessões
