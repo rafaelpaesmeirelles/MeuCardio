@@ -1406,5 +1406,85 @@
       "Galiè N, Barberà JA, Frost AE, et al. Initial Use of Ambrisentan plus Tadalafil in Pulmonary Arterial Hypertension. N Engl J Med. 2015;373(9):834-844. DOI: 10.1056/NEJMoa1413687. PMID: 26308684"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "ic-sintomatica-com-regurgitacao-mitral-secundaria-grave-reparo-transcateter-coapt",
+    "titulo": "Insuficiência cardíaca com regurgitação mitral secundária grave, já em terapia máxima: o que resta?",
+    "tema": "Valvopatias",
+    "nivel": "avançado",
+    "enunciado": "Homem, 71 anos, com miocardiopatia dilatada, fração de ejeção de 28% e regurgitação mitral secundária grave. Segue sintomático (NYHA III), com duas internações por descompensação no último ano, apesar de doses máximas toleradas de terapia baseada em diretriz, incluindo ressincronizador. A anatomia valvar é considerada favorável pelo Heart Team.",
+    "pergunta": "Qual conduta tem evidência randomizada de reduzir internação e mortalidade neste perfil?",
+    "opcoes": [
+      "Reparo mitral transcateter borda a borda somado ao tratamento clínico",
+      "Apenas intensificar diurético, já que a regurgitação secundária é consequência da disfunção ventricular e não alvo terapêutico",
+      "Troca valvar mitral cirúrgica de urgência, conduta de escolha em qualquer regurgitação secundária grave",
+      "Encaminhar diretamente para transplante cardíaco, sem outra intervenção valvar possível"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O COAPT incluiu 614 pacientes com insuficiência cardíaca e regurgitação mitral secundária moderada a grave ou grave que permaneciam sintomáticos apesar de doses MÁXIMAS de terapia médica baseada em diretriz — essa exigência do protocolo é o que define a quem o resultado se aplica e o que separa o COAPT de ensaios com resultado neutro na mesma pergunta. Foram 302 pacientes para reparo mitral transcateter mais tratamento clínico e 312 para tratamento clínico isolado. A taxa anualizada de todas as internações por insuficiência cardíaca em 24 meses foi de 35,8% por paciente-ano no grupo dispositivo contra 67,9% no controle (HR 0,53; IC95% 0,40-0,70; P<0,001). A mortalidade por qualquer causa em 24 meses foi de 29,1% contra 46,1% (HR 0,62; IC95% 0,46-0,82; P<0,001). A segurança também foi desfecho formal: liberdade de complicações relacionadas ao dispositivo em 12 meses de 96,6% (limite inferior do IC95% de 94,8%), superando o objetivo pré-especificado de 88,0% (P<0,001). O que o caso ensina é a sequência: a intervenção valvar entrou DEPOIS da terapia clínica maximizada, não no lugar dela.",
+    "source_refs": [
+      "Stone GW, Lindenfeld J, Abraham WT, et al. Transcatheter Mitral-Valve Repair in Patients with Heart Failure. N Engl J Med. 2018;379(24):2307-2318. DOI: 10.1056/NEJMoa1806640. PMID: 30280640"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "drc-albuminurica-sem-diabetes-dapagliflozina-dapa-ckd",
+    "titulo": "Doença renal crônica albuminúrica em paciente NÃO diabético: cabe inibidor de SGLT2?",
+    "tema": "Diabetes e cardiologia",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 57 anos, com doença renal crônica por glomerulopatia, filtração glomerular estimada de 38 mL/min/1,73 m² e relação albumina-creatinina urinária de 900 mg/g. Não é diabética. Está em uso de bloqueador do sistema renina-angiotensina em dose otimizada e pressão arterial controlada.",
+    "pergunta": "A dapagliflozina tem indicação neste caso, mesmo sem diabetes?",
+    "opcoes": [
+      "Não — o benefício renal dos inibidores de SGLT2 depende do efeito glicêmico e não se aplica a quem não tem diabetes",
+      "Sim — a dapagliflozina reduziu desfecho renal composto e mortalidade na doença renal crônica, com efeito semelhante em quem tem e em quem não tem diabetes tipo 2",
+      "Não — abaixo de 45 mL/min o inibidor de SGLT2 está contraindicado por risco de lesão renal aguda",
+      "Sim, mas somente se a hemoglobina glicada estiver acima de 6,5%, o que caracterizaria pré-diabetes"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O DAPA-CKD randomizou 4.304 participantes com filtração glomerular estimada entre 25 e 75 mL/min/1,73 m² e relação albumina-creatinina urinária entre 200 e 5.000 mg/g para dapagliflozina 10 mg ao dia ou placebo — critérios que esta paciente preenche. O comitê independente recomendou interromper o ensaio por eficácia. Em mediana de 2,4 anos, o desfecho primário (queda sustentada de pelo menos 50% na filtração glomerular, doença renal em estágio terminal ou morte por causa renal ou cardiovascular) ocorreu em 9,2% do grupo dapagliflozina contra 14,5% do placebo (HR 0,61; IC95% 0,51-0,72; P<0,001), com número necessário para tratar de 19 (IC95% 15 a 27) para evitar um evento. O componente renal isolado teve HR 0,56 (IC95% 0,45-0,68; P<0,001) e o composto de morte cardiovascular ou internação por insuficiência cardíaca, HR 0,71 (IC95% 0,55-0,92; P=0,009). A mortalidade por qualquer causa foi de 4,7% contra 6,8% (HR 0,69; IC95% 0,53-0,88; P=0,004). O ponto decisivo para este caso está escrito no próprio ensaio: os efeitos foram semelhantes com e sem diabetes tipo 2 — a droga entrou como nefroprotetora e cardioprotetora, e não pelo controle glicêmico.",
+    "source_refs": [
+      "Heerspink HJL, Stefánsson BV, Correa-Rotter R, et al. Dapagliflozin in Patients with Chronic Kidney Disease. N Engl J Med. 2020;383(15):1436-1446. DOI: 10.1056/NEJMoa2024816. PMID: 32970396"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "icfep-com-obesidade-semaglutida-step-hfpef-limite-do-desfecho",
+    "titulo": "Insuficiência cardíaca com fração preservada e obesidade: o que a semaglutida entrega — e o que não entrega?",
+    "tema": "Insuficiência cardíaca",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 63 anos, com insuficiência cardíaca de fração de ejeção preservada e índice de massa corporal de 38 kg/m². Queixa-se sobretudo de limitação física e dispneia que atrapalham a rotina. Não é diabética. Já usa diurético e tem pressão controlada.",
+    "pergunta": "O que a evidência randomizada sustenta ao indicar semaglutida 2,4 mg semanal neste caso?",
+    "opcoes": [
+      "Redução comprovada de mortalidade cardiovascular e de internação por insuficiência cardíaca",
+      "Melhora de sintomas, limitação física, capacidade de exercício e peso — desfechos primários do ensaio —, sem que ele tenha sido desenhado para demonstrar redução de morte ou internação",
+      "Nenhum benefício demonstrado: o ensaio foi neutro em todos os desfechos",
+      "Benefício restrito a pacientes com diabetes tipo 2 associado"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O STEP-HFpEF randomizou 529 pacientes com insuficiência cardíaca de fração de ejeção preservada e índice de massa corporal de 30 ou mais para semaglutida 2,4 mg por semana ou placebo, por 52 semanas. Ler o desfecho primário com precisão é o objetivo deste caso: os desfechos primários DUPLOS foram a variação no escore clínico resumido do Kansas City Cardiomyopathy Questionnaire e a variação do peso corporal — não morte nem internação. O KCCQ-CSS subiu 16,6 pontos com semaglutida contra 8,7 com placebo (diferença estimada de 7,8 pontos; IC95% 4,8 a 10,9; P<0,001) e o peso caiu 13,3% contra 2,6% (diferença de -10,7 pontos percentuais; IC95% -11,9 a -9,4; P<0,001). A caminhada de 6 minutos melhorou 21,5 m contra 1,2 m (diferença de 20,3 m; IC95% 8,6 a 32,1; P<0,001), o composto hierárquico favoreceu a semaglutida (win ratio 1,72; IC95% 1,37-2,15; P<0,001) e a proteína C-reativa caiu 43,5% contra 7,3%. Eventos adversos graves foram MENOS frequentes com semaglutida (13,3% contra 26,7%). Prometer redução de mortalidade a partir deste ensaio seria extrapolar além do que ele mediu — e é esse o erro que a alternativa correta evita.",
+    "source_refs": [
+      "Kosiborod MN, Abildstrøm SZ, Borlaug BA, et al. Semaglutide in Patients with Heart Failure with Preserved Ejection Fraction and Obesity. N Engl J Med. 2023;389(12):1069-1084. DOI: 10.1056/NEJMoa2306963. PMID: 37622681"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "fa-escolha-entre-apixabana-e-varfarina-aristotle-nos-numeros",
+    "titulo": "Fibrilação atrial com indicação de anticoagulação: apixabana ou varfarina?",
+    "tema": "Fibrilação atrial",
+    "nivel": "básico",
+    "enunciado": "Homem, 74 anos, com fibrilação atrial permanente, hipertensão e insuficiência cardíaca compensada. Função renal normal, sem valva mecânica e sem estenose mitral moderada a grave. Ele pergunta por que o médico prefere um anticoagulante direto à varfarina, que o irmão usa há anos.",
+    "pergunta": "Qual comparação corresponde ao que o ensaio randomizado demonstrou?",
+    "opcoes": [
+      "A apixabana foi apenas não inferior à varfarina em AVC, com mais sangramento maior, e a escolha se justifica só pela ausência de controle de INR",
+      "A apixabana foi superior à varfarina na prevenção de AVC ou embolia sistêmica, com menos sangramento maior e menor mortalidade por qualquer causa",
+      "A apixabana reduziu AVC isquêmico, mas aumentou AVC hemorrágico em relação à varfarina",
+      "Os dois são equivalentes em todos os desfechos, e a escolha é apenas de custo"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O ARISTOTLE comparou apixabana 5 mg duas vezes ao dia com varfarina (INR alvo de 2,0 a 3,0) em 18.201 pacientes com fibrilação atrial e ao menos um fator de risco adicional para AVC, em desenho duplo-cego. Em seguimento mediano de 1,8 ano, o desfecho primário de AVC isquêmico ou hemorrágico ou embolia sistêmica ocorreu a 1,27% ao ano com apixabana contra 1,60% ao ano com varfarina (HR 0,79; IC95% 0,66-0,95; P<0,001 para não inferioridade e P=0,01 para superioridade). O sangramento maior foi de 2,13% ao ano contra 3,09% ao ano (HR 0,69; IC95% 0,60-0,80; P<0,001) e a mortalidade por qualquer causa, 3,52% contra 3,94% (HR 0,89; IC95% 0,80-0,99; P=0,047). A decomposição do desfecho de AVC é o que explica o resultado e vale para a conversa com o paciente: o ganho veio quase todo do AVC hemorrágico (0,24% contra 0,47% ao ano; HR 0,51; IC95% 0,35-0,75; P<0,001), enquanto o AVC isquêmico ou de tipo incerto foi praticamente igual (0,97% contra 1,05% ao ano; HR 0,92; IC95% 0,74-1,13; P=0,42). Nada disso se aplica a valva mecânica ou estenose mitral moderada a grave, situações em que o anticoagulante direto não substitui a varfarina — por isso o enunciado as exclui.",
+    "source_refs": [
+      "Granger CB, Alexander JH, McMurray JJ, et al.; ARISTOTLE Committees and Investigators. Apixaban versus warfarin in patients with atrial fibrillation. N Engl J Med. 2011;365(11):981-992. DOI: 10.1056/NEJMoa1107039. PMID: 21870978"
+    ],
+    "review_status": "revisado"
   }
 ]
