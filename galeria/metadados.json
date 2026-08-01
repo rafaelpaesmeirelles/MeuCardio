@@ -1984,5 +1984,132 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "arvd-rm-parede-livre-de-vd",
+    "title": "RM cardíaca em cardiomiopatia arritmogênica de VD — corte axial da via de entrada",
+    "modality": "Ressonância cardíaca",
+    "theme": "Cardiomiopatias",
+    "file_path": "rm/arvd-rm-parede-livre-de-vd.jpg",
+    "findings": "Corte axial de RM cardíaca (sequência spin-eco) mostrando ventrículo direito e esquerdo em paciente com cardiomiopatia/displasia arritmogênica de ventrículo direito (ARVC/D). A legenda da fonte descreve sinal transmural difuso e brilhante na parede livre do VD, atribuído a substituição fibroadiposa — na resolução e contraste desta cópia da imagem não é possível confirmar com segurança essa alteração de sinal específica; o registro se limita a identificar a modalidade e a região anatômica mostrada.",
+    "teaching_points": "A infiltração fibroadiposa da parede livre do VD é o achado estrutural clássico de imagem na cardiomiopatia arritmogênica — substitui progressivamente o miocárdio por tecido fibroadiposo, predispondo a taquicardia ventricular e morte súbita, tipicamente em jovens atletas. Complementa o achado eletrocardiográfico (onda épsilon) já existente na galeria para a mesma doença.",
+    "source_name": "Wikimedia Commons (originalmente publicado em Orphanet J Rare Dis)",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Arvd_MRI.jpg",
+    "license": "CC BY 2.0",
+    "attribution": "Thiene G, Corrado D, Basso C. Orphanet J Rare Dis. 2007;2:45. DOI: 10.1186/1750-1172-2-45 — CC BY 2.0.",
+    "tags": [
+      "cardiomiopatia arritmogenica de vd",
+      "arvd",
+      "ressonancia cardiaca",
+      "substituicao fibroadiposa"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "amiloidose-cardiaca-avaliacao-multimodal",
+    "title": "Amiloidose cardíaca — avaliação por multimodalidade de imagem (eco, RM, cintilografia óssea)",
+    "modality": "Diagrama",
+    "theme": "Cardiomiopatias",
+    "file_path": "diagrama/amiloidose-cardiaca-multimodalidade.jpg",
+    "findings": "Figura composta com 15 painéis (A-O) do mesmo caso de amiloidose cardíaca: (A-B) ecocardiograma 2D com hipertrofia ventricular; (C-D) strain longitudinal global em mapa \"bull's eye\", com valores absolutos reduzidos de forma mais acentuada nos segmentos basais que nos apicais — padrão compatível com \"apical sparing\"; (E-H) Doppler tecidual/mitral para função diastólica; (I-J) RM cardíaca, incluindo imagem com sinal difuso sugestivo de realce tardio; (K-L) mapas paramétricos coloridos (mapeamento de T1); (M-O) cintilografia óssea de corpo inteiro com traçador ósseo, mostrando captação cardíaca.",
+    "teaching_points": "Reúne, num só caso, os quatro pilares de imagem do diagnóstico não invasivo de amiloidose cardíaca — hipertrofia ao eco, padrão de apical sparing ao strain, realce tardio/mapeamento de T1 à RM, e captação miocárdica na cintilografia óssea (base do escore de Perugini, usado para diferenciar amiloidose TTR de AL). É uma figura de revisão multimodal, não uma imagem isolada — a atribuição é ao artigo completo.",
+    "source_name": "PMC (Frontiers in Cardiovascular Medicine, acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7661689/",
+    "license": "CC BY",
+    "attribution": "Khanna S, Wen I, Bhat A, Chen HHL, Gan GCH, Pathan F, Tan TC. Front Cardiovasc Med. 2020;7:590557. PMID: 33195479 — CC BY.",
+    "tags": [
+      "amiloidose cardiaca",
+      "apical sparing",
+      "strain longitudinal",
+      "cintilografia ossea",
+      "multimodalidade"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "vegetacao-de-endocardite-peca-de-patologia",
+    "title": "Vegetação de endocardite infecciosa — fragmentos de peça cirúrgica/patológica",
+    "modality": "Anatomia patológica",
+    "theme": "Endocardite",
+    "file_path": "patologia/vegetacao-endocardite-peca-anatomica.jpg",
+    "findings": "Fotografia de fragmentos de tecido valvar em bandeja de processamento histopatológico, com régua para escala (em centímetros). Seta branca aponta um fragmento específico de coloração amarelo-acastanhada e aspecto friável/granular, consistente com material de vegetação, entre outros fragmentos de tecido valvar de aspecto mais pálido.",
+    "teaching_points": "Mostra o material de vegetação como é recebido pelo patologista após cirurgia valvar por endocardite — massa friável, irregular, aderida a fragmento de tecido valvar, confirmando macroscopicamente o achado que o ecocardiograma detecta in vivo (critério maior de Duke).",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Gross_pathology_of_vegetation_of_infective_endocarditis,_annotated.jpg",
+    "license": "CC0 1.0 (domínio público)",
+    "attribution": "Mikael Häggström, M.D., via Wikimedia Commons — CC0 1.0.",
+    "tags": [
+      "vegetacao de endocardite",
+      "peca cirurgica",
+      "anatomia patologica",
+      "criterio de duke"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "abscesso-de-raiz-aortica-ecocardiograma",
+    "title": "Abscesso de raiz aórtica — ecocardiograma transtorácico, eixo longo paraesternal",
+    "modality": "Ecocardiograma",
+    "theme": "Endocardite",
+    "file_path": "ecocardiograma/abscesso-de-raiz-aortica-eco.jpg",
+    "findings": "Ecocardiograma em eixo longo paraesternal com duas medidas por cursor (2,08 cm e 1,47 cm) demarcadas em uma área na topografia da raiz aórtica/região perivalvar. Fonte identificada como caso de ECHOpedia (CardioNetworks/AMC Echolab), com cortesia creditada na própria imagem.",
+    "teaching_points": "Ilustra a mensuração direta de uma coleção perivalvar (abscesso de raiz aórtica) ao ecocardiograma transtorácico — complicação da endocardite infecciosa que muda a conduta para cirurgia precoce independentemente de outros critérios, tema que a base de documentos já cobre em texto mas ainda não tinha imagem associada.",
+    "source_name": "Wikimedia Commons (ECHOpedia/CardioNetworks)",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Abscess_of_aortic_root_E00270_(CardioNetworks_ECHOpedia).jpg",
+    "license": "CC BY-SA 3.0",
+    "attribution": "CardioNetworks ECHOpedia, cortesia do AMC Echolab (Academic Medical Center, Amsterdã, Holanda), caso E00270 — CC BY-SA 3.0.",
+    "tags": [
+      "abscesso de raiz aortica",
+      "endocardite infecciosa",
+      "complicacao perivalvar",
+      "ecocardiograma"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "oclusao-coronaria-total-cronica-com-colateral",
+    "title": "Oclusão coronária total crônica (CTO) — técnica de fio paralelo com preenchimento por colateral",
+    "modality": "Angiografia",
+    "theme": "Doença coronariana",
+    "file_path": "angiografia/oclusao-total-cronica-com-colateral.jpg",
+    "findings": "Sequência de 8 quadros (a-h) de cinecoronariografia documentando um procedimento de recanalização de oclusão total crônica pela técnica de fio paralelo — incluindo o coto proximal rombo da artéria ocluída e, num dos quadros, injeção contralateral evidenciando enchimento retrógrado do vaso por circulação colateral (septal e epicárdica), seguido dos passos até o implante do stent.",
+    "teaching_points": "Documenta os dois elementos centrais de uma CTO: a oclusão total propriamente dita (coto rombo, sem opacificação anterógrada) e o mecanismo compensatório que mantém alguma perfusão do território — a rede de colaterais, revelada pela injeção do vaso doador contralateral. É achado de imagem real de procedimento, distinto das lesões obstrutivas não totais já cobertas na galeria.",
+    "source_name": "PMC (BMC Cardiovascular Disorders, acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4746803/",
+    "license": "CC BY 4.0",
+    "attribution": "Sianos G, Konstantinidis NV, Di Mario C, Karvounis H. BMC Cardiovasc Disord. 2016;16:33. PMID: 26860695 — CC BY 4.0.",
+    "tags": [
+      "oclusao total cronica",
+      "cto",
+      "circulacao colateral",
+      "angiografia coronariana"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "escore-de-calcio-coronariano-tc-real",
+    "title": "TC de escore de cálcio coronariano — relatório e corte axial com segmentação de placa",
+    "modality": "TC",
+    "theme": "Doença coronariana",
+    "file_path": "tc/escore-de-calcio-coronariano-tc.png",
+    "findings": "Captura de tela de software de pontuação de cálcio coronariano (interface em alemão): tabela de resultados por artéria (tronco, DA, circunflexa, coronária direita) com número de lesões, volume, massa equivalente e escore — neste caso, escore total de 213,1, inteiramente atribuído a 4 lesões na artéria descendente anterior (DA/LAD). Abaixo, corte axial de TC de tórax com segmentação automática em cor (rosa/magenta) de estruturas ósseas/calcificadas da parede torácica e uma pequena área em amarelo na topografia da DA, correspondente à calcificação coronariana quantificada.",
+    "teaching_points": "Complementa o exame de escore de cálcio já cadastrado em texto com a imagem real de um exame — mostra como o software calcula o escore de Agatston automaticamente por segmentação de voxels acima do limiar de densidade (130 UH, indicado na própria tela), atribuindo volume, massa equivalente e escore por artéria coronária individualmente.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:CCTA_Agatston-Score.png",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Usuário MBq, via Wikimedia Commons — CC BY-SA 4.0.",
+    "tags": [
+      "escore de calcio coronariano",
+      "agatston",
+      "tomografia de coronarias",
+      "quantificacao de placa"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]

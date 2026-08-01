@@ -25992,5 +25992,371 @@
       "cirurgia isolada"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "aha2023-ccd-betabloqueador-recomendado-em-fe-40-ou-menos",
+    "statement": "Em pacientes com doença coronariana crônica (DCC) e FEVE ≤40%, com ou sem IAM prévio, o uso de betabloqueador é recomendado para reduzir o risco de eventos cardiovasculares maiores futuros, incluindo morte cardiovascular.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "AHA/ACC",
+    "year": 2023,
+    "guideline_title": "2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease",
+    "reference": "Virani SS, Newby LK, Arnold SV, Bittner V, Brewer LC, Demeter SH, et al. 2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease. Circulation. 2023;148(9):e9-e119. DOI: 10.1161/CIR.0000000000001168. PMID: 37471501. Sem PMC e bloqueada por 403 em ahajournals.org; texto lido em mirror PDF aberto e íntegro (111 páginas), conferido contra os marcadores de página impressos nesta sessão. Diretriz americana de doença coronariana crônica, complementar à ESC 2024 já usada na base. Usa sistema ACC/AHA 2016 — Classe 1/2a/2b/3 (com dois subtipos de Classe 3: \"No Benefit\" e \"Harm\", distinção preservada no texto do statement, já que o campo do banco não a difere estruturalmente) + Nível A/B-R/B-NR/C-LD. Contexto: 4.3.2, betabloqueador em DCC com disfunção de VE",
+    "theme": "Doença coronariana",
+    "tags": [
+      "betabloqueador",
+      "fracao de ejecao reduzida",
+      "doenca coronariana cronica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "aha2023-ccd-betabloqueador-escolha-especifica-em-fe-menor-que-50",
+    "statement": "Em pacientes com DCC e FEVE <50%, o uso de succinato de metoprolol de liberação prolongada, carvedilol ou bisoprolol, titulados até a dose-alvo, é recomendado em preferência a outros betabloqueadores.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "AHA/ACC",
+    "year": 2023,
+    "guideline_title": "2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease",
+    "reference": "Virani SS, Newby LK, Arnold SV, Bittner V, Brewer LC, Demeter SH, et al. 2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease. Circulation. 2023;148(9):e9-e119. DOI: 10.1161/CIR.0000000000001168. PMID: 37471501. Sem PMC e bloqueada por 403 em ahajournals.org; texto lido em mirror PDF aberto e íntegro (111 páginas), conferido contra os marcadores de página impressos nesta sessão. Diretriz americana de doença coronariana crônica, complementar à ESC 2024 já usada na base. Usa sistema ACC/AHA 2016 — Classe 1/2a/2b/3 (com dois subtipos de Classe 3: \"No Benefit\" e \"Harm\", distinção preservada no texto do statement, já que o campo do banco não a difere estruturalmente) + Nível A/B-R/B-NR/C-LD. Contexto: 4.3.2, escolha do betabloqueador específico",
+    "theme": "Doença coronariana",
+    "tags": [
+      "betabloqueador",
+      "metoprolol",
+      "carvedilol",
+      "bisoprolol"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "aha2023-ccd-betabloqueador-reavaliar-uso-prolongado-pos-iam-sem-outra-indicacao",
+    "statement": "Em pacientes com DCC iniciados em betabloqueador por IAM prévio, sem história ou FEVE atual ≤50%, angina, arritmia ou hipertensão não controlada, pode ser razoável reavaliar a indicação de uso prolongado (>1 ano) do betabloqueador para redução de eventos cardiovasculares maiores.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B-NR",
+    "society": "AHA/ACC",
+    "year": 2023,
+    "guideline_title": "2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease",
+    "reference": "Virani SS, Newby LK, Arnold SV, Bittner V, Brewer LC, Demeter SH, et al. 2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease. Circulation. 2023;148(9):e9-e119. DOI: 10.1161/CIR.0000000000001168. PMID: 37471501. Sem PMC e bloqueada por 403 em ahajournals.org; texto lido em mirror PDF aberto e íntegro (111 páginas), conferido contra os marcadores de página impressos nesta sessão. Diretriz americana de doença coronariana crônica, complementar à ESC 2024 já usada na base. Usa sistema ACC/AHA 2016 — Classe 1/2a/2b/3 (com dois subtipos de Classe 3: \"No Benefit\" e \"Harm\", distinção preservada no texto do statement, já que o campo do banco não a difere estruturalmente) + Nível A/B-R/B-NR/C-LD. Contexto: 4.3.2, reavaliação de betabloqueador crônico pós-IAM",
+    "theme": "Doença coronariana",
+    "tags": [
+      "betabloqueador",
+      "reavaliacao terapeutica",
+      "pos-infarto"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "aha2023-ccd-betabloqueador-sem-beneficio-sem-iam-previo-ou-disfuncao-de-ve",
+    "statement": "Em pacientes com DCC sem IAM prévio nem FEVE ≤50%, o uso de betabloqueador NÃO traz benefício para reduzir eventos cardiovasculares maiores, na ausência de outra indicação primária para o fármaco.",
+    "recommendation_class": "III",
+    "evidence_level": "B-NR",
+    "society": "AHA/ACC",
+    "year": 2023,
+    "guideline_title": "2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease",
+    "reference": "Virani SS, Newby LK, Arnold SV, Bittner V, Brewer LC, Demeter SH, et al. 2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease. Circulation. 2023;148(9):e9-e119. DOI: 10.1161/CIR.0000000000001168. PMID: 37471501. Sem PMC e bloqueada por 403 em ahajournals.org; texto lido em mirror PDF aberto e íntegro (111 páginas), conferido contra os marcadores de página impressos nesta sessão. Diretriz americana de doença coronariana crônica, complementar à ESC 2024 já usada na base. Usa sistema ACC/AHA 2016 — Classe 1/2a/2b/3 (com dois subtipos de Classe 3: \"No Benefit\" e \"Harm\", distinção preservada no texto do statement, já que o campo do banco não a difere estruturalmente) + Nível A/B-R/B-NR/C-LD. Contexto: 4.3.2, betabloqueador sem indicação primária (No Benefit)",
+    "theme": "Doença coronariana",
+    "tags": [
+      "betabloqueador",
+      "sem beneficio",
+      "doenca coronariana cronica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "aha2023-ccd-antianginoso-primeira-linha-betabloqueador-bcc-ou-nitrato",
+    "statement": "Em pacientes com DCC e angina, terapia antianginosa com betabloqueador, bloqueador de canal de cálcio (BCC) ou nitrato de longa duração é recomendada para alívio da angina ou sintoma equivalente.",
+    "recommendation_class": "I",
+    "evidence_level": "B-R",
+    "society": "AHA/ACC",
+    "year": 2023,
+    "guideline_title": "2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease",
+    "reference": "Virani SS, Newby LK, Arnold SV, Bittner V, Brewer LC, Demeter SH, et al. 2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease. Circulation. 2023;148(9):e9-e119. DOI: 10.1161/CIR.0000000000001168. PMID: 37471501. Sem PMC e bloqueada por 403 em ahajournals.org; texto lido em mirror PDF aberto e íntegro (111 páginas), conferido contra os marcadores de página impressos nesta sessão. Diretriz americana de doença coronariana crônica, complementar à ESC 2024 já usada na base. Usa sistema ACC/AHA 2016 — Classe 1/2a/2b/3 (com dois subtipos de Classe 3: \"No Benefit\" e \"Harm\", distinção preservada no texto do statement, já que o campo do banco não a difere estruturalmente) + Nível A/B-R/B-NR/C-LD. Contexto: 4.3.6, antianginoso de primeira linha",
+    "theme": "Doença coronariana",
+    "tags": [
+      "angina",
+      "betabloqueador",
+      "bloqueador de canal de calcio",
+      "nitrato"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "aha2023-ccd-antianginoso-associar-segunda-classe-se-sintomatico",
+    "statement": "Em pacientes com DCC e angina que permanecem sintomáticos após tratamento inicial, a adição de um segundo agente antianginoso de classe terapêutica diferente (betabloqueador, BCC, nitrato de longa duração) é recomendada para alívio da angina ou sintoma equivalente.",
+    "recommendation_class": "I",
+    "evidence_level": "B-R",
+    "society": "AHA/ACC",
+    "year": 2023,
+    "guideline_title": "2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease",
+    "reference": "Virani SS, Newby LK, Arnold SV, Bittner V, Brewer LC, Demeter SH, et al. 2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease. Circulation. 2023;148(9):e9-e119. DOI: 10.1161/CIR.0000000000001168. PMID: 37471501. Sem PMC e bloqueada por 403 em ahajournals.org; texto lido em mirror PDF aberto e íntegro (111 páginas), conferido contra os marcadores de página impressos nesta sessão. Diretriz americana de doença coronariana crônica, complementar à ESC 2024 já usada na base. Usa sistema ACC/AHA 2016 — Classe 1/2a/2b/3 (com dois subtipos de Classe 3: \"No Benefit\" e \"Harm\", distinção preservada no texto do statement, já que o campo do banco não a difere estruturalmente) + Nível A/B-R/B-NR/C-LD. Contexto: 4.3.6, associação de segunda classe antianginosa",
+    "theme": "Doença coronariana",
+    "tags": [
+      "angina refrataria",
+      "terapia combinada",
+      "antianginoso"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "aha2023-ccd-ranolazina-recomendada-apos-tres-classes-padrao",
+    "statement": "Em pacientes com DCC que permanecem sintomáticos apesar de tratamento com betabloqueador, BCC ou nitrato de longa duração, ranolazina é recomendada. Ensaios de suporte: CARISA (823 pacientes) e ERICA (565 pacientes).",
+    "recommendation_class": "I",
+    "evidence_level": "B-R",
+    "society": "AHA/ACC",
+    "year": 2023,
+    "guideline_title": "2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease",
+    "reference": "Virani SS, Newby LK, Arnold SV, Bittner V, Brewer LC, Demeter SH, et al. 2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease. Circulation. 2023;148(9):e9-e119. DOI: 10.1161/CIR.0000000000001168. PMID: 37471501. Sem PMC e bloqueada por 403 em ahajournals.org; texto lido em mirror PDF aberto e íntegro (111 páginas), conferido contra os marcadores de página impressos nesta sessão. Diretriz americana de doença coronariana crônica, complementar à ESC 2024 já usada na base. Usa sistema ACC/AHA 2016 — Classe 1/2a/2b/3 (com dois subtipos de Classe 3: \"No Benefit\" e \"Harm\", distinção preservada no texto do statement, já que o campo do banco não a difere estruturalmente) + Nível A/B-R/B-NR/C-LD. Contexto: 4.3.6, ranolazina como terceira linha — CARISA e ERICA",
+    "theme": "Doença coronariana",
+    "tags": [
+      "ranolazina",
+      "angina refrataria",
+      "carisa",
+      "erica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "aha2023-ccd-nitroglicerina-sublingual-para-alivio-imediato",
+    "statement": "Nitroglicerina sublingual ou spray é recomendada para alívio imediato de curto prazo da angina ou sintoma equivalente, em pacientes com DCC.",
+    "recommendation_class": "I",
+    "evidence_level": "B-NR",
+    "society": "AHA/ACC",
+    "year": 2023,
+    "guideline_title": "2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease",
+    "reference": "Virani SS, Newby LK, Arnold SV, Bittner V, Brewer LC, Demeter SH, et al. 2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease. Circulation. 2023;148(9):e9-e119. DOI: 10.1161/CIR.0000000000001168. PMID: 37471501. Sem PMC e bloqueada por 403 em ahajournals.org; texto lido em mirror PDF aberto e íntegro (111 páginas), conferido contra os marcadores de página impressos nesta sessão. Diretriz americana de doença coronariana crônica, complementar à ESC 2024 já usada na base. Usa sistema ACC/AHA 2016 — Classe 1/2a/2b/3 (com dois subtipos de Classe 3: \"No Benefit\" e \"Harm\", distinção preservada no texto do statement, já que o campo do banco não a difere estruturalmente) + Nível A/B-R/B-NR/C-LD. Contexto: 4.3.6, alívio imediato de crise anginosa",
+    "theme": "Doença coronariana",
+    "tags": [
+      "nitroglicerina sublingual",
+      "alivio imediato",
+      "angina"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "aha2023-ccd-ivabradina-potencialmente-prejudicial-com-fe-normal",
+    "statement": "Em pacientes com DCC e função sistólica de VE NORMAL, a adição de ivabradina à terapia antianginosa padrão é potencialmente prejudicial. Ensaio de 19.102 pacientes: ivabradina teve maior taxa do desfecho primário (morte cardiovascular ou IAM) vs. placebo (7,6% vs. 6,5%; p=0,02), apesar de melhora da classe de angina.",
+    "recommendation_class": "III",
+    "evidence_level": "B-R",
+    "society": "AHA/ACC",
+    "year": 2023,
+    "guideline_title": "2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease",
+    "reference": "Virani SS, Newby LK, Arnold SV, Bittner V, Brewer LC, Demeter SH, et al. 2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease. Circulation. 2023;148(9):e9-e119. DOI: 10.1161/CIR.0000000000001168. PMID: 37471501. Sem PMC e bloqueada por 403 em ahajournals.org; texto lido em mirror PDF aberto e íntegro (111 páginas), conferido contra os marcadores de página impressos nesta sessão. Diretriz americana de doença coronariana crônica, complementar à ESC 2024 já usada na base. Usa sistema ACC/AHA 2016 — Classe 1/2a/2b/3 (com dois subtipos de Classe 3: \"No Benefit\" e \"Harm\", distinção preservada no texto do statement, já que o campo do banco não a difere estruturalmente) + Nível A/B-R/B-NR/C-LD. Contexto: 4.3.6, ivabradina em FE normal (Harm)",
+    "theme": "Doença coronariana",
+    "tags": [
+      "ivabradina",
+      "fracao de ejecao normal",
+      "dano"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "aha2023-ccd-contrapulsacao-externa-aumentada-em-angina-refrataria",
+    "statement": "Em pacientes com DCC, angina refratária e sem outra opção terapêutica, a contrapulsação externa aumentada pode ser considerada para alívio sintomático.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B-R",
+    "society": "AHA/ACC",
+    "year": 2023,
+    "guideline_title": "2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease",
+    "reference": "Virani SS, Newby LK, Arnold SV, Bittner V, Brewer LC, Demeter SH, et al. 2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease. Circulation. 2023;148(9):e9-e119. DOI: 10.1161/CIR.0000000000001168. PMID: 37471501. Sem PMC e bloqueada por 403 em ahajournals.org; texto lido em mirror PDF aberto e íntegro (111 páginas), conferido contra os marcadores de página impressos nesta sessão. Diretriz americana de doença coronariana crônica, complementar à ESC 2024 já usada na base. Usa sistema ACC/AHA 2016 — Classe 1/2a/2b/3 (com dois subtipos de Classe 3: \"No Benefit\" e \"Harm\", distinção preservada no texto do statement, já que o campo do banco não a difere estruturalmente) + Nível A/B-R/B-NR/C-LD. Contexto: 4.3.7, contrapulsação externa aumentada",
+    "theme": "Doença coronariana",
+    "tags": [
+      "angina refrataria",
+      "contrapulsacao externa aumentada"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "aha2023-ccd-revascularizacao-para-melhorar-sintomas-apesar-de-gdmt",
+    "statement": "Em pacientes com DCC e angina limitante apesar de terapia clínica otimizada (GDMT), com estenose coronariana significativa passível de revascularização, a revascularização é recomendada para melhorar sintomas.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "AHA/ACC",
+    "year": 2023,
+    "guideline_title": "2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease",
+    "reference": "Virani SS, Newby LK, Arnold SV, Bittner V, Brewer LC, Demeter SH, et al. 2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease. Circulation. 2023;148(9):e9-e119. DOI: 10.1161/CIR.0000000000001168. PMID: 37471501. Sem PMC e bloqueada por 403 em ahajournals.org; texto lido em mirror PDF aberto e íntegro (111 páginas), conferido contra os marcadores de página impressos nesta sessão. Diretriz americana de doença coronariana crônica, complementar à ESC 2024 já usada na base. Usa sistema ACC/AHA 2016 — Classe 1/2a/2b/3 (com dois subtipos de Classe 3: \"No Benefit\" e \"Harm\", distinção preservada no texto do statement, já que o campo do banco não a difere estruturalmente) + Nível A/B-R/B-NR/C-LD. Contexto: 5.1, objetivo sintomático da revascularização",
+    "theme": "Doença coronariana",
+    "tags": [
+      "revascularizacao",
+      "angina limitante",
+      "gdmt"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "aha2023-ccd-cabg-preferida-em-tronco-ou-multiarterial-com-fe-35-ou-menos",
+    "statement": "Em pacientes com DCC com doença significativa de tronco de coronária esquerda ou multiarterial com disfunção grave de VE (FEVE ≤35%), CABG associada à terapia clínica é recomendada em vez de terapia clínica isolada, para melhorar sobrevida. O STICH mostrou sobrevida melhor em 10 anos com CABG; o REVIVED-BCIS2 (ICP), ao contrário, não melhorou eventos cardiovasculares maiores nessa mesma faixa de FEVE.",
+    "recommendation_class": "I",
+    "evidence_level": "B-R",
+    "society": "AHA/ACC",
+    "year": 2023,
+    "guideline_title": "2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease",
+    "reference": "Virani SS, Newby LK, Arnold SV, Bittner V, Brewer LC, Demeter SH, et al. 2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease. Circulation. 2023;148(9):e9-e119. DOI: 10.1161/CIR.0000000000001168. PMID: 37471501. Sem PMC e bloqueada por 403 em ahajournals.org; texto lido em mirror PDF aberto e íntegro (111 páginas), conferido contra os marcadores de página impressos nesta sessão. Diretriz americana de doença coronariana crônica, complementar à ESC 2024 já usada na base. Usa sistema ACC/AHA 2016 — Classe 1/2a/2b/3 (com dois subtipos de Classe 3: \"No Benefit\" e \"Harm\", distinção preservada no texto do statement, já que o campo do banco não a difere estruturalmente) + Nível A/B-R/B-NR/C-LD. Contexto: 5.1, CABG em disfunção grave de VE — STICH e REVIVED-BCIS2",
+    "theme": "Doença coronariana",
+    "tags": [
+      "cabg",
+      "disfuncao ventricular grave",
+      "stich",
+      "revived-bcis2"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "aha2023-ccd-revascularizacao-multiarterial-razoavel-para-reduzir-eventos",
+    "statement": "Em pacientes com DCC e doença multiarterial elegíveis tanto para CABG quanto para PCI, a revascularização associada à terapia clínica otimizada é razoável para reduzir o risco de eventos cardiovasculares (infarto espontâneo, revascularização urgente não planejada ou morte cardíaca).",
+    "recommendation_class": "IIa",
+    "evidence_level": "B-R",
+    "society": "AHA/ACC",
+    "year": 2023,
+    "guideline_title": "2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease",
+    "reference": "Virani SS, Newby LK, Arnold SV, Bittner V, Brewer LC, Demeter SH, et al. 2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease. Circulation. 2023;148(9):e9-e119. DOI: 10.1161/CIR.0000000000001168. PMID: 37471501. Sem PMC e bloqueada por 403 em ahajournals.org; texto lido em mirror PDF aberto e íntegro (111 páginas), conferido contra os marcadores de página impressos nesta sessão. Diretriz americana de doença coronariana crônica, complementar à ESC 2024 já usada na base. Usa sistema ACC/AHA 2016 — Classe 1/2a/2b/3 (com dois subtipos de Classe 3: \"No Benefit\" e \"Harm\", distinção preservada no texto do statement, já que o campo do banco não a difere estruturalmente) + Nível A/B-R/B-NR/C-LD. Contexto: 5.1, revascularização multiarterial razoável",
+    "theme": "Doença coronariana",
+    "tags": [
+      "revascularizacao",
+      "doenca multiarterial",
+      "cabg",
+      "pci"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "aha2023-ccd-pci-razoavel-em-tronco-selecionado-com-revascularizacao-equivalente",
+    "statement": "Em pacientes selecionados com DCC e estenose significativa de tronco de coronária esquerda, para os quais a PCI pode oferecer revascularização equivalente à CABG, a PCI é razoável para melhorar sobrevida.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B-NR",
+    "society": "AHA/ACC",
+    "year": 2023,
+    "guideline_title": "2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease",
+    "reference": "Virani SS, Newby LK, Arnold SV, Bittner V, Brewer LC, Demeter SH, et al. 2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease. Circulation. 2023;148(9):e9-e119. DOI: 10.1161/CIR.0000000000001168. PMID: 37471501. Sem PMC e bloqueada por 403 em ahajournals.org; texto lido em mirror PDF aberto e íntegro (111 páginas), conferido contra os marcadores de página impressos nesta sessão. Diretriz americana de doença coronariana crônica, complementar à ESC 2024 já usada na base. Usa sistema ACC/AHA 2016 — Classe 1/2a/2b/3 (com dois subtipos de Classe 3: \"No Benefit\" e \"Harm\", distinção preservada no texto do statement, já que o campo do banco não a difere estruturalmente) + Nível A/B-R/B-NR/C-LD. Contexto: 5.1, PCI em tronco selecionado",
+    "theme": "Doença coronariana",
+    "tags": [
+      "pci",
+      "tronco de coronaria esquerda",
+      "revascularizacao equivalente"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "aha2023-ccd-ffr-recomendado-antes-de-pci-em-estenose-intermediaria-sem-teste-previo",
+    "statement": "Em pacientes com DCC com angina ou equivalente anginoso, sem avaliação prévia de isquemia, e estenose angiograficamente intermediária, o uso de FFR ou outra razão de pressão não hiperêmica validada (ex.: iFR) é recomendado antes de prosseguir com PCI.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "AHA/ACC",
+    "year": 2023,
+    "guideline_title": "2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease",
+    "reference": "Virani SS, Newby LK, Arnold SV, Bittner V, Brewer LC, Demeter SH, et al. 2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease. Circulation. 2023;148(9):e9-e119. DOI: 10.1161/CIR.0000000000001168. PMID: 37471501. Sem PMC e bloqueada por 403 em ahajournals.org; texto lido em mirror PDF aberto e íntegro (111 páginas), conferido contra os marcadores de página impressos nesta sessão. Diretriz americana de doença coronariana crônica, complementar à ESC 2024 já usada na base. Usa sistema ACC/AHA 2016 — Classe 1/2a/2b/3 (com dois subtipos de Classe 3: \"No Benefit\" e \"Harm\", distinção preservada no texto do statement, já que o campo do banco não a difere estruturalmente) + Nível A/B-R/B-NR/C-LD. Contexto: 5.1, FFR/iFR antes de PCI em estenose intermediária",
+    "theme": "Doença coronariana",
+    "tags": [
+      "ffr",
+      "ifr",
+      "estenose intermediaria",
+      "pci"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "aha2023-ccd-heart-team-recomendado-em-triarterial-complexa-ou-decisao-incerta",
+    "statement": "Em pacientes com DCC com doença triarterial complexa ou para os quais a estratégia terapêutica ótima é incerta, uma abordagem de Heart Team, incluindo representantes de cardiologia intervencionista e cirurgia cardíaca, é recomendada para melhorar os desfechos do paciente.",
+    "recommendation_class": "I",
+    "evidence_level": "B-NR",
+    "society": "AHA/ACC",
+    "year": 2023,
+    "guideline_title": "2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease",
+    "reference": "Virani SS, Newby LK, Arnold SV, Bittner V, Brewer LC, Demeter SH, et al. 2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease. Circulation. 2023;148(9):e9-e119. DOI: 10.1161/CIR.0000000000001168. PMID: 37471501. Sem PMC e bloqueada por 403 em ahajournals.org; texto lido em mirror PDF aberto e íntegro (111 páginas), conferido contra os marcadores de página impressos nesta sessão. Diretriz americana de doença coronariana crônica, complementar à ESC 2024 já usada na base. Usa sistema ACC/AHA 2016 — Classe 1/2a/2b/3 (com dois subtipos de Classe 3: \"No Benefit\" e \"Harm\", distinção preservada no texto do statement, já que o campo do banco não a difere estruturalmente) + Nível A/B-R/B-NR/C-LD. Contexto: 5.1, Heart Team em doença complexa",
+    "theme": "Doença coronariana",
+    "tags": [
+      "heart team",
+      "doenca triarterial complexa",
+      "decisao multidisciplinar"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "aha2023-ccd-cabg-preferida-em-tronco-com-alta-complexidade-syntax",
+    "statement": "Em pacientes com DCC que necessitam de revascularização por envolvimento significativo de tronco associado a doença coronariana de ALTA complexidade, CABG é recomendada em preferência a PCI para melhorar sobrevida. O SYNTAX mostrou, com escore >33, maior evento cardiovascular maior e mortalidade cardíaca em 5 anos com PCI.",
+    "recommendation_class": "I",
+    "evidence_level": "B-R",
+    "society": "AHA/ACC",
+    "year": 2023,
+    "guideline_title": "2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease",
+    "reference": "Virani SS, Newby LK, Arnold SV, Bittner V, Brewer LC, Demeter SH, et al. 2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease. Circulation. 2023;148(9):e9-e119. DOI: 10.1161/CIR.0000000000001168. PMID: 37471501. Sem PMC e bloqueada por 403 em ahajournals.org; texto lido em mirror PDF aberto e íntegro (111 páginas), conferido contra os marcadores de página impressos nesta sessão. Diretriz americana de doença coronariana crônica, complementar à ESC 2024 já usada na base. Usa sistema ACC/AHA 2016 — Classe 1/2a/2b/3 (com dois subtipos de Classe 3: \"No Benefit\" e \"Harm\", distinção preservada no texto do statement, já que o campo do banco não a difere estruturalmente) + Nível A/B-R/B-NR/C-LD. Contexto: 5.1, tronco + alta complexidade — SYNTAX",
+    "theme": "Doença coronariana",
+    "tags": [
+      "cabg",
+      "tronco de coronaria esquerda",
+      "syntax",
+      "alta complexidade"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "aha2023-ccd-cabg-razoavel-em-multiarterial-complexa-syntax-maior-que-33",
+    "statement": "Em pacientes com DCC que necessitam de revascularização por doença multiarterial complexa e difusa (ex.: escore SYNTAX >33), é razoável escolher CABG em vez de PCI para melhorar sobrevida. Seguimento de 10 anos do SYNTAX: mortalidade 40% maior com PCI na doença triarterial.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B-R",
+    "society": "AHA/ACC",
+    "year": 2023,
+    "guideline_title": "2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease",
+    "reference": "Virani SS, Newby LK, Arnold SV, Bittner V, Brewer LC, Demeter SH, et al. 2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease. Circulation. 2023;148(9):e9-e119. DOI: 10.1161/CIR.0000000000001168. PMID: 37471501. Sem PMC e bloqueada por 403 em ahajournals.org; texto lido em mirror PDF aberto e íntegro (111 páginas), conferido contra os marcadores de página impressos nesta sessão. Diretriz americana de doença coronariana crônica, complementar à ESC 2024 já usada na base. Usa sistema ACC/AHA 2016 — Classe 1/2a/2b/3 (com dois subtipos de Classe 3: \"No Benefit\" e \"Harm\", distinção preservada no texto do statement, já que o campo do banco não a difere estruturalmente) + Nível A/B-R/B-NR/C-LD. Contexto: 5.1, multiarterial complexa — SYNTAX 10 anos",
+    "theme": "Doença coronariana",
+    "tags": [
+      "cabg",
+      "doenca multiarterial",
+      "syntax",
+      "mortalidade"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "aha2023-ccd-pci-razoavel-em-alto-risco-cirurgico",
+    "statement": "Em pacientes com DCC elegíveis para revascularização mas maus candidatos cirúrgicos, é razoável escolher PCI em vez de CABG para melhorar sintomas e reduzir eventos cardiovasculares maiores. Baseado no registro OPTIMUM.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B-NR",
+    "society": "AHA/ACC",
+    "year": 2023,
+    "guideline_title": "2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease",
+    "reference": "Virani SS, Newby LK, Arnold SV, Bittner V, Brewer LC, Demeter SH, et al. 2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease. Circulation. 2023;148(9):e9-e119. DOI: 10.1161/CIR.0000000000001168. PMID: 37471501. Sem PMC e bloqueada por 403 em ahajournals.org; texto lido em mirror PDF aberto e íntegro (111 páginas), conferido contra os marcadores de página impressos nesta sessão. Diretriz americana de doença coronariana crônica, complementar à ESC 2024 já usada na base. Usa sistema ACC/AHA 2016 — Classe 1/2a/2b/3 (com dois subtipos de Classe 3: \"No Benefit\" e \"Harm\", distinção preservada no texto do statement, já que o campo do banco não a difere estruturalmente) + Nível A/B-R/B-NR/C-LD. Contexto: 5.1, alto risco cirúrgico — registro OPTIMUM",
+    "theme": "Doença coronariana",
+    "tags": [
+      "pci",
+      "alto risco cirurgico",
+      "registro optimum"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "aha2023-ccd-cabg-com-mamaria-preferida-em-diabetes-e-envolvimento-de-da",
+    "statement": "Em pacientes com DCC, diabetes e doença multiarterial com envolvimento da artéria descendente anterior, candidatos apropriados a CABG, a CABG (com mamária interna esquerda para a descendente anterior) é recomendada em preferência a PCI para reduzir mortalidade e revascularização repetida.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "AHA/ACC",
+    "year": 2023,
+    "guideline_title": "2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease",
+    "reference": "Virani SS, Newby LK, Arnold SV, Bittner V, Brewer LC, Demeter SH, et al. 2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease. Circulation. 2023;148(9):e9-e119. DOI: 10.1161/CIR.0000000000001168. PMID: 37471501. Sem PMC e bloqueada por 403 em ahajournals.org; texto lido em mirror PDF aberto e íntegro (111 páginas), conferido contra os marcadores de página impressos nesta sessão. Diretriz americana de doença coronariana crônica, complementar à ESC 2024 já usada na base. Usa sistema ACC/AHA 2016 — Classe 1/2a/2b/3 (com dois subtipos de Classe 3: \"No Benefit\" e \"Harm\", distinção preservada no texto do statement, já que o campo do banco não a difere estruturalmente) + Nível A/B-R/B-NR/C-LD. Contexto: 5.1, diabetes + DA — CABG com mamária",
+    "theme": "Doença coronariana",
+    "tags": [
+      "cabg",
+      "diabetes",
+      "arteria mamaria interna",
+      "descendente anterior"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "aha2023-ccd-pci-pode-ser-considerada-em-diabetes-com-tronco-e-baixa-complexidade",
+    "statement": "Em pacientes com DCC e diabetes com estenose de tronco de coronária esquerda e complexidade baixa ou intermediária (ex.: escore SYNTAX ≤33), PCI pode ser considerada como alternativa a CABG para reduzir eventos cardiovasculares maiores.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B-R",
+    "society": "AHA/ACC",
+    "year": 2023,
+    "guideline_title": "2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease",
+    "reference": "Virani SS, Newby LK, Arnold SV, Bittner V, Brewer LC, Demeter SH, et al. 2023 AHA/ACC/ACCP/ASPC/NLA/PCNA Guideline for the Management of Patients With Chronic Coronary Disease. Circulation. 2023;148(9):e9-e119. DOI: 10.1161/CIR.0000000000001168. PMID: 37471501. Sem PMC e bloqueada por 403 em ahajournals.org; texto lido em mirror PDF aberto e íntegro (111 páginas), conferido contra os marcadores de página impressos nesta sessão. Diretriz americana de doença coronariana crônica, complementar à ESC 2024 já usada na base. Usa sistema ACC/AHA 2016 — Classe 1/2a/2b/3 (com dois subtipos de Classe 3: \"No Benefit\" e \"Harm\", distinção preservada no texto do statement, já que o campo do banco não a difere estruturalmente) + Nível A/B-R/B-NR/C-LD. Contexto: 5.1, diabetes + tronco de baixa complexidade",
+    "theme": "Doença coronariana",
+    "tags": [
+      "pci",
+      "diabetes",
+      "tronco de coronaria esquerda",
+      "syntax baixo"
+    ],
+    "review_status": "revisado"
   }
 ]
