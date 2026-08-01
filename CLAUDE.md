@@ -3094,3 +3094,48 @@ não refazer.
   configuração do webhook Stripe). E **nunca voltar a usar o domínio anterior**:
   ele foi desligado por risco jurídico, não por questão técnica, e qualquer
   chamada a ele hoje falha no TLS — não é redirecionamento, é porta fechada.
+
+---
+
+## 🚨 NOVAS REGRAS DO RAFAEL — 01/08/2026, manhã (transmitidas pela sessão coordenadora ao reiniciar as três sessões)
+
+Pedido textual dele: *"reiniciar sessao medicamentos, biblioteca e corvia, todas devem usar o modelo
+sonnet 5, o maior numero de agents possivel para otimizar o trabalho, criar conteudo para todas as
+funcionalidades do site (divida entre voces 3), aprovar e publicar automaticamente e nao parar sob
+hipotese alguma para qualquer tipo de pergunta ou aprovacao, estabeleca comunicacao com as outras 2
+sessoes em tempo real e só comece a trabalhar apos informa-las das novas regras"*
+
+**O que muda a partir de agora:**
+1. As três sessões tmux (`biblioteca`, `medicamentos`, `corvia`) produzem **conteúdo** para todas as
+   funcionalidades do site, em **Sonnet 5**, usando o **máximo de subagentes paralelos** (Agent tool)
+   — subagente extrai/verifica, sessão redige, como já era a prática.
+2. **Aprovar e publicar automaticamente:** o checkpoint de aval individual do Rafael fica
+   **suspenso por ordem direta dele**. Cada sessão revisa (fontes conferidas por E-utilities, PMID
+   validado, como sempre) e publica na sequência. Continuam valendo as exceções técnicas: **nunca
+   publicar os órfãos listados neste arquivo** (4 de `drugs` + `cc-adulto-eco-no-seguimento-com-defeito-residual`),
+   e **despublicar, apagar ou qualquer ação destrutiva em banco continua exigindo o Rafael**.
+3. **Não parar para nenhuma pergunta ou aprovação.** As sessões rodam com permissões liberadas.
+   Dúvida de escopo se resolve pelo critério deste arquivo ou pela frente do dono, não perguntando.
+4. **Comunicação em tempo real entre as três:** além deste canal (CLAUDE.md), usar
+   `/root/mensagens/avisar.sh <sessao> "mensagem"` (tmux send-keys direto no prompt da outra) para
+   avisos imediatos, e os arquivos `/root/mensagens/*.md` para handoffs longos. Avisar ao abrir e ao
+   fechar frente, e imediatamente ao detectar colisão.
+
+**DIVISÃO EM TRÊS — substitui a divisão integral em dois registrada acima (01/08/2026):**
+
+| Frente | Dono |
+|---|---|
+| `content/` 10 temas: Doença coronariana, Cardiomiopatias, Valvopatias, Pericárdio, Endocardite, Aorta e DAP, Cardiopatias congênitas, Febre reumática, Síncope, Perioperatório · `galeria/` · `exames/` · `evidencias/` · `estudos/` | **BIBLIOTECA** |
+| `content/` 17 temas: Farmacologia, Gravidez, Terapia intensiva, Tromboembolismo, Fibrilação atrial, Arritmias, Dispositivos, Prevenção e lipídios, Diabetes e cardiologia, Insuficiência cardíaca, Hipertensão, Hipertensão pulmonar, Calculadoras, Cardio-oncologia, Comunicação clínica, Geral, Saúde mental · `medicamentos/*.json` · `emergencia/` · `checklists/` · `material-paciente/` | **MEDICAMENTOS** |
+| `casos-clinicos/` · `trilhas/` · funcionalidades restantes do site (round hospitalar, modelos de documento, comparador de medicamentos, agenda — inventariar o que aceita conteúdo e preencher) | **CORVIA** |
+
+**Avisos de transição:**
+- Havia uma sessão **fora do tmux** commitando em `evidencias/` e `estudos/` (66 evidências entre
+  01:06–01:10 de 01/08). Biblioteca: `git log` nessas frentes antes de escrever; se ela seguir
+  ativa, coordenar por este canal em vez de colidir.
+- A sessão `corvia` foi interrompida com **2 tarefas de frontend abertas** (página admin "Usuários
+  Online"; widget de chat flutuante com WebSocket — migração e backend já commitados). Ficam
+  registradas aqui para retomada quando o Rafael pedir; a ordem atual dela é conteúdo.
+- Há um arquivo **não commitado** de Comunicação clínica
+  (`reconciliacao-medicamentosa-e-transicao-de-cuidado-onde-o-erro-acontece.md`) da sessão de
+  Medicamentos anterior ao restart — a sessão nova decide se completa e commita ou descarta.
