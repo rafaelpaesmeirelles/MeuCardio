@@ -2881,5 +2881,110 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "dupla-via-de-saida-de-ventriculo-direito-ecocardiograma-em-gestante",
+    "title": "Dupla via de saída de ventrículo direito (DORV) — ecocardiograma em gestante com síndrome de Eisenmenger",
+    "modality": "Ecocardiograma",
+    "theme": "Cardiopatias congênitas",
+    "file_path": "ecocardiograma/dupla-via-de-saida-de-vd-eco.jpg",
+    "findings": "Corte ecocardiográfico transtorácico mostrando grande vaso emergindo predominantemente do ventrículo direito, achado que sustenta o diagnóstico de dupla via de saída de ventrículo direito associada a comunicação interventricular, em gestante de 20 anas com síndrome de Eisenmenger. AVISO: a imagem em si não traz rótulos anatômicos sobrepostos — a identificação da aorta emergindo do VD vem da legenda original da fonte, não de marcação visível nesta cópia; RM/angioTC não estavam disponíveis no serviço de origem, então este é o único registro de imagem do caso.",
+    "teaching_points": "Documenta um caso raro e de alto risco — gestação levada a termo com parto vaginal bem-sucedido numa paciente com DORV e síndrome de Eisenmenger já estabelecida —, ilustrando que mesmo cardiopatia congênita complexa com hipertensão pulmonar grave pode, em cenários excepcionais e com manejo multidisciplinar intensivo, chegar a desfecho obstétrico favorável.",
+    "source_name": "PMC (Case Reports in Cardiology, acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13402882/",
+    "license": "CC BY 4.0",
+    "attribution": "Dahir OF, Ahmed SA, Abdi AE, et al. Successful Vaginal Delivery in a Young Female With Eisenmenger Syndrome and Double Outlet Right Ventricle: A Challenging Case Report. Case Rep Cardiol. 2026;2026:3877926. PMID: 42516891. DOI: 10.1155/cric/3877926. PMCID: PMC13402882 — CC BY 4.0.",
+    "tags": [
+      "dupla via de saida de vd",
+      "dorv",
+      "sindrome de eisenmenger",
+      "gestacao de alto risco"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "anomalia-de-ebstein-deslocamento-apical-tricuspide-ressonancia",
+    "title": "Anomalia de Ebstein — deslocamento apical do folheto tricúspide à ressonância magnética cardíaca",
+    "modality": "Ressonância cardíaca",
+    "theme": "Cardiopatias congênitas",
+    "file_path": "rm/anomalia-de-ebstein-deslocamento-apical-rm.jpg",
+    "findings": "Corte de RM cardíaca em plano 4 câmaras com linha tracejada branca e seta amarela demarcando o deslocamento apical do folheto anterior da valva tricúspide em relação ao plano do anel tricúspide (medido em 5,3 cm na fonte original) — em mulher de 44 anos com apresentação incomum de anomalia de Ebstein envolvendo deslocamento dos três folhetos.",
+    "teaching_points": "Complementa o registro já existente de correlação anatomo-ecocardiográfica da anomalia de Ebstein, desta vez pela ressonância magnética — modalidade que permite medir diretamente a distância de deslocamento apical em relação ao anel tricúspide verdadeiro, um dos parâmetros usados na graduação da gravidade da anomalia.",
+    "source_name": "PMC (Clinical Case Reports/Wiley, acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11126910/",
+    "license": "CC BY 4.0",
+    "attribution": "Jalali A, Khajali Z, Parsaee M, et al. Uncommon manifestation of Ebstein anomaly: A case report of apical displacement involving all tricuspid valve leaflets. Clin Case Rep. 2024;12(6):e8991. PMID: 38799521. DOI: 10.1002/ccr3.8991. PMCID: PMC11126910 — CC BY 4.0.",
+    "tags": [
+      "anomalia de ebstein",
+      "deslocamento apical",
+      "ressonancia magnetica cardiaca",
+      "valva tricuspide"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "persistencia-do-canal-arterial-no-adulto-doppler-colorido",
+    "title": "Persistência do canal arterial não tratada no adulto — Doppler colorido com fluxo anormal para a artéria pulmonar",
+    "modality": "Ecocardiograma",
+    "theme": "Cardiopatias congênitas",
+    "file_path": "ecocardiograma/persistencia-do-canal-arterial-doppler-colorido-adulto.jpg",
+    "findings": "Ecocardiograma transtorácico em corte paraesternal eixo curto com Doppler colorido, mostrando fluxo anormal (seta) entrando na artéria pulmonar principal por persistência do canal arterial — em homem de 70 anos com PCA diagnosticada na infância e nunca tratada, que evoluiu com cardiomiopatia dilatada adquirida por sobrecarga volumétrica crônica.",
+    "teaching_points": "Ilustra uma apresentação rara na prática atual — PCA isolada, nunca corrigida, chegando à sétima década de vida — e a consequência hemodinâmica de décadas de shunt esquerda-direita não tratado: cardiomiopatia dilatada adquirida por sobrecarga de volume crônica, achado que se reverte, ao menos parcialmente, após o fechamento tardio do canal.",
+    "source_name": "PMC (Cureus, acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12896669/",
+    "license": "CC BY 4.0",
+    "attribution": "Giannopoulou E, Tsilivarakis D, Lekaditi M, Kosmopoulou S. An Unusual Case of Acquired Dilated Cardiomyopathy Due to Long-Standing Patent Ductus Arteriosus. Cureus. 2026;18(1):e101436. PMID: 41694839. DOI: 10.7759/cureus.101436. PMCID: PMC12896669 — CC BY 4.0.",
+    "tags": [
+      "persistencia do canal arterial",
+      "pca no adulto",
+      "cardiomiopatia dilatada adquirida",
+      "doppler colorido"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "vegetacao-em-valva-mitral-nativa-flying-saucer-ete-3d",
+    "title": "Vegetação em valva mitral nativa com morfologia \"flying saucer\" — correlação ETE 3D, 2D e TC",
+    "modality": "Ecocardiograma",
+    "theme": "Endocardite",
+    "file_path": "ecocardiograma/vegetacao-mitral-nativa-flying-saucer-ete-3d.jpg",
+    "findings": "Quatro painéis do mesmo caso: A, ETE tridimensional mostrando vegetação plana em disco, de base ampla (contorno tracejado azul), com estrutura cística sobrejacente (seta vermelha) cobrindo a superfície atrial dos folhetos anterior e posterior da mitral — morfologia descrita pelos autores como \"flying saucer\" (disco voador); B e C, ETE 2D e Doppler colorido do mesmo achado; D, corte de TC. Endocardite por Staphylococcus aureus (MSSA) sobre estenose mitral degenerativa, em paciente em hemodiálise crônica.",
+    "teaching_points": "Documenta uma morfologia de vegetação atípica e nomeada pelos próprios autores — disco amplo e plano, em vez do aspecto pediculado/móvel mais comumente ilustrado —, reforçando que a apresentação ecocardiográfica da vegetação infecciosa é heterogênea e pode ocorrer sobre valva já estruturalmente doente (estenose mitral degenerativa preexistente), não só sobre valva previamente normal.",
+    "source_name": "PMC (JACC: Case Reports, acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13080928/",
+    "license": "CC BY 4.0",
+    "attribution": "Iitsuka H, Yoshida J, Yoshii A, et al. \"Flying Saucer\"-Like Morphology in Infective Endocarditis Arising on a Stenotic Mitral Valve. JACC Case Rep. 2026;31(13):106955. PMID: 41677493. DOI: 10.1016/j.jaccas.2026.106955. PMCID: PMC13080928 — CC BY 4.0.",
+    "tags": [
+      "vegetacao mitral",
+      "endocardite infecciosa",
+      "ete 3d",
+      "estenose mitral degenerativa"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "endocardite-fungica-candida-em-protese-mitral-mecanica",
+    "title": "Endocardite fúngica por Candida em prótese valvar mitral mecânica — recidiva",
+    "modality": "Ecocardiograma",
+    "theme": "Endocardite",
+    "file_path": "ecocardiograma/endocardite-fungica-candida-protese-mitral.jpg",
+    "findings": "Ecocardiograma transesofágico com vegetação medindo 14,4 mm de comprimento (seta vermelha) sobre prótese valvar mitral mecânica, com sombreamento acústico posterior — recidiva de endocardite por Candida parapsilosis complex, em paciente com cardiopatia reumática prévia e troca valvar mitral/aórtica mecânica, manejado de forma conservadora em ambiente de recursos limitados.",
+    "teaching_points": "Ilustra a endocardite fúngica de prótese valvar — etiologia menos comum que a bacteriana, mas com vegetações tipicamente maiores e prognóstico mais reservado — e o desafio de imagem específico de prótese MECÂNICA (não bioprotética), cujo material gera sombra acústica que pode ocultar parte da vegetação, exigindo interpretação cuidadosa do que está e do que não está sendo visualizado.",
+    "source_name": "PMC (Cureus, acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13225458/",
+    "license": "CC BY 4.0",
+    "attribution": "Villeda WA, Portillo JA, Nolasco Ferrera K, Santos RJ. Recurrent Candida parapsilosis Complex Endocarditis in a Patient With a Mechanical Mitral Prosthetic Valve Managed Conservatively in a Resource-Limited Setting: A Case Report. Cureus. 2026;18(5):e108143. PMID: 42231988. DOI: 10.7759/cureus.108143. PMCID: PMC13225458 — CC BY 4.0.",
+    "tags": [
+      "endocardite fungica",
+      "candida",
+      "protese valvar mecanica",
+      "recidiva de endocardite"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
