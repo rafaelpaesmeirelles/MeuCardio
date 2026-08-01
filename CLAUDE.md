@@ -503,6 +503,32 @@ Claude." Especificação já levantada pela monitora (não repetir a pesquisa):
   `AI_PROVIDER=anthropic` e `ANTHROPIC_API_KEY` já configurados. O bloqueio acima não
   se aplica mais — Rafael confirmou diretamente ("publicar e ativar tudo"). Pode
   implementar, publicar e ativar a funcionalidade inteira sem pausa adicional.
+- **✅ IMPLEMENTADO no commit `631b21e`** — mas Rafael testou e pediu 2 ajustes
+  (23h42 de 01/08, direto à monitora), registrados aqui pra quem pegar a tarefa:
+  1. **Busca na internet não pode depender de opt-in manual.** O checkbox
+     "Buscar na internet" nasceu com `useState(false)` — ninguém descobre e liga
+     sozinho, então na prática o assistente nunca buscava fora do site, ao
+     contrário de "uma sessão do Claude comum" (onde o modelo decide sozinho, por
+     turno, se busca ou não). Corrigir: `usar_internet` default `true` tanto no
+     front (`useState(true)`) quanto no back (`Pergunta.usar_internet: bool = True`
+     em `ai.py` e no parâmetro correspondente em `rag.perguntar`/`provedor.py`).
+     Manter o checkbox como opção de desligar, só não pode nascer desligado.
+  2. **Modelo padrão: escolha automática entre Opus 5 e Fable 5 pela pergunta**,
+     não mais um modelo fixo pré-selecionado no dropdown. Adicionar em `rag.py`
+     algo como `escolher_modelo_automatico(pergunta: str) -> str` — heurística
+     simples por tamanho da pergunta é suficiente para a primeira versão (ex.:
+     `len(pergunta) >= 600` → `claude-fable-5`, caso contrário `claude-opus-5`;
+     ajustar o limiar depois com uso real). Em `ai.py`, quando `dados.modelo` for
+     `None` (usuário não escolheu manualmente no dropdown), chamar essa função em
+     vez de deixar o provider cair no `self._modelo` do `.env`. Acrescentar
+     `claude-fable-5` na allowlist e em `modelos_disponiveis`. No dropdown do
+     `Assistente.tsx`, acrescentar uma opção `"Automático (recomendado)"` com
+     `value=""` como primeira/padrão (troca o `useState(s.modelo)` inicial para
+     `useState("")`); ao montar o POST, só mandar `modelo` quando não for string
+     vazia.
+  3. Depois de aplicar, repita o teste manual (pergunta simples → Opus 5 sem
+     pedir nada; pergunta complexa/longa → Fable 5; qualquer pergunta → cita
+     fonte da web mesmo sem mexer no checkbox).
 - Teste manual antes de dar por pronto: suba o backend, rode uma pergunta com
   `usar_internet=true` e confirme que a resposta cita fonte da web, e uma troca de
   modelo confirmando no campo `modelo` da resposta.
