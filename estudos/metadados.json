@@ -7224,5 +7224,244 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "valvuloplastia-aortica-fetal-desfechos-pos-natais-dos-primeiros-100-pacientes",
+    "title": "Valvuloplastia aórtica fetal na estenose aórtica grave em evolução para síndrome do coração esquerdo hipoplásico: desfechos pós-natais dos primeiros 100 pacientes",
+    "study_type": "estudo_de_coorte",
+    "authors": "Freud LR, McElhinney DB, Marshall AC, Marx GR, Friedman KG, Emani SM, et al.",
+    "journal": "Circulation",
+    "year": 2014,
+    "doi": "10.1161/CIRCULATIONAHA.114.009032",
+    "pmid": "25052401",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/25052401/",
+    "summary": "Coorte que descreve os desfechos pós-natais dos primeiros 100 fetos submetidos a valvuloplastia aórtica fetal por estenose aórtica grave em evolução para síndrome do coração esquerdo hipoplásico (HLHS), no maior centro de referência da técnica, comparando os que alcançaram circulação biventricular (BV) com os que permaneceram em via univentricular.",
+    "key_findings": [
+      "De 88 nascidos vivos, 38 (43%) alcançaram circulação biventricular (31 desde o nascimento, 7 convertidos após paliação univentricular inicial).",
+      "Estruturas do coração esquerdo (valva aórtica, valva mitral, volume de VE) eram significativamente maiores ao nascimento no grupo biventricular (p<0,01).",
+      "Sobrevida livre de morte cardíaca aos 5 anos foi de 96±4% no grupo biventricular, superior ao grupo manejado como HLHS (log-rank p=0,04); não houve mortalidade cardíaca entre os que já nasceram com circulação biventricular.",
+      "42% do grupo biventricular precisou de troca de valva aórtica ou mitral no seguimento (mediana de 5,4 anos); 80% mantinha fração de ejeção normal no ecocardiograma mais recente."
+    ],
+    "clinical_implications": "A valvuloplastia aórtica fetal pode reverter parte dos casos de estenose aórtica grave em evolução para HLHS para uma via biventricular, com sobrevida encorajadora em curto e médio prazo. O procedimento não é curativo: a maioria dos pacientes com circulação biventricular ainda precisa de reintervenção valvar, e o acompanhamento estrutural seriado deve ser mantido a longo prazo.",
+    "limitations": "Estudo unicêntrico e observacional, sem grupo controle randomizado (comparação com pacientes manejados como HLHS ao longo do mesmo período histórico). A seleção de quem efetivamente atinge circulação biventricular pode refletir anatomia basal mais favorável, não apenas o efeito da intervenção fetal.",
+    "theme": "Cardiologia pediátrica",
+    "tags": [
+      "cardiologia fetal",
+      "estenose aórtica",
+      "síndrome do coração esquerdo hipoplásico",
+      "valvuloplastia",
+      "intervenção fetal"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "starts-1-sildenafila-oral-em-criancas-com-hipertensao-arterial-pulmonar",
+    "title": "STARTS-1: ensaio randomizado, duplo-cego, controlado por placebo, de faixa de dose de sildenafila oral em crianças virgens de tratamento com hipertensão arterial pulmonar",
+    "study_type": "ensaio_clinico",
+    "authors": "Barst RJ, Ivy DD, Gaitan G, Szatmari A, Rudzinski A, Garcia AE, et al.",
+    "journal": "Circulation",
+    "year": 2012,
+    "doi": "10.1161/CIRCULATIONAHA.110.016667",
+    "pmid": "22128226",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/22128226/",
+    "summary": "Ensaio clínico randomizado, duplo-cego e controlado por placebo (STARTS-1) que testou sildenafila oral em três doses (baixa, média, alta) versus placebo, por 16 semanas, em 235 crianças com peso ≥8 kg e hipertensão arterial pulmonar sem tratamento prévio, avaliando capacidade de exercício, classe funcional e hemodinâmica.",
+    "key_findings": [
+      "A variação percentual média do consumo de oxigênio de pico (PVO2) com as 3 doses combinadas vs. placebo foi de 7,7±4,0% (IC95% -0,2% a 15,6%; p=0,056) — o desfecho primário combinado não atingiu significância estatística formal.",
+      "As doses média e alta melhoraram PVO2, classe funcional e parâmetros hemodinâmicos em relação ao placebo; a dose baixa foi ineficaz.",
+      "A maioria dos eventos adversos foi leve a moderada durante as 16 semanas do estudo principal.",
+      "No estudo de extensão aberto STARTS-2, doses mais altas de sildenafila se associaram a maior mortalidade, o que motivou alerta de segurança sobre uso crônico em altas doses nessa população."
+    ],
+    "clinical_implications": "A sildenafila oral é bem tolerada em curto prazo e mostra sinais de eficácia funcional e hemodinâmica em dose média/alta na hipertensão arterial pulmonar pediátrica. O achado de mortalidade aumentada com doses altas no seguimento de longo prazo (STARTS-2) reforça que a dose deve ser ajustada por peso/idade e mantida na faixa média, evitando escalonamento para a dose alta fora de indicação individualizada.",
+    "limitations": "O desfecho primário pré-especificado (combinação das 3 doses) não atingiu significância estatística; a avaliação de exercício foi possível em apenas 115 das 235 crianças; o achado de mortalidade dose-dependente veio do estudo de extensão aberto (STARTS-2), não do ensaio duplo-cego original, o que limita a força causal dessa associação.",
+    "theme": "Cardiologia pediátrica",
+    "tags": [
+      "hipertensão arterial pulmonar",
+      "sildenafila",
+      "ensaio clínico",
+      "pediatria",
+      "farmacologia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "tomorrow-macitentana-em-hipertensao-arterial-pulmonar-pediatrica",
+    "title": "TOMORROW: ensaio clínico randomizado de macitentana na hipertensão arterial pulmonar pediátrica",
+    "study_type": "ensaio_clinico",
+    "authors": "Berger RMF, Beghetti M, Ivy DD, Ploegstra MJ, Hoeper MM, Humpl T, et al.",
+    "journal": "The Journal of Pediatrics",
+    "year": 2026,
+    "doi": "10.1016/j.jpeds.2026.115057",
+    "pmid": "41796854",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41796854/",
+    "summary": "Ensaio de fase 3, multicêntrico e aberto (TOMORROW), que randomizou 148 crianças de 2 a menos de 18 anos, em classe funcional OMS I-III, para macitentana em dose ajustada por peso ou tratamento padrão (até 2 terapias específicas para hipertensão arterial pulmonar), avaliando farmacocinética, eficácia e segurança em longo prazo.",
+    "key_findings": [
+      "A concentração plasmática de macitentana em platô (185 ng/mL) e do metabólito ativo aprocitentana (983 ng/mL) foi consistente com o perfil farmacocinético observado em adultos, confirmando adequação da dose por peso.",
+      "Razões de risco (macitentana vs. tratamento padrão) foram numericamente favoráveis, mas sem significância estatística: 0,828 para progressão de doença, 0,912 para hospitalização por HAP e 1,530 para mortalidade por HAP (p>0,05 para todas).",
+      "NT-proBNP em percentual do basal foi 72% com macitentana vs. 101% com tratamento padrão na semana 12 (p=0,086), sem diferença mantida na semana 24 (76% vs. 78%; p=0,884).",
+      "Macitentana produziu melhora clinicamente relevante na qualidade de vida em relação ao tratamento padrão, tanto na avaliação da própria criança (p=0,043) quanto dos pais (p=0,020) na semana 24, com duração média de tratamento de 183 semanas."
+    ],
+    "clinical_implications": "O TOMORROW confirma que a dosagem de macitentana calculada por peso corporal reproduz exposição plasmática semelhante à do adulto em crianças com hipertensão arterial pulmonar, e sinaliza potencial benefício sobre desfechos centrados no paciente (qualidade de vida). Não houve, porém, superioridade estatisticamente significativa nos desfechos clínicos duros (progressão, hospitalização, mortalidade) em relação ao tratamento padrão — a decisão terapêutica deve ponderar esses dois planos de evidência separadamente.",
+    "limitations": "Desenho aberto, sem cegamento, o que pode influenciar desfechos subjetivos como qualidade de vida; amostra pequena para desfechos de evento clínico (mortalidade, hospitalização), limitando o poder estatístico para detectar diferenças reais nesses desfechos; braço controle heterogêneo, podendo incluir até duas terapias específicas associadas.",
+    "theme": "Cardiologia pediátrica",
+    "tags": [
+      "hipertensão arterial pulmonar",
+      "macitentana",
+      "ensaio clínico",
+      "pediatria",
+      "qualidade de vida"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "procedimento-de-ross-revisao-sistematica-metanalise-e-microssimulacao",
+    "title": "O procedimento de Ross: revisão sistemática, metanálise e microssimulação de desfechos em crianças e adultos",
+    "study_type": "metanalise",
+    "authors": "Etnel JRG, Elmont LC, Takkenberg JJM, et al.",
+    "journal": "Circulation: Cardiovascular Quality and Outcomes",
+    "year": 2018,
+    "doi": "10.1161/CIRCOUTCOMES.118.004748",
+    "pmid": "30562065",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/30562065/",
+    "summary": "Revisão sistemática e metanálise de 99 publicações (13.129 pacientes, 93.408 pacientes-ano de seguimento) sobre desfechos após o procedimento de Ross em crianças e adultos, com microssimulação estatística para estimar expectativa de vida e risco vitalício de reintervenção a partir das taxas de evento agrupadas.",
+    "key_findings": [
+      "Em crianças (idade média 9,4±5,5 anos ao procedimento), a mortalidade precoce foi 4,19% (IC95% 3,21-5,46) e a mortalidade tardia 0,54%/ano (IC95% 0,42-0,70) — ambas mais altas que nos adultos operados (2,01% e 0,59%/ano, respectivamente).",
+      "Reintervenção do autoenxerto em crianças ocorreu a 1,28%/ano (IC95% 0,99-1,66); reintervenção da via de saída do ventrículo direito, a 1,97%/ano (IC95% 1,64-2,36) — esta última, a maior fonte de reoperação nessa faixa etária.",
+      "O risco vitalício estimado de reintervenção em crianças foi de 94% para o autoenxerto e 100% para a via de saída do VD, contra 49% e 19%, respectivamente, em um adulto operado aos 45 anos.",
+      "A expectativa de vida estimada após a cirurgia em crianças foi de 59 anos, próxima da população geral pareada por idade e sexo (64 anos)."
+    ],
+    "clinical_implications": "O procedimento de Ross oferece sobrevida excelente em crianças e evita a necessidade de anticoagulação crônica, mas praticamente todos os pacientes pediátricos vão precisar de pelo menos uma reintervenção ao longo da vida (autoenxerto e/ou via de saída do VD). Esse dado deve entrar explicitamente na decisão compartilhada com a família diante das alternativas de prótese mecânica ou homoenxerto na criança com indicação de troca valvar aórtica.",
+    "limitations": "Dados agregados de estudos observacionais heterogêneos, sem nenhum ensaio clínico randomizado incluído, com risco de viés de seleção e de publicação típico de séries cirúrgicas. A microssimulação depende de extrapolação de taxas de evento consideradas constantes ao longo do tempo, o que pode não refletir o risco real em horizontes de seguimento muito longos.",
+    "theme": "Cardiologia pediátrica",
+    "tags": [
+      "procedimento de Ross",
+      "cirurgia valvar",
+      "estenose aórtica",
+      "pediatria",
+      "metanálise"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "rehab-hf-reabilitacao-fisica-em-idosos-hospitalizados-por-insuficiencia-cardiaca",
+    "title": "REHAB-HF: ensaio clínico de reabilitação física multidomínio em idosos hospitalizados por insuficiência cardíaca descompensada",
+    "study_type": "ensaio_clinico",
+    "authors": "Kitzman DW, Whellan DJ, Duncan P, Pastva AM, Mentz RJ, Reeves GR, et al.",
+    "journal": "The New England Journal of Medicine",
+    "year": 2021,
+    "doi": "10.1056/NEJMoa2026141",
+    "pmid": "33999544",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/33999544/",
+    "summary": "Ensaio clínico multicêntrico, randomizado e controlado (REHAB-HF) que testou um programa de reabilitação física transicional, individualizado e progressivo — cobrindo força, equilíbrio, mobilidade e resistência —, iniciado durante ou logo após internação por insuficiência cardíaca descompensada em pacientes idosos, contra cuidado usual.",
+    "key_findings": [
+      "349 pacientes randomizados (175 intervenção, 174 controle); 97% eram frágeis ou pré-frágeis no início, com mediana de 5 comorbidades por grupo.",
+      "O escore da Short Physical Performance Battery aos 3 meses foi 8,3±0,2 no grupo intervenção vs. 6,9±0,2 no controle (diferença entre grupos de 1,5 ponto; IC95% 0,9-2,0; p<0,001).",
+      "A taxa de rehospitalização por qualquer causa em 6 meses não diferiu entre os grupos (razão de taxas 0,93; IC95% 0,66-1,19).",
+      "A mortalidade por qualquer causa foi numericamente maior no grupo intervenção (taxa 0,13 vs. 0,10; razão de taxas 1,17; IC95% 0,61-2,27), sem significância estatística; adesão às sessões foi de 67% e retenção no estudo, de 82%."
+    ],
+    "clinical_implications": "Em idosos hospitalizados por insuficiência cardíaca descompensada — grupo tradicionalmente excluído dos ensaios clássicos de reabilitação cardíaca — uma intervenção multidomínio iniciada precocemente melhora a função física de forma clinicamente relevante, ainda que sem redução demonstrada de rehospitalização. Idade avançada e fragilidade, isoladamente, não devem ser motivo para negar encaminhamento à reabilitação.",
+    "limitations": "Não houve cegamento do paciente nem da equipe assistencial (o desfecho funcional primário foi avaliado por avaliador cego à alocação); o estudo não foi desenhado nem teve poder estatístico para desfechos de mortalidade; a adesão de 67% às sessões reflete o desafio prático de manter reabilitação estruturada nessa população.",
+    "theme": "Cardiologia geriátrica",
+    "tags": [
+      "reabilitação cardíaca",
+      "insuficiência cardíaca",
+      "fragilidade",
+      "idoso",
+      "ensaio clínico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "frailty-avr-escalas-de-fragilidade-e-desfecho-apos-troca-valvar-aortica-no-idoso",
+    "title": "FRAILTY-AVR: comparação de sete escalas de fragilidade na predição de desfecho após TAVI ou troca cirúrgica de valva aórtica em idosos",
+    "study_type": "estudo_de_coorte",
+    "authors": "Afilalo J, Lauck S, Kim DH, Lefèvre T, Piazza N, Lachapelle K, et al.",
+    "journal": "Journal of the American College of Cardiology",
+    "year": 2017,
+    "doi": "10.1016/j.jacc.2017.06.024",
+    "pmid": "28693934",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/28693934/",
+    "summary": "Coorte prospectiva multicêntrica (14 centros em 3 países, 2012-2016) que comparou o valor preditivo incremental de sete escalas de fragilidade diferentes — Fried, Fried+, Rockwood, Short Physical Performance Battery, Bern, Columbia e Essential Frailty Toolset (EFT) — para prever morte e incapacidade em idosos submetidos a TAVI ou troca cirúrgica de valva aórtica (SAVR).",
+    "key_findings": [
+      "1.020 pacientes, idade mediana de 82 anos; a prevalência de fragilidade variou de 26% a 68% conforme a escala utilizada, evidenciando a falta de padronização do conceito na prática clínica.",
+      "A EFT — escala breve de 4 itens (força de membro inferior, comprometimento cognitivo, anemia e hipoalbuminemia) — foi a preditora mais forte de óbito em 1 ano (odds ratio ajustada 3,72; IC95% 2,54-5,45), com melhora do estatístico C de 0,071 (p<0,001).",
+      "A EFT também foi a mais forte preditora de piora de incapacidade em 1 ano (OR ajustada 2,13; IC95% 1,57-2,87) e de óbito em 30 dias (OR ajustada 3,29; IC95% 1,73-6,26)."
+    ],
+    "clinical_implications": "A escolha da escala de fragilidade importa na prática: uma ferramenta breve e objetiva (EFT) supera escalas mais longas e subjetivas na predição de morte e incapacidade após TAVI/SAVR, e pode ser incorporada à avaliação pré-procedimento do idoso com estenose aórtica grave sem sobrecarregar a consulta, complementando os escores de risco cirúrgico tradicionais.",
+    "limitations": "Estudo observacional, sem randomização quanto à escala usada para a decisão clínica; a escolha entre TAVI e SAVR não foi controlada pelo desenho e pode confundir a associação entre fragilidade e desfecho; validação externa fora dos 14 centros participantes ainda é necessária antes de generalização plena.",
+    "theme": "Cardiologia geriátrica",
+    "tags": [
+      "fragilidade",
+      "TAVI",
+      "cirurgia valvar",
+      "estenose aórtica",
+      "idoso"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "optimise-desprescricao-de-anti-hipertensivos-em-idosos-muito-idosos",
+    "title": "OPTIMISE: ensaio de não inferioridade sobre redução de anti-hipertensivos em pacientes de 80 anos ou mais",
+    "study_type": "ensaio_clinico",
+    "authors": "Sheppard JP, Burt J, Lown M, Temple E, Lowe R, Fraser R, et al.",
+    "journal": "JAMA",
+    "year": 2020,
+    "doi": "10.1001/jama.2020.4871",
+    "pmid": "32453368",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/32453368/",
+    "summary": "Ensaio clínico randomizado, aberto, de não inferioridade (OPTIMISE), conduzido em 69 unidades de atenção primária na Inglaterra, comparando uma estratégia de retirada de 1 anti-hipertensivo com manutenção do tratamento habitual em pacientes de 80 anos ou mais, com pressão sistólica já controlada (<150 mmHg) em uso de 2 ou mais anti-hipertensivos.",
+    "key_findings": [
+      "569 pacientes randomizados (idade média 84,8 anos; 48,5% mulheres); 86,4% do grupo com redução de medicação vs. 87,7% do grupo controle mantiveram pressão sistólica <150 mmHg em 12 semanas (risco relativo ajustado 0,98), confirmando não inferioridade pelo desfecho pré-especificado (margem de RR 0,90).",
+      "A redução de medicação foi sustentada em 66,3% dos participantes do grupo intervenção até a 12ª semana.",
+      "A pressão sistólica média foi 3,4 mmHg mais alta (IC95% 1,1-5,8) no grupo de redução em comparação ao controle.",
+      "Eventos adversos graves ocorreram em 4,3% do grupo de redução vs. 2,4% do controle (risco relativo ajustado 1,72; IC95% 0,7-4,3), sem diferença estatisticamente significativa; 5 dos 7 desfechos secundários pré-especificados não mostraram diferença entre os grupos."
+    ],
+    "clinical_implications": "Em pacientes muito idosos (≥80 anos) com polifarmácia anti-hipertensiva e pressão arterial bem controlada, é possível tentar a desprescrição de um fármaco sem perda clinicamente relevante do controle pressórico no curto prazo — um dado que sustenta a prática de simplificação terapêutica nesse grupo, sujeita a reavaliação individualizada e a acompanhamento de desfechos de mais longo prazo.",
+    "limitations": "Seguimento curto (12 semanas), insuficiente para avaliar desfechos cardiovasculares duros, quedas ou mortalidade; desenho aberto, sem cegamento de pacientes ou investigadores; houve elevação discreta, porém mensurável, da pressão sistólica no grupo de redução, cujo impacto clínico em prazo mais longo o estudo não respondeu.",
+    "theme": "Cardiologia geriátrica",
+    "tags": [
+      "hipertensão",
+      "desprescrição",
+      "polifarmácia",
+      "idoso",
+      "ensaio clínico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "tavi-em-nonagenarios-metanalise-de-desfechos-comparados-a-pacientes-mais-jovens",
+    "title": "TAVI em nonagenários: revisão sistemática e metanálise de desfechos clínicos comparados a pacientes mais jovens",
+    "study_type": "metanalise",
+    "authors": "Noguchi M, Kagase A, Yashima F, Shimizu H, Fukuda K, Naganuma T, et al.",
+    "journal": "Cardiovascular Intervention and Therapeutics",
+    "year": 2022,
+    "doi": "10.1007/s12928-021-00755-4",
+    "pmid": "33428156",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/33428156/",
+    "summary": "Revisão sistemática e metanálise de 16 estudos observacionais (179.565 pacientes, sendo 21.674 nonagenários) comparando complicações procedurais e mortalidade após implante transcateter de valva aórtica (TAVI) entre pacientes com 90 anos ou mais e pacientes mais jovens.",
+    "key_findings": [
+      "Nonagenários tiveram mortalidade significativamente maior em curto prazo (razão de risco 1,48; IC95% 1,38-1,59; p<0,001) e em longo prazo (razão de risco 1,34; IC95% 1,24-1,44; p<0,001) em comparação a pacientes mais jovens.",
+      "Sangramento maior e/ou com risco de vida foi mais frequente em nonagenários (razão de risco 1,21; IC95% 1,05-1,39; p=0,008).",
+      "AVC (razão de risco 1,24; IC95% 1,11-1,40; p<0,001) e complicação vascular maior (razão de risco 2,15; IC95% 1,35-3,42; p=0,001) também foram mais frequentes nos nonagenários.",
+      "Complicação vascular menor, infarto do miocárdio periprocedimento e necessidade de marca-passo definitivo foram semelhantes entre nonagenários e pacientes mais jovens."
+    ],
+    "clinical_implications": "A idade ≥90 anos, isoladamente, associa-se a maior risco de morte e de complicações maiores após TAVI, mas não constitui contraindicação absoluta ao procedimento — a seleção cuidadosa do nonagenário (funcionalidade, comorbidades, expectativa de vida, fragilidade) permanece determinante para o resultado, e a discussão de risco-benefício com o paciente e a família deve incorporar esses números absolutos, não apenas a idade cronológica isolada.",
+    "limitations": "Todos os 16 estudos incluídos são observacionais, com viés de seleção esperado (nonagenários encaminhados a TAVI provavelmente já eram um subgrupo mais favorável dentro da faixa etária); heterogeneidade entre os estudos quanto a critérios de inclusão, geração de protocolo TAVI utilizada e definição de desfechos não totalmente explorada na metanálise.",
+    "theme": "Cardiologia geriátrica",
+    "tags": [
+      "TAVI",
+      "estenose aórtica",
+      "nonagenários",
+      "idoso",
+      "metanálise"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]

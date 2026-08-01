@@ -20783,5 +20783,79 @@
         "por_que": "Fecha com a métrica funcional comum a todo esse seguimento de décadas: como o teste cardiopulmonar de exercício quantifica o impacto residual, seja da regurgitação pulmonar pós-Fallot, seja de qualquer disfunção ventricular residual pós-switch."
       }
     ]
+  },
+  {
+    "slug": "trilha-cardiologia-pediatrica-doenca-de-kawasaki-da-fase-aguda-a-refrataria",
+    "titulo": "Cardiologia pediátrica: doença de Kawasaki, da fase aguda à refratária ao tratamento com imunoglobulina",
+    "tema": "Cardiologia pediátrica",
+    "objetivo": "Percorrer o diagnóstico e a estratificação de risco coronariano da doença de Kawasaki, a base de evidência do esquema clássico de imunoglobulina intravenosa em dose única, o papel da aspirina em dose anti-inflamatória e depois antiplaquetária, e a evidência para associar corticoide já na fase aguda nos casos de maior risco.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "doenca-de-kawasaki-criterios-diagnosticos-estratificacao-de-risco-por-z-score-e-tratamento",
+        "por_que": "Fixa os critérios diagnósticos clássicos e incompletos, a estratificação de risco coronariano por Z-escore e o esquema terapêutico de primeira linha antes de entrar na evidência primária de cada componente."
+      },
+      {
+        "ordem": 2,
+        "item_type": "estudo",
+        "item_slug": "newburger-1991-ivig-dose-unica-versus-quatro-doses-kawasaki",
+        "por_que": "É o ensaio que estabeleceu a dose única de 2 g/kg de imunoglobulina como superior ao esquema fracionado em quatro doses diárias, base do protocolo atual."
+      },
+      {
+        "ordem": 3,
+        "item_type": "medicamento",
+        "item_slug": "acido-acetilsalicilico-aas",
+        "por_que": "A aspirina acompanha a imunoglobulina em todo o tratamento da fase aguda, primeiro em dose anti-inflamatória e depois em dose antiplaquetária — vale revisar o ajuste de dose entre as duas fases."
+      },
+      {
+        "ordem": 4,
+        "item_type": "estudo",
+        "item_slug": "raise-prednisolona-associada-a-imunoglobulina-na-doenca-de-kawasaki-grave",
+        "por_que": "Mostra em que subgrupo de maior risco (identificado por escore) a adição de corticoide à imunoglobulina já na fase aguda reduz a chance de aneurisma coronariano, fechando o percurso da doença refratária."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-cardiologia-geriatrica-estado-cognitivo-funcional-e-decisao-cardiovascular",
+    "titulo": "Cardiologia geriátrica: quando o estado cognitivo e funcional, não a idade cronológica, deve orientar a decisão",
+    "tema": "Cardiologia geriátrica",
+    "objetivo": "Reconhecer três cenários em que o comprometimento cognitivo e a fragilidade funcional — mais do que a idade isolada — mudam a decisão cardiovascular no muito idoso: a escolha e a adesão ao anticoagulante, a indicação e desativação de dispositivo eletrônico implantável em fim de vida, e o risco de delirium pós-operatório em cirurgia cardíaca.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "comprometimento-cognitivo-e-demencia-como-modificador-de-decisao-cardiovascular",
+        "por_que": "Estabelece por que o comprometimento cognitivo muda a relação risco-benefício de terapias cardiovasculares — adesão, capacidade de monitorização e objetivos de cuidado — antes de entrar nos cenários específicos."
+      },
+      {
+        "ordem": 2,
+        "item_type": "estudo",
+        "item_slug": "frail-af-troca-de-varfarina-por-doac-em-idoso-fragil",
+        "por_que": "Testa diretamente, em idosos frágeis já anticoagulados e estáveis, se trocar antagonista de vitamina K por DOAC é seguro — pergunta que se torna ainda mais delicada quando há comprometimento cognitivo associado à fragilidade."
+      },
+      {
+        "ordem": 3,
+        "item_type": "estudo",
+        "item_slug": "eldercare-af-edoxaban-em-dose-reduzida-no-muito-idoso",
+        "por_que": "Mostra a alternativa de dose reduzida de DOAC especificamente desenhada para o paciente muito idoso considerado inelegível para anticoagulação em dose plena — outra forma de adaptar a terapia ao estado funcional, não à idade isolada."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "delirium-pos-operatorio-em-cirurgia-cardiaca-no-idoso",
+        "por_que": "O comprometimento cognitivo prévio é o principal fator de risco para delirium pós-operatório — a trilha conecta a avaliação cognitiva pré-operatória ao risco perioperatório concreto em cirurgia cardíaca."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "marca-passo-e-cdi-no-muito-idoso-indicacao-e-desativacao-em-fim-de-vida",
+        "por_que": "Fecha a trilha no outro extremo da decisão: quando a expectativa de vida e o estado cognitivo mudam não a indicação inicial do dispositivo, mas a discussão sobre desativação em cuidado de fim de vida."
+      }
+    ]
   }
 ]

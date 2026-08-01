@@ -3825,5 +3825,249 @@
       "estenose pulmonar",
       "ramo de arteria pulmonar"
     ]
+  },
+  {
+    "slug": "espirometria-e-prova-de-funcao-pulmonar-em-crianca-com-hipertensao-pulmonar",
+    "name": "Espirometria e prova de função pulmonar em criança com hipertensão pulmonar",
+    "category": "metodo_grafico",
+    "theme": "Cardiologia pediátrica",
+    "what_it_measures": "Volumes e fluxos pulmonares dinâmicos — capacidade vital forçada (CVF), volume expiratório forçado no primeiro segundo (VEF1), relação VEF1/CVF e a alça fluxo-volume — obtidos por manobra expiratória forçada após inspiração máxima.",
+    "reference_range": "Valores preditos por altura, sexo e etnia, calculados pelas equações de referência da Global Lung Function Initiative (GLI); a relação VEF1/CVF normal na infância costuma ser mais alta que no adulto (frequentemente acima de 0,85-0,90). Não há um corte único de normalidade — o resultado individual é sempre comparado ao predito por essas equações.",
+    "indications": "Compõe a investigação etiológica de toda criança com hipertensão pulmonar (HP) confirmada ou suspeita, para excluir ou quantificar doença pulmonar parenquimatosa ou de vias aéreas associada (grupo 3 da classificação de HP) — displasia broncopulmonar, doença pulmonar intersticial, obstrução crônica de vias aéreas —, conforme a diretriz conjunta da American Heart Association e da American Thoracic Society para HP pediátrica.",
+    "interpretation": "Padrão obstrutivo (relação VEF1/CVF reduzida para a idade) sugere doença de vias aéreas contribuindo para a HP, como sequela de displasia broncopulmonar; padrão restritivo (CVF reduzida com relação VEF1/CVF preservada) sugere doença intersticial ou limitação da caixa torácica. Um resultado normal não exclui HP arterial pulmonar idiopática ou hereditária (grupo 1), mas afasta componente pulmonar relevante como causa isolada.",
+    "limitations": "Exige cooperação ativa da criança na manobra expiratória forçada, geralmente inviável de forma técnica e reprodutível abaixo de 5-6 anos de idade — nessa faixa etária a avaliação pulmonar depende sobretudo de tomografia de tórax e da história clínica. O exame também não avalia diretamente a vasculatura pulmonar nem a função do ventrículo direito: é sempre complementar ao ecocardiograma e ao cateterismo cardíaco direito, nunca substituto deles.",
+    "source_refs": [
+      "Abman SH, Hansmann G, Archer SL, et al. Pediatric Pulmonary Hypertension: Guidelines From the American Heart Association and American Thoracic Society. Circulation. 2015;132(21):2037-2099. PMID 26534956."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "espirometria",
+      "prova de função pulmonar",
+      "hipertensão pulmonar pediátrica",
+      "displasia broncopulmonar",
+      "grupo 3"
+    ]
+  },
+  {
+    "slug": "teste-genetico-para-canalopatias-qt-longo-e-sindrome-de-brugada-em-pediatria",
+    "name": "Teste genético para canalopatias (síndrome do QT longo e síndrome de Brugada) em pediatria",
+    "category": "laboratorial",
+    "theme": "Cardiologia pediátrica",
+    "what_it_measures": "Sequenciamento dos genes associados às principais canalopatias hereditárias — entre eles KCNQ1 (LQT1), KCNH2 (LQT2) e SCN5A (LQT3 e a maioria dos casos genotipados de síndrome de Brugada) — para identificar variante patogênica ou provavelmente patogênica compatível com o fenótipo clínico do paciente.",
+    "reference_range": "Não se aplica: resultado qualitativo, classificado como variante patogênica, provavelmente patogênica, benigna, provavelmente benigna, ou variante de significado incerto (VUS), segundo os critérios do American College of Medical Genetics and Genomics (ACMG).",
+    "indications": "Classe I no probando com diagnóstico clínico firme de síndrome do QT longo (por critério eletrocardiográfico ou escore de Schwartz) ou de síndrome de Brugada (padrão tipo 1 espontâneo ou farmacologicamente induzido), segundo a diretriz ESC 2022 de arritmias ventriculares e prevenção de morte súbita. Uma vez identificada variante patogênica no probando, o mesmo teste dirigido (só para a variante em questão, mais barato e rápido) é indicado em cascata para os familiares de primeiro grau.",
+    "interpretation": "Variante patogênica confirmada no probando orienta o rastreio familiar em cascata e pode influenciar a estratificação de risco e a escolha terapêutica — por exemplo, LQT1 tem resposta mais previsível ao betabloqueador que os demais subtipos. Um resultado genético negativo NÃO exclui o diagnóstico clínico: cerca de 20-25% dos casos fenotipicamente confirmados de síndrome de Brugada, e uma fração relevante dos casos de QT longo, não têm variante identificada nos painéis genéticos atuais — nesses casos o diagnóstico permanece clínico e eletrocardiográfico.",
+    "limitations": "Variante de significado incerto (VUS) é um resultado frequente e não deve, isoladamente, orientar conduta clínica nem rastreio familiar em cascata — tratá-la como se fosse patogênica é um erro de interpretação comum. A leitura do resultado exige correlação estrita com o fenótipo clínico e, idealmente, aconselhamento genético especializado; um laudo isolado, sem esse contexto, pode levar a conduta equivocada (ansiedade familiar desnecessária ou, no outro extremo, falsa tranquilidade).",
+    "source_refs": [
+      "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. PMID 36017572."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "canalopatia",
+      "teste genético",
+      "síndrome do qt longo",
+      "síndrome de brugada",
+      "morte súbita pediátrica",
+      "scn5a"
+    ]
+  },
+  {
+    "slug": "teste-de-caminhada-de-6-minutos-em-criancas-com-insuficiencia-cardiaca",
+    "name": "Teste de caminhada de 6 minutos (TC6) em crianças com insuficiência cardíaca",
+    "category": "metodo_grafico",
+    "theme": "Cardiologia pediátrica",
+    "what_it_measures": "Distância percorrida por caminhada em corredor plano padronizado durante 6 minutos, em ritmo autodeterminado pela criança, como medida submáxima de capacidade funcional — alternativa mais simples e barata ao teste cardiopulmonar de exercício (CPET) quando este não está disponível.",
+    "reference_range": "Não existe um valor absoluto único de normalidade para a distância percorrida — depende de idade, altura, sexo e etnia. Na prática pediátrica usa-se sobretudo a variação longitudinal no mesmo paciente (comparação seriada ao longo do seguimento) e a correlação com o pico de VO2 obtido no teste cardiopulmonar.",
+    "indications": "Avaliação seriada de capacidade funcional em crianças e adolescentes com cardiopatia congênita complexa e insuficiência cardíaca, incluindo pacientes com fisiologia de Fontan, quando o teste cardiopulmonar de exercício não está disponível ou não é tolerado.",
+    "interpretation": "Em coorte de 459 crianças de 6-18 anos com cardiopatia congênita (76 delas com fisiologia de Fontan), o TC6 mostrou coeficiente de correlação intraclasse de 0,93 entre duas aplicações (boa reprodutibilidade teste-reteste) e correlação positiva moderada a forte com o VO2 de pico do CPET (r = 0,62). Na prática clínica, o achado mais relevante costuma ser a queda da distância percorrida em avaliações seriadas do mesmo paciente — sinaliza piora funcional antes do surgimento de sintomas floridos em repouso.",
+    "limitations": "Não substitui o teste cardiopulmonar de exercício quando este está disponível, porque não quantifica consumo de oxigênio nem identifica o mecanismo limitante (cardíaco, pulmonar ou muscular) — apenas registra o desempenho final. Depende de cooperação da criança e de um corredor padronizado e reprodutível; um resultado isolado, sem teste basal de referência para comparação, tem valor interpretativo limitado.",
+    "source_refs": [
+      "Qu J, Shi H, Guo Y, et al. Is the six-minute walk test still reliable compared to cardiopulmonary exercise test for exercise capacity in children with congenital heart disease? Front Pediatr. 2022;10:965739. PMID 36452347."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "teste de caminhada de 6 minutos",
+      "tc6",
+      "capacidade funcional",
+      "fontan",
+      "insuficiência cardíaca pediátrica"
+    ]
+  },
+  {
+    "slug": "mapa-24h-no-idoso-com-hipertensao-arterial-resistente",
+    "name": "MAPA de 24 horas no idoso com hipertensão arterial resistente",
+    "category": "metodo_grafico",
+    "theme": "Cardiologia geriátrica",
+    "what_it_measures": "Registro automático e seriado da pressão arterial ao longo de 24 horas, em intervalos programados (tipicamente a cada 15-30 minutos), incluindo o período de sono — gera as médias de pressão em vigília, em sono e nas 24 horas, além do padrão de descenso noturno (dipping).",
+    "reference_range": "Valores de corte diagnósticos de hipertensão pelo MAPA, segundo a diretriz ESH 2023: média de 24h ≥ 130/80 mmHg, média em vigília ≥ 135/85 mmHg, média em sono ≥ 120/70 mmHg.",
+    "indications": "Etapa obrigatória na investigação de hipertensão arterial resistente (pressão não controlada com três ou mais classes de anti-hipertensivos em doses adequadas, incluindo diurético) — recomendação da diretriz ESH 2023 para confirmar que a elevação pressórica é sustentada fora do consultório (afastando hipertensão do jaleco branco) e para caracterizar o padrão circadiano, frequentemente alterado no idoso hipertenso resistente.",
+    "interpretation": "Padrão non-dipper (queda da pressão no sono menor que 10% em relação à vigília) e padrão riser (pressão de sono maior que a de vigília) são mais frequentes no idoso com hipertensão resistente e associam-se a maior risco cardiovascular; sua identificação pode motivar ajuste do horário de administração da medicação. Persistência de médias elevadas nas 24 horas, a despeito de esquema terapêutico otimizado e de adesão confirmada, sustenta o diagnóstico de hipertensão verdadeiramente resistente e direciona a investigação de causas secundárias.",
+    "limitations": "No idoso, artefatos de medida são mais frequentes por rigidez arterial aumentada, arritmias (especialmente fibrilação atrial, que compromete a acurácia do método oscilométrico) e maior dificuldade de tolerar o manguito durante o sono. O exame não distingue, por si só, hipertensão resistente verdadeira de pseudorresistência por má adesão medicamentosa — a confirmação de adesão continua sendo etapa clínica separada.",
+    "source_refs": [
+      "Mancia G, Kreutz R, Brunström M, et al. 2023 ESH Guidelines for the management of arterial hypertension. J Hypertens. 2023;41(12):1874-2071. PMID 37345492."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "mapa",
+      "hipertensão resistente",
+      "idoso",
+      "padrão non-dipper",
+      "monitorização ambulatorial da pressão arterial"
+    ]
+  },
+  {
+    "slug": "ecocardiograma-tridimensional-3d-na-valvopatia-mitral-do-idoso",
+    "name": "Ecocardiograma tridimensional (3D) na valvopatia mitral do idoso",
+    "category": "imagem",
+    "theme": "Cardiologia geriátrica",
+    "what_it_measures": "Reconstrução volumétrica em tempo real do aparelho valvar mitral (anel, folhetos, cordoalhas e músculos papilares), obtida por sonda transtorácica ou, com maior resolução, transesofágica 3D — permite quantificar área e geometria do orifício regurgitante ou estenótico em plano não limitado pela orientação do feixe ultrassônico, ao contrário do 2D.",
+    "reference_range": "Não se aplica um valor de referência único — os parâmetros de gravidade (área do orifício regurgitante efetivo, volume regurgitante) seguem os mesmos cortes de gravidade do 2D/Doppler estabelecidos pela diretriz ESC/EACTS 2021 de valvopatias, com a vantagem de medição direta da área em vez de estimativa geométrica.",
+    "indications": "Recomendado pela diretriz ESC/EACTS 2021 de valvopatias para detalhar a anatomia valvar e avaliar a possibilidade de reparo antes de qualquer intervenção mitral, e como guia intraprocedimento de reparo transcateter borda-a-borda (TEER) — procedimento cada vez mais utilizado no idoso com regurgitação mitral primária ou secundária e alto risco cirúrgico.",
+    "interpretation": "A visão 'em face cirúrgica' (surgical view) do 3D permite localizar com precisão o segmento do folhete acometido (nomenclatura de Carpentier — A1-A3, P1-P3), informação central para decidir entre reparo e troca valvar e para guiar o implante do dispositivo de TEER em tempo real. Regurgitação mitral primária é definida como grave quando a área do orifício regurgitante efetivo é ≥ 40 mm², o volume regurgitante ≥ 60 mL e a fração regurgitante ≥ 50%, segundo a mesma diretriz.",
+    "limitations": "Resolução temporal (taxa de quadros por segundo) inferior à do 2D, o que pode prejudicar a avaliação de estruturas em movimento rápido. No idoso, janela acústica transtorácica frequentemente subótima (enfisema, deformidade torácica, obesidade) torna a via transesofágica necessária com mais frequência para obter reconstrução 3D de qualidade diagnóstica — exame semi-invasivo, com sedação, de maior risco relativo nessa faixa etária.",
+    "source_refs": [
+      "Vahanian A, Beyersdorf F, Praz F, et al. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. PMID 34453165."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ecocardiograma 3d",
+      "valvopatia mitral",
+      "idoso",
+      "teer",
+      "regurgitação mitral"
+    ]
+  },
+  {
+    "slug": "cintilografia-com-pirofosfato-de-tecnecio-99m-tc-pyp-para-amiloidose-cardiaca-attr-no-idoso",
+    "name": "Cintilografia com pirofosfato de tecnécio-99m (Tc-PYP) para amiloidose cardíaca ATTR no idoso",
+    "category": "imagem",
+    "theme": "Cardiologia geriátrica",
+    "what_it_measures": "Captação miocárdica de um traçador ósseo (pirofosfato marcado com tecnécio-99m) que se liga preferencialmente aos depósitos de amiloide de transtirretina (ATTR) no miocárdio — avaliada de forma visual (grau 0 a 3, comparando a intensidade da captação cardíaca com a captação óssea nas costelas) e semiquantitativa, pela razão coração/pulmão contralateral (H/CL) na imagem planar tardia.",
+    "reference_range": "Grau visual: 0 = nenhuma captação cardíaca; 1 = captação discreta, menor que a óssea; 2 = captação moderada, igual à óssea; 3 = captação intensa, maior que a óssea, com captação óssea costal reduzida ou ausente. Razão H/CL ≥ 1,5 na imagem de 1 hora é considerada positiva na maioria dos protocolos.",
+    "indications": "Investigação não invasiva de amiloidose cardíaca por transtirretina (ATTR) — hereditária ou selvagem (senil) — em paciente idoso com sinais sugestivos: hipertrofia ventricular esquerda desproporcional à história de hipertensão, insuficiência cardíaca com fração de ejeção preservada de causa indeterminada, ou intolerância a doses habituais de anti-hipertensivo por hipotensão.",
+    "interpretation": "No estudo multicêntrico de Gillmore et al. (2016, n = 1.217 pacientes com suspeita de amiloidose cardíaca), qualquer captação miocárdica na cintilografia óssea teve sensibilidade > 99% e especificidade de 86% para amiloide ATTR cardíaco (contra amiloidose não relacionada a ATTR). O achado combinado de captação grau 2 ou 3 E ausência de proteína monoclonal no soro ou na urina (por imunofixação e cadeias leves livres) elevou a especificidade e o valor preditivo positivo para ATTR cardíaco a 100% (IC 98,0-100) — permitindo diagnóstico não invasivo, sem biópsia endomiocárdica, na maioria dos pacientes.",
+    "limitations": "A presença de proteína monoclonal no soro ou na urina — comum no idoso, mesmo sem relação causal com o quadro cardíaco (gamopatia monoclonal de significado indeterminado é frequente nessa faixa etária) — invalida o critério não invasivo: nesse cenário, mesmo com captação grau 2-3, a biópsia (endomiocárdica ou de tecido gorduroso/outro sítio) é necessária para excluir amiloidose de cadeia leve (AL), que é uma emergência hematológica e não pode ser tratada como ATTR. O exame não distingue a forma hereditária da forma selvagem (senil) de ATTR — isso exige teste genético complementar do gene TTR.",
+    "source_refs": [
+      "Gillmore JD, Maurer MS, Falk RH, et al. Nonbiopsy diagnosis of cardiac transthyretin amyloidosis. Circulation. 2016;133(24):2404-2412. PMID 27143678.",
+      "Saleem M, Sadat B, Van Harn M, Ananthasubramaniam K. Towards a diagnosis of cardiac amyloidosis: Single center experience with 99m technetium pyrophosphate planar imaging and opportunities for standardization of diagnostic workflow. Medicina (Kaunas). 2023;59(2):378. PMID 36837580."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "cintilografia",
+      "pirofosfato",
+      "tc-pyp",
+      "amiloidose cardíaca",
+      "attr",
+      "idoso"
+    ]
+  },
+  {
+    "slug": "estudo-eletrofisiologico-invasivo-em-cardiopatia-congenita-mapeamento-de-substrato",
+    "name": "Estudo eletrofisiológico invasivo com mapeamento de substrato arritmogênico pós-operatório em cardiopatia congênita",
+    "category": "metodo_grafico",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Registro elétrico intracavitário direto do átrio, ventrículo e vias de condução por cateteres multipolares, associado a mapeamento eletroanatômico tridimensional (voltagem e ativação) da câmara de interesse. Em pacientes operados de cardiopatia congênita, o exame localiza o substrato anatômico da arritmia — istmos de condução lenta entre cicatrizes cirúrgicas (atriotomia, patch de CIA/CIV), suturas, valvas protéticas e estruturas naturais (veia cava inferior, valva tricúspide) — que sustentam taquicardias por reentrada intra-atrial (a chamada 'taquicardia atrial relacionada à cicatriz' ou IART) ou taquicardia ventricular monomórfica relacionada ao patch de fechamento de CIV.",
+    "reference_range": "Não se aplica (exame funcional/anatômico invasivo, não gera valor de referência numérico); o resultado é descritivo — mapa de voltagem com identificação de área(s) de cicatriz/baixa voltagem, istmo(s) crítico(s) e mecanismo da taquicidade induzida).",
+    "indications": "Taquicardia atrial sustentada relacionada a cicatriz cirúrgica (IART) recorrente ou refratária a fármacos em paciente com cardiopatia congênita operada (mais comum após correção de CIA, correção de Fontan, cirurgia de Mustard/Senning, correção de tetralogia de Fallot); taquicardia ventricular monomórfica sustentada em pós-operatório de tetralogia de Fallot ou outras cardiopatias com ventriculotomia/patch de CIV, para localizar o istmo entre a cicatriz e um anel valvar/estrutura não condutora antes de ablação por radiofrequência ou como parte da estratificação de risco de morte súbita.",
+    "interpretation": "A indução da taquicidade clínica reproduz o mecanismo (reentrada macro ou microrreentrante) e permite mapear o(s) istmo(s) crítico(s) — corredores de condução lenta entre duas barreiras elétricas fixas (cicatriz-cicatriz, cicatriz-valva, cicatriz-veia cava) —, alvo da ablação por radiofrequência ou crioablação. Em tetralogia de Fallot operada, quatro istmos anatômicos são classicamente descritos entre a ventriculotomia/patch de saída de VD, o anel tricúspide, o anel pulmonar e o septo — o istmo entre o patch e o anel tricúspide (istmo 3) é o mais frequentemente implicado em TV sustentada e o alvo mais estudado de ablação preventiva combinada à cirurgia de revalvação pulmonar.",
+    "limitations": "Procedimento invasivo, com necessidade de acesso vascular múltiplo e, com frequência, punção transeptal ou acesso retrógrado em anatomias reoperadas — risco aumentado de complicação vascular, tamponamento e lesão de estruturas de condução (bloqueio atrioventricular) em corações com anatomia distorcida por cirurgia prévia. Exige laboratório com experiência em cardiopatia congênita do adulto e disponibilidade de suporte de imagem (fluoroscopia biplanar, ecocardiograma intracardíaco, sistemas de mapeamento eletroanatômico) e de anestesia familiarizada com a fisiologia da cardiopatia de base — recomendação explícita do consenso PACES/HRS. A ablação de substrato ventricular relacionado a patch de CIV carrega risco de lesão de ramo de condução e de perfuração em paredes adelgaçadas por cirurgia prévia.",
+    "source_refs": [
+      "Khairy P, Van Hare GF, Balaji S, et al. PACES/HRS Expert Consensus Statement on the Recognition and Management of Arrhythmias in Adult Congenital Heart Disease. Heart Rhythm. 2014;11(10):e102-165. PMID 24814377."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "eletrofisiologia invasiva",
+      "mapeamento eletroanatômico",
+      "taquicardia atrial relacionada a cicatriz",
+      "IART",
+      "taquicardia ventricular",
+      "tetralogia de Fallot",
+      "ablação por cateter"
+    ]
+  },
+  {
+    "slug": "teste-de-esforco-com-oximetria-de-pulso-em-cardiopatia-congenita-cianotica",
+    "name": "Teste de esforço com oximetria de pulso contínua em cardiopatia congênita cianótica",
+    "category": "metodo_grafico",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Monitorização contínua da saturação periférica de oxigênio (SpO₂) por oximetria de pulso durante um protocolo padronizado de exercício (esteira ou cicloergômetro, geralmente protocolo em rampa ou escalonado), sem necessariamente incluir análise metabólica de gases (o que a diferencia do teste cardiopulmonar de exercício/CPET completo, já cadastrado nesta base). O parâmetro central é a magnitude e a velocidade da queda da SpO₂ em relação ao basal de repouso ao longo do esforço, refletindo o comportamento do shunt direita-esquerda (fixo ou dependente de resistência vascular pulmonar) sob demanda de débito cardíaco aumentada.",
+    "reference_range": "Não há corte numérico único validado para queda de SpO₂ no esforço; a referência é o próprio basal do paciente (SpO₂ de repouso) comparado à SpO₂ no pico de esforço e na recuperação, com dessaturação maior e mais precoce indicando reserva funcional pulmonar/shunt menos favorável. VERIFICAÇÃO HUMANA NECESSÁRIA para um valor de corte quantitativo de queda percentual associado a desfecho, se a instituição desejar adotar um limiar operacional — a literatura consultada nesta sessão não sustenta um número único de consenso.",
+    "indications": "Cardiopatia congênita cianótica não corrigida ou paliada (fisiologia de Eisenmenger, tetralogia de Fallot não corrigida, atresia tricúspide, dupla via de saída sem reparo anatômico) para caracterizar a resposta funcional e o comportamento do shunt ao esforço; parte da avaliação de elegibilidade para fechamento de defeito quando há dúvida sobre reversibilidade da hipertensão pulmonar (dessaturação de membro inferior ao esforço em paciente com saturação normal em repouso é sinal de alerta para hipertensão pulmonar associada a shunt, e contraindica o fechamento segundo a diretriz europeia); seguimento evolutivo de pacientes com síndrome de Eisenmenger em terapia-alvo para hipertensão pulmonar; triagem funcional quando o CPET completo com análise de gases não está disponível.",
+    "interpretation": "Queda maior e mais precoce da SpO₂ durante o esforço, com recuperação lenta, indica shunt direita-esquerda hemodinamicamente mais significativo sob demanda de fluxo, compatível com pior reserva funcional. A diretriz europeia de cardiopatia congênita do adulto (ESC 2020) destaca a dessaturação ao esforço como critério clínico relevante: em pacientes com persistência do canal arterial ou outro shunt e saturação normal em repouso, dessaturação de membro inferior ao esforço sinaliza hipertensão arterial pulmonar associada e contraindica o fechamento do defeito — assim como em pacientes já com fisiologia de Eisenmenger estabelecida. A queda de SpO₂ é interpretada em conjunto com a distância percorrida (quando associada ao teste de caminhada de 6 minutos) e, quando disponível, com os parâmetros metabólicos do CPET completo (consumo de O₂ de pico, eficiência ventilatória).",
+    "limitations": "A oximetria de pulso periférica tem acurácia reduzida em extremos de perfusão (vasoconstrição, frio, baixo débito) e em saturações muito baixas (< 70-75%), faixa em que a curva de calibração do oxímetro é menos confiável — nessas situações a gasometria arterial seriada é mais precisa, porém invasiva e não compatível com o protocolo de esforço contínuo. O teste isolado de oximetria, sem análise de gases expirados, não substitui o CPET completo quando a pergunta clínica exige quantificar consumo de oxigênio de pico ou eficiência ventilatória (VE/VCO₂) — é um exame complementar mais simples e mais disponível, não um substituto equivalente. Protocolos de esforço não são padronizados de forma uniforme entre centros para esta finalidade específica.",
+    "source_refs": [
+      "Baumgartner H, De Backer J, Babu-Narayan SV, et al. 2020 ESC Guidelines for the management of adult congenital heart disease. Eur Heart J. 2021;42(6):563-645. PMID 32860028.",
+      "Cifra B, Cordina RL, Gauthier N, et al. Cardiopulmonary Exercise Test Interpretation Across the Lifespan in Congenital Heart Disease: A Scientific Statement From the American Heart Association. J Am Heart Assoc. 2025;14(4):e038200. PMID 39782908 (errata em J Am Heart Assoc. 2025;14(5):e10680)."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "oximetria de pulso",
+      "teste de esforço",
+      "cardiopatia cianótica",
+      "síndrome de Eisenmenger",
+      "dessaturação ao exercício",
+      "shunt direita-esquerda"
+    ]
+  },
+  {
+    "slug": "biopsia-endomiocardica-em-cardiopatia-congenita-pos-transplante-cardiaco",
+    "name": "Biópsia endomiocárdica no seguimento pós-transplante cardíaco por cardiopatia congênita",
+    "category": "metodo_grafico",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Coleta de fragmentos de tecido miocárdico do ventrículo direito (ou, em anatomias alteradas por cardiopatia congênita, de câmara de acesso possível) por via percutânea transvenosa, com bioptomo guiado por fluoroscopia ou ecocardiograma, para análise histopatológica direta do miocárdio transplantado — padrão-ouro para diagnóstico e graduação da rejeição celular aguda pelos critérios da International Society for Heart and Lung Transplantation (ISHLT).",
+    "reference_range": "Graduação histopatológica ISHLT de rejeição celular aguda, de 0R (ausente) a 3R (grave); resultado descritivo, não numérico contínuo.",
+    "indications": "Vigilância protocolar (surveillance) de rejeição no primeiro ano pós-transplante cardíaco pediátrico, período de maior rendimento diagnóstico; investigação de disfunção de enxerto, sintomas inespecíficos ou suspeita clínica de rejeição em qualquer momento do seguimento; reavaliação após redução de imunossupressão ou após episódio de rejeição tratado, para confirmar resposta. Crianças transplantadas por cardiopatia congênita (incluindo pós-Fontan em falência) frequentemente têm anatomia venosa central e intracardíaca alterada por cirurgias prévias, o que exige planejamento de acesso vascular individualizado antes do procedimento.",
+    "interpretation": "Biópsia de vigilância no primeiro ano mostrou rejeição significativa (grau ISHLT ≥ 3A na nomenclatura antiga) em 18% dos procedimentos numa série pediátrica de referência, com rendimento de 14 a 43% quando a indicação era clínica (não protocolar) — sintomas, disfunção de enxerto ou redução de imunossupressão. O rendimento da biópsia de vigilância declina com o tempo pós-transplante e é mais baixo em lactentes (4% entre 1 e 5 anos pós-transplante, contra 13% em crianças maiores) e em pacientes sem história de rejeição frequente no primeiro ano — achado usado para individualizar a frequência de biópsias protocolares além do primeiro ano. Esquema imunossupressor baseado em tacrolimo associou-se a menos rejeição que ciclosporina A no primeiro ano (14% vs. 24% nas biópsias de vigilância, p=0,035).",
+    "limitations": "Procedimento invasivo com risco de perfuração cardíaca, lesão valvar (particularmente tricúspide, pela passagem repetida do bioptomo), arritmia e complicação vascular no sítio de punção — risco adicional em crianças pequenas e em reoperados de cardiopatia congênita com acesso venoso central limitado por trombose ou estenose de vasos previamente cateterizados/operados. O valor da biópsia de vigilância rotineira em longo prazo (além de 2 a 5 anos) é controverso na literatura pediátrica, por rendimento diagnóstico decrescente, e programas vêm incorporando métodos não invasivos complementares (DNA livre de doador, perfil de expressão gênica, ecocardiograma com strain, RM cardíaca) para reduzir a frequência de biópsias em pacientes de baixo risco.",
+    "source_refs": [
+      "Wagner K, Oliver MC, Boyle GJ, Miller SA, Law YM, Pigula F, Webber SA. Endomyocardial biopsy in pediatric heart transplant recipients: a useful exercise? (Analysis of 1,169 biopsies). Pediatr Transplant. 2000;4(3):186-192. PMID 10933318."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "biópsia endomiocárdica",
+      "transplante cardíaco pediátrico",
+      "rejeição celular aguda",
+      "ISHLT",
+      "cardiopatia congênita",
+      "pós-Fontan"
+    ]
+  },
+  {
+    "slug": "rm-cardiaca-t1-mapping-fibrose-em-ventriculo-direito-sistemico",
+    "name": "Ressonância magnética cardíaca com mapeamento de T1 e volume extracelular na avaliação de fibrose do ventrículo direito sistêmico",
+    "category": "imagem",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Sequência de RM cardíaca (tipicamente MOLLI — Modified Look-Locker Inversion recovery) que gera mapas paramétricos de tempo de relaxamento T1 do miocárdio antes (T1 nativo) e depois (T1 pós-contraste) da administração de gadolínio, permitindo calcular o volume extracelular (ECV, do inglês extracellular volume) a partir do hematócrito e da variação de T1 no sangue e no miocárdio. Aplicado ao ventrículo direito sistêmico — na transposição das grandes artérias operada por cirurgia atrial (Mustard/Senning) ou na transposição congenitamente corrigida (ccTGA) —, o exame quantifica fibrose miocárdica difusa, processo distinto e complementar ao realce tardio (que identifica fibrose focal/substitutiva).",
+    "reference_range": "Valores normativos de T1 nativo e ECV dependem do equipamento (campo magnético), da sequência e do protocolo de cada centro — não há valor de referência único e transferível entre serviços; a interpretação exige comparação com controles saudáveis pareados adquiridos no mesmo protocolo/equipamento. Em uma série com transposição das grandes artérias e ventrículo direito sistêmico, o ECV do ventrículo esquerdo subpulmonar (usado como parâmetro comparativo) esteve elevado: mediana de 34% (intervalo interquartil 30-41%) nos pacientes versus 26% (23-27%) em controles saudáveis (p<0,001), com 10 de 13 pacientes (77%) acima do limite superior da normalidade.",
+    "indications": "Avaliação de fibrose miocárdica difusa como marcador não invasivo de remodelamento e disfunção em pacientes com ventrículo direito sistêmico — transposição das grandes artérias corrigida por cirurgia de switch atrial (Mustard/Senning) ou transposição congenitamente corrigida (ccTGA) —, no contexto de estratificação de risco de insuficiência cardíaca e como complemento à volumetria e à fração de ejeção já obtidas rotineiramente por RM cardíaca (exame já cadastrado nesta base).",
+    "interpretation": "Em séries publicadas, o T1 nativo e o ECV elevados no ventrículo sistêmico (e, de forma ainda mais consistente, no ventrículo esquerdo subpulmonar) correlacionam-se com pior função ventricular — associação negativa moderada entre T1/ECV e fração de ejeção nas duas câmaras. Em pacientes pós-switch atrial e com ccTGA, achados de fibrose focal (por realce tardio) já eram conhecidos por se relacionar a disfunção e a desfecho adverso; o mapeamento de T1/ECV acrescenta a detecção de fibrose difusa, processo mais precoce e potencialmente mais sensível a mudança ao longo do seguimento, embora seu papel prognóstico e seu uso para guiar terapia ainda estejam em investigação, sem validação prospectiva ampla até a data desta revisão.",
+    "limitations": "Valores normativos de T1/ECV variam entre equipamentos, campos magnéticos (1,5T vs. 3T) e sequências — comparação entre centros exige cautela, e cada serviço idealmente deveria ter seus próprios controles. Amostras publicadas em ccTGA e pós-switch atrial são pequenas (dezenas de pacientes), o que limita a generalização dos valores de corte. O ECV depende de hematócrito atualizado no momento do exame e de contraste à base de gadolínio, com as contraindicações e cuidados habituais (função renal). Trata-se de técnica emergente, ainda sem incorporação formal a diretriz de sociedade como parâmetro obrigatório de seguimento nesta população — a decisão de solicitar o exame é individualizada.",
+    "source_refs": [
+      "Shaji S, Alsaied T, Saraf A, Hoskoppal A, Olivieri L, Christopher A. T1 mapping: a non-invasive tool to assess the systemic right ventricle. Int J Cardiovasc Imaging. 2024;40(8):1779-1785. PMID 38949675.",
+      "Al-Wakeel-Marquard N, Ferreira da Silva T, Berger F, Kuehne T, Messroghli DR. Myocardial extracellular volume is a non-invasive tissue marker of heart failure in patients with transposition of the great arteries and systemic right ventricle. Front Pediatr. 2022;10:949078. PMID 36419919.",
+      "Cheung YF, Lam WWM, So EKF, et al. Differential myocardial fibrosis of the systemic right ventricle and subpulmonary left ventricle after atrial switch operation for complete transposition of the great arteries. Int J Cardiol Heart Vasc. 2020;30:100612. PMID 32817881."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "mapeamento de T1",
+      "volume extracelular",
+      "ECV",
+      "fibrose miocárdica difusa",
+      "ventrículo direito sistêmico",
+      "transposição das grandes artérias",
+      "switch atrial",
+      "ccTGA",
+      "ressonância magnética cardíaca"
+    ]
   }
 ]

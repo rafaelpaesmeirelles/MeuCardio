@@ -9894,5 +9894,125 @@
       "Losay J, Touchot A, Serraf A, et al. Late outcome after arterial switch operation for transposition of the great arteries. Circulation. 2001;104(12 Suppl 1):I121-I126. DOI: 10.1161/hc37t1.094716. PMID: 11568042."
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "mis-c-imunoglobulina-associada-a-corticoide-ou-imunoglobulina-isolada-como-terapia-inicial",
+    "titulo": "Síndrome inflamatória multissistêmica pediátrica (MIS-C): imunoglobulina isolada ou associada a corticoide desde o início?",
+    "tema": "Cardiologia pediátrica",
+    "nivel": "avançado",
+    "enunciado": "Menino de 6 anos é internado com febre há 5 dias, conjuntivite não purulenta, exantema polimorfo, dor abdominal e hipotensão. Há relato de infecção por SARS-CoV-2 confirmada 5 semanas antes. Exames mostram PCR e BNP muito elevados, linfopenia e troponina discretamente aumentada. O ecocardiograma mostra disfunção sistólica leve de ventrículo esquerdo, sem derrame pericárdico significativo. Fecha-se o diagnóstico de síndrome inflamatória multissistêmica pediátrica (MIS-C) associada a COVID-19, e a equipe discute o esquema imunomodulador inicial.",
+    "pergunta": "Segundo o maior estudo observacional multicêntrico norte-americano sobre o tema, qual estratégia de tratamento imunomodulador inicial esteve associada a menor risco de disfunção cardiovascular (disfunção de VE ou choque com necessidade de vasopressor) a partir do segundo dia de tratamento?",
+    "opcoes": [
+      "Imunoglobulina intravenosa (IVIG) isolada, reservando o corticoide apenas para os casos refratários",
+      "IVIG associada a glicocorticoide já no primeiro dia de tratamento imunomodulador",
+      "Glicocorticoide isolado, sem IVIG, pelo menor custo e maior disponibilidade",
+      "Ácido acetilsalicílico em dose anti-inflamatória isolada, sem qualquer imunomodulador"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "No estudo de vigilância de 58 hospitais americanos (Son et al., NEJM 2021), 518 pacientes com MIS-C (idade mediana 8,7 anos) receberam pelo menos um imunomodulador; 9 morreram. Na análise pareada por escore de propensão (103 pacientes em cada braço), o tratamento inicial com IVIG associada a glicocorticoide teve risco MENOR de disfunção cardiovascular a partir do dia 2 do que IVIG isolada: 17% vs. 31% (risco relativo 0,56; IC95% 0,34-0,94). Os componentes isolados também favoreceram a associação: disfunção de VE 8% vs. 17% (RR 0,46; IC95% 0,19-1,15) e choque com vasopressor 13% vs. 24% (RR 0,54; IC95% 0,29-1,00). A necessidade de terapia adjuvante (corticoide de resgate, biológico ou segunda dose de IVIG) também foi menor com a associação inicial: 34% vs. 70% (RR 0,49; IC95% 0,36-0,65). Um dado importante para não superestimar o efeito: o risco de febre persistente ou recorrente NÃO foi diferente entre os grupos (31% vs. 40%; RR 0,78; IC95% 0,53-1,13) — a associação reduz disfunção cardiovascular, não necessariamente todos os desfechos inflamatórios. É um estudo observacional com pareamento por propensão, não um ensaio randomizado, e isso deve ser declarado ao interpretar a força da recomendação.",
+    "source_refs": [
+      "Son MBF et al. Multisystem Inflammatory Syndrome in Children - Initial Therapy and Outcomes. N Engl J Med. 2021;385(1):23-34. PMID: 34133855"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "alcapa-lactente-com-insuficiencia-mitral-e-disfuncao-de-ve-e-a-disfuncao-subclinica-apos-o-reparo",
+    "titulo": "ALCAPA no lactente: a fração de ejeção normaliza após o reparo, mas o strain conta outra história",
+    "tema": "Cardiologia pediátrica",
+    "nivel": "intermediário",
+    "enunciado": "Lactente de 4 meses é levado ao pronto-socorro por choro intenso e irritabilidade durante as mamadas, associados a taquipneia e sudorese — um equivalente anginoso na faixa etária. O exame mostra sopro de regurgitação mitral e hepatomegalia. O ECG mostra ondas Q profundas e inversão de T em DI e aVL, padrão de infarto de parede lateral. O ecocardiograma revela fração de ejeção de 22% e insuficiência mitral moderada a grave. A angiotomografia confirma origem anômala da artéria coronária esquerda a partir do tronco pulmonar (ALCAPA). O lactente é submetido a translocação coronariana com reimplante direto no seio de Valsalva, sem necessidade de suporte circulatório mecânico.",
+    "pergunta": "No maior estudo de seguimento de longo prazo desse tipo de reparo, apesar de a fração de ejeção normalizar na maioria dos pacientes, qual achado adicional a ecocardiografia com speckle tracking revelou no seguimento tardio?",
+    "opcoes": [
+      "Recorrência inevitável de disfunção sistólica grave, com necessidade de transplante cardíaco na maioria dos pacientes ao longo do seguimento",
+      "Normalização completa da função miocárdica em todos os parâmetros, sem qualquer sequela detectável por nenhum método, incluindo o strain",
+      "Fração de ejeção e fração de encurtamento normais na quase totalidade dos pacientes, mas com redução persistente do strain longitudinal e circunferencial globais, evidenciando disfunção miocárdica subclínica não capturada pelos parâmetros convencionais",
+      "Persistência de insuficiência mitral moderada a grave na maioria dos pacientes, mesmo quando associado reparo valvar mitral no mesmo tempo cirúrgico"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "Na coorte retrospectiva de 34 pacientes operados de ALCAPA (idade mediana no reparo: 5 meses; translocação coronariana em 91% dos casos), a função ventricular convencional melhorou de forma expressiva: fração de ejeção de 21%±6% para 60%±7% (p=0,008), fração de encurtamento de 25%±14% para 38%±5% (p=0,01), Z-escore do diâmetro diastólico final de VE de 6,0±3,8 para 0,9±0,7 (p<0,001), e a proporção de pacientes com insuficiência mitral moderada a grave caiu de 44% (15/34) para 5% (1/21). Todos os pacientes tinham fração de ejeção e de encurtamento NORMAIS no último seguimento. Apesar disso, a ecocardiografia com speckle tracking mostrou strain longitudinal global (p=0,01) e circunferencial global (p=0,03) reduzidos em 11 de 14 pacientes avaliados (79%) — ou seja, os parâmetros convencionais de função (FE, FE%) normalizam, mas subestimam uma disfunção miocárdica subclínica que só o strain detecta. Isso reforça a necessidade de seguimento estruturado a longo prazo mesmo quando o ecocardiograma \"parece normal\" pelos critérios usuais.",
+    "source_refs": [
+      "Cabrera AG et al. Outcomes of anomalous left coronary artery from pulmonary artery repair: beyond normal function. Ann Thorac Surg. 2015;99(4):1342-1347. PMID: 25725925"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "bloqueio-atrioventricular-congenito-recorrencia-em-gestacao-subsequente-e-a-hidroxicloroquina",
+    "titulo": "Bloqueio atrioventricular congênito por anti-Ro: existe algo que reduza o risco de recorrência na próxima gestação?",
+    "tema": "Cardiologia pediátrica",
+    "nivel": "avançado",
+    "enunciado": "Mulher de 29 anos, com lúpus eritematoso sistêmico e anticorpo anti-SSA/Ro positivo, teve seu primeiro filho diagnosticado com bloqueio atrioventricular total congênito por ecocardiograma fetal na 22ª semana da gestação anterior, tendo sido necessário implante de marca-passo no período neonatal. Ela engravida novamente e pergunta ao cardiologista se existe alguma medida capaz de reduzir a chance de o próximo filho nascer com a mesma condição, sabendo que a recorrência nessas gestações é historicamente descrita como próxima de 10 vezes maior que o risco basal.",
+    "pergunta": "Segundo dados agregados de três bancos de dados internacionais (Estados Unidos, Inglaterra e França), qual conduta farmacológica na gestação subsequente esteve associada a redução do risco de recorrência do bloqueio cardíaco congênito por anticorpo anti-Ro?",
+    "opcoes": [
+      "Nenhuma intervenção altera esse risco; a recorrência permanece fixa em torno de 20%, qualquer que seja a conduta adotada",
+      "Uso mantido de hidroxicloroquina ao longo de toda a gestação, iniciado antes da 10ª semana gestacional",
+      "Suspensão de qualquer fármaco imunomodulador, incluindo a hidroxicloroquina, para minimizar a exposição fetal a medicamentos",
+      "Cerclagem cervical profilática, medida obstétrica descrita como capaz de reduzir especificamente o risco de bloqueio cardíaco fetal"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Em coorte histórica reunindo 257 gestações subsequentes de mães anti-SSA/Ro positivas que já haviam tido um filho com manifestação cardíaca do lúpus neonatal (40 expostas e 217 não expostas à hidroxicloroquina, com exposição definida como uso mantido ao longo da gestação iniciado antes da 10ª semana), a taxa de recorrência foi de 7,5% (3/40) no grupo exposto contra 21,2% (46/217) no grupo não exposto (p=0,050). Não houve nenhuma morte fetal entre os expostos, enquanto a taxa de letalidade entre os fetos afetados no grupo não exposto foi de 21,7%. Em análise multivariada ajustada para banco de dados de origem, etnia materna e status anti-SSB/La, o uso de hidroxicloroquina permaneceu associado a menor risco de recorrência (razão de chances 0,23; IC95% 0,06-0,92; p=0,037), resultado reproduzido por análise de escore de propensão. É evidência observacional multinacional, não um ensaio randomizado — mas é o maior corpo de dados disponível sobre o tema e sustenta a recomendação de considerar hidroxicloroquina nessas gestações de alto risco.",
+    "source_refs": [
+      "Izmirly PM et al. Maternal use of hydroxychloroquine is associated with a reduced risk of recurrent anti-SSA/Ro-antibody-associated cardiac manifestations of neonatal lupus. Circulation. 2012;126(1):76-82. PMID: 22626746"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "reversao-de-dabigatrana-com-idarucizumabe-em-idoso-com-hemorragia-intracraniana",
+    "titulo": "Hemorragia intracraniana em idoso anticoagulado com dabigatrana: o que esperar da reversão com idarucizumabe?",
+    "tema": "Cardiologia geriátrica",
+    "nivel": "intermediário",
+    "enunciado": "Paciente de 84 anos, em uso de dabigatrana para fibrilação atrial, é trazido ao pronto-socorro com rebaixamento do nível de consciência. A tomografia de crânio mostra hemorragia intracraniana espontânea. A família informa que a última dose de dabigatrana foi tomada há 6 horas. A equipe decide administrar idarucizumabe, o antídoto específico do dabigatrana.",
+    "pergunta": "Segundo o maior estudo prospectivo publicado sobre o antídoto (RE-VERSE AD, análise de coorte completa), qual é o efeito esperado do idarucizumabe sobre o efeito anticoagulante do dabigatrana, e em que prazo?",
+    "opcoes": [
+      "Administração de 5 g de idarucizumabe IV; reversão mediana de 100% do efeito anticoagulante do dabigatrana, avaliada nas primeiras 4 horas após a infusão",
+      "Não há papel para antídoto específico nessa situação; a única conduta cabível é aguardar a depuração renal espontânea do dabigatrana, que costuma levar cerca de 5 dias",
+      "Deve-se preferir concentrado de complexo protrombínico (CCP) em vez de idarucizumabe, já que o antídoto específico não demonstrou eficácia relevante para reversão do dabigatrana",
+      "Vitamina K intravenosa em altas doses reverte o efeito anticoagulante do dabigatrana da mesma forma que reverte o efeito da varfarina"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "No estudo RE-VERSE AD (análise de coorte completa, 503 pacientes: 301 no grupo A, com sangramento não controlado, e 202 no grupo B, antes de procedimento urgente), a reversão percentual máxima mediana do efeito anticoagulante do dabigatrana dentro de 4 horas após 5 g de idarucizumabe IV foi de 100% (IC95% 100-100), medida pelo tempo de trombina diluído ou pelo tempo de coagulação de ecarina. No grupo A, 45,5% apresentavam sangramento gastrointestinal e 32,6% hemorragia intracraniana; o tempo mediano até a cessação do sangramento, entre os pacientes avaliáveis, foi de 2,5 horas. No grupo B, o tempo mediano até o início do procedimento pretendido foi de 1,6 hora, com hemostasia periprocedimento normal em 93,4% dos pacientes. Aos 90 dias, eventos trombóticos ocorreram em 6,3% (grupo A) e 7,4% (grupo B), e a mortalidade foi de 18,8% e 18,9%, respectivamente — números que refletem a gravidade basal desses pacientes (sangramento maior ou necessidade de cirurgia urgente), não um efeito adverso do antídoto, já que não houve sinal de segurança grave atribuído ao idarucizumabe no estudo.",
+    "source_refs": [
+      "Pollack CV Jr et al. Idarucizumab for Dabigatran Reversal - Full Cohort Analysis. N Engl J Med. 2017;377(5):431-441. PMID: 28693366"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "escolha-de-stent-e-duracao-do-dapt-na-angioplastia-do-paciente-com-75-anos-ou-mais",
+    "titulo": "Angioplastia no paciente com 75 anos ou mais: stent farmacológico ou convencional, com DAPT curta?",
+    "tema": "Cardiologia geriátrica",
+    "nivel": "intermediário",
+    "enunciado": "Paciente de 79 anos, com angina estável e estenose de 80% em artéria descendente anterior, tem indicação de angioplastia coronária percutânea. A equipe discute se deve implantar stent farmacológico (DES) ou stent metálico convencional (BMS), com o objetivo de manter a dupla antiagregação plaquetária (DAPT) pelo menor tempo possível, dado o maior risco hemorrágico do paciente idoso.",
+    "pergunta": "No ensaio SENIOR, que randomizou pacientes com 75 anos ou mais para DES ou BMS com DAPT curta (1 mês nos pacientes estáveis, 6 meses nos com síndrome coronariana aguda), qual foi o resultado no desfecho combinado de eventos cardíacos e cerebrovasculares maiores (MACCE) em 1 ano?",
+    "opcoes": [
+      "Não houve diferença entre DES e BMS: quando a duração da DAPT é igualmente curta nos dois grupos, o tipo de stent deixa de ser relevante",
+      "O BMS foi superior ao DES, com menor taxa de MACCE, o que justificaria a preferência por stent convencional no paciente muito idoso",
+      "O DES com DAPT curta foi superior ao BMS com a mesma duração de DAPT, com MACCE menor (12% vs. 16%; risco relativo 0,71) e taxas de sangramento semelhantes entre os grupos",
+      "O DES aumentou de forma significativa o risco de trombose de stent em relação ao BMS nessa população, inviabilizando seu uso combinado com DAPT curta"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O SENIOR randomizou 1.200 pacientes com 75 anos ou mais submetidos a angioplastia (596 para DES, 604 para BMS), com duração de DAPT definida pela apresentação clínica (1 mês nos estáveis, 6 meses nos com síndrome coronariana aguda) e idêntica nos dois grupos. O desfecho primário (mortalidade por qualquer causa, infarto, AVC ou revascularização da lesão-alvo guiada por isquemia) em 1 ano ocorreu em 68 pacientes (12%) do grupo DES contra 98 (16%) do grupo BMS (risco relativo 0,71; IC95% 0,52-0,94; p=0,02) — favorecendo o DES. As complicações hemorrágicas foram semelhantes entre os grupos (5% em cada, RR 0,90; IC95% 0,51-1,54; p=0,68), e a trombose de stent em 1 ano foi infrequente nos dois braços (1% DES vs. 1% BMS; RR 0,38; IC95% 0,00-1,48; p=0,13, sem significância estatística). A conclusão prática é que, no paciente muito idoso submetido a angioplastia, associar um stent farmacológico a um esquema curto de DAPT reduz eventos maiores sem aumentar sangramento, e é preferível à antiga prática de usar BMS pensando em encurtar apenas a DAPT.",
+    "source_refs": [
+      "Varenne O et al. Drug-eluting stents in elderly patients with coronary artery disease (SENIOR): a randomised single-blind trial. Lancet. 2018;391(10115):41-50. PMID: 29102362"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "prevencao-primaria-e-secundaria-com-estatina-no-idoso-de-70-a-82-anos-com-risco-vascular",
+    "titulo": "\"Estatina ainda vale a pena nessa idade?\" — o que o PROSPER mostrou entre 70 e 82 anos",
+    "tema": "Cardiologia geriátrica",
+    "nivel": "básico",
+    "enunciado": "Paciente de 76 anos, hipertensa, ex-tabagista, sem diagnóstico prévio de doença cardiovascular estabelecida mas com múltiplos fatores de risco vascular, tem LDL de 145 mg/dL. Um familiar questiona se ainda vale a pena iniciar estatina \"nessa idade\", supondo que o benefício se perde com o avançar da idade e que o risco de efeitos adversos passaria a superar o ganho.",
+    "pergunta": "Segundo o ensaio PROSPER, que randomizou pacientes de 70 a 82 anos com doença vascular estabelecida ou fatores de risco para pravastatina 40 mg/dia ou placebo, qual foi o efeito sobre o desfecho composto de morte coronariana, infarto não fatal e AVC fatal ou não fatal?",
+    "opcoes": [
+      "Não houve benefício em nenhum desfecho avaliado, confirmando que estatina não deveria ser iniciada após os 70 anos",
+      "Redução do desfecho composto (razão de risco 0,85; IC95% 0,74-0,97; p=0,014), associada à redução de 34% do LDL, mas sem redução do risco de AVC isoladamente",
+      "Redução expressiva e estatisticamente significativa do risco de AVC isoladamente, sem qualquer efeito sobre os desfechos coronarianos",
+      "O benefício ficou restrito aos pacientes com diagnóstico prévio de doença coronariana, sem qualquer efeito nos que tinham apenas fatores de risco vascular"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O PROSPER randomizou 5.804 homens e mulheres de 70 a 82 anos, com doença vascular estabelecida ou fatores de risco para ela, para pravastatina 40 mg/dia ou placebo, com seguimento médio de 3,2 anos. A pravastatina reduziu o LDL em 34% e diminuiu o desfecho primário composto (morte coronariana, infarto não fatal, AVC fatal ou não fatal) para 408 eventos, contra 473 no placebo (razão de risco 0,85; IC95% 0,74-0,97; p=0,014); o risco de morte coronariana ou infarto não fatal isoladamente também caiu (RR 0,81; IC95% 0,69-0,94; p=0,006), e a mortalidade coronariana caiu 24% (p=0,043). Um ponto que o ensaio deixa claro e não deve ser omitido: o risco de AVC isolado NÃO foi reduzido de forma significativa (RR 1,03; IC95% 0,81-1,31; p=0,8), embora o risco de ataque isquêmico transitório tenha ficado na fronteira da significância (RR 0,75; p=0,051). Houve mais diagnósticos novos de câncer no grupo pravastatina (RR 1,25; IC95% 1,04-1,51; p=0,020), achado que não se confirmou numa metanálise reunindo todos os ensaios de pravastatina e de estatinas em geral, sugerindo achado de acaso isolado ao PROSPER. Não houve efeito sobre função cognitiva ou incapacidade. Em conjunto, os dados sustentam iniciar estatina no idoso de risco vascular elevado nessa faixa etária — sem prometer redução de AVC isolado e reconhecendo o sinal isolado de câncer.",
+    "source_refs": [
+      "Shepherd J et al. Pravastatin in elderly individuals at risk of vascular disease (PROSPER): a randomised controlled trial. Lancet. 2002;360(9346):1623-1630. PMID: 12457784"
+    ],
+    "review_status": "revisado"
   }
 ]
