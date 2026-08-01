@@ -9387,5 +9387,207 @@
       "Tarakji KG, Korantzopoulos P, Philippon F, Biffi M, Mittal S, Poole JE, Kennergren C, Lexcen DR, Lande JD, Seshadri S, Wilkoff BL. Infectious consequences of hematoma from cardiac implantable electronic device procedures and the role of the antibiotic envelope: A WRAP-IT trial analysis. Heart Rhythm. 2021;18(12):2080-2086. DOI: 10.1016/j.hrthm.2021.07.011. PMID: 34280568 — análise secundária do WRAP-IT, 6.800 pacientes"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "cianose-neonatal-persistente-lesao-ductal-dependente-e-uso-precoce-de-prostaglandina",
+    "titulo": "Cianose neonatal persistente: quando suspeitar de lesão ducto-dependente e iniciar prostaglandina",
+    "tema": "Cardiologia pediátrica",
+    "nivel": "básico",
+    "enunciado": "Recém-nascido a termo, 6 horas de vida, cianótico central desde o nascimento, taquipneico mas sem desconforto respiratório importante. SpO2 pré-ductal (mão direita) 78%, pós-ductal (pé) 75%. Ausculta cardíaca sem sopro significativo. Oxigênio suplementar a 100% por capacete eleva a SpO2 para apenas 82%. Pulsos periféricos amplos e simétricos.",
+    "pergunta": "Qual a conduta mais apropriada diante desse quadro?",
+    "opcoes": [
+      "Aumentar ainda mais a FiO2 e aguardar resposta, já que cianose neonatal costuma ter causa pulmonar",
+      "Suspeitar de cardiopatia congênita crítica ducto-dependente, iniciar infusão de prostaglandina E1 para manter a patência do canal arterial e solicitar ecocardiograma urgente, independentemente da resposta à oxigenoterapia",
+      "Solicitar radiografia de tórax e aguardar o resultado antes de qualquer intervenção, já que o exame físico cardíaco é normal",
+      "Tranquilizar a família, já que a ausência de sopro cardíaco praticamente exclui cardiopatia estrutural grave no período neonatal"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Cianose central persistente que não melhora significativamente com oxigênio suplementar é um sinal de alerta clássico para cardiopatia congênita crítica, sobretudo lesões ducto-dependentes como a transposição das grandes artérias — nas quais a ausência de sopro é a regra, não a exceção, porque o sopro depende de fluxo turbulento através de uma lesão obstrutiva ou de um shunt, e muitas lesões ducto-dependentes graves não geram sopro algum. Conforme resumido por Burgess et al. (Arch Dis Child Educ Pract Ed, 2026), os sinais que devem levantar suspeita de cardiopatia congênita crítica no recém-nascido incluem diferença entre saturação pré e pós-ductal, cianose persistente não responsiva a oxigênio, má perfusão e pulsos femorais fracos (achado que varia conforme a lesão específica). A conduta inicial descrita pelos autores inclui estabilização com administração cautelosa de fluidos e uso precoce de infusão de prostaglandina E1 para manter ou reabrir o canal arterial nas lesões ducto-dependentes, com monitorização de efeitos colaterais (apneia, febre) e discussão precoce com um centro cardíaco terciário — sem esperar a confirmação ecocardiográfica para iniciar a prostaglandina quando a suspeita clínica é forte. Aguardar exames adicionais ou tranquilizar a família com base na ausência de sopro atrasa uma intervenção que pode ser salvadora.",
+    "source_refs": [
+      "Burgess X, Spinty J, Elnazir P, Hawcutt D, Capobianco L, Khan S. Fifteen-minute consultation: A neonate with suspected critical congenital heart disease. Arch Dis Child Educ Pract Ed. 2026;111(4):140-143. DOI: 10.1136/archdischild-2025-329478. PMID: 41203267."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "taquicardia-supraventricular-em-lactente-manobra-vagal-e-adenosina-em-bolus-rapido",
+    "titulo": "Taquicardia supraventricular no lactente: manobra vagal primeiro, depois adenosina em bolus rápido",
+    "tema": "Cardiologia pediátrica",
+    "nivel": "intermediário",
+    "enunciado": "Lactente de 4 meses, previamente hígido, trazido à emergência por irritabilidade e recusa alimentar há 6 horas. Ao exame: taquicárdico, FC 240 bpm, ritmo regular, sem sopro, perfusão periférica levemente lentificada mas pulsos palpáveis, pressão arterial dentro da faixa esperada para a idade. O ECG mostra taquicardia de complexo QRS estreito, regular, sem onda P claramente identificável.",
+    "pergunta": "Qual a sequência de conduta mais apropriada para esse lactente hemodinamicamente estável com taquicardia supraventricular (TSV)?",
+    "opcoes": [
+      "Iniciar diretamente amiodarona intravenosa em infusão contínua, reservando a adenosina para os casos refratários",
+      "Tentar manobra vagal (por exemplo, estímulo do reflexo de mergulho com compressa de gelo na face) e, se não houver reversão, administrar adenosina em bolus intravenoso rápido seguido de flush salino imediato (técnica da dupla seringa), sob monitorização contínua, com possibilidade de doses escalonadas",
+      "Realizar cardioversão elétrica sincronizada imediata, já que fármacos têm eficácia limitada nessa faixa etária",
+      "Manter em observação monitorada por 24 horas sem qualquer intervenção, pois a maioria das TSV em lactentes reverte espontaneamente nesse período"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Em lactentes e crianças hemodinamicamente estáveis com TSV, manobras vagais — manobra de Valsalva, estímulo do reflexo de mergulho em lactentes (aplicação de compressa gelada na face), massagem unilateral do seio carotídeo — são o primeiro passo, não invasivo e realizável mesmo fora do ambiente hospitalar, conforme resumido por Abbasi et al. (Canadian Family Physician, 2023). Quando a manobra vagal não reverte o ritmo, a adenosina em bolus intravenoso rápido é a terapia farmacológica de escolha, administrada com a técnica da dupla seringa (bolus seguido de flush salino imediato através de veia calibrosa, em 1 a 2 segundos). A mesma fonte descreve a dose inicial mais comumente relatada como 0,1 mg/kg por via periférica rápida, com doses repetidas de 0,2 e 0,3 mg/kg se necessário, e dose inicial habitualmente ajustada para cerca de 0,15 mg/kg em lactentes menores de 1 ano — consistente com o algoritmo pediátrico de suporte avançado de vida da American Heart Association (2020), que trata a TSV estável com manobra vagal seguida de adenosina como primeira linha farmacológica. Cardioversão elétrica sincronizada fica reservada para instabilidade hemodinâmica; amiodarona não é a primeira escolha em paciente estável; e observação sem tratamento não é apropriada diante de frequência cardíaca tão elevada com sintomas já instalados (irritabilidade, recusa alimentar).",
+    "source_refs": [
+      "Abbasi E, Vijayashankar SS, Goldman RD. Management of acute supraventricular tachycardia in children. Can Fam Physician. 2023;69(12):839-841. DOI: 10.46747/cfp.6912839. PMID: 38092445.",
+      "Topjian AA, Raymond TT, Atkins D, et al. Part 4: Pediatric Basic and Advanced Life Support: 2020 American Heart Association Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation. 2020;142(16_suppl_2):S469-S523. DOI: 10.1161/CIR.0000000000000901. PMID: 33081526."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "miocardite-viral-aguda-na-crianca-reconhecendo-o-choque-cardiogenico-atras-do-quadro-gripal",
+    "titulo": "Miocardite viral aguda na criança: reconhecendo o choque cardiogênico escondido atrás de um quadro \"gripal\"",
+    "tema": "Cardiologia pediátrica",
+    "nivel": "avançado",
+    "enunciado": "Menina de 8 anos, previamente hígida, é levada ao pronto-socorro com 3 dias de febre baixa, mialgia e sintomas respiratórios leves, evoluindo nas últimas 12 horas com dor abdominal, vômitos, letargia e recusa alimentar. Ao exame: taquicárdica de forma desproporcional à febre, extremidades frias, tempo de enchimento capilar de 4 segundos, hepatomegalia discreta, ausculta pulmonar com estertores finos bibasais. O ECG mostra taquicardia sinusal com baixa voltagem do QRS e alterações inespecíficas de repolarização. Troponina está elevada.",
+    "pergunta": "Qual a interpretação e conduta mais apropriada diante desse quadro?",
+    "opcoes": [
+      "Quadro compatível com gastroenterite viral associada a infecção respiratória concomitante; tratar sintomaticamente e reavaliar em 48 horas",
+      "O quadro sugere miocardite aguda com comprometimento hemodinâmico (possível choque cardiogênico); solicitar ecocardiograma e considerar ressonância cardíaca, com internação em unidade capaz de monitorização e suporte hemodinâmico contínuo",
+      "Os sintomas gastrointestinais e respiratórios associados praticamente descartam causa cardíaca primária; investigar abdome agudo cirúrgico como prioridade",
+      "Baixa voltagem no ECG é achado inespecífico e sem relevância clínica numa criança com quadro viral; alta com antitérmico e retorno se piora"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A miocardite pediátrica é um desafio clínico justamente porque sua apresentação pode ser confundida com quadros virais banais ou gastrointestinais, conforme destaca o posicionamento científico da American Heart Association sobre diagnóstico e manejo de miocardite em crianças (Law YM et al., Circulation 2021). O espectro clínico varia de sintomas mínimos a insuficiência cardíaca franca, arritmias potencialmente fatais ou choque cardiogênico. Sinais como taquicardia desproporcional à febre, má perfusão periférica, hepatomegalia e baixa voltagem de QRS associada a troponina elevada devem levantar a suspeita, mesmo quando o quadro inicial mimetiza gastroenterite ou virose respiratória — é exatamente esse tipo de apresentação que a declaração da AHA aponta como fonte de atraso diagnóstico. O diagnóstico apoia-se em suspeita clínica associada a exames complementares; a ressonância magnética cardíaca ganhou papel central na avaliação não invasiva do miocárdio, reduzindo a dependência da biópsia endomiocárdica, que é invasiva e de sensibilidade limitada. Diante de sinais de comprometimento hemodinâmico como os descritos, a criança precisa de monitorização contínua e capacidade de suporte circulatório, não de alta com tratamento sintomático baseado numa impressão de quadro viral autolimitado.",
+    "source_refs": [
+      "Law YM, Lal AK, Chen S, Čiháková D, Cooper LT Jr, Deshpande S, Godown J, Grosse-Wortmann L, Robinson JD, Towbin JA. Diagnosis and Management of Myocarditis in Children: A Scientific Statement From the American Heart Association. Circulation. 2021;144(6):e123-e135. DOI: 10.1161/CIR.0000000000001001. PMID: 34229446. Errata em Circulation. 2021;144(6):e149. DOI: 10.1161/CIR.0000000000001011."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "doenca-de-kawasaki-criterios-diagnosticos-e-janela-para-imunoglobulina-antes-do-decimo-dia",
+    "titulo": "Doença de Kawasaki: reconhecendo os critérios clássicos e a janela para imunoglobulina",
+    "tema": "Cardiologia pediátrica",
+    "nivel": "intermediário",
+    "enunciado": "Menino de 2 anos e 6 meses, com febre há 6 dias, refratária a antitérmico. Apresenta hiperemia conjuntival bilateral não exsudativa, fissuras labiais com eritema de mucosa oral, exantema polimorfo em tronco, edema e eritema de mãos e pés, além de linfonodo cervical único, endurecido, de aproximadamente 1,8 cm.",
+    "pergunta": "Diante desse quadro, qual a conduta mais apropriada?",
+    "opcoes": [
+      "Aguardar defervescência espontânea da febre, já que exantemas virais inespecíficos são a causa mais provável nessa faixa etária",
+      "Reconhecer os critérios clássicos de doença de Kawasaki (febre por 5 dias ou mais associada a pelo menos 4 dos 5 achados principais) e iniciar imunoglobulina intravenosa em dose única (2 g/kg), idealmente dentro dos primeiros 10 dias de doença, associada a ácido acetilsalicílico",
+      "Solicitar hemocultura e iniciar antibioticoterapia empírica de amplo espectro, já que o quadro é mais compatível com sepse bacteriana com foco a esclarecer",
+      "Iniciar corticoide sistêmico isolado como primeira linha, reservando a imunoglobulina apenas para os casos que não responderem ao corticoide"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Este paciente preenche os critérios clássicos de doença de Kawasaki: febre por 5 dias ou mais associada a pelo menos 4 dos 5 achados principais (conjuntivite não exsudativa bilateral, alterações de mucosa oral, exantema polimorfo, alterações de extremidades e linfadenopatia cervical) — aqui presentes os cinco. Conforme o posicionamento científico da American Heart Association (McCrindle BW et al., Circulation 2017), o tratamento padrão é imunoglobulina intravenosa em dose única de 2 g/kg, associada a ácido acetilsalicílico, com o objetivo de reduzir o risco de aneurisma de artéria coronária — que ocorre em aproximadamente 25% dos casos não tratados, sendo a principal causa de cardiopatia adquirida na infância em países desenvolvidos. O tratamento deve, idealmente, começar dentro dos primeiros 10 dias de doença, período de maior benefício em prevenir dano coronariano, embora possa ser considerado depois disso se ainda houver evidência de inflamação ativa. Aproximadamente 10% a 20% dos pacientes não respondem à imunoglobulina inicial e necessitam de terapias adicionais, conforme a mesma diretriz. Antibioticoterapia empírica de amplo espectro e corticoide sistêmico isolado como primeira linha não são a conduta recomendada nesse cenário.",
+    "source_refs": [
+      "McCrindle BW, Rowley AH, Newburger JW, Burns JC, Bolger AF, Gewitz M, Baker AL, Jackson MA, Takahashi M, Shah PB, Kobayashi T, Wu MH, Saji TT, Pahl E. Diagnosis, Treatment, and Long-Term Management of Kawasaki Disease: A Scientific Statement for Health Professionals From the American Heart Association. Circulation. 2017;135(17):e927-e999. DOI: 10.1161/CIR.0000000000000484. PMID: 28356445. Errata em Circulation. 2019;140(5):e181-e184. DOI: 10.1161/CIR.0000000000000703."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sincope-durante-natacao-em-adolescente-atleta-suspeita-de-sindrome-do-qt-longo-tipo-1",
+    "titulo": "Síncope durante a natação em adolescente atleta: quando suspeitar de síndrome do QT longo",
+    "tema": "Cardiologia pediátrica",
+    "nivel": "avançado",
+    "enunciado": "Adolescente de 15 anos, nadadora competitiva, apresenta episódio de síncope durante treino de natação, com recuperação espontânea da consciência em menos de 1 minuto e sem período pós-ictal prolongado. Refere episódio semelhante 8 meses antes, também durante exercício, que foi atribuído a \"insolação\". História familiar positiva para morte súbita inexplicada em tio materno aos 30 anos. O ECG de repouso mostra intervalo QT corrigido (QTc) prolongado.",
+    "pergunta": "Qual a conduta mais apropriada diante desse quadro?",
+    "opcoes": [
+      "Tranquilizar a paciente e liberar retorno imediato ao treinamento competitivo, já que síncope durante exercício em atletas jovens é habitualmente benigna e de causa vasovagal",
+      "Suspender temporariamente a participação em esportes competitivos e encaminhar para avaliação cardiológica especializada com ECG seriado, avaliação genética e rastreio de familiares de primeiro grau, dado que o padrão de síncope recorrente relacionada a esforço físico (particularmente natação), QTc prolongado e história familiar de morte súbita constituem sinais de alarme para canalopatia arritmogênica",
+      "Solicitar apenas eletroencefalograma, já que o quadro é mais sugestivo de causa neurológica do que de causa cardíaca",
+      "Iniciar betabloqueador empiricamente sem confirmar o diagnóstico nem restringir a atividade física, permitindo que a paciente continue competindo normalmente"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A combinação de síncope recorrente desencadeada por esforço físico — sobretudo natação, gatilho classicamente associado à síndrome do QT longo tipo 1 —, QTc prolongado ao ECG e história familiar de morte súbita inexplicada em parente jovem constitui um conjunto de sinais de alarme para canalopatia arritmogênica que não deve ser atribuído a insolação ou síncope vasovagal sem investigação adequada. Conforme revisado por Sharma et al. (Hospital Pediatrics, 2020), a síndrome do QT longo é comumente causada por canalopatias que podem levar a morte súbita cardíaca, e pediatras devem reconhecer situações como síncope relacionada a esforço, eventos de quase afogamento ou história familiar de morte súbita como pistas clínicas para a doença; as recomendações de manejo e de participação esportiva têm evoluído ao longo dos anos com o entendimento da doença e do risco de arritmia. A conduta apropriada envolve avaliação cardiológica especializada antes de qualquer liberação para o esporte competitivo, incluindo avaliação genética e rastreio de familiares de primeiro grau (a história de morte súbita no tio materno reforça a suspeita de condição hereditária). Iniciar betabloqueador sem confirmação diagnóstica nem restrição de atividade, ou atribuir o quadro a causas não cardíacas sem investigação, expõe a paciente a risco real de morte súbita.",
+    "source_refs": [
+      "Sharma N, Cortez D, Disori K, Imundo JR, Beck M. A Review of Long QT Syndrome: Everything a Hospitalist Should Know. Hosp Pediatr. 2020;10(4):369-375. DOI: 10.1542/hpeds.2019-0139. PMID: 32144177."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "crise-hipoxemica-tet-spell-em-lactente-com-tetralogia-de-fallot-nao-corrigida",
+    "titulo": "Crise hipoxêmica (\"Tet spell\") em lactente com Tetralogia de Fallot não corrigida",
+    "tema": "Cardiologia pediátrica",
+    "nivel": "intermediário",
+    "enunciado": "Lactente de 5 meses, com diagnóstico prévio de Tetralogia de Fallot ainda não corrigida cirurgicamente (aguardando cirurgia eletiva), é levado à emergência pelos pais porque, durante episódio de choro intenso após uma injeção vacinal, ficou subitamente mais cianótico, taquipneico e hipotônico, com diminuição da intensidade do sopro sistólico previamente auscultado.",
+    "pergunta": "Qual a sequência de medidas iniciais mais apropriada diante dessa crise hipercianótica (\"Tet spell\")?",
+    "opcoes": [
+      "Deixar a criança em decúbito dorsal, estimular o choro para \"abrir as vias aéreas\" e aguardar resolução espontânea, já que crises hipercianóticas geralmente não requerem intervenção",
+      "Acalmar a criança, posicioná-la em posição genupeitoral (joelhos contra o tórax) para aumentar a resistência vascular sistêmica e reduzir o shunt direita-esquerda, oferecer oxigênio suplementar, e escalonar para medidas farmacológicas sob supervisão especializada se não houver resposta",
+      "Iniciar diurético de alça imediatamente, já que a piora da cianose sugere congestão pulmonar aguda",
+      "Encaminhar para cirurgia cardíaca de emergência antes de qualquer manobra clínica, já que toda crise hipercianótica exige correção cirúrgica imediata"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Na Tetralogia de Fallot não corrigida, a obstrução da via de saída do ventrículo direito tem componente dinâmico (espasmo infundibular), e episódios de agitação, choro, dor ou febre podem desencadear piora aguda desse espasmo, aumentando o shunt direita-esquerda através da comunicação interventricular e agravando a cianose — a chamada crise hipercianótica ou \"Tet spell\". Sharkey e Sharma (Seminars in Cardiothoracic and Vascular Anesthesia, 2012), em revisão sobre as variantes anatômicas da Tetralogia de Fallot e seu impacto no manejo, descrevem exatamente essa fisiologia dinâmica decorrente da obstrução variável da via de saída do ventrículo direito. A diminuição da intensidade do sopro sistólico durante a crise é um achado característico, porque reflete a redução do fluxo através da via de saída obstruída — quanto mais grave o espasmo, menos turbulência e, paradoxalmente, sopro mais discreto. As medidas iniciais visam reverter essa fisiologia aguda: acalmar a criança (reduzindo o estímulo catecolaminérgico que agrava o espasmo infundibular), posição genupeitoral — que aumenta a resistência vascular sistêmica e, com isso, reduz o gradiente que favorece o shunt direita-esquerda — e oxigênio suplementar; quando essas medidas não revertem a crise, torna-se necessário escalonar para medidas farmacológicas adicionais sob supervisão especializada. Diurético não tem papel nessa fisiologia (não há congestão pulmonar por sobrecarga de volume nesse mecanismo), e cirurgia de emergência não é a primeira conduta diante de uma crise que frequentemente responde às medidas clínicas iniciais.",
+    "source_refs": [
+      "Sharkey AM, Sharma A. Tetralogy of Fallot: anatomic variants and their impact on surgical management. Semin Cardiothorac Vasc Anesth. 2012;16(2):88-96. DOI: 10.1177/1089253211434566. PMID: 22275348."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "fa-idoso-com-risco-de-quedas-decisao-de-anticoagular",
+    "titulo": "Fibrilação atrial no muito idoso com risco de quedas: anticoagular?",
+    "tema": "Cardiologia geriátrica",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 86 anos, vive sozinha, com fibrilação atrial permanente diagnosticada há 2 anos. CHA2DS2-VASc de 5 (idade, hipertensão, sexo feminino, insuficiência cardíaca leve). Nos últimos 12 meses teve duas quedas domiciliares sem fratura, atribuídas a fraqueza muscular e tapete solto. A família pede para suspender o anticoagulante oral, com receio de que uma queda cause hemorragia intracraniana fatal.",
+    "pergunta": "Qual a conduta mais alinhada à evidência sobre risco de queda e anticoagulação em idosos com FA?",
+    "opcoes": [
+      "Suspender a anticoagulação e manter apenas AAS, já que o histórico de quedas contraindica anticoagulante oral nesta paciente",
+      "Manter a anticoagulação oral: modelos de decisão mostram que a paciente precisaria cair cerca de 300 vezes em um ano para que o risco de hematoma subdural por queda superasse o benefício de prevenção de AVC do anticoagulante",
+      "Suspender o anticoagulante por 6 meses e reavaliar apenas se não houver nova queda no período",
+      "Substituir o anticoagulante por AAS associado a clopidogrel, que tem menor risco de sangramento intracraniano que a anticoagulação oral"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Um modelo de decisão de Markov clássico (Man-Son-Hing et al., 1999) comparou varfarina, AAS e nenhuma terapia antitrombótica em idosos com FA e risco de queda, medindo o desfecho em anos de vida ajustados por qualidade. A conclusão foi que a propensão a cair não é um fator importante para a escolha da terapia antitrombótica, independentemente da idade ou do risco basal de AVC do paciente — a varfarina permaneceu a estratégia com maior benefício líquido mesmo nos cenários de maior risco de queda simulados. A análise de sensibilidade mostrou que seria necessário um número de quedas da ordem de centenas por ano para que o risco de hematoma subdural relacionado à queda superasse o benefício de prevenção de AVC. Uma revisão sistemática posterior dos mesmos autores (2003) reforça que o medo do sangramento associado a quedas, sangramento digestivo alto prévio ou idade avançada isoladamente costuma ser exagerado pelos médicos e não deveria, por si só, ser motivo para negar anticoagulação a um paciente com indicação clara pelo escore de risco tromboembólico. A decisão de anticoagular deve seguir o escore de risco de AVC (aqui, CHA2DS2-VASc de 5, indicação forte), com avaliação individualizada de causas corrigíveis de queda (força muscular, ambiente domiciliar, polifarmácia), não a simples presença de histórico de quedas.",
+    "source_refs": [
+      "Man-Son-Hing M, Nichol G, Lau A, Laupacis A. Choosing antithrombotic therapy for elderly patients with atrial fibrillation who are at risk for falls. Arch Intern Med. 1999;159(7):677-685. PMID: 10218746.",
+      "Man-Son-Hing M, Laupacis A. Anticoagulant-related bleeding in older persons with atrial fibrillation: physicians' fears often unfounded. Arch Intern Med. 2003;163(13):1580-1586. PMID: 12860581."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "tavi-em-idoso-fragil-avaliacao-formal-de-fragilidade-antes-da-decisao",
+    "titulo": "TAVI em idoso muito frágil: a avaliação técnica basta para indicar?",
+    "tema": "Cardiologia geriátrica",
+    "nivel": "avançado",
+    "enunciado": "Homem, 89 anos, estenose aórtica grave sintomática (dispneia classe funcional III), anatomia favorável ao implante transcateter de valva aórtica (TAVI) na angiotomografia. Ao exame: velocidade de marcha muito lenta, força de preensão palmar reduzida, albumina sérica baixa e hemoglobina 10,2 g/dL. Mora sozinho, com declínio funcional progressivo nos últimos 6 meses. A equipe considera o caso tecnicamente favorável para TAVI.",
+    "pergunta": "Antes de indicar o procedimento, qual conduta é mais bem sustentada pela evidência sobre fragilidade e desfechos pós-TAVI?",
+    "opcoes": [
+      "Indicar TAVI sem avaliação adicional: a anatomia favorável e a ausência de comorbidade grave isolada já autorizam o procedimento",
+      "Aplicar uma escala de fragilidade validada (como a Essential Frailty Toolset, que combina força de membros inferiores, cognição, anemia e hipoalbuminemia) antes de decidir, pois fragilidade acentuada é preditor independente de morte e incapacidade em 1 ano, mesmo com sucesso técnico do implante",
+      "Contraindicar o procedimento definitivamente, já que qualquer grau de fragilidade em paciente nonagenário torna o TAVI fútil",
+      "Postergar a decisão por 1 ano para observar se a fragilidade piora antes de reavaliar a indicação"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O estudo FRAILTY-AVR acompanhou prospectivamente 1.020 idosos (idade mediana de 82 anos) submetidos a TAVI ou troca cirúrgica de valva aórtica em 14 centros, comparando 7 escalas de fragilidade quanto à capacidade de prever morte e incapacidade em 1 ano. A prevalência de fragilidade variou de 26% a 68% conforme a escala usada — o que já mostra que 'parecer frágil' clinicamente não substitui uma medida padronizada. A Essential Frailty Toolset (EFT), um instrumento breve de 4 itens (fraqueza de membros inferiores, comprometimento cognitivo, anemia e hipoalbuminemia), foi a que melhor previu óbito em 1 ano (odds ratio ajustado de 3,72) e piora de incapacidade em 1 ano (odds ratio ajustado de 2,13), superando escalas mais longas e complexas. A mensagem central do estudo não é negar o procedimento a todo paciente frágil, mas formalizar a avaliação de fragilidade como parte da decisão da equipe cardiológica — sucesso técnico do implante não equivale a benefício funcional e de sobrevida para o paciente, especialmente quando a fragilidade é acentuada. A decisão final deve integrar a fragilidade objetivamente medida à discussão compartilhada sobre expectativas realistas de recuperação.",
+    "source_refs": [
+      "Afilalo J, Lauck S, Kim DH, et al. Frailty in Older Adults Undergoing Aortic Valve Replacement: The FRAILTY-AVR Study. J Am Coll Cardiol. 2017;70(6):689-700. PMID: 28693934."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "desprescricao-de-estatina-em-expectativa-de-vida-limitada",
+    "titulo": "Estatina em paciente com prognóstico de meses: manter ou suspender?",
+    "tema": "Cardiologia geriátrica",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 79 anos, em cuidados paliativos por câncer metastático, expectativa de vida estimada entre 2 e 6 meses. Usa sinvastatina há 8 anos para prevenção secundária após infarto prévio, sem evento cardiovascular recente. A equipe de cuidados paliativos questiona se a estatina ainda tem papel neste momento, dado o número crescente de comprimidos e o objetivo de simplificar o tratamento e priorizar qualidade de vida.",
+    "pergunta": "Qual a conduta mais sustentada pela evidência sobre suspensão de estatina neste contexto?",
+    "opcoes": [
+      "Manter a estatina indefinidamente: suspendê-la aumenta o risco de eventos cardiovasculares agudos nas últimas semanas de vida",
+      "Suspender a estatina é seguro e pode se associar a melhor qualidade de vida e redução do número de medicamentos e de custo, sem diferença demonstrada na mortalidade em 60 dias, segundo ensaio clínico randomizado nesta população",
+      "Substituir a estatina por um hipolipemiante de ação mais rápida, para manter o controle lipídico enquanto se avalia a suspensão",
+      "A decisão deve ser adiada até haver piora clínica objetiva, pois não existe evidência randomizada sobre suspender estatina em cuidado paliativo"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Um ensaio clínico randomizado, multicêntrico e pragmático (Kutner et al., 2015) incluiu 381 pacientes com expectativa de vida entre 1 mês e 1 ano, em uso de estatina há pelo menos 3 meses para prevenção primária ou secundária, sem evento cardiovascular ativo recente, randomizados para suspender ou manter a estatina. Não houve diferença significativa no desfecho primário (óbito em 60 dias: 23,8% no grupo que suspendeu vs. 20,3% no grupo que manteve; IC 90%, -3,5% a 10,5%; p=0,36), e o estudo não atingiu formalmente o critério de não inferioridade pré-especificado, mas os eventos cardiovasculares foram poucos e semelhantes entre os grupos (13 vs. 11). A qualidade de vida total foi melhor no grupo que suspendeu a estatina (escore McGill QOL de 7,11 vs. 6,85; p=0,04), com redução do número de medicamentos não estatínicos e economia média de US$ 3,37 por dia por paciente. A conclusão dos autores é que suspender a estatina neste contexto é seguro e pode trazer benefícios em qualidade de vida — decisão que deve ser discutida com o paciente e a família, pesando o benefício incerto e tardio da estatina (que leva anos para se acumular) contra o objetivo de simplificar o tratamento e reduzir carga medicamentosa em quem tem expectativa de vida curta.",
+    "source_refs": [
+      "Kutner JS, Blatchford PJ, Taylor DH Jr, et al. Safety and benefit of discontinuing statin therapy in the setting of advanced, life-limiting illness: a randomized clinical trial. JAMA Intern Med. 2015;175(5):691-700. PMID: 25798575."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cascata-de-prescricao-edema-por-bloqueador-de-canal-de-calcio-tratado-com-diuretico",
+    "titulo": "Edema em membros inferiores após anlodipino: novo diagnóstico ou efeito do remédio?",
+    "tema": "Cardiologia geriátrica",
+    "nivel": "básico",
+    "enunciado": "Mulher, 81 anos, iniciou anlodipino há 6 semanas para hipertensão. Retorna com edema bilateral de membros inferiores, novo. Em outra consulta, um segundo médico interpreta o achado como sinal de insuficiência cardíaca incipiente e prescreve furosemida, sem suspender ou revisar o anlodipino.",
+    "pergunta": "Que fenômeno de segurança do idoso esse caso ilustra, e qual seria a conduta mais adequada?",
+    "opcoes": [
+      "É um caso de resistência medicamentosa; a conduta correta é associar um terceiro anti-hipertensivo em vez de furosemida",
+      "É uma cascata de prescrição: um efeito adverso do bloqueador de canal de cálcio (edema periférico, por vasodilatação arteriolar pré-capilar) foi interpretado como nova doença e tratado com outro fármaco, em vez de reconhecido como efeito adverso do primeiro; a conduta adequada é reavaliar e considerar reduzir a dose, trocar de classe ou suspender o anlodipino antes de acrescentar diurético",
+      "É o curso esperado da hipertensão não controlada evoluindo para insuficiência cardíaca; a furosemida é a conduta correta e não requer revisão do anlodipino",
+      "É uma reação alérgica ao anlodipino que exige troca imediata para um inibidor da ECA em dose plena, sem necessidade de investigação adicional"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O termo \"cascata de prescrição\" foi descrito por Rochon e Gurwitz (1997) para o padrão em que um efeito adverso de um medicamento é interpretado como um novo problema médico, levando à prescrição de um segundo fármaco para tratar esse \"novo problema\" — quando a conduta correta seria reconhecer e tratar o efeito adverso do primeiro medicamento. O exemplo clássico dos autores é exatamente este: bloqueadores de canal de cálcio di-hidropiridínicos (como o anlodipino) causam edema periférico por vasodilatação arteriolar pré-capilar desproporcional à venodilatação, um efeito de classe dose-dependente e não relacionado a piora da função cardíaca. Quando esse edema é confundido com insuficiência cardíaca e tratado com diurético, o paciente passa a usar dois fármacos onde nenhum era necessário além do primeiro — o diurético não corrige a causa (a vasodilatação arteriolar) e ainda expõe o idoso a novos riscos (hipovolemia, distúrbio eletrolítico, hipotensão postural, queda). O idoso é particularmente vulnerável a esse fenômeno porque usa mais medicamentos simultaneamente e porque efeitos adversos são mais facilmente atribuídos a \"nova doença relacionada à idade\" do que a iatrogenia. A conduta correta diante de um sintoma novo após início de medicamento é sempre considerar o próprio medicamento como causa antes de tratar o sintoma como doença nova.",
+    "source_refs": [
+      "Rochon PA, Gurwitz JH. Optimising drug treatment for elderly people: the prescribing cascade. BMJ. 1997;315(7115):1096-1099. PMID: 9366745."
+    ],
+    "review_status": "revisado"
   }
 ]

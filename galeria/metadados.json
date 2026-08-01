@@ -2986,5 +2986,119 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "ecg-taquicardia-supraventricular-neonato",
+    "title": "ECG — Taquicardia supraventricular em recém-nascido, com onda P retrógrada",
+    "modality": "ECG",
+    "theme": "Cardiologia pediátrica",
+    "file_path": "ecg/taquicardia-supraventricular-neonato.jpg",
+    "findings": "Derivação II de traçado de taquicardia supraventricular (TSV) em recém-nascido, registrado no dia do parto. A fonte assinala com seta a onda P retrógrada, visível logo após o QRS — achado típico de TSV por reentrada (nodal ou por via acessória), em que o átrio é despolarizado depois do ventrículo. O ritmo é regular e de frequência elevada, sem a variabilidade batimento a batimento esperada no ritmo sinusal do neonato.",
+    "teaching_points": "TSV é a taquiarritmia sustentada mais comum na faixa etária pediátrica, e o recém-nascido pode se apresentar sem os sintomas clássicos do adulto (palpitação) — irritabilidade, recusa alimentar, taquipneia ou sinais de insuficiência cardíaca são frequentes quando o episódio é prolongado, porque o miocárdio neonatal tolera mal a taquicardia sustentada. A posição da onda P em relação ao QRS ajuda a localizar o circuito: P retrógrada colada ao QRS (RP curto) é compatível com reentrada nodal AV ou por via acessória oculta (padrão ortodrômico), enquanto RP longo sugere outros mecanismos (taquicardia por reentrada juncional permanente, foco atrial ectópico). No caso descrito pela fonte, o episódio foi revertido com cardioversão sincronizada após falha de manobra vagal e adenosina — lembrete de que, no neonato hemodinamicamente instável, a cardioversão elétrica não deve ser postergada à espera de resposta farmacológica.",
+    "source_name": "PMC (PubMed Central) — Cureus",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11361474/",
+    "license": "CC BY 4.0",
+    "attribution": "Garud B, Kumar G, Chavan S, Salunkhe S, Chandrashekhar Reddy G. Unexpected Rhythm: Supraventricular Tachycardia Unveiled in a Neonate Diagnosed at Delivery. Cureus. 2024;16(7):e65710. doi: 10.7759/cureus.65710. PMID: 39211675. Figura 1, CC BY 4.0.",
+    "tags": [
+      "ecg",
+      "taquicardia supraventricular",
+      "neonato",
+      "pediatria",
+      "onda p retrógrada",
+      "arritmia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ecg-qt-longo-congenito-lactente",
+    "title": "ECG — Síndrome do QT longo congênito em lactente de 2 meses, com QT e RR marcados",
+    "modality": "ECG",
+    "theme": "Cardiologia pediátrica",
+    "file_path": "ecg/qt-longo-congenito-lactente.jpg",
+    "findings": "Traçado de 12 derivações de lactente do sexo feminino, 2 meses de vida (nascida com 32 semanas), com frequência cardíaca de 111 bpm. A própria imagem traz as setas de medida do intervalo RR e do intervalo QT sobre as derivações II e III, evidenciando um QT visivelmente alongado em relação ao ciclo cardíaco — QTc calculado pela fonte em 544 ms, valor muito acima do limite superior da normalidade pediátrica (~450 ms).",
+    "teaching_points": "A síndrome do QT longo congênito no lactente pode se manifestar de forma menos típica que no adulto ou no adolescente: em vez de síncope relacionada a estresse/exercício, o achado inicial costuma ser bradicardia relativa para a idade, arritmia ventricular ou até quase-morte súbita/ALTE (evento aparentemente letal). O corte diagnóstico de QTc também difere do adulto: valores ≥ 480-500 ms são fortemente sugestivos mesmo sem outro critério, e a medida deve usar o método de Bazett com cuidado nas frequências cardíacas altas do lactente, onde a fórmula tende a superestimar o QTc — reforça a utilidade de marcar visualmente RR e QT no mesmo traçado, como faz esta imagem, em vez de confiar só no valor calculado pelo aparelho. No caso da fonte, o QTc caiu para 485 ms após início de propranolol, ilustrando a resposta esperada ao betabloqueador como primeira linha antes de escalonar para marca-passo ou CDI.",
+    "source_name": "PMC (PubMed Central) — Cureus",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10844771/",
+    "license": "CC BY 4.0",
+    "attribution": "Aldirawi M, Musa R, Hamdi M, Yavuz L. Congenital Long QT Syndrome (LQTS) in Infancy: A Challenging Case. Cureus. 2024;16(1):e51810. doi: 10.7759/cureus.51810. PMID: 38322063. Figura 1, CC BY 4.0.",
+    "tags": [
+      "ecg",
+      "qt longo",
+      "lactente",
+      "pediatria",
+      "canalopatia",
+      "morte súbita"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ecg-fibrilacao-atrial-controlada-idosa",
+    "title": "ECG — Fibrilação atrial com resposta ventricular controlada em paciente de 89 anos",
+    "modality": "ECG",
+    "theme": "Cardiologia geriátrica",
+    "file_path": "ecg/fibrilacao-atrial-controlada-idosa.jpg",
+    "findings": "ECG de 12 derivações com tira de ritmo em D2, de mulher de 89 anos: ausência de onda P organizada (linha de base fibrilatória) e intervalos RR irregularmente irregulares, com frequência ventricular de 98 bpm — fibrilação atrial com resposta ventricular controlada, segundo a descrição da própria fonte.",
+    "teaching_points": "Na paciente idosa, a distinção entre FA de resposta controlada e não controlada muda a urgência da conduta: um QRS irregular com frequência já próxima da meta habitual (abaixo de 110 bpm em repouso, pelo critério pragmático do RACE II) não exige controle agudo de frequência, e a atenção se volta para a decisão de anticoagulação — quase sempre indicada a partir dos 75 anos pelo próprio critério de idade do CHA₂DS₂-VASc, independentemente de outros fatores de risco. A irregularidade do ritmo é o achado mais confiável ao lado do leito antes mesmo do traçado: em paciente idoso com pulso irregular, vale registrar o ECG antes de assumir extrassistolia isolada.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:ECG_Atrial_Fibrillation_98_bpm.jpg",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Ewingdo, via Wikimedia Commons — CC BY-SA 4.0. Descrição original do autor: \"ECG of an 89-year-old female with atrial fibrillation and controlled ventricular response. Heart rate 98 bpm.\"",
+    "tags": [
+      "ecg",
+      "fibrilação atrial",
+      "idoso",
+      "geriatria",
+      "resposta ventricular controlada",
+      "anticoagulação"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "estenose-aortica-grave-doppler-nonagenaria",
+    "title": "Ecocardiograma — Estenose aórtica grave ao Doppler colorido e contínuo, em paciente de 90 anos",
+    "modality": "Ecocardiograma",
+    "theme": "Cardiologia geriátrica",
+    "file_path": "ecocardiograma/estenose-aortica-grave-doppler-nonagenaria.jpg",
+    "findings": "Imagem composta de ecocardiograma transtorácico de mulher de 90 anos: no corte 2D superior, mapeamento por Doppler colorido mostra mosaico de turbulência (jato de alta velocidade, aliasing) atravessando um orifício valvar aórtico reduzido; abaixo, o traçado de Doppler contínuo (CW) através da valva mede velocidade máxima de 3,84 m/s e gradiente médio de 41,59 mmHg — os dois acima do corte de gravidade (velocidade ≥4 m/s ou, como neste caso, gradiente médio ≥40 mmHg já caracteriza estenose aórtica grave pelos critérios de referência).",
+    "teaching_points": "O diagnóstico de gravidade da estenose aórtica não depende de um único número: velocidade máxima, gradiente médio e área valvar (pelo método da continuidade) formam um tripé, e este caso preenche o critério pelo gradiente médio mesmo com velocidade de pico um pouco abaixo do corte clássico de 4 m/s — situação comum quando o débito cardíaco está reduzido ou a frequência cardíaca está elevada no momento do exame, o que reforça a importância de sempre registrar a frequência cardíaca junto da medida Doppler. No paciente muito idoso, a apresentação de estenose aórtica grave pode ser atípica: no caso de origem desta imagem, a paciente foi internada por delirium, não por síncope ou dispneia aos esforços — sinal de baixo débito cerebral que pode ser confundido com quadro demencial agudo se o exame cardiovascular não for dirigido para o sopro sistólico.",
+    "source_name": "PMC (PubMed Central) — Cureus",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12579575/",
+    "license": "CC BY 4.0",
+    "attribution": "Rafai I, Malik SJ, Ali A. Delirium as an Atypical Presentation of Severe Aortic Stenosis in a Cognitively Intact Nonagenarian With Atrial Fibrillation: A Case Report. Cureus. 2025;17(10):e93623. doi: 10.7759/cureus.93623. PMID: 41185831. Figura 5, CC BY 4.0.",
+    "tags": [
+      "ecocardiograma",
+      "estenose aórtica",
+      "idoso",
+      "geriatria",
+      "doppler",
+      "delirium"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "transposicao-grandes-arterias-sinal-ovo-preso-barbante",
+    "title": "Radiografia de tórax — Transposição das grandes artérias em neonato, sinal do \"ovo preso ao barbante\"",
+    "modality": "Radiografia",
+    "theme": "Cardiopatias congênitas",
+    "file_path": "radiografia/transposicao-grandes-arterias-ovo-preso-barbante.jpg",
+    "findings": "Radiografia de tórax em incidência frontal de recém-nascido masculino de 2.850 g, nascido com 36 semanas, admitido por cianose central e desconforto respiratório grave. A silhueta cardíaca aparece globosa e o pedículo vascular superior estreito — o \"ovo preso ao barbante\" (egg-on-a-string), decorrente da relação anteroposterior anômala entre aorta e artéria pulmonar na transposição das grandes artérias, que estreita a sombra mediastinal superior onde normalmente se veem os grandes vasos lado a lado.",
+    "teaching_points": "O sinal do ovo preso ao barbante aparece em cerca de um terço dos casos de transposição das grandes artérias e nunca deve ser usado para EXCLUIR o diagnóstico quando ausente — a maioria dos neonatos com TGA tem radiografia inespecífica ou até normal nas primeiras horas. Nesta imagem, os dois achados que compõem o sinal são separáveis: a silhueta cardíaca globosa vem do septo interatrial redirecionando o retorno venoso, e o pedículo estreito vem da posição anteroposterior (em vez de lado a lado) da aorta sobre a artéria pulmonar, que reduz a largura mediastinal superior na projeção frontal. Diante de cianose neonatal com radiografia sugestiva, o ecocardiograma é o exame confirmatório e a hipoxemia costuma responder mal à oferta de oxigênio (teste da hiperóxia) porque o problema é de mistura entre as circulações, não de troca gasosa pulmonar — e a prostaglandina E1 mantém o canal arterial pérvio como fonte de mistura até a correção cirúrgica.",
+    "source_name": "PMC (PubMed Central) — Pan African Medical Journal",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6457718/",
+    "license": "CC BY",
+    "attribution": "Varal IG, Dogan P. Egg on a string sign. Pan Afr Med J. 2018;31:79. doi: 10.11604/pamj.2018.31.79.17024. PMID: 31007826. Figura 1, CC BY.",
+    "tags": [
+      "radiografia",
+      "transposição das grandes artérias",
+      "cardiopatia congênita crítica",
+      "cianose neonatal",
+      "ovo preso ao barbante"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]

@@ -3151,5 +3151,213 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "bnp-nt-probnp-em-pediatria",
+    "name": "BNP e NT-proBNP em pediatria",
+    "category": "laboratorial",
+    "theme": "Cardiologia pediátrica",
+    "what_it_measures": "Peptídeos natriuréticos liberados por estresse de parede miocárdica — usados em neonatos e crianças para investigar cardiopatia estrutural com repercussão hemodinâmica, miocardite e insuficiência cardíaca, mas com faixas de referência muito diferentes das do adulto.",
+    "reference_range": "Não existe um corte único como no adulto (ex.: <125 pg/mL ambulatorial) — os valores são fortemente dependentes da idade: mais altos nos primeiros dias de vida (refletindo a transição da circulação fetal para a neonatal), com queda acentuada nas primeiras semanas, e um declínio gradual e discreto ao longo da infância, com nível um pouco mais alto em meninas na puberdade. Usar sempre a faixa de referência pediátrica por idade/dia de vida do ensaio utilizado — extrapolar o corte do adulto para uma criança, e sobretudo para um neonato, é inválido e leva a interpretação errada.",
+    "indications": "Suspeita de cardiopatia estrutural com repercussão hemodinâmica, miocardite, insuficiência cardíaca pediátrica, e acompanhamento de resposta a tratamento.",
+    "interpretation": "Elevação franca acima da faixa esperada para a idade (e, no recém-nascido, para o dia de vida) sugere sobrecarga ou disfunção ventricular. Como o valor cai de forma muito acentuada nas primeiras semanas de vida, um resultado só é interpretável comparando-o à referência da idade exata da criança no momento da coleta, nunca a um valor fixo único.",
+    "limitations": "BNP e NT-proBNP não são intercambiáveis entre si, e ensaios de fabricantes diferentes também não são diretamente comparáveis. Não existe, na prática clínica corrente, um Z-score simples e único que valha para todas as idades — a tentativa mais completa de resolver isso (fórmula \"Zlog\" contínua de 0 a 18 anos) ainda não é de uso consagrado. As referências publicadas vêm de coortes relativamente pequenas por faixa etária quando comparadas às disponíveis para o adulto.",
+    "source_refs": [
+      "Nir A, Lindinger A, Rauh M, Bar-Oz B, Laer S, Schwachtgen L, Koch A, Falkenberg J, Mir TS. NT-pro-B-type natriuretic peptide in infants and children: reference values based on combined data from four studies. Pediatr Cardiol. 2009;30(1):3-8. PMID: 18600369.",
+      "Palm J, Hoffmann G, Klawonn F, Tutarel O, Palm H, Holdenrieder S, Ewert P. Continuous, complete and comparable NT-proBNP reference ranges in healthy children. Clin Chem Lab Med. 2020;58(9):1509-1516. PMID: 32305952."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "bnp",
+      "nt-probnp",
+      "pediatria",
+      "biomarcador",
+      "insuficiencia cardiaca"
+    ]
+  },
+  {
+    "slug": "eletrocardiograma-neonatal-e-pediatrico-padroes-de-normalidade",
+    "name": "Eletrocardiograma neonatal e pediátrico — padrões de normalidade por faixa etária",
+    "category": "metodo_grafico",
+    "theme": "Cardiologia pediátrica",
+    "what_it_measures": "Traçado elétrico cardíaco, interpretado com critérios de normalidade específicos por faixa etária — o predomínio de forças ventriculares direitas ao nascimento (herança da fisiologia fetal), a frequência cardíaca de base e a duração de intervalos (PR, QRS, QT) mudam de forma previsível ao longo da infância até convergir para o padrão do adulto.",
+    "reference_range": "Não há um único conjunto de limites válido para toda a infância. Rijnbeek et al. (2001) derivaram limites normais atualizados para 9 faixas etárias pediátricas (11 dias a 16 anos) a partir de 1912 ECGs digitais de crianças holandesas saudáveis, mostrando diferenças clinicamente relevantes em relação aos padrões de normalidade usados até então, inclusive diferença por sexo na duração do QRS e em algumas amplitudes de onda. Os limites do adulto não se aplicam a nenhuma faixa etária pediátrica, e os limites de uma faixa pediátrica não se aplicam a outra.",
+    "indications": "Avaliação de arritmia, síncope, sopro, triagem pré-participação esportiva, suspeita de canalopatia (síndrome do QT longo, Brugada) e acompanhamento eletrocardiográfico de cardiopatia congênita.",
+    "interpretation": "Predomínio de forças de ventrículo direito é fisiológico no neonato e no lactente pequeno — reflete a resistência vascular pulmonar elevada e a hipertrofia relativa de VD da vida fetal — e se atenua progressivamente ao longo do primeiro ano de vida. Desconsiderar esse padrão evolutivo leva a diagnosticar sobrecarga de VD onde não existe, ou a deixar de reconhecer uma sobrecarga real quando o padrão já deveria ter regredido para a idade.",
+    "limitations": "Os limites de normalidade publicados dependem da técnica de aquisição e do software de mensuração usados no estudo de referência, e podem variar discretamente entre populações e equipamentos diferentes. O laudo automatizado de ECG pediátrico tem taxa de erro maior que o do adulto e deve sempre ser revisado por profissional com treinamento específico em ECG pediátrico antes de gerar conduta.",
+    "source_refs": [
+      "Rijnbeek PR, Witsenburg M, Schrama E, Hess J, Kors JA. New normal limits for the paediatric electrocardiogram. Eur Heart J. 2001;22(8):702-711. PMID: 11286528."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ecg",
+      "eletrocardiograma",
+      "pediatria",
+      "neonato",
+      "padroes de normalidade"
+    ]
+  },
+  {
+    "slug": "ecocardiograma-transtoracico-pediatrico-com-escore-z",
+    "name": "Ecocardiograma transtorácico pediátrico com escore Z",
+    "category": "imagem",
+    "theme": "Cardiologia pediátrica",
+    "what_it_measures": "Dimensões das estruturas cardíacas (valvas, grandes vasos, câmaras) normalizadas pela superfície corporal e expressas como escore Z — desvios-padrão em relação à média esperada para o tamanho da criança —, em vez do valor absoluto em milímetros, que muda continuamente com o crescimento.",
+    "reference_range": "Escore Z entre -2 e +2 é geralmente considerado dentro da normalidade (dentro de aproximadamente 2 desvios-padrão da média esperada para a superfície corporal). Pettersen et al. (2008) derivaram equações de regressão relacionando 21 estruturas cardíacas à superfície corporal numa coorte de 782 crianças saudáveis, de 1 dia a 18 anos, e essas equações estão entre as mais usadas na prática para calcular o escore Z.",
+    "indications": "Avaliação de dimensão de estrutura cardíaca em lactente e criança — por exemplo, raiz aórtica na síndrome de Marfan e outras aortopatias, anel valvar em estenose, dimensão de câmara ventricular em cardiomiopatia — e acompanhamento seriado do crescimento de uma estrutura ao longo do tempo.",
+    "interpretation": "Usar sempre o escore Z, não o valor absoluto em milímetros — uma valva de 8 mm pode ser normal num lactente e gravemente estenótica num pré-escolar. A tendência do escore Z ao longo de exames seriados (por exemplo, aumento progressivo na raiz aórtica) pode ser tão importante clinicamente quanto o valor isolado de um único exame.",
+    "limitations": "Escores Z calculados por coortes de referência diferentes (Pettersen, Boston, Detroit, entre outras) não são diretamente intercambiáveis — o mesmo paciente pode ter escore Z discretamente diferente conforme a calculadora usada, o que exige atenção ao comparar exames feitos em serviços distintos. A coorte original de Pettersen não cobre todas as estruturas cardíacas nem populações fora da faixa etária estudada (1 dia a 18 anos).",
+    "source_refs": [
+      "Pettersen MD, Du W, Skeens ME, Humes RA. Regression equations for calculation of z scores of cardiac structures in a large cohort of healthy infants, children, and adolescents: an echocardiographic study. J Am Soc Echocardiogr. 2008;21(8):922-934. PMID: 18406572."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ecocardiograma",
+      "escore z",
+      "pediatria",
+      "z-score",
+      "cardiopatia estrutural"
+    ]
+  },
+  {
+    "slug": "escore-de-fragilidade-pre-procedimento-cardiovascular",
+    "name": "Escore de fragilidade pré-procedimento cardiovascular (Essential Frailty Toolset)",
+    "category": "metodo_grafico",
+    "theme": "Cardiologia geriátrica",
+    "what_it_measures": "Avaliação funcional/geriátrica estruturada — não um exame de imagem ou laboratório isolado — que mede o grau de fragilidade do paciente idoso antes de TAVI ou cirurgia valvar aórtica, num domínio distinto do risco cirúrgico calculado por escores tradicionais como STS ou EuroSCORE.",
+    "reference_range": "O Essential Frailty Toolset (EFT), validado no estudo FRAILTY-AVR (1.020 pacientes com idade mediana de 82 anos, submetidos a TAVI ou troca cirúrgica de valva aórtica em 14 centros de 3 países), é uma escala breve de 4 itens: força de membro inferior (teste cronometrado de sentar-levantar 5 vezes), comprometimento cognitivo (miniexame do estado mental), anemia e hipoalbuminemia. Entre 7 escalas de fragilidade comparadas no mesmo estudo (Fried, Fried+, Rockwood, Short Physical Performance Battery, Bern, Columbia e EFT), o EFT foi o preditor mais forte de desfecho.",
+    "indications": "Avaliação pré-procedimento em idoso candidato a TAVI ou cirurgia valvar aórtica, como parte da discussão em heart team sobre relação risco-benefício e prognóstico funcional pós-procedimento.",
+    "interpretation": "Fragilidade pelo EFT associou-se a óbito em 1 ano com razão de chances ajustada de 3,72 (IC95% 2,54-5,45), a piora de incapacidade em 1 ano (OR ajustada 2,13; IC95% 1,57-2,87) e a óbito em 30 dias (OR ajustada 3,29; IC95% 1,73-6,26). A prevalência de fragilidade variou de 26% a 68% conforme a escala usada — o que reforça que a escolha do instrumento importa, e a recomendação dos próprios autores é usar especificamente o EFT nesse cenário.",
+    "limitations": "Fragilidade não é sinônimo de contraindicação ao procedimento — no estudo, muitos pacientes frágeis foram tratados com sucesso. O escore mede risco e informa a discussão, mas não decide sozinho a indicação, que segue sendo do heart team. Os componentes do EFT dependem de aplicação padronizada (teste de sentar-levantar cronometrado, miniexame do estado mental aplicado corretamente) para manter o valor preditivo demonstrado no estudo original.",
+    "source_refs": [
+      "Afilalo J, Lauck S, Kim DH, Lefèvre T, Piazza N, Lachapelle K, Martucci G, Lamy A, Labinaz M, Peterson MD, Arora RC, Noiseux N, Rassi A, Palacios IF, Généreux P, Lindman BR, Asgar AW, Kim CA, Trnkus A, Morais JA, Langlois Y, Rudski LG, Morin JF, Popma JJ, Webb JG, Perrault LP. Frailty in Older Adults Undergoing Aortic Valve Replacement: The FRAILTY-AVR Study. J Am Coll Cardiol. 2017;70(6):689-700. PMID: 28693934."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "fragilidade",
+      "tavi",
+      "geriatria",
+      "essential frailty toolset",
+      "avaliacao pre-procedimento"
+    ]
+  },
+  {
+    "slug": "clearance-de-creatinina-no-idoso-cockcroft-gault-vs-ckd-epi",
+    "name": "Clearance de creatinina no idoso — Cockcroft-Gault vs. CKD-EPI",
+    "category": "laboratorial",
+    "theme": "Cardiologia geriátrica",
+    "what_it_measures": "Estimativa da função renal a partir da creatinina sérica, por duas fórmulas com bases diferentes: Cockcroft-Gault (usa peso corporal, estima clearance de creatinina em mL/min) e CKD-EPI (não usa peso, estima taxa de filtração glomerular em mL/min/1,73m²) — que podem divergir de forma clinicamente relevante no paciente muito idoso.",
+    "reference_range": "Não há um valor único de corte comum às duas fórmulas, porque são grandezas diferentes que coincidem numericamente na maioria dos adultos, mas divergem no extremo de idade avançada e função renal reduzida. Todos os anticoagulantes orais diretos (dabigatrana, rivaroxabana, apixabana, edoxabana) foram estudados nos ensaios pivotais e têm a dose ajustada pela fórmula de Cockcroft-Gault em bula — não pelo CKD-EPI.",
+    "indications": "Ajuste de dose de fármaco renalmente eliminado — sobretudo anticoagulante oral direto — em paciente idoso, principalmente acima de 75 anos ou com função renal estimada reduzida (<60 mL/min).",
+    "interpretation": "Em pacientes com 75 anos ou mais e função renal reduzida, o CKD-EPI tende a superestimar a função renal em relação ao Cockcroft-Gault. Uma revisão da literatura mostrou discordância de dose de anticoagulante oral direto variando de 28,8% de subdosagem a 59,2% de sobredosagem quando se substitui Cockcroft-Gault por CKD-EPI ou MDRD. Um estudo espanhol com 454 pacientes em fibrilação atrial não valvar mostrou diferença média de +11,3 mL/min/1,73m² do CKD-EPI sobre o Cockcroft-Gault (IC95% 8,9-13,7; p<0,001), concentrada em clearance <60 mL/min e mais evidente em pacientes com 75 anos ou mais. Usar CKD-EPI nesse cenário pode classificar erroneamente um idoso como elegível para dose plena quando a dose reduzida — ou mesmo a contraindicação — seria a correta pela fórmula validada nos ensaios.",
+    "limitations": "O Cockcroft-Gault tende a ser impreciso em extremos de peso corporal (obesidade, caquexia) e depende de peso atualizado — usar peso desatualizado ou peso ideal em vez do peso real distorce o resultado. A fórmula não foi desenvolvida nem validada para diálise. Enquanto não houver estudos de eficácia/segurança de anticoagulante oral direto usando CKD-EPI ou MDRD para definir a dose, a recomendação da literatura é manter o Cockcroft-Gault na prática especificamente para essa finalidade, mesmo sendo o CKD-EPI hoje preferido para outras decisões clínicas de função renal.",
+    "source_refs": [
+      "Nabiee M, Dashti-Khavidaki S, Khajeh B. Dose discordance of direct acting oral anticoagulants using different equations for estimating GFR: a literature review. Expert Rev Clin Pharmacol. 2020;13(8):857-863. PMID: 32683999.",
+      "Pérez Cabeza AI, Chinchurreta Capote PA, González Correa JA, Ruiz Mateas F, Rosas Cervantes G, Rivas Ruiz F, Valle Alberca A, Bravo Marqués R. Discrepancies between the use of MDRD-4 IDMS and CKD-EPI equations, instead of the Cockcroft-Gault equation, in the determination of the dosage of direct oral anticoagulants in patients with non-valvular atrial fibrillation. Med Clin (Barc). 2018;150(3):85-91. PMID: 28739270."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "clearance de creatinina",
+      "cockcroft-gault",
+      "ckd-epi",
+      "anticoagulante oral direto",
+      "geriatria"
+    ]
+  },
+  {
+    "slug": "teste-de-caminhada-de-6-minutos-tc6-na-avaliacao-funcional-pre-tavi",
+    "name": "Teste de caminhada de 6 minutos (TC6) na avaliação funcional pré-TAVI",
+    "category": "metodo_grafico",
+    "theme": "Cardiologia geriátrica",
+    "what_it_measures": "Distância percorrida em 6 minutos de caminhada, usada no idoso candidato a TAVI como marcador funcional simples e reprodutível, complementar — não substituto — à avaliação de fragilidade e ao risco cirúrgico calculado por escore.",
+    "reference_range": "Não há corte único validado como determinante isolado de conduta. No substudo do PARTNER (n=484), os pacientes foram estratificados pela mediana da distância basal do TC6 (128,5 m) em \"incapazes de caminhar\" (n=218), \"caminhantes lentos\" (abaixo da mediana, n=133) e \"caminhantes rápidos\" (acima da mediana, n=133).",
+    "indications": "Avaliação funcional complementar em idoso candidato a TAVI, como parte da discussão em heart team sobre prognóstico funcional e expectativa de benefício do procedimento.",
+    "interpretation": "No substudo do PARTNER, a distância basal do TC6 não previu desfechos precoces (30 dias), mas previu mortalidade tardia: óbito por qualquer causa em 2 anos foi de 42,5% nos incapazes de caminhar, 31,2% nos caminhantes lentos e 28,8% nos caminhantes rápidos (p=0,02), diferença concentrada em óbito não cardíaco. Pacientes com pior capacidade funcional basal foram também os que mais melhoraram a distância percorrida após o TAVI (aumento médio de 66±109 m entre os incapazes de caminhar, contra queda de 44±148 m entre os caminhantes rápidos, que já partiam de patamar mais alto).",
+    "limitations": "O TC6 basal não deve ser usado isoladamente para negar o procedimento — no próprio estudo, o subgrupo com pior capacidade funcional foi justamente o que mais ganhou em distância percorrida após o TAVI, o que sugere que limitação funcional isolada não identifica quem não se beneficia. O estudo reflete uma coorte de alto risco cirúrgico da era inicial do TAVI, com válvulas de gerações mais antigas — a generalização para o perfil de paciente e as válvulas atuais exige cautela.",
+    "source_refs": [
+      "Green P, Cohen DJ, Généreux P, McAndrew T, Arnold SV, Alu M, Beohar N, Rihal CS, Mack MJ, Kapadia S, Dvir D, Maurer MS, Williams MR, Kodali S, Leon MB, Kirtane AJ. Relation between six-minute walk test performance and outcomes after transcatheter aortic valve implantation (from the PARTNER trial). Am J Cardiol. 2013;112(5):700-706. PMID: 23725996. PMCID: PMC3745807."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "teste de caminhada de 6 minutos",
+      "tavi",
+      "geriatria",
+      "capacidade funcional"
+    ]
+  },
+  {
+    "slug": "teste-de-caminhada-de-6-minutos-tc6-na-circulacao-de-fontan",
+    "name": "Teste de caminhada de 6 minutos (TC6) na circulação de Fontan",
+    "category": "metodo_grafico",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Distância percorrida em 6 minutos, usada como marcador simples e reprodutível de capacidade funcional em pacientes com circulação de Fontan, cuja fisiologia — ausência de bomba subpulmonar — limita estruturalmente a resposta ao exercício.",
+    "reference_range": "Não há corte único validado; a comparação clinicamente relevante é contra controles saudáveis pareados por idade e sexo, não um valor absoluto isolado. Em estudo caso-controle, pacientes com Fontan (n=21, 16,4±6,6 anos) percorreram distância significativamente menor que controles pareados (n=21) no TC6 (p<0,05), com maior variação de frequência cardíaca, queda de saturação periférica de O2 e dispneia/fadiga de membros inferiores ao final do teste.",
+    "indications": "Avaliação seriada de capacidade funcional em paciente com circulação de Fontan, acompanhamento longitudinal e avaliação de resposta a programa de reabilitação/exercício.",
+    "interpretation": "Uma queda de saturação de O2 mais pronunciada durante o teste, em comparação a controles saudáveis, é esperada na fisiologia de Fontan e reflete a limitação de reserva de débito cardíaco — não é necessariamente sinal de deterioração aguda, mas deve ser contextualizada e comparada a testes anteriores do mesmo paciente. O teste cardiopulmonar de exercício, com consumo de oxigênio de pico, continua sendo o padrão mais fino de estratificação prognóstica no Fontan; o TC6 é a alternativa mais simples e acessível quando o teste cardiopulmonar não está disponível.",
+    "limitations": "O TC6 é submáximo e mais sujeito a efeito-teto e a variabilidade de motivação e técnica do que o teste cardiopulmonar de exercício. O estudo de referência usado aqui é pequeno (21 pacientes com Fontan e 21 controles) — coortes maiores podem refinar a magnitude exata da diferença encontrada.",
+    "source_refs": [
+      "Tekerlek H, Saglam M, Kucukdagli AC, Aykan HH, Vardar-Yagli N, Calik-Kutukcu E, Inal-Ince D, Karagoz T. Assessment of exercise capacity using field walking tests in patients after the Fontan procedure: A case-control study. Heart Lung. 2023;60:66-73. PMID: 36924606."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "teste de caminhada de 6 minutos",
+      "fontan",
+      "cardiopatia congenita",
+      "capacidade funcional"
+    ]
+  },
+  {
+    "slug": "bnp-nt-probnp-em-cardiopatia-congenita-do-adulto",
+    "name": "NT-proBNP em cardiopatia congênita do adulto (ACHD)",
+    "category": "laboratorial",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Peptídeo natriurético como marcador de estresse de parede ventricular no adulto com cardiopatia congênita (ACHD) — população estruturalmente diferente do coração biventricular normal (ventrículo sistêmico direito, fisiologia de Fontan, shunts residuais), na qual o valor absoluto tem interpretação distinta da do coração normal.",
+    "reference_range": "Estudo prospectivo de coorte com 595 pacientes com ACHD (idade mediana 33 anos, 90% em classe funcional NYHA I) definiu NT-proBNP basal elevado como acima de 14 pmol/L — valor usado no próprio estudo para estratificar risco, não um corte diagnóstico de insuficiência cardíaca no sentido tradicional do coração normal.",
+    "indications": "Estratificação de risco e acompanhamento longitudinal (seguimento anual em ambulatório especializado) do adulto com cardiopatia congênita, sobretudo quando a NT-proBNP basal já está elevada.",
+    "interpretation": "No seguimento mediano de 4,4 anos, o aumento de NT-proBNP no ano anterior a um evento (óbito, insuficiência cardíaca, hospitalização, arritmia, evento tromboembólico ou intervenção cardíaca) foi de 2,9 pmol/L, contra 0,3 pmol/L nos pacientes que permaneceram livres de evento (p=0,006 para a diferença de inclinação); antes de óbito ou insuficiência cardíaca especificamente, o aumento médio foi de 18,2 pmol/L (p<0,001). Em pacientes com NT-proBNP basal elevado (>14 pmol/L, 53% da coorte), medidas repetidas associaram-se ao desfecho primário composto (HR 2,08 por cada valor 2 vezes maior; IC95% 1,31-3,87; p<0,001) e ao desfecho de óbito ou insuficiência cardíaca (HR 2,47; IC95% 1,13-5,70; p=0,017). A tendência de medidas seriadas acrescenta informação prognóstica além de uma medida isolada.",
+    "limitations": "Coorte de centro único de referência terciária (Erasmus MC, Roterdã), com predomínio de pacientes em boa classe funcional (90% NYHA I) — a magnitude do efeito pode não se replicar em populações com lesões mais graves ou pior classe funcional. O estudo original usa pmol/L como unidade; a conversão para pg/mL e o corte equivalente devem ser conferidos com o laboratório que processa a amostra antes de aplicar o valor de 14 pmol/L na prática. Não define um corte diagnóstico único de insuficiência cardíaca no ACHD — mede tendência prognóstica, não substitui avaliação clínica e ecocardiográfica.",
+    "source_refs": [
+      "Baggen VJM, Baart SJ, van den Bosch AE, Eindhoven JA, Witsenburg M, Cuypers JAAE, Roos-Hesselink JW, Boersma E. Prognostic Value of Serial N-Terminal Pro-B-Type Natriuretic Peptide Measurements in Adults With Congenital Heart Disease. J Am Heart Assoc. 2018;7(7):e008349. PMID: 29581225. PMCID: PMC5907602."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "nt-probnp",
+      "achd",
+      "cardiopatia congenita do adulto",
+      "biomarcador",
+      "prognostico"
+    ]
+  },
+  {
+    "slug": "teste-genetico-microarray-cromossomico-em-cardiopatia-congenita-sindromica",
+    "name": "Teste genético (microarray cromossômico) em cardiopatia congênita sindrômica — exemplo da deleção 22q11.2",
+    "category": "laboratorial",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Identificação de variantes cromossômicas — sobretudo deleções e duplicações (copy number variants) — associadas a síndromes que incluem cardiopatia congênita, por análise de microarray cromossômico (CMA) ou outra técnica genômica; hoje substitui em grande parte o cariótipo convencional e o FISH isolado como primeira linha de investigação.",
+    "reference_range": "Não se aplica no formato de valor de referência — o resultado é qualitativo (presença ou ausência de deleção/duplicação patogênica identificável). Para a deleção 22q11.2, especificamente, o diagnóstico é estabelecido por microarray cromossômico (ou outra análise genômica) demonstrando deleção heterozigota na região 22q11.2, tipicamente de cerca de 3,0 (2,54) Mb.",
+    "indications": "Cardiopatia conotruncal — comunicação interventricular, tetralogia de Fallot, interrupção de arco aórtico, tronco arterioso comum — é a principal porta de entrada para a suspeita de deleção 22q11.2. A American Heart Association recomenda considerar avaliação genética, incluindo análise cromossômica, em cardiopatia congênita isolada ou associada a outras anomalias/síndrome; achados extracardíacos associados (fenda palatina, hipocalcemia, imunodeficiência, dismorfismos faciais, atraso de desenvolvimento) reforçam a indicação de testar especificamente a deleção 22q11.2. Estenose pulmonar associada a baixa estatura e fenótipo sugestivo de RASopatia direciona para painel de Noonan, não para 22q11.2 — a escolha do teste depende do fenótipo, não é genérica.",
+    "interpretation": "A deleção 22q11.2 é de novo em mais de 90% dos casos; quando herdada, o padrão é autossômico dominante, e a prole de um indivíduo afetado tem 50% de chance de herdar a deleção — implicação direta para aconselhamento genético e para rastreio de outros familiares. O achado orienta também vigilância extracardíaca ao longo da vida (imunológica, endócrina/cálcio, palato, desenvolvimento neuropsicomotor), não apenas cardíaca.",
+    "limitations": "Um resultado negativo de microarray não exclui outras causas genéticas de cardiopatia congênita sindrômica — variantes de ponto em genes de RASopatia, por exemplo, exigem painel ou sequenciamento dirigido, não microarray. A decisão de testar, a escolha do gene/painel a solicitar e a interpretação do resultado devem envolver aconselhamento genético; não é exame para ser solicitado e interpretado isoladamente pelo cardiologista.",
+    "source_refs": [
+      "McDonald-McGinn DM, Hain HS, Emanuel BS, Zackai EH. 22q11.2 Deletion Syndrome. 1999 Sep 23 [updated 2025 May 8]. In: Adam MP, Bick S, Mirzaa GM, Pagon RA, Wallace SE, Amemiya A, editors. GeneReviews® [Internet]. Seattle (WA): University of Washington, Seattle; 1993-2026. PMID: 20301696.",
+      "Pierpont ME, Brueckner M, Chung WK, Garg V, Lacro RV, McGuire AL, Mital S, Priest JR, Pu WT, Roberts A, Ware SM, Gelb BD, Russell MW; American Heart Association Council on Cardiovascular Disease in the Young; Council on Cardiovascular and Stroke Nursing; and Council on Genomic and Precision Medicine. Genetic Basis for Congenital Heart Disease: Revisited: A Scientific Statement From the American Heart Association. Circulation. 2018;138(21):e653-e711. PMID: 30571578. PMCID: PMC6555769."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "genetica",
+      "22q11",
+      "microarray cromossomico",
+      "cardiopatia congenita sindromica",
+      "aconselhamento genetico"
+    ]
   }
 ]

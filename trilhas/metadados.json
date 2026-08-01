@@ -20243,5 +20243,189 @@
         "por_que": "Fecha a trilha respondendo à pergunta que fica em aberto ao final da etapa 3: quando o hematologista troca o dasatinibe por suspeita de toxicidade, o risco de hipertensão pulmonar desaparece com a troca, ou o novo fármaco carrega risco próprio? A coorte comparativa francesa (Circulation 2026) mostra que bosutinibe (HR 10,76) e ponatinibe (HR 7,74) têm hazard ratio elevado contra imatinibe, mas quase todos os casos descritos ocorreram em pacientes com exposição recente ao dasatinibe — 'reexposição de uma vulnerabilidade vascular pulmonar já instalada', não necessariamente um segundo evento independente, o que muda a leitura de efeito de classe para efeito de sequência de tratamento."
       }
     ]
+  },
+  {
+    "slug": "trilha-cardiologia-pediatrica-recem-nascido-cianotico",
+    "titulo": "Cardiologia pediátrica: do recém-nascido cianótico à cardiopatia estrutural",
+    "tema": "Cardiologia pediátrica",
+    "objetivo": "Sair sabendo o caminho completo da suspeita neonatal de cardiopatia congênita: triagem por oximetria, diagnóstico diferencial da cianose, as lesões estruturais mais comuns e a trajetória de cuidado que se estende até a vida adulta.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "triagem-neonatal-de-cardiopatia-congenita-critica-por-oximetria-de-pulso",
+        "por_que": "Começa aqui porque a triagem é o que detecta a cardiopatia crítica ANTES do sintoma aparecer — é o primeiro contato do sistema com a maioria das lesões duto-dependentes."
+      },
+      {
+        "ordem": 2,
+        "item_type": "estudo",
+        "item_slug": "de-wahl-granelli-2009-oximetria-de-pulso-triagem-neonatal",
+        "por_que": "O estudo que sustenta a triagem: mostra a sensibilidade real do método e por que ele se somou, sem substituir, ao exame físico e ao ultrassom pré-natal."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "cianose-no-recem-nascido-diagnostico-diferencial-e-conduta-inicial",
+        "por_que": "Quando a triagem falha ou o recém-nascido já chega cianótico, este é o passo seguinte: diferencial entre causa cardíaca e pulmonar, e a estabilização inicial antes do ecocardiograma."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "civ-e-cia-na-crianca-historia-natural-e-criterios-de-fechamento",
+        "por_que": "As duas lesões estruturais mais frequentes da infância, com a história natural que decide observar versus fechar — é o contraponto às lesões críticas dos passos anteriores, que exigem fechamento imediato."
+      },
+      {
+        "ordem": 5,
+        "item_type": "estudo",
+        "item_slug": "faella-hijazi-2000-oclusor-amplatzer-canal-arterial-registro-internacional",
+        "por_que": "Do critério de fechamento para a técnica: registro internacional do fechamento transcateter do canal arterial, a lesão duto-dependente mais comum nesta trilha."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "cardiopatia-congenita-do-adulto-achd-manejo-abrangente-esc-2020",
+        "por_que": "Fecha a trilha mostrando o outro extremo da mesma história: a criança tratada hoje se torna o adulto com cardiopatia congênita de amanhã, e o cuidado não termina na alta da neonatologia."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-cardiologia-pediatrica-emergencias-e-morte-subita",
+    "titulo": "Cardiologia pediátrica: arritmia, miocardite e triagem de morte súbita",
+    "tema": "Cardiologia pediátrica",
+    "objetivo": "Sair sabendo reconhecer e manejar as três emergências cardíacas mais decisivas da infância e adolescência: a taquiarritmia do lactente, a miocardite aguda que pode evoluir para ECMO, e a síncope que exige triagem de canalopatia antes de liberar o esporte.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "taquicardia-supraventricular-no-lactente-e-na-crianca-manejo-agudo-e-cronico",
+        "por_que": "A arritmia sustentada mais comum da infância. Começa aqui porque o manejo agudo (manobra vagal, adenosina, cardioversão) é o que precisa estar automatizado antes de qualquer discussão de manejo crônico."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "miocardite-aguda-pediatrica-diagnostico-suporte-hemodinamico-e-ecmo",
+        "por_que": "Segunda emergência: quando a apresentação não é arritmia isolada, mas choque cardiogênico de início agudo em criança previamente hígida — inclui o critério de quando escalar para suporte mecânico."
+      },
+      {
+        "ordem": 3,
+        "item_type": "estudo",
+        "item_slug": "drucker-1994-imunoglobulina-miocardite-aguda-pediatrica",
+        "por_que": "A evidência por trás da imunoglobulina intravenosa na miocardite pediátrica, terapia citada no documento anterior — para entender o que o estudo original de fato mostrou, e não só a recomendação derivada dele."
+      },
+      {
+        "ordem": 4,
+        "item_type": "estudo",
+        "item_slug": "pices-carvedilol-insuficiencia-cardiaca-pediatrica",
+        "por_que": "Quando a miocardite deixa disfunção residual, a insuficiência cardíaca pediátrica entra em cena — o PICES é o ensaio que testou carvedilol nessa população, e por que a evidência de adulto não se extrapola sem checar."
+      },
+      {
+        "ordem": 5,
+        "item_type": "medicamento",
+        "item_slug": "carvedilol",
+        "por_que": "Do ensaio para a prescrição: dose e apresentação do fármaco testado no PICES, para quem vai de fato prescrever."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "sincope-e-morte-subita-em-criancas-e-atletas-jovens-triagem-de-canalopatias-e-cardiomiopatias",
+        "por_que": "Fecha a trilha na emergência que mais assusta por ser silenciosa até o desfecho fatal: como diferenciar síncope vasovagal benigna de sinal de canalopatia ou cardiomiopatia antes de liberar a criança para o esporte."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-cardiologia-geriatrica-fragilidade-e-desprescricao",
+    "titulo": "Cardiologia geriátrica: fragilidade, decisão de intervir e desprescrição",
+    "tema": "Cardiologia geriátrica",
+    "objetivo": "Sair sabendo usar a fragilidade como eixo central de decisão no idoso — da indicação de TAVI à meta pressórica — e reconhecer quando o próximo passo certo é retirar medicação, não acrescentar.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "fragilidade-como-modificador-de-decisao-cardiovascular",
+        "por_que": "Começa pelo conceito que atravessa toda a trilha: fragilidade não é idade cronológica, é um eixo de decisão próprio, com instrumentos de avaliação e impacto direto em TAVI, cirurgia valvar e revascularização."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "estenose-aortica-grave-no-idoso-fragil-tavi-e-futilidade",
+        "por_que": "Aplicação direta do conceito anterior ao cenário em que a fragilidade mais pesa na decisão: quando o TAVI muda o prognóstico e quando a fragilidade extrema torna a intervenção fútil."
+      },
+      {
+        "ordem": 3,
+        "item_type": "estudo",
+        "item_slug": "thourani-2015-nonagenarios-tavi-partner",
+        "por_que": "A evidência por trás da decisão: desfechos reais de TAVI em nonagenários no PARTNER-I, para julgar o caso concreto e não só o princípio geral do documento anterior."
+      },
+      {
+        "ordem": 4,
+        "item_type": "estudo",
+        "item_slug": "hyvet-2008-tratamento-hipertensao-muito-idoso",
+        "por_que": "Muda o eixo de decisão de intervenção para farmacoterapia: o HYVET é o ensaio que mostrou benefício em tratar hipertensão aos 80 anos ou mais, quando a extrapolação de ensaios mais jovens era a única referência disponível."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "metas-terapeuticas-cardiovasculares-no-muito-idoso",
+        "por_que": "Do ensaio isolado para a síntese: como fixar meta de pressão, LDL e anticoagulação no muito idoso sem simplesmente copiar o alvo do adulto de meia-idade."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "polifarmacia-cardiovascular-no-idoso-cascata-de-prescricao-e-desprescricao",
+        "por_que": "Fecha a trilha no ponto que mais falta na prática: usar STOPP/START e os critérios de Beers para identificar cascata de prescrição e desprescrever com a mesma disciplina com que se prescreve."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-cardiologia-geriatrica-farmacoterapia-ic-fa-idoso",
+    "titulo": "Cardiologia geriátrica: farmacoterapia de IC e FA no muito idoso",
+    "tema": "Cardiologia geriátrica",
+    "objetivo": "Sair sabendo sequenciar os quatro pilares da insuficiência cardíaca e decidir anticoagulação em fibrilação atrial no paciente muito idoso, apoiado nos subestudos por faixa etária dos grandes ensaios — e reconhecer quando a desprescrição de um fármaco preventivo é a conduta certa.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "insuficiencia-cardiaca-no-muito-idoso-sequenciamento-dos-quatro-pilares",
+        "por_que": "Começa pela pergunta prática do consultório geriátrico: os quatro pilares da ICFEr são os mesmos do adulto jovem, mas a ORDEM e a VELOCIDADE de titulação precisam mudar no muito idoso."
+      },
+      {
+        "ordem": 2,
+        "item_type": "estudo",
+        "item_slug": "jhund-2015-paradigm-hf-sacubitril-valsartana-por-idade",
+        "por_que": "A evidência que sustenta manter o INRA como pilar preferencial mesmo em idade avançada: o subestudo do PARADIGM-HF por faixa etária, que mostra se o benefício se mantém quando a amostra geral do ensaio inclui poucos octogenários."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "fibrilacao-atrial-no-idoso-anticoagulacao-versus-risco-de-queda-e-ajuste-renal",
+        "por_que": "Muda o eixo de IC para a outra decisão farmacológica mais frequente no idoso: como pesar risco de queda contra risco tromboembólico, e como ajustar dose pela função renal que declina com a idade."
+      },
+      {
+        "ordem": 4,
+        "item_type": "estudo",
+        "item_slug": "halvorsen-2014-aristotle-apixabana-por-idade",
+        "por_que": "A evidência por trás da escolha do anticoagulante: o subestudo do ARISTOTLE por faixa etária, que mostra se a superioridade da apixabana sobre a varfarina se mantém no estrato mais idoso do ensaio."
+      },
+      {
+        "ordem": 5,
+        "item_type": "medicamento",
+        "item_slug": "apixabana",
+        "por_que": "Do ensaio para a prescrição: dose e o critério de redução de dose (idade, peso, creatinina) que decide se o idoso frágil recebe a dose plena ou a reduzida."
+      },
+      {
+        "ordem": 6,
+        "item_type": "estudo",
+        "item_slug": "kutner-2015-descontinuacao-de-estatina-doenca-avancada",
+        "por_que": "Fecha a trilha com o contraponto necessário: nem todo fármaco cardiovascular deve ser mantido até o fim. O estudo mostra que descontinuar estatina em doença avançada com expectativa de vida limitada não piora sobrevida nem eventos, e melhora qualidade de vida."
+      }
+    ]
   }
 ]
