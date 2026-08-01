@@ -20175,5 +20175,73 @@
         "por_que": "Fecha invertendo a via mais uma vez, coração-para-mente: o choque do cardiodesfibrilador implantável como gatilho de ansiedade e TEPT no próprio paciente cardiopata."
       }
     ]
+  },
+  {
+    "slug": "trilha-tromboembolismo-decisoes-fora-do-algoritmo-padrao-profilaxia-cateter-alta-precoce-e-sequela",
+    "titulo": "Tromboembolismo: decisões que fogem do algoritmo padrão — profilaxia em quem sangra fácil, cateter que fica, alta precoce e a sequela que sobra",
+    "tema": "Tromboembolismo",
+    "objetivo": "Percorrer quatro decisões de TEV que não seguem o protocolo genérico de 'anticoagular por X meses': escolher entre profilaxia mecânica e farmacológica quando o paciente cirúrgico tem alto risco trombótico E hemorrágico ao mesmo tempo; decidir se remove ou mantém um cateter venoso central associado a trombose de membro superior, e por quanto tempo anticoagular em cada caso; identificar quem pode tratar um TEP agudo fora do hospital com segurança, pela evidência primária dos ensaios que testaram essa prática; e reconhecer que 'venoativo' não é uma classe uniforme quando a síndrome pós-trombótica já está instalada.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "profilaxia-mecanica-versus-farmacologica-de-tev-no-paciente-cirurgico-com-alto-risco-de-sangramento",
+        "por_que": "Abre pela decisão mais precoce da linha do tempo: antes de qualquer trombose acontecer, como profilaxiar o paciente cirúrgico que tem risco trombótico alto E risco hemorrágico alto ao mesmo tempo. A diretriz ASH 2019 e a revisão Cochrane de compressão pneumática combinada mostram que é o componente farmacológico, não o mecânico, que carrega o custo hemorrágico — por isso, nesse paciente específico, a orientação é manter compressão mecânica isolada e evitar o fármaco."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "trombose-venosa-de-membro-superior-associada-a-cateter-diagnostico-e-manejo",
+        "por_que": "Segue para um cenário em que a trombose já aconteceu, mas a decisão central não é só o anticoagulante — é o próprio dispositivo que está no corpo do paciente. A diretriz CHEST 2021 orienta manter anticoagulação enquanto o cateter permanecer no lugar, em vez do prazo fixo de 3 meses que orienta a TVP de membro inferior; a lógica de decisão aqui é sobre remover ou não o cateter, não sobre a duração isolada do fármaco."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "tratamento-ambulatorial-do-tep-de-baixo-risco-aujesky-e-hestia",
+        "por_que": "Avança para a decisão inversa: em vez de manter o paciente internado por padrão, os ensaios de Aujesky (randomizado, não inferioridade) e Hestia (coorte de triagem por critério clínico) mostram, com números primários, que o TEP de baixo risco bem selecionado pode ser tratado em casa com segurança — uma recomendação de diretriz que, como o próprio ensaio registra, a prática ainda não segue na rotina."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "sindrome-pos-trombotica-escore-de-villalta-e-tratamento",
+        "por_que": "Fecha no fim da linha do tempo, com a sequela crônica que pode sobrar mesmo depois de toda decisão aguda ter sido correta: como graduar a síndrome pós-trombótica pelo escore de Villalta e por que tratar 'venoativo' como classe uniforme é o erro mais fácil de cometer — sulodexida tem evidência de benefício em cicatrização de úlcera (OR 2,32) e rutosídeos não têm evidência de benefício em nenhum desfecho avaliado pela revisão Cochrane, dentro do mesmo rótulo genérico."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-cardio-oncologia-hipertensao-vascular-do-antineoplasico-a-crise-e-a-circulacao-pulmonar",
+    "titulo": "Cardio-oncologia — hipertensão vascular induzida por terapia antineoplásica: da toxicidade mais comum ao extremo neurológico e à circulação pulmonar",
+    "tema": "Cardio-oncologia",
+    "objetivo": "Percorrer o mesmo mecanismo de fundo — a hipertensão como toxicidade vascular da terapia antineoplásica — em três apresentações de gravidade e leito vascular crescentes: a hipertensão sistêmica esperada e tratável dos inibidores de VEGF, que paradoxalmente é sinal de eficácia antitumoral; o extremo neurológico agudo desse mesmo espectro, a síndrome de encefalopatia posterior reversível; e a hipertensão de outro leito vascular inteiramente distinto, a circulação pulmonar, induzida por um fármaco de mecanismo diferente (inibidor de Bcr-Abl) e comparada entre os fármacos dessa classe. Sair sabendo que 'hipertensão induzida por antineoplásico' não é uma entidade única — é um espectro de mecanismos, leitos vasculares e condutas que vão do simples controle pressórico ambulatorial à emergência neurológica e à suspensão definitiva de um inibidor de tirosina-quinase.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "hipertensao-induzida-por-terapia-antineoplasica-e-o-paradoxo-de-ela-ser-sinal-de-eficacia",
+        "por_que": "Abre pela toxicidade cardiovascular mais comum de todas as classes de antineoplásico, segundo a declaração científica da AHA — e pelo paradoxo que muda a conduta: nos inibidores de VEGF, a hipertensão é biomarcador de que a droga está fazendo efeito (no sunitinibe, sobrevida global mediana de 30,9 vs. 7,2 meses entre quem desenvolve hipertensão e quem não desenvolve), o que reforça tratar a pressão e manter o antineoplásico, nunca o contrário."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "sindrome-de-encefalopatia-posterior-reversivel-pres-por-antiangiogenicos-manejo-da-crise-hipertensiva",
+        "por_que": "Segue para o extremo raro do mesmo espectro: quando a elevação pressórica dos antiangiogênicos — ou, em até 30% dos casos, uma pressão só discretamente elevada — desencadeia edema vasogênico cerebral posterior. Ensina a diferença que decide a conduta na emergência: a meta de redução pressórica no PRES é de 25% do basal por infusão contínua, não o protocolo genérico de crise hipertensiva, e a suspensão do antiangiogênico é conduta paralela ao controle pressórico, não substituta."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "hipertensao-pulmonar-arterial-induzida-por-dasatinibe",
+        "por_que": "Muda de leito vascular: da circulação sistêmica e cerebral para a pulmonar, e de classe farmacológica: do inibidor de VEGF para o inibidor de tirosina-quinase Bcr-Abl usado na leucemia mieloide crônica. O registro francês (9 casos incidentes) mostra hipertensão pulmonar arterial pré-capilar grave, com melhora clínica na maioria após suspensão do dasatinibe, mas sem normalização hemodinâmica completa em nenhum paciente e 22% de mortalidade no seguimento — dispneia em paciente com LMC em uso de dasatinibe não pode ser atribuída de forma automática a anemia ou causa cardíaca comum."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "hipertensao-pulmonar-por-bosutinibe-e-ponatinibe-comparacao-de-risco-entre-inibidores-de-bcr-abl",
+        "por_que": "Fecha a trilha respondendo à pergunta que fica em aberto ao final da etapa 3: quando o hematologista troca o dasatinibe por suspeita de toxicidade, o risco de hipertensão pulmonar desaparece com a troca, ou o novo fármaco carrega risco próprio? A coorte comparativa francesa (Circulation 2026) mostra que bosutinibe (HR 10,76) e ponatinibe (HR 7,74) têm hazard ratio elevado contra imatinibe, mas quase todos os casos descritos ocorreram em pacientes com exposição recente ao dasatinibe — 'reexposição de uma vulnerabilidade vascular pulmonar já instalada', não necessariamente um segundo evento independente, o que muda a leitura de efeito de classe para efeito de sequência de tratamento."
+      }
+    ]
   }
 ]
