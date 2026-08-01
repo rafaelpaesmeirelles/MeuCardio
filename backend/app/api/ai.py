@@ -205,12 +205,31 @@ def perguntar_stream(dados: Pergunta, db: Session = Depends(get_db), user=Depend
     tempo todo, o que evita esse timeout por inatividade da conexão.
     """
     conv, historico, modelo_efetivo = _preparar_pergunta(dados, db, user)
+    # Capturados como valores simples, não objetos ORM — ver o comentário
+    # dentro de eventos() sobre por que a sessão do Depends(get_db) não pode
+    # ser usada lá dentro.
+    conv_id = conv.id
+    user_id = user.id
 
     def eventos():
+        # Sessão própria, independente da injetada por Depends(get_db).
+        # Achado ao vivo em produção (DetachedInstanceError em conv.id): o
+        # FastAPI encerra a sessão do Depends assim que esta rota RETORNA o
+        # StreamingResponse — não quando este generator termina de rodar.
+        # Como eventos() só começa a executar de fato durante o envio da
+        # resposta (streaming), por essa altura a sessão `db` já foi
+        # fechada e qualquer objeto ORM dela (conv, user) já está detached.
+        # Abrir e fechar a própria sessão aqui dentro evita depender de um
+        # ciclo de vida que não é o nosso — e é por isso que só valores
+        # simples (conv_id, user_id) atravessam a fronteira, nunca os
+        # objetos ORM.
+        from app.core.db import SessionLocal
+
+        db2 = SessionLocal()
         texto_acumulado = []
         try:
             for evento in rag.perguntar_stream(
-                db, dados.pergunta, historico, dados.temas,
+                db2, dados.pergunta, historico, dados.temas,
                 modelo=modelo_efetivo, usar_internet=dados.usar_internet,
             ):
                 if "delta" in evento:
@@ -218,31 +237,33 @@ def perguntar_stream(dados: Pergunta, db: Session = Depends(get_db), user=Depend
                     yield f"data: {json.dumps({'tipo': 'delta', 'texto': evento['delta']}, ensure_ascii=False)}\n\n"
                 else:
                     r = evento["final"]
-                    db.add(AIMessage(conversation_id=conv.id, papel="user", conteudo=dados.pergunta))
-                    db.add(AIMessage(
-                        conversation_id=conv.id, papel="assistant", conteudo=r["texto"],
+                    db2.add(AIMessage(conversation_id=conv_id, papel="user", conteudo=dados.pergunta))
+                    db2.add(AIMessage(
+                        conversation_id=conv_id, papel="assistant", conteudo=r["texto"],
                         fontes=r["fontes_json"],
                         fontes_pubmed=json.dumps(r["fontes_pubmed"], ensure_ascii=False) if r["fontes_pubmed"] else None,
                         modelo=r["modelo"],
                         tokens_entrada=r["tokens_entrada"], tokens_saida=r["tokens_saida"],
                     ))
-                    db.add(AuditLog(
-                        user_id=user.id, action="perguntar", entity="ia", entity_id=str(conv.id),
+                    db2.add(AuditLog(
+                        user_id=user_id, action="perguntar", entity="ia", entity_id=str(conv_id),
                         detail={"modelo": r["modelo"], "fontes": [f["slug"] for f in r["fontes"]],
                                 "fontes_pubmed": [f["pmid"] for f in r["fontes_pubmed"]],
                                 "tokens": r["tokens_entrada"] + r["tokens_saida"], "via": "stream"},
                     ))
-                    db.commit()
-                    yield f"data: {json.dumps({'tipo': 'final', 'conversation_id': conv.id, 'fontes': r['fontes'], 'fontes_pubmed': r['fontes_pubmed'], 'modelo': r['modelo']}, ensure_ascii=False)}\n\n"
+                    db2.commit()
+                    yield f"data: {json.dumps({'tipo': 'final', 'conversation_id': conv_id, 'fontes': r['fontes'], 'fontes_pubmed': r['fontes_pubmed'], 'modelo': r['modelo']}, ensure_ascii=False)}\n\n"
         except Exception as e:
             # Sem isto, o erro real só aparecia indo direto ao log do
-            # Postgres — o usuário via só "IntegrityError" e ninguém
+            # Postgres — o usuário via só o nome da exceção e ninguém
             # descobria O QUÊ sem SQL manual. log.exception grava o
             # traceback inteiro no log do container, de onde `docker compose
             # logs backend` alcança sem depender do banco.
-            log.exception("Falha em /ai/perguntar/stream (conversation_id=%s)", conv.id)
-            db.rollback()
+            log.exception("Falha em /ai/perguntar/stream (conversation_id=%s)", conv_id)
+            db2.rollback()
             yield f"data: {json.dumps({'tipo': 'erro', 'detalhe': f'O provedor de IA não respondeu ({type(e).__name__}). Tente novamente.'}, ensure_ascii=False)}\n\n"
+        finally:
+            db2.close()
 
     return StreamingResponse(
         eventos(),
