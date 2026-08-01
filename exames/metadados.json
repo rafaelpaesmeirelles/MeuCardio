@@ -2265,5 +2265,184 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "cac-drs-coronary-artery-calcium-data-and-reporting-system",
+    "name": "CAC-DRS (Coronary Artery Calcium Data and Reporting System)",
+    "category": "imagem",
+    "theme": "Doença coronariana",
+    "what_it_measures": "Sistema padronizado de laudo do escore de cálcio coronariano (Agatston) por TC sem contraste, combinando a categoria de escore total (A0-A3) com o número de artérias acometidas (N0-N4), num relato único por paciente.",
+    "reference_range": "VERIFICAÇÃO HUMANA NECESSÁRIA para os cortes numéricos exatos de cada categoria A (A0/A1/A2/A3 em unidades Agatston) — o documento de consenso original (Hecht et al. 2018) não tem texto integral em acesso aberto nesta sessão, e o abstract não traz os limiares. O que está confirmado pela validação em coorte de 54.678 pacientes: gradiente de risco crescente de A0 até A3/N4, com mortalidade por todas as causas de 1,2 por 1.000 pessoas-ano em A0 até 15,4 por 1.000 pessoas-ano em A3/N4.",
+    "indications": "Padronização do laudo de qualquer TC de cálcio coronariano, independente da indicação do exame — facilita a comunicação do risco e a decisão sobre terapia preventiva.",
+    "interpretation": "Categoria A3/N4 (maior escore, mais vasos acometidos) associa-se a HR 5,9 (IC95% 3,6-9,9) para mortalidade coronariana, HR 4,0 (IC95% 2,8-5,7) para mortalidade cardiovascular e HR 2,5 (IC95% 2,1-3,0) para mortalidade por todas as causas, em comparação a A0 — ajustado para fatores de risco tradicionais. O CAC-DRS discriminou risco melhor que o escore Agatston isolado (AUC 0,762 vs. 0,754, p<0,001) e que a distribuição por vasos isolada (AUC 0,762 vs. 0,748, p<0,001).",
+    "limitations": "Coorte de validação é observacional, de indivíduos assintomáticos sem doença cardiovascular basal — não validado especificamente para triagem de dor torácica aguda; os cortes numéricos exatos de cada categoria A não puderam ser confirmados nesta sessão (ver VERIFICAÇÃO HUMANA NECESSÁRIA acima).",
+    "source_refs": [
+      "Hecht HS, Blaha MJ, Kazerooni EA, Cury RC, Budoff M, Leipsic J, Shaw L. CAC-DRS: Coronary Artery Calcium Data and Reporting System. An expert consensus document of the Society of Cardiovascular Computed Tomography (SCCT). J Cardiovasc Comput Tomogr. 2018;12(3):185-191. DOI: 10.1016/j.jcct.2018.03.008. PMID: 29793848 — documento original, sem texto integral em acesso aberto verificado nesta sessão.",
+      "Dzaye O, Dudum R, Mirbolouk M, et al. Validation of the Coronary Artery Calcium Data and Reporting System (CAC-DRS): Dual importance of CAC score and CAC distribution from the Coronary Artery Calcium (CAC) consortium. J Cardiovasc Comput Tomogr. 2020;14(1):12-17. DOI: 10.1016/j.jcct.2019.03.011. PMID: 30952612. PMCID: PMC6765460 — validação prognóstica, números conferidos no abstract."
+    ],
+    "tags": [
+      "cac-drs",
+      "escore de calcio coronariano",
+      "agatston",
+      "estratificacao de risco"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "protocolo-de-eco-de-estresse-com-dobutamina",
+    "name": "Protocolo de ecocardiograma de estresse com dobutamina",
+    "category": "imagem",
+    "theme": "Doença coronariana",
+    "what_it_measures": "Avaliação da contratilidade segmentar do ventrículo esquerdo em resposta a doses crescentes de dobutamina intravenosa (agente inotrópico/cronotrópico), comparando as fases basal, doses intermediárias, pico do estresse farmacológico e recuperação — detecta isquemia induzida por indução de desbalanço entre oferta e demanda de oxigênio miocárdico.",
+    "reference_range": "VERIFICAÇÃO HUMANA NECESSÁRIA para as doses exatas de cada estágio (mcg/kg/min), a duração de cada estágio e o critério/dose de atropina associada — a diretriz de referência (ASE 2020, Pellikka et al.) não teve o texto integral acessado nesta sessão, só o título foi confirmado no PubMed. Não escrever o protocolo numérico de memória.",
+    "indications": "Detecção de isquemia miocárdica induzível em paciente incapaz de exercitar-se adequadamente (protocolo farmacológico substituindo o esforço físico), incluindo avaliação de doença coronariana não obstrutiva com isquemia demonstrável ao estresse.",
+    "interpretation": "Alteração NOVA de contratilidade segmentar (hipocinesia, acinesia ou discinesia) surgindo do basal para o pico, ausente na recuperação, é o critério ecocardiográfico de isquemia induzida. Ausência de nova alteração segmentar em todas as fases é resultado negativo para isquemia induzível.",
+    "limitations": "Interpretação depende de qualidade de imagem e experiência do operador; contraindicado em arritmia ventricular significativa não controlada, hipertensão grave não controlada, dissecção de aorta e estenose aórtica grave sintomática; a suspensão do exame por eventos adversos (arritmia, hipotensão) reduz a sensibilidade quando ocorre antes do pico planejado.",
+    "source_refs": [
+      "Pellikka PA, Arruda-Olson A, Chaudhry FA, Chen MH, Marshall JE, Porter TR, Sawada SG. Guidelines for Performance, Interpretation, and Application of Stress Echocardiography in Ischemic Heart Disease: From the American Society of Echocardiography. J Am Soc Echocardiogr. 2020;33(1):1-41.e8. DOI: 10.1016/j.echo.2019.07.001. PMID: 31740370 — diretriz de referência, texto integral NÃO acessado nesta sessão (só título/metadados confirmados via PubMed).",
+      "Baweja P, Sweeney MJ, López-Candales A. A Reminder That Stress Echocardiography Is Useful in Diagnosing Myocardial Ischemia in Nonobstructive Coronary Artery Disease: Case Series. Cureus. 2021;13(9):e17763. PMID: 34659974 — exemplo de aplicação clínica com as quatro fases do protocolo (basal/dose baixa/pico/recuperação), imagem correspondente já cadastrada na galeria."
+    ],
+    "tags": [
+      "eco de estresse",
+      "dobutamina",
+      "isquemia induzivel",
+      "estresse farmacologico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "estadiamento-de-mayo-2012-revisado-na-amiloidose-al",
+    "name": "Estadiamento de Mayo 2012 (revisado) na amiloidose de cadeia leve (AL)",
+    "category": "laboratorial",
+    "theme": "Cardiomiopatias",
+    "what_it_measures": "Sistema de estadiamento prognóstico da amiloidose AL, combinando três biomarcadores séricos: troponina cardíaca (T ou I), NT-proBNP (ou BNP) e a diferença entre cadeias leves livres séricas envolvida e não envolvida (dFLC).",
+    "reference_range": "Estágio I: nenhum dos 3 marcadores acima do corte. Estágio II: 1 dos 3 acima do corte. Estágio III: 2 dos 3 acima do corte. Estágio IV: os 3 acima do corte. Cortes usados no estudo original: troponina T cardíaca ≥0,025 ng/mL; NT-proBNP ≥1.800 pg/mL; dFLC ≥180 mg/L.",
+    "indications": "Estratificação prognóstica de paciente com amiloidose AL recém-diagnosticada, antes de definir estratégia de tratamento hematológico (incluindo elegibilidade para transplante autólogo de células-tronco).",
+    "interpretation": "Estágio mais avançado (III/IV) indica maior carga de dano cardíaco por depósito de cadeias leves e pior sobrevida global — é o estadiamento usado nos ensaios de hematologia para amiloidose AL. IMPORTANTE: este é um sistema DIFERENTE do estadiamento de amiloidose TRANSTIRRETINA (ATTR) por troponina/NT-proBNP (estadiamento de Gillmore/UK National Amyloidosis Centre) — os dois usam biomarcador cardíaco de forma análoga, mas são validados em populações distintas (AL vs. ATTR) e não são intercambiáveis. Não usar os cortes de um sistema para estadiar a outra doença.",
+    "limitations": "Derivado e validado em coorte de amiloidose AL, não de ATTR; os cortes de troponina/NT-proBNP podem variar conforme o ensaio laboratorial usado (T vs. I, e o método de dosagem de NT-proBNP); paciente com disfunção renal significativa pode ter NT-proBNP falsamente elevado por retenção, não só por dano cardíaco direto.",
+    "source_refs": [
+      "Kumar S, Dispenzieri A, Lacy MQ, Hayman SR, et al. Revised prognostic staging system for light chain amyloidosis incorporating cardiac biomarkers and serum free light chain measurements. J Clin Oncol. 2012;30(9):989-95. DOI: 10.1200/JCO.2011.38.5724. PMID: 22331953 — estadiamento revisado (Mayo 2012), fonte primária."
+    ],
+    "tags": [
+      "estadiamento de mayo",
+      "amiloidose al",
+      "cadeia leve",
+      "biomarcadores cardiacos"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "painel-genetico-de-genes-sarcomericos-na-cardiomiopatia-hipertrofica",
+    "name": "Painel genético de genes sarcoméricos na cardiomiopatia hipertrófica",
+    "category": "laboratorial",
+    "theme": "Cardiomiopatias",
+    "what_it_measures": "Sequenciamento de nova geração de painel de genes associados à cardiomiopatia hipertrófica (genes sarcoméricos como MYH7, MYBPC3, TNNT2, TNNI3, TPM1, MYL2, MYL3, entre outros incluídos conforme o tamanho do painel), buscando variante patogênica ou provavelmente patogênica (LP/P).",
+    "reference_range": "Coorte australiana de 382 probandos com CMH testados com painel ≥45 genes de cardiomiopatia: 127 (33%) com variante LP/P, 139 (36%) com variante de significado incerto (VUS), 66 (17%) com múltiplas variantes raras. Com painel dirigido de 8 genes sarcoméricos clássicos: 125 (32%) LP/P, 52 (14%) VUS, 14 (4%) múltiplas variantes raras — rendimento diagnóstico semelhante ao painel amplo, com menos VUS.",
+    "indications": "Investigação etiológica de paciente com CMH confirmada (fenótipo), especialmente com história familiar de CMH ou de morte súbita cardíaca em parente jovem — a positividade orienta o rastreio em cascata de familiares de primeiro grau.",
+    "interpretation": "Variante LP/P confirmada permite rastreio genético direcionado (mais barato e definitivo) em familiares assintomáticos. Ausência de variante identificável (resultado negativo) NÃO exclui CMH hereditária — reduz a probabilidade, mas parte relevante dos casos permanece geneticamente não elucidada mesmo com painel amplo.",
+    "limitations": "VUS (36% no painel amplo desta coorte) é resultado ambíguo — não deve ser usado para rastreio em cascata de familiares até reclassificação; rendimento diagnóstico é maior em CMH familiar com história de morte súbita do que em CMH não familiar (fenocópia, hipertensão, sobrecarga hemodinâmica); painéis muito amplos aumentam a chance de achar múltiplas variantes raras (17% nesta coorte) sem que isso represente, sozinho, maior gravidade clínica confirmada.",
+    "source_refs": [
+      "Burns C, Bagnall RD, Lam L, Semsarian C, Ingles J. Multiple Gene Variants in Hypertrophic Cardiomyopathy in the Era of Next-Generation Sequencing. Circ Cardiovasc Genet. 2017;10(4):e001666. DOI: 10.1161/CIRCGENETICS.116.001666. PMID: 28790153.",
+      "Ingles J, Burns C, Bagnall RD, Lam L, et al. Nonfamilial Hypertrophic Cardiomyopathy: Prevalence, Natural History, and Clinical Implications. Circ Cardiovasc Genet. 2017;10(2):e001620. DOI: 10.1161/CIRCGENETICS.116.001620. PMID: 28408708 — 61% dos probandos sem variante sarcomérica identificável tinham história familiar negativa, contexto de rendimento diagnóstico por subgrupo."
+    ],
+    "tags": [
+      "painel genetico",
+      "cardiomiopatia hipertrofica",
+      "genes sarcomericos",
+      "rastreio em cascata"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "procalcitonina-como-marcador-prognostico-a-admissao-na-endocardite",
+    "name": "Procalcitonina como marcador prognóstico à admissão na endocardite infecciosa",
+    "category": "laboratorial",
+    "theme": "Endocardite",
+    "what_it_measures": "Biomarcador sérico de resposta inflamatória sistêmica a infecção bacteriana, dosado dentro de 24h da admissão, combinado a PCR e albumina num escore de risco (3-6 pontos) para mortalidade de longo prazo em endocardite infecciosa.",
+    "reference_range": "Coorte retrospectiva de 204 pacientes: grupo de alto risco (>4 pontos no escore combinado CRP+procalcitonina+albumina, n=29) teve procalcitonina e PCR mais elevados e albumina mais baixa (2,7±0,5 vs. 3,5±0,6 g/dL) que o grupo de baixo risco (≤4 pontos, n=175).",
+    "indications": "Estratificação de risco de mortalidade de longo prazo NO MOMENTO DA ADMISSÃO de paciente com endocardite infecciosa, combinada a outros marcadores inflamatórios e nutricionais — não é indicado isoladamente.",
+    "interpretation": "Após pareamento por escore de propensão, o grupo de alto risco teve mortalidade de 76% vs. 44% no grupo de baixo risco; em análise multivariada, alto risco associou-se a HR ajustado de 2,87 (IC95% 1,32-6,26) para mortalidade de longo prazo. IMPORTANTE: este é um marcador PROGNÓSTICO medido NA ADMISSÃO, não um marcador validado de RESPOSTA AO TRATAMENTO ao longo da antibioticoterapia — a fonte não avalia procalcitonina seriada para guiar duração de tratamento.",
+    "limitations": "Estudo retrospectivo de centro único, com grupo de alto risco pequeno (n=29); a procalcitonina isolada (sem PCR e albumina) não foi testada separadamente quanto ao valor preditivo nesta coorte; não avalia procalcitonina seriada durante o tratamento nem sua utilidade para decidir suspensão de antibiótico.",
+    "source_refs": [
+      "Karaca B, Esin F, Tiryaki MM, Akkan G, Kiris T. Combining C-reactive protein, procalcitonin, and serum albumin to predict long-term mortality in patients with infective endocarditis. J Int Med Res. 2023;51(10):3000605231208910. DOI: 10.1177/03000605231208910. PMID: 37891466. PMCID: PMC10612466."
+    ],
+    "tags": [
+      "procalcitonina",
+      "prognostico na endocardite",
+      "marcador inflamatorio",
+      "mortalidade"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "protocolo-combinado-de-tilt-test-e-massagem-do-seio-carotideo",
+    "name": "Protocolo combinado de tilt test e massagem do seio carotídeo na investigação de síncope",
+    "category": "metodo_grafico",
+    "theme": "Síncope",
+    "what_it_measures": "Sequência diagnóstica não invasiva combinando história estruturada, ECG de 12 derivações, massagem do seio carotídeo (CSM) e teste de inclinação (head-up tilt test), com teste de hiperventilação, na investigação ambulatorial de síncope inexplicada.",
+    "reference_range": "Não é um valor numérico único — é um algoritmo sequencial de investigação. Na coorte de origem (317 pacientes consecutivos em clínica de síncope), a combinação de história + ECG + CSM + tilt test + hiperventilação estabeleceu a etiologia em 81% dos casos, sendo três quartos das causas identificadas de forma não invasiva (CSM + tilt test + hiperventilação); testes invasivos (estudo eletrofisiológico, monitor de eventos implantável) acrescentaram apenas 7% adicional de diagnósticos, restritos a pacientes com cardiopatia estrutural ou síncope traumática.",
+    "indications": "Investigação padronizada de síncope inexplicada após avaliação inicial (história, exame físico, ECG) não conclusiva — protocolo de clínica especializada em síncope.",
+    "interpretation": "Alto rendimento diagnóstico não invasivo (75% das causas) reforça que a maioria dos casos de síncope inexplicada é esclarecida sem necessidade de teste invasivo; idade e número de pródromos significativos foram os únicos fatores preditivos de síncope rítmica em modelo de regressão logística.",
+    "limitations": "Estudo de centro único, coorte de clínica especializada em síncope (possível viés de seleção para casos mais complexos); modelos preditivos baseados em variáveis clínicas simples tiveram alto valor preditivo negativo mas valor preditivo positivo apenas modesto — úteis para excluir, não para confirmar isoladamente uma causa específica.",
+    "source_refs": [
+      "Graf D, Schlaepfer J, Gollut E, van Melle G, Mischler C, Fromer M, Kappenberger L, Pruvot E. Predictive models of syncope causes in an outpatient clinic. Int J Cardiol. 2008;123(3):249-56. DOI: 10.1016/j.ijcard.2006.12.007. PMID: 17397948."
+    ],
+    "tags": [
+      "tilt test",
+      "massagem do seio carotideo",
+      "protocolo diagnostico",
+      "sincope inexplicada"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "escore-de-calcio-da-valva-aortica-por-tc",
+    "name": "Escore de cálcio da valva aórtica por tomografia computadorizada (TC-AVC)",
+    "category": "imagem",
+    "theme": "Valvopatias",
+    "what_it_measures": "Quantificação da carga de cálcio na valva aórtica por TC sem contraste sincronizada ao ECG (método Agatston, aplicado à valva em vez das coronárias) — usado para arbitrar a gravidade da estenose aórtica quando o ecocardiograma é inconclusivo ou discordante (ex.: gradiente baixo com fração de ejeção preservada).",
+    "reference_range": "Cortes específicos por sexo para estenose aórtica grave: mulheres ≥1.377 unidades Agatston (UA), homens ≥2.062 UA (coorte multicêntrica internacional, 918 pacientes) — valores muito próximos aos previamente publicados por outro grupo (mulheres 1.274 UA, homens 2.065 UA), reforçando reprodutibilidade entre coortes.",
+    "indications": "Arbitragem de gravidade em estenose aórtica com avaliação ecocardiográfica DISCORDANTE (ex.: área valvar <1,0 cm² com gradiente médio <40 mmHg e fração de ejeção preservada — o cenário clássico de \"baixo fluxo, baixo gradiente\" com função sistólica normal).",
+    "interpretation": "Nos pacientes com avaliação ecocardiográfica CONCORDANTE, o TC-AVC discriminou estenose grave com excelente acurácia (estatística C: mulheres 0,92, homens 0,89). O escore acima do corte sexo-específico foi preditor independente de troca valvar e óbito (HR 3,90; IC95% 2,19-6,78) mesmo após ajuste para idade, sexo, velocidade de pico e área valvar — e manteve valor prognóstico também nos 23% de pacientes com avaliação ecocardiográfica discordante (HR 3,67; IC95% 1,39-9,73).",
+    "limitations": "Não substitui o ecocardiograma como exame de primeira linha — é ferramenta de arbitragem para os casos discordantes/inconclusivos; validado predominantemente em valva tricúspide, aplicação em valva aórtica bicúspide exige cautela adicional (calcificação com padrão distinto); exposição a radiação ionizante, ainda que em dose baixa por ser exame sem contraste.",
+    "source_refs": [
+      "Pawade T, Clavel MA, Tribouilloy C, Dreyfus J, et al. Computed Tomography Aortic Valve Calcium Scoring in Patients With Aortic Stenosis. Circ Cardiovasc Imaging. 2018;11(3):e007146. DOI: 10.1161/CIRCIMAGING.117.007146. PMID: 29555836."
+    ],
+    "tags": [
+      "escore de calcio valvar",
+      "estenose aortica",
+      "tc sincronizada",
+      "avaliacao discordante"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "teste-de-vasorreatividade-aguda-criterios-de-sitbon",
+    "name": "Teste de vasorreatividade pulmonar aguda (critérios de Sitbon) na avaliação de hipertensão pulmonar associada a shunt congênito",
+    "category": "metodo_grafico",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Resposta hemodinâmica aguda a vasodilatador pulmonar (epoprostenol ou óxido nítrico inalado) durante cateterismo cardíaco direito, medindo variação percentual da pressão arterial pulmonar média (PAPm) e da resistência vascular pulmonar (RVP) em relação ao basal.",
+    "reference_range": "Definição original de \"resposta aguda positiva\" (Sitbon et al. 2005, coorte de 557 pacientes com hipertensão arterial pulmonar idiopática): queda de PAPm E de RVP >20% em relação ao basal. Apenas 70/557 (12,6%; IC95% 9,8-15,3%) preencheram esse critério, e destes só 38 (6,8% do total) mostraram benefício SUSTENTADO com bloqueador de canal de cálcio em longo prazo (≥1 ano em classe funcional I/II). ATENÇÃO: a formulação \"queda de PAPm ≥10 mmHg até valor absoluto ≤40 mmHg, com débito cardíaco mantido ou aumentado\", amplamente citada em diretrizes e revisões como \"critério de Sitbon\", é a PARÁFRASE consolidada pela comunidade — o abstract do artigo original de 2005 usado nesta sessão define resposta por variação PERCENTUAL (>20% em PAPm e RVP), não pelo valor absoluto de 40 mmHg citado depois. Esta divergência não foi resolvida contra o texto integral nesta sessão.",
+    "indications": "Extrapolação de uso: em cardiopatia congênita com shunt esquerda-direita e RVP elevada, o teste de vasorreatividade aguda ajuda a avaliar o componente reversível (vasoconstritivo) versus fixo (remodelamento vascular pulmonar estabelecido) da resistência pulmonar, informando a decisão de operabilidade do defeito — a fonte primária usada aqui estudou hipertensão arterial pulmonar IDIOPÁTICA em adultos, não cardiopatia congênita; a extrapolação para avaliação pré-operatória de shunt congênito é prática clínica estabelecida, mas os números de resposta (12,6% positivos, 6,8% com benefício sustentado) não vêm de coorte de cardiopatia congênita.",
+    "interpretation": "Respondedores agudos (definição percentual) tiveram queda de PAPm mais pronunciada (-39±11% vs. -26±7%; p<0,0001) e PAPm absoluta pós-teste mais baixa (33±8 vs. 46±10 mmHg; p<0,0001) que os não respondedores — mas resposta aguda não garante benefício sustentado: só about metade dos respondedores agudos (38 de 70) manteve o benefício em longo prazo.",
+    "limitations": "Resposta aguda positiva é rara (12,6% nesta coorte de referência em centro especializado) e resposta sustentada mais rara ainda (6,8%); não confundir teste de vasorreatividade aguda com teste de reserva vascular pulmonar em shunt congênito de alto fluxo, que usa protocolos e pontos de corte próprios não verificados nesta sessão; a formulação numérica exata do \"critério de Sitbon\" (≤40 mmHg absoluto) precisa de confirmação em fonte que reproduza esse texto literalmente, não só na paráfrase consolidada pela comunidade.",
+    "source_refs": [
+      "Sitbon O, Humbert M, Jaïs X, Ioos V, Hamid AM, Provencher S, Garcia G, Parent F, Hervé P, Simonneau G. Long-term response to calcium channel blockers in idiopathic pulmonary arterial hypertension. Circulation. 2005;111(23):3105-11. DOI: 10.1161/CIRCULATIONAHA.104.488486. PMID: 15939821 — fonte primária, abstract lido integralmente nesta sessão."
+    ],
+    "tags": [
+      "teste de vasorreatividade aguda",
+      "criterios de sitbon",
+      "shunt congenito",
+      "operabilidade"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]

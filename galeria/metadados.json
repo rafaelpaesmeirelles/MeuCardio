@@ -2277,5 +2277,171 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "eco-estresse-dobutamina-quatro-fases-dac-nao-obstrutiva",
+    "title": "Ecocardiograma de estresse com dobutamina — quatro fases em paciente com isquemia e DAC não obstrutiva",
+    "modality": "Ecocardiograma",
+    "theme": "Doença coronariana",
+    "file_path": "ecocardiograma/eco-estresse-dobutamina-quatro-fases.jpg",
+    "findings": "Quatro séries de imagens (A-D, um paciente por linha/coluna) de ecocardiograma de estresse com dobutamina, cada uma com os quatro estágios do protocolo lado a lado: basal (baseline), dose baixa (low dose), pico (peak) e recuperação (recovery). Os painéis B e D têm seta apontando alteração de contratilidade segmentar no pico do estresse.",
+    "teaching_points": "Ilustra o protocolo padrão de aquisição do eco de estresse com dobutamina — as quatro fases lado a lado permitem comparar a contratilidade segmentar basal com o pico farmacológico, identificando isquemia induzida mesmo quando a coronariografia não mostra lesão obstrutiva significativa (o achado central da série de casos de origem: DAC não obstrutiva com isquemia demonstrável ao estresse).",
+    "source_name": "PMC (Cureus, acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8515003/",
+    "license": "CC BY 4.0",
+    "attribution": "Baweja P, Sweeney MJ, López-Candales A. A Reminder That Stress Echocardiography Is Useful in Diagnosing Myocardial Ischemia in Nonobstructive Coronary Artery Disease: Case Series. Cureus. 2021;13(9):e17763. DOI: 10.7759/cureus.17763. PMID: 34659974 — CC BY 4.0.",
+    "tags": [
+      "eco de estresse",
+      "dobutamina",
+      "isquemia miocardica",
+      "dac nao obstrutiva"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "placa-coronariana-nao-calcificada-angiotc-com-correlacao-invasiva",
+    "title": "Placa coronariana não calcificada (baixa atenuação) — angiotomografia com correlação por cateterismo",
+    "modality": "Angiotomografia",
+    "theme": "Doença coronariana",
+    "file_path": "tc/placa-coronariana-nao-calcificada-angiotc.jpg",
+    "findings": "Painel A: reconstrução curva de angiotomografia coronariana com três níveis marcados (B, C, D) ao longo do vaso. Painéis B-D: cortes transversais ampliados no local de cada marcação, mostrando placa não calcificada (asterisco branco) de baixa atenuação, distinta do lúmen contrastado (asterisco amarelo). Painéis E-F: correlação por cateterismo (angiografia invasiva) do mesmo vaso, com cabeças de seta amarela e vermelha indicando os pontos correspondentes.",
+    "teaching_points": "Documenta o achado central do estudo de origem — caracterização de placa não calcificada de baixa atenuação por angiotomografia coronariana, com correlação direta à angiografia invasiva no mesmo paciente —, reforçando por que a angiotomografia identifica carga de placa não calcificada que a angiografia invasiva (que só mostra o contorno luminal) não caracteriza.",
+    "source_name": "PMC (Frontiers in Cardiovascular Medicine, acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9047875/",
+    "license": "CC BY 4.0",
+    "attribution": "Yamaura H, Otsuka K, Ishikawa H, Shirasawa K, et al. Determinants of Non-calcified Low-Attenuation Coronary Plaque Burden in Patients Without Known Coronary Artery Disease: A Coronary CT Angiography Study. Front Cardiovasc Med. 2022;9:824470. DOI: 10.3389/fcvm.2022.824470. PMID: 35463764 — CC BY 4.0.",
+    "tags": [
+      "placa nao calcificada",
+      "angiotomografia coronariana",
+      "baixa atenuacao",
+      "correlacao invasiva"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "doppler-transmitral-padrao-restritivo-e-a-invertido",
+    "title": "Doppler transmitral com padrão restritivo — relação E/A muito elevada",
+    "modality": "Ecocardiograma",
+    "theme": "Cardiomiopatias",
+    "file_path": "ecocardiograma/doppler-transmitral-padrao-restritivo.jpg",
+    "findings": "Doppler pulsado do fluxo transmitral (via apical 4 câmaras) mostrando onda E dominante e onda A pequena, com medidas sobrepostas: onda E 1,10 m/s, tempo de desaceleração (DecT) 114,1 ms, onda A 0,22 m/s e relação E/A de 5,08.",
+    "teaching_points": "Exemplo numérico de padrão de enchimento restritivo ao Doppler transmitral — relação E/A muito elevada (aqui 5,08, bem acima do corte de referência de 2) associada a tempo de desaceleração curto (<150 ms), o padrão hemodinâmico esperado em disfunção diastólica grave (cardiomiopatia restritiva, pericardite constritiva ou ICFEr avançada), distinto do padrão de relaxamento alterado (E/A <1) que costuma ilustrar o estágio inicial da disfunção diastólica.",
+    "source_name": "Echopedia / AMC Echolab (The Netherlands), via Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Restrictive_filling_pattern.png",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Cortesia do AMC Echolab, Amsterdam Medical Center, The Netherlands, via Echopedia — CC BY-SA 3.0. Licença conferida diretamente na página do arquivo no Wikimedia Commons.",
+    "tags": [
+      "doppler transmitral",
+      "padrao restritivo",
+      "relacao e/a",
+      "disfuncao diastolica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "valva-mitral-mixomatosa-eco-3d-multiplos-cortes-doenca-de-barlow",
+    "title": "Valva mitral mixomatosa (doença de Barlow) — peça anatômica e ecocardiografia 3D em múltiplos cortes",
+    "modality": "Peça anatômica e ecocardiograma",
+    "theme": "Valvopatias",
+    "file_path": "ecocardiograma/valva-mitral-mixomatosa-eco-3d-multiplos-cortes.jpg",
+    "findings": "Seis painéis (A-F): A, peça anatômica de valva mitral mixomatosa em corte, com seta apontando espessamento e redundância do folheto; B-D, ecocardiografia tridimensional em diferentes ângulos/cortes mostrando os folhetos espessados e redundantes, com prolapso; E-F, reconstrução 3D em vista cirúrgica (\"en face\") do aparelho valvar mitral, com múltiplas setas demarcando os segmentos acometidos pela degeneração mixomatosa.",
+    "teaching_points": "Reúne, numa única figura, a correlação entre o substrato anatômico da doença de Barlow (espessamento mixomatoso difuso, múltiplos segmentos redundantes) e sua representação pela ecocardiografia 3D — a vista \"en face\" (painéis E-F) é o mesmo enquadramento que o cirurgião usa ao olhar a valva pelo átrio esquerdo, e é o que torna a eco 3D valiosa no planejamento do reparo mitral em doença mixomatosa extensa (diferente da degeneração fibroelástica, tipicamente restrita a um segmento).",
+    "source_name": "PMC (Frontiers in Cardiovascular Medicine, acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9880116/",
+    "license": "CC BY 4.0",
+    "attribution": "Mantegazza V, Gripari P, Tamborini G, Muratori M, et al. 3D echocardiography in mitral valve prolapse. Front Cardiovasc Med. 2022;9:1050476. DOI: 10.3389/fcvm.2022.1050476. PMID: 36704460 — CC BY 4.0.",
+    "tags": [
+      "valva mitral mixomatosa",
+      "doenca de barlow",
+      "ecocardiografia 3d",
+      "prolapso mitral"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "pericardio-calcificado-constritivo-tc-axial",
+    "title": "Pericárdio difusamente calcificado causando pericardite constritiva — TC axial",
+    "modality": "TC",
+    "theme": "Pericárdio",
+    "file_path": "tc/pericardio-calcificado-constritivo-tc-axial.jpg",
+    "findings": "Corte axial de tomografia de tórax (janela óssea/mediastinal) mostrando espessamento e calcificação circunferencial densa do pericárdio, envolvendo praticamente todo o contorno cardíaco, em paciente com pericardite constritiva grave.",
+    "teaching_points": "Demonstra o achado tomográfico clássico e mais específico de pericardite constritiva de etiologia crônica — calcificação pericárdica circunferencial extensa —, distinto do espessamento pericárdico sem calcificação que pode ocorrer em constrição de causa mais recente (pós-cirúrgica, pós-radioterapia), onde a TC pode ser normal ou mostrar só espessamento sutil.",
+    "source_name": "PMC (Methodist DeBakey Cardiovascular Journal, acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10061485/",
+    "license": "CC BY 4.0",
+    "attribution": "Kaur J, Xu J, Alturkmani HJ, Al'Aref S. Severely Calcified Pericardium Causing Constrictive Pericarditis. Methodist Debakey Cardiovasc J. 2023;19(1):7-11. DOI: 10.14797/mdcvj.1183. PMID: 36698864 — CC BY 4.0.",
+    "tags": [
+      "pericardite constritiva",
+      "calcificacao pericardica",
+      "tomografia de torax"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "abscesso-periprotetico-valva-aortica-tc",
+    "title": "Abscesso periprotético em prótese valvar aórtica — tomografia cardíaca",
+    "modality": "Angiotomografia",
+    "theme": "Endocardite",
+    "file_path": "tc/abscesso-periprotetico-valva-aortica-tc.jpg",
+    "findings": "Corte tomográfico cardíaco mostrando prótese valvar aórtica (estrutura circular hiperdensa central) circundada por área de baixa atenuação demarcada por múltiplas setas brancas, compatível com coleção periprotética (abscesso) no contexto de endocardite protética por Parvimonas micra associada a infecção de marca-passo. NOTA: a fonte identifica a prótese como \"prótese valvar aórtica\" no título, sem especificar no resumo se é mecânica ou biológica — este registro não afirma o tipo de prótese além do que a fonte confirma.",
+    "teaching_points": "Ilustra o papel da tomografia cardíaca sincronizada como método complementar ao ecocardiograma na endocardite de prótese valvar com suspeita de abscesso periprotético — a TC tem melhor resolução espacial que o eco para delimitar coleções perianulares, especialmente relevante quando a prótese gera artefato de reverberação ao ultrassom.",
+    "source_name": "PMC (Cureus, acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12574733/",
+    "license": "CC BY 4.0",
+    "attribution": "Boukobza M Sr, Aubry P Sr, Laissy JP 4th. Pacemaker Infection and Parvimonas micra-Induced Prosthetic Aortic Valve Endocarditis With Periannular Abscess: A Case Report. Cureus. 2025;17(10):e93749. DOI: 10.7759/cureus.93749. PMID: 41185797 — CC BY 4.0.",
+    "tags": [
+      "abscesso periprotetico",
+      "endocardite de protese valvar",
+      "tomografia cardiaca"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "estenose-mitral-reumatica-sinal-hockey-stick",
+    "title": "Estenose mitral reumática — sinal do \"hockey stick\" ao ecocardiograma",
+    "modality": "Ecocardiograma",
+    "theme": "Febre reumática",
+    "file_path": "ecocardiograma/estenose-mitral-reumatica-sinal-hockey-stick.jpg",
+    "findings": "Ecocardiograma modo 2D (corte paraesternal eixo longo) com seta e rótulo \"Hockey Stick\" apontando o folheto anterior da valva mitral, mostrando o dobramento característico do folheto no ponto de transição entre a porção rígida (fusão comissural/fibrose da ponta) e a porção mais móvel da base — em paciente com estenose mitral reumática documentada no contexto de insuficiência cardíaca revelada por COVID-19.",
+    "teaching_points": "Documenta o sinal ecocardiográfico clássico e nomeado (\"hockey stick\") da estenose mitral reumática — o folheto anterior espessado na ponta e relativamente móvel na base assume essa curvatura característica pela fusão comissural, distinguindo a etiologia reumática de causas degenerativas de estenose mitral, nas quais o folheto costuma ser rígido em toda a extensão.",
+    "source_name": "PMC (Cureus, acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10896727/",
+    "license": "CC BY 4.0",
+    "attribution": "Karki M, Bhattarai P, Mohan R, Mushtaq F. COVID-19 Unveiling Heart Failure in the Realm of Rheumatic Heart Disease. Cureus. 2024;16(1):e52903. DOI: 10.7759/cureus.52903. PMID: 38406011 — CC BY 4.0.",
+    "tags": [
+      "estenose mitral reumatica",
+      "sinal do hockey stick",
+      "ecocardiograma",
+      "febre reumatica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "holter-bloqueio-atrioventricular-alto-grau-sarcoidose-cardiaca",
+    "title": "Bloqueio atrioventricular de alto grau transitório ao Holter — sarcoidose cardíaca recém-diagnosticada",
+    "modality": "ECG",
+    "theme": "Síncope",
+    "file_path": "ecg/holter-bloqueio-av-alto-grau-sarcoidose.jpg",
+    "findings": "Trecho de Holter (derivação única) mostrando complexos QRS espaçados de forma irregular, com um período de menor frequência de condução destacado em verde na tira de ritmo contínuo abaixo — registrado em paciente com sarcoidose cardíaca recém-diagnosticada e bloqueio atrioventricular de alto grau transitório.",
+    "teaching_points": "Ilustra achado eletrocardiográfico do caso índice de bloqueio AV de alto grau REVERSÍVEL em sarcoidose cardíaca — o paciente recuperou a condução AV normal com corticoterapia isolada, sem necessidade de implante de marca-passo, reforçando por que a sarcoidose cardíaca recém-diagnosticada com BAV de alto grau justifica tentativa de imunossupressão antes de indicar dispositivo definitivo, ao contrário do BAV de alto grau de causa degenerativa.",
+    "source_name": "PMC (Cureus, acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10404425/",
+    "license": "CC BY 4.0",
+    "attribution": "Rathore A, Mgbemena O, Adrover Lopez P, Suryanarayana P, et al. Recovery of Transient High-Grade Atrioventricular Block Managed With Corticosteroid Therapy Without Device Implantation in Newly Diagnosed Cardiac Sarcoidosis: A Case Report. Cureus. 2023;15(7):e41481. DOI: 10.7759/cureus.41481. PMID: 37554599 — CC BY 4.0.",
+    "tags": [
+      "bloqueio atrioventricular de alto grau",
+      "sarcoidose cardiaca",
+      "holter",
+      "sincope cardiogenica"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
