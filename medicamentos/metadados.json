@@ -4403,7 +4403,7 @@
     "slug": "cilostazol",
     "review_status": "pendente_revisao",
     "generic_name": "Cilostazol",
-    "drug_class": "Inibidor da fosfodiesterase III (PDE3) — antiagregante plaquetário e vasodilatador arterial, com efeito adicional de inibição da captação de adenosina",
+    "drug_class": "Inibidor da fosfodiesterase III (PDE3) — antiagregante e vasodilatador arterial",
     "mechanism": "Inibe seletivamente a fosfodiesterase III, enzima que degrada o AMP cíclico (AMPc) intracelular. O acúmulo de AMPc nas plaquetas reduz a agregação plaquetária, e o mesmo acúmulo na musculatura lisa vascular produz vasodilatação arterial — dupla ação (antiplaquetária + vasodilatadora) que distingue o cilostazol de um antiagregante puro como AAS ou clopidogrel. É a mesma classe farmacológica da milrinona e da amrinona, inibidores de PDE3 usados por via intravenosa como inotrópicos na insuficiência cardíaca aguda — parentesco de classe que explica a contraindicação formal em insuficiência cardíaca.",
     "presentations": [
       "Comprimidos de 50 mg e 100 mg (rótulo do FDA e bulas brasileiras convergem nessas duas dosagens)"
@@ -4444,6 +4444,9 @@
       "Eventos graves em farmacovigilância pós-comercialização: agranulocitose, hemorragia intracraniana e síndrome de Stevens-Johnson",
       "fonte: rótulo do FDA (DailyMed, Cilostazol Tablets), incidência ≥2% e superior ao placebo na dose de 100 mg 2x/dia"
     ],
-    "interactions_note": "Inibidores fortes/moderados de CYP3A4 (cetoconazol, itraconazol, eritromicina, diltiazem) e inibidores de CYP2C19 (ticlopidina, fluconazol, omeprazol) aumentam a exposição ao cilostazol — reduzir para 50 mg 2x/dia. AAS: uso concomitante de curto prazo mostrou potencialização da inibição plaquetária sem aumento significativo de complicações hemorrágicas nos estudos citados pelo rótulo do FDA — não há contraindicação formal à associação, mas cabe cautela clínica. Varfarina: o rótulo do FDA não documenta interação farmacocinética significativa. Anticoagulantes, antiagregantes plaquetários, trombolíticos e prostaglandina E1 (bula brasileira): risco de aumento da tendência hemorrágica com uso concomitante."
+    "notes": {
+      "interacoes_detalhe": "Inibidores fortes/moderados de CYP3A4 (cetoconazol, itraconazol, eritromicina, diltiazem) e inibidores de CYP2C19 (ticlopidina, fluconazol, omeprazol) aumentam a exposição ao cilostazol — reduzir para 50 mg 2x/dia. AAS: uso concomitante de curto prazo mostrou potencialização da inibição plaquetária sem aumento significativo de complicações hemorrágicas nos estudos citados pelo rótulo do FDA — não há contraindicação formal à associação, mas cabe cautela clínica. Varfarina: o rótulo do FDA não documenta interação farmacocinética significativa. Anticoagulantes, antiagregantes plaquetários, trombolíticos e prostaglandina E1 (bula brasileira): risco de aumento da tendência hemorrágica com uso concomitante.",
+      "drug_class_completo": "Inibidor da fosfodiesterase III (PDE3) — antiagregante plaquetário e vasodilatador arterial, com efeito adicional de inibição da captação de adenosina"
+    }
   }
 ]
