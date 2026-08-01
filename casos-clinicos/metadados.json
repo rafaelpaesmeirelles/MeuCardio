@@ -1125,5 +1125,165 @@
       "Perioperative Anticoagulation Management · StatPearls (NCBI Bookshelf) · https://www.ncbi.nlm.nih.gov/books/NBK557590/"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "fa-recente-controle-de-ritmo-precoce-east-afnet-4",
+    "titulo": "Fibrilação atrial diagnosticada há dois meses: esperar os sintomas para tratar o ritmo?",
+    "tema": "Fibrilação atrial",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 71 anos, hipertenso e com doença arterial coronariana estável, teve fibrilação atrial persistente documentada há dois meses. Está anticoagulado, com frequência cardíaca controlada por betabloqueador, e refere sintomas leves (EHRA II). Função ventricular preservada. Ele pergunta se vale a pena tentar manter o ritmo sinusal agora ou se pode aguardar.",
+    "pergunta": "Qual conduta tem melhor respaldo em desfecho cardiovascular?",
+    "opcoes": [
+      "Manter apenas controle de frequência e anticoagulação, reservando o controle de ritmo para quando os sintomas piorarem",
+      "Oferecer controle de ritmo precoce (antiarrítmico ou ablação) já nesta fase, mantendo a anticoagulação",
+      "Suspender a anticoagulação assim que o ritmo sinusal for restaurado, já que o gatilho terá sido removido",
+      "Indicar ablação apenas se o paciente falhar a dois antiarrítmicos, independentemente do tempo de diagnóstico"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O EAST-AFNET 4 randomizou 2.789 pacientes com fibrilação atrial diagnosticada há no máximo 1 ano (mediana de 36 dias) e condições cardiovasculares para controle de ritmo precoce — antiarrítmico ou ablação logo após a randomização — ou cuidado usual, em que o controle de ritmo ficava reservado ao alívio de sintomas. O ensaio foi interrompido por eficácia na terceira análise interina, após mediana de 5,1 anos: o desfecho primário (morte cardiovascular, AVC ou internação por piora de insuficiência cardíaca ou síndrome coronariana aguda) ocorreu a 3,9 por 100 pessoas-ano no grupo precoce contra 5,0 no cuidado usual (HR 0,79; IC96% 0,66-0,94; P=0,005). O benefício é da estratégia precoce, não do alívio sintomático: sintomas e função ventricular aos 2 anos não diferiram entre os grupos. O preço também está no ensaio e deve ser dito ao paciente — eventos adversos graves relacionados à terapia de controle de ritmo ocorreram em 4,9% do grupo precoce contra 1,4% do cuidado usual, ainda que o desfecho composto de segurança não diferisse. A anticoagulação foi mantida nos dois braços: restaurar o ritmo sinusal não autoriza suspendê-la, decisão que continua sendo do escore de risco tromboembólico.",
+    "source_refs": [
+      "Kirchhof P, Camm AJ, Goette A, et al.; EAST-AFNET 4 Trial Investigators. Early Rhythm-Control Therapy in Patients with Atrial Fibrillation. N Engl J Med. 2020;383(14):1305-1316. DOI: 10.1056/NEJMoa2019422. PMID: 32865375"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "icfep-empagliflozina-emperor-preserved-sem-diabetes",
+    "titulo": "Insuficiência cardíaca com fração de ejeção preservada, sem diabetes: cabe inibidor de SGLT2?",
+    "tema": "Insuficiência cardíaca",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 74 anos, hipertensa e obesa, com dispneia aos esforços moderados (NYHA III). Ecocardiograma com fração de ejeção de 55%, aumento atrial esquerdo e disfunção diastólica; BNP elevado. Não é diabética. Está em uso de diurético de alça e anti-hipertensivo, com melhora apenas parcial da congestão.",
+    "pergunta": "Há indicação de acrescentar empagliflozina neste caso?",
+    "opcoes": [
+      "Não — o benefício dos inibidores de SGLT2 na insuficiência cardíaca depende da presença de diabetes",
+      "Não — a evidência de inibidor de SGLT2 se restringe à fração de ejeção reduzida",
+      "Sim — a empagliflozina reduziu morte cardiovascular ou internação por insuficiência cardíaca com fração de ejeção acima de 40%, independentemente de diabetes",
+      "Sim, mas apenas depois de otimizar dose de diurético por pelo menos seis meses e repetir o ecocardiograma"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O EMPEROR-Preserved randomizou 5.988 pacientes em classe funcional II a IV com fração de ejeção acima de 40% para empagliflozina 10 mg ao dia ou placebo, somados ao tratamento habitual. Em mediana de 26,2 meses, o desfecho primário (morte cardiovascular ou internação por insuficiência cardíaca) ocorreu em 13,8% do grupo empagliflozina contra 17,1% do placebo (HR 0,79; IC95% 0,69-0,90; P<0,001), com o efeito explicado principalmente pela redução de internações — o total de internações por insuficiência cardíaca caiu de 541 para 407 (HR 0,73; IC95% 0,61-0,88; P<0,001). Os autores relatam efeito consistente na presença ou ausência de diabetes, que é exatamente o ponto que decide este caso: a droga entrou como tratamento de insuficiência cardíaca, não como hipoglicemiante. Infecções genitais e urinárias não complicadas e hipotensão foram mais frequentes com empagliflozina, e são o que se monitora depois de prescrever.",
+    "source_refs": [
+      "Anker SD, Butler J, Filippatos G, et al.; EMPEROR-Preserved Trial Investigators. Empagliflozin in Heart Failure with a Preserved Ejection Fraction. N Engl J Med. 2021;385(16):1451-1461. DOI: 10.1056/NEJMoa2107038. PMID: 34449189"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hipertensao-alvo-intensivo-sprint-alto-risco-sem-diabetes",
+    "titulo": "Alvo pressórico em paciente de alto risco sem diabetes: 140 basta?",
+    "tema": "Hipertensão",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 69 anos, hipertenso, tabagista prévio, com doença renal crônica estágio 3 e escore de risco cardiovascular elevado. Não é diabético e nunca teve AVC. Em uso de dois anti-hipertensivos, a pressão sistólica média em consultório é de 138 mmHg. Ele tolera bem as medicações e pergunta se precisa de mais alguma coisa.",
+    "pergunta": "Qual alvo de pressão sistólica tem melhor sustentação de evidência neste perfil?",
+    "opcoes": [
+      "Manter o alvo abaixo de 140 mmHg — já está atingido e intensificar só acrescenta efeito adverso",
+      "Perseguir alvo abaixo de 120 mmHg, com monitoração ativa de hipotensão, síncope, eletrólitos e função renal",
+      "Perseguir alvo abaixo de 130 mmHg apenas se ele desenvolver diabetes ou tiver um evento coronariano",
+      "Relaxar o alvo para 150 mmHg pela idade acima de 65 anos e pela doença renal crônica"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O SPRINT randomizou 9.361 pessoas com pressão sistólica de 130 mmHg ou mais e risco cardiovascular aumentado, mas sem diabetes, para alvo sistólico abaixo de 120 mmHg (tratamento intensivo) ou abaixo de 140 mmHg (padrão). Ao final de 1 ano a sistólica média era de 121,4 mmHg no braço intensivo e 136,2 mmHg no padrão. A intervenção foi interrompida precocemente, após seguimento mediano de 3,26 anos, porque o desfecho composto primário foi menor no braço intensivo (1,65% ao ano contra 2,19% ao ano; HR 0,75; IC95% 0,64-0,89; P<0,001), com mortalidade por todas as causas também menor (HR 0,73; IC95% 0,60-0,90; P=0,003). O dano é parte da mesma resposta e precisa ser dito: eventos adversos graves de hipotensão, síncope, distúrbio eletrolítico e lesão renal aguda foram mais frequentes no braço intensivo — mas quedas com lesão, o medo mais citado no paciente idoso, não foram. Duas fronteiras do ensaio limitam a extrapolação: pacientes com diabetes foram excluídos, e a medida de pressão do SPRINT foi obtida em protocolo padronizado, que costuma render valores mais baixos que a aferição comum de consultório.",
+    "source_refs": [
+      "SPRINT Research Group; Wright JT Jr, Williamson JD, Whelton PK, et al. A Randomized Trial of Intensive versus Standard Blood-Pressure Control. N Engl J Med. 2015;373(22):2103-2116. DOI: 10.1056/NEJMoa1511939. PMID: 26551272. Errata em: N Engl J Med. 2017;377(25):2506."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "tep-risco-intermediario-alto-trombolise-sistemica-peitho",
+    "titulo": "Embolia pulmonar de risco intermediário: trombolisar o paciente normotenso?",
+    "tema": "Tromboembolismo",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 66 anos, com embolia pulmonar aguda confirmada por angiotomografia. Está normotensa (PA 118/72 mmHg), taquicárdica, com disfunção de ventrículo direito ao ecocardiograma e troponina positiva. Recebeu heparina. A equipe discute acrescentar trombolítico sistêmico de imediato.",
+    "pergunta": "Qual conduta corresponde melhor à evidência disponível?",
+    "opcoes": [
+      "Trombolisar de imediato todos os pacientes desse perfil, pois a disfunção de VD com troponina positiva equivale a instabilidade",
+      "Manter anticoagulação e vigilância estreita, reservando a trombólise de resgate para deterioração hemodinâmica",
+      "Não anticoagular enquanto a decisão sobre trombólise não estiver tomada, pela soma de risco hemorrágico",
+      "Substituir a heparina por anticoagulante oral direto imediatamente, o que dispensa a discussão sobre trombólise"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O PEITHO comparou tenecteplase mais heparina contra placebo mais heparina em 1.005 pacientes normotensos com embolia pulmonar de risco intermediário, definidos exatamente como o caso: disfunção de ventrículo direito ao ecocardiograma ou à tomografia somada a lesão miocárdica indicada por troponina positiva. O desfecho primário — morte ou descompensação hemodinâmica em 7 dias — ocorreu em 2,6% com tenecteplase contra 5,6% com placebo (OR 0,44; IC95% 0,23-0,87; P=0,02). Mas o preço hemorrágico foi grande e não compensou em mortalidade: sangramento extracraniano maior em 6,3% contra 1,2% (P<0,001) e AVC em 2,4% contra 0,2% (P=0,003), hemorrágico em 10 dos 12 casos. A mortalidade não diferiu nem em 7 dias (1,2% contra 1,8%; P=0,42) nem em 30 dias (2,4% contra 3,2%; P=0,42). É por isso que a estratégia padrão neste perfil é anticoagular e vigiar de perto, deixando a trombólise para quem de fato descompensa — e não porque o benefício hemodinâmico não exista.",
+    "source_refs": [
+      "Meyer G, Vicaut E, Danays T, et al.; PEITHO Investigators. Fibrinolysis for patients with intermediate-risk pulmonary embolism. N Engl J Med. 2014;370(15):1402-1411. DOI: 10.1056/NEJMoa1302097. PMID: 24716681"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "pos-sca-ldl-acima-do-alvo-em-estatina-potente-ezetimiba-improve-it",
+    "titulo": "LDL ainda acima do alvo depois da síndrome coronariana aguda: ezetimiba muda desfecho?",
+    "tema": "Prevenção e lipídios",
+    "nivel": "básico",
+    "enunciado": "Homem, 60 anos, internado há oito dias por infarto sem supradesnivelamento de ST, já revascularizado. Em uso de estatina de alta potência desde a admissão, com LDL-colesterol de 88 mg/dL na reavaliação. Boa tolerância, sem mialgia, transaminases normais.",
+    "pergunta": "Acrescentar ezetimiba à estatina traz benefício clínico, além da redução adicional do LDL?",
+    "opcoes": [
+      "Não — a ezetimiba reduz LDL, mas nunca demonstrou redução de evento cardiovascular em ensaio de desfecho",
+      "Sim — associada à estatina após síndrome coronariana aguda, reduziu o desfecho cardiovascular composto, com benefício modesto em termos absolutos",
+      "Não — abaixo de 100 mg/dL não há benefício em reduzir mais o LDL, pelo fenômeno de curva em J",
+      "Sim, mas apenas em pacientes diabéticos; nos demais o efeito é exclusivamente laboratorial"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O IMPROVE-IT randomizou 18.144 pacientes internados por síndrome coronariana aguda nos 10 dias anteriores, com LDL entre 50 e 100 mg/dL em uso de hipolipemiante (ou entre 50 e 125 mg/dL sem ele), para sinvastatina 40 mg com ezetimiba 10 mg ou sinvastatina 40 mg com placebo. O LDL médio ponderado no tempo ficou em 53,7 mg/dL com a combinação contra 69,5 mg/dL com a monoterapia (P<0,001). Em 7 anos, a taxa de eventos do desfecho primário composto foi de 32,7% contra 34,7% — diferença absoluta de 2,0 pontos percentuais, HR 0,936 (IC95% 0,89-0,99; P=0,016), com seguimento mediano de 6 anos. O valor do ensaio está tanto no resultado quanto no seu tamanho: é benefício real, mas modesto, e foi o primeiro a mostrar que um hipolipemiante não estatínico acrescentado à estatina reduz evento clínico, e que baixar o LDL abaixo dos alvos então vigentes ainda traz ganho. Efeitos adversos musculares, biliares, hepáticos e a incidência de câncer foram semelhantes entre os grupos. Não há na evidência do ensaio sustentação para restringir o benefício a diabéticos, nem para a ideia de curva em J do LDL neste patamar.",
+    "source_refs": [
+      "Cannon CP, Blazing MA, Giugliano RP, et al.; IMPROVE-IT Investigators. Ezetimibe Added to Statin Therapy after Acute Coronary Syndromes. N Engl J Med. 2015;372(25):2387-2397. DOI: 10.1056/NEJMoa1410489. PMID: 26039521"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "estenose-aortica-muito-grave-assintomatica-cirurgia-precoce-recovery",
+    "titulo": "Estenose aórtica muito grave sem sintomas: operar agora ou vigiar?",
+    "tema": "Valvopatias",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 68 anos, assintomática, com estenose aórtica descoberta em avaliação de sopro. Ecocardiograma: área valvar de 0,7 cm², velocidade de jato de 4,8 m/s e gradiente médio de 54 mmHg, com fração de ejeção normal. Sem comorbidade que aumente o risco cirúrgico. Ela caminha diariamente e nega dispneia, angina ou síncope.",
+    "pergunta": "Qual conduta tem respaldo em ensaio randomizado para este perfil específico?",
+    "opcoes": [
+      "Vigilância clínica e ecocardiográfica semestral, intervindo apenas ao surgir o primeiro sintoma",
+      "Discutir troca valvar precoce, que reduziu morte cardiovascular e mortalidade total nesse subgrupo de estenose muito grave",
+      "Iniciar estatina de alta potência para retardar a progressão da estenose e adiar a cirurgia",
+      "Solicitar teste ergométrico e, se normal, liberar para reavaliação apenas em dois anos"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O RECOVERY randomizou 145 pacientes assintomáticos com estenose aórtica MUITO grave — definida no ensaio como área valvar de 0,75 cm² ou menos somada a velocidade de jato de pelo menos 4,5 m/s ou gradiente médio de pelo menos 50 mmHg — para cirurgia precoce ou conduta conservadora conforme as diretrizes então vigentes. É essa definição, e não a de estenose grave em geral, que o caso reproduz. Na análise por intenção de tratar, o desfecho primário (mortalidade operatória ou morte cardiovascular em todo o seguimento) ocorreu em 1 de 73 pacientes do grupo cirurgia precoce (1%) contra 11 de 72 do conservador (15%) — HR 0,09; IC95% 0,01-0,67; P=0,003. A mortalidade por qualquer causa foi de 7% contra 21% (HR 0,33; IC95% 0,12-0,90). No grupo conservador, a incidência cumulativa de morte súbita foi de 4% em 4 anos e 14% em 8 anos, número que dá a dimensão do risco de simplesmente esperar. Não houve mortalidade operatória entre os 69 dos 73 pacientes operados em até 2 meses, o que situa o resultado em contexto de centro experiente. Nenhuma terapia farmacológica, estatina inclusive, demonstrou retardar a progressão da estenose aórtica.",
+    "source_refs": [
+      "Kang DH, Park SJ, Lee SA, et al. Early Surgery or Conservative Care for Asymptomatic Aortic Stenosis. N Engl J Med. 2020;382(2):111-119. DOI: 10.1056/NEJMoa1912846. PMID: 31733181"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "endocardite-esquerda-estavel-troca-para-antibiotico-oral-poet",
+    "titulo": "Endocardite esquerda estabilizada: é preciso completar seis semanas de antibiótico intravenoso?",
+    "tema": "Endocardite",
+    "nivel": "avançado",
+    "enunciado": "Homem, 58 anos, com endocardite de valva aórtica nativa por estreptococo, em tratamento intravenoso há 12 dias. Está afebril há cinco dias, com hemoculturas de controle negativas, sem sinais de embolização recente, sem abscesso e sem indicação cirúrgica ao ecocardiograma transesofágico de reavaliação. Ele mora longe do hospital e pergunta se pode continuar o tratamento em casa.",
+    "pergunta": "O que a evidência randomizada sustenta neste cenário?",
+    "opcoes": [
+      "A via intravenosa é obrigatória por todo o curso; qualquer troca para via oral aumenta recidiva",
+      "Após estabilização e pelo menos 10 dias de tratamento intravenoso, a troca para esquema oral foi não inferior à manutenção da via intravenosa em pacientes selecionados",
+      "A troca pode ser feita desde o primeiro dia, uma vez que a via de administração não influencia o desfecho na endocardite",
+      "A troca é aceitável apenas em endocardite de câmaras direitas; em valva esquerda a via oral está contraindicada"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O POET randomizou 400 adultos em condição estável com endocardite do lado esquerdo do coração causada por estreptococo, Enterococcus faecalis, Staphylococcus aureus ou estafilococo coagulase-negativo, já em tratamento intravenoso, para continuar a via intravenosa (199 pacientes) ou mudar para antibiótico oral (201 pacientes). Duas condições do desenho são o que autoriza aplicar o resultado a este caso e não a qualquer paciente: todos receberam pelo menos 10 dias de tratamento intravenoso antes da troca, e todos estavam estáveis. O desfecho composto primário — mortalidade por todas as causas, cirurgia cardíaca não planejada, evento embólico ou recidiva de bacteremia com o patógeno primário, até 6 meses após o fim do tratamento — ocorreu em 24 pacientes (12,1%) do grupo intravenoso e em 18 (9,0%) do oral, diferença de 3,1 pontos percentuais (IC95% -3,4 a 9,6; P=0,40), atendendo ao critério de não inferioridade. Quando possível, os pacientes do grupo oral receberam alta para tratamento ambulatorial, que é exatamente a pergunta que este paciente faz. O que o ensaio não sustenta é generalizar a troca para quem ainda não estabilizou, para os primeiros dias de tratamento ou para microrganismos e situações fora dos critérios estudados.",
+    "source_refs": [
+      "Iversen K, Ihlemann N, Gill SU, et al. Partial Oral versus Intravenous Antibiotic Treatment of Endocarditis. N Engl J Med. 2019;380(5):415-424. DOI: 10.1056/NEJMoa1808312. PMID: 30152252"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "periop-betabloqueador-iniciado-vespera-da-cirurgia-poise",
+    "titulo": "Iniciar betabloqueador na véspera da cirurgia não cardíaca protege o coração?",
+    "tema": "Perioperatório",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 70 anos, com doença aterosclerótica conhecida, será submetido a colectomia eletiva daqui a dois dias. Não usa betabloqueador. A equipe cirúrgica pergunta se vale começar metoprolol de liberação prolongada logo antes do procedimento para reduzir o risco de infarto perioperatório.",
+    "pergunta": "Qual a resposta com base no ensaio randomizado que testou exatamente essa estratégia?",
+    "opcoes": [
+      "Sim — reduz infarto perioperatório sem custo relevante, e deve ser rotina em paciente com aterosclerose",
+      "Não — a estratégia reduziu infarto, mas aumentou mortalidade total e AVC, e não deve ser iniciada dessa forma",
+      "Indiferente — o ensaio mostrou resultado neutro em todos os desfechos, e a decisão é de preferência da equipe",
+      "Sim, desde que a dose seja dobrada em relação à ambulatorial, para garantir controle de frequência no intraoperatório"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O POISE randomizou 8.351 pacientes com doença aterosclerótica ou sob risco dela, submetidos a cirurgia não cardíaca, para succinato de metoprolol de liberação prolongada ou placebo, iniciado 2 a 4 horas antes da operação e mantido por 30 dias. O desfecho primário composto (morte cardiovascular, infarto não fatal e parada cardíaca não fatal) foi menos frequente com metoprolol: 5,8% contra 6,9% (HR 0,84; IC95% 0,70-0,99; p=0,0399), com redução clara de infarto (4,2% contra 5,7%; HR 0,73; IC95% 0,60-0,89; p=0,0017). O problema é o que veio junto: houve mais mortes no grupo metoprolol (3,1% contra 2,3%; HR 1,33; IC95% 1,03-1,74; p=0,0317) e mais AVC (1,0% contra 0,5%; HR 2,17; IC95% 1,26-3,74; p=0,0053). Os próprios autores concluem que os pacientes dificilmente aceitariam esses riscos. A leitura correta é sobre a estratégia testada — dose alta e fixa iniciada horas antes da cirurgia em quem não vinha usando a droga —, e não sobre manter betabloqueador de uso crônico, que é outra pergunta: nesse caso a suspensão abrupta no perioperatório é que traz risco.",
+    "source_refs": [
+      "POISE Study Group; Devereaux PJ, Yang H, Yusuf S, et al. Effects of extended-release metoprolol succinate in patients undergoing non-cardiac surgery (POISE trial): a randomised controlled trial. Lancet. 2008;371(9627):1839-1847. DOI: 10.1016/S0140-6736(08)60601-7. PMID: 18479744"
+    ],
+    "review_status": "revisado"
   }
 ]
