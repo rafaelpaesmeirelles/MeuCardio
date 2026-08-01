@@ -47,10 +47,10 @@ Wells PS et al., Thromb Haemost. 2000;83(3):416-420 (PMID 10744147). Sete crité
 | Hemoptise | +1 |
 | Neoplasia (tratamento nos últimos 6 meses, ou paliativo) | +1 |
 
-**Interpretação tradicional (3 níveis)**: baixa 0-1; moderada 2-6; alta ≥7. **Interpretação simplificada (2 níveis)**: TEP improvável ≤4; TEP provável >4.
+**Interpretação tradicional (3 níveis)**: baixa <2 pontos; moderada 2-6; alta >6 (mesma estrutura de corte do escore de TVP original — "baixa" inclui qualquer soma abaixo de 2, inclusive valores fracionários como 1,5, e "alta" é qualquer soma acima de 6, inclusive 6,5). **Interpretação simplificada (2 níveis)**: TEP improvável ≤4; TEP provável >4.
 
 ## Armadilhas clinicas
 - Confundir os critérios do Wells de TVP com os do Wells de TEP — são escores diferentes, com variáveis e pesos diferentes, apesar do nome comum
 - Usar a versão de 3 níveis e a de 2 níveis (simplificada) de forma inconsistente na mesma decisão clínica — cada uma tem seu próprio corte e propósito (a de 2 níveis foi desenhada para combinar com D-dímero)
-- Aplicar D-dímero para excluir diagnóstico em paciente de alta probabilidade clínica (TVP >6 pontos ou TEP ≥7/>4 conforme a versão) — o valor preditivo negativo do D-dímero cai nesse cenário, e a estratégia de excluir só por D-dímero negativo não vale para probabilidade alta
+- Aplicar D-dímero para excluir diagnóstico em paciente de alta probabilidade clínica (TVP >6 pontos ou TEP >6/>4 conforme a versão) — o valor preditivo negativo do D-dímero cai nesse cenário, e a estratégia de excluir só por D-dímero negativo não vale para probabilidade alta
 - Ignorar o item "diagnóstico alternativo pelo menos tão provável" no escore de TVP, que **subtrai** pontos (-2) — é o único critério do escore de TVP que não soma, e omiti-lo infla a pontuação e a probabilidade calculada
