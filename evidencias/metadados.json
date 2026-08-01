@@ -11792,5 +11792,408 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "ferro-eco-como-primeira-linha-na-sobrecarga",
+    "statement": "Na sobrecarga de ferro suspeita ou confirmada, o ecocardiograma transtorácico com análise da geometria e da função sistólica BIVENTRICULAR deve ser realizado como primeira linha — e também com análise da função DIASTÓLICA do ventrículo esquerdo, incluindo Doppler tecidual do anel mitral medial E lateral. São duas recomendações fortes distintas: a sistólica e a diastólica não se substituem.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Mod",
+    "society": "SBC",
+    "year": 2026,
+    "guideline_title": "Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026",
+    "reference": "Hotta VT, Costa IBSS, Felix RCM, Bosco MEO, Romano MMD, et al. Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026 (Sociedade Brasileira de Cardiologia). Arq Bras Cardiol. 2026;123(4):e20260221. DOI: 10.36660/abc.20260221. PMID: 42233840 — texto integral em acesso aberto (PMC13155782), 13 tabelas graduadas conferidas linha a linha em 01/08/2026. Este posicionamento usa GRADE: força FORTE ou FRACA da recomendação, e certeza ALTA, MODERADA ou BAIXA da evidência — não a escala de classe I-III da ESC/AHA. A certeza é gravada abreviada porque a coluna é varchar(5), e expandida na exibição.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "sobrecarga de ferro",
+      "ecocardiograma",
+      "função diastólica",
+      "Doppler tecidual"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ferro-t2-estrela-abaixo-de-20-ms-define-sobrecarga-relevante",
+    "statement": "A ressonância magnética com medida do tempo de relaxamento T2* deve ser realizada em TODOS os pacientes em avaliação de sobrecarga de ferro. Os cortes: **T2* abaixo de 20 ms** indica sobrecarga clinicamente relevante, e **abaixo de 10 ms** indica risco elevado de disfunção cardíaca e de arritmias graves. Na faixa de 20 a 30 ms, o mapeamento T1 detecta o ferro mais precocemente que o T2*.",
+    "recommendation_class": "Fraca",
+    "evidence_level": "Mod",
+    "society": "SBC",
+    "year": 2026,
+    "guideline_title": "Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026",
+    "reference": "Hotta VT, Costa IBSS, Felix RCM, Bosco MEO, Romano MMD, et al. Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026 (Sociedade Brasileira de Cardiologia). Arq Bras Cardiol. 2026;123(4):e20260221. DOI: 10.36660/abc.20260221. PMID: 42233840 — texto integral em acesso aberto (PMC13155782), 13 tabelas graduadas conferidas linha a linha em 01/08/2026. Este posicionamento usa GRADE: força FORTE ou FRACA da recomendação, e certeza ALTA, MODERADA ou BAIXA da evidência — não a escala de classe I-III da ESC/AHA. A certeza é gravada abreviada porque a coluna é varchar(5), e expandida na exibição.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "T2*",
+      "20 ms",
+      "10 ms",
+      "ressonância magnética",
+      "sobrecarga de ferro"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ferro-intervalo-do-eco-depende-do-t2-estrela",
+    "statement": "O ecocardiograma deve ser repetido a cada 6 A 12 MESES se o T2* medido pela ressonância for INFERIOR A 20 ms, e a cada 6 MESES OU MENOS se o paciente se tornar sintomático. O intervalo de seguimento é definido por um valor de ressonância, não pelo ecocardiograma anterior — e é essa dependência entre os dois métodos que costuma se perder na prática.",
+    "recommendation_class": "Fraca",
+    "evidence_level": "Mod",
+    "society": "SBC",
+    "year": 2026,
+    "guideline_title": "Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026",
+    "reference": "Hotta VT, Costa IBSS, Felix RCM, Bosco MEO, Romano MMD, et al. Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026 (Sociedade Brasileira de Cardiologia). Arq Bras Cardiol. 2026;123(4):e20260221. DOI: 10.36660/abc.20260221. PMID: 42233840 — texto integral em acesso aberto (PMC13155782), 13 tabelas graduadas conferidas linha a linha em 01/08/2026. Este posicionamento usa GRADE: força FORTE ou FRACA da recomendação, e certeza ALTA, MODERADA ou BAIXA da evidência — não a escala de classe I-III da ESC/AHA. A certeza é gravada abreviada porque a coluna é varchar(5), e expandida na exibição.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "sobrecarga de ferro",
+      "seguimento",
+      "T2*",
+      "intervalo"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ferro-t2-estrela-no-acompanhamento-do-tratamento",
+    "statement": "A ressonância com medida do T2* deve ser realizada no ACOMPANHAMENTO do paciente em tratamento com quelantes e flebotomia, porque a melhora dos valores de T2* se correlaciona com a recuperação da função cardíaca e com a redução de eventos adversos. É um dos poucos marcadores de imagem em que a melhora do número acompanha a melhora do desfecho.",
+    "recommendation_class": "Fraca",
+    "evidence_level": "Mod",
+    "society": "SBC",
+    "year": 2026,
+    "guideline_title": "Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026",
+    "reference": "Hotta VT, Costa IBSS, Felix RCM, Bosco MEO, Romano MMD, et al. Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026 (Sociedade Brasileira de Cardiologia). Arq Bras Cardiol. 2026;123(4):e20260221. DOI: 10.36660/abc.20260221. PMID: 42233840 — texto integral em acesso aberto (PMC13155782), 13 tabelas graduadas conferidas linha a linha em 01/08/2026. Este posicionamento usa GRADE: força FORTE ou FRACA da recomendação, e certeza ALTA, MODERADA ou BAIXA da evidência — não a escala de classe I-III da ESC/AHA. A certeza é gravada abreviada porque a coluna é varchar(5), e expandida na exibição.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "T2*",
+      "quelante de ferro",
+      "flebotomia",
+      "resposta ao tratamento"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ferro-t1-nativo-reduzido-distingue-a-sobrecarga",
+    "statement": "Na cardiomiopatia por sobrecarga de ferro o mapa T1 nativo é REDUZIDO — ao contrário da amiloidose e da maior parte das cardiomiopatias infiltrativas, em que ele é elevado. A medida do T1 pode ser realizada nesses pacientes, e a inversão do sinal é o que a torna útil no diagnóstico diferencial. Critérios diagnósticos de sobrecarga: ferritina sérica acima de 300 ng/mL, saturação de transferrina acima de 55%, T2* abaixo de 20 ms e evidência de doença cardíaca.",
+    "recommendation_class": "Fraca",
+    "evidence_level": "Baixa",
+    "society": "SBC",
+    "year": 2026,
+    "guideline_title": "Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026",
+    "reference": "Hotta VT, Costa IBSS, Felix RCM, Bosco MEO, Romano MMD, et al. Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026 (Sociedade Brasileira de Cardiologia). Arq Bras Cardiol. 2026;123(4):e20260221. DOI: 10.36660/abc.20260221. PMID: 42233840 — texto integral em acesso aberto (PMC13155782), 13 tabelas graduadas conferidas linha a linha em 01/08/2026. Este posicionamento usa GRADE: força FORTE ou FRACA da recomendação, e certeza ALTA, MODERADA ou BAIXA da evidência — não a escala de classe I-III da ESC/AHA. A certeza é gravada abreviada porque a coluna é varchar(5), e expandida na exibição.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "mapa T1",
+      "T1 reduzido",
+      "ferritina",
+      "saturação de transferrina"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "sarcoidose-ressonancia-e-pet-fdg-no-diagnostico",
+    "statement": "Na suspeita clínica de SARCOIDOSE CARDÍACA, a ressonância magnética deve ser realizada para avaliação diagnóstica, e o PET/CT com 18F-FDG deve ser realizado para CONFIRMAÇÃO diagnóstica — as duas com recomendação forte e certeza moderada. E, sempre que possível, o PET deve ser INTEGRADO à ressonância: os dois respondem perguntas diferentes, inflamação ativa e dano estabelecido.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Mod",
+    "society": "SBC",
+    "year": 2026,
+    "guideline_title": "Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026",
+    "reference": "Hotta VT, Costa IBSS, Felix RCM, Bosco MEO, Romano MMD, et al. Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026 (Sociedade Brasileira de Cardiologia). Arq Bras Cardiol. 2026;123(4):e20260221. DOI: 10.36660/abc.20260221. PMID: 42233840 — texto integral em acesso aberto (PMC13155782), 13 tabelas graduadas conferidas linha a linha em 01/08/2026. Este posicionamento usa GRADE: força FORTE ou FRACA da recomendação, e certeza ALTA, MODERADA ou BAIXA da evidência — não a escala de classe I-III da ESC/AHA. A certeza é gravada abreviada porque a coluna é varchar(5), e expandida na exibição.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "sarcoidose cardíaca",
+      "ressonância magnética",
+      "PET-FDG",
+      "integração"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "sarcoidose-preparo-rigoroso-e-condicao-do-exame",
+    "statement": "O PET/CT com 18F-FDG para pesquisa de sarcoidose cardíaca deve SEMPRE ser feito com PREPARO CARDÍACO RIGOROSO do paciente — recomendação forte, com certeza ALTA, a mais alta do bloco de sarcoidose. Sem a supressão adequada da captação fisiológica do miocárdio, o exame não distingue inflamação de metabolismo normal, e o resultado não é interpretável.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Alta",
+    "society": "SBC",
+    "year": 2026,
+    "guideline_title": "Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026",
+    "reference": "Hotta VT, Costa IBSS, Felix RCM, Bosco MEO, Romano MMD, et al. Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026 (Sociedade Brasileira de Cardiologia). Arq Bras Cardiol. 2026;123(4):e20260221. DOI: 10.36660/abc.20260221. PMID: 42233840 — texto integral em acesso aberto (PMC13155782), 13 tabelas graduadas conferidas linha a linha em 01/08/2026. Este posicionamento usa GRADE: força FORTE ou FRACA da recomendação, e certeza ALTA, MODERADA ou BAIXA da evidência — não a escala de classe I-III da ESC/AHA. A certeza é gravada abreviada porque a coluna é varchar(5), e expandida na exibição.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "PET-FDG",
+      "preparo",
+      "supressão fisiológica",
+      "sarcoidose"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "sarcoidose-pet-no-monitoramento-e-strain-no-rastreio",
+    "statement": "O PET/CT com 18F-FDG pode ser realizado no MONITORAMENTO da resposta ao tratamento da sarcoidose cardíaca (recomendação fraca, certeza baixa). E recomenda-se o ecocardiograma com strain miocárdico por speckle tracking para TODOS os pacientes com diagnóstico de sarcoidose SISTÊMICA — o rastreio cardíaco parte do strain, não do PET. Achado morfológico característico: afilamento do segmento basal do septo interventricular, definido como espessura igual ou inferior a 4 mm, descrito em 28% dos casos.",
+    "recommendation_class": "Fraca",
+    "evidence_level": "Baixa",
+    "society": "SBC",
+    "year": 2026,
+    "guideline_title": "Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026",
+    "reference": "Hotta VT, Costa IBSS, Felix RCM, Bosco MEO, Romano MMD, et al. Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026 (Sociedade Brasileira de Cardiologia). Arq Bras Cardiol. 2026;123(4):e20260221. DOI: 10.36660/abc.20260221. PMID: 42233840 — texto integral em acesso aberto (PMC13155782), 13 tabelas graduadas conferidas linha a linha em 01/08/2026. Este posicionamento usa GRADE: força FORTE ou FRACA da recomendação, e certeza ALTA, MODERADA ou BAIXA da evidência — não a escala de classe I-III da ESC/AHA. A certeza é gravada abreviada porque a coluna é varchar(5), e expandida na exibição.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "sarcoidose",
+      "strain",
+      "rastreio",
+      "septo basal",
+      "4 mm"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "fabry-eco-anual-como-primeira-linha",
+    "statement": "Na DOENÇA DE FABRY, o ecocardiograma transtorácico deve ser realizado como método de imagem de PRIMEIRA LINHA na investigação, e REPETIDO ANUALMENTE ou diante de novos sintomas cardíacos — recomendação forte com certeza ALTA. O corte de espessura que define a hipertrofia é específico por sexo: acima de 11 mm na mulher e acima de 12 mm no homem.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Alta",
+    "society": "SBC",
+    "year": 2026,
+    "guideline_title": "Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026",
+    "reference": "Hotta VT, Costa IBSS, Felix RCM, Bosco MEO, Romano MMD, et al. Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026 (Sociedade Brasileira de Cardiologia). Arq Bras Cardiol. 2026;123(4):e20260221. DOI: 10.36660/abc.20260221. PMID: 42233840 — texto integral em acesso aberto (PMC13155782), 13 tabelas graduadas conferidas linha a linha em 01/08/2026. Este posicionamento usa GRADE: força FORTE ou FRACA da recomendação, e certeza ALTA, MODERADA ou BAIXA da evidência — não a escala de classe I-III da ESC/AHA. A certeza é gravada abreviada porque a coluna é varchar(5), e expandida na exibição.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "doença de Fabry",
+      "ecocardiograma",
+      "seguimento anual",
+      "espessura por sexo"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "fabry-strain-reduzido-no-segmento-basal-inferolateral",
+    "statement": "Na doença de Fabry, o strain longitudinal global ALTERADO por diminuição da deformação miocárdica no segmento BASAL INFEROLATERAL é característico e auxilia o diagnóstico diferencial com outras doenças de fenótipo semelhante. É o segmento que distingue Fabry de cardiomiopatia hipertrófica sarcomérica — e a alteração regional vale mais que o valor global.",
+    "recommendation_class": "Fraca",
+    "evidence_level": "Mod",
+    "society": "SBC",
+    "year": 2026,
+    "guideline_title": "Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026",
+    "reference": "Hotta VT, Costa IBSS, Felix RCM, Bosco MEO, Romano MMD, et al. Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026 (Sociedade Brasileira de Cardiologia). Arq Bras Cardiol. 2026;123(4):e20260221. DOI: 10.36660/abc.20260221. PMID: 42233840 — texto integral em acesso aberto (PMC13155782), 13 tabelas graduadas conferidas linha a linha em 01/08/2026. Este posicionamento usa GRADE: força FORTE ou FRACA da recomendação, e certeza ALTA, MODERADA ou BAIXA da evidência — não a escala de classe I-III da ESC/AHA. A certeza é gravada abreviada porque a coluna é varchar(5), e expandida na exibição.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "doença de Fabry",
+      "strain",
+      "segmento basal inferolateral",
+      "diagnóstico diferencial"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "fabry-t1-reduzido-e-o-marcador-de-imagem",
+    "statement": "Na doença de Fabry a ressonância magnética é considerada o PADRÃO-OURO de investigação cardíaca, por caracterizar melhor o dano miocárdico e fornecer informação prognóstica e de resposta terapêutica. O padrão que a identifica: mapa T1 REDUZIDO — com a ressalva importante de que ele pode PSEUDONORMALIZAR em área de realce tardio —, mapa T2 elevado, e realce tardio subepicárdico e mesocárdico inferolateral e septal.",
+    "recommendation_class": "Fraca",
+    "evidence_level": "Baixa",
+    "society": "SBC",
+    "year": 2026,
+    "guideline_title": "Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026",
+    "reference": "Hotta VT, Costa IBSS, Felix RCM, Bosco MEO, Romano MMD, et al. Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026 (Sociedade Brasileira de Cardiologia). Arq Bras Cardiol. 2026;123(4):e20260221. DOI: 10.36660/abc.20260221. PMID: 42233840 — texto integral em acesso aberto (PMC13155782), 13 tabelas graduadas conferidas linha a linha em 01/08/2026. Este posicionamento usa GRADE: força FORTE ou FRACA da recomendação, e certeza ALTA, MODERADA ou BAIXA da evidência — não a escala de classe I-III da ESC/AHA. A certeza é gravada abreviada porque a coluna é varchar(5), e expandida na exibição.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "doença de Fabry",
+      "mapa T1 reduzido",
+      "pseudonormalização",
+      "realce tardio"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "fabry-eco-na-triagem-familiar-quando-nao-ha-teste-genetico",
+    "statement": "Na doença de Fabry, o ecocardiograma deve ser usado para TRIAGEM de familiares de primeiro grau, no momento do diagnóstico do caso-índice, QUANDO o teste genético não é possível. A imagem é o substituto do teste genético, não o contrário — e a ordem importa em serviço sem acesso ao sequenciamento.",
+    "recommendation_class": "Fraca",
+    "evidence_level": "Mod",
+    "society": "SBC",
+    "year": 2026,
+    "guideline_title": "Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026",
+    "reference": "Hotta VT, Costa IBSS, Felix RCM, Bosco MEO, Romano MMD, et al. Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026 (Sociedade Brasileira de Cardiologia). Arq Bras Cardiol. 2026;123(4):e20260221. DOI: 10.36660/abc.20260221. PMID: 42233840 — texto integral em acesso aberto (PMC13155782), 13 tabelas graduadas conferidas linha a linha em 01/08/2026. Este posicionamento usa GRADE: força FORTE ou FRACA da recomendação, e certeza ALTA, MODERADA ou BAIXA da evidência — não a escala de classe I-III da ESC/AHA. A certeza é gravada abreviada porque a coluna é varchar(5), e expandida na exibição.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "doença de Fabry",
+      "triagem familiar",
+      "teste genético",
+      "ecocardiograma"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "depositos-de-glicogenio-eco-como-primeira-linha-e-valores-de-referencia",
+    "statement": "Nas DOENÇAS DE DEPÓSITO DE GLICOGÊNIO — Danon, Pompe e PRKAG2 —, o ecocardiograma deve ser realizado como método de primeira linha. A hipertrofia é frequentemente ACIMA DE 30 mm, biventricular e rapidamente progressiva na doença de Danon em homens, com obstrução de via de saída em 25% deles. Valores de referência normais da ressonância para comparação: mapa T1 abaixo de 1050 ms, T2 ou T2* acima de 40 ms, e volume extracelular abaixo de 40%.",
+    "recommendation_class": "Fraca",
+    "evidence_level": "Mod",
+    "society": "SBC",
+    "year": 2026,
+    "guideline_title": "Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026",
+    "reference": "Hotta VT, Costa IBSS, Felix RCM, Bosco MEO, Romano MMD, et al. Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026 (Sociedade Brasileira de Cardiologia). Arq Bras Cardiol. 2026;123(4):e20260221. DOI: 10.36660/abc.20260221. PMID: 42233840 — texto integral em acesso aberto (PMC13155782), 13 tabelas graduadas conferidas linha a linha em 01/08/2026. Este posicionamento usa GRADE: força FORTE ou FRACA da recomendação, e certeza ALTA, MODERADA ou BAIXA da evidência — não a escala de classe I-III da ESC/AHA. A certeza é gravada abreviada porque a coluna é varchar(5), e expandida na exibição.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "doenças de depósito de glicogênio",
+      "Danon",
+      "Pompe",
+      "PRKAG2",
+      "30 mm"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "depositos-de-glicogenio-manobras-provocativas-e-esforco",
+    "statement": "Nas doenças de depósito de glicogênio, o ecocardiograma com MANOBRAS PROVOCATIVAS — Valsalva e ortostase — é recomendável no paciente DISPNEICO com hipertrofia de ventrículo esquerdo que não apresente gradiente de via de saída igual ou superior a 50 mmHg em repouso. E o ecocardiograma sob ESFORÇO é recomendável quando esse paciente também não apresenta o gradiente à manobra provocativa. É a mesma escada de três degraus da cardiomiopatia hipertrófica, aplicada aqui.",
+    "recommendation_class": "Fraca",
+    "evidence_level": "Mod",
+    "society": "SBC",
+    "year": 2026,
+    "guideline_title": "Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026",
+    "reference": "Hotta VT, Costa IBSS, Felix RCM, Bosco MEO, Romano MMD, et al. Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026 (Sociedade Brasileira de Cardiologia). Arq Bras Cardiol. 2026;123(4):e20260221. DOI: 10.36660/abc.20260221. PMID: 42233840 — texto integral em acesso aberto (PMC13155782), 13 tabelas graduadas conferidas linha a linha em 01/08/2026. Este posicionamento usa GRADE: força FORTE ou FRACA da recomendação, e certeza ALTA, MODERADA ou BAIXA da evidência — não a escala de classe I-III da ESC/AHA. A certeza é gravada abreviada porque a coluna é varchar(5), e expandida na exibição.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "doenças de depósito",
+      "manobra provocativa",
+      "gradiente",
+      "50 mmHg"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "depositos-de-glicogenio-t1-reduzido-no-prkag2-e-o-mapa-polar",
+    "statement": "Nas doenças de depósito de glicogênio, o padrão de ressonância difere por gene: na doença de DANON há realce tardio transmural ou subepicárdico difuso, com T1 e volume extracelular elevados ou normais; na de POMPE, realce raro mesocárdico inferolateral; e no PRKAG2 o mapa T1 é REDUZIDO nos estágios iniciais. No PRKAG2, o padrão em LISTRAS no mapa polar do strain longitudinal apareceu em 60% de uma série de 30 pacientes.",
+    "recommendation_class": "Fraca",
+    "evidence_level": "Baixa",
+    "society": "SBC",
+    "year": 2026,
+    "guideline_title": "Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026",
+    "reference": "Hotta VT, Costa IBSS, Felix RCM, Bosco MEO, Romano MMD, et al. Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026 (Sociedade Brasileira de Cardiologia). Arq Bras Cardiol. 2026;123(4):e20260221. DOI: 10.36660/abc.20260221. PMID: 42233840 — texto integral em acesso aberto (PMC13155782), 13 tabelas graduadas conferidas linha a linha em 01/08/2026. Este posicionamento usa GRADE: força FORTE ou FRACA da recomendação, e certeza ALTA, MODERADA ou BAIXA da evidência — não a escala de classe I-III da ESC/AHA. A certeza é gravada abreviada porque a coluna é varchar(5), e expandida na exibição.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "Danon",
+      "Pompe",
+      "PRKAG2",
+      "mapa polar",
+      "padrão em listras"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "depositos-de-glicogenio-transesofagico-no-evento-neurologico",
+    "statement": "Nas doenças de depósito de glicogênio, o ecocardiograma TRANSESOFÁGICO deve ser indicado diante de evento neurológico AGUDO, para detecção de trombos intracardíacos, no contexto de disfunção ventricular esquerda ou de arritmias. E o ecocardiograma deve ser usado para triagem de familiares de primeiro grau quando o teste genético não for possível.",
+    "recommendation_class": "Fraca",
+    "evidence_level": "Mod",
+    "society": "SBC",
+    "year": 2026,
+    "guideline_title": "Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026",
+    "reference": "Hotta VT, Costa IBSS, Felix RCM, Bosco MEO, Romano MMD, et al. Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026 (Sociedade Brasileira de Cardiologia). Arq Bras Cardiol. 2026;123(4):e20260221. DOI: 10.36660/abc.20260221. PMID: 42233840 — texto integral em acesso aberto (PMC13155782), 13 tabelas graduadas conferidas linha a linha em 01/08/2026. Este posicionamento usa GRADE: força FORTE ou FRACA da recomendação, e certeza ALTA, MODERADA ou BAIXA da evidência — não a escala de classe I-III da ESC/AHA. A certeza é gravada abreviada porque a coluna é varchar(5), e expandida na exibição.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "transesofágico",
+      "trombo intracardíaco",
+      "evento neurológico",
+      "triagem familiar"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esclerose-sistemica-eco-com-doppler-e-strain",
+    "statement": "Na ESCLEROSE SISTÊMICA, o ecocardiograma com Doppler tecidual é recomendado para avaliação da função ventricular esquerda sistólica e diastólica (recomendação forte, certeza moderada), e a análise do strain longitudinal global deve ser considerada para detecção PRECOCE de disfunção ventricular esquerda (fraca, certeza moderada). O strain entra para achar o que o Doppler ainda não mostra.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Mod",
+    "society": "SBC",
+    "year": 2026,
+    "guideline_title": "Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026",
+    "reference": "Hotta VT, Costa IBSS, Felix RCM, Bosco MEO, Romano MMD, et al. Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026 (Sociedade Brasileira de Cardiologia). Arq Bras Cardiol. 2026;123(4):e20260221. DOI: 10.36660/abc.20260221. PMID: 42233840 — texto integral em acesso aberto (PMC13155782), 13 tabelas graduadas conferidas linha a linha em 01/08/2026. Este posicionamento usa GRADE: força FORTE ou FRACA da recomendação, e certeza ALTA, MODERADA ou BAIXA da evidência — não a escala de classe I-III da ESC/AHA. A certeza é gravada abreviada porque a coluna é varchar(5), e expandida na exibição.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "esclerose sistêmica",
+      "Doppler tecidual",
+      "strain",
+      "disfunção precoce"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esclerose-sistemica-rastreio-de-hipertensao-pulmonar-pelo-jato-tricuspide",
+    "statement": "Na esclerose sistêmica, a avaliação diagnóstica de HIPERTENSÃO PULMONAR pelo ecocardiograma, por meio da estimativa da velocidade do jato de regurgitação tricúspide, tem recomendação FORTE com certeza ALTA — a mais alta do bloco. E o ecocardiograma sob estresse com EXERCÍCIO pode ser considerado para avaliar a pressão pulmonar no paciente com dispneia SEM hipertensão pulmonar ao exame de repouso.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Alta",
+    "society": "SBC",
+    "year": 2026,
+    "guideline_title": "Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026",
+    "reference": "Hotta VT, Costa IBSS, Felix RCM, Bosco MEO, Romano MMD, et al. Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026 (Sociedade Brasileira de Cardiologia). Arq Bras Cardiol. 2026;123(4):e20260221. DOI: 10.36660/abc.20260221. PMID: 42233840 — texto integral em acesso aberto (PMC13155782), 13 tabelas graduadas conferidas linha a linha em 01/08/2026. Este posicionamento usa GRADE: força FORTE ou FRACA da recomendação, e certeza ALTA, MODERADA ou BAIXA da evidência — não a escala de classe I-III da ESC/AHA. A certeza é gravada abreviada porque a coluna é varchar(5), e expandida na exibição.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "esclerose sistêmica",
+      "hipertensão pulmonar",
+      "jato tricúspide",
+      "eco de estresse"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esclerose-sistemica-seguimento-da-funcao-do-ventriculo-direito",
+    "statement": "Na esclerose sistêmica, o ecocardiograma com medidas de TAPSE, onda S do anel tricúspide, strain longitudinal do ventrículo direito e variação fracional de área é recomendado para acompanhamento da função sistólica do VENTRÍCULO DIREITO — recomendação forte, certeza alta. São quatro medidas, e a diretriz as pede em conjunto.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Alta",
+    "society": "SBC",
+    "year": 2026,
+    "guideline_title": "Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026",
+    "reference": "Hotta VT, Costa IBSS, Felix RCM, Bosco MEO, Romano MMD, et al. Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026 (Sociedade Brasileira de Cardiologia). Arq Bras Cardiol. 2026;123(4):e20260221. DOI: 10.36660/abc.20260221. PMID: 42233840 — texto integral em acesso aberto (PMC13155782), 13 tabelas graduadas conferidas linha a linha em 01/08/2026. Este posicionamento usa GRADE: força FORTE ou FRACA da recomendação, e certeza ALTA, MODERADA ou BAIXA da evidência — não a escala de classe I-III da ESC/AHA. A certeza é gravada abreviada porque a coluna é varchar(5), e expandida na exibição.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "esclerose sistêmica",
+      "ventrículo direito",
+      "TAPSE",
+      "variação fracional de área"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esclerose-sistemica-cintilografia-e-o-achado-que-desconcerta",
+    "statement": "Na esclerose sistêmica, a cintilografia de perfusão miocárdica é recomendada para detecção de isquemia — recomendação forte, certeza ALTA. E o achado que explica a força dessa recomendação: até cerca de 80% dos pacientes com esclerose sistêmica apresentam defeitos perfusionais MESMO SEM doença aterosclerótica coronariana, por acometimento microvascular. O PET com 18F-FDG para inflamação miocárdica e a cintilografia com MIBG para função simpática são recomendações fracas com certeza baixa.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Alta",
+    "society": "SBC",
+    "year": 2026,
+    "guideline_title": "Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026",
+    "reference": "Hotta VT, Costa IBSS, Felix RCM, Bosco MEO, Romano MMD, et al. Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026 (Sociedade Brasileira de Cardiologia). Arq Bras Cardiol. 2026;123(4):e20260221. DOI: 10.36660/abc.20260221. PMID: 42233840 — texto integral em acesso aberto (PMC13155782), 13 tabelas graduadas conferidas linha a linha em 01/08/2026. Este posicionamento usa GRADE: força FORTE ou FRACA da recomendação, e certeza ALTA, MODERADA ou BAIXA da evidência — não a escala de classe I-III da ESC/AHA. A certeza é gravada abreviada porque a coluna é varchar(5), e expandida na exibição.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "esclerose sistêmica",
+      "cintilografia de perfusão",
+      "doença microvascular",
+      "80%"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "esclerose-sistemica-ressonancia-com-mapeamento-t1-e-t2",
+    "statement": "Na esclerose sistêmica, a ressonância magnética com realce tardio e mapeamento de T1 e T2 deve ser considerada para o diagnóstico de acometimento cardíaco e para estratificação prognóstica. Os valores de T1 e T2 globais são significativamente mais elevados que em controles — mas o documento NÃO publica os valores absolutos de corte, e por isso qualquer número específico exige VERIFICAÇÃO HUMANA NECESSÁRIA contra a fonte original.",
+    "recommendation_class": "Fraca",
+    "evidence_level": "Mod",
+    "society": "SBC",
+    "year": 2026,
+    "guideline_title": "Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026",
+    "reference": "Hotta VT, Costa IBSS, Felix RCM, Bosco MEO, Romano MMD, et al. Posicionamento sobre Avaliação Multimodalidade em Imagem Cardíaca em Pacientes com Doenças Sistêmicas – 2026 (Sociedade Brasileira de Cardiologia). Arq Bras Cardiol. 2026;123(4):e20260221. DOI: 10.36660/abc.20260221. PMID: 42233840 — texto integral em acesso aberto (PMC13155782), 13 tabelas graduadas conferidas linha a linha em 01/08/2026. Este posicionamento usa GRADE: força FORTE ou FRACA da recomendação, e certeza ALTA, MODERADA ou BAIXA da evidência — não a escala de classe I-III da ESC/AHA. A certeza é gravada abreviada porque a coluna é varchar(5), e expandida na exibição.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "esclerose sistêmica",
+      "mapeamento T1",
+      "mapeamento T2",
+      "realce tardio"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
