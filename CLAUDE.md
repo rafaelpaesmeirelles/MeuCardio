@@ -1,5 +1,34 @@
 # Corvia — contexto e instruções permanentes
 
+> ## ✅ TAREFA ESPECIAL DA corvia2 CONCLUÍDA, 01/08/2026 ~20h30: calculadoras 6 → 18
+> A tarefa atribuída pelo Rafael (seção "TAREFA ESPECIAL DA corvia2" mais abaixo, ainda mantida
+> como registro do pedido original) foi concluída. **12 calculadoras novas** em
+> `backend/app/services/calculators.py`, commit `f1fec43`: TIMI risco UA/NSTEMI, TIMI risco
+> STEMI, Wells TEP, Wells TVP, Genebra revisado, Genebra simplificado, PESI, sPESI, CRUSADE,
+> DAPT score, ORBIT, QTc (Bazett/Fridericia/Framingham/Hodges). Total agora **18** (6 + 12).
+>
+> **Método de verificação, porque "erro em calculadora é pior que lacuna":** cada tabela de
+> pontos foi conferida contra a fonte primária antes de codificar — não de memória. CRUSADE em
+> particular: o PDF original (Subherwal 2009) foi baixado e a Tabela 4 (algoritmo de pontuação)
+> extraída com `pdftotext -layout`, porque a tabela nunca aparece completa em resumo secundário
+> nenhum encontrado. TIMI (ambos), Wells (ambos), Genebra (ambos), PESI, sPESI, DAPT e ORBIT
+> foram conferidos via WebSearch/WebFetch contra fonte primária ou secundária confiável, com
+> pelo menos dois pontos de dado cruzados por escore. Depois de codificar, **todas as 12** foram
+> testadas com casos de fronteira conhecidos (score mínimo e máximo, ou identidade das fórmulas
+> de QTc em FC=60 bpm) via `python3` direto — o container do backend **não tem bind-mount de
+> código-fonte** (só as pastas de conteúdo), então testar exigiu rodar o módulo fora do Docker.
+> Regressão das 6 calculadoras já existentes confirmada sem alteração de comportamento.
+>
+> **Frontend não precisou de nenhuma alteração** — `Calculadoras.tsx`/`Calculadora.tsx` são
+> inteiramente dirigidos pelo endpoint `/api/calculators`, sem lista fixa; as 12 novas aparecem
+> automaticamente assim que o backend for rebuildado.
+>
+> **Pendência que não é desta sessão:** o código está commitado e pronto, mas **não fiz rebuild
+> do backend** — rebuild é ação de fora para dentro que normalmente exige confirmação, e a
+> autorização do Rafael cobriu explicitamente "editar código", não "rebuildar produção". As 18
+> calculadoras só passam a valer para o assinante depois de alguém rodar
+> `docker compose -f docker-compose.prod.yml up -d --build backend`.
+
 > ## ✅ Sessão corvia1, 01/08/2026 — balanço da rodada: +410 itens medidos, todos publicados
 > Frente: `content/` dos 10 temas (Doença coronariana, Cardiomiopatias, Valvopatias, Pericárdio,
 > Endocardite, Aorta e DAP, Cardiopatias congênitas, Febre reumática, Síncope, Perioperatório) +
