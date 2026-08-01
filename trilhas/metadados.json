@@ -2978,5 +2978,405 @@
         "por_que": "Fecha a trilha mostrando por que a cardioproteção primária importa a longo prazo: sobreviventes de câncer na infância carregam risco cardiovascular tardio elevado, o desfecho que toda a vigilância e a profilaxia das etapas anteriores tentam evitar."
       }
     ]
+  },
+  {
+    "slug": "trilha-diabetes-alem-do-sglt2-e-glp1",
+    "titulo": "Diabetes: além do SGLT2 e GLP-1 — cardiomiopatia diabética, nefroproteção e cirurgia metabólica",
+    "tema": "Diabetes e cardiologia",
+    "objetivo": "Sair sabendo rastrear a cardiomiopatia diabética por strain, reconhecer hipoglicemia e neuropatia autonômica como risco cardiovascular, bloquear o SRAA para nefroproteção clássica, situar a segurança dos inibidores de DPP-4, e decidir sobre cirurgia bariátrica como intervenção cardiovascular.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "estratificacao-de-risco-cardiovascular-no-diabetes-diretriz-sbd-2025",
+        "por_que": "Ponto de partida nacional: como a diretriz brasileira mais recente estratifica risco cardiovascular no diabético."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "cardiomiopatia-diabetica-rastreamento-por-strain-e-tratamento",
+        "por_que": "Uma disfunção ventricular que existe antes de qualquer evento coronariano — o strain detecta o que a fração de ejeção ainda não mostra."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "hipoglicemia-arritmia-e-neuropatia-autonomica-cardiaca-no-diabetes",
+        "por_que": "O lado oposto do controle glicêmico: hipoglicemia também é risco cardiovascular, não só hiperglicemia."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "nefroprotecao-com-bloqueio-do-sraa-na-nefropatia-diabetica-renaal-idnt-e-o-limite-do-ontarget",
+        "por_que": "A nefroproteção clássica, anterior aos inibidores de SGLT2 — e onde o bloqueio duplo do SRAA mostrou seu limite."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "inibidores-da-dpp-4-e-seguranca-cardiovascular-savor-timi-53-examine-e-tecos",
+        "por_que": "Uma classe mais antiga de hipoglicemiante, com sinal de segurança que não se replicou entre os ensaios — vale saber por quê."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "cirurgia-bariatrica-e-eventos-cardiovasculares-de-longo-prazo-estudo-sos",
+        "por_que": "Fecha com a intervenção mais radical: o que a perda de peso cirúrgica entrega em evento cardiovascular no seguimento de décadas."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "metformina-na-insuficiencia-cardiaca-seguranca-e-beneficio",
+        "por_que": "A droga mais antiga e mais usada da lista, revisitada: segurança e benefício quando o diabético já tem insuficiência cardíaca."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-hipertensao-pulmonar-causas-associadas-e-cteph",
+    "titulo": "Hipertensão pulmonar: causas associadas e a fronteira intervencionista da CTEPH",
+    "tema": "Hipertensão pulmonar",
+    "objetivo": "Sair sabendo investigar hipertensão arterial pulmonar associada à esclerose sistêmica, reconhecer a forma hereditária e a portopulmonar, situar a síndrome de Eisenmenger, e decidir entre riociguate e angioplastia por balão na CTEPH inoperável.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "hipertensao-arterial-pulmonar-associada-a-esclerose-sistemica-algoritmo-detect",
+        "por_que": "A doença do tecido conjuntivo mais associada a HAP, com algoritmo próprio de rastreamento — o DETECT."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "hipertensao-arterial-pulmonar-hereditaria-bmpr2-penetrancia-e-rastreio-familiar",
+        "por_que": "Quando a HAP tem componente genético, a pergunta muda de tratamento individual para rastreio de família."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "hipertensao-portopulmonar-criterios-diagnosticos-e-elegibilidade-para-transplante-hepatico",
+        "por_que": "Uma forma que decide algo além do tratamento da HAP em si: se o paciente pode ou não ser transplantado do fígado."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "sindrome-de-eisenmenger-breathe-5-maestro-e-o-que-a-terapia-especifica-entrega",
+        "por_que": "O extremo evolutivo do shunt não corrigido — e o que a terapia específica de HAP realmente muda nessa fisiologia particular."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "hipertensao-pulmonar-tromboembolica-cronica-cteph-e-criterios-de-transplante-pulmonar",
+        "por_que": "A CTEPH é o único grupo de hipertensão pulmonar potencialmente curável por cirurgia — por isso merece via diagnóstica própria."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "riociguate-na-hap-e-na-cteph-os-ensaios-patent-1-e-chest-1",
+        "por_que": "A opção medicamentosa para quem não pode operar a CTEPH, ou para a doença residual após a cirurgia."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "angioplastia-pulmonar-por-balao-na-cteph-inoperavel-race-e-mr-bpa",
+        "por_que": "Fecha com a alternativa intervencionista ao riociguate na CTEPH inoperável — os dois ensaios que sustentam essa via."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-gravidez-arritmia-valvopatia-tev-e-pre-eclampsia",
+    "titulo": "Gravidez: valvopatia, arritmia, TEV e pré-eclâmpsia no pré-natal cardiológico",
+    "tema": "Gravidez",
+    "objetivo": "Sair sabendo ajustar limiar de intervenção em estenose mitral e aórtica na gestante, investigar TEP na gravidez pelo protocolo adaptado, escolher a dose de tromboprofilaxia, tratar hipertensão grave e eclâmpsia, e aplicar os escores de risco materno CARPREG e ZAHARA.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "escores-de-risco-materno-carpreg-carpreg-ii-e-zahara",
+        "por_que": "Complementa a classificação mWHO da trilha anterior com escores derivados de coorte, úteis quando a mWHO não captura toda a nuance do caso."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "estenose-mitral-e-aortica-na-gestacao-limiares-de-intervencao-e-tecnica-percutanea",
+        "por_que": "Uma valvopatia estenótica na gestante não espera o parto se o limiar de gravidade for cruzado — este documento dá o corte."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "fibrilacao-atrial-cronica-e-cardiomiopatia-dilatada-pre-existente-na-gestacao",
+        "por_que": "A arritmia crônica pré-existente que engravida junto com a cardiopatia estrutural, exigindo ajuste dos dois tratamentos ao mesmo tempo."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "diagnostico-de-tep-na-gestante-years-adaptado-e-a-estrategia-do-ct-pe-pregnancy",
+        "por_que": "A dispneia na gestante tem diagnóstico diferencial próprio, e o algoritmo YEARS foi adaptado exatamente para reduzir exposição a radiação nessa investigação."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "tromboprofilaxia-na-gestacao-e-puerperio-dose-baixa-ou-intermediaria-o-ensaio-highlow",
+        "por_que": "Decidido investigar e tratar TEV, a próxima pergunta é a dose de manutenção — o HIGHLOW responde isso diretamente."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "hipertensao-grave-e-eclampsia-magpie-chips-e-a-escolha-do-anti-hipertensivo-oral",
+        "por_que": "A emergência hipertensiva da gestação, com os ensaios que sustentam sulfato de magnésio e a escolha do anti-hipertensivo oral."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "profilaxia-de-pre-eclampsia-com-aas-em-baixa-dose",
+        "por_que": "Voltando à prevenção: quem se beneficia de aspirina em baixa dose antes da pré-eclâmpsia se instalar."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "via-de-parto-e-insuficiencia-cardiaca-na-gestante-cardiopata-o-registro-ropac",
+        "por_que": "Fecha na decisão do parto em si: o registro ROPAC informa se via vaginal ou cesárea muda desfecho na cardiopata."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "rebecga-registro-brasileiro-de-cardiopatia-e-gravidez",
+        "por_que": "O retrato nacional do problema — útil para calibrar expectativa de desfecho com dado brasileiro, não só europeu ou americano."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-saude-mental-populacoes-especiais-e-tratamento",
+    "titulo": "Saúde mental: populações especiais e o que tratar a doença mental muda no coração",
+    "tema": "Saúde mental e cardiologia",
+    "objetivo": "Sair sabendo o papel protetor do antipsicótico na esquizofrenia, o risco cardíaco dos estimulantes no TDAH, a mortalidade cardíaca da anorexia nervosa, o diagnóstico diferencial entre takotsubo e ansiedade, e se tratar a depressão de fato melhora desfecho cardíaco.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "esquizofrenia-e-mortalidade-cardiovascular-o-papel-protetor-do-antipsicotico",
+        "por_que": "Um achado contraintuitivo: o antipsicótico, apesar do estigma de risco cardíaco, associa-se a MENOR mortalidade cardiovascular na esquizofrenia."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "antipsicoticos-e-risco-cardiaco-e-apneia-obstrutiva-do-sono-em-cardiologia",
+        "por_que": "Aprofunda o risco cardíaco específico dos antipsicóticos e soma outra comorbidade do sono que anda junto na prática."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "estimulantes-no-tdah-e-risco-cardiovascular-curto-versus-longo-prazo",
+        "por_que": "Uma pergunta cada vez mais comum no consultório com o aumento de diagnóstico e tratamento de TDAH em adultos."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "mortalidade-cardiaca-na-anorexia-nervosa-metanalise-de-lai",
+        "por_que": "O transtorno psiquiátrico com a maior mortalidade cardíaca da psiquiatria, e por mecanismo direto, não só por comorbidade."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "cardiomiopatia-takotsubo-e-transtornos-de-ansiedade-como-diagnostico-diferencial-cardiaco",
+        "por_que": "Onde psiquiatria e cardiologia se confundem de verdade: dor torácica e disfunção ventricular que pode ser takotsubo ou crise de ansiedade."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "transtorno-de-estresse-pos-traumatico-como-fator-de-risco-coronariano",
+        "por_que": "Fecha o bloco de populações especiais com um fator de risco independente pouco perguntado na anamnese cardiológica de rotina."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "tratar-a-depressao-melhora-o-desfecho-cardiaco-sadhart-create-e-mood-hf",
+        "por_que": "A pergunta que fecha a trilha: depois de reconhecer o fator de risco, tratá-lo de fato muda o desfecho cardíaco?"
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "exercicio-e-intervencao-psicologica-na-depressao-do-cardiopata-upbeat-e-as-revisoes-cochrane",
+        "por_que": "Complementa a resposta do passo anterior com a intervenção não farmacológica — exercício e psicoterapia — e o que as revisões Cochrane sustentam."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-arritmias-taquiarritmias-supraventriculares-e-ventriculares",
+    "titulo": "Taquiarritmias: do supraventricular ao ventricular, e quando a ablação resolve",
+    "tema": "Arritmias",
+    "objetivo": "Sair sabendo diagnosticar e conduzir a taquicardia supraventricular, reconhecer WPW assintomático como decisão de risco, indicar ablação no flutter e na taquicardia ventricular idiopática, encaminhar a ablação de TV na cardiopatia isquêmica, e abordar a taquicardia de QRS largo sem diagnóstico estabelecido.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "fluxograma-taquicardia-de-qrs-largo-esc-2019",
+        "por_que": "Ponto de entrada na emergência: como abordar uma taquicardia de QRS largo antes de saber o diagnóstico exato."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "taquicardia-supraventricular-diagnostico-e-manejo-esc-2019",
+        "por_que": "A arritmia paroxística mais comum fora da fibrilação atrial, com manobra vagal e adenosina como primeira linha."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "wolff-parkinson-white-assintomatico-e-cardiomiopatia-induzida-por-extrassistoles",
+        "por_que": "Um achado eletrocardiográfico incidental que carrega risco de morte súbita mesmo sem sintoma — decisão de estratificar ou não."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "flutter-atrial-tipico-diagnostico-ablacao-e-fibrilacao-atrial-de-novo",
+        "por_que": "Uma arritmia com solução curativa de alta taxa de sucesso — e o que fazer quando fibrilação atrial aparece depois da ablação do flutter."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "taquicardia-ventricular-idiopatica-do-trato-de-saida-diagnostico-e-ablacao",
+        "por_que": "Uma taquicardia ventricular sem cardiopatia estrutural, com bom prognóstico e alvo de ablação bem definido."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "extrassistole-ventricular-frequente-e-cardiomiopatia-induzida-carga-que-preve-disfuncao",
+        "por_que": "A carga de extrassístole que, sozinha, pode induzir cardiomiopatia — reconhecer isso muda o limiar para tratar o que antes parecia benigno."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "ablacao-de-taquicardia-ventricular-na-cardiopatia-isquemica-quando-encaminhar",
+        "por_que": "Fecha no cenário mais complexo: taquicardia ventricular sobre cicatriz de infarto, e os ensaios que definem quando encaminhar para ablação."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-geral-prevencao-e-equidade-em-cardiologia",
+    "titulo": "Prevenção e equidade em cardiologia: vacina, ritmo circadiano e o que ainda é subestimado",
+    "tema": "Geral",
+    "objetivo": "Sair sabendo o efeito protetor da vacina de influenza no evento cardiovascular, a disparidade de sexo no tratamento do infarto, o impacto do turno noturno e do sono no risco coronariano, e o risco cardiometabólico de cafeína, cigarro eletrônico, canabis e ruído ambiental.",
+    "nivel": "intermediário",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "vacinacao-contra-influenza-como-prevencao-cardiovascular-iami-e-metanalise-de-udell",
+        "por_que": "Uma das intervenções preventivas mais custo-efetivas da cardiologia, e ainda subprescrita — os números do IAMI mostram por quê importa lembrar dela."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "disparidade-de-sexo-no-tratamento-do-iamcst-o-estudo-virgo",
+        "por_que": "Nem toda desigualdade em desfecho é biológica — o VIRGO mede a parte que é atraso e diferença de tratamento entre os sexos."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "trabalho-em-turno-noturno-rotativo-e-risco-coronariano-nurses-health-study",
+        "por_que": "Um fator de risco ocupacional raramente perguntado na anamnese, com décadas de seguimento sustentando o achado."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "sono-e-risco-cardiovascular-metanalise-de-cappuccio",
+        "por_que": "Complementa o turno noturno com a duração do sono em si — pouco e muito sono, os dois lados do U de risco."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "cafeina-e-arritmia-o-que-o-ensaio-crave-e-a-metanalise-mostram",
+        "por_que": "A pergunta mais recorrente de consultório sobre hábito de consumo — o que o ensaio randomizado mostrou, e o que ainda é crença."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "cigarro-eletronico-vaping-e-risco-cardiometabolico",
+        "por_que": "Um hábito relativamente novo, e frequentemente apresentado ao paciente como 'mais seguro' que o cigarro tradicional — o que os dados sustentam disso."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "uso-de-canabis-e-risco-cardiovascular",
+        "por_que": "Outro hábito em normalização crescente, com pergunta cada vez mais frequente no consultório sobre risco cardiovascular real."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "ruido-de-transporte-urbano-e-aeroportuario-como-fator-de-risco-cardiovascular",
+        "por_que": "Fecha com um fator ambiental que o paciente não controla sozinho — relevante para orientação de exposição, não só de hábito pessoal."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-calculadoras-escores-de-sangramento-tev-e-risco-cirurgico",
+    "titulo": "Escores de sangramento, tromboembolismo e risco cirúrgico: qual pedir e quando",
+    "tema": "Calculadoras",
+    "objetivo": "Sair sabendo aplicar Wells e Genebra na probabilidade pré-teste de TEP, graduar gravidade com PESI, usar CRUSADE e DAPT/PRECISE-DAPT na decisão antitrombótica, e escolher entre RCRI, EuroSCORE II, STS e SYNTAX conforme o tipo de cirurgia.",
+    "nivel": "avançado",
+    "review_status": "pendente_revisao",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "escore-de-wells-dvt-e-embolia-pulmonar-criterios-completos",
+        "por_que": "O escore mais usado para probabilidade pré-teste de TVP e TEP, ponto de partida da investigação de tromboembolismo."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "escore-de-genebra-revisado-e-simplificado-probabilidade-pre-teste-de-tep",
+        "por_que": "A alternativa ao Wells que não depende do julgamento clínico subjetivo — útil quando se quer um escore inteiramente objetivo."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "pesi-e-spesi-escore-de-gravidade-do-tromboembolismo-pulmonar",
+        "por_que": "Diagnosticado o TEP, a próxima pergunta é gravidade — o PESI e sua versão simplificada decidem internação e monitorização."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "crusade-bleeding-score",
+        "por_que": "Muda de tromboembolismo para hemorragia: o escore que quantifica risco de sangramento na síndrome coronariana aguda."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "dapt-score-e-precise-dapt-duracao-da-dupla-antiagregacao-apos-stent",
+        "por_que": "Combina o risco isquêmico e o hemorrágico numa única decisão: por quanto tempo manter dupla antiagregação após stent."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "escores-de-risco-cardiaco-para-cirurgia-nao-cardiaca-rcri-e-nsqip-mica",
+        "por_que": "Muda de cardiologia intervencionista para avaliação pré-operatória: o escore que estratifica risco cardíaco antes de cirurgia não cardíaca."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "sts-risk-score-modelos-de-risco-da-society-of-thoracic-surgeons",
+        "por_que": "Já em cirurgia cardíaca: o modelo mais usado nos EUA para prever mortalidade e complicação por procedimento específico."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "euroscore-ii-risco-de-mortalidade-em-cirurgia-cardiaca",
+        "por_que": "O equivalente europeu ao STS, com variáveis diferentes — útil saber quando um discorda do outro."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "syntax-score-complexidade-anatomica-e-escolha-entre-pci-e-cabg",
+        "por_que": "Fecha na decisão que mais depende de escore anatômico: complexidade da lesão coronariana decidindo entre angioplastia e cirurgia."
+      }
+    ]
   }
 ]
