@@ -20461,5 +20461,189 @@
         "por_que": "Fecha a trilha com o mais recente dos quatro (O'Brien et al., registro ORBIT-AF, 2015) e com a resposta à pergunta que as três etapas anteriores deixam em aberto: qual desses escores é realmente melhor? A discriminação (índice-c) dos quatro é semelhante — nenhum se destaca isoladamente nessa métrica —, mas o ORBIT mostrou calibração superior na validação externa (coorte ROCKET-AF), o que ajuda a entender por que a literatura recente tende a preferir os escores mais novos e mais simples sem que isso signifique um salto de acurácia."
       }
     ]
+  },
+  {
+    "slug": "trilha-cardiologia-pediatrica-ventriculo-unico-e-fontan",
+    "titulo": "Cardiologia pediátrica: ventrículo único, do Norwood ao Fontan de longo prazo",
+    "tema": "Cardiologia pediátrica",
+    "objetivo": "Sair sabendo a trajetória cirúrgica e clínica das lesões de ventrículo único: a escolha do shunt no Norwood, o manejo farmacológico no lactente entre as etapas, a fisiologia de Fontan, a evidência de tromboprofilaxia e o que esperar no seguimento de décadas.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "estudo",
+        "item_slug": "svr-tipo-de-shunt-no-procedimento-de-norwood",
+        "por_que": "Começa na primeira decisão cirúrgica da vida da criança com ventrículo único: o SVR comparou os dois tipos de shunt no Norwood, e essa escolha condiciona toda a trajetória que a trilha percorre a seguir."
+      },
+      {
+        "ordem": 2,
+        "item_type": "estudo",
+        "item_slug": "isv-enalapril-no-lactente-com-ventriculo-unico",
+        "por_que": "O período interestágio é o de maior risco da fisiologia de ventrículo único. O Infant Single Ventricle testou enalapril nessa janela — e mostrar que não houve benefício, ao contrário do que a lógica da IC extrapolaria, é o tipo de resultado negativo que muda a prática."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "circulacao-de-fontan-e-transposicao-das-grandes-arterias-no-adulto",
+        "por_que": "Da etapa cirúrgica para a fisiologia que resulta dela: entender a circulação de Fontan — pré-carga passiva, ausência de bomba subpulmonar — é o que torna as etapas seguintes compreensíveis, não apenas memorizáveis."
+      },
+      {
+        "ordem": 4,
+        "item_type": "estudo",
+        "item_slug": "monagle-2011-fontan-aas-versus-varfarina-tromboprofilaxia",
+        "por_que": "A pergunta prática mais frequente do seguimento: AAS ou varfarina para tromboprofilaxia primária pós-Fontan. Este é o ensaio que gerou a evidência, antes de ver a recomendação já pronta."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "tromboprofilaxia-na-circulacao-de-fontan",
+        "por_que": "Do ensaio para a recomendação consolidada, incluindo os cenários em que a anticoagulação plena se sobrepõe ao antiagregante isolado."
+      },
+      {
+        "ordem": 6,
+        "item_type": "estudo",
+        "item_slug": "pundi-seguimento-de-40-anos-apos-fontan",
+        "por_que": "Fecha a trilha no horizonte mais longo que existe sobre o tema: desfechos reais de 40 anos em mais de mil pacientes, o que situa a expectativa de vida e as complicações tardias que o pediatra de hoje precisa antecipar."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-cardiologia-pediatrica-cia-civ-fechamento-percutaneo",
+    "titulo": "Cardiologia pediátrica: comunicação interatrial e interventricular — da criança ao fechamento percutâneo",
+    "tema": "Cardiologia pediátrica",
+    "objetivo": "Sair sabendo a evidência que sustenta o fechamento percutâneo de CIA e CIV, do primeiro ensaio comparativo contra a cirurgia até os dispositivos mais recentes, e como essa mesma decisão se aplica quando o defeito só é achado no adulto.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "estudo",
+        "item_slug": "du-2002-fechamento-transcateter-vs-cirurgico-de-cia-secundum",
+        "por_que": "Começa no ensaio que estabeleceu a alternativa: comparação direta entre fechamento transcateter e cirúrgico da CIA ostium secundum, mostrando desfecho comparável com menor morbidade do procedimento percutâneo."
+      },
+      {
+        "ordem": 2,
+        "item_type": "estudo",
+        "item_slug": "tomar-2011-amplatzer-seguimento-de-longo-prazo-em-529-pacientes",
+        "por_que": "A durabilidade é a dúvida natural depois do ensaio comparativo — este seguimento de longo prazo em 529 pacientes com o oclusor Amplatzer responde se o resultado inicial se mantém com os anos."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "fluxograma-comunicacao-interatrial-e-shunt-esquerda-direita-no-adulto-esc-2020",
+        "por_que": "Da evidência técnica para a árvore de decisão usada na prática hoje, incluindo os critérios que valem quando o mesmo defeito só é identificado na vida adulta."
+      },
+      {
+        "ordem": 4,
+        "item_type": "estudo",
+        "item_slug": "oster-fechamento-de-cia-secundum-revisao-sistematica-aha-acc-2018",
+        "por_que": "A síntese que sustenta a diretriz AHA/ACC 2018: revisão sistemática reunindo o corpo de evidência de terapia intervencionista versus conduta clínica na CIA secundum, para ver a força da recomendação, não só o enunciado dela."
+      },
+      {
+        "ordem": 5,
+        "item_type": "estudo",
+        "item_slug": "wang-oclusor-bioabsorvivel-para-civ-perimembranosa",
+        "por_que": "Muda de CIA para CIV, e do estabelecido para o experimental: ensaio randomizado de um oclusor totalmente bioabsorvível para a CIV perimembranosa, a fronteira atual da tecnologia de fechamento transcateter."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "teste-cardiopulmonar-de-exercicio-na-cardiopatia-congenita-aha-2025",
+        "por_que": "Fecha a trilha na avaliação que decide e acompanha o resultado funcional do fechamento, por lesão — o desfecho que interessa ao paciente, além da imagem do defeito ocluído."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-cardiologia-geriatrica-cardiopatia-congenita-diagnosticada-tarde",
+    "titulo": "Cardiologia geriátrica: a cardiopatia congênita que só aparece tarde — bicúspide, shunt e o idoso não diagnosticado",
+    "tema": "Cardiologia geriátrica",
+    "objetivo": "Sair sabendo reconhecer as lesões congênitas que permanecem silenciosas por décadas e se apresentam pela primeira vez no idoso — valva aórtica bicúspide, comunicação interatrial e suas consequências hemodinâmicas tardias — e como isso muda a investigação de um sopro ou de uma dispneia inexplicada no paciente geriátrico.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "valva-aortica-bicuspide-e-aortopatia-associada-esc-2024",
+        "por_que": "Começa pela lesão congênita mais comum de todas: a valva aórtica bicúspide costuma ficar silenciosa até a calcificação da meia-idade avançada, e pode se apresentar pela primeira vez como estenose aórtica no consultório geriátrico, disfarçada de doença puramente degenerativa."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "fluxograma-comunicacao-interatrial-e-shunt-esquerda-direita-no-adulto-esc-2020",
+        "por_que": "A segunda lesão que mais escapa ao diagnóstico na infância: uma CIA pequena pode ficar assintomática até a sétima ou oitava década, quando a complacência do ventrículo esquerdo cai com a idade e o shunt aumenta. Este fluxograma decide fechar ou não quando o achado é tardio."
+      },
+      {
+        "ordem": 3,
+        "item_type": "estudo",
+        "item_slug": "reveal-registry-hipertensao-pulmonar-associada-a-cardiopatia-congenita",
+        "por_que": "A consequência de décadas de shunt não corrigido: o REVEAL Registry mostra a hipertensão arterial pulmonar associada à cardiopatia congênita, incluindo Eisenmenger, com desfecho em 4 e 7 anos — é o que se encontra quando o diagnóstico tardio já custou a janela de fechamento simples."
+      },
+      {
+        "ordem": 4,
+        "item_type": "medicamento",
+        "item_slug": "bosentana",
+        "por_que": "Quando a hipertensão pulmonar já se instalou e o fechamento deixou de ser opção segura, esta é a classe terapêutica que resta — do achado tardio para a prescrição concreta."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "arritmias-e-sindrome-de-eisenmenger-em-cardiopatia-congenita-do-adulto",
+        "por_que": "A sobrecarga crônica de décadas também arritmiza: fibrilação e flutter atrial são achado comum no idoso com shunt tardio, e o limiar de estabilidade hemodinâmica é diferente do paciente sem cardiopatia estrutural."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "cardiopatia-congenita-do-adulto-achd-manejo-abrangente-esc-2020",
+        "por_que": "Fecha a trilha na moldura que une tudo: o manejo abrangente do adulto com cardiopatia congênita, hoje uma população que envelhece e cujo seguimento não pode parar na transição da pediatria — ele se estende, de fato, até a geriatria."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-cardiologia-geriatrica-choque-cardiogenico-suporte-hemodinamico",
+    "titulo": "Cardiologia geriátrica: suporte hemodinâmico no choque cardiogênico do muito idoso",
+    "tema": "Cardiologia geriátrica",
+    "objetivo": "Sair sabendo sequenciar vasopressor, inotrópico e diurético no choque cardiogênico do paciente muito idoso, com a cautela farmacológica que a idade impõe — depuração renal reduzida, betabloqueio crônico prévio e menor reserva para hipotensão — e fechar com os cuidados de alta que evitam a reinternação precoce.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "medicamento",
+        "item_slug": "noradrenalina-norepinefrina",
+        "por_que": "Começa pela prioridade fisiológica: antes de qualquer inotrópico, restaurar a pressão de perfusão coronariana e cerebral. É o vasopressor de primeira linha no choque cardiogênico, e no muito idoso a margem para hipotensão é menor."
+      },
+      {
+        "ordem": 2,
+        "item_type": "medicamento",
+        "item_slug": "dobutamina",
+        "por_que": "Com a pressão de perfusão restaurada, entra o inotrópico beta-agonista clássico — com a ressalva que mais pesa no idoso: maior risco de taquiarritmia num miocárdio já fibrosado pela idade."
+      },
+      {
+        "ordem": 3,
+        "item_type": "medicamento",
+        "item_slug": "milrinona",
+        "por_que": "Alternativa para quem chega ao choque em uso crônico de betabloqueador — extremamente comum no idoso com insuficiência cardíaca prévia, onde a dobutamina perde parte do efeito. A ressalva que a idade impõe aqui é outra: depuração renal, com necessidade de ajuste de dose que a dobutamina não exige."
+      },
+      {
+        "ordem": 4,
+        "item_type": "medicamento",
+        "item_slug": "levosimendana",
+        "por_que": "Terceira opção, por mecanismo independente do receptor beta — útil precisamente quando o betabloqueio crônico limita as duas anteriores e a função renal já limitou a milrinona."
+      },
+      {
+        "ordem": 5,
+        "item_type": "medicamento",
+        "item_slug": "furosemida",
+        "por_que": "Só depois de restaurar perfusão é que a diurese entra em cena. No muito idoso, a diurese agressiva sem perfusão garantida é a causa mais comum de lesão renal aguda iatrogênica nesse cenário."
+      },
+      {
+        "ordem": 6,
+        "item_type": "checklist",
+        "item_slug": "alta-pos-choque-cardiogenico",
+        "por_que": "Fecha a trilha no momento em que a sequência farmacológica termina e a prevenção de reinternação começa — o checklist reúne, em forma de conferência, a transição de cuidado que evita o retorno precoce à emergência."
+      }
+    ]
   }
 ]

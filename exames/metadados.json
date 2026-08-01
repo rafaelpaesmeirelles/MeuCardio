@@ -3359,5 +3359,142 @@
       "cardiopatia congenita sindromica",
       "aconselhamento genetico"
     ]
+  },
+  {
+    "slug": "holter-pediatrico-criterios-de-normalidade-por-idade",
+    "name": "Holter (ECG ambulatorial de 24h) em pediatria — critérios de normalidade por faixa etária",
+    "category": "metodo_grafico",
+    "theme": "Cardiologia pediátrica",
+    "what_it_measures": "Registro contínuo do ritmo cardíaco por 24 horas, usado em crianças para avaliar frequência cardíaca, pausas sinusais, condução atrioventricular e ectopia — os limiares de normalidade são diferentes dos do adulto e mudam com a idade, pelo tônus vagal mais alto da criança saudável.",
+    "reference_range": "Estudo de referência (Southall et al. 1981) em 92 crianças saudáveis de 7-11 anos, tecnicamente adequadas para análise: frequência cardíaca mais alta média de 164±17 bpm (sobre 9 batimentos); frequência mais baixa média de 49±6 bpm (sobre 3 batimentos) e 56±6 bpm (sobre 9 batimentos), com duração máxima abaixo de 55 bpm de até 40 minutos; ritmo de escape juncional na frequência mais baixa em 45% das crianças (duração máxima 25 min); pausas sinusais em 65% (60/92), com duração máxima média de 1,36±0,23 s; PR ≥0,20 s em 9/92 crianças, incluindo 3 com bloqueio AV de segundo grau Mobitz I (Wenckebach); ectopia isolada (<1/hora) em 21%.",
+    "indications": "Investigação de palpitações, síncope ou pré-síncope, avaliação pré-participação esportiva com achado suspeito no ECG de repouso, seguimento de arritmia já conhecida (ex.: extrassistolia frequente) e acompanhamento pós-operatório de cardiopatia congênita com risco de bloqueio AV ou taquiarritmia.",
+    "interpretation": "Achados que em adulto seriam sinal de alarme — pausa sinusal acima de 1 segundo, ritmo de escape juncional, Mobitz I durante o sono, frequência mínima abaixo de 55 bpm por dezenas de minutos — são variantes normais em criança saudável, sobretudo durante o sono, relacionadas ao predomínio vagal. O próprio estudo original conclui que crianças aparentemente saudáveis mostram variações de frequência e ritmo 'até então consideradas anormais'.",
+    "limitations": "A amostra de referência é de crianças de 7-11 anos; os valores não se aplicam diretamente a neonatos e lactentes, que têm frequência basal mais alta e resposta vagal diferente — faixas etárias mais jovens exigem tabela de normalidade própria, não coberta por este estudo. É um estudo de 1981, sem a tecnologia digital atual, mas os achados fisiológicos de base (predomínio vagal noturno como causa de bradicardia/pausa/bloqueio funcional) seguem sendo a referência citada na literatura pediátrica.",
+    "source_refs": [
+      "Southall DP, Johnston F, Shinebourne EA, Johnston PG. 24-hour electrocardiographic study of heart rate and rhythm patterns in population of healthy children. Br Heart J. 1981;45(3):281-91. PMID: 7470341."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "holter pediátrico",
+      "eletrocardiograma ambulatorial",
+      "arritmia infantil",
+      "pausa sinusal",
+      "ritmo juncional"
+    ]
+  },
+  {
+    "slug": "cateterismo-cardiaco-pediatrico-perfil-de-risco-e-eventos-adversos",
+    "name": "Cateterismo cardíaco pediátrico — perfil de risco e taxas de eventos adversos",
+    "category": "imagem",
+    "theme": "Cardiologia pediátrica",
+    "what_it_measures": "Procedimento invasivo diagnóstico e/ou terapêutico (angiografia, medida de pressões e saturações, intervenção percutânea) em criança com cardiopatia estrutural suspeita ou conhecida. Este registro trata do perfil de risco do procedimento em si — não do cálculo hemodinâmico de Qp:Qs, que tem exame próprio no tema Cardiopatias congênitas.",
+    "reference_range": "Não numérico — o dado relevante é a taxa de complicação, não um valor de referência. Registro multicêntrico C3PO (Congenital Cardiac Catheterization Project on Outcomes), 3.855 procedimentos em 6 centros (fev/2007-abr/2008): taxa mediana de eventos adversos de 16% entre centros (variação de 5-18%) — 20% nos procedimentos intervencionistas contra 10% nos diagnósticos; eventos adversos de alta gravidade em 9% dos intervencionistas contra 5% dos diagnósticos; eventos adversos 'incomuns' nos procedimentos de biópsia. Anestesia geral usada em 70% dos casos (variação de 28-99% entre centros); 22% dos procedimentos foram não eletivos ou emergenciais.",
+    "indications": "Confirmação hemodinâmica pré-operatória, biópsia endomiocárdica (vigilância de rejeição pós-transplante), intervenção percutânea (angioplastia, implante de stent, oclusão de defeito) e estudo eletrofisiológico em criança com cardiopatia congênita ou adquirida.",
+    "interpretation": "A taxa de eventos adversos não é uniforme entre tipos de procedimento — intervencionista tem o dobro da taxa do diagnóstico — nem entre centros, e a comparação bruta entre serviços (5-18%) reflete em parte diferença de composição de casos (case-mix), não necessariamente diferença de qualidade assistencial, como o próprio estudo ressalva.",
+    "limitations": "Dado de registro multicêntrico de 2007-2008, anterior à adoção disseminada de escores de risco padronizados por tipo de caso que vieram depois (como as categorias de risco do próprio C3PO); técnica, materiais e prática de sedação evoluíram desde então, e números atuais tendem a ser mais favoráveis. VERIFICAÇÃO HUMANA NECESSÁRIA para taxas de eventos adversos de coortes mais recentes (pós-2015), não conferidas nesta sessão.",
+    "source_refs": [
+      "Bergersen L, Marshall A, Gauvreau K, Beekman R, Hirsch R, Foerster S, et al. Adverse event rates in congenital cardiac catheterization - a multi-center experience. Catheter Cardiovasc Interv. 2010;75(3):389-400. PMID: 19885913. DOI: 10.1002/ccd.22266."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "cateterismo cardíaco pediátrico",
+      "evento adverso",
+      "c3po",
+      "cardiopatia congênita",
+      "procedimento invasivo"
+    ]
+  },
+  {
+    "slug": "holter-no-idoso-saudavel-achados-relacionados-a-idade",
+    "name": "Holter (ECG ambulatorial de 24h) no idoso saudável — achados relacionados à idade versus arritmia patológica",
+    "category": "metodo_grafico",
+    "theme": "Cardiologia geriátrica",
+    "what_it_measures": "Registro contínuo do ritmo cardíaco por 24 horas, usado para diferenciar ectopia benigna relacionada à idade de arritmia ou distúrbio de condução que exige investigação, em idoso sem cardiopatia estrutural conhecida.",
+    "reference_range": "Estudo de referência (Fleg & Kennedy, Chest 1982) em 98 idosos saudáveis e ativos (60-85 anos), com saúde cardiovascular confirmada por teste ergométrico máximo (98/98) e cintilografia com tálio (38/98): 'prevalência substancial' de extrassístoles supraventriculares e ventriculares, isoladas e complexas — o resumo indexado não quantifica o percentual exato por tipo de ectopia. Em contraste, bloqueio AV de alto grau, bradicardia sinusal acentuada, pausas sinusais anormais e parada sinusal foram descritos como RAROS em idosos normais. VERIFICAÇÃO HUMANA NECESSÁRIA para os percentuais numéricos exatos de cada tipo de arritmia, que estão no texto completo (Chest 1982;81(3)) e não no resumo lido nesta sessão.",
+    "indications": "Investigação de palpitações, síncope ou pré-síncope em idoso, quando a dúvida clínica é se um achado ectópico já visto no ECG de repouso é relevante ou uma variante relacionada à idade.",
+    "interpretation": "A distinção clinicamente relevante não é 'tem ou não tem arritmia' — é qual arritmia. Extrassistolia isolada e complexa (incluindo pares e salvas curtas) é achado frequente e não define, isoladamente, doença em idoso saudável e ativo. Já bloqueio AV avançado, bradicardia sinusal importante, pausa sinusal patológica e parada sinusal são incomuns mesmo nessa faixa etária e merecem investigação ativa quando encontrados — não devem ser atribuídos ao envelhecimento normal.",
+    "limitations": "Amostra selecionada de idosos ativos e sem doença cardiovascular demonstrável (não representa idosos frágeis ou com múltipla comorbidade) — extrapolar para a população geriátrica geral, mais heterogênea, é limitado. Estudo de 1982; o resumo indexado no PubMed traz só a descrição qualitativa citada, sem os percentuais exatos de prevalência por tipo de arritmia.",
+    "source_refs": [
+      "Fleg JL, Kennedy HL. Cardiac arrhythmias in a healthy elderly population: detection by 24-hour ambulatory electrocardiography. Chest. 1982;81(3):302-7. PMID: 7056104."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "holter no idoso",
+      "arritmia relacionada à idade",
+      "ectopia benigna",
+      "bloqueio av",
+      "envelhecimento cardiovascular"
+    ]
+  },
+  {
+    "slug": "digoxinemia-serica-no-idoso-com-funcao-renal-reduzida",
+    "name": "Digoxinemia sérica no idoso — janela terapêutica estreita com função renal reduzida",
+    "category": "laboratorial",
+    "theme": "Cardiologia geriátrica",
+    "what_it_measures": "Concentração sérica de digoxina, fármaco de eliminação predominantemente renal e margem terapêutica estreita. No idoso, a redução fisiológica do clearance de creatinina — presente mesmo com creatinina sérica 'normal', pela menor massa muscular — reduz a depuração do fármaco e aumenta o risco de acúmulo e toxicidade na mesma dose que seria segura em paciente mais jovem.",
+    "reference_range": "Análise post-hoc do ensaio DIG (3.782 homens com fração de ejeção ≤45%, digoxina vs. placebo) mostrou relação dose-resposta com mortalidade: o grupo com digoxinemia mais baixa (0,5-0,8 ng/mL) teve redução de mortalidade de 6,3% em relação ao placebo, enquanto o grupo com digoxinemia mais alta (≥1,2 ng/mL) teve aumento de 11,8% na mortalidade. Os autores concluem que o efeito benéfico se concentra na faixa de 0,5 a 0,8 ng/mL — abaixo do corte de toxicidade classicamente citado (em torno de 2,0 ng/mL), que marca risco de intoxicação, não o alvo de benefício.",
+    "indications": "Monitorização em idoso em uso de digoxina para controle de frequência na fibrilação atrial ou como adjuvante na insuficiência cardíaca com fração de ejeção reduzida — sobretudo diante de piora aguda da função renal, início de fármaco com interação conhecida (amiodarona, verapamil, claritromicina) ou sintomas sugestivos de toxicidade (náusea, distúrbio visual, arritmia nova).",
+    "interpretation": "Nível dentro da faixa de benefício (0,5-0,8 ng/mL) não exclui toxicidade em paciente sensível — a correlação entre nível sérico e efeito clínico é mais fraca no idoso. Ainda assim, nível acima de 1,2 ng/mL associou-se a excesso de mortalidade na mesma coorte e deve motivar redução de dose, independentemente de sintomas.",
+    "limitations": "O ensaio DIG foi conduzido só em homens; a extrapolação do alvo de 0,5-0,8 ng/mL para mulheres é prática consolidada, mas não foi demonstrada na mesma coorte. É análise post-hoc, não um desfecho primário pré-especificado do ensaio. VERIFICAÇÃO HUMANA NECESSÁRIA para o ajuste de dose específico por faixa de clearance de creatinina no idoso — não confirmado nesta sessão em bula brasileira ou diretriz.",
+    "source_refs": [
+      "Rathore SS, Curtis JP, Wang Y, Bristow MR, Krumholz HM. Association of serum digoxin concentration and outcomes in patients with heart failure. JAMA. 2003;289(7):871-8. PMID: 12588271."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "digoxina",
+      "digoxinemia",
+      "idoso",
+      "função renal",
+      "toxicidade digitálica"
+    ]
+  },
+  {
+    "slug": "ressonancia-magnetica-cardiaca-fetal",
+    "name": "Ressonância magnética cardíaca fetal",
+    "category": "imagem",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Imagem complementar ao ecocardiograma fetal na avaliação de cardiopatia congênita — usa reconstrução tridimensional com correção de movimento a partir de múltiplas aquisições bidimensionais (o coração fetal não pode ser sincronizado por ECG como no adulto), permitindo visualizar estruturas vasculares e a anatomia cardíaca com detalhe que o ultrassom pode não alcançar.",
+    "reference_range": "Não se aplica um valor numérico de referência — a avaliação é anatômica, não quantitativa por corte numérico.",
+    "indications": "Uso como complemento à ecocardiografia fetal (método de primeira linha), particularmente quando há necessidade de detalhamento vascular adicional ou quando a janela ultrassonográfica é inadequada (hábito corporal materno, posição fetal, oligoidrâmnio).",
+    "interpretation": "No maior estudo prospectivo até a publicação (Lloyd et al., Lancet 2019 — 85 casos consecutivos de cardiopatia congênita suspeita ou confirmada), a reconstrução 3D com correção de movimento identificou 97% das estruturas anatômicas relevantes, contra 53% pela RM 2D sem correção de movimento — e avaliadores classificaram a qualidade de imagem 3D como superior em 90% das estruturas comparáveis. A concordância das medidas vasculares com o ecocardiograma foi boa, com coeficiente de correlação intraclasse de 0,78.",
+    "limitations": "A técnica descrita depende de pós-processamento (reconstrução por registro de fatia-volume), não é uma sequência pronta disponível em qualquer aparelho — exige software específico. Não substitui o ecocardiograma fetal como método de primeira linha; é complementar. VERIFICAÇÃO HUMANA NECESSÁRIA para idade gestacional mínima recomendada e eventuais contraindicações específicas da gestação, não detalhadas no resumo lido nesta sessão.",
+    "source_refs": [
+      "Lloyd DFA, Pushparajah K, Simpson JM, van Amerom JFP, van Poppel MPM, et al. Three-dimensional visualisation of the fetal heart using prenatal MRI with motion-corrected slice-volume registration: a prospective, single-centre cohort study. Lancet. 2019;393(10181):1619-1627. PMID: 30910324."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ressonância magnética fetal",
+      "cardiopatia congênita",
+      "ecocardiograma fetal",
+      "reconstrução 3d"
+    ]
+  },
+  {
+    "slug": "teste-cardiopulmonar-de-exercicio-em-cardiopatia-congenita-do-adulto",
+    "name": "Teste cardiopulmonar de exercício (CPET) em cardiopatia congênita do adulto (ACHD)",
+    "category": "metodo_grafico",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Ergoespirometria com medida direta do consumo de oxigênio (VO2) durante exercício progressivo, usada no adulto com cardiopatia congênita para quantificar objetivamente a capacidade funcional — com frequência de forma mais sensível do que a limitação percebida pelo próprio paciente, que costuma se adaptar à limitação desde a infância.",
+    "reference_range": "Diller et al. (Circulation 2005), comparando 335 pacientes com cardiopatia congênita do adulto, 40 pacientes com insuficiência cardíaca não congênita e 23 controles saudáveis: pico de VO2 reduzido nos pacientes com ACHD frente a controles saudáveis pareados por idade (21,7±8,5 vs. 45,1±8,6 mL/kg/min; p<0,001) — pouco menos da metade da capacidade aeróbica esperada. A capacidade de exercício foi comparável à de pacientes com insuficiência cardíaca de gravidade equivalente por classe funcional.",
+    "indications": "Estratificação de risco em cardiopatia congênita do adulto, sobretudo em fisiologia complexa (circulação de Fontan, transposição corrigida, tetralogia de Fallot operada) — quantifica objetivamente a limitação funcional mesmo quando o paciente relata poucos sintomas.",
+    "interpretation": "Pico de VO2 reduzido foi preditor independente de desfecho adverso (hospitalização ou óbito) em seguimento de 10 meses, ocorrido em 62 dos 335 pacientes com ACHD (18,5%) — ao lado de frequência cardíaca de pico, função pulmonar, hipertensão pulmonar, sexo e índice de massa corporal, identificados como correlatos multivariados da capacidade de exercício reduzida.",
+    "limitations": "Seguimento curto (10 meses) no estudo original; a magnitude da queda de VO2 variou por subtipo anatômico de cardiopatia congênita, sem um único corte numérico universal de risco reportado no resumo. VERIFICAÇÃO HUMANA NECESSÁRIA para o valor de corte de pico de VO2 usado na prática para indicar transplante ou intervenção, que precisa vir de diretriz específica (ESC 2020 ou AHA/ACC 2018 de cardiopatia congênita do adulto) — não confirmado nesta sessão.",
+    "source_refs": [
+      "Diller GP, Dimopoulos K, Okonko D, Li W, Babu-Narayan SV, Broberg CS, et al. Exercise intolerance in adult congenital heart disease: comparative severity, correlates, and prognostic implication. Circulation. 2005;112(6):828-35. PMID: 16061735."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "teste cardiopulmonar de exercício",
+      "cardiopatia congênita do adulto",
+      "achd",
+      "pico de vo2",
+      "capacidade funcional"
+    ]
   }
 ]

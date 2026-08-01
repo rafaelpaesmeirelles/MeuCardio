@@ -9610,5 +9610,169 @@
       "Mach F, Koskinas KC, Roeters van Lennep J, et al. 2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias. Eur Heart J. 2025;46(42):4359-4378. DOI: 10.1093/eurheartj/ehaf190. PMID: 40878289."
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "cardiomiopatia-hipertrofica-pediatrica-triagem-familiar-abaixo-dos-10-anos",
+    "titulo": "Triagem familiar de cardiomiopatia hipertrófica: esperar até os 10-12 anos?",
+    "tema": "Cardiologia pediátrica",
+    "nivel": "intermediário",
+    "enunciado": "Menino de 7 anos, assintomático, exame físico normal, é levado à consulta porque seu pai foi diagnosticado com cardiomiopatia hipertrófica (CMH) na semana passada. Não há história familiar de morte súbita, e o genótipo do pai ainda não foi identificado. A família ouviu falar que a triagem de familiares só precisa começar aos 10-12 anos e pergunta se pode esperar até lá.",
+    "pergunta": "Diante de um estudo com 524 crianças submetidas a triagem familiar de CMH, qual conduta melhor reflete o que os dados sugerem sobre o momento de iniciar a avaliação?",
+    "opcoes": [
+      "Aguardar até os 10-12 anos sem qualquer avaliação agora, pois é a idade padrão de início da triagem seriada e a criança não tem história familiar de morte súbita",
+      "Considerar avaliação clínica basal (história, exame, ECG e ecocardiograma) já no momento do diagnóstico do caso índice, independentemente da idade: no estudo, 9,9% das 331 crianças triadas com menos de 10 anos já tinham evidência ecocardiográfica de CMH, e apenas 69% das crianças com doença de início precoce preenchiam os critérios de triagem precoce vigentes — ou seja, um terço dos casos precoces teria sido perdido pela regra de esperar até os 10-12 anos",
+      "Solicitar apenas teste genético isolado; se negativo, dispensar todo acompanhamento clínico futuro, independentemente do resultado no pai",
+      "Encaminhar direto para ressonância cardíaca com contraste, dispensando ECG e ecocardiograma como primeira linha"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Em coorte de triagem familiar de CMH (Lafreniere-Roula et al., Eur Heart J 2019), 524 crianças foram avaliadas antes dos 18 anos; 331 tinham menos de 10 anos, e 9,9% delas já apresentavam evidência ecocardiográfica de CMH, com 1,1% sintomáticas já na primeira triagem. A idade mediana de início do fenótipo foi 8,9 anos (IQR 4,7-13,4), e a idade mediana do primeiro evento cardíaco maior (morte, morte súbita, ou necessidade de miectomia/CDI/transplante) foi 10,9 anos — com apenas 1,5 ano de intervalo mediano entre o início do fenótipo e o evento. Mais da metade (52,5%) das crianças fenótipo-positivas e 41% dos eventos maiores ocorreram antes dos 10 anos. Criticamente, apenas 69% das crianças com CMH de início precoce preenchiam os critérios de triagem precoce então vigentes (história familiar de morte súbita, genótipo maligno, sintomas) — ou seja, um terço dos casos precoces não seria identificado por esses critérios. Sexo masculino, história familiar de morte súbita e variantes patogênicas em MYH7/MYBPC3 foram preditores de CMH e de eventos precoces. Os autores concluem que familiares mais jovens deveriam ser considerados para triagem clínica e genética mais cedo, para identificar o subgrupo que precisa de vigilância mais próxima — sem que isso signifique, por si só, uma mudança formal já incorporada em toda diretriz vigente; é um argumento baseado em dados observacionais para reconsiderar a prática de esperar até os 10-12 anos, e uma avaliação clínica basal no momento do diagnóstico do caso índice é uma conduta prudente e proporcional ao achado.",
+    "source_refs": [
+      "Lafreniere-Roula M, Bolkier Y, Zahavich L, Mathew J, George K, Wilson J, Stephenson EA, Benson LN, Manlhiot C, Mital S. Family screening for hypertrophic cardiomyopathy: Is it time to change practice guidelines? Eur Heart J. 2019;40(45):3672-3681. DOI: 10.1093/eurheartj/ehz396. PMID: 31170284."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "insuficiencia-cardiaca-em-lactente-com-fisiologia-univentricular-enalapril-nao-comprovado",
+    "titulo": "IECA na insuficiência cardíaca do lactente com ventrículo único: a extrapolação do adulto se confirma?",
+    "tema": "Cardiologia pediátrica",
+    "nivel": "avançado",
+    "enunciado": "Lactente de 5 meses, portador de síndrome de coração esquerdo hipoplásico após cirurgia de Norwood (fisiologia de ventrículo único, volume-sobrecarregado), apresenta déficit de crescimento e escore de insuficiência cardíaca de Ross elevado. O pediatra assistente sugere iniciar enalapril, extrapolando a prática consagrada de IECA na insuficiência cardíaca por disfunção sistólica do ventrículo sistêmico biventricular do adulto.",
+    "pergunta": "O que o ensaio clínico randomizado do Pediatric Heart Network (Infant Single Ventricle Trial) mostrou sobre o enalapril nesse contexto específico?",
+    "opcoes": [
+      "Em 230 lactentes com fisiologia de ventrículo único randomizados para enalapril (dose-alvo 0,4 mg/kg/dia) ou placebo e seguidos até 14 meses, não houve diferença no escore z de peso-para-idade (-0,62 vs. -0,42; p=0,28), na estatura, na classe de Ross, no BNP, no desenvolvimento (Bayley) ou na fração de ejeção — o estudo não sustentou o uso rotineiro de enalapril nessa população",
+      "O mesmo ensaio confirmou benefício robusto e estatisticamente significativo de enalapril sobre o crescimento somático, validando a extrapolação direta da prática do ventrículo sistêmico biventricular do adulto",
+      "Não existe nenhum ensaio clínico randomizado sobre IECA em lactentes com fisiologia de ventrículo único; toda a prática nessa população específica é puramente extrapolada de adultos, sem nunca ter sido testada",
+      "O ensaio mostrou redução estatisticamente significativa de mortalidade e necessidade de transplante no grupo enalapril em comparação ao placebo"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O Infant Single Ventricle Trial (Hsu DT et al., Circulation 2010) randomizou, em duplo-cego, 230 lactentes com fisiologia de ventrículo único para enalapril (dose-alvo 0,4 mg/kg/dia) ou placebo, seguidos até 14 meses de idade, com desfecho primário de escore z de peso-para-idade. Não houve diferença entre os grupos nesse desfecho (-0,62±0,13 enalapril vs. -0,42±0,13 placebo; p=0,28), nem em estatura-para-idade, classe de insuficiência cardíaca de Ross, peptídeo natriurético cerebral, escores de desenvolvimento de Bayley ou fração de ejeção ventricular. A incidência de óbito ou transplante foi 13% e não diferiu entre grupos, e eventos adversos graves foram semelhantes (88 no grupo enalapril, 87 no placebo). Os autores concluem explicitamente que a administração de enalapril a lactentes com fisiologia de ventrículo único no primeiro ano de vida não melhorou o crescimento somático, a função ventricular ou a gravidade da insuficiência cardíaca, e que os resultados não sustentam o uso rotineiro de enalapril nessa população. Isso contrasta com a disfunção sistólica do ventrículo sistêmico biventricular (cardiomiopatia dilatada, por exemplo), onde o IECA segue sendo pilar terapêutico extrapolado da evidência do adulto dentro de uma estratégia individualizada por fisiopatologia, conforme o posicionamento científico da American Heart Association sobre tratamento das cardiomiopatias pediátricas. A lição prática é que a fisiologia de ventrículo único é um cenário hemodinâmico distinto (volume-sobrecarregado, sem necessariamente disfunção sistólica primária), no qual a extrapolação direta da prática do adulto foi especificamente testada e não se confirmou.",
+    "source_refs": [
+      "Hsu DT, Zak V, Mahony L, Sleeper LA, Atz AM, Levine JC, Barker PC, Ravishankar C, McCrindle BW, Williams RV, Altmann K, Ghanayem NS, Margossian R, Chung WK, Border WL, Pearson GD, Stylianou MP, Mital S; Pediatric Heart Network Investigators. Enalapril in infants with single ventricle: results of a multicenter randomized trial. Circulation. 2010;122(4):333-340. DOI: 10.1161/CIRCULATIONAHA.109.927988. PMID: 20625111.",
+      "Bogle C, Colan SD, Miyamoto SD, Choudhry S, Baez-Hernandez N, Brickler MM, Feingold B, Lal AK, Lee TM, Canter CE, Lipshultz SE; American Heart Association Young Hearts Pediatric Heart Failure and Transplantation Committee. Treatment Strategies for Cardiomyopathy in Children: A Scientific Statement From the American Heart Association. Circulation. 2023;148(2):174-195. DOI: 10.1161/CIR.0000000000001151. PMID: 37288568."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hipertensao-pulmonar-persistente-do-recem-nascido-oxido-nitrico-inalatorio",
+    "titulo": "Hipertensão pulmonar persistente do recém-nascido: qual terapia reduz a necessidade de ECMO?",
+    "tema": "Cardiologia pediátrica",
+    "nivel": "intermediário",
+    "enunciado": "Recém-nascido a termo, 39 semanas, com síndrome de aspiração meconial, apresenta hipoxemia refratária desproporcional aos achados radiográficos pulmonares e diferença de saturação pré e pós-ductal maior que 10%. Ecocardiograma confirma hipertensão pulmonar suprassistêmica com shunt direita-esquerda pelo forame oval e pelo canal arterial, sem cardiopatia estrutural. Está em ventilação mecânica otimizada e sedado, sem acidose ou hipotermia associadas.",
+    "pergunta": "Qual terapia farmacológica tem o maior nível de evidência para melhorar a oxigenação e reduzir a necessidade de suporte extracorpóreo (ECMO) neste quadro?",
+    "opcoes": [
+      "Óxido nítrico inalatório — em ensaio multicêntrico randomizado com 58 recém-nascidos a termo com hipoxemia grave e hipertensão pulmonar persistente, ele dobrou a oxigenação sistêmica em 53% dos tratados versus 7% no grupo controle, e reduziu a necessidade de ECMO de 71% para 40% (p=0,02), sem causar hipotensão sistêmica ou aumentar metemoglobina",
+      "Hiperventilação induzindo alcalose respiratória para promover vasodilatação pulmonar, sem necessidade de qualquer vasodilatador farmacológico",
+      "Sildenafila oral isolada, sem qualquer papel para o óxido nítrico inalatório neste cenário",
+      "Corticoide sistêmico em altas doses, isoladamente, como primeira linha antes de qualquer vasodilatador pulmonar"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "No estudo pivotal do Inhaled Nitric Oxide Study Group (Roberts JD Jr et al., N Engl J Med 1997), 58 recém-nascidos a termo com hipoxemia grave e hipertensão pulmonar persistente foram randomizados para gás controle (nitrogênio) ou óxido nítrico inalatório (80 ppm) misturado ao oxigênio do ventilador. O óxido nítrico dobrou a oxigenação sistêmica em 16 de 30 lactentes (53%), contra apenas 2 de 28 (7%) no grupo controle; a terapia prolongada manteve a oxigenação em 75% dos que responderam inicialmente. A necessidade de ECMO caiu de 71% no grupo controle para 40% no grupo óxido nítrico (p=0,02), sem diferença no número de óbitos entre os grupos, e sem que o óxido nítrico causasse hipotensão sistêmica ou elevação de metemoglobina. Esse é o fundamento do óxido nítrico inalatório como vasodilatador pulmonar seletivo de primeira linha na hipertensão pulmonar persistente do recém-nascido. A hiperventilação para alcalose respiratória induzida foi prática histórica, hoje evitada por seus riscos (barotrauma, redução da perfusão cerebral), e o manejo contemporâneo prioriza ventilação protetora, ecocardiografia à beira-leito para monitorar a fisiopatologia e resposta ao tratamento, e vasodilatadores pulmonares direcionados, com o óxido nítrico inalatório como pilar farmacológico inicial.",
+    "source_refs": [
+      "Roberts JD Jr, Fineman JR, Morin FC 3rd, Shaul PW, Rimar S, Schreiber MD, Polin RA, Zwass MS, Zayek MM, Gross I, Heymann MA, Zapol WM; Inhaled Nitric Oxide Study Group. Inhaled nitric oxide and persistent pulmonary hypertension of the newborn. N Engl J Med. 1997;336(9):605-610. DOI: 10.1056/NEJM199702273360902. PMID: 9032045.",
+      "Singh Y, Lakshminrusimha S. Pathophysiology and Management of Persistent Pulmonary Hypertension of the Newborn. Clin Perinatol. 2021;48(3):595-618. DOI: 10.1016/j.clp.2021.05.009. PMID: 34353582."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "doenca-de-kawasaki-refrataria-a-imunoglobulina-infliximabe-versus-segunda-dose-kidcare",
+    "titulo": "Doença de Kawasaki refratária à imunoglobulina: infliximabe ou segunda dose de IVIG?",
+    "tema": "Cardiologia pediátrica",
+    "nivel": "avançado",
+    "enunciado": "Menina de 3 anos, tratada há 40 horas com imunoglobulina intravenosa (IVIG) em dose única (2 g/kg) para doença de Kawasaki, mantém febre persistente e elevação de PCR, configurando doença refratária à primeira dose de IVIG.",
+    "pergunta": "Segundo o ensaio randomizado KIDCARE, qual opção de segunda linha apresentou melhor desfecho primário (resolução da febre em 24h sem recorrência em 7 dias) e menor tempo de internação?",
+    "opcoes": [
+      "Segunda dose de imunoglobulina intravenosa, com taxa de resolução da febre superior à do infliximabe",
+      "Infliximabe (10 mg/kg IV), com resolução da febre em 77% dos pacientes versus 51% com segunda dose de IVIG (odds ratio 0,31; IC95% 0,13-0,73; p=0,0076), menor número médio de dias de febre (1,5 vs. 2,5 dias; p=0,014), menor tempo médio de internação (3,2 vs. 4,5 dias; p<0,001) e menor incidência de queda significativa de hemoglobina e de anemia hemolítica",
+      "Corticoide sistêmico em pulsoterapia, não avaliado no ensaio KIDCARE mas considerado superior a ambos por consenso de especialistas",
+      "Ácido acetilsalicílico isolado em dose anti-inflamatória, sem necessidade de qualquer terapia imunológica adicional"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O ensaio KIDCARE (Burns JC et al., Lancet Child Adolesc Health 2021) randomizou 105 pacientes (4 semanas a 17 anos) com doença de Kawasaki refratária à primeira dose de IVIG (febre persistente 36h ou mais após o término da infusão) para infliximabe (10 mg/kg IV em 2h, sem pré-medicação) ou segunda infusão de IVIG (2 g/kg), com crossover para os que mantinham febre entre 24h e 7 dias. Na população por intenção de tratar (103 pacientes), o desfecho primário — resolução da febre em 24h sem recorrência atribuível à doença de Kawasaki em 7 dias pós-alta — ocorreu em 77% (40/52) do grupo infliximabe versus 51% (25/49) do grupo segunda IVIG (odds ratio 0,31; IC95% 0,13-0,73; p=0,0076). O grupo infliximabe teve menos dias médios de febre (1,5 vs. 2,5 dias; p=0,014) e internação mais curta (3,2 vs. 4,5 dias; p<0,001). Em segurança, queda de hemoglobina ≥2 g/dL ocorreu em 33% dos pacientes expostos a IVIG (três precisaram de transfusão) contra 7% dos expostos só a infliximabe (nenhuma transfusão); anemia hemolítica, o único evento adverso grave definida ou provavelmente relacionado ao tratamento, ocorreu em 15% dos expostos a IVIG e em nenhum paciente exposto só a infliximabe. Os autores concluem que o infliximabe é seguro, bem tolerado e eficaz para doença de Kawasaki resistente a IVIG, com menor duração de febre, menor necessidade de terapia adicional, anemia menos grave e internação mais curta que uma segunda infusão de IVIG. Errata publicada em Lancet Child Adolesc Health 2022;6(2):e5, não incorporada nesta leitura do resumo.",
+    "source_refs": [
+      "Burns JC, Roberts SC, Tremoulet AH, He F, Printz BF, Ashouri N, Jain SS, Michalik DE, Sharma K, Truong DT, Wood JB, Kim KK, Jain S; KIDCARE Multicenter Study Group. Infliximab versus second intravenous immunoglobulin for treatment of resistant Kawasaki disease in the USA (KIDCARE): a randomised, multicentre comparative effectiveness trial. Lancet Child Adolesc Health. 2021;5(12):852-861. DOI: 10.1016/S2352-4642(21)00270-4. PMID: 34715057. Errata em Lancet Child Adolesc Health. 2022;6(2):e5. DOI: 10.1016/S2352-4642(21)00399-0."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sincope-no-idoso-por-hipotensao-ortostatica-relacionada-a-polifarmacia",
+    "titulo": "Síncope no idoso: quando a lista de anti-hipertensivos é a causa, não a solução",
+    "tema": "Cardiologia geriátrica",
+    "nivel": "básico",
+    "enunciado": "Mulher, 82 anos, hipertensa, em uso de losartana, hidroclorotiazida, anlodipino e um diurético poupador de potássio, prescritos por diferentes médicos ao longo dos anos, sem revisão conjunta da lista. Relata dois episódios de síncope ao levantar da cama pela manhã nos últimos dois meses, sem pródromo cardíaco e sem palpitações. Pressão arterial sentada 118/70 mmHg; após 3 minutos em pé, cai para 90/54 mmHg (queda sistólica de 28 mmHg), com tontura reproduzida.",
+    "pergunta": "Diante da hipotensão ortostática confirmada, qual conduta é apoiada por evidência sobre rastreio e desprescrição em idosos polimedicados?",
+    "opcoes": [
+      "Manter todos os anti-hipertensivos inalterados e apenas orientar a paciente a se levantar mais devagar, sem rever a lista de medicações",
+      "Rastrear sistematicamente hipotensão ortostática em idosos e, diante de resultado positivo, considerar a desprescrição de anti-hipertensivos: em estudo de atenção primária, a triagem levou à descontinuação de anti-hipertensivo em 17% dos pacientes com hipotensão ortostática positiva versus 4% dos negativos (p=0,037), sendo os bloqueadores de canal de cálcio a classe mais frequentemente suspensa",
+      "Substituir todos os anti-hipertensivos orais por um agente de ação central, sem necessidade de reavaliar a pressão em pé depois da troca",
+      "Aumentar a dose de hidroclorotiazida para compensar uma eventual retenção hídrica associada aos episódios de síncope"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Em estudo de rastreio de hipotensão ortostática (queda de PAS ≥20 mmHg ou PAD ≥10 mmHg após 3 minutos em pé) em pacientes ≥65 anos de atenção primária (Kaye MG et al., Blood Press Monit 2023), a prevalência de hipotensão ortostática foi de 18%. Pacientes com hipotensão ortostática positiva tinham mais frequentemente uso prévio de betabloqueador (56% vs. 32%, p=0,056) e de diurético poupador de potássio (11% vs. 1%, p=0,026) que os negativos. Médicos descontinuaram algum anti-hipertensivo com mais frequência nos pacientes com rastreio positivo (17% vs. 4%; p=0,037), sendo os bloqueadores de canal de cálcio a classe mais frequentemente suspensa. Os autores concluem que a hipotensão ortostática assintomática é prevalente em idosos e que o rastreio pode levar à desescalada do esquema anti-hipertensivo e à redução da polifarmácia. Essa conduta se soma ao princípio geral de segurança do idoso polimedicado: quedas e hipotensão ortostática estão entre as manifestações clínicas mais comuns de reação adversa a medicamento nessa faixa etária, e o risco cresce com alterações farmacocinéticas e farmacodinâmicas relacionadas à idade, comorbidade e polifarmácia — o que torna a revisão periódica da lista de medicamentos, com desprescrição quando o fármaco não é mais eficaz, necessário ou mais seguro que uma alternativa, parte do manejo da síncope, e não um passo isolado da avaliação cardiológica.",
+    "source_refs": [
+      "Kaye MG, Rutowski J, Aftab H, Pandey R, Khan R, Kalot MA, Anand R, Graham SP. Screening for orthostatic hypotension in the geriatric population in a real-world primary care setting reduces prescribed antihypertensive medications. Blood Press Monit. 2023;28(6):338-342. DOI: 10.1097/MBP.0000000000000673. PMID: 37661718.",
+      "Lavan AH, Gallagher P. Predicting risk of adverse drug reactions in older adults. Ther Adv Drug Saf. 2016;7(1):11-22. DOI: 10.1177/2042098615615472. PMID: 26834959."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "choque-cardiogenico-no-idoso-decisao-de-suporte-circulatorio-mecanico-por-idade",
+    "titulo": "Choque cardiogênico no idoso: a idade isolada contraindica o suporte circulatório mecânico?",
+    "tema": "Cardiologia geriátrica",
+    "nivel": "avançado",
+    "enunciado": "Homem, 78 anos, previamente independente para as atividades de vida diária, sem doença arterial periférica, é admitido com infarto agudo do miocárdio anterior extenso complicado por choque cardiogênico refratário a inotrópicos. A equipe discute a indicação de suporte circulatório mecânico de curta duração (ECMO veno-arterial ou Impella), e um dos membros argumenta que idade acima de 75 anos deveria pesar como contraindicação relativa suficiente para não oferecer o suporte.",
+    "pergunta": "O que dados observacionais sobre suporte circulatório mecânico de curta duração em pacientes ≥70 anos sustentam quanto ao papel da idade isolada na decisão?",
+    "opcoes": [
+      "A idade isoladamente deve ser usada como contraindicação absoluta ao suporte mecânico, independentemente de outros fatores clínicos do paciente",
+      "Em coorte retrospectiva de 164 implantes de suporte de curta duração (VA-ECMO ou Impella CP), os 45 pacientes (27,4%) com 70 anos ou mais tiveram sobrevida na alta (40% vs. 43,7%) e no seguimento (35,6% vs. 37,8%) semelhante à dos pacientes mais jovens, sem aumento significativo de complicações; no grupo idoso, os preditores de mortalidade foram doença arterial periférica, lactato e creatinina elevados no implante, tempo de parada cardíaca mais longo e pior fração de ejeção pós-implante — ou seja, a seleção clínica pesa mais que a idade cronológica isolada",
+      "O suporte circulatório mecânico em idosos é sistematicamente fútil e deveria ser reservado exclusivamente a pacientes com menos de 60 anos",
+      "Não existem dados observacionais sobre suporte circulatório mecânico em pacientes idosos, apenas extrapolação de séries de adultos jovens"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Em análise retrospectiva de um centro de referência (Alonso-Fernandez-Gatta M et al., Artif Organs 2022), de 164 implantes de suporte circulatório mecânico de curta duração (VA-ECMO ou Impella CP) entre 2013 e outubro de 2020, 45 (27,4%) foram em pacientes com 70 anos ou mais (73,3% VA-ECMO, 26,7% Impella CP), 80% como ponte para recuperação e 15,6% para intervenção coronária percutânea de alto risco. Não houve diferença significativa de complicações entre o grupo idoso e o mais jovem. A sobrevida na alta (40% vs. 43,7%; p=0,403) e no seguimento (mediana de 13,6 meses; 35,6% vs. 37,8%; log-rank p=0,061) foi semelhante entre idosos e pacientes mais jovens. Os fatores preditivos de mortalidade dentro do grupo idoso foram doença arterial periférica (p=0,037), lactato mais alto (p=0,003) e creatinina mais alta (p=0,035) no momento do implante, tempo de parada cardíaca mais longo (p=0,003) e pior fração de ejeção ventricular esquerda pós-implante (p=0,003); pacientes com indicação de suporte para angioplastia de alto risco tiveram sobrevida maior que as demais indicações (p=0,013). Os autores concluem que o suporte de curta duração em idosos pode ser opção razoável em situações de comprometimento hemodinâmico, sem aumento significativo de complicações ou mortalidade em comparação a pacientes mais jovens, e que a idade não deveria ser contraindicação absoluta — mas que a seleção cuidadosa do candidato, com base em comorbidades e marcadores de gravidade no momento do implante, é necessária. No caso descrito, a ausência de doença arterial periférica e a independência funcional prévia são fatores que pesam a favor de considerar o suporte mecânico, e não contra, apesar da idade.",
+    "source_refs": [
+      "Alonso-Fernandez-Gatta M, Merchan-Gomez S, Toranzo-Nieto I, Gonzalez-Cebrian M, Diego-Nieto A, Barrio A, Martin-Herrero F, Sanchez PL. Short-term mechanical circulatory support in elderly patients. Artif Organs. 2022;46(5):867-877. DOI: 10.1111/aor.14117. PMID: 34780090."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "regurgitacao-mitral-secundaria-grave-idoso-inoperavel-durabilidade-do-beneficio-em-5-anos-coapt",
+    "titulo": "Reparo transcateter borda a borda em idosa inoperável: o benefício dura ou é só paliação de curto prazo?",
+    "tema": "Cardiologia geriátrica",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 84 anos, com insuficiência cardíaca de fração de ejeção reduzida e regurgitação mitral secundária grave, sintomática (classe funcional III) apesar de terapia clínica otimizada em doses máximas toleradas. A equipe cirúrgica considera o risco cirúrgico proibitivo pela idade e pelas comorbidades, e a família questiona se um procedimento transcateter de borda a borda (tipo MitraClip) realmente compensa em alguém com expectativa de vida limitada, ou se seria apenas paliação de curto prazo.",
+    "pergunta": "O que o seguimento de 5 anos do ensaio COAPT mostra sobre a durabilidade do benefício do reparo transcateter borda a borda nesse cenário?",
+    "opcoes": [
+      "O benefício se limitou aos primeiros 30 dias após o procedimento e desapareceu completamente ao longo do primeiro ano de seguimento",
+      "Em 5 anos, o grupo tratado com reparo transcateter teve taxa anualizada de internação por insuficiência cardíaca menor (33,1%/ano vs. 57,2%/ano; hazard ratio 0,53; IC95% 0,41-0,68) e mortalidade por todas as causas menor (57,3% vs. 67,2%; hazard ratio 0,72; IC95% 0,58-0,89) que o grupo em terapia clínica isolada, com eventos de segurança específicos do dispositivo concentrados nos primeiros 30 dias (1,4% dos pacientes tratados)",
+      "A mortalidade em 5 anos foi idêntica nos dois grupos, e o único ganho documentado foi em qualidade de vida autorreferida, sem efeito em desfechos duros",
+      "O estudo não fez seguimento além de 2 anos, portanto não existe dado de durabilidade do benefício"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O seguimento de 5 anos do ensaio COAPT (Stone GW et al., N Engl J Med 2023) acompanhou 614 pacientes com insuficiência cardíaca e regurgitação mitral secundária moderada a grave ou grave, sintomáticos apesar de terapia clínica otimizada em dose máxima, randomizados para reparo transcateter borda a borda mais terapia clínica (302 pacientes) ou terapia clínica isolada (312 pacientes). Ao longo de 5 anos, a taxa anualizada de internação por insuficiência cardíaca foi 33,1% ao ano no grupo dispositivo contra 57,2% ao ano no grupo controle (hazard ratio 0,53; IC95% 0,41-0,68). A mortalidade por todas as causas em 5 anos foi 57,3% no grupo dispositivo versus 67,2% no grupo controle (hazard ratio 0,72; IC95% 0,58-0,89), e o desfecho combinado de morte ou internação por insuficiência cardíaca em 5 anos ocorreu em 73,6% do grupo dispositivo versus 91,5% do grupo controle (hazard ratio 0,53; IC95% 0,44-0,64). Eventos de segurança específicos do dispositivo em 5 anos ocorreram em apenas 4 de 293 pacientes tratados (1,4%), todos dentro dos primeiros 30 dias após o procedimento — ou seja, sem sinal de risco cumulativo tardio do próprio dispositivo. Os autores concluem que, nessa população (insuficiência cardíaca com regurgitação mitral secundária grave sintomática apesar de terapia otimizada), o reparo transcateter foi seguro e associado a menor taxa de internação por insuficiência cardíaca e menor mortalidade por todas as causas ao longo de 5 anos, em comparação à terapia clínica isolada — sustentando que o benefício não é um efeito de curto prazo, desde que a paciente atenda aos critérios de seleção usados no ensaio (fração de ejeção, gravidade da regurgitação mitral e otimização prévia da terapia clínica).",
+    "source_refs": [
+      "Stone GW, Abraham WT, Lindenfeld J, Kar S, Grayburn PA, Lim DS, Mishell JM, Whisenant B, Rinaldi M, Kapadia SR, Rajagopal V, Sarembock IJ, Brieke A, Marx SO, Cohen DJ, Asch FM, Mack MJ; COAPT Investigators. Five-Year Follow-up after Transcatheter Repair of Secondary Mitral Regurgitation. N Engl J Med. 2023;388(22):2037-2048. DOI: 10.1056/NEJMoa2300213. PMID: 36876756."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "estenose-mitral-degenerativa-por-calcificacao-anular-no-muito-idoso-diagnostico-e-conduta",
+    "titulo": "Estenose mitral no nonagenário: é a mesma doença da estenose mitral reumática?",
+    "tema": "Cardiologia geriátrica",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 89 anos, sopro diastólico em foco mitral identificado em consulta de rotina, sem antecedente de febre reumática. O ecocardiograma mostra calcificação extensa do anel mitral (MAC) com redução da área valvar efetiva. A equipe discute se o quadro deve ser interpretado e conduzido da mesma forma que a estenose mitral reumática clássica.",
+    "pergunta": "Qual afirmação está correta sobre a estenose mitral degenerativa por calcificação anular mitral no idoso, em comparação com a estenose mitral reumática?",
+    "opcoes": [
+      "É indistinguível da estenose mitral reumática em fisiopatologia, epidemiologia e conduta cirúrgica, devendo ser tratada exatamente da mesma forma",
+      "A estenose mitral degenerativa é tipicamente uma apresentação tardia da calcificação anular mitral, predominando em idosos de países desenvolvidos — ao contrário da forma reumática, mais comum em jovens de países em desenvolvimento; a avaliação da área valvar mitral é tecnicamente mais difícil nesse contexto pela distorção das estruturas atrial e valvar, e a cirurgia de troca valvar convencional carrega risco aumentado de obstrução da via de saída do ventrículo esquerdo, vazamento paravalvular, embolização de prótese e AVC — o que motiva considerar abordagens transcateter ou conduta conservadora conforme o risco cirúrgico individual, dentro de uma discussão de heart team",
+      "Por ser degenerativa, a estenose mitral por calcificação anular nunca causa sintomas e não requer acompanhamento ecocardiográfico seriado",
+      "A calcificação anular mitral é achado exclusivo de pacientes jovens em diálise por doença renal crônica, sem relevância em pacientes nonagenários"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A estenose mitral reumática é comum em jovens de países em desenvolvimento, enquanto a estenose mitral degenerativa (DMS) é observada em idosos de países desenvolvidos, com prevalência crescente, e costuma ser uma apresentação tardia da calcificação anular mitral (MAC) — não uma sequela de febre reumática (Al-Taweel A et al., Echocardiography 2019). Nesse contexto, a avaliação acurada da área valvar mitral é desafiadora, por causa das alterações nas estruturas atrial e valvar impostas pela própria calcificação, somadas às comorbidades típicas dessa população envelhecida; a revisão discute abordagens terapêuticas medicamentosa, cirúrgica e por intervenção transcateter, sem indicar equivalência de conduta com a forma reumática. De forma complementar, uma revisão dedicada ao manejo cirúrgico da MAC grave (Pizano A, Hirji SA, Nguyen TC, Semin Thorac Cardiovasc Surg 2020) descreve que o manejo da disfunção valvar mitral na presença de MAC substancial permanece controverso e um dos problemas mais desafiadores da cirurgia mitral, com a calcificação relacionada sobretudo ao envelhecimento e a condições crônicas; os autores destacam que o objetivo terapêutico é minimizar complicações pós-operatórias específicas desse cenário — obstrução da via de saída do ventrículo esquerdo, vazamento paravalvular de prótese, embolização de prótese e AVC —, o que reforça a necessidade de uma abordagem multidisciplinar (heart team), considerando alternativas transcateter ou conduta conservadora quando o risco cirúrgico convencional for proibitivo, em vez de replicar automaticamente a conduta cirúrgica padrão da estenose mitral reumática.",
+    "source_refs": [
+      "Al-Taweel A, Almahmoud MF, Khairandish Y, Ahmad M. Degenerative mitral valve stenosis: Diagnosis and management. Echocardiography. 2019;36(10):1901-1909. DOI: 10.1111/echo.14495. PMID: 31587368.",
+      "Pizano A, Hirji SA, Nguyen TC. Severe Mitral Annular Calcification and Mitral Valve Surgery: An Algorithmic Approach to Management. Semin Thorac Cardiovasc Surg. 2020;32(4):630-634. DOI: 10.1053/j.semtcvs.2020.05.021. PMID: 32464177."
+    ],
+    "review_status": "revisado"
   }
 ]

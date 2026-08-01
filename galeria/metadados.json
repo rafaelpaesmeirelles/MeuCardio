@@ -3100,5 +3100,93 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "angiotomografia-aneurisma-coronariano-sequela-de-doenca-de-kawasaki",
+    "title": "Angiotomografia coronariana — aneurisma coronariano como sequela tardia da doença de Kawasaki",
+    "modality": "Angiotomografia",
+    "theme": "Cardiologia pediátrica",
+    "file_path": "tc/aneurisma-coronariano-sequela-de-kawasaki.jpg",
+    "findings": "Reconstrução tridimensional (volume rendering) de angiotomografia cardíaca mostrando a árvore coronariana epicárdica. Há uma dilatação aneurismática bem definida, esbranquiçada e de contorno nodular, na topografia proximal de um dos vasos coronarianos principais, próxima à sua origem — achado destoante do calibre liso e afilado esperado do restante da árvore coronariana, visível na mesma imagem. Segundo a fonte, o exame foi realizado em um homem de 50 anos que teve doença de Kawasaki na infância; a imagem não traz rótulo indicando qual artéria coronária específica está acometida.",
+    "teaching_points": "A doença de Kawasaki é uma vasculite aguda de crianças, tipicamente antes dos 5 anos, com potencial de acometer as artérias coronárias. Segundo a declaração científica da American Heart Association (McCrindle BW et al. Diagnosis, Treatment, and Long-Term Management of Kawasaki Disease. Circulation. 2017;135(17):e927-e999. PMID: 28356445), a doença leva a aneurisma coronariano em aproximadamente 25% dos casos não tratados, e entre 10% e 20% dos pacientes não respondem à imunoglobulina intravenosa (IVIG) inicial — o tratamento que reduz esse risco. Esta imagem, de um paciente de 50 anos, ilustra por que a doença de Kawasaki não se encerra na infância: o aneurisma coronariano formado na fase aguda pode persistir por décadas, com risco de trombose, estenose e infarto no próprio local, exigindo seguimento cardiológico ao longo de toda a vida do paciente, não só no episódio agudo.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Coronaraneursymen_bei_Kawasaki-Syndrom_-_CT_-_Volume_rendering_gesamt_-_026.jpg",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Hellerhoff, via Wikimedia Commons — CC BY-SA 3.0.",
+    "tags": [
+      "doença de kawasaki",
+      "aneurisma coronariano",
+      "angiotomografia",
+      "vasculite pediátrica",
+      "sequela tardia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ecocardiograma-modo-m-espessamento-parietal-na-amiloidose-cardiaca",
+    "title": "Ecocardiograma modo M — espessamento parietal concêntrico na amiloidose cardíaca",
+    "modality": "Ecocardiograma",
+    "theme": "Cardiologia geriátrica",
+    "file_path": "ecocardiograma/amiloidose-cardiaca-espessamento-parietal-mmodo.jpg",
+    "findings": "Modo M através do ventrículo esquerdo, com medidas sobrepostas ao traçado: septo interventricular em diástole (IVSd) 1,99 cm, parede posterior do ventrículo esquerdo em diástole (LVPWd) 1,99 cm, diâmetro diastólico do ventrículo esquerdo (LVIDd) 3,74 cm e volume diastólico final estimado pelo método de Teichholz de 59,53 mL. O padrão visível é de espessamento parietal simétrico e acentuado (septo e parede posterior praticamente iguais, ambos além do limite superior habitual de espessura) associado a uma cavidade ventricular esquerda de tamanho pequeno a normal — combinação que não se explica por hipertensão arterial isolada, que tipicamente poupa mais a cavidade e produz espessamento menos extremo nesta faixa etária.",
+    "teaching_points": "O conjunto 'parede espessada + cavidade pequena/normal' é o gatilho clássico para suspeitar de doença infiltrativa, e não hipertrofia por sobrecarga de pressão (hipertensiva ou por estenose aórtica). Na cardiologia geriátrica, a etiologia mais comum por trás desse padrão em paciente muito idoso é a amiloidose cardíaca por transtirretina selvagem (ATTRwt) — antes chamada de amiloidose senil —, hoje reconhecida como causa subdiagnosticada de insuficiência cardíaca com fração de ejeção preservada no idoso. O espessamento simétrico do septo e da parede posterior, sem assimetria septal desproporcional, ajuda a diferenciar esse padrão do mais típico da cardiomiopatia hipertrófica sarcomérica.",
+    "source_name": "Wikimedia Commons (CardioNetworks ECHOpedia)",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Amyloidosis_E00209_(CardioNetworks_ECHOpedia).jpg",
+    "license": "CC BY-SA 3.0",
+    "attribution": "CardioNetworks Secretariat / AMC Echolab, AMC (Amsterdã, Holanda), via Wikimedia Commons — CC BY-SA 3.0.",
+    "tags": [
+      "amiloidose cardíaca",
+      "modo m",
+      "espessamento parietal",
+      "hipertrofia ventricular",
+      "idoso"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "doppler-mitral-padrao-restritivo-na-amiloidose-cardiaca",
+    "title": "Doppler de fluxo mitral — padrão restritivo na amiloidose cardíaca",
+    "modality": "Ecocardiograma",
+    "theme": "Cardiologia geriátrica",
+    "file_path": "ecocardiograma/amiloidose-cardiaca-padrao-restritivo-doppler.jpg",
+    "findings": "Doppler pulsado do influxo mitral, com as medidas sobrepostas ao traçado: onda E (enchimento precoce) com velocidade de 0,75 m/s, onda A (contração atrial) com velocidade de 0,31 m/s, relação E/A de 2,43 e tempo de desaceleração (DecT) de 165,97 ms. O traçado mostra onda E bem maior que a onda A, com desaceleração rápida — padrão de enchimento restritivo.",
+    "teaching_points": "Relação E/A acima de 2 com tempo de desaceleração curto (nesta imagem, abaixo de 200 ms) define o padrão restritivo de enchimento mitral, o estágio mais avançado de disfunção diastólica — o átrio esquerdo empurra pouco sangue adicional (onda A pequena) porque o ventrículo já está rígido e pouco complacente, e a maior parte do enchimento ocorre de forma rápida e precoce, sob alta pressão atrial. Em contraste, a disfunção diastólica leve ('alteração de relaxamento') mostra o padrão oposto — onda E menor que a onda A. Na amiloidose cardíaca, o padrão restritivo reflete o miocárdio infiltrado por fibrilas amiloides, rígido e pouco complacente, e sua presença já em fase relativamente pouco avançada da doença é um dos motivos pelos quais a amiloidose cardíaca costuma se apresentar como insuficiência cardíaca de evolução mais rápida do que a fração de ejeção — que pode estar preservada — sugeriria isoladamente.",
+    "source_name": "Wikimedia Commons (CardioNetworks ECHOpedia)",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Amyloidosis_E00197_(CardioNetworks_ECHOpedia).jpg",
+    "license": "CC BY-SA 3.0",
+    "attribution": "CardioNetworks Secretariat / AMC Echolab, AMC (Amsterdã, Holanda), via Wikimedia Commons — CC BY-SA 3.0.",
+    "tags": [
+      "amiloidose cardíaca",
+      "doppler mitral",
+      "padrão restritivo",
+      "disfunção diastólica",
+      "idoso"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "angiotomografia-fontan-e-glenn-em-atresia-tricuspide",
+    "title": "Angiotomografia — conduto de Fontan e shunt de Glenn em atresia tricúspide operada",
+    "modality": "TC",
+    "theme": "Cardiopatias congênitas",
+    "file_path": "tc/fontan-e-glenn-em-atresia-tricuspide.jpg",
+    "findings": "Corte coronal de tomografia de tórax mostrando um contorno cardíaco globoso e aumentado, compatível com fisiologia de ventrículo único. Segundo a descrição da fonte — um radiologista que publicou o caso a partir da própria prática —, a imagem é de um paciente de 19 anos com atresia tricúspide tratada com shunt de Glenn bidirecional (veia cava superior à artéria pulmonar direita) e cirurgia de Fontan (conduto extracardíaco conectando a veia cava inferior à artéria pulmonar), com ventrículo esquerdo dilatado — o único ventrículo funcionante nessa fisiologia. Este corte específico (35 de uma série de 74) não traz seta ou rótulo apontando cada estrutura individualmente; a identificação de cada conduto foi feita pela fonte a partir do conjunto completo de cortes da série, não apenas deste corte isolado.",
+    "teaching_points": "Atresia tricúspide é o protótipo da fisiologia de ventrículo único: sem via direta entre átrio direito e ventrículo direito, o sangue sistêmico depende de uma comunicação interatrial obrigatória e o ventrículo esquerdo sustenta sozinho a circulação sistêmica. A cirurgia de Fontan é feita em estágios — geralmente shunt de Glenn bidirecional na primeira infância, seguido do conduto de Fontan alguns anos depois — e redireciona todo o retorno venoso sistêmico diretamente para a artéria pulmonar, sem passar por uma câmara subpulmonar: a circulação passa a depender da pressão venosa central para perfundir o pulmão, sem uma bomba dedicada a essa etapa. É o mesmo contexto fisiológico avaliado pelo teste de caminhada de 6 minutos já cadastrado neste acervo (exame 'Teste de caminhada de 6 minutos (TC6) na circulação de Fontan', tema Cardiopatias congênitas): a capacidade de exercício na circulação de Fontan reflete diretamente a eficiência desse arranjo sem bomba subpulmonar dedicada.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:CT_of_Glenn_shunt_and_Fontan_in_tricuspid_atresia.jpg",
+    "license": "CC BY-SA 3.0 (dual GFDL 1.2+/CC BY-SA 3.0)",
+    "attribution": "Jto410, via Wikimedia Commons — CC BY-SA 3.0.",
+    "tags": [
+      "atresia tricúspide",
+      "cirurgia de fontan",
+      "shunt de glenn",
+      "ventrículo único",
+      "angiotomografia"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
