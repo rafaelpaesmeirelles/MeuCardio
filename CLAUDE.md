@@ -210,6 +210,20 @@ Regras que decorrem disso:
 - O público é o cardiologista brasileiro em geral, não uma equipe interna.
   Linguagem, navegação e conteúdo devem assumir esse leitor.
 
+### 🎯 META ATUALIZADA pelo Rafael em 01/08/2026, 17h06: **5.000 itens no total, mesmo prazo 10/08/2026**
+**A meta de 3.000 (10/08/2026) foi SUBSTITUÍDA — não é acréscimo, é a nova régua, mesmo prazo.**
+Vale para as três sessões (`corvia1`, `corvia2`, `corvia3`).
+
+**Ponto de partida medido no disco às 17h04 de 01/08/2026:** ~2.623 itens (`content/*.md` 599 ·
+`evidencias` 1.344 · `estudos` 202 · `medicamentos` 92 · `exames` 74 · `galeria` 75 ·
+`casos-clinicos` 109 · `trilhas` 81 · `emergencia` 24 · `checklists` 10 · `material-paciente` 13).
+**Faltam ~2.377 itens em pouco menos de 9 dias corridos** — ritmo necessário bem mais alto que o
+que fechou os 3.000; replanejar o dia em cima de "faltam N para 5.000, em D dias".
+
+A régua de qualidade não muda com a meta maior — nada fabricado, fonte real e verificável, ou
+`VERIFICAÇÃO HUMANA NECESSÁRIA` explícito onde a fonte não confirmar. Segue valendo tudo o que está
+em "NOVO MODELO DE SESSÕES" acima (paralelismo máximo, publicar sem pausa até 10/08).
+
 ## Metas do projeto (norteiam prioridade de qualquer tarefa)
 1. **Ser referência em Cardiologia no Brasil.** A régua de qualidade é a de
    uma fonte que um cardiologista citaria: sempre fundamentado em diretriz
