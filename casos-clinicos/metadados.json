@@ -1285,5 +1285,126 @@
       "POISE Study Group; Devereaux PJ, Yang H, Yusuf S, et al. Effects of extended-release metoprolol succinate in patients undergoing non-cardiac surgery (POISE trial): a randomised controlled trial. Lancet. 2008;371(9627):1839-1847. DOI: 10.1016/S0140-6736(08)60601-7. PMID: 18479744"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "dac-estavel-isquemia-moderada-a-grave-estrategia-invasiva-inicial-ischemia",
+    "titulo": "Isquemia moderada a grave em coronariopata estável: cateterizar de imediato?",
+    "tema": "Doença coronariana",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 64 anos, com angina estável classe II, hipertenso e dislipidêmico. Cintilografia de perfusão mostra isquemia moderada a grave em parede anterior. Ele está em uso de AAS, estatina de alta potência, betabloqueador e inibidor da ECA, com sintomas controlados. Função ventricular preservada e sem lesão de tronco conhecida.",
+    "pergunta": "Qual estratégia inicial tem melhor sustentação em ensaio randomizado?",
+    "opcoes": [
+      "Encaminhar imediatamente para cinecoronariografia com revascularização, porque isquemia moderada a grave por si só reduz mortalidade quando revascularizada",
+      "Otimizar o tratamento clínico como estratégia inicial, reservando a cinecoronariografia para falha do tratamento ou sintomas refratários",
+      "Suspender o tratamento antianginoso para melhor avaliar a isquemia antes de decidir",
+      "Indicar cirurgia de revascularização de imediato, independentemente da anatomia coronariana"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O ISCHEMIA randomizou 5.179 pacientes com doença coronariana estável e isquemia moderada a grave para estratégia invasiva inicial (cinecoronariografia com revascularização quando factível, mais tratamento clínico) ou estratégia conservadora inicial (tratamento clínico isolado, com cinecoronariografia se o tratamento falhasse). Em mediana de 3,2 anos ocorreram 318 eventos primários no braço invasivo e 352 no conservador — sem redução de risco. A leitura fina importa mais que o resultado global, e é o que o caso ensina: em 6 meses o evento acumulado era MAIOR no braço invasivo (5,3% contra 3,4%; diferença de 1,9 ponto percentual, IC95% 0,8 a 3,0), refletindo o custo periprocedimento, e só em 5 anos a curva se invertia numericamente (16,4% contra 18,2%; diferença de -1,8 ponto, IC95% -4,7 a 1,0). Mortalidade foi praticamente idêntica: 145 óbitos contra 144 (HR 1,05; IC95% 0,83-1,32). Os próprios autores registram que o desfecho primário foi sensível à definição de infarto usada, com uma análise secundária rendendo mais infartos periprocedimento de importância clínica incerta. O ensaio não diz que a revascularização é inútil — ela segue indicada para sintoma refratário ao tratamento otimizado —, e não respondeu a pergunta em lesão de tronco, excluída do estudo.",
+    "source_refs": [
+      "Maron DJ, Hochman JS, Reynolds HR, et al.; ISCHEMIA Research Group. Initial Invasive or Conservative Strategy for Stable Coronary Disease. N Engl J Med. 2020;382(15):1395-1407. DOI: 10.1056/NEJMoa1915922. PMID: 32227755"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "fa-com-ic-fe-reduzida-ablacao-por-cateter-castle-af",
+    "titulo": "Fibrilação atrial em portador de insuficiência cardíaca com fração de ejeção reduzida: ablação muda desfecho?",
+    "tema": "Arritmias",
+    "nivel": "avançado",
+    "enunciado": "Homem, 62 anos, com insuficiência cardíaca classe funcional III, fração de ejeção de 30% e cardiodesfibrilador implantado. Tem fibrilação atrial persistente sintomática, que recorreu apesar de amiodarona, e ele não tolerou o efeito adverso da droga. Terapia da insuficiência cardíaca já otimizada segundo diretriz.",
+    "pergunta": "Qual conduta tem evidência de reduzir morte e internação neste perfil?",
+    "opcoes": [
+      "Ablação por cateter da fibrilação atrial, além do tratamento da insuficiência cardíaca conforme diretriz",
+      "Aceitar o controle de frequência, já que em insuficiência cardíaca o controle de ritmo nunca mostrou benefício",
+      "Retomar a amiodarona em dose maior, tolerando os efeitos adversos",
+      "Indicar ablação do nó atrioventricular como primeira opção, por ser procedimento mais simples"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O CASTLE-AF randomizou 363 pacientes com fibrilação atrial paroxística ou persistente sintomática que não responderam a antiarrítmico, tiveram efeito adverso inaceitável ou recusaram a droga — exatamente a situação deste paciente — para ablação por cateter (179) ou terapia medicamentosa de controle de frequência ou ritmo (184), somadas ao tratamento da insuficiência cardíaca baseado em diretriz. Todos tinham classe funcional II a IV, fração de ejeção de 35% ou menos e desfibrilador implantado, o que delimita a população a que o resultado se aplica. Em mediana de 37,8 meses, o desfecho composto primário de morte por qualquer causa ou internação por piora da insuficiência cardíaca ocorreu em 28,5% do grupo ablação contra 44,6% do grupo medicamentoso (HR 0,62; IC95% 0,43-0,87; P=0,007). Os componentes acompanharam o composto: morte por qualquer causa 13,4% contra 25,0% (HR 0,53; IC95% 0,32-0,86; P=0,01), internação por piora da insuficiência cardíaca 20,7% contra 35,9% (HR 0,56; IC95% 0,37-0,83; P=0,004) e morte cardiovascular 11,2% contra 22,3% (HR 0,49; IC95% 0,29-0,84; P=0,009). O desfibrilador presente em todos os participantes é parte do desenho, não detalhe: foi o que permitiu monitorar carga de arritmia e o que situa o resultado numa população de alto risco.",
+    "source_refs": [
+      "Marrouche NF, Brachmann J, Andresen D, et al.; CASTLE-AF Investigators. Catheter Ablation for Atrial Fibrillation with Heart Failure. N Engl J Med. 2018;378(5):417-427. DOI: 10.1056/NEJMoa1707855. PMID: 29385358"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "pericardite-com-multiplas-recorrencias-colchicina-corp-2",
+    "titulo": "Terceira recorrência de pericardite: ainda vale acrescentar colchicina?",
+    "tema": "Pericárdio",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 41 anos, na terceira recorrência de pericardite idiopática em dois anos. Cada episódio respondeu a anti-inflamatório, mas ela recaiu na retirada. Não usou colchicina nos episódios anteriores. Sem causa neoplásica ou bacteriana identificada, função renal e hepática normais.",
+    "pergunta": "A colchicina tem benefício demonstrado também neste cenário de recorrências múltiplas?",
+    "opcoes": [
+      "Não — a evidência da colchicina se limita ao primeiro episódio agudo e à primeira recorrência",
+      "Sim — em pacientes com duas ou mais recorrências, a colchicina somada ao anti-inflamatório reduziu quase pela metade a taxa de nova recorrência",
+      "Não — em recorrências múltiplas a conduta com evidência é corticoide em dose alta, e a colchicina perde efeito",
+      "Sim, mas apenas se houver derrame pericárdico moderado ou volumoso documentado"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O CORP-2 respondeu exatamente a esta pergunta: randomizou 240 adultos com DUAS ou mais recorrências de pericardite para colchicina (0,5 mg duas vezes ao dia por 6 meses acima de 70 kg, ou 0,5 mg ao dia até 70 kg) ou placebo, somada ao anti-inflamatório convencional. A recorrência ocorreu em 21,6% do grupo colchicina contra 42,5% do placebo (risco relativo 0,49; IC95% 0,24-0,65; p=0,0009), com número necessário para tratar de 5. Efeitos adversos e descontinuação foram semelhantes entre os grupos; os mais comuns foram intolerância gastrointestinal (9 contra 9 pacientes) e hepatotoxicidade (3 contra 1), sem evento adverso grave. Esse resultado completa a sequência que já existia: o CORP, na PRIMEIRA recorrência, mostrou taxa de recorrência em 18 meses de 24% com colchicina contra 55% com placebo, com número necessário para tratar de 3. É por isso que a colchicina é tratada como terapia de primeira linha na pericardite aguda e recorrente, na ausência de contraindicação — e não como recurso reservado a casos leves. O corticoide não é a resposta aqui: associa-se a mais recorrência e é reservado a situações específicas.",
+    "source_refs": [
+      "Imazio M, Belli R, Brucato A, et al. Efficacy and safety of colchicine for treatment of multiple recurrences of pericarditis (CORP-2): a multicentre, double-blind, placebo-controlled, randomised trial. Lancet. 2014;383(9936):2232-2237. DOI: 10.1016/S0140-6736(13)62709-9. PMID: 24694983",
+      "Imazio M, Brucato A, Cemin R, et al.; CORP Investigators. Colchicine for recurrent pericarditis (CORP): a randomized trial. Ann Intern Med. 2011;155(7):409-414. DOI: 10.7326/0003-4819-155-7-201110040-00359. PMID: 21873705"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sincope-vasovagal-recorrente-midodrina-post-4",
+    "titulo": "Síncope vasovagal que não cede com medidas gerais: existe droga com evidência?",
+    "tema": "Síncope",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 29 anos, saudável, com seis episódios de síncope vasovagal no último ano, alguns com trauma leve. Já faz ingesta hídrica e de sal adequadas, manobras de contrapressão e reconhece pródromos, sem controle satisfatório. Sem cardiopatia estrutural, ECG normal.",
+    "pergunta": "Há tratamento farmacológico com respaldo randomizado para esse perfil?",
+    "opcoes": [
+      "Não — nenhum fármaco jamais reduziu recorrência de síncope vasovagal em ensaio randomizado",
+      "Sim — midodrina reduziu a proporção de pacientes com nova síncope em jovens saudáveis com alta carga de eventos",
+      "Sim — betabloqueador é o tratamento de escolha, com benefício consistente em todas as faixas etárias",
+      "Não — a única conduta com evidência nesse cenário é o implante de marcapasso"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O POST 4 randomizou 133 pacientes com síncope vasovagal recorrente e sem comorbidade séria para midodrina ou placebo, com seguimento de 12 meses. A população é o que torna o resultado aplicável a esta paciente e limita sua extrapolação: mediana de idade de 32 anos, 73% mulheres e mediana de 6 episódios de síncope no ano anterior — exatamente o perfil descrito. Menos pacientes tiveram ao menos um episódio de síncope com midodrina: 42% (28 de 66) contra 61% (41 de 67), risco relativo 0,69 (IC95% 0,49-0,97; P=0,035), redução absoluta de risco de 19 pontos percentuais (IC95% 2 a 36) e número necessário para tratar de 5,3 (IC95% 2,8 a 47,6) — o intervalo largo do NNT é parte honesta do resultado. O tempo até a primeira síncope também foi maior (HR 0,59; IC95% 0,37-0,96; P=0,035), com efeitos adversos semelhantes entre os grupos. Os autores registram as limitações que o médico precisa levar ao consultório: estudo pequeno, pacientes jovens e saudáveis, observação relativamente curta e alta proporção de participantes de um único centro. Marcapasso não é conduta para esse perfil, e a evidência de betabloqueador em síncope vasovagal não sustenta uso amplo.",
+    "source_refs": [
+      "Sheldon R, Faris P, Tang A, et al.; POST 4 investigators. Midodrine for the Prevention of Vasovagal Syncope: A Randomized Clinical Trial. Ann Intern Med. 2021;174(10):1349-1356. DOI: 10.7326/M20-5415. PMID: 34339231"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "choque-cardiogenico-multivaso-so-a-culpada-ou-tudo-culprit-shock",
+    "titulo": "Infarto com choque cardiogênico e doença multiarterial: tratar todas as lesões na mesma sessão?",
+    "tema": "Terapia intensiva",
+    "nivel": "avançado",
+    "enunciado": "Homem, 68 anos, com infarto agudo e choque cardiogênico, em uso de noradrenalina. A cinecoronariografia mostra oclusão da descendente anterior (lesão culpada) e estenoses graves na coronária direita e na circunflexa. A hemodinâmica pergunta se deve tratar todas as lesões agora, aproveitando o mesmo procedimento.",
+    "pergunta": "Qual estratégia inicial de revascularização tem melhor desfecho neste cenário?",
+    "opcoes": [
+      "Angioplastia apenas da lesão culpada, deixando as demais para revascularização estagiada se indicada",
+      "Angioplastia multivaso imediata, tratando todas as lesões graves na mesma sessão",
+      "Não revascularizar enquanto o choque não reverter com suporte inotrópico",
+      "Encaminhar para cirurgia de revascularização de urgência em todos os casos de doença multiarterial com choque"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O CULPRIT-SHOCK randomizou 706 pacientes com doença multiarterial, infarto agudo e choque cardiogênico para angioplastia só da lesão culpada — com opção de revascularização estagiada das demais — ou angioplastia multivaso imediata. Em 30 dias, o desfecho primário composto de morte ou insuficiência renal grave com necessidade de terapia de substituição renal ocorreu em 45,9% (158 de 344) do grupo lesão culpada contra 55,4% (189 de 341) do multivaso imediato (risco relativo 0,83; IC95% 0,71-0,96; P=0,01). O componente que carregou o resultado foi a mortalidade: risco relativo 0,84 (IC95% 0,72-0,98; P=0,03), enquanto a terapia de substituição renal isoladamente não alcançou significância (risco relativo 0,71; IC95% 0,49-1,03; P=0,07). Tempo até estabilização hemodinâmica, uso e duração de catecolaminas, níveis de troponina T e creatinoquinase e taxas de sangramento e AVC não diferiram entre os grupos. A lição transferível é contraintuitiva e vale registrar: no choque, fazer mais na mesma sessão foi pior, não melhor — provavelmente por contraste, tempo de procedimento e carga isquêmica adicional num paciente que já está no limite.",
+    "source_refs": [
+      "Thiele H, Akin I, Sandri M, et al. PCI Strategies in Patients with Acute Myocardial Infarction and Cardiogenic Shock. N Engl J Med. 2017;377(25):2419-2432. DOI: 10.1056/NEJMoa1710261. PMID: 29083953"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hap-virgem-de-tratamento-combinacao-inicial-ambrisentana-tadalafila-ambition",
+    "titulo": "Hipertensão arterial pulmonar recém-diagnosticada: começar com uma droga ou duas?",
+    "tema": "Hipertensão pulmonar",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 44 anos, com hipertensão arterial pulmonar idiopática recém-confirmada por cateterismo direito, classe funcional III da OMS, sem tratamento específico prévio. Teste de vasorreatividade negativo. Função hepática e renal normais.",
+    "pergunta": "Qual estratégia inicial de terapia específica tem melhor evidência?",
+    "opcoes": [
+      "Monoterapia com um antagonista do receptor de endotelina, escalonando apenas se houver deterioração clínica",
+      "Combinação inicial de ambrisentana e tadalafila, que reduziu pela metade o risco de falência clínica em comparação com monoterapia",
+      "Monoterapia com inibidor de fosfodiesterase-5, reservando a combinação para classe funcional IV",
+      "Iniciar bloqueador de canal de cálcio em dose alta, independentemente do teste de vasorreatividade"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O AMBITION randomizou, em proporção 2:1:1, participantes com hipertensão arterial pulmonar em classe funcional II ou III da OMS e SEM tratamento prévio para receber combinação inicial de ambrisentana 10 mg mais tadalafila 40 mg, ambrisentana com placebo ou tadalafila com placebo, todos uma vez ao dia. A análise primária incluiu 500 participantes: 253 na combinação, 126 na monoterapia com ambrisentana e 121 na monoterapia com tadalafila. Um evento de falência clínica — composto de morte, internação por piora da hipertensão pulmonar, progressão de doença ou resposta clínica insatisfatória a longo prazo — ocorreu em 18% do grupo combinação contra 34% e 28% das monoterapias, e 31% no grupo de monoterapia agrupada, com HR de 0,50 (IC95% 0,35-0,72; P<0,001) a favor da combinação. Na semana 24 a combinação também reduziu mais o NT-proBNP (queda média de 67,2% contra 50,4%; P<0,001), teve mais resposta clínica satisfatória (39% contra 29%; OR 1,56; IC95% 1,05-2,32; P=0,03) e maior ganho na caminhada de 6 minutos (mediana de 48,98 m contra 23,80 m; P<0,001). O preço aparece nos eventos adversos mais frequentes com a combinação: edema periférico, cefaleia, congestão nasal e anemia. Bloqueador de canal de cálcio em dose alta só se aplica ao subgrupo com teste de vasorreatividade positivo, que não é o caso.",
+    "source_refs": [
+      "Galiè N, Barberà JA, Frost AE, et al. Initial Use of Ambrisentan plus Tadalafil in Pulmonary Arterial Hypertension. N Engl J Med. 2015;373(9):834-844. DOI: 10.1056/NEJMoa1413687. PMID: 26308684"
+    ],
+    "review_status": "revisado"
   }
 ]
