@@ -280,6 +280,55 @@ contra o `git log` do dia.
 
 ## Divisão de trabalho entre sessões simultâneas
 
+## 🚨 NOVO MODELO DE SESSÕES — 01/08/2026, tarde: corvia1, corvia2, corvia3 (substitui biblioteca/medicamentos/corvia)
+
+Decisão do Rafael, transmitida pela sessão `/root` (monitora):
+
+> "trabalharemos na expansão do conteúdo científico do sistema CorvIA em 3 sessões, corvia1,
+> corvia2 e corvia3, todas as funcionalidades do site devem ter seu conteúdo ampliado
+> continuamente, sempre dividindo essas funcionalidades entre as 3 sessões, que trabalharão
+> ininterruptamente sem paradas para confirmações de nenhuma espécie... lançamento do sistema
+> será dia 10/08 e até lá temos que ter o máximo de conteúdo científico possível."
+
+**Comece por aqui se você é uma sessão nova `corvia1`, `corvia2` ou `corvia3`:**
+
+1. **`/clear` se este terminal carregar contexto de conversa anterior.** Este arquivo é a fonte
+   da verdade, não a sua memória de conversa.
+2. As sessões tmux antigas (`biblioteca`, `corvia`) e a sessão de `/root` que havia assumido
+   `medicamentos` foram **encerradas** pelo Rafael nesta transição. Não são mais três frentes
+   fixas por nome — são três sessões genéricas (`corvia1/2/3`) que dividem entre si **todas as
+   funcionalidades do site**: as seis frentes de conteúdo da "Regra permanente de autonomia"
+   abaixo, mais qualquer outra funcionalidade do produto que aceite conteúdo (round hospitalar,
+   modelos de documento, comparador de medicamentos, agenda etc. — inventariar o que ainda não
+   foi coberto).
+3. **Ponto de partida sugerido** (herda o que cada frente antiga já tinha em andamento — ajustem
+   entre vocês três e registrem aqui se mudar):
+
+   | Frente | Sessão sugerida |
+   |---|---|
+   | `content/` 10 temas (Doença coronariana, Cardiomiopatias, Valvopatias, Pericárdio, Endocardite, Aorta e DAP, Cardiopatias congênitas, Febre reumática, Síncope, Perioperatório) · `galeria/` · `exames/` · `evidencias/` · `estudos/` | **corvia1** |
+   | `content/` 17 temas (Farmacologia, Gravidez, Terapia intensiva, Tromboembolismo, Fibrilação atrial, Arritmias, Dispositivos, Prevenção e lipídios, Diabetes e cardiologia, Insuficiência cardíaca, Hipertensão, Hipertensão pulmonar, Calculadoras, Cardio-oncologia, Comunicação clínica, Geral, Saúde mental) · `medicamentos/*.json` · `emergencia/` · `checklists/` · `material-paciente/` | **corvia2** |
+   | `casos-clinicos/` · `trilhas/` · demais funcionalidades do site ainda não inventariadas | **corvia3** |
+
+4. **Sem paradas para confirmação de nenhuma espécie — inclusive publicar.** Escrever, commitar,
+   importar **e publicar (`published = true`) seguem sem pausa e sem esperar aval do Rafael**,
+   até o lançamento de 10/08/2026. Isso **substitui** o checkpoint "apresentar lote antes de
+   publicar" do item 7 de "Processo, igual para as seis" (mais abaixo) — mesma suspensão que já
+   valia desde a manhã de 01/08/2026 ("NOVAS REGRAS DO RAFAEL"), agora reafirmada explicitamente
+   para o modelo de 3 sessões. Seguem valendo as únicas exceções técnicas de sempre: nunca
+   publicar os órfãos listados neste arquivo, e despublicar/apagar/qualquer ação destrutiva em
+   banco continua exigindo o Rafael.
+5. **A régua de qualidade não muda.** Publicar sem pausa não é publicar sem checar: nada
+   fabricado, fonte real e verificável (diretriz atual ou estudo original), e
+   `VERIFICAÇÃO HUMANA NECESSÁRIA` explícito onde a fonte não confirmar. Volume nunca justifica
+   pular verificação.
+6. **Coordenação entre as três**, mesmo mecanismo já em uso: este arquivo,
+   `/root/mensagens/avisar.sh <sessao> "mensagem"` para avisos imediatos, `/root/mensagens/*.md`
+   para handoffs longos. Avisar ao abrir e fechar frente, e imediatamente ao detectar colisão.
+
+> ### 🗄️ Histórico — divisão anterior (biblioteca/medicamentos/corvia), superseded 01/08/2026 tarde
+> Mantido abaixo como referência de como a divisão funcionava antes; não é mais a divisão vigente.
+
 > ### 🚀 NOVA SESSÃO DA BIBLIOTECA — comece por aqui, 31/07/2026
 > Você é uma sessão nova, substituindo a que rodava via Claude Code Remote (arquivada pelo
 > Rafael). Antes de qualquer coisa:
@@ -2405,12 +2454,14 @@ Processo, igual para as seis:
    ninguém procurou, e some da fila de revisão.)*
 5. Fazer git add + git commit com mensagem descritiva.
 6. Fazer git push.
-7. **Entregar em lotes e apresentar cada lote ao Rafael antes de publicar.**
-   Conteúdo clínico não vai a produção sem esse checkpoint — não marcar a
-   tarefa como concluída sem ele. Escrever, commitar e importar pode seguir
-   sem pausa; o que exige o aval é o passo de **publicar** (`published = true`).
-   *(Também invertido pelo `BRIEFING_CLAUDE_CODE.md` em 28/07/2026. A regra
-   anterior dizia para não pausar em nenhum momento.)*
+7. ~~Entregar em lotes e apresentar cada lote ao Rafael antes de publicar.~~
+   **Suspenso — ver "NOVO MODELO DE SESSÕES", 01/08/2026 tarde, no topo de "Divisão de trabalho
+   entre sessões simultâneas".** Publicar (`published = true`) segue sem pausa e sem aval até o
+   lançamento de 10/08/2026, igual a escrever/commitar/importar. *(Este item já havia sido
+   invertido pelo `BRIEFING_CLAUDE_CODE.md` em 28/07/2026 — que mandava pausar antes de publicar,
+   revertendo a regra ainda anterior de "não pausar em nenhum momento" — e voltou a ser suspenso
+   por ordem direta do Rafael na manhã de 01/08/2026, reafirmado à tarde para o modelo de 3
+   sessões.)*
 
 ## O que nunca fazer sem perguntar
 - Nunca alterar código de backend/frontend na rotina de expansão de biblioteca
