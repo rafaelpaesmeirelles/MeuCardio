@@ -1788,5 +1788,456 @@
       "El-Jawahri A, Paasche-Orlow MK, Matlock D, et al. Randomized, Controlled Trial of an Advance Care Planning Video Decision Support Tool for Patients With Advanced Heart Failure. Circulation. 2016;134(1):52-60. DOI: 10.1161/CIRCULATIONAHA.116.021937. PMID: 27358437"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "elevacao-de-creatinina-30-por-cento-apos-ieca-suspender-ou-manter",
+    "titulo": "Creatinina sobe 27% após iniciar enalapril: suspender o IECA?",
+    "tema": "Hipertensão",
+    "nivel": "intermediário",
+    "enunciado": "Mulher de 66 anos, hipertensa, com doença renal crônica estágio 3 (creatinina basal de 1,5 mg/dL), inicia enalapril para nefroproteção e controle pressórico. Duas semanas depois, a creatinina de controle vem em 1,9 mg/dL (alta de 27% em relação ao basal) e o potássio está em 5,0 mmol/L. A pressão arterial melhorou e ela está assintomática, sem sinais de depleção de volume, sem uso recente de anti-inflamatório ou contraste, e sem sopro abdominal sugestivo de estenose de artéria renal.",
+    "pergunta": "Qual a conduta mais apropriada diante desse achado?",
+    "opcoes": [
+      "Suspender o IECA imediatamente: qualquer elevação de creatinina após seu início indica lesão renal induzida pelo fármaco e exige troca de classe",
+      "Manter o enalapril e reavaliar função renal e potássio em 1 a 2 semanas, até completar a janela de 2 meses: alta de creatinina de até 30% que se estabiliza nesse período está associada a maior preservação renal a longo prazo, e o potássio está abaixo do corte que indicaria suspensão",
+      "Suspender o enalapril e substituir por bloqueador de canal de cálcio, já que doença renal crônica estágio 3 contraindica IECA",
+      "Manter a dose atual, mas só repetir os exames em 6 meses, sem necessidade de reavaliação mais próxima"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A revisão de Bakris e Weir (12 ensaios randomizados, 1.102 pacientes com IECA, seguimento médio de 3 anos) mostrou que aumentos agudos de creatinina de até 30% que se estabilizam nos primeiros 2 meses de terapia associam-se a redução de 55% a 75% no risco de progressão da doença renal em pacientes com creatinina basal ≥ 1,4 mg/dL — é o efeito hemodinâmico esperado da dilatação da arteríola eferente, não dano. A retirada só é indicada quando a alta excede 30% do basal nos primeiros 2 meses ou quando surge hipercalemia (potássio ≥ 5,6 mmol/L). Neste caso, a alta de 27% e o potássio de 5,0 mmol/L estão abaixo dos dois cortes — a conduta é manter e reavaliar a estabilização, não suspender.",
+    "source_refs": [
+      "Bakris GL, Weir MR. Angiotensin-converting enzyme inhibitor-associated elevations in serum creatinine: is this a cause for concern? Arch Intern Med. 2000;160(5):685-693. DOI: 10.1001/archinte.160.5.685. PMID: 10724055 — revisão de 12 ensaios clínicos randomizados, 1.102 pacientes randomizados a IECA, seguimento médio de 3 anos"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "protese-valvar-mecanica-trocar-varfarina-por-doac-para-facilitar-o-controle",
+    "titulo": "Prótese mitral mecânica com INR difícil de controlar: trocar varfarina por dabigatrana?",
+    "tema": "Tromboembolismo",
+    "nivel": "avançado",
+    "enunciado": "Homem de 54 anos, portador de prótese mitral mecânica há 8 anos, em uso de varfarina com INR-alvo entre 2,5 e 3,5. Ele relata cansaço com as coletas frequentes de INR e com os episódios recorrentes de INR fora da faixa (ora subterapêutico, ora supraterapêutico), sem sangramento ou evento tromboembólico até agora. Pede para trocar a varfarina por um anticoagulante oral direto, alegando que colegas com fibrilação atrial usam esses fármacos sem monitorização.",
+    "pergunta": "Qual a conduta mais apropriada quanto a esse pedido?",
+    "opcoes": [
+      "Trocar para dabigatrana, ajustando a dose pela função renal e monitorizando o nível plasmático de vale para garantir exposição adequada",
+      "Não trocar por anticoagulante oral direto: no RE-ALIGN, a dabigatrana em prótese valvar mecânica associou-se a mais AVC (5% vs. 0% com varfarina) e mais sangramento maior (4% vs. 2%, todos pericárdicos), com o ensaio interrompido precocemente por excesso de dano — a melhor conduta é otimizar o tempo em faixa terapêutica do INR",
+      "Trocar para apixabana, já que o ARISTOTLE validou sua segurança em pacientes com prótese valvar",
+      "Associar AAS em baixa dose à varfarina, o que permitiria relaxar a frequência de controle do INR"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O RE-ALIGN (Eikelboom et al., NEJM 2013) randomizou 252 pacientes com prótese valvar mecânica para dabigatrana (dose ajustada por função renal e mirando nível de vale ≥ 50 ng/mL) ou varfarina, e foi interrompido precocemente por excesso de eventos: AVC isquêmico ou não especificado em 9 pacientes (5%) com dabigatrana contra nenhum com varfarina, e sangramento maior em 7 (4%) contra 2 (2%), todos os sangramentos maiores pericárdicos. Não houve subdosagem — o protocolo mirava exposição plasmática adequada. O ARISTOTLE testou apixabana em fibrilação atrial, não em prótese valvar, e nenhum outro DOAC foi testado nesse cenário em ensaio randomizado; a contraindicação de classe é regulatória e de diretriz, não experimental para além da dabigatrana. A conduta correta é manter varfarina e trabalhar para melhorar o tempo na faixa terapêutica.",
+    "source_refs": [
+      "Eikelboom JW, Connolly SJ, Brueckmann M, Granger CB, Kappetein AP, Mack MJ, et al; RE-ALIGN Investigators. Dabigatran versus warfarin in patients with mechanical heart valves. N Engl J Med. 2013;369(13):1206-1214. DOI: 10.1056/NEJMoa1300615. PMID: 23991661 — NCT01452347 e NCT01505881. Estudo de fase 2 de validação de dose, INTERROMPIDO PRECOCEMENTE. Financiamento: Boehringer Ingelheim, fabricante da dabigatrana"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "diabetico-tipo-2-assintomatico-rastrear-isquemia-com-cintilografia-diad",
+    "titulo": "Diabético tipo 2 assintomático pede \"check-up cardiológico completo\": rastrear isquemia silenciosa?",
+    "tema": "Diabetes e cardiologia",
+    "nivel": "básico",
+    "enunciado": "Homem de 58 anos, diabético tipo 2 há 6 anos, hipertenso controlado e em uso de estatina, comparece para consulta de rotina completamente assintomático — sem dor torácica, dispneia de esforço ou equivalente anginoso. Ele pede um \"check-up cardiológico completo\", incluindo cintilografia miocárdica com estresse, porque leu que diabéticos podem ter isquemia silenciosa e quer se antecipar a um possível infarto.",
+    "pergunta": "Com base na evidência disponível, qual a conduta mais apropriada quanto ao rastreio de isquemia neste paciente?",
+    "opcoes": [
+      "Solicitar a cintilografia de perfusão miocárdica com estresse, pois todo diabético tem indicação de rastreio rotineiro de isquemia silenciosa",
+      "Não solicitar exame de rastreio de isquemia de rotina: no DIAD, cintilografia com estresse por adenosina em diabéticos assintomáticos não reduziu morte cardíaca ou infarto não fatal em relação a não rastrear (HR 0,88; IC95% 0,44-1,88; p=0,73), e o ganho deve vir da otimização do tratamento clínico (controle pressórico, estatina, controle glicêmico e fármacos com benefício cardiovascular comprovado)",
+      "Solicitar angiotomografia de coronárias em vez de cintilografia, já que essa modalidade foi a testada e validada pelo mesmo ensaio para essa finalidade",
+      "Solicitar a cintilografia apenas se o diabetes tiver mais de 10 anos de diagnóstico, que é o critério que define quando rastrear"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O DIAD (Young et al., JAMA 2009) randomizou 1.123 diabéticos tipo 2 assintomáticos para rastreio com cintilografia de perfusão miocárdica com estresse por adenosina ou não rastreio, com desfecho de morte cardíaca ou infarto não fatal. Ao longo de seguimento médio de 4,8 anos, a taxa de eventos foi de 2,7% no grupo rastreado contra 3,0% no não rastreado (HR 0,88; IC95% 0,44-1,88; p=0,73) — sem diferença. O exame estratificou risco de verdade dentro do grupo rastreado (defeito moderado/grande: HR 6,3 para eventos), mas o valor preditivo positivo desse achado foi de apenas 12%, e a prevenção medicamentosa aumentou igualmente nos dois braços — é ela que fez o trabalho, não o rastreio. O ensaio testou apenas cintilografia, não angiotomografia, e não se aplica a pacientes sintomáticos.",
+    "source_refs": [
+      "Young LH, Wackers FJ, Chyun DA, Davey JA, Barrett EJ, Taillefer R, Heller GV, et al; DIAD Investigators. Cardiac outcomes after screening for asymptomatic coronary artery disease in patients with type 2 diabetes: the DIAD study: a randomized controlled trial. JAMA. 2009;301(15):1547-1555. DOI: 10.1001/jama.2009.476. PMID: 19366774 — NCT00769275, 1.123 participantes, seguimento de agosto/2000 a setembro/2007"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cardiomiopatia-chagasica-estabelecida-benznidazol-para-reduzir-eventos-benefit",
+    "titulo": "Cardiomiopatia chagásica já estabelecida: o benznidazol reduz eventos clínicos?",
+    "tema": "Cardiomiopatias",
+    "nivel": "avançado",
+    "enunciado": "Homem de 61 anos, natural de área endêmica, com cardiomiopatia chagásica crônica estabelecida — fração de ejeção de 35%, sintomas de insuficiência cardíaca classe funcional II e sorologia positiva para T. cruzi confirmada por PCR. Ele pergunta se iniciar benznidazol agora ajudaria a \"combater a causa\" e reduzir o risco de piora clínica futura, já que ouviu falar que o remédio ataca o parasita.",
+    "pergunta": "Com base na evidência de maior nível disponível para esse estágio da doença, qual orientação está correta quanto ao benznidazol?",
+    "opcoes": [
+      "O benznidazol reduz de forma significativa a progressão clínica na cardiomiopatia chagásica já estabelecida, e deve ser iniciado com essa expectativa",
+      "O BENEFIT mostrou que o benznidazol reduz de forma marcada a positividade de PCR para T. cruzi, mas não reduziu o desfecho clínico composto (morte, insuficiência cardíaca nova, arritmia sustentada, implante de dispositivo, transplante, AVC ou outro evento tromboembólico) na cardiomiopatia já estabelecida — 27,5% com benznidazol vs. 29,1% com placebo (HR 0,93; IC95% 0,81-1,07; p=0,31) — e a indicação nesse estágio não deve ser sustentada pela expectativa de benefício clínico",
+      "Não há mais indicação de benznidazol em nenhum estágio da doença de Chagas, já que o BENEFIT foi neutro",
+      "O benznidazol deve ser suspenso em quem já iniciou o tratamento, pois o BENEFIT demonstrou dano cardiovascular associado ao fármaco"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O BENEFIT (Morillo et al., NEJM 2015) randomizou 2.854 pacientes com cardiomiopatia chagásica estabelecida para benznidazol ou placebo por até 80 dias, com seguimento médio de 5,4 anos. O desfecho clínico composto ocorreu em 27,5% (benznidazol) vs. 29,1% (placebo) — HR 0,93 (IC95% 0,81-1,07; p=0,31), sem diferença. O efeito antiparasitário foi claro: conversão de PCR para negativa em 66,2% com benznidazol vs. 33,5% com placebo ao fim do tratamento (p<0,001) — mas essa negativação de PCR, um desfecho substituto, se dissociou do desfecho clínico. O resultado é específico da cardiomiopatia já estabelecida; fase aguda, forma indeterminada, reativação e infecção congênita têm indicação própria, não respondida por este ensaio, e nenhum excesso de dano cardiovascular foi demonstrado pelo benznidazol.",
+    "source_refs": [
+      "Morillo CA, Marin-Neto JA, Avezum A, Sosa-Estani S, Rassi A Jr, Rosas F, et al; BENEFIT Investigators. Randomized Trial of Benznidazole for Chronic Chagas' Cardiomyopathy. N Engl J Med. 2015;373(14):1295-1306. DOI: 10.1056/NEJMoa1507574. PMID: 26323937"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "endocardite-prevencao-em-protese-valvar-antes-de-extracao-dentaria",
+    "titulo": "Extração dentária em portador de prótese valvar biológica",
+    "tema": "Endocardite",
+    "nivel": "intermediário",
+    "enunciado": "Homem de 68 anos, com troca valvar aórtica biológica há 4 anos por estenose grave, está clinicamente bem e sem sinais de disfunção protética. Foi encaminhado ao dentista para extração de um molar com abscesso periapical, procedimento que envolve manipulação da região periapical e da mucosa gengival. O cirurgião-dentista pergunta ao cardiologista assistente se o paciente precisa de profilaxia antibiótica antes do procedimento.",
+    "pergunta": "Qual a conduta correta quanto à profilaxia antibiótica de endocardite infecciosa neste paciente?",
+    "opcoes": [
+      "Não é necessária profilaxia, pois válvula protética biológica tem risco de endocardite equivalente ao da população geral",
+      "Prescrever clindamicina 600 mg por via oral 1 hora antes do procedimento, por ser a alternativa clássica em paciente de alto risco",
+      "Prescrever amoxicilina 2 g por via oral, em dose única, 30 a 60 minutos antes do procedimento, pois válvula protética é condição de alto risco (Classe I)",
+      "Prescrever amoxicilina 500 mg de 8 em 8 horas por 7 dias, iniciando no dia do procedimento"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "Válvula cardíaca protética, incluindo a biológica, é condição de alto risco com indicação Classe I (Nível C) de profilaxia na ESC 2023, para procedimento odontológico com manipulação de tecido gengival ou da região periapical. O esquema padrão, pela Tabela 6 da diretriz, é dose ÚNICA de amoxicilina 2 g por via oral, 30-60 minutos antes do procedimento — não um curso prolongado. A clindamicina deixou de ser recomendada pela força-tarefa da ESC 2023 mesmo como alternativa em alérgico à penicilina, pelo risco elevado de infecção por Clostridioides difficile; as alternativas atuais nesse caso são cefalexina, azitromicina/claritromicina ou doxiciclina.",
+    "source_refs": [
+      "Profilaxia antibacteriana para prevenção da endocardite bacteriana após procedimentos dentários · Cochrane Library · 2022 · https://www.cochranelibrary.com/es/cdsr/doi/10.1002/14651858.CD003813.pub5/full/pt",
+      "Endocardite Infecciosa: Ainda mais Desafios que Certezas · PMC · 2022 · https://pmc.ncbi.nlm.nih.gov/articles/PMC9368884/",
+      "Delgado V, Ajmone Marsan N, de Waha S, et al. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI 10.1093/eurheartj/ehad193. PMID 37622656 — Recommendation Table 1 e Table 6, texto integral conferido diretamente em 30/07/2026."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "estenose-aortica-grave-sintomatica-antes-de-cirurgia-nao-cardiaca-eletiva",
+    "titulo": "Estenose aórtica grave sintomática antes de artroplastia de quadril eletiva",
+    "tema": "Perioperatório",
+    "nivel": "intermediário",
+    "enunciado": "Mulher de 77 anos, com estenose aórtica grave (área valvar 0,7 cm², gradiente médio 52 mmHg) e dispneia aos esforços moderados (classe funcional II-III), é encaminhada para artroplastia eletiva de quadril por osteoartrose grave — cirurgia de risco intermediário. A cirurgia pode ser adiada sem prejuízo clínico imediato. FEVE preservada, sem outras comorbidades limitantes.",
+    "pergunta": "Qual a conduta recomendada pela diretriz de avaliação cardiovascular perioperatória (ESC 2022) antes desta cirurgia eletiva?",
+    "opcoes": [
+      "Liberar para a artroplastia com monitorização hemodinâmica invasiva intraoperatória, sem necessidade de tratar a valva antes",
+      "Adiar a cirurgia eletiva e encaminhar para discussão em Heart Team e troca valvar aórtica (TAVI ou SAVR), já que a paciente é sintomática e a cirurgia pode ser postergada",
+      "Realizar valvuloplastia aórtica por balão como tratamento definitivo antes da artroplastia",
+      "Cancelar definitivamente a indicação cirúrgica ortopédica, sem reavaliação futura"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Na ESC 2022, a troca valvar aórtica (SAVR ou TAVI) é recomendação Classe I, Nível C, em paciente sintomático com estenose aórtica grave agendado para cirurgia eletiva de risco intermediário ou alto. Como a artroplastia pode ser adiada sem prejuízo, a diretriz prioriza tratar a valva antes: uma via de saída obstruída e fixa tolera mal o deslocamento de volume e a taquicardia do intraoperatório. A valvuloplastia por balão é reservada como ponte (Classe IIb) apenas quando a cirurgia é time-sensitive e SAVR/TAVI são inviáveis, não como tratamento definitivo eletivo.",
+    "source_refs": [
+      "Halvorsen S, Mehilli J, Cassese S, et al. 2022 ESC Guidelines on cardiovascular assessment and management of patients undergoing non-cardiac surgery. Eur Heart J. 2022;43(39):3826-3924. DOI: 10.1093/eurheartj/ehac270. PMID: 36017553 — seção 6.3 (Valvular heart disease) e Recommendation Table 21, texto integral obtido e conferido em 30/07/2026."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "extrassistole-ventricular-assintomatica-pos-infarto-nao-suprimir-cast",
+    "titulo": "Extrassístoles ventriculares frequentes assintomáticas após infarto do miocárdio",
+    "tema": "Arritmias",
+    "nivel": "avançado",
+    "enunciado": "Homem de 61 anos, 3 semanas após infarto do miocárdio com supradesnivelamento de ST tratado com angioplastia primária, está assintomático, em uso de betabloqueador, IECA, estatina e AAS/inibidor de P2Y12. FEVE 48% ao eco. Holter de rotina mostra mais de 15 extrassístoles ventriculares por hora, sem taquicardia ventricular não sustentada. O paciente não relata palpitação, síncope ou pré-síncope.",
+    "pergunta": "Qual a conduta correta quanto às extrassístoles ventriculares assintomáticas encontradas no Holter?",
+    "opcoes": [
+      "Iniciar flecainida para suprimir a ectopia ventricular e reduzir o risco de morte súbita",
+      "Iniciar encainida em dose baixa, titulando conforme resposta no Holter de controle",
+      "Não prescrever antiarrítmico para suprimir a ectopia; manter a terapia pós-infarto guiada por diretriz, incluindo o betabloqueador já em uso",
+      "Substituir o betabloqueador por amiodarona em dose plena, por ser mais eficaz na supressão de extrassístoles"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O CAST randomizou exatamente este cenário — pós-infarto, extrassístole ventricular assintomática ou pouco sintomática, ≥6 EV/hora — e encontrou o oposto do esperado: mortalidade total de 7,7% com encainida/flecainida vs. 3,0% com placebo (RR 2,5; IC95% 1,6-4,5), e morte por arritmia ou parada cardíaca não fatal em 4,5% vs. 1,2% (RR 3,6; IC95% 1,7-8,5). O SWORD repetiu o achado de excesso de mortalidade com d-sotalol, um bloqueador puro de canal de potássio, afastando a hipótese de que o dano fosse exclusivo da classe IC. Suprimir a arritmia visível no Holter não remove o risco que ela sinaliza — o betabloqueador, ao contrário, reduz mortalidade nessa população sem jamais ter sido prescrito para suprimir ectopia.",
+    "source_refs": [
+      "Cardiac Arrhythmia Suppression Trial (CAST) Investigators. Preliminary report: effect of encainide and flecainide on mortality in a randomized trial of arrhythmia suppression after myocardial infarction. N Engl J Med. 1989;321(6):406-412. DOI: 10.1056/NEJM198908103210629. PMID: 2473403 — 2.309 recrutados para a fase de titulação; 1.727 randomizados",
+      "Echt DS, Liebson PR, Mitchell LB, Peters RW, Obias-Manno D, Barker AH, et al. Mortality and morbidity in patients receiving encainide, flecainide, or placebo. The Cardiac Arrhythmia Suppression Trial. N Engl J Med. 1991;324(12):781-788. DOI: 10.1056/NEJM199103213241201. PMID: 1900101 — relatório de 1.498 pacientes dos braços de encainida e flecainida",
+      "Waldo AL, Camm AJ, deRuyter H, Friedman PL, MacNeil DJ, Pauls JF, et al; SWORD Investigators. Effect of d-sotalol on mortality in patients with left ventricular dysfunction after recent and remote myocardial infarction. Survival With Oral d-Sotalol (SWORD). Lancet. 1996;348(9019):7-12. DOI: 10.1016/s0140-6736(96)02149-6. PMID: 8691967 — 3.121 dos 6.400 planejados; ensaio interrompido. NOTA: existe Erratum em Lancet 1996;348(9024):416, registrado mas NÃO lido nesta consulta"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "avc-criptogenico-monitor-cardiaco-implantavel-versus-encerrar-investigacao",
+    "titulo": "AVC criptogênico com monitorização convencional negativa",
+    "tema": "Dispositivos",
+    "nivel": "intermediário",
+    "enunciado": "Mulher de 58 anos sofre AVC isquêmico em território de artéria cerebral média. Investigação completa — ecocardiograma transesofágico, angiotomografia de vasos cervicais e intracranianos, perfil trombofílico e 48 horas de monitorização eletrocardiográfica contínua hospitalar — não identifica fonte cardioembólica nem outra etiologia, e o ritmo permanece sinusal durante toda a monitorização. O AVC é classificado como criptogênico e a paciente recebe alta em uso de antiagregante plaquetário.",
+    "pergunta": "Com base no ensaio CRYSTAL AF, qual conduta adicional está mais bem sustentada pela evidência?",
+    "opcoes": [
+      "Considerar a investigação encerrada, já que 48 horas de monitorização hospitalar são suficientes para descartar fibrilação atrial paroxística",
+      "Implantar monitor cardíaco implantável (ICM) para monitorização prolongada, já que ele detectou FA em 12,4% dos pacientes em 12 meses, contra 2,0% do seguimento convencional",
+      "Repetir Holter de 24 horas mensalmente por 6 meses, estratégia com rendimento diagnóstico equivalente ao do monitor implantável",
+      "Iniciar anticoagulação empírica sem investigação adicional, presumindo etiologia cardioembólica"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "No CRYSTAL AF (441 pacientes com AVC criptogênico e monitorização convencional negativa por ≥24h), o monitor cardíaco implantável detectou FA em 8,9% dos pacientes em 6 meses (HR 6,4; IC95% 1,9-21,7; p<0,001) e em 12,4% em 12 meses (HR 7,3; IC95% 2,6-20,8; p<0,001), contra apenas 1,4% e 2,0% no grupo de seguimento convencional, respectivamente. A detecção de FA muda diretamente a conduta terapêutica, de antiagregação para anticoagulação — por isso a monitorização prolongada com dispositivo implantável, e não a repetição de Holter de curta duração, é a estratégia sustentada pela evidência.",
+    "source_refs": [
+      "Sanna T, Diener HC, Passman RS, et al; CRYSTAL AF Investigators. Cryptogenic stroke and underlying atrial fibrillation. N Engl J Med. 2014;370(26):2478-2486. DOI: 10.1056/NEJMoa1313600. PMID: 24963567"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "pos-infarto-com-feve-preservada-manter-betabloqueador-indefinidamente-reduce-ami",
+    "titulo": "Pós-infarto com FEVE preservada: manter betabloqueador para sempre?",
+    "tema": "Doença coronariana",
+    "nivel": "intermediário",
+    "enunciado": "Homem de 58 anos, infarto agudo do miocárdio sem supradesnível há 10 dias, submetido a coronariografia e angioplastia com sucesso. Ecocardiograma pós-evento mostra fração de ejeção do ventrículo esquerdo de 58%. Recebeu metoprolol na alta hospitalar. Em consulta ambulatorial, está assintomático, sem angina, sem arritmia e sem qualquer outra indicação clássica isolada para betabloqueador. O paciente pergunta se precisará usar o betabloqueador 'para sempre'.",
+    "pergunta": "Com base no maior ensaio randomizado que testou especificamente essa pergunta, qual a conduta mais sustentada pela evidência?",
+    "opcoes": [
+      "Manter o betabloqueador indefinidamente, pois ele reduz mortalidade e reinfarto em qualquer paciente pós-infarto, independentemente da fração de ejeção",
+      "Reavaliar a manutenção do betabloqueador a longo prazo: em pacientes com FEVE ≥50% pós-infarto e coronariografia realizada, o desfecho primário (morte por qualquer causa ou novo infarto) não diferiu entre usar e não usar betabloqueador — a decisão deve considerar outras indicações do fármaco (angina, arritmia, hipertensão), e não presumir benefício automático só pela indicação pós-infarto",
+      "Suspender o betabloqueador imediatamente e afirmar que ele está contraindicado nesse cenário, já que o estudo provou ausência total e definitiva de qualquer benefício",
+      "Trocar o betabloqueador por outro de classe diferente (por exemplo, carvedilol), já que o estudo mostrou que a falha de eficácia é específica do metoprolol"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O REDUCE-AMI (Yndigegn T et al., N Engl J Med 2024, PMID 38587241) randomizou 5.020 pacientes pós-infarto, com coronariografia realizada e FEVE ≥50%, para betabloqueador de longo prazo (metoprolol ou bisoprolol) versus nenhum, com mediana de seguimento de 3,5 anos. O desfecho primário — morte por qualquer causa ou novo infarto — ocorreu em 7,9% com betabloqueador contra 8,3% sem (HR 0,96; IC95% 0,79-1,16; p=0,64), e todos os desfechos secundários (morte cardiovascular, internação por FA, internação por IC) foram igualmente neutros. Como o desenho foi ABERTO e a taxa de eventos ficou abaixo da prevista, o IC95% chega a 1,16, ou seja, não exclui até cerca de 21% de benefício relativo — é ausência de benefício demonstrado, não equivalência provada. Isso afasta tanto a certeza de 'deve continuar sempre' quanto a certeza oposta de 'está contraindicado' ou de 'o problema é a molécula usada'.",
+    "source_refs": [
+      "Yndigegn T, Lindahl B, Mars K, Alfredsson J, Benatar J, et al. Ensaio REDUCE-AMI — betabloqueador (metoprolol ou bisoprolol) versus nenhum betabloqueador após infarto agudo do miocárdio com fração de ejeção preservada (≥50%). New England Journal of Medicine, 2024. DOI: 10.1056/NEJMoa2401479. PMID: 38587241 — ensaio randomizado aberto, 45 centros (Suécia, Estônia, Nova Zelândia), 5.020 pacientes, mediana de seguimento de 3,5 anos; registrado em estudos/metadados.json da Corvia, slug reduce-ami-betabloqueador-apos-infarto-com-fracao-de-ejecao-preservada"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "colchicina-baixa-dose-em-uso-de-verapamil-com-insuficiencia-renal-grave",
+    "titulo": "Colchicina em prevenção secundária, em uso de verapamil e com TFGe 25",
+    "tema": "Farmacologia",
+    "nivel": "avançado",
+    "enunciado": "Homem de 66 anos, doença arterial coronariana estável, 8 meses após angioplastia, em uso de verapamil para controle de frequência de fibrilação atrial permanente. Exames atuais mostram TFGe de 25 mL/min/1,73m² (insuficiência renal grave). O cardiologista considera acrescentar colchicina em baixa dose para prevenção secundária cardiovascular, indicação Classe IIa da ESC 2023.",
+    "pergunta": "Qual a conduta mais correta diante da combinação com o verapamil e da função renal deste paciente?",
+    "opcoes": [
+      "Iniciar colchicina na dose padrão de prevenção cardiovascular (0,5 mg 2x/dia), pois a indicação Classe IIa da ESC 2023 não exige nenhum ajuste adicional",
+      "Evitar associar colchicina ao verapamil — a bula do verapamil não recomenda essa associação, pelo risco de toxicidade por via metabólica comum (CYP3A4/glicoproteína-P) — e, se a associação for mantida, ajustar a colchicina para no máximo 0,5 mg a cada 2 a 3 dias, pela faixa de TFGe 15-29 mL/min (insuficiência renal grave)",
+      "Colchicina está contraindicada em qualquer paciente com TFGe abaixo de 30 mL/min, portanto não pode ser prescrita neste caso em nenhuma dose",
+      "Como o ensaio CLEAR-SYNERGY (maior e mais recente) não confirmou benefício da colchicina em prevenção secundária, a droga deve ser evitada neste paciente, independentemente da interação medicamentosa ou da função renal"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O verbete de colchicina da biblioteca registra que a bula brasileira do DILACORON (verapamil) não recomenda a associação com colchicina, pela via comum de metabolização por CYP3A4 e glicoproteína-P, que eleva o risco de toxicidade (fraqueza muscular, náusea, vômito, diarreia). Quanto ao ajuste renal, a bula do COLCHIS (colchicina, Apsen) estabelece: TFGe 30-59 mL/min, 0,5 mg 1x/dia; TFGe 15-29 mL/min (insuficiência renal grave, a faixa deste paciente com TFGe 25), 0,5 mg a cada 2 a 3 dias; e contraindicação apenas abaixo de TFGe 15 mL/min — não abaixo de 30, como afirma a opção 3 (índice 2), que erra o corte. A recomendação Classe IIa da ESC 2023 para colchicina em baixa dose na prevenção secundária de doença arterial coronariana não dispensa a checagem de interação medicamentosa nem o ajuste pela função renal; e o resultado do CLEAR-SYNERGY, citado no mesmo documento como ensaio maior e mais recente que não confirmou benefício, é uma questão de eficácia — não altera a farmacocinética nem a interação medicamentosa deste caso, e por isso não é o motivo correto para evitar a droga aqui.",
+    "source_refs": [
+      "content/Farmacologia/colchicina.md (Corvia, documento publicado) — seção 'Ajuste renal e hepático': bula do COLCHIS (colchicina, Apsen Farmacêutica), conferida na íntegra em 31/07/2026, com faixas por TFGe (30-59 mL/min: 0,5 mg 1x/dia; 15-29 mL/min: 0,5 mg a cada 2-3 dias; <15 mL/min: contraindicada); e seção de interações, citando a bula do DILACORON (verapamil), que não recomenda a associação com colchicina",
+      "Low-Dose Colchicine for Secondary Prevention of Coronary Artery Disease: JACC Review Topic of the Week · JACC · https://www.jacc.org/doi/10.1016/j.jacc.2023.05.055 — recomendação Classe IIa da ESC 2023 para colchicina em baixa dose na prevenção secundária de doença coronariana, e o resultado neutro do ensaio CLEAR-SYNERGY (2024) citado no mesmo verbete"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cancer-de-prostata-e-alto-risco-cardiovascular-relugolix-ou-leuprolide-hero",
+    "titulo": "Câncer de próstata e alto risco cardiovascular: relugolix ou leuprolide?",
+    "tema": "Cardio-oncologia",
+    "nivel": "avançado",
+    "enunciado": "Homem de 71 anos, câncer de próstata localmente avançado, com indicação de privação androgênica (ADT) definida pelo oncologista. Antecedente de infarto do miocárdio há 2 anos e diabetes mellitus tipo 2 — alto risco cardiovascular. O oncologista pergunta ao cardiologista se há preferência, do ponto de vista cardiovascular, entre um agonista de GnRH injetável (leuprolide) e o antagonista de GnRH oral (relugolix).",
+    "pergunta": "Com base no ensaio HERO, qual a orientação mais correta a dar ao oncologista?",
+    "opcoes": [
+      "O HERO demonstrou, em desfecho primário desenhado especificamente para isso, que o relugolix reduz eventos cardiovasculares maiores em relação ao leuprolide, devendo substituir o leuprolide como primeira escolha em qualquer paciente",
+      "Não há diferença cardiovascular relevante entre as duas classes, e a escolha deve ser feita exclusivamente pelo oncologista, sem qualquer contribuição da avaliação cardiovascular",
+      "O HERO mostrou eventos cardiovasculares adversos maiores (MACE) em 2,9% com relugolix versus 6,2% com leuprolide (HR 0,46; IC95% 0,24-0,88), mas esse foi um desfecho SECUNDÁRIO de segurança, não o desfecho primário do ensaio (que foi supressão hormonal) — em paciente de alto risco cardiovascular como este, é argumento a favor de considerar relugolix, dentro de decisão compartilhada com o oncologista/urologista, sem dispensar a avaliação de risco cardiovascular basal antes de iniciar qualquer ADT",
+      "Como a privação androgênica tem cardiotoxicidade estabelecida, a conduta correta é contraindicar a ADT neste paciente e buscar alternativa não hormonal ao tratamento oncológico"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O HERO (Shore ND et al., N Engl J Med 2020, PMID 32469183) randomizou 930 pacientes (2:1) para relugolix oral (120 mg/dia) ou leuprolide injetável, por 48 semanas. O desfecho primário — supressão de testosterona sustentada a nível de castração — favoreceu o relugolix (96,7% vs. 88,8%; p<0,001), e não era um desfecho cardiovascular. No desfecho de segurança, MACE ocorreu em 2,9% com relugolix vs. 6,2% com leuprolide, HR 0,46 (IC95% 0,24-0,88); mas por ser secundário/de segurança, com número absoluto pequeno de eventos num seguimento de 48 semanas, o resultado é hipótese-gerador e pede cautela antes de virar recomendação de primeira linha isolada — o que torna a opção 1 (índice 0), que trata isso como prova definitiva de superioridade em desfecho primário, incorreta. Em paciente de alto risco cardiovascular, é argumento válido para considerar relugolix como parte de decisão compartilhada, sem eliminar a necessidade de avaliação cardiovascular basal (o que também afasta a opção de que a escolha cabe só ao oncologista) e sem justificar contraindicar toda ADT, que tem indicação oncológica estabelecida.",
+    "source_refs": [
+      "Shore ND, Saad F, Cookson MS, George DJ, Saltzstein DR, Tutrone R, Akaza H, Bossi A, van Veenhuyzen DF, Selby B, Fan X, Kang V, Walling J, Tombal B. Oral Relugolix for Androgen-Deprivation Therapy in Advanced Prostate Cancer. N Engl J Med. 2020;382(23):2187-2196. DOI: 10.1056/NEJMoa2004325. PMID: 32469183 — ensaio HERO, fase 3, randomizado 2:1, 930 pacientes"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "tdah-em-adulto-uso-cronico-de-metilfenidato-em-dose-alta-e-nova-insuficiencia-cardiaca",
+    "titulo": "TDAH em adulto: uso crônico de metilfenidato em dose alta e nova insuficiência cardíaca",
+    "tema": "Saúde mental e cardiologia",
+    "nivel": "intermediário",
+    "enunciado": "Mulher de 34 anos, diagnóstico de TDAH na infância, em uso contínuo de metilfenidato em dose ≥1 dose diária definida (DDD) por dia há 8 anos, procura atendimento por dispneia progressiva aos esforços e edema de membros inferiores há 3 semanas. Ecocardiograma mostra fração de ejeção reduzida, sem etiologia evidente nos exames iniciais.",
+    "pergunta": "Diante dos dois principais estudos que avaliaram risco cardiovascular de estimulantes no TDAH, qual a interpretação e conduta mais corretas?",
+    "opcoes": [
+      "O estudo americano de 2011 (Habel) já provou que estimulantes são seguros no longo prazo, então a insuficiência cardíaca não pode estar relacionada ao metilfenidato, e nenhuma investigação adicional quanto ao fármaco é necessária",
+      "O registro dinamarquês de longo prazo (Holt 2024) mostrou risco relativo aumentado de insuficiência cardíaca (RR 1,7; IC95% 1,3-2,2) com uso contínuo em dose ≥1 DDD/dia por vários anos — associação, não causalidade definitivamente estabelecida, na própria linguagem dos autores — o que justifica investigar outras causas de IC e reavaliar, em conjunto com o prescritor, a relação risco-benefício da manutenção do metilfenidato nessa dose, sem suspender por conta própria nem presumir segurança cardiovascular incondicional",
+      "Como existe sinal de risco para insuficiência cardíaca nos estudos, a conduta correta é suspender o metilfenidato imediatamente e afirmar à paciente que o estimulante foi a causa comprovada do quadro",
+      "O sinal de risco encontrado nos estudos é para síndrome coronariana aguda, não para insuficiência cardíaca, portanto o achado ecocardiográfico não tem relação alguma com o uso do estimulante"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Habel LA et al. (JAMA 2011, PMID 22161946) avaliou uso atual/recente de estimulantes (seguimento mediano de apenas 1,3 ano), sem achar sinal de risco cardiovascular agudo — não é evidência sobre uso contínuo por vários anos, o que torna a opção 1 (índice 0) incorreta. Holt A et al. (JACC 2024, PMID 38719367), registro nacional dinamarquês, comparou uso contínuo em dose ≥1 DDD/dia (estabelecida após 1 ano) com usuários prévios que já haviam descontinuado: risco absoluto padronizado em 10 anos de insuficiência cardíaca de 1,2% vs. 0,7% (RR 1,7; IC95% 1,3-2,2) e de AVC 2,1% vs. 1,7% (RR 1,2; IC95% 1,0-1,5), SEM associação aparente com síndrome coronariana aguda (1,0% vs. 0,9%) — o que torna a opção 4 (índice 3) incorreta, por inverter justamente esse ponto: o sinal descrito é para IC e AVC, não para SCA. Os próprios autores do estudo de 2024 usam linguagem de associação a ser mais investigada, não de causalidade estabelecida, o que afasta tanto a suspensão unilateral com afirmação categórica de causa (opção 3, índice 2) quanto a presunção de segurança incondicional pelo estudo mais antigo (opção 1, índice 0).",
+    "source_refs": [
+      "Habel LA, Cooper WO, Sox CM, et al. ADHD medications and risk of serious cardiovascular events in young and middle-aged adults. JAMA. 2011;306(24):2673-2683. DOI: 10.1001/jama.2011.1830. PMID: 22161946",
+      "Holt A, Strange JE, Rasmussen PV, et al. Long-Term Cardiovascular Risk Associated With Treatment of Attention-Deficit/Hyperactivity Disorder in Adults. J Am Coll Cardiol. 2024;83(19):1870-1882. DOI: 10.1016/j.jacc.2024.03.375. PMID: 38719367"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "expectativa-de-beneficio-da-pci-eletiva-e-ferramenta-de-decisao-compartilhada-pci-choice",
+    "titulo": "Expectativa de benefício da angioplastia eletiva: o que a ferramenta de decisão compartilhada resolve (e o que não resolve)",
+    "tema": "Comunicação clínica",
+    "nivel": "intermediário",
+    "enunciado": "Homem de 61 anos, hipertenso e diabético, com doença arterial coronariana estável documentada por cateterismo (lesão de 70% em artéria descendente anterior), em uso de terapia clínica otimizada (AAS, estatina de alta potência, betabloqueador), com angina estável classe I aos grandes esforços. É encaminhado para discussão de angioplastia (PCI) eletiva. Na consulta, afirma: 'Doutor, eu quero fazer o stent agora, porque assim eu evito ter um infarto ou morrer disso.' O cardiologista sabe que essa é a crença mais frequente entre pacientes elegíveis para PCI eletiva em DAC estável.",
+    "pergunta": "Com base no ensaio PCI Choice, qual conduta na consulta é mais adequada?",
+    "opcoes": [
+      "Prosseguir com a angioplastia sem outra conversa, pois o paciente já expressou vontade clara de ser tratado",
+      "Entregar a ferramenta de decisão compartilhada PCI Choice ao paciente e presumir que isso, por si só, garante que a decisão final será compartilhada e bem informada",
+      "Esclarecer explicitamente que a angioplastia eletiva não reduz morte nem infarto em comparação à terapia clínica otimizada — o mal-entendido mais comum nesse cenário —, apoiando essa conversa com a ferramenta de decisão compartilhada, sem presumir que ela substitui a condução ativa do diálogo pelo médico",
+      "Recusar a indicação do procedimento, já que a expectativa do paciente sobre o benefício está equivocada"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "No PCI Choice (Coylewright et al., 2016; 124 pacientes elegíveis para análise final), o uso da ferramenta de decisão compartilhada aumentou o conhecimento objetivo sobre o benefício da PCI de 40% para 60% dos pacientes (p=0,034) e fez os pacientes se sentirem mais informados (p=0,043). Porém, as demais medidas de qualidade decisória não melhoraram, e o engajamento do médico em decisão compartilhada não mudou com o uso da ferramenta — no estudo qualitativo do mesmo grupo, os médicos tenderam a usar a ferramenta como material educativo, não como facilitadora de diálogo. Ou seja: entregar a ferramenta melhora a transmissão de informação, mas não substitui o esclarecimento ativo, pelo próprio médico, de que a PCI eletiva em DAC estável não reduz morte nem infarto frente à terapia clínica otimizada.",
+    "source_refs": [
+      "Coylewright M, Dick S, Zmolek B, Askelin J, Hawkins E, Branda M, Inselman JW, Zeballos-Palacios C, Shah ND, Hess EP, LeBlanc A, Montori VM, Ting HH. PCI Choice Decision Aid for Stable Coronary Artery Disease: A Randomized Trial. Circ Cardiovasc Qual Outcomes. 2016;9(6):767-776. DOI: 10.1161/CIRCOUTCOMES.116.002641. PMID: 27803090 — NCT01771536, 124 pacientes elegíveis para análise final",
+      "Coylewright M, Branda ME, Inselman J, Shah ND, Hess EP, LeBlanc A, Montori VM, Ting HH. PCI Choice: Cardiovascular clinicians' perceptions of shared decision making in stable coronary artery disease. Patient Educ Couns. 2017;100(6):1136-1143. DOI: 10.1016/j.pec.2017.01.008. PMID: 28110953 — perspectiva qualitativa do médico"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sono-muito-longo-nao-e-sinal-tranquilizador-metanalise-de-cappuccio",
+    "titulo": "Dormir 9,5 horas por noite é sinal de saúde? A metanálise de Cappuccio",
+    "tema": "Geral",
+    "nivel": "básico",
+    "enunciado": "Mulher de 58 anos, sem comorbidades cardiovasculares conhecidas, relata dormir rotineiramente 9,5 horas por noite e diz se sentir bem descansada. Pergunta ao cardiologista, em consulta de rotina, se dormir tanto assim é 'sinal de que o corpo está saudável' e se deveria se preocupar com algo. Não relata sintomas sugestivos de apneia do sono nem sonolência diurna excessiva, mas nunca foi investigada para isso.",
+    "pergunta": "Com base na metanálise de Cappuccio et al. (2011), qual orientação é mais adequada?",
+    "opcoes": [
+      "Tranquilizar a paciente, pois dormir mais de 9 horas por noite é fator protetor cardiovascular comprovado",
+      "Orientar que reduza o sono para menos de 5 horas por noite, já que o sono curto tem menor risco cardiovascular que o sono longo",
+      "Não tranquilizar quanto ao sono longo isoladamente como sinal de saúde, e investigar causas subjacentes (como apneia obstrutiva do sono e depressão), já que sono habitual muito longo (>8-9h) associou-se nesta metanálise a risco maior de doença arterial coronariana, AVC e doença cardiovascular total do que o sono curto",
+      "Não dar nenhuma orientação, pois a duração do sono não tem nenhuma associação estabelecida com risco cardiovascular"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "Na metanálise de Cappuccio et al. (Eur Heart J 2011; 15 estudos, 24 coortes, 474.684 participantes, 16.067 eventos), o sono longo (tipicamente >8-9h) associou-se a RR de 1,38 (IC95% 1,15-1,66) para doença arterial coronariana, 1,65 (IC95% 1,45-1,87) para AVC e 1,41 (IC95% 1,19-1,68) para doença cardiovascular total — magnitudes maiores que as do sono curto no mesmo desfecho, inclusive superando-o para doença cardiovascular total, em que o sono curto não atingiu significância estatística (RR 1,03; IC95% 0,93-1,15). Os autores não estabelecem causalidade: sono muito longo pode ser marcador de comorbidade não diagnosticada, como apneia obstrutiva do sono, depressão ou doença subclínica, mais do que causa direta — o que sustenta investigar, não apenas tranquilizar.",
+    "source_refs": [
+      "Cappuccio FP, Cooper D, D'Elia L, Strazzullo P, Miller MA. Sleep duration predicts cardiovascular outcomes: a systematic review and meta-analysis of prospective studies. Eur Heart J. 2011;32(12):1484-1492. DOI: 10.1093/eurheartj/ehr007. PMID: 21300732 — 15 estudos, 24 coortes, 474.684 participantes, seguimento de 6,9 a 25 anos, 16.067 eventos"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "tetralogia-de-fallot-operada-regurgitacao-pulmonar-grave-assintomatica-quando-trocar-a-valva",
+    "titulo": "Tetralogia de Fallot operada, regurgitação pulmonar grave e paciente assintomático: quando trocar a valva?",
+    "tema": "Cardiopatias congênitas",
+    "nivel": "avançado",
+    "enunciado": "Homem de 24 anos, submetido a correção cirúrgica de tetralogia de Fallot aos 8 meses de vida, em acompanhamento ambulatorial anual em ambulatório de cardiopatia congênita do adulto. Assintomático, sem limitação ao exercício referida e com boa capacidade funcional. Ressonância magnética cardíaca de rotina mostra regurgitação pulmonar livre, importante, com volume diastólico final do ventrículo direito indexado (VDFVDi) de 172 mL/m² e função sistólica de VD ainda preservada.",
+    "pergunta": "Diante desse achado em paciente assintomático, qual conduta é mais alinhada à tendência atual descrita na revisão sistemática sobre timing de troca valvar pulmonar pós-Fallot?",
+    "opcoes": [
+      "Manter conduta expectante e repetir a ressonância em 5 anos, já que o paciente é assintomático e a regurgitação pulmonar costuma ser bem tolerada por anos",
+      "Encaminhar para troca valvar pulmonar mesmo na ausência de sintomas, pois o VDFVDi está na faixa proposta (150-180 mL/m²) para intervenção precoce, já que a disfunção de VD por sobrecarga de volume crônica pode se tornar irreversível se não eliminada antes do surgimento de sintomas",
+      "Iniciar diurético e betabloqueador para controle de sintomas de insuficiência cardíaca, adiando indefinidamente a intervenção valvar",
+      "Solicitar avaliação para transplante cardíaco, por se tratar de insuficiência de VD em estágio terminal"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A regurgitação pulmonar crônica pós-Fallot pode ser bem tolerada por anos, mas a sobrecarga de volume do VD eventualmente supera os mecanismos compensatórios do miocárdio, podendo levar a disfunção irreversível se a sobrecarga não for eliminada a tempo. Por isso, a tendência atual descrita na revisão sistemática sobre timing de troca valvar pulmonar é considerar a troca precoce, antes do surgimento de sintomas de insuficiência cardíaca, com um limiar volumétrico de VDFVD indexado de 150-180 mL/m² proposto como critério de indicação em pacientes assintomáticos — faixa em que este paciente (172 mL/m²) se enquadra. A indicação em assintomáticos ainda é motivo de debate na literatura, mas a cirurgia tem baixa morbimortalidade operatória e bons resultados de longo prazo quando realizada em centro terciário experiente.",
+    "source_refs": [
+      "Pulmonary Valve Replacement Timing Following Initial Tetralogy of Fallot Repair: A Systematic Review · PMC · https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10754298/",
+      "Pulmonary Regurgitation after Tetralogy of Fallot Repair: A Diagnostic and Therapeutic Challenge · PMC · https://pmc.ncbi.nlm.nih.gov/articles/PMC5353440/"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "valvopatia-mitral-reumatica-com-insuficiencia-tricuspide-leve-operar-a-tricuspide-junto",
+    "titulo": "Cirurgia mitral reumática com insuficiência tricúspide apenas leve: operar a tricúspide junto?",
+    "tema": "Febre reumática",
+    "nivel": "intermediário",
+    "enunciado": "Mulher de 35 anos, com sequela de febre reumática na infância, apresenta estenose e insuficiência mitral reumática grave, com espessamento subvalvar importante e calcificação leve dos folhetos, com indicação cirúrgica estabelecida. O ecocardiograma pré-operatório mostra também insuficiência tricúspide discreta (leve), porém com dilatação significativa do anel tricúspide (>40 mm). Não há sinais de insuficiência cardíaca direita. A equipe cirúrgica discute se deve intervir sobre a valva tricúspide durante a mesma cirurgia.",
+    "pergunta": "Segundo a evidência sobre manejo da valva tricúspide na doença valvar reumática multivalvar, qual conduta é mais adequada?",
+    "opcoes": [
+      "Não intervir sobre a valva tricúspide nesta cirurgia, já que a insuficiência é apenas leve, reavaliando somente se houver progressão no pós-operatório",
+      "Realizar cirurgia tricúspide concomitante, mesmo com insuficiência apenas leve, pela presença de dilatação significativa do anel — conduta que previne piora futura da regurgitação e favorece o remodelamento reverso do VD e a melhora funcional, sem aumentar o risco operatório",
+      "Substituir a valva tricúspide por prótese mecânica de rotina, independentemente do grau de insuficiência tricúspide",
+      "Adiar a cirurgia mitral até que a insuficiência tricúspide se torne moderada a grave, para então justificar a cirurgia concomitante"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A cirurgia tricúspide concomitante é indicada durante a cirurgia da valva esquerda mesmo diante de regurgitação tricúspide apenas leve, quando há dilatação do anel tricúspide ou sinais de insuficiência cardíaca direita — situação desta paciente, com anel >40 mm. Essa estratégia previne a piora futura da regurgitação tricúspide e facilita o remodelamento reverso do ventrículo direito e a melhora funcional, sem aumento do risco operatório; a maioria dos pacientes operados alcança valva competente (regurgitação não maior que leve) no pós-operatório. Como em toda doença valvar reumática multivalvar, a decisão deve ser discutida em equipe cardíaca multidisciplinar.",
+    "source_refs": [
+      "Managing tricuspid valve pathology in multiple valvular heart disease · PMC · https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9577839/",
+      "Surgical Algorithm for Rheumatic Tricuspid Disease · The Annals of Thoracic Surgery · https://www.annalsthoracicsurgery.org/article/S0003-4975(19)30346-7/fulltext"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "has-grave-sem-acesso-venoso-anti-hipertensivo-oral-easterling",
+    "titulo": "Hipertensão grave na gestação sem acesso venoso: qual anti-hipertensivo oral?",
+    "tema": "Gravidez",
+    "nivel": "intermediário",
+    "enunciado": "Gestante, 29 anos, 32 semanas, é admitida em maternidade de hospital público sem leito de UTI disponível no momento. Pressão arterial confirmada em duas aferições: 168/114 mmHg, sem sinais de eclâmpsia iminente. Não há acesso venoso periférico pérvio nem bomba de infusão disponível de imediato para anti-hipertensivo intravenoso. É necessário reduzir a pressão de forma segura enquanto o acesso venoso é providenciado.",
+    "pergunta": "Com base no ensaio de Easterling et al. (Lancet, 2019), qual conduta tem melhor respaldo para o controle pressórico em até 6 horas nesta situação?",
+    "opcoes": [
+      "Nifedipino retard 10 mg por via oral, com escalonamento de dose de hora em hora, que atingiu o desfecho de controle pressórico com maior frequência entre os três esquemas orais testados",
+      "Labetalol 200 mg por via oral, com escalonamento horário, por ser o único esquema testado com superioridade estatística confirmada sobre os demais",
+      "Metildopa 1.000 mg em dose única, por ser o esquema mais simples e com menor necessidade de monitorização",
+      "Nenhum anti-hipertensivo oral deve ser iniciado; é obrigatório aguardar o acesso venoso antes de qualquer tratamento farmacológico"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "No ensaio de Easterling et al. (Lancet 2019; PMID 31378394), realizado em dois hospitais públicos de Nagpur, Índia — cenário de recursos limitados, sem acesso venoso imediato garantido —, 894 gestantes com hipertensão grave (≥160/110 mmHg) foram randomizadas para nifedipino retard, labetalol ou metildopa por via oral. O desfecho primário (controle pressórico em 6 horas, sem desfecho adverso) foi atingido por 84% (249/298) com nifedipino, 77% (228/295) com labetalol e 76% (230/301) com metildopa; a diferença do nifedipino foi estatisticamente significativa contra a metildopa (p=0,03), mas não contra o labetalol (p=0,05). Como droga isolada, o nifedipino teve a maior frequência de sucesso — com a ressalva de que nifedipino e labetalol tinham escalonamento horário de dose, enquanto a metildopa foi dose única, então a comparação é entre regimes, não apenas entre fármacos. O achado central do ensaio é que os três esquemas orais são opções viáveis quando não há via endovenosa disponível de imediato — adiar o tratamento por falta de acesso venoso não é a conduta sustentada pela evidência.",
+    "source_refs": [
+      "Easterling T, Mundle S, Bracken H, Parvekar S, Mool S, et al. Oral antihypertensive regimens (nifedipine retard, labetalol, and methyldopa) for management of severe hypertension in pregnancy: an open-label, randomised controlled trial. Lancet. 2019;394(10203):1011-1021. PMID: 31378394 — NCT01912677 e CTRI/2013/08/003866, 894 randomizadas em dois hospitais públicos de Nagpur, Índia. Financiamento: PREEMPT, com aporte da Bill & Melinda Gates Foundation"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hp-grupo-3-dpi-treprostinil-inalado-ensaio-increase",
+    "titulo": "Hipertensão pulmonar do Grupo 3 por doença pulmonar intersticial: há tratamento vasodilatador?",
+    "tema": "Hipertensão pulmonar",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 68 anos, com fibrose pulmonar idiopática confirmada em tomografia de tórax, evolui com dispneia progressiva desproporcional à limitação ventilatória conhecida. Cateterismo cardíaco direito confirma hipertensão pulmonar associada à doença pulmonar intersticial (Grupo 3). A equipe assistente questiona o uso de vasodilatador pulmonar, lembrando o ensino tradicional de que essa classe de fármacos poderia piorar a relação ventilação-perfusão e a hipoxemia nesse grupo.",
+    "pergunta": "Com base no ensaio INCREASE (Waxman et al., N Engl J Med 2021), qual conduta terapêutica tem sustentação em evidência randomizada para este paciente?",
+    "opcoes": [
+      "Vasodilatadores pulmonares permanecem contraindicados no Grupo 3 em qualquer circunstância, e não há papel para terapia vascular pulmonar específica",
+      "Treprostinil inalado pode ser considerado, com monitorização cuidadosa da oxigenação durante a titulação, pois demonstrou melhora significativa da distância no teste de caminhada de 6 minutos e redução da piora clínica composta nesta população específica",
+      "Sildenafila oral em dose plena deve ser iniciada como primeira linha, por extrapolação direta dos dados de eficácia do Grupo 1",
+      "O tratamento deve visar exclusivamente a doença pulmonar de base, sem qualquer papel documentado para terapia vascular pulmonar específica no Grupo 3"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O ensaio INCREASE (Waxman A et al., NEJM 2021;384(4):325-334, PMID 33440084) randomizou 326 pacientes com hipertensão pulmonar associada a doença pulmonar intersticial para treprostinil inalado ou placebo por 16 semanas. O treprostinil melhorou a distância no teste de caminhada de 6 minutos em 31,12 m a mais que o placebo (IC95% 16,85-45,39; p<0,001), reduziu o NT-proBNP em 15% (vs. aumento de 46% com placebo) e diminuiu a piora clínica composta (22,7% vs. 33,1%; HR 0,61; IC95% 0,40-0,92; p=0,04). É o primeiro ensaio randomizado a mostrar benefício terapêutico nesse cenário, revertendo décadas de cautela com vasodilatador pulmonar no Grupo 3 por receio de piorar a hipoxemia — por isso a monitorização respiratória durante a titulação continua recomendada. Dois limites importantes: o desfecho primário é substituto (capacidade de exercício, não mortalidade), com apenas 16 semanas de seguimento, e a população testada é especificamente doença pulmonar intersticial, não generalizável a todo o espectro do Grupo 3 (por exemplo, DPOC isolada) sem confirmar que os critérios do ensaio se aplicam.",
+    "source_refs": [
+      "Waxman A, Restrepo-Jaramillo R, Thenappan T, Ravichandran A, Engel P, Bajwa A, Allen R, Feldman J, Argula R, Smith P, Rollins K, Deng C, Peterson L, Bell H, Tapson V, Nathan SD. Inhaled Treprostinil in Pulmonary Hypertension Due to Interstitial Lung Disease. N Engl J Med. 2021;384(4):325-334. DOI: 10.1056/NEJMoa2008470. PMID: 33440084 — ensaio INCREASE, NCT02630316, 326 pacientes, financiado pela United Therapeutics"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "pericardite-recorrente-colchicino-resistente-anakinra-airtrip",
+    "titulo": "Pericardite recorrente resistente à colchicina e dependente de corticosteroide: há alternativa com respaldo randomizado?",
+    "tema": "Pericárdio",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 34 anos, cursa com o quarto episódio de pericardite recorrente em 18 meses, apesar de AINE em dose anti-inflamatória plena e colchicina por pelo menos 6 meses. Permanece dependente de corticosteroide para controlar os sintomas, com PCR persistentemente elevada a cada tentativa de desmame — perfil já caracterizado como resistência à colchicina e dependência de corticosteroide.",
+    "pergunta": "Com base no ensaio AIRTRIP (Brucato et al., JAMA 2016), qual conduta tem respaldo de ensaio clínico randomizado especificamente para este perfil de paciente?",
+    "opcoes": [
+      "Aumentar a dose de colchicina acima da habitualmente recomendada, já que a resistência seria dose-dependente",
+      "Associar anakinra, que no ensaio randomizado reduziu a recorrência de 90% (grupo placebo) para 18,2% (grupo tratado), exatamente na população resistente à colchicina e dependente de corticosteroide",
+      "Iniciar rilonacepte como primeira escolha, por ter sido comparado diretamente à anakinra em ensaio de não inferioridade",
+      "Indicar pericardiectomia, por já terem sido esgotadas as opções farmacológicas de primeira e segunda linha"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O ensaio AIRTRIP (Brucato A et al., JAMA 2016;316(18):1906-1912, PMID 27825009) é um ensaio de retirada, randomizado e duplo-cego, em 21 pacientes de pericardite recorrente (≥3 recorrências prévias) especificamente com resistência à colchicina e dependência de corticosteroide — não pericardite idiopática recorrente em geral. Após fase aberta com anakinra (2 mg/kg/dia, até 100 mg, por 2 meses), os respondedores foram randomizados para continuar anakinra (n=11) ou trocar por placebo (n=10): recorrência em 90% (9/10) do grupo placebo vs. 18,2% (2/11) do grupo anakinra, com sobrevida livre de crise de mediana 72 dias no placebo contra não alcançada no grupo anakinra (p<0,001). O rilonacepte tem ensaio de fase 3 próprio (RHAPSODY), controlado por placebo — não foi comparado diretamente à anakinra em ensaio de não inferioridade, o que torna a opção 3 uma leitura incorreta da evidência disponível. Aumentar a dose de colchicina não tem base nesse ensaio, e a pericardiectomia é conduta mais invasiva do que a evidência randomizada sustenta como próximo passo para este perfil.",
+    "source_refs": [
+      "Brucato A, Imazio M, Gattorno M, et al. Effect of Anakinra on Recurrent Pericarditis Among Patients With Colchicine Resistance and Corticosteroid Dependence: The AIRTRIP Randomized Clinical Trial. JAMA. 2016;316(18):1906-1912. DOI: 10.1001/jama.2016.15826. PMID: 27825009 — números conferidos contra o abstract indexado (Europe PMC) em 30/07/2026."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sincope-reflexa-cardioinibitoria-grave-candidata-a-cardioneuroablacao",
+    "titulo": "Síncope reflexa cardioinibitória grave e recorrente: é candidata à cardioneuroablação?",
+    "tema": "Síncope",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 26 anos, sem cardiopatia estrutural, com síncope reflexa recorrente há 3 anos apesar de hidratação adequada, ingesta de sal, manobras de contrapressão física e fludrocortisona. Um monitor de eventos implantável registrou um episódio sincopal espontâneo com pausa assistólica de 4,5 segundos por parada sinusal, precedido de pródromo vasovagal típico. Um teste de inclinação prévio também havia reproduzido síncope, com padrão predominantemente cardioinibitório.",
+    "pergunta": "Segundo a posição conjunta EHRA/HRS/APHRS/LAHRS 2024 sobre cardioneuroablação (CNA), qual afirmação está correta para esta paciente?",
+    "opcoes": [
+      "A CNA está formalmente contraindicada, pois o único ensaio randomizado disponível avaliou apenas bloqueio atrioventricular de causa intrínseca",
+      "Esta paciente se enquadra no subgrupo estreito em que há algum dado favorável — jovem, síncope cardioinibitória grave com pausa assistólica sintomática espontânea maior que 3 segundos, após falha de terapias não invasivas —, mas o documento explicita que ainda não é possível fazer recomendação forte, exigindo decisão compartilhada e seguimento prolongado",
+      "Como o padrão foi predominantemente cardioinibitório, a CNA deve ser oferecida como primeira linha, antes mesmo de qualquer medida não farmacológica ou farmacológica",
+      "O teste da atropina deveria ter sido usado antes do procedimento para prever a resposta à CNA, e sua ausência invalida a indicação"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A posição conjunta EHRA/HRS/APHRS/LAHRS 2024 (Aksu T et al., Europace 2024;26(8):euae206, PMID 39082698) concentra os dados favoráveis limitados de CNA em pacientes jovens, com síncope cardioinibitória grave, imprevisível e recorrente, definida por pausa sintomática documentada espontaneamente maior que 3 segundos (ou assintomática maior que 6 segundos, ou síncope assistólica maior que 3 segundos no tilt test), sempre depois de falha das terapias convencionais não invasivas — exatamente o perfil desta paciente. Ainda assim, o documento é explícito: 'não é possível fazer recomendações fortes sobre o uso da CNA', porque até a publicação existia apenas um ensaio randomizado pequeno, sendo necessários ensaios controlados por procedimento simulado (sham). O teste da atropina foi usado nos estudos publicados para EXCLUIR doença intrínseca do nó sinusal ou atrioventricular, e seu valor para PREVER resposta à CNA 'ainda não está definido' — não é pré-requisito de indicação. Oferecer a CNA como primeira linha, antes da falha das terapias não invasivas, contraria diretamente a posição do documento, assim como afirmar contraindicação formal baseada só em bloqueio AV intrínseco, o que não corresponde ao texto.",
+    "source_refs": [
+      "Aksu T, Brignole M, Calo L, Debruyne P, et al. Cardioneuroablation for the treatment of reflex syncope and functional bradyarrhythmias: A Scientific Statement of the European Heart Rhythm Association (EHRA) of the ESC, the Heart Rhythm Society (HRS), the Asia Pacific Heart Rhythm Society (APHRS) and the Latin American Heart Rhythm Society (LAHRS). Europace. 2024;26(8):euae206. DOI: 10.1093/europace/euae206. PMID: 39082698 — texto integral acessado em acesso aberto (PMC11350289), licença CC BY, e conferido em 31/07/2026; a seção 'Writing committee position' é a base das conclusões deste documento"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "choque-cardiogenico-pos-iam-iabp-de-rotina-ou-nao-iabp-shock-ii",
+    "titulo": "Choque cardiogênico pós-IAM: balão intra-aórtico de rotina?",
+    "tema": "Terapia intensiva",
+    "nivel": "intermediário",
+    "enunciado": "Paciente de 64 anos, IAM com supra de ST em parede anterior extensa, evolui em poucas horas com choque cardiogênico (PAS 78 mmHg, extremidades frias, lactato elevado). É submetido a angioplastia primária com sucesso angiográfico e já está em uso de noradrenalina em dose moderada, com terapia médica otimizada. O intensivista de plantão sugere implantar balão intra-aórtico (IABP) de rotina, alegando que 'sempre ajuda' no choque cardiogênico pós-infarto.",
+    "pergunta": "Com base no ensaio IABP-SHOCK II, qual conduta é sustentada pela evidência para este paciente?",
+    "opcoes": [
+      "Implantar o IABP rotineiramente, pois o ensaio mostrou redução significativa da mortalidade em 30 dias em relação ao grupo controle",
+      "Não implantar o IABP de rotina neste cenário: o ensaio randomizado mostrou mortalidade em 30 dias e em 12 meses idêntica entre IABP e controle, em pacientes já em revascularização precoce e terapia médica otimizada",
+      "Implantar o IABP porque reduz significativamente o risco de sangramento maior e de complicação isquêmica periférica em relação ao controle",
+      "Substituir a angioplastia primária por IABP isolado como estratégia definitiva de suporte hemodinâmico"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O IABP-SHOCK II randomizou 600 pacientes com choque cardiogênico pós-IAM, todos com expectativa de revascularização precoce e melhor terapia médica disponível, para IABP (301) ou controle sem IABP (299). A mortalidade por qualquer causa em 30 dias foi 39,7% (IABP) vs. 41,3% (controle) — RR 0,96, IC95% 0,79-1,17, p=0,69, sem diferença — e em 12 meses 52% vs. 51% (RR 1,01; IC95% 0,86-1,18; p=0,91), sem sinal de benefício tardio. Também não houve diferença em sangramento maior (3,3% vs. 4,4%) nem em complicação isquêmica periférica (4,3% vs. 3,4%): a ausência de benefício não veio acompanhada de excesso de risco, é ausência de eficácia. Esse resultado, confirmado em dois momentos de seguimento independentes, é a base pela qual as diretrizes atuais deixaram de recomendar o uso rotineiro de IABP em choque cardiogênico pós-infarto já em revascularização precoce.",
+    "source_refs": [
+      "Thiele H, Zeymer U, Neumann FJ, et al; IABP-SHOCK II Trial Investigators. Intraaortic balloon support for myocardial infarction with cardiogenic shock. N Engl J Med. 2012;367(14):1287-1296. DOI: 10.1056/NEJMoa1208410. PMID: 22920912",
+      "Thiele H, Zeymer U, Neumann FJ, et al; IABP-SHOCK II Trial Investigators. Intra-aortic balloon counterpulsation in acute myocardial infarction complicated by cardiogenic shock (IABP-SHOCK II): final 12 month results of a randomised, open-label trial. Lancet. 2013;382(9905):1638-1645. DOI: 10.1016/S0140-6736(13)61783-3. PMID: 24011548"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "has-bled-alto-e-motivo-para-nao-anticoagular",
+    "titulo": "HAS-BLED alto: motivo para não anticoagular na fibrilação atrial?",
+    "tema": "Calculadoras",
+    "nivel": "básico",
+    "enunciado": "Paciente de 74 anos com fibrilação atrial permanente, hipertensão arterial mal controlada (PAS habitual em torno de 170 mmHg), uso crônico de anti-inflamatório não esteroidal para artrose, e CHA2DS2-VA de 3, com indicação clara de anticoagulação oral. Ao calcular o HAS-BLED, o escore resulta em 4 pontos. O médico assistente cogita não iniciar a anticoagulação, considerando o risco de sangramento 'alto demais'.",
+    "pergunta": "Com base no artigo de derivação do HAS-BLED e na diretriz ESC 2024 de fibrilação atrial, qual é a conduta correta?",
+    "opcoes": [
+      "Não iniciar a anticoagulação, pois HAS-BLED ≥3 é contraindicação formal ao uso de anticoagulante oral",
+      "Manter a indicação de anticoagular dada pelo CHA2DS2-VA, usar o HAS-BLED para identificar e corrigir os fatores modificáveis (controlar a pressão arterial, suspender o AINE) e intensificar o acompanhamento",
+      "Usar o HAS-BLED, e não o CHA2DS2-VA, como critério para decidir se o paciente deve ou não ser anticoagulado",
+      "Iniciar a anticoagulação em dose reduzida, abaixo da recomendada, para compensar o risco hemorrágico sinalizado pelo escore"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O HAS-BLED foi desenhado como ferramenta complementar à decisão de anticoagular, nunca como substituto ou critério de exclusão dela. A diretriz ESC 2024 de fibrilação atrial afirma explicitamente que a decisão de anticoagular não deve ser condicionada a escore de sangramento, priorizando a avaliação individualizada e a correção de fatores modificáveis — neste caso, hipertensão não controlada (>160 mmHg) e uso de AINE, dois dos nove itens do próprio escore — sobre o uso do escore como filtro isolado. Escore ≥3 indica risco aumentado e pede monitorização mais frequente, não suspensão da anticoagulação. Quem decide a indicação de anticoagular é o CHA2DS2-VA; o HAS-BLED entra na etapa de reavaliação (Evaluation) do caminho AF-CARE.",
+    "source_refs": [
+      "Pisters R, Lane DA, Nieuwlaat R, de Vos CB, Crijns HJGM, Lip GYH. A novel user-friendly score (HAS-BLED) to assess 1-year risk of major bleeding in patients with atrial fibrillation: the Euro Heart Survey. Chest. 2010;138(5):1093-1100. DOI: 10.1378/chest.10-0134. PMID: 20299623",
+      "Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the EACTS. Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176. PMID: 39210723"
+    ],
+    "review_status": "revisado"
   }
 ]
