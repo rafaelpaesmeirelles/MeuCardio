@@ -3060,5 +3060,96 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "intervalo-de-ecocardiograma-no-seguimento-pos-cardite-reumatica",
+    "name": "Intervalo de ecocardiograma no seguimento pós-tratamento de cardite reumática, por prioridade clínica",
+    "category": "imagem",
+    "theme": "Febre reumática",
+    "what_it_measures": "Frequência recomendada de reavaliação ecocardiográfica após febre reumática/cardiopatia reumática, estratificada em 4 categorias de prioridade clínica conforme gravidade do acometimento valvar, história de cirurgia e número de episódios prévios.",
+    "reference_range": "Prioridade 1 (RHD Estágio C grave e todo Estágio D; pós-cirurgia valvar de alto risco; ≥3 episódios de febre reumática em 5 anos; gestante com RHD; criança ≤5 anos com FR/RHD): pelo menos a cada 6 meses. Prioridade 2 (RHD Estágio C moderado; pós-cirurgia valvar de risco moderado): 6 meses a 1 ano. Prioridade 3 (RHD Estágio A ou B; FR sem cardite/RHD em profilaxia secundária; pós-cirurgia valvar de baixo risco): crianças ≤21 anos a cada 1-2 anos, >21 anos a cada 2-3 anos. Prioridade 4 (história de FR com profilaxia secundária completada; RHD resolvida com profilaxia completada): aos 1, 3 e 5 anos após a suspensão da profilaxia secundária.",
+    "indications": "Definir a periodicidade de reavaliação ecocardiográfica de todo paciente com febre reumática aguda ou cardiopatia reumática estabelecida, conforme a categoria de prioridade em que se enquadra.",
+    "interpretation": "A lógica da estratificação é escalonar o esforço de vigilância pelo risco de progressão — desde reavaliação semestral no acometimento mais grave até reavaliações espaçadas (1, 3 e 5 anos) só para confirmar resolução sustentada após a profilaxia secundária ser suspensa.",
+    "limitations": "A própria fonte adverte que as frequências são um guia e podem ser individualizadas conforme o caso — não são regra rígida e universal. O estadiamento (A/B/C/D) usado para classificar a prioridade segue a taxonomia da WHF 2023, já usada em outros registros desta base.",
+    "source_refs": [
+      "RHDAustralia. Australian guideline for the prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease, Edition 3.3, August 2025, Table 7.4 (Priority classification and recommended follow-up). Versão-resumo em periódico: Ralph AP, et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309 — a tabela de intervalos numéricos só está na edição completa do guideline, não no artigo-resumo indexado no PubMed."
+    ],
+    "tags": [
+      "seguimento ecocardiografico",
+      "cardite reumatica",
+      "estratificacao de prioridade",
+      "rhdaustralia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "rm-com-mapeamento-t1-t2-nos-criterios-de-lake-louise-atualizados",
+    "name": "RM cardíaca com mapeamento T1/T2 nos critérios de Lake Louise atualizados para miopericardite aguda",
+    "category": "imagem",
+    "theme": "Pericárdio",
+    "what_it_measures": "Sequências de mapeamento paramétrico T1 e T2 por RM cardíaca (quantificação direta do tempo de relaxamento do miocárdio, sem depender de comparação visual a tecido de referência), usadas nos critérios de Lake Louise atualizados (2018) para diagnóstico de inflamação miocárdica/pericárdica aguda.",
+    "reference_range": "VERIFICAÇÃO HUMANA NECESSÁRIA para um corte numérico universal — a própria diretriz original (Ferreira et al. 2018, JACC) não define um valor fixo em milissegundos: o corte é ESPECÍFICO DE CADA SCANNER/CENTRO, tipicamente definido como a média + 2 desvios-padrão da faixa de referência local daquele equipamento. Valor ILUSTRATIVO de um estudo que aplicou o método (não da diretriz original, e não generalizável a outro scanner): em equipamento 1,5T, faixa normal de T1 até aproximadamente 1.035 ms e de T2 até aproximadamente 55 ms, com T1 medindo 1.113±60 ms e T2 60±3 ms nos casos positivos.",
+    "indications": "Investigação de miopericardite aguda por RM cardíaca, como alternativa ou complemento aos critérios de Lake Louise clássicos (baseados em sequências ponderadas em T2 e realce tardio, sem mapeamento quantitativo).",
+    "interpretation": "O mapeamento paramétrico (T1 e T2) tem a vantagem teórica de fornecer um número absoluto, não uma comparação visual subjetiva a um tecido de referência — mas essa vantagem só se realiza se o centro tiver sua própria faixa de referência validada, o que limita a portabilidade direta de um corte numérico entre serviços diferentes.",
+    "limitations": "Texto integral da diretriz original (PMID 30545455) está atrás de paywall, sem PMC — os números de corte não puderam ser conferidos diretamente na fonte primária nesta sessão, só em estudos que aplicam o método. Não usar o valor ilustrativo acima como corte universal — ele é do scanner/estudo específico que o mediu.",
+    "source_refs": [
+      "Ferreira VM, Schulz-Menger J, Holmvang G, et al. Cardiovascular Magnetic Resonance in Nonischemic Myocardial Inflammation: Expert Recommendations. J Am Coll Cardiol. 2018;72(24):3158-3176. PMID: 30545455 — diretriz original dos critérios de Lake Louise atualizados; texto integral não acessado nesta sessão (paywall, sem PMC).",
+      "Hua A, Domenech-Ximenos B, Lopez B, et al. Diagnostic utility of the revised Lake Louise criteria in myocarditis associated with active autoimmune rheumatic disease. J Cardiovasc Magn Reson. 2025;27(2):101916. PMID: 40467038 — fonte do valor ilustrativo de corte específico de scanner.",
+      "Wang Y, Duan X, Zhu L, et al. Prognostic Value of Myocardial Parametric Mapping in Patients with Acute Myocarditis: A Retrospective Study. Radiol Cardiothorac Imaging. 2025;7(1):e240125. PMID: 39912725 — confirma o mesmo método de corte local (média + 2 DP)."
+    ],
+    "tags": [
+      "mapeamento t1 t2",
+      "criterios de lake louise",
+      "miopericardite aguda",
+      "ressonancia cardiaca"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "biopsia-pericardica-no-diagnostico-de-pericardite-tuberculosa",
+    "name": "Biópsia pericárdica no diagnóstico de pericardite tuberculosa",
+    "category": "laboratorial",
+    "theme": "Pericárdio",
+    "what_it_measures": "Análise histopatológica de tecido pericárdico obtido por biópsia aberta, buscando inflamação granulomatosa (com ou sem necrose caseosa) e/ou positividade à coloração de Ziehl-Neelsen, em paciente com derrame pericárdico volumoso de etiologia indefinida.",
+    "reference_range": "Sensibilidade 64%, especificidade 100%, eficiência diagnóstica 75% (coorte de 36 pacientes com derrame pericárdico volumoso, dos quais 25 com pericardite tuberculosa confirmada, 5 deles coinfectados por HIV).",
+    "indications": "Investigação etiológica de derrame pericárdico volumoso de causa indefinida, especialmente em região de alta prevalência de tuberculose, quando métodos menos invasivos (bioquímica do líquido, ADA) não são conclusivos.",
+    "interpretation": "Especificidade de 100% torna o achado histopatológico positivo (granuloma e/ou BAAR) altamente confiável para confirmar o diagnóstico — mas a sensibilidade moderada (64%) significa que uma biópsia negativa NÃO exclui pericardite tuberculosa, sobretudo em paciente coinfectado por HIV, população em que a fonte descreve sensibilidade histopatológica reduzida.",
+    "limitations": "Procedimento invasivo (biópsia aberta); coinfecção por HIV reduz a sensibilidade histopatológica — nesse cenário, métodos bioquímicos como ADA (ver registro correspondente) podem ter eficiência diagnóstica comparável ou superior com menor invasividade.",
+    "source_refs": [
+      "Reuter H, Burgess LJ, Schneider J, Van Vuuren W, Doubell AF. The role of histopathology in establishing the diagnosis of tuberculous pericardial effusions in the presence of HIV. Histopathology. 2006;48(3):295-302. PMID: 16430476."
+    ],
+    "tags": [
+      "biopsia pericardica",
+      "pericardite tuberculosa",
+      "granuloma",
+      "ziehl-neelsen"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "adenosina-deaminase-ada-no-liquido-pericardico-para-pericardite-tuberculosa",
+    "name": "Adenosina deaminase (ADA) no líquido pericárdico para diagnóstico de pericardite tuberculosa",
+    "category": "laboratorial",
+    "theme": "Pericárdio",
+    "what_it_measures": "Atividade da enzima adenosina deaminase no líquido pericárdico obtido por pericardiocentese, biomarcador indireto de resposta imune celular à infecção por Mycobacterium tuberculosis.",
+    "reference_range": "DUAS FONTES COM CORTES DIFERENTES, registradas com a divergência explícita: (1) corte de 30 U/L — sensibilidade 94%, especificidade 68%, VPP 80% (coorte de 110 pacientes com efusão pericárdica volumosa de etiologias variadas); (2) corte de ≥40 U/L — sensibilidade 82,1%, especificidade 92,4% (coorte de 105 pacientes HIV-negativos com suspeita de pericardite tuberculosa, 39 confirmados).",
+    "indications": "Investigação etiológica de derrame pericárdico volumoso com suspeita de tuberculose, por método menos invasivo que a biópsia pericárdica — amostra obtida na mesma pericardiocentese já indicada para alívio de tamponamento, quando presente.",
+    "interpretation": "O corte mais baixo (30 U/L) prioriza SENSIBILIDADE (menos falso-negativo, mais falso-positivo); o corte mais alto (≥40 U/L) prioriza ESPECIFICIDADE (menos falso-positivo, mais falso-negativo) — a escolha do corte depende do contexto: em população de alta prevalência de TB, um corte mais sensível reduz o risco de perder o diagnóstico; em população de baixa prevalência, um corte mais específico evita tratamento desnecessário.",
+    "limitations": "ADA elevada não é exclusiva de tuberculose — também se eleva em derrame pericárdico neoplásico e em outras infecções, o que explica a especificidade imperfeita nos dois estudos; a segunda fonte (PMID 33004934) também avaliou Xpert MTB/RIF (especificidade 98,5%, sensibilidade menor, 66,7%) e T-SPOT.TB como métodos complementares — a combinação sequencial dos testes teve razão de chances diagnóstica de 252,0, maior que qualquer teste isolado.",
+    "source_refs": [
+      "Burgess LJ, Reuter H, Carstens ME, Taljaard JJ, Doubell AF. The use of adenosine deaminase and interferon-gamma as diagnostic tools for tuberculous pericarditis. Chest. 2002;122(3):900-905. PMID: 12226030 — corte de 30 U/L.",
+      "Hu X, et al. Diagnostic values of Xpert MTB/RIF, T-SPOT.TB and adenosine deaminase for HIV-negative tuberculous pericarditis in a high burden setting: a prospective observational study. Sci Rep. 2020;10(1):16325. PMID: 33004934 — corte de ≥40 U/L, e comparação com Xpert MTB/RIF e T-SPOT.TB."
+    ],
+    "tags": [
+      "adenosina deaminase",
+      "ada",
+      "pericardite tuberculosa",
+      "liquido pericardico"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
