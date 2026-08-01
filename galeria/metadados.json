@@ -1514,5 +1514,115 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "sindrome-de-twiddler-eletrodos-enrolados",
+    "title": "Radiografia de tórax — Síndrome de Twiddler (eletrodos enrolados no gerador)",
+    "modality": "Radiografia",
+    "theme": "Dispositivos",
+    "file_path": "radiografia/sindrome-de-twiddler-eletrodos-enrolados.jpg",
+    "findings": "Radiografia de tórax em incidência anteroposterior, com gerador de cardiodesfibrilador implantável na loja infraclavicular esquerda (identificada como \"LEFT 20\" no canto superior). As setas brancas apontam os eletrodos enrolados em torno do próprio gerador, formando alças concêntricas junto à loja. Não se identifica nenhum eletrodo percorrendo o trajeto venoso até as câmaras cardíacas direitas — as pontas foram tracionadas para fora do ventrículo, e o restante do campo cardíaco está livre de material de eletrodo.",
+    "teaching_points": "Síndrome de Twiddler: rotação repetida do gerador dentro da loja subcutânea — em geral pela manipulação do próprio paciente, consciente ou não — que enrola os eletrodos no gerador e os traciona retrogradamente, deslocando as pontas das câmaras cardíacas. O resultado é perda de captura e de sensibilidade num dispositivo aparentemente íntegro: no marca-passo, assistolia ou ritmo de escape no paciente dependente; no cardiodesfibrilador, falha de terapia e, se o eletrodo deslocado passar a estimular estruturas vizinhas, contração diafragmática ou de peitoral. O diagnóstico é radiográfico e a chave de leitura é a mesma da radiografia de dispositivo em geral (localizar o gerador, contar os eletrodos, seguir cada trajeto até a ponta): aqui o achado que fecha é a ausência de eletrodo no coração com alças redundantes na loja. Corrigir exige reposicionamento cirúrgico; fixar o gerador à fáscia e usar loja justa reduzem a recidiva. Suspeitar sempre que houver falha de dispositivo com radiografia que ninguém conferiu — é uma causa mecânica que o interrogatório do aparelho descreve como \"deslocamento\" sem explicar o porquê.",
+    "source_name": "Wikimedia Commons (a partir de Clin Pract Cases Emerg Med, acesso aberto)",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Twiddler%27s_syndrome.jpg",
+    "license": "CC BY 4.0",
+    "attribution": "Lesnick J, Cooper B, Doshi P. Twiddler's Syndrome. Clin Pract Cases Emerg Med. 2019;3(3):299-300. PMID 31404310, PMC6682220 — via Wikimedia Commons, CC BY 4.0.",
+    "tags": [
+      "radiografia",
+      "dispositivo cardíaco",
+      "síndrome de twiddler",
+      "cardiodesfibrilador",
+      "deslocamento de eletrodo"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ressincronizador-tres-eletrodos-fluoroscopia",
+    "title": "Fluoroscopia — Ressincronizador com três eletrodos (átrio direito, ventrículo direito e seio coronário)",
+    "modality": "Fluoroscopia",
+    "theme": "Dispositivos",
+    "file_path": "radiografia/ressincronizador-tres-eletrodos-fluoroscopia.png",
+    "findings": "Imagem fluoroscópica do tórax com gerador na região peitoral esquerda e três eletrodos, marcados por setas na própria imagem: seta preta cheia — eletrodo de átrio direito, com ponta à esquerda do campo; seta preta tracejada — eletrodo de ventrículo direito, que exibe dois segmentos nitidamente espessados ao longo do corpo, correspondentes às bobinas de choque; seta vermelha — eletrodo em veia tributária do seio coronário, com trajeto contornando a face lateral do ventrículo esquerdo, à direita do campo. O gerador é de tamanho maior que o de um marca-passo convencional, compatível com dispositivo que também desfibrila.",
+    "teaching_points": "Leitura de imagem de ressincronizador: três eletrodos definem terapia de ressincronização (TRC), e o terceiro é o que a distingue de um dispositivo de dupla câmara — ele não fica dentro de uma câmara, e sim numa veia cardíaca tributária do seio coronário, por fora do ventrículo esquerdo, o que dá o trajeto lateral e epicárdico característico. Dois detalhes separam TRC-P de TRC-D na mesma imagem: as bobinas de choque no eletrodo de ventrículo direito (segmentos espessos e mais radiopacos) e o volume maior do gerador. Reconhecer a diferença importa porque muda a expectativa clínica — TRC-D acrescenta prevenção de morte súbita por arritmia à correção da dissincronia, e a decisão entre as duas está na diretriz de estimulação cardíaca e ressincronização da ESC de 2021 (Eur Heart J. 2021;42(35):3427-3520). Numa radiografia de rotina, contar eletrodos e seguir o trajeto do terceiro é o que evita descrever um ressincronizador como marca-passo dupla-câmara.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Cardiac_resynchronisation_therapy.png",
+    "license": "CC BY 3.0",
+    "attribution": "Gregory Marcus, MD, MAS, FACC, via Wikimedia Commons — CC BY 3.0.",
+    "tags": [
+      "fluoroscopia",
+      "ressincronização cardíaca",
+      "trc",
+      "seio coronário",
+      "dispositivo cardíaco"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cteph-arterias-pulmonares-centrais-proeminentes",
+    "title": "Radiografia de tórax — Artérias pulmonares centrais proeminentes com salto de calibre (CTEPH sobre DPOC)",
+    "modality": "Radiografia",
+    "theme": "Hipertensão pulmonar",
+    "file_path": "radiografia/cteph-arterias-pulmonares-centrais-proeminentes.jpg",
+    "findings": "Radiografia de tórax póstero-anterior, obtida em ortostase (marcação \"stehend\" no canto superior). As artérias pulmonares centrais estão realçadas em roxo bilateralmente pelo autor da imagem: dilatadas, de contorno bem definido, com redução abrupta do calibre na transição para os ramos periféricos — o \"salto de calibre\" descrito na legenda original. As cúpulas diafragmáticas estão nitidamente aplanadas dos dois lados, e os campos pulmonares se apresentam hiperinsuflados, achados da doença pulmonar obstrutiva crônica associada no mesmo paciente.",
+    "teaching_points": "Dois grupos de hipertensão pulmonar convivem nesta radiografia, e a distinção muda o tratamento: a hiperinsuflação e o aplanamento diafragmático apontam doença pulmonar crônica (grupo 3), enquanto a dilatação das artérias centrais com queda abrupta do calibre periférico é o padrão descrito na hipertensão pulmonar tromboembólica crônica (grupo 4) — a única forma potencialmente curável por cirurgia. A radiografia não estabelece nenhum dos dois: é achado que levanta a suspeita e obriga a seguir a investigação. Na diretriz ESC/ERS de hipertensão pulmonar de 2022 (Eur Heart J. 2022;43(38):3618-3731), a cintilografia de ventilação/perfusão é o exame de rastreamento para doença tromboembólica crônica em paciente com hipertensão pulmonar, porque a angiotomografia isolada pode não mostrar a doença organizada e distal, e o cateterismo direito é o que confirma o diagnóstico hemodinâmico. Erro a evitar: atribuir toda a hipertensão pulmonar do pneumopata à doença de base e não rastrear tromboembolismo crônico — a coexistência, como neste caso, é justamente o que faz perder o diagnóstico tratável.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:COPD_und_CTEPH_79W_-_CR_pa_-_001_-_Annotation.jpg",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Hellerhoff, via Wikimedia Commons — CC BY-SA 4.0. Anotação em roxo do autor da imagem.",
+    "tags": [
+      "radiografia",
+      "hipertensão pulmonar",
+      "cteph",
+      "dpoc",
+      "artéria pulmonar"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "endarterectomia-pulmonar-especime-cteph",
+    "title": "Espécime cirúrgico — Endarterectomia pulmonar na hipertensão pulmonar tromboembólica crônica",
+    "modality": "Anatomia patológica",
+    "theme": "Hipertensão pulmonar",
+    "file_path": "patologia/endarterectomia-pulmonar-especime-cteph.jpg",
+    "findings": "Peça retirada em endarterectomia pulmonar, fotografada sobre campo azul com régua centimetrada. São dois moldes ramificados, um de cada pulmão, que reproduzem em relevo a árvore arterial pulmonar: tronco central espesso, esbranquiçado a amarelado e de aspecto fibroso, do qual partem prolongamentos progressivamente mais finos e translúcidos, correspondentes aos ramos segmentares e subsegmentares. Pela régua, cada molde se estende por cerca de 10 a 12 cm no maior eixo. O material é firme e organizado, sem o aspecto gelatinoso e vermelho-escuro do trombo recente.",
+    "teaching_points": "Esta peça explica por que a hipertensão pulmonar tromboembólica crônica é a única forma de hipertensão pulmonar potencialmente curável por cirurgia — e por que ela não se trata com anticoagulação apenas. O que obstrui não é trombo fresco, e sim tecido fibrótico organizado incorporado à camada íntima da artéria: nenhum anticoagulante o dissolve, e é por isso que a operação consiste em uma endarterectomia (descolamento de um plano da parede arterial) e não em uma embolectomia. O molde ramificado mostra o alcance distal necessário — remover só o material proximal deixa a resistência vascular elevada. Consequência prática: paciente com dispneia persistente após tromboembolismo pulmonar agudo, mesmo anticoagulado corretamente, precisa ser investigado para doença tromboembólica crônica e, se confirmada, encaminhado a centro com experiência em endarterectomia pulmonar antes de ser tratado apenas com fármacos vasodilatadores pulmonares. Na diretriz ESC/ERS de 2022 (Eur Heart J. 2022;43(38):3618-3731), a operabilidade é decidida por equipe multidisciplinar em centro de referência, e a angioplastia pulmonar por balão e o tratamento farmacológico ficam para os casos inoperáveis ou com doença residual.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:PEA_specimen.tif",
+    "license": "CC BY-SA 4.0",
+    "attribution": "ICA CTEPH, via Wikimedia Commons — CC BY-SA 4.0.",
+    "tags": [
+      "anatomia patológica",
+      "cteph",
+      "endarterectomia pulmonar",
+      "hipertensão pulmonar",
+      "tromboembolismo"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "curva-de-pressao-balao-intra-aortico",
+    "title": "Curva de pressão arterial com balão intra-aórtico — efeitos hemodinâmicos do contrapulso",
+    "modality": "Traçado hemodinâmico",
+    "theme": "Terapia intensiva",
+    "file_path": "hemodinamica/curva-de-pressao-balao-intra-aortico.jpg",
+    "findings": "Traçado esquemático de pressão arterial em mmHg, com eixo marcado em 80, 100 e 120 mmHg, mostrando ciclos assistidos e não assistidos por balão intra-aórtico. Vê-se um pico sistólico não assistido próximo de 110 mmHg, seguido de um segundo pico, mais alto que ele e acima da linha tracejada dos 120 mmHg, correspondente à insuflação do balão na diástole (aumento diastólico). Logo após, o traçado desce abaixo da linha tracejada dos 80 mmHg, atingindo o ponto mais baixo de todo o registro — a queda da pressão diastólica final produzida pela desinsuflação do balão. O ciclo seguinte tem pico sistólico em torno de 100 mmHg, menor que o pico não assistido inicial. Os pontos A a F estão rotulados na figura, mas a fonte não fornece legenda explicando cada letra.",
+    "teaching_points": "Os três efeitos do balão intra-aórtico são lidos diretamente na curva, sem nenhum número calculado: (1) aumento diastólico — a insuflação no fechamento da valva aórtica eleva a pressão na diástole, que é quando o miocárdio recebe perfusão coronária, e o pico assistido chega acima do pico sistólico não assistido; (2) redução da pressão diastólica final — a desinsuflação súbita imediatamente antes da sístole cria um vazio de pressão na aorta e reduz a pós-carga contra a qual o ventrículo esquerdo tem de ejetar; (3) redução do pico sistólico assistido, consequência da queda de pós-carga, com menor consumo miocárdico de oxigênio. O balão portanto melhora a oferta de oxigênio e reduz a demanda ao mesmo tempo, e é isso que se confere à beira do leito antes de discutir sincronismo: se o pico diastólico assistido não supera o sistólico não assistido, ou se a diastólica final não cai, o tempo de insuflação/desinsuflação está errado ou há problema no balão. Cuidado de leitura: a fonte não legenda os pontos A a F da figura, então o traçado deve ser usado pelo padrão de morfologia, não pela correspondência de cada letra a um evento específico.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Ballondruckkurve.JPG",
+    "license": "Domínio público",
+    "attribution": "Dscp, via Wikimedia Commons — domínio público (liberado pelo autor).",
+    "tags": [
+      "hemodinâmica",
+      "balão intra-aórtico",
+      "contrapulso",
+      "choque cardiogênico",
+      "terapia intensiva"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
