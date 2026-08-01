@@ -1797,5 +1797,192 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "oct-intracoronaria-tecnica",
+    "title": "Tomografia de coerência óptica (OCT) intracoronária — imagem exemplar da técnica",
+    "modality": "Angiografia",
+    "theme": "Doença coronariana",
+    "file_path": "angiografia/oct-intracoronaria-tecnica.png",
+    "findings": "Imagem intracoronária por OCT (luz próxima ao infravermelho) mostrando corte transversal do lúmen vascular: luz arterial escura e circular, com o cateter/fio-guia visível projetando sombra acústica característica, e as camadas da parede do vaso demonstradas em alta resolução (anéis concêntricos de diferentes densidades de sinal). A imagem em si NÃO permite identificar com segurança um achado patológico específico (placa, trombo ou dissecção) — a legenda da fonte não descreve achado além de \"exemplo de imagem de OCT intracoronária\", e a inspeção direta confirma um lúmen de aspecto relativamente regular.",
+    "teaching_points": "Serve para ilustrar a técnica em si: a OCT tem a maior resolução espacial entre os métodos de imagem intracoronária (10-20 μm, ordem de grandeza maior que o ultrassom intravascular), permitindo diferenciar as três camadas da parede arterial (íntima, média, adventícia) e caracterizar em detalhe a superfície de uma placa — mas exige que o sangue seja removido do campo (flush de contraste), diferente do IVUS.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Intracoronary_OCT_imaging.png",
+    "license": "CC BY-SA 4.0",
+    "attribution": "OCTRnD, via Wikimedia Commons — CC BY-SA 4.0.",
+    "tags": [
+      "oct",
+      "tomografia de coerencia optica",
+      "imagem intracoronaria",
+      "tecnica de imagem"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ecg-iam-anterolateral-extenso",
+    "title": "ECG — Infarto agudo do miocárdio anterolateral extenso",
+    "modality": "ECG",
+    "theme": "Doença coronariana",
+    "file_path": "ecg/ecg-iam-anterolateral-extenso.jpg",
+    "findings": "ECG de 12 derivações com supradesnivelamento do segmento ST visível em V1 a V4 (parede anterior) e também em I e aVL (parede lateral alta) — padrão de infarto anterolateral extenso, compatível com oclusão proximal da artéria descendente anterior com envolvimento de ramo diagonal ou da circunflexa. Confirmado por inspeção direta do traçado antes de cadastrar.",
+    "teaching_points": "Complementa o ECG de IAM inferior já existente na base: aqui a extensão do supra para a parede lateral (I, aVL), além da anterior (V1-V4), sinaliza território isquêmico maior — geralmente associado a oclusão mais proximal e maior massa miocárdica em risco, com implicação de urgência ainda maior na reperfusão.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:AnteriorLateralMI.jpg",
+    "license": "CC BY-SA 3.0",
+    "attribution": "James Heilman, MD, via Wikimedia Commons — CC BY-SA 3.0.",
+    "tags": [
+      "infarto agudo do miocardio",
+      "parede anterolateral",
+      "supra de st",
+      "ecg"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "prolapso-mitral-disjuncao-anular",
+    "title": "Prolapso da valva mitral com disjunção do anel mitral (MAD) — ecocardiograma 2D",
+    "modality": "Ecocardiograma",
+    "theme": "Valvopatias",
+    "file_path": "ecocardiograma/prolapso-mitral-disjuncao-anular.jpg",
+    "findings": "Dois cortes ecocardiográficos parasternais longitudinais do mesmo paciente, em modo 2D (sem Doppler): painel em diástole mostrando folheto mitral espessado e alongado, e painel em sístole com seta vermelha apontando separação entre o anel mitral e a inserção miocárdica do folheto posterior — disjunção do anel mitral (MAD), medida pela fonte em 10 mm.",
+    "teaching_points": "A disjunção do anel mitral (MAD) é um achado estrutural cada vez mais reconhecido no prolapso mitral, associado em estudos recentes a maior risco de arritmia ventricular — é um achado 2D puro, independente do jato de regurgitação ao Doppler, e por isso complementa (não repete) o registro de regurgitação mitral por Doppler já existente na base.",
+    "source_name": "PMC (Medical Sciences, MDPI, acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12452400/",
+    "license": "CC BY 4.0",
+    "attribution": "Opris DR, Harpa MM, Anitei D-E, Calburean P, Rudzik R. Med Sci (Basel). 2025;13(3):185. PMID: 40981183 — CC BY 4.0.",
+    "tags": [
+      "prolapso da valva mitral",
+      "disjuncao do anel mitral",
+      "mad",
+      "risco arritmico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "estenose-mitral-cardiomegalia-e-congestao-radiografia",
+    "title": "Radiografia de tórax na estenose mitral reumática grave — cardiomegalia e congestão pulmonar",
+    "modality": "Radiografia",
+    "theme": "Valvopatias",
+    "file_path": "radiografia/estenose-mitral-cardiomegalia-congestao.jpg",
+    "findings": "Radiografia de tórax em incidência frontal mostrando cardiomegalia e sinais de congestão vascular pulmonar num paciente com estenose mitral reumática grave. Na resolução disponível não é possível confirmar com segurança o sinal específico de duplo contorno do átrio esquerdo descrito pela fonte — a descrição aqui se limita ao que é claramente identificável (cardiomegalia e congestão), sem afirmar o sinal fino que a legenda da fonte menciona.",
+    "teaching_points": "Ilustra o quadro radiográfico geral de valvopatia mitral reumática avançada com repercussão hemodinâmica — cardiomegalia por sobrecarga de câmaras esquerdas e direitas associada, e congestão pulmonar por elevação crônica de pressão em átrio esquerdo. Fonte brasileira (Arquivos Brasileiros de Cardiologia).",
+    "source_name": "PMC (Arquivos Brasileiros de Cardiologia, acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6122908/",
+    "license": "CC BY",
+    "attribution": "Favarato D, Aiello VD. Arq Bras Cardiol. 2018;111(2):215-222. DOI: 10.5935/abc.20180157. PMID: 30183990 — CC BY.",
+    "tags": [
+      "estenose mitral reumatica",
+      "cardiomegalia",
+      "congestao pulmonar",
+      "radiografia de torax"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cisto-pericardico-tc",
+    "title": "Cisto pericárdico — TC de tórax, cortes axial, sagital e coronal",
+    "modality": "TC",
+    "theme": "Pericárdio",
+    "file_path": "tc/cisto-pericardico.jpg",
+    "findings": "Composição de 4 painéis de TC de tórax contrastada (cortes axial, sagital e coronal) mostrando lesão cística/hipodensa bem delimitada, homogênea, adjacente ao pericárdio no hemitórax direito, próxima ao diafragma — sem realce significativo pelo contraste, compatível com conteúdo líquido simples.",
+    "teaching_points": "O cisto pericárdico é achado incidental benigno mais comum na região do ângulo cardiofrênico — o diagnóstico diferencial de imagem inclui cisto broncogênico (geralmente tem relação com a árvore traqueobrônquica, ausente aqui) e outras massas mediastinais. A lesão costuma ser assintomática e sem necessidade de intervenção quando os achados de imagem são típicos.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Perikardzyste_55W_-_CT_KM_pv_-_001.jpg",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Hellerhoff, via Wikimedia Commons — CC BY-SA 4.0.",
+    "tags": [
+      "cisto pericardico",
+      "tomografia de torax",
+      "achado incidental"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "agenesia-de-pericardio-sinal-de-snoopy",
+    "title": "Ausência congênita de pericárdio — radiografia de tórax com sinal de Snoopy",
+    "modality": "Radiografia",
+    "theme": "Pericárdio",
+    "file_path": "radiografia/agenesia-pericardio-sinal-de-snoopy.jpg",
+    "findings": "Painel duplo: (A) ecocardiograma apical com seta amarela e marcação em estrela azul indicando deslocamento/mobilidade cardíaca anormal; (B) radiografia de tórax frontal mostrando deslocamento do coração para a esquerda, com apagamento do contorno cardíaco direito e retificação/proeminência da borda cardíaca esquerda — o contorno cardíaco alterado é demarcado em desenho amarelo sobreposto no canto superior direito da imagem, reproduzindo o \"sinal de Snoopy\" (a silhueta cardíaca deslocada lembra o formato do cão da tira em quadrinhos).",
+    "teaching_points": "Achado radiográfico clássico e nomeado da ausência congênita de pericárdio — condição rara em que a ausência do saco pericárdico permite deslocamento e rotação anormais do coração dentro do tórax. Este achado de imagem forma par direto com o documento de texto já publicado nesta base sobre agenesia congênita do pericárdio, que até então não tinha imagem associada.",
+    "source_name": "PMC (Cureus, acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12515374/",
+    "license": "CC BY 4.0",
+    "attribution": "Gupta S, Kumar D. Cureus. 2025;17(9):e92125. DOI: 10.7759/cureus.92125. PMID: 41084701 — CC BY 4.0. Figura 2 do artigo (painéis A e B).",
+    "tags": [
+      "agenesia do pericardio",
+      "sinal de snoopy",
+      "radiografia de torax",
+      "ausencia congenita de pericardio"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "gangrena-seca-isquemia-critica-de-membro",
+    "title": "Gangrena seca dos artelhos — isquemia crítica de membro",
+    "modality": "Fotografia clínica",
+    "theme": "Aorta e doença arterial periférica",
+    "file_path": "clinico/gangrena-seca-isquemia-critica-de-membro.jpg",
+    "findings": "Fotografia clínica de pé mostrando três artelhos com necrose seca (gangrena seca) — tecido enegrecido, endurecido e bem demarcado do tecido viável adjacente, com um quarto artelho de coloração violácea/arroxeada sugerindo isquemia menos avançada em transição. O padrão morfológico (tecido mumificado, seco, bem delimitado, sem sinais de secreção ou infecção evidente) é consistente com gangrena SECA por isquemia, distinta da gangrena úmida/infectada — avaliação feita por inspeção direta da imagem, não só pela legenda da fonte.",
+    "teaching_points": "Estágio mais avançado da doença arterial periférica — isquemia crítica de membro com perda tecidual irreversível. A demarcação nítida entre tecido necrótico e viável, sem sinais de infecção associada, é a distinção clínica que orienta o manejo (gangrena seca tende a autoamputação/desbridamento eletivo; gangrena úmida exige intervenção urgente por risco de sepse).",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:GangreneFoot.JPG",
+    "license": "CC BY-SA 3.0",
+    "attribution": "James Heilman, MD, via Wikimedia Commons — CC BY-SA 3.0 / GFDL 1.2+.",
+    "tags": [
+      "gangrena seca",
+      "isquemia critica de membro",
+      "doenca arterial periferica avancada"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "pausa-sinusal-prolongada-telemetria",
+    "title": "Pausa sinusal prolongada — telemetria contínua",
+    "modality": "ECG",
+    "theme": "Síncope",
+    "file_path": "ecg/pausa-sinusal-prolongada-telemetria.jpg",
+    "findings": "Tira de ritmo em telemetria contínua, múltiplas derivações (I, II, III, V1, aVR, aVL, aVF), com complexos QRS estreitos e regulares interrompidos por uma PAUSA nitidamente marcada (indicada por seta e rótulo \"PAUSE\" na imagem) — ausência de atividade elétrica por um intervalo bem maior que o ciclo basal, antes da retomada do ritmo. É registro de telemetria/monitor contínuo hospitalar, não Holter ambulatorial propriamente dito.",
+    "teaching_points": "Ilustra o achado eletrocardiográfico que define a causa cardíaca de síncope por disfunção do nó sinusal — pausa documentada e temporalmente correlacionada (ou não) com sintoma é o dado que muda a decisão entre observação e marca-passo, dependendo da duração exata e do contexto clínico.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:ECG_Sinus_Pause.jpg",
+    "license": "CC BY-SA 4.0",
+    "attribution": "PerpetuallyTachy, via Wikimedia Commons — CC BY-SA 4.0.",
+    "tags": [
+      "pausa sinusal",
+      "disfuncao do no sinusal",
+      "telemetria",
+      "sincope cardiaca"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "tilt-test-sincope-vasodepressora",
+    "title": "Teste de inclinação (tilt test) — padrão vasodepressor de síncope",
+    "modality": "Diagrama",
+    "theme": "Síncope",
+    "file_path": "diagrama/tilt-test-sincope-vasodepressora.jpg",
+    "findings": "Gráficos de frequência cardíaca (vermelho), pressão arterial (preto) e velocidade de fluxo sanguíneo cerebral (azul) ao longo do tempo durante teste de inclinação, com o momento da síncope marcado. A pressão arterial cai progressivamente até um nadir (de aproximadamente 100 para 31 mmHg no painel principal) coincidindo com a síncope, enquanto a frequência cardíaca permanece relativamente estável, SEM bradicardia relevante — padrão hemodinâmico vasodepressor puro, sem componente cardioinibitório.",
+    "teaching_points": "Documenta objetivamente a distinção entre os subtipos hemodinâmicos de síncope reflexa: aqui a queda de pressão ocorre sem redução proporcional da frequência cardíaca, definindo o padrão vasodepressor — diferente do padrão cardioinibitório (queda de FC predominante) e do misto, que a base já descreve em texto mas ainda não tinha ilustração gráfica do traçado hemodinâmico real durante o teste.",
+    "source_name": "PMC (Neuroscience Journal, Hindawi, acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4972931/",
+    "license": "CC BY",
+    "attribution": "Novak P. Neurosci J. 2016;2016:6127340. DOI: 10.1155/2016/6127340. PMID: 27525257 — CC BY.",
+    "tags": [
+      "tilt test",
+      "teste de inclinacao",
+      "sincope vasodepressora",
+      "padrao hemodinamico"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]

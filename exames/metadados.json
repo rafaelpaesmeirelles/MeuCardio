@@ -1942,5 +1942,143 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "troponina-de-alta-sensibilidade-algoritmo-0h1h-esc",
+    "name": "Troponina de alta sensibilidade — algoritmo 0h/1h (ESC) no diagnóstico rápido de IAM",
+    "category": "laboratorial",
+    "theme": "Doença coronariana",
+    "what_it_measures": "Concentração sérica de troponina cardíaca (T ou I) por ensaio de alta sensibilidade, medida na chegada (0h) e repetida em 1 hora; a variação absoluta (Δ1h) somada ao valor absoluto de 0h classifica o paciente em zonas de descarte, observação ou confirmação de IAM.",
+    "reference_range": "Cortes por ensaio (ng/L), Tabela 5 da diretriz — hs-cTnT (Elecsys, Roche): 0h muito baixo <5; 0h baixo <12 com Δ1h <3 → descarte; 0h alto ≥52 ou Δ1h ≥5 → confirmação. hs-cTnI (Architect, Abbott): 0h muito baixo <4; 0h baixo <5 com Δ1h <2 → descarte; 0h alto ≥64 ou Δ1h ≥6 → confirmação. hs-cTnI (Centaur, Siemens): 0h muito baixo <3; 0h baixo <6 com Δ1h <3 → descarte; 0h alto ≥120 ou Δ1h ≥12 → confirmação. hs-cTnI (Access, Beckman Coulter): 0h muito baixo <4; 0h baixo <5 com Δ1h <4 → descarte; 0h alto ≥50 ou Δ1h ≥15 → confirmação. Cortes válidos independente de idade e função renal.",
+    "indications": "Todo paciente com suspeita de síndrome coronariana aguda sem supra de ST, para triagem rápida na emergência — Classe I, Nível B, quando o ensaio disponível tiver algoritmo 0h/1h validado.",
+    "interpretation": "Rule-out (VPN >99%) se dosagem inicial muito baixa OU dosagem baixa com Δ1h abaixo do limiar. Rule-in se dosagem inicial muito alta OU Δ1h acima do limiar de confirmação — exige integração clínica, não é confirmação absoluta isolada. Demais casos ficam em observação, com 3ª dosagem em 3h.",
+    "limitations": "Sempre integrar a avaliação clínica e ECG de 12 derivações; dosagem seriada obrigatória se dor torácica recorrente. Até 1% dos pacientes têm elevação tardia, exigindo reavaliação se suspeita clínica persistir. Concentração afetada por idade, função renal, tempo desde início da dor e sexo. Cortes NÃO são intercambiáveis entre ensaios de fabricantes diferentes.",
+    "source_refs": [
+      "Collet JP, Thiele H, Barbato E, et al. 2020 ESC Guidelines for the management of acute coronary syndromes in patients presenting without persistent ST-segment elevation. Eur Heart J. 2021;42(14):1289-1367. PMID: 32860058. DOI: 10.1093/eurheartj/ehaa575 — Tabela 5, texto integral conferido em PDF oficial."
+    ],
+    "tags": [
+      "troponina de alta sensibilidade",
+      "algoritmo 0h1h",
+      "diagnostico rapido de iam",
+      "esc 2020"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "pericardiocentese-diagnostica-analise-do-liquido-pericardico",
+    "name": "Pericardiocentese diagnóstica — análise do líquido pericárdico",
+    "category": "laboratorial",
+    "theme": "Pericárdio",
+    "what_it_measures": "Conjunto de testes bioquímicos, citológicos e microbiológicos no líquido obtido por pericardiocentese, para diferenciar exsudato de transudato e identificar etiologia (neoplásica, tuberculosa, bacteriana).",
+    "reference_range": "Critérios adaptados de Light (proteína >3 g/dL; relação proteína líquido/soro >0,5; LDH >200 UI/L; relação LDH líquido/soro >0,6) — a diretriz declara explicitamente que esses critérios NÃO foram validados para líquido pericárdico, só extrapolados do líquido pleural. ADA (corte de fonte secundária, não da própria diretriz ESC): ≥40 U/L, sensibilidade 88%, especificidade 83%.",
+    "indications": "Derrame pericárdico moderado a grande sintomático sem resposta a tratamento clínico, suspeita de etiologia bacteriana ou neoplásica, ou tamponamento cardíaco (nesse caso a pericardiocentese é terapêutica e indicada de forma absoluta). Protocolo escalonado específico para suspeita de pericardite tuberculosa: avaliação não invasiva → pericardiocentese diagnóstica → biópsia pericárdica → quimioterapia empírica antituberculose.",
+    "interpretation": "Diagnóstico DEFINITIVO de pericardite tuberculosa exige bacilo álcool-ácido resistente no líquido/histologia, cultura positiva ou PCR positivo. Diagnóstico PROVÁVEL: exsudato linfocítico com IFN-γ não estimulado, ADA ou lisozima elevados, em área endêmica, com evidência de TB em outro sítio e/ou resposta à quimioterapia empírica. IFN-γ não estimulado tem acurácia superior à ADA e ao Xpert MTB/RIF.",
+    "limitations": "Critérios de Light são extrapolados do líquido pleural, NÃO validados especificamente para o pericárdio — declarado pela própria diretriz em nota de rodapé. Teste de tuberculina cutânea não é útil em adultos, independente da prevalência de base de tuberculose. O corte de ADA vem de metanálise externa, não da diretriz ESC.",
+    "source_refs": [
+      "Adler Y, Charron P, Imazio M, et al. 2015 ESC Guidelines for the diagnosis and management of pericardial diseases. Eur Heart J. 2015;36(42):2921-2964. PMID: 26320112. PMCID: PMC7539677 — Tabelas 15 e 17, lidas em imagem no depósito do PMC.",
+      "Tuon FF, Litvoc MN, Lopes MI. Adenosine deaminase and tuberculous pericarditis--a systematic review with meta-analysis. Acta Trop. 2006;99(1):67-74. PMID: 16950165 — corte de ADA, 5 estudos, sensibilidade 88%/especificidade 83%."
+    ],
+    "tags": [
+      "pericardiocentese",
+      "liquido pericardico",
+      "pericardite tuberculosa",
+      "ada"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "metodo-pisa-na-quantificacao-de-regurgitacao-mitral-e-aortica",
+    "name": "Método PISA (área de isovelocidade proximal) na quantificação de regurgitação mitral e aórtica",
+    "category": "metodo_grafico",
+    "theme": "Valvopatias",
+    "what_it_measures": "Área do orifício regurgitante efetivo (EROA) e volume regurgitante, calculados a partir do raio da zona de convergência de fluxo (hemisfério de isovelocidade) ao Doppler colorido, combinado à velocidade de aliasing e à velocidade de pico do jato ao Doppler contínuo.",
+    "reference_range": "Cortes de gravidade (ASE 2017, mesmos usados pelo ACC/AHA 2020): RM grave (primária E secundária) — EROA ≥0,40 cm², volume regurgitante ≥60 mL, fração regurgitante ≥50%. RA grave — EROA ≥0,30 cm², volume regurgitante ≥60 mL, fração regurgitante >50%.",
+    "indications": "Quantificação de regurgitação mitral ou aórtica ao ecocardiograma, especialmente quando a avaliação qualitativa (jato colorido) é indeterminada ou é necessária decisão de gravidade para indicar intervenção.",
+    "interpretation": "EROA e volume regurgitante acima dos cortes definem regurgitação grave, sempre integrados a outros parâmetros (vena contracta, fluxo reverso em veias pulmonares/aorta descendente, dimensão de câmaras). É medida de fluxo de pico instantâneo, não do ciclo inteiro.",
+    "limitations": "Pressupõe geometria hemisférica da zona de convergência — na RM funcional/secundária o orifício costuma ser elíptico/em crescente, o que SUBESTIMA a EROA pelo método convencional. Correção angular é necessária com funil de folhetos mitrais (ângulo <180°) ou ângulo obtuso na RA (>220°) — sem correção, a EROA aórtica fica significativamente subestimada. Tecnicamente difícil delimitar o raio com precisão na prática de rotina.",
+    "source_refs": [
+      "Zoghbi WA, Adams D, Bonow RO, et al. Recommendations for Noninvasive Evaluation of Native Valvular Regurgitation. J Am Soc Echocardiogr. 2017;30(4):303-371. PMID: 28314623."
+    ],
+    "tags": [
+      "pisa",
+      "area de isovelocidade proximal",
+      "regurgitacao mitral",
+      "regurgitacao aortica",
+      "eroa"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "vhs-e-pcr-como-criterios-menores-de-jones",
+    "name": "VHS e PCR como critérios menores de Jones na febre reumática",
+    "category": "laboratorial",
+    "theme": "Febre reumática",
+    "what_it_measures": "Marcadores inespecíficos de resposta inflamatória sistêmica (VHS em mm/h; PCR em mg/dL), usados como um dos cinco critérios MENORES da revisão de 2015 dos critérios de Jones.",
+    "reference_range": "Populações de BAIXO risco (incidência de FRA ≤2/100.000 crianças em idade escolar OU prevalência de doença reumática cardíaca ≤1/1.000/ano em todas as idades): VHS ≥60 mm/h E/OU PCR ≥3,0 mg/dL. Populações de risco MODERADO a ALTO: VHS ≥30 mm/h E/OU PCR ≥3,0 mg/dL — o corte de PCR não muda entre as populações, só o de VHS.",
+    "indications": "Investigação de paciente com suspeita de febre reumática aguda, compondo o escore diagnóstico junto aos critérios maiores (cardite, artrite, coreia, eritema marginado, nódulos subcutâneos).",
+    "interpretation": "Usado apenas como critério MENOR — não estabelece diagnóstico isoladamente. Episódio inicial exige 2 maiores OU 1 maior + 2 menores, com evidência de infecção estreptocócica prévia (exceto coreia isolada ou cardite indolente).",
+    "limitations": "VHS e PCR são inespecíficos, elevam-se em qualquer processo inflamatório/infeccioso. Usar o corte de VHS da população errada (baixo vs. moderado/alto risco) pode gerar sub ou sobrediagnóstico. Não usar artrite como critério menor se já contabilizada como maior, para evitar dupla contagem do mesmo domínio clínico.",
+    "source_refs": [
+      "Gewitz MH, Baltimore RS, Tani LY, et al. Revision of the Jones Criteria for the Diagnosis of Acute Rheumatic Fever in the Era of Doppler Echocardiography: A Scientific Statement From the American Heart Association. Circulation. 2015;131(20):1806-1818. PMID: 25908771."
+    ],
+    "tags": [
+      "criterios de jones",
+      "vhs",
+      "pcr",
+      "febre reumatica aguda",
+      "criterio menor"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "holter-versus-monitor-de-eventos-externo-na-sincope",
+    "name": "Holter de 24-48h vs. monitor de eventos externo — rendimento diagnóstico comparado na síncope",
+    "category": "metodo_grafico",
+    "theme": "Síncope",
+    "what_it_measures": "Registro contínuo (Holter) ou intermitente ativado por sintoma/algoritmo (loop recorder externo) do ritmo cardíaco por período prolongado, para correlacionar sintoma com achado eletrocardiográfico simultâneo (correlação sintoma-ritmo).",
+    "reference_range": "Não é exame com corte numérico — o desfecho relevante é a taxa de correlação sintoma-ritmo obtida.",
+    "indications": "Monitorização de ECG prolongada indicada quando há probabilidade alta de recorrência do sintoma dentro do período de uso do dispositivo (ESC 2018). Holter foi REBAIXADO de Classe I para Classe IIa na revisão de 2018. Monitor de eventos externo: Classe IIa, Nível B, para intervalo entre sintomas menor que 4 semanas.",
+    "interpretation": "Ensaio randomizado cruzado (Sivakumaran et al. 2003, 115 pacientes): loop recorder alocado primeiro identificou/excluiu arritmia em 63% (31/49) vs. 24% (12/51) com Holter primeiro (p<0,0001). Probabilidade global de correlação sintoma-ritmo: 56% com loop recorder vs. 22% com Holter. Revisões não randomizadas relatam rendimento de 15-28% para Holter de 24h e até 63% para loop recorder externo usado por período mais longo (mínimo recomendado de 30 dias).",
+    "limitations": "Holter de 24h tem baixo rendimento por captar recorte curto de tempo — só útil se recorrência for extremamente frequente. Rendimento do loop recorder externo depende de o paciente operar o dispositivo corretamente — idosos, pacientes que moram sozinhos ou com baixa adesão tecnológica têm rendimento reduzido. Nenhum dos dois serve para síncope de recorrência espaçada (meses a anos), onde a indicação passa a ser monitor implantável.",
+    "source_refs": [
+      "Sivakumaran S, Krahn AD, Klein GJ, Finan J, Yee R, Renner S, Skanes AC. A prospective randomized comparison of loop recorders versus Holter monitors in patients with syncope or presyncope. Am J Med. 2003;115(1):1-5. PMID: 12867227.",
+      "Brignole M, Moya A, de Lange FJ, et al. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948. PMID: 29562304."
+    ],
+    "tags": [
+      "holter",
+      "monitor de eventos externo",
+      "loop recorder",
+      "correlacao sintoma-ritmo",
+      "sincope"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "lactato-serico-perioperatorio-como-marcador-de-hipoperfusao",
+    "name": "Lactato sérico perioperatório como marcador de hipoperfusão",
+    "category": "laboratorial",
+    "theme": "Perioperatório",
+    "what_it_measures": "Concentração sérica de lactato, produto do metabolismo anaeróbio — eleva-se quando a oferta de oxigênio tecidual é insuficiente (hipoperfusão), embora outros mecanismos (metformina, epinefrina exógena, sepse, aumento de glicólise) também possam elevá-lo sem hipoperfusão.",
+    "reference_range": "Normal em paciente não estressado: 0,5-1 mmol/L; em criticamente enfermo, considera-se normal <2 mmol/L. Corte de hiperlactatemia usado no estudo de referência: >2,2 mmol/L (limite institucional do estudo, não universal).",
+    "indications": "Cirurgia não cardíaca de médio-alto risco, sobretudo com instabilidade hemodinâmica intraoperatória ou suspeita de hipoperfusão oculta em paciente aparentemente estável — dosagem seriada é mais informativa que valor isolado.",
+    "interpretation": "Kim et al. 2021 (coorte pareada por propensão, 1.905 pacientes): lesão miocárdica pós-cirurgia não cardíaca (MINS) em 17,7% (normal) vs. 37,7% (hiperlactatemia), OR ajustado 2,03 (IC95% 1,53-2,69). Mortalidade em 30 dias: 0,8% vs. 4,8%, HR ajustado 2,61 (IC95% 1,13-6,03). Corte ótimo por ROC para prever MINS: 2,38 mmol/L, sensibilidade 39,2%, especificidade 83,9%, AUC 0,62 (poder discriminativo modesto, declarado pelos autores). Achado complementar (Meregalli et al. 2004, n=44): lactato às 12h maior nos não sobreviventes (2,9 vs. 1,6 mmol/L, p=0,012) — \"hipoperfusão oculta\" com sinais vitais normais associada a maior mortalidade e tempo de internação.",
+    "limitations": "Estudo principal é retrospectivo, sujeito a confundimento não medido; causas multifatoriais de hiperlactatemia além de hipóxia tecidual; poder discriminativo \"levemente baixo\" (AUC 0,62) declarado pelos próprios autores; sem dado de intervenção — não permite recomendar tratamento guiado pelo lactato a partir deste estudo observacional.",
+    "source_refs": [
+      "Kim J, Park J, Kwon JH, et al. Association between Intraoperative Hyperlactatemia and Myocardial Injury after Noncardiac Surgery. Diagnostics (Basel). 2021;11(9):1656. PMID: 34573997.",
+      "Meregalli A, Oliveira RP, Friedman G. Occult hypoperfusion is associated with increased mortality in hemodynamically stable, high-risk, surgical patients. Crit Care. 2004;8(2):R60-65. PMID: 15025779."
+    ],
+    "tags": [
+      "lactato serico",
+      "hipoperfusao",
+      "mins",
+      "cirurgia nao cardiaca"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
