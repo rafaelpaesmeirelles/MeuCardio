@@ -244,5 +244,674 @@
       "Gualandro DM, Fornari LS, Caramelli B, Abizaid AAC, et al. Diretriz de Avaliação Cardiovascular Perioperatória da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240590. DOI: 10.36660/abc.20240590. PMID: 39442131 — texto integral em acesso aberto (PMC12094288)"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "torsades-de-pointes-refrataria-a-magnesio-isoproterenol-no-qt-longo-adquirido",
+    "titulo": "Torsades de pointes refratária ao magnésio: e agora?",
+    "tema": "Arritmias",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 71 anos, internada por pneumonia, em uso de haloperidol e furosemida. Potássio sérico 3,2mEq/L. Monitorização mostra QTc de 540ms e dois episódios de taquicardia ventricular polimórfica autolimitada, compatíveis com torsades de pointes, sem instabilidade hemodinâmica entre os episódios. O haloperidol foi suspenso, o potássio está sendo reposto e ela já recebeu 2g de sulfato de magnésio IV em push, seguidos de infusão de manutenção — mas um terceiro episódio de torsades ocorre pouco depois.",
+    "pergunta": "Diante da torsades refratária ao magnésio, qual a próxima conduta farmacológica mais adequada?",
+    "opcoes": [
+      "Iniciar isoproterenol IV, titulado para manter a frequência cardíaca em torno de 100bpm",
+      "Iniciar amiodarona IV, por ser o antiarrítmico de escolha em taquicardia ventricular",
+      "Não usar isoproterenol, pois é contraindicado em qualquer forma de QT longo",
+      "Repor potássio apenas até a faixa de normalidade padrão (3,5-4,5mEq/L) e observar"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "No QT longo ADQUIRIDO (por fármaco/distúrbio eletrolítico) refratário ao sulfato de magnésio, o isoproterenol é a opção de segunda linha: betaagonista não seletivo que aumenta a frequência cardíaca e encurta o QT, reduzindo o fenômeno de R sobre T que deflagra a torsades, em dose de 10-20mcg IV em push ou infusão titulada para FC de 100bpm. Ele é CONTRAINDICADO apenas na síndrome do QT longo CONGÊNITA, onde pode paradoxalmente prolongar o QT — não é o caso desta paciente, cujo QT longo é claramente adquirido (fármaco + hipopotassemia). Um antiarrítmico classe III como a amiodarona prolonga ainda mais o QT e não é indicado aqui. A meta de reposição de potássio durante o tratamento de torsades é mais alta que a faixa de normalidade habitual — 4,5 a 5,0mEq/L —, especificamente para reduzir a dispersão de repolarização.",
+    "source_refs": [
+      "Tisdale JE, Jaynes HA, Kingery JR, et al. Development and validation of a risk score to predict QT interval prolongation in hospitalized patients. Circ Cardiovasc Qual Outcomes. 2013;6(4):479-487. DOI: 10.1161/CIRCOUTCOMES.113.000152. PMID: 23716032 — pontuação por variável conferida contra duas fontes secundárias independentes, texto completo bloqueado nesta sessão (paywall)",
+      "Torsade de Pointes. StatPearls, NCBI Bookshelf, NBK459388 — seção de tratamento, consultada em 30/07/2026"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "fibrilacao-atrial-pre-excitada-na-wpw-qual-farmaco-usar",
+    "titulo": "Fibrilação atrial pré-excitada na WPW: qual fármaco não pode faltar (e qual nunca pode entrar)",
+    "tema": "Arritmias",
+    "nivel": "avançado",
+    "enunciado": "Homem, 32 anos, com diagnóstico prévio de síndrome de Wolff-Parkinson-White, procura o pronto-socorro com palpitações de início súbito. O ECG mostra taquicardia de QRS largo e irregular, com frequência ventricular muito alta (~220bpm), compatível com fibrilação atrial conduzindo pela via acessória (FA pré-excitada). A pressão arterial está preservada e o paciente permanece hemodinamicamente estável.",
+    "pergunta": "Qual o fármaco de escolha para este paciente estável com FA pré-excitada?",
+    "opcoes": [
+      "Verapamil IV, para bloquear a condução pelo nó atrioventricular",
+      "Procainamida IV",
+      "Adenosina IV, em bolus rápido",
+      "Amiodarona IV, por ser segura em qualquer taquiarritmia de QRS largo"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Em fibrilação atrial pré-excitada (condução pela via acessória, não pelo nó AV) com paciente estável, procainamida ou ibutilida são os fármacos de escolha. Bloqueadores do nó atrioventricular — adenosina, verapamil, diltiazem, betabloqueador e digoxina — são CONTRAINDICADOS: eles bloqueiam o nó AV mas não a via acessória, favorecendo a condução preferencial por ela e podendo precipitar fibrilação ventricular. A amiodarona intravenosa também deve ser evitada nesse cenário específico, com relatos de indução de fibrilação ventricular quando usada em FA associada a WPW. Se o paciente estivesse instável, a conduta seria cardioversão sincronizada (ou desfibrilação), não farmacológica.",
+    "source_refs": [
+      "Sudden Cardiac Death: The Most Feared but Potentially Preventable Presentation of Wolff-Parkinson-White Syndrome · PMC · https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8616676/",
+      "A Randomized Study of Prophylactic Catheter Ablation in Asymptomatic Patients with the Wolff–Parkinson–White Syndrome · New England Journal of Medicine · https://www.nejm.org/doi/full/10.1056/NEJMoa035345",
+      "Burden of Premature Ventricular Complexes and Risk of Cardiomyopathy: A Cross-Sectional Study · JACC: Clinical Electrophysiology · 2025 · https://www.jacc.org/doi/10.1016/j.jacep.2025.01.004",
+      "Premature Ventricular Contraction-Induced Cardiomyopathy: Contemporary Evidence from Risk Stratification, Pathophysiology, and Management · PMC · https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11084868/",
+      "Wolff-Parkinson-White Syndrome. StatPearls, NCBI Bookshelf, NBK554437 — seção de manejo da fibrilação atrial pré-excitada, consultada em 30/07/2026"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cdi-profilatico-na-cardiomiopatia-nao-isquemica-decisao-individualizada-danish",
+    "titulo": "CDI profilático na cardiomiopatia não isquêmica: o que o DANISH manda pesar",
+    "tema": "Dispositivos",
+    "nivel": "avançado",
+    "enunciado": "Homem, 79 anos, cardiomiopatia dilatada não isquêmica, FEVE 30%, NYHA II, em terapia medicamentosa otimizada (IECA/BRA-ARNI, betabloqueador, antagonista mineralocorticoide, iSGLT2) e já com ressincronizador cardíaco há 8 meses, com boa resposta clínica. Apresenta comorbidades relevantes (DPOC moderada, doença renal crônica estágio 3) e expectativa de vida limitada pelas comorbidades associadas. A equipe discute se deve indicar um CDI.",
+    "pergunta": "Qual conduta melhor reflete a evidência do ensaio DANISH para este caso?",
+    "opcoes": [
+      "Indicar CDI, pois o DANISH demonstrou redução da mortalidade total na cardiomiopatia não isquêmica",
+      "Não indicar CDI em nenhuma hipótese na cardiomiopatia não isquêmica, pois o DANISH não mostrou nenhum benefício do dispositivo",
+      "Individualizar a indicação considerando idade e expectativa de vida, sabendo que o CDI reduziu a morte súbita cardíaca pela metade no DANISH sem reduzir a mortalidade total nessa população",
+      "Substituir a indicação de CDI por otimização da ressincronização, já que a TRC isolada comprovadamente basta"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "No DANISH (1.116 pacientes com IC sistólica não isquêmica, FEVE ≤35%, 58% com TRC em ambos os braços), o CDI reduziu a morte súbita cardíaca pela metade (HR 0,50; IC95% 0,31-0,82; p=0,005), mas não mudou a mortalidade por qualquer causa (HR 0,87; IC95% 0,68-1,12; p=0,28). A explicação é a competição de causas de morte: numa população em terapia moderna, a morte súbita é fração menor da mortalidade total, dominada por falência de bomba progressiva e causas não cardíacas que o CDI não previne. A análise de subgrupo por idade do próprio ensaio mostrou que o benefício se concentra nos pacientes mais jovens, com maior expectativa de vida — por isso a decisão em paciente idoso e com comorbidades relevantes deve pesar essa expectativa de vida, não assumir ganho de sobrevida automático nem descartar o dispositivo por completo.",
+    "source_refs": [
+      "Køber L, Thune JJ, Nielsen JC, Haarbo J, Videbæk L, Korup E, et al; DANISH Investigators. Defibrillator Implantation in Patients with Nonischemic Systolic Heart Failure. N Engl J Med. 2016;375(13):1221-1230. DOI: 10.1056/NEJMoa1608029. PMID: 27571011 — NCT00542945, 1.116 pacientes. Financiamento: Medtronic e outros"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "disfuncao-do-no-sinusal-escolha-do-modo-de-estimulacao-most",
+    "titulo": "Marca-passo na disfunção do nó sinusal: dupla câmara ou ventricular?",
+    "tema": "Dispositivos",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 74 anos, com disfunção do nó sinusal sintomática (síncope associada a pausas sinusais), sem fragilidade importante e com bom acesso venoso. Indicação de marca-passo definitivo já estabelecida. A equipe discute qual modo de estimulação programar.",
+    "pergunta": "Com base no ensaio MOST, qual o modo de estimulação preferível nesta paciente?",
+    "opcoes": [
+      "Modo ventricular isolado, mais simples e com menos hardware, já que não há diferença relevante de desfecho",
+      "Modo de dupla câmara (atrioventricular), pois reduz o risco de fibrilação atrial e de síndrome do marca-passo, melhora escores de insuficiência cardíaca e qualidade de vida, mesmo sem diferença de sobrevida",
+      "Modo de dupla câmara, pois reduz mortalidade e AVC em comparação ao modo ventricular",
+      "Modo ventricular, já que o MOST demonstrou menor incidência de fibrilação atrial com esse modo"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O MOST (2.010 pacientes com disfunção do nó sinusal) foi neutro no desfecho primário — morte por qualquer causa ou AVC não fatal, 21,5% com dupla câmara vs. 23,0% com ventricular, p=0,48 — mas mostrou menor incidência de fibrilação atrial com dupla câmara (HR 0,79; p=0,008), melhores escores de insuficiência cardíaca (p<0,001) e ganho pequeno, porém mensurável, de qualidade de vida. A leitura correta não é 'o modo não faz diferença' nem 'dupla câmara aumenta sobrevida' — é escolher dupla câmara pelos desfechos que ela de fato melhora (FA, síndrome do marca-passo, sintomas), sem prometer ganho de sobrevida. Em paciente frágil, com dificuldade de acesso venoso ou expectativa de vida curta, o modo ventricular continua defensável, porque o que se perde ao optá-lo não é sobrevida — não é o caso desta paciente, sem fragilidade relevante.",
+    "source_refs": [
+      "Lamas GA, Lee KL, Sweeney MO, Silverman R, Leon A, Yee R, Marinchak RA, et al; Mode Selection Trial in Sinus-Node Dysfunction (MOST) Investigators. Ventricular pacing or dual-chamber pacing for sinus-node dysfunction. N Engl J Med. 2002;346(24):1854-1862. DOI: 10.1056/NEJMoa013040. PMID: 12063369 — 2.010 pacientes, seguimento mediano de 33,1 meses"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "stemi-em-centro-sem-hemodinamica-icp-primaria-ou-fibrinolise",
+    "titulo": "STEMI em hospital sem hemodinâmica: transferir ou trombolisar?",
+    "tema": "Doença coronariana",
+    "nivel": "básico",
+    "enunciado": "Homem, 58 anos, chega a um pronto-socorro sem sala de hemodinâmica com dor torácica típica iniciada há 40 minutos. O ECG confirma STEMI de parede anterior. A equipe estima que a transferência para o centro com hemodinâmica mais próximo, incluindo tempo de deslocamento, levaria cerca de 150 minutos até a passagem do fio-guia. Não há contraindicações à fibrinólise.",
+    "pergunta": "Qual a estratégia de reperfusão recomendada pela diretriz ESC 2023 neste cenário?",
+    "opcoes": [
+      "Aguardar a transferência para ICP primária, mesmo ultrapassando 120 minutos, por ser a estratégia preferida",
+      "Fibrinólise imediata (bolus em menos de 10 minutos do diagnóstico), com angiografia de rotina em 2-24h se bem-sucedida ou ICP de resgate imediata se falhar",
+      "Fibrinólise, reservando a angiografia apenas para caso o paciente evolua com novo evento isquêmico nos meses seguintes",
+      "ICP primária com transferência, sem alvo de tempo definido pela diretriz"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A diretriz ESC 2023 de síndromes coronarianas agudas define que, em centro sem hemodinâmica, a escolha entre ICP primária e fibrinólise depende do atraso estimado: se a ICP primária puder ser realizada em menos de 120 minutos do diagnóstico de STEMI, transfere-se com alvo de menos de 90 minutos até o fio-guia; se não (como neste caso, com estimativa de 150 minutos), a conduta é fibrinólise imediata, com alvo de menos de 10 minutos do diagnóstico até o bolus do trombolítico. Após fibrinólise bem-sucedida, a diretriz recomenda angiografia de rotina em 2-24 horas; se a fibrinólise falhar, ICP de resgate imediata — nunca postergada para um evento futuro. Tempo é músculo: todos os alvos são contados a partir do diagnóstico eletrocardiográfico de STEMI.",
+    "source_refs": [
+      "2023 ESC Guidelines for the management of acute coronary syndromes · European Heart Journal · 2023 · 44(38):3720-3826 · 10.1093/eurheartj/ehad191",
+      "2023 ESC Guidelines — Acute Coronary Syndromes — Quick Reference · SattiMD · https://sattimd.com/guidelines/esc-acs-2023.html",
+      "Damluji AA, van Diepen S, Katz JN, et al. Mechanical Complications of Acute Myocardial Infarction: A Scientific Statement From the American Heart Association. Circulation. 2021;144(2):e16-e35. DOI 10.1161/CIR.0000000000000985. PMID 34126755."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "dor-toracica-na-emergencia-ecg-preocupante-quando-repetir",
+    "titulo": "Dor torácica na emergência com ECG limítrofe: repetir quando?",
+    "tema": "Doença coronariana",
+    "nivel": "básico",
+    "enunciado": "Homem, 60 anos, dor torácica atípica há 2 horas, hemodinamicamente estável. O ECG inicial mostra alterações inespecíficas de repolarização, sem supradesnível de ST nem critérios claros de equivalente de oclusão coronária aguda — traçado classificado como \"preocupante\"/de difícil interpretação. A primeira troponina é normal.",
+    "pergunta": "Segundo a Diretriz Brasileira de Atendimento à Dor Torácica na Unidade de Emergência (SBC 2025), qual a conduta correta em relação ao eletrocardiograma?",
+    "opcoes": [
+      "Considerar o ECG definitivo e não repeti-lo, já que não há supradesnível de ST",
+      "Repetir o ECG a cada 10 a 20 minutos, com derivações complementares e apoio conforme necessário, dado o traçado \"preocupante\"",
+      "Repetir o ECG somente após 6 horas, junto com a segunda dosagem de troponina",
+      "Solicitar diretamente angiografia coronariana invasiva, dispensando o ECG seriado"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A diretriz brasileira de 2025 estabelece, como recomendação Classe I, que casos com ECG limítrofe ou de difícil interpretação (\"preocupante\") e/ou com critérios clínicos de instabilidade devem repetir o eletrocardiograma a cada 10 a 20 minutos, com derivações complementares e apoio conforme necessário. Um único traçado normal ou inconclusivo na porta de entrada não encerra a investigação — a diretriz também exige buscar ativamente os \"equivalentes de supradesnível de ST\" (equivalentes de oclusão coronária aguda), recomendação Classe I própria, e não apenas o critério clássico de supra de ST.",
+    "source_refs": [
+      "Diretriz Brasileira de Atendimento à Dor Torácica na Unidade de Emergência – 2025. Arq Bras Cardiol. 2025 — texto integral acessado em acesso aberto (PMC12981354) e conferido em 31/07/2026; o escore HEART, as recomendações de classificação do eletrocardiograma, de tempo porta-ECG e de estratificação de risco foram transcritos das tabelas correspondentes"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "reversao-de-dabigatrana-em-sangramento-com-risco-de-vida",
+    "titulo": "Sangramento com risco de vida sob dabigatrana: qual reversor usar?",
+    "tema": "Farmacologia",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 74 anos, em uso de dabigatrana para fibrilação atrial, dá entrada no pronto-socorro com hemorragia digestiva alta volumosa, hipotenso, com indicação de endoscopia de urgência. É necessário reverter o efeito anticoagulante imediatamente.",
+    "pergunta": "Qual o agente de escolha para reversão específica e imediata do efeito da dabigatrana neste cenário?",
+    "opcoes": [
+      "Vitamina K 10mg IV",
+      "Plasma fresco congelado, 15mL/kg",
+      "Idarucizumabe, 5g IV, em duas doses de 2,5g em bolus",
+      "Andexanet alfa, em bolus seguido de infusão"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O idarucizumabe é o fragmento de anticorpo (Fab) que se liga especificamente à dabigatrana, neutralizando sua atividade anticoagulante sem agir sobre outros fatores de coagulação. A dose é 5g IV, em duas doses de 2,5g em bolus. No RE-VERSE AD (503 pacientes), a reversão do efeito anticoagulante foi de mediana 100% (IC95% 100-100), com tempo mediano até cessação do sangramento de 2,5 horas no grupo com sangramento não controlado. Vitamina K reverte antagonistas de vitamina K (varfarina), não inibidores diretos da trombina. Plasma fresco congelado não é reversor específico e tem início de ação mais lento. Andexanet alfa é o reversor específico dos inibidores do fator Xa (apixabana, rivaroxabana) — não tem ação sobre a dabigatrana, que é um inibidor direto da trombina.",
+    "source_refs": [
+      "Idarucizumab in dabigatran-treated patients with acute stroke: a review and clinical update · Frontiers in Neurology · https://pmc.ncbi.nlm.nih.gov/articles/PMC11137220/",
+      "Pollack CV Jr et al. Idarucizumab for Dabigatran Reversal — Full Cohort Analysis. N Engl J Med. 2017;377(5):431-441."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "betabloqueador-pos-infarto-em-paciente-com-dpoc-block-copd",
+    "titulo": "Betabloqueador pós-infarto em paciente com DPOC: o BLOCK-COPD contraindica?",
+    "tema": "Farmacologia",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 68 anos, com DPOC moderada (VEF₁ 55% do previsto) e infarto do miocárdio há 3 semanas, com fração de ejeção de 30% (ICFEr). O médico assistente hesita em iniciar betabloqueador, citando o ensaio BLOCK-COPD como evidência de que a droga faz mal em pacientes com DPOC.",
+    "pergunta": "Diante do que o BLOCK-COPD efetivamente demonstrou, qual a conduta correta quanto ao betabloqueador neste paciente?",
+    "opcoes": [
+      "Não prescrever betabloqueador, pois o BLOCK-COPD demonstrou risco aumentado de exacerbação e de internação por DPOC com o fármaco",
+      "Prescrever metoprolol com o objetivo adicional de prevenir exacerbações de DPOC, além da indicação cardíaca",
+      "Prescrever betabloqueador cardiosseletivo, titulado, pela indicação cardíaca estabelecida (pós-infarto com ICFEr) — população que o BLOCK-COPD excluiu do estudo",
+      "Suspender a indicação até nova espirometria de controle, adiando o início do betabloqueador"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O BLOCK-COPD testou uma hipótese diferente da deste paciente: se o metoprolol previne exacerbação de DPOC em quem NÃO tem indicação cardíaca para o fármaco — e excluiu explicitamente quem já usava betabloqueador ou tinha indicação estabelecida para ele. O resultado (sem diferença no tempo até exacerbação, HR 1,05, p=0,66; mais internação por exacerbação com metoprolol, HR 1,91) responde apenas a essa pergunta específica, não à segurança do betabloqueador em quem tem indicação cardíaca. Neste paciente, pós-infarto com ICFEr, a indicação cardíaca do betabloqueador é estabelecida por evidência própria e não foi revogada pelo BLOCK-COPD — a conduta correta é usar betabloqueador cardiosseletivo, titulado, com atenção clínica, e não recusá-lo por causa da DPOC.",
+    "source_refs": [
+      "Dransfield MT, Voelker H, Bhatt SP, Brenner K, Casaburi R, Come CE, et al; BLOCK COPD Trial Group. Metoprolol for the Prevention of Acute Exacerbations of COPD. N Engl J Med. 2019;381(24):2304-2314. DOI: 10.1056/NEJMoa1908142. PMID: 31633896 — NCT02587351, 532 pacientes, interrompido precocemente"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cardiotoxicidade-anti-her2-queda-de-feve-suspender-ou-manter-trastuzumabe",
+    "titulo": "Queda assintomática da FEVE em uso de trastuzumabe: suspender ou manter?",
+    "tema": "Cardio-oncologia",
+    "nivel": "intermediário",
+    "enunciado": "Mulher de 52 anos, em tratamento adjuvante de câncer de mama HER2-positivo com paclitaxel semanal e trastuzumabe, encontra-se no sexto ciclo. Ecocardiograma basal, antes do início do tratamento, mostrava FEVE de 62%. No exame de reavaliação trimestral, assintomática, sem dispneia, edema ou queda de capacidade funcional, a FEVE atual é de 48%, com strain longitudinal global também reduzido em relação ao basal. Não há história de exposição prévia a antraciclina, hipertensão ou diabetes. A equipe de oncologia pergunta ao cardiologista se o trastuzumabe deve ser suspenso.",
+    "pergunta": "Qual a conduta mais adequada diante dessa queda de FEVE relacionada à terapia anti-HER2?",
+    "opcoes": [
+      "Suspender definitivamente o trastuzumabe, pois toda queda de FEVE abaixo de 50% é contraindicação absoluta e universal à continuidade da terapia anti-HER2.",
+      "Discutir o caso em equipe multidisciplinar de cardio-oncologia, individualizando a decisão de manter, suspender temporariamente ou interromper a terapia, considerando a magnitude da queda, a ausência de sintomas e o benefício oncológico do tratamento.",
+      "Manter o trastuzumabe sem nenhuma mudança de conduta ou reavaliação adicional, já que a paciente está assintomática.",
+      "Trocar imediatamente o esquema para um regime baseado em antraciclina, que tem menor risco de cardiotoxicidade que a terapia anti-HER2."
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A paciente preenche a definição de disfunção cardíaca relacionada à terapia oncológica (CTRCD) — queda de FEVE ≥10 pontos percentuais para valor <50% (62% → 48%). O documento de origem é explícito: a decisão de suspender, interromper temporariamente ou manter a terapia anti-HER2 deve ser individualizada por equipe multidisciplinar de cardio-oncologia, considerando magnitude da queda, presença de sintomas e benefício oncológico da terapia — não há critério numérico único e universal que obrigue interrupção automática. Diferente da cardiotoxicidade por antraciclina (tipo I, frequentemente irreversível), a cardiotoxicidade por terapia anti-HER2 (tipo II) é tipicamente reversível após a interrupção, o que reforça a lógica de decisão caso a caso em vez de suspensão automática — e torna a troca para antraciclina (mais cardiotóxica e menos reversível) uma escolha pior, não melhor.",
+    "source_refs": [
+      "Anthracycline- and HER2-induced cardiotoxicity: mechanisms, current strategies, and the emerging role of dapagliflozin as a targeted cardioprotective agent · Cardio-Oncology (BMC) · 2025 · https://cardiooncologyjournal.biomedcentral.com/articles/10.1186/s40959-025-00300-1",
+      "Adjuvant Weekly Paclitaxel and Trastuzumab for HER2-Positive Early-Stage Breast Cancer with Preserved Baseline LVEF: Incidence of Cardiotoxicity and Feasibility of Simplified Cardiac Surveillance · Breast Cancer (Dove Med Press) · 2026 · https://pmc.ncbi.nlm.nih.gov/articles/PMC13089467/"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "ibrutinibe-e-fibrilacao-atrial-nova-decisao-de-anticoagular",
+    "titulo": "Fibrilação atrial nova em uso de ibrutinibe: anticoagular como em qualquer FA?",
+    "tema": "Cardio-oncologia",
+    "nivel": "avançado",
+    "enunciado": "Homem de 71 anos, hipertenso, em uso de ibrutinibe para leucemia linfocítica crônica há 8 meses, com boa resposta oncológica. Procura atendimento por palpitações; o ECG confirma fibrilação atrial de início recente, com boa tolerância hemodinâmica. O CHA2DS2-VASc calculado é 3. Não há sangramento ativo, mas o paciente já apresentava equimoses fáceis desde o início do ibrutinibe. A equipe assistente pergunta se deve suspender o ibrutinibe e iniciar anticoagulação oral em dose plena, como se faria em qualquer paciente com o mesmo escore.",
+    "pergunta": "Qual a conduta mais adequada diante dessa fibrilação atrial nova em uso de ibrutinibe?",
+    "opcoes": [
+      "Suspender o ibrutinibe imediatamente e iniciar anticoagulação oral em dose plena, seguindo estritamente o CHA2DS2-VASc, sem necessidade de contato com a hematologia/oncologia.",
+      "Não anticoagular e apenas observar, pois o próprio ibrutinibe já contraindica qualquer anticoagulante concomitante.",
+      "Avaliar o risco tromboembólico e hemorrágico em conjunto com a equipe de hematologia/oncologia, sem suspender automaticamente o ibrutinibe nem aplicar a mesma régua de decisão de uma FA sem fármaco concomitante de risco hemorrágico aumentado.",
+      "Trocar o ibrutinibe por outro inibidor de BTK de segunda geração antes de decidir qualquer coisa sobre anticoagulação."
+    ],
+    "resposta_correta": 2,
+    "explicacao": "A análise agrupada de 4 ensaios randomizados mostrou que o ibrutinibe aumenta tanto a FA de qualquer grau (RR 8,81; IC95% 2,70-28,75; p=0,0003) quanto o sangramento de qualquer grau (RR 2,93; IC95% 1,14-7,52; p=0,03) — mas o sangramento maior não atingiu significância (RR 1,72; p=0,07). O documento de origem é explícito: a decisão cardiológica de anticoagular não pode ser tomada isoladamente da decisão oncológica, e na prática a maioria dos pacientes que desenvolve FA em uso de ibrutinibe NÃO descontinua o fármaco — a anticoagulação deve ser decidida em conjunto com hematologia/oncologia, pesando o risco tromboembólico contra o risco hemorrágico já elevado pelo próprio ibrutinibe, sem a suposição automática de que suspender o fármaco ou anticoagular sem ressalvas são as únicas opções.",
+    "source_refs": [
+      "Yun S, Vincelette ND, Acharya U, Abraham I. Risk of Atrial Fibrillation and Bleeding Diathesis Associated With Ibrutinib Treatment: A Systematic Review and Pooled Analysis of Four Randomized Controlled Trials. Clin Lymphoma Myeloma Leuk. 2017;17(1):31-37.e13. DOI: 10.1016/j.clml.2016.09.010. PMID: 27780690"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "depressao-pos-infarto-iniciar-sertralina-seguranca-e-expectativa-de-beneficio",
+    "titulo": "Depressão maior após infarto: tratar com sertralina muda o risco cardiovascular?",
+    "tema": "Saúde mental e cardiologia",
+    "nivel": "intermediário",
+    "enunciado": "Homem de 57 anos, internado há 3 semanas por infarto agudo do miocárdio, é diagnosticado com depressão maior no rastreio de rotina pós-alta, com escore HAM-D elevado. Nunca usou antidepressivo antes. A fração de ejeção pós-IAM é de 54%, sem arritmia documentada. O paciente pergunta se tratar a depressão vai ajudar seu coração a se recuperar melhor, além de melhorar o humor.",
+    "pergunta": "Qual orientação mais correta sobre iniciar sertralina nesse contexto?",
+    "opcoes": [
+      "Iniciar sertralina, deixando claro que ela é segura no pós-IAM recente e eficaz para tratar a depressão, mas sem prometer que isso reduza eventos cardiovasculares — nenhum ensaio demonstrou esse benefício.",
+      "Iniciar sertralina com a expectativa explícita de que o tratamento da depressão reduzirá reinfarto e mortalidade cardiovascular, já que a depressão é fator de risco estabelecido.",
+      "Não indicar antidepressivo por risco de prolongamento de QTc e arritmia ventricular em paciente pós-IAM recente.",
+      "Encaminhar apenas para psicoterapia interpessoal, evitando qualquer fármaco, por ser a opção mais seguramente eficaz nesse cenário."
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O SADHART (369 pacientes pós-IAM/angina instável) mostrou que a sertralina não teve efeito significativo sobre a fração de ejeção, QTc ou extrassístoles ventriculares (todas as comparações p≥0,05), e foi eficaz para a depressão (taxa de resposta pelo CGI-I de 67% vs. 53% com placebo, p=0,01). Mas o desfecho primário do SADHART foi de segurança, não de desfecho cardiovascular — e o MOOD-HF, desenhado especificamente para testar se tratar a depressão muda o prognóstico cardíaco (na insuficiência cardíaca, com escitalopram), foi negativo tanto para a depressão quanto para o desfecho composto de morte/internação (HR 0,99; IC95% 0,76-1,27; p=0,92). A conduta correta trata a depressão pela depressão em si — indicação estabelecida e seguimento clínico justificado —, sem prometer benefício cardiovascular que a evidência não sustenta.",
+    "source_refs": [
+      "Glassman AH, O'Connor CM, Califf RM, Swedberg K, Schwartz P, et al; Sertraline Antidepressant Heart Attack Randomized Trial (SADHART) Group. Sertraline treatment of major depression in patients with acute MI or unstable angina. JAMA. 2002;288(6):701-709. DOI: 10.1001/jama.288.6.701. PMID: 12169073 — 369 pacientes, duplo-cego, controlado por placebo, 40 centros. NOTA: existe Erratum em JAMA 2002;288(14):1720, registrado mas NÃO lido nesta consulta",
+      "Lespérance F, Frasure-Smith N, Koszycki D, Laliberté MA, van Zyl LT, et al; CREATE Investigators. Effects of citalopram and interpersonal psychotherapy on depression in patients with coronary artery disease: the CREATE trial. JAMA. 2007;297(4):367-379. DOI: 10.1001/jama.297.4.367. PMID: 17244833 — ISRCTN15858091, 284 pacientes, fatorial 2 × 2, 9 centros acadêmicos canadenses. NOTA: existe Erratum em JAMA 2007;298(1):40, registrado mas NÃO lido nesta consulta",
+      "Angermann CE, Gelbrich G, Störk S, Gunold H, Edelmann F, et al; MOOD-HF Study Investigators. Effect of Escitalopram on All-Cause Mortality and Hospitalization in Patients With Heart Failure and Depression: The MOOD-HF Randomized Clinical Trial. JAMA. 2016;315(24):2683-2693. DOI: 10.1001/jama.2016.7635. PMID: 27367876 — ISRCTN33128015, 372 pacientes, 16 centros terciários na Alemanha, interrompido precocemente"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "holiday-heart-fa-induzida-por-alcool-conduta-aguda",
+    "titulo": "Fibrilação atrial após consumo excessivo de álcool em festa: conduta aguda e prevenção",
+    "tema": "Saúde mental e cardiologia",
+    "nivel": "básico",
+    "enunciado": "Homem de 34 anos, sem cardiopatia estrutural conhecida e sem história prévia de arritmia, procura o pronto-socorro na manhã seguinte a uma festa de confraternização em que consumiu grande quantidade de bebida alcoólica em curto intervalo de tempo. Refere palpitações desde a madrugada. O ECG mostra fibrilação atrial com resposta ventricular controlada, e o paciente está hemodinamicamente estável, sem dor torácica ou dispneia. Exames laboratoriais e ecocardiograma não mostram cardiopatia estrutural.",
+    "pergunta": "Qual a conduta mais adequada na fase aguda e na orientação de prevenção desse episódio?",
+    "opcoes": [
+      "Cardioverter eletricamente de imediato, independentemente da estabilidade hemodinâmica, por se tratar de holiday heart syndrome.",
+      "Iniciar amiodarona de manutenção crônica de imediato, já que o quadro tende a recorrer independentemente do consumo de álcool.",
+      "Observação clínica, já que a maioria dos episódios reverte espontaneamente em até 24 horas, e orientar na alta a redução do consumo de álcool para no máximo 3 doses-padrão (30 g de álcool) por semana, como recomendação Classe I da ESC 2024 para reduzir recorrência de FA.",
+      "Não é necessário orientar quanto ao álcool nem calcular o risco tromboembólico, pois se trata de evento isolado sem expectativa de repetição."
+    ],
+    "resposta_correta": 2,
+    "explicacao": "A 'holiday heart syndrome' é arritmia atrial aguda desencadeada por consumo excessivo episódico de álcool em coração estruturalmente normal, e a conduta central na fase aguda é a abstinência — a maioria dos episódios resolve espontaneamente em até 24 horas, sem necessidade de antiarrítmico. A diretriz ESC 2024 de fibrilação atrial (framework AF-CARE, pilar 'Avoid triggers/factors') elevou a redução do consumo de álcool a Classe I, Nível B, recomendando reduzir para ≤3 doses-padrão (≤30 g de álcool) por semana — respaldada pelo ensaio de Voskoboinik et al. (NEJM 2020), que mostrou redução de recorrência de FA com abstinência (HR 0,55; IC95% 0,36-0,84; p=0,005). O episódio é sinal de gatilho modificável, não evento isolado sem repetição esperada.",
+    "source_refs": [
+      "Alvarado JD, Zuniga P, Stringer I, Ramirez A, Cortes E, Solano J. Holiday Heart Syndrome: A Review of Alcohol-Induced Atrial Fibrillation. Cureus. 2025;17(2):e79816. DOI: 10.7759/cureus.79816. PMID: 40161046.",
+      "2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS). Eur Heart J. 2024;45(36):3314-3414. DOI: 10.1093/eurheartj/ehae176 — módulo AF-CARE, pilar 'Avoid triggers/factors', recomendação sobre redução do consumo de álcool.",
+      "Voskoboinik A, Kalman JM, De Silva A, et al. Alcohol Abstinence in Drinkers with Atrial Fibrillation. N Engl J Med. 2020;382(1):20-28. DOI: 10.1056/NEJMoa1817591. PMID: 31893513."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "presenca-de-familiar-durante-reanimacao-cardiopulmonar",
+    "titulo": "Familiar quer presenciar a reanimação cardiopulmonar: permitir ou afastar?",
+    "tema": "Comunicação clínica",
+    "nivel": "básico",
+    "enunciado": "Equipe de atendimento pré-hospitalar é acionada para parada cardiorrespiratória de um homem de 68 anos em via pública. A esposa chega ao local durante as manobras de reanimação e pede para permanecer próxima, observando o atendimento. Um dos socorristas hesita, com receio de que a presença dela atrapalhe o desempenho técnico da equipe, aumente o estresse dos profissionais ou gere problema médico-legal posterior.",
+    "pergunta": "Qual conduta a evidência sustenta em relação à presença da familiar durante a reanimação?",
+    "opcoes": [
+      "Solicitar que ela se afaste, pois a presença de familiares durante a RCP aumenta o estresse da equipe e o risco de ações médico-legais.",
+      "Oferecer sistematicamente a ela a oportunidade de presenciar a reanimação, respeitando sua decisão de aceitar ou recusar, sem impor a presença.",
+      "Permitir a presença apenas mediante autorização por escrito, dado o risco médico-legal elevado documentado na literatura.",
+      "Afastá-la por padrão, já que presenciar a RCP piora os desfechos psicológicos da família a longo prazo, como transtorno de estresse pós-traumático."
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O ensaio de Jabre et al. (NEJM 2013), randomizado por cluster com 570 familiares em 15 unidades de emergência pré-hospitalar na França, mostrou o oposto do que a equipe teme: familiares que NÃO testemunharam a RCP tiveram mais sintomas de TEPT (razão de chances ajustada 1,7; IC95% 1,2-2,5; p=0,004), ansiedade e depressão do que os que testemunharam. A presença da família não afetou as características da reanimação, a sobrevida do paciente, o estresse da equipe, nem gerou ações médico-legais. A prática recomendada é oferecer sistematicamente a oportunidade — não impor —, respeitando a decisão do familiar de aceitar ou não.",
+    "source_refs": [
+      "Jabre P, Belpomme V, Azoulay E, et al. Family presence during cardiopulmonary resuscitation. N Engl J Med. 2013;368(11):1008-1018. DOI: 10.1056/NEJMoa1203366. PMID: 23484827"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "desativacao-de-choque-do-cdi-em-paciente-terminal",
+    "titulo": "Paciente terminal pede para desligar os choques do CDI: isso é eutanásia?",
+    "tema": "Comunicação clínica",
+    "nivel": "intermediário",
+    "enunciado": "Homem de 74 anos, portador de cardiodesfibrilador implantável (CDI) para prevenção secundária, encontra-se em cuidados paliativos exclusivos por neoplasia metastática sem possibilidade de tratamento curativo. Ele mantém ritmo cardíaco próprio, não depende de estimulação por marca-passo, mas já recebeu dois choques apropriados do CDI nas últimas semanas, com sofrimento importante. Ele pede à equipe, de forma lúcida e reiterada, que os choques sejam desligados, mas o residente hesita, achando que isso equivaleria a antecipar a morte dele.",
+    "pergunta": "Qual conduta o consenso HRS/EHRA sobre desativação de dispositivos no fim de vida recomenda?",
+    "opcoes": [
+      "Recusar o pedido, pois desativar a terapia de choque do CDI equivale eticamente a eutanásia ou suicídio assistido.",
+      "Aceitar o pedido, esclarecendo que se trata da desativação da terapia de choque (ele não depende de estimulação), documentar o consentimento por escrito e proceder por reprogramação do dispositivo — se ele vier a falecer, a causa será a doença de base, não a desativação.",
+      "Só atender ao pedido se toda a família concordar formalmente por escrito, independentemente da vontade expressa pelo próprio paciente.",
+      "Indicar remoção cirúrgica do gerador como a única forma adequada de suspender definitivamente a terapia de choque."
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O consenso HRS/EHRA 2010 enquadra a desativação da terapia de choque do CDI no mesmo princípio ético e legal da decisão de não reanimar: quando o paciente morre após recusar ou suspender um tratamento, a causa da morte é considerada a doença de base, não a intervenção médica — diferente da eutanásia ou do suicídio assistido, em que a causa da morte é a intervenção realizada pelo profissional. O documento recomenda esclarecer qual função está em jogo (a maioria dos pedidos mira o choque, não a estimulação — que, neste caso, o paciente nem depende), documentar o consentimento por escrito e reprogramar o dispositivo; a remoção cirúrgica não é recomendada para esse fim, por ser procedimento invasivo cujo risco não se justifica.",
+    "source_refs": [
+      "Padeletti L, Arnar DO, Boncinelli L, et al. EHRA Expert Consensus Statement on the management of cardiovascular implantable electronic devices in patients nearing end of life or requesting withdrawal of therapy. Europace. 2010;12(10):1480-1489. DOI: 10.1093/europace/euq275. PMID: 20675674 — documento conjunto com a Heart Rhythm Society (HRS), endossado por ACC, AHA, American Geriatrics Society, American Academy of Hospice and Palliative Medicine e Hospice and Palliative Nurses Association."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "substituto-de-sal-em-hipertenso-com-avc-previo",
+    "titulo": "Hipertensa com AVC prévio: trocar o sal de cozinha por substituto reduz eventos?",
+    "tema": "Geral",
+    "nivel": "básico",
+    "enunciado": "Mulher de 68 anos, hipertensa há 15 anos, com AVC isquêmico prévio há 2 anos, função renal preservada e sem uso de poupador de potássio, IECA ou BRA em dose alta. Está em acompanhamento ambulatorial de rotina e pergunta se pode substituir o sal de cozinha comum que usa em casa por um substituto de sal 'com menos sódio', que viu à venda no mercado.",
+    "pergunta": "Com base na evidência disponível, qual orientação é mais adequada para essa paciente?",
+    "opcoes": [
+      "Orientar a substituição do sal comum por substituto de sal (cerca de 75% cloreto de sódio e 25% cloreto de potássio), medida associada a redução de AVC, eventos cardiovasculares maiores e mortalidade por qualquer causa, sem sinal de hipercalemia grave nessa população de risco.",
+      "Não recomendar o substituto de sal, pois o maior teor de potássio contraindica seu uso em qualquer paciente hipertenso.",
+      "Orientar apenas a redução da quantidade total de sal consumido, já que isso é equivalente à substituição por sal com potássio segundo a evidência disponível.",
+      "Recomendar o substituto de sal independentemente da função renal ou do uso de poupadores de potássio, já que o ensaio que testou essa estratégia não mostrou nenhum risco de hipercalemia em nenhum cenário."
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O ensaio SSaSS (Neal et al., NEJM 2021), com quase 21 mil participantes chineses com AVC prévio ou ≥60 anos e hipertensão — perfil semelhante ao dessa paciente —, mostrou redução do AVC (razão de taxa 0,86; IC95% 0,77-0,96; p=0,006), de eventos cardiovasculares maiores (razão de taxa 0,87; p<0,001) e de morte por qualquer causa (razão de taxa 0,88; p<0,001) com o substituto de sal, sem diferença significativa em eventos adversos graves atribuídos a hipercalemia (razão de taxa 1,04; p=0,76). Mas essa ausência de sinal de hipercalemia foi observada na população estudada, sem seleção específica por risco renal — o próprio documento de origem alerta contra recomendar indiscriminadamente a quem já tem insuficiência renal significativa ou usa poupador de potássio/IECA/BRA em dose alta, o que não é o caso desta paciente.",
+    "source_refs": [
+      "Neal B, Wu Y, Feng X, et al. Effect of Salt Substitution on Cardiovascular Events and Death. N Engl J Med. 2021;385(12):1067-1077. DOI: 10.1056/NEJMoa2105675. PMID: 34459569"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "vacinacao-antiinfluenza-apos-sindrome-coronariana-aguda",
+    "titulo": "Paciente pós-infarto ainda não vacinado contra influenza: vale a pena priorizar antes da alta?",
+    "tema": "Geral",
+    "nivel": "básico",
+    "enunciado": "Homem de 60 anos, internado há 5 dias por infarto agudo do miocárdio com supradesnivelamento de ST, tratado com angioplastia primária, evolui bem e está em fase de reabilitação cardíaca intra-hospitalar. Durante a revisão de alta, a equipe percebe que ele ainda não recebeu a vacina contra influenza nesta temporada. Ele questiona se isso é realmente relevante para o coração, já que entende a vacina como medida de prevenção respiratória, não cardiovascular.",
+    "pergunta": "Qual conduta é mais adequada em relação à vacinação contra influenza nesse paciente?",
+    "opcoes": [
+      "Recomendar fortemente a vacinação ainda durante a internação ou antes da alta, já que em pacientes com síndrome coronariana aguda recente o ensaio IAMI mostrou redução do desfecho composto de morte, IAM ou trombose de stent em 12 meses (HR 0,72) e da mortalidade por qualquer causa (HR 0,59).",
+      "Postergar a vacinação para uma consulta ambulatorial futura, já que o benefício cardiovascular da vacina só foi demonstrado na população geral, não em pacientes com síndrome coronariana aguda recente.",
+      "Não priorizar a vacinação, por se tratar de medida de prevenção respiratória, fora do escopo do acompanhamento cardiológico.",
+      "Recomendar a vacinação apenas se o paciente apresentar sintomas respiratórios associados no momento da alta."
+    ],
+    "resposta_correta": 0,
+    "explicacao": "A metanálise de Udell (JAMA 2013, 6.735 pacientes) mostrou que o benefício cardiovascular da vacinação contra influenza se concentra justamente em quem teve síndrome coronariana aguda recente (RR 0,45; IC95% 0,32-0,63) e não em quem não teve (RR 0,94; IC95% 0,55-1,61), com interação estatisticamente significativa (p=0,02). O ensaio IAMI, desenhado especificamente para confirmar esse achado em pacientes pós-IAM ou coronariopatia de alto risco, encontrou redução do desfecho composto de morte, IAM ou trombose de stent em 12 meses (5,3% vs. 7,2%; HR 0,72; IC95% 0,52-0,99; p=0,040) e da mortalidade por qualquer causa (HR 0,59; IC95% 0,39-0,89; p=0,010). O momento da internação pós-IAM é exatamente quando o benefício é maior — postergar ou considerar a vacina 'fora do escopo cardiológico' contraria diretamente essa evidência.",
+    "source_refs": [
+      "Udell JA, Zawi R, Bhatt DL, et al. Association between influenza vaccination and cardiovascular outcomes in high-risk patients: a meta-analysis. JAMA. 2013;310(16):1711-1720. DOI: 10.1001/jama.2013.279206. PMID: 24150467",
+      "Fröbert O, Götberg M, Erlinge D, et al; IAMI Investigators. Influenza Vaccination After Myocardial Infarction: A Randomized, Double-Blind, Placebo-Controlled, Multicenter Trial. Circulation. 2021;144(18):1476-1484. DOI: 10.1161/CIRCULATIONAHA.121.057042. PMID: 34459211"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "fontan-sem-arritmia-qual-antitrombotico-escolher",
+    "titulo": "Fontan sem arritmia: qual antitrombótico escolher?",
+    "tema": "Cardiopatias congênitas",
+    "nivel": "intermediário",
+    "enunciado": "Paciente de 22 anos, portador de atresia tricúspide, submetido a cirurgia de Fontan aos 4 anos de idade, em acompanhamento ambulatorial de rotina. Holter de 24 horas em ritmo sinusal, sem arritmia documentada. Ecocardiograma sem trombo intracardíaco e função ventricular sistêmica preservada. Não há nenhuma outra indicação clínica de anticoagulação. A equipe discute o início de profilaxia antitrombótica primária, dada a fisiologia de baixo fluxo e estase própria da circulação de Fontan.",
+    "pergunta": "Diante da ausência de um vencedor inequívoco entre as estratégias antitrombóticas nas duas dimensões (eficácia e segurança), qual conduta está mais alinhada aos achados da metanálise em rede de 2023 para este paciente?",
+    "opcoes": [
+      "Não iniciar nenhuma profilaxia antitrombótica, pois nenhuma das três estratégias reduziu de forma significativa o risco de evento tromboembólico em comparação à ausência de tratamento",
+      "Iniciar varfarina, por ter apresentado a menor incidência absoluta de sangramento maior entre as três estratégias avaliadas",
+      "Iniciar AAS, que apresentou o perfil combinado de eficácia e segurança mais favorável no ranqueamento (P-score), com redução significativa de eventos tromboembólicos e tendência a menor risco de sangramento maior",
+      "Iniciar anticoagulante oral direto (NOAC) de forma exclusiva, por ser a única classe com eficácia estatisticamente comprovada na prevenção de eventos tromboembólicos"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "A metanálise em rede de Van den Eynde et al. (JACC 2023) mostrou que as três estratégias — NOAC (IRR 0,11), varfarina (IRR 0,23) e AAS (IRR 0,24) — reduzem significativamente o evento tromboembólico frente a nenhuma profilaxia, o que descarta a opção de não tratar. No ranqueamento de P-score, o NOAC teve a maior pontuação isolada de eficácia (0,921), mas ao combinar eficácia e segurança (sangramento maior: NOAC IRR 1,45; varfarina IRR 1,38; AAS IRR 0,72, nenhuma diferença estatisticamente significativa entre as opções), foi o AAS que teve o perfil geral mais favorável, com redução expressiva de eventos e tendência a menor sangramento. Os próprios autores apontam número limitado de pacientes em NOAC e heterogeneidade entre estudos como limitação à leitura de superioridade do NOAC.",
+    "source_refs": [
+      "Van den Eynde J, Possner M, Alahdab F, et al. Thromboprophylaxis in Patients With Fontan Circulation: A Systematic Review and Network Meta-Analysis. J Am Coll Cardiol. 2023;81(4):374-389. DOI: 10.1016/j.jacc.2022.10.037. PMID: 36697138 — números conferidos contra o resumo do artigo."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "valva-aortica-bicuspide-fenotipo-ascendente-51mm-operar-ou-vigiar",
+    "titulo": "Valva aórtica bicúspide, fenótipo ascendente, 51 mm: operar ou vigiar?",
+    "tema": "Cardiopatias congênitas",
+    "nivel": "avançado",
+    "enunciado": "Mulher de 38 anos, 1,60 m de altura, com valva aórtica bicúspide fusionada diagnosticada em rastreio de rotina, assintomática, com risco cirúrgico estimado baixo (< 3%). A angiotomografia mostra dilatação predominante do segmento tubular supracoronariano, com diâmetro sinusal menor que o tubular — fenótipo ascendente. O diâmetro máximo da aorta ascendente é 51 mm, estável entre duas medidas seriadas com um ano de intervalo. Ela deseja engravidar nos próximos dois anos.",
+    "pergunta": "Diante do fenótipo ascendente com diâmetro de 51 mm em paciente de baixo risco cirúrgico, qual conduta a diretriz ESC 2024 de doenças aórticas sustenta?",
+    "opcoes": [
+      "Não operar, pois o limiar cirúrgico absoluto para qualquer fenótipo é 55 mm e ela está abaixo desse valor",
+      "Considerar a cirurgia (Classe IIa), pois o diâmetro está ≥ 50 mm e há fator agravante presente — estatura baixa (entre 1,50 e 1,69 m) e desejo de gestação",
+      "Operar de forma obrigatória (Classe I), pois o fenótipo ascendente reduz automaticamente o limiar cirúrgico para 50 mm em qualquer paciente",
+      "Aguardar até que surjam sintomas, pois o fenótipo ascendente tem risco de evento aórtico agudo equivalente ao fenótipo de raiz"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A Recommendation Table 68 da diretriz ESC 2024 estabelece que, no fenótipo ascendente com baixo risco cirúrgico e diâmetro ≥ 50 mm, a cirurgia deve ser considerada (Classe IIa, Nível C) se presente qualquer um dos fatores agravantes listados — entre eles estatura menor (altura entre 1,50 e 1,69 m, que produz razão área transversal/altura maior que 13 cm²/m para o mesmo diâmetro) e desejo de gestação, ambos presentes neste caso. O corte de 55 mm é o limiar de indicação absoluta (Classe I) para qualquer fenótipo, mas não é o único ponto de decisão; e o fenótipo ascendente não iguala automaticamente o limiar de 50 mm do fenótipo de raiz, que tem crescimento mais rápido e pior prognóstico se não operado.",
+    "source_refs": [
+      "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179 — seção 10.2 (Aortic disease associated with bicuspid aortic valves), Figura 43 e Recommendation Table 68 (Recommendations for bicuspid aortic valve-associated aortopathy management)."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cardite-reumatica-moderada-sem-sequela-ate-quando-manter-profilaxia",
+    "titulo": "Cardite reumática moderada sem sequela: até quando manter a profilaxia?",
+    "tema": "Febre reumática",
+    "nivel": "básico",
+    "enunciado": "Menino de 12 anos, primeiro episódio de febre reumática aguda há 6 meses, com cardite classificada como moderada ao ecocardiograma na fase aguda (regurgitação mitral leve a moderada), sem sinais de doença valvar residual na reavaliação atual. Está em uso regular de penicilina G benzatina intramuscular a cada 21 dias e mora em região de alta incidência de febre reumática. Os pais perguntam até quando ele precisará continuar recebendo as injeções.",
+    "pergunta": "Segundo a categorização de duração da profilaxia secundária por categoria de risco, até que idade ela deve ser mantida neste caso (cardite moderada, sem doença valvar residual)?",
+    "opcoes": [
+      "Por 10 anos após o episódio, ou até os 21 anos de idade — o que ocorrer por último, mesma duração da febre reumática sem cardite",
+      "Até os 35 anos de idade",
+      "Até os 40 anos de idade ou por período mais prolongado, a critério clínico individualizado",
+      "Pode ser suspensa agora, pois a reavaliação atual não mostrou doença valvar residual"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A categorização por gravidade da profilaxia secundária estabelece três faixas de duração: sem cardite ou doença leve, mínimo de 10 anos após o último episódio ou até os 21 anos (o que ocorrer por último); cardite moderada sem doença valvar residual, até os 35 anos de idade; e doença grave com doença valvar residual persistente, até os 40 anos ou por período mais prolongado. O caso descrito é exatamente a categoria intermediária — cardite moderada na fase aguda, sem sequela valvar na reavaliação —, o que corresponde à manutenção até os 35 anos, não aos 21 nem à suspensão imediata.",
+    "source_refs": [
+      "Ralph AP, Noonan S, Wade V, Currie BJ. Prescribing for people with acute rheumatic fever. Aust Prescr. 2017;40(2):70-74.",
+      "Implementing the World Health Organization Guidelines for Rheumatic Heart Disease in Highly Endemic Settings: Balancing Evidence with Reality. Global Heart. 2026."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cardite-reumatica-grave-com-ic-qual-esquema-anti-inflamatorio",
+    "titulo": "Cardite reumática grave com IC manifesta: qual esquema anti-inflamatório?",
+    "tema": "Febre reumática",
+    "nivel": "intermediário",
+    "enunciado": "Menina de 9 anos internada com febre reumática aguda, taquicardia desproporcional à febre, sopro de regurgitação mitral importante, cardiomegalia à radiografia de tórax e disfunção sistólica do ventrículo esquerdo ao ecocardiograma, associadas a sintomas limitantes de insuficiência cardíaca (dispneia aos mínimos esforços). Já foram iniciadas a erradicação estreptocócica com penicilina benzatina e as medidas de suporte para IC (diurético e IECA).",
+    "pergunta": "Segundo a graduação de gravidade e a Tabela 40 da diretriz de miocardites da SBC (2022), qual esquema anti-inflamatório é o indicado para esta cardite, classificada como grave?",
+    "opcoes": [
+      "AAS 100 mg/kg/dia em 4 doses, por 2 semanas",
+      "Prednisona 0,5 a 1 mg/kg/dia por 15 dias com redução gradual, totalizando 4 a 8 semanas",
+      "Prednisona 1 a 2 mg/kg/dia por 15 dias com redução gradual, totalizando cerca de 12 semanas",
+      "Nenhum anti-inflamatório está indicado nesta faixa — apenas erradicação estreptocócica e suporte para a IC"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "A Tabela 40 da diretriz de miocardites da SBC 2022 recomenda, para cardite moderada a grave, prednisona 1 a 2 mg/kg/dia (máximo 60 mg) por via oral, em 2 a 3 tomadas, por 15 dias, seguida de redução semanal de 20% da dose, totalizando cerca de 12 semanas — Classe I, Nível B. O esquema de 0,5-1 mg/kg por 4 a 8 semanas é reservado à faixa subclínica a leve, e é Classe IIb, não I. O AAS/naproxeno por 2 semanas é indicado quando há artrite e/ou pericardite associada na forma subclínica, não na forma grave com disfunção sistólica e IC manifesta.",
+    "source_refs": [
+      "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022 · Arquivos Brasileiros de Cardiologia · seção 7 (Cardite Reumática), Tabelas 39 e 40 — texto integral em acesso aberto no PubMed Central"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hipertensao-cronica-leve-na-gestacao-tratar-ou-nao-o-ensaio-chap",
+    "titulo": "Hipertensão crônica leve na gestação: tratar ou não? O ensaio CHAP",
+    "tema": "Gravidez",
+    "nivel": "básico",
+    "enunciado": "Gestante de 29 anos, com hipertensão crônica prévia à gravidez, atualmente com 16 semanas de idade gestacional e feto único. A pressão arterial mede-se em torno de 145/93 mmHg em consultas seriadas, sem proteinúria e sem sinais de gravidade. Ela nunca fez uso de anti-hipertensivo antes da gestação e questiona se deve iniciar tratamento agora, pois ouviu dizer que \"baixar a pressão pode prejudicar o crescimento do bebê\".",
+    "pergunta": "Com base no ensaio CHAP, qual conduta deve ser adotada nesta gestante com hipertensão crônica leve?",
+    "opcoes": [
+      "Não tratar até que a pressão atinja o critério de gravidade (≥ 160/105 mmHg), para evitar restrição de crescimento fetal",
+      "Iniciar anti-hipertensivo apropriado para a gestação, com alvo de pressão abaixo de 140/90 mmHg",
+      "Iniciar anti-hipertensivo apenas se surgir proteinúria ou outro sinal de pré-eclâmpsia sobreposta",
+      "Encaminhar para interrupção da gestação, pois hipertensão crônica com PA acima de 140/90 mmHg contraindica a manutenção da gravidez"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O ensaio CHAP (Tita et al., NEJM 2022; PMID 35363951), com 2.408 gestantes com hipertensão crônica leve (abaixo de 160/100 mmHg), mostrou que tratar com alvo abaixo de 140/90 mmHg reduziu o desfecho primário composto (30,2% vs. 37,0%; RR ajustado 0,82; p<0,001), sem aumentar o peso ao nascer pequeno para a idade gestacional (11,2% vs. 10,4%; RR 1,04; p=0,76) — o dano temido de restrição de crescimento fetal não se confirmou. Isso desfez a conduta histórica de não tratar hipertensão leve na gestação por receio de prejudicar o feto.",
+    "source_refs": [
+      "Tita AT, Szychowski JM, Boggess K, Dugoff L, Sibai B, Lawrence K, et al; Chronic Hypertension and Pregnancy (CHAP) Trial Consortium. Treatment for Mild Chronic Hypertension during Pregnancy. N Engl J Med. 2022;386(19):1781-1792. DOI: 10.1056/NEJMoa2201295. PMID: 35363951 — 2.408 gestantes, ensaio aberto e multicêntrico"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "tev-previo-na-gestacao-dose-baixa-ou-intermediaria-de-hbpm-o-ensaio-highlow",
+    "titulo": "TEV prévio na gestação: dose baixa ou intermediária de HBPM? O ensaio HIGHLOW",
+    "tema": "Gravidez",
+    "nivel": "intermediário",
+    "enunciado": "Gestante de 33 anos, com história prévia de trombose venosa profunda não relacionada a cirurgia, atualmente com 10 semanas de gestação. A equipe discute a dose de heparina de baixo peso molecular para profilaxia da recorrência ao longo da gestação e do puerpério: um membro da equipe sugere dose intermediária ajustada ao peso \"para maior proteção\", e outro sugere dose baixa fixa.",
+    "pergunta": "Com base no ensaio HIGHLOW, qual esquema de tromboprofilaxia deve ser adotado nesta gestante com TEV prévio?",
+    "opcoes": [
+      "Dose intermediária ajustada ao peso, pois reduziu significativamente a recorrência de TEV em comparação à dose baixa",
+      "Dose baixa fixa, pois não houve diferença significativa de eficácia entre as doses e a dose menor é a preferível quando a eficácia empata",
+      "Associar as duas doses, alternando semanalmente, para maximizar a proteção",
+      "Suspender a profilaxia após o primeiro trimestre, retomando apenas no puerpério"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O ensaio HIGHLOW (Bistervels et al., Lancet 2022; PMID 36354038), com 1.110 gestantes com TEV prévio, não encontrou diferença significativa de recorrência entre dose intermediária ajustada ao peso e dose baixa fixa (2% vs. 3%; RR 0,69; IC95% 0,32-1,47; p=0,33), com o esquema mantido até 6 semanas pós-parto. Os próprios autores concluem que a dose baixa é a dose apropriada: quando a eficácia empata, a dose menor significa menos exposição, menor custo e potencialmente menos sangramento, em um contexto (parto e puerpério) em que o sangramento é risco concreto.",
+    "source_refs": [
+      "Bistervels IM, Buchmüller A, Wiegers HMG, Ní Áinle F, Tardy B, Donnelly J, Verhamme P, et al; Highlow Block Writing Committee and Highlow Investigators. Intermediate-dose versus low-dose low-molecular-weight heparin in pregnant and post-partum women with a history of venous thromboembolism (Highlow study): an open-label, randomised, controlled trial. Lancet. 2022;400(10365):1777-1787. DOI: 10.1016/S0140-6736(22)02128-6. PMID: 36354038 — NCT01828697, 1.110 gestantes randomizadas em 70 hospitais de nove países"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "teste-de-vasorreatividade-positivo-na-hap-idiopatica-qual-a-conduta",
+    "titulo": "Teste de vasorreatividade positivo na HAP idiopática: qual a conduta?",
+    "tema": "Hipertensão pulmonar",
+    "nivel": "intermediário",
+    "enunciado": "Paciente de 34 anos, virgem de tratamento, com diagnóstico recente de hipertensão arterial pulmonar idiopática. Durante o cateterismo cardíaco direito, é realizado teste de vasorreatividade aguda com óxido nítrico inalado. A pressão arterial pulmonar média (PAPm) basal era de 52 mmHg e cai para 40 mmHg após o vasodilatador, sem redução do débito cardíaco.",
+    "pergunta": "Este resultado caracteriza teste de vasorreatividade positivo? E qual é a conduta terapêutica indicada?",
+    "opcoes": [
+      "Sim, é positivo (queda ≥ 10 mmHg da PAPm, atingindo valor absoluto de 40 mmHg, sem queda do débito cardíaco); iniciar bloqueador de canal de cálcio oral de longa ação em dose alta",
+      "Não, pois a queda precisa ser de pelo menos 20% do valor basal, independentemente do valor absoluto atingido",
+      "Sim, é positivo, mas a conduta é iniciar diretamente terapia combinada com antagonista do receptor de endotelina e inibidor de PDE5",
+      "Não é possível classificar sem repetir o teste com epoprostenol intravenoso, já que óxido nítrico isoladamente não é aceito como agente vasodilatador"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O critério de resposta positiva no teste de vasorreatividade aguda é a redução da PAPm de pelo menos 10 mmHg, atingindo PAPm absoluta de 40 mmHg, sem redução do débito cardíaco — exatamente o que ocorreu neste caso (52 para 40 mmHg). O óxido nítrico inalado é um dos agentes vasodilatadores aceitos tanto pelas diretrizes europeias quanto pelo consenso norte-americano. \"Respondedores agudos\" devem ser tratados com bloqueador de canal de cálcio oral de longa ação em dose alta (nifedipino, diltiazem ou amlodipino), e não com terapia combinada específica para HAP, que é a conduta para os não respondedores.",
+    "source_refs": [
+      "2022 ESC/ERS Guidelines for the diagnosis and treatment of pulmonary hypertension · European Heart Journal · 2022 · https://academic.oup.com/eurheartj/article/43/38/3618/6673929",
+      "Positive Vasoreactivity Testing in Pulmonary Arterial Hypertension: Therapeutic Consequences, Treatment Patterns, and Outcomes in the Modern Management Era · Circulation · https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.122.063821",
+      "Acute pulmonary vasoreactivity: a simple test revisited in the contemporary era · PMC · https://pmc.ncbi.nlm.nih.gov/articles/PMC12719676/",
+      "Pathogenesis of pulmonary hypertension caused by left heart disease · PMC · https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10020203/"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hipertensao-pulmonar-do-grupo-2-tratar-a-hp-ou-a-doenca-cardiaca-esquerda",
+    "titulo": "Hipertensão pulmonar do grupo 2: tratar a HP ou a doença cardíaca esquerda?",
+    "tema": "Hipertensão pulmonar",
+    "nivel": "básico",
+    "enunciado": "Mulher de 68 anos, com insuficiência cardíaca com fração de ejeção preservada, hipertensão arterial sistêmica de longa data e fibrilação atrial permanente, encaminhada por dispneia progressiva. O ecocardiograma mostra sinais sugestivos de hipertensão pulmonar (pressão sistólica de artéria pulmonar estimada em 55 mmHg), atribuída a disfunção diastólica do ventrículo esquerdo, sem valvopatia importante. Ela ainda não está em tratamento otimizado para a IC — usa apenas diurético em dose baixa.",
+    "pergunta": "Qual é a estratégia terapêutica inicial mais apropriada para a hipertensão pulmonar deste caso, classificada como grupo 2 (doença cardíaca esquerda)?",
+    "opcoes": [
+      "Iniciar diretamente terapia específica para hipertensão arterial pulmonar, como antagonista do receptor de endotelina",
+      "Otimizar o tratamento da doença cardíaca esquerda subjacente antes de considerar avaliação específica da hipertensão pulmonar",
+      "Indicar cateterismo direito com teste de vasorreatividade aguda como primeiro passo, independentemente do tratamento da IC",
+      "Iniciar inibidor de PDE5 imediatamente, já que é a única classe com benefício comprovado em hipertensão pulmonar de qualquer grupo"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Na hipertensão pulmonar do grupo 2 (doença cardíaca esquerda) — que inclui disfunção sistólica ou diastólica do ventrículo esquerdo, valvopatia mitral ou aórtica e cardiopatia congênita esquerda —, a estratégia primária é otimizar o tratamento da doença cardíaca subjacente antes de considerar avaliação específica da hipertensão pulmonar. Terapia específica para HAP (antagonista do receptor de endotelina, inibidor de PDE5) não é a abordagem inicial nesse grupo, ao contrário do que ocorre na HAP do grupo 1.",
+    "source_refs": [
+      "2022 ESC/ERS Guidelines for the diagnosis and treatment of pulmonary hypertension · European Heart Journal · 2022 · https://academic.oup.com/eurheartj/article/43/38/3618/6673929",
+      "Positive Vasoreactivity Testing in Pulmonary Arterial Hypertension: Therapeutic Consequences, Treatment Patterns, and Outcomes in the Modern Management Era · Circulation · https://www.ahajournals.org/doi/10.1161/CIRCULATIONAHA.122.063821",
+      "Acute pulmonary vasoreactivity: a simple test revisited in the contemporary era · PMC · https://pmc.ncbi.nlm.nih.gov/articles/PMC12719676/",
+      "Pathogenesis of pulmonary hypertension caused by left heart disease · PMC · https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10020203/"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "pericardite-aguda-colchicina-adjuvante-reduz-recorrencia",
+    "titulo": "Pericardite aguda: colchicina reduz a recorrência?",
+    "tema": "Pericárdio",
+    "nivel": "básico",
+    "enunciado": "Homem, 34 anos, previamente hígido, procura o pronto-socorro com dor torácica pleurítica retroesternal há 2 dias, que piora deitado e melhora ao sentar-se e inclinar-se para frente. À ausculta, atrito pericárdico. O ECG mostra elevação difusa do segmento ST com concavidade para cima, sem inversão recíproca de onda T. O ecocardiograma não mostra derrame significativo. É o primeiro episódio de pericardite, sem etiologia identificável (idiopática). Função renal normal, sem contraindicação a anti-inflamatório.",
+    "pergunta": "Além do AINE em dose anti-inflamatória plena, qual conduta reduz de forma comprovada o risco de recorrência?",
+    "opcoes": [
+      "Associar colchicina (0,5 mg 1x/dia se ≤70 kg, ou 0,5 mg 2x/dia se >70 kg) por 3 meses, desde a fase aguda",
+      "Associar prednisona 0,2-0,5 mg/kg/dia como terapia de primeira linha, junto com o AINE",
+      "Não associar nada além do AINE: colchicina só está indicada em pericardite recorrente, não no primeiro episódio",
+      "Suspender o AINE e tratar apenas com repouso, sem terapia anti-inflamatória"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "A colchicina passou a ser recomendada rotineiramente como terapia adjuvante de PRIMEIRA linha, não mais reservada à recorrência. No ensaio ICAP (240 pacientes, randomizado, duplo-cego), colchicina associada à terapia convencional reduziu o desfecho primário (pericardite incessante ou recorrente) de 37,5% para 16,7% — redução de risco relativo de 56% (IC95% 30-72%; p<0,001) — e a recorrência isolada de 20,8% para 9,2% (p=0,02). O COPE, ensaio anterior com 120 pacientes, já havia mostrado redução de recorrência em 18 meses de 32,3% para 10,7% (p=0,004, NNT=5). Corticosteroide como primeira linha na pericardite idiopática é justamente uma armadilha reconhecida: aumenta o risco de recorrência e deve ficar restrito a doença refratária ou reumática subjacente.",
+    "source_refs": [
+      "Imazio M, Bobbio M, Cecchi E, et al. Colchicine in addition to conventional therapy for acute pericarditis: results of the COlchicine for acute PEricarditis (COPE) trial. Circulation. 2005;112(13):2012-2016. DOI: 10.1161/CIRCULATIONAHA.105.542738. PMID: 16186437.",
+      "Imazio M, Brucato A, Cemin R, et al. A randomized trial of colchicine for acute pericarditis (ICAP). N Engl J Med. 2013;369(16):1522-1528. DOI: 10.1056/NEJMoa1208536. PMID: 24552335.",
+      "Schulz-Menger J, Collini V, Gröschel J, et al. 2025 ESC Guidelines for the management of myocarditis and pericarditis. Eur Heart J. 2025;46(40):3952-4041. DOI: 10.1093/eurheartj/ehaf192. PMID: 40878297 — Tabela 13 (dosagem), conferida contra o texto integral."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "tamponamento-cardiaco-achado-ecocardiografico-mais-especifico",
+    "titulo": "Tamponamento cardíaco: qual achado ecocardiográfico é mais específico?",
+    "tema": "Pericárdio",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 61 anos, com neoplasia de mama em tratamento, é trazida ao pronto-socorro com dispneia progressiva, taquicardia e hipotensão (PA 82x54 mmHg), turgência jugular e bulhas abafadas. O ecocardiograma à beira do leito mostra derrame pericárdico volumoso. A equipe discute se os achados de imagem confirmam tamponamento cardíaco antes de indicar pericardiocentese de urgência.",
+    "pergunta": "Entre os achados ecocardiográficos abaixo, qual tem MAIOR especificidade para tamponamento cardíaco, sustentando a indicação de pericardiocentese de urgência?",
+    "opcoes": [
+      "Colapso diastólico do ventrículo direito, ocorrendo próximo à onda T",
+      "Veia cava inferior dilatada (>2,1 cm) com colapso inspiratório menor que 50%",
+      "Variação respirofásica do fluxo mitral abaixo de 25%",
+      "Espessura pericárdica maior que 3 mm à tomografia"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O posicionamento internacional de 2024 (JACC Cardiovasc Imaging) distingue explicitamente o achado mais sensível do mais específico no tamponamento: a veia cava inferior dilatada (>2,1 cm) com colapso inspiratório <50% é o achado MAIS SENSÍVEL, enquanto o colapso telediastólico do ventrículo direito, próximo à onda T, é o achado MAIS ESPECÍFICO. Confundir os dois é uma armadilha nomeada no próprio documento. A variação respirofásica do fluxo mitral abaixo de 25% não é anormal — no tamponamento, o corte de interdependência ventricular usado é >30% no fluxo mitral e >60% no tricúspide (cortes diferentes dos usados na pericardite constritiva, que são >25% e >40%). Espessura pericárdica é critério de constrição, não de tamponamento, e a própria fonte adverte que nenhum achado isolado fecha diagnóstico — a decisão é sempre pelo conjunto clínico e ecocardiográfico.",
+    "source_refs": [
+      "Klein AL, Wang TKM, Cremer PC, Abbate A, Adler Y, et al. Pericardial Diseases: International Position Statement on New Concepts and Advances in Multimodality Cardiac Imaging. JACC Cardiovasc Imaging. 2024 Aug;17(8):937-988. DOI: 10.1016/j.jcmg.2024.04.010. PMID: 39111992 — texto integral em acesso aberto (PMC12156183), endossado pelo ACC Imaging Council e pela Society for Cardiovascular Magnetic Resonance; tabelas de recomendação e de critérios conferidas em 01/08/2026"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sincope-bav-mobitz-ii-criterio-maior-ecg-eusem",
+    "titulo": "Síncope com BAV Mobitz II: baixo risco ou internação?",
+    "tema": "Síncope",
+    "nivel": "básico",
+    "enunciado": "Mulher, 72 anos, é atendida no pronto-socorro após episódio de síncope sem pródromo, ocorrido enquanto caminhava. Nega dor torácica ou palpitações antes do evento. Exame físico e sinais vitais atuais estáveis. O ECG de admissão mostra bloqueio atrioventricular de 2º grau Mobitz II. A equipe discute se a paciente pode receber alta com investigação ambulatorial.",
+    "pergunta": "Segundo o consenso do grupo de síncope da EUSEM, como classificar o risco desta paciente com base no ECG?",
+    "opcoes": [
+      "Alto risco pelo ECG — BAV Mobitz II é característica de alto risco MAIOR, que vale por si mesma, independentemente da história — internar para investigação e monitorização",
+      "Baixo risco, pois o restante do ECG e o exame físico estão normais — liberar com retorno ambulatorial",
+      "Aplicar o corte de QTc do Escore Canadense de Risco de Síncope (480 ms) para decidir, já que o BAV isolado não define risco",
+      "Classificar como critério MENOR, pois BAV Mobitz II só conta como achado de alto risco se a história for compatível com síncope arritmogênica"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O consenso da EUSEM (2024) é explícito: bloqueio atrioventricular Mobitz II de 2º grau e bloqueio de 3º grau são características de alto risco MAIORES, que valem por si — não dependem da história ser ou não compatível com síncope arritmogênica (essa condição vale apenas para as características MENORES, como BAV Mobitz I). Além disso, a regra central do documento é que APENAS um ECG normal corresponde a baixo risco; um ECG com qualquer achado de alto risco maior já classifica o paciente para investigação e monitorização, não para alta. Misturar o corte de QTc do Escore Canadense de Risco de Síncope (480 ms) com o critério de ECG da EUSEM (QTc >460 ms) também é um erro nomeado no documento — são instrumentos diferentes, com finalidades diferentes, e não se aplica ao caso desta paciente, cujo achado relevante é o BAV, não o QTc.",
+    "source_refs": [
+      "Möckel M, Catherine Janssens KA, Pudasaini S, Garcia-Castrillo Riesgo L, et al; EUSEM syncope group. The syncope core management process in the emergency department: a consensus statement of the EUSEM syncope group. Eur J Emerg Med. 2024;31(4):250-259. DOI: 10.1097/MEJ.0000000000001146. PMID: 38874507 — texto integral acessado em acesso aberto (PMC11198953) e conferido em 31/07/2026; a tabela de características de alto risco do ECG foi transcrita item a item"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sincope-recorrente-inexplicada-monitor-de-eventos-implantavel",
+    "titulo": "Síncope recorrente inexplicada: qual o próximo passo diagnóstico?",
+    "tema": "Síncope",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 45 anos, sem cardiopatia estrutural identificada (ecocardiograma normal), relata três episódios de síncope nos últimos dois anos, sem pródromo claro. Já foi submetido a avaliação inicial completa, incluindo ECG de repouso normal e tilt test, que resultou negativo. Nenhuma causa foi identificada até o momento.",
+    "pergunta": "Qual a conduta mais apropriada para elucidar a causa da síncope recorrente deste paciente?",
+    "opcoes": [
+      "Implantar um monitor de eventos implantável (loop recorder), pelo maior rendimento diagnóstico frente aos testes convencionais",
+      "Repetir o tilt test com protocolo mais longo, já que um resultado negativo deve sempre ser repetido antes de qualquer outra investigação",
+      "Indicar estudo eletrofisiológico isoladamente, sem considerar o monitor de eventos implantável",
+      "Encaminhar diretamente para implante de marca-passo definitivo, dado o número de episódios"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "Segundo a ESC 2018, quando uma avaliação abrangente — incluindo tilt test — não identifica a causa da perda transitória de consciência, o monitor de eventos implantável é a conduta recomendada. O rendimento diagnóstico é bem superior aos testes convencionais: 55% de diagnóstico (predominantemente bradiarritmia) com o monitor implantável, contra apenas 19% com tilt test e estudo eletrofisiológico combinados. Marca-passo definitivo sem diagnóstico de resposta cardioinibitória documentada não tem indicação neste momento — ele só entra (Classe IIb, nível B) em pacientes ≥40 anos com resposta cardioinibitória comprovada ao tilt test e síncope recorrente após falha de terapias alternativas, o que não é o caso aqui, já que o tilt test foi negativo.",
+    "source_refs": [
+      "2018 ESC Guidelines for the diagnosis and management of syncope · European Heart Journal · 2018 · 39:1883-1948 · 10.1093/eurheartj/ehy037",
+      "Practical Instructions for the 2018 ESC Syncope Guidelines · American College of Cardiology · 2018 · https://www.acc.org/latest-in-cardiology/ten-points-to-remember/2018/04/04/15/09/practical-instructions-for-the-2018-esc-guidelines-for-syncope"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "pos-parada-cardiorrespiratoria-normotermia-versus-hipotermia-induzida",
+    "titulo": "Pós-parada cardiorrespiratória: induzir hipotermia ou evitar febre?",
+    "tema": "Terapia intensiva",
+    "nivel": "intermediário",
+    "enunciado": "Paciente de 58 anos é reanimado de parada cardiorrespiratória extra-hospitalar por fibrilação ventricular, com retorno da circulação espontânea (RCE). Duas horas após o RCE, permanece em coma na UTI, hemodinamicamente estável. A equipe discute a estratégia de controle de temperatura a ser adotada nas próximas horas.",
+    "pergunta": "Com base no ensaio TTM2, qual estratégia de controle térmico deve ser adotada?",
+    "opcoes": [
+      "Manter normotermia, com tratamento precoce se a temperatura atingir ≥37,8°C, evitando induzir hipotermia a 33°C",
+      "Induzir hipotermia a 33°C rotineiramente, pois reduz a mortalidade em comparação à normotermia com tratamento de febre",
+      "Induzir hipotermia a 33°C, pois melhora o desfecho neurológico em 6 meses, mesmo sem alterar a mortalidade",
+      "Não monitorizar nem tratar a temperatura, já que nenhum dos dois ensaios mostrou diferença entre as estratégias"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O TTM2 (1.900 pacientes) comparou hipotermia induzida a 33°C contra normotermia com tratamento precoce da febre (≥37,8°C) e não encontrou diferença de mortalidade em 6 meses (50% vs. 48%; RR 1,04, IC95% 0,94-1,14; p=0,37) nem de função neurológica (Rankin ≥4 em 55% nos dois grupos) — mas a hipotermia associou-se a MAIS arritmia com repercussão hemodinâmica (24% vs. 17%; p<0,001), a única diferença real de segurança do ensaio. Somado ao TTM (2013), que já havia mostrado ausência de benefício de 33°C sobre 36°C, a conclusão prática é que o alvo que sobrevive à evidência é evitar febre — não induzir hipotermia agressiva, que soma risco de arritmia sem ganho demonstrado.",
+    "source_refs": [
+      "Nielsen N, Wetterslev J, Cronberg T, et al. Targeted temperature management at 33°C versus 36°C after cardiac arrest (TTM). N Engl J Med. 2013;369(23):2197-2206. DOI: 10.1056/NEJMoa1310519. PMID: 24237006",
+      "Dankiewicz J, Cronberg T, Lilja G, et al. Hypothermia versus normothermia after out-of-hospital cardiac arrest (TTM2). N Engl J Med. 2021;384(24):2283-2294. DOI: 10.1056/NEJMoa2100591. PMID: 34133859"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "pos-parada-cardiaca-sem-supra-de-st-coronariografia-imediata-ou-adiada",
+    "titulo": "Pós-parada cardíaca sem supra de ST: cateterismo agora ou depois?",
+    "tema": "Terapia intensiva",
+    "nivel": "avançado",
+    "enunciado": "Paciente é reanimado de parada cardiorrespiratória extra-hospitalar de provável origem coronariana. Está hemodinamicamente estável após o retorno da circulação espontânea, sem instabilidade elétrica. O ECG pós-ressuscitação NÃO mostra supradesnivelamento de ST. A equipe da emergência cogita encaminhar o paciente imediatamente à sala de hemodinâmica.",
+    "pergunta": "Com base nos ensaios COACT e TOMAHAWK, qual conduta é sustentada pela evidência atual?",
+    "opcoes": [
+      "Priorizar o cuidado pós-parada (controle de temperatura, hemodinâmica, avaliação neurológica) e reservar a coronariografia para quando houver indicação clínica definida (estratégia adiada ou seletiva)",
+      "Encaminhar para coronariografia imediata, pois reduziu a mortalidade em 90 dias em comparação à estratégia adiada",
+      "Encaminhar para coronariografia imediata apenas se a troponina estiver muito elevada, independentemente do ECG",
+      "Não realizar coronariografia em nenhum momento neste cenário, dado o sinal de dano encontrado no TOMAHAWK"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "No COACT (552 pacientes), a coronariografia imediata não melhorou a sobrevida em 90 dias frente à adiada (64,5% vs. 67,2%; OR 0,89; p=0,51) e ainda atrasou o controle de temperatura-alvo (5,4h vs. 4,7h). No TOMAHAWK (554 pacientes), a estratégia imediata não reduziu a mortalidade em 30 dias e o desfecho primário teve HR 1,28 (IC95% 1,00-1,63; p=0,06) — um sinal desfavorável que não pode ser descartado, embora não alcance significância formal. A leitura correta não é 'dano comprovado' nem 'neutro tranquilo': é ausência de benefício com sinal de alerta. A conduta sustentada pelos dois ensaios é priorizar o cuidado pós-parada e reservar a angiografia para quando surgir indicação clínica (estratégia adiada ou seletiva) — sem excluir a coronariografia por completo, e sempre ressalvando que pacientes com supra de ST ou instabilidade hemodinâmica/elétrica persistente não foram estudados por esse desenho e seguem indicação de cateterismo imediato.",
+    "source_refs": [
+      "Lemkes JS, Janssens GN, van der Hoeven NW, Jewbali LSD, Dubois EA, et al. Coronary Angiography after Cardiac Arrest without ST-Segment Elevation. N Engl J Med. 2019;380(15):1397-1407. DOI: 10.1056/NEJMoa1816897. PMID: 30883057 — ensaio COACT, Netherlands Trial Register NTR4973, 552 randomizados. Financiamento: Netherlands Heart Institute e outros",
+      "Desch S, Freund A, Akin I, Behnes M, Preusch MR, et al. Angiography after Out-of-Hospital Cardiac Arrest without ST-Segment Elevation. N Engl J Med. 2021;385(27):2544-2553. DOI: 10.1056/NEJMoa2101909. PMID: 34459570 — ensaio TOMAHAWK, NCT02750462, 554 randomizados. Financiamento: German Center for Cardiovascular Research"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "escore-heart-baixo-risco-alta-do-pronto-socorro",
+    "titulo": "Escore HEART baixo: pode dar alta ao paciente com dor torácica?",
+    "tema": "Calculadoras",
+    "nivel": "básico",
+    "enunciado": "Homem, 45 anos, sem fatores de risco cardiovascular relevantes (não tabagista, sem diabetes, hipertensão, dislipidemia ou história familiar de doença coronariana precoce), procura o pronto-socorro com dor torácica atípica, iniciada há 1 hora e já completamente resolvida no momento da avaliação. O ECG é normal e a troponina inicial está dentro da normalidade. Ao aplicar o escore HEART, o paciente pontua 2 (faixa 0-3).",
+    "pergunta": "Com base na validação prospectiva do escore HEART, qual a conduta mais apropriada?",
+    "opcoes": [
+      "Considerar alta com seguimento ambulatorial: a faixa 0-3 associou-se a apenas 1,7% de eventos cardíacos adversos maiores (MACE) em 6 semanas na validação prospectiva",
+      "Internar para observação clínica, pois todo paciente com dor torácica no pronto-socorro deve ser observado independentemente do escore",
+      "Indicar estratégia invasiva precoce, pois uma troponina inicial normal não exclui síndrome coronariana aguda",
+      "Recalcular o risco usando a tabela do TIMI, que teve desempenho estatístico superior ao HEART nesta população de dor torácica indiferenciada"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "Na validação prospectiva do HEART score (2.440 pacientes não selecionados em dez hospitais holandeses), a faixa 0-3 (36,4% dos pacientes) apresentou apenas 1,7% de MACE em 6 semanas, sustentando conduta reservada e alta com seguimento ambulatorial — os próprios autores concluem que escores baixos excluem MACE de curto prazo com mais de 98% de certeza. É o inverso do TIMI: na mesma população, a estatística c do HEART (0,83) foi significativamente maior que a do TIMI (0,75) e a do GRACE (0,70), p<0,0001 nas duas comparações — ou seja, o HEART tem desempenho SUPERIOR, não inferior, nessa população indiferenciada de dor torácica. O próprio ensaio randomizado de implementação (2017) mostrou que usar o HEART é seguro (margem de não inferioridade respeitada), reforçando que o escore, quando baixo, sustenta conduta menos agressiva.",
+    "source_refs": [
+      "Six AJ, Backus BE, Kelder JC. Chest pain in the emergency room: value of the HEART score. Neth Heart J. 2008;16(6):191-196. DOI: 10.1007/BF03086144. PMID: 18665203. PMCID: PMC2442661 — artigo original, 122 pacientes, 120 avaliáveis",
+      "Backus BE, Six AJ, Kelder JC, Bosschaert MA, Mast EG, et al. A prospective validation of the HEART score for chest pain patients at the emergency department. Int J Cardiol. 2013;168(3):2153-2158. DOI: 10.1016/j.ijcard.2013.01.255. PMID: 23465250 — validação prospectiva, 2.440 pacientes não selecionados em dez hospitais da Holanda",
+      "Poldervaart JM, Reitsma JB, Backus BE, Koffijberg H, Veldkamp RF, et al. Effect of Using the HEART Score in Patients With Chest Pain in the Emergency Department: A Stepped-Wedge, Cluster Randomized Trial. Ann Intern Med. 2017;166(10):689-697. DOI: 10.7326/M16-1600. PMID: 28437795 — NCT01756846, 3.648 pacientes, nove hospitais holandeses. NOTA: existe Erratum em Ann Intern Med. 2017;167(2):144 (DOI 10.7326/L17-0301), registrado mas NÃO lido nesta consulta"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "dapt-score-alto-prolongar-dupla-antiagregacao-apos-12-meses",
+    "titulo": "DAPT score alto aos 12 meses: prolongar a dupla antiagregação?",
+    "tema": "Calculadoras",
+    "nivel": "intermediário",
+    "enunciado": "Paciente, 58 anos, foi submetido a intervenção coronária percutânea (ICP) com stent farmacológico há exatamente 12 meses, por infarto agudo do miocárdio. Está em uso de dupla antiagregação plaquetária (AAS + inibidor de P2Y12) desde então, sem nenhum episódio de sangramento no período. Ao calcular o DAPT score, o paciente pontua 3 (faixa ≥2).",
+    "pergunta": "Com base no ensaio de derivação do DAPT score, qual conduta o escore sustenta para este paciente?",
+    "opcoes": [
+      "Prolongar a dupla antiagregação além de 12 meses: escore ≥2 associou-se a redução significativa de eventos isquêmicos, com benefício líquido favorável nessa faixa",
+      "Suspender o inibidor de P2Y12 imediatamente aos 12 meses, independentemente do escore, mantendo apenas AAS",
+      "Usar o PRECISE-DAPT, e não o DAPT score, para decidir sobre prolongar a terapia além de 12 meses",
+      "Não prolongar a terapia: escore ≥2 indica risco de sangramento que supera o benefício isquêmico"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "No estudo de derivação do DAPT score (11.648 pacientes já com 12 meses de dupla antiagregação sem sangramento), o grupo com escore ≥2 (n=5.917) teve redução significativa de eventos isquêmicos ao continuar a tienopiridina além de 12 meses (2,7% vs. 5,7%; diferença de risco -3,0%, IC95% -4,1% a -2,0%; p<0,001) — benefício líquido favorável a prolongar. Já no grupo de escore <2, a continuação não reduziu isquemia de forma significativa e aumentou mais o sangramento (3,0% vs. 1,4%; p<0,001) — por isso o escore ≥2 aponta na direção oposta à opção que sugere não prolongar. O PRECISE-DAPT é o escore correto para calibrar risco de sangramento NO MOMENTO DO IMPLANTE do stent, não para decidir sobre prolongar aos 12 meses — os dois escores respondem perguntas diferentes e se complementam, mas não são substitutos um do outro.",
+    "source_refs": [
+      "Yeh RW, Secemsky EA, Kereiakes DJ, et al; DAPT Study Investigators. Development and Validation of a Prediction Rule for Benefit and Harm of Dual Antiplatelet Therapy Beyond 1 Year After Percutaneous Coronary Intervention. JAMA. 2016;315(16):1735-1749. DOI: 10.1001/jama.2016.3775. PMID: 27022822",
+      "Costa F, van Klaveren D, James S, et al; PRECISE-DAPT Study Investigators. Derivation and validation of the predicting bleeding complications in patients undergoing stent implantation and subsequent dual antiplatelet therapy (PRECISE-DAPT) score. Lancet. 2017;389(10073):1025-1034. DOI: 10.1016/S0140-6736(17)30397-5. PMID: 28290994"
+    ],
+    "review_status": "revisado"
   }
 ]
