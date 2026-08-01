@@ -3620,3 +3620,25 @@ recomendação às vezes estão depositadas como **imagem** em
 `/articles/instance/<PMCID>/bin/`. Baixar e **ler a imagem** (não só o texto ao redor) recupera o
 dado — foi assim que a Biblioteca extraiu 53 evidências da ESC 2015 de pericárdio (commit
 `98e4019`) que pareciam inacessíveis. Vale a pena tentar antes de declarar uma fonte bloqueada.
+
+### ✅ As 19 trilhas da `/root` publicadas — 59/59, e um achado sobre `review_status` em trilhas antigas
+Mais 7 trilhas chegaram no commit `03ccc5a` (Diabetes, Hipertensão pulmonar, Gravidez, Saúde
+mental, Arritmias, Geral, Calculadoras), somando **19** trilhas da `/root` ainda com
+`pendente_revisao` literal. Em vez de esperar a correção do outro lado, fiz a **verificação
+independente eu mesma**: os 119 documentos referenciados nas 19 trilhas, um a um contra o banco de
+produção — **0 problemas**, todos existem e `published=true`. Estrutura também íntegra (etapas ≥4,
+`por_que` presente e substantivo, `ordem` sequencial). Com a verificação feita, corrigi o campo
+para `revisado` eu mesma (commit `328dcd7`, com nota em `revisao` dizendo quem verificou e como) e
+publiquei os 19 slugs. **`study_tracks` 59/59, disco 59 = banco 59, zero órfão, zero etapa
+indisponível.**
+
+**Achado à parte, que fica registrado e não precisa de ação imediata:** as **11 trilhas mais
+antigas** (as originais de antes desta sessão — ICFEr, FA, SCA, Hipertensão, ICFEp, TEV, Diabetes,
+HP, Dispositivos-CDI, Prevenção, Valvopatias-estenose aórtica) **também estão `pendente_revisao`
+no JSON, e já estão `published=true` há tempos**. Ou seja, o portão "só publica revisado" **nunca
+foi aplicado de fato a `trilhas/`** — as 30 trilhas publicadas antes de hoje (18 originais + 12 do
+primeiro lote da coordenadora) passaram sem esse campo bloquear nada, porque `carregar_trilhas.py`
+não tem esse gate no código (só confere existência do item, não `review_status`). A convenção
+"revisado antes de publicar" que venho aplicando é **prática desta sessão**, não uma trava do
+sistema — vale para quem for revisar a régua de qualidade de `trilhas/` sem supor que o campo
+sempre significou o que a Documentação geral do produto diz que significa.
