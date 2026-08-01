@@ -6299,5 +6299,505 @@
       "Mittleman MA, Maclure M, Nachnani M, Sherwood JB, Muller JE. Educational attainment, anger, and the risk of triggering myocardial infarction onset. The Determinants of Myocardial Infarction Onset Study Investigators. Arch Intern Med. 1997;157(7):769-775. PMID: 9125009. DOI: não disponível no registro do PubMed (publicação de 1997, anterior à atribuição sistemática de DOI)."
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "monoterapia-de-manutencao-apos-icp-clopidogrel-ou-aas-host-exam",
+    "titulo": "Monoterapia antiplaquetária de manutenção após ICP com stent farmacológico: clopidogrel ou AAS?",
+    "tema": "Doença coronariana",
+    "nivel": "avançado",
+    "enunciado": "Homem de 64 anos foi submetido a implante de stent farmacológico há 9 meses por síndrome coronariana aguda. Manteve dupla antiagregação plaquetária desde então, sem nenhum evento isquêmico e sem sangramento maior. O cardiologista assistente decide suspender um dos dois antiagregantes e mantê-lo em monoterapia por tempo indeterminado, como parte da rotina de manutenção crônica pós-intervenção coronariana percutânea (ICP). O paciente pergunta qual dos dois agentes — AAS ou clopidogrel — é a escolha mais bem sustentada por evidência direta, cabeça a cabeça, para essa fase.",
+    "pergunta": "Segundo o ensaio HOST-EXAM, qual agente antiplaquetário em monoterapia reduziu o desfecho composto de morte, infarto, AVC, reinternação por síndrome coronariana aguda e sangramento maior durante a fase de manutenção crônica após ICP com stent farmacológico?",
+    "opcoes": [
+      "Clopidogrel 75 mg/dia foi superior ao AAS 100 mg/dia, reduzindo o desfecho composto (HR 0,73; IC95% 0,59-0,90; p=0,0035)",
+      "AAS 100 mg/dia foi superior ao clopidogrel, com redução de eventos isquêmicos às custas de mais sangramento",
+      "Os dois agentes foram estatisticamente equivalentes em todos os desfechos avaliados, sem diferença relevante",
+      "O estudo não comparou os dois fármacos isoladamente — testou a manutenção da dupla antiagregação indefinida contra a monoterapia"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O HOST-EXAM (Koo BK et al., Lancet 2021;397(10293):2487-2496, PMID 34010616) foi um ensaio randomizado, aberto, multicêntrico (37 centros na Coreia do Sul), que incluiu 5.530 pacientes com pelo menos 20 anos que haviam mantido dupla antiagregação sem eventos por 6 a 18 meses após ICP com stent farmacológico (DES). Foram randomizados 1:1 (5.438 pacientes analisados) para clopidogrel 75 mg/dia (n=2.710) ou AAS 100 mg/dia (n=2.728) por 24 meses. O desfecho primário — composto de morte por qualquer causa, infarto não fatal, AVC, reinternação por síndrome coronariana aguda e sangramento BARC tipo 3 ou maior — ocorreu em 152 pacientes (5,7%) no grupo clopidogrel contra 207 (7,7%) no grupo AAS, com razão de risco (HR) de 0,73 (IC95% 0,59-0,90; p=0,0035), favorecendo o clopidogrel. Os autores concluíram que, na fase de manutenção crônica após ICP com DES, a monoterapia com clopidogrel foi superior à monoterapia com AAS em prevenir eventos clínicos adversos futuros. Este é um achado de um único ensaio investigator-initiated coreano; a generalização para outras populações e a magnitude do efeito devem ser interpretadas com essa ressalva.",
+    "source_refs": [
+      "Koo BK, Kang J, Park KW, et al; HOST-EXAM investigators. Aspirin versus clopidogrel for chronic maintenance monotherapy after percutaneous coronary intervention (HOST-EXAM): an investigator-initiated, prospective, randomised, open-label, multicentre trial. Lancet. 2021;397(10293):2487-2496. DOI: 10.1016/S0140-6736(21)01063-1. PMID: 34010616"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cavd-gene-elusiva-sem-mutacao-desmossomica-exercicio-de-endurance-e-restricao",
+    "titulo": "Cardiomiopatia arritmogênica de ventrículo direito sem mutação desmossômica identificada: o exercício intenso é inocente?",
+    "tema": "Cardiomiopatias",
+    "nivel": "avançado",
+    "enunciado": "Triatleta de 25 anos, sem história familiar de morte súbita ou cardiomiopatia, apresenta síncope durante treino. ECG mostra ondas T invertidas de V1 a V3, e o Holter revela extrassístoles ventriculares frequentes com morfologia de bloqueio de ramo esquerdo. A ressonância cardíaca preenche critérios estruturais maiores da Task Force para cardiomiopatia arritmogênica de ventrículo direito (CAVD/DAVD). O painel genético para os principais genes desmossômicos (PKP2, DSP, DSG2, DSC2, JUP) é negativo — caso classificado como \"gene-elusivo\". O paciente pergunta se pode continuar treinando na mesma intensidade, já que \"não tem a mutação\".",
+    "pergunta": "De acordo com o estudo de Sawant et al. (JAHA 2014) sobre pacientes com CAVD gene-elusiva (sem mutação desmossômica identificada), qual é o papel do exercício de endurance nesse subgrupo e qual a implicação prática para este paciente?",
+    "opcoes": [
+      "Pacientes gene-elusivos fizeram significativamente MENOS exercício do que os portadores de mutação desmossômica, o que afasta relação causal e permite manter o treinamento sem restrição",
+      "Todos os pacientes gene-elusivos do estudo eram atletas de endurance, com exercício significativamente mais intenso antes da apresentação clínica do que os desmossômicos (p<0,001) e história familiar bem menos frequente (9% vs 40%, p<0,001) — achados que sustentam papel causal do próprio exercício e indicam restrição de atividade física intensa, mesmo sem mutação identificada",
+      "Não houve diferença de intensidade de exercício entre os grupos gene-elusivo e desmossômico",
+      "O estudo avaliou apenas resposta a fármacos antiarrítmicos, não hábitos de exercício"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Sawant AC et al. (J Am Heart Assoc. 2014;3(6):e001471, PMID 25516436) estudaram 82 pacientes com CAVD (39 com mutação desmossômica identificada, todos probandos), entrevistados sobre atividade física regular desde os 10 anos de idade. TODOS os pacientes gene-elusivos (sem mutação desmossômica) eram atletas de endurance, e esse grupo teve maior probabilidade de ser atleta de endurance (p<0,001) e fez exercício significativamente mais intenso (MET-horas/ano) antes da apresentação clínica (p<0,001), particularmente entre os casos que se apresentaram antes dos 25 anos (p=0,027). A história familiar foi bem menos prevalente nos gene-elusivos (9% vs 40% nos desmossômicos, p<0,001), sugerindo maior peso do fator ambiental. Entre os gene-elusivos sem história familiar, o exercício foi ainda mais intenso do que nos demais pacientes com CAVD (p=0,004). Os gene-elusivos que fizeram o exercício mais intenso (quartil superior de MET-horas/ano) tiveram idade de apresentação mais precoce (p=0,025), maior chance de preencher os critérios estruturais da Task Force (100% vs 43%, p=0,02) e sobrevida livre de arritmia ventricular mais curta no seguimento (p=0,002). Os autores concluem que a CAVD gene-elusiva, não familiar, está associada a exercício de intensidade muito alta, sugerindo que o próprio exercício tem papel desproporcional na patogênese desses casos — e que, como o exercício modifica negativamente a estrutura cardíaca e promove arritmias, a restrição de exercício é indicada mesmo sem mutação desmossômica confirmada.",
+    "source_refs": [
+      "Sawant AC, Bhonsale A, te Riele AS, Tichnell C, Murray B, Russell SD, Tandri H, Tedford RJ, Judge DP, Calkins H, James CA. Exercise has a disproportionate role in the pathogenesis of arrhythmogenic right ventricular dysplasia/cardiomyopathy in patients without desmosomal mutations. J Am Heart Assoc. 2014;3(6):e001471. DOI: 10.1161/JAHA.114.001471. PMID: 25516436"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "estenose-mitral-reumatica-com-valva-pliavel-comissurotomia-fechada-ou-valvuloplastia-por-balao",
+    "titulo": "Estenose mitral reumática grave com valva pliável: comissurotomia fechada ou valvuloplastia por balão?",
+    "tema": "Valvopatias",
+    "nivel": "intermediário",
+    "enunciado": "Mulher de 29 anos, com sequela de febre reumática, apresenta estenose mitral grave sintomática (classe funcional II-III), área valvar mitral de 1,1 cm² e gradiente médio transmitral de cerca de 20 mmHg. O escore ecocardiográfico é favorável: valva pliável, sem calcificação relevante, sem regurgitação mitral significativa e sem trombo em átrio esquerdo. O serviço dispõe tanto de hemodinâmica para valvuloplastia mitral por balão percutânea (PMBV) quanto de cirurgia cardíaca para comissurotomia mitral fechada (CMC), e a equipe discute qual técnica oferecer.",
+    "pergunta": "Com base no estudo comparativo de Tokmakoglu et al. (J Heart Valve Dis 2001), que achado deve orientar a discussão entre comissurotomia fechada e valvuloplastia por balão nesta paciente com anatomia favorável?",
+    "opcoes": [
+      "A mortalidade da comissurotomia fechada foi muito maior que a da valvuloplastia por balão, o que contraindica a cirurgia sempre que houver anatomia favorável",
+      "A comissurotomia fechada obteve taxa de sucesso primário mais alta (98,3% vs 89%, p<0,0001) e maior área valvar residual tanto na primeira semana (2,5±0,5 vs 2,1±0,4 cm², p<0,0001) quanto em 1 ano (2,3±0,5 vs 1,9±0,4 cm², p<0,0001); a valvuloplastia por balão, por sua vez, evita toracotomia e anestesia geral e reduz o tempo de internação — a escolha depende do contexto clínico, disponibilidade e preferência, não de superioridade absoluta de uma técnica",
+      "As duas técnicas foram estatisticamente equivalentes em todos os desfechos hemodinâmicos avaliados no estudo",
+      "A valvuloplastia por balão é formalmente contraindicada quando a valva é pliável e sem calcificação"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Tokmakoglu H et al. (J Heart Valve Dis. 2001;10(3):281-287, PMID 11380088) compararam, em estudo retrospectivo comparativo (não randomizado) de 580 pacientes com estenose mitral reumática grave, 280 submetidos a comissurotomia mitral fechada (CMC) e 300 a valvuloplastia mitral por balão percutânea (PMBV). O gradiente transmitral médio basal foi 21±6 mmHg no grupo CMC e 20±5 mmHg no grupo PMBV (p=0,6), e a área valvar mitral basal foi 1,1±0,2 cm² em ambos os grupos — coortes comparáveis na linha de base. A mortalidade foi 0,7% após CMC e 0,3% após PMBV; a taxa de sucesso primário foi de 98,3% na CMC contra 89% na PMBV (p<0,0001). Na primeira semana, o gradiente médio caiu para 4±3 mmHg (CMC) e 5,8±2 mmHg (PMBV) (p<0,0001), e a área valvar aumentou para 2,5±0,5 cm² (CMC) e 2,1±0,4 cm² (PMBV) (p<0,0001). Em 1 ano, o gradiente foi 5,4±4 mmHg (CMC) e 7,1±3 mmHg (PMBV) (ambos p<0,0001 vs. basal), e a área valvar foi 2,3±0,5 cm² (CMC) e 1,9±0,4 cm² (PMBV) (ambos p<0,0001 vs. basal) — os resultados de CMC foram significativamente melhores quanto a gradiente e área valvar nesses dois momentos (p<0,0001). Os próprios autores concluem que, embora resultados satisfatórios sejam obtidos com qualquer uma das duas abordagens, a CMC oferece maior taxa de sucesso primário, maior aumento de área valvar e melhor controle técnico durante o procedimento, com menor custo, enquanto a PMBV encurta a internação e elimina o risco de toracotomia e anestesia geral — sendo preferida quando a cirurgia é contraindicada por comorbidade associada. É importante registrar que este é um estudo observacional retrospectivo, não um ensaio clínico randomizado, sujeito a viés de seleção entre os grupos.",
+    "source_refs": [
+      "Tokmakoglu H, Vural KM, Ozatik MA, Cehreli S, Sener E, Tasdemir O. Closed commissurotomy versus balloon valvuloplasty for rheumatic mitral stenosis. J Heart Valve Dis. 2001;10(3):281-287. PMID: 11380088"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "pericardite-constritiva-recente-pos-cardiotomia-observar-antes-da-pericardiectomia",
+    "titulo": "Pericardite constritiva de início recente após cirurgia cardíaca: pericardiectomia de imediato ou período de observação clínica?",
+    "tema": "Pericárdio",
+    "nivel": "intermediário",
+    "enunciado": "Paciente evolui, 6 semanas após revascularização miocárdica cirúrgica, com dispneia progressiva, turgência jugular e edema de membros inferiores. O ecocardiograma mostra septo interventricular com movimento em \"dip-plateau\", variação respiratória exagerada do fluxo mitral e \"swing\" septal, achados compatíveis com fisiologia constritiva. A proteína C-reativa está elevada e não há outra causa identificada além do próprio pós-operatório. O paciente está hemodinamicamente estável, sem sinais de baixo débito grave, e a equipe discute se deve encaminhar de imediato para pericardiectomia ou tentar um período de tratamento clínico.",
+    "pergunta": "Com base no estudo de Haley et al. (JACC 2004) sobre pericardite constritiva \"transitória\", qual conduta inicial é sustentada pela evidência em um paciente estável como este, com constrição de início recente após cirurgia cardíaca?",
+    "opcoes": [
+      "Pericardiectomia de urgência está sempre indicada assim que a fisiologia constritiva é documentada ao ecocardiograma, independentemente da estabilidade clínica",
+      "Em uma revisão de banco de ecocardiogramas da Mayo Clinic com 212 pacientes com achados de pericardite constritiva (1988-1999), a fisiologia constritiva resolveu com tratamento clínico, sem pericardiectomia, em 36 pacientes (17%); a causa mais comum nesse grupo foi cirurgia cardiovascular prévia (25%), e no subgrupo seguido serialmente (n=22) a resolução ocorreu, em média, 8,3 semanas após o diagnóstico — um período de observação com terapia anti-inflamatória antes de indicar pericardiectomia definitiva é, portanto, uma conduta razoável em paciente estável",
+      "Pericardite constritiva é, por definição, sempre irreversível, e o conceito de constrição \"transitória\" não tem respaldo em estudo algum",
+      "Anticoagulação plena é o tratamento definitivo da pericardite constritiva pós-cirúrgica"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Haley JH, Tajik AJ, Danielson GK, Schaff HV, Mulvagh SL, Oh JK. Transient constrictive pericarditis: causes and natural history. J Am Coll Cardiol. 2004;43(2):271-275, PMID 14736448. Os autores revisaram o banco de ecocardiogramas da Mayo Clinic e identificaram 212 pacientes com achados ecocardiográficos de pericardite constritiva entre 1988 e 1999. Em 36 desses 212 pacientes (17%), ecocardiogramas de seguimento mostraram resolução da fisiologia constritiva sem necessidade de pericardiectomia. A idade média foi 49±21 anos, 72% homens. As causas foram diversas, sendo a mais comum a cirurgia cardiovascular prévia (25%). Em um subgrupo de 22 pacientes seguidos serialmente durante a evolução, a resolução das características fisiológicas constritivas ocorreu, em média, 8,3 semanas após o diagnóstico. A conclusão dos autores é que um subgrupo de pacientes com pericardite constritiva apresenta resolução do quadro sem necessidade de pericardiectomia — o que sustenta, em paciente hemodinamicamente estável e com etiologia potencialmente reversível (como pós-cirurgia cardíaca recente ou processo inflamatório ativo), um período de observação com terapia anti-inflamatória antes de indicar a cirurgia definitiva, reservando a pericardiectomia para quem não resolve ou piora.",
+    "source_refs": [
+      "Haley JH, Tajik AJ, Danielson GK, Schaff HV, Mulvagh SL, Oh JK. Transient constrictive pericarditis: causes and natural history. J Am Coll Cardiol. 2004;43(2):271-275. DOI: 10.1016/j.jacc.2003.08.032. PMID: 14736448"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "valva-aortica-bicuspide-de-risco-moderado-profilaxia-antibiotica-antes-de-extracao-dentaria-dados-populacionais-nice",
+    "titulo": "Valva aórtica bicúspide com refluxo leve antes de extração dentária: profilaxia antibiótica de rotina, mesmo sem indicação pela diretriz atual?",
+    "tema": "Endocardite",
+    "nivel": "intermediário",
+    "enunciado": "Homem de 45 anos, portador de valva aórtica bicúspide com regurgitação leve, sem prótese valvar e sem episódio prévio de endocardite infecciosa — portanto classificado como risco \"moderado\", e não \"alto\", pelas diretrizes atuais de prevenção de endocardite. Ele vai realizar uma extração dentária eletiva e pergunta ao cardiologista se deve tomar antibiótico profilático antes do procedimento, como sempre fez no passado, citando ter lido que a suspensão de rotina da profilaxia na Inglaterra coincidiu com aumento de casos de endocardite.",
+    "pergunta": "O que o estudo populacional de Dayer et al. (Lancet 2015), sobre a suspensão total da profilaxia antibiótica recomendada pela diretriz do NICE de 2008 no Reino Unido, mostrou — e como esse achado deve ser comunicado a um paciente de risco MODERADO como este?",
+    "opcoes": [
+      "A suspensão da profilaxia não teve nenhuma relação temporal com a incidência de endocardite infecciosa na Inglaterra, o que reforça, sem ressalvas, que profilaxia nunca é necessária em nenhum grau de risco",
+      "Após a diretriz do NICE de suspensão total da profilaxia em março de 2008, as prescrições caíram de uma média de 10.900/mês para 2.236/mês (p<0,0001), e a partir de então a incidência de endocardite infecciosa na Inglaterra aumentou significativamente acima da tendência histórica projetada (0,11 caso a mais por 10 milhões de pessoas por mês; IC95% 0,05-0,16; p<0,0001), chegando a 35 casos a mais por mês do que o esperado em março de 2013; o próprio estudo, observacional e de séries temporais, não estabelece causalidade — e mesmo à luz desse achado, as diretrizes atuais de sociedades como ESC e AHA continuam reservando a profilaxia de rotina para pacientes de risco ALTO (prótese valvar, endocardite prévia, cardiopatia congênita cianótica não corrigida, entre outros), não para o risco moderado deste paciente",
+      "O estudo prova, de forma causal e definitiva, que toda profilaxia antibiótica deve ser universal para qualquer valvopatia, independentemente do grau de risco",
+      "O estudo não encontrou nenhuma associação estatisticamente significativa entre a queda nas prescrições de profilaxia e a incidência de endocardite"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Dayer MJ, Jones S, Prendergast B, Baddour LM, Lockhart PB, Thornhill MH. Incidence of infective endocarditis in England, 2000-13: a secular trend, interrupted time-series analysis. Lancet. 2015;385(9974):1219-1228, PMID 25467569. Estudo retrospectivo de tendência secular, analisado como série temporal interrompida, avaliando prescrições de profilaxia antibiótica (jan/2004 a mar/2013) e altas hospitalares por endocardite infecciosa (jan/2000 a mar/2013) na Inglaterra, antes e depois da diretriz do NICE de março de 2008 que recomendou a suspensão completa da profilaxia antibiótica para prevenção de endocardite. As prescrições caíram substancialmente após a diretriz: média de 10.900 prescrições/mês (jan/2004-mar/2008) contra 2.236/mês (abr/2008-mar/2013), p<0,0001. A partir de março de 2008, o número de casos de endocardite infecciosa aumentou significativamente acima da tendência histórica projetada, em 0,11 casos por 10 milhões de pessoas por mês (IC95% 0,05-0,16; p<0,0001); até março de 2013, foram relatados 35 casos a mais por mês do que o esperado caso a tendência anterior tivesse continuado. Esse aumento foi significativo tanto para indivíduos de alto risco quanto de baixo risco de endocardite. Os próprios autores são explícitos: \"our data do not establish a causal association\" — os dados não estabelecem associação causal, apenas temporal. Esse estudo foi um dos gatilhos para sociedades reconsiderarem, anos depois, a ampliação da profilaxia para populações de risco muito alto — mas não alterou a recomendação vigente de que a profilaxia de rotina não é indicada para pacientes de risco moderado, categoria em que se enquadra a valva aórtica bicúspide com refluxo leve sem prótese e sem endocardite prévia.",
+    "source_refs": [
+      "Dayer MJ, Jones S, Prendergast B, Baddour LM, Lockhart PB, Thornhill MH. Incidence of infective endocarditis in England, 2000-13: a secular trend, interrupted time-series analysis. Lancet. 2015;385(9974):1219-1228. DOI: 10.1016/S0140-6736(14)62007-9. PMID: 25467569"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "ieca-no-primeiro-trimestre-da-gestacao-e-malformacoes-congenitas-cooper-2006",
+    "titulo": "IECA usado só no primeiro trimestre da gestação: é seguro suspender ao saber da gravidez e não fazer mais nada?",
+    "tema": "Gravidez",
+    "nivel": "intermediário",
+    "enunciado": "Mulher de 31 anos com hipertensão arterial crônica engravida em uso de enalapril. Descobre a gestação com 7 semanas, quando já havia completado cerca de 6 semanas de exposição embrionária ao IECA, e suspende o fármaco imediatamente. Ela pergunta se essa exposição, restrita ao primeiro trimestre, trouxe algum risco real ao feto — sempre ouviu dizer que a teratogenicidade dos IECA depende da redução da perfusão renal fetal, mecanismo que só se manifestaria com uso no segundo e terceiro trimestres.",
+    "pergunta": "Com base no maior estudo de coorte já publicado sobre exposição a IECA restrita ao primeiro trimestre (29.507 lactentes do Medicaid do Tennessee, 1985-2000), qual é a orientação correta para essa gestante?",
+    "opcoes": [
+      "A exposição a IECA restrita ao primeiro trimestre é segura, porque a teratogenicidade por redução da perfusão renal fetal exige exposição continuada no 2º/3º trimestre — não há necessidade de rastreio adicional",
+      "A exposição isolada ao primeiro trimestre já se associou a risco aumentado de malformações maiores (RR 2,71; IC95% 1,72-4,27) em comparação a gestações sem exposição a anti-hipertensivo, com risco particularmente elevado de malformações cardiovasculares (RR 3,72; IC95% 1,89-7,30) e do sistema nervoso central (RR 4,39; IC95% 1,37-14,02) — a exposição não pode ser considerada segura e deve ser evitada",
+      "O risco aumentado só existe se a gestante também tiver diabetes mellitus não controlado, condição que confunde totalmente o efeito do IECA",
+      "O estudo mostrou que qualquer anti-hipertensivo usado no primeiro trimestre, não só o IECA, eleva igualmente o risco de malformações maiores"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A coorte de Cooper et al. (Tennessee Medicaid) identificou 209 lactentes com exposição a IECA restrita ao primeiro trimestre, 202 com exposição a outros anti-hipertensivos só no primeiro trimestre e 29.096 sem exposição a anti-hipertensivo em nenhum momento da gestação (gestantes com diabetes foram excluídas da coorte, o que já afasta a alternativa que atribui o achado à diabetes). Os lactentes expostos a IECA tiveram risco aumentado de malformações congênitas maiores (RR 2,71; IC95% 1,72-4,27), com risco elevado especificamente para malformações cardiovasculares (RR 3,72; IC95% 1,89-7,30) e do sistema nervoso central (RR 4,39; IC95% 1,37-14,02). Em contraste, a exposição a OUTROS anti-hipertensivos só no primeiro trimestre não conferiu risco aumentado (RR 0,66; IC95% 0,25-1,75) — o achado é específico da classe dos IECA, não um efeito geral de anti-hipertensivo em gestante hipertensa, o que descarta a alternativa que generaliza o risco a qualquer anti-hipertensivo. Os autores concluem literalmente que a exposição a IECA no primeiro trimestre 'não pode ser considerada segura e deve ser evitada' — contrariando a crença, ainda comum, de que só a exposição no 2º/3º trimestre importa clinicamente.",
+    "source_refs": [
+      "Cooper WO, Hernandez-Diaz S, Arbogast PG, Dudley JA, Dyer S, Gideon PS, Hall K, Ray WA. Major congenital malformations after first-trimester exposure to ACE inhibitors. N Engl J Med. 2006;354(23):2443-2451. DOI: 10.1056/NEJMoa055202. PMID: 16760444"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "levosimendana-profilatica-em-cirurgia-cardiaca-com-disfuncao-de-ve-o-ensaio-levo-cts",
+    "titulo": "Levosimendana profilática antes de cirurgia cardíaca com disfunção de VE previne baixo débito? O ensaio LEVO-CTS",
+    "tema": "Terapia intensiva",
+    "nivel": "avançado",
+    "enunciado": "Paciente com fração de ejeção de VE de 30% será submetido a revascularização miocárdica cirúrgica com circulação extracorpórea. A equipe de terapia intensiva discute iniciar levosimendana intravenosa profilática antes da cirurgia, citando estudos pequenos anteriores favoráveis à prevenção da síndrome de baixo débito cardíaco pós-operatório.",
+    "pergunta": "No ensaio LEVO-CTS (multicêntrico, randomizado, controlado por placebo, fase 3, 882 pacientes com FEVE ≤35% submetidos a cirurgia cardíaca com CEC), qual foi o efeito da levosimendana profilática sobre os desfechos primários compostos?",
+    "opcoes": [
+      "Reduziu significativamente o desfecho composto de 4 componentes (morte, terapia renal substitutiva, IAM perioperatório ou uso de dispositivo de assistência mecânica até o dia 30), justificando seu uso rotineiro em pacientes com FEVE reduzida",
+      "A levosimendana NÃO reduziu o desfecho composto de 4 componentes (24,5% vs 24,5%; OR ajustada 1,00; IC99% 0,66-1,54; p=0,98) nem o desfecho composto de 2 componentes (13,1% vs 11,4%; OR ajustada 1,18; IC96% 0,76-1,82; p=0,45), sem diferença significativa na taxa de eventos adversos entre os grupos",
+      "Aumentou significativamente a mortalidade em 30 dias, o que motivou a interrupção precoce do estudo por excesso de eventos no grupo levosimendana",
+      "Só demonstrou benefício quando iniciada no pós-operatório imediato, e não antes da cirurgia como no desenho do LEVO-CTS"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "No LEVO-CTS, 882 pacientes foram randomizados (849 na população de intenção de tratar modificada) para levosimendana intravenosa (0,2 mcg/kg/min por 1h, depois 0,1 mcg/kg/min por 23h, iniciada antes da cirurgia) ou placebo. O desfecho composto de 4 componentes ocorreu em 105/428 (24,5%) com levosimendana e 103/421 (24,5%) com placebo (OR ajustada 1,00; IC99% 0,66-1,54; p=0,98). O desfecho composto de 2 componentes (morte até o dia 30 ou uso de dispositivo de assistência mecânica até o dia 5) ocorreu em 56 (13,1%) vs 48 (11,4%) (OR ajustada 1,18; IC96% 0,76-1,82; p=0,45). A taxa de eventos adversos não diferiu significativamente entre os grupos — não houve excesso de mortalidade que justificasse interrupção precoce, e o estudo completou o recrutamento planejado. Os autores concluem que a levosimendana profilática NÃO resultou em taxa mais baixa do desfecho composto de curto prazo do que o placebo em pacientes com FEVE reduzida submetidos a cirurgia cardíaca com CEC — um resultado negativo que contraria a expectativa criada por estudos pequenos anteriores.",
+    "source_refs": [
+      "Mehta RH, Leimberger JD, van Diepen S, Meza J, Wang A, Jankowich R, Harrison RW, Hay D, Fremes S, Duncan A, Soltesz EG, Luber J, Park S, Argenziano M, Murphy E, Marcel R, Kalavrouziotis D, Nagpal D, Bozinovski J, Toller W, Heringlake M, Goodman SG, Levy JH, Harrington RA, Anstrom KJ, Alexander JH; LEVO-CTS Investigators. Levosimendan in Patients with Left Ventricular Dysfunction Undergoing Cardiac Surgery. N Engl J Med. 2017;376(21):2032-2042. DOI: 10.1056/NEJMoa1616218. PMID: 28316276"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sindrome-antifosfolipide-triplo-positiva-rivaroxabana-ou-varfarina-o-ensaio-traps",
+    "titulo": "Síndrome antifosfolípide triplo positiva com trombose prévia: rivaroxabana pode substituir a varfarina? O ensaio TRAPS",
+    "tema": "Tromboembolismo",
+    "nivel": "avançado",
+    "enunciado": "Mulher de 35 anos com síndrome antifosfolípide triplo positiva (anticoagulante lúpico, anticorpo anticardiolipina e anti-β2-glicoproteína I, mesmo isótipo) e AVC isquêmico prévio está em uso de varfarina com alvo de INR 2,5. Relata dificuldade em manter o INR estável, com idas frequentes ao laboratório, e pergunta se pode trocar por rivaroxabana, já que o fármaco é usado com segurança em fibrilação atrial e tromboembolismo venoso.",
+    "pergunta": "O que o ensaio TRAPS (multicêntrico, randomizado, aberto, de não inferioridade, com julgamento cego de desfechos) mostrou ao comparar rivaroxabana com varfarina especificamente em pacientes de alto risco com SAF triplo positiva?",
+    "opcoes": [
+      "Rivaroxabana foi não inferior à varfarina e completou o recrutamento planejado sem sinal de segurança, podendo substituir o antagonista da vitamina K nesse cenário",
+      "O estudo foi interrompido precocemente, após a inclusão de apenas 120 pacientes (59 rivaroxabana, 61 varfarina), por excesso de eventos no grupo rivaroxabana: eventos do desfecho primário em 11 (19%) vs 2 (3%), e eventos tromboembólicos em 7 (12%) — 4 AVC isquêmico e 3 IAM — só no grupo rivaroxabana, nenhum no grupo varfarina",
+      "Só o risco de sangramento maior aumentou com rivaroxabana; o risco de trombose recorrente foi igual entre os grupos",
+      "Não houve diferença entre os grupos em nenhum desfecho, e o estudo confirmou que rivaroxabana é alternativa aceitável em SAF de qualquer perfil de anticorpos"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O TRAPS incluiu apenas pacientes de alto risco, triplo positivos (anticoagulante lúpico + anticardiolipina + anti-β2-glicoproteína I do mesmo isótipo), com rivaroxabana 20 mg/dia (15 mg se disfunção renal) comparada a varfarina (INR alvo 2,5). O estudo foi interrompido prematuramente após a randomização de apenas 120 pacientes (59 para rivaroxabana, 61 para varfarina) por excesso de eventos no braço rivaroxabana — seguimento médio de 569 dias. Houve 11 eventos do desfecho primário (19%) no grupo rivaroxabana contra 2 (3%) no grupo varfarina. Eventos tromboembólicos ocorreram em 7 pacientes (12%) randomizados para rivaroxabana (4 AVC isquêmico e 3 infarto do miocárdio), e NENHUM evento tromboembólico foi registrado no grupo varfarina. Sangramento maior ocorreu em 6 pacientes: 4 (7%) com rivaroxabana e 2 (3%) com varfarina — ou seja, o excesso de risco com rivaroxabana não se limitou ao sangramento, também incluiu trombose, o que afasta a alternativa que isola o problema só no sangramento. Não houve óbitos. Os autores concluem que rivaroxabana em pacientes de alto risco com SAF associou-se a maior taxa de eventos que varfarina, sem benefício e com excesso de risco — a varfarina permanece o anticoagulante de escolha nesse subgrupo específico, apesar do sucesso dos DOAC em FA e TEV em geral.",
+    "source_refs": [
+      "Pengo V, Denas G, Zoppellaro G, Jose SP, Hoxha A, Ruffatti A, Andreoli L, Tincani A, Cenci C, Prisco D, Fierro T, Gresele P, Cafolla A, De Micheli V, Ghirarduzzi A, Tosetto A, Falanga A, Martinelli I, Testa S, Barcellona D, Gerosa M, Banzato A. Rivaroxaban vs warfarin in high-risk patients with antiphospholipid syndrome. Blood. 2018;132(13):1365-1371. DOI: 10.1182/blood-2018-04-848333. PMID: 30002145"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "fa-nao-valvar-com-contraindicacao-a-anticoagulacao-oclusao-do-apendice-atrial-esquerdo-protect-af-prevail-5-anos",
+    "titulo": "FA não valvar com sangramento gastrointestinal recorrente sob anticoagulação: oclusão do apêndice atrial esquerdo é alternativa sustentada em 5 anos?",
+    "tema": "Fibrilação atrial",
+    "nivel": "avançado",
+    "enunciado": "Homem de 74 anos com fibrilação atrial não valvar, CHA₂DS₂-VASc 4, apresentou dois episódios de sangramento gastrointestinal grave sob anticoagulação oral, sem causa reversível identificada na investigação endoscópica. A equipe considera a oclusão percutânea do apêndice atrial esquerdo com dispositivo Watchman como alternativa à anticoagulação prolongada.",
+    "pergunta": "Na metanálise combinada, por paciente individual, dos ensaios PROTECT AF e PREVAIL, com seguimento de 5 anos (1.114 pacientes, 4.343 pacientes-ano), o que se observou ao comparar a oclusão do apêndice atrial esquerdo (Watchman) com varfarina?",
+    "opcoes": [
+      "A oclusão aumentou significativamente o risco combinado de AVC isquêmico e embolia sistêmica em relação à varfarina, o que contraindica o procedimento nesse tipo de paciente",
+      "O desfecho composto de AVC, embolia sistêmica ou morte cardiovascular/inexplicada foi semelhante entre os grupos (HR 0,820; p=0,27); AVC hemorrágico (HR 0,20; p=0,0022), morte cardiovascular/inexplicada (HR 0,59; p=0,027), morte por qualquer causa (HR 0,73; p=0,035) e sangramento pós-procedimento (HR 0,48; p=0,0003) favoreceram a oclusão do apêndice",
+      "O único benefício demonstrado foi a redução de sangramento; não houve qualquer diferença em mortalidade entre os grupos",
+      "Os dois ensaios, isoladamente, atingiram não inferioridade em todos os desfechos coprimários pré-especificados, sem nenhuma ressalva metodológica"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A análise combinada de PROTECT AF e PREVAIL (1.114 pacientes, 4.343 pacientes-ano, randomização 2:1 para oclusão ou varfarina) mostrou desfecho composto (AVC, embolia sistêmica ou morte cardiovascular/inexplicada) semelhante entre os grupos (HR 0,820; p=0,27) e taxa de todo AVC/embolia sistêmica também semelhante (HR 0,961; p=0,87). A taxa de AVC isquêmico/embolia sistêmica foi numericamente maior com a oclusão, mas sem significância estatística (HR 1,71; p=0,080) — portanto não se pode afirmar aumento significativo desse desfecho, o que afasta a alternativa que contraindica o procedimento com base nesse dado. Em contrapartida, diferenças favoreceram a oclusão em AVC hemorrágico (HR 0,20; p=0,0022), AVC incapacitante/fatal (HR 0,45; p=0,03), morte cardiovascular/inexplicada (HR 0,59; p=0,027), morte por qualquer causa (HR 0,73; p=0,035) e sangramento pós-procedimento (HR 0,48; p=0,0003) — ou seja, o benefício não se limitou a sangramento, também incluiu mortalidade, o que afasta a alternativa que isola o achado só em sangramento. Ressalva importante que o próprio estudo declara: isoladamente, o PREVAIL NÃO atingiu não inferioridade no primeiro desfecho coprimário (probabilidade posterior de não inferioridade de 88,4%), embora o segundo desfecho coprimário (AVC isquêmico/embolia sistêmica pós-procedimento) tenha atingido não inferioridade (97,5%) — o braço varfarina do PREVAIL teve taxa de AVC isquêmico incomumente baixa (0,73%), o que torna a conclusão isolada do PREVAIL inconclusiva e reforça a necessidade da análise combinada de 5 anos para sustentar a decisão clínica.",
+    "source_refs": [
+      "Reddy VY, Doshi SK, Kar S, Gibson DN, Price MJ, Huber K, Horton RP, Buchbinder M, Neuzil P, Gordon NT, Holmes DR Jr; PREVAIL and PROTECT AF Investigators. 5-Year Outcomes After Left Atrial Appendage Closure: From the PREVAIL and PROTECT AF Trials. J Am Coll Cardiol. 2017;70(24):2964-2975. DOI: 10.1016/j.jacc.2017.10.021. PMID: 29103847"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "marca-passo-sem-eletrodo-micra-seguranca-frente-ao-sistema-transvenoso",
+    "titulo": "Marca-passo sem eletrodo (Micra): a segurança frente ao sistema transvenoso convencional",
+    "tema": "Dispositivos",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 78 anos, com bloqueio atrioventricular de segundo grau Mobitz II sintomático e indicação de estimulação ventricular isolada. Tem múltiplas comorbidades e histórico de infecção de bolsa de gerador em cirurgia prévia de outra especialidade, o que aumenta a preocupação com risco infeccioso de um novo sistema com bolsa e eletrodo transvenoso. A equipe discute o implante de um marca-passo sem eletrodo (leadless), transcateter, como alternativa ao sistema convencional.",
+    "pergunta": "De acordo com o estudo pivotal do Micra Transcatheter Pacing System (Reynolds D et al., NEJM 2016), que comparou o desfecho de segurança do dispositivo sem eletrodo com uma coorte histórica de sistemas transvenosos, qual foi o principal achado?",
+    "opcoes": [
+      "O sistema sem eletrodo teve taxa de complicações maiores significativamente MENOR que a coorte histórica de sistemas transvenosos (razão de risco 0,49; IC95% 0,33-0,75; p=0,001), apesar de 28 complicações maiores terem ocorrido em 25 dos 725 pacientes",
+      "O sistema sem eletrodo teve taxa de complicações maiores significativamente MAIOR que a coorte histórica, principalmente por perfuração cardíaca",
+      "Não houve diferença estatística entre os dois sistemas em nenhum desfecho de segurança avaliado",
+      "O estudo não permitiu qualquer comparação de segurança, pois foi desenhado apenas para avaliar o limiar de captura do eletrodo"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O estudo foi prospectivo, multicêntrico, sem grupo controle randomizado concomitante, com implante bem-sucedido em 719 de 725 pacientes (99,2%). O desfecho primário de segurança (liberdade de complicações maiores relacionadas ao sistema ou ao procedimento) teve estimativa de Kaplan-Meier de 96,0% (IC95% 93,9-97,3; p<0,001 frente à meta de desempenho de 83%), com 28 complicações maiores em 25 dos 725 pacientes e nenhum deslocamento do dispositivo. O desfecho primário de eficácia (limiar de captura baixo e estável em 6 meses) foi de 98,3% (IC95% 96,1-99,5; p<0,001 frente à meta de 80%) em 292 de 297 pacientes com dados pareados. Na análise post hoc comparando com uma coorte histórica de 2.667 pacientes com marca-passo transvenoso de seis estudos previamente publicados, os pacientes com o sistema transcateter tiveram significativamente menos complicações maiores (razão de risco 0,49; IC95% 0,33-0,75; p=0,001). A conclusão do próprio estudo é que o dispositivo atingiu as metas pré-especificadas de segurança e eficácia, com perfil de segurança semelhante ao do sistema transvenoso e limiares de estimulação baixos e estáveis — não uma comparação randomizada direta, mas uma comparação histórica que favoreceu o sistema sem eletrodo.",
+    "source_refs": [
+      "Reynolds D, Duray GZ, Omar R, Soejima K, Neuzil P, Zhang S, Narasimhan C, et al.; Micra Transcatheter Pacing Study Group. A Leadless Intracardiac Transcatheter Pacing System. N Engl J Med. 2016;374(6):533-541. DOI: 10.1056/NEJMoa1511643. PMID: 26551877"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "epa-em-alta-dose-associado-a-estatina-reducao-de-eventos-coronarianos-jelis",
+    "titulo": "Ácido eicosapentaenoico (EPA) associado à estatina na hipercolesterolemia: o que o JELIS mostrou, antes do REDUCE-IT",
+    "tema": "Prevenção e lipídios",
+    "nivel": "intermediário",
+    "enunciado": "Mulher japonesa, 58 anos, com colesterol total de 265 mg/dL, já em uso de estatina, sem uso prévio de ômega-3. O cardiologista avalia se o acréscimo de ácido eicosapentaenoico (EPA) em dose de 1.800 mg/dia à estatina reduz eventos coronarianos maiores, com base no desenho aberto (não duplo-cego) do estudo japonês JELIS — anterior e distinto do REDUCE-IT, que testou o icosapente etílico purificado em outra dose e com desenho duplo-cego controlado por placebo mineral.",
+    "pergunta": "No estudo JELIS (Yokoyama M et al., Lancet 2007), em 18.645 pacientes hipercolesterolêmicos japoneses acompanhados por média de 4,6 anos, qual foi o efeito de acrescentar 1.800 mg/dia de EPA à estatina sobre eventos coronarianos maiores, comparado à estatina isolada?",
+    "opcoes": [
+      "Redução relativa de 19% nos eventos coronarianos maiores (2,8% no grupo EPA vs. 3,5% no grupo controle; p=0,011), sem diferença significativa em morte súbita cardíaca ou morte coronariana entre os grupos",
+      "Redução relativa de 44% nos eventos coronarianos maiores, com redução também estatisticamente significativa de morte súbita cardíaca",
+      "Nenhuma redução significativa de eventos coronarianos maiores; o EPA reduziu apenas o LDL, sem repercussão clínica",
+      "Aumento significativo de eventos hemorrágicos, que motivou a suspensão precoce do estudo antes do seguimento planejado de 5 anos"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "18.645 pacientes com colesterol total ≥6,5 mmol/L foram randomizados para EPA 1.800 mg/dia associado à estatina (n=9.326) ou estatina isolada (n=9.319), com seguimento planejado de 5 anos (média real de 4,6 anos). O desfecho primário (qualquer evento coronariano maior, incluindo morte súbita cardíaca, IAM fatal e não fatal, angina instável, angioplastia, stent ou revascularização cirúrgica) ocorreu em 262 pacientes (2,8%) do grupo EPA e 324 (3,5%) do grupo controle — redução relativa de 19% (p=0,011). O LDL caiu 25% em ambos os grupos igualmente (de 4,7 mmol/L), e essa queda de LDL NÃO foi fator significativo na redução de risco — ou seja, o benefício não se explica só pela queda lipídica. Angina instável e eventos coronarianos não fatais foram significativamente reduzidos no grupo EPA; morte súbita cardíaca e morte coronariana NÃO diferiram entre os grupos. No subgrupo de prevenção secundária (história prévia de doença coronariana), a redução foi de 19% (158/9,326=8,7% EPA vs. 197=10,7% controle; p=0,048); no subgrupo de prevenção primária, a redução numérica de 18% não atingiu significância (104=1,4% vs. 127=1,7%; p=0,132). O próprio registro da fonte traz uma errata publicada (Lancet 2007;370(9583):220), não lida nesta redação — declarada aqui em vez de omitida.",
+    "source_refs": [
+      "Yokoyama M, Origasa H, Matsuzaki M, Matsuzawa Y, Saito Y, Ishikawa Y, Oikawa S, et al.; Japan EPA Lipid Intervention Study (JELIS) Investigators. Effects of eicosapentaenoic acid on major coronary events in hypercholesterolaemic patients (JELIS): a randomised open-label, blinded endpoint analysis. Lancet. 2007;369(9567):1090-1098. DOI: 10.1016/S0140-6736(07)60527-3. PMID: 17398308. Errata em Lancet. 2007;370(9583):220 (não lida nesta redação)."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "ertugliflozina-nao-inferioridade-cardiovascular-sem-superioridade-vertis-cv",
+    "titulo": "Ertugliflozina em diabetes tipo 2 com doença aterosclerótica estabelecida: não inferioridade, sem superioridade (VERTIS CV)",
+    "tema": "Diabetes e cardiologia",
+    "nivel": "avançado",
+    "enunciado": "Homem, 64 anos, diabetes tipo 2 há 12 anos, com doença arterial coronariana estabelecida (angioplastia prévia), já em metformina e estatina de alta intensidade com LDL na meta. O endocrinologista pergunta se pode iniciar ertugliflozina (inibidor de SGLT2) esperando o mesmo benefício cardiovascular robusto já demonstrado por empagliflozina (EMPA-REG OUTCOME) ou canagliflozina (CANVAS), assumindo efeito de classe uniforme entre os inibidores de SGLT2.",
+    "pergunta": "No estudo VERTIS CV (Cannon CP et al., NEJM 2020), em 8.246 pacientes com diabetes tipo 2 e doença cardiovascular aterosclerótica estabelecida, acompanhados por média de 3,5 anos, qual foi o resultado da ertugliflozina em relação ao desfecho primário de eventos cardiovasculares adversos maiores (MACE) e ao desfecho secundário-chave de morte cardiovascular ou hospitalização por insuficiência cardíaca?",
+    "opcoes": [
+      "Ertugliflozina foi não inferior ao placebo para MACE (razão de risco 0,97; IC95,6% 0,85-1,11; p<0,001 para não inferioridade), mas NÃO atingiu superioridade estatística para morte cardiovascular ou hospitalização por IC (razão de risco 0,88; IC95,8% 0,75-1,03; p=0,11)",
+      "Ertugliflozina reduziu MACE de forma superior ao placebo, replicando integralmente o benefício de magnitude observado no EMPA-REG OUTCOME (razão de risco 0,86; p<0,001 para superioridade)",
+      "Ertugliflozina foi inferior ao placebo, com aumento estatisticamente significativo de MACE que motivou alerta regulatório",
+      "O estudo foi interrompido precocemente por excesso de amputações no grupo ertugliflozina em relação ao placebo"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "Dos 8.246 pacientes randomizados (5 mg ou 15 mg de ertugliflozina, agrupados para análise, vs. placebo), 8.238 receberam pelo menos uma dose e foram seguidos por média de 3,5 anos. MACE ocorreu em 653 de 5.493 pacientes (11,9%) no grupo ertugliflozina e em 327 de 2.745 (11,9%) no grupo placebo — razão de risco 0,97 (IC95,6% 0,85-1,11), p<0,001 para não inferioridade (margem pré-especificada de 1,3), SEM teste formal de superioridade para esse desfecho. O desfecho secundário-chave (morte cardiovascular ou hospitalização por IC) ocorreu em 444 de 5.499 (8,1%) vs. 250 de 2.747 (9,1%); razão de risco 0,88 (IC95,8% 0,75-1,03), p=0,11 para superioridade — não significativo. A razão de risco para morte cardiovascular isolada foi 0,92 (IC95,8% 0,77-1,11), e para o composto renal (morte renal, terapia renal substitutiva ou duplicação da creatinina) foi 0,81 (IC95,8% 0,63-1,04) — nenhum desses atingiu significância. Amputações ocorreram em 54 (2,0%) pacientes com 5 mg e 57 (2,1%) com 15 mg, versus 45 (1,6%) com placebo — numericamente mais frequentes, mas o estudo não foi interrompido por isso. A lição clínica central: ao contrário do EMPA-REG OUTCOME e do CANVAS/DECLARE-TIMI 58, o VERTIS CV NÃO demonstrou superioridade cardiovascular ou de insuficiência cardíaca — o benefício de classe dos inibidores de SGLT2 não deve ser presumido como uniforme entre as moléculas sem olhar o estudo específico.",
+    "source_refs": [
+      "Cannon CP, Pratley R, Dagogo-Jack S, Mancuso J, Huyck S, Masiukiewicz U, Charbonnel B, et al.; VERTIS CV Investigators. Cardiovascular Outcomes with Ertugliflozin in Type 2 Diabetes. N Engl J Med. 2020;383(15):1425-1435. DOI: 10.1056/NEJMoa2004967. PMID: 32966714"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "ferro-carboximaltose-apos-alta-por-ic-aguda-descompensada-affirm-ahf",
+    "titulo": "Deficiência de ferro na alta por IC aguda: a ferro carboximaltose reduz hospitalização por IC (AFFIRM-AHF)",
+    "tema": "Insuficiência cardíaca",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 70 anos, internado por insuficiência cardíaca aguda descompensada, FEVE 35%, com deficiência de ferro confirmada (ferritina 80 μg/L, sem necessidade de saturação de transferrina adicional pelo critério do próprio ponto de corte). Antes da alta hospitalar, a equipe discute se a reposição intravenosa de ferro (ferro carboximaltose) reduz o risco combinado de nova hospitalização por IC e morte cardiovascular nas 52 semanas seguintes, em comparação a placebo.",
+    "pergunta": "No estudo AFFIRM-AHF (Ponikowski P et al., Lancet 2020), em 1.132 pacientes estabilizados após IC aguda, com FEVE <50% e deficiência de ferro, randomizados para ferro carboximaltose intravenoso ou placebo antes da alta, qual foi o resultado sobre o desfecho primário (hospitalizações totais por IC somadas à morte cardiovascular, em 52 semanas)?",
+    "opcoes": [
+      "Houve redução numérica do desfecho primário composto (razão de taxas 0,79; IC95% 0,62-1,01; p=0,059) que NÃO atingiu significância estatística formal, mas com redução estatisticamente significativa das hospitalizações totais por IC isoladamente (razão de taxas 0,74; IC95% 0,58-0,94; p=0,013), sem diferença de morte cardiovascular entre os grupos (p=0,81)",
+      "Houve redução estatisticamente significativa do desfecho primário composto e também redução significativa da mortalidade cardiovascular isolada",
+      "Não houve nenhuma diferença entre os grupos em qualquer desfecho avaliado, incluindo hospitalizações totais por IC",
+      "O ferro carboximaltose aumentou significativamente as hospitalizações por IC em relação ao placebo, levando à interrupção precoce do estudo"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "De 1.132 pacientes randomizados 1:1, 1.108 (558 no grupo carboximaltose, 550 no placebo) tiveram pelo menos um dado pós-randomização e entraram na análise. O desfecho primário (hospitalizações totais por IC + morte cardiovascular até 52 semanas) ocorreu em 293 eventos (57,2 por 100 pacientes-ano) no grupo ferro carboximaltose e 372 (72,5 por 100 pacientes-ano) no placebo — razão de taxas 0,79 (IC95% 0,62-1,01), p=0,059, NÃO significativo pelo corte convencional de 0,05. O composto de hospitalizações cardiovasculares totais + morte cardiovascular teve razão de taxas 0,80 (IC95% 0,64-1,00), p=0,050 — no limite. Morte cardiovascular isolada NÃO diferiu (77 de 558, 14%, vs. 78 de 550, 14%; razão de risco 0,96; IC95% 0,70-1,32; p=0,81). As hospitalizações totais por IC, isoladamente, foram significativamente menores com ferro carboximaltose: 217 vs. 294 eventos, razão de taxas 0,74 (IC95% 0,58-0,94), p=0,013. O composto de primeira hospitalização por IC ou morte cardiovascular ocorreu em 181 (32%) vs. 209 (38%), razão de risco 0,80 (IC95% 0,66-0,98), p=0,030. Dias perdidos por hospitalização/morte por IC também foram menores (369 vs. 548 dias por 100 pacientes-ano; razão de taxas 0,67; IC95% 0,47-0,97; p=0,035). A própria interpretação do estudo resume bem o padrão: tratamento seguro, que reduziu hospitalizações por IC, sem efeito aparente sobre mortalidade cardiovascular. Este registro tem errata publicada (Lancet 2021;398(10315):1964), não lida nesta redação — declarada em vez de omitida.",
+    "source_refs": [
+      "Ponikowski P, Kirwan BA, Anker SD, McDonagh T, Dorobantu M, Drozdz J, Fabien V, et al.; AFFIRM-AHF investigators. Ferric carboxymaltose for iron deficiency at discharge after acute heart failure: a multicentre, double-blind, randomised, controlled trial. Lancet. 2020;396(10266):1895-1904. DOI: 10.1016/S0140-6736(20)32339-4. PMID: 33197395. Errata em Lancet. 2021;398(10315):1964 (não lida nesta redação)."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "denervacao-renal-por-radiofrequencia-sem-medicacao-spyral-htn-off-med",
+    "titulo": "Denervação renal por radiofrequência sem uso de anti-hipertensivos: o SPYRAL HTN-OFF MED Pivotal",
+    "tema": "Hipertensão",
+    "nivel": "avançado",
+    "enunciado": "Homem, 55 anos, hipertensão não controlada com PA sistólica de consultório de 162 mmHg, que recusa iniciar terapia farmacológica anti-hipertensiva e é encaminhado para avaliação de denervação renal por cateter de radiofrequência como alternativa, dentro de um protocolo de pesquisa com procedimento simulado (sham) como controle e cegamento do paciente.",
+    "pergunta": "No estudo SPYRAL HTN-OFF MED Pivotal (Böhm M et al., Lancet 2020), em 331 pacientes hipertensos SEM uso de medicação anti-hipertensiva, randomizados 1:1 para denervação renal por radiofrequência ou procedimento sham, qual foi o efeito sobre a pressão arterial sistólica ambulatorial de 24 horas em 3 meses?",
+    "opcoes": [
+      "A denervação renal reduziu a PAS ambulatorial de 24h em 3,9 mmHg a mais que o sham (intervalo de credibilidade bayesiano de 95%: -6,2 a -1,6 mmHg), com probabilidade posterior de superioridade acima de 0,999 tanto para o desfecho ambulatorial quanto para o de consultório",
+      "Não houve diferença entre denervação renal e sham em nenhum dos desfechos pressóricos avaliados",
+      "A denervação renal reduziu a PAS ambulatorial de 24h em mais de 15 mmHg em relação ao sham, superando em muito o efeito de qualquer classe farmacológica isolada",
+      "O procedimento de denervação renal foi interrompido precocemente por excesso de eventos adversos maiores relacionados ao dispositivo"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "Entre junho de 2015 e outubro de 2019, 331 pacientes com PA sistólica de consultório entre 150 e <180 mmHg foram randomizados 1:1 para denervação renal (n=166) ou procedimento sham (n=165), em 44 centros de 9 países, com desenho bayesiano que combinou a evidência do estudo piloto com a do Pivotal por meio de um prior informativo. Tanto o desfecho primário de eficácia (variação ajustada pelo basal da PAS ambulatorial de 24h) quanto o secundário (variação ajustada da PAS de consultório) foram atingidos, com probabilidade posterior de superioridade acima de 0,999 para os dois. A diferença de tratamento na PAS ambulatorial de 24h foi de -3,9 mmHg (intervalo de credibilidade bayesiano de 95%: -6,2 a -1,6), e na PAS de consultório foi de -6,5 mmHg (-9,6 a -3,5). Não houve eventos maiores de segurança relacionados ao dispositivo ou ao procedimento até 3 meses. É importante distinguir este estudo do RADIANCE-HTN TRIO, que usa denervação renal por ultrassom — o SPYRAL HTN-OFF MED Pivotal usa o cateter de radiofrequência Symplicity Spyral, tecnologia diferente, e a magnitude de redução pressórica (poucos mmHg) é bem menor que a de uma classe farmacológica isolada, o que situa a denervação renal como terapia adjuvante, não substituta da farmacoterapia.",
+    "source_refs": [
+      "Böhm M, Kario K, Kandzari DE, Mahfoud F, Weber MA, Schmieder RE, Tsioufis K, et al.; SPYRAL HTN-OFF MED Pivotal Investigators. Efficacy of catheter-based renal denervation in the absence of antihypertensive medications (SPYRAL HTN-OFF MED Pivotal): a multicentre, randomised, sham-controlled trial. Lancet. 2020;395(10234):1444-1451. DOI: 10.1016/S0140-6736(20)30554-7. PMID: 32234534"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hipertensao-pulmonar-tromboembolica-cronica-inoperavel-riociguat-ensaio-chest-1",
+    "titulo": "HP tromboembólica crônica inoperável: riociguat muda a capacidade de exercício? O ensaio CHEST-1",
+    "tema": "Hipertensão pulmonar",
+    "nivel": "avançado",
+    "enunciado": "Paciente com hipertensão pulmonar tromboembólica crônica (HPTEC) avaliada pela equipe cirúrgica como inoperável, em classe funcional OMS III, com distância reduzida no teste de caminhada de 6 minutos e resistência vascular pulmonar elevada ao cateterismo direito. A equipe discute se há alguma terapia farmacológica com benefício demonstrado em ensaio clínico randomizado especificamente para essa população (HPTEC inoperável ou persistente/recorrente após tromboendarterectomia pulmonar).",
+    "pergunta": "De acordo com o ensaio CHEST-1 (fase 3, randomizado, duplo-cego, controlado por placebo, 261 pacientes com HPTEC inoperável ou HP persistente/recorrente após endarterectomia), qual foi o efeito do riociguat sobre a distância percorrida no teste de caminhada de 6 minutos (TC6M) em 16 semanas, em comparação com placebo?",
+    "opcoes": [
+      "Aumento médio de 39 m no grupo riociguat, contra uma queda média de 6 m no grupo placebo (diferença de médias por mínimos quadrados de 46 m; IC95% 25 a 67; p<0,001), acompanhado de queda da resistência vascular pulmonar e melhora do NT-proBNP e da classe funcional OMS",
+      "Nenhuma diferença estatisticamente significativa entre riociguat e placebo em qualquer desfecho do estudo",
+      "O TC6M aumentou igualmente nos dois grupos, sem diferença atribuível ao fármaco",
+      "Riociguat piorou o desempenho no TC6M em relação ao placebo, motivando a suspensão precoce do estudo"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "No CHEST-1, o TC6M aumentou em média 39 m no grupo riociguat e caiu 6 m no grupo placebo, com diferença de médias por mínimos quadrados de 46 m (IC95% 25-67; p<0,001). A resistência vascular pulmonar caiu 226 dyn·s·cm⁻⁵ com riociguat e aumentou 23 dyn·s·cm⁻⁵ com placebo (diferença de -246 dyn·s·cm⁻⁵; IC95% -303 a -190; p<0,001). Houve também melhora significativa do NT-proBNP (p<0,001) e da classe funcional OMS (p=0,003). Os eventos adversos graves mais comuns foram insuficiência ventricular direita (3% em cada grupo) e síncope (2% no grupo riociguat, 3% no grupo placebo). O estudo estabeleceu o riociguat como a primeira terapia farmacológica com benefício demonstrado especificamente na HPTEC inoperável ou persistente/recorrente pós-endarterectomia — população distinta da hipertensão arterial pulmonar do Grupo 1, onde o mesmo fármaco foi testado separadamente no PATENT-1.",
+    "source_refs": [
+      "Ghofrani HA, D'Armini AM, Grimminger F, et al. Riociguat for the treatment of chronic thromboembolic pulmonary hypertension. N Engl J Med. 2013;369(4):319-329. DOI: 10.1056/NEJMoa1209657. PMID: 23883377"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "escore-maggic-predizendo-sobrevida-na-insuficiencia-cardiaca",
+    "titulo": "Escore MAGGIC: qual é o preditor mais forte de mortalidade na insuficiência cardíaca?",
+    "tema": "Calculadoras",
+    "nivel": "intermediário",
+    "enunciado": "Paciente ambulatorial com insuficiência cardíaca é avaliado com o escore MAGGIC (Meta-Analysis Global Group in Chronic Heart Failure), derivado de dados individuais de 39.372 pacientes de 30 estudos de coorte, combinando FE reduzida e preservada. O médico quer entender quais variáveis pesam mais no cálculo, para explicar ao paciente por que o escore não se resume à fração de ejeção.",
+    "pergunta": "No modelo final de 13 preditores independentes de mortalidade do MAGGIC, qual variável teve a maior força preditiva, superando inclusive a fração de ejeção reduzida?",
+    "opcoes": [
+      "Idade",
+      "Fração de ejeção reduzida",
+      "Classe funcional NYHA",
+      "Creatinina sérica"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "No modelo de regressão de Poisson por partes com seleção stepwise, a ordem de força preditiva dos 13 preditores independentes de mortalidade foi: idade, FE mais baixa, classe NYHA, creatinina sérica, diabetes, ausência de prescrição de betabloqueador, PA sistólica mais baixa, menor massa corporal, tempo desde o diagnóstico, tabagismo atual, DPOC, sexo masculino e ausência de prescrição de IECA/BRA — ou seja, a idade superou até a FE reduzida como preditor isolado mais forte. Na FE preservada, a idade foi ainda mais preditiva e a PA sistólica menos preditiva do que na FE reduzida. 40,2% dos pacientes morreram durante o seguimento mediano de 2,5 anos, e a conversão em escore inteiro mostrou gradiente acentuado de risco: mortalidade em 3 anos de 10% no quintil de menor risco contra 70% no decil de maior risco. O escore está disponível em www.heartfailurerisk.org.",
+    "source_refs": [
+      "Pocock SJ, Ariti CA, McMurray JJ, et al. Predicting survival in heart failure: a risk score based on 39 372 patients from 30 studies. Eur Heart J. 2013;34(19):1404-1413. DOI: 10.1093/eurheartj/ehs337. PMID: 23095984"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "radioterapia-de-cancer-de-mama-risco-de-doenca-isquemica-do-coracao-darby",
+    "titulo": "Radioterapia para câncer de mama: como a dose cardíaca média se relaciona ao risco coronariano?",
+    "tema": "Cardio-oncologia",
+    "nivel": "intermediário",
+    "enunciado": "Mulher em planejamento de radioterapia adjuvante para câncer de mama à esquerda. O radio-oncologista estima a dose média de radiação ao coração a partir do planejamento dosimétrico e pergunta ao cardiologista se existe uma relação quantitativa conhecida entre essa dose e o risco cardiovascular de longo prazo, incluindo em mulheres sem fatores de risco cardíaco prévios.",
+    "pergunta": "De acordo com o estudo caso-controle de Darby et al. (2168 mulheres tratadas na Suécia e Dinamarca entre 1958 e 2001, 963 com evento coronariano maior e 1205 controles), como a taxa de eventos coronarianos maiores (infarto, revascularização ou morte por doença isquêmica do coração) se relacionou com a dose média de radiação ao coração?",
+    "opcoes": [
+      "Aumento linear de 7,4% por Gy (IC95% 2,9 a 14,5; p<0,001), sem limiar aparente, com início já nos primeiros 5 anos após a radioterapia e persistindo por pelo menos a terceira década, com incremento absoluto de risco maior nas mulheres que já tinham fatores de risco cardíaco",
+      "Relação em forma de U, com risco elevado apenas em doses muito baixas e muito altas",
+      "Risco aumentado só acima de um limiar identificável de 20 Gy, sem efeito abaixo disso",
+      "Nenhuma associação estatisticamente significativa entre dose cardíaca e eventos coronarianos"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "A dose média ao coração inteiro variou de 0,03 a 27,72 Gy (média geral 4,9 Gy). A taxa de eventos coronarianos maiores aumentou linearmente com a dose média ao coração, em 7,4% por Gy (IC95% 2,9 a 14,5; p<0,001), sem limiar aparente. O aumento começou já nos primeiros 5 anos após a radioterapia e persistiu por pelo menos a terceira década. O incremento PROPORCIONAL por Gy foi semelhante em mulheres com e sem fatores de risco cardíaco prévios — mas como o risco basal é maior nas que já tinham fator de risco, o incremento ABSOLUTO de risco causado pela radioterapia foi maior nesse subgrupo. O estudo sustenta a prática de minimizar a dose cardíaca no planejamento (técnicas de respiração suspensa, posicionamento em decúbito ventral, IMRT) mesmo em pacientes sem cardiopatia prévia.",
+    "source_refs": [
+      "Darby SC, Ewertz M, McGale P, et al. Risk of ischemic heart disease in women after radiotherapy for breast cancer. N Engl J Med. 2013;368(11):987-998. DOI: 10.1056/NEJMoa1209825. PMID: 23484825"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "facilitador-de-comunicacao-na-uti-reduz-sofrimento-familiar-e-intensidade-de-cuidado-curtis-2016",
+    "titulo": "Facilitador de comunicação na UTI: reduz sofrimento familiar e intensidade do cuidado de fim de vida?",
+    "tema": "Comunicação clínica",
+    "nivel": "intermediário",
+    "enunciado": "Paciente internado em UTI cardiológica com mortalidade prevista ≥30%, dependente de um familiar como tomador de decisão substituto. A comunicação entre a equipe assistente e a família está fragmentada, com sinais de sofrimento importante do familiar. A equipe considera acionar um facilitador de comunicação treinado — profissional dedicado a apoiar a comunicação entre clínicos e família, adaptar a linguagem às necessidades de cada família e mediar conflitos — ao lado (não em substituição) da equipe médica.",
+    "pergunta": "No ensaio randomizado de Curtis et al. (dois hospitais, 168 pacientes randomizados de 488 elegíveis, 268 familiares participantes de 352 elegíveis), o uso de um facilitador de comunicação na UTI mostrou qual conjunto de resultados?",
+    "opcoes": [
+      "Reduziu sintomas depressivos da família aos 6 meses (p=0,017) e reduziu o custo de UTI por paciente ($51.060 na intervenção vs. $75.850 no controle; p=0,042) e, entre os pacientes que morreram, reduziu tempo de UTI (7,7 vs. 28,5 dias) e de internação hospitalar (8,0 vs. 31,8 dias; p<0,001), sem aumentar a mortalidade na UTI (21% vs. 25%; p=0,615)",
+      "Aumentou significativamente a mortalidade na UTI no grupo que recebeu o facilitador de comunicação",
+      "Não teve nenhum efeito mensurável em qualquer desfecho psicológico, de custo ou de tempo de internação",
+      "Reduziu ansiedade e TEPT da família aos 3 meses, mas às custas de maior tempo de internação"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O facilitador de comunicação associou-se a redução de sintomas depressivos da família aos 6 meses (p=0,017), mas não houve diferença significativa em sintomas psicológicos aos 3 meses, nem em ansiedade ou TEPT aos 6 meses. Não houve diferença de mortalidade na UTI (25% no controle vs. 21% na intervenção; p=0,615). Os custos de UTI caíram de $75.850 para $51.060 por paciente (p=0,042), com queda ainda maior entre os pacientes que morreram ($98.220 vs. $22.690; p=0,028). Nesse subgrupo, o tempo de UTI caiu de 28,5 para 7,7 dias e o tempo de internação hospitalar de 31,8 para 8,0 dias (p<0,001 para ambos). Os autores destacam que este foi o primeiro estudo a mostrar redução da intensidade do cuidado de fim de vida com sofrimento familiar igual ou menor — ou seja, reduzir intervenção no fim da vida não veio à custa de mais angústia para a família.",
+    "source_refs": [
+      "Curtis JR, Treece PD, Nielsen EL, et al. Randomized Trial of Communication Facilitators to Reduce Family Distress and Intensity of End-of-Life Care. Am J Respir Crit Care Med. 2016;193(2):154-162. DOI: 10.1164/rccm.201505-0900OC. PMID: 26378963"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "lei-antifumo-em-local-publico-reducao-de-internacoes-por-infarto-helena-montana",
+    "titulo": "Lei antifumo em locais públicos: existe efeito mensurável sobre internações por infarto?",
+    "tema": "Geral",
+    "nivel": "básico",
+    "enunciado": "Uma comunidade geograficamente isolada, servida por um único hospital, aprova uma lei proibindo o fumo em locais públicos e locais de trabalho. A lei fica em vigor por 6 meses e depois é suspensa por decisão judicial. Um médico da equipe de qualidade do hospital pergunta se há evidência concreta de que esse tipo de medida populacional, sem qualquer intervenção individual sobre os pacientes, tenha algum efeito mensurável sobre desfechos cardiovasculares duros na própria comunidade.",
+    "pergunta": "De acordo com o estudo de Sargent, Shepard e Glantz (Helena, Montana, EUA; análise de admissões de dezembro de 1997 a novembro de 2003), o que ocorreu com as internações por infarto agudo do miocárdio durante os 6 meses de vigência da lei antifumo?",
+    "opcoes": [
+      "Caíram de uma média de 40 admissões (nos mesmos meses, nos anos antes e depois da lei) para 24 admissões durante os 6 meses de vigência (-16 admissões; IC95% -31,7 a -0,3), sem aumento compensatório significativo de internações vindas de fora da cidade (+5,6; IC95% -5,2 a 16,4)",
+      "Não houve nenhuma mudança detectável nas internações por infarto durante a vigência da lei",
+      "As internações por infarto aumentaram durante a lei, atribuído ao estresse da mudança de hábito",
+      "A queda só foi observada nos pacientes que efetivamente pararam de fumar, sem efeito populacional"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "Usando análise de Poisson das admissões mensais por IAM entre dezembro de 1997 e novembro de 2003, os autores encontraram queda de uma média de 40 admissões (nos mesmos meses, nos anos antes e depois da lei) para um total de 24 admissões durante os 6 meses de vigência da lei antifumo (-16 admissões; IC95% -31,7 a -0,3). As internações de moradores de fora de Helena tiveram um aumento não significativo de 5,6 (IC95% -5,2 a 16,4), afastando a hipótese de que a queda local fosse só deslocamento de pacientes para outro hospital. Os autores concluem que leis que impõem ambientes livres de fumo em locais públicos e de trabalho podem ter efeito sobre a morbidade por doença cardíaca — plausível pelo efeito agudo do tabagismo passivo sobre função endotelial e agregação plaquetária, não apenas pelo efeito de longo prazo da cessação do tabagismo ativo.",
+    "source_refs": [
+      "Sargent RP, Shepard RM, Glantz SA. Reduced incidence of admissions for myocardial infarction associated with public smoking ban: before and after study. BMJ. 2004;328(7446):977-980. DOI: 10.1136/bmj.38055.715683.55. PMID: 15066887"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "solidao-e-isolamento-social-como-fator-de-risco-para-doenca-coronariana-e-avc-valtorta",
+    "titulo": "Solidão e isolamento social aumentam o risco de doença coronariana e AVC? A metanálise de Valtorta et al.",
+    "tema": "Saúde mental e cardiologia",
+    "nivel": "básico",
+    "enunciado": "Paciente idoso, mora sozinho, relata pouco contato social e nenhum fator de risco cardiovascular tradicional relevante (não fumante, sem hipertensão, sem diabetes, LDL controlado). O paciente pergunta se \"morar sozinho e ter poucos amigos\" tem algum peso real no risco cardiovascular, ou se é só uma questão de qualidade de vida sem relação com o coração.",
+    "pergunta": "De acordo com a metanálise de Valtorta et al. (Heart, 2016; revisão sistemática de estudos longitudinais, com dados agrupáveis de 11 estudos de doença coronariana e 8 estudos de AVC, totalizando 4.628 eventos de DAC e 3.002 eventos de AVC), qual foi o aumento de risco associado a relações sociais pobres (solidão e/ou isolamento social)?",
+    "opcoes": [
+      "Aumento de 29% no risco de doença coronariana incidente (RR agrupado 1,29; IC95% 1,04-1,59) e de 32% no risco de AVC incidente (RR agrupado 1,32; IC95% 1,04-1,68), sem diferença entre homens e mulheres nas análises de subgrupo",
+      "Aumento de risco relevante só em homens, sem efeito estatisticamente significativo em mulheres",
+      "Nenhum aumento estatisticamente significativo do risco de DAC ou de AVC nesta metanálise",
+      "Aumento de mais de 100% no risco de DAC, de magnitude comparável ao tabagismo ativo"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "A partir de 35.925 registros triados, 23 artigos (16 conjuntos de dados longitudinais em países de alta renda) atenderam aos critérios de inclusão, com seguimento de 3 a 21 anos. Onze estudos de DAC e oito de AVC forneceram dados para metanálise: relações sociais pobres associaram-se a aumento de 29% no risco de DAC incidente (RR agrupado 1,29; IC95% 1,04-1,59) e de 32% no risco de AVC incidente (RR agrupado 1,32; IC95% 1,04-1,68). As análises de subgrupo não identificaram diferença por sexo. Os autores concluem que déficits nas relações sociais associam-se a maior risco de DAC e AVC — duas das principais causas de morte e incapacidade em países de alta renda — e apontam a necessidade de estudos de intervenção para saber se atuar sobre solidão/isolamento social reduz esse risco.",
+    "source_refs": [
+      "Valtorta NK, Kanaan M, Gilbody S, Ronzi S, Hanratty B. Loneliness and social isolation as risk factors for coronary heart disease and stroke: systematic review and meta-analysis of longitudinal observational studies. Heart. 2016;102(13):1009-1016. DOI: 10.1136/heartjnl-2015-308790. PMID: 27091846"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "fontan-com-fadiga-ao-esforco-udenafil-melhora-o-consumo-de-oxigenio-ensaio-fuel",
+    "titulo": "Fontan com queda da capacidade de exercício: o udenafil (inibidor da PDE5) melhora o consumo de oxigênio de pico?",
+    "tema": "Cardiopatias congênitas",
+    "nivel": "intermediário",
+    "enunciado": "Adolescente de 15 anos, com fisiologia de Fontan por atresia tricúspide (cirurgia realizada aos 3 anos), em acompanhamento ambulatorial. Refere fadiga progressiva aos esforços moderados nos últimos meses, sem sinais de descompensação (sem edema, sem hepatomegalia, saturação basal de 94%). Ecocardiograma sem disfunção ventricular relevante, sem trombo intracavitário e sem estenose de conduíte. O cardiologista considera prescrever udenafil (inibidor da fosfodiesterase-5) para tentar melhorar a capacidade funcional.",
+    "pergunta": "Segundo o ensaio FUEL (Fontan Udenafil Exercise Longitudinal), qual foi o efeito do udenafil sobre o desfecho primário (consumo de oxigênio no pico do exercício) e sobre os desfechos secundários no limiar anaeróbico ventilatório?",
+    "opcoes": [
+      "O udenafil reduziu significativamente o consumo de oxigênio no pico do exercício, contraindicando seu uso em pacientes com Fontan.",
+      "O udenafil não alterou significativamente o consumo de oxigênio no pico do exercício (desfecho primário, p=0,071), mas melhorou desfechos secundários no limiar anaeróbico ventilatório, como consumo de oxigênio (p=0,012) e carga de trabalho (p=0,021).",
+      "O udenafil melhorou significativamente tanto o desfecho primário quanto todos os desfechos secundários, incluindo o índice de performance miocárdica e o BNP.",
+      "O ensaio foi interrompido precocemente por eventos adversos graves relacionados ao udenafil, sem análise de eficácia."
+    ],
+    "resposta_correta": 1,
+    "explicacao": "No FUEL trial (fase III, 30 centros na América do Norte e na Coreia do Sul, 400 pacientes com fisiologia de Fontan, idade média 15,5±2 anos, randomizados 1:1 para udenafil 87,5 mg 2x/dia ou placebo), o desfecho primário — variação do consumo de oxigênio no pico do exercício — não atingiu significância estatística: aumento de 44±245 mL/min (2,8%) no grupo udenafil versus queda de 3,7±228 mL/min (-0,2%) no placebo, p=0,071. Porém, na análise no limiar anaeróbico ventilatório, o udenafil mostrou melhora significativa no consumo de oxigênio (+33±185 mL/min [3,2%] vs. -9±193 mL/min [-0,9%], p=0,012), nos equivalentes ventilatórios de CO2 (-0,8 vs. -0,06, p=0,014) e na carga de trabalho (+3,8 vs. +0,34 W, p=0,021). Não houve diferença entre os grupos no índice de performance miocárdica, no logaritmo natural do índice de hiperemia reativa nem no BNP. O ensaio tem errata publicada (Circulation. 2020;142(2):e31), não lida nesta redação — declarada aqui para não ser omitida.",
+    "source_refs": [
+      "Goldberg DJ, Zak V, Goldstein BH, et al; Pediatric Heart Network Investigators. Results of the FUEL Trial. Circulation. 2020;141(8):641-651. DOI: 10.1161/CIRCULATIONAHA.119.044352. PMID: 31736357"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "aneurisma-no-local-do-reparo-previo-de-coartacao-da-aorta-stent-revestido-coast-ii",
+    "titulo": "Aneurisma no sítio de reparo prévio de coartação da aorta: o stent revestido é uma opção segura? O ensaio COAST II",
+    "tema": "Cardiopatias congênitas",
+    "nivel": "avançado",
+    "enunciado": "Paciente de 22 anos, operado na infância para correção de coartação de aorta por técnica de retalho de subclávia, em acompanhamento com angioTC anual. O exame atual mostra uma dilatação sacular de 15 mm na parede da aorta torácica descendente, no sítio do reparo prévio (lesão de parede aórtica), sem sintomas. O caso é discutido em equipe de cardiologia intervencionista pediátrica/congênita, cogitando tratamento percutâneo com stent coberto.",
+    "pergunta": "Segundo o ensaio COAST II (Covered Cheatham-Platinum Stents for Prevention or Treatment of Aortic Wall Injury Associated with Coarctation of the Aorta), qual foi o desempenho do stent coberto (covered Cheatham-Platinum stent, CCPS) no tratamento dessa lesão de parede aórtica associada à coartação?",
+    "opcoes": [
+      "O stent coberto não conseguiu reduzir o gradiente de pressão entre aorta ascendente e descendente na maioria dos pacientes.",
+      "O implante do CCPS reduziu o gradiente sistólico médio de 27±20 mmHg para 4±6 mmHg, com cobertura completa da lesão de parede aórtica em 92% dos pacientes (76 de 83) e sem morte, reintervenção ou nova lesão de parede aórtica aguda; a lesão vascular do sítio de acesso foi a complicação relevante mais comum.",
+      "O estudo foi interrompido por excesso de eventos embólicos relacionados ao stent coberto.",
+      "O CCPS só foi eficaz nos pacientes sem lesão de parede aórtica pré-existente (grupo de prevenção), falhando no grupo com lesão já estabelecida."
+    ],
+    "resposta_correta": 1,
+    "explicacao": "COAST II foi um ensaio multicêntrico de braço único (não comparativo) que incluiu 158 pacientes (65% homens, idade mediana 19 anos) com coartação de aorta e lesão de parede aórtica (AWI) pré-existente (grupo Tratamento, 83 pacientes) ou risco aumentado de AWI (grupo Prevenção). O gradiente sistólico médio entre aorta ascendente e descendente melhorou de 27±20 mmHg para 4±6 mmHg. A cobertura completa da AWI pré-existente foi alcançada em 66 de 71 pacientes (93%) que receberam um único CCPS, e em 76 de 83 pacientes (92%) no total, com 7 pacientes apresentando endoleaks menores que não exigiram nova intervenção. Quatro pacientes tiveram lesão vascular relevante no sítio de acesso — a complicação importante mais comum. Não houve AWI aguda, reintervenção ou óbito na série. Os autores destacam que é necessário seguimento de mais longo prazo para definir os desfechos tardios — este é um estudo de resultados imediatos, não de seguimento longo.",
+    "source_refs": [
+      "Taggart NW, Minahan M, Cabalka AK, Cetta F, Usmani K, Ringel RE; COAST II Investigators. Immediate Outcomes of Covered Stent Placement for Treatment or Prevention of Aortic Wall Injury Associated With Coarctation of the Aorta (COAST II). JACC Cardiovasc Interv. 2016;9(5):484-493. DOI: 10.1016/j.jcin.2015.11.038. PMID: 26896890"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "prevalencia-e-mortalidade-global-da-cardiopatia-reumatica-carga-de-doenca-2015",
+    "titulo": "Onde a cardiopatia reumática pesa mais no mundo? O que o estudo de Carga Global de Doença 2015 mostra",
+    "tema": "Febre reumática",
+    "nivel": "básico",
+    "enunciado": "Durante discussão de caso em ambulatório de cardiologia, um residente pergunta por que a triagem ecocardiográfica ativa de cardiopatia reumática em crianças é uma prioridade de saúde pública em alguns países, mas não é rotina na maior parte do Brasil urbano. O preceptor cita o estudo de Carga Global de Doença (Global Burden of Disease) de 2015 dedicado à cardiopatia reumática, que incluiu autores brasileiros da Universidade Federal de Minas Gerais.",
+    "pergunta": "Segundo esse estudo, qual foi a estimativa de mortes por cardiopatia reumática em 2015 e onde se concentrou a maior carga de mortalidade e prevalência?",
+    "opcoes": [
+      "Cerca de 30 mil mortes em 2015, distribuídas igualmente entre todas as regiões do mundo, sem diferença geográfica relevante.",
+      "Cerca de 319.400 mortes em 2015 (intervalo de incerteza de 95%: 297.300-337.300), com a maior mortalidade e prevalência padronizadas por idade concentradas na Oceania, no sul da Ásia e na África subsaariana central; a mortalidade global padronizada por idade caiu 47,8% entre 1990 e 2015.",
+      "A mortalidade por cardiopatia reumática aumentou de forma constante entre 1990 e 2015 em todas as regiões do mundo, sem nenhuma queda registrada.",
+      "O estudo estimou menos de 1 milhão de casos prevalentes de cardiopatia reumática no mundo em 2015, concentrados majoritariamente em países de alta renda."
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O estudo de Carga Global de Doença 2015 dedicado à cardiopatia reumática (Watkins DA et al., com participação de pesquisadores da Universidade Federal de Minas Gerais) estimou 319.400 mortes por cardiopatia reumática em 2015 (intervalo de incerteza de 95%: 297.300-337.300). A mortalidade global padronizada por idade caiu 47,8% entre 1990 e 2015 (intervalo de incerteza: 44,7-50,9), mas com grandes diferenças regionais: em 2015, a maior mortalidade e prevalência padronizadas por idade estavam na Oceania, no sul da Ásia e na África subsaariana central. Estimaram-se 33,4 milhões de casos prevalentes (intervalo de incerteza: 29,7-43,1 milhões) e 10,5 milhões de anos de vida perdidos ajustados por incapacidade (DALYs, intervalo de incerteza: 9,6-11,5 milhões) globalmente. Os autores concluem que, apesar da queda mundial, a doença permanece concentrada nas regiões mais pobres — o que justifica clinicamente por que a triagem ativa por ecocardiograma é estratégia de saúde pública priorizada nessas regiões, e não uma rotina universal no Brasil urbano.",
+    "source_refs": [
+      "Watkins DA, Johnson CO, Colquhoun SM, et al. Global, Regional, and National Burden of Rheumatic Heart Disease, 1990-2015. N Engl J Med. 2017;377(8):713-722. DOI: 10.1056/NEJMoa1603693. PMID: 28834488"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sincope-vasovagal-com-prodromo-reconhecivel-manobras-de-contrapressao-fisica-pc-trial",
+    "titulo": "Síncope vasovagal com pródromo reconhecível: as manobras físicas de contrapressão reduzem a recorrência? O PC-Trial",
+    "tema": "Síncope",
+    "nivel": "básico",
+    "enunciado": "Mulher de 24 anos, sem cardiopatia estrutural, relata quatro episódios de síncope vasovagal no último ano, sempre precedidos por sensação de calor, sudorese e escurecimento visual (pródromo reconhecível) que dura cerca de 15-20 segundos antes da perda de consciência. O teste de inclinação (tilt test) foi positivo, compatível com síncope vasovagal. Ela pergunta se existe alguma medida não farmacológica eficaz para reduzir os episódios, já que teme efeitos colaterais de medicação.",
+    "pergunta": "Segundo o PC-Trial (Physical Counterpressure Manoeuvres Trial), qual foi o efeito de treinar o paciente nas manobras físicas de contrapressão (como cruzar as pernas com contração muscular, ou entrelaçar e tracionar as mãos), associadas ao tratamento convencional, sobre a recorrência de síncope vasovagal?",
+    "opcoes": [
+      "As manobras de contrapressão não tiveram nenhum efeito sobre a recorrência de síncope e foram abandonadas como recomendação.",
+      "As manobras de contrapressão reduziram a recorrência de síncope (31,6% vs. 50,9% no grupo de tratamento convencional isolado, p=0,005), com redução de risco relativo de 39% (IC95% 11-53%), sem nenhum evento adverso relatado.",
+      "As manobras de contrapressão só foram eficazes em pacientes que também usavam fludrocortisona associada.",
+      "O estudo mostrou benefício das manobras apenas em homens, sem efeito em mulheres."
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O PC-Trial foi um ensaio multicêntrico, prospectivo e randomizado com 223 pacientes (idade média 38,6±15,4 anos) com síncope vasovagal recorrente e sintomas prodrômicos reconhecíveis. Cento e dezessete pacientes receberam apenas terapia convencional padronizada (explicação e orientações de estilo de vida) e 106 receberam a mesma terapia associada a treinamento em manobras físicas de contrapressão (PCM). Durante seguimento médio de 14 meses, 50,9% dos pacientes em terapia convencional isolada tiveram recorrência de síncope, contra 31,6% no grupo treinado em PCM (p=0,005), com sobrevida livre de recorrência significativamente maior no grupo de tratamento (log-rank p=0,018) e redução de risco relativo de 39% (IC95% 11-53%). A carga anual mediana de síncope também foi significativamente menor no grupo PCM (p=0,004). Nenhum evento adverso foi relatado. Os autores concluem que as manobras de contrapressão são um tratamento de baixo custo, sem risco e eficaz, devendo ser indicadas como terapia de primeira linha em pacientes com síncope vasovagal e sintomas prodrômicos reconhecíveis — exatamente o perfil desta paciente.",
+    "source_refs": [
+      "van Dijk N, Quartieri F, Blanc JJ, Garcia-Civera R, Brignole M, Moya A, Wieling W; PC-Trial Investigators. Effectiveness of physical counterpressure maneuvers in preventing vasovagal syncope: the Physical Counterpressure Manoeuvres Trial (PC-Trial). J Am Coll Cardiol. 2006;48(8):1652-1657. DOI: 10.1016/j.jacc.2006.06.059. PMID: 17045903"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "profilaxia-com-clonidina-no-perioperatorio-de-cirurgia-nao-cardiaca-poise-2",
+    "titulo": "Clonidina profilática no perioperatório de cirurgia não cardíaca reduz infarto e morte? O braço de clonidina do POISE-2",
+    "tema": "Perioperatório",
+    "nivel": "intermediário",
+    "enunciado": "Homem de 67 anos, hipertenso e com doença arterial periférica, será submetido a uma cirurgia vascular eletiva de grande porte. Um colega sugere iniciar clonidina em baixa dose no perioperatório, com o racional de que o bloqueio do tônus simpático central reduziria o risco de infarto e morte perioperatórios, já que a ativação simpática é marcante durante e após a cirurgia não cardíaca.",
+    "pergunta": "No braço de clonidina do ensaio POISE-2 (desenho fatorial 2x2, comparando clonidina 0,2 mg/dia versus placebo em pacientes com ou sob risco de doença aterosclerótica submetidos a cirurgia não cardíaca), qual foi o efeito da clonidina sobre o desfecho primário (morte ou infarto não fatal em 30 dias) e sobre a segurança?",
+    "opcoes": [
+      "A clonidina reduziu significativamente o desfecho primário composto e não teve nenhum efeito hemodinâmico relevante, tornando-se recomendação padrão de profilaxia perioperatória.",
+      "A clonidina não reduziu o desfecho primário composto de morte ou infarto não fatal (HR 1,08; IC95% 0,93-1,26; p=0,29), e aumentou significativamente a hipotensão clinicamente importante (47,6% vs. 37,1%; HR 1,32; p<0,001) e a parada cardíaca não fatal (0,3% vs. 0,1%; HR 3,20; IC95% 1,17-8,73; p=0,02).",
+      "A clonidina reduziu a mortalidade isolada, mas não teve efeito sobre infarto do miocárdio.",
+      "O estudo foi interrompido precocemente por benefício inequívoco da clonidina, antes de completar o recrutamento planejado."
+    ],
+    "resposta_correta": 1,
+    "explicacao": "No braço de clonidina do POISE-2 (10.010 pacientes randomizados em desenho fatorial 2x2 para clonidina 0,2 mg/dia ou placebo, e separadamente para AAS ou placebo, com o fármaco mantido até 72 horas após a cirurgia), a clonidina não reduziu o desfecho primário composto de morte ou infarto não fatal em 30 dias: 367 eventos com clonidina vs. 339 com placebo (HR 1,08; IC95% 0,93-1,26; p=0,29). O infarto do miocárdio isolado ocorreu em 6,6% (clonidina) vs. 5,9% (placebo) — HR 1,11; IC95% 0,95-1,30; p=0,18, também sem diferença significativa. Em contrapartida, a clonidina aumentou significativamente a hipotensão clinicamente importante (47,6% [2.385 pacientes] vs. 37,1% [1.854 pacientes]; HR 1,32; IC95% 1,24-1,40; p<0,001) e a parada cardíaca não fatal (0,3% [16 pacientes] vs. 0,1% [5 pacientes]; HR 3,20; IC95% 1,17-8,73; p=0,02). Os autores concluem que a clonidina em baixa dose não reduz morte ou infarto não fatal e aumenta o risco de hipotensão importante e parada cardíaca não fatal — achado que, junto ao resultado já conhecido do braço de AAS do mesmo ensaio (POISE-2, PMID 24679062), reforça que bloquear a resposta simpática perioperatória de forma farmacológica genérica não é estratégia segura nem eficaz nesse contexto.",
+    "source_refs": [
+      "Devereaux PJ, Sessler DI, Leslie K, et al; POISE-2 Investigators. Clonidine in patients undergoing noncardiac surgery. N Engl J Med. 2014;370(16):1504-1513. DOI: 10.1056/NEJMoa1401106. PMID: 24679061"
+    ],
+    "review_status": "revisado"
   }
 ]
