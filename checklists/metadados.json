@@ -985,5 +985,178 @@
       }
     ],
     "revisao": "Verificado item a item em 01/08/2026 contra os documentos de origem citados em source_refs, já publicados nesta base: cada um dos 8 itens corresponde a um dado estruturado ou recomendação nomeada dessas fontes (corte renal por fármaco, contraindicação por prótese mecânica pelo RE-ALIGN, contraindicação prática por valva reumática pelo INVICTUS, critérios combinados de redução de dose por peso/idade, interações que alteram eficácia, restrição em gravidez, alerta de tarja preta sobre descontinuação precoce). ATENÇÃO: este checklist NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles — diferente do checklist de alta pós-SCA de 28/07/2026, a atestação dele não é presumida aqui, mesmo padrão já usado no checklist de TEV agudo."
+  },
+  {
+    "slug": "acompanhamento-pos-cardiomiopatia-induzida-por-taquicardia",
+    "condicao": "Acompanhamento pós-cardiomiopatia induzida por taquicardia",
+    "resumo": "O que confirmar e vigiar depois do controle da arritmia culpada numa cardiomiopatia induzida por taquicardia/arritmia (AIC/TIC), derivado da revisão de referência de Gopinathannair et al. 2015 e dos estudos multicêntricos de recuperação de FEVE.",
+    "documento_origem": "cardiomiopatia-induzida-por-taquicardia-reversibilidade-apos-controle-da-arritmia",
+    "theme": "Insuficiência cardíaca",
+    "review_status": "revisado",
+    "source_refs": [
+      "Gopinathannair R, Etheridge SP, Marchlinski FE, Spinale FG, Lakkireddy D, Olshansky B. Arrhythmia-Induced Cardiomyopathies: Mechanisms, Recognition, and Management. J Am Coll Cardiol. 2015;66(15):1714-1728. DOI: 10.1016/j.jacc.2015.08.038. PMID: 26449143",
+      "Sato N. Tachycardia-induced cardiomyopathy: evolution of the concept and contemporary insights. Heart Fail Rev. 2026;31(1):79. DOI: 10.1007/s10741-026-10650-2. PMID: 42412249",
+      "Gopinathannair R, Dhawan R, Lakkireddy DR, Murray A, Angus CR, Farid T, Mar PL, Atkins D, Olshansky B. Predictors of myocardial recovery in arrhythmia-induced cardiomyopathy: A multicenter study. J Cardiovasc Electrophysiol. 2021;32(4):1085-1092. DOI: 10.1111/jce.14963. PMID: 33625771",
+      "Ahmad A, Mar PL, Olshansky B, Horbal P, Tsai C, Patel H, Hussein A, Dickey S, Dhawan R, Murray A, Lakkireddy D, Gopinathannair R. Echocardiographic changes and heart failure hospitalizations following rhythm control for arrhythmia-induced cardiomyopathy: results from a multicenter, retrospective study. J Interv Card Electrophysiol. 2023;66(2):455-462. DOI: 10.1007/s10840-022-01354-2. PMID: 36008502"
+    ],
+    "itens": [
+      {
+        "id": "aic-arritmia-controlada",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Confirmado que a arritmia culpada (fibrilação atrial, taquicardia/flutter atrial ou extrassístoles ventriculares frequentes) foi efetivamente controlada, em geral por controle de ritmo",
+        "origem_secao": "As três arritmias culpadas mais estudadas / Aplicação prática"
+      },
+      {
+        "id": "aic-reavaliacao-feve",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Reavaliação ecocardiográfica da FEVE agendada após o controle da arritmia — prazo de referência de até 6 meses, o seguimento mediano usado no estudo de Ahmad et al. 2023",
+        "origem_secao": "Numeros de recuperacao"
+      },
+      {
+        "id": "aic-diagnostico-retrospectivo",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Registrado que o diagnóstico de cardiomiopatia induzida por taquicardia/arritmia se confirma retrospectivamente pela melhora da FEVE após o tratamento — o paciente não deve ser rotulado como cardiomiopatia dilatada idiopática permanente antes dessa reavaliação",
+        "origem_secao": "Aplicação prática"
+      },
+      {
+        "id": "aic-vigilancia-recorrencia",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Vigilância ativa de recorrência da arritmia mantida mesmo após normalização da FEVE — a taxa de recorrência foi de 50,5% em 6 meses num dos estudos multicêntricos",
+        "origem_secao": "Numeros de recuperacao / Armadilhas clinicas"
+      },
+      {
+        "id": "aic-orientacao-recidiva",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente orientado de que a recidiva da arritmia pode causar novo declínio, por vezes rápido, da função ventricular já recuperada",
+        "origem_secao": "O alerta que a revisão de 2015 registra, e que ainda vale"
+      },
+      {
+        "id": "aic-alerta-morte-subita",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Paciente e equipe alertados de que há relatos de morte súbita mesmo com a FEVE já normalizada, e que a normalização não deve ser tratada como alta do risco cardiovascular",
+        "origem_secao": "O alerta que a revisão de 2015 registra, e que ainda vale"
+      },
+      {
+        "id": "aic-expectativa-por-etiologia",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Se a etiologia foi extrassístoles ventriculares frequentes ou há doença cardíaca estrutural associada: expectativa de FEVE final ajustada, já que esses grupos atingem fração de ejeção final mais baixa apesar de maior ganho absoluto de FEVE",
+        "origem_secao": "Numeros de recuperacao"
+      },
+      {
+        "id": "aic-duracao-nao-exclui",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Registrado que a duração conhecida da arritmia não foi usada como critério para deixar de tratar — a magnitude de melhora da FEVE foi semelhante entre arritmia de longa e de curta duração",
+        "origem_secao": "Numeros de recuperacao / Armadilhas clinicas"
+      }
+    ],
+    "revisao": "Derivado de documento já verificado e publicado nesta base (cardiomiopatia-induzida-por-taquicardia-reversibilidade-apos-controle-da-arritmia), com a seção de origem registrada em cada item e as quatro referências primárias reaproveitadas do documento de origem. Cada item foi conferido contra o texto antes de marcar review_status: revisado — nenhum corte numérico de frequência cardíaca ou carga de extrassístoles foi incluído, porque o documento de origem já registra essa lacuna como VERIFICAÇÃO HUMANA NECESSÁRIA e não a resolve. Elaborado pela sessão de conteúdo em 01/08/2026 sob a autorização contínua de publicação. ATENÇÃO: assim como os demais checklists derivados nesta data, este ainda NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles — a atestação dele não é presumida."
+  },
+  {
+    "slug": "escalonamento-do-hipolipemiante-em-prevencao-secundaria",
+    "condicao": "Escalonamento do tratamento hipolipemiante em prevenção secundária",
+    "resumo": "Titulação de estatina, associação de ezetimiba, indicação de inibidor de PCSK9 ou ácido bempedoico, e reavaliação — derivado da atualização ESC/EAS 2025 e do ensaio SECURE. Não substitui o checklist geral de alta pós-SCA: aprofunda especificamente a escolha e a titulação do hipolipemiante.",
+    "documento_origem": "dislipidemia-metas-ldl-estratificacao-risco-esc-eas-2025",
+    "theme": "Prevenção e lipídios",
+    "review_status": "revisado",
+    "source_refs": [
+      "Mach F, Koskinas KC, Roeters van Lennep JE, et al. 2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias. Eur Heart J. 2025;46(42):4359-4378. DOI: 10.1093/eurheartj/ehaf190. PMID: 40878289",
+      "Mach F et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188. DOI: 10.1093/eurheartj/ehz455",
+      "Castellano JM, Pocock SJ, Bhatt DL, et al; SECURE Investigators. Polypill Strategy in Secondary Cardiovascular Prevention. N Engl J Med. 2022;387(11):967-977. DOI: 10.1056/NEJMoa2208275. PMID: 36018037"
+    ],
+    "itens": [
+      {
+        "id": "hip-meta",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Categoria de risco confirmada e meta de LDL-C explícita registrada — em prevenção secundária, doença aterosclerótica estabelecida já classifica como muito alto risco: LDL-C abaixo de 55 mg/dL E redução de pelo menos 50% do valor basal",
+        "origem_secao": "Metas de LDL-colesterol por categoria de risco / Árvore de decisão: categoria de risco e meta de LDL-C"
+      },
+      {
+        "id": "hip-contexto-sca",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se a titulação ocorre durante internação por síndrome coronariana aguda: diferenciado se o paciente já vinha em hipolipemiante (intensificar o esquema atual — Classe I, nível C) ou é virgem de tratamento (iniciar estatina de alta intensidade combinada a ezetimiba já na internação, quando não se espera atingir a meta só com estatina — Classe IIa, nível B)",
+        "origem_secao": "Árvore de decisão: escalonamento do tratamento hipolipemiante — nó D5"
+      },
+      {
+        "id": "hip-estatina",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Estatina de alta intensidade prescrita na maior dose tolerada, até a meta da categoria de risco — Classe I, nível A",
+        "origem_secao": "Árvore de decisão: escalonamento do tratamento hipolipemiante — nó P2"
+      },
+      {
+        "id": "hip-intolerancia",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se houve intolerância à estatina: registrada nova tentativa com outra estatina ou outra dose antes de migrar para terapia não estatínica",
+        "origem_secao": "Árvore de decisão: escalonamento do tratamento hipolipemiante — nó D6"
+      },
+      {
+        "id": "hip-ezetimiba",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Se a meta de LDL-C não foi atingida com estatina em dose máxima tolerada: ezetimiba associada — Classe I, nível B",
+        "origem_secao": "Árvore de decisão: escalonamento do tratamento hipolipemiante — nó P3"
+      },
+      {
+        "id": "hip-pcsk9",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se a meta permanece não atingida com estatina em dose máxima tolerada mais ezetimiba, em prevenção secundária de muito alto risco: inibidor de PCSK9 (anticorpo monoclonal ou inclisirana) associado — Classe I, nível A",
+        "origem_secao": "Árvore de decisão: escalonamento do tratamento hipolipemiante — nó C15"
+      },
+      {
+        "id": "hip-bempedoico",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Ácido bempedoico avaliado como alternativa em caso de intolerância a estatina (Classe I, nível B) ou como adjuvante à estatina em dose máxima tolerada, com ou sem ezetimiba, em alto risco ainda fora da meta (Classe IIa, nível C)",
+        "origem_secao": "Árvore de decisão: escalonamento do tratamento hipolipemiante — nó C12 / C18, e nota de procedência sobre ácido bempedoico"
+      },
+      {
+        "id": "hip-meta-extrema",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Se houve segundo evento vascular em até 2 anos, não necessariamente do mesmo tipo do primeiro, já em estatina na dose máxima tolerada: considerada meta mais agressiva de LDL-C abaixo de 40 mg/dL — Classe IIb, nível B (recomendação mais fraca, não obrigatória)",
+        "origem_secao": "O paciente que volta a ter evento: a meta abaixo de 40 mg/dL"
+      },
+      {
+        "id": "hip-lpa",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Lipoproteína(a) dosada ao menos uma vez na vida, se ainda não dosada — valor acima de 50 mg/dL (105 nmol/L) é fator agravante de risco cardiovascular, Classe IIa, nível B",
+        "origem_secao": "O que as árvores não mostram — Lipoproteína(a)"
+      },
+      {
+        "id": "hip-reavaliacao",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Reavaliação do perfil lipídico agendada, com data definida, para confirmar a meta atingida ou escalonar o próximo passo do esquema",
+        "origem_secao": "Árvore de decisão: escalonamento do tratamento hipolipemiante — nós D7/D8, C13/C14"
+      },
+      {
+        "id": "hip-polipilula",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Em prevenção secundária pós-infarto (até 6 meses), se dificuldade de adesão for identificada: considerada estratégia de polipílula (AAS 100 mg + ramipril + atorvastatina em comprimido único), que no ensaio SECURE reduziu o desfecho composto (HR 0,76; IC95% 0,60-0,96; p=0,02) pela via da adesão, não por fármaco novo",
+        "origem_secao": "polipilula-em-prevencao-secundaria-pos-infarto-o-ensaio-secure.md — Resultados e O ponto que faz este ensaio interessante"
+      },
+      {
+        "id": "hip-suplemento",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Paciente orientado de que suplemento alimentar e vitamina não têm indicação para reduzir LDL-C nem risco aterosclerótico — Classe III, nível B — e não substituem nem atrasam o escalonamento farmacológico",
+        "origem_secao": "O que as árvores não mostram — Suplemento alimentar e vitamina não têm lugar aqui"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798) em 01/08/2026. Cada item foi conferido contra o texto integral dos três documentos já publicados citados em source_refs (o protocolo, o fluxograma com as classes/níveis de recomendação linha a linha, e o estudo SECURE), sem nenhum dado escrito de memória. Não duplica o checklist alta-pos-sindrome-coronariana-aguda: aquele cobre a alta de SCA como um todo, com um único item genérico sobre hipolipemiante; este aprofunda especificamente a titulação — estatina, ezetimiba, PCSK9, ácido bempedoico, meta extrema pós-recorrência e reavaliação."
   }
 ]
