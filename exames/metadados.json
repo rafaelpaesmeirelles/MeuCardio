@@ -1759,5 +1759,31 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "estudo-eletrofisiologico-eps-na-sincope-inexplicada",
+    "name": "Estudo eletrofisiológico (EPS) na síncope inexplicada",
+    "category": "metodo_grafico",
+    "theme": "Síncope",
+    "what_it_measures": "Registro invasivo de eletrogramas intracardíacos por cateteres posicionados via acesso venoso central, medindo intervalos de condução (destaque para o intervalo H-V, do feixe de His ao início da ativação ventricular) e testando indutibilidade de arritmia por estimulação elétrica programada — atrial e ventricular, com desafio farmacológico (ex.: procainamida) quando indicado.",
+    "reference_range": "H-V basal normal: até 55 ms. H-V ≥70 ms, ou bloqueio His-Purkinje de 2º/3º grau induzido por estimulação atrial incremental ou desafio farmacológico, define doença de condução infra-hissiana significativa.",
+    "indications": "Segundo a diretriz ESC 2018 de síncope (seção 4.2.6): Classe I/Nível B em síncope com infarto do miocárdio prévio ou outra condição com cicatriz miocárdica, quando a causa permanece inexplicada após avaliação não invasiva; Classe IIa/Nível B em síncope com bloqueio de ramo bifascicular nas mesmas condições; Classe IIb/Nível B em bradicardia sinusal assintomática, restrito aos casos em que monitorização não invasiva não conseguiu correlacionar síncope e bradicardia; Classe IIb/Nível C em síncope precedida por palpitação súbita e breve, ainda inexplicada. A própria diretriz nota que o desenvolvimento de monitorização eletrocardiográfica prolongada não invasiva reduziu a relevância do EPS na prática — cerca de 3% dos pacientes com síncope inexplicada avaliados por cardiologista chegam a fazer o exame.",
+    "interpretation": "Em paciente com infarto prévio e FEVE preservada, indução de taquicardia ventricular monomórfica sustentada é fortemente preditiva de causa arrítmica da síncope; indução de fibrilação ventricular é achado inespecífico. Estudo dedicado a síncope com bloqueio de ramo (Azocar D et al., Rev Esp Cardiol 2011;64(3):213-9, PMID 21330036), com protocolo escalonado de EPS seguido de monitor de eventos implantável (ILR) em quem tinha EPS não diagnóstico: EPS foi diagnóstico em 42% (36/85) — bloqueio atrioventricular (BAV) paroxístico em 27 pacientes e taquicardia ventricular em 6, esta última presente só em pacientes com cardiopatia estrutural, com predomínio de bloqueio de ramo esquerdo nesse subgrupo. Dos 38 pacientes com EPS não diagnóstico que foram para ILR, o diagnóstico chegou em 34% (13/38), a maioria (10) por BAV paroxístico, com mediana de 97 dias até o diagnóstico (intervalo interquartil 60-117 dias) — BAV paroxístico foi mais frequente em bloqueio de ramo direito associado a PR prolongado e/ou desvio de eixo. Não houve taquicardia ventricular nem morte arrítmica no seguimento desse grupo.",
+    "limitations": "EPS positivo prediz a causa da síncope; EPS negativo não exclui síncope arrítmica — é a principal limitação, e o próprio estudo de bloqueio de ramo mostra na prática: 34% dos pacientes com EPS não diagnóstico tinham BAV paroxístico revelado só depois, pelo ILR. Geralmente não é útil em paciente com síncope, ECG normal, sem cardiopatia estrutural e sem palpitação prévia. É exame invasivo, com os riscos inerentes ao acesso venoso central e à estimulação intracardíaca, o que justifica a preferência atual por monitorização não invasiva prolongada como primeira linha antes de indicar EPS.",
+    "source_refs": [
+      "Brignole M, Moya A, de Lange FJ, et al. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948. DOI: 10.1093/eurheartj/ehy037. PMID: 29562304 — seção 4.2.6 (Electrophysiological study), texto integral já conferido nesta biblioteca em 30/07/2026 (ver content/Síncope/sincope-diagnostico-e-manejo-esc-2018.md).",
+      "Azocar D, Ruiz-Granell R, Ferrero A, et al. Syncope and bundle branch block. Diagnostic yield of a stepped use of electrophysiology study and implantable loop recorders. Rev Esp Cardiol. 2011;64(3):213-219. DOI: 10.1016/j.recesp.2010.10.016. PMID: 21330036 — abstract conferido verbatim via PubMed E-utilities em 01/08/2026."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "estudo eletrofisiológico",
+      "eps",
+      "síncope",
+      "bloqueio de ramo",
+      "bloqueio atrioventricular",
+      "intervalo h-v",
+      "esc 2018"
+    ]
   }
 ]
