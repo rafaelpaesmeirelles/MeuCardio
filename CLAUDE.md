@@ -1783,6 +1783,24 @@ uma frente livre em vez de negociar no meio do commit.
 > 2. **Consenso dedicado a FA no paciente com câncer: não existe** no EHJ nem na Europace a partir de
 >    2021. O mais próximo é um Clinical Consensus Statement da ACVC/ESC em Eur Heart J Acute
 >    Cardiovasc Care (**PMID 36226746**), sobre arritmias agudas — não é diretriz de FA em câncer.
+>
+> ### 👻 ÓRFÃO EM `evidence_records` — nunca publicar, 01/08/2026
+> **`cc-adulto-eco-no-seguimento-com-defeito-residual`** está no banco, `review_status: revisado` e
+> `published: false`, e **o slug não existe mais em `evidencias/metadados.json`**. Nasceu no commit
+> `4c1fcdb` e foi **reescrito no `4df7b93`**, que desfez uma duplicata: o enunciado antigo englobava
+> um registro já publicado. O slug correto, com recorte de uma linha de tabela por registro, é
+> **`cc-adulto-eco-anual-no-pos-operatorio-com-defeito-residual`**, já publicado. Como o carregador
+> faz upsert por slug e **nunca apaga**, a versão errada ficou para trás.
+>
+> **Publicá-lo recria a duplicata.** E como ele está `revisado`, **qualquer rotina que publique
+> "tudo que está revisado e não publicado" o ressuscita** — mesmo padrão dos 4 slugs órfãos de
+> `drugs` já registrados neste arquivo. Excluir por nome em qualquer publicação em lote.
+>
+> **Regra geral que este caso confirma, e que vale para as 11 tabelas:** órfão é o que existe no
+> banco e **não** existe no arquivo de origem. Auditoria de publicação que só olha
+> `review_status`/`published` **não o distingue de um item pronto** — precisa comparar o slug contra
+> o JSON do disco. A varredura de órfãos que o arquivo registra como inexistente desde 29/07
+> continua não existindo, e hoje já renderia pelo menos este caso.
 
 | Caminho | Sessão | Estado |
 |---|---|---|
