@@ -314,7 +314,7 @@
   {
     "slug": "queda-de-plaquetas-em-uso-de-heparina-suspeita-de-hit",
     "titulo": "Queda de plaquetas em uso de heparina/enoxaparina — suspeita de HIT",
-    "gatilho": "Paciente em uso de heparina não fracionada ou enoxaparina (SCA, angioplastia, cirurgia cardíaca, profilaxia de TEV, ponte de anticoagulação) que apresenta queda de plaquetas — tipicamente 5 a 14 dias após o início da heparina, em horas se houve exposição à heparina nos últimos 30 dias, ou 5 a 10 dias após heparina só intraoperatória. É a fase 'HIT suspeita': plaqueta reduzida com os testes laboratoriais ainda pendentes — a decisão de suspender a heparina e trocar de anticoagulante costuma ser tomada nesse momento, antes da confirmação",
+    "gatilho": "Paciente em uso de heparina ou enoxaparina (SCA, angioplastia, cirurgia cardíaca, profilaxia de TEV, ponte de anticoagulação) com queda de plaquetas — 5-14 dias após início, em horas se exposição prévia nos últimos 30 dias, ou 5-10 dias se só intraoperatória. Fase 'HIT suspeita': plaqueta caindo com teste laboratorial ainda pendente.",
     "ordem": 28,
     "documento_slug": "trombocitopenia-induzida-por-heparina-hit-escore-4ts-fases-e-anticoagulante-nao-heparinico",
     "fluxograma_slug": null,
@@ -324,12 +324,12 @@
   {
     "slug": "dor-toracica-aguda-com-uso-recente-confirmado-ou-suspeito-de-cocaina",
     "titulo": "Dor torácica aguda com uso recente confirmado ou suspeito de cocaína",
-    "gatilho": "Dor torácica aguda em paciente com uso recente (confirmado ou apenas suspeito) de cocaína, sobretudo dentro da primeira hora após o consumo — o risco de início de infarto está elevado em até 23,7 vezes nessa janela, mesmo em paciente jovem e sem fator de risco coronariano clássico. Benzodiazepínico e nitrato costumam ser citados como primeira linha, e evitar betabloqueador puro na fase aguda é recomendação amplamente ensinada na literatura secundária — mas a fonte primária dedicada (AHA 2008) não foi lida na íntegra nesta sessão por bloqueio de acesso, então essa conduta específica carrega VERIFICAÇÃO HUMANA NECESSÁRIA e não deve ser tratada como fato conferido.",
+    "gatilho": "Dor torácica aguda com uso recente (confirmado ou suspeito) de cocaína, sobretudo na primeira hora — risco de infarto elevado em até 23,7x nessa janela, mesmo em jovem sem fator de risco clássico. Evitar betabloqueador puro na fase aguda é ensinado na literatura, mas a fonte primária (AHA 2008) não foi lida na íntegra nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA.",
     "ordem": 77,
     "documento_slug": "cocaina-e-metanfetamina-infarto-desencadeado-na-primeira-hora-e-cardiomiopatia-reversivel",
     "fluxograma_slug": null,
     "relacionados": [
-      "dor-toracica-e-sca-por-vasoespasmo-coronariano-induzido-por-cocaina"
+      "cocaina-e-risco-cardiovascular-vasoespasmo-coronariano-e-infarto"
     ],
     "review_status": "revisado"
   }
