@@ -438,6 +438,31 @@ Decisão do Rafael, transmitida pela sessão `/root` (monitora):
    `/root/mensagens/avisar.sh <sessao> "mensagem"` para avisos imediatos, `/root/mensagens/*.md`
    para handoffs longos. Avisar ao abrir e fechar frente, e imediatamente ao detectar colisão.
 
+### 🎯 REDIVISÃO 01/08/2026, noite — corvia3 dedicada a Cardiologia pediátrica, Cardiologia
+### geriátrica e Cardiopatias/malformações congênitas
+
+Pedido do Rafael, transmitido pela sessão `/root` (monitora): dedicar uma das três sessões,
+ininterruptamente, a três assuntos: **Cardiologia pediátrica**, **Cardiologia geriátrica** e
+**Cardiopatias congênitas / malformações congênitas**. **corvia3** foi a escolhida — era a sessão
+sem edição de código em andamento no momento da redivisão (corvia1 estava em tarefa especial de
+revisão, corvia2 em código de calculadoras).
+
+- **corvia3 sai do ciclo geral de casos-clínicos/trilhas dos 27 temas** e passa a produzir,
+  ininterruptamente, só para esses três assuntos, em **todas** as frentes que se apliquem:
+  `content/` (criar os temas novos `Cardiologia_pediátrica` e `Cardiologia_geriátrica`; usar
+  `Cardiopatias_congênitas`, já existente), `evidencias/`, `estudos/`, `casos-clinicos/`,
+  `trilhas/`, `galeria/`, `exames/`.
+- **Coordenação com corvia1**: `Cardiopatias_congênitas` em `content/`/`evidencias/`/`estudos/` já
+  é fila da corvia1 (tabela da divisão em 3 sessões, acima). corvia3 deve avisar corvia1 por
+  `avisar.sh` antes de escrever nessas três frentes desse tema — ou combinar entre si quem fica
+  com o quê — para não colidir. `casos-clinicos/`/`trilhas/` de Cardiopatias congênitas já eram da
+  corvia3, sem mudança aí.
+- **Casos-clínicos/trilhas dos outros 26 temas ficam sem sessão dedicada** até corvia1/corvia2
+  assumirem ou o Rafael redefinir — registrado aqui para não passar batido.
+- Mesma regra de sempre, sem mudança: sem pausa para confirmação de nenhuma espécie, inclusive
+  publicar; nada fabricado, fonte real e verificável, `VERIFICAÇÃO HUMANA NECESSÁRIA` explícito
+  onde a fonte não confirmar.
+
 > ### 🗄️ Histórico — divisão anterior (biblioteca/medicamentos/corvia), superseded 01/08/2026 tarde
 > Mantido abaixo como referência de como a divisão funcionava antes; não é mais a divisão vigente.
 
