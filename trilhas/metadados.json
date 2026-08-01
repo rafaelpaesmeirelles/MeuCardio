@@ -2167,7 +2167,7 @@
     "tema": "Doença coronariana",
     "objetivo": "Sair sabendo aplicar o HEART na dor torácica da emergência, seguir o algoritmo da síndrome coronariana crônica, escolher o teste funcional certo por cenário, e reconhecer MINOCA e SCAD quando a angiografia não mostra obstrução.",
     "nivel": "intermediário",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "etapas": [
       {
         "ordem": 1,
@@ -2211,7 +2211,8 @@
         "item_slug": "minoca-e-scad-infarto-sem-doenca-coronariana-obstrutiva-e-dissecção-espontânea",
         "por_que": "Fecha a trilha no cenário que a investigação padrão não resolve: troponina positiva com coronária angiograficamente normal."
       }
-    ]
+    ],
+    "revisao": "Marcado revisado pela sessão corvia em 01/08/2026: verificação independente de que todos os item_slug referenciados (119 documentos) existem e estão published=true no banco de produção. Curadoria original da sessão /root."
   },
   {
     "slug": "trilha-dispositivos-complicacoes-e-novas-tecnologias",
@@ -2219,7 +2220,7 @@
     "tema": "Dispositivos",
     "objetivo": "Sair sabendo reconhecer e conduzir infecção de dispositivo, escolher entre estimulação do ramo esquerdo e biventricular, evitar a cardiomiopatia induzida por estimulação, e situar o monitor cardíaco implantável e o CDI subcutâneo na prática.",
     "nivel": "avançado",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "etapas": [
       {
         "ordem": 1,
@@ -2263,7 +2264,8 @@
         "item_slug": "monitor-cardiaco-implantavel-rendimento-diagnostico-e-o-que-ele-nao-resolve",
         "por_que": "Última peça: o dispositivo que só monitora, sem terapia — o que ele de fato resolve, e onde ainda deixa o médico sem resposta."
       }
-    ]
+    ],
+    "revisao": "Marcado revisado pela sessão corvia em 01/08/2026: verificação independente de que todos os item_slug referenciados (119 documentos) existem e estão published=true no banco de produção. Curadoria original da sessão /root."
   },
   {
     "slug": "trilha-cardiomiopatia-dilatada-arritmogenica-e-chagasica",
@@ -2271,7 +2273,7 @@
     "tema": "Cardiomiopatias",
     "objetivo": "Sair sabendo diagnosticar a cardiomiopatia dilatada por genética, reconhecer a arritmogênica pelos critérios de imagem e ritmo, e situar a miocardite e a cardiomiopatia chagásica como causa regional relevante, do tratamento etiológico ao momento de indicar CDI.",
     "nivel": "avançado",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "etapas": [
       {
         "ordem": 1,
@@ -2309,7 +2311,8 @@
         "item_slug": "cardiopatia-chagasica-cronica-escore-de-rassi-e-indicacao-de-cdi",
         "por_que": "Fecha a trilha na decisão que mais pesa na cardiomiopatia chagásica estabelecida: o escore que estratifica risco de morte e indica CDI."
       }
-    ]
+    ],
+    "revisao": "Marcado revisado pela sessão corvia em 01/08/2026: verificação independente de que todos os item_slug referenciados (119 documentos) existem e estão published=true no banco de produção. Curadoria original da sessão /root."
   },
   {
     "slug": "trilha-miocardite-e-sindromes-inflamatorias-miopericardicas",
@@ -2317,7 +2320,7 @@
     "tema": "Pericárdio",
     "objetivo": "Sair sabendo diagnosticar e estratificar risco na miocardite aguda, situar o framework unificado das síndromes inflamatórias miopericárdicas, reconhecer a miopericardite pós-vacina de mRNA, identificar a sarcoidose cardíaca, e escalonar a pericardite recorrente refratária com inibidor de IL-1.",
     "nivel": "avançado",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "etapas": [
       {
         "ordem": 1,
@@ -2349,7 +2352,8 @@
         "item_slug": "inibidores-de-il-1-na-pericardite-recorrente-e-derrame-pericardico-neoplasico",
         "por_que": "Fecha com o degrau terapêutico mais recente para quem já falhou colchicina e corticoide na doença recorrente."
       }
-    ]
+    ],
+    "revisao": "Marcado revisado pela sessão corvia em 01/08/2026: verificação independente de que todos os item_slug referenciados (119 documentos) existem e estão published=true no banco de produção. Curadoria original da sessão /root."
   },
   {
     "slug": "trilha-endocardite-situacoes-especiais",
@@ -2357,7 +2361,7 @@
     "tema": "Endocardite",
     "objetivo": "Sair sabendo aplicar os critérios Duke-ISCVID 2023 à endocardite de dispositivo, conduzir a endocardite de câmaras direitas, investigar hemocultura negativa, diferenciar a endocardite trombótica não bacteriana, e decidir quando indicar profilaxia antibiótica antes de procedimento odontológico.",
     "nivel": "avançado",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "etapas": [
       {
         "ordem": 1,
@@ -2395,7 +2399,8 @@
         "item_slug": "profilaxia-antibiotica-de-endocardite-infecciosa-em-procedimentos-odontologicos",
         "por_que": "Fecha do lado da prevenção: em quem profilaxia antes do dentista realmente muda risco, e em quem é rotina sem sustentação."
       }
-    ]
+    ],
+    "revisao": "Marcado revisado pela sessão corvia em 01/08/2026: verificação independente de que todos os item_slug referenciados (119 documentos) existem e estão published=true no banco de produção. Curadoria original da sessão /root."
   },
   {
     "slug": "trilha-valvopatias-regurgitacao-mitral-e-tricuspide",
@@ -2403,7 +2408,7 @@
     "tema": "Valvopatias",
     "objetivo": "Sair sabendo decidir o mecanismo antes da conduta na regurgitação mitral grave, conduzir a estenose mitral remanescente, e situar o reparo transcateter borda a borda na insuficiência tricúspide grave.",
     "nivel": "avançado",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "etapas": [
       {
         "ordem": 1,
@@ -2429,7 +2434,8 @@
         "item_slug": "valvopatias-atualizacao-diretriz-esceacts-2025",
         "por_que": "Panorama de fechamento: o que mudou na atualização mais recente da diretriz, para não citar recomendação já superada."
       }
-    ]
+    ],
+    "revisao": "Marcado revisado pela sessão corvia em 01/08/2026: verificação independente de que todos os item_slug referenciados (119 documentos) existem e estão published=true no banco de produção. Curadoria original da sessão /root."
   },
   {
     "slug": "trilha-aorta-vasculites-e-doenca-renovascular",
@@ -2437,7 +2443,7 @@
     "tema": "Aorta e doença arterial periférica",
     "objetivo": "Sair sabendo diagnosticar a doença arterial periférica de membros pelo ITB, reconhecer arterite de Takayasu e de células gigantes como causa de estenose vascular no jovem e no idoso, e decidir investigação e revascularização na doença renovascular e na estenose de carótida.",
     "nivel": "avançado",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "etapas": [
       {
         "ordem": 1,
@@ -2469,7 +2475,8 @@
         "item_slug": "estenose-de-carotida-diagnostico-e-indicacao-de-revascularizacao-esc-2024",
         "por_que": "Fecha no território mais perguntado em consultório: quando revascularizar carótida assintomática, e quando só tratar clinicamente."
       }
-    ]
+    ],
+    "revisao": "Marcado revisado pela sessão corvia em 01/08/2026: verificação independente de que todos os item_slug referenciados (119 documentos) existem e estão published=true no banco de produção. Curadoria original da sessão /root."
   },
   {
     "slug": "trilha-cardiopatia-congenita-shunt-valva-bicuspide-e-via-de-saida",
@@ -2477,7 +2484,7 @@
     "tema": "Cardiopatias congênitas",
     "objetivo": "Sair sabendo decidir o fechamento de shunt residual no adulto, reconhecer a aortopatia associada à valva aórtica bicúspide, diagnosticar a anomalia de Ebstein e a obstrução da via de saída do ventrículo direito, e usar o teste cardiopulmonar de exercício para acompanhar essas lesões.",
     "nivel": "avançado",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "etapas": [
       {
         "ordem": 1,
@@ -2509,7 +2516,8 @@
         "item_slug": "teste-cardiopulmonar-de-exercicio-na-cardiopatia-congenita-aha-2025",
         "por_que": "A ferramenta que acompanha todas as lesões acima ao longo do tempo — o valor de referência muda por tipo de lesão, não é um número único."
       }
-    ]
+    ],
+    "revisao": "Marcado revisado pela sessão corvia em 01/08/2026: verificação independente de que todos os item_slug referenciados (119 documentos) existem e estão published=true no banco de produção. Curadoria original da sessão /root."
   },
   {
     "slug": "trilha-febre-reumatica-prevencao-primaria-a-cirurgia",
@@ -2517,7 +2525,7 @@
     "tema": "Febre reumática",
     "objetivo": "Sair sabendo situar a prevenção primária pela infecção de pele, reconhecer a coreia de Sydenham, aplicar os critérios ecocardiográficos da WHF 2023 no rastreamento, indicar valvuloplastia por balão na estenose mitral reumática, e decidir entre reparo e substituição na cirurgia valvar reumática.",
     "nivel": "avançado",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "etapas": [
       {
         "ordem": 1,
@@ -2549,7 +2557,8 @@
         "item_slug": "cirurgia-de-valvopatia-reumatica-mitral-multivalvar-reparo-versus-substituicao",
         "por_que": "Fecha no extremo cirúrgico: quando a valva reumática ainda é reparável e quando já exige prótese."
       }
-    ]
+    ],
+    "revisao": "Marcado revisado pela sessão corvia em 01/08/2026: verificação independente de que todos os item_slug referenciados (119 documentos) existem e estão published=true no banco de produção. Curadoria original da sessão /root."
   },
   {
     "slug": "trilha-sincope-situacoes-especiais",
@@ -2557,7 +2566,7 @@
     "tema": "Síncope",
     "objetivo": "Sair sabendo diferenciar hipotensão ortostática de POTS, indicar cardioneuroablação na síncope reflexa refratária, reconhecer hipersensibilidade do seio carotídeo no idoso, distinguir síncope de pseudossíncope no atleta, e aplicar os critérios de alto risco do ECG na emergência.",
     "nivel": "avançado",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "etapas": [
       {
         "ordem": 1,
@@ -2589,7 +2598,8 @@
         "item_slug": "sincope-no-atleta-e-pseudossincope-psicogenica-diagnostico-diferencial",
         "por_que": "Fecha em dois cenários que pedem cautela redobrada: perda de consciência no atleta, que pode ser cardíaca grave, e a pseudossíncope, que não é."
       }
-    ]
+    ],
+    "revisao": "Marcado revisado pela sessão corvia em 01/08/2026: verificação independente de que todos os item_slug referenciados (119 documentos) existem e estão published=true no banco de produção. Curadoria original da sessão /root."
   },
   {
     "slug": "trilha-perioperatorio-dispositivo-fragilidade-e-antitromboticos",
@@ -2597,7 +2607,7 @@
     "tema": "Perioperatório",
     "objetivo": "Sair sabendo manejar marca-passo e CDI na cirurgia não cardíaca, decidir sobre ressonância magnética em portador de dispositivo, avaliar valvopatia antes de cirurgia não cardíaca, aplicar escore de risco cirúrgico e fragilidade no idoso, e ajustar DAPT e anticoagulante no perioperatório.",
     "nivel": "avançado",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "etapas": [
       {
         "ordem": 1,
@@ -2629,7 +2639,8 @@
         "item_slug": "manejo-perioperatorio-de-antitromboticos-dapt-e-anticoagulantes-orais",
         "por_que": "Fecha na decisão que mais gera interconsulta: quando suspender, em qual dia, e quando não suspender de jeito nenhum."
       }
-    ]
+    ],
+    "revisao": "Marcado revisado pela sessão corvia em 01/08/2026: verificação independente de que todos os item_slug referenciados (119 documentos) existem e estão published=true no banco de produção. Curadoria original da sessão /root."
   },
   {
     "slug": "trilha-cardio-oncologia-classes-especificas-de-terapia",
@@ -2637,7 +2648,7 @@
     "tema": "Cardio-oncologia",
     "objetivo": "Sair sabendo reconhecer a síndrome de liberação de citocinas na terapia com CAR-T, manejar a fibrilação atrial induzida por ibrutinibe, identificar o vasoespasmo coronariano por fluoropirimidina, interpretar a hipertensão como sinal de eficácia da terapia antiangiogênica, e situar o risco cardiovascular tardio do sobrevivente de câncer na infância.",
     "nivel": "avançado",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "etapas": [
       {
         "ordem": 1,
@@ -2669,7 +2680,8 @@
         "item_slug": "risco-cardiovascular-tardio-em-sobreviventes-de-cancer-na-infancia",
         "por_que": "Fecha olhando para décadas à frente: quem tratou câncer na infância carrega risco cardiovascular que só aparece no seguimento de adulto."
       }
-    ]
+    ],
+    "revisao": "Marcado revisado pela sessão corvia em 01/08/2026: verificação independente de que todos os item_slug referenciados (119 documentos) existem e estão published=true no banco de produção. Curadoria original da sessão /root."
   },
   {
     "slug": "trilha-diabetes-rastreio-silencioso-e-protecao-renal",
@@ -2985,7 +2997,7 @@
     "tema": "Diabetes e cardiologia",
     "objetivo": "Sair sabendo rastrear a cardiomiopatia diabética por strain, reconhecer hipoglicemia e neuropatia autonômica como risco cardiovascular, bloquear o SRAA para nefroproteção clássica, situar a segurança dos inibidores de DPP-4, e decidir sobre cirurgia bariátrica como intervenção cardiovascular.",
     "nivel": "avançado",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "etapas": [
       {
         "ordem": 1,
@@ -3029,7 +3041,8 @@
         "item_slug": "metformina-na-insuficiencia-cardiaca-seguranca-e-beneficio",
         "por_que": "A droga mais antiga e mais usada da lista, revisitada: segurança e benefício quando o diabético já tem insuficiência cardíaca."
       }
-    ]
+    ],
+    "revisao": "Marcado revisado pela sessão corvia em 01/08/2026: verificação independente de que todos os item_slug referenciados (119 documentos) existem e estão published=true no banco de produção. Curadoria original da sessão /root."
   },
   {
     "slug": "trilha-hipertensao-pulmonar-causas-associadas-e-cteph",
@@ -3037,7 +3050,7 @@
     "tema": "Hipertensão pulmonar",
     "objetivo": "Sair sabendo investigar hipertensão arterial pulmonar associada à esclerose sistêmica, reconhecer a forma hereditária e a portopulmonar, situar a síndrome de Eisenmenger, e decidir entre riociguate e angioplastia por balão na CTEPH inoperável.",
     "nivel": "avançado",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "etapas": [
       {
         "ordem": 1,
@@ -3081,7 +3094,8 @@
         "item_slug": "angioplastia-pulmonar-por-balao-na-cteph-inoperavel-race-e-mr-bpa",
         "por_que": "Fecha com a alternativa intervencionista ao riociguate na CTEPH inoperável — os dois ensaios que sustentam essa via."
       }
-    ]
+    ],
+    "revisao": "Marcado revisado pela sessão corvia em 01/08/2026: verificação independente de que todos os item_slug referenciados (119 documentos) existem e estão published=true no banco de produção. Curadoria original da sessão /root."
   },
   {
     "slug": "trilha-gravidez-arritmia-valvopatia-tev-e-pre-eclampsia",
@@ -3089,7 +3103,7 @@
     "tema": "Gravidez",
     "objetivo": "Sair sabendo ajustar limiar de intervenção em estenose mitral e aórtica na gestante, investigar TEP na gravidez pelo protocolo adaptado, escolher a dose de tromboprofilaxia, tratar hipertensão grave e eclâmpsia, e aplicar os escores de risco materno CARPREG e ZAHARA.",
     "nivel": "avançado",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "etapas": [
       {
         "ordem": 1,
@@ -3145,7 +3159,8 @@
         "item_slug": "rebecga-registro-brasileiro-de-cardiopatia-e-gravidez",
         "por_que": "O retrato nacional do problema — útil para calibrar expectativa de desfecho com dado brasileiro, não só europeu ou americano."
       }
-    ]
+    ],
+    "revisao": "Marcado revisado pela sessão corvia em 01/08/2026: verificação independente de que todos os item_slug referenciados (119 documentos) existem e estão published=true no banco de produção. Curadoria original da sessão /root."
   },
   {
     "slug": "trilha-saude-mental-populacoes-especiais-e-tratamento",
@@ -3153,7 +3168,7 @@
     "tema": "Saúde mental e cardiologia",
     "objetivo": "Sair sabendo o papel protetor do antipsicótico na esquizofrenia, o risco cardíaco dos estimulantes no TDAH, a mortalidade cardíaca da anorexia nervosa, o diagnóstico diferencial entre takotsubo e ansiedade, e se tratar a depressão de fato melhora desfecho cardíaco.",
     "nivel": "avançado",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "etapas": [
       {
         "ordem": 1,
@@ -3203,7 +3218,8 @@
         "item_slug": "exercicio-e-intervencao-psicologica-na-depressao-do-cardiopata-upbeat-e-as-revisoes-cochrane",
         "por_que": "Complementa a resposta do passo anterior com a intervenção não farmacológica — exercício e psicoterapia — e o que as revisões Cochrane sustentam."
       }
-    ]
+    ],
+    "revisao": "Marcado revisado pela sessão corvia em 01/08/2026: verificação independente de que todos os item_slug referenciados (119 documentos) existem e estão published=true no banco de produção. Curadoria original da sessão /root."
   },
   {
     "slug": "trilha-arritmias-taquiarritmias-supraventriculares-e-ventriculares",
@@ -3211,7 +3227,7 @@
     "tema": "Arritmias",
     "objetivo": "Sair sabendo diagnosticar e conduzir a taquicardia supraventricular, reconhecer WPW assintomático como decisão de risco, indicar ablação no flutter e na taquicardia ventricular idiopática, encaminhar a ablação de TV na cardiopatia isquêmica, e abordar a taquicardia de QRS largo sem diagnóstico estabelecido.",
     "nivel": "avançado",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "etapas": [
       {
         "ordem": 1,
@@ -3255,7 +3271,8 @@
         "item_slug": "ablacao-de-taquicardia-ventricular-na-cardiopatia-isquemica-quando-encaminhar",
         "por_que": "Fecha no cenário mais complexo: taquicardia ventricular sobre cicatriz de infarto, e os ensaios que definem quando encaminhar para ablação."
       }
-    ]
+    ],
+    "revisao": "Marcado revisado pela sessão corvia em 01/08/2026: verificação independente de que todos os item_slug referenciados (119 documentos) existem e estão published=true no banco de produção. Curadoria original da sessão /root."
   },
   {
     "slug": "trilha-geral-prevencao-e-equidade-em-cardiologia",
@@ -3263,7 +3280,7 @@
     "tema": "Geral",
     "objetivo": "Sair sabendo o efeito protetor da vacina de influenza no evento cardiovascular, a disparidade de sexo no tratamento do infarto, o impacto do turno noturno e do sono no risco coronariano, e o risco cardiometabólico de cafeína, cigarro eletrônico, canabis e ruído ambiental.",
     "nivel": "intermediário",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "etapas": [
       {
         "ordem": 1,
@@ -3313,7 +3330,8 @@
         "item_slug": "ruido-de-transporte-urbano-e-aeroportuario-como-fator-de-risco-cardiovascular",
         "por_que": "Fecha com um fator ambiental que o paciente não controla sozinho — relevante para orientação de exposição, não só de hábito pessoal."
       }
-    ]
+    ],
+    "revisao": "Marcado revisado pela sessão corvia em 01/08/2026: verificação independente de que todos os item_slug referenciados (119 documentos) existem e estão published=true no banco de produção. Curadoria original da sessão /root."
   },
   {
     "slug": "trilha-calculadoras-escores-de-sangramento-tev-e-risco-cirurgico",
@@ -3321,7 +3339,7 @@
     "tema": "Calculadoras",
     "objetivo": "Sair sabendo aplicar Wells e Genebra na probabilidade pré-teste de TEP, graduar gravidade com PESI, usar CRUSADE e DAPT/PRECISE-DAPT na decisão antitrombótica, e escolher entre RCRI, EuroSCORE II, STS e SYNTAX conforme o tipo de cirurgia.",
     "nivel": "avançado",
-    "review_status": "pendente_revisao",
+    "review_status": "revisado",
     "etapas": [
       {
         "ordem": 1,
@@ -3377,6 +3395,7 @@
         "item_slug": "syntax-score-complexidade-anatomica-e-escolha-entre-pci-e-cabg",
         "por_que": "Fecha na decisão que mais depende de escore anatômico: complexidade da lesão coronariana decidindo entre angioplastia e cirurgia."
       }
-    ]
+    ],
+    "revisao": "Marcado revisado pela sessão corvia em 01/08/2026: verificação independente de que todos os item_slug referenciados (119 documentos) existem e estão published=true no banco de produção. Curadoria original da sessão /root."
   }
 ]
