@@ -499,13 +499,10 @@ Claude." Especificação já levantada pela monitora (não repetir a pesquisa):
   `modelo`/`usar_internet` no corpo do POST `/ai/perguntar` (hoje em `enviar()`,
   linhas ~61-84). Conferir se `ChatFlutuante.tsx` duplica essa chamada e precisa do
   mesmo ajuste.
-- **NÃO mude `ai_provider` (config.py linha 45, hoje `"openai"`) sem antes conferir se
-  `ANTHROPIC_API_KEY` está de fato configurada no `.env` de produção** — troca de
-  provedor é decisão de custo/infra do Rafael, registrada no comentário do próprio
-  `provedor.py` como pendente. Implemente a funcionalidade inteira; se o provider atual
-  for `openai`, avise a monitora (`avisar.sh root-monitor` não existe — avise via
-  `/root/mensagens/*.md` ou aguarde a monitora perguntar) antes de flipar o default,
-  já que isso muda comportamento ao vivo para assinantes.
+- **✅ LIBERADO às 23h30 de 01/08/2026**: conferido no `.env` de produção —
+  `AI_PROVIDER=anthropic` e `ANTHROPIC_API_KEY` já configurados. O bloqueio acima não
+  se aplica mais — Rafael confirmou diretamente ("publicar e ativar tudo"). Pode
+  implementar, publicar e ativar a funcionalidade inteira sem pausa adicional.
 - Teste manual antes de dar por pronto: suba o backend, rode uma pergunta com
   `usar_internet=true` e confirme que a resposta cita fonte da web, e uma troca de
   modelo confirmando no campo `modelo` da resposta.
