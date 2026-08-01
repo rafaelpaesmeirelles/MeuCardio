@@ -1,0 +1,65 @@
+---
+title: "Taquicardia Juncional no Adulto: Foco Automático (JET) e PJRT — Diagnóstico Diferencial e Ablação por Cateter"
+slug: taquicardia-juncional-jet-e-pjrt-diagnostico-diferencial-e-ablacao-por-cateter
+theme: "Arritmias"
+kind: estudo
+review_status: revisado
+source_refs: ["Page RL, Joglar JA, Caldwell MA, et al. 2015 ACC/AHA/HRS Guideline for the Management of Adult Patients With Supraventricular Tachycardia. Circulation. 2016;133(14):e506-e574. DOI: 10.1161/CIR.0000000000000311. PMID: 26399663 — publicação online em 23/09/2015; sem depósito em PMC (conferido via elink db=pmc, 0 resultados)", "Meiltz A, Weber R, Halimi F, et al. Permanent form of junctional reciprocating tachycardia in adults: peculiar features and results of radiofrequency catheter ablation. Europace. 2006;8(1):21-28. DOI: 10.1093/europace/euj007. PMID: 16627404 — série de 49 adultos", "Vaksmann G, D'Hoinne C, Lucet V, et al. Permanent junctional reciprocating tachycardia in children: a multicentre study on clinical profile and outcome. Heart. 2006;92(1):101-104. DOI: 10.1136/hrt.2004.054163. PMID: 15831598 — série pediátrica, contraste com a população adulta", "Law IH, Von Bergen NH, Gingerich JC, et al. Transcatheter cryothermal ablation of junctional ectopic tachycardia in the normal heart. Heart Rhythm. 2006;3(8):903-907. DOI: 10.1016/j.hrthm.2006.04.026. PMID: 16876738 — série de 6 pacientes", "Chen MC, Guo GB, et al. Junctional tachycardia during radiofrequency ablation of the slow pathway in patients with AV nodal reentrant tachycardia: effects of autonomic blockade. J Cardiovasc Electrophysiol. 1999;10(1):56-60. DOI: 10.1111/j.1540-8167.1999.tb00642.x. PMID: 9930910 — usado só para a armadilha do ritmo juncional como marcador de ablação, não como fonte de dado de JET sustentada"]
+legacy_source: "Documento novo, escrito em 01/08/2026. A pasta tinha documentos dedicados a AVNRT, taquicardia atrial focal, taquicardia atrial multifocal e flutter (típico e atípico), mas nenhum cobria a taquicardia JUNCIONAL — nem o foco automático (JET) nem a forma recíproca permanente (PJRT) — apesar de ser diagnóstico diferencial obrigatório de qualquer TSV de QRS estreito com RP longo. O flutter típico dependente do istmo cavotricuspídeo já tinha documento dedicado com taxa de sucesso de ablação (flutter-atrial-tipico-diagnostico-ablacao-e-fibrilacao-atrial-de-novo.md), por isso a lacuna escolhida foi esta."
+---
+
+# Taquicardia Juncional no Adulto: Foco Automático (JET) e PJRT — Diagnóstico Diferencial e Ablação por Cateter
+
+## Duas entidades sob o mesmo nome, mecanismos diferentes
+"Taquicardia juncional" não é uma arritmia única. Duas entidades distintas compartilham a origem anatômica na região do nó AV/feixe de His, mas têm mecanismo, apresentação e conduta diferentes:
+- **Taquicardia juncional ectópica (JET), foco automático**: automatismo anormal originado no nó AV compacto ou no feixe de His proximal, com dissociação AV frequente (a arritmia não depende do átrio nem do ventrículo para se manter). É rara como arritmia sustentada no adulto — a forma congênita/idiopática ("normal heart") é descrita sobretudo em crianças e adultos jovens, e a forma pós-operatória (cirurgia cardíaca pediátrica) é tipicamente transitória.
+- **Taquicardia juncional recíproca permanente (PJRT, "taquicardia de Coumel")**: macrorreentrada verdadeira, usando uma via acessória **oculta**, de condução **decremental** e lenta, tipicamente **posterosseptal**. É a via lenta que dá à PJRT seu caráter **incessante** e sua tendência a **cardiomiopatia induzida por taquicardia (TIC)**.
+- **fonte**: Meiltz et al., Europace 2006, PMID 16627404; Law et al., Heart Rhythm 2006, PMID 16876738
+
+## Achados eletrocardiográficos que diferenciam as duas — e das outras TSV
+- **JET**: QRS estreito regular (ou levemente irregular no início), frequência tipicamente 110-250 bpm, **dissociação atrioventricular** com ondas P sinusais "passeando" independentes do QRS, ou condução retrógrada 1:1 variável. Início e término podem ser graduais ("aquecimento"/"resfriamento"), assinatura de mecanismo automático — o mesmo padrão já descrito no documento desta pasta sobre taquicardia atrial focal.
+- **PJRT**: taquicardia de **RP longo** (intervalo RP maior que PR) — onda P retrógrada **profundamente negativa em II, III e aVF**, distinta da AVNRT típica (RP curto, P frequentemente escondida no QRS) e também distinta da taquicardia atrial focal por sua natureza incessante e resposta a manobra vagal/adenosina (interrompe transitoriamente a via acessória, mas a taquicardia tende a reiniciar).
+- **O achado clínico mais específico de PJRT não é o ECG isolado, é o comportamento**: taquicardia **incessante** (presente na maior parte do dia, meses a fio), refratária a cardioversão química repetida, em paciente sem cardiopatia estrutural óbvia — é esse padrão que deve disparar suspeita de via acessória decremental, não de AVNRT atípica.
+- **fonte**: Meiltz et al., Europace 2006, PMID 16627404
+
+## PJRT no adulto — os números da série de Meiltz et al.
+Série de referência específica da população **adulta** (não pediátrica), 49 pacientes (22 homens, 27 mulheres; idade média 43±16 anos):
+- **cardiomiopatia induzida por taquicardia (TIC) na apresentação**: 8 de 49 (**16%**)
+- **frequência ventricular média**: 146±30 bpm
+- **padrão de apresentação**: permanente/incessante em 23/49 (47%), paroxística em 26/49 (53%)
+- **localização da via acessória**: posterosseptal em 76%, sítio atípico em 24%
+- **sucesso agudo da ablação por radiofrequência**: 46/49 (**94%**), sem complicação grave
+- **sucesso a longo prazo, sem uso de antiarrítmico**: 49/49 (**100%**), em seguimento médio de **49±38 meses**
+- **regressão da cardiomiopatia induzida por taquicardia**: 8/8 (**100%**)
+- **fonte**: Meiltz et al., Europace 2006, PMID 16627404
+
+A conclusão literal dos autores é que a ablação por cateter é "altamente eficaz e deve ser considerada o tratamento de primeira escolha" para PJRT do adulto.
+
+## Contraste com a população pediátrica — a mesma arritmia, conduta diferente
+A série de Vaksmann et al. (85 crianças, idade ao diagnóstico entre o nascimento e 20 anos, mediana de 3 meses; seguimento mediano de 8,2 anos) mostra por que a estratégia inicial **não** é a mesma em criança pequena:
+- **insuficiência cardíaca congestiva na apresentação**: 24/85 (28%), revertida com tratamento clínico em todos os casos
+- **sucesso farmacológico**: amiodarona e verapamil foram os mais eficazes, com taxa de sucesso de **84-94%**
+- **resolução espontânea**: 19/85 (**22%**) — a PJRT pode desaparecer com o crescimento, achado sem equivalente na população adulta
+- **ablação por radiofrequência**: realizada em só 18 pacientes, com sucesso **variável e dependente da idade** — falha mais comum nos pacientes mais jovens (risco técnico maior em via posterosseptal perto do sistema de condução em coração pequeno)
+- **desfecho grave**: 2 pacientes com disfunção ventricular esquerda persistente evoluíram para **morte súbita**
+- **fonte**: Vaksmann et al., Heart 2006, PMID 15831598
+
+**A leitura correta não é "farmacoterapia é preferível"** — é que a decisão pediátrica pesa o risco técnico da ablação em via posterosseptal de coração pequeno contra a chance real de resolução espontânea, equação que não existe no adulto. No adulto, os números de Meiltz et al. (sucesso de 94-100%, sem complicação grave relatada) tornam a ablação a conduta inicial, não a de resgate.
+
+## Diretriz ACC/AHA/HRS 2015 de TSV do adulto
+A diretriz aborda a taquicardia juncional dentro do espectro de TSV do adulto, com a ablação por cateter posicionada como tratamento definitivo preferencial para a forma incessante/recorrente — em linha direta com a "regra do incessante" registrada acima: arritmia que ocupa a maior parte do dia carrega risco cumulativo de taquicardiomiopatia, e esse risco pesa a favor de tratamento definitivo em vez de tentativa prolongada de controle farmacológico.
+- **VERIFICAÇÃO HUMANA NECESSÁRIA**: a classe de recomendação e o nível de evidência específicos para PJRT/JET (em oposição à recomendação genérica de ablação em TSV) não foram confirmados linha a linha contra o texto integral da diretriz nesta sessão — ela não está em acesso aberto no PMC (0 resultados por `elink`/`esearch db=pmc`), e o `academic.oup.com`/`ahajournals.org` bloqueiam o PDF. Confirmar classe/nível exatos contra o texto integral antes de citá-los a um paciente ou em material de prescrição.
+- **fonte**: Page et al., Circulation 2016, PMID 26399663
+
+## JET no coração estruturalmente normal — risco de bloqueio AV na ablação
+A proximidade anatômica do foco de JET com o nó AV compacto e o feixe de His torna a ablação tecnicamente diferente de qualquer outra TSV: o mesmo tecido que abriga o foco automático é o tecido de condução essencial. A série de Law et al. (6 pacientes, 7,7-36,5 anos, coração estruturalmente normal) ilustra o problema e uma solução:
+- **crioablação eliminou a arritmia em todos os pacientes tratados**, confirmada em seguimento de 6 semanas
+- em **1 dos 6 pacientes**, o crio-mapeamento eliminou o foco juncional mas produziu **bloqueio AV completo transitório** — a ablação **não foi realizada** nesse paciente, justamente porque a reversibilidade do efeito frio permitiu identificar o risco antes de causar dano permanente (vantagem que a radiofrequência, com lesão irreversível desde a primeira aplicação, não oferece no mesmo grau)
+- **fonte**: Law et al., Heart Rhythm 2006, PMID 16876738
+
+## Armadilhas clínicas
+- **Não confundir ritmo/taquicardia juncional TRANSITÓRIA durante ablação de via lenta na AVNRT com JET como arritmia sustentada.** Batimentos juncionais acelerados durante a aplicação de radiofrequência na via lenta são um **marcador de sucesso do procedimento** (proximidade adequada do tecido-alvo), fenômeno autolimitado descrito por Chen et al. (PMID 9930910) — não é a mesma entidade clínica que este documento descreve, e tratar um achado intraprocedimento esperado como se fosse JET patológica é erro de leitura.
+- **PJRT incessante é frequentemente rotulada como "AVNRT atípica refratária" antes do diagnóstico correto.** O RP longo com P profundamente negativa em II/III/aVF e o padrão incessante — não paroxístico — são os dados que devem redirecionar a suspeita para via acessória decremental.
+- **Não extrapolar a resposta farmacológica pediátrica (84-94% com amiodarona/verapamil) para o adulto como estratégia inicial.** A série de referência em adultos mostra ablação com sucesso próximo de 100% e sem complicação grave relatada — farmacoterapia crônica expõe o adulto a mais tempo de risco de taquicardiomiopatia sem o benefício de resolução espontânea que existe na criança.
+- **Cardiomiopatia induzida por taquicardia é reversível quando tratada — mas não é sempre reversível a tempo.** A regressão completa da TIC em 8/8 adultos ablados (Meiltz et al.) contrasta com os 2 óbitos por morte súbita em disfunção ventricular persistente na série pediátrica (Vaksmann et al.): atraso no reconhecimento do padrão incessante tem custo real, não é só uma questão de conforto do paciente.
+- **Ablação de foco juncional automático carrega risco de bloqueio AV que a ablação de PJRT (via acessória posterosseptal, tecido distante do nó AV compacto) não tem na mesma magnitude** — a escolha de energia (crioablação favorece reversibilidade em foco próximo ao nó AV) e a discussão de risco com o paciente devem refletir qual das duas entidades está sendo tratada, não um risco genérico de "ablação de taquicardia supraventricular".
