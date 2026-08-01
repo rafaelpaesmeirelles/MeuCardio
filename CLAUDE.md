@@ -467,6 +467,49 @@ Decisão do Rafael, transmitida pela sessão `/root` (monitora):
    `/root/mensagens/avisar.sh <sessao> "mensagem"` para avisos imediatos, `/root/mensagens/*.md`
    para handoffs longos. Avisar ao abrir e fechar frente, e imediatamente ao detectar colisão.
 
+### 🛠️ TAREFA ESPECIAL — corvia2, 01/08/2026 noite: Assistente clínico com busca na internet
+### e seletor de modelo Claude (pedido direto do Rafael, via monitora)
+
+Exceção autorizada a mexer em backend/frontend (mesmo regime da tarefa de calculadoras).
+Rafael pediu: "ajustar assistente clínico para consultar base do site e também toda a
+internet como uma sessão do Claude tradicional, e dar opção de escolher o modelo do
+Claude." Especificação já levantada pela monitora (não repetir a pesquisa):
+
+- **`backend/app/services/ia/provedor.py`**: `ProvedorAnthropic.responder` ganha
+  `modelo: str | None = None` (override por chamada) e `usar_internet: bool = False`
+  — quando `True`, passa `tools=[{"type": "web_search_20260209", "name": "web_search"}]`
+  para `self._cliente.messages.create(...)`. Ao montar `texto`, filtrar só blocos
+  `type == "text"` (ignorar `server_tool_use`/`web_search_tool_result`). `ProvedorOpenAI`
+  recebe os mesmos parâmetros na assinatura por paridade de interface, ignora
+  `usar_internet` (sem busca na internet no caminho OpenAI).
+- **`backend/app/services/rag.py`**: `perguntar(db, pergunta, historico, temas=None,
+  modelo: str | None = None, usar_internet: bool = False)` — repassa para
+  `obter_provedor().responder(...)` (chamada hoje na linha ~489).
+- **`backend/app/api/ai.py`**: `Pergunta` ganha `modelo: str | None = None` e
+  `usar_internet: bool = False`. Validar `modelo` contra allowlist explícita —
+  `claude-opus-5`, `claude-sonnet-5`, `claude-haiku-4-5` (IDs corretos, sem sufixo de
+  data) — 422 se fora da lista. Se `usar_internet=True` e `settings.ai_provider !=
+  "anthropic"`, 422 explicando que a busca exige o provedor Claude. `status()` ganha
+  `modelos_disponiveis` (só quando provider é anthropic) para o frontend popular o
+  seletor.
+- **`frontend/src/pages/Assistente.tsx`**: novo estado `modeloEscolhido` (default
+  `status.modelo`) e `usarInternet` (toggle). Dropdown de modelo (só visível quando
+  `status.provedor === "anthropic"`) + checkbox "Buscar na internet" na área do
+  cabeçalho (linhas ~106-124, onde já ficam os botões Nova/Histórico). Incluir
+  `modelo`/`usar_internet` no corpo do POST `/ai/perguntar` (hoje em `enviar()`,
+  linhas ~61-84). Conferir se `ChatFlutuante.tsx` duplica essa chamada e precisa do
+  mesmo ajuste.
+- **NÃO mude `ai_provider` (config.py linha 45, hoje `"openai"`) sem antes conferir se
+  `ANTHROPIC_API_KEY` está de fato configurada no `.env` de produção** — troca de
+  provedor é decisão de custo/infra do Rafael, registrada no comentário do próprio
+  `provedor.py` como pendente. Implemente a funcionalidade inteira; se o provider atual
+  for `openai`, avise a monitora (`avisar.sh root-monitor` não existe — avise via
+  `/root/mensagens/*.md` ou aguarde a monitora perguntar) antes de flipar o default,
+  já que isso muda comportamento ao vivo para assinantes.
+- Teste manual antes de dar por pronto: suba o backend, rode uma pergunta com
+  `usar_internet=true` e confirme que a resposta cita fonte da web, e uma troca de
+  modelo confirmando no campo `modelo` da resposta.
+
 ### 🎯 REDIVISÃO 01/08/2026, noite — corvia3 dedicada a Cardiologia pediátrica, Cardiologia
 ### geriátrica e Cardiopatias/malformações congênitas
 
