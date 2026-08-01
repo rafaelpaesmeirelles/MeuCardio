@@ -12614,5 +12614,1122 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "rt-pcr-ou-sorologia-para-covid-19-na-suspeita-de-miocardite",
+    "statement": "Na avaliação laboratorial inicial da miocardite, a investigação sorológica e/ou a detecção de antígenos e/ou o RT-PCR para diagnóstico de Covid-19 são recomendados nos casos suspeitos (Classe I, Nível B). É a única investigação viral específica que a diretriz recomenda como Classe I — contrasta com a sorologia viral de rotina, que é Classe III.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 3.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "miocardite",
+      "Covid-19",
+      "RT-PCR",
+      "diagnóstico"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "investigacao-viral-dirigida-em-etiologia-especifica-de-miocardite",
+    "statement": "A investigação sorológica e/ou a detecção de antígenos e/ou o RT-PCR devem ser considerados na avaliação inicial de pacientes em situações especiais de suspeita de miocardite por etiologias específicas (Classe IIa, Nível C). A distinção que a diretriz faz é entre investigação DIRIGIDA por suspeita etiológica, que é IIa, e painel viral de rotina, que é Classe III.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 3.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "miocardite",
+      "investigação etiológica",
+      "sorologia viral"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "ecocardiograma-para-guiar-a-biopsia-endomiocardica-na-miocardite",
+    "statement": "O ecocardiograma deve ser considerado para guiar a biópsia endomiocárdica na miocardite (Classe IIa, Nível C).",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 5.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "miocardite",
+      "ecocardiograma",
+      "biópsia endomiocárdica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "angiotomografia-de-coronarias-para-excluir-dac-obstrutiva-na-suspeita-de-miocardite",
+    "statement": "A angiotomografia de coronárias é recomendada para exclusão de coronariopatia obstrutiva grave na investigação de miocardite, como alternativa à coronariografia, em pacientes com probabilidade pré-teste baixa ou intermediária de doença arterial coronariana (Classe I, Nível C).",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 11.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "miocardite",
+      "angiotomografia de coronárias",
+      "diagnóstico diferencial"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "biopsia-endomiocardica-na-ic-entre-3-e-12-meses-refrataria",
+    "statement": "A biópsia endomiocárdica deve ser considerada na insuficiência cardíaca com início entre 3 e 12 meses, sem causa definida e não responsiva à terapia-padrão otimizada (Classe IIa, Nível C). É a faixa temporal intermediária: abaixo de 3 meses a indicação é Classe I, e aqui cai para IIa.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 12.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "miocardite",
+      "biópsia endomiocárdica",
+      "insuficiência cardíaca"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "biopsia-endomiocardica-na-cardiomiopatia-dilatada-com-suspeita-alergica-ou-eosinofilia",
+    "statement": "A biópsia endomiocárdica deve ser considerada na insuficiência cardíaca decorrente de cardiomiopatia dilatada de QUALQUER duração, quando houver suspeita de reação alérgica e/ou eosinofilia (Classe IIa, Nível C). A ausência de limite de tempo nesta linha é deliberada e a distingue das demais indicações da mesma tabela.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 12.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "miocardite eosinofílica",
+      "biópsia endomiocárdica",
+      "cardiomiopatia dilatada"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "biopsia-endomiocardica-em-arritmia-ventricular-frequente-sem-causa-definida",
+    "statement": "A biópsia endomiocárdica pode ser considerada diante de arritmias ventriculares frequentes, com ou sem sintomas, sem causa definida (Classe IIb, Nível C).",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 12.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "miocardite",
+      "biópsia endomiocárdica",
+      "arritmia ventricular"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "imunossupressao-na-miocardite-comprovada-com-disfuncao-ventricular",
+    "statement": "A terapêutica imunossupressora é recomendada na presença de miocardite comprovada — por células gigantes, doenças autoimunes, sarcoidose ou eosinofílica — associada à disfunção ventricular (Classe I, Nível B).",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 17.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "miocardite",
+      "imunossupressão",
+      "disfunção ventricular"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "imunossupressao-na-miocardite-viral-negativa-com-ic-cronica",
+    "statement": "A terapêutica imunossupressora deve ser considerada na miocardite comprovada por biópsia endomiocárdica COM PESQUISA VIRAL NEGATIVA, em pacientes com insuficiência cardíaca crônica, com o objetivo de melhora clínica e da função ventricular (Classe IIa, Nível B). A pesquisa viral negativa no miocárdio é condição da recomendação, não detalhe.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 17.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "miocardite",
+      "imunossupressão",
+      "pesquisa viral negativa",
+      "insuficiência cardíaca crônica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "imunossupressao-na-ic-aguda-nao-responsiva-nao-e-recomendada",
+    "statement": "A terapêutica imunossupressora NÃO é recomendada na insuficiência cardíaca aguda não responsiva à terapêutica usual (Classe III, Nível C). É a situação em que a tentação de imunossuprimir é maior, e a diretriz a classifica como Classe III.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 17.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "miocardite",
+      "imunossupressão",
+      "insuficiência cardíaca aguda",
+      "Classe III"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "terapia-modificadora-de-prognostico-na-disfuncao-sistolica-por-miocardite",
+    "statement": "Na miocardite, o tratamento com medicações modificadoras de prognóstico é recomendado para pacientes com disfunção sistólica de ventrículo esquerdo, sintomáticos OU assintomáticos, de acordo com a diretriz de insuficiência cardíaca vigente (Classe I, Nível C).",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 18.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "miocardite",
+      "insuficiência cardíaca",
+      "terapia modificadora de prognóstico"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "manter-bloqueio-neuro-hormonal-apos-normalizacao-da-fe-na-miocardite",
+    "statement": "É recomendada a MANUTENÇÃO da terapia com bloqueio neuro-hormonal após a normalização da função ventricular na miocardite (Classe I, Nível C). Normalizar a fração de ejeção não autoriza suspender o tratamento.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 18.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "miocardite",
+      "bloqueio neuro-hormonal",
+      "recuperação de função ventricular"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "bloqueio-neuro-hormonal-com-fibrose-miocardica-sem-disfuncao",
+    "statement": "Deve-se considerar o uso de medicação com ação sobre bloqueio neuro-hormonal em pacientes com evidência de fibrose miocárdica SEM disfunção ventricular após miocardite (Classe IIa, Nível C).",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 18.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "miocardite",
+      "fibrose miocárdica",
+      "bloqueio neuro-hormonal"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "reavaliacao-periodica-nos-dois-primeiros-anos-apos-miocardite-sbc-2022",
+    "statement": "Pacientes com miocardite prévia devem ser reavaliados periodicamente, especialmente nos PRIMEIROS 2 ANOS, pelo risco aumentado de recorrência e de progressão silenciosa da doença (Classe IIa, Nível C).",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 20.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "miocardite",
+      "seguimento",
+      "recorrência",
+      "atleta"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "vacinacao-na-miocardite-quais-e-a-partir-de-quando",
+    "statement": "Na miocardite são recomendadas as vacinas contra gripe, pneumococo, caxumba, sarampo, rubéola, poliomielite e Covid-19 (Classe I, Nível C). Os pacientes não devem estar na fase aguda da doença, e a recomendação é vacinar com MAIS DE 3 MESES do início da suspeita diagnóstica.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 21.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "miocardite",
+      "vacinação",
+      "Covid-19",
+      "influenza"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "azatioprina-como-poupador-de-corticoide-na-sarcoidose-cardiaca",
+    "statement": "Na sarcoidose cardíaca, a azatioprina 50 a 200 mg/dia pode ser considerada como imunossupressor adicional em caso de uso de corticosteroide (Classe IIb, Nível C).",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 23.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "sarcoidose cardíaca",
+      "azatioprina",
+      "imunossupressão"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "metotrexato-como-poupador-de-corticoide-na-sarcoidose-cardiaca",
+    "statement": "Na sarcoidose cardíaca, o metotrexato 10 a 20 mg por semana pode ser considerado como imunossupressor adicional em caso de uso de corticosteroide (Classe IIb, Nível C).",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 23.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "sarcoidose cardíaca",
+      "metotrexato",
+      "imunossupressão"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "infliximab-na-sarcoidose-multissistemica",
+    "statement": "Na sarcoidose, o infliximab pode ser considerado nas formas pulmonar, cutânea, ocular, neurológica e multissistêmica (Classe IIb, Nível C). A indicação é por acometimento extracardíaco associado, não pelo comprometimento cardíaco isolado.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 23.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "sarcoidose cardíaca",
+      "infliximab",
+      "sarcoidose multissistêmica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "leflunomida-como-poupador-de-corticoide-na-sarcoidose-cardiaca",
+    "statement": "Na sarcoidose cardíaca, a leflunomida 10 a 20 mg/dia pode ser considerada como imunossupressor adicional em caso de uso de corticosteroide (Classe IIb, Nível C).",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 23.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "sarcoidose cardíaca",
+      "leflunomida",
+      "imunossupressão"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cdi-na-sarcoidose-cardiaca-apos-tv-ou-morte-abortada",
+    "statement": "Na sarcoidose cardíaca, o cardiodesfibrilador implantável é recomendado após taquicardia ventricular ou morte cardíaca abortada (Classe I, Nível C).",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 24.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "sarcoidose cardíaca",
+      "cardiodesfibrilador implantável",
+      "prevenção secundária"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cdi-na-sarcoidose-cardiaca-com-feve-abaixo-de-35",
+    "statement": "Na sarcoidose cardíaca, o cardiodesfibrilador implantável é recomendado quando a FEVE for menor que 35% a despeito de tratamento otimizado e de período de imunossupressão e inflamação ativa (Classe I, Nível C).",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 24.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "sarcoidose cardíaca",
+      "cardiodesfibrilador implantável",
+      "FEVE"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cdi-na-sarcoidose-cardiaca-com-sincope-inexplicada",
+    "statement": "Na sarcoidose cardíaca, o cardiodesfibrilador implantável deve ser considerado diante de síncope inexplicada de provável causa arrítmica (Classe IIa, Nível C).",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 24.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "sarcoidose cardíaca",
+      "cardiodesfibrilador implantável",
+      "síncope"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cdi-na-sarcoidose-com-fe-35-a-49-e-cicatriz-extensa-em-rm-ou-pet",
+    "statement": "Na sarcoidose cardíaca, o cardiodesfibrilador implantável deve ser considerado quando a fração de ejeção estiver entre 35% e 49% e/ou a FEVD for menor que 40%, a despeito de tratamento otimizado e imunossupressor, E houver evidência de CICATRIZ MIOCÁRDICA EXTENSA pela ressonância ou pelo PET (Classe IIa, Nível C). A cicatriz extensa é o que separa esta linha da seguinte.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 24.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "sarcoidose cardíaca",
+      "cardiodesfibrilador implantável",
+      "realce tardio",
+      "PET"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cdi-na-sarcoidose-com-fe-35-a-49-sem-cicatriz-extensa",
+    "statement": "Na sarcoidose cardíaca, o cardiodesfibrilador implantável PODE ser considerado quando a fração de ejeção estiver entre 35% e 49% e/ou a FEVD for menor que 40% a despeito de tratamento otimizado e imunossupressor, SEM a evidência de cicatriz extensa em ressonância ou PET (Classe IIb, Nível C). Mesma faixa de função ventricular da recomendação IIa: a presença ou ausência de cicatriz extensa é o único critério que muda a classe.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 24.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "sarcoidose cardíaca",
+      "cardiodesfibrilador implantável",
+      "FEVD"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "biopsia-ou-analise-de-explante-na-suspeita-de-miocardite-de-celulas-gigantes",
+    "statement": "Na suspeita de miocardite de células gigantes, é recomendada a biópsia endomiocárdica, ou a análise do coração explantado durante o transplante, ou de fragmento miocárdico obtido durante o implante de dispositivo de assistência mecânica, em pacientes com quadro agudo de insuficiência cardíaca com grave comprometimento hemodinâmico ou fulminante (Classe I, Nível B).",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 25.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "miocardite de células gigantes",
+      "biópsia endomiocárdica",
+      "assistência circulatória"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "biopsia-endomiocardica-em-miocardite-com-parada-arritmia-bloqueio-ou-simulacao-de-iam",
+    "statement": "A biópsia endomiocárdica é recomendada na suspeita de miocardite associada a parada cardíaca, ou fibrilação ou taquicardia ventricular, ou bloqueios, ou quadro simulando infarto agudo do miocárdio (Classe I, Nível B).",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 25.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "miocardite de células gigantes",
+      "biópsia endomiocárdica",
+      "parada cardíaca",
+      "bloqueio atrioventricular"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cdi-na-miocardite-de-celulas-gigantes",
+    "statement": "Na miocardite de células gigantes, o cardiodesfibrilador implantável é recomendado para prevenção primária ou secundária de arritmias ventriculares complexas (Classe I, Nível B). É a única miocardite em que a diretriz dá Classe I ao CDI também em prevenção PRIMÁRIA — na miocardite em geral, o CDI é Classe III na fase aguda e subaguda.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 26.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "miocardite de células gigantes",
+      "cardiodesfibrilador implantável",
+      "prevenção primária"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "tratamento-etiologico-na-infeccao-chagasica-aguda-qualquer-via-de-transmissao",
+    "statement": "Na miocardite chagásica aguda, o tratamento etiológico é recomendado na infecção aguda, independentemente do mecanismo de transmissão (Classe I, Nível C) — inclui, portanto, a transmissão oral, hoje a via mais frequente de surto no Brasil.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 27.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "doença de Chagas",
+      "miocardite chagásica aguda",
+      "tratamento etiológico",
+      "benznidazol"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "tratamento-etiologico-na-reativacao-de-infeccao-cronica-por-t-cruzi",
+    "statement": "O tratamento etiológico é recomendado na reativação de infecção crônica pelo Trypanosoma cruzi (Classe I, Nível C) — situação típica do paciente imunossuprimido, transplantado ou com HIV.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 27.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "doença de Chagas",
+      "reativação",
+      "imunossupressão",
+      "tratamento etiológico"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rm-cardiaca-na-miocardite-aguda-com-suspeita-de-acometimento-pericardico",
+    "statement": "No paciente com miocardite aguda e suspeita de acometimento pericárdico, a ressonância magnética cardíaca é recomendada para elucidação diagnóstica nos casos duvidosos (Classe I, Nível C).",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 37.",
+    "theme": "Pericárdio",
+    "tags": [
+      "miocardite",
+      "pericardite",
+      "ressonância magnética cardíaca",
+      "miopericardite"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "holter-na-miocardite-de-risco-intermediario-ou-alto",
+    "statement": "Na miocardite aguda, o Holter é recomendado para pacientes de risco prognóstico intermediário e alto (Classe I, Nível C).",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 41.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "miocardite",
+      "Holter",
+      "estratificação de risco"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "ecg-de-12-derivacoes-na-cardite-reumatica",
+    "statement": "O eletrocardiograma de 12 derivações é recomendado na avaliação diagnóstica da cardite reumática (Classe I, Nível B).",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 39.",
+    "theme": "Febre reumática",
+    "tags": [
+      "cardite reumática",
+      "febre reumática",
+      "diagnóstico",
+      "eletrocardiograma"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "radiografia-de-torax-na-cardite-reumatica",
+    "statement": "A radiografia de tórax é recomendada na avaliação diagnóstica da cardite reumática (Classe I, Nível C).",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 39.",
+    "theme": "Febre reumática",
+    "tags": [
+      "cardite reumática",
+      "febre reumática",
+      "diagnóstico",
+      "radiografia de tórax"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "ecodopplercardiograma-transtoracico-na-cardite-reumatica-sbc-2022",
+    "statement": "O ecodopplercardiograma transtorácico é recomendado na avaliação diagnóstica da cardite reumática (Classe I, Nível B).",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 39.",
+    "theme": "Febre reumática",
+    "tags": [
+      "cardite reumática",
+      "febre reumática",
+      "diagnóstico",
+      "ecocardiograma"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "ecodopplercardiograma-transesofagico-quando-a-janela-transtoracica-e-ruim-na-cardite-reumatica",
+    "statement": "O ecodopplercardiograma transesofágico é recomendado na cardite reumática em situações de dificuldade de visualização pela via transtorácica (Classe I, Nível C).",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 39.",
+    "theme": "Febre reumática",
+    "tags": [
+      "cardite reumática",
+      "febre reumática",
+      "diagnóstico",
+      "ecocardiograma transesofágico"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "vhs-e-pcr-na-cardite-reumatica",
+    "statement": "A velocidade de hemossedimentação e a proteína C-reativa são recomendadas na avaliação diagnóstica da cardite reumática — são os reagentes de fase aguda dos critérios de Jones (Classe I, Nível B).",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 39.",
+    "theme": "Febre reumática",
+    "tags": [
+      "cardite reumática",
+      "febre reumática",
+      "diagnóstico",
+      "VHS",
+      "proteína C-reativa",
+      "critérios de Jones"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "antiestreptolisina-o-na-cardite-reumatica",
+    "statement": "A antiestreptolisina O é recomendada na avaliação diagnóstica da cardite reumática, como evidência de infecção estreptocócica precedente nos critérios de Jones (Classe I, Nível C).",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 39.",
+    "theme": "Febre reumática",
+    "tags": [
+      "cardite reumática",
+      "febre reumática",
+      "diagnóstico",
+      "ASLO",
+      "critérios de Jones"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "antidesoxirribonuclease-b-como-alternativa-a-aslo-na-cardite-reumatica",
+    "statement": "A antidesoxirribonuclease B deve ser considerada como ALTERNATIVA à antiestreptolisina O na avaliação diagnóstica da cardite reumática (Classe IIa, Nível C) — útil quando a ASLO não está disponível ou é negativa apesar de forte suspeita.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 39.",
+    "theme": "Febre reumática",
+    "tags": [
+      "cardite reumática",
+      "febre reumática",
+      "diagnóstico",
+      "anti-DNase B",
+      "ASLO"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "alfa-1-glicoproteina-acida-no-monitoramento-da-atividade-da-cardite-reumatica",
+    "statement": "A alfa-1 glicoproteína ácida deve ser considerada para o MONITORAMENTO da atividade inflamatória na cardite reumática (Classe IIa, Nível C) — é acompanhamento de atividade, não critério diagnóstico.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 39.",
+    "theme": "Febre reumática",
+    "tags": [
+      "cardite reumática",
+      "febre reumática",
+      "diagnóstico",
+      "alfa-1 glicoproteína ácida",
+      "atividade inflamatória"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "eletroforese-de-proteinas-alfa-2-globulina-no-monitoramento-da-cardite-reumatica",
+    "statement": "A eletroforese de proteínas, pela fração alfa-2 globulina, deve ser considerada para o monitoramento da atividade inflamatória na cardite reumática (Classe IIa, Nível C).",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 39.",
+    "theme": "Febre reumática",
+    "tags": [
+      "cardite reumática",
+      "febre reumática",
+      "diagnóstico",
+      "eletroforese de proteínas",
+      "atividade inflamatória"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "troponina-como-criterio-diagnostico-de-cardite-reumatica-e-fraca",
+    "statement": "A troponina pode ser considerada como critério diagnóstico de cardite reumática, mas com recomendação fraca (Classe IIb, Nível B). A cardite reumática é predominantemente valvar, e não uma síndrome de necrose miocárdica — por isso a troponina não ocupa aqui o papel central que tem na miocardite.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 39.",
+    "theme": "Febre reumática",
+    "tags": [
+      "cardite reumática",
+      "febre reumática",
+      "diagnóstico",
+      "troponina"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cintilografia-com-galio-67-na-cardite-reumatica",
+    "statement": "A cintilografia com Gálio-67 deve ser considerada na avaliação diagnóstica da cardite reumática (Classe IIa, Nível B). Chama atenção que ela receba recomendação MAIS FORTE (IIa) que o PET com 18F-FDG e que a ressonância cardíaca (ambos IIb) nesta diretriz.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 39.",
+    "theme": "Febre reumática",
+    "tags": [
+      "cardite reumática",
+      "febre reumática",
+      "diagnóstico",
+      "cintilografia",
+      "Gálio-67"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "pet-18f-fdg-na-cardite-reumatica",
+    "statement": "O PET com 18F-FDG associado à tomografia pode ser considerado na avaliação diagnóstica da cardite reumática (Classe IIb, Nível B).",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 39.",
+    "theme": "Febre reumática",
+    "tags": [
+      "cardite reumática",
+      "febre reumática",
+      "diagnóstico",
+      "PET",
+      "18F-FDG"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "ressonancia-cardiaca-na-cardite-reumatica",
+    "statement": "A ressonância cardíaca pode ser considerada na avaliação diagnóstica da cardite reumática (Classe IIb, Nível C) — recomendação fraca, ao contrário do peso que a ressonância tem na miocardite não reumática, em que é Classe I.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 39.",
+    "theme": "Febre reumática",
+    "tags": [
+      "cardite reumática",
+      "febre reumática",
+      "diagnóstico",
+      "ressonância magnética cardíaca"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "biopsia-endomiocardica-na-cardite-reumatica-e-fraca",
+    "statement": "A biópsia endomiocárdica pode ser considerada na avaliação diagnóstica da cardite reumática (Classe IIb, Nível C).",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 39.",
+    "theme": "Febre reumática",
+    "tags": [
+      "cardite reumática",
+      "febre reumática",
+      "diagnóstico",
+      "biópsia endomiocárdica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "repouso-na-cardite-reumatica-moderada-ou-grave",
+    "statement": "No tratamento da cardite reumática, o repouso deve ser considerado nos casos moderados ou graves (Classe IIa, Nível C).",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 40.",
+    "theme": "Febre reumática",
+    "tags": [
+      "cardite reumática",
+      "repouso",
+      "tratamento"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hospitalizacao-na-cardite-reumatica-moderada-a-grave",
+    "statement": "A hospitalização para controle de sintomas deve ser considerada na cardite reumática moderada a grave (Classe IIa, Nível C).",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 40.",
+    "theme": "Febre reumática",
+    "tags": [
+      "cardite reumática",
+      "hospitalização"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "prednisona-em-dose-menor-na-cardite-reumatica-subclinica-a-leve",
+    "statement": "Na cardite reumática de casos SUBCLÍNICOS A LEVES, a prednisona 0,5 a 1 mg/kg/dia (máximo 50 mg) por via oral, podendo ser dividida em 2 a 3 tomadas diárias, mantida por 15 dias, com redução posterior semanal de 20% da dose, pode ser considerada; o tempo total é de 4 a 8 semanas (Classe IIb, Nível B). Note que esta é a dose MENOR e a recomendação MAIS FRACA — a gravidade é o único critério que a separa do esquema de 1 a 2 mg/kg, que é Classe I.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 40.",
+    "theme": "Febre reumática",
+    "tags": [
+      "cardite reumática",
+      "prednisona",
+      "corticoterapia",
+      "dose"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "aas-ou-naproxeno-na-cardite-reumatica-subclinica-com-artrite-ou-pericardite",
+    "statement": "Na cardite reumática de casos subclínicos com artrite e/ou PERICARDITE associada, é recomendado o ácido acetilsalicílico 100 mg/kg (máximo 3 a 4 g) dividido em 4 doses, OU o naproxeno 20 mg/kg (máximo 1.000 mg) dividido em 2 doses, por tempo total de 2 semanas (Classe I, Nível B).",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 40.",
+    "theme": "Febre reumática",
+    "tags": [
+      "cardite reumática",
+      "ácido acetilsalicílico",
+      "naproxeno",
+      "pericardite",
+      "dose"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "prednisona-em-dose-plena-na-cardite-reumatica-moderada-a-grave",
+    "statement": "Na cardite reumática de casos MODERADOS A GRAVES, é recomendada a prednisona 1 a 2 mg/kg/dia (máximo 60 mg) por via oral, podendo ser dividida em 2 a 3 tomadas diárias, mantida por 15 dias, com redução posterior semanal de 20% da dose; o tempo total é de cerca de 12 semanas (Classe I, Nível B) — o triplo do tempo mínimo do esquema dos casos leves.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 40.",
+    "theme": "Febre reumática",
+    "tags": [
+      "cardite reumática",
+      "prednisona",
+      "corticoterapia",
+      "dose"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "metilprednisolona-em-pulsos-na-cardite-reumatica-refrataria",
+    "statement": "Na cardite reumática de casos graves e refratários ao tratamento inicial, a metilprednisolona 30 mg/kg/dia em ciclos semanais pode ser considerada (Classe IIb, Nível B).",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 40.",
+    "theme": "Febre reumática",
+    "tags": [
+      "cardite reumática",
+      "metilprednisolona",
+      "pulsoterapia",
+      "refratariedade"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "tratamento-da-insuficiencia-cardiaca-na-cardite-reumatica",
+    "statement": "Na presença de sinais ou sintomas de disfunção ventricular na cardite reumática, é recomendado o tratamento medicamentoso da insuficiência cardíaca com diurético e drogas de atuação neuro-hormonal (Classe I, Nível C).",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 40.",
+    "theme": "Febre reumática",
+    "tags": [
+      "cardite reumática",
+      "insuficiência cardíaca",
+      "diurético"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cirurgia-valvar-na-cardite-reumatica-grave-e-refrataria",
+    "statement": "Na cardite reumática de casos graves e refratários, a cirurgia cardíaca valvar é recomendada, com plástica valvar mitral por técnica que permita o crescimento do anel e, quando houver troca aórtica, preferência por prótese mecânica (Classe I, Nível B). As duas especificações técnicas são parte da recomendação, porque a população é pediátrica e em crescimento.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 40.",
+    "theme": "Febre reumática",
+    "tags": [
+      "cardite reumática",
+      "cirurgia valvar",
+      "plástica mitral",
+      "prótese mecânica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "betabloqueador-espironolactona-e-sacubitril-valsartana-na-disfuncao-sistolica-por-miocardite",
+    "statement": "Na miocardite com disfunção sistólica de ventrículo esquerdo, é recomendado o tratamento com betabloqueador, espironolactona e sacubitril-valsartana (Classe I, Nível C).",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 43.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "miocardite",
+      "betabloqueador",
+      "espironolactona",
+      "sacubitril-valsartana"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "marca-passo-provisorio-na-bradiarritmia-da-fase-aguda-da-miocardite",
+    "statement": "O marca-passo provisório é recomendado para bradiarritmias sintomáticas e/ou bloqueio atrioventricular avançado durante a FASE AGUDA da miocardite (Classe I, Nível C) — provisório, porque a condução frequentemente se recupera com a resolução da inflamação.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 43.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "miocardite",
+      "marca-passo provisório",
+      "bloqueio atrioventricular",
+      "bradiarritmia"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "amiodarona-na-tvns-sintomatica-ou-tvs-da-fase-aguda-da-miocardite",
+    "statement": "A terapia antiarrítmica com amiodarona é recomendada na taquicardia ventricular não sustentada SINTOMÁTICA ou na taquicardia ventricular sustentada durante a fase aguda da miocardite (Classe I, Nível C). É tratamento de arritmia manifesta — para prevenção primária, o antiarrítmico é Classe III.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 43.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "miocardite",
+      "amiodarona",
+      "taquicardia ventricular"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cdi-na-fase-cronica-da-miocardite-com-cardiomiopatia-dilatada",
+    "statement": "O implante de cardiodesfibrilador para prevenção primária de morte súbita deve ser considerado em pacientes com cardiomiopatia dilatada na FASE CRÔNICA da miocardite (mais de 6 meses), com tratamento clínico otimizado, classe funcional II ou III, FEVE de 35% ou menos e expectativa de vida de pelo menos 1 ano (Classe IIa, Nível C).",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 43.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "miocardite",
+      "cardiodesfibrilador implantável",
+      "prevenção primária",
+      "cardiomiopatia dilatada"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cdi-nas-fases-aguda-e-subaguda-da-miocardite-nao-e-recomendado",
+    "statement": "O implante de cardiodesfibrilador NÃO é recomendado nas fases aguda e subaguda da miocardite, ou seja, nos primeiros 6 meses (Classe III, Nível C). O corte de 6 meses é o que separa esta Classe III da recomendação IIa da fase crônica: a função ventricular pode se recuperar, e implantar cedo demais expõe a um dispositivo definitivo por uma disfunção transitória. A exceção é a miocardite de células gigantes, em que o CDI é Classe I.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 43.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "miocardite",
+      "cardiodesfibrilador implantável",
+      "Classe III",
+      "fase aguda"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "antiarritmico-para-prevencao-primaria-na-miocardite-nao-e-recomendado",
+    "statement": "O uso de agentes antiarrítmicos para PREVENÇÃO PRIMÁRIA de arritmias cardíacas na miocardite NÃO é recomendado (Classe III, Nível C).",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 43.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "miocardite",
+      "antiarrítmico",
+      "prevenção primária",
+      "Classe III"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "seguimento-clinico-e-ecg-na-miocardite-de-baixo-risco",
+    "statement": "Na miocardite de BAIXO RISCO, é recomendado acompanhamento clínico com eletrocardiograma aos 1, 3, 6 e 12 meses, e anualmente a seguir (Classe I, Nível C).",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 44.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "miocardite",
+      "seguimento",
+      "eletrocardiograma",
+      "baixo risco"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "seguimento-ecocardiografico-na-miocardite-de-baixo-risco",
+    "statement": "Na miocardite de baixo risco, é recomendado acompanhamento por ecocardiograma aos 1, 6 e 12 meses, e anualmente a seguir (Classe I, Nível C). O calendário do ecocardiograma é mais espaçado que o do eletrocardiograma, que inclui também o 3º mês.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 44.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "miocardite",
+      "seguimento",
+      "ecocardiograma",
+      "baixo risco"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "seguimento-na-miocardite-de-risco-intermediario",
+    "statement": "Na miocardite de RISCO INTERMEDIÁRIO, é recomendada avaliação clínica e laboratorial com Holter e exames de imagem aos 1, 3 e 6 meses — ecocardiograma e/ou ressonância conforme disponibilidade —, e anualmente a seguir (Classe I, Nível C).",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 44.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "miocardite",
+      "seguimento",
+      "Holter",
+      "risco intermediário"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "seguimento-na-miocardite-de-alto-risco-comeca-em-15-dias",
+    "statement": "Na miocardite de ALTO RISCO, é recomendado acompanhamento clínico e laboratorial com Holter e exames de imagem aos 15 DIAS, 1, 3 e 6 meses — ecocardiograma ou ressonância conforme disponibilidade —, e anualmente a seguir (Classe I, Nível C). A avaliação de 15 dias existe só neste estrato e é o que o distingue operacionalmente dos demais.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2022,
+    "guideline_title": "Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022",
+    "reference": "Montera MW, Marcondes-Braga FG, Simões MV, et al. Diretriz de Miocardites da Sociedade Brasileira de Cardiologia – 2022. Arq Bras Cardiol. 2022;119(1):143-211. DOI: 10.36660/abc.20220412. PMID 35830116. PMCID PMC9352123 (acesso aberto, CC BY). Errata: Arq Bras Cardiol. 2022;119(6):1008 — corrige apenas a grafia do nome de um autor, nenhuma recomendação, número ou classe. Tabela 44.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "miocardite",
+      "seguimento",
+      "alto risco",
+      "Holter"
+    ],
+    "review_status": "revisado"
   }
 ]
