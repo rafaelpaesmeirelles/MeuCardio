@@ -1,4 +1,5 @@
 import json
+import logging
 
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import StreamingResponse
@@ -12,6 +13,8 @@ from app.core.security import current_user, require_admin
 from app.models.audit import AuditLog
 from app.models.rag import AIConversation, AIMessage
 from app.services import rag
+
+log = logging.getLogger("meucardio.ai")
 
 router = APIRouter(prefix="/api/ai", tags=["ia"])
 
@@ -122,7 +125,16 @@ def _preparar_pergunta(dados: Pergunta, db: Session, user) -> tuple[AIConversati
     else:
         conv = AIConversation(user_id=user.id, titulo=dados.pergunta[:120].strip())
         db.add(conv)
-        db.flush()
+        # commit, não flush: a conversa precisa estar DURAVELMENTE gravada
+        # antes de perguntar() começar — achado em produção (IntegrityError
+        # em ai_messages, FK apontando pra conversation_id inexistente): com
+        # só flush(), a conversa ficava presa numa transação aberta e OCIOSA
+        # durante os ~1-2 min de streaming/busca na internet, e o
+        # idle_in_transaction_session_timeout do Postgres derrubava essa
+        # transação no meio — a linha "existia" só na sessão do SQLAlchemy,
+        # nunca foi de fato commitada, e o INSERT final em ai_messages
+        # referenciava um id que não estava na tabela.
+        db.commit()
 
     anteriores = db.execute(
         select(AIMessage).where(AIMessage.conversation_id == conv.id).order_by(AIMessage.created_at)
@@ -151,6 +163,7 @@ def perguntar(dados: Pergunta, db: Session = Depends(get_db), user=Depends(curre
     except NotImplementedError as e:
         raise HTTPException(status_code=501, detail=str(e))
     except Exception as e:  # falha do provedor externo
+        log.exception("Falha em /ai/perguntar (conversation_id=%s)", conv.id)
         raise HTTPException(
             status_code=502,
             detail=f"O provedor de IA não respondeu ({type(e).__name__}). Tente novamente.",
@@ -222,6 +235,12 @@ def perguntar_stream(dados: Pergunta, db: Session = Depends(get_db), user=Depend
                     db.commit()
                     yield f"data: {json.dumps({'tipo': 'final', 'conversation_id': conv.id, 'fontes': r['fontes'], 'fontes_pubmed': r['fontes_pubmed'], 'modelo': r['modelo']}, ensure_ascii=False)}\n\n"
         except Exception as e:
+            # Sem isto, o erro real só aparecia indo direto ao log do
+            # Postgres — o usuário via só "IntegrityError" e ninguém
+            # descobria O QUÊ sem SQL manual. log.exception grava o
+            # traceback inteiro no log do container, de onde `docker compose
+            # logs backend` alcança sem depender do banco.
+            log.exception("Falha em /ai/perguntar/stream (conversation_id=%s)", conv.id)
             db.rollback()
             yield f"data: {json.dumps({'tipo': 'erro', 'detalhe': f'O provedor de IA não respondeu ({type(e).__name__}). Tente novamente.'}, ensure_ascii=False)}\n\n"
 
