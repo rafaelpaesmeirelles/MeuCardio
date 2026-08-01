@@ -30,7 +30,13 @@ class ProvedorIA(ABC):
     def embeddings(self, textos: list[str]) -> list[list[float]]: ...
 
     @abstractmethod
-    def responder(self, sistema: str, mensagens: list[dict]) -> Resposta: ...
+    def responder(
+        self,
+        sistema: str,
+        mensagens: list[dict],
+        modelo: str | None = None,
+        usar_internet: bool = False,
+    ) -> Resposta: ...
 
     @property
     @abstractmethod
@@ -53,9 +59,20 @@ class ProvedorOpenAI(ProvedorIA):
         resp = self._cliente.embeddings.create(model=self._modelo_embedding, input=textos)
         return [d.embedding for d in resp.data]
 
-    def responder(self, sistema: str, mensagens: list[dict]) -> Resposta:
+    def responder(
+        self,
+        sistema: str,
+        mensagens: list[dict],
+        modelo: str | None = None,
+        usar_internet: bool = False,
+    ) -> Resposta:
+        # usar_internet e modelo por chamada não têm efeito no caminho OpenAI —
+        # aceitos na assinatura só por paridade de interface com ProvedorAnthropic.
+        # A validação de que usar_internet exige provider="anthropic" é feita
+        # antes, na rota (app/api/ai.py), não aqui.
+        modelo_efetivo = self._modelo
         resp = self._cliente.chat.completions.create(
-            model=self._modelo,
+            model=modelo_efetivo,
             messages=[{"role": "system", "content": sistema}, *mensagens],
             max_tokens=settings.ai_max_output_tokens,
             temperature=0.2,
@@ -65,7 +82,7 @@ class ProvedorOpenAI(ProvedorIA):
             texto=resp.choices[0].message.content or "",
             tokens_entrada=getattr(uso, "prompt_tokens", 0) or 0,
             tokens_saida=getattr(uso, "completion_tokens", 0) or 0,
-            modelo=self._modelo,
+            modelo=modelo_efetivo,
         )
 
 
@@ -93,18 +110,31 @@ class ProvedorAnthropic(ProvedorIA):
             "Configure AI_EMBEDDING_PROVIDER separadamente ao migrar a geração para Claude."
         )
 
-    def responder(self, sistema: str, mensagens: list[dict]) -> Resposta:
-        resp = self._cliente.messages.create(
-            model=self._modelo,
-            system=sistema,
-            messages=mensagens,
-            max_tokens=settings.ai_max_output_tokens,
-        )
+    def responder(
+        self,
+        sistema: str,
+        mensagens: list[dict],
+        modelo: str | None = None,
+        usar_internet: bool = False,
+    ) -> Resposta:
+        modelo_efetivo = modelo or self._modelo
+        kwargs: dict = {
+            "model": modelo_efetivo,
+            "system": sistema,
+            "messages": mensagens,
+            "max_tokens": settings.ai_max_output_tokens,
+        }
+        if usar_internet:
+            kwargs["tools"] = [{"type": "web_search_20260209", "name": "web_search"}]
+        resp = self._cliente.messages.create(**kwargs)
+        # Com busca na internet ligada, resp.content mistura blocos de texto com
+        # blocos de uso de ferramenta (server_tool_use/web_search_tool_result) —
+        # só os blocos type == "text" compõem a resposta final ao usuário.
         return Resposta(
             texto="".join(b.text for b in resp.content if b.type == "text"),
             tokens_entrada=resp.usage.input_tokens,
             tokens_saida=resp.usage.output_tokens,
-            modelo=self._modelo,
+            modelo=modelo_efetivo,
         )
 
 

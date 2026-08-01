@@ -472,7 +472,12 @@ def contar_uso_diario(db: Session, user_id: int) -> int:
 
 
 def perguntar(
-    db: Session, pergunta: str, historico: list[dict], temas: list[str] | None = None
+    db: Session,
+    pergunta: str,
+    historico: list[dict],
+    temas: list[str] | None = None,
+    modelo: str | None = None,
+    usar_internet: bool = False,
 ) -> dict:
     from app.services.pubmed import buscar_pubmed, montar_contexto_pubmed
 
@@ -486,10 +491,15 @@ def perguntar(
     if contexto_pubmed:
         contexto = f"{contexto}\n\n{contexto_pubmed}"
 
-    resposta = obter_provedor().responder(PROMPT_SISTEMA, [
-        *historico[-8:],
-        {"role": "user", "content": f"CONTEXTO INSTITUCIONAL:\n{contexto}\n\nPERGUNTA:\n{pergunta}"},
-    ])
+    resposta = obter_provedor().responder(
+        PROMPT_SISTEMA,
+        [
+            *historico[-8:],
+            {"role": "user", "content": f"CONTEXTO INSTITUCIONAL:\n{contexto}\n\nPERGUNTA:\n{pergunta}"},
+        ],
+        modelo=modelo,
+        usar_internet=usar_internet,
+    )
 
     return {
         "texto": resposta.texto,

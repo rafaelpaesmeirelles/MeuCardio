@@ -11,7 +11,7 @@ type Fonte = {
 type FontePubmed = { pmid: string; titulo: string; autores: string; revista: string; ano: string; url: string };
 type Mensagem = { papel: "user" | "assistant"; conteudo: string; fontes?: Fonte[]; fontesPubmed?: FontePubmed[] };
 type Status = {
-  ativo: boolean; provedor: string; modelo: string;
+  ativo: boolean; provedor: string; modelo: string; modelos_disponiveis: string[];
   limite_diario: number; usado_hoje: number; restante_hoje: number;
 };
 type ConversaResumo = { id: number; titulo: string; updated_at: string };
@@ -25,9 +25,16 @@ export default function Assistente() {
   const [erro, setErro] = useState("");
   const [historico, setHistorico] = useState<ConversaResumo[]>([]);
   const [mostrarHistorico, setMostrarHistorico] = useState(false);
+  const [modeloEscolhido, setModeloEscolhido] = useState("");
+  const [usarInternet, setUsarInternet] = useState(false);
   const fim = useRef<HTMLDivElement>(null);
 
-  useEffect(() => { api.get<Status>("/ai/status").then(setStatus).catch(() => setStatus(null)); }, []);
+  useEffect(() => {
+    api.get<Status>("/ai/status").then((s) => {
+      setStatus(s);
+      setModeloEscolhido(s.modelo);
+    }).catch(() => setStatus(null));
+  }, []);
   useEffect(() => { fim.current?.scrollIntoView({ behavior: "smooth" }); }, [mensagens, pensando]);
 
   const recarregarHistorico = () => api.get<ConversaResumo[]>("/ai/conversas").then(setHistorico).catch(() => {});
@@ -68,7 +75,11 @@ export default function Assistente() {
     try {
       const r = await api.post<{
         conversation_id: number; resposta: string; fontes: Fonte[]; fontes_pubmed: FontePubmed[];
-      }>("/ai/perguntar", { pergunta: texto, conversation_id: conversa });
+      }>("/ai/perguntar", {
+        pergunta: texto, conversation_id: conversa,
+        modelo: status?.provedor === "anthropic" ? modeloEscolhido : undefined,
+        usar_internet: status?.provedor === "anthropic" ? usarInternet : false,
+      });
       setConversa(r.conversation_id);
       setMensagens((m) => [...m, {
         papel: "assistant", conteudo: r.resposta, fontes: r.fontes,
@@ -108,7 +119,29 @@ export default function Assistente() {
           <p className="eyebrow">Assistente clínico</p>
           <h1 style={{ marginBottom: 2 }}>Perguntar à base</h1>
         </div>
-        <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
+        <div style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap" }}>
+          {status.provedor === "anthropic" && (
+            <>
+              <select
+                value={modeloEscolhido}
+                onChange={(e) => setModeloEscolhido(e.target.value)}
+                aria-label="Modelo Claude"
+                style={{ padding: "0.35rem 0.5rem", fontSize: "0.82rem" }}
+              >
+                {status.modelos_disponiveis.map((m) => (
+                  <option key={m} value={m}>{m}</option>
+                ))}
+              </select>
+              <label style={{ display: "flex", alignItems: "center", gap: 4, fontSize: "0.82rem" }}>
+                <input
+                  type="checkbox"
+                  checked={usarInternet}
+                  onChange={(e) => setUsarInternet(e.target.checked)}
+                />
+                Buscar na internet
+              </label>
+            </>
+          )}
           <button className="botao botao--secundario" style={{ padding: "0.35rem 0.7rem", fontSize: "0.82rem" }}
                   onClick={novaConversa}>
             + Nova

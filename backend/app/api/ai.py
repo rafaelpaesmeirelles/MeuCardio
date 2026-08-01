@@ -14,11 +14,17 @@ from app.services import rag
 
 router = APIRouter(prefix="/api/ai", tags=["ia"])
 
+# IDs corretos dos modelos Claude, sem sufixo de data — mesma allowlist usada
+# para validar `modelo` e para popular o seletor no frontend.
+MODELOS_ANTHROPIC_PERMITIDOS = ["claude-opus-5", "claude-sonnet-5", "claude-haiku-4-5"]
+
 
 class Pergunta(BaseModel):
     pergunta: str = Field(min_length=3, max_length=4000)
     conversation_id: int | None = None
     temas: list[str] | None = None
+    modelo: str | None = None
+    usar_internet: bool = False
 
 
 @router.get("/status")
@@ -28,6 +34,7 @@ def status(db: Session = Depends(get_db), user=Depends(current_user)):
         "ativo": settings.ai_enabled and bool(settings.openai_api_key or settings.anthropic_api_key),
         "provedor": settings.ai_provider,
         "modelo": settings.openai_model if settings.ai_provider == "openai" else settings.anthropic_model,
+        "modelos_disponiveis": MODELOS_ANTHROPIC_PERMITIDOS if settings.ai_provider == "anthropic" else [],
         "limite_diario": settings.ai_daily_limit,
         "usado_hoje": usado,
         "restante_hoje": max(settings.ai_daily_limit - usado, 0),
@@ -88,6 +95,17 @@ def perguntar(dados: Pergunta, db: Session = Depends(get_db), user=Depends(curre
             detail=f"Remova estes identificadores antes de enviar: {', '.join(achados)}.",
         )
 
+    if dados.modelo is not None and dados.modelo not in MODELOS_ANTHROPIC_PERMITIDOS:
+        raise HTTPException(
+            status_code=422,
+            detail=f"Modelo inválido. Use um de: {', '.join(MODELOS_ANTHROPIC_PERMITIDOS)}.",
+        )
+    if dados.usar_internet and settings.ai_provider != "anthropic":
+        raise HTTPException(
+            status_code=422,
+            detail="A busca na internet exige o provedor Claude (AI_PROVIDER=anthropic).",
+        )
+
     usado = rag.contar_uso_diario(db, user.id)
     if usado >= settings.ai_daily_limit:
         raise HTTPException(
@@ -110,7 +128,10 @@ def perguntar(dados: Pergunta, db: Session = Depends(get_db), user=Depends(curre
     historico = [{"role": m.papel, "content": m.conteudo} for m in anteriores]
 
     try:
-        r = rag.perguntar(db, dados.pergunta, historico, dados.temas)
+        r = rag.perguntar(
+            db, dados.pergunta, historico, dados.temas,
+            modelo=dados.modelo, usar_internet=dados.usar_internet,
+        )
     except NotImplementedError as e:
         raise HTTPException(status_code=501, detail=str(e))
     except Exception as e:  # falha do provedor externo
