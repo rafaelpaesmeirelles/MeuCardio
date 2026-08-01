@@ -23238,5 +23238,1351 @@
       "sincope pediatrica"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-rm-sem-vasodilatador-em-fe-preservada",
+    "statement": "Em pacientes normotensos com função sistólica ventricular esquerda preservada, não há evidência que sustente o uso de vasodilatador na regurgitação mitral (RM) primária significativa.",
+    "recommendation_class": "Ponderada",
+    "evidence_level": "B",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Regurgitação mitral, manejo clínico",
+    "theme": "Febre reumática",
+    "tags": [
+      "regurgitacao mitral",
+      "vasodilatador",
+      "doenca cardiaca reumatica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-rm-grave-sintomatica-encaminhar-para-cirurgia",
+    "statement": "Pacientes com RM grave e função sistólica de VE preservada que são sintomáticos devem ser automaticamente encaminhados para tratamento cirúrgico.",
+    "recommendation_class": "Forte",
+    "evidence_level": "B",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Regurgitação mitral, indicação cirúrgica",
+    "theme": "Febre reumática",
+    "tags": [
+      "regurgitacao mitral",
+      "indicacao cirurgica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-rm-dilatacao-ou-disfuncao-de-ve-maior-risco",
+    "statement": "Pacientes com RM que desenvolvem dilatação do VE (adultos: diâmetro diastólico final ≥40 mm) ou disfunção sistólica (FE ≥30% e <60%) têm maior risco cirúrgico, menor chance de restaurar função sistólica normal e maior risco de insuficiência cardíaca tardia e morte.",
+    "recommendation_class": "Forte",
+    "evidence_level": "B",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Regurgitação mitral, indicação cirúrgica",
+    "theme": "Febre reumática",
+    "tags": [
+      "regurgitacao mitral",
+      "disfuncao ventricular",
+      "indicacao cirurgica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-rm-mesmo-risco-em-fa-pre-operatoria",
+    "statement": "O maior risco associado a dilatação/disfunção do VE na RM também se aplica a pacientes com fibrilação atrial pré-operatória.",
+    "recommendation_class": "Ponderada",
+    "evidence_level": "B",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Regurgitação mitral, indicação cirúrgica",
+    "theme": "Febre reumática",
+    "tags": [
+      "regurgitacao mitral",
+      "fibrilacao atrial"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-rm-criancas-cirurgia-por-z-score",
+    "statement": "Em crianças com RM, a cirurgia pode ser considerada se o Z-score do diâmetro/volume sistólico final do VE for >+2,0, e é altamente recomendada se >+3,0.",
+    "recommendation_class": "Forte",
+    "evidence_level": "C",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Regurgitação mitral, indicação cirúrgica em criança",
+    "theme": "Febre reumática",
+    "tags": [
+      "regurgitacao mitral",
+      "cardiopatia reumatica pediatrica",
+      "z-score"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-rm-hipertensao-ieca-precoce",
+    "statement": "Em adultos com RM e hipertensão, agentes anti-hipertensivos devem ser usados conforme a diretriz de hipertensão, incluindo uso precoce de inibidor da ECA.",
+    "recommendation_class": "Forte",
+    "evidence_level": "A",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Regurgitação mitral, manejo clínico",
+    "theme": "Febre reumática",
+    "tags": [
+      "regurgitacao mitral",
+      "hipertensao",
+      "ieca"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-rm-adulto-assintomatico-so-opera-se-sintomas-refratarios",
+    "statement": "Em adultos com RM assintomática ou pouco sintomática, embora o limiar de intervenção seja mais baixo em criança/adolescente, a intervenção só está indicada nos que têm sintomas refratários à terapia medicamentosa.",
+    "recommendation_class": "Ponderada",
+    "evidence_level": "C",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Regurgitação mitral, indicação cirúrgica",
+    "theme": "Febre reumática",
+    "tags": [
+      "regurgitacao mitral",
+      "assintomatico"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-rm-cirurgia-precoce-em-centro-especializado-mesmo-sem-criterio-formal",
+    "statement": "Pacientes com RM significativa, anatomia favorável e boa adesão à profilaxia secundária, que não preenchem os critérios formais de indicação cirúrgica, podem ser considerados para cirurgia precoce em centros com baixa mortalidade perioperatória e altas taxas de sucesso no reparo mitral.",
+    "recommendation_class": "Ponderada",
+    "evidence_level": "C",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Regurgitação mitral, indicação cirúrgica",
+    "theme": "Febre reumática",
+    "tags": [
+      "regurgitacao mitral",
+      "reparo valvar",
+      "centro especializado"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-rm-moderada-a-grave-assintomatica-encaminhar-precocemente",
+    "statement": "Pacientes com RM moderada ou grave assintomática devem ser encaminhados precocemente a equipes especializadas, considerando achados clínicos, ecocardiográficos, circunstâncias individuais e teste de esforço.",
+    "recommendation_class": "Forte",
+    "evidence_level": "B",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Regurgitação mitral, encaminhamento",
+    "theme": "Febre reumática",
+    "tags": [
+      "regurgitacao mitral",
+      "encaminhamento especializado",
+      "teste de esforco"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-rm-reumatica-reparo-e-a-operacao-de-escolha",
+    "statement": "A operação de escolha para RM reumática dominante ou pura é o reparo da valva mitral.",
+    "recommendation_class": "Forte",
+    "evidence_level": "B",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Reparo da valva mitral",
+    "theme": "Febre reumática",
+    "tags": [
+      "regurgitacao mitral",
+      "reparo valvar",
+      "cardiopatia reumatica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-rm-bioprotese-mitral-tres-meses-de-anticoagulacao",
+    "statement": "Após substituição da valva mitral por bioprótese, a maioria dos pacientes em ritmo sinusal pode ser manejada com apenas três meses de anticoagulação.",
+    "recommendation_class": "Forte",
+    "evidence_level": "B",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Substituição por bioprótese mitral",
+    "theme": "Febre reumática",
+    "tags": [
+      "bioprotese mitral",
+      "anticoagulacao",
+      "ritmo sinusal"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-em-reducao-de-fc-alivia-sintoma-mesmo-em-ritmo-sinusal",
+    "statement": "A redução da frequência cardíaca pode reduzir sintomas na estenose mitral (EM) mesmo em pacientes em ritmo sinusal.",
+    "recommendation_class": "Forte",
+    "evidence_level": "C",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Estenose mitral, manejo clínico",
+    "theme": "Febre reumática",
+    "tags": [
+      "estenose mitral",
+      "controle de frequencia"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-em-diureticos-para-congestao-ou-disfuncao-de-camaras-direitas",
+    "statement": "Em pacientes com congestão pulmonar ou disfunção de câmaras direitas secundária a EM significativa, diuréticos podem ser usados para alívio sintomático.",
+    "recommendation_class": "Forte",
+    "evidence_level": "C",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Estenose mitral, manejo clínico",
+    "theme": "Febre reumática",
+    "tags": [
+      "estenose mitral",
+      "diuretico",
+      "disfuncao de vd"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-em-indicacao-de-intervencao-por-sintomas-e-gravidade",
+    "statement": "A indicação de intervenção na EM é a presença de sintomas progressivos associados a evidência documentada de EM grave (adultos: área do orifício mitral ≤1,5 cm², tempo de meia-pressão trans-mitral ≥150 ms, gradiente médio trans-mitral ≥10 mmHg; crianças: área do orifício mitral ≤1,5 cm², PSAP ≥50 mmHg).",
+    "recommendation_class": "Forte",
+    "evidence_level": "A",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Estenose mitral, indicação de intervenção",
+    "theme": "Febre reumática",
+    "tags": [
+      "estenose mitral",
+      "area valvar",
+      "indicacao de intervencao"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-em-assintomatico-geralmente-nao-precisa-intervencao",
+    "statement": "Pacientes assintomáticos com EM geralmente não precisam de intervenção, a menos que haja história de tromboembolismo, FA paroxística ou hipertensão pulmonar significativa (PSAP >50 mmHg).",
+    "recommendation_class": "Ponderada",
+    "evidence_level": "B",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Estenose mitral, indicação de intervenção",
+    "theme": "Febre reumática",
+    "tags": [
+      "estenose mitral",
+      "assintomatico",
+      "hipertensao pulmonar"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-em-tolerancia-limitada-ou-gradiente-alto-pode-indicar-intervencao",
+    "statement": "Tolerância limitada ao esforço para a idade, e elevação significativa do gradiente médio trans-mitral (>15 mmHg) ou da PSAP (>60 mmHg) ao ecocardiograma, podem indicar necessidade de intervenção na EM.",
+    "recommendation_class": "Ponderada",
+    "evidence_level": "B",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Estenose mitral, indicação de intervenção",
+    "theme": "Febre reumática",
+    "tags": [
+      "estenose mitral",
+      "teste de esforco",
+      "gradiente transmitral"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-em-pbmv-e-o-tratamento-de-escolha",
+    "statement": "O tratamento de escolha para EM dominante ou pura é a valvuloplastia mitral percutânea por balão (PBMV).",
+    "recommendation_class": "Forte",
+    "evidence_level": "A",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Valvuloplastia mitral percutânea por balão",
+    "theme": "Febre reumática",
+    "tags": [
+      "estenose mitral",
+      "valvuloplastia por balao",
+      "pbmv"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-em-nao-elegiveis-a-pbmv-preferir-reparo",
+    "statement": "Nos poucos pacientes com EM não elegíveis para PBMV, todo esforço deve ser feito para reparar a valva mitral em vez de substituí-la, especialmente se o paciente estiver em ritmo sinusal.",
+    "recommendation_class": "Forte",
+    "evidence_level": "C",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Estenose mitral, manejo cirúrgico",
+    "theme": "Febre reumática",
+    "tags": [
+      "estenose mitral",
+      "reparo valvar",
+      "cirurgia"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-em-substituicao-em-valva-muito-calcificada-ou-doenca-mista",
+    "statement": "A substituição da valva mitral pode ser necessária em EM com valva muito calcificada, especialmente com envolvimento subvalvar, ou em doença mitral mista significativa.",
+    "recommendation_class": "Forte",
+    "evidence_level": "B",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Estenose mitral, manejo cirúrgico",
+    "theme": "Febre reumática",
+    "tags": [
+      "estenose mitral",
+      "substituicao valvar",
+      "calcificacao"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-ra-vasodilatador-em-hipertensao-sistemica",
+    "statement": "Em pacientes adultos com regurgitação aórtica (RA) significativa e hipertensão sistêmica, a terapia vasodilatadora é recomendada.",
+    "recommendation_class": "Forte",
+    "evidence_level": "B",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Regurgitação aórtica, manejo clínico",
+    "theme": "Febre reumática",
+    "tags": [
+      "regurgitacao aortica",
+      "vasodilatador",
+      "hipertensao"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-ra-vasodilatador-pode-ajudar-em-sintomatica-mesmo-sem-hipertensao",
+    "statement": "Em pacientes com RA sintomática significativa, com ou sem disfunção sistólica do VE, a terapia vasodilatadora pode ajudar nos sintomas.",
+    "recommendation_class": "Ponderada",
+    "evidence_level": "B",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Regurgitação aórtica, manejo clínico",
+    "theme": "Febre reumática",
+    "tags": [
+      "regurgitacao aortica",
+      "vasodilatador"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-ra-terapia-medicamentosa-nao-substitui-cirurgia",
+    "statement": "A terapia medicamentosa não substitui a intervenção cirúrgica na RA grave; é apropriada em pacientes de risco cirúrgico muito alto ou que recusam cirurgia.",
+    "recommendation_class": "Forte",
+    "evidence_level": "C",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Regurgitação aórtica, manejo clínico",
+    "theme": "Febre reumática",
+    "tags": [
+      "regurgitacao aortica",
+      "risco cirurgico"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-ra-grave-sintomatica-encaminhar-independente-de-fe",
+    "statement": "Pacientes com RA grave sintomática devem ser encaminhados para cirurgia, independentemente da função sistólica do VE.",
+    "recommendation_class": "Forte",
+    "evidence_level": "B",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Regurgitação aórtica, indicação cirúrgica",
+    "theme": "Febre reumática",
+    "tags": [
+      "regurgitacao aortica",
+      "indicacao cirurgica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-ra-assintomatico-com-fe-reduzida-encaminhar-o-quanto-antes",
+    "statement": "Pacientes assintomáticos com RA e função sistólica reduzida (FEVE <50%) devem ser encaminhados o quanto antes para cirurgia valvar — estudos de longo prazo sugerem progressão para insuficiência cardíaca e morte em até 25% desses pacientes por ano.",
+    "recommendation_class": "Forte",
+    "evidence_level": "B",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Regurgitação aórtica, indicação cirúrgica",
+    "theme": "Febre reumática",
+    "tags": [
+      "regurgitacao aortica",
+      "disfuncao ventricular",
+      "prognostico"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-ra-sintomas-equivocos-fazer-teste-de-esforco",
+    "statement": "Pacientes com RA e sintomas equívocos devem realizar teste de esforço para avaliar capacidade funcional e resposta sintomática.",
+    "recommendation_class": "Ponderada",
+    "evidence_level": "B",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Regurgitação aórtica, indicação cirúrgica",
+    "theme": "Febre reumática",
+    "tags": [
+      "regurgitacao aortica",
+      "teste de esforco"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-ra-considerar-cirurgia-se-ve-gravemente-dilatado-mesmo-assintomatico",
+    "statement": "A cirurgia deve ser considerada em pacientes assintomáticos com RA grave e função sistólica preservada, mas com VE gravemente dilatado (adultos: diâmetro diastólico >70 mm, diâmetro sistólico >50 mm; crianças: Z-score do diâmetro sistólico >+4,0).",
+    "recommendation_class": "Ponderada",
+    "evidence_level": "B",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Regurgitação aórtica, indicação cirúrgica",
+    "theme": "Febre reumática",
+    "tags": [
+      "regurgitacao aortica",
+      "dilatacao ventricular",
+      "z-score"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-ea-hipertensao-tratar-com-monitorizacao-de-efeitos-colaterais",
+    "statement": "Pacientes com estenose aórtica (EA) assintomática e hipertensão devem ser tratados conforme diretrizes padrão, com monitorização frequente de efeitos colaterais.",
+    "recommendation_class": "Forte",
+    "evidence_level": "B",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Estenose aórtica, manejo clínico",
+    "theme": "Febre reumática",
+    "tags": [
+      "estenose aortica",
+      "hipertensao"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-ea-anti-hipertensivo-ou-diuretico-com-cautela-em-ve-pequeno",
+    "statement": "O uso de anti-hipertensivo ou diurético em pacientes com EA normotensos, com insuficiência cardíaca clínica ou cavidade de VE pequena deve ser feito com cautela e monitorização hemodinâmica apropriada.",
+    "recommendation_class": "Forte",
+    "evidence_level": "C",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Estenose aórtica, manejo clínico",
+    "theme": "Febre reumática",
+    "tags": [
+      "estenose aortica",
+      "diuretico",
+      "monitorizacao hemodinamica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-ea-tavi-desfecho-semelhante-a-cirurgia-em-risco-intermediario-alto",
+    "statement": "Os desfechos do TAVI são semelhantes aos da bioprótese cirúrgica em pacientes com EA grave e risco cirúrgico intermediário ou alto.",
+    "recommendation_class": "Forte",
+    "evidence_level": "B",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Estenose aórtica, escolha da intervenção",
+    "theme": "Febre reumática",
+    "tags": [
+      "estenose aortica",
+      "tavi",
+      "risco cirurgico"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-ea-troca-valvar-recomendada-em-grave-sintomatica",
+    "statement": "A troca valvar aórtica é recomendada para EA grave sintomática (gradiente de pressão médio ≥40 mmHg, área valvar aórtica ≤1 cm², velocidade máxima ≥4 m/s).",
+    "recommendation_class": "Forte",
+    "evidence_level": "B",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Estenose aórtica, indicação de intervenção",
+    "theme": "Febre reumática",
+    "tags": [
+      "estenose aortica",
+      "troca valvar",
+      "area valvar"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-ea-gradiente-moderado-com-area-reduzida-investigar-baixo-fluxo",
+    "statement": "Pacientes com EA e gradientes moderados e área valvar aórtica gravemente reduzida devem realizar imagem adicional (ETE, TC ou hemodinâmica invasiva) para determinar se há EA grave de baixo fluxo/baixo gradiente.",
+    "recommendation_class": "Ponderada",
+    "evidence_level": "B",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Estenose aórtica, indicação de intervenção",
+    "theme": "Febre reumática",
+    "tags": [
+      "estenose aortica",
+      "baixo fluxo baixo gradiente"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-ea-eco-dobutamina-diferencia-grave-de-pseudograve",
+    "statement": "Em pacientes com EA e função sistólica de VE gravemente comprometida, o ecocardiograma de estresse com dobutamina pode ajudar a diferenciar EA verdadeiramente grave de EA pseudograve.",
+    "recommendation_class": "Ponderada",
+    "evidence_level": "B",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Estenose aórtica, indicação de intervenção",
+    "theme": "Febre reumática",
+    "tags": [
+      "estenose aortica",
+      "eco de estresse com dobutamina",
+      "pseudograve"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-ea-critica-assintomatica-pode-considerar-cirurgia",
+    "statement": "Pacientes com EA crítica/muito grave assintomática, definida por gradiente de pressão médio >50 mmHg ou velocidade máxima >5,5 m/s, podem ser considerados para cirurgia.",
+    "recommendation_class": "Forte",
+    "evidence_level": "C",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Estenose aórtica, indicação de intervenção",
+    "theme": "Febre reumática",
+    "tags": [
+      "estenose aortica",
+      "assintomatico",
+      "ea critica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-ea-valvuloplastia-por-balao-como-ponte-em-instabilidade",
+    "statement": "A valvuloplastia aórtica por balão pode ser considerada em pacientes com EA sintomáticos e hemodinamicamente instáveis, como ponte para intervenção cirúrgica ou transcateter definitiva.",
+    "recommendation_class": "Ponderada",
+    "evidence_level": "C",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Valvuloplastia aórtica por balão",
+    "theme": "Febre reumática",
+    "tags": [
+      "estenose aortica",
+      "valvuloplastia por balao",
+      "ponte terapeutica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-rt-diuretico-para-alivio-sintomatico",
+    "statement": "O alívio sintomático na regurgitação tricúspide (RT) significativa com sobrecarga de volume é feito com terapia diurética (furosemida, espironolactona).",
+    "recommendation_class": "Forte",
+    "evidence_level": "C",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Valva tricúspide, manejo clínico",
+    "theme": "Febre reumática",
+    "tags": [
+      "regurgitacao tricuspide",
+      "diuretico"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-rt-secundaria-reparo-concomitante-nao-aumenta-mortalidade",
+    "statement": "No contexto de RT secundária grave, o reparo tricúspide durante a cirurgia valvar do lado esquerdo não aumenta a mortalidade perioperatória e pode prevenir a deterioração das câmaras direitas.",
+    "recommendation_class": "Forte",
+    "evidence_level": "C",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Valva tricúspide, manejo cirúrgico",
+    "theme": "Febre reumática",
+    "tags": [
+      "regurgitacao tricuspide",
+      "reparo valvar",
+      "cirurgia concomitante"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-rt-primaria-grave-sintomatica-tratar-cirurgicamente",
+    "statement": "Regurgitação tricúspide primária grave sintomática deve ser tratada com intervenção cirúrgica.",
+    "recommendation_class": "Forte",
+    "evidence_level": "C",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Valva tricúspide, manejo cirúrgico",
+    "theme": "Febre reumática",
+    "tags": [
+      "regurgitacao tricuspide",
+      "indicacao cirurgica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-et-grave-tratar-cirurgicamente-se-sintomatica-ou-junto-com-lado-esquerdo",
+    "statement": "Estenose tricúspide grave deve ser tratada cirurgicamente se sintomática ou no contexto de cirurgia valvar do lado esquerdo.",
+    "recommendation_class": "Forte",
+    "evidence_level": "C",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Valva tricúspide, manejo cirúrgico",
+    "theme": "Febre reumática",
+    "tags": [
+      "estenose tricuspide",
+      "indicacao cirurgica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-rt-funcional-moderada-progressiva-considerar-cirurgia-concomitante",
+    "statement": "Regurgitação tricúspide funcional progressiva de gravidade moderada pode ser considerada para cirurgia no momento de um procedimento valvar do lado esquerdo.",
+    "recommendation_class": "Ponderada",
+    "evidence_level": "C",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Valva tricúspide, manejo cirúrgico",
+    "theme": "Febre reumática",
+    "tags": [
+      "regurgitacao tricuspide",
+      "cirurgia concomitante"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-et-valvuloplastia-por-balao-em-casos-selecionados",
+    "statement": "A valvuloplastia por balão para estenose tricúspide pode ser considerada pela equipe de coração em casos selecionados, como pacientes de alto risco cirúrgico.",
+    "recommendation_class": "Ponderada",
+    "evidence_level": "D",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Valva tricúspide, valvuloplastia por balão",
+    "theme": "Febre reumática",
+    "tags": [
+      "estenose tricuspide",
+      "valvuloplastia por balao",
+      "alto risco cirurgico"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-mista-sintomas-e-lesao-predominante-guiam-manejo",
+    "statement": "Na doença valvar mista e multivalvar, os sintomas clínicos e a natureza da lesão predominante devem guiar o manejo clínico e o momento da intervenção cardíaca.",
+    "recommendation_class": "Forte",
+    "evidence_level": "C",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Doença valvar mista e multivalvar",
+    "theme": "Febre reumática",
+    "tags": [
+      "doenca valvar mista",
+      "doenca multivalvar"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-mista-cirurgia-mais-precoce-evita-disfuncao-pos-operatoria",
+    "statement": "Na doença valvar mista e multivalvar, a cirurgia mais precoce é preferível para evitar disfunção ventricular esquerda pós-operatória.",
+    "recommendation_class": "Ponderada",
+    "evidence_level": "C",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Doença valvar mista e multivalvar",
+    "theme": "Febre reumática",
+    "tags": [
+      "doenca valvar mista",
+      "timing cirurgico"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-fa-cha2ds2-va-2-ou-mais-anticoagular",
+    "statement": "Um escore CHA₂DS₂-VA ≥2 pontos está associado a risco significativamente elevado de evento tromboembólico, que pode ser reduzido com anticoagulação terapêutica.",
+    "recommendation_class": "Forte",
+    "evidence_level": "A",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: FA/flutter atrial, anticoagulação",
+    "theme": "Febre reumática",
+    "tags": [
+      "fibrilacao atrial",
+      "cha2ds2-va",
+      "anticoagulacao"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-fa-cha2ds2-va-1-considerar-anticoagulacao",
+    "statement": "A anticoagulação deve ser considerada em indivíduos com escore CHA₂DS₂-VA de 1.",
+    "recommendation_class": "Forte",
+    "evidence_level": "B",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: FA/flutter atrial, anticoagulação",
+    "theme": "Febre reumática",
+    "tags": [
+      "fibrilacao atrial",
+      "cha2ds2-va",
+      "anticoagulacao"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-fa-cha2ds2-va-0-nao-anticoagular",
+    "statement": "A anticoagulação não é recomendada em indivíduos com escore CHA₂DS₂-VA de 0.",
+    "recommendation_class": "Ponderada",
+    "evidence_level": "B",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: FA/flutter atrial, anticoagulação",
+    "theme": "Febre reumática",
+    "tags": [
+      "fibrilacao atrial",
+      "cha2ds2-va"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-fa-em-moderada-grave-ou-protese-mecanica-varfarina-sempre",
+    "statement": "Pacientes com fibrilação atrial e estenose mitral moderada ou grave (independentemente do escore CHA₂DS₂-VA), ou com prótese valvar mecânica, devem ser tratados com varfarina.",
+    "recommendation_class": "Forte",
+    "evidence_level": "B",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: FA/flutter atrial, anticoagulação",
+    "theme": "Febre reumática",
+    "tags": [
+      "fibrilacao atrial",
+      "estenose mitral",
+      "protese mecanica",
+      "varfarina"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-ritmo-sinusal-anticoagular-se-tev-previo-ou-trombo-atrial",
+    "statement": "Em pacientes em ritmo sinusal e sem história de FA, a anticoagulação está indicada se houver história de evento tromboembólico ou trombo visualizado no átrio esquerdo ou apêndice atrial esquerdo.",
+    "recommendation_class": "Forte",
+    "evidence_level": "B",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Estenose mitral, anticoagulação em ritmo sinusal",
+    "theme": "Febre reumática",
+    "tags": [
+      "estenose mitral",
+      "ritmo sinusal",
+      "trombo atrial"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-ritmo-sinusal-considerar-anticoagulacao-se-contraste-espontaneo-ou-atrio-dilatado",
+    "statement": "A anticoagulação deve ser considerada também em pacientes em ritmo sinusal com contraste espontâneo significativo no átrio esquerdo ao ecocardiograma, ou átrio esquerdo significativamente dilatado.",
+    "recommendation_class": "Ponderada",
+    "evidence_level": "C",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Estenose mitral, anticoagulação em ritmo sinusal",
+    "theme": "Febre reumática",
+    "tags": [
+      "estenose mitral",
+      "contraste espontaneo",
+      "atrio esquerdo dilatado"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-em-noac-so-em-casos-especificos-com-adesao-demonstrada",
+    "statement": "O uso de anticoagulante oral não antagonista da vitamina K (NOAC) em pacientes com estenose mitral significativa pode ser considerado em casos específicos em que a varfarina é contraindicada e a adesão foi demonstrada.",
+    "recommendation_class": "Ponderada",
+    "evidence_level": "D",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Estenose mitral, anticoagulação",
+    "theme": "Febre reumática",
+    "tags": [
+      "estenose mitral",
+      "noac",
+      "varfarina"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-protese-mecanica-varfarina-e-a-unica-opcao",
+    "statement": "A varfarina continua sendo a única opção de anticoagulação após implante de prótese valvar mecânica.",
+    "recommendation_class": "Forte",
+    "evidence_level": "A",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Prótese valvar mecânica, anticoagulação",
+    "theme": "Febre reumática",
+    "tags": [
+      "protese mecanica",
+      "varfarina",
+      "anticoagulacao"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-bioprotese-1-a-3-meses-de-anticoagulacao-pos-operatoria",
+    "statement": "Pacientes com substituição por bioprótese podem ser tratados com anticoagulação (varfarina) nos primeiros um a três meses de pós-operatório, período de maior risco de eventos tromboembólicos.",
+    "recommendation_class": "Forte",
+    "evidence_level": "C",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Substituição por bioprótese, anticoagulação",
+    "theme": "Febre reumática",
+    "tags": [
+      "bioprotese",
+      "anticoagulacao",
+      "pos-operatorio"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-ic-descompensada-diuretico-para-congestao",
+    "statement": "A terapia diurética é recomendada para reduzir a congestão na insuficiência cardíaca descompensada aguda, em complicação de doença cardíaca reumática.",
+    "recommendation_class": "Forte",
+    "evidence_level": "C",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Complicações da DCR — insuficiência cardíaca",
+    "theme": "Febre reumática",
+    "tags": [
+      "insuficiencia cardiaca",
+      "diuretico",
+      "cardiopatia reumatica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-ic-vasodilatador-se-pas-90-ou-mais",
+    "statement": "A redução de pós-carga com terapia vasodilatadora (nitratos IV/tópicos) pode ser benéfica na IC descompensada por DCR em pacientes com pressão arterial sistólica ≥90 mmHg.",
+    "recommendation_class": "Ponderada",
+    "evidence_level": "C",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Complicações da DCR — insuficiência cardíaca",
+    "theme": "Febre reumática",
+    "tags": [
+      "insuficiencia cardiaca",
+      "vasodilatador",
+      "nitratos"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-ic-inotropico-em-choque-refratario",
+    "statement": "A terapia inotrópica pode ser necessária em pacientes com IC por DCR e hipotensão progressiva, congestão ou choque cardiogênico refratário aos tratamentos anteriores.",
+    "recommendation_class": "Ponderada",
+    "evidence_level": "C",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Complicações da DCR — insuficiência cardíaca",
+    "theme": "Febre reumática",
+    "tags": [
+      "insuficiencia cardiaca",
+      "inotropico",
+      "choque cardiogenico"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-hp-por-doenca-esquerda-tratar-a-causa-de-base",
+    "statement": "O tratamento da hipertensão pulmonar associada à doença cardíaca esquerda (reumática) é focado no manejo e na reversão da patologia cardíaca subjacente.",
+    "recommendation_class": "Forte",
+    "evidence_level": "B",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Complicações da DCR — hipertensão pulmonar",
+    "theme": "Febre reumática",
+    "tags": [
+      "hipertensao pulmonar",
+      "doenca cardiaca esquerda"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-hp-terapia-especifica-de-hap-nao-recomendada",
+    "statement": "Terapias específicas para hipertensão arterial pulmonar não são recomendadas na hipertensão pulmonar devida à doença cardíaca esquerda (reumática).",
+    "recommendation_class": "Forte",
+    "evidence_level": "C",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Complicações da DCR — hipertensão pulmonar",
+    "theme": "Febre reumática",
+    "tags": [
+      "hipertensao pulmonar",
+      "hipertensao arterial pulmonar"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-trombose-protese-mecanica-cirurgia-de-urgencia-se-critico",
+    "statement": "A cirurgia de urgência é recomendada em pacientes criticamente enfermos com trombose de valva mecânica.",
+    "recommendation_class": "Forte",
+    "evidence_level": "C",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Trombose de prótese valvar",
+    "theme": "Febre reumática",
+    "tags": [
+      "trombose de protese",
+      "protese mecanica",
+      "cirurgia de urgencia"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-trombose-protese-trombolise-se-cirurgia-indisponivel",
+    "statement": "Em locais onde a cirurgia não está imediatamente disponível ou é considerada de risco muito alto, a trombólise deve ser considerada na trombose de prótese valvar.",
+    "recommendation_class": "Ponderada",
+    "evidence_level": "C",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Trombose de prótese valvar",
+    "theme": "Febre reumática",
+    "tags": [
+      "trombose de protese",
+      "trombolise"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-trombose-bioprotese-tentar-anticoagulacao-antes-de-nova-cirurgia",
+    "statement": "Em pacientes com trombose acometendo uma bioprótese, a anticoagulação deve ser tentada antes de se considerar nova cirurgia.",
+    "recommendation_class": "Forte",
+    "evidence_level": "C",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Trombose de prótese valvar",
+    "theme": "Febre reumática",
+    "tags": [
+      "trombose de protese",
+      "bioprotese",
+      "anticoagulacao"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-profilaxia-ei-amoxicilina-apropriada-mesmo-com-bpg-de-longo-prazo",
+    "statement": "É opinião consensual dos grupos de especialistas em antibióticos que a amoxicilina continua apropriada para profilaxia de endocardite infecciosa em pacientes recebendo penicilina G benzatina (BPG) de longo prazo para prevenção secundária da febre reumática aguda.",
+    "recommendation_class": "Ponderada",
+    "evidence_level": "D",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Prevenção de endocardite infecciosa",
+    "theme": "Febre reumática",
+    "tags": [
+      "profilaxia de endocardite",
+      "amoxicilina",
+      "penicilina benzatina"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-saude-bucal-revisao-odontologica-regular-reduz-risco-de-ei",
+    "statement": "Todas as pessoas com febre reumática aguda e doença cardíaca reumática precisam de revisão odontológica regular para reduzir o risco de endocardite infecciosa.",
+    "recommendation_class": "Ponderada",
+    "evidence_level": "D",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Saúde bucal e doença cardíaca reumática",
+    "theme": "Febre reumática",
+    "tags": [
+      "saude bucal",
+      "prevencao de endocardite",
+      "cardiopatia reumatica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rhd2020-vp-saude-bucal-avaliacao-odontologica-antes-de-cirurgia-cardiaca",
+    "statement": "Pacientes que necessitam de intervenção cardíaca para doença cardíaca reumática precisam de avaliação odontológica abrangente antes da cirurgia.",
+    "recommendation_class": "Ponderada",
+    "evidence_level": "D",
+    "society": "RHDAustralia",
+    "year": 2020,
+    "guideline_title": "The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition)",
+    "reference": "RHDAustralia (ARF/RHD Writing Group). The 2020 Australian guideline for prevention, diagnosis and management of acute rheumatic fever and rheumatic heart disease (3rd edition). Darwin: Menzies School of Health Research, 2020. Editores: Bart Currie, Anna Ralph. Artigo-resumo: Ralph AP et al. Med J Aust. 2021;214(5):220-227. PMID: 33190309. Capítulo 11 (Management of rheumatic heart disease), texto integral do PDF lido diretamente nesta sessão em 01/08/2026 (pdftotext -layout, 21.167 linhas). CONVENÇÃO DE SISTEMA: esta diretriz usa GRADE, não a escala Classe/Nível da ESC — força da recomendação 1=Forte/2=Ponderada combinada com qualidade da evidência A=alta/B=moderada/C=baixa/D=muito baixa (\"nenhuma evidência disponível; julgamento de consenso de especialistas\"). Gravado aqui como recommendation_class Forte/Ponderada + evidence_level A/B/C/D, seguindo a mesma convenção já usada para a Diretriz de Chagas da SBC nesta base. Contexto: Saúde bucal e doença cardíaca reumática",
+    "theme": "Febre reumática",
+    "tags": [
+      "saude bucal",
+      "avaliacao pre-operatoria",
+      "cirurgia cardiaca"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-dap-exercicio-supervisionado-recomendado-em-dap-sintomatica",
+    "statement": "Em pacientes com doença arterial periférica (DAP) sintomática, o treinamento físico supervisionado (SET) é recomendado.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Sem PMC (confirmado por elink); academic.oup.com bloqueado por Cloudflare. Texto integral em PDF já em cache desta sessão, conferido linha a linha (13.159 linhas extraídas com pdftotext -layout). Contexto: Recommendation Table 13, exercício supervisionado",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "dap",
+      "exercicio supervisionado",
+      "claudicacao"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-dap-exercicio-supervisionado-como-adjuvante-a-revascularizacao",
+    "statement": "Em pacientes submetidos a revascularização endovascular por DAP, o treinamento físico supervisionado (SET) é recomendado como terapia adjuvante.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Sem PMC (confirmado por elink); academic.oup.com bloqueado por Cloudflare. Texto integral em PDF já em cache desta sessão, conferido linha a linha (13.159 linhas extraídas com pdftotext -layout). Contexto: Recommendation Table 13, exercício adjuvante à revascularização",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "dap",
+      "exercicio supervisionado",
+      "revascularizacao endovascular"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-dap-exercicio-domiciliar-estruturado-quando-supervisionado-indisponivel",
+    "statement": "Quando o treinamento supervisionado (SET) não está disponível ou não é viável, um programa domiciliar (HBET) estruturado e monitorado (ligações, diário, dispositivos conectados) deve ser considerado.",
+    "recommendation_class": "IIa",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Sem PMC (confirmado por elink); academic.oup.com bloqueado por Cloudflare. Texto integral em PDF já em cache desta sessão, conferido linha a linha (13.159 linhas extraídas com pdftotext -layout). Contexto: Recommendation Table 13, exercício domiciliar estruturado",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "dap",
+      "exercicio domiciliar",
+      "hbet"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-dap-caminhada-e-a-modalidade-de-primeira-linha",
+    "statement": "A caminhada deve ser considerada como modalidade de treinamento de primeira linha na DAP. Quando não for viável, modalidades alternativas (treinamento de força, ergômetro de braço, ciclismo, combinações) também devem ser consideradas.",
+    "recommendation_class": "IIa",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Sem PMC (confirmado por elink); academic.oup.com bloqueado por Cloudflare. Texto integral em PDF já em cache desta sessão, conferido linha a linha (13.159 linhas extraídas com pdftotext -layout). Contexto: Recommendation Table 13, modalidade de exercício",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "dap",
+      "caminhada",
+      "modalidade de exercicio"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-dap-treinamento-de-alta-intensidade-melhora-desempenho-e-condicionamento",
+    "statement": "Treinamento de caminhada em alta intensidade (77-95% da FC máxima, ou 14-17 na escala de Borg de esforço percebido) deve ser considerado para melhorar o desempenho de marcha; treinamento aeróbico de alta intensidade (vários modos) deve ser considerado para melhorar o condicionamento cardiorrespiratório.",
+    "recommendation_class": "IIa",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Sem PMC (confirmado por elink); academic.oup.com bloqueado por Cloudflare. Texto integral em PDF já em cache desta sessão, conferido linha a linha (13.159 linhas extraídas com pdftotext -layout). Contexto: Recommendation Table 13, intensidade do treinamento",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "dap",
+      "treinamento de alta intensidade",
+      "escala de borg"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-dap-prescricao-minima-de-frequencia-duracao-e-tempo-total",
+    "statement": "Frequência de treinamento de pelo menos 3x/semana, duração de sessão de pelo menos 30 minutos e duração total do programa de pelo menos 12 semanas devem ser consideradas na prescrição de exercício para DAP.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Sem PMC (confirmado por elink); academic.oup.com bloqueado por Cloudflare. Texto integral em PDF já em cache desta sessão, conferido linha a linha (13.159 linhas extraídas com pdftotext -layout). Contexto: Recommendation Table 13, prescrição de exercício",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "dap",
+      "prescricao de exercicio",
+      "duracao do programa"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-dap-treinar-ate-dor-moderada-a-grave-nao-e-obrigatorio",
+    "statement": "Exercício até dor de claudicação moderada-grave pode ser considerado para melhorar o desempenho de marcha na DAP — mas o benefício também é alcançável com dor leve ou treino sem dor.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Sem PMC (confirmado por elink); academic.oup.com bloqueado por Cloudflare. Texto integral em PDF já em cache desta sessão, conferido linha a linha (13.159 linhas extraídas com pdftotext -layout). Contexto: Recommendation Table 13, intensidade da dor durante o exercício",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "dap",
+      "claudicacao",
+      "dor durante exercicio"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-dap-progressao-de-carga-conforme-tolerancia",
+    "statement": "Com base na tolerância do paciente, aumento progressivo (a cada 1-2 semanas) da carga de treinamento pode ser considerado na DAP.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Sem PMC (confirmado por elink); academic.oup.com bloqueado por Cloudflare. Texto integral em PDF já em cache desta sessão, conferido linha a linha (13.159 linhas extraídas com pdftotext -layout). Contexto: Recommendation Table 13, progressão de carga",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "dap",
+      "progressao de treinamento"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-dap-aas-ou-clopidogrel-isolados-reduzem-mace-na-dap-sintomatica",
+    "statement": "O uso de antiagregante com AAS isolado (75-160 mg/dia) ou clopidogrel isolado (75 mg/dia) é recomendado para reduzir eventos cardiovasculares maiores (MACE) em pacientes com DAP sintomática.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Sem PMC (confirmado por elink); academic.oup.com bloqueado por Cloudflare. Texto integral em PDF já em cache desta sessão, conferido linha a linha (13.159 linhas extraídas com pdftotext -layout). Contexto: Recommendation Table 14, antiagregação de primeira linha",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "dap",
+      "aspirina",
+      "clopidogrel",
+      "mace"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-dap-rivaroxabana-vascular-mais-aas-em-alto-risco-isquemico",
+    "statement": "A combinação de rivaroxabana em dose vascular (2,5 mg 2x/dia) e AAS (100 mg/dia) deve ser considerada em pacientes com DAP de ALTO RISCO ISQUÊMICO e risco de sangramento não elevado. Alto risco isquêmico definido pela fonte como: amputação prévia, isquemia crítica de membro, revascularização prévia, comorbidade de alto risco (IC, diabetes, doença vascular em 2+ territórios) ou TFGe <60 mL/min/1,73m².",
+    "recommendation_class": "IIa",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Sem PMC (confirmado por elink); academic.oup.com bloqueado por Cloudflare. Texto integral em PDF já em cache desta sessão, conferido linha a linha (13.159 linhas extraídas com pdftotext -layout). Contexto: Recommendation Table 14, dupla via rivaroxabana + AAS em alto risco isquêmico",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "dap",
+      "rivaroxabana",
+      "aspirina",
+      "alto risco isquemico"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-dap-rivaroxabana-vascular-mais-aas-pos-revascularizacao-de-membro",
+    "statement": "A combinação de rivaroxabana em dose vascular (2,5 mg 2x/dia) e AAS (100 mg/dia) deve ser considerada em pacientes com DAP e risco de sangramento não elevado, após revascularização de membro inferior.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Sem PMC (confirmado por elink); academic.oup.com bloqueado por Cloudflare. Texto integral em PDF já em cache desta sessão, conferido linha a linha (13.159 linhas extraídas com pdftotext -layout). Contexto: Recommendation Table 14, dupla via rivaroxabana + AAS pós-revascularização",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "dap",
+      "rivaroxabana",
+      "aspirina",
+      "revascularizacao de membro"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-dap-clopidogrel-pode-ser-preferido-a-aas",
+    "statement": "O uso de clopidogrel isolado (75 mg/dia) pode ser considerado preferencialmente ao AAS, para reduzir IAM, AVC e morte vascular na DAP.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Sem PMC (confirmado por elink); academic.oup.com bloqueado por Cloudflare. Texto integral em PDF já em cache desta sessão, conferido linha a linha (13.159 linhas extraídas com pdftotext -layout). Contexto: Recommendation Table 14, preferência por clopidogrel",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "dap",
+      "clopidogrel",
+      "aspirina"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-dap-aas-prevencao-primaria-so-em-dap-assintomatica-com-diabetes",
+    "statement": "AAS (75-100 mg) para prevenção primária pode ser considerada em pacientes com DAP ASSINTOMÁTICA e diabetes mellitus concomitante, na ausência de contraindicação.",
+    "recommendation_class": "IIb",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Sem PMC (confirmado por elink); academic.oup.com bloqueado por Cloudflare. Texto integral em PDF já em cache desta sessão, conferido linha a linha (13.159 linhas extraídas com pdftotext -layout). Contexto: Recommendation Table 14, prevenção primária em DAP assintomática com diabetes",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "dap",
+      "aspirina",
+      "diabetes",
+      "prevencao primaria"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-dap-dapt-por-pelo-menos-1-mes-pos-revascularizacao-para-reduzir-evento-de-membro",
+    "statement": "Dupla antiagregação (DAPT) por pelo menos 1 mês após revascularização pode ser considerada para reduzir eventos do membro na DAP.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Sem PMC (confirmado por elink); academic.oup.com bloqueado por Cloudflare. Texto integral em PDF já em cache desta sessão, conferido linha a linha (13.159 linhas extraídas com pdftotext -layout). Contexto: Recommendation Table 14, DAPT curta pós-revascularização",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "dap",
+      "dapt",
+      "revascularizacao",
+      "evento de membro"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-dap-dapt-prolongada-nao-recomendada",
+    "statement": "Dupla antiagregação (DAPT) prolongada em pacientes com DAP NÃO é recomendada.",
+    "recommendation_class": "III",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Sem PMC (confirmado por elink); academic.oup.com bloqueado por Cloudflare. Texto integral em PDF já em cache desta sessão, conferido linha a linha (13.159 linhas extraídas com pdftotext -layout). Contexto: Recommendation Table 14, DAPT prolongada",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "dap",
+      "dapt",
+      "contraindicacao"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-dap-anticoagulante-oral-isolado-nao-recomendado-so-por-causa-da-dap",
+    "statement": "Anticoagulante oral em monoterapia para DAP (fora de outra indicação, como fibrilação atrial ou prótese mecânica) NÃO é recomendado.",
+    "recommendation_class": "III",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Sem PMC (confirmado por elink); academic.oup.com bloqueado por Cloudflare. Texto integral em PDF já em cache desta sessão, conferido linha a linha (13.159 linhas extraídas com pdftotext -layout). Contexto: Recommendation Table 14, anticoagulante oral isolado",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "dap",
+      "anticoagulante oral",
+      "contraindicacao"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-dap-ticagrelor-rotineiro-nao-recomendado-euclid",
+    "statement": "O uso rotineiro de ticagrelor em pacientes com DAP NÃO é recomendado. Baseado no ensaio EUCLID: ticagrelor não superou clopidogrel em MACE nem em sangramento maior.",
+    "recommendation_class": "III",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Sem PMC (confirmado por elink); academic.oup.com bloqueado por Cloudflare. Texto integral em PDF já em cache desta sessão, conferido linha a linha (13.159 linhas extraídas com pdftotext -layout). Contexto: Recommendation Table 14, ticagrelor de rotina — EUCLID",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "dap",
+      "ticagrelor",
+      "euclid"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-dap-antiagregante-sistematico-nao-recomendado-em-assintomatico-sem-outro-sinal-de-ascvd",
+    "statement": "NÃO é recomendado tratar sistematicamente com antiagregante pacientes com DAP assintomática sem nenhum sinal de doença aterosclerótica cardiovascular clinicamente relevante.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of peripheral arterial and aortic diseases",
+    "reference": "Mazzolai L, Teixido-Tura G, Lanzi S, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722. Sem PMC (confirmado por elink); academic.oup.com bloqueado por Cloudflare. Texto integral em PDF já em cache desta sessão, conferido linha a linha (13.159 linhas extraídas com pdftotext -layout). Contexto: Recommendation Table 14, antiagregante em DAP assintomática isolada",
+    "theme": "Aorta e doença arterial periférica",
+    "tags": [
+      "dap",
+      "antiagregante",
+      "assintomatico",
+      "ascvd"
+    ],
+    "review_status": "revisado"
   }
 ]
