@@ -1546,5 +1546,125 @@
       }
     ],
     "revisao": "Derivado integralmente do documento já verificado e publicado antipsicoticos-e-prolongamento-de-qt-risco-de-morte-subita-cardiaca.md (tema Saúde mental e cardiologia), com a seção de origem registrada em cada item — nenhum critério numérico de corte de QTc foi inventado: o item qt-corte-numerico-suspensao reproduz literalmente a marcação VERIFICAÇÃO HUMANA NECESSÁRIA já presente no documento de origem, porque nenhuma das três fontes primárias (Ray et al. 2001, Ray et al. 2009, Wenzel-Seifert et al. 2011) define esse corte nem uma periodicidade fixa de ECG seriado. Elaborado pela sessão de conteúdo em 01/08/2026 sob a autorização contínua de publicação. ATENÇÃO: este checklist ainda NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles — a atestação dele não é presumida."
+  },
+  {
+    "slug": "alta-pos-miocardite-aguda",
+    "condicao": "Alta hospitalar após episódio de miocardite aguda",
+    "documento_origem": "miocardite-diagnostico-estratificacao-de-risco-e-biopsia-endomiocardica-esc-2025",
+    "theme": "Cardiomiopatias",
+    "resumo": "O que checar antes de dar alta a um paciente internado por miocardite aguda — estratificação de risco já concluída, decisão sobre corticosteroide, e o que orienta o seguimento ambulatorial. Derivado da diretriz ESC 2025 de miocardite e pericardite.",
+    "itens": [
+      {
+        "id": "miocardite-estratificacao-concluida",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "origem_secao": "Estratificação de risco — miocardite-diagnostico-estratificacao-de-risco-e-biopsia-endomiocardica-esc-2025.md",
+        "texto": "Estratificação de risco documentada (alto/intermediário/baixo, Tabela 7) com base em critérios clínicos (IC aguda/choque, síncope, arritmia ventricular sustentada, bloqueio AV de alto grau) e de imagem (FEVE, extensão do realce tardio na RM) — orienta a intensidade do seguimento, não só o risco."
+      },
+      {
+        "id": "miocardite-emb-decidida",
+        "categoria": "diagnostico",
+        "obrigatorio": false,
+        "origem_secao": "Biópsia endomiocárdica — quando pedir — miocardite-diagnostico-estratificacao-de-risco-e-biopsia-endomiocardica-esc-2025.md",
+        "texto": "Indicação de biópsia endomiocárdica avaliada e decidida (Classe I em alto risco/instabilidade/refratariedade) — se realizada, resultado histológico e de PCR viral revisado antes da alta, porque pode mudar a conduta (ex.: imunossupressão dirigida)."
+      },
+      {
+        "id": "miocardite-corticosteroide-decisao",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "origem_secao": "Corticosteroide na miocardite aguda — dois cenários opostos — miocardite-diagnostico-estratificacao-de-risco-e-biopsia-endomiocardica-esc-2025.md",
+        "texto": "Decisão sobre corticosteroide registrada e justificada pelo cenário: considerar (Classe IIb) apenas se FEVE reduzida refratária à terapia padrão de IC; uso rotineiro NÃO recomendado (Classe III) com FEVE preservada — o único RCT com imunossupressão combinada não mostrou diferença de sobrevida."
+      },
+      {
+        "id": "miocardite-ic-terapia-otimizada",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "origem_secao": "Curso natural da miocardite aguda não complicada — mesmo documento",
+        "texto": "Se houver disfunção ventricular na alta, terapia padrão de insuficiência cardíaca (os quatro pilares, conforme a fração de ejeção) iniciada ou otimizada antes da saída — a maioria recupera espontaneamente (até 50%), mas até 10-25% progride com disfunção ventricular, o que sustenta tratar a IC concomitante, não só observar."
+      },
+      {
+        "id": "miocardite-arritmia-monitorizada",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "origem_secao": "Estratificação de risco (critérios de alto risco) — mesmo documento",
+        "texto": "Se houve arritmia ventricular sustentada, bloqueio AV de alto grau ou parada cardíaca na internação, plano de monitorização de ritmo pós-alta definido (ex.: Holter, monitor de eventos) antes da saída, mesmo sem indicação formal e automática de CDI nesse momento."
+      },
+      {
+        "id": "miocardite-retorno-agendado",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "origem_secao": "Curso natural da miocardite aguda não complicada — mesmo documento",
+        "texto": "Retorno ambulatorial agendado com reavaliação clínica e de imagem (ecocardiograma, e RM cardíaca se indicada) para acompanhar a trajetória de recuperação — o curso é definido só ao longo do seguimento (recuperação, disfunção estável ou progressão), não na alta."
+      },
+      {
+        "id": "miocardite-restricao-esforco-alerta",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "origem_secao": "O que este documento não cobre — mesmo documento",
+        "texto": "VERIFICAÇÃO HUMANA NECESSÁRIA: critério de retorno ao esporte/exercício físico após miocardite aguda não é coberto pela diretriz ESC 2025 usada como fonte deste checklist (lacuna declarada explicitamente no próprio documento de origem) — a orientação de restrição de esforço até liberação médica deve ser dada, mas o prazo/critério específico não tem fonte verificada nesta base ainda."
+      }
+    ],
+    "revisao": "Cada item corresponde a uma recomendação nomeada ou dado estruturado do documento de origem (estratificação de risco Tabela 7, indicação de EMB, tabela de corticosteroide por cenário de FEVE, distribuição do curso natural). O item de restrição de esforço físico foi mantido com VERIFICAÇÃO HUMANA NECESSÁRIA em vez de omitido ou inventado, porque a própria fonte declara essa lacuna. Este checklist NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles.",
+    "source_refs": [
+      "Schulz-Menger J, Collini V, Gröschel J, et al. 2025 ESC Guidelines for the management of myocarditis and pericarditis. Eur Heart J. 2025;46(40):3952-4041. DOI: 10.1093/eurheartj/ehaf192. PMID: 40878297"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "inicio-de-inibidor-de-miosina-cardiaca-mavacamten-na-cmh-obstrutiva",
+    "condicao": "Início de inibidor de miosina cardíaca (mavacamten) na cardiomiopatia hipertrófica obstrutiva",
+    "documento_origem": "cardiomiopatia-hipertrofica-obstrutiva-terapia-com-inibidores-de-miosina-cardiaca",
+    "theme": "Cardiomiopatias",
+    "resumo": "O que checar antes e durante a titulação de mavacamten na CMH obstrutiva sintomática — dose inicial, gradiente de LVOT à manobra de Valsalva e FEVE como critérios de ajuste, e ecocardiograma seriado nos marcos de reavaliação.",
+    "itens": [
+      {
+        "id": "mavacamten-diagnostico-confirmado",
+        "categoria": "diagnostico",
+        "obrigatorio": true,
+        "origem_secao": "Recomendacao esc 2023 / Populacao alvo — cardiomiopatia-hipertrofica-obstrutiva-terapia-com-inibidores-de-miosina-cardiaca.md",
+        "texto": "CMH obstrutiva sintomática confirmada, com terapia farmacológica convencional (betabloqueador ou antagonista de canal de cálcio não-diidropiridínico) já otimizada ou contraindicada/não tolerada — mavacamten não é primeira linha."
+      },
+      {
+        "id": "mavacamten-feve-basal",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "origem_secao": "dosing (criterio para aumento de dose) — medicamentos/metadados.json, entrada mavacamten",
+        "texto": "Ecocardiograma basal com FEVE e gradiente de via de saída do VE à manobra de Valsalva documentados antes da primeira dose — são os dois parâmetros que guiam toda a titulação subsequente."
+      },
+      {
+        "id": "mavacamten-dose-inicial",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "origem_secao": "dosing (dose inicial) — medicamentos/metadados.json, entrada mavacamten",
+        "texto": "Dose inicial de 5 mg uma vez ao dia."
+      },
+      {
+        "id": "mavacamten-reavaliacao-4-8-semanas",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "origem_secao": "dosing (titulacao, criterio de reducao precoce de dose) — medicamentos/metadados.json, entrada mavacamten",
+        "texto": "Ecocardiograma agendado nas semanas 4 e 8 para reavaliar gradiente de LVOT à Valsalva — se o gradiente cair abaixo de 20 mmHg nesse período, a dose deve ser reduzida precocemente (risco de disfunção sistólica excessiva)."
+      },
+      {
+        "id": "mavacamten-reavaliacao-12-semanas",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "origem_secao": "dosing (criterio para aumento de dose) — medicamentos/metadados.json, entrada mavacamten",
+        "texto": "Ecocardiograma agendado na semana 12 (e a cada 12 semanas depois) — aumento de dose só é permitido a partir desse ponto, e apenas se o gradiente de LVOT à Valsalva permanecer ≥30 mmHg com FEVE ≥55%."
+      },
+      {
+        "id": "mavacamten-interacao-cyp2c19",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "origem_secao": "Nenhuma fonte desta base confirma detalhe de interação/CYP2C19 nesta sessão",
+        "texto": "VERIFICAÇÃO HUMANA NECESSÁRIA: mavacamten é conhecido na literatura internacional por interação relevante com inibidores/indutores de CYP2C19 e por exigir programa de monitorização regulatória (REMS, nos EUA) — nenhum dos dois documentos-fonte desta base (protocolo clínico ou verbete de medicamento) confirma esses detalhes com número/critério específico nesta sessão; conferir bula brasileira antes de prescrever."
+      }
+    ],
+    "revisao": "Itens de titulação (dose inicial, semanas 4/8/12, cortes de gradiente de LVOT e FEVE) conferidos contra o campo `dosing` já revisado do verbete `mavacamten` em medicamentos/metadados.json. O item de interação/CYP2C19 foi mantido com VERIFICAÇÃO HUMANA NECESSÁRIA em vez de completado de memória — nenhuma das duas fontes desta base confirma esse dado. Este checklist NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles.",
+    "source_refs": [
+      "Mavacamten-A Targeted Therapy for Hypertrophic Cardiomyopathy. JACC. 2023. PMID 36878205",
+      "dosing de mavacamten — medicamentos/metadados.json (fonte: JAHA/ACC, já revisado nesta base)"
+    ],
+    "review_status": "revisado"
   }
 ]
