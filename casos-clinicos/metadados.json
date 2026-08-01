@@ -1566,5 +1566,187 @@
       "Velazquez EJ, Morrow DA, DeVore AD, et al.; PIONEER-HF Investigators. Angiotensin-Neprilysin Inhibition in Acute Decompensated Heart Failure. N Engl J Med. 2019;380(6):539-548. DOI: 10.1056/NEJMoa1812851. PMID: 30415601. ERRATA REGISTRADA e não lida nesta redação: N Engl J Med. 2019;380(11):1090."
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "prevencao-primaria-ldl-normal-com-pcr-us-elevada-rosuvastatina-jupiter",
+    "titulo": "LDL normal e proteína C-reativa alta em prevenção primária: tratar quem não tem hiperlipidemia?",
+    "tema": "Prevenção e lipídios",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 58 anos, sem doença cardiovascular conhecida, sem diabetes e sem tabagismo. LDL-colesterol de 112 mg/dL e proteína C-reativa ultrassensível de 3,1 mg/L, confirmada em segunda dosagem fora de quadro infeccioso. Pressão controlada sem medicação.",
+    "pergunta": "Há evidência randomizada de benefício com estatina neste perfil, apesar do LDL não elevado?",
+    "opcoes": [
+      "Sim — a rosuvastatina reduziu eventos cardiovasculares maiores em pessoas aparentemente saudáveis com LDL abaixo de 130 mg/dL e PCR ultrassensível de 2,0 mg/L ou mais",
+      "Não — sem hiperlipidemia a estatina não altera desfecho, e a PCR ultrassensível é apenas marcador prognóstico sem valor terapêutico",
+      "Sim, mas o benefício demonstrado foi apenas na redução da própria PCR, sem efeito em evento clínico",
+      "Não — a conduta correta é anti-inflamatório não esteroidal em dose baixa para reduzir a PCR"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O JUPITER randomizou 17.802 homens e mulheres aparentemente saudáveis, com LDL abaixo de 130 mg/dL e proteína C-reativa ultrassensível de 2,0 mg/L ou mais, para rosuvastatina 20 mg ao dia ou placebo — critérios que este paciente preenche. O ensaio foi interrompido após seguimento mediano de 1,9 ano (máximo de 5,0). A rosuvastatina reduziu o LDL em 50% e a PCR ultrassensível em 37%. O desfecho primário combinado (infarto, AVC, revascularização arterial, internação por angina instável ou morte cardiovascular) ocorreu a 0,77 contra 1,36 por 100 pessoas-ano (HR 0,56; IC95% 0,46-0,69; P<0,00001), com reduções concordantes em infarto (HR 0,46), AVC (HR 0,52) e morte por qualquer causa (1,00 contra 1,25 por 100 pessoas-ano; HR 0,80; IC95% 0,67-0,97; P=0,02). Duas ressalvas que pertencem à decisão e estão no próprio ensaio: o seguimento mediano foi curto, de menos de 2 anos, e o grupo rosuvastatina teve MAIOR incidência de diabetes relatado pelo médico, sem aumento significativo de miopatia ou câncer. O ensaio não testou anti-inflamatório comum, e nada nele apoia essa alternativa.",
+    "source_refs": [
+      "Ridker PM, Danielson E, Fonseca FA, et al.; JUPITER Study Group. Rosuvastatin to prevent vascular events in men and women with elevated C-reactive protein. N Engl J Med. 2008;359(21):2195-2207. DOI: 10.1056/NEJMoa0807646. PMID: 18997196"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "inflamacao-residual-pos-infarto-canaquinumabe-cantos-prova-de-conceito",
+    "titulo": "Inflamação residual depois do infarto: tratar a inflamação muda desfecho?",
+    "tema": "Geral",
+    "nivel": "avançado",
+    "enunciado": "Homem, 64 anos, com infarto prévio há dois anos, LDL em 62 mg/dL sob estatina de alta potência e ezetimiba, aderente ao tratamento. A proteína C-reativa ultrassensível permanece em 4,2 mg/L, sem foco infeccioso ou doença inflamatória identificada. Ele pergunta se existe tratamento para essa inflamação residual.",
+    "pergunta": "O que o ensaio randomizado que testou essa hipótese demonstrou?",
+    "opcoes": [
+      "Que reduzir inflamação sem mexer em lipídios reduziu evento cardiovascular recorrente — em uma dose específica, ao custo de mais infecção fatal e sem redução de mortalidade total",
+      "Que a redução da inflamação não teve efeito algum sobre eventos, encerrando a hipótese inflamatória",
+      "Que o benefício veio da redução de LDL provocada pelo anti-inflamatório",
+      "Que houve redução de mortalidade por todas as causas em todas as doses testadas"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O CANTOS testou canaquinumabe, anticorpo monoclonal contra a interleucina-1β, em 10.061 pacientes com infarto prévio e PCR ultrassensível de 2 mg/L ou mais, comparando três doses (50, 150 e 300 mg por via subcutânea a cada 3 meses) com placebo. Em 48 meses, a redução mediana da PCR ultrassensível foi 26, 37 e 41 pontos percentuais maior que a do placebo nas três doses — e o canaquinumabe NÃO reduziu lipídios, o que é justamente o desenho que permite isolar o efeito anti-inflamatório. Em seguimento mediano de 3,7 anos, a incidência do desfecho primário foi de 4,50 eventos por 100 pessoas-ano no placebo contra 4,11, 3,86 e 3,90 nas doses de 50, 150 e 300 mg. Só a dose de 150 mg atingiu o limiar pré-especificado ajustado para multiplicidade (HR 0,85; IC95% 0,74-0,98; P=0,021); a de 300 mg teve HR 0,86 (P=0,031) sem cruzar esse limiar, e a de 50 mg não foi significativa (HR 0,93; P=0,30). O preço e o limite estão no mesmo abstract: mais infecção FATAL com canaquinumabe e nenhuma diferença em mortalidade por todas as causas (HR 0,94; IC95% 0,83-1,06; P=0,31). É prova de conceito da hipótese inflamatória — não uma prescrição de rotina para este paciente.",
+    "source_refs": [
+      "Ridker PM, Everett BM, Thuren T, et al.; CANTOS Trial Group. Antiinflammatory Therapy with Canakinumab for Atherosclerotic Disease. N Engl J Med. 2017;377(12):1119-1131. DOI: 10.1056/NEJMoa1707914. PMID: 28845751"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "escore-grace-o-que-ele-mede-e-o-que-nao-mede-na-sca",
+    "titulo": "Escore GRACE na síndrome coronariana aguda: o que ele estima, exatamente?",
+    "tema": "Calculadoras",
+    "nivel": "básico",
+    "enunciado": "Mulher, 72 anos, admitida com síndrome coronariana aguda sem supradesnivelamento de ST. Frequência cardíaca de 104 bpm, pressão sistólica de 108 mmHg, creatinina de 1,4 mg/dL, Killip II, troponina positiva e infradesnivelamento de ST. O residente calcula o escore GRACE e pergunta o que fazer com o número.",
+    "pergunta": "Qual afirmação descreve corretamente o escore GRACE e sua base de derivação?",
+    "opcoes": [
+      "Estima o risco de morte hospitalar a partir de oito variáveis clínicas e laboratoriais, derivado de um registro com validação externa, e serve para graduar risco — não para escolher sozinho a estratégia",
+      "Estima exclusivamente o risco de sangramento maior durante a internação",
+      "Foi derivado de um ensaio clínico randomizado de estratégia invasiva e indica diretamente quem deve ir ao cateterismo",
+      "Aplica-se apenas ao infarto com supradesnivelamento de ST, não ao quadro sem supra"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O escore GRACE foi derivado por regressão logística multivariável em 11.389 pacientes com síndrome coronariana aguda COM e SEM supradesnivelamento de ST, incluindo 509 óbitos hospitalares, do Global Registry of Acute Coronary Events entre abril de 1999 e março de 2001 — ou seja, de um registro observacional, não de um ensaio randomizado de estratégia. Foi validado em duas coortes independentes: 3.972 pacientes subsequentes do próprio GRACE e 12.142 do ensaio GUSTO-IIb. Oito fatores de risco independentes responderam por 89,9% da informação prognóstica, e todos aparecem no enunciado deste caso: idade (OR 1,7 por 10 anos), classe de Killip (OR 2,0 por classe), pressão sistólica (OR 1,4 por queda de 20 mmHg), desvio do segmento ST (OR 2,4), parada cardíaca na apresentação (OR 4,3), creatinina sérica (OR 1,2 por aumento de 1 mg/dL), enzimas cardíacas iniciais positivas (OR 1,6) e frequência cardíaca (OR 1,3 por aumento de 30 bpm). A discriminação foi boa: estatística c de 0,83 na derivação, 0,84 na confirmação do GRACE e 0,79 no GUSTO-IIb. O desfecho modelado é MORTE HOSPITALAR — não sangramento, que é objeto de outros escores — e a aplicação correta é graduar risco para informar a decisão, não substituí-la.",
+    "source_refs": [
+      "Granger CB, Goldberg RJ, Dabbous O, et al.; Global Registry of Acute Coronary Events Investigators. Predictors of hospital mortality in the global registry of acute coronary events. Arch Intern Med. 2003;163(19):2345-2353. DOI: 10.1001/archinte.163.19.2345. PMID: 14581255"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "ic-classe-ii-com-qrs-largo-acrescentar-ressincronizacao-ao-cdi-madit-crt-raft",
+    "titulo": "Insuficiência cardíaca pouco sintomática com QRS largo: ressincronizar ou só implantar o desfibrilador?",
+    "tema": "Dispositivos",
+    "nivel": "avançado",
+    "enunciado": "Homem, 66 anos, com cardiomiopatia dilatada, fração de ejeção de 27% e QRS de 158 ms com morfologia de bloqueio de ramo esquerdo. Está em classe funcional II com terapia medicamentosa otimizada e tem indicação de cardiodesfibrilador para prevenção primária.",
+    "pergunta": "Vale acrescentar ressincronização ao desfibrilador neste paciente pouco sintomático?",
+    "opcoes": [
+      "Sim — nesse perfil a ressincronização somada ao desfibrilador reduziu eventos de insuficiência cardíaca, com maior benefício quando o QRS é de 150 ms ou mais",
+      "Não — a ressincronização só tem benefício demonstrado em classe funcional III ou IV",
+      "Não — o benefício da ressincronização se restringe à cardiomiopatia isquêmica",
+      "Sim, e o benefício independe da duração do QRS, que não influencia a resposta"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "Dois ensaios sustentam a resposta e se complementam. O MADIT-CRT incluiu 1.820 pacientes com cardiomiopatia isquêmica ou não isquêmica, fração de ejeção de 30% ou menos, QRS de 130 ms ou mais e sintomas em classe I ou II, randomizados 3:2 para ressincronização mais desfibrilador ou desfibrilador isolado. Em seguimento médio de 2,4 anos, o desfecho primário de morte por qualquer causa ou evento não fatal de insuficiência cardíaca ocorreu em 17,2% contra 25,3% (HR 0,66; IC95% 0,52-0,84; P=0,001). Três achados delimitam o resultado: o benefício veio de uma redução de 41% no risco de eventos de insuficiência cardíaca, foi evidente principalmente no subgrupo pré-especificado com QRS de 150 ms ou mais, e NÃO houve diferença de mortalidade — 3% ao ano em cada grupo. O benefício também não diferiu significativamente entre cardiomiopatia isquêmica e não isquêmica, o que descarta a alternativa que restringe à isquêmica. O RAFT, com 1.798 pacientes em classe II ou III e seguimento médio de 40 meses, foi além no desfecho duro: morte ou internação por insuficiência cardíaca em 33,2% contra 40,3% (HR 0,75; IC95% 0,64-0,87; P<0,001), com redução de mortalidade (186 contra 236 óbitos; HR 0,75; IC95% 0,62-0,91; P=0,003). O custo aparece no mesmo ensaio: em 30 dias após o implante houve evento adverso em 124 pacientes do grupo ressincronização contra 58 do grupo desfibrilador isolado (P<0,001).",
+    "source_refs": [
+      "Moss AJ, Hall WJ, Cannom DS, et al.; MADIT-CRT Trial Investigators. Cardiac-resynchronization therapy for the prevention of heart-failure events. N Engl J Med. 2009;361(14):1329-1338. DOI: 10.1056/NEJMoa0906431. PMID: 19723701",
+      "Tang AS, Wells GA, Talajic M, et al.; Resynchronization-Defibrillation for Ambulatory Heart Failure Trial Investigators. Cardiac-resynchronization therapy for mild-to-moderate heart failure. N Engl J Med. 2010;363(25):2385-2395. DOI: 10.1056/NEJMoa1009540. PMID: 21073365"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "avc-criptogenico-em-jovem-com-forame-oval-patente-fechar-ou-antiagregar",
+    "titulo": "AVC criptogênico em adulto jovem com forame oval patente: fechar o forame?",
+    "tema": "Cardiopatias congênitas",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 38 anos, com AVC isquêmico sem causa identificada após investigação completa, incluindo monitorização prolongada de ritmo sem fibrilação atrial. O ecocardiograma transesofágico mostra forame oval patente com shunt interatrial amplo e aneurisma do septo interatrial. Sem trombofilia conhecida.",
+    "pergunta": "Qual conduta tem melhor sustentação randomizada neste perfil?",
+    "opcoes": [
+      "Manter apenas antiagregante plaquetário — o fechamento nunca superou o tratamento clínico",
+      "Fechamento percutâneo do forame associado a antiagregante, ciente do aumento de fibrilação atrial e de complicação do procedimento",
+      "Anticoagulação plena por toda a vida, conduta superior a todas as demais em ensaio randomizado",
+      "Fechamento cirúrgico aberto do septo interatrial"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Dois ensaios de 2017 respondem a esta pergunta, e o perfil desta paciente é o que os torna aplicáveis. O CLOSE randomizou 663 pacientes de 16 a 60 anos com AVC recente atribuído ao forame oval E com aneurisma do septo atrial ou shunt interatrial amplo — exatamente os achados descritos — para fechamento percutâneo mais antiagregante, antiagregante isolado ou anticoagulação oral. Em seguimento médio de 5,3 anos, NENHUM dos 238 pacientes do grupo fechamento teve AVC, contra 14 de 235 do grupo antiagregante isolado (HR 0,03; IC95% 0 a 0,26; P<0,001). O custo está no mesmo ensaio: complicações do procedimento em 14 pacientes (5,9%) e mais fibrilação atrial no grupo fechamento (4,6% contra 0,9%; P=0,02). O RESPECT, em 980 pacientes de 18 a 60 anos seguidos por mediana de 5,9 anos, apontou na mesma direção com efeito menor: AVC isquêmico recorrente a 0,58 contra 1,07 evento por 100 pacientes-ano (HR 0,55; IC95% 0,31 a 0,999; P=0,046), e a 0,38 (IC95% 0,18-0,79; P=0,007) quando restrito a AVC de causa indeterminada; tromboembolismo venoso foi mais comum no grupo fechamento. Duas ressalvas honestas: a análise do seguimento estendido do RESPECT foi considerada EXPLORATÓRIA pelos próprios autores, e a exposição ao tratamento foi desigual entre os grupos por maior abandono no braço clínico. O braço de anticoagulação do CLOSE teve 3 AVC em 187 contra 7 em 174 no antiagregante — números pequenos, que não sustentam a alternativa da anticoagulação vitalícia.",
+    "source_refs": [
+      "Mas JL, Derumeaux G, Guillon B, et al.; CLOSE Investigators. Patent Foramen Ovale Closure or Anticoagulation vs. Antiplatelets after Stroke. N Engl J Med. 2017;377(11):1011-1021. DOI: 10.1056/NEJMoa1705915. PMID: 28902593",
+      "Saver JL, Carroll JD, Thaler DE, et al.; RESPECT Investigators. Long-Term Outcomes of Patent Foramen Ovale Closure or Medical Therapy after Stroke. N Engl J Med. 2017;377(11):1022-1032. DOI: 10.1056/NEJMoa1610057. PMID: 28902590"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cardiopatia-reumatica-latente-detectada-por-rastreio-profilaxia-goal",
+    "titulo": "Cardiopatia reumática latente achada em rastreamento ecocardiográfico: iniciar profilaxia?",
+    "tema": "Febre reumática",
+    "nivel": "intermediário",
+    "enunciado": "Adolescente de 14 anos, assintomática, teve alteração valvar compatível com cardiopatia reumática latente detectada em rastreamento ecocardiográfico escolar, confirmada por ecocardiograma diagnóstico. Nunca teve episódio documentado de febre reumática aguda nem sintomas cardíacos.",
+    "pergunta": "Há evidência randomizada de que a profilaxia secundária altere a evolução nesse estágio latente?",
+    "opcoes": [
+      "Sim — penicilina G benzatina a cada 4 semanas por 2 anos reduziu a progressão ecocardiográfica da doença latente",
+      "Não — sem episódio agudo documentado, a profilaxia não tem qualquer efeito demonstrado",
+      "Sim, mas apenas com antibiótico oral diário, já que a via intramuscular foi abandonada por risco anafilático",
+      "Não — a conduta indicada é intervenção valvar precoce, sem papel para antibiótico"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O ensaio GOAL randomizou crianças e adolescentes ugandeses de 5 a 17 anos com cardiopatia reumática LATENTE para penicilina G benzatina intramuscular a cada 4 semanas por 2 anos ou nenhuma profilaxia, com ecocardiograma no início e após 2 anos e adjudicação das mudanças por painel cego à alocação. A escala do rastreamento contextualiza o achado desta paciente: entre 102.200 crianças e adolescentes rastreados, 3.327 foram inicialmente classificados como portadores de doença latente e 926 tiveram diagnóstico definitivo por ecocardiograma confirmatório; 818 entraram na análise por intenção de tratar modificada e 799 (97,7%) completaram o estudo. A progressão ecocardiográfica em 2 anos ocorreu em 3 participantes (0,8%) do grupo profilaxia contra 33 (8,2%) do controle — diferença de risco de -7,5 pontos percentuais (IC95% -10,2 a -4,7; P<0,001). A segurança foi favorável e está quantificada: dois participantes tiveram evento adverso grave atribuível à profilaxia, incluindo um episódio de reação anafilática leve, representando menos de 0,1% de todas as doses administradas — o que desmonta a alternativa que abandona a via intramuscular. Uma ressalva que os próprios autores fazem e que não deve ser omitida: é necessária mais pesquisa antes de recomendar rastreamento populacional, ou seja, o ensaio sustenta tratar quem já foi diagnosticado, não necessariamente rastrear todo mundo.",
+    "source_refs": [
+      "Beaton A, Okello E, Rwebembera J, et al. Secondary Antibiotic Prophylaxis for Latent Rheumatic Heart Disease. N Engl J Med. 2022;386(3):230-240. DOI: 10.1056/NEJMoa2102074. PMID: 34767321"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "icfer-trocar-ieca-por-sacubitril-valsartana-paradigm-hf-e-seus-limites",
+    "titulo": "Insuficiência cardíaca com fração reduzida em uso de inibidor da ECA: trocar por sacubitril-valsartana?",
+    "tema": "Farmacologia",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 61 anos, com insuficiência cardíaca de fração de ejeção de 32%, classe funcional II, em uso de enalapril 10 mg duas vezes ao dia, betabloqueador e espironolactona, todos em dose otimizada. Pressão sistólica de 116 mmHg, potássio de 4,4 mEq/L, função renal estável. Segue sintomático aos esforços moderados.",
+    "pergunta": "O que a evidência sustenta sobre substituir o inibidor da ECA por sacubitril-valsartana?",
+    "opcoes": [
+      "A troca reduziu morte cardiovascular, mortalidade total e internação por insuficiência cardíaca em comparação com enalapril, com mais hipotensão e angioedema não grave e menos disfunção renal, hipercalemia e tosse",
+      "A troca só reduziu internação, sem qualquer efeito sobre mortalidade",
+      "A troca deve ser feita mantendo o inibidor da ECA em associação, para efeito aditivo",
+      "A troca não tem benefício em classe funcional II, apenas em classe III ou IV"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O PARADIGM-HF randomizou 8.442 pacientes em classe II, III ou IV com fração de ejeção de 40% ou menos para sacubitril-valsartana (200 mg duas vezes ao dia) ou enalapril (10 mg duas vezes ao dia), somados à terapia recomendada — a mesma dose de enalapril que este paciente já usa, o que torna a comparação direta. O ensaio foi interrompido precocemente, conforme regras pré-especificadas, após mediana de 27 meses, por benefício considerado incontestável. O desfecho primário composto ocorreu em 21,8% contra 26,5% (HR 0,80; IC95% 0,73-0,87; P<0,001); morreram 17,0% contra 19,8% (HR para morte por qualquer causa 0,84; IC95% 0,76-0,93; P<0,001), e por causa cardiovascular 13,3% contra 16,5% (HR 0,80; IC95% 0,71-0,89; P<0,001). A internação por insuficiência cardíaca caiu 21% (P<0,001), com melhora de sintomas e limitação física (P=0,001). O perfil de efeitos adversos é o que se deve dizer ao paciente e vem do próprio ensaio: mais hipotensão e angioedema NÃO grave com sacubitril-valsartana, e menos comprometimento renal, hipercalemia e tosse que com enalapril. Um ponto de segurança que a alternativa errada esconde: sacubitril-valsartana SUBSTITUI o inibidor da ECA e nunca se associa a ele — a combinação eleva o risco de angioedema, e o próprio desenho do ensaio previa período de suspensão entre as drogas.",
+    "source_refs": [
+      "McMurray JJ, Packer M, Desai AS, et al.; PARADIGM-HF Investigators and Committees. Angiotensin-neprilysin inhibition versus enalapril in heart failure. N Engl J Med. 2014;371(11):993-1004. DOI: 10.1056/NEJMoa1409077. PMID: 25176015"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cancer-de-mama-com-antraciclico-candesartana-ou-metoprolol-prada",
+    "titulo": "Quimioterapia com antracíclico em câncer de mama: cardioproteção com bloqueador do receptor ou betabloqueador?",
+    "tema": "Cardio-oncologia",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 49 anos, com câncer de mama inicial, sem cardiopatia prévia nem comorbidade séria, iniciará esquema adjuvante contendo antracíclico, possivelmente com trastuzumabe e radioterapia. A oncologia pergunta se cabe cardioproteção medicamentosa concomitante e com qual droga.",
+    "pergunta": "O que o ensaio randomizado que testou as duas drogas mostrou?",
+    "opcoes": [
+      "Candesartana atenuou o declínio precoce da fração de ejeção; metoprolol não teve efeito sobre esse declínio — e a magnitude do efeito foi pequena",
+      "Metoprolol foi a droga eficaz, e a candesartana não teve efeito",
+      "As duas drogas reduziram mortalidade por câncer e por causa cardiovascular",
+      "Nenhuma das duas alterou qualquer desfecho, e a cardioproteção farmacológica foi descartada"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O PRADA foi um ensaio fatorial 2 × 2, randomizado, duplo-cego e controlado por placebo, com 130 mulheres adultas com câncer de mama inicial e sem comorbidade séria, que receberam candesartana cilexetila, succinato de metoprolol ou placebos correspondentes em paralelo à terapia adjuvante. O desfecho primário foi a variação da fração de ejeção medida por RESSONÂNCIA MAGNÉTICA cardíaca — método mais reprodutível que o ecocardiograma, o que importa para detectar variações pequenas. Não houve interação entre os dois tratamentos (P=0,530). O declínio global da fração de ejeção foi de 2,6 pontos percentuais (IC95% 1,5 a 3,8) no grupo placebo contra 0,8 (IC95% -0,4 a 1,9) no grupo candesartana, na análise por intenção de tratar (P=0,026 para a diferença entre grupos); o metoprolol não teve efeito sobre o declínio global. Duas leituras honestas que o caso exige: os próprios autores definiram a priori que uma variação de 5 pontos percentuais seria clinicamente importante, e o efeito observado ficou abaixo disso; e o desfecho é de FUNÇÃO VENTRICULAR, não de insuficiência cardíaca clínica ou mortalidade, que o ensaio não tinha tamanho para medir.",
+    "source_refs": [
+      "Gulati G, Heck SL, Ree AH, et al. Prevention of cardiac dysfunction during adjuvant breast cancer therapy (PRADA): a 2 × 2 factorial, randomized, placebo-controlled, double-blind clinical trial of candesartan and metoprolol. Eur Heart J. 2016;37(21):1671-1680. DOI: 10.1093/eurheartj/ehw022. PMID: 26903532"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "gestante-de-alto-risco-para-pre-eclampsia-precoce-aspirina-aspre",
+    "titulo": "Gestante de alto risco para pré-eclâmpsia pré-termo: aspirina, em que dose e quando?",
+    "tema": "Gravidez",
+    "nivel": "intermediário",
+    "enunciado": "Gestante de 31 anos, com gestação única de 12 semanas, classificada como de alto risco para pré-eclâmpsia pré-termo em rastreamento do primeiro trimestre. Sem sangramento, sem alergia a salicilato e sem contraindicação a antiagregante.",
+    "pergunta": "Qual conduta corresponde ao que o ensaio randomizado demonstrou?",
+    "opcoes": [
+      "Aspirina 150 mg ao dia, iniciada entre 11 e 14 semanas e mantida até 36 semanas, que reduziu a incidência de pré-eclâmpsia pré-termo",
+      "Aspirina apenas a partir de 24 semanas, quando o risco placentário se estabelece",
+      "Nenhuma profilaxia: a aspirina não reduziu pré-eclâmpsia pré-termo em ensaio randomizado",
+      "Heparina de baixo peso molecular em dose profilática, em vez de aspirina"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O ASPRE randomizou 1.776 mulheres com gestação única e alto risco para pré-eclâmpsia pré-termo para aspirina 150 mg ao dia ou placebo, DE 11 A 14 SEMANAS ATÉ 36 SEMANAS de gestação — dose e janela que fazem parte do resultado e não são detalhe. O desfecho primário era parto com pré-eclâmpsia antes de 37 semanas. Após 152 retiradas de consentimento e 4 perdas de seguimento, restaram 798 participantes no grupo aspirina e 822 no placebo. A pré-eclâmpsia pré-termo ocorreu em 13 participantes (1,6%) com aspirina contra 35 (4,3%) com placebo (OR 0,38; IC95% 0,20-0,74; P=0,004), com resultado materialmente inalterado em análise de sensibilidade que considerou as perdas. A adesão foi boa: 79,9% das participantes relataram tomar 85% ou mais dos comprimidos previstos. Não houve diferença significativa entre os grupos em desfechos adversos neonatais ou outros eventos adversos. A dose de 150 mg e o início precoce são o que distingue este ensaio de estudos anteriores com doses menores e início mais tardio — por isso a alternativa que posterga o começo para 24 semanas não corresponde ao que foi testado.",
+    "source_refs": [
+      "Rolnik DL, Wright D, Poon LC, et al. Aspirin versus Placebo in Pregnancies at High Risk for Preterm Preeclampsia. N Engl J Med. 2017;377(7):613-622. DOI: 10.1056/NEJMoa1704559. PMID: 28657417"
+    ],
+    "review_status": "revisado"
   }
 ]
