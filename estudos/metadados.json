@@ -2951,5 +2951,57 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "chagasics-cdi-versus-amiodarona-na-cardiomiopatia-chagasica",
+    "title": "CHAGASICS — Cardiodesfibrilador implantável versus amiodarona na cardiomiopatia chagásica crônica",
+    "study_type": "ensaio_clinico",
+    "authors": "Martinelli-Filho M, Marin-Neto JA, Scanavacca MI, de Paola AAV, Medeiros PTJ, et al.",
+    "journal": "JAMA Cardiology",
+    "year": 2024,
+    "doi": "10.1001/jamacardio.2024.3169",
+    "pmid": "39356542",
+    "url": "https://doi.org/10.1001/jamacardio.2024.3169",
+    "summary": "Ensaio brasileiro, aberto e randomizado 1:1, conduzido em 13 centros do país entre 30/05/2014 e 13/08/2021, comparando cardiodesfibrilador implantável (CDI) com amiodarona (dose de ataque de 600 mg após a randomização) na PREVENÇÃO PRIMÁRIA de morte na cardiomiopatia chagásica crônica. O critério de seleção é a parte mais aplicável do estudo: sorologia positiva para doença de Chagas, escore de risco de Rassi de pelo menos 10 pontos (risco intermediário a alto) e ao menos um episódio de taquicardia ventricular não sustentada. Foram 323 pacientes (157 CDI, 166 amiodarona), idade média de 57,4 anos (DP 9,8), 57,3% homens, fração de ejeção média de 37,0% (DP 11,6), com mediana de seguimento de 3,6 anos (IIQ 1,8-4,4) e análise por intenção de tratar. Registro ClinicalTrials.gov NCT01722942.",
+    "key_findings": "O desfecho primário — mortalidade por qualquer causa — NÃO diferiu: 60 mortes (38,2%) com CDI contra 64 (38,6%) com amiodarona, HR 0,86 (IC95% 0,60-1,22; p=0,40). Os secundários foram todos favoráveis ao CDI: morte súbita cardíaca 6 (3,8%) contra 23 (13,9%), HR 0,25 (IC95% 0,10-0,61; p=0,001); bradicardia com necessidade de estimulação 3 (1,9%) contra 27 (16,3%), HR 0,10 (IC95% 0,03-0,34; p<0,001); e internação por insuficiência cardíaca 14 (8,9%) contra 28 (16,9%), HR 0,46 (IC95% 0,24-0,87; p=0,01).",
+    "limitations": "O ensaio foi INTERROMPIDO PRECOCEMENTE por razões administrativas, com 323 dos 1.100 pacientes previstos — menos de um terço da amostra planejada. Isso é decisivo para ler o resultado primário: o intervalo de confiança da mortalidade global (0,60 a 1,22) é compatível tanto com ausência de efeito quanto com uma redução real de até 40%, e o ensaio não tem poder para distinguir as duas hipóteses. Primário inconclusivo não é primário negativo. É ensaio ABERTO, sem cegamento. Dois cuidados de leitura nos números: (1) os percentuais de redução que circulam — 72% para morte súbita e 47% para internação — são reduções brutas de taxa de evento (1 − 3,8/13,9 e 1 − 8,9/16,9), enquanto os HR de 0,25 e 0,46 vêm da análise de tempo até o evento; são duas medidas diferentes do mesmo achado, não números discordantes; (2) o HR de 0,10 para necessidade de estimulação precisa ser lido lembrando que o próprio CDI estimula — o paciente do braço CDI já possui a função que o desfecho mede, o que favorece estruturalmente esse braço. Os próprios autores concluem que novos estudos são necessários para confirmar os achados.",
+    "clinical_implications": "É o primeiro ensaio randomizado a comparar CDI e amiodarona na cardiomiopatia chagásica, e é brasileiro — a doença cuja maior carga está no Brasil finalmente tem evidência randomizada própria, em vez de extrapolação da cardiopatia isquêmica. O que ele autoriza dizer: em paciente chagásico com Rassi ≥ 10 e TVNS, o CDI não demonstrou reduzir mortalidade global, mas reduziu morte súbita, necessidade de estimulação e internação por insuficiência cardíaca. O que ele NÃO autoriza: concluir que o CDI é inútil nessa população — a interrupção precoce tirou do ensaio o poder de responder à pergunta primária. O escore de Rassi ≥ 10 associado a TVNS é o critério operacional de seleção que o ensaio deixa pronto para uso.",
+    "theme": "Cardiomiopatias",
+    "tags": [
+      "doença de Chagas",
+      "cardiomiopatia chagásica",
+      "cardiodesfibrilador implantável",
+      "amiodarona",
+      "morte súbita",
+      "escore de Rassi",
+      "ensaio brasileiro"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cochrane-2017-intervencoes-no-tratamento-da-pericardite-tuberculosa",
+    "title": "Revisão Cochrane 2017 — Intervenções no tratamento da pericardite tuberculosa",
+    "study_type": "revisao_sistematica",
+    "authors": "Wiysonge CS, Ntsekhe M, Thabane L, Volmink J, Majombozi D, et al.",
+    "journal": "Cochrane Database of Systematic Reviews",
+    "year": 2017,
+    "doi": "10.1002/14651858.CD000526.pub2",
+    "pmid": "28902412",
+    "url": "https://doi.org/10.1002/14651858.CD000526.pub2",
+    "summary": "Revisão sistemática com metanálise de efeito fixo, com certeza da evidência avaliada por GRADE, reunindo 7 ensaios randomizados ou quase randomizados e 1.959 participantes — TODOS da África subsaariana, e 1.051 deles (54%) com HIV. Os sete avaliaram corticosteroide; um avaliou colchicina, um a imunoterapia com Mycobacterium indicus pranii e um a drenagem cirúrgica aberta. Quatro ensaios (1.841 participantes) foram de baixo risco de viés e três (118 participantes) de alto risco. Busca atualizada até 27/03/2017. A revisão estratifica os resultados por status de HIV, e é essa separação que dá o valor dela.",
+    "key_findings": "SEM HIV: o corticosteroide pode reduzir a mortalidade por qualquer causa — RR 0,80 (IC95% 0,59-1,09; 660 participantes, 4 ensaios; certeza BAIXA), com o intervalo cruzando a unidade; e provavelmente reduz a morte por pericardite — RR 0,39 (IC95% 0,19-0,80; 660 participantes, 4 ensaios; certeza MODERADA), este sim com intervalo que não cruza 1. Sobre repetir a pericardiocentese, RR 0,85 (IC95% 0,70-1,04; 492 participantes, 2 ensaios; certeza baixa). O efeito sobre constrição e sobre câncer permaneceu incerto (certeza muito baixa). COM HIV: o corticosteroide pode reduzir a constrição — RR 0,55 (IC95% 0,26-1,16; 575 participantes, 3 ensaios; certeza baixa), intervalo também cruzando a unidade; tem pouco ou nenhum efeito sobre repetir pericardiocentese — RR 1,02 (IC95% 0,89-1,18; 517 participantes, 2 ensaios; certeza baixa); e o efeito sobre morte por qualquer causa e sobre câncer é incerto (certeza muito baixa). DRENAGEM CIRÚRGICA ABERTA, em pessoas sem HIV: pode reduzir a necessidade de repetir pericardiocentese — RR 0,23 (IC95% 0,07-0,76; 122 participantes, 1 ensaio; certeza baixa). COLCHICINA: um único ensaio com 33 participantes, dados insuficientes para qualquer conclusão. IMUNOTERAPIA com M. indicus pranii: efeito incerto sobre qualquer desfecho (certeza muito baixa).",
+    "limitations": "Duas limitações mudam a aplicabilidade e precisam ser ditas juntas. A primeira é que apenas 19,9% dos participantes (203 de 1.959) estavam em uso de antirretroviral — a coorte HIV-positiva da revisão não representa o paciente tratado hoje. A segunda é geográfica: os sete ensaios são todos da África subsaariana. Além disso, a rotulagem GRADE da Cochrane ('pode reduzir') convive, em dois dos desfechos principais, com intervalos de confiança que incluem a ausência de efeito — mortalidade global sem HIV (0,59-1,09) e constrição com HIV (0,26-1,16). A revisão não encontrou nenhum ensaio elegível sobre a DURAÇÃO do tratamento antituberculoso, nem sobre drenagem percutânea sob anestesia local, nem sobre o momento da pericardiectomia na constrição — três perguntas de beira de leito que seguem sem resposta randomizada.",
+    "clinical_implications": "Esta revisão e o IMPI, já cadastrado nesta base, parecem discordar e não discordam: falam de populações diferentes. O IMPI, com dois terços de participantes HIV-positivos, teve desfecho primário neutro e sinalizou AUMENTO de câncer no coinfectado. A Cochrane, ao separar por status de HIV, mostra que o sinal favorável do corticosteroide sobre mortalidade por pericardite se concentra em quem NÃO tem HIV (RR 0,39, certeza moderada) — estrato que o IMPI isoladamente não conseguia iluminar. A recomendação prática que os autores extraem disso é a ponte para a prática atual: no paciente HIV-positivo com boa supressão viral por antirretroviral, os resultados obtidos nos pacientes SEM HIV são os mais relevantes, justamente porque a coorte HIV-positiva dos ensaios estava quase toda sem tratamento antirretroviral.",
+    "theme": "Pericárdio",
+    "tags": [
+      "pericardite tuberculosa",
+      "corticosteroide",
+      "HIV",
+      "constrição pericárdica",
+      "GRADE",
+      "drenagem pericárdica",
+      "colchicina"
+    ],
+    "review_status": "revisado"
   }
 ]
