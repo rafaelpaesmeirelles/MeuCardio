@@ -72,6 +72,10 @@ export default function Assistente() {
     setErro("");
     setMensagens((m) => [...m, { papel: "user", conteudo: texto }, { papel: "assistant", conteudo: "" }]);
     setPensando(true);
+    // Sinaliza para main.tsx que um streaming está em andamento: se o
+    // service worker trocar de versão nesse meio-tempo, a recarga da página
+    // fica pendente em vez de cortar a resposta no meio (ver main.tsx).
+    (window as unknown as { __streamAtivo?: boolean }).__streamAtivo = true;
     try {
       await api.stream("/ai/perguntar/stream", {
         pergunta: texto, conversation_id: conversa,
@@ -112,6 +116,8 @@ export default function Assistente() {
       setErro(e instanceof Error ? e.message : "Não foi possível consultar o assistente.");
     } finally {
       setPensando(false);
+      (window as unknown as { __streamAtivo?: boolean }).__streamAtivo = false;
+      (window as unknown as { __streamEncerrado?: () => void }).__streamEncerrado?.();
     }
   }
 
