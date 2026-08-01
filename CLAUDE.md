@@ -3392,6 +3392,23 @@ despubliquei** — é ação destrutiva em banco e continua exigindo o Rafael, m
 contínua de publicação. Recomendação: manter a de Cardiomiopatias (tema mais preciso para
 achado de ventriculografia) e despublicar a de Saúde mental, ou o inverso, à escolha dele.
 
+**✅ RESOLVIDO em 01/08/2026, 13h30 — o Rafael decidiu e autorizou por ordem direta:**
+*"despublica a imagem duplicada do takotsubo de saude mental"*. Executado pela sessão `/root`
+(monitor), que conferiu os dois registros antes de tocar em qualquer coisa:
+
+- `takotsubo-abaulamento-apical-ventriculografia` (Saúde mental) → **`published = false`**
+- `ventriculografia-takotsubo-balonamento-apical` (Cardiomiopatias) → **continua no ar**, intacta
+
+`gallery_images` foi de 74/74 para **73/74**. `AuditLog` gravado com ação `despublicar`, o MD5 da
+duplicata, o slug que permanece publicado e a autorização nominal do Rafael. **Nenhum arquivo foi
+apagado** — a imagem e a entrada em `galeria/metadados.json` continuam no disco; só saiu do ar.
+
+**Não precisa de guarda extra contra recarga:** conferi o `carregar_galeria.py` depois de
+despublicar. No ramo de registro já existente ele atualiza por lista explícita de campos
+(`title`, `modality`, `theme`, `findings`, ...) que **não inclui `published`**, e no ramo de
+registro novo remove a chave. Uma recarga da galeria não ressuscita a imagem. Se alguém quiser
+reverter, é decisão do Rafael de novo — basta setar `published = true` no slug de Saúde mental.
+
 ### 🔴 01/08/2026, manhã — SESSÃO EXTRA EM `/root` ESCREVEU EM `casos-clinicos/`, E NÃO CONSEGUE CARREGAR NO BANCO
 Registro de uma sessão do Claude Code aberta pelo Rafael **fora do tmux, no diretório `/root`**, a
 quem ele pediu para "assumir a sessão corvia". Ela **não é** o painel `corvia` do tmux — esse
