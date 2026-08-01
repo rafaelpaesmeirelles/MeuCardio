@@ -48,7 +48,39 @@ O modelo gera um **índice de risco** (soma ponderada das variáveis acima) que 
 
 **Discriminação, na coorte de derivação:** área sob a curva ROC de **0,80 para mortalidade em 30 dias** e **0,77 para mortalidade em 1 ano**. Na coorte de validação externa, as taxas de mortalidade previstas corresponderam de perto às observadas em todo o espectro de risco.
 
-`VERIFICAÇÃO HUMANA NECESSÁRIA`: o resumo estruturado do PubMed confirma os preditores, as razões de chance das comorbidades e os pontos de corte de risco (≤60 e >150) com os desfechos correspondentes, mas **não traz a tabela detalhada de pontos por variável** (quantos pontos cada faixa de idade, de pressão arterial, de frequência respiratória, de ureia e de sódio contribui para a soma). Essa tabela existe no texto completo do artigo (JAMA 2003;290(19):2581-2587) e não deve ser reconstruída de memória — consultar o artigo original ou o nomograma publicado antes de aplicar o escore ponto a ponto na prática.
+## Tabela de pontos por variavel (Table 4 do artigo original)
+Tabela extraída do texto completo do artigo (Lee DS et al., JAMA. 2003;290(19):2581-2587, Table 4 "Heart Failure Risk Scoring System", p. 2585), conferida diretamente no PDF do periódico — não reconstruída de memória nem de fonte secundária.
+
+| Variável | Pontos — escore de 30 dias | Pontos — escore de 1 ano |
+|---|---|---|
+| **Idade, anos** | + idade (em anos) | + idade (em anos) |
+| **Frequência respiratória, irpm** (mínimo 20; máximo 45)* | + frequência (em irpm) | + frequência (em irpm) |
+| **Pressão arterial sistólica, mmHg†** | | |
+| ≥180 | −60 | −50 |
+| 160-179 | −55 | −45 |
+| 140-159 | −50 | −40 |
+| 120-139 | −45 | −35 |
+| 100-119 | −40 | −30 |
+| 90-99 | −35 | −25 |
+| <90 | −30 | −20 |
+| **Ureia (BUN), mg/dL** (máximo 60 mg/dL)*‡ | + nível (em mg/dL) | + nível (em mg/dL) |
+| **Sódio sérico <136 mEq/L** | +10 | +10 |
+| **Doença cerebrovascular** | +10 | +10 |
+| **Demência** | +20 | +15 |
+| **Doença pulmonar obstrutiva crônica** | +10 | +10 |
+| **Cirrose hepática** | +25 | +35 |
+| **Câncer** | +15 | +15 |
+| **Hemoglobina <10,0 g/dL (<100 g/L)** | não se aplica ao escore de 30 dias | +10 |
+
+\* Valores acima do máximo ou abaixo do mínimo listado recebem o valor máximo/mínimo correspondente (ou seja, frequência respiratória é truncada em 20 e 45 irpm antes de somar; ureia é truncada em 60 mg/dL antes de somar).
+† Pressão arterial mais alta é protetora nos dois modelos — por isso os pontos são **subtraídos** conforme a faixa, não somados.
+‡ O valor máximo de ureia (60 mg/dL) equivale a 21 mmol/L; o escore é calculado usando o valor em mg/dL.
+
+**Como somar:** escore de 30 dias = idade + frequência respiratória + pontos de pressão arterial sistólica + ureia + pontos de sódio + pontos de doença cerebrovascular + pontos de demência + pontos de DPOC + pontos de cirrose hepática + pontos de câncer. O escore de 1 ano usa a mesma soma, acrescida dos pontos de hemoglobina (que não entram no escore de 30 dias).
+
+**Faixas de risco** (o artigo as descreve em relação a um escore intermediário de referência, 91-120 pontos): muito baixo (≤60 pontos), baixo (61-90), intermediário (91-120), alto (121-150) e muito alto (>150) — os dois extremos e suas mortalidades já constavam na seção acima.
+
+O próprio artigo cita, na nota de rodapé da Table 4, que uma versão eletrônica da calculadora estava disponível em `http://www.ccort.ca/CHFriskmodel.asp` (Canadian Cardiovascular Outcomes Research Team) — endereço histórico de 2003, hoje fora do ar, registrado aqui apenas como a atribuição original do próprio artigo, não como link ativo.
 
 ## Conclusao do proprio estudo
 **"Entre pacientes com insuficiência cardíaca de base comunitária, fatores identificáveis dentro de horas da apresentação hospitalar previram o risco de mortalidade em 30 dias e em 1 ano. O índice preditivo, validado externamente, pode auxiliar os clínicos a estimar o risco de mortalidade por insuficiência cardíaca e a fornecer orientação quantitativa para a tomada de decisão no cuidado da insuficiência cardíaca."**
@@ -59,5 +91,7 @@ O EFFECT ocupa um espaço que nem o GWTG-HF nem o Seattle Heart Failure Model co
 ## Armadilhas clinicas
 - **Não confundir com o GWTG-HF**: o GWTG-HF (Peterson PN et al., 2010, já registrado nesta pasta) prevê **só mortalidade intra-hospitalar**, com variáveis parcialmente diferentes (frequência cardíaca e raça entram no GWTG-HF; frequência respiratória e comorbidades específicas — cerebrovascular, DPOC, cirrose, demência, câncer — entram no EFFECT). São escores complementares, não intercambiáveis.
 - **Não confundir com o Seattle Heart Failure Model**: aquele estima sobrevida ambulatorial de **1 a 3 anos** em IC **crônica**, calculado com dado de consulta, não de internação aguda.
-- **Não aplicar o corte de risco (≤60 ou >150) sem a tabela de pontos completa** — os dois cortes citados aqui vieram do resumo estruturado do artigo, mas o cálculo do escore de cada paciente depende da tabela detalhada de pontos por variável, que está marcada como pendente de verificação no texto completo.
+- **A pressão arterial sistólica pontua ao contrário do que a intuição sugere**: pressão mais alta é protetora, então os pontos são **subtraídos** (de −30 na faixa <90 mmHg até −60 na faixa ≥180 mmHg) — inverter o sinal por engano derruba o escore inteiro.
+- **Ureia e frequência respiratória são truncadas antes de somar** (ureia no máximo 60 mg/dL, frequência respiratória entre 20 e 45 irpm) — valor medido fora dessa faixa entra no cálculo pelo limite, não pelo valor bruto.
+- **O escore de 30 dias e o de 1 ano usam tabelas de pontos diferentes**, não a mesma soma aplicada a dois cortes: cirrose hepática, por exemplo, vale +25 no escore de 30 dias e +35 no de 1 ano, e a hemoglobina só entra no escore de 1 ano.
 - A coorte de derivação e validação é **de base comunitária canadense (Ontário)** — extrapolar para outra população sem considerar diferença de perfil assistencial e de sistema de saúde é uma limitação do próprio desenho do estudo, não exclusiva deste escore.

@@ -4,7 +4,7 @@ slug: indice-de-comorbidade-de-charlson-aplicado-ao-prognostico-cardiovascular
 theme: "Calculadoras"
 kind: calculadora
 review_status: revisado
-source_refs: ["Charlson ME, Pompei P, Ales KL, MacKenzie CR. A new method of classifying prognostic comorbidity in longitudinal studies: development and validation. J Chronic Dis. 1987;40(5):373-383. DOI: 10.1016/0021-9681(87)90171-8. PMID: 3558716 — ARTIGO ORIGINAL do índice. O resumo confirma as faixas de mortalidade por escore e a comparação com o sistema de Kaplan-Feinstein; NÃO traz a tabela completa de doenças e pesos, que está só no texto completo (ver observação de procedência no corpo do documento)", "Charlson M, Szatrowski TP, Peterson J, Gold J. Validation of a combined comorbidity index. J Clin Epidemiol. 1994;47(11):1245-1251. DOI: 10.1016/0895-4356(94)90129-5. PMID: 7722560 — versão AJUSTADA POR IDADE do índice, lida no PubMed; traz os riscos relativos por unidade de comorbidade e por década de idade", "Sachdev M, Sun JL, Tsiatis AA, Nelson CL, Mark DB, Jollis JG. The prognostic importance of comorbidity for mortality in patients with stable coronary artery disease. J Am Coll Cardiol. 2004;43(4):576-582. DOI: 10.1016/j.jacc.2003.10.031. PMID: 14975466 — validação do índice de Charlson especificamente em doença coronariana estável, Duke Databank for Cardiovascular Diseases, 1.471 pacientes"]
+source_refs: ["Charlson ME, Pompei P, Ales KL, MacKenzie CR. A new method of classifying prognostic comorbidity in longitudinal studies: development and validation. J Chronic Dis. 1987;40(5):373-383. DOI: 10.1016/0021-9681(87)90171-8. PMID: 3558716 — ARTIGO ORIGINAL do índice. O resumo confirma as faixas de mortalidade por escore e a comparação com o sistema de Kaplan-Feinstein; a tabela completa de doenças e pesos foi confirmada por via secundária qualificada (ver referência de 2022, abaixo), não pelo texto completo deste artigo, que não foi acessado nesta sessão", "Charlson M, Szatrowski TP, Peterson J, Gold J. Validation of a combined comorbidity index. J Clin Epidemiol. 1994;47(11):1245-1251. DOI: 10.1016/0895-4356(94)90129-5. PMID: 7722560 — versão AJUSTADA POR IDADE do índice, lida no PubMed; traz os riscos relativos por unidade de comorbidade e por década de idade", "Sachdev M, Sun JL, Tsiatis AA, Nelson CL, Mark DB, Jollis JG. The prognostic importance of comorbidity for mortality in patients with stable coronary artery disease. J Am Coll Cardiol. 2004;43(4):576-582. DOI: 10.1016/j.jacc.2003.10.031. PMID: 14975466 — validação do índice de Charlson especificamente em doença coronariana estável, Duke Databank for Cardiovascular Diseases, 1.471 pacientes", "Charlson ME, Carrozzino D, Guidi J, Patierno C. Charlson Comorbidity Index: A Critical Review of Clinimetric Properties. Psychother Psychosom. 2022;91(1):8-35. DOI: 10.1159/000521288. PMID: 34991091 — revisão crítica com a própria Mary Charlson como primeira autora; Tabela 1 ('The CCI: the 19 item-version') reproduz literalmente as 19 condições e pesos do índice original, citando o artigo de 1987 como fonte. Texto completo obtido em PDF e lido com pdftotext -layout — é a fonte da tabela completa acrescentada nesta revisão", "Quan H, Sundararajan V, Halfon P, Fong A, Burnand B, Luthi JC, Saunders LD, Beck CA, Feasby TE, Ghali WA. Coding algorithms for defining comorbidities in ICD-9-CM and ICD-10 administrative data. Med Care. 2005;43(11):1130-1139. DOI: 10.1097/01.mrl.0000182534.19832.83. PMID: 16224307 — Tabela 1 do artigo (códigos CID-9-CM de Deyo e CID-10), lida em PDF, confirma a versão administrativa de 17 categorias que funde tumor sólido/leucemia/linfoma numa só", "Glasheen WP, Cordier T, Gumpina R, Haugh G, Davis J, Renda A. Charlson Comorbidity Index: ICD-9 Update and ICD-10 Translation. Am Health Drug Benefits. 2019;12(4):188-197. PMID: 31428236 — confirma que o instrumento original de 1987 tinha 19 categorias com pesos 1/2/3/6, e descreve a estrutura hierárquica (só a condição mais grave de cada par conta) e a fusão de Deyo das três categorias de câncer não metastático em 1992"]
 legacy_source: "Documento novo, escrito em 01/08/2026. A pasta Calculadoras tinha escores de sangramento (HAS-BLED, CRUSADE, VTE-BLEED), de risco isquêmico (CHA2DS2-VASc, TIMI, GRACE, SYNTAX) e de insuficiência cardíaca (MAGGIC, Seattle Heart Failure Model, GWTG-HF), mas nenhum instrumento de COMORBIDADE GERAL — a pergunta de quanto a doença associada, e não só a doença cardíaca em si, pesa no prognóstico do paciente. É lacuna real: conferido por grep, nenhum documento da pasta nem do restante de content/ menciona Charlson."
 ---
 
@@ -50,15 +50,59 @@ Cada nível a mais do índice associou-se a aumento **em degrau** da mortalidade
 foi preditor independente** de mortalidade (p < 0,001). Os próprios autores relatam que o novo
 índice teve desempenho **semelhante** a um sistema anterior de Kaplan e Feinstein.
 
-> ⚠️ **Procedência da tabela de pontos por doença — leia antes de usar em decisão clínica.** O
-> resumo do PubMed confirma as **faixas de escore e a mortalidade correspondente**, mas **não lista**
-> as 19 condições que compõem o índice nem o peso individual de cada uma (de 1 a 6 pontos). Essa
-> tabela está no **texto completo** do artigo de 1987, que não foi acessado nesta sessão. **Marca-se
-> aqui `VERIFICAÇÃO HUMANA NECESSÁRIA`** para a lista completa de doenças e pesos — a régua deste
-> projeto não permite escrevê-la de memória, por mais que a composição do índice seja amplamente
-> reproduzida na literatura secundária. O que **pode** ser afirmado com base em fonte primária lida
-> é a lista de condições que o estudo de validação em DAC (abaixo) cita explicitamente, com sua
-> importância relativa **naquela população**.
+## Tabela completa: as 19 condições e seus pesos
+O resumo do PubMed do artigo de 1987 confirma as faixas de escore e a mortalidade correspondente
+(tabelas acima), mas não lista as 19 condições nem o peso individual de cada uma — isso está só no
+texto completo do artigo de 1987, que é anterior ao PMC e não foi acessado nesta sessão. A tabela
+abaixo fecha essa lacuna por uma via diferente e verificável: é a reprodução literal da **Tabela 1
+("The CCI: the 19 item-version")** de um artigo de revisão crítica que tem a própria **Mary Charlson
+como primeira autora** — Charlson ME, Carrozzino D, Guidi J, Patierno C. *Charlson Comorbidity Index:
+A Critical Review of Clinimetric Properties.* Psychother Psychosom. 2022;91(1):8-35. DOI:
+10.1159/000521288. PMID: 34991091 — que cita o artigo de 1987 (PMID 3558716) como referência [14]
+exatamente para essa tabela. O texto completo em PDF foi obtido e a tabela lida diretamente
+(`pdftotext -layout`), não de memória nem de fonte secundária não verificável.
+
+| Condição | Peso |
+|---|---|
+| Infarto do miocárdio (MI) | **1** |
+| Insuficiência cardíaca congestiva (CHF) | **1** |
+| Doença arterial periférica | **1** |
+| Doença cerebrovascular | **1** |
+| Demência | **1** |
+| Doença pulmonar crônica | **1** |
+| Doença do tecido conjuntivo | **1** |
+| Úlcera péptica | **1** |
+| Doença hepática leve | **1** |
+| Diabetes (sem lesão de órgão-alvo) | **1** |
+| Hemiplegia | **2** |
+| Doença renal moderada ou grave | **2** |
+| Diabetes com lesão de órgão-alvo | **2** |
+| Tumor sólido sem metástase | **2** |
+| Leucemia | **2** |
+| Linfoma | **2** |
+| Doença hepática moderada ou grave | **3** |
+| Tumor sólido metastático | **6** |
+| AIDS | **6** |
+
+**Pontuação:** soma simples dos pesos das condições presentes no paciente — sem a idade, o teto
+teórico é 33 pontos, com as 19 condições simultaneamente presentes. A hierarquia é implícita ao
+desenho do instrumento: entre duas formas de gravidade da mesma condição, só a mais grave conta —
+por exemplo, doença hepática leve (1) e moderada/grave (3) não se somam, vale só a mais grave
+presente; o mesmo vale para diabetes sem/com lesão de órgão-alvo (Glasheen WP, Cordier T, Gumpina R,
+et al. *Charlson Comorbidity Index: ICD-9 Update and ICD-10 Translation.* Am Health Drug Benefits.
+2019;12(4):188-197. PMID: 31428236 — descreve essa estrutura hierárquica citando o artigo de 1987).
+
+> ⚠️ **Duas versões em circulação — não confundir ao contar condições.** A versão **original de 1987**
+> (acima, 19 itens) trata "tumor sólido sem metástase", "leucemia" e "linfoma" como três categorias
+> separadas, cada uma com peso 2. A adaptação para bases administrativas por código CID — Deyo RA et
+> al. 1992 (ICD-9-CM), depois traduzida para CID-10 por Quan H et al., *Coding algorithms for defining
+> comorbidities in ICD-9-CM and ICD-10 administrative data.* Med Care. 2005;43(11):1130-1139. DOI:
+> 10.1097/01.mrl.0000182534.19832.83. PMID: 16224307 (Tabela 1 do artigo, conferida diretamente em
+> PDF) — **funde essas três categorias em uma só** ("qualquer malignidade, incluindo linfoma e
+> leucemia", peso 2), reduzindo a lista operacional a **17 categorias**, mesmo peso total possível.
+> É a versão usada por quem calcula o índice a partir de banco de dados administrativo/CID em vez de
+> avaliação clínica direta — as duas contam o mesmo peso quando o paciente tem só uma daquelas três
+> condições, e diferem apenas no caso raro de mais de uma estar presente ao mesmo tempo.
 
 ## Versão ajustada por idade
 Charlson M et al., J Clin Epidemiol. 1994;47(11):1245-1251 (PMID 7722560). Estudo em **226
@@ -131,9 +175,13 @@ contra um marcador cardiológico consagrado (FEVE).
   desempenho **comparável** à FEVE em DAC estável, não superioridade nem substituição em outros
   cenários (síndrome coronariana aguda, insuficiência cardíaca aguda têm escores próprios nesta
   pasta)
-- **Aplicar a tabela de pontos por doença de memória ou de fonte secundária não conferida** — a
-  tabela completa (19 condições, pesos de 1 a 6) está marcada `VERIFICAÇÃO HUMANA NECESSÁRIA` neste
-  documento porque não foi lida em fonte primária nesta sessão
+- **Confundir a versão original de 19 condições com a versão administrativa de 17** — ver a tabela e
+  a ressalva acima; a diferença está inteiramente em como "tumor sólido sem metástase", "leucemia" e
+  "linfoma" são contadas (três categorias de peso 2 na versão de 1987, ou uma só na versão CID de
+  Deyo/Quan), e só importa na prática quando o paciente tem mais de uma dessas três ao mesmo tempo
+- **Somar peso de duas gravidades da mesma condição** — a estrutura é hierárquica: entre doença
+  hepática leve e moderada/grave, ou entre diabetes com e sem lesão de órgão-alvo, conta-se **só a
+  mais grave presente**, nunca as duas somadas
 - **Somar idade ao escore sem usar a versão validada** — o RR de 1,4 por década de idade e 1,4 por
   ponto de comorbidade (Charlson 1994) só foi demonstrado no desenho de escore combinado do próprio
   estudo; somar arbitrariamente pontos de idade de outra fonte não tem o mesmo lastro

@@ -85,6 +85,33 @@ um no outro sem ver a tabela original seria inventar exatamente o tipo de dado q
 Surg. 2010;52(3):674-683, com apêndices 683.e1-683.e3), não no resumo indexado no PubMed. Quem tiver
 acesso ao texto integral pode completar este documento com a pontuação exata de cada fator.
 
+**Vias de acesso ao texto completo já tentadas em 02/08/2026, e todas fechadas — não repetir:**
+- **PMC/PMID 20570467**: `elink.fcgi` (dbfrom=pubmed, db=pmc) devolve só `pubmed_pmc_refs` (artigos
+  que citam o estudo), nenhum `pubmed_pmc` — o artigo **não está depositado no PMC**. Coerente com o
+  registro do PubMed, que classifica o financiamento como `Research Support, U.S. Gov't, Non-P.H.S.`
+  — sem financiamento do NIH/PHS, não há mandato de depósito no PubMed Central.
+- **Unpaywall** (DOI 10.1016/j.jvs.2010.03.031): `is_oa: false`, `oa_locations: []`,
+  `has_repository_copy: false` — nenhuma cópia de acesso aberto catalogada, em repositório
+  institucional ou preprint.
+- **ScienceDirect/Elsevier** (`linkinghub.elsevier.com`, PII S0741-5214(10)00774-3): a página é um
+  redirecionador que exige JavaScript; sem assinatura, não expõe o corpo do artigo nem os apêndices.
+- **ResearchGate** (publicação 44694849): retorna 403 (bloqueio de acesso automatizado).
+- **medicalalgorithms.com**: tem uma página dedicada ao VSG-CRI de Bertges et al., mas o conteúdo
+  está atrás de assinatura — a busca não expôs a tabela de pontos.
+- **PMC5079798** (Bertges DJ et al., "The Vascular Quality Initiative Cardiac Risk Index for
+  prediction of myocardial infarction after vascular surgery", J Vasc Surg. 2016;64(5):1411-1421,
+  PMID 27449347) é **um escore diferente** — o VQI-CRI, sucessor do VSG-CRI, derivado numa coorte
+  maior e mais recente (88.791 procedimentos, 2012-2014) e com desfecho restrito a infarto
+  (excluindo arritmia/ICC). O texto completo está aberto (NIHPA Author Manuscript), mas cita o
+  VSG-CRI só na lista de referências — **não reproduz a tabela de pontos do escore de 2010**, e
+  usar os pontos do VQI-CRI como se fossem do VSG-CRI seria atribuir dado ao escore errado.
+- **Resultados de busca na web** (WebSearch) devolveram uma tabela de pontos por preditor (idade em
+  faixas, DAC, ICC, DPOC, creatinina, tabagismo, diabetes, betabloqueador, revascularização prévia)
+  atribuída ao VSG-CRI, mas **sem página-fonte citável e verificável** — o resumo do resultado
+  aponta para calculadoras online (ex.: appcardio.com) e agregadores, categorias de fonte já
+  registradas como inaceitáveis neste projeto. **Não foi usada**, porque não há como conferir que os
+  valores vieram do artigo original e não de estimativa/reconstrução de terceiros.
+
 ## O que o resumo garante: estratificação por número de fatores e por escore final
 Duas estratificações distintas aparecem no resumo, e não devem ser confundidas entre si:
 
