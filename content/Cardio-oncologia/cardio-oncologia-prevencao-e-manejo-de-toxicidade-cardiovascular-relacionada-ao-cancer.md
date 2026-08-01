@@ -4,7 +4,7 @@ slug: cardio-oncologia-prevencao-e-manejo-de-toxicidade-cardiovascular-relaciona
 theme: "Cardio-oncologia"
 kind: protocolo
 review_status: pendente_revisao
-source_refs: ["2022 ESC Guidelines on cardio-oncology · ESC/EHA/ESTRO/IC-OS · 2022 · https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/cardio-oncology/"]
+source_refs: ["Lyon AR, Dent S, Stanway S, et al. 2022 ESC Guidelines on cardio-oncology developed in collaboration with the European Hematology Association (EHA), the European Society for Therapeutic Radiology and Oncology (ESTRO) and the International Cardio-Oncology Society (IC-OS). Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244. PMID: 36017568", "2022 ESC Guidelines on cardio-oncology · ESC/EHA/ESTRO/IC-OS · 2022 · https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/cardio-oncology/"]
 legacy_source: "Protocolo de Cardio-Oncologia (ESC 2022)"
 ---
 
@@ -39,7 +39,7 @@ Avaliação de risco cardiovascular basal recomendada antes do início da terapi
 - Diltiazem e verapamil não recomendados para hipertensão em pacientes com câncer devido a interações medicamentosas
 
 ## Novidades gestao terapia
-- **trastuzumabe**: Nova recomendação apoia continuar trastuzumabe em pacientes com queda assintomática/leve de FEVE (49-50%) enquanto inicia terapia cardioprotetora
+- **trastuzumabe**: Nova recomendação apoia continuar trastuzumabe em pacientes com queda assintomática/leve de FEVE enquanto inicia terapia cardioprotetora, em vez de interromper automaticamente pelo limiar histórico de FEVE <50% — abordagem sustentada por achados de coortes e séries de caso (ex.: SCHOLAR e SAFE-HEaRt, com LVEF ≥40%) que mostram viabilidade de manter a terapia sob otimização de GDMT e vigilância estreita. **VERIFICAÇÃO HUMANA NECESSÁRIA**: a faixa numérica exata "49-50%" citada na versão original deste documento não pôde ser confirmada contra o texto da diretriz ESC 2022 (bloqueado por paywall em `academic.oup.com`, sem depósito em PMC) nem contra nenhuma fonte secundária aberta consultada — é uma faixa estreita e atipicamente precisa para este tipo de recomendação, e pode ser transcrição imprecisa do corte real (possivelmente algo como "FEVE ≥50% ou queda leve para a faixa 40-49%"). Conferir contra o texto integral antes de usar o número isolado em decisão clínica
 - **de escalonamento**: Nova recomendação apoia reduzir gradualmente medicações cardioprotetoras em sobreviventes de câncer com função cardíaca preservada e baixo risco cardiovascular futuro
 - **fonte**: ACC Ten Points
 

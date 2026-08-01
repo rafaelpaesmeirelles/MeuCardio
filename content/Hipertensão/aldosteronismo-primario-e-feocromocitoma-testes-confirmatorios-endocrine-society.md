@@ -25,7 +25,8 @@ Recomendação textual da diretriz (2016): rastrear pacientes com **PA sustentad
 | Teste | Corte |
 |---|---|
 | Sobrecarga oral de sódio | Aldosterona urinária de 24h **>12 mcg** (protocolo Mayo) ou **>14 mcg** (protocolo Cleveland) |
-| Infusão salina | Aldosterona plasmática **>6-6,8 ng/dL (170 pmol/L)** confirma; **<5 ng/dL** torna aldosteronismo primário improvável |
+| Infusão salina, protocolo clássico (decúbito) | Aldosterona plasmática pós-infusão **>10 ng/dL (280 pmol/L)** torna o diagnóstico muito provável; **<5 ng/dL (140 pmol/L)** torna improvável |
+| Infusão salina, protocolo modificado (sentado) | Aldosterona plasmática **>6 ng/dL (170 pmol/L)** confirma — a diretriz cita ainda um estudo com corte de 6,8 ng/dL (equivalente a ~190 pmol/L, não 170) como o de melhor equilíbrio entre sensibilidade e especificidade, mas esse valor vem do estudo citado, não é o corte que a própria diretriz recomenda |
 | Supressão com fludrocortisona | Aldosterona plasmática **>6 ng/dL (170 nmol/L)**, às 10h do 4º dia |
 | Desafio com captopril | Aldosterona permanece elevada e a atividade de renina plasmática permanece suprimida (supressão **>30%** é o esperado em indivíduo normal) |
 
