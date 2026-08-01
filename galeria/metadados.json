@@ -2735,5 +2735,68 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "sindrome-de-brugada-tipo-1-padrao-coved-ecg",
+    "title": "Síndrome de Brugada tipo 1 — padrão \"coved\" em derivações precordiais direitas",
+    "modality": "ECG",
+    "theme": "Síncope",
+    "file_path": "ecg/sindrome-de-brugada-tipo-1-padrao-coved.png",
+    "findings": "Traçado de ECG em três derivações mostrando supradesnivelamento do ponto J e do segmento ST em formato \"em telhado\" (coved), seguido de onda T negativa, padrão repetido a cada batimento — configuração eletrocardiográfica diagnóstica do padrão de Brugada tipo 1.",
+    "teaching_points": "O padrão de Brugada tipo 1 (coved) é o único dos três padrões eletrocardiográficos da síndrome que é, isoladamente, diagnóstico — os tipos 2 e 3 exigem teste farmacológico provocativo para confirmação. É a canalopatia mais associada a síncope inexplicada em paciente jovem sem cardiopatia estrutural, e sua identificação correta muda a investigação de \"síncope reflexa provável\" para rastreio de risco de morte súbita e possível indicação de CDI.",
+    "source_name": "CardioNetworks ECGpedia, via Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Brugada_syndrome_type1_example1_(CardioNetworks_ECGpedia).png",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Postema PG, CardioNetworks ECGpedia, via Wikimedia Commons — CC BY-SA 3.0. Licença conferida diretamente na página do arquivo.",
+    "tags": [
+      "sindrome de brugada",
+      "padrao coved",
+      "canalopatia",
+      "sincope arritmica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "bloqueio-atrioventricular-total-dissociacao-atrioventricular-completa",
+    "title": "Bloqueio atrioventricular total (terceiro grau) — dissociação atrioventricular completa",
+    "modality": "ECG",
+    "theme": "Síncope",
+    "file_path": "ecg/bloqueio-atrioventricular-total-dissociacao-av.jpg",
+    "findings": "ECG de 12 derivações mostrando ondas P regulares em frequência própria, sem relação fixa com os complexos QRS (que surgem em frequência independente e mais lenta) — padrão de dissociação atrioventricular completa, característico de bloqueio atrioventricular de terceiro grau (total).",
+    "teaching_points": "Diferencia-se do BAV de alto grau (2:1 ou pausas intermitentes, já cadastrado nesta base) por não haver NENHUMA condução AV — átrio e ventrículo batem de forma completamente independente, o ventrículo sustentado por um ritmo de escape (juncional ou ventricular). É causa clássica de síncope de Stokes-Adams e indicação inequívoca de marca-passo definitivo, salvo causa reversível identificada.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:CompleteHeartBlock.jpg",
+    "license": "CC BY-SA 3.0",
+    "attribution": "James Heilman, MD, Wikimedia Commons, obra própria — CC BY-SA 3.0. Licença conferida diretamente na página do arquivo.",
+    "tags": [
+      "bloqueio atrioventricular total",
+      "dissociacao atrioventricular",
+      "sincope de stokes-adams",
+      "bavt"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cateter-venoso-central-malposicionado-em-veia-azigos",
+    "title": "Cateter venoso central malposicionado — migração para o sistema da veia ázigos",
+    "modality": "Radiografia",
+    "theme": "Perioperatório",
+    "file_path": "radiografia/cateter-venoso-central-malposicionado-veia-azigos.jpg",
+    "findings": "Radiografia de tórax anteroposterior com trajeto do cateter venoso central (linha vermelha sobreposta pela fonte) desviando para baixo e à esquerda da posição esperada na veia cava superior, compatível com migração da ponta do cateter para o sistema da veia ázigos, em vez do trajeto reto habitual até a junção cavoatrial.",
+    "teaching_points": "Ilustra um malposicionamento clássico de cateter venoso central inserido por via jugular ou subclávia — a ponta desvia posteriormente para a veia ázigos em vez de seguir o trajeto anterior esperado até a VCS/átrio direito. Reforça por que a confirmação radiográfica de posição é etapa obrigatória após qualquer inserção de CVC, mesmo quando o procedimento transcorre sem intercorrência aparente: cateter em ázigos infunde solução hipertônica/vasoativa num vaso de menor calibre, com risco aumentado de lesão vascular local.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Fehllage_ZVK_in_Vena_azygos_50M_-_CR_ap_-_001_-_Annotation.jpg",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Hellerhoff, Wikimedia Commons, obra própria — CC BY-SA 4.0. Licença conferida diretamente na página do arquivo.",
+    "tags": [
+      "cateter venoso central",
+      "malposicionamento",
+      "veia azigos",
+      "complicacao de procedimento"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]

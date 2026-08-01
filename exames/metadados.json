@@ -2861,5 +2861,115 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "rcri-indice-de-risco-cardiaco-revisado-escore-de-lee",
+    "name": "RCRI — Índice de Risco Cardíaco Revisado (escore de Lee)",
+    "category": "laboratorial",
+    "theme": "Perioperatório",
+    "what_it_measures": "Escore clínico de 6 variáveis, cada uma valendo 1 ponto, que estima o risco de complicação cardíaca maior em cirurgia não cardíaca: cirurgia de alto risco (intraperitoneal, intratorácica ou vascular suprainguinal), antecedente de cardiopatia isquêmica, antecedente de insuficiência cardíaca, antecedente de doença cerebrovascular, tratamento pré-operatório com insulina, e creatinina sérica pré-operatória >2,0 mg/dL.",
+    "reference_range": "Risco de complicação cardíaca por número de fatores presentes (coorte de validação): 0 fatores = 0,4%; 1 fator = 0,9%; 2 fatores = 7%; ≥3 fatores = 11%.",
+    "indications": "Estratificação de risco cardiovascular pré-operatório em cirurgia não cardíaca — um dos escores mais usados e validados na prática, ponto de partida do algoritmo de avaliação perioperatória de diversas diretrizes.",
+    "interpretation": "O salto de risco entre 1 e 2 fatores (de ~1% para ~7%) é o degrau clinicamente mais relevante — pacientes com 2 ou mais fatores do RCRI justificam investigação cardiológica mais aprofundada antes de cirurgia eletiva de risco intermediário/alto.",
+    "limitations": "Não incorpora biomarcadores (troponina, BNP) nem capacidade funcional formal — escores mais recentes (como o próprio biomarcador perioperatório) podem refinar a estratificação inicial do RCRI; validado numa era anterior à disponibilidade ampla de troponina de alta sensibilidade.",
+    "source_refs": [
+      "Lee TH, Marcantonio ER, Mangione CM, Thomas EJ, Polanczyk CA, Cook EF, Sugarbaker DJ, Donaldson MC, Poss R, Ho KK, Ludwig LE, Pedan A, Goldman L. Derivation and prospective validation of a simple index for prediction of cardiac risk of major noncardiac surgery. Circulation. 1999;100(10):1043-1049. PMID: 10477528."
+    ],
+    "tags": [
+      "rcri",
+      "escore de lee",
+      "indice de risco cardiaco revisado",
+      "avaliacao pre-operatoria"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "avaliacao-fisiologica-pre-operatoria-em-ressecção-pulmonar",
+    "name": "Avaliação fisiológica pré-operatória em ressecção pulmonar (ppo-FEV1, ppo-DLCO e TCPE)",
+    "category": "metodo_grafico",
+    "theme": "Perioperatório",
+    "what_it_measures": "Algoritmo escalonado de avaliação de reserva pulmonar antes de ressecção pulmonar (geralmente por câncer de pulmão): FEV1 e DLCO pós-operatórios previstos (ppo-FEV1, ppo-DLCO, calculados a partir do volume de parênquima a ser ressecado), seguidos de teste funcional de baixa tecnologia ou teste cardiopulmonar de exercício (TCPE) conforme o resultado inicial.",
+    "reference_range": "Risco BAIXO: ppo-FEV1 e ppo-DLCO ambos >60% do previsto — sem necessidade de testes adicionais. Risco INTERMEDIÁRIO: ppo-FEV1 ou ppo-DLCO entre 30-60% — indicado teste de baixa tecnologia (subida de escada >22 m ou shuttle walk >400 m); se satisfatório, reclassifica para baixo risco. Risco ALTO: ppo-FEV1 ou ppo-DLCO <30% — indicado TCPE; dentro do TCPE, VO₂ pico <10 mL/kg/min (ou <35% do previsto) indica alto risco de mortalidade, e VO₂ pico >20 mL/kg/min (ou >75% do previsto) indica baixo risco.",
+    "indications": "Avaliação pré-operatória de todo paciente candidato a ressecção pulmonar (lobectomia, pneumonectomia), para estimar a reserva respiratória residual e o risco cirúrgico associado.",
+    "interpretation": "A lógica é escalonada por custo/complexidade: só avança para o teste seguinte (mais caro, mais demorado) quem não conseguiu ser classificado com segurança no nível anterior. O TCPE é reservado para o subgrupo de maior risco calculado pela espirometria/DLCO, não é exame de triagem inicial para todos.",
+    "limitations": "Depende de cálculo acurado do volume de parênquima a ser ressecado (cintilografia de perfusão quantitativa ou contagem de segmentos) para prever corretamente o ppo-FEV1/DLCO; população de origem é predominantemente oncológica (câncer de pulmão), podendo não se generalizar integralmente a outras indicações de ressecção pulmonar.",
+    "source_refs": [
+      "Brunelli A, Kim AW, Berger KI, Addrizzo-Harris DJ. Physiologic evaluation of the patient with lung cancer being considered for resectional surgery: Diagnosis and management of lung cancer, 3rd ed: American College of Chest Physicians evidence-based clinical practice guidelines. Chest. 2013;143(5 Suppl):e166S-e190S. PMID: 23649437."
+    ],
+    "tags": [
+      "ppo-fev1",
+      "ppo-dlco",
+      "teste cardiopulmonar de exercicio",
+      "ressecao pulmonar"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ecocardiograma-transtoracico-pre-operatorio-de-rotina-em-cirurgia-de-baixo-risco",
+    "name": "Ecocardiograma transtorácico pré-operatório de rotina em cirurgia não cardíaca de baixo risco",
+    "category": "imagem",
+    "theme": "Perioperatório",
+    "what_it_measures": "Avaliação do papel do ecocardiograma transtorácico solicitado por rotina (sem indicação clínica direcionada) antes de cirurgia não cardíaca classificada como baixo risco.",
+    "reference_range": "Taxa de eventos cardiovasculares pós-operatórios adversos na coorte estudada: 0,79%.",
+    "indications": "A fonte questiona, não recomenda, a prática de solicitar eco de rotina em cirurgia de baixo risco — a indicação correta continua sendo direcionada por história de insuficiência cardíaca ou suspeita clínica específica de disfunção cardíaca, não por protocolo automático.",
+    "interpretation": "O ecocardiograma pré-operatório de rotina, isoladamente, NÃO foi preditor estatisticamente significativo de evento cardiovascular em análise multivariada (p=0,097) nesta coorte. Porém, QUANDO o resultado vem anormal (sobretudo disfunção sistólica/anormalidade de contratilidade), a associação com evento cardiovascular pós-operatório é forte e independente (OR ajustado 23,93; p=0,008) — ou seja, o exame não deve ser feito indiscriminadamente, mas quando alterado, o achado tem grande peso prognóstico.",
+    "limitations": "Estudo observacional de coorte única; a conclusão dos autores é que a prática de solicitar eco de rotina em baixo risco é excessiva e que melhor seleção pré-teste (por história/suspeita clínica) otimizaria o uso do recurso.",
+    "source_refs": [
+      "Kim EK, Choi HM, Lee JH, Han DW, Lee HS, Choi EY. Practical role of preoperative echocardiography in low-risk non-cardiac surgery. Front Cardiovasc Med. 2023;10:1088496. PMID: 36755797."
+    ],
+    "tags": [
+      "ecocardiograma pre-operatorio",
+      "cirurgia de baixo risco",
+      "rotina vs. direcionado"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "razao-nt-probnp-troponina-na-cardiomiopatia-de-takotsubo",
+    "name": "Razão NT-proBNP/troponina e NT-proBNP/mioglobina no diagnóstico diferencial da cardiomiopatia de Takotsubo",
+    "category": "laboratorial",
+    "theme": "Cardiomiopatias",
+    "what_it_measures": "Razão entre o pico de NT-proBNP e o pico de troponina T (ou de mioglobina), usada para diferenciar cardiomiopatia de Takotsubo de síndrome coronariana aguda (STEMI e NSTEMI) — o raciocínio é que o Takotsubo produz elevação de NT-proBNP desproporcionalmente maior que a lesão miocítica (troponina/mioglobina), ao contrário do infarto.",
+    "reference_range": "NT-proBNP/mioglobina: corte 3,8 diferencia Takotsubo de STEMI (sensibilidade 89%, especificidade 90%); corte 14 diferencia de NSTEMI (sensibilidade 65%, especificidade 90%). NT-proBNP/troponina T (picos): corte 2.889 diferencia de STEMI (sensibilidade 91%, especificidade 95%); corte 5.000 diferencia de NSTEMI (sensibilidade 83%, especificidade 95%).",
+    "indications": "Apoio ao diagnóstico diferencial entre cardiomiopatia de Takotsubo e síndrome coronariana aguda no paciente com dor torácica, alteração de ECG e elevação de biomarcadores — cenário em que os dois quadros podem ser indistinguíveis só pela apresentação clínica inicial.",
+    "interpretation": "A melhor discriminação, segundo os próprios autores, veio da razão NT-proBNP/troponina T de pico — reforçando que, no Takotsubo, o estresse hemodinâmico (refletido pelo NT-proBNP) é desproporcionalmente maior que a necrose miocítica real (refletida pela troponina), padrão oposto ao do infarto, onde a necrose predomina.",
+    "limitations": "Não substitui a angiografia coronariana (ou angiotomografia) para excluir doença coronariana obstrutiva, que continua sendo o método definitivo de diferenciação; os cortes foram derivados numa coorte específica e podem variar conforme o ensaio laboratorial usado para cada biomarcador.",
+    "source_refs": [
+      "Fröhlich GM, Schoch B, Schmid F, et al. Takotsubo cardiomyopathy has a unique cardiac biomarker profile: NT-proBNP/myoglobin and NT-proBNP/troponin T ratios for the differential diagnosis of acute coronary syndromes and stress induced cardiomyopathy. Int J Cardiol. 2012;154(3):328-332. PMID: 22044675."
+    ],
+    "tags": [
+      "takotsubo",
+      "nt-probnp",
+      "diagnostico diferencial",
+      "sindrome coronariana aguda"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "genotipagem-do-gene-ttr-na-amiloidose-por-transtirretina",
+    "name": "Genotipagem/sequenciamento do gene TTR na amiloidose cardíaca por transtirretina",
+    "category": "laboratorial",
+    "theme": "Cardiomiopatias",
+    "what_it_measures": "Sequenciamento do gene TTR (transtirretina), único exame capaz de distinguir a forma HEREDITÁRIA da amiloidose por transtirretina (mutação desestabilizadora, autossômica dominante) da forma WILD-TYPE (processo ligado ao envelhecimento, sem mutação) — as duas produzem o mesmo tipo de depósito amiloide no coração, mas têm implicações prognósticas e familiares diferentes.",
+    "reference_range": "Exemplo de variante amiloidogênica bem caracterizada: alelo V122I (rs76992529) tem frequência de 0,0173 na população afro-americana, e aproximadamente 3,43% dos afro-americanos <65 anos carregam ao menos uma cópia — variante descrita quase exclusivamente em pessoas de ascendência africana.",
+    "indications": "Todo paciente com diagnóstico confirmado de amiloidose cardíaca por transtirretina (por cintilografia com pirofosfato ou biópsia) deve ser submetido a sequenciamento do gene TTR, para diferenciar hereditária de wild-type — a forma hereditária tem implicação direta para rastreio em cascata de familiares de primeiro grau.",
+    "interpretation": "Identificar uma mutação patogênica no TTR muda a conduta familiar: parentes de primeiro grau tornam-se candidatos a aconselhamento genético e rastreio. Na forma wild-type (sem mutação), não há essa implicação de rastreio familiar direcionado por genótipo.",
+    "limitations": "A prevalência de variantes amiloidogênicas do TTR varia muito por ancestralidade (o V122I é quase exclusivo de ascendência africana) — um painel genético que não inclua a variante relevante para a população do paciente pode gerar falso-negativo; a decisão de rastrear familiares assintomáticos envolve também questões éticas e psicológicas que extrapolam o resultado laboratorial isolado.",
+    "source_refs": [
+      "Ruberg FL, Grogan M, Hanna M, Kelly JW, Maurer MS. Transthyretin Amyloid Cardiomyopathy: JACC State-of-the-Art Review. J Am Coll Cardiol. 2019;73(22):2872-2891. PMID: 31171094.",
+      "Jacobson DR, Alexander AA, Tagoe C, Buxbaum JN. Prevalence of the amyloidogenic transthyretin (TTR) V122I allele in 14,333 African-Americans. Amyloid. 2015;22(3):171-174. PMID: 26123279 — dado de frequência alélica."
+    ],
+    "tags": [
+      "genotipagem ttr",
+      "amiloidose por transtirretina",
+      "attr hereditaria",
+      "attr wild-type"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
