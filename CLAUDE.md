@@ -3379,6 +3379,22 @@ sessoes em tempo real e só comece a trabalhar apos informa-las das novas regras
   (`reconciliacao-medicamentosa-e-transicao-de-cuidado-onde-o-erro-acontece.md`) da sessão de
   Medicamentos anterior ao restart — a sessão nova decide se completa e commita ou descarta.
 
+> ### 🔀 SUBDIVISÃO INTERNA DA BIBLIOTECA, 01/08/2026 — duas sessões simultâneas nessa faixa
+> Há **duas sessões na faixa da Biblioteca ao mesmo tempo**: a do tmux `biblioteca` e uma segunda,
+> **BIBLIOTECA-B, fora do tmux**, autorizada pelo Rafael a retomar essa faixa. `evidencias/` e
+> `estudos/` são reescritos **inteiros** a cada gravação — sem subdivisão, quem grava por último
+> apaga o lote do outro sem conflito de git (já aconteceu: publicação em massa de `estudos/`
+> engoliu 2 itens da outra sessão, corrigido por aviso mútuo, sem perda). Proposta da BIBLIOTECA-B,
+> aceita pela sessão do tmux:
+>
+> | Frente | Quem |
+> |---|---|
+> | `evidencias/`, `estudos/` + Doença coronariana, Cardiomiopatias, Valvopatias, Pericárdio, Endocardite | **BIBLIOTECA-B** (fora do tmux) |
+> | `galeria/`, `exames/` + Aorta e DAP, Cardiopatias congênitas, Febre reumática, Síncope, Perioperatório | **biblioteca** (tmux) |
+>
+> Se uma terceira sessão entrar nesta faixa, respeite esta subdivisão em vez da linha genérica
+> "BIBLIOTECA" da tabela acima — ela é mais específica e mais recente.
+
 ### 🖼️ DUPLICATA DE IMAGEM ENCONTRADA NO AR, 01/08/2026 — decisão do Rafael (despublicar exige ele)
 Sessão da Biblioteca, ao reiniciar. **Dois registros de `galeria/metadados.json` apontam para o
 MESMO arquivo de imagem** (MD5 idêntico, `6d75e39a54f1ab3ead48d1816ef81c41`), os dois `published =
