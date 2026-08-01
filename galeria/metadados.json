@@ -1647,5 +1647,155 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "ecg-iam-inferior-ondas-de-pardee",
+    "title": "ECG — Infarto agudo de parede inferior, ondas de Pardee em II, III e aVF",
+    "modality": "ECG",
+    "theme": "Doença coronariana",
+    "file_path": "ecg/ecg-iam-inferior-ondas-de-pardee.jpg",
+    "findings": "Fotografia de traçado real de ECG de 12 derivações (monitor Medtronic Physio-Control, com o próprio aparelho sinalizando \"ACUTE MI SUSPECTED\" e \"ST elevation consider inferior injury or acute infarct\"). Supradesnivelamento do segmento ST (ondas de Pardee) visível nas derivações inferiores II, III e aVF, com FC de 100 bpm.",
+    "teaching_points": "Padrão eletrocardiográfico clássico do infarto agudo do miocárdio de parede inferior — oclusão tipicamente de coronária direita ou circunflexa dominante. A imagem é uma fotografia de traçado real captado por dispositivo médico (metadados EXIF confirmam câmera HP de 2006), não um ECG sintético gerado por software — verificado por inspeção direta antes de cadastrar.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:12_lead_generated_inferior_MI.JPG",
+    "license": "Domínio público",
+    "attribution": "Glenlarson, via Wikimedia Commons — domínio público.",
+    "tags": [
+      "infarto agudo do miocardio",
+      "parede inferior",
+      "onda de pardee",
+      "supra de st",
+      "ecg"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "parada-cardiaca-intraoperatoria-por-vasoespasmo-evolucao-ao-ecg",
+    "title": "ECG — Parada cardíaca intraoperatória por angina vasoespástica, evolução até fibrilação ventricular",
+    "modality": "ECG",
+    "theme": "Perioperatório",
+    "file_path": "ecg/ecg-parada-intraoperatoria-vasoespasmo-fv.jpg",
+    "findings": "Três tiras de ECG intraoperatório em sequência temporal: (a) traçado basal antes do evento; (b) três cortes no mesmo episódio — 0s com supradesnivelamento de ST inicial, 60s com traçado já grosseiramente alterado e alargado, e 110s com padrão caótico de fibrilação ventricular grosseira; (c) traçado final após reanimação, com QRS mais estreito e alteração de repolarização residual, compatível com retorno de circulação espontânea.",
+    "teaching_points": "Documenta em tempo real a evolução de isquemia miocárdica intraoperatória (por vasoespasmo coronariano, não placa aterosclerótica rota) até fibrilação ventricular, num contexto de cirurgia NÃO cardíaca — ilustra por que a monitorização eletrocardiográfica contínua no intraoperatório importa mesmo em cirurgia extracardíaca, e que a etiologia isquêmica perioperatória nem sempre é aterotrombótica.",
+    "source_name": "PMC (JA Clinical Reports, acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10632342/",
+    "license": "CC BY 4.0",
+    "attribution": "Sugita S, Obata M, Hasunuma F, Sakamoto A. JA Clin Rep. 2023;9:77. DOI: 10.1186/s40981-023-00667-z — CC BY 4.0.",
+    "tags": [
+      "parada cardiaca intraoperatoria",
+      "angina vasoespastica",
+      "fibrilacao ventricular",
+      "ecg intraoperatorio"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "curva-de-pa-invasiva-subamortecimento-e-superamortecimento",
+    "title": "Curva de pressão arterial invasiva — subamortecimento e superamortecimento, diagrama esquemático",
+    "modality": "Diagrama",
+    "theme": "Perioperatório",
+    "file_path": "hemodinamica/curva-pa-invasiva-sub-e-superamortecimento.jpg",
+    "findings": "Diagrama esquemático com quatro curvas de onda de pressão arterial invasiva rotuladas A-D. A e B mostram padrão SUBAMORTECIDO (onda com múltiplas incisuras/ressonância excessiva), com super-estimação da pressão sistólica e subestimação da diastólica. C e D mostram padrão SUPERAMORTECIDO (onda arredondada, sem incisura dicrótica nítida), com subestimação da sistólica e superestimação da diastólica.",
+    "teaching_points": "Ensina a reconhecer quando a curva de PA invasiva está tecnicamente inválida antes de tomar decisão clínica sobre o número exibido no monitor — subamortecimento superestima a sistólica e subestima a diastólica, e o superamortecimento faz o oposto. É decisão prática de à beira do leito no perioperatório e na terapia intensiva, tema até então não coberto na galeria.",
+    "source_name": "PMC (Cureus, acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8483407/",
+    "license": "CC BY",
+    "attribution": "Lam S, Liu H, Jian Z, Settels J, Bohringer C. Cureus. 2021;13(8):e17610. DOI: 10.7759/cureus.17610 — CC BY.",
+    "tags": [
+      "pressao arterial invasiva",
+      "subamortecimento",
+      "superamortecimento",
+      "monitorizacao hemodinamica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "tamponamento-cardiaco-colapso-diastolico-de-vd-modo-m",
+    "title": "Tamponamento cardíaco — colapso diastólico do ventrículo direito ao modo-M",
+    "modality": "Ecocardiograma",
+    "theme": "Pericárdio",
+    "file_path": "ecocardiograma/tamponamento-cardiaco-colapso-diastolico-vd-modo-m.jpg",
+    "findings": "Imagem bidimensional (topo) e traçado em modo-M (corpo da figura) com derrame pericárdico volumoso circunferencial (PE, rotulado acima e abaixo do coração). A seta vermelha aponta o colapso diastólico precoce da parede livre do ventrículo direito (RV), sincronizado com o traço de ECG na base da imagem — o septo (VS) e o ventrículo esquerdo (LV) também estão rotulados para referência anatômica.",
+    "teaching_points": "O colapso diastólico do VD é o sinal ecocardiográfico mais específico de tamponamento cardíaco — o VD é a câmara de menor pressão e a primeira a colabar sob compressão externa pelo derrame. Documenta em modo-M, com correlação temporal exata ao ciclo cardíaco pelo ECG simultâneo, o mecanismo fisiopatológico que a semiologia clínica (pulso paradoxal, turgência jugular) apenas infere indiretamente.",
+    "source_name": "PMC (Cureus, acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8720257/",
+    "license": "CC BY",
+    "attribution": "Toquica Gahona CC, Watts A, Patel KV. Cureus. 2021;13(12):e20106. DOI: 10.7759/cureus.20106 — CC BY.",
+    "tags": [
+      "tamponamento cardiaco",
+      "colapso diastolico de vd",
+      "modo-m",
+      "derrame pericardico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "realce-tardio-mesocardico-em-cardiomiopatia-dilatada",
+    "title": "RM cardíaca — realce tardio de padrão mesocárdico (não isquêmico) na cardiomiopatia dilatada",
+    "modality": "Ressonância cardíaca",
+    "theme": "Cardiomiopatias",
+    "file_path": "rm/realce-tardio-mesocardico-cardiomiopatia-dilatada.jpg",
+    "findings": "Dois cortes de RM cardíaca em eixo curto médio-ventricular, mesmo paciente. Painel (1): sem realce tardio visível. Painel (2): setas brancas apontam um padrão quase circunferencial de realce tardio de gadolínio na porção subepicárdica/mesocárdica da parede do ventrículo esquerdo — poupando o subendocárdio.",
+    "teaching_points": "O padrão mesocárdico/subepicárdico de realce tardio — poupando o subendocárdio — é a marca de fibrose miocárdica de origem NÃO coronariana. Distingue-se do padrão subendocárdico ou transmural de origem isquêmica, que segue território de artéria coronária. Na cardiomiopatia dilatada, esse padrão tem valor prognóstico documentado pelo estudo-fonte, que o associa a desfecho clínico a longo prazo.",
+    "source_name": "PMC (PLoS One, acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6586397/",
+    "license": "CC BY 4.0",
+    "attribution": "Chimura M, Yamada S, Taniguchi Y, Yasaka Y, Kawai H. PLoS One. 2019;14(6):e0217865. PMID: 31220100 — CC BY 4.0.",
+    "tags": [
+      "realce tardio",
+      "padrao mesocardico",
+      "cardiomiopatia dilatada",
+      "fibrose miocardica nao isquemica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "estenose-mitral-reumatica-boca-de-peixe-ete-3d",
+    "title": "Estenose mitral reumática grave — aspecto em \"boca de peixe\" ao ecocardiograma transesofágico 3D",
+    "modality": "Ecocardiograma",
+    "theme": "Valvopatias",
+    "file_path": "ecocardiograma/estenose-mitral-boca-de-peixe-ete-3d.jpg",
+    "findings": "Dois painéis (A e B) de ecocardiograma transesofágico tridimensional com visão em face da valva mitral (MV) a partir do átrio esquerdo, mostrando o apêndice atrial esquerdo (LAAE) como referência anatômica. No painel B, o orifício valvar mitral está delimitado por linha pontilhada, com fusão comissural e abertura estreitada e irregular — a planimetria direta mede área de 0,741 cm², compatível com estenose mitral GRAVE.",
+    "teaching_points": "O aspecto em \"boca de peixe\" (fish mouth) do orifício mitral por fusão comissural é o achado morfológico clássico da estenose mitral reumática, aqui com medida direta da área valvar por planimetria 3D em tempo real — reforça o método mais confiável de quantificar a gravidade, mais direto que os métodos derivados de Doppler (tempo de meia-pressão, PISA).",
+    "source_name": "PMC (Frontiers in Cardiovascular Medicine, acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8329529/",
+    "license": "CC BY 4.0",
+    "attribution": "Vieira MLC, Branco CEB, Gazola ASL, et al. Front Cardiovasc Med. 2021. PMID: 34355026 — CC BY 4.0.",
+    "tags": [
+      "estenose mitral reumatica",
+      "boca de peixe",
+      "ecocardiograma transesofagico 3d",
+      "planimetria"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "comunicacao-interventricular-cinco-posicoes-anatomicas-eco",
+    "title": "Comunicação interventricular — cinco posições anatômicas ao ecocardiograma, figura composta",
+    "modality": "Ecocardiograma",
+    "theme": "Cardiopatias congênitas",
+    "file_path": "ecocardiograma/comunicacao-interventricular-fetal-eco.jpg",
+    "findings": "Figura composta e didática (rótulos em francês) organizada em torno de um desenho esquemático central do septo interventricular, com cinco imagens ecocardiográficas correspondendo a cada posição anatômica de CIV: membranosa (\"CIV membraneuse\"), sub-aórtica associada a del22q11 (\"CIV sous aortique\"), posterior associada a trissomia do 21 (\"CIV postérieure — T21\"), muscular (\"CIV musculaire\", com painel em modo B e um segundo painel com mapeamento de fluxo em cores mostrando o shunt) e apical (\"CIV apicale\", também com Doppler colorido mostrando o jato através do defeito). CORREÇÃO EM RELAÇÃO À DESCRIÇÃO ORIGINAL DA FONTE: verificado por inspeção direta da imagem — não é uma única imagem de eco fetal em modo B, é uma figura composta com 5 sub-imagens, das quais 2 (muscular e apical) mostram Doppler colorido.",
+    "teaching_points": "Reúne numa só figura a correlação entre a posição anatômica da CIV no septo (membranosa, sub-aórtica, posterior, muscular, apical) e sua aparência ecocardiográfica — inclusive a associação de posições específicas a síndromes genéticas (del22q11 na sub-aórtica, trissomia do 21 na posterior/tipo canal AV), reforçando que o achado ecocardiográfico da localização orienta a investigação sindrômica associada.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:CIVFoetus-Wiki.jpg",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Ph. Pézard, via Wikimedia Commons — CC BY-SA 3.0 / GFDL 1.2+.",
+    "tags": [
+      "comunicacao interventricular",
+      "civ",
+      "posicao anatomica",
+      "del22q11",
+      "trissomia do 21",
+      "doppler colorido"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]

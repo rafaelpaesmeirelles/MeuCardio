@@ -1785,5 +1785,162 @@
       "intervalo h-v",
       "esc 2018"
     ]
+  },
+  {
+    "slug": "ecocardiograma-fetal-na-triagem-de-cardiopatia-congenita",
+    "name": "Ecocardiograma fetal",
+    "category": "imagem",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Avaliação ultrassonográfica detalhada da anatomia e função cardíaca fetal — situs, quatro câmaras, vias de saída, grandes vasos e ritmo —, realizada por especialista treinado, distinta da triagem obstétrica de rotina (que avalia só quatro câmaras e vias de saída).",
+    "reference_range": "Prevalência de cardiopatia congênita na população geral: 8,2 por 1.000 nascidos vivos. Detecção pré-natal global: menos da metade das anomalias cardíacas são identificadas antes do nascimento.",
+    "indications": "Janela ideal do exame de triagem: 18-22 semanas. Indicações para encaminhamento a ecocardiograma fetal detalhado (fatores fetais): anomalia cardíaca estrutural suspeita, anomalia extracardíaca associada, disfunção cardíaca/cardiomegalia suspeita, hidropisia fetal, taquicardia fetal persistente ≥180 bpm, bloqueio cardíaco ou bradicardia persistente ≤110 bpm, arritmia irregular frequente/persistente, translucência nucal ≥3,5 mm, anormalidade genética confirmada/suspeita, gestação monocoriônica gemelar. Indicações maternas/familiares: parente de 1º grau com cardiopatia congênita, diabetes pré-gestacional, anticorpos anti-Ro/SSA, fenilcetonúria com fenilalanina periconcepcional >10 mg/dL, exposição a retinoides, infecção fetal confirmada (TORCH/parvovírus B19).",
+    "interpretation": "Translucência nucal ≥3,5 mm entre 11-14 semanas é indicação de avaliação cardíaca detalhada, mesmo que a medida normalize depois. Fatores com evidência mais fraca (a considerar): parente de 2º grau, diabetes gestacional diagnosticada precocemente, translucência nucal 3,0-3,4 mm, certos teratógenos, FIV/ICSI, uso de IECA. Fatores SEM evidência suficiente de risco aumentado: obesidade materna (IMC≥35), a maioria dos ISRS (exceto paroxetina), marcador isolado de aneuploidia, foco ecogênico intracardíaco isolado, artéria umbilical única isolada.",
+    "limitations": "Taxa de detecção varia muito por região e tipo de lesão — habilidade do examinador, frequência do transdutor, hábito corporal materno, cicatrizes abdominais, idade gestacional, volume de líquido amniótico e posição fetal influenciam o resultado. Em auditoria de detecção pré-natal falha, critério técnico inadequado respondeu por ~50% dos casos perdidos, e falha do operador em reconhecer anatomia anormal numa imagem tecnicamente adequada respondeu por outros ~31%.",
+    "source_refs": [
+      "Carvalho JS, Axt-Fliedner R, Chaoui R, et al. ISUOG Practice Guidelines (updated): fetal cardiac screening. Ultrasound Obstet Gynecol. 2023;61(6):788-803. PMID: 37267096. DOI: 10.1002/uog.26224 — acesso aberto, CC, texto completo lido em PDF."
+    ],
+    "tags": [
+      "ecocardiograma fetal",
+      "triagem pre-natal",
+      "translucencia nucal",
+      "cardiopatia congenita"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "teste-de-hiperoxia-no-diferencial-de-cianose-neonatal",
+    "name": "Teste de hiperóxia no diagnóstico diferencial de cianose neonatal",
+    "category": "laboratorial",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Resposta da PaO2 arterial à administração de oxigênio a 100%, usada para diferenciar cianose de causa CARDÍACA (shunt direita-esquerda fixo) de cianose de causa PULMONAR (hipoxemia responsiva a O2).",
+    "reference_range": "Cardiopatia congênita cianótica: elevação da PaO2 geralmente não maior que 10-30 mmHg, raramente ultrapassando 100 mmHg. Doença pulmonar: PaO2 frequentemente sobe acima de 100 mmHg.",
+    "indications": "Recém-nascido cianótico, quando a confirmação por ecocardiograma à beira do leito não está disponível ou precisa ser complementada. Com a disponibilidade atual do ecocardiograma à beira do leito, o teste é raramente realizado na prática, mas ajuda quando a ecocardiografia não está disponível. Técnica: administrar oxigênio por capuz (hood) por pelo menos 10 minutos antes de colher a gasometria.",
+    "interpretation": "PaO2 que permanece baixa (elevação ≤10-30 mmHg, não excede 100 mmHg) sugere cardiopatia cianótica com shunt fixo direita-esquerda. PaO2 >100 mmHg sugere causa pulmonar. Deve ser interpretado sempre no contexto do quadro clínico e da radiografia de tórax, nunca isoladamente.",
+    "limitations": "Falso-negativo: shunt intrapulmonar maciço por doença respiratória grave pode não elevar a PaO2 até 100 mmHg, mimetizando padrão cardíaco. Falso-positivo: cardiopatias cianóticas com fluxo pulmonar AUMENTADO — como o retorno venoso pulmonar anômalo total (TAPVC) — podem elevar a PaO2 a 100 mmHg ou mais, mimetizando padrão pulmonar.",
+    "source_refs": [
+      "Singh Y, Lakshminrusimha S. Pathophysiology and Management of Persistent Pulmonary Hypertension of the Newborn. Clin Perinatol. 2021;48(3):595-618. PMID: 34353582. PMCID: PMC8351908. DOI: 10.1016/j.clp.2021.05.009 — acesso aberto, texto completo via PMC."
+    ],
+    "tags": [
+      "teste de hiperoxia",
+      "cianose neonatal",
+      "diagnostico diferencial",
+      "tapvc"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ressonancia-magnetica-cardiaca-na-cardiopatia-congenita",
+    "name": "Ressonância magnética cardíaca na cardiopatia congênita",
+    "category": "imagem",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Avaliação não invasiva de anatomia complexa, volumes e função ventricular (especialmente do ventrículo direito), quantificação de fluxo por contraste de fase (regurgitação valvar, Qp:Qs, débito cardíaco, perfusão pulmonar diferencial) e massa ventricular — sem radiação ionizante, ao contrário de angiografia por raios-X ou TC.",
+    "reference_range": "Não se aplica um único valor numérico — a fonte descreve os parâmetros medidos (volumes, fração de ejeção, fração regurgitante, Qp:Qs) sem definir limiares de intervenção, que devem ser buscados em diretriz específica por lesão.",
+    "indications": "Avaliação anatômica de cardiopatia congênita complexa e vasculatura torácica anômala; avaliação do ventrículo direito quando as janelas acústicas do eco são inadequadas; avaliação de coração univentricular, onde o eco tem limitações relevantes; planejamento pré e pós-operatório. É padrão de referência clínico para ventriculografia (volumes e função, sobretudo de VD) e para quantificação de fluxo por contraste de fase.",
+    "interpretation": "Interpretação depende do protocolo específico da lesão — volumes/função de VD, fração regurgitante pulmonar e Qp:Qs orientam a decisão clínica, mas os limiares numéricos de intervenção (ex.: para reoperação valvar) não são definidos por este documento e devem vir de diretriz específica por lesão.",
+    "limitations": "Crianças pequenas (tipicamente <6-8 anos) em geral exigem sedação, com riscos associados (aspiração, obstrução de via aérea). Dispositivo metálico implantado (comum em cardiopatia congênita operada) causa artefato por efeito T2*, mais pronunciado em 3T que em 1,5T — compatibilidade de dispositivo com RM é mais bem documentada em 1,5T. Pacientes pequenos exigem voxels menores, reduzindo relação sinal-ruído. Tempo de aquisição longo (7-10 min para 3D) exige imobilidade; artefato de movimento respiratório permanece problemático apesar da sincronização (gating).",
+    "source_refs": [
+      "Fratz S, Chung T, Greil GF, Samyn MM, Taylor AM, Valsangiacomo Buechel ER, et al. Guidelines and protocols for cardiovascular magnetic resonance in children and adults with congenital heart disease: SCMR expert consensus group on congenital heart disease. J Cardiovasc Magn Reson. 2013;15(1):51. PMID: 23763839. PMCID: PMC3686659. DOI: 10.1186/1532-429X-15-51 — acesso aberto, texto completo via PMC."
+    ],
+    "tags": [
+      "ressonancia magnetica cardiaca",
+      "cardiopatia congenita",
+      "ventriculo direito",
+      "quantificacao de fluxo"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "angiotomografia-cardiaca-pediatrica-na-cardiopatia-congenita",
+    "name": "Angiotomografia cardíaca (CCTA) pediátrica na cardiopatia congênita",
+    "category": "imagem",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Imagem tomográfica com contraste iodado e sincronização ECG, usada como complemento ao ecocardiograma, à RM cardíaca e ao cateterismo quando anatomia extracardíaca ou intracardíaca detalhada é necessária e o eco é incompleto ou subótimo.",
+    "reference_range": "Não numérico — indicação por anatomia. Protocolo de contraste: 270-300 mg iodo/mL para peso <40 kg e 320-350 mg iodo/mL para peso >40 kg, volume de 1,5-2 mL/kg, seguido de flush salino de 1 mL/kg.",
+    "indications": "Anomalias de origem coronariana (ALCAPA/ARCAPA); coartação de aorta complexa (detalhes distais, avaliação pós-stent); anomalias complexas do arco aórtico (0,5-3% de todas as cardiopatias congênitas); estenose aórtica supravalvar (síndrome de Williams); janela aortopulmonar (o ETT não demonstra a comunicação em até 37% dos exames); vasos pulmonares e colaterais aortopulmonares maiores (MAPCAs); anomalias de veias pulmonares (retorno venoso anômalo total, síndrome da cimitarra); seguimento pós-switch arterial (recomendado a partir de 5-6 anos, para óstios e porção proximal das coronárias); anatomia intracardíaca complexa para planejamento cirúrgico com reconstrução 3D.",
+    "interpretation": "Achado positivo confirma/detalha a anomalia suspeitada pelo eco — a CCTA é complementar, não substituta, do eco, da RM e do cateterismo; nenhuma modalidade isolada é abrangente em cardiopatia congênita complexa.",
+    "limitations": "Exige preparo cuidadoso (sedação leve ocasional em criança pequena; anestesia geral raramente necessária); minimização de dose é prioridade central pela exposição cumulativa ao longo da vida desses pacientes; acesso venoso e técnica de injeção exigem adaptação por peso e tipo de conexão cirúrgica (ex.: injeção por veia de perna em conexão cavopulmonar). Cine-TC funcional NÃO é recomendada em criança — eco ou RM são preferíveis, pela exposição substancialmente maior à radiação.",
+    "source_refs": [
+      "Warin-Fresse K, Isorni MA, Dacher JN, Pontana F, Gorincour G, Boddaert N, Jacquier A, Raimondi F. Pediatric cardiac computed tomography angiography: Expert consensus from the FCPC and SFICV. Diagn Interv Imaging. 2020;101(6):335-345. PMID: 32029386. DOI: 10.1016/j.diii.2020.01.007 — PDF de acesso aberto, texto integral lido via sficv.com."
+    ],
+    "tags": [
+      "angiotomografia cardiaca",
+      "cardiopatia congenita pediatrica",
+      "anomalia coronariana",
+      "protocolo de contraste"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "angiotomografia-cardiaca-na-endocardite-infecciosa",
+    "name": "Angiotomografia cardíaca (CT) na endocardite infecciosa",
+    "category": "imagem",
+    "theme": "Endocardite",
+    "what_it_measures": "Tomografia computadorizada cardíaca com contraste, incorporada como critério de imagem MAIOR nos critérios de Duke-ISCVID 2023, com maior resolução espacial que o ecocardiograma para lesões perivalvares.",
+    "reference_range": "Achado qualitativo (presença/ausência de vegetação, abscesso, pseudoaneurisma, deiscência protética, fístula) — sem corte numérico.",
+    "indications": "Critério de imagem maior dos critérios de Duke-ISCVID 2023, junto com ecocardiograma e PET-CT/FDG. Indicada especialmente na busca de lesão perivalvar/periprotética (abscesso, pseudoaneurisma), cenário em que supera o ecocardiograma transesofágico (ETE).",
+    "interpretation": "Números de uma metanálise de 8 estudos (355 pacientes avaliados por TC, 510 por ETE): para VEGETAÇÃO, ETE 94% (IC95% 92-96%) vs. TC 64% (IC95% 57-70%) — ETE superior. Para ABSCESSO/PSEUDOANEURISMA, TC 78% (IC95% 70-85%) vs. ETE 69% (IC95% 62-76%) — TC superior, e a TC multifásica isolada chega a 87% (IC95% 78-93%). Para PERFURAÇÃO DE FOLHETO, ETE 81% (IC95% 71-88%) vs. TC 41% (IC95% 25-59%) — ETE muito superior. A combinação TC+eco tem sensibilidade superior a qualquer método isolado, para todas as lesões.",
+    "limitations": "Inferior ao eco para detectar vegetação (sobretudo <10 mm) e perfuração/fístula valvar; superior ao eco para abscesso/pseudoaneurisma perivalvar, sobretudo com protocolo multifásico. A metanálise-fonte nota: intervalo entre imagem e cirurgia (padrão-ouro de confirmação) frequentemente não relatado; possível viés de publicação; tamanho amostral pequeno em alguns estudos, desenho retrospectivo. Sem dado de sensibilidade do ETT isolado nesta metanálise.",
+    "source_refs": [
+      "Fowler VG, Durack DT, Selton-Suty C, et al. The 2023 Duke-ISCVID Criteria for Infective Endocarditis. Clin Infect Dis. 2023;77(4):518-526. PMID: 37138445. PMCID: PMC10681650. DOI: 10.1093/cid/ciad271 — CT cardíaca como critério de imagem maior.",
+      "Oliveira M, Guittet L, Hamon M, Hamon M. Comparative Value of Cardiac CT and Transesophageal Echocardiography in Infective Endocarditis: A Systematic Review and Meta-Analysis. Radiol Cardiothorac Imaging. 2020;2(3):e190189. PMID: 33778583. PMCID: PMC7977865. DOI: 10.1148/ryct.2020190189 — números de sensibilidade/especificidade."
+    ],
+    "tags": [
+      "angiotomografia cardiaca",
+      "endocardite infecciosa",
+      "criterios de duke-iscvid",
+      "abscesso perivalvar"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "sorologia-para-coxiella-e-bartonella-na-endocardite-com-hemocultura-negativa",
+    "name": "Sorologia para Coxiella burnetii e Bartonella spp. na endocardite com hemocultura negativa",
+    "category": "laboratorial",
+    "theme": "Endocardite",
+    "what_it_measures": "Detecção de anticorpos IgG (e, para Bartonella, também IgM) contra Coxiella burnetii (febre Q) e Bartonella henselae/B. quintana — patógenos fastidiosos que raramente crescem em hemocultura convencional e respondem por parte relevante da endocardite com hemocultura negativa (BCNIE).",
+    "reference_range": "Coxiella burnetii: título de IgG antifase I >1:800 (ou imunoensaio enzimático IgG ≥1:800) qualifica como CRITÉRIO MAIOR de Duke-ISCVID 2023 — título único, sem exigir soro pareado. Bartonella henselae/B. quintana: imunofluorescência indireta (IFA), título de IgG ≥1:800 qualifica como critério maior — também título único.",
+    "indications": "Investigação de endocardite com hemocultura negativa, especialmente quando cultura convencional e sorologia dirigida inicial não identificam agente. Cultura positiva única de Coxiella também preenche critério maior isoladamente.",
+    "interpretation": "Título de IgG antifase I de Coxiella >1:800 OU cultura positiva única = critério maior isolado, suficiente para contribuir ao diagnóstico de endocardite definitiva na combinação de critérios de Duke-ISCVID 2023. Título de IgG ≥1:800 para Bartonella por IFA tem o mesmo peso.",
+    "limitations": "O corte é específico para ANTÍGENO DE FASE I da Coxiella (não fase II) — usar fase II ou não distinguir as fases invalida a leitura do critério. Sorologia negativa não exclui infecção ativa recente (janela de soroconversão); a fonte não fornece sensibilidade/especificidade numérica para os cortes, só o valor de corte diagnóstico adotado pelo critério.",
+    "source_refs": [
+      "Fowler VG, Durack DT, Selton-Suty C, et al. The 2023 Duke-ISCVID Criteria for Infective Endocarditis. Clin Infect Dis. 2023;77(4):518-526. PMID: 37138445. PMCID: PMC10681650. DOI: 10.1093/cid/ciad271 — seção de critérios maiores microbiológicos, texto completo via PMC."
+    ],
+    "tags": [
+      "coxiella burnetii",
+      "bartonella",
+      "endocardite com hemocultura negativa",
+      "sorologia",
+      "febre q"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cintilografia-com-leucocitos-marcados-na-endocardite-de-protese",
+    "name": "Cintilografia com leucócitos marcados (WBC SPECT/CT) na endocardite de prótese valvar/dispositivo",
+    "category": "imagem",
+    "theme": "Endocardite",
+    "what_it_measures": "Cintilografia com leucócitos autólogos radiomarcados, associada a SPECT/CT, para visualizar focos de infecção ativa ao redor de material protético (valva, dispositivo, enxerto).",
+    "reference_range": "Achado qualitativo (captação focal anormal vs. ausente) — sem corte numérico de atividade.",
+    "indications": "Particularmente útil quando o PET-CT com FDG é não diagnóstico ou equívoco — complementar ao PET-CT, não método de primeira linha. Requer jejum e, quando clinicamente possível, suspensão temporária do antibiótico por 10-14 dias antes do exame; aquisição em múltiplos tempos após injeção (ex.: 2-4h e 20-24h).",
+    "interpretation": "Para endocardite de prótese valvar/dispositivo, especificidade relatada próxima de 100% e sensibilidade de aproximadamente 60% — especificidade maior que a do PET-CT/FDG, à custa de sensibilidade menor.",
+    "limitations": "VERIFICAÇÃO HUMANA NECESSÁRIA — os números de sensibilidade/especificidade (~60%/~100%) vieram de uma revisão NARRATIVA de 2026, que por sua vez cita dois estudos primários não conferidos diretamente nesta extração. É fonte secundária, mais fraca que diretriz ou estudo original, declarada explicitamente aqui conforme a régua do projeto. Adicionalmente, o próprio artigo dos critérios de Duke-ISCVID 2023 NÃO menciona WBC SPECT/CT entre seus critérios formais — o método não está incorporado como critério maior/menor nesses critérios. Sensibilidade mais baixa que PET-CT/FDG limita seu uso isolado como método de exclusão.",
+    "source_refs": [
+      "Di Vito L, D'Amato G, Pascucci R, et al. Current Management of Infective Endocarditis: A Narrative Review Focused on Unmet Clinical Needs and the Multidisciplinary Approach. J Cardiovasc Dev Dis. 2026;13(4):155. PMID: 42041981. PMCID: PMC13116544. DOI: 10.3390/jcdd13040155 — FONTE SECUNDÁRIA (revisão narrativa), não diretriz nem estudo original; números não conferidos nos estudos primários citados pela revisão (refs. 99-100 do artigo)."
+    ],
+    "tags": [
+      "cintilografia com leucocitos marcados",
+      "spect-ct",
+      "endocardite de protese",
+      "infeccao de dispositivo",
+      "verificacao humana necessaria"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
