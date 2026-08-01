@@ -2443,5 +2443,297 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "ulcera-aterosclerotica-penetrante-da-aorta-ascendente-angiotc",
+    "title": "Úlcera aterosclerótica penetrante da aorta ascendente — angiotomografia",
+    "modality": "Angiotomografia",
+    "theme": "Aorta e doença arterial periférica",
+    "file_path": "tc/ulcera-aterosclerotica-penetrante-aorta-ascendente.jpg",
+    "findings": "Dois cortes de angiotomografia (A, coronal; B, axial) com seta tracejada apontando pequeno \"outpouching\" (protrusão focal) na parede da aorta ascendente, compatível com úlcera aterosclerótica penetrante — achado confirmado no mesmo caso por foto intraoperatória (não incluída neste registro).",
+    "teaching_points": "Ilustra o achado tomográfico de úlcera aterosclerótica penetrante (PAU) — uma protrusão focal contrastada além do contorno esperado da parede aórtica, distinta da dissecção clássica (sem retalho intimal/falso lúmen) e do aneurisma sacular verdadeiro (sem base aterosclerótica ulcerada). É uma das três síndromes aórticas agudas, ao lado da dissecção e do hematoma intramural.",
+    "source_name": "PMC (Brazilian Journal of Cardiovascular Surgery, acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9423815/",
+    "license": "CC BY",
+    "attribution": "Patino J, Roughneen PT. The Rarity of Penetrating Ulcer with Intramural Hematoma of the Ascending Aorta. Braz J Cardiovasc Surg. 2022;37(4):599-601. PMID: 35675491. PMCID: PMC9423815 — CC BY.",
+    "tags": [
+      "ulcera aterosclerotica penetrante",
+      "sindrome aortica aguda",
+      "aorta ascendente",
+      "angiotomografia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "hematoma-intramural-da-aorta-toracica-angiotc",
+    "title": "Hematoma intramural da aorta torácica descendente — angiotomografia",
+    "modality": "Angiotomografia",
+    "theme": "Aorta e doença arterial periférica",
+    "file_path": "tc/hematoma-intramural-aorta-toracica.jpg",
+    "findings": "Dois cortes de angiotomografia (a, axial; b, sagital) com asterisco demarcando espessamento crescente da parede da aorta torácica descendente, sem realce de contraste no seu interior e sem retalho intimal — padrão de hematoma intramural (IMH).",
+    "teaching_points": "Documenta o segundo tipo de síndrome aórtica aguda — o hematoma intramural, reconhecido pela TC como espessamento parietal em crescente sem comunicação com o lúmen (ao contrário da dissecção clássica, que tem retalho intimal visível). No caso de origem, o IMH coexistia com uma úlcera penetrante em outro nível da aorta, ilustrando que as três síndromes aórticas agudas (dissecção, hematoma intramural e úlcera penetrante) podem se sobrepor no mesmo paciente.",
+    "source_name": "PMC (Indian Journal of Thoracic and Cardiovascular Surgery, acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8980974/",
+    "license": "CC BY",
+    "attribution": "Warner DL, Bhamidipati CM, Abraham CZ. Management of penetrating aortic ulcer and intramural hematoma in the thoracic aorta. Indian J Thorac Cardiovasc Surg. 2022;38(Suppl 1):198-203. PMID: 35463695. PMCID: PMC8980974 — CC BY.",
+    "tags": [
+      "hematoma intramural",
+      "sindrome aortica aguda",
+      "aorta toracica descendente",
+      "angiotomografia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "gangrena-de-membro-por-trombose-arterial-fotografia-clinica",
+    "title": "Gangrena de membro inferior por trombose de artéria femoral — fotografia clínica",
+    "modality": "Fotografia clínica",
+    "theme": "Aorta e doença arterial periférica",
+    "file_path": "clinico/gangrena-de-membro-por-trombose-arterial.jpg",
+    "findings": "Fotografia clínica de membro inferior com coloração violácea/enegrecida difusa da pele, da coxa até a extremidade distal, compatível com gangrena estabelecida — atribuída pela fonte a trombose de artéria femoral em contexto de doença aterosclerótica.",
+    "teaching_points": "Ilustra o desfecho mais grave da isquemia crítica de membro não revascularizada a tempo — gangrena estabelecida, estágio em que a viabilidade do membro já está perdida e a discussão clínica se desloca de revascularização para amputação. Reforça a urgência da isquemia aguda/crítica de membro como emergência vascular tempo-dependente.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Gangrene_thrombosis_arteriae_femoris.jpg",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Katanga, Wikimedia Commons, obra própria — CC BY-SA 3.0 (também disponível sob GFDL 1.2+). Licença conferida diretamente na página do arquivo.",
+    "tags": [
+      "gangrena",
+      "isquemia critica de membro",
+      "trombose arterial",
+      "doenca arterial periferica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "embolos-septicos-pulmonares-em-tc-de-torax-contexto-de-endocardite",
+    "title": "Êmbolos sépticos pulmonares em TC de tórax — associados a endocardite infecciosa por MRSA",
+    "modality": "Angiotomografia",
+    "theme": "Endocardite",
+    "file_path": "tc/embolos-septicos-pulmonares-endocardite.jpg",
+    "findings": "TC de tórax em dois cortes (axial à esquerda, coronal à direita) mostrando nódulo/cavitação pulmonar periférica no lobo inferior direito (corte axial) e múltiplos nódulos periféricos bilaterais demarcados por setas no corte coronal — padrão de embolização séptica pulmonar em paciente com tromboflebite séptica por MRSA associada a endocardite infecciosa.",
+    "teaching_points": "Ilustra o achado tomográfico de êmbolos sépticos pulmonares — nódulos periféricos, muitas vezes cavitados, de distribuição predominantemente basal — como manifestação extracardíaca da bacteriemia por endocardite, particularmente relevante na endocardite de câmaras direitas ou de dispositivo, onde o pulmão (não a circulação sistêmica) recebe o êmbolo séptico primeiro.",
+    "source_name": "PMC (Clinical Case Reports/Wiley, acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13334284/",
+    "license": "CC BY 4.0",
+    "attribution": "Saenz-Ancira S, Higuera-Ornelas J, Olivero L, Tale E, Borkowski P, Adhikari S. MRSA Septic Thrombophlebitis and Pulmonary Embolism: A Case Report Highlighting the Tight Bond With Infective Endocarditis. Clin Case Rep. 2026;14(7):e73077. PMID: 42440832. PMCID: PMC13334284 — CC BY 4.0.",
+    "tags": [
+      "embolos septicos pulmonares",
+      "endocardite infecciosa",
+      "mrsa",
+      "tomografia de torax"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "eritema-marginado-em-adulto-com-febre-reumatica",
+    "title": "Eritema marginado em adulto com história de febre reumática aguda",
+    "modality": "Fotografia clínica",
+    "theme": "Febre reumática",
+    "file_path": "clinico/eritema-marginado-em-adulto-fotografia-clinica.jpg",
+    "findings": "Fotografia clínica de pele de antebraço/coxa mostrando placas eritematosas de bordas serpiginosas/anulares, em paciente adulto com história de febre reumática aguda documentada e sequela valvar reumática — achado registrado pelo próprio paciente durante um surto anterior.",
+    "teaching_points": "Documenta o eritema marginado, um dos critérios MAIORES de Jones para febre reumática aguda e o achado cutâneo mais específico da doença — bordas serpiginosas/anulares, não pruriginoso, tipicamente em tronco e face interna de membros, poupando a face. O próprio título do artigo de origem (\"When Lupus Isn't Lupus\") alerta para o diagnóstico diferencial mais comum: o eritema marginado pode ser confundido com lesões cutâneas de doença autoimune se a história de febre reumática não for ativamente buscada.",
+    "source_name": "PMC (Cureus, acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13417354/",
+    "license": "CC BY 4.0",
+    "attribution": "Bouhamdi C, Douhi Z, El Fid K, Baybay H, Mernissi FZ. When Lupus Isn't Lupus: Erythema Marginatum in an Adult with a History of Acute Rheumatic Fever. Cureus. 2026;18(6):e111702. PMID: 42529369. PMCID: PMC13417354 — CC BY 4.0.",
+    "tags": [
+      "eritema marginado",
+      "febre reumatica",
+      "criterios de jones",
+      "achado cutaneo"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "valva-mitral-reumatica-cronificada-peca-anatomica",
+    "title": "Valva mitral reumática cronificada — peça anatômica (fusão comissural e espessamento de cordoalhas)",
+    "modality": "Anatomia patológica",
+    "theme": "Febre reumática",
+    "file_path": "patologia/valva-mitral-reumatica-peca-anatomica.jpg",
+    "findings": "Peça de necropsia com ventrículo esquerdo aberto, mostrando valva mitral com espessamento acentuado dos folhetos, fusão comissural e cordoalhas tendíneas espessadas e encurtadas — padrão clássico de cardiopatia reumática crônica cicatrizada.",
+    "teaching_points": "Ilustra o substrato anatômico final da cardite reumática recorrente não tratada — a inflamação valvar aguda repetida cicatriza como fusão comissural e espessamento fibroso progressivo, o mecanismo que transforma insuficiência mitral aguda (fase inflamatória) em estenose mitral crônica (fase cicatricial), décadas depois do episódio agudo inicial.",
+    "source_name": "CDC Public Health Image Library, via Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rheumatic_heart_disease,_gross_pathology_20G0013_lores.jpg",
+    "license": "Domínio público",
+    "attribution": "CDC/Dr. Edwin P. Ewing, Jr. Public Health Image Library (PHIL), ID #847 — domínio público (obra do governo dos EUA), via Wikimedia Commons. Licença conferida diretamente na página do arquivo.",
+    "tags": [
+      "cardiopatia reumatica cronica",
+      "fusao comissural",
+      "valva mitral",
+      "peca anatomica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "sindrome-do-qt-longo-tipo-2-com-alternancia-de-onda-t",
+    "title": "Síndrome do QT longo tipo 2 com alternância de onda T — ECG de 12 derivações",
+    "modality": "ECG",
+    "theme": "Síncope",
+    "file_path": "ecg/qt-longo-tipo-2-alternancia-de-onda-t.jpg",
+    "findings": "ECG de 12 derivações de paciente com síndrome do QT longo tipo 2 confirmada, mostrando alteração de repolarização com alternância de onda T (T-wave alternans) — variação batimento a batimento da morfologia/amplitude da onda T, visível em múltiplas derivações precordiais.",
+    "teaching_points": "A alternância de onda T é um marcador eletrocardiográfico de instabilidade elétrica ventricular associado a maior risco de arritmia ventricular maligna e síncope/torsades de pointes nas canalopatias hereditárias — sua presença num ECG de superfície, fora de teste de esforço formal, é um sinal de alarme que reforça a necessidade de estratificação de risco mais agressiva no paciente com síndrome do QT longo.",
+    "source_name": "PMC (Annals of Pediatric Cardiology, acesso aberto), via Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:PMC4608198_Shashank_2015_Long_QT2_with_T-wave_alternans.jpg",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Behere SP, Weindling SN. Inherited arrhythmias: The cardiac channelopathies. Ann Pediatr Cardiol. 2015;8(3):210-220. DOI: 10.4103/0974-2069.164695. PMID: 26556967. PMCID: PMC4608198 — CC BY-SA 3.0, via Wikimedia Commons. Licença conferida na página do arquivo.",
+    "tags": [
+      "sindrome do qt longo",
+      "alternancia de onda t",
+      "canalopatia",
+      "sincope arritmica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "tilt-test-grafico-de-pressao-arterial-e-frequencia-cardiaca-pots",
+    "title": "Teste de inclinação (tilt table test) positivo para POTS — gráfico de PA e frequência cardíaca",
+    "modality": "Traçado hemodinâmico",
+    "theme": "Síncope",
+    "file_path": "hemodinamica/tilt-test-grafico-pots.webp",
+    "findings": "Gráfico de linha do tempo (0 a 30 minutos) mostrando pressão arterial sistólica (linha azul), diastólica (linha vermelha) e frequência cardíaca (triângulos pretos) antes, durante e depois de teste de inclinação — as linhas tracejadas verticais demarcam o início (10 min) e o fim (20 min) do período de inclinação. A frequência cardíaca sobe de forma sustentada logo após a inclinação e permanece elevada durante todo o período, sem queda relevante da pressão arterial — padrão de síndrome de taquicardia postural ortostática (POTS), não o padrão vasovagal clássico (que cursaria com queda de PA e/ou FC).",
+    "teaching_points": "Documenta visualmente a diferença entre POTS e síncope vasovagal reflexa no mesmo tipo de exame: no POTS a frequência cardíaca sobe e se sustenta elevada durante a inclinação, com a pressão arterial preservada — o oposto do padrão cardioinibitório/vasodepressor da síncope reflexa clássica. É um lembrete de que \"teste de inclinação positivo\" não é um resultado único — a curva de PA e FC precisa ser lida para saber qual mecanismo está sendo demonstrado.",
+    "source_name": "ResearchGate (artigo de acesso aberto), via Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Tilt_table_test_showing_POTS.webp",
+    "license": "CC BY 4.0",
+    "attribution": "Said SAM. Postural Tachycardia Syndrome. DOI: 10.25141/2472-102X-2017-1.0004 — CC BY 4.0, via Wikimedia Commons. Licença conferida na página do arquivo.",
+    "tags": [
+      "tilt table test",
+      "pots",
+      "taquicardia postural ortostatica",
+      "sincope"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "pneumotorax-bilateral-apos-implante-de-marcapasso",
+    "title": "Pneumotórax bilateral após punção subclávia unilateral para implante de marca-passo",
+    "modality": "Radiografia e TC",
+    "theme": "Perioperatório",
+    "file_path": "radiografia/pneumotorax-bilateral-pos-implante-marcapasso.jpg",
+    "findings": "Série de 6 painéis (A-F) documentando a evolução temporal de um caso: A, radiografia basal 20 minutos após o implante sem pneumotórax aparente; B-C, pneumotórax bilateral de predomínio esquerdo em radiografia PA e perfil; D, corte axial de TC confirmando o pneumotórax bilateral; E-F, radiografias de seguimento após drenagem torácica mostrando melhora progressiva.",
+    "teaching_points": "Ilustra uma complicação rara e contraintuitiva do implante de marca-passo por via subclávia: pneumotórax BILATERAL a partir de uma punção UNILATERAL — mecanismo que reforça a importância de reavaliação radiográfica cuidadosa mesmo quando só um lado foi puncionado, e de manter alto índice de suspeição para desconforto respiratório inesperado no pós-procedimento imediato.",
+    "source_name": "PMC (Cureus, acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11452319/",
+    "license": "CC BY 4.0",
+    "attribution": "Kuninobu T, Kawamata H, Honda S, Kawasaki T. Bilateral Pneumothorax After Unilateral Subclavian Vein Cannulation for Pacemaker Implantation: A Case Report. Cureus. 2024;16(9):e68573. PMID: 39371783. PMCID: PMC11452319 — CC BY 4.0.",
+    "tags": [
+      "pneumotorax bilateral",
+      "implante de marcapasso",
+      "puncao subclavia",
+      "complicacao de procedimento"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "deiscencia-esternal-com-infeccao-profunda-pos-cirurgia-cardiaca",
+    "title": "Deiscência de ferida esternal com infecção profunda após cirurgia cardíaca",
+    "modality": "Fotografia clínica",
+    "theme": "Perioperatório",
+    "file_path": "clinico/deiscencia-esternal-infeccao-profunda.jpg",
+    "findings": "Fotografia clínica de ferida esternal longitudinal completamente aberta (deiscência), com leito de tecido de granulação e fibrina, e dois pontos de cerclagem esternal (fio de aço) expostos na linha média — caso de infecção profunda de ferida esternal por Mycoplasma hominis após cirurgia cardíaca. NOTA: é infecção PROFUNDA com deiscência e exposição de fios de cerclagem, não infecção superficial.",
+    "teaching_points": "Documenta o espectro mais grave de infecção de ferida esternal — infecção profunda com deiscência completa e exposição do material de síntese óssea —, que se distingue da infecção superficial (eritema/secreção sem comprometimento da fáscia/osso) por exigir reabordagem cirúrgica, não só antibioticoterapia. O agente causal neste caso (Mycoplasma hominis) é atípico e didático por escapar da cultura bacteriana convencional se não houver suspeita específica.",
+    "source_name": "PMC (Frontiers in Cardiovascular Medicine, acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12104231/",
+    "license": "CC BY 4.0",
+    "attribution": "Wang Z, Shi Y, Chen Y, Chen L. Case Report: Deep sternal wound infection caused by Mycoplasma hominis after cardiac surgery. Front Cardiovasc Med. 2025;12:1538389. PMID: 40421187. PMCID: PMC12104231 — CC BY 4.0.",
+    "tags": [
+      "deiscencia esternal",
+      "infeccao profunda de ferida operatoria",
+      "cirurgia cardiaca",
+      "mycoplasma hominis"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "regurgitacao-aortica-grave-em-valva-bicuspide-doppler-fluxo-reverso",
+    "title": "Regurgitação aórtica grave em valva aórtica bicúspide — Doppler pulsado com fluxo diastólico reverso em aorta abdominal",
+    "modality": "Ecocardiograma",
+    "theme": "Valvopatias",
+    "file_path": "ecocardiograma/regurgitacao-aortica-grave-valva-bicuspide-doppler-fluxo-reverso.jpg",
+    "findings": "Doppler pulsado de aorta abdominal mostrando fluxo reverso holodiastólico (abaixo da linha de base durante toda a diástole), em paciente com valva aórtica bicúspide e regurgitação aórtica grave. Este registro documenta o traçado espectral de quantificação da gravidade, não a morfologia bivalvar da valva em corte 2D.",
+    "teaching_points": "O fluxo diastólico reverso holodiastólico na aorta abdominal é um sinal indireto clássico de regurgitação aórtica GRAVE — quanto mais distal (aorta abdominal, em vez de só na aorta torácica proximal) e mais prolongado (ocupando toda a diástole) o fluxo reverso, maior a gravidade da regurgitação. É achado complementar à quantificação direta no trato de saída do VE.",
+    "source_name": "CardioNetworks ECHOpedia (AMC Echolab, Amsterdã), via Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Bicuspid_aortic_valve,_severe_aortic_regurgitation_E00859_(CardioNetworks_ECHOpedia).jpg",
+    "license": "CC BY-SA 3.0",
+    "attribution": "CardioNetworks ECHOpedia — AMC Echolab, Academic Medical Center, Amsterdã, Holanda, via Wikimedia Commons — CC BY-SA 3.0. Licença conferida diretamente na página do arquivo.",
+    "tags": [
+      "regurgitacao aortica grave",
+      "valva aortica bicuspide",
+      "doppler pulsado",
+      "fluxo diastolico reverso"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "regurgitacao-tricuspide-grave-reversao-sistolica-fluxo-veia-hepatica",
+    "title": "Regurgitação tricúspide grave — reversão sistólica de fluxo em veia hepática ao Doppler pulsado",
+    "modality": "Ecocardiograma",
+    "theme": "Valvopatias",
+    "file_path": "ecocardiograma/regurgitacao-tricuspide-grave-reversao-fluxo-veia-hepatica.jpg",
+    "findings": "Doppler pulsado de veia hepática mostrando reversão do fluxo durante a sístole (setas vermelhas, picos acima da linha de base sincronizados com a sístole ventricular no traçado de ECG simultâneo), em paciente com regurgitação tricúspide grave.",
+    "teaching_points": "A reversão sistólica do fluxo em veia hepática é um sinal indireto de gravidade da regurgitação tricúspide, frequentemente esquecido na avaliação de rotina que se concentra só no jato colorido dentro do ventrículo direito — o refluxo se propaga retrogradamente até o sistema venoso hepático quando a regurgitação é volumosa o suficiente, e sua presença reforça a classificação de gravidade GRAVE.",
+    "source_name": "CardioNetworks ECHOpedia (AMC Echolab, Amsterdã), via Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Severe_tricuspid_regurgitation_E00573_(CardioNetworks_ECHOpedia).jpg",
+    "license": "CC BY-SA 3.0",
+    "attribution": "CardioNetworks ECHOpedia — AMC Echolab, Academic Medical Center, Amsterdã, Holanda, via Wikimedia Commons — CC BY-SA 3.0. Licença conferida diretamente na página do arquivo.",
+    "tags": [
+      "regurgitacao tricuspide grave",
+      "reversao de fluxo hepatico",
+      "doppler pulsado",
+      "sinal indireto de gravidade"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "prolapso-de-valva-mitral-ecocardiograma-transesofagico",
+    "title": "Prolapso de valva mitral — ecocardiograma transesofágico (ETE)",
+    "modality": "Ecocardiograma",
+    "theme": "Valvopatias",
+    "file_path": "ecocardiograma/prolapso-de-valva-mitral-ete.jpg",
+    "findings": "Quatro cortes de ecocardiograma transesofágico mostrando o folheto mitral abaulando/protruindo em direção ao átrio esquerdo durante a sístole — padrão de prolapso valvar mitral, documentado em múltiplos planos de corte do mesmo exame.",
+    "teaching_points": "Complementa o registro já existente de valva mitral mixomatosa em eco 3D — este é um exame ETE 2D convencional, útil para lembrar que o diagnóstico de prolapso mitral não depende de tecnologia 3D: o abaulamento sistólico do folheto além do plano do anel mitral, visto em cortes 2D padrão, já é suficiente para o diagnóstico ecocardiográfico.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Mitralinsuff_TEE.jpg",
+    "license": "CC BY-SA 3.0",
+    "attribution": "J. Heuser, Wikimedia Commons, obra própria — CC BY-SA 3.0 (também disponível sob GNU FDL 1.2+). Licença conferida diretamente na página do arquivo.",
+    "tags": [
+      "prolapso de valva mitral",
+      "ecocardiograma transesofagico",
+      "ete"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "veia-cava-superior-esquerda-persistente-angiotomografia",
+    "title": "Veia cava superior esquerda persistente (descendente à esquerda) — angiotomografia axial e coronal",
+    "modality": "Angiotomografia",
+    "theme": "Cardiopatias congênitas",
+    "file_path": "tc/veia-cava-superior-esquerda-persistente-angiotc.jpg",
+    "findings": "Cortes de angiotomografia axial (esquerda) e coronal (direita) mostrando vaso venoso adicional contrastado junto ao mediastino superior esquerdo, descendo paralelo ao arco aórtico — compatível com veia cava superior esquerda persistente, variante anatômica do desenvolvimento venoso sistêmico.",
+    "teaching_points": "A veia cava superior esquerda persistente é a variante venosa congênita mais comum do tórax (achado incidental na maioria dos casos, geralmente drenando para o seio coronário) — relevante na prática por poder alterar o trajeto de cabos de dispositivo cardíaco implantável e por, ocasionalmente, associar-se a outras anomalias cardíacas estruturais que justificam investigação adicional quando achada.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Links_descendierende_Vena_cava_superior_63W_-_CT_axial_und_coronar_-_001.jpg",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Hellerhoff, Wikimedia Commons, obra própria — CC BY-SA 4.0. Licença conferida diretamente na página do arquivo.",
+    "tags": [
+      "veia cava superior esquerda persistente",
+      "variante anatomica congenita",
+      "angiotomografia"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]

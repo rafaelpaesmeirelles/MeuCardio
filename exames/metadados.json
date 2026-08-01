@@ -2444,5 +2444,422 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "troponina-de-alta-sensibilidade-no-diagnostico-de-mins",
+    "name": "Troponina (convencional e de alta sensibilidade) no diagnóstico de MINS (lesão miocárdica após cirurgia não cardíaca)",
+    "category": "laboratorial",
+    "theme": "Perioperatório",
+    "what_it_measures": "Troponina cardíaca dosada no pós-operatório de cirurgia não cardíaca, para detectar lesão miocárdica de origem isquêmica — a maior parte dos casos sem sintomas isquêmicos típicos.",
+    "reference_range": "Critério diagnóstico original (troponina T convencional, estudo VISION): pico ≥0,03 ng/mL atribuído a isquemia. Com troponina T de ALTA sensibilidade (hs-cTnT), mortalidade em 30 dias por faixa de pico: <5 ng/L (referência) · 20 a <65 ng/L → 3,0% · 65 a <1.000 ng/L → 9,1% · ≥1.000 ng/L → 29,6%.",
+    "indications": "Dosagem seriada de troponina no pós-operatório de cirurgia não cardíaca em paciente de risco cardiovascular elevado, independente de sintomas — a maioria dos casos de MINS é silenciosa.",
+    "interpretation": "Elevação de troponina no pós-operatório, mesmo assintomática, é preditor independente forte de mortalidade em 30 dias (HR ajustado 3,87; IC95% 2,96-5,08, no estudo de definição diagnóstica). Com hs-cTnT, o risco de morte sobe de forma gradual e acentuada por faixa de pico, chegando a quase 30% no estrato mais alto (≥1.000 ng/L).",
+    "limitations": "93,1% dos pacientes com hs-cTnT elevada não tinham sintomas isquêmicos típicos — rastreio ativo (não só investigação orientada por sintoma) é necessário para não perder o diagnóstico; MINS inclui, mas não se limita a, infarto tipo 1 — mecanismos não coronarianos (desbalanço oferta-demanda, sepse, embolia pulmonar) também elevam troponina no perioperatório.",
+    "source_refs": [
+      "Botto F, Alonso-Coello P, Chan MT, et al. (VISION Writing Group). Myocardial injury after noncardiac surgery: a large, international, prospective cohort study establishing diagnostic criteria, characteristics, predictors, and 30-day outcomes. Anesthesiology. 2014;120(3):564-578. DOI: 10.1097/ALN.0000000000000113. PMID: 24534856 — definição diagnóstica original (troponina T convencional, corte 0,03 ng/mL).",
+      "Writing Committee for the VISION Study Investigators. Association of Postoperative High-Sensitivity Troponin Levels With Myocardial Injury and 30-Day Mortality Among Patients Undergoing Noncardiac Surgery. JAMA. 2017;317(16):1642-1651. DOI: 10.1001/jama.2017.4360. PMID: 28444280 — estratificação por hs-cTnT, faixas de mortalidade."
+    ],
+    "tags": [
+      "troponina de alta sensibilidade",
+      "mins",
+      "lesao miocardica perioperatoria",
+      "cirurgia nao cardiaca"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "bnp-pre-operatorio-em-cirurgia-vascular",
+    "name": "BNP pré-operatório na estratificação de risco de cirurgia vascular",
+    "category": "laboratorial",
+    "theme": "Perioperatório",
+    "what_it_measures": "Peptídeo natriurético tipo B, dosado antes de cirurgia vascular eletiva, como preditor de eventos cardíacos adversos maiores (morte cardíaca e infarto não fatal) em 30 dias.",
+    "reference_range": "Corte ótimo (melhor equilíbrio sensibilidade/especificidade): 116 pg/mL (sensibilidade 66%, especificidade 82%). Corte de rastreio (alta sensibilidade): 30 pg/mL (sensibilidade 95%, especificidade 44%). Corte de confirmação (alta especificidade): 372 pg/mL (sensibilidade 32%, especificidade 95%).",
+    "indications": "Estratificação de risco cardiovascular pré-operatório em paciente submetido a cirurgia vascular — população de risco cardiovascular elevado por definição (doença aterosclerótica sistêmica).",
+    "interpretation": "BNP ≥116 pg/mL associa-se a OR 7,9 (IC95% 4,7-13,3) para o composto de morte cardíaca e infarto não fatal em 30 dias, em metanálise de dados individuais de pacientes. É BNP (não NT-proBNP) — os cortes não devem ser transpostos para NT-proBNP sem fonte que declare a equivalência.",
+    "limitations": "Metanálise de dados individuais reúne estudos de populações e ensaios de BNP potencialmente heterogêneos; não valida diretamente para cirurgia não vascular; corte ótimo (116 pg/mL) é o de melhor equilíbrio estatístico, não necessariamente o mais adequado para toda decisão clínica — a escolha entre os três cortes depende de priorizar sensibilidade ou especificidade.",
+    "source_refs": [
+      "Rodseth RN, Biccard BM, Chu R, Lurati Buse GA, et al. The predictive ability of pre-operative B-type natriuretic peptide in vascular patients for major adverse cardiac events: an individual patient data meta-analysis. J Am Coll Cardiol. 2011;58(5):522-529. DOI: 10.1016/j.jacc.2011.04.018. PMID: 21777751."
+    ],
+    "tags": [
+      "bnp",
+      "peptideo natriuretico",
+      "risco cardiovascular perioperatorio",
+      "cirurgia vascular"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "escore-de-gupta-de-insuficiencia-respiratoria-pos-operatoria",
+    "name": "Escore de Gupta de risco de insuficiência respiratória pós-operatória",
+    "category": "laboratorial",
+    "theme": "Perioperatório",
+    "what_it_measures": "Calculadora de risco derivada de coorte cirúrgica ampla (NSQIP), estimando a probabilidade de insuficiência respiratória pós-operatória (ventilação mecânica >48h ou intubação não planejada em até 30 dias) a partir de 5 variáveis pré-operatórias: tipo de cirurgia, caráter de emergência, status funcional dependente, sepse pré-operatória e classe ASA.",
+    "reference_range": "VERIFICAÇÃO HUMANA NECESSÁRIA para a pontuação exata de cada variável — o abstract da fonte primária não traz a tabela de pontos, só a lista de variáveis preditoras e a discriminação do modelo.",
+    "indications": "Estimar o risco pré-operatório de insuficiência respiratória em cirurgia não cardíaca, para orientar decisão sobre necessidade de UTI pós-operatória e monitorização respiratória mais próxima.",
+    "interpretation": "Modelo com boa discriminação: c-estatística 0,894 na coorte de derivação (211.410 pacientes, NSQIP 2007, incidência de insuficiência respiratória pós-operatória de 3,1%) e 0,897 na coorte de validação (257.385 pacientes, NSQIP 2008).",
+    "limitations": "Pontuação exata de cada variável não confirmada nesta sessão — não usar como calculadora numérica sem consultar o texto integral; derivado de base de dados americana (NSQIP), pode não refletir exatamente a distribuição de risco de outras populações cirúrgicas.",
+    "source_refs": [
+      "Gupta H, Gupta PK, Fang X, Miller WJ, Cemaj S, Forse RA, Morrow LE. Development and validation of a risk calculator predicting postoperative respiratory failure. Chest. 2011;140(5):1207-1215. DOI: 10.1378/chest.11-0466. PMID: 21757571."
+    ],
+    "tags": [
+      "escore de gupta",
+      "insuficiencia respiratoria pos-operatoria",
+      "calculadora de risco",
+      "nsqip"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "teste-de-caminhada-de-6-minutos-pre-operatorio",
+    "name": "Teste de caminhada de 6 minutos (TC6) pré-operatório",
+    "category": "metodo_grafico",
+    "theme": "Perioperatório",
+    "what_it_measures": "Distância percorrida em 6 minutos de caminhada, medida antes de cirurgia não cardíaca, como estimativa funcional/cardiorrespiratória complementar à capacidade funcional autorreferida.",
+    "reference_range": "Não há corte único validado de distância mínima — a associação é contínua: OR ajustado de 1,32 por cada 100 m de REDUÇÃO na distância (IC95% 1,01-1,73; p=0,045) para complicações pós-operatórias moderadas/graves.",
+    "indications": "Avaliação funcional pré-operatória complementar em paciente cuja capacidade funcional é difícil de estimar clinicamente (ex.: limitação musculoesquelética que mascara sintomas cardiopulmonares).",
+    "interpretation": "Associação estatisticamente significativa, porém MODESTA (os próprios autores usam esse termo), com complicações pós-operatórias moderadas/graves. Sem associação estatisticamente significativa com lesão miocárdica ou mortalidade em 30 dias nesta coorte — não deve ser interpretado como preditor forte de desfecho cardíaco isoladamente.",
+    "limitations": "Análise secundária de estudo de coorte (METS), não desenhada primariamente para validar o TC6 como preditor; amostra relativamente pequena (545 pacientes) para o desfecho de mortalidade (13% de lesão miocárdica ou óbito combinados); efeito de magnitude modesta, não deve substituir avaliação clínica de capacidade funcional (METs) nem outros exames funcionais quando indicados.",
+    "source_refs": [
+      "Ramos RJ, Ladha KS, Cuthbertson BH, Shulman MA, Myles PS, Wijeysundera DN (METS Study Investigators). Association of six-minute walk test distance with postoperative complications in non-cardiac surgery: a secondary analysis of a multicentre prospective cohort study. Can J Anaesth. 2021;68(4):514-529. DOI: 10.1007/s12630-020-01909-9. PMID: 33442834."
+    ],
+    "tags": [
+      "teste de caminhada de 6 minutos",
+      "capacidade funcional",
+      "avaliacao pre-operatoria"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "massagem-do-seio-carotideo-criterios-de-hipersensibilidade",
+    "name": "Massagem do seio carotídeo — critérios diagnósticos de hipersensibilidade do seio carotídeo",
+    "category": "metodo_grafico",
+    "theme": "Síncope",
+    "what_it_measures": "Resposta hemodinâmica (frequência cardíaca e pressão arterial) à compressão manual do seio carotídeo, avaliando componente cardioinibitório (assistolia) e vasodepressor (queda de PA) como causa de síncope reflexa.",
+    "reference_range": "Critério cardioinibitório de positividade: assistolia ≥3 segundos durante a massagem.",
+    "indications": "Investigação de síncope inexplicada em paciente >40 anos, especialmente com síncope relacionada a rotação cervical, barbear ou colar apertado — sugestivo de síndrome do seio carotídeo.",
+    "interpretation": "Resposta cardioinibitória positiva (assistolia ≥3s) sustenta hipersensibilidade do seio carotídeo como causa da síncope quando reproduz os sintomas do paciente.",
+    "limitations": "IMPORTANTE — resposta positiva NÃO é específica isoladamente: em amostra populacional de idosos ASSINTOMÁTICOS, 24% tiveram resposta cardioinibitória positiva à massagem — o diagnóstico de síndrome do seio carotídeo exige que a massagem REPRODUZA os sintomas do paciente, não apenas que o critério hemodinâmico seja atingido; contraindicado em paciente com sopro carotídeo, AVC/AIT recente ou placa carotídea significativa conhecida, pelo risco de embolização.",
+    "source_refs": [
+      "Kerr SR, Pearce MS, Brayne C, Davis RJ, Kenny RA. Carotid sinus hypersensitivity in asymptomatic older persons: implications for diagnosis of syncope and falls. Arch Intern Med. 2006;166(5):515-520. DOI: 10.1001/archinte.166.5.515. PMID: 16534037."
+    ],
+    "tags": [
+      "massagem do seio carotideo",
+      "hipersensibilidade do seio carotideo",
+      "sincope reflexa"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "monitor-de-eventos-implantavel-rendimento-diagnostico-na-sincope",
+    "name": "Monitor de eventos implantável (ILR) — rendimento diagnóstico na síncope inexplicada",
+    "category": "metodo_grafico",
+    "theme": "Síncope",
+    "what_it_measures": "Dispositivo subcutâneo de monitorização eletrocardiográfica contínua e prolongada (meses a anos), comparado à investigação convencional (Holter, teste de esforço, estudo eletrofisiológico) na elucidação da causa de síncope recorrente inexplicada.",
+    "reference_range": "Não é valor de referência — é comparação de rendimento diagnóstico. Ensaio randomizado RAST (Randomized Assessment of Syncope Trial): rendimento diagnóstico de 52% (14/27) com monitorização prolongada por ILR vs. 20% (6/30) com teste convencional (p=0,012); detecção específica de bradicardia como causa: 40% vs. 8% (p=0,005).",
+    "indications": "Síncope recorrente inexplicada após investigação inicial não conclusiva, especialmente quando os episódios são pouco frequentes (dias a meses de intervalo), tornando a monitorização de curta duração pouco sensível.",
+    "interpretation": "A estratégia de monitorização prolongada mais que dobrou o rendimento diagnóstico em relação ao teste convencional neste ensaio randomizado, sobretudo por identificar bradicardia como mecanismo — achado que a investigação convencional de curta duração tende a perder por intermitência dos episódios.",
+    "limitations": "Ensaio pequeno (57 pacientes randomizados no total); a detecção de uma arritmia durante episódio sintomático correlaciona causa e efeito, mas dispositivo tem vida útil limitada (geralmente 2-3 anos) e não substitui investigação de causas não arrítmicas (reflexa, ortostática).",
+    "source_refs": [
+      "Krahn AD, Klein GJ, Yee R, Skanes AC. Randomized assessment of syncope trial: conventional diagnostic testing versus a prolonged monitoring strategy. Circulation. 2001;104(1):46-51. DOI: 10.1161/01.cir.104.1.46. PMID: 11435336."
+    ],
+    "tags": [
+      "monitor de eventos implantavel",
+      "ilr",
+      "sincope inexplicada",
+      "rendimento diagnostico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "teste-de-atp-no-diagnostico-diferencial-de-sincope",
+    "name": "Teste de ATP (adenosina trifosfato) no diagnóstico diferencial de síncope",
+    "category": "metodo_grafico",
+    "theme": "Síncope",
+    "what_it_measures": "Resposta do sistema de condução atrioventricular a um bolus intravenoso de ATP, avaliando susceptibilidade a bloqueio AV induzido por adenosina como possível mecanismo de síncope inexplicada (a chamada \"síncope sensível à adenosina\").",
+    "reference_range": "Dose: bolus IV de 20 mg de ATP. Critério de positividade: pausa ventricular (bloqueio atrioventricular induzido) ≥6 segundos.",
+    "indications": "Investigação de síncope inexplicada, particularmente em paciente sem cardiopatia estrutural e sem diagnóstico após avaliação inicial — usado historicamente para identificar um possível mecanismo de bloqueio AV paroxístico não capturado por ECG convencional.",
+    "interpretation": "Resposta positiva (pausa ≥6s) sugere susceptibilidade do nó AV a bloqueio induzido por adenosina como mecanismo possível da síncope — mas a correlação entre teste positivo e mecanismo real do episódio espontâneo do paciente é motivo de debate na literatura, e o teste não é universalmente recomendado nas diretrizes atuais de síncope.",
+    "limitations": "O valor preditivo do teste positivo para prever o mecanismo real da síncope espontânea do paciente é limitado — um resultado positivo não prova que a síncope clínica do paciente teve esse mecanismo; teste pouco usado na prática atual em comparação a monitorização prolongada (ILR).",
+    "source_refs": [
+      "Brignole M, Gaggioli G, Menozzi C, Gianfranchi L, Bartoletti A, Bottoni N, Lolli G, Oddone D, Del Rosso A, Pellinghelli G. Adenosine-induced atrioventricular block in patients with unexplained syncope: the diagnostic value of ATP testing. Circulation. 1997;96(11):3921-3927. DOI: 10.1161/01.cir.96.11.3921. PMID: 9403616."
+    ],
+    "tags": [
+      "teste de atp",
+      "bloqueio atrioventricular induzido",
+      "sincope inexplicada"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "escore-egsys-probabilidade-de-sincope-cardiaca",
+    "name": "Escore EGSYS — probabilidade de síncope de origem cardíaca",
+    "category": "laboratorial",
+    "theme": "Síncope",
+    "what_it_measures": "Escore clínico multiparamétrico (variáveis de história e ECG), pontuado de -1 a +4 conforme a magnitude de cada preditor, estimando a probabilidade de a síncope ter origem cardíaca em vez de reflexa/outra.",
+    "reference_range": "VERIFICAÇÃO HUMANA NECESSÁRIA para a lista completa de variáveis e o peso exato de cada uma — não confirmado no abstract da fonte primária. Corte confirmado: escore <3 associa-se a menor probabilidade de síncope cardíaca.",
+    "indications": "Estratificação inicial de probabilidade de síncope cardíaca em paciente atendido com síncope, para orientar prioridade de investigação cardiológica.",
+    "interpretation": "Nas validações da fonte primária (n=456), o escore teve sensibilidade de 89-91% e especificidade de 69-73% para identificar síncope cardíaca — desempenho de triagem razoável, mas com taxa relevante de falso-positivo/negativo, não deve substituir julgamento clínico isolado.",
+    "limitations": "Peso exato de cada variável não confirmado nesta sessão — não montar tabela de pontuação sem consultar o texto integral; validado em população de pronto-socorro/hospital geral, pode não se aplicar da mesma forma em outros contextos de atendimento.",
+    "source_refs": [
+      "Del Rosso A, Ungar A, Maggi R, Giada F, Petix NR, De Santo T, Menozzi C, Brignole M. Clinical predictors of cardiac syncope at initial evaluation in patients referred urgently to a general hospital: the EGSYS score. Heart. 2008;94(12):1620-1626. DOI: 10.1136/hrt.2008.143123. PMID: 18519550."
+    ],
+    "tags": [
+      "escore egsys",
+      "sincope cardiaca",
+      "estratificacao de risco"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "criterios-ecocardiograficos-de-tamponamento-cardiaco",
+    "name": "Critérios ecocardiográficos de tamponamento cardíaco",
+    "category": "imagem",
+    "theme": "Pericárdio",
+    "what_it_measures": "Conjunto de achados ecocardiográficos usados para diferenciar derrame pericárdico simples de tamponamento hemodinamicamente significativo: colapso diastólico do ventrículo direito, colapso sistólico do átrio direito, pletora de veia cava inferior com variação respiratória mínima, e variação exagerada das velocidades de fluxo mitral/tricúspide com a respiração (substituto ecocardiográfico do pulso paradoxal).",
+    "reference_range": "VERIFICAÇÃO HUMANA NECESSÁRIA para os cortes percentuais exatos de variação de fluxo mitral/tricúspide (valores como \">25%\" e \">40%\" circulam na literatura secundária, mas não foram confirmados no abstract da fonte usada aqui — só o texto integral traria esse número).",
+    "indications": "Avaliação ecocardiográfica de paciente com derrame pericárdico e suspeita clínica de tamponamento, para apoiar (não substituir) a decisão de pericardiocentese.",
+    "interpretation": "Colapso diastólico de VD tem ALTA especificidade; colapso sistólico de AD é o sinal mais PRECOCE a aparecer; pletora de veia cava inferior com variação respiratória mínima tem ALTA sensibilidade. A fonte é explícita: \"tamponamento pericárdico não é diagnóstico clínico nem ecocardiográfico isolado\" — nenhum achado isolado confirma ou exclui tamponamento sozinho, é a combinação clínica + ecocardiográfica que decide.",
+    "limitations": "Derrame pericárdico sem repercussão hemodinâmica pode ser confundido com tamponamento se os achados forem interpretados isoladamente; os cortes numéricos exatos de variação respiratória do fluxo valvar não foram confirmados nesta sessão (ver acima).",
+    "source_refs": [
+      "Alerhand S, Carter JM. What echocardiographic findings suggest a pericardial effusion is causing tamponade? Am J Emerg Med. 2019;37(2):321-326. DOI: 10.1016/j.ajem.2018.11.004. PMID: 30471929."
+    ],
+    "tags": [
+      "tamponamento cardiaco",
+      "criterios ecocardiograficos",
+      "derrame pericardico",
+      "colapso diastolico de vd"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "d-dimero-no-primeiro-episodio-de-pericardite-aguda",
+    "name": "D-dímero no primeiro episódio de pericardite aguda",
+    "category": "laboratorial",
+    "theme": "Pericárdio",
+    "what_it_measures": "Biomarcador de ativação da coagulação/fibrinólise, dosado em paciente com primeiro episódio de pericardite aguda, avaliado como marcador de intensidade do processo inflamatório — não como gatilho automático de investigação de tromboembolismo.",
+    "reference_range": "Mediana de D-dímero de 1.456 ng/mL em coorte de 165 pacientes com primeiro episódio de pericardite aguda; 121/165 (73,3%) com D-dímero elevado ajustado por idade. VERIFICAÇÃO HUMANA NECESSÁRIA para um ponto de corte numérico único de \"elevado\" — a fonte usa ajuste por idade, não um valor fixo.",
+    "indications": "Avaliação laboratorial de rotina no primeiro episódio de pericardite aguda — NÃO deve, isoladamente, motivar angiotomografia de artéria pulmonar em paciente com dor torácica sem outros dados sugestivos de embolia pulmonar ou síndrome aórtica.",
+    "interpretation": "D-dímero elevado associou-se a mais derrame pleural (69,4% vs. 38,6%, p<0,001) e mais derrame pericárdico (89,3% vs. 72,7%, p=0,009) — reflete intensidade do processo inflamatório, não é marcador específico de complicação tromboembólica. Entre os pacientes com D-dímero elevado que fizeram angioTC de artéria pulmonar (43,8% deles), nenhum caso de TEP ou síndrome aórtica foi identificado.",
+    "limitations": "Coorte de centro único, D-dímero medido em apenas 62,3% dos 265 pacientes originais (viés de seleção possível); a fonte explicitamente desaconselha usar a elevação isolada do D-dímero como gatilho de investigação de TEP/síndrome aórtica sem outros dados clínicos sugestivos.",
+    "source_refs": [
+      "Lazaros G, Vlachakis PK, Theofilis P, et al. D-dimer as a diagnostic and prognostic plasma biomarker in patients with a first episode of acute pericarditis. Eur J Intern Med. 2023;116:58-64. DOI: 10.1016/j.ejim.2023.06.017. PMID: 37357033."
+    ],
+    "tags": [
+      "d-dimero",
+      "pericardite aguda",
+      "primeiro episodio",
+      "marcador inflamatorio"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "criterios-de-duke-iscvid-2023",
+    "name": "Critérios de Duke-ISCVID 2023 (atualização dos critérios modificados de Duke)",
+    "category": "laboratorial",
+    "theme": "Endocardite",
+    "what_it_measures": "Conjunto atualizado de critérios clínicos, microbiológicos e de imagem para diagnóstico de endocardite infecciosa, revisando os critérios de Duke modificados de 2000 à luz de novas técnicas de imagem e microbiologia.",
+    "reference_range": "Não é valor numérico — é conjunto de critérios maiores/menores classificando o caso em definido, possível ou rejeitado, conforme a combinação de critérios preenchidos (mesma lógica dos critérios de Duke modificados já usados na prática).",
+    "indications": "Classificação diagnóstica de qualquer paciente com suspeita de endocardite infecciosa, nativa ou protética, incluindo contextos antes mal cobertos como TAVI e dispositivo cardíaco eletrônico implantável (CIED) endovascular.",
+    "interpretation": "Principais mudanças em relação aos critérios de 2000: PET-CT com ¹⁸F-FDG e TC cardíaca entram como novas ferramentas de imagem aceitas; inspeção intraoperatória vira novo CRITÉRIO CLÍNICO MAIOR; lista de microrganismos \"típicos\" foi expandida (alguns só contam como típicos na presença de prótese intracardíaca); foi removida a exigência de horário específico e de punções venosas separadas para as hemoculturas; PCR, sequenciamento metagenômico e hibridização in situ passam a ser aceitos como evidência microbiológica; condições predisponentes esclarecidas para incluir TAVI, CIED endovascular e endocardite infecciosa prévia.",
+    "limitations": "Critério de classificação, não teste isolado — sua acurácia depende da qualidade de cada componente (hemocultura, imagem, achado intraoperatório) usado para pontuá-lo; validação externa publicada em 2024 (PMID 38330166) não teve os números extraídos nesta sessão.",
+    "source_refs": [
+      "Fowler VG, Durack DT, Selton-Suty C, et al. The 2023 Duke-International Society for Cardiovascular Infectious Diseases Criteria for Infective Endocarditis: Updating the Modified Duke Criteria. Clin Infect Dis. 2023;77(4):518-526. DOI: 10.1093/cid/ciad271. PMID: 37138445."
+    ],
+    "tags": [
+      "criterios de duke",
+      "duke-iscvid 2023",
+      "diagnostico de endocardite"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "pet-ct-com-fdg-na-infeccao-de-dispositivo-cardiaco-eletronico-implantavel",
+    "name": "PET-CT com ¹⁸F-FDG na infecção de dispositivo cardíaco eletrônico implantável (CIED)",
+    "category": "imagem",
+    "theme": "Endocardite",
+    "what_it_measures": "Captação de ¹⁸F-fluorodesoxiglicose (marcador de atividade metabólica/inflamatória) ao longo do trajeto do dispositivo cardíaco implantável (gerador, bolso subcutâneo, cabos), para identificar foco infeccioso associado ao dispositivo.",
+    "reference_range": "Desempenho global: especificidade 100%, sensibilidade 85% — mas a sensibilidade VARIA MUITO por localização da infecção: bolso do gerador (pocket) 79%, cabo subcutâneo 57%, cabo endovascular 22%, cabo intracardíaco 10%.",
+    "indications": "Investigação de suspeita de infecção de dispositivo cardíaco implantável (marca-passo, CDI, ressincronizador), especialmente quando a suspeita envolve os cabos e não só o bolso do gerador.",
+    "interpretation": "A sensibilidade cai progressivamente do bolso do gerador (proximal, mais superficial) até o cabo intracardíaco (distal, mais profundo) — é este gradiente, não a sensibilidade global de 85%, que deve orientar a leitura de um PET-CT negativo: negativo no bolso tem valor de exclusão maior que negativo no segmento intracardíaco. Combinado ao ecocardiograma transesofágico, o diagnóstico definitivo de infecção sistêmica associada ao dispositivo sobe de 34% para 56%.",
+    "limitations": "Sensibilidade baixa para infecção restrita ao segmento intracardíaco do cabo (10%) — um PET-CT negativo não exclui infecção nesse segmento; interpretação exige correlação com captação de baço/medula óssea para diferenciar infecção sistêmica bacterêmica de localizada.",
+    "source_refs": [
+      "Hernández-Meneses M, Perissinotti A, Páez-Martínez S, et al. Reappraisal of [18F]FDG-PET/CT for diagnosis and management of cardiac implantable electronic device infections. Rev Esp Cardiol (Engl Ed). 2023;76(12):970-979. DOI: 10.1016/j.rec.2023.04.001. PMID: 37028797."
+    ],
+    "tags": [
+      "pet-ct",
+      "fdg",
+      "infeccao de dispositivo cardiaco",
+      "cied"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "acuracia-do-ecocardiograma-transtoracico-vs-transesofagico-na-endocardite",
+    "name": "Acurácia diagnóstica do ecocardiograma transtorácico (ETT) comparado ao transesofágico (ETE) na endocardite infecciosa",
+    "category": "imagem",
+    "theme": "Endocardite",
+    "what_it_measures": "Sensibilidade e especificidade do ETT harmônico para detectar vegetação/achados de endocardite, usando o ETE como padrão-ouro de referência, em metanálise de estudos observacionais.",
+    "reference_range": "Metanálise de 16 estudos, 2.807 pacientes: sensibilidade do ETT 61% (IC95% 45-75%), especificidade 94% (IC95% 85-98%) para detecção de vegetação, tendo o ETE como referência.",
+    "indications": "Primeira linha de imagem em qualquer suspeita de endocardite infecciosa — decide a necessidade de complementar com ETE.",
+    "interpretation": "Especificidade alta (94%) e sensibilidade moderada (61%) significam que um ETT positivo é bastante confiável, mas um ETT negativo NÃO exclui endocardite com segurança na maioria dos cenários — a fonte é explícita que só em paciente sem prótese valvar e com boa janela acústica um ETT negativo reduz substancialmente a probabilidade pós-teste; na maioria dos outros achados a confirmação por ETE é necessária.",
+    "limitations": "Metanálise de estudos observacionais heterogêneos; desempenho depende da qualidade da janela acústica e da geração do equipamento usado (\"harmônico\" especificamente, tecnologia mais recente que a fundamental); não substitui julgamento clínico quando a suspeita pré-teste é alta apesar de ETT negativo.",
+    "source_refs": [
+      "Bai AD, Steinberg M, Showler A, et al. Diagnostic Accuracy of Transthoracic Echocardiography for Infective Endocarditis Findings Using Transesophageal Echocardiography as the Reference Standard: A Meta-Analysis. J Am Soc Echocardiogr. 2017;30(7):639-646.e8. DOI: 10.1016/j.echo.2017.03.007. PMID: 28483353."
+    ],
+    "tags": [
+      "ecocardiograma transtoracico",
+      "ecocardiograma transesofagico",
+      "acuracia diagnostica",
+      "endocardite"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ergometria-na-estenose-aortica-assintomatica-grave",
+    "name": "Ergometria (teste de esforço) na estenose aórtica assintomática grave",
+    "category": "metodo_grafico",
+    "theme": "Valvopatias",
+    "what_it_measures": "Resposta clínica (sintomas limitantes), comportamento da pressão arterial e do segmento ST ao esforço físico, em paciente com estenose aórtica GRAVE clinicamente assintomática — usado para desmascarar sintomas subclínicos.",
+    "reference_range": "Valor preditivo positivo de sintomas induzidos por esforço para desenvolvimento de sintomas espontâneos em 12 meses: 57% na população geral, 79% em pacientes <70 anos. Valor preditivo negativo: 87% geral, 86% no subgrupo <70 anos. Em coorte independente, teste positivo associou-se a HR 7,43 para desfecho combinado (análise multivariada, p=0,0001).",
+    "indications": "Estratificação de risco em paciente com estenose aórtica GRAVE (critério ecocardiográfico já preenchido) que se declara assintomático, antes de decidir entre conduta expectante e intervenção precoce. Contraindicado em paciente já sintomático — não é para desencadear sintoma que o paciente relata não ter, é para confirmar se o relato de ausência de sintoma é confiável.",
+    "interpretation": "Sintomas limitantes ao esforço foram o único preditor independente de desfecho em 12 meses — alteração de pressão arterial e infradesnivelamento de ST isolados NÃO melhoraram a acurácia preditiva nesta coorte. Em pacientes com área valvar muito reduzida (≤0,6 cm²) e teste positivo, houve casos de morte súbita na coorte de referência — sinal de que a combinação de área crítica e teste positivo identifica o subgrupo de maior risco imediato.",
+    "limitations": "Deve ser realizado sob supervisão médica direta, com equipe preparada para intercorrência — a coorte de referência teve casos de tontura durante o teste, com recuperação espontânea; teste de esforço formalmente contraindicado em paciente já sintomático.",
+    "source_refs": [
+      "Das P, Rimington H, Chambers J. Exercise testing to stratify risk in aortic stenosis. Eur Heart J. 2005;26(13):1309-1313. DOI: 10.1093/eurheartj/ehi250. PMID: 15820999.",
+      "Amato MC, Moffa PJ, Werner KE, Ramires JA. Treatment decision in asymptomatic aortic valve stenosis: role of exercise testing. Heart. 2001;86(4):381-386. DOI: 10.1136/heart.86.4.381. PMID: 11559673. PMCID: PMC1729928 — dado de mortalidade súbita e hazard ratio."
+    ],
+    "tags": [
+      "ergometria",
+      "teste de esforco",
+      "estenose aortica assintomatica",
+      "estratificacao de risco"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "bnp-na-regurgitacao-mitral-assintomatica-grave",
+    "name": "BNP como gatilho de indicação cirúrgica na regurgitação mitral assintomática grave",
+    "category": "laboratorial",
+    "theme": "Valvopatias",
+    "what_it_measures": "Peptídeo natriurético tipo B, dosado em paciente com regurgitação mitral orgânica GRAVE, clinicamente assintomático e com fração de ejeção preservada (>60%) — usado para identificar subgrupo de maior risco antes do aparecimento de critério clássico de indicação cirúrgica.",
+    "reference_range": "Corte de BNP ≥105 pg/mL discrimina subgrupo de maior risco, validado em duas coortes independentes (derivação e validação).",
+    "indications": "Estratificação de risco em paciente com regurgitação mitral orgânica grave, assintomático, com FEVE preservada (>60%) — cenário em que os critérios clássicos de indicação cirúrgica (sintoma, disfunção de VE, FA nova, hipertensão pulmonar) ainda não estão presentes.",
+    "interpretation": "Desfecho combinado (sintomas de insuficiência cardíaca, disfunção de VE ou morte) ocorreu em 76% dos pacientes com BNP ≥105 pg/mL vs. 5,4% dos com BNP abaixo do corte, na coorte de derivação (66% vs. 4,0% na coorte de validação) — BNP foi o preditor independente mais forte em análise multivariada nas duas coortes.",
+    "limitations": "É BNP, não NT-proBNP — o corte de 105 pg/mL não deve ser transposto para NT-proBNP sem fonte que declare a equivalência; validado especificamente em regurgitação mitral ORGÂNICA (degenerativa), não necessariamente aplicável à regurgitação mitral funcional/secundária.",
+    "source_refs": [
+      "Pizarro R, Bazzino OO, Oberti PF, Falconi M, Achilli F, Arias A, Krauss JG, Cagide AM. Prospective validation of the prognostic usefulness of brain natriuretic peptide in asymptomatic patients with chronic severe mitral regurgitation. J Am Coll Cardiol. 2009;54(12):1099-1106. DOI: 10.1016/j.jacc.2009.06.013. PMID: 19744620."
+    ],
+    "tags": [
+      "bnp",
+      "regurgitacao mitral assintomatica",
+      "gatilho cirurgico",
+      "estratificacao de risco"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "oximetria-de-pulso-no-rastreio-neonatal-de-cardiopatia-congenita-critica",
+    "name": "Oximetria de pulso (saturação pré/pós-ductal) no rastreio neonatal de cardiopatia congênita crítica",
+    "category": "metodo_grafico",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Saturação periférica de oxigênio medida em membro superior direito (pré-ductal) e num membro inferior (pós-ductal) do recém-nascido, para rastreio de cardiopatia congênita crítica dependente de canal arterial antes da alta da maternidade.",
+    "reference_range": "VERIFICAÇÃO HUMANA NECESSÁRIA para o algoritmo numérico exato de aprovação/reteste/falha (a versão amplamente citada na prática — saturação ≥95% em qualquer membro com diferença ≤3% entre mão direita e pé = passa; <90% = falha; 90-94% ou diferença >3% = repetir — não foi confirmada no abstract das fontes usadas nesta sessão).",
+    "indications": "Rastreio universal de recém-nascidos aparentemente saudáveis antes da alta da maternidade, complementar ao exame físico, para identificar cardiopatia congênita crítica ainda não diagnosticada (especialmente lesões ducto-dependentes).",
+    "interpretation": "Estudo sueco em 39.821 recém-nascidos: sensibilidade combinada de exame físico + oximetria de 82,8% (IC95% 64,2-95,2%), detectando 100% dos casos com circulação ducto-dependente. Taxa de falso-positivo da oximetria de apenas 0,17%, contra 1,90% do exame físico isolado (p<0,0001). Risco de alta hospitalar sem diagnóstico foi de 8% no grupo rastreado com oximetria vs. 28% nos demais (RR 3,36; p=0,0025), com zero óbitos por circulação ducto-dependente não diagnosticada no grupo rastreado (vs. 5 óbitos nos demais).",
+    "limitations": "A oximetria detecta mal lesões sem hipoxemia significativa de repouso — no estudo sueco, os 5 casos perdidos pelo rastreio eram todos de obstrução de arco aórtico (ex.: coarctação isolada), que pode ter saturação normal antes do fechamento do canal arterial.",
+    "source_refs": [
+      "Mahle WT, Newburger JW, Matherne GP, et al. Role of pulse oximetry in examining newborns for congenital heart disease: a scientific statement from the American Heart Association and American Academy of Pediatrics. Circulation. 2009;120(5):447-458. DOI: 10.1161/CIRCULATIONAHA.109.192576. PMID: 19581492.",
+      "de-Wahl Granelli A, Wennergren M, Sandberg K, et al. Impact of pulse oximetry screening on the detection of duct dependent congenital heart disease: a Swedish prospective screening study in 39,821 newborns. BMJ. 2009;338:a3037. DOI: 10.1136/bmj.a3037. PMID: 19131383. PMCID: PMC2627280."
+    ],
+    "tags": [
+      "oximetria de pulso",
+      "rastreio neonatal",
+      "cardiopatia congenita critica",
+      "saturacao pre-pos-ductal"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "rm-cardiaca-com-quantificacao-de-shunt-por-contraste-de-fase",
+    "name": "RM cardíaca com quantificação de shunt (Qp:Qs) por contraste de fase",
+    "category": "imagem",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Fluxo sanguíneo na artéria pulmonar (Qp) e na aorta ascendente (Qs) medido por ressonância magnética com contraste de fase (phase-contrast MRI), calculando a razão Qp/Qs de forma não invasiva, sem cateterismo.",
+    "reference_range": "Razão Qp/Qs média de 1,69±0,45 (variação 1,27 a 2,79) em coorte pediátrica com shunt esquerda-direita, medida pelo protocolo padrão de RM com contraste de fase.",
+    "indications": "Quantificação não invasiva de shunt esquerda-direita quando a janela ecocardiográfica é inadequada, ou quando o mapeamento anatômico simultâneo (ex.: drenagem anômala parcial de veias pulmonares) é útil junto com a quantificação de fluxo — alternativa ao cálculo de Qp:Qs por cateterismo (já cadastrado nesta base como `cateterismo-cardiaco-direito-com-calculo-de-qpqs`).",
+    "interpretation": "Técnica acelerada com SENSE (fator 3) produziu diferenças desprezíveis em relação ao protocolo padrão (±3%, limites de concordância de -7% a -18% no limite inferior e +3% a +24% no superior), com tempo de aquisição menor que 60 segundos — viabiliza o exame em criança sem sedação prolongada.",
+    "limitations": "Este é um estudo de validação técnica (comparação de protocolos de RM entre si), não uma comparação direta RM vs. cateterismo/método de Fick com número de acurácia diagnóstica publicado — não afirmar concordância RM×cateterismo com número específico sem fonte que faça essa comparação direta.",
+    "source_refs": [
+      "Beerbaum P, Körperich H, Gieseke J, Barth P, Peuster M, Meyer H. Rapid left-to-right shunt quantification in children by phase-contrast magnetic resonance imaging combined with sensitivity encoding (SENSE). Circulation. 2003;108(11):1355-1361. DOI: 10.1161/01.CIR.0000087603.97036.C2. PMID: 12939211."
+    ],
+    "tags": [
+      "ressonancia magnetica cardiaca",
+      "quantificacao de shunt",
+      "qp:qs",
+      "contraste de fase"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "teste-rapido-de-antigeno-estreptococico-vs-cultura-de-orofaringe",
+    "name": "Teste rápido de antígeno estreptocócico (RADT) vs. cultura de orofaringe no diagnóstico de faringite estreptocócica",
+    "category": "laboratorial",
+    "theme": "Febre reumática",
+    "what_it_measures": "Detecção de Streptococcus pyogenes (grupo A) na orofaringe, por teste rápido de antígeno (RADT, resultado em minutos) comparado à cultura em ágar-sangue (padrão-ouro, resultado em 24-48h) — a etapa diagnóstica que precede e justifica o tratamento antibiótico da faringite, prevenindo o primeiro episódio de febre reumática aguda.",
+    "reference_range": "RADT: sensibilidade de aproximadamente 70-90% comparado à cultura; especificidade de aproximadamente 95% (resultados falso-positivos são incomuns).",
+    "indications": "Investigação de faringite aguda com suspeita clínica de etiologia estreptocócica (escore de Centor/McIsaac elevado), para decidir tratamento antibiótico e prevenir febre reumática aguda em populações de risco.",
+    "interpretation": "Em CRIANÇAS E ADOLESCENTES: RADT negativo deve ser CONFIRMADO por cultura de orofaringe — a sensibilidade de 70-90% do RADT, combinada à prevalência de faringite estreptocócica de 20-30% nessa faixa etária, torna o falso-negativo clinicamente relevante o bastante para justificar a confirmação. Em ADULTOS: a confirmação por cultura após RADT negativo NÃO é necessária rotineiramente — a prevalência de faringite por S. pyogenes é menor (5-15%) e o risco de febre reumática subsequente é excepcionalmente baixo nessa população; o médico pode optar por confirmar se quiser sensibilidade diagnóstica máxima.",
+    "limitations": "RADT positivo geralmente dispensa cultura confirmatória (alta especificidade); a diferença de conduta por faixa etária reflete diferença de prevalência da doença e de risco de complicação, não diferença de desempenho técnico do teste entre adultos e crianças.",
+    "source_refs": [
+      "Shulman ST, Bisno AL, Clegg HW, et al.; Infectious Diseases Society of America. Clinical practice guideline for the diagnosis and management of group A streptococcal pharyngitis: 2012 update by the Infectious Diseases Society of America. Clin Infect Dis. 2012;55(10):e86-e102. DOI: 10.1093/cid/cis629. PMID: 22965026. PMCID: PMC7108032."
+    ],
+    "tags": [
+      "teste rapido de antigeno estreptococico",
+      "radt",
+      "cultura de orofaringe",
+      "faringite estreptococica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "itb-pos-exercicio-em-esteira-na-claudicacao-intermitente",
+    "name": "Índice tornozelo-braço (ITB) pós-exercício em esteira na claudicação intermitente",
+    "category": "metodo_grafico",
+    "theme": "Aorta e doença arterial periférica",
+    "what_it_measures": "Variação do índice tornozelo-braço medida logo após teste de esforço em esteira, em paciente com sintomas de claudicação e ITB de repouso normal ou limítrofe — desmascara doença arterial periférica hemodinamicamente significativa que o ITB de repouso não capturou.",
+    "reference_range": "Critério de positividade (AHA scientific statement): queda do ITB pós-exercício maior que 20% EM RELAÇÃO AO REPOUSO, OU queda da pressão de tornozelo pós-exercício maior que 30 mmHg em relação ao repouso — qualquer um dos dois critérios confirma DAP hemodinamicamente significativa.",
+    "indications": "Indicação Classe I (Nível B-NR) segundo a diretriz AHA/ACC 2016 de DAP de membro inferior: paciente com sintomas em perna não atribuíveis a causa articular e ITB de repouso normal ou limítrofe (>0,90 e ≤1,40). Também Classe IIa (Nível B-NR) em paciente com DAP já confirmada e ITB de repouso anormal (≤0,90), para avaliar objetivamente o status funcional.",
+    "interpretation": "Um ITB de repouso normal NÃO exclui DAP sintomática — a claudicação clássica só reduz o fluxo de forma perceptível durante a demanda metabólica aumentada do esforço, daí a necessidade do teste pós-exercício quando a suspeita clínica é alta apesar do ITB de repouso normal.",
+    "limitations": "O protocolo exato de velocidade/inclinação da esteira varia entre serviços (a nomenclatura popular \"protocolo de Gardner\" não foi confirmada nas fontes primárias consultadas nesta sessão — não afirmar parâmetros específicos sob esse nome sem nova verificação); exige capacidade de deambulação em esteira, o que nem todo paciente sintomático consegue realizar.",
+    "source_refs": [
+      "Aboyans V, Criqui MH, Abraham P, et al. Measurement and interpretation of the ankle-brachial index: a scientific statement from the American Heart Association. Circulation. 2012;126(24):2890-2909. PMID: 23159553 — fonte do critério numérico (>20% ITB ou >30 mmHg pressão de tornozelo), reproduzido e citado literalmente em: Mahe G, Pollak AW, Liedl DA, et al. Discordant Diagnosis of Lower Extremity Peripheral Artery Disease Using American Heart Association Postexercise Guidelines. Medicine (Baltimore). 2015;94(31):e1277. DOI: 10.1097/MD.0000000000001277. PMID: 26252297. PMCID: PMC4616614.",
+      "Gerhard-Herman MD, Gornik HL, Barrett C, et al. 2016 AHA/ACC Guideline on the Management of Patients With Lower Extremity Peripheral Artery Disease. Circulation. 2017;135(12):e686-e725. PMID: 27840332. PMCID: PMC5479414 — classe/nível de indicação."
+    ],
+    "tags": [
+      "itb pos-exercicio",
+      "esteira",
+      "claudicacao intermitente",
+      "doenca arterial periferica"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
