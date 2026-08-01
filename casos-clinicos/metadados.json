@@ -913,5 +913,217 @@
       "Costa F, van Klaveren D, James S, et al; PRECISE-DAPT Study Investigators. Derivation and validation of the predicting bleeding complications in patients undergoing stent implantation and subsequent dual antiplatelet therapy (PRECISE-DAPT) score. Lancet. 2017;389(10073):1025-1034. DOI: 10.1016/S0140-6736(17)30397-5. PMID: 28290994"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "fa-anticoagulada-procedimento-eletivo-ponte-com-heparina-ou-nao",
+    "titulo": "FA anticoagulada e cirurgia eletiva: fazer ponte com heparina?",
+    "tema": "Fibrilação atrial",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 76 anos, com fibrilação atrial permanente, CHA₂DS₂-VASc de 4, em uso crônico de varfarina com bom controle de INR, vai ser submetido a uma herniorrafia inguinal eletiva. A equipe cirúrgica pede orientação sobre como manejar a anticoagulação no perioperatório. Um dos residentes sugere suspender a varfarina 5 dias antes e fazer ponte com dalteparina até próximo do procedimento, retomando a heparina depois, \"para não deixar o paciente descoberto\". O paciente não tem valva mecânica, AVC recente nem estenose mitral reumática.",
+    "pergunta": "Qual a conduta mais adequada quanto à ponte com heparina neste paciente?",
+    "opcoes": [
+      "Fazer a ponte com dalteparina, como sugerido, para minimizar o risco tromboembólico durante a suspensão da varfarina",
+      "Não fazer ponte com heparina — apenas suspender a varfarina e reiniciá-la após o procedimento, sem heparina no intervalo",
+      "Substituir a varfarina por um DOAC apenas para o período perioperatório, evitando heparina",
+      "Manter a varfarina em dose plena durante todo o procedimento, sem qualquer suspensão"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O ensaio BRIDGE (randomizado, duplo-cego, controlado por placebo, 1.884 pacientes com FA) mostrou que dispensar a ponte com heparina foi não inferior para tromboembolismo arterial (0,4% sem ponte vs. 0,3% com ponte; p=0,01 para não inferioridade) e superior em segurança, reduzindo o sangramento maior (1,3% vs. 3,2%; RR 0,41; IC95% 0,20-0,78; p=0,005). Como o paciente não pertence à população de risco tromboembólico muito alto excluída do ensaio (sem valva mecânica, AVC recente ou estenose mitral reumática), a conduta sustentada pela evidência é suspender a varfarina antes do procedimento e reiniciá-la depois, sem ponte de heparina — que triplicaria o risco de sangramento maior sem ganho de proteção, já que o evento tromboembólico perioperatório nessa população é raro (0,3-0,4%).",
+    "source_refs": [
+      "Douketis JD, Spyropoulos AC, Kaatz S, Becker RC, Caprini JA, et al; BRIDGE Investigators. Perioperative Bridging Anticoagulation in Patients with Atrial Fibrillation. N Engl J Med. 2015;373(9):823-833. DOI: 10.1056/NEJMoa1501035. PMID: 26095867 — NCT00786474, randomizado, duplo-cego, controlado por placebo, 1.884 pacientes. Financiamento: National Heart, Lung, and Blood Institute (NIH)"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sglt2-durante-internacao-por-ic-aguda-esperar-a-alta-ou-iniciar-ja",
+    "titulo": "IC aguda internada: esperar a alta para iniciar o iSGLT2?",
+    "tema": "Insuficiência cardíaca",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 71 anos, não diabética, internada há 3 dias por descompensação de insuficiência cardíaca com fração de ejeção de 35%. Após diurese intravenosa, encontra-se clinicamente estável, euvolêmica, PA 116/72mmHg, TFGe 58mL/min/1,73m², sem hipotensão sintomática. A equipe assistente discute iniciar um inibidor de SGLT2 ainda durante a internação, mas um dos médicos prefere aguardar a alta hospitalar, por receio de instabilidade hemodinâmica precoce.",
+    "pergunta": "Qual conduta é mais alinhada à evidência disponível quanto ao momento de iniciar o inibidor de SGLT2?",
+    "opcoes": [
+      "Adiar o início do inibidor de SGLT2 até a alta hospitalar, para evitar risco de instabilidade na fase aguda",
+      "Iniciar o inibidor de SGLT2 ainda durante a internação, assim que a paciente estiver clinicamente estável, sem necessidade de aguardar a alta",
+      "Não iniciar inibidor de SGLT2 neste episódio, pois a paciente não é diabética",
+      "Reservar o inibidor de SGLT2 apenas para quem tem fração de ejeção reduzida grave (< 25%)"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O ensaio EMPULSE (duplo-cego, multinacional, 530 pacientes com IC aguda, independente de diabetes ou fração de ejeção) randomizou pacientes ainda internados, com mediana de 3 dias após a admissão, para empagliflozina ou placebo. O grupo empagliflozina teve mais benefício clínico pelo desfecho hierárquico de razão de vitórias (win ratio 1,36; IC95% 1,09-1,68; p=0,0054), com eventos adversos graves MENOS frequentes que no placebo (32,3% vs. 43,6%) — ou seja, tolerabilidade boa, e não motivo para adiar. O benefício foi consistente independente de diabetes e de fração de ejeção, o que descarta tanto a hipótese de reservar o fármaco para diabéticos quanto a de restringi-lo a FEVE muito reduzida. Não há, portanto, razão para esperar a alta hospitalar para iniciar essa classe em paciente já estável.",
+    "source_refs": [
+      "Voors AA, Angermann CE, Teerlink JR, et al. The SGLT2 inhibitor empagliflozin in patients hospitalized for acute heart failure: a multinational randomized trial. Nat Med. 2022;28(3):568-574. DOI: 10.1038/s41591-021-01659-1. PMID: 35228754"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "horario-do-anti-hipertensivo-a-noite-melhora-o-prognostico-cardiovascular",
+    "titulo": "Trocar o anti-hipertensivo para a noite melhora o prognóstico cardiovascular?",
+    "tema": "Hipertensão",
+    "nivel": "básico",
+    "enunciado": "Homem, 63 anos, hipertenso controlado em uso de losartana pela manhã, sem comorbidades relevantes, pergunta na consulta se deveria passar a tomar o anti-hipertensivo à noite, pois leu que isso \"protege mais o coração\", baseado em estudo anterior que sugeria vantagem da dose noturna sobre desfechos cardiovasculares. Ele não relata tontura, hipotensão postural nem problemas de adesão com o horário atual.",
+    "pergunta": "Com base na evidência mais robusta disponível, qual orientação é mais adequada?",
+    "opcoes": [
+      "Orientar a troca para a dose noturna, pois ela reduz significativamente eventos cardiovasculares maiores em relação à matinal",
+      "Explicar que grande ensaio randomizado não encontrou diferença em desfechos cardiovasculares maiores entre dose matinal e noturna, e que o paciente pode manter o horário que lhe for mais conveniente",
+      "Orientar a trocar para a dose noturna apenas se ele tiver diagnóstico confirmado de hipertensão noturna isolada por MAPA",
+      "Recomendar dividir a dose em duas tomadas, manhã e noite, para obter o benefício de ambos os horários"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O ensaio TIME (prospectivo, randomizado, pragmático, com desfecho adjudicado às cegas, 21.104 participantes, seguimento mediano de 5,2 anos) comparou tomar todos os anti-hipertensivos habituais pela manhã ou à noite. O desfecho primário composto (morte vascular, IAM não fatal ou AVC não fatal) não diferiu entre os grupos (3,4% noite vs. 3,7% manhã; HR 0,95; IC95% 0,83-1,10; p=0,53), sem sinal de segurança preocupante. Os próprios autores concluem que o paciente pode tomar a medicação no horário que for mais conveniente e que minimize efeitos indesejáveis — a decisão de horário passa a ser guiada por tolerabilidade e adesão, não por expectativa de proteção cardiovascular adicional, que o ensaio não confirmou.",
+    "source_refs": [
+      "Mackenzie IS, Rogers A, Poulter NR, Williams B, Brown MJ, Webb DJ, et al; TIME Study Group. Cardiovascular outcomes in adults with hypertension with evening versus morning dosing of usual antihypertensives in the UK (TIME study): a prospective, randomised, parallel-group, decentralised, open-label, blinded-endpoint clinical trial. Lancet. 2022;400(10361):1417-1425. DOI: 10.1016/S0140-6736(22)01786-X. PMID: 36240838. PMCID: PMC9631239 — EudraCT 2011-001968-21, ISRCTN18157641, 21.104 participantes"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "tev-associado-a-cancer-apos-6-meses-manter-dose-plena-ou-reduzir-o-doac",
+    "titulo": "TEV associado a câncer após 6 meses: manter dose plena ou reduzir o DOAC?",
+    "tema": "Tromboembolismo",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 64 anos, com neoplasia de mama metastática em tratamento oncológico ativo, teve trombose venosa profunda proximal há 7 meses e completou o período inicial de anticoagulação com apixabana 5mg 2x/dia, sem sangramento nem recorrência até o momento. Como o câncer permanece ativo, a equipe discute manter a anticoagulação por tempo indeterminado, mas há dúvida sobre manter a dose plena de apixabana ou reduzi-la, dado o risco de sangramento historicamente elevado nessa população.",
+    "pergunta": "Qual conduta a evidência mais recente sustenta para a fase estendida de anticoagulação neste caso?",
+    "opcoes": [
+      "Manter apixabana 5mg 2x/dia (dose plena) indefinidamente, pois é a única dose com eficácia comprovada em câncer ativo",
+      "Reduzir para apixabana 2,5mg 2x/dia na fase estendida, pois foi não inferior em eficácia e associou-se a menos sangramento clinicamente relevante que a dose plena",
+      "Suspender a anticoagulação, já que o paciente completou 6 meses sem evento e está sem sintomas",
+      "Trocar para varfarina em dose ajustada por INR, por ser mais previsível que o DOAC nessa fase"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O ensaio API-CAT (randomizado, duplo-cego, de não inferioridade, com adjudicação central cega, 1.766 pacientes com câncer ativo que já haviam completado pelo menos 6 meses de anticoagulação) comparou apixabana em dose reduzida (2,5mg 2x/dia) com dose plena (5,0mg 2x/dia) por 12 meses adicionais. A dose reduzida foi não inferior para TEV recorrente (2,1% vs. 2,8%; razão de sub-hazard ajustada 0,76; p=0,001 para não inferioridade) e SUPERIOR em segurança, com menos sangramento clinicamente relevante (12,1% vs. 15,6%; razão de sub-hazard ajustada 0,75; IC95% 0,58-0,97; p=0,03). É um dos raros casos em que não inferioridade na eficácia coexiste com superioridade formal na segurança, o que torna a dose reduzida a escolha preferível — não apenas aceitável — na fase estendida, mantendo o câncer ativo. Suspender a anticoagulação não foi testado (nenhum braço do ensaio parou o fármaco) e a varfarina não é a comparação feita pelo estudo.",
+    "source_refs": [
+      "Mahé I, Carrier M, Mayeur D, Chidiac J, Vicaut E, Falvo N, et al; API-CAT Investigators. Extended Reduced-Dose Apixaban for Cancer-Associated Venous Thromboembolism. N Engl J Med. 2025;392(14):1363-1373. DOI: 10.1056/NEJMoa2416112. PMID: 40162636 — NCT03692065, 1.766 pacientes. Financiamento: Bristol-Myers Squibb-Pfizer Alliance"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "finerenona-em-doenca-renal-cronica-diabetica-com-sraa-ja-otimizado",
+    "titulo": "Finerenona na doença renal crônica diabética: quando associar ao bloqueio do SRAA já otimizado",
+    "tema": "Diabetes e cardiologia",
+    "nivel": "avançado",
+    "enunciado": "Homem, 64 anos, diabetes tipo 2 há 15 anos, hipertenso. TFGe de 42mL/min/1,73m² (DRC estágio 3b) e relação albumina/creatinina urinária de 550mg/g (albuminúria grave). Está em uso de losartana na dose máxima tolerada há mais de 4 meses, com pressão arterial controlada (128/78mmHg) e potássio sérico de 4,6mEq/L. HbA1c de 7,1%, dentro da meta individualizada, sem outras comorbidades cardiovasculares estabelecidas.",
+    "pergunta": "Qual a conduta mais apropriada para reduzir o risco de progressão renal e de eventos cardiovasculares neste paciente?",
+    "opcoes": [
+      "Associar finerenona ao bloqueio do SRAA já otimizado",
+      "Trocar a losartana por um IECA, mantendo bloqueio simples do SRAA",
+      "Associar um IECA à losartana, para bloqueio duplo do SRAA e maior redução da albuminúria",
+      "Não iniciar nenhum fármaco adicional, já que a pressão arterial e a glicemia já estão controladas"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O perfil deste paciente — DRC estágio 3-4 com albuminúria moderada a grave em diabetes tipo 2, já em bloqueio otimizado do SRAA — corresponde à população do FIDELIO-DKD (Bakris GL et al., NEJM 2020;383(23):2219-2229, PMID 33264825), que recrutou 5.734 pacientes nessas condições. A adição de finerenona reduziu o desfecho renal primário (falência renal, queda ≥40% da TFGe ou morte renal) de 21,1% para 17,8% (HR 0,82; IC95% 0,73-0,93; p=0,001) e o desfecho cardiovascular secundário de 14,8% para 13,0% (HR 0,86; IC95% 0,75-0,99; p=0,03) — benefício complementado pelo FIGARO-DKD, com desenho pareado no mesmo programa. Trocar o BRA por um IECA não muda a classe de bloqueio nem tem esse respaldo; associar um segundo bloqueador do SRAA para bloqueio duplo não tem benefício adicional comprovado e está associado a mais eventos adversos; e manter apenas o esquema atual, mesmo com PA e HbA1c controladas, deixa sem tratamento o risco residual renal e cardiovascular sinalizado pela albuminúria grave.",
+    "source_refs": [
+      "Bakris GL, Agarwal R, Anker SD, et al; FIDELIO-DKD Investigators. Effect of Finerenone on Chronic Kidney Disease Outcomes in Type 2 Diabetes. N Engl J Med. 2020;383(23):2219-2229. DOI: 10.1056/NEJMoa2025845. PMID: 33264825",
+      "Pitt B, Filippatos G, Agarwal R, et al; FIGARO-DKD Investigators. Cardiovascular Events with Finerenone in Kidney Disease and Type 2 Diabetes. N Engl J Med. 2021;385(24):2252-2263. DOI: 10.1056/NEJMoa2110956. PMID: 34449181"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hipertrigliceridemia-persistente-sob-estatina-icosapente-etilico-vs-omega-3-combinado",
+    "titulo": "Hipertrigliceridemia persistente sob estatina: icosapente etílico ou ômega-3 combinado?",
+    "tema": "Prevenção e lipídios",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 59 anos, com infarto do miocárdio prévio há 2 anos, em uso de atorvastatina 80mg/dia. LDL-colesterol atual de 68mg/dL, dentro da meta. Triglicerídeos de jejum persistentemente elevados, 260mg/dL, confirmados em duas dosagens consecutivas. HDL-colesterol de 34mg/dL. Ele pergunta se deve associar algum suplemento de óleo de peixe para reduzir os triglicerídeos e o risco cardiovascular residual.",
+    "pergunta": "Qual a conduta tem melhor respaldo de redução de eventos cardiovasculares para este paciente?",
+    "opcoes": [
+      "Associar icosapente etílico 2g de 12/12h à estatina",
+      "Associar suplemento de óleo de peixe de venda livre, em dose equivalente de EPA+DHA",
+      "Associar formulação combinada de EPA+DHA em alta dose, como testada em ensaios de desfecho cardiovascular",
+      "Aumentar a dose ou a potência da estatina, já que o LDL ainda poderia ser reduzido mais"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "Este paciente reproduz o perfil do REDUCE-IT (Bhatt DL et al., NEJM 2019;380(1):11-22, PMID 30415628): doença cardiovascular estabelecida, em estatina, com triglicerídeos de jejum na faixa 135-499mg/dL e LDL-C entre 41-100mg/dL. Nos 8.179 pacientes desse perfil, a adição de icosapente etílico (EPA isolado em alta dose e alta pureza, 2g 12/12h) reduziu o desfecho primário composto de 22,0% para 17,2% (HR 0,75; IC95% 0,68-0,83; p<0,001), o que sustenta a recomendação Classe IIa, nível B da atualização ESC/EAS 2025 de dislipidemias. Uma formulação combinando EPA+DHA em alta dose foi testada no STRENGTH em população de perfil semelhante (13.078 pacientes) e não mostrou benefício algum (12,0% vs. 12,2%; HR 0,99; p=0,84), interrompido por futilidade — ou seja, 'ômega-3' não é uma classe única de benefício, e a formulação combinada não é intercambiável com o icosapente etílico. Suplemento de venda livre não tem a dose nem a pureza testadas no REDUCE-IT. E como o LDL já está na meta, o ganho de aumentar a estatina para o risco residual ligado aos triglicerídeos é limitado — o alvo aqui é a hipertrigliceridemia, não o LDL.",
+    "source_refs": [
+      "Bhatt DL, Steg PG, Miller M, et al; REDUCE-IT Investigators. Cardiovascular Risk Reduction with Icosapent Ethyl for Hypertriglyceridemia. N Engl J Med. 2019;380(1):11-22. DOI: 10.1056/NEJMoa1812792. PMID: 30415628",
+      "Nicholls SJ, Lincoff AM, Garcia M, et al. Effect of High-Dose Omega-3 Fatty Acids vs Corn Oil on Major Adverse Cardiovascular Events in Patients at High Cardiovascular Risk: The STRENGTH Randomized Clinical Trial. JAMA. 2020;324(22):2268-2280. DOI: 10.1001/jama.2020.22258. PMID: 33190147",
+      "2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias. Eur Heart J. 2025;46(42):4359-4378. DOI: 10.1093/eurheartj/ehaf190 — recomendação sobre icosapente etílico, Classe IIa, nível B"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "estenose-aortica-grave-sintomatica-tavi-vs-savr-corte-etario-atualizado",
+    "titulo": "Estenose aórtica grave sintomática aos 72 anos: TAVI ou cirurgia, pelo corte etário atual?",
+    "tema": "Valvopatias",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 72 anos, estenose aórtica grave sintomática (dispneia aos médios esforços), valva aórtica tricúspide calcificada, área valvar de 0,7cm² e gradiente médio de 48mmHg. Sem comorbidades relevantes, STS Score (risco cirúrgico estimado) baixo, boa capacidade funcional. Avaliada pelo Heart Team, com anatomia vascular ilíaco-femoral adequada para acesso transfemoral.",
+    "pergunta": "Segundo a diretriz atual (ESC/EACTS 2025), qual a conduta preferencial de intervenção?",
+    "opcoes": [
+      "TAVI transfemoral, independentemente do risco cirúrgico estimado",
+      "SAVR (cirurgia), já que ela tem menos de 75 anos e baixo risco cirúrgico",
+      "Aguardar piora funcional adicional antes de indicar qualquer intervenção",
+      "TAVI só estaria indicada se o risco cirúrgico fosse alto ou proibitivo"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "A diretriz ESC/EACTS 2025 reduziu o corte etário de indicação preferencial de TAVI de 75 para 70 anos em valva aórtica tricúspide, independentemente do risco cirúrgico estimado — TAVI em ≥70 anos com valva tricúspide é Classe I, Nível A, enquanto SAVR permanece padrão apenas em <70 anos com baixo risco cirúrgico (Classe I, Nível B). Com 72 anos e valva tricúspide, esta paciente já está acima do novo corte: TAVI transfemoral é a conduta preferencial pela diretriz vigente, mesmo tendo baixo risco cirúrgico — que era justamente o critério que, na diretriz anterior (ESC/EACTS 2021, corte de 75 anos), a levaria à cirurgia. A mudança foi sustentada por ensaios em pacientes de baixo risco cirúrgico (DEDICATE, EVOLUT Low Risk, PARTNER 3, NOTION), o que também derruba a ideia de que TAVI só se indica em risco cirúrgico alto ou proibitivo. Aguardar não é apropriado: ela já é sintomática grave, o que por si só indica intervenção sem demora.",
+    "source_refs": [
+      "2025 ESC/EACTS Guidelines for the management of valvular heart disease · European Heart Journal · 2025 · https://www.escardio.org",
+      "ESC 2025 – Novas diretrizes para manejo de doença cardíaca valvar · TribeMD · 2025 · https://tribemd.com/br/conteudos/esc%C2%AE-2025-%E2%80%93-novas-diretrizes-para-manejo-de-doen%C3%A7a-card%C3%ADaca-valvar/",
+      "ESC 2025: Principais atualizações da nova diretriz de valvopatias · Afya Cardiologia · 2025 · https://portal.afya.com.br/cardiologia/esc-2025-principais-atualizacoes-da-nova-diretriz-de-valvopatias",
+      "Valvopatias: Diretriz da ESC 2025 · Guia TdC · 2025 · https://www.tadeclinicagem.com.br/guia/508/valvopatias-diretriz-da-esc-2025/",
+      "ESC 2025: Guideline revisions include new TAVI age threshold · Cardiovascular News · 2025 · https://cardiovascularnews.com/esc-2025-guideline-revisions-include-new-tavi-age-threshold/ — classes de recomendação do corte etário conferidas de forma independente em 30/07/2026."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "attr-cm-nyha-ii-adiar-tafamidis-ate-piora-sintomatica",
+    "titulo": "Amiloidose ATTR-CM em NYHA II: adiar o tafamidis até a piora dos sintomas?",
+    "tema": "Cardiomiopatias",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 74 anos, encaminhado após investigação de espessamento parietal do ventrículo esquerdo com padrão de \"strain apical poupado\" no ecocardiograma. Cintilografia com pirofosfato de tecnécio positiva (Grau 3) e eletroforese de proteínas sem componente monoclonal, fechando o diagnóstico de cardiomiopatia amiloide por transtirretina (ATTR-CM), tipo selvagem.\n\nHoje está em **NYHA classe II**: refere leve limitação aos esforços moderados (subir dois lances de escada), sem dispneia em repouso, sem edema. Faz caminhada diária sem parar. Função renal e hepática normais, sem outras contraindicações medicamentosas.\n\nO plano terapêutico inclui otimização de diuréticos, mas o convênio autoriza tafamidis, de alto custo. Um colega sugere \"guardar\" o tafamidis e começar apenas quando o paciente evoluir para classe funcional III, para não gastar o benefício antes da hora.",
+    "pergunta": "Qual a conduta quanto ao início do tafamidis neste paciente com ATTR-CM em NYHA II?",
+    "opcoes": [
+      "Adiar o início do tafamidis até a progressão para NYHA III, reservando a terapia para quando os sintomas forem mais limitantes",
+      "Iniciar o tafamidis agora: o benefício de sobrevida é maior em estágios funcionais menos avançados, e quem começa mais tarde não recupera a sobrevida de quem começou cedo",
+      "Não iniciar tafamidis, pois o ATTR-ACT não demonstrou redução de mortalidade com o fármaco",
+      "Iniciar tafamidis apenas se for confirmada variante hereditária (ATTRm), já que o benefício não se estende ao tipo selvagem"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O ATTR-ACT mostrou redução de 30% na mortalidade por todas as causas com tafamidis (HR 0,70; IC95% 0,51-0,96) e de 32% na hospitalização cardiovascular, com benefício presente tanto em ATTRm quanto em ATTRwt. Mais importante para esta decisão: a extensão de longo prazo do estudo (Elliott et al., Circ Heart Fail 2022) comparou quem recebeu tafamidis contínuo desde o início com quem só começou depois do período de placebo — e quem começou tardiamente NUNCA alcançou a sobrevida de quem começou cedo (HR 0,59; IC95% 0,44-0,79; p<0,001 no geral). Em NYHA I-II o benefício de mortalidade é mais consistente (HR 0,56; IC95% 0,38-0,82; p=0,003); em NYHA III ele perde significância (HR 0,65; IC95% 0,41-1,01; p=0,06). Ou seja, esperar a progressão para classe III não \"guarda\" o benefício — arrisca perdê-lo, porque é justamente nos estágios menos avançados que a terapia funciona melhor e o atraso não é recuperável.",
+    "source_refs": [
+      "Maurer MS, Schwartz JH, Gundapaneni B, et al. Tafamidis treatment for patients with transthyretin amyloid cardiomyopathy (ATTR-ACT). N Engl J Med. 2018;379(11):1007-1016. DOI: 10.1056/NEJMoa1805689. PMID: 30145929",
+      "Elliott P, Drachman BM, Gottlieb SS, et al. Long-Term Survival With Tafamidis in Patients With Transthyretin Amyloid Cardiomyopathy. Circ Heart Fail. 2022;15(1):e008193. DOI: 10.1161/CIRCHEARTFAILURE.120.008193. PMID: 34923848 — fonte da seção de extensão de longo prazo"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "endocardite-vegetacao-10mm-com-embolia-previa-timing-cirurgico",
+    "titulo": "Endocardite mitral com vegetação de 12 mm e embolia esplênica prévia: qual o timing cirúrgico?",
+    "tema": "Endocardite",
+    "nivel": "avançado",
+    "enunciado": "Homem, 45 anos, usuário de drogas injetáveis, internado há 5 dias com endocardite infecciosa da valva mitral nativa por *Staphylococcus aureus* sensível à oxacilina, em uso de oxacilina intravenosa em dose plena desde a admissão.\n\nHemoculturas de controle no 4º dia já negativas, sem febre há 48 horas, PCR em queda. Ecocardiograma transesofágico mostra **vegetação móvel de 12 mm** em folheto anterior da mitral, com regurgitação mitral leve e função ventricular preservada, sem sinais de insuficiência cardíaca.\n\nNa admissão, tomografia de abdome por dor em hipocôndrio esquerdo revelou **infarto esplênico compatível com embolia séptica**, já assintomático. A equipe discute se a infecção controlada e a ausência de disfunção valvar grave dispensam a cirurgia, ou se a combinação de achados já indica intervenção.",
+    "pergunta": "Qual o timing cirúrgico indicado neste paciente?",
+    "opcoes": [
+      "Cirurgia emergencial, dentro de 24 horas, pela persistência de bacteremia não controlada",
+      "Cirurgia urgente, em 3 a 5 dias, pela vegetação ≥10 mm associada a episódio embólico prévio — indicação de classe I com nível de evidência B na ESC 2023",
+      "Não operar: vegetação isolada sem disfunção valvar grave e sem repercussão hemodinâmica não constitui indicação cirúrgica",
+      "Cirurgia não urgente, adiada para o fim da internação, para primeiro completar o curso antibiótico total"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A ESC 2023 trouxe como novidade de classe I a indicação de cirurgia urgente a partir de vegetação ≥10 mm associada a outra indicação cirúrgica — e a evidência é mais forte (nível B, contra nível C das demais situações) justamente quando há episódio embólico prévio, como o infarto esplênico documentado neste caso. A classificação de timing da diretriz define urgente como 3 a 5 dias, diferente de emergencial (24 horas, reservado para infecção não controlada ou instabilidade hemodinâmica grave) e de não urgente (mesma internação, sem pressa). Como a infecção já está controlada (hemoculturas negativas, afebril), a indicação aqui não é a de infecção não controlada, mas a de prevenção de nova embolização diante de vegetação grande já complicada por embolia — o que aponta para cirurgia urgente, não emergencial nem postergada.",
+    "source_refs": [
+      "2023 ESC Guidelines for the management of endocarditis · European Heart Journal · 2023 · https://academic.oup.com/eurheartj/article/44/39/3948/7243107",
+      "Surgical Implications of the 2023 ESC Endocarditis Guidelines Endorsed by EACTS · CTSNet · https://www.ctsnet.org/jans/surgical-implications-2023-esc-endocarditis-guidelines-endorsed-eacts-bridging-guidelines-and",
+      "Association of Vegetation Size With Embolic Risk in Patients With Infective Endocarditis: A Systematic Review and Meta-analysis · PubMed · https://pubmed.ncbi.nlm.nih.gov/29459947/"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "stent-farmacologico-recente-cirurgia-eletiva-quando-operar",
+    "titulo": "Stent farmacológico implantado há 6 semanas: pode operar uma colecistectomia eletiva já?",
+    "tema": "Perioperatório",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 63 anos, sofreu infarto agudo do miocárdio tratado com angioplastia e **implante de stent farmacológico (DES)** há **6 semanas**. Está em dupla antiagregação plaquetária com AAS e clopidogrel, assintomático do ponto de vista cardiovascular.\n\nTem colelitíase sintomática com dois episódios de cólica biliar nas últimas semanas, sem sinais de colecistite aguda no momento. O cirurgião geral quer programar colecistectomia videolaparoscópica **eletiva** e pergunta ao cardiologista quando pode operar com segurança.\n\nNão há evidência de sangramento ativo, hemoglobina normal, função renal preservada. O cirurgião pondera que \"suspender o clopidogrel por 5 dias antes já resolveria o risco de sangramento\".",
+    "pergunta": "Qual a conduta quanto ao momento da cirurgia eletiva e ao manejo da DAPT?",
+    "opcoes": [
+      "Operar agora, suspendendo o clopidogrel 5 dias antes e mantendo a aspirina",
+      "Adiar a cirurgia eletiva até completar pelo menos 6 meses do implante do stent farmacológico, mantendo a DAPT até lá",
+      "Suspender aspirina e clopidogrel 7 dias antes da cirurgia, para minimizar o risco de sangramento",
+      "Fazer terapia de ponte substituindo o clopidogrel por heparina intravenosa e operar imediatamente"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Para stent farmacológico (DES), a recomendação é adiar cirurgia eletiva por 6 meses após o implante; o período pode ser encurtado para 3 meses apenas quando o risco de adiar ainda mais a cirurgia superar o risco esperado de trombose de stent — o que não é o caso de uma colecistectomia eletiva por colelitíase sem sinais de colecistite aguda. Com apenas 6 semanas de implante, este paciente está muito aquém até do limiar mínimo de 3 meses, e o risco de trombose de stent por suspensão precoce da DAPT supera em muito o risco de manter a cirurgia eletiva em espera. A aspirina, por regra geral, é mantida durante todo o período perioperatório na maioria dos casos — não suspensa por rotina —, e não há indicação de ponte com heparina intravenosa para substituir antiagregante plaquetário nesse cenário.",
+    "source_refs": [
+      "2022 ESC Guidelines on cardiovascular assessment and management of patients undergoing non-cardiac surgery · ESC · 2022 · https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/non-cardiac-surgery/",
+      "Dual antiplatelet management in the perioperative period: updated and expanded systematic review · PMC · https://pmc.ncbi.nlm.nih.gov/articles/PMC10576385/",
+      "Perioperative Anticoagulation Management · StatPearls (NCBI Bookshelf) · https://www.ncbi.nlm.nih.gov/books/NBK557590/"
+    ],
+    "review_status": "revisado"
   }
 ]
