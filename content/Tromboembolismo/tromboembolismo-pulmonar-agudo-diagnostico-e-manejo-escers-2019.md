@@ -3,8 +3,8 @@ title: "Tromboembolismo Pulmonar Agudo: Diagnóstico e Manejo (ESC/ERS 2019)"
 slug: tromboembolismo-pulmonar-agudo-diagnostico-e-manejo-escers-2019
 theme: "Tromboembolismo"
 kind: protocolo
-review_status: pendente_revisao
-source_refs: ["2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism · ESC/ERS · 2019 · https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/acute-pulmonary-embolism/", "2019 ESC Guidelines for Acute Pulmonary Embolism — Ten Points to Remember · ACC · 2019 · https://www.acc.org/latest-in-cardiology/ten-points-to-remember/2019/09/04/13/39/2019-esc-guidelines-for-acute-pulmonary-embolism", "Meyer G, Vicaut E, Danays T, et al; PEITHO Investigators. Fibrinolysis for patients with intermediate-risk pulmonary embolism. N Engl J Med. 2014;370(15):1402-1411. DOI: 10.1056/NEJMoa1302097. PMID: 24716681", "Chatterjee S, Chakraborty A, Weinberg I, et al. Thrombolysis for pulmonary embolism and risk of all-cause mortality, major bleeding, and intracranial hemorrhage: a meta-analysis. JAMA. 2014;311(23):2414-2421. DOI: 10.1001/jama.2014.5990. PMID: 24938564"]
+review_status: revisado
+source_refs: ["Konstantinides SV, Meyer G, Becattini C, et al; ESC Scientific Document Group. 2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism developed in collaboration with the European Respiratory Society (ERS). Eur Heart J. 2020;41(4):543-603. DOI: 10.1093/eurheartj/ehz405. PMID: 31504429 — texto completo bloqueado por Cloudflare/paywall no Oxford Academic e nos mirrors da ERS/ERJ (403 em todas as tentativas em 02/08/2026); citação, PMID e DOI conferidos via PubMed", "2019 ESC Guidelines for Acute Pulmonary Embolism — Ten Points to Remember · ACC · 2019 · https://www.acc.org/latest-in-cardiology/ten-points-to-remember/2019/09/04/13/39/2019-esc-guidelines-for-acute-pulmonary-embolism — texto completo lido e conferido ponto a ponto em 02/08/2026", "Pruszczyk P, Konstantinides S. Where to treat patients with acute pulmonary embolism? Kardiol Pol. 2020;78(1):15-19. DOI: 10.33963/KP.15143. PMID: 31939451 — acesso aberto (CC BY-NC-ND), coautoria de Konstantinides (também autor sênior da diretriz ESC 2019 citada acima); reproduz as Tabelas 1, 2, 3 e 4 da diretriz (critérios de alto risco, indicadores de risco intermediário, sPESI, critérios de Hestia), todas atribuídas na própria tabela à diretriz ESC 2019 (referência 5 do artigo); PDF baixado e lido na íntegra com pdftotext -layout", "Jiménez D, Aujesky D, Moores L, et al; RIETE Investigators. Simplification of the pulmonary embolism severity index for prognostication in patients with acute symptomatic pulmonary embolism. Arch Intern Med. 2010;170(15):1383-1389. DOI: 10.1001/archinternmed.2010.199. PMID: 20696966 — artigo original de derivação e validação do sPESI, citado na diretriz ESC 2019 e usado para conferir a tabela de pontos", "Meyer G, Vicaut E, Danays T, et al; PEITHO Investigators. Fibrinolysis for patients with intermediate-risk pulmonary embolism. N Engl J Med. 2014;370(15):1402-1411. DOI: 10.1056/NEJMoa1302097. PMID: 24716681 — números conferidos contra o abstract do PubMed em 02/08/2026", "Chatterjee S, Chakraborty A, Weinberg I, et al. Thrombolysis for pulmonary embolism and risk of all-cause mortality, major bleeding, and intracranial hemorrhage: a meta-analysis. JAMA. 2014;311(23):2414-2421. DOI: 10.1001/jama.2014.5990. PMID: 24938564 — números conferidos contra o abstract do PubMed em 02/08/2026"]
 legacy_source: "Fusão de dois documentos da mesma diretriz ESC 2019 na mesma pasta, com 14 e 9 seções e apenas 2 em comum. Do absorvido vieram estratificação de mortalidade em 30 dias, tratamento domiciliar, papel da tomografia, trombólise, TEP subsegmentar e outras formas de embolia."
 ---
 
@@ -50,14 +50,30 @@ Modelo de cuidado integrado hospitalar-ambulatorial 3-6 meses após o evento, al
 
 ## Criterios internacao
 
-VERIFICAÇÃO HUMANA NECESSÁRIA — seção sem conteúdo extraído da diretriz ESC 2019 nesta revisão; critérios explícitos de internação hospitalar não foram confirmados contra a fonte.
+- **alto risco e risco intermediário (qualquer subtipo)**: hospitalização obrigatória. Pacientes normotensos com pelo menos um indicador de risco elevado (critérios clínicos, de imagem/VD ou laboratoriais — ver "Criterios estratificacao") formam o grupo de risco intermediário e devem ser hospitalizados
+- **baixo risco, sem comorbidade grave**: candidatos a alta precoce e continuação do tratamento em domicílio — mas a alta só é apropriada quando, além do baixo risco do próprio evento (PESI/sPESI 0, sem disfunção de VD, sem biomarcador elevado), não há comorbidade grave associada e existe nível suficiente de cuidado ambulatorial (garantia de anticoagulação, orientação sobre TEV e suporte médico pronto se necessário)
+- **critérios de Hestia** (regra de exclusão para tratamento domiciliar, checklist de 12 perguntas à beira do leito — instabilidade hemodinâmica, necessidade de trombólise/embolectomia, sangramento ativo ou alto risco de sangramento, necessidade de O2 >24h para SatO2>90%, diagnóstico em vigência de anticoagulação, dor grave exigindo analgesia IV >24h, razão médica ou social para internação >24h, ClCr <30 mL/min, insuficiência hepática grave, gestação, TIH prévia documentada): resposta "não" a todas autoriza tratamento domiciliar
+- **fonte**: Pruszczyk P, Konstantinides S. Kardiol Pol. 2020;78(1):15-19 (PMID 31939451), Tabela 2 (indicadores de gravidade em normotensos) e Tabela 4 (critérios de Hestia), ambas atribuídas pelo próprio artigo à diretriz ESC 2019 (PMID 31504429); ensaio HoT-PE (Barco S et al., Eur Heart J. 2020;41(4):509-518, PMID 31120118, 525 pacientes, alta programada em até 48h, mediana de internação 34h) e estudo de Aujesky et al. (Lancet. 2011;378(9785):41-48, PMID 21703676) sustentam a não inferioridade da alta precoce em baixo risco cuidadosamente selecionado
 
 ## Criterios uti
 
-VERIFICAÇÃO HUMANA NECESSÁRIA — seção sem conteúdo extraído da diretriz ESC 2019 nesta revisão; critérios explícitos de admissão em UTI não foram confirmados contra a fonte.
+- **alto risco**: manejo em unidade de terapia intensiva, pelo mesmo critério usado para outras condições cardiovasculares agudas com risco de morte iminente — reperfusão primária urgente (trombólise sistêmica como primeira escolha), suporte hemodinâmico com vasopressor IV quando necessário e ventilação mecânica em casos selecionados
+- **risco intermediário-alto** (disfunção de VD por imagem **e** troponina elevada, sem instabilidade hemodinâmica): monitorização nas primeiras horas, **preferencialmente em UTI**, pelo risco de descompensação hemodinâmica precoce — no PEITHO, 5% dos pacientes inicialmente só anticoagulados descompensaram e precisaram de trombólise de resgate. Reperfusão primária **não** é recomendada nesse grupo (o risco de sangramento, sobretudo intracraniano, supera o benefício); a trombólise de resgate — ou, alternativamente, embolectomia cirúrgica ou tratamento percutâneo por cateter — fica reservada para quem desenvolve instabilidade hemodinâmica
+- **fonte**: Pruszczyk P, Konstantinides S. Kardiol Pol. 2020;78(1):15-19 (PMID 31939451), texto e Tabela 1, atribuídos à diretriz ESC 2019 (PMID 31504429); dado do PEITHO conferido contra Meyer G et al., NEJM 2014 (PMID 24716681)
 
 ## Escore pesi
 Regras de predição clínica validadas (PESI) devem ser usadas para estratificação adicional quando não há alto risco; imagem de VD e biomarcadores devem ser realizados apesar de PESI baixo
+
+**sPESI (PESI simplificado)** — 6 critérios, 1 ponto cada (**doença cardiopulmonar crônica é um único critério combinado**, insuficiência cardíaca crônica OU doença pulmonar crônica, não dois critérios somáveis):
+- Idade > 80 anos
+- Câncer (história)
+- Doença cardíaca crônica OU doença pulmonar crônica (critério combinado, 1 ponto no total)
+- Frequência cardíaca ≥ 110 bpm
+- Pressão arterial sistólica < 100 mmHg
+- Saturação arterial de O2 < 90%
+
+**Interpretação**: 0 pontos = baixo risco, mortalidade em 30 dias de **1,0%** (IC95% 0,0-2,1%) na coorte de derivação e **1,1%** (IC95% 0,7-1,5%) na validação externa (coorte RIETE); ≥ 1 ponto = alto risco pelo escore, mortalidade em 30 dias de **10,9%** (IC95% 8,5-13,2%) na derivação e **8,9%** (IC95% 8,1-9,8%) na validação. Acurácia prognóstica equivalente à do PESI original de 11 variáveis (área sob a curva 0,75; IC95% 0,69-0,80)
+- **fonte**: Jiménez D et al., Arch Intern Med. 2010;170(15):1383-1389, PMID 20696966 (derivação e validação); tabela reproduzida também em Pruszczyk P, Konstantinides S, Kardiol Pol. 2020;78(1):15-19, PMID 31939451, Tabela 3, atribuída à diretriz ESC 2019 (PMID 31504429)
 
 ## Armadilhas clinicas
 - Usar terminologia 'provocado/não provocado' desatualizada em vez da nova classificação de fatores de risco
@@ -76,11 +92,12 @@ Diretriz estratifica TEP agudo com base na mortalidade prevista em 30 dias, clas
 - **risco intermediario alto**: PESI/sPESI elevado + disfunção de ventrículo direito por imagem + biomarcadores cardíacos elevados (troponina, BNP) — sem instabilidade hemodinâmica, porém com risco elevado de descompensação
 - **risco intermediario baixo**: PESI/sPESI elevado, mas apenas um ou nenhum dos critérios adicionais (disfunção de VD ou biomarcadores) presente
 - **baixo risco**: PESI/sPESI baixo, sem disfunção de VD, sem elevação de biomarcadores — candidatos a tratamento ambulatorial
-- **fonte**: diretriz ESC 2019 de embolia pulmonar aguda, já citada nas referências deste documento
+- **fonte**: diretriz ESC 2019 de embolia pulmonar aguda (Konstantinides SV et al., Eur Heart J. 2020;41(4):543-603, PMID 31504429), com a estrutura de 4 categorias confirmada, texto e Tabelas 1-2, em Pruszczyk P, Konstantinides S, Kardiol Pol. 2020;78(1):15-19, PMID 31939451 (Konstantinides é autor sênior dos dois artigos)
 
 ## Possibilidade tratamento domiciliar
 
-Diretriz permite considerar alta precoce e tratamento ambulatorial em pacientes de baixo risco cuidadosamente selecionados, sustentada por estudos como Hestia Study e ensaio de Aujesky et al. (Lancet 2011), que demonstraram não-inferioridade do tratamento ambulatorial vs. hospitalar em pacientes selecionados
+Diretriz permite considerar alta precoce e tratamento ambulatorial em pacientes de baixo risco cuidadosamente selecionados, sustentada por estudos como o Hestia Study (Zondag W et al., J Thromb Haemost. 2011;9(8):1500-1507, PMID 21645235 — recorrência de TEV de 2% em 3 meses nos pacientes com alta em até 24h) e o ensaio de Aujesky et al. (Lancet. 2011;378(9785):41-48, PMID 21703676 — 344 pacientes randomizados para tratamento hospitalar vs. ambulatorial, mortalidade em 90 dias de 0,6% em cada braço), que demonstraram não-inferioridade do tratamento ambulatorial vs. hospitalar em pacientes selecionados. O ensaio **HoT-PE** (Barco S et al., Eur Heart J. 2020;41(4):509-518, PMID 31120118 — 525 pacientes de baixo risco selecionados também por ausência de disfunção de VD/trombo intracardíaco, não só por critério clínico) confirma a mesma conclusão com rivaroxabana: recorrência sintomática de TEV em 0,6% e sangramento maior em 1,2%, com alta programada em até 48h (internação mediana de 34h)
+- **fonte**: Pruszczyk P, Konstantinides S, Kardiol Pol. 2020;78(1):15-19, PMID 31939451, texto e referências 30, 31 e 33
 
 ## Papel da tomografia
 

@@ -3,7 +3,7 @@ title: "Profilaxia de TEV no Paciente Clínico Hospitalizado: Escore de Padua e 
 slug: profilaxia-de-tev-no-paciente-clinico-hospitalizado-escore-de-padua-e-profilaxia-estendida
 theme: "Tromboembolismo"
 kind: calculadora
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Barbar S, Noventa F, Rossetto V, et al. A risk assessment model for the identification of hospitalized medical patients at risk for venous thromboembolism: the Padua Prediction Score. J Thromb Haemost. 2010;8(11):2450-2457. DOI: 10.1111/j.1538-7836.2010.04044.x. PMID: 20738765", "Spyropoulos AC, Ageno W, Albers GW, et al; MARINER Investigators. Rivaroxaban for Thromboprophylaxis after Hospitalization for Medical Illness. N Engl J Med. 2018;379(12):1118-1127. DOI: 10.1056/NEJMoa1805090. PMID: 30145946"]
 legacy_source: "Documento novo — a biblioteca cobria tromboembolismo em contextos específicos (câncer, gestação, trombofilia) mas não a pergunta mais frequente na prática hospitalar geral: este paciente clínico internado precisa de profilaxia farmacológica, e por quanto tempo."
 ---
@@ -46,5 +46,5 @@ Pergunta distinta: vale a pena **estender** a profilaxia farmacológica além da
 ## Armadilhas clinicas
 - Indicar profilaxia farmacológica em todo paciente clínico internado sem calcular o escore — o próprio estudo de derivação mostra risco de TEV de só 0,3% no subgrupo de baixo risco, onde profilaxia rotineira expõe a sangramento sem benefício proporcional
 - Estender rotineiramente a profilaxia farmacológica além da alta hospitalar em paciente clínico de alto risco, extrapolando do resultado do TEV não fatal isolado — o desfecho composto (que inclui morte por TEV) não atingiu significância no MARINER, e há sinal (não significativo, mas presente) de mais sangramento maior
-- Confundir escore de Padua com escore IMPROVE — são ferramentas relacionadas, mas distintas: o MARINER selecionou pacientes pelo IMPROVE (com ou sem D-dímero), não pelo Padua
+- Confundir escore de Padua com escore IMPROVE — são ferramentas relacionadas, mas distintas: o MARINER selecionou pacientes pelo IMPROVE modificado (faixa de 0 a 10 pontos, corte ≥4, ou 2-3 com D-dímero elevado), não pelo Padua (faixa de 0 a 20 pontos, corte ≥4). O corte numérico "≥4" coincide nos dois escores, mas as escalas e os pesos por critério não são os mesmos — aplicar a tabela de um ao nome do outro erra a classificação de risco
 - Aplicar o corte de alto risco (≥4) sem somar corretamente os pesos diferentes de cada critério — os critérios não têm peso uniforme (3 pontos para trombofilia/câncer/imobilidade/TEV prévio, contra 1 ponto para vários outros)

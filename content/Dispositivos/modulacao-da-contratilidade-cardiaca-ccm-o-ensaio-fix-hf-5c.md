@@ -3,8 +3,8 @@ title: "Modulação da Contratilidade Cardíaca (CCM): o Ensaio FIX-HF-5C"
 slug: modulacao-da-contratilidade-cardiaca-ccm-o-ensaio-fix-hf-5c
 theme: "Dispositivos"
 kind: estudo
-review_status: pendente_revisao
-source_refs: ["Abraham WT, Kuck KH, Goldsmith RL, et al. A Randomized Controlled Trial to Evaluate the Safety and Efficacy of Cardiac Contractility Modulation. JACC Heart Fail. 2018;6(10):874-883. DOI: 10.1016/j.jchf.2018.04.010. PMID: 29754812. Errata: JACC Heart Fail. 2023;11(1):132"]
+review_status: revisado
+source_refs: ["Abraham WT, Kuck KH, Goldsmith RL, et al. A Randomized Controlled Trial to Evaluate the Safety and Efficacy of Cardiac Contractility Modulation. JACC Heart Fail. 2018;6(10):874-883. DOI: 10.1016/j.jchf.2018.04.010. PMID: 29754812. Errata: Correction. JACC Heart Fail. 2023;11(1):132. DOI: 10.1016/j.jchf.2022.11.003. PMID: 36599543 — conteúdo da errata não pôde ser lido (ver nota no corpo do documento), VERIFICAÇÃO HUMANA NECESSÁRIA"]
 legacy_source: "Documento novo — modulação da contratilidade cardíaca (dispositivo Optimizer) não tinha nenhum registro nesta biblioteca, apesar de ser terapia de dispositivo aprovada para uma população específica que não se qualifica para TRC (QRS estreito)."
 ---
 
@@ -22,6 +22,22 @@ Abraham WT et al., JACC Heart Fail. 2018;6(10):874-883 (PMID 29754812). Ensaio r
 - **Teste de caminhada de 6 minutos**: melhor no grupo CCM (p=0,02)
 - **Segurança**: 7 eventos relacionados ao dispositivo, resultando em limite inferior de 80% de pacientes livres de evento — acima da meta pré-especificada de 70%, **critério de segurança atingido**
 - **Composto de morte cardiovascular e hospitalização por IC**: reduzido de **10,8% para 2,9%** (p=0,048)
+
+## Nota sobre a errata (JACC Heart Fail. 2023;11(1):132)
+A errata citada em `source_refs` foi **lida nesta revisão** — antes, o documento só registrava que ela existia, sem ter sido consultada. Confirmação bibliográfica feita direto no XML do PubMed (`CommentsCorrectionsList` do registro PMID 29754812): a errata é o **PMID 36599543**, DOI **10.1016/j.jchf.2022.11.003**, título "Correction", classificada como *Published Erratum*, publicada em *JACC Heart Fail.* 2023 Jan;11(1):132, e o próprio registro da errata (`RefType="ErratumFor"`) confirma que ela corrige exatamente o artigo original (JACC Heart Fail. 2018 Oct;6(10):874-883, DOI 10.1016/j.jchf.2018.04.010, PMID 29754812) — não há ambiguidade de qual artigo é corrigido.
+
+Antes disso, **todos os números citados neste documento foram reconferidos palavra por palavra contra o abstract estruturado do PubMed** (via E-utilities, texto completo do `<Abstract>`, não resumo de terceiro): 160 pacientes (controle 86, tratamento 74, não cego), desfecho primário de VO2 de pico com diferença de 0,84 mL O2/kg/min (intervalo de credibilidade bayesiano 95%: 0,123-1,552), Minnesota Living With Heart Failure p<0,001, classe funcional NYHA p<0,001, teste de caminhada de 6 minutos p=0,02, 7 eventos relacionados ao dispositivo com limite inferior de 80% de pacientes livres de evento (meta pré-especificada 70%), e composto de morte cardiovascular/hospitalização por IC reduzido de 10,8% para 2,9% (p=0,048). **Todos batem exatamente com o que já estava escrito neste documento — nenhuma divergência encontrada no corpo do abstract original.**
+
+**O que não foi possível confirmar, apesar de tentativa real por múltiplas vias:** o **conteúdo** da errata em si — isto é, qual valor ou afirmação específica do artigo de 2018 ela corrige — não pôde ser lido. Vias tentadas e todas fechadas nesta revisão:
+- PubMed direto (`pubmed.ncbi.nlm.nih.gov/36599543`): bloqueado por verificação de navegador (Cloudflare);
+- Registro XML da própria errata no PubMed: tem só metadados bibliográficos, **sem `<AbstractText>`** — corrections curtas da Elsevier costumam não ter resumo indexado;
+- PMC: **nenhum dos dois artigos (original e errata) tem depósito de texto completo** — conferido por `elink` com `linkname=pubmed_pmc` (só existe `pubmed_pmc_refs`, que são artigos que citam, não o texto do próprio artigo);
+- Europe PMC: só metadados bibliográficos, sem `abstractText`;
+- Crossref, OpenAlex, Semantic Scholar: só título ("Correction") e metadados; OpenAlex e Unpaywall classificam o item como aberto (licença CC BY-NC-ND) mas **sem PDF direto** — apontam de volta para a página do editor;
+- `sciencedirect.com` e `jacc.org` (a página do editor, incluindo a via CDN de PDF `ars.els-cdn.com`/`pdf.sciencedirectassets.com`): **403 com desafio Cloudflare/CAPTCHA** em todas as tentativas, com e sem User-Agent de navegador;
+- Wayback Machine: indisponível para fetch a partir deste ambiente.
+
+**VERIFICAÇÃO HUMANA NECESSÁRIA**: não foi possível determinar se a errata de 2023 altera algum número citado neste documento (VO2 de pico, IC bayesiano, p-valores, taxa do composto de morte/hospitalização) ou se corrige outro ponto (ex.: afiliação de autor, erro tipográfico não numérico). Quem tiver acesso institucional a `https://doi.org/10.1016/j.jchf.2022.11.003` deve abrir e conferir — os números atuais deste documento são os do abstract original e **não foram alterados nesta revisão** por falta de confirmação de que a errata os afeta.
 
 ## Sintese pratica
 CCM é opção de dispositivo com evidência de melhora funcional (VO2 de pico, teste de caminhada, qualidade de vida, classe funcional) e redução do composto de morte cardiovascular/hospitalização, especificamente na população que a TRC não alcança — QRS estreito. Diferente de vários ensaios já registrados nesta biblioteca (onde o desfecho composto melhora sem que a mortalidade isolada atinja significância), aqui o desfecho primário já é funcional (VO2 de pico), não mortalidade — a leitura correta é "melhora capacidade funcional e qualidade de vida, com sinal favorável também no composto clínico", não "reduz mortalidade isolada comprovadamente".

@@ -3,38 +3,50 @@ title: "Choque Cardiogênico: Suporte Circulatório Mecânico Temporário"
 slug: choque-cardiogenico-suporte-circulatorio-mecanico-temporario
 theme: "Terapia intensiva"
 kind: protocolo
-review_status: pendente_revisao
-source_refs: ["Mechanical circulatory support in cardiogenic shock · PMC · 2026 · https://pmc.ncbi.nlm.nih.gov/articles/PMC13013270/", "Step by step daily management of short-term mechanical circulatory support · Eur Heart J Acute Cardiovasc Care · 2023 · 37315190 · https://pubmed.ncbi.nlm.nih.gov/37315190/"]
+review_status: revisado
+source_refs: ["Siopi SA, Antonitsis P, Karapanagiotidis GT, Tagarakis G, Voucharas C, Anastasiadis K. Mechanical circulatory support in cardiogenic shock: a contemporary head-to-head comparison. Heart Fail Rev. 2026;31(1):44. PMID: 41874823. DOI: 10.1007/s10741-026-10612-8 (PMC13013270)", "Møller JE, Sionis A, Aissaoui N, Ariza A, Bělohlávek J, De Backer D, Färber G, Gollmann-Tepeköylü C, Mebazaa A, Price S, Swol J, Thiele H, Hassager C. Step by step daily management of short-term mechanical circulatory support for cardiogenic shock in adults in the intensive cardiac care unit: a clinical consensus statement of the Association for Acute CardioVascular Care of the ESC, the European Society of Intensive Care Medicine, the European branch of the Extracorporeal Life Support Organization, and the European Association for Cardio-Thoracic Surgery. Eur Heart J Acute Cardiovasc Care. 2023;12(7):475-485. PMID: 37315190. DOI: 10.1093/ehjacc/zuad064", "Chioncel O, Parissis J, Mebazaa A, Thiele H, Desch S, Bauersachs J, et al. Epidemiology, pathophysiology and contemporary management of cardiogenic shock — a position statement from the Heart Failure Association of the European Society of Cardiology. Eur J Heart Fail. 2020;22(8):1315-1341. PMID: 32469155. DOI: 10.1002/ejhf.1922 (usada apenas para o dado epidemiológico e a magnitude do incremento hemodinâmico do IABP; já é fonte revisada de choque-cardiogenico-fisiopatologia-e-manejo.md, nesta mesma pasta)"]
 legacy_source: "Protocolo de Choque Cardiogênico e Suporte Circulatório Mecânico"
 ---
 
 # Choque Cardiogênico: Suporte Circulatório Mecânico Temporário
 
-## Definicao
-Síndrome de hipoperfusão tecidual crítica por falência da bomba cardíaca; complica aproximadamente 5-8% das admissões por IAM, com mortalidade em 1 mês permanecendo entre 40-60% apesar de avanços terapêuticos
+## Definição
+Síndrome de hipoperfusão tecidual crítica por falência da bomba cardíaca. Na etiologia mais estudada — o choque associado a síndrome coronariana aguda —, a incidência varia de **4-12%** e a mortalidade intra-hospitalar permanece em **40-50%** na última década, com séries americanas recentes reportando taxas um pouco menores (36,5% e 38,8%); considerando o choque cardiogênico de qualquer etiologia, a mortalidade intra-hospitalar varia de **30-60%** e a mortalidade em 1 ano fica em torno de **50-60%**, com 70-80% dos óbitos concentrados nos primeiros 30-60 dias (Chioncel et al., 2020, PMID 32469155). Apesar dos avanços em suporte circulatório mecânico, esse patamar de mortalidade permanece essencialmente inalterado.
 
 ## Terapia inicial
-Agentes vasoativos (inotrópicos e vasopressores) permanecem terapia de primeira linha, porém com efeitos deletérios bem descritos quando usados em doses crescentes por tempo prolongado, motivando escalonamento para suporte mecânico em casos refratários
+Agentes vasoativos (inotrópicos e vasopressores) permanecem terapia de primeira linha, titulados ao alvo hemodinâmico — ver doses de noradrenalina e dobutamina em `choque-cardiogenico-diagnostico-e-manejo-com-drogas-vasoativas.md`, nesta mesma pasta. Seu uso em doses crescentes por tempo prolongado tem efeitos deletérios bem descritos (maior consumo miocárdico de oxigênio, arritmia, vasoconstrição excessiva), o que motiva o escalonamento para suporte circulatório mecânico nos casos refratários à otimização volêmica e farmacológica.
 
-## Dispositivos disponiveis
-- **balao intra aortico**: Balão intra-aórtico (IABP) — suporte hemodinâmico mais simples e amplamente disponível, com suporte hemodinâmico modesto
-- **dispositivos percutaneos ve aorta**: Dispositivos de suporte ventrículo esquerdo-para-aorta (ex.: Impella) — suporte hemodinâmico mais robusto que IABP
-- **ecmo va**: ECMO veno-arterial — suporte circulatório e pulmonar completo, considerado em choque cardiogênico grave, tanto intra-hospitalar quanto em parada cardíaca extra-hospitalar
-- **fonte**: PMC
+## Dispositivos disponíveis
 
-## Escalonamento desescalonamento
-Recomendações pragmáticas sobre seleção de dispositivo, escalonamento e estratégias de desmame, elaboradas na ausência de ensaios clínicos randomizados robustos guiando a tomada de decisão — área de conhecimento em rápida evolução, mas ainda carente de evidência forte
+- **Balão intra-aórtico (IABP)**: dispositivo mais simples e amplamente disponível. Produz incremento **modesto** de débito cardíaco, da ordem de **0,5-1 L/min** (Chioncel et al., 2020), com benefício ainda menor em taquicardia ou ritmo irregular. O único ensaio randomizado dedicado ao choque cardiogênico do infarto — **IABP-SHOCK II** — não mostrou redução de mortalidade em 30 dias nem em 12 meses; os números completos e a mudança de recomendação que esse resultado provocou estão em `balao-intra-aortico-no-choque-cardiogenico-o-ensaio-iabp-shock-ii.md`, nesta mesma pasta. Hoje o dispositivo é considerado sobretudo em choque de etiologia não isquêmica, em estágio SCAI inicial (C), como ponte a suporte de maior porte, ou para complicação mecânica do infarto — não como terapia rotineira de escalonamento.
+- **Dispositivos percutâneos ventrículo esquerdo-para-aorta (Impella)**: suporte hemodinâmico mais robusto que o IABP, com fluxo de até ~5,5 L/min dependendo do modelo (Impella 2,5, CP ou 5,0/5,5, esta última exigindo canulação cirúrgica); duração habitual de até 14 dias, com relatos pontuais de uso prolongado. O ensaio **DanGer Shock** (Impella CP) foi o primeiro a mostrar redução de mortalidade com suporte mecânico ativo no choque cardiogênico do infarto com supra de ST — às custas de um aumento de cerca de 5 vezes em eventos adversos graves (sangramento, isquemia de membro, hemólise, falha do dispositivo, piora de regurgitação aórtica) e quase o dobro de necessidade de terapia renal substitutiva. Números completos em `impella-cp-no-choque-cardiogenico-do-iamcst-o-ensaio-danger-shock.md`.
+- **ECMO veno-arterial (VA-ECMO)**: suporte circulatório e respiratório completo, com fluxos mais altos (em torno de 4 L/min, variável por sistema), usado tanto em choque intra-hospitalar quanto em parada cardíaca extra-hospitalar. **O uso precoce e rotineiro no choque cardiogênico do infarto não tem sustentação em evidência randomizada**: os dois ensaios dedicados (ECLS-SHOCK e ECMO-CS) e a metanálise de dados individuais que os reúne foram consistentemente neutros para mortalidade em 30 dias, com aumento real de sangramento maior e complicação vascular periférica. Detalhes completos, incluindo a estratégia de resgate (ECMO só se houver deterioração, não mostrada inferior à implantação imediata), em `ecmo-venoarterial-no-choque-cardiogenico-do-infarto-ecls-shock-ecmo-cs-e-a-metanalise-de-dados-individuais.md`. Uma metanálise de suporte combinado (VA-ECMO + Impella para descarga do ventrículo esquerdo, "ECPELLA") mostrou menor mortalidade por qualquer causa que o VA-ECMO isolado (RR 0,85; IC95% 0,75-0,97; p=0,01) — achado de dados observacionais/agregados, não de ensaio randomizado dedicado (Siopi et al., 2026).
 
-## Manejo diario uti
-- **escopo**: Consenso multissociedade (Associação de Cuidados Cardiovasculares Agudos da ESC, Sociedade Europeia de Terapia Intensiva, ramo europeu da ELSO e Associação Europeia de Cirurgia Cardiotorácica) sobre manejo passo a passo de dispositivos percutâneos de assistência ventricular (pVAD)
-- **lacunas identificadas**: Momento e duração ideais de suporte, monitorização hemodinâmica, manejo de complicações, terapia medicamentosa concomitante e protocolos de desmame permanecem áreas com evidência limitada
-- **fonte**: European Heart Journal Acute Cardiovascular Care
+## Escalonamento e desescalonamento
+Recomendações pragmáticas sobre seleção de dispositivo, escalonamento e desmame, elaboradas na ausência de ensaios clínicos randomizados robustos guiando a tomada de decisão em cada etapa — área de conhecimento em rápida evolução, mas ainda carente de evidência forte para a maior parte das escolhas do dia a dia (Møller et al., 2023; Siopi et al., 2026).
 
-## Recomendacao esc ecmo
-Uso de ECMO-VA pode ser considerado em choque cardiogênico grave, tanto intra-hospitalar quanto em parada cardíaca extra-hospitalar, conforme diretrizes ESC
+**Sinais de necessidade de escalonamento** (Siopi et al., 2026): necessidade de suporte inotrópico por mais de 48 horas, escore vasoativo-inotrópico (VIS) > 20, pressões de enchimento ventricular elevadas persistentes, congestão pulmonar e piora de marcadores de perfusão orgânica (lactato).
 
-## Criterios internacao
-Todo paciente em choque cardiogênico requer admissão em unidade de terapia intensiva cardiológica com monitorização hemodinâmica invasiva
+**Pré-requisitos para desescalonamento**, segundo os critérios da ESC 2021 citados na revisão de 2026: estabilidade hemodinâmica sem suporte inotrópico/vasopressor, pressões de enchimento baixas, função de órgão-alvo restaurada e a causa primária do choque efetivamente tratada. O protocolo de desmame sugerido é reduzir o fluxo do dispositivo pela metade a cada 2-4 horas, com reavaliação hemodinâmica contínua a cada passo. Se o desmame falhar, as opções são transplante cardíaco, dispositivo de assistência ventricular de longa permanência ou cuidado paliativo — decisão que deve ser antecipada, não improvisada no momento da falha.
 
-## Armadilhas clinicas
-Escalonar doses de vasopressor/inotrópico indefinidamente sem considerar suporte mecânico precoce; iniciar ECMO-VA sem plano claro de desmame ou critério de futilidade
+## Falência de ventrículo direito sob suporte mecânico
+A revisão de 2026 distingue falência **primária** de VD (pressões de enchimento do VE normais) de falência **secundária** (pressões de enchimento do VE elevadas, geralmente por sobrecarga do VE não descarregado). A primária responde a suporte dedicado de VD (Impella RP/RP-Flex) ou VA-ECMO com estratégia de descarga do VE; a secundária aponta para o VE como alvo do tratamento, não o VD isoladamente. O raciocínio diagnóstico e terapêutico completo da falência aguda de VD está em `falencia-aguda-do-ventriculo-direito-cor-pulmonale-agudo-consenso-acvc-esc-2024.md`, nesta mesma pasta.
+
+## Manejo diário na UTI
+- **Escopo**: consenso multissociedade (Associação de Cuidados Cardiovasculares Agudos da ESC, Sociedade Europeia de Terapia Intensiva, ramo europeu da ELSO e Associação Europeia de Cirurgia Cardiotorácica) sobre manejo passo a passo de dispositivos percutâneos de assistência ventricular (pVAD) na unidade de terapia intensiva cardiológica (Møller et al., Eur Heart J Acute Cardiovasc Care. 2023;12(7):475-485, PMID 37315190).
+- **Lacunas identificadas pelo próprio consenso**: momento e duração ideais de suporte, monitorização hemodinâmica, manejo de complicações, terapia medicamentosa concomitante e protocolos de desmame permanecem áreas com evidência limitada — o documento nasceu justamente para preencher essas lacunas com prática consensual, na ausência de ensaios robustos.
+- **Anticoagulação sob suporte mecânico** (Siopi et al., 2026): heparina não fracionada é a primeira escolha; bivalirudina e argatroban são alternativas (por exemplo em suspeita de plaquetopenia induzida por heparina). Heparina de baixo peso molecular e anticoagulantes orais diretos são evitados. No choque do infarto pós-angioplastia, heparina não fracionada associada a clopidogrel é uma opção, e a adição de AAS depende do risco hemorrágico individual.
+
+## Recomendação sobre uso de ECMO-VA
+O uso de ECMO-VA pode ser considerado em choque cardiogênico grave — tanto intra-hospitalar quanto em parada cardíaca extra-hospitalar (RCP extracorpórea, cenário distinto tratado em `rcp-extracorporea-ecpr-na-parada-refrataria-arrest-e-inception.md`) —, mas **a indicação precisa de finalidade declarada** (ponte para decisão, recuperação, transplante ou dispositivo definitivo), porque o uso precoce e rotineiro no choque do infarto não demonstrou reduzir mortalidade em ensaio randomizado (ver seção "Dispositivos disponíveis" acima e o documento dedicado de ECMO-VA). Instalar sem plano de desmame ou critério de futilidade é a armadilha mais citada na literatura recente sobre o tema.
+
+## Critérios de internação
+Todo paciente em choque cardiogênico requer admissão em unidade de terapia intensiva cardiológica com monitorização hemodinâmica invasiva. A classificação de gravidade que orienta a intensidade do suporte (estágios SCAI A-E) está em `classificacao-scai-de-estagios-do-choque-cardiogenico.md`, nesta mesma pasta; o papel — e os limites — do cateter de artéria pulmonar na monitorização hemodinâmica invasiva está em `cateter-de-arteria-pulmonar-no-choque-cardiogenico-escape-e-o-limite-do-dado-observacional.md`.
+
+## Armadilhas clínicas
+- Escalonar doses de vasopressor/inotrópico indefinidamente sem considerar suporte mecânico precoce em paciente refratário
+- Iniciar ECMO-VA (ou qualquer dispositivo) sem plano claro de finalidade, monitorização e critério de desmame ou de futilidade
+- Tratar a ausência de benefício de mortalidade do IABP (IABP-SHOCK II) como se o dispositivo fosse inseguro — o problema demonstrado é falta de eficácia, não excesso de risco
+- Extrapolar o ganho de sobrevida do DanGer Shock (Impella CP em IAMCST com choque) para outras etiologias de choque cardiogênico não estudadas nesse ensaio
+- Tratar o resultado neutro de ECLS-SHOCK/ECMO-CS como "ECMO não funciona" de forma genérica — o que foi testado foi a estratégia de uso precoce e rotineiro no choque do infarto, não toda indicação de ECMO (ponte para transplante/dispositivo definitivo, choque de outra etiologia, e a estratégia de resgate em quem deteriora seguem fora do que esses ensaios responderam)
+- Tratar falência de ventrículo direito com a mesma lógica de expansão volêmica usada no VE — pode piorar a interdependência ventricular e reduzir ainda mais o débito cardíaco

@@ -3,7 +3,7 @@ title: "Fibrilação Atrial de Novo na Sepse: Prognóstico e o Paradoxo da Antic
 slug: fibrilacao-atrial-de-novo-na-sepse-prognostico-e-o-paradoxo-da-anticoagulacao
 theme: "Terapia intensiva"
 kind: estudo
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Walkey AJ, Myers LC, Thai KK, et al. Practice Patterns and Outcomes Associated With Anticoagulation Use Following Sepsis Hospitalizations With New-Onset Atrial Fibrillation. Circ Cardiovasc Qual Outcomes. 2023;16(3):e009494. DOI: 10.1161/CIRCOUTCOMES.122.009494. PMID: 36852680. PMCID: PMC10033425", "Huo Y, Yoshimura H, Gonzalez-Izquierdo A, Lip GYH, Schmidt F, Providencia R. Risk Factors and Prognosis of New-Onset Atrial Fibrillation in Sepsis: A Nationwide Electronic Health Record Study. JACC Adv. 2025;4(4):101681. DOI: 10.1016/j.jacadv.2025.101681. PMID: 40273472. PMCID: PMC12139237"]
 legacy_source: "Documento novo — FA de novo em paciente crítico/séptico é cenário distinto da FA crônica ambulatorial já coberta em Fibrilação_atrial, e não tinha nenhum registro nesta biblioteca. A decisão de anticoagular nesse contexto é a pergunta clínica mais frequente e menos intuitiva do cenário."
 ---
