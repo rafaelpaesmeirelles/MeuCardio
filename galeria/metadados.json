@@ -2798,5 +2798,88 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "cisto-pericardico-ressonancia-multissequencial",
+    "title": "Cisto pericárdico — ressonância magnética multissequencial",
+    "modality": "Ressonância cardíaca",
+    "theme": "Pericárdio",
+    "file_path": "rm/cisto-pericardico-multissequencial.jpg",
+    "findings": "Quatro cortes de RM (A-D, sequências white blood axial, black blood axial, T2 fat-sat eixo curto e pós-contraste) mostrando estrutura ovalada hiperintensa junto à borda cardíaca lateral esquerda (setas amarelas), sem realce interno ou periférico após contraste — padrão de cisto pericárdico simples.",
+    "teaching_points": "A ausência de realce pós-contraste é o achado que diferencia o cisto pericárdico (simples, benigno) de uma massa sólida pericárdica — é exatamente esse padrão multissequencial (hipersinal em T2, sem realce) que permite à RM caracterizar a lesão sem necessidade de biópsia na maioria dos casos. Complementa o registro já existente de cisto pericárdico por TC, mostrando a mesma lesão pela modalidade que melhor caracteriza conteúdo (líquido simples vs. sólido).",
+    "source_name": "PMC (Journal of Clinical Medicine/MDPI, acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12941829/",
+    "license": "CC BY 4.0",
+    "attribution": "Agrawal A, Elnashar M, Garg K, et al. Contemporary Review of Clinical Features, Multi-Modality Imaging, and Management of Pericardial Cysts. J Clin Med. 2026;15(4). PMID: 41753272. DOI: 10.3390/jcm15041585. PMCID: PMC12941829 — CC BY 4.0.",
+    "tags": [
+      "cisto pericardico",
+      "ressonancia magnetica cardiaca",
+      "massa pericardica benigna"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "pericardite-constritiva-septal-bounce-cine-rm-tempo-real",
+    "title": "Pericardite constritiva — \"septal bounce\" em cine-RM de tempo real com respiração dinâmica",
+    "modality": "Ressonância cardíaca",
+    "theme": "Pericárdio",
+    "file_path": "rm/pericardite-constritiva-septal-bounce-cine-rm.jpg",
+    "findings": "Figura composta de estudo metodológico: painéis superiores mostram sequências de tecido (T2 STIR black blood e T1 pós-contraste); painéis inferiores mostram cine-RM em tempo real no mesmo corte de eixo curto durante inspiração (com seta branca indicando desvio septal) e durante expiração — a comparação entre os dois momentos respiratórios demonstra o \"septal bounce\", movimento anormal do septo interventricular para a esquerda durante a inspiração profunda, sinal de interdependência ventricular exagerada.",
+    "teaching_points": "O \"septal bounce\" é um achado dinâmico — só aparece comparando o mesmo corte em fases diferentes da respiração, por isso a cine-RM em tempo real (não sincronizada ao ECG) é necessária para captá-lo, diferente da RM cardíaca convencional sincronizada. É um dos sinais de imagem mais específicos de fisiologia constritiva, refletindo o mesmo princípio fisiopatológico do septal shift ao ecocardiograma. NOTA: a imagem de origem é de um estudo metodológico sobre quantificação de forças hemodinâmicas por RM (não um caso clínico isolado) — os painéis de gráfico e força hemodinâmica da figura original não foram descritos aqui, o foco deste registro é o achado de imagem do septal bounce nos dois painéis inferiores.",
+    "source_name": "PMC (Insights into Imaging/Springer, acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13264637/",
+    "license": "CC BY 4.0",
+    "attribution": "Vollbrecht TM, Proff A, Juraschitz S, et al. Left ventricular strain and hemodynamic forces from cine CMR for detecting constrictive physiology in pericarditis. Insights Imaging. 2026;17(1). PMID: 42287343. DOI: 10.1186/s13244-026-02332-2. PMCID: PMC13264637 — CC BY 4.0.",
+    "tags": [
+      "pericardite constritiva",
+      "septal bounce",
+      "cine-rm tempo real",
+      "interdependencia ventricular"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "derrame-pericardico-loculado-correlacao-multimodalidade",
+    "title": "Derrame pericárdico loculado com efeito de massa — correlação TC, ecocardiograma e Doppler",
+    "modality": "Radiografia e TC",
+    "theme": "Pericárdio",
+    "file_path": "tc/derrame-pericardico-loculado-multimodalidade.jpg",
+    "findings": "Figura composta de 7 painéis do mesmo caso: A, B e E são cortes de angiotomografia cardíaca mostrando derrame pericárdico loculado com efeito de massa sobre as câmaras direitas; C e D são cortes ecocardiográficos do mesmo achado; F e G são traçados de Doppler. Caso de derrame pericárdico loculado por artrite reumatoide (não pós-cirúrgico), que evoluiu para fisiologia constritiva e foi tratado com pericardiectomia parcial após falha da pericardiocentese.",
+    "teaching_points": "Ilustra a correlação entre três modalidades no mesmo derrame pericárdico loculado — a TC localiza a coleção e mostra o efeito de massa com melhor resolução espacial, o eco documenta o achado à beira do leito e orienta a pericardiocentese, e o Doppler contribui para a avaliação hemodinâmica. É um exemplo real de como um derrame inicialmente tratável por drenagem percutânea pode evoluir para constrição quando loculado — reforçando por que o seguimento após pericardiocentese não termina no procedimento.",
+    "source_name": "PMC (European Heart Journal — Case Reports/Oxford Academic, acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13128196/",
+    "license": "CC BY 4.0",
+    "attribution": "Elangovan A, Lewandowski T, Naik D, et al. A cheesy exudate: a case report on management of pericardial disease through multimodal cardiac imaging. Eur Heart J Case Rep. 2026;10(4):ytag261. PMID: 42065009. DOI: 10.1093/ehjcr/ytag261. PMCID: PMC13128196 — CC BY 4.0.",
+    "tags": [
+      "derrame pericardico loculado",
+      "correlacao multimodalidade",
+      "pericardite constritiva",
+      "artrite reumatoide"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cardiomiopatia-arritmogenica-pediatrica-realce-tardio-de-vd",
+    "title": "Cardiomiopatia arritmogênica de início precoce (deficiência de MCAD) — realce tardio de gadolínio em ventrículo direito",
+    "modality": "Ressonância cardíaca",
+    "theme": "Cardiomiopatias",
+    "file_path": "rm/cardiomiopatia-arritmogenica-realce-tardio-vd.jpg",
+    "findings": "Três cortes de RM cardíaca em paciente pediátrico (A, 4 câmaras; B, eixo curto; C, sequência PSIR de realce tardio) mostrando ventrículo direito aumentado e, no painel C, realce tardio de gadolínio na parede livre do VD, na topografia da anormalidade de contração descrita pelos autores — em criança com deficiência de MCAD (acil-CoA desidrogenase de cadeia média) e cardiomiopatia arritmogênica de início precoce.",
+    "teaching_points": "Documenta o critério de imagem mais específico das cardiomiopatias arritmogênicas — realce tardio de gadolínio em ventrículo direito, refletindo fibrose miocárdica —, num contexto raro e didático: cardiomiopatia arritmogênica de causa METABÓLICA (deficiência de MCAD) e início pediátrico, diferente da forma genética/desmossômica clássica do adulto. Reforça que o fenótipo arritmogênico de VD não é exclusivo da forma hereditária clássica.",
+    "source_name": "PMC (HeartRhythm Case Reports/Elsevier, acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13379363/",
+    "license": "CC BY 4.0",
+    "attribution": "Lin TK, McConkey ND, Stefek BP, et al. Early-onset and rapid progression of arrhythmogenic cardiomyopathy in a pediatric patient with medium chain acyl-CoA dehydrogenase deficiency. HeartRhythm Case Rep. 2026;12(7):835-840. PMID: 42472204. DOI: 10.1016/j.hrcr.2026.04.007. PMCID: PMC13379363 — CC BY 4.0.",
+    "tags": [
+      "cardiomiopatia arritmogenica",
+      "realce tardio de vd",
+      "deficiencia de mcad",
+      "cardiomiopatia pediatrica"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]

@@ -2971,5 +2971,94 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "escore-syntax-e-syntax-score-ii-na-decisao-pci-vs-cabg",
+    "name": "Escore SYNTAX e SYNTAX Score II na decisão entre angioplastia (PCI) e cirurgia (CABG) na doença multiarterial",
+    "category": "imagem",
+    "theme": "Doença coronariana",
+    "what_it_measures": "Escore angiográfico de complexidade da doença coronariana (SYNTAX original), que soma pontos por lesão conforme localização, gravidade e características anatômicas — o SYNTAX Score II acrescenta variáveis CLÍNICAS (idade, clearance de creatinina, FEVE, doença de tronco não protegido, doença arterial periférica, sexo feminino, DPOC) ao escore anatômico, para individualizar a decisão entre PCI e CABG.",
+    "reference_range": "Categorias de tercil do SYNTAX anatômico: baixo 0-22; intermediário 23-32; alto ≥33.",
+    "indications": "Doença coronariana multiarterial (3 vasos) ou de tronco de coronária esquerda, na decisão entre revascularização percutânea (PCI) e cirúrgica (CABG) — quanto mais alto o escore, maior a complexidade anatômica a favor da cirurgia.",
+    "interpretation": "Em escore BAIXO, PCI e CABG tiveram MACCE semelhante em 5 anos (33,3% vs. 26,8%; p=0,21), com mais repetição de revascularização no grupo PCI. Em escores INTERMEDIÁRIO/ALTO, a CABG mostrou vantagem clara em múltiplos desfechos. O SYNTAX Score II, ao incorporar variáveis clínicas, teve melhor capacidade de discriminação individual (índice de concordância 0,725 interno / 0,716 em validação externa) que o escore anatômico isolado.",
+    "limitations": "O artigo de descrição metodológica original do escore (Sianos et al. 2005) não tem abstract indexado no PubMed — a metodologia detalhada de pontuação por lesão não foi conferida diretamente nesta sessão, só os cortes de tercil e o desempenho do SYNTAX II, que vêm de fontes com abstract lido.",
+    "source_refs": [
+      "Head SJ, Davierwala PM, Serruys PW, et al. Coronary artery bypass grafting vs. percutaneous coronary intervention for patients with three-vessel disease: final five-year follow-up of the SYNTAX trial. Eur Heart J. 2014;35(40):2821-2830. PMID: 24849105 — cortes de tercil e desfechos por categoria.",
+      "Farooq V, van Klaveren D, Steyerberg EW, et al. Anatomical and clinical characteristics to guide decision making between coronary artery bypass surgery and percutaneous coronary intervention for individual patients: development and validation of SYNTAX score II. Lancet. 2013;381(9867):639-650. PMID: 23439103 — SYNTAX Score II, variáveis clínicas e índice de concordância.",
+      "Sianos G, Morel MA, Kappetein AP, et al. The SYNTAX Score: an angiographic tool grading the complexity of coronary artery disease. EuroIntervention. 2005;1(2):219-227. PMID: 19758907 — descrição original do escore; abstract não indexado no PubMed, metodologia não conferida diretamente nesta sessão."
+    ],
+    "tags": [
+      "escore syntax",
+      "syntax score ii",
+      "pci vs cabg",
+      "doenca multiarterial"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "nt-probnp-no-diagnostico-diferencial-de-dispneia-estudo-pride",
+    "name": "NT-proBNP no diagnóstico diferencial de dispneia no pronto-socorro (estudo PRIDE)",
+    "category": "laboratorial",
+    "theme": "Doença coronariana",
+    "what_it_measures": "Peptídeo natriurético N-terminal tipo B, dosado em paciente com dispneia aguda no pronto-socorro, para diferenciar insuficiência cardíaca aguda de outras causas de dispneia (pulmonar, entre outras).",
+    "reference_range": "Corte de EXCLUSÃO: <300 pg/mL (valor preditivo negativo de 99%). Corte de INCLUSÃO, dependente da idade: >450 pg/mL em pacientes <50 anos; >900 pg/mL em pacientes ≥50 anos.",
+    "indications": "Paciente com dispneia aguda de causa indefinida no pronto-socorro, quando a diferenciação clínica entre insuficiência cardíaca e causa pulmonar/outra não é conclusiva.",
+    "interpretation": "Na coorte do estudo PRIDE (600 pacientes, 209 com IC aguda confirmada), a mediana de NT-proBNP foi 4.054 pg/mL no grupo com IC aguda vs. 131 pg/mL sem IC (p<0,001), com OR de 44 para IC aguda. O NT-proBNP isolado superou o julgamento clínico isolado na acurácia diagnóstica (p=0,006), e a combinação dos dois teve o melhor desempenho.",
+    "limitations": "Os cortes de inclusão são estratificados por idade — usar um valor único para todas as faixas etárias reduz a acurácia; NT-proBNP pode estar elevado por outras causas (disfunção renal, idade avançada, fibrilação atrial) mesmo sem IC aguda descompensada, e reduzido artificialmente na obesidade.",
+    "source_refs": [
+      "Januzzi JL Jr, Camargo CA, Anwaruddin S, et al. The N-terminal Pro-BNP investigation of dyspnea in the emergency department (PRIDE) study. Am J Cardiol. 2005;95(8):948-954. PMID: 15820160."
+    ],
+    "tags": [
+      "nt-probnp",
+      "dispneia aguda",
+      "diagnostico diferencial",
+      "insuficiencia cardiaca aguda"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "rm-de-aorta-toracica-sem-contraste-em-contraindicacao-a-gadolinio",
+    "name": "RM de aorta torácica sem contraste (angio-RM não contrastada) em paciente com contraindicação a gadolínio/iodo",
+    "category": "imagem",
+    "theme": "Aorta e doença arterial periférica",
+    "what_it_measures": "Avaliação da aorta torácica por RM usando sequência balanced steady-state free-precession (SSFP) tridimensional, SEM administração de gadolínio, comparada à angio-RM convencional com contraste no mesmo paciente.",
+    "reference_range": "Não é valor numérico — é comparação de desempenho diagnóstico. Identificou 100% dos achados patológicos da aorta torácica, com acurácia diagnóstica de 100% em relação ao exame com contraste, na coorte estudada (21 pacientes).",
+    "indications": "Avaliação de doença da aorta torácica em paciente com contraindicação a gadolínio (disfunção renal grave, risco de fibrose sistêmica nefrogênica) ou a iodo (impossibilitando também a angiotomografia), e/ou com acesso venoso difícil.",
+    "interpretation": "A qualidade de imagem foi, nesta coorte, SUPERIOR à técnica com contraste na raiz da aorta (4,4±0,8 vs. 3,2±0,9; p<0,0005) e na aorta ascendente (4,1±1 vs. 3,7±0,9; p=0,05) — ou seja, a técnica sem contraste não é apenas uma alternativa de necessidade, teve desempenho pelo menos equivalente e, nessas regiões específicas, melhor.",
+    "limitations": "Amostra pequena (21 pacientes), estudo comparativo retrospectivo de centro único; artefato por implante metálico e heterogeneidade de campo em regiões pulmonares foram descritos como limitações técnicas, embora não tenham comprometido o diagnóstico nesta série.",
+    "source_refs": [
+      "Srichai MB, Kim S, Axel L, et al. Non-gadolinium-enhanced 3-dimensional magnetic resonance angiography for the evaluation of thoracic aortic disease: a preliminary experience. Tex Heart Inst J. 2010;37(1):58-65. PMID: 20200628."
+    ],
+    "tags": [
+      "rm de aorta sem contraste",
+      "angio-rm nao contrastada",
+      "contraindicacao a gadolinio",
+      "ssfp"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "angiotc-de-baixa-dose-de-contraste-na-isquemia-critica-de-membro",
+    "name": "AngioTC com protocolo de baixa dose de contraste iodado (80 kVp) na isquemia crítica de membro",
+    "category": "imagem",
+    "theme": "Aorta e doença arterial periférica",
+    "what_it_measures": "Protocolo de angiotomografia de membro inferior com tensão reduzida (80 kVp) e menor volume de contraste iodado, comparado ao protocolo padrão (120 kVp), em paciente com isquemia crônica que ameaça o membro (chronic limb-threatening ischemia).",
+    "reference_range": "Protocolo experimental: 80 kVp + 75-85 mL de contraste, comparado ao protocolo padrão: 120 kVp + 95-105 mL — redução de aproximadamente 30% na exposição à radiação e 19% no volume de iodo administrado.",
+    "indications": "Paciente com isquemia crítica de membro e função renal limítrofe ou outro motivo para minimizar a carga de contraste iodado, quando ainda assim a angiotomografia é o exame de escolha.",
+    "interpretation": "A qualidade de imagem diagnóstica foi mantida no protocolo de baixa dose, com ruído de imagem discretamente maior mas relação sinal/contraste equivalente, sem diferença clinicamente relevante na capacidade diagnóstica entre os dois protocolos.",
+    "limitations": "FONTE MAIS FRACA QUE DIRETRIZ OU ESTUDO PIVOTAL — publicada em periódico de propósito geral (Medicine, Baltimore), não em revista especializada de imagem cardiovascular; amostra de 74 pacientes, estudo comparativo, não ensaio randomizado.",
+    "source_refs": [
+      "Li Z, Zhang Y, Zhao J, Wang F, Wei W, Huang L. Feasibility of 80-kVp CTA with reduced iodine contrast in chronic limb-threatening ischemia. Medicine (Baltimore). 2026;105(14):e48193. PMID: 41931323 — fonte mais fraca que diretriz/estudo pivotal, declarado."
+    ],
+    "tags": [
+      "angiotc de baixa dose",
+      "protocolo de contraste reduzido",
+      "isquemia critica de membro"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
