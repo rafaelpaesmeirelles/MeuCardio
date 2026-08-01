@@ -1,0 +1,59 @@
+---
+title: "Troca Eletiva de Gerador de Marca-Passo e CDI: Risco por Escopo do Procedimento e o Escore REPLACE DARE"
+slug: troca-eletiva-de-gerador-marca-passo-cdi-risco-por-escopo-e-escore-dare-registro-replace
+theme: "Dispositivos"
+kind: estudo
+review_status: revisado
+source_refs: ["Poole JE, Gleva MJ, Mela T, Chung MK, Uslan DZ, Borge R, et al; REPLACE Registry Investigators. Complication rates associated with pacemaker or implantable cardioverter-defibrillator generator replacements and upgrade procedures: results from the REPLACE registry. Circulation. 2010;122(16):1553-1561. DOI: 10.1161/CIRCULATIONAHA.110.976076. PMID: 20921437 — autoria, desenho (coorte 1 sem adição planejada de eletrodo, coorte 2 com adição/upgrade), números de complicação maior e infecção conferidos no abstract indexado (PubMed) em 01/08/2026.", "Chung MK, Holcomb RG, Mittal S, Steinberg JS, Gleva MJ, Mela T, Uslan DZ, Mitchell K, Poole JE; REPLACE Investigators. REPLACE DARE (Death After Replacement Evaluation) score: determinants of all-cause mortality after implantable device replacement or upgrade from the REPLACE registry. Circ Arrhythm Electrophysiol. 2014;7(6):1048-1056. DOI: 10.1161/CIRCEP.114.001671. PMID: 25221331 — autoria, metodologia (coorte prospectiva REPLACE, regressão de Cox) e números (mortalidade em 6 meses, valores do escore, ROC, risco por faixa) conferidos no abstract indexado em 01/08/2026."]
+legacy_source: "Documento novo, escrito em 01/08/2026. A pasta Dispositivos tinha marcapasso sem eletrodo e manejo perioperatório, extração de eletrodo transvenoso, infecção de dispositivo e RM em portador de dispositivo legado (esta última em Perioperatório) — mas nenhum documento sobre a decisão mais frequente na prática ambulatorial de eletrofisiologia: quando e como trocar um gerador que está chegando ao fim de vida da bateria. Cobre a lacuna com os dois estudos que mais diretamente quantificam essa decisão, ambos do mesmo registro prospectivo (REPLACE)."
+---
+
+# Troca Eletiva de Gerador de Marca-Passo e CDI: Risco por Escopo do Procedimento e o Escore REPLACE DARE
+
+## Por que esta é uma decisão, não um procedimento de rotina
+Bateria chegando ao indicador de substituição eletiva (ERI) ou ao fim de vida (EOL) é o motivo mais comum de reoperação em portador de marca-passo ou cardiodesfibrilador implantável (CDI). A tentação é tratar a troca de gerador como procedimento simples — reabrir a loja, desconectar o gerador antigo, conectar um novo aos eletrodos já testados e fechar. **O REPLACE Registry (Poole JE et al., Circulation 2010, PMID 20921437) mostrou que essa premissa está errada na proporção exata em que o procedimento deixa de ser "só trocar a bateria".**
+
+## O registro REPLACE — desenho
+- **Estudo prospectivo, multicêntrico**, 72 centros acadêmicos e de prática privada nos Estados Unidos.
+- Avaliou complicações **pré-definidas**, relacionadas ao procedimento, ao longo de **6 meses de seguimento**, com adjudicação por comitê de eventos independente.
+- **Dois grupos, definidos ANTES do procedimento pelo escopo planejado:**
+  - **Coorte 1 (n = 1.031)**: troca eletiva de gerador de marca-passo ou CDI **sem** adição planejada de eletrodo transvenoso.
+  - **Coorte 2 (n = 713)**: troca **com** adição planejada de eletrodo, ou upgrade para dispositivo com terapia adicional (por exemplo, marca-passo para CDI, ou sistema para ressincronização cardíaca).
+- Fonte: Poole JE et al., Circulation. 2010;122(16):1553-1561, PMID 20921437.
+
+## Resultado — o risco escala com o que se acrescenta ao procedimento, não com "trocar a bateria" em si
+| Cenário | Complicação maior (IC95%) |
+|---|---|
+| Coorte 1 — só troca de gerador, sem eletrodo novo | **4,0%** (2,9–5,4%) |
+| Coorte 2 — troca com adição de eletrodo ou upgrade | **15,3%** (12,7–18,1%) |
+| Subgrupo de upgrade para ressincronização cardíaca ou revisão de sistema de TRC dentro da coorte 2 | **18,7%** (15,1–22,6%) |
+
+Em **ambas** as coortes, a complicação maior foi mais frequente na troca de **CDI** do que na de **marca-passo**. As taxas de infecção em 6 meses foram semelhantes entre os dois grupos — **1,4%** (0,7–2,3%) na coorte 1 e **1,1%** (0,5–2,2%) na coorte 2 — ou seja, **o excesso de risco na coorte 2 não é, principalmente, infeccioso**: é o risco mecânico de manipular ou acrescentar eletrodo (perfuração, deslocamento, pneumotórax, hematoma que exige reintervenção).
+
+**Não houve óbito periprocedimento em nenhuma das duas coortes**, mas **8 óbitos tardios relacionados ao procedimento ocorreram na coorte 2** — nenhum na coorte 1. Os próprios autores concluem que os achados **sustentam uma decisão cuidadosa antes da troca de dispositivo, no manejo de recalls/avisos de segurança do fabricante, e ao considerar upgrade para sistema mais complexo** — não que a troca deva ser evitada, mas que ela não é o procedimento de baixo risco que a prática costuma presumir.
+
+## O escore REPLACE DARE — para quem a troca é mais arriscada de morrer, não de complicar
+Mesmo registro REPLACE, análise secundária dedicada a mortalidade (Chung MK et al., Circ Arrhythm Electrophysiol. 2014;7(6):1048-1056, PMID 25221331):
+- De **1.744 pacientes** do registro (as duas coortes reunidas), **70 (4,0%) morreram em 6 meses**.
+- **Achado central, e contraintuitivo**: na regressão de Cox, **as complicações maiores do procedimento NÃO se associaram de forma significativa à morte**. Quem prediz óbito são as **comorbidades do paciente**: internação recente por insuficiência cardíaca, classe funcional NYHA III/IV, uso de antiarrítmico, doença cerebrovascular e estágio de doença renal crônica.
+- A partir dessas variáveis foi construído o **REPLACE DARE Score** (Death After Replacement Evaluation), um escore aditivo de risco:
+  - **DARE médio 2,0 ± 1,4 nos sobreviventes vs. 3,5 ± 1,8 nos que morreram** (p < 0,001).
+  - **Capacidade discriminativa (ROC) de 0,758** (p < 0,001) para prever morte em 6 meses.
+  - **Risco de morte de 1,0% no DARE = 0 contra 55,6% no DARE = 7** — um gradiente de risco de mais de 50 vezes entre os extremos do mesmo escore.
+  - Razão de risco (hazard ratio) de **1,8 para cada aumento de uma unidade** no DARE.
+
+**Consequência prática, dita pelos próprios autores**: em pacientes com DARE elevado, o risco de morte relacionado à troca não vem do procedimento em si — vem de quem é o paciente. Isso reposiciona a decisão: não é "o gerador está no ERI, logo troca-se", é "qual é a carga de comorbidade deste paciente específico, e o benefício esperado da troca (manter estimulação/terapia de choque) supera esse risco de base agora, ou há espaço para reavaliar o momento".
+
+## O que isso significa para a decisão de reprogramar, adiar ou trocar
+A combinação dos dois estudos do REPLACE dá três elementos concretos para a decisão à beira do consultório, quando a bateria atinge ERI:
+
+1. **Se a troca puder ser feita SEM adicionar ou revisar eletrodo**, o risco de complicação maior medido é de ordem de 4% — proporção que a literatura anterior ao REPLACE, baseada em séries retrospectivas, já vinha subestimando por presumir que a troca de gerador era procedimento de baixo risco uniforme.
+2. **Se o plano envolver adição de eletrodo, revisão de sistema ou upgrade** (por exemplo, de marca-passo para CDI, ou para ressincronização), o risco de complicação maior mais que triplica (15,3%, chegando a 18,7% nos upgrades de TRC) — dado que pesa a favor de separar, sempre que clinicamente possível, a pergunta "preciso trocar o gerador" da pergunta "preciso, além disso, mudar o sistema de eletrodos".
+3. **Em paciente com comorbidade pesada (DARE alto)**, o risco relevante a discutir com o paciente antes da troca não é o de complicação do procedimento — é o de mortalidade nos meses seguintes, que reflete a doença de base, não o procedimento. Nesses casos, a decisão de antecipar, postergar ou reforçar cuidado perioperatório (otimização de insuficiência cardíaca, função renal) antes de operar tem, nos dados deste registro, mais peso do que a técnica cirúrgica da troca.
+
+## Limite explícito do que este documento cobre
+O REPLACE registry quantifica o risco da troca e da adição/upgrade, e o escore DARE quantifica o risco de morte por comorbidade do paciente — os dois lados sólidos, com número real, desta decisão. **Sobre a prática de reprogramar o dispositivo (reduzir amplitude/duração de pulso, desativar terapias antitaquicardia acessórias, ajustar sensores) para ESTENDER o tempo até a troca em paciente de alto risco, esta sessão não localizou estudo prospectivo dedicado que quantifique o ganho de tempo ou o efeito sobre desfecho clínico** — é prática reconhecida em manejo de dispositivo, mas os números específicos (quantos meses de sobrevida de bateria uma reprogramação conservadora tipicamente acrescenta) exigiriam fonte própria, não encontrada nesta busca. **VERIFICAÇÃO HUMANA NECESSÁRIA** para quantificar essa estratégia — o que este documento sustenta com evidência primária é o risco de proceder à troca, e para quem esse risco pesa mais.
+
+## Fontes
+- Poole JE, Gleva MJ, Mela T, Chung MK, Uslan DZ, Borge R, et al; REPLACE Registry Investigators. Complication rates associated with pacemaker or implantable cardioverter-defibrillator generator replacements and upgrade procedures: results from the REPLACE registry. Circulation. 2010;122(16):1553-1561. PMID: 20921437.
+- Chung MK, Holcomb RG, Mittal S, Steinberg JS, Gleva MJ, Mela T, Uslan DZ, Mitchell K, Poole JE; REPLACE Investigators. REPLACE DARE (Death After Replacement Evaluation) score: determinants of all-cause mortality after implantable device replacement or upgrade from the REPLACE registry. Circ Arrhythm Electrophysiol. 2014;7(6):1048-1056. PMID: 25221331.
