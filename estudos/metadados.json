@@ -324,7 +324,8 @@
       "ensaio clínico"
     ],
     "review_status": "revisado",
-    "published": false
+    "published": false,
+    "pmid": "30152252"
   },
   {
     "slug": "castle-af-ablacao-por-cateter-fa-com-icfer",
@@ -4919,6 +4920,187 @@
       "mortalidade",
       "cardiopatia reumatica",
       "preditores de desfecho"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "duke-iscvid-2023-atualizacao-dos-criterios-de-duke",
+    "title": "The 2023 Duke-ISCVID Criteria for Infective Endocarditis — atualização dos critérios de Duke modificados",
+    "study_type": "consenso",
+    "authors": "Fowler VG, Durack DT, Selton-Suty C, et al.; ISCVID Working Group",
+    "journal": "Clinical Infectious Diseases",
+    "year": 2023,
+    "doi": "10.1093/cid/ciad271",
+    "pmid": "37138445",
+    "url": "https://doi.org/10.1093/cid/ciad271",
+    "summary": "Documento de consenso multissociedade (International Society for Cardiovascular Infectious Diseases) atualizando os critérios de Duke modificados de 1994/2000 para o diagnóstico de endocardite infecciosa.",
+    "key_findings": "Incorpora novos métodos microbiológicos (imunoensaio para Bartonella, PCR, sequenciamento de amplicon/metagenômico, hibridização in situ) e novos métodos de imagem (PET-CT com 18F-FDG, TC cardíaca) como critérios maiores. Acrescenta a inspeção intraoperatória como novo critério clínico maior. Amplia a lista de micro-organismos \"típicos\" e remove a exigência de tempo/punções separadas para hemocultura. Acrescenta condições predisponentes (TAVI, dispositivo eletrônico endovascular, EI prévia) à lista de critérios menores.",
+    "clinical_implications": "É o critério diagnóstico vigente usado por toda a base de conteúdo de Endocardite desta biblioteca — a atualização amplia a capacidade de diagnóstico definitivo sem depender só de hemocultura convencional, relevante sobretudo na EI de prótese/dispositivo com cultura difícil.",
+    "limitations": "É consenso de especialistas com revisão de evidência, não ensaio randomizado — a validação prospectiva multicêntrica dos novos critérios combinados ainda é limitada.",
+    "theme": "Endocardite",
+    "tags": [
+      "criterios de duke",
+      "duke-iscvid",
+      "criterios diagnosticos",
+      "consenso"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "pet-ct-metanalise-ipd-endocardite-de-protese-valvar",
+    "title": "Metanálise de dados de paciente individual — acurácia do PET-CT/FDG na endocardite de prótese valvar",
+    "study_type": "metanalise",
+    "authors": "O'Gorman P, Nair L, Kisiel N, Hughes I, Huang K, et al.",
+    "journal": "American Heart Journal",
+    "year": 2023,
+    "doi": "10.1016/j.ahj.2023.03.007",
+    "pmid": "36934977",
+    "url": "https://doi.org/10.1016/j.ahj.2023.03.007",
+    "summary": "Metanálise de dados de paciente individual (IPD) reunindo 17 estudos e 537 pacientes (538 exames) avaliando sensibilidade e especificidade do PET-CT com 18F-FDG para endocardite de prótese valvar (PVE).",
+    "key_findings": "Sensibilidade e especificidade combinadas: 85% (IC95% 74,2-91,8%) e 86,5% (IC95% 75,8-92,9%) quando \"PVE possível\" é classificado como positivo; 87,4%/84,9% quando classificado como negativo. Patógeno conhecido (sobretudo estafilococo coagulase-negativo), PCR elevada, valva biológica ou aórtica associaram-se a maior acurácia; valva mecânica, antibiótico prévio ou TAVI reduziram a acurácia. 84% dos casos inicialmente \"possível PVE\" pelos critérios de Duke receberam diagnóstico final mais conclusivo após o PET-CT.",
+    "clinical_implications": "Quantifica, com a maior amostra reunida até então, o ganho diagnóstico real do PET-CT/FDG na endocardite de prótese — sustenta sua incorporação como critério maior nos critérios de Duke-ISCVID 2023, e mostra que o exame reclassifica a maioria dos casos ambíguos.",
+    "limitations": "Heterogeneidade de protocolo entre os 17 estudos reunidos; acurácia varia por fatores identificados (tipo de valva, uso prévio de antibiótico) que nem sempre são reportados uniformemente.",
+    "theme": "Endocardite",
+    "tags": [
+      "pet-ct",
+      "fdg",
+      "endocardite de protese",
+      "metanalise de dados individuais"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "poetry-implementacao-clinica-do-protocolo-poet",
+    "title": "POETry — implementação clínica real do protocolo de troca para antibiótico oral na endocardite (estudo dinamarquês)",
+    "study_type": "estudo_de_coorte",
+    "authors": "Pries-Heje MM, Hjulmand JG, Lenz IT, Hasselbalch RB, Povlsen JA, et al.",
+    "journal": "European Heart Journal",
+    "year": 2023,
+    "doi": "10.1093/eurheartj/ehad592",
+    "pmid": "37879115",
+    "url": "https://doi.org/10.1093/eurheartj/ehad592",
+    "summary": "Estudo observacional dinamarquês (não randomizado), avaliando a implementação do esquema POET fora de ensaio clínico, em 562 pacientes com endocardite infecciosa (idade mediana 74 anos) entre maio/2019 e dezembro/2020.",
+    "key_findings": "Terapia oral (PO) em 240 pacientes (43%) vs. intravenosa (IV) em 322 (57%) — o grupo IV concentrou mais casos de S. aureus, abscesso intracardíaco, marca-passo e cirurgia. Desfecho primário composto: 13% (PO) vs. 18% (IV), p=0,051. Mortalidade por todas as causas: 8% (PO) vs. 14% (IV), p=0,024. Internação mais curta no grupo oral (mediana 24 vs. 43 dias, p<0,001).",
+    "clinical_implications": "Confirma, em prática clínica real (não em protocolo de ensaio), que a troca para via oral é factível e reduz tempo de internação. Os próprios autores alertam que a menor mortalidade observada no grupo oral pode refletir viés de seleção — médicos escolheram via oral para os pacientes clinicamente mais estáveis, o que o desenho observacional não consegue separar do efeito do tratamento.",
+    "limitations": "Não randomizado — viés de seleção explicitamente reconhecido pelos próprios autores como limitação central; complementa mas não substitui o ensaio randomizado POET.",
+    "theme": "Endocardite",
+    "tags": [
+      "poet",
+      "antibiotico oral",
+      "implementacao clinica",
+      "estudo observacional"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "pizzi-2015-pet-ct-em-endocardite-de-protese-e-dispositivo-coorte-de-barcelona",
+    "title": "PET-CT/FDG na endocardite de prótese valvar e dispositivo — coorte prospectiva de centro de referência (Barcelona)",
+    "study_type": "estudo_de_coorte",
+    "authors": "Pizzi MN, Roque A, Fernández-Hidalgo N, Cuéllar-Calabria H, et al.",
+    "journal": "Circulation",
+    "year": 2015,
+    "doi": "10.1161/CIRCULATIONAHA.115.015316",
+    "pmid": "26276890",
+    "url": "https://doi.org/10.1161/CIRCULATIONAHA.115.015316",
+    "summary": "Coorte prospectiva de 92 pacientes com suspeita de endocardite de prótese valvar ou dispositivo cardíaco (novembro/2012 a novembro/2014) em centro de referência, todos submetidos a ecocardiograma e PET-CT/FDG, 76 também a angiotomografia (PET/CTA).",
+    "key_findings": "Concordância entre eco e PET-CT em apenas 54% dos casos (kappa=0,23). Critérios de Duke isolados: sensibilidade 52%, especificidade 94,7%. PET-CT isolado: sensibilidade 87%, especificidade 92,1%. Duke + PET-CT combinados: sensibilidade 90,7%, especificidade 89,5% — reclassificou 90% dos casos inicialmente \"possível EI\" para diagnóstico conclusivo em 95% das vezes. PET-CTA (com contraste) teve desempenho ainda melhor, reduzindo casos duvidosos de 20% para 8% (p<0,001).",
+    "clinical_implications": "Um dos estudos fundadores que levou à incorporação do PET-CT como critério maior nos critérios de Duke atualizados — mostra concretamente o ganho de reclassificação diagnóstica em população de alto risco (prótese/dispositivo), onde os critérios de Duke clássicos têm sensibilidade baixa (52%).",
+    "limitations": "Centro único, alta especialização em EI — resultado pode não generalizar a serviços com menor volume/experiência em PET-CT cardíaco; concordância baixa com eco reflete população selecionada de casos diagnósticos difíceis.",
+    "theme": "Endocardite",
+    "tags": [
+      "pet-ct",
+      "endocardite de protese",
+      "infeccao de dispositivo",
+      "criterios de duke"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "csrs-escore-canadense-de-risco-na-sincope",
+    "title": "Canadian Syncope Risk Score (CSRS) — derivação de escore para predizer evento adverso grave após avaliação de síncope na emergência",
+    "study_type": "estudo_de_coorte",
+    "authors": "Thiruganasambandamoorthy V, Kwong K, Wells GA, Sivilotti MLA, Mukarram M, et al.",
+    "journal": "CMAJ (Canadian Medical Association Journal)",
+    "year": 2016,
+    "doi": "10.1503/cmaj.151469",
+    "pmid": "27378464",
+    "url": "https://doi.org/10.1503/cmaj.151469",
+    "summary": "Coorte prospectiva de derivação de escore, 6 prontos-socorros canadenses, 4.030 pacientes com síncope (idade média 53,6 anos, 55,5% mulheres, 9,5% internados).",
+    "key_findings": "Evento adverso grave em 30 dias em 147 pacientes (3,6%). De 43 preditores candidatos, 9 entraram no modelo final: predisposição a síncope vasovagal, cardiopatia, PA sistólica <90 ou >180 mmHg na emergência, troponina acima do percentil 99, eixo de QRS anormal (<-30° ou >100°), QRS >130ms, QTc >480ms, e diagnóstico de síncope cardíaca ou vasovagal já na emergência (estatística C 0,88; IC95% 0,85-0,90). Risco variou de 0,4% (escore -3) a 83,6% (escore 11); sensibilidade de 99,2% no limiar ≥-2.",
+    "clinical_implications": "Ferramenta validada para decisão de alta vs. observação/internação após síncope na emergência — sensibilidade muito alta no limiar recomendado torna o escore útil sobretudo para identificar com segurança quem pode ter alta precoce.",
+    "limitations": "Estudo de derivação — precisa de validação externa antes de aplicação isolada; população canadense, extrapolação a outros sistemas de saúde não é automática.",
+    "theme": "Síncope",
+    "tags": [
+      "escore de risco",
+      "sincope na emergencia",
+      "canadian syncope risk score"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "stand-trial-midodrina-na-sincope-vasovagal-refrataria",
+    "title": "STAND-trial — midodrina na síncope vasovagal recorrente refratária ao tratamento não farmacológico (resultado negativo)",
+    "study_type": "ensaio_clinico",
+    "authors": "Romme JJ, van Dijk N, Go-Schön IK, Reitsma JB, Wieling W",
+    "journal": "Europace",
+    "year": 2011,
+    "doi": "10.1093/europace/eur200",
+    "pmid": "21752826",
+    "url": "https://doi.org/10.1093/europace/eur200",
+    "summary": "Ensaio cruzado, duplo-cego, 23 pacientes com síncope vasovagal recorrente REFRATÁRIA a medidas não farmacológicas, tratados com midodrina ou placebo por 3 meses cada, com 1 semana de washout entre os períodos.",
+    "key_findings": "Recorrência de síncope: 48% (midodrina) vs. 65% (placebo), p=0,22 — SEM diferença estatisticamente significativa. Pré-síncope: 74% vs. 78%, p>0,99. Número mediano de episódios em 3 meses também sem diferença (síncope 0 vs. 1, p=0,57). Efeitos colaterais semelhantes entre os grupos (48% vs. 57%).",
+    "clinical_implications": "Resultado NEGATIVO que contrasta diretamente com o POST 4 (já cadastrado nesta base), positivo para midodrina na síncope vasovagal em geral. A diferença de população explica o contraste: o STAND-trial selecionou justamente pacientes REFRATÁRIOS ao manejo não farmacológico, um subgrupo mais grave — sinal de que a midodrina, eficaz na população geral do POST 4, pode não sustentar o mesmo benefício quando a síncope já resistiu a medidas de primeira linha.",
+    "limitations": "Amostra pequena (23 pacientes), o que limita poder estatístico para detectar diferença moderada; desenho cruzado pode diluir efeito se houver carryover entre os períodos apesar do washout.",
+    "theme": "Síncope",
+    "tags": [
+      "midodrina",
+      "sincope vasovagal refrataria",
+      "ensaio negativo",
+      "stand-trial"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "csars-escore-canadense-de-risco-de-arritmia-na-sincope",
+    "title": "Canadian Syncope Arrhythmia Risk Score (CSARS) — predição de risco de arritmia de curto prazo na síncope",
+    "study_type": "estudo_de_coorte",
+    "authors": "Thiruganasambandamoorthy V, Stiell IG, Sivilotti MLA, Rowe BH, Mukarram M, et al.",
+    "journal": "Academic Emergency Medicine",
+    "year": 2017,
+    "doi": "10.1111/acem.13239",
+    "pmid": "28791782",
+    "url": "https://doi.org/10.1111/acem.13239",
+    "summary": "Coorte prospectiva multicêntrica, 6 emergências terciárias canadenses, 5.010 pacientes com síncope (idade média 53,4 anos), derivando escore específico para risco de arritmia (não desfecho adverso geral, como o CSRS).",
+    "key_findings": "Arritmia ou óbito em 30 dias em 106 pacientes (2,1%). De 39 variáveis candidatas, 8 entraram no modelo final: ausência de predisposição vasovagal, cardiopatia, PA sistólica <90 ou >180 mmHg, troponina acima do percentil 99, QRS >130ms, QTc >480ms, e diagnóstico de síncope cardíaca ou vasovagal na emergência (estatística C 0,90; IC95% 0,87-0,93). Risco de 0,2% a 74,5% conforme o escore (-2 a 8); no limiar ≥0, sensibilidade de 97,1% e especificidade de 53,4%.",
+    "clinical_implications": "Complementa o CSRS (risco de desfecho adverso geral) com um escore focado especificamente em arritmia — útil quando a decisão clínica é sobre monitorização eletrocardiográfica prolongada, não sobre internação em geral.",
+    "limitations": "Mesma coorte de origem do grupo CSRS — ainda carece de validação totalmente independente fora do sistema canadense; estudo de derivação, não de validação externa.",
+    "theme": "Síncope",
+    "tags": [
+      "escore de risco",
+      "arritmia",
+      "canadian syncope arrhythmia risk score"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "duracao-de-monitorizacao-ecg-pos-alta-por-estrato-de-risco",
+    "title": "Duração ideal de monitorização eletrocardiográfica após alta de pacientes com síncope, por estrato de risco (CSRS)",
+    "study_type": "estudo_de_coorte",
+    "authors": "Thiruganasambandamoorthy V, Rowe BH, Sivilotti MLA, McRae AD, Arcot K, et al.",
+    "journal": "Circulation",
+    "year": 2019,
+    "doi": "10.1161/CIRCULATIONAHA.118.036495",
+    "pmid": "30661373",
+    "url": "https://doi.org/10.1161/CIRCULATIONAHA.118.036495",
+    "summary": "Coorte prospectiva, 6 emergências, 5.581 pacientes com síncope, seguidos por 30 dias e estratificados pelo Canadian Syncope Risk Score (CSRS), avaliando quando ocorrem os desfechos arrítmicos após a alta.",
+    "key_findings": "Desfecho arrítmico grave em 207 pacientes (3,7%: 161 arritmias, 30 implantes de dispositivo, 16 óbitos inexplicados). Risco por estrato do CSRS: baixo 0,4%, médio 8,7%, alto 25,3%. Metade dos desfechos arrítmicos ocorreu nas primeiras 2h (risco baixo) ou 6h (risco médio/alto) da chegada; 91,7% dos desfechos em risco médio/alto (incluindo TODAS as arritmias ventriculares) ocorreram em até 15 dias. Nenhum paciente de baixo risco teve arritmia ventricular ou óbito inexplicado.",
+    "clinical_implications": "Dá base numérica direta para a duração da monitorização ambulatorial pós-alta: 15 dias captura praticamente todos os desfechos arrítmicos graves em pacientes de risco médio/alto selecionados para alta — sustenta o uso de monitor de eventos de curta duração em vez de internação prolongada só para observação.",
+    "limitations": "Aplica-se a pacientes considerados aptos para alta (não aos de altíssimo risco, que a própria estratificação já indicaria internar); dependente da adoção correta do CSRS na triagem inicial.",
+    "theme": "Síncope",
+    "tags": [
+      "monitorizacao eletrocardiografica",
+      "canadian syncope risk score",
+      "alta da emergencia"
     ],
     "review_status": "revisado"
   }

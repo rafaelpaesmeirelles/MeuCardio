@@ -24584,5 +24584,174 @@
       "ascvd"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-scc-ccta-primeira-linha-em-probabilidade-baixa-a-moderada",
+    "statement": "Em indivíduos com suspeita de síndrome coronariana crônica (SCC) e probabilidade pré-teste baixa ou moderada (>5%-50%) de doença arterial coronariana obstrutiva, a angiotomografia coronariana (CCTA) é recomendada para diagnosticar doença obstrutiva e estimar o risco de eventos cardiovasculares maiores (MACE).",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of chronic coronary syndromes",
+    "reference": "Vrints C, Andreotti F, Koskinas KC, Rossello X, Adamo M, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of chronic coronary syndromes. Eur Heart J. 2024;45(36):3415-3537. DOI: 10.1093/eurheartj/ehae177. PMID: 39210710. Texto integral em PDF conferido linha a linha nesta sessão (não é o mesmo documento do fluxograma/teste funcional já cadastrados desta diretriz — recorte de angiotomografia coronariana e escore de cálcio). Contexto: Recommendation Table 8, CCTA de primeira linha",
+    "theme": "Doença coronariana",
+    "tags": [
+      "ccta",
+      "angiotomografia coronariana",
+      "probabilidade pre-teste"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-scc-ccta-segunda-linha-apos-teste-nao-invasivo-inconclusivo",
+    "statement": "A CCTA é recomendada em indivíduos com probabilidade pré-teste baixa ou moderada (>5%-50%) para refinar o diagnóstico quando outro teste não invasivo for inconclusivo.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of chronic coronary syndromes",
+    "reference": "Vrints C, Andreotti F, Koskinas KC, Rossello X, Adamo M, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of chronic coronary syndromes. Eur Heart J. 2024;45(36):3415-3537. DOI: 10.1093/eurheartj/ehae177. PMID: 39210710. Texto integral em PDF conferido linha a linha nesta sessão (não é o mesmo documento do fluxograma/teste funcional já cadastrados desta diretriz — recorte de angiotomografia coronariana e escore de cálcio). Contexto: Recommendation Table 8, CCTA de segunda linha",
+    "theme": "Doença coronariana",
+    "tags": [
+      "ccta",
+      "angiotomografia coronariana",
+      "teste nao invasivo inconclusivo"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-scc-ccta-contraindicada-por-limitacao-tecnica",
+    "statement": "A CCTA NÃO é recomendada em pacientes com insuficiência renal grave (TFGe <30 mL/min/1,73m²), insuficiência cardíaca descompensada, calcificação coronariana extensa, frequência cardíaca rápida e irregular, obesidade grave, incapacidade de cooperar com comando de apneia, ou qualquer condição que torne improvável obter qualidade de imagem adequada.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of chronic coronary syndromes",
+    "reference": "Vrints C, Andreotti F, Koskinas KC, Rossello X, Adamo M, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of chronic coronary syndromes. Eur Heart J. 2024;45(36):3415-3537. DOI: 10.1093/eurheartj/ehae177. PMID: 39210710. Texto integral em PDF conferido linha a linha nesta sessão (não é o mesmo documento do fluxograma/teste funcional já cadastrados desta diretriz — recorte de angiotomografia coronariana e escore de cálcio). Contexto: Recommendation Table 8, contraindicação técnica à CCTA",
+    "theme": "Doença coronariana",
+    "tags": [
+      "ccta",
+      "contraindicacao",
+      "limitacao tecnica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-scc-modelo-rf-cl-para-probabilidade-pre-teste",
+    "statement": "É recomendado estimar a probabilidade pré-teste de doença arterial coronariana obstrutiva epicárdica usando o modelo Risk Factor-weighted Clinical Likelihood (RF-CL), que pondera fatores de risco além dos dados clínicos básicos.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of chronic coronary syndromes",
+    "reference": "Vrints C, Andreotti F, Koskinas KC, Rossello X, Adamo M, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of chronic coronary syndromes. Eur Heart J. 2024;45(36):3415-3537. DOI: 10.1093/eurheartj/ehae177. PMID: 39210710. Texto integral em PDF conferido linha a linha nesta sessão (não é o mesmo documento do fluxograma/teste funcional já cadastrados desta diretriz — recorte de angiotomografia coronariana e escore de cálcio). Contexto: Recommendation Table 3, modelo de probabilidade pré-teste",
+    "theme": "Doença coronariana",
+    "tags": [
+      "probabilidade pre-teste",
+      "rf-cl",
+      "modelo de risco"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-scc-probabilidade-muito-baixa-considerar-adiar-testes",
+    "statement": "Em indivíduos com probabilidade pré-teste muito baixa (≤5%) de doença coronariana obstrutiva, deve-se considerar adiar testes diagnósticos adicionais.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of chronic coronary syndromes",
+    "reference": "Vrints C, Andreotti F, Koskinas KC, Rossello X, Adamo M, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of chronic coronary syndromes. Eur Heart J. 2024;45(36):3415-3537. DOI: 10.1093/eurheartj/ehae177. PMID: 39210710. Texto integral em PDF conferido linha a linha nesta sessão (não é o mesmo documento do fluxograma/teste funcional já cadastrados desta diretriz — recorte de angiotomografia coronariana e escore de cálcio). Contexto: Recommendation Table 3, probabilidade muito baixa",
+    "theme": "Doença coronariana",
+    "tags": [
+      "probabilidade pre-teste",
+      "adiamento de teste"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-scc-escore-de-calcio-para-reclassificar-probabilidade-baixa",
+    "statement": "Em indivíduos com probabilidade pré-teste BAIXA (>5%-15%) de doença coronariana obstrutiva, o escore de cálcio coronariano (CACS) deve ser considerado para reclassificar o paciente e identificar mais casos de probabilidade clínica ponderada pelo cálcio verdadeiramente muito baixa (≤5%). O modelo combinado CACS+RF-CL (CACS-CL) categorizou 54% dos pacientes como de probabilidade muito baixa, contra 38% pelo RF-CL isolado, com melhor predição de infarto e óbito no seguimento.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of chronic coronary syndromes",
+    "reference": "Vrints C, Andreotti F, Koskinas KC, Rossello X, Adamo M, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of chronic coronary syndromes. Eur Heart J. 2024;45(36):3415-3537. DOI: 10.1093/eurheartj/ehae177. PMID: 39210710. Texto integral em PDF conferido linha a linha nesta sessão (não é o mesmo documento do fluxograma/teste funcional já cadastrados desta diretriz — recorte de angiotomografia coronariana e escore de cálcio). Contexto: Recommendation Table 3, escore de cálcio para reclassificação",
+    "theme": "Doença coronariana",
+    "tags": [
+      "escore de calcio",
+      "cacs",
+      "reclassificacao de risco"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-scc-achado-incidental-de-calcio-em-tc-previa-refina-risco",
+    "statement": "Quando há achado de calcificação coronariana em TC de tórax prévia feita por outro motivo, usar esse achado para reforçar a estratificação de risco e guiar o tratamento de fatores de risco modificáveis deve ser considerado.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of chronic coronary syndromes",
+    "reference": "Vrints C, Andreotti F, Koskinas KC, Rossello X, Adamo M, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of chronic coronary syndromes. Eur Heart J. 2024;45(36):3415-3537. DOI: 10.1093/eurheartj/ehae177. PMID: 39210710. Texto integral em PDF conferido linha a linha nesta sessão (não é o mesmo documento do fluxograma/teste funcional já cadastrados desta diretriz — recorte de angiotomografia coronariana e escore de cálcio). Contexto: Recommendation Table 27, achado incidental de cálcio coronariano",
+    "theme": "Doença coronariana",
+    "tags": [
+      "escore de calcio",
+      "achado incidental",
+      "rastreio assintomatico"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-scc-escore-de-calcio-deliberado-em-assintomatico-pode-ser-considerado",
+    "statement": "Em indivíduo assintomático, o escore de cálcio coronariano pode ser considerado, pedido deliberadamente, para melhorar a classificação de risco em torno de limiares de decisão terapêutica (ex.: início de estatina/antiagregação) — finalidade distinta de diagnosticar dor torácica.",
+    "recommendation_class": "IIb",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of chronic coronary syndromes",
+    "reference": "Vrints C, Andreotti F, Koskinas KC, Rossello X, Adamo M, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of chronic coronary syndromes. Eur Heart J. 2024;45(36):3415-3537. DOI: 10.1093/eurheartj/ehae177. PMID: 39210710. Texto integral em PDF conferido linha a linha nesta sessão (não é o mesmo documento do fluxograma/teste funcional já cadastrados desta diretriz — recorte de angiotomografia coronariana e escore de cálcio). Contexto: Recommendation Table 27, escore de cálcio em assintomático",
+    "theme": "Doença coronariana",
+    "tags": [
+      "escore de calcio",
+      "rastreio assintomatico",
+      "decisao terapeutica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-scc-us-de-carotidas-alternativa-ao-escore-de-calcio-indisponivel",
+    "statement": "Ultrassom de carótidas pode ser considerado como alternativa quando o escore de cálcio coronariano não está disponível ou não é viável, para detectar aterosclerose e melhorar a classificação de risco em torno de limiares de decisão terapêutica.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of chronic coronary syndromes",
+    "reference": "Vrints C, Andreotti F, Koskinas KC, Rossello X, Adamo M, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of chronic coronary syndromes. Eur Heart J. 2024;45(36):3415-3537. DOI: 10.1093/eurheartj/ehae177. PMID: 39210710. Texto integral em PDF conferido linha a linha nesta sessão (não é o mesmo documento do fluxograma/teste funcional já cadastrados desta diretriz — recorte de angiotomografia coronariana e escore de cálcio). Contexto: Recommendation Table 27, ultrassom de carótidas como alternativa",
+    "theme": "Doença coronariana",
+    "tags": [
+      "escore de calcio",
+      "ultrassom de carotidas",
+      "aterosclerose subclinica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esc2024-scc-ffr-ct-integra-definicao-de-alto-risco-anatomico-funcional",
+    "statement": "Estenose ≥70% de descendente anterior proximal associada a FFR-CT (fração de fluxo de reserva derivada da angiotomografia) ≤0,8 integra a definição de alto risco anatômico-funcional que justifica angiografia invasiva com avaliação funcional. O FFR-CT não tem recomendação isolada de classe/nível nesta diretriz — aparece apenas dentro desse critério combinado.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of chronic coronary syndromes",
+    "reference": "Vrints C, Andreotti F, Koskinas KC, Rossello X, Adamo M, et al.; ESC Scientific Document Group. 2024 ESC Guidelines for the management of chronic coronary syndromes. Eur Heart J. 2024;45(36):3415-3537. DOI: 10.1093/eurheartj/ehae177. PMID: 39210710. Texto integral em PDF conferido linha a linha nesta sessão (não é o mesmo documento do fluxograma/teste funcional já cadastrados desta diretriz — recorte de angiotomografia coronariana e escore de cálcio). Contexto: Tabela de critérios de alto risco anatômico-funcional, FFR-CT combinado",
+    "theme": "Doença coronariana",
+    "tags": [
+      "ffr-ct",
+      "alto risco anatomico",
+      "angiotomografia coronariana"
+    ],
+    "review_status": "revisado"
   }
 ]
