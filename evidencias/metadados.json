@@ -22171,14 +22171,31 @@
     "review_status": "revisado"
   },
   {
-    "slug": "jcs2026-ei-t10-fdg-pet-ct-quando-diagnostico-indefinido",
-    "statement": "18F-FDG PET/CT deve ser considerado quando há suspeita de EI, particularmente em pacientes com valvas protéticas ou dispositivos implantados, e o diagnóstico definitivo não pode ser estabelecido por outros métodos (sem cobertura pelo seguro de saúde japonês para esta indicação).",
+    "slug": "jcs2026-ei-t10-fdg-pet-ct-valva-protetica-ou-cied",
+    "statement": "18F-FDG PET/CT deve ser considerado quando há suspeita de EI em pacientes com VALVA PROTÉTICA OU DISPOSITIVO IMPLANTADO (CIED) e o diagnóstico definitivo não pode ser estabelecido por outros métodos (sem cobertura pelo seguro de saúde japonês para esta indicação).",
     "recommendation_class": "IIa",
-    "evidence_level": "A para EI de valva protética/CIED; C para EI de valva nativa",
+    "evidence_level": "A",
     "society": "JCS",
     "year": 2026,
     "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
-    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 10",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 10, nível A específico para EI de valva protética/CIED",
+    "theme": "Endocardite",
+    "tags": [
+      "pet-ct",
+      "endocardite de protese",
+      "endocardite de dispositivo"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "jcs2026-ei-t10-fdg-pet-ct-valva-nativa",
+    "statement": "18F-FDG PET/CT deve ser considerado quando há suspeita de EI em VALVA NATIVA e o diagnóstico definitivo não pode ser estabelecido por outros métodos (sem cobertura pelo seguro de saúde japonês para esta indicação). O nível de evidência é mais baixo que para valva protética/CIED, pela menor especificidade do método na valva nativa.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "JCS",
+    "year": 2026,
+    "guideline_title": "JCS 2026 Guideline on the Management of Infective Endocarditis",
+    "reference": "Izumi C, Daimon M, Kaji S, Masumoto A, Ashihara K, et al., on behalf of the Japanese Circulation Society Joint Working Group. JCS 2026 Guideline on the Management of Infective Endocarditis. Circulation Journal (Advance Publication). DOI: 10.1253/circj.CJ-25-0987. Publicado online 20/03/2026, HTML atualizado 13/06/2026. PMID ainda não indexado no PubMed (publicação recente \"advance\") — não afirmado. Acesso aberto no J-STAGE, texto integral conferido nesta sessão em 01/08/2026: https://www.jstage.jst.go.jp/article/circj/advpub/0/advpub_CJ-25-0987/_pdf/-char/en. Contexto: Table 10, nível C específico para EI de valva nativa",
     "theme": "Endocardite",
     "tags": [
       "pet-ct",
