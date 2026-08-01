@@ -8559,5 +8559,126 @@
       "Chida Y, Steptoe A. The association of anger and hostility with future coronary heart disease: a meta-analytic review of prospective evidence. J Am Coll Cardiol. 2009;53(11):936-946. DOI: 10.1016/j.jacc.2008.11.044. PMID: 19281923."
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "hit-suspeita-clinica-antes-da-confirmacao-laboratorial",
+    "titulo": "A plaqueta caiu no 6º dia de heparina — tratar antes do laboratório confirmar?",
+    "tema": "Farmacologia",
+    "nivel": "intermediário",
+    "enunciado": "Paciente de 62 anos, internado há 6 dias por síndrome coronariana aguda, em uso de enoxaparina profilática desde a admissão. A contagem de plaquetas, que era 220.000/µL na admissão, caiu para 95.000/µL hoje. Não há sangramento. O médico assistente considera suspender a heparina e trocar por um anticoagulante não heparínico, mas os testes laboratoriais confirmatórios (ELISA anti-PF4/heparina, teste funcional) ainda não saíram.",
+    "pergunta": "Segundo a diretriz da American Society of Hematology (ASH) de 2018 sobre HIT (Cuker A et al., Blood Adv. 2018;2(22):3360-3392, PMID 30482768), qual é a conduta correta e sua justificativa?",
+    "opcoes": [
+      "Aguardar a confirmação laboratorial antes de qualquer mudança de conduta — HIT é diagnóstico de exclusão que só se trata após ELISA positivo, e suspender heparina sem confirmação expõe o paciente a troca desnecessária de anticoagulante",
+      "Suspender a heparina e iniciar anticoagulante não heparínico com base na probabilidade clínica (ex.: escore 4Ts), mesmo antes da confirmação laboratorial — porque HIT não tratada tem risco diário de 5-10% de tromboembolismo, amputação ou morte, e a decisão terapêutica costuma anteceder o resultado do teste",
+      "Transfundir plaquetas para corrigir a trombocitopenia antes de decidir sobre a heparina",
+      "Manter a heparina no mesmo esquema, já que a queda de plaqueta em uso de heparina profilática (diferente da terapêutica) não tem relevância clínica"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A HIT é uma reação protrombótica (não hemorrágica) mediada por anticorpo, com risco diário de 5-10% de tromboembolismo, amputação ou morte se não tratada, segundo a diretriz ASH 2018. Por isso a decisão de suspender a heparina e iniciar anticoagulante não heparínico é tomada com base na probabilidade clínica (escore 4Ts), ANTES da confirmação laboratorial — esperar o ELISA ou o teste funcional expõe o paciente a dias de risco trombótico não tratado. Transfusão de plaquetas é contraindicada na suspeita de HIT, porque pode piorar a trombose (a doença não é de sangramento). A queda de plaqueta em vigência de heparina, seja profilática ou terapêutica, deve levantar a suspeita — a via de administração não muda a fisiopatologia do anticorpo anti-PF4/heparina.",
+    "source_refs": [
+      "Cuker A, Arepally GM, Chong BH, Cines DB, Greinacher A, Gruel Y, et al. American Society of Hematology 2018 guidelines for management of venous thromboembolism: heparin-induced thrombocytopenia. Blood Adv. 2018;2(22):3360-3392. DOI: 10.1182/bloodadvances.2018024489. PMID: 30482768."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "esmolol-no-choque-septico-taquicardico-refratario",
+    "titulo": "Choque séptico com frequência cardíaca persistente de 110 bpm apesar de noradrenalina — betabloqueador é seguro?",
+    "tema": "Terapia intensiva",
+    "nivel": "avançado",
+    "enunciado": "Paciente de 58 anos em choque séptico, já com volemia otimizada e noradrenalina em infusão para manter PAM ≥65 mmHg, mantém frequência cardíaca de 110 bpm de forma persistente. Um residente pergunta se faria sentido usar um betabloqueador para reduzir a frequência, mas outro médico da equipe se opõe, alegando que betabloqueador é contraindicado no choque por reduzir o débito cardíaco.",
+    "pergunta": "Segundo o ensaio de Morelli A et al. (JAMA. 2013;310(16):1683-1691, PMID 24108526), que testou esmolol titulado para manter FC entre 80-94 bpm nesse cenário específico (choque séptico com FC≥95 apesar de volemia e noradrenalina otimizadas), qual foi o achado de mortalidade em 28 dias e qual a ressalva mais importante sobre como interpretá-lo?",
+    "opcoes": [
+      "Mortalidade em 28 dias foi maior no grupo esmolol (66,0% vs. 49,4%), confirmando que betabloqueador é deletério no choque séptico e não deve ser usado",
+      "Mortalidade em 28 dias foi menor no grupo esmolol (49,4% vs. 80,5% no controle, HR 0,39), mas o achado exige cautela: é um ensaio de fase 2, unicêntrico, aberto, com 154 pacientes, sem poder desenhado para mortalidade como desfecho primário — magnitude grande demais para ser lida como prova definitiva",
+      "Não houve diferença de mortalidade entre os grupos, e o único benefício foi hemodinâmico (menor necessidade de fluido)",
+      "O ensaio foi interrompido precocemente por excesso de eventos adversos graves no grupo esmolol"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O ensaio de Morelli et al. (JAMA 2013) randomizou 154 pacientes (77 por braço) em choque séptico com FC≥95 bpm apesar de volemia e noradrenalina otimizadas, para infusão de esmolol (alvo FC 80-94 bpm) vs. tratamento padrão. A mortalidade em 28 dias foi 49,4% no grupo esmolol contra 80,5% no controle, HR ajustado 0,39 (IC95% 0,26-0,59). É o achado mais chamativo do ensaio, mas a magnitude — mortalidade quase pela metade — é grande demais para um estudo de fase 2, unicêntrico, aberto (sem cegamento) e pequeno ser interpretado como prova definitiva: o desfecho primário do ensaio era o controle de frequência cardíaca, não a mortalidade, que entrou como desfecho secundário exploratório. O artigo relatou ausência de diferença clinicamente relevante de eventos adversos entre os grupos, sem sinal de descompensação hemodinâmica precipitada pelo betabloqueio — mas isso não substitui a necessidade de replicação em ensaio maior, multicêntrico e cego antes de mudar a prática padrão.",
+    "source_refs": [
+      "Morelli A, Ertmer C, Westphal M, Rehberg S, Kampmeier T, Ligges S, et al. Effect of heart rate control with esmolol on hemodynamic and clinical outcomes in patients with septic shock: a randomized clinical trial. JAMA. 2013;310(16):1683-1691. DOI: 10.1001/jama.2013.278477. PMID: 24108526."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "semaglutida-e-protecao-renal-no-diabetico-com-drc-o-ensaio-flow",
+    "titulo": "Paciente diabético com DRC já em iSGLT2 — semaglutida ainda acrescenta proteção renal?",
+    "tema": "Diabetes e cardiologia",
+    "nivel": "intermediário",
+    "enunciado": "Mulher de 64 anos com diabetes tipo 2 e doença renal crônica, já em uso de dapagliflozina, é avaliada para acrescentar um agonista de GLP-1. O médico assistente pergunta se, no paciente que já usa iSGLT2, ainda há benefício renal demonstrado ao acrescentar semaglutida.",
+    "pergunta": "Segundo o ensaio FLOW (Perkovic V et al., N Engl J Med. 2024;391(2):109-121, PMID 38785209) e sua análise de subgrupo pré-especificada por uso basal de iSGLT2 (Mann JFE et al., Nat Med. 2024;30(10):2849-2856, PMID 38914124), o que se pode afirmar sobre o benefício renal da semaglutida em quem já usa iSGLT2?",
+    "opcoes": [
+      "O subgrupo com iSGLT2 basal (n=550) não mostrou benefício demonstrável isolado (HR 1,07), mas o teste de interação (p=0,109) não confirmou heterogeneidade real do efeito entre os subgrupos — a leitura correta não é 'semaglutida não funciona com iSGLT2', e sim que esse subgrupo teve poder estatístico limitado (79 eventos) para detectar diferença de efeito",
+      "O estudo prova formalmente que semaglutida não tem benefício renal em quem já usa iSGLT2, e a combinação deve ser evitada",
+      "Apenas pacientes SEM iSGLT2 foram incluídos no ensaio FLOW, então a pergunta não pode ser respondida por este estudo",
+      "O benefício da semaglutida foi exclusivamente cardiovascular, sem nenhum efeito sobre desfecho renal em nenhum subgrupo"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O FLOW randomizou 3.533 participantes com diabetes tipo 2 e DRC, com desfecho primário composto renal/cardiovascular reduzido em 24% com semaglutida (HR 0,76, IC95% 0,66-0,88). Na análise de subgrupo por uso basal de iSGLT2 (15,6% dos participantes, n=550), o subgrupo COM iSGLT2 não mostrou benefício demonstrável isolado (HR 1,07, IC95% 0,69-1,67), enquanto o subgrupo SEM iSGLT2 manteve benefício semelhante ao global (HR 0,73). Porém, o teste de interação — a ferramenta estatística correta para avaliar se o efeito realmente difere entre subgrupos — não atingiu significância (p=0,109), e o subgrupo com iSGLT2 tinha apenas 79 eventos primários no total, poder estatístico limitado para detectar uma diferença real de efeito. Os próprios autores concluem que o benefício global de semaglutida não foi influenciado pelo uso concomitante de iSGLT2, com a ressalva de poder limitado. Interpretar o resultado do subgrupo isoladamente como prova de ausência de efeito é o erro estatístico clássico de superinterpretar um subgrupo sem heterogeneidade confirmada.",
+    "source_refs": [
+      "Perkovic V, Tuttle KR, Rossing P, Mahaffey KW, Mann JFE, Bakris G, et al. Effects of Semaglutide on Chronic Kidney Disease in Patients with Type 2 Diabetes. N Engl J Med. 2024;391(2):109-121. DOI: 10.1056/NEJMoa2403347. PMID: 38785209.",
+      "Mann JFE, Rossing P, Bakris G, et al. Effects of semaglutide with and without concomitant SGLT2 inhibitor use in participants with type 2 diabetes and chronic kidney disease in the FLOW trial. Nat Med. 2024;30(10):2849-2856. DOI: 10.1038/s41591-024-03133-0. PMID: 38914124."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "fa-de-inicio-recente-no-ps-esperar-ou-reverter-agora",
+    "titulo": "FA de início recente, paciente estável no pronto-socorro — cardioverter agora ou esperar?",
+    "tema": "Fibrilação atrial",
+    "nivel": "intermediário",
+    "enunciado": "Homem de 55 anos chega ao pronto-socorro com palpitações há 8 horas, ECG mostrando fibrilação atrial, hemodinamicamente estável e sem instabilidade. A equipe discute entre cardioverter imediatamente (farmacológica ou elétrica) ou apenas controlar a frequência e reavaliar depois.",
+    "pergunta": "Segundo o ensaio RACE 7 ACWAS (Pluymaekers NAHA et al., N Engl J Med. 2019;380(16):1499-1508, PMID 30883054), que comparou estratégia de espera vigilante (cardioversão só se não houver reversão espontânea em 48h) contra cardioversão imediata em FA sintomática de início <36h, qual foi o resultado e o que sustenta essa conduta na prática?",
+    "opcoes": [
+      "A estratégia de espera foi inferior à cardioversão imediata, com menor taxa de ritmo sinusal em 4 semanas, e não deve ser adotada",
+      "A estratégia de espera foi não inferior à cardioversão imediata para o desfecho de ritmo sinusal em 4 semanas (91% vs. 94%, diferença dentro da margem de não inferioridade pré-especificada), sustentada pelo fato de 69% dos pacientes no grupo de espera terem revertido espontaneamente em 48 horas sem qualquer cardioversão",
+      "O ensaio não avaliou reversão espontânea, apenas comparou dois métodos de cardioversão ativa (farmacológica vs. elétrica)",
+      "A cardioversão imediata reduziu significativamente a recorrência de FA em 4 semanas comparada à espera vigilante"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O RACE 7 ACWAS randomizou 427 pacientes com FA sintomática, hemodinamicamente estável, de início <36h, em 15 centros holandeses, para cardioversão tardia/'esperar e ver' (controle de frequência inicial, cardioversão só se não revertesse em 48h) vs. cardioversão precoce imediata. O desfecho primário — ritmo sinusal em 4 semanas — ocorreu em 91% (grupo tardio) vs. 94% (grupo precoce), diferença de -2,9 pontos percentuais (IC95% -8,2 a 2,2), com o limite inferior do IC dentro da margem de não inferioridade pré-especificada de -10 pontos — a estratégia expectante não foi inferior. O dado que sustenta essa conduta na prática é que, no grupo de conduta expectante, 69% dos pacientes (150/218) reverteram espontaneamente dentro de 48 horas sem qualquer cardioversão, evitando o risco e o custo do procedimento em mais de dois terços dos casos. Isso testa o MOMENTO da cardioversão, não a indicação de anticoagulação, que segue os critérios de risco tromboembólico já estabelecidos independentemente da conduta escolhida.",
+    "source_refs": [
+      "Pluymaekers NAHA, Dudink EAMP, Luermans JGLM, et al.; RACE 7 ACWAS Investigators. Early or Delayed Cardioversion in Recent-Onset Atrial Fibrillation. N Engl J Med. 2019;380(16):1499-1508. DOI: 10.1056/NEJMoa1900353. PMID: 30883054."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "trombo-em-transito-no-forame-oval-decisao-terapeutica-sem-ensaio-randomizado",
+    "titulo": "TEP agudo com trombo serpiginoso cruzando um forame oval patente ao ecocardiograma",
+    "tema": "Tromboembolismo",
+    "nivel": "avançado",
+    "enunciado": "Paciente de 51 anos com TEP agudo confirmado por angiotomografia, apresenta também déficit neurológico focal transitório. O ecocardiograma transesofágico mostra um trombo serpiginoso móvel cruzando um forame oval patente — configurando 'trombo em trânsito' com embolia paradoxal iminente. A equipe discute entre anticoagulação isolada, trombólise sistêmica ou embolectomia cirúrgica.",
+    "pergunta": "Segundo a revisão sistemática de Myers PO et al. (Chest. 2010;137(1):164-170, PMID 19592472), que reuniu 174 casos publicados dessa condição, o que os dados agregados mostram sobre as três estratégias de tratamento, e qual é a limitação central dessa evidência?",
+    "opcoes": [
+      "Existe ensaio clínico randomizado comparando as três estratégias, e ele mostrou superioridade inequívoca da trombólise sistêmica",
+      "A embolectomia cirúrgica teve mortalidade de 10,6% (menor que os outros grupos combinados) e reduziu significativamente embolização sistêmica durante o tratamento comparada à anticoagulação isolada, mas essa é uma revisão sistemática de relatos/séries de caso — não há ensaio randomizado, e os próprios autores reconhecem limitações metodológicas severas (viés de publicação e seleção)",
+      "A anticoagulação isolada foi a estratégia com menor mortalidade entre as três, tornando desnecessária qualquer intervenção mais invasiva",
+      "A mortalidade em 30 dias foi de 2% no conjunto de 174 pacientes, tornando esta uma condição de baixo risco"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A revisão sistemática de Myers et al. (Chest 2010) identificou 174 pacientes com embolia paradoxal iminente publicados em relatos e séries de caso — não há coorte prospectiva nem ensaio randomizado para esta condição rara. A mortalidade em 30 dias foi de 18,4% no conjunto todo. Das três estratégias de tratamento (embolectomia cirúrgica, anticoagulação isolada, trombólise), a cirurgia teve mortalidade de 10,6% (menor que as demais combinadas, p=0,04) e reduziu com significância estatística a embolização sistêmica durante o próprio tratamento (OR 0,13, IC95% 0,03-0,67) comparada à anticoagulação isolada. A trombólise, comparada à anticoagulação isolada, mostrou tendência não significativa de MAIOR mortalidade (OR 1,62). A limitação central, que os próprios autores reconhecem, é que a base de evidência é uma agregação de relatos de caso — sujeita a viés de publicação e seleção, sem grupo controle prospectivo — não um ensaio randomizado. A leitura correta é que a cirurgia mostrou sinal favorável, não prova definitiva.",
+    "source_refs": [
+      "Myers PO, Bounameaux H, Panos A, Lerch R, Kalangos A. Impending paradoxical embolism: systematic review of prognostic factors and treatment. Chest. 2010;137(1):164-170. DOI: 10.1378/chest.09-0961. PMID: 19592472."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "regurgitacao-tricuspide-nova-em-paciente-com-marcapasso-transvenoso",
+    "titulo": "Congestão direita nova, 4 anos após implante de marcapasso transvenoso",
+    "tema": "Dispositivos",
+    "nivel": "intermediário",
+    "enunciado": "Paciente de 68 anos, com marcapasso transvenoso implantado há 4 anos por bloqueio atrioventricular total, evolui com edema de membros inferiores progressivo, hepatomegalia e turgência jugular, sem outra causa evidente na investigação inicial. O ecocardiograma mostra regurgitação tricúspide moderada a grave, ausente no exame pré-implante.",
+    "pergunta": "Segundo o estudo de coorte de Höke UB et al. (Heart. 2014;100(12):960-968, PMID 24449717), que acompanhou 239 pacientes com marcapasso ou CDI transvenosos por seguimento mediano de 58 meses, qual é a magnitude desse achado e seu impacto prognóstico?",
+    "opcoes": [
+      "É um achado raro (<2% dos casos) e sem relevância prognóstica — apenas uma curiosidade ecocardiográfica",
+      "Regurgitação tricúspide significativa nova ou piorada ocorreu em 38% dos pacientes (91 de 239), e foi associada de forma independente a maior mortalidade por todas as causas (HR 1,749) e maior taxa de eventos de insuficiência cardíaca (HR 1,641) — não é achado raro nem inócuo, é marcador independente de pior desfecho",
+      "O achado só ocorre em pacientes com CDI, nunca em marcapasso convencional",
+      "A regurgitação tricúspide induzida por eletrodo sempre regride espontaneamente em até 12 meses, sem necessidade de investigação adicional"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Höke et al. (Heart 2014) acompanharam 239 pacientes (191 com CDI, 48 com marcapasso) com ecocardiograma antes e depois do implante, seguimento mediano de 58 meses. Regurgitação tricúspide significativa nova ou piorada ocorreu em 38% (91/239) dos pacientes — não é achado raro, é a regra numa minoria substancial. Pacientes que desenvolveram RT significativa tinham maior remodelamento de câmaras direitas (maior área diastólica de VD, maior átrio direito, maior pressão pulmonar estimada) e a RT significativa foi associada de forma independente a maior mortalidade por todas as causas (HR 1,749, p=0,047), pior sobrevida global (HR 1,687, p=0,040) e maior taxa de eventos de insuficiência cardíaca (HR 1,641, p=0,019). O achado central é que essa RT não é uma curiosidade ecocardiográfica sem consequência — é marcador independente de pior desfecho, na mesma linha da RT funcional de outras etiologias, e deve ser investigada ativamente diante de sinais de congestão direita nova em portador de dispositivo transvenoso.",
+    "source_refs": [
+      "Höke U, Auger D, Thijssen J, et al. Significant lead-induced tricuspid regurgitation is associated with poor prognosis at long-term follow-up. Heart. 2014;100(12):960-968. DOI: 10.1136/heartjnl-2013-304673. PMID: 24449717."
+    ],
+    "review_status": "revisado"
   }
 ]

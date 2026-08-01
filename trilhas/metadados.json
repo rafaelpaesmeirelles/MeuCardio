@@ -18769,5 +18769,185 @@
         "por_que": "fecha a trajetória com a resposta estruturada ao sofrimento psíquico acumulado nas etapas anteriores — cuidado paliativo integrado à IC avançada, não substituição do tratamento ativo"
       }
     ]
+  },
+  {
+    "slug": "trilha-farmacologia-hit-do-reconhecimento-a-troca-de-anticoagulante",
+    "titulo": "Farmacologia: trombocitopenia induzida por heparina, do fármaco causador à troca de anticoagulante",
+    "tema": "Farmacologia",
+    "objetivo": "Sair sabendo reconhecer a HIT como reação adversa protrombótica dos anticoagulantes mais usados em cardiologia, e escolher corretamente a alternativa não heparínica antes mesmo da confirmação laboratorial, dado o risco diário de trombose se a doença não for tratada.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "heparina-nao-fracionada",
+        "por_que": "parte do fármaco mais associado historicamente à HIT, cujo mecanismo e apresentações precisam ser conhecidos antes de discutir a complicação"
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "enoxaparina-sodica",
+        "por_que": "a heparina de baixo peso molecular também causa HIT, com risco menor mas não nulo — comparação necessária para entender a magnitude do problema"
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "trombocitopenia-induzida-por-heparina-hit-escore-4ts-fases-e-anticoagulante-nao-heparinico",
+        "por_que": "o núcleo da trilha — reconhecimento clínico, escore 4Ts, as cinco fases da doença e a decisão terapêutica antes da confirmação laboratorial"
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "fondaparinux-sodico",
+        "por_que": "fecha com uma das alternativas de troca — anticoagulante não heparínico, mecanismo de ação sem reatividade cruzada com o anticorpo anti-PF4/heparina"
+      }
+    ]
+  },
+  {
+    "slug": "trilha-terapia-intensiva-frequencia-cardiaca-no-choque-septico",
+    "titulo": "Terapia intensiva: da otimização vasopressora ao controle contraintuitivo da frequência cardíaca no choque séptico",
+    "tema": "Terapia intensiva",
+    "objetivo": "Sair entendendo a sequência terapêutica do choque séptico refratário — vasopressor de resgate quando a noradrenalina não basta, e a pergunta mais contraintuitiva do tema: por que um betabloqueador, droga classicamente evitada no choque, pode ter papel quando a taquicardia persiste apesar de tudo otimizado.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "vasopressores-adjuvantes-no-choque-vasodilatador-vasst-vanish-e-athos-3",
+        "por_que": "estabelece o racional de adicionar vasopressor quando a noradrenalina isolada não sustenta a pressão — o ponto de partida antes de discutir frequência cardíaca"
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "esmolol",
+        "por_que": "farmacologia de base do betabloqueador de ação ultracurta usado no ensaio seguinte — meia-vida, titulação, dose"
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "controle-de-frequencia-cardiaca-com-esmolol-no-choque-septico",
+        "por_que": "fecha com o ensaio de Morelli et al. — a pergunta mais contraintuitiva do tema, com o achado de mortalidade e a ressalva sobre por que ele exige cautela, não entusiasmo"
+      }
+    ]
+  },
+  {
+    "slug": "trilha-diabetes-glp1-e-isglt2-na-protecao-renal",
+    "titulo": "Diabetes e cardiologia: iSGLT2 e GLP-1 na proteção renal, e o que acontece quando se somam",
+    "tema": "Diabetes e cardiologia",
+    "objetivo": "Sair sabendo que as duas classes com maior impacto de proteção renal no diabetes tipo 2 — iSGLT2 e agonistas de GLP-1 — têm ensaios próprios com desfecho renal primário, e entender o que a análise de subgrupo do FLOW diz (e não diz) sobre o uso concomitante das duas.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "dapagliflozina",
+        "por_que": "abre pela classe iSGLT2, já estabelecida em proteção renal (DAPA-CKD) antes de introduzir o comparador GLP-1"
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "semaglutida",
+        "por_que": "farmacologia de base do GLP-1 estudado no ensaio de desfecho renal primário da etapa seguinte"
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "semaglutida-e-desfecho-renal-no-diabetes-tipo-2-o-ensaio-flow",
+        "por_que": "fecha com o ensaio FLOW e a análise de subgrupo por uso concomitante de iSGLT2 — o teste de interação não confirma heterogeneidade real, mesmo com sinal aparente no subgrupo pequeno"
+      }
+    ]
+  },
+  {
+    "slug": "trilha-fibrilacao-atrial-cardioversao-quando-como-e-com-o-que",
+    "titulo": "Fibrilação atrial: cardioversão da FA de início recente — quando, como e com o quê",
+    "tema": "Fibrilação atrial",
+    "objetivo": "Sair sabendo decidir as três perguntas da cardioversão na FA de início recente sintomática: quando anticoagular antes/depois do procedimento, qual fármaco escolher para cardioversão química, e se vale a pena cardioverter imediatamente ou aguardar reversão espontânea.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "cardioversao-eletiva-e-anticoagulacao-periprocedimento-esc-2024",
+        "por_que": "estabelece a base de segurança — anticoagulação periprocedimento — antes de qualquer decisão sobre método ou momento da cardioversão"
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "vernakalant-versus-amiodarona-na-cardioversao-quimica-o-ensaio-avro",
+        "por_que": "resolve a escolha farmacológica quando se decide cardioverter quimicamente"
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "wait-and-see-versus-cardioversao-precoce-na-fa-de-inicio-recente-race-7-acwas",
+        "por_que": "fecha com a pergunta que antecede as duas anteriores na prática: vale a pena cardioverter agora, ou esperar a reversão espontânea que ocorre em 69% dos casos em 48h?"
+      }
+    ]
+  },
+  {
+    "slug": "trilha-tromboembolismo-do-diagnostico-a-apresentacao-rara-de-alto-risco",
+    "titulo": "Tromboembolismo: do diagnóstico e gravidade do TEP à apresentação rara de altíssimo risco",
+    "tema": "Tromboembolismo",
+    "objetivo": "Sair sabendo o caminho do TEP agudo: diagnóstico e manejo geral, estratificação de gravidade prognóstica com PESI/sPESI, e a apresentação mais rara e de decisão mais urgente — trombo em trânsito cruzando forame oval patente, sem ensaio randomizado para orientar a escolha entre cirurgia, trombólise e anticoagulação isolada.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "tromboembolismo-pulmonar-agudo-diagnostico-e-manejo-escers-2019",
+        "por_que": "base diagnóstica e terapêutica geral do TEP agudo, ponto de partida antes de qualquer estratificação de gravidade"
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "pesi-e-spesi-escore-de-gravidade-do-tromboembolismo-pulmonar",
+        "por_que": "estratifica gravidade prognóstica do TEP já diagnosticado, decidindo candidato a tratamento ambulatorial vs. internação"
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "embolia-paradoxal-iminente-trombo-em-transito-no-forame-oval-patente",
+        "por_que": "fecha com a apresentação mais rara e de decisão mais urgente do espectro — trombo em trânsito, com evidência limitada a relatos de caso agregados, não ensaio randomizado"
+      }
+    ]
+  },
+  {
+    "slug": "trilha-dispositivos-marcapasso-transvenoso-indicacao-acesso-e-complicacao-tardia",
+    "titulo": "Dispositivos: marcapasso transvenoso, da indicação ao risco valvar que só aparece anos depois",
+    "tema": "Dispositivos",
+    "objetivo": "Sair sabendo o percurso completo do marcapasso transvenoso — indicação por disfunção do sistema de condução, acesso e complicação na fase aguda de implante em emergência, risco de extração quando o dispositivo precisa sair, e a complicação valvar tardia (regurgitação tricúspide induzida por eletrodo) que só aparece no seguimento de anos, mas muda o prognóstico.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "marcapasso-definitivo-indicacoes-estimulacao-sistema-conducao",
+        "por_que": "indicação formal do marcapasso definitivo, ponto de partida antes de discutir acesso, extração ou complicação tardia"
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "marcapasso-temporario-transvenoso-indicacao-acesso-e-complicacoes-na-emergencia",
+        "por_que": "complicações da fase aguda de acesso venoso e implante, antes de chegar às complicações de longo prazo"
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "extracao-de-eletrodo-transvenoso-seguranca-e-o-efeito-do-volume-do-centro",
+        "por_que": "risco quando o eletrodo precisa ser removido — infecção, mau funcionamento ou upgrade de sistema"
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "regurgitacao-tricuspide-induzida-por-eletrodo-mecanismo-prognostico-e-manejo",
+        "por_que": "fecha com a complicação valvar tardia que só aparece no seguimento de anos — 38% de incidência e marcador independente de pior desfecho, não uma curiosidade ecocardiográfica"
+      }
+    ]
   }
 ]
