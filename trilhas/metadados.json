@@ -18949,5 +18949,97 @@
         "por_que": "fecha com a complicação valvar tardia que só aparece no seguimento de anos — 38% de incidência e marcador independente de pior desfecho, não uma curiosidade ecocardiográfica"
       }
     ]
+  },
+  {
+    "slug": "trilha-doenca-coronariana-sindrome-coronariana-aguda-no-paciente-oncologico",
+    "titulo": "Síndrome coronariana aguda no paciente oncológico: quando o câncer muda a antiagregação",
+    "tema": "Doença coronariana",
+    "objetivo": "Sair sabendo diagnosticar e conduzir a síndrome coronariana aguda no paciente com câncer ativo — decidir estratégia invasiva pela expectativa de sobrevida, não pelo diagnóstico oncológico isolado, e escalonar a escada de antiagregação pelo corte de plaquetas.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "sindrome-coronariana-aguda-diagnostico-e-manejo-esc-2023",
+        "por_que": "Ponto de partida: o algoritmo geral de diagnóstico e manejo da SCA, antes de qualquer particularidade do paciente oncológico."
+      },
+      {
+        "ordem": 2,
+        "item_type": "evidencia",
+        "item_slug": "estrategia-invasiva-no-paciente-oncologico-com-sca-de-alto-risco",
+        "por_que": "A primeira decisão no paciente com câncer não é 'operar ou não por causa do câncer' — é a expectativa de sobrevida declarada em número (6 meses ou mais) que condiciona a estratégia invasiva, não o diagnóstico oncológico em si."
+      },
+      {
+        "ordem": 3,
+        "item_type": "evidencia",
+        "item_slug": "aas-nao-recomendado-no-paciente-oncologico-com-plaquetas-abaixo-de-10-mil",
+        "por_que": "Primeiro degrau da escada de plaquetopenia — o AAS é o antiagregante que se mantém por mais tempo, e mesmo ele sai abaixo de 10.000/µL."
+      },
+      {
+        "ordem": 4,
+        "item_type": "evidencia",
+        "item_slug": "clopidogrel-nao-recomendado-no-paciente-oncologico-com-plaquetas-abaixo-de-30-mil",
+        "por_que": "Segundo degrau: o clopidogrel sai antes do AAS, abaixo de 30.000/µL."
+      },
+      {
+        "ordem": 5,
+        "item_type": "evidencia",
+        "item_slug": "prasugrel-e-ticagrelor-nao-recomendados-com-plaquetas-abaixo-de-50-mil",
+        "por_que": "Terceiro degrau, o mais alto: os inibidores potentes de P2Y12 saem primeiro, já abaixo de 50.000/µL — fecha a escada dos três cortes."
+      },
+      {
+        "ordem": 6,
+        "item_type": "medicamento",
+        "item_slug": "ticagrelor",
+        "por_que": "Revisa o perfil de sangramento e a posologia do inibidor potente que fica reservado ao paciente oncológico com plaquetopenia mais leve, à luz do corte aprendido na etapa anterior."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-cardiomiopatias-teste-genetico-aconselhamento-e-rastreamento-em-cascata",
+    "titulo": "Cardiomiopatia genética: do teste no caso índice ao rastreamento da família",
+    "tema": "Cardiomiopatias",
+    "objetivo": "Sair sabendo quando pedir teste genético em cardiomiopatia (inclusive para diferenciar fenocópias), por que o aconselhamento genético é parte do teste e não uma etapa opcional, e como conduzir o rastreamento em cascata dos familiares de primeiro grau.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "evidencia",
+        "item_slug": "ressonancia-com-contraste-na-avaliacao-inicial-de-cardiomiopatia",
+        "por_que": "Ponto de partida da avaliação inicial: a caracterização tecidual por ressonância entra desde o primeiro exame, porque muda a hipótese etiológica antes mesmo de se chegar ao teste genético."
+      },
+      {
+        "ordem": 2,
+        "item_type": "evidencia",
+        "item_slug": "cmh-teste-genetico-para-diferenciar-fenocopias",
+        "por_que": "Primeiro uso do teste genético no caso índice: não é só confirmar cardiomiopatia hipertrófica, é excluir fenocópias — outras causas genéticas de espessamento miocárdico que mudam completamente a conduta."
+      },
+      {
+        "ordem": 3,
+        "item_type": "evidencia",
+        "item_slug": "cmh-teste-genetico-para-identificar-familiares-em-risco",
+        "por_que": "Segundo uso do mesmo teste no caso índice: identificar a variante que vai orientar quem, na família, precisa ser rastreado."
+      },
+      {
+        "ordem": 4,
+        "item_type": "evidencia",
+        "item_slug": "aconselhamento-genetico-antes-e-depois-do-teste-em-cardiomiopatia",
+        "por_que": "Antes de qualquer resultado sair, o aconselhamento genético já precisa estar presente — é parte do teste, não uma etapa que o segue, porque devolver risco genético sem ele deixa a família sem como interpretá-lo."
+      },
+      {
+        "ordem": 5,
+        "item_type": "evidencia",
+        "item_slug": "rastreamento-em-cascata-de-familiares-em-cardiomiopatia",
+        "por_que": "Fecha a trilha no destino de toda essa investigação: uma vez confirmada a variante patogênica, a cascata começa pelos parentes de primeiro grau, sequencialmente."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "cardiomiopatia-hipertrofica-diagnostico-e-tratamento-diretriz-brasileira-2024",
+        "por_que": "Ancora as recomendações de teste genético e triagem familiar na diretriz brasileira de cardiomiopatia hipertrófica, para quem quiser ler o texto completo em vez de só as evidências pontuais."
+      }
+    ]
   }
 ]

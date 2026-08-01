@@ -8680,5 +8680,47 @@
       "Höke U, Auger D, Thijssen J, et al. Significant lead-induced tricuspid regurgitation is associated with poor prognosis at long-term follow-up. Heart. 2014;100(12):960-968. DOI: 10.1136/heartjnl-2013-304673. PMID: 24449717."
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "scad-em-mulher-jovem-no-puerperio-conduta-conservadora-ou-invasiva",
+    "titulo": "Dissecção espontânea de coronária no puerpério: intervir ou observar?",
+    "tema": "Doença coronariana",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 32 anos, sem fatores de risco cardiovascular tradicionais, apresenta dor torácica típica 3 semanas após o parto. ECG mostra supradesnível de ST em parede inferior e troponina está elevada. A angiografia coronária mostra afilamento longo e irregular da artéria coronária direita, sem placa aterosclerótica visível — achado sugestivo de dissecção espontânea de artéria coronária (SCAD). A paciente está hemodinamicamente estável, sem dor recorrente após analgesia e sem sinais de isquemia em curso no ECG seriado.",
+    "pergunta": "Qual a conduta mais apropriada nesta paciente?",
+    "opcoes": [
+      "Angioplastia imediata da lesão, tratando-a como se fosse uma placa aterotrombótica comum, para restaurar o fluxo o quanto antes",
+      "Tratamento conservador, sem intervenção mecânica, com observação hospitalar de 3 a 5 dias para monitorar extensão da dissecção",
+      "Cirurgia de revascularização miocárdica de urgência, já que a intervenção percutânea é contraindicada em qualquer caso de SCAD",
+      "Alta hospitalar no mesmo dia, pois a SCAD associada à gestação tem resolução espontânea garantida e não exige observação"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Em paciente clinicamente estável e sem evidência objetiva de isquemia em curso, a terapia conservadora é a estratégia preferida na SCAD — o hematoma intramural tende a resolver espontaneamente, e a intervenção mecânica em tecido dissecado e friável carrega risco técnico desproporcional: três séries independentes documentam falha técnica de PCI em 53% (Mayo Clinic, N=189, mesmo desconsiderando estenose residual em 30%), 36% (Vancouver, N=168) e 27% (Europa, N=134) dos casos, com CABG de emergência em 9-13%. A intervenção mecânica fica reservada a dissecção de tronco de coronária esquerda, instabilidade hemodinâmica, isquemia em curso apesar de tratamento clínico ou choque cardiogênico — nenhuma presente neste caso. Observação hospitalar de 3 a 5 dias é recomendada porque o risco de extensão da dissecção é de 5-10% nos primeiros 7 dias — não há garantia de resolução que dispense monitorização. A SCAD é a causa mais comum de infarto associado à gestação (43% dos casos de IAM na gravidez, prevalência de 1,81/100.000 gestações), predominando fortemente em mulheres e ocorrendo sobretudo no terceiro trimestre ou nas primeiras 6 semanas pós-parto — exatamente o cenário deste caso.",
+    "source_refs": [
+      "Hayes SN, Kim ESH, Saw J, et al. Spontaneous Coronary Artery Dissection: Current State of the Science: A Scientific Statement From the American Heart Association. Circulation. 2018;137(19):e523-e557. DOI: 10.1161/CIR.0000000000000564. PMID: 29472380.",
+      "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-3826. DOI: 10.1093/eurheartj/ehad191. PMID: 37622654."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cmh-variante-patogenica-identificada-rastreamento-em-cascata-dos-filhos",
+    "titulo": "Cardiomiopatia hipertrófica com variante patogênica: e os filhos, testar?",
+    "tema": "Cardiomiopatias",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 45 anos, diagnosticado com cardiomiopatia hipertrófica assimétrica (espessura septal de 18 mm) após investigação de sopro sistólico em consulta de rotina. O teste genético do caso índice identifica variante patogênica em MYBPC3. Ele tem dois filhos adultos, de 22 e 25 anos, assintomáticos, com ecocardiograma de rotina prévio descrito como normal.",
+    "pergunta": "Qual a conduta mais apropriada em relação aos filhos deste paciente?",
+    "opcoes": [
+      "Como os filhos são assintomáticos e o eco prévio foi normal, não há necessidade de teste genético nem de acompanhamento adicional",
+      "Oferecer teste genético em cascata aos dois filhos, por serem parentes de primeiro grau, com aconselhamento genético antes e depois do teste para ambos",
+      "Testar apenas o filho mais velho, já que o risco aumenta com a idade e testar os dois seria redundante",
+      "Encaminhar os filhos diretamente para ressonância cardíaca com contraste, sem necessidade de teste genético, por ser o exame mais sensível"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Quando uma variante patogênica ou provavelmente patogênica é detectada no caso índice, o teste genético em cascata deve ser oferecido a familiares adultos em risco — inicialmente aos parentes de primeiro grau disponíveis, com cascata sequencial subsequente (ESC 2023, Classe I, Nível B). Um ecocardiograma normal prévio não dispensa o teste: a cardiomiopatia hipertrófica genética tem penetrância incompleta e dependente da idade, e um filho portador da variante pode ainda não ter expressado o fenótipo aos 22-25 anos. O aconselhamento genético antes e depois do teste é recomendado para todo indivíduo testado (ESC 2023, Classe I, Nível B) — é parte do teste, não etapa opcional que o segue, porque devolver um resultado sem ele transfere ao paciente e à família uma informação de risco que eles não têm como interpretar sozinhos. A diretriz brasileira de cardiomiopatia hipertrófica (SBC 2024) reforça o mesmo caminho: o teste genético deve ser considerado para identificar familiares em risco (Classe IIa, B) e a triagem genética de parentes de primeiro grau também é Classe IIa, B. Testar só o filho mais velho ou pular direto para ressonância sem o teste genético ignora que a cascata familiar é conduzida pelo resultado molecular do caso índice, não pela idade ou por imagem isolada.",
+    "source_refs": [
+      "Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI: 10.1093/eurheartj/ehad194.",
+      "Fernandes F, Simões MV, Correia EB, Marcondes-Braga FG, Coelho OR, et al. Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e202400415. DOI: 10.36660/abc.20240415. PMID: 39082572."
+    ],
+    "review_status": "revisado"
   }
 ]
