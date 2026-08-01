@@ -1,0 +1,58 @@
+---
+title: "Lítio e o Coração: Toxicidade Eletrocardiográfica Direta versus Associação Protetora em Coorte Populacional"
+slug: litio-toxicidade-eletrocardiografica-e-risco-cardiovascular-no-transtorno-bipolar
+theme: "Saúde mental e cardiologia"
+kind: estudo
+review_status: revisado
+source_refs: ["Mehta N, Vannozzi R. Lithium-induced electrocardiographic changes: A complete review. Clin Cardiol. 2017;40(12):1363-1367. DOI: 10.1002/clc.22822. PMID: 29247520 — revisão sistemática de 56 artigos (PubMed e Medline, 1970-2016) sobre achados eletrocardiográficos associados ao lítio", "Xu N, Yu H, Deng Y, Yang R, Zheng L, Wang K, Wang H, Wu J, Xie S, Chen Y, Li T, Chang Z, Lv X, Hu Y, Wu Y, Yu X. Association of lithium treatment with incident cardiovascular disease in patients with bipolar disorder: A claims-based longitudinal cohort study. J Affect Disord. 2026;414:122282. DOI: 10.1016/j.jad.2026.122282. PMID: 42471187 — coorte longitudinal de base administrativa (Beijing Medical Claim Data for Employees, 2010-2017), 2.945 pacientes com transtorno bipolar recém-diagnosticado, seguimento médio de 3 anos, ponderação por probabilidade inversa (IPW) para ajuste de confundimento basal"]
+legacy_source: "Documento novo, escrito em 01/08/2026. Os documentos já existentes desta pasta cobrem antipsicóticos, antidepressivos e estimulantes do TDAH quanto ao risco cardíaco, mas nenhum aborda o lítio — o estabilizador de humor de primeira linha para transtorno bipolar e o fármaco psiquiátrico com a relação mais antiga e mais bem documentada com alterações eletrocardiográficas diretas. A lacuna é dupla: falta tanto o efeito eletrofisiológico direto (toxicidade dose-dependente, já descrito há décadas) quanto o dado populacional mais recente sobre desfecho cardiovascular clínico em uso crônico, que aponta na direção oposta."
+---
+
+# Lítio e o Coração: Toxicidade Eletrocardiográfica Direta versus Associação Protetora em Coorte Populacional
+
+## Por que este tema é diferente dos outros psicofármacos já cadastrados
+
+O lítio ocupa um lugar peculiar na farmacologia psiquiátrica que interessa diretamente ao cardiologista: é o estabilizador de humor de primeira linha para transtorno bipolar há mais de seis décadas, tem margem terapêutica estreita (a mesma faixa de litemia que separa eficácia de toxicidade é estreita o bastante para exigir dosagem sérica de rotina), e — ao contrário dos antidepressivos e antipsicóticos já documentados nesta pasta, cujo risco cardíaco é predominantemente por prolongamento de QT e efeito metabólico indireto — tem uma relação **eletrofisiológica direta e mecanicamente distinta**: o íon lítio compete com potássio e sódio na membrana celular e se acumula no tecido de condução, com efeito descrito desde os anos 1970. Ao mesmo tempo, um estudo populacional muito recente sugere que, no desfecho clínico agregado de doença cardiovascular incidente, pacientes bipolares em uso de lítio podem sair **protegidos**, não prejudicados. As duas informações não se contradizem — respondem perguntas diferentes — mas só fazem sentido lidas juntas.
+
+## O que a revisão de Mehta e Vannozzi (2017) mostra sobre o efeito direto no ECG
+
+Mehta N, Vannozzi R. *Lithium-induced electrocardiographic changes: A complete review*. Clin Cardiol. 2017;40(12):1363-1367 (PMID 29247520). Revisão sistemática em PubMed e Medline, período de janeiro de 1970 a março de 2016, com a palavra-chave "lithium" combinada a "electrocardiography" ou "ECG". De 406 artigos encontrados, **56 atenderam aos critérios de inclusão** e foram sintetizados.
+
+Achados principais, na ordem de frequência relatada na literatura:
+- **Inversão de onda T foi o achado eletrocardiográfico mais frequentemente relatado** — descrito como o efeito mais comum e, na maioria dos casos, benigno e reversível com a suspensão do fármaco.
+- **Disfunção do nó sinusal e bloqueios sinoatriais** — mecanismo mais preocupante clinicamente, por poder progredir para bradiarritmia sintomática.
+- **Prolongamento e dispersão do intervalo PR e do intervalo QT**.
+- **Taquiarritmias ventriculares** em relatos de casos mais graves.
+- Casos descritos na literatura incluem desfechos cardíacos sérios: **supradesnivelamento de ST simulando infarto agudo do miocárdio, bloqueios de condução de alto grau e padrão eletrocardiográfico de Brugada** induzido pelo lítio.
+- **As alterações elétricas dependem tanto da duração do tratamento quanto do nível sérico de lítio** — ou seja, é um efeito dose e tempo-dependente, coerente com mecanismo de acúmulo tecidual.
+- Os autores concluem que, apesar de não existir uma diretriz padronizada de monitorização eletrocardiográfica para uso de lítio, **a monitorização frequente do paciente em tratamento pode garantir o uso seguro do medicamento**.
+
+## O que a coorte de Xu et al. (2026) mostra sobre desfecho cardiovascular clínico populacional
+
+Xu N et al. *Association of lithium treatment with incident cardiovascular disease in patients with bipolar disorder: A claims-based longitudinal cohort study*. J Affect Disord. 2026;414:122282 (PMID 42471187). Coorte longitudinal construída a partir da base administrativa de sinistros médicos de empregados de Pequim (Beijing Medical Claim Data for Employees), 2010-2017. Pacientes recém-diagnosticados com transtorno bipolar foram categorizados em usuários e não usuários de lítio, com **ponderação por probabilidade inversa (IPW)** para controlar confundimento basal, e o desfecho estimado por modelos de Cox ponderados.
+
+Números do estudo:
+- **2.945 pacientes incluídos**, idade média de **44,5 anos**, seguimento médio de **3 anos**.
+- Uso de lítio associou-se a **risco significativamente menor de doença cardiovascular incidente geral** (HR = **0,38**; IC95% 0,18-0,78).
+- O efeito foi ainda mais marcado para **doença isquêmica do coração especificamente** (HR = **0,20**; IC95% 0,06-0,67).
+- **Não houve associação significativa para acidente vascular cerebral** (HR = 0,69; IC95% 0,27-1,75) — o efeito protetor aparente não se estendeu de forma estatisticamente robusta ao desfecho cerebrovascular.
+- Análises de subgrupo mostraram que a redução de risco foi **mais pronunciada em indivíduos mais velhos, do sexo masculino e com fatores de risco cardiovascular pré-existentes** — justamente o subgrupo em que se esperaria maior risco basal, e não menor.
+- Os próprios autores enquadram o achado como sugestão de que **o lítio pode conferir benefício duplo, psiquiátrico e somático**, sustentando sua utilidade continuada em populações de alto risco — sem deixar de registrar, na introdução do próprio artigo, que a segurança cardiovascular de longo prazo do lítio **"permanece debatida, com evidência conflitante entre toxicidade potencial e efeito protetor"**.
+
+## Síntese prática: como conciliar os dois achados sem escolher um vencedor
+
+Os dois estudos não competem pela mesma pergunta, e por isso a leitura correta não é "qual está certo" — é entender **em que nível cada um mede o efeito**:
+
+1. **A revisão de Mehta e Vannozzi documenta o efeito eletrofisiológico direto do íon lítio no tecido de condução** — um mecanismo farmacológico de curto a médio prazo, dose e tempo-dependente, que se manifesta no traçado do ECG e pode, em casos raros e geralmente ligados a níveis séricos elevados ou toxicidade, evoluir para bradiarritmia sintomática ou padrão de Brugada.
+2. **A coorte de Xu et al. mede o desfecho clínico agregado de doença cardiovascular incidente** em uso terapêutico crônico, numa população real de pacientes bipolares — e nesse nível, o achado é de associação favorável, não de dano.
+3. **As duas coisas são compatíveis**: um fármaco pode ter efeito eletrofisiológico mensurável e potencialmente sério em nível individual/tóxico e, ainda assim, associar-se a menor incidência de eventos cardiovasculares maiores numa coorte tratada adequadamente — seja por efeito específico ainda não plenamente elucidado, seja porque a estabilização do quadro bipolar reduz exposição a fatores de risco cardiovascular indiretos (tabagismo, sedentarismo, descontrole metabólico, uso de substâncias) que acompanham episódios de humor não tratados. O próprio desenho observacional da coorte chinesa não permite atribuir causalidade ao lítio isoladamente — é um estudo de associação, não um ensaio randomizado.
+4. **Conduta prática que decorre disso**: a suspensão do lítio por um achado eletrocardiográfico assintomático e discreto (por exemplo, inversão isolada de onda T em paciente com litemia dentro da faixa terapêutica) não deveria ser automática — é justamente o achado mais comum e mais benigno da revisão de Mehta e Vannozzi. Já a disfunção do nó sinusal, bloqueio de condução de alto grau ou padrão de Brugada emergente pedem avaliação cardiológica antes de qualquer decisão sobre manter, ajustar ou suspender o fármaco, e a dosagem de litemia é parte obrigatória dessa avaliação, dado que o efeito é dose-dependente.
+
+## Armadilhas clínicas
+
+- **Tratar qualquer alteração eletrocardiográfica em paciente em uso de lítio como toxicidade grave** — a inversão de onda T é o achado mais comum e, na maioria dos relatos, benigna e reversível; escalonar para suspensão do estabilizador de humor sem necessidade expõe o paciente ao risco de recaída do transtorno bipolar sem benefício cardiovascular claro.
+- **Ignorar a disfunção do nó sinusal como "só um efeito colateral leve"** — é o achado da revisão com maior potencial de repercussão clínica (bradiarritmia sintomática), e mencionado explicitamente ao lado dos bloqueios sinoatriais como desfecho a vigiar, não como nota de rodapé.
+- **Interpretar o HR protetor da coorte de Xu et al. como prova de que o lítio "faz bem ao coração"** de forma causal e generalizável — é estudo observacional, de base administrativa única (Pequim), com 2.945 pacientes e IC95% que chega perto de 1 mesmo no desfecho de maior efeito (IHD: 0,06-0,67); não é ensaio clínico randomizado e não estabelece mecanismo.
+- **Não dosar litemia diante de sintoma cardiovascular novo em paciente em uso do fármaco** — o efeito eletrocardiográfico é explicitamente dose e tempo-dependente na revisão sistemática; alteração no ECG sem o nível sérico correspondente deixa a decisão clínica incompleta.
+- **Extrapolar o efeito protetor para acidente vascular cerebral** — a coorte não encontrou associação estatisticamente significativa para esse desfecho especificamente (HR 0,69; IC95% 0,27-1,75), diferente do resultado para doença cardiovascular geral e isquêmica coronariana.
+- VERIFICAÇÃO HUMANA NECESSÁRIA: nenhuma das duas fontes desta ficha define um protocolo padronizado de monitorização eletrocardiográfica por tempo de tratamento ou faixa de litemia — a própria revisão de Mehta e Vannozzi registra a ausência de diretriz padronizada nesse ponto. Correlacionar com o texto da bula brasileira do carbonato de lítio e com o verbete correspondente em `content/Farmacologia`, se existente, antes de orientar frequência de ECG na prática.
