@@ -3,7 +3,7 @@ title: "Hipertensão Arterial e Pressão Arterial Elevada (ESC 2024)"
 slug: hipertensao-arterial-e-pressao-arterial-elevada-esc-2024
 theme: "Hipertensão"
 kind: protocolo
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["2024 ESC Guidelines for the management of elevated blood pressure and hypertension · ESC · 2024 · https://academic.oup.com/eurheartj/article/45/38/3912/7741010"]
 legacy_source: "protocolos/protocolo-de-hipertensao-arterial-esc-2024.md"
 ---
@@ -26,7 +26,7 @@ Hipertensão requer confirmação de PA sistólica ≥140 mmHg ou diastólica �
 - **estilo de vida**: Intervenções de estilo de vida recomendadas por 3 meses antes de terapia farmacológica em casos apropriados; se não plenamente eficazes, iniciar farmacoterapia
 - **combinacao inicial**: Combinação de dois fármacos em dose baixa recomendada como estratégia inicial para a maioria dos pacientes (Classe I), preferencialmente em comprimido único (single pill combination)
 - **escalonamento**: Combinação de três fármacos em dose baixa como próximo passo, antes de titular para doses máximas toleradas, visando controle mais rápido e menor risco de efeitos colaterais
-- **monoterapia inicial**: Opção reservada para indivíduos ≥85 anos, fragilidade moderada/grave, hipotensão ortostática sintomática, e pacientes com PA elevada (130-139/80-89 mmHg) e risco CV suficientemente alto
+- **monoterapia inicial**: Opção reservada para indivíduos ≥85 anos, fragilidade moderada/grave, hipotensão ortostática sintomática, e pacientes em toda a categoria de **PA elevada (120-139/70-89 mmHg)** com risco CV suficientemente alto — não um subintervalo mais estreito dentro dessa categoria
 - **fonte**: European Heart Journal Cardiovascular Pharmacotherapy
 
 ## Hipertensao resistente

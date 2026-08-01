@@ -3,7 +3,7 @@ title: "Choque Cardiogênico: Fisiopatologia e Manejo"
 slug: choque-cardiogenico-fisiopatologia-e-manejo
 theme: "Terapia intensiva"
 kind: protocolo
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Epidemiology, pathophysiology and contemporary management of cardiogenic shock · Heart Failure Association/ESC · 10.1002/ejhf.1922 · https://onlinelibrary.wiley.com/doi/10.1002/ejhf.1922", "Management of cardiogenic shock: state-of-the-art · PMC · 2024 · https://pmc.ncbi.nlm.nih.gov/articles/PMC11541372/"]
 legacy_source: "protocolos/protocolo-clinico-choque-cardiogenico.md"
 ---

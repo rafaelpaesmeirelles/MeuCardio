@@ -3,7 +3,7 @@ title: "Hipertensão Arterial Pulmonar Associada à Esquistossomose: Epidemiolog
 slug: hipertensao-arterial-pulmonar-associada-a-esquistossomose-epidemiologia-e-prognostico-no-brasil
 theme: "Hipertensão pulmonar"
 kind: estudo
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Piscoya Roncal CG, Mendes AA, Muniz MTC, et al. Schistosomiasis-associated pulmonary arterial hypertension: survival in endemic area in Brazil. Int J Cardiol Heart Vasc. 2019;25:100373. DOI: 10.1016/j.ijcha.2019.100373. PMID: 31720370. PMCID: PMC6838530", "Clinical, Functional, and Hemodynamic Profile of Schistosomiasis-Associated Pulmonary Arterial Hypertension Patients in Brazil: Systematic Review and Meta-Analysis. Infect Dis Rep. 2025;17(2):22. DOI: 10.3390/idr17020022. PMCID: PMC11932222"]
 legacy_source: "Documento novo — a esquistossomose aparecia só como um item de lista dentro da classificação do grupo 1 de HAP, sem nenhum dado de epidemiologia, perfil hemodinâmico ou prognóstico, apesar de ser uma das causas mais frequentes de HAP no Brasil."
 ---

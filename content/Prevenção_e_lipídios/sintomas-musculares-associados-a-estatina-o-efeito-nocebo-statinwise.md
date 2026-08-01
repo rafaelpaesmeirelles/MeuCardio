@@ -3,7 +3,7 @@ title: "Sintomas Musculares Associados a Estatina: o Efeito Nocebo (StatinWISE)"
 slug: sintomas-musculares-associados-a-estatina-o-efeito-nocebo-statinwise
 theme: "Prevenção e lipídios"
 kind: estudo
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Herrett E, Williamson E, Brack K, et al; StatinWISE Trial Group. Statin treatment and muscle symptoms: series of randomised, placebo controlled n-of-1 trials. BMJ. 2021;372:n135. DOI: 10.1136/bmj.n135. PMID: 33627334. PMCID: PMC7903384"]
 legacy_source: "Documento novo — intolerância a estatina já era mencionada como contexto de outros hipolipemiantes (ácido bempedoico, anti-PCSK9), mas o mecanismo do próprio sintoma muscular — e a evidência de que boa parte dele não é farmacológica — não tinha registro."
 ---

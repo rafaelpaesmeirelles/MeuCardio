@@ -3,7 +3,7 @@ title: "Arritmias Ventriculares e Prevenção de Morte Súbita Cardíaca (ESC 20
 slug: arritmias-ventriculares-e-prevencao-de-morte-subita-cardiaca-esc-2022
 theme: "Arritmias"
 kind: protocolo
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death · ESC · 2022 · 10.1093/eurheartj/ehac262 · 36017572 · https://guardheart.ern-net.eu/wp-content/uploads/sites/4/2023/02/PMID-36017572_ESCGuideline_Zeppenfeld.pdf", "Sapp JL, Wells GA, Parkash R, et al. Ventricular tachycardia ablation versus escalation of antiarrhythmic drugs (VANISH). N Engl J Med. 2016;375(2):111-121. DOI: 10.1056/NEJMoa1513614. PMID: 27149033"]
 legacy_source: "protocolos/protocolo-de-arritmias-ventriculares-e-morte-subita-cardiaca.md"
 ---

@@ -3,7 +3,7 @@ title: "Proteína C-Reativa de Alta Sensibilidade e Estatina na Prevenção Prim
 slug: proteina-c-reativa-de-alta-sensibilidade-e-estatina-na-prevencao-primaria-jupiter
 theme: "Prevenção e lipídios"
 kind: estudo
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Ridker PM, Danielson E, Fonseca FA, et al; JUPITER Study Group. Rosuvastatin to prevent vascular events in men and women with elevated C-reactive protein. N Engl J Med. 2008;359(21):2195-2207. DOI: 10.1056/NEJMoa0807646. PMID: 18997196"]
 legacy_source: "Documento novo — o conceito de risco inflamatório residual e o papel da PCR de alta sensibilidade na seleção de candidatos à estatina em prevenção primária não tinham registro nesta biblioteca."
 ---

@@ -3,7 +3,7 @@ title: "SYNTAX Score: Complexidade Anatômica e Escolha entre PCI e CABG"
 slug: syntax-score-complexidade-anatomica-e-escolha-entre-pci-e-cabg
 theme: "Calculadoras"
 kind: calculadora
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Sianos G, Morel MA, Kappetein AP, et al. The SYNTAX Score: an angiographic tool grading the complexity of coronary artery disease. EuroIntervention. 2005;1(2):219-227 — tercis de complexidade, citados via múltiplas fontes secundárias convergentes, acesso ao texto original bloqueado nesta sessão", "Serruys PW, Morice MC, Kappetein AP, et al; SYNTAX Investigators. Percutaneous coronary intervention versus coronary-artery bypass grafting for severe coronary artery disease. N Engl J Med. 2009;360(10):961-972. DOI: 10.1056/NEJMoa0804626. PMID: 19228612"]
 legacy_source: "Documento novo — o SYNTAX score, uma das ferramentas mais usadas para decidir entre revascularização percutânea e cirúrgica em doença coronariana complexa, não tinha nenhum registro nesta biblioteca."
 ---

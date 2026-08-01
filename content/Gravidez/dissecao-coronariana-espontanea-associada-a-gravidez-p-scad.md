@@ -3,7 +3,7 @@ title: "Dissecção Coronariana Espontânea Associada à Gravidez (P-SCAD)"
 slug: dissecao-coronariana-espontanea-associada-a-gravidez-p-scad
 theme: "Gravidez"
 kind: estudo
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Tweet MS, Hayes SN, Codsi E, Gulati R, Rose CH, Best PJM. Spontaneous Coronary Artery Dissection Associated With Pregnancy. J Am Coll Cardiol. 2017;70(4):426-435. DOI: 10.1016/j.jacc.2017.05.055. PMID: 28728686", "Chen S, Merchant M, Mahrer KN, Ambrosy AP, Lundstrom RJ, Naderi S. Pregnancy-Associated Spontaneous Coronary Artery Dissection: Clinical Characteristics, Outcomes, and Risk During Subsequent Pregnancy. J Invasive Cardiol. 2021;33(6):E457-E466. DOI: 10.25270/jic/20.00529. PMID: 34001675"]
 legacy_source: "Documento novo — a dissecção coronariana espontânea associada à gravidez (P-SCAD), causa mais comum de infarto agudo do miocárdio associado à gestação, não tinha nenhum registro nesta biblioteca."
 ---

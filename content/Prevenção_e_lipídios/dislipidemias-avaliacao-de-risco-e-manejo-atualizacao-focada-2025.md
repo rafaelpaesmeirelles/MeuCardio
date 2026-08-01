@@ -3,7 +3,7 @@ title: "Dislipidemias: Avaliação de Risco e Manejo (Atualização Focada 2025)
 slug: dislipidemias-avaliacao-de-risco-e-manejo-atualizacao-focada-2025
 theme: "Prevenção e lipídios"
 kind: protocolo
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["The 2025 ESC/EAS Dyslipidaemia Focused Update · ESC/EAS · 2025 · 41706264 · https://pubmed.ncbi.nlm.nih.gov/41706264/", "ESC guidelines on dyslipidemia update 2025 · Herz · 2025 · 41366604 · https://pubmed.ncbi.nlm.nih.gov/41366604/"]
 legacy_source: "Protocolo de Dislipidemias (ESC/EAS 2025 Focused Update)"
 ---
@@ -33,9 +33,9 @@ Recomendação reforçada de início imediato de estatina de alta intensidade, n
 
 ## Subgrupos especiais
 - **hiv**: Estatina recomendada a partir dos 40 anos independentemente do LDL-C
-- **anticiclina**: Estatina recomendada em pacientes de alto risco em tratamento com antraciclina
-- **risco extremo**: Novo alvo de LDL-C de 40 mg/dL (aproximadamente 1,0 mmol/L) considerado para pacientes de risco extremo, com papel reforçado para imagem na avaliação
-- **fonte**: diretriz de dislipidemia já citada nas referências deste documento
+- **antraciclina**: Estatina recomendada em pacientes de alto risco em tratamento com antraciclina
+- **segundo evento vascular em 2 anos (risco extremo)**: Alvo de LDL-C **abaixo de 40 mg/dL (~1,0 mmol/L)** pode ser considerado (Classe IIb) para paciente que tem um segundo evento vascular dentro de 2 anos do primeiro, em uso de estatina em dose máxima tolerada — **este alvo já constava da diretriz ESC/EAS de 2019 (não é novidade da atualização focada de 2025)**; a atualização de 2025 mantém os valores-alvo de LDL-C inalterados em relação a 2019 (ver "Metas ldl" acima), com papel reforçado para imagem na avaliação de risco
+- **fonte**: The 2025 ESC/EAS Dyslipidaemia Focused Update: Clinical Interpretation and Practical Implications (PMID 41706264) e ESC guidelines on dyslipidemia update 2025 (Herz, PMID 41366604) — os dois afirmam explicitamente que os valores-alvo de LDL-C permanecem inalterados
 
 ## Suplementos vitaminas
 Uso desencorajado para prevenção cardiovascular primária, sem evidência de benefício
