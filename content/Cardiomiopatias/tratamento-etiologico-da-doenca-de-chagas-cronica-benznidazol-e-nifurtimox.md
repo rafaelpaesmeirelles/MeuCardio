@@ -5,7 +5,7 @@ theme: "Cardiomiopatias"
 kind: protocolo
 summary: "As doses, a duração e o protocolo de monitorização que faltavam: benznidazol 5-7 mg/kg/dia por 60 dias, com os cortes de neutrófilos e de transaminases que mandam suspender, a cronologia dos efeitos adversos semana a semana, e o confronto entre o protocolo brasileiro e o da OPAS/OMS — que divergem justamente no corte de 50 anos e na lesão orgânica estabelecida."
 review_status: revisado
-source_refs: ["Hasslocher-Moreno AM. Trypanocidal Treatment for Chronic Chagas Disease: Past, Present, and Future. Rev Soc Bras Med Trop. 2025;58:e0242-2025. DOI: 10.1590/0037-8682-0242-2025. PMID: 41172392 — texto integral em acesso aberto (PMC12562791), revisão do Instituto Nacional de Infectologia Evandro Chagas (Fiocruz-RJ); as cinco tabelas foram conferidas em 01/08/2026. As duas diretrizes confrontadas na revisão são o Protocolo Clínico e Diretrizes Terapêuticas brasileiro (CONITEC, 2018) e a diretriz da OPAS/OMS (2018), ambas em GRADE"]
+source_refs: ["Hasslocher-Moreno AM. Trypanocidal Treatment for Chronic Chagas Disease: Past, Present, and Future. Rev Soc Bras Med Trop. 2025;58:e0242-2025. DOI: 10.1590/0037-8682-0242-2025. PMID: 41172392 — texto integral em acesso aberto (PMC12562791), revisão do Instituto Nacional de Infectologia Evandro Chagas (Fiocruz-RJ); as cinco tabelas foram conferidas em 01/08/2026. As duas diretrizes confrontadas na revisão são o Protocolo Clínico e Diretrizes Terapêuticas brasileiro (CONITEC, 2018) e a diretriz da OPAS/OMS (2018), ambas em GRADE", "Ministério da Saúde/CONITEC. Protocolo Clínico e Diretrizes Terapêuticas Doença de Chagas. Outubro/2018, nº 397. www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/svsa/doenca-de-chagas/protocolo-clinico-e-diretrizes-terapeuticas-para-doenca-de-chagas-_-relatorio-de-recomendacao.pdf — texto integral lido por pdftotext em 01/08/2026, seção 7 e Tabela 6, para resolver as duas incoerências internas (apresentações do benznidazol e fracionamento do nifurtimox) marcadas como verificação humana necessária em 31/07/2026"]
 ---
 
 # Tratamento etiológico da doença de Chagas crônica
@@ -19,16 +19,34 @@ Este documento reúne as doses, o protocolo de monitorização e o confronto ent
 
 | | **Benznidazol** | **Nifurtimox** |
 |---|---|---|
-| Apresentação | comprimidos de **100 mg** e **12,5 mg** (pediátrico), via oral | comprimidos de **120 mg** e **30 mg**, via oral |
-| **Dose no adulto** | **5 a 7 mg/kg/dia**, em 2 tomadas | **8 a 10 mg/kg/dia**, em 3 a 4 tomadas |
-| **Dose na criança** | **5 a 10 mg/kg/dia**, em 2 tomadas | **10 a 20 mg/kg/dia**, em 3 a 4 tomadas |
+| Apresentação | comprimidos de **100 mg** e **12,5 mg** (pediátrico), via oral — confirmado no PCDT/CONITEC 2018, só essas duas | comprimidos de **120 mg** e **30 mg**, via oral |
+| **Dose no adulto** | **5 a 7 mg/kg/dia**, em 2 tomadas | **8 a 10 mg/kg/dia**, em **3 tomadas** (PCDT/CONITEC 2018: fixo em 3x/dia, não em faixa) |
+| **Dose na criança** | **5 a 10 mg/kg/dia**, em 2 tomadas | **10 a 20 mg/kg/dia**, em **3 tomadas** (PCDT/CONITEC 2018: fixo em 3x/dia, não em faixa) |
 | **Duração** | **60 dias** (pode variar, até 80 dias) | **60 dias** |
 | Efeitos adversos principais | náusea, vômito, dermatite alérgica, neuropatia periférica | anorexia, perda de peso, vômito, dor abdominal, insônia |
 | Contraindicações principais | **gravidez**, doença neurológica grave, hepatopatia grave | **gravidez**, transtorno neurológico ou psiquiátrico grave, hepatopatia grave |
 
 O **benznidazol é a primeira linha** pelo protocolo brasileiro, com o nifurtimox como alternativa; a OPAS/OMS não declara preferência entre os dois.
 
-> **Duas incoerências internas da própria fonte, registradas e não resolvidas por conta própria.** O corpo do texto descreve o benznidazol em **três** apresentações — 100 mg, 50 mg e a pediátrica de 12,5 mg —, enquanto a tabela lista **duas**, omitindo a de 50 mg. E o fracionamento do nifurtimox aparece como "2 a 3 tomadas" no texto e "3 a 4 vezes ao dia" na tabela. Nos dois pontos, **VERIFICAÇÃO HUMANA NECESSÁRIA** contra a bula e o protocolo nacional vigentes antes de prescrever.
+> **Duas incoerências internas da própria fonte, resolvidas em 01/08/2026 contra o texto integral do
+> PCDT brasileiro (a mesma diretriz já citada no confronto abaixo), não contra a fonte secundária que
+> as havia gerado.** Fonte: *Protocolo Clínico e Diretrizes Terapêuticas Doença de Chagas*, Ministério
+> da Saúde/CONITEC, outubro de 2018, nº 397 —
+> `www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/svsa/doenca-de-chagas/protocolo-clinico-e-diretrizes-terapeuticas-para-doenca-de-chagas-_-relatorio-de-recomendacao.pdf`,
+> seção 7 ("Fármacos e esquema de administração") e Tabela 6, lidas na íntegra por `pdftotext -layout`
+> nesta sessão.
+>
+> - **Benznidazol tem, no protocolo oficial, DUAS apresentações, não três**: "Comprimidos de 12,5 mg
+>   (pediátrico) e de 100 mg (adulto)" — texto literal da Tabela 6 do PCDT. **A tabela deste documento
+>   já estava certa**; a versão de "três apresentações" (100 mg, 50 mg e 12,5 mg) que constava só no
+>   corpo do texto **não existe no protocolo brasileiro** e foi removida abaixo. O que existe é o
+>   esquema pediátrico por faixa de peso usando múltiplos do comprimido de 12,5 mg (por exemplo,
+>   "37,5 mg" = 3 comprimidos de 12,5 mg entre 10 e 15 kg) — não uma apresentação própria de 50 mg.
+> - **Nifurtimox é fracionado em 3 tomadas diárias, fixo — não numa faixa de "2 a 3" nem de "3 a
+>   4"**: o PCDT descreve "O medicamento é usado em três doses diárias, por 60 dias" para o adulto, e
+>   "15 mg/kg/dia, 3x ao dia, por 60 dias" para a criança — mesma frequência nas duas faixas etárias.
+>   **Nem o texto original deste documento (2 a 3) nem a tabela original (3 a 4) estavam certos**; os
+>   dois foram corrigidos abaixo para 3 tomadas/dia, conforme o protocolo nacional.
 
 ## Quem tratar: onde as duas diretrizes divergem
 
