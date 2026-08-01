@@ -1874,6 +1874,22 @@ Os 4 subagentes que lancei para as mesmas 11 trilhas (antes de notar o rascunho 
 tree) geraram conteúdo redundante nos mesmos temas — descartado, não commitado, para não duplicar
 slug nem sobrepor curadoria já verificada.
 
+**Segunda leva, mesmo dia — casos clínicos: 44 → 54.** Depois de fechar as 27 lacunas de tema
+(bloco acima), 10 temas ainda tinham só 1 caso (Fibrilação atrial, Insuficiência cardíaca,
+Hipertensão, Tromboembolismo, Diabetes e cardiologia, Prevenção e lipídios, Valvopatias,
+Cardiomiopatias, Endocardite, Perioperatório). Mais 3 subagentes, cada um lendo o caso já existente
+do tema antes de escolher a fonte nova, para garantir **ângulo clínico diferente** (ex.: o caso
+antigo de FA era sobre CHA₂DS₂-VASc em achado incidental; o novo é sobre ponte com heparina no
+BRIDGE para procedimento eletivo). Mesma verificação de sempre — fonte publicada conferida no
+banco, `source_refs` copiado literal, amostra de 5 PMIDs reconferida por `esummary` depois de
+escrito, todos batendo. Publicado por lista explícita de 10 slugs, órfãos e paridade disco×banco
+conferidos: **54 disco = 54 banco = 54 publicados**.
+
+**Acervo medido no disco às ~08h de 01/08/2026, com as três sessões ainda ativas e commitando (não
+é medição final do dia): 1.781 itens** — `content/*.md` 571 · `evidencias` 726 · `estudos` 120 ·
+`medicamentos` 89 · `galeria` 74 · `exames` 73 · `casos-clinicos` **54** · `trilhas` **30** ·
+`emergencia` 24 · `checklists` 9 · `material-paciente` 11. **Faltam 219 para os 2.000.**
+
 **Regras que evitam colisão, todas aprendidas apanhando aqui:**
 
 1. **`git pull --rebase origin main` antes de commitar.** As duas sessões
