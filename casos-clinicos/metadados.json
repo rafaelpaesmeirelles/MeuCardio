@@ -4239,5 +4239,545 @@
       "Nashef SA, Roques F, Sharples LD, Nilsson J, Smith C, Goldstone AR, Lockowandt U. EuroSCORE II. Eur J Cardiothorac Surg. 2012;41(4):734-744. DOI: 10.1093/ejcts/ezs043. PMID: 22378855"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "dupla-antiagregacao-abreviada-apos-icp-em-alto-risco-hemorragico-master-dapt",
+    "titulo": "DAPT abreviada após ICP em paciente de alto risco hemorrágico: quanto tempo é seguro?",
+    "tema": "Doença coronariana",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 78 anos, com síndrome coronariana tratada com implante de stent farmacológico de sirolimo de polímero biodegradável, apresenta insuficiência renal crônica e história de sangramento gastrointestinal prévio — critérios de alto risco hemorrágico (HBR). Completou um mês de dupla antiagregação plaquetária (DAPT), está clinicamente estável e sem novo sangramento. A equipe discute se deve suspender um dos dois antiagregantes agora ou manter a dupla terapia por mais tempo.",
+    "pergunta": "De acordo com o ensaio MASTER DAPT, qual conduta é apropriada um mês após ICP com stent farmacológico em paciente de alto risco hemorrágico?",
+    "opcoes": [
+      "Suspender um dos antiagregantes (terapia abreviada) agora, pois é não inferior a manter DAPT por pelo menos mais 2 meses quanto a eventos clínicos e reduz o sangramento",
+      "Manter DAPT por 12 meses obrigatoriamente, independentemente do risco hemorrágico",
+      "Suspender todo antiagregante agora e manter apenas anticoagulante oral",
+      "Trocar para monoterapia com inibidor de P2Y12 somente se houver sangramento ativo"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "No MASTER DAPT (NEJM 2021), 4434 pacientes de alto risco hemorrágico na população por protocolo mostraram que a terapia abreviada (suspensão de um antiagregante um mês após ICP) foi não inferior à terapia padrão (manutenção por pelo menos mais 2 meses) quanto a eventos adversos clínicos líquidos (7,5% vs. 7,7%; diferença -0,23 pontos percentuais; IC95% -1,80 a 1,33; p<0,001 para não inferioridade) e quanto a eventos cardíacos ou cerebrais adversos maiores (6,1% vs. 5,9%; diferença 0,11 pontos percentuais; IC95% -1,29 a 1,51; p=0,001 para não inferioridade). Na análise por intenção de tratar (4579 pacientes), a terapia abreviada também resultou em menor incidência de sangramento maior ou clinicamente relevante não maior (6,5% vs. 9,4%; diferença -2,82 pontos percentuais; IC95% -4,40 a -1,24; p<0,001 para superioridade). O stent usado no ensaio foi farmacológico de sirolimo de polímero biodegradável, e o estudo foi financiado pela Terumo.",
+    "source_refs": [
+      "Valgimigli M, Frigoli E, Heg D, et al. Dual Antiplatelet Therapy after PCI in Patients at High Bleeding Risk. N Engl J Med. 2021;385(18):1643-1655. DOI: 10.1056/NEJMoa2108749. PMID: 34449185"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "attr-cm-estabilizador-de-ttr-acoramidis-attribute-cm",
+    "titulo": "Amiloidose ATTR-CM: o estabilizador de transtirretina acoramidis é alternativa ao tafamidis?",
+    "tema": "Cardiomiopatias",
+    "nivel": "avançado",
+    "enunciado": "Homem, 76 anos, com amiloidose cardíaca por transtirretina (ATTR-CM) confirmada por cintilografia com pirofosfato de tecnécio, classe funcional NYHA II-III e NT-proBNP elevado, já em uso otimizado de diuréticos. A equipe discute iniciar um estabilizador de transtirretina e questiona se existe alternativa ao tafamidis, já testado no ATTR-ACT, com eficácia demonstrada por outro mecanismo de estabilização.",
+    "pergunta": "Segundo o ensaio ATTRibute-CM, qual foi o resultado do desfecho hierárquico primário com acoramidis em relação ao placebo, em pacientes com ATTR-CM?",
+    "opcoes": [
+      "O acoramidis favoreceu o desfecho hierárquico composto (óbito, hospitalização cardiovascular, variação de NT-proBNP e do teste de caminhada de 6 minutos), com razão de vitórias (win ratio) de 1,8, sem aumento de eventos adversos",
+      "O acoramidis não atingiu significância estatística em nenhum componente do desfecho primário",
+      "O acoramidis reduziu apenas a mortalidade isolada, sem efeito sobre hospitalização ou biomarcadores",
+      "O estudo foi interrompido precocemente por excesso de eventos adversos graves no grupo acoramidis"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "No ATTRibute-CM (NEJM 2024), 632 pacientes com ATTR-CM foram randomizados na proporção 2:1 para acoramidis 800mg 2x/dia ou placebo por 30 meses. A análise hierárquica de quatro etapas (óbito por qualquer causa, hospitalização cardiovascular, variação do NT-proBNP e variação da distância no teste de caminhada de 6 minutos), pelo método de Finkelstein-Schoenfeld, favoreceu o acoramidis sobre o placebo (p<0,001), com razão de vitórias (win ratio) de 1,8 (IC95% 1,4-2,2) — 63,7% das comparações pareadas favoreceram acoramidis contra 35,9% que favoreceram placebo. Óbito e hospitalização cardiovascular, juntos, responderam por mais da metade das comparações pareadas que decidiram a razão de vitórias (58%); as comparações de NT-proBNP tiveram a maior razão de vitórias a perdas (23,3% vs. 7,0%). A incidência global de eventos adversos foi semelhante entre os grupos (98,1% acoramidis vs. 97,6% placebo), e eventos adversos graves foram MENOS frequentes com acoramidis (54,6% vs. 64,9% no placebo), não mais.",
+    "source_refs": [
+      "Gillmore JD, Judge DP, Cappelli F, et al. Efficacy and Safety of Acoramidis in Transthyretin Amyloid Cardiomyopathy. N Engl J Med. 2024;390(2):132-142. DOI: 10.1056/NEJMoa2305434. PMID: 38197816"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "pos-tavi-sem-indicacao-de-anticoagulacao-rivaroxabana-de-rotina-galileo",
+    "titulo": "Pós-TAVI sem indicação prévia de anticoagulação: rivaroxabana de rotina previne trombose?",
+    "tema": "Valvopatias",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 81 anos, submetida a implante de válvula aórtica transcateter (TAVI) bem-sucedido por estenose aórtica grave, sem fibrilação atrial nem outra indicação estabelecida de anticoagulação oral. A equipe considera associar um anticoagulante de rotina ao esquema antitrombótico, com a hipótese de reduzir eventos tromboembólicos subclínicos na prótese.",
+    "pergunta": "De acordo com o ensaio GALILEO, qual foi o efeito de uma estratégia com rivaroxabana 10 mg/dia (associada a AAS por 3 meses) comparada a AAS associado a clopidogrel por 3 meses, em pacientes sem indicação estabelecida de anticoagulação após TAVI bem-sucedido?",
+    "opcoes": [
+      "A estratégia com rivaroxabana foi associada a maior risco de óbito ou evento tromboembólico e de sangramento maior, levando à interrupção precoce do estudo por segurança",
+      "A rivaroxabana reduziu significativamente óbito e tromboembolismo, sem aumento de sangramento",
+      "As duas estratégias foram equivalentes, sem diferença estatística em nenhum desfecho",
+      "A rivaroxabana aumentou apenas o sangramento, sem qualquer efeito sobre óbito ou tromboembolismo"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "No GALILEO (NEJM 2020), 1644 pacientes sem indicação estabelecida de anticoagulação oral após TAVI bem-sucedido foram randomizados para rivaroxabana 10mg/dia (com AAS 75-100mg/dia nos primeiros 3 meses) ou AAS 75-100mg/dia (com clopidogrel 75mg/dia nos primeiros 3 meses). Após mediana de 17 meses, óbito ou primeiro evento tromboembólico (análise por intenção de tratar) ocorreu em 105 pacientes do grupo rivaroxabana vs. 78 do grupo antiplaquetário (9,8 vs. 7,2 por 100 pacientes-ano; HR 1,35; IC95% 1,01-1,81; p=0,04). Sangramento maior, incapacitante ou com risco de morte ocorreu em 46 vs. 31 pacientes (4,3 vs. 2,8 por 100 pacientes-ano; HR 1,50; IC95% 0,95-2,37; p=0,08). Houve 64 óbitos no grupo rivaroxabana vs. 38 no grupo antiplaquetário (5,8 vs. 3,4 por 100 pacientes-ano; HR 1,69; IC95% 1,13-2,53). O estudo foi interrompido precocemente pelo comitê de monitorização de segurança por esses achados desfavoráveis à rivaroxabana.",
+    "source_refs": [
+      "Dangas GD, Tijssen JGP, Wöhrle J, et al. A Controlled Trial of Rivaroxaban after Transcatheter Aortic-Valve Replacement. N Engl J Med. 2020;382(2):120-129. DOI: 10.1056/NEJMoa1911425. PMID: 31733180"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "pericardite-recorrente-idiopatica-inibidor-de-il-1-goflikicept",
+    "titulo": "Pericardite recorrente idiopática em remissão: vale manter um novo inibidor de IL-1 além da colchicina?",
+    "tema": "Pericárdio",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 34 anos, no quarto episódio de pericardite idiopática recorrente, com proteína C-reativa persistentemente elevada nas crises e dependência de corticosteroide apesar de colchicina otimizada. Entrou em remissão clínica e laboratorial após iniciar um novo inibidor de interleucina-1 (goflikicept) em fase aberta de um estudo, e a equipe discute se o fármaco deve ser mantido ou se pode ser substituído por placebo agora que os sintomas melhoraram.",
+    "pergunta": "No estudo de fase II/III com goflikicept em pericardite recorrente idiopática, o que ocorreu na fase randomizada e controlada por placebo de retirada, entre os pacientes que haviam respondido ao fármaco na fase aberta prévia?",
+    "opcoes": [
+      "Recorrência de pericardite ocorreu em 9 dos 10 pacientes do grupo placebo, contra nenhuma recorrência no grupo goflikicept, dentro de 24 semanas (p<0,001)",
+      "A taxa de recorrência foi semelhante nos dois grupos, sem diferença estatística",
+      "A recorrência foi maior no grupo goflikicept do que no placebo, sugerindo efeito rebote",
+      "O estudo não teve fase de retirada randomizada, apenas seguimento aberto contínuo"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O estudo de fase II/III (JACC 2023) incluiu 22 pacientes com pericardite recorrente idiopática; 20 foram randomizados após responderem ao goflikicept (inibidor de IL-1) durante a fase aberta inicial (run-in), entrando em uma fase controlada por placebo de retirada do fármaco, com desfecho primário de tempo até a primeira recorrência de pericardite. Durante o run-in, houve redução da proteína C-reativa acompanhada de redução da dor torácica e do derrame pericárdico em relação ao basal. Na fase de retirada randomizada, recorrência de pericardite ocorreu em 9 dos 10 pacientes do grupo placebo, sem nenhum evento de recorrência no grupo goflikicept dentro de 24 semanas após a randomização (p<0,001). Foram relatados 122 eventos adversos em 21 dos 22 pacientes (95,5%), sem óbitos e sem novos sinais de segurança identificados para o goflikicept.",
+    "source_refs": [
+      "Myachikova VY, Maslyanskiy AL, Moiseeva OM, et al. Treatment of Idiopathic Recurrent Pericarditis With Goflikicept: Phase II/III Study Results. J Am Coll Cardiol. 2023;82(1):30-40. DOI: 10.1016/j.jacc.2023.04.046. PMID: 37380301"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "endocardite-infecciosa-aas-em-dose-plena-como-adjuvante-reduz-embolia-chan",
+    "titulo": "Endocardite infecciosa já em antibioticoterapia: acrescentar AAS em dose plena reduz o risco de embolia?",
+    "tema": "Endocardite",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 58 anos, internado com endocardite infecciosa de valva nativa, sem abscesso perivalvular, em início de antibioticoterapia dirigida por hemocultura. A equipe discute se deve associar AAS em dose plena (325mg/dia) desde o início do tratamento, com a hipótese de que a inibição plaquetária reduziria o risco de eventos embólicos sistêmicos, extrapolando achados de modelos animais.",
+    "pergunta": "Segundo o ensaio randomizado, duplo-cego e controlado por placebo de Chan et al., qual foi o efeito de acrescentar AAS 325mg/dia por 4 semanas, além do antibiótico, sobre o risco de eventos embólicos clínicos em pacientes com endocardite infecciosa?",
+    "opcoes": [
+      "O AAS não reduziu o risco de eventos embólicos e mostrou tendência a maior sangramento, não sendo indicado no manejo inicial da endocardite",
+      "O AAS reduziu significativamente os eventos embólicos, devendo integrar o tratamento padrão da endocardite",
+      "O AAS acelerou a resolução ecocardiográfica da vegetação, embora sem efeito sobre embolia",
+      "O AAS não teve qualquer efeito, nem benéfico nem deletério, em nenhum desfecho avaliado"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "No ensaio de Chan et al. (JACC 2003), 115 pacientes com endocardite infecciosa (excluídos os com abscesso perivalvular) foram randomizados para AAS 325mg/dia ou placebo por 4 semanas, além do tratamento antibiótico padrão. Eventos embólicos clínicos ocorreram em 17 pacientes (28,3%) do grupo AAS vs. 11 (20,0%) do grupo placebo (odds ratio 1,62; IC95% 0,68-3,86; p=0,29) — sem redução, com tendência numérica desfavorável ao AAS. Houve também tendência a maior incidência de sangramento no grupo AAS (odds ratio 1,92; IC95% 0,76-4,86; p=0,075). O desenvolvimento de novas lesões intracranianas foi semelhante nos dois grupos, e o AAS não teve efeito sobre a resolução da vegetação nem sobre a disfunção valvar. Os autores concluíram que o AAS não é indicado no manejo inicial da endocardite infecciosa.",
+    "source_refs": [
+      "Chan KL, Dumesnil JG, Cujec B, et al. A randomized trial of aspirin on the risk of embolic events in patients with infective endocarditis. J Am Coll Cardiol. 2003;42(5):775-780. DOI: 10.1016/s0735-1097(03)00829-5. PMID: 12957419"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "aneurisma-de-aorta-abdominal-roto-estrategia-endovascular-ou-cirurgia-aberta-improve",
+    "titulo": "Aneurisma de aorta abdominal roto: a estratégia endovascular reduz a mortalidade em 30 dias?",
+    "tema": "Aorta e doença arterial periférica",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 74 anos, chega ao pronto-socorro com dor abdominal súbita, hipotensão e massa pulsátil, com diagnóstico clínico de aneurisma de aorta abdominal roto. O centro dispõe de hemodinâmica e discute se deve seguir uma estratégia de reparo endovascular (quando a anatomia permitir) ou encaminhar diretamente para cirurgia aberta.",
+    "pergunta": "Segundo o ensaio randomizado IMPROVE, qual foi o resultado de uma estratégia de reparo endovascular (quando anatomicamente adequado, com conversão para cirurgia aberta quando não) comparada à cirurgia aberta como abordagem inicial, em pacientes com diagnóstico clínico de aneurisma de aorta abdominal roto?",
+    "opcoes": [
+      "Não houve redução significativa da mortalidade em 30 dias com a estratégia endovascular, mas mulheres tiveram benefício maior que homens, e mais pacientes do grupo endovascular tiveram alta direta para casa",
+      "A estratégia endovascular reduziu a mortalidade em 30 dias em mais da metade, igualmente em homens e mulheres",
+      "A cirurgia aberta foi superior à estratégia endovascular tanto em mortalidade quanto em custo",
+      "Não houve diferença em nenhum desfecho avaliado, incluindo local de alta e custo"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "No IMPROVE (BMJ 2014), 613 pacientes com diagnóstico clínico de aneurisma de aorta abdominal roto, provenientes de 30 centros vasculares, foram randomizados para uma estratégia de reparo endovascular (quando a anatomia era adequada, com cirurgia aberta se não fosse) ou diretamente para cirurgia aberta. A mortalidade em 30 dias foi 35,4% (112/316) no grupo de estratégia endovascular vs. 37,4% (111/297) no grupo de cirurgia aberta (odds ratio 0,92; IC95% 0,66-1,28; p=0,62), sem diferença significativa. Houve sinal de interação por sexo (p=0,02): mulheres pareceram se beneficiar mais da estratégia endovascular (odds ratio 0,44; IC95% 0,22-0,91) do que homens (odds ratio 1,18; IC95% 0,80-1,75). Mais pacientes do grupo endovascular tiveram alta direta para casa (189/201, 94% vs. 141/183, 77%; p<0,001), e o custo médio em 30 dias foi numericamente menor com a estratégia endovascular (economia incremental de £1186; IC95% -£625 a £2997, sem robustez estatística). Os autores concluíram que a estratégia endovascular não trouxe redução significativa de mortalidade nem de custo em 30 dias.",
+    "source_refs": [
+      "IMPROVE Trial Investigators, Powell JT, Sweeting MJ, et al. Endovascular or open repair strategy for ruptured abdominal aortic aneurysm: 30 day outcomes from IMPROVE randomised trial. BMJ. 2014;348:f7661. DOI: 10.1136/bmj.f7661. PMID: 24418950"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "marfan-com-dilatacao-da-raiz-da-aorta-losartana-ou-atenolol",
+    "titulo": "Síndrome de Marfan com dilatação da raiz da aorta: losartana ou atenolol para reduzir a progressão?",
+    "tema": "Cardiopatias congênitas",
+    "nivel": "intermediário",
+    "enunciado": "Menino de 12 anos com síndrome de Marfan confirmada geneticamente (mutação em FBN1), diâmetro da raiz aórtica com z-score 3,8 ajustado à superfície corporal, sem regurgitação aórtica significativa e sem histórico de dissecção. Os pais perguntam se a losartana, droga descrita como \"mais moderna e voltada à causa\", substitui com vantagem o betabloqueador que o cardiologista pediátrico vinha propondo.",
+    "pergunta": "Com base no maior ensaio randomizado que já comparou diretamente as duas estratégias em crianças e adultos jovens com síndrome de Marfan, qual conduta está de acordo com a evidência?",
+    "opcoes": [
+      "Iniciar losartana e suspender qualquer plano de usar betabloqueador, porque o ensaio mostrou redução significativamente maior da dilatação da raiz aórtica com losartana",
+      "Iniciar atenolol e não considerar a losartana, porque o ensaio mostrou superioridade do betabloqueador na redução da taxa de dilatação",
+      "Qualquer uma das duas classes é uma opção razoável para desacelerar a dilatação da raiz aórtica, já que o ensaio não encontrou diferença significativa entre losartana e atenolol na taxa de mudança do z-score aórtico",
+      "Nenhuma das duas classes deve ser usada isoladamente; o ensaio só validou a combinação de losartana com atenolol"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O ensaio do Pediatric Heart Network (Lacro RV et al., NEJM 2014) randomizou 608 participantes de 6 meses a 25 anos (idade média 11,5±6,5 anos no grupo atenolol e 11,0±6,2 anos no grupo losartana) com z-score da raiz aórtica maior que 3,0, em 21 centros, entre janeiro/2007 e fevereiro/2011. A taxa ajustada de mudança do z-score da raiz aórtica não diferiu significativamente entre atenolol (-0,139±0,013 desvios-padrão/ano) e losartana (-0,107±0,013 desvios-padrão/ano), p=0,08. As duas inclinações foram significativamente menores que zero, ou seja, os dois tratamentos reduziram a dilatação relativa à superfície corporal. As taxas de cirurgia da raiz aórtica, dissecção, morte e o composto desses eventos em 3 anos também não diferiram entre os grupos. Não houve superioridade demonstrada de uma classe sobre a outra — a escolha pode considerar tolerabilidade e comorbidades associadas, não uma vantagem farmacológica comprovada da losartana sobre o betabloqueador.",
+    "source_refs": [
+      "Lacro RV, Dietz HC, Sleeper LA, et al. Atenolol versus losartan in children and young adults with Marfan's syndrome. N Engl J Med. 2014;371(22):2061-2071. DOI: 10.1056/NEJMoa1404731. PMID: 25405392"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "fibrilacao-atrial-em-valvopatia-mitral-reumatica-rivaroxabana-ou-antagonista-de-vitamina-k-invictus",
+    "titulo": "Fibrilação atrial associada a valvopatia mitral reumática: a rivaroxabana pode substituir o antagonista de vitamina K?",
+    "tema": "Febre reumática",
+    "nivel": "avançado",
+    "enunciado": "Mulher de 48 anos, natural do interior, com estenose mitral reumática moderada (área valvar 1,8 cm²) e fibrilação atrial permanente, CHA2DS2-VASc 3. O médico da unidade básica sugere trocar a varfarina por rivaroxabana para simplificar o seguimento, argumentando que \"os DOAC são hoje a primeira escolha na fibrilação atrial\".",
+    "pergunta": "O que o maior ensaio clínico randomizado já conduzido especificamente em fibrilação atrial associada a doença cardíaca reumática mostrou sobre essa troca?",
+    "opcoes": [
+      "A rivaroxabana foi não inferior ao antagonista de vitamina K para o desfecho composto de eventos cardiovasculares e morte, com menos sangramento maior, apoiando a troca",
+      "O antagonista de vitamina K levou a uma taxa menor do composto de eventos cardiovasculares e morte do que a rivaroxabana, sem diferença significativa no sangramento maior — a troca não deve ser feita rotineiramente nesse contexto",
+      "Não houve diferença entre as duas estratégias em nenhum desfecho avaliado, tornando a escolha indiferente",
+      "A rivaroxabana reduziu significativamente a mortalidade em comparação com o antagonista de vitamina K, mas à custa de mais sangramento maior"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O estudo INVICTUS (Connolly SJ et al., NEJM 2022) randomizou 4.565 pacientes com fibrilação atrial e doença cardíaca reumática documentada por ecocardiograma (idade média 50,5 anos, 72,3% mulheres) para rivaroxabana em dose padrão ou antagonista de vitamina K ajustado; 4.531 entraram na análise final. As curvas de sobrevida foram não proporcionais; o tempo médio restrito de sobrevida livre do desfecho composto (AVC, embolia sistêmica, infarto ou morte vascular/desconhecida) foi de 1.599 dias no grupo rivaroxabana versus 1.675 dias no grupo antagonista de vitamina K (diferença de -76 dias; IC95% -121 a -31; p<0,001). A mortalidade também foi maior com rivaroxabana (tempo médio restrito de sobrevida 1.608 vs. 1.680 dias; diferença -72 dias; IC95% -117 a -28). Não houve diferença significativa na taxa de sangramento maior entre os grupos, e a descontinuação permanente da medicação do estudo foi mais frequente com rivaroxabana em todas as visitas. Conclusão dos autores: nessa população, o antagonista de vitamina K é superior à rivaroxabana para o composto cardiovascular/morte, sem o custo de mais sangramento — resultado que contraria a preferência geral por DOAC na fibrilação atrial não valvar e reforça que a doença reumática mitral está excluída dos grandes ensaios de fibrilação atrial que sustentam essa preferência.",
+    "source_refs": [
+      "Connolly SJ, Karthikeyan G, Ntsekhe M, et al. Rivaroxaban in Rheumatic Heart Disease-Associated Atrial Fibrillation. N Engl J Med. 2022;387(11):978-988. DOI: 10.1056/NEJMoa2209051. PMID: 36036525"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sincope-vasovagal-recorrente-metoprolol-tem-respaldo-ensaio-post",
+    "titulo": "Síncope vasovagal recorrente e tilt test positivo: o betabloqueador metoprolol previne novos episódios?",
+    "tema": "Síncope",
+    "nivel": "intermediário",
+    "enunciado": "Mulher de 24 anos com mais de 10 episódios de síncope vasovagal ao longo de 8 anos, todos precedidos de pródromos típicos (sudorese fria, escurecimento visual), tilt test positivo. Já orientada quanto a hidratação, ingesta de sal e manobras de contrapressão física, mas mantém episódios incapacitantes. Um colega sugere iniciar metoprolol, \"já que é betabloqueador e reduz o tônus simpático que dispara o reflexo\".",
+    "pergunta": "O que o ensaio randomizado, duplo-cego, controlado por placebo, desenhado especificamente para testar essa hipótese mostrou sobre o metoprolol na síncope vasovagal recorrente?",
+    "opcoes": [
+      "O metoprolol reduziu significativamente a recorrência de síncope em todos os pacientes, sendo hoje a primeira linha farmacológica",
+      "O metoprolol só foi eficaz em pacientes com menos de 42 anos, definindo um corte etário para indicação",
+      "O metoprolol não foi eficaz em reduzir a recorrência de síncope na população estudada, e nem a idade nem a necessidade de isoproterenol para positivar o tilt test predisseram benefício",
+      "O metoprolol foi eficaz apenas nos pacientes com tilt test positivo sem uso de isoproterenol"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O estudo POST (Prevention of Syncope Trial; Sheldon R et al., Circulation 2006) randomizou, de forma duplo-cega e controlada por placebo, 208 pacientes (idade média 42±18 anos, mediana de 9 episódios de síncope ao longo de mediana de 11 anos, todos com mais de 2 episódios e tilt test positivo) — 108 para metoprolol e 100 para placebo, em doses de 25 a 200 mg/dia pelo maior tempo tolerado, com acompanhamento de 1 ano. Houve 75 pacientes com pelo menos uma recorrência de síncope, sem diferença significativa entre os grupos. A randomização foi estratificada por idade (<42 e ≥42 anos), e nem a idade nem a necessidade de isoproterenol para tornar o tilt test positivo predisseram benefício significativo do metoprolol. Conclusão dos autores: o metoprolol não foi eficaz em prevenir a síncope vasovagal na população estudada — achado que distingue essa droga de outras estratégias farmacológicas testadas depois na mesma população, como a midodrina (ensaio POST 4) e a fludrocortisona (ensaio POST 2), cujos resultados não devem ser extrapolados para o betabloqueador.",
+    "source_refs": [
+      "Sheldon R, Connolly S, Rose S, et al. Prevention of Syncope Trial (POST): a randomized, placebo-controlled study of metoprolol in the prevention of vasovagal syncope. Circulation. 2006;113(9):1164-1170. DOI: 10.1161/CIRCULATIONAHA.105.535161. PMID: 16505178"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "ieca-cronico-antes-de-cirurgia-nao-cardiaca-de-grande-porte-continuar-ou-suspender-stop-or-not",
+    "titulo": "Uso crônico de IECA antes de cirurgia não cardíaca de grande porte: continuar até o dia da cirurgia ou suspender 48 horas antes?",
+    "tema": "Perioperatório",
+    "nivel": "avançado",
+    "enunciado": "Homem de 68 anos, hipertenso, em uso de enalapril há mais de 3 anos, será submetido a colectomia eletiva de grande porte. A equipe de anestesiologia diverge: um médico defende suspender o IECA 48 horas antes para evitar hipotensão intraoperatória; outro defende manter até o dia da cirurgia para evitar labilidade pressórica por rebote.",
+    "pergunta": "Segundo o maior ensaio clínico randomizado multicêntrico que comparou diretamente as duas estratégias em cirurgia não cardíaca de grande porte, qual achado deve orientar a conduta?",
+    "opcoes": [
+      "A estratégia de continuação reduziu significativamente a mortalidade e as complicações maiores em 28 dias, apesar de mais hipotensão intraoperatória",
+      "A estratégia de continuação não se associou a maior taxa de mortalidade e complicações pós-operatórias maiores em 28 dias do que a suspensão, apesar de se associar a mais episódios de hipotensão intraoperatória",
+      "A estratégia de suspensão aumentou significativamente a taxa de lesão renal aguda em comparação com a continuação",
+      "Nenhuma das duas estratégias pôde ser recomendada, porque o ensaio foi interrompido precocemente por futilidade"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O ensaio Stop-or-Not (Legrand M et al., JAMA 2024), conduzido em 40 hospitais franceses entre janeiro/2018 e abril/2023, randomizou 2.222 pacientes em uso de IECA ou BRA havia pelo menos 3 meses e programados para cirurgia não cardíaca de grande porte: 1.107 para continuar o IECA/BRA até o dia da cirurgia e 1.115 para suspender 48 horas antes (última dose 3 dias antes). Idade média 67±10 anos, 65% homens; 46% em uso de IECA e 54% de BRA no início do estudo. O desfecho primário (composto de mortalidade por qualquer causa e complicações pós-operatórias maiores em 28 dias) ocorreu em 22% dos pacientes em ambos os grupos (247/1.107 na continuação vs. 245/1.115 na suspensão; risco relativo 1,02; IC95% 0,87-1,19; p=0,85). Episódios de hipotensão intraoperatória foram mais frequentes com a continuação (54% vs. 41%; risco relativo 1,31; IC95% 1,19-1,44). Não houve outras diferenças relevantes entre os desfechos do estudo. Conclusão dos autores: entre pacientes submetidos a cirurgia não cardíaca de grande porte, continuar o IECA/BRA até o dia da cirurgia não se associou a mais complicações pós-operatórias do que suspender — achado que relativiza a prática disseminada de suspensão rotineira, mesmo com a hipotensão intraoperatória mais frequente na continuação.",
+    "source_refs": [
+      "Legrand M, Falcone J, Cholley B, et al. Continuation vs Discontinuation of Renin-Angiotensin System Inhibitors Before Major Noncardiac Surgery: The Stop-or-Not Randomized Clinical Trial. JAMA. 2024;332(12):970-978. DOI: 10.1001/jama.2024.17123. PMID: 39212270"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "dupla-antiagregacao-com-clopidogrel-e-omeprazol-profilatico-reduz-sangramento-sem-perder-eficacia-cogent",
+    "titulo": "Dupla antiagregação com AAS e clopidogrel após stent: associar omeprazol profilático compromete a eficácia cardiovascular do clopidogrel?",
+    "tema": "Farmacologia",
+    "nivel": "intermediário",
+    "enunciado": "Homem de 61 anos, com implante recente de stent farmacológico por síndrome coronariana aguda, em dupla antiagregação com AAS e clopidogrel, tem antecedente de úlcera péptica há 5 anos. O cardiologista quer prescrever um inibidor de bomba de prótons para reduzir o risco de sangramento gastrointestinal, mas hesita por causa de relatos observacionais de que os IBP reduziriam a eficácia antiplaquetária do clopidogrel por interação no citocromo P450.",
+    "pergunta": "No único ensaio clínico randomizado, duplo-cego e controlado por placebo, desenhado para testar diretamente essa interação, o que aconteceu com o desfecho cardiovascular composto ao associar omeprazol ao clopidogrel?",
+    "opcoes": [
+      "O omeprazol aumentou significativamente o risco de eventos cardiovasculares, confirmando a interação farmacológica temida",
+      "O ensaio não avaliou desfecho cardiovascular, apenas desfecho gastrointestinal",
+      "Não houve diferença significativa no desfecho cardiovascular composto entre omeprazol e placebo, enquanto o desfecho gastrointestinal foi significativamente reduzido com omeprazol",
+      "O omeprazol reduziu tanto o desfecho cardiovascular quanto o gastrointestinal, sem nenhum efeito adverso relevante"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O ensaio COGENT (Bhatt DL et al., NEJM 2010) randomizou 3.873 pacientes em dupla antiagregação com AAS e clopidogrel para receber omeprazol ou placebo; 3.761 entraram na análise. O desfecho gastrointestinal primário (composto de sangramento evidente ou oculto, úlcera gastroduodenal sintomática ou erosões, obstrução ou perfuração) ocorreu em 51 pacientes: taxa de 1,1% com omeprazol vs. 2,9% com placebo em 180 dias (HR 0,34; IC95% 0,18-0,63; p<0,001); o sangramento digestivo alto evidente também foi reduzido (HR 0,13; IC95% 0,03-0,56; p=0,001). O desfecho cardiovascular composto (morte cardiovascular, infarto não fatal, revascularização ou AVC) ocorreu em 109 pacientes, com taxas de 4,9% no grupo omeprazol e 5,7% no grupo placebo (HR 0,99; IC95% 0,68-1,44; p=0,96), sem heterogeneidade significativa nos subgrupos de alto risco. O risco de diarreia foi maior com omeprazol. O estudo foi interrompido precocemente porque o patrocinador (Cogentus Pharmaceuticals) perdeu financiamento, o que limitou o poder estatístico — os próprios autores declaram que os resultados não excluem uma diferença clinicamente relevante no desfecho cardiovascular. Ainda assim, não houve sinal de interação clinicamente detectável nesse ensaio randomizado, ao contrário do que sugeriam os estudos observacionais anteriores baseados em testes de função plaquetária.",
+    "source_refs": [
+      "Bhatt DL, Cryer BL, Contant CF, et al. Clopidogrel with or without omeprazole in coronary artery disease. N Engl J Med. 2010;363(20):1909-1917. DOI: 10.1056/NEJMoa1007964. PMID: 20925534"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hipertensao-cronica-na-gestacao-qual-a-meta-pressorica-o-ensaio-chips",
+    "titulo": "Hipertensão crônica na gestação: meta de PA rigorosa ou menos rigorosa? O ensaio CHIPS",
+    "tema": "Gravidez",
+    "nivel": "intermediário",
+    "enunciado": "Uma gestante de 32 anos, primigesta, com hipertensão arterial crônica prévia à gravidez, está em acompanhamento na 22ª semana. Em uso de metildopa, mantém pressão arterial diastólica em torno de 92 mmHg em consultas seriadas, sem proteinúria, sem sinais de pré-eclâmpsia sobreposta e com crescimento fetal adequado ao ultrassom obstétrico. A equipe obstétrica e a cardiologista assistente discutem qual meta de pressão arterial diastólica perseguir durante o restante do pré-natal.",
+    "pergunta": "Com base no ensaio CHIPS (Control of Hypertension In Pregnancy Study), qual das afirmações a seguir descreve corretamente a evidência sobre a meta de pressão arterial diastólica nessa gestante?",
+    "opcoes": [
+      "Controle menos rigoroso (PAD alvo de 100 mmHg) reduziu significativamente a perda gestacional ou a necessidade de cuidado neonatal intensivo em comparação ao controle rigoroso, sendo a estratégia preferida.",
+      "Não há diferença entre as duas metas em nenhum desfecho avaliado, incluindo a incidência de hipertensão grave, o que torna a escolha da meta irrelevante na prática.",
+      "O controle rigoroso (PAD alvo de 85 mmHg) não reduziu de forma estatisticamente significativa o desfecho composto primário (perda gestacional ou cuidado neonatal de alto nível por mais de 48h) nem as complicações maternas graves, mas reduziu significativamente a incidência de hipertensão grave (≥160/110 mmHg): 27,5% vs. 40,6% no grupo menos rigoroso (p<0,001) — achado que sustenta perseguir a meta mais rigorosa na prática.",
+      "O controle rigoroso aumentou significativamente as complicações maternas graves em comparação ao controle menos rigoroso e deve ser evitado nessa paciente."
+    ],
+    "resposta_correta": 2,
+    "explicacao": "No CHIPS (n=987 gestantes com hipertensão crônica ou gestacional não proteinúrica, 74,6% com hipertensão preexistente), o desfecho composto primário (perda gestacional ou cuidado neonatal de alto nível por mais de 48 dias pós-natais) foi semelhante entre controle menos rigoroso (PAD alvo 100 mmHg) e controle rigoroso (PAD alvo 85 mmHg): 31,4% vs. 30,7% (razão de chances ajustada 1,02; IC95% 0,77–1,35). As complicações maternas graves também não diferiram significativamente (3,7% vs. 2,0%; OR ajustada 1,74; IC95% 0,79–3,84). No entanto, a hipertensão grave (≥160/110 mmHg) foi significativamente mais frequente no grupo de controle menos rigoroso: 40,6% vs. 27,5% no grupo de controle rigoroso (p<0,001), apesar de a PAD média no grupo menos rigoroso ser apenas 4,6 mmHg maior (IC95% 3,7–5,4). Ou seja, o estudo não mostrou dano do controle mais apertado e mostrou benefício claro em reduzir episódios de hipertensão grave — é essa combinação que justifica adotar a meta mais rigorosa (~85 mmHg) na prática clínica, mesmo sem diferença estatisticamente significativa no desfecho composto primário.",
+    "source_refs": [
+      "Magee LA, von Dadelszen P, Rey E, et al.; CHIPS Study Group. Less-tight versus tight control of hypertension in pregnancy. N Engl J Med. 2015;372(5):407-417. DOI: 10.1056/NEJMoa1404595. PMID: 25629739"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "choque-cardiogenico-pos-iam-epinefrina-ou-noradrenalina-o-ensaio-optimacc",
+    "titulo": "Choque cardiogênico pós-infarto: epinefrina ou noradrenalina? O ensaio OptimaCC",
+    "tema": "Terapia intensiva",
+    "nivel": "avançado",
+    "enunciado": "Um homem de 61 anos é admitido com infarto agudo do miocárdio de parede anterior extensa, evoluindo 6 horas após angioplastia primária com hipotensão refratária (PA sistólica 76 mmHg), extremidades frias, lactato de 4,8 mmol/L e diurese reduzida, configurando choque cardiogênico. Já está em dobutamina em dose otimizada e a equipe de terapia intensiva decide associar um vasopressor.",
+    "pergunta": "Com base no ensaio randomizado, duplo-cego OptimaCC, qual vasopressor deve ser priorizado nesse cenário, e por quê?",
+    "opcoes": [
+      "Epinefrina, pois no OptimaCC ela reduziu significativamente a incidência de choque refratário em comparação à noradrenalina.",
+      "Noradrenalina: no OptimaCC, o índice cardíaco evoluiu de forma semelhante entre os grupos (p=0,43), mas a incidência de choque refratário foi maior com epinefrina (37% vs. 7% com noradrenalina; p=0,008), levando à interrupção precoce do estudo por segurança.",
+      "Dopamina, por ter se mostrado superior tanto à epinefrina quanto à noradrenalina no manejo do choque cardiogênico pós-infarto nesse ensaio.",
+      "Vasopressina, por ter reduzido significativamente a acidose lática em comparação à noradrenalina no OptimaCC."
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O OptimaCC foi um ensaio prospectivo, duplo-cego, multicêntrico e randomizado (n=57) comparando epinefrina e noradrenalina em pacientes com choque cardiogênico após infarto agudo do miocárdio. O desfecho de eficácia primário — evolução do índice cardíaco da admissão (H0) até 72 horas — foi semelhante entre os grupos (p=0,43). Já o desfecho de segurança primário, incidência de choque refratário (hipotensão sustentada, hipoperfusão de órgão-alvo, hiperlactatemia e doses altas de inotrópico/vasopressor), foi significativamente maior no grupo epinefrina: 10 de 27 pacientes (37%) vs. 2 de 30 (7%) no grupo noradrenalina (p=0,008), levando à interrupção precoce do estudo. A epinefrina também se associou a aumento significativo da frequência cardíaca, do duplo produto cardíaco (p=0,0002) e da acidose lática entre 2 e 24 horas (p<0,0001), enquanto a noradrenalina manteve esses parâmetros estáveis. Dopamina e vasopressina não foram testadas neste ensaio.",
+    "source_refs": [
+      "Levy B, Clere-Jehl R, Legras A, et al. Epinephrine Versus Norepinephrine for Cardiogenic Shock After Acute Myocardial Infarction (OptimaCC). J Am Coll Cardiol. 2018;72(2):173-182. DOI: 10.1016/j.jacc.2018.04.051. PMID: 29976291"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "tev-associado-a-cancer-escolha-inicial-do-anticoagulante-o-ensaio-caravaggio",
+    "titulo": "TEV associado a câncer: apixabana oral ou dalteparina subcutânea? O ensaio CARAVAGGIO",
+    "tema": "Tromboembolismo",
+    "nivel": "intermediário",
+    "enunciado": "Uma mulher de 58 anos, em tratamento quimioterápico para adenocarcinoma de pulmão metastático, procura o pronto-socorro com dispneia súbita e dor torácica pleurítica. A angiotomografia confirma embolia pulmonar segmentar bilateral, a paciente está hemodinamicamente estável, sem trombocitopenia significativa e sem lesão intracraniana. A equipe assistente discute a escolha do anticoagulante para o tratamento inicial e de manutenção por 6 meses.",
+    "pergunta": "Com base no ensaio CARAVAGGIO, qual opção terapêutica tem suporte de evidência de não inferioridade em relação à dalteparina subcutânea, sem aumento de sangramento maior, para essa paciente com TEV associado a câncer?",
+    "opcoes": [
+      "Rivaroxabana 15 mg 2x/dia, único DOAC formalmente testado em não inferioridade contra dalteparina nessa população no CARAVAGGIO.",
+      "Varfarina, mantendo INR terapêutico entre 2 e 3, foi a intervenção comparada à dalteparina no CARAVAGGIO.",
+      "Apixabana oral (10 mg 2x/dia por 7 dias, seguida de 5 mg 2x/dia): no CARAVAGGIO, foi não inferior à dalteparina subcutânea para TEV recorrente (5,6% vs. 7,9%; HR 0,63; IC95% 0,37–1,07; p<0,001 para não inferioridade), sem aumento de sangramento maior (3,8% vs. 4,0%; HR 0,82; IC95% 0,40–1,69).",
+      "Dalteparina subcutânea mostrou-se superior à apixabana oral para prevenção de TEV recorrente no CARAVAGGIO e deve ser mantida como padrão obrigatório."
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O CARAVAGGIO foi um ensaio multinacional, randomizado, aberto com adjudicação central cega, de não inferioridade, que comparou apixabana oral (10 mg 2x/dia por 7 dias, seguida de 5 mg 2x/dia) com dalteparina subcutânea (200 UI/kg/dia no primeiro mês, depois 150 UI/kg/dia), ambas por 6 meses, em pacientes com câncer e TVP proximal ou embolia pulmonar sintomática ou incidental. TEV recorrente ocorreu em 32/576 pacientes (5,6%) com apixabana vs. 46/579 (7,9%) com dalteparina (HR 0,63; IC95% 0,37–1,07; p<0,001 para não inferioridade). Sangramento maior foi semelhante: 22 pacientes (3,8%) com apixabana vs. 23 (4,0%) com dalteparina (HR 0,82; IC95% 0,40–1,69; p=0,60). O estudo não testou rivaroxabana nem varfarina — essas comparações vêm de outros ensaios (SELECT-D e CATCH/CLOT, respectivamente), não do CARAVAGGIO.",
+    "source_refs": [
+      "Agnelli G, Becattini C, Meyer G, et al.; Caravaggio Investigators. Apixaban for the Treatment of Venous Thromboembolism Associated with Cancer. N Engl J Med. 2020;382(17):1599-1607. DOI: 10.1056/NEJMoa1915103. PMID: 32223112"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "fa-permanente-controle-brando-ou-rigoroso-da-frequencia-o-ensaio-race-ii",
+    "titulo": "FA permanente: controle de frequência brando ou rigoroso? O ensaio RACE II",
+    "tema": "Fibrilação atrial",
+    "nivel": "básico",
+    "enunciado": "Um homem de 71 anos tem fibrilação atrial permanente há 4 anos, sem sintomas relacionados à arritmia e sem insuficiência cardíaca ou disfunção ventricular. Está anticoagulado com apixabana e em uso de bisoprolol, mantendo frequência cardíaca de repouso em torno de 95 bpm em consultas sucessivas. O cardiologista assistente discute se é necessário intensificar a medicação bradicardizante para reduzir ainda mais a frequência cardíaca de repouso.",
+    "pergunta": "Com base no ensaio RACE II, qual estratégia de controle de frequência é apoiada pela evidência para esse paciente?",
+    "opcoes": [
+      "Controle rigoroso (FC de repouso <80 bpm) deve sempre ser buscado, pois reduziu significativamente o desfecho composto cardiovascular em comparação ao controle brando.",
+      "Controle brando (FC de repouso <110 bpm) é não inferior ao controle rigoroso (FC de repouso <80 bpm e <110 bpm no exercício moderado) para o desfecho composto de morte cardiovascular, internação por IC, AVC, embolia sistêmica, sangramento e arritmia com risco de vida: incidência cumulativa em 3 anos de 12,9% vs. 14,9% (diferença -2,0 pontos percentuais; IC90% -7,6 a 3,5; p<0,001 para não inferioridade), exigindo muito menos consultas para atingir a meta.",
+      "Não existe ensaio randomizado comparando as duas estratégias de controle de frequência na FA permanente.",
+      "O controle de ritmo com antiarrítmico é superior ao controle de frequência, brando ou rigoroso, nesse cenário."
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O RACE II randomizou 614 pacientes com FA permanente para controle brando da frequência (FC de repouso <110 bpm) ou controle rigoroso (FC de repouso <80 bpm e FC <110 bpm durante exercício moderado). Em 3 anos de seguimento, a incidência cumulativa do desfecho composto primário (morte cardiovascular, internação por IC, AVC, embolia sistêmica, sangramento e eventos arrítmicos com risco de vida) foi de 12,9% no grupo brando vs. 14,9% no grupo rigoroso, diferença de -2,0 pontos percentuais (IC90% -7,6 a 3,5; p<0,001 para o critério pré-especificado de não inferioridade). Mais pacientes do grupo brando atingiram a(s) meta(s) de frequência (97,7% vs. 67,0%; p<0,001), com muito menos consultas totais (mediana de 0 vs. 2 consultas adicionais; p<0,001). A frequência de sintomas e eventos adversos foi semelhante entre os grupos. O estudo não avaliou controle de ritmo com antiarrítmico.",
+    "source_refs": [
+      "Van Gelder IC, Groenveld HF, Crijns HJ, et al.; RACE II Investigators. Lenient versus strict rate control in patients with atrial fibrillation. N Engl J Med. 2010;362(15):1363-1373. DOI: 10.1056/NEJMoa1001337. PMID: 20231232"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "primeiro-choque-apropriado-do-cdi-ablacao-imediata-da-tv-o-ensaio-partita",
+    "titulo": "Primeiro choque apropriado do CDI por TV: ablação imediata ou conduta conservadora? O ensaio PARTITA",
+    "tema": "Arritmias",
+    "nivel": "avançado",
+    "enunciado": "Um homem de 64 anos com cardiomiopatia isquêmica e fração de ejeção de 30% recebeu um cardiodesfibrilador implantável para prevenção secundária após episódio de taquicardia ventricular sustentada. Seis meses depois, recebe o primeiro choque apropriado do dispositivo por nova TV monomórfica, é revertido com sucesso e permanece hemodinamicamente estável. A equipe de eletrofisiologia discute se deve indicar ablação por cateter da TV imediatamente ou manter conduta conservadora, apenas otimizando o antiarrítmico.",
+    "pergunta": "Com base no ensaio randomizado PARTITA, qual conduta após o primeiro choque apropriado do CDI está associada a menor risco do desfecho composto de morte por qualquer causa ou internação por piora da insuficiência cardíaca?",
+    "opcoes": [
+      "Aumentar a dose de amiodarona isoladamente, conduta com maior evidência de benefício segundo o PARTITA.",
+      "Ablação por cateter imediata (dentro de 2 meses do choque): no PARTITA, reduziu o desfecho composto de morte por qualquer causa ou internação por piora da IC para 4% vs. 42% no grupo de conduta padrão (HR 0,11; IC95% 0,01–0,85; p=0,034), com menor mortalidade (0% vs. 33%; p=0,004) e menos choques subsequentes do CDI (9% vs. 42%; p=0,039), levando à interrupção precoce da fase randomizada do estudo.",
+      "Não há diferença entre ablação imediata e conduta conservadora; o PARTITA foi um estudo neutro para o desfecho composto primário.",
+      "Substituir o CDI por um dispositivo de dupla câmara é a conduta recomendada com base no PARTITA."
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O PARTITA foi um ensaio multicêntrico em 2 fases: pacientes com cardiomiopatia isquêmica ou não isquêmica e indicação de CDI para prevenção primária ou secundária foram acompanhados até o primeiro choque apropriado (fase A observacional); os que tiveram o primeiro choque (56 de 517, 11%) foram então randomizados 1:1 para ablação imediata (até 2 meses do choque) ou conduta padrão (fase B). A fase B foi interrompida em 23/07/2021 após análise interina bayesiana. Com seguimento mediano de 24,2 meses, o desfecho composto primário (morte por qualquer causa ou internação por piora de IC) ocorreu em 1 de 23 pacientes (4%) no grupo ablação vs. 10 de 24 (42%) no grupo controle (HR 0,11; IC95% 0,01–0,85; p=0,034), critério bayesiano de superioridade (>99% de probabilidade posterior) atingido. Não houve mortes no grupo ablação vs. 8 mortes (33%) no grupo controle (p=0,004); choques do CDI foram menos frequentes no grupo ablação (9% vs. 42%; p=0,039). O estudo não testou troca por dispositivo de dupla câmara nem avaliou escalonamento isolado de amiodarona como braço comparador.",
+    "source_refs": [
+      "Della Bella P, Baratto F, Vergara P, et al. Does Timing of Ventricular Tachycardia Ablation Affect Prognosis in Patients With an Implantable Cardioverter Defibrillator? Results From the Multicenter Randomized PARTITA Trial. Circulation. 2022;145(25):1829-1838. DOI: 10.1161/CIRCULATIONAHA.122.059598. PMID: 35369700"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "lvad-avancado-bomba-centrifuga-versus-axial-momentum-3",
+    "titulo": "Insuficiência cardíaca avançada com indicação de LVAD: bomba de fluxo centrífugo ou axial?",
+    "tema": "Dispositivos",
+    "nivel": "avançado",
+    "enunciado": "Homem de 58 anos com cardiomiopatia dilatada não isquêmica, INTERMACS perfil 3, em terapia otimizada e dependente de suporte inotrópico intermitente, é avaliado para implante de dispositivo de assistência ventricular esquerda (LVAD) de fluxo contínuo, como ponte para transplante. A equipe de cirurgia cardíaca dispõe de dois modelos: uma bomba de fluxo centrífugo com levitação magnética total e uma bomba de fluxo axial com mancal mecânico, ambas já utilizadas rotineiramente no serviço.",
+    "pergunta": "Segundo os desfechos de 2 anos do MOMENTUM 3, qual das alternativas descreve corretamente a comparação entre a bomba centrífuga e a bomba axial?",
+    "opcoes": [
+      "A bomba centrífuga foi superior ao desfecho composto de sobrevida livre de AVC incapacitante ou reoperação por mau funcionamento do dispositivo (79,5% vs. 60,2%; HR 0,46; IC95% 0,31-0,69), com reoperação por mau funcionamento muito menos frequente (1,6% vs. 17,0%; HR 0,08; IC95% 0,03-0,27)",
+      "A bomba axial reduziu significativamente a mortalidade geral em comparação à centrífuga, apesar de mais reoperações",
+      "Não houve diferença entre as duas bombas em nenhum desfecho avaliado no estudo, inclusive reoperação e AVC",
+      "A bomba centrífuga aumentou a taxa de AVC incapacitante em comparação à axial, sendo essa a razão de sua maior taxa de reoperação"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "No MOMENTUM 3 (366 pacientes com IC avançada, randomizados para bomba de fluxo centrífugo com levitação magnética total, n=190, ou bomba de fluxo axial com mancal mecânico, n=176), o desfecho composto primário — sobrevida em 2 anos livre de AVC incapacitante (Rankin modificado >3) ou livre de reoperação para substituir/remover o dispositivo — ocorreu em 151 pacientes (79,5%) do grupo de fluxo centrífugo contra 106 (60,2%) do grupo de fluxo axial (diferença absoluta de 19,2 pontos percentuais; limite inferior do IC95% de 9,8 pontos, P<0,001 para não inferioridade; HR 0,46; IC95% 0,31-0,69; P<0,001 para superioridade). A reoperação por mau funcionamento da bomba foi muito menos frequente no grupo de fluxo centrífugo (3 pacientes, 1,6%, vs. 30 pacientes, 17,0%; HR 0,08; IC95% 0,03-0,27; P<0,001). As taxas de morte e de AVC incapacitante isoladamente foram semelhantes entre os grupos, mas a taxa geral de AVC (incapacitante ou não) foi menor com a bomba centrífuga (10,1% vs. 19,2%; HR 0,47; IC95% 0,27-0,84; P=0,02). Não há, portanto, redução isolada de mortalidade geral nem superioridade da bomba axial — a vantagem da bomba centrífuga é sobre o desfecho composto, sustentada principalmente pela reoperação, e ela também reduz, não aumenta, a taxa de AVC.",
+    "source_refs": [
+      "Mehra MR, Goldstein DJ, Uriel N, Cleveland JC Jr, et al.; MOMENTUM 3 Investigators. Two-Year Outcomes with a Magnetically Levitated Cardiac Pump in Heart Failure. N Engl J Med. 2018;378(15):1386-1395. DOI: 10.1056/NEJMoa1800866. PMID: 29526139"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "pos-sca-alirocumabe-reduz-mortalidade-odyssey-outcomes",
+    "titulo": "Após síndrome coronariana aguda, sob estatina de alta intensidade: o alirocumabe reduz mortalidade?",
+    "tema": "Prevenção e lipídios",
+    "nivel": "avançado",
+    "enunciado": "Paciente de 61 anos, 4 meses após infarto agudo do miocárdio, mantém LDL-colesterol de 92 mg/dL apesar de estatina de alta intensidade em dose máxima tolerada. Não há contraindicação a terapia injetável, e o cardiologista discute se acrescentar um inibidor de PCSK9 traria, além de redução adicional de LDL, algum ganho em desfechos clínicos duros, incluindo mortalidade.",
+    "pergunta": "De acordo com o ODYSSEY OUTCOMES, a adição de alirocumabe ao tratamento pós-síndrome coronariana aguda mostrou qual efeito sobre mortalidade por todas as causas, além do desfecho isquêmico composto?",
+    "opcoes": [
+      "Reduziu tanto o desfecho isquêmico composto (9,5% vs. 11,1%; HR 0,85; IC95% 0,78-0,93; P<0,001) quanto a mortalidade por todas as causas (3,5% vs. 4,1%; HR 0,85; IC95% 0,73-0,98)",
+      "Reduziu o desfecho isquêmico composto, mas não teve nenhum efeito detectável sobre mortalidade por todas as causas",
+      "Não teve efeito significativo sobre nenhum desfecho clínico, apenas sobre o LDL-colesterol",
+      "Aumentou a mortalidade por todas as causas, atribuída ao maior número de reações no local de injeção"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O ODYSSEY OUTCOMES randomizou 18.924 pacientes que haviam tido síndrome coronariana aguda 1 a 12 meses antes, com LDL ≥70 mg/dL (ou não-HDL ≥100 mg/dL, ou ApoB ≥80 mg/dL) apesar de estatina em dose de alta intensidade ou na dose máxima tolerada, para alirocumabe 75 mg subcutâneo a cada 2 semanas (n=9462, dose ajustada sob cegamento para LDL-alvo de 25-50 mg/dL) ou placebo (n=9462). Com mediana de seguimento de 2,8 anos, o desfecho primário composto (morte por doença coronariana, IAM não fatal, AVC isquêmico fatal ou não fatal, ou angina instável com hospitalização) ocorreu em 903 pacientes (9,5%) do grupo alirocumabe versus 1052 (11,1%) do grupo placebo (HR 0,85; IC95% 0,78-0,93; P<0,001). A mortalidade por todas as causas também foi menor com alirocumabe: 334 pacientes (3,5%) versus 392 (4,1%) no placebo (HR 0,85; IC95% 0,73-0,98). O benefício absoluto foi maior nos pacientes com LDL basal ≥100 mg/dL. A incidência de eventos adversos foi semelhante entre os grupos, com exceção de reações no local de injeção (3,8% vs. 2,1%), que não se traduziram em excesso de mortalidade. Esse achado de redução de mortalidade geral distingue o ODYSSEY OUTCOMES (alirocumabe) de ensaios anteriores de inibidor de PCSK9 que não demonstraram esse benefício isoladamente no período de seguimento estudado.",
+    "source_refs": [
+      "Schwartz GG, Steg PG, Szarek M, Bhatt DL, et al.; ODYSSEY OUTCOMES Committees and Investigators. Alirocumab and Cardiovascular Outcomes after Acute Coronary Syndrome. N Engl J Med. 2018;379(22):2097-2107. DOI: 10.1056/NEJMoa1801174. PMID: 30403574"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "diabetes-tipo-2-maioria-sem-doenca-cardiovascular-estabelecida-dulaglutida-rewind",
+    "titulo": "Diabetes tipo 2 com fatores de risco cardiovascular, sem evento prévio: a dulaglutida ainda protege?",
+    "tema": "Diabetes e cardiologia",
+    "nivel": "intermediário",
+    "enunciado": "Mulher de 63 anos com diabetes tipo 2 há 8 anos, HbA1c 7,4%, hipertensa e dislipidêmica, sem história de infarto, AVC ou revascularização — ou seja, sem doença cardiovascular aterosclerótica estabelecida, apenas fatores de risco. O endocrinologista pergunta ao cardiologista se um agonista do receptor de GLP-1 traria proteção cardiovascular também nesse perfil de prevenção primária, e não só em quem já teve evento.",
+    "pergunta": "No REWIND, que incluiu pacientes com diabetes tipo 2 com evento cardiovascular prévio OU apenas fatores de risco cardiovascular (população mais ampla que a de outros ensaios de agonista de GLP-1), o que se observou com a dulaglutida?",
+    "opcoes": [
+      "Redução do desfecho composto de IAM não fatal, AVC não fatal ou morte cardiovascular (12,0% vs. 13,4%; HR 0,88; IC95% 0,79-0,99; P=0,026), sem diferença significativa na mortalidade por todas as causas",
+      "Nenhuma redução do desfecho cardiovascular composto, benefício restrito a quem já tinha doença cardiovascular estabelecida",
+      "Redução da mortalidade por todas as causas, mas sem efeito sobre o desfecho composto de eventos cardiovasculares",
+      "Aumento do desfecho composto cardiovascular, atribuído aos eventos gastrointestinais mais frequentes no grupo dulaglutida"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O REWIND incluiu 9901 participantes com diabetes tipo 2, idade ≥50 anos, com evento cardiovascular prévio OU fatores de risco cardiovascular (desenho que, ao contrário de vários outros ensaios de agonista de GLP-1 que exigiam doença cardiovascular estabelecida, permitiu avaliar também população predominantemente de prevenção primária), randomizados para dulaglutida 1,5 mg semanal subcutânea (n=4949) ou placebo (n=4952). Com mediana de seguimento de 5,4 anos, o desfecho primário composto (IAM não fatal, AVC não fatal ou morte cardiovascular) ocorreu em 594 participantes (12,0%; incidência de 2,4/100 pessoas-ano) no grupo dulaglutida versus 663 (13,4%; incidência de 2,7/100 pessoas-ano) no grupo placebo (HR 0,88; IC95% 0,79-0,99; P=0,026). A mortalidade por todas as causas não diferiu entre os grupos (536 pacientes, 10,8%, vs. 592, 12,0%; HR 0,90; IC95% 0,80-1,01; P=0,067). Eventos adversos gastrointestinais foram mais frequentes com dulaglutida (47,4% vs. 34,1%; P<0,0001), mas isso não se traduziu em excesso do desfecho cardiovascular composto — pelo contrário, este foi reduzido. Os autores concluem que a dulaglutida pode ser considerada no manejo glicêmico de adultos de meia-idade e idosos com diabetes tipo 2, com ou sem doença cardiovascular prévia.",
+    "source_refs": [
+      "Gerstein HC, Colhoun HM, Dagenais GR, Diaz R, et al.; REWIND Investigators. Dulaglutide and cardiovascular outcomes in type 2 diabetes (REWIND): a double-blind, randomised placebo-controlled trial. Lancet. 2019;394(10193):121-130. DOI: 10.1016/S0140-6736(19)31149-3. PMID: 31189511"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "icfer-recem-hospitalizada-acrescentar-vericiguate-victoria",
+    "titulo": "IC com fração reduzida e hospitalização recente, já em quadriterapia: vale acrescentar vericiguate?",
+    "tema": "Insuficiência cardíaca",
+    "nivel": "avançado",
+    "enunciado": "Homem de 67 anos, IC crônica classe funcional III (NYHA), FEVE de 28%, já em uso otimizado dos quatro pilares (IECA/BRA/INRA, betabloqueador, antagonista mineralocorticoide e iSGLT2), foi hospitalizado por descompensação há 3 semanas e recebeu diurético intravenoso durante a internação. Permanece sintomático apesar da terapia otimizada, e o cardiologista considera acrescentar vericiguate, um estimulador oral da guanilato ciclase solúvel.",
+    "pergunta": "No VICTORIA, que incluiu pacientes com ICFEr de alto risco (FE <45%, com hospitalização recente por IC ou uso de diurético intravenoso), o que se observou com a adição de vericiguate ao tratamento otimizado?",
+    "opcoes": [
+      "Redução do desfecho composto de morte cardiovascular ou primeira hospitalização por IC (35,5% vs. 38,5%; HR 0,90; IC95% 0,82-0,98; P=0,02), sem redução isolada estatisticamente significativa da morte cardiovascular",
+      "Redução isolada e estatisticamente significativa da morte cardiovascular, sem efeito sobre hospitalização por IC",
+      "Nenhum efeito sobre o desfecho composto primário, benefício restrito a pacientes NYHA IV",
+      "Aumento significativo de síncope e hipotensão sintomática, que motivou a suspensão precoce do estudo"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O VICTORIA randomizou 5050 pacientes com IC crônica (NYHA II, III ou IV) e FEVE <45%, recentemente hospitalizados por IC ou que haviam recebido diurético intravenoso, para vericiguate (dose-alvo de 10 mg/dia; n=2526) ou placebo (n=2524), somados à terapia otimizada guiada por diretriz. Com mediana de seguimento de 10,8 meses, o desfecho primário — composto de morte cardiovascular ou primeira hospitalização por IC — ocorreu em 897 pacientes (35,5%) do grupo vericiguate versus 972 (38,5%) do grupo placebo (HR 0,90; IC95% 0,82-0,98; P=0,02). Hospitalização por IC isolada ocorreu em 691 pacientes (27,4%) vs. 747 (29,6%) (HR 0,90; IC95% 0,81-1,00). Já a morte cardiovascular isolada não atingiu significância estatística: 414 pacientes (16,4%) vs. 441 (17,5%) (HR 0,93; IC95% 0,81-1,06) — ou seja, o benefício do desfecho composto veio principalmente da redução de hospitalização, não de um efeito isolado significativo sobre mortalidade cardiovascular. O composto de morte por qualquer causa ou hospitalização por IC também foi menor (37,9% vs. 40,9%; HR 0,90; IC95% 0,83-0,98; P=0,02). Hipotensão sintomática (9,1% vs. 7,9%; P=0,12) e síncope (4,0% vs. 3,5%; P=0,30) não diferiram significativamente entre os grupos, e não houve suspensão precoce do estudo por segurança.",
+    "source_refs": [
+      "Armstrong PW, Pieske B, Anstrom KJ, Ezekowitz J, et al.; VICTORIA Study Group. Vericiguat in Patients with Heart Failure and Reduced Ejection Fraction. N Engl J Med. 2020;382(20):1883-1893. DOI: 10.1056/NEJMoa1915928. PMID: 32222134"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "diabetes-tipo-2-alto-risco-cv-alvo-pressorico-intensivo-accord-bp",
+    "titulo": "Diabetes tipo 2 de alto risco cardiovascular: o alvo pressórico intensivo do SPRINT também vale aqui?",
+    "tema": "Hipertensão",
+    "nivel": "avançado",
+    "enunciado": "Paciente de 64 anos com diabetes tipo 2 e alto risco cardiovascular, PAS habitual de 145 mmHg em uso de dois anti-hipertensivos. Lembrando do resultado do SPRINT (alvo de PAS <120 mmHg reduzindo eventos cardiovasculares), o médico assistente pergunta se o mesmo alvo intensivo deveria ser perseguido neste paciente — sabendo que o SPRINT excluiu pacientes diabéticos.",
+    "pergunta": "No ACCORD-BP, conduzido especificamente em pacientes com diabetes tipo 2 de alto risco cardiovascular, o alvo pressórico intensivo (PAS <120 mmHg) reduziu o desfecho composto primário de IAM não fatal, AVC não fatal ou morte cardiovascular, em comparação ao alvo padrão (PAS <140 mmHg)?",
+    "opcoes": [
+      "Não reduziu significativamente o desfecho composto primário (taxa anual de 1,87% vs. 2,09%; HR 0,88; IC95% 0,73-1,06; P=0,20), embora tenha reduzido o AVC como desfecho secundário (HR 0,59; IC95% 0,39-0,89; P=0,01), à custa de mais eventos adversos graves atribuídos ao tratamento (3,3% vs. 1,3%; P<0,001)",
+      "Reduziu significativamente o desfecho composto primário, replicando de forma consistente o resultado do SPRINT também em pacientes diabéticos",
+      "Não teve nenhum efeito, nem mesmo sobre o AVC como desfecho secundário",
+      "Reduziu significativamente a mortalidade por todas as causas, mas não teve efeito sobre o desfecho composto cardiovascular"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O ACCORD-BP randomizou 4733 participantes com diabetes tipo 2 de alto risco cardiovascular para terapia intensiva, com alvo de PAS <120 mmHg, ou terapia padrão, com alvo de PAS <140 mmHg, com seguimento médio de 4,7 anos. Após 1 ano, a PAS média foi de 119,3 mmHg no grupo intensivo e 133,5 mmHg no grupo padrão. A taxa anual do desfecho composto primário (IAM não fatal, AVC não fatal ou morte cardiovascular) foi de 1,87% no grupo intensivo versus 2,09% no grupo padrão (HR 0,88; IC95% 0,73-1,06; P=0,20) — diferença NÃO estatisticamente significativa, ao contrário do resultado positivo do SPRINT, que havia excluído explicitamente pacientes com diabetes. A mortalidade por qualquer causa também não diferiu (1,28% vs. 1,19%; HR 1,07; IC95% 0,85-1,35; P=0,55). O AVC, desfecho secundário pré-especificado, foi reduzido com a terapia intensiva (0,32% vs. 0,53% ao ano; HR 0,59; IC95% 0,39-0,89; P=0,01). Em contrapartida, eventos adversos graves atribuídos ao tratamento anti-hipertensivo foram mais frequentes no grupo intensivo (77 de 2362 participantes, 3,3%, vs. 30 de 2371, 1,3%; P<0,001). O ACCORD-BP é, portanto, o ensaio que testa especificamente em diabéticos o alvo pressórico agressivo popularizado pelo SPRINT, e mostra um resultado neutro para o desfecho composto principal — ilustrando que o benefício de um alvo intensivo demonstrado numa população não se extrapola automaticamente para outra com perfil de risco diferente.",
+    "source_refs": [
+      "ACCORD Study Group; Cushman WC, Evans GW, Byington RP, Goff DC Jr, et al. Effects of intensive blood-pressure control in type 2 diabetes mellitus. N Engl J Med. 2010;362(17):1575-1585. DOI: 10.1056/NEJMoa1001286. PMID: 20228401"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hap-sintomatica-em-terapia-de-base-estavel-adicionar-sotatercept-ensaio-stellar",
+    "titulo": "HAP sintomática apesar de terapia de base estável: adicionar sotatercept muda a capacidade funcional? O ensaio STELLAR",
+    "tema": "Hipertensão pulmonar",
+    "nivel": "avançado",
+    "enunciado": "Mulher de 52 anos, portadora de hipertensão arterial pulmonar (HAP) idiopática, classe funcional III da OMS, em tratamento de base estável com antagonista do receptor de endotelina e inibidor da fosfodiesterase-5 há mais de um ano. Mantém teste de caminhada de 6 minutos (TC6M) limitado, resistência vascular pulmonar elevada e NT-proBNP fora da meta, apesar da terapia otimizada. A equipe discute acrescentar sotatercept, uma proteína de fusão que sequestra ativinas e fatores de diferenciação de crescimento envolvidos na HAP.",
+    "pergunta": "De acordo com o ensaio STELLAR (fase 3, multicêntrico, duplo-cego: sotatercept subcutâneo vs. placebo a cada 3 semanas, como adjuvante à terapia de base estável em HAP classe funcional II-III), qual foi o efeito no desfecho primário (variação do TC6M em 24 semanas) e no perfil de segurança observado?",
+    "opcoes": [
+      "O TC6M aumentou em média 34,4 m no grupo sotatercept vs. 1,0 m no placebo, com diferença estimada de 40,8 m (IC95% 27,5-54,1; p<0,001) a favor do sotatercept; eventos adversos mais frequentes com sotatercept incluíram epistaxe, tontura, telangiectasia, elevação de hemoglobina, trombocitopenia e aumento da pressão arterial",
+      "Não houve diferença significativa no TC6M entre os grupos, mas houve redução isolada de mortalidade em 24 semanas, sem efeito sobre capacidade funcional",
+      "O sotatercept só demonstrou benefício em pacientes com hipertensão pulmonar do grupo 3 por doença pulmonar intersticial, sem eficácia demonstrada na HAP idiopática",
+      "O ganho médio no TC6M foi inferior a 10 m e não atingiu significância estatística, apesar da tendência numérica favorável"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "No STELLAR (163 pacientes no grupo sotatercept, 160 no placebo), a variação mediana do TC6M do basal até a semana 24 foi de 34,4 m com sotatercept e 1,0 m com placebo; a estimativa de Hodges-Lehmann para a diferença entre os grupos foi de 40,8 m (IC95% 27,5-54,1; p<0,001) — desfecho primário do estudo. Dos nove desfechos secundários hierarquizados (melhora multicomponente, variação da resistência vascular pulmonar, variação do NT-proBNP, melhora da classe funcional da OMS, tempo até óbito ou piora clínica, escore de risco francês, e domínios físico e de sintomas cardiopulmonares do PAH-SYMPACT), os primeiros oito foram significativamente melhores com sotatercept; apenas o domínio cognitivo/emocional do PAH-SYMPACT não diferiu. Eventos adversos mais frequentes com sotatercept do que com placebo foram epistaxe, tontura, telangiectasia, elevação da hemoglobina, trombocitopenia e aumento da pressão arterial — sinal coerente com o mecanismo de ação (sequestro de ativinas/GDF, com efeito hematopoiético). O estudo incluiu pacientes em classe funcional II ou III da OMS em terapia de base estável (não avaliou classe IV isoladamente), e o benefício foi demonstrado como adjuvante, não como monoterapia inicial.",
+    "source_refs": [
+      "Hoeper MM, Badesch DB, Ghofrani HA, Gibbs JSR, Gomberg-Maitland M, McLaughlin VV, et al; STELLAR Trial Investigators. Phase 3 Trial of Sotatercept for Treatment of Pulmonary Arterial Hypertension. N Engl J Med. 2023;388(16):1478-1490. DOI: 10.1056/NEJMoa2213558. PMID: 36877098"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "estratificacao-de-risco-em-hap-recem-diagnosticada-escore-reveal",
+    "titulo": "Estratificação de risco na hipertensão arterial pulmonar recém-diagnosticada: o escore de risco REVEAL",
+    "tema": "Calculadoras",
+    "nivel": "intermediário",
+    "enunciado": "Homem de 64 anos com hipertensão arterial pulmonar associada à hipertensão portal (cirrose por hepatite C), classe funcional III da OMS, resistência vascular pulmonar elevada e derrame pericárdico ao ecocardiograma. A equipe está avaliando o risco basal do paciente antes de decidir entre terapia dupla oral inicial ou terapia mais agressiva, e quer usar uma ferramenta de estratificação de risco derivada de registro multicêntrico para estimar a sobrevida em 1 ano.",
+    "pergunta": "A equação de risco derivada do registro americano REVEAL (2.716 pacientes com HAP, analisados para prever sobrevida em 1 ano) identificou, em análise multivariada com regressão de Cox, quais variáveis basais associadas ao MAIOR aumento independente do risco de mortalidade, e qual foi a sobrevida global em 1 ano da coorte?",
+    "opcoes": [
+      "Resistência vascular pulmonar >32 unidades Wood (HR 4,1; IC95% 2,0-8,3), HAP associada à hipertensão portal (HR 3,6; IC95% 2,4-5,4) e classe funcional IV (HR 3,1; IC95% 2,2-4,4) foram os preditores independentes mais fortes; a sobrevida global em 1 ano da coorte foi de 91,0% (IC95% 89,9-92,1)",
+      "Apenas a idade isolada prediz mortalidade nesse modelo; resistência vascular pulmonar e classe funcional não entraram na análise multivariada final",
+      "A sobrevida em 1 ano da coorte foi de 65%, e o único preditor independente identificado foi o peptídeo natriurético cerebral (BNP)",
+      "A HAP associada à hipertensão portal teve risco de mortalidade igual ao da HAP idiopática, sem diferença estatística entre os grupos"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "No estudo que derivou o escore REVEAL, a sobrevida em 1 ano a partir da data de inclusão foi de 91,0% (IC95% 89,9-92,1) na coorte de 2.716 pacientes. Na análise multivariada com regressão de Cox, as variáveis independentemente associadas a maior mortalidade foram: resistência vascular pulmonar >32 unidades Wood (HR 4,1; IC95% 2,0-8,3), HAP associada à hipertensão portal (HR 3,6; IC95% 2,4-5,4), classe funcional IV da NYHA/OMS modificada (HR 3,1; IC95% 2,2-4,4), sexo masculino acima de 60 anos (HR 2,2; IC95% 1,6-3,0) e história familiar de HAP (HR 2,2; IC95% 1,2-4,0). Também predisseram mortalidade, com peso menor no modelo: insuficiência renal, HAP associada a doença do tecido conjuntivo, classe funcional III, pressão de átrio direito média, pressão arterial sistólica e frequência cardíaca de repouso, distância no TC6M, BNP, capacidade de difusão de monóxido de carbono (% previsto) e derrame pericárdico ao ecocardiograma — todos usados na formulação da equação prognóstica final, validada por técnica de bootstrapping.",
+    "source_refs": [
+      "Benza RL, Miller DP, Gomberg-Maitland M, Frantz RP, Foreman AJ, Coffey CS, et al. Predicting survival in pulmonary arterial hypertension: insights from the Registry to Evaluate Early and Long-Term Pulmonary Arterial Hypertension Disease Management (REVEAL). Circulation. 2010;122(2):164-172. DOI: 10.1161/CIRCULATIONAHA.109.898122. PMID: 20585012"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cardioprotecao-primaria-com-perindopril-ou-bisoprolol-no-trastuzumabe-ensaio-manticore",
+    "titulo": "Cardioproteção primária com perindopril ou bisoprolol durante o trastuzumabe adjuvante: o ensaio MANTICORE",
+    "tema": "Cardio-oncologia",
+    "nivel": "avançado",
+    "enunciado": "Mulher de 48 anos com câncer de mama HER2-positivo inicia trastuzumabe adjuvante por 17 ciclos, com FEVE basal normal e sem cardiopatia prévia. A equipe de cardio-oncologia discute se vale iniciar, de forma profilática e desde o primeiro ciclo, um inibidor da enzima conversora de angiotensina ou um betabloqueador, na expectativa de prevenir a cardiotoxicidade relacionada ao trastuzumabe.",
+    "pergunta": "No ensaio MANTICORE 101-Breast (duplo-cego, controlado por placebo: perindopril vs. bisoprolol vs. placebo, por toda a duração do trastuzumabe adjuvante, com ressonância cardíaca basal e após o ciclo 17), o que se observou no desfecho primário (variação do volume diastólico final do ventrículo esquerdo indexado, VDFVEi) e no desfecho secundário (variação da FEVE)?",
+    "opcoes": [
+      "O desfecho primário (aumento do VDFVEi) não diferiu entre os grupos — perindopril +7±14, bisoprolol +8±9, placebo +4±11 mL/m² (p=0,36) —, ou seja, nenhum dos dois fármacos preveniu o remodelamento ventricular; já na análise secundária, a queda da FEVE foi atenuada com bisoprolol (-1±5%) em comparação a perindopril (-3±4%) e placebo (-5±5%), p=0,001",
+      "O perindopril preveniu totalmente o remodelamento ventricular (desfecho primário) e foi superior ao bisoprolol em todos os desfechos avaliados, primário e secundários",
+      "Nem perindopril nem bisoprolol tiveram qualquer efeito mensurável, nem no desfecho primário nem nos secundários, refutando a cardioproteção farmacológica primária nesse cenário",
+      "O estudo foi interrompido precocemente por excesso de eventos adversos graves atribuíveis ao bisoprolol, antes de completar o seguimento planejado"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O MANTICORE 101-Breast randomizou 94 pacientes (33 perindopril, 31 bisoprolol, 30 placebo) com câncer de mama HER2-positivo em início de trastuzumabe adjuvante. O desfecho primário — variação do VDFVE indexado do basal ao pós-ciclo 17 — NÃO diferiu entre os grupos: +7±14 mL/m² (perindopril), +8±9 mL/m² (bisoprolol) e +4±11 mL/m² (placebo), p=0,36. É essencial não confundir esse resultado negativo com ausência total de efeito: na análise secundária, a queda da FEVE foi atenuada no grupo bisoprolol (-1±5%) em relação a perindopril (-3±4%) e placebo (-5±5%), p=0,001, e o uso de perindopril e bisoprolol foi preditor independente de manutenção da FEVE em análise multivariada. Os fármacos foram bem tolerados, sem eventos adversos graves relatados. Conclusão dos autores: perindopril e bisoprolol protegeram contra a queda da FEVE relacionada ao trastuzumabe, mas o remodelamento ventricular — desfecho primário do estudo — não foi prevenido por essas farmacoterapias.",
+    "source_refs": [
+      "Pituskin E, Mackey JR, Koshman S, Jassal D, Pitz M, Haykowsky MJ, et al. Multidisciplinary Approach to Novel Therapies in Cardio-Oncology Research (MANTICORE 101-Breast): A Randomized Trial for the Prevention of Trastuzumab-Associated Cardiotoxicity. J Clin Oncol. 2017;35(8):870-877. DOI: 10.1200/JCO.2016.68.7830. PMID: 27893331"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "video-de-apoio-a-decisao-de-metas-de-cuidado-antes-de-conversa-sobre-reanimacao",
+    "titulo": "Vídeo de apoio à decisão de metas de cuidado antes da conversa sobre reanimação: evidência original e extrapolação para a cardiologia",
+    "tema": "Comunicação clínica",
+    "nivel": "intermediário",
+    "enunciado": "Homem de 71 anos internado por choque cardiogênico refratário sobre cardiopatia estrutural avançada, com múltiplas comorbidades e prognóstico reservado a curto prazo. A equipe planeja uma conversa sobre metas de cuidado, incluindo a decisão sobre reanimação cardiopulmonar (RCP), e cogita complementar a descrição verbal habitual com um vídeo educativo que ilustra visualmente três níveis de cuidado: suporte pleno (RCP, ventilação mecânica), cuidado básico (internação, sem RCP) e cuidado de conforto.",
+    "pergunta": "A evidência original sobre esse tipo de vídeo de apoio à decisão (ensaio randomizado de El-Jawahri et al., validado em pacientes oncológicos com glioma maligno — não em cardiopatas — e hoje citado por extrapolação em discussões de metas de cuidado de outras doenças graves, inclusive na cardiologia) mostrou que, comparado à descrição apenas verbal, assistir ao vídeo:",
+    "opcoes": [
+      "Aumentou a preferência por cuidados de conforto (91,3% no grupo vídeo vs. 22,2% no grupo verbal) e reduziu a incerteza da decisão (escore médio de certeza 13,7 vs. 11,5; p<0,002), com 82,6% dos participantes do grupo vídeo relatando-se muito confortáveis ao assisti-lo",
+      "Não alterou a preferência de cuidado em nenhum sentido, mas aumentou a ansiedade relatada pelos participantes em relação à própria conversa",
+      "Aumentou a preferência por reanimação cardiopulmonar plena em relação à descrição apenas verbal, o oposto do que a equipe esperava",
+      "Só foi validado originalmente em pacientes com insuficiência cardíaca avançada, nunca tendo sido testado fora desse contexto"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O ensaio de El-Jawahri et al. (2010) randomizou 50 pacientes com glioma maligno — não cardiopatas — para descrição verbal isolada das opções de metas de cuidado (n=27, grupo controle) ou a mesma descrição verbal seguida do vídeo (n=23, grupo intervenção). Após a descrição verbal isolada, 25,9% preferiram cuidado prolongador de vida, 51,9% cuidado básico e 22,2% cuidado de conforto. No grupo vídeo, nenhum participante preferiu cuidado prolongador de vida, 4,4% preferiram cuidado básico, 91,3% cuidado de conforto e 4,4% permaneceram incertos (p<0,0001). O escore médio de incerteza da decisão (variando de 3 a 15, maior = menos incerteza) foi maior no grupo vídeo (13,7) do que no verbal (11,5), p<0,002, e 82,6% dos participantes do grupo vídeo relataram-se muito confortáveis ao assistir. **Ressalva de população, que precisa ficar explícita ao citar este ensaio em cardiologia**: a evidência original é de pacientes oncológicos com glioma maligno, não de cardiopatas em choque cardiogênico ou insuficiência cardíaca avançada — o uso de ferramentas de vídeo análogas em conversas de metas de cuidado cardiológicas é extrapolação por analogia de mecanismo (vídeo reduz incerteza e alinha preferência à informação recebida), não replicação direta do ensaio nessa população. Há errata publicada para este artigo (J Clin Oncol. 2010 Mar 10;28(8):1438), cujo conteúdo específico não foi lido nesta redação — declarado aqui, não omitido.",
+    "source_refs": [
+      "El-Jawahri A, Podgurski LM, Eichler AF, Plotkin SR, Temel JS, Mitchell SL, et al. Use of video to facilitate end-of-life discussions with patients with cancer: a randomized controlled trial. J Clin Oncol. 2010;28(2):305-310. DOI: 10.1200/JCO.2009.24.7502. PMID: 19949010. Errata: J Clin Oncol. 2010 Mar 10;28(8):1438 (conteúdo não lido nesta redação)."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "estresse-emocional-agudo-por-terremoto-como-gatilho-de-morte-subita-cardiaca",
+    "titulo": "\"Fiquei em pé durante o terremoto e ele teve uma parada cardíaca\": o que o estudo do terremoto de Northridge mostrou sobre estresse emocional agudo",
+    "tema": "Geral",
+    "nivel": "básico",
+    "enunciado": "Homem de 68 anos, com doença arterial coronariana estabelecida, é atendido em pronto-socorro horas após um forte terremoto na região, relatando dor torácica típica iniciada minutos após o tremor, sem relação com esforço físico. A equipe discute, no ambulatório de prevenção secundária, se existe relação causal entre estresse emocional agudo intenso e desencadeamento de eventos coronarianos, para além do gatilho já bem estabelecido de esforço físico.",
+    "pergunta": "O estudo de Leor, Poole e Kloner (NEJM, 1996), que comparou os registros do legista do condado de Los Angeles na semana anterior, no dia e nos seis dias posteriores ao terremoto de Northridge (17/01/1994) com os mesmos períodos em anos de controle, mostrou que:",
+    "opcoes": [
+      "O número de mortes súbitas de causa cardíaca no dia do terremoto subiu de uma média basal de 4,6±2,1/dia para 24 (z=4,41; p<0,001), caindo para 2,7±1,2/dia nos 6 dias seguintes; a maioria das vítimas (16 de 24) teve sintomas, geralmente dor torácica, ou morreu na primeira hora após o tremor, e apenas 3 mortes ocorreram durante ou logo após esforço físico incomum",
+      "Não houve variação estatisticamente significativa no número de mortes súbitas cardíacas em torno do terremoto, o que refutou a hipótese de gatilho emocional agudo",
+      "O aumento de mortes súbitas só ocorreu entre pessoas que estavam realizando esforço físico intenso no momento do terremoto, sem relação com o estresse emocional isoladamente",
+      "O efeito do terremoto sobre a incidência de morte súbita cardíaca persistiu elevado por mais de um mês após o evento, sem retorno à linha de base"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "Leor, Poole e Kloner revisaram os registros do legista do condado de Los Angeles na semana anterior ao terremoto, no dia do evento, nos seis dias seguintes, e em períodos-controle correspondentes de 1991-1993. No dia do terremoto (17/01/1994), o número de mortes súbitas por causa cardíaca relacionadas à doença aterosclerótica saltou da média basal de 4,6±2,1/dia (semana anterior) para 24 no próprio dia (z=4,41; p<0,001). Nos seis dias seguintes, o número caiu para uma média de 2,7±1,2/dia — abaixo do basal, sugerindo um efeito de \"antecipação\" de eventos que já ocorreriam, não apenas adição de novos casos. Dezesseis das vítimas de morte súbita tiveram sintomas — geralmente dor torácica — ou morreram na primeira hora após o tremor inicial; apenas 3 mortes súbitas ocorreram durante ou imediatamente após esforço físico incomum, o que isola o estresse emocional como gatilho independente do esforço. Conclusão dos autores: o terremoto de Northridge foi um gatilho significativo de morte súbita cardíaca, independente do esforço físico, sugerindo que o estresse emocional agudo pode precipitar eventos cardíacos em indivíduos predispostos.",
+    "source_refs": [
+      "Leor J, Poole WK, Kloner RA. Sudden Cardiac Death Triggered by an Earthquake. N Engl J Med. 1996;334(7):413-419. DOI: 10.1056/NEJM199602153340701. PMID: 8552142"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "depressao-pos-revascularizacao-cirurgica-cuidado-colaborativo-por-telefone-bypassing-the-blues",
+    "titulo": "Depressão após revascularização miocárdica cirúrgica: cuidado colaborativo por telefone muda a qualidade de vida? O ensaio \"Bypassing the Blues\"",
+    "tema": "Saúde mental e cardiologia",
+    "nivel": "intermediário",
+    "enunciado": "Homem de 60 anos, três semanas após cirurgia de revascularização miocárdica (CRM), apresenta sintomas depressivos moderados na consulta de retorno, com escore elevado na Escala de Hamilton para Depressão (HRS-D). A equipe discute se vale oferecer, além do acompanhamento clínico habitual, um programa estruturado de cuidado colaborativo coordenado por telefone, com enfermeiro atuando junto ao médico assistente e supervisão de psiquiatra.",
+    "pergunta": "O ensaio \"Bypassing the Blues\" (Rollman et al., JAMA 2009), que randomizou pacientes com depressão pós-CRM para 8 meses de cuidado colaborativo por telefone (enfermeiro + médico assistente + supervisão psiquiátrica) versus cuidado usual, mostrou que o grupo intervenção, comparado ao cuidado usual, teve:",
+    "opcoes": [
+      "Maior melhora na qualidade de vida mental (SF-36 MCS: Δ3,2 pontos; IC95% 0,5-6,0), na funcionalidade física (DASI: Δ4,6; IC95% 1,9-7,3) e nos sintomas depressivos (HRS-D: Δ3,1; IC95% 1,3-4,9), com resposta de 50% ou mais na HRS-D em 50,0% vs. 29,6% dos pacientes (NNT 4,9; IC95% 3,2-10,4; p<0,001) — benefício ainda maior no subgrupo masculino (SF-36 MCS: Δ5,7; IC95% 2,2-9,2; p=0,001)",
+      "Nenhuma diferença em qualidade de vida ou sintomas depressivos, apenas uma redução isolada de reinternações hospitalares em 8 meses",
+      "Equiparação completa da qualidade de vida do grupo intervenção à do grupo comparação sem depressão pós-CRM, eliminando totalmente a diferença basal entre os dois",
+      "Maior eficácia em mulheres do que em homens, com ausência de benefício demonstrável no subgrupo masculino"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O \"Bypassing the Blues\" randomizou 302 pacientes com depressão pós-CRM (150 intervenção, 152 cuidado usual) em 7 hospitais de Pittsburgh, com um grupo de comparação de 151 pacientes pós-CRM sem depressão, seguidos por 8 meses. O grupo intervenção teve maior melhora em todos os desfechos pré-especificados (todos p≤0,02): qualidade de vida mental pelo SF-36 Mental Component Summary (Δ3,2 pontos; IC95% 0,5-6,0), funcionalidade física pelo Duke Activity Status Index (Δ4,6; IC95% 1,9-7,3) e sintomas depressivos pela Hamilton Rating Scale for Depression (Δ3,1; IC95% 1,3-4,9). Resposta de 50% ou mais de queda no HRS-D em relação ao basal ocorreu em 50,0% do grupo intervenção vs. 29,6% do cuidado usual (NNT 4,9; IC95% 3,2-10,4; p<0,001). Homens com depressão se beneficiaram particularmente da intervenção (SF-36 MCS: Δ5,7; IC95% 2,2-9,2; p=0,001) — o oposto do que a alternativa 3 afirma. Ressalva que o próprio estudo declara: apesar da melhora, a qualidade de vida mental e a funcionalidade física do grupo intervenção NÃO alcançaram os níveis do grupo de comparação sem depressão — o cuidado colaborativo reduziu, mas não eliminou, a diferença associada à depressão pós-CRM.",
+    "source_refs": [
+      "Rollman BL, Belnap BH, LeMenager MS, Mazumdar S, Houck PR, Counihan PJ, et al. Telephone-delivered collaborative care for treating post-CABG depression: a randomized controlled trial. JAMA. 2009;302(19):2095-2103. DOI: 10.1001/jama.2009.1670. PMID: 19918088"
+    ],
+    "review_status": "revisado"
   }
 ]
