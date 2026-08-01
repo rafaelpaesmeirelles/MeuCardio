@@ -332,5 +332,37 @@
       "cocaina-e-risco-cardiovascular-vasoespasmo-coronariano-e-infarto"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "endocardite-infecciosa-com-instabilidade-ou-complicacao-aguda",
+    "titulo": "Endocardite infecciosa com instabilidade ou complicação aguda",
+    "gatilho": "Febre + sopro novo ou piora de sopro conhecido · sinais de insuficiência cardíaca aguda por destruição valvar · êmbolo séptico (AVC, isquemia de membro, infarto esplênico/renal) · vegetação grande com risco embólico",
+    "documento_slug": "endocardite-infecciosa-prevencao-diagnostico-e-tratamento-esc-2023",
+    "fluxograma_slug": "fluxograma-endocardite-infecciosa-esc-2023",
+    "ordem": 78,
+    "relacionados": [
+      "esquemas-antibioticos-na-endocardite-infecciosa-por-agente-esc-2023"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sincope-ou-parada-cardiaca-abortada-em-cardiomiopatia-hipertrofica",
+    "titulo": "Síncope ou parada cardíaca abortada em cardiomiopatia hipertrófica",
+    "gatilho": "Síncope inexplicada em paciente com CMH conhecida, ou hipertrofia septal ≥15mm ao eco de emergência · sobrevivente de parada cardíaca por TV/FV · TV não sustentada documentada com sintomas",
+    "documento_slug": "cardiomiopatia-hipertrofica-diagnostico-estratificacao-de-risco-e-tratamento-esc-2023-versao-completa",
+    "fluxograma_slug": "fluxograma-cardiomiopatia-hipertrofica-esc-2023",
+    "ordem": 79,
+    "relacionados": [],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "miocardite-fulminante",
+    "titulo": "Miocardite fulminante",
+    "gatilho": "Choque cardiogênico de início recente em paciente jovem, previamente hígido, com pródromo viral recente · insuficiência cardíaca aguda súbita sem cardiopatia prévia conhecida · arritmia ventricular sustentada com quadro infeccioso recente",
+    "documento_slug": "miocardite-diagnostico-estratificacao-de-risco-e-biopsia-endomiocardica-esc-2025",
+    "fluxograma_slug": "fluxograma-miocardite-aguda-esc-2025",
+    "ordem": 80,
+    "relacionados": [],
+    "review_status": "revisado"
   }
 ]
