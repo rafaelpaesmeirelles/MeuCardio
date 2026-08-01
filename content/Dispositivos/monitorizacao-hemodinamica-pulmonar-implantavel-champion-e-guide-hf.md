@@ -3,7 +3,7 @@ title: "Monitorização Hemodinâmica Pulmonar Implantável: CHAMPION e GUIDE-HF
 slug: monitorizacao-hemodinamica-pulmonar-implantavel-champion-e-guide-hf
 theme: "Dispositivos"
 kind: estudo
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Abraham WT, Adamson PB, Bourge RC, et al; CHAMPION Trial Study Group. Wireless pulmonary artery haemodynamic monitoring in chronic heart failure: a randomised controlled trial. Lancet. 2011;377(9766):658-666. DOI: 10.1016/S0140-6736(11)60101-3. PMID: 21315441", "Lindenfeld J, Zile MR, Desai AS, et al; GUIDE-HF Investigators. Haemodynamic-guided management of heart failure (GUIDE-HF): a randomised controlled trial. Lancet. 2021;398(10304):991-1001. DOI: 10.1016/S0140-6736(21)01754-2. PMID: 34461042", "Binanay C, Califf RM, Hasselblad V, et al; ESCAPE Investigators. Evaluation study of congestive heart failure and pulmonary artery catheterization effectiveness: the ESCAPE trial. JAMA. 2005;294(13):1625-1633. DOI: 10.1001/jama.294.13.1625. PMID: 16204662"]
 legacy_source: "Documento novo — dispositivo de monitorização hemodinâmica implantável (CardioMEMS) não tinha nenhum registro nesta biblioteca, apesar de ser tecnologia em uso real no manejo de IC avançada."
 ---

@@ -3,7 +3,7 @@ title: "Trombose Venosa Profunda: Diagnóstico e Tratamento"
 slug: trombose-venosa-profunda-diagnostico-e-tratamento
 theme: "Tromboembolismo"
 kind: protocolo
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Diagnostic et prise en charge de la thrombose veineuse — synthèse SFMV/ESC · Société Française de Médecine Vasculaire · https://ex.sfmv.fr/sites/default/files/docs/fiches_rbp_mtev_aigu_esc_2017_vd3.pdf", "Diretrizes sobre trombose venosa profunda da Sociedade Brasileira de Angiologia e Cirurgia Vascular · 2024 · https://www.scielo.br/j/jvb/a/QrkKryFq4fDkCHZPLBbgpdJ/?format=pdf&lang=pt", "Mismetti P, Laporte S, Pellerin O, et al. Effect of a retrievable inferior vena cava filter plus anticoagulation vs anticoagulation alone on risk of recurrent pulmonary embolism (PREPIC2). JAMA. 2015;313(16):1627-1635. DOI: 10.1001/jama.2015.3780. PMID: 25919526"]
 legacy_source: "Fusão de dois documentos de TVP na mesma pasta, com 12 e 11 seções e apenas 3 em comum. Do absorvido vieram imagem diagnóstica, duração da anticoagulação, terapia intervencionista e adjuvante, individualização da duração e TVP na gestação."
 ---

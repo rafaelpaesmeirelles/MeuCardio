@@ -3,7 +3,7 @@ title: "Dislipidemia — Metas de LDL, Estratificação de Risco e a Atualizaç�
 slug: dislipidemia-metas-ldl-estratificacao-risco-esc-eas-2025
 theme: "Prevenção e lipídios"
 kind: protocolo
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Mach F, Koskinas KC, Roeters van Lennep J et al. 2025 focused update of the 2019 ESC/EAS guidelines for the management of dyslipidaemias. Eur Heart J. 2025;46(42):4359-4378. DOI: 10.1093/eurheartj/ehaf190", "Mach F et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188."]
 legacy_source: "Pesquisado e redigido para preencher lacuna identificada em COBERTURA.md — tema tinha apenas 3 documentos."
 ---

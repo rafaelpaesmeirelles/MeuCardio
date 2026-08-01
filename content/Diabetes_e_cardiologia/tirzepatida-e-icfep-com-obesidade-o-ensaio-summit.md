@@ -3,7 +3,7 @@ title: "Tirzepatida e ICFEp com Obesidade: o Ensaio SUMMIT"
 slug: tirzepatida-e-icfep-com-obesidade-o-ensaio-summit
 theme: "Diabetes e cardiologia"
 kind: estudo
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Packer M, Zile MR, Kramer CM, et al; SUMMIT Trial Study Group. Tirzepatide for Heart Failure with Preserved Ejection Fraction and Obesity. N Engl J Med. 2025;392(5):427-437. DOI: 10.1056/NEJMoa2410027. PMID: 39555826"]
 legacy_source: "Documento novo — os agonistas de GLP-1 (LEADER, SUSTAIN-6, REWIND) e os iSGLT2 já estavam cobertos nesta pasta, mas tirzepatida — agonista duplo GIP/GLP-1, molécula distinta — não tinha nenhum registro, apesar de ser a primeira classe farmacológica com ensaio de desfecho dedicado especificamente à ICFEp com obesidade."
 ---

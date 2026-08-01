@@ -3,7 +3,7 @@ title: "Taquicardia Ventricular Idiopática do Trato de Saída: Diagnóstico e A
 slug: taquicardia-ventricular-idiopatica-do-trato-de-saida-diagnostico-e-ablacao
 theme: "Arritmias"
 kind: protocolo
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Amadis MR, Higa S, Lin CY, et al. Reappraisal of the clinical and anatomic characteristics of idiopathic outflow tract ventricular arrhythmias with an R wave pattern break in precordial lead: A multi-center study. Int J Cardiol Heart Vasc. 2025;58:101664. DOI: 10.1016/j.ijcha.2025.101664. PMID: 40213414", "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572 — recomendação de ablação como primeira linha, conferida via revisão secundária publicada em PMC9691474, por bloqueio de acesso ao texto completo original nesta sessão"]
 legacy_source: "Documento novo — a taquicardia/extrassístole ventricular idiopática do trato de saída é o subtipo anatômico mais comum de arritmia ventricular idiopática, mas não tinha nenhum registro nesta biblioteca, que cobria só as arritmias ventriculares malignas associadas a cardiopatia estrutural ou canalopatia."
 ---

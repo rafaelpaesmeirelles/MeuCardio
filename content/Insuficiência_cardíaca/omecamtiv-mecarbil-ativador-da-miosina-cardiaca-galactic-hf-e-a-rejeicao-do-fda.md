@@ -3,7 +3,7 @@ title: "Omecamtiv Mecarbil (Ativador da Miosina Cardíaca): GALACTIC-HF e a Reje
 slug: omecamtiv-mecarbil-ativador-da-miosina-cardiaca-galactic-hf-e-a-rejeicao-do-fda
 theme: "Insuficiência cardíaca"
 kind: estudo
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Teerlink JR, Diaz R, Felker GM, et al; GALACTIC-HF Investigators. Cardiac Myosin Activation with Omecamtiv Mecarbil in Systolic Heart Failure. N Engl J Med. 2021;384(2):105-116. DOI: 10.1056/NEJMoa2025797. PMID: 33185990", "Cytokinetics, Incorporated. Cytokinetics Receives Complete Response Letter From FDA for New Drug Application for Omecamtiv Mecarbil. Comunicado oficial da empresa, 28/02/2023 — registro público da decisão regulatória, já que o FDA não publica a Carta de Resposta Completa diretamente; conferido em 30/07/2026", "Cytokinetics, Incorporated. Cytokinetics Announces Outcome of FDA Advisory Committee Vote On Omecamtiv Mecarbil. Comunicado oficial da empresa, 13/12/2022, republicado pela Heart Failure Society of America (hfsa.org) — voto 8 a 3 do Comitê Consultivo de Medicamentos Cardiovasculares e Renais do FDA contra a aprovação; conferido em 30/07/2026"]
 legacy_source: "Documento novo — omecamtiv mecarbil (mecanismo farmacológico genuinamente novo, ativador seletivo da miosina cardíaca) não tinha registro nesta biblioteca, e é um caso raro em que o desfecho regulatório (rejeição pelo FDA) é tão relevante clinicamente quanto o resultado do próprio ensaio."
 ---

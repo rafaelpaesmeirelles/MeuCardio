@@ -3,7 +3,7 @@ title: "Hipertensão Arterial — Classificação, Diagnóstico, Metas e Tratame
 slug: hipertensao-arterial-classificacao-diagnostico-metas
 theme: "Hipertensão"
 kind: protocolo
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Brandão AA, Rodrigues CIS, Bortolotto LA, Armstrong AC, Mulinari RA, Feitosa ADM, et al. Diretriz Brasileira de Hipertensão Arterial – 2025. Arq Bras Cardiol. 2025;122(9):e20250624. DOI: 10.36660/abc.20250624"]
 legacy_source: "Substitui versão anterior baseada na diretriz 2020, desatualizada pela diretriz 2025 (SBC/SBH/SBN, lançada no Congresso Brasileiro de Cardiologia em setembro de 2025)."
 ---

@@ -3,7 +3,7 @@ title: "Fibrilação Atrial em Diálise: o que Diz a Evidência (RENAL-AF e AXAD
 slug: fibrilacao-atrial-em-dialise-o-que-diz-a-evidencia-renal-af-e-axadia-afnet-8
 theme: "Fibrilação atrial"
 kind: estudo
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Pokorney SD, Chertow GM, Al-Khalidi HR, et al; RENAL-AF Investigators. Apixaban for Patients With Atrial Fibrillation on Hemodialysis: A Multicenter Randomized Controlled Trial. Circulation. 2022;146(23):1735-1745. DOI: 10.1161/CIRCULATIONAHA.121.054990. PMID: 36335914", "Reinecke H, Engelbertz C, Bauersachs R, et al. A Randomized Controlled Trial Comparing Apixaban With the Vitamin K Antagonist Phenprocoumon in Patients on Chronic Hemodialysis: The AXADIA-AFNET 8 Study. Circulation. 2023;147(4):296-309. DOI: 10.1161/CIRCULATIONAHA.122.062779. PMID: 36335915. PMCID: PMC9875840"]
 legacy_source: "Documento novo — a biblioteca tinha ajuste renal de cada DOAC por fármaco (Farmacologia), mas nenhum registro específico sobre a evidência de anticoagular FA em paciente dialítico, que é questão clínica distinta e sem consenso forte."
 ---

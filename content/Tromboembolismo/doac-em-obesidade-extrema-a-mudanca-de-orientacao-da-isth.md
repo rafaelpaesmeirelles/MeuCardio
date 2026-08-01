@@ -3,7 +3,7 @@ title: "DOAC em Obesidade Extrema: a Mudança de Orientação da ISTH"
 slug: doac-em-obesidade-extrema-a-mudanca-de-orientacao-da-isth
 theme: "Tromboembolismo"
 kind: protocolo
-review_status: pendente_revisao
+review_status: revisado
 source_refs: ["Martin KA, Beyer-Westendorf J, Davidson BL, Huisman MV, Sandset PM, Moll S. Use of direct oral anticoagulants in patients with obesity for treatment and prevention of venous thromboembolism: Updated communication from the ISTH SSC Subcommittee on Control of Anticoagulation. J Thromb Haemost. 2021;19(8):1874-1882. DOI: 10.1111/jth.15358. PMID: 34259389 — texto completo bloqueado nesta sessão (paywall), conferido via duas fontes secundárias independentes e convergentes"]
 legacy_source: "Documento novo — orientação sobre DOAC em obesidade extrema não tinha registro nesta biblioteca, e é área onde muitos médicos ainda seguem a orientação de 2016, já revisada."
 ---
