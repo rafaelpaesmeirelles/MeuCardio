@@ -26,6 +26,14 @@ export default defineConfig({
         ]
       },
       workbox: {
+        // Sem clientsClaim, o novo service worker fica "waiting" até que TODAS
+        // as abas antigas fechem — quem já tinha o app aberto continua rodando
+        // o bundle velho indefinidamente. skipWaiting + clientsClaim juntos
+        // fazem o SW novo assumir o controle na hora; o reload em main.tsx
+        // (ouvindo controllerchange) é o que garante que o JS já carregado
+        // também seja substituído, não só as respostas de rede futuras.
+        skipWaiting: true,
+        clientsClaim: true,
         globPatterns: ["**/*.{js,css,html,svg,png,woff2}"],
         // Sem isto, abrir /emergencia offline devolveria 404 do servidor em vez
         // da aplicação: a rota é do roteador do cliente, não existe no disco.
