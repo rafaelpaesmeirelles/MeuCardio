@@ -6,9 +6,11 @@
 > sessões e abrange as onze frentes já medidas neste arquivo, não só `content/`.
 >
 > **Ponto de partida: 2.004 itens** (contagem no disco em 01/08/2026, mesmo método de sempre —
-> `casos-clinicos` com hífen). **Faltam 996.** Nenhum prazo novo foi comunicado até agora; não
-> presumir o prazo antigo (10/08/2026) nem "sem prazo" — perguntar ao Rafael ou aguardar
-> confirmação explícita antes de planejar ritmo diário em cima de uma data.
+> `casos-clinicos` com hífen). **Faltam 996.**
+>
+> **Prazo confirmado pelo Rafael em 01/08/2026 (à sessão `/root`, monitor): 10/08/2026** — o mesmo
+> prazo original do lançamento. Não é mais "sem prazo": planejar ritmo diário em cima dessa data
+> (9 dias a partir de 01/08).
 >
 > **A régua de qualidade não muda com a meta maior — vale reafirmar a cada escalada.** Nada
 > fabricado, fonte real e verificável, ou `VERIFICAÇÃO HUMANA NECESSÁRIA` explícito onde a fonte
