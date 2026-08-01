@@ -1,5 +1,38 @@
 # Corvia — contexto e instruções permanentes
 
+> ## ✅ Sessão corvia1, 01/08/2026 — balanço da rodada: +410 itens medidos, todos publicados
+> Frente: `content/` dos 10 temas (Doença coronariana, Cardiomiopatias, Valvopatias, Pericárdio,
+> Endocardite, Aorta e DAP, Cardiopatias congênitas, Febre reumática, Síncope, Perioperatório) +
+> `galeria/` + `exames/` + `evidencias/` + `estudos/`, conforme a tabela de divisão em 3 sessões.
+>
+> **Medido no disco, início → fim desta rodada:** `evidencias` 1.122 → **1.448** (+326) ·
+> `estudos` 191 → **232** (+41) · `galeria` 75 → **97** (+22, líquido de 4 candidatas descartadas
+> por duplicata real de MD5/tópico) · `exames` 74 → **87** (+13) · `content/` nos 10 temas 108 →
+> **116** (+8 documentos novos). Tudo carregado e publicado por **lista explícita de slugs**,
+> `AuditLog` gravado à mão em cada lote, varredura de órfãos rodada e zerada após cada publicação.
+>
+> **Método que rendeu mais**: minerar fontes já citadas neste arquivo até o fim — JCS 2022
+> perioperatório (43 evidências), JCS 2026 endocardite (77), RHDAustralia 2020 Cap. 11 de
+> valvopatia reumática em GRADE (62) e Cap. 12 de gestação (documento novo), HRS 2015 síncope
+> vasovagal/POTS (17), AHA/ACC 2018 ACHD (23 + documento de gravidez/contracepção com a
+> classificação Anátomo-Fisiológica), ACC/AHA 2020 valvopatia (33 + documento de regurgitação
+> aórtica), AHA 2023 doença coronariana crônica (21). Todas via PDF de acesso aberto quando o
+> Oxford Academic/ahajournals.org bloqueava por 403 — nenhuma fonte ficou sem tentar via mirror.
+>
+> **Verificação que não foi pulada pelo volume**: cada lote de evidências foi validado contra o
+> índice antes do commit (JSON parseável, slugs e PMIDs únicos, `evidence_level`/
+> `recommendation_class` dentro do limite de varchar — um item de PET-CT com dois níveis
+> diferentes por contexto foi corrigido separando em duas entradas antes de carregar). Toda
+> imagem de galeria foi baixada, inspecionada visualmente e comparada por MD5 contra o acervo
+> antes de cadastrar — 4 candidatas descartadas por já existirem (2 por pixel idêntico, 1 por
+> mesmo tópico com pixel diferente, achado só ao abrir a imagem). Uma imagem teve a descrição da
+> fonte corrigida após inspeção direta (a "CIV fetal" proposta por um agente era na verdade uma
+> figura composta com 5 posições anatômicas, não uma única imagem).
+>
+> **Nenhuma lacuna de fonte ficou sem registro**: AHA 2015 de profilaxia de endocardite (Wilson
+> et al., PMID 33853363) abre mas **não é graduada** (zero COR/LOE no texto) — não serve para
+> evidências, registrado para não repetir a tentativa.
+
 > ## 🎯 NOVA META pelo Rafael, 01/08/2026: **3.000 itens no total de todas as frentes**
 > **A meta de 2.000 foi SUBSTITUÍDA — não é acréscimo, é a nova régua**, pedida diretamente pelo
 > Rafael assim que a de 2.000 foi confirmada batida (ver bloco logo abaixo). Vale para todas as
