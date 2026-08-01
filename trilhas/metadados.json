@@ -1792,5 +1792,379 @@
     ],
     "review_status": "revisado",
     "revisao": "Curadoria verificada pela sessão CORVIA em 01/08/2026. Cada etapa aponta para item que já existe e está publicado na base — os slugs foram conferidos um a um contra o campo `slug` do front matter dos documentos e contra os JSON de estudos, medicamentos e checklists, e depois contra o banco de produção. A ordem e a justificativa derivam do conteúdo dos próprios itens, lido antes de escrever; a trilha não afirma nada que não esteja no item para o qual aponta."
+  },
+  {
+    "slug": "trilha-farmacologia-ambulatorial-do-consultorio-a-adesao",
+    "titulo": "Farmacologia cardiovascular ambulatorial: do consultório à adesão",
+    "tema": "Farmacologia",
+    "objetivo": "Sair sabendo escolher e titular, classe a classe, os fármacos orais que o cardiologista prescreve no consultório para hipertensão, arritmia crônica, anticoagulação e dislipidemia — não os agentes de emergência.",
+    "nivel": "básico",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "hidroclorotiazida",
+        "por_que": "Diurético tiazídico é classe de primeira linha na hipertensão e ponto de partida da trilha; o documento já registra a divergência entre a dose de bula (50-100 mg/dia) e a faixa de prática atual (12,5-25 mg/dia), que é a que se prescreve hoje."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "anlodipino-besilato",
+        "por_que": "Bloqueador de canal de cálcio di-hidropiridínico, a outra classe de primeira linha para hipertensão isolada, com dose única diária pela meia-vida longa (35-50h) — o contraste farmacocinético com o tiazídico do passo anterior já orienta a escolha entre as duas."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "enalapril-maleato",
+        "por_que": "IECA: além de anti-hipertensivo, é a classe historicamente pivotal para disfunção sistólica do VE (SOLVD), o que justifica escolhê-lo sobre o tiazídico ou o BCC quando o paciente tem cardiopatia estrutural, não só pressão alta."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "losartana-potassica",
+        "por_que": "BRA, alternativa ao IECA do passo anterior quando há tosse por acúmulo de bradicinina — o documento explica o mecanismo dessa diferença e traz a evidência pivotal própria da classe (LIFE, RENAAL), não repetida do IECA."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "bisoprolol-hemifumarato",
+        "por_que": "Betabloqueador oral cardiosseletivo, fecha o quarteto de classes anti-hipertensivas de uso ambulatorial e introduz a titulação lenta e escalonada (semana a semana) que é a lógica de uso crônico, distinta da dose única de emergência."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "verapamil-diltiazem",
+        "por_que": "Bloqueadores de canal de cálcio não di-hidropiridínicos: documento de classe que compara verapamil e diltiazem entre si e com o anlodipino do passo 2, mostrando por que essa subclasse serve também para controle de frequência em arritmia crônica, não só pressão."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "propafenona-cloridrato",
+        "por_que": "Antiarrítmico classe IC de uso ORAL contínuo e em estratégia ambulatorial ('pill-in-the-pocket') para fibrilação atrial paroxística — o contraponto natural da trilha de emergência, que trata a mesma droga só pela via endovenosa e aguda."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "varfarina-sodica",
+        "por_que": "Anticoagulante oral clássico: o documento é explícito sobre onde ele continua insubstituível — prótese valvar mecânica e FA valvar reumática, cenários em que os DOACs do próximo passo são contraindicados."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "apixabana",
+        "por_que": "DOAC como alternativa ambulatorial à varfarina na FA não valvar, sem necessidade de monitorização de INR; o documento detalha o ajuste por função renal, decisão do dia a dia de consultório que a varfarina não exige da mesma forma."
+      },
+      {
+        "ordem": 10,
+        "item_type": "documento",
+        "item_slug": "atorvastatina-calcica",
+        "por_que": "Estatina: pilar oral da prevenção cardiovascular ambulatorial, com a dose titulada por meta de LDL-C em vez de por resposta pressórica ou de frequência — muda a lógica de titulação em relação a todos os passos anteriores."
+      },
+      {
+        "ordem": 11,
+        "item_type": "documento",
+        "item_slug": "ezetimiba",
+        "por_que": "Fecha a trilha como segunda linha da dislipidemia, associada à estatina do passo anterior quando a meta de LDL-C não é atingida em dose máxima tolerada — o documento traz o IMPROVE-IT como evidência de desfecho dessa combinação."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-fibrilacao-atrial-cenarios-especiais",
+    "titulo": "Fibrilação atrial em cenários especiais: pós-operatório, comorbidade e periprocedimento",
+    "tema": "Fibrilação atrial",
+    "objetivo": "Sair sabendo conduzir a FA fora do caminho-padrão do AF-CARE: no pós-operatório de cirurgia cardíaca, na insuficiência cardíaca, na diálise, no idoso com quedas, quando achada por dispositivo, ao redor de um procedimento eletivo, na FA valvar reumática e depois de uma hemorragia intracraniana.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "fibrilacao-atrial-pos-operatoria-de-cirurgia-cardiaca-controle-de-frequencia-ou-de-ritmo",
+        "por_que": "Abre pelo cenário mais frequente de FA de início súbito no ambiente hospitalar — o ensaio do CTSN citado no documento mediu 33,0% de incidência no pós-operatório de cirurgia cardíaca, dentro da faixa de 20-60% da literatura geral."
+      },
+      {
+        "ordem": 2,
+        "item_type": "estudo",
+        "item_slug": "copps-2-colchicina-na-prevencao-da-sindrome-pos-pericardiotomia",
+        "por_que": "Testa a prevenção antes de seguir para o tratamento do que já instalou: a colchicina reduziu a síndrome pós-pericardiotomia (NNT 10), mas NÃO reduziu FA pós-operatória na análise por intenção de tratar — o ganho só aparece na análise on-treatment, e citar o ensaio como prova de prevenção de FA é ler a análise errada."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "controle-de-ritmo-vs-frequencia-na-fibrilacao-atrial-affirm-east-afnet-4-e-castle-af",
+        "por_que": "Muda de cenário cirúrgico para comorbidade: reúne AFFIRM (frequência e ritmo equivalentes na população geral), CASTLE-AF (ablação reduz morte/hospitalização por IC em FEVE ≤35%) e EAST-AFNET 4 (controle precoce do ritmo reduz desfecho cardiovascular maior) — a resposta à pergunta ritmo-ou-frequência muda conforme a população."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "digoxina-ou-betabloqueador-no-controle-de-frequencia-da-fa-permanente-rate-af",
+        "por_que": "Desce do nível estratégico do passo anterior para a escolha concreta de fármaco no controle de frequência da FA PERMANENTE (RATE-AF) — decisão diária de beira de leito nessa mesma população."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "fibrilacao-atrial-em-dialise-o-que-diz-a-evidencia-renal-af-e-axadia-afnet-8",
+        "por_que": "Outra comorbidade que muda a conduta-padrão: paciente em diálise, população sistematicamente excluída dos grandes ensaios de DOAC (RE-LY, ROCKET-AF, ARISTOTLE, ENGAGE AF), com evidência própria e específica em RENAL-AF e AXADIA-AFNET 8."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "fa-no-idoso-com-historico-de-quedas-o-medo-de-anticoagular-e-o-que-os-dados-mostram",
+        "por_que": "Terceira população especial da trilha: o idoso com histórico de quedas, em que o medo do hematoma subdural leva a subprescrever anticoagulante mesmo quando os dados não sustentam essa cautela."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "fibrilacao-atrial-subclinica-detectada-por-dispositivo-noah-afnet-6-artesia-e-metanalise",
+        "por_que": "Troca o cenário de detecção: FA subclínica achada em marca-passo, CDI ou monitor de eventos, sem sintoma — NOAH-AFNET 6, ARTESiA e a metanálise que os reconcilia respondem se e quando esse achado incidental justifica anticoagular."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "cardioversao-eletiva-e-anticoagulacao-periprocedimento-esc-2024",
+        "por_que": "Passa da decisão de manter o anticoagulante para a de administrá-lo ao redor de um procedimento: anticoagulação periprocedimento na cardioversão eletiva, pergunta semanal de ambulatório."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "interrupcao-do-anticoagulante-para-procedimento-eletivo-na-fa-bridge-e-pause",
+        "por_que": "Generaliza a pergunta do passo anterior para qualquer procedimento eletivo, não só cardioversão: BRIDGE e PAUSE mostram, em desenho duplo-cego, que a ponte com heparina triplicou o sangramento maior (3,2% vs. 1,3%) sem ganho tromboembólico."
+      },
+      {
+        "ordem": 10,
+        "item_type": "estudo",
+        "item_slug": "invictus-rivaroxabana-versus-varfarina-na-fa-da-cardiopatia-reumatica",
+        "por_que": "População anatômica que muda a classe de anticoagulante recomendada: na FA valvar por cardiopatia reumática (inclui estenose mitral), o INVICTUS testou a extrapolação do DOAC e ela FALHOU — rivaroxabana foi inferior à varfarina em eficácia, sem ganho de segurança, e a varfarina segue padrão nessa população."
+      },
+      {
+        "ordem": 11,
+        "item_type": "documento",
+        "item_slug": "reiniciar-anticoagulacao-na-fa-apos-hemorragia-intracraniana-sostart-prestige-af-e-a-metanalise-cocroach",
+        "por_que": "Fecha a trilha no cenário de maior tensão clínica: reiniciar ou não o anticoagulante depois de uma hemorragia intracraniana, com três fontes (SoSTART, COCROACH, PRESTIGE-AF) que convergem na redução do evento isquêmico mas divergem no tamanho do risco hemorrágico, sem nenhuma delas demonstrar benefício líquido comprovado."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-hipertensao-secundaria-e-populacoes-especiais",
+    "titulo": "Hipertensão secundária e populações especiais",
+    "tema": "Hipertensão",
+    "objetivo": "Sair sabendo rastrear e confirmar as causas secundárias mais frequentes (aldosteronismo primário, feocromocitoma, estenose de artéria renal, apneia do sono) e ajustar a conduta pressórica em quatro populações que não seguem a regra geral: doença renal crônica, gestação, idoso muito idoso e o paciente que precisa apenas de orientação sobre horário da dose.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "aldosteronismo-primario-e-feocromocitoma-testes-confirmatorios-endocrine-society",
+        "por_que": "Abre a trilha pelo teste confirmatório das duas causas endócrinas mais relevantes de hipertensão secundária — traz os critérios de rastreamento (PA >150/100, resistência a 3 drogas, hipopotassemia, incidentaloma) e os cortes exatos dos testes confirmatórios da Endocrine Society, o ponto de partida antes de qualquer conduta específica."
+      },
+      {
+        "ordem": 2,
+        "item_type": "medicamento",
+        "item_slug": "espironolactona",
+        "por_que": "O antagonista mineralocorticoide é o fármaco que liga o diagnóstico de aldosteronismo (etapa 1) ao tratamento — verbete de dose e ajuste antes de ver a evidência de eficácia como quarta droga na etapa seguinte."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "hipertensao-resistente-espironolactona-como-quarta-droga-o-ensaio-pathway-2",
+        "por_que": "O PATHWAY-2 mostra a espironolactona superior a bisoprolol e doxazosina como quarta droga na hipertensão resistente em toda a distribuição de renina, não só nos casos com aldosteronismo confirmado — fecha o elo entre suspeitar de excesso mineralocorticoide e agir mesmo sem diagnóstico confirmado de aldosteronismo primário."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "estenose-aterosclerotica-de-arteria-renal-o-ensaio-coral-e-o-fim-do-stent-rotineiro",
+        "por_que": "Segunda causa secundária clássica, e o ensaio CORAL (947 pacientes) mostra que revascularizar por achado anatômico isolado não reduz o desfecho composto cardiovascular/renal (HR 0,94) — desarma o reflexo de indicar stent só porque a estenose apareceu na imagem."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "apneia-obstrutiva-do-sono-e-hipertensao-quanto-o-cpap-realmente-baixa-a-pressao",
+        "por_que": "Terceira causa secundária a rastrear (mais de 70% dos hipertensos resistentes têm AOS), e o documento quantifica o que a associação epidemiológica não diz: o CPAP reduz cerca de 2,5-3 mmHg em média (Bratton) e não alterou desfecho cardiovascular no SAVE — é adjuvante, não substitui anti-hipertensivo."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "controle-pressorico-na-doenca-renal-cronica-estagios-3-a-5",
+        "por_que": "Primeira população especial da trilha: na DRC estágios 3-5 a meta pressórica não é a mesma discussão do hipertenso sem nefropatia, porque baixar mais a pressão pode tanto proteger o coração quanto acelerar a perda de função renal — a metanálise de Malhotra (15.924 pacientes com DRC) mostra menor mortalidade com controle mais intensivo (132 x 140 mmHg), mas sem resolver o desfecho renal."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "tratar-hipertensao-cronica-leve-na-gestacao-o-ensaio-chap",
+        "por_que": "Segunda população especial: o CHAP resolveu a dúvida sobre tratar hipertensão crônica leve na gestação, mostrando que o desfecho de eficácia melhora sem confirmar o receio de restrição de crescimento fetal que sustentava a conduta anterior — é a peça que faltava entre triagem de causa secundária e a decisão terapêutica na gestante hipertensa."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "tratamento-da-hipertensao-aos-80-anos-ou-mais-o-ensaio-hyvet",
+        "por_que": "Terceira população especial, no outro extremo etário: o HYVET testa se tratar hipertensão sistólica no octogenário reduz eventos, questão distinta de qualquer causa secundária e que pede evidência dedicada a essa faixa etária, não extrapolação de ensaios em adultos mais jovens."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "hipotensao-ortostatica-nao-e-motivo-para-desescalonar-o-anti-hipertensivo",
+        "por_que": "Continuação direta da etapa anterior: no idoso tratado (como no HYVET), a hipotensão ortostática medida no consultório é achado frequente, e a metanálise de dados individuais (18.466 participantes) mostra que ela não deve, isoladamente, levar a reduzir a medicação anti-hipertensiva."
+      },
+      {
+        "ordem": 10,
+        "item_type": "documento",
+        "item_slug": "horario-do-anti-hipertensivo-manha-ou-noite-o-ensaio-time",
+        "por_que": "Fecha a trilha com uma decisão prática que atravessa todas as populações vistas antes: o TIME (21.104 participantes) mostra que o horário da dose — manhã ou noite — não altera desfecho cardiovascular, transferindo a escolha para a conveniência e a adesão do paciente, independentemente da causa ou da população de base."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-tromboembolismo-em-cenarios-especiais",
+    "titulo": "Tromboembolismo em Cenários Especiais: Câncer, Gestação, Sítios Incomuns e Periprocedimento",
+    "tema": "Tromboembolismo",
+    "objetivo": "Sair sabendo decidir a anticoagulação nos cenários de TEV que fogem do algoritmo padrão — extensão em câncer, diagnóstico e profilaxia na gestante, trombo intracavitário, SAF, sítios incomuns (venoso cerebral e de membro superior) e o manejo periprocedimento, incluindo a interrupção eletiva e o reinício após hemorragia intracraniana.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "anticoagulacao-estendida-em-dose-reduzida-no-tev-do-cancer-o-ensaio-api-cat",
+        "por_que": "Ponto de partida: pressupõe a escolha inicial do anticoagulante no câncer (escore de Khorana, já coberto na trilha geral de TEV) e resolve a pergunta seguinte — manter dose plena ou reduzir depois dos primeiros 6 meses. O API-CAT mostrou não inferioridade na eficácia e superioridade formal na segurança da dose reduzida (p=0,03 para sangramento)."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "diagnostico-de-tep-na-gestante-years-adaptado-e-a-estrategia-do-ct-pe-pregnancy",
+        "por_que": "Muda de população: a gestante tem algoritmo diagnóstico próprio, porque o D-dímero perde especificidade na gravidez e a irradiação fetal pesa na escolha do exame. O YEARS adaptado (Artemis) e o CT-PE-Pregnancy validam estratégias que evitam angioTC em boa parte das gestantes com suspeita de TEP."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "tromboprofilaxia-na-gestacao-e-puerperio-dose-baixa-ou-intermediaria-o-ensaio-highlow",
+        "por_que": "Sequência natural do passo anterior: uma vez confirmado ou tendo havido TEV prévio, qual a dose de profilaxia na gestação e no puerpério seguinte. O HIGHLOW não mostrou superioridade da dose intermediária (RR 0,69; p=0,33), o que sustenta a dose baixa como preferível num contexto em que sangrar é risco concreto."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "anticoagulantes-na-gestacao-e-lactacao-o-que-diz-a-bula-registrada",
+        "por_que": "Fecha o bloco de gestação descendo ao nível da bula: o que cada anticoagulante (HBPM, varfarina, cada DOAC) tem registrado no Brasil para gravidez e amamentação, incluindo as divergências entre a rotulagem brasileira e a internacional que mudam a conduta à beira do leito."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "anticoagulacao-no-trombo-de-ventriculo-esquerdo-varfarina-ou-doac",
+        "por_que": "Muda de cenário para um substrato intracavitário sem ensaio randomizado dimensionado: o trombo de VE pós-infarto anterior, em que a varfarina é o único tratamento formalmente aprovado e o uso de DOAC na prática corrente se apoia em metanálise em rede com dados reconstruídos, não em RCT dedicado."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "trombofilia-hereditaria-e-adquirida-risco-de-recorrencia-e-doac-na-sindrome-antifosfolipide",
+        "por_que": "Outra situação em que o algoritmo padrão não se aplica: na síndrome antifosfolípide de alto risco, o DOAC foi inferior à varfarina no TRAPS — é a trombofilia que mais frequentemente muda a escolha do anticoagulante em relação ao TEV não provocado comum."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "trombose-venosa-cerebral-anticoagulacao-mesmo-com-hemorragia-e-o-ensaio-re-spect-cvt",
+        "por_que": "Sítio incomum com a conduta mais contraintuitiva do bloco: a trombose venosa cerebral se trata anticoagulando mesmo quando há hemorragia intracraniana associada ao próprio evento, e o RE-SPECT CVT testou dabigatrana como alternativa à varfarina ajustada nesse cenário."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "trombose-venosa-de-membro-superior-associada-a-cateter-diagnostico-e-manejo",
+        "por_que": "Segundo sítio incomum, cada vez mais frequente com o uso de PICC e cateteres de longa permanência: aqui a decisão central não é só o anticoagulante, é se o cateter deve ser removido ou mantido, o que não tem equivalente na TVP de membro inferior."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "interrupcao-do-anticoagulante-para-procedimento-eletivo-na-fa-bridge-e-pause",
+        "por_que": "Vira a chave do bloco para o periprocedimento: o BRIDGE mostrou que fazer ponte com heparina para procedimento eletivo triplica o sangramento maior sem ganho tromboembólico (3,2% vs. 1,3%), e o PAUSE valida a interrupção protocolada de DOAC sem dosagem de coagulação de rotina."
+      },
+      {
+        "ordem": 10,
+        "item_type": "documento",
+        "item_slug": "reiniciar-anticoagulacao-na-fa-apos-hemorragia-intracraniana-sostart-prestige-af-e-a-metanalise-cocroach",
+        "por_que": "Fecha o periprocedimento pelo outro extremo: não a interrupção planejada, mas o reinício depois do pior desfecho hemorrágico possível. As três fontes convergem na redução do evento isquêmico e divergem no tamanho do preço hemorrágico — nenhuma demonstrou benefício líquido em desfecho global, e o documento não escolhe vencedor."
+      },
+      {
+        "ordem": 11,
+        "item_type": "checklist",
+        "item_slug": "alta-pos-tromboembolismo-venoso-agudo",
+        "por_que": "Aplicação prática de fechamento: o item sobre TEP associado a câncer lembra, no momento da alta, que a escolha do anticoagulante deve considerar o sítio tumoral — o recorte fino que amarra o primeiro passo desta trilha (câncer) ao cuidado do dia a dia."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-prevencao-alem-do-ldl-calcio-inflamacao-e-estilo-de-vida",
+    "titulo": "Prevenção além do LDL: cálcio coronariano, inflamação residual e estilo de vida",
+    "tema": "Prevenção e lipídios",
+    "objetivo": "Sair sabendo usar o escore de cálcio coronariano e a PCR-us para refinar risco quando o LDL não conta a história toda, decidir quando a colchicina em baixa dose entra no arsenal anti-inflamatório e como prescrevê-la, e situar dieta mediterrânea, cessação tabágica, atividade física e aspirina em prevenção primária dentro da mesma lógica de risco residual.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "escore-de-calcio-coronariano-o-que-o-mesa-mediu-e-o-que-significa-um-escore-zero",
+        "por_que": "Ponto de partida da trilha: mostra que a estratificação de risco não termina no LDL — o escore de cálcio coronariano, medido no MESA, reclassifica pacientes de risco intermediário e um escore zero tem valor preditivo negativo próprio, independente do perfil lipídico."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "proteina-c-reativa-de-alta-sensibilidade-e-estatina-na-prevencao-primaria-jupiter",
+        "por_que": "Depois da imagem, o segundo marcador não lipídico: o JUPITER selecionou pacientes com LDL não elevado mas PCR-us alta e mostrou benefício de estatina — evidência de que a inflamação, e não só o colesterol, identifica quem se beneficia do tratamento."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "inflamacao-residual-como-alvo-cantos-cirt-e-o-que-o-rescue-ainda-nao-prova",
+        "por_que": "Estende a hipótese inflamatória do JUPITER para o tratamento direcionado: o CANTOS reduziu eventos bloqueando IL-1β, o CIRT com metotrexato foi neutro, e o RESCUE ainda é estudo de biomarcador com ziltivekimab — o documento deixa claro o que já está provado e o que ainda não está."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "colchicina-em-baixa-dose-na-prevencao-cardiovascular-lodoco2-colcot-e-o-resultado-neutro-do-clear-synergy",
+        "por_que": "Da inflamação como alvo teórico para a droga que já está disponível na farmácia: LoDoCo2 e COLCOT sustentam benefício da colchicina em baixa dose na prevenção secundária, mas o CLEAR-SYNERGY, mais recente e maior, foi neutro no pós-infarto agudo — a trilha não escolhe um vencedor, mostra a divergência."
+      },
+      {
+        "ordem": 5,
+        "item_type": "estudo",
+        "item_slug": "clear-synergy-oasis-9-colchicina-pos-iam",
+        "por_que": "Aprofunda exatamente o ensaio que introduz a divergência no documento anterior — o CLEAR-SYNERGY (OASIS-9), o maior e mais recente teste de colchicina pós-IAM, com resultado neutro que contrasta com LoDoCo2 e COLCOT."
+      },
+      {
+        "ordem": 6,
+        "item_type": "medicamento",
+        "item_slug": "colchicina",
+        "por_que": "Depois de decidir se colchicina entra no plano terapêutico, o verbete do fármaco traz o que muda a decisão à beira do leito: apresentação, dose, ajuste renal e contraindicações — informação que nenhum dos dois documentos de ensaio clínico substitui."
+      },
+      {
+        "ordem": 7,
+        "item_type": "documento",
+        "item_slug": "suplemento-de-omega-3-nao-e-icosapente-vital-ascend-e-a-metanalise-de-77-917",
+        "por_que": "Muda de eixo, da inflamação para o triglicerídeo: VITAL, ASCEND e a metanálise de 77.917 pacientes mostram que suplemento de ômega-3 de venda livre não reproduz o benefício visto com icosapente etílico purificado — distinção que evita confundir as duas coisas na prática."
+      },
+      {
+        "ordem": 8,
+        "item_type": "documento",
+        "item_slug": "dieta-mediterranea-em-prevencao-primaria-o-predimed-e-a-retratacao-que-o-refez",
+        "por_que": "Sai do fármaco para a intervenção não farmacológica de maior evidência em prevenção primária — o PREDIMED, com a ressalva metodológica de que a publicação original de 2013 foi retratada e a referência válida é a republicação de 2018."
+      },
+      {
+        "ordem": 9,
+        "item_type": "documento",
+        "item_slug": "tratamento-farmacologico-da-cessacao-tabagica-o-ensaio-eagles",
+        "por_que": "Continua no estilo de vida, agora no fator de risco modificável de maior impacto absoluto: o EAGLES testou vareniclina, bupropiona e reposição de nicotina cabeça a cabeça, com o financiamento por dois dos fabricantes declarado no próprio documento."
+      },
+      {
+        "ordem": 10,
+        "item_type": "documento",
+        "item_slug": "passos-por-dia-e-mortalidade-o-que-substitui-a-meta-dos-10-mil",
+        "por_que": "Fecha o bloco de estilo de vida com a pergunta mais frequente do consultório — quantos passos por dia bastam — e mostra por que a meta tradicional de 10 mil não é o corte que a evidência sustenta."
+      },
+      {
+        "ordem": 11,
+        "item_type": "documento",
+        "item_slug": "aspirina-em-prevencao-primaria-no-idoso-saudavel-o-ensaio-aspree",
+        "por_que": "Encerra a trilha com um contraponto didático: o ASPREE testou aspirina em prevenção primária no idoso saudável e não mostrou benefício líquido, com mais sangramento — depois de nove intervenções que ajudam, esta mostra quando acrescentar mais uma medida deixa de compensar."
+      }
+    ]
   }
 ]
