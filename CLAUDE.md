@@ -1,5 +1,97 @@
 # Corvia — contexto e instruções permanentes
 
+> ## 🎉 META DE 2.000 ITENS ATINGIDA em 01/08/2026 — **2.002 itens, oito dias antes do prazo**
+> Medido no disco depois de as sessões commitarem: `content/*.md` 571 · `evidencias` **865** ·
+> `estudos` **166** · `casos-clinicos` 85 · `medicamentos` 89 · `galeria` 74 · `exames` 73 ·
+> `trilhas` 35 · `emergencia` 24 · `checklists` 9 · `material-paciente` 11. **Não é estimativa** —
+> é contagem por script, com `casos-clinicos` grafada com hífen (a armadilha já registrada).
+>
+> ### Contribuição da sessão da Biblioteca fora do tmux, 01/08/2026: **248 itens, todos publicados**
+> `evidencias` **+202** · `estudos` **+46**. Publicados por lista explícita de slugs, com `AuditLog`
+> gravado à mão e varredura de órfãos após cada lote — **zero órfãos** nas duas frentes. O único
+> registro retido em toda a base continua sendo o órfão conhecido
+> `cc-adulto-eco-no-seguimento-com-defeito-residual`.
+>
+> #### O que rendeu, e por quê — **minerar UMA diretriz até o fim, de novo**
+> Duas fontes brasileiras em acesso aberto responderam por 139 dos 202 registros de evidência:
+> - **Diretriz de Miocardites da SBC 2022** (PMC9352123): 63 registros de 18 tabelas intocadas —
+>   sarcoidose cardíaca inteira, cardite reumática com dose, e a regra do CDI que se decide pelo
+>   corte de 6 meses (Classe III na fase aguda e subaguda, IIa na crônica).
+> - **Diretriz de Cardiomiopatia da Doença de Chagas da SBC 2023** (PMC10344417): **139 registros**
+>   de 12 tabelas — as três de marca-passo inteiras, ablação de TV, ressincronização, tratamento
+>   etiológico, insuficiência cardíaca e os 11 métodos complementares. Para uma plataforma
+>   brasileira, era a maior lacuna isolada que restava.
+>
+> #### Verificação — o que o volume NÃO dispensou
+> **Baixei o XML do PMC das duas diretrizes e conferi tabela por tabela contra a transcrição dos
+> subagentes**: 18 tabelas da miocardite e 11 do Chagas, classe e nível de cada linha. **Zero
+> divergências** — inclusive nos erros tipográficos da fonte, que transcrevi como impressos
+> (`CHADS-VASc` sem o subscrito 2, `observacioais`, `cardiomopatia`). Nos 46 estudos, cada PMID,
+> título, revista, paginação e número saiu do registro do PubMed, nunca de memória.
+>
+> #### Convenção de GRADE, confirmada na prática
+> `recommendation_class` recebe **`Forte`** ou **`Ponderado`** (9 caracteres, cabe no `varchar(10)`)
+> e `evidence_level` recebe A/B/C. **Não converta GRADE para o sistema da ESC** — seria inventar
+> equivalência que a fonte não faz. Cada registro em GRADE carrega a nota de sistema explicando que,
+> nesta diretriz, **A significa evidência obtida NA cardiomiopatia chagásica**, B evidência
+> extrapolada de outras cardiopatias e C ausência de evidência empírica.
+>
+> #### 🐛 DUPLICATA VIVA ENCONTRADA — decisão do Rafael, despublicar exige ele
+> A **mesma recomendação** da Diretriz de Miocardites da SBC 2022 — sorologia viral de rotina não
+> indicada, Classe III C — está cadastrada **duas vezes e publicada nas duas**:
+> `sorologias-virais-de-rotina-nao-sao-indicadas-na-miocardite` (tema Cardiomiopatias) e
+> `sorologia-viral-de-rotina-nao-e-recomendada-na-miocardite` (tema Pericárdio). A varredura mostrou
+> também que **os registros de miocardite da base estão divididos de forma inconsistente entre
+> Cardiomiopatias e Pericárdio**. Os 63 registros novos usam **Cardiomiopatias** para miocardite e
+> **Febre reumática** para cardite reumática; só a recomendação de acometimento pericárdico ficou em
+> Pericárdio.
+>
+> #### ⚠️ ERRO MEU, registrado para não se repetir: publiquei 2 itens que não eram meus
+> Ao publicar meus 30 estudos usei **"todos os pendentes"** em vez de lista explícita de slugs, e
+> levei junto dois registros da sessão `biblioteca` do tmux que estavam carregados e retidos
+> (`revisao-cochrane-reparo-endovascular-versus-aberto-do-aneurisma-de-arteria-poplitea` e
+> `antonello-2005-...-aneurisma-poplitea`, tema Aorta e DAP). **Estão no ar e eu não os verifiquei.**
+> Avisei a sessão pelo canal em tempo real. **A regra do arquivo — publicar por LISTA EXPLÍCITA de
+> slugs — existe exatamente para isto, e eu a quebrei; voltei a segui-la nos lotes seguintes.**
+>
+> #### 🔁 ARMADILHA NOVA DE GIT: `git stash pop` cego reabre o autostash antigo
+> Eu vinha usando `git stash push -- .claude/settings.local.json` seguido de `git stash pop`. Numa
+> das rodadas o arquivo **não estava modificado**, então o `push` não criou entrada nenhuma — e o
+> `pop` desempilhou o **`stash@{0}: autostash`** do incidente de 31/07, despejando a versão antiga de
+> 376 evidências por cima da árvore e gerando conflito em 4 arquivos. Nada se perdeu (os commits já
+> estavam feitos; restaurei os 4 de `HEAD`), e o autostash **continua intacto**, porque o pop falhou.
+> **Regra: só faça `pop` se o `push` de fato criou entrada** — confira com `git stash list` antes,
+> ou use `git stash push` sempre com `--` e um caminho que você sabe estar modificado.
+>
+> #### 🔓 Fontes que ESTAVAM bloqueadas e foram destravadas nesta sessão — não repita a busca
+> - **ESC 2015 de pericárdio: ESTÁ no PMC** (PMC7539677), com ~100 recomendações graduadas. O XML
+>   vem sem corpo e o HTML dá reCAPTCHA, mas **as tabelas estão depositadas como IMAGENS** em
+>   `https://pmc.ncbi.nlm.nih.gov/articles/instance/7539677/bin/ehv318NN.jpg`, legíveis uma a uma.
+>   ⚠️ A **ESC 2025 de miocardite e pericardite substitui a de 2015** e **não tem PMC** — ao usar a
+>   de 2015, marque que foi superada.
+> - **Critérios de Duke-ISCVID 2023: abertos** (PMC10681650). O `efetch` de XML é bloqueado pelo
+>   editor, **mas a página HTML do PMC abre normalmente** — quem tenta só por XML conclui errado.
+> - **JCS 2026 de endocardite**: sem PMC, mas com PDF integral **aberto no J-STAGE**, e é a fonte
+>   mais rica que se achou (esquemas antimicrobianos com dose e duração, cirurgia precoce com
+>   definição operacional de urgência, profilaxia por procedimento). É o caminho para qualquer
+>   diretriz da JCS.
+> - **Diretriz brasileira de IAMCSST: só existe a de 2015 (PMID 26375058) e ela NÃO tem PMC.** SciELO
+>   dá 403, `publicacoes.cardiol.br` devolve a home. **Não há diretriz SBC de IAMCSST posterior a
+>   2015** — prazos porta-agulha e porta-balão, fibrinólise e estratégia farmacoinvasiva seguem sem
+>   fonte brasileira aberta.
+> - **`esearch db=pmc` NÃO indexa termos em português.** Busca com `endocardite[title]` devolve
+>   `phrasesnotfound` — não é prova de que a diretriz não exista, é prova de que a consulta nunca vai
+>   achá-la. Busque por título em inglês ou por `"Arq Bras Cardiol"[journal]`.
+>
+> #### 📌 Erratas encontradas e declaradas dentro dos registros
+> AVATAR (PMID 35226561) · EVEREST II (NEJM 2011;365(2):189) · TASTE (NEJM 2014;371(8):786) ·
+> VERDICT (PMID 30608878) · EXCEL (PMID 31671258) · NOBLE (PMID 27816194) · Lalani 2013 (JAMA Intern
+> Med 2013;173(19):1846). **Duas com impacto numérico real, achadas por agente e ainda NÃO
+> aplicadas:** a Diretriz Brasileira de Reabilitação Cardiovascular 2020 tem errata que corrige
+> `50-85%` para **`50-80%`** da FC de reserva — e **o PMC ainda traz o valor errado na versão em
+> inglês**; e a Atualização Perioperatória de 2022 corrige, na Figura 1, `30 dias a <6 meses` para
+> **`30 dias a <3 meses`**, com a figura em português errada no original.
+
 ## O que é
 Plataforma de apoio à decisão clínica em Cardiologia ("Guia de Cardiologia"),
 idealizada e desenvolvida por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798).
