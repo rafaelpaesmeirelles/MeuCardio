@@ -48,7 +48,11 @@ class Settings(BaseSettings):
     # na prática, mesmo com ai_provider="anthropic". Existe como campo explícito
     # (não hardcoded) pra o dia em que outro provedor de embedding for suportado.
     ai_daily_limit: int = 50
-    ai_max_output_tokens: int = 1800
+    # 1800 era curto demais com a busca na internet ligada: cada rodada de
+    # web_search consome tokens de saída em blocos de tool_use/tool_result
+    # antes do texto final, e o teto baixo cortava a resposta no meio (texto
+    # final vazio) ou forçava stop_reason=pause_turn sem terminar o raciocínio.
+    ai_max_output_tokens: int = 4096
     ai_top_k: int = 8
     ai_max_context_chars: int = 24000
 

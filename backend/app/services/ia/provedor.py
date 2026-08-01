@@ -121,19 +121,39 @@ class ProvedorAnthropic(ProvedorIA):
         kwargs: dict = {
             "model": modelo_efetivo,
             "system": sistema,
-            "messages": mensagens,
             "max_tokens": settings.ai_max_output_tokens,
         }
         if usar_internet:
             kwargs["tools"] = [{"type": "web_search_20260209", "name": "web_search"}]
-        resp = self._cliente.messages.create(**kwargs)
-        # Com busca na internet ligada, resp.content mistura blocos de texto com
-        # blocos de uso de ferramenta (server_tool_use/web_search_tool_result) —
-        # só os blocos type == "text" compõem a resposta final ao usuário.
+
+        # stop_reason == "pause_turn" acontece em buscas na internet mais longas
+        # (ferramenta server-side): não é erro nem resposta pronta, é o sinal de
+        # que o modelo ainda está no meio do raciocínio/busca e precisa que a
+        # MESMA conversa continue — resposta anterior sem tratar isso chegava
+        # com texto final vazio. O jeito certo, por documentação da Anthropic,
+        # é reenviar o bloco de conteúdo do assistente como nova mensagem
+        # "assistant" e chamar de novo, sem tool_result (quem executa a busca é
+        # o servidor da Anthropic, não este código).
+        mensagens_turno = list(mensagens)
+        textos: list[str] = []
+        tokens_entrada = 0
+        tokens_saida = 0
+        for _ in range(5):
+            resp = self._cliente.messages.create(messages=mensagens_turno, **kwargs)
+            tokens_entrada += resp.usage.input_tokens
+            tokens_saida += resp.usage.output_tokens
+            # Com busca na internet ligada, resp.content mistura blocos de texto
+            # com blocos de uso de ferramenta (server_tool_use/web_search_tool_result)
+            # — só os blocos type == "text" compõem a resposta final ao usuário.
+            textos.append("".join(b.text for b in resp.content if b.type == "text"))
+            if resp.stop_reason != "pause_turn":
+                break
+            mensagens_turno = [*mensagens_turno, {"role": "assistant", "content": resp.content}]
+
         return Resposta(
-            texto="".join(b.text for b in resp.content if b.type == "text"),
-            tokens_entrada=resp.usage.input_tokens,
-            tokens_saida=resp.usage.output_tokens,
+            texto="".join(textos),
+            tokens_entrada=tokens_entrada,
+            tokens_saida=tokens_saida,
             modelo=modelo_efetivo,
         )
 
