@@ -920,17 +920,11 @@
       {
         "ordem": 6,
         "item_type": "medicamento",
-        "item_slug": "atropina",
-        "por_que": "O fármaco de primeira linha na bradicardia sintomática — antes de considerar marca-passo transcutâneo."
-      },
-      {
-        "ordem": 7,
-        "item_type": "medicamento",
         "item_slug": "adenosina",
         "por_que": "Diagnóstico e terapêutico ao mesmo tempo — interrompe taquicardia supraventricular por reentrada nodal e ajuda a revelar o ritmo de base em taquicardias de origem incerta."
       },
       {
-        "ordem": 8,
+        "ordem": 7,
         "item_type": "medicamento",
         "item_slug": "amiodarona-cloridrato",
         "por_que": "Fecha a trilha com o antiarrítmico mais versátil da emergência — usado tanto na parada com ritmo chocável refratário quanto em taquiarritmias fora da parada."
