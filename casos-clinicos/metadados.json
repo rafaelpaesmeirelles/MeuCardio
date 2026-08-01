@@ -8722,5 +8722,545 @@
       "Fernandes F, Simões MV, Correia EB, Marcondes-Braga FG, Coelho OR, et al. Diretriz sobre Diagnóstico e Tratamento da Cardiomiopatia Hipertrófica – 2024. Arq Bras Cardiol. 2024;121(7):e202400415. DOI: 10.36660/abc.20240415. PMID: 39082572."
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "dapt-alem-de-12-meses-apos-stent-farmacologico-reduz-trombose-mas-aumenta-sangramento-dapt-study",
+    "titulo": "DAPT além de 12 meses após stent farmacológico: vale estender, e a que custo?",
+    "tema": "Doença coronariana",
+    "nivel": "intermediário",
+    "enunciado": "Homem de 64 anos recebeu stent farmacológico há exatamente 12 meses por síndrome coronariana aguda, completou o ano de dupla antiagregação (AAS + clopidogrel) sem nenhum episódio de sangramento e pergunta se deve continuar tomando o clopidogrel junto com o AAS por mais tempo, ou se pode parar agora com segurança.",
+    "pergunta": "De acordo com o DAPT Study, que randomizou pacientes estáveis após 12 meses de tienopiridínico + AAS pós-stent farmacológico para continuar a tienopiridina por mais 18 meses (total 30 meses) ou trocar por placebo (mantendo só o AAS), qual foi o resultado entre 12 e 30 meses?",
+    "resposta_correta": 0,
+    "explicacao": "O DAPT Study (Mauri et al., NEJM 2014) randomizou 9.961 pacientes já estáveis após 12 meses de tienopiridínico (clopidogrel ou prasugrel) + AAS pós-stent farmacológico para continuar a tienopiridina por mais 18 meses (total de 30) ou trocar por placebo, mantendo o AAS nos dois grupos. Entre 12 e 30 meses, a continuidade da tienopiridina reduziu a trombose de stent (0,4% vs. 1,4%; HR 0,29; IC95% 0,17-0,48; p<0,001) e o desfecho composto de morte, infarto ou AVC (4,3% vs. 5,9%; HR 0,71; IC95% 0,59-0,85; p<0,001), com menor taxa de infarto isolado (2,1% vs. 4,1%; HR 0,47; p<0,001). Em contrapartida, o sangramento moderado ou grave aumentou (2,5% vs. 1,6%; p=0,001), e a mortalidade por todas as causas foi numericamente maior no grupo de terapia estendida (2,0% vs. 1,5%; HR 1,36; IC95% 1,00-1,85; p=0,05) — um sinal no limite da significância estatística (o IC toca o 1,00), que o próprio estudo não considera conclusivo isoladamente, mas que pesou nas diretrizes subsequentes para individualizar a decisão pelo risco isquêmico versus hemorrágico de cada paciente. Também houve elevação do risco de trombose de stent e infarto nos 3 meses após a suspensão da tienopiridina em ambos os grupos. O caso contrasta deliberadamente com os ensaios de DAPT abreviada já registrados na base (MASTER DAPT, STOPDAPT-2): aqui a pergunta é sobre estender, não abreviar — e a resposta certa depende do perfil de sangramento do paciente, não é a mesma em todo caso.",
+    "source_refs": [
+      "Mauri L, Kereiakes DJ, Yeh RW, et al. Twelve or 30 Months of Dual Antiplatelet Therapy after Drug-Eluting Stents. N Engl J Med. 2014;371(23):2155-2166. DOI: 10.1056/NEJMoa1409312. PMID: 25399658"
+    ],
+    "review_status": "revisado",
+    "opcoes": [
+      "A terapia estendida reduziu trombose de stent (0,4% vs. 1,4%; HR 0,29; IC95% 0,17-0,48) e eventos cardiovasculares e cerebrovasculares maiores (4,3% vs. 5,9%; HR 0,71; IC95% 0,59-0,85), mas aumentou o sangramento moderado ou grave (2,5% vs. 1,6%; p=0,001) e mostrou um sinal, não conclusivo, de maior mortalidade por todas as causas (2,0% vs. 1,5%; HR 1,36; IC95% 1,00-1,85; p=0,05)",
+      "A terapia estendida reduziu todos os desfechos isquêmicos e hemorrágicos ao mesmo tempo, sem nenhum custo em segurança",
+      "Não houve diferença significativa em nenhum desfecho, isquêmico ou hemorrágico, entre continuar e suspender a tienopiridina",
+      "A terapia estendida aumentou a trombose de stent por um efeito rebote ao longo dos 18 meses adicionais, sem qualquer benefício em eventos maiores"
+    ]
+  },
+  {
+    "slug": "hipertrofia-por-doenca-de-fabry-agalsidase-beta-atrasa-eventos-quanto-mais-cedo-fabry-trial",
+    "titulo": "Hipertrofia ventricular por doença de Fabry: a terapia de reposição enzimática deve começar já, ou pode esperar a piora?",
+    "tema": "Cardiomiopatias",
+    "nivel": "avançado",
+    "enunciado": "Homem de 38 anos com diagnóstico genético confirmado de doença de Fabry (deficiência de alfa-galactosidase A) apresenta hipertrofia ventricular esquerda concêntrica ao ecocardiograma, proteinúria leve a moderada e taxa de filtração glomerular ainda preservada, sem nenhum evento cardíaco, renal ou cerebrovascular até o momento. O paciente pergunta se faz sentido começar a terapia de reposição enzimática agora, já que ainda está assintomático, ou se é mais seguro aguardar sinais de piora de órgão-alvo antes de expor-se ao tratamento intravenoso crônico.",
+    "pergunta": "No ensaio randomizado, duplo-cego, controlado por placebo de agalsidase-beta em pacientes com doença de Fabry avançada e comprometimento renal leve a moderado, qual foi o achado central sobre o momento ideal para iniciar a terapia?",
+    "resposta_correta": 3,
+    "explicacao": "No ensaio de Banikazemi et al. (Ann Intern Med 2007), 82 adultos com doença de Fabry e nefropatia leve a moderada foram randomizados 2:1 para agalsidase-beta (1 mg/kg IV a cada 2 semanas) ou placebo, por até 35 meses. Na análise por intenção de tratar (ajustada para desbalanço de proteinúria basal), a agalsidase-beta retardou o tempo até o primeiro evento clínico composto (renal, cardíaco, cerebrovascular ou morte): 13/31 (42%) eventos no placebo vs. 14/51 (27%) no tratamento, HR 0,47 (IC95% 0,21-1,03; p=0,06) — resultado no limite da significância estatística na análise primária por ITT. Na análise secundária restrita aos pacientes aderentes ao protocolo, o efeito foi mais nítido: HR 0,39 (IC95% 0,16-0,93; p=0,034). A análise de subgrupo pré-especificada mostrou efeito de tratamento maior nos pacientes com TFG basal >55 mL/min/1,73m² (HR 0,19; IC95% 0,05-0,82; p=0,025) do que nos com TFG ≤55 (HR 0,85; IC95% 0,32-2,3; p=0,75), embora o teste formal de interação não tenha atingido significância (p=0,09). Os autores concluem que a intervenção terapêutica antes do dano orgânico irreversível pode trazer maior benefício clínico. É importante registrar as limitações do próprio estudo: amostra pequena (82 pacientes), só um terço apresentou evento, e o resultado primário por ITT não foi formalmente significativo (p=0,06) — a evidência aponta na direção de tratar cedo, mas não é definitiva.",
+    "source_refs": [
+      "Banikazemi M, Bultas J, Waldek S, et al; Fabry Disease Clinical Trial Study Group. Agalsidase-beta therapy for advanced Fabry disease: a randomized trial. Ann Intern Med. 2007;146(2):77-86. DOI: 10.7326/0003-4819-146-2-200701160-00148. PMID: 17179052"
+    ],
+    "review_status": "revisado",
+    "opcoes": [
+      "A agalsidase-beta só demonstrou benefício estatisticamente significativo nos pacientes com TFG basal já abaixo de 55 mL/min/1,73m², reforçando a estratégia de aguardar a piora renal antes de tratar",
+      "Não houve diferença de eventos clínicos entre os grupos tratado e placebo em nenhuma das análises, isquêmicas ou renais",
+      "A agalsidase-beta reduziu apenas a mortalidade isolada, sem qualquer efeito mensurável sobre os desfechos renais ou cardíacos",
+      "A agalsidase-beta retardou o tempo até o primeiro evento clínico composto (renal, cardíaco, cerebrovascular ou morte), com efeito de tratamento maior no subgrupo com TFG basal acima de 55 mL/min/1,73m² (HR 0,19; IC95% 0,05-0,82) do que no subgrupo com TFG ≤55 (HR 0,85; IC95% 0,32-2,3) — sugerindo que tratar antes do dano de órgão já instalado rende mais benefício"
+    ]
+  },
+  {
+    "slug": "estenose-aortica-grave-assintomatica-criterios-convencionais-cirurgia-precoce-avatar",
+    "titulo": "Estenose aórtica grave assintomática por critérios convencionais (não 'muito grave'): cirurgia já ou vigilância clínica?",
+    "tema": "Valvopatias",
+    "nivel": "intermediário",
+    "enunciado": "Mulher de 68 anos, completamente assintomática, apresenta estenose aórtica grave por critérios convencionais (área valvar ≤1,0 cm² e velocidade de jato aórtico >4 m/s), fração de ejeção preservada e teste ergométrico negativo, sem queda de pressão, arritmia ou sintomas ao esforço. A equipe discute se vale encaminhar para cirurgia agora ou manter vigilância clínica até o aparecimento de sintomas, já que ela não preenche os critérios mais restritivos de estenose 'muito grave' (velocidade ≥4,5-5 m/s) usados em outros ensaios de cirurgia precoce.",
+    "pergunta": "Segundo o ensaio AVATAR — que randomizou pacientes assintomáticos com estenose aórtica grave por critérios convencionais (não os critérios de 'muito grave') e teste ergométrico negativo obrigatório — qual foi o efeito da cirurgia valvar precoce sobre o desfecho composto de morte por qualquer causa, infarto agudo, AVC ou internação não planejada por insuficiência cardíaca?",
+    "resposta_correta": 0,
+    "explicacao": "O AVATAR trial (Banovic et al., Circulation 2022) randomizou 157 pacientes assintomáticos com estenose aórtica grave (área ≤1 cm² com velocidade de jato >4 m/s ou gradiente médio ≥40 mmHg), função ventricular normal e teste ergométrico negativo obrigatório para cirurgia precoce (n=78) ou tratamento conservador guiado por diretriz (n=79), em 9 centros de 7 países europeus. Com seguimento mediano de 32 meses, houve 39 eventos no total (13 no grupo de cirurgia precoce vs. 26 no conservador). Na análise por intenção de tratar, a cirurgia precoce reduziu significativamente o desfecho composto primário (morte por qualquer causa, infarto agudo, AVC ou internação não planejada por insuficiência cardíaca): HR 0,46 (IC95% 0,23-0,90; p=0,02). No grupo de cirurgia precoce, 92,3% dos pacientes (72/78) de fato foram operados, com mortalidade operatória de 1,4%. Não houve diferença estatística nos desfechos secundários isolados (mortalidade total, primeira internação por IC, sangramento maior, tromboembolismo), embora as tendências fossem consistentes com o resultado primário. É importante contextualizar: o AVATAR usa critérios convencionais de estenose grave (não os critérios mais restritivos de 'muito grave' do RECOVERY, que exige velocidade ≥4,5 m/s ou área ≤0,75 cm²) — os dois ensaios, juntos, ampliam a base de evidência para cirurgia precoce em estenose aórtica grave assintomática, mas em populações discretamente diferentes. Os próprios autores classificam o resultado como 'suporte preliminar', dado o tamanho amostral orientado por evento (mínimo de 35 eventos pré-especificado).",
+    "source_refs": [
+      "Banovic M, Putnik S, Penicka M, et al; AVATAR Trial Investigators. Aortic Valve Replacement Versus Conservative Treatment in Asymptomatic Severe Aortic Stenosis: The AVATAR Trial. Circulation. 2022;145(9):648-658. DOI: 10.1161/CIRCULATIONAHA.121.057639. PMID: 34779220 (com errata publicada em Circulation. 2022;145(9):e761, sobre dado de afiliação/tabela, não lida nesta sessão — declarada para não ser omitida)"
+    ],
+    "review_status": "revisado",
+    "opcoes": [
+      "A cirurgia precoce reduziu significativamente o desfecho composto em comparação com o tratamento conservador (HR 0,46; IC95% 0,23-0,90; p=0,02), com mortalidade operatória de 1,4%, embora sem diferença estatística nos desfechos secundários isolados (mortalidade total, primeira internação por IC, sangramento maior, tromboembolismo)",
+      "Não houve diferença significativa entre as duas estratégias, sustentando a vigilância clínica como conduta padrão nesse grupo",
+      "O tratamento conservador foi superior, com menor mortalidade total no seguimento",
+      "O estudo foi interrompido precocemente por excesso de eventos no braço cirúrgico"
+    ]
+  },
+  {
+    "slug": "suspeita-de-pericardite-constritiva-confirmacao-nao-invasiva-por-fluxo-em-tempo-real-na-rm",
+    "titulo": "Suspeita de pericardite constritiva: como confirmar a fisiologia sem recorrer ao cateterismo invasivo?",
+    "tema": "Pericárdio",
+    "nivel": "avançado",
+    "enunciado": "Paciente de 57 anos com quadro de congestão sistêmica refratária (edema de membros inferiores, ascite e turgência jugular), espessamento pericárdico ao ecocardiograma e dúvida diagnóstica entre pericardite constritiva e cardiomiopatia restritiva. A equipe considera cateterismo cardíaco direito e esquerdo simultâneo para demonstrar a interdependência ventricular característica da constrição, mas o paciente tem acesso vascular difícil e a equipe pergunta se existe alternativa não invasiva com boa acurácia.",
+    "pergunta": "No estudo que avaliou ressonância magnética cardíaca com fluxo de contraste de fase em tempo real e respiração livre (RT-PC), medindo simultaneamente as velocidades de influxo mitral e tricúspide, qual achado teve a maior acurácia diagnóstica para identificar a fisiologia constritiva?",
+    "resposta_correta": 2,
+    "explicacao": "Thavendiranathan et al. (JACC Cardiovasc Imaging 2012) estudaram 16 pacientes com suspeita ou pericardite constritiva (CP) confirmada e 10 controles, submetidos a fluxo de contraste de fase em tempo real (RT-PC) que captura simultaneamente as velocidades de influxo mitral e tricúspide ao longo de 10 segundos de respiração livre. Dos 16, 10 tinham CP confirmada (por história clínica, imagem, cateterismo, achado intraoperatório ou histopatologia), todos com espessamento pericárdico aumentado (6,2 ± 1,0 mm). A variação respirofásica discordante do influxo atrioventricular esteve presente em todos os pacientes com CP: variação da velocidade mitral de 46 ± 20% e tricúspide de 60 ± 15%, contra 16 ± 8% e 24 ± 11%, respectivamente, nos pacientes sem CP (p<0,004 para ambos) e 17 ± 5% e 31 ± 13% nos controles (p<0,001 para ambos) — sem diferença entre os pacientes sem CP e os controles (p>0,3). Um corte de variação respiratória acima de 25% no influxo mitral teve sensibilidade de 100%, especificidade de 100% e área sob a curva ROC de 1,0 para detectar a fisiologia constritiva; um corte de 45% no influxo tricúspide teve sensibilidade de 90%, especificidade de 88% e AUC de 0,98. É um estudo pequeno (16 pacientes com suspeita de CP e 10 controles, de um único centro), então os números de acurácia perfeita devem ser lidos com essa ressalva de tamanho amostral — mas o método, incorporado a protocolos de RM que já avaliam a morfologia pericárdica, oferece evidência hemodinâmica funcional sem a necessidade de cateterismo invasivo simultâneo.",
+    "source_refs": [
+      "Thavendiranathan P, Verhaert D, Walls MC, et al. Simultaneous right and left heart real-time, free-breathing CMR flow quantification identifies constrictive physiology. JACC Cardiovasc Imaging. 2012;5(1):15-24. DOI: 10.1016/j.jcmg.2011.07.010. PMID: 22239888"
+    ],
+    "review_status": "revisado",
+    "opcoes": [
+      "Espessamento pericárdico isolado acima de 4 mm à ressonância, com sensibilidade de 100% para o diagnóstico",
+      "Presença de realce tardio pericárdico ao gadolínio, dispensando qualquer avaliação funcional de fluxo",
+      "Variação respiratória do influxo mitral acima de 25%, com sensibilidade de 100%, especificidade de 100% e área sob a curva ROC de 1,0 para identificar a fisiologia constritiva",
+      "Discordância do septo interventricular ao cateterismo invasivo, sem nenhuma correlação com os achados de ressonância"
+    ]
+  },
+  {
+    "slug": "bacteremia-por-mrsa-com-vegetacao-tricuspide-acrescentar-betalactamico-a-vancomicina-camera2",
+    "titulo": "Bacteremia por MRSA com vegetação tricúspide: acrescentar um betalactâmico à vancomicina acelera a cura?",
+    "tema": "Endocardite",
+    "nivel": "avançado",
+    "enunciado": "Usuário de drogas injetáveis, 34 anos, é internado com bacteremia por Staphylococcus aureus resistente à meticilina (MRSA) e vegetação em valva tricúspide ao ecocardiograma transtorácico, já em vancomicina intravenosa. A equipe de infectologia discute associar, pelos primeiros 7 dias, um betalactâmico antiestafilocócico (como flucloxacilina ou cefazolina) à vancomicina, na expectativa de acelerar a depuração da bacteremia e reduzir a chance de falha terapêutica.",
+    "pergunta": "No ensaio CAMERA2, que randomizou pacientes hospitalizados com bacteremia por MRSA para terapia padrão (vancomicina ou daptomicina) associada ou não a um betalactâmico antiestafilocócico intravenoso por 7 dias, o que se observou no desfecho composto de 90 dias (mortalidade, bacteremia persistente no dia 5, recidiva microbiológica ou falha de tratamento)?",
+    "resposta_correta": 3,
+    "explicacao": "O CAMERA2 (Tong et al., JAMA 2020) randomizou 352 pacientes hospitalizados com bacteremia por MRSA, em 27 centros de 4 países, para terapia padrão intravenosa (vancomicina ou daptomicina) associada a um betalactâmico antiestafilocócico (flucloxacilina, cloxacilina ou cefazolina) por 7 dias (n=174) ou terapia padrão isolada (n=178). O comitê de monitorização de segurança recomendou o encerramento precoce do estudo antes de completar os 440 pacientes planejados, por motivo de segurança. O desfecho composto primário em 90 dias (mortalidade, bacteremia persistente no dia 5, recidiva microbiológica ou falha de tratamento) ocorreu em 59/174 (35%) no grupo combinado vs. 68/178 (39%) no grupo padrão, sem diferença estatisticamente significativa (diferença -4,2%; IC95% -14,3% a 6,0%). Dos 9 desfechos secundários pré-especificados, 7 não mostraram diferença significativa. A bacteremia persistente no dia 5 foi menor com a combinação (19/166, 11% vs. 35/172, 20%; diferença -8,9%; IC95% -16,6% a -1,2%), mas, excluindo pacientes em diálise basal, a lesão renal aguda foi maior com a combinação (34/145, 23% vs. 9/145, 6%; diferença 17,2%; IC95% 9,3%-25,2%). A mortalidade por todas as causas em 90 dias não diferiu significativamente (35/174, 21% vs. 28/178, 16%; diferença 4,5%; IC95% -3,7% a 12,7%). **Ressalva de procedência, declarada em vez de omitida**: o CAMERA2 randomizou pacientes com bacteremia por MRSA em geral — não foi um ensaio desenhado exclusivamente para endocardite, e o resumo indexado no PubMed não especifica a proporção de participantes com endocardite confirmada entre as fontes documentadas de bacteremia. A evidência se aplica diretamente à fase bacterêmica da endocardite por MRSA (como no vinheta acima, que tem vegetação documentada), mas a extrapolação de 'MRSA bacteremia' para 'endocardite por MRSA' deve ser lida como generalização clinicamente razoável, não como resultado obtido numa coorte exclusivamente endocardítica.",
+    "source_refs": [
+      "Tong SYC, Lye DC, Yahav D, et al; Australasian Society for Infectious Diseases Clinical Research Network. Effect of Vancomycin or Daptomycin With vs Without an Antistaphylococcal β-Lactam on Mortality, Bacteremia, Relapse, or Treatment Failure in Patients With MRSA Bacteremia: A Randomized Clinical Trial. JAMA. 2020;323(6):527-537. DOI: 10.1001/jama.2020.0103. PMID: 32044943"
+    ],
+    "review_status": "revisado",
+    "opcoes": [
+      "A combinação reduziu significativamente o desfecho composto primário, sem qualquer aumento de toxicidade renal",
+      "A combinação aumentou a mortalidade em 90 dias de forma estatisticamente significativa, sem nenhum benefício microbiológico associado",
+      "Não houve diferença em nenhum desfecho avaliado, incluindo a função renal",
+      "A combinação NÃO reduziu significativamente o desfecho composto primário (35% com combinação vs. 39% com terapia padrão; diferença -4,2%; IC95% -14,3% a 6,0%), diminuiu a bacteremia persistente no dia 5 (11% vs. 20%), mas aumentou a lesão renal aguda (23% vs. 6%; excluindo pacientes em diálise) — e o estudo foi encerrado precocemente pelo comitê de segurança"
+    ]
+  },
+  {
+    "slug": "isquemia-critica-de-membro-por-doenca-infrainguinal-bypass-ou-angioplastia-primeiro-basil",
+    "titulo": "Isquemia crítica de membro por doença infrainguinal: bypass ou angioplastia como estratégia inicial?",
+    "tema": "Aorta e doença arterial periférica",
+    "nivel": "intermediário",
+    "enunciado": "Paciente de 70 anos apresenta dor isquêmica em repouso e pequena ulceração no pé, por doença arterial infrainguinal grave, e é considerado clinicamente elegível tanto para cirurgia de revascularização (bypass) quanto para angioplastia com balão, sem que a decisão dependa de um território anatômico infrapoplíteo específico nem da disponibilidade de veia safena adequada. A equipe vascular discute qual estratégia oferecer como primeira escolha.",
+    "pergunta": "De acordo com o ensaio BASIL (bypass versus angioplastia em isquemia grave da perna por doença infrainguinal, com população mais ampla do que a exigência de veia safena adequada usada depois no BASIL-2), qual foi o achado na sobrevida livre de amputação (do membro do estudo) aos 6 meses de seguimento?",
+    "resposta_correta": 1,
+    "explicacao": "O BASIL trial (Adam et al., Lancet 2005) randomizou 452 pacientes de 27 hospitais do Reino Unido com isquemia grave da perna por doença infrainguinal para uma estratégia iniciada por cirurgia de bypass (n=228) ou por angioplastia com balão (n=224), com desfecho primário de sobrevida livre de amputação (do membro do estudo). Do total, 86% (195/228) do grupo cirurgia e 96% (216/224) do grupo angioplastia efetivamente receberam a intervenção alocada, numa mediana de 6 dias após a randomização em ambos os grupos. Ao final do seguimento (mediano de 5,5 anos de duração do estudo), 55% dos pacientes estavam vivos sem amputação, 8% vivos com amputação, 8% mortos após amputação e 29% mortos sem amputação. Aos 6 meses, as duas estratégias não diferiram significativamente na sobrevida livre de amputação (48 vs. 60 eventos; HR não ajustada 1,07, IC95% 0,72-1,6; HR ajustada para desbalanços basais 0,73, IC95% 0,49-1,07). Não houve diferença de qualidade de vida relacionada à saúde entre as estratégias, mas no primeiro ano os custos hospitalares associados à estratégia cirúrgica foram cerca de um terço maiores do que os da estratégia por angioplastia. **Distinção importante, para não confundir com outro ensaio já cadastrado na base**: este é o BASIL original (2005), de população mais ampla (doença infrainguinal em geral, elegível para os dois métodos) — diferente do BASIL-2 (2023, já registrado neste tema), que testou especificamente pacientes com doença infrapoplítea E veia safena adequada, e cujo resultado favoreceu a estratégia endovascular. Os dois, lidos juntos, sustentam que a escolha da estratégia depende do nível anatômico da doença e da disponibilidade de conduto — não existe uma resposta universal 'cirurgia' ou 'angioplastia' para isquemia crítica de membro.",
+    "source_refs": [
+      "Adam DJ, Beard JD, Cleveland T, et al; BASIL trial participants. Bypass versus angioplasty in severe ischaemia of the leg (BASIL): multicentre, randomised controlled trial. Lancet. 2005;366(9501):1925-1934. DOI: 10.1016/S0140-6736(05)67704-5. PMID: 16325694"
+    ],
+    "review_status": "revisado",
+    "opcoes": [
+      "A estratégia cirúrgica foi superior de forma estatisticamente significativa, justificando cirurgia como primeira escolha sempre que tecnicamente viável",
+      "As duas estratégias não diferiram significativamente na sobrevida livre de amputação aos 6 meses (HR não ajustada 1,07; IC95% 0,72-1,6; HR ajustada 0,73; IC95% 0,49-1,07), sem diferença na qualidade de vida relacionada à saúde, mas com custo hospitalar no primeiro ano cerca de um terço maior no braço cirúrgico",
+      "A estratégia por angioplastia foi superior de forma estatisticamente significativa, além de ter menor custo hospitalar",
+      "A angioplastia aumentou significativamente a taxa de amputação maior em comparação à cirurgia, levando à interrupção precoce do estudo"
+    ]
+  },
+  {
+    "slug": "vsvd-nativa-dilatada-pos-tetralogia-de-fallot-valva-harmony-e-uma-opcao-viavel",
+    "titulo": "Via de saída de VD nativa e dilatada após Tetralogia de Fallot: a valva pulmonar transcateter Harmony é uma opção viável?",
+    "tema": "Cardiopatias congênitas",
+    "nivel": "avançado",
+    "enunciado": "Paciente de 25 anos, com tetralogia de Fallot operada na infância, evolui com regurgitação pulmonar grave e via de saída de ventrículo direito (VSVD) nativa, dilatada e de anatomia irregular — sem conduto protético prévio, o que a torna anatomicamente inadequada para a valva pulmonar percutânea Melody, desenhada para condutos cirúrgicos calibrados. Assintomático, mas com dilatação progressiva do VD em ecocardiogramas seriados. A equipe considera a valva Harmony, autoexpansível e desenhada especificamente para acomodar a VSVD nativa dilatada, então ainda em estudo de viabilidade nos Estados Unidos.",
+    "pergunta": "No estudo de viabilidade da valva Harmony (Bergersen et al., JACC Cardiovasc Interv 2017), realizado em 3 centros com 20 pacientes implantados (mediana de idade 25 anos, 95% com diagnóstico de tetralogia de Fallot e regurgitação pulmonar grave), qual foi o desfecho agudo e em 1 mês?",
+    "opcoes": [
+      "O dispositivo foi liberado na posição desejada em 19 dos 20 pacientes (95%); ao 1º mês, a regurgitação pulmonar era ausente ou trivial em todos os implantados, com gradiente médio de VSVD de 16 ± 8 mmHg (variação 6-31 mmHg)",
+      "O estudo foi interrompido precocemente por migração do dispositivo em mais da metade dos casos",
+      "Metade dos pacientes precisou de explante cirúrgico imediato por má posição do dispositivo",
+      "A regurgitação pulmonar residual moderada a grave persistiu em mais de 60% dos pacientes no primeiro mês"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O estudo de viabilidade (Food and Drug Administration early feasibility study) rastreou 66 pacientes entre maio de 2013 e maio de 2015; 21 foram aprovados para implante e 20 efetivamente implantados. A população era predominantemente de tetralogia de Fallot operada (95%), com regurgitação pulmonar grave (95%) e estenose trivial ou leve. O dispositivo foi liberado na posição desejada em 19 dos 20 pacientes (95%). Houve migração proximal em 1 paciente durante a remoção do sistema de liberação, e 2 dispositivos foram explantados cirurgicamente (o abstract não especifica o intervalo exato até o explante). Extrassístoles ventriculares relacionadas ao procedimento ocorreram em 3 pacientes (2 resolvidas sem tratamento); 1 paciente teve arritmia ventricular que exigiu tratamento e depois se resolveu. Ao 1º mês, o ecocardiograma mostrou regurgitação pulmonar ausente ou trivial em todos os pacientes, com gradiente médio de VSVD de 16 ± 8 mmHg (variação 6-31 mmHg). É um estudo de viabilidade de fase inicial, com amostra pequena (n=20) e seguimento reportado até 6 meses — não é um ensaio randomizado, e a decisão de usar a Harmony em vez de aguardar mais dados de segurança de médio/longo prazo deve ponderar essa limitação. A diferença central para a valva Melody (já registrada em outro caso desta base) é a indicação: Melody é pensada para condutos cirúrgicos ou próteses biológicas calibradas, enquanto a Harmony foi concebida para a VSVD nativa, dilatada e de geometria irregular — como a deste caso.",
+    "source_refs": [
+      "Bergersen L, Benson LN, Gillespie MJ, Cheatham SL, Crean AM, Hor KN, Horlick EM, Lung TH, McHenry BT, Osten MD, Powell AJ, Cheatham JP. Harmony Feasibility Trial: Acute and Short-Term Outcomes With a Self-Expanding Transcatheter Pulmonary Valve. JACC Cardiovasc Interv. 2017;10(17):1763-1773. DOI: 10.1016/j.jcin.2017.05.034. PMID: 28882284"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "rastreio-de-cardiopatia-reumatica-por-ultrassom-cardiaco-focado-operado-por-enfermeira-mirabel-2015",
+    "titulo": "Rastreio escolar de cardiopatia reumática em área de poucos recursos: um ultrassom cardíaco focado, operado por enfermeira, tem desempenho aceitável?",
+    "tema": "Febre reumática",
+    "nivel": "intermediário",
+    "enunciado": "Programa de rastreamento escolar de cardiopatia reumática (RHD) numa região de alta incidência da Nova Caledônia, sem cardiologista disponível para exame ecocardiográfico completo em todas as crianças. A equipe de saúde pública treina duas enfermeiras para operar um aparelho de ecocardiografia portátil tipo 'bolso', usando um protocolo simplificado de ultrassom cardíaco focado (focused cardiac ultrasound, FCU) com apenas dois critérios: jato de regurgitação mitral ≥ 2 cm OU qualquer grau de regurgitação aórtica.",
+    "pergunta": "No estudo de Mirabel et al. (Circ Cardiovasc Imaging 2015), que comparou esse protocolo simplificado de FCU, operado por enfermeiras não especialistas, ao exame ecocardiográfico padrão (critérios da World Heart Federation 2012, revisado por cardiologista) em 1.217 escolares, qual foi o desempenho diagnóstico do FCU para detectar cardiopatia reumática?",
+    "opcoes": [
+      "Sensibilidade de 83,7% (enfermeira A) e 77,6% (enfermeira B), com especificidade de 90,9%-92,0% e concordância entre enfermeiras de 91,4% — desempenho considerado aceitável para triagem em cenário de poucos recursos",
+      "Sensibilidade abaixo de 50%, inviabilizando o uso do método como instrumento de rastreio populacional",
+      "Especificidade de apenas 40%, gerando um número inaceitável de falsos positivos",
+      "Desempenho estatisticamente idêntico ao exame padrão, sem qualquer perda de sensibilidade ou especificidade"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "Dos 1.217 escolares avaliados (média de 9,6 ± 1 anos, 49,6% do sexo masculino), 49 (4%) foram diagnosticados com cardiopatia reumática pelo método de referência (exame padronizado por cardiologista, critérios WHF 2012). O ultrassom cardíaco focado (FCU), com o critério simplificado de regurgitação mitral ≥ 2 cm OU qualquer regurgitação aórtica, teve sensibilidade de 83,7% (IC95% 73,3-94,0) para a enfermeira A e 77,6% (IC95% 65,9-89,2) para a enfermeira B; especificidade de 90,9% (IC95% 89,3-92,6) e 92,0% (IC95% 90,4-93,5), respectivamente. A concordância entre as duas enfermeiras foi de 91,4%. Os autores concluem que o FCU operado por não especialistas com dispositivo portátil é factível e tem sensibilidade/especificidade aceitáveis para abrir a possibilidade de rastreio em massa em cenários de poucos recursos. Ressalva que o próprio desenho deixa explícita: o critério simplificado de 2 sinais foi derivado dentre 6 critérios testados numa fase preliminar na MESMA população — ou seja, não foi validado de forma totalmente independente, e o estudo é de um único território de alta prevalência (4% de RHD na amostra), o que limita a generalização direta do valor preditivo para populações de prevalência muito diferente.",
+    "source_refs": [
+      "Mirabel M, Bacquelin R, Tafflet M, Robillard C, Huon B, Corsenac P, de Frémicourt I, Narayanan K, Meunier JM, Noël B, Hagège AA, Rouchon B, Jouven X, Marijon E. Screening for rheumatic heart disease: evaluation of a focused cardiac ultrasound approach. Circ Cardiovasc Imaging. 2015;8(1):e002324. DOI: 10.1161/CIRCIMAGING.114.002324. PMID: 25567654"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sincope-no-pronto-socorro-regra-de-sao-francisco-para-sincope-derivacao-quinn-2004",
+    "titulo": "Síncope sem causa evidente no pronto-socorro: o que a Regra de São Francisco para Síncope acrescenta à decisão de internar?",
+    "tema": "Síncope",
+    "nivel": "intermediário",
+    "enunciado": "Paciente atendido no pronto-socorro após episódio sincopal, sem diagnóstico etiológico evidente após anamnese, exame físico e ECG de 12 derivações. O médico assistente considera aplicar a Regra de São Francisco para Síncope (San Francisco Syncope Rule) para estimar o risco de desfecho grave em curto prazo e apoiar a decisão de internar ou liberar o paciente.",
+    "pergunta": "No estudo de derivação da Regra de São Francisco para Síncope (Quinn et al., Ann Emerg Med 2004), coorte prospectiva de 684 atendimentos por síncope em pronto-socorro universitário, quais variáveis compuseram a regra final e qual foi seu desempenho para prever desfecho grave em 7 dias?",
+    "opcoes": [
+      "ECG anormal, queixa de dispneia, hematócrito < 30%, pressão sistólica < 90 mmHg ou história de insuficiência cardíaca congestiva — sensibilidade de 96% (IC95% 92-100%) e especificidade de 62% (IC95% 58-66%), com potencial de reduzir a taxa de internação em 10% se aplicada à mesma coorte",
+      "Apenas idade acima de 65 anos, isoladamente, com sensibilidade relatada de 99%",
+      "Presença de pródromo vasovagal típico, com especificidade relatada de 95%",
+      "Elevação isolada de troponina, sem nenhuma outra variável clínica associada"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "Dos 684 atendimentos por síncope incluídos, 79 (11,5%) evoluíram com desfecho grave em 7 dias (óbito, infarto do miocárdio, arritmia, embolia pulmonar, AVC, hemorragia subaracnóidea, sangramento significativo, ou qualquer condição que motivasse retorno ao pronto-socorro com internação relacionada). Das 50 variáveis preditoras testadas, 26 se associaram a desfecho grave na análise univariada; a regra final, obtida por partição recursiva, considera ECG anormal, queixa de dispneia, hematócrito < 30%, pressão arterial sistólica < 90 mmHg ou história de insuficiência cardíaca congestiva. Essa combinação teve sensibilidade de 96% (IC95% 92-100%) e especificidade de 62% (IC95% 58-66%) para desfecho grave em 7 dias; aplicada retrospectivamente a essa mesma coorte, teria o potencial de reduzir a taxa de internação em 10%. Ressalva importante, presente na própria conclusão do artigo: trata-se de um estudo de DERIVAÇÃO, numa coorte única de centro universitário — os próprios autores condicionam a utilidade da regra à validação prospectiva externa, que este estudo isoladamente não fornece. É uma regra diferente da Regra Canadense de Síncope e do escore EGSYS, já registrados nesta base, com variáveis e população de derivação distintas.",
+    "source_refs": [
+      "Quinn JV, Stiell IG, McDermott DA, Sellers KL, Kohn MA, Wells GA. Derivation of the San Francisco Syncope Rule to predict patients with short-term serious outcomes. Ann Emerg Med. 2004;43(2):224-232. DOI: 10.1016/s0196-0644(03)00823-0. PMID: 14747812"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "anestesico-volatil-versus-anestesia-venosa-total-em-revascularizacao-miocardica-eletiva-ensaio-myriad",
+    "titulo": "Revascularização miocárdica eletiva: o anestésico volátil reduz mortalidade em comparação à anestesia venosa total? O ensaio MYRIAD",
+    "tema": "Perioperatório",
+    "nivel": "avançado",
+    "enunciado": "Paciente será submetido a revascularização miocárdica cirúrgica (CRM) eletiva, majoritariamente com circulação extracorpórea. O anestesiologista pondera a escolha entre um agente anestésico volátil (sevoflurano, isoflurano ou desflurano), classicamente associado a efeito cardioprotetor por pré-condicionamento farmacológico em estudos menores e com desfechos substitutos, e a anestesia venosa total com propofol.",
+    "pergunta": "No ensaio MYRIAD (Landoni et al., N Engl J Med 2019), pragmático, multicêntrico (36 centros, 13 países), com 5.400 pacientes randomizados para anestésico volátil ou anestesia venosa total antes de CRM eletiva, qual foi o efeito sobre a mortalidade por qualquer causa em 1 ano?",
+    "opcoes": [
+      "Não houve diferença significativa: mortalidade em 1 ano de 2,8% no grupo do anestésico volátil vs. 3,0% no grupo de anestesia venosa total (risco relativo 0,94; IC95% 0,69-1,29; p=0,71); o estudo foi interrompido por futilidade na segunda análise interina",
+      "O anestésico volátil reduziu a mortalidade em 1 ano em quase 50%, confirmando o efeito cardioprotetor esperado a partir dos estudos menores",
+      "A anestesia venosa total associou-se a excesso estatisticamente significativo de infarto do miocárdio perioperatório",
+      "O estudo foi interrompido precocemente por excesso de mortalidade no grupo do anestésico volátil"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O MYRIAD randomizou 5.400 pacientes (2.709 para anestésico volátil, 2.691 para anestesia venosa total) antes de CRM eletiva; CRM com circulação extracorpórea em 64% dos casos, com duração média de 79 minutos. Os grupos eram semelhantes em características basais, duração da CEC e número de pontes. Na segunda análise interina, o comitê de monitorização de segurança recomendou interromper o estudo por futilidade. Não houve diferença significativa em mortalidade por qualquer causa em 1 ano (2,8% no grupo volátil vs. 3,0% no grupo intravenoso; risco relativo 0,94; IC95% 0,69-1,29; p=0,71; dados disponíveis para 5.353 pacientes, 99,1%), nem em 30 dias (1,4% vs. 1,3%; risco relativo 1,11; IC95% 0,70-1,76; dados para 5.398 pacientes, 99,9%). Também não houve diferença significativa em nenhum desfecho secundário nem na incidência de eventos adversos pré-especificados, incluindo infarto do miocárdio. Conclusão do próprio ensaio: entre pacientes submetidos a CRM eletiva, a anestesia com agente volátil não resultou em número significativamente menor de mortes em 1 ano do que a anestesia venosa total — um resultado pragmático, em grande escala, que contraria a expectativa de benefício clínico sugerida por estudos anteriores menores e baseados em desfechos substitutos de cardioproteção.",
+    "source_refs": [
+      "Landoni G, Lomivorotov VV, Nigro Neto C, Monaco F, Pasyuga VV, Bradic N, et al. Volatile Anesthetics versus Total Intravenous Anesthesia for Cardiac Surgery. N Engl J Med. 2019;380(13):1214-1225. DOI: 10.1056/NEJMoa1816476. PMID: 30888743"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "digoxina-em-icfer-com-ritmo-sinusal-e-sintomas-persistentes-ensaio-dig",
+    "titulo": "Insuficiência cardíaca com fração reduzida, em ritmo sinusal, ainda sintomática sob IECA e diurético: vale associar digoxina?",
+    "tema": "Farmacologia",
+    "nivel": "básico",
+    "enunciado": "Paciente com insuficiência cardíaca com fração de ejeção reduzida (FEVE ≤ 0,45), em ritmo sinusal, já em uso de diurético de alça e inibidor da ECA, mantém sintomas leves a moderados. O médico assistente considera associar digoxina, ciente de que a droga é historicamente questionada quanto a benefício de sobrevida, mas ainda usada por seu efeito sintomático e possível impacto em internações.",
+    "pergunta": "No ensaio DIG (The Digitalis Investigation Group, N Engl J Med 1997), randomizado, duplo-cego, que alocou 3.397 pacientes com FEVE ≤ 0,45 para digoxina e 3.403 para placebo, ambos os grupos em uso associado de diurético e IECA (seguimento médio de 37 meses), qual foi o efeito da digoxina sobre mortalidade total e sobre internação por piora da insuficiência cardíaca?",
+    "opcoes": [
+      "Mortalidade total não foi alterada (34,8% digoxina vs. 35,1% placebo; risco relativo 0,99; IC95% 0,91-1,07; p=0,80), mas houve redução relativa de 28% na internação por piora da insuficiência cardíaca (26,8% vs. 34,7%; risco relativo 0,72; IC95% 0,66-0,79; p<0,001)",
+      "A digoxina reduziu a mortalidade total em cerca de 20%, mas às custas de aumento significativo das internações por insuficiência cardíaca",
+      "Não houve nenhum efeito da digoxina em qualquer desfecho avaliado, nem mortalidade nem internação",
+      "A digoxina aumentou significativamente a mortalidade total, levando à interrupção precoce do estudo pelo comitê de monitorização"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "No estudo principal (FEVE ≤ 0,45), com dose mediana de digoxina de 0,25 mg/dia e seguimento médio de 37 meses, houve 1.181 óbitos (34,8%) no grupo digoxina e 1.194 (35,1%) no grupo placebo — risco relativo 0,99 (IC95% 0,91-1,07; p=0,80), ou seja, sem efeito sobre mortalidade total. Houve uma tendência a menor morte atribuída à piora da insuficiência cardíaca no grupo digoxina (risco relativo 0,88; IC95% 0,77-1,01; p=0,06). O grupo digoxina teve 6% menos internações por qualquer causa, e especificamente menos internações por piora da insuficiência cardíaca: 26,8% vs. 34,7% (risco relativo 0,72; IC95% 0,66-0,79; p<0,001). Um estudo ancilar, com pacientes de FEVE > 0,45 (492 digoxina vs. 496 placebo), mostrou achados consistentes com os do estudo principal para o desfecho combinado de óbito ou internação por piora da insuficiência cardíaca. Conclusão dos próprios autores: a digoxina não reduz a mortalidade geral, mas reduz a taxa de internação, tanto geral quanto por piora da insuficiência cardíaca — é esse o papel que o DIG define com precisão para a droga no manejo crônico da insuficiência cardíaca.",
+    "source_refs": [
+      "The Digitalis Investigation Group. The effect of digoxin on mortality and morbidity in patients with heart failure. N Engl J Med. 1997;336(8):525-533. DOI: 10.1056/NEJM199702203360801. PMID: 9036306"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hipertensao-grave-na-gestacao-nifedipino-oral-ou-labetalol-intravenoso",
+    "titulo": "Hipertensão grave na gestação: nifedipino oral ou labetalol intravenoso para controle agudo?",
+    "tema": "Gravidez",
+    "nivel": "intermediário",
+    "enunciado": "Gestante de 34 semanas, previamente hígida, é admitida com pressão arterial de 168/114 mmHg e cefaleia, sem outros sinais de emergência hipertensiva grave. O acesso venoso está sendo obtido pela equipe de enfermagem, mas ainda não está disponível. O obstetra de plantão considera iniciar nifedipino oral enquanto aguarda a veia, mas o residente questiona se isso não atrasaria perigosamente o controle pressórico em comparação a aguardar o labetalol intravenoso.",
+    "pergunta": "Segundo o ensaio randomizado duplo-cego de Raheem, Saaid, Omar e Tan (BJOG, 2012), que comparou nifedipino oral com labetalol intravenoso em emergências hipertensivas da gestação, qual conduta é sustentada pela evidência?",
+    "opcoes": [
+      "O nifedipino oral não mostrou diferença estatisticamente significativa em relação ao labetalol IV para atingir a meta de PA ≤150/100 mmHg: tempo mediano de 30 minutos (IQR 22,5-67,5) com nifedipino vs. 45 minutos (IQR 30-60) com labetalol (p=0,59), com terapia cruzada necessária em 20% de cada grupo",
+      "O labetalol intravenoso foi significativamente mais rápido, controlando a pressão em menos da metade do tempo do nifedipino oral",
+      "O ensaio mostrou que o nifedipino oral aumenta o risco de hipotensão materna grave, sendo formalmente contraindicado como primeira linha na urgência hipertensiva gestacional",
+      "Apenas o labetalol intravenoso atingiu a meta pressórica pré-especificada; o nifedipino oral falhou em reduzir a pressão arterial na maioria das pacientes"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "No ensaio randomizado duplo-cego (crossover permitido) conduzido em um hospital universitário da Malásia, gestantes com hipertensão grave (PA ≥160/110 mmHg) que precisavam de tratamento imediato foram alocadas para nifedipino oral (10 mg, até 5 doses) com placebo IV, ou labetalol IV em doses escalonadas (20, 40, 80, 80, 80 mg) com placebo oral, até atingir PA ≤150/100 mmHg. O desfecho primário — tempo até atingir a meta pressórica — foi de 30 minutos (IQR 22,5-67,5) com nifedipino e 45 minutos (IQR 30-60) com labetalol, sem diferença estatística (p=0,59). A pressão sistólica e diastólica caíram significativamente na primeira hora em ambos os grupos (F=87,6, p<0,001 e F=55,8, p<0,001, respectivamente), mas sem diferença na trajetória entre os grupos (sistólica F=0,12, p=0,74; diastólica F=0,92, p=0,34). Terapia cruzada (por falha do esquema inicial) foi necessária em 20% de cada braço. Conclusão dos autores: nifedipino oral e labetalol IV são igualmente eficazes no controle agudo da hipertensão grave na gestação — achado relevante justamente no cenário clínico em que o acesso venoso ainda não está disponível, situação em que a via oral não representa uma segunda opção inferior.",
+    "source_refs": [
+      "Raheem IA, Saaid R, Omar SZ, Tan PC. Oral nifedipine versus intravenous labetalol for acute blood pressure control in hypertensive emergencies of pregnancy: a randomised trial. BJOG. 2012;119(1):78-85. DOI: 10.1111/j.1471-0528.2011.03151.x. PMID: 21985500"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "pcr-com-ritmo-nao-chocavel-hipotermia-terapeutica-ou-normotermia-o-ensaio-hyperion",
+    "titulo": "PCR com ritmo não chocável (AESP/assistolia): hipotermia terapêutica a 33°C muda o desfecho neurológico? O ensaio HYPERION",
+    "tema": "Terapia intensiva",
+    "nivel": "avançado",
+    "enunciado": "Paciente de 58 anos é reanimado após parada cardiorrespiratória extra-hospitalar cujo ritmo inicial era atividade elétrica sem pulso. Após retorno da circulação espontânea, permanece em coma na UTI. A equipe discute se deve induzir hipotermia terapêutica a 33°C ou apenas manter normotermia (37°C) e evitar febre, argumentando que os grandes ensaios de controle de temperatura mais citados incluíram majoritariamente pacientes com ritmo inicial chocável, nos quais o benefício da hipotermia é incerto para ritmos não chocáveis.",
+    "pergunta": "De acordo com o ensaio HYPERION (Lascarrou et al., NEJM, 2019), conduzido especificamente em pacientes com PCR de ritmo não chocável, qual foi o resultado da hipotermia terapêutica a 33°C comparada à normotermia (37°C) para sobrevida com bom estado neurológico em 90 dias?",
+    "opcoes": [
+      "A hipotermia a 33°C aumentou significativamente a proporção de pacientes vivos com escore CPC 1-2 em 90 dias (10,2% vs. 5,7%; diferença de 4,5 pontos percentuais; IC95% 0,1-8,9; p=0,04), sem diferença significativa na mortalidade global",
+      "Não houve diferença em nenhum desfecho entre hipotermia e normotermia, confirmando que ritmo não chocável não se beneficia de controle de temperatura",
+      "A hipotermia a 33°C reduziu significativamente a mortalidade aos 90 dias, mas piorou o desfecho neurológico dos sobreviventes",
+      "A normotermia (37°C) foi superior à hipotermia, com menor incidência de eventos adversos e melhor desfecho neurológico"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O HYPERION foi um ensaio aberto, randomizado, controlado, que incluiu 584 pacientes em coma após reanimação de PCR com ritmo inicial não chocável (assistolia ou atividade elétrica sem pulso) em 25 UTIs francesas (581 analisados). Os pacientes foram randomizados para hipotermia terapêutica moderada (33°C nas primeiras 24 horas) ou normotermia-alvo (37°C). O desfecho primário — sobrevida com bom estado neurológico (Cerebral Performance Category 1 ou 2) em 90 dias, avaliada de forma cega — ocorreu em 29 de 284 pacientes (10,2%) no grupo hipotermia versus 17 de 297 (5,7%) no grupo normotermia (diferença de 4,5 pontos percentuais; IC95% 0,1-8,9; p=0,04). A mortalidade em 90 dias não diferiu significativamente entre os grupos (81,3% vs. 83,2%; diferença de -1,9 ponto percentual; IC95% -8,0 a 4,3), e a incidência de eventos adversos pré-especificados também não diferiu significativamente. Esse resultado é importante porque os ensaios de controle de temperatura mais citados na PCR (como o de Nielsen et al. 2013 e o TTM2 de 2021, já presentes nesta biblioteca) incluíram predominantemente ritmos chocáveis e não tinham poder estatístico específico para o subgrupo de ritmo não chocável — o HYPERION foi desenhado exatamente para responder a essa lacuna, e mostrou benefício na hipotermia para esse subgrupo específico de pior prognóstico basal.",
+    "source_refs": [
+      "Lascarrou JB, Merdji H, Le Gouge A, et al; CRICS-TRIGGERSEP Group. Targeted Temperature Management for Cardiac Arrest with Nonshockable Rhythm. N Engl J Med. 2019;381(24):2327-2337. DOI: 10.1056/NEJMoa1906661. PMID: 31577396"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hemorragia-intracerebral-em-uso-de-inibidor-do-fator-xa-andexanet-alfa-o-ensaio-annexa-i",
+    "titulo": "Hemorragia intracerebral em uso de inibidor do fator Xa: andexanet alfa reduz a expansão do hematoma, mas a que custo? O ensaio ANNEXA-I",
+    "tema": "Tromboembolismo",
+    "nivel": "avançado",
+    "enunciado": "Paciente de 76 anos, em uso de apixabana para fibrilação atrial, é trazido ao pronto-socorro por rebaixamento do nível de consciência iniciado há 2 horas. A tomografia de crânio mostra hemorragia intracerebral espontânea de 22 mL. A equipe discute se deve solicitar andexanet alfa para reversão específica do efeito anticoagulante do fator Xa ou manter a conduta habitual do serviço, com concentrado de complexo protrombínico.",
+    "pergunta": "Segundo o ensaio ANNEXA-I (Connolly et al., NEJM, 2024), que randomizou pacientes com hemorragia intracerebral aguda associada a inibidor do fator Xa para receber andexanet alfa ou conduta habitual, qual afirmação está correta sobre os resultados?",
+    "opcoes": [
+      "O andexanet alfa melhorou a eficácia hemostática em relação à conduta habitual (67,0% vs. 53,1%; diferença ajustada de 13,4 pontos percentuais; IC95% 4,6-22,2; p=0,003), mas aumentou os eventos trombóticos, incluindo AVC isquêmico (10,3% vs. 5,6%; p=0,048)",
+      "O andexanet alfa foi superior em todos os desfechos, inclusive reduzindo a mortalidade e os eventos trombóticos em comparação à conduta habitual",
+      "Não houve diferença na eficácia hemostática entre os grupos, e o andexanet alfa foi retirado do estudo por excesso inaceitável de sangramento recorrente",
+      "O andexanet alfa reduziu a atividade anti-fator Xa de forma semelhante ao concentrado de complexo protrombínico, sem vantagem hemostática adicional"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O ANNEXA-I randomizou, 1:1, pacientes que haviam usado inibidor do fator Xa nas 15 horas anteriores a uma hemorragia intracerebral aguda, para receber andexanet alfa (263 pacientes) ou conduta habitual (267 pacientes, dos quais 85,5% receberam concentrado de complexo protrombínico). O desfecho primário de eficácia hemostática (expansão do hematoma ≤35% em 12h, aumento na NIHSS <7 pontos em 12h e ausência de terapia de resgate entre 3-12h) foi atingido em 150 de 224 pacientes (67,0%) no grupo andexanet versus 121 de 228 (53,1%) na conduta habitual (diferença ajustada de 13,4 pontos percentuais; IC95% 4,6-22,2; p=0,003). A redução mediana da atividade anti-fator Xa do início ao nadir de 1-2h foi de 94,5% com andexanet contra 26,9% com conduta habitual (p<0,001). Porém, eventos trombóticos ocorreram em 27 de 263 pacientes (10,3%) com andexanet versus 15 de 267 (5,6%) com conduta habitual (diferença de 4,6 pontos percentuais; IC95% 0,1-9,2; p=0,048), com AVC isquêmico em 6,5% versus 1,5%, respectivamente. Não houve diferença apreciável na escala de Rankin modificada nem na mortalidade em 30 dias entre os grupos. A leitura correta não é 'andexanet vence' nem 'andexanet perde': é um agente que controla melhor a expansão do hematoma às custas de mais trombose, exatamente o tipo de trade-off que deve pesar na decisão individualizada à beira do leito.",
+    "source_refs": [
+      "Connolly SJ, Sharma M, Cohen AT, et al; ANNEXA-I Investigators. Andexanet for Factor Xa Inhibitor-Associated Acute Intracerebral Hemorrhage. N Engl J Med. 2024;390(19):1745-1755. DOI: 10.1056/NEJMoa2313040. PMID: 38749032"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "avc-isquemico-com-fibrilacao-atrial-quando-iniciar-o-doac-o-ensaio-elan",
+    "titulo": "AVC isquêmico com fibrilação atrial: iniciar o DOAC precocemente ou aguardar? O ensaio ELAN",
+    "tema": "Fibrilação atrial",
+    "nivel": "intermediário",
+    "enunciado": "Paciente de 71 anos com fibrilação atrial não valvar sofre AVC isquêmico de gravidade moderada (NIHSS 8). A tomografia de crânio de controle em 24 horas não mostra transformação hemorrágica significativa. A equipe de neurologia vascular discute o melhor momento para iniciar a anticoagulação oral direta: já nas primeiras 48 horas, ou aguardar até o sexto ou sétimo dia, como a prática tradicional recomenda para AVC de gravidade intermediária, por temor de transformação hemorrágica.",
+    "pergunta": "De acordo com o ensaio ELAN (Fischer et al., NEJM, 2023), que randomizou 2.013 pacientes com AVC isquêmico e fibrilação atrial para início precoce ou tardio de DOAC, o que os resultados em 30 dias sustentam?",
+    "opcoes": [
+      "O desfecho composto (AVC isquêmico recorrente, embolia sistêmica, sangramento extracraniano maior, hemorragia intracraniana sintomática ou morte vascular) ocorreu numericamente menos no grupo de início precoce (2,9% vs. 4,1%), com diferença de risco de -1,18 ponto percentual (IC95% -2,84 a 0,47), e a hemorragia intracraniana sintomática foi rara e idêntica nos dois grupos (0,2%)",
+      "O início precoce do DOAC aumentou significativamente a hemorragia intracraniana sintomática, contraindicando a anticoagulação antes do sexto dia após AVC moderado",
+      "Não houve nenhuma tendência de benefício do início precoce em qualquer desfecho, e o estudo foi interrompido por futilidade",
+      "O início precoce reduziu significativamente a mortalidade global, mas às custas de mais AVC hemorrágico"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O ELAN foi um ensaio aberto, multicêntrico (103 centros, 15 países), com avaliação de desfecho cega, que randomizou 2.013 participantes (37% com AVC leve, 40% moderado, 23% grave) para anticoagulação precoce (até 48 horas após AVC leve ou moderado, ou no dia 6-7 após AVC grave) ou tardia (dia 3-4 após AVC leve, dia 6-7 após moderado, ou dia 12-14 após AVC grave). O desfecho primário composto (AVC isquêmico recorrente, embolia sistêmica, sangramento extracraniano maior, hemorragia intracraniana sintomática ou morte vascular em 30 dias) ocorreu em 29 participantes (2,9%) no grupo precoce e 41 (4,1%) no grupo tardio, com diferença de risco de -1,18 ponto percentual (IC95% -2,84 a 0,47) — o intervalo de confiança inclui zero, mas está deslocado a favor do início precoce. O AVC isquêmico recorrente ocorreu em 1,4% (precoce) vs. 2,5% (tardio) em 30 dias (razão de chances 0,57; IC95% 0,29-1,07) e em 1,9% vs. 3,1% em 90 dias (razão de chances 0,60; IC95% 0,33-1,06). A hemorragia intracraniana sintomática foi rara e igual nos dois grupos (0,2% em ambos, em 30 dias) — não houve o excesso de sangramento que a prática tradicional de aguardar temia. O ensaio não teve poder estatístico para provar superioridade formal do início precoce, mas afasta a hipótese de dano por hemorragia e sustenta a segurança de antecipar a anticoagulação.",
+    "source_refs": [
+      "Fischer U, Koga M, Strbian D, et al; ELAN Investigators. Early versus Later Anticoagulation for Stroke with Atrial Fibrillation. N Engl J Med. 2023;388(26):2411-2421. DOI: 10.1056/NEJMoa2303048. PMID: 37222476"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "fv-refrataria-a-choque-amiodarona-lidocaina-ou-placebo-o-ensaio-alps",
+    "titulo": "PCR extra-hospitalar por FV/TV sem pulso refratária ao choque: amiodarona, lidocaína ou placebo melhoram a sobrevida? O ensaio ALPS",
+    "tema": "Arritmias",
+    "nivel": "intermediário",
+    "enunciado": "Paciente sofre parada cardiorrespiratória extra-hospitalar por fibrilação ventricular. Após o primeiro choque sem sucesso, o socorrista já obteve acesso vascular e considera administrar um antiarrítmico parenteral antes do próximo choque. A equipe discute se amiodarona ou lidocaína realmente aumentam a chance de sobrevida até a alta hospitalar em relação a não usar nenhum antiarrítmico (placebo), além do suporte avançado padrão.",
+    "pergunta": "Segundo o ensaio ALPS (Kudenchuk et al., NEJM, 2016), que randomizou 3.026 pacientes com PCR extra-hospitalar por FV/TV sem pulso refratária a choque para amiodarona, lidocaína ou placebo, qual é a conclusão correta sobre a sobrevida até a alta hospitalar?",
+    "opcoes": [
+      "Nem a amiodarona (24,4%) nem a lidocaína (23,7%) resultaram em sobrevida significativamente maior do que o placebo (21,0%): a diferença amiodarona-placebo foi de 3,2 pontos percentuais (IC95% -0,4 a 7,0; p=0,08) e lidocaína-placebo de 2,6 pontos percentuais (IC95% -1,0 a 6,3; p=0,16)",
+      "A amiodarona aumentou significativamente a sobrevida até a alta em relação ao placebo, confirmando-a como superior à lidocaína em todos os cenários",
+      "A lidocaína foi significativamente superior à amiodarona e ao placebo, tornando-se a droga de escolha em qualquer PCR refratária a choque",
+      "O estudo foi interrompido precocemente por dano, pois ambas as drogas ativas aumentaram a mortalidade em comparação ao placebo"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "No ALPS (ensaio randomizado, duplo-cego, em 10 sítios norte-americanos), pacientes com PCR extra-hospitalar não traumática, ritmo inicial de FV ou TV sem pulso refratária a pelo menos um choque e acesso vascular obtido, foram randomizados para amiodarona, lidocaína ou placebo parenteral, além do suporte padrão. Na população por protocolo (3.026 pacientes: 974 amiodarona, 993 lidocaína, 1.059 placebo), sobreviveram até a alta hospitalar 24,4%, 23,7% e 21,0%, respectivamente. A diferença amiodarona-placebo foi de 3,2 pontos percentuais (IC95% -0,4 a 7,0; p=0,08); lidocaína-placebo, 2,6 pontos percentuais (IC95% -1,0 a 6,3; p=0,16); e amiodarona-lidocaína, 0,7 ponto percentual (IC95% -3,2 a 4,7; p=0,70) — nenhuma diferença atingiu significância estatística, e o desfecho neurológico na alta foi semelhante nos três grupos. Houve heterogeneidade de efeito conforme a parada ter sido testemunhada ou não (p=0,05): as drogas ativas associaram-se a sobrevida significativamente maior que o placebo apenas entre os pacientes com parada testemunhada por transeunte, não nos casos não testemunhados. Mais pacientes do grupo amiodarona precisaram de marca-passo temporário do que nos grupos lidocaína ou placebo. Conclusão: no conjunto da população estudada, nem amiodarona nem lidocaína aumentaram significativamente a sobrevida em relação ao placebo — o benefício, quando presente, concentrou-se no subgrupo de parada testemunhada.",
+    "source_refs": [
+      "Kudenchuk PJ, Brown SP, Daya M, et al; Resuscitation Outcomes Consortium Investigators. Amiodarone, Lidocaine, or Placebo in Out-of-Hospital Cardiac Arrest. N Engl J Med. 2016;374(18):1711-1722. DOI: 10.1056/NEJMoa1514204. PMID: 27043165"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "bloqueio-av-com-disfuncao-sistolica-marca-passo-biventricular-ou-convencional-block-hf",
+    "titulo": "Bloqueio atrioventricular com disfunção sistólica: marca-passo biventricular ou estimulação de ventrículo direito?",
+    "tema": "Dispositivos",
+    "nivel": "intermediário",
+    "enunciado": "Paciente, 74 anos, com IC classe funcional II NYHA, FEVI 42%, bloqueio AV de segundo grau tipo Mobitz II com indicação formal de marca-passo definitivo. Não há indicação clássica de terapia de ressincronização por QRS estreito basal. O eletrofisiologista pondera entre implantar sistema convencional de estimulação em ventrículo direito (VD) e sistema biventricular, sabendo que a estimulação crônica em VD pode induzir dissincronia e piora da função sistólica.",
+    "pergunta": "De acordo com o estudo BLOCK HF, qual estratégia de estimulação reduziu o desfecho composto de morte, atendimento de urgência por IC com necessidade de terapia intravenosa, ou aumento ≥15% no índice de volume sistólico final do VE, em pacientes com indicação de marca-passo por BAV e FEVI ≤50%?",
+    "opcoes": [
+      "Estimulação biventricular, com redução significativa do desfecho combinado (HR 0,74; IC95% credível 0,60-0,90) em relação à estimulação convencional de ventrículo direito",
+      "Estimulação convencional de ventrículo direito, por menor taxa de complicações relacionadas ao eletrodo",
+      "As duas estratégias foram equivalentes, sem diferença estatística no desfecho primário",
+      "Estimulação biventricular só trouxe benefício nos pacientes com indicação concomitante de CDI, sem efeito nos que receberam apenas marca-passo"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O BLOCK HF (Curtis AB et al., NEJM 2013) randomizou 691 pacientes com indicação de estimulação por BAV, IC NYHA I-III e FEVI ≤50% para receber marca-passo (ou CDI, quando indicado) com estimulação convencional em ventrículo direito ou biventricular, com seguimento médio de 37 meses. O desfecho primário composto (morte por qualquer causa, atendimento de urgência por IC com necessidade de terapia intravenosa, ou aumento ≥15% no índice de volume sistólico final do VE) ocorreu em 55,6% (190/342) do grupo VD contra 45,8% (160/349) do grupo biventricular, com HR 0,74 (IC 95% credível 0,60-0,90) a favor da estimulação biventricular — resultado consistente tanto no subgrupo de marca-passo quanto no de CDI. Complicações relacionadas ao eletrodo de VE ocorreram em 6,4% dos pacientes. O estudo mostra que, em pacientes com indicação de estimulação frequente por BAV e função sistólica já comprometida (FEVI ≤50%), a estimulação biventricular evita a dissincronia iatrogênica que a estimulação apical isolada de VD pode induzir, mesmo sem os critérios clássicos de indicação de ressincronização (QRS largo).",
+    "source_refs": [
+      "Curtis AB, Worley SJ, Adamson PB, et al; Biventricular versus Right Ventricular Pacing in Heart Failure Patients with Atrioventricular Block (BLOCK HF) Trial Investigators. Biventricular pacing for atrioventricular block and systolic dysfunction. N Engl J Med. 2013;368(17):1585-1593. DOI: 10.1056/NEJMoa1210356. PMID: 23614585"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "pos-sca-estatina-intensiva-versus-moderada-prove-it-timi-22",
+    "titulo": "Após síndrome coronariana aguda: estatina de alta intensidade ou moderada?",
+    "tema": "Prevenção e lipídios",
+    "nivel": "básico",
+    "enunciado": "Paciente, 58 anos, internado há 8 dias por síndrome coronariana aguda sem supra de ST, com angioplastia bem-sucedida. Antes da alta, o LDL era de 130 mg/dL. A equipe discute se deve iniciar pravastatina 40 mg (dose moderada, já bem tolerada em outros pacientes do serviço) ou atorvastatina 80 mg (dose alta) para prevenção secundária.",
+    "pergunta": "De acordo com o PROVE IT-TIMI 22, qual foi o resultado da comparação entre terapia intensiva (atorvastatina 80 mg) e terapia padrão (pravastatina 40 mg) em pacientes hospitalizados por síndrome coronariana aguda nos 10 dias anteriores?",
+    "opcoes": [
+      "A terapia intensiva com atorvastatina 80 mg reduziu o desfecho composto de morte, IAM, angina instável com reinternação, revascularização e AVC, com LDL mediano de 62 mg/dL contra 95 mg/dL no grupo pravastatina",
+      "As duas estratégias foram estatisticamente equivalentes, confirmando a hipótese de não inferioridade pré-especificada do estudo",
+      "A terapia intensiva aumentou a taxa de eventos hemorrágicos maiores sem benefício isquêmico compensatório",
+      "A pravastatina 40 mg foi superior por reduzir mais efetivamente a taxa de revascularização tardia"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O PROVE IT-TIMI 22 (Cannon CP et al., NEJM 2004) randomizou 4.162 pacientes hospitalizados por síndrome coronariana aguda nos 10 dias anteriores para pravastatina 40 mg (terapia padrão) ou atorvastatina 80 mg (terapia intensiva). O desenho original buscava demonstrar não inferioridade da pravastatina, critério que o estudo não atingiu — em vez disso, mostrou superioridade da atorvastatina. O LDL mediano alcançado foi de 95 mg/dL no grupo pravastatina contra 62 mg/dL no grupo atorvastatina (p<0,001). Em 2 anos, a taxa do desfecho primário (morte por qualquer causa, IAM, angina instável documentada com reinternação, revascularização realizada após 30 dias, e AVC) foi de 26,3% com pravastatina contra 22,4% com atorvastatina — redução de 16% no risco relativo a favor da atorvastatina (p=0,005; IC95% 5-26%). O estudo tem errata publicada (N Engl J Med. 2006;354(7):778), não lida nesta redação — declarada aqui em vez de omitida. O PROVE IT-TIMI 22 é uma das bases do princípio 'quanto mais baixo, melhor' para o LDL logo após um evento coronariano agudo, sustentando as diretrizes atuais que recomendam estatina de alta intensidade já no período hospitalar da SCA.",
+    "source_refs": [
+      "Cannon CP, Braunwald E, McCabe CH, et al; Pravastatin or Atorvastatin Evaluation and Infection Therapy-Thrombolysis in Myocardial Infarction 22 Investigators. Intensive versus moderate lipid lowering with statins after acute coronary syndromes. N Engl J Med. 2004;350(15):1495-1504. DOI: 10.1056/NEJMoa040583. PMID: 15007110. Errata: N Engl J Med. 2006;354(7):778."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "diabetes-tipo-2-alto-risco-cv-controle-glicemico-intensivo-aumenta-mortalidade-accord",
+    "titulo": "Diabetes tipo 2 de alto risco cardiovascular: controle glicêmico intensivo sempre protege o coração?",
+    "tema": "Diabetes e cardiologia",
+    "nivel": "avançado",
+    "enunciado": "Paciente, 63 anos, diabetes tipo 2 há 12 anos, com doença cardiovascular estabelecida e HbA1c de 8,1%. O endocrinologista propõe intensificar o esquema hipoglicemiante para atingir HbA1c < 6,0%, argumentando que 'quanto mais baixa a glicada, menor o risco cardiovascular'. O cardiologista assistente questiona essa premissa antes de concordar com a intensificação.",
+    "pergunta": "No estudo ACCORD, qual foi o resultado de mirar HbA1c < 6,0% (terapia intensiva) comparado a 7,0-7,9% (terapia padrão) em pacientes de alto risco cardiovascular com diabetes tipo 2?",
+    "opcoes": [
+      "A terapia intensiva aumentou a mortalidade por qualquer causa (HR 1,22; IC95% 1,01-1,46; p=0,04) sem redução significativa do desfecho cardiovascular composto, levando à suspensão precoce do braço intensivo",
+      "A terapia intensiva reduziu significativamente o desfecho cardiovascular composto de IAM não fatal, AVC não fatal ou morte cardiovascular, sem impacto na mortalidade total",
+      "As duas estratégias foram equivalentes em todos os desfechos avaliados, sem necessidade de interrupção do estudo",
+      "A terapia intensiva reduziu tanto o desfecho cardiovascular quanto a mortalidade, mas à custa de maior taxa de hipoglicemia grave"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O ACCORD (Action to Control Cardiovascular Risk in Diabetes, NEJM 2008) randomizou 10.251 pacientes com diabetes tipo 2, HbA1c mediana de 8,1% e doença cardiovascular estabelecida ou fatores de risco adicionais, para terapia intensiva (alvo HbA1c < 6,0%) ou padrão (alvo 7,0-7,9%). Em 1 ano, os grupos atingiram HbA1c mediana estável de 6,4% e 7,5%, respectivamente. O desfecho primário (IAM não fatal, AVC não fatal ou morte cardiovascular) ocorreu em 352 pacientes do grupo intensivo contra 371 do grupo padrão (HR 0,90; IC95% 0,78-1,04; p=0,16) — sem diferença significativa. Porém, a mortalidade por qualquer causa foi maior no grupo intensivo: 257 mortes contra 203 no grupo padrão (HR 1,22; IC95% 1,01-1,46; p=0,04), achado que levou à suspensão do braço de terapia intensiva após seguimento médio de 3,5 anos. Hipoglicemia grave com necessidade de assistência e ganho de peso acima de 10 kg também foram mais frequentes na terapia intensiva (p<0,001 para ambos). O ACCORD é a evidência-chave de que controle glicêmico agressivo, buscando normalizar a HbA1c, não é sinônimo de proteção cardiovascular e pode causar dano — motivo pelo qual as diretrizes atuais individualizam a meta glicêmica por expectativa de vida, tempo de doença e risco de hipoglicemia, em vez de perseguir a menor HbA1c possível.",
+    "source_refs": [
+      "Action to Control Cardiovascular Risk in Diabetes Study Group; Gerstein HC, Miller ME, Byington RP, et al. Effects of intensive glucose lowering in type 2 diabetes. N Engl J Med. 2008;358(24):2545-2559. DOI: 10.1056/NEJMoa0802743. PMID: 18539917"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "ic-classe-iii-monitorizacao-hemodinamica-invasiva-reduz-internacao-champion",
+    "titulo": "IC classe III com internação prévia: monitorização hemodinâmica invasiva reduz internação?",
+    "tema": "Insuficiência cardíaca",
+    "nivel": "intermediário",
+    "enunciado": "Paciente, 67 anos, IC crônica classe funcional III da NYHA (FEVI 30%), já em quadriterapia otimizada, com uma internação por descompensação nos últimos 12 meses. A equipe de IC avançada considera implantar um sensor de pressão de artéria pulmonar (CardioMEMS) para monitorização hemodinâmica remota, guiando ajustes diários de diurético a partir da pressão medida, além do manejo clínico padrão.",
+    "pergunta": "No estudo CHAMPION, qual foi o efeito do monitoramento hemodinâmico por sensor implantável de pressão de artéria pulmonar, associado ao cuidado padrão, sobre as internações por IC em 6 meses, em pacientes NYHA III com internação prévia por IC?",
+    "opcoes": [
+      "Redução significativa das internações por IC (taxa 0,31 vs. 0,44; HR 0,70; IC95% 0,60-0,84; p<0,0001), mantida em 39% de redução durante o seguimento médio de 15 meses",
+      "Nenhuma redução nas internações por IC, com benefício restrito à melhora de qualidade de vida",
+      "Redução das internações apenas no subgrupo com FEVI preservada, sem efeito nos pacientes com FEVI reduzida",
+      "Aumento das internações por IC no grupo monitorizado, atribuído a intervenções diuréticas excessivas guiadas pelo sensor"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O CHAMPION (Abraham WT et al., Lancet 2011) randomizou 550 pacientes com IC NYHA III (independente da FEVI) e internação prévia por IC para monitorização hemodinâmica com sensor implantável de pressão de artéria pulmonar associada ao cuidado padrão (grupo tratamento, n=270), ou cuidado padrão isolado (grupo controle, n=280), por pelo menos 6 meses. Em 6 meses, houve 83 internações por IC no grupo tratamento contra 120 no grupo controle (taxa 0,31 vs. 0,44; HR 0,70; IC95% 0,60-0,84; p<0,0001). Durante todo o seguimento (média de 15 meses), a redução de internações por IC se manteve em 39% (153 vs. 253 eventos; HR 0,64; IC95% 0,55-0,75; p<0,0001). A segurança do dispositivo foi alta: liberdade de complicações relacionadas ao sistema em 98,6% dos pacientes (contra critério pré-especificado de 80%, p<0,0001) e 100% de liberdade de falha do sensor de pressão. O estudo tem errata publicada (Lancet. 2012;379(9814):412), não lida nesta redação — declarada aqui em vez de omitida. O CHAMPION sustenta a monitorização hemodinâmica ambulatorial como estratégia complementar aos quatro pilares farmacológicos da ICFEr, permitindo ajuste precoce de diurético antes da congestão se manifestar clinicamente.",
+    "source_refs": [
+      "Abraham WT, Adamson PB, Bourge RC, et al; CHAMPION Trial Study Group. Wireless pulmonary artery haemodynamic monitoring in chronic heart failure: a randomised controlled trial. Lancet. 2011;377(9766):658-666. DOI: 10.1016/S0140-6736(11)60101-3. PMID: 21315441. Errata: Lancet. 2012;379(9814):412."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hipertensao-multiplos-fatores-de-risco-amlodipino-perindopril-versus-atenolol-bendroflumetiazida-ascot-bpla",
+    "titulo": "Hipertensão com múltiplos fatores de risco: qual combinação de anti-hipertensivos previne mais eventos?",
+    "tema": "Hipertensão",
+    "nivel": "intermediário",
+    "enunciado": "Paciente, 61 anos, hipertenso, com pelo menos três outros fatores de risco cardiovascular (dislipidemia, tabagismo e história familiar), ainda sem doença coronariana estabelecida. O médico da atenção primária mantém o esquema tradicional de atenolol associado a diurético tiazídico, esquema com o qual já tem familiaridade, e questiona se vale a pena trocar para uma combinação mais moderna de bloqueador de canal de cálcio com IECA.",
+    "pergunta": "No ASCOT-BPLA, como o esquema baseado em amlodipino (associando perindopril conforme necessário) se comparou ao esquema baseado em atenolol (associando bendroflumetiazida conforme necessário) para prevenção de eventos cardiovasculares em hipertensos de alto risco?",
+    "opcoes": [
+      "O esquema com amlodipino reduziu significativamente AVC (HR 0,77; IC95% 0,66-0,89), eventos cardiovasculares totais (HR 0,84), mortalidade total (HR 0,89) e incidência de diabetes novo, embora a diferença no desfecho primário (IAM não fatal e DAC fatal) não tenha atingido significância estatística",
+      "Os dois esquemas foram estatisticamente idênticos em todos os desfechos avaliados, sem justificativa para preferir um sobre o outro",
+      "O esquema com atenolol foi superior na prevenção de AVC, revertendo a hipótese inicial do estudo",
+      "O amlodipino aumentou a incidência de diabetes de novo em relação ao atenolol, limitando seu uso em hipertensos de risco metabólico"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "O ASCOT-BPLA (Dahlöf B et al., Lancet 2005) randomizou 19.257 hipertensos de 40-79 anos com pelo menos três fatores de risco cardiovascular adicionais para amlodipino 5-10 mg associado a perindopril 4-8 mg conforme necessário (n=9.639) ou atenolol 50-100 mg associado a bendroflumetiazida 1,25-2,5 mg e potássio conforme necessário (n=9.618). O estudo foi interrompido precocemente após seguimento mediano de 5,5 anos. O desfecho primário (IAM não fatal, incluindo silencioso, e doença coronariana fatal) foi numericamente menor com amlodipino, mas sem significância estatística (429 vs. 474 eventos; HR 0,90; IC95% 0,79-1,02; p=0,1052). Já os desfechos secundários favoreceram claramente o amlodipino: AVC fatal e não fatal (327 vs. 422; HR 0,77; IC95% 0,66-0,89; p=0,0003), eventos e procedimentos cardiovasculares totais (1.362 vs. 1.602; HR 0,84; IC95% 0,78-0,90; p<0,0001) e mortalidade por qualquer causa (738 vs. 820; HR 0,89; IC95% 0,81-0,99; p=0,025). A incidência de diabetes novo também foi menor com amlodipino (567 vs. 799; HR 0,70; IC95% 0,63-0,78; p<0,0001). Os autores destacam que esses efeitos podem não ser inteiramente explicados pela diferença de controle pressórico entre os grupos. O estudo contribuiu para afastar a combinação betabloqueador + tiazídico como primeira escolha rotineira na hipertensão sem indicação específica para betabloqueador, em favor de combinações com bloqueador de canal de cálcio e bloqueador do SRAA.",
+    "source_refs": [
+      "Dahlöf B, Sever PS, Poulter NR, et al; ASCOT Investigators. Prevention of cardiovascular events with an antihypertensive regimen of amlodipine adding perindopril as required versus atenolol adding bendroflumethiazide as required, in the Anglo-Scandinavian Cardiac Outcomes Trial-Blood Pressure Lowering Arm (ASCOT-BPLA): a multicentre randomised controlled trial. Lancet. 2005;366(9489):895-906. DOI: 10.1016/S0140-6736(05)67185-1. PMID: 16154016"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hap-classe-funcional-iii-sem-meta-com-pde5i-trocar-para-riociguate-respite",
+    "titulo": "HAP classe funcional III sem atingir meta apesar de PDE5i: trocar para riociguate é seguro e eficaz? O ensaio RESPITE",
+    "tema": "Hipertensão pulmonar",
+    "nivel": "avançado",
+    "enunciado": "Mulher de 52 anos com hipertensão arterial pulmonar idiopática, classe funcional III da OMS, em uso de sildenafila e de um antagonista do receptor de endotelina há mais de um ano. Teste de caminhada de 6 minutos com 380 m, índice cardíaco 2,6 L/min/m², resistência vascular pulmonar elevada e NT-proBNP em ascensão. Ela não atinge critérios de baixo risco apesar do tratamento otimizado com o inibidor da fosfodiesterase-5 (PDE5i). A equipe discute substituir a sildenafila pelo estimulador da guanilato-ciclase solúvel riociguate, mantendo o antagonista do receptor de endotelina, e pergunta o que a evidência mostra sobre essa troca.",
+    "pergunta": "No ensaio RESPITE (fase 3b, aberto, sem grupo-controle, 61 pacientes com resposta insuficiente a PDE5i), o que aconteceu após a troca para riociguate ao longo de 24 semanas?",
+    "opcoes": [
+      "A troca foi malsucedida: a distância caminhada em 6 minutos caiu em média 31 m e a classe funcional piorou na maioria dos pacientes.",
+      "51 dos 61 pacientes (84%) completaram o protocolo; a distância caminhada em 6 minutos aumentou em média 31±63 m, o NT-proBNP caiu 347±1235 pg/mL e a classe funcional melhorou em 28 pacientes (54%) — mas 16% tiveram eventos adversos graves, incluindo 2 óbitos (não relacionados ao fármaco em estudo), e o desenho aberto e sem controle limita a força da conclusão.",
+      "O estudo foi interrompido precocemente por excesso de hipotensão sintomática em mais de 40% dos pacientes.",
+      "Nenhum desfecho mudou de forma mensurável, e os autores concluíram que a troca nunca deve ser considerada nesse cenário."
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O RESPITE avaliou a segurança e o benefício de trocar PDE5i por riociguate em 61 pacientes com HAP classe funcional III que não atingiam metas terapêuticas (50/61, 82%, em uso concomitante de antagonista do receptor de endotelina). Dos 61 pacientes enrolados, 51 (84%) completaram as 24 semanas do estudo. Na semana 24, a distância caminhada em 6 minutos havia aumentado em média 31±63 m, o NT-proBNP caiu em média 347±1235 pg/mL e a classe funcional da OMS melhorou em 28 pacientes (54%). Do lado da segurança, 32 pacientes (52%) tiveram eventos adversos relacionados ao fármaco do estudo, 10 (16%) tiveram eventos adversos graves (2 deles, 3%, relacionados ao fármaco) e 6 (10%) apresentaram piora clínica, incluindo 2 óbitos, nenhum atribuído ao fármaco em estudo. É importante que o próprio artigo declare a limitação do desenho: RESPITE foi um estudo aberto, multicêntrico, SEM grupo-controle e SEM cegamento — não é um ensaio randomizado controlado por placebo, e os autores concluem que pacientes selecionados 'podem se beneficiar' da troca, mas que a estratégia 'precisa ser mais estudada'. Isso não invalida o achado, mas limita a força da recomendação: o resultado é sugestivo de benefício em subgrupo selecionado, não prova definitiva de superioridade da troca sobre a manutenção do PDE5i.",
+    "source_refs": [
+      "Hoeper MM, Simonneau G, Corris PA, Ghofrani HA, Klinger JR, Langleben D, Naeije R, Jansa P, Rosenkranz S, Scelsi L, Grünig E, Vizza CD, Chang M, Colorado P, Meier C, Busse D, Benza RL. RESPITE: switching to riociguat in pulmonary arterial hypertension patients with inadequate response to phosphodiesterase-5 inhibitors. Eur Respir J. 2017;50(3):1602425. DOI: 10.1183/13993003.02425-2016. PMID: 28889107"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "fa-em-anticoagulacao-oral-cronica-estimar-risco-hemorragico-escore-orbit",
+    "titulo": "FA em anticoagulação oral crônica: o escore ORBIT discrimina risco de sangramento melhor do que o HAS-BLED?",
+    "tema": "Calculadoras",
+    "nivel": "intermediário",
+    "enunciado": "Homem de 78 anos com fibrilação atrial permanente, em uso de anticoagulante oral há 3 anos, com histórico de sangramento gastrointestinal há 2 anos, hemoglobina 11,8 g/dL, taxa de filtração glomerular reduzida e uso concomitante de AAS por doença coronariana estável. Antes de decidir se mantém a anticoagulação nessa combinação, o médico quer estimar objetivamente o risco de sangramento maior usando uma ferramenta validada.",
+    "pergunta": "Segundo o estudo de derivação e validação externa do escore ORBIT (registro ORBIT-AF, com validação no ROCKET-AF), como ele se compara ao HAS-BLED e ao ATRIA para prever sangramento maior?",
+    "opcoes": [
+      "O ORBIT usa 12 variáveis, é mais trabalhoso de aplicar à beira do leito do que o HAS-BLED e discrimina pior.",
+      "O escore ORBIT, com apenas 5 variáveis (idade ≥75 anos, redução de hemoglobina/hematócrito ou anemia, sangramento prévio, função renal insuficiente e uso de antiplaquetário), teve discriminação semelhante (índice c 0,67) à do modelo contínuo completo (índice c 0,69) e calibração nitidamente melhor do que HAS-BLED e ATRIA na validação externa no ROCKET-AF.",
+      "O ORBIT foi inferior ao HAS-BLED em todas as métricas testadas na validação externa e não deve ser usado.",
+      "O ORBIT só é validado para pacientes em uso de varfarina, nunca para pacientes em uso de anticoagulante oral direto."
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O escore ORBIT foi derivado em 7.411 pacientes do registro ORBIT-AF em uso de anticoagulação oral, com taxa de sangramento maior de 4,0 por 100 pessoas-ano. Por regressão de Cox, os autores identificaram os 5 fatores mais preditivos e construíram um escore numérico simples (idade ≥75 anos, hemoglobina/hematócrito reduzidos ou história de anemia, sangramento prévio, função renal insuficiente e tratamento antiplaquetário concomitante). O modelo contínuo completo (12 variáveis) teve índice c de 0,69, e o escore ORBIT de 5 itens teve índice c de 0,67 — discriminação semelhante entre os dois. Quando comparado a HAS-BLED e ATRIA na coorte de validação externa (ensaio ROCKET-AF), o ORBIT manteve discriminação parecida, mas com CALIBRAÇÃO nitidamente melhor — ou seja, o risco previsto pelo escore se aproximou mais do risco observado do que os outros dois escores. A conclusão dos autores é que o ORBIT oferece uma ferramenta simples e de fácil memorização para apoiar a decisão clínica sobre risco de sangramento na FA.",
+    "source_refs": [
+      "O'Brien EC, Simon DN, Thomas LE, Hylek EM, Gersh BJ, Ansell JE, Kowey PR, Mahaffey KW, Chang P, Fonarow GC, Pencina MJ, Piccini JP, Peterson ED. The ORBIT bleeding score: a simple bedside score to assess bleeding risk in atrial fibrillation. Eur Heart J. 2015;36(46):3258-3264. DOI: 10.1093/eurheartj/ehv476. PMID: 26424865"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "lmc-recem-diagnosticada-com-risco-cardiovascular-nilotinibe-ou-imatinibe-enestnd",
+    "titulo": "LMC em fase crônica recém-diagnosticada em paciente com múltiplos fatores de risco cardiovascular: nilotinibe ou imatinibe? O ENESTnd em 10 anos",
+    "tema": "Cardio-oncologia",
+    "nivel": "avançado",
+    "enunciado": "Homem de 61 anos, hipertenso, diabético e ex-tabagista, recebe diagnóstico de leucemia mieloide crônica em fase crônica. O hematologista discute com o cardiologista assistente a escolha entre nilotinibe (300 mg 2x/dia) e imatinibe (400 mg 1x/dia) como terapia inicial, ponderando a maior potência molecular do nilotinibe contra o perfil de risco cardiovascular do paciente.",
+    "pergunta": "Segundo a análise de 10 anos do ensaio ENESTnd, o que se observou nas taxas cumulativas de eventos cardiovasculares entre nilotinibe e imatinibe, e como isso deve pesar nesta decisão?",
+    "opcoes": [
+      "As taxas de eventos cardiovasculares foram semelhantes entre os braços (em torno de 4% em todos), então o risco cardiovascular não deveria pesar na escolha do fármaco.",
+      "Aos 10 anos, as taxas cumulativas de eventos cardiovasculares foram nitidamente maiores com nilotinibe do que com imatinibe (16,5% com 300 mg 2x/dia e 23,5% com 400 mg 2x/dia, contra 3,6% com imatinibe), incluindo pacientes classificados como baixo risco pelo escore de Framingham — o perfil cardiovascular deste paciente deve pesar contra a escolha do nilotinibe, apesar da maior taxa de resposta molecular.",
+      "O imatinibe teve mais eventos cardiovasculares do que o nilotinibe em todas as doses testadas ao longo dos 10 anos de seguimento.",
+      "Eventos cardiovasculares só ocorreram em pacientes que já tinham diagnóstico prévio de doença coronariana estabelecida, nunca em pacientes de baixo risco basal."
+    ],
+    "resposta_correta": 1,
+    "explicacao": "No ENESTnd, com seguimento de 10 anos ou mais em pacientes com LMC em fase crônica recém-diagnosticada, o nilotinibe mostrou taxas cumulativas de resposta molecular maior (RMM) e RM4.5 mais altas do que o imatinibe (RMM em 10 anos: 77,7% com nilotinibe 300 mg 2x/dia e 79,7% com 400 mg 2x/dia, contra 62,5% com imatinibe 400 mg 1x/dia), menor progressão e morte relacionada à LMC, e maior elegibilidade para remissão livre de tratamento (48,6% e 47,3% com nilotinibe vs. 29,7% com imatinibe). A sobrevida global estimada em 10 anos foi semelhante entre os grupos (87,6%, 90,3% e 88,3%, respectivamente). O reverso da maior eficácia molecular foi o risco cardiovascular: as taxas cumulativas de eventos cardiovasculares em 10 anos foram de 16,5% (nilotinibe 300 mg 2x/dia) e 23,5% (nilotinibe 400 mg 2x/dia), contra apenas 3,6% com imatinibe — diferença que se manteve inclusive entre pacientes classificados como baixo risco pelo escore de Framingham no início do tratamento. Os próprios autores concluem que o perfil de benefício-risco deve ser avaliado individualmente, conforme os objetivos de tratamento de cada paciente — em um paciente com múltiplos fatores de risco cardiovascular já presentes, esse excesso de eventos é um argumento concreto contra o nilotinibe, mesmo com a vantagem de resposta molecular. Há uma errata publicada para este artigo (Leukemia. 2021;35(7):2142-2143, DOI: 10.1038/s41375-021-01306-1) cujo conteúdo específico não foi lido em detalhe nesta redação — declarado aqui em vez de omitido.",
+    "source_refs": [
+      "Kantarjian HM, Hughes TP, Larson RA, Kim DW, Issaragrisil S, le Coutre P, Etienne G, Boquimpani C, Pasquini R, Clark RE, Dubruille V, Flinn IW, Kyrcz-Krzemien S, Medras E, Zanichelli M, Bendit I, Cacciatore S, Titorenko K, Aimone P, Saglio G, Hochhaus A. Long-term outcomes with frontline nilotinib versus imatinib in newly diagnosed chronic myeloid leukemia in chronic phase: ENESTnd 10-year analysis. Leukemia. 2021;35(2):440-453. DOI: 10.1038/s41375-020-01111-2. PMID: 33414482. Errata em: Leukemia. 2021;35(7):2142-2143. DOI: 10.1038/s41375-021-01306-1 — conteúdo da correção não lido no detalhe, declarado."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "decisao-cirurgica-de-alto-risco-em-idoso-ferramenta-best-case-worst-case",
+    "titulo": "Decisão sobre cirurgia de alto risco em paciente idoso agudamente doente: a ferramenta \"Best Case/Worst Case\" muda a conversa?",
+    "tema": "Comunicação clínica",
+    "nivel": "básico",
+    "enunciado": "Paciente de 84 anos com múltiplas comorbidades cardiovasculares é internado com abdome agudo cirúrgico. A equipe precisa decidir, com o paciente e a família, entre operar com risco perioperatório elevado ou seguir tratamento não operatório, num cenário de tempo curto para a decisão. Cogita-se usar a ferramenta estruturada de comunicação \"Best Case/Worst Case\" (BC/WC), desenhada para apresentar, lado a lado, o melhor e o pior desfecho plausível de cada opção.",
+    "pergunta": "No estudo que treinou cirurgiões para usar a ferramenta BC/WC em decisões cirúrgicas agudas de alto risco, o que os resultados mostraram sobre a adoção e a percepção da ferramenta na prática real?",
+    "opcoes": [
+      "Apesar do treinamento estruturado, menos da metade dos cirurgiões conseguiu completar os elementos essenciais da ferramenta na prática com pacientes reais.",
+      "25 cirurgiões completaram um treinamento estruturado de 2 horas seguido de coaching individual; usaram uma mediana de 10 dos 11 elementos da ferramenta com pacientes hospitalizados reais, e 3 meses depois 79% consideraram o BC/WC melhor do que sua abordagem habitual, com 71% relatando uso ativo na prática clínica.",
+      "A ferramenta foi abandonada porque pacientes e familiares a consideraram confusa demais e recomendaram descontinuar seu uso.",
+      "O estudo mediu apenas a satisfação declarada pelos próprios cirurgiões, sem qualquer avaliação envolvendo pacientes ou familiares."
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O estudo treinou 25 cirurgiões de um hospital terciário para usar a ferramenta \"Best Case/Worst Case\", com sessão estruturada de 2 horas seguida de coaching individual. As conversas com pacientes padronizados e com 20 pacientes hospitalizados reais foram gravadas em áudio, e pacientes/familiares participaram de entrevistas abertas entre 30 e 120 dias depois. Usando um checklist de 11 elementos da ferramenta, os cirurgiões completaram uma mediana de 10 dos 11 elementos tanto com pacientes padronizados quanto com pacientes hospitalizados (variação de 5 a 11) — houve variabilidade moderada na apresentação das opções de tratamento e na descrição dos desfechos. Três meses após o treinamento, 79% dos cirurgiões relataram que o BC/WC é melhor do que sua abordagem usual, e 71% endossaram uso ativo da ferramenta na prática clínica. Pacientes e familiares relataram que a ferramenta estabeleceu expectativas claras e facilitou a deliberação. É importante notar que este é um estudo de treinamento e viabilidade (sem grupo-controle, avaliando fidelidade de uso e aceitabilidade), não um ensaio randomizado medindo desfecho duro de decisão — ele demonstra que cirurgiões conseguem aprender e incorporar a ferramenta, não que ela necessariamente muda a escolha final do paciente.",
+    "source_refs": [
+      "Kruser JM, Taylor LJ, Campbell TC, Zelenski A, Johnson SK, Nabozny MJ, Steffens NM, Tucholka JL, Kwekkeboom KL, Schwarze ML. \"Best Case/Worst Case\": Training Surgeons to Use a Novel Communication Tool for High-Risk Acute Surgical Problems. J Pain Symptom Manage. 2017;53(4):711-719.e5. DOI: 10.1016/j.jpainsymman.2016.11.014. PMID: 28062349"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "transicao-do-horario-de-verao-e-risco-de-infarto-registro-riks-hia",
+    "titulo": "\"Adiantei o relógio uma hora e tive um infarto\": existe essa relação? O registro sueco RIKS-HIA",
+    "tema": "Geral",
+    "nivel": "básico",
+    "enunciado": "Paciente de 58 anos, hipertenso e em uso de sinvastatina, é internado com infarto agudo do miocárdio na segunda-feira seguinte à transição para o horário de verão (relógios adiantados em 1 hora, com perda equivalente de sono). Ele pergunta ao cardiologista se essa mudança repentina de horário teve alguma relação real com o evento, ou se é só coincidência.",
+    "pergunta": "Segundo o registro sueco RIKS-HIA (dados nacionais de admissões em unidades coronarianas), o que se observou na incidência de infarto agudo do miocárdio na semana seguinte à transição do horário de verão?",
+    "opcoes": [
+      "Não houve nenhuma alteração detectável na incidência de infarto em nenhuma das duas transições de horário (adiantar na primavera ou atrasar no outono).",
+      "A incidência de infarto aumentou de forma semelhante e importante nas duas transições, tanto ao adiantar quanto ao atrasar o relógio.",
+      "Houve um aumento discreto, porém estatisticamente significativo, na incidência de infarto na primeira semana após adiantar o relógio na primavera (razão de incidência 1,039; IC95% 1,003-1,075), mais pronunciado entre quem usava medicação cardíaca e tinha colesterol e triglicerídeos baixos; não houve alteração estatisticamente significativa após atrasar o relógio no outono.",
+      "O aumento de infarto ocorreu exclusivamente entre fumantes, sem qualquer efeito em não fumantes."
+    ],
+    "resposta_correta": 2,
+    "explicacao": "Usando o RIKS-HIA (registro nacional sueco de admissões em unidades coronarianas), os autores compararam a incidência de infarto agudo do miocárdio nos 7 dias seguintes a cada transição do horário de verão com a incidência média em períodos-controle. Encontraram uma razão de incidência elevada de 1,039 (IC95% 1,003-1,075) na primeira semana após adiantar o relógio na primavera — um aumento discreto, mas estatisticamente significativo. Esse risco maior foi mais pronunciado entre indivíduos em uso de medicação cardíaca e com colesterol e triglicerídeos baixos. Não houve mudança estatisticamente significativa na incidência após a transição de outono (atrasar o relógio). Pacientes com hiperlipidemia e em uso de estatina ou bloqueador de canal de cálcio tenderam a ter incidência menor do que a esperada, e fumantes não apresentaram incidência maior em nenhuma das transições. Os autores concluem que mesmo uma privação de sono modesta e a perturbação do ciclo sono-vigília podem aumentar o risco de infarto na população, e que identificar os subgrupos de maior risco pode orientar estratégias preventivas.",
+    "source_refs": [
+      "Janszky I, Ahnve S, Ljung R, Mukamal KJ, Gautam S, Wallentin L, Stenestrand U. Daylight saving time shifts and incidence of acute myocardial infarction--Swedish Register of Information and Knowledge About Swedish Heart Intensive Care Admissions (RIKS-HIA). Sleep Med. 2012;13(3):237-242. DOI: 10.1016/j.sleep.2011.07.019. PMID: 22285108"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "icfer-com-baixo-status-de-saude-percebido-cuidado-colaborativo-para-sintomas-e-aspectos-psicossociais-casa",
+    "titulo": "IC crônica sintomática com fadiga e sintomas depressivos: cuidado colaborativo para sintomas e aspectos psicossociais muda o desfecho? O ensaio CASA",
+    "tema": "Saúde mental e cardiologia",
+    "nivel": "intermediário",
+    "enunciado": "Paciente de 65 anos com insuficiência cardíaca crônica sintomática, fadiga importante e sintomas depressivos leves a moderados, sem diagnóstico formal de transtorno depressivo maior. O ambulatório considera encaminhá-lo a um programa de cuidado colaborativo — enfermeira para sintomas físicos e assistente social para aspectos psicossociais, ambos supervisionados por clínico, cardiologista e paliativista — em vez de manter apenas o cuidado convencional.",
+    "pergunta": "No ensaio CASA (Collaborative Care to Alleviate Symptoms and Adjust to Illness; 314 pacientes de serviços de veteranos, acadêmicos e de rede de segurança no Colorado), qual foi o resultado da intervenção de cuidado colaborativo aos 6 meses?",
+    "opcoes": [
+      "A intervenção melhorou significativamente o desfecho primário (status de saúde específico da IC pelo Kansas City Cardiomyopathy Questionnaire) e todos os desfechos secundários, incluindo mortalidade em 12 meses.",
+      "O desfecho primário (KCCQ) não mudou significativamente entre os grupos (diferença de 2,6 pontos; IC95% -1,3 a 6,6; p=0,19), mas os sintomas depressivos e a fadiga melhoraram de forma estatisticamente significativa com a intervenção (p=0,02 para os dois); a mortalidade em 12 meses foi semelhante entre os grupos (10 vs. 13 óbitos, p=0,52).",
+      "A intervenção piorou os sintomas depressivos em comparação ao cuidado usual, levando à suspensão precoce do braço de intervenção.",
+      "O estudo foi interrompido antes de completar o recrutamento por futilidade evidente em uma análise interina."
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O CASA foi um ensaio clínico randomizado, unicego, com 314 pacientes ambulatoriais com IC sintomática e status de saúde reduzido, randomizados 1:1 para a intervenção CASA (cuidado colaborativo de sintomas por enfermeira + cuidado psicossocial por assistente social, ambos trabalhando com o clínico do paciente e supervisionados por clínico geral, cardiologista e médico paliativista) ou cuidado usual. O desfecho primário — mudança no Kansas City Cardiomyopathy Questionnaire (KCCQ, 0-100) aos 6 meses — melhorou 5,5 pontos no grupo intervenção e 2,9 pontos no grupo controle, uma diferença de 2,6 pontos (IC95% -1,3 a 6,6; p=0,19), sem significância estatística. Entre os desfechos secundários, sintomas depressivos e fadiga melhoraram significativamente com a intervenção (tamanho de efeito -0,29, IC95% -0,53 a -0,04, para sintomas depressivos; -0,30, IC95% -0,55 a -0,06, para fadiga; p=0,02 para ambos). Não houve mudança significativa em sofrimento geral por sintomas, dor ou dispneia, nem no número de internações. A mortalidade em 12 meses foi semelhante entre os braços (10 óbitos no grupo CASA vs. 13 no cuidado usual; p=0,52). Os autores concluem que o desfecho primário de status de saúde específico da IC não melhorou, mas que dois desfechos secundários difíceis de tratar na IC — depressão e fadiga — melhoraram com o cuidado colaborativo. É um caso didático de ensaio com desfecho primário neutro e desfechos secundários positivos, que o documento não deve resolver escolhendo um lado: mostra o que a intervenção demonstrou e o que não demonstrou.",
+    "source_refs": [
+      "Bekelman DB, Allen LA, McBryde CF, Hattler B, Fairclough DL, Havranek EP, Turvey C, Meek PM. Effect of a Collaborative Care Intervention vs Usual Care on Health Status of Patients With Chronic Heart Failure: The CASA Randomized Clinical Trial. JAMA Intern Med. 2018;178(4):511-519. DOI: 10.1001/jamainternmed.2017.8667. PMID: 29482218"
+    ],
+    "review_status": "revisado"
   }
 ]
