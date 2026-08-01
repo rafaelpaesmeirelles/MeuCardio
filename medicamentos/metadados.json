@@ -5784,5 +5784,315 @@
       "Administracao": "Tomar com alimento."
     },
     "hepatic_adjustment": "Não recomendado em insuficiência hepática grave (Child-Pugh C); sem informação de ajuste específico para leve/moderada nas fontes consultadas."
+  },
+  {
+    "slug": "nicorandil",
+    "generic_name": "Nicorandil",
+    "drug_class": "Antianginoso vasodilatador — ativador de canal de potássio ATP-dependente, efeito nitrato-símile",
+    "mechanism": "Vasodilatador de mecanismo duplo: (1) abertura de canais de potássio sensíveis a ATP (K-ATP) na musculatura lisa vascular, promovendo predominantemente vasodilatação arteriolar/coronariana (incluindo os vasos de resistência coronarianos, com possível efeito de pré-condicionamento isquêmico); e (2) porção nitrato (éster nicotinamídico com grupo nitrato) que ativa a guanilato ciclase solúvel, aumentando GMPc e produzindo vasodilatação predominantemente venosa, semelhante à dos nitratos orgânicos. A combinação reduz pré-carga e pós-carga e melhora o fluxo sanguíneo miocárdico. Fonte: Nicorandil 10mg/20mg Tablets — Summary of Product Characteristics (SmPC/RCM), electronic medicines compendium (emc), seção 5.1.",
+    "indications": "Tratamento sintomático da angina de peito estável em adultos com controle inadequado pelas terapias antianginosas de primeira linha (betabloqueadores e/ou antagonistas de canal de cálcio), ou que tenham contraindicação/intolerância a essas terapias de primeira linha. Desde a revisão de segurança de 2016 (MHRA/EMA), o nicorandil deixou de ser recomendado como tratamento de primeira linha e passou a ser posicionado como terapia de segunda linha, pelo risco de ulceração grave (ver adverse_effects). Fonte: SmPC (emc, seção 4.1) e MHRA Drug Safety Update, volume 9, issue 6, janeiro de 2016.",
+    "dosing": {
+      "dose": "Dose inicial usual: 10 mg, via oral, 2x/dia (preferencialmente de manhã e à noite). Titular conforme resposta e tolerância até 40 mg 2x/dia, se necessário. Faixa terapêutica habitual: 10-20 mg 2x/dia. Em pacientes particularmente propensos a cefaleia, pode-se iniciar com dose reduzida de 5 mg 2x/dia. Comprimidos devem ser deglutidos inteiros, com água, independentemente das refeições.",
+      "fonte": "Nicorandil 10mg/20mg Tablets — SmPC (emc), seção 4.2; confirmado também no MHRA Drug Safety Update de janeiro de 2016.",
+      "origem da informacao": "NÃO foi localizada bula brasileira nem registro ativo do nicorandil no bulário eletrônico da ANVISA nas buscas realizadas nesta tarefa. O medicamento também não está aprovado/comercializado nos EUA (sem registro no FDA, sem monografia no DailyMed). A informação de dose vem do RCM/SmPC harmonizado pela EMA (marcas Ikorel/Dancor e genéricos) publicado no repertório britânico 'electronic medicines compendium' (emc). VERIFICAÇÃO HUMANA NECESSÁRIA quanto à existência de apresentação comercial brasileira."
+    },
+    "contraindications": [
+      "Hipersensibilidade conhecida ao nicorandil ou a qualquer excipiente",
+      "Choque cardiogênico, hipotensão grave ou disfunção de ventrículo esquerdo com baixa pressão de enchimento",
+      "Hipovolemia",
+      "Edema agudo de pulmão",
+      "Uso concomitante de inibidores da fosfodiesterase-5 (sildenafila, tadalafila, vardenafila e similares) — risco de queda grave e potencialmente fatal da pressão arterial por potencialização do efeito nitrato-símile",
+      "Uso concomitante de estimuladores da guanilato ciclase solúvel (ex.: riociguato) — mesmo mecanismo de risco de hipotensão grave que os inibidores da PDE5"
+    ],
+    "interactions": [
+      "Inibidores da PDE5 (sildenafila, tadalafila, vardenafila): CONTRAINDICADO — risco de hipotensão grave, mesmo mecanismo dos nitratos orgânicos",
+      "Estimuladores da guanilato ciclase solúvel (riociguato): CONTRAINDICADO — mesmo risco de queda acentuada da pressão arterial",
+      "Outros vasodilatadores/anti-hipertensivos e álcool: risco aditivo de hipotensão",
+      "AINEs e ácido acetilsalicílico: aumentam o risco de ulceração/perfuração/hemorragia gastrointestinal associado ao nicorandil",
+      "Corticosteroides: mesmo risco de potencializar ulceração gastrointestinal",
+      "Medicamentos que elevam o potássio sérico, especialmente em insuficiência renal moderada a grave: usar com cautela"
+    ],
+    "monitoring": "Pressão arterial (risco de hipotensão, sobretudo em associação com outros vasodilatadores, hipovolemia ou nas primeiras doses/titulação). Vigilância clínica ativa e contínua — durante todo o tratamento, inclusive anos após o início — para sinais de ulceração oral, gastrointestinal, cutânea, perianal, genital, parastomal e ocular; qualquer ulceração suspeita exige suspensão do nicorandil. Fonte: MHRA Drug Safety Update, janeiro de 2016, e SmPC (emc), seções 4.4 e 4.8.",
+    "adverse_effects": [
+      "Cefaleia — efeito adverso mais comum (mecanismo tipo nitrato), dose-dependente, pode ser atenuada iniciando com dose reduzida de 5 mg 2x/dia; tende a diminuir com o uso continuado",
+      "Tontura, rubor facial (flushing), náusea e vômitos",
+      "Hipotensão",
+      "ALERTA DE SEGURANÇA GRAVE — ulcerações: nicorandil pode causar ulcerações graves, refratárias ao tratamento convencional (incluindo cirurgia), que respondem quase exclusivamente à suspensão do fármaco. Mais frequentemente gastrointestinais (podendo progredir para perfuração, fístula, abscesso ou hemorragia); também descritas ulcerações de pele e mucosas (principalmente perianais, genitais e de estoma/parastomais) e, raramente, ulcerações oculares. Podem surgir em qualquer momento do tratamento, inclusive anos após o início. Pacientes com doença diverticular têm risco aumentado de fístula/perfuração intestinal; uso concomitante de AAS, AINEs ou corticosteroides aumenta o risco. Cicatrização pode levar semanas a meses após a suspensão. Foi por este achado que, em 2016, a MHRA e reguladores da UE reclassificaram o nicorandil de primeira para segunda linha no tratamento da angina estável."
+    ],
+    "pregnancy": "Dados de uso em gestantes são inexistentes ou limitados. Estudos em animais não indicam efeitos deletérios diretos ou indiretos sobre a reprodução, mas, como medida de precaução, o SmPC recomenda evitar o uso do nicorandil durante a gestação. Fonte: Nicorandil Tablets — SmPC (emc), seção 4.6.",
+    "lactation": "Estudos em animais mostram excreção do nicorandil em pequenas quantidades no leite; não se sabe se é excretado no leite humano. Por esse motivo, o SmPC não recomenda o uso de nicorandil durante a amamentação. Fonte: Nicorandil Tablets — SmPC (emc), seção 4.6.",
+    "outcomes": "Estudo IONA (Impact Of Nicorandil in Angina) — IONA Study Group. Effect of nicorandil on coronary events in patients with stable angina: the Impact Of Nicorandil in Angina (IONA) randomised trial. Lancet. 2002;359(9314):1269-1275. PMID 11965271. Ensaio randomizado, duplo-cego, controlado por placebo, 5.126 pacientes com angina estável, nicorandil 20 mg 2x/dia (n=2.565) vs. placebo (n=2.561), como adjuvante à terapia antianginosa padrão, seguimento médio de 1,6 ano. Desfecho primário composto (morte por doença coronariana, IAM não fatal ou internação hospitalar não planejada por dor torácica cardíaca): 337 eventos (13,1%) com nicorandil vs. 398 (15,5%) com placebo — HR 0,83 (IC95% 0,72-0,97; p=0,014). Desfecho secundário (morte por doença coronariana ou IAM não fatal): 107 (4,2%) vs. 134 (5,2%) — HR 0,79 (IC95% 0,61-1,02; p=0,068, não significativo). Síndromes coronarianas agudas: HR 0,79 (IC95% 0,64-0,98; p=0,028).",
+    "references": [
+      "Nicorandil 10mg Tablets · Summary of Product Characteristics (SmPC), electronic medicines compendium (emc) · https://www.medicines.org.uk/emc/product/652/smpc",
+      "Nicorandil 20mg Tablets · Summary of Product Characteristics (SmPC), electronic medicines compendium (emc) · https://www.medicines.org.uk/emc/product/1747/smpc",
+      "Nicorandil (Ikorel): now second-line treatment for angina; risk of ulcer complications · MHRA Drug Safety Update, vol. 9, issue 6, janeiro 2016 · https://assets.publishing.service.gov.uk/media/5a7504bb40f0b6397f35d061/pdf_Jan_2016.pdf",
+      "IONA Study Group. Effect of nicorandil on coronary events in patients with stable angina: the Impact Of Nicorandil in Angina (IONA) randomised trial. Lancet. 2002;359(9314):1269-1275 · PubMed · https://pubmed.ncbi.nlm.nih.gov/11965271/",
+      "The IONA Study Group. Trial to show the impact of nicorandil in angina (IONA): design, methodology, and management · PubMed · https://pubmed.ncbi.nlm.nih.gov/11359763/"
+    ],
+    "review_status": "revisado",
+    "notes": {
+      "alerta_de_seguranca_ulceracao": "Reclassificado de primeira para segunda linha no tratamento da angina estável pela MHRA (Reino Unido) e por reguladores da UE em janeiro de 2016, após revisão de farmacovigilância, motivada pelo risco de ulcerações cutâneas, mucosas e oculares graves — incluindo úlceras gastrointestinais com potencial de perfuração, hemorragia, fístula ou abscesso — refratárias a tratamento convencional (inclusive cirúrgico) e que só respondem à suspensão do fármaco.",
+      "disponibilidade_no_brasil": "Não localizada bula nem registro ativo de nicorandil no bulário eletrônico da ANVISA nesta tarefa; medicamento também sem registro/comercialização nos EUA. Amplamente registrado e comercializado na Europa (marcas Ikorel, Dancor e genéricos). VERIFICAÇÃO HUMANA NECESSÁRIA quanto à disponibilidade comercial atual no Brasil."
+    }
+  },
+  {
+    "slug": "tirzepatida",
+    "review_status": "revisado",
+    "generic_name": "Tirzepatida",
+    "drug_class": "Agonista duplo dos receptores de GIP e GLP-1 (peptídeo insulinotrópico e peptídeo-1 semelhante ao glucagon)",
+    "mechanism": "Agonista de ação dual e simultânea sobre o receptor do GIP (polipeptídeo insulinotrópico dependente de glicose) e o receptor do GLP-1 (peptídeo-1 semelhante ao glucagon), classe distinta dos agonistas seletivos de GLP-1 (ex. semaglutida). Segundo a bula brasileira do MOUNJARO, melhora o controle glicêmico por: aumento da liberação de insulina dependente de glicose; melhora da sensibilidade à insulina, atribuída em parte à redução do peso corporal; redução da concentração de glucagon de jejum e pós-prandial; e retardo do esvaziamento gástrico. Fonte: bula do paciente MOUNJARO (Eli Lilly do Brasil), item 2; e SURPASS-2 (Frías JP et al., N Engl J Med 2021;385(6):503-515, PMID 34170647).",
+    "indications": [
+      "Diabetes mellitus tipo 2: melhora do controle glicêmico em adultos, em conjunto com dieta e exercícios — indicação original, aprovada pela Anvisa em setembro de 2023 (registro Anvisa nº 1.1260.0202; bula do paciente aprovada em 21/11/2024).",
+      "Controle crônico do peso (perda e manutenção de peso), em conjunto com dieta hipocalórica e aumento de atividade física, em adultos com IMC ≥30 kg/m² (obesidade) OU IMC ≥27 kg/m² (sobrepeso) associado a pelo menos uma comorbidade relacionada ao peso — nova indicação aprovada pela Anvisa, publicada no Diário Oficial da União em 09/06/2025, com base nos estudos SURMOUNT-1 e SURMOUNT-2."
+    ],
+    "contraindications": [
+      "Hipersensibilidade conhecida à tirzepatida ou a qualquer componente da fórmula.",
+      "Histórico pessoal ou familiar de carcinoma medular de tireoide (CMT) — contraindicação formal no rótulo brasileiro (diferente da rotulagem brasileira de alguns agonistas seletivos de GLP-1, em que esse histórico consta como precaução, não contraindicação formal).",
+      "Neoplasia endócrina múltipla tipo 2 (NEM2)."
+    ],
+    "interactions": [
+      "MOUNJARO retarda o esvaziamento gástrico e tem potencial de afetar a absorção de medicamentos orais concomitantes. A bula brasileira declara não haver impacto clinicamente significativo sobre atorvastatina, digoxina, etinilestradiol, lisinopril, metformina, metoprolol, norelgestromina, paracetamol, sitagliptina e varfarina, sem necessidade de ajuste de dose.",
+      "Insulina basal e secretagogos de insulina (ex. sulfonilureia): risco aumentado de hipoglicemia quando combinados com tirzepatida — considerar redução da dose desses outros medicamentos."
+    ],
+    "monitoring": [
+      "Sintomas de tumor de tireoide (massa cervical, disfagia, dispneia, rouquidão persistente).",
+      "Sinais e sintomas de pancreatite aguda; em caso de suspeita, interromper o tratamento.",
+      "Glicemia, quando em combinação com insulina basal ou sulfonilureia.",
+      "Estado de hidratação e função renal.",
+      "Sinais de reação de hipersensibilidade.",
+      "Sinais de doença aguda da vesícula biliar.",
+      "Estado nutricional (peso corporal, sinais de deficiência de vitaminas/minerais/proteína).",
+      "Humor e ideação suicida, especialmente em paciente com histórico de tentativa de suicídio, depressão ou transtorno de humor.",
+      "Retinopatia diabética preexistente — a tirzepatida não foi estudada em retinopatia diabética grave."
+    ],
+    "adverse_effects": [
+      "Muito comum (>10%): náusea e diarreia; hipoglicemia quando combinada com insulina basal ou sulfonilureia.",
+      "Comum (1-10%): dor abdominal, vômito, dispepsia, constipação, distensão abdominal, eructação, flatulência, DRGE, doença aguda da vesícula biliar, fadiga, reação no local da injeção, reação de hipersensibilidade, redução do apetite.",
+      "Incomum (0,1-1%): disgeusia; pós-comercialização, disestesia.",
+      "Rara (0,01-0,1%, pós-comercialização): reação anafilática, angioedema.",
+      "A incidência de náusea, vômito e diarreia é maior durante a titulação e diminui com o tempo; a maioria dos eventos GI foi leve a moderada.",
+      "Pancreatite aguda: citada como advertência, sem frequência numérica declarada no rótulo brasileiro consultado.",
+      "Fonte: bula do paciente MOUNJARO (tirzepatida), Eli Lilly do Brasil, aprovada pela Anvisa em 21/11/2024."
+    ],
+    "dosing": {
+      "dose inicial": "2,5 mg por via subcutânea, uma vez por semana — dose de adaptação, não terapêutica.",
+      "titulacao semana 5": "Após 4 semanas na dose inicial, aumentar para 5 mg uma vez por semana.",
+      "titulacao subsequente": "Se necessário, novos aumentos em acréscimos de 2,5 mg, sempre após mínimo de 4 semanas na dose atual (degraus: 2,5 → 5 → 7,5 → 10 → 12,5 → 15 mg).",
+      "dose maxima": "15 mg por via subcutânea, uma vez por semana.",
+      "apresentacoes": "Solução injetável em caneta aplicadora de uso único (0,5 mL), nas dosagens de 2,5, 5, 7,5, 10, 12,5 ou 15 mg; embalagem com 4 canetas.",
+      "via e local": "Subcutânea, no abdome, coxa ou braço, com rodízio do local a cada dose; pode ser administrada em qualquer horário, independente das refeições.",
+      "dose esquecida": "Administrar assim que possível, dentro de 4 dias (96 horas) do esquecimento; se mais de 4 dias, pular e retomar no dia habitual.",
+      "populacoes especiais": "Bula declara não ser necessário ajustar a dose por idade, sexo, raça, etnia, peso corporal ou insuficiência hepática/renal (incluindo estágio terminal). Não estabelecida em menores de 18 anos.",
+      "meia-vida": "Aproximadamente 5 dias, segundo a bula.",
+      "fonte": "Bula do paciente MOUNJARO (tirzepatida), Eli Lilly do Brasil Ltda., aprovada pela Anvisa em 21/11/2024 (registro Anvisa nº 1.1260.0202).",
+      "origem da informacao": "Bula brasileira do detentor do registro (Eli Lilly do Brasil), consultada na íntegra nesta sessão — não é rotulagem estrangeira. A bula consultada é a versão de 21/11/2024, anterior à publicação da nova indicação de controle de peso (09/06/2025) — não confirmado se bula posterior alterou o esquema de titulação."
+    },
+    "outcomes": {
+      "SURMOUNT-1 — perda de peso em obesidade/sobrepeso": "Jastreboff AM et al. Tirzepatide Once Weekly for the Treatment of Obesity. N Engl J Med. 2022;387(3):205-216. PMID 35658024. Ensaio de fase 3, 2.539 adultos com obesidade/sobrepeso com comorbidade (sem diabetes), 72 semanas. Redução média de peso vs. placebo: -15,0% (5 mg), -19,5% (10 mg), -20,9% (15 mg), vs. -3,1% placebo. Redução ≥5%: 85%, 89%, 91% vs. 35% placebo (P<0,001).",
+      "SURPASS-2 — diabetes tipo 2, comparação com semaglutida": "Frías JP et al. Tirzepatide versus Semaglutide Once Weekly in Patients with Type 2 Diabetes. N Engl J Med. 2021;385(6):503-515. PMID 34170647. Ensaio de fase 3, 1.879 adultos com DM2 em metformina, 40 semanas, tirzepatida vs. semaglutida 1 mg/semana. Redução de HbA1c: -2,01 (5 mg), -2,24 (10 mg), -2,30 (15 mg) pontos percentuais vs. -1,86 com semaglutida (P=0,02 para 5 mg; P<0,001 para 10/15 mg). Redução de peso, diferença vs. semaglutida: -1,9 kg (5 mg), -3,6 kg (10 mg), -5,5 kg (15 mg), todas P<0,001.",
+      "SUMMIT — insuficiência cardíaca com fração de ejeção preservada e obesidade": "Packer M et al. Tirzepatide for Heart Failure with Preserved Ejection Fraction and Obesity. N Engl J Med. 2025;392(5):427-437. PMID 39555826. Ensaio de fase 3, pacientes com IC FEVE ≥50%, obesidade (IMC ≥30) e NYHA ≥II. Desfecho composto de morte cardiovascular ou piora de IC: 9,9% (tirzepatida) vs. 15,3% (placebo), HR 0,62 (IC95% 0,41-0,95; P=0,026). Eventos de piora da IC isolados: 8,0% vs. 14,2%, HR 0,54 (IC95% 0,34-0,85). KCCQ-CSS em 52 semanas: +19,5 pontos (tirzepatida) vs. +12,7 (placebo), diferença 6,9 pontos (IC95% 3,3-10,6; P<0,001)."
+    },
+    "pregnancy": "'MOUNJARO somente deve ser utilizado em gestantes se o benefício potencial para a mãe justificar o risco para o bebê. Este medicamento não deve ser utilizado por mulheres grávidas sem orientação médica' — texto literal da bula do paciente, item 4. A bula brasileira consultada não especifica categoria de risco gestacional nem detalha dados pré-clínicos de reprodução para este ponto — VERIFICAÇÃO HUMANA NECESSÁRIA quanto à categoria de risco. Fonte: bula do paciente MOUNJARO, Eli Lilly do Brasil, aprovada pela Anvisa em 21/11/2024.",
+    "lactation": "'A quantidade de MOUNJARO no leite materno foi considerada indetectável a muito baixa. Ainda que presente no leite materno, não é esperado que seja absorvido pelo bebê. MOUNJARO somente deve ser utilizado em lactantes se o benefício potencial para a mãe justificar o risco para o bebê' — texto literal da bula do paciente, item 4. Fonte: bula do paciente MOUNJARO, Eli Lilly do Brasil, aprovada pela Anvisa em 21/11/2024.",
+    "references": [
+      "Bula do paciente MOUNJARO (tirzepatida) · Eli Lilly do Brasil Ltda., registro Anvisa nº 1.1260.0202, aprovada pela Anvisa em 21/11/2024 · https://static.poder360.com.br/2025/03/bula-mounjaro.pdf",
+      "Mounjaro® (tirzepatida): nova indicação (controle crônico do peso) · Agência Nacional de Vigilância Sanitária (Anvisa), DOU 09/06/2025 · https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/novos-medicamentos-e-indicacoes/mounjaro-r-tirzepatida-nova-indicacao",
+      "Jastreboff AM et al. Tirzepatide Once Weekly for the Treatment of Obesity (SURMOUNT-1) · N Engl J Med. 2022;387(3):205-216 · https://pubmed.ncbi.nlm.nih.gov/35658024/",
+      "Frías JP et al. Tirzepatide versus Semaglutide Once Weekly in Patients with Type 2 Diabetes (SURPASS-2) · N Engl J Med. 2021;385(6):503-515 · https://pubmed.ncbi.nlm.nih.gov/34170647/",
+      "Packer M et al. Tirzepatide for Heart Failure with Preserved Ejection Fraction and Obesity (SUMMIT) · N Engl J Med. 2025;392(5):427-437 · https://pubmed.ncbi.nlm.nih.gov/39555826/"
+    ],
+    "notes": {
+      "Relevancia cardiologica crescente": "A tirzepatida ganha relevância direta em cardiologia por dois caminhos que convergem no ensaio SUMMIT: obesidade como fator de risco mecânico/neuro-hormonal para ICFEp, e o SUMMIT como primeiro ensaio de fase 3 a demonstrar redução do composto morte cardiovascular/piora de IC com agonista GIP/GLP-1 especificamente em ICFEp+obesidade. Fonte: Packer M et al., SUMMIT, N Engl J Med. 2025;392(5):427-437, PMID 39555826.",
+      "Observacao metodologica": "A bula consultada (21/11/2024) antecede a aprovação da nova indicação de controle de peso (09/06/2025); se houver divergência de texto na versão pós-09/06/2025, não foi conferida aqui."
+    }
+  },
+  {
+    "slug": "minoxidil",
+    "generic_name": "Minoxidil (via oral)",
+    "drug_class": "Vasodilatador arteriolar direto — anti-hipertensivo de exceção (reserva terapêutica para hipertensão grave/resistente)",
+    "mechanism": "Vasodilatador arteriolar direto: o metabólito ativo minoxidil sulfato abre canais de potássio sensíveis a ATP (K-ATP) na musculatura lisa vascular, promovendo hiperpolarização da membrana e relaxamento arteriolar. Reduz a resistência vascular periférica por ação predominantemente arterial, com efeito mínimo sobre o leito venoso (não causa hipotensão ortostática por si só). Fonte: bula FDA/DailyMed do minoxidil oral (rótulo LONITEN/genérico) e Bursztyn M, Ben-Dov IZ. Contemporary Use of an Old Drug: Minoxidil for Resistant Hypertension. Hypertension. 2025;82(4):543-548 (PMID 40106530).",
+    "indications": "Tratamento da hipertensão arterial grave, sintomática ou associada a lesão de órgão-alvo, refratária ao tratamento com dose máxima de um diurético associado a pelo menos outros dois anti-hipertensivos. Texto da bula (DailyMed): 'Minoxidil tablets are indicated only in the treatment of hypertension that is symptomatic or associated with target organ damage and that is not manageable with maximally titrated doses of a diuretic plus two other antihypertensive agents.' Não é indicação de primeira linha.",
+    "dosing": {
+      "dose": "Adultos e crianças acima de 12 anos: dose inicial de 5 mg em dose única diária. Titulação: pode ser aumentada para 10, 20 e depois 40 mg/dia, com intervalo mínimo de 3 dias entre ajustes. Faixa de dose efetiva habitual: 10-40 mg/dia. Dose máxima: 100 mg/dia. Dose única diária se a redução da PA diastólica for <30 mmHg; doses divididas se a redução for >30 mmHg. Crianças <12 anos: início 0,2 mg/kg em dose única diária, faixa efetiva 0,25-1 mg/kg/dia, máximo 50 mg/dia.",
+      "fonte": "Bula FDA/DailyMed do minoxidil oral em comprimidos (LONITEN e genéricos) — DailyMed, seção Dosage and Administration.",
+      "origem da informacao": "IMPORTANTE — não foi localizada bula brasileira vigente da ANVISA para minoxidil oral em comprimido industrializado. Fontes secundárias convergem em afirmar que o produto industrializado Loniten 10 mg (Pfizer) teve registro histórico na ANVISA para hipertensão grave, mas foi descontinuado do mercado brasileiro por volta de 2010 — hoje, quando indicado no Brasil, o minoxidil oral para uso cardiovascular só está disponível por manipulação magistral (RDC 67/2007), fora de apresentação industrializada com bula própria. Não foi possível acessar diretamente o Bulário Eletrônico da ANVISA nesta pesquisa (bloqueio HTTP 403). A dosagem vem integralmente da bula FDA/DailyMed. VERIFICAÇÃO HUMANA NECESSÁRIA quanto ao status regulatório brasileiro exato de hoje."
+    },
+    "contraindications": [
+      "Feocromocitoma — o minoxidil pode estimular a secreção de catecolaminas pelo tumor, podendo precipitar crise hipertensiva paradoxal (bula FDA/DailyMed).",
+      "Hipersensibilidade ao minoxidil ou a qualquer componente da formulação (bula FDA/DailyMed)."
+    ],
+    "interactions": [
+      "Guanetidina: uso concomitante pode causar hipotensão ortostática profunda. A bula recomenda suspender a guanetidina antes de iniciar minoxidil ou, se isso não for possível, hospitalizar o paciente durante o início da titulação. A bula original não detalha outras interações formais além desta."
+    ],
+    "monitoring": [
+      "Terapia combinada OBRIGATÓRIA, não opcional: a bula é explícita — deve ser administrado usualmente junto de betabloqueador (dose equivalente a 80-160 mg/dia de propranolol) para prevenir taquicardia, e usualmente com diurético — frequentemente de alça — para prevenir retenção hídrica grave.",
+      "Frequência cardíaca e sinais de isquemia miocárdica: o minoxidil aumenta a FC por taquicardia reflexa e pode desencadear ou agravar angina.",
+      "Peso corporal e edema a cada consulta.",
+      "Derrame pericárdico: a bula orienta observação clínica atenta, com ecocardiograma se houver suspeita clínica. Risco maior em pacientes com função renal comprometida.",
+      "Hipertricose: monitorar e orientar o paciente sobre o crescimento capilar difuso esperado.",
+      "Alterações eletrocardiográficas: mudanças na direção e magnitude da onda T ocorrem em cerca de 60% dos pacientes, segundo a bula."
+    ],
+    "adverse_effects": [
+      "Hipertricose (alongamento, espessamento e hiperpigmentação de pelos finos) em aproximadamente 80% dos pacientes — início em 3-6 semanas, resolução em 1-6 meses após a suspensão (bula FDA/DailyMed).",
+      "Edema/retenção hídrica temporária em cerca de 7% dos pacientes sem edema no início do tratamento (bula FDA/DailyMed).",
+      "Derrame pericárdico, ocasionalmente com tamponamento, em cerca de 3% dos pacientes não dialíticos, principalmente com função renal comprometida — efeito adverso mais grave e motivo pelo qual o minoxidil é reservado a casos refratários.",
+      "Taquicardia reflexa e possível piora ou surgimento de angina (bula FDA/DailyMed).",
+      "Alterações do segmento/onda T ao ECG em cerca de 60% dos pacientes (bula FDA/DailyMed).",
+      "Rash cutâneo por hipersensibilidade em menos de 1% dos pacientes.",
+      "Trombocitopenia e leucopenia (leucócitos <3.000/mm³) raramente relatadas."
+    ],
+    "pregnancy": "Categoria C (sistema antigo de classificação da FDA, mantido na bula deste fármaco). Estudos em animais mostraram aumento de reabsorção fetal em coelhas com doses cerca de 5 vezes a dose máxima anti-hipertensiva oral recomendada em humanos, sem evidência de efeito teratogênico em ratos e coelhos. Hipertricose neonatal foi relatada após exposição materna durante a gestação. A bula orienta uso na gravidez apenas se o benefício justificar o risco ao feto. Fonte: bula FDA/DailyMed, seção Pregnancy.",
+    "lactation": "Há relato de excreção de minoxidil no leite materno em mulher tratada com 5 mg de minoxidil oral duas vezes ao dia para hipertensão. Pelo potencial de efeitos adversos no lactente, a bula orienta que o minoxidil não deve ser administrado a mulher em amamentação. Fonte: bula FDA/DailyMed, seção Nursing Mothers.",
+    "outcomes": {
+      "resumo": "A evidência de eficácia do minoxidil oral em hipertensão resistente é predominantemente observacional/retrospectiva — não foi localizado ensaio clínico randomizado controlado contemporâneo comparando minoxidil a placebo ou outro vasodilatador de reserva em hipertensão resistente verdadeira. É fármaco antigo (aprovado pela FDA em 1979), reposicionado como terapia de reserva, cuja evidência moderna vem de coortes retrospectivas em centros especializados.",
+      "estudo_principal": "Mundt HM, Matenaer M, Lammert A, Göttmann U, Krämer BK, Birck R, Benck U. Minoxidil for Treatment of Resistant Hypertension in Chronic Kidney Disease — A Retrospective Cohort Analysis. J Clin Hypertens (Greenwich). 2016;18(11):1162-1167. PMID 27246772. Coorte retrospectiva de 54 pacientes internados com hipertensão não controlada; a adição de minoxidil reduziu a pressão de 162,4±15,1/83,2±12,7 mmHg para 135,8±12,2/72,8±6,9 mmHg (p<0,0001).",
+      "revisao_contemporanea": "Bursztyn M, Ben-Dov IZ. Contemporary Use of an Old Drug: Minoxidil for Resistant Hypertension. Hypertension. 2025;82(4):543-548. PMID 40106530. Revisão contemporânea; o texto completo não pôde ser acessado nesta pesquisa (bloqueio HTTP 403). Citada apenas como referência de leitura complementar, sem números extraídos dela."
+    },
+    "references": [
+      "Label: MINOXIDIL tablet · DailyMed (NIH/NLM) · https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=a0066eac-cb58-49ef-a480-105cb1043c2b",
+      "Label: minoxidil tablet (LONITEN e genéricos) · DailyMed (NIH/NLM) · https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=0354a7f5-5917-44dc-9963-411104008cb5",
+      "Loniten (minoxidil) Tablets — approval letter e histórico regulatório · FDA · https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2015/018154Orig1s026ltr.pdf",
+      "Mundt HM et al. Minoxidil for Treatment of Resistant Hypertension in Chronic Kidney Disease · J Clin Hypertens (Greenwich). 2016;18(11):1162-1167, PMID 27246772 · https://pubmed.ncbi.nlm.nih.gov/27246772/",
+      "Bursztyn M, Ben-Dov IZ. Contemporary Use of an Old Drug: Minoxidil for Resistant Hypertension. Hypertension. 2025;82(4):543-548, PMID 40106530 · https://pubmed.ncbi.nlm.nih.gov/40106530/",
+      "Pericardial effusion associated with minoxidil therapy: case reports, PMID 1637746 · https://pubmed.ncbi.nlm.nih.gov/1637746/"
+    ],
+    "review_status": "revisado",
+    "notes": {
+      "terapia_combinada_obrigatoria": "O minoxidil oral NUNCA deve ser prescrito em monoterapia para hipertensão: a bula condiciona seu uso a supervisão clínica estrita, associado usualmente a betabloqueador (dose equivalente a 80-160 mg/dia de propranolol) e a diurético — geralmente de alça.",
+      "status_regulatorio_brasil": "Registro histórico do produto industrializado (Loniten 10 mg, Pfizer) existiu no Brasil, mas fontes secundárias relatam descontinuação comercial por volta de 2010; hoje o uso oral cardiovascular tende a depender de manipulação magistral. VERIFICAÇÃO HUMANA NECESSÁRIA para confirmar o status de registro exato e atual.",
+      "perfil_de_uso": "Fármaco de exceção/terceira-quarta linha para hipertensão verdadeiramente resistente ou grave com lesão de órgão-alvo, junto de hidralazina, clonidina e metildopa já cadastrados na base."
+    }
+  },
+  {
+    "slug": "vernakalanto",
+    "review_status": "revisado",
+    "generic_name": "Vernakalanto",
+    "brand_names": [
+      "Brinavess"
+    ],
+    "drug_class": "Antiarrítmico intravenoso atrial-seletivo (bloqueador multicanal, cardioversão química da FA de início recente)",
+    "mechanism": "Antiarrítmico atrial-seletivo que bloqueia múltiplas correntes iônicas cardíacas (incluindo correntes de potássio e de sódio), com seletividade preferencial pelo tecido atrial em relação ao ventricular — prolonga a refratariedade atrial e reduz a condução do impulso de forma frequência-dependente nos átrios. Fonte: EMA, Resumo das Características do Medicamento (SmPC) do BRINAVESS, secção 5.1, texto original: 'Vernakalant hydrochloride is a novel anti-arrhythmic drug that acts preferentially in the atria to prolong atrial refractoriness and to rate-dependently slow impulse conduction.'",
+    "indications": [
+      "Reversão rápida (cardioversão química) de fibrilação atrial de início recente para ritmo sinusal, em adultos: FA com duração ≤7 dias em pacientes não cirúrgicos; FA com duração ≤3 dias em pacientes no pós-operatório de cirurgia cardíaca. Fonte: EMA, SmPC BRINAVESS, secção 4.1."
+    ],
+    "contraindications": [
+      "Hipersensibilidade à substância ativa (vernakalanto) ou a qualquer excipiente da fórmula",
+      "Estenose aórtica grave",
+      "Pressão arterial sistólica < 100 mmHg",
+      "Insuficiência cardíaca classe funcional NYHA III ou NYHA IV",
+      "Prolongamento do intervalo QT basal (QT não corrigido > 440 ms)",
+      "Bradicardia grave, disfunção do nó sinusal, ou bloqueio atrioventricular de 2º ou 3º grau, na ausência de marca-passo",
+      "Uso de antiarrítmicos intravenosos de controle de ritmo (classe I e classe III) nas 4 horas anteriores, ou nas primeiras 4 horas após a administração de vernakalanto",
+      "Síndrome coronariana aguda (incluindo infarto agudo do miocárdio) nos 30 dias anteriores",
+      "fonte: EMA, SmPC BRINAVESS (vernakalant), secção 4.3 (Contraindicações), conferida verbatim via medicines.org.uk/emc, produto 7249."
+    ],
+    "interactions": [
+      "Nenhum estudo formal de interação medicamentosa foi realizado com o vernakalanto ('No interaction studies have been performed', SmPC secção 4.5).",
+      "Antiarrítmicos intravenosos de classe I e classe III não devem ser administrados nas 4 horas anteriores nem nas 4 horas posteriores à infusão de vernakalanto — é contraindicação formal (ver contraindications), não apenas precaução.",
+      "A retomada ou o início de terapia antiarrítmica oral de manutenção pode ser considerado a partir de 2 horas após a administração de vernakalanto.",
+      "Vernakalanto é substrato da CYP2D6, mas análises farmacocinéticas populacionais não mostraram diferença relevante na exposição aguda ao fármaco quando administrado com inibidores fracos ou potentes da CYP2D6 — não é necessário ajuste de dose conforme o status metabolizador de CYP2D6.",
+      "fonte: EMA, SmPC BRINAVESS, secção 4.5 (Interações medicamentosas e outras formas de interação)."
+    ],
+    "monitoring": [
+      "Monitorização contínua do ritmo cardíaco (ECG) e dos sinais vitais durante toda a duração da infusão e por, no mínimo, 15 minutos após o término da infusão.",
+      "Vigilância ativa para hipotensão — tipicamente precoce, durante a infusão ou logo após o término, geralmente corrigível com medidas de suporte padrão (ex.: posição de Trendelenburg, fluido IV).",
+      "Vigilância para bradicardia e para prolongamento do intervalo QT/eventos proarrítmicos (incluindo flutter atrial com condução atrioventricular 1:1 — ver adverse_effects).",
+      "fonte: EMA, SmPC BRINAVESS, secção 4.4 (Advertências e precauções especiais de utilização)."
+    ],
+    "adverse_effects": [
+      "Muito comum (≥1/10): disgeusia (alteração do paladar), espirros",
+      "Comum (≥1/100 a <1/10): parestesia, tontura, bradicardia, flutter atrial, hipotensão, tosse, náusea, prurido, hiperidrose, dor no local da infusão, sensação de calor",
+      "Incomum (≥1/1.000 a <1/100): hipoestesia, sensação de queimação, síncope, parada sinusal, taquicardia ventricular, rubor, dispneia, boca seca, fadiga, diarreia",
+      "Rara (≥1/10.000 a <1/1.000): flutter atrial com condução atrioventricular 1:1",
+      "Eventos graves associados ao uso (não estratificados por frequência nesta extração): hipotensão grave, arritmias ventriculares e distúrbios de condução — foram os motivos declarados pela FDA para recusar a aprovação nos EUA (ver notes)",
+      "fonte: EMA, SmPC BRINAVESS, secção 4.8 (Efeitos indesejáveis), conferida verbatim via medicines.org.uk/emc, produto 7249."
+    ],
+    "pregnancy": "Não há dados sobre o uso de vernakalanto em mulheres grávidas. Estudos em animais são insuficientes para avaliar completamente os efeitos sobre gravidez, desenvolvimento embrionário/fetal, parto e desenvolvimento pós-natal. Texto da fonte: 'it is preferable to avoid the use of vernakalant during pregnancy' — é preferível evitar o uso de vernakalanto durante a gravidez, salvo julgamento clínico de que o benefício supera o risco. Fonte europeia (EMA, SmPC BRINAVESS, secção 4.6), não bula brasileira — este fármaco não tem produto registrado no Brasil (ver dosing.origem da informacao).",
+    "lactation": "Desconhece-se se o vernakalanto ou seus metabólitos são excretados no leite humano. Um risco para o recém-nascido/lactente não pode ser excluído. Fonte, texto da SmPC: 'It is unknown whether vernakalant/metabolites are excreted in human milk... A risk to the newborns/infants cannot be excluded' — a decisão de amamentar ou não deve ponderar o benefício da amamentação para a criança e da terapia para a mãe. Fonte europeia (EMA, SmPC BRINAVESS, secção 4.6), não bula brasileira — este fármaco não tem produto registrado no Brasil (ver dosing.origem da informacao).",
+    "dosing": {
+      "origem da informacao": "⚠️ Rotulagem estrangeira — não há bula brasileira. Vernakalanto/vernakalant NÃO tem produto registrado na ANVISA e também NÃO é aprovado pela FDA nos Estados Unidos: a FDA recusou o pedido de registro em 2008 (após um painel consultivo votar 6:2 a favor em 2007) e recusou novamente em dezembro de 2019, quando o comitê consultivo de Drogas Cardiovasculares e Renais votou 2-11 contra a aprovação, por preocupação com hipotensão grave, arritmias ventriculares, distúrbios de condução e óbito — não há, portanto, registro no DailyMed. A posologia abaixo vem do Resumo das Características do Medicamento (SmPC) aprovado pela EMA para BRINAVESS (vernakalant), em inglês (medicines.org.uk/emc, produto 7249, e PDF oficial da EMA), fármaco também aprovado pela Health Canada sob o mesmo nome comercial — não é bula brasileira e não corresponde a nenhuma apresentação disponível em farmácia no Brasil; uso no país, se ocorrer, seria por importação excepcional.",
+      "dose": "Infusão IV inicial de 3 mg/kg ao longo de 10 minutos (dose inicial máxima de 339 mg, ou seja, tetada para peso de aproximadamente 113 kg). Se a fibrilação atrial não reverter dentro de 15 minutos após o término da primeira infusão, pode ser administrada uma segunda infusão de 2 mg/kg ao longo de 10 minutos (dose máxima da segunda infusão: 226 mg). Doses cumulativas acima de 5 mg/kg não devem ser administradas dentro de 24 horas. Retomada ou início de terapia antiarrítmica oral de manutenção pode ser considerado a partir de 2 horas após a administração de vernakalanto. Sem necessidade de ajuste de dose por insuficiência renal, insuficiência hepática ou idade (≥65 anos). Não há uso relevante em crianças e adolescentes <18 anos, e o fármaco não deve ser usado nessa população.",
+      "fonte": "EMA, SmPC BRINAVESS (vernakalant), secção 4.2 (Posologia e modo de administração), conferida verbatim via medicines.org.uk/emc, produto 7249, e cruzada com o PDF oficial da EMA (ema.europa.eu/en/documents/product-information/brinavess-epar-product-information_en.pdf)."
+    },
+    "outcomes": {
+      "AVRO — vernakalanto versus amiodarona": "Camm AJ, Capucci A, Hohnloser SH, Torp-Pedersen C, Van Gelder IC, Mangal B, Beatch G; AVRO Investigators. A randomized active-controlled study comparing the efficacy and safety of vernakalant to amiodarone in recent-onset atrial fibrillation. J Am Coll Cardiol. 2011;57(3):313-321. PMID 21232669. Ensaio randomizado, duplo-cego, com 254 pacientes com FA de 3 a 48 horas de duração elegíveis para cardioversão. Desfecho primário — conversão de FA para ritmo sinusal dentro dos primeiros 90 minutos: 60 de 116 (51,7%) pacientes com vernakalanto versus 6 de 116 (5,2%) com amiodarona (p<0,0001). Tempo mediano de conversão nos respondedores ao vernakalanto: 11 minutos. Alívio de sintomas em 90 minutos: 53,4% (vernakalanto) versus 32,8% (amiodarona), p=0,0012. Segurança: sem casos de torsades de pointes, fibrilação ventricular ou taquicardia ventricular polimórfica/sustentada em nenhum dos dois grupos. É o documento de referência já existente na base (content/Fibrilação_atrial/vernakalant-versus-amiodarona-na-cardioversao-quimica-o-ensaio-avro.md).",
+      "ACT-I — ensaio pivotal placebo-controlado": "Roy D, Pratt CM, Torp-Pedersen C, Wyse DG, Toft E, Juul-Moller S, Nielsen T, Rasmussen SL, Stiell IG, Coutu B, Ip JH, Pritchett EL, Camm AJ; Atrial Arrhythmia Conversion Trial Investigators. Vernakalant hydrochloride for rapid conversion of atrial fibrillation: a phase 3, randomized, placebo-controlled trial. Circulation. 2008;117(12):1518-1525. PMID 18332267. No subgrupo de FA de curta duração, 51,7% converteram para ritmo sinusal com vernakalanto versus 4,0% (3 de 75) com placebo (p<0,001). Na população geral do estudo (incluindo FA de longa duração, menos responsiva), 83 de 221 pacientes com vernakalanto (37,6%) tiveram reversão da FA versus 3 de 115 com placebo (2,6%; p<0,001). Tempo mediano de conversão: 11 minutos. Efeitos adversos mais comuns: disgeusia transitória e espirros; 4 eventos adversos graves em 3 pacientes tratados com vernakalanto.",
+      "ACT-III — ensaio placebo-controlado, subgrupos de duração curta e longa": "Pratt CM, Roy D, Torp-Pedersen C, Wyse DG, Toft E, Juul-Moller S, Retyk E, Drenning DH; Atrial Arrhythmia Conversion Trial (ACT-III) Investigators. Usefulness of vernakalant hydrochloride injection for rapid conversion of atrial fibrillation. Am J Cardiol. 2010;106(9):1277-1283. PMID 21029824. FA de curta duração (>3 horas a ≤7 dias): 44 de 86 (51,2%) converteram com vernakalanto versus 3 de 84 (3,6%) com placebo (p<0,0001); tempo mediano de conversão nos respondedores: 8 minutos. População geral (curta + longa duração): 47 de 118 (39,8%) versus 4 de 121 (3,3%) com placebo (p<0,0001). Segurança: um paciente com estenose aórtica grave (condição hoje contraindicação formal) apresentou complicação grave, com hipotensão, fibrilação ventricular e óbito.",
+      "ACT-II — FA pós-cirurgia cardíaca": "Kowey PR, Dorian P, Mitchell LB, Pratt CM, Roy D, Schwartz PJ, Sadowski J, Sobczyk D, Bochenek A, Toft E; Atrial Arrhythmia Conversion Trial Investigators. Vernakalant hydrochloride for the rapid conversion of atrial fibrillation after cardiac surgery: a randomized, double-blind, placebo-controlled trial. Circ Arrhythm Electrophysiol. 2009;2(6):652-659. PMID 19948506. Em pacientes com FA ou flutter atrial após CRM, cirurgia valvar ou ambas: 47 de 100 (47%) converteram para ritmo sinusal com vernakalanto versus 7 de 50 (14%) com placebo (p<0,001); tempo mediano de conversão: 12 minutos. É o ensaio que sustenta especificamente a indicação de FA pós-operatória ≤3 dias."
+    },
+    "notes": {
+      "ausencia_de_registro_brasil_e_eua": "Vernakalanto está aprovado em cerca de 41 países (incluindo Canadá e países europeus, sob o nome comercial Brinavess), mas NÃO tem registro na ANVISA e NÃO é aprovado pela FDA nos Estados Unidos — dois ciclos de recusa (2008 e dezembro de 2019), o mais recente por voto 2-11 do comitê consultivo cardiovascular/renal da FDA, citando hipotensão grave, arritmias ventriculares, distúrbios de condução e óbito como motivos de segurança.",
+      "relacao_com_documento_clinico_ja_existente": "A base já tem o documento clínico content/Fibrilação_atrial/vernakalant-versus-amiodarona-na-cardioversao-quimica-o-ensaio-avro.md, centrado no ensaio AVRO. Este verbete fecha o gap do fármaco em si na base estruturada de medicamentos.",
+      "verificacao_pendente": "VERIFICAÇÃO HUMANA NECESSÁRIA para presentations/commercial_presentations e half_life_hours — não localizados com fonte primária conferida nesta sessão."
+    },
+    "references": [
+      "Brinavess (vernakalant) — Summary of Product Characteristics (SmPC), European Medicines Agency (EMA) · medicines.org.uk/emc, produto 7249 · https://www.medicines.org.uk/emc/product/7249/smpc",
+      "Brinavess, INN-vernakalant hydrochloride — Annex I Summary of Product Characteristics · European Medicines Agency · https://www.ema.europa.eu/en/documents/product-information/brinavess-epar-product-information_en.pdf",
+      "Camm AJ et al; AVRO Investigators. A randomized active-controlled study comparing the efficacy and safety of vernakalant to amiodarone in recent-onset atrial fibrillation. J Am Coll Cardiol. 2011;57(3):313-321 · PubMed · https://pubmed.ncbi.nlm.nih.gov/21232669/",
+      "Roy D et al; Atrial Arrhythmia Conversion Trial Investigators. Vernakalant hydrochloride for rapid conversion of atrial fibrillation: a phase 3, randomized, placebo-controlled trial (ACT-I). Circulation. 2008;117(12):1518-1525 · PubMed · https://pubmed.ncbi.nlm.nih.gov/18332267/",
+      "Pratt CM et al; Atrial Arrhythmia Conversion Trial (ACT-III) Investigators. Usefulness of vernakalant hydrochloride injection for rapid conversion of atrial fibrillation. Am J Cardiol. 2010;106(9):1277-1283 · PubMed · https://pubmed.ncbi.nlm.nih.gov/21029824/",
+      "Kowey PR et al; Atrial Arrhythmia Conversion Trial Investigators. Vernakalant hydrochloride for the rapid conversion of atrial fibrillation after cardiac surgery (ACT-II). Circ Arrhythm Electrophysiol. 2009;2(6):652-659 · PubMed · https://pubmed.ncbi.nlm.nih.gov/19948506/",
+      "FDA Advisors Decline to Recommend Vernakalant Approval · tctmd.com · https://www.tctmd.com/news/fda-advisors-decline-recommend-vernakalant-approval",
+      "Brinavess (vernakalant): What is it and is it FDA approved? · Drugs.com · https://www.drugs.com/history/brinavess.html"
+    ]
+  },
+  {
+    "slug": "ibutilida",
+    "generic_name": "Ibutilida (fumarato)",
+    "brand_names": [
+      "Corvert"
+    ],
+    "review_status": "revisado",
+    "drug_class": "Antiarrítmico classe III (Vaughan Williams), de uso exclusivamente intravenoso hospitalar",
+    "mechanism": "Prolonga a duração do potencial de ação e aumenta a refratariedade atrial e ventricular (efeito eletrofisiológico classe III), mas por mecanismo distinto de outros antiarrítmicos classe III como sotalol e amiodarona: em concentrações nanomolares, retarda a repolarização por ativação de uma corrente lenta de entrada — predominantemente de sódio — em vez de bloquear as correntes de saída de potássio. Fonte: bula FDA/DailyMed de CORVERT (ibutilide fumarate injection), seção de farmacologia clínica.",
+    "indications": [
+      "Conversão farmacológica rápida de fibrilação atrial ou flutter atrial de início recente para ritmo sinusal. A eficácia diminui quando a arritmia dura mais de 90 dias (fonte: bula FDA/DailyMed de CORVERT)."
+    ],
+    "dosing": {
+      "origem da informacao": "VERIFICAÇÃO HUMANA NECESSÁRIA — não há bula vigente da ANVISA. Há registro de que a Ibutilida (Pharmacia Brasil Ltda, registro ANVISA nº 1238900590012, 0,1 mg/mL injetável) esteve registrada no Brasil, mas o próprio registro está listado como VENCIDO desde 01/06/2003 em base de dados agregadora de registros da ANVISA (smerp.com.br) — não confirmado diretamente no Bulário Eletrônico oficial da ANVISA, cuja busca é renderizada em JavaScript e não pôde ser consultada por esta sessão. Não foi encontrada nenhuma bula brasileira ativa nos espelhos consultados. A dose abaixo vem da bula do FDA/DailyMed de CORVERT (ibutilide fumarate injection, fabricante Pharmacia & Upjohn Company LLC), rotulagem americana, não brasileira.",
+      "dose_60kg_ou_mais": "1 mg (um frasco-ampola de fumarato de ibutilida) por via intravenosa, infundido em 10 minutos.",
+      "dose_menor_que_60kg": "0,01 mg/kg (0,1 mL/kg) por via intravenosa, infundido em 10 minutos.",
+      "dose_repetida": "Se a arritmia não reverter até 10 minutos após o término da primeira infusão, uma segunda infusão de igual concentração (mesma dose por faixa de peso) pode ser administrada, com início 10 minutos após o término da primeira.",
+      "pos_cirurgia_cardiaca": "Uma ou duas infusões de 0,5 mg (ou 0,005 mg/kg para pacientes <60 kg) mostraram-se eficazes no contexto pós-operatório de cirurgia cardíaca, segundo o rótulo do FDA.",
+      "fonte": "DailyMed — CORVERT (ibutilide fumarate) injection, solution, Pharmacia & Upjohn Company LLC, rótulo atualizado em 25/01/2024. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=b7d717ed-022d-4459-b5e6-098c2a8b7427"
+    },
+    "contraindications": [
+      "Hipersensibilidade conhecida à ibutilida fumarato ou a qualquer componente da fórmula — única contraindicação formal do rótulo do FDA.",
+      "Uso concomitante com outros antiarrítmicos de classe Ia ou classe III durante a infusão ou nas 4 horas seguintes — risco somado de prolongamento do intervalo QT."
+    ],
+    "interactions": [
+      "Antiarrítmicos de classe Ia e outros de classe III: não administrar concomitantemente nem nas 4 horas após a infusão — risco somado de prolongamento de QT/torsades de pointes (bula FDA).",
+      "Outros fármacos que prolongam o intervalo QT (ex.: fenotiazinas, antidepressivos tricíclicos, alguns anti-histamínicos): potencial de pró-arritmia aumentado, segundo o rótulo do FDA.",
+      "Digoxina, bloqueadores de canal de cálcio e betabloqueadores: a coadministração não alterou segurança nem eficácia nos ensaios clínicos de registro, segundo o rótulo do FDA."
+    ],
+    "monitoring": "Corrigir hipocalemia e hipomagnesemia antes da infusão, para reduzir o potencial de pró-arritmia. Administrar somente em ambiente com monitorização eletrocardiográfica contínua, com pessoal treinado e equipamento disponível de imediato — incluindo monitor cardíaco, recursos de estimulação intracardíaca e cardioversor/desfibrilador. Manter monitorização eletrocardiográfica contínua por pelo menos 4 horas após o término da infusão, ou até o QTc retornar ao valor basal — o que for mais longo. Fonte: bula FDA/DailyMed de CORVERT, seções WARNINGS e DOSAGE AND ADMINISTRATION.",
+    "adverse_effects": [
+      "Taquicardia ventricular polimórfica sustentada (tipicamente torsades de pointes) com necessidade de cardioversão — 1,7% dos pacientes tratados nos estudos de registro (bula FDA/DailyMed).",
+      "Taquicardia ventricular polimórfica não sustentada — 2,7% (rótulo FDA); no ensaio pivotal de Stambler et al. (Circulation 1996), ocorreu em 8,3% (15/180), sendo 6,7% não sustentada e 1,7% sustentada com necessidade de cardioversão.",
+      "Extrassístoles ventriculares — 5,1% (vs. 0,8% placebo)",
+      "Taquicardia ventricular monomórfica não sustentada — 4,9% (vs. 0,8% placebo)",
+      "Taquicardia (sinusal/outra) — 2,7% (vs. 0,8% placebo)",
+      "Hipotensão — 2,0% (vs. 1,6% placebo)",
+      "Bloqueio atrioventricular — 1,5% (vs. 0,8% placebo)",
+      "Náusea — 1,9% (vs. 0,8% placebo)"
+    ],
+    "pregnancy": "A bula do FDA/DailyMed de CORVERT não atribui letra de categoria de risco gestacional. O texto do rótulo orienta: 'CORVERT should not be administered to a pregnant woman unless clinical benefit outweighs potential risk to the fetus' — não deve ser administrado a gestante a menos que o benefício clínico supere o risco potencial ao feto. Estudos em animais (ibutilida oral, em ratos) mostraram teratogenicidade (adactilia, defeitos de septo, escoliose). Fonte: bula FDA/DailyMed de CORVERT, seção Pregnancy. VERIFICAÇÃO HUMANA NECESSÁRIA quanto a uma eventual bula brasileira equivalente, que não foi localizada.",
+    "lactation": "A bula do FDA/DailyMed de CORVERT declara que a excreção de ibutilida no leite humano não foi estudada, e orienta desencorajar a amamentação durante o tratamento. Fonte: bula FDA/DailyMed de CORVERT, seção Nursing Mothers. VERIFICAÇÃO HUMANA NECESSÁRIA quanto a uma eventual bula brasileira equivalente, que não foi localizada.",
+    "outcomes": {
+      "Ensaio pivotal de doses repetidas — Stambler et al. 1996": "Stambler BS, Wood MA, Ellenbogen KA, Perry KT, Wakefield LK, VanderLugt JT. Efficacy and safety of repeated intravenous doses of ibutilide for rapid conversion of atrial flutter or fibrillation. Circulation. 1996;94(7):1613-1621. PMID 8840852. Ensaio multicêntrico randomizado, 266 pacientes com fibrilação atrial (n=133) ou flutter atrial (n=133) sustentados, com duração de 3 horas a 45 dias, receberam até duas infusões intravenosas de 10 minutos de ibutilida ou placebo. Taxa de conversão de 47% com ibutilida vs. 2% com placebo (p<0,0001); eficácia maior no flutter (63%) que na fibrilação atrial (31%); tempo médio até a reversão de 27 minutos após o início da infusão. Taquicardia ventricular polimórfica ocorreu em 8,3% dos tratados com ibutilida (15/180), exigindo cardioversão em 1,7% (3 pacientes).",
+      "Ensaio pivotal dose-resposta — Ellenbogen et al. 1996": "Ellenbogen KA, Stambler BS, Wood MA, Sager PT, Wesley RC Jr, Meissner MC, Zoble RG, Wakefield LK, Perry KT, VanderLugt JT. Efficacy of intravenous ibutilide for rapid termination of atrial fibrillation and atrial flutter: a dose-response study. J Am Coll Cardiol. 1996;28(1):130-136. PMID 8752805. Ensaio randomizado, duplo-cego, 200 pacientes, testando quatro doses (0,005; 0,010; 0,015 e 0,025 mg/kg) mais placebo. Taxas de conversão: placebo 3%, 0,005 mg/kg 12%, 0,010 mg/kg 33%, 0,015 mg/kg 45%, 0,025 mg/kg 46%. Tempo médio até a reversão de 19 minutos. Taquicardia ventricular polimórfica no grupo ibutilida em 3,6%, todos revertidos com cardioversão elétrica, sem recorrência."
+    },
+    "references": [
+      "CORVERT (ibutilide fumarate) injection, solution — DailyMed, rótulo FDA, Pharmacia & Upjohn Company LLC, atualizado 25/01/2024 · https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=b7d717ed-022d-4459-b5e6-098c2a8b7427",
+      "IBUTILIDE FUMARATE injection, solution — DailyMed, rótulo genérico FDA · https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0cf8724a-f0d1-4ce2-b7c1-cf5fac345fd0",
+      "Stambler BS et al. Efficacy and safety of repeated intravenous doses of ibutilide for rapid conversion of atrial flutter or fibrillation · Circulation. 1996;94(7):1613-1621, PMID 8840852 · https://pubmed.ncbi.nlm.nih.gov/8840852/",
+      "Ellenbogen KA et al. Efficacy of intravenous ibutilide for rapid termination of atrial fibrillation and atrial flutter: a dose-response study · J Am Coll Cardiol. 1996;28(1):130-136, PMID 8752805 · https://pubmed.ncbi.nlm.nih.gov/8752805/",
+      "Registro ANVISA nº 1238900590012 (FUMARATO DE IBUTILIDA, Pharmacia Brasil Ltda) — status VENCIDO desde 01/06/2003, base agregadora de registros ANVISA (fonte secundária) · https://www.smerp.com.br/anvisa/?ac=prodDetail&anvisaId=1238900590012"
+    ],
+    "notes": {
+      "Disponibilidade no Brasil": "VERIFICAÇÃO HUMANA NECESSÁRIA — não foi localizada bula brasileira ativa nem produto atualmente comercializado no Brasil. Há registro histórico da ANVISA listado como vencido desde 01/06/2003 numa base agregadora de terceiros; a busca direta no Bulário Eletrônico oficial da ANVISA não pôde ser executada por esta sessão por ser renderizada em JavaScript.",
+      "Diferencial farmacológico dentro da classe III": "Ao contrário de sotalol e amiodarona, a ibutilida prolonga a repolarização por ativação de uma corrente lenta de entrada, predominantemente de sódio — mecanismo distinto dentro do mesmo efeito eletrofisiológico classe III.",
+      "Uso exclusivo hospitalar/intravenoso": "Não existe apresentação oral. O uso é restrito a ambiente com monitorização eletrocardiográfica contínua e recursos imediatos de cardioversão/desfibrilação, dado o risco de torsades de pointes."
+    }
   }
 ]
