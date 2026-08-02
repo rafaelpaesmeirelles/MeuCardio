@@ -4,7 +4,7 @@ slug: sindrome-de-kounis-sindrome-coronariana-aguda-alergica
 theme: "Farmacologia"
 kind: farmacologia
 review_status: revisado
-source_refs: ["Kounis NG, Zavras GM. Histamine-induced coronary artery spasm: the concept of allergic angina. Br J Clin Pract. 1991;45(2):121-128. PMID: 1793697 — descrição original do conceito de angina alérgica", "Kounis NG. Kounis syndrome: an update on epidemiology, pathogenesis, diagnosis and therapeutic management. Clin Chem Lab Med. 2016;54(10):1545-1559. PMID: 26966931 — revisão de atualização do próprio autor que cunhou o termo, descreve os três variantes/subtipos", "Kounis NG, Koniari I, Roumeliotis A, Tsigkas G, Soufras G, Grapsas N, Davlouros P, Hahalis G. Thrombotic responses to coronary stents, bioresorbable scaffolds and the Kounis hypersensitivity-associated acute thrombotic syndrome. J Thorac Dis. 2017;9(4):1155-1164. PMID: 28523173. PMCID: PMC5418277 — texto completo de acesso aberto, define literalmente os tipos I, II e III e o subtipo de trombose recorrente de stent", "Wang C, Zhou Y, Fang W, Li Z, Zhao S. Clinical features, diagnosis and management of amoxicillin-induced Kounis syndrome. Front Pharmacol. 2022;13:998239. PMID: 36386157 — revisão de 33 casos publicados, traz a recomendação explícita de cautela com epinefrina e a necessidade de tratamento simultâneo dos componentes alérgico e cardíaco", "Fassio F, Losappio L, Antolin-Amerigo D, Peveri S, Pala G, Preziosi D, Massaro I, Giuliani G, Gasperini C, Caminati M, Heffler E. Kounis syndrome: A concise review with focus on management. Eur J Intern Med. 2016;30:7-10. PMID: 26795552 — revisão focada em manejo prático"]
+source_refs: ["Kounis NG, Zavras GM. Histamine-induced coronary artery spasm: the concept of allergic angina. Br J Clin Pract. 1991;45(2):121-128. PMID: 1793697 — descrição original do conceito de angina alérgica", "Kounis NG. Kounis syndrome: an update on epidemiology, pathogenesis, diagnosis and therapeutic management. Clin Chem Lab Med. 2016;54(10):1545-1559. PMID: 26966931 — revisão de atualização do próprio autor que cunhou o termo, descreve os três variantes/subtipos", "Kounis NG, Koniari I, Roumeliotis A, Tsigkas G, Soufras G, Grapsas N, Davlouros P, Hahalis G. Thrombotic responses to coronary stents, bioresorbable scaffolds and the Kounis hypersensitivity-associated acute thrombotic syndrome. J Thorac Dis. 2017;9(4):1155-1164. PMID: 28523173. PMCID: PMC5418277 — texto completo de acesso aberto, define literalmente os tipos I, II e III e o subtipo de trombose recorrente de stent", "Wang C, Zhou Y, Fang W, Li Z, Zhao S. Clinical features, diagnosis and management of amoxicillin-induced Kounis syndrome. Front Pharmacol. 2022;13:998239. PMID: 36386157 — revisão de 33 casos publicados, traz a recomendação explícita de cautela com epinefrina e a necessidade de tratamento simultâneo dos componentes alérgico e cardíaco", "Fassio F, Losappio L, Antolin-Amerigo D, Peveri S, Pala G, Preziosi D, Massaro I, Giuliani G, Gasperini C, Caminati M, Heffler E. Kounis syndrome: A concise review with focus on management. Eur J Intern Med. 2016;30:7-10. PMID: 26795552 — revisão focada em manejo prático", "Ganeshanandha R, Teoh ZH, Hii R, Chew DP, Leung M. Allergy-Associated Acute Coronary Syndromes: Therapeutic Framework for Kounis Syndrome. JACC Case Rep. 2026;31(21):107946. doi: 10.1016/j.jaccas.2026.107946. PMID: 41989366. PMCID: PMC13221886 — série de 3 casos com algoritmo de manejo proposto (dose/via de adrenalina, contraindicação de betabloqueador, anti-histamínico/corticosteroide, nitrato/BCC no vasospasmo, DAPT na ICP); fonte mais fraca que diretriz de sociedade — declarado explicitamente no corpo do documento"]
 legacy_source: "Documento novo, escrito em 02/08/2026. Lacuna real: nenhum arquivo do acervo (`grep -ril \"Kounis\"`) cobria a síndrome de Kounis, incluindo o subtipo III relacionado a stent farmacológico, apesar de ser diagnóstico diferencial relevante em qualquer SCA que ocorra no contexto de reação alérgica/anafilática (picada de inseto, contraste iodado, antibiótico, AINE, ou hipersensibilidade ao próprio stent)."
 ---
 
@@ -114,12 +114,49 @@ Takotsubo, anafilaxia e síndrome coronariana associada a hipersensibilidade de 
 clínico associando administração intravenosa, em vez de intramuscular, de epinefrina a desfecho cardíaco
 adverso em anafilaxia relacionada a quimioterapia — PMID 38420090)**.
 
-`VERIFICAÇÃO HUMANA NECESSÁRIA`: as fontes consultadas nesta sessão não trazem um protocolo estruturado
-(dose exata, via preferencial, algoritmo passo a passo) para conciliar tratamento da anafilaxia com o da
-SCA na síndrome de Kounis — apenas a recomendação qualitativa de cautela com epinefrina e a necessidade
-de tratamento simultâneo. Decisões de dose/via de epinefrina em paciente com suspeita de síndrome de
-Kounis e instabilidade hemodinâmica devem ser individualizadas à beira do leito, considerando que a
-anafilaxia não tratada também é risco de vida.
+**Protocolo estruturado (dose, via, algoritmo passo a passo).** A lacuna anterior deste documento
+registrava que as fontes consultadas até então só traziam a recomendação qualitativa de cautela com
+epinefrina, sem dose/via/sequência. Uma busca dedicada localizou um algoritmo de manejo explícito,
+publicado em 2026 **(fonte: Ganeshanandha R, Teoh ZH, Hii R, Chew DP, Leung M. Allergy-Associated Acute
+Coronary Syndromes: Therapeutic Framework for Kounis Syndrome. JACC Case Rep. 2026;31(21):107946.
+doi: 10.1016/j.jaccas.2026.107946. PMID 41989366, PMCID PMC13221886)**:
+
+- **Adrenalina — via e dose:** *"em um primeiro momento, a adrenalina deve ser administrada por via
+  intramuscular, na dose de 0,2 a 0,5 mg (1:1.000), a cada 5 minutos até resolução dos sintomas"*. A via
+  **intravenosa** deve ficar reservada para pacientes que não respondem à via intramuscular repetida, ou
+  que têm instabilidade hemodinâmica/respiratória persistente — porque a adrenalina IV *"pode agravar a
+  isquemia miocárdica, prolongar o QTc e precipitar arritmias ou vasospasmo"*, sobretudo por essa via.
+- **Betabloqueador está contraindicado** no manejo da SCA secundária à síndrome de Kounis — ao contrário
+  do manejo clássico de SCA —, por poder precipitar efeito alfa-adrenérgico não contraposto, agravando
+  isquemia e vasospasmo. Em quem já usa betabloqueador com isquemia piorando, glucagon pode ser
+  considerado para neutralizar o efeito.
+- **Opioides** — codeína, morfina e meperidina podem aumentar a degranulação de mastócitos e devem ser
+  usados com cautela; **fentanil e derivados** são preferíveis, por menor propensão a ativar mastócitos.
+- **Componente alérgico:** anti-histamínicos H1 e H2 — difenidramina (1-2 mg/kg) ou ranitidina (1 mg/kg)
+  — na fase imediata, para reduzir novas manifestações alérgicas; corticosteroide — hidrocortisona 1-2
+  mg/kg/dia — pode ajudar a prevenir resposta anafilática bifásica. O texto pondera que corticosteroide
+  pode teoricamente prejudicar cicatrização e aumentar risco de afinamento/aneurisma/ruptura miocárdica,
+  mas registra que seu uso na SCA não foi associado a aumento de mortalidade ou dano nas fontes citadas
+  por aquele artigo.
+- **Reposição volêmica** é essencial no choque anafilático, mas precisa ser equilibrada para não
+  precipitar edema pulmonar no contexto de SCA.
+- **Vasospasmo coronariano (Tipos I e II, fase aguda):** nitrato (oral ou intravenoso) é o pilar do
+  tratamento para reverter o espasmo e restaurar a oxigenação miocárdica; bloqueador de canal de cálcio
+  — verapamil ou diltiazem — é adjuvante adequado. Angiografia coronariana é recomendada para confirmar
+  o vasospasmo e excluir ruptura de placa.
+- **Quando há indicação de ICP (Tipos II e III):** dupla antiagregação plaquetária, com ácido
+  acetilsalicílico mais um segundo inibidor de P2Y12.
+- **Oxigênio suplementar** só está indicado se houver hipóxia (saturação < 90%).
+
+**Força da fonte, declarada de propósito:** este algoritmo vem de uma série de apenas **3 casos**
+publicados pelo mesmo grupo (Victorian Heart Hospital, Monash Health), não de uma diretriz de
+sociedade nem de revisão sistemática — os próprios autores o descrevem como um algoritmo *proposto*,
+não uma recomendação formal com classe/nível de evidência. É mais fraco que o padrão-ouro deste
+projeto (diretriz atual ou estudo original de grande porte), e a decisão de dose/via de epinefrina em
+paciente com instabilidade hemodinâmica continua exigindo individualização à beira do leito — a
+anafilaxia não tratada também é risco de vida. Ainda assim, é a fonte mais específica e mais recente
+encontrada até agora que amarra dose, via e sequência de forma explícita, e nenhuma das buscas trouxe
+nada equivalente vindo de sociedade cardiológica ou alergológica com classe/nível de recomendação.
 
 Outros pontos práticos observados nas fontes:
 
