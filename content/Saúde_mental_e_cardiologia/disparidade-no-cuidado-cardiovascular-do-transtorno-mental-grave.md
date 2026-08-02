@@ -1,0 +1,72 @@
+---
+title: "Disparidade no Cuidado Cardiovascular do Transtorno Mental Grave: Mais Risco, Menos Revascularização"
+slug: disparidade-no-cuidado-cardiovascular-do-transtorno-mental-grave
+theme: "Saúde mental e cardiologia"
+kind: estudo
+review_status: revisado
+source_refs: ["Correll CU, Solmi M, Veronese N, et al. Prevalence, incidence and mortality from cardiovascular disease in patients with pooled and specific severe mental illness: a large-scale meta-analysis of 3,211,768 patients and 113,383,368 controls. World Psychiatry. 2017;16(2):163-180. DOI: 10.1002/wps.20420. PMID: 28498599", "Druss BG, Bradford DW, Rosenheck RA, Radford MJ, Krumholz HM. Mental disorders and use of cardiovascular procedures after myocardial infarction. JAMA. 2000;283(4):506-511. DOI: 10.1001/jama.283.4.506. PMID: 10659877", "Mitchell AJ, Malone D, Doebbeling CC. Quality of medical care for people with and without comorbid mental illness and substance misuse: systematic review of comparative studies. Br J Psychiatry. 2009;194(6):491-499. DOI: 10.1192/bjp.bp.107.045732. PMID: 19478286"]
+legacy_source: "Documento novo, escrito em 02/08/2026. A pasta já cobre extensamente o risco cardiovascular decorrente de transtorno mental (ansiedade, depressão, TEPT, esquizofrenia, transtorno bipolar) e a segurança cardiovascular de psicofármaco, mas nenhum documento tratava do outro lado da mesma equação: a qualidade do cuidado cardiovascular que a própria pessoa com transtorno mental grave recebe, uma vez doente. Os três achados numéricos (prevalência/incidência/mortalidade de DCV em transtorno mental grave, menor taxa de revascularização pós-IAM, e a revisão sistemática de qualidade de cuidado) foram verificados verbatim contra o resumo estruturado do PubMed via E-utilities antes da redação — nenhum número de memória."
+---
+
+# Disparidade no Cuidado Cardiovascular do Transtorno Mental Grave: Mais Risco, Menos Revascularização
+
+## Duas afirmações que parecem contraditórias, e não são
+Esta pasta já documenta, em vários registros, que transtorno mental é fator de risco cardiovascular — por mecanismo fisiopatológico (ativação simpática, inflamação), por comportamento (sedentarismo, tabagismo, adesão) e por efeito adverso de fármaco (síndrome metabólica do antipsicótico, do lítio, do valproato). O que falta nesta pasta é a segunda metade do problema, que não é fisiopatológica: **uma vez que a pessoa com transtorno mental grave — esquizofrenia, transtorno bipolar, depressão maior — desenvolve doença cardiovascular, ela recebe historicamente um cuidado de qualidade inferior por ela**, medido de forma direta e reprodutível em procedimento invasivo. As duas coisas não competem: maior risco de adoecer **e** menor chance de ser tratado adequadamente somam-se na mesma direção, e é essa soma que explica boa parte do excesso de mortalidade cardiovascular já descrito no documento desta pasta sobre esquizofrenia e mortalidade geral.
+
+## O tamanho do excesso de risco: a metanálise de Correll et al., 2017
+Correll CU et al., World Psychiatry. 2017;16(2):163-180 (PMID 28498599). Metanálise de grande escala reunindo **92 estudos, 3.211.768 pacientes com transtorno mental grave (esquizofrenia, transtorno bipolar e transtorno depressivo maior) e 113.383.368 controles**:
+- **Prevalência agrupada de doença cardiovascular (DCV) em transtorno mental grave: 9,9%** (IC95% 7,4-13,3), idade média de 50 anos.
+- Nos estudos transversais, **odds significativamente maior de DCV** no grupo com transtorno mental grave vs. controle: **OR 1,53** (IC95% 1,27-1,83), após ajuste por mediana de sete fatores de confusão.
+- Odds maior especificamente para **doença coronariana** (OR 1,51; IC95% 1,47-1,55) e **doença cerebrovascular** (OR 1,42; IC95% 1,21-1,66).
+- Nos estudos longitudinais, **incidência cumulativa de DCV de 3,6%** (IC95% 2,7-5,3) em seguimento mediano de 8,4 anos, com **HR 1,78** (IC95% 1,60-1,98; 31 estudos) comparado a controle, após ajuste por mediana de seis fatores de confusão.
+- Incidência também maior, especificamente, para doença coronariana (HR 1,54), doença cerebrovascular (HR 1,64), insuficiência cardíaca congestiva (HR 2,10) e **morte relacionada a DCV** (HR 1,85; IC95% 1,53-2,24).
+- **Todos os três diagnósticos-guarda-chuva — depressão maior, transtorno bipolar e esquizofrenia — mostraram risco aumentado de morte relacionada a DCV** frente ao controle.
+- A própria metanálise identifica **uso de antipsicótico, IMC mais elevado e prevalência basal de DCV mais alta** como fatores associados a maior incidência de DCV no grupo com transtorno mental grave (p=0,008; p=0,008; p=0,03).
+
+**Conclusão literal dos autores:** pacientes com transtorno mental grave têm risco significativamente aumentado de DCV e de mortalidade relacionada a DCV, e IMC elevado, uso de antipsicótico, e rastreio/manejo de DCV requerem atenção clínica urgente.
+
+## O outro lado: menos revascularização depois do mesmo infarto — o estudo de Druss et al., 2000
+Se o risco de adoecer já é maior, a pergunta seguinte é o que acontece quando o infarto de fato ocorre. Druss BG et al., JAMA. 2000;283(4):506-511 (PMID 10659877). Coorte retrospectiva nacional norte-americana, dados do Cooperative Cardiovascular Project: **113.653 pacientes com 65 anos ou mais, hospitalizados por infarto agudo do miocárdio confirmado entre fevereiro de 1994 e julho de 1995**. Comparou a chance de cateterismo cardíaco, angioplastia transluminal percutânea coronariana (ACTP) ou revascularização cirúrgica (CRM) durante a internação-índice, entre pacientes com e sem transtorno mental comórbido (esquizofrenia, transtorno afetivo maior, transtorno por uso de substância, ou outro transtorno mental).
+
+- **Pacientes com qualquer transtorno mental comórbido (n=5.365; 4,7% da coorte) foram significativamente menos submetidos a ACTP** (11,8% vs. 16,8%; p<0,001) **e a CRM** (8,2% vs. 12,6%; p<0,001), em comparação ao restante da amostra.
+- Após ajuste para fatores demográficos, clínicos, hospitalares e regionais, pacientes com transtorno mental tiveram **41% (esquizofrenia) a 78% (transtorno por uso de substância) da chance** de ser submetidos a cateterismo cardíaco, em relação a pacientes sem transtorno mental (p<0,001 para todos os grupos).
+- Entre os pacientes que **foram** cateterizados, as taxas subsequentes de ACTP ou CRM **não diferiram significativamente** entre quem tinha e quem não tinha transtorno mental (p=0,12 para ACTP; p=0,06 para CRM) — ou seja, a disparidade se concentra na **porta de entrada** (indicação de cateterismo), não necessariamente na decisão seguinte de revascularizar quem já foi cateterizado.
+- **A mortalidade em 30 dias, em modelo multivariado, não diferiu** entre pacientes com e sem transtorno mental nesta coorte.
+
+**Conclusão literal dos autores:** indivíduos com transtorno mental comórbido tiveram chance substancialmente menor de ser submetidos a procedimento de revascularização coronariana do que aqueles sem transtorno mental; é necessária mais pesquisa para entender o quanto fatores do paciente e do provedor de saúde contribuem para essa diferença, e suas implicações para a qualidade e o desfecho de longo prazo do cuidado.
+
+## A revisão sistemática que mostra que o achado não é isolado — Mitchell et al., 2009
+Um único estudo, por maior que seja, poderia ser peculiaridade de sistema de saúde ou de período. Mitchell AJ, Malone D, Doebbeling CC. Br J Psychiatry. 2009;194(6):491-499 (PMID 19478286). Revisão sistemática de estudos comparativos sobre qualidade do cuidado médico (não só cardiovascular) em pessoas com e sem transtorno mental comórbido, incluindo transtorno por uso de substância:
+- **31 estudos válidos** identificados: **27 examinaram recebimento de cuidado médico** comparando transtorno mental vs. sem transtorno mental, e **10 examinaram cuidado médico** comparando transtorno por uso de substância (ou diagnóstico duplo) vs. sem esse diagnóstico.
+- **19 dos 27 estudos (transtorno mental) e 10 dos 10 estudos (uso de substância) sugeriram qualidade de cuidado inferior em pelo menos um domínio.**
+- **12 estudos não encontraram diferença apreciável**, ou falharam em detectar diferença em pelo menos uma área-chave.
+- Vários estudos mostraram **aumento na utilização de serviço de saúde, sem aumento correspondente de qualidade**.
+- Apenas **3 estudos encontraram cuidado superior** para quem tinha transtorno mental, em subdomínios específicos.
+
+**Conclusão literal dos autores:** apesar de contato médico similar ou mais frequente, frequentemente há disparidades no cuidado físico de saúde oferecido a quem tem doença psiquiátrica, embora a magnitude desse efeito varie consideravelmente.
+
+## Síntese prática: por que isso importa na consulta cardiológica
+Lidas juntas, as três fontes descrevem uma sequência, não um fato isolado:
+1. **A pessoa com transtorno mental grave tem risco maior de desenvolver DCV** (Correll et al.) — já coberto, do lado fisiopatológico e farmacológico, por outros documentos desta pasta.
+2. **Quando o evento cardiovascular ocorre, ela tem uma chance substancialmente menor de ser encaminhada a cateterismo e a revascularização** (Druss et al.) — a diferença de 41-78% na chance de cateterismo, mesmo após ajuste por múltiplos fatores clínicos e hospitalares, é grande demais para ser explicada só por diferença de gravidade clínica.
+3. **Esse padrão de subtratamento não é peculiaridade de um sistema de saúde ou de uma doença cardíaca específica** — a revisão sistemática de Mitchell et al. mostra o mesmo achado em 19 de 27 estudos de qualidade de cuidado geral, cruzando múltiplos países e décadas.
+
+O ponto prático para o cardiologista, que nenhuma das três fontes deixa de mencionar: **o próprio estudo de Druss constatou que, entre quem já havia sido cateterizado, a taxa de revascularização subsequente não diferia por transtorno mental.** Isso aponta a barreira para o **momento da indicação**, não necessariamente para o julgamento técnico feito depois que o paciente já está na sala de hemodinâmica. Na prática, isso quer dizer que o viés mais provável de atuar é implícito e ocorre cedo — na decisão de investigar ou encaminhar —, e não na decisão de tratar um achado angiográfico já estabelecido.
+
+## O que fazer com isso na prática
+1. **Não deixar transtorno mental grave — esquizofrenia, transtorno bipolar, depressão maior — reduzir o limiar de investigação invasiva** diante de quadro sugestivo de síndrome coronariana aguda. A indicação de cateterismo deve seguir o mesmo critério de risco clínico usado para qualquer outro paciente.
+2. **Estar atento a "diagnostic overshadowing"** — atribuir sintoma físico (dor torácica, dispneia) à doença psiquiátrica de base ou a ansiedade, adiando ou evitando a investigação cardiovascular apropriada. Nenhuma das três fontes usa esse termo especificamente, mas é o mecanismo mais citado na literatura de disparidade em saúde mental para explicar achados como os de Druss et al.
+3. **Lembrar que, uma vez indicado o cateterismo, a decisão de revascularizar tende a seguir o mesmo padrão** independentemente do transtorno mental (achado do próprio Druss et al.) — a maior alavanca de correção está na etapa de indicação, não na de execução do procedimento.
+4. **Considerar a comunicação e a adesão como parte do plano, não como obstáculo à indicação** — este documento não endossa reduzir o rigor de indicação por dificuldade de comunicação ou de adesão esperada; a decisão de investigar/revascularizar deve ser clínica, e o suporte para adesão (envolvimento de psiquiatria assistente, cuidador, equipe multidisciplinar) deve ser endereçado à parte.
+
+## Limites
+- **Druss et al. é um estudo de 1994-1995**, população de 65 anos ou mais nos EUA — a disparidade absoluta medida (diferença de 5-4,4 pontos percentuais em ACTP/CRM) pode não refletir exatamente a prática cardiológica brasileira atual; o próprio desenho da coorte não permite separar quanto da diferença vem de fator do paciente (recusa, contraindicação real) e quanto vem de fator do provedor — os próprios autores dizem isso explicitamente na conclusão.
+- **A metanálise de Correll et al. é de 2017**, com estudos publicados até então; a própria metanálise nota que a prevalência de DCV (mas não a incidência) aumentou em estudos mais recentes dentro da própria amostra, o que sugere que o quadro pode ter mudado desde então em direção a mais, não menos, prevalência de DCV documentada.
+- **A revisão de Mitchell et al. é uma síntese qualitativa de estudos heterogêneos** (populações, definições de qualidade de cuidado, desenhos), não uma metanálise quantitativa — a magnitude do efeito, como os próprios autores dizem, "varia consideravelmente" entre estudos, e 12 dos 31 estudos não encontraram diferença.
+- Nenhuma das três fontes é específica para o sistema de saúde brasileiro. **VERIFICAÇÃO HUMANA NECESSÁRIA** para dado equivalente de disparidade de cuidado cardiovascular em transtorno mental grave medido em coorte brasileira ou latino-americana — não localizada nesta sessão.
+
+## Armadilhas clínicas
+- **Atribuir dor torácica ou dispneia a ansiedade ou a sintoma psiquiátrico sem investigação objetiva equivalente à que se faria em qualquer outro paciente** — é o mecanismo mais plausível por trás da menor taxa de cateterismo encontrada por Druss et al., e o oposto do que este documento recomenda. Ver, nesta mesma pasta, o documento sobre transtorno de pânico como diagnóstico diferencial de dor torácica cardíaca — que trata do lado inverso do mesmo cuidado, não interpretar como justificativa para reduzir investigação.
+- **Assumir que menor taxa de revascularização reflete contraindicação clínica real ou recusa do paciente** — o próprio estudo de Druss ajustou para fatores clínicos, demográficos, hospitalares e regionais, e a diferença permaneceu robusta (41-78% da chance) mesmo após esse ajuste.
+- **Tratar a disparidade como resolvida ou historicamente superada** — a revisão de Mitchell et al. reúne estudos de décadas e regiões diferentes com achado consistente na maioria (19 de 27 e 10 de 10), não um achado pontual de um único centro ou período.
+- **Confundir este documento com os documentos desta pasta sobre risco cardiovascular do transtorno mental em si ou do psicofármaco** — aqueles tratam de por que a pessoa com transtorno mental adoece mais; este trata de como ela é tratada depois de já estar doente. São mecanismos distintos e aditivos, não o mesmo achado com outra roupagem.
