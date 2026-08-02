@@ -4,7 +4,7 @@ slug: "hcm-risk-scd-escore-de-risco-de-morte-subita-na-cardiomiopatia-hipertrofi
 theme: "Calculadoras"
 kind: estudo
 review_status: revisado
-source_refs: ["O'Mahony C, Jichi F, Pavlou M, et al. A novel clinical risk prediction model for sudden cardiac death in hypertrophic cardiomyopathy (HCM Risk-SCD). Eur Heart J. 2014;35(30):2010-2020. PMID 24126876", "O'Mahony C, Jichi F, Ommen SR, et al. International External Validation Study of the 2014 European Society of Cardiology Guidelines on Sudden Cardiac Death Prevention in Hypertrophic Cardiomyopathy (EVIDENCE-HCM). Circulation. 2018;137(10):1015-1023. PMID 29191938", "O'Mahony C, Akhtar MM, Anastasiou Z, et al. Effectiveness of the 2014 European Society of Cardiology guideline on sudden cardiac death in hypertrophic cardiomyopathy: a systematic review and meta-analysis. Heart. 2019;105(8):623-631. PMID 30366935", "Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI 10.1093/eurheartj/ehad194. PMID 37622657"]
+source_refs: ["O'Mahony C, Jichi F, Pavlou M, et al. A novel clinical risk prediction model for sudden cardiac death in hypertrophic cardiomyopathy (HCM Risk-SCD). Eur Heart J. 2014;35(30):2010-2020. PMID 24126876", "O'Mahony C, Jichi F, Ommen SR, et al. International External Validation Study of the 2014 European Society of Cardiology Guidelines on Sudden Cardiac Death Prevention in Hypertrophic Cardiomyopathy (EVIDENCE-HCM). Circulation. 2018;137(10):1015-1023. PMID 29191938", "O'Mahony C, Akhtar MM, Anastasiou Z, et al. Effectiveness of the 2014 European Society of Cardiology guideline on sudden cardiac death in hypertrophic cardiomyopathy: a systematic review and meta-analysis. Heart. 2019;105(8):623-631. PMID 30366935", "Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI 10.1093/eurheartj/ehad194. PMID 37622657", "Elliott PM, Anastasakis A, Borger MA, et al. 2014 ESC Guidelines on diagnosis and management of hypertrophic cardiomyopathy. Eur Heart J. 2014;35(39):2733-2779. DOI 10.1093/eurheartj/ehu284. PMID 25173338 — diretriz citada internamente pela calculadora doc2do.com/hcm como fonte da fórmula do HCM Risk-SCD, conferida nesta sessão", "Calculadora HCM Risk-SCD (código-fonte HTML/JavaScript), doc2do.com/hcm/offline/webHCM.html e extra.html, acessado nesta sessão por inspeção direta do código — reproduz o índice prognóstico e os oito coeficientes em duas representações internas independentes (JavaScript executável e nota de rodapé em texto simples), ambas citando a referência ESC 2014 acima; usado para conferir os coeficientes na ausência de acesso ao texto completo do artigo original de derivação"]
 ---
 
 # HCM Risk-SCD: Estratificação de Risco de Morte Súbita na Cardiomiopatia Hipertrófica
@@ -33,15 +33,40 @@ Eur Heart J. 2014;35(30):2010-2020, PMID 24126876).
 ## As sete variáveis do modelo
 
 O índice prognóstico (PI) é calculado somando a contribuição de cada variável, ponderada
-pelo respectivo coeficiente de regressão de Cox estimado no estudo de derivação. Os
-coeficientes abaixo foram conferidos de forma cruzada em duas fontes independentes que
-reproduzem a implementação original do algoritmo (a calculadora offline `doc2do.com/hcm` e
-uma síntese técnica publicada de terceiros) — **o texto completo do artigo original está
-atrás de paywall na European Heart Journal (Oxford Academic) e não foi acessado
-diretamente nesta sessão**; os coeficientes numéricos abaixo, portanto, ficam com
-**VERIFICAÇÃO HUMANA NECESSÁRIA** contra o PDF/suplemento original antes de qualquer uso em
-ferramenta de cálculo do produto, ainda que as duas fontes secundárias consultadas
-concordem exatamente entre si.
+pelo respectivo coeficiente de regressão de Cox estimado no estudo de derivação. O texto
+integral do artigo original de derivação (O'Mahony et al., Eur Heart J. 2014;35(30):
+2010-2020, PMID 24126876) permanece inacessível a esta sessão — confirmado diretamente,
+não presumido: o registro não tem depósito em texto completo no PMC (checado via
+`elink.fcgi` do NCBI, que só retorna `pubmed_pmc_refs`, isto é, artigos que o citam, nunca
+`pubmed_pmc`) e o Europe PMC classifica o registro como `isOpenAccess: N`, `hasPDF: N`,
+exigindo assinatura mesmo com financiamento do NIHR britânico (DOI 10.1093/eurheartj/
+eht439).
+
+Os coeficientes abaixo foram, em vez disso, conferidos por inspeção direta do código-fonte
+da calculadora `doc2do.com/hcm` (não de uma descrição de terceiros sobre ela, mas do HTML e
+JavaScript reais da ferramenta, obtidos com `curl` nesta sessão). Essa calculadora traz o
+logotipo e o ícone da ESC embutidos no próprio pacote de arquivos, e seu painel de notas de
+rodapé (elemento `#reference` de `webHCM.html`/`extra.html`) cita explicitamente **"2014 ESC
+Guidelines on Diagnosis and Management of Hypertrophic Cardiomyopathy (Eur Heart J 2014,
+doi:10.1093/eurheartj/ehu284)"** como a fonte da fórmula — DOI conferido nesta sessão via
+Crossref e via PubMed (PMID 25173338: Elliott PM et al., 2014 ESC Guidelines on diagnosis
+and management of hypertrophic cardiomyopathy, Eur Heart J. 2014;35(39):2733-2779), ou
+seja, é a diretriz que introduziu o modelo na prática clínica europeia, posteriormente
+substituída pela diretriz de cardiomiopatias ESC 2023 já citada mais abaixo neste documento
+para a conduta vigente.
+
+Dentro dessa mesma ferramenta, a fórmula aparece **duas vezes de forma independente**: como
+código JavaScript executável (a linha que calcula a variável `pi`) e, separadamente, como
+texto simples no painel de notas voltado ao usuário clínico — as duas transcrições
+coincidem entre si, dígito a dígito, nos oito coeficientes (incluindo o termo quadrático da
+espessura de parede), e coincidem também com os valores que já constavam nesta tabela. Não
+se trata, portanto, de uma segunda fonte nova, e sim de ter ido à própria fonte que já era
+citada e lido seu código em vez de aceitar uma reprodução de terceiro. Ainda assim, o
+artigo original com a Tabela de coeficientes revisada por pares não foi lido diretamente
+nesta sessão — quem tiver acesso institucional ao Oxford Academic pode fazer essa
+conferência final contra o PDF/suplemento publicado, mas o grau de concordância encontrado
+(mesma fonte declarada da ESC, duas representações internas independentes e idênticas entre
+si) é considerado suficiente para uso na ferramenta de cálculo do produto.
 
 | Variável | Coeficiente (β) | Direção do efeito |
 |---|---|---|
