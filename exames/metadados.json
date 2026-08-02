@@ -4982,5 +4982,159 @@
       "sequenciamento de nova geracao",
       "aconselhamento genetico"
     ]
+  },
+  {
+    "slug": "radiografia-de-torax-pediatrica-silhueta-cardiaca-e-relacao-cardiotoracica",
+    "name": "Radiografia de tórax pediátrica — silhueta cardíaca e relação cardiotorácica",
+    "category": "imagem",
+    "theme": "Cardiologia pediátrica",
+    "what_it_measures": "Avaliação do tamanho e da configuração da silhueta cardíaca e da trama vascular pulmonar na radiografia simples de tórax da criança, com ênfase na relação cardiotorácica (RCT) — razão entre o maior diâmetro transverso da silhueta cardíaca e o maior diâmetro interno do tórax — e no reconhecimento da sombra tímica, que se sobrepõe à silhueta cardíaca nos primeiros anos de vida e é a principal armadilha de interpretação nessa faixa etária.",
+    "reference_range": "RCT normal em RECÉM-NASCIDOS (incidência AP, primeira semana de vida, decúbito dorsal): até 56,4%-56,5% usando a largura torácica máxima ou a largura na margem interna da 8ª costela, respectivamente — valor ≥ 57% é considerado aumentado (Edwards DK et al., 175 recém-nascidos normais, idade gestacional 26,5-44 semanas). Faixa inspiratória normal associada: 6,6-9,4 costelas posteriores visíveis ao nível do hemidiafragma direito. Diferente do adulto (corte convencional de 50%), a RCT do neonato e do lactente é fisiologicamente maior — em parte pela incidência AP (e não PA) obrigatória nessa faixa etária, que magnifica o coração por divergência do feixe de raios X, e em parte pela configuração torácica. O valor tende a se aproximar do padrão do adulto (~50%) ao longo da infância, chegando perto disso na idade escolar.",
+    "indications": "Suspeita clínica de cardiopatia (sopro, cianose, taquipneia, dificuldade de ganho ponderal), avaliação inicial de insuficiência cardíaca, investigação de miocardite ou cardiomiopatia, e acompanhamento de trama vascular pulmonar em cardiopatia com shunt. Exame de primeira linha, barato e amplamente disponível, mas sempre complementar ao ecocardiograma — não substitui a avaliação estrutural.",
+    "interpretation": "Cardiomegalia franca (RCT muito acima da faixa normal para a idade) sugere sobrecarga de volume ou disfunção miocárdica e deve motivar ecocardiograma; hipofluxo pulmonar (campos pulmonares 'enegrecidos', trama pulmonar reduzida) sugere lesão obstrutiva à direita com shunt direita-esquerda, enquanto hiperfluxo (trama pulmonar proeminente, vasos visíveis até a periferia) sugere shunt esquerda-direita significativo. A sombra do timo — mais proeminente até os 2-3 anos de idade — pode produzir o clássico 'sinal da vela' (sail sign), tipicamente à direita, com contorno ondulado por impressão das costelas adjacentes, e não deve ser confundida com cardiomegalia ou massa mediastinal.",
+    "limitations": "A RCT perde acurácia no recém-nascido e no lactente pequeno quando a inspiração é inadequada (frequente nessa faixa etária, por dificuldade técnica de captar o filme em inspiração plena) — expiração simula falsamente cardiomegalia. A sombra tímica sobreposta pode tornar difícil delimitar com precisão a borda cardíaca verdadeira nos primeiros anos de vida. A radiografia isolada não define anatomia intracardíaca nem função — um coração de tamanho normal não exclui cardiopatia estrutural ou funcional relevante, e o diagnóstico definitivo depende do ecocardiograma.",
+    "source_refs": [
+      "Edwards DK, Higgins CB, Gilpin EA. The cardiothoracic ratio in newborn infants. AJR Am J Roentgenol. 1981;136(5):907-913. PMID: 6784525.",
+      "Yoon HK. Interpretation of Neonatal Chest Radiography. J Korean Soc Radiol. 2016;74(5):279-290. DOI: 10.3348/jksr.2016.74.5.279."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "radiografia de torax",
+      "pediatria",
+      "relacao cardiotoracica",
+      "silhueta cardiaca",
+      "sombra timica",
+      "recem-nascido"
+    ]
+  },
+  {
+    "slug": "marcadores-inflamatorios-na-sindrome-inflamatoria-multissistemica-pediatrica-mis-c",
+    "name": "Marcadores inflamatórios e biomarcadores cardíacos na síndrome inflamatória multissistêmica pediátrica (MIS-C)",
+    "category": "laboratorial",
+    "theme": "Cardiologia pediátrica",
+    "what_it_measures": "Painel de biomarcadores usado na avaliação de criança com suspeita de síndrome inflamatória multissistêmica associada ao SARS-CoV-2 (MIS-C, antiga PIMS-TS): marcadores inflamatórios (PCR, VHS, ferritina, D-dímero, fibrinogênio, IL-6 quando disponível), hematológicos (linfopenia, plaquetopenia) e cardíacos (troponina e BNP/NT-proBNP), interpretados em conjunto — nenhum isoladamente define o diagnóstico, que é clínico-laboratorial e depende de definição de caso (febre, evidência de inflamação, disfunção multissistêmica e evidência de exposição/infecção por SARS-CoV-2).",
+    "reference_range": "Não há corte único validado para diagnóstico — os valores são interpretados como GRAU de elevação em relação ao normal para a idade, não como positivo/negativo. Na maior série publicada até hoje (Feldstein LR et al., NEJM 2020, 186 crianças com MIS-C em 26 estados dos EUA), 92% dos pacientes tinham elevação de PELO MENOS QUATRO biomarcadores inflamatórios simultaneamente — é esse padrão de elevação multissistêmica, e não um único valor, que sustenta a suspeita diagnóstica.",
+    "indications": "Toda criança ou adolescente com febre persistente e sinais de inflamação sistêmica em contexto epidemiológico de exposição ou infecção recente por SARS-CoV-2, especialmente com acometimento cardiovascular (hipotensão, choque, disfunção ventricular) — no estudo de Feldstein et al., o sistema cardiovascular foi o segundo mais acometido (80% dos casos, atrás apenas do gastrointestinal, 92%), à frente até do respiratório (70%). BNP/NT-proBNP e troponina orientam a necessidade de suporte hemodinâmico e de vigilância para disfunção ventricular; ecocardiograma seriado (incluindo diâmetro/escore Z das coronárias) é mandatório sempre que o painel estiver alterado.",
+    "interpretation": "Elevação simultânea e desproporcional de PCR/ferritina/D-dímero com troponina e/ou BNP elevados, em criança febril com disfunção de múltiplos órgãos, sustenta o diagnóstico de MIS-C e prediz maior necessidade de suporte intensivo — na mesma série, 80% dos pacientes precisaram de cuidados intensivos, 48% de suporte vasoativo e 20% de ventilação mecânica. Dilatação ou aneurisma de coronária (escore Z ≥ 2,5) foi documentado em 8% dos casos e achados sugestivos de doença de Kawasaki em 40% — o que faz da MIS-C um diagnóstico diferencial obrigatório diante de quadro Kawasaki-like em criança maior (a doença de Kawasaki clássica é rara acima dos 5 anos, enquanto a MIS-C atinge idade mediana mais alta, 8,3 anos na série).",
+    "limitations": "Nenhum biomarcador isolado é específico de MIS-C — a mesma elevação de PCR/ferritina/D-dímero ocorre em sepse bacteriana, doença de Kawasaki clássica e outras vasculites, e o diagnóstico diferencial ativo com essas condições é sempre necessário antes de tratar como MIS-C. A maioria dos achados laboratoriais e da disfunção cardíaca se resolve em semanas a poucos meses com tratamento adequado, o que exige reavaliação seriada, não uma dosagem isolada, para acompanhar a evolução. A comparação direta de qual biomarcador discrimina melhor MIS-C de COVID-19 não grave mostrou o BNP como o de maior diferenciação em metanálise, mas troponina isoladamente teve desempenho discriminativo limitado nessa mesma comparação.",
+    "source_refs": [
+      "Feldstein LR, Rose EB, Horwitz SM, et al. Multisystem Inflammatory Syndrome in U.S. Children and Adolescents. N Engl J Med. 2020;383(4):334-346. PMID: 32598831.",
+      "CDC. Clinical Overview of Multisystem Inflammatory Syndrome in Children (MIS-C). Centers for Disease Control and Prevention. Acesso em 2026."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "mis-c",
+      "pims-ts",
+      "sindrome inflamatoria multissistemica",
+      "kawasaki-like",
+      "biomarcadores",
+      "pediatria",
+      "covid-19",
+      "coronariopatia"
+    ]
+  },
+  {
+    "slug": "tsh-e-funcao-tireoidiana-no-diagnostico-inicial-da-fibrilacao-atrial-no-idoso",
+    "name": "TSH e função tireoidiana na avaliação inicial da fibrilação atrial no idoso",
+    "category": "laboratorial",
+    "theme": "Cardiologia geriátrica",
+    "what_it_measures": "Dosagem de TSH (hormônio tireoestimulante), com T4 livre reflexo quando o TSH estiver alterado, como parte do painel laboratorial básico solicitado na primeira avaliação de fibrilação atrial (FA) de diagnóstico recente — junto com hemograma completo e painel metabólico —, para identificar disfunção tireoidiana como causa reversível ou fator agravante da arritmia.",
+    "reference_range": "Não há corte específico por idade recomendado pelas diretrizes de FA — usa-se a faixa de referência padrão do TSH do laboratório. O ponto prático é que a triagem de função tireoidiana faz parte da avaliação BÁSICA recomendada em toda FA de diagnóstico recente, independentemente de o paciente ser sintomático de tireoidopatia — o hipertireoidismo subclínico no idoso costuma ser oligossintomático, e a FA pode ser sua única manifestação clínica evidente.",
+    "indications": "Toda fibrilação atrial de diagnóstico recente, como parte da avaliação clínica básica inicial (junto com ECG de 12 derivações, ecocardiograma, hemograma, função renal e eletrólitos) — 2023 ACC/AHA/ACCP/HRS Guideline, Recomendação 1 da Seção 4.2.1 (Classe 1, Nível de evidência B-NR): 'testes laboratoriais devem incluir hemograma completo, painel metabólico e função tireoidiana', para identificar fatores de risco de AVC/sangramento e condições subjacentes que orientam o tratamento. Repetir a dosagem é razoável quando a FA se torna de difícil controle sem causa aparente, mesmo que o TSH inicial fosse normal.",
+    "interpretation": "TSH suprimido com T4 livre elevado confirma hipertireoidismo manifesto como causa ou agravante da FA — corrigi-lo é parte essencial do tratamento e pode, por si só, reverter a arritmia em parte dos casos. TSH suprimido com T4 livre normal define hipertireoidismo SUBCLÍNICO, mais comum no idoso e classicamente associado a apresentação atípica ou 'apática' — sem os sinais adrenérgicos floridos do hipertireoidismo do adulto jovem —, o que faz da FA inexplicada, por vezes, a pista clínica isolada que leva ao diagnóstico. TSH elevado (hipotireoidismo) é causa menos direta de FA, mas relevante pelo impacto em controle de frequência e por vezes coexistir com amiodarona em uso prévio.",
+    "limitations": "Doença aguda concomitante ('síndrome do eutireoideo doente') pode alterar TSH e T4 livre transitoriamente sem tireoidopatia estrutural — reavaliar fora do contexto agudo antes de firmar diagnóstico. Fármacos usados no próprio manejo da FA interferem na leitura: a amiodarona altera o metabolismo tireoidiano de forma direta e pode causar tanto hipo quanto hipertireoidismo induzidos pelo fármaco, exigindo monitorização própria e interpretação à parte deste rastreio inicial. TSH normal não exclui necessidade de repetição futura, sobretudo se a FA se tornar refratária ao tratamento habitual.",
+    "source_refs": [
+      "Joglar JA, Chung MK, Armbruster AL, et al. 2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management of Atrial Fibrillation. J Am Coll Cardiol. 2024;83(1):109-279. PMID: 38043043. Seção 4.2.1, Recomendação 1 (COR 1, LOE B-NR).",
+      "Hindricks G, Potpara T, Dagres N, et al. 2020 ESC Guidelines for the diagnosis and management of atrial fibrillation developed in collaboration with the EACTS. Eur Heart J. 2021;42(5):373-498. PMID: 32860505."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "tsh",
+      "tireoide",
+      "fibrilacao atrial",
+      "idoso",
+      "hipertireoidismo subclinico",
+      "causa reversivel",
+      "geriatria"
+    ]
+  },
+  {
+    "slug": "massagem-do-seio-carotideo-com-monitorizacao-eletrocardiografica-no-idoso-com-sincope",
+    "name": "Massagem do seio carotídeo com monitorização eletrocardiográfica no idoso com síncope",
+    "category": "metodo_grafico",
+    "theme": "Cardiologia geriátrica",
+    "what_it_measures": "Teste provocativo à beira do leito que avalia a sensibilidade do seio carotídeo por meio de compressão manual sequencial (10 segundos de cada lado, nunca simultânea), com registro contínuo de ECG e, idealmente, de pressão arterial batimento a batimento — busca reproduzir a resposta cardioinibitória (pausa sinusal ou bloqueio atrioventricular) e/ou vasodepressora (queda isolada da pressão arterial) que caracteriza a síndrome do seio carotídeo, causa de síncope particularmente prevalente no idoso.",
+    "reference_range": "Resposta considerada ANORMAL (define hipersensibilidade do seio carotídeo): assistolia ≥ 3 segundos (componente cardioinibitório) e/ou queda da pressão arterial sistólica > 50 mmHg (componente vasodepressor). O diagnóstico de síndrome do seio carotídeo — e não apenas hipersensibilidade assintomática — exige, além da resposta anormal, a reprodução dos sintomas espontâneos do paciente durante o teste, em contexto clínico compatível com mecanismo reflexo.",
+    "indications": "Pacientes com mais de 40 anos e síncope de causa não esclarecida, compatível com mecanismo reflexo — a diretriz ESC 2018 de síncope destaca a massagem do seio carotídeo como um dos testes de MELHOR custo-benefício na avaliação inicial dessa faixa etária, justamente por ser rápido, barato e realizável à beira do leito. É particularmente relevante no idoso, em quem a hipersensibilidade do seio carotídeo é mais prevalente e frequentemente subdiagnosticada como causa de quedas recorrentes sem síncope testemunhada.",
+    "interpretation": "Resposta cardioinibitória pura (assistolia ≥ 3s sem queda pressórica relevante) direciona para marca-passo como tratamento; resposta vasodepressora pura (queda pressórica sem pausa significativa) não se beneficia de marca-passo e exige abordagem não farmacológica/postural; resposta mista combina os dois mecanismos. A reprodução dos sintomas espontâneos durante o teste é o que transforma um achado de hipersensibilidade (comum em idosos assintomáticos) em diagnóstico causal da síncope investigada.",
+    "limitations": "Contraindicado em pacientes com sopro carotídeo audível, placa carotídea conhecida ou AVC/AIT nos 3 meses anteriores, pelo risco (raro, mas descrito) de embolização. Hipersensibilidade do seio carotídeo assintomática é achado comum no idoso saudável — por isso o diagnóstico de síndrome do seio carotídeo exige reprodução de sintomas, não apenas resposta eletrocardiográfica anormal isolada. O teste deve ser realizado tanto em decúbito quanto em ortostase (quando tolerado), pois a resposta vasodepressora pode só se manifestar na posição ereta; testar apenas deitado subestima a prevalência da síndrome.",
+    "source_refs": [
+      "Brignole M, Moya A, de Lange FJ, et al. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948. PMID: 29562304."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "massagem do seio carotideo",
+      "sincope",
+      "hipersensibilidade do seio carotideo",
+      "idoso",
+      "assistolia",
+      "geriatria",
+      "quedas"
+    ]
+  },
+  {
+    "slug": "clareamento-fecal-de-alfa-1-antitripsina-na-enteropatia-perdedora-de-proteinas-pos-fontan",
+    "name": "Clareamento fecal de alfa-1-antitripsina (α1-AT) na enteropatia perdedora de proteínas (PLE) pós-Fontan",
+    "category": "laboratorial",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "A alfa-1-antitripsina é uma proteína endógena resistente à digestão proteolítica intestinal — ao contrário da albumina, não é degradada ao atravessar o trato gastrointestinal. Por isso sua concentração numa amostra pontual de fezes, ou seu clareamento (clearance) calculado a partir de dosagens simultâneas no soro e nas fezes de 24 horas, reflete diretamente a quantidade de proteína perdida pela parede intestinal, sem depender de ingestão exógena nem de outra fonte de variação.",
+    "reference_range": "Clareamento fecal de α1-AT normal: < 13 mL/24h. Critério diagnóstico de enteropatia perdedora de proteínas (PLE): concentração fecal pontual elevada OU clareamento > 24 mL/24h; nos pacientes com diarreia concomitante, usar o corte mais alto de > 56 mL/24h — a diarreia por si só eleva o clareamento e falsearia o resultado com o corte padrão.",
+    "indications": "Paciente com circulação de Fontan e edema periférico, ascite, derrame pleural/pericárdico ou diarreia/esteatorreia crônica inexplicados; hipoalbuminemia sem outra causa identificada em portador de cardiopatia congênita univentricular paliada. É o exame de primeira linha diante de suspeita de PLE — complicação rara mas grave e potencialmente fatal do Fontan.",
+    "interpretation": "O diagnóstico de PLE exige a combinação de hipoalbuminemia (< 30 g/L, sem outra causa identificável de perda proteica) com concentração fecal pontual elevada de α1-AT ou clareamento acima do corte. A fisiopatologia no Fontan é multifatorial — pressão venosa sistêmica elevada (> 12 mmHg é fator preditivo), disfunção linfática com linfangiectasia intestinal, baixo débito cardíaco comprometendo a perfusão intestinal e aumento da permeabilidade do enterócito — e o achado laboratorial não distingue entre esses mecanismos nem localiza o segmento de perda; a investigação etiológica é complementar, não substituída por este exame.",
+    "limitations": "O ambiente ácido do estômago degrada parcialmente a α1-AT, de modo que o teste tende a subestimar a perda proteica de origem gástrica — a StatPearls recomenda repetir a dosagem com o paciente em uso de antiácido quando há suspeita de estado hipersecretor associado. Sangramento gastrointestinal também eleva o clareamento e pode gerar falso-positivo. A coleta de 24 horas é mais robusta que a amostra pontual, mas operacionalmente mais difícil de obter. Nos casos de alta suspeita clínica com α1-AT negativo, o padrão-ouro de referência é o clareamento de albumina marcada com Cr-51, exame de acesso mais restrito.",
+    "source_refs": [
+      "Barracano R, Merola A, Fusco F, Scognamiglio G, Sarubbi B. Protein-losing enteropathy in Fontan circulation: Pathophysiology, outcome and treatment options of a complex condition. Int J Cardiol Congenit Heart Dis. 2022;7:100322. DOI: 10.1016/j.ijcchd.2022.100322. PMID: 39712272.",
+      "Nagra N, Dang S. Protein-Losing Enteropathy. StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; última atualização 12 jun 2023."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "alfa-1-antitripsina",
+      "enteropatia perdedora de proteinas",
+      "ple",
+      "fontan",
+      "hipoalbuminemia",
+      "cardiopatia congenita"
+    ]
+  },
+  {
+    "slug": "rm-linfangiografia-nao-contrastada-em-anormalidades-linfaticas-pos-fontan",
+    "name": "RM — linfangiografia não contrastada (T2 SPACE) em anormalidades linfáticas pós-Fontan",
+    "category": "imagem",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Sequência de ressonância magnética tridimensional ponderada em T2 (SPACE — sampling perfection with application-optimized contrasts using different flip-angle evolution), sem contraste, que explora o alto sinal do líquido linfático parado para mapear a anatomia e a extensão da rede linfática central e peribrônquica — o mesmo princípio da colangiopancreatografia por RM aplicado ao sistema linfático.",
+    "reference_range": "Não é exame com faixa numérica de referência — o achado é classificado por grau de anormalidade linfática (de padrão leve/tipo 1, com poucos canais visíveis, até padrão de alto grau/tipos 3-4, com redes linfáticas peribrônquicas e mediastinais dilatadas e retrógradas), conforme sistema de graduação usado no seguimento seriado de pacientes com fisiologia de ventrículo único.",
+    "indications": "Estadiamento e seguimento de anormalidades linfáticas ao longo do estadiamento cirúrgico do Fontan (antes e depois da cirurgia), sobretudo em paciente com derrame pleural/pericárdico prolongado, quilotórax, bronquite plástica ou enteropatia perdedora de proteínas já estabelecida ou suspeita — condições em que a disfunção linfática é o mecanismo fisiopatológico comum.",
+    "interpretation": "Grau de anormalidade linfática pré-Fontan prediz complicação clínica pós-operatória: numa coorte de 43 pacientes seguidos de forma seriada, os padrões de alto grau (tipos 3-4) associaram-se a quilotórax em 75% (6/8) contra 12% nos pacientes sem progressão, e a enteropatia perdedora de proteínas em 38% (3/8) contra 0% — além de drenagem torácica e internação prolongadas. A anormalidade linfática progrediu em 44% (19/43) da coorte entre a etapa pré-Fontan e a conclusão da cirurgia.",
+    "limitations": "É mapeamento anatômico não contrastado — não avalia dinâmica de fluxo linfático nem guia intervenção por si só; quando há indicação terapêutica (ex.: embolização de ducto torácico na bronquite plástica), soma-se a linfangiografia por RM dinâmica com contraste intranodal, exame distinto e mais invasivo. Depende de protocolo dedicado (aquisição coronal ponderada em T2, com disparo respiratório) e de leitura por radiologista treinado na graduação do padrão linfático, ainda não universalmente padronizada entre centros.",
+    "source_refs": [
+      "Kelly B, Mohanakumar S, Ford B, Smith CL, Pinto E, Biko DM, Hjortdal VE, Dori Y. Sequential MRI Evaluation of Lymphatic Abnormalities over the Course of Fontan Completion. Radiol Cardiothorac Imaging. 2024;6(3):e230315. DOI: 10.1148/ryct.230315. PMID: 38814187.",
+      "Collins JD, Thompson SM. Noncontrast MR Lymphangiography to Identify Progression of Lymphatic Abnormalities over the Course of Fontan Completion [comentário]. Radiol Cardiothorac Imaging. 2024;6(4):e240201. DOI: 10.1148/ryct.240201. PMID: 39051879.",
+      "Barracano R, Merola A, Fusco F, Scognamiglio G, Sarubbi B. Protein-losing enteropathy in Fontan circulation: Pathophysiology, outcome and treatment options of a complex condition. Int J Cardiol Congenit Heart Dis. 2022;7:100322. DOI: 10.1016/j.ijcchd.2022.100322. PMID: 39712272."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ressonancia magnetica",
+      "linfangiografia",
+      "sistema linfatico",
+      "fontan",
+      "bronquite plastica",
+      "quilotorax"
+    ]
   }
 ]

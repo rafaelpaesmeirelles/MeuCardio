@@ -21200,5 +21200,52 @@
         "por_que": "Fecha a trilha na anomalia coronariana mais grave do grupo: a origem anômala da artéria coronária esquerda a partir da pulmonar (ALCAPA), em que a fisiopatologia de roubo coronariano — não de simples shunt de volume — torna o reconhecimento precoce uma emergência, e que se conecta ao passo anterior pela mesma lógica de investigar ativamente a origem coronariana diante de anomalia vascular associada."
       }
     ]
+  },
+  {
+    "slug": "trilha-cardiologia-pediatrica-tetralogia-de-fallot-do-pre-natal-ao-seguimento-adulto",
+    "titulo": "Tetralogia de Fallot: do diagnóstico pré-natal à decisão de reoperar no adulto",
+    "tema": "Cardiologia pediátrica",
+    "objetivo": "Sair sabendo reconhecer o diagnóstico pré-natal e a crise de hipóxia da Tetralogia de Fallot, entender por que a janela etária da correção primária pesa sobre o desfecho, conhecer o fármaco usado na profilaxia crônica da crise hipercianótica, e acompanhar o mesmo paciente décadas depois — do que vigiar no ECG e no ecocardiograma até o limiar quantitativo (índice de volume sistólico final de VD) que sustenta indicar troca valvar pulmonar mesmo sem sintomas.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "revisao": "Curadoria verificada pela sessão CORVIA (frente Cardiologia pediátrica/geriátrica/congênitas) em 02/08/2026. Os seis item_slug foram conferidos um a um contra o banco de produção (published=true) antes de escrever a trilha, e a ordem e o `por_que` de cada etapa derivam do conteúdo real do item para o qual apontam — nenhum documento ou estudo é citado por associação de tema sem ter sido lido nesta sessão ou já verificado em documento anterior da base.",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "tetralogia-de-fallot-rastreio-pre-natal-crise-de-hipoxia-e-estrategia-cirurgica",
+        "por_que": "Abre a trilha na base anatômica e no diagnóstico: os quatro componentes da tetralogia, o que o rastreio pré-natal realmente detecta (e por que metade dos diagnósticos pré-natais vem de encaminhamento por suspeita, não do rastreio geral), a sequência correta de manejo da crise de hipóxia (\"tet spell\") e o racional das duas estratégias cirúrgicas em uso — correção neonatal completa versus paliação inicial seguida de correção aos 4-6 meses."
+      },
+      {
+        "ordem": 2,
+        "item_type": "estudo",
+        "item_slug": "van-arsdell-idade-otima-para-correcao-da-tetralogia-de-fallot",
+        "por_que": "Aprofunda exatamente a pergunta que a etapa anterior deixa em aberto — qual é a janela etária ideal para a correção primária. Nesta coorte, toda a mortalidade concentrou-se em correções realizadas após 12 meses, e a correção antes dos 3 meses aumentou tempo de internação sem aumentar mortalidade — dado que ajuda a interpretar a controvérsia entre as duas estratégias cirúrgicas da etapa 1."
+      },
+      {
+        "ordem": 3,
+        "item_type": "medicamento",
+        "item_slug": "propranolol",
+        "por_que": "O documento da etapa 1 cita o propranolol como ferramenta de profilaxia CRÔNICA do espasmo infundibular em pacientes de risco para crise de hipóxia — nunca como droga de resgate agudo, pela meia-vida longa e risco de hipotensão/disfunção cardíaca. Esta etapa fecha o ciclo farmacológico do lactente sintomático antes da correção definitiva."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "seguimento-tardio-de-tetralogia-de-fallot-e-coarctacao-de-aorta-no-adulto",
+        "por_que": "Salta décadas: o mesmo paciente corrigido na infância vira o adulto que precisa de seguimento vitalício. Conecta o patch transanular e a regurgitação pulmonar crônica mencionados na etapa 1 ao que de fato se vigia no consultório do adulto operado de tetralogia de Fallot."
+      },
+      {
+        "ordem": 5,
+        "item_type": "estudo",
+        "item_slug": "bokma-2023-indicator-troca-valvar-pulmonar-na-tetralogia-de-fallot",
+        "por_que": "Transforma a vigilância genérica da etapa anterior numa decisão quantitativa concreta: o registro INDICATOR mostra que, acima de 80 mL/m² de índice de volume sistólico final de VD, a troca valvar pulmonar reduz o risco de óbito ou taquicardia ventricular sustentada — mesmo no paciente assintomático — enquanto abaixo desse limiar o benefício não foi demonstrado."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "teste-cardiopulmonar-de-exercicio-na-cardiopatia-congenita-aha-2025",
+        "por_que": "Fecha a trilha com a ferramenta de seguimento funcional que complementa o ECG e o ecocardiograma das etapas anteriores — o teste cardiopulmonar de exercício detecta deterioração antes do sintoma, e traz valores de referência por lesão que incluem especificamente a via de saída de ventrículo direito operada."
+      }
+    ]
   }
 ]

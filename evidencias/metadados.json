@@ -31352,5 +31352,120 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "sbc2019-plastia-mitral-preferivel-a-troca-na-insuficiencia-mitral-primaria-grave-cronica-no-idoso",
+    "theme": "Cardiologia geriátrica",
+    "statement": "Em pacientes idosos com insuficiência mitral primária crônica grave, a plastia mitral (reparo) é preferível à troca valvar mitral, sempre que tecnicamente exequível.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2019,
+    "guideline_title": "Updated Geriatric Cardiology Guidelines of the Brazilian Society of Cardiology - 2019",
+    "reference": "Feitosa-Filho GS, Peixoto JM, Pinheiro JES et al. Arq Bras Cardiol. 2019;112(5):649-705. DOI: 10.5935/abc.20190086. PMID: 31188969. PMCID: PMC6555565 — texto integral aberto, lido e conferido nesta sessão via PMC, tabela \"Recommendations for MR surgery\", capítulo 6.2.2 (Mitral Regurgitation — Treatment Peculiarities). Distinta da recomendação já cadastrada sobre troca preferível à plastia na insuficiência mitral SECUNDÁRIA de etiologia isquêmica — aqui trata-se de insuficiência mitral PRIMÁRIA.",
+    "tags": [
+      "insuficiência mitral",
+      "plastia mitral",
+      "cirurgia valvar",
+      "idoso"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "sbc2019-cirurgia-indicada-na-regurgitacao-aortica-grave-sintomatica-no-idoso",
+    "theme": "Cardiologia geriátrica",
+    "statement": "Em pacientes idosos com regurgitação aórtica grave sintomática, o tratamento cirúrgico está indicado independentemente da função sistólica do ventrículo esquerdo.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2019,
+    "guideline_title": "Updated Geriatric Cardiology Guidelines of the Brazilian Society of Cardiology - 2019",
+    "reference": "Feitosa-Filho GS, Peixoto JM, Pinheiro JES et al. Arq Bras Cardiol. 2019;112(5):649-705. DOI: 10.5935/abc.20190086. PMID: 31188969. PMCID: PMC6555565 — texto integral aberto, lido e conferido nesta sessão via PMC, tabela \"Recommendations for surgical treatment of aortic regurgitation\", capítulo 6.4.2 (Aortic Regurgitation — Treatment Peculiarities).",
+    "tags": [
+      "regurgitação aórtica",
+      "insuficiência aórtica",
+      "cirurgia valvar",
+      "idoso"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "sbc2019-holter-de-eventos-de-7-dias-para-sintomas-infrequentes-no-idoso",
+    "theme": "Cardiologia geriátrica",
+    "statement": "Em pacientes idosos com pré-síncope, síncope, palpitações, dispneia aos esforços, fadiga desproporcional ao esforço ou tontura não rotatória de caráter infrequente, o Holter de eventos (gravador de alça) de 7 dias é recomendado.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2019,
+    "guideline_title": "Updated Geriatric Cardiology Guidelines of the Brazilian Society of Cardiology - 2019",
+    "reference": "Feitosa-Filho GS, Peixoto JM, Pinheiro JES et al. Arq Bras Cardiol. 2019;112(5):649-705. DOI: 10.5935/abc.20190086. PMID: 31188969. PMCID: PMC6555565 — texto integral aberto, lido e conferido nesta sessão via PMC, tabela \"General recommendations for diagnosing bradyarrhythmias in elderly patients\", capítulo 7.1.2 (Bradyarrhythmias — Diagnostic Peculiarities). Distinta das recomendações já cadastradas sobre Holter de 24 horas — aqui o método é o gravador de eventos/alça de 7 dias, para sintomas infrequentes.",
+    "tags": [
+      "holter de eventos",
+      "gravador de alça",
+      "síncope",
+      "bradiarritmia",
+      "idoso"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "sbc2019-ecocardiograma-transesofagico-antes-da-cardioversao-de-fa-com-mais-de-48-horas-no-idoso",
+    "theme": "Cardiologia geriátrica",
+    "statement": "Em pacientes idosos com fibrilação atrial com duração superior a 48 horas candidatos à reversão para ritmo sinusal, o ecocardiograma transesofágico é recomendado.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2019,
+    "guideline_title": "Updated Geriatric Cardiology Guidelines of the Brazilian Society of Cardiology - 2019",
+    "reference": "Feitosa-Filho GS, Peixoto JM, Pinheiro JES et al. Arq Bras Cardiol. 2019;112(5):649-705. DOI: 10.5935/abc.20190086. PMID: 31188969. PMCID: PMC6555565 — texto integral aberto, lido e conferido nesta sessão via PMC, tabela \"General recommendations regarding AF diagnosis in the elderly\", capítulo 7.3.1 (Atrial Fibrillation — Diagnostic Peculiarities).",
+    "tags": [
+      "fibrilação atrial",
+      "ecocardiograma transesofágico",
+      "cardioversão",
+      "idoso"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "paces2021-chagas-marca-passo-razoavel-no-bavt-avancado",
+    "theme": "Cardiologia pediátrica",
+    "statement": "Na doença de Chagas com bloqueio atrioventricular avançado de segundo ou terceiro grau, o implante de marca-passo definitivo é razoável, já que a resolução espontânea é improvável; o implante de cardioversor-desfibrilador implantável pode ser uma alternativa razoável.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C-LD",
+    "society": "PACES/HRS",
+    "year": 2021,
+    "guideline_title": "2021 PACES Expert Consensus Statement on the Indications and Management of Cardiovascular Implantable Electronic Devices in Pediatric Patients",
+    "reference": "Shah MJ, Silka MJ, Avari Silva JN et al. Indian Pacing Electrophysiol J. 2021;21(6):367-393. DOI: 10.1016/j.ipej.2021.07.005. PMID: 34333141. PMCID: PMC8577100 — texto integral aberto, lido e conferido nesta sessão via PMC, tabela da seção \"Inflammation/Infection\".",
+    "tags": [
+      "doença de chagas",
+      "bloqueio atrioventricular",
+      "marca-passo",
+      "cardioversor-desfibrilador"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "paces2021-monitor-cardiaco-implantavel-na-sincope-de-alto-risco-sem-causa-definida",
+    "theme": "Cardiologia pediátrica",
+    "statement": "O monitor cardíaco implantável está indicado em pacientes pediátricos com síncope e critérios de alto risco, quando uma avaliação abrangente não define a causa nem leva a um tratamento específico, e que não têm indicação convencional de marca-passo ou cardioversor-desfibrilador implantável.",
+    "recommendation_class": "I",
+    "evidence_level": "B-NR",
+    "society": "PACES/HRS",
+    "year": 2021,
+    "guideline_title": "2021 PACES Expert Consensus Statement on the Indications and Management of Cardiovascular Implantable Electronic Devices in Pediatric Patients",
+    "reference": "Shah MJ, Silka MJ, Avari Silva JN et al. Indian Pacing Electrophysiol J. 2021;21(6):367-393. DOI: 10.1016/j.ipej.2021.07.005. PMID: 34333141. PMCID: PMC8577100 — texto integral aberto, lido e conferido nesta sessão via PMC, tabela da seção \"Insertable Cardiac Monitors\".",
+    "tags": [
+      "síncope",
+      "monitor cardíaco implantável",
+      "gravador de alça implantável",
+      "estratificação de risco"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
