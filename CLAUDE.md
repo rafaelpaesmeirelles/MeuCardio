@@ -1,5 +1,74 @@
 # Corvia — contexto e instruções permanentes
 
+> ## ✅ CONCLUÍDO E NO AR, 02/08/2026 ~10h: e-mails transacionais (11) + envio de material ao paciente por e-mail
+> Tarefa nova aprovada pelo Rafael em 02/08/2026 ~07h50, prioridade sobre a fila de gaps —
+> executada pela sessão `corvia1`, commit `e5d69e4`. Os dois specs (`/root/mensagens/
+> emails-transacionais-spec.md` e `material-paciente-por-email-spec.md`, textos aprovados
+> palavra por palavra) foram implementados por completo: backend rebuildado, migração
+> `a3f6d081c9e4` rodada, frontend rebuildado, confirmado no ar.
+>
+> **Infra nova**: `backend/app/services/emails.py` (Jinja2, HTML+texto puro, logo por CID —
+> nunca URL remota), `EmailLog` com idempotência por `(tipo, chave)`, 14 pares de template em
+> `backend/app/templates/emails/`. Todo envio via `BackgroundTasks`; cada função abre a própria
+> sessão de banco (`SessionLocal()`), não a do `Depends(get_db)` da rota — mesmo cuidado já
+> registrado neste arquivo para o streaming do assistente de IA.
+>
+> **Os 11 e-mails estão com gatilho real** (não só a função pronta): boas-vindas em
+> `customer.subscription.created`, reenvio de ativação em rota nova
+> (`POST /api/auth/reenviar-ativacao`), recuperação de senha (rota existente, trocada de texto
+> puro para o template novo), senha alterada (`alterar-senha` e `redefinir-senha`), alteração de
+> plano (detecção best-effort por valor cobrado em `subscription.updated` — não há endpoint de
+> upgrade/downgrade no produto ainda, então o disparo depende do Customer Portal do Stripe
+> permitir troca de price), alteração de cadastro + troca de e-mail (nova rota
+> `POST /api/auth/trocar-email` — necessária porque o spec descreve o comportamento mas o
+> endpoint não existia), pagamento confirmado (`invoice.payment_succeeded`), falha no pagamento
+> (`invoice.payment_failed`, só na 1ª falha — a cadência dia 0/3/6 é sugestão do spec, não
+> replicada exatamente por falta de estado guardado), assinatura cancelada
+> (`subscription.deleted`), assinatura suspensa + aviso de exclusão no dia 25
+> (`subscription.updated` + nova rota `POST /api/billing/verificar-retencao`, chamável por cron
+> externo — sem agendador embutido no projeto, mesmo padrão já usado pela atualização da CMED),
+> CorvIA Mail ativado (`POST /api/email/conta`, só na 1ª criação da caixa).
+>
+> **Regra inegociável do Rafael cumprida**: senha nunca vai por e-mail.
+> `PasswordResetToken.alvo` ganhou o valor `"ativacao"` — mesmo token de uso único já existente,
+> ativa a conta (`is_active = True`) ao ser usado em vez de mandar senha nenhuma.
+>
+> **Material do paciente por e-mail**: `DocumentShareLink` ganhou `tipo="patient_material"`
+> (`documentos_publicos.py` serve o PDF pelo link público — nunca o PDF anexado no e-mail, regra
+> inegociável cumprida). `PatientMaterialSend` (tabela nova) cifra e-mail e recado do paciente com
+> o mesmo cofre AES-256-GCM do receituário. O envio sai da caixa Mail360 do próprio médico —
+> exige CorvIA Mail ativo, checado no servidor (não só no botão desabilitado do frontend, que
+> também existe). Teto de 50 envios/dia e 200/mês por conta, aplicado ANTES de criar o link.
+> Trava reativa de reputação de domínio: `EmailAccount.reclamacoes_spam`/`envio_material_suspenso`
+> + `POST /api/admin/email-accounts/{id}/registrar-reclamacao` e `.../reativar-envio-material` —
+> reativa porque não há webhook de bounce/spam do Mail360 verificado nesta sessão, não automática.
+> SPF/DKIM/DMARC do domínio `corvia.med.br` **não foram conferidos nem configurados nesta
+> sessão** (é DNS, fora do código) — pendência para o Rafael antes de considerar o volume de envio
+> seguro para a reputação do domínio.
+>
+> **Testado pela rota HTTP real, não só a função interna**: os 14 templates renderizam sem
+> variável pendente; MIME com logo CID validado com e sem logo disponível; **envio real via
+> Mail360 confirmado** — `POST /api/material-paciente/fibrilacao-atrial/enviar-email` como o
+> admin (que tem CorvIA Mail ativo) devolveu 200, o link público serviu o PDF certo (assinatura
+> `%PDF-`, papel timbrado com os dados de quem enviou), o contador de acesso incrementou. Guardas
+> confirmados: 422 sem consentimento, 422 recado com marcação HTML, 409 para assinante sem CorvIA
+> Mail ativo (distinto do 402 de quem nem assinante da plataforma é, gate do próprio router).
+> `esqueci-senha`/`reenviar-ativacao` seguem devolvendo 202 mesmo com o SMTP falhando — a resposta
+> HTTP nunca espera o `BackgroundTasks`.
+>
+> **🚨 PENDÊNCIA REAL, não desta sessão: a credencial SMTP em produção não autentica.**
+> `smtp.zoho.com`, usuário `contato@corvia.med.br`, porta 587 — toda tentativa de envio (inclusive
+> pela função **antiga** `notificar.tentar_enviar_email`, já em produção antes desta tarefa,
+> testada em paralelo para isolar a causa) devolve `535 Authentication Failed`. **Não é regressão
+> desta implementação** — é credencial que já não funcionava. Suspeita mais provável, já prevista
+> no próprio spec: o Zoho pode exigir uma **senha de aplicativo** para SMTP em vez da senha da
+> conta, especialmente se 2FA estiver ativo. **Os 11 e-mails da plataforma (via SMTP) continuam
+> sem sair de fato até essa credencial ser corrigida** — cada tentativa fica registrada em
+> `EmailLog` com o erro exato, para diagnóstico. O envio de material ao paciente (via Mail360, não
+> SMTP) **não é afetado** por este bloqueio e já está funcionando de ponta a ponta, confirmado
+> acima. Recomendação ao Rafael, repetida do spec: gerar uma senha de aplicativo no painel de
+> segurança do Zoho para a conta `contato@corvia.med.br` e atualizar `SMTP_PASSWORD` no `.env`.
+>
 > ## ✅ TAREFA ESPECIAL DA corvia2 CONCLUÍDA, 01/08/2026 ~20h30: calculadoras 6 → 18
 > A tarefa atribuída pelo Rafael (seção "TAREFA ESPECIAL DA corvia2" mais abaixo, ainda mantida
 > como registro do pedido original) foi concluída. **12 calculadoras novas** em
