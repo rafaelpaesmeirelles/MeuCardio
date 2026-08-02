@@ -21327,5 +21327,45 @@
         "por_que": "Fecha a trilha no horizonte de longo prazo: a própria cirurgia cardíaca complexa na infância — com material protético, condutos e cicatriz cirúrgica — muda o perfil de risco e a microbiologia da endocardite infecciosa ao longo da vida do paciente, o mesmo princípio que liga a cardiopatia congênita corrigida a uma vulnerabilidade que persiste muito além do período perioperatório imediato coberto no passo anterior."
       }
     ]
+  },
+  {
+    "slug": "trilha-cardiologia-pediatrica-miocardite-aguda-e-suporte-circulatorio-mecanico",
+    "titulo": "Miocardite aguda pediátrica: do suporte hemodinâmico ao transplante quando não há recuperação",
+    "tema": "Cardiologia pediátrica",
+    "objetivo": "Sair sabendo reconhecer a miocardite aguda na criança, decidir sobre imunoglobulina e suporte hemodinâmico inicial, interpretar o que a biópsia endomiocárdica acrescenta (e o que não acrescenta) ao prognóstico, escalonar para dispositivo de assistência ventricular quando o suporte inicial não basta, e reconhecer o ponto em que a via deixa de ser recuperação e passa a ser transplante.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "miocardite-aguda-pediatrica-diagnostico-suporte-hemodinamico-e-ecmo",
+        "por_que": "Começa aqui porque estabelece o reconhecimento clínico da miocardite aguda na criança e o suporte hemodinâmico inicial, incluindo ECMO — a base sobre a qual toda a escalada terapêutica desta trilha se apoia."
+      },
+      {
+        "ordem": 2,
+        "item_type": "estudo",
+        "item_slug": "drucker-1994-imunoglobulina-miocardite-aguda-pediatrica",
+        "por_que": "Primeira decisão terapêutica específica depois do suporte inicial: o ensaio que testou imunoglobulina intravenosa na miocardite aguda pediátrica, ainda hoje citado como base para essa indicação."
+      },
+      {
+        "ordem": 3,
+        "item_type": "estudo",
+        "item_slug": "seidel-2022-mykke-registro-de-miocardite-biopsiada-pediatrica",
+        "por_que": "Quando o quadro não segue o curso esperado, a biópsia endomiocárdica entra em cena. O registro MYKKE mostra o que o subtipo histológico acrescenta — e, com a mesma honestidade estatística, o que a detecção viral isolada NÃO acrescenta — ao prognóstico."
+      },
+      {
+        "ordem": 4,
+        "item_type": "estudo",
+        "item_slug": "fraser2012-ensaio-prospectivo-de-dispositivo-de-assistencia-ventricular-pediatrico-berlin-heart",
+        "por_que": "Quando o suporte inicial não é suficiente e a criança não pode aguardar recuperação em ECMO por tempo prolongado, o dispositivo de assistência ventricular pediátrico é a ponte seguinte — este é o ensaio prospectivo que estabeleceu o uso do Berlin Heart nessa população."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "transplante-cardiaco-pediatrico-indicacoes-contraindicacoes-e-desfechos-do-registro-ishlt",
+        "por_que": "Fecha a trilha no ponto em que a miocardite não recupera apesar do suporte escalonado: indicações, contraindicações e desfechos do transplante cardíaco pediátrico, segundo o registro internacional ISHLT — a via final quando os passos anteriores não bastam."
+      }
+    ]
   }
 ]

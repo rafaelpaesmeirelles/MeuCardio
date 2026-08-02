@@ -10993,5 +10993,125 @@
       "Sadeghipour P, Mohebbi B, Firouzi A, et al. Randomized Comparison of Balloon-Expandable Versus Self-Expanding Stents for Aortic Coarctation. JACC Cardiovasc Interv. 2022. DOI: 10.1016/j.jcin.2021.10.031. PMID: 35144787."
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "escore-de-kobayashi-predizendo-resistencia-a-imunoglobulina-na-doenca-de-kawasaki",
+    "titulo": "Escore de Kobayashi: prevendo resistência à imunoglobulina na doença de Kawasaki",
+    "tema": "Cardiologia pediátrica",
+    "nivel": "intermediário",
+    "enunciado": "Lactente de 8 meses com doença de Kawasaki diagnosticada no 5º dia de doença. Antes de iniciar imunoglobulina intravenosa (IVIG), a equipe quer estimar o risco de não resposta à primeira dose para decidir se associa corticoide desde o início. Exames à admissão: neutrófilos 82% do leucograma, plaquetas 250.000/mm³, AST 120 U/L, sódio sérico 133 mEq/L, PCR 18 mg/dL.",
+    "pergunta": "Segundo o modelo japonês que originou o escore de Kobayashi, qual afirmação está correta sobre o uso desse escore para orientar a decisão de terapia adjuvante?",
+    "opcoes": [
+      "O escore deve ser aplicado a qualquer criança com Kawasaki, independentemente da ascendência, com a mesma acurácia observada na coorte japonesa que o originou",
+      "O escore de Kobayashi (7 variáveis: dia de doença no início do tratamento, idade em meses, percentual de neutrófilos, contagem de plaquetas, AST, sódio e PCR), com corte ≥4 pontos, identifica um subgrupo de maior risco de não resposta à IVIG (sensibilidade 86%, especificidade 68%, AUC 0,85 no conjunto de validação) que pode ser candidato a terapia adjuvante com corticoide desde o início — mas seu desempenho foi bem inferior quando testado em coortes não japonesas, e essa limitação de generalização deve pesar na decisão",
+      "Um escore de Kobayashi baixo garante que a criança não desenvolverá aneurisma coronariano, independentemente do tratamento recebido",
+      "A hiponatremia (sódio 133) e a plaquetopenia relativa, isoladamente e sem as demais variáveis, já bastam para prever resistência à IVIG com a mesma acurácia do escore completo de 7 variáveis"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O estudo de Kobayashi et al. (Circulation 2006) desenvolveu, em 546 pacientes japoneses consecutivos (conjunto de desenvolvimento) e validou em 204 pacientes subsequentes (conjunto de validação), um modelo logístico de 7 variáveis — dia de doença no início do tratamento, idade em meses, percentual de neutrófilos, contagem de plaquetas, AST, sódio sérico e PCR — para prever não resposta à IVIG (definida como febre persistente além de 24 horas ou febre recrudescente). O modelo logístico completo teve AUC de 0,84 no desenvolvimento e 0,90 na validação; um escore de pontos simplificado derivado das mesmas variáveis, com corte ≥4 pontos, teve sensibilidade de 86% e especificidade de 68% (AUC 0,85), com boa concordância com o modelo logístico (kappa 0,67). Os achados laboratoriais deste lactente (neutrofilia relativa, plaquetas na faixa mais baixa para a fase aguda, AST elevada, hiponatremia leve, PCR elevada, tratamento em fase precoce da doença) estão na direção associada a maior risco no modelo, o que sustenta considerá-lo candidato a terapia adjuvante — a mesma lógica de seleção de paciente de maior risco usada no ensaio RAISE, já cadastrado nesta biblioteca. A ressalva central, e o que descarta a opção 1, é que validações posteriores em coortes norte-americanas e europeias mostraram desempenho discriminativo bem inferior ao da coorte japonesa original, sugerindo que a fisiopatologia e a resposta ao tratamento variam por ascendência e que o escore não deve ser extrapolado sem essa ressalva. O escore não tem relação direta comprovada com desfecho coronariano (descartando a opção 3), e nenhuma variável isolada reproduz a acurácia do modelo completo de 7 variáveis (descartando a opção 4).",
+    "source_refs": [
+      "Kobayashi T, Inoue Y, Takeuchi K, Okada Y, Tamura K, Tomomasa T, Kobayashi T, Morikawa A. Prediction of intravenous immunoglobulin unresponsiveness in patients with Kawasaki disease. Circulation. 2006;113(22):2606-2612. DOI: 10.1161/CIRCULATIONAHA.105.592865. PMID: 16735679 — citação e números conferidos por esummary/efetch do PubMed e contra o registro já publicado nesta base: kobayashi2006-escore-preditor-de-resistencia-a-imunoglobulina-na-doenca-de-kawasaki."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "miocardite-pediatrica-biopsia-endomiocardica-estratifica-prognostico-registro-mykke",
+    "titulo": "Miocardite pediátrica: a biópsia endomiocárdica estratifica prognóstico? O registro MYKKE",
+    "tema": "Cardiologia pediátrica",
+    "nivel": "avançado",
+    "enunciado": "Adolescente de 13 anos internado por miocardite aguda, submetido a biópsia endomiocárdica que mostra padrão histológico de miocardite crônica/em cicatrização linfocítica (não miocardite aguda). A família pergunta sobre prognóstico e se esse achado histológico específico muda a conduta além do suporte hemodinâmico já em curso.",
+    "pergunta": "Segundo o registro prospectivo multicêntrico alemão MYKKE (23 centros, biópsia endomiocárdica em 260 crianças com suspeita de miocardite), o que o subtipo histológico encontrado na biópsia acrescenta ao prognóstico deste paciente?",
+    "opcoes": [
+      "O subtipo crônico/em cicatrização linfocítico teve numericamente a menor sobrevida livre de evento adverso maior em 5 anos (24%, contra 31% na miocardite aguda linfocítica e 58% na já cicatrizada), mas a diferença entre os três subtipos NÃO atingiu significância estatística (p=0,294) nessa coorte de 209 pacientes com miocardite confirmada — o achado é descritivo e gerador de hipótese, não uma regra de decisão validada",
+      "O subtipo crônico/em cicatrização teve sobrevida estatisticamente pior (p<0,05) que os demais subtipos, o que já embasa recomendação formal de transplante precoce automático nesse subgrupo",
+      "A detecção de DNA/RNA viral no tecido miocárdico foi o preditor mais forte e estatisticamente significativo de desfecho adverso, superando o valor do achado histológico",
+      "Nenhuma diferença prognóstica entre subtipos histológicos foi observada no registro — a biópsia endomiocárdica tem valor apenas diagnóstico, nunca prognóstico, na miocardite pediátrica"
+    ],
+    "resposta_correta": 0,
+    "explicacao": "No registro MYKKE (Seidel F et al., Int J Cardiol 2022), miocardite foi confirmada por biópsia em 209 dos 260 pacientes: 64% com miocardite crônica/em cicatrização linfocítica, 23% com miocardite aguda linfocítica e 14% já cicatrizada, sem nenhum caso de miocardite de células gigantes. A sobrevida livre do desfecho combinado (suporte circulatório mecânico, transplante cardíaco ou óbito) em 5 anos foi de 24% no subtipo crônico/em cicatrização, 31% na aguda e 58% na já cicatrizada — mas essa diferença NÃO atingiu significância estatística (p=0,294), o que o próprio estudo reconhece como limitação de uma coorte observacional sem grupo controle. A detecção de DNA/RNA viral no miocárdio, apesar de amplamente pesquisada, não teve efeito estatisticamente significativo sobre o desfecho — o oposto do afirmado na opção 3. A taxa de desmame bem-sucedido do suporte circulatório mecânico foi de 64% entre os pacientes com miocardite aguda. A leitura correta, e o valor real do achado para este paciente, é que a biópsia oferece uma tendência prognóstica a considerar na discussão com a família e no planejamento de vigilância mais próxima — não uma regra que determine automaticamente transplante precoce (opção 2, que superestima a força estatística do achado) nem a conclusão de que a biópsia é irrelevante para prognóstico (opção 4, que ignora a estratificação descritiva encontrada).",
+    "source_refs": [
+      "Seidel F, Opgen-Rhein B, Rentzsch A, et al.; MYKKE consortium. Clinical characteristics and outcome of biopsy-proven myocarditis in children - Results of the German prospective multicentre registry \"MYKKE\". Int J Cardiol. 2022;357:95-104. DOI: 10.1016/j.ijcard.2022.03.026. PMID: 35304189 — resumo integral conferido por efetch do PubMed (p=0,294 confirmado no texto do abstract) e contra o registro já publicado nesta base: seidel-2022-mykke-registro-de-miocardite-biopsiada-pediatrica."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "infarto-em-paciente-com-85-anos-ou-mais-subtratamento-e-o-papel-da-mobilidade-silver-ami",
+    "titulo": "Infarto agudo do miocárdio aos 85 anos ou mais: subtratamento sistemático? O que mostra o SILVER-AMI",
+    "tema": "Cardiologia geriátrica",
+    "nivel": "intermediário",
+    "enunciado": "Mulher de 87 anos, previamente independente para atividades básicas de vida diária mas com limitação de mobilidade (usa andador), é internada por infarto agudo do miocárdio sem supra de ST, com apresentação atípica — relatou apenas dispneia e fraqueza, sem dor torácica. Um médico mais jovem da equipe sugere conduta conservadora, sem cateterismo, \"dada a idade\".",
+    "pergunta": "O que a coorte prospectiva multicêntrica SILVER-AMI (3.041 pacientes ≥75 anos, comparando pacientes de 75-84 anos com pacientes ≥85 anos) mostra sobre essa decisão?",
+    "opcoes": [
+      "A idade cronológica isolada (≥85 anos) é, por si só, contraindicação formal a cateterismo e revascularização coronariana",
+      "Pacientes com 85 anos ou mais apresentaram dor torácica como sintoma principal com menor frequência (52,7% vs. 57,7%) e receberam revascularização coronariana com menor frequência (58,1% vs. 71,8%) que os de 75-84 anos; a mortalidade em 6 meses foi maior nesse grupo mais idoso (HR 1,78), mas essa associação se atenuou substancialmente após ajuste para limitação de MOBILIDADE (HR 1,29) — sugerindo que a fragilidade funcional, não a idade cronológica isolada, explica boa parte do excesso de mortalidade, o que sustenta avaliação funcional sistemática (não decisão só pela idade) antes de negar revascularização",
+      "A apresentação atípica sem dor torácica clássica é achado raro em pacientes com 85 anos ou mais e não deveria ter mudado a suspeita diagnóstica inicial desta paciente",
+      "O estudo demonstra que revascularizar menos os pacientes com 85 anos ou mais já é prática corretamente ajustada ao risco, sem evidência de subtratamento sistemático"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A análise da coorte SILVER-AMI (Gupta A et al., Am J Med 2021), com 3.041 pacientes ≥75 anos com infarto agudo do miocárdio em 94 hospitais americanos, comparou 2.210 pacientes de 75-84 anos com 831 pacientes ≥85 anos. Os mais idosos apresentaram dor torácica com menor frequência (52,7% vs. 57,7%) e maior prevalência de limitações funcionais, e receberam revascularização coronariana com menor frequência (58,1% vs. 71,8%; p<0,01 para ambas as comparações) — dados que, em conjunto com a apresentação atípica desta paciente (dispneia e fraqueza, sem dor torácica), descrevem exatamente o padrão de subtratamento relativo do grupo mais idoso, e não confirmam a opção 3 nem a opção 4. A mortalidade em 6 meses foi maior no grupo ≥85 anos (HR 1,78; IC95% 1,39-2,28), mas essa associação se atenuou substancialmente (HR 1,29; IC95% 0,99-1,68, perdendo significância estatística) após ajuste para limitação de mobilidade — um marcador de fragilidade mensurável à beira do leito. Isso indica que boa parte do excesso de mortalidade atribuído à idade cronológica é, na verdade, explicado por fragilidade funcional, o que sustenta avaliação funcional sistemática (mobilidade, independência) em vez de negar procedimento só pela idade em anos (o que descarta a opção 1).",
+    "source_refs": [
+      "Gupta A, Tsang S, Hajduk A, Krumholz HM, Nanna MG, Green P, Dodson JA, Chaudhry SI. Presentation, Treatment, and Outcomes of the Oldest-Old Patients with Acute Myocardial Infarction: The SILVER-AMI Study. Am J Med. 2021;134(1):95-103. DOI: 10.1016/j.amjmed.2020.07.020. PMID: 32805225 — citação conferida por esummary do PubMed e contra o registro já publicado nesta base: gupta2021-silver-ami-desfechos-no-idoso-muito-idoso-com-infarto."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "trocar-varfarina-por-doac-em-idoso-fragil-ja-estavel-em-inr-o-que-mostrou-o-frail-af",
+    "titulo": "Trocar varfarina por DOAC em idoso frágil já estável em INR? O que mostrou o FRAIL-AF",
+    "tema": "Cardiologia geriátrica",
+    "nivel": "intermediário",
+    "enunciado": "Paciente de 84 anos, fibrilação atrial permanente, fragilidade documentada por escore de fragilidade de Groningen, em uso de antagonista de vitamina K (varfarina) há vários anos, com INR terapêutico estável e sem episódio de sangramento prévio. Um familiar leu que \"DOAC é mais seguro que varfarina\" e pergunta se a medicação deveria ser trocada.",
+    "pergunta": "Segundo o ensaio randomizado FRAIL-AF (1.330 idosos frágeis, idade média 83 anos, todos já estáveis em antagonista de vitamina K antes da randomização), qual conduta está sustentada pela evidência?",
+    "opcoes": [
+      "Trocar sempre para DOAC, porque DOAC é uniformemente mais seguro que varfarina em qualquer subgrupo de pacientes com fibrilação atrial, incluindo o idoso frágil já estabilizado",
+      "Não trocar por trocar: o ensaio foi interrompido precocemente por futilidade — trocar de varfarina para DOAC aumentou o sangramento maior ou clinicamente relevante não maior (razão de risco 1,69; IC95% 1,23-2,32) SEM redução compensatória de eventos tromboembólicos (razão de risco 1,26; IC95% 0,60-2,61, sem significância estatística) nesse subgrupo específico de idosos frágeis já estáveis em antagonista de vitamina K — a extrapolação automática de que 'DOAC é sempre mais seguro' não se sustentou aqui",
+      "A troca deve ser feita sempre que o paciente relatar preferência por não fazer exames de INR regulares, já que o estudo não mostrou diferença nem de eficácia nem de segurança entre as duas estratégias",
+      "O estudo confirma que idosos frágeis devem ser excluídos de qualquer anticoagulação oral, dado o risco elevado de sangramento verificado nas duas estratégias comparadas"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O FRAIL-AF (Joosten LPT et al.; FRAIL-AF Study Group, Circulation 2024) foi um ensaio pragmático, multicêntrico, aberto, randomizado, de superioridade, conduzido na Holanda em 1.330 pacientes idosos frágeis (idade média 83 anos, definidos por 75 anos ou mais associado a escore de fragilidade de Groningen ≥3) já em uso estável de antagonista de vitamina K para fibrilação atrial, testando a troca para DOAC contra manter o antagonista de vitamina K guiado por INR. O estudo foi interrompido precocemente por futilidade após 163 eventos do desfecho primário (101 no braço trocado para DOAC, 62 no braço que manteve o antagonista de vitamina K): razão de risco de 1,69 (IC95% 1,23-2,32) para sangramento maior ou clinicamente relevante não maior, mais frequente no grupo trocado para DOAC, sem redução compensatória de eventos tromboembólicos (razão de risco 1,26; IC95% 0,60-2,61, sem diferença estatística). Isso contraria diretamente a extrapolação automática de que DOAC é sempre mais seguro que varfarina — regra bem estabelecida na população geral com fibrilação atrial, mas que este ensaio mostra não se sustentar especificamente no idoso frágil já estabilizado em antagonista de vitamina K. A mensagem prática correta é não trocar por trocar quando o paciente frágil já está bem controlado com INR, não a preferência do paciente por menos exames (opção 3, que ignora o resultado de segurança) nem a exclusão de qualquer anticoagulação (opção 4, que não é o que o estudo testou nem concluiu — ele comparou duas estratégias de anticoagulação entre si, não anticoagular versus não anticoagular).",
+    "source_refs": [
+      "Joosten LPT, van Doorn S, van de Ven PM, et al.; FRAIL-AF Study Group. Safety of Switching From a Vitamin K Antagonist to a Non-Vitamin K Antagonist Oral Anticoagulant in Frail Older Patients With Atrial Fibrillation: Results of the FRAIL-AF Randomized Controlled Trial. Circulation. 2024;149(4):279-289. DOI: 10.1161/CIRCULATIONAHA.123.066485. PMID: 37634130 — citação conferida por esummary do PubMed e contra o registro já publicado nesta base: frail-af-troca-de-varfarina-por-doac-em-idoso-fragil."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "civ-perimembranosa-em-crianca-oclusor-bioabsorvivel-ou-nitinol-ensaio-randomizado-chines",
+    "titulo": "CIV perimembranosa em criança: oclusor bioabsorvível ou de nitinol? O ensaio randomizado chinês",
+    "tema": "Cardiopatias congênitas",
+    "nivel": "intermediário",
+    "enunciado": "Criança de 6 anos com comunicação interventricular (CIV) perimembranosa de 4 mm, com indicação de fechamento transcateter. O cardiologista intervencionista discute com a família a escolha entre um oclusor totalmente bioabsorvível de nova geração e o oclusor tradicional de nitinol, citando a preocupação histórica com bloqueio atrioventricular pela proximidade do defeito perimembranoso ao feixe de His.",
+    "pergunta": "Segundo o ensaio clínico randomizado multicêntrico chinês (7 centros, 108 pacientes com CIV perimembranosa >3 mm, desenho de não inferioridade, seguimento de 24 meses), o que diferencia as duas estratégias de oclusor?",
+    "opcoes": [
+      "O oclusor de nitinol foi superior em eficácia de fechamento, com menos shunt residual que o oclusor bioabsorvível ao final do seguimento",
+      "Não houve shunt residual maior que 2 mm em nenhum dos dois grupos ao final do seguimento de 24 meses; a incidência de bloqueio de condução SUSTENTADO foi menor no grupo bioabsorvível (0/54 pacientes) que no grupo nitinol (6/54 pacientes, p=0,036) — sinal favorável ao dispositivo bioabsorvível na complicação mais temida desse procedimento, com eficácia e segurança globais não inferiores às do oclusor de nitinol tradicional",
+      "A incidência de arritmia pós-procedimento foi significativamente maior no grupo bioabsorvível (p<0,05), o que contraindicaria seu uso rotineiro nesta criança",
+      "O oclusor bioabsorvível já tem dados de seguimento superiores a 10 anos confirmando reabsorção completa e segurança definitiva do dispositivo"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "No ensaio de Wang S et al. (Sci Bull 2023), 108 pacientes com CIV perimembranosa >3 mm foram randomizados entre oclusor totalmente bioabsorvível (n=54) e oclusor tradicional de nitinol (n=54), com desenho de não inferioridade e seguimento de 24 meses. Nenhum shunt residual >2 mm foi observado em qualquer grupo ao final do seguimento, o que descarta a opção 1. A incidência de bloqueio de condução sustentado — a complicação mais temida do fechamento percutâneo de CIV perimembranosa, pela proximidade do feixe de His — foi de 0/54 no grupo bioabsorvível contra 6/54 no grupo nitinol (p=0,036), favorável ao dispositivo bioabsorvível. A arritmia pós-procedimento em geral foi numericamente menor no grupo bioabsorvível (5,56% vs. 14,81%), mas essa diferença NÃO atingiu significância estatística (p=0,112) — o oposto do afirmado na opção 3, tanto na direção quanto na significância. O estudo conclui não inferioridade de eficácia e segurança globais do oclusor bioabsorvível em relação ao nitinol. A ressalva que o próprio estudo registra como limitação é a amostra pequena (108 pacientes) para um desfecho de segurança relativamente raro, e o seguimento de 24 meses não permite afirmar dado de reabsorção e segurança em prazo mais longo (o que descarta a opção 4, que extrapola além do que o estudo mostrou).",
+    "source_refs": [
+      "Wang S, Li Z, Wang Y, Zhao T, et al. Transcatheter closure of perimembranous ventricular septal defect using a novel fully bioabsorbable occluder: multicenter randomized controlled trial. Sci Bull (Beijing). 2023;68(10):1051-1059. DOI: 10.1016/j.scib.2023.04.027. PMID: 37179234 — resumo integral conferido por efetch do PubMed e contra o registro já publicado nesta base: wang-oclusor-bioabsorvivel-para-civ-perimembranosa. Nota: o DOI conferido diretamente no PubMed (10.1016/j.scib.2023.04.027) difere em um dígito final do DOI gravado no registro de estudos desta base (10.1016/j.scib.2023.04.026); mesmo PMID, mesmo artigo — divergência de digitação a corrigir naquele registro, não neste caso."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "gestante-com-cardiopatia-congenita-nao-corrigida-o-gradiente-de-risco-escondido-na-media-registro-ropac",
+    "titulo": "Gestante com cardiopatia congênita não corrigida: o gradiente de risco escondido na média — registro ROPAC",
+    "tema": "Cardiopatias congênitas",
+    "nivel": "avançado",
+    "enunciado": "Mulher de 24 anos, portadora de cardiopatia congênita cianótica não corrigida evoluindo com síndrome de Eisenmenger, engravida sem planejamento e é encaminhada tardiamente ao pré-natal de alto risco. A equipe obstétrica, ao consultar dados gerais de mortalidade materna em cardiopatia congênita não corrigida (0,7% no registro ROPAC), considera o risco relativamente baixo e questiona a indicação de aconselhamento formal para interrupção precoce da gestação.",
+    "pergunta": "O que os dados do registro ROPAC (10 anos, 53 países, 1.059 gestações com cardiopatia congênita NÃO corrigida) mostram sobre essa leitura pela média geral do grupo?",
+    "opcoes": [
+      "A mortalidade materna de 0,7% se aplica igualmente a todos os subtipos de cardiopatia congênita não corrigida, incluindo a síndrome de Eisenmenger — não há necessidade de estratificar por lesão específica antes de aconselhar a paciente",
+      "O risco médio do grupo geral (mortalidade materna 0,7% em cardiopatia congênita não corrigida) esconde um gradiente extremo: no subgrupo especificamente com síndrome de EISENMENGER, evento cardíaco ocorreu em 65,5% das gestações, mortalidade materna foi de 10,3% e insuficiência cardíaca em 48,3% — números que sustentam contraindicar formalmente a gestação nesse subgrupo específico, e mostram que a leitura pela média do grupo maior é enganosa para esta paciente",
+      "Gestantes de países emergentes e de países desenvolvidos com cardiopatia congênita não corrigida tiveram desfechos idênticos no registro, sem diferença de internação por evento cardíaco",
+      "A síndrome de Eisenmenger deixou de ser contraindicação formal à gestação segundo os dados mais recentes do registro ROPAC"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O registro ROPAC (Sliwa K et al., JACC Heart Fail 2020), com dados de 10 anos, 53 países e 3.295 gestações com cardiopatia congênita, incluiu 1.059 gestações com cardiopatia congênita NÃO corrigida (41,4% delas em países emergentes). No grupo geral dessas cardiopatias não corrigidas, a mortalidade materna foi de 0,7% e insuficiência cardíaca ocorreu em 8,7% — mas esse risco médio esconde um gradiente extremo: no subgrupo especificamente com síndrome de Eisenmenger, evento cardíaco ocorreu em 65,5% das gestações, mortalidade materna foi de 10,3% (quase 15 vezes maior que a média do grupo geral) e insuficiência cardíaca em 48,3%. Isso quantifica com precisão por que a leitura pela média do grupo maior é enganosa e potencialmente perigosa para esta paciente específica, e sustenta a recomendação de contraindicar formalmente a gestação no Eisenmenger — já registrada nas evidências AHA/ACC 2018 desta base — com números concretos do próprio registro, não apenas por princípio geral (o que descarta as opções 1 e 4). Gestantes de países emergentes tiveram, ao contrário do afirmado na opção 3, cerca de 3 vezes mais internação por evento cardíaco e mais restrição de crescimento intrauterino que as de países desenvolvidos — diferença atribuível, ao menos em parte, a heterogeneidade de acesso a cuidado entre os 53 países do registro, limitação que o próprio estudo reconhece.",
+    "source_refs": [
+      "Sliwa K, Baris L, Sinning C, Zengin-Sahm E, Gumbiene L, Yaseen IF, Youssef G, Johnson M, Al-Farhan H, Lelonek M, Hall R, Roos-Hesselink J. Pregnant Women With Uncorrected Congenital Heart Disease: Heart Failure and Mortality. JACC Heart Fail. 2020;8(2):100-110. DOI: 10.1016/j.jchf.2019.09.001. PMID: 31511192 — citação conferida por esummary do PubMed e contra o registro já publicado nesta base: ropac-gestacao-em-cardiopatia-congenita-nao-corrigida."
+    ],
+    "review_status": "revisado"
   }
 ]

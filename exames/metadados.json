@@ -5414,5 +5414,204 @@
       "gata4",
       "aconselhamento genetico"
     ]
+  },
+  {
+    "slug": "sorologia-e-pcr-para-doenca-de-chagas-congenita-diagnostico-da-transmissao-vertical",
+    "name": "Diagnóstico da doença de Chagas congênita: exame parasitológico direto, PCR e sorologia por idade",
+    "category": "laboratorial",
+    "theme": "Cardiologia pediátrica",
+    "what_it_measures": "Detecção de Trypanosoma cruzi por três métodos complementares, escolhidos conforme a idade do lactente: método parasitológico direto por concentração (microhematócrito ou método de Strout/\"microstrout\", com exame microscópico da camada leucoplaquetária do sangue de cordão umbilical ou periférico), reação em cadeia da polimerase (PCR) e sorologia convencional (detecção de anticorpos IgG anti-T. cruzi).",
+    "reference_range": "Resultado qualitativo (presença/ausência do parasita ou de DNA parasitário; sorologia reagente/não reagente) — não há valor numérico de referência.",
+    "indications": "Recém-nascido de mãe com sorologia positiva para T. cruzi (rastreio sorológico universal recomendado na gestante, sobretudo em área endêmica ou com história epidemiológica compatível); irmãos de caso índice de Chagas congênita; qualquer lactente com suspeita clínica de infecção congênita.",
+    "interpretation": "Exame parasitológico direto positivo ao nascimento, ou repetido e positivo com 1 mês de vida — momento em que a parasitemia costuma atingir o pico —, confirma infecção congênita. Se o exame direto ao nascer for negativo, deve ser repetido a 1 mês. A PCR pode ser empregada entre 1 e 3 meses de vida como método de detecção precoce, mas a fonte a trata como teste ainda em incorporação (\"uptaking test\"), não substituto definitivo do método parasitológico direto onde este estiver disponível. A sorologia só é interpretável com segurança **após os 10 meses de idade**, quando os anticorpos maternos transferidos passivamente pela placenta já foram eliminados da circulação do lactente: sorologia reagente após essa idade confirma infecção congênita, e sorologia não reagente após os 10 meses exclui a infecção.",
+    "limitations": "A sensibilidade do exame parasitológico direto cai com parasitemia baixa e depende de processamento da amostra em até 24 horas por pessoal treinado. A PCR carece de padronização completa entre laboratórios e centros. Sorologia realizada antes dos 10 meses de vida não distingue infecção verdadeira do lactente de anticorpo materno transferido passivamente por via transplacentária — um resultado reagente nesse intervalo não confirma nem exclui infecção congênita, e repetir a sorologia antes dessa idade não resolve a ambiguidade.",
+    "source_refs": [
+      "Carlier Y, Altcheh J, Angheben A, Freilij H, Luquetti AO, Schijman AG, Segovia M, Wagner N, Albajar Vinas P. Congenital Chagas disease: Updated recommendations for prevention, diagnosis, treatment, and follow-up. PLoS Negl Trop Dis. 2019;13(10):e0007694. DOI: 10.1371/journal.pntd.0007694. PMID: 31647811. PMCID: PMC6812740 — texto integral de acesso aberto lido nesta sessão via PMC, fonte dos prazos e métodos por idade descritos acima."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "doença de chagas",
+      "chagas congênito",
+      "transmissão vertical",
+      "trypanosoma cruzi",
+      "sorologia",
+      "pcr",
+      "recém-nascido"
+    ]
+  },
+  {
+    "slug": "ecocardiograma-seriado-da-raiz-aortica-escore-z-nas-aortopatias-geneticas-pediatricas",
+    "name": "Ecocardiograma seriado da raiz aórtica (diâmetro e escore Z) nas aortopatias genéticas pediátricas",
+    "category": "imagem",
+    "theme": "Cardiologia pediátrica",
+    "what_it_measures": "Medida seriada do diâmetro da raiz aórtica (habitualmente expressa como escore Z, ajustado para superfície corporal) por ecocardiograma transtorácico, em crianças com síndrome de Marfan (gene FBN1), síndrome de Loeys-Dietz (genes TGFBR1/TGFBR2/SMAD2/SMAD3/TGFB2/TGFB3) ou síndrome de Ehlers-Danlos vascular (gene COL3A1) — as três aortopatias genéticas pediátricas mais estabelecidas.",
+    "reference_range": "Não há um único corte: o limiar que motiva reparo cirúrgico eletivo em lactente/criança pequena varia por síndrome e, na síndrome de Loeys-Dietz, pelo gene específico envolvido (ver interpretação).",
+    "indications": "Vigilância seriada em toda criança com diagnóstico confirmado ou fortemente suspeito de síndrome de Marfan, Loeys-Dietz ou Ehlers-Danlos vascular. Na síndrome de Marfan, a frequência recomendada é anual quando a dimensão aórtica é relativamente pequena e a taxa de dilatação relativamente lenta, com exames mais frequentes quando esses critérios de estabilidade não são atendidos. Na síndrome de Loeys-Dietz, recomenda-se ecocardiograma pelo menos anual, complementado por angiorressonância ou angiotomografia com reconstrução 3D da cabeça à pelve pelo menos a cada 2 anos.",
+    "interpretation": "Síndrome de Marfan: em lactente/criança pequena, reparo é considerado quando a taxa de aumento do diâmetro da raiz aórtica se aproxima de 0,5–1,0 cm/ano OU há regurgitação aórtica progressiva e grave — mas \"muitos centros usam o critério de corte do adulto, de 5,0 cm\", dada a raridade extrema de dissecção nessa faixa etária. Síndrome de Loeys-Dietz, em lactentes/crianças pequenas com variante em TGFBR1 ou TGFBR2: limiar cirúrgico no diâmetro acima do percentil 99 E anel aórtico maior que 1,8–2,0 cm — mais agressivo que Marfan, coerente com a observação de que aproximadamente metade dos aneurismas descritos em coortes de Loeys-Dietz fica fora do alcance do ecocardiograma (daí a necessidade da imagem de corpo inteiro complementar). Síndrome de Ehlers-Danlos vascular: a fonte declara textualmente que \"não há diretrizes para orientar recomendações de reparo eletivo\" — decisão individualizada, com preferência emergente por abordagem endovascular quando indicada, e angiografia convencional com contraste desencorajada pelo risco de lesão vascular no próprio acesso.",
+    "limitations": "Tratar as três síndromes como uma única entidade \"aorta genética\" é o erro mais perigoso: os limiares numéricos divergem de forma clinicamente relevante entre elas, e dentro da própria síndrome de Loeys-Dietz o limiar muda conforme o gene (TGFBR1/TGFBR2 vs. SMAD2/SMAD3/TGFB2 vs. TGFB3). O ecocardiograma isolado subestima a extensão da doença vascular na síndrome de Loeys-Dietz, por não alcançar aneurismas fora da raiz aórtica — cerca de metade deles, segundo a fonte. Na síndrome de Ehlers-Danlos vascular, o próprio exame invasivo de imagem (angiografia com contraste) carrega risco procedural pela fragilidade extrema da parede arterial.",
+    "source_refs": [
+      "Dietz H. FBN1-Related Marfan Syndrome. GeneReviews [Internet]. Seattle (WA): University of Washington, Seattle; 2001 Apr 18 [Updated 2022]. PMID: 20301510 — texto integral de acesso aberto lido nesta sessão em ncbi.nlm.nih.gov/books/NBK1335/.",
+      "Loeys BL, Dietz HC. Loeys-Dietz Syndrome. GeneReviews [Internet]. Seattle (WA): University of Washington, Seattle; 2008 Feb 28 [atualizado periodicamente]. PMID: 20301312 — texto integral de acesso aberto lido nesta sessão em ncbi.nlm.nih.gov/books/ (capítulo Loeys-Dietz).",
+      "Byers PH. Vascular Ehlers-Danlos Syndrome. GeneReviews [Internet]. Seattle (WA): University of Washington, Seattle; 1999 Sep 2 [Updated 2025]. PMID: 20301667 — texto integral de acesso aberto lido nesta sessão em ncbi.nlm.nih.gov/books/NBK1494/.",
+      "Morris SA, Flyer JN, Yetman AT, et al. Cardiovascular Management of Aortopathy in Children: A Scientific Statement From the American Heart Association. Circulation. 2024;150(11):e228-e254. PMID: 39129620 — ficha bibliográfica conferida via PubMed E-utilities nesta sessão; texto integral bloqueado (ahajournals.org, HTTP 403), citado apenas como o posicionamento mais recente dedicado ao tema, sem extração de número de seu texto integral."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "aortopatia genética",
+      "síndrome de marfan",
+      "síndrome de loeys-dietz",
+      "ehlers-danlos vascular",
+      "escore z",
+      "raiz aórtica",
+      "ecocardiograma pediátrico"
+    ]
+  },
+  {
+    "slug": "holter-24h-no-diagnostico-diferencial-da-cardiomiopatia-induzida-por-taquicardia-na-crianca",
+    "name": "Holter de 24 horas no diagnóstico diferencial da cardiomiopatia induzida por taquicardia em crianças",
+    "category": "metodo_grafico",
+    "theme": "Cardiologia pediátrica",
+    "what_it_measures": "Registro eletrocardiográfico contínuo por 24 horas, usado para documentar e identificar o mecanismo de uma taquiarritmia sustentada ou incessante (não sinusal) em criança com disfunção ventricular sistólica de causa não esclarecida — passo diagnóstico central para diferenciar cardiomiopatia induzida por taquicardia (TIC) de cardiomiopatia dilatada primária com taquicardia sinusal reativa à própria insuficiência cardíaca.",
+    "reference_range": "Não se aplica um valor de referência único — o achado relevante é qualitativo: presença e mecanismo de taquiarritmia não sinusal sustentada/incessante, não uma contagem numérica de referência.",
+    "indications": "Criança com fração de encurtamento <28% ou fração de ejeção <55% (ou <50%, conforme a série) ao ecocardiograma, sem cardiopatia congênita associada, em quem se suspeita de taquiarritmia como causa (e não consequência) da disfunção — sobretudo quando o ECG de superfície isolado não é conclusivo.",
+    "interpretation": "O Holter confirma o diagnóstico de TIC ao demonstrar taquiarritmia documentada com mecanismo não sinusal formalmente identificado. Na maior série pediátrica dedicada ao tema (Kafalı et al. 2020, n=26), os mecanismos mais frequentes foram taquicardia atrial focal (31% das taquicardias supraventriculares), taquicardia por reentrada atrioventricular (27%) e taquicardia juncional recíproca permanente/PJRT (15%). Numa série mais recente (Zhang, Cao, Zhang 2026, n=12), 3 das 12 crianças eram completamente assintomáticas, com a arritmia identificada de forma incidental — e um caso adicional se apresentou apenas com dor epigástrica isolada e ECG de superfície inicialmente normal, sendo o diagnóstico feito exclusivamente pelo Holter de 24 horas, que revelou taquicardia atrial paroxística subjacente.",
+    "limitations": "Um único registro de 24 horas pode não capturar um evento paroxístico não incessante — se a suspeita clínica persistir após Holter negativo, monitorização mais prolongada ou estudo eletrofisiológico invasivo podem ser necessários. O Holter documenta o mecanismo, mas não substitui o ecocardiograma seriado para acompanhar a recuperação funcional após tratamento, que pode levar até 36 meses para normalização estrutural completa segundo as séries pediátricas disponíveis.",
+    "source_refs": [
+      "Kafalı HC, Öztürk E, Özgür S, Şahin Tunca G, Güzeltaş A, Ergül Y. Electrophysiologic characteristics and catheter ablation results of tachycardia-induced cardiomyopathy in children with structurally normal heart. Anatol J Cardiol. 2020;24(6):370-376. PMID: 33253137. PMCID: PMC7791294 — texto integral de acesso aberto lido nesta sessão via PMC.",
+      "Zhang M, Cao X, Zhang Y. Clinical significance and efficacy of radiofrequency catheter ablation in the treatment of tachycardia-induced cardiomyopathy in 12 children. J Cardiothorac Surg. 2026;21:503. PMID: 41484642. PMCID: PMC12866243 — texto integral de acesso aberto lido nesta sessão via PMC."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "holter",
+      "cardiomiopatia induzida por taquicardia",
+      "taquicardia atrial focal",
+      "pjrt",
+      "cardiomiopatia pediátrica",
+      "arritmia pediátrica"
+    ]
+  },
+  {
+    "slug": "teste-de-hipotensao-ortostatica-medida-seriada-de-pa-e-fc-no-idoso-cardiopata",
+    "name": "Teste de hipotensão ortostática (medida seriada de pressão arterial e frequência cardíaca, deitado-em pé) no idoso cardiopata",
+    "category": "metodo_grafico",
+    "theme": "Cardiologia geriátrica",
+    "what_it_measures": "Medida sequencial da pressão arterial e da frequência cardíaca com o paciente em decúbito e depois em ortostatismo (ativo, ficando de pé, ou passivo, em mesa de inclinação), documentando a magnitude e o padrão temporal da queda pressórica ao assumir a posição ortostática — achado clinicamente relevante e prevalente no idoso cardiopata, seja por disautonomia, depleção de volume ou efeito farmacológico.",
+    "reference_range": "Hipotensão ortostática definida por consenso como queda sustentada da pressão arterial sistólica ≥20 mmHg ou da diastólica ≥10 mmHg dentro de 3 minutos após assumir a posição ortostática (ativa ou em mesa de inclinação), a partir da posição deitada ou sentada.",
+    "indications": "Idoso cardiopata com síncope, pré-síncope, tontura postural, quedas de repouso inexplicadas, ou em uso de anti-hipertensivo/diurético/vasodilatador, sobretudo quando há suspeita de contribuição disautonômica ou farmacológica para os sintomas.",
+    "interpretation": "Queda pressórica que preenche o critério de consenso, temporalmente associada aos sintomas relatados (tontura, turvação visual, síncope), sustenta hipotensão ortostática como causa. A distinção do padrão temporal também orienta a etiologia: queda muito precoce e rápida sugere hipotensão ortostática inicial (mecanismo diferente, geralmente benigno), enquanto queda sustentada e progressiva ao longo dos 3 minutos é mais compatível com falência autonômica.",
+    "limitations": "O próprio documento de consenso adverte que a definição é operacional, não um corte biologicamente absoluto — magnitude semelhante de queda pode ser sintomática em um paciente e assintomática em outro, e a correlação temporal com os sintomas relatados pelo paciente continua sendo parte essencial da interpretação, não apenas o número isolado. É um teste distinto da avaliação de hipotensão pós-prandial (outro padrão temporal, medido tipicamente por MAPA com registro pós-refeição) e da massagem do seio carotídeo — os três avaliam mecanismos diferentes de intolerância ortostática no idoso e não são intercambiáveis.",
+    "source_refs": [
+      "Freeman R, Wieling W, Axelrod FB, et al. Consensus statement on the definition of orthostatic hypotension, neurally mediated syncope and the postural tachycardia syndrome. Auton Neurosci. 2011;161(1-2):46-48. PMID: 21393070 — ficha bibliográfica e definição de consenso conferidas via PubMed E-utilities nesta sessão."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "hipotensão ortostática",
+      "síncope no idoso",
+      "queda de pressão postural",
+      "disautonomia",
+      "idoso cardiopata"
+    ]
+  },
+  {
+    "slug": "dosagem-de-atividade-anti-xa-calibrada-para-monitorizacao-de-doac-no-idoso-com-funcao-renal-limitrofe",
+    "name": "Dosagem de atividade anti-Xa calibrada para monitorização de anticoagulante oral direto (apixabana/rivaroxabana/edoxabana) no idoso com função renal limítrofe",
+    "category": "laboratorial",
+    "theme": "Cardiologia geriátrica",
+    "what_it_measures": "Atividade anti-fator Xa medida por ensaio cromogênico calibrado especificamente para o anticoagulante oral direto (DOAC) inibidor do fator Xa em uso (apixabana, rivaroxabana ou edoxabana) — método quantitativo preferido quando é necessário estimar a exposição real ao fármaco, em vez de inferi-la apenas pela dose prescrita e pela função renal estimada.",
+    "reference_range": "Não há corte único aplicável a todos os cenários clínicos — o resultado deve ser interpretado em função do fármaco, da dose, do horário da última tomada em relação à coleta (pico vs. vale) e da calibração específica do laboratório para aquele DOAC; ensaios não calibrados (ex.: anti-Xa calibrado para heparina) não são intercambiáveis e podem gerar leitura enganosa.",
+    "indications": "Situações em que a exposição real ao DOAC precisa ser quantificada, e não apenas presumida pela dose e pela função renal: sangramento maior em curso, necessidade de cirurgia/procedimento urgente, suspeita de acúmulo por deterioração renal aguda ou interação medicamentosa — cenário especialmente relevante no idoso, em quem a função renal costuma ser mais instável e mais frequentemente subestimada pela creatinina isolada.",
+    "interpretation": "A comunicação oficial da International Society on Thrombosis and Haemostasis (ISTH) sobre testes laboratoriais em pacientes tratados com DOAC afirma que ensaios de atividade anti-Xa (ou anti-IIa, para a dabigatrana) são o método preferido quando informação quantitativa é necessária para os inibidores do fator Xa — em contraste com os testes de coagulação de rotina (TP/RNI, TTPa), que não foram desenhados para quantificar DOAC e podem permanecer normais mesmo com concentração plasmática relevante do fármaco.",
+    "limitations": "Sensibilidades e variabilidades de calibração diferem entre reagentes e laboratórios, o que impede comparar diretamente um resultado numérico entre centros diferentes sem conhecer o ensaio usado. O teste não é rotineiramente necessário na maioria dos pacientes estáveis em uso de DOAC — seu valor está concentrado nos cenários de exceção descritos acima, não como monitorização de rotina (diferença conceitual central em relação à varfarina, cuja monitorização por RNI é sistemática).",
+    "source_refs": [
+      "Douxfils J, Ageno W, Samama CM, Lessire S, Ten Cate H, Verhamme P, Dogné JM, Mullier F. Laboratory testing in patients treated with direct oral anticoagulants: a practical guide for clinicians. J Thromb Haemost. 2018;16(2):209-219. PMID: 29193737 — comunicação da International Society on Thrombosis and Haemostasis; abstract conferido via PubMed E-utilities nesta sessão."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "anti-xa",
+      "doac",
+      "apixabana",
+      "rivaroxabana",
+      "monitorização de anticoagulante",
+      "idoso",
+      "função renal"
+    ]
+  },
+  {
+    "slug": "gdf-15-na-estratificacao-de-risco-de-sangramento-do-idoso-anticoagulado-por-fibrilacao-atrial",
+    "name": "GDF-15 (fator de diferenciação de crescimento 15) na estratificação de risco de sangramento do idoso anticoagulado por fibrilação atrial",
+    "category": "laboratorial",
+    "theme": "Cardiologia geriátrica",
+    "what_it_measures": "Concentração sérica do fator de diferenciação de crescimento 15 (GDF-15), citocina da superfamília do TGF-β cuja elevação reflete estresse celular/inflamação e está associada a maior risco de sangramento em pacientes com fibrilação atrial em uso de anticoagulante — um dos três componentes biológicos do escore ABC (Age, Biomarkers, Clinical history)-bleeding, ao lado de troponina T de alta sensibilidade e hemoglobina.",
+    "reference_range": "Não é usado isoladamente por um corte único — entra como variável contínua na fórmula multivariável do escore ABC-bleeding, junto com idade, troponina T de alta sensibilidade, hemoglobina e história clínica de sangramento prévio.",
+    "indications": "Estratificação de risco de sangramento em paciente idoso com fibrilação atrial já com indicação de anticoagulação, como complemento aos escores clínicos tradicionais (HAS-BLED, ORBIT) — populações de derivação e validação do escore ABC-bleeding incluíram grandes coortes de pacientes com FA em uso de apixabana (ARISTOTLE) e varfarina/dabigatrana (RE-LY).",
+    "interpretation": "No estudo de derivação (14.537 pacientes, coorte ARISTOTLE) e validação externa (8.468 pacientes, coorte RE-LY), o escore ABC-bleeding — que incorpora o GDF-15 — teve desempenho preditivo superior aos escores clínicos tradicionais: índice C de 0,71 (IC95% 0,68-0,73) na validação externa, contra 0,62 (0,59-0,64) do HAS-BLED e 0,68 (0,65-0,70) do ORBIT.",
+    "limitations": "GDF-15 é um biomarcador inespecífico de estresse celular, elevado também em outras condições agudas e crônicas (insuficiência cardíaca, doença renal, neoplasia, infecção) — sua elevação isolada não é diagnóstica de nenhuma condição específica, e o valor clínico documentado é dentro da fórmula combinada do escore, não como teste isolado interpretado sozinho. O uso rotineiro do escore ABC-bleeding na prática clínica depende de disponibilidade laboratorial do ensaio de GDF-15, que não é universal.",
+    "source_refs": [
+      "Hijazi Z, Oldgren J, Lindbäck J, et al. The novel biomarker-based ABC (age, biomarkers, clinical history)-bleeding risk score for patients with atrial fibrillation: a derivation and validation study. Lancet. 2016;387(10035):2302-2311. PMID: 27056738 — ficha bibliográfica, biomarcadores do escore e índices C conferidos via PubMed E-utilities nesta sessão."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "gdf-15",
+      "escore abc-bleeding",
+      "risco de sangramento",
+      "fibrilação atrial no idoso",
+      "anticoagulação",
+      "biomarcador"
+    ]
+  },
+  {
+    "slug": "acido-urico-e-funcao-renal-na-cardiopatia-congenita-cianotica",
+    "name": "Ácido úrico sérico e função renal na cardiopatia congênita cianótica não corrigida",
+    "category": "laboratorial",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Ácido úrico sérico, ureia e creatinina, usados para rastrear a nefropatia hiperuricêmica associada à hipoxemia crônica em cardiopatia congênita cianótica não corrigida ou paliada (ex.: síndrome de Eisenmenger) — um dos componentes da chamada 'doença renal cianótica', distinta e concomitante à eritrocitose secundária e à coagulopatia já descritas nessa população.",
+    "reference_range": "Não há corte específico validado para cardiopatia congênita cianótica — usa-se a referência padrão do laboratório. O achado característico não é um valor único, e sim a elevação proporcional ao grau de hipoxemia: quanto mais grave a dessaturação crônica, maior a tendência a hiperuricemia.",
+    "indications": "Cardiopatia congênita cianótica não corrigida ou paliada, com ou sem sintomas articulares. Monitorização de rotina do ácido úrico, eletrólitos e função renal é recomendada nessa população, mesmo sem queixa, e antes de estudo contrastado (angiotomografia, cateterismo) — nesse caso, considerar pré-hidratação e evitar agente nefrotóxico adicional.",
+    "interpretation": "Os níveis séricos de ácido úrico sobem em proporção ao grau de hipoxemia, levando frequentemente a gota — mecanismo ligado ao turnover celular aumentado da eritrocitose secundária e à redução do fluxo sanguíneo renal efetivo que acompanha o baixo débito cardíaco crônico e a hiperviscosidade. A 'doença renal cianótica' se manifesta tipicamente com hiperuricemia e proteinúria, refletindo disfunção glomerular e tubular combinada nesse contexto de hipoxemia crônica.",
+    "limitations": "Hiperuricemia isolada e assintomática não deve, por si só, motivar tratamento hipouricemiante de rotina — a decisão depende de crise de gota estabelecida ou de nefrolitíase, e nefrotóxicos (incluindo anti-inflamatórios não esteroidais em dose plena) devem ser evitados nessa população pelo risco renal basal já aumentado. O ácido úrico isolado não substitui a avaliação seriada de função renal nem a investigação de outras causas concomitantes de disfunção renal nessa população (baixo débito, congestão venosa, nefrotoxicidade por contraste).",
+    "source_refs": [
+      "Quain AM, Paranjpe AS, Joynt MR. Clinical progress note: Noncardiac complications in adults with congenital heart disease. J Hosp Med. 2022;17(9):740-743. DOI: 10.1002/jhm.12899. PMID: 35766213."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ácido úrico",
+      "cardiopatia congênita cianótica",
+      "doença renal cianótica",
+      "hiperuricemia",
+      "gota",
+      "eisenmenger"
+    ]
+  },
+  {
+    "slug": "afp-e-imagem-hepatica-na-vigilancia-de-carcinoma-hepatocelular-associado-a-fontan",
+    "name": "Alfa-fetoproteína (AFP) e imagem hepática seriada na vigilância de carcinoma hepatocelular associado à circulação de Fontan",
+    "category": "laboratorial",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Dosagem sérica de alfa-fetoproteína (AFP) associada a exame de imagem hepática seriado (ultrassonografia, tomografia ou ressonância magnética), usados em conjunto para vigilância de nódulo hepático maligno na doença hepática associada à circulação de Fontan (Fontan-associated liver disease, FALD) — a hepatopatia congestiva crônica que decorre da pressão venosa sistêmica elevada permanente da fisiologia de Fontan.",
+    "reference_range": "Não há corte de AFP validado especificamente para FALD. Na população geral de hepatopatia, AFP acima de 400 ng/mL favorece fortemente malignidade, mas o próprio valor normal não afasta o diagnóstico: até 20-25% dos casos de carcinoma hepatocelular (CHC) confirmado em pacientes com Fontan cursam com AFP normal — armadilha relevante nessa população específica.",
+    "indications": "Paciente com circulação de Fontan, rastreado de forma individualizada conforme o tempo de paliação e o grau de fibrose/cirrose hepática documentado — a American Heart Association recomenda avaliação seriada da saúde hepática no seguimento de longo prazo do Fontan, e uma revisão de 2026 descreve o consenso de especialistas como favorável a monitorização individualizada, sem intervalo único uniformemente estabelecido. Massa hepática nodular incidental em paciente Fontan é sempre indicação de investigação dirigida.",
+    "interpretation": "Nódulo hepático ocorre em 20-48% dos pacientes com Fontan ao longo do seguimento, e o carcinoma hepatocelular se desenvolve em aproximadamente 0,18-1,3% — em média cerca de 22 anos após a cirurgia de Fontan. Ressonância magnética é a modalidade preferida para detecção e caracterização de lesão, com tomografia reservada para quem não pode fazer RM; a ultrassonografia tem sensibilidade limitada para detecção de nódulo nessa população, o que a torna insuficiente como método isolado de vigilância. O sistema LI-RADS, desenvolvido para hepatopatia cirrótica 'comum', não deve ser aplicado à caracterização de nódulo em Fontan — a fisiopatologia congestiva produz padrões de realce que não correspondem à mesma escala de risco.",
+    "limitations": "Diferenciar nódulo benigno (hiperplasia nodular focal-like, comum na congestão crônica) de nódulo maligno é particularmente difícil nessa população pela sobreposição de achados de imagem. Lesão de caracterização ambígua exige reavaliação de imagem em curto prazo (3-6 meses) e/ou biópsia, com revisão multidisciplinar — não existe ainda protocolo de vigilância universal com intervalo fixo validado para todos os pacientes Fontan, o que é uma lacuna reconhecida da literatura, não uma omissão deste registro.",
+    "source_refs": [
+      "Jarasvaraparn C, Schooler GR, González ÍA, et al. Long-Term Care in Fontan Circulation: Surveillance and Management of Fontan-Associated Liver Disease and Protein-Losing Enteropathy. Curr Cardiol Rep. 2026;28(1):56. DOI: 10.1007/s11886-026-02378-0 — acesso aberto (CC BY 4.0).",
+      "Rychik J, Atz AM, Celermajer DS, et al. Evaluation and Management of the Child and Adult With Fontan Circulation: A Scientific Statement From the American Heart Association. Circulation. 2019;140(6):e234-e284. DOI: 10.1161/CIR.0000000000000696. PMID: 31256636."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "doença hepática associada a fontan",
+      "fald",
+      "carcinoma hepatocelular",
+      "alfa-fetoproteína",
+      "cardiopatia congênita",
+      "vigilância oncológica"
+    ]
   }
 ]
