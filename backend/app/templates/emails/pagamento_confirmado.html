@@ -1,0 +1,20 @@
+{% extends "_base.html" %}
+{% from "_macros.html" import botao %}
+{% block corpo %}
+<p style="margin:0 0 16px;">Olá, {{ nome }}!</p>
+<p style="margin:0 0 16px;">Recebemos o pagamento da sua assinatura Corvia.</p>
+
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#EFF5F8;border-radius:8px;margin:0 0 20px;">
+  <tr>
+    <td style="padding:16px 20px;font-size:14px;line-height:1.7;">
+      <strong>Valor:</strong> {{ valor }}<br>
+      <strong>Data:</strong> {{ data }}<br>
+      <strong>Plano:</strong> {{ plano }}<br>
+      <strong>Período coberto:</strong> {{ periodo_inicio }} a {{ periodo_fim }}<br>
+      <strong>Cartão:</strong> final {{ ultimos4 }}
+    </td>
+  </tr>
+</table>
+
+{{ botao("Ver fatura", link_fatura) }}
+{% endblock %}

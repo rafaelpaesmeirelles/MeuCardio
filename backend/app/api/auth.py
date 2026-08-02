@@ -2,7 +2,7 @@ import secrets
 from datetime import date
 from pathlib import Path
 
-from fastapi import APIRouter, Depends, File, HTTPException, UploadFile
+from fastapi import APIRouter, BackgroundTasks, Depends, File, HTTPException, UploadFile
 from fastapi.security import OAuth2PasswordRequestForm
 from pydantic import BaseModel, field_validator
 from sqlalchemy.orm import Session
@@ -12,6 +12,7 @@ from app.core.db import get_db
 from app.core.security import create_access_token, current_user, hash_password, verify_password
 from app.core.validators import UFS, cpf_valido, limpar_cpf
 from app.models.user import User
+from app.services import emails
 
 router = APIRouter(prefix="/api/auth", tags=["auth"])
 
@@ -136,9 +137,36 @@ class DadosPessoais(BaseModel):
         return v
 
 
+# Rótulo exibido no e-mail de "alteração de cadastro" (item 6 do spec de
+# e-mails transacionais) para cada campo que `DadosPessoais` permite editar.
+# Endereços completos não entram campo a campo (seriam 14 linhas de tabela
+# para uma mudança de CEP) — mudança em qualquer um deles aparece agregada
+# como uma única linha "Endereço residencial"/"Endereço profissional".
+_ROTULOS_CADASTRO = {
+    "full_name": "Nome completo",
+    "profession": "Profissão",
+    "council_name": "Conselho de classe",
+    "council_number": "Número no conselho",
+    "council_state": "UF do conselho",
+    "specialty": "Especialidade",
+    "rqe": "RQE",
+}
+_CAMPOS_ENDERECO_RESIDENCIAL = (
+    "home_street", "home_number", "home_complement", "home_neighborhood", "home_city", "home_state", "home_zip",
+)
+_CAMPOS_ENDERECO_PROFISSIONAL = (
+    "practice_street", "practice_number", "practice_complement", "practice_neighborhood",
+    "practice_city", "practice_state", "practice_zip", "practice_phone",
+)
+
+
 @router.patch("/me")
-def atualizar_me(dados: DadosPessoais, db: Session = Depends(get_db),
-                 user: User = Depends(current_user)):
+def atualizar_me(dados: DadosPessoais, background_tasks: BackgroundTasks,
+                 db: Session = Depends(get_db), user: User = Depends(current_user)):
+    antes = {campo: getattr(user, campo) for campo in _ROTULOS_CADASTRO}
+    endereco_residencial_antes = tuple(getattr(user, c) for c in _CAMPOS_ENDERECO_RESIDENCIAL)
+    endereco_profissional_antes = tuple(getattr(user, c) for c in _CAMPOS_ENDERECO_PROFISSIONAL)
+
     user.full_name = dados.full_name
     user.profession = (dados.profession or "").strip() or None
     user.council_name = (dados.council_name or "").strip().upper() or None
@@ -164,8 +192,20 @@ def atualizar_me(dados: DadosPessoais, db: Session = Depends(get_db),
     user.practice_zip = (dados.practice_zip or "").strip() or None
     user.practice_phone = (dados.practice_phone or "").strip() or None
 
+    mudancas = [
+        {"campo": rotulo, "antigo": antes[campo], "novo": getattr(user, campo)}
+        for campo, rotulo in _ROTULOS_CADASTRO.items()
+        if antes[campo] != getattr(user, campo)
+    ]
+    if endereco_residencial_antes != tuple(getattr(user, c) for c in _CAMPOS_ENDERECO_RESIDENCIAL):
+        mudancas.append({"campo": "Endereço residencial", "antigo": None, "novo": "atualizado"})
+    if endereco_profissional_antes != tuple(getattr(user, c) for c in _CAMPOS_ENDERECO_PROFISSIONAL):
+        mudancas.append({"campo": "Endereço profissional", "antigo": None, "novo": "atualizado"})
+
     db.commit()
     db.refresh(user)
+    if mudancas:
+        background_tasks.add_task(emails.enviar_alteracao_cadastro, user.id, mudancas)
     return _perfil(user)
 
 
@@ -293,8 +333,8 @@ class TrocaDeSenha(BaseModel):
 
 
 @router.post("/alterar-senha")
-def alterar_senha(dados: TrocaDeSenha, db: Session = Depends(get_db),
-                  user: User = Depends(current_user)):
+def alterar_senha(dados: TrocaDeSenha, background_tasks: BackgroundTasks,
+                  db: Session = Depends(get_db), user: User = Depends(current_user)):
     if not verify_password(dados.senha_atual, user.password_hash):
         raise HTTPException(status_code=400, detail="Senha atual incorreta.")
     if len(dados.nova_senha) < 8:
@@ -303,7 +343,46 @@ def alterar_senha(dados: TrocaDeSenha, db: Session = Depends(get_db),
         raise HTTPException(status_code=422, detail="A nova senha precisa ser diferente da atual.")
     user.password_hash = hash_password(dados.nova_senha)
     db.commit()
+    background_tasks.add_task(emails.enviar_senha_alterada, user.id)
     return {"nota": "Senha alterada."}
+
+
+class TrocaDeEmail(BaseModel):
+    senha_atual: str
+    novo_email: str
+
+    @field_validator("novo_email")
+    @classmethod
+    def _email(cls, v: str) -> str:
+        v = v.strip().lower()
+        if "@" not in v:
+            raise ValueError("E-mail inválido.")
+        return v
+
+
+@router.post("/trocar-email")
+def trocar_email(dados: TrocaDeEmail, background_tasks: BackgroundTasks,
+                 db: Session = Depends(get_db), user: User = Depends(current_user)):
+    """Item 6 do spec de e-mails transacionais — "troca de e-mail é caso à
+    parte". Exige senha atual (é a identidade de login mudando, mesmo nível
+    de confirmação de `alterar_senha`). A troca é imediata, como todo o resto
+    de `atualizar_me` neste arquivo — não há mecanismo de dupla confirmação
+    em nenhuma outra parte do sistema, e criar um só para este campo
+    inventaria um padrão novo em vez de seguir o já existente. A segurança
+    fica nos DOIS avisos que saem depois (`emails.enviar_troca_email`): o
+    endereço antigo recebe alerta imediato com link de contestação."""
+    if not verify_password(dados.senha_atual, user.password_hash):
+        raise HTTPException(status_code=400, detail="Senha atual incorreta.")
+    if dados.novo_email == user.email:
+        raise HTTPException(status_code=422, detail="Este já é o seu e-mail atual.")
+    if db.query(User).filter(User.email == dados.novo_email).first():
+        raise HTTPException(status_code=409, detail="Já existe uma conta com este e-mail.")
+
+    email_antigo = user.email
+    user.email = dados.novo_email
+    db.commit()
+    background_tasks.add_task(emails.enviar_troca_email, user.id, email_antigo, dados.novo_email)
+    return {"nota": "E-mail alterado. Use o novo endereço para entrar a partir de agora."}
 
 
 class SolicitacaoAcesso(BaseModel):

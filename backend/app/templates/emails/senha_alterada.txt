@@ -1,0 +1,8 @@
+Olá, {{ nome }}!
+
+A senha da sua conta Corvia foi alterada em {{ quando }}{% if cidade %}, a partir de {{ cidade }}{% endif %}.
+
+Não foi você? Fale conosco agora:
+{{ link_suporte }}
+
+Por segurança, esta mensagem nunca traz a senha em si.

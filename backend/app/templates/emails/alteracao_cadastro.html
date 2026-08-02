@@ -1,0 +1,22 @@
+{% extends "_base.html" %}
+{% block corpo %}
+<p style="margin:0 0 16px;">Olá, {{ nome }}!</p>
+<p style="margin:0 0 16px;">Seu cadastro na Corvia foi alterado em {{ quando }}.</p>
+
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin:0 0 20px;">
+  <tr>
+    <td style="padding:8px 0;border-bottom:1px solid #E4E8EA;font-size:13px;color:#55666F;">Campo</td>
+    <td style="padding:8px 0;border-bottom:1px solid #E4E8EA;font-size:13px;color:#55666F;">Antes</td>
+    <td style="padding:8px 0;border-bottom:1px solid #E4E8EA;font-size:13px;color:#55666F;">Agora</td>
+  </tr>
+  {% for m in mudancas %}
+  <tr>
+    <td style="padding:8px 12px 8px 0;font-size:14px;">{{ m.campo }}</td>
+    <td style="padding:8px 12px 8px 0;font-size:14px;color:#55666F;">{{ m.antigo or "—" }}</td>
+    <td style="padding:8px 0;font-size:14px;">{{ m.novo or "—" }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+<p style="margin:0;font-size:13px;color:#55666F;">Não reconhece esta alteração? Responda este e-mail o quanto antes.</p>
+{% endblock %}

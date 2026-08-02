@@ -9,6 +9,11 @@ import { Carregando, Erro } from "../components/Estado";
  * conteúdo aqui é escrito em outro registro, para quem não é da área, e não
  * contém dose, receita nem conduta. Misturar os dois na mesma listagem faria o
  * médico abrir um esperando o outro.
+ *
+ * Envio por e-mail ao paciente (02/08/2026, material-paciente-por-email-spec.md):
+ * só o link vai por e-mail, nunca o PDF anexado. O botão exige CorvIA Mail
+ * ativo — sem ele, fica desabilitado com explicação, e "Baixar PDF" continua
+ * livre para todo mundo entregar por outro canal.
  */
 
 type Material = {
@@ -19,16 +24,32 @@ type Material = {
   resumo: string | null;
 };
 
+type ContaEmail = { ativa: boolean; status?: string };
+
 export default function MaterialPaciente() {
   const [itens, setItens] = useState<Material[] | null>(null);
   const [erro, setErro] = useState("");
   const [baixando, setBaixando] = useState("");
+  const [corviaMailAtivo, setCorviaMailAtivo] = useState<boolean | null>(null);
+
+  const [envioAberto, setEnvioAberto] = useState<string>("");
+  const [nomePaciente, setNomePaciente] = useState("");
+  const [emailPaciente, setEmailPaciente] = useState("");
+  const [recado, setRecado] = useState("");
+  const [consentimento, setConsentimento] = useState(false);
+  const [enviando, setEnviando] = useState(false);
+  const [erroEnvio, setErroEnvio] = useState("");
+  const [resultado, setResultado] = useState<{ slug: string; expiraEm: string } | null>(null);
 
   useEffect(() => {
     api
       .get<Material[]>("/material-paciente")
       .then(setItens)
       .catch((e) => setErro(e?.message || "Não foi possível carregar."));
+    api
+      .get<ContaEmail>("/email/conta")
+      .then((c) => setCorviaMailAtivo(c.ativa && c.status === "ativa"))
+      .catch(() => setCorviaMailAtivo(false));
   }, []);
 
   async function baixar(m: Material) {
@@ -46,6 +67,49 @@ export default function MaterialPaciente() {
       setErro(e?.message || "Não foi possível gerar o PDF.");
     } finally {
       setBaixando("");
+    }
+  }
+
+  function abrirEnvio(slug: string) {
+    setEnvioAberto(slug);
+    setNomePaciente("");
+    setEmailPaciente("");
+    setRecado("");
+    setConsentimento(false);
+    setErroEnvio("");
+    setResultado(null);
+  }
+
+  function fecharEnvio() {
+    setEnvioAberto("");
+  }
+
+  async function enviarPorEmail(slug: string) {
+    setErroEnvio("");
+    if (!nomePaciente.trim() || !emailPaciente.trim()) {
+      setErroEnvio("Preencha o nome e o e-mail do paciente.");
+      return;
+    }
+    if (!consentimento) {
+      setErroEnvio("Confirme que o paciente autorizou receber este material por e-mail.");
+      return;
+    }
+    setEnviando(true);
+    try {
+      const resp = await api.post<{ enviado: boolean; expira_em: string }>(
+        `/material-paciente/${slug}/enviar-email`,
+        {
+          nome_paciente: nomePaciente.trim(),
+          email_paciente: emailPaciente.trim(),
+          recado: recado.trim() || undefined,
+          consentimento,
+        }
+      );
+      setResultado({ slug, expiraEm: resp.expira_em });
+    } catch (e: any) {
+      setErroEnvio(e?.message || "Não foi possível enviar o e-mail agora.");
+    } finally {
+      setEnviando(false);
     }
   }
 
@@ -82,14 +146,99 @@ export default function MaterialPaciente() {
               <p className="eyebrow">{m.tema}</p>
               <strong>{m.titulo}</strong>
               {m.subtitulo && <span>{m.subtitulo}</span>}
-              <button
-                className="botao botao--acao"
-                style={{ marginTop: "0.7rem" }}
-                onClick={() => baixar(m)}
-                disabled={baixando === m.slug}
-              >
-                {baixando === m.slug ? "Gerando…" : "Baixar PDF para entregar"}
-              </button>
+              <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", marginTop: "0.7rem" }}>
+                <button
+                  className="botao botao--acao"
+                  onClick={() => baixar(m)}
+                  disabled={baixando === m.slug}
+                >
+                  {baixando === m.slug ? "Gerando…" : "Baixar PDF para entregar"}
+                </button>
+                <button
+                  className="botao"
+                  onClick={() => abrirEnvio(m.slug)}
+                  disabled={corviaMailAtivo === false}
+                  title={
+                    corviaMailAtivo === false
+                      ? "O envio em nome próprio faz parte do CorvIA Mail — ative sua caixa para usar esta opção."
+                      : undefined
+                  }
+                >
+                  Enviar por e-mail ao paciente
+                </button>
+              </div>
+
+              {envioAberto === m.slug && (
+                <div className="cartao" style={{ marginTop: "0.8rem", background: "var(--fundo-alt, #f7f9fa)" }}>
+                  {resultado && resultado.slug === m.slug ? (
+                    <div>
+                      <p style={{ margin: 0 }}>
+                        <strong>E-mail enviado.</strong> O link vale até{" "}
+                        {new Date(resultado.expiraEm).toLocaleDateString("pt-BR")}.
+                      </p>
+                      <button className="botao" style={{ marginTop: "0.6rem" }} onClick={fecharEnvio}>
+                        Fechar
+                      </button>
+                    </div>
+                  ) : (
+                    <div>
+                      <label style={{ display: "block", marginBottom: "0.5rem" }}>
+                        Nome do paciente
+                        <input
+                          type="text"
+                          value={nomePaciente}
+                          onChange={(e) => setNomePaciente(e.target.value)}
+                          style={{ display: "block", width: "100%", marginTop: "0.25rem" }}
+                        />
+                      </label>
+                      <label style={{ display: "block", marginBottom: "0.5rem" }}>
+                        E-mail do paciente
+                        <input
+                          type="email"
+                          value={emailPaciente}
+                          onChange={(e) => setEmailPaciente(e.target.value)}
+                          style={{ display: "block", width: "100%", marginTop: "0.25rem" }}
+                        />
+                      </label>
+                      <label style={{ display: "block", marginBottom: "0.5rem" }}>
+                        Recado curto (opcional)
+                        <textarea
+                          value={recado}
+                          onChange={(e) => setRecado(e.target.value)}
+                          maxLength={500}
+                          rows={2}
+                          style={{ display: "block", width: "100%", marginTop: "0.25rem" }}
+                        />
+                      </label>
+                      <label style={{ display: "flex", alignItems: "flex-start", gap: "0.4rem", fontSize: "0.85rem" }}>
+                        <input
+                          type="checkbox"
+                          checked={consentimento}
+                          onChange={(e) => setConsentimento(e.target.checked)}
+                          style={{ marginTop: "0.2rem" }}
+                        />
+                        Confirmo que o paciente autorizou receber este material por e-mail.
+                      </label>
+                      <p style={{ fontSize: "0.8rem", color: "var(--texto-suave, #666)", margin: "0.5rem 0" }}>
+                        Só o link é enviado — o PDF não vai anexado.
+                      </p>
+                      {erroEnvio && <p className="erro">{erroEnvio}</p>}
+                      <div style={{ display: "flex", gap: "0.5rem", marginTop: "0.5rem" }}>
+                        <button
+                          className="botao botao--acao"
+                          onClick={() => enviarPorEmail(m.slug)}
+                          disabled={enviando}
+                        >
+                          {enviando ? "Enviando…" : "Enviar"}
+                        </button>
+                        <button className="botao" onClick={fecharEnvio} disabled={enviando}>
+                          Cancelar
+                        </button>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           ))}
         </div>

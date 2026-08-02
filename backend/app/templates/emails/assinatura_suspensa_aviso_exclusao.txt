@@ -1,0 +1,8 @@
+Olá, {{ nome }}!
+
+Faltam {{ dias_restantes }} dias para a exclusão definitiva dos seus dados na Corvia.
+
+Regularize sua assinatura agora para manter tudo como está.
+
+Regularizar assinatura:
+{{ link_regularizar }}

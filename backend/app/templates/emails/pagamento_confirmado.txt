@@ -1,0 +1,12 @@
+Olá, {{ nome }}!
+
+Recebemos o pagamento da sua assinatura Corvia.
+
+Valor: {{ valor }}
+Data: {{ data }}
+Plano: {{ plano }}
+Período coberto: {{ periodo_inicio }} a {{ periodo_fim }}
+Cartão: final {{ ultimos4 }}
+
+Ver fatura:
+{{ link_fatura }}

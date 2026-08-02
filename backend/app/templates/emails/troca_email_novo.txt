@@ -1,0 +1,8 @@
+Olá, {{ nome }}!
+
+Este endereço passou a ser o e-mail de acesso da sua conta Corvia, a partir de {{ quando }}.
+
+Ver minha conta:
+{{ link_conta }}
+
+Não reconhece esta alteração? Responda este e-mail o quanto antes.

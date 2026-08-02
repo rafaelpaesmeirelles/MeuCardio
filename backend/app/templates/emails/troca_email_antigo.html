@@ -1,0 +1,8 @@
+{% extends "_base.html" %}
+{% from "_macros.html" import botao %}
+{% block corpo %}
+<p style="margin:0 0 16px;">Olá, {{ nome }}!</p>
+<p style="margin:0 0 16px;">O e-mail de acesso da sua conta Corvia foi alterado para <strong>{{ novo_email_mascarado }}</strong>, em {{ quando }}.</p>
+<p style="margin:0 0 4px;"><strong>Não foi você?</strong></p>
+{{ botao("Fale conosco agora", link_nao_fui_eu) }}
+{% endblock %}

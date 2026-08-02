@@ -74,7 +74,11 @@ class Settings(BaseSettings):
     smtp_port: int = 587
     smtp_user: str = ""
     smtp_password: str = ""
-    smtp_from: str = "Corvia <nao-responda@corvia.med.br>"
+    # "Corvia <contato@corvia.med.br>" — aprovado pelo Rafael em 02/08/2026
+    # (ver emails-transacionais-spec.md). O valor real de produção já está
+    # gravado no .env do servidor; este default só evita divergir em quem
+    # rodar sem `.env` configurado (dev local, teste).
+    smtp_from: str = "Corvia <contato@corvia.med.br>"
     public_url: str = "https://corvia.med.br"
 
     # --- Caixa de e-mail do assinante — Zoho Mail360 (Tarefa 28) ------------

@@ -1,7 +1,7 @@
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 import stripe
-from fastapi import APIRouter, Depends, HTTPException, Query, Request
+from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException, Query, Request
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
@@ -12,12 +12,20 @@ from app.models.subscription import (
     PLANO_BASICO, PLANO_COMPLETO, TIPO_CURSO, TIPO_EMAIL, TIPO_MEUCARDIO, Subscription,
 )
 from app.models.user import User
+from app.services import emails
 
 PLANOS_VALIDOS = {PLANO_BASICO, PLANO_COMPLETO}
 # Preço do plano completo cobrado inline (price_data), no mesmo padrão já usado
 # no checkout do CorvIA Mail avulso — evita depender de um segundo Price
 # pré-criado no painel do Stripe só para este plano.
 PRECO_COMPLETO_CENTAVOS = 5990
+# Preço do plano básico — hoje vem de um Price pré-criado no Stripe
+# (`settings.stripe_price_id`), não de um valor inline como o completo. O
+# valor abaixo é só para compor o e-mail de boas-vindas/confirmação sem uma
+# chamada extra à API do Stripe a cada assinatura nova; é o mesmo R$49,90
+# documentado em CLAUDE.md e cobrado no painel do Stripe.
+PRECO_BASICO_CENTAVOS = 4990
+PLANOS_NOME = {PLANO_BASICO: "Assinatura Básica", PLANO_COMPLETO: "Assinatura Completa"}
 
 # O prefixo precisa incluir /api: o Caddy usa `handle /api/*` (que, ao contrário
 # de `handle_path`, não remove o prefixo antes de repassar ao backend).
@@ -140,7 +148,7 @@ def _obter_ou_criar_assinatura_email(db: Session, user: User) -> Subscription:
     return sub
 
 
-def _aplicar_evento(db: Session, obj, quando: datetime, alteracoes) -> None:
+def _aplicar_evento(db: Session, obj, quando: datetime, alteracoes) -> Subscription | None:
     """Grava as alterações se o evento for mais novo que o último já aplicado.
 
     O Stripe reentrega eventos e não garante ordem de chegada, então um evento
@@ -191,14 +199,33 @@ def _aplicar_evento(db: Session, obj, quando: datetime, alteracoes) -> None:
             consulta = consulta.filter(Subscription.kind == TIPO_MEUCARDIO)
         sub = consulta.order_by(Subscription.id.desc()).first()
     if sub is None:
-        return
+        return None
     if sub.last_event_at is not None and quando < sub.last_event_at:
-        return
+        return None
     alteracoes(sub)
     sub.last_event_at = quando
     db.commit()
     if sub.kind == TIPO_EMAIL:
         _sincronizar_caixa_de_email(db, sub)
+    return sub
+
+
+def _inferir_plano_do_objeto(obj) -> str | None:
+    """Lê o valor cobrado no primeiro item da assinatura do Stripe e infere
+    qual dos dois planos da plataforma é. Best-effort: usado só para detectar
+    troca de plano numa assinatura já existente (e-mail de "alteração de
+    plano") — se não der para ler o valor, simplesmente não dispara o e-mail,
+    nunca adivinha. Como só existem dois planos hoje, comparar contra o valor
+    conhecido do Completo já resolve o caso — se um terceiro plano existir um
+    dia, esta função precisa ser refeita, não só estendida."""
+    itens = _campo(_campo(obj, "items") or {}, "data") or []
+    if not itens:
+        return None
+    price = _campo(itens[0], "price") or {}
+    valor = _campo(price, "unit_amount")
+    if valor is None:
+        return None
+    return PLANO_COMPLETO if valor == PRECO_COMPLETO_CENTAVOS else PLANO_BASICO
 
 
 def _sincronizar_caixa_de_email(db: Session, sub: Subscription) -> None:
@@ -487,8 +514,28 @@ def status_assinatura(db: Session = Depends(get_db), user: User = Depends(curren
     return {"status": sub.status, "current_period_end": sub.current_period_end, "plano": sub.plano}
 
 
+def _ultimos4_da_fatura(invoice_id: str | None) -> str:
+    """Best-effort: o payload do webhook não traz os 4 últimos dígitos do
+    cartão por padrão, então busca a fatura expandida. Nunca fabrica o
+    valor — qualquer falha (fatura sem cartão, Pix, erro de rede) devolve
+    "----", que o template já trata como "não disponível", em vez de
+    inventar um número."""
+    if not invoice_id:
+        return "----"
+    try:
+        fatura = stripe.Invoice.retrieve(invoice_id, expand=["charge.payment_method_details"])
+        charge = _campo(fatura, "charge")
+        if not charge:
+            return "----"
+        detalhes = _campo(charge, "payment_method_details") or {}
+        cartao = _campo(detalhes, "card") or {}
+        return _campo(cartao, "last4") or "----"
+    except Exception:  # noqa: BLE001
+        return "----"
+
+
 @router.post("/webhook")
-async def webhook(request: Request, db: Session = Depends(get_db)):
+async def webhook(request: Request, background_tasks: BackgroundTasks, db: Session = Depends(get_db)):
     payload = await request.body()
     sig_header = request.headers.get("stripe-signature")
 
@@ -510,21 +557,93 @@ async def webhook(request: Request, db: Session = Depends(get_db)):
     obj = event["data"]["object"]
     quando = datetime.fromtimestamp(event["created"], tz=timezone.utc)
 
+    # Todos os disparos de e-mail abaixo usam BackgroundTasks: a resposta ao
+    # Stripe não espera o SMTP, e cada função de `emails.py` abre a própria
+    # sessão de banco (não `db` desta rota — ver o comentário no topo de
+    # `app/services/emails.py`).
     if tipo in ("customer.subscription.created", "customer.subscription.updated"):
+        estado_antes: dict = {}
+
         def alterar(sub):
+            estado_antes["era_nova"] = sub.stripe_subscription_id is None
+            estado_antes["status_anterior"] = sub.status
+            estado_antes["plano_anterior"] = sub.plano
             sub.stripe_subscription_id = obj["id"]
             sub.status = traduzir_status(obj["status"])
             fim = _fim_do_periodo(obj)
             if fim is not None:
                 sub.current_period_end = fim
+            if sub.kind == TIPO_MEUCARDIO:
+                novo_plano = _inferir_plano_do_objeto(obj)
+                if novo_plano:
+                    sub.plano = novo_plano
 
-        _aplicar_evento(db, obj, quando, alterar)
+        sub = _aplicar_evento(db, obj, quando, alterar)
+
+        if sub is not None and sub.kind == TIPO_MEUCARDIO and estado_antes:
+            era_nova = estado_antes["era_nova"]
+            status_anterior = estado_antes["status_anterior"]
+            plano_anterior = estado_antes["plano_anterior"]
+            valor_do_plano = PRECO_COMPLETO_CENTAVOS if sub.plano == PLANO_COMPLETO else PRECO_BASICO_CENTAVOS
+
+            if era_nova and tipo == "customer.subscription.created":
+                background_tasks.add_task(
+                    emails.enviar_boas_vindas, sub.user_id, sub.plano, valor_do_plano, sub.current_period_end,
+                )
+            elif not era_nova and plano_anterior != sub.plano:
+                background_tasks.add_task(
+                    emails.enviar_alteracao_plano, sub.user_id, plano_anterior, sub.plano,
+                    valor_do_plano, sub.current_period_end or quando,
+                )
+
+            if not era_nova and status_anterior != "suspenso" and sub.status == "suspenso":
+                dados_ate = (sub.current_period_end or quando) + timedelta(
+                    days=emails.RETENCAO_DIAS_APOS_CANCELAMENTO
+                )
+                background_tasks.add_task(
+                    emails.enviar_assinatura_suspensa, sub.user_id, dados_ate,
+                    f"assinatura_suspensa:{sub.id}:{quando.date().isoformat()}",
+                )
 
     elif tipo == "customer.subscription.deleted":
-        _aplicar_evento(db, obj, quando, lambda sub: setattr(sub, "status", "cancelado"))
+        sub = _aplicar_evento(db, obj, quando, lambda s: setattr(s, "status", "cancelado"))
+        if sub is not None and sub.kind == TIPO_MEUCARDIO:
+            tinha_mail = sub.plano == PLANO_COMPLETO or (
+                db.query(Subscription)
+                .filter(
+                    Subscription.user_id == sub.user_id, Subscription.kind == TIPO_EMAIL,
+                    Subscription.status.in_(ACESSO_LIBERADO),
+                )
+                .first()
+                is not None
+            )
+            background_tasks.add_task(
+                emails.enviar_assinatura_cancelada, sub.user_id, sub.current_period_end or quando, tinha_mail,
+            )
 
     elif tipo == "invoice.payment_failed":
-        _aplicar_evento(db, obj, quando, lambda sub: setattr(sub, "status", "inadimplente"))
+        estado_antes = {}
+
+        def marcar_inadimplente(s):
+            estado_antes["status_anterior"] = s.status
+            s.status = "inadimplente"
+
+        sub = _aplicar_evento(db, obj, quando, marcar_inadimplente)
+        if (
+            sub is not None and sub.kind == TIPO_MEUCARDIO
+            and estado_antes.get("status_anterior") != "inadimplente"
+        ):
+            # Só a PRIMEIRA falha desta assinatura dispara o e-mail. As
+            # tentativas seguintes seguem a cadência configurada no painel
+            # do Stripe (smart retries); replicar dia-a-dia aqui exigiria
+            # guardar a data-limite original em algum lugar, e não há coluna
+            # para isso nesta primeira versão — documentado, não fabricado.
+            data_limite = quando + timedelta(days=emails.PRAZO_TENTATIVAS_DIAS)
+            background_tasks.add_task(
+                emails.enviar_pagamento_falhou, sub.user_id, emails.PRAZO_TENTATIVAS_DIAS,
+                data_limite, f"{settings.public_url}/minha-conta",
+                f"pagamento_falhou:{_campo(obj, 'id')}",
+            )
 
     elif tipo == "invoice.payment_succeeded":
         # Cada fatura paga de assinatura de curso vira um registro com bruto,
@@ -534,6 +653,26 @@ async def webhook(request: Request, db: Session = Depends(get_db)):
         from app.api.partner_courses import registrar_pagamento
 
         registrar_pagamento(db, obj)
+
+        id_assinatura_fatura = _campo(obj, "subscription")
+        if id_assinatura_fatura:
+            sub = (
+                db.query(Subscription)
+                .filter(Subscription.stripe_subscription_id == id_assinatura_fatura)
+                .first()
+            )
+            if sub is not None and sub.kind in (TIPO_MEUCARDIO, TIPO_EMAIL):
+                linha = (_campo(_campo(obj, "lines") or {}, "data") or [{}])[0]
+                periodo = _campo(linha, "period") or {}
+                inicio_ts, fim_ts = _campo(periodo, "start"), _campo(periodo, "end")
+                periodo_inicio = datetime.fromtimestamp(inicio_ts, tz=timezone.utc) if inicio_ts else quando
+                periodo_fim = datetime.fromtimestamp(fim_ts, tz=timezone.utc) if fim_ts else quando
+                plano_nome = PLANOS_NOME.get(sub.plano, "Assinatura") if sub.kind == TIPO_MEUCARDIO else "CorvIA Mail"
+                background_tasks.add_task(
+                    emails.enviar_pagamento_confirmado, sub.user_id, _campo(obj, "amount_paid") or 0, quando,
+                    plano_nome, periodo_inicio, periodo_fim, _ultimos4_da_fatura(_campo(obj, "id")),
+                    f"{settings.public_url}/minha-conta", f"pagamento_confirmado:{_campo(obj, 'id')}",
+                )
 
     elif tipo == "checkout.session.completed":
         # A mesma rota recebe os dois fluxos de cobrança. O `mode` separa:
@@ -547,3 +686,36 @@ async def webhook(request: Request, db: Session = Depends(get_db)):
             confirmar_pagamento(db, obj)
 
     return {"received": True}
+
+
+@router.post("/verificar-retencao")
+def verificar_retencao(db: Session = Depends(get_db), admin: User = Depends(current_user)):
+    """Item 10 do spec de e-mails transacionais: aviso adicional no 25º dia
+    de retenção de uma assinatura suspensa (5 dias antes da exclusão
+    definitiva). Não há agendador embutido no projeto — este endpoint serve
+    tanto a chamada manual do admin quanto um cron externo diário (mesmo
+    padrão já documentado no CLAUDE.md para a atualização mensal da CMED: um
+    único caminho de código, chamado das duas formas)."""
+    if admin.role != "admin":
+        raise HTTPException(status_code=403, detail="Só administradores.")
+
+    agora = datetime.now(timezone.utc)
+    limite = agora - timedelta(days=emails.RETENCAO_DIAS_APOS_CANCELAMENTO - 5)
+    candidatas = (
+        db.query(Subscription)
+        .filter(
+            Subscription.kind == TIPO_MEUCARDIO, Subscription.status == "suspenso",
+            Subscription.last_event_at.isnot(None), Subscription.last_event_at <= limite,
+        )
+        .all()
+    )
+
+    avisos_enviados = 0
+    for sub in candidatas:
+        dias_desde_suspensao = (agora - sub.last_event_at).days
+        dias_restantes = max(emails.RETENCAO_DIAS_APOS_CANCELAMENTO - dias_desde_suspensao, 0)
+        chave = f"aviso_exclusao:{sub.id}:{sub.last_event_at.date().isoformat()}"
+        if emails.enviar_assinatura_suspensa_aviso_exclusao(sub.user_id, dias_restantes, chave):
+            avisos_enviados += 1
+
+    return {"assinaturas_verificadas": len(candidatas), "avisos_enviados": avisos_enviados}

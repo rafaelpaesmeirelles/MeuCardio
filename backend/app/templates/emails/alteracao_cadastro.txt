@@ -1,0 +1,7 @@
+Olá, {{ nome }}!
+
+Seu cadastro na Corvia foi alterado em {{ quando }}.
+
+{% for m in mudancas %}{{ m.campo }}: {{ m.antigo or "—" }} -> {{ m.novo or "—" }}
+{% endfor %}
+Não reconhece esta alteração? Responda este e-mail o quanto antes.

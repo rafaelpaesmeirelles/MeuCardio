@@ -1,0 +1,10 @@
+{% extends "_base.html" %}
+{% from "_macros.html" import botao %}
+{% block corpo %}
+<p style="margin:0 0 16px;">Recebemos um pedido de redefinição de senha para esta conta.</p>
+<p style="margin:0 0 4px;">Clique abaixo para escolher uma nova senha:</p>
+
+{{ botao("Redefinir minha senha", link) }}
+
+<p style="margin:0;font-size:13px;color:#55666F;">O link vale por 1 hora. Se não foi você que pediu, ignore este e-mail — sua senha continua a mesma.</p>
+{% endblock %}

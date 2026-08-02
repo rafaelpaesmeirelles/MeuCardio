@@ -1,0 +1,17 @@
+Olá, {{ nome }}!
+
+Sua assinatura da Corvia foi confirmada. Resumo:
+
+Plano: {{ plano.nome }}
+Inclui: {{ plano.descricao }}
+Valor: {{ plano.preco_formatado }}/mês
+Próxima cobrança: {{ proxima_cobranca }}
+
+Nome de usuário: {{ email }}
+
+Ative sua conta e crie sua senha neste link (válido por 48 horas):
+{{ link_ativacao }}
+
+Se o link expirar, você pode pedir um novo a qualquer momento na tela de entrada.
+
+Acesse a plataforma em {{ public_url }}

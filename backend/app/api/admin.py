@@ -468,3 +468,63 @@ def usuarios_online(db: Session = Depends(get_db), _=Depends(require_admin)):
         }
         for u in usuarios
     ]
+
+
+# ---------------------------------------------------------------------------
+# Reclamação de spam contra a caixa do CorvIA Mail — trava de reputação de
+# domínio (material-paciente-por-email-spec.md, "risco operacional", 02/08/2026)
+# ---------------------------------------------------------------------------
+
+LIMITE_RECLAMACOES_SUSPENSAO = 3
+
+
+@router.post("/email-accounts/{account_id}/registrar-reclamacao")
+def registrar_reclamacao_spam(account_id: int, db: Session = Depends(get_db), admin=Depends(require_admin)):
+    """Reativa, não automática: não há webhook de bounce/reclamação do
+    Mail360 verificado nesta sessão, então o incremento é manual — o admin
+    (ou um processo que leia relatório do provedor) chama esta rota quando
+    uma reclamação chega. Ao atingir o limite, `envio_material_suspenso`
+    liga sozinho e bloqueia só o envio de material a paciente; o resto do
+    CorvIA Mail continua funcionando normalmente."""
+    from app.models.email_account import EmailAccount
+
+    conta = db.get(EmailAccount, account_id)
+    if conta is None:
+        raise HTTPException(status_code=404, detail="Caixa não encontrada.")
+
+    conta.reclamacoes_spam += 1
+    suspenso_agora = False
+    if conta.reclamacoes_spam >= LIMITE_RECLAMACOES_SUSPENSAO and not conta.envio_material_suspenso:
+        conta.envio_material_suspenso = True
+        suspenso_agora = True
+
+    db.add(AuditLog(
+        user_id=admin.id, action="registrar_reclamacao_spam", entity="email_accounts",
+        entity_id=str(account_id),
+        detail={"reclamacoes_spam": conta.reclamacoes_spam, "suspenso_agora": suspenso_agora},
+    ))
+    db.commit()
+    return {
+        "reclamacoes_spam": conta.reclamacoes_spam,
+        "envio_material_suspenso": conta.envio_material_suspenso,
+    }
+
+
+@router.post("/email-accounts/{account_id}/reativar-envio-material")
+def reativar_envio_material(account_id: int, db: Session = Depends(get_db), admin=Depends(require_admin)):
+    """Contraparte manual da suspensão acima — decisão do admin, depois de
+    investigar a causa das reclamações."""
+    from app.models.email_account import EmailAccount
+
+    conta = db.get(EmailAccount, account_id)
+    if conta is None:
+        raise HTTPException(status_code=404, detail="Caixa não encontrada.")
+
+    conta.envio_material_suspenso = False
+    conta.reclamacoes_spam = 0
+    db.add(AuditLog(
+        user_id=admin.id, action="reativar_envio_material", entity="email_accounts",
+        entity_id=str(account_id), detail={},
+    ))
+    db.commit()
+    return {"envio_material_suspenso": False, "reclamacoes_spam": 0}

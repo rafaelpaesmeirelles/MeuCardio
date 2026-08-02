@@ -1,0 +1,43 @@
+{# E-mail ao PACIENTE, enviado do endereço do próprio médico via Mail360 —
+   não é um e-mail "da Corvia" (por isso não estende _base.html: sem logo/
+   rodapé institucional, é o médico falando, não a plataforma). Texto
+   aprovado palavra por palavra pelo Rafael em material-paciente-por-email-
+   spec.md — não reescrever o conteúdo, só os estilos. #}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Material do seu médico — Corvia</title>
+</head>
+<body style="margin:0;padding:0;background-color:#F4F6F7;font-family:Arial,Helvetica,sans-serif;color:#26333B;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#F4F6F7;padding:24px 0;">
+<tr><td align="center">
+<table role="presentation" width="560" cellpadding="0" cellspacing="0" style="background-color:#ffffff;max-width:560px;width:100%;border-radius:8px;">
+  <tr>
+    <td style="padding:28px 32px;font-size:15px;line-height:1.65;">
+      <p style="margin:0 0 16px;">{{ nome_paciente }},</p>
+      <p style="margin:0 0 16px;">Dr(a). {{ nome_medico }} disponibilizou um material para você.</p>
+      {% if recado %}
+      <p style="margin:0 0 16px;font-style:italic;color:#26333B;background-color:#EFF5F8;padding:12px 16px;border-radius:6px;">&ldquo;{{ recado }}&rdquo;</p>
+      {% endif %}
+      <table role="presentation" cellpadding="0" cellspacing="0" style="margin:8px 0 6px;">
+        <tr>
+          <td style="background-color:#D5001D;border-radius:6px;">
+            <a href="{{ url }}" style="display:inline-block;padding:12px 28px;font-size:15px;font-weight:bold;color:#ffffff;text-decoration:none;border-radius:6px;">Ver o material</a>
+          </td>
+        </tr>
+      </table>
+      <p style="font-size:12.5px;color:#55666F;word-break:break-all;margin:0 0 16px;">{{ url }}</p>
+      <p style="margin:0 0 16px;font-size:13.5px;color:#55666F;">O link é pessoal e vale por {{ dias }} dias — não compartilhe.</p>
+      <p style="margin:0;font-size:13.5px;color:#55666F;">
+        Em caso de dúvida sobre o conteúdo, responda a este e-mail para falar diretamente com seu médico.
+        <strong>Se você estiver passando mal agora, não use este canal — procure atendimento ou ligue 192.</strong>
+      </p>
+    </td>
+  </tr>
+</table>
+</td></tr>
+</table>
+</body>
+</html>

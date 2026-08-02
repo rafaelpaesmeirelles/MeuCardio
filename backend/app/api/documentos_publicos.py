@@ -68,6 +68,29 @@ def _pdf_receita(db: Session, referencia_id: int) -> tuple[bytes, str]:
     return pdf, f"receituario-{doc.id}.pdf"
 
 
+def _pdf_material_paciente(db: Session, referencia_id: int, criado_por: int) -> tuple[bytes, str]:
+    """Reaproveita `svc_material.gerar` — o mesmo gerador de PDF já usado em
+    `GET /api/material-paciente/{slug}/pdf` (Tarefa 12). O papel timbrado
+    sai com os dados de `criado_por` (quem gerou o link, sempre o médico que
+    disparou o envio), não de um médico genérico — é a ele que o paciente
+    volta com dúvida, mesma lógica já documentada em `exportacao.py`."""
+    from app.models.patient_material import PatientMaterial
+    from app.services import material_paciente as svc_material
+
+    m = db.get(PatientMaterial, referencia_id)
+    if not m or not m.published:
+        raise HTTPException(status_code=404, detail="Material não disponível.")
+    medico = db.get(User, criado_por)
+    pdf = svc_material.gerar(m, {
+        "full_name": medico.full_name if medico else "",
+        "council_name": medico.council_name if medico else None,
+        "council_number": medico.council_number if medico else None,
+        "council_state": medico.council_state if medico else None,
+        "rqe": medico.rqe if medico else None,
+    })
+    return pdf, f"material-{m.slug}.pdf"
+
+
 def _pdf_documento(db: Session, referencia_id: int) -> tuple[bytes, str]:
     from app.services.pdf_documento import documento_generico, resolver_endereco
 
@@ -106,6 +129,8 @@ def baixar_por_token(token: str, db: Session = Depends(get_db)):
         pdf, nome_arquivo = _pdf_receita(db, link.referencia_id)
     elif link.tipo == "generated_document":
         pdf, nome_arquivo = _pdf_documento(db, link.referencia_id)
+    elif link.tipo == "patient_material":
+        pdf, nome_arquivo = _pdf_material_paciente(db, link.referencia_id, link.criado_por)
     else:
         raise HTTPException(status_code=500, detail="Tipo de link desconhecido.")
 

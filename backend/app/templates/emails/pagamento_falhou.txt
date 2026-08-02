@@ -1,0 +1,8 @@
+Olá, {{ nome }}!
+
+Não conseguimos processar a cobrança da sua assinatura Corvia.
+
+Atualize a forma de pagamento para continuar com acesso:
+{{ link_atualizar_cartao }}
+
+Faltam {{ dias_restantes }} dia(s) até a suspensão do acesso (data-limite: {{ data_limite }}).

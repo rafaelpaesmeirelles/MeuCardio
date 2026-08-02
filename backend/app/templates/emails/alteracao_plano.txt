@@ -1,0 +1,14 @@
+Olá, {{ nome }}!
+
+Seu plano na Corvia foi alterado.
+
+Plano anterior: {{ plano_anterior }}
+Novo plano: {{ plano_novo }}
+Novo valor: {{ valor_novo }}/mês
+Vale a partir de: {{ vigencia_desde }}
+{% if ganha_perde %}
+O que muda:
+{% for item in ganha_perde %}- {{ item }}
+{% endfor %}{% endif %}{% if aviso_mail %}
+{{ aviso_mail }}
+{% endif %}

@@ -1,0 +1,29 @@
+{% extends "_base.html" %}
+{% block corpo %}
+<p style="margin:0 0 16px;">Olá, {{ nome }}!</p>
+<p style="margin:0 0 16px;">Seu plano na Corvia foi alterado.</p>
+
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#EFF5F8;border-radius:8px;margin:0 0 20px;">
+  <tr>
+    <td style="padding:16px 20px;font-size:14px;line-height:1.7;">
+      <strong>Plano anterior:</strong> {{ plano_anterior }}<br>
+      <strong>Novo plano:</strong> {{ plano_novo }}<br>
+      <strong>Novo valor:</strong> {{ valor_novo }}/mês<br>
+      <strong>Vale a partir de:</strong> {{ vigencia_desde }}
+    </td>
+  </tr>
+</table>
+
+{% if ganha_perde %}
+<p style="margin:0 0 8px;"><strong>O que muda:</strong></p>
+<ul style="margin:0 0 16px;padding-left:20px;">
+  {% for item in ganha_perde %}
+  <li style="margin:0 0 6px;">{{ item }}</li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+{% if aviso_mail %}
+<p style="margin:0;padding:12px 16px;background-color:#FDEEF0;border-radius:6px;font-size:13.5px;">{{ aviso_mail }}</p>
+{% endif %}
+{% endblock %}

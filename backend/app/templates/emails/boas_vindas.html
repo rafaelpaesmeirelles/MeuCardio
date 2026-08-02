@@ -1,0 +1,25 @@
+{% extends "_base.html" %}
+{% from "_macros.html" import botao %}
+{% block corpo %}
+<p style="margin:0 0 16px;">Olá, {{ nome }}!</p>
+<p style="margin:0 0 16px;">Sua assinatura da Corvia foi confirmada. Aqui está o resumo:</p>
+
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#EFF5F8;border-radius:8px;margin:0 0 20px;">
+  <tr>
+    <td style="padding:16px 20px;font-size:14px;line-height:1.7;">
+      <strong>Plano:</strong> {{ plano.nome }}<br>
+      <strong>Inclui:</strong> {{ plano.descricao }}<br>
+      <strong>Valor:</strong> {{ plano.preco_formatado }}/mês<br>
+      <strong>Próxima cobrança:</strong> {{ proxima_cobranca }}
+    </td>
+  </tr>
+</table>
+
+<p style="margin:0 0 8px;"><strong>Nome de usuário:</strong> {{ email }}</p>
+<p style="margin:0 0 4px;">Clique abaixo para ativar sua conta e criar sua senha:</p>
+
+{{ botao("Ativar minha conta e criar senha", link_ativacao) }}
+
+<p style="margin:0 0 16px;font-size:13px;color:#55666F;">O link expira em 48 horas. Se expirar, você pode pedir um novo a qualquer momento na tela de entrada.</p>
+<p style="margin:0;">Acesse a plataforma em <a href="{{ public_url }}" style="color:#1C7293;">{{ public_url }}</a>.</p>
+{% endblock %}

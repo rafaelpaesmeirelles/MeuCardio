@@ -1,0 +1,6 @@
+Olá, {{ nome }}!
+
+Aqui está o novo link para ativar sua conta e criar sua senha (válido por 48 horas):
+{{ link_ativacao }}
+
+O link anterior deixou de valer.

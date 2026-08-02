@@ -23,7 +23,7 @@ import re
 import unicodedata
 from datetime import datetime, timezone
 
-from fastapi import APIRouter, Depends, HTTPException, UploadFile
+from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException, UploadFile
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
 
@@ -37,7 +37,7 @@ from app.core.security import (
 from app.models.email_account import EmailAccount
 from app.models.password_reset import PasswordResetToken
 from app.models.user import User
-from app.services import mail360
+from app.services import emails, mail360
 from app.services.mail360 import Mail360Error
 from app.services.notificar import tentar_enviar_email
 
@@ -179,7 +179,10 @@ class AtivarConta(BaseModel):
 
 
 @router.post("/conta", status_code=201)
-def ativar_conta(dados: AtivarConta, db: Session = Depends(get_db), user: User = Depends(current_user)):
+def ativar_conta(
+    dados: AtivarConta, background_tasks: BackgroundTasks,
+    db: Session = Depends(get_db), user: User = Depends(current_user),
+):
     """Provisiona a caixa e define a senha própria da "sessão email" — as
     duas coisas juntas, porque uma caixa sem senha não serve pra nada (não
     tem como logar em `/entrar`). Exige a assinatura de CorvIA Mail ativa —
@@ -235,6 +238,10 @@ def ativar_conta(dados: AtivarConta, db: Session = Depends(get_db), user: User =
     )
     db.add(conta)
     db.commit()
+    # Item 11 do spec de e-mails transacionais: "caixa criada com sucesso" —
+    # só na primeira criação (`ja_existia: False`), não numa reativação de
+    # senha, que é o outro ramo desta rota.
+    background_tasks.add_task(emails.enviar_corvia_mail_ativado, user.id, conta.email_address)
     return {"ativa": True, "email_address": conta.email_address, "ja_existia": False}
 
 

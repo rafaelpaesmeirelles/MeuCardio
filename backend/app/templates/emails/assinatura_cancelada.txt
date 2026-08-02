@@ -1,0 +1,12 @@
+Olá, {{ nome }}!
+
+Sua assinatura Corvia foi cancelada, como pedido.
+
+Você mantém acesso até {{ acesso_ate }} — fim do período já pago.
+{% if tinha_mail %}
+Sua caixa do CorvIA Mail e as mensagens nela seguem acessíveis até essa mesma data.
+{% endif %}
+Seus dados ficam guardados por {{ dias_retencao }} dias após o fim do acesso. Depois disso, exclusão definitiva.
+
+Reativar assinatura:
+{{ link_reativar }}

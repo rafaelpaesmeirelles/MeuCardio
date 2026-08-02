@@ -1,6 +1,6 @@
 from datetime import datetime, timezone
 
-from sqlalchemy import DateTime, ForeignKey, String
+from sqlalchemy import Boolean, DateTime, ForeignKey, Integer, String
 from sqlalchemy.orm import Mapped, mapped_column
 
 from app.core.db import Base
@@ -45,6 +45,19 @@ class EmailAccount(Base):
     status: Mapped[str] = mapped_column(String(20), default="ativa")  # ativa | suspensa
     lgpd_aceite_em: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
     lgpd_aceite_versao: Mapped[str | None] = mapped_column(String(20), nullable=True)
+
+    # Acrescentado em 02/08/2026 — trava de reputação do domínio para o envio
+    # de material do paciente pelo endereço do médico (ver
+    # material-paciente-por-email-spec.md, "risco operacional"). Sem
+    # integração de webhook de bounce/spam do Mail360 verificada nesta
+    # sessão, o incremento acontece pela rota administrativa
+    # `POST /api/admin/email-accounts/{id}/registrar-reclamacao` — reativa,
+    # não automática a partir do provedor. Ao atingir 3, `envio_material_
+    # suspenso` liga sozinho e bloqueia só o envio ao paciente (a caixa
+    # continua funcionando para o resto do CorvIA Mail).
+    reclamacoes_spam: Mapped[int] = mapped_column(Integer, default=0)
+    envio_material_suspenso: Mapped[bool] = mapped_column(Boolean, default=False)
+
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
     )
