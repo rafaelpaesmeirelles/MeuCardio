@@ -191,6 +191,7 @@ def perguntar(dados: Pergunta, db: Session = Depends(get_db), user=Depends(curre
         "fontes": r["fontes"],
         "fontes_pubmed": r["fontes_pubmed"],
         "modelo": r["modelo"],
+        "truncado": r["truncado"],
     }
 
 
@@ -252,7 +253,7 @@ def perguntar_stream(dados: Pergunta, db: Session = Depends(get_db), user=Depend
                                 "tokens": r["tokens_entrada"] + r["tokens_saida"], "via": "stream"},
                     ))
                     db2.commit()
-                    yield f"data: {json.dumps({'tipo': 'final', 'conversation_id': conv_id, 'fontes': r['fontes'], 'fontes_pubmed': r['fontes_pubmed'], 'modelo': r['modelo']}, ensure_ascii=False)}\n\n"
+                    yield f"data: {json.dumps({'tipo': 'final', 'conversation_id': conv_id, 'fontes': r['fontes'], 'fontes_pubmed': r['fontes_pubmed'], 'modelo': r['modelo'], 'truncado': r['truncado']}, ensure_ascii=False)}\n\n"
         except Exception as e:
             # Sem isto, o erro real só aparecia indo direto ao log do
             # Postgres — o usuário via só o nome da exceção e ninguém

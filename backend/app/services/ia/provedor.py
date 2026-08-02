@@ -23,6 +23,10 @@ class Resposta:
     tokens_entrada: int
     tokens_saida: int
     modelo: str
+    # True quando a resposta foi cortada por atingir ai_max_output_tokens —
+    # sem isso o usuário recebe um texto incompleto (ex.: dose cortada no
+    # meio) sem nenhum sinal de que faltou conteúdo.
+    truncado: bool = False
 
 
 class ProvedorIA(ABC):
@@ -96,6 +100,7 @@ class ProvedorOpenAI(ProvedorIA):
             tokens_entrada=getattr(uso, "prompt_tokens", 0) or 0,
             tokens_saida=getattr(uso, "completion_tokens", 0) or 0,
             modelo=modelo_efetivo,
+            truncado=resp.choices[0].finish_reason == "length",
         )
 
     def responder_stream(
@@ -117,17 +122,20 @@ class ProvedorOpenAI(ProvedorIA):
         textos: list[str] = []
         tokens_entrada = 0
         tokens_saida = 0
+        truncado = False
         for chunk in stream:
             if chunk.choices and chunk.choices[0].delta.content:
                 pedaco = chunk.choices[0].delta.content
                 textos.append(pedaco)
                 yield {"delta": pedaco}
+            if chunk.choices and chunk.choices[0].finish_reason == "length":
+                truncado = True
             if chunk.usage:
                 tokens_entrada = chunk.usage.prompt_tokens or 0
                 tokens_saida = chunk.usage.completion_tokens or 0
         yield {"final": Resposta(
             texto="".join(textos), tokens_entrada=tokens_entrada,
-            tokens_saida=tokens_saida, modelo=modelo_efetivo,
+            tokens_saida=tokens_saida, modelo=modelo_efetivo, truncado=truncado,
         )}
 
 
@@ -216,6 +224,10 @@ class ProvedorAnthropic(ProvedorIA):
             tokens_entrada=tokens_entrada,
             tokens_saida=tokens_saida,
             modelo=modelo_efetivo,
+            # stop_reason da última rodada — se saiu do loop por esgotar
+            # max_tokens em vez de terminar (end_turn) ou parar de pausar,
+            # o texto está cortado no meio.
+            truncado=resp.stop_reason == "max_tokens",
         )
 
     def responder_stream(
@@ -250,6 +262,7 @@ class ProvedorAnthropic(ProvedorIA):
         yield {"final": Resposta(
             texto="".join(textos), tokens_entrada=tokens_entrada,
             tokens_saida=tokens_saida, modelo=modelo_efetivo,
+            truncado=resp.stop_reason == "max_tokens",
         )}
 
 

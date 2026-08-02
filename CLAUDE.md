@@ -605,6 +605,46 @@ Claude." Especificação já levantada pela monitora (não repetir a pesquisa):
   erro), **conferido também no banco** — a `AIConversation`, as 2 `AIMessage` (user + assistant)
   e o `AuditLog` correspondentes existem, todos com o `conversation_id` correto. Backend
   rebuildado duas vezes (uma por fix) e verificado em produção antes de cada registro.
+- **✅ REVISÃO DE CÓDIGO NOVO DO RAFAEL, 02/08/2026 ~07h20-08h** — a monitora recebeu um snippet
+  standalone (FastAPI + hook React) que o Rafael passou pedindo correção, com uma revisão prévia
+  de 8 bugs em `/root/mensagens/assistente-streaming-revisao.md`. **Antes de aplicar, conferi
+  (como o próprio handoff pedia) se o snippet substituía o backend real — não substituía**: é um
+  exemplo autocontido, sem RAG, sem PubMed, sem histórico de conversa, sem autenticação, sem
+  limite diário — nada do que já existe em `app/api/ai.py`/`app/services/rag.py`. Cruzei os 8
+  bugs contra o código de produção em vez de aplicar às cegas:
+  - **#1 (crítico, JSON quebrado em várias linhas `data:`), #2 (modelo hardcoded), #4
+    (perguntas simultâneas se misturando), #6 (evento de conclusão ignorado), #7 (erro deixa
+    resposta parcial parecendo completa) — nenhum existe em produção.** O #1 não existe porque
+    `ai.py` já serializa o payload com `json.dumps(...)` antes do `data:` — JSON nunca emite `\n`
+    literal, então o SSE nunca quebra o texto em múltiplas linhas `data:` (é exatamente a correção
+    que o handoff pedia, só que já estava lá). O #2 não existe porque o modelo vem de
+    `settings.anthropic_model`/allowlist, nunca hardcoded. O #4 não existe porque `enviar()` em
+    `Assistente.tsx` já tem guarda `if (!texto || pensando) return` no topo. O #6/#7 não existem
+    porque o evento `final` já é tratado por completo e o `catch` de erro já **remove** a bolha
+    parcial (`setMensagens((m) => m.slice(0, -1))`) em vez de deixá-la visível.
+  - **#3 (buffer final descartado) e #5 (truncamento por `max_tokens` nunca sinalizado) eram reais
+    e foram corrigidos em produção.** #3: `api.ts`/`stream()` fazia `break` no `done` sem processar
+    o `restante` do buffer — se o último evento SSE (o `final`, com fontes/`conversation_id`) não
+    vinha seguido de mais bytes, sumia em silêncio. Extraí o parsing para uma função
+    `processarEvento` e chamei mais uma vez sobre o `restante` depois do laço. #5:
+    `ProvedorAnthropic`/`ProvedorOpenAI` nunca verificavam `stop_reason`/`finish_reason` — uma
+    resposta cortada por `max_tokens` (ex.: dose truncada no meio) chegava ao médico sem nenhum
+    aviso. `Resposta` ganhou o campo `truncado: bool = False`, populado nos 4 pontos de retorno
+    (`responder`/`responder_stream` × OpenAI/Anthropic), propagado por `rag.perguntar()`/
+    `perguntar_stream()` e pelas duas rotas (`/perguntar` e `/perguntar/stream`) até o evento
+    `final` do SSE. `Assistente.tsx` mostra um selo "Resposta cortada por limite de tamanho" na
+    bolha quando `truncado` vem `true`.
+  - **#8 (cache de prompt) não foi aplicado** — otimização de custo/latência, não correção de
+    bug, fora do escopo desta revisão pontual.
+  **Verificado pela rota HTTP real** (não só import): `POST /api/ai/perguntar/stream` com token
+  real, pergunta sem busca na internet — status 200, evento `final` com `'truncado': False`
+  presente e correto. Backend (`docker compose up -d --build backend`) e frontend
+  (`--build frontend-build`) rebuildados; bundle novo confirmado no Caddy por grep da string do
+  aviso de truncamento em `/site/assets/*.js`.
+  **O snippet original do Rafael também foi corrigido** (nos dois arquivos de paste-cache da
+  sessão da monitora, não faz parte do repositório) com os 8 fixes, para responder ao pedido
+  literal — mas não foi (e não deve ser) usado para substituir `app/api/ai.py`: perderia RAG,
+  PubMed, persistência de conversa, autenticação e os fixes desta madrugada documentados acima.
 - **✅ IMPLEMENTADO no commit `631b21e`** — mas Rafael testou e pediu 2 ajustes
   (23h42 de 01/08, direto à monitora), registrados aqui pra quem pegar a tarefa:
   1. **Busca na internet não pode depender de opt-in manual.** O checkbox

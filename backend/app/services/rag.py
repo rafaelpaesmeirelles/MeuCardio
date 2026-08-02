@@ -527,6 +527,7 @@ def perguntar(
         "modelo": resposta.modelo,
         "tokens_entrada": resposta.tokens_entrada,
         "tokens_saida": resposta.tokens_saida,
+        "truncado": resposta.truncado,
     }
 
 
@@ -581,4 +582,5 @@ def perguntar_stream(
                 "modelo": resposta.modelo,
                 "tokens_entrada": resposta.tokens_entrada,
                 "tokens_saida": resposta.tokens_saida,
+                "truncado": resposta.truncado,
             }}

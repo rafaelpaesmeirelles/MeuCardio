@@ -134,6 +134,12 @@ export const api = {
       const detail = await res.json().catch(() => null);
       throw new ApiError(res.status, detail?.detail ?? "Não foi possível consultar o assistente.");
     }
+    const processarEvento = (parte: string) => {
+      const linha = parte.split("\n").find((l) => l.startsWith("data: "));
+      if (!linha) return;
+      aoReceberEvento(JSON.parse(linha.slice(6)));
+    };
+
     const leitor = res.body.getReader();
     const decodificador = new TextDecoder();
     let restante = "";
@@ -143,12 +149,13 @@ export const api = {
       restante += decodificador.decode(value, { stream: true });
       const partes = restante.split("\n\n");
       restante = partes.pop() ?? "";
-      for (const parte of partes) {
-        const linha = parte.split("\n").find((l) => l.startsWith("data: "));
-        if (!linha) continue;
-        aoReceberEvento(JSON.parse(linha.slice(6)));
-      }
+      partes.forEach(processarEvento);
     }
+    // O último evento pode não vir seguido de mais bytes (sem "\n\n" a
+    // empurrá-lo para fora do buffer) — sem isto, o evento "final" (fontes,
+    // conversation_id, aviso de truncamento) some em silêncio quando o
+    // stream fecha logo depois dele.
+    if (restante.trim()) processarEvento(restante);
   },
 
   async login(email: string, password: string) {

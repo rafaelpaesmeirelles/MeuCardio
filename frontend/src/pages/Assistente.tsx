@@ -9,7 +9,10 @@ type Fonte = {
   referencia: string; slug: string; titulo: string; tema: string; review_status: string;
 };
 type FontePubmed = { pmid: string; titulo: string; autores: string; revista: string; ano: string; url: string };
-type Mensagem = { papel: "user" | "assistant"; conteudo: string; fontes?: Fonte[]; fontesPubmed?: FontePubmed[] };
+type Mensagem = {
+  papel: "user" | "assistant"; conteudo: string; fontes?: Fonte[]; fontesPubmed?: FontePubmed[];
+  truncado?: boolean;
+};
 type Status = {
   ativo: boolean; provedor: string; modelo: string; modelos_disponiveis: string[];
   limite_diario: number; usado_hoje: number; restante_hoje: number;
@@ -101,6 +104,7 @@ export default function Assistente() {
             copia[copia.length - 1] = {
               ...ultima, fontes: evento.fontes,
               fontesPubmed: evento.fontes_pubmed?.length ? evento.fontes_pubmed : undefined,
+              truncado: evento.truncado,
             };
             return copia;
           });
@@ -246,6 +250,11 @@ export default function Assistente() {
               ) : (
               <>
                 <Markdown remarkPlugins={[remarkGfm]}>{m.conteudo}</Markdown>
+                {m.truncado && (
+                  <p className="selo selo--pendente" style={{ display: "inline-block", marginTop: 4 }}>
+                    Resposta cortada por limite de tamanho — pode estar incompleta. Peça para continuar.
+                  </p>
+                )}
                 {m.fontes && m.fontes.length > 0 && (
                   <div className="ia__fontes">
                     <p className="eyebrow">Fontes consultadas</p>
