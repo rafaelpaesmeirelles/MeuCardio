@@ -31212,5 +31212,145 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "sbc2019-holter-24h-em-idoso-assintomatico-com-disfuncao-de-ve-e-hvsq",
+    "theme": "Cardiologia geriátrica",
+    "statement": "Em pacientes idosos assintomáticos com disfunção da função sistólica do ventrículo esquerdo e hipertrofia ventricular esquerda ao eletrocardiograma, a realização de Holter de 24 horas para avaliação de arritmias ventriculares é recomendada.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2019,
+    "guideline_title": "Updated Geriatric Cardiology Guidelines of the Brazilian Society of Cardiology - 2019",
+    "reference": "Feitosa-Filho GS et al. Updated Geriatric Cardiology Guidelines of the Brazilian Society of Cardiology - 2019. Arq Bras Cardiol. 2019;112(5):649-705. DOI: 10.5935/abc.20190086. PMID: 31188969. PMCID: PMC6555565 — texto integral aberto, lido e conferido nesta sessão via PMC, seção 7.2.1 (tabela de recomendações diagnósticas para taquiarritmias no idoso).",
+    "tags": [
+      "idoso",
+      "arritmia ventricular",
+      "Holter",
+      "hipertrofia ventricular esquerda",
+      "estratificação de risco"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "sbc2019-holter-24h-nao-indicado-para-sintomas-inespecificos-com-bradicardia-documentada-no-idoso",
+    "theme": "Cardiologia geriátrica",
+    "statement": "Em pacientes idosos com bradicardia já documentada, o Holter de 24 horas não está indicado com o objetivo de correlacionar eletrocardiograficamente sintomas inespecíficos — como tontura rotatória, dispneia e sudorese —, que não são característicos de bradiarritmia.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2019,
+    "guideline_title": "Updated Geriatric Cardiology Guidelines of the Brazilian Society of Cardiology - 2019",
+    "reference": "Feitosa-Filho GS et al. Updated Geriatric Cardiology Guidelines of the Brazilian Society of Cardiology - 2019. Arq Bras Cardiol. 2019;112(5):649-705. DOI: 10.5935/abc.20190086. PMID: 31188969. PMCID: PMC6555565 — texto integral aberto, lido e conferido nesta sessão via PMC, seção 7.1.2 (tabela de recomendações gerais para diagnóstico de bradiarritmias no idoso).",
+    "tags": [
+      "idoso",
+      "bradiarritmia",
+      "Holter",
+      "tontura",
+      "sintomas inespecíficos"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "sbc2019-troca-valvar-mitral-preferivel-a-plastia-na-insuficiencia-mitral-secundaria-isquemica-no-idoso",
+    "theme": "Cardiologia geriátrica",
+    "statement": "Em pacientes idosos com insuficiência mitral crônica secundária de etiologia isquêmica, a troca valvar mitral é preferível à plastia mitral.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2019,
+    "guideline_title": "Updated Geriatric Cardiology Guidelines of the Brazilian Society of Cardiology - 2019",
+    "reference": "Feitosa-Filho GS et al. Updated Geriatric Cardiology Guidelines of the Brazilian Society of Cardiology - 2019. Arq Bras Cardiol. 2019;112(5):649-705. DOI: 10.5935/abc.20190086. PMID: 31188969. PMCID: PMC6555565 — texto integral aberto, lido e conferido nesta sessão via PMC, seção 6.2.2 (tabela \"Recommendations for MR surgery\").",
+    "tags": [
+      "idoso",
+      "insuficiência mitral",
+      "cirurgia valvar",
+      "etiologia isquêmica",
+      "plastia mitral"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "sbc2019-reposicao-de-ferro-iv-na-ic-com-deficiencia-de-ferro-no-idoso",
+    "theme": "Cardiologia geriátrica",
+    "statement": "Em pacientes idosos com insuficiência cardíaca e deficiência de ferro (ferritina < 100 ng/mL, ou ferritina entre 100 e 199 ng/mL associada a saturação de transferrina < 20%), a reposição de ferro por via intravenosa é razoável, com o objetivo de melhorar sintomas e qualidade de vida.",
+    "recommendation_class": "IIa",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2019,
+    "guideline_title": "Updated Geriatric Cardiology Guidelines of the Brazilian Society of Cardiology - 2019",
+    "reference": "Feitosa-Filho GS et al. Updated Geriatric Cardiology Guidelines of the Brazilian Society of Cardiology - 2019. Arq Bras Cardiol. 2019;112(5):649-705. DOI: 10.5935/abc.20190086. PMID: 31188969. PMCID: PMC6555565 — texto integral aberto, lido e conferido nesta sessão via PMC, seção 4.3 (tabela \"Treatment of comorbidities\", item deficiência de ferro).",
+    "tags": [
+      "idoso",
+      "insuficiência cardíaca",
+      "deficiência de ferro",
+      "ferro intravenoso",
+      "qualidade de vida"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "paces2021-marca-passo-na-disfuncao-do-no-sinusal-com-sintomas-correlacionados-a-bradicardia",
+    "theme": "Cardiologia pediátrica",
+    "statement": "Em crianças, adolescentes e pacientes com cardiopatia congênita, a implantação de marcapasso definitivo atrial ou de dupla câmara está indicada na disfunção isolada do nó sinusal quando há correlação temporal entre os sintomas e bradicardia inadequada para a idade.",
+    "recommendation_class": "I",
+    "evidence_level": "B-NR",
+    "society": "PACES/HRS",
+    "year": 2021,
+    "guideline_title": "2021 PACES Expert Consensus Statement on the Indications and Management of Cardiovascular Implantable Electronic Devices in Pediatric Patients",
+    "reference": "Shah MJ, Silka MJ, Avari Silva JN et al. Indian Pacing Electrophysiol J. 2021;21(6):367-393. DOI: 10.1016/j.ipej.2021.07.005. PMID: 34333141. PMCID: PMC8577100 — texto integral aberto, lido e conferido nesta sessão via PMC, seção 2.2 (tabela \"Isolated Sinus Node Dysfunction\").",
+    "tags": [
+      "disfunção do nó sinusal",
+      "marcapasso definitivo",
+      "bradicardia",
+      "pediatria",
+      "cardiopatia congênita"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "paces2021-marca-passo-nao-indicado-na-disfuncao-do-no-sinusal-assintomatica",
+    "theme": "Cardiologia pediátrica",
+    "statement": "Em crianças, adolescentes e pacientes com cardiopatia congênita, a implantação de marcapasso definitivo não está indicada na disfunção isolada do nó sinusal assintomática — não há benefício demonstrado.",
+    "recommendation_class": "III",
+    "evidence_level": "C-EO",
+    "society": "PACES/HRS",
+    "year": 2021,
+    "guideline_title": "2021 PACES Expert Consensus Statement on the Indications and Management of Cardiovascular Implantable Electronic Devices in Pediatric Patients",
+    "reference": "Shah MJ, Silka MJ, Avari Silva JN et al. Indian Pacing Electrophysiol J. 2021;21(6):367-393. DOI: 10.1016/j.ipej.2021.07.005. PMID: 34333141. PMCID: PMC8577100 — texto integral aberto, lido e conferido nesta sessão via PMC, seção 2.2 (tabela \"Isolated Sinus Node Dysfunction\", classe III \"No Benefit\").",
+    "tags": [
+      "disfunção do nó sinusal",
+      "marcapasso definitivo",
+      "assintomático",
+      "pediatria",
+      "cardiopatia congênita"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "paces2021-marca-passo-nao-indicado-no-bav-de-1-grau-ou-mobitz-i-assintomaticos-em-pediatria",
+    "theme": "Cardiologia pediátrica",
+    "statement": "Em crianças, adolescentes e pacientes com cardiopatia congênita, a implantação de marcapasso definitivo não está indicada no bloqueio atrioventricular de primeiro grau assintomático nem no bloqueio atrioventricular de segundo grau tipo Mobitz I (Wenckebach) assintomático.",
+    "recommendation_class": "III",
+    "evidence_level": "C-LD",
+    "society": "PACES/HRS",
+    "year": 2021,
+    "guideline_title": "2021 PACES Expert Consensus Statement on the Indications and Management of Cardiovascular Implantable Electronic Devices in Pediatric Patients",
+    "reference": "Shah MJ, Silka MJ, Avari Silva JN et al. Indian Pacing Electrophysiol J. 2021;21(6):367-393. DOI: 10.1016/j.ipej.2021.07.005. PMID: 34333141. PMCID: PMC8577100 — texto integral aberto, lido e conferido nesta sessão via PMC, seção 2.4 (tabela \"Atrioventricular Block: Other Considerations\", classe III \"Harm\").",
+    "tags": [
+      "bloqueio atrioventricular",
+      "Mobitz I",
+      "marcapasso definitivo",
+      "pediatria",
+      "assintomático"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]

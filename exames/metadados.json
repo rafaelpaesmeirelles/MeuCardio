@@ -4829,5 +4829,103 @@
       "vigilância",
       "circulação de fontan"
     ]
+  },
+  {
+    "slug": "cadeias-leves-livres-e-imunofixacao-no-algoritmo-nao-invasivo-da-amiloidose-cardiaca-no-idoso",
+    "name": "Cadeias leves livres séricas (kappa/lambda) e imunofixação sérica/urinária no algoritmo diagnóstico da amiloidose cardíaca",
+    "category": "laboratorial",
+    "theme": "Cardiologia geriátrica",
+    "what_it_measures": "Rastreio de gamopatia monoclonal — dosagem de cadeias leves livres kappa e lambda no soro (com cálculo da razão kappa/lambda) e imunofixação por eletroforese no soro e na urina. No idoso com suspeita de amiloidose cardíaca (espessamento parietal desproporcional à voltagem no ECG, padrão restritivo, strain com poupança apical), este trio de exames é o que decide se a cintilografia óssea positiva pode ser lida como amiloidose por transtirretina (ATTR) sem biópsia, ou se ainda é preciso excluir amiloidose de cadeia leve (AL) por biópsia.",
+    "reference_range": "Razão kappa/lambda sérica normal: aproximadamente 0,26 a 1,65 (o intervalo varia por ensaio nefelométrico/turbidimétrico — usar a referência do laboratório que processou a amostra). Imunofixação sérica e urinária: normal = ausência de componente monoclonal (banda discreta) em ambas. Nenhum dos três pode estar alterado para autorizar o diagnóstico não invasivo de ATTR.",
+    "indications": "Todo paciente idoso com captação miocárdica grau 2 ou 3 na cintilografia com traçador ósseo (pirofosfato de tecnécio-99m, PYP, ou equivalente) e suspeita clínica/ecocardiográfica de amiloidose cardíaca — os três exames (razão de cadeias leves livres + imunofixação sérica + imunofixação urinária) são etapa obrigatória do algoritmo antes de dispensar a biópsia endomiocárdica, porque uma gamopatia monoclonal concomitante (comum e muitas vezes incidental no idoso, tipo MGUS) invalida a leitura não invasiva.",
+    "interpretation": "Se a cintilografia mostra captação miocárdica grau 2 ou 3 E os três exames de cadeia leve são normais (razão kappa/lambda normal, imunofixação sérica e urinária negativas), o diagnóstico de amiloidose cardíaca por ATTR pode ser firmado sem biópsia — no estudo multicêntrico original (Gillmore et al., 1217 pacientes com suspeita de amiloidose cardíaca, 857 com amiloide histologicamente comprovado), essa combinação teve especificidade e valor preditivo positivo de 100% para ATTR cardíaca (IC 95% do VPP: 98,0-100%). Se qualquer um dos três exames vier alterado, a gamopatia monoclonal pode representar amiloidose AL concomitante (ou coincidente, tipo MGUS) — biópsia (endomiocárdica ou de gordura/outro sítio) é obrigatória antes de excluir AL, porque tratar uma AL como ATTR atrasa terapia direcionada à discrasia de plasmócitos, que é emergência hematológica.",
+    "limitations": "A captação óssea isolada, sem os exames de cadeia leve, tem especificidade muito menor: até 14% dos pacientes com captação grau 2-3 na cintilografia tinham na verdade amiloidose AL no estudo original — é a gamopatia monoclonal concomitante, não a captação óssea em si, que gera o falso positivo mais perigoso. A prevalência de MGUS sobe com a idade (esperada em torno de 3-5% acima de 70 anos), então no idoso a chance de um resultado de cadeia leve falsamente alterado por gamopatia benigna não relacionada à amiloidose é maior — nesse cenário, a decisão de biopsiar deve ser compartilhada com hematologia, e não decidida só pelo cardiologista. A razão kappa/lambda pode estar alterada por insuficiência renal (acúmulo de cadeias leves por clearance reduzido) mesmo sem gamopatia — no idoso com doença renal crônica associada, usar a razão ajustada para a função renal quando disponível, em vez da razão padrão.",
+    "source_refs": [
+      "Gillmore JD, Maurer MS, Falk RH, Merlini G, Damy T, Dispenzieri A, et al. Nonbiopsy Diagnosis of Cardiac Transthyretin Amyloidosis. Circulation. 2016;133(24):2404-2412. PMID: 27143678.",
+      "Kittleson MM, Ruberg FL, Ambardekar AV, Brannagan TH, Cheng RK, Clarke JO, et al. 2023 ACC Expert Consensus Decision Pathway on Comprehensive Multidisciplinary Care for the Patient With Cardiac Amyloidosis. J Am Coll Cardiol. 2023;81(11):1076-1126. PMID: 36697326."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "amiloidose cardiaca",
+      "cadeias leves livres",
+      "imunofixacao",
+      "attr",
+      "amiloidose al",
+      "idoso"
+    ]
+  },
+  {
+    "slug": "tomografia-computadorizada-de-planejamento-pre-tavi-anel-aortico-e-vias-de-acesso",
+    "name": "Tomografia computadorizada de planejamento pré-TAVI: anel aórtico, vias de acesso e risco de oclusão coronária",
+    "category": "imagem",
+    "theme": "Cardiologia geriátrica",
+    "what_it_measures": "Angiotomografia com sincronização cardíaca (ECG-gated), com aquisição adicional de todo o trajeto vascular do tórax à artéria femoral — usada para dimensionar a prótese no implante valvar aórtico transcateter (TAVI): perímetro e área do anel aórtico (plano virtual pelos três pontos de inserção basal das cúspides), altura dos óstios coronarianos, diâmetro dos seios de Valsalva, calcificação da via de saída do ventrículo esquerdo, e calibre/tortuosidade/calcificação do trajeto ilíaco-femoral que definirá a via de acesso.",
+    "reference_range": "Não há valor único de referência — o exame gera medidas que são comparadas à tabela de compatibilidade de cada modelo de prótese (balão-expansível ou autoexpansível), com percentual de sobredimensionamento (\"oversizing\") calculado como [(medida nominal da prótese ÷ medida do anel do paciente) − 1] × 100, geralmente na faixa de 5-20% conforme o fabricante e a técnica de sizing usada (perímetro para prótese autoexpansível, área para balão-expansível).",
+    "indications": "Planejamento de todo paciente candidato a TAVI, antes da escolha do tamanho e do modelo de prótese e da via de acesso — é exame obrigatório do fluxo de decisão da equipe cardíaca estruturada (heart team), não uma opção entre outras.",
+    "interpretation": "Altura do óstio coronariano menor que 12 mm em relação ao plano do anel, combinada a seio de Valsalva com diâmetro médio menor que 30 mm, identifica o paciente com maior risco de oclusão coronariana durante o implante — o folheto nativo calcificado é empurrado contra o óstio baixo pela prótese. Via ilíaco-femoral com diâmetro luminal mínimo insuficiente para a bainha do sistema escolhido, calcificação circunferencial extensa ou angulação acentuada contraindicam a via transfemoral e direcionam para acesso alternativo (subclávio, carotídeo, transapical ou transaórtico direto). Sobredimensionamento insuficiente aumenta o risco de regurgitação paravalvar; sobredimensionamento excessivo aumenta o risco de ruptura do anel ou de bloqueio atrioventricular por compressão do sistema de condução.",
+    "limitations": "A oclusão coronariana continua sendo um evento raro mesmo nos casos identificados como de maior risco pelo exame (incidência global inferior a 1% nas séries mais recentes, um pouco mais frequente com prótese balão-expansível que autoexpansível segundo metanálise comparativa) — a tomografia estratifica risco, não prediz o evento com certeza individual, e casos de baixo risco pela TC também podem ocluir. A qualidade da medida do anel depende de reconstrução na fase correta do ciclo cardíaco (sistólica, próxima ao pico de abertura); medir fora dessa fase subestima ou superestima a área. Calcificação intensa e artefato de contagem parcial de volume dificultam a delimitação exata dos folhetos em pacientes muito idosos, que são justamente a população mais frequentemente encaminhada para TAVI.",
+    "source_refs": [
+      "Blanke P, Weir-McCall JR, Achenbach S, Delgado V, Hausleiter J, Jilaihawi H, et al. Computed Tomography Imaging in the Context of Transcatheter Aortic Valve Implantation (TAVI)/Transcatheter Aortic Valve Replacement (TAVR): An Expert Consensus Document of the Society of Cardiovascular Computed Tomography. JACC Cardiovasc Imaging. 2019;12(1):1-24. PMID: 30621986.",
+      "Wang YF, Liu ZQ, Ma XT, Yang LX, Wang ZJ, Zhou YJ. Incidence of Coronary Obstruction During Aortic Valve Implantation: Meta-Analysis and Mixed-Treatment Comparison of Self-Expandable Versus Balloon-Expandable Valve Prostheses. Rev Cardiovasc Med. 2025;26(7):36208. PMID: 40776940."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "tavi",
+      "tavr",
+      "planejamento pre-procedimento",
+      "anel aortico",
+      "oclusao coronariana",
+      "idoso"
+    ]
+  },
+  {
+    "slug": "painel-genetico-multigenico-em-cardiomiopatia-pediatrica-de-inicio-precoce",
+    "name": "Painel genético multigênico na cardiomiopatia pediátrica de início precoce",
+    "category": "laboratorial",
+    "theme": "Cardiologia pediátrica",
+    "what_it_measures": "Sequenciamento em painel (ou exoma/genoma clínico) de genes associados a cardiomiopatia na criança — diferente do painel do adulto, cobre não só genes sarcoméricos, mas também genes da via RAS/MAPK (RASopatias, causa relevante de hipertrofia em lactentes), genes mitocondriais/metabólicos e genes associados a canalopatia/arritmia quando o fenótipo é misto — porque a distribuição etiológica na criança é distinta da do adulto, com muito mais peso de doença sindrômica, metabólica e mitocondrial nas faixas etárias mais jovens.",
+    "reference_range": "Não se aplica um valor numérico — o resultado é qualitativo, classificado por categoria de variante (patogênica, provavelmente patogênica, variante de significado incerto, provavelmente benigna, benigna), segundo os critérios do American College of Medical Genetics and Genomics (ACMG).",
+    "indications": "Toda criança com diagnóstico confirmado de cardiomiopatia (hipertrófica, dilatada, restritiva ou não compactada), independentemente de história familiar — a criança sem outro caso conhecido na família ainda tem chance real de variante patogênica identificável, e o resultado muda o rastreio em cascata da família. Também indicado diante de fenótipo misto (cardiomiopatia com atraso de desenvolvimento, dismorfismo, hipotonia ou outro achado extracardíaco), que aumenta a suspeita de causa sindrômica, metabólica ou mitocondrial.",
+    "interpretation": "Em coorte pediátrica australiana de 221 crianças com cardiomiopatia (idade ≤18 anos), o rendimento diagnóstico do teste genético variou por fenótipo: mais alto na cardiomiopatia restritiva (80%) e na hipertrófica (66%), mais baixo na dilatada (29%) e na não compactação isolada (25%). A maioria das variantes patogênicas identificadas estava em genes de proteínas sarcoméricas, com variantes em TNNT2 e TNNI3 associadas a desfechos clínicos mais graves nessa coorte. Em 4,5% das crianças havia mais de uma variante patogênica (heterozigose composta ou dupla mutação), o que também se associa a fenótipo mais grave. Em 14 famílias, o resultado genético levou à revisão do diagnóstico clínico inicial, apontando para causa sindrômica, mitocondrial ou metabólica não suspeitada antes do teste.",
+    "limitations": "Um resultado negativo não exclui causa genética — reflete o painel de genes testado e a tecnologia empregada, não ausência de etiologia hereditária, e pode justificar reteste futuro com painel ampliado ou genoma completo conforme a genética evolui. Variante de significado incerto é o resultado mais difícil de comunicar à família: não deve orientar conduta clínica isolada nem decisão sobre rastreio em cascata até ser reclassificada. Teste em cascata dos familiares, quando uma variante patogênica é confirmada na criança-índice, exige aconselhamento genético estruturado — na mesma coorte de referência, o teste em cascata de 127 famílias identificou 24 variantes de novo e herança recessiva em 8 famílias, o que muda a orientação reprodutiva dada aos pais.",
+    "source_refs": [
+      "Bagnall RD, Singer ES, Wacker J, Nowak N, Ingles J, King I, et al. Genetic Basis of Childhood Cardiomyopathy. Circ Genom Precis Med. 2022;15(6):e003686. PMID: 36252119."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "cardiomiopatia pediatrica",
+      "teste genetico",
+      "sarcomero",
+      "rasopatia",
+      "cardiomiopatia hipertrofica",
+      "cardiomiopatia dilatada"
+    ]
+  },
+  {
+    "slug": "ressonancia-magnetica-cardiaca-com-realce-tardio-na-cardiomiopatia-hipertrofica-pediatrica",
+    "name": "Ressonância magnética cardíaca com realce tardio de gadolínio na cardiomiopatia hipertrófica pediátrica",
+    "category": "imagem",
+    "theme": "Cardiologia pediátrica",
+    "what_it_measures": "Fibrose de substituição miocárdica identificada pelo realce tardio após injeção de gadolínio, quantificada como percentual da massa do ventrículo esquerdo — na cardiomiopatia hipertrófica da criança e do adolescente, complementa a espessura parietal ao ecocardiograma como marcador de risco de morte súbita e de progressão de doença.",
+    "reference_range": "Ausência de realce tardio é o achado mais comum na criança com hipertrofia isolada por mutação sarcomérica sem hipertrofia manifesta (portador assintomático). Não há um corte único validado prospectivamente para decisão de implante de cardiodesfibrilador na criança, ao contrário do que já se discute no adulto — a extensão do realce entra como um entre vários fatores de risco a somar, não como critério isolado.",
+    "indications": "Estratificação de risco de morte súbita na cardiomiopatia hipertrófica pediátrica, sobretudo quando outros marcadores (espessura parietal extrema para a superfície corporal, síncope inexplicada, resposta pressórica anormal ao esforço, história familiar de morte súbita) deixam a decisão de cardiodesfibrilador implantável em zona cinzenta. Também usada para acompanhar progressão de doença ao longo do tempo em exames seriados.",
+    "interpretation": "Em coorte multicêntrica norte-americana de 195 pacientes com até 21 anos (155 com hipertrofia manifesta e 40 portadores de mutação sarcomérica sem hipertrofia), o realce tardio esteve presente em 46% das crianças e adolescentes com hipertrofia manifesta — proporção menor que os cerca de 60% tipicamente relatados no adulto com a mesma doença — e ausente em todos os portadores sem hipertrofia ao exame. Na reavaliação seriada de 31 pacientes (intervalo mediano de 2,4 anos), a extensão do realce aumentou de forma estatisticamente significativa, de 2,9% para 4,3% da massa ventricular esquerda, acompanhada de aumento da massa do VE e do átrio esquerdo — evidência direta de progressão de doença dentro da infância/adolescência, não só um achado estático.",
+    "limitations": "Ao contrário do adulto, ainda não existe corte de percentual de realce tardio validado prospectivamente como critério isolado de indicação de cardiodesfibrilador em criança — a extensão do realce entra como reforço de decisão dentro de escore de risco pediátrico, nunca como gatilho único. Exige sedação ou anestesia geral nas crianças menores, que não conseguem colaborar com as apneias necessárias para a aquisição, o que acrescenta risco procedural ausente no exame do adulto cooperativo. Portador de mutação sarcomérica sem hipertrofia manifesta e sem realce tardio ainda pode desenvolver a doença mais tarde — exame negativo não encerra o seguimento genético-clínico.",
+    "source_refs": [
+      "Axelsson Raja A, Farhad H, Valente AM, Couce JP, Jefferies JL, Bundgaard H, et al. Prevalence and Progression of Late Gadolinium Enhancement in Children and Adolescents With Hypertrophic Cardiomyopathy. Circulation. 2018;138(8):782-792. PMID: 29622585."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "cardiomiopatia hipertrofica",
+      "ressonancia cardiaca",
+      "realce tardio",
+      "morte subita",
+      "pediatria",
+      "fibrose miocardica"
+    ]
   }
 ]

@@ -4373,5 +4373,93 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "fibroma-cardiaco-string-of-beads-crianca",
+    "title": "Fibroma cardíaco pediátrico — sinal do \"colar de contas\" (string of beads) ao ecocardiograma",
+    "modality": "Ecocardiograma",
+    "theme": "Cardiologia pediátrica",
+    "file_path": "eco/fibroma-cardiaco-string-of-beads-crianca.jpg",
+    "findings": "Ecocardiograma transtorácico pré-operatório de criança de 2 anos e 8 meses com fibroma cardíaco. Painéis A/C em modo bidimensional e B/D com Doppler colorido mostram massa hiperecogênica na parede posterior do ventrículo esquerdo (setas), com um componente ecogênico serpiginoso em forma de \"colar de contas\" projetando-se para a via de saída do ventrículo esquerdo — uma extremidade fixa à parede posterior do VE e a outra aparentemente conectada ao seio coronariano esquerdo da aorta. Painéis E/F mostram outro plano da mesma massa com fluxo colorido ao redor. Achado confirmado como fibroma cardíaco com degeneração mixoide em análise histopatológica pós-ressecção.",
+    "teaching_points": "O fibroma cardíaco é o segundo tumor cardíaco primário mais comum na infância depois do rabdomioma (já cadastrado nesta galeria), mas ao contrário do rabdomioma — que regride espontaneamente e costuma ser múltiplo — o fibroma é tipicamente único, não regride e tem indicação cirúrgica na maioria dos casos, sobretudo quando obstrui via de saída ou está associado a arritmia ventricular. A morfologia em \"colar de contas\" descrita neste caso é uma variante incomum: a maior parte dos fibromas se apresenta como massa única, bem delimitada e intramural, geralmente no septo interventricular ou na parede livre do ventrículo esquerdo, com frequência mostrando calcificação central ao corte transversal (achado não presente neste caso específico). O diagnóstico diferencial de massa intracavitária pediátrica inclui também mixoma (raro em criança) e trombo — a ressonância cardíaca com realce tardio ajuda a diferenciar pela ausência de perfusão central característica do fibroma.",
+    "source_name": "PMC / Frontiers in Cardiovascular Medicine (acesso aberto)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11008678/",
+    "license": "CC BY 4.0",
+    "attribution": "Tian Y, Lin J, Yang X, Zeng D, Hu Y, Chen J, Wu Z, Deng X. A rare morphology of the cardiac fibroma in a child: a case report. Front Cardiovasc Med. 2024;11:1357747. PMID: 38606376 — CC BY 4.0.",
+    "tags": [
+      "fibroma cardiaco",
+      "tumor cardiaco pediatrico",
+      "ecocardiograma",
+      "string of beads",
+      "crianca"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "reacao-inflamatoria-sitio-bcg-doenca-de-kawasaki",
+    "title": "Reação inflamatória no sítio de vacinação BCG na doença de Kawasaki",
+    "modality": "Fotografia clínica",
+    "theme": "Cardiologia pediátrica",
+    "file_path": "clinico/reacao-inflamatoria-sitio-bcg-doenca-de-kawasaki.png",
+    "findings": "Fotografia clínica de close-up do braço de lactente, mostrando eritema e induração no sítio de inoculação prévia da vacina BCG, com múltiplos pontos de reação ao redor das marcas de aplicação — achado documentado durante episódio de doença de Kawasaki.",
+    "teaching_points": "A reativação inflamatória do sítio de BCG é um sinal clínico de alto valor diagnóstico para doença de Kawasaki em países com vacinação universal ao nascimento (caso do Brasil), mas não faz parte dos critérios clássicos americanos/AHA, que foram desenvolvidos em população sem BCG rotineira — por isso o sinal é subutilizado por quem treina só pelos critérios clássicos. Está presente em cerca de 30-50% dos casos de Kawasaki, é significativamente mais comum no lactente (até ~70% dos casos) do que na criança maior (~28%), e tende a aparecer mais precocemente no curso da doença (antes do 5º dia de febre) nesse grupo etário — coincidindo com a faixa etária de maior risco de aneurisma coronariano e de apresentação incompleta/atípica, que é justamente onde um sinal clínico adicional mais ajuda. O valor preditivo positivo do sinal para Kawasaki foi de 90,8% no lactente e 96,2% na criança maior em uma série retrospectiva publicada. Deve ser procurado ativamente no exame físico de toda criança pequena com febre prolongada sem foco definido.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:R%C3%A9action_inflammatoire_BCG_lors_maladie_de_kawasaki.png",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Dong Soo Kim, via Lamiot, Wikimedia Commons — CC BY-SA 4.0. Achado clínico documentado em: Loh ACE, Kua PHJ, Tan ZL. Erythema and induration of the Bacillus Calmette-Guérin site for diagnosing Kawasaki disease. Singapore Med J. 2019;60(2):89-93. PMID: 30009317.",
+    "tags": [
+      "doenca de kawasaki",
+      "bcg",
+      "sinal clinico",
+      "lactente",
+      "vacinacao"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "tavi-bioprotese-valvar-aortica-radiografia-torax",
+    "title": "Bioprótese valvar aórtica transcateter (TAVI) — radiografia de tórax em PA",
+    "modality": "Radiografia",
+    "theme": "Cardiologia geriátrica",
+    "file_path": "radiografia/tavi-bioprotese-valvar-aortica-radiografia-torax.jpg",
+    "findings": "Radiografia de tórax em incidência posteroanterior mostrando a estrutura radiopaca em malha (\"stent\" metálico) da armação de uma bioprótese valvar aórtica transcateter, projetada sobre a silhueta cardíaca na topografia esperada da valva aórtica, em paciente idosa submetida a implante por estenose aórtica.",
+    "teaching_points": "A armação metálica da prótese TAVI é facilmente reconhecível na radiografia simples de tórax pela sua geometria característica em malha/coroa, distinta de marca-passo, cabo de desfibrilador ou clipe cirúrgico — reconhecê-la evita confundir o achado com corpo estranho ou material de osteossíntese em paciente sem história cirúrgica clara no prontuário disponível. A radiografia pós-implante não substitui o ecocardiograma para avaliar função da prótese (gradiente, regurgitação paravalvar) nem a angiotomografia usada no planejamento pré-procedimento (já cadastrada nos Exames desta plataforma) — serve sobretudo para confirmar posição, detectar migração ou complicação mecânica grosseira, e como registro basal para comparação em radiografias futuras do mesmo paciente.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:TAVI_und_Sklerose_Aorta_91W_-_CR_pa_-_001.jpg",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Hellerhoff, via Wikimedia Commons — CC BY-SA 4.0.",
+    "tags": [
+      "tavi",
+      "bioprotese valvar",
+      "radiografia de torax",
+      "estenose aortica",
+      "idoso"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "configuracao-aortica-do-coracao-estenose-aortica-idosa",
+    "title": "Configuração aórtica do coração na estenose aórtica grave do idoso — radiografia de tórax",
+    "modality": "Radiografia",
+    "theme": "Cardiologia geriátrica",
+    "file_path": "radiografia/configuracao-aortica-do-coracao-estenose-aortica-idosa.jpg",
+    "findings": "Radiografia de tórax em incidência posteroanterior de paciente idosa com estenose aórtica, mostrando a chamada \"configuração aórtica\" do coração: ápice arredondado e discretamente deslocado, com sombra cardíaca de contorno global preservado (sem cardiomegalia acentuada) e aorta ascendente proeminente/desdobrada na topografia do botão aórtico, sem sinais radiográficos de congestão venosa pulmonar associada.",
+    "teaching_points": "A \"configuração aórtica\" (ou \"coração em bota invertida\") é um sinal radiográfico clássico, hoje pouco procurado na era do ecocardiograma, mas ainda útil como achado incidental: reflete hipertrofia concêntrica do ventrículo esquerdo por sobrecarga de pressão crônica — o ápice se arredonda e eleva sem que a área cardíaca global aumente muito, ao contrário da \"configuração mitral\" (aumento de átrio esquerdo, retificação do arco médio, sinais de congestão) que se vê na doença valvar mitral ou na insuficiência cardíaca com débito reduzido. No idoso, achar esse padrão numa radiografia pedida por outro motivo (pré-operatório, dispneia inespecífica) deve levantar a suspeita de estenose aórtica não diagnosticada, sobretudo se associado a sopro sistólico ejetivo ao exame físico — a radiografia normal, porém, não exclui estenose aórtica grave, e o ecocardiograma continua sendo o exame que confirma e quantifica.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Aortale_Herzkonfiguration_bei_Aortenstenose_75W_-_CR_pa_-_001.jpg",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Hellerhoff, via Wikimedia Commons — CC BY-SA 4.0.",
+    "tags": [
+      "estenose aortica",
+      "radiografia de torax",
+      "configuracao aortica",
+      "hipertrofia ventricular esquerda",
+      "idoso"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
