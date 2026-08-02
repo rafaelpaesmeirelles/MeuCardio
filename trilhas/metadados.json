@@ -21247,5 +21247,51 @@
         "por_que": "Fecha a trilha com a ferramenta de seguimento funcional que complementa o ECG e o ecocardiograma das etapas anteriores — o teste cardiopulmonar de exercício detecta deterioração antes do sintoma, e traz valores de referência por lesão que incluem especificamente a via de saída de ventrículo direito operada."
       }
     ]
+  },
+  {
+    "slug": "trilha-cardiologia-pediatrica-cardiomiopatia-genetica-metabolica-e-reversivel",
+    "titulo": "Cardiomiopatia pediátrica: causa genética, metabólica ou reversível — por que o rótulo isolado não basta",
+    "tema": "Cardiologia pediátrica",
+    "objetivo": "Sair sabendo diferenciar, na criança com disfunção ventricular ou risco cardiovascular sem lesão estrutural congênita, três origens não anatômicas que exigem investigação própria: a cardiomiopatia dilatada e hipertrófica por etiologia genética versus adquirida, a cardiomiopatia induzida por taquicardia como causa potencialmente totalmente reversível de disfunção sistólica, e a hipercolesterolemia familiar como doença de exposição cumulativa ao longo da vida que precisa de rastreio e tratamento precoces — e reconhecer quando a etiologia por trás do rótulo muda tanto o prognóstico quanto a conduta, até o limite em que o transplante se torna a via necessária.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "cardiomiopatia-pediatrica-dilatada-e-hipertrofica-etiologia-genetica-versus-adquirida-e-transplante",
+        "por_que": "Começa aqui porque estabelece a moldura da trilha inteira: na criança, ao contrário do adulto, a etiologia por trás do rótulo 'cardiomiopatia' (genética versus adquirida) muda tanto a apresentação por faixa etária quanto o prognóstico e a indicação de transplante — nada do que vem depois faz sentido sem essa base."
+      },
+      {
+        "ordem": 2,
+        "item_type": "estudo",
+        "item_slug": "towbin2006-incidencia-causas-e-desfechos-da-cardiomiopatia-dilatada-em-criancas",
+        "por_que": "O registro que dá números reais à classificação anterior: incidência, causas e desfecho da cardiomiopatia dilatada pediátrica, mostrando que a etiologia identificada altera diretamente a sobrevida — não é uma classificação acadêmica sem consequência clínica."
+      },
+      {
+        "ordem": 3,
+        "item_type": "estudo",
+        "item_slug": "colan-2007-registro-cardiomiopatia-hipertrofica-pediatrica",
+        "por_que": "O mesmo princípio do passo anterior, agora para a cardiomiopatia hipertrófica: o Registro Pediátrico de Cardiomiopatia mostra que a causa por trás do fenótipo hipertrófico (idiopática, erro inato do metabolismo, síndrome malformativa) é o que discrimina o desfecho — completa o par dilatada/hipertrófica antes de entrar no diagnóstico diferencial mais traiçoeiro da trilha."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "cardiomiopatia-induzida-por-taquicardia-na-crianca-diagnostico-diferencial-e-recuperacao-apos-ablacao",
+        "por_que": "O diagnóstico diferencial mais importante desta trilha: uma criança com quadro inicial idêntico ao de cardiomiopatia dilatada primária pode, na verdade, ter uma arritmia sustentada como causa — e, ao contrário de tudo visto até aqui, essa forma é potencialmente totalmente reversível quando a taquiarritmia é controlada. É o ponto em que 'investigar a causa' deixa de ser acadêmico e passa a decidir entre tratamento definitivo e transplante desnecessário."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "dislipidemia-familiar-heterozigotica-pediatrica-rastreio-alvo-de-ldl-e-inicio-de-estatina",
+        "por_que": "Muda o eixo da trilha de 'disfunção já instalada' para 'risco cardiovascular futuro por causa genética silenciosa' — a hipercolesterolemia familiar é, como as cardiomiopatias genéticas do primeiro passo, uma condição hereditária que se beneficia de identificação precoce, mas aqui a lógica é evitar o evento coronariano décadas à frente, não tratar uma disfunção já presente."
+      },
+      {
+        "ordem": 6,
+        "item_type": "documento",
+        "item_slug": "transplante-cardiaco-pediatrico-indicacoes-contraindicacoes-e-desfechos-do-registro-ishlt",
+        "por_que": "Fecha a trilha no ponto em que a etiologia não permite recuperação: quando a cardiomiopatia pediátrica (genética ou adquirida, mas não a forma induzida por taquicardia do passo 4) progride apesar do tratamento otimizado, o transplante passa a ser a via — e a indicação diagnóstica correta, estabelecida nos passos anteriores, é exatamente o que orienta essa decisão e o que o registro internacional (ISHLT) mostra sobre desfecho por causa de base."
+      }
+    ]
   }
 ]

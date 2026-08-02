@@ -5136,5 +5136,156 @@
       "bronquite plastica",
       "quilotorax"
     ]
+  },
+  {
+    "slug": "d-dimero-pediatrico-por-que-o-valor-de-referencia-do-adulto-nao-se-aplica",
+    "name": "D-dímero em pediatria — valores de referência por faixa etária, distintos do adulto",
+    "category": "laboratorial",
+    "theme": "Cardiologia pediátrica",
+    "what_it_measures": "Mesmo analito do D-dímero do adulto — produto de degradação da fibrina liberado quando um trombo é formado e simultaneamente clivado pelo sistema fibrinolítico —, mas com concentração basal que varia de forma acentuada com a idade dentro da própria infância. O sistema hemostático da criança não é uma versão em miniatura do sistema do adulto: é o conceito de \"hemostasia do desenvolvimento\" (developmental haemostasis), com trajetória própria de maturação de fatores pró e anticoagulantes desde o nascimento até a adolescência.",
+    "reference_range": "Em recém-nascidos a termo saudáveis de 1 a 28 dias de vida, o D-dímero está fisiologicamente elevado em relação ao adulto: intervalo de referência global de 0,25-2,81 mg/L (média 1,74 ± 1,88 mg/L), com queda progressiva ao longo do primeiro mês — 2,44-2,45 mg/L na 1ª semana, 1,71-1,76 mg/L na 2ª, 1,26-0,89 mg/L na 3ª e 0,88-0,66 mg/L na 4ª semana — e correlação inversa com a idade pós-natal (r = -0,3; p < 0,001). Mesmo ao final do primeiro mês, o valor permanece acima do intervalo de referência do adulto. Além do período neonatal, o próprio conceito de hemostasia do desenvolvimento (Monagle et al., que descreveram pela primeira vez faixas de referência pediátricas de D-dímero associadas a um sistema analisador específico) estabelece que a faixa de referência muda com a idade e depende do analisador/reagente usado no laboratório — por isso este registro não reproduz uma tabela numérica única para além do período neonatal: **VERIFICAÇÃO HUMANA NECESSÁRIA** para o valor de corte específico validado pelo laboratório de referência de cada serviço em crianças maiores e adolescentes, que deve ser obtido do próprio fabricante do ensaio ou de um estudo de validação local, não extrapolado do adulto nem do neonato.",
+    "indications": "Suspeita de tromboembolismo venoso em criança — cenário menos comum que no adulto, mas em ascensão pela maior sobrevida de crianças com cateter venoso central, cardiopatia complexa, câncer ou doença inflamatória crônica. Também usado como parâmetro de triagem em protocolos de dor torácica/dispneia em pronto-socorro pediátrico que tentam adaptar regras de decisão clínica do adulto (como o PERC) à criança.",
+    "interpretation": "A armadilha central deste exame em pediatria é dupla e nos dois sentidos: um D-dímero \"normal para adulto\" pode já estar patologicamente elevado para um recém-nascido em uso do corte do adulto sem ajuste — mas, inversamente, aplicar cegamente o corte do adulto (que pressupõe basal baixo) a um neonato saudável classificaria como \"positivo\" um exame que reflete apenas maturação hemostática normal, gerando investigação de imagem desnecessária. Fora do período neonatal, a validação de regras de decisão clínica combinando probabilidade pré-teste com D-dímero para tromboembolismo pediátrico ainda está em curso — o estudo multicêntrico BEEPER (rede PECARN), que testa a regra PERC-Peds associada ao D-dímero para excluir embolia pulmonar em crianças de 4 a 17 anos sem exame de imagem, segue em fase de coleta com desfecho previsto para 2025, o que reflete que esta validação ainda não está consolidada como está no adulto.",
+    "limitations": "Os valores de referência dependem do sistema analisador e do reagente utilizados — o próprio estudo fundador da hemostasia do desenvolvimento em laboratório moderno (Monagle et al., 2006) demonstrou que trocar o sistema de coagulação altera as faixas absolutas de referência para D-dímero em neonatos e crianças, e recomenda que cada laboratório desenvolva sua própria faixa etária-específica em vez de importar valores publicados por outro serviço. Como no adulto, é exame de alto valor preditivo negativo e baixa especificidade — eleva-se também em infecção, trauma, cirurgia recente e doença inflamatória sistêmica (inclusive na síndrome inflamatória multissistêmica pediátrica, já registrada nesta base), sem indicar tromboembolismo por si só. Ainda não existe, até o momento desta revisão, um corte único validado e amplamente adotado para crianças além do período neonatal equivalente ao corte ajustado por idade do adulto (idade × 10 µg/L) — a extrapolação direta desse corte para pediatria não tem respaldo publicado.",
+    "source_refs": [
+      "Khalilov Zİ, Ünsal A, Altuntaş N. The D-dimer reference intervals in healty term newborns. Transfus Apher Sci. 2022;61(6):103493. DOI: 10.1016/j.transci.2022.103493. PMID: 35810118.",
+      "Monagle P, Barnes C, Ignjatovic V, Furmedge J, Newall F, Chan A, De Rosa L, Hamilton S, Ragg P, Robinson S, Auldist A, Crock C, Roy N, Rowlands S. Developmental haemostasis. Impact for clinical haemostasis laboratories. Thromb Haemost. 2006;95(2):362-372. DOI: 10.1160/TH05-01-0047. PMID: 16493500.",
+      "Mercurio L, Corwin D, Kaplan R, Ellison AM, Casper TC, Kuppermann N, Kline JA. Bedside exclusion of pulmonary embolism in children without radiation (BEEPER): a national study of the Pediatric Emergency Care Applied Research Network-Study protocol. Res Pract Thromb Haemost. 2023;7(2):100046. DOI: 10.1016/j.rpth.2023.100046. PMID: 36865906."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "d-dimero",
+      "pediatria",
+      "hemostasia do desenvolvimento",
+      "tromboembolismo pediatrico",
+      "valores de referencia",
+      "neonatologia"
+    ]
+  },
+  {
+    "slug": "ultrassonografia-pulmonar-escore-de-linhas-b-no-pos-operatorio-de-cirurgia-cardiaca-pediatrica",
+    "name": "Ultrassonografia pulmonar point-of-care (escore de linhas B) no pós-operatório de cirurgia cardíaca pediátrica",
+    "category": "imagem",
+    "theme": "Cardiologia pediátrica",
+    "what_it_measures": "Técnica de ultrassom à beira do leito que quantifica linhas B (artefatos verticais hiperecoicos que partem da linha pleural, equivalente sonográfico do espessamento dos septos interlobulares por líquido) em janelas torácicas padronizadas, somando-as num escore que reflete a gravidade do edema pulmonar — sem uso de radiação ionizante e com resultado disponível em minutos à beira do leito, ao contrário da radiografia de tórax convencional.",
+    "reference_range": "Não há um único corte numérico universal de escore de linhas B — o valor é comparado antes/depois do procedimento ou correlacionado a desfecho clínico, e não a uma faixa fixa de normalidade. No estudo de coorte prospectiva com 131 crianças submetidas a cirurgia cardíaca para cardiopatia congênita, um escore de linhas B mais alto nas primeiras 24 horas de pós-operatório associou-se de forma robusta a falha de extubação (p < 0,001), e a correlação entre o escore e o tempo de ventilação mecânica foi positiva, mais forte no período pré-operatório.",
+    "indications": "Monitorização do edema pulmonar pós-operatório em unidade de terapia intensiva pediátrica/cardíaca — complicação frequente após cirurgia cardíaca em criança, associada a maior morbidade —, como alternativa mais rápida e sem radiação à radiografia seriada, para identificar precocemente o paciente sob maior risco de falha de extubação e ventilação mecânica prolongada.",
+    "interpretation": "Entre 131 pacientes incluídos (até 18 anos, submetidos a cirurgia cardíaca por cardiopatia congênita), 116 foram extubados, com taxa de falha de extubação de 18,3%; os pacientes com falha de extubação eram mais jovens e tiveram maior tempo de ventilação mecânica. Edema pulmonar grave identificado por linhas B no primeiro dia pós-operatório mostrou melhor acurácia para prever falha de extubação e ventilação mecânica prolongada do que a avaliação clínica isolada, segundo os autores. O achado é consistente com o uso já mais estabelecido do escore de linhas B na insuficiência cardíaca do adulto, em que a congestão subclínica detectada por ultrassom pulmonar antes da alta prediz reinternação.",
+    "limitations": "Estudo unicêntrico, de coorte prospectiva observacional — não randomizado, sem grupo intervencional testando se agir sobre o escore muda desfecho. A acurácia depende de protocolo de janelas padronizado e de operador treinado na técnica, ainda não universalmente disponível em toda unidade de terapia intensiva pediátrica. O escore reflete gravidade de edema pulmonar, não sua causa — não distingue por si só congestão cardiogênica de lesão pulmonar pós-circulação extracorpórea, edema de permeabilidade ou atelectasia, exigindo interpretação em conjunto com o quadro clínico e hemodinâmico.",
+    "source_refs": [
+      "Rezende RQ, Lopes CLS, Ricachinevsky CP, Piva JP. Lung ultrasound accuracy to predict ventilatory outcomes after paediatric cardiac surgery. Cardiol Young. 2025;35(5):1011-1015. DOI: 10.1017/S1047951125001775. PMID: 40384370.",
+      "Parri N, Allinovi M, Giacalone M, Corsini I. To B or not to B. The rationale for quantifying B-lines in pediatric lung diseases. Pediatr Pulmonol. 2023;58(1):9-15. DOI: 10.1002/ppul.26185. PMID: 36253340."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ultrassom pulmonar",
+      "linhas b",
+      "pos-operatorio",
+      "cirurgia cardiaca pediatrica",
+      "edema pulmonar",
+      "terapia intensiva pediatrica",
+      "extubacao"
+    ]
+  },
+  {
+    "slug": "cistatina-c-e-egfr-no-idoso-cardiopata-quando-a-creatinina-engana",
+    "name": "Cistatina C e taxa de filtração glomerular estimada (eGFR) no idoso cardiopata — quando a creatinina superestima a função renal",
+    "category": "laboratorial",
+    "theme": "Cardiologia geriátrica",
+    "what_it_measures": "Proteína produzida em ritmo constante por praticamente todas as células nucleadas do corpo e livremente filtrada pelo glomérulo, usada como marcador endógeno alternativo à creatinina para estimar a taxa de filtração glomerular. Ao contrário da creatinina — subproduto do metabolismo muscular, cuja produção cai junto com a massa magra —, a cistatina C não depende de massa muscular, o que a torna menos sujeita ao viés que a sarcopenia introduz na creatinina sérica do paciente idoso.",
+    "reference_range": "Não tem faixa de normalidade única e fixa em mg/L com valor clínico isolado — o uso relevante em cardiologia é como insumo das equações CKD-EPI 2021 sem raça, que combinam idade, sexo e cistatina C (equação eGFRcys) ou creatinina + cistatina C (equação eGFRcr-cys, a mais precisa das três) para estimar a TFG em mL/min/1,73 m². A equação combinada creatinina-cistatina C sem raça foi a mais acurada das testadas no estudo de derivação/validação da CKD-EPI (Inker et al., 2021), com menor diferença entre grupos raciais do que as equações que usam um único marcador.",
+    "indications": "Idoso cardiopata em que a creatinina isolada é suspeita de subestimar a perda de função renal por baixa massa muscular (sarcopenia, imobilidade, desnutrição) — cenário relevante para ajuste de dose de anticoagulante oral direto, contraste iodado em angiotomografia/cateterismo e fármacos de depuração renal —, ou quando há discordância clinicamente inesperada entre a TFG estimada por creatinina e o quadro clínico do paciente.",
+    "interpretation": "Metanálise de 2025 reunindo 18 estudos de coorte/transversais (amostras de 373 a 363.494 pessoas) mostrou que a discordância entre eGFR por cistatina C e por creatinina tem valor prognóstico independente: pessoas com eGFR por cistatina C mais baixo que o esperado pela creatinina (eGFRcys ≤60% do eGFRcr, ou diferença ≤-15 mL/min/1,73 m²) tiveram risco 58% maior de mortalidade (HR 1,58; IC95% 1,42-1,76) e 32% maior de eventos cardiovasculares (HR 1,32; IC95% 1,25-1,39) do que quem não tinha discordância; o padrão inverso (cistatina C relativamente mais alta) associou-se a risco 39% menor de mortalidade (HR 0,61; IC95% 0,52-0,70) e 29% menor de eventos cardiovasculares (HR 0,71; IC95% 0,62-0,81). Em outras palavras: quando a creatinina \"parece melhor\" que a cistatina C no mesmo paciente, é a cistatina C que carrega o sinal prognóstico mais confiável — achado consistente com sarcopenia mascarando perda real de função renal em quem depende só da creatinina.",
+    "limitations": "Cistatina C também sofre influência de fatores não renais — inflamação, disfunção tireoidiana, obesidade e, em menor grau, tabagismo — que podem deslocar o valor independentemente da TFG real, então não é um substituto isento de limitação, e sim um segundo marcador com viés diferente do da creatinina. A metanálise que sustenta o valor prognóstico da discordância é observacional (não testa se corrigir a conduta com base na cistatina C muda desfecho) e não há consenso sobre um único ponto de corte de discordância clinicamente acionável. O próprio artigo de derivação das equações 2021 (Inker et al.) foi motivado pela remoção do termo de raça das fórmulas anteriores — uma mudança de acurácia e de equidade, não elaborada especificamente para geriatria, ainda que a equação combinada creatinina-cistatina C seja a mais recomendada pelas diretrizes KDIGO justamente por reduzir o erro em populações com massa muscular atípica, incluindo o idoso frágil.",
+    "source_refs": [
+      "Liu Q, Welsh P, Celis-Morales C, Ho FK, Lees JS, Mark PB. Discordance between cystatin C-based and creatinine-based estimated glomerular filtration rate and health outcomes in adults: a systematic review and meta-analysis. Clin Kidney J. 2025;18(3):sfaf003. DOI: 10.1093/ckj/sfaf003. PMID: 40235956. PMCID: PMC11997436.",
+      "Inker LA, Eneanya ND, Coresh J, Tighiouart H, Wang D, Sang Y, Crews DC, Doria A, Estrella MM, Froissart M, Grams ME, Greene T, Grubb A, Gudnason V, Gutiérrez OM, Kalil R, Karger AB, Mauer M, Navis G, Nelson RG, Poggio ED, Rodby R, Rossing P, Rule AD, Selvin E, Seegmiller JC, Shlipak MG, Torres VE, Yang W, Ballew SH, Couture SJ, Powe NR, Levey AS; Chronic Kidney Disease Epidemiology Collaboration. New Creatinine- and Cystatin C-Based Equations to Estimate GFR without Race. N Engl J Med. 2021;385(19):1737-1749. DOI: 10.1056/NEJMoa2102953. PMID: 34554658."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "cistatina c",
+      "egfr",
+      "funcao renal",
+      "sarcopenia",
+      "idoso",
+      "ckd-epi 2021",
+      "creatinina"
+    ]
+  },
+  {
+    "slug": "dinamometria-de-preensao-manual-handgrip-strength-na-estratificacao-de-risco-cardiovascular-do-idoso",
+    "name": "Dinamometria de preensão manual (handgrip strength) na estratificação de risco cardiovascular do idoso",
+    "category": "metodo_grafico",
+    "theme": "Cardiologia geriátrica",
+    "what_it_measures": "Medida simples e reprodutível da força muscular global, obtida com dinamômetro de mão (handheld) num teste de segundos — marcador funcional de massa e força muscular (correlato clínico da sarcopenia), usado como preditor independente de risco cardiovascular e de mortalidade, não como diagnóstico de doença cardíaca específica.",
+    "reference_range": "Não há um único corte de normalidade universal — a interpretação usual é por associação linear inversa com risco (quanto menor a força, maior o risco) ou por quartil/quintil populacional, ajustado por sexo e estatura. No estudo PURE (Prospective Urban Rural Epidemiology), cada redução de 5 kg na força de preensão associou-se a aumento de 16% na mortalidade por todas as causas (HR 1,16; IC95% 1,13-1,20), 17% na mortalidade cardiovascular (HR 1,17; IC95% 1,11-1,24), 7% no risco de infarto do miocárdio (HR 1,07; IC95% 1,02-1,11) e 9% no risco de acidente vascular cerebral (HR 1,09; IC95% 1,05-1,14), numa coorte de 139.691 adultos de 17 países.",
+    "indications": "Avaliação funcional complementar do idoso cardiopata, sobretudo no contexto pré-procedimento (é um dos domínios avaliados em ferramentas de fragilidade mais amplas, como parte da discussão em heart team) ou como marcador simples de risco populacional em consulta geral — pela facilidade de aplicação (um dinamômetro, poucos segundos), tem uso maior que a maioria dos outros testes funcionais de fragilidade nesta base.",
+    "interpretation": "No PURE, a força de preensão foi preditor mais forte de mortalidade por todas as causas do que a pressão arterial sistólica, e comparável à magnitude de outros preditores estabelecidos, mantendo-se significativa após ajuste para idade, sexo, escolaridade, tabagismo, uso de álcool, atividade física ocupacional, IMC e diabetes. A associação foi consistente entre países de renda alta, média e baixa, sugerindo que o achado não é artefato de um único contexto socioeconômico. O valor prático deste teste está menos em rastrear uma doença específica e mais em identificar, de forma barata e rápida, o idoso com maior risco global — que se beneficia de investigação e acompanhamento mais próximos, independentemente do mecanismo fisiopatológico exato por trás da associação (ainda não plenamente elucidado).",
+    "limitations": "É medida associativa, populacional — não estabelece causalidade nem substitui avaliação cardiovascular dirigida (ECG, ecocardiograma, escore de risco) diante de sintoma específico. O mecanismo biológico que liga força muscular a desfecho cardiovascular permanece parcialmente especulativo (sarcopenia como marcador de fragilidade sistêmica, inatividade física, inflamação crônica de baixo grau) e não foi isolado no desenho observacional do PURE. A técnica exige dinamômetro calibrado e protocolo padronizado (posição do braço, número de tentativas, mão dominante) para ser comparável entre avaliações — medição não padronizada reduz a reprodutibilidade demonstrada em estudos de validação.",
+    "source_refs": [
+      "Leong DP, Teo KK, Rangarajan S, Lopez-Jaramillo P, Avezum A Jr, Orlandini A, Seron P, Ahmed SH, Rosengren A, Kelishadi R, Rahman O, Swaminathan S, Iqbal R, Gupta R, Lear SA, Oguz A, Yusoff K, Zatonska K, Chifamba J, Igumbor E, Mohan V, Anjana RM, Gu H, Li W, Yusuf S; Prospective Urban Rural Epidemiology (PURE) Study investigators. Prognostic value of grip strength: findings from the Prospective Urban Rural Epidemiology (PURE) study. Lancet. 2015;386(9990):266-273. DOI: 10.1016/S0140-6736(14)62000-6. PMID: 25982160."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "dinamometria",
+      "forca de preensao manual",
+      "handgrip strength",
+      "fragilidade",
+      "idoso",
+      "risco cardiovascular",
+      "pure study"
+    ]
+  },
+  {
+    "slug": "hemograma-ferritina-eritrocitose-secundaria-cardiopatia-congenita-cianotica",
+    "name": "Hemograma completo e ferritina na eritrocitose secundária da cardiopatia congênita cianótica",
+    "category": "laboratorial",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Hemoglobina, hematócrito, volume corpuscular médio (VCM) e ferritina, usados em conjunto para caracterizar a eritrocitose secundária à hipoxemia crônica (shunt direita-esquerda fixo) em cardiopatia congênita cianótica não corrigida ou paliada, como na síndrome de Eisenmenger — nunca a hemoglobina/hematócrito isolados, porque o dado que decide a conduta é o status do ferro, não o grau de eritrocitose em si.",
+    "reference_range": "Não há um corte único de hematócrito que, isolado, indique flebotomia. Sociedades britânicas recomendam manter o hematócrito abaixo de 55% (meta mais baixa se houver fator de risco cardiovascular adicional); na prática da cardiopatia congênita cianótica, o limiar mais usado para considerar flebotomia é hematócrito acima de 65% OU sintomas de hiperviscosidade, com hemoglobina acima de 220 g/L como outro gatilho de investigação.",
+    "indications": "Cardiopatia congênita cianótica não corrigida ou paliada (atresia tricúspide, tetralogia de Fallot não operada, síndrome de Eisenmenger), com ou sem sintomas de hiperviscosidade (cefaleia, tontura, parestesias, turvação visual, fadiga). Repetir periodicamente no seguimento, não apenas quando sintomático.",
+    "interpretation": "A eritrocitose secundária tem duas fases, e a diferença entre elas é o que orienta a conduta: eritrocitose COMPENSADA, com metabolismo do ferro preservado, hemácias normocíticas/normocrômicas e equilíbrio entre produção e sintomas mínimos; e eritrocitose DESCOMPENSADA (ferropriva), com balanço de ferro negativo, microcitose e hemácias mais rígidas e menos deformáveis — que paradoxalmente AUMENTAM a viscosidade sanguínea e o risco trombótico mesmo com hematócrito mais baixo do que o esperado para o grau de hipoxemia. Ferritina baixa com hematócrito elevado é o padrão que identifica a forma descompensada.",
+    "limitations": "Flebotomia de rotina não é recomendada apenas por hematócrito elevado assintomático — indica-se reposição de ferro (preferencialmente por via endovenosa) na eritrocitose ferropriva, e flebotomias repetidas sem critério pioram a deficiência de ferro, agravando a rigidez das hemácias e o próprio risco que a flebotomia pretendia reduzir. O hemograma isolado não distingue as duas fases sem a ferritina pareada, e deve ser interpretado junto da saturação de oxigênio basal e dos sintomas de hiperviscosidade, nunca isoladamente.",
+    "source_refs": [
+      "Borsani O, Varettoni M, Riccaboni G, Rumi E. Erythrocytosis in congenital heart defects: hints for diagnosis and therapy from a clinical case. Front Med (Lausanne). 2024;11:1419092. PMID: 39188884. DOI: 10.3389/fmed.2024.1419092 — acesso aberto (Frontiers, CC BY)."
+    ],
+    "tags": [
+      "eritrocitose secundária",
+      "cardiopatia congênita cianótica",
+      "eisenmenger",
+      "hiperviscosidade",
+      "ferritina",
+      "flebotomia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "perfil-de-coagulacao-cardiopatia-congenita-cianotica-nao-corrigida",
+    "name": "Perfil de coagulação (TP, TTPa, plaquetas) na cardiopatia congênita cianótica não corrigida",
+    "category": "laboratorial",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Tempo de protrombina (TP), tempo de tromboplastina parcial ativada (TTPa) e contagem de plaquetas, usados para rastrear a coagulopatia associada à hipoxemia crônica e à eritrocitose em cardiopatia congênita cianótica não corrigida — distúrbio hemostático distinto e concomitante ao risco trombótico da própria eritrocitose.",
+    "reference_range": "Não há corte específico validado para cardiopatia congênita cianótica — usa-se a referência padrão do laboratório para TP e TTPa. O que caracteriza o achado nessa população é a PROPORÇÃO de pacientes com alteração, não um valor de corte próprio.",
+    "indications": "Cardiopatia congênita cianótica não corrigida, especialmente com saturação de oxigênio abaixo de 85%, antes de procedimento invasivo ou cirurgia, ou na investigação de sangramento ou trombose.",
+    "interpretation": "Em coorte pediátrica com cardiopatia congênita cianótica não corrigida, TP esteve prolongado em 31,4% e TTPa em 25,7% dos pacientes — os parâmetros mais frequentemente alterados —, com trombocitopenia em 22,9%; no total, 57,1% dos pacientes cianóticos tinham alguma anormalidade de coagulação, contra 17,1% dos acianóticos. Todos os pacientes com trombocitopenia tinham saturação de oxigênio abaixo de 85%, e saturação de O2 e hematócrito foram fatores de risco independentes para a alteração — achados compatíveis com um estado subclínico de baixo grau, sem sangramento evidente na maioria dos casos.",
+    "limitations": "O estudo de referência é observacional, de centro único, em população pediátrica não corrigida — extrapolar diretamente para o adulto com cardiopatia paliada (ex.: Eisenmenger estabelecido) exige cautela. Alteração laboratorial isolada, sem sangramento clínico, não deve por si só motivar suspensão de antitrombótico ou adiamento de cirurgia sem avaliação hematológica dirigida; TP/TTPa também não capturam a disfunção plaquetária qualitativa nem a síndrome de von Willebrand adquirida já descritas nessa população, que exigem testes específicos quando houver sangramento clinicamente relevante.",
+    "source_refs": [
+      "Majiyagbe OO, Akinsete AM, Adeyemo TA, Salako AO, Ekure EN, Okoromah CAN. Coagulation abnormalities in children with uncorrected congenital heart defects seen at a teaching hospital in a developing country. PLoS One. 2022;17(7):e0263948. PMID: 35901057. DOI: 10.1371/journal.pone.0263948 — acesso aberto (CC BY)."
+    ],
+    "tags": [
+      "coagulopatia",
+      "cardiopatia congênita cianótica",
+      "trombocitopenia",
+      "tempo de protrombina",
+      "ttpa",
+      "hipoxemia crônica"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]

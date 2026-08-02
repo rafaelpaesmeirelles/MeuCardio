@@ -31467,5 +31467,159 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "paces2021-acm-cdi-classe-i-em-sobrevivente-de-parada-cardiaca-ou-tv-nao-tolerada",
+    "theme": "Cardiologia pediátrica",
+    "statement": "Em pacientes pediátricos com cardiomiopatia arritmogênica (incluindo a forma predominantemente de ventrículo direito, antes chamada displasia/cardiomiopatia arritmogênica do ventrículo direito), o implante de cardioversor-desfibrilador está indicado quando houve ressuscitação de parada cardíaca súbita ou taquicardia ventricular sustentada hemodinamicamente não tolerada.",
+    "recommendation_class": "I",
+    "evidence_level": "B-NR",
+    "society": "PACES/HRS",
+    "year": 2021,
+    "guideline_title": "2021 PACES Expert Consensus Statement on the Indications and Management of Cardiovascular Implantable Electronic Devices in Pediatric Patients",
+    "reference": "Shah MJ, Silka MJ, Avari Silva JN et al. Indian Pacing Electrophysiol J. 2021;21(6):367-393. DOI: 10.1016/j.ipej.2021.07.005. PMID: 34333141. PMCID: PMC8577100 — texto integral aberto, lido e conferido nesta sessão via PMC, seção 3.4.3 (Cardiomiopatias Arritmogênicas).",
+    "tags": [
+      "cardiomiopatia arritmogênica",
+      "displasia arritmogênica do ventrículo direito",
+      "cardioversor-desfibrilador implantável",
+      "parada cardíaca súbita",
+      "taquicardia ventricular"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "paces2021-acm-cdi-classe-iia-em-tv-tolerada-sincope-ou-feve-35",
+    "theme": "Cardiologia pediátrica",
+    "statement": "Em pacientes pediátricos com cardiomiopatia arritmogênica, é razoável considerar o implante de cardioversor-desfibrilador quando há taquicardia ventricular sustentada hemodinamicamente tolerada, síncope presumivelmente de origem arrítmica ventricular, ou fração de ejeção do ventrículo esquerdo igual ou inferior a 35%.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B-NR",
+    "society": "PACES/HRS",
+    "year": 2021,
+    "guideline_title": "2021 PACES Expert Consensus Statement on the Indications and Management of Cardiovascular Implantable Electronic Devices in Pediatric Patients",
+    "reference": "Shah MJ, Silka MJ, Avari Silva JN et al. Indian Pacing Electrophysiol J. 2021;21(6):367-393. DOI: 10.1016/j.ipej.2021.07.005. PMID: 34333141. PMCID: PMC8577100 — texto integral aberto, lido e conferido nesta sessão via PMC, seção 3.4.3 (Cardiomiopatias Arritmogênicas), recomendação complementar à de Classe I do mesmo item.",
+    "tags": [
+      "cardiomiopatia arritmogênica",
+      "cardioversor-desfibrilador implantável",
+      "síncope",
+      "fração de ejeção",
+      "taquicardia ventricular"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ergped2024-suspeita-de-tvp-catecolaminergica-indica-teste-ergometrico",
+    "theme": "Cardiologia pediátrica",
+    "statement": "Na suspeita de taquicardia ventricular polimórfica catecolaminérgica (TVPC) em criança ou adolescente, o teste ergométrico é indicado, por ser o método mais sensível para reproduzir a arritmia induzida por esforço/catecolaminas e permitir o diagnóstico.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em Crianças e Adolescentes – 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, et al. Diretriz Brasileira de Ergometria em Crianças e Adolescentes – 2024. Arq Bras Cardiol. 2024;121(8):e20240525. DOI: 10.36660/abc.20240525. PMID: 39292116. PMCID: PMC11495813 — texto conferido nesta sessão na Tabela 6 (Indicações do TE no contexto das arritmias e distúrbios de condução), via PMC.",
+    "tags": [
+      "taquicardia ventricular polimórfica catecolaminérgica",
+      "teste ergométrico",
+      "arritmia induzida por esforço",
+      "morte súbita"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ergped2024-suspeita-de-sindrome-de-brugada-teste-ergometrico-pode-auxiliar-diagnostico",
+    "theme": "Cardiologia pediátrica",
+    "statement": "Na suspeita de síndrome de Brugada em criança ou adolescente, o teste ergométrico pode ser considerado como auxiliar diagnóstico, avaliando o comportamento do padrão eletrocardiográfico e de eventuais arritmias durante o esforço e a recuperação.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2024,
+    "guideline_title": "Diretriz Brasileira de Ergometria em Crianças e Adolescentes – 2024",
+    "reference": "Carvalho T, Freitas OGA, Chalela WA, et al. Diretriz Brasileira de Ergometria em Crianças e Adolescentes – 2024. Arq Bras Cardiol. 2024;121(8):e20240525. DOI: 10.36660/abc.20240525. PMID: 39292116. PMCID: PMC11495813 — texto conferido nesta sessão na Tabela 6 (Indicações do TE no contexto das arritmias e distúrbios de condução), via PMC.",
+    "tags": [
+      "síndrome de brugada",
+      "teste ergométrico",
+      "eletrocardiograma",
+      "canalopatia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "sbc2020eco-fetal-diabetes-pre-gestacional-materna-indica-ecocardiograma-fetal",
+    "theme": "Cardiopatias congênitas",
+    "statement": "O ecocardiograma fetal é indicado em gestante com diabetes mellitus pré-gestacional, pelo risco aumentado de cardiopatia congênita no concepto associado à hiperglicemia materna no período periconcepcional e no primeiro trimestre.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2020,
+    "guideline_title": "Posicionamento sobre Indicações da Ecocardiografia em Cardiologia Fetal, Pediátrica e Cardiopatias Congênitas do Adulto – 2020",
+    "reference": "Morhy SS et al. Posicionamento sobre Indicações da Ecocardiografia em Cardiologia Fetal, Pediátrica e Cardiopatias Congênitas do Adulto – 2020. Arq Bras Cardiol. 2020;115(5):987-1005. PMID: 33295472. PMCID: PMC8452202 — texto conferido nesta sessão na Tabela 1 (Perfil de gestação de alto risco para indicação de ecocardiograma fetal), via PMC.",
+    "tags": [
+      "ecocardiograma fetal",
+      "diabetes mellitus pré-gestacional",
+      "cardiopatia congênita",
+      "rastreio pré-natal"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "sbc2020eco-fetal-gemelaridade-monocorionica-indica-ecocardiograma-fetal",
+    "theme": "Cardiopatias congênitas",
+    "statement": "O ecocardiograma fetal é indicado em gestação gemelar monocoriônica, pelo maior risco de cardiopatia congênita estrutural e de disfunção cardíaca associada à síndrome de transfusão feto-fetal nesse tipo de gemelaridade.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2020,
+    "guideline_title": "Posicionamento sobre Indicações da Ecocardiografia em Cardiologia Fetal, Pediátrica e Cardiopatias Congênitas do Adulto – 2020",
+    "reference": "Morhy SS et al. Posicionamento sobre Indicações da Ecocardiografia em Cardiologia Fetal, Pediátrica e Cardiopatias Congênitas do Adulto – 2020. Arq Bras Cardiol. 2020;115(5):987-1005. PMID: 33295472. PMCID: PMC8452202 — texto conferido nesta sessão na Tabela 1 (Perfil de gestação de alto risco para indicação de ecocardiograma fetal), via PMC.",
+    "tags": [
+      "ecocardiograma fetal",
+      "gemelaridade monocoriônica",
+      "síndrome de transfusão feto-fetal",
+      "cardiopatia congênita"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "sbc2019geriatria-itb-classe-i-para-rastreio-de-doenca-arterial-periferica-aos-70-anos",
+    "theme": "Cardiologia geriátrica",
+    "statement": "A partir dos 70 anos de idade, a medida do índice tornozelo-braquial (ITB) é recomendada como rastreio de doença arterial obstrutiva periférica, independentemente de outros fatores de risco — a idade avançada isoladamente já é fator de risco independente para a doença, com prevalência acima de 20% nessa faixa etária em homens e mulheres.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2019,
+    "guideline_title": "Atualização da Diretriz de Cardiogeriatria da Sociedade Brasileira de Cardiologia – 2019",
+    "reference": "Feitosa-Filho GS et al. Updated Geriatric Cardiology Guidelines of the Brazilian Society of Cardiology - 2019. Arq Bras Cardiol. 2019;112(5):649-705. PMID: 31188969. PMCID: PMC6555565 — texto conferido nesta sessão na seção 1.11.6.1 (Índice tornozelo-braquial), via PMC. A diretriz brasileira, ao formular esta recomendação, referencia e endossa explicitamente um posicionamento científico americano sobre a associação entre idade avançada e prevalência de doença arterial periférica.",
+    "tags": [
+      "índice tornozelo-braquial",
+      "doença arterial periférica",
+      "rastreio",
+      "idoso"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "sbc2019geriatria-itb-classe-iia-quando-exame-clinico-sugere-doenca-arterial-periferica",
+    "theme": "Cardiologia geriátrica",
+    "statement": "No idoso com achados de exame clínico sugestivos de doença arterial periférica, a medida do índice tornozelo-braquial (ITB) é considerada razoável, tanto para confirmar o diagnóstico quanto para excluir claudicação intermitente — um ITB abaixo de 0,9 associa-se a maior número de eventos coronarianos e a maior mortalidade cardiovascular.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2019,
+    "guideline_title": "Atualização da Diretriz de Cardiogeriatria da Sociedade Brasileira de Cardiologia – 2019",
+    "reference": "Feitosa-Filho GS et al. Updated Geriatric Cardiology Guidelines of the Brazilian Society of Cardiology - 2019. Arq Bras Cardiol. 2019;112(5):649-705. PMID: 31188969. PMCID: PMC6555565 — texto conferido nesta sessão na seção 1.11.6.1 (Índice tornozelo-braquial), via PMC.",
+    "tags": [
+      "índice tornozelo-braquial",
+      "doença arterial periférica",
+      "claudicação intermitente",
+      "idoso"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
