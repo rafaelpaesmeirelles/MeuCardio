@@ -114,3 +114,21 @@ testou uma incisão específica para reduzir esse risco, sem diferença entre os
 `VERIFICAÇÃO HUMANA NECESSÁRIA` permanece para uma incidência populacional específica no cenário de
 cirurgia cardíaca do ADULTO (não congênita/Fontan) — o dado acima não deve ser extrapolado para essa
 população, que tem anatomia, idade e tipo de cicatriz cirúrgica diferentes.
+
+**Busca adicional feita em 02/08/2026, sem sucesso — registrada para não repetir.** Via E-utilities
+do PubMed (`esearch`/`esummary`/`efetch`), tentativas com os termos "atrial flutter incidence after
+cardiac surgery atriotomy adult", "incisional atrial tachycardia incidence coronary artery bypass
+valve surgery", "atrial flutter incidence after cardiac surgery adult review" e "intra-atrial
+reentrant tachycardia OR incisional atrial tachycardia incidence adult cardiac surgery" não
+localizaram estudo de base populacional (coorte cirúrgica não selecionada, com denominador de todos
+os operados) que meça a incidência de flutter atípico/IART em cirurgia cardíaca do adulto. O mais
+próximo encontrado, PMID 31197584 (Kondo M et al., "Different characteristics of postoperative
+atrial tachyarrhythmias between congenital and non-congenital heart disease", J Interv Card
+Electrophysiol. 2020), compara mecanismo entre 26 pacientes com cardiopatia congênita e 16 sem
+(71% flutter, 24% IART, 0% focal no grupo não congênito) — mas é, como as fontes já usadas acima,
+coorte de pacientes **já referenciados para ablação**, não estudo de incidência populacional; **não
+foi incorporado ao corpo do documento** por não resolver a lacuna e por ter denominador pequeno (16
+pacientes) demais para uma afirmação de incidência. A lacuna é estrutural: taquicardia atrial tardia
+pós-cirúrgica no adulto não tem o mesmo rastreamento sistemático que a FA pós-operatória precoce
+(que tem incidência bem estabelecida em torno de 30%), porque exige seguimento longo de toda a
+coorte operada, não só dos sintomáticos referenciados a eletrofisiologia.

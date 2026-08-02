@@ -26,8 +26,13 @@ O documento `taquicardia-supraventricular-diagnostico-e-manejo-esc-2019.md` já 
 - **fonte**: ESC 2019
 
 ## Tratamento crônico: ablação como primeira linha, mas o fármaco não desaparece
-A ESC 2019 ampliou a recomendação de ablação por cateter como tratamento de primeira linha para a maioria dos pacientes com TSV recorrente sintomática — incluindo a AVNRT —, após discussão explícita de riscos e benefícios com o paciente. O tratamento farmacológico crônico (verapamil, diltiazem ou beta-bloqueador; antiarrítmicos de classe Ic como flecainida ou propafenona em casos selecionados sem cardiopatia estrutural) permanece como opção para quem recusa o procedimento, tem episódios raros e bem tolerados, ou tem contraindicação à ablação.
-- **fonte**: ESC 2019
+A ESC 2019 ampliou a recomendação de ablação por cateter como tratamento de primeira linha para a maioria dos pacientes com TSV recorrente sintomática — incluindo a AVNRT —, após discussão explícita de riscos e benefícios com o paciente. O tratamento farmacológico crônico (verapamil, diltiazem ou beta-bloqueador; antiarrítmicos de classe Ic como flecainida ou propafenona em casos selecionados sem cardiopatia estrutural, citados no texto da diretriz sem classe/nível formal — não constam da tabela de recomendação graduada) permanece como opção para quem recusa o procedimento, tem episódios raros e bem tolerados, ou tem contraindicação à ablação.
+
+A tabela de recomendações da ESC 2019 específica para o **tratamento crônico da AVNRT** (seção 11.2.1.2, p. 685 da publicação original) traz três recomendações graduadas:
+- **Ablação por cateter é recomendada para AVNRT sintomática e recorrente** — Classe **I**, Nível **B** (refs. 208, 336-339 da diretriz).
+- **Diltiazem ou verapamil (em pacientes sem IC com fração de ejeção reduzida) ou beta-bloqueadores devem ser considerados se a ablação não for desejável ou factível** — Classe **IIa**, Nível **B** (refs. 340-342).
+- **Abstenção de tratamento deve ser considerada em pacientes minimamente sintomáticos com episódios muito infrequentes e de curta duração** — Classe **IIa**, Nível **C** (ref. 319).
+- **fonte**: ESC 2019, tabela "Recommendations for the treatment of AVNRT" (terapia crônica), p. 685 — conferida no texto integral (PDF), não apenas nos metadados do PubMed
 
 ## Eficácia da ablação por cateter — números agregados de meta-análise
 A meta-análise de Spector et al. (2009) reuniu 39 estudos primários com 49 braços de tratamento e 7.693 pacientes submetidos a ablação por radiofrequência de TSV dependente do nó AV (via acessória e AVNRT combinadas):
@@ -71,12 +76,21 @@ Os dois estudos de energia concordam no ponto mais importante clinicamente — *
 
 ## O que isso muda na conversa de risco-benefício da ESC 2019
 A recomendação de ablação como primeira linha pressupõe que o risco de bloqueio atrioventricular seja discutido explicitamente, não apenas mencionado. Os números acima dão o conteúdo concreto dessa conversa: taxa de sucesso em torno de 95-96% nas duas energias, recorrência de poucos por cento, e um risco pequeno mas real e assimétrico entre as energias de precisar de marca-passo definitivo — risco que a radiofrequência convencional carrega e que a crioablação, nos estudos dedicados a ela, não mostrou.
-- **fonte**: ESC 2019; Schwagten et al. 2011; Wells et al. 2018
+
+O próprio texto narrativo da ESC 2019 (não apenas os estudos citados acima) converge com esses números: para a abordagem combinada anatômica e por mapeamento na via lenta (a técnica-padrão), a diretriz relata **taxa de sucesso de 97%, recorrência de aproximadamente 1,3-4% e risco de bloqueio atrioventricular menor que 1%** em relatos prévios (referências 203, 204, 352 e 353 da diretriz — estudos diferentes dos citados individualmente acima). A mesma diretriz também afirma, em texto corrido: *"a crioablação pode ter um risco menor de bloqueio atrioventricular, mas está associada a uma taxa de recorrência significativamente maior"* — o que é consistente com a leitura deste documento (mais durabilidade com RF, mais segurança com crio), embora a ESC use um tom mais assertivo sobre a diferença de recorrência do que os dois estudos individuais citados acima permitem, isoladamente, sustentar com a mesma força.
+- **fonte**: ESC 2019, texto integral, seção 11.2.1.2.2 "Catheter ablation", p. 685-686; Schwagten et al. 2011; Wells et al. 2018
 
 ## Armadilhas de leitura
 - **Os números da meta-análise de Spector (93-95% de sucesso, 5,6% de recorrência) são de TSV dependente do nó AV como grupo — via acessória e AVNRT combinadas —, não exclusivos de AVNRT.** Usar esse dado como se fosse específico de AVNRT superestima a precisão do número.
 - **"Nenhum caso de marca-passo com crioablação" nos dois estudos citados não significa risco zero em qualquer série** — são coortes específicas (ICY-AVNRT com protocolo padronizado de boas práticas; Schwagten com N pequeno, 150 pacientes). É o melhor dado disponível, não uma garantia populacional.
 - **A reintervenção maior da crioablação na série de Schwagten (11% vs. 5%) é de UMA série retrospectiva de longo seguimento**; o ICY-AVNRT, com cateter de maior diâmetro de ponta (6 mm) e seguimento mais curto, mostrou recorrência menor (2,7% em 6 meses). Os dois números não são diretamente comparáveis entre si (populações, cateteres e tempos de seguimento diferentes) e por isso o documento não escolhe um vencedor entre as duas energias.
 
-## VERIFICAÇÃO HUMANA NECESSÁRIA
-A classe de recomendação e o nível de evidência específicos da ESC 2019 para ablação de AVNRT (em oposição ao número genérico "classe I, nível A ou B para quase todos os tipos de TSV" já registrado no documento geral desta pasta) não foram confirmados linha a linha no texto integral da diretriz nesta sessão — o acesso disponível foi por metadados do PubMed (título, autoria, DOI), não pelo texto completo do `academic.oup.com`, que historicamente bloqueia a extração automatizada neste projeto. Confirmar contra o PDF ou o texto integral antes de citar uma classe/nível específico só para AVNRT.
+## Resolução da verificação pendente: classe e nível específicos da ESC 2019 para AVNRT
+Este documento tinha uma marcação de lacuna pedindo a classe de recomendação e o nível de evidência específicos da ESC 2019 para ablação de AVNRT, que não haviam sido confirmados linha a linha no texto integral da diretriz — só por metadados do PubMed. Isso foi resolvido nesta revisão: o texto integral foi obtido (PDF de acesso aberto; `academic.oup.com` bloqueia a extração automatizada, mas um mirror do mesmo artigo, hospedado em `techmed.sk`, abriu e foi conferido com `pdftotext -layout` e, para os trechos com caractere ilegível, por inspeção visual direta da página renderizada em imagem — mesmo método já documentado neste projeto para PDFs com fonte subset problemática).
+
+A tabela específica de AVNRT (seção 11.2.1.2, "Chronic therapy", p. 685) confirma:
+- **Ablação por cateter — Classe I, Nível B** (não o genérico "I, A ou B" do documento geral de TSV; para AVNRT especificamente, o nível é B).
+- **Diltiazem/verapamil ou beta-bloqueador quando ablação não é desejável/factível — Classe IIa, Nível B.**
+- **Abstenção de tratamento em paciente minimamente sintomático com episódios raros — Classe IIa, Nível C.**
+
+Estes três valores foram incorporados às seções "Tratamento crônico" e "O que isso muda na conversa de risco-benefício da ESC 2019" acima, com a citação exata da tabela e da página. Não restam lacunas de classe/nível não verificadas neste documento.
