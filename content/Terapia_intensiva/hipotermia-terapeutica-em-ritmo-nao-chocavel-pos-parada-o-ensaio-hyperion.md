@@ -4,7 +4,7 @@ slug: hipotermia-terapeutica-em-ritmo-nao-chocavel-pos-parada-o-ensaio-hyperion
 theme: "Terapia intensiva"
 kind: estudo
 review_status: revisado
-source_refs: ["Lascarrou JB, Merdji H, Le Gouge A, Colin G, Grillet G, et al. Targeted Temperature Management for Cardiac Arrest with Nonshockable Rhythm. N Engl J Med. 2019;381(24):2327-2337. DOI: 10.1056/NEJMoa1906661. PMID: 31577396 — ensaio HYPERION, CRICS-TRIGGERSEP Group, NCT01994772, 581 randomizados analisados, 25 UTIs francesas, financiamento do Ministério da Saúde francês", "Dankiewicz J, Cronberg T, Lilja G, Jakobsen JC, Levin H, et al. Hypothermia versus Normothermia after Out-of-Hospital Cardiac Arrest. N Engl J Med. 2021;384(24):2283-2294. DOI: 10.1056/NEJMoa2100591. PMID: 34133859 — ensaio TTM2, 1850 avaliados no desfecho primário, NCT02908308 — já citado no documento desta biblioteca sobre controle de temperatura, referenciado aqui apenas para contraste de subgrupo por ritmo inicial"]
+source_refs: ["Lascarrou JB, Merdji H, Le Gouge A, Colin G, Grillet G, et al. Targeted Temperature Management for Cardiac Arrest with Nonshockable Rhythm. N Engl J Med. 2019;381(24):2327-2337. DOI: 10.1056/NEJMoa1906661. PMID: 31577396 — ensaio HYPERION, CRICS-TRIGGERSEP Group, NCT01994772, 581 randomizados analisados, 25 UTIs francesas, financiamento do Ministério da Saúde francês", "Dankiewicz J, Cronberg T, Lilja G, Jakobsen JC, Levin H, et al. Hypothermia versus Normothermia after Out-of-Hospital Cardiac Arrest. N Engl J Med. 2021;384(24):2283-2294. DOI: 10.1056/NEJMoa2100591. PMID: 34133859 — ensaio TTM2, 1850 avaliados no desfecho primário, NCT02908308 — já citado no documento desta biblioteca sobre controle de temperatura, referenciado aqui apenas para contraste de subgrupo por ritmo inicial", "Ziriat I, Le Thuaut A, Colin G, Merdji H, Grillet G, Girardie P, et al. Outcomes of mild-to-moderate postresuscitation shock after non-shockable cardiac arrest and association with temperature management: a post hoc analysis of HYPERION trial data. Ann Intensive Care. 2022;12:96. DOI: 10.1186/s13613-022-01071-z. PMID: 36251223 — análise post hoc dos dados do HYPERION, mesmo grupo de investigadores do ensaio original (Lascarrou JB como autor correspondente), acesso aberto (PMC9576832); citada aqui apenas para confirmar o critério de inclusão do ensaio original quanto ao cenário da parada (intra e extra-hospitalar), não para os resultados de choque pós-ressuscitação, que são o objeto próprio daquele artigo"]
 legacy_source: "Documento novo, escrito em 01/08/2026. O documento existente desta biblioteca (controle-de-temperatura-pos-parada-cardiorrespiratoria-ttm-e-ttm2.md) cobre TTM e TTM2 — os dois com maioria de ritmo chocável (fibrilação ventricular/taquicardia ventricular) na população geral — e declara explicitamente, na seção final, que não cobre extrapolação para outro desenho de população. O HYPERION é o único ensaio randomizado desta biblioteca dedicado especificamente a ritmo NÃO chocável (assistolia/AESP), e chegou a um resultado que diverge do TTM2 no ponto mais debatido da reanimação: hipotermia vale a pena quando o ritmo inicial não é chocável?"
 ---
 
@@ -121,10 +121,21 @@ como conclusão:**
 
 ## O que este documento não cobre
 
-**Se o HYPERION incluiu parada intra-hospitalar além de extra-hospitalar.**
-O resumo do artigo original não detalha essa proporção, e este documento não
-afirma nada sobre o assunto sem ter lido o texto completo — **VERIFICAÇÃO
-HUMANA NECESSÁRIA** para quem precisar dessa distinção.
+**Sobre parada intra-hospitalar no HYPERION — esclarecido.** O ensaio incluiu
+os dois cenários: o critério de inclusão, confirmado numa análise post hoc dos
+próprios dados do HYPERION publicada pelo mesmo grupo de investigadores
+(Ziriat I et al., Ann Intensive Care 2022;12:96, PMID 36251223, acesso
+aberto), descreve a população-alvo textualmente como adultos que atingiram
+retorno da circulação espontânea **"after out-of-hospital or in-hospital
+cardiac arrest"** em ritmo não chocável. O abstract do artigo original do
+NEJM (Lascarrou et al., 2019) não traz essa informação, e o texto completo do
+artigo primário está bloqueado por paywall/Cloudflare (mesmo padrão de
+bloqueio já registrado para outros periódicos nesta biblioteca) — por isso a
+confirmação aqui vem de uma publicação subsequente da mesma equipe do
+ensaio, não do artigo original em si, o que fica declarado. A **proporção
+exata** de casos intra-hospitalares dentro da amostra (quantos dos 581
+pacientes) não foi confirmada em nenhuma fonte primária consultada nesta
+sessão e não é afirmada aqui.
 
 **Recomendação atual de sociedade (ERC/ESICM, AHA) especificamente para
 ritmo não chocável.** Este documento não leu diretriz de ressuscitação para
