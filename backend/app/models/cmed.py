@@ -52,10 +52,14 @@ class CmedApresentacao(Base):
     laboratorio: Mapped[str] = mapped_column(Text)
     produto: Mapped[str] = mapped_column(Text)  # marca
     apresentacao: Mapped[str] = mapped_column(Text)
-    ggrem: Mapped[str] = mapped_column(String(30), index=True)
-    registro: Mapped[str | None] = mapped_column(String(30), nullable=True)
-    ean1: Mapped[str | None] = mapped_column(String(20), nullable=True)
-    tarja: Mapped[str | None] = mapped_column(String(20), nullable=True)
+    # Texto livre, não numérico limitado: a primeira importação real estourou
+    # String(20) em `tarja` (a CMED anexa nota/rodapé ao valor em algumas
+    # linhas, ex. "- (*)") — nenhum destes campos tem formato garantido por
+    # norma que justifique um teto arbitrário.
+    ggrem: Mapped[str] = mapped_column(Text, index=True)
+    registro: Mapped[str | None] = mapped_column(Text, nullable=True)
+    ean1: Mapped[str | None] = mapped_column(Text, nullable=True)
+    tarja: Mapped[str | None] = mapped_column(Text, nullable=True)
     tipo_produto: Mapped[str | None] = mapped_column(Text, nullable=True)
     classe_terapeutica: Mapped[str | None] = mapped_column(Text, nullable=True)
     restricao_hospitalar: Mapped[bool] = mapped_column(Boolean, default=False)

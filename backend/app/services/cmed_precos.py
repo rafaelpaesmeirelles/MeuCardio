@@ -311,7 +311,14 @@ def atualizar(db: Session, forcar: bool = False, diretorio: Path | None = None) 
     dados = baixar_planilha(url, caminho)
     sha256 = hashlib.sha256(dados).hexdigest()
 
-    farmacos = db.query(Drug.id, Drug.generic_name).all()
+    # Só fármaco PUBLICADO entra na disputa de casamento. Há slugs órfãos
+    # antigos no catálogo (ex.: `metoprolol-succinato`, published=False, já
+    # registrado no CLAUDE.md) com nome mais "limpo" que o fármaco vivo —
+    # sem este filtro, o desempate por igualdade exata prefere o órfão ao
+    # publicado, e o preço nunca aparece pra quem o médico realmente vê na
+    # tela (medido em produção, 03/08/2026: "metoprolol-succinato" roubou o
+    # match de "metoprolol").
+    farmacos = db.query(Drug.id, Drug.generic_name).filter(Drug.published.is_(True)).all()
     farmacos_normalizados = [(drug_id, palavras_normalizadas(nome)) for drug_id, nome in farmacos]
 
     linhas = list(parsear_linhas(caminho))
