@@ -8,7 +8,8 @@ source_refs: [
   "Carità P, Corrado E, Pontone G, Curnis A, Bontempi L, Novo G, Guglielmo M, Ciaramitaro G, Assennato P, Novo S, Coppola G. Non-responders to cardiac resynchronization therapy: Insights from multimodality imaging and electrocardiography. A brief review. Int J Cardiol. 2016;225:402-407. PMID 27776243.",
   "Leclercq C, Burri H, Curnis A, Delnoy PP, Rinaldi CA, Sperzel J, Lee K, Calò L, Vicentini A, Concha JF, Thibault B; MORE-CRT MPP Investigators. Cardiac resynchronization therapy non-responder to responder conversion rate in the more response to cardiac resynchronization therapy with MultiPoint Pacing (MORE-CRT MPP) study. Eur Heart J. 2019 Sep 14. PMID 30859220.",
   "Barold SS, Ilercil A, Herweg B. Echocardiographic optimization of the atrioventricular and interventricular intervals during cardiac resynchronization. Europace. 2008;10 Suppl 3:iii88-95. PMID 18955406.",
-  "Borgquist R, Mörtsell D, Chaudhry U, et al. Repositioning and optimization of left ventricular lead position in nonresponders to cardiac resynchronization therapy. Heart Rhythm O2. 2022 Jun 30;3(5):457-463. PMID 36340500."
+  "Borgquist R, Mörtsell D, Chaudhry U, Brandt J, Farouq M, Wang L. Repositioning and optimization of left ventricular lead position in nonresponders to cardiac resynchronization therapy is associated with improved ejection fraction, lower NT-proBNP values, and fewer heart failure symptoms. Heart Rhythm O2. 2022 Jun 30;3(5):457-463. PMID 36340500 / PMCID PMC9626901.",
+  "Chung ES, Leon AR, Tavazzi L, Sun JP, Nihoyannopoulos P, Merlino J, Abraham WT, Ghio S, Leclercq C, Bax JJ, Yu CM, Gorcsan J 3rd, St John Sutton M, De Sutter J, Murillo J. Results of the Predictors of Response to CRT (PROSPECT) trial. Circulation. 2008 May 20;117(20):2608-2616. PMID 18458170."
 ]
 ---
 
@@ -68,10 +69,37 @@ critério ecocardiográfico estrito numa coorte contemporânea com sistema
 quadripolar, deve ser lido como uma estimativa de referência, não como o
 único número da literatura — séries mais antigas, com eletrodo bipolar e
 outros critérios (inclusive critérios clínicos, mais permissivos), costumam
-reportar taxas mais altas. **A cifra de "cerca de 30%" frequentemente citada
-em resumos de diretriz não foi confirmada em fonte primária nesta sessão —
-VERIFICAÇÃO HUMANA NECESSÁRIA para essa cifra específica; o número desta
-seção (24,3%) é o único com fonte primária conferida.**
+reportar taxas mais altas.
+
+A cifra de "cerca de 30%", frequentemente citada em resumos de diretriz e
+aulas sem referência explícita, **tem origem rastreável no estudo PROSPECT**
+(Chung ES et al., Circulation 2008, PMID 18458170) — ensaio prospectivo
+multicêntrico (53 centros na Europa, Hong Kong e Estados Unidos, 498
+pacientes com indicação padrão de TRC) desenhado para testar parâmetros
+ecocardiográficos de dissincronia como preditores de resposta. O PROSPECT
+reportou **dois números de não-resposta diferentes, conforme o critério**,
+o que confirma na fonte primária o mesmo ponto de método já feito acima
+nesta seção — os critérios não são intercambiáveis:
+
+- pelo **escore clínico composto** (critério clínico), houve melhora em
+  **69% de 426 pacientes** avaliados — ou seja, **31% não melhoraram**, o
+  número mais próximo do "cerca de 30%" citado de memória em resumos;
+- pelo **critério ecocardiográfico** (mesmo corte de LVESV ≥15% de redução
+  usado pelo MORE-CRT MPP), houve resposta em **56% de 286 pacientes** com
+  dado pareado — ou seja, **44% não atingiram** o corte de remodelamento
+  reverso, número bem mais alto que o "30%" popularmente citado.
+
+Ou seja: a cifra de "cerca de 30%" **não é fabricada nem infundada** — ela
+corresponde ao número de não-resposta pelo **critério clínico** do PROSPECT
+(31%), um ensaio real e citável. Mas usá-la como se fosse também o número de
+não-resposta ecocardiográfica é o erro de leitura que este documento já
+alertava: no mesmo estudo, pelo critério de imagem, a taxa é 44%, mais
+próxima da faixa "30-45%" do que de "30%" isolado. Os dois números com fonte
+primária conferida nesta seção são, portanto: **24,3%** (MORE-CRT MPP,
+critério ecocardiográfico estrito, coorte contemporânea com eletrodo
+quadripolar), **31%** (PROSPECT, critério clínico) e **44%** (PROSPECT,
+critério ecocardiográfico, coorte mais antiga com eletrodo bipolar/menos
+seleção por fenótipo eletrocardiográfico que os ensaios atuais).
 
 ## Causas mais comuns de não-resposta
 
@@ -149,11 +177,12 @@ com seguimento mediano de 2,5 anos (IQR 1,1-3,7):
   (IQR 2-11; p = 0,01).
 - **Duração do QRS**: redução de **-36 ms** (IQR -44 a -8; p < 0,001).
 - **NT-proBNP**: redução de **-615 ng/L** (IQR -2.837 a +121; p = 0,03).
-- Reposicionamento bem-sucedido em **todos os 25 casos**, com taxa de
-  complicação descrita como baixa (número absoluto de complicações não
-  detalhado no resumo consultado nesta sessão — **VERIFICAÇÃO HUMANA
-  NECESSÁRIA** para o dado granular de complicação, se necessário para
-  decisão individual de risco-benefício).
+- Reposicionamento bem-sucedido em **todos os 25 casos**. Complicações,
+  conferidas no texto completo (PMC9626901): **nenhuma complicação precoce**
+  do procedimento de reposicionamento; **1 complicação tardia (4%)** — uma
+  infecção local tardia que exigiu extração completa do sistema e
+  substituição por um CRT convencional (eletrodo do lado direito), com o
+  eletrodo de VE reimplantado na mesma posição já otimizada.
 
 É uma série de tamanho pequeno-moderado, sem grupo controle randomizado — o
 que limita a força da inferência causal —, mas é evidência direta e
@@ -219,18 +248,26 @@ recomendação de rotina.
    funcionais e bioquímicos favoráveis em série não randomizada (PMID
    36340500).
 
-## VERIFICAÇÃO HUMANA NECESSÁRIA — pontos não confirmados nesta sessão
+## Nota de revisão — lacuna original estreitada em sessão posterior
 
-- A cifra de "cerca de 30%" de não-resposta, comumente citada em resumos de
-  diretriz e aulas, não foi confirmada em fonte primária nesta sessão — o
-  único número com fonte primária conferida é 24,3% (MORE-CRT MPP, critério
-  ecocardiográfico de LVESV, coorte com sistema quadripolar).
-- Número absoluto de complicações do reposicionamento cirúrgico de eletrodo
-  de VE na série de Borgquist et al. (o resumo consultado descreve "taxa
-  baixa" sem detalhar o número).
-- O consenso 2012 EHRA/HRS sobre TRC (Daubert JC et al., Heart Rhythm
-  2012;9(9):1524-1576, PMID 22939223/Europace PMID 22930717) é referência
-  histórica de manejo e otimização, mas não tem resumo estruturado disponível
-  no PubMed nem texto integral em acesso aberto no PMC — não foi possível
-  extrair dados numéricos dele nesta sessão; quem tiver acesso ao texto
-  completo pode complementar este documento.
+Este documento tinha uma lacuna sinalizada como não confirmada quanto à
+cifra de "cerca de 30%" de não-resposta e quanto ao número absoluto de
+complicações da série de reposicionamento de eletrodo. As duas foram
+resolvidas contra fonte primária: a cifra de ~30% rastreia ao PROSPECT
+(Chung ES et al., Circulation 2008, PMID 18458170 — ver seção "Incidência
+real" acima, que agora traz os três números com fonte, 24,3%/31%/44%,
+conforme critério e coorte), e o número de complicações da série de
+Borgquist et al. foi extraído do texto completo em acesso aberto no PMC
+(PMCID PMC9626901 — ver seção "Reposicionamento do eletrodo de VE" acima:
+0 complicações precoces, 1 tardia em 25 pacientes).
+
+Um ponto permanece **não confirmado**, e a marcação é mantida especificamente
+para ele: o consenso 2012 EHRA/HRS sobre TRC (Daubert JC et al., Heart Rhythm
+2012;9(9):1524-1576, PMID 22939223/Europace PMID 22930717) é referência
+histórica de manejo e otimização, mas não tem resumo estruturado disponível
+no PubMed nem texto integral em acesso aberto no PMC (conferido por `elink`
+nesta sessão: só existem registros de artigos que o citam, não o texto dele
+mesmo) — não foi possível extrair dados numéricos dele. **VERIFICAÇÃO HUMANA
+NECESSÁRIA** para quem tiver acesso ao texto completo (assinatura
+institucional ou Heart Rhythm Society) e quiser complementar este documento
+com o conteúdo desse consenso especificamente.
