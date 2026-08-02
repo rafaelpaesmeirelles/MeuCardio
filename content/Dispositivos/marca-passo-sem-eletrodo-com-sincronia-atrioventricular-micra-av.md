@@ -1,0 +1,68 @@
+---
+title: "Marca-passo sem eletrodo com sincronia atrioventricular — Micra AV/AV2"
+slug: marca-passo-sem-eletrodo-com-sincronia-atrioventricular-micra-av
+theme: "Dispositivos"
+kind: farmacologia
+review_status: revisado
+source_refs: ["Steinwender C, Khelae SK, Garweg C, Chan JYS, Ritter P, Johansen JB, Sagi V, et al. Atrioventricular Synchronous Pacing Using a Leadless Ventricular Pacemaker: Results From the MARVEL 2 Study. JACC Clin Electrophysiol. 2020;6(1):94-106. DOI: 10.1016/j.jacep.2019.10.017. PMID: 31709982", "Garweg C, Piccini JP, Epstein LM, Kowal RC, Windle J, Ritter P, Chinitz L, et al. A leadless ventricular pacemaker providing atrioventricular synchronous pacing in the real-world setting: 12-Month results from the Micra AV post-approval registry. Heart Rhythm. 2024;21(10):1939-1947. DOI: 10.1016/j.hrthm.2024.06.008. PMID: 38878939", "Leal MA, Sheldon T, Escalante K, Holm M, Galarneau M, Stromberg K, Piccini JP. Atrioventricular Synchrony Algorithm Modeling of a Leadless Pacemaker Family: A Virtual Patient Analysis. Cardiovasc Eng Technol. 2025;16(4):410-422. DOI: 10.1007/s13239-025-00783-0. PMID: 40425938", "Leal MA, Sheldon T, Escalante K, Holm M, Galarneau M, Rosemas S, Stromberg K, Piccini JP. Device longevity impact of battery/electronics enhancements of next-generation Micra leadless pacemakers, VR2 and AV2. Future Cardiol. 2025;21(10):753-758. DOI: 10.1080/14796678.2025.2527466. PMID: 40671373", "Garweg C, Willems R. Advancements in Leadless Pacemakers: What the Second-generation Micra AV2 Brings to Cardiac Care. Heart Int. 2024;18(2):4-6. DOI: 10.17925/HI.2024.18.2.3. PMID: 39885931"]
+---
+
+# Marca-passo sem eletrodo com sincronia atrioventricular — Micra AV/AV2
+
+## Definição e relação com os documentos já existentes
+O tema Dispositivos já cobre o marcapasso sem eletrodo (Micra) em sua indicação clássica de estimulação **ventricular isolada** (VVI/VVIR) e o marcapasso leadless **bicameral** (sistema Aveir DR, dois dispositivos implantados separadamente com comunicação implante-a-implante — ver documento próprio). Este documento é dedicado a uma terceira família de solução, distinta das duas anteriores: um **único dispositivo implantado no ventrículo direito** (Micra AV, e sua segunda geração Micra AV2) que estima a contração atrial **mecanicamente**, por acelerômetro, sem qualquer eletrodo ou sensor elétrico no átrio, para entregar estimulação **sincronizada** ao ritmo atrial (modo VDD).
+
+## Mecanismo — detecção mecânica da contração atrial
+- O dispositivo é implantado inteiramente no ventrículo direito, como o Micra VR convencional, e **não possui eletrodo atrial** de nenhuma espécie — nem elétrico nem mecânico externo ao próprio corpo do gerador.
+- Um **acelerômetro tridimensional** embutido no gerador capta os sinais de vibração/movimento transmitidos através do septo e das paredes cardíacas produzidos pela contração mecânica das quatro câmaras ao longo do ciclo cardíaco. Um desses componentes de sinal corresponde à contração atrial (evento **A4**, na nomenclatura do algoritmo), distinguido de outros componentes mecânicos (fechamento e abertura valvar, contração ventricular) por sua posição temporal característica no ciclo.
+- O algoritmo (denominado A3 na versão original e "Auto + A3 Threshold" na segunda geração) usa esse evento mecânico como substituto do sinal elétrico atrial (onda P/eletrograma atrial) que um eletrodo atrial forneceria num sistema bicameral convencional, e dispara a estimulação ventricular num intervalo AV programado após detectar a contração atrial — reproduzindo o comportamento de um marca-passo VDD tradicional sem o hardware atrial.
+- **Fonte do mecanismo**: Steinwender C et al., MARVEL 2, JACC Clin Electrophysiol. 2020;6(1):94-106 (PMID 31709982).
+
+## Resultados do estudo pivotal — MARVEL 2
+Estudo prospectivo, multicêntrico (12 centros), em pacientes com **bloqueio atrioventricular** e ritmo sinusal preservado, comparando o algoritmo VDD (sincronia AV via acelerômetro) contra estimulação VVI-50 no mesmo dispositivo:
+- **75 pacientes** incluídos; **40 pacientes** atenderam ao critério pré-especificado para análise do desfecho primário de eficácia
+- **Desfecho primário**: proporção de pacientes com **≥70% de sincronia AV em repouso** — **95% no modo VDD versus 0% no modo VVI** (p<0,001)
+- **Sincronia AV média**: aumentou de **26,8%** (mediana 26,9%) em VVI para **89,2%** (mediana 94,3%) em VDD
+- **Segurança**: nenhuma pausa nem episódio de taquicardia por sobredetecção (oversensing) durante a estimulação VDD, nos 75 pacientes
+- **Fonte**: Steinwender C et al., JACC Clin Electrophysiol. 2020;6(1):94-106 (PMID 31709982)
+
+## Desempenho no mundo real — registro pós-aprovação Micra AV
+Registro prospectivo, observacional, de braço único, com comparação a coorte histórica de marca-passo transvenoso de dupla câmara, resultados em 12 meses:
+- **Implante bem-sucedido**: 796/801 pacientes (**99,4%**), em 97 centros de 19 países
+- Pacientes do grupo Micra AV eram **mais idosos** (74,1 vs. 71,1 anos; p<0,0001) e com **maior prevalência de doença renal** (22,3% vs. 9,8%; p<0,0001) que a coorte transvenosa histórica de 2.667 pacientes
+- **Complicação maior em 12 meses**: **3,7%** (Micra AV) vs. **8,8%** (transvenoso de dupla câmara) — razão de risco (HR) **0,42** (IC95% 0,28–0,61; p<0,001)
+- **Revisão de sistema em 12 meses**: **1,5%** (Micra AV) vs. **5,5%** (transvenoso) — HR **0,25** (IC95% 0,13–0,47; p<0,001)
+- **Índice de sincronia AV**: mediana de **79,4%** (intervalo interquartil 65,2%–86,4%) entre os pacientes com estimulação ventricular >90% do tempo
+- **Fonte**: Garweg C et al., Heart Rhythm. 2024;21(10):1939-1947 (PMID 38878939)
+
+## Segunda geração — Micra AV2, o que muda
+O Micra AV2 substitui o algoritmo A3 original por uma versão aprimorada ("Auto + A3 Threshold"), com ajuste mais automatizado do limiar de detecção do evento atrial mecânico, e traz eletrônica/bateria revisadas.
+- **Sincronia AV comparativa** (análise de modelagem com pacientes virtuais, dados de acelerômetro do estudo clínico AccelAV, método de Monte Carlo): **>70% de sincronia AV em 90% dos pacientes simulados com o algoritmo do AV2 (27/30) versus 43% com o algoritmo do Micra AV original (13/30)**, p<0,001. Em monitorização ambulatorial na faixa de 80–100 bpm, o algoritmo Auto + A3 Threshold do AV2 atingiu **84,1%** de sincronia AV.
+  **Fonte**: Leal MA et al., Cardiovasc Eng Technol. 2025;16(4):410-422 (PMID 40425938) — **estudo de modelagem/simulação com pacientes virtuais, não ensaio clínico direto de sincronia AV do AV2 em pacientes reais**; a magnitude do ganho deve ser lida com essa ressalva.
+- **Longevidade do dispositivo** (modelagem a partir do estudo IDE do Micra, da base CareLink da Medtronic e de dados históricos de sobrevida de pacientes com marca-passo): longevidade mediana projetada de **10,8 anos** para o Micra AV original versus **15,6 anos** para o Micra AV2 (coorte de 999 pacientes); **80%** dos pacientes projetados a necessitar de **um único dispositivo AV2** ao longo da vida, contra uma proporção menor com o AV original — a modelagem estima **15 trocas de dispositivo evitadas a cada 100 pacientes** com o AV2 em vez do AV.
+  **Fonte**: Leal MA et al., Future Cardiol. 2025;21(10):753-758 (PMID 40671373)
+- Um editorial dedicado descreve que o Micra AV original apresentava "alta variabilidade" na sincronia AV entre pacientes, e que o AV2 promete sincronia "mais inteligente e mais automática" — mas **não traz números próprios de eficácia**, sendo um comentário editorial sobre o dispositivo, não um estudo primário.
+  **Fonte**: Garweg C, Willems R. Heart Int. 2024;18(2):4-6 (PMID 39885931)
+- **VERIFICAÇÃO HUMANA NECESSÁRIA**: não foi localizado, nesta sessão, um ensaio clínico prospectivo com desenho equivalente ao MARVEL 2 (comparação direta VDD vs. VVI em pacientes reais implantados) especificamente para o Micra AV2 — os dados de superioridade do algoritmo do AV2 sobre o AV original disponíveis até o momento desta redação vêm de modelagem com pacientes virtuais (PMID 40425938), não de um estudo clínico dedicado com desfecho primário de sincronia AV medido diretamente em pacientes com o AV2 implantado.
+
+## Indicações
+- **Bloqueio atrioventricular** (de segundo ou terceiro grau) com **ritmo sinusal preservado**, em que a sincronia entre a contração atrial e a estimulação ventricular é clinicamente desejável — a mesma população de indicação de estimulação de dupla câmara convencional, mas na qual o acesso venoso central ou o risco de complicação relacionada a eletrodo/bolsa tornam o sistema transvenoso menos atrativo.
+- Situações em que um marca-passo transvenoso de dupla câmara carrega risco aumentado: hemodiálise crônica em curso ou esperada, problemas de acesso venoso superior, fragilidade com alto risco de sangramento/infecção, endocardite valvar prévia, ou necessidade de extração de dispositivo previamente infectado (indicações já registradas no documento de marcapasso sem eletrodo/manejo perioperatório deste tema, e que se aplicam igualmente à variante AV/AV2 quando o paciente tem ritmo sinusal e se beneficiaria de sincronia AV, não apenas de estimulação ventricular isolada).
+- No registro pós-aprovação (PMID 38878939), a população efetivamente implantada era mais idosa e com maior carga de doença renal crônica que a coorte transvenosa comparativa — compatível com uso preferencial nos pacientes de maior risco para sistema transvenoso.
+
+## Contraindicações relativas ao marca-passo transvenoso tradicional
+Não são contraindicações ao Micra AV em si, mas fatores que tornam o **sistema transvenoso convencional** menos favorável e reforçam a escolha pela via leadless com sincronia AV:
+- Estenose ou oclusão de veia subclávia/inominada/cava superior que dificulte a passagem de eletrodo transvenoso
+- Necessidade de acesso venoso central preservado para hemodiálise
+- Histórico de infecção de dispositivo cardíaco implantável, com necessidade de extração completa do sistema anterior
+- Risco elevado de sangramento relacionado à criação de bolsa subcutânea (uso de anticoagulação, fragilidade cutânea)
+
+## Limitações — ausência de sensor atrial elétrico verdadeiro
+- O acelerômetro **não é um substituto perfeito** de um eletrodo atrial elétrico: ele detecta um evento **mecânico** indireto (vibração transmitida ao ventrículo), sujeito a variabilidade por postura, atividade física, frequência cardíaca e arritmias atriais concomitantes — o próprio MARVEL 2 mostra que nem todos os pacientes triados atingiram o critério de eficácia (40 de 75 analisados para o desfecho primário).
+- Na fibrilação atrial ou em arritmias atriais desorganizadas, não há um evento mecânico atrial regular e discreto para o algoritmo rastrear — o dispositivo não oferece sincronia AV nesse contexto e se comporta como estimulação ventricular isolada.
+- A sincronia AV obtida é **variável entre pacientes** e não universalmente alta: no registro do mundo real (PMID 38878939), a mediana de 79,4% de sincronia (com IIQ de 65,2%–86,4%) indica que uma parcela relevante de pacientes fica abaixo desse patamar — diferente de um sistema bicameral transvenoso convencional, em que a detecção atrial elétrica direta tende a ser mais consistente.
+- O dispositivo continua sendo um sistema de **uma única câmara** (só o gerador ventricular): não há terapia de estimulação atrial (não trata bradicardia sinusal isoladamente) nem função de desfibrilação — permanece restrito a marca-passo, sem a opção de choque de um CDI.
+- Assim como o Micra VR, o AV/AV2 tem **bateria não substituível isoladamente**: ao final da vida útil, a conduta usual é o implante de um novo dispositivo (frequentemente deixando o anterior em posição), não a troca de bateria como em gerador convencional de bolsa — o que reforça a relevância prática dos dados de longevidade projetada (PMID 40671373).
+
+## Fonte e ressalva geral
+Os quatro estudos citados (PMID 31709982, 38878939, 40425938, 40671373) foram consultados nesta sessão via PubMed/E-utilities, com abstract conferido linha a linha antes da transcrição dos números; nenhum valor foi escrito de memória. Onde a fonte disponível é modelagem/simulação em vez de ensaio clínico direto (comparação AV vs. AV2), isso está declarado explicitamente no texto, não omitido.
