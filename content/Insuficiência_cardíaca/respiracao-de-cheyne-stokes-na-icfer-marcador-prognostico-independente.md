@@ -4,7 +4,7 @@ slug: respiracao-de-cheyne-stokes-na-icfer-marcador-prognostico-independente
 theme: "Insuficiência cardíaca"
 kind: estudo
 review_status: revisado
-source_refs: ["Lanfranchi PA, Braghiroli A, Bosimini E, Mazzuero G, Colombo R, Donner CF, Giannuzzi P. Prognostic value of nocturnal Cheyne-Stokes respiration in chronic heart failure. Circulation. 1999;99(11):1435-1440. DOI: 10.1161/01.CIR.99.11.1435. PMID: 10086966", "Hanly PJ, Zuberi-Khokhar NS. Increased mortality associated with Cheyne-Stokes respiration in patients with congestive heart failure. Am J Respir Crit Care Med. 1996;153(1):272-276. DOI: 10.1164/ajrccm.153.1.8542128. PMID: 8542128"]
+source_refs: ["Lanfranchi PA, Braghiroli A, Bosimini E, Mazzuero G, Colombo R, Donner CF, Giannuzzi P. Prognostic value of nocturnal Cheyne-Stokes respiration in chronic heart failure. Circulation. 1999;99(11):1435-1440. DOI: 10.1161/01.CIR.99.11.1435. PMID: 10086966", "Hanly PJ, Zuberi-Khokhar NS. Increased mortality associated with Cheyne-Stokes respiration in patients with congestive heart failure. Am J Respir Crit Care Med. 1996;153(1):272-276. DOI: 10.1164/ajrccm.153.1.8542128. PMID: 8542128", "Butt JH, Jering K, de Boer RA, Claggett BL, Desai AS, Hernandez AF, et al. Heart Failure, Investigator-Reported Sleep Apnea and Dapagliflozin: A Patient-Level Pooled Meta-Analysis of DAPA-HF and DELIVER. J Card Fail. 2024;30(3):436-448. DOI: 10.1016/j.cardfail.2023.08.027. PMID: 38104937"]
 legacy_source: "Documento novo. A base já tem SERVE-HF e ADVENT-HF, que respondem se TRATAR a apneia central com servoventilação muda o desfecho (a resposta do SERVE-HF foi negativa e com sinal de dano; a do ADVENT-HF não reproduziu o dano). Este documento responde a uma pergunta anterior e diferente: o que a PRESENÇA da respiração de Cheyne-Stokes/apneia central, por si só, diz sobre o prognóstico do paciente com ICFEr — independentemente de qualquer decisão terapêutica sobre ela."
 ---
 
@@ -102,11 +102,58 @@ acionável:
   lido como recomendação de terapia — apenas como o registro de que o achado tem peso prognóstico
   próprio.
 
+## A pergunta na era da terapia quádrupla — o que a busca mais recente encontrou, e o que continua sem resposta específica
+Uma busca dirigida (PubMed/E-utilities e literatura secundária, agosto de 2026) por estudo que
+isole especificamente a respiração de Cheyne-Stokes/apneia central — confirmada por
+polissonografia, não apenas relatada pelo investigador — como preditor independente dentro de uma
+coorte **já em terapia quádrupla completa** (IECA/BRA/ARNI + betabloqueador + antagonista
+mineralocorticoide + inibidor de SGLT2) **não encontrou esse estudo específico**. Não há, até onde
+esta busca alcançou, uma análise post-hoc de DAPA-HF ou EMPEROR-Reduced que estratifique o efeito
+prognóstico da respiração de Cheyne-Stokes por si só nessa população.
+
+O achado mais próximo, e que deve ser lido com as diferenças declaradas em relação à pergunta
+original, é uma análise combinada dos dois grandes ensaios de dapagliflozina:
+
+> Butt JH, Jering K, de Boer RA, Claggett BL, Desai AS, Hernandez AF, et al. Heart Failure,
+> Investigator-Reported Sleep Apnea and Dapagliflozin: A Patient-Level Pooled Meta-Analysis of
+> DAPA-HF and DELIVER. J Card Fail. 2024;30(3):436-448. DOI: 10.1016/j.cardfail.2023.08.027.
+> PMID: 38104937.
+
+Nessa análise combinada de **DAPA-HF (ICFEr) e DELIVER (ICFEr levemente reduzida/preservada)**, mais
+de 11.000 pacientes, história de apneia do sono relatada pelo investigador (5,7% na coorte de ICFEr,
+7,8% na de FE mais preservada — os próprios autores consideram que a prevalência real está
+subestimada, por não ter havido polissonografia sistemática) esteve associada a mais eventos de
+piora da IC ou morte cardiovascular: **16,0 vs. 10,6 por 100 pacientes-ano, HR ajustado 1,29 (IC95%
+1,10-1,52)**. O benefício da dapagliflozina sobre esse desfecho foi **semelhante** com e sem apneia
+do sono (HR 0,78 [IC95% 0,59-1,03] com apneia vs. 0,79 [IC95% 0,72-0,87] sem; p de interação = 0,93)
+— ou seja, o inibidor de SGLT2 não elimina o excesso de risco associado à apneia, mas também não
+tem seu próprio benefício anulado por ela.
+
+**Por que este dado não fecha a lacuna original, e deve ser citado com essa ressalva:**
+- **Não é específico de Cheyne-Stokes/apneia central** — é "apneia do sono" relatada pelo
+  investigador, categoria que mistura apneia obstrutiva e central e que, na prática clínica de
+  rotina (sem polissonografia sistemática), tende a capturar predominantemente diagnóstico prévio
+  de SAOS, não especificamente o padrão central em crescendo-decrescendo discutido neste documento.
+- **Não é restrito à ICFEr** — a coorte combina DAPA-HF (ICFEr) com DELIVER (FE levemente reduzida
+  e preservada), e o resultado relatado é para a população combinada.
+- **Não é uma coorte de terapia quádrupla já estabelecida** — no início do DAPA-HF, o uso basal de
+  sacubitril-valsartana era de aproximadamente 11%, e a combinação completa ARNI + betabloqueador +
+  antagonista mineralocorticoide estava presente em cerca de 7% dos pacientes antes da
+  randomização. O próprio inibidor de SGLT2 é o fármaco testado no ensaio, não uma terapia de fundo
+  já incorporada em toda a coorte.
+
+Nenhuma das duas fontes originais deste documento (Lanfranchi 1999, Hanly & Zuberi-Khokhar 1996)
+testou intervenção — são estudos observacionais de história natural, de antes da era de
+betabloqueador, ARNI e iSGLT2 em uso disseminado. Não derive desta associação prognóstica nenhuma
+recomendação de terapia direcionada à respiração periódica; para essa pergunta, ver os documentos
+de SERVE-HF e ADVENT-HF desta base.
+
 ## O que NÃO afirmar
-Nenhuma das duas fontes aqui citadas testou intervenção — são estudos observacionais de história
-natural. Não derive desta associação prognóstica nenhuma recomendação de terapia direcionada à
-respiração periódica; para essa pergunta, ver os documentos de SERVE-HF e ADVENT-HF. Não há, nas
-fontes consultadas nesta sessão, um hazard ratio único e moderno consolidado (ex. em metanálise) que
-quantifique esse risco em termos atuais de tratamento guiado por diretriz da ICFEr (a era dos
-inibidores de SGLT2 e sacubitril-valsartana) — **VERIFICAÇÃO HUMANA NECESSÁRIA** para quem precisar
-de uma estimativa de risco relativo atualizada a essa população.
+Não há, nas fontes localizadas até agora, um hazard ratio específico e moderno — de coorte com
+respiração de Cheyne-Stokes confirmada por polissonografia, restrita à ICFEr, com toda a coorte já
+em terapia quádrupla estabelecida — que quantifique esse risco nesses termos exatos. O dado mais
+próximo (Butt et al. 2024, acima) mostra que uma categoria mais ampla de apneia do sono continua
+associada a pior desfecho mesmo em ensaio que testa um inibidor de SGLT2, mas não deve ser
+apresentado como se respondesse à pergunta específica sobre Cheyne-Stokes na ICFEr em terapia
+quádrupla — essa estimativa mais precisa segue em aberto, e quem precisar dela deve tratá-la como
+lacuna ainda não preenchida por fonte primária adequada, não como número já estabelecido.
