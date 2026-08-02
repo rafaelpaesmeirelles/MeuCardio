@@ -4,7 +4,7 @@ slug: intoxicacao-grave-por-bloqueador-de-canal-de-calcio-insulina-em-dose-alta-
 theme: "Terapia intensiva"
 kind: protocolo
 review_status: revisado
-source_refs: ["St-Onge M, Anseeuw K, Cantrell FL, Gilchrist IC, Hantson P, Bailey B, Lavergne V, Gosselin S, Kerns W 2nd, Laliberté M, Lavonas EJ, Juurlink DN, Muscedere J, Yang CC, Sinuff T, Rieder M, Mégarbane B. Experts Consensus Recommendations for the Management of Calcium Channel Blocker Poisoning in Adults. Crit Care Med. 2017;45(3):e306-e315. DOI: 10.1097/CCM.0000000000002087. PMID: 27749343. PMCID: PMC5312725 — consenso Delphi modificado, workgroup multidisciplinar/multinacional, graduação GRADE (recomendações 1D/2D; qualidade da evidência classificada como MUITO BAIXA em todas as intervenções)", "Engebretsen KM, Kaczmarek KM, Morgan J, Holger JS. High-dose insulin therapy in beta-blocker and calcium channel-blocker poisoning. Clin Toxicol (Phila). 2011;49(4):277-283. DOI: 10.3109/15563650.2011.582471. PMID: 21563902 — revisão de 485 artigos identificados, 72 considerados relevantes; usada aqui só para o mecanismo proposto da insulina em alta dose e a evolução histórica das doses, já citada no documento irmão desta pasta"]
+source_refs: ["St-Onge M, Anseeuw K, Cantrell FL, Gilchrist IC, Hantson P, Bailey B, Lavergne V, Gosselin S, Kerns W 2nd, Laliberté M, Lavonas EJ, Juurlink DN, Muscedere J, Yang CC, Sinuff T, Rieder M, Mégarbane B. Experts Consensus Recommendations for the Management of Calcium Channel Blocker Poisoning in Adults. Crit Care Med. 2017;45(3):e306-e315. DOI: 10.1097/CCM.0000000000002087. PMID: 27749343. PMCID: PMC5312725 — consenso Delphi modificado, workgroup multidisciplinar/multinacional, graduação GRADE (recomendações 1D/2D; qualidade da evidência classificada como MUITO BAIXA em todas as intervenções). Inclui o Apêndice 7 (racional de não recomendar glucagon, azul de metileno e outras terapias), localizado no Supplemental Digital Content 1 do próprio artigo, arquivo 'ccm-45-e306-s001.docx', acessado via http://links.lww.com/CCM/C94 (redireciona para cdn-links.lww.com) — texto lido na íntegra nesta revisão, não apenas o corpo principal do artigo", "Engebretsen KM, Kaczmarek KM, Morgan J, Holger JS. High-dose insulin therapy in beta-blocker and calcium channel-blocker poisoning. Clin Toxicol (Phila). 2011;49(4):277-283. DOI: 10.3109/15563650.2011.582471. PMID: 21563902 — revisão de 485 artigos identificados, 72 considerados relevantes; usada aqui só para o mecanismo proposto da insulina em alta dose e a evolução histórica das doses, já citada no documento irmão desta pasta"]
 legacy_source: "Documento novo, escrito em 02/08/2026. Já existe nesta pasta `hipercalemia-grave-e-intoxicacao-por-betabloqueador-ou-bloqueador-de-canal-de-calcio.md`, que cobre a mesma terapia (insulina em alta dose) a partir da revisão narrativa de Engebretsen 2011, tratando betabloqueador e bloqueador de canal de cálcio (BCC) juntos, ao lado de hipercalemia. ESTE documento não duplica aquele: é focado especificamente em BCC (verapamil/diltiazem), usa como fonte principal o CONSENSO FORMAL de 2017 (St-Onge et al., Delphi modificado com graduação GRADE), que o documento irmão não cita, e cobre um ponto que o outro não cobre — os critérios e a graduação para escalonar a ECMO venoarterial no choque refratário. Onde os dois se sobrepõem (mecanismo geral e evolução histórica da dose de insulina), este documento aponta para o outro em vez de repetir o texto."
 ---
 
@@ -71,10 +71,15 @@ miocárdica de oxigênio num coração já deprimido e mal perfundido. É por es
 insulina em alta dose, com seu efeito inotrópico e vasodilatador simultâneo, ocupa lugar de
 primeira linha ao lado do vasopressor, e não depois dele.
 
-**Sobre o glucagon:** o consenso **não formulou recomendação de uso** para glucagon na intoxicação
-por BCC — o racional para não recomendar fica em apêndice do artigo original, não reproduzido nos
-trechos consultados nesta sessão. `VERIFICAÇÃO HUMANA NECESSÁRIA` — quem precisar do racional
-completo de exclusão do glucagon deve consultar o Apêndice 7 do artigo original (PMC5312725).
+**Sobre o glucagon:** o consenso **formulou, sim, recomendação contra o uso de glucagon** — grau
+**2D** (recomendação fraca, evidência de qualidade muito baixa), a mesma escala usada no restante
+deste documento. Texto literal do Apêndice 7 (conteúdo suplementar digital do artigo original,
+St-Onge et al., 2017, PMID 27749343): *"the workgroup suggests not to use glucagon because case
+series reported variable effects. Vomiting and hyperglycemia have been reported in several case
+reports, and more effective interventions for the treatment of CCB poisoning are available"* (grau
+2D). No mesmo apêndice, o consenso recomenda **contra** o azul de metileno e a levosimendana com
+grau **1D** (recomendação mais forte que a do glucagon), por experiência clínica limitada a poucos
+relatos de caso e falta de eficácia demonstrada em estudo animal, respectivamente.
 
 ## Insulina em dose alta euglicêmica (HIEC/HIET) — esquema do consenso de 2017
 
@@ -152,8 +157,10 @@ documento.
   declarado explicitamente pelo próprio grupo de trabalho. Não há ensaio clínico controlado em
   humanos sustentando nenhuma das condutas descritas aqui — a base é consenso de especialistas
   sobre relatos de caso, séries de caso e modelos animais.
-- O racional completo de por que o **glucagon não foi recomendado** não foi consultado nesta sessão
-  (está em apêndice do artigo original) — `VERIFICAÇÃO HUMANA NECESSÁRIA` para quem precisar dele.
+- **Correção:** este documento chegou a registrar que o racional de exclusão do glucagon não havia
+  sido consultado. Foi localizado no Apêndice 7 (conteúdo suplementar digital) do consenso de 2017
+  e está descrito na seção "Medidas de primeira linha e suas limitações", acima — é recomendação
+  formal **contra** o uso, grau 2D, não ausência de recomendação como constava antes.
 - O consenso **não formulou recomendação sobre reposição volêmica** especificamente para
   intoxicação por BCC, por não terem sido encontrados estudos de reposição de fluidos dedicados a
   esse contexto — a conduta de ressuscitação volêmica segue extrapolada de choque em geral.
