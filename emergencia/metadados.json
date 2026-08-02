@@ -62,7 +62,7 @@
     "gatilho": "Hipotensão com turgência jugular · pulso paradoxal · bulhas abafadas",
     "ordem": 6,
     "documento_slug": "tamponamento-cardiaco-e-pericardite-constritiva-diagnostico-e-manejo",
-    "fluxograma_slug": null,
+    "fluxograma_slug": "fluxograma-tamponamento-cardiaco",
     "relacionados": [],
     "review_status": "revisado"
   },
@@ -72,7 +72,7 @@
     "gatilho": "Taquicardia de QRS largo · TV sustentada · tempestade elétrica",
     "ordem": 7,
     "documento_slug": "arritmias-ventriculares-e-prevencao-de-morte-subita-cardiaca-esc-2022",
-    "fluxograma_slug": null,
+    "fluxograma_slug": "fluxograma-arritmia-ventricular-e-morte-subita",
     "relacionados": [
       "bradiarritmias-bloqueio-atrioventricular-e-tempestade-eletrica"
     ],
@@ -84,7 +84,7 @@
     "gatilho": "Bradicardia com hipoperfusão · BAV avançado · pausas sintomáticas",
     "ordem": 8,
     "documento_slug": "bradiarritmias-bloqueio-atrioventricular-e-tempestade-eletrica",
-    "fluxograma_slug": null,
+    "fluxograma_slug": "fluxograma-bradicardia-sintomatica-manejo-agudo",
     "relacionados": [],
     "review_status": "revisado"
   },
@@ -94,7 +94,7 @@
     "gatilho": "Taquicardia regular de QRS estreito · instabilidade hemodinâmica",
     "ordem": 9,
     "documento_slug": "taquicardia-supraventricular-diagnostico-e-manejo-esc-2019",
-    "fluxograma_slug": null,
+    "fluxograma_slug": "fluxograma-taquicardia-supraventricular-qrs-estreito-esc-2019",
     "relacionados": [],
     "review_status": "revisado"
   },
@@ -104,7 +104,7 @@
     "gatilho": "Pressão muito elevada COM lesão aguda de órgão-alvo",
     "ordem": 10,
     "documento_slug": "emergencia-hipertensiva-e-triagem-de-hipertensao-secundaria",
-    "fluxograma_slug": null,
+    "fluxograma_slug": "fluxograma-emergencia-hipertensiva",
     "relacionados": [],
     "review_status": "revisado"
   },
@@ -114,7 +114,7 @@
     "gatilho": "Dispneia · congestão · ortopneia · ganho de peso rápido",
     "ordem": 11,
     "documento_slug": "estrategia-diuretica-na-insuficiencia-cardiaca-aguda-descompensada",
-    "fluxograma_slug": null,
+    "fluxograma_slug": "fluxograma-insuficiencia-cardiaca-aguda-descompensada",
     "relacionados": [
       "vasodilatadores-endovenosos-na-ic-aguda-por-que-nesiritida-serelaxina-e-ularitida-falharam",
       "suporte-inotropico-na-ic-aguda-descompensada-optime-chf-e-o-sinal-na-etiologia-isquemica",
@@ -128,7 +128,7 @@
     "gatilho": "Hipotensão com VD dilatado · TEP · SDRA · HP descompensada",
     "ordem": 12,
     "documento_slug": "falencia-aguda-do-ventriculo-direito-cor-pulmonale-agudo-consenso-acvc-esc-2024",
-    "fluxograma_slug": null,
+    "fluxograma_slug": "fluxograma-falencia-aguda-de-ventriculo-direito",
     "relacionados": [
       "vasopressores-adjuvantes-no-choque-vasodilatador-vasst-vanish-e-athos-3",
       "classificacao-scai-de-estagios-do-choque-cardiogenico"
@@ -141,7 +141,7 @@
     "gatilho": "Hemorragia grave · anticoagulante em uso · necessidade de reversão",
     "ordem": 13,
     "documento_slug": "reversao-de-anticoagulante-em-sangramento-maior-idarucizumabe-e-andexanet-alfa",
-    "fluxograma_slug": null,
+    "fluxograma_slug": "fluxograma-sangramento-maior-em-paciente-anticoagulado",
     "relacionados": [
       "doac-no-tratamento-do-tev-agudo-amplify-einstein-pe-re-cover-e-hokusai-vte",
       "reiniciar-anticoagulacao-na-fa-apos-hemorragia-intracraniana-sostart-prestige-af-e-a-metanalise-cocroach"
@@ -154,7 +154,7 @@
     "gatilho": "Náusea · alteração visual · bradiarritmia ou arritmia sob digoxina",
     "ordem": 14,
     "documento_slug": "intoxicacao-digitalica-manejo-agudo-e-anticorpo-antidigoxina-fab",
-    "fluxograma_slug": null,
+    "fluxograma_slug": "fluxograma-intoxicacao-digitalica",
     "relacionados": [
       "digoxina-na-icfer-o-ensaio-dig-e-o-que-um-resultado-neutro-em-mortalidade-ainda-entrega",
       "digoxina-ou-betabloqueador-no-controle-de-frequencia-da-fa-permanente-rate-af"
@@ -167,7 +167,7 @@
     "gatilho": "Síncope ou TV polimórfica com QT prolongado · fármaco de risco",
     "ordem": 15,
     "documento_slug": "torsades-de-pointes-e-qt-longo-adquirido-escore-de-tisdale-e-manejo-agudo",
-    "fluxograma_slug": null,
+    "fluxograma_slug": "fluxograma-torsades-de-pointes-e-qt-longo-adquirido",
     "relacionados": [
       "canalopatias-sindrome-do-qt-longo-e-sindrome-de-brugada-diagnostico-e-manejo",
       "suprimir-extrassistole-nao-e-tratar-o-paciente-cast-e-sword"
@@ -193,7 +193,7 @@
     "gatilho": "Retorno de circulação espontânea · ECG sem supra de ST",
     "ordem": 17,
     "documento_slug": "coronariografia-imediata-apos-parada-cardiaca-sem-supra-de-st-coact-e-tomahawk",
-    "fluxograma_slug": null,
+    "fluxograma_slug": "fluxograma-cuidado-pos-parada-e-coronariografia",
     "relacionados": [
       "controle-de-temperatura-pos-parada-cardiorrespiratoria-ttm-e-ttm2",
       "rcp-extracorporea-ecpr-na-parada-refrataria-arrest-e-inception"
@@ -233,7 +233,7 @@
     "gatilho": "K elevado · alteração no ECG · bloqueio do SRAA em uso",
     "ordem": 20,
     "documento_slug": "hipercalemia-grave-e-intoxicacao-por-betabloqueador-ou-bloqueador-de-canal-de-calcio",
-    "fluxograma_slug": null,
+    "fluxograma_slug": "fluxograma-hipercalemia-grave",
     "relacionados": [
       "hipercalemia-como-barreira-ao-bloqueio-do-sraa-o-ensaio-diamond-com-patiromer",
       "elevacao-de-creatinina-ao-iniciar-ieca-ou-bra-quando-manter-e-quando-suspender"
@@ -246,7 +246,7 @@
     "gatilho": "Bradicardia com hipotensão refratária · ingestão de cardiotóxico",
     "ordem": 21,
     "documento_slug": "hipercalemia-grave-e-intoxicacao-por-betabloqueador-ou-bloqueador-de-canal-de-calcio",
-    "fluxograma_slug": null,
+    "fluxograma_slug": "fluxograma-intoxicacao-por-betabloqueador-ou-antagonista-de-calcio",
     "relacionados": [
       "choque-cardiogenico-diagnostico-e-manejo-com-drogas-vasoativas",
       "intoxicacao-digitalica-manejo-agudo-e-anticorpo-antidigoxina-fab"
@@ -272,7 +272,7 @@
     "gatilho": "PA ≥ 160/110 na gestante · convulsão · pré-eclâmpsia",
     "ordem": 23,
     "documento_slug": "hipertensao-grave-e-eclampsia-magpie-chips-e-a-escolha-do-anti-hipertensivo-oral",
-    "fluxograma_slug": null,
+    "fluxograma_slug": "fluxograma-eclampsia-e-hipertensao-grave-na-gestacao",
     "relacionados": [
       "pre-eclampsia-grave-hellp-e-arritmias-supraventriculares-na-gestacao",
       "cesarea-perimortem-a-regra-dos-4-minutos-e-a-revisao-de-katz"
@@ -285,7 +285,7 @@
     "gatilho": "Hemoglobina baixa com isquemia em curso",
     "ordem": 24,
     "documento_slug": "limiar-de-transfusao-no-cardiopata-mint-reality-e-trics-iii",
-    "fluxograma_slug": null,
+    "fluxograma_slug": "fluxograma-anemia-e-decisao-de-transfusao-no-infarto",
     "relacionados": [
       "reversao-de-anticoagulante-em-sangramento-maior-idarucizumabe-e-andexanet-alfa"
     ],
@@ -297,7 +297,7 @@
     "gatilho": "Dor torácica em paciente com uso recente de cocaína (intranasal, inalada ou intravenosa) — especialmente se jovem, com dor atípica e poucos fatores de risco coronariano clássicos",
     "ordem": 27,
     "documento_slug": "cocaina-e-risco-cardiovascular-vasoespasmo-coronariano-e-infarto",
-    "fluxograma_slug": null,
+    "fluxograma_slug": "fluxograma-dor-toracica-e-sca-por-vasoespasmo-coronariano-induzido-por-cocaina",
     "relacionados": [],
     "review_status": "revisado"
   },
@@ -307,7 +307,7 @@
     "gatilho": "Crise hipertensiva paroxística com taquicardia, sudorese e cefaleia, em paciente com feocromocitoma conhecido ou suspeito (massa adrenal) — inclui a crise precipitada por manipulação tumoral, indução anestésica ou início de betabloqueador antes do bloqueio alfa estabelecido",
     "ordem": 26,
     "documento_slug": "feocromocitoma-preparo-pre-operatorio-com-bloqueio-alfa-o-ensaio-prescript",
-    "fluxograma_slug": null,
+    "fluxograma_slug": "fluxograma-crise-hipertensiva-adrenergica-do-feocromocitoma",
     "relacionados": [],
     "review_status": "revisado"
   },
@@ -317,7 +317,7 @@
     "gatilho": "Paciente em uso de heparina ou enoxaparina (SCA, angioplastia, cirurgia cardíaca, profilaxia de TEV, ponte de anticoagulação) com queda de plaquetas — 5-14 dias após início, em horas se exposição prévia nos últimos 30 dias, ou 5-10 dias se só intraoperatória. Fase 'HIT suspeita': plaqueta caindo com teste laboratorial ainda pendente.",
     "ordem": 28,
     "documento_slug": "trombocitopenia-induzida-por-heparina-hit-escore-4ts-fases-e-anticoagulante-nao-heparinico",
-    "fluxograma_slug": null,
+    "fluxograma_slug": "fluxograma-queda-de-plaquetas-em-uso-de-heparina-suspeita-de-hit",
     "relacionados": [],
     "review_status": "revisado"
   },
@@ -327,7 +327,7 @@
     "gatilho": "Dor torácica aguda com uso recente (confirmado ou suspeito) de cocaína, sobretudo na primeira hora — risco de infarto elevado em até 23,7x nessa janela, mesmo em jovem sem fator de risco clássico. Evitar betabloqueador puro na fase aguda é ensinado na literatura, mas a fonte primária (AHA 2008) não foi lida na íntegra nesta sessão — VERIFICAÇÃO HUMANA NECESSÁRIA.",
     "ordem": 77,
     "documento_slug": "cocaina-e-metanfetamina-infarto-desencadeado-na-primeira-hora-e-cardiomiopatia-reversivel",
-    "fluxograma_slug": null,
+    "fluxograma_slug": "fluxograma-dor-toracica-aguda-com-uso-recente-confirmado-ou-suspeito-de-cocaina",
     "relacionados": [
       "cocaina-e-risco-cardiovascular-vasoespasmo-coronariano-e-infarto"
     ],
