@@ -10,7 +10,8 @@ source_refs: [
   "U.S. Food and Drug Administration. FDA Drug Safety Communication: FDA warns that SGLT2 inhibitors for diabetes may result in a serious condition of too much acid in the blood. 15 de maio de 2015 (revisão de dezembro de 2015)",
   "U.S. Food and Drug Administration. FDA Drug Safety Communication: FDA revises labels of SGLT2 inhibitors for diabetes to include warnings about too much acid in the blood and serious urinary tract infections. Atualização de 17 de março de 2020 (recomendação de suspensão perioperatória)",
   "Morace C, Lorello G, Bellone F, et al. Ketoacidosis and SGLT2 Inhibitors: A Narrative Review. Metabolites. 2024;14(5):264. PMID 38786741. DOI 10.3390/metabo14050264",
-  "Snel LIP, Li X, Jamaludin F, Siegelaar SE, Holleman F, Vriesendorp TM, DeVries JH, Hoekstra JBL, Preckel B, van Raalte DH, Hermanides J, Hulst AH. A Systematic Review and Expert Evaluation of Perioperative SGLT2 Inhibitor-Associated Ketoacidosis Case Reports. Acta Anaesthesiol Scand. 2026;70(6):e70254. PMID 42130079. DOI 10.1111/aas.70254"
+  "Snel LIP, Li X, Jamaludin F, Siegelaar SE, Holleman F, Vriesendorp TM, DeVries JH, Hoekstra JBL, Preckel B, van Raalte DH, Hermanides J, Hulst AH. A Systematic Review and Expert Evaluation of Perioperative SGLT2 Inhibitor-Associated Ketoacidosis Case Reports. Acta Anaesthesiol Scand. 2026;70(6):e70254. PMID 42130079. DOI 10.1111/aas.70254",
+  "Marino EC, Negretto LAF, Ribeiro RS, Momesso D, Feitosa ACR, Toyoshima MTK, Silva Junior JC, Vencio S, Lauria MW, Sá JR, Malerbi DA, Valente F, Leite SAO, Amaral DEO, Guimarães GMN, Leal PC, Lopes MB, Salles LCB, Azi LMTA, Fonseca AG, Carvalho LIM, Coelho FF, Halpern B, Valerio CM, Trujilho FR, Brandão ACA, Lyra R, Bertoluci M. Rastreamento e Controle da Hiperglicemia no Perioperatório - Posicionamento Conjunto da Sociedade Brasileira de Diabetes (SBD), Sociedade Brasileira de Anestesiologia (SBA) e Associação Brasileira para o Estudo da Obesidade e Síndrome Metabólica (ABESO). Diretriz Oficial da Sociedade Brasileira de Diabetes. 2025. DOI 10.29327/5660187.2025-10. ISBN 978-65-5941-367-6"
 ]
 ---
 
@@ -162,10 +163,29 @@ validação prospectiva. Isto não muda a recomendação regulatória vigente de
 pré-operatória; reforça que a suspensão **isolada**, sem vigilância clínica ativa no
 perioperatório, não elimina o risco.
 
-`VERIFICAÇÃO HUMANA NECESSÁRIA`: não foi localizada nesta sessão uma recomendação
-regulatória brasileira (Anvisa/bula nacional) equivalente à comunicação da FDA de
-17/03/2020 sobre suspensão perioperatória — as bulas nacionais dos iSGLT2 devem ser
-conferidas individualmente antes de se afirmar que reproduzem os mesmos prazos.
+**Posicionamento nacional equivalente.** A recomendação americana tem contrapartida
+brasileira explícita, com graduação própria: o posicionamento conjunto de 2025 da
+Sociedade Brasileira de Diabetes (SBD), da Sociedade Brasileira de Anestesiologia
+(SBA) e da Associação Brasileira para o Estudo da Obesidade e Síndrome Metabólica
+(ABESO) recomenda, na sua R6, a suspensão dos iSGLT2 **com antecedência de três a
+quatro dias antes de cirurgias de grande porte e procedimentos invasivos planejados
+que envolvam redução da ingestão calórica**, para minimizar o risco de CAD-E — Classe
+I, Nível B; nos demais casos (procedimentos de menor porte, sem redução relevante da
+ingesta), a manutenção da medicação deve ser avaliada individualmente pelo
+risco-benefício, não suspensa por rotina. O mesmo documento orienta especificamente
+para **cirurgia de emergência**, cenário em que a suspensão de 3-4 dias não é possível:
+suspender o iSGLT2 imediatamente e monitorizar a cetonemia capilar diariamente por
+3 a 5 dias após o procedimento, ou enquanto o paciente permanecer em jejum oral
+(Marino EC, Negretto LAF, Ribeiro RS, Momesso D, Feitosa ACR, Toyoshima MTK, et al.
+Rastreamento e Controle da Hiperglicemia no Perioperatório — Posicionamento Conjunto
+da Sociedade Brasileira de Diabetes (SBD), Sociedade Brasileira de Anestesiologia
+(SBA) e Associação Brasileira para o Estudo da Obesidade e Síndrome Metabólica
+(ABESO). Diretriz Oficial da Sociedade Brasileira de Diabetes, 2025. DOI
+10.29327/5660187.2025-10). Este não é um alerta regulatório da Anvisa nem texto de
+bula nacional — é a diretriz de sociedade médica brasileira mais próxima do tema, e
+o prazo que ela recomenda (3-4 dias) é compatível com o da FDA (3 dias para
+canagliflozina/dapagliflozina/empagliflozina, 4 para ertugliflozina). A bula
+brasileira de cada iSGLT2 individualmente não foi conferida nesta sessão.
 
 ## Conduta prática à beira do leito
 
