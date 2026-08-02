@@ -126,6 +126,11 @@ def _carregar_strings(z: zipfile.ZipFile) -> list[str]:
 def _num(v: str | None) -> float | None:
     if v is None:
         return None
+    # A planilha da CMED grava número em formato BR (vírgula decimal, ex.
+    # "36,56") mesmo dentro de célula numérica de verdade — medido em
+    # produção, 03/08/2026: sem essa troca, float() falha em toda célula
+    # preenchida e o preço vira None em silêncio para 100% das linhas.
+    v = v.strip().replace(".", "").replace(",", ".") if "," in v else v.strip()
     try:
         return round(float(v), 2)
     except ValueError:
@@ -171,7 +176,11 @@ def parsear_linhas(caminho_xlsx: Path):
                 "tarja": (valores.get(COL_TARJA) or "").strip() or None,
                 "tipo_produto": (valores.get(COL_TIPO_PRODUTO) or "").strip() or None,
                 "classe_terapeutica": (valores.get(COL_CLASSE_TERAPEUTICA) or "").strip() or None,
-                "restricao_hospitalar": bool((valores.get(COL_RESTRICAO_HOSPITALAR) or "").strip()),
+                # A coluna vem como texto "Sim"/"Não", não vazio/preenchido —
+                # bool() de string não vazia dava True pra "Não" também,
+                # marcando 100% das linhas como restrição hospitalar (medido
+                # em produção, 03/08/2026).
+                "restricao_hospitalar": (valores.get(COL_RESTRICAO_HOSPITALAR) or "").strip().lower() == "sim",
                 "pmc_por_aliquota": {
                     nome: _num(valores.get(idx)) for idx, nome in COLUNAS_PMC.items()
                 },
