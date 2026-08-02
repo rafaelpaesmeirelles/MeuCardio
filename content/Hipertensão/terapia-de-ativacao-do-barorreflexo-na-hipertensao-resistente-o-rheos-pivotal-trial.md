@@ -1,0 +1,44 @@
+---
+title: "Terapia de Ativação do Barorreflexo na Hipertensão Resistente: o Rheos Pivotal Trial"
+slug: terapia-de-ativacao-do-barorreflexo-na-hipertensao-resistente-o-rheos-pivotal-trial
+theme: "Hipertensão"
+kind: protocolo
+review_status: revisado
+source_refs: ["Bisognano JD, Bakris G, Nadim MK, et al. Baroreflex activation therapy lowers blood pressure in patients with resistant hypertension: results from the double-blind, randomized, placebo-controlled Rheos Pivotal Trial. J Am Coll Cardiol. 2011;58(7):765-773. DOI: 10.1016/j.jacc.2011.06.008. PMID: 21816315", "Bakris GL, Nadim MK, Haller H, Lovett EG, Schafer JE, Bisognano JD. Baroreflex activation therapy provides durable benefit in patients with resistant hypertension: results of long-term follow-up in the Rheos Pivotal Trial. J Am Soc Hypertens. 2012;6(2):152-158. DOI: 10.1016/j.jash.2012.01.003. PMID: 22341199"]
+---
+
+# Terapia de Ativação do Barorreflexo na Hipertensão Resistente: o Rheos Pivotal Trial
+
+## Definicao
+A terapia de ativação do barorreflexo (baroreflex activation therapy, BAT) é um dispositivo implantável que estimula eletricamente o seio carotídeo, ativando aferências barorreflexas que reduzem o tônus simpático central e aumentam o tônus vagal — mecanismo distinto da denervação renal, que atua na aferência simpática renal. O documento geral de hipertensão resistente desta biblioteca cita denervação renal e antagonistas da aldosterona; este documento cobre a BAT, cuja evidência pivotal é anterior e tem desenho de trial diferente — comparação contra placebo com dispositivo implantado nos dois grupos (double-blind), não sham de procedimento único.
+
+## O dispositivo de primeira geração e o desenho do rheos pivotal trial
+O sistema testado (Rheos, CVRx — precursor do atual Barostim Neo) exigia implante bilateral de eletrodos no seio carotídeo por dissecção cervical, procedimento cirúrgico mais invasivo que o implante unilateral por acesso percutâneo dos dispositivos de gerações posteriores. O Rheos Pivotal Trial foi um ensaio fase III, multicêntrico, randomizado, duplo-cego e controlado por placebo, em **265 pacientes com hipertensão resistente** (PAS em consultório ≥160 mmHg em uso de pelo menos 3 anti-hipertensivos, incluindo diurético). Todos os 265 pacientes foram implantados com o dispositivo; um mês depois, foram randomizados na proporção **2:1** entre ativação imediata da BAT (Grupo A) e ativação retardada após 6 meses (Grupo B) — desenho que mantém o cegamento clínico porque os dois grupos têm o dispositivo implantado e ligado ao sistema, diferindo apenas em quando a estimulação é ativada.
+
+## Os cinco desfechos coprimarios e o que o ensaio cumpriu
+O trial definia cinco desfechos coprimários — taxa de respondedor agudo (queda de PAS ≥10 mmHg) aos 6 meses, taxa de resposta sustentada aos 12 meses, segurança do procedimento, segurança da BAT e segurança do dispositivo. **O desfecho de respondedor agudo aos 6 meses não foi atingido** — a proporção de pacientes com queda de PAS ≥10 mmHg não diferiu significativamente entre os grupos nesse ponto do desenho pré-especificado. O ensaio **cumpriu os desfechos de eficácia sustentada, segurança da BAT e segurança do dispositivo**, mas não cumpriu o desfecho de segurança do procedimento. Ou seja: de cinco desfechos coprimários, três foram atingidos e dois não — resultado misto, não um sucesso limpo, e é essa mistura que explica por que o dispositivo nunca obteve aprovação plena da FDA para hipertensão resistente (ver seção regulatória abaixo).
+
+## Resultados de pressao arterial
+Numa análise de meta de pressão (não o desfecho coprimário de "respondedor" propriamente dito), a proporção de pacientes que atingiu **PAS ≤140 mmHg aos 6 meses** foi **42% no Grupo A (BAT imediata) vs. 24% no Grupo B (BAT ainda desligada)**, diferença estatisticamente significativa (p=0,005) — a favor da ativação imediata. Aos **12 meses**, quando o Grupo B já havia recebido a ativação do dispositivo a partir do 6º mês (desenho crossover), a diferença desapareceu: **53% no Grupo A vs. 51% no Grupo B atingiram PAS ≤140 mmHg (p=0,70)** — os dois grupos convergem porque, nesse ponto, ambos estão sob estimulação ativa. Essa convergência é o próprio ensaio demonstrando consistência interna: o efeito aparece quando o dispositivo está ligado, em qualquer um dos dois grupos.
+
+## Seguranca aos 30 dias e a durante o seguimento
+A segurança do procedimento é o ponto fraco do dispositivo de primeira geração, refletindo a dissecção cervical bilateral necessária ao implante. Aos 30 dias: **4,8% de lesão nervosa permanente** (rouquidão, disfagia, dormência facial), **4,4% de lesão nervosa transitória**, **4,8% de complicações cirúrgicas gerais** e **2,6% de queixas respiratórias**. A liberdade de eventos adversos relacionados à estimulação do barorreflexo foi de **92% no Grupo A vs. 89% no Grupo B**, e a liberdade de eventos adversos relacionados ao dispositivo aos 12 meses foi de **87% nos dois grupos combinados** — números que sustentam os desfechos coprimários de segurança da BAT e do dispositivo (cumpridos), distintos do desfecho de segurança do procedimento (não cumprido, por causa da taxa de lesão nervosa do implante cirúrgico em si).
+
+## Seguimento de longo prazo publicado em 2012
+A publicação de seguimento (Bakris et al., 2012) ampliou a coorte para **322 pacientes implantados** (incluindo os do braço pivotal e pacientes adicionais de acompanhamento aberto, não randomizado) e acompanhou resposta e segurança por **22 a 53 meses**. Usando o critério de respondedor clinicamente significativo definido pela FDA, **76% (n=245) foram classificados como respondedores**, com mais **10% indeterminados**. Entre os respondedores de longo prazo, a queda média de pressão foi de **35/16 mmHg**, e **55% dos respondedores atingiram a meta pressórica** (<140 mmHg, ou <130 mmHg em diabetes ou doença renal crônica). O uso de medicação anti-hipertensiva caiu ao final da fase randomizada e permaneceu reduzido durante o seguimento, e a pressão arterial dos pacientes ativos manteve-se estável do fim da fase randomizada até o fim do seguimento de longo prazo.
+
+## Situacao regulatoria — armadilha de confundir com o dispositivo atual
+O sucessor do Rheos, o **Barostim Neo**, é hoje **aprovado pela FDA nos Estados Unidos para insuficiência cardíaca com fração de ejeção reduzida** (indicação sustentada pelo ensaio BeAT-HF, coberto em documento próprio de Insuficiência cardíaca/Dispositivos desta biblioteca) — **não para hipertensão resistente**. Para hipertensão, a situação regulatória nos EUA é mais restrita: a FDA concedeu em dezembro de 2014 uma **Humanitarian Device Exemption (HDE)**, via de aprovação distinta da aprovação plena (PMA), destinada a populações de uso limitado, cobrindo pacientes definidos como respondedores ao sistema Rheos original — não uma aprovação ampla para hipertensão resistente em geral. Na Europa, o Barostim Neo tem **marcação CE tanto para insuficiência cardíaca quanto para hipertensão resistente**. **Confundir a aprovação para IC (ampla, por PMA) com a situação para hipertensão (HDE, limitada) é o erro mais provável de quem conhece o dispositivo só pelo BeAT-HF.**
+
+## Sintese pratica
+- BAT por ativação do barorreflexo carotídeo é mecanismo distinto de denervação renal — reduz tônus simpático central via aferência barorreflexa, não desnerva o rim
+- O Rheos Pivotal Trial (n=265) foi positivo para PAS ≤140 mmHg aos 6 meses com BAT ativa (42% vs. 24%, p=0,005), mas **não atingiu o desfecho coprimário de respondedor agudo** nem o desfecho coprimário de **segurança do procedimento** — resultado misto, três de cinco desfechos coprimários cumpridos
+- No seguimento de longo prazo (22-53 meses, n=322), 76% foram respondedores clinicamente significativos, com queda média de 35/16 mmHg entre os respondedores
+- A segurança do implante cirúrgico de primeira geração tem custo real: 4,8% de lesão nervosa permanente aos 30 dias — dado que qualquer discussão sobre indicar o procedimento precisa incluir
+- Nos EUA, a situação regulatória para hipertensão é de Humanitarian Device Exemption, não aprovação plena — mais restrita que a aprovação para insuficiência cardíaca do dispositivo atual
+
+## Armadilhas clinicas
+- Apresentar o Rheos Pivotal Trial como sucesso pleno sem mencionar que 2 dos 5 desfechos coprimários (respondedor agudo aos 6 meses e segurança do procedimento) não foram atingidos
+- Confundir a aprovação da FDA do Barostim Neo para insuficiência cardíaca (PMA, ampla) com a situação regulatória para hipertensão resistente nos EUA (HDE, limitada) — são vias de aprovação e populações-alvo diferentes
+- Omitir a taxa de lesão nervosa permanente (4,8% aos 30 dias) ao discutir a BAT como opção para hipertensão resistente refratária
+- Tratar BAT e denervação renal como intervenções equivalentes ou intercambiáveis — mecanismos, dispositivos e corpo de evidência são distintos
