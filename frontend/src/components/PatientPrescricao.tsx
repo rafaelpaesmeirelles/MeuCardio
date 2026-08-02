@@ -1,15 +1,28 @@
 import CabecalhoDocumento from "./CabecalhoDocumento";
 import { useEffect, useState } from "react";
 import { api } from "../lib/api";
+import { useAuth } from "../lib/auth";
 
 type ItemDrug = {
   drug_name: string; presentation: string; posology: string; orientation: string;
-  brand_name?: string; manufacturer?: string;
+  // Tarefa B (CLAUDE.md, 02/08/2026) — escolha de marca via CMED, sempre
+  // opcional: o genérico (sem estes seis campos) continua sendo o padrão.
+  brand_name?: string; manufacturer?: string; ggrem?: string;
+  pmc_snapshot?: number; uf?: string; cmed_version?: string;
 };
 type Prescricao = { id: number; items: ItemDrug[]; notes: string | null; created_at: string };
-type ApresentacaoComercial = {
-  brand_name: string; manufacturer: string; form: string; dosage: string;
-  pack_sizes: number[]; generic_available: boolean;
+// GET /drugs/{slug}/apresentacoes?uf=XX (Tarefa A/B) — marca, laboratório,
+// apresentação e PMC (teto CMED) pra escolha explícita durante a digitação.
+// Mesma forma usada em Receituario.tsx — não é o `commercial_presentations`
+// estático de `Drug` (esse é curado por admin à parte, e quase sempre vazio).
+type PrecoCmed = { valor: number | null; rotulo: string };
+type ApresentacaoCmed = {
+  produto: string; laboratorio: string; apresentacao: string; ggrem: string;
+  restricao_hospitalar: boolean; preco: PrecoCmed;
+};
+type RespostaApresentacoes = {
+  uf: string | null; cmed_publicado_em: string | null;
+  apresentacoes: ApresentacaoCmed[]; aviso: string | null;
 };
 type SugestaoFarmaco = { slug: string; generic_name: string };
 
@@ -21,8 +34,9 @@ export default function PatientPrescricao({ patientId }: { patientId: number }) 
   const [notas, setNotas] = useState("");
   const [salvando, setSalvando] = useState(false);
   const [impressao, setImpressao] = useState<any | null>(null);
-  const [escolhendo, setEscolhendo] = useState<{ nome: string; opcoes: ApresentacaoComercial[] } | null>(null);
+  const [escolhendo, setEscolhendo] = useState<{ nome: string; resp: RespostaApresentacoes } | null>(null);
 
+  const { usuario } = useAuth();
   const recarregar = () => api.get<Prescricao[]>(`/prescriptions/patient/${patientId}`).then(setHistorico);
   useEffect(() => { recarregar(); }, [patientId]);
 
@@ -37,20 +51,23 @@ export default function PatientPrescricao({ patientId }: { patientId: number }) 
   async function escolherMedicamento(slug: string, nome: string) {
     setBusca("");
     setSugestoes([]);
-    const detalhe = await api.get<{ commercial_presentations: ApresentacaoComercial[] }>(`/drugs/${slug}`);
-    if (detalhe.commercial_presentations && detalhe.commercial_presentations.length > 0) {
-      setEscolhendo({ nome, opcoes: detalhe.commercial_presentations });
+    const uf = usuario?.council_state;
+    const resp = await api.get<RespostaApresentacoes>(`/drugs/${slug}/apresentacoes${uf ? `?uf=${uf}` : ""}`);
+    if (resp.apresentacoes.length > 0) {
+      setEscolhendo({ nome, resp });
     } else {
       adicionarItem(nome);
     }
   }
 
-  function adicionarComApresentacao(nome: string, ap: ApresentacaoComercial, caixa: number) {
+  function adicionarComApresentacao(nome: string, ap: ApresentacaoCmed, resp: RespostaApresentacoes) {
     setItens([...itens, {
       drug_name: nome,
-      presentation: `${ap.brand_name} — ${ap.dosage}, caixa com ${caixa} ${ap.form}(s)`,
+      presentation: `${ap.produto} — ${ap.apresentacao}`,
       posology: "", orientation: "",
-      brand_name: ap.brand_name, manufacturer: ap.manufacturer,
+      brand_name: ap.produto, manufacturer: ap.laboratorio, ggrem: ap.ggrem,
+      pmc_snapshot: ap.preco.valor ?? undefined,
+      uf: resp.uf ?? undefined, cmed_version: resp.cmed_publicado_em ?? undefined,
     }]);
     setEscolhendo(null);
   }
@@ -115,27 +132,34 @@ export default function PatientPrescricao({ patientId }: { patientId: number }) 
       {escolhendo && (
         <div className="cartao" style={{ marginTop: "0.5rem" }}>
           <p style={{ margin: 0, fontSize: "0.88rem" }}>
-            <strong>{escolhendo.nome}</strong> — escolha a apresentação:
+            <strong>{escolhendo.nome}</strong> — escolha a marca (opcional):
           </p>
-          {escolhendo.opcoes.map((ap, i) => (
-            <div key={i} style={{ marginTop: "0.5rem", borderTop: "1px solid var(--borda)", paddingTop: "0.4rem" }}>
-              <p style={{ margin: 0, fontSize: "0.86rem" }}>
-                <strong>{ap.brand_name}</strong> — {ap.manufacturer} — {ap.dosage}
-                {ap.generic_available && <span className="eyebrow"> (tem genérico)</span>}
-              </p>
-              <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginTop: "0.3rem" }}>
-                {ap.pack_sizes.map((caixa) => (
-                  <button key={caixa} className="botao botao--secundario" style={{ padding: "0.25rem 0.6rem", fontSize: "0.82rem" }}
-                          onClick={() => adicionarComApresentacao(escolhendo.nome, ap, caixa)}>
-                    Caixa com {caixa}
-                  </button>
-                ))}
-              </div>
-            </div>
-          ))}
+          <div style={{ maxHeight: 180, overflowY: "auto", marginTop: "0.4rem" }}>
+            {escolhendo.resp.apresentacoes.map((ap, i) => (
+              <button key={i} type="button"
+                      style={{ display: "block", width: "100%", textAlign: "left", padding: "0.3rem 0", border: "none", borderTop: i > 0 ? "1px solid var(--borda)" : "none", background: "transparent", cursor: "pointer" }}
+                      onClick={() => adicionarComApresentacao(escolhendo.nome, ap, escolhendo.resp)}>
+                <p style={{ margin: 0, fontSize: "0.86rem" }}>
+                  <strong>{ap.produto}</strong> — {ap.laboratorio}
+                  <br />
+                  <span style={{ color: "var(--texto-secundario, #666)" }}>
+                    {ap.apresentacao} · {ap.preco.valor != null
+                      ? ap.preco.valor.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })
+                      : "sem preço publicado"}
+                  </span>
+                </p>
+              </button>
+            ))}
+          </div>
+          {escolhendo.resp.uf && (
+            <p className="eyebrow" style={{ margin: "0.2rem 0 0" }}>
+              Preço de referência para {escolhendo.resp.uf} — teto CMED (PMC), lista {escolhendo.resp.cmed_publicado_em}.
+              Nunca é o preço final de farmácia, que costuma ser menor.
+            </p>
+          )}
           <button className="botao botao--secundario" style={{ marginTop: "0.6rem", fontSize: "0.82rem" }}
                   onClick={() => { adicionarItem(escolhendo.nome); setEscolhendo(null); }}>
-            Preencher manualmente em vez disso
+            Usar genérico (sem marca)
           </button>
         </div>
       )}

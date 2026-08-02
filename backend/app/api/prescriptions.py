@@ -15,6 +15,14 @@ class ItemPrescricao(BaseModel):
     presentation: str = ""
     posology: str
     orientation: str = ""
+    # Tarefa B (CLAUDE.md, 02/08/2026) — marca escolhida via CMED em
+    # /drugs/{slug}/apresentacoes, sempre opcional (genérico é o padrão).
+    brand_name: str | None = None
+    manufacturer: str | None = None
+    ggrem: str | None = None
+    pmc_snapshot: float | None = None
+    uf: str | None = None
+    cmed_version: str | None = None
 
 
 class PrescricaoIn(BaseModel):
