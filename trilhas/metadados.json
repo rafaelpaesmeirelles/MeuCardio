@@ -21125,5 +21125,46 @@
         "por_que": "Fecha com a valvopatia historicamente mais negligenciada: insuficiência tricúspide grave tratada como 'mera consequência' da doença de base, quando o reparo percutâneo borda a borda muda qualidade de vida e reinternação mesmo no paciente idoso frágil considerado inoperável — inclusive no octogenário, onde a idade isolada não deveria ser o único critério para negar o procedimento."
       }
     ]
+  },
+  {
+    "slug": "trilha-cardiologia-geriatrica-sono-cognicao-e-avaliacao-perioperatoria",
+    "titulo": "Cardiologia geriátrica: apneia do sono, comprometimento cognitivo e avaliação pré-operatória — comorbidades que mudam a decisão além da idade isolada",
+    "tema": "Cardiologia geriátrica",
+    "objetivo": "Sair sabendo reconhecer três comorbidades subdiagnosticadas e frequentemente mal interpretadas no muito idoso — apneia obstrutiva do sono, comprometimento cognitivo e risco perioperatório modificado pela fragilidade — e como cada uma exige calibrar a decisão cardiovascular por um eixo diferente da idade cronológica isolada: a AOS pelo padrão etário de risco e pelos limites reais do benefício do CPAP, o comprometimento cognitivo pela estrutura de suporte necessária à segurança terapêutica (não pela negação do tratamento), e a avaliação pré-operatória pela perda de precisão das ferramentas convencionais nessa faixa etária.",
+    "nivel": "avançado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "apneia-obstrutiva-do-sono-no-idoso-cardiopata-prevalencia-risco-modificado-pela-idade-e-limites-do-cpap",
+        "por_que": "Estabelece que a apneia obstrutiva do sono é achado frequente e subdiagnosticado no idoso, que sua associação com doença coronariana incidente enfraquece (não fortalece) com o avançar da idade, e que o único ensaio randomizado dedicado a essa faixa etária (PREDICT) mostrou benefício sobre sonolência sem sinal cardiovascular — a base para não prometer ao idoso um benefício que a evidência não sustenta."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "comprometimento-cognitivo-e-demencia-como-modificador-de-decisao-cardiovascular",
+        "por_que": "Muda o eixo de análise de um distúrbio específico (sono) para um domínio geriátrico transversal: como o comprometimento cognitivo, rastreado ou já estabelecido, deveria modificar decisões cardiovasculares de rotina — em especial a anticoagulação na fibrilação atrial — sem que a resposta correta seja negar o tratamento."
+      },
+      {
+        "ordem": 3,
+        "item_type": "estudo",
+        "item_slug": "sprint-mind-controle-pressorico-intensivo-e-risco-de-demencia-no-idoso",
+        "por_que": "Aprofunda, com o ensaio randomizado citado na etapa anterior, até onde vai a evidência de que uma intervenção cardiovascular de rotina (meta pressórica intensiva) modifica risco cognitivo — e onde a interrupção precoce do estudo deixou a pergunta mais importante (demência isolada) sem poder estatístico suficiente, distinção que precisa ser comunicada com precisão ao paciente e à família."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "avaliacao-pre-operatoria-cardiovascular-no-muito-idoso-para-cirurgia-nao-cardiaca",
+        "por_que": "Aplica o mesmo princípio de individualização geriátrica — já visto para sono e cognição — ao momento de decisão cirúrgica: onde os escores de risco convencionais perdem precisão no muito idoso, e o que precisa ser avaliado além deles antes de indicar ou contraindicar uma cirurgia não cardíaca."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "fragilidade-como-modificador-de-decisao-cardiovascular",
+        "por_que": "Fecha a trilha generalizando o fio condutor das quatro etapas anteriores: fragilidade e comorbidades geriátricas específicas — não a idade cronológica isolada — são o eixo correto de decisão em TAVI, cirurgia valvar e revascularização, do mesmo modo que já se mostrou verdadeiro para apneia do sono, cognição e risco perioperatório."
+      }
+    ],
+    "review_status": "revisado",
+    "revisao": "Curadoria verificada pela sessão CORVIA (tema Cardiologia pediátrica/geriátrica/congênitas) em 02/08/2026. As cinco etapas foram conferidas contra o banco de produção (docker compose exec backend) antes de escrever: os quatro documentos e o estudo existem com os slugs exatos usados aqui e estão published=True. A ordem e a justificativa de cada etapa foram redigidas depois de ler o conteúdo de cada item, não antes — o fio condutor (comorbidade específica > eixo de decisão que ela desloca, sempre além da idade isolada) é o que os cinco itens já defendem individualmente, e a trilha só o torna explícito como sequência."
   }
 ]

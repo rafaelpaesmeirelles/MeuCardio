@@ -4680,5 +4680,154 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "perfil-lipidico-pediatrico-rastreio-universal",
+    "name": "Perfil lipídico pediátrico — rastreio universal por idade",
+    "category": "laboratorial",
+    "theme": "Cardiologia pediátrica",
+    "what_it_measures": "Dosagem do perfil lipídico — colesterol total (CT), LDL-colesterol (LDL-C), HDL-colesterol (HDL-C), triglicerídeos (TG) e colesterol não-HDL (não-HDL-C = CT − HDL-C) — em crianças e adolescentes, como rastreio POPULACIONAL, independentemente da presença de fatores de risco individuais. O colesterol não-HDL pode ser calculado em amostra não jejum, o que viabiliza o rastreio em consulta de rotina sem a logística do jejum.",
+    "reference_range": "Cortes do painel de especialistas do NHLBI/AAP (2011), em mg/dL, aplicáveis à faixa pediátrica (não aos valores de adulto): Colesterol total — aceitável <170, limítrofe 170-199, elevado ≥200. LDL-C — aceitável <110, limítrofe 110-129, elevado ≥130. Não-HDL-C — aceitável <120, limítrofe 120-144, elevado ≥145. HDL-C — baixo <40, limítrofe 40-45, aceitável >45. Triglicerídeos, 0-9 anos — aceitável <75, limítrofe 75-99, elevado ≥100; 10-19 anos — aceitável <90, limítrofe 90-129, elevado ≥130. Os cortes de elevado e limítrofe correspondem, respectivamente, aos percentis 95 e 75 da distribuição pediátrica de referência, e o corte baixo de HDL-C ao percentil 10 — não são os mesmos números usados para adultos.",
+    "indications": "Painel de especialistas do NHLBI, endossado pela American Academy of Pediatrics (Expert Panel on Integrated Guidelines for Cardiovascular Health and Risk Reduction in Children and Adolescents, 2011): RASTREIO UNIVERSAL (toda criança, independentemente de fatores de risco) recomendado uma vez entre 9 e 11 anos e novamente entre 17 e 21 anos, com colesterol não-HDL não jejum ou painel lipídico em jejum (FLP). Nas faixas 0-9 anos e 12-16 anos o rastreio é SELETIVO — só diante de história familiar positiva para doença cardiovascular precoce ou dislipidemia em um dos pais, ou de outro fator de risco/condição de alto risco na própria criança (obesidade, diabetes, hipertensão, doença renal crônica, cardiopatia congênita, uso crônico de corticosteroide, entre outras). A lógica das duas janelas de rastreio universal (9-11 e 17-21 anos) é evitar a puberdade (2-10 anos aproximadamente), período em que o colesterol fisiologicamente cai e um rastreio isolado nesse intervalo tem mais falso-negativo.",
+    "interpretation": "Valor no corte de \"elevado\" em amostra única não fecha diagnóstico de dislipidemia — a recomendação do próprio painel é repetir o perfil lipídico em jejum antes de rotular a criança, porque há variabilidade biológica e laboratorial relevante. O objetivo primário do rastreio universal aos 9-11 anos é identificar hipercolesterolemia familiar (HF) e outras dislipidemias genéticas antes do primeiro evento coronariano — a HF heterozigótica tem prevalência populacional estimada em torno de 1:250 a 1:500 e é tratável, mas a maioria dos casos permanece sem diagnóstico até a vida adulta na ausência de rastreio ativo. Colesterol não-HDL elevado tem desempenho equivalente ao LDL-C calculado para triagem inicial e evita o jejum, mas LDL-C (calculado ou dosado diretamente) continua sendo o parâmetro usado para decisão terapêutica e para os critérios fenotípicos de HF.",
+    "limitations": "O rastreio universal em crianças é estratégia com custo-efetividade debatida e adotada de forma não unânime entre sociedades — a US Preventive Services Task Force, por exemplo, não endossou a mesma recomendação de universalidade com o mesmo grau de certeza que o NHLBI/AAP, por insuficiência de evidência direta de que o rastreio na infância reduza desfechos cardiovasculares na vida adulta (a cadeia de evidência é indireta, apoiada em modelos de risco cumulativo). Um perfil lipídico levemente alterado isoladamente NÃO diagnostica hipercolesterolemia familiar — exige correlação com critérios fenotípicos (LDL-C muito elevado, história familiar de doença coronariana precoce) e, quando indicado, teste genético confirmatório (ver exame correspondente nesta biblioteca). Variação por diagnóstico laboratorial, tempo de jejum quando usado, e por doença aguda concomitante (lipídios caem transitoriamente em infecção/inflamação) podem confundir a interpretação de uma dosagem isolada.",
+    "source_refs": [
+      "Expert Panel on Integrated Guidelines for Cardiovascular Health and Risk Reduction in Children and Adolescents; National Heart, Lung, and Blood Institute. Expert panel on integrated guidelines for cardiovascular health and risk reduction in children and adolescents: summary report. Pediatrics. 2011;128(Suppl 5):S213-256. PMID: 22084329. PMCID: PMC4536582. DOI: 10.1542/peds.2009-2107C — acesso aberto, texto integral lido para os cortes numéricos e a lógica das duas janelas de rastreio universal."
+    ],
+    "tags": [
+      "perfil lipidico pediatrico",
+      "rastreio universal",
+      "dislipidemia infantil",
+      "colesterol nao-hdl",
+      "hipercolesterolemia familiar",
+      "nhlbi"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "teste-genetico-para-dislipidemia-familiar-em-criancas",
+    "name": "Teste genético em dislipidemia familiar (hipercolesterolemia familiar) na infância",
+    "category": "laboratorial",
+    "theme": "Cardiologia pediátrica",
+    "what_it_measures": "Sequenciamento dos genes associados à hipercolesterolemia familiar (HF) monogênica autossômica dominante — principalmente LDLR (receptor de LDL, causa mais comum, com mais de 1.700 mutações descritas), APOB (apolipoproteína B, ~5% dos casos) e PCSK9 (proprotéina convertase subtilisina/kexina tipo 9, <1% dos casos, mutação de ganho de função) — e, na forma recessiva rara, LDLRAP1. Identifica a variante causal específica na criança index e viabiliza o rastreio em cascata dirigido dos familiares de primeiro grau.",
+    "reference_range": "Não se aplica corte numérico — resultado qualitativo (variante patogênica identificada / não identificada / variante de significado incerto). Em crianças que preenchem critério fenotípico de HF heterozigótica com padrão de herança autossômico dominante na família, uma mutação funcional é identificada em cerca de 95% dos casos pelo sequenciamento dirigido desses genes.",
+    "indications": "Consenso da European Atherosclerosis Society (Wiegman et al., 2015) para HF em crianças e adolescentes: teste genético recomendado quando há suspeita fenotípica de HF heterozigótica — LDL-C ≥ 190 mg/dL (5 mmol/L) isoladamente, ou ≥ 160 mg/dL (4 mmol/L) associado a história familiar de doença coronariana precoce e/ou colesterol muito elevado em um dos pais — e a partir dos 5 anos de idade (mais cedo se houver suspeita de forma homozigótica, que deve ser investigada assim que suspeitada, em qualquer idade). Quando um dos pais já tem mutação identificada, o corte fenotípico para testar o filho cai para LDL-C ≥ 130 mg/dL (3,5 mmol/L). Uma vez identificada a variante no caso index, o teste genético dirigido (só da variante já conhecida) deve ser oferecido a todos os familiares de primeiro grau — é essa etapa, o rastreio em cascata, que dá ao teste genético seu maior rendimento populacional.",
+    "interpretation": "O teste genético positivo confirma o diagnóstico com sensibilidade e especificidade teóricas de 100% nos familiares de primeiro grau testados por variante já conhecida na família — contra 70-85% de sensibilidade/especificidade do diagnóstico só por critério clínico-fenotípico (Simon Broome, Dutch Lipid Clinic Network ou equivalente pediátrico). Resultado genético negativo NÃO exclui HF: entre 5% e 30% dos casos com fenótipo clássico de HF não têm mutação identificável nos genes monogênicos conhecidos — parte é causa poligênica (soma de múltiplos polimorfismos comuns, cada um de pequeno efeito) e parte permanece de causa desconhecida. Nesses casos, a decisão terapêutica deve seguir o fenótipo (LDL-C e história familiar), não o resultado genético isolado.",
+    "limitations": "O teste não deve ser usado como rastreio populacional de primeira linha — é confirmatório, aplicado depois que o perfil lipídico (rastreio universal) e a história familiar já levantaram a suspeita fenotípica. Resultado negativo não tranquiliza sozinho quando o fenótipo é fortemente sugestivo, pelo motivo já descrito (mutação em gene não testado, causa poligênica). Variante de significado incerto (VUS) é achado frequente em sequenciamento amplo e não deve ser comunicada à família como diagnóstico definitivo nem usada para excluir parentes do rastreio em cascata. O acesso ao teste genético no Brasil é heterogêneo, com custo relevante fora de centros de referência em lipidologia — a decisão terapêutica (estatina a partir de 8-10 anos na forma heterozigótica) não deve ficar condicionada à disponibilidade do teste, que é ferramenta de confirmação e de rastreio familiar, não pré-requisito para tratar.",
+    "source_refs": [
+      "Wiegman A, Gidding SS, Watts GF, et al; European Atherosclerosis Society Consensus Panel. Familial hypercholesterolaemia in children and adolescents: gaining decades of life by optimizing detection and treatment. Eur Heart J. 2015;36(36):2425-2437. PMID: 26009596. PMCID: PMC4576143. DOI: 10.1093/eurheartj/ehv157 — acesso aberto, texto integral lido para os genes testados, os cortes fenotípicos de LDL-C e a taxa de detecção de mutação."
+    ],
+    "tags": [
+      "teste genetico",
+      "hipercolesterolemia familiar",
+      "dislipidemia familiar",
+      "ldlr",
+      "rastreio em cascata",
+      "pediatria"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "monitor-de-eventos-no-idoso-com-palpitacao",
+    "name": "Monitor de eventos (Holter de eventos / gravador de alça externo) no idoso com palpitação",
+    "category": "metodo_grafico",
+    "theme": "Cardiologia geriátrica",
+    "what_it_measures": "Registro eletrocardiográfico ambulatorial prolongado (dias a semanas), por dispositivo externo ativado pelo próprio paciente no momento do sintoma (gravador de eventos clássico) e/ou por detecção automática contínua com memória em alça (loop recorder externo), ou por adesivo de eletrodo único de uso contínuo (patch monitor). Diferente do Holter convencional de 24-48h, que registra continuamente por período fixo curto, o monitor de eventos estende a janela de captação para aumentar a chance de correlacionar o sintoma (palpitação) com o ritmo cardíaco no exato momento em que ele ocorre — a chamada correlação sintoma-ritmo.",
+    "reference_range": "Não se aplica valor de referência numérico — o resultado é a presença ou ausência de correlação temporal entre o sintoma relatado (diário do paciente ou botão de evento) e um achado eletrocardiográfico concomitante (extrassístole, taquiarritmia supraventricular ou ventricular, pausa, bloqueio atrioventricular). Ausência de sintomas durante o período de uso também é resultado válido — reduz, mas não zera, a probabilidade de arritmia como causa.",
+    "indications": "Consenso ISHNE-HRS de 2017 sobre monitorização eletrocardiográfica ambulatorial (Steinberg et al., Heart Rhythm): indicado quando a palpitação é intermitente e pouco frequente a ponto de ter baixa chance de ser capturada num Holter de 24-48h — situação comum no idoso, em que a palpitação pode ser sintoma isolado de fibrilação atrial paroxística, doença do nó sinusal, bloqueio atrioventricular intermitente ou taquicardia supraventricular. A escolha entre gravador de eventos ativado pelo paciente, patch adesivo contínuo e monitor de alça implantável depende da frequência esperada do sintoma: quanto mais espaçado o sintoma, mais longa a janela de monitorização necessária. Estudo comparativo direto (Barrett et al., 2014) em 146 pacientes monitorizados simultaneamente com Holter de 24h e patch adesivo de 14 dias mostrou que o patch detectou 96 eventos arrítmicos contra 61 do Holter no mesmo período de uso total (p<0,001) — o ganho vem sobretudo da duração maior de registro, não de superioridade técnica do sensor.",
+    "interpretation": "Correlação positiva (sintoma relatado coincidindo com arritmia documentada) tem alto valor diagnóstico e orienta diretamente a conduta — por exemplo, anticoagulação e controle de frequência/ritmo se a palpitação corresponder a fibrilação atrial. Diário de sintomas sem qualquer alteração de ritmo correspondente é igualmente informativo: torna causa arrítmica menos provável e direciona a investigação para diagnósticos diferenciais não cardíacos da palpitação (ansiedade, hipertireoidismo, anemia, efeito de medicação). No idoso especificamente, achados incidentais assintomáticos durante o período de uso — extrassistolia frequente, pausas sinusais curtas, episódios curtos de FA subclínica — são comuns e nem sempre correspondem ao sintoma que motivou o exame; a decisão terapêutica deve se apoiar na correlação temporal, não em qualquer anormalidade encontrada isoladamente.",
+    "limitations": "Depende de adesão do paciente ao diário de sintomas e, nos modelos ativados manualmente, da destreza para acionar o dispositivo no momento certo — limitação relevante em idosos com deficit cognitivo, tremor ou limitação de destreza manual, situação em que o patch de registro contínuo (sem necessidade de ativação) tende a ter melhor rendimento prático. Irritação cutânea pelo adesivo é mais frequente em pele fina e frágil do idoso, podendo levar à remoção precoce do dispositivo antes do fim da janela planejada de monitorização. Mesmo com maior duração, monitor de eventos externo não substitui o monitor de alça implantável quando o sintoma é muito espaçado (semanas a meses de intervalo) — nesse cenário, o rendimento diagnóstico de qualquer monitor externo, por mais prolongado, permanece baixo.",
+    "source_refs": [
+      "Steinberg JS, Varma N, Cygankiewicz I, et al. 2017 ISHNE-HRS expert consensus statement on ambulatory ECG and external cardiac monitoring/telemetry. Heart Rhythm. 2017;14(7):e55-e96. PMID: 28495301. DOI: 10.1016/j.hrthm.2017.03.038 — duas errata publicadas (Heart Rhythm. 2018;15(5):789 e 15(8):1276), não lidas nesta redação, declaradas por transparência.",
+      "Barrett PM, Komatireddy R, Haaser S, et al. Comparison of 24-hour Holter monitoring with 14-day novel adhesive patch electrocardiographic monitoring. Am J Med. 2014;127(1):95.e11-95.e17. PMID: 24384108. PMCID: PMC3882198. DOI: 10.1016/j.amjmed.2013.10.003 — acesso aberto, números de eventos detectados conferidos no resumo estruturado."
+    ],
+    "tags": [
+      "monitor de eventos",
+      "holter de eventos",
+      "palpitacao",
+      "loop recorder externo",
+      "patch monitor",
+      "idoso",
+      "correlacao sintoma-ritmo"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "albumina-serica-e-gnri-no-idoso-com-insuficiencia-cardiaca",
+    "name": "Albumina sérica e índice de risco nutricional geriátrico (GNRI) no idoso com insuficiência cardíaca",
+    "category": "laboratorial",
+    "theme": "Cardiologia geriátrica",
+    "what_it_measures": "Dosagem sérica de albumina como marcador de estado nutricional e de gravidade inflamatória/hepática, e cálculo do índice de risco nutricional geriátrico (GNRI, Geriatric Nutritional Risk Index) a partir da albumina e do peso corporal: GNRI = [1,489 × albumina sérica (g/L)] + [41,7 × (peso atual / peso ideal)]. O peso ideal usado na fórmula original é o calculado pela equação de Lorentz. O GNRI foi desenvolvido para avaliar risco nutricional em idosos hospitalizados em geral e passou a ser amplamente estudado como marcador prognóstico específico na insuficiência cardíaca (IC), onde caquexia cardíaca e desnutrição subclínica são comuns e subdiagnosticadas.",
+    "reference_range": "Albumina sérica: valor de referência laboratorial padrão de adulto, tipicamente 3,5-5,0 g/dL (hipoalbuminemia definida abaixo de 3,5 g/dL, com relevância prognóstica na IC já em quedas mais discretas). GNRI, classificação de risco de desnutrição pelo estudo original (Bouillanne et al., 2005): sem risco ≥98; risco baixo 92-97,9; risco moderado 82-91,9; risco grave <82.",
+    "indications": "Avaliação nutricional dirigida no idoso com insuficiência cardíaca, sobretudo com fração de ejeção preservada (ICFEp) — perfil predominante do paciente idoso internado por IC no Brasil e no mundo —, como parte da estratificação de risco e do planejamento de alta, junto de outras ferramentas geriátricas (avaliação geriátrica ampla, escore de fragilidade). Indicado especialmente quando há sinais clínicos de perda de peso não intencional, edema que mascara perda de massa magra, ou internações recorrentes por IC, cenários em que a caquexia cardíaca subjacente pode passar despercebida no exame físico isolado.",
+    "interpretation": "Revisão sistemática e metanálise brasileira (Meng et al., Arq Bras Cardiol 2023, 9 estudos, 5.603 adultos com ICFEp) mostrou que albumina sérica reduzida associou-se a mortalidade por todas as causas quase 2 vezes maior (HR 1,98; IC95% 1,28-3,06; p=0,002) e a pior desfecho composto de mortalidade e reinternação por IC (HR 1,77; IC95% 1,48-2,11); GNRI reduzido associou-se a mortalidade por todas as causas (HR 1,81; IC95% 1,06-3,09; p=0,029) e, com magnitude maior, a mortalidade cardiovascular (HR 1,92; IC95% 1,50-2,46). Albumina baixa e GNRI baixo devem ser lidos como marcadores de risco a incorporar na decisão de intensidade de acompanhamento pós-alta (visitas mais frequentes, suporte nutricional, reabilitação), não como alvo terapêutico isolado — não há evidência de que corrigir a albumina por infusão, por exemplo, mude prognóstico.",
+    "limitations": "Albumina sérica é marcador inespecífico: cai na inflamação sistêmica aguda (reagente de fase aguda negativo), na disfunção hepática e na doença renal com perda proteica, não só na desnutrição — um episódio de descompensação aguda de IC com congestão hepática pode reduzir a albumina por mecanismo diferente do nutricional, confundindo a interpretação isolada no momento da internação. O índice nutricional prognóstico (PNI, outro escore baseado em albumina e linfócitos) NÃO mostrou associação significativa com mortalidade na mesma metanálise (HR 1,18; IC95% 0,86-1,61; p=0,314) — nem todo escore nutricional tem o mesmo desempenho prognóstico na IC, e a extrapolação de um escore para outro não é válida. O GNRI foi originalmente derivado e validado em população geriátrica hospitalizada geral, não especificamente cardiopata (Bouillanne et al., 2005) — seu uso na IC é apoiado por estudos observacionais de validação posterior, não pelo desenho original.",
+    "source_refs": [
+      "Meng Y, Zhang Z, Zhao T, Zhang D. Prognostic Significance of Nutrition-Associated Markers in Heart Failure with Preserved Ejection Fraction: A Systematic Review and Meta-Analysis. Arq Bras Cardiol. 2023;120(5):e20220523. PMID: 37162076. PMCID: PMC10263396. DOI: 10.36660/abc.20220523 — acesso aberto (bilíngue português/inglês), números de HR e IC95% conferidos no resumo estruturado.",
+      "Bouillanne O, Morineau G, Dupont C, et al. Geriatric Nutritional Risk Index: a new index for evaluating at-risk elderly medical patients. Am J Clin Nutr. 2005;82(4):777-783. PMID: 16210706. DOI: 10.1093/ajcn/82.4.777 — fonte da fórmula original do GNRI e das faixas de classificação de risco."
+    ],
+    "tags": [
+      "albumina",
+      "gnri",
+      "avaliacao nutricional",
+      "caquexia cardiaca",
+      "insuficiencia cardiaca",
+      "idoso",
+      "icfep"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "rm-cardiaca-regurgitacao-pulmonar-e-criterios-de-troca-valvar-em-tetralogia-de-fallot",
+    "name": "Ressonância magnética cardíaca — quantificação da regurgitação pulmonar e critérios de troca valvar pulmonar na tetralogia de Fallot reparada",
+    "category": "imagem",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "RM com contraste de fase (phase-contrast) mede o volume regurgitante e a fração de regurgitação pulmonar (RF) através da via de saída do ventrículo direito (VD), além dos volumes biventriculares indexados — VDVFd (RVEDVi) e VDVFs (RVESVi) — e da função sistólica do VD. Não é um exame que só confirma a existência de regurgitação pulmonar (isso o ecocardiograma já faz): é o exame que quantifica seu impacto volumétrico sobre o VD ao longo do tempo, de forma seriada e comparável entre exames.",
+    "reference_range": "Não existe um único 'valor de referência' — a leitura do exame é sempre contra os limiares que definem indicação de troca valvar pulmonar (ver 'interpretation'), não contra uma faixa de normalidade isolada.",
+    "indications": "Seguimento ambulatorial do adulto operado de tetralogia de Fallot com regurgitação pulmonar residual moderada ou importante — para decidir o momento da troca valvar pulmonar (percutânea ou cirúrgica), não para o diagnóstico inicial da regurgitação. Repetição seriada (tipicamente a cada 1-2 anos, a critério clínico) para acompanhar a trajetória dos volumes do VD.",
+    "interpretation": "Pela diretriz AHA/ACC 2018 de cardiopatia congênita do adulto: troca valvar pulmonar é Classe I quando há sintomas atribuíveis à regurgitação pulmonar moderada ou importante; é razoável (Classe IIa) no paciente assintomático com regurgitação pulmonar moderada ou importante e presença de dois ou mais dos seguintes critérios por RM — disfunção sistólica de VD ou de ventrículo esquerdo (leve ou pior), dilatação importante de VD (VDVFd indexado ≥160 mL/m² ou VDVFs indexado ≥80 mL/m²), volume diastólico final de VD ≥2× o do ventrículo esquerdo, pressão sistólica de VD ≥2/3 da pressão sistêmica, ou redução progressiva e objetiva da capacidade de exercício.",
+    "limitations": "Os cortes de VDVFd/VDVFs indexados foram derivados de séries com protocolo e software de pós-processamento específicos, e variam algo entre laboratórios — não substituem o julgamento clínico do quadro como um todo. Exige paciente colaborativo (sedação em crianças pequenas) e é contraindicada com determinados dispositivos incompatíveis com campo magnético. A quantificação de fluxo por contraste de fase depende de qualidade técnica adequada do plano de aquisição, perpendicular ao vaso.",
+    "source_refs": [
+      "Stout KK, Daniels CJ, Aboulhosn JA, et al. 2018 AHA/ACC Guideline for the Management of Adults With Congenital Heart Disease: A Report of the American College of Cardiology/American Heart Association Task Force on Clinical Practice Guidelines. Circulation. 2019;139(14):e698-e800."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "tetralogia de fallot",
+      "regurgitação pulmonar",
+      "troca valvar pulmonar",
+      "ressonância magnética",
+      "achd",
+      "contraste de fase"
+    ]
+  },
+  {
+    "slug": "elastografia-hepatica-na-vigilancia-de-doenca-hepatica-associada-a-circulacao-de-fontan",
+    "name": "Elastografia hepática (ultrassonográfica ou por ressonância magnética) na vigilância da doença hepática associada à circulação de Fontan",
+    "category": "imagem",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "A rigidez (stiffness) do parênquima hepático, medida por onda de cisalhamento na elastografia ultrassonográfica ou por elastografia por ressonância magnética — usada como biomarcador seriado da congestão venosa crônica e da fibrose que se desenvolvem progressivamente no fígado de quem vive com circulação de Fontan, e não como substituto do diagnóstico histológico.",
+    "reference_range": "Não há corte validado que separe, de forma confiável, congestão de fibrose nesta população. Os valores medidos costumam cair na faixa observada em cirrose avançada do adulto, mesmo sem fibrose extensa à biópsia — um caso publicado registrou elastografia ultrassonográfica de 25 kPa e elastografia por RM de 5,1 kPa no mesmo paciente (as duas técnicas não são intercambiáveis nem comparáveis em unidade). O valor isolado não define conduta — o que tem valor é a tendência seriada, no mesmo paciente e, quando possível, no mesmo aparelho.",
+    "indications": "Vigilância de rotina do paciente com circulação de Fontan, incorporada à ultrassonografia abdominal — a proposta do Grupo de Trabalho Abdominal da Sociedade Europeia de Radiologia Pediátrica é rastreio anual por imagem a partir da fase pós-operatória ainda na infância, com elastografia agregada ao exame de rotina.",
+    "interpretation": "Elevação progressiva do valor no mesmo paciente sinaliza piora da congestão hepática e/ou da fibrose, e pode ser o primeiro sinal não invasivo de deterioração hemodinâmica do circuito de Fontan — mas o método não distingue as duas causas entre si. Nódulo hepático detectado nesse rastreio deve ser investigado preferencialmente por RM, com contraste hepatobiliar quando disponível, e não por TC.",
+    "limitations": "A elastografia ultrassonográfica amostra uma pequena região do lobo hepático direito, o que pode não representar bem uma doença de distribuição heterogênea. A congestão venosa, por si só, já eleva a rigidez medida, confundindo-se com fibrose. Não existe consenso de corte validado para esta população específica, e séries pediátricas e de adultos não mostram correlação consistente entre o valor de elastografia e o grau histológico de fibrose hepática.",
+    "source_refs": [
+      "Perucca G, de Lange C, Franchi-Abella S, et al. Surveillance of Fontan-associated liver disease: current standards and a proposal from the European Society of Paediatric Radiology Abdominal Task Force. Pediatr Radiol. 2021;51(13):2598-2606.",
+      "de Lange C, Möller T, Hebelka H. Fontan-associated liver disease: Diagnosis, surveillance, and management. Front Pediatr. 2023;11:1100514."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "fontan",
+      "elastografia",
+      "doença hepática",
+      "achd",
+      "vigilância",
+      "circulação de fontan"
+    ]
   }
 ]
