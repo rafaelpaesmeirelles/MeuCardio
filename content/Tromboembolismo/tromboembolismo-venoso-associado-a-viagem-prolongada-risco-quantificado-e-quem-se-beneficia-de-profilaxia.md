@@ -1,0 +1,48 @@
+---
+title: "Tromboembolismo Venoso Associado a Viagem Prolongada: Risco Quantificado e Quem se Beneficia de Profilaxia"
+slug: tromboembolismo-venoso-associado-a-viagem-prolongada-risco-quantificado-e-quem-se-beneficia-de-profilaxia
+theme: "Tromboembolismo"
+kind: estudo
+review_status: revisado
+source_refs: ["Chandra D, Parisini E, Mozaffarian D. Meta-analysis: travel and risk for venous thromboembolism. Ann Intern Med. 2009;151(3):180-190. DOI: 10.7326/0003-4819-151-3-200908040-00129. PMID: 19581633", "Kahn SR, Lim W, Dunn AS, Cushman M, Dentali F, Akl EA, Cook DJ, Balekian AA, Klein RC, Le H, Schulman S, Murad MH. Prevention of VTE in Nonsurgical Patients: Antithrombotic Therapy and Prevention of Thrombosis, 9th ed: American College of Chest Physicians Evidence-Based Clinical Practice Guidelines. Chest. 2012;141(2 Suppl):e195S-e226S. DOI: 10.1378/chest.11-2296. PMID: 22315261"]
+legacy_source: "Documento novo, escrito em 02/08/2026. A pasta cobre profilaxia de TEV no paciente clínico hospitalizado (escore de Padua), no paciente cirúrgico com alto risco de sangramento (CPI vs. farmacológica) e após cirurgia bariátrica, mas nenhum documento tratava do cenário ambulatorial mais comum de pergunta ao cardiologista fora do contexto hospitalar: o paciente que vai viajar (voo longo, ônibus, carro) e pergunta se precisa de alguma medida preventiva. É pergunta de consultório frequente, sem documento dedicado até aqui."
+---
+
+# Tromboembolismo Venoso Associado a Viagem Prolongada: Risco Quantificado e Quem se Beneficia de Profilaxia
+
+## O problema clínico
+"Vou viajar de avião por dez horas, preciso tomar alguma coisa?" é pergunta rotineira de consultório — de paciente com TEV prévio, de paciente com trombofilia conhecida, e também de paciente saudável que ouviu falar em "síndrome da classe econômica" e quer saber se o medo tem fundamento. A resposta exige duas peças separadas: **quanto** a viagem prolongada realmente eleva o risco (pergunta epidemiológica, respondida por uma metanálise robusta) e **o que fazer** com esse risco na prática (pergunta de conduta, respondida por diretriz baseada em estratificação por risco individual, não por duração de viagem isoladamente). Nenhum documento desta pasta tratava do tema até aqui.
+
+## O tamanho do risco: a metanálise de Chandra et al., 2009
+Chandra D, Parisini E, Mozaffarian D. Ann Intern Med. 2009;151(3):180-190 (PMID 19581633) reuniu **14 estudos** (11 caso-controle, 2 de coorte, 1 caso-cruzado), totalizando **4.055 casos de TEV**, para estimar a associação entre viagem e tromboembolismo venoso.
+
+- **Risco relativo agrupado, todos os estudos:** **2,0 (IC95% 1,5-2,7)** — viajantes têm o dobro do risco de TEV em relação a não viajantes.
+- **Análise restrita a estudos sem viés de seleção de controles referenciados** (excluindo estudos com grupo controle proveniente de encaminhamento clínico, desenho mais suscetível a viés): o risco relativo sobe para **2,8 (IC95% 2,2-3,7)** — ou seja, a estimativa mais conservadora quanto a viés é a que mostra risco **maior**, não menor.
+- **Relação dose-resposta com a duração da viagem:** **aumento de 18% no risco de TEV a cada 2 horas de viagem**, de forma geral, e **aumento de 26% a cada 2 horas especificamente de viagem aérea** — o risco não é um efeito de limiar fixo ("mais de X horas = risco"), é gradual e proporcional ao tempo de exposição.
+
+**Leitura clínica direta destes números:** o risco absoluto de TEV em viajante saudável, sem fatores de risco adicionais, é baixo mesmo com esse risco relativo dobrado ou triplicado — a metanálise mede razão de risco, não incidência absoluta, e a maior parte dos estudos incluídos tinha população de base com incidência espontânea de TEV muito pequena. É a combinação de viagem longa **com** fator de risco individual adicional que desloca a decisão de "nenhuma medida" para "medida específica", como a diretriz a seguir detalha.
+
+## O que fazer: a diretriz da ACCP/CHEST 2012 (Kahn SR et al.)
+A 9ª edição das diretrizes de terapia antitrombótica do American College of Chest Physicians (Chest. 2012;141(2 Suppl):e195S-e226S, PMID 22315261) dedica uma seção específica a "viajantes de longa distância", com três recomendações, todas de força **condicional** (Grade 2) e certeza de evidência **baixa** (C) — nenhuma é forte, e isso já orienta a conversa com o paciente para "medida razoável a considerar", não para "obrigação".
+
+- **Recomendação 6.1.1:** para viajantes de **alto risco**, a diretriz sugere **deambulação frequente, exercício da musculatura da panturrilha, e sentar no corredor quando possível** — medidas comportamentais, sem custo e sem contraindicação, aplicáveis a qualquer viajante independentemente do risco.
+- **Recomendação 6.1.2:** para viajantes de **alto risco**, a diretriz sugere considerar **meia de compressão graduada abaixo do joelho, ajustada corretamente, fornecendo 15 a 30 mmHg de pressão no tornozelo**, durante a viagem. **Para todos os demais viajantes de longa distância (sem fator de risco adicional), a diretriz sugere CONTRA o uso rotineiro de meia de compressão.**
+- **Recomendação 6.1.3:** para viajantes de longa distância em geral, a diretriz sugere **CONTRA o uso de aspirina ou anticoagulante** com a finalidade específica de prevenir TEV relacionado a viagem.
+
+**Quem se qualifica como "alto risco" nesta diretriz:** TEV prévio, cirurgia ou trauma recente, malignidade ativa, gestação, uso de estrogênio, idade avançada, mobilidade limitada, obesidade grave e distúrbio trombofílico conhecido — a mesma lista de fatores de risco individuais que já orienta profilaxia de TEV em outros contextos desta pasta (ver o documento de profilaxia no paciente clínico hospitalizado, escore de Padua), aplicada aqui ao cenário ambulatorial da viagem.
+
+## Lendo as duas fontes juntas
+A metanálise mostra que o risco é real e mensurável (RR 2,0-2,8, dose-dependente pela duração); a diretriz mostra que a resposta a esse risco **não é generalizar profilaxia farmacológica ou mecânica para todo viajante**, e sim reservar a medida mais específica (meia de compressão) para quem já carrega um fator de risco adicional, e nunca recorrer a anticoagulante ou aspirina só por causa da viagem em si. A recomendação universal — deambulação, exercício de panturrilha, assento de corredor — é a única que vale para todo mundo, exatamente porque não tem custo nem risco associado.
+
+## Algoritmo prático de conduta
+1. **Viagem longa (a partir de ~4 horas, com risco crescente e proporcional à duração) em paciente sem fator de risco adicional:** orientar deambulação frequente, exercício de panturrilha, hidratação, evitar sedativos que prolonguem imobilidade, e assento de corredor quando possível. **Não prescrever meia elástica nem anticoagulante/aspirina** — a diretriz é explícita contra essas duas medidas neste cenário.
+2. **Viagem longa em paciente de alto risco** (TEV prévio, câncer ativo, cirurgia/trauma recente, gestação, uso de estrogênio, mobilidade limitada, obesidade grave, trombofilia conhecida): acrescentar meia de compressão graduada abaixo do joelho (15-30 mmHg no tornozelo), além das medidas comportamentais. **Ainda assim, sem aspirina nem anticoagulante só pela viagem** — a Recomendação 6.1.3 não abre exceção por nível de risco.
+3. **Paciente já anticoagulado por outra indicação** (por exemplo, FA ou TEV prévio em tratamento): a viagem não é motivo para suspender, ajustar dose ou trocar o esquema já estabelecido — a diretriz trata da decisão de **iniciar** medida preventiva por causa da viagem, não da conduta em quem já está anticoagulado por indicação independente.
+
+## Armadilhas clínicas
+- **Prescrever anticoagulante ou aspirina "por precaução" a qualquer paciente que vá viajar** — é exatamente a conduta que a Recomendação 6.1.3 orienta evitar, inclusive no paciente de alto risco; o risco de sangramento de uma medida farmacológica não se justifica para essa indicação específica.
+- **Generalizar a prescrição de meia elástica de compressão para todo viajante**, sem estratificar risco — a diretriz sugere contra isso explicitamente para quem não tem fator de risco adicional (Recomendação 6.1.2, segunda metade).
+- **Confundir esta indicação com a do documento sobre meia elástica e síndrome pós-trombótica (ensaio SOX)**, já publicado nesta pasta — são perguntas diferentes: aqui trata-se de profilaxia primária de TEV associado a viagem em paciente de risco, ali trata-se de prevenção de síndrome pós-trombótica após TVP já ocorrida. O SOX não testou meia elástica no contexto de viagem, e este documento não testa prevenção de síndrome pós-trombótica.
+- **Tratar a metanálise de Chandra et al. como prova de risco absoluto alto.** Risco relativo dobrado ou triplicado sobre uma incidência de base baixa continua sendo, para a maioria dos viajantes saudáveis, um risco absoluto pequeno — é isso que sustenta a diretriz não recomendar medida farmacológica universal, apesar do RR estatisticamente significativo.
+- **Ignorar a força e a certeza da evidência declaradas pela própria diretriz.** As três recomendações são Grade 2C (condicional, certeza baixa) — a diretriz não afirma protocolo rígido, e desvio justificado por particularidade do paciente (por exemplo, trombofilia grave associada a viagem intercontinental) é compatível com a evidência disponível, desde que registrado.
+- **Extrapolar a definição de "viagem" só para avião.** A metanálise inclui estudos de outros meios de transporte prolongado (a imobilidade prolongada é o mecanismo fisiopatológico comum), e a diretriz se refere a "viajantes de longa distância" em geral, não exclusivamente a voos.

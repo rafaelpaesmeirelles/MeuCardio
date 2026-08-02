@@ -1,0 +1,51 @@
+---
+title: "Viés de Raça e Sexo na Recomendação de Cateterismo Cardíaco: o Estudo de Schulman (NEJM, 1999)"
+slug: vies-de-raca-e-sexo-na-recomendacao-de-cateterismo-cardiaco-o-estudo-de-schulman-1999
+theme: "Comunicação clínica"
+kind: estudo
+review_status: revisado
+source_refs: ["Schulman KA, Berlin JA, Harless W, Kerner JF, Sistrunk S, Gersh BJ, Dubé R, Taleghani CK, Burke JE, Williams S, Eisenberg JM, Escarce JJ. The effect of race and sex on physicians' recommendations for cardiac catheterization. N Engl J Med. 1999;340(8):618-626. DOI: 10.1056/NEJM199902253400806. PMID: 10029647", "Schwartz LM, Woloshin S, Welch HG. Misunderstandings about the effects of race and sex on physicians' referrals for cardiac catheterization. N Engl J Med. 1999;341(4):279-283; discussion 286-287. PMID: 10413743"]
+legacy_source: "Documento novo, escrito em 02/08/2026. Esta pasta já cobre disparidade racial na ACEITAÇÃO de dispositivo pelo paciente (decisão compartilhada para CDI em pacientes negros) e vieses de comunicação de risco numérico (odds ratio vs. frequência natural), mas faltava o estudo clássico sobre viés do LADO DO MÉDICO na indicação de um exame/procedimento diagnóstico — momento anterior e distinto da decisão compartilhada, e o caso mais citado da literatura sobre como a própria comunicação clínica (a entrevista com o paciente) pode carregar viés de raça e sexo sem que o médico perceba."
+---
+
+# Viés de Raça e Sexo na Recomendação de Cateterismo Cardíaco: o Estudo de Schulman (NEJM, 1999)
+
+## O que este documento cobre, e o que ele não cobre
+Os documentos já existentes nesta pasta sobre disparidade racial tratam do momento em que o **paciente** decide aceitar ou recusar um dispositivo já indicado (CDI de prevenção primária). Este documento trata de um momento anterior e diferente: o momento em que o **médico** decide, a partir da mesma queixa e dos mesmos dados clínicos, se recomenda ou não um exame invasivo — cateterismo cardíaco para investigação de dor torácica. É o estudo mais citado da literatura médica sobre viés implícito de raça e sexo na própria comunicação clínica, e segue relevante porque o desenho metodológico (variar só a aparência do paciente, mantendo o quadro clínico idêntico) continua sendo a referência para estudos posteriores de viés em cardiologia.
+
+## O estudo (Schulman et al., NEJM 1999)
+Schulman KA et al., N Engl J Med. 1999;340(8):618-626 (PMID 10029647). Estudo transversal com instrumento de pesquisa computadorizado, conduzido em **720 médicos de atenção primária**, recrutados em duas reuniões nacionais de sociedades de medicina interna/atenção primária nos Estados Unidos.
+
+**Metodologia:** atores foram filmados em entrevistas roteirizadas, descrevendo o mesmo quadro de dor torácica com o mesmo texto, mesma entonação e mesmos dados clínicos anexos (idade, fatores de risco, tipo de dor, resultado de teste ergométrico) — variando sistematicamente apenas a raça (negro/branco) e o sexo do paciente-ator. Cada médico participante assistiu a **uma** entrevista gravada e a um conjunto de dados do paciente hipotético, e então registrou sua avaliação de probabilidade de doença arterial coronariana e sua recomendação de conduta, incluindo indicação de cateterismo cardíaco. A análise controlou estatisticamente (regressão logística multivariada) pela própria estimativa de probabilidade de DAC feita pelo médico, idade do paciente, risco coronariano, tipo de dor torácica e resultado do teste ergométrico — ou seja, o desenho isola o efeito de raça/sexo do efeito desses fatores clínicos, que também influenciaram a estimativa.
+
+### Resultados
+- **A estimativa média de probabilidade de DAC feita pelo próprio médico já variava por sexo**: 64,1% (±19,3) para mulheres vs. 69,2% (±18,2) para homens (p<0,001) — e também por idade (63,8% aos 55 anos vs. 69,5% aos 70 anos, p<0,001) e por tipo de dor (58,3% na dor não anginosa, 64,4% na angina possível, 77,1% na angina definitiva, p=0,001).
+- **Após ajuste para essas variáveis clínicas**, mulheres continuaram com menor chance de indicação de cateterismo do que homens: **odds ratio 0,60 (IC95% 0,4-0,9; p=0,02)**.
+- **Pacientes negros continuaram com menor chance de indicação de cateterismo do que brancos**, no mesmo ajuste: **odds ratio 0,60 (IC95% 0,4-0,9; p=0,02)**.
+- **Interação raça × sexo**: mulheres negras tiveram indicação de cateterismo significativamente menor do que homens brancos: **odds ratio 0,4 (IC95% 0,2-0,7; p=0,004)**.
+
+**Conclusão literal dos autores:** "nossos achados sugerem que a raça e o sexo do paciente influenciam de forma independente a maneira como os médicos conduzem a dor torácica."
+
+## A controvérsia estatística que se seguiu — vale como estudo de caso de comunicação de risco
+A publicação teve repercussão extensa na imprensa leiga americana em 1999, incluindo cobertura em jornais de grande circulação e no programa Nightline da rede ABC. Essa repercussão gerou uma réplica formal publicada no mesmo periódico: Schwartz LM, Woloshin S, Welch HG. N Engl J Med. 1999;341(4):279-283 (PMID 10413743), intitulada literalmente "Mal-entendidos sobre os efeitos de raça e sexo nos encaminhamentos médicos para cateterismo cardíaco". O núcleo do debate publicado foi metodológico e estatístico: **um odds ratio de 0,4 não equivale a "40% menos provável"** em linguagem de risco absoluto ou relativo — essa é uma confusão comum entre razão de chances (odds ratio) e razão de risco (risk ratio), que só coincidem numericamente quando o desfecho é raro, o que não era o caso aqui (a maioria dos pacientes do estudo foi, de fato, encaminhada para cateterismo em ambos os grupos). Segundo um retrospecto do Leonard Davis Institute of Health Economics (Universidade da Pensilvânia) sobre a repercussão do estudo, a diferença absoluta de encaminhamento entre pacientes negros e brancos girou em torno de **7 pontos percentuais**, concentrada principalmente nas mulheres negras — uma diferença real e clinicamente relevante, mas numericamente bem menor do que a leitura de "40% menos provável" sugerida por parte da cobertura jornalística da época.
+
+Este episódio não invalida o achado original — o efeito de raça e sexo permaneceu estatisticamente significativo depois do ajuste multivariado, nos dois artigos. O que ele demonstra é a mesma armadilha de comunicação de risco já registrada em outro documento desta pasta (como apresentar redução de risco: relativo, absoluto ou frequência natural): **um odds ratio comunicado sem seu correspondente em risco absoluto tende a ser superestimado por quem o lê**, inclusive por veículos de comunicação e, por extensão, por médicos que citam o estudo de memória.
+
+## Síntese prática
+O estudo de Schulman continua sendo a referência inicial de qualquer discussão sobre viés implícito na indicação de exame cardiovascular: com o quadro clínico idêntico e apenas a raça e o sexo do paciente variando, a recomendação médica mudou de forma estatisticamente significativa. É um achado sobre o próprio ato da comunicação clínica — a forma como o médico interpreta e responde ao relato de sintomas de diferentes pacientes —, não sobre acesso ao sistema de saúde ou preferência do paciente, variáveis que o desenho do estudo excluiu deliberadamente ao usar atores com roteiro idêntico. Ao mesmo tempo, a controvérsia estatística que se seguiu é parte inseparável de como este estudo deve ser citado: o tamanho do efeito, em termos absolutos, é mais modesto do que a cobertura da imprensa sugeriu na época.
+
+## O que fazer com isso na prática
+1. **Diante de uma queixa de dor torácica, aplicar o mesmo critério objetivo de decisão** (probabilidade pré-teste, escore de risco, resultado de teste funcional) **antes** de formar uma impressão sobre o paciente a partir de raça, sexo ou apresentação social — o estudo mostrou que a própria estimativa inicial de probabilidade de DAC já variava por sexo e idade, antes mesmo da decisão final de conduta.
+2. **Ao citar odds ratio para um colega ou paciente, converter para risco absoluto sempre que possível** — é a mesma lição do documento desta pasta sobre formas de apresentar redução de risco, e este episódio de 1999 é o exemplo histórico mais visível de como essa conversão, quando omitida, distorce a mensagem.
+3. **Não tratar viés implícito como acusação pessoal ao médico individual** — o desenho do estudo (grande amostra, análise multivariada) mostra um padrão populacional, não a intenção de nenhum profissional específico; a resposta clínica útil é o protocolo padronizado, não a defensiva.
+
+## Limites
+- Estudo americano de 1999, com médicos de atenção primária dos EUA; não há garantia de que a magnitude do efeito se replique em outro sistema de saúde ou outra época — o achado qualitativo (viés mensurável) tem sido reproduzido em estudos posteriores, mas os valores numéricos aqui são específicos deste estudo.
+- Desfecho medido foi a **recomendação declarada** pelo médico diante de um cenário simulado, não a conduta real tomada à beira do leito nem o desfecho clínico do paciente.
+- A crítica de Schwartz, Woloshin e Welch (1999) recai sobre a comunicação pública dos resultados, não sobre a validade estatística do ajuste multivariado original, que não foi refutado.
+
+## Armadilhas clínicas
+- **Citar "odds ratio 0,4" como "60% menos provável" ou "40% menos provável" em risco absoluto** — é exatamente a confusão que motivou a réplica publicada no mesmo periódico.
+- **Assumir que o achado se refere a decisão do paciente, e não do médico** — o desenho do estudo isolou deliberadamente a resposta do profissional a um roteiro de paciente-ator idêntico; não há decisão do paciente neste desenho.
+- **Descartar o estudo por ser antigo (1999) ou por ter gerado controvérsia midiática** — a controvérsia foi sobre a magnitude comunicada do efeito, não sobre a existência do efeito, que permaneceu estatisticamente significativo no ajuste multivariado.
+- **Confundir este documento com o de decisão compartilhada para CDI em pacientes negros**, já existente nesta pasta — aquele mede a aceitação do dispositivo pelo paciente após a indicação já ter sido feita; este mede se a indicação do exame é feita da mesma forma pelo médico, independentemente de raça e sexo.
