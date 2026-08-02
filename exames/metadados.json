@@ -5764,5 +5764,97 @@
       "vigilância ambulatorial",
       "cardiopatia congênita univentricular"
     ]
+  },
+  {
+    "slug": "vigilancia-ecocardiografica-por-escore-z-na-doenca-de-kawasaki",
+    "name": "Vigilância ecocardiográfica seriada por escore Z na doença de Kawasaki",
+    "category": "imagem",
+    "theme": "Cardiologia pediátrica",
+    "what_it_measures": "Diâmetro luminal das artérias coronárias (tronco de coronária esquerda, descendente anterior, circunflexa e coronária direita) ao ecocardiograma transtorácico, normalizado pela superfície corporal como escore Z — não o diâmetro absoluto isolado, que não é comparável entre crianças de tamanhos diferentes.",
+    "reference_range": "Classificação de risco da diretriz da American Heart Association (McCrindle et al., 2017), por escore Z do segmento coronariano mais acometido: sem envolvimento coronariano, sempre <2; só dilatação, de 2 a <2,5 (ou, se inicialmente <2, uma queda do escore Z durante o seguimento ≥1); aneurisma pequeno, de ≥2,5 a <5; aneurisma médio, de ≥5 a <10 e com dimensão absoluta <8 mm; aneurisma grande ou gigante, ≥10 ou com dimensão absoluta ≥8 mm.",
+    "indications": "Todo caso de doença de Kawasaki, independentemente da resposta à imunoglobulina intravenosa. Cronograma recomendado pela AHA: ecocardiograma basal ao diagnóstico, repetido entre 1 e 2 semanas e novamente entre 4 e 6 semanas após o início do tratamento — reavaliações mais frequentes e por tempo mais prolongado são necessárias sempre que houver aneurisma documentado, porque a doença coronariana pode evoluir mesmo após a resolução da febre e dos sinais mucocutâneos.",
+    "interpretation": "O escore Z do maior segmento acometido, e não a média, define a categoria de risco e a intensidade da tromboprofilaxia e do seguimento subsequente. Um ecocardiograma basal normal não exclui o desenvolvimento posterior de aneurisma — é por isso que a reavaliação programada nas semanas seguintes é parte do exame, não uma repetição por dúvida diagnóstica. Aneurisma grande ou gigante (Z≥10 ou ≥8 mm) implica seguimento cardiológico ininterrupto e vitalício, pelo risco de trombose, estenose e infarto tardios.",
+    "limitations": "A qualidade da mensuração depende de a janela acústica permitir visualizar todo o trajeto proximal das quatro artérias — em criança maior ou mal colaborativa a janela pode ser limitada. O cálculo do escore Z depende da fórmula de normalização por superfície corporal usada pelo serviço; comparar medidas de laboratórios diferentes sem conferir se usam a mesma equação de referência pode gerar interpretação equivocada de progressão ou regressão.",
+    "source_refs": [
+      "McCrindle BW, Rowley AH, Newburger JW, et al. Diagnosis, Treatment, and Long-Term Management of Kawasaki Disease: A Scientific Statement for Health Professionals From the American Heart Association. Circulation. 2017;135(17):e927-e999. PMID: 28356445 — resumo estrutural conferido diretamente no PubMed nesta sessão; a classificação de risco por escore Z (categorias e cortes citados acima) foi conferida por citação textual em: Wu et al., \"Predicting coronary artery lesions in patients with Kawasaki disease in China using a machine-learning algorithm\", Front Immunol. 2026 (PMC13143907), que reproduz literalmente a tabela da diretriz da AHA. O cronograma de reavaliação em 1-2 e 4-6 semanas foi conferido em: \"Kawasaki disease in Kenya and review of the African literature\", Pediatr Rheumatol Online J (PMC11016229), que cita a mesma diretriz da AHA para esse cronograma."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "kawasaki",
+      "escore z",
+      "aneurisma coronariano",
+      "vigilância",
+      "pediatria"
+    ]
+  },
+  {
+    "slug": "ecocardiografia-fetal-no-diagnostico-de-arritmias-fetais",
+    "name": "Ecocardiografia fetal (modo M e Doppler pulsado) no diagnóstico de arritmias fetais",
+    "category": "imagem",
+    "theme": "Cardiologia pediátrica",
+    "what_it_measures": "Como o feto não permite eletrocardiograma de superfície convencional interpretável, a ecocardiografia fetal estima a atividade elétrica cardíaca de forma indireta, a partir de eventos MECÂNICOS — a contração atrial e a contração ventricular — captados por modo M (movimento de parede atrial e ventricular) ou por Doppler pulsado com o volume de amostra posicionado para captar simultaneamente um influxo (ex.: valva mitral) e um efluxo (ex.: valva aórtica), ou um par like a veia cava superior e a aorta.",
+    "reference_range": "Não há uma faixa numérica única — a interpretação é do RITMO e da RELAÇÃO temporal entre o evento atrial e o ventricular, não de um valor isolado. Um intervalo mecânico PR (equivalente ao PR elétrico, porém medido entre o início da contração atrial e o início da contração ventricular) prolongado ou a perda da relação 1:1 entre eventos atriais e ventriculares são os achados que definem bloqueio atrioventricular.",
+    "indications": "Suspeita de arritmia fetal na ausculta obstétrica de rotina (frequência irregular, muito rápida ou muito lenta), acompanhamento de gestante com anticorpos anti-Ro/anti-La (risco de bloqueio atrioventricular total imune) ou de feto com cardiopatia estrutural associada a maior risco arrítmico.",
+    "interpretation": "Taquicardia supraventricular fetal e flutter atrial tipicamente mostram relação atrioventricular anormal (VA curto na taquicardia por reentrada, ou múltiplos eventos atriais para cada ventricular no flutter). O bloqueio atrioventricular de 2º grau tipo 2:1 é identificado quando há duas contrações atriais para cada contração ventricular, avaliado por Doppler pulsado simultâneo (ex.: par valva mitral–valva aórtica, ou veia cava superior–aorta) ou por modo M das paredes atrial e ventricular. O modo M também identifica arritmias ventriculares pela análise isolada do movimento da parede ventricular.",
+    "limitations": "Todos esses métodos extrapolam o evento elétrico a partir do evento mecânico correspondente — não medem a atividade elétrica diretamente, ao contrário do ECG pós-natal. A qualidade depende de posicionamento fetal favorável e de janela acústica adequada, e a movimentação fetal pode interromper o traçado antes que um número suficiente de ciclos seja capturado para caracterizar o mecanismo com segurança.",
+    "source_refs": [
+      "Donofrio MT, Moon-Grady AJ, Hornberger LK, et al. Diagnosis and Treatment of Fetal Cardiac Disease: A Scientific Statement From the American Heart Association. Circulation. 2014;129(21):2183-2242. PMID: 24763516 — resumo estrutural conferido diretamente no PubMed nesta sessão. A descrição técnica do Doppler pulsado simultâneo (pares mitral-aórtica e cava superior-aorta) e do modo M para bloqueio atrioventricular 2:1 e arritmias ventriculares foi conferida por citação textual em: \"The Prenatal Diagnosis and Perinatal Management of Congenital Long QT Syndrome: A Comprehensive Literature Review and Recent Updates\", J Cardiovasc Dev Dis. 2026 (PMC12027825, CC BY 4.0), que descreve a técnica citando a mesma diretriz da AHA."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ecocardiografia fetal",
+      "arritmia fetal",
+      "modo m",
+      "doppler",
+      "bloqueio atrioventricular"
+    ]
+  },
+  {
+    "slug": "cateterismo-cardiaco-direito-constricao-versus-restricao-no-idoso",
+    "name": "Cateterismo cardíaco direito no diagnóstico diferencial hemodinâmico entre pericardite constritiva e cardiomiopatia restritiva/amiloidose no idoso",
+    "category": "imagem",
+    "theme": "Cardiologia geriátrica",
+    "what_it_measures": "Curvas de pressão intracavitária de alta fidelidade (ventrículo direito e ventrículo esquerdo, idealmente simultâneas) durante a respiração, comparando o comportamento das pressões sistólicas nas duas câmaras entre a inspiração e a expiração — o que o resumo do estudo de referência chama de 'interação ventricular reforçada' (enhanced ventricular interaction), fenômeno específico da constrição pericárdica.",
+    "reference_range": "Achado convencional comum às duas condições, e por isso não discriminativo isoladamente: enchimento diastólico precoce rápido seguido de plateau ('dip-and-plateau' ou sinal da raiz quadrada) com equalização das pressões diastólicas finais das quatro câmaras. O achado que diferencia é o índice de área sistólica (razão entre a área sistólica de pressão-tempo do ventrículo direito e do ventrículo esquerdo durante a inspiração versus a expiração): na série de referência (Talreja et al., 2008), esse índice teve sensibilidade de 97% e acurácia preditiva de 100% para constrição pericárdica confirmada cirurgicamente, contra <75% de acurácia de qualquer critério convencional isolado.",
+    "indications": "Paciente idoso com sinais de insuficiência cardíaca direita predominante, ascite e edema desproporcionais à disfunção sistólica, quando o ecocardiograma (variação respiratória do fluxo mitral/tricúspide, deslocamento septal) não define com segurança se o mecanismo é constrição pericárdica (potencialmente tratável por pericardiectomia) ou cardiomiopatia restritiva/infiltrativa — amiloidose cardíaca em particular, cuja prevalência aumenta com a idade.",
+    "interpretation": "Equalização das pressões diastólicas finais e padrão em raiz quadrada, isoladamente, não distinguem as duas condições — ambas produzem fisiologia restritiva ao enchimento. A discordância entre as pressões sistólicas de ventrículo direito e esquerdo ao longo do ciclo respiratório (aumentada na constrição, ausente na restrição miocárdica) é o achado que orienta a decisão, porque reflete a interdependência ventricular reforçada pelo pericárdio rígido — mecanismo que não existe quando o problema é a rigidez do próprio miocárdio.",
+    "limitations": "Exige registro de pressão de alta fidelidade e, idealmente, cateteres simultâneos em ambos os ventrículos — nem todo laboratório de hemodinâmica está equipado ou treinado para essa aquisição específica. É exame invasivo, com os riscos inerentes ao cateterismo, e deve ser reservado para quando a avaliação não invasiva (ecocardiograma com Doppler tecidual e strain, ressonância com realce tardio pericárdico, ou os métodos de caracterização tecidual e cintilografia usados na investigação de amiloidose) deixar a dúvida diagnóstica em aberto.",
+    "source_refs": [
+      "Talreja DR, Nishimura RA, Oh JK, Holmes DR. Constrictive pericarditis in the modern era: novel criteria for diagnosis in the cardiac catheterization laboratory. J Am Coll Cardiol. 2008;51(3):315-319. PMID: 18206742 — resumo estrutural (incluindo os números de sensibilidade e acurácia preditiva citados) conferido diretamente no PubMed nesta sessão."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "cateterismo cardíaco direito",
+      "pericardite constritiva",
+      "cardiomiopatia restritiva",
+      "amiloidose",
+      "idoso"
+    ]
+  },
+  {
+    "slug": "doppler-quantitativo-da-regurgitacao-aortica-no-idoso",
+    "name": "Doppler quantitativo da regurgitação aórtica (tempo de meia-pressão e reversão de fluxo na aorta descendente)",
+    "category": "imagem",
+    "theme": "Cardiologia geriátrica",
+    "what_it_measures": "Dois parâmetros complementares do jato de regurgitação aórtica ao ecocardiograma Doppler: o tempo de meia-pressão (PHT) ao Doppler contínuo do próprio jato, que mede a rapidez de equalização do gradiente diastólico entre aorta e ventrículo esquerdo; e o padrão de fluxo na aorta descendente/abdominal ao Doppler pulsado, que identifica se há reversão de fluxo diastólico (sangue voltando em direção ao coração durante a diástole) e por quanto tempo do ciclo ela persiste.",
+    "reference_range": "Critérios de gravidade da Sociedade Americana de Ecocardiografia (Zoghbi et al., 2017): regurgitação aórtica grave quando o PHT é menor que 200 ms; e quando há reversão de fluxo HOLODIASTÓLICA (durante toda a diástole, não só no início) na aorta descendente, com velocidade telediastólica acima de 20 cm/s — quanto mais distal (aorta abdominal) a reversão holodiastólica for detectada, maior a especificidade para gravidade.",
+    "indications": "Quantificação de regurgitação aórtica identificada ao Doppler colorido, sobretudo quando a avaliação visual do jato (largura da vena contracta, extensão no trato de saída) é ambígua ou tecnicamente difícil — cenário comum no idoso, em que a janela acústica costuma ser pior e a valva aórtica degenerativa/calcificada distorce o jato e dificulta a medida direta da vena contracta.",
+    "interpretation": "PHT curto (<200 ms) e reversão de fluxo holodiastólica na aorta descendente convergindo para grave reforçam um ao outro; quando divergem, prevalece a integração com os demais parâmetros (vena contracta, volume regurgitante, fração regurgitante), nunca um critério isolado. Etiologicamente, no idoso a regurgitação aórtica costuma ser degenerativa — calcificação e retração de cúspide, com ou sem dilatação da raiz — diferente do padrão predominante em pacientes mais jovens (valva bicúspide, doença do tecido conjuntivo, sequela de endocardite).",
+    "limitations": "O PHT encurta também quando a complacência do ventrículo esquerdo está reduzida (disfunção diastólica, hipertrofia concêntrica) independentemente da gravidade da regurgitação — achado especialmente relevante no idoso, em que a disfunção diastólica relacionada à idade é prevalente mesmo sem valvopatia. A reversão de fluxo aórtico pode ser mascarada por taquicardia (diástole curta) ou, no sentido oposto, produzida por outras causas de fluxo diastólico anterógrado reduzido na aorta — os dois parâmetros exigem correlação com o quadro clínico e com o restante do exame, não uso isolado.",
+    "source_refs": [
+      "Zoghbi WA, Adams D, Bonow RO, et al. Recommendations for Noninvasive Evaluation of Native Valvular Regurgitation: A Report from the American Society of Echocardiography Developed in Collaboration with the Society for Cardiovascular Magnetic Resonance. J Am Soc Echocardiogr. 2017;30(4):303-371. PMID: 28314623 — resumo estrutural conferido diretamente no PubMed nesta sessão; os cortes numéricos de PHT <200 ms e reversão holodiastólica com velocidade telediastólica >20 cm/s foram conferidos por citação textual (Tabela 2) em: \"Contemporary Overview of Aortic Regurgitation in Young Individuals: Insights From Real-Life Evidence\", J Am Heart Assoc (artigo que reproduz os critérios da diretriz ASE 2017 nessa tabela)."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "regurgitação aórtica",
+      "doppler",
+      "tempo de meia-pressão",
+      "reversão de fluxo",
+      "idoso"
+    ]
   }
 ]

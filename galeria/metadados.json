@@ -5139,5 +5139,71 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "kawasaki-desquamacao-periungueal-dedos",
+    "title": "Fotografia clínica — Descamação periungueal dos dedos na doença de Kawasaki (fase subaguda)",
+    "modality": "Fotografia clínica",
+    "theme": "Cardiologia pediátrica",
+    "file_path": "clinico/kawasaki-desquamacao-periungueal-dedos.jpg",
+    "findings": "Descamação da pele iniciando na ponta dos dedos, na transição entre a lâmina ungueal e o leito periungueal, com destacamento em grandes retalhos (não em escamas finas). É achado típico da fase subaguda da doença de Kawasaki, que a AHA situa entre o 11º e o 25º dia de doença — tipicamente 1 a 3 semanas após o início da febre, quando a febre e os sinais mucocutâneos agudos (conjuntivite, exantema, língua em morango) já regrediram ou estão em regressão.",
+    "teaching_points": "A descamação periungueal não é um dos cinco critérios clínicos principais da doença de Kawasaki (febre ≥5 dias + 4 de: conjuntivite bilateral não exsudativa, alterações orais, exantema polimorfo, alterações de extremidades, linfadenopatia cervical) — ela entra como achado de apoio, útil sobretudo quando o quadro já regrediu e o paciente chega para avaliação tardia com suspeita retrospectiva. É também o motivo pelo qual a vigilância ecocardiográfica não pode parar quando a febre cede: a fase subaguda, marcada por esta descamação e por plaquetose reativa, é justamente o período de maior risco de formação ou progressão de aneurisma coronariano, conforme o cronograma de reavaliação por escore Z da diretriz da AHA (McCrindle et al., 2017) — ecocardiograma basal, com repetição em 1-2 semanas e novamente em 4-6 semanas após o início do tratamento, mesmo em paciente assintomático.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kawasaki_symptoms_F.jpg",
+    "license": "CC BY 2.0",
+    "attribution": "Dong Soo Kim (recorte/derivative work por Natr), via Wikimedia Commons — CC BY 2.0. A página da imagem-irmã da mesma série (File:Kawasaki.PNG, mesmo autor) atribui a figura original a Kim DS. Kawasaki disease. Yonsei Med J. 2006;47(6):759-772, PMID 17191303.",
+    "tags": [
+      "kawasaki",
+      "descamação periungueal",
+      "criança",
+      "vasculite",
+      "fase subaguda"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "regurgitacao-aortica-grave-doppler-continuo-pht-idoso",
+    "title": "Ecocardiograma Doppler contínuo — Regurgitação aórtica grave, tempo de meia-pressão (PHT) reduzido",
+    "modality": "Ecocardiograma",
+    "theme": "Cardiologia geriátrica",
+    "file_path": "ecocardiograma/regurgitacao-aortica-grave-doppler-continuo-pht-idoso.jpg",
+    "findings": "Doppler contínuo do jato de regurgitação aórtica: velocidade máxima (Vmax) de 4,59 m/s, gradiente máximo instantâneo de 84,3 mmHg, tempo de meia-pressão (PHT) de 135,35 ms, tempo de desaceleração de 466,72 ms e taxa (slope) de desaceleração de 9,84 m/s². O quadro pequeno no canto superior mostra o jato ao Doppler colorido em corte paraesternal longitudinal, na via de saída do ventrículo esquerdo.",
+    "teaching_points": "O PHT reflete a rapidez com que o gradiente diastólico entre aorta e ventrículo esquerdo se equaliza: quanto mais grave a regurgitação, mais rápido esse gradiente cai, e menor o PHT. A Sociedade Americana de Ecocardiografia (Zoghbi et al., 2017) usa PHT < 200 ms como um dos critérios Doppler de regurgitação aórtica grave — o valor de 135 ms neste traçado está bem dentro dessa faixa. Na prática geriátrica, a etiologia mais comum de regurgitação aórtica isolada é degenerativa (valva tricúspide com calcificação e retração de cúspide, ou dilatação anular associada à esclerose aórtica relacionada à idade), diferente do padrão predominante em adultos mais jovens (valva bicúspide, doença do tecido conjuntivo, endocardite). O PHT isolado tem limitação importante: encurta também quando a complacência do ventrículo esquerdo está reduzida (disfunção diastólica, hipertrofia) independentemente da gravidade da regurgitação — por isso a diretriz recomenda integrá-lo a outros parâmetros (largura da vena contracta, reversão de fluxo holodiastólica na aorta descendente/abdominal, volume regurgitante), não interpretá-lo isoladamente.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Severe_aortic_regurgitation_E00184_(CardioNetworks_ECHOpedia).jpg",
+    "license": "CC BY-SA 3.0",
+    "attribution": "CardioNetworks ECHOpedia, cortesia do AMC Echolab, AMC (Amsterdam), via Wikimedia Commons — CC BY-SA 3.0.",
+    "tags": [
+      "ecocardiograma",
+      "doppler contínuo",
+      "regurgitação aórtica",
+      "tempo de meia-pressão",
+      "idoso"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "regurgitacao-aortica-grave-mmodo-flutter-diastolico-idoso",
+    "title": "Ecocardiograma modo M — Regurgitação aórtica grave, flutter diastólico fino da valva mitral",
+    "modality": "Ecocardiograma",
+    "theme": "Cardiologia geriátrica",
+    "file_path": "ecocardiograma/regurgitacao-aortica-grave-mmodo-flutter-diastolico-idoso.jpg",
+    "findings": "Modo M através da via de entrada mitral, no mesmo caso da imagem de Doppler contínuo desta galeria (regurgitação aórtica grave, frequência cardíaca 74 bpm nas duas). O traçado mostra fluttering (tremulação) diastólico fino e de alta frequência sobreposto ao movimento do folheto, mais evidente na porção que corresponde ao folheto anterior da valva mitral.",
+    "teaching_points": "O flutter diastólico de alta frequência da valva mitral (ou, menos comumente, do septo interventricular) é um sinal qualitativo clássico e antigo de regurgitação aórtica ao modo M — o jato regurgitante de alta velocidade que atinge o aparelho mitral durante a diástole faz o folheto vibrar. É um achado que precede historicamente o Doppler colorido e continua útil como pista rápida ao modo M, mas não substitui a quantificação: a gravidade se define pelos parâmetros do Doppler (vena contracta, PHT, reversão de fluxo aórtico, volume regurgitante), não pela presença ou ausência de flutter, que pode faltar em alguns casos graves e aparecer em graus leves a moderados. Didaticamente, vale reservar este achado para reconhecimento visual rápido do padrão, sempre seguido de quantificação formal — e não confundir com o flutter de menor amplitude que pode ocorrer em outras condições de alto fluxo diastólico.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Severe_aortic_regurgitation_E00181_(CardioNetworks_ECHOpedia).jpg",
+    "license": "CC BY-SA 3.0",
+    "attribution": "CardioNetworks ECHOpedia, cortesia do AMC Echolab, AMC (Amsterdam), via Wikimedia Commons — CC BY-SA 3.0.",
+    "tags": [
+      "ecocardiograma",
+      "modo m",
+      "regurgitação aórtica",
+      "flutter diastólico",
+      "idoso"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
