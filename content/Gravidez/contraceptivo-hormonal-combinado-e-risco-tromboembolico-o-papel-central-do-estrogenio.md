@@ -168,8 +168,10 @@ estrogênico descrito nas seções anteriores.
   está mais ligado à escolha do anticoagulante (DOAC vs. antagonista da vitamina K) do que ao uso
   de terapia hormonal (Martinelli et al., 2016).
 
-VERIFICAÇÃO HUMANA NECESSÁRIA: este documento não substitui a aplicação dos critérios de
-elegibilidade da OMS por condição cardíaca específica (prótese valvar, hipertensão pulmonar,
-cardiopatia congênita cianótica, disfunção ventricular grave) — quando esse documento existir na
-base, os dois devem ser lidos em conjunto, e a categoria de elegibilidade individual da paciente
-prevalece sobre a generalização de mecanismo aqui descrita.
+Este documento não substitui a aplicação dos critérios de elegibilidade da OMS por condição
+cardíaca específica (prótese valvar, hipertensão pulmonar, cardiopatia congênita cianótica,
+disfunção ventricular grave) — esse documento complementar já existe na base
+(`anticoncepcao-na-mulher-com-cardiopatia-criterios-de-elegibilidade-da-oms-posicionamento-sbc-2020.md`,
+com as sete tabelas do Posicionamento SBC 2020 traduzidas da 5ª edição dos critérios da OMS), e os
+dois devem ser lidos em conjunto: a categoria de elegibilidade individual da paciente, por
+condição, prevalece sobre a generalização de mecanismo trombótico descrita aqui.
