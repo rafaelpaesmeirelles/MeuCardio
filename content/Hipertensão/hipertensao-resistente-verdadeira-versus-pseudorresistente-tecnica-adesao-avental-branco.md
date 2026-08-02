@@ -1,0 +1,67 @@
+---
+title: "Hipertensão Resistente Verdadeira × Pseudorresistente: o Que Excluir Antes de Escalonar"
+slug: hipertensao-resistente-verdadeira-versus-pseudorresistente-tecnica-adesao-avental-branco
+theme: "Hipertensão"
+kind: protocolo
+review_status: revisado
+source_refs: ["de la Sierra A, Segura J, Banegas JR, Gorostidi M, de la Cruz JJ, Armario P, Oliveras A, Ruilope LM. Clinical features of 8295 patients with resistant hypertension classified on the basis of ambulatory blood pressure monitoring. Hypertension. 2011;57(5):898-902. DOI: 10.1161/HYPERTENSIONAHA.110.168948. PMID: 21444835", "Jung O, Gechter JL, Wunder C, Paulke A, Bartel C, Geiger H, Toennes SW. Resistant hypertension? Assessment of adherence by toxicological urine analysis. J Hypertens. 2013;31(4):766-774. DOI: 10.1097/HJH.0b013e32835e2286. PMID: 23337469", "Kallioinen N, Hill A, Horswill MS, Ward HE, Watson MO. Sources of inaccuracy in the measurement of adult patients' resting blood pressure in clinical settings: a systematic review. J Hypertens. 2017;35(3):421-441. DOI: 10.1097/HJH.0000000000001197. PMID: 27977471", "Carey RM, Calhoun DA, Bakris GL, Brook RD, Daugherty SL, Dennison-Himmelfarb CR, Egan BM, Flack JM, Gidding SS, Judd E, Lackland DT, Laffer CL, Newton-Cheh C, Smith SM, Taler SJ, Textor SC, Turan TN, White WB. Resistant Hypertension: Detection, Evaluation, and Management: A Scientific Statement From the American Heart Association. Hypertension. 2018;72(5):e53-e90. DOI: 10.1161/HYP.0000000000000084. PMID: 30354828"]
+legacy_source: "Documento novo. A base já tinha o tratamento farmacológico da hipertensão resistente verdadeira (PATHWAY-2/espironolactona), as opções intervencionistas (denervação renal) e o rastreio de hiperaldosteronismo primário — mas nenhum documento tratava especificamente da distinção verdadeira × pseudorresistente, com dados quantitativos de quanto da 'resistência' aparente se desfaz ao corrigir técnica, aderência e avental branco antes de escalonar tratamento ou investigar causa secundária."
+---
+
+# Hipertensão Resistente Verdadeira × Pseudorresistente
+
+## Por que esta distinção vem antes de qualquer outra decisão
+"Hipertensão resistente" não é um diagnóstico que se faz olhando três receitas na tela. É um rótulo que só deveria ser aplicado **depois** de excluir um conjunto de armadilhas metodológicas que, somadas, respondem por uma fração grande — em alguns estudos, a maior fração — dos pacientes que chegam ao consultório etiquetados como "resistentes". Tratar um paciente pseudorresistente como se fosse verdadeiramente resistente tem dois custos: escalonar terapia (quarta droga, denervação renal) sem benefício esperado, e investigar causa secundária (hiperaldosteronismo primário, doença renovascular) num paciente cuja pressão real já está controlada ou seria controlada com aderência adequada.
+
+## Definição de hipertensão resistente verdadeira
+Pela definição do *scientific statement* da American Heart Association (Carey RM et al., Hypertension 2018;72(5):e53-e90, PMID 30354828), hipertensão resistente é a **pressão arterial acima da meta apesar do uso concomitante de 3 classes de anti-hipertensivos**, tipicamente incluindo um bloqueador de canal de cálcio de ação prolongada, um bloqueador do sistema renina-angiotensina (IECA ou BRA) e um diurético, **todos em dose otimizada** — ou pressão controlada, mas às custas de **4 ou mais medicações**.
+
+Duas condições estão embutidas nessa definição e não são opcionais:
+- **confirmação de aderência** ao esquema medicamentoso;
+- **exclusão do efeito do avental branco** — pressão elevada no consultório, mas normal (ou na meta) fora dele.
+
+Sem as duas, o rótulo "resistente" não deveria ser aplicado — é exatamente o que a literatura chama de **pseudorresistência**, e é o assunto deste documento.
+
+## As três causas principais de pseudorresistência
+
+### 1) Técnica de aferição inadequada
+A pressão medida no consultório está sujeita a um número grande de fontes de erro — postura, tamanho do manguito, conversa durante a medida, bexiga cheia, apoio de braço e costas, tempo de repouso prévio, entre outras. Uma revisão sistemática de 328 estudos empíricos sobre a acurácia da medida de pressão arterial em ambiente clínico (Kallioinen N et al., J Hypertens 2017;35(3):421-441, PMID 27977471) identificou **29 fontes potenciais de erro** com **efeito direcional significativo em 27 delas**. A magnitude do desvio em relação à pressão de repouso verdadeira, somando as fontes individuais analisadas, variou de **-23,6 a +33 mmHg na sistólica** e de **-14 a +23 mmHg na diastólica**. Ou seja: um único erro de técnica pode, sozinho, empurrar a leitura para a faixa que classificaria o paciente como não controlado, mesmo com esquema terapêutico adequado. Os autores recomendam medidas repetidas e média, em vez de decisão clínica sobre uma leitura isolada.
+
+Na prática, isso significa: antes de qualquer escalonamento, **reaferir a pressão seguindo a técnica padronizada** (manguito de tamanho adequado, paciente sentado com apoio de costas e braço na altura do coração, sem falar, após 5 minutos de repouso, média de pelo menos duas medidas) é o primeiro passo, não um refinamento posterior.
+
+### 2) Efeito do avental branco
+Parte dos pacientes rotulados como "resistentes" com base só na pressão de consultório tem pressão normal fora dele — o efeito do avental branco, ou "hipertensão do avental branco" quando aplicado a esse subgrupo específico de pacientes já em tratamento.
+
+O maior estudo que quantificou isso é o registro espanhol de MAPA (de la Sierra A et al., Hypertension 2011;57(5):898-902, PMID 21444835): de **68.045 pacientes hipertensos tratados**, **8.295 (12,2%)** preenchiam critério de hipertensão resistente **pela pressão de consultório**. Ao submeter esses 8.295 pacientes à monitorização ambulatorial da pressão arterial (MAPA), **apenas 62,5% foram confirmados como verdadeiramente resistentes** (pressão ambulatorial também elevada) — os **outros 37,5% tinham "resistência do avental branco"**: pressão de consultório elevada, mas pressão ambulatorial de 24 horas normal. Os pacientes com resistência verdadeira eram mais jovens, mais frequentemente homens, e tinham perfil de risco cardiovascular pior (mais tabagistas, mais diabéticos, mais lesão de órgão-alvo — hipertrofia ventricular esquerda, função renal reduzida, microalbuminúria — e mais doença cardiovascular estabelecida).
+
+**Implicação direta:** mais de 1 em cada 3 pacientes que preenchem critério de resistência pela pressão de consultório teria a "resistência" desfeita por uma MAPA (ou, na falta dela, automedida domiciliar bem executada — ver `automedida-domiciliar-de-pressao-arterial-guiando-titulacao-tasminh4-e-home-bp.md`, nesta mesma pasta). MAPA ou automedida domiciliar são, portanto, **etapa obrigatória de confirmação diagnóstica**, não exame de segunda linha.
+
+### 3) Não aderência
+A causa mais subestimada — e possivelmente a mais prevalente — de pseudorresistência é o paciente simplesmente não tomar (ou tomar parcialmente) a medicação prescrita, sem que isso seja verbalizado na consulta.
+
+O estudo mais direto sobre isso mediu aderência **objetivamente**, por triagem toxicológica de urina (cromatografia líquida acoplada a espectrometria de massa, capaz de detectar os próprios fármacos anti-hipertensivos e metabólitos na urina) em pacientes referenciados por hipertensão não controlada (Jung O et al., J Hypertens 2013;31(4):766-774, PMID 23337469). De 375 pacientes referenciados, **108 preenchiam critério de hipertensão resistente**. Da triagem toxicológica: **40 pacientes (53%) foram identificados como não aderentes** — não pelo relato do paciente, mas pela ausência ou concentração incompatível do(s) fármaco(s) na urina. Entre os não aderentes, **30% tinham não aderência completa e 70% não aderência parcial**, e destes últimos, **85% haviam tomado menos de 50% dos fármacos prescritos**. Os autores concluem que a não aderência foi a causa mais comum de mau controle pressórico, **duas vezes mais frequente que causas secundárias de hipertensão** identificadas na mesma coorte.
+
+Um número que merece destaque para quem pratica clínica: **mais da metade** dos pacientes referenciados como "resistentes" nesse estudo não estava, de fato, tomando o esquema prescrito como prescrito — e a maioria dos não aderentes não estava em não aderência total e óbvia, e sim em uso parcial e irregular, o tipo mais difícil de captar só perguntando "o senhor toma a medicação certinho?".
+
+Ferramentas práticas para rastrear não aderência (em ordem crescente de objetividade): contagem de comprimidos, farmácia (registro de reabastecimento de receita), questionários validados (Morisky-Green), e — quando disponível — dosagem sérica ou urinária dos próprios fármacos, que é o padrão mais objetivo e o único que não depende do relato do paciente.
+
+## Algoritmo prático de exclusão, antes de escalonar tratamento ou investigar causa secundária
+
+1. **Reaferir a pressão com técnica padronizada** — manguito adequado ao braço, posição correta, repouso prévio, sem conversa, média de pelo menos duas medidas.
+2. **Confirmar com medida fora do consultório** — MAPA (padrão-ouro, permite quantificar também o descenso noturno) ou automedida domiciliar estruturada, se MAPA não disponível. Se a pressão fora do consultório estiver controlada: **é pseudorresistência por avental branco**, não hipertensão resistente verdadeira.
+3. **Investigar aderência ativamente**, não apenas perguntar — contagem de comprimidos, verificação de reabastecimento na farmácia, e triagem bioquímica quando disponível. Se a causa for não aderência: o problema é adesão, não a necessidade de mais uma droga.
+4. **Revisar o esquema em si** — todas as três classes centrais em dose otimizada (incluindo diurético adequado à função renal — tiazídico/similar se TFG preservada, de alça se TFG reduzida)? Interações e substâncias que elevam a pressão foram checadas (AINE, descongestionantes, corticoide, contraceptivo oral, alcaçuz/regaliz — ver `hipertensao-por-alcacuz-regaliz-pseudohiperaldosteronismo-mecanismo-e-manejo.md`, nesta mesma pasta)?
+5. **Só depois de excluir os quatro pontos acima** — técnica, avental branco, aderência e otimização do esquema — o paciente é classificado como hipertensão resistente **verdadeira**, e o caminho passa a ser o tratamento farmacológico de quarta linha (ver `hipertensao-resistente-espironolactona-como-quarta-droga-o-ensaio-pathway-2.md`) e, se ainda assim não controlado, a investigação de causa secundária, com destaque para hiperaldosteronismo primário (ver `hiperaldosteronismo-primario-subdiagnosticado-prevalencia-real-e-rastreio-por-arr.md`).
+
+## Implicação clínica: por que pular esta etapa é caro e sem propósito
+Investigar hiperaldosteronismo primário (relação aldosterona-renina, teste confirmatório, eventualmente cateterismo de veia adrenal) ou indicar denervação renal em um paciente cuja "resistência" é, na verdade, avental branco não reconhecido ou não aderência não identificada tem duplo custo: **exame e procedimento caros e não isentos de risco, aplicados a um problema que eles não resolvem**, e **atraso no diagnóstico real**, que é corrigir técnica de medida, confirmar a pressão fora do consultório, ou trabalhar a aderência com o paciente.
+
+Somando os números centrais deste documento: numa coorte grande de pacientes rotulados como resistentes pela pressão de consultório, **mais de um terço (37,5%) tinha pressão ambulatorial normal** (de la Sierra et al., PMID 21444835), e, em outra coorte de pacientes referenciados por hipertensão resistente, **mais da metade (53%) apresentava não aderência objetivamente comprovada** (Jung et al., PMID 23337469) — populações e desenhos diferentes, que não devem ser somados como se fossem a mesma amostra, mas que convergem no mesmo ponto: **antes de rotular "resistente", a maioria dos rótulos merece ser questionada**.
+
+`VERIFICAÇÃO HUMANA NECESSÁRIA`: não foi localizada, nesta sessão, uma coorte única que quantifique simultaneamente as três causas de pseudorresistência (técnica, avental branco e não aderência) na mesma amostra de pacientes, com percentual de "resistência" que se desfaz ao corrigir cada uma isoladamente ou em conjunto — os dois estudos quantitativos citados (de la Sierra et al. e Jung et al.) medem cada um uma causa isolada, em coortes distintas, e a proporção combinada de pseudorresistência (a soma das três causas numa mesma população) não deve ser inferida por adição simples dos dois percentuais.
+
+## Armadilhas
+- **Escalonar antes de confirmar a pressão fora do consultório** — mais de 1 em cada 3 "resistentes" por critério de consultório tem pressão ambulatorial normal.
+- **Aceitar o relato verbal de aderência como suficiente** — a maioria dos não aderentes identificados por triagem objetiva não é de não aderência total e declarada, e sim parcial e não percebida pelo próprio paciente como "não tomar o remédio".
+- **Investigar causa secundária (hiperaldosteronismo, doença renovascular) antes de excluir pseudorresistência** — inverte a ordem do algoritmo e gera exame caro para um problema que ele não resolve.
+- **Tratar hipertensão resistente verdadeira e pseudorresistência como a mesma decisão clínica** — a primeira pede otimização/quarta droga/investigação; a segunda pede correção de técnica, confirmação fora do consultório e trabalho de aderência, não mais medicação.
