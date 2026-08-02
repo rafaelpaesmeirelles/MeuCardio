@@ -8,7 +8,9 @@ source_refs: [
   "Jaeggi ET, Carvalho JS, De Groot E, Api O, Clur SA, Rammeloo L, McCrindle BW, Ryan G, Manlhiot C, Blom NA. Comparison of transplacental treatment of fetal supraventricular tachyarrhythmias with digoxin, flecainide, and sotalol: results of a nonrandomized multicenter study. Circulation. 2011;124(16):1747-1754. PMID 21931080. doi:10.1161/CIRCULATIONAHA.111.026120",
   "Strasburger JF, Eckstein G, Butler M, Noffke P, Wacker-Gussmann A. Fetal Arrhythmia Diagnosis and Pharmacologic Management. J Clin Pharmacol. 2022;62(Suppl 1):S53-S66. PMID 36106782. doi:10.1002/jcph.2129",
   "Bravo-Valenzuela NJ, Rocha LA, Machado Nardozza LM, Araujo Júnior E. Fetal cardiac arrhythmias: Current evidence. Ann Pediatr Cardiol. 2018;11(2):148-163. PMID 29922012. doi:10.4103/apc.APC_134_17",
-  "Oudijk MA, Ruskamp JM, Ambachtsheer BE, Ververs TF, Stoutenbeek P, Visser GH, Meijboom EJ. Drug treatment of fetal tachycardias. Paediatr Drugs. 2002;4(1):49-63. PMID 11817986. doi:10.2165/00128072-200204010-00006"
+  "Oudijk MA, Ruskamp JM, Ambachtsheer BE, Ververs TF, Stoutenbeek P, Visser GH, Meijboom EJ. Drug treatment of fetal tachycardias. Paediatr Drugs. 2002;4(1):49-63. PMID 11817986. doi:10.2165/00128072-200204010-00006",
+  "Parilla BV, Strasburger JF, Socol ML. Fetal supraventricular tachycardia complicated by hydrops fetalis: a role for direct fetal intramuscular therapy. Am J Perinatol. 1996;13(8):483-486. PMID 8989479. doi:10.1055/s-2007-994432",
+  "Munoz JL, Lewis AL, Song J, Ramsey PS. Fetal Intervention for Refractory Supraventricular Tachycardia Complicated by Hydrops Fetalis. Case Rep Obstet Gynecol. 2022;2022:5148250. PMID 35313721. PMCID PMC8934222. doi:10.1155/2022/5148250"
 ]
 ---
 
@@ -131,11 +133,25 @@ comprometida contra o risco procedural documentado da via intracordal — por is
 descrita na literatura recai sobre a via intramuscular/intraperitoneal fetal, reservando o acesso
 intravascular direto para cenários mais restritos.
 
-`VERIFICAÇÃO HUMANA NECESSÁRIA`: doses exatas recomendadas por via direta (intramuscular,
-intraperitoneal) em miligramas por fármaco não foram confirmadas nesta sessão contra uma fonte
-atual — os protocolos de dose disponíveis nas fontes consultadas datam de 2002 (Oudijk et al.) e
-podem não refletir a prática mais recente. Não usar os valores desse protocolo antigo para decisão
-de dose sem confirmar contra diretriz ou revisão atualizada.
+**Dose de digoxina intramuscular fetal, com fonte primária conferida:** a série de casos de Parilla
+et al. (*Am J Perinatol* 1996;13(8):483-486, PMID 8989479) — a mesma referência [4] que Strasburger
+et al. (PMID 36106782) cita ao afirmar que a digoxina intramuscular encurta o tempo de conversão e
+que carrega o risco anedótico de lesão do nervo ciático — descreve a dose como **88 mcg/kg a cada
+12-24 horas, com no máximo três injeções** no glúteo fetal, guiada por ultrassom. Não é um esquema
+abandonado com a idade da publicação original: um relato de caso mais recente (Munoz et al., *Case
+Rep Obstet Gynecol* 2022;2022:5148250, PMID 35313721, PMCID PMC8934222) aplicou essa mesma
+referência de dose — calculando 72,3 mcg para o peso fetal estimado do caso, em injeção única — com
+resolução da TSV em 24 horas, o que indica que o parâmetro de Parilla et al. segue sendo usado como
+referência na prática publicada mais atual disponível, apesar de a série original ser de 1996.
+
+Para a via **intraperitoneal**, e para flecainida ou sotalol administrados diretamente ao feto, esta
+pesquisa não localizou uma dose em miligramas equivalente à documentada acima para a digoxina
+intramuscular — as fontes consultadas (Oudijk et al.; Strasburger et al.) recomendam a via
+intramuscular/intraperitoneal em conjunto, sem detalhar posologia própria por fármaco para o
+componente intraperitoneal. Quem for aplicar esse esquema à beira do leito deve confirmar a dose
+com o centro de referência em terapia fetal invasiva, que ajusta ao peso fetal estimado no momento
+do procedimento — o valor de digoxina intramuscular acima não deve ser extrapolado para outra via
+ou outro fármaco sem essa confirmação.
 
 ## Resumo prático
 
