@@ -5613,5 +5613,156 @@
       "cardiopatia congênita",
       "vigilância oncológica"
     ]
+  },
+  {
+    "slug": "ecocardiograma-no-diagnostico-da-hipertensao-pulmonar-persistente-do-recem-nascido",
+    "name": "Ecocardiograma no diagnóstico e estratificação da hipertensão pulmonar persistente do recém-nascido (PPHN)",
+    "category": "imagem",
+    "theme": "Cardiologia pediátrica",
+    "what_it_measures": "Avaliação ecocardiográfica funcional e estrutural do recém-nascido com hipoxemia desproporcional à doença pulmonar, usada para confirmar a hipertensão pulmonar persistente do recém-nascido (PPHN) depois de excluir cardiopatia congênita estrutural — que é sempre o primeiro objetivo do exame, porque cianose neonatal com shunt direita-esquerda pode ter causa anatômica indistinguível da PPHN só pela clínica. O exame combina o grau de retificação/abaulamento do septo interventricular (achatamento proporcional à gravidade da hipertensão pulmonar), a estimativa da pressão sistólica de artéria pulmonar (PASP) pelo jato de regurgitação tricúspide ou pelo gradiente do shunt ductal, e a direção do fluxo no canal arterial e/ou forame oval — direita-esquerda indica PASP suprassistêmica, esquerda-direita indica PASP subsistêmica, e bidirecional indica PASP próxima da sistêmica.",
+    "reference_range": "Não há um valor numérico único de referência — a gravidade é estratificada de forma qualitativa/semiquantitativa: retificação leve, moderada ou grave do septo interventricular à inspeção visual, cada uma proporcional ao grau de sobrecarga pressórica do ventrículo direito. Complementarmente, a diferença de saturação periférica de O2 entre o membro superior direito (pré-ductal) e um membro inferior (pós-ductal) maior que 5-10%, ou diferença de PaO2 entre 10-20 mmHg com o nível pré-ductal mais alto, constitui shunt extrapulmonar direita-esquerda clinicamente significativo através do canal arterial.",
+    "indications": "Recém-nascido com hipoxemia labil desproporcional ao grau de doença parenquimatosa pulmonar na radiografia de tórax, especialmente com fatores de risco (aspiração meconial, sepse neonatal, hipoplasia pulmonar, hérnia diafragmática congênita, asfixia perinatal) — o diagnóstico preliminar costuma se apoiar em cianose diferencial e hipoxemia lábil, mas a confirmação é sempre ecocardiográfica.",
+    "interpretation": "O ecocardiograma cumpre dois papéis simultâneos: excluir cardiopatia congênita cianótica estrutural (sempre o primeiro passo, porque PPHN é diagnóstico de exclusão anatômica) e documentar a fisiologia da hipertensão pulmonar — grau de achatamento septal, disproporção de câmaras direitas (VD hipertrofiado e/ou dilatado nas janelas apical e subcostal), estimativa de PASP pelo jato de IT quando presente, e sentido do shunt no canal arterial/forame oval, que também serve de monitorização da resposta ao vasodilatador pulmonar inalatório ou sistêmico ao longo do tratamento.",
+    "limitations": "A gradação por achatamento septal é qualitativa e sujeita a variabilidade entre observadores. A estimativa de PASP pelo jato de regurgitação tricúspide depende de um jato mensurável, ausente em parcela relevante dos recém-nascidos — quando ausente, a estimativa cai sobre o gradiente do shunt ductal, menos direta. Shunt balanceado nos dois níveis (canal arterial e forame oval) pode gerar gradiente de saturação pré/pós-ductal pequeno mesmo com hipertensão pulmonar significativa, e a ausência de gradiente não afasta PPHN por si só — a interpretação é sempre em conjunto com os achados estruturais e funcionais do próprio ecocardiograma, nunca pela oximetria isolada.",
+    "source_refs": [
+      "Singh Y, Lakshminrusimha S. Pathophysiology and Management of Persistent Pulmonary Hypertension of the Newborn. Clin Perinatol. 2021;48(3):595-618. DOI: 10.1016/j.clp.2021.05.009. PMID: 34353582. PMCID: PMC8351908 — acesso aberto.",
+      "Fuloria M, Aschner JL. Persistent pulmonary hypertension of the newborn. Semin Fetal Neonatal Med. 2017;22(4):220-226. DOI: 10.1016/j.siny.2017.03.004. PMID: 28342684."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "pphn",
+      "hipertensão pulmonar persistente do recém-nascido",
+      "ecocardiograma neonatal",
+      "shunt direita-esquerda",
+      "gradiente pré e pós-ductal",
+      "cianose neonatal"
+    ]
+  },
+  {
+    "slug": "diagnostico-por-imagem-da-origem-anomala-da-coronaria-esquerda-a-partir-da-pulmonar-alcapa",
+    "name": "Diagnóstico por imagem da origem anômala da artéria coronária esquerda a partir da artéria pulmonar (ALCAPA)",
+    "category": "imagem",
+    "theme": "Cardiologia pediátrica",
+    "what_it_measures": "Combinação de ecocardiograma transtorácico com Doppler colorido e angiotomografia de coronárias (ou angiorressonância/cateterismo em casos selecionados) para confirmar a origem anômala da artéria coronária esquerda a partir do tronco da artéria pulmonar em vez da aorta — a chamada síndrome de Bland-White-Garland. O ecocardiograma busca a ausência de origem da coronária esquerda no seio aórtico esquerdo, fluxo retrógrado (do leito coronariano para a artéria pulmonar) ao Doppler colorido, artéria coronária direita dilatada e tortuosa com colaterais intercoronárias proeminentes, disfunção sistólica do ventrículo esquerdo com alteração segmentar de contratilidade, ecogenicidade aumentada dos músculos papilares (sinal de isquemia/fibrose) e regurgitação mitral por isquemia do músculo papilar. A angiotomografia confirma diretamente a origem da coronária esquerda no tronco pulmonar, a coronária direita dilatada com colaterais extensas e, com frequência, artérias brônquicas dilatadas funcionando como colaterais sistêmicas adicionais.",
+    "reference_range": "Não se aplica valor de referência numérico — o achado é categórico (presença ou ausência da origem anômala). A idade de apresentação é bimodal: a forma infantil clássica manifesta-se tipicamente nos primeiros meses de vida com insuficiência cardíaca e disfunção de ventrículo esquerdo; a forma do adulto, sustentada por colateralização suficiente, tem idade média de diagnóstico de 41 anos, com casos descritos até os 75 anos.",
+    "indications": "Lactente com insuficiência cardíaca de início precoce associada a disfunção sistólica de ventrículo esquerdo e regurgitação mitral por isquemia de músculo papilar — quadro que pode ser confundido com cardiomiopatia dilatada primária se a origem coronariana não for ativamente pesquisada. No adulto, suspeitar diante de isquemia miocárdica sem doença aterosclerótica obstrutiva típica, sobretudo com padrão de colateralização coronária incomum.",
+    "interpretation": "Sem tratamento cirúrgico, a mortalidade no primeiro ano de vida da forma infantil chega a cerca de 90%. O ecocardiograma com Doppler colorido, com transdutores de alta frequência e mapeamento de fluxo, permite diagnóstico com alta acurácia na maioria dos casos pediátricos e costuma ser suficiente isoladamente; angiotomografia, angiorressonância e cateterismo com angiografia seguem como complementares valiosos, especialmente em pacientes mais velhos, quando a janela acústica é pior ou a anatomia das colaterais precisa de mapeamento mais detalhado antes da cirurgia (reimplante da coronária anômala na aorta, criando sistema coronariano duplo).",
+    "limitations": "A ausência de origem visível da coronária esquerda no seio aórtico correto pode ser confundida com má janela acústica em lactentes maiores ou mais agitados — exige Doppler colorido dirigido e, na dúvida, confirmação por segunda modalidade de imagem antes de excluir o diagnóstico. Em pacientes mais velhos com colateralização extensa, o fluxo retrógrado pode ser de baixa velocidade e mais difícil de demonstrar ao Doppler, o que aumenta a dependência de angiotomografia ou cateterismo para a confirmação definitiva.",
+    "source_refs": [
+      "Blickenstaff EA, Smith SD, Cetta F, Connolly HM, Majdalany DS. Anomalous Left Coronary Artery from the Pulmonary Artery: How to Diagnose and Treat. J Pers Med. 2023;13(11):1561. DOI: 10.3390/jpm13111561. PMID: 38003878. PMCID: PMC10672344 — acesso aberto (CC BY).",
+      "Silverman NH. Echocardiographic presentation of anomalous origin of the left coronary artery from the pulmonary artery. Cardiol Young. 2015;25(8):1512-1523. DOI: 10.1017/S1047951115002565. PMID: 26675598."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "alcapa",
+      "bland-white-garland",
+      "coronária anômala",
+      "ecocardiograma pediátrico",
+      "angiotomografia de coronárias",
+      "cardiomiopatia dilatada do lactente"
+    ]
+  },
+  {
+    "slug": "ecocardiograma-de-estresse-com-dobutamina-em-baixa-dose-na-estenose-aortica-de-baixo-fluxo-baixo-gradiente-com-fe-reduzida",
+    "name": "Ecocardiograma de estresse com dobutamina em baixa dose (reserva contrátil) na estenose aórtica de baixo fluxo, baixo gradiente com fração de ejeção reduzida no idoso",
+    "category": "imagem",
+    "theme": "Cardiologia geriátrica",
+    "what_it_measures": "Ecocardiograma seriado durante infusão incremental de dobutamina em baixa dose (protocolo de 5, 10, 15 e 20 μg/kg/min em estágios de 3 minutos, sem chegar às doses altas usadas para pesquisa de isquemia), usado para diferenciar estenose aórtica verdadeiramente grave de estenose pseudograve no idoso com disfunção sistólica de ventrículo esquerdo (FEVE reduzida) e discordância entre área valvar aórtica pequena (≤1,0 cm²) e gradiente médio baixo (<40 mmHg) — cenário clássico de 'baixo fluxo, baixo gradiente clássico', em que a área valvar calculada pela equação de continuidade não é confiável porque o fluxo transvalvar está reduzido pela própria disfunção ventricular.",
+    "reference_range": "Reserva contrátil (fluxo) presente é definida como aumento de mais de 20% no índice de volume sistólico entre o basal e o pico da infusão de dobutamina. Estenose verdadeiramente grave ('true severe') é definida por gradiente médio atingindo 40 mmHg ou mais em algum estágio do teste, com a área valvar aórtica permanecendo abaixo de 1,0 cm² apesar do aumento de fluxo. Estenose pseudograve é sugerida quando a área valvar aumenta significativamente (geralmente para acima de 1,0 cm²) com o aumento de fluxo, sem o gradiente acompanhar proporcionalmente.",
+    "indications": "Idoso com insuficiência cardíaca e fração de ejeção reduzida, área valvar aórtica ≤1,0 cm² e gradiente médio <40 mmHg discordantes entre si — a chamada estenose aórtica de baixo fluxo/baixo gradiente clássica. O teste não se aplica à forma paradoxal (FEVE preservada), que é avaliada preferencialmente por escore de cálcio da valva aórtica por tomografia, não por reserva contrátil sob dobutamina.",
+    "interpretation": "Presença de reserva contrátil (aumento de volume sistólico >20%) permite classificar a estenose em verdadeiramente grave ou pseudograve pelo comportamento do gradiente e da área valvar durante o estresse, e também informa o risco cirúrgico — ausência de reserva contrátil associa-se a maior mortalidade perioperatória em cirurgia valvar convencional, o que costuma inclinar a decisão para troca valvar transcateter (TAVI) nesse subgrupo mais frágil. Quando não há reserva contrátil, o escore de cálcio da valva aórtica por tomografia (cortes de Agatston específicos por sexo, já usados na diretriz ESC/EACTS 2021) entra como critério auxiliar para não deixar a decisão sem nenhum parâmetro objetivo de gravidade.",
+    "limitations": "Cerca de 30 a 40% dos pacientes não desenvolvem aumento significativo de volume sistólico sob dobutamina (ausência de reserva contrátil) — nesse grupo o teste não consegue classificar a gravidade da estenose, e a decisão precisa recorrer a outro método (escore de cálcio). O teste exige monitorização cuidadosa (arritmia, hipotensão, angina) pela própria natureza do estímulo inotrópico/cronotrópico em paciente idoso com disfunção ventricular, e a dose empregada aqui é deliberadamente baixa — não deve ser confundida com o protocolo de dose alta usado para pesquisa de isquemia miocárdica induzível.",
+    "source_refs": [
+      "Alluri K, Carabello BA, Nekkanti R. Imaging Strategies for Evaluating Low-Flow, Low-Gradient Aortic Stenosis with Reduced and Preserved Left Ventricular Ejection Fraction. Curr Cardiol Rep. 2019;21(9):94. DOI: 10.1007/s11886-019-1186-9. PMID: 31352636.",
+      "Elkaryoni A, et al. The clinical significance of the incorporation of tissue Doppler imaging into low-dose Dobutamine stress echocardiography in patients with aortic stenosis prior to Transcatheter aortic valve implantation. BMC Cardiovasc Disord. 2020;20:410. PMID: 32928125. PMCID: PMC7490967 — acesso aberto, protocolo de dose e critérios numéricos citados.",
+      "2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2021;43(7):561-632."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "estenose aórtica de baixo fluxo baixo gradiente",
+      "reserva contrátil",
+      "eco de estresse com dobutamina",
+      "estenose pseudograve",
+      "tavi",
+      "idoso"
+    ]
+  },
+  {
+    "slug": "sarcopenia-por-tomografia-area-do-musculo-psoas-como-preditor-de-mortalidade-pos-tavi-no-idoso",
+    "name": "Sarcopenia avaliada por tomografia computadorizada (área do músculo psoas em L3) como preditor de desfecho pós-TAVI no idoso",
+    "category": "imagem",
+    "theme": "Cardiologia geriátrica",
+    "what_it_measures": "Medida da área de secção transversal do músculo psoas (ou de ambos os psoas somados) no corte axial ao nível da vértebra L3, obtida na angiotomografia de planejamento pré-TAVI já realizada de rotina para medir o anel aórtico e as vias de acesso — ou seja, sem exame adicional, é um dado extraído do mesmo exame já indicado por outro motivo. O valor é normalizado pela superfície corporal (área do psoas em mm²/m²) para permitir comparação entre pacientes de tamanhos diferentes, e serve como marcador objetivo e quantitativo de sarcopenia, complementar às escalas clínicas de fragilidade.",
+    "reference_range": "Não há um corte único consagrado internacionalmente — os estudos usam tercis ou quartis da própria coorte. Em uma coorte de referência de 153 pacientes submetidos a TAVI, a mediana da área do psoas normalizada pela superfície corporal foi de 2.581,1 mm²/m² (intervalo interquartil 2.214,9-2.654,9), e o tercil mais baixo desse valor concentrou a maior mortalidade em 12 meses.",
+    "indications": "Todo paciente idoso encaminhado para TAVI, aproveitando a angiotomografia de planejamento já indicada para avaliação do anel aórtico e das vias de acesso vascular — não exige exame adicional nem contraste extra, apenas a análise do corte axial em L3 que rotineiramente já está incluído no protocolo.",
+    "interpretation": "Área do psoas normalizada no tercil mais baixo associa-se a maior mortalidade por todas as causas em 12 meses após TAVI e a maior incidência de fibrilação atrial de novo início no seguimento. Em modelos de curva ROC, a área do psoas (e o volume do psoas) tiveram desempenho preditivo pelo menos equivalente aos escores clínicos de fragilidade tradicionais (VARC-2 e outras escalas), com a vantagem de ser objetivo, reprodutível e não depender de avaliação funcional presencial — o que é relevante em paciente idoso com mobilidade limitada, em quem testes de marcha ou dinamometria podem ser difíceis de padronizar.",
+    "limitations": "A ausência de um corte de normalidade único e validado prospectivamente em múltiplas populações limita o uso isolado da medida na decisão individual — hoje funciona melhor como componente de um modelo de risco combinado do que como critério autônomo de contraindicação ao procedimento. A medida também pode ser confundida por miosite, infiltração gordurosa intramuscular (mudança de composição sem necessariamente reduzir a área) e variação técnica entre softwares de segmentação, motivo pelo qual comparações entre estudos com metodologias diferentes de medida devem ser vistas com cautela.",
+    "source_refs": [
+      "Kleczynski P, Tokarek T, Dziewierz A, Sorysz D, Bagienski M, Rzeszutko L, Dudek D. Usefulness of Psoas Muscle Area and Volume and Frailty Scoring to Predict Outcomes After Transcatheter Aortic Valve Implantation. Am J Cardiol. 2018;122(1):135-140. DOI: 10.1016/j.amjcard.2018.03.020. PMID: 29703441.",
+      "Garg L, et al. Impact of computed-tomography defined sarcopenia on outcomes of older adults undergoing transcatheter aortic valve implantation. J Cardiovasc Comput Tomogr. 2022;16(3):223-230. PMID: 34896066."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "sarcopenia",
+      "músculo psoas",
+      "tavi",
+      "fragilidade",
+      "tomografia computadorizada",
+      "idoso"
+    ]
+  },
+  {
+    "slug": "ecocardiograma-doppler-de-vigilancia-para-estenose-de-veia-pulmonar-pos-operatoria-em-cardiopatia-congenita",
+    "name": "Ecocardiograma Doppler de vigilância para estenose de veia pulmonar pós-operatória (secundária) em cardiopatia congênita",
+    "category": "imagem",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Doppler colorido para localizar individualmente cada veia pulmonar e Doppler espectral pulsado/contínuo para medir a velocidade de fluxo e o gradiente médio em cada uma, usado como método de rastreio ecocardiográfico longitudinal para detectar e acompanhar a estenose de veia pulmonar que se desenvolve DEPOIS da cirurgia de correção de uma cardiopatia congênita que envolve as veias pulmonares — sobretudo drenagem anômala total ou parcial de veias pulmonares e cor triatriatum. É a chamada estenose de veia pulmonar 'secundária' ou 'pós-operatória', mecanismo distinto da estenose primária/congênita de veia pulmonar típica do lactente ex-prematuro: aqui a obstrução nasce de anastomose cirúrgica inadequada, cicatriz cirúrgica, distorção da veia pulmonar ou tecido atrial residual obstrutivo, e não necessariamente da proliferação neointimal que caracteriza a forma primária intraluminal.",
+    "reference_range": "Não há corte único de gravidade amplamente adotado. Os critérios ecocardiográficos usados para o diagnóstico de estenose de veia pulmonar são gradiente médio de 2 a 5 mmHg, perda do padrão de fluxo fásico e diminuição da pulsatilidade ao Doppler espectral. O valor absoluto do gradiente precisa ser interpretado à luz da perfusão pulmonar relativa daquele território (por cintilografia de perfusão pulmonar): um gradiente de apenas 3 mmHg pode ser significativo se o fluxo estiver redistribuído para outros lobos, e um gradiente de 8 mmHg pode ser insignificante se o lobo em questão já recebe a maior parte do débito por estenose/atresia contralateral, desde que o padrão de fluxo permaneça fásico.",
+    "indications": "Todo paciente operado de correção de drenagem anômala total ou parcial de veias pulmonares, de cor triatriatum ou de qualquer procedimento com anastomose envolvendo veia pulmonar, dentro de um protocolo de vigilância seriada — a rotina descrita na literatura combina avaliação clínica mensal com exame de imagem por 3 meses após o diagnóstico inicial ou após qualquer reintervenção por reestenose, espaçando o intervalo depois se não houver nova estenose. Também indicado diante de sintomas respiratórios novos ou piora inexplicada, intolerância alimentar, irritabilidade ou febre de origem indeterminada em paciente com esse antecedente cirúrgico.",
+    "interpretation": "Evidência ecocardiográfica de reestenose inclui gradiente de veia pulmonar novo ou em piora — desde que não confundido por anemia, agitação da criança durante o exame ou material protético obstrutivo —, aumento da pressão estimada de ventrículo direito e/ou piora da função de ventrículo direito. Como o eco isolado não garante a extensão nem a lateralidade da doença, a interpretação do gradiente costuma ser feita em conjunto com a cintilografia de perfusão pulmonar (já cadastrada nesta base): a mudança na perfusão relativa entre os pulmões é o que confirma se um gradiente crescente corresponde a obstrução clinicamente relevante ou não.",
+    "limitations": "O ecocardiograma isoladamente não fornece informação suficiente sobre o calibre da veia nem sobre a presença de doença mais distal, no interior do parênquima pulmonar — por isso costuma ser usado em conjunto com cintilografia de perfusão pulmonar ou angiotomografia seriada, e alguns centros com experiência específica adotam ressonância cardíaca para caracterização mais completa. A avaliação de gradiente por Doppler espectral pode não refletir com precisão o grau real de obstrução quando o fluxo para aquele segmento pulmonar já está significativamente reduzido por doença prévia. Em crianças pequenas, sedação pode ser necessária para obter janelas acústicas adequadas em cada veia individualmente.",
+    "source_refs": [
+      "Callahan R, Morray BH, Hirsch R, Petit CJ. Management of Pediatric Pulmonary Vein Stenosis. J Soc Cardiovasc Angiogr Interv. 2022;1(5):100391. DOI: 10.1016/j.jscai.2022.100391. PMID: 39131478. PMCID: PMC11307749 — acesso aberto, critérios ecocardiográficos e protocolo de vigilância citados no texto integral.",
+      "Seale AN, Uemura H, Webber SA, et al. Total anomalous pulmonary venous connection: outcome of postoperative pulmonary venous obstruction. J Thorac Cardiovasc Surg. 2013;145(5):1255-1262. DOI: 10.1016/j.jtcvs.2012.06.031. PMID: 22892140."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "estenose de veia pulmonar",
+      "pós-operatório",
+      "drenagem anômala de veias pulmonares",
+      "doppler espectral",
+      "cor triatriatum",
+      "vigilância ecocardiográfica"
+    ]
+  },
+  {
+    "slug": "holter-de-vigilancia-de-arritmia-atrial-na-circulacao-de-fontan",
+    "name": "Holter (monitorização ambulatorial do ritmo) de vigilância de arritmia atrial na circulação de Fontan",
+    "category": "metodo_grafico",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Registro eletrocardiográfico contínuo ambulatorial (tipicamente 24 a 48 horas), programado em intervalos predefinidos por idade e repetido independentemente da presença de sintomas, para detectar taquicardia supraventricular — sobretudo taquicardia por reentrada intra-atrial (IART, o antigo 'flutter atrial' da era do Fontan atriopulmonar clássico) —, disfunção do nó sinusal, ritmo juncional acelerado, bloqueio atrioventricular além do primeiro grau e ectopia ventricular complexa em pacientes com circulação de Fontan. Essa população carrega risco cumulativo de arritmia atrial ao longo da vida por causa das extensas linhas de sutura atrial da cirurgia, da hipertensão e dilatação atrial crônicas impostas pela fisiologia de Fontan e, nas técnicas mais antigas (Fontan atriopulmonar), do próprio átrio direito hipertensivo funcionando como câmara de bombeamento contra a circulação pulmonar.",
+    "reference_range": "Não há valor numérico de referência — o resultado é qualitativo (presença ou ausência de arritmia ao registro). Em coorte pediátrica de referência com 139 Holters de vigilância realizados em 83 pacientes de Fontan, 37% dos exames mostraram alguma arritmia (taquicardia supraventricular, disfunção do nó sinusal, ritmo juncional acelerado, bloqueio atrioventricular acima do primeiro grau ou ectopia ventricular complexa), incluindo achados discretos e assintomáticos detectados apenas pela vigilância programada.",
+    "indications": "Paciente com circulação de Fontan, independentemente de sintomas, dentro de um protocolo de vigilância periódica — a coorte de referência usou Holters programados aos 6, 10, 13, 16 e 19 anos de idade. Também indicado diante de qualquer sintoma sugestivo de arritmia (palpitação, síncope, pré-síncope, piora inexplicada da capacidade funcional), situação em que a sensibilidade do exame para detectar arritmia é maior do que na vigilância assintomática — 52% versus 26% dos exames positivos na mesma coorte.",
+    "interpretation": "O achado de arritmia — mesmo assintomática/oculta, detectada só pela vigilância programada — motivou mudança de conduta em 31% dos Holters positivos da coorte de referência, da introdução de medicação antiarrítmica ao encaminhamento para estudo eletrofisiológico/ablação ou reavaliação hemodinâmica. Nessa mesma coorte, sexo feminino, morfologia de ventrículo único de tipo direito e QRS mais alargado ao ECG basal associaram-se a maior probabilidade de arritmia; os achados ocultos (só pela vigilância) foram menos associados a regurgitação atrioventricular moderada a grave ou a disfunção ventricular do que as arritmias clinicamente indicadas, sugerindo que a vigilância programada capta uma fase mais precoce da doença atrial do que o achado clínico isolado.",
+    "limitations": "Um Holter de 24 a 48 horas isolado tem sensibilidade limitada para arritmia paroxística de baixa frequência — um resultado normal não afasta arritmia intermitente, e monitores de eventos implantáveis (looper) ou registros ambulatoriais de maior duração podem ser necessários quando a suspeita clínica persiste apesar de Holter normal. O protocolo de idades fixas (6/10/13/16/19 anos) usado na coorte de referência é a rotina adotada por um único centro, não uma recomendação formal de sociedade com intervalo definido — a frequência ideal de vigilância na população de Fontan carece de padronização entre centros.",
+    "source_refs": [
+      "Saley TP, Patel ND, Bar-Cohen Y, Silka MJ, Hill AC. Utility of Surveillance Ambulatory Rhythm Monitoring in the Pediatric Fontan Population. Pediatr Cardiol. 2021;42(6):1442-1448. DOI: 10.1007/s00246-021-02630-0. PMID: 33963437.",
+      "Khairy P, Van Hare GF, Balaji S, et al. PACES/HRS Expert Consensus Statement on the Recognition and Management of Arrhythmias in Adult Congenital Heart Disease. Heart Rhythm. 2014;11(10):e102-e165. DOI: 10.1016/j.hrthm.2014.05.009. PMID: 24814377 — documento de consenso que discute especificamente o mecanismo e o risco de arritmia atrial na circulação de Fontan; citado aqui de forma geral, como referência de contexto (o registro do PubMed não traz resumo estruturado com números para citação pontual)."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "fontan",
+      "taquicardia por reentrada intra-atrial",
+      "holter",
+      "arritmia atrial",
+      "vigilância ambulatorial",
+      "cardiopatia congênita univentricular"
+    ]
   }
 ]

@@ -21367,5 +21367,45 @@
         "por_que": "Fecha a trilha no ponto em que a miocardite não recupera apesar do suporte escalonado: indicações, contraindicações e desfechos do transplante cardíaco pediátrico, segundo o registro internacional ISHLT — a via final quando os passos anteriores não bastam."
       }
     ]
+  },
+  {
+    "slug": "trilha-cardiopatia-congenita-doenca-hepatica-associada-a-fontan-e-sobrevida-de-longo-prazo",
+    "titulo": "Fontan ao longo da vida: sobrevida por técnica cirúrgica e a vigilância hepática que começa na infância",
+    "tema": "Cardiopatias congênitas",
+    "objetivo": "Sair sabendo que a sobrevida de longo prazo após a Fontan depende da técnica cirúrgica empregada e da morfologia de base, reconhecer que a doença hepática associada a Fontan (FALD) é praticamente universal já na infância e adolescência — não uma complicação tardia exclusiva do adulto —, entender por que nenhum método não invasivo isolado substitui a biópsia hepática para estimar a gravidade da fibrose, e usar os preditores objetivos (pressão venosa central e regurgitação atrioventricular ao cateterismo) para calibrar a intensidade da vigilância hepática de cada paciente.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "circulacao-de-fontan-e-transposicao-das-grandes-arterias-no-adulto",
+        "por_que": "Começa aqui porque estabelece a fisiologia da circulação de Fontan no adulto e o arcabouço geral de acompanhamento sobre o qual as questões mais específicas desta trilha — sobrevida por técnica cirúrgica e vigilância hepática — se apoiam."
+      },
+      {
+        "ordem": 2,
+        "item_type": "estudo",
+        "item_slug": "dudekem-2014-sobrevida-de-25-anos-apos-fontan-no-registro-da-australia-e-nova-zelandia",
+        "por_que": "Antes de discutir complicações tardias específicas, é preciso saber quanto tempo de sobrevida esperar e de que ela depende: o registro binacional da Austrália e Nova Zelândia mostra sobrevida de 25 anos de 76% na coorte de conexão atriopulmonar (técnica histórica), risco 6,2 vezes maior de morte em comparação ao conduto extracardíaco moderno, e a síndrome do coração esquerdo hipoplásico como principal preditor independente de falha do Fontan — o ponto de partida para saber quais pacientes exigem seguimento mais intenso."
+      },
+      {
+        "ordem": 3,
+        "item_type": "estudo",
+        "item_slug": "rathgeber2020-espectro-da-doenca-hepatica-associada-a-fontan-em-criancas-e-adolescentes",
+        "por_que": "Desfaz a ideia de que a doença hepática associada a Fontan (FALD) é exclusivamente um problema do adulto: nas 17 biópsias hepáticas realizadas nesta coorte pediátrica (mediana de 14,8 anos), 100% mostraram alterações patológicas — a lesão histológica já está presente, de forma praticamente universal, na infância e adolescência."
+      },
+      {
+        "ordem": 4,
+        "item_type": "estudo",
+        "item_slug": "munsterman2019-espectro-clinico-da-doenca-hepatica-associada-a-fontan-coorte-prospectiva",
+        "por_que": "Na coorte adulta de rastreio hepático multimodal, a fibrose esteve presente em 100% das biópsias (grave em 68%), mas nenhum método não invasivo isolado — elastografia, biomarcadores séricos, parâmetros semiquantitativos de RM/TC — se correlacionou com a gravidade histológica, e o MELD-XI permaneceu baixo mesmo com fibrose avançada. É o achado que justifica por que a biópsia continua sendo o padrão de referência, e não um exame de rastreio normal isoladamente."
+      },
+      {
+        "ordem": 5,
+        "item_type": "estudo",
+        "item_slug": "inuzuka2023-preditores-de-cirrose-hepatica-e-carcinoma-hepatocelular-pos-fontan",
+        "por_que": "Fecha a trilha com critérios objetivos e mensuráveis para calibrar a intensidade da vigilância: nesta coorte multi-institucional de 1.117 sobreviventes perioperatórios da Fontan, pressão venosa central elevada e regurgitação atrioventricular grave ao cateterismo pós-operatório foram preditores independentes de cirrose hepática e carcinoma hepatocelular em seguimento mediano de 10,3 anos — transformando a vigilância hepática de rotina genérica em estratificação de risco individualizada."
+      }
+    ]
   }
 ]
