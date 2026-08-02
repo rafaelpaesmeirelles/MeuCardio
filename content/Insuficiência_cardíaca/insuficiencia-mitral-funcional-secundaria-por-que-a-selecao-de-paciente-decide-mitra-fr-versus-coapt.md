@@ -1,0 +1,50 @@
+---
+title: "Insuficiência Mitral Funcional Secundária à Dilatação do Ventrículo Esquerdo: Por Que a Seleção do Paciente Decide — MITRA-FR versus COAPT"
+slug: insuficiencia-mitral-funcional-secundaria-por-que-a-selecao-de-paciente-decide-mitra-fr-versus-coapt
+theme: "Insuficiência cardíaca"
+kind: estudo
+review_status: revisado
+source_refs: ["Obadia JF, Messika-Zeitoun D, Leurent G, Iung B, Bonnet G, Piriou N, Lefèvre T, Piot C, Rouleau F, Carrié D, et al. (MITRA-FR Investigators). Percutaneous Repair or Medical Treatment for Secondary Mitral Regurgitation. N Engl J Med. 2018;379(24):2297-2306. PMID 30145927 — abstract conferido via NCBI E-utilities nesta sessão (02/08/2026)", "Stone GW, Lindenfeld J, Abraham WT, Kar S, Lim DS, Mishell JM, Whisenant B, Grayburn PA, Rinaldi M, Kapadia SR, et al. (COAPT Investigators). Transcatheter Mitral-Valve Repair in Patients with Heart Failure. N Engl J Med. 2018;379(24):2307-2318. PMID 30280640 — abstract conferido via NCBI E-utilities nesta sessão (02/08/2026)"]
+legacy_source: "Documento novo, escrito em 02/08/2026. Conferido por grep em content/Insuficiência_cardíaca e content/Valvopatias antes de escrever: nenhum documento do repositório cobria MITRA-FR, COAPT ou o conceito de insuficiência mitral funcional/desproporcional. Salvo em Insuficiência cardíaca (faixa desta sessão) porque o eixo do documento é o mecanismo de remodelamento do VE e a lição sobre seleção de paciente para terapia estrutural na cardiopatia dilatada — não uma revisão de técnica valvar, que seria de Valvopatias."
+---
+
+# Insuficiência Mitral Funcional Secundária à Dilatação do Ventrículo Esquerdo
+
+## Por que a insuficiência mitral funcional é uma doença diferente da degenerativa
+Na insuficiência mitral **primária (degenerativa)**, o problema está na própria valva: folheto redundante, corda rota, calcificação — uma lesão estrutural que, corrigida, resolve o refluxo. Na insuficiência mitral **funcional (secundária)**, os folhetos e as cordas são **estruturalmente normais**. O que causa o refluxo é a geometria do coração ao redor da valva: um ventrículo esquerdo dilatado e remodelado (por cardiomiopatia isquêmica ou não isquêmica) desloca os músculos papilares para fora e para baixo, tracionando as cúspides mitrais e impedindo o fechamento coaptado (*tethering*). O anel mitral também dilata junto com o átrio e o ventrículo. O resultado é o mesmo sinal ecocardiográfico — jato regurgitante — mas por um mecanismo geométrico, não por doença valvar primária.
+
+Essa distinção tem uma consequência prática direta: se a causa é a geometria do ventrículo, **reparar apenas a valva não trata a doença de base**. A cardiomiopatia dilatada e a insuficiência mitral funcional coexistem numa relação circular — o refluxo mitral sobrecarrega ainda mais o VE já disfuncionante, e o VE mais disfuncionante traciona ainda mais a valva —, e reduzir o refluxo por si só não necessariamente interrompe esse ciclo se o miocárdio subjacente não responder.
+
+## MITRA-FR: reparo percutâneo não mudou o desfecho em 12 meses
+O MITRA-FR (Obadia JF et al., *N Engl J Med* 2018;379(24):2297-2306, PMID 30145927) randomizou **304 pacientes** com insuficiência mitral secundária grave e insuficiência cardíaca para reparo percutâneo da valva mitral (MitraClip) associado a terapia medicamentosa otimizada, versus terapia medicamentosa otimizada isolada. No desfecho composto de morte por qualquer causa ou hospitalização não planejada por insuficiência cardíaca em **12 meses**:
+- Grupo intervenção: **54,6% (83 de 152 pacientes)**.
+- Grupo controle: **51,3% (78 de 152 pacientes)**.
+- Razão de chances **1,16** (IC 95% 0,73–1,84), **P = 0,53** — sem diferença estatisticamente significativa (PMID 30145927).
+
+Nos desfechos isolados, também sem diferença: mortalidade de 24,3% (37/152) na intervenção versus 22,4% (34/152) no controle (razão de risco 1,11; IC 95% 0,69–1,77); hospitalização por insuficiência cardíaca de 48,7% (74/152) versus 47,4% (72/152) (razão de risco 1,13; IC 95% 0,81–1,56) (PMID 30145927). O reparo percutâneo com MitraClip, apesar de tecnicamente bem-sucedido em reduzir o grau de regurgitação, **não se traduziu em benefício clínico** nessa população.
+
+## COAPT: a mesma intervenção, com resultado oposto
+O COAPT (Stone GW et al., *N Engl J Med* 2018;379(24):2307-2318, PMID 30280640) testou o **mesmo dispositivo** (MitraClip) na mesma indicação de base — insuficiência mitral secundária moderada a grave ou grave, apesar de terapia medicamentosa máxima — em **614 pacientes**, em 78 centros norte-americanos, randomizados para dispositivo + terapia clínica versus terapia clínica isolada. Nesse ensaio, o desfecho foi **positivo** em ambos os componentes, com seguimento de **24 meses**:
+- **Hospitalização por insuficiência cardíaca** (desfecho primário de eficácia): taxa anualizada de **35,8% por paciente-ano** no grupo dispositivo versus **67,9% por paciente-ano** no grupo controle (razão de risco 0,53; IC 95% 0,40–0,70; **P < 0,001**) (PMID 30280640).
+- **Mortalidade por qualquer causa em 24 meses**: **29,1%** no grupo dispositivo versus **46,1%** no grupo controle (razão de risco 0,62; IC 95% 0,46–0,82; **P < 0,001**) (PMID 30280640).
+- Segurança: **96,6%** de liberdade de complicações relacionadas ao dispositivo em 12 meses (PMID 30280640).
+
+Duas leituras opostas do mesmo procedimento, na mesma indicação nominal ("insuficiência mitral funcional em paciente com insuficiência cardíaca"), publicadas no mesmo número da mesma revista, no mesmo dia (13 de dezembro de 2018).
+
+## A explicação da divergência: regurgitação "proporcional" versus "desproporcional" ao grau de dilatação do VE
+A leitura mais aceita para a discordância entre os dois ensaios — e que se tornou um conceito central no manejo da insuficiência mitral funcional depois de 2018 — é a de **proporcionalidade entre o grau de regurgitação mitral e o grau de dilatação/disfunção do ventrículo esquerdo**:
+
+- No **MITRA-FR**, os pacientes tinham ventrículos **mais dilatados** para o grau de regurgitação mitral (volume regurgitante e área do orifício regurgitante menores em relação ao volume diastólico final do VE) — ou seja, a regurgitação mitral era relativamente **proporcional** ao tamanho do ventrículo. Nessa situação, o remodelamento ventricular grave é o principal determinante do prognóstico, e reduzir o refluxo mitral tem pouco espaço para alterar o curso de uma cardiomiopatia já avançada — o VE dilatado continuaria a ser o fator dominante independentemente da correção valvar.
+- No **COAPT**, os critérios de inclusão selecionaram pacientes com regurgitação mitral **grave** (área do orifício regurgitante efetivo mais restrita ao critério de gravidade) em ventrículos **menos dilatados** proporcionalmente — ou seja, a regurgitação mitral era **desproporcional** ao grau de disfunção do VE. Nesses pacientes, a própria insuficiência mitral (e não apenas a cardiomiopatia de base) contribui de forma relevante para os sintomas e para as hospitalizações, de modo que reduzi-la mecanicamente tem potencial real de alterar a trajetória clínica.
+
+**Nota de precisão sobre a origem do conceito**: a formulação explícita da hipótese de regurgitação "proporcional versus desproporcional" como explicação central para a divergência MITRA-FR/COAPT é amplamente atribuída a uma análise posterior de Grayburn PA e colaboradores (que também integraram o corpo de investigadores do COAPT), comparando as características ecocardiográficas basais das duas coortes. **VERIFICAÇÃO HUMANA NECESSÁRIA**: o PMID e a citação completa dessa análise específica de proporcionalidade não foram confirmados nesta sessão — os dois abstracts primários (MITRA-FR e COAPT) sustentam integralmente os números clínicos apresentados acima, mas não usam literalmente o par de termos "proporcional/desproporcional"; esse enquadramento consolidou-se na literatura posterior de revisão e deve ser verificado em fonte primária antes de ser atribuído a um autor ou artigo específico.
+
+Outras diferenças metodológicas entre os dois ensaios também são discutidas na literatura como contribuintes possíveis (intensidade e protocolo de otimização da terapia clínica antes da randomização, critérios ecocardiográficos de gravidade da regurgitação, taxa de sucesso técnico do implante) — **VERIFICAÇÃO HUMANA NECESSÁRIA** para o detalhamento quantitativo dessas diferenças, que não constam dos abstracts dos dois artigos primários consultados nesta sessão e exigiriam leitura do texto completo e de editoriais comparativos dedicados.
+
+## Implicação prática: a seleção do paciente decide mais do que a técnica
+A lição central que os dois ensaios sustentam, em conjunto, é que a mesma intervenção estrutural (MitraClip) não tem eficácia uniforme na insuficiência mitral funcional — ela depende de **qual mecanismo está dominando o quadro clínico**:
+
+- Quando o ventrículo dilatado é o motor principal da doença (regurgitação proporcional ao remodelamento), corrigir a valva sem tratar ou revertê-lo tem eficácia limitada — é isto que o MITRA-FR mostra, com um desfecho composto neutro em 12 meses (PMID 30145927).
+- Quando a regurgitação mitral em si é desproporcionalmente grave e contribui de forma independente para os sintomas e as internações, corrigi-la percutaneamente reduz hospitalização e mortalidade de forma expressiva — é isto que o COAPT mostra, com redução de risco de aproximadamente metade no desfecho primário e na mortalidade em 24 meses (PMID 30280640).
+
+Na prática clínica, isso reforça que a insuficiência mitral funcional secundária **não deve ser tratada como uma indicação binária de "presença de regurgitação grave"** para intervenção estrutural. A otimização plena da terapia farmacológica e, quando indicada, da terapia de ressincronização cardíaca da insuficiência cardíaca de base — antes de considerar o reparo transcatâneo — é etapa prévia essencial, e a decisão de intervir na valva depende de caracterizar se o grau de regurgitação é proporcional ou desproporcional ao remodelamento ventricular já estabelecido, não apenas da gravidade isolada do refluxo à ecocardiografia.
