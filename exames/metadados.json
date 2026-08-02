@@ -5287,5 +5287,132 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "ferro-ferritina-e-saturacao-de-transferrina-na-insuficiencia-cardiaca-do-idoso",
+    "name": "Ferro sérico, ferritina e saturação de transferrina na insuficiência cardíaca do idoso",
+    "category": "laboratorial",
+    "theme": "Cardiologia geriátrica",
+    "what_it_measures": "Painel de reservas de ferro (ferritina sérica) e de ferro disponível para eritropoiese e função muscular/mitocondrial (saturação de transferrina, TSAT = ferro sérico ÷ capacidade total de ligação do ferro × 100). No idoso com insuficiência cardíaca, a deficiência de ferro é comum e frequentemente independe de anemia — pode haver deficiência de ferro com hemoglobina normal.",
+    "reference_range": "Definição de deficiência de ferro usada nos ensaios clínicos de IC e nas diretrizes: ferritina sérica < 100 µg/L, OU ferritina entre 100 e 299 µg/L COM saturação de transferrina < 20%. É a mesma definição operacional do AFFIRM-AHF (Ponikowski P et al. Lancet. 2020;396(10266):1895-1904).",
+    "indications": "Rastreio de rotina em todo paciente com insuficiência cardíaca, independentemente da presença de anemia — a diretriz ESC de IC recomenda dosar periodicamente. É especialmente relevante no idoso, em quem a prevalência de deficiência de ferro na IC ultrapassa 50% em algumas coortes e frequentemente coexiste com doença renal crônica e inflamação crônica de baixo grau, que confundem a interpretação isolada da ferritina.",
+    "interpretation": "Deficiência de ferro confirmada (pelos critérios acima) em paciente com ICFEr sintomático (FEVE ≤ 50% na atualização de 2023) é indicação de reposição intravenosa com carboxi­maltose férrica — reduz hospitalização por IC. No AFFIRM-AHF (pacientes estabilizados após internação por IC aguda com FEVE < 50% e deficiência de ferro), a reposição reduziu as hospitalizações totais por IC (217 vs. 294 eventos; RR 0,74; IC95% 0,58–0,94; p=0,013) sem diferença de mortalidade cardiovascular isolada.",
+    "limitations": "A ferritina é reagente de fase aguda — eleva-se em qualquer processo inflamatório ou infeccioso, comum no idoso hospitalizado, o que pode mascarar deficiência de ferro verdadeira (deficiência 'funcional', com ferritina normal/alta e TSAT baixa). Por isso a TSAT tem peso maior que a ferritina isolada na interpretação combinada. Ferro sérico tem variação circadiana relevante — coletar sempre em jejum, pela manhã, sem suplementação de ferro oral nas 24h anteriores.",
+    "source_refs": [
+      "McDonagh TA et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726.",
+      "Ponikowski P et al. Ferric carboxymaltose for iron deficiency at discharge after acute heart failure (AFFIRM-AHF): a multicentre, double-blind, randomised, controlled trial. Lancet. 2020;396(10266):1895-1904."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ferro",
+      "ferritina",
+      "saturação de transferrina",
+      "insuficiência cardíaca",
+      "idoso",
+      "deficiência de ferro"
+    ]
+  },
+  {
+    "slug": "teste-ergometrico-na-provocacao-de-taquicardia-ventricular-catecolaminergica-polimorfica-em-criancas",
+    "name": "Teste ergométrico (esteira) na provocação de taquicardia ventricular catecolaminérgica polimórfica em crianças",
+    "category": "metodo_grafico",
+    "theme": "Cardiologia pediátrica",
+    "what_it_measures": "Resposta eletrocardiográfica ao esforço físico progressivo em crianças e adolescentes com suspeita de taquicardia ventricular catecolaminérgica polimórfica (TVPC/CPVT) — canalopatia em que a arritmia é desencadeada por estímulo adrenérgico (exercício ou emoção intensa), não estando presente em repouso. Diferente do teste ergométrico pediátrico padrão (protocolo de Bruce modificado, já cadastrado nesta base), cujo objetivo é a capacidade funcional — aqui o objetivo é provocar a arritmia.",
+    "reference_range": "Normal: ausência de ectopia ventricular significativa durante todo o esforço e a recuperação. No paciente com TVPC, o teste tipicamente reproduz extrassístoles ventriculares que aumentam em complexidade com a frequência cardíaca crescente, evoluindo para taquicardia ventricular bidirecional (alternância de eixo do QRS batimento a batimento) e depois polimórfica, conforme a intensidade do esforço sobe.",
+    "indications": "Criança ou adolescente com síncope ou palpitação desencadeada por exercício ou estresse emocional, coração estruturalmente normal e ECG de repouso sem alterações — cenário em que o ECG de repouso e o Holter convencional costumam ser normais, e o teste ergométrico é o principal exame provocativo à beira do leito antes do teste genético.",
+    "interpretation": "Segundo o consenso de especialistas HRS/EHRA/APHRS sobre síndromes arrítmicas primárias hereditárias, taquicardia ventricular bidirecional ou polimórfica inequivocamente induzida por exercício ou catecolamina, em indivíduo com menos de 40 anos, coração estruturalmente normal e ECG basal normal, é critério diagnóstico de TVPC mesmo sem confirmação genética. O teste também serve para acompanhar a resposta ao tratamento com betabloqueador, que é a base da terapia.",
+    "limitations": "Teste negativo não exclui o diagnóstico — a sensibilidade não é de 100%, e parte dos pacientes só manifesta a arritmia com estresse emocional ou catecolamina exógena (teste de infusão de epinefrina), não reproduzido pelo exercício em esteira. O teste deve ser realizado com desfibrilador e equipe treinada em ressuscitação imediatamente disponíveis, pela possibilidade concreta de induzir taquicardia ventricular sustentada ou fibrilação ventricular.",
+    "source_refs": [
+      "Priori SG, Wilde AA, Horie M, et al. HRS/EHRA/APHRS expert consensus statement on the diagnosis and management of patients with inherited primary arrhythmia syndromes. Heart Rhythm. 2013;10(12):1932-1963."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "teste ergométrico",
+      "tvpc",
+      "cpvt",
+      "taquicardia ventricular catecolaminérgica",
+      "síncope",
+      "pediatria",
+      "canalopatia"
+    ]
+  },
+  {
+    "slug": "strain-longitudinal-global-na-cardiotoxicidade-por-antraciclina-em-criancas-e-adolescentes",
+    "name": "Strain longitudinal global (speckle tracking) na cardiotoxicidade por antraciclina em crianças e adolescentes",
+    "category": "imagem",
+    "theme": "Cardiologia pediátrica",
+    "what_it_measures": "Deformação miocárdica longitudinal do ventrículo esquerdo por rastreamento de manchas (speckle tracking) ao ecocardiograma, na monitorização seriada de crianças e adolescentes em quimioterapia com antraciclina — mesma técnica já cadastrada nesta base para o adulto em cardio-oncologia, aqui com o dado específico da faixa etária pediátrica, em que o desfecho de referência é a queda da fração de ejeção meses depois.",
+    "reference_range": "Não há um corte único validado especificamente para a faixa pediátrica com o mesmo nível de evidência do adulto. O achado de referência do estudo pediátrico fundador é a queda estatisticamente significativa do strain sistólico longitudinal de pico (LPSS) do ventrículo esquerdo em relação ao basal já aos 4 meses de tratamento, precedendo a queda da fração de ejeção.",
+    "indications": "Monitorização seriada de adolescentes em quimioterapia com antraciclina, para detectar disfunção contrátil subclínica antes da queda mensurável da fração de ejeção pelo método de Simpson — mesmo racional do uso em adultos, com a diferença de que a população pediátrica tem sobrevida longa após o tratamento oncológico, o que torna a detecção precoce ainda mais relevante para decisões de cardioproteção.",
+    "interpretation": "No estudo de Poterucha et al. (19 adolescentes em antraciclina vs. 19 controles pareados, ecocardiograma com speckle tracking no basal, 4 e 8 meses), a queda do LPSS global do VE foi significativa em relação ao basal já aos 4 meses e manteve-se aos 8 meses, enquanto a fração de ejeção caiu de forma mais gradual; a variação segmentar do LPSS médio nas porções médio-apicais do VE se correlacionou significativamente com a variação da fração de ejeção subsequente — ou seja, o strain anunciou a queda de FE antes de ela ocorrer.",
+    "limitations": "Estudo pequeno (19 pacientes), de um único centro, sem ponto de corte numérico único validado para decisão clínica na pediatria — ao contrário do adulto, onde a queda relativa >15% é usada nas diretrizes de cardio-oncologia. Mesma limitação técnica do adulto: variabilidade entre plataformas de ecógrafo e entre observadores, o que recomenda repetir o exame sempre no mesmo equipamento quando possível.",
+    "source_refs": [
+      "Poterucha JT et al. Changes in left ventricular longitudinal strain with anthracycline chemotherapy in adolescents precede subsequent decreased left ventricular ejection fraction. J Am Soc Echocardiogr. 2012;25(7):733-740.",
+      "2022 ESC Guidelines on cardio-oncology. Eur Heart J. 2022;43(41):4229-4361."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "strain longitudinal global",
+      "speckle tracking",
+      "cardiotoxicidade",
+      "antraciclina",
+      "pediatria",
+      "cardio-oncologia",
+      "ecocardiograma"
+    ]
+  },
+  {
+    "slug": "densitometria-ossea-dxa-na-circulacao-de-fontan",
+    "name": "Densitometria óssea (DXA) na avaliação da saúde óssea em crianças e adultos com circulação de Fontan",
+    "category": "imagem",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Densidade mineral óssea (DMO) por absorciometria de raios-X de dupla energia (DXA), habitualmente na coluna lombar e no corpo total em crianças/adolescentes, ou na coluna lombar e no colo do fêmur em adultos — expressa em escore Z (comparação com pares da mesma idade e sexo, uso preferencial em pediatria) ou escore T (comparação com adulto jovem de referência).",
+    "reference_range": "Segundo os critérios convencionais da ISCD/OMS: em adultos, T-score ≥ -1,0 é normal, entre -1,0 e -2,5 é osteopenia, ≤ -2,5 é osteoporose; em crianças e adolescentes usa-se o Z-score, com ≤ -2,0 definido como 'densidade mineral óssea abaixo do esperado para a idade cronológica' (não se usa o termo 'osteoporose' na pediatria sem fratura associada). Não há um corte específico validado só para a população com circulação de Fontan — os estudos citados abaixo aplicam os mesmos critérios gerais.",
+    "indications": "Rastreio da massa óssea na circulação de Fontan, população em que déficit ósseo é achado consistente e não incidental: a diretriz da AHA sobre avaliação e manejo da circulação de Fontan lista explicitamente 'abnormalities in body composition, bone structure, and growth' entre as complicações sistêmicas documentadas dessa fisiologia, dentro do roteiro de vigilância proposto no documento.",
+    "interpretation": "Em coorte de adultos jovens com Fontan (n=28), 29% tinham DMO em faixa osteopênica e 1 paciente era osteoporótico, com 14% apresentando escore Z < -2,0; havia hiperparatireoidismo secundário associado (PTH 6,1 ± 3,5 vs. mediana laboratorial de 4 pmol/L, p=0,01) e a relação sistólica/diastólica do influxo atrioventricular ao ecocardiograma (marcador de disfunção diastólica) se correlacionou inversamente com os escores de quadril. Em crianças e adolescentes (n=64), o escore Z médio foi -1,0 ± 1,3 na coluna lombar e -0,2 ± 1,2 no corpo total, com piora progressiva por faixa etária — no grupo de 16 a 18 anos, 35% tinham escore Z ≤ -2 DP, e pacientes com túnel lateral apresentaram DMO menor que os com condutos extracardíacos.",
+    "limitations": "Não existe protocolo único de periodicidade de rastreio validado especificamente para a circulação de Fontan — a decisão de repetir o exame é individualizada. Em crianças, a interpretação exige ajuste para estatura e maturação óssea (muitos pacientes com Fontan têm atraso de crescimento), sob risco de superestimar o déficit em quem é proporcionalmente menor sem ter menor densidade real — o Z-score bruto sem esse ajuste (ex. por área de superfície óssea ou densidade mineral óssea aparente) pode enganar. A etiologia é multifatorial (hiperparatireoidismo secundário, hipoxemia, congestão venosa crônica com má absorção entérica de cálcio e vitamina D, disfunção diastólica, sedentarismo) e a DXA não distingue essas causas entre si — exige investigação bioquímica complementar (PTH, 25-OH-vitamina D, cálcio, fósforo).",
+    "source_refs": [
+      "Rychik J et al. Evaluation and Management of the Child and Adult With Fontan Circulation: A Scientific Statement From the American Heart Association. Circulation. 2019;140(6):e234-e284. PMID 31256636.",
+      "D'Ambrosio P et al. Prevalence and risk factors for low bone density in adults with a Fontan circulation. Congenit Heart Dis. 2019;14(6):987-995. PMID 31430042.",
+      "Diab SG et al. Progressive loss of bone mass in children with Fontan circulation. Congenit Heart Dis. 2019;14(6):996-1004. PMID 31600039."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "fontan",
+      "densitometria ossea",
+      "dxa",
+      "osteopenia",
+      "saude ossea",
+      "ventriculo unico"
+    ]
+  },
+  {
+    "slug": "sequenciamento-genetico-dirigido-em-cardiopatia-congenita-nao-sindromica-familiar",
+    "name": "Sequenciamento genético dirigido (painel multigênico ou exoma clínico) em cardiopatia congênita não sindrômica com recorrência familiar",
+    "category": "laboratorial",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Variantes patogênicas em genes associados a cardiopatia congênita isolada (não sindrômica), com padrão de herança mendeliano reconhecido — como TBX5 (síndrome de Holt-Oram) e GATA4 —, buscadas por painel multigênico dirigido ou sequenciamento do exoma clínico. É exame distinto do microarray cromossômico (que detecta variação de número de cópias, como a deleção 22q11.2) e do NIPT (que rastreia aneuploidias fetais comuns), ambos já cadastrados nesta base: aqui a suspeita é de variante de ponto num gene específico, não de alteração cromossômica.",
+    "reference_range": "Não se aplica um valor de referência numérico — o resultado é qualitativo, classificado conforme as categorias padronizadas do consenso ACMG/AMP: variante patogênica, provavelmente patogênica, de significado incerto (VUS), provavelmente benigna ou benigna.",
+    "indications": "Cardiopatia congênita sem achados sindrômicos extracardíacos evidentes e com cariótipo/microarray cromossômico normais, quando há pelo menos um familiar de primeiro grau também afetado, ou anomalia associada de membro superior (sugerindo síndrome de Holt-Oram). A declaração científica da AHA sobre a base genética da cardiopatia congênita orienta painel dirigido quando o 'differential diagnosis' é pequeno e compatível com doença monogênica, reservando o exoma clínico para quadro com diagnóstico diferencial genético amplo e sem associação sindrômica óbvia.",
+    "interpretation": "Identificar variante patogênica em TBX5 confirma síndrome de Holt-Oram mesmo em apresentação cardíaca isolada ou com anomalia discreta de membro superior — o espectro cardíaco documentado inclui CIA, CIV, defeito do septo atrioventricular e defeitos de condução. A mesma declaração da AHA descreve correlação genótipo-fenótipo dentro do próprio gene: variantes patogênicas de sentido trocado (missense) na porção 5' do domínio T-box de TBX5 associam-se a defeitos cardíacos mais graves que variantes em outras regiões do gene. GATA4 é apontado como o gene mais provavelmente responsável pela cardiopatia associada à deleção 8p23.1.",
+    "limitations": "Resultado negativo não exclui causa genética — o rendimento diagnóstico é incompleto e a maioria dos casos aparentemente esporádicos de cardiopatia congênita tem herança poligênica/multifatorial, sem variante única identificável pelos painéis atuais. Variante de significado incerto (VUS) é achado frequente e, pelo próprio consenso ACMG/AMP, não deve ser usada isoladamente para decisão reprodutiva ou de rastreio familiar. A declaração da AHA enfatiza que aconselhamento genético pré e pós-teste, conduzido por profissional qualificado, é essencial para o uso ético e apropriado de qualquer teste genético nesse contexto — não é exame para ser solicitado e interpretado sem esse suporte.",
+    "source_refs": [
+      "Pierpont ME et al. Genetic Basis for Congenital Heart Disease: Revisited: A Scientific Statement From the American Heart Association. Circulation. 2018;138(21):e653-e711. PMID 30571578.",
+      "Richards S et al. Standards and guidelines for the interpretation of sequence variants: a joint consensus recommendation of the American College of Medical Genetics and Genomics and the Association for Molecular Pathology. Genet Med. 2015;17(5):405-424. PMID 25741868."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "genetica",
+      "cardiopatia congenita familiar",
+      "tbx5",
+      "holt-oram",
+      "gata4",
+      "aconselhamento genetico"
+    ]
   }
 ]

@@ -10889,5 +10889,109 @@
       "Broberg CS, Aboulhosn J, Deng LX, et al. Long-Term Outcomes After Atrial Switch Operation for Transposition of the Great Arteries. J Am Coll Cardiol. 2022;80(10):951-963. DOI: 10.1016/j.jacc.2022.06.020. PMID: 36049802 — coorte multicêntrica retrospectiva de 1.168 adultos com d-TGA submetidos a switch atrial (Mustard/Senning) na infância, seguimento mediano de 9,2 anos; 91 pacientes (8,8% por 10 pessoas-ano) evoluíram para óbito, transplante ou suporte circulatório mecânico; preditores independentes de desfecho adverso em 5 anos: arritmia ventricular prévia, internação por insuficiência cardíaca, anatomia complexa, QRS >120 ms e disfunção grave de ventrículo direito sistêmico. Citação conferida contra o registro já publicado nesta base: broberg-2022-desfecho-de-longo-prazo-apos-switch-atrial-na-tga."
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "febre-pos-operatoria-em-lactente-apos-fechamento-de-cia-sindrome-pos-pericardiotomia-ou-infeccao",
+    "titulo": "Febre no 12º dia após fechamento cirúrgico de CIA em lactente: infecção ou síndrome pós-pericardiotomia?",
+    "tema": "Cardiologia pediátrica",
+    "nivel": "intermediário",
+    "enunciado": "Lactente de 14 meses, submetido a fechamento cirúrgico de comunicação interatrial (CIA) tipo ostium secundum há 12 dias, recebe alta hospitalar sem intercorrências e retorna ao pronto-socorro com febre de 38,6°C, irritabilidade e recusa alimentar iniciadas há 2 dias. Ao exame: taquicárdico, sem sinais de infecção de ferida operatória, ausculta pulmonar limpa. Hemograma mostra leucocitose leve com PCR elevada. Radiografia de tórax mostra discreto aumento da silhueta cardíaca em relação à alta. Ecocardiograma transtorácico revela derrame pericárdico leve a moderado, novo em relação ao exame pré-alta, sem sinais de tamponamento.",
+    "pergunta": "Diante desse quadro, qual é o diagnóstico mais provável e a conduta inicial mais apropriada?",
+    "opcoes": [
+      "Sepse de foco indeterminado: iniciar antibioticoterapia empírica de amplo espectro e investigar hemocultura antes de qualquer outra hipótese",
+      "Síndrome pós-pericardiotomia (PPS): quadro compatível com os critérios diagnósticos (febre sem causa alternativa evidente + derrame pericárdico novo, em paciente com fechamento de CIA — procedimento associado a incidência de até 28%); após excluir infecção, iniciar AINE (não salicilato) associado a colchicina como primeira linha",
+      "Complicação mecânica tardia da cirurgia: solicitar reoperação de urgência para investigar deiscência do fechamento",
+      "Quadro viral autolimitado: orientar apenas antitérmico e reavaliação ambulatorial em 7 dias, sem necessidade de investigação adicional"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O quadro preenche os critérios diagnósticos de síndrome pós-pericardiotomia (PPS), a apresentação mais comum da síndrome de lesão cardíaca pós-injúria (PCIS): febre sem causa alternativa evidente associada a derrame pericárdico novo já são 2 dos 5 achados que definem o diagnóstico (os outros três sendo dor pleurítica/pericardítica, atrito pericárdico/pleural e derrame pleural com PCR elevada). O tempo de aparecimento (1 a 6 semanas após a lesão cardíaca, concentrado no primeiro mês) e o tipo de cirurgia realizado batem com o perfil descrito na literatura: o fechamento cirúrgico de CIA está entre os procedimentos com incidência mais alta de PPS, atribuída à manipulação pericárdica mais extensa — no estudo pediátrico dedicado a essa cirurgia, 27 de 97 crianças (28%) desenvolveram PPS no primeiro ano pós-operatório. Antes de tratar como PPS, é preciso excluir infecção de sítio cirúrgico, pneumonia e tromboembolismo pulmonar — o que o exame físico sem sinais de ferida infectada e a ausculta pulmonar limpa já tornam menos prováveis, embora a investigação inicial (hemograma, PCR, radiografia) sirva também a esse propósito. Confirmado o diagnóstico, o tratamento de primeira linha em criança é AINE não salicilato associado a colchicina — o ácido acetilsalicílico é evitado em menores de 12 anos pelo risco de síndrome de Reye, e corticoide crônico é contraindicado pelo impacto sobre crescimento, reservado a casos refratários e de forma pontual.",
+    "source_refs": [
+      "Imazio M, Tomat M. Evaluation and Management of Post-Cardiac Injury Syndrome. Methodist Debakey Cardiovasc J. 2026;22(2):27-40. DOI: 10.14797/mdcvj.1783. PMID: 41835355.",
+      "Heching HJ, Bacha EA, Liberman L. Post-pericardiotomy syndrome in pediatric patients following surgical closure of secundum atrial septal defects: incidence and risk factors. Pediatr Cardiol. 2015;36(3):498-502. DOI: 10.1007/s00246-014-1039-7. PMID: 25293428.",
+      "Ballas CE, Theologou T, Samara E, et al. Preventing Postpericardiotomy Syndrome: Current Evidence and Future Directions. J Cardiovasc Dev Dis. 2026;13(2):63. DOI: 10.3390/jcdd13020063. PMID: 41745311."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "recem-nascido-cianotico-com-sopro-holossistolico-e-segunda-bulha-unica-suspeita-de-tronco-arterial-comum",
+    "titulo": "Recém-nascido cianótico com sopro holossistólico rude e segunda bulha única: por que pensar em tronco arterial comum antes da alta da maternidade?",
+    "tema": "Cardiologia pediátrica",
+    "nivel": "avançado",
+    "enunciado": "Recém-nascido a termo, 2 dias de vida, apresenta cianose leve e taquipneia discreta desde as primeiras horas de vida, sem melhora significativa com oxigênio suplementar. Ao exame: sopro holossistólico rude, clique de ejeção audível e segunda bulha única e hiperfonética. Ecocardiograma confirma tronco arterial comum tipo A1 de Van Praagh (tronco pulmonar principal se bifurcando em ramos direito e esquerdo), com CIV subjacente e regurgitação leve da valva truncal. A equipe discute o momento da alta da maternidade e o encaminhamento cirúrgico.",
+    "pergunta": "Com base nos desfechos cirúrgicos contemporâneos descritos para essa cardiopatia, qual afirmação está correta sobre o manejo e o prognóstico deste recém-nascido?",
+    "opcoes": [
+      "Como o tipo A1 é a forma mais comum (~50% dos casos) e sem interrupção de arco aórtico, a criança pode receber alta da maternidade com reavaliação eletiva em 4 a 6 semanas, já que a sobrevida sem correção é aceitável nesse intervalo",
+      "O diagnóstico antes da alta da maternidade é um fator de proteção documentado: em coorte multicêntrica contemporânea, a falha em diagnosticar antes da alta associou-se a maior risco de evento adverso cardíaco maior (MACE) no perioperatório (odds ratio 3,1); a sobrevida em 1 ano sem correção cirúrgica é inferior a 20%, o que torna o encaminhamento cirúrgico não eletivo",
+      "Por se tratar do tipo A1, a criança não corre risco de insuficiência cardíaca por hiperfluxo pulmonar antes da cirurgia, já que apenas os tipos com interrupção de arco aórtico (A4) cursam com sobrecarga de volume pré-operatória",
+      "A presença de regurgitação leve da valva truncal contraindica a correção cirúrgica precoce, sendo necessário aguardar maturidade da valva antes da intervenção"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O tronco arterial comum é incompatível com sobrevida prolongada sem correção cirúrgica — a sobrevida em 1 ano sem cirurgia é inferior a 20%, pela combinação de hiperfluxo pulmonar não restrito com sobrecarga de volume biventricular. Isso vale para todos os subtipos anatômicos, incluindo o A1 (o mais comum, ~50% dos casos), não apenas para as formas com interrupção de arco aórtico. Um dado direto de uma coorte multicêntrica contemporânea (216 pacientes, 15 centros dos EUA, 2009-2016) identificou três fatores de risco potencialmente modificáveis para eventos adversos cardíacos maiores (MACE) no perioperatório: falha em diagnosticar a cardiopatia antes da alta da maternidade (odds ratio 3,1; IC95% 1,3-7,4), tempo de circulação extracorpórea acima de 150 minutos (odds ratio 3,5) e diâmetro do conduto de VD-AP acima de 50 mm/m² (odds ratio 4,7). Ou seja, diagnosticar e encaminhar antes da alta — em vez de reavaliação eletiva tardia — é um dos poucos fatores de risco realmente modificáveis pela equipe assistencial, o que torna essa cardiopatia uma indicação cirúrgica não eletiva assim que diagnosticada.",
+    "source_refs": [
+      "Bhansali S, Horenstein MS, Phoon C. Truncus Arteriosus. In: StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; atualização 2026. PMID: 30521195.",
+      "Mastropietro CW, Amula V, Sassalos P, et al. Characteristics and operative outcomes for children undergoing repair of truncus arteriosus: A contemporary multicenter analysis. J Thorac Cardiovasc Surg. 2019;157(6):2386-2398.e4. DOI: 10.1016/j.jtcvs.2018.12.115. PMID: 30954295."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "idosa-viuva-com-icfep-e-internacoes-recorrentes-rastrear-solidao-como-fator-de-risco",
+    "titulo": "Idosa viúva com ICFEp e internações recorrentes: vale a pena perguntar sobre solidão na consulta cardiológica?",
+    "tema": "Cardiologia geriátrica",
+    "nivel": "básico",
+    "enunciado": "Mulher de 78 anos, viúva há 8 meses, com insuficiência cardíaca de fração de ejeção preservada estável em uso de diurético e antagonista mineralocorticoide, é internada pela terceira vez em 10 meses por descompensação. Investigação não mostra causa mecânica ou farmacológica clara para as internações recorrentes (adesão medicamentosa confirmada, dieta hipossódica revisada, função renal estável). Durante a anamnese ampliada, a paciente relata morar sozinha, ter contato telefônico esporádico com os filhos e raramente sair de casa desde o falecimento do marido.",
+    "pergunta": "Qual afirmação está mais bem sustentada pela evidência científica atual sobre isolamento social/solidão e desfecho cardiovascular no idoso?",
+    "opcoes": [
+      "Isolamento social e solidão são questões exclusivamente sociais, sem relação estabelecida com desfecho cardiovascular, e não devem orientar a investigação de internações recorrentes por IC",
+      "A viuvez é o fator de risco de maior magnitude para solidão indesejada identificado em coorte de pacientes idosos com IC estável (razão de chances 3,25), e a solidão indesejada associou-se a maior risco do desfecho composto de morte ou internação por qualquer causa (hazard ratio 1,83) nessa mesma coorte — dado que justifica rastrear a rede de apoio social como parte da investigação, ainda que nenhum ensaio de intervenção com desfecho cardiovascular tenha sido testado até o momento",
+      "Existe hoje evidência de ensaio clínico randomizado mostrando que intervenções estruturadas de suporte social reduzem hospitalização por IC no idoso, e essa deveria ser prescrita como parte do tratamento",
+      "Solidão e isolamento social são sinônimos e devem ser rastreados exatamente da mesma forma, já que compartilham a mesma via inflamatória"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Isolamento social e solidão são hoje reconhecidos como fatores de risco cardiovascular independentes. Em coorte espanhola dedicada a pacientes idosos com IC estável (298 pacientes, idade média 75,8 anos), a viuvez foi o fator de risco de maior magnitude para solidão indesejada (razão de chances 3,25; IC95% 1,51-7,01), e a solidão indesejada associou-se significativamente a maior risco do desfecho composto de morte ou internação por qualquer causa ao longo do seguimento (hazard ratio 1,83; IC95% 1,18-2,84). A declaração científica da American Heart Association reforça que quase 1 em 4 idosos ≥65 anos vivendo na comunidade está socialmente isolado, e associa isolamento social a maior mortalidade por doença coronariana, maior risco de recorrência após AVC/IAM e maior hospitalização por IC. Importante: a mesma declaração afirma explicitamente que nenhum estudo de intervenção publicado até a data testou reduzir esse risco por meio de suporte social estruturado — o corpo de evidência hoje autoriza rastrear e discutir a rede social do paciente como parte da avaliação, mas não autoriza prometer redução de risco cardiovascular por uma intervenção específica de combate à solidão. Isolamento social (medida objetiva) e solidão (percepção subjetiva) também não são sinônimos: têm vias inflamatórias parcialmente distintas (PCR/fibrinogênio no isolamento objetivo, IL-6 na solidão subjetiva).",
+    "source_refs": [
+      "Cené CW, Beckie TM, Sims M, et al. Effects of Objective and Perceived Social Isolation on Cardiovascular and Brain Health: A Scientific Statement From the American Heart Association. J Am Heart Assoc. 2022;11(16):e026493. DOI: 10.1161/JAHA.122.026493. PMID: 35924775.",
+      "Benito T, Zaharia G, Pérez A, et al. Risk factors and prognostic impact of unwanted loneliness in heart failure. Sci Rep. 2024;14(1):22229. DOI: 10.1038/s41598-024-72847-5. PMID: 39333672."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "fibrilacao-atrial-em-idosa-de-88-anos-com-sangramento-previo-doac-em-dose-reduzida-ainda-vale-a-pena",
+    "titulo": "Fibrilação atrial em mulher de 88 anos com episódio prévio de sangramento gastrointestinal: o DOAC ainda vale a pena?",
+    "tema": "Cardiologia geriátrica",
+    "nivel": "intermediário",
+    "enunciado": "Mulher de 88 anos, fibrilação atrial permanente, hipertensão e um episódio de sangramento digestivo alto autolimitado há 2 anos (sem necessidade de transfusão), é encaminhada para reavaliação de anticoagulação. Ela e a família estão receosas de reiniciar anticoagulante oral pelo risco de sangramento, e cogitam suspender definitivamente qualquer anticoagulação, mantendo apenas acompanhamento clínico.",
+    "pergunta": "O que uma coorte nacional coreana de base populacional, dedicada especificamente a pacientes com fibrilação atrial de 80 anos ou mais e alto risco de sangramento, mostra sobre essa decisão?",
+    "opcoes": [
+      "Nessa faixa etária e de risco, a ausência de anticoagulação é a opção mais segura, já que o risco hemorrágico supera qualquer benefício isquêmico demonstrado",
+      "O uso de DOAC (predominantemente em dose reduzida) associou-se a menor risco de AVC isquêmico (HR 0,81) e menor mortalidade por qualquer causa (HR 0,91) em comparação à ausência de anticoagulação, apesar de maior risco de sangramento maior (HR 1,44); o desfecho clínico líquido, que pondera eventos isquêmicos e hemorrágicos, favoreceu o DOAC (HR 0,93)",
+      "A coorte mostrou que o AAS em dose antiplaquetária é equivalente ao DOAC nessa população, sendo preferível pelo menor risco de sangramento",
+      "O estudo não permite nenhuma conclusão sobre essa faixa etária, porque pacientes acima de 80 anos são sistematicamente excluídos de qualquer coorte disponível na literatura"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A coorte nacional de base populacional coreana (23.858 pacientes com FA de 80 anos ou mais e critérios de inclusão do tipo ELDERCARE-AF — o mesmo perfil de alto risco hemorrágico tipicamente excluído dos grandes ensaios pivotais) comparou DOAC versus ausência de anticoagulação oral por ponderação por escore de propensão. O DOAC associou-se a menor risco de AVC isquêmico (HR 0,81; IC95% 0,68-0,96) e menor mortalidade por qualquer causa (HR 0,91; IC95% 0,86-0,96), com maior risco de sangramento maior (HR 1,44; IC95% 1,21-1,70) — mas o desfecho clínico líquido, que pondera os dois lados da balança, ainda favoreceu o DOAC (HR 0,93; IC95% 0,88-0,98). No grupo tratado, 69% usaram dose reduzida e 9% dose muito reduzida, refletindo a prática de ajuste posológico nessa faixa etária de maior fragilidade. O achado reproduz em prática real o resultado do ensaio ELDERCARE-AF, e sustenta que a decisão de suspender definitivamente a anticoagulação apenas pela idade avançada e por um episódio hemorrágico prévio autolimitado não é a opção mais bem embasada — sem substituir a avaliação individual de risco-benefício, que continua sendo necessária caso a caso.",
+    "source_refs": [
+      "Go YH et al. Direct oral anticoagulants in the very elderly and high bleeding risk patients with atrial fibrillation — Korean nationwide cohort. Europace. 2025. DOI: 10.1093/europace/euaf230. PMID: 41020486."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "coartacao-nativa-de-aorta-em-adolescente-escolha-entre-stent-balao-expansivel-e-autoexpansivel",
+    "titulo": "Coartação nativa de aorta em adolescente candidato a stent: balão-expansível ou autoexpansível?",
+    "tema": "Cardiopatias congênitas",
+    "nivel": "intermediário",
+    "enunciado": "Adolescente de 16 anos, hipertenso, com coartação nativa de aorta discreta (sem repáro prévio), é avaliado para tratamento percutâneo por implante de stent. A equipe intervencionista discute qual família de stent utilizar — balão-expansível (tipo Cheatham-Platinum) ou autoexpansível (nitinol) — e o paciente pergunta se uma das opções é claramente mais segura ou mais eficaz.",
+    "pergunta": "Com base no primeiro ensaio clínico randomizado comparando diretamente essas duas plataformas no tratamento percutâneo da coartação nativa de aorta, qual é a resposta mais adequada?",
+    "opcoes": [
+      "O stent autoexpansível demonstrou superioridade estatisticamente significativa sobre o balão-expansível tanto em taxa de complicação quanto em recoartação, devendo ser a escolha padrão",
+      "O ensaio randomizado (92 pacientes, 46 por braço) encontrou uma diferença numérica em complicação composta procedimento/vascular (10,9% no balão-expansível vs. 2,2% no autoexpansível), mas sem significância estatística (p=0,20); a taxa de recoartação também não diferiu significativamente entre os grupos (6,5% vs. 4,3%, p=0,64), e o controle pressórico em 12 meses foi semelhante — a amostra é pequena para uma conclusão definitiva sobre superioridade de uma plataforma sobre a outra",
+      "O stent balão-expansível é formalmente contraindicado em coartação nativa, sendo reservado apenas para tratamento de recoartação pós-cirúrgica",
+      "O ensaio mostrou que nenhuma das duas plataformas de stent controla adequadamente a pressão arterial em 12 meses, sendo a cirurgia aberta a única opção validada nesse cenário"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O ensaio clínico randomizado, aberto e unicêntrico (Irã, 92 pacientes, 46 por braço, idade mediana 30 anos, incluindo adolescentes e adultos jovens) comparou stent balão-expansível (Cheatham-Platinum) versus autoexpansível (nitinol) no tratamento percutâneo da coartação nativa de aorta. A complicação composta procedimento/vascular foi numericamente maior no grupo balão-expansível (10,9% vs. 2,2%), mas essa diferença não atingiu significância estatística (p=0,20); a taxa de recoartação também não diferiu (6,5% vs. 4,3%, p=0,64), assim como o controle pressórico em 12 meses (~50% nos dois grupos). Houve um caso de pseudoaneurisma aórtico (1,1%) na amostra. Trata-se do primeiro ensaio randomizado cadastrado nesta base comparando diretamente as duas famílias de plataforma, e ele mostra segurança e eficácia globalmente equivalentes — sem que a amostra relativamente pequena permita afirmar superioridade definitiva de uma plataforma sobre a outra. A escolha entre as duas, portanto, segue sendo guiada por fatores anatômicos individuais e pela experiência do operador, não por evidência de superioridade de uma plataforma.",
+    "source_refs": [
+      "Sadeghipour P, Mohebbi B, Firouzi A, et al. Randomized Comparison of Balloon-Expandable Versus Self-Expanding Stents for Aortic Coarctation. JACC Cardiovasc Interv. 2022. DOI: 10.1016/j.jcin.2021.10.031. PMID: 35144787."
+    ],
+    "review_status": "revisado"
   }
 ]

@@ -21293,5 +21293,39 @@
         "por_que": "Fecha a trilha no ponto em que a etiologia não permite recuperação: quando a cardiomiopatia pediátrica (genética ou adquirida, mas não a forma induzida por taquicardia do passo 4) progride apesar do tratamento otimizado, o transplante passa a ser a via — e a indicação diagnóstica correta, estabelecida nos passos anteriores, é exatamente o que orienta essa decisão e o que o registro internacional (ISHLT) mostra sobre desfecho por causa de base."
       }
     ]
+  },
+  {
+    "slug": "trilha-cardiologia-pediatrica-tronco-arterial-comum-diagnostico-cirurgia-e-complicacoes",
+    "titulo": "Tronco arterial comum: do diagnóstico diferencial da cianose neonatal às complicações da cirurgia complexa",
+    "tema": "Cardiologia pediátrica",
+    "objetivo": "Sair sabendo situar o tronco arterial comum dentro do diagnóstico diferencial da cianose no recém-nascido, reconhecer suas classificações anatômicas (Van Praagh e Collett-Edwards), a associação com a deleção 22q11.2 e os fatores de risco modificáveis para evento adverso cardíaco maior no reparo cirúrgico contemporâneo, identificar a síndrome pós-pericardiotomia como a complicação inflamatória mais comum após esse tipo de cirurgia cardíaca extensa, e reconhecer como a própria correção cirúrgica de cardiopatia congênita complexa altera o perfil de risco e a microbiologia da endocardite infecciosa ao longo da infância e adolescência.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "cianose-no-recem-nascido-diagnostico-diferencial-e-conduta-inicial",
+        "por_que": "Ponto de partida obrigatório: antes de aprofundar numa cardiopatia cianótica específica e rara, é preciso dominar o raciocínio geral diante do recém-nascido cianótico — que lesões considerar, que exames iniciais pedir e quando iniciar prostaglandina — para depois entender por que o tronco arterial comum é um dos diagnósticos desse diferencial que não admite conduta expectante."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "tronco-arterial-comum-classificacao-associacao-com-22q11-e-desfechos-cirurgicos-contemporaneos",
+        "por_que": "O aprofundamento central da trilha: uma cardiopatia cianótica rara em que um único vaso arterial, por falha de septação embrionária, origina as circulações sistêmica, pulmonar e coronariana. Cobre a classificação anatômica (Van Praagh e Collett-Edwards), a associação com a deleção 22q11.2, a apresentação clínica e — o dado mais acionável para a prática — os fatores de risco modificáveis para evento adverso cardíaco maior no reparo contemporâneo, entre eles a falha em diagnosticar antes da alta da maternidade."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "sindrome-pos-pericardiotomia-pediatrica-incidencia-diagnostico-e-tratamento",
+        "por_que": "A complicação inflamatória mais comum depois de qualquer cirurgia cardíaca aberta na infância — e particularmente relevante após um reparo que exige manipulação pericárdica extensa, como o do tronco arterial comum. Fecha o ciclo cirúrgico do passo anterior com o que a equipe precisa reconhecer nas semanas seguintes à alta: critérios diagnósticos, propedêutica e as duas particularidades do tratamento pediátrico (por que AAS é evitado abaixo de 12 anos, por que corticoide crônico não é usado como manutenção)."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "endocardite-infecciosa-em-crianca-e-adolescente-fatores-de-risco-microbiologia-e-tratamento",
+        "por_que": "Fecha a trilha no horizonte de longo prazo: a própria cirurgia cardíaca complexa na infância — com material protético, condutos e cicatriz cirúrgica — muda o perfil de risco e a microbiologia da endocardite infecciosa ao longo da vida do paciente, o mesmo princípio que liga a cardiopatia congênita corrigida a uma vulnerabilidade que persiste muito além do período perioperatório imediato coberto no passo anterior."
+      }
+    ]
   }
 ]

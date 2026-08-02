@@ -4772,5 +4772,120 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "ecg-sindrome-do-no-sinusal-bradicardia-taquicardia-idoso",
+    "title": "ECG — Síndrome do nó sinusal (padrão bradicardia-taquicardia)",
+    "modality": "ECG",
+    "theme": "Cardiologia geriátrica",
+    "file_path": "ecg/sindrome-do-no-sinusal-bradicardia-taquicardia-idoso.jpg",
+    "findings": "Traçado de derivações simultâneas mostrando taquiarritmia supraventricular irregular de complexo estreito nas primeiras derivações, com transição para um ritmo mais lento e de morfologia distinta ao final do traçado — padrão de alternância entre taquicardia e bradicardia característico da disfunção do nó sinusal (síndrome bradicardia-taquicardia, uma das apresentações da doença do nó sinusal).",
+    "teaching_points": "A doença do nó sinusal é predominantemente uma doença do envelhecimento — a idade mediana de apresentação está na sétima-oitava década de vida, por fibrose degenerativa do nó sinoatrial e do tecido perinodal. A variante bradicardia-taquicardia é clinicamente importante porque a fase taquicárdica (comumente fibrilação ou flutter atrial) expõe o paciente a risco tromboembólico, enquanto a fase bradicárdica/pausa pode causar síncope — e o tratamento da taquiarritmia com drogas cronotrópicas negativas, sem marca-passo associado, pode agravar a bradicardia sintomática. O diagnóstico definitivo em geral exige Holter ou monitor de eventos, já que o ECG de repouso isolado pode ser normal entre os episódios.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:SSS_ecg_001_(CardioNetworks_ECGpedia).jpg",
+    "license": "CC BY-SA 3.0",
+    "attribution": "CardioNetworks ECGpedia, cortesia de R.W. Koster, MD, PhD, AMC (Amsterdam), via Wikimedia Commons — CC BY-SA 3.0.",
+    "tags": [
+      "ecg",
+      "síndrome do nó sinusal",
+      "bradicardia-taquicardia",
+      "doença do nó sinusal",
+      "idoso",
+      "arritmia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ecg-taquicardia-ventricular-catecolaminergica-polimorfica-crianca",
+    "title": "ECG — Taquicardia ventricular catecolaminérgica polimórfica (TVPC) em criança durante o esforço",
+    "modality": "ECG",
+    "theme": "Cardiologia pediátrica",
+    "file_path": "ecg/taquicardia-ventricular-catecolaminergica-polimorfica-crianca.png",
+    "findings": "Tiras de ritmo mostrando ectopia ventricular que evolui, com o aumento do esforço, para taquicardia ventricular com alternância de morfologia batimento a batimento — o painel à direita destaca o intervalo entre batimentos de morfologia alternada (setas 'X' e 'Y'), ilustrando o padrão bidirecional/polimórfico típico da TVPC induzida por catecolamina.",
+    "teaching_points": "Caso publicado de menina de 13 anos com síncope desencadeada por exercício, diagnóstico final de taquicardia ventricular catecolaminérgica polimórfica (TVPC) — canalopatia (mutação mais comum no gene do receptor de rianodina cardíaco, RyR2) em que o coração é estruturalmente normal e o ECG de repouso costuma ser normal, ao contrário da síndrome do QT longo. A arritmia só aparece com estímulo adrenérgico — exercício físico ou emoção intensa —, o que torna o teste ergométrico o exame provocativo de escolha à beira do leito, antes da confirmação genética. É diagnóstico diferencial importante de síncope de esforço em criança e adolescente, população em que a causa cardíaca da síncope precisa ser ativamente excluída.",
+    "source_name": "PMC (Open-I / NLM), PMC3337370",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Abnormal_heart_rhythms_in_a_case_of_CPVT_(ECG_graphs).png",
+    "license": "CC BY 2.5",
+    "attribution": "Femenía F, Barbosa-Barros R, Sampaio SV, Arce M, Perez-Riera A, Baranchuk A, via PMC/Open-I e Wikimedia Commons — CC BY 2.5.",
+    "tags": [
+      "ecg",
+      "tvpc",
+      "cpvt",
+      "taquicardia ventricular catecolaminérgica",
+      "síncope",
+      "pediatria",
+      "canalopatia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "eco-doppler-disfuncao-diastolica-grau-i-relaxamento-alterado-idoso",
+    "title": "Ecocardiograma Doppler — Disfunção diastólica grau I (relaxamento alterado)",
+    "modality": "Ecocardiograma",
+    "theme": "Cardiologia geriátrica",
+    "file_path": "ecocardiograma/disfuncao-diastolica-grau-i-doppler-mitral-idoso.jpg",
+    "findings": "Doppler pulsado do influxo mitral com onda E (enchimento protodiastólico) de velocidade menor que a onda A (contração atrial) — no traçado, velocidade da onda E de 0,79 m/s e da onda A de 0,94 m/s, relação E/A de 0,84 (invertida em relação ao padrão normal, em que E > A), com tempo de desaceleração da onda E prolongado (221 ms).",
+    "teaching_points": "Padrão de relaxamento ventricular alterado (disfunção diastólica grau I) — o estágio mais leve e mais prevalente de disfunção diastólica, muito comum como achado relacionado à idade mesmo sem cardiopatia estrutural evidente, por perda de complacência do miocárdio que envelhece. A relação E/A invertida (A > E) reflete menor contribuição do enchimento passivo precoce e maior dependência da contração atrial para completar o enchimento ventricular — é por isso que o idoso com esse padrão tolera mal a perda da contração atrial (ex.: fibrilação atrial de início agudo), podendo descompensar clinicamente. Não confundir com o padrão pseudonormal (grau II) ou restritivo (grau III, já cadastrado nesta galeria no contexto de amiloidose cardíaca) — a progressão exige também avaliar o Doppler tecidual do anel mitral (relação E/e') e o átrio esquerdo, não somente o influxo mitral isolado.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Diastolic_dysfunction_(impaired_relaxation)_E00877_(CardioNetworks_ECHOpedia).jpg",
+    "license": "CC BY-SA 3.0",
+    "attribution": "CardioNetworks ECHOpedia, cortesia do AMC Echolab, AMC (Amsterdam), via Wikimedia Commons — CC BY-SA 3.0.",
+    "tags": [
+      "ecocardiograma",
+      "doppler",
+      "disfunção diastólica",
+      "relaxamento alterado",
+      "idoso",
+      "e/a"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ecg-eixo-superior-comunicacao-interatrial-ostium-primum",
+    "title": "Eletrocardiograma — eixo superior do QRS na comunicação interatrial do tipo ostium primum",
+    "modality": "ECG",
+    "theme": "Cardiopatias congênitas",
+    "file_path": "ecg/asd-primum-eixo-superior-qrs.jpg",
+    "findings": "ECG de 12 derivações de paciente de 17 anos com comunicação interatrial do tipo ostium primum (defeito parcial do septo atrioventricular), sem medicação em uso. O próprio aparelho relata frequência ventricular de 93 bpm, PR de 192 ms, QRS de 104 ms e eixo do QRS (eixo R) de -47° — ou seja, desvio de eixo para a ESQUERDA/SUPERIOR, com padrão de ativação ventricular no sentido anti-horário no plano frontal, visível nas derivações inferiores (II, III e aVF predominantemente negativas).",
+    "teaching_points": "É o achado eletrocardiográfico que diferencia a comunicação interatrial ostium primum da ostium secundum (já cadastrada nesta galeria): a ostium secundum tipicamente cursa com sobrecarga de câmaras direitas e desvio de eixo para a DIREITA, enquanto a ostium primum — por fazer parte do espectro do defeito do septo atrioventricular, com deslocamento do sistema de condução relacionado à ausência do septo de entrada — cursa classicamente com eixo SUPERIOR (esquerdo), muitas vezes associado a bloqueio incompleto do ramo direito em V1. Diante de uma CIA com eixo superior ao ECG, a hipótese de ostium primum (ou de defeito do septo atrioventricular parcial) deve ser buscada ativamente ao ecocardiograma, inclusive quanto à competência da valva atrioventricular esquerda (fenda do folheto anterior mitral), que não é problema da forma ostium secundum.",
+    "source_name": "Wikimedia Commons (via askdrwiki.com)",
+    "source_url": "https://commons.wikimedia.org/wiki/File:ASDPrimum.jpg",
+    "license": "CC BY-SA 3.0",
+    "attribution": "WikiSysop, askdrwiki.com, via Wikimedia Commons — CC BY-SA 3.0.",
+    "tags": [
+      "ecg",
+      "eletrocardiograma",
+      "ostium primum",
+      "defeito do septo atrioventricular",
+      "eixo superior",
+      "comunicação interatrial"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "fistula-arteria-coronaria-camara-cardiaca-angiotomografia",
+    "title": "Angiotomografia — fístula congênita de artéria coronária para câmara cardíaca (fístula coronário-cameral)",
+    "modality": "TC",
+    "theme": "Cardiopatias congênitas",
+    "file_path": "angiotc/fistula-coronaria-camera-cardiaca-tc.jpg",
+    "findings": "Corte axial de angiotomografia de tórax mostrando artéria coronária dilatada, tortuosa e com opacificação pobre (fluxo lento), drenando para o ventrículo direito — descrição literal da fonte. É achado compatível com fístula coronário-cameral congênita, comunicação anômala direta entre uma artéria coronária e uma câmara cardíaca (aqui, o ventrículo direito) sem o leito capilar miocárdico interposto.",
+    "teaching_points": "A fístula coronário-cameral congênita é diferente da origem anômala de coronária já cadastrada nesta galeria (ALCAPA e origem interarterial): ali o problema é de ONDE a coronária nasce; aqui a artéria nasce em posição normal, mas termina numa conexão anormal que rouba fluxo do leito miocárdico distal (fenômeno de roubo coronariano) e pode gerar sobrecarga de volume da câmara receptora quando o shunt é grande — o mecanismo fisiopatológico lembra o de uma comunicação arteriovenosa. A maioria é pequena e assintomática, achado incidental; fístulas grandes podem cursar com sopro contínuo, isquemia por roubo, dilatação da câmara receptora e, mais raramente, endocardite infecciosa do trajeto fistuloso. Dilatação e tortuosidade importantes da coronária de origem, como neste exemplo, são sinais indiretos de fluxo aumentado através do trajeto fistuloso.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:CT_image_of_coronary_cameral_fistula.jpg",
+    "license": "CC BY-SA 3.0 / GFDL 1.2+",
+    "attribution": "Jto410, via Wikimedia Commons — CC BY-SA 3.0 / GFDL 1.2+.",
+    "tags": [
+      "fístula coronária",
+      "angiotomografia",
+      "coronária anômala",
+      "cardiopatia congênita",
+      "roubo coronariano"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
