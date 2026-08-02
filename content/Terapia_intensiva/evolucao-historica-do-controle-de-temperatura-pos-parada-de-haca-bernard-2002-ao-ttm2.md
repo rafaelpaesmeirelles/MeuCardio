@@ -4,7 +4,7 @@ slug: evolucao-historica-do-controle-de-temperatura-pos-parada-de-haca-bernard-2
 theme: "Terapia intensiva"
 kind: estudo
 review_status: revisado
-source_refs: ["Hypothermia after Cardiac Arrest Study Group. Mild therapeutic hypothermia to improve the neurologic outcome after cardiac arrest. N Engl J Med. 2002;346(8):549-556. DOI: 10.1056/NEJMoa012689. PMID: 11856793. Errata: N Engl J Med. 2002;346(22):1756.", "Bernard SA, Gray TW, Buist MD, Jones BM, Silvester W, Gutteridge G, Smith K. Treatment of comatose survivors of out-of-hospital cardiac arrest with induced hypothermia. N Engl J Med. 2002;346(8):557-563. DOI: 10.1056/NEJMoa003289. PMID: 11856794.", "Nielsen N, Wetterslev J, Cronberg T, et al. Targeted temperature management at 33°C versus 36°C after cardiac arrest (TTM). N Engl J Med. 2013;369(23):2197-2206. DOI: 10.1056/NEJMoa1310519. PMID: 24237006.", "Dankiewicz J, Cronberg T, Lilja G, et al. Hypothermia versus normothermia after out-of-hospital cardiac arrest (TTM2). N Engl J Med. 2021;384(24):2283-2294. DOI: 10.1056/NEJMoa2100591. PMID: 34133859."]
+source_refs: ["Hypothermia after Cardiac Arrest Study Group. Mild therapeutic hypothermia to improve the neurologic outcome after cardiac arrest. N Engl J Med. 2002;346(8):549-556. DOI: 10.1056/NEJMoa012689. PMID: 11856793. Errata: N Engl J Med. 2002;346(22):1756.", "Bernard SA, Gray TW, Buist MD, Jones BM, Silvester W, Gutteridge G, Smith K. Treatment of comatose survivors of out-of-hospital cardiac arrest with induced hypothermia. N Engl J Med. 2002;346(8):557-563. DOI: 10.1056/NEJMoa003289. PMID: 11856794.", "Nielsen N, Wetterslev J, Cronberg T, et al. Targeted temperature management at 33°C versus 36°C after cardiac arrest (TTM). N Engl J Med. 2013;369(23):2197-2206. DOI: 10.1056/NEJMoa1310519. PMID: 24237006.", "Dankiewicz J, Cronberg T, Lilja G, et al. Hypothermia versus normothermia after out-of-hospital cardiac arrest (TTM2). N Engl J Med. 2021;384(24):2283-2294. DOI: 10.1056/NEJMoa2100591. PMID: 34133859.", "Nolan JP, Morley PT, Vanden Hoek TL, Hickey RW, et al; International Liaison Committee on Resuscitation. Therapeutic hypothermia after cardiac arrest: an advisory statement by the advanced life support task force of the International Liaison Committee on Resuscitation. Circulation. 2003;108(1):118-121. DOI: 10.1161/01.CIR.0000079019.02601.90. PMID: 12847056.", "Heart and Stroke Foundation of Canada. Therapeutic hypothermia after cardiac arrest. ILCOR Advisory Statement, October 2002 [reimpresso]. CJEM. 2005;7(2):129. DOI: 10.1017/s1481803500013129. PMID: 17355666.", "Donnino MW, Andersen LW, Berg KM, et al; ILCOR ALS Task Force. Temperature Management After Cardiac Arrest: An Advisory Statement by the Advanced Life Support Task Force of the International Liaison Committee on Resuscitation and the American Heart Association Emergency Cardiovascular Care Committee and the Council on Cardiopulmonary, Critical Care, Perioperative and Resuscitation. Circulation. 2015;132(25):2448-2456. DOI: 10.1161/CIR.0000000000000313. PMID: 26434495. Errata: Circulation. 2016;133(1):e13.", "Sandroni C, Nolan JP, Andersen LW, et al. ERC-ESICM guidelines on temperature control after cardiac arrest in adults. Intensive Care Med. 2022;48(3):261-269. DOI: 10.1007/s00134-022-06620-5. PMID: 35089409.", "Perman SM, Bartos JA, Del Rios M, et al; American Heart Association. Temperature Management for Comatose Adult Survivors of Cardiac Arrest: A Science Advisory From the American Heart Association. Circulation. 2023;148(12):982-988. DOI: 10.1161/CIR.0000000000001164. PMID: 37584195.", "Perman SM, Elmer J, Maciel CB, et al; American Heart Association. 2023 American Heart Association Focused Update on Adult Advanced Cardiovascular Life Support. Circulation. 2024;149(5):e254-e273. DOI: 10.1161/CIR.0000000000001194. PMID: 38108133."]
 legacy_source: "Documento novo, escrito em 02/08/2026. Esta biblioteca já tem controle-de-temperatura-pos-parada-cardiorrespiratoria-ttm-e-ttm2.md (foco: números do TTM e do TTM2) e hipotermia-terapeutica-em-ritmo-nao-chocavel-pos-parada-o-ensaio-hyperion.md (foco: subgrupo de ritmo não chocável). Nenhum dos dois cobre os DOIS ensaios que originaram a hipotermia terapêutica como padrão de cuidado em 2002 — HACA e Bernard SA et al. — nem contrasta explicitamente por que o desenho do grupo-controle mudou entre 2002 e 2021, o que é a chave para entender por que o TTM2 chegou a um resultado neutro sem contradizer tecnicamente os ensaios de origem. Este documento fecha essa lacuna, com ângulo de EVOLUÇÃO HISTÓRICA, remetendo aos dois documentos existentes para o detalhamento numérico completo de TTM/TTM2/HYPERION."
 ---
 
@@ -75,11 +75,26 @@ artigo original já sinalizava o tamanho amostral pequeno como limite.**
 Nenhum dos dois é grande — 136+137 no HACA, 43+34 no Bernard —, mas os dois
 apontam na **mesma direção**, publicados juntos, na mesma revista, no mesmo
 dia. Isso deu à hipotermia terapêutica um peso de evidência que um ensaio
-isolado desse tamanho normalmente não teria, e a incorporação a diretrizes
-internacionais de ressuscitação seguiu nos anos seguintes.
-**VERIFICAÇÃO HUMANA NECESSÁRIA** para o ano exato e o texto da primeira
-recomendação formal do ILCOR/AHA que incorporou os dois ensaios — não lido
-nesta revisão.
+isolado desse tamanho normalmente não teria, e a incorporação formal a
+diretrizes internacionais veio rápido: o Advanced Life Support Task Force do
+**ILCOR** emitiu um parecer datado de **outubro de 2002** — data confirmada
+por um reimpresso posterior (Heart and Stroke Foundation of Canada.
+"Therapeutic hypothermia after cardiac arrest. ILCOR Advisory Statement,
+October 2002." CJEM. 2005;7(2):129. PMID: 17355666) —, publicado como
+*advisory statement* na *Circulation* em **8 de julho de 2003**: Nolan JP,
+Morley PT, Vanden Hoek TL, Hickey RW, et al.; International Liaison
+Committee on Resuscitation. "Therapeutic hypothermia after cardiac arrest: an
+advisory statement by the advanced life support task force of the
+International Liaison Committee on Resuscitation." Circulation.
+2003;108(1):118-121. PMID: 12847056.
+
+Esse documento de 2003 **não tem resumo indexado no PubMed** — é um parecer
+curto (3 páginas), sem abstract estruturado — e o texto integral não foi lido
+nesta revisão; não é possível, portanto, reproduzir aqui a formulação exata
+da recomendação (nem dizer se ela usava classe/nível formais). A data e a
+referência bibliográfica completa estão confirmadas contra o registro do
+PubMed; **VERIFICAÇÃO HUMANA NECESSÁRIA** segue valendo, de forma mais
+estreita, só para quem for citar o texto literal da recomendação de 2003.
 
 ## 2013 — o TTM começa a separar "controlar temperatura" de "induzir frio"
 
@@ -157,10 +172,41 @@ sendo cuidado padrão nos quatro ensaios, sem exceção — nenhum deles testou
 **induzir hipotermia a 32-34°C deixou de ser obrigatório** para obter o
 benefício que a prática atribuía à hipotermia em si; evitar e tratar febre
 ativamente parece ser o componente que sobrevive à evidência mais recente e
-de maior amostra. Qual diretriz de ressuscitação vigente (ILCOR, AHA, ERC/
-ESICM) incorporou essa leitura, com que data e que classe de recomendação,
-**não foi conferido nesta revisão — VERIFICAÇÃO HUMANA NECESSÁRIA** antes de
-citar uma recomendação de sociedade a partir deste texto.
+de maior amostra.
+
+**Do lado europeu**, essa leitura já está incorporada em diretriz formal, com
+o texto da recomendação lido nesta revisão: Sandroni C, Nolan JP, Andersen
+LW, et al. "ERC-ESICM guidelines on temperature control after cardiac arrest
+in adults." Intensive Care Med. 2022;48(3):261-269 (epub 28/01/2022; também
+publicada em *Resuscitation*). PMID: 35089409. Essa diretriz **substitui
+explicitamente** a seção de controle de temperatura da diretriz ERC-ESICM de
+2021 de cuidado pós-ressuscitação, e recomenda, com certeza de evidência
+GRADE moderada a baixa: monitorização contínua da temperatura central e
+prevenção ativa de febre (definida como temperatura > 37,7°C) por pelo menos
+72 horas; **não** reaquecer ativamente o paciente com hipotermia leve
+espontânea para atingir normotermia; **não** usar resfriamento pré-hospitalar
+com infusão rápida de grande volume de fluido intravenoso gelado. A própria
+diretriz declara que **não há evidência suficiente para recomendar a favor
+ou contra** manter um alvo de 32-36°C ou o resfriamento precoce — ou seja,
+não proíbe a hipotermia induzida, só deixa de exigi-la.
+
+**Do lado americano**, a incorporação veio em duas etapas, as duas
+conferidas nesta revisão. Primeiro um parecer de transição — Perman SM,
+Bartos JA, Del Rios M, et al.; American Heart Association. "Temperature
+Management for Comatose Adult Survivors of Cardiac Arrest: A Science Advisory
+From the American Heart Association." Circulation. 2023;148(12):982-988.
+PMID: 37584195 (publicado on-line em 16/08/2023) —, cujo próprio resumo
+adverte que **ainda não substitui a diretriz vigente** e que uma atualização
+formal viria a seguir. Essa atualização é: Perman SM, Elmer J, Maciel CB, et
+al.; American Heart Association. "2023 American Heart Association Focused
+Update on Adult Advanced Cardiovascular Life Support." Circulation.
+2024;149(5):e254-e273. PMID: 38108133 (epub 18/12/2023). O resumo confirma
+que controle de temperatura está entre os temas revisados nessa atualização,
+mas **a classe de recomendação exata atribuída a cada faixa de temperatura
+não foi conferida nesta revisão** (o texto completo do documento não foi
+lido) — para quem for citar a classe/nível específicos da diretriz
+americana, e não apenas a existência e a data do documento (já confirmadas),
+**VERIFICAÇÃO HUMANA NECESSÁRIA** contra o texto integral.
 
 ## Limitações que atravessam os quatro ensaios, e populações pouco representadas
 
