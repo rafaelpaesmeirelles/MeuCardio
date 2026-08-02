@@ -1,0 +1,49 @@
+---
+title: "Cardioproteção Guiada por Troponina: o Ensaio de Cardinale e o ICOS-ONE"
+slug: cardioprotecao-guiada-por-troponina-o-ensaio-de-cardinale-e-o-icos-one
+theme: "Cardio-oncologia"
+kind: estudo
+review_status: revisado
+source_refs: ["Cardinale D, Colombo A, Sandri MT, et al. Prevention of high-dose chemotherapy-induced cardiotoxicity in high-risk patients by angiotensin-converting enzyme inhibition. Circulation. 2006;114(23):2474-2481. DOI: 10.1161/CIRCULATIONAHA.106.635144. PMID: 17101852", "Cardinale D, Ciceri F, Latini R, et al. Anthracycline-induced cardiotoxicity: A multicenter randomised trial comparing two strategies for guiding prevention with enalapril: The International CardioOncology Society-one trial. Eur J Cancer. 2018;94:126-137. DOI: 10.1016/j.ejca.2018.02.005. PMID: 29567630", "Meessen JMTA, Cardinale D, Ciceri F, et al. Circulating biomarkers and cardiac function over 3 years after chemotherapy with anthracyclines: the ICOS-ONE trial. ESC Heart Fail. 2020;7(4):1452-1466. DOI: 10.1002/ehf2.12695. PMID: 32358917 — análise post-hoc de seguimento estendido do mesmo ensaio, citada aqui só para o achado de ausência de novo evento cardiovascular entre 12 e 36 meses", "Lyon AR, López-Fernández T, Couch LS, et al. 2022 ESC Guidelines on cardio-oncology developed in collaboration with the European Hematology Association (EHA), the European Society for Therapeutic Radiology and Oncology (ESTRO) and the International Cardio-Oncology Society (IC-OS). Eur Heart J. 2022;43(41):4229-4361. DOI: 10.1093/eurheartj/ehac244. PMID: 36017568 — usada aqui só para os cortes de definição de lesão miocárdica subclínica por biomarcador (Tabela 3), já verificados linha a linha no documento geral desta pasta"]
+legacy_source: "Documento novo — a pasta já cobre vigilância de cardiotoxicidade por strain longitudinal global (dois documentos dedicados) e menciona os cortes de troponina/BNP de passagem no protocolo geral da ESC 2022, mas não existia nenhum documento sobre a estratégia de cardioproteção farmacológica GUIADA POR TROPONINA — a intervenção (iniciar IECA no paciente que eleva troponina) tem mecanismo de seleção de paciente e desenho de evidência completamente distintos da vigilância por imagem, e é o corpo de evidência que sustenta a prática de dosar troponina seriada durante quimioterapia cardiotóxica. Verificado nesta sessão pela API E-utilities do PubMed: abstract completo lido para os três PMIDs antes de qualquer número ser transcrito."
+---
+
+# Cardioproteção Guiada por Troponina: o Ensaio de Cardinale e o ICOS-ONE
+
+## Definicao
+Estratégia de prevenção farmacológica de cardiotoxicidade que usa a **elevação da troponina durante ou logo após a quimioterapia** como gatilho para iniciar um inibidor da enzima conversora de angiotensina (IECA) — em vez de tratar todo paciente preventivamente ou de só agir depois que a fração de ejeção já caiu. É a base de evidência por trás da prática de dosar troponina seriada durante regime cardiotóxico (antraciclina em especial), distinta da vigilância por imagem (strain longitudinal global, já coberta em outro documento desta pasta) — aqui o biomarcador não é só um sinal de alarme, é o critério que decide quem recebe tratamento.
+
+## O ensaio original de Cardinale 2006
+Cardinale D et al. Circulation. 2006;114(23):2474-2481 (PMID 17101852). Coorte de 473 pacientes com câncer avaliados após quimioterapia em alta dose; **114 pacientes (72 mulheres, idade média 45±12 anos) que apresentaram elevação de troponina I logo após a quimioterapia** foram randomizados para:
+- **Enalapril 20 mg/dia** (grupo IECA, n=56), iniciado 1 mês após a quimioterapia e mantido por 1 ano
+- **Sem enalapril** (grupo controle, n=58)
+- Avaliação cardiológica em 1, 3, 6 e 12 meses
+
+**Desfecho primário** (queda absoluta de FEVE >10 pontos percentuais, com valor final abaixo do limite normal): **43% no grupo controle vs. 0% no grupo enalapril (p<0,001)**, por análise de Kaplan-Meier. Redução significativa de FEVE e aumento de volumes diastólico e sistólico finais foram observados **só nos pacientes não tratados**.
+
+**Conclusão do próprio ensaio**: "Em pacientes de alto risco tratados com quimioterapia em alta dose, definidos por elevação de troponina I, o tratamento precoce com enalapril parece prevenir o desenvolvimento de cardiotoxicidade tardia."
+
+## O ICOS-ONE: guiar todo mundo ou só quem eleva a troponina?
+Cardinale D et al. Eur J Cancer. 2018;94:126-137 (PMID 29567630). Se elevação de troponina prediz benefício de enalapril, a pergunta seguinte é: **vale a pena tratar todo paciente preventivamente, antes mesmo de saber se a troponina vai subir, ou é seguro esperar a troponina subir para então tratar?** O ICOS-ONE (International CardioOncology Society-one trial) respondeu essa pergunta — ensaio multicêntrico, aberto (não cego), 21 hospitais italianos, **273 pacientes** (88% mulheres, idade média 51±12 anos, 76% câncer de mama), randomizados para duas **estratégias de indicação**, não duas drogas diferentes:
+- **Braço "prevenção"**: enalapril iniciado em **todos** antes da quimioterapia
+- **Braço "guiado por troponina"**: enalapril iniciado **só** em quem elevasse a troponina durante ou após a quimioterapia
+
+Doses cumulativas medianas de epirrubicina 360 mg/m² e doxorrubicina 240 mg/m². **Desfecho primário: incidência de elevação de troponina acima do limiar** — **23% no braço prevenção vs. 26% no braço guiado por troponina (p=0,50)**, sem diferença entre as estratégias. **Cardiotoxicidade clínica** (queda de FEVE ≥10 pontos percentuais para valor <50%) ocorreu em **apenas 3 pacientes de 273 (1,1%)** — dois no braço prevenção, um no braço guiado por troponina.
+
+**Conclusão do próprio ensaio**: doses cumulativas baixas de antraciclina em adultos de baixo risco cardiovascular podem elevar a troponina, sem diferença entre as duas estratégias de administrar enalapril; **considerando o benefício do enalapril na prevenção de disfunção de VE** (demonstrado no ensaio de 2006), **a estratégia guiada por troponina pode ser mais conveniente** — evita expor ao IECA quem nunca vai precisar dele.
+
+### Seguimento estendido (36 meses) — achado complementar
+Meessen JMTA et al. ESC Heart Fail. 2020;7(4):1452-1466 (PMID 32358917), análise post-hoc do mesmo ensaio, estendendo o seguimento a 36 meses: **nenhum caso novo de disfunção de VE** apareceu entre 12 e 36 meses, sem diferença de biomarcador (troponina I ultrassensível, BNP, pentraxina 3) entre os dois braços originais. Os autores discutem duas leituras possíveis, sem decidir entre elas: **eficácia de 100% do enalapril** (preventivo ou guiado por troponina) **ou** risco cardiovascular absoluto baixo o suficiente nessa coorte (idade mediana 51 anos, sem doença cardiovascular prévia) **para não precisar de seguimento cardiológico intensivo** — o próprio ensaio não tem como distinguir as duas hipóteses.
+
+## Onde os cortes de troponina se encaixam na diretriz atual
+A ESC 2022 de cardio-oncologia (Lyon AR et al., Eur Heart J. 2022;43(41):4229-4361, PMID 36017568) usa cTnI/T acima do percentil 99 do limite superior de referência do método local, junto com BNP ≥35 pg/mL ou NT-proBNP ≥125 pg/mL, como parte da definição de lesão miocárdica subclínica dentro do espectro de disfunção cardíaca relacionada à terapia do câncer (CTRCD) — o mesmo corte de percentil 99 usado operacionalmente nos dois ensaios de Cardinale. Isso é o que dá sustentação atual (não histórica) à prática de dosagem seriada de troponina durante regime com antraciclina.
+
+## Sintese pratica
+Os dois ensaios, lidos juntos, formam uma cadeia lógica completa: **(1)** elevação de troponina após quimioterapia em alta dose identifica quem vai desenvolver disfunção de VE se não for tratado (Cardinale 2006 — diferença absoluta de 43 pontos percentuais, achado extremo para um ensaio cardiovascular); **(2)** uma vez que se sabe que o IECA funciona nesse subgrupo, **não é preciso tratar todo mundo peventivamente** — esperar a troponina subir para então agir rende a mesma taxa de elevação de biomarcador e permite poupar IECA de quem nunca vai precisar (ICOS-ONE). A estratégia guiada por troponina é, portanto, a mais eficiente das duas testadas: mesma proteção presumida, exposição a droga menor.
+
+## Armadilhas clinicas
+- Tratar o ICOS-ONE como um ensaio que testa "enalapril funciona ou não" — ele **não tem braço placebo/sem tratamento nenhum**; compara **duas estratégias de indicação** do mesmo fármaco. Quem quiser a evidência de que o enalapril reduz cardiotoxicidade é o ensaio de 2006, não o ICOS-ONE.
+- Ler a taxa "43% vs. 0%" do ensaio de 2006 como se aplicasse à população geral em quimioterapia — a coorte era **pré-selecionada por elevação de troponina** (114 de 473 avaliados, 24%), ou seja, já era um subgrupo de risco. Extrapolar esse número absoluto para quem nunca elevou troponina não tem base nos dados.
+- Confundir a incidência de 1,1% de cardiotoxicidade clínica do ICOS-ONE com a incidência geral esperada de cardiotoxicidade por antraciclina — a coorte tinha doses cumulativas relativamente baixas (mediana de epirrubicina 360 mg/m² e doxorrubicina 240 mg/m²) e baixo risco cardiovascular basal (3% hipertensão, 4% diabetes), o que limita a generalização para populações de maior risco.
+- Assumir que o resultado "sem diferença entre as duas estratégias" no ICOS-ONE prova que a estratégia guiada por troponina é **segura em qualquer população** — o próprio artigo do seguimento de 36 meses (PMID 32358917) reconhece explicitamente não conseguir distinguir entre "o enalapril é 100% eficaz" e "esta coorte tinha risco baixo demais para o ensaio detectar diferença".
+- Tratar o enalapril como a única droga validada nesse desenho — os dois ensaios usaram especificamente enalapril; extrapolar para outro IECA ou para BRA sem evidência equivalente é extensão de classe, não achado direto do estudo.
