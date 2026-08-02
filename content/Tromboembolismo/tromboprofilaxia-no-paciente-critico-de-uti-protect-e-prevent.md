@@ -1,0 +1,56 @@
+---
+title: "Tromboprofilaxia no Paciente Crítico de UTI: o Que os Ensaios PROTECT e PREVENT Realmente Respondem"
+slug: tromboprofilaxia-no-paciente-critico-de-uti-protect-e-prevent
+theme: "Tromboembolismo"
+kind: documento
+review_status: revisado
+source_refs: ["PROTECT Investigators for the Canadian Critical Care Trials Group and the Australian and New Zealand Intensive Care Society Clinical Trials Group; Cook D, Meade M, Guyatt G, et al. Dalteparin versus unfractionated heparin in critically ill patients. N Engl J Med. 2011;364(14):1305-1314. DOI: 10.1056/NEJMoa1014475. PMID: 21417952", "Arabi YM, Al-Hameed F, Burns KEA, et al.; Saudi Critical Care Trials Group. Adjunctive Intermittent Pneumatic Compression for Venous Thromboprophylaxis. N Engl J Med. 2019;380(14):1305-1315. DOI: 10.1056/NEJMoa1816150. PMID: 30779530", "Schünemann HJ, Cushman M, Burnett AE, et al. American Society of Hematology 2018 guidelines for management of venous thromboembolism: prophylaxis for hospitalized and nonhospitalized medical patients. Blood Adv. 2018;2(22):3198-3225. DOI: 10.1182/bloodadvances.2018022954. PMID: 30482763"]
+legacy_source: "Documento novo, escrito em 02/08/2026. A pasta já cobria profilaxia de TEV no paciente clínico hospitalizado em geral (escore de Padua) e no paciente cirúrgico com alto risco de sangramento, mas nenhum documento tratava especificamente do paciente CRÍTICO de UTI — população com farmacocinética alterada (edema, vasopressor, disfunção renal aguda) em que a pergunta não é só 'profilaxia sim ou não', mas 'qual anticoagulante' e 'a compressão mecânica soma algo ao fármaco'. Os três PMIDs foram lidos na íntegra (abstract estruturado via E-utilities do PubMed) nesta sessão antes da redação; nenhum número foi escrito de memória."
+---
+
+# Tromboprofilaxia no Paciente Crítico de UTI: o Que os Ensaios PROTECT e PREVENT Realmente Respondem
+
+## O problema clínico
+O paciente internado em UTI reúne, quase por definição, os principais fatores de risco para tromboembolismo venoso (TEV) — imobilização completa, sedação, ventilação mecânica, cateter venoso central, sepse, cirurgia recente — e ao mesmo tempo é o paciente em que a farmacocinética da profilaxia costuma estar mais alterada: edema e terceiro espaço podem reduzir a absorção subcutânea, o uso de vasopressor redistribui o fluxo para a pele, e a disfunção renal aguda, comum nesse cenário, muda a eliminação de heparinas de baixo peso molecular (HBPM). A pergunta "profilaxia farmacológica ou mecânica" já está respondida para a maioria dos pacientes clínicos hospitalizados (ver o documento desta pasta sobre o escore de Padua) e para o paciente cirúrgico com alto risco de sangramento (ver o documento correspondente). O que faltava aqui era a pergunta específica do paciente **crítico**: entre os anticoagulantes disponíveis, importa qual se escolhe? E a compressão pneumática intermitente (CPI), quando somada à profilaxia farmacológica que o paciente já recebe, agrega proteção? Dois ensaios multicêntricos de grande porte responderam a essas duas perguntas de forma direta, e a resposta a ambas é mais modesta do que a prática clínica costuma pressupor.
+
+## PROTECT: dalteparina não é superior à heparina não fracionada para prevenir TVP, mas reduz TEP
+O ensaio PROTECT (Cook D et al., N Engl J Med. 2011;364(14):1305-1314, PMID 21417952) randomizou **3.764 pacientes críticos** para dalteparina subcutânea 5.000 UI uma vez ao dia (mais placebo, para manter o esquema cego de duas aplicações diárias) ou heparina não fracionada (HNF) 5.000 UI duas vezes ao dia, durante a internação em UTI. O desfecho primário era TVP proximal de membro inferior, diagnosticada por ultrassonografia de compressão seriada.
+
+- **Desfecho primário (TVP proximal):** sem diferença significativa — **5,1% com dalteparina versus 5,8% com HNF** (HR 0,92; IC95% 0,68-1,23; p=0,57). A hipótese de superioridade da HBPM sobre TVP **não se confirmou**.
+- **Embolia pulmonar:** significativamente menor com dalteparina — **1,3% versus 2,3%** (HR 0,51; IC95% 0,30-0,88; p=0,01). É o achado que sustenta a preferência por HBPM na prática, mesmo sem diferença no desfecho primário pré-especificado.
+- **Sangramento maior:** sem diferença — HR 1,00 (IC95% 0,75-1,34; p=0,98).
+- **Mortalidade hospitalar:** sem diferença — HR 0,92 (IC95% 0,80-1,05; p=0,21).
+- **Trombocitopenia induzida por heparina (TIH):** menos frequente com dalteparina na análise por protocolo pré-especificada (HR 0,27; IC95% 0,08-0,98; p=0,046) — achado de análise secundária, não do desfecho primário, e deve ser lido com essa ressalva.
+
+**Leitura correta do resultado:** o PROTECT é, formalmente, um ensaio **negativo** para o desfecho primário — a dalteparina não reduziu TVP proximal. O que sustenta a preferência clínica por HBPM em UTI não é a superioridade no desfecho principal, e sim o conjunto de achados secundários (menos TEP, menos TIH, sem custo de sangramento), que apontam na mesma direção sem atingir, isoladamente, o desenho estatístico do estudo.
+
+## PREVENT: acrescentar compressão pneumática intermitente ao fármaco não reduz TVP proximal
+O ensaio PREVENT (Arabi YM et al., N Engl J Med. 2019;380(14):1305-1315, PMID 30779530) testou a pergunta seguinte, já assumindo que o paciente recebe profilaxia farmacológica: **a CPI adicional (pelo menos 18 horas por dia) soma proteção?** Randomizou **2.003 pacientes críticos** que já estavam em profilaxia farmacológica (HNF ou HBPM) para receber, ou não, CPI associada.
+
+- **Desfecho primário (TVP proximal de membro inferior incidente):** **3,9% no grupo CPI versus 4,2% no grupo controle** (RR 0,93; IC95% 0,60-1,44; p=0,74) — **sem diferença**.
+- **TEV total (TEP ou qualquer TVP de membro inferior):** **10,4% versus 9,4%** (RR 1,11; IC95% 0,85-1,44) — numericamente maior no grupo com CPI, sem significância estatística.
+- **Óbito por qualquer causa em 90 dias:** **26,1% versus 26,7%** (RR 0,98; IC95% 0,84-1,13) — sem diferença.
+- A CPI foi de fato aplicada com boa adesão (mediana de 22 horas/dia, por mediana de 7 dias), então o resultado negativo não se explica por subutilização do dispositivo.
+
+**Leitura correta do resultado:** em paciente crítico que já recebe profilaxia farmacológica eficaz, **acrescentar CPI não reduziu TVP proximal nem o composto de TEV**. Isso não significa que a CPI seja inútil em UTI — significa que o benefício demonstrado é **aditivo ao fármaco, não comprovado**, o que é uma pergunta diferente de "a CPI previne TEV quando usada sozinha, por não haver alternativa farmacológica segura" (ver a seção seguinte).
+
+## Quando a via farmacológica é contraindicada: a diretriz ASH 2018
+O PROTECT e o PREVENT respondem à escolha **entre** anticoagulantes e ao valor de **somar** compressão mecânica — mas nenhum dos dois trata do paciente crítico em que o anticoagulante está contraindicado (sangramento ativo, coagulopatia, trombocitopenia grave, neurocirurgia ou politrauma recentes). Para esse cenário, a fonte mais recente e explicitamente graduada é a diretriz da American Society of Hematology de 2018 para profilaxia de TEV em pacientes hospitalizados (Schünemann HJ et al., Blood Adv. 2018;2(22):3198-3225, PMID 30482763), que usa a metodologia **GRADE** (força **forte/condicional**, não o sistema Classe I-III/Nível A-C da ESC — os dois vocabulários não são equivalentes e não devem ser convertidos um no outro).
+
+O painel da ASH chegou a **19 recomendações** para pacientes agudamente enfermos e **criticamente enfermos**, das quais três resumem a conduta central:
+- **Recomendação forte:** profilaxia farmacológica de TEV em paciente agudo ou criticamente enfermo com risco de sangramento **aceitável**.
+- **Recomendação forte:** uso de profilaxia **mecânica** quando o risco de sangramento for **inaceitável** — é a recomendação que autoriza a CPI como estratégia isolada, não como coadjuvante, exatamente no paciente em que o PROTECT e o PREVENT não se aplicam.
+- **Recomendação forte:** **contra** o uso de anticoagulante oral de ação direta (DOAC) durante a internação para esse fim, e **contra** estender a profilaxia farmacológica além da alta hospitalar nesse grupo.
+
+## Algoritmo prático de decisão
+1. **Risco hemorrágico aceitável, sem contraindicação a anticoagulante:** profilaxia farmacológica é a base (ASH 2018, recomendação forte). Entre HNF e HBPM, o PROTECT não mostrou superioridade de nenhuma das duas para TVP proximal — a preferência por dalteparina (ou outra HBPM) apoia-se nos achados secundários de menos TEP e menos TIH, não em superioridade do desfecho primário.
+2. **Paciente já em profilaxia farmacológica, sem contraindicação:** o PREVENT não sustenta a adição rotineira de CPI para reduzir TVP proximal — decidir por CPI adicional exige outra justificativa (por exemplo, imobilidade extrema ou preferência institucional), não a expectativa de redução de TVP demonstrada em ensaio.
+3. **Contraindicação a anticoagulante (sangramento ativo, coagulopatia, trombocitopenia grave, pós-operatório imediato de neurocirurgia):** profilaxia **mecânica isolada** (ASH 2018, recomendação forte) — este é o paciente para quem a CPI foi desenhada como estratégia primária, e não o paciente do PREVENT, que já estava protegido pelo fármaco.
+4. **Reavaliar diariamente:** a contraindicação ao anticoagulante em UTI costuma ser dinâmica (sangramento controlado, plaquetas em recuperação, janela pós-operatória se fechando) — a transição de mecânica isolada para farmacológica deve ser revista a cada dia, não decidida uma única vez na admissão.
+
+## Armadilhas clínicas
+- **Ler o PROTECT como prova de que a HBPM é superior à HNF para prevenir TVP.** Não é — o desfecho primário foi neutro. A vantagem de TEP e de TIH é real, mas é achado secundário, e apresentá-lo como se fosse o resultado principal do ensaio distorce a força da evidência.
+- **Assumir que o PREVENT prova que a CPI não funciona em UTI.** O ensaio testou a adição de CPI a paciente **já protegido por fármaco** — não testou a CPI como estratégia isolada no paciente sem alternativa farmacológica, que é exatamente o cenário em que a ASH 2018 recomenda seu uso com força.
+- **Confundir os dois desenhos.** PROTECT compara **fármaco contra fármaco**; PREVENT compara **fármaco mais mecânica contra fármaco isolado**. Nenhum dos dois testou "mecânica isolada versus nenhuma profilaxia" nem "mecânica isolada versus farmacológica isolada" no paciente crítico — essa lacuna de evidência direta é o motivo de a recomendação da ASH 2018 para o paciente com contraindicação ao anticoagulante se apoiar em extrapolação de risco-benefício, não em ensaio dedicado a essa pergunta.
+- **Converter a força de recomendação GRADE da ASH ("forte"/"condicional") para as classes da ESC (I/IIa/IIb/III).** São sistemas de graduação distintos; tratar "forte" como equivalente a "Classe I" seria inventar uma equivalência que a fonte não faz.
+- **Aplicar cegamente a dose fixa do PROTECT (dalteparina 5.000 UI/dia, HNF 5.000 UI 2x/dia) sem considerar peso extremo ou disfunção renal grave do paciente individual** — o ensaio não foi desenhado para responder ajuste de dose por peso corporal ou por clearance de creatinina; ajustes nesses cenários específicos devem seguir orientação de bula e não são o objeto deste documento.
