@@ -1,5 +1,46 @@
 # Corvia — contexto e instruções permanentes
 
+> ## ✅ CONCLUÍDO E NO AR, 03/08/2026 ~00h50: dois bugs de produção da CMED + gap de integração na Beira do leito
+> Sessão `/root` caiu por volta de 00h22 no meio do trabalho de Tarefas A+B (commit `81f663e`
+> já estava feito, mas com diff não commitado em `cmed.py`/`cmed_precos.py`/migration nova).
+> Retomado, testado e fechado:
+>
+> **Bug 1 — truncamento de coluna.** A 1ª importação real (25.702 linhas) estourou
+> `tarja VARCHAR(20)`. `ggrem`/`registro`/`ean1`/`tarja` viraram `Text` (migration `c4a8e6f1b3d7`,
+> aplicada). Reimportação testada: 0 erro, 25.702 linhas, 3.367 apresentações casadas.
+>
+> **Bug 2 — órfão roubava o match do fármaco publicado.** `cmed_precos.atualizar()` casava por
+> nome sem checar `published`, e o slug órfão `metoprolol-succinato` (mais "limpo" textualmente)
+> ganhava de `metoprolol` no desempate. Filtro `Drug.published.is_(True)` adicionado antes do
+> casamento. Medido depois do fix: `metoprolol` 71 apresentações casadas (era 0),
+> `metoprolol-succinato` 0 (era 142). Commit `8f36285`.
+>
+> **Gap de integração — `PatientPrescricao.tsx` (Beira do leito) nunca foi religado à CMED.**
+> Rafael reportou "ao digitar o nome do medicamento no campo específico, não aparece o que ficou
+> definido". Causa: esse componente (diferente de `Receituario.tsx`) chamava
+> `GET /drugs/{slug}` e lia `commercial_presentations` — campo estático antigo, curado só por
+> admin via `PUT /drugs/{slug}/apresentacoes-comerciais`, vazio pra quase todo fármaco. Portado
+> pro mesmo padrão de `Receituario.tsx`: agora chama `GET /drugs/{slug}/apresentacoes` (Tarefa
+> A/B). `ItemPrescricao` (backend, `/api/prescriptions`) ganhou os mesmos 6 campos opcionais de
+> marca que `receituario.py` já tinha, pra escolha persistir em vez de ser descartada pelo
+> Pydantic. Commit `a8ad865`. Rebuild de backend e frontend feito; string nova confirmada no
+> bundle servido em produção.
+>
+> **Investigação da cobertura CMED, pedida pelo Rafael.** 84/102 fármacos publicados (82%) têm
+> preço casado na importação real. Dos 18 sem match: **9 genuinamente ausentes da CMED**
+> (torasemida, bumetanida, nitroprussiato de sódio, nicardipina, icosapente etila, ácido
+> nicotínico/niacina, vernakalanto, ibutilida, nicorandil — nenhuma linha na planilha, nem
+> substring) e **2 só existem em combinação de dose fixa**, sem apresentação isolada (felodipino:
+> só com candesartana ou succinato de metoprolol; ácido bempedoico: só com ezetimiba) — a regra
+> de "combinação não empresta PMC ao princípio isolado" (já documentada abaixo, Tarefa A) está
+> funcionando como desenhada, não é bug. Atualiza a lista de 7 órfãos conhecidos registrada na
+> Tarefa A (medida antes da importação real valer).
+>
+> **Receita controlada — confirmado a pedido do Rafael: já é automático.**
+> `classificacao_receituario.py` (Tarefa 27, já commitado) classifica cada item pela lista
+> ANVISA da substância (A1/A2/B1/B2/C1/C5 etc.) e decide sozinho entre Notificação de Receita e
+> Receita de Controle Especial — o médico não escolhe manualmente.
+
 > ## ✅ CONCLUÍDO E NO AR, 02/08/2026 ~10h: e-mails transacionais (11) + envio de material ao paciente por e-mail
 > Tarefa nova aprovada pelo Rafael em 02/08/2026 ~07h50, prioridade sobre a fila de gaps —
 > executada pela sessão `corvia1`, commit `e5d69e4`. Os dois specs (`/root/mensagens/
