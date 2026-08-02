@@ -5,7 +5,9 @@ from sqlalchemy.orm import Session
 from app.core.db import get_db
 from app.core.security import current_user, require_admin
 from app.models.audit import AuditLog
+from app.models.cmed import CmedApresentacao, CmedVersao
 from app.models.drug import Drug
+from app.services import cmed_precos
 
 router = APIRouter(prefix="/api/drugs", tags=["medicamentos"])
 
@@ -295,6 +297,55 @@ def get_drug(slug: str, db: Session = Depends(get_db), _=Depends(current_user)):
     if not d:
         raise HTTPException(status_code=404, detail="Medicamento não encontrado.")
     return _dump(d)
+
+
+@router.get("/{slug}/apresentacoes")
+def apresentacoes_comerciais(
+    slug: str, uf: str | None = Query(None, max_length=2),
+    db: Session = Depends(get_db), user=Depends(current_user),
+):
+    """Marca, laboratório, apresentação e PMC via CMED (Tarefa A/B,
+    CLAUDE.md) — para o médico ver tudo ao digitar a prescrição. UF default
+    vem do conselho do médico (`users.council_state`); nem sempre é onde o
+    paciente compra, por isso o parâmetro `uf` sobrescreve.
+
+    Ausência de linha aqui é, na maioria das vezes, informação real (a
+    substância não tem produto com PMC publicado no Brasil, ou só existe em
+    combinação) — nunca tratada como erro."""
+    d = db.query(Drug).filter(Drug.slug == slug, Drug.published.is_(True)).first()
+    if not d:
+        raise HTTPException(status_code=404, detail="Medicamento não encontrado.")
+
+    versao = db.query(CmedVersao).order_by(CmedVersao.id.desc()).first()
+    if not versao:
+        return {
+            "generic_name": d.generic_name, "uf": None, "cmed_publicado_em": None,
+            "apresentacoes": [], "aviso": "Nenhuma lista da CMED foi importada ainda.",
+        }
+
+    linhas = db.query(CmedApresentacao).filter(
+        CmedApresentacao.drug_id == d.id, CmedApresentacao.cmed_versao_id == versao.id,
+    ).all()
+
+    uf_usada = (uf or user.council_state or "").upper() or None
+    apresentacoes = [
+        {
+            "produto": l.produto, "laboratorio": l.laboratorio, "apresentacao": l.apresentacao,
+            "ggrem": l.ggrem, "registro": l.registro, "restricao_hospitalar": l.restricao_hospitalar,
+            "preco": cmed_precos.preco_pmc(l.pmc_por_aliquota, uf_usada),
+        }
+        for l in linhas
+    ]
+    return {
+        "generic_name": d.generic_name, "uf": uf_usada, "cmed_versao_id": versao.id,
+        "cmed_publicado_em": versao.publicado_em,
+        "apresentacoes": apresentacoes,
+        "aviso": None if apresentacoes else (
+            "Sem apresentação com preço publicado pela CMED para esta substância — "
+            "pode ser produto genuinamente ausente da lista, ou existir só em combinação "
+            "de dose fixa (que não tem o mesmo PMC do princípio isolado)."
+        ),
+    }
 
 
 @router.patch("/{slug}/meia-vida")

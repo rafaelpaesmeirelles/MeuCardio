@@ -4,7 +4,25 @@ import { useAuth } from "../lib/auth";
 import { Carregando, Erro, Vazio } from "../components/Estado";
 
 type Farmaco = { slug: string; nome: string };
-type Item = { drug_slug?: string; descricao: string; apresentacao: string; posologia: string; orientacao: string };
+type Item = {
+  drug_slug?: string; descricao: string; apresentacao: string; posologia: string; orientacao: string;
+  // Tarefa B (CLAUDE.md, 02/08/2026) — escolha de marca via CMED, sempre
+  // opcional: o genérico (sem estes seis campos) continua sendo o padrão.
+  brand_name?: string; manufacturer?: string; ggrem?: string;
+  pmc_snapshot?: number; uf?: string; cmed_version?: string;
+};
+
+// GET /drugs/{slug}/apresentacoes?uf=XX (Tarefa A/B) — marca, laboratório,
+// apresentação e PMC (teto CMED) pra escolha explícita durante a digitação.
+type PrecoCmed = { valor: number | null; rotulo: string };
+type ApresentacaoCmed = {
+  produto: string; laboratorio: string; apresentacao: string; ggrem: string;
+  restricao_hospitalar: boolean; preco: PrecoCmed;
+};
+type RespostaApresentacoes = {
+  uf: string | null; cmed_publicado_em: string | null;
+  apresentacoes: ApresentacaoCmed[]; aviso: string | null;
+};
 
 type DocumentoClassificado = {
   tipo: string; tipo_nome: string | null; tipo_ativo: boolean;
@@ -353,6 +371,10 @@ export default function Receituario() {
   const [observacoes, setObservacoes] = useState("");
   const [itens, setItens] = useState<Item[]>([{ ...ITEM_VAZIO }]);
   const [buscaFarmaco, setBuscaFarmaco] = useState<string[]>([""]);
+  // Uma entrada por índice de item — null enquanto não escolheu fármaco
+  // nenhum, undefined enquanto a busca de apresentações está em voo.
+  const [apresentacoes, setApresentacoes] = useState<(RespostaApresentacoes | null | undefined)[]>([null]);
+  const { usuario } = useAuth();
 
   const [previa, setPrevia] = useState<Previa | null>(null);
   const [classificando, setClassificando] = useState(false);
@@ -377,19 +399,49 @@ export default function Receituario() {
   }
 
   function escolherFarmaco(i: number, f: Farmaco) {
-    atualizarItem(i, "drug_slug", f.slug);
-    atualizarItem(i, "descricao", f.nome);
+    setPrevia(null);
+    setItens((lista) => lista.map((it, idx) => idx === i
+      ? { drug_slug: f.slug, descricao: f.nome, apresentacao: "", posologia: it.posologia, orientacao: it.orientacao }
+      : it));
     setBuscaFarmaco((b) => b.map((v, idx) => idx === i ? f.nome : v));
+    // Marca é escolha explícita do médico, nunca automática (Tarefa B,
+    // CLAUDE.md) — a busca só traz o que existe pra ele escolher; o genérico
+    // (sem marca) continua valendo até ele decidir trocar.
+    setApresentacoes((a) => a.map((v, idx) => idx === i ? undefined : v));
+    api.get<RespostaApresentacoes>(`/drugs/${f.slug}/apresentacoes${usuario?.council_state ? `?uf=${usuario.council_state}` : ""}`)
+      .then((r) => setApresentacoes((a) => a.map((v, idx) => idx === i ? r : v)))
+      .catch(() => setApresentacoes((a) => a.map((v, idx) => idx === i ? null : v)));
+  }
+
+  function escolherApresentacao(i: number, ap: ApresentacaoCmed, resp: RespostaApresentacoes) {
+    setPrevia(null);
+    setItens((lista) => lista.map((it, idx) => idx === i ? {
+      ...it,
+      apresentacao: it.apresentacao || ap.apresentacao,
+      brand_name: ap.produto, manufacturer: ap.laboratorio, ggrem: ap.ggrem,
+      pmc_snapshot: ap.preco.valor ?? undefined,
+      uf: resp.uf ?? undefined, cmed_version: resp.cmed_publicado_em ?? undefined,
+    } : it));
+  }
+
+  function voltarParaGenerico(i: number) {
+    setPrevia(null);
+    setItens((lista) => lista.map((it, idx) => idx === i ? {
+      ...it, brand_name: undefined, manufacturer: undefined, ggrem: undefined,
+      pmc_snapshot: undefined, uf: undefined, cmed_version: undefined,
+    } : it));
   }
 
   function adicionarItem() {
     setItens((l) => [...l, { ...ITEM_VAZIO }]);
     setBuscaFarmaco((b) => [...b, ""]);
+    setApresentacoes((a) => [...a, null]);
   }
 
   function removerItem(i: number) {
     setItens((l) => l.filter((_, idx) => idx !== i));
     setBuscaFarmaco((b) => b.filter((_, idx) => idx !== i));
+    setApresentacoes((a) => a.filter((_, idx) => idx !== i));
     setPrevia(null);
   }
 
@@ -399,6 +451,8 @@ export default function Receituario() {
     itens: itensValidos.map((it) => ({
       drug_slug: it.drug_slug, descricao: it.descricao, apresentacao: it.apresentacao,
       posologia: it.posologia, orientacao: it.orientacao,
+      brand_name: it.brand_name, manufacturer: it.manufacturer, ggrem: it.ggrem,
+      pmc_snapshot: it.pmc_snapshot, uf: it.uf, cmed_version: it.cmed_version,
     })),
     observacoes,
   };
@@ -456,6 +510,11 @@ export default function Receituario() {
     setEndereco(d.destinatario.endereco ?? "");
     setDocumento(d.destinatario.documento ?? "");
     setObservacoes(d.observacoes ?? "");
+    // Marca/preço NÃO são carregados daqui de propósito: pmc_snapshot é o
+    // preço no momento em que a receita ORIGINAL foi feita, e a lista da
+    // CMED muda todo mês — reaproveitar seria mostrar preço velho como se
+    // fosse atual. Recriar sempre volta pro genérico; o médico escolhe marca
+    // de novo se quiser, com o preço de agora.
     const novosItens: Item[] = d.itens_originais.length > 0
       ? d.itens_originais.map((i) => ({
           drug_slug: i.drug_slug ?? undefined, descricao: i.descricao,
@@ -465,6 +524,7 @@ export default function Receituario() {
       : [{ ...ITEM_VAZIO }];
     setItens(novosItens);
     setBuscaFarmaco(novosItens.map((i) => i.descricao));
+    setApresentacoes(novosItens.map(() => null));
     setAba("nova");
   }
 
@@ -507,6 +567,7 @@ export default function Receituario() {
                   setBuscaFarmaco((b) => b.map((v, idx) => idx === i ? e.target.value : v));
                   atualizarItem(i, "drug_slug", "");
                   atualizarItem(i, "descricao", e.target.value);
+                  setApresentacoes((a) => a.map((v, idx) => idx === i ? null : v));
                 }}
                 placeholder="Busque na base ou digite livremente"
               />
@@ -538,6 +599,66 @@ export default function Receituario() {
               })()}
               <label style={{ marginTop: "0.4rem" }}>Apresentação (ex.: 500mg, comprimido)</label>
               <input value={it.apresentacao} onChange={(e) => atualizarItem(i, "apresentacao", e.target.value)} />
+
+              {it.drug_slug && (() => {
+                const resp = apresentacoes[i];
+                if (it.brand_name) {
+                  // Marca já escolhida — mostra o que foi selecionado e a
+                  // saída pra voltar ao genérico (marca nunca é obrigatória).
+                  return (
+                    <div style={{ marginTop: "0.4rem", padding: "0.4rem 0.6rem", border: "1px solid var(--linha)", borderRadius: 6 }}>
+                      <p style={{ margin: 0, fontSize: "0.86rem" }}>
+                        <strong>{it.brand_name}</strong> — {it.manufacturer}
+                        {it.pmc_snapshot != null && (
+                          <> · {it.pmc_snapshot.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}</>
+                        )}
+                      </p>
+                      <button type="button" className="botao botao--secundario" style={{ marginTop: "0.3rem", fontSize: "0.82rem" }}
+                              onClick={() => voltarParaGenerico(i)}>
+                        Usar genérico (sem marca)
+                      </button>
+                    </div>
+                  );
+                }
+                if (resp === undefined) {
+                  return <p className="eyebrow" style={{ margin: "0.3rem 0 0" }}>Buscando marcas e preços…</p>;
+                }
+                if (!resp || resp.apresentacoes.length === 0) {
+                  // Ausência de marca com PMC publicado é informação real na
+                  // maioria dos casos (substância fora da CMED, ou só existe
+                  // em combinação) — mostra o aviso em vez de sumir calada.
+                  return resp?.aviso
+                    ? <p className="eyebrow" style={{ margin: "0.3rem 0 0" }}>{resp.aviso}</p>
+                    : null;
+                }
+                return (
+                  <div style={{ marginTop: "0.3rem" }}>
+                    <label style={{ margin: 0 }}>Marca (opcional — genérico já está selecionado)</label>
+                    <div style={{ maxHeight: 180, overflowY: "auto", border: "1px solid var(--linha)", borderRadius: 6 }}>
+                      {resp.apresentacoes.map((ap, ai) => (
+                        <button key={ai} type="button"
+                                style={{ display: "block", width: "100%", textAlign: "left", padding: "0.3rem 0.5rem", border: "none", borderBottom: "1px solid var(--linha)", background: "transparent", cursor: "pointer", fontSize: "0.86rem" }}
+                                onClick={() => escolherApresentacao(i, ap, resp)}>
+                        <strong>{ap.produto}</strong> — {ap.laboratorio}
+                          <br />
+                          <span style={{ color: "var(--texto-secundario, #666)" }}>
+                            {ap.apresentacao} · {ap.preco.valor != null
+                              ? ap.preco.valor.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })
+                              : "sem preço publicado"}
+                          </span>
+                        </button>
+                      ))}
+                    </div>
+                    {resp.uf && (
+                      <p className="eyebrow" style={{ margin: "0.2rem 0 0" }}>
+                        Preço de referência para {resp.uf} — teto CMED (PMC), lista {resp.cmed_publicado_em}.
+                        Nunca é o preço final de farmácia, que costuma ser menor.
+                      </p>
+                    )}
+                  </div>
+                );
+              })()}
+
               <label style={{ marginTop: "0.4rem" }}>Posologia</label>
               <input value={it.posologia} onChange={(e) => atualizarItem(i, "posologia", e.target.value)} />
               <label style={{ marginTop: "0.4rem" }}>Orientação (opcional)</label>

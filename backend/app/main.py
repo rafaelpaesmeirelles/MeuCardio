@@ -2,7 +2,7 @@ from fastapi import Depends, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.api import (
-    admin, ai, appointments, assinatura, auth, calculators, chat, documents, documentos_publicos,
+    admin, ai, appointments, assinatura, auth, calculators, chat, cmed, documents, documentos_publicos,
     drugs, email as email_api, evidence,
     favorites, gallery, health, lab_tests, library, password_reset,
     prescriptions, round as round_api, search, service_orders, studies,
@@ -52,6 +52,7 @@ app.add_middleware(
 ROUTERS_LIVRES = (
     health.router, auth.router, password_reset.router, billing.router, admin.router,
     service_orders.router, partner_courses.router, email_api.router, documentos_publicos.router,
+    cmed.router,
 )
 
 ROUTERS_ASSINANTES = (

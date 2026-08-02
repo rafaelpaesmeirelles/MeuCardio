@@ -1,0 +1,33 @@
+{
+  "_leia_isto": "Mapa UF -> alíquota de ICMS sobre medicamento para cálculo do PMC (Tarefa A, CLAUDE.md). Regra do projeto: alíquota de ICMS é matéria tributária estadual, muda por norma, e não pode ser inventada/deduzida de memória. Cada UF começa 'nao_verificado' até alguém confirmar a norma vigente (lei/decreto estadual ou convênio CONFAZ) com fonte rastreável e data. Enquanto 'nao_verificado', a API usa a queda para média nacional rotulada (ver services/cmed_precos.py:preco_pmc) e marca a UF como VERIFICAÇÃO HUMANA NECESSÁRIA — nunca aplica um número sem fonte.",
+  "atualizado_em": null,
+  "ufs": {
+    "AC": {"aliquota_pct": null, "fonte": null, "verificado_em": null, "status": "nao_verificado"},
+    "AL": {"aliquota_pct": null, "fonte": null, "verificado_em": null, "status": "nao_verificado"},
+    "AP": {"aliquota_pct": null, "fonte": null, "verificado_em": null, "status": "nao_verificado"},
+    "AM": {"aliquota_pct": null, "fonte": null, "verificado_em": null, "status": "nao_verificado"},
+    "BA": {"aliquota_pct": null, "fonte": null, "verificado_em": null, "status": "nao_verificado"},
+    "CE": {"aliquota_pct": null, "fonte": null, "verificado_em": null, "status": "nao_verificado"},
+    "DF": {"aliquota_pct": null, "fonte": null, "verificado_em": null, "status": "nao_verificado"},
+    "ES": {"aliquota_pct": null, "fonte": null, "verificado_em": null, "status": "nao_verificado"},
+    "GO": {"aliquota_pct": null, "fonte": null, "verificado_em": null, "status": "nao_verificado"},
+    "MA": {"aliquota_pct": null, "fonte": null, "verificado_em": null, "status": "nao_verificado"},
+    "MT": {"aliquota_pct": null, "fonte": null, "verificado_em": null, "status": "nao_verificado"},
+    "MS": {"aliquota_pct": null, "fonte": null, "verificado_em": null, "status": "nao_verificado"},
+    "MG": {"aliquota_pct": null, "fonte": null, "verificado_em": null, "status": "nao_verificado"},
+    "PA": {"aliquota_pct": null, "fonte": null, "verificado_em": null, "status": "nao_verificado"},
+    "PB": {"aliquota_pct": null, "fonte": null, "verificado_em": null, "status": "nao_verificado"},
+    "PR": {"aliquota_pct": null, "fonte": null, "verificado_em": null, "status": "nao_verificado"},
+    "PE": {"aliquota_pct": null, "fonte": null, "verificado_em": null, "status": "nao_verificado"},
+    "PI": {"aliquota_pct": null, "fonte": null, "verificado_em": null, "status": "nao_verificado"},
+    "RJ": {"aliquota_pct": null, "fonte": null, "verificado_em": null, "status": "nao_verificado"},
+    "RN": {"aliquota_pct": null, "fonte": null, "verificado_em": null, "status": "nao_verificado"},
+    "RS": {"aliquota_pct": null, "fonte": null, "verificado_em": null, "status": "nao_verificado"},
+    "RO": {"aliquota_pct": null, "fonte": null, "verificado_em": null, "status": "nao_verificado"},
+    "RR": {"aliquota_pct": null, "fonte": null, "verificado_em": null, "status": "nao_verificado"},
+    "SC": {"aliquota_pct": null, "fonte": null, "verificado_em": null, "status": "nao_verificado"},
+    "SP": {"aliquota_pct": null, "fonte": null, "verificado_em": null, "status": "nao_verificado"},
+    "SE": {"aliquota_pct": null, "fonte": null, "verificado_em": null, "status": "nao_verificado"},
+    "TO": {"aliquota_pct": null, "fonte": null, "verificado_em": null, "status": "nao_verificado"}
+  }
+}

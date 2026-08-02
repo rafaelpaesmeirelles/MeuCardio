@@ -23,3 +23,4 @@ from app.models.receituario import (  # noqa: F401
     PrescriptionRecipient, PrescriptionDocument,
 )
 from app.models.assinatura import DocumentoEmitido  # noqa: F401
+from app.models.cmed import CmedVersao, CmedApresentacao  # noqa: F401

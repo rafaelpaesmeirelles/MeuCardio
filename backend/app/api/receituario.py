@@ -50,12 +50,25 @@ class ItemIn(BaseModel):
     """`drug_slug` é o caminho correto: ele resolve a substância na base
     estruturada. `descricao` livre é aceita para não travar o médico, mas cai
     em pendência — texto livre não é classificável, e chutar aqui emitiria o
-    documento errado."""
+    documento errado.
+
+    Os seis campos abaixo são a Tarefa B (CLAUDE.md): escolha de marca via
+    CMED, sempre opcional e sempre explícita do médico — nunca preenchida
+    sozinha aqui. `pmc_snapshot`/`uf`/`cmed_version` gravam o preço vigente
+    NO MOMENTO da prescrição, porque a lista da CMED muda todo mês e um
+    relatório antigo não pode recalcular com preço novo. Ausência dos seis
+    (genérico puro, sem marca) continua sendo o caminho padrão e válido."""
     drug_slug: str | None = None
     descricao: str = ""
     apresentacao: str = ""
     posologia: str = ""
     orientacao: str = ""
+    brand_name: str | None = None
+    manufacturer: str | None = None
+    ggrem: str | None = None
+    pmc_snapshot: float | None = None
+    uf: str | None = None
+    cmed_version: str | None = None
 
 
 class DestinatarioIn(BaseModel):
