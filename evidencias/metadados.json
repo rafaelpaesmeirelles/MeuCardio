@@ -30778,5 +30778,162 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "achd2018-ebstein-cirurgia-por-regurgitacao-tricuspide-significativa-com-sintomas",
+    "statement": "O reparo cirúrgico ou a reoperação da valva tricúspide é recomendado para adultos com anomalia de Ebstein e regurgitação tricúspide significativa quando presente um ou mais dos seguintes achados: sintomas de insuficiência cardíaca, evidência objetiva de piora da capacidade de exercício, ou disfunção sistólica progressiva do ventrículo direito ao ecocardiograma ou à ressonância magnética cardíaca.",
+    "recommendation_class": "I",
+    "evidence_level": "B-NR",
+    "society": "AHA/ACC",
+    "year": 2018,
+    "guideline_title": "2018 AHA/ACC Guideline for the Management of Adults With Congenital Heart Disease: Executive Summary",
+    "reference": "Stout KK, Daniels CJ, Aboulhosn JA, Bozkurt B, Broberg CS, Colman JM, Crumb SR, Dearani JA, Fuller S, Gurvitz M, Khairy P, Landzberg MJ, Saidi A, Valente AM, Van Hare GF. 2018 AHA/ACC Guideline for the Management of Adults With Congenital Heart Disease: Executive Summary: A Report of the American College of Cardiology/American Heart Association Task Force on Clinical Practice Guidelines. Circulation. 2019;139(14):e637-e697. DOI: 10.1161/CIR.0000000000000602. PMID: 30586768. Diretriz completa (PMID 30586767) sem PMC e bloqueada por Cloudflare; texto lido no Executive Summary da mesma diretriz e mesmo comitê (mesmas tabelas COR/LOE), PDF de acesso aberto hospedado pela Society of Thoracic Surgeons (sociedade endossante), conferido linha a linha nesta sessão (pdftotext -layout). Recomendação nº5 da seção \"Recommendations for Ebstein Anomaly\" (Therapeutic), Tabela da seção 4.3.4, página e665.",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "anomalia de ebstein",
+      "regurgitação tricúspide",
+      "cirurgia valvar",
+      "insuficiência cardíaca direita"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "achd2018-ebstein-ablacao-por-cateter-em-via-acessoria-de-alto-risco",
+    "statement": "A ablação por cateter é recomendada para adultos com anomalia de Ebstein e condução por via acessória de alto risco ou vias acessórias múltiplas, para reduzir o risco de morte súbita cardíaca.",
+    "recommendation_class": "I",
+    "evidence_level": "C-LD",
+    "society": "AHA/ACC",
+    "year": 2018,
+    "guideline_title": "2018 AHA/ACC Guideline for the Management of Adults With Congenital Heart Disease: Executive Summary",
+    "reference": "Stout KK, Daniels CJ, Aboulhosn JA, Bozkurt B, Broberg CS, Colman JM, Crumb SR, Dearani JA, Fuller S, Gurvitz M, Khairy P, Landzberg MJ, Saidi A, Valente AM, Van Hare GF. 2018 AHA/ACC Guideline for the Management of Adults With Congenital Heart Disease: Executive Summary: A Report of the American College of Cardiology/American Heart Association Task Force on Clinical Practice Guidelines. Circulation. 2019;139(14):e637-e697. DOI: 10.1161/CIR.0000000000000602. PMID: 30586768. Diretriz completa (PMID 30586767) sem PMC e bloqueada por Cloudflare; texto lido no Executive Summary da mesma diretriz e mesmo comitê (mesmas tabelas COR/LOE), PDF de acesso aberto hospedado pela Society of Thoracic Surgeons (sociedade endossante), conferido linha a linha nesta sessão (pdftotext -layout). Recomendação nº6 da seção \"Recommendations for Ebstein Anomaly\" (Therapeutic), Tabela da seção 4.3.4, página e665.",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "anomalia de ebstein",
+      "via acessória",
+      "ablação por cateter",
+      "morte súbita cardíaca",
+      "pré-excitação ventricular"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "achd2018-fontan-nova-taquiarritmia-atrial-deve-ser-tratada-prontamente",
+    "statement": "Uma nova apresentação de taquiarritmia atrial em adultos com paliação de Fontan deve ser manejada prontamente, incluindo prevenção de eventos tromboembólicos e consulta com eletrofisiologista com experiência em cardiopatia congênita.",
+    "recommendation_class": "I",
+    "evidence_level": "C-LD",
+    "society": "AHA/ACC",
+    "year": 2018,
+    "guideline_title": "2018 AHA/ACC Guideline for the Management of Adults With Congenital Heart Disease: Executive Summary",
+    "reference": "Stout KK, Daniels CJ, Aboulhosn JA, Bozkurt B, Broberg CS, Colman JM, Crumb SR, Dearani JA, Fuller S, Gurvitz M, Khairy P, Landzberg MJ, Saidi A, Valente AM, Van Hare GF. 2018 AHA/ACC Guideline for the Management of Adults With Congenital Heart Disease: Executive Summary: A Report of the American College of Cardiology/American Heart Association Task Force on Clinical Practice Guidelines. Circulation. 2019;139(14):e637-e697. DOI: 10.1161/CIR.0000000000000602. PMID: 30586768. Diretriz completa (PMID 30586767) sem PMC e bloqueada por Cloudflare; texto lido no Executive Summary da mesma diretriz e mesmo comitê (mesmas tabelas COR/LOE), PDF de acesso aberto hospedado pela Society of Thoracic Surgeons (sociedade endossante), conferido linha a linha nesta sessão (pdftotext -layout). Recomendação nº1 da seção \"Recommendations for Fontan Palliation of Single Ventricle Physiology (Including Tricuspid Atresia and Double Inlet Left Ventricle)\", seção 4.4.2, página e671.",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "fontan",
+      "atresia tricúspide",
+      "taquiarritmia atrial",
+      "tromboembolismo",
+      "ventrículo único"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "achd2018-fontan-vigilancia-de-doenca-hepatica-com-imagem-e-laboratorio",
+    "statement": "É razoável realizar exame de imagem do fígado (ultrassonografia, ressonância magnética cardíaca ou tomografia computadorizada) e avaliação laboratorial da função hepática para fibrose, cirrose e/ou carcinoma hepatocelular em adultos após paliação de Fontan.",
+    "recommendation_class": "IIa",
+    "evidence_level": "C-LD",
+    "society": "AHA/ACC",
+    "year": 2018,
+    "guideline_title": "2018 AHA/ACC Guideline for the Management of Adults With Congenital Heart Disease: Executive Summary",
+    "reference": "Stout KK, Daniels CJ, Aboulhosn JA, Bozkurt B, Broberg CS, Colman JM, Crumb SR, Dearani JA, Fuller S, Gurvitz M, Khairy P, Landzberg MJ, Saidi A, Valente AM, Van Hare GF. 2018 AHA/ACC Guideline for the Management of Adults With Congenital Heart Disease: Executive Summary: A Report of the American College of Cardiology/American Heart Association Task Force on Clinical Practice Guidelines. Circulation. 2019;139(14):e637-e697. DOI: 10.1161/CIR.0000000000000602. PMID: 30586768. Diretriz completa (PMID 30586767) sem PMC e bloqueada por Cloudflare; texto lido no Executive Summary da mesma diretriz e mesmo comitê (mesmas tabelas COR/LOE), PDF de acesso aberto hospedado pela Society of Thoracic Surgeons (sociedade endossante), conferido linha a linha nesta sessão (pdftotext -layout). Recomendação nº6 da seção \"Recommendations for Fontan Palliation of Single Ventricle Physiology (Including Tricuspid Atresia and Double Inlet Left Ventricle)\", seção 4.4.2, página e671.",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "fontan",
+      "doença hepática associada ao fontan",
+      "cirrose",
+      "carcinoma hepatocelular",
+      "vigilância"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "achd2018-fontan-vasodilatador-pulmonar-pode-beneficiar-capacidade-de-exercicio",
+    "statement": "Medicamentos vasoativos pulmonares podem ser benéficos para melhorar a capacidade de exercício em adultos com reparo de Fontan.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B-R",
+    "society": "AHA/ACC",
+    "year": 2018,
+    "guideline_title": "2018 AHA/ACC Guideline for the Management of Adults With Congenital Heart Disease: Executive Summary",
+    "reference": "Stout KK, Daniels CJ, Aboulhosn JA, Bozkurt B, Broberg CS, Colman JM, Crumb SR, Dearani JA, Fuller S, Gurvitz M, Khairy P, Landzberg MJ, Saidi A, Valente AM, Van Hare GF. 2018 AHA/ACC Guideline for the Management of Adults With Congenital Heart Disease: Executive Summary: A Report of the American College of Cardiology/American Heart Association Task Force on Clinical Practice Guidelines. Circulation. 2019;139(14):e637-e697. DOI: 10.1161/CIR.0000000000000602. PMID: 30586768. Diretriz completa (PMID 30586767) sem PMC e bloqueada por Cloudflare; texto lido no Executive Summary da mesma diretriz e mesmo comitê (mesmas tabelas COR/LOE), PDF de acesso aberto hospedado pela Society of Thoracic Surgeons (sociedade endossante), conferido linha a linha nesta sessão (pdftotext -layout). Recomendação nº14 da seção \"Recommendations for Fontan Palliation of Single Ventricle Physiology (Including Tricuspid Atresia and Double Inlet Left Ventricle)\", seção 4.4.2, página e671.",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "fontan",
+      "hipertensão pulmonar",
+      "vasodilatador pulmonar",
+      "capacidade de exercício"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "paces2021-bavt-congenito-marca-passo-em-neonato-ou-lactente-assintomatico-com-fc-menor-ou-igual-a-50",
+    "statement": "O implante de marca-passo permanente é indicado para bloqueio atrioventricular total congênito isolado em neonatos ou lactentes assintomáticos quando a frequência ventricular média é ≤50 bpm; a frequência ventricular isolada não deve ser usada como único critério de implante, pois sintomas por baixo débito cardíaco podem ocorrer em frequências mais altas.",
+    "recommendation_class": "I",
+    "evidence_level": "C-LD",
+    "society": "PACES/HRS",
+    "year": 2021,
+    "guideline_title": "2021 PACES Expert Consensus Statement on the Indications and Management of Cardiovascular Implantable Electronic Devices in Pediatric Patients",
+    "reference": "Shah MJ, Silka MJ, Avari Silva JN, Balaji S, Beach CM, Benjamin MN, Berul CI, Cannon B, Cecchin F, Cohen MI, Dalal AS, Dechert BE, Foster A, Gebauer R, Gonzalez Corcia MC, Kannankeril PJ, Karpawich PP, Kim JJ, Krishna MR, Kubuš P, LaPage MJ, Mah DY, Malloy-Walton L, Miyazaki A, Motonaga KS, Niu MC, Olen M, Paul T, Rosenthal E, Saarel EV, Silvetti MS, Stephenson EA, Tan RB, Triedman J, Von Bergen NH, Wackel PL; Writing Committee Members. 2021 PACES expert consensus statement on the indications and management of cardiovascular implantable electronic devices in pediatric patients. Indian Pacing Electrophysiol J. 2021;21(6):367-393. DOI: 10.1016/j.ipej.2021.07.005. PMID: 34333141. PMCID: PMC8577100 — texto integral aberto, lido e conferido nesta sessão via PMC (curl + extração de tabela COR/LOE/referência). Recomendação da seção 2.3.1 \"Isolated Congenital Complete Atrioventricular Block\".",
+    "theme": "Cardiologia pediátrica",
+    "tags": [
+      "bloqueio atrioventricular total congênito",
+      "marca-passo",
+      "neonato",
+      "lactente",
+      "bradicardia"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "paces2021-cardiomiopatia-hipertrofica-pediatrica-cdi-primario-com-fator-de-risco",
+    "statement": "Para crianças com cardiomiopatia hipertrófica que têm um ou mais fatores de risco primários — síncope inexplicada, hipertrofia ventricular esquerda maciça, taquicardia ventricular não sustentada, ou história familiar de morte súbita cardíaca precoce relacionada à cardiomiopatia hipertrófica —, o implante de cardioversor-desfibrilador implantável (CDI) é razoável, após considerar as potenciais complicações do implante de CDI em longo prazo.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B-NR",
+    "society": "PACES/HRS",
+    "year": 2021,
+    "guideline_title": "2021 PACES Expert Consensus Statement on the Indications and Management of Cardiovascular Implantable Electronic Devices in Pediatric Patients",
+    "reference": "Shah MJ, Silka MJ, Avari Silva JN, Balaji S, Beach CM, Benjamin MN, Berul CI, Cannon B, Cecchin F, Cohen MI, Dalal AS, Dechert BE, Foster A, Gebauer R, Gonzalez Corcia MC, Kannankeril PJ, Karpawich PP, Kim JJ, Krishna MR, Kubuš P, LaPage MJ, Mah DY, Malloy-Walton L, Miyazaki A, Motonaga KS, Niu MC, Olen M, Paul T, Rosenthal E, Saarel EV, Silvetti MS, Stephenson EA, Tan RB, Triedman J, Von Bergen NH, Wackel PL; Writing Committee Members. 2021 PACES expert consensus statement on the indications and management of cardiovascular implantable electronic devices in pediatric patients. Indian Pacing Electrophysiol J. 2021;21(6):367-393. DOI: 10.1016/j.ipej.2021.07.005. PMID: 34333141. PMCID: PMC8577100 — texto integral aberto, lido e conferido nesta sessão via PMC (curl + extração de tabela COR/LOE/referência). Recomendação da seção 3.4.1 \"Hypertrophic Cardiomyopathy\".",
+    "theme": "Cardiologia pediátrica",
+    "tags": [
+      "cardiomiopatia hipertrófica",
+      "cardioversor-desfibrilador implantável",
+      "morte súbita cardíaca",
+      "prevenção primária",
+      "criança"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "aspirina-primaria-contraindicada-de-rotina-no-idoso-acima-de-70-anos",
+    "statement": "O ácido acetilsalicílico em baixa dose (75-100 mg por via oral ao dia) NÃO deve ser administrado de rotina para prevenção primária de doença cardiovascular aterosclerótica em adultos com mais de 70 anos de idade, pelo risco aumentado de sangramento que supera o benefício esperado nessa faixa etária.",
+    "recommendation_class": "III",
+    "evidence_level": "B-R",
+    "society": "AHA/ACC",
+    "year": 2019,
+    "guideline_title": "2019 ACC/AHA Guideline on the Primary Prevention of Cardiovascular Disease",
+    "reference": "Arnett DK, Blumenthal RS, Albert MA, Buroker AB, Goldberger ZD, Hahn EJ, Himmelfarb CD, Khera A, Lloyd-Jones D, McEvoy JW, Michos ED, Miedema MD, Muñoz D, Smith SC Jr, Virani SS, Williams KA Sr, Yeboah J, Ziaeian B. 2019 ACC/AHA Guideline on the Primary Prevention of Cardiovascular Disease: A Report of the American College of Cardiology/American Heart Association Task Force on Clinical Practice Guidelines. Circulation. 2019;140(11):e596-e646. DOI: 10.1161/CIR.0000000000000678. PMID: 30879355. PMCID: PMC7734661 — texto integral aberto, lido e conferido nesta sessão via PMC (curl), seção 4.6 'Aspirin Use', recomendação nº2.",
+    "theme": "Cardiologia geriátrica",
+    "tags": [
+      "ácido acetilsalicílico",
+      "prevenção primária",
+      "sangramento",
+      "idoso"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]

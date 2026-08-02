@@ -21045,5 +21045,45 @@
         "por_que": "Fecha a trilha no momento prático em que a decisão de encaminhar — ou não — à reabilitação de fato é tomada: a alta hospitalar, onde o julgamento sobre fragilidade formado nas etapas anteriores precisa virar uma linha concreta do plano de cuidado."
       }
     ]
+  },
+  {
+    "slug": "trilha-cardiologia-pediatrica-taquiarritmia-ablacao-por-cateter-e-o-adulto-com-cardiopatia-congenita",
+    "titulo": "Cardiologia pediátrica: da taquiarritmia do lactente à ablação por cateter — limites técnicos e a trajetória até o adulto com cardiopatia congênita",
+    "tema": "Cardiologia pediátrica",
+    "objetivo": "Sair sabendo reconhecer e tratar a taquicardia supraventricular do lactente, entender os limites de peso e idade que definem quando a ablação por cateter é tecnicamente viável na criança, conhecer o desfecho da ablação especificamente em população pediátrica com cardiopatia congênita, e acompanhar essa mesma vulnerabilidade arrítmica quando o paciente se torna um adulto com cardiopatia congênita — usando a síndrome de Eisenmenger como exemplo de arritmia que precipita instabilidade nessa fase da vida.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "taquicardia-supraventricular-no-lactente-e-na-crianca-manejo-agudo-e-cronico",
+        "por_que": "Começa pelo cenário mais comum: reconhecer e tratar a taquicardia supraventricular (TSV) no lactente, manejo agudo (manobra vagal, adenosina) e crônico. É a base sobre a qual a decisão de ablação, tratada nas etapas seguintes, se apoia."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "ablacao-por-cateter-na-crianca-limites-de-peso-e-idade-crioablacao-e-mapeamento-eletroanatomico",
+        "por_que": "Da TSV manejada clinicamente para a pergunta técnica seguinte: quando a ablação por cateter é viável na criança. Traz os limites de peso e idade que pesam na decisão, e a comparação entre crioablação e radiofrequência, incluindo redução de exposição à fluoroscopia."
+      },
+      {
+        "ordem": 3,
+        "item_type": "estudo",
+        "item_slug": "houck-2019-ablacao-por-cateter-em-arritmia-de-cardiopatia-congenita-pediatrica",
+        "por_que": "Aplica o conteúdo técnico da etapa anterior a uma população mais complexa: crianças com cardiopatia congênita de base, em que os mecanismos de arritmia e o desfecho da ablação diferem do coração estruturalmente normal."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "arritmias-e-sindrome-de-eisenmenger-em-cardiopatia-congenita-do-adulto",
+        "por_que": "Faz a ponte para a vida adulta: a mesma vulnerabilidade arrítmica que se manifesta na criança com cardiopatia congênita continua e ganha novo peso quando o shunt evolui para síndrome de Eisenmenger, em que a arritmia atrial pode precipitar instabilidade hemodinâmica franca."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "cardiopatia-congenita-do-adulto-achd-manejo-abrangente-esc-2020",
+        "por_que": "Fecha a trilha no manejo abrangente do adulto com cardiopatia congênita, encaixando a arritmia dentro do acompanhamento de longo prazo que começa na infância e não tem alta definitiva — o fio condutor de toda a trilha."
+      }
+    ]
   }
 ]

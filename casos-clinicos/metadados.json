@@ -10254,5 +10254,109 @@
       "Du ZD, Hijazi ZM, Kleinman CS, Silverman NH, Larntz K; Amplatzer Investigators. Comparison between transcatheter and surgical closure of secundum atrial septal defect in children and adults: results of a multicenter nonrandomized trial. J Am Coll Cardiol. 2002;39(11):1836-1844. DOI: 10.1016/s0735-1097(02)01862-4. PMID: 12039500."
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "cmh-pediatrica-sindrome-de-noonan-quando-suspeitar-de-rasopatia",
+    "titulo": "Cardiomiopatia hipertrófica em lactente com fenótipo dismórfico: quando suspeitar de síndrome de Noonan?",
+    "tema": "Cardiologia pediátrica",
+    "nivel": "intermediário",
+    "enunciado": "Lactente de 8 meses, encaminhado por sopro sistólico e ganho ponderal abaixo do esperado. Ao exame: baixa estatura, hipertelorismo ocular, orelhas de implantação baixa, pescoço alado e tórax em quilha na porção superior. O ecocardiograma mostra hipertrofia septal com escore-Z de espessura miocárdica acima de 2, sem obstrução dinâmica significativa da via de saída do ventrículo esquerdo em repouso. Não há história familiar de cardiomiopatia hipertrófica (CMH) em nenhum dos pais.",
+    "pergunta": "Diante da hipertrofia ventricular associada a esse fenótipo dismórfico, qual é a conduta mais apropriada?",
+    "opcoes": [
+      "Tratar como CMH sarcomérica isolada e manter apenas seguimento ecocardiográfico de rotina, já que a ausência de história familiar torna causa genética hereditária pouco provável",
+      "Suspeitar de RASopatia (como a síndrome de Noonan) diante do fenótipo dismórfico associado à CMH: essa causa secundária responde por hipertrofia em 20-30% dos casos de síndrome de Noonan, com maior risco de obstrução da via de saída do ventrículo esquerdo e prognóstico tipicamente pior do que o da CMH sarcomérica não sindrômica isolada",
+      "Excluir CMH genética, pois a presença de fenótipo dismórfico é incompatível com uma causa cardíaca primária e sugere apenas uma condição não relacionada ao coração",
+      "Adiar qualquer investigação etiológica até os 10-12 anos de idade, já que a causa da CMH pediátrica não muda a conduta clínica no lactente"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A cardiomiopatia hipertrófica (CMH) pediátrica tem causas primárias (variantes sarcoméricas — MYH7, MYBPC3, TNNT2, entre outras) e causas secundárias que precisam ser ativamente rastreadas, não presumidas ausentes pela falta de história familiar. Entre as causas secundárias, as RASopatias merecem destaque: a síndrome de Noonan (autossômica dominante) está associada a CMH em 20-30% dos casos, com maior risco de obstrução da via de saída do ventrículo esquerdo e prognóstico tipicamente pior do que a CMH não sindrômica. O fenótipo descrito — baixa estatura, hipertelorismo, orelhas de implantação baixa, pescoço alado e deformidade torácica — é o quadro clássico da síndrome de Noonan, e reconhecê-lo muda a investigação (painel genético dirigido à via RAS-MAPK, não apenas ao sarcômero), o aconselhamento familiar (a maioria dos casos de Noonan é esporádica, mas quando herdada é autossômica dominante) e a expectativa de prognóstico. Tratar toda CMH pediátrica como sarcomérica isolada, sem rastrear RASopatia, doença de depósito ou erro inato do metabolismo, é uma armadilha clínica explicitamente registrada na literatura sobre o tema — a distinção etiológica muda prognóstico e pode abrir porta para terapia direcionada específica de cada causa secundária.",
+    "source_refs": [
+      "Raissadati A, Tolani D, Profita EL. Cardiomyopathy as indication for pediatric heart transplantation. JHLT Open. 2025;10:100360. DOI: 10.1016/j.jhlto.2025.100360. PMID: 40843315."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "endocardite-infecciosa-pediatrica-cardiopatia-congenita-muda-a-microbiologia",
+    "titulo": "Endocardite infecciosa em adolescente com tetralogia de Fallot corrigida: o perfil microbiológico muda com a cardiopatia de base?",
+    "tema": "Cardiologia pediátrica",
+    "nivel": "intermediário",
+    "enunciado": "Adolescente de 14 anos, portador de tetralogia de Fallot corrigida cirurgicamente aos 2 anos de idade (sem material protético residual), apresenta febre baixa persistente há 10 dias, inapetência e fadiga progressiva. À ausculta, sopro sistólico já conhecido, sem mudança clara de intensidade referida pelos pais. Hemoculturas seriadas em coleta, aguardando resultado.",
+    "pergunta": "Considerando o perfil microbiológico descrito na literatura para crianças COM cardiopatia congênita de base (em contraste com crianças sem cardiopatia), qual afirmação está correta?",
+    "opcoes": [
+      "Staphylococcus aureus responde isoladamente por mais de 70% dos casos nessa população, o que torna dispensável cobertura empírica para outros agentes",
+      "Em crianças com cardiopatia congênita, o estreptococo do grupo viridans costuma ser a causa mais comum de endocardite, e bacilos Gram-negativos e estafilococos coagulase-negativos ganham peso proporcionalmente maior do que em crianças sem cardiopatia de base",
+      "Cardiopatia congênita corrigida sem material protético residual elimina o risco de endocardite infecciosa, autorizando descartar a hipótese sem investigação adicional",
+      "Hemocultura negativa é achado raríssimo (menos de 1% dos casos) nesse cenário, e um resultado negativo praticamente descarta o diagnóstico"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O perfil microbiológico da endocardite infecciosa (EI) pediátrica se divide de forma marcante conforme a presença ou não de cardiopatia congênita de base. Em criança sem cardiopatia, Staphylococcus aureus e estreptococos dividem o protagonismo em proporções semelhantes (35-40% cada). Já em criança COM cardiopatia congênita, o estreptococo do grupo viridans costuma ser a causa mais comum, enquanto bacilos Gram-negativos (25-30% versus 10-15% sem cardiopatia) e estafilococos coagulase-negativos — ligados a material protético e cateter (10-15% versus 0-5% sem cardiopatia) — ganham peso proporcionalmente maior. Endocardite por Gram-negativos é rara em qualquer criança, mas proporcionalmente mais representada no grupo com cardiopatia congênita. Quanto à hemocultura, ela é negativa em 5 a 7% dos casos verdadeiros de EI (por antibioticoterapia prévia, germe de crescimento lento ou técnica inadequada) — proporção que está longe de ser desprezível e não deve levar a descartar o diagnóstico diante de um único resultado negativo, sobretudo com incubação inferior a 5 dias. Cardiopatia congênita corrigida, mesmo sem material protético, permanece o principal fator predisponente identificado em crianças com EI, e febre persistente com sopro conhecido nesse contexto exige investigação ativa, não tranquilização.",
+    "source_refs": [
+      "Vicent L, Luna R, Martínez-Sellés M. Pediatric Infective Endocarditis: A Literature Review. J Clin Med. 2022;11(11):3217. DOI: 10.3390/jcm11113217. PMID: 35683606."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "amiloidose-attrwt-mascarada-de-cardiopatia-hipertensiva-no-idoso-com-hfpep",
+    "titulo": "\"Cardiopatia hipertensiva com HFpEF\" pela enésima vez em idoso de 84 anos: até quando aceitar o rótulo?",
+    "tema": "Cardiologia geriátrica",
+    "nivel": "avançado",
+    "enunciado": "Paciente de 84 anos, hipertenso há mais de 30 anos, rotulado repetidamente como \"cardiopatia hipertensiva com HFpEF\" ao longo de internações recorrentes por descompensação. Refere síndrome do túnel do carpo bilateral, operada há 6 anos. O ECG mostra baixa voltagem em derivações periféricas; o ecocardiograma mostra hipertrofia ventricular esquerda concêntrica desproporcional ao grau de hipertensão relatado nos prontuários. O paciente tolera mal as doses habituais de IECA, com episódios recorrentes de hipotensão sintomática.",
+    "pergunta": "Diante da discordância entre voltagem eletrocardiográfica e espessura parietal, associada à síndrome do túnel do carpo bilateral prévia, qual é a conduta diagnóstica mais apropriada segundo a evidência disponível?",
+    "opcoes": [
+      "Manter o rótulo de cardiopatia hipertensiva, já que a idade muito avançada isoladamente torna outras causas de hipertrofia ventricular esquerda pouco prováveis",
+      "Indicar biópsia endomiocárdica de imediato, por ser hoje o único método capaz de confirmar amiloidose cardíaca nesse cenário",
+      "Solicitar cintilografia óssea com radiotraçador e eletroforese de proteínas séricas/urinárias com dosagem de cadeias leves livres: a combinação de captação miocárdica grau 2-3 (escala de Perugini) associada à ausência de gamopatia monoclonal tem especificidade e valor preditivo positivo de 100% para amiloidose ATTR cardíaca, autorizando o diagnóstico sem biópsia",
+      "Não investigar amiloidose cardíaca, pois a prevalência da doença diminui com a idade e a hipótese é pouco provável acima de 80 anos"
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O quadro descrito reúne os sinais que, na combinação, deveriam afastar o raciocínio automático de \"cardiopatia hipertensiva\": espessamento ventricular desproporcional ao grau de hipertensão relatado, discordância entre baixa voltagem ao ECG e espessura parietal ao ecocardiograma (padrão clássico de infiltração, ao contrário da hipertrofia hipertensiva verdadeira, em que voltagem e espessura crescem juntas), síndrome do túnel do carpo bilateral prévia e intolerância desproporcional a IECA por hipotensão. A idade avançada NÃO reduz a probabilidade da doença — ao contrário: em estudo de autópsia sistemática de Mohammed et al. (109 pacientes com HFpEF sem amiloidose clinicamente aparente e 131 controles), a prevalência de depósito de transtirretina selvagem foi maior nos pacientes com HFpEF (odds ratio 3,8; IC95% 1,5-11,3; p=0,03), com cerca de 1 em 20 pacientes rotulados como HFpEF \"comum\" tendo amiloidose como causa estrutural primária. Desde 2016, o diagnóstico não exige mais biópsia obrigatória: Gillmore et al. avaliaram 1.217 pacientes com suspeita de amiloidose cardíaca (857 com amiloide histologicamente comprovado, 360 com cardiomiopatia não amiloide confirmada) e mostraram que a captação miocárdica ao radiotraçador tem sensibilidade acima de 99% e especificidade de 86% para amiloidose ATTR cardíaca — e que a combinação de captação grau 2 ou 3 associada à AUSÊNCIA de proteína monoclonal no sangue ou na urina tem especificidade e valor preditivo positivo de 100% (IC95% do VPP: 98,0-100) para o diagnóstico, sem necessidade de biópsia. A cintilografia positiva isolada, porém, não distingue ATTR de AL — os falsos positivos vêm quase exclusivamente de amiloidose AL, daí a necessidade de excluir gamopatia monoclonal antes de fechar o diagnóstico.",
+    "source_refs": [
+      "Gillmore JD, Maurer MS, Falk RH, et al. Nonbiopsy Diagnosis of Cardiac Transthyretin Amyloidosis. Circulation. 2016;133(24):2404-2412. PMID: 27143678.",
+      "Mohammed SF, Mirzoyev SA, Edwards WD, et al. Left ventricular amyloid deposition in patients with heart failure and preserved ejection fraction. JACC Heart Fail. 2014;2(2):113-122. PMID: 24720917."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "ablacao-de-fibrilacao-atrial-em-octogenario-idade-isolada-nao-contraindica",
+    "titulo": "Fibrilação atrial paroxística refratária em paciente de 83 anos: a idade isolada contraindica a ablação?",
+    "tema": "Cardiologia geriátrica",
+    "nivel": "intermediário",
+    "enunciado": "Paciente de 83 anos, funcionalmente independente e sem outras comorbidades limitantes, com fibrilação atrial (FA) paroxística sintomática refratária a dois antiarrítmicos, CHA2DS2-VASc de 4. O cardiologista assistente relutou em encaminhar o paciente para ablação por cateter, alegando que ele seria \"idoso demais para o procedimento\".",
+    "pergunta": "Com base nas maiores comparações diretas por faixa etária disponíveis hoje (radiofrequência guiada por índice de ablação, criobalão e ablação por campo pulsado), qual afirmação está correta sobre a decisão de encaminhar esse paciente?",
+    "opcoes": [
+      "A idade cronológica de 80 anos ou mais, isoladamente, deve contraindicar o procedimento, pois todas as séries disponíveis mostram mais complicação nessa faixa etária",
+      "A idade cronológica isolada não é critério de exclusão: na maior comparação direta disponível (2.087 pacientes submetidos a ablação por radiofrequência guiada por índice de ablação), a recorrência de taquiarritmia atrial (HR 1,24 ajustado por tipo de FA, IC95% 0,92-1,65, p=0,15) e a taxa de complicação relacionada ao procedimento (3,1% vs. 3,0%, p=0,83) foram semelhantes entre pacientes com 80 anos ou mais e pacientes mais jovens — o tipo de FA, não a idade, é o determinante mais consistente de sucesso",
+      "A ablação em octogenários só deve ser considerada com ablação por campo pulsado, por ser comprovadamente a tecnologia mais segura nessa faixa etária, sem qualquer ressalva",
+      "A FA persistente responde tão bem quanto a paroxística no paciente muito idoso, o que torna o tipo de FA um critério irrelevante para a decisão nessa faixa etária"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "As três tecnologias de ablação hoje em uso disseminado mostram eficácia e segurança comparáveis entre idosos e não idosos em comparações diretas de coorte. Na maior série (Okamatsu et al., 2.087 pacientes, 193 com 80 anos ou mais versus 1.894 mais jovens), a sobrevida livre de recorrência de taquiarritmia atrial foi semelhante entre os grupos mesmo após ajuste pelo tipo de FA (HR 1,24; IC95% 0,92-1,65; p=0,15), e a taxa de complicação relacionada ao procedimento foi praticamente idêntica (3,1% vs. 3,0%; p=0,83). No criobalão (Cecchini/Mugnai, 95 octogenários), a liberdade de FA foi de 81,1% em 12 meses e 66,6% em 24 meses, maior no subgrupo paroxístico do que no persistente (p=0,007) — reforçando que o TIPO de FA, e não a idade, segue sendo o preditor mais consistente de sucesso, inclusive no muito idoso. A ressalva importante vem da ablação por campo pulsado (Mené et al., subanálise do registro EU-PORIA): a taxa de complicação GLOBAL foi comparável entre idosos e mais jovens (5,7% vs. 3,5%, p=0,29), mas o AVC especificamente foi mais frequente no grupo idoso (2,3% vs. 0,3%, p=0,04) — achado observacional, não isolado do perfil de risco tromboembólico basal mais alto desse grupo (CHA2DS2-VASc mediano 4 vs. 2), que justifica vigilância redobrada da anticoagulação periprocedimento nessa técnica específica, não o abandono da ablação como opção terapêutica pela idade.",
+    "source_refs": [
+      "Okamatsu H, Okumura K, Onishi F, et al. Safety and efficacy of ablation index-guided atrial fibrillation ablation in octogenarians. Clin Cardiol. 2023;46(7):794-800. PMID: 37199002.",
+      "Cecchini F, Mugnai G, Iacopino S, et al. Safety and long-term efficacy of cryoballoon ablation for atrial fibrillation in octogenarians: a multicenter experience. J Interv Card Electrophysiol. 2022;65(2):559-571. PMID: 35869379.",
+      "Mené R, Sousonis V, Schmidt B, et al. Safety and efficacy of pulsed-field ablation for atrial fibrillation in the elderly: A EU-PORIA sub-analysis. Int J Cardiol. 2024;417:132522. PMID: 39245073."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "contracepcao-na-fisiologia-de-fontan-por-que-evitar-o-estrogenio",
+    "titulo": "Contracepção na fisiologia de Fontan: o anticoncepcional oral combinado é uma opção segura?",
+    "tema": "Cardiopatias congênitas",
+    "nivel": "avançado",
+    "enunciado": "Mulher de 24 anos, portadora de circulação de Fontan (atresia tricúspide corrigida na infância em três estágios cirúrgicos), funcionalmente bem, classe funcional NYHA I, sem hipoxemia e sem histórico de evento trombótico prévio. Ela procura aconselhamento contraceptivo antes de iniciar vida sexual ativa e pergunta especificamente sobre o anticoncepcional oral combinado que uma amiga sem cardiopatia utiliza.",
+    "pergunta": "Qual orientação está mais alinhada à evidência disponível sobre segurança contraceptiva na fisiologia de Fontan?",
+    "opcoes": [
+      "O anticoncepcional oral combinado é a primeira escolha, pois reduz o fluxo menstrual e não há qualquer sinal de risco tromboembólico documentado nessa população",
+      "Contraceptivos com ESTROGÊNIO devem ser evitados por risco tromboembólico aumentado — a diretriz AHA/ACC 2018 classifica essa combinação como potencialmente prejudicial (Classe III, Dano) em fisiologia de Fontan; uma coorte citada por revisão sistemática encontrou tromboembolismo em 28% das usuárias com fisiologia de Fontan em uso atual de anticoncepcional oral combinado, contra 4% na população geral de usuárias, enquanto o progestágeno isolado (acetato de medroxiprogesterona injetável) não mostrou sinal de risco acrescido frente a não usuárias na mesma coorte (8% vs. 11%)",
+      "Qualquer método hormonal, com ou sem estrogênio, está formalmente contraindicado na fisiologia de Fontan, restando apenas métodos de barreira como opção segura",
+      "A esterilização cirúrgica deve ser recomendada como primeira linha para toda mulher com fisiologia de Fontan, independentemente do desejo reprodutivo futuro"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A diretriz AHA/ACC 2018 de manejo do adulto com cardiopatia congênita classifica o contraceptivo com ESTROGÊNIO como potencialmente prejudicial (Classe III, Dano, nível de evidência B-NR) em populações de alto risco tromboembólico, incluindo explicitamente cianose, fisiologia de Fontan, prótese valvar mecânica, evento trombótico prévio e hipertensão arterial pulmonar. A própria diretriz não detalha segurança método a método além dessa contraindicação ao estrogênio, remetendo a referências externas não lidas na extração original deste conteúdo. Uma revisão sistemática independente (Abarbanell et al., 2019), que buscou todos os estudos de segurança contraceptiva em cardiopatia congênita publicados até abril de 2018 e encontrou apenas 5 estudos elegíveis (65 a 505 mulheres cada — dados reconhecidamente escassos), traz o dado mais direto sobre Fontan: uma dessas coortes (Miner et al.) relatou tromboembolismo em 4% das usuárias de anticoncepcional oral combinado em geral, subindo para 9% nas cardiopatias complexas e 28% nas pacientes com fisiologia de Fontan em uso atual — o maior risco relativo entre os subgrupos analisados. Em contraste, outra coorte (Pundi et al.) não encontrou sinal de risco acrescido com progestágeno isolado (acetato de medroxiprogesterona injetável): 8% de eventos tromboembólicos entre usuárias, contra 11% entre não usuárias. DIU não foi associado a endocardite em dois estudos não comparativos. A conduta mais alinhada à evidência é evitar estrogênio e considerar progestágeno isolado ou DIU como alternativas com melhor perfil de segurança documentado, e não a contraindicação absoluta de todo método hormonal nem a indicação de esterilização como única opção.",
+    "source_refs": [
+      "Stout KK, Daniels CJ, Aboulhosn JA, Bozkurt B, Broberg CS, Colman JM, et al. 2018 AHA/ACC Guideline for the Management of Adults With Congenital Heart Disease. Circulation. 2019;139(14):e698-e800. DOI: 10.1161/CIR.0000000000000603. PMID: 30586767.",
+      "Abarbanell G, Tepper NK, Farr SL. Safety of contraceptive use among women with congenital heart disease: A systematic review. Congenit Heart Dis. 2019;14(3):331-340. DOI: 10.1111/chd.12752. PMID: 30681774."
+    ],
+    "review_status": "revisado"
   }
 ]

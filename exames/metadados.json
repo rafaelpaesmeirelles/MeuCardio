@@ -4411,5 +4411,132 @@
       "adolescente",
       "coração de atleta"
     ]
+  },
+  {
+    "slug": "troponina-de-alta-sensibilidade-corte-especifico-por-idade-e-sexo-no-idoso",
+    "name": "Troponina T de alta sensibilidade — desempenho de cortes específicos por idade e sexo no idoso",
+    "category": "laboratorial",
+    "theme": "Cardiologia geriátrica",
+    "what_it_measures": "Concentração sérica de troponina T cardíaca medida por ensaio de alta sensibilidade (hs-cTnT), marcador de lesão miocárdica. Este registro trata especificamente do impacto de usar cortes diagnósticos ESTRATIFICADOS POR IDADE E SEXO, em vez do corte único do 99º percentil da população geral de referência, na interpretação do exame em paciente idoso — não substitui o registro geral de troponina de alta sensibilidade da base, que trata do exame em sua indicação padrão.",
+    "reference_range": "Sub-análise do estudo TRAPID-AMI (ensaio Roche Elecsys hs-cTnT, n=1282) comparou o corte geral do 99º percentil (14 ng/L) a cortes propostos estratificados por idade (28 ng/L para ≥65 anos) e por sexo (9 ng/L em mulheres, 15,5 ng/L em homens). Estes valores são específicos deste ensaio e desta proposta de corte — NÃO são o 99º percentil universal de todo ensaio de hs-cTnT, que varia por fabricante.",
+    "indications": "Interpretação de troponina elevada em paciente idoso admitido com dor torácica ou dispneia, no contexto em que a elevação discreta e crônica da troponina relacionada à idade (por redução de depuração renal, fibrose miocárdica subclínica e hipertrofia ventricular, mesmo sem síndrome coronariana aguda) pode gerar diagnóstico de infarto em paciente que não tem doença coronariana aguda, se o corte único do 99º percentil da população geral for aplicado sem ajuste.",
+    "interpretation": "Na sub-análise do TRAPID-AMI, aplicar o corte específico por idade (28 ng/L) em vez do corte geral (14 ng/L) em pacientes ≥65 anos reduziu a taxa de diagnóstico de infarto agudo do miocárdio de 29,8% para 18,3% na coorte completa (n=557) e de 54,7% para 40,9% na subcoorte com síndrome coronariana aguda confirmada (n=225) — ou seja, uma fração relevante dos diagnósticos de infarto pelo corte único era, sob o corte ajustado por idade, reclassificada como não-infarto. Essa reclassificação teve significância prognóstica real: melhora líquida de reclassificação (NRI) de 14,2% para mortalidade em 1 e 3 meses (p<0,001) tanto na coorte completa quanto na subcoorte de SCA. Já o corte específico por sexo teve impacto discreto e não alterou significativamente a reclassificação de desfecho — aumentou o diagnóstico de infarto em mulheres (16,6% para 22,6% na coorte completa) e reduziu discretamente em homens (23,1% para 21,1%), sem diferença de desfecho demonstrada.",
+    "limitations": "Os valores de corte descritos são de UM estudo, com UM ensaio comercial específico (Roche Elecsys hs-cTnT) — não são o corte universal de todo hs-cTnT nem foram incorporados como recomendação-padrão pelas diretrizes atuais de síndrome coronariana aguda (ESC/AHA-ACC), que seguem recomendando o 99º percentil único do fabricante do ensaio como referência primária, com curva seriada (protocolo 0h/1h ou 0h/2h) para diferenciar elevação aguda de elevação crônica — o método mais robusto para não confundir troponina cronicamente elevada pela idade com infarto agudo é a VARIAÇÃO seriada (delta), não um corte absoluto alternativo. Os próprios autores concluem que o corte específico por idade 'pode ser considerado para validação adicional', não que deva substituir a prática corrente. Achado não validado nesta sessão em coorte brasileira ou em outro ensaio comercial de hs-cTnT (Abbott, Siemens) — VERIFICAÇÃO HUMANA NECESSÁRIA antes de aplicar a um ensaio diferente do estudado.",
+    "source_refs": [
+      "Mueller-Hennessen M, Lindahl B, Giannitsis E, et al; TRAPID-AMI Investigators. Diagnostic and prognostic implications using age- and gender-specific cut-offs for high-sensitivity cardiac troponin T - Sub-analysis from the TRAPID-AMI study. Int J Cardiol. 2016;209:26-33. PMID: 26878470. doi:10.1016/j.ijcard.2016.01.213"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "troponina de alta sensibilidade",
+      "idoso",
+      "geriatria",
+      "corte por idade",
+      "corte por sexo",
+      "infarto agudo do miocardio",
+      "TRAPID-AMI"
+    ]
+  },
+  {
+    "slug": "escore-de-calcio-coronariano-interpretacao-e-limites-no-idoso",
+    "name": "Escore de cálcio coronariano (Agatston) — interpretação por percentil e prazo de repetição no idoso",
+    "category": "imagem",
+    "theme": "Cardiologia geriátrica",
+    "what_it_measures": "Este registro trata especificamente das duas nuances de interpretação do escore de cálcio coronariano (Agatston, por tomografia sem contraste) que mudam no paciente idoso em relação ao adulto de meia-idade: (1) a leitura do valor absoluto precisa ser ajustada por idade/sexo/etnia, porque o escore aumenta de forma esperada com o envelhecimento mesmo sem doença acelerada; e (2) o valor de tranquilidade de um escore zero (ausência de cálcio) tem prazo de validade mais curto do que se costuma assumir. Não substitui o registro geral do escore de cálcio coronariano da base, que trata da indicação padrão em reestratificação de risco.",
+    "reference_range": "Não há um corte único válido para todas as idades: os percentis por idade, sexo e raça/etnia do estudo MESA (McClelland et al., n=6110, idade média 62 anos) mostram que a quantidade e a prevalência de cálcio coronariano aumentam de forma constante e esperada com o avanço da idade, e um mesmo valor absoluto de escore representa percentil de risco muito diferente aos 50 e aos 80 anos — a ferramenta pública do MESA (mesa-nhlbi.org) converte escore bruto em percentil ajustado por essas três variáveis.",
+    "indications": "Interpretação de um exame de escore de cálcio já realizado em paciente idoso (reestratificação de risco em paciente de risco intermediário) e decisão sobre repetir ou não um exame anterior com resultado zero, especialmente na presença de diabetes ou outros fatores de risco adicionais que encurtam o prazo de reavaliação.",
+    "interpretation": "Um escore de cálcio elevado em termos absolutos pode representar risco apenas mediano para a idade do paciente, e a diretriz brasileira de dislipidemias usa cortes de valor absoluto (>100 como alto risco, >10 como critério de aterosclerose subclínica) que não incorporam esse ajuste — a leitura por percentil ajustado complementa, não substitui, esses cortes. Sobre o prazo de validade do escore zero: em coorte do MESA com 3.116 participantes com escore basal zero, acompanhados por até 10 anos, a prevalência de progressão para escore >0 foi de 53%, para >10 foi de 36% e para >100 foi de 8% ao final de 10 anos; usando um critério de rendimento de reteste de 25% (número necessário para escanear = 4), o prazo estimado de validade (\"warranty period\") do escore zero variou de 3 a 7 anos conforme sexo e raça/etnia, e foi significativamente MAIS CURTO na presença de diabetes.",
+    "limitations": "O estudo de prazo de validade (Dzaye et al., MESA) tem idade média de 58 ± 9 anos na inclusão — não é uma coorte exclusivamente geriátrica, e os autores não relatam na íntegra, no resumo indexado, o prazo de validade estratificado por faixa etária avançada especificamente (a estratificação relatada no resumo é por sexo, raça/etnia e diabetes) — VERIFICAÇÃO HUMANA NECESSÁRIA para quem quiser o número exato de prazo de validade por década de idade, que exige o texto completo do artigo. O escore de cálcio, em qualquer idade, mede só a fração calcificada da placa — não exclui placa não calcificada, e não deve ser reescaneado em intervalo curto (a diretriz brasileira já registrada na base cobre esse ponto para o adulto em geral).",
+    "source_refs": [
+      "McClelland RL, Chung H, Detrano R, Post W, Kronmal RA. Distribution of coronary artery calcium by race, gender, and age: results from the Multi-Ethnic Study of Atherosclerosis (MESA). Circulation. 2006;113(1):30-37. PMID: 16365194. doi:10.1161/CIRCULATIONAHA.105.580696",
+      "Dzaye O, Dardari ZA, Cainzos-Achirica M, et al. Warranty Period of a Calcium Score of Zero: Comprehensive Analysis From MESA. JACC Cardiovasc Imaging. 2021;14(5):990-1002. PMID: 33129734. PMCID: PMC8076346. doi:10.1016/j.jcmg.2020.06.048"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "escore de calcio",
+      "agatston",
+      "idoso",
+      "geriatria",
+      "MESA",
+      "percentil ajustado por idade",
+      "prevencao"
+    ]
+  },
+  {
+    "slug": "escores-laboratoriais-de-predicao-de-resistencia-a-imunoglobulina-na-doenca-de-kawasaki",
+    "name": "Escores laboratoriais de predição de resistência à imunoglobulina na doença de Kawasaki (Kobayashi/Egami/Sano)",
+    "category": "laboratorial",
+    "theme": "Cardiologia pediátrica",
+    "what_it_measures": "Escores clínico-laboratoriais aplicados ANTES do início do tratamento da doença de Kawasaki, combinando variáveis de rotina (sódio, transaminases, proteína C-reativa, contagem de plaquetas e neutrófilos, idade e dia de doença) para estimar a probabilidade de a criança não responder à primeira dose de imunoglobulina intravenosa (IVIG) — o objetivo é identificar, antes de tratar, quem se beneficiaria de terapia inicial intensificada (IVIG associada a corticosteroide) para reduzir o risco de lesão coronariana.",
+    "reference_range": "Três escores japoneses, todos com ponto de corte definido: Escore de Kobayashi (Gunma) ≥5 pontos (sensibilidade 76%, especificidade 80%) — sódio ≤133 mmol/L (2 pts), AST ≥100 UI/L (2 pts), início do tratamento no dia 4 de doença ou antes (2 pts), neutrófilos ≥80% (2 pts), PCR ≥10 mg/dL (1 pt), plaquetas ≤300.000/μL (1 pt), idade ≤12 meses (1 pt). Escore de Egami (Kurume) ≥3 pontos (sensibilidade 76%, especificidade 80%) — ALT ≥80 UI/L (2 pts), início do tratamento no dia 4 de doença ou antes (1 pt), PCR ≥8 mg/dL (1 pt), plaquetas ≤300.000/μL (1 pt), idade ≤6 meses (1 pt). Escore de Sano (Osaka) ≥2 pontos (sensibilidade 77%, especificidade 86%) — AST ≥200 UI/L (1 pt), bilirrubina total ≥0,9 mg/dL (1 pt), PCR ≥7 mg/dL (1 pt).",
+    "indications": "Triagem de risco de refratariedade à IVIG no momento do diagnóstico de doença de Kawasaki, antes da primeira infusão — usado para decidir se a criança deve receber IVIG isolada (esquema padrão) ou terapia inicial já intensificada com corticosteroide associado, nos serviços que adotam essa estratégia de estratificação.",
+    "interpretation": "No 24º levantamento nacional japonês, 17,8% dos pacientes tratados foram refratários à primeira linha; entre os refratários, o tratamento adicional mais usado na prática foi nova dose de IVIG (90,6%), seguido de corticosteroide (28,9%), infliximabe (7,3%), imunossupressor (5,4%) e plasmaférese (2,5%). Os três escores têm desempenho semelhante entre si (sensibilidade 76-77%, especificidade 80-86%) na população em que foram desenvolvidos e validados — nenhum é claramente superior aos outros dois nessa população.",
+    "limitations": "Os três escores foram desenvolvidos e validados EXCLUSIVAMENTE em populações japonesas, e a diretriz de origem (JCS/JSCS 2020) declara explicitamente que há relatos de desempenho inadequado fora dessa população, atribuídos a diferenças no tempo até a procura de atendimento, na estrutura assistencial e nos métodos de exame — os próprios autores da diretriz japonesa qualificam que os escores 'parecem adequados pelo menos na situação atual do Japão'. Aplicar os cortes numéricos acima em população brasileira ou de outro país sem essa ressalva é VERIFICAÇÃO HUMANA NECESSÁRIA quanto ao desempenho local — nenhum dos três escores tem validação publicada em coorte brasileira conferida nesta sessão.",
+    "source_refs": [
+      "Fukazawa R, Kobayashi J, Ayusawa M, et al; Japanese Circulation Society Joint Working Group. JCS/JSCS 2020 Guideline on Diagnosis and Management of Cardiovascular Sequelae in Kawasaki Disease. Circ J. 2020;84(8):1348-1407. PMID: 32641591. doi:10.1253/circj.CJ-19-1094 — Tabela 4, PDF de acesso aberto no J-STAGE."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "doenca de kawasaki",
+      "criança",
+      "pediatria",
+      "imunoglobulina intravenosa",
+      "escore de kobayashi",
+      "escore de egami",
+      "aneurisma coronariano"
+    ]
+  },
+  {
+    "slug": "ecocardiograma-transesofagico-intraoperatorio-em-cirurgia-cardiaca-congenita",
+    "name": "Ecocardiograma transesofágico (ETE) intraoperatório em cirurgia cardíaca congênita",
+    "category": "imagem",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Imagem ecocardiográfica obtida por sonda transesofágica inserida pelo anestesista logo após a indução anestésica e mantida em posição durante toda a cirurgia cardíaca congênita, usada para confirmar o diagnóstico pré-operatório imediatamente antes da abertura do tórax e, sobretudo, para avaliar a qualidade do reparo cirúrgico logo após a saída de circulação extracorpórea (CEC) — função ventricular, competência valvar, gradientes residuais, shunts residuais e patência de vias de saída — enquanto o paciente ainda está na sala, com o tórax aberto e em condição de retornar à CEC se necessário.",
+    "reference_range": "Não numérico — exame qualitativo/estrutural. Avaliação padronizada em dois tempos: pré-CEC (confirma diagnóstico e detalhes anatômicos que orientam a técnica cirúrgica) e pós-CEC, antes da reversão da heparina (avalia o resultado do reparo).",
+    "indications": "Toda cirurgia cardíaca congênita com acesso transesofágico viável pelo tamanho do paciente — reparo de comunicação interventricular/interatrial, correção de tetralogia de Fallot, switch arterial, procedimentos valvares (mitral, tricúspide, pulmonar), reparo de canal atrioventricular, entre outros. Serve como controle de qualidade cirúrgica em tempo real, antes de o paciente sair da sala.",
+    "interpretation": "Uma coorte de 2.268 cirurgias cardíacas pediátricas encontrou lesão residual maior exigindo revisão cirúrgica imediata em 41 casos (3,9%), com reparo bem-sucedido em todos após retorno à CEC guiado pelos achados do ETE — número compatível com a faixa de 4,4-16% relatada na literatura prévia citada pelos mesmos autores. As revisões mais frequentes foram no trato de saída do ventrículo direito (27%), fechamento de comunicação interventricular (17%) e valva mitral (19%). Achado residual relevante ao ETE pós-CEC leva à decisão cirúrgica de retomar a bypass para corrigir antes do fechamento do tórax — decisão que pesa o benefício da correção imediata contra o risco de tempo adicional de CEC.",
+    "limitations": "Inserção da sonda pode ser tecnicamente difícil em recém-nascidos e lactentes de baixo peso, levando à necessidade de ecocardiografia epicárdica (estéril, aplicada diretamente sobre o coração pelo cirurgião) em cerca de 2% dos casos da mesma coorte. Há também limitação anatômica intrínseca à janela transesofágica, não específica de congênitas: a artéria pulmonar esquerda proximal é reconhecidamente mal visualizada por ser encoberta pelo brônquio principal esquerdo (taxa de visualização de 47% versus 94% da direita em série ecocardiográfica transesofágica), o que pode exigir ecocardiografia epicárdica complementar para avaliar ramos pulmonares proximais no pós-operatório imediato.",
+    "source_refs": [
+      "Jijeh AMZ, Omran AS, Najm HK, Abu-Sulaiman RM. Role of intraoperative transesophageal echocardiography in pediatric cardiac surgery. J Saudi Heart Assoc. 2015;28(2):89-94. PMID: 27053898. DOI: 10.1016/j.jsha.2015.06.005 — texto integral de acesso aberto, PMC.",
+      "Pruszczyk P, Torbicki A, Kuch-Wocial A, Szulc M, Styczynski G, Bochowicz A, Kostrubiec M. Visualization of the central pulmonary arteries by biplane transesophageal echocardiography. Exp Clin Cardiol. 2001;6(4):206-210. PMID: 20428260 — usado apenas como referência da limitação anatômica de visualização da artéria pulmonar esquerda proximal pela janela transesofágica, não é estudo em população pediátrica congênita."
+    ],
+    "tags": [
+      "ecocardiograma transesofagico",
+      "intraoperatorio",
+      "cirurgia cardiaca congenita",
+      "circulacao extracorporea",
+      "lesao residual",
+      "ecocardiografia epicardica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "rm-cardiaca-realce-tardio-fibrose-ventricular-direita-em-tetralogia-de-fallot-reparada",
+    "name": "RM cardíaca com realce tardio (LGE) — fibrose ventricular direita na tetralogia de Fallot reparada",
+    "category": "imagem",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Sequência de ressonância magnética cardíaca obtida 10-20 minutos após injeção de gadolínio, que identifica e quantifica áreas de fibrose miocárdica focal (realce tardio, do inglês late gadolinium enhancement — LGE) nos sítios cirúrgicos do reparo de tetralogia de Fallot — via de saída do ventrículo direito e local de fechamento da comunicação interventricular — e no restante do miocárdio ventricular direito e esquerdo, distinta do T1 mapping (que quantifica fibrose difusa, não localizada em cicatriz focal).",
+    "reference_range": "Não numérico — quantificação de volume/extensão de LGE em relação ao volume miocárdico total, expressa em percentual de massa ventricular ou em volume absoluto de cicatriz reconstruído em 3D, sem corte de normalidade único consolidado; a extensão é comparada entre pacientes e correlacionada a desfechos, não interpretada como presente/ausente de forma binária no ventrículo operado.",
+    "indications": "Estratificação de risco de arritmia ventricular e de morte súbita em adultos com tetralogia de Fallot reparada, sobretudo quando associada a outros marcadores de risco (disfunção ventricular direita ou esquerda, taquicardia atrial sustentada prévia, QRS alargado); seleção de candidatos para estudo eletrofisiológico invasivo com estimulação ventricular programada; caracterização do substrato arritmogênico antes de ablação por cateter, mapeando os istmos anatômicos entre a cicatriz cirúrgica e estruturas não condutoras (anel valvar, patch).",
+    "interpretation": "Em coorte de 92 adultos com tetralogia de Fallot reparada, o realce tardio no ventrículo direito esteve presente em praticamente todos os sítios cirúrgicos — via de saída (99%) e local de fechamento da comunicação interventricular (98%) — e permaneceu preditor independente de arritmia em análise multivariada, associando-se também a maior idade, maior sintomas, ativação neuro-hormonal e menor capacidade de exercício. Em coorte prospectiva de 69 pacientes submetidos a estimulação ventricular programada invasiva, a carga de cicatriz por LGE tridimensional foi associada de forma independente à indução de taquicardia ventricular (induzida em 22 de 69 pacientes, 31%), sugerindo papel na seleção de candidatos ao estudo eletrofisiológico dentro de uma coorte de risco clínico pelo menos intermediário.",
+    "limitations": "A extensão do realce tardio nos sítios cirúrgicos (via de saída do VD e patch de fechamento da CIV) reflete, em parte, o próprio material/técnica cirúrgica e não é puramente equivalente a fibrose miocárdica espontânea — por isso a interpretação de risco combina a extensão de LGE com outros marcadores clínicos e funcionais, não isoladamente. É exame que exige pós-processamento volumétrico 3D especializado para quantificação reprodutível, não disponível em toda rotina clínica; a maior parte da evidência de prognóstico vem de coortes de centro único, com número moderado de pacientes.",
+    "source_refs": [
+      "Babu-Narayan SV, Kilner PJ, Li W, Moon JC, Goktekin O, Davlouros PA, Khan M, Ho SY, Pennell DJ, Gatzoulis MA. Ventricular fibrosis suggested by cardiovascular magnetic resonance in adults with repaired tetralogy of fallot and its relationship to adverse markers of clinical outcome. Circulation. 2006;113(3):405-413. PMID: 16432072. DOI: 10.1161/CIRCULATIONAHA.105.548727.",
+      "Ghonim S, Ernst S, Keegan J, Giannakidis A, Spadotto V, Voges I, Smith GC, Boutsikou M, Montanaro C, Wong T, Ho SY, McCarthy KP, Shore DF, Dimopoulos K, Uebing A, Swan L, Li W, Pennell DJ, Gatzoulis MA, Babu-Narayan SV. Three-Dimensional Late Gadolinium Enhancement Cardiovascular Magnetic Resonance Predicts Inducibility of Ventricular Tachycardia in Adults With Repaired Tetralogy of Fallot. Circ Arrhythm Electrophysiol. 2020;13(11):e008321. PMID: 33022183. DOI: 10.1161/CIRCEP.119.008321."
+    ],
+    "tags": [
+      "ressonancia magnetica cardiaca",
+      "realce tardio",
+      "late gadolinium enhancement",
+      "tetralogia de fallot reparada",
+      "fibrose ventricular direita",
+      "arritmia ventricular",
+      "morte subita"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
