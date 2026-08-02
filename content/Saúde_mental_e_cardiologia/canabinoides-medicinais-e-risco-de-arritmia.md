@@ -4,7 +4,7 @@ slug: canabinoides-medicinais-e-risco-de-arritmia
 theme: "Saúde mental e cardiologia"
 kind: estudo
 review_status: revisado
-source_refs: ["Chandy M, Jimenez-Tellez N, Wu JC. The relationship between cannabis and cardiovascular disease: clearing the haze. Nat Rev Cardiol. 2025;22(7):467-481. DOI: 10.1038/s41569-025-01121-6. PMID: 39849111 — revisão narrativa em revista de alto impacto sobre canabinoides e sistema cardiovascular, incluindo arritmia, infarto, AVC e insuficiência cardíaca", "Richards JR, Blohm E, Toles KA, Jarman AF, Ely DF, Elder JW. The association of cannabis use and cardiac dysrhythmias: a systematic review. Clin Toxicol (Phila). 2020;58(9):861-869. DOI: 10.1080/15563650.2020.1743847. PMID: 32267189 — revisão sistemática graduada pelos critérios do Oxford Centre for Evidence-Based Medicine, incluindo 1 revisão sistemática/metanálise de nível I, 16 estudos de nível II (6.942 sujeitos), 9 estudos de nível III (3.797.096 sujeitos) e 39 séries/relatos de caso (42 sujeitos)", "Orvos P, Pászti B, Topal L, Gazdag P, Prorok J, Polyák A, Kiss T, Tóth-Molnár E, Csupor-Löffler B, Bajtel Á, Varró A, Hohmann J, Virág L, Csupor D. The electrophysiological effect of cannabidiol on hERG current and in guinea-pig and rabbit cardiac preparations. Sci Rep. 2020;10(1):16079. DOI: 10.1038/s41598-020-73165-2. PMCID: PMC7528081. PMID: 32999428 — estudo pré-clínico em linhagem celular HEK, preparações cardíacas de coelho e porquinho-da-índia", "Sellers EM, Schoedel K, Bartlett C, Romach M, Russo EB, Stott CG, Wright S, White L, Duncombe P, Chen CF. A Multiple-Dose, Randomized, Double-Blind, Placebo-Controlled, Parallel-Group QT/QTc Study to Evaluate the Electrophysiologic Effects of THC/CBD Spray. Clin Pharmacol Drug Dev. 2013;2(3):285-294. DOI: 10.1002/cpdd.36. PMID: 27121791 — estudo formal de QT/QTc (thorough QT study) exigido por agência regulatória, 258 voluntários saudáveis, doses terapêuticas e supraterapêuticas do spray oromucoso THC/CBD (nabiximóis)", "Cortopassi J. Warfarin dose adjustment required after cannabidiol initiation and titration. Am J Health Syst Pharm. 2020;77(22):1846-1851. DOI: 10.1093/ajhp/zxaa268. PMID: 33016308 — relato de caso de paciente em uso de varfarina que necessitou redução de ~20% da dose após início de canabidiol (Epidiolex, aprovado pelo FDA)", "Greger J, Bates V, Mechtler L, Gengo F. A Review of Cannabis and Interactions With Anticoagulant and Antiplatelet Agents. J Clin Pharmacol. 2020;60(4):432-438. DOI: 10.1002/jcph.1557. PMID: 31724188 — revisão de 665 artigos triados (PubMed e EMBASE), com síntese de 4 relatos de caso, 1 estudo in vitro e 1 artigo farmacocinético sobre interação de canabinoides com varfarina e clopidogrel"]
+source_refs: ["Chandy M, Jimenez-Tellez N, Wu JC. The relationship between cannabis and cardiovascular disease: clearing the haze. Nat Rev Cardiol. 2025;22(7):467-481. DOI: 10.1038/s41569-025-01121-6. PMID: 39849111 — revisão narrativa em revista de alto impacto sobre canabinoides e sistema cardiovascular, incluindo arritmia, infarto, AVC e insuficiência cardíaca", "Richards JR, Blohm E, Toles KA, Jarman AF, Ely DF, Elder JW. The association of cannabis use and cardiac dysrhythmias: a systematic review. Clin Toxicol (Phila). 2020;58(9):861-869. DOI: 10.1080/15563650.2020.1743847. PMID: 32267189 — revisão sistemática graduada pelos critérios do Oxford Centre for Evidence-Based Medicine, incluindo 1 revisão sistemática/metanálise de nível I, 16 estudos de nível II (6.942 sujeitos), 9 estudos de nível III (3.797.096 sujeitos) e 39 séries/relatos de caso (42 sujeitos)", "Orvos P, Pászti B, Topal L, Gazdag P, Prorok J, Polyák A, Kiss T, Tóth-Molnár E, Csupor-Löffler B, Bajtel Á, Varró A, Hohmann J, Virág L, Csupor D. The electrophysiological effect of cannabidiol on hERG current and in guinea-pig and rabbit cardiac preparations. Sci Rep. 2020;10(1):16079. DOI: 10.1038/s41598-020-73165-2. PMCID: PMC7528081. PMID: 32999428 — estudo pré-clínico em linhagem celular HEK, preparações cardíacas de coelho e porquinho-da-índia", "Sellers EM, Schoedel K, Bartlett C, Romach M, Russo EB, Stott CG, Wright S, White L, Duncombe P, Chen CF. A Multiple-Dose, Randomized, Double-Blind, Placebo-Controlled, Parallel-Group QT/QTc Study to Evaluate the Electrophysiologic Effects of THC/CBD Spray. Clin Pharmacol Drug Dev. 2013;2(3):285-294. DOI: 10.1002/cpdd.36. PMID: 27121791 — estudo formal de QT/QTc (thorough QT study) exigido por agência regulatória, 258 voluntários saudáveis, doses terapêuticas e supraterapêuticas do spray oromucoso THC/CBD (nabiximóis)", "Cortopassi J. Warfarin dose adjustment required after cannabidiol initiation and titration. Am J Health Syst Pharm. 2020;77(22):1846-1851. DOI: 10.1093/ajhp/zxaa268. PMID: 33016308 — relato de caso de paciente em uso de varfarina que necessitou redução de ~20% da dose após início de canabidiol (Epidiolex, aprovado pelo FDA)", "Greger J, Bates V, Mechtler L, Gengo F. A Review of Cannabis and Interactions With Anticoagulant and Antiplatelet Agents. J Clin Pharmacol. 2020;60(4):432-438. DOI: 10.1002/jcph.1557. PMID: 31724188 — revisão de 665 artigos triados (PubMed e EMBASE), com síntese de 4 relatos de caso, 1 estudo in vitro e 1 artigo farmacocinético sobre interação de canabinoides com varfarina e clopidogrel", "EPIDIOLEX (cannabidiol) oral solution — full prescribing information (bula aprovada pela FDA), seção 12.2 Pharmacodynamics/Cardiac Electrophysiology, revisão 5/2026, Jazz Pharmaceuticals Inc. Fonte: DailyMed (National Library of Medicine), setid 8bf27097-4870-43fb-94f0-f3d0871d1eec, https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8bf27097-4870-43fb-94f0-f3d0871d1eec — documento regulatório primário, resolve a lacuna sobre estudo formal de QT para canabidiol isolado", "European Medicines Agency (EMA), Committee for Medicinal Products for Human Use (CHMP). Assessment report: Epidyolex, international non-proprietary name cannabidiol. Procedure No. EMEA/H/C/004675/0000, EMA/458106/2019, 25 July 2019, seção 2.4.4 (Discussion on clinical pharmacology), https://www.ema.europa.eu/en/documents/assessment-report/epidyolex-epar-public-assessment-report_en.pdf — relatório de avaliação regulatória europeu, confirma estudo formal de QTc ('lege artis QTc study', análise farmacocinética-farmacodinâmica do 'TQT trial') conduzido para o canabidiol isolado"]
 legacy_source: "Documento novo, escrito em 01/08/2026. A pasta `Geral` já tem `uso-de-canabis-e-risco-cardiovascular.md`, que cobre uso RECREATIVO diário de canabis e desfecho cardiovascular amplo (infarto, AVC) numa amostra transversal de base populacional (BRFSS). Este documento trata de outra exposição: canabinoides prescritos com indicação médica — muitos deles justamente para ansiedade, insônia, dor crônica ou epilepsia, que é o motivo de estar em Saúde mental e cardiologia, não em Geral — com foco específico em ARRITMIA (não infarto/AVC), no mecanismo eletrofisiológico (hERG, QT) e nas interações farmacológicas com anticoagulante e antiplaquetário, que o documento de canabis recreativo não aborda."
 ---
 
@@ -125,6 +125,59 @@ específico, testado como manda a regulação, saiu com repolarização cardíac
 não permite extrapolar automaticamente segurança eletrocardiográfica para todo canabinoide, toda
 via de administração ou toda combinação de dose.
 
+## O canabidiol isolado (Epidiolex): também existe estudo formal de QT, e o resultado é mais matizado que o do nabiximol
+
+O documento originalmente registrava não ter localizado, nesta linha de pesquisa, um estudo formal
+de QT para o canabidiol **isolado** (produto Epidiolex, aprovado para epilepsia refratária),
+equivalente ao que existe para o nabiximol (Sellers 2013, acima). Essa lacuna foi revisitada e
+**existe sim avaliação formal de QT para o CBD isolado — em duas fontes regulatórias primárias
+independentes, FDA e EMA —, mas o resultado não é simplesmente "sem efeito" como no nabiximol.**
+
+**Bula aprovada pela FDA (EPIDIOLEX, seção 12.2, Cardiac Electrophysiology, revisão 5/2026):**
+texto literal — *"Concentration-dependent QTc prolongation was observed for EPIDIOLEX. At exposures
+obtained when administered as monotherapy at recommended doses with a high fat meal, EPIDIOLEX did
+not prolong the QTc interval greater than 10 msec."* Ou seja: **houve, sim, prolongamento de QTc
+dependente da concentração** — a diferença para o nabiximol é que, **nas doses recomendadas em
+monoterapia e com refeição gordurosa**, o prolongamento observado ficou abaixo de 10 mseg (o corte
+regulatório usual para "sem efeito clinicamente relevante" na avaliação de QT de novos fármacos).
+
+**A mesma bula acrescenta uma ressalva que não pode ser omitida:** *"Other factors such as food
+intake, certain concomitant medications (e.g., clobazam), and alcohol consumption may increase the
+exposure of EPIDIOLEX and the potential effect on QTc prolongation in this scenario is not known."*
+— ou seja, em cenário de **exposição aumentada** (interação com clobazam, consumo de álcool, ou
+mudança na ingestão alimentar), o efeito sobre o QTc **não foi caracterizado** e não pode ser
+presumido seguro pela mesma margem.
+
+**O relatório de avaliação da EMA (CHMP, EMA/458106/2019, 2019)** descreve a mesma linha de
+evidência de forma mais resumida: *"The applicant has conducted a lege artis QTc study. CBD at
+therapeutic and supratherapeutic doses does not influence QTcF interval"* — resultado da análise
+farmacocinética-farmacodinâmica conduzida como parte do que o relatório chama de "TQT trial"
+(thorough QT trial, o desenho regulatório padrão). **As duas agências, a partir de dados do mesmo
+programa de desenvolvimento clínico, descrevem o achado com ênfase diferente**: a FDA nomeia
+explicitamente o prolongamento dependente de concentração e o restringe pelo cenário testado
+(monoterapia, dose recomendada, com alimento); a EMA resume como ausência de efeito na dose
+terapêutica e supraterapêutica, sem essa mesma ressalva textual. Registrar as duas formulações,
+em vez de escolher só a mais tranquilizadora, é o que evita uma leitura otimista demais do dado.
+
+**O que isso muda na leitura do documento como um todo:** o canabidiol isolado, tomado como
+monoterapia na dose aprovada, tem hoje avaliação formal de QT em humanos — não é uma lacuna pura de
+dado, como pré-clínico sem correlato clínico. Mas, ao contrário do nabiximol (Sellers 2013, sem
+qualquer sinal de prolongamento em nenhuma dose testada, incluindo supraterapêutica), o CBD isolado
+**tem sinal real de prolongamento de QTc dependente de concentração**, que a bula da FDA considera
+dentro do limite aceitável apenas no cenário de uso rotulado — e que fica sem caracterização
+conhecida quando a exposição aumenta por interação medicamentosa, álcool ou alimentação. Isso reforça,
+com dado clínico e não só pré-clínico, o mecanismo de bloqueio de hERG descrito por Orvos et al.
+(2020) acima.
+
+**Limite desta fonte, declarado:** tanto a bula da FDA quanto o relatório da EMA são documentos
+regulatórios primários — não uma publicação revisada por pares com desenho de estudo, número de
+participantes e resultado estatístico detalhados no texto disponível. Não foi localizada, nesta
+pesquisa, uma publicação em periódico com PMID/DOI que reporte esses dados do estudo de QT do
+canabidiol isolado com o mesmo nível de detalhe metodológico que o artigo de Sellers (2013) traz
+para o nabiximol. O dado quantitativo citado (prolongamento sem exceder 10 mseg em monoterapia) vem
+diretamente do texto da bula aprovada, que é, por si, fonte primária e rastreável — mas de natureza
+regulatória, não de artigo científico com desenho e estatística abertos ao leitor.
+
 ## A interação que mais importa na prática cardiológica: canabidiol e varfarina
 
 Cortopassi J, Am J Health Syst Pharm. 2020;77(22):1846-1851 (PMID 33016308). Relato de caso: homem
@@ -151,20 +204,24 @@ antiplaquetários frequentemente prescritos a pacientes de alto risco cardiovasc
   clopidogrel e, potencialmente, **aumento do risco de eventos isquêmicos** (incluindo AVC) em
   quem depende da ativação do pró-fármaco para proteção antiplaquetária.
 
-## O que os quatro tipos de evidência dizem juntos
+## O que os cinco tipos de evidência dizem juntos
 
 | Evidência | O que mostra | Número-chave |
 |---|---|---|
 | Revisão sistemática de disritmia (Richards 2020) | Canabis (uso amplo) associa-se a arritmias variadas, algumas fatais | FV é a disritmia mais citada nos casos graves (21%) |
 | Mecanismo celular do CBD (Orvos 2020) | CBD bloqueia hERG e prolonga QTc em modelo animal, em concentração acima do Cmax habitual | IC50 hERG = 2,07 µM |
-| Estudo formal de QT do nabiximol (Sellers 2013) | Produto farmacêutico combinado, em dose terapêutica e supraterapêutica, não prolongou QT em humanos | Sem efeito em QTcI/QTcF/QTcB |
+| Estudo formal de QT do nabiximol (Sellers 2013) | Produto farmacêutico combinado (THC+CBD), em dose terapêutica e supraterapêutica, não prolongou QT em humanos | Sem efeito em QTcI/QTcF/QTcB |
+| Avaliação formal de QT do canabidiol isolado (bula FDA do Epidiolex; EMA/CHMP 2019) | Produto de CBD isolado, em monoterapia e dose recomendada, teve prolongamento de QTc dependente de concentração, abaixo do limite regulatório de relevância | Prolongamento não excede 10 mseg **apenas** no cenário de monoterapia/dose recomendada/com alimento |
 | Interação com varfarina (Cortopassi 2020) e clopidogrel (Greger 2020) | CBD interfere no metabolismo de fármacos cardiovasculares por via enzimática (CYP2C9/CYP2C19) | Redução de 20-30% na dose de varfarina necessária |
 
 **Três conclusões defensáveis:**
 1. **O risco de arritmia associado a canabinoides não é uniforme** — depende de produto, dose, via
    de administração e do que mais o paciente está tomando. Nem toda exposição a canabinoide tem o
-   mesmo perfil eletrocardiográfico: o nabiximol testado formalmente não prolongou QT, enquanto o
-   CBD isolado, em modelo pré-clínico, inibe um canal de repolarização relevante.
+   mesmo perfil eletrocardiográfico: o nabiximol testado formalmente não mostrou nenhum sinal de
+   prolongamento de QT em nenhuma dose testada, enquanto o CBD isolado (Epidiolex) tem, segundo a
+   própria bula aprovada pela FDA, prolongamento de QTc **dependente de concentração** — mecanismo
+   coerente com o bloqueio de hERG já visto em modelo pré-clínico (Orvos 2020) —, contido dentro do
+   limite regulatório apenas no cenário de monoterapia em dose recomendada.
 2. **A pergunta mais produtiva ao rever medicação de um paciente cardiopata não é "usa canabinoide
    medicinal?", e sim "qual produto, em que dose, e o que mais está em uso concomitante"** — a
    reserva de repolarização (outros fármacos que prolongam QT, distúrbio eletrolítico) e a
@@ -183,9 +240,18 @@ antiplaquetários frequentemente prescritos a pacientes de alto risco cardiovasc
 - **Assumir que a ausência de efeito de QT no estudo de Sellers (2013) descarta risco
   eletrofisiológico de qualquer canabinoide.** O mecanismo de bloqueio de hERG pelo CBD isolado
   (Orvos 2020) é real em modelo pré-clínico; ele só não se traduziu em prolongamento de QT clínico
-  **naquele produto, naquela dose, em voluntários saudáveis sem outro fator de risco**. Paciente
-  com reserva de repolarização já comprometida (hipocalemia, outro fármaco que prolonga QT,
-  síndrome de QT longo) não estava representado nesse desenho.
+  **naquele produto (nabiximol), naquela dose, em voluntários saudáveis sem outro fator de risco**.
+  Paciente com reserva de repolarização já comprometida (hipocalemia, outro fármaco que prolonga QT,
+  síndrome de QT longo) não estava representado nesse desenho. E, diferente do nabiximol, o
+  canabidiol isolado (Epidiolex) **tem** sinal clínico real de prolongamento de QTc dependente de
+  concentração, segundo a própria bula da FDA — só fica dentro do limite regulatório no cenário de
+  monoterapia em dose recomendada, com efeito desconhecido quando a exposição aumenta.
+- **Presumir que a tranquilidade da bula do Epidiolex sobre QT vale para qualquer cenário de uso.**
+  A própria FDA declara que o efeito sobre QTc **não é conhecido** quando a exposição ao canabidiol
+  aumenta por fator alimentar, consumo de álcool ou interação medicamentosa (o exemplo citado na
+  bula é justamente o clobazam, anticonvulsivante frequentemente coprescrito). Paciente que usa
+  Epidiolex fora do cenário testado (dose maior, sem o padrão alimentar do estudo, ou com inibidor
+  de CYP concomitante) não tem a mesma garantia regulatória de QTc contido.
 - **Não perguntar sobre canabidiol ao revisar a lista de medicamentos de um paciente
   anticoagulado.** Os dois casos de Cortopassi (2020) mostram interação clinicamente relevante e
   já documentada com Epidiolex, produto aprovado e cada vez mais prescrito — não é uma
@@ -206,8 +272,16 @@ antiplaquetários frequentemente prescritos a pacientes de alto risco cardiovasc
   revisão de poucos estudos** (Greger 2020 identificou apenas 4 relatos de caso, 1 estudo in vitro
   e 1 artigo farmacocinético em 665 artigos triados) — não há ensaio clínico randomizado
   desenhado especificamente para quantificar a magnitude dessa interação.
-- **VERIFICAÇÃO HUMANA NECESSÁRIA**: não foi identificado, nesta sessão, um estudo formal de QT
-  para o canabidiol isolado (Epidiolex) em humanos, equivalente ao que existe para o nabiximol
-  (Sellers 2013) — a ausência de sinal de QT nesta revisão refere-se ao produto combinado THC/CBD,
-  não ao CBD isolado nas doses usadas para epilepsia (tipicamente mais altas que as de nabiximol
-  para espasticidade). Não generalizar o resultado tranquilizador de um produto para o outro.
+- **Lacuna original revisitada e parcialmente fechada**: a versão anterior deste documento registrava
+  não ter localizado um estudo formal de QT para o canabidiol isolado (Epidiolex) em humanos,
+  equivalente ao de Sellers (2013) para o nabiximol. Duas fontes regulatórias primárias — a bula
+  aprovada pela FDA (seção 12.2, revisão 5/2026) e o relatório de avaliação da EMA/CHMP
+  (EMA/458106/2019) — confirmam que **esse estudo formal de QT existe** para o canabidiol isolado, e
+  o resultado está descrito na nova seção acima ("O canabidiol isolado (Epidiolex): também existe
+  estudo formal de QT..."). **O que permanece como limite real, não uma lacuna de busca**: nenhuma
+  das duas fontes é uma publicação em periódico revisado por pares com PMID/DOI e desenho de estudo
+  detalhado (número de participantes, braços de dose, estatística) no mesmo nível do artigo de
+  Sellers (2013) — são documentos regulatórios primários (bula aprovada e relatório de agência), que
+  esta pesquisa considera fonte válida e rastreável, mas de natureza diferente de um artigo
+  científico. Se uma publicação revisada por pares desse estudo existir e for localizada no futuro,
+  ela deve substituir ou complementar esta citação.
