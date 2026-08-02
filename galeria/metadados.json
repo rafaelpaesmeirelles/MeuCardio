@@ -4461,5 +4461,51 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "estenose-valvar-pulmonar-doppler-continuo-transpulmonar",
+    "title": "Ecocardiograma — Doppler contínuo transpulmonar em estenose valvar pulmonar",
+    "modality": "Ecocardiograma",
+    "theme": "Cardiopatias congênitas",
+    "file_path": "ecocardiograma/estenose-valvar-pulmonar-doppler-continuo.jpg",
+    "findings": "Traçado espectral de Doppler contínuo através da valva pulmonar, com miniatura em modo bidimensional e Doppler colorido no canto superior direito mostrando o feixe alinhado à via de saída do ventrículo direito/valva pulmonar. O painel de medidas mostra velocidade de pico (PV Vmax) de 4,07 m/s, velocidade média (PV Vmean) de 3,15 m/s, gradiente de pico (PV maxPG) de 66,13 mmHg, gradiente médio (PV meanPG) de 42,87 mmHg, integral velocidade-tempo (PV VTI) de 118,91 cm e frequência cardíaca de 75,66 bpm. Pelo critério de gravidade por gradiente de pico ao Doppler (leve < 36 mmHg; moderada 36–64 mmHg; grave ≥ 64 mmHg), este traçado corresponde a estenose valvar pulmonar grave, no limite superior da faixa moderada-para-grave.",
+    "teaching_points": "O Doppler contínuo — não o colorido nem a impressão visual de abertura valvar ao bidimensional — é o que gradua a estenose pulmonar, pelo mesmo princípio já registrado nesta galeria para a valva aórtica bicúspide: a velocidade de pico e o gradiente derivado dela (equação de Bernoulli simplificada, 4×v²) são os parâmetros que definem conduta, não a inspeção do orifício valvar. Um cuidado de interpretação vale para os dois lados da via de saída direita: o gradiente por Doppler tende a superestimar o gradiente medido por cateterismo em estenoses valvares isoladas, por não captar a recuperação de pressão que ocorre distalmente ao jato — diferença relevante quando o valor ecocardiográfico for usado para indicar valvoplastia por balão. Estenose pulmonar isolada, sobretudo com folhetos displásicos, é um dos dois achados cardíacos mais associados à síndrome de Noonan e às demais RASopatias — ver o exame de painel genético NGS para RASopatias nesta base, que detalha essa associação.",
+    "source_name": "Wikimedia Commons (CardioNetworks ECHOpedia)",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Pulmonary_valve_stenosis_E00693_(CardioNetworks_ECHOpedia).jpg",
+    "license": "CC BY-SA 3.0",
+    "attribution": "CardioNetworks Secretariat, cortesia do AMC Echolab (Academic Medical Center, Amsterdã, Holanda), via Wikimedia Commons — CC BY-SA 3.0. Caso E00693 do banco de imagens ECHOpedia.",
+    "tags": [
+      "estenose valvar pulmonar",
+      "doppler continuo",
+      "cardiopatia congenita",
+      "ecocardiograma",
+      "sindrome de noonan",
+      "gradiente transpulmonar"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "shunt-blalock-taussig-thomas-subclavia-pulmonar-diagrama",
+    "title": "Shunt sistêmico-pulmonar de Blalock-Taussig-Thomas (subclávia–artéria pulmonar) — diagrama esquemático",
+    "modality": "Diagrama",
+    "theme": "Cardiopatias congênitas",
+    "file_path": "diagrama/shunt-blalock-taussig-thomas-subclavia-pulmonar.png",
+    "findings": "Diagrama esquemático em dois painéis lado a lado. À esquerda, anatomia sem o shunt: aorta ascendente e arco (vermelho) e tronco pulmonar (lavanda/azulado) emergindo normalmente do coração, com o padrão habitual de ramos coronarianos epicárdicos sobre a superfície ventricular. À direita, após a construção do shunt: a artéria subclávia (ramo do arco aórtico, em vermelho) é redirecionada — a linha tracejada marca seu trajeto original — até se anastomosar ao tronco/ramo pulmonar (lavanda), criando uma comunicação controlada entre a circulação sistêmica e a pulmonar.",
+    "teaching_points": "O shunt de Blalock-Taussig-Thomas (nomeado também em reconhecimento a Vivien Thomas, que desenvolveu a técnica cirúrgica no laboratório com Alfred Blalock) é a paliação cirúrgica clássica para lesões com fluxo pulmonar dependente de canal arterial ou gravemente reduzido — tetralogia de Fallot grave, atresia pulmonar, atresia tricúspide com estenose pulmonar associada — quando a correção definitiva ainda não é possível ou seria de alto risco no momento. A operação original, descrita por Blalock e Taussig em 1945, anastomosava diretamente a artéria subclávia (seccionada) à artéria pulmonar ipsilateral, sacrificando o fluxo anterógrado nativo para o membro superior daquele lado. A versão hoje padrão, descrita por de Leval e colaboradores em 1981, interpõe um tubo sintético (politetrafluoretileno expandido, Gore-Tex) entre a subclávia e a pulmonar, preservando o fluxo para o braço — é essa a técnica geralmente chamada de 'shunt de Blalock-Taussig-Thomas modificado'. Fisiologicamente, o shunt cria um fluxo sistêmico-pulmonar contínuo, análogo a um canal arterial artificial, e costuma ser o primeiro estágio de uma sequência paliativa que, em fisiologia de ventrículo único, segue depois para a anastomose de Glenn e, por fim, para a operação de Fontan — a mesma sequência de três estágios já registrada nesta galeria a partir da imagem de conduto de Fontan e shunt de Glenn em atresia tricúspide.",
+    "source_name": "Wikimedia Commons (BruceBlaus/Blausen Medical)",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Blalock_Taussig_Shunt_-_Subclavian_to_Pulmonary.png",
+    "license": "CC BY-SA 4.0",
+    "attribution": "BruceBlaus, via Wikimedia Commons — CC BY-SA 4.0. Ilustração baseada em material da Blausen Medical Communications.",
+    "tags": [
+      "shunt de blalock-taussig",
+      "shunt de blalock-taussig-thomas",
+      "cirurgia paliativa",
+      "cardiopatia congenita cianotica",
+      "fluxo pulmonar dependente de canal arterial",
+      "diagrama anatomico"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]

@@ -4927,5 +4927,60 @@
       "pediatria",
       "fibrose miocardica"
     ]
+  },
+  {
+    "slug": "mapa-na-coarctacao-de-aorta-operada",
+    "name": "Monitorização ambulatorial da pressão arterial (MAPA) no seguimento da coarctação de aorta operada",
+    "category": "metodo_grafico",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Registro automático e seriado da pressão arterial ao longo de 24 horas em ambiente livre (não hospitalar), com leituras programadas em intervalos regulares durante vigília e sono — ao contrário da aferição casual de consultório, que é um único ponto no tempo e pode não captar o padrão pressórico real do paciente ao longo do dia.",
+    "reference_range": "Pela atualização de 2022 da American Heart Association para MAPA pediátrico: em crianças e adolescentes com 13 anos ou mais, pressão normal é < 125/75 mmHg nas 24 horas, < 130/80 mmHg em vigília e < 110/65 mmHg no sono; abaixo de 13 anos usam-se o percentil 95 para idade/sexo/estatura ou os mesmos pontos de corte do adolescente, conforme o caso. Hipertensão mascarada é definida como pressão de consultório normal com pressão ambulatorial acima desses limiares — é exatamente esse padrão que a coarctação de aorta operada expõe com frequência.",
+    "indications": "Seguimento de pacientes com coarctação de aorta corrigida (cirúrgica ou por cateter), mesmo com reparo tecnicamente bem-sucedido e sem gradiente residual significativo ao repouso — a MAPA está indicada porque a pressão de consultório isolada subestima sistematicamente a carga pressórica real nessa população. Também indicada diante de gradiente braço-perna limítrofe, para apoiar a decisão de reintervenção, e na suspeita de hipertensão mascarada ou de padrão non-dipper (queda insuficiente da pressão noturna).",
+    "interpretation": "Em coorte de 25 crianças e adolescentes (13,5 ± 3,43 anos) com coarctação reparada precocemente e com sucesso, comparados a 16 controles saudáveis, a prevalência de hipertensão mascarada foi de 40%, de hipertensão noturna isolada 28% e de hipertrofia ventricular esquerda 24% — achados que a pressão de consultório, por definição normal nesses pacientes, não capta. O índice de massa ventricular esquerda foi significativamente maior no grupo com coarctação, reforçando que a hipertensão mascarada tem repercussão estrutural real, não é apenas um número de aparelho. Recomenda-se aferir a pressão preferencialmente no membro superior direito (proximal à maioria das coarctações e das reintervenções), pois um manguito posicionado num membro distal a estenose residual subestima a pressão sistêmica real.",
+    "limitations": "Exige cooperação do paciente com o uso do aparelho por 24 horas contínuas, incluindo durante o sono, o que limita a tolerância em crianças menores. Manguito de tamanho inadequado para o braço (comum em adolescentes com biotipo variável) distorce a leitura. A MAPA não substitui a avaliação de gradiente por Doppler/RM nem a medida direta braço-perna — mede a carga pressórica sistêmica ambulatorial, não quantifica a obstrução mecânica residual em si. Ponto específico da coarctação: se houver diferença pressórica relevante entre os membros (por estenose residual ou origem anômala de subclávia), o membro escolhido para o manguito influencia diretamente o resultado, e essa escolha precisa ser explícita no laudo.",
+    "source_refs": [
+      "Ağbaş A, Gökalp S, Canpolat N, Çalışkan S, Öztunç F. Is the burden of late hypertension and cardiovascular target organ damage in children and adolescents with coarctation of the aorta after early successful repair different to healthy controls? Cardiol Young. 2020;30(9):1305-1312. PMID: 32693850.",
+      "Flynn JT, Urbina EM, Brady TM, Baker-Smith C, Daniels SR, Hayman LL, Mitsnefes M, Tran A, Zachariah JP; American Heart Association Council on Hypertension. Ambulatory Blood Pressure Monitoring in Children and Adolescents: 2022 Update: A Scientific Statement From the American Heart Association. Hypertension. 2022;79(7):e114-e124. PMID: 35603599.",
+      "Egbe AC, Miranda WR, Bonnichsen CR, Warnes CA, Connolly HM. Potential Benefits of Ambulatory Blood Pressure Monitoring in Coarctation of Aorta. J Am Coll Cardiol. 2020;75(16):2089-2090. PMID: 32327108."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "coarctacao de aorta",
+      "mapa",
+      "hipertensao mascarada",
+      "pressao arterial ambulatorial",
+      "cardiopatia congenita",
+      "seguimento pos-operatorio"
+    ]
+  },
+  {
+    "slug": "painel-genetico-ngs-noonan-rasopatias-cardiopatia-congenita",
+    "name": "Painel genético multigênico por sequenciamento de nova geração (NGS) para síndrome de Noonan e outras RASopatias",
+    "category": "laboratorial",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Sequenciamento de nova geração (NGS) de um painel de genes da via RAS/MAPK — entre os mais incluídos estão PTPN11, SOS1, RAF1, RIT1, KRAS, NRAS, BRAF, MAP2K1, LZTR1, CBL, SOS2 e SHOC2 — para identificar variantes de ponto e pequenas inserções/deleções causadoras de síndrome de Noonan e das demais RASopatias (síndrome de Costello, síndrome cardiofaciocutânea, síndrome de Noonan com múltiplos lentigos, síndrome de Legius). É exame complementar ao microarray cromossômico, não substituto: detecta um tipo de alteração genética diferente (variante de ponto/pequeno indel em gene específico, não deleção/duplicação de segmento cromossômico maior).",
+    "reference_range": "Não se aplica no formato de valor numérico de referência — o resultado é qualitativo (presença ou ausência de variante patogênica ou provavelmente patogênica em algum dos genes do painel), com possibilidade de variante de significado incerto, que exige acompanhamento e reclassificação ao longo do tempo, não interpretação isolada.",
+    "indications": "Cardiopatia congênita associada a fenótipo sugestivo de RASopatia — baixa estatura, dismorfismos faciais característicos, pterígio cervical, criptorquidia, diátese hemorrágica leve, atraso leve de desenvolvimento. Em cardiologia, dois achados isolados costumam disparar a suspeita mesmo sem o fenótipo sindrômico completo: estenose valvar pulmonar (sobretudo displásica) e cardiomiopatia hipertrófica de início na infância sem outra causa identificada. A diretriz de 2018 da American Heart Association sobre bases genéticas da cardiopatia congênita recomenda considerar avaliação genética dirigida por fenótipo nesses cenários, em vez de testar por microarray isoladamente quando o quadro clínico já aponta para RASopatia.",
+    "interpretation": "Os genes têm correlação genótipo-fenótipo cardíaco relativamente consistente entre coortes: em estudo multicêntrico com 25 pacientes pediátricos submetidos a sequenciamento do exoma completo, variantes em PTPN11 associaram-se predominantemente à estenose valvar pulmonar, e variantes em RAF1 à cardiomiopatia hipertrófica — achados cardiovasculares presentes em 88% da coorte. Em outra coorte pediátrica com mutação identificada (sete genes detectados — PTPN11, RAF1, SOS1, RIT1, BRAF, SOS2 e LZTR1), PTPN11 e RAF1 responderam por 27% dos casos cada, com o mesmo padrão — PTPN11 ligado a estenose pulmonar e comunicação interatrial, RAF1 a cardiomiopatia hipertrófica (obstrutiva ou não), comunicação interatrial e insuficiência mitral; SOS1 associou-se a fenótipo cardíaco mais brando, com displasia valvar pulmonar e hipertrofia biventricular. Conhecer o gene específico não é apenas etiológico: orienta a intensidade do rastreio de cardiomiopatia hipertrófica ao longo do seguimento (mais intenso em RAF1/BRAF) e o aconselhamento familiar, já que a maioria das RASopatias segue padrão autossômico dominante.",
+    "limitations": "Painel de genes conhecidos não detecta variante em gene ainda não descrito nem a maioria dos rearranjos estruturais maiores (que exigem microarray cromossômico complementar). Resultado negativo não exclui RASopatia clinicamente diagnosticada — a sensibilidade combinada dos genes atualmente conhecidos não é de 100%, e o diagnóstico clínico por escore fenotípico permanece válido mesmo com painel negativo. Interpretação de variante de significado incerto e a decisão de qual painel solicitar (Noonan isolado vs. RASopatias amplas) devem envolver aconselhamento genético — não é exame para pedido e leitura isolados pelo cardiologista, mesma ressalva já registrada para o microarray cromossômico nesta base.",
+    "source_refs": [
+      "Ilic N, Krasic S, Maric N, Gasic V, Krstic J, Cvetkovic D, Miljkovic V, Zec B, Maver A, Vukomanovic V, Sarajlija A. Noonan Syndrome: Relation of Genotype to Cardiovascular Phenotype—A Multi-Center Retrospective Study. Genes (Basel). 2024;15(11):1463. PMID: 39596663.",
+      "Sun L, Xie YM, Wang SS, Zhang ZW. Cardiovascular Abnormalities and Gene Mutations in Children With Noonan Syndrome. Front Genet. 2022;13:915129. PMID: 35770001.",
+      "Rauen KA. The RASopathies. Annu Rev Genomics Hum Genet. 2013;14:355-369. PMID: 23875798.",
+      "Pierpont ME, Brueckner M, Chung WK, Garg V, Lacro RV, McGuire AL, Mital S, Priest JR, Pu WT, Roberts A, Ware SM, Gelb BD, Russell MW; American Heart Association Council on Cardiovascular Disease in the Young; Council on Cardiovascular and Stroke Nursing; and Council on Genomic and Precision Medicine. Genetic Basis for Congenital Heart Disease: Revisited: A Scientific Statement From the American Heart Association. Circulation. 2018;138(21):e653-e711. PMID: 30571578."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "genetica",
+      "sindrome de noonan",
+      "rasopatia",
+      "ptpn11",
+      "raf1",
+      "cardiopatia congenita sindromica",
+      "sequenciamento de nova geracao",
+      "aconselhamento genetico"
+    ]
   }
 ]

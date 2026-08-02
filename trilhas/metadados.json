@@ -21166,5 +21166,39 @@
     ],
     "review_status": "revisado",
     "revisao": "Curadoria verificada pela sessão CORVIA (tema Cardiologia pediátrica/geriátrica/congênitas) em 02/08/2026. As cinco etapas foram conferidas contra o banco de produção (docker compose exec backend) antes de escrever: os quatro documentos e o estudo existem com os slugs exatos usados aqui e estão published=True. A ordem e a justificativa de cada etapa foram redigidas depois de ler o conteúdo de cada item, não antes — o fio condutor (comorbidade específica > eixo de decisão que ela desloca, sempre além da idade isolada) é o que os cinco itens já defendem individualmente, e a trilha só o torna explícito como sequência."
+  },
+  {
+    "slug": "trilha-cardiologia-pediatrica-malformacoes-vasculares-raras-diagnostico-anatomico",
+    "titulo": "Cardiologia pediátrica: malformações raras de shunt e conexão vascular — reconhecendo o que não é 'apenas mais uma CIA'",
+    "tema": "Cardiologia pediátrica",
+    "objetivo": "Sair sabendo diferenciar, na criança, quatro entidades que compartilham fisiopatologia de shunt esquerda-direita e hiperfluxo pulmonar mas são anatomicamente distintas entre si e exigem investigação e conduta próprias: os defeitos septais atriais e ventriculares mais comuns como ponto de partida; a drenagem venosa anômala pulmonar parcial associada ao defeito do septo interatrial tipo seio venoso, incluindo a variante da síndrome de cimitarra; a janela aortopulmonar, comunicação acima das valvas semilunares e sua associação pouco lembrada com a origem anômala da artéria coronária direita (ARCAPA); e a origem anômala da artéria coronária esquerda a partir da pulmonar (ALCAPA), em que o mesmo princípio de shunt esconde uma fisiopatologia de roubo coronariano potencialmente fatal.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "civ-e-cia-na-crianca-historia-natural-e-criterios-de-fechamento",
+        "por_que": "Ponto de partida: a história natural e os critérios de fechamento dos defeitos septais mais comuns na criança, base anatômica e fisiológica sobre a qual as três malformações mais raras desta trilha se diferenciam."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "drenagem-venosa-anomala-pulmonar-parcial-defeito-do-seio-venoso-sindrome-de-cimitarra-e-tecnicas-cirurgicas",
+        "por_que": "A primeira diferenciação: o defeito do septo interatrial tipo seio venoso não é a mesma entidade do ostium secundum do passo anterior, e frequentemente coexiste com drenagem venosa anômala pulmonar parcial — incluindo a variante da síndrome de cimitarra —, com técnica cirúrgica e desfecho de ritmo próprios."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "janela-aortopulmonar-classificacao-de-mori-lesoes-associadas-e-resultados-cirurgicos",
+        "por_que": "Uma segunda comunicação anômala, anatomicamente distinta das anteriores por estar acima das valvas semilunares: a janela aortopulmonar, com sua própria classificação de complexidade cirúrgica e a associação pouco lembrada com a origem anômala da artéria coronária direita a partir da pulmonar (ARCAPA), que exige checagem ativa da origem coronariana mesmo sem sintoma isquêmico."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "origem-anomala-da-coronaria-esquerda-a-partir-da-pulmonar-alcapa-fisiopatologia-do-roubo-coronariano-e-conduta-cirurgica",
+        "por_que": "Fecha a trilha na anomalia coronariana mais grave do grupo: a origem anômala da artéria coronária esquerda a partir da pulmonar (ALCAPA), em que a fisiopatologia de roubo coronariano — não de simples shunt de volume — torna o reconhecimento precoce uma emergência, e que se conecta ao passo anterior pela mesma lógica de investigar ativamente a origem coronariana diante de anomalia vascular associada."
+      }
+    ]
   }
 ]
