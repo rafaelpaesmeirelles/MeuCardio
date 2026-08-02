@@ -1,5 +1,39 @@
 # Corvia — contexto e instruções permanentes
 
+> ## ✅ CONCLUÍDO E NO AR, 03/08/2026 ~02h: Modo Emergência — 31/31 protocolos com fluxograma
+> Pedido do Rafael, retomando uma decisão já tomada antes da queda da sessão: cada protocolo de
+> emergência ganha um fluxograma de **conduta imediata** (reconhecimento até resolução do
+> quadro), servido pelo pacote único de `/api/emergencia`, com o conteúdo escrito de hoje entrando
+> como reforço visual — o texto corrido já publicado continua valendo por baixo.
+>
+> Estado ao assumir: 12/31 protocolos já tinham `fluxograma_slug` (reaproveitando fluxogramas
+> gerais existentes por afinidade de tema — checagem inicial errada tinha dito 0/31, por bug de
+> chave no meu próprio script de auditoria, `fluxograma` em vez de `fluxograma_slug`). 19 agentes
+> em paralelo escreveram os que faltavam, cada um a partir do documento clínico já revisado da
+> mesma condição, pesquisa adicional em fonte primária (ESC/AHA/Endocrine Society) só onde o
+> documento-base não cobria detalhe agudo. Dois deles vieram sem o prefixo `fluxograma-` no slug —
+> corrigido (rename + front matter) antes de publicar.
+>
+> **Validação e dois bugs achados nos próprios scripts de validação** (recriados do zero no
+> scratchpad da sessão, a partir da descrição deste arquivo — os originais se perderam na queda):
+> nó com forma declarada inline do lado do destino da seta (`A --> B["texto"]`) e aresta com forma
+> inline na origem não eram reconhecidos, gerando falso-negativo — inclusive nos fluxogramas de
+> referência já publicados antes desta sessão. Corrigido; revalidados os 19 depois do fix.
+>
+> Importados (19 novos), publicados por lista explícita de slug com AuditLog, carregados em
+> `emergency_protocols` (31/31 atualizados). Conferido: 31/31 com `fluxograma_slug`, 31/31
+> `published`, zero referência quebrada nas 3 colunas (documento/fluxograma/relacionados).
+>
+> ## ✅ CONCLUÍDO E NO AR, 03/08/2026 ~01h20: dois bugs graves de parsing da CMED (vírgula decimal e restrição hospitalar)
+> Rafael reportou "medicações estão sem preço" pouco depois do fix anterior (abaixo) já estar no
+> ar. Causa raiz, achada comparando a planilha real linha a linha: `_num()` não convertia vírgula
+> decimal brasileira (`"36,56"`) antes de `float()`, então **todo** PMC de **toda** linha virava
+> `None` em silêncio; e a coluna `RESTRIÇÃO HOSPITALAR` vem como texto `"Sim"/"Não"` nunca vazio —
+> `bool("Não")` é `True` em Python, então as 25.702 linhas foram marcadas como restrição
+> hospitalar, inclusive losartana e sinvastatina. Os dois corrigidos, reimportado e testado:
+> losartana/COZAAR com preço real (R$27,30–R$134,58, antes `None`); `restricao_hospitalar` caiu de
+> 25702/25702 pra 3884/25702 (proporção plausível). `cmed_versao_id` 6.
+>
 > ## ✅ CONCLUÍDO E NO AR, 03/08/2026 ~00h50: dois bugs de produção da CMED + gap de integração na Beira do leito
 > Sessão `/root` caiu por volta de 00h22 no meio do trabalho de Tarefas A+B (commit `81f663e`
 > já estava feito, mas com diff não commitado em `cmed.py`/`cmed_precos.py`/migration nova).
