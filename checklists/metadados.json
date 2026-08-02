@@ -1666,5 +1666,149 @@
       "dosing de mavacamten — medicamentos/metadados.json (fonte: JAHA/ACC, já revisado nesta base)"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "inicio-de-amiodarona-monitorizacao-basal-e-de-seguimento",
+    "condicao": "Início de amiodarona — monitorização basal e de seguimento",
+    "documento_origem": "amiodarona-cloridrato",
+    "theme": "Farmacologia",
+    "resumo": "TSH, transaminases, radiografia de tórax, ECG e avaliação oftalmológica: o que colher antes da primeira dose de amiodarona e com que frequência reavaliar durante o uso contínuo, seguindo o guia de prática da NASPE e a bula brasileira já verificada nesta base.",
+    "itens": [
+      {
+        "id": "amio-avaliacao-basal",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Avaliação clínica basal completa antes da primeira dose oral, com atenção a cardiopatia estrutural, disfunção ventricular e à lista completa de medicações concomitantes",
+        "origem_secao": "Practical guidelines for clinicians who treat patients with amiodarone (NASPE) — avaliação basal"
+      },
+      {
+        "id": "amio-tsh-basal",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "TSH (e T4 livre, quando disponível) dosados antes de iniciar, para não confundir disfunção tireoidiana pré-existente com a induzida pelo fármaco",
+        "origem_secao": "amiodarona-cloridrato.md, item T do mnemônico TRETA; NASPE — avaliação basal"
+      },
+      {
+        "id": "amio-hepatica-basal",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "TGO/TGP basais dosados antes da primeira dose",
+        "origem_secao": "amiodarona-cloridrato.md, item T do mnemônico TRETA; NASPE — avaliação basal"
+      },
+      {
+        "id": "amio-rxtorax-basal",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Radiografia de tórax basal obtida antes de iniciar o uso oral prolongado, para servir de referência a alterações futuras",
+        "origem_secao": "NASPE — avaliação basal (radiografia de tórax e prova de função pulmonar antes do início)"
+      },
+      {
+        "id": "amio-pft-basal",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Prova de função pulmonar com capacidade de difusão (DLCO) basal considerada quando disponível, sobretudo se uso oral prolongado for previsto",
+        "origem_secao": "NASPE — avaliação basal"
+      },
+      {
+        "id": "amio-ecg-basal",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "ECG basal obtido, com o intervalo QT medido e registrado, para servir de referência de comparação durante o uso",
+        "origem_secao": "amiodarona-cloridrato.md, item E do mnemônico TRETA"
+      },
+      {
+        "id": "amio-oftalmo-basal",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Se houver alteração visual prévia, avaliação oftalmológica basal (biomicroscopia com lâmpada de fenda e fundoscopia) realizada antes de iniciar",
+        "origem_secao": "NASPE — avaliação basal (exame oftalmológico condicional a déficit visual pré-existente)"
+      },
+      {
+        "id": "amio-interacoes",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Lista de medicações revisada quanto a interações críticas já verificadas na bula brasileira — aumento de 50-75% do nível sérico de digoxina, potencialização de varfarina, dose de sinvastatina limitada a 20 mg em uso concomitante, e fármacos que também prolongam o QT",
+        "origem_secao": "amiodarona-cloridrato.md — Interações medicamentosas críticas"
+      },
+      {
+        "id": "amio-varfarina-inr",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Se em uso concomitante de varfarina: INR monitorado com maior frequência ao iniciar amiodarona, já que a interação se aprofunda progressivamente e atinge o pico de efeito em torno da 7ª semana, com redução média de até 44% na dose de varfarina necessária",
+        "origem_secao": "interacao-amiodarona-varfarina-inibicao-enzimatica-e-ajuste-de-dose.md — Sanoski & Bauman, Chest 2002 (PMID 11796427)"
+      },
+      {
+        "id": "amio-tsh-seguimento",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "TSH reavaliado a cada 6 meses durante o uso contínuo",
+        "origem_secao": "amiodarona-cloridrato.md, item T do mnemônico TRETA; NASPE — monitorização periódica"
+      },
+      {
+        "id": "amio-hepatica-seguimento",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "TGO/TGP reavaliados a cada 6 meses durante o uso contínuo",
+        "origem_secao": "amiodarona-cloridrato.md, item T do mnemônico TRETA; NASPE — monitorização periódica"
+      },
+      {
+        "id": "amio-hepatica-decisao",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Se TGO/TGP alterados: registrado se a elevação é leve, isolada e estável (achado incidental frequente, em geral não exige suspensão) ou progressiva/acentuada/sintomática (exige suspensão e investigação imediatas) — a decisão é caso a caso; VERIFICAÇÃO HUMANA NECESSÁRIA quanto à existência de um corte numérico único fixado por diretriz de classe/nível, que não foi localizado nesta base",
+        "origem_secao": "hepatotoxicidade-por-amiodarona-do-tgo-tgp-elevado-a-hepatite-aguda-grave.md — Quando suspender e quando não suspender"
+      },
+      {
+        "id": "amio-rxtorax-seguimento",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Radiografia de tórax repetida anualmente, ou antes se surgir dispneia, tosse seca ou febre não explicada",
+        "origem_secao": "amiodarona-cloridrato.md, item R do mnemônico TRETA; NASPE — monitorização periódica"
+      },
+      {
+        "id": "amio-oftalmo-seguimento",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Avaliação oftalmológica realizada prontamente diante de qualquer queixa visual nova, e considerada anualmente no uso prolongado",
+        "origem_secao": "amiodarona-cloridrato.md, item A do mnemônico TRETA; NASPE — monitorização periódica (exame anual no uso de longo prazo)"
+      },
+      {
+        "id": "amio-pele",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente orientado sobre fotossensibilidade (uso de protetor solar e proteção da pele) e sobre a possível coloração azulada da pele com uso prolongado",
+        "origem_secao": "amiodarona-cloridrato.md — Efeitos adversos"
+      },
+      {
+        "id": "amio-pulmonar-sintomas",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente orientado a comunicar imediatamente dispneia nova, tosse seca ou febre — sinais precoces de pneumonite/fibrose pulmonar, a toxicidade mais grave e potencialmente irreversível do fármaco",
+        "origem_secao": "amiodarona-cloridrato.md — Efeitos adversos; item R do mnemônico TRETA"
+      },
+      {
+        "id": "amio-tireoide-decisao",
+        "categoria": "encaminhamento",
+        "obrigatorio": false,
+        "texto": "Se disfunção tireoidiana for detectada no seguimento: diferenciada entre hipotireoidismo e tireotoxicose tipo 1 versus tipo 2 antes de decidir sobre suspender o fármaco, porque os tratamentos dos dois tipos de tireotoxicose são opostos",
+        "origem_secao": "disfuncao-tireoidiana-associada-a-amiodarona-diferenciar-tipo-1-de-tipo-2-e-decidir-sobre-suspender.md"
+      },
+      {
+        "id": "amio-gravidez",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Se paciente do sexo feminino em idade fértil: contraindicação na gravidez (exceto circunstância excepcional a critério médico, pelo efeito sobre a tireoide fetal) e na lactação discutida, com contracepção considerada",
+        "origem_secao": "amiodarona-cloridrato.md — Contraindicações; Gravidez"
+      }
+    ],
+    "revisao": "Compilado nesta sessão (02/08/2026) a partir de fontes verificadas por WebSearch/WebFetch: o guia de prática Goldschlager N et al. (NASPE), Arch Intern Med 2000;160(12):1741-1748, PMID 10871966, ainda citado como referência-padrão de monitorização em estudos de adesão publicados até 2024-2025, sem substituto formal mais recente localizado; a revisão baseada em evidência de Vassallo & Trohman, JAMA 2007, PMID 17878423; a revisão de Siddoway, Am Fam Physician 2003, PMID 14677662, que operacionaliza o guia da NASPE em cronograma prático; e a bula brasileira do cloridrato de amiodarona (Fresenius Kabi injetável e ATLANSIL comprimidos), já conferida e citada em amiodarona-cloridrato.md desta base. Os itens de interação com varfarina, hepatotoxicidade e disfunção tireoidiana reaproveitam três documentos já verificados nesta base, com a seção de origem registrada em cada item. O item amio-hepatica-decisao carrega VERIFICAÇÃO HUMANA NECESSÁRIA explícita quanto a um corte numérico único de suspensão por hepatotoxicidade, porque nenhuma das fontes consultadas nesta sessão confirma esse valor em nível de diretriz de classe/nível. Este checklist NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles — a atestação dele não é presumida.",
+    "source_refs": [
+      "Goldschlager N, Epstein AE, Naccarelli G, Olshansky B, Singh B; Practice Guidelines Subcommittee, North American Society of Pacing and Electrophysiology. Practical guidelines for clinicians who treat patients with amiodarone. Arch Intern Med. 2000;160(12):1741-1748. DOI: 10.1001/archinte.160.12.1741. PMID: 10871966",
+      "Vassallo P, Trohman RG. Prescribing amiodarone: an evidence-based review of clinical indications. JAMA. 2007;298(11):1312-1322. PMID: 17878423",
+      "Siddoway LA. Amiodarone: Guidelines for Use and Monitoring. Am Fam Physician. 2003;68(11):2189-2196. PMID: 14677662",
+      "Sanoski CA, Bauman JL. Clinical observations with the amiodarone/warfarin interaction: dosing relationships with long-term therapy. Chest. 2002;121(1):19-23. PMID: 11796427 — já usado em content/Farmacologia/interacao-amiodarona-varfarina-inibicao-enzimatica-e-ajuste-de-dose.md",
+      "Cloridrato de Amiodarona — Bula do Profissional de Saúde (injetável), Fresenius Kabi Brasil Ltda.; ATLANSIL (cloridrato de amiodarona, comprimidos), Sanofi-Aventis Farmacêutica Ltda. — mesma fonte já verificada em content/Farmacologia/amiodarona-cloridrato.md"
+    ],
+    "review_status": "revisado"
   }
 ]
