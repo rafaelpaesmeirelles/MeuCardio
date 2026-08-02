@@ -21005,5 +21005,45 @@
         "por_que": "Fecha a trilha no outro extremo do episódio: o paciente que sobreviveu ao choque e ao suporte mecânico ainda precisa de um plano de alta estruturado, que é onde o julgamento sobre fragilidade feito na admissão volta a ser testado na prática."
       }
     ]
+  },
+  {
+    "slug": "trilha-cardiologia-geriatrica-fragilidade-vascular-mascarada-e-reabilitacao-fisica",
+    "titulo": "Cardiologia geriátrica: da doença arterial periférica mascarada pela calcificação à reabilitação física como parte do tratamento, não risco a evitar",
+    "tema": "Cardiologia geriátrica",
+    "objetivo": "Percorrer o fio condutor de que fragilidade e idade avançada, isoladamente, não devem excluir nem o diagnóstico correto de doença vascular (que pode ser mascarado por um exame de rastreio enganoso) nem o encaminhamento a reabilitação física — e mostrar, com evidência direta, que o recondicionamento é seguro e eficaz mesmo no paciente muito idoso e frágil.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "doenca-arterial-periferica-e-claudicacao-no-muito-idoso",
+        "por_que": "Abre mostrando que a doença arterial periférica é subdiagnosticada no muito idoso por dois motivos que se somam: sintoma mascarado por outras limitações de mobilidade, e um índice tornozelo-braquial que pode enganar exatamente na faixa etária em que a calcificação arterial medial é mais comum — o primeiro passo antes de pensar em reabilitação é não deixar de diagnosticar."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "fragilidade-como-modificador-de-decisao-cardiovascular",
+        "por_que": "Fornece o arcabouço formal de avaliação de fragilidade — medida de forma estruturada, não por impressão clínica —, evitando a armadilha de decidir 'não vale a pena investir' só pela idade cronológica, tanto no diagnóstico quanto no tratamento."
+      },
+      {
+        "ordem": 3,
+        "item_type": "estudo",
+        "item_slug": "rehab-hf-reabilitacao-fisica-em-idosos-hospitalizados-por-insuficiencia-cardiaca",
+        "por_que": "Traz a evidência direta de que reabilitação física multidomínio, iniciada durante ou logo após internação por insuficiência cardíaca descompensada, melhora a função física de forma clinicamente relevante numa população majoritariamente frágil (97% frágeis ou pré-frágeis) — o contra-exemplo concreto de que fragilidade não é motivo para negar o encaminhamento."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "reabilitacao-cardiaca-no-muito-idoso-seguranca-fragilidade-e-adesao",
+        "por_que": "Generaliza o achado do REHAB-HF (uma população hospitalizada por IC) para o programa de reabilitação cardíaca tradicional no muito idoso em geral, tratando especificamente segurança e adesão — as duas objeções mais comuns levantadas contra encaminhar esse paciente."
+      },
+      {
+        "ordem": 5,
+        "item_type": "checklist",
+        "item_slug": "alta-pos-insuficiencia-cardiaca-descompensada",
+        "por_que": "Fecha a trilha no momento prático em que a decisão de encaminhar — ou não — à reabilitação de fato é tomada: a alta hospitalar, onde o julgamento sobre fragilidade formado nas etapas anteriores precisa virar uma linha concreta do plano de cuidado."
+      }
+    ]
   }
 ]

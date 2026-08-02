@@ -7700,5 +7700,269 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "broderick-2023-cochrane-ivig-doenca-de-kawasaki",
+    "title": "Revisão Cochrane — Imunoglobulina intravenosa no tratamento da doença de Kawasaki",
+    "study_type": "revisao_sistematica",
+    "authors": "Broderick C et al.",
+    "journal": "Cochrane Database of Systematic Reviews",
+    "year": 2023,
+    "doi": "10.1002/14651858.CD014884.pub2",
+    "pmid": "36695415",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/36695415/",
+    "summary": "Revisão sistemática Cochrane de 31 ensaios clínicos randomizados (4.744 participantes) comparando imunoglobulina intravenosa (IVIG) com ácido acetilsalicílico (AAS) isolado, diferentes doses/regimes de IVIG, prednisolona ou infliximabe no tratamento da doença de Kawasaki, com avaliação de certeza da evidência pelo sistema GRADE.",
+    "key_findings": [
+      "IVIG versus AAS: redução da incidência de anomalias coronarianas em 30 dias (OR 0,60; IC95% 0,41-0,87; 11 estudos, 1.437 participantes).",
+      "Regime de IVIG em dose alta versus dose média/baixa: OR 0,60 (IC95% 0,40-0,89; 8 estudos, 1.824 participantes) para anomalias coronarianas.",
+      "IVIG reduziu a duração da febre em 4,00 dias em média (IC95% -5,06 a -2,93) em comparação com AAS isolado."
+    ],
+    "clinical_implications": "É a maior síntese de evidência já publicada sobre o tratamento da doença de Kawasaki, e confirma que regimes de IVIG em dose alta reduzem o risco de anomalia coronariana — sustentando diretamente a recomendação padrão de 2 g/kg em dose única, já adotada pela diretriz da AHA.",
+    "limitations": "Certeza da evidência variando de moderada a muito baixa por risco de viés, imprecisão e inconsistência entre os estudos incluídos; poucos ensaios avaliam tratamento de segunda ou terceira linha na doença de Kawasaki resistente à IVIG.",
+    "theme": "Cardiologia pediátrica",
+    "tags": [
+      "doença de kawasaki",
+      "ivig",
+      "revisão cochrane",
+      "anomalia coronariana"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "seidel-2022-mykke-registro-de-miocardite-biopsiada-pediatrica",
+    "title": "Registro MYKKE — características clínicas e desfecho da miocardite pediátrica comprovada por biópsia",
+    "study_type": "estudo_de_coorte",
+    "authors": "Seidel F et al. (MYKKE Consortium)",
+    "journal": "International Journal of Cardiology",
+    "year": 2022,
+    "doi": "10.1016/j.ijcard.2022.03.026",
+    "pmid": "35304189",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/35304189/",
+    "summary": "Registro prospectivo multicêntrico alemão (23 centros, 2013-2020) com biópsia endomiocárdica em 260 crianças com suspeita de miocardite, correlacionando achados histológicos/moleculares com desfecho combinado (suporte circulatório mecânico, transplante cardíaco ou óbito).",
+    "key_findings": [
+      "Miocardite confirmada por biópsia em 209/260 pacientes (64% miocardite crônica/em cicatrização linfocítica, 23% aguda linfocítica, 14% já cicatrizada; nenhum caso de células gigantes).",
+      "Idade mediana ao diagnóstico: 12,8 anos (variação 1,4-15,9 anos).",
+      "Sobrevida livre de evento adverso maior pior no grupo com miocardite crônica/em cicatrização (24% em 5 anos), seguida da aguda (31%) e da já cicatrizada (58%; p=0,294).",
+      "Taxa de desmame bem-sucedido do suporte circulatório mecânico de 64% entre os pacientes com miocardite aguda.",
+      "A detecção de DNA/RNA viral no miocárdio não teve efeito estatisticamente significativo sobre o desfecho."
+    ],
+    "clinical_implications": "A biópsia endomiocárdica estratifica risco de eventos adversos maiores por tipo e estágio histológico na miocardite pediátrica — pacientes com infiltrado mononuclear intenso e miocardite crônica/em cicatrização têm o pior prognóstico, o que pode orientar indicação mais precoce de suporte circulatório avançado ou transplante.",
+    "limitations": "Estudo observacional de registro, sem grupo controle nem randomização; a etiologia viral, apesar de amplamente pesquisada, não se mostrou preditora de desfecho isoladamente, limitando seu uso como marcador prognóstico independente.",
+    "theme": "Cardiologia pediátrica",
+    "tags": [
+      "miocardite pediátrica",
+      "biópsia endomiocárdica",
+      "registro mykke",
+      "suporte circulatório mecânico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "houck-2019-ablacao-por-cateter-em-arritmia-de-cardiopatia-congenita-pediatrica",
+    "title": "Mecanismos de arritmia e desfecho da ablação por cateter em pacientes pediátricos com cardiopatia congênita",
+    "study_type": "estudo_de_coorte",
+    "authors": "Houck CA et al.",
+    "journal": "Circulation: Arrhythmia and Electrophysiology",
+    "year": 2019,
+    "doi": "10.1161/CIRCEP.119.007663",
+    "pmid": "31722541",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/31722541/",
+    "summary": "Coorte de 232 pacientes consecutivos menores de 18 anos com cardiopatia congênita submetidos a ablação por cateter em dois centros (Boston Children's Hospital e Erasmus MC) ao longo de 11 anos (2007-2018), avaliando mecanismo arrítmico e desfecho procedural e tardio.",
+    "key_findings": [
+      "Diagnósticos de base mais comuns: anomalia de Ebstein (n=44), defeitos de septo (n=39) e fisiologia de ventrículo único (n=36).",
+      "Sucesso completo do procedimento em 189/232 casos (81%); falha em 16 (7%).",
+      "Recorrência de arritmia em 49% dos pacientes ao longo de um seguimento mediano de 3,6 anos.",
+      "Escore de gravidade da arritmia caiu de mediana 4 (variação 0-10) para 0,5 (variação 0-8) em 4 anos de seguimento (p<0,001).",
+      "Taxa geral de evento adverso relacionado ao procedimento de 9,4% (1,6% de eventos maiores)."
+    ],
+    "clinical_implications": "A ablação por cateter é factível e reduz a carga de arritmia em crianças e adolescentes com cardiopatia congênita, mesmo diante de um espectro amplo e anatomicamente complexo de mecanismos arrítmicos — o benefício se mantém mesmo quando há recorrência, pela redução da gravidade do escore arrítmico.",
+    "limitations": "Estudo observacional de dois centros terciários de referência, sem grupo controle; em 45% das reintervenções o substrato arrítmico havia mudado em relação ao procedimento inicial, dificultando prever recorrência a partir das características do primeiro procedimento.",
+    "theme": "Cardiologia pediátrica",
+    "tags": [
+      "ablação por cateter",
+      "cardiopatia congênita pediátrica",
+      "arritmia",
+      "anomalia de ebstein"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "damluji-2021-fragilidade-e-desfechos-cardiovasculares-nhats",
+    "title": "Fragilidade e desfechos cardiovasculares no National Health and Aging Trends Study",
+    "study_type": "estudo_de_coorte",
+    "authors": "Damluji AA et al.",
+    "journal": "European Heart Journal",
+    "year": 2021,
+    "doi": "10.1093/eurheartj/ehab468",
+    "pmid": "34324648",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/34324648/",
+    "summary": "Coorte prospectiva ligada a uma amostra do Medicare (National Health and Aging Trends Study), com 4.656 idosos, dos quais 3.259 sem doença coronariana prévia, com fenótipo de fragilidade de Fried avaliado no basal e seguimento de 6 anos para desfechos cardiovasculares maiores.",
+    "key_findings": [
+      "Fragilidade associada a maior incidência de eventos cardiovasculares maiores (MACE): HR 1,77 (IC95% 1,53-2,06).",
+      "Maior mortalidade por qualquer causa: HR 2,70 (IC95% 2,16-3,38).",
+      "Maior incidência de infarto agudo do miocárdio: HR 1,95 (IC95% 1,31-2,90) e de AVC: HR 1,71 (IC95% 1,34-2,17).",
+      "Maior incidência de doença arterial periférica: HR 1,80 (IC95% 1,44-2,27) e de doença coronariana incidente: HR 1,35 (IC95% 1,11-1,65)."
+    ],
+    "clinical_implications": "A fragilidade é fator de risco independente e robusto para eventos cardiovasculares maiores em idosos sem doença coronariana prévia — sustenta o rastreio sistemático de fragilidade como parte da avaliação de risco cardiovascular geriátrica, não apenas como variável de desfecho funcional.",
+    "limitations": "Estudo observacional, sujeito a confusão residual; o fenótipo de fragilidade de Fried é um entre vários instrumentos de avaliação de fragilidade, e o resultado pode não generalizar integralmente a outras escalas.",
+    "theme": "Cardiologia geriátrica",
+    "tags": [
+      "fragilidade",
+      "idoso",
+      "eventos cardiovasculares maiores",
+      "nhats"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "go-2025-doac-no-muito-idoso-de-alto-risco-hemorragico-coreia",
+    "title": "Anticoagulantes orais diretos em idosos muito idosos e de alto risco de sangramento com fibrilação atrial — coorte coreana",
+    "study_type": "estudo_de_coorte",
+    "authors": "Go YH et al.",
+    "journal": "Europace",
+    "year": 2025,
+    "doi": "10.1093/europace/euaf230",
+    "pmid": "41020486",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41020486/",
+    "summary": "Coorte nacional de base populacional coreana (dados administrativos, 2014-2017), com 23.858 pacientes com fibrilação atrial de 80 anos ou mais e critérios de inclusão do tipo ELDERCARE-AF — população tipicamente excluída dos grandes ensaios de anticoagulação. Comparou anticoagulante oral direto (DOAC) versus ausência de anticoagulação oral por ponderação por escore de propensão.",
+    "key_findings": [
+      "DOAC versus ausência de anticoagulação: menor risco de AVC isquêmico, HR 0,81 (IC95% 0,68-0,96).",
+      "Menor mortalidade por qualquer causa: HR 0,91 (IC95% 0,86-0,96).",
+      "Maior risco de sangramento maior: HR 1,44 (IC95% 1,21-1,70).",
+      "Desfecho clínico líquido (balanço entre eventos isquêmicos e hemorrágicos) favorável ao DOAC: HR 0,93 (IC95% 0,88-0,98).",
+      "No grupo DOAC, 69% dos pacientes usaram dose reduzida e 9% dose muito reduzida."
+    ],
+    "clinical_implications": "Em idosos muito idosos e de alto risco de sangramento — grupo sistematicamente subrrepresentado nos ensaios pivotais de FA —, o uso de DOAC (predominantemente em dose reduzida) trouxe benefício clínico líquido positivo apesar do maior sangramento, reproduzindo em prática real o achado do ensaio ELDERCARE-AF.",
+    "limitations": "Estudo observacional com dados administrativos (claims), sujeito a viés de indicação mesmo após ponderação por escore de propensão; sem dados de adesão medicamentosa real nem de causa específica dos sangramentos.",
+    "theme": "Cardiologia geriátrica",
+    "tags": [
+      "doac",
+      "muito idoso",
+      "fibrilação atrial",
+      "alto risco hemorrágico",
+      "eldercare-af"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "deschamps-2024-engages-canada-anestesia-guiada-por-eeg-e-delirium",
+    "title": "ENGAGES-Canada — anestesia guiada por eletroencefalograma e delirium pós-operatório em idosos após cirurgia cardíaca",
+    "study_type": "ensaio_clinico",
+    "authors": "Deschamps A et al. (Canadian Perioperative Anesthesia Clinical Trials Group)",
+    "journal": "JAMA",
+    "year": 2024,
+    "doi": "10.1001/jama.2024.8144",
+    "pmid": "38857019",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/38857019/",
+    "summary": "Ensaio clínico randomizado paralelo, com 1.140 adultos de 60 anos ou mais submetidos a cirurgia cardíaca em 4 hospitais canadenses (2016-2022), randomizados 1:1 para anestesia guiada por eletroencefalograma (evitando supressão eletroencefalográfica profunda, n=567) versus cuidado anestésico usual (n=573), com desfecho primário de delirium entre o 1º e o 5º dia pós-operatório.",
+    "key_findings": [
+      "Delirium pós-operatório: 18,15% no grupo guiado por EEG versus 18,10% no cuidado usual — diferença de 0,05 ponto percentual (IC95% -4,57% a 4,67%), sem significância estatística.",
+      "Mortalidade em 30 dias: 1,4% versus 2,3%, sem diferença significativa.",
+      "Sem diferença no tempo de internação em UTI ou no tempo total de internação hospitalar entre os grupos."
+    ],
+    "clinical_implications": "A anestesia guiada por EEG para minimizar a supressão eletroencefalográfica não reduziu o delirium pós-operatório em idosos submetidos a cirurgia cardíaca — resultado negativo que contraria uma estratégia amplamente adotada com base em estudos observacionais prévios, e reforça que a extrapolação de dados observacionais para cirurgia cardíaca (de maior complexidade hemodinâmica) precisa de confirmação por ensaio randomizado.",
+    "limitations": "O delirium foi avaliado apenas até o 5º dia pós-operatório, podendo subestimar casos de início mais tardio; o achado negativo é consistente com o ensaio ENGAGES original em cirurgia não cardíaca, mas a maior complexidade hemodinâmica da cirurgia cardíaca limita a extrapolação direta entre as duas populações.",
+    "theme": "Cardiologia geriátrica",
+    "tags": [
+      "delirium pós-operatório",
+      "cirurgia cardíaca",
+      "idoso",
+      "anestesia guiada por eeg",
+      "ensaio randomizado"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "bokma-2023-indicator-troca-valvar-pulmonar-na-tetralogia-de-fallot",
+    "title": "Registro INDICATOR — desfecho após troca valvar pulmonar na tetralogia de Fallot reparada",
+    "study_type": "estudo_de_coorte",
+    "authors": "Bokma JP et al.",
+    "journal": "Journal of the American College of Cardiology",
+    "year": 2023,
+    "doi": "10.1016/j.jacc.2023.02.052",
+    "pmid": "37225360",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/37225360/",
+    "summary": "Análise pareada por escore de propensão do registro internacional multicêntrico INDICATOR, com 1.143 pacientes com tetralogia de Fallot reparada (idade média 27±14 anos; 47% haviam sido submetidos a troca valvar pulmonar; seguimento médio 8,3±5,2 anos), comparando troca valvar pulmonar (TVP) versus conduta conservadora quanto ao desfecho composto de óbito ou taquicardia ventricular sustentada.",
+    "key_findings": [
+      "Desfecho primário (óbito ou taquicardia ventricular sustentada) ocorreu em 82 dos 1.143 pacientes.",
+      "Na coorte pareada por propensão (n=524): HR ajustado para TVP versus não-TVP de 0,41 (IC95% 0,21-0,81; p=0,010).",
+      "Em pacientes com dilatação avançada de ventrículo direito (índice de volume sistólico final de VD > 80 mL/m²): HR 0,32 (IC95% 0,16-0,62; p<0,001).",
+      "Sem benefício demonstrado da TVP em pacientes com índice de volume sistólico final de VD ≤ 80 mL/m²: HR 0,86 (IC95% 0,38-1,92; p=0,70)."
+    ],
+    "clinical_implications": "A troca valvar pulmonar reduz o risco de óbito ou taquicardia ventricular sustentada especificamente em pacientes com dilatação de ventrículo direito já avançada — fornece um limiar quantitativo (volume sistólico final de VD > 80 mL/m²) para orientar o momento ideal da intervenção, uma das questões mais controversas do seguimento tardio da tetralogia de Fallot reparada.",
+    "limitations": "Estudo observacional pareado por escore de propensão, não randomizado; possível confusão residual por indicação, já que pacientes selecionados para troca valvar podem diferir sistematicamente dos não operados mesmo após o pareamento.",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "tetralogia de fallot",
+      "troca valvar pulmonar",
+      "taquicardia ventricular",
+      "registro indicator"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "daley-2022-fenestracao-de-fontan-desfecho-de-longo-prazo",
+    "title": "Impacto da fenestração de Fontan sobre desfechos de longo prazo — análise pareada por escore de propensão",
+    "study_type": "estudo_de_coorte",
+    "authors": "Daley M et al.",
+    "journal": "Journal of the American Heart Association",
+    "year": 2022,
+    "doi": "10.1161/JAHA.122.026087",
+    "pmid": "35621213",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/35621213/",
+    "summary": "Coorte do registro de Fontan da Austrália e Nova Zelândia, com 1.443 pacientes (621 fenestrados e 822 não fenestrados), pareados por escore de propensão (407 pares), com seguimento mediano de 10,6 anos, avaliando sobrevida e liberdade de falência do circuito de Fontan conforme a presença de fenestração no procedimento inicial.",
+    "key_findings": [
+      "Sem diferença de sobrevida em 20 anos: 87% nos fenestrados versus 90% nos não fenestrados (p=0,16).",
+      "Sem diferença na liberdade de falência do Fontan em 20 anos: 73% versus 80% (p=0,10).",
+      "Liberdade de tromboembolismo sistêmico ou do circuito de Fontan maior no grupo não fenestrado: 89% (IC95% 88-95%) versus 84% no grupo fenestrado (IC95% 77-89%; p=0,03)."
+    ],
+    "clinical_implications": "A fenestração de rotina no procedimento de Fontan não trouxe benefício de sobrevida nem de liberdade de falência a longo prazo nesta coorte pareada, e associou-se a mais tromboembolismo — questiona a prática de fenestração rotineira, sugerindo reservá-la para pacientes de maior risco hemodinâmico identificados caso a caso.",
+    "limitations": "Estudo observacional pareado por escore de propensão, não randomizado; a decisão de fenestrar historicamente foi reservada a pacientes de maior risco anatômico ou hemodinâmico, o que pode manter confusão residual mesmo após o pareamento.",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "fontan",
+      "fenestração",
+      "tromboembolismo",
+      "sobrevida de longo prazo"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "lee-2019-mortalidade-tardia-apos-reparo-de-coarctacao-de-aorta",
+    "title": "Mortalidade tardia e carga cardiovascular em sobreviventes adultos de coarctação de aorta reparada",
+    "study_type": "estudo_de_coorte",
+    "authors": "Lee MGY et al.",
+    "journal": "Heart",
+    "year": 2019,
+    "doi": "10.1136/heartjnl-2018-314257",
+    "pmid": "30923175",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/30923175/",
+    "summary": "Coorte retrospectiva de centro único (Royal Brompton Hospital e Royal Children's Hospital Melbourne), com 834 pacientes de 16 anos ou mais após reparo de coarctação de aorta (cirurgia em 83%, angioplastia ou stent em 17%), com seguimento mediano de 27 anos, comparados com a mortalidade esperada de uma população geral pareada.",
+    "key_findings": [
+      "38 óbitos tardios registrados (5% da coorte).",
+      "Sobrevida global de 99%, 88% e 65% aos 30, 50 e 70 anos de idade, respectivamente — significativamente reduzida em relação à população geral pareada (razão de mortalidade padronizada 3,20; log-rank p<0,001).",
+      "Reintervenção sobre o arco aórtico em 30% dos pacientes (246/834).",
+      "Recoarctação ou gradiente residual em 60% dos pacientes avaliados (282/474).",
+      "Hipertensão de repouso em 57% dos pacientes no último seguimento (379/661)."
+    ],
+    "clinical_implications": "Mesmo após reparo tecnicamente bem-sucedido, sobreviventes de coarctação de aorta têm mortalidade tardia acelerada a partir da terceira década de vida e alta prevalência de hipertensão residual e necessidade de reintervenção — sustenta a necessidade de seguimento cardiológico estruturado por toda a vida, não apenas até a idade adulta jovem.",
+    "limitations": "Estudo de centro único, retrospectivo; o período de reparo dos pacientes incluídos abrange várias décadas com diferentes técnicas cirúrgicas e percutâneas, o que pode diluir o efeito de técnicas mais modernas sobre os desfechos observados.",
+    "theme": "Cardiopatias congênitas",
+    "tags": [
+      "coarctação de aorta",
+      "mortalidade tardia",
+      "hipertensão residual",
+      "reintervenção de arco aórtico"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]

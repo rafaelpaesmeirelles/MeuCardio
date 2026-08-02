@@ -4277,5 +4277,139 @@
       "fechamento percutâneo",
       "seguimento pós-operatório"
     ]
+  },
+  {
+    "slug": "cintilografia-de-perfusao-pulmonar-diferencial-em-cardiopatia-congenita",
+    "name": "Cintilografia de perfusão pulmonar diferencial (quantitativa) em cardiopatia congênita",
+    "category": "imagem",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Distribuição percentual do fluxo sanguíneo pulmonar entre os dois pulmões (e, em protocolo SPECT, por segmento), por meio de macroagregados de albumina marcados com tecnécio-99m (99mTc-MAA, dose usual de 37-148 MBq/1-4 mCi) injetados por via intravenosa e captados por câmara gama — as partículas se alojam nos capilares pulmonares proporcionalmente ao fluxo regional recebido. Aplicação central em cardiopatia congênita: quantificar a repercussão de estenose de ramo de artéria pulmonar (nativa ou pós-cirúrgica) sobre a perfusão de cada pulmão, e mapear a distribuição de fluxo em anatomias com conexões cavopulmonares (Glenn, Fontan).",
+    "reference_range": "Distribuição normal é próxima da simetria, com discreto predomínio do pulmão direito: 53% direito / 47% esquerdo, segundo revisão de Fathala (Heart Views, 2010) dedicada a cardiopatia congênita — valor concordante com a faixa de 52,5%/47,5% (± 2,1%) descrita em coortes maiores de exames considerados normais, e abaixo do corte histórico de 55%/45% frequentemente citado de memória. Assimetria além dessa faixa (fluxo reduzido, ausente ou multissegmentar num pulmão) é sempre achado a investigar, nunca variante da normalidade.",
+    "indications": "Quantificar a repercussão funcional de estenose de ramo pulmonar suspeitada por ecocardiograma, angiotomografia ou angiorressonância — sobretudo no seguimento pós-operatório de tetralogia de Fallot, em que estenose periférica de ramo pulmonar ocorre em 20-40% dos operados; comparar perfusão pré e pós-intervenção percutânea (angioplastia por balão, stent) no mesmo ramo; mapear distribuição de fluxo antes de cirurgia de Glenn ou Fontan, e no seguimento dessas anatomias, em que a cintilografia também serve para rastrear malformação arteriovenosa pulmonar (fluxo preferencial para um pulmão, tipicamente o que não recebe o efluente hepático) e embolia pulmonar assintomática, mais comum nesta população.",
+    "interpretation": "Redução percentual do fluxo para um pulmão em relação à faixa normal (53/47) quantifica objetivamente a estenose de ramo vista à imagem anatômica — no caso ilustrativo da revisão de Fathala, um paciente com tetralogia de Fallot e estenose de artéria pulmonar esquerda tinha 33% de perfusão para o pulmão esquerdo antes do implante de stent, subindo para 44% após o procedimento, documentando a melhora funcional além do que a medida angiográfica do diâmetro isoladamente mostra. Padrões descritos incluem perfusão simétrica normal, ausência unitalteral de perfusão, redução unilateral difusa e defeitos segmentares múltiplos — este último padrão sugere tromboembolismo pulmonar, achado incidental relativamente comum e às vezes assintomático nesta população, e que motiva investigação dirigida quando encontrado.",
+    "limitations": "Local de injeção (membro superior versus inferior) altera o padrão de distribuição observado, sobretudo em anatomias operadas (ex. veia cava superior esquerda persistente, desvios cirúrgicos de fluxo venoso) — é preciso conhecer a anatomia cirúrgica do paciente antes de interpretar o exame. Método quantifica fluxo relativo entre território, não fornece diagnóstico anatômico da lesão (não substitui ecocardiograma, angiotomografia, angiorressonância ou cateterismo, que localizam e caracterizam a estenose). Radiação ionizante, embora em dose baixa, é uma limitação em população pediátrica submetida a exames seriados de seguimento ao longo da vida. Também não distingue, isoladamente, estenose fixa de vasoconstrição reversível.",
+    "source_refs": [
+      "Fathala A. Quantitative lung perfusion scintigraphy in patients with congenital heart disease. Heart Views. 2010;11(3):109-114. PMID 21577378. PMCID PMC3089824. doi:10.4103/1995-705X.76802",
+      "Chien KJ, Huang HW, Huang TC, Lee CL, Weng KP, Lin CC, Shieh PC, Wu MT, Hsieh KS. Assessment of branch pulmonary artery stenosis in children after repair of tetralogy of Fallot using lung perfusion scintigraphy comparison with echocardiography. Ann Nucl Med. 2016;30(1):49-59. PMID 26493388. doi:10.1007/s12149-015-1029-8",
+      "Sabiniewicz R, Romanowicz G, Bandurski T, Chojnicki M, Alszewicz-Baranowska J, Ereciński J, Lass P. Lung perfusion scintigraphy in the diagnosis of peripheral pulmonary stenosis in patients after repair of Fallot tetralogy. Nucl Med Rev Cent East Eur. 2002;5(1):11-13. PMID 14600940"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "cardiopatia congênita",
+      "cintilografia pulmonar",
+      "perfusão pulmonar diferencial",
+      "estenose de ramo pulmonar",
+      "tetralogia de fallot",
+      "fontan",
+      "glenn",
+      "medicina nuclear"
+    ]
+  },
+  {
+    "slug": "cariotipo-fetal-invasivo-amniocentese-ou-biopsia-de-vilo-corial",
+    "name": "Cariótipo fetal invasivo (amniocentese ou biópsia de vilo corial) na investigação de cardiopatia congênita",
+    "category": "laboratorial",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Análise cromossômica direta de células fetais obtidas por procedimento invasivo — biópsia de vilo corial (10-13 semanas, tecido placentário) ou amniocentese (a partir de ~15 semanas, líquido amniótico) — por cariótipo convencional (bandeamento G) associado, na prática atual, a técnica de microarray cromossômico (CMA), que detecta microdeleções/microduplicações abaixo da resolução do cariótipo convencional (como a deleção 22q11.2). É teste **diagnóstico**, não de rastreio: ao contrário do NIPT (cfDNA), confirma ou exclui a alteração cromossômica em vez de estimar risco.",
+    "reference_range": "Não se aplica valor de referência numérico — resultado é a descrição do cariótipo (ex. 46,XY normal) e, no microarray, a lista de variantes de número de cópias (CNV) encontradas, classificadas como patogênicas, benignas ou de significado incerto (VUS). No ensaio randomizado de referência (Wapner et al., NEJM 2012, n=4.406), o microarray identificou CNV clinicamente relevante em **6,0%** das amostras com cariótipo normal e anomalia estrutural ao ultrassom (contra 1,7% nas amostras encaminhadas só por idade materna avançada ou rastreio combinado alterado) — ou seja, a presença de malformação estrutural, como a cardiopatia congênita, mais que triplica o rendimento diagnóstico incremental do microarray sobre o cariótipo isolado.",
+    "indications": "Achado de cardiopatia congênita (sobretudo anomalia conotruncal) ao ecocardiograma fetal, para diagnóstico cromossômico definitivo — indicação central quando o objetivo é confirmar ou excluir aneuploidia e microdeleção associada antes de decisão clínica irreversível, o que um resultado de rastreio (NIPT) não pode sustentar sozinho. Também indicado diante de rastreio de aneuploidia de primeiro/segundo trimestre alterado, translucência nucal aumentada, outras malformações estruturais associadas, ou resultado de NIPT de alto risco que precisa de confirmação diagnóstica.",
+    "interpretation": "Resultado normal no cariótipo convencional não exclui microdeleção/microduplicação submicroscópica — é por isso que a diretriz de procedimentos invasivos da ISUOG (Ghi et al., 2016) e a prática atual recomendam associar microarray ao cariótipo, não substituí-lo isoladamente pelo cariótipo sozinho, diante de anomalia estrutural fetal. Achado de aneuploidia clássica (trissomias do 21, 18, 13) ou de CNV patogênica conhecida (ex. deleção 22q11.2) confirma o diagnóstico e orienta aconselhamento genético, investigação de outras malformações associadas e planejamento do parto e do cuidado neonatal. Variante de significado incerto (VUS) exige aconselhamento genético especializado — não deve ser comunicada como achado definitivamente benigno nem definitivamente patogênico.",
+    "limitations": "Procedimento invasivo com risco de perda gestacional acima do basal, hoje estimado bem menor do que classicamente citado: metanálise de Akolekar et al. (2015, Ultrasound Obstet Gynecol) com mais de 51 mil procedimentos controlados calculou risco procedimento-relacionado de **0,11%** (IC95% -0,04 a 0,26%) para amniocentese e **0,22%** (IC95% -0,71 a 1,16%) para biópsia de vilo corial — valores substancialmente menores que o 0,5-1% classicamente citado em material mais antigo. Cariótipo convencional tem tempo de resultado de 1-2 semanas (cultura celular necessária); FISH ou QF-PCR rápidos para aneuploidias comuns saem em 24-48h, mas não substituem o cariótipo/microarray completo. Microarray não detecta translocações balanceadas nem triploidia — o estudo de Wapner et al. mostrou que o microarray identificou todas as aneuploidias e rearranjos desbalanceados do cariótipo, mas não esses dois tipos de alteração, que exigem cariótipo convencional em paralelo.",
+    "source_refs": [
+      "Wapner RJ, Martin CL, Levy B, Ballif BC, Eng CM, Zachary JM, Savage M, Platt LD, Saltzman D, Grobman WA, Klugman S, Scholl T, Simpson JL, McCall K, Aggarwal VS, Bunke B, Nahum O, Patel A, Lamb AN, Thom EA, Beaudet AL, Ledbetter DH, Shaffer LG, Jackson L. Chromosomal microarray versus karyotyping for prenatal diagnosis. N Engl J Med. 2012;367(23):2175-2184. PMID 23215555. PMCID PMC3549418. doi:10.1056/NEJMoa1203382",
+      "Akolekar R, Beta J, Picciarelli G, Ogilvie C, D'Antonio F. Procedure-related risk of miscarriage following amniocentesis and chorionic villus sampling: a systematic review and meta-analysis. Ultrasound Obstet Gynecol. 2015;45(1):16-26. PMID 25042845. doi:10.1002/uog.14636",
+      "Ghi T, Sotiriadis A, Calda P, Da Silva Costa F, Raine-Fenning N, Alfirevic Z, McGillivray G; International Society of Ultrasound in Obstetrics and Gynecology (ISUOG). ISUOG Practice Guidelines: invasive procedures for prenatal diagnosis. Ultrasound Obstet Gynecol. 2016;48(2):256-268. PMID 27485589. doi:10.1002/uog.15945"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "cardiopatia congênita",
+      "cariótipo",
+      "amniocentese",
+      "biópsia de vilo corial",
+      "microarray cromossômico",
+      "22q11.2",
+      "diagnóstico pré-natal",
+      "teste diagnóstico invasivo"
+    ]
+  },
+  {
+    "slug": "nt-probnp-no-idoso-acima-de-75-anos",
+    "name": "NT-proBNP no idoso acima de 75 anos — refinamento do corte diagnóstico por faixa etária",
+    "category": "laboratorial",
+    "theme": "Cardiologia geriátrica",
+    "what_it_measures": "Peptídeo natriurético N-terminal tipo B (mesmo biomarcador do NT-proBNP geral), com foco no refinamento do ponto de corte diagnóstico de insuficiência cardíaca (IC) aguda especificamente para pacientes muito idosos (acima de 75 anos) com dispneia no pronto-socorro — subgrupo em que o corte único usado para todos os pacientes ≥50 anos do estudo PRIDE original perde acurácia.",
+    "reference_range": "Corte de EXCLUSÃO, válido para todas as idades (estudo PRIDE original): <300 pg/mL, com valor preditivo negativo de 99%. Corte de INCLUSÃO/diagnóstico, estratificado em três faixas etárias pelo substudo de Krauser et al. (2006): >450 pg/mL para pacientes <50 anos; >900 pg/mL para 50-75 anos; >1.800 pg/mL para pacientes >75 anos.",
+    "indications": "Dispneia aguda de causa indefinida em paciente idoso (acima de 75 anos) no pronto-socorro, quando a diferenciação clínica entre IC aguda descompensada e outra causa (pulmonar, entre outras) não é conclusiva — é justamente nesta faixa etária que aplicar o corte único de >900 pg/mL (válido para todo o bloco ≥50 anos) tende a gerar mais resultados falso-positivos, pela elevação basal fisiológica do NT-proBNP com o avançar da idade, mesmo sem IC aguda.",
+    "interpretation": "O estudo PRIDE original (Januzzi et al., 2005, 600 pacientes dispneicos, 209 com IC aguda confirmada) definiu cortes de inclusão de >450 pg/mL para <50 anos e >900 pg/mL para todo o restante (≥50 anos), tratado como um único bloco. O substudy de Krauser et al. (2006), ao reexaminar a mesma coorte PRIDE (599 pacientes) estratificando por raça e sexo, refinou esse bloco único em três faixas — <50, 50-75 e >75 anos —, com o corte subindo para 1.800 pg/mL nos pacientes acima de 75 anos. Isso reconhece que a concentração basal de NT-proBNP aumenta progressivamente com a idade por motivos independentes de disfunção cardíaca aguda (rigidez arterial, redução da taxa de filtração glomerular relacionada à idade, fibrose miocárdica subclínica), e que usar 900 pg/mL como corte único nessa faixa etária mais avançada reduziria a especificidade do teste.",
+    "limitations": "O refinamento por três faixas etárias vem de um substudy (599 pacientes) da mesma coorte de derivação do estudo PRIDE original — não é uma coorte de validação prospectiva externa dedicada especificamente ao corte de 1.800 pg/mL. Função renal reduzida, extremamente prevalente no paciente idoso, eleva o NT-proBNP por mecanismo independente de IC aguda e exige interpretação sempre em conjunto com a creatinina/taxa de filtração glomerular estimada, nunca do biomarcador isolado. Fibrilação atrial concomitante, comum nesta faixa etária, também eleva o NT-proBNP basal.",
+    "source_refs": [
+      "Krauser DG, Chen AA, Tung R, Anwaruddin S, Baggish AL, Januzzi JL Jr. Neither race nor gender influences the usefulness of amino-terminal pro-brain natriuretic peptide testing in dyspneic subjects: a ProBNP Investigation of Dyspnea in the Emergency Department (PRIDE) substudy. J Card Fail. 2006;12(6):452-457. PMID: 16911912. doi:10.1016/j.cardfail.2006.04.005",
+      "Januzzi JL Jr, Camargo CA, Anwaruddin S, et al. The N-terminal Pro-BNP investigation of dyspnea in the emergency department (PRIDE) study. Am J Cardiol. 2005;95(8):948-954. PMID: 15820160. doi:10.1016/j.amjcard.2004.12.032"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "nt-probnp",
+      "idoso",
+      "dispneia aguda",
+      "corte ajustado por idade",
+      "insuficiência cardíaca aguda",
+      "geriatria",
+      "biomarcador"
+    ]
+  },
+  {
+    "slug": "monitor-de-eventos-implantavel-looper-em-criancas-com-sincope-e-palpitacoes",
+    "name": "Monitor de eventos implantável (looper) em crianças e adolescentes com síncope e palpitações",
+    "category": "metodo_grafico",
+    "theme": "Cardiologia pediátrica",
+    "what_it_measures": "Dispositivo subcutâneo de registro contínuo de ECG (implantable loop recorder, ILR — \"looper\"), implantado em criança/adolescente para captura prolongada (meses a poucos anos) do ritmo cardíaco, indicado quando sintomas paroxísticos pouco frequentes (síncope, palpitação, episódio tipo convulsivo) não são elucidados por Holter ou monitor externo de curta duração, cuja janela de registro (dias a poucas semanas) costuma ser curta demais para capturar eventos esparsos.",
+    "reference_range": "Não se aplica valor de referência numérico — o resultado é a presença ou ausência de arritmia relevante registrada durante o episódio sintomático (ativação manual pelo paciente/cuidador) ou detectada automaticamente pelo algoritmo do dispositivo (ativação automática), classificada por tipo: pausa sinusal ≥3 segundos, bloqueio atrioventricular de alto grau, disfunção do nó sinusal, taquicardia supraventricular, taquicardia ventricular ou taquicardia sinusal inapropriada.",
+    "indications": "Síncope, pré-síncope, palpitação ou episódio tipo convulsivo em criança/adolescente sem diagnóstico definido após avaliação inicial (ECG de repouso, ecocardiograma, Holter ou monitor externo não conclusivos), sobretudo quando há suspeita de canalopatia ou cardiopatia hereditária de alto risco, ou arritmia já documentada previamente que precisa de quantificação de recorrência.",
+    "interpretation": "Coorte retrospectiva unicêntrica de 155 pacientes pediátricos (idade mediana 11,4 anos, implantes entre janeiro de 2016 e dezembro de 2023, seguimento mediano de 2,3 anos): arritmia diagnóstica foi registrada em 60% das transmissões ativadas pelo próprio paciente e em 80% das transmissões ativadas automaticamente pelo dispositivo. Os achados mais comuns foram pausa sinusal (37,5% dos diagnósticos) e taquicardia ventricular (30%). No subgrupo com síncope como indicação (n=76), 30% tiveram arritmia relevante; no subgrupo com palpitação (n=20), 35%. Cerca de 80% dos pacientes com arritmia diagnosticada pelo dispositivo tiveram conduta terapêutica modificada (ajuste medicamentoso ou procedimento adicional) a partir do achado.",
+    "limitations": "Estudo unicêntrico e retrospectivo, sem comparação direta, no mesmo paciente, com o rendimento de Holter/monitor externo prévio. Complicação relatada em apenas 2,5% dos casos, todas classificadas como menores (nenhuma complicação significativa). O rendimento diagnóstico depende do tempo total de uso do dispositivo — sintomas muito espaçados podem exigir monitorização por anos até a captura do evento, o que também é uma vantagem do método frente ao Holter de curta duração.",
+    "source_refs": [
+      "Agudo-Montore P, Stuart G, Wilson D, Spentzou G, Sidiqqui R, González-Corcia C. Role of new generation implantable loop recorders in managing undiagnosed pediatric cardiac symptoms. Eur J Pediatr. 2024;183(10):4553-4561. PMID: 39158593. PMCID: PMC11413195. doi:10.1007/s00431-024-05728-8"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "monitor de eventos implantável",
+      "looper",
+      "síncope pediátrica",
+      "palpitação",
+      "criança",
+      "adolescente",
+      "arritmia pediátrica"
+    ]
+  },
+  {
+    "slug": "eletrocardiograma-de-triagem-pre-participacao-esportiva-em-criancas-e-adolescentes",
+    "name": "Eletrocardiograma de triagem pré-participação esportiva em crianças e adolescentes",
+    "category": "metodo_grafico",
+    "theme": "Cardiologia pediátrica",
+    "what_it_measures": "Eletrocardiograma de repouso de 12 derivações usado como ferramenta de rastreio cardiovascular pré-participação em atletas jovens competitivos, com o objetivo de identificar, antes do início ou da continuidade da prática esportiva, padrões sugestivos de cardiopatia associada a morte súbita cardíaca durante o esforço (cardiomiopatia hipertrófica, canalopatias como síndrome do QT longo e Brugada, displasia arritmogênica de ventrículo direito, entre outras), distinguindo-os das adaptações eletrocardiográficas fisiológicas do \"coração de atleta\" relacionadas ao treinamento.",
+    "reference_range": "Não se aplica valor de referência numérico único. Os documentos de consenso internacional (Corrado et al. 2010; Sharma/Drezner et al. 2017) classificam os achados em três categorias: alterações relacionadas ao treinamento (não exigem investigação adicional), achados limítrofes isolados (em geral não exigem investigação se isolados, sem outros achados associados) e achados anormais (exigem investigação adicional dirigida antes da liberação para o esporte). Os limiares numéricos específicos de voltagem, duração e morfologia por achado individual não foram conferidos linha a linha no texto integral desta sessão e não são reproduzidos aqui — VERIFICAÇÃO HUMANA NECESSÁRIA para quem for aplicar critério específico à beira do consultório; consultar o documento original.",
+    "indications": "Avaliação cardiovascular pré-participação em atleta competitivo jovem — isolada, em sistemas que adotam o ECG como parte obrigatória do rastreio (modelo europeu/internacional), ou como exame complementar a uma história e exame físico dirigidos que identifiquem sinais de alarme (modelo da AHA/ACC nos Estados Unidos, que não recomenda ECG obrigatório em rastreio universal da faixa de 12 a 25 anos).",
+    "interpretation": "Dois documentos de referência coexistem e não convergem totalmente sobre o papel do ECG no rastreio pré-participação: (1) o consenso internacional de 2017 (reunião de especialistas em Seattle, fevereiro de 2015, atualizando as recomendações europeias de Corrado et al. 2010) propõe critérios modernos de interpretação para distinguir remodelamento fisiológico do atleta de achados patológicos preditivos de morte súbita, e é a base usada por programas que incluem o ECG no rastreio; (2) a diretriz científica da American Heart Association/American College of Cardiology de 2014 sobre rastreio cardiovascular em jovens de 12 a 25 anos NÃO recomenda a inclusão obrigatória do ECG no rastreio universal desta faixa etária, priorizando o modelo de história e exame físico dirigidos (14 elementos), citando preocupação com a relação custo-efetividade e a taxa de resultados falso-positivos em programas de rastreio de larga escala.",
+    "limitations": "A divergência entre o modelo internacional (ECG incluído) e o modelo americano (ECG não obrigatório) reflete incerteza real sobre a relação custo-benefício do ECG em rastreio populacional de grande escala — não é um erro de um dos dois lados, e a escolha do protocolo depende do sistema de saúde e do contexto local. Critérios de interpretação específicos por achado eletrocardiográfico exigem consulta ao documento original completo; este registro descreve o enquadramento geral, não a tabela integral de critérios.",
+    "source_refs": [
+      "Sharma S, Drezner JA, Baggish A, et al. International Recommendations for Electrocardiographic Interpretation in Athletes. J Am Coll Cardiol. 2017;69(8):1057-1075. PMID: 28231933. doi:10.1016/j.jacc.2017.01.015 (publicado simultaneamente em Br J Sports Med. 2017;51(9):704-731, PMID 28258178, e Eur Heart J. 2018;39(16):1466-1480, PMID 28329355)",
+      "Corrado D, Pelliccia A, Heidbuchel H, et al. Recommendations for interpretation of 12-lead electrocardiogram in the athlete. Eur Heart J. 2010;31(2):243-259. PMID: 19933514. doi:10.1093/eurheartj/ehp473",
+      "Maron BJ, Friedman RA, Kligfield P, et al. Assessment of the 12-lead electrocardiogram as a screening test for detection of cardiovascular disease in healthy general populations of young people (12-25 years of age): a scientific statement from the American Heart Association and the American College of Cardiology. J Am Coll Cardiol. 2014;64(14):1479-1514. PMID: 25234655. doi:10.1016/j.jacc.2014.05.006"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ecg",
+      "triagem pré-participação esportiva",
+      "atleta jovem",
+      "morte súbita cardíaca",
+      "criança",
+      "adolescente",
+      "coração de atleta"
+    ]
   }
 ]
