@@ -4,7 +4,7 @@ slug: "sindrome-de-liberacao-de-citocinas-por-car-t-graduacao-astct-choque-distr
 theme: "Cardio-oncologia"
 kind: protocolo
 review_status: revisado
-source_refs: ["Lee DW, Santomasso BD, Locke FL, et al. ASTCT Consensus Grading for Cytokine Release Syndrome and Neurologic Toxicity Associated with Immune Effector Cells. Biol Blood Marrow Transplant. 2019;25(4):625-638. PMID 30592986", "Alvi RM, Frigault MJ, Fradley MG, et al. Cardiovascular Events Among Adults Treated With Chimeric Antigen Receptor T-Cells (CAR-T). J Am Coll Cardiol. 2019;74(25):3099-3108. PMID 31856966", "Le RQ, Li L, Yuan W, et al. FDA Approval Summary: Tocilizumab for Treatment of Chimeric Antigen Receptor T Cell-Induced Severe or Life-Threatening Cytokine Release Syndrome. Oncologist. 2018;23(8):943-947. PMID 29622697", "Gill J. Cardiovascular Toxicities with Chimeric Antigen Receptor T-cell Therapy. Curr Cardiol Rev. 2023;19(1):e230622206353. PMID 35747980", "Maleki S, Esmaeili Z, Seighali N, et al. Cardiac adverse events after Chimeric Antigen Receptor (CAR) T cell therapies: an updated systematic review and meta-analysis. Cardio-oncology (Lond). 2024;10(1):52. PMID 39164789"]
+source_refs: ["Lee DW, Santomasso BD, Locke FL, et al. ASTCT Consensus Grading for Cytokine Release Syndrome and Neurologic Toxicity Associated with Immune Effector Cells. Biol Blood Marrow Transplant. 2019;25(4):625-638. PMID 30592986", "Alvi RM, Frigault MJ, Fradley MG, et al. Cardiovascular Events Among Adults Treated With Chimeric Antigen Receptor T-Cells (CAR-T). J Am Coll Cardiol. 2019;74(25):3099-3108. PMID 31856966", "Le RQ, Li L, Yuan W, et al. FDA Approval Summary: Tocilizumab for Treatment of Chimeric Antigen Receptor T Cell-Induced Severe or Life-Threatening Cytokine Release Syndrome. Oncologist. 2018;23(8):943-947. PMID 29622697", "Gill J. Cardiovascular Toxicities with Chimeric Antigen Receptor T-cell Therapy. Curr Cardiol Rev. 2023;19(1):e230622206353. PMID 35747980", "Maleki S, Esmaeili Z, Seighali N, et al. Cardiac adverse events after Chimeric Antigen Receptor (CAR) T cell therapies: an updated systematic review and meta-analysis. Cardio-oncology (Lond). 2024;10(1):52. PMID 39164789", "Camilli M, Viscovo M, Felici T, et al. Inflammation and acute cardiotoxicity in adult hematological patients treated with CAR-T cells: results from a pilot proof-of-concept study. Cardio-oncology (Lond). 2024;10(1):18. PMID 38532515. DOI 10.1186/s40959-024-00218-0"]
 ---
 
 # Síndrome de Liberação de Citocinas por CAR-T: Graduação ASTCT, Choque Distributivo e Tocilizumabe
@@ -65,12 +65,29 @@ tempo até normalização. A revisão de Gill (PMID 35747980) afirma, em termos 
 "as cardiotoxicidades podem ser transitórias e reversíveis em pacientes mais jovens com poucas
 comorbidades cardíacas; entretanto, podem ser fatais em pacientes mais velhos com fatores de risco
 cardíaco significativos" — sem quantificar a proporção de reversão completa.
-**VERIFICAÇÃO HUMANA NECESSÁRIA**: não foi localizada, nesta sessão, uma taxa numérica específica
-de reversibilidade (percentual de pacientes com recuperação completa da FEVE em prazo definido)
-para a disfunção miocárdica associada à SLC por CAR-T. A afirmação qualitativa acima (idade e
-comorbidade como moduladores de reversibilidade vs. desfecho fatal) está corretamente atribuída à
-fonte; um número específico de taxa de recuperação exigiria fonte adicional não encontrada.
-- **fonte**: Gill J, Curr Cardiol Rev 2023 (PMID 35747980); Alvi RM et al., JACC 2019 (PMID 31856966)
+
+Uma busca dedicada nesta revisão (PubMed/PMC, cruzando CAR-T, cardiotoxicidade, FEVE e recuperação)
+localizou o único estudo prospectivo desenhado especificamente para acompanhar a trajetória
+temporal da função cardíaca após CAR-T — o estudo CARdio-Tox (Camilli M et al., Cardio-oncology
+2024, PMID 38532515), que reavaliou os pacientes por ecocardiograma no basal, no dia 7 e no dia 30
+após a infusão. **Mesmo neste estudo dedicado, os autores não relatam um percentual de pacientes
+com recuperação completa da FEVE** — o achado relatado é qualitativo e vai na direção oposta ao
+tom otimista da revisão de Gill: a reavaliação aos 30 dias mostrou, nas palavras dos autores,
+"recuperação incompleta dos parâmetros sistólicos e diastólicos" (FEVE e strain longitudinal
+global), levantando a possibilidade de que o dano miocárdico agudo relacionado à SLC **nem sempre
+se resolva** no seguimento de curto prazo estudado. Os próprios autores registram como limitação
+que um seguimento mais longo, fora do escopo daquele estudo-piloto, seria necessário para
+esclarecer o efeito da cardiotoxicidade aguda sobre desfechos clínicos tardios.
+
+Em resumo: continua sem confirmação uma **taxa numérica específica de reversibilidade** (percentual
+de pacientes com recuperação completa da FEVE em prazo definido) para a disfunção miocárdica
+associada à SLC por CAR-T — não por falta de busca, mas porque o único estudo primário que mediu
+a trajetória temporal da FEVE não reportou esse percentual, e descreve a recuperação observada como
+incompleta, não completa. Este ponto específico segue sinalizado como
+**VERIFICAÇÃO HUMANA NECESSÁRIA**: um percentual de recuperação completa da FEVE, se existir em
+alguma fonte primária, não foi localizado nesta revisão nem na anterior.
+- **fonte**: Gill J, Curr Cardiol Rev 2023 (PMID 35747980); Alvi RM et al., JACC 2019 (PMID
+  31856966); Camilli M et al., Cardio-oncology (Lond) 2024 (PMID 38532515)
 
 ## Graduação de gravidade — sistema de consenso ASTCT (2019)
 O sistema de graduação de referência, que substituiu escalas anteriores (Lee 2014, CTCAE, Penn), foi
@@ -145,6 +162,9 @@ Recomendações convergentes das fontes revisadas:
 3. O atraso na administração do tocilizumabe tem relação direta e mensurável com o risco
    cardiovascular (aumento de 1,7× por 12h de atraso) — a decisão de tratar a SLC precocemente é
    também uma decisão de proteção cardiovascular, não só de controle da síndrome inflamatória.
-4. A reversibilidade da disfunção miocárdica não está quantificada na literatura revisada nesta
-   sessão — a mensagem qualitativa disponível é que idade avançada e comorbidade cardíaca prévia
-   pendem para desfecho mais grave/fatal, e não para reversão espontânea garantida.
+4. A reversibilidade da disfunção miocárdica não está quantificada na literatura revisada — nem
+   mesmo o único estudo prospectivo com reavaliação ecocardiográfica seriada (basal, dia 7, dia 30;
+   CARdio-Tox, PMID 38532515) reporta um percentual de recuperação completa da FEVE, e o achado
+   qualitativo desse estudo é de **recuperação incompleta** aos 30 dias — em vez de reversibilidade
+   garantida, a mensagem que os dados sustentam é que idade avançada e comorbidade cardíaca prévia
+   pendem para desfecho mais grave/fatal, sem garantia de reversão espontânea no curto prazo.
