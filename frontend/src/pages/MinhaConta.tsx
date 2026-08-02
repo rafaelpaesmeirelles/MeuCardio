@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { api, ApiError, type Usuario } from "../lib/api";
 import { useAuth } from "../lib/auth";
 
-const CONSELHOS = ["CRM", "COREN", "CRF", "CREFITO", "CRN", "CRP", "CRO", "Outro"];
+const CONSELHOS = ["CRM", "COREN", "CRF", "CRBM", "CREFITO", "CRN", "CRP", "CRO", "Outro"];
 const UFS = [
   "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG",
   "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO",
@@ -385,6 +385,65 @@ function LogoDocumento({ perfil, aoTrocar }: { perfil: Usuario; aoTrocar: (u: Us
   );
 }
 
+// Catálogo de métodos de assinatura de documento (Tarefa 4) — GET
+// /assinatura/provedores. Mesmo tipo usado em Receituario.tsx/Templates.tsx.
+type Provedor = { codigo: string; nome: string; nivel: string; familia: string; disponivel: boolean; motivo: string | null };
+
+/** Preferência de MÉTODO DE ASSINATURA DIGITAL do documento clínico — não
+ * confundir com o componente `Assinatura` abaixo, que é a assinatura
+ * COMERCIAL (billing) da Corvia. Só define o valor inicial sugerido no
+ * `<select>` da tela de emissão (Tarefa 4); o médico sempre pode trocar a
+ * cada receita/documento. */
+function PreferenciaAssinaturaDigital({ perfil, aoSalvar }: { perfil: Usuario; aoSalvar: (u: Usuario) => void }) {
+  const [provedores, setProvedores] = useState<Provedor[] | null>(null);
+  const [metodo, setMetodo] = useState(perfil.assinatura_metodo_preferido ?? "MANUAL");
+  const [salvando, setSalvando] = useState(false);
+  const [erro, setErro] = useState("");
+  const [salvo, setSalvo] = useState(false);
+
+  useEffect(() => { api.get<Provedor[]>("/assinatura/provedores").then(setProvedores).catch(() => {}); }, []);
+
+  async function salvar() {
+    setSalvando(true);
+    setErro("");
+    setSalvo(false);
+    try {
+      aoSalvar(await api.patch<Usuario>("/auth/me/assinatura", { metodo }));
+      setSalvo(true);
+    } catch (e) {
+      setErro(e instanceof ApiError ? e.message : "Não foi possível salvar a preferência.");
+    } finally {
+      setSalvando(false);
+    }
+  }
+
+  return (
+    <div className="cartao">
+      <h2 style={{ margin: "0 0 0.2rem" }}>Método de assinatura padrão</h2>
+      <p style={{ margin: 0, fontSize: "0.82rem", color: "var(--texto-secundario)" }}>
+        Sugestão inicial ao emitir receita ou documento — você ainda escolhe (ou troca) a cada um.
+      </p>
+
+      <select style={{ marginTop: "0.6rem" }} value={metodo} onChange={(e) => setMetodo(e.target.value)}>
+        {(provedores ?? []).map((p) => (
+          <option key={p.codigo} value={p.codigo} disabled={!p.disponivel}>
+            {p.nome}{!p.disponivel ? " — indisponível" : ""}
+          </option>
+        ))}
+      </select>
+
+      {erro && <p role="alert" style={{ color: "var(--alerta)", fontSize: "0.84rem" }}>{erro}</p>}
+      {salvo && !erro && <p style={{ color: "var(--sucesso)", fontSize: "0.84rem" }}>Preferência salva.</p>}
+
+      <div style={{ marginTop: "0.6rem" }}>
+        <button className="botao botao--secundario" onClick={salvar} disabled={salvando}>
+          {salvando ? "Salvando…" : "Salvar preferência"}
+        </button>
+      </div>
+    </div>
+  );
+}
+
 type Fatura = {
   id: string;
   numero: string | null;
@@ -657,6 +716,13 @@ export default function MinhaConta() {
         <LogoDocumento
           perfil={perfil}
           aoTrocar={(u) => {
+            setPerfil(u);
+            recarregar();
+          }}
+        />
+        <PreferenciaAssinaturaDigital
+          perfil={perfil}
+          aoSalvar={(u) => {
             setPerfil(u);
             recarregar();
           }}

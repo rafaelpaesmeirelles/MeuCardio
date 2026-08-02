@@ -1,0 +1,270 @@
+"""Testes da Tarefa 4 — catálogo de assinatura digital e persistência do PDF.
+
+Cobre os dois caminhos de emissão (receituário e documento gerado a partir
+de modelo): o método "MANUAL" tem que funcionar de ponta a ponta e produzir
+PDF determinístico (mesmo hash em downloads repetidos); qualquer outro
+método do catálogo, sem credencial configurada, tem que recusar com 409 e
+`nada_foi_simulado: true` — nunca assinar de mentira.
+"""
+import hashlib
+
+import pytest
+from sqlalchemy import text
+
+from app.models.assinatura import DocumentoEmitido
+from app.models.audit import AuditLog
+from app.models.receituario import PrescriptionType
+
+# Tabelas desta suíte, além das já limpas por `_banco_limpo` em conftest.py —
+# aquela suíte é do CorvIA Mail e não mexe em conteúdo clínico de propósito.
+_TABELAS_ASSINATURA = (
+    "documentos_emitidos", "prescription_documents", "prescription_recipients",
+    "prescriptions", "generated_documents", "document_templates", "prescription_types",
+)
+
+
+@pytest.fixture(autouse=True)
+def _limpar_e_semear(db):
+    db.execute(text(f"TRUNCATE {', '.join(_TABELAS_ASSINATURA)} RESTART IDENTITY CASCADE"))
+    # Seed mínimo: "COMUM" ativo — o único tipo com layout de PDF reproduzido
+    # hoje — e "RCE" inativo, pra testar a correção manual de tipo (Tarefa 4)
+    # sem depender do SNCR/layout real.
+    db.add(PrescriptionType(codigo="COMUM", nome="Receituário comum", ativo=True))
+    db.add(PrescriptionType(codigo="RCE", nome="Receita de Controle Especial", ativo=False))
+    db.commit()
+    yield
+
+
+def _autorizado(role="admin"):
+    """Admin pula `assinante_ativo` (ver core/security.py) sem precisar
+    montar uma Subscription — o que importa aqui é a emissão, não billing."""
+    return role
+
+
+class TestCatalogoDeProvedores:
+    def test_lista_14_provedores_so_manual_disponivel(self, client, criar_usuario):
+        _, token = criar_usuario(role="admin")
+        r = client.get("/api/assinatura/provedores", headers={"Authorization": f"Bearer {token}"})
+        assert r.status_code == 200
+        provedores = r.json()
+        assert len(provedores) == 14
+        por_codigo = {p["codigo"]: p for p in provedores}
+        assert por_codigo["MANUAL"]["disponivel"] is True
+        assert por_codigo["MANUAL"]["motivo"] is None
+        for codigo, p in por_codigo.items():
+            if codigo == "MANUAL":
+                continue
+            assert p["disponivel"] is False, codigo
+            assert p["motivo"], codigo
+
+
+def _criar_e_revisar_receita(client, token, itens=None):
+    itens = itens or [{"descricao": "Dipirona 500mg", "posologia": "1 cp a cada 6h"}]
+    r = client.post(
+        "/api/receituario",
+        headers={"Authorization": f"Bearer {token}"},
+        json={"destinatario": {"nome": "Paciente de Teste"}, "itens": itens},
+    )
+    assert r.status_code == 201, r.text
+    doc_id = r.json()["documentos"][0]["id"]
+    r = client.post(
+        f"/api/receituario/documentos/{doc_id}/revisar",
+        headers={"Authorization": f"Bearer {token}"},
+        json={"confirmar": True},
+    )
+    assert r.status_code == 200, r.text
+    assert r.json()["status"] == "revisado"
+    return doc_id
+
+
+class TestCorrigirTipo:
+    """O médico não é obrigado a aceitar a classificação automática — pode
+    corrigir pra outro tipo do catálogo na revisão, com motivo obrigatório
+    (ver docstring de `revisar` em `api/receituario.py`)."""
+
+    def _criar_documento(self, client, token):
+        r = client.post(
+            "/api/receituario",
+            headers={"Authorization": f"Bearer {token}"},
+            json={"destinatario": {"nome": "Paciente de Teste"},
+                  "itens": [{"descricao": "Dipirona 500mg"}]},
+        )
+        assert r.status_code == 201, r.text
+        return r.json()["documentos"][0]["id"]
+
+    def test_corrigir_para_rce_exige_motivo(self, client, criar_usuario):
+        _, token = criar_usuario(role="admin")
+        doc_id = self._criar_documento(client, token)
+
+        r = client.post(
+            f"/api/receituario/documentos/{doc_id}/revisar",
+            headers={"Authorization": f"Bearer {token}"},
+            json={"confirmar": True, "corrigir_para": "RCE"},
+        )
+        assert r.status_code == 422, r.text
+
+    def test_corrigir_para_rce_com_motivo_funciona(self, client, criar_usuario):
+        _, token = criar_usuario(role="admin")
+        doc_id = self._criar_documento(client, token)
+
+        r = client.post(
+            f"/api/receituario/documentos/{doc_id}/revisar",
+            headers={"Authorization": f"Bearer {token}"},
+            json={"confirmar": True, "corrigir_para": "RCE", "motivo": "É anabolizante, não é comum."},
+        )
+        assert r.status_code == 200, r.text
+        corpo = r.json()
+        assert corpo["tipo"] == "RCE"
+        assert corpo["tipo_ativo"] is False
+        assert corpo["classificacao_corrigida_de"] == "COMUM"
+        assert corpo["motivo_correcao"] == "É anabolizante, não é comum."
+
+    def test_corrigir_para_tipo_desconhecido_devolve_422(self, client, criar_usuario):
+        _, token = criar_usuario(role="admin")
+        doc_id = self._criar_documento(client, token)
+
+        r = client.post(
+            f"/api/receituario/documentos/{doc_id}/revisar",
+            headers={"Authorization": f"Bearer {token}"},
+            json={"confirmar": True, "corrigir_para": "NAO_EXISTE", "motivo": "teste"},
+        )
+        assert r.status_code == 422
+
+    def test_bloqueio_de_tipo_inativo_nao_culpa_assinatura_digital(self, client, criar_usuario):
+        """A mensagem de bloqueio é regressão em potencial: antes da Tarefa 4
+        ela citava "assinatura digital" como pendência — ficou errado desde
+        que o método MANUAL passou a funcionar pra qualquer tipo."""
+        _, token = criar_usuario(role="admin")
+        doc_id = self._criar_documento(client, token)
+        client.post(
+            f"/api/receituario/documentos/{doc_id}/revisar",
+            headers={"Authorization": f"Bearer {token}"},
+            json={"confirmar": True, "corrigir_para": "RCE", "motivo": "teste"},
+        )
+
+        r = client.post(
+            f"/api/receituario/documentos/{doc_id}/emitir",
+            headers={"Authorization": f"Bearer {token}"},
+            json={"metodo": "MANUAL"},
+        )
+        assert r.status_code == 409, r.text
+        bloqueios = " ".join(r.json()["detail"]["bloqueios"]).lower()
+        assert "sncr" in bloqueios
+        assert "não depende mais da assinatura digital" in bloqueios
+
+
+class TestEmitirReceituario:
+    def test_emitir_manual_produz_pdf_e_persiste(self, client, criar_usuario, db):
+        _, token = criar_usuario(role="admin")
+        doc_id = _criar_e_revisar_receita(client, token)
+
+        r = client.post(
+            f"/api/receituario/documentos/{doc_id}/emitir",
+            headers={"Authorization": f"Bearer {token}"},
+            json={"metodo": "MANUAL"},
+        )
+        assert r.status_code == 200, r.text
+        assert r.content.startswith(b"%PDF")
+
+        registro = db.query(DocumentoEmitido).filter(
+            DocumentoEmitido.tipo == "prescription_document", DocumentoEmitido.referencia_id == doc_id,
+        ).one()
+        assert registro.metodo == "MANUAL"
+        assert registro.nivel == "nenhuma"
+        assert registro.sha256 == hashlib.sha256(r.content).hexdigest()
+        assert registro.assinado_em is None  # MANUAL não assina
+
+        auditoria = db.query(AuditLog).filter(
+            AuditLog.entity == "prescription_document", AuditLog.entity_id == str(doc_id),
+            AuditLog.action == "emitir_documento_receita",
+        ).one()
+        assert auditoria.detail["metodo"] == "MANUAL"
+        assert auditoria.detail["sha256"] == registro.sha256
+
+    def test_emitir_provedor_indisponivel_recusa_sem_gerar_nada(self, client, criar_usuario, db):
+        _, token = criar_usuario(role="admin")
+        doc_id = _criar_e_revisar_receita(client, token)
+
+        r = client.post(
+            f"/api/receituario/documentos/{doc_id}/emitir",
+            headers={"Authorization": f"Bearer {token}"},
+            json={"metodo": "VIDAAS"},
+        )
+        assert r.status_code == 409, r.text
+        detail = r.json()["detail"]
+        assert detail["nada_foi_simulado"] is True
+        assert any("VIDaaS" in b or "VIDAAS" in b for b in detail["bloqueios"])
+
+        assert db.query(DocumentoEmitido).count() == 0
+
+    def test_emitir_metodo_desconhecido_devolve_422(self, client, criar_usuario):
+        _, token = criar_usuario(role="admin")
+        doc_id = _criar_e_revisar_receita(client, token)
+
+        r = client.post(
+            f"/api/receituario/documentos/{doc_id}/emitir",
+            headers={"Authorization": f"Bearer {token}"},
+            json={"metodo": "NAO_EXISTE"},
+        )
+        assert r.status_code == 422
+
+
+class TestGerarDocumento:
+    def _criar_template_e_gerar(self, client, token):
+        r = client.post(
+            "/api/document-templates",
+            headers={"Authorization": f"Bearer {token}"},
+            json={"title": "Atestado padrão", "doc_type": "atestado", "body": "Atesto que o paciente precisa de repouso."},
+        )
+        assert r.status_code == 201, r.text
+        template_id = r.json()["id"]
+
+        r = client.post(
+            "/api/document-templates/gerar",
+            headers={"Authorization": f"Bearer {token}"},
+            json={"template_id": template_id, "variables": {}},
+        )
+        assert r.status_code == 201, r.text
+        return r.json()["id"]
+
+    def test_primeiro_download_manual_emite_e_persiste_hash_estavel(self, client, criar_usuario, db):
+        _, token = criar_usuario(role="admin")
+        gerado_id = self._criar_template_e_gerar(client, token)
+
+        r1 = client.get(
+            f"/api/document-templates/gerados/{gerado_id}/pdf?metodo=MANUAL",
+            headers={"Authorization": f"Bearer {token}"},
+        )
+        assert r1.status_code == 200, r1.text
+        assert r1.content.startswith(b"%PDF")
+
+        # Segundo download: já emitido — serve os mesmos bytes, sem levar em
+        # conta um `metodo` diferente (o método já foi decidido no primeiro).
+        r2 = client.get(
+            f"/api/document-templates/gerados/{gerado_id}/pdf?metodo=VIDAAS",
+            headers={"Authorization": f"Bearer {token}"},
+        )
+        assert r2.status_code == 200
+        assert hashlib.sha256(r2.content).hexdigest() == hashlib.sha256(r1.content).hexdigest()
+
+        assert db.query(DocumentoEmitido).filter(
+            DocumentoEmitido.tipo == "generated_document", DocumentoEmitido.referencia_id == gerado_id,
+        ).count() == 1
+
+        auditoria = db.query(AuditLog).filter(
+            AuditLog.entity == "generated_document", AuditLog.entity_id == str(gerado_id),
+        ).all()
+        assert len(auditoria) == 1  # só o primeiro download audita — o segundo só leu do cofre
+        assert auditoria[0].detail["metodo"] == "MANUAL"
+
+    def test_primeiro_download_provedor_indisponivel_recusa(self, client, criar_usuario, db):
+        _, token = criar_usuario(role="admin")
+        gerado_id = self._criar_template_e_gerar(client, token)
+
+        r = client.get(
+            f"/api/document-templates/gerados/{gerado_id}/pdf?metodo=CLICKSIGN",
+            headers={"Authorization": f"Bearer {token}"},
+        )
+        assert r.status_code == 409, r.text
+        assert r.json()["detail"]["nada_foi_simulado"] is True
+        assert db.query(DocumentoEmitido).count() == 0

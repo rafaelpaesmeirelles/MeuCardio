@@ -71,6 +71,12 @@ class GeneratedDocument(Base):
     # campo homônimo em PrescriptionDocument: gravado na geração, não
     # recalculado depois, para o PDF sair idêntico toda vez que for reaberto.
     endereco_exibido: Mapped[str | None] = mapped_column(String(20), nullable=True)
+    # Acrescentado em 02/08/2026 (Tarefa 4 — arquivo/recriar): os valores que
+    # preencheram `{{variaveis}}` na geração. Não existia antes porque só o
+    # texto final (`rendered_body`) importava; guardar isto é o que permite
+    # "recriar baseado neste" pré-preencher o formulário em vez de começar
+    # vazio. Nulo/`{}` para documento gerado antes desta tarefa.
+    variables: Mapped[dict] = mapped_column(JSONB, default=dict, nullable=True)
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
     )

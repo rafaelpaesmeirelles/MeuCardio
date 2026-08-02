@@ -58,11 +58,24 @@ export const apiEmail = {
     });
   },
 
+  /** Fora de `request()` de propósito: login nunca tem token prévio pra
+   *  expirar, então um 401 aqui é sempre "endereço ou senha incorretos" (ou,
+   *  no caso mais comum de quem nunca ativou a caixa, "conta inexistente")
+   *  — nunca "sessão expirada". Roteado pelo `request()` genérico, a
+   *  mensagem real do backend (`detail`) era descartada e trocada por
+   *  "Sessão da caixa de e-mail expirada", que confunde quem está entrando
+   *  pela primeira vez tanto quanto quem de fato só errou a senha. */
   async entrar(endereco: string, senha: string) {
-    const dados = await request<{ access_token: string }>("/email/entrar", {
+    const res = await fetch(`${BASE}/email/entrar`, {
       method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ endereco, senha }),
     });
+    if (!res.ok) {
+      const detail = await res.json().catch(() => null);
+      throw new ApiEmailError(res.status, detail?.detail ?? "Não foi possível entrar.");
+    }
+    const dados = (await res.json()) as { access_token: string };
     tokenEmail.set(dados.access_token);
     return dados;
   },

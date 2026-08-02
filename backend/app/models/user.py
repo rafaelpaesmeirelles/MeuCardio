@@ -86,3 +86,9 @@ class User(Base):
     # online" do admin (Tarefa de 31/07/2026). "Online" é derivado no momento
     # da consulta (últimos 5 minutos), não é um booleano gravado.
     last_seen_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+
+    # Método de assinatura preferido do médico (Tarefa 4) — código do
+    # catálogo em `services/assinatura/catalogo.py` (ex.: "MANUAL", "VIDAAS").
+    # Só o DEFAULT sugerido na tela de emissão; o médico ainda escolhe (ou
+    # troca) a cada documento. Nulo = usa `settings.assinatura_metodo_padrao`.
+    assinatura_metodo_preferido: Mapped[str | None] = mapped_column(String(20), nullable=True)

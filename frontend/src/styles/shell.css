@@ -713,6 +713,10 @@
   border-bottom: 2px solid var(--primaria);
 }
 .doc-cabecalho__profissional { display: flex; flex-direction: column; gap: 0.1rem; }
+/* Logo pessoal/do consultório (Tarefa 4) — junto do nome, não em vez dele:
+   o documento é do médico, a logo é só identificação de origem, mesma
+   hierarquia que o comentário da função já explica. */
+.doc-cabecalho__logo-pessoal { width: 100px; height: auto; margin-bottom: 0.3rem; }
 .doc-cabecalho__nome { font-size: 1.05rem; color: var(--primaria); }
 .doc-cabecalho__registro { font-size: 0.88rem; }
 .doc-cabecalho__especialidade { font-size: 0.82rem; color: var(--texto-secundario); }

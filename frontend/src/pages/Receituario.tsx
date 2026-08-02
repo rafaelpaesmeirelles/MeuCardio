@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { api, ApiError } from "../lib/api";
-import { Carregando, Erro } from "../components/Estado";
+import { useAuth } from "../lib/auth";
+import { Carregando, Erro, Vazio } from "../components/Estado";
 
 type Farmaco = { slug: string; nome: string };
 type Item = { drug_slug?: string; descricao: string; apresentacao: string; posologia: string; orientacao: string };
@@ -24,6 +25,36 @@ type Documento = {
 };
 type ReceituarioCriado = { prescricao_id: number; exige_revisao: boolean; documentos: Documento[] };
 
+// Arquivo/histórico (Tarefa 4, pedido do Rafael de 02/08/2026) — GET
+// /receituario (lista) e GET /receituario/{id} (detalhe, usado tanto pra
+// "Abrir" quanto pra "Recriar baseado nesta").
+type HistoricoDocResumo = { tipo: string; tipo_nome: string | null; status: string };
+type HistoricoItem = {
+  prescricao_id: number; criado_em: string; paciente_nome: string | null;
+  documentos: HistoricoDocResumo[];
+};
+type ItemOriginal = {
+  drug_slug: string | null; descricao: string; apresentacao: string;
+  posologia: string; orientacao: string;
+};
+type PrescricaoDetalhe = {
+  prescricao_id: number;
+  destinatario: { nome: string | null; endereco: string | null; documento: string | null };
+  observacoes: string | null;
+  itens_originais: ItemOriginal[];
+  documentos: Documento[];
+};
+
+// Catálogo de métodos de assinatura (Tarefa 4) — GET /assinatura/provedores.
+// "MANUAL" é o único com disponivel=true hoje; os demais aparecem desabilitados
+// com o motivo, no mesmo espírito de "recusa e explica" que o tipo_ativo já usa.
+type Provedor = { codigo: string; nome: string; nivel: string; familia: string; disponivel: boolean; motivo: string | null };
+
+// GET /receituario/tipos — usado pra deixar o médico escolher/corrigir o
+// tipo do documento na revisão (comum ou controle especial), em vez de só
+// aceitar a classificação automática.
+type TipoReceituario = { codigo: string; nome: string; ativo: boolean };
+
 const STATUS_RÓTULO: Record<string, string> = {
   rascunho: "Rascunho", revisado: "Revisado", emitido: "Emitido",
 };
@@ -39,12 +70,22 @@ function baixarBlob(blob: Blob, nomeArquivo: string) {
 
 /** Um documento já criado (PrescriptionDocument): revisar, emitir, enviar
  * por e-mail. Emissão só funciona para tipo COMUM hoje — os demais (NRA,
- * RCE etc.) esperam o SNCR e a assinatura digital, e a própria rota recusa
+ * RCE etc.) esperam o SNCR e o layout oficial, e a própria rota recusa
  * com explicação em vez de simular. */
-function CartaoDocumento({ doc, onAtualizado }: { doc: Documento; onAtualizado: (d: Documento) => void }) {
+function CartaoDocumento({ doc, provedores, tipos, onAtualizado }: {
+  doc: Documento; provedores: Provedor[] | null; tipos: TipoReceituario[] | null;
+  onAtualizado: (d: Documento) => void;
+}) {
+  const { usuario } = useAuth();
   const [revisando, setRevisando] = useState(false);
   const [emitindo, setEmitindo] = useState(false);
   const [endereco, setEndereco] = useState<"" | "residencial" | "profissional">("");
+  const [metodo, setMetodo] = useState(usuario?.assinatura_metodo_preferido ?? "MANUAL");
+  // Correção de tipo na revisão (comum ↔ controle especial): o médico não
+  // é obrigado a aceitar a classificação automática. `corrigirPara` começa
+  // igual a `doc.tipo` (sem correção) e só exige `motivo` quando muda.
+  const [corrigirPara, setCorrigirPara] = useState(doc.tipo);
+  const [motivoCorrecao, setMotivoCorrecao] = useState("");
   const [erro, setErro] = useState("");
   const [email, setEmail] = useState("");
   const [enviando, setEnviando] = useState(false);
@@ -54,7 +95,11 @@ function CartaoDocumento({ doc, onAtualizado }: { doc: Documento; onAtualizado: 
     setRevisando(true);
     setErro("");
     try {
-      const atualizado = await api.post<Documento>(`/receituario/documentos/${doc.id}/revisar`, { confirmar: true });
+      const corrigindo = corrigirPara !== doc.tipo;
+      const atualizado = await api.post<Documento>(`/receituario/documentos/${doc.id}/revisar`, {
+        confirmar: true,
+        ...(corrigindo ? { corrigir_para: corrigirPara, motivo: motivoCorrecao } : {}),
+      });
       onAtualizado(atualizado);
     } catch (e) {
       setErro(e instanceof ApiError ? e.message : "Não foi possível revisar.");
@@ -69,7 +114,7 @@ function CartaoDocumento({ doc, onAtualizado }: { doc: Documento; onAtualizado: 
     try {
       const blob = await api.blob(`/receituario/documentos/${doc.id}/emitir`, {
         method: "POST",
-        body: JSON.stringify({ endereco: endereco || null }),
+        body: JSON.stringify({ endereco: endereco || null, metodo }),
       });
       baixarBlob(blob, `receituario-${doc.id}.pdf`);
       onAtualizado({ ...doc, status: "emitido" });
@@ -102,10 +147,27 @@ function CartaoDocumento({ doc, onAtualizado }: { doc: Documento; onAtualizado: 
         <span className="eyebrow" style={{ margin: 0 }}>{STATUS_RÓTULO[doc.status] ?? doc.status}</span>
       </div>
 
+      {/* Sem isto, um item digitado manualmente (sem drug_slug — ver
+         "Busque na base ou digite livremente" no formulário) já ia pro
+         documento, mas o médico não tinha como conferir aqui que a
+         digitação foi capturada antes de revisar e emitir. */}
+      {doc.itens.length > 0 && (
+        <ul style={{ fontSize: "0.86rem", marginTop: "0.5rem", paddingLeft: "1.1rem" }}>
+          {doc.itens.map((it, i) => (
+            <li key={i}>
+              <strong>{it.descricao}</strong>
+              {it.apresentacao && ` — ${it.apresentacao}`}
+              {it.posologia && <span style={{ color: "var(--texto-secundario)" }}> · {it.posologia}</span>}
+            </li>
+          ))}
+        </ul>
+      )}
+
       {!doc.tipo_ativo && (
         <p style={{ fontSize: "0.86rem", marginTop: "0.4rem" }}>
-          Este tipo depende da integração com o SNCR (Anvisa, previsto até 30/09/2026) e da assinatura
-          digital — ainda não pode ser emitido.
+          Este tipo depende da integração com o SNCR (Anvisa, previsto até 30/09/2026) e do layout
+          oficial ainda não reproduzido — ainda não pode ser emitido. A assinatura digital (manual)
+          já funciona para qualquer tipo, não é mais o que falta aqui.
         </p>
       )}
 
@@ -128,12 +190,56 @@ function CartaoDocumento({ doc, onAtualizado }: { doc: Documento; onAtualizado: 
           <p className="eyebrow" style={{ margin: "0.3rem 0 0" }}>
             Preencha em Minha Conta antes, se ainda não tiver cadastrado.
           </p>
+
+          <label style={{ marginTop: "0.5rem" }}>Método de assinatura</label>
+          <select value={metodo} onChange={(e) => setMetodo(e.target.value)}>
+            {(provedores ?? []).map((p) => (
+              <option key={p.codigo} value={p.codigo} disabled={!p.disponivel}>
+                {p.nome}{!p.disponivel ? " — indisponível" : ""}
+              </option>
+            ))}
+          </select>
+          {(() => {
+            const escolhido = provedores?.find((p) => p.codigo === metodo);
+            if (!escolhido) return null;
+            if (!escolhido.disponivel) {
+              return <p style={{ color: "var(--alerta)", fontSize: "0.82rem", margin: "0.3rem 0 0" }}>{escolhido.motivo}</p>;
+            }
+            if (escolhido.nivel !== "qualificada" && escolhido.codigo !== "MANUAL") {
+              return (
+                <p style={{ color: "var(--alerta)", fontSize: "0.82rem", margin: "0.3rem 0 0" }}>
+                  Assinatura {escolhido.nivel === "avancada" ? "avançada" : escolhido.nivel} — sem presunção
+                  ICP-Brasil; a farmácia pode recusar receita assinada assim.
+                </p>
+              );
+            }
+            return null;
+          })()}
+        </div>
+      )}
+
+      {doc.status === "rascunho" && (
+        <div style={{ marginTop: "0.6rem" }}>
+          <label>Tipo de receita</label>
+          <select value={corrigirPara} onChange={(e) => setCorrigirPara(e.target.value)}>
+            {(tipos ?? []).map((t) => (
+              <option key={t.codigo} value={t.codigo}>{t.nome}{!t.ativo ? " (indisponível hoje)" : ""}</option>
+            ))}
+          </select>
+          {corrigirPara !== doc.tipo && (
+            <>
+              <label style={{ marginTop: "0.4rem" }}>Motivo da correção</label>
+              <input value={motivoCorrecao} onChange={(e) => setMotivoCorrecao(e.target.value)}
+                     placeholder="Por que este tipo é o correto, não o classificado automaticamente" />
+            </>
+          )}
         </div>
       )}
 
       <div style={{ display: "flex", gap: 8, marginTop: "0.6rem", flexWrap: "wrap" }}>
         {doc.status === "rascunho" && (
-          <button className="botao" onClick={revisar} disabled={revisando}>
+          <button className="botao" onClick={revisar}
+                  disabled={revisando || (corrigirPara !== doc.tipo && !motivoCorrecao.trim())}>
             {revisando ? "Revisando…" : "Confirmar revisão"}
           </button>
         )}
@@ -168,10 +274,77 @@ function CartaoDocumento({ doc, onAtualizado }: { doc: Documento; onAtualizado: 
   );
 }
 
+/** Arquivo de receituários já criados (Tarefa 4) — "Abrir" retoma um
+ * rascunho pra continuar revisando/emitindo; "Recriar baseado nesta"
+ * pré-preenche o formulário de uma receita NOVA com os dados desta, pro
+ * médico editar em vez de montar tudo de novo (retorno de paciente, refil). */
+function HistoricoReceituario({ onAbrir, onRecriar }: {
+  onAbrir: (d: PrescricaoDetalhe) => void; onRecriar: (d: PrescricaoDetalhe) => void;
+}) {
+  const [itens, setItens] = useState<HistoricoItem[] | null>(null);
+  const [erro, setErro] = useState("");
+  const [carregandoId, setCarregandoId] = useState<number | null>(null);
+
+  useEffect(() => {
+    api.get<HistoricoItem[]>("/receituario")
+      .then(setItens)
+      .catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível carregar o histórico."));
+  }, []);
+
+  async function abrir(id: number, acao: (d: PrescricaoDetalhe) => void) {
+    setCarregandoId(id);
+    setErro("");
+    try {
+      acao(await api.get<PrescricaoDetalhe>(`/receituario/${id}`));
+    } catch (e) {
+      setErro(e instanceof ApiError ? e.message : "Não foi possível abrir esta receita.");
+    } finally {
+      setCarregandoId(null);
+    }
+  }
+
+  if (erro) return <Erro mensagem={erro} />;
+  if (!itens) return <Carregando />;
+  if (itens.length === 0) return <Vazio titulo="Nenhuma receita criada ainda" acao="Crie a primeira na aba Nova receita." />;
+
+  return (
+    <div style={{ maxWidth: "72ch" }}>
+      {itens.map((it) => (
+        <div key={it.prescricao_id} className="cartao" style={{ marginBottom: "0.6rem" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+            <strong>{it.paciente_nome ?? "Paciente sem nome"}</strong>
+            <span className="eyebrow" style={{ margin: 0 }}>{new Date(it.criado_em).toLocaleString("pt-BR")}</span>
+          </div>
+          <p style={{ fontSize: "0.86rem", margin: "0.3rem 0 0", color: "var(--texto-secundario)" }}>
+            {it.documentos.map((d, i) => (
+              <span key={i}>
+                {i > 0 && " · "}{d.tipo_nome ?? d.tipo} ({STATUS_RÓTULO[d.status] ?? d.status})
+              </span>
+            ))}
+          </p>
+          <div style={{ display: "flex", gap: 8, marginTop: "0.5rem" }}>
+            <button className="botao botao--secundario" disabled={carregandoId === it.prescricao_id}
+                    onClick={() => abrir(it.prescricao_id, onAbrir)}>
+              {carregandoId === it.prescricao_id ? "Abrindo…" : "Abrir"}
+            </button>
+            <button className="botao botao--secundario" disabled={carregandoId === it.prescricao_id}
+                    onClick={() => abrir(it.prescricao_id, onRecriar)}>
+              Recriar baseado nesta
+            </button>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 const ITEM_VAZIO: Item = { descricao: "", apresentacao: "", posologia: "", orientacao: "" };
 
 export default function Receituario() {
+  const [aba, setAba] = useState<"nova" | "historico">("nova");
   const [farmacos, setFarmacos] = useState<Farmaco[] | null>(null);
+  const [provedores, setProvedores] = useState<Provedor[] | null>(null);
+  const [tipos, setTipos] = useState<TipoReceituario[] | null>(null);
   const [erroCarregar, setErroCarregar] = useState("");
 
   const [nome, setNome] = useState("");
@@ -191,6 +364,11 @@ export default function Receituario() {
     api.get<{ slug: string; generic_name: string }[]>("/drugs")
       .then((l) => setFarmacos(l.map((d) => ({ slug: d.slug, nome: d.generic_name }))))
       .catch((e) => setErroCarregar(e instanceof ApiError ? e.message : "Não foi possível carregar os medicamentos."));
+    // Falha em carregar o catálogo não impede a tela — CartaoDocumento cai
+    // para o `<select>` vazio e o default "MANUAL", que é o método que
+    // sempre funciona.
+    api.get<Provedor[]>("/assinatura/provedores").then(setProvedores).catch(() => {});
+    api.get<TipoReceituario[]>("/receituario/tipos").then(setTipos).catch(() => {});
   }, []);
 
   function atualizarItem(i: number, campo: keyof Item, valor: string) {
@@ -255,6 +433,41 @@ export default function Receituario() {
     setCriado((c) => c ? { ...c, documentos: c.documentos.map((x) => x.id === d.id ? d : x) } : c);
   }
 
+  // "Abrir" (histórico) — retoma uma receita já criada, pro médico continuar
+  // revisando/emitindo/baixando exatamente como se tivesse acabado de criar.
+  function abrirDoHistorico(d: PrescricaoDetalhe) {
+    setCriado({
+      prescricao_id: d.prescricao_id,
+      exige_revisao: d.documentos.some((doc) => doc.pendencias.length > 0),
+      documentos: d.documentos,
+    });
+    setAba("nova");
+  }
+
+  // "Recriar baseado nesta" (histórico) — pré-preenche o FORMULÁRIO de uma
+  // receita nova com os dados desta. Não reabre nada: o médico edita e
+  // clica "Criar receituário" como sempre, virando uma Prescription nova,
+  // independente da que serviu de base.
+  function recriarDoHistorico(d: PrescricaoDetalhe) {
+    setCriado(null);
+    setErro("");
+    setPrevia(null);
+    setNome(d.destinatario.nome ?? "");
+    setEndereco(d.destinatario.endereco ?? "");
+    setDocumento(d.destinatario.documento ?? "");
+    setObservacoes(d.observacoes ?? "");
+    const novosItens: Item[] = d.itens_originais.length > 0
+      ? d.itens_originais.map((i) => ({
+          drug_slug: i.drug_slug ?? undefined, descricao: i.descricao,
+          apresentacao: i.apresentacao ?? "", posologia: i.posologia ?? "",
+          orientacao: i.orientacao ?? "",
+        }))
+      : [{ ...ITEM_VAZIO }];
+    setItens(novosItens);
+    setBuscaFarmaco(novosItens.map((i) => i.descricao));
+    setAba("nova");
+  }
+
   if (erroCarregar) return <Erro mensagem={erroCarregar} />;
   if (!farmacos) return <Carregando />;
 
@@ -263,7 +476,18 @@ export default function Receituario() {
       <p className="eyebrow">Documentos</p>
       <h1>Prescrição Eletrônica</h1>
 
-      {!criado ? (
+      <div style={{ display: "flex", gap: 8, marginBottom: "1rem" }}>
+        <button className={aba === "nova" ? "botao" : "botao botao--secundario"} onClick={() => setAba("nova")}>
+          Nova receita
+        </button>
+        <button className={aba === "historico" ? "botao" : "botao botao--secundario"} onClick={() => setAba("historico")}>
+          Histórico
+        </button>
+      </div>
+
+      {aba === "historico" ? (
+        <HistoricoReceituario onAbrir={abrirDoHistorico} onRecriar={recriarDoHistorico} />
+      ) : !criado ? (
         <div className="cartao" style={{ maxWidth: "72ch" }}>
           <p className="eyebrow" style={{ margin: 0 }}>Paciente</p>
           <label>Nome</label>
@@ -286,21 +510,33 @@ export default function Receituario() {
                 }}
                 placeholder="Busque na base ou digite livremente"
               />
-              {buscaFarmaco[i] && !it.drug_slug && (
-                <div style={{ maxHeight: 140, overflowY: "auto", border: "1px solid var(--linha)", borderRadius: 6, marginTop: 4 }}>
-                  {farmacos
-                    .filter((f) => f.nome.toLowerCase().includes(buscaFarmaco[i].toLowerCase()))
-                    .slice(0, 8)
-                    .map((f) => (
+              {(() => {
+                if (!buscaFarmaco[i] || it.drug_slug) return null;
+                const sugestoes = farmacos
+                  .filter((f) => f.nome.toLowerCase().includes(buscaFarmaco[i].toLowerCase()))
+                  .slice(0, 8);
+                if (sugestoes.length === 0) {
+                  // Não achou na base — deixa explícito que digitar segue valendo:
+                  // nome, mg e apresentação ficam nos campos abaixo, texto livre.
+                  return (
+                    <p className="eyebrow" style={{ margin: "0.3rem 0 0" }}>
+                      Não consta na base — pode preencher nome, mg e apresentação abaixo por conta própria.
+                    </p>
+                  );
+                }
+                return (
+                  <div style={{ maxHeight: 140, overflowY: "auto", border: "1px solid var(--linha)", borderRadius: 6, marginTop: 4 }}>
+                    {sugestoes.map((f) => (
                       <button key={f.slug} type="button"
                               style={{ display: "block", width: "100%", textAlign: "left", padding: "0.3rem 0.5rem", border: "none", background: "transparent", cursor: "pointer" }}
                               onClick={() => escolherFarmaco(i, f)}>
                         {f.nome}
                       </button>
                     ))}
-                </div>
-              )}
-              <label style={{ marginTop: "0.4rem" }}>Apresentação</label>
+                  </div>
+                );
+              })()}
+              <label style={{ marginTop: "0.4rem" }}>Apresentação (ex.: 500mg, comprimido)</label>
               <input value={it.apresentacao} onChange={(e) => atualizarItem(i, "apresentacao", e.target.value)} />
               <label style={{ marginTop: "0.4rem" }}>Posologia</label>
               <input value={it.posologia} onChange={(e) => atualizarItem(i, "posologia", e.target.value)} />
@@ -356,13 +592,13 @@ export default function Receituario() {
         </div>
       ) : (
         <div style={{ maxWidth: "72ch" }}>
-          <p style={{ color: "var(--sucesso)" }}>Receituário nº {criado.prescricao_id} criado.</p>
+          <p style={{ color: "var(--sucesso)" }}>Receituário nº {criado.prescricao_id}.</p>
           {criado.documentos.map((d) => (
-            <CartaoDocumento key={d.id} doc={d} onAtualizado={atualizarDocumento} />
+            <CartaoDocumento key={d.id} doc={d} provedores={provedores} tipos={tipos} onAtualizado={atualizarDocumento} />
           ))}
           <button className="botao botao--secundario" style={{ marginTop: "1rem" }}
                   onClick={() => { setCriado(null); setItens([{ ...ITEM_VAZIO }]); setBuscaFarmaco([""]); setNome(""); setPrevia(null); }}>
-            Nova receita
+            Criar outra receita
           </button>
         </div>
       )}

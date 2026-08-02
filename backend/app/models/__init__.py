@@ -17,3 +17,9 @@ from app.models.partner_course import PartnerCourse, CourseMaterial, CoursePayme
 from app.models.guideline import Guideline, GuidelineLink  # noqa: F401
 from app.models.checklist import DischargeChecklist, DischargeChecklistRun  # noqa: F401
 from app.models.study_track import StudyTrack, StudyTrackProgress  # noqa: F401
+from app.models.compartilhamento import DocumentShareLink  # noqa: F401
+from app.models.receituario import (  # noqa: F401
+    ControlledSubstance, PrescriptionType, PrescriptionRule,
+    PrescriptionRecipient, PrescriptionDocument,
+)
+from app.models.assinatura import DocumentoEmitido  # noqa: F401

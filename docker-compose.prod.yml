@@ -61,6 +61,10 @@ services:
       # Caddy de proposito: arquivo de exame nao pode ter URL alcancavel de
       # fora, o acesso passa obrigatoriamente pela rota autenticada que audita.
       - examefiles:/exames-pacientes
+      # PDF de receita/documento emitido, cifrado em repouso (Tarefa 4).
+      # Mesmo motivo do examefiles: nao montado no Caddy, so rota autenticada
+      # ou link publico com token servem o arquivo.
+      - documentofiles:/documentos-emitidos
       - cursofiles:/materiais-curso
     command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --workers 2
     restart: unless-stopped
@@ -102,6 +106,7 @@ volumes:
   sitefiles:
   userfiles:
   examefiles:
+  documentofiles:
   cursofiles:
   caddy_data:
   caddy_config:

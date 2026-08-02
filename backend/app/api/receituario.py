@@ -32,6 +32,7 @@ from app.models.receituario import (
     PrescriptionRule, PrescriptionType,
 )
 from app.services import cofre
+from app.services.assinatura import emissao as assinatura_emissao
 from app.services.classificacao_receituario import (
     ItemPrescrito, Regra, Substancia, classificar, normalizar,
 )
@@ -228,6 +229,49 @@ def criar(dados: ReceituarioIn, db: Session = Depends(get_db), user=Depends(curr
             "documentos": [_doc_json(x, tipos.get(x.tipo_codigo)) for x in criados]}
 
 
+@router.get("")
+def listar(db: Session = Depends(get_db), user=Depends(current_user)):
+    """Arquivo de receituários do médico (Tarefa 4 — pedido do Rafael de
+    02/08/2026): tudo que ele já criou, mais recente primeiro, pra reabrir
+    (`GET /{id}`) ou usar como base de uma receita nova.
+
+    Decifra o nome do destinatário de cada uma — é o que torna a lista
+    reconhecível ("a receita da Dona Maria semana passada"), não só uma
+    lista de datas. Mas audita em LOTE, uma linha por chamada desta rota,
+    não uma por paciente decifrado: isto é montar uma tela de listagem, não
+    uma decisão clínica sobre um paciente específico — N inserts de auditoria
+    por carregamento de página seria desproporcional ao padrão que `obter()`
+    já usa (uma leitura direcionada = uma linha de auditoria).
+    """
+    prescricoes = (
+        db.query(Prescription)
+        .filter(Prescription.created_by == user.id)
+        .order_by(Prescription.created_at.desc())
+        .limit(200)
+        .all()
+    )
+    tipos = _tipos(db)
+    resultado = []
+    for presc in prescricoes:
+        dest = db.query(PrescriptionRecipient).filter(
+            PrescriptionRecipient.prescription_id == presc.id).first()
+        nome = cofre.decifrar_campo(dest.nome_cifrado, presc.id) if dest else None
+        docs = db.query(PrescriptionDocument).filter(
+            PrescriptionDocument.prescription_id == presc.id).all()
+        resultado.append({
+            "prescricao_id": presc.id, "criado_em": presc.created_at, "paciente_nome": nome,
+            "documentos": [{"tipo": d.tipo_codigo, "tipo_nome": tipos[d.tipo_codigo].nome
+                            if d.tipo_codigo in tipos else None, "status": d.status}
+                           for d in docs],
+        })
+
+    if resultado:
+        db.add(AuditLog(user_id=user.id, action="listar_receituarios", entity="prescription",
+                        detail={"count": len(resultado)}))
+        db.commit()
+    return resultado
+
+
 @router.get("/{prescricao_id}")
 def obter(prescricao_id: int, db: Session = Depends(get_db), user=Depends(current_user)):
     presc = db.get(Prescription, prescricao_id)
@@ -238,9 +282,13 @@ def obter(prescricao_id: int, db: Session = Depends(get_db), user=Depends(curren
         PrescriptionRecipient.prescription_id == presc.id).first()
     # Toda leitura de dado identificável de paciente vai para a auditoria, do
     # mesmo jeito que a leitura de exame no Cofre.
-    nome = None
+    destinatario = {"nome": None, "endereco": None, "documento": None}
     if dest:
-        nome = cofre.decifrar_campo(dest.nome_cifrado, presc.id)
+        destinatario["nome"] = cofre.decifrar_campo(dest.nome_cifrado, presc.id)
+        if dest.endereco_cifrado:
+            destinatario["endereco"] = cofre.decifrar_campo(dest.endereco_cifrado, presc.id)
+        if dest.documento_cifrado:
+            destinatario["documento"] = cofre.decifrar_campo(dest.documento_cifrado, presc.id)
         db.add(AuditLog(user_id=user.id, action="ler_destinatario_receita",
                         entity="prescription", entity_id=str(presc.id)))
         db.commit()
@@ -248,8 +296,14 @@ def obter(prescricao_id: int, db: Session = Depends(get_db), user=Depends(curren
     docs = db.query(PrescriptionDocument).filter(
         PrescriptionDocument.prescription_id == presc.id).all()
     tipos = _tipos(db)
-    return {"prescricao_id": presc.id, "destinatario": {"nome": nome},
+    return {"prescricao_id": presc.id, "destinatario": destinatario,
             "observacoes": presc.notes,
+            # Formato cru de `ItemIn` (Tarefa 4) — usado pelo frontend pra
+            # "recriar baseado nesta": melhor fonte que os `itens` já
+            # classificados por documento, porque uma receita com listas
+            # diferentes vira mais de um `PrescriptionDocument` e o cru é
+            # um só, no formato exato que `POST ""` espera de volta.
+            "itens_originais": presc.items,
             "documentos": [_doc_json(x, tipos.get(x.tipo_codigo)) for x in docs]}
 
 
@@ -296,6 +350,10 @@ class EmitirIn(BaseModel):
     # 30/07/2026: privacidade, nem todo médico quer endereço de casa
     # impresso num papel que o paciente leva embora).
     endereco: str | None = None
+    # Código do catálogo em `services/assinatura/catalogo.py` (Tarefa 4).
+    # "MANUAL" (carimbo e assinatura do próprio punho) é o único que funciona
+    # de verdade hoje — os demais existem no catálogo e recusam com motivo.
+    metodo: str = "MANUAL"
 
 
 @router.post("/documentos/{documento_id}/emitir")
@@ -303,9 +361,12 @@ def emitir(documento_id: int, dados: EmitirIn = EmitirIn(), db: Session = Depend
           user=Depends(current_user)):
     """Recusa e explica, em vez de simular.
 
-    Emitir exige três coisas que ainda não existem: o tipo ligado, a numeração
-    do SNCR e a assinatura digital. Devolver um documento sem elas seria entregar
-    ao médico um papel que a farmácia recusa — e pior, com aparência de válido.
+    Emitir exige o tipo ligado e, se o tipo exigir, numeração do SNCR — as
+    duas ainda pendentes para tudo que não é receituário comum. Assinatura
+    digital (Tarefa 4) já é uma escolha real: `dados.metodo` no catálogo de
+    `services/assinatura/catalogo.py`, com "MANUAL" (carimbo e assinatura do
+    próprio punho) sendo o único que funciona hoje — qualquer outro método
+    recusa aqui, com motivo, exatamente como SNCR/RCE.
     """
     doc = db.get(PrescriptionDocument, documento_id)
     if not doc:
@@ -314,6 +375,11 @@ def emitir(documento_id: int, dados: EmitirIn = EmitirIn(), db: Session = Depend
     if not presc or presc.created_by != user.id:
         raise HTTPException(status_code=404, detail="Documento não encontrado.")
 
+    try:
+        provedor, info_metodo = assinatura_emissao.preparar(dados.metodo)
+    except assinatura_emissao.MetodoInvalido as e:
+        raise HTTPException(status_code=422, detail=str(e)) from e
+
     tipo = _tipos(db).get(doc.tipo_codigo)
     bloqueios = []
     if doc.status != "revisado":
@@ -321,13 +387,18 @@ def emitir(documento_id: int, dados: EmitirIn = EmitirIn(), db: Session = Depend
     if not tipo or not tipo.ativo:
         bloqueios.append(
             f"O tipo {doc.tipo_codigo} está desligado: depende da integração com o "
-            f"SNCR, que a Anvisa disponibiliza até 30/09/2026, e da assinatura digital."
+            f"SNCR, que a Anvisa disponibiliza até 30/09/2026, e do layout oficial "
+            f"(fixo, publicado pela Anvisa) ainda não reproduzido. Não depende mais "
+            f"da assinatura digital — o método MANUAL já funciona para qualquer tipo."
         )
     if tipo and tipo.exige_numeracao_sncr and not doc.numeracao:
         bloqueios.append(
             "Este tipo exige numeração do SNCR, e o prescritor precisa estar "
             "cadastrado no sistema da Anvisa para obtê-la."
         )
+    disponivel, motivo_indisponivel = provedor.disponivel()
+    if not disponivel:
+        bloqueios.append(motivo_indisponivel)
     if bloqueios:
         raise HTTPException(status_code=409, detail={
             "erro": "Emissão indisponível.", "bloqueios": bloqueios,
@@ -358,23 +429,31 @@ def emitir(documento_id: int, dados: EmitirIn = EmitirIn(), db: Session = Depend
             destinatario["endereco"] = cofre.decifrar_campo(dest.endereco_cifrado, presc.id)
 
     endereco_medico = resolver_endereco(user, dados.endereco)
-    pdf = receituario_comum(
+    medico = {"full_name": user.full_name, "council_name": user.council_name,
+              "council_number": user.council_number, "council_state": user.council_state,
+              "rqe": user.rqe, "specialty": user.specialty,
+              "document_logo_url": user.document_logo_url}
+    data_emissao = datetime.now(timezone.utc)
+    pdf_visual = receituario_comum(
         destinatario=destinatario, itens=doc.itens, observacoes=presc.notes or "",
-        medico={"full_name": user.full_name, "council_name": user.council_name,
-                "council_number": user.council_number, "council_state": user.council_state,
-                "rqe": user.rqe, "specialty": user.specialty,
-                "document_logo_url": user.document_logo_url},
-        endereco=endereco_medico,
+        medico=medico, endereco=endereco_medico, data_emissao=data_emissao,
+        metodo_assinatura=dados.metodo, provedor_nome=info_metodo.nome,
+    )
+    emitido = assinatura_emissao.assinar_e_persistir(
+        db, tipo=assinatura_emissao.TIPO_RECEITA, referencia_id=doc.id, metodo=dados.metodo,
+        provedor=provedor, info=info_metodo, pdf_visual=pdf_visual, medico=medico,
+        criado_por=user.id, data_emissao=data_emissao,
     )
 
     doc.status = "emitido"
-    doc.emitido_em = datetime.now(timezone.utc)
+    doc.emitido_em = data_emissao
     doc.endereco_exibido = dados.endereco if endereco_medico else None
     db.add(AuditLog(user_id=user.id, action="emitir_documento_receita",
                     entity="prescription_document", entity_id=str(doc.id),
-                    detail={"tipo": doc.tipo_codigo, "bytes": len(pdf)}))
+                    detail={"tipo": doc.tipo_codigo, "bytes": len(emitido.pdf),
+                            "metodo": dados.metodo, "sha256": emitido.registro.sha256}))
     db.commit()
-    return Response(content=pdf, media_type="application/pdf", headers={
+    return Response(content=emitido.pdf, media_type="application/pdf", headers={
         "Content-Disposition": f'inline; filename="receituario-{doc.id}.pdf"'})
 
 

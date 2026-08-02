@@ -2,8 +2,8 @@ from fastapi import Depends, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.api import (
-    admin, ai, appointments, auth, calculators, chat, documents, documentos_publicos, drugs,
-    email as email_api, evidence,
+    admin, ai, appointments, assinatura, auth, calculators, chat, documents, documentos_publicos,
+    drugs, email as email_api, evidence,
     favorites, gallery, health, lab_tests, library, password_reset,
     prescriptions, round as round_api, search, service_orders, studies,
     timeline, billing, partner_courses, guidelines, indicadores, checklists, study_tracks,
@@ -60,6 +60,7 @@ ROUTERS_ASSINANTES = (
     studies.router, prescriptions.router, documents.router, appointments.router,
     timeline.router, guidelines.router, indicadores.router, checklists.router, study_tracks.router,
     exportacao.router, emergencia.router, receituario.router, clinical_cases.router, chat.router,
+    assinatura.router,
 )
 
 for r in ROUTERS_LIVRES:

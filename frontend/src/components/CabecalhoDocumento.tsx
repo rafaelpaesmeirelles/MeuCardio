@@ -5,6 +5,7 @@ type Medico = {
   council_state?: string | null;
   rqe?: string | null;
   specialty?: string | null;
+  document_logo_url?: string | null;
 };
 
 /**
@@ -29,6 +30,13 @@ export default function CabecalhoDocumento({ medico }: { medico: Medico }) {
   return (
     <header className="doc-cabecalho">
       <div className="doc-cabecalho__profissional">
+        {medico.document_logo_url && (
+          <img
+            className="doc-cabecalho__logo-pessoal"
+            src={medico.document_logo_url}
+            alt=""
+          />
+        )}
         <strong className="doc-cabecalho__nome">{medico.full_name}</strong>
         {registro && (
           <span className="doc-cabecalho__registro">

@@ -45,30 +45,37 @@ def _chave() -> bytes:
     return chave
 
 
-def _raiz() -> Path:
-    return Path(settings.exames_dir)
+def _raiz(raiz: Path | None = None) -> Path:
+    return raiz if raiz is not None else Path(settings.exames_dir)
 
 
-def guardar(conteudo: bytes, dono_id: int) -> str:
+def guardar(conteudo: bytes, dono_id: int, raiz: Path | None = None) -> str:
     """Cifra e grava. Devolve o nome do arquivo, que é um UUID aleatório —
-    nunca nome, CPF ou qualquer dado do paciente."""
+    nunca nome, CPF ou qualquer dado do paciente.
+
+    `raiz` deixa outro chamador usar este mesmo cofre com outro volume —
+    ver `app/services/assinatura/`, que guarda PDF emitido em
+    `settings.documentos_dir` em vez de `exames_dir`. Sem isso, um segundo
+    tipo de arquivo cifrado exigiria reimplementar AES-256-GCM do zero,
+    contra a decisão do Rafael de 29/07/2026 de reaproveitar este cofre."""
     aesgcm = AESGCM(_chave())
     nonce = secrets.token_bytes(TAMANHO_NONCE)
     # O id do dono entra como dado autenticado: um arquivo movido para outro
     # pedido não decifra, em vez de decifrar para o paciente errado.
     cifrado = aesgcm.encrypt(nonce, conteudo, str(dono_id).encode())
 
-    destino = _raiz()
+    destino = _raiz(raiz)
     destino.mkdir(parents=True, exist_ok=True)
     nome = f"{uuid.uuid4().hex}.bin"
     (destino / nome).write_bytes(nonce + cifrado)
     return nome
 
 
-def ler(nome: str, dono_id: int) -> bytes:
-    caminho = _raiz() / nome
+def ler(nome: str, dono_id: int, raiz: Path | None = None) -> bytes:
+    base = _raiz(raiz)
+    caminho = base / nome
     # Impede que um nome manipulado ("../../etc/passwd") escape da pasta.
-    if not caminho.resolve().is_relative_to(_raiz().resolve()):
+    if not caminho.resolve().is_relative_to(base.resolve()):
         raise FileNotFoundError(nome)
     if not caminho.exists():
         raise FileNotFoundError(nome)
@@ -83,9 +90,10 @@ def ler(nome: str, dono_id: int) -> bytes:
         ) from e
 
 
-def apagar(nome: str) -> None:
-    caminho = _raiz() / nome
-    if caminho.resolve().is_relative_to(_raiz().resolve()):
+def apagar(nome: str, raiz: Path | None = None) -> None:
+    base = _raiz(raiz)
+    caminho = base / nome
+    if caminho.resolve().is_relative_to(base.resolve()):
         caminho.unlink(missing_ok=True)
 
 

@@ -13,6 +13,7 @@ from app.core.security import create_access_token, current_user, hash_password, 
 from app.core.validators import UFS, cpf_valido, limpar_cpf
 from app.models.user import User
 from app.services import emails
+from app.services.assinatura import catalogo
 
 router = APIRouter(prefix="/api/auth", tags=["auth"])
 
@@ -77,6 +78,9 @@ def _perfil(user: User) -> dict:
         "practice_zip": user.practice_zip, "practice_phone": user.practice_phone,
         "document_logo_url": user.document_logo_url,
         "boas_vindas_pendente": user.boas_vindas_pendente,
+        # Método de assinatura preferido (Tarefa 4) — só o DEFAULT sugerido
+        # na tela de emissão; nunca impede escolher outro a cada documento.
+        "assinatura_metodo_preferido": user.assinatura_metodo_preferido,
     }
 
 
@@ -217,6 +221,25 @@ def marcar_boas_vindas_vista(db: Session = Depends(get_db), user: User = Depends
     user.boas_vindas_pendente = False
     db.commit()
     return {"boas_vindas_pendente": False}
+
+
+class PreferenciaAssinatura(BaseModel):
+    # Código do catálogo em `services/assinatura/catalogo.py`, ou None para
+    # voltar a usar `settings.assinatura_metodo_padrao`. Só sugere o valor
+    # inicial do `<select>` na tela de emissão (Tarefa 4) — o médico ainda
+    # escolhe (ou troca) o método a cada documento.
+    metodo: str | None = None
+
+
+@router.patch("/me/assinatura")
+def atualizar_preferencia_assinatura(dados: PreferenciaAssinatura, db: Session = Depends(get_db),
+                                     user: User = Depends(current_user)):
+    if dados.metodo is not None and catalogo.info(dados.metodo) is None:
+        raise HTTPException(status_code=422, detail=f"Método de assinatura desconhecido: {dados.metodo}")
+    user.assinatura_metodo_preferido = dados.metodo
+    db.commit()
+    db.refresh(user)
+    return _perfil(user)
 
 
 # --- foto de perfil --------------------------------------------------------

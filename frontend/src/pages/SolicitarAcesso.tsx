@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { api, ApiError } from "../lib/api";
 import Credito from "../components/Credito";
 
-const CONSELHOS = ["CRM", "COREN", "CRF", "CREFITO", "CRN", "CRP", "CRO", "Outro"];
+const CONSELHOS = ["CRM", "COREN", "CRF", "CRBM", "CREFITO", "CRN", "CRP", "CRO", "Outro"];
 const UFS = [
   "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG",
   "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO",

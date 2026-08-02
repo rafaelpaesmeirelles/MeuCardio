@@ -9,10 +9,12 @@ from sqlalchemy.orm import Session
 from app.core.config import settings
 from app.core.db import get_db
 from app.core.security import current_user
+from app.models.audit import AuditLog
 from app.models.clinical_docs import DocumentTemplate, GeneratedDocument
 from app.models.compartilhamento import DocumentShareLink
 from app.models.round import Patient
 from app.services import cofre
+from app.services.assinatura import emissao as assinatura_emissao
 from app.services.notificar import tentar_enviar_email
 
 router = APIRouter(prefix="/api/document-templates", tags=["documentos"])
@@ -70,6 +72,12 @@ class GerarDocumentoIn(BaseModel):
     # 'residencial' | 'profissional' | None — mesma escolha do receituário
     # (Tarefa 29), gravada aqui porque o PDF é gerado sob demanda depois
     # (GET .../pdf, ou pelo link público) e precisa sair sempre igual.
+    #
+    # Método de assinatura (Tarefa 4) NÃO entra aqui: `GeneratedDocument`
+    # nasce só como texto renderizado — quem usa `PatientDocumentos.tsx`
+    # nem chega a baixar PDF, só imprime `rendered_body` pelo navegador. O
+    # método é escolhido em `GET .../pdf`, no primeiro download de fato, que
+    # é quando o documento passa a existir como PDF.
     endereco: str | None = None
 
 
@@ -101,7 +109,7 @@ def gerar_documento(dados: GerarDocumentoIn, db: Session = Depends(get_db), user
     gerado = GeneratedDocument(
         patient_id=dados.patient_id, template_id=t.id, created_by=user.id,
         doc_type=t.doc_type, title=t.title, rendered_body=corpo,
-        endereco_exibido=dados.endereco,
+        endereco_exibido=dados.endereco, variables=dados.variables,
     )
     db.add(gerado)
     db.commit()
@@ -109,9 +117,13 @@ def gerar_documento(dados: GerarDocumentoIn, db: Session = Depends(get_db), user
     return {
         "id": gerado.id, "title": gerado.title, "doc_type": gerado.doc_type,
         "rendered_body": gerado.rendered_body, "created_at": gerado.created_at,
+        # `document_logo_url` — mesmo par logo pessoal + logo Corvia que o
+        # PDF do backend já desenha (`pdf_documento.py`), agora também no
+        # cabeçalho de impressão pelo navegador (`CabecalhoDocumento.tsx`).
         "medico": {"full_name": user.full_name, "council_name": user.council_name,
                    "council_number": user.council_number, "council_state": user.council_state,
-                   "rqe": user.rqe, "specialty": user.specialty},
+                   "rqe": user.rqe, "specialty": user.specialty,
+                   "document_logo_url": user.document_logo_url},
     }
 
 
@@ -144,29 +156,75 @@ def obter_gerado(gid: int, db: Session = Depends(get_db), user=Depends(current_u
         "id": g.id, "title": g.title, "doc_type": g.doc_type,
         "rendered_body": g.rendered_body, "created_at": g.created_at,
         "tem_email_destinatario": g.destinatario_email_cifrado is not None,
+        # `template_id`/`variables` (Tarefa 4) — pra "recriar baseado neste":
+        # o frontend reabre o MESMO modelo com os MESMOS valores pré-
+        # preenchidos, em vez de começar do zero. `variables` só existe pra
+        # documento gerado depois desta tarefa; nulo pros anteriores.
+        "template_id": g.template_id, "variables": g.variables,
     }
 
 
 @router.get("/gerados/{gid}/pdf")
-def baixar_pdf_gerado(gid: int, db: Session = Depends(get_db), user=Depends(current_user)):
+def baixar_pdf_gerado(gid: int, metodo: str = "MANUAL", db: Session = Depends(get_db),
+                      user=Depends(current_user)):
+    """Primeiro download de fato EMITE o documento (Tarefa 4): escolhe o
+    método de assinatura, gera o PDF e persiste — downloads seguintes servem
+    exatamente os mesmos bytes, ignorando `metodo`, porque o documento já
+    foi emitido (mesma semântica de uma vez só que a receita tem via
+    `status`, só que aqui não existe esse campo — quem marca "já emitido" é
+    a própria existência do `DocumentoEmitido`)."""
     from app.models.user import User
     from app.services.pdf_documento import documento_generico, resolver_endereco
 
     g = _obter_gerado(gid, db, user)
+
+    existente = assinatura_emissao.buscar(db, tipo=assinatura_emissao.TIPO_DOCUMENTO, referencia_id=g.id)
+    if existente is not None:
+        pdf = assinatura_emissao.ler_bytes(existente)
+        return Response(content=pdf, media_type="application/pdf", headers={
+            "Content-Disposition": f'inline; filename="documento-{g.id}.pdf"'})
+
+    try:
+        provedor, info_metodo = assinatura_emissao.preparar(metodo)
+    except assinatura_emissao.MetodoInvalido as e:
+        raise HTTPException(status_code=422, detail=str(e)) from e
+
+    disponivel, motivo = provedor.disponivel()
+    if not disponivel:
+        raise HTTPException(status_code=409, detail={
+            "erro": "Emissão indisponível.", "bloqueios": [motivo], "nada_foi_simulado": True,
+        })
+
     # O cabeçalho do PDF tem que trazer o médico que EMITIU o documento, não
     # quem está baixando agora — um admin vendo o documento de outro médico
     # não pode aparecer como se fosse o emissor.
     emissor = db.get(User, g.created_by) or user
+    medico = {"full_name": emissor.full_name, "council_name": emissor.council_name,
+              "council_number": emissor.council_number, "council_state": emissor.council_state,
+              "rqe": emissor.rqe, "specialty": emissor.specialty,
+              "document_logo_url": emissor.document_logo_url}
     titulo = {"atestado": "Atestado", "laudo": "Laudo"}.get(g.doc_type, g.title)
-    pdf = documento_generico(
-        titulo=titulo, corpo=g.rendered_body,
-        medico={"full_name": emissor.full_name, "council_name": emissor.council_name,
-                "council_number": emissor.council_number, "council_state": emissor.council_state,
-                "rqe": emissor.rqe, "specialty": emissor.specialty,
-                "document_logo_url": emissor.document_logo_url},
+    # `g.created_at`, não `datetime.now()`: se esta rota for chamada mais de
+    # uma vez antes de conseguir persistir (ex.: primeira tentativa recusada
+    # por provedor indisponível), o PDF ainda sai determinístico.
+    pdf_visual = documento_generico(
+        titulo=titulo, corpo=g.rendered_body, medico=medico,
         endereco=resolver_endereco(emissor, g.endereco_exibido),
+        data_emissao=g.created_at, metodo_assinatura=metodo, provedor_nome=info_metodo.nome,
     )
-    return Response(content=pdf, media_type="application/pdf", headers={
+    emitido = assinatura_emissao.assinar_e_persistir(
+        db, tipo=assinatura_emissao.TIPO_DOCUMENTO, referencia_id=g.id, metodo=metodo,
+        provedor=provedor, info=info_metodo, pdf_visual=pdf_visual, medico=medico,
+        criado_por=g.created_by, data_emissao=g.created_at,
+    )
+    # `documents.py` não auditava emissão nenhuma até aqui — assimetria com
+    # `receituario.py`, corrigida junto da Tarefa 4.
+    db.add(AuditLog(user_id=user.id, action="emitir_documento_gerado",
+                    entity="generated_document", entity_id=str(g.id),
+                    detail={"doc_type": g.doc_type, "bytes": len(emitido.pdf),
+                            "metodo": metodo, "sha256": emitido.registro.sha256}))
+    db.commit()
+    return Response(content=emitido.pdf, media_type="application/pdf", headers={
         "Content-Disposition": f'inline; filename="documento-{g.id}.pdf"'})
 
 

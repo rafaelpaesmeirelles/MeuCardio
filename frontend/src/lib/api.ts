@@ -206,4 +206,5 @@ export type Usuario = {
   practice_phone: string | null;
   document_logo_url: string | null;
   boas_vindas_pendente: boolean;
+  assinatura_metodo_preferido: string | null;
 };

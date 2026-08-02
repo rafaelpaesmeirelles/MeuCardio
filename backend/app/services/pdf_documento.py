@@ -144,6 +144,19 @@ def _registro(medico: dict) -> str:
     return "  ·  ".join(partes)
 
 
+def _fundo_logo(c: canvas.Canvas, x: float, y: float, largura: float, altura: float) -> None:
+    """Pinta branco atrás de uma logo antes de desenhá-la — o fundo do
+    próprio documento (a página inteira é branca, `_cabecalho`/`_rodape`
+    nunca colorem a área da logo). Existe por causa da logo PESSOAL: o
+    upload aceita JPEG (`app/api/auth.py:ASSINATURAS`), formato que não tem
+    canal alfa — nunca tem "fundo definido" (transparente). Sem isto, o
+    fundo que vier de dentro do arquivo (branco, cinza, o que for) aparece
+    como veio; com isto, pelo menos garante que bate com o branco da
+    página em vez de depender do arquivo do médico estar bem recortado."""
+    c.setFillColorRGB(1, 1, 1)
+    c.rect(x, y, largura, altura, fill=1, stroke=0)
+
+
 def _logo(c: canvas.Canvas, x: float, y_topo: float) -> float:
     """Desenha a logo no canto superior esquerdo e devolve a altura ocupada
     (0 se o arquivo não existir — ausência de logo não derruba a geração de
@@ -153,6 +166,7 @@ def _logo(c: canvas.Canvas, x: float, y_topo: float) -> float:
     img = ImageReader(str(LOGO))
     largura_px, altura_px = img.getSize()
     altura = LARGURA_LOGO * altura_px / largura_px
+    _fundo_logo(c, x, y_topo - altura, LARGURA_LOGO, altura)
     c.drawImage(img, x, y_topo - altura, width=LARGURA_LOGO, height=altura,
                 mask="auto", preserveAspectRatio=True)
     return altura
@@ -200,6 +214,7 @@ def _logo_pessoal(c: canvas.Canvas, x_direita: float, y: float, medico: dict) ->
         img = ImageReader(str(caminho))
         largura_px, altura_px = img.getSize()
         altura = LARGURA_LOGO_PESSOAL * altura_px / largura_px
+        _fundo_logo(c, x_direita - LARGURA_LOGO_PESSOAL, y - altura, LARGURA_LOGO_PESSOAL, altura)
         c.drawImage(img, x_direita - LARGURA_LOGO_PESSOAL, y - altura,
                     width=LARGURA_LOGO_PESSOAL, height=altura, mask="auto", preserveAspectRatio=True)
         return y - altura - 3 * mm
@@ -312,12 +327,41 @@ def _itens(c: canvas.Canvas, y: float, itens: list[dict]) -> float:
     return y
 
 
-def _rodape(c: canvas.Canvas, medico: dict, endereco: dict | None, via: str | None, aviso: str | None) -> None:
+def _assinatura_rodape(metodo: str, provedor_nome: str | None, medico: dict, sujeito: str) -> tuple[str, str | None]:
+    """Decide a legenda da linha de assinatura e o aviso vermelho a partir do
+    MÉTODO escolhido na emissão (Tarefa 4) — este módulo continua sem saber
+    assinar, só sabe representar no papel o que já foi decidido em
+    `app/services/assinatura/`. `sujeito` é "prescritor" ou "emissor",
+    conforme o tipo de documento (mesma distinção que o aviso fixo já fazia).
+
+    `MANUAL` é hoje o único caminho que realmente acontece — mantém o aviso
+    vermelho, porque o documento de fato sai sem assinatura válida e o
+    profissional precisa saber que ainda tem de assinar de próprio punho.
+    O ramo "assinado" existe pronto para quando um provedor real entrar
+    (Fase 2): nesse caso o aviso desaparece, porque deixa de ser verdade."""
+    if metodo == "MANUAL":
+        return (
+            "Carimbo e assinatura do profissional",
+            f"Documento sem assinatura digital — requer assinatura do {sujeito}.",
+        )
+    nome = medico.get("full_name") or ""
+    provedor = provedor_nome or metodo
+    return (f"Assinado digitalmente por {nome} — {provedor}", None)
+
+
+def _rodape(c: canvas.Canvas, medico: dict, endereco: dict | None, via: str | None, aviso: str | None,
+           data_emissao: datetime, legenda: str) -> None:
     """Bloco de assinatura (Tarefa 29): identificação do profissional, local
     e data, e — algumas linhas abaixo — o campo para assinatura digital ou
     para carimbo e assinatura manual. Nessa ordem porque foi assim que o
     Rafael descreveu o pedido, e é a convenção de documento formal
-    brasileiro (identificação primeiro, assinatura por último)."""
+    brasileiro (identificação primeiro, assinatura por último).
+
+    `data_emissao` vem de `emitido_em`/`criado_em`, nunca de `datetime.now()`
+    (Tarefa 4): o mesmo documento pode ser regerado ou reaberto por link
+    público mais de uma vez, e o PDF precisa sair byte-a-byte igual toda
+    vez — condição para poder assinar e para o hash guardado em
+    `DocumentoEmitido.sha256` continuar batendo."""
     y = 52 * mm
 
     c.setFillColorRGB(0, 0, 0)
@@ -338,7 +382,7 @@ def _rodape(c: canvas.Canvas, medico: dict, endereco: dict | None, via: str | No
         y -= 4 * mm
 
     local = _local(endereco)
-    data = datetime.now(FUSO).strftime("%d/%m/%Y")
+    data = data_emissao.astimezone(FUSO).strftime("%d/%m/%Y")
     c.drawCentredString(LARGURA / 2, y, f"{local}, {data}" if local else data)
     y -= 10 * mm  # "algumas linhas abaixo", antes do campo de assinatura
 
@@ -346,7 +390,7 @@ def _rodape(c: canvas.Canvas, medico: dict, endereco: dict | None, via: str | No
     c.line(LARGURA / 2 - 35 * mm, y, LARGURA / 2 + 35 * mm, y)
     c.setFont("Helvetica", 7.5)
     c.setFillColorRGB(*CINZA)
-    c.drawCentredString(LARGURA / 2, y - 4 * mm, "Assinatura digital ou carimbo e assinatura do profissional")
+    c.drawCentredString(LARGURA / 2, y - 4 * mm, legenda)
 
     if via:
         c.setFont("Helvetica", 7.5)
@@ -357,14 +401,20 @@ def _rodape(c: canvas.Canvas, medico: dict, endereco: dict | None, via: str | No
         c.drawString(MARGEM, 6 * mm, aviso)
 
 
-def documento_generico(titulo: str, corpo: str, medico: dict, endereco: dict | None = None) -> bytes:
+def documento_generico(titulo: str, corpo: str, medico: dict, data_emissao: datetime,
+                       endereco: dict | None = None, metodo_assinatura: str = "MANUAL",
+                       provedor_nome: str | None = None) -> bytes:
     """PDF de atestado/laudo gerado a partir de `DocumentTemplate` (Tarefa 29).
 
     Ao contrário do receituário, o corpo já chega pronto — as variáveis
     `{{...}}` já foram substituídas em `app/api/documents.py:gerar_documento`
     antes de chegar aqui. Este renderizador só formata como documento, com o
     mesmo cabeçalho/rodapé do receituário, para manter a mesma identidade
-    visual em todo PDF clínico que a Corvia emite."""
+    visual em todo PDF clínico que a Corvia emite.
+
+    `data_emissao` e `metodo_assinatura` vêm de `DocumentoEmitido` (Tarefa 4)
+    — nunca do relógio nem de um default silencioso — para o PDF sair
+    determinístico e o rodapé refletir o que foi de fato escolhido."""
     buf = io.BytesIO()
     c = canvas.Canvas(buf, pagesize=A4)
     c.setTitle(titulo)
@@ -385,19 +435,27 @@ def documento_generico(titulo: str, corpo: str, medico: dict, endereco: dict | N
             c.drawString(MARGEM, y, linha)
             y -= 5 * mm
 
-    _rodape(c, medico, endereco, None, "Documento sem assinatura digital — requer assinatura do emissor.")
+    legenda, aviso = _assinatura_rodape(metodo_assinatura, provedor_nome, medico, "emissor")
+    _rodape(c, medico, endereco, None, aviso, data_emissao, legenda)
     c.showPage()
     c.save()
     return buf.getvalue()
 
 
-def receituario_comum(destinatario: dict, itens: list[dict], medico: dict,
-                      observacoes: str = "", endereco: dict | None = None) -> bytes:
+def receituario_comum(destinatario: dict, itens: list[dict], medico: dict, data_emissao: datetime,
+                      observacoes: str = "", endereco: dict | None = None, metodo_assinatura: str = "MANUAL",
+                      provedor_nome: str | None = None) -> bytes:
     """Receituário comum, uma via. Retorna os bytes do PDF.
 
-    O aviso de rodapé é deliberado e não deve ser removido enquanto a assinatura
-    digital não existir: um PDF com aparência de receita, sem assinatura válida,
-    é pior que nenhum documento — o médico precisa saber que ainda tem de assinar.
+    O aviso de rodapé é deliberado e não deve ser removido enquanto o método
+    escolhido for `MANUAL`: um PDF com aparência de receita, sem assinatura
+    válida, é pior que nenhum documento — o médico precisa saber que ainda
+    tem de assinar. Some sozinho quando `metodo_assinatura` for um provedor
+    que de fato assinou (Fase 2) — ver `_assinatura_rodape`.
+
+    `data_emissao` vem de `DocumentoEmitido`/`emitido_em`, nunca do relógio:
+    o mesmo documento é reaberto por link público depois, e precisa sair
+    byte-a-byte igual toda vez (Tarefa 4).
     """
     buf = io.BytesIO()
     c = canvas.Canvas(buf, pagesize=A4)
@@ -419,8 +477,8 @@ def receituario_comum(destinatario: dict, itens: list[dict], medico: dict,
             c.drawString(MARGEM, y, linha)
             y -= 4.6 * mm
 
-    _rodape(c, medico, endereco, None,
-            "Documento sem assinatura digital — requer assinatura do prescritor.")
+    legenda, aviso = _assinatura_rodape(metodo_assinatura, provedor_nome, medico, "prescritor")
+    _rodape(c, medico, endereco, None, aviso, data_emissao, legenda)
     c.showPage()
     c.save()
     return buf.getvalue()

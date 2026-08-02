@@ -29,6 +29,11 @@ class Settings(BaseSettings):
     # alcançável de fora. Este volume não é montado no Caddy — o acesso passa
     # obrigatoriamente por rota autenticada, que registra quem leu.
     exames_dir: str = "/exames-pacientes"
+    # PDF assinado/emitido, cifrado com o mesmo cofre dos exames (Tarefa 4).
+    # Mesma razão do exames_dir: documento clínico não pode ter URL alcançável
+    # de fora do Caddy, e este volume não é montado lá — só rota autenticada
+    # ou o link público com token de `documentos_publicos.py` servem o PDF.
+    documentos_dir: str = "/documentos-emitidos"
     storage_encryption_key: str = ""
     # Janela de plantão para o SLA de 2h do pedido urgente. Fora dela, o
     # prazo passa a contar como eletivo (decisão do Rafael: 7h às 22h, todos
@@ -135,6 +140,23 @@ class Settings(BaseSettings):
     @property
     def smtp_configurado(self) -> bool:
         return bool(self.smtp_host and self.smtp_user and self.smtp_password)
+
+    # --- Assinatura digital de documento clínico (Tarefa 4) -----------------
+    # Mesma filosofia do Mail360/SMTP acima: em branco, o provedor fica
+    # indisponível — a emissão devolve 409 explicando, nunca assina de
+    # mentira. "Regra que não se flexibiliza: nunca simular a assinatura"
+    # (CLAUDE.md). Cada par abaixo corresponde a um provedor do catálogo em
+    # `app/services/assinatura/catalogo.py`; só ganha adaptador real (e
+    # credencial preenchida) quando o Rafael conseguir a credencial daquele
+    # provedor — até 02/08/2026, nenhum tinha.
+    assinatura_metodo_padrao: str = "MANUAL"
+
+    vidaas_client_id: str = ""
+    vidaas_client_secret: str = ""
+
+    @property
+    def vidaas_configurado(self) -> bool:
+        return bool(self.vidaas_client_id and self.vidaas_client_secret)
 
     @property
     def cors_list(self) -> list[str]:

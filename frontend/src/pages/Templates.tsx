@@ -1,9 +1,23 @@
 import { useEffect, useState } from "react";
 import { api, ApiError } from "../lib/api";
+import { useAuth } from "../lib/auth";
 import { Carregando, Vazio } from "../components/Estado";
 
 type Template = { id: number; title: string; doc_type: string; body: string };
 type Gerado = { id: number; title: string; doc_type: string; created_at: string };
+// GET /document-templates/gerados/{gid} — usado só por "Recriar baseado
+// neste" (Tarefa 4): busca o modelo de origem e os valores usados, pra
+// pré-preencher em vez de começar do zero.
+type GeradoDetalhe = {
+  template_id: number | null;
+  variables: Record<string, string> | null;
+};
+
+// Catálogo de métodos de assinatura (Tarefa 4) — GET /assinatura/provedores.
+// Escolhido no MOMENTO DO DOWNLOAD, não ao gerar: `GeneratedDocument` nasce
+// só como texto (endereço é a exceção histórica, gravado ao gerar); quem
+// decide se vira PDF assinado ou manual é o primeiro `GET .../pdf`.
+type Provedor = { codigo: string; nome: string; nivel: string; familia: string; disponivel: boolean; motivo: string | null };
 
 const RÓTULO: Record<string, string> = { atestado: "Atestado", laudo: "Laudo", outro: "Outro" };
 
@@ -25,12 +39,15 @@ function baixarBlob(blob: Blob, nomeArquivo: string) {
 /** Formulário de "gerar documento" a partir de um modelo — preenche as
  * variáveis, gera, e a partir daí baixa PDF ou envia por e-mail (link
  * seguro, nunca o PDF anexado — ver Tarefa 29 no CLAUDE.md). */
-function GerarDocumento({ template, onFechar, onGerado }: {
-  template: Template; onFechar: () => void; onGerado: () => void;
+function GerarDocumento({ template, provedores, valoresIniciais, onFechar, onGerado }: {
+  template: Template; provedores: Provedor[] | null; valoresIniciais?: Record<string, string>;
+  onFechar: () => void; onGerado: () => void;
 }) {
+  const { usuario } = useAuth();
   const variaveis = variaveisDoModelo(template.body);
-  const [valores, setValores] = useState<Record<string, string>>({});
+  const [valores, setValores] = useState<Record<string, string>>(valoresIniciais ?? {});
   const [endereco, setEndereco] = useState<"" | "residencial" | "profissional">("");
+  const [metodo, setMetodo] = useState(usuario?.assinatura_metodo_preferido ?? "MANUAL");
   const [gerando, setGerando] = useState(false);
   const [erro, setErro] = useState("");
   const [geradoId, setGeradoId] = useState<number | null>(null);
@@ -59,7 +76,9 @@ function GerarDocumento({ template, onFechar, onGerado }: {
   async function baixar() {
     if (!geradoId) return;
     try {
-      const blob = await api.blob(`/document-templates/gerados/${geradoId}/pdf`);
+      // `metodo` só tem efeito no PRIMEIRO download — depois disso o
+      // documento já foi emitido e sempre serve os mesmos bytes.
+      const blob = await api.blob(`/document-templates/gerados/${geradoId}/pdf?metodo=${encodeURIComponent(metodo)}`);
       baixarBlob(blob, `${template.doc_type}-${geradoId}.pdf`);
     } catch (e) {
       setErro(e instanceof ApiError ? e.message : "Não foi possível baixar o PDF.");
@@ -114,7 +133,23 @@ function GerarDocumento({ template, onFechar, onGerado }: {
       ) : (
         <>
           <p style={{ color: "var(--sucesso)" }}>Documento gerado.</p>
-          <button className="botao" onClick={baixar}>Baixar PDF</button>
+
+          <div style={{ marginTop: "0.4rem" }}>
+            <label>Método de assinatura</label>
+            <select value={metodo} onChange={(e) => setMetodo(e.target.value)}>
+              {(provedores ?? []).map((p) => (
+                <option key={p.codigo} value={p.codigo} disabled={!p.disponivel}>
+                  {p.nome}{!p.disponivel ? " — indisponível" : ""}
+                </option>
+              ))}
+            </select>
+            {(() => {
+              const escolhido = provedores?.find((p) => p.codigo === metodo);
+              if (!escolhido || escolhido.disponivel) return null;
+              return <p style={{ color: "var(--alerta)", fontSize: "0.82rem", margin: "0.3rem 0 0" }}>{escolhido.motivo}</p>;
+            })()}
+          </div>
+          <button className="botao" style={{ marginTop: "0.6rem" }} onClick={baixar}>Baixar PDF</button>
 
           <div style={{ marginTop: "0.8rem" }}>
             <label>Enviar por e-mail ao paciente (link seguro, válido por 7 dias)</label>
@@ -150,11 +185,20 @@ export default function Templates() {
   const [editando, setEditando] = useState<Partial<Template> | null>(null);
   const [salvando, setSalvando] = useState(false);
   const [gerandoDe, setGerandoDe] = useState<Template | null>(null);
+  const [valoresIniciais, setValoresIniciais] = useState<Record<string, string> | undefined>(undefined);
   const [gerados, setGerados] = useState<Gerado[] | null>(null);
+  const [provedores, setProvedores] = useState<Provedor[] | null>(null);
+  const [erroGerados, setErroGerados] = useState("");
 
   const recarregar = () => api.get<Template[]>("/document-templates").then(setLista);
   const recarregarGerados = () => api.get<Gerado[]>("/document-templates/gerados").then(setGerados);
-  useEffect(() => { recarregar(); recarregarGerados(); }, []);
+  useEffect(() => {
+    recarregar();
+    recarregarGerados();
+    // Falha aqui não trava a tela — GerarDocumento cai para o `<select>`
+    // vazio e o default "MANUAL", que é o método que sempre funciona.
+    api.get<Provedor[]>("/assinatura/provedores").then(setProvedores).catch(() => {});
+  }, []);
 
   async function salvar() {
     if (!editando?.title || !editando.doc_type || !editando.body) return;
@@ -175,6 +219,33 @@ export default function Templates() {
   async function apagar(id: number) {
     await api.delete(`/document-templates/${id}`);
     recarregar();
+  }
+
+  // "Recriar baseado neste" (Tarefa 4) — busca de qual modelo o documento
+  // veio e com quais valores, e reabre o formulário de gerar já preenchido
+  // (o médico edita o que precisar e gera um `GeneratedDocument` novo,
+  // independente do antigo). Modelo apagado ou documento sem `template_id`
+  // (gerado antes desta tarefa) não tem como recriar — avisa em vez de falhar
+  // silenciosamente.
+  async function recriarBaseadoEm(gid: number) {
+    setErroGerados("");
+    try {
+      const detalhe = await api.get<GeradoDetalhe>(`/document-templates/gerados/${gid}`);
+      if (!detalhe.template_id) {
+        setErroGerados("Este documento foi gerado antes desta função existir — não dá pra recriar automaticamente.");
+        return;
+      }
+      const template = lista?.find((t) => t.id === detalhe.template_id);
+      if (!template) {
+        setErroGerados("O modelo original não existe mais.");
+        return;
+      }
+      setValoresIniciais(detalhe.variables ?? {});
+      setGerandoDe(template);
+      document.getElementById(`modelo-${template.id}`)?.scrollIntoView({ behavior: "smooth", block: "center" });
+    } catch (e) {
+      setErroGerados(e instanceof ApiError ? e.message : "Não foi possível recriar este documento.");
+    }
   }
 
   return (
@@ -222,7 +293,7 @@ export default function Templates() {
           <Vazio titulo="Nenhum modelo ainda" acao="Crie o primeiro modelo acima." />
         ) : (
           lista.map((t) => (
-            <div key={t.id} className="cartao" style={{ marginBottom: "0.5rem" }}>
+            <div key={t.id} id={`modelo-${t.id}`} className="cartao" style={{ marginBottom: "0.5rem" }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                 <div>
                   <p className="eyebrow" style={{ margin: 0 }}>{RÓTULO[t.doc_type] ?? t.doc_type}</p>
@@ -230,7 +301,7 @@ export default function Templates() {
                 </div>
                 <div style={{ display: "flex", gap: 6 }}>
                   <button className="botao" style={{ padding: "0.3rem 0.6rem" }}
-                          onClick={() => setGerandoDe(gerandoDe?.id === t.id ? null : t)}>
+                          onClick={() => { setGerandoDe(gerandoDe?.id === t.id ? null : t); setValoresIniciais(undefined); }}>
                     Usar
                   </button>
                   <button className="botao botao--secundario" style={{ padding: "0.3rem 0.6rem" }}
@@ -240,7 +311,9 @@ export default function Templates() {
                 </div>
               </div>
               {gerandoDe?.id === t.id && (
-                <GerarDocumento template={t} onFechar={() => setGerandoDe(null)} onGerado={recarregarGerados} />
+                <GerarDocumento template={t} provedores={provedores} valoresIniciais={valoresIniciais}
+                                onFechar={() => { setGerandoDe(null); setValoresIniciais(undefined); }}
+                                onGerado={recarregarGerados} />
               )}
             </div>
           ))
@@ -248,6 +321,7 @@ export default function Templates() {
       </div>
 
       <h2 style={{ marginTop: "2rem" }}>Documentos gerados</h2>
+      {erroGerados && <p role="alert" style={{ color: "var(--alerta)", fontSize: "0.86rem" }}>{erroGerados}</p>}
       {gerados === null ? (
         <Carregando />
       ) : gerados.length === 0 ? (
@@ -262,13 +336,19 @@ export default function Templates() {
                 {new Date(g.created_at).toLocaleString("pt-BR")}
               </p>
             </div>
-            <button className="botao botao--secundario" style={{ padding: "0.3rem 0.6rem" }}
-                    onClick={async () => {
-                      const blob = await api.blob(`/document-templates/gerados/${g.id}/pdf`);
-                      baixarBlob(blob, `${g.doc_type}-${g.id}.pdf`);
-                    }}>
-              Baixar PDF
-            </button>
+            <div style={{ display: "flex", gap: 6 }}>
+              <button className="botao botao--secundario" style={{ padding: "0.3rem 0.6rem" }}
+                      onClick={() => recriarBaseadoEm(g.id)}>
+                Recriar baseado neste
+              </button>
+              <button className="botao botao--secundario" style={{ padding: "0.3rem 0.6rem" }}
+                      onClick={async () => {
+                        const blob = await api.blob(`/document-templates/gerados/${g.id}/pdf`);
+                        baixarBlob(blob, `${g.doc_type}-${g.id}.pdf`);
+                      }}>
+                Baixar PDF
+              </button>
+            </div>
           </div>
         ))
       )}
