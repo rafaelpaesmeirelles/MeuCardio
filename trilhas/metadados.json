@@ -21085,5 +21085,45 @@
         "por_que": "Fecha a trilha no manejo abrangente do adulto com cardiopatia congênita, encaixando a arritmia dentro do acompanhamento de longo prazo que começa na infância e não tem alta definitiva — o fio condutor de toda a trilha."
       }
     ]
+  },
+  {
+    "slug": "trilha-cardiologia-geriatrica-doenca-estrutural-atras-do-rotulo-generico",
+    "titulo": "Cardiologia geriátrica: doença estrutural escondida atrás de rótulos genéricos — amiloidose, síndrome cardiorrenal e insuficiência tricúspide negligenciada",
+    "tema": "Cardiologia geriátrica",
+    "objetivo": "Sair sabendo reconhecer três situações em que um rótulo clínico plausível e comum no idoso — 'cardiopatia hipertensiva com HFpEF', 'piora renal pela diurese' e 'insuficiência tricúspide é só consequência, não se trata' — mascara uma doença estrutural específica e tratável: a amiloidose cardíaca por transtirretina selvagem, a síndrome cardiorrenal corretamente classificada, e a insuficiência tricúspide funcional grave candidata a reparo percutâneo.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "amiloidose-cardiaca-por-transtirretina-selvagem-attrwt-no-idoso",
+        "por_que": "Abre pelo rótulo mais frequentemente usado sem questionamento no idoso hipertenso com HFpEF e ventrículo espesso — mostrando, com dado de autópsia sistemática, o quanto a amiloidose por transtirretina selvagem fica escondida atrás dele."
+      },
+      {
+        "ordem": 2,
+        "item_type": "estudo",
+        "item_slug": "attr-act-tafamidis-na-cardiomiopatia-amiloide-por-transtirretina",
+        "por_que": "O ensaio que mudou a amiloidose cardíaca por transtirretina de diagnóstico sem tratamento específico para doença com terapia modificadora de curso — justifica por que vale a pena procurar o diagnóstico correto em vez de aceitar o rótulo genérico."
+      },
+      {
+        "ordem": 3,
+        "item_type": "medicamento",
+        "item_slug": "tafamidis",
+        "por_que": "Do ensaio para a prescrição: a droga que o ATTR-ACT testou, com a dose e as particularidades práticas de uso nessa população."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "sindrome-cardiorrenal-no-idoso-classificacao-e-o-mito-da-piora-renal-durante-a-descongestao",
+        "por_que": "Segundo rótulo automático que merece desconfiança: a subida de creatinina durante a diurese do idoso internado por IC descompensada é lida, por padrão, como dano renal induzido pelo tratamento — quando a evidência mostra com frequência o oposto. Traz também a classificação de Ronco que organiza qual órgão iniciou o processo em cada cenário."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "insuficiencia-tricuspide-funcional-grave-no-idoso-fragil-teer-tricuspide-e-o-triluminate",
+        "por_que": "Fecha com a valvopatia historicamente mais negligenciada: insuficiência tricúspide grave tratada como 'mera consequência' da doença de base, quando o reparo percutâneo borda a borda muda qualidade de vida e reinternação mesmo no paciente idoso frágil considerado inoperável — inclusive no octogenário, onde a idade isolada não deveria ser o único critério para negar o procedimento."
+      }
+    ]
   }
 ]

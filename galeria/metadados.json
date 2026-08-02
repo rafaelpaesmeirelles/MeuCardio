@@ -4105,5 +4105,138 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "ecg-hipertrofia-ventricular-esquerda-idosa-pos-avc",
+    "title": "ECG — Hipertrofia ventricular esquerda marcante em paciente idosa, achado após AVC",
+    "modality": "ECG",
+    "theme": "Cardiologia geriátrica",
+    "file_path": "ecg/hipertrofia-ventricular-esquerda-idosa-pos-avc.jpg",
+    "findings": "Eletrocardiograma de 12 derivações de uma mulher de 83 anos, obtido dez dias após um AVC isquêmico, mostrando critérios de voltagem para hipertrofia ventricular esquerda (HVE) — R proeminente em V5-V6 e S profundo em V1-V3 — associados a alterações de repolarização (infradesnivelamento de ST e inversão de onda T) nas derivações laterais, compatíveis com padrão de \"strain\" ventricular esquerdo. É bem diferente do ECG da mesma paciente quatro meses antes, que mostrava fibrilação atrial com QRS estreito e nenhum critério de HVE.",
+    "teaching_points": "O achado motivou investigação adicional (ecocardiograma, coronariografia e ressonância cardíaca), que revelou o diagnóstico real: cardiomiopatia hipertrófica apical, não hipertrofia hipertensiva simples — reforçando que HVE nova ao ECG em paciente idosa, especialmente com padrão desproporcional ao grau de hipertensão conhecida, merece caracterização por imagem antes de ser atribuída de forma automática à hipertensão arterial. O caso também ilustra como o quadro eletrocardiográfico pode mudar de forma expressiva num intervalo curto (quatro meses) no idoso, o que reforça a importância de comparar sempre com um traçado de base quando disponível, em vez de interpretar o ECG isoladamente.",
+    "source_name": "J Med Case Rep. 2018;12:76 (PMID 29562910, PMCID PMC5863476, PubMed Central Open Access)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5863476/",
+    "license": "CC BY 4.0",
+    "attribution": "Umeojiako WI, Kanyal R. Left ventricular hypertrophy diagnosed after a stroke: a case report. J Med Case Rep. 2018;12:76. PMID: 29562910. doi:10.1186/s13256-018-1592-4. Figura 2, via PubMed Central (licença CC BY 4.0).",
+    "tags": [
+      "hipertrofia ventricular esquerda",
+      "ecg",
+      "idoso",
+      "cardiomiopatia hipertrofica apical",
+      "geriatria"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ecocardiograma-aneurisma-coronariano-doenca-de-kawasaki-crianca",
+    "title": "Ecocardiograma — Aneurisma de artéria coronária esquerda na doença de Kawasaki atípica em criança",
+    "modality": "Ecocardiograma",
+    "theme": "Cardiologia pediátrica",
+    "file_path": "ecocardiograma/aneurisma-coronariano-kawasaki-crianca.jpg",
+    "findings": "Corte paraesternal eixo curto ao ecocardiograma transtorácico de uma criança de 9 anos com doença de Kawasaki atípica, mostrando dilatação aneurismática da artéria coronária principal esquerda (LMCA, 6 mm — seta amarela) e da artéria descendente anterior (LAD, 6,2 mm — seta vermelha), ambas com escore Z acima de 6 (LMCA Z=6,4; LAD Z=9,04), diagnósticas de aneurisma coronariano segundo os critérios vigentes. O painel ao Doppler colorido, ao lado, mostra o fluxo dentro da região dilatada.",
+    "teaching_points": "A doença de Kawasaki é a causa mais frequente de doença coronariana adquirida na infância nos países desenvolvidos, e o aneurisma coronariano é a complicação que define o prognóstico a longo prazo — daí a recomendação de ecocardiograma seriado (diagnóstico, 1-2 semanas e 4-6 semanas após o início) em todo caso confirmado ou suspeito. Este caso é de apresentação atípica (a criança não preenchia todos os critérios clínicos clássicos), o que reforça um ponto prático: aneurisma coronariano ao ecocardiograma confirma o diagnóstico mesmo quando o quadro clínico é incompleto, e a ausência de critérios completos não deve atrasar a pesquisa de acometimento coronariano nem o início de imunoglobulina intravenosa. Complementa, com outra modalidade e outro paciente, os achados de aneurisma coronariano por Kawasaki já publicados na galeria em angiotomografia (mesmo tema).",
+    "source_name": "Cureus. 2021;13(2):e13589 (PMID 33815991, PMCID PMC8009467, PubMed Central Open Access)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8009467/",
+    "license": "CC BY 3.0",
+    "attribution": "Tanti SK, Mishra S. Atypical Kawasaki Disease Complicated With Coronary Artery Aneurysm: A Case Report and Review of Literature. Cureus. 2021;13(2):e13589. PMID: 33815991. doi:10.7759/cureus.13589. Figura 1, via PubMed Central (licença CC BY 3.0).",
+    "tags": [
+      "doenca de kawasaki",
+      "aneurisma coronariano",
+      "ecocardiograma",
+      "pediatria",
+      "vasculite"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "eco-strain-apical-sparing-amiloidose-cardiaca-idoso",
+    "title": "Ecocardiograma com strain — padrão de \"apical sparing\" (cherry on top) na amiloidose cardíaca do idoso",
+    "modality": "Ecocardiograma",
+    "theme": "Cardiologia geriátrica",
+    "file_path": "ecocardiograma/strain-apical-sparing-amiloidose-idoso.jpg",
+    "findings": "Mapa polar (\"bullseye\") de strain longitudinal de pico sistólico por speckle-tracking, num paciente de 72 anos com amiloidose cardíaca confirmada por biópsia. Os segmentos apicais (centro do mapa) mostram strain preservado, mais negativo (-14,0 a -20,2%), enquanto os segmentos basais (anel externo) mostram strain acentuadamente reduzido, próximo de zero (-0,6 a -4,5%) — o padrão de relativa preservação do ápice em contraste com a base gravemente afetada, conhecido na literatura como \"apical sparing\" ou sinal do \"cherry on top\".",
+    "teaching_points": "O apical sparing é um dos achados ecocardiográficos mais sensíveis e específicos para amiloidose cardíaca, e sua utilidade prática é justamente discriminar amiloidose de outras causas de hipertrofia ventricular esquerda concêntrica no idoso (como a hipertrofia hipertensiva) — condições que podem parecer semelhantes ao ecocardiograma convencional (2D e Doppler), mas cuja distribuição do strain regional difere. Vale a ressalva já registrada na biblioteca: o padrão não é exclusivo de amiloidose (pode aparecer, com menor frequência, em outras cardiomiopatias hipertróficas/infiltrativas) e por si só não substitui a confirmação diagnóstica — neste caso, feita por ressonância cardíaca e biópsia com coloração de Vermelho Congo. Complementa, com outra técnica, os achados de amiloidose cardíaca já publicados na galeria em modo M e Doppler de fluxo mitral (mesmo tema).",
+    "source_name": "Case Rep Cardiol. 2021;2021:5673364 (PMID 34676118, PMCID PMC8526272, PubMed Central Open Access)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8526272/",
+    "license": "CC BY 4.0",
+    "attribution": "Sanchez AC, Murphy R, Rao S, Martinez F, Bryant S, Chaudhuri D. A Case Report of Cardiac Amyloidosis Highlighting the Importance of Strain Analysis. Case Rep Cardiol. 2021;2021:5673364. PMID: 34676118. doi:10.1155/2021/5673364. Figura 3, via PubMed Central (licença CC BY 4.0).",
+    "tags": [
+      "amiloidose cardiaca",
+      "strain longitudinal",
+      "apical sparing",
+      "idoso",
+      "geriatria",
+      "speckle-tracking"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ecocardiograma-vegetacao-mitral-endocardite-infecciosa-crianca",
+    "title": "Ecocardiograma — Vegetação em valva mitral e óstio de veia pulmonar na endocardite infecciosa em criança sem cardiopatia prévia",
+    "modality": "Ecocardiograma",
+    "theme": "Cardiologia pediátrica",
+    "file_path": "ecocardiograma/vegetacao-mitral-endocardite-crianca.jpg",
+    "findings": "Ecocardiograma transtorácico de uma menina de 8 anos sem cardiopatia estrutural prévia e sem cirurgia cardíaca anterior, com endocardite infecciosa por Abiotrophia defectiva. Painel A: corte mostrando átrio esquerdo (LA) e ventrículo esquerdo (LV), com uma imagem aderida, estriada e flocular (seta) na entrada da veia pulmonar esquerda na parede posterior do átrio esquerdo. Painel B: corte mostrando átrio direito (RA), átrio esquerdo (LA) e ventrículo esquerdo (LV), com espessamento dos folhetos mitrais anterior e posterior e a mesma imagem estriada e flocular, de textura móvel (setas), aderida a ambos os folhetos — achados compatíveis com vegetação.",
+    "teaching_points": "O caso reforça um ponto de triagem importante: endocardite infecciosa pode ocorrer em criança sem cardiopatia estrutural prévia nem fator de risco conhecido, então a ausência desses antecedentes não deve reduzir a suspeita clínica diante de febre persistente com sopro novo ou fenômeno embólico. Abiotrophia defectiva é um estreptococo variante nutricionalmente exigente (\"nutritionally variant streptococcus\"), historicamente associado a taxas mais altas de falha terapêutica e recidiva do que os estreptococos do grupo viridans típicos — informação relevante para a escolha e a duração do esquema antimicrobiano. Neste caso, a vegetação em local pouco habitual (óstio de veia pulmonar, além da valva mitral) se associou a fenômenos embólicos cerebrais (aneurismas micóticos e infarto), documentados por ressonância magnética de crânio no mesmo artigo — lembrete de que a investigação de embolização a distância deve acompanhar o achado de vegetação, sobretudo quando volumosa ou móvel.",
+    "source_name": "Front Pediatr. 2022;10:894049 (PMID 35874573, PMCID PMC9299070, PubMed Central Open Access)",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9299070/",
+    "license": "CC BY 4.0",
+    "attribution": "Du Y, Zhang Z, Chen C, et al. Case Report: Report of Infective Endocarditis Caused by Abiotrophia defectiva and Literature Review. Front Pediatr. 2022;10:894049. PMID: 35874573. doi:10.3389/fped.2022.894049. Figura 2, via PubMed Central (licença CC BY 4.0).",
+    "tags": [
+      "endocardite infecciosa",
+      "vegetacao",
+      "valva mitral",
+      "pediatria",
+      "abiotrophia defectiva"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "bicuspide-valva-aortica-doppler-continuo-estenose-leve",
+    "title": "Ecocardiograma — Doppler contínuo transaórtico em valva aórtica bicúspide (estenose leve)",
+    "modality": "Ecocardiograma",
+    "theme": "Cardiopatias congênitas",
+    "file_path": "ecocardiograma/valva-aortica-bicuspide-doppler-continuo-estenose-leve.jpg",
+    "findings": "Traçado de Doppler contínuo (onda espectral) do fluxo transaórtico, com a miniatura em modo bidimensional e Doppler colorido no topo mostrando o feixe alinhado à via de saída do ventrículo esquerdo/valva aórtica, e traçado eletrocardiográfico simultâneo na base (FC 67 bpm). Segundo a fonte, o caso é de valva aórtica bicúspide com estenose leve — a valva bicúspide é a cardiopatia congênita mais comum (cerca de 1-2% da população) e a principal causa de estenose aórtica isolada em adultos jovens.",
+    "teaching_points": "A valva aórtica bicúspide costuma ser assintomática por décadas e é frequentemente um achado incidental — ao ecocardiograma transtorácico, o corte paraesternal eixo curto mostra classicamente um orifício valvar em 'boca de peixe' (fish-mouth) em vez do trevo de três folhetos. O Doppler contínuo, como o desta imagem, é o que permite graduar a gravidade da estenose pela velocidade de pico e pelo gradiente médio — não a impressão visual da abertura valvar. Ponto de ensino relevante: a valva bicúspide associa-se a aortopatia própria (dilatação da aorta ascendente), que precisa ser rastreada e seguida independentemente do grau de estenose ou regurgitação valvar.",
+    "source_name": "Wikimedia Commons (CardioNetworks ECHOpedia)",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Bicuspid_aortic_valve_E00343_(CardioNetworks_ECHOpedia).jpg",
+    "license": "CC BY-SA 3.0",
+    "attribution": "CardioNetworks Secretariat, cortesia do AMC Echolab (Academic Medical Center, Amsterdã, Holanda), via Wikimedia Commons — CC BY-SA 3.0. Caso E00343 do banco de imagens ECHOpedia.",
+    "tags": [
+      "valva aortica bicuspide",
+      "estenose aortica",
+      "doppler continuo",
+      "cardiopatia congenita",
+      "ecocardiograma"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "transposicao-grandes-arterias-vasos-paralelos-eco-subcostal",
+    "title": "Ecocardiograma — Transposição das grandes artérias, vasos paralelos em corte subcostal",
+    "modality": "Ecocardiograma",
+    "theme": "Cardiopatias congênitas",
+    "file_path": "ecocardiograma/transposicao-grandes-arterias-vasos-paralelos-subcostal.jpg",
+    "findings": "Corte ecocardiográfico subcostal com anotação da fonte identificando ventrículo esquerdo (VG), ventrículo direito (VD) e os dois grandes vasos emergindo lado a lado (rotulados em conjunto 'TP Ao' — tronco pulmonar e aorta), em vez da relação cruzada normal entre via de saída aórtica e pulmonar. É o mesmo diagnóstico já ilustrado nesta galeria pelo sinal radiográfico do 'ovo preso ao barbante' em recém-nascido — aqui pela via ecocardiográfica que de fato confirma o diagnóstico.",
+    "teaching_points": "No coração normal, os grandes vasos se cruzam (a aorta nasce posterior e a pulmonar anterior, e os dois trajetos se entrecruzam ao sair dos ventrículos). Na transposição das grandes artérias, os vasos saem PARALELOS um ao outro — a aorta anterior a partir do ventrículo direito e a pulmonar posterior a partir do ventrículo esquerdo —, e é esse paralelismo, visível no corte subcostal ou paraesternal eixo curto modificado, que fecha o diagnóstico ecocardiográfico, sem depender do achado radiográfico (presente em menos da metade dos casos). A radiografia de tórax pode ser normal nos primeiros dias, e é o ecocardiograma — não a radiografia — o exame que confirma a anatomia e orienta a conduta imediata (septostomia atrial com balão, se houver mistura inadequada).",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:TGVSsCostal-Wiki.jpg",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Pezard, via Wikimedia Commons — CC BY-SA 3.0 (também disponível sob GFDL 1.2+). Legenda original em francês: 'Vaisseaux parallèles (voie sous costale) TGV'.",
+    "tags": [
+      "transposicao das grandes arterias",
+      "vasos paralelos",
+      "ecocardiograma subcostal",
+      "cardiopatia congenita cianotica",
+      "diagnostico ecocardiografico"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]

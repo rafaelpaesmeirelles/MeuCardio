@@ -4538,5 +4538,147 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "ecocardiograma-fetal-de-rastreio-pre-natal",
+    "name": "Ecocardiograma fetal de rastreio (18-24 semanas)",
+    "category": "imagem",
+    "theme": "Cardiologia pediátrica",
+    "what_it_measures": "Avaliação ultrassonográfica da anatomia e função cardíaca fetal durante o pré-natal, obtida por via transabdominal (ocasionalmente transvaginal em idade gestacional mais precoce). O rastreio obstétrico padrão inclui, no mínimo, o corte de quatro câmaras; a triagem estendida — hoje recomendada como parte do exame morfológico de rotina — acrescenta as vias de saída ventriculares (via de saída do VE, via de saída do VD) e o corte dos três vasos/três vasos e traqueia, permitindo detectar lesões que o corte de quatro câmaras isolado não capta, como transposição das grandes artérias, tetralogia de Fallot e dupla via de saída de VD.",
+    "reference_range": "Não se aplica valor de referência único — é exame anatômico e funcional qualitativo/semiquantitativo (situs, conexões atrioventriculares e ventrículo-arteriais, quatro câmaras simétricas, septo íntegro, ritmo regular). Achados considerados normais incluem forame oval pérvio com shunt direita-esquerda fisiológico e discreta assimetria de câmaras direitas em relação às esquerdas no terceiro trimestre.",
+    "indications": "Segundo a diretriz da ISUOG (2023) e o consenso da AHA (Donofrio MT et al., 2014): o rastreio de quatro câmaras + vias de saída faz parte do exame morfológico obstétrico de rotina em toda gestação. O ecocardiograma fetal DETALHADO (exame direcionado, mais longo, realizado por especialista) está indicado quando há fator de risco: história familiar de cardiopatia congênita em parente de primeiro grau, diabetes materna pré-gestacional, exposição a teratógeno cardíaco conhecido, translucência nucal aumentada, suspeita de anomalia cardíaca ou extracardíaca no rastreio de rotina, arritmia fetal detectada, gestação por reprodução assistida e algumas condições maternas (doença do tecido conectivo com risco de bloqueio atrioventricular fetal, fenilcetonúria descompensada).",
+    "interpretation": "A janela ideal para o rastreio é 18-24 semanas, quando o coração já tem tamanho suficiente para os cortes-padrão e ainda há tempo hábil para aconselhamento e planejamento do parto caso uma cardiopatia seja identificada. Cardiopatia crítica identificada no pré-natal muda o local do parto (para centro com cirurgia cardíaca pediátrica disponível) e permite iniciar prostaglandina E1 já ao nascimento nas lesões ducto-dependentes, antes do fechamento fisiológico do canal arterial.",
+    "limitations": "Sensibilidade do rastreio de quatro câmaras isolado para cardiopatia congênita é limitada (a literatura mostra grande variação, dependente de operador e de equipamento) — é justamente essa limitação que motivou a extensão do protocolo às vias de saída. Habitus materno (obesidade), posição fetal desfavorável, oligoâmnio e idade gestacional fora da janela ideal reduzem a qualidade da imagem. O rastreio de rotina não substitui o ecocardiograma fetal detalhado quando há fator de risco.",
+    "source_refs": [
+      "Carvalho JS, Axt-Fliedner R, Chaoui R, Copel JA, Cuneo BF, Goff D, et al; International Society of Ultrasound in Obstetrics and Gynecology. ISUOG Practice Guidelines (updated): fetal cardiac screening. Ultrasound Obstet Gynecol. 2023;61(6):788-803. PMID: 37267096. DOI: 10.1002/uog.26224",
+      "Donofrio MT, Moon-Grady AJ, Hornberger LK, Copel JA, Sklansky MS, Abuhamad A, et al; American Heart Association Adults With Congenital Heart Disease Joint Committee. Diagnosis and Treatment of Fetal Cardiac Disease: A Scientific Statement From the American Heart Association. Circulation. 2014;129(21):2183-2242. PMID: 24763516. DOI: 10.1161/01.cir.0000437597.44550.5d"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ecocardiograma fetal",
+      "pre-natal",
+      "rastreio",
+      "cardiopatia congenita",
+      "pediatria"
+    ]
+  },
+  {
+    "slug": "d-dimero-ajustado-por-idade-no-idoso-com-suspeita-de-tep",
+    "name": "D-dímero ajustado por idade no idoso com suspeita de TEP",
+    "category": "laboratorial",
+    "theme": "Cardiologia geriátrica",
+    "what_it_measures": "Produto de degradação da fibrina, elevado na presença de trombose ativa — mas também, de forma inespecífica, em idosos por conta do aumento fisiológico de fibrinogênio e ativação basal da coagulação relacionada à idade. O corte fixo tradicional (500 µg/L, equivalente a 0,5 µg/mL FEU) perde especificidade em pacientes acima de 50 anos, reduzindo a proporção de idosos em que o tromboembolismo pulmonar (TEP) pode ser excluído sem exame de imagem.",
+    "reference_range": "Corte ajustado por idade (validado pelo estudo ADJUST-PE): abaixo de 50 anos, mantém-se o corte convencional de 500 µg/L FEU; a partir de 50 anos, o corte passa a ser idade × 10 µg/L FEU (ex.: 800 µg/L para um paciente de 80 anos, 900 µg/L para um paciente de 90 anos). Aplica-se apenas a pacientes com probabilidade pré-teste BAIXA ou INTERMEDIÁRIA (Wells ou Genebra) — nunca em probabilidade alta, cenário em que o D-dímero não deve ser usado para excluir TEP independentemente do corte.",
+    "indications": "Paciente com suspeita clínica de TEP, idade ≥50 anos, e probabilidade pré-teste baixa ou intermediária pelos escores de Wells ou Genebra revisado/simplificado — é exatamente a população em que o corte fixo tradicional gera mais angiotomografias desnecessárias, segundo a diretriz ESC 2019 de tromboembolismo pulmonar, que incorpora o corte ajustado por idade ao algoritmo diagnóstico.",
+    "interpretation": "D-dímero abaixo do corte ajustado por idade, em paciente de baixa/intermediária probabilidade pré-teste, exclui TEP com segurança equivalente ao corte fixo tradicional — no estudo ADJUST-PE, a taxa de eventos tromboembólicos nos 3 meses seguintes à exclusão por esse critério foi de 0,3% (IC95% 0,1%-1,7%), consistente com a taxa considerada aceitável para descartar TEP sem imagem. D-dímero acima do corte ajustado, seja qual for o valor, não confirma TEP — segue exigindo confirmação por angiotomografia ou cintilografia.",
+    "limitations": "O corte ajustado por idade não deve ser aplicado a pacientes de alta probabilidade pré-teste clínica, gestantes, pacientes oncológicos ativos, hospitalizados ou pós-operatórios recentes — populações em que o D-dímero já está inespecificamente elevado por outros mecanismos, reduzindo ainda mais o valor preditivo negativo do teste. O ADJUST-PE usou um ensaio quantitativo específico (VIDAS D-Dimer Exclusion); a validade do corte ajustado pode variar conforme o método analítico do laboratório.",
+    "source_refs": [
+      "Righini M, Van Es J, Den Exter PL, Roy PM, Verschuren F, Ghuysen A, et al. Age-Adjusted D-Dimer Cutoff Levels to Rule Out Pulmonary Embolism: The ADJUST-PE Study. JAMA. 2014;311(11):1117-1124. PMID: 24643601. DOI: 10.1001/jama.2014.2135",
+      "Konstantinides SV, Meyer G, Becattini C, Bueno H, Geersing GJ, Harjola VP, et al; ESC Scientific Document Group. 2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism developed in collaboration with the European Respiratory Society (ERS). Eur Heart J. 2020;41(4):543-603. PMID: 31504429. DOI: 10.1093/eurheartj/ehz405"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "d-dimero",
+      "tep",
+      "tromboembolismo pulmonar",
+      "idoso",
+      "geriatria"
+    ]
+  },
+  {
+    "slug": "teste-cardiopulmonar-de-exercicio-ergoespirometria-pediatrico",
+    "name": "Teste cardiopulmonar de exercício (ergoespirometria) pediátrico",
+    "category": "metodo_grafico",
+    "theme": "Cardiologia pediátrica",
+    "what_it_measures": "Teste de esforço progressivo (esteira ou cicloergômetro) com análise de gases expirados breath-by-breath, medindo consumo de oxigênio (VO2), produção de CO2 (VCO2), ventilação-minuto e frequência cardíaca ao longo do exercício — vai além do eletrocardiograma e da resposta pressórica que o teste ergométrico convencional (protocolo de Bruce) fornece, permitindo quantificar a capacidade aeróbica funcional (VO2 pico) e identificar o limiar anaeróbico.",
+    "reference_range": "Não existe um valor único: o VO2 pico de referência varia por idade, sexo, superfície corporal e nível de condicionamento, e deve ser comparado ao previsto para a população pediátrica saudável (não ao valor do adulto) — a estatística da AHA 2006 recomenda expressar o resultado como percentual do previsto para idade/sexo/tamanho corporal, e não como valor absoluto isolado. Critério de esforço máximo aceito: razão de troca respiratória (RER, VCO2/VO2) ≥1,0 a 1,1 no pico do esforço.",
+    "indications": "Segundo a diretriz da American Heart Association (Paridon SM et al., Circulation 2006): avaliação de capacidade funcional em cardiopatia congênita operada (especialmente fisiologia univentricular/Fontan), cardiomiopatias, hipertensão pulmonar pediátrica, dispneia ou intolerância ao esforço inexplicadas, e antes de liberação para esporte competitivo em criança com cardiopatia estrutural conhecida. Também usado em seguimento longitudinal para documentar progressão ou resposta a intervenção (cirúrgica, medicamentosa ou de reabilitação).",
+    "interpretation": "VO2 pico reduzido em relação ao previsto para idade/sexo indica limitação da capacidade aeróbica, mas a causa exige integrar os demais parâmetros do teste: platô de VO2 sem aumento adicional com o esforço sugere componente cardiovascular; padrão ventilatório desproporcional (baixa reserva ventilatória) aponta para componente pulmonar; RER baixo no pico sugere esforço submáximo, limitando a interpretação do VO2 pico medido. Em cardiopatia congênita operada, quedas seriadas de VO2 pico ao longo do seguimento têm valor prognóstico e podem anteceder deterioração clínica.",
+    "limitations": "Exige equipamento específico (analisador de gases, sistema breath-by-breath) e cooperação da criança — a colaboração é limitante abaixo de aproximadamente 6-7 anos de idade, e o teste depende de motivação e esforço voluntário máximo, o que pode subestimar a capacidade real em criança pouco cooperativa ou ansiosa. Valores de referência pediátricos são menos robustos e menos numerosos que os do adulto, com heterogeneidade entre protocolos (esteira vs. cicloergômetro) e entre laboratórios.",
+    "source_refs": [
+      "Paridon SM, Alpert BS, Boas SR, Cabrera ME, Caldarera LL, Daniels SR, et al; American Heart Association Council on Cardiovascular Disease in the Young, Committee on Atherosclerosis, Hypertension, and Obesity in Youth. Clinical Stress Testing in the Pediatric Age Group: A Statement From the American Heart Association Council on Cardiovascular Disease in the Young, Committee on Atherosclerosis, Hypertension, and Obesity in Youth. Circulation. 2006;113(15):1905-1920. PMID: 16567564. DOI: 10.1161/CIRCULATIONAHA.106.174375"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ergoespirometria",
+      "teste cardiopulmonar de exercicio",
+      "vo2",
+      "pediatria",
+      "fontan"
+    ]
+  },
+  {
+    "slug": "velocidade-de-onda-de-pulso-rigidez-arterial-no-idoso",
+    "name": "Velocidade de onda de pulso (VOP) carótido-femoral — rigidez arterial no idoso",
+    "category": "metodo_grafico",
+    "theme": "Cardiologia geriátrica",
+    "what_it_measures": "Mede a velocidade de propagação da onda de pulso arterial entre dois pontos de referência — classicamente carótida e artéria femoral — como marcador direto de rigidez da parede da aorta. A rigidez aórtica aumenta progressivamente com a idade (perda de elastina, aumento de colágeno na camada média) e é considerada, nas diretrizes de hipertensão, um marcador de lesão de órgão-alvo distinto da própria pressão arterial, com valor preditivo independente para eventos cardiovasculares no idoso.",
+    "reference_range": "Corte de anormalidade adotado pelas diretrizes ESC/ESH de hipertensão desde 2013 (revisado do corte anterior de 12 m/s, de 2007): velocidade de onda de pulso carótido-femoral > 10 m/s indica rigidez aórtica aumentada e lesão de órgão-alvo mediada por hipertensão. Valores de referência aumentam com a idade mesmo em normotensos — o documento de consenso de Van Bortel et al. (2012) recomenda expressar o resultado ajustado à distância de trajeto (fator de correção de 0,8) e não como valor bruto de trajeto direto.",
+    "indications": "Estratificação de risco cardiovascular em hipertensão arterial, sobretudo quando a decisão terapêutica é incerta pelos fatores de risco tradicionais isolados — a VOP aumentada reclassifica parte dos pacientes de risco intermediário para risco mais alto. Também usada em pesquisa e em avaliação especializada de idosos com hipertensão sistólica isolada, quadro clínico em que a rigidez aórtica é o mecanismo fisiopatológico dominante (e não a resistência vascular periférica, como na hipertensão do adulto jovem).",
+    "interpretation": "VOP > 10 m/s no idoso hipertenso reforça a indicação de tratamento mais intensivo e de investigação de lesão de órgão-alvo adicional (hipertrofia ventricular esquerda, microalbuminúria, retinopatia). A hipertensão sistólica isolada do idoso — pressão de pulso alargada com PA diastólica normal ou baixa — é a expressão clínica direta de uma aorta rígida: a onda refletida retorna mais rápido e se soma à onda sistólica em vez de à diastólica, elevando a sistólica e reduzindo a diastólica.",
+    "limitations": "Requer equipamento dedicado (tonometria de aplanação ou oscilometria validada) pouco disponível fora de centros especializados ou de pesquisa, o que limita seu uso rotineiro na prática clínica geral. A medida é sensível à frequência cardíaca, ao estado volêmico no momento do exame e à técnica de posicionamento dos sensores; arritmia (especialmente fibrilação atrial, comum no idoso) compromete a qualidade e a reprodutibilidade da leitura.",
+    "source_refs": [
+      "Van Bortel LM, Laurent S, Boutouyrie P, Chowienczyk P, Cruickshank JK, De Backer T, et al; Artery Society, European Society of Hypertension Working Group on Vascular Structure and Function, European Network for Noninvasive Investigation of Large Arteries. Expert consensus document on the measurement of aortic stiffness in daily practice using carotid-femoral pulse wave velocity. J Hypertens. 2012;30(3):445-448. PMID: 22278144. DOI: 10.1097/HJH.0b013e32834fa8b0",
+      "Williams B, Mancia G, Spiering W, Agabiti Rosei E, Azizi M, Burnier M, et al; ESC Scientific Document Group. 2018 ESC/ESH Guidelines for the management of arterial hypertension. Eur Heart J. 2018;39(33):3021-3104. PMID: 30165516. DOI: 10.1093/eurheartj/ehy339"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "velocidade de onda de pulso",
+      "rigidez arterial",
+      "idoso",
+      "geriatria",
+      "hipertensao sistolica isolada"
+    ]
+  },
+  {
+    "slug": "ecocardiografia-fetal-precoce-rastreio-cardiaco-no-primeiro-trimestre",
+    "name": "Ecocardiografia fetal precoce (rastreio cardíaco no primeiro trimestre, 11+0 a 13+6 semanas)",
+    "category": "imagem",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Exame ultrassonográfico direcionado ao coração fetal realizado na janela do rastreio de translucência nucal (11+0 a 13+6 semanas), distinto do ecocardiograma fetal detalhado de 18-22 semanas. Avalia situs (posição de estômago e coração à esquerda, eixo cardíaco), a visualização de quatro câmaras (enchimento biventricular, coluna posteriorizada) e a via de saída trivascular e traqueia (3VTV) com Doppler colorido/power bidirecional, demonstrando os arcos aórtico e ductal do lado esquerdo.",
+    "reference_range": "Não numérico — exame morfológico/funcional dirigido. A taxa de sucesso de visualização completa das estruturas cardíacas é significativamente maior após 12+3 semanas de gestação, pelo tamanho reduzido do coração fetal em idade gestacional muito precoce.",
+    "indications": "Rastreio cardíaco precoce, realizado no momento do exame de translucência nucal quando o serviço tem essa capacidade — não é rotineiro nem obrigatório, mas mostrou-se eficaz em populações de baixo risco. Requisito mínimo: visualização do coração dentro do tórax e confirmação de ritmo regular. Uso de transdutor transabdominal de alta frequência (ocasionalmente transvaginal) e Doppler colorido/power priorizado sobre a escala de cinza, pela resolução necessária para as estruturas pequenas do coração fetal nessa idade gestacional.",
+    "interpretation": "Visualização adequada de situs, quatro câmaras e 3VTV com anatomia normal reduz (mas não exclui) a probabilidade de cardiopatia estrutural maior. A avaliação das vias de saída ventriculares nessa idade gestacional é tecnicamente difícil e sujeita tanto a falso-negativo quanto a falso-positivo — por isso o rastreio precoce apoia-se principalmente em situs e 3VTV. Qualquer suspeita de cardiopatia congênita nesse exame indica encaminhamento para ecocardiografia fetal detalhada, sem aguardar a janela de 18-22 semanas.",
+    "limitations": "Segurança do Doppler: índice térmico deve ser mantido ≤1,0 e o tempo de exposição o mais curto possível (em geral não superior a 5-10 minutos). Estruturas pequenas, hábito materno, posição fetal e experiência do examinador limitam a taxa de detecção nessa janela mais do que no exame de 18-22 semanas. Não substitui o rastreio morfológico de segundo trimestre — é complementar, e achado normal aqui não dispensa o exame padrão posterior.",
+    "source_refs": [
+      "Carvalho JS, Axt-Fliedner R, Chaoui R, et al. ISUOG Practice Guidelines (updated): fetal cardiac screening. Ultrasound Obstet Gynecol. 2023;61(6):788-803. PMID: 37267096. DOI: 10.1002/uog.26224 — acesso aberto (CC-BY), texto integral lido em PDF, seção 'Early fetal cardiac screening'."
+    ],
+    "tags": [
+      "ecocardiografia fetal",
+      "rastreio primeiro trimestre",
+      "translucencia nucal",
+      "cardiopatia congenita",
+      "3vtv"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "doppler-do-ducto-venoso-no-primeiro-trimestre-no-rastreio-de-cardiopatia-congenita",
+    "name": "Doppler do ducto venoso no primeiro trimestre no rastreio de cardiopatia congênita",
+    "category": "imagem",
+    "theme": "Cardiopatias congênitas",
+    "what_it_measures": "Avaliação por Doppler pulsado do fluxo no ducto venoso fetal, vaso que shunta sangue oxigenado da veia umbilical diretamente para a veia cava inferior. A onda normal tem três componentes (sístole S, diástole D e onda 'a' de contração atrial, sempre anterógrada); a onda 'a' ausente ou reversa é considerada achado anormal e correlaciona-se com maior risco de cardiopatia congênita e de aneuploidia em fetos cromossomicamente normais.",
+    "reference_range": "Onda 'a' anterógrada (fluxo anterógrado durante toda a contração atrial) é o padrão normal. Onda 'a' ausente ou reversa é o achado anormal que define o teste como positivo para rastreio.",
+    "indications": "Rastreio de cardiopatia congênita entre 11+0 e 13+6 semanas (comprimento cabeça-nádega de 45-84 mm), como complemento à translucência nucal — não isoladamente. Estudo multicêntrico prospectivo mostrou que a aquisição de imagem Doppler de qualidade 'boa' foi factível em 58,6% dos casos na prática de rotina, sem aumento relevante do tempo de exame quando o escore de Herman era >7 e a aquisição levava menos de 5 minutos.",
+    "interpretation": "Metanálise de 7 estudos (n=50.354) regardless de status de translucência nucal mostrou sensibilidade de 50% e especificidade de 93% do Doppler do ducto venoso para detecção de cardiopatia congênita em fetos cromossomicamente normais. Em subgrupo com translucência nucal aumentada (9 estudos, n=2.908), sensibilidade 83% e especificidade 80%; em subgrupo com translucência nucal normal (7 estudos, n=47.610), sensibilidade 19% e especificidade 96% — ou seja, o valor do teste depende muito do risco pré-teste dado pela translucência nucal.",
+    "limitations": "Teste operador-dependente, com curva de aprendizado — a taxa de imagens adequadas na prática de rotina (58,6%) é bem inferior à de centros de referência. Sensibilidade isolada é baixa (19-50% conforme a população), portanto onda 'a' normal NÃO exclui cardiopatia congênita — é rastreio complementar à translucência nucal e ao exame morfológico do coração, nunca substitui a ecocardiografia fetal detalhada.",
+    "source_refs": [
+      "Papatheodorou SI, Evangelou E, Makrydimas G, Ioannidis JPA. First-trimester ductus venosus screening for cardiac defects: a meta-analysis. BJOG. 2011;118(12):1438-1445. PMID: 21668765. DOI: 10.1111/j.1471-0528.2011.03029.x",
+      "Joinau-Zoulovits F, Bouzidi A, Etienne F, Levêque C. Feasibility of Ductus Venosus Doppler Screening During First Trimester Ultrasound: Prospective Multicenter Study. Medicina (Kaunas). 2025;61(8):1391. PMID: 40870436. PMCID: PMC12387703. DOI: 10.3390/medicina61081391 — acesso aberto (CC-BY), texto integral lido."
+    ],
+    "tags": [
+      "ducto venoso",
+      "doppler",
+      "rastreio primeiro trimestre",
+      "cardiopatia congenita",
+      "translucencia nucal"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]

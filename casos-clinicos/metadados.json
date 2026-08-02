@@ -10358,5 +10358,107 @@
       "Abarbanell G, Tepper NK, Farr SL. Safety of contraceptive use among women with congenital heart disease: A systematic review. Congenit Heart Dis. 2019;14(3):331-340. DOI: 10.1111/chd.12752. PMID: 30681774."
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "cardiotoxicidade-por-antraciclina-vigilancia-cardiologica-apos-quimioterapia-para-leucemia",
+    "titulo": "Após a leucemia: por que este menino de 8 anos ainda precisa de ecocardiograma anual?",
+    "tema": "Cardiologia pediátrica",
+    "nivel": "básico",
+    "enunciado": "Menino de 8 anos, tratado há 2 anos para leucemia linfoblástica aguda com protocolo quimioterápico que incluiu dose cumulativa de antraciclina de 300 mg/m², sem radioterapia torácica associada. Está clinicamente bem, assintomático, sem queixas cardiovasculares, e o ecocardiograma realizado ao final do tratamento oncológico foi normal. A família pergunta se ainda é necessário manter consultas cardiológicas, já que ele está 'curado do câncer'.",
+    "pergunta": "Com base na estratificação de risco do International Late Effects of Childhood Cancer Guideline Harmonization Group (IGHG), qual a conduta de vigilância cardiológica apropriada?",
+    "opcoes": [
+      "Não é necessária vigilância cardiológica dedicada: ele está assintomático e o ecocardiograma anterior foi normal, então recebe alta cardiológica",
+      "Classificar como grupo de risco Alto (dose de antraciclina ≥250 mg/m²) e manter vigilância cardiológica de rotina, com recomendação forte segundo o IGHG, independentemente da ausência de sintomas",
+      "Vigilância só passaria a ser necessária se ele tivesse recebido também radioterapia torácica, já que antraciclina isolada abaixo de 600 mg/m² não eleva risco relevante",
+      "Repetir ecocardiograma apenas quando surgir sintoma sugestivo de insuficiência cardíaca, pois a fase assintomática da cardiotoxicidade não tem valor preditivo"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A dose cumulativa recebida (300 mg/m²) está acima do corte de 250 mg/m² que define o grupo de risco Alto na Tabela 3 do IGHG (Armenian et al., Lancet Oncol 2015) — mesmo sem radioterapia torácica associada. A cardiomiopatia sintomática é tipicamente precedida por alterações estruturais e funcionais assintomáticas, progressivas e graduais, que podem ser atenuadas com tratamento precoce: é exatamente esse racional que sustenta a vigilância programada, não orientada por sintoma. A incidência de insuficiência cardíaca congestiva é inferior a 5% com dose cumulativa <250 mg/m², se aproxima de 10% entre 250 e 600 mg/m², e excede 30% para doses >600 mg/m² — mas a diretriz é explícita: não há um limiar de dose comprovadamente seguro, e cardiomiopatia sintomática já foi descrita em sobreviventes que receberam doses bem abaixo de 250 mg/m². Sobreviventes com risco relativo de IC congestiva 4 vezes maior ou mais em relação a quem não foi exposto (caso do grupo Alto) devem receber vigilância de rotina com recomendação forte. Sobreviventes de câncer infantil expostos a antraciclina e/ou radioterapia torácica têm risco 15 vezes maior de desenvolver insuficiência cardíaca congestiva e 7 vezes maior risco de morte precoce por causa cardíaca em comparação com a população geral — dar alta cardiológica por estar assintomático hoje ignora justamente a longa latência entre exposição e doença clinicamente evidente que justifica o programa de vigilância.",
+    "source_refs": [
+      "Armenian SH, Hudson MM, Mulder RL, et al; International Late Effects of Childhood Cancer Guideline Harmonization Group. Recommendations for cardiomyopathy surveillance for survivors of childhood cancer: a report from the International Late Effects of Childhood Cancer Guideline Harmonization Group. Lancet Oncol. 2015;16(3):e123-e136. DOI: 10.1016/S1470-2045(14)70409-7. PMID: 25752563."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "estenose-pulmonar-valvar-grave-em-lactente-relacao-balao-anel-na-valvoplastia",
+    "titulo": "Valvoplastia pulmonar em lactente: o balão maior reduz mais o gradiente?",
+    "tema": "Cardiologia pediátrica",
+    "nivel": "intermediário",
+    "enunciado": "Lactente de 4 meses com estenose pulmonar valvar isolada, gradiente de pico ao Doppler contínuo de 75 mmHg (grave), função de ventrículo direito preservada. Vai ser submetido a valvoplastia por balão. A equipe intervencionista discute a relação entre o diâmetro do balão escolhido e o diâmetro do anel valvar pulmonar (relação balão:anel).",
+    "pergunta": "Com base no estudo de Pathak et al. (2016), comparando relação balão:anel ≤1,2 (n=67) contra >1,2 (n=31) em 98 pacientes pediátricos, o que a evidência mostra sobre a escolha do diâmetro do balão?",
+    "opcoes": [
+      "Um balão desproporcionalmente maior (relação >1,2) reduz mais o gradiente transvalvar e deve ser sempre preferido, mesmo à custa de mais insuficiência pulmonar",
+      "A relação balão:anel ≤1,2 produziu insuficiência pulmonar residual significativamente menor do que >1,2 (p=0,008), sem diferença na redução do gradiente (p=0,33) nem na taxa de reintervenção (p=0,89)",
+      "A relação balão:anel não influencia nenhum desfecho relevante, e a escolha do diâmetro do balão é arbitrária dentro da prática",
+      "Um balão menor que o anel (relação <1,0) é obrigatório para evitar ruptura do anel valvar, mesmo sabendo que aumentará a taxa de reintervenção"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "No estudo de Pathak et al. (Congenit Heart Dis 2016), a eficácia do procedimento (redução do gradiente) não dependeu de usar um balão desproporcionalmente maior que o anel — mas o risco de insuficiência pulmonar residual, sim. Comparando relação balão:anel ≤1,2 (n=67) contra >1,2 (n=31): a redução do gradiente não diferiu entre os grupos (p=0,33), nem a taxa de reintervenção (p=0,89), mas o grupo com relação ≤1,2 teve insuficiência pulmonar significativamente menor (p=0,008). Conclusão literal dos autores: realizar a valvoplastia pulmonar por balão com relação balão:anel de ≤1,2 produz insuficiência pulmonar significativamente menor do que uma relação >1,2, sem reduzir a eficácia do procedimento. É o dado que sustenta a prática atual de mirar relação balão:anel próxima de 1,2, evitando sobredimensionar o balão além do necessário para romper a estenose — um balão desnecessariamente maior não ganha eficácia adicional e só acrescenta risco de insuficiência pulmonar residual, achado clinicamente relevante porque essa insuficiência tende a ser progressiva e, décadas depois, uma das causas mais comuns de reintervenção sobre a via de saída do ventrículo direito.",
+    "source_refs": [
+      "Pathak SJ, Pockett CR, Moore JW, El-Said HG. Effect of Balloon:Annulus Ratio on Incidence of Pulmonary Insufficiency Following Valvuloplasty. Congenit Heart Dis. 2016;11(5):415-419. DOI: 10.1111/chd.12327. PMID: 26887667."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "piora-de-creatinina-durante-diurese-intravenosa-em-idoso-com-ic-descompensada-suspender-o-diuretico",
+    "titulo": "Creatinina subiu durante a diurese: hora de suspender o diurético?",
+    "tema": "Cardiologia geriátrica",
+    "nivel": "intermediário",
+    "enunciado": "Mulher de 84 anos, internada por insuficiência cardíaca descompensada com congestão importante (estertores bibasais, edema de membros inferiores 3+/4+, pressão venosa jugular elevada), em furosemida intravenosa em dose otimizada. No terceiro dia de internação, a creatinina sobe de 1,1 para 1,4 mg/dL (aumento de 27%), mas há melhora clínica clara da congestão: perda de 3 kg de peso, redução da dispneia e dos estertores, hemoconcentração ao hemograma seriado (elevação de hematócrito, proteínas totais e albumina).",
+    "pergunta": "Com base na análise secundária do estudo ESCAPE conduzida por Testani et al. (2010), qual a conduta mais apropriada diante dessa subida de creatinina?",
+    "opcoes": [
+      "Suspender imediatamente o diurético: a subida da creatinina indica lesão renal aguda causada pelo próprio tratamento e exige interromper a diurese",
+      "Manter a estratégia de descongestão: neste estudo, a hemoconcentração associada à diurese eficaz esteve associada a piora transitória da função renal (odds ratio 5,3; p<0,001), mas a mortalidade em 180 dias foi significativamente MENOR nesse grupo, não maior (HR 0,31; p=0,013)",
+      "Trocar a furosemida por diurético tiazídico isolado, que não se associa a nenhuma alteração de função renal durante a descongestão",
+      "Iniciar diálise de forma profilática, já que qualquer elevação de creatinina em paciente idoso hospitalizado com IC descompensada indica insuficiência renal aguda estabelecida e progressiva"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Testani et al. (Circulation 2010), em análise secundária de 336 pacientes do estudo ESCAPE, mostraram que a hemoconcentração (definida como ≥2 parâmetros de hemoconcentração no tercil superior — elevação de hematócrito, proteínas totais e/ou albumina) esteve fortemente associada a piora da função renal (odds ratio 5,3; p<0,001). No entanto, pacientes com hemoconcentração tiveram mortalidade em 180 dias significativamente MENOR (HR 0,31; p=0,013), relação que se manteve após ajuste para características basais (HR 0,16; p=0,001). Ou seja: a subida de creatinina que acompanha uma descongestão eficaz não tem, neste estudo, o significado prognóstico negativo que a leitura intuitiva sugere — pelo contrário, marca o paciente que respondeu bem ao tratamento. Na classificação de Ronco et al. (2008), esta paciente se enquadra como síndrome cardiorrenal tipo 1 (piora abrupta da função cardíaca causando lesão renal aguda): o coração precede o rim, e a estratégia terapêutica primária continua sendo tratar a congestão, o que contraintuitivamente pode exigir manter ou intensificar a diurese, não suspendê-la. Suspender o diurético diante de melhora clínica clara, só pela subida isolada de creatinina, trocaria uma resposta terapêutica adequada por congestão persistente — que é o desfecho realmente associado a pior prognóstico nesta população.",
+    "source_refs": [
+      "Testani JM, Chen J, McCauley BD, Kimmel SE, Shannon RP. Potential effects of aggressive decongestion during the treatment of decompensated heart failure on renal function and survival. Circulation. 2010;122(3):265-272. PMID: 20606118.",
+      "Ronco C, Haapio M, House AA, Anavekar N, Bellomo R. Cardiorenal syndrome. J Am Coll Cardiol. 2008;52(19):1527-1539. PMID: 19007588."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "indicacao-de-teer-tricuspide-em-octogenario-fragil-com-insuficiencia-tricuspide-grave",
+    "titulo": "Insuficiência tricúspide grave aos 83 anos: a idade isolada contraindica o reparo percutâneo?",
+    "tema": "Cardiologia geriátrica",
+    "nivel": "intermediário",
+    "enunciado": "Mulher de 83 anos, insuficiência tricúspide funcional grave sintomática (classe funcional NYHA III), fração de ejeção de ventrículo esquerdo preservada, congestão hepática crônica, recusada para cirurgia valvar tricúspide isolada pela Heart Team por risco cirúrgico proibitivo. A família questiona se, com 83 anos, ainda vale a pena considerar o reparo percutâneo borda a borda (TEER) tricúspide, ou se a idade por si só já contraindica o procedimento.",
+    "pergunta": "Com base nos dados publicados especificamente sobre octogenários (Monaco et al., 2025) e no seguimento de 2 anos do programa TRILUMINATE Pivotal (Kar et al., 2025), qual afirmação está correta?",
+    "opcoes": [
+      "A idade ≥80 anos isoladamente contraindica o TEER tricúspide, pois os desfechos clínicos são sistematicamente piores nessa faixa etária",
+      "Depois de ajuste por escore de propensão (IPTW), os desfechos clínicos entre octogenários e pacientes mais jovens submetidos a TEER tricúspide foram comparáveis, e a redução de internação recorrente por insuficiência cardíaca no seguimento de 2 anos (0,19 vs. 0,26 evento/paciente-ano, p=0,02) confirma que o benefício se mantém a longo prazo",
+      "TEER tricúspide não deve ser considerado em nenhum paciente com mais de 75 anos, independentemente do grau de fragilidade ou do risco cirúrgico",
+      "A mortalidade por qualquer causa em 2 anos foi significativamente MENOR no grupo submetido a TEER em comparação ao tratamento clínico, o que por si só já justificaria o procedimento em qualquer octogenário"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Monaco et al. (Am J Cardiol 2025) compararam, numa coorte retrospectiva de 101 pacientes consecutivos submetidos a TEER tricúspide, octogenários (≥80 anos, 36 pacientes, 36% da coorte) contra pacientes mais jovens, com ajuste por escore de propensão ponderado por probabilidade inversa de tratamento (IPTW). Depois desse ajuste, os desfechos clínicos — eventos adversos e sobrevida — foram comparáveis entre os grupos. A conclusão literal dos autores é direta: 'a idade isolada não deveria ser o único critério para negar TEER'. Isso é reforçado pelo seguimento de 2 anos do TRILUMINATE Pivotal (Kar et al., Circulation 2025): a taxa anualizada de internação recorrente por insuficiência cardíaca foi menor no grupo TEER que no grupo controle (0,19 vs. 0,26 evento/paciente-ano; p=0,02; hazard ratio 0,72), e a liberdade de morte, cirurgia valvar tricúspide e nova intervenção valvar em 2 anos favoreceu fortemente o grupo TEER (77,6% vs. 29,3%; p<0,0001) — embora essa diferença seja dominada, em boa parte, pelo alto crossover do grupo controle para o dispositivo (61,5%). É importante não confundir esse ganho de reinternação e qualidade de vida com benefício de sobrevida isolada: a mortalidade por qualquer causa em 2 anos foi semelhante entre os grupos (17,9% vs. 17,1%) — o ganho do TEER está em qualidade de vida e reinternação, não em sobrevida global, e é esse padrão de benefício (sintoma e função, não sobrevida marginal) que costuma ser o mais relevante para o paciente idoso frágil.",
+    "source_refs": [
+      "Kar S, Makkar RR, Whisenant BK, et al; TRILUMINATE Pivotal Investigators. Two-Year Outcomes of Transcatheter Edge-to-Edge Repair for Severe Tricuspid Regurgitation: The TRILUMINATE Pivotal Randomized Controlled Trial. Circulation. 2025;151(23):1630-1638. PMID: 40159089.",
+      "Monaco F, D'Andria Ursoleo J, Ghirardi E, et al. Outcomes of Octogenarians Undergoing Edge-to-Edge Transcatheter Valve Repair for Tricuspid Regurgitation: Inverse Propensity Score-Weighted Analysis. Am J Cardiol. 2025;244:32-40. PMID: 40023208."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "estenose-pulmonar-valvar-grave-assintomatica-em-adulto-jovem-indicacao-de-intervencao-esc-2020",
+    "titulo": "Estenose pulmonar grave, mas 'ele não sente nada': operar mesmo assim?",
+    "tema": "Cardiopatias congênitas",
+    "nivel": "intermediário",
+    "enunciado": "Homem de 26 anos, com estenose pulmonar valvar isolada diagnosticada na infância, nunca operado e sem seguimento cardiológico regular há vários anos. Retoma acompanhamento por iniciativa própria. Ecocardiograma atual: valva pulmonar em cúpula com base móvel preservada, gradiente de pico ao Doppler contínuo de 78 mmHg, função sistólica de ventrículo direito preservada. Ele nega dispneia, síncope ou limitação ao esforço, e não há teste cardiopulmonar de exercício documentado.",
+    "pergunta": "Segundo a diretriz ESC 2020 de cardiopatia congênita do adulto, qual a conduta apropriada diante desse gradiente?",
+    "opcoes": [
+      "Não intervir agora: por estar assintomático, a intervenção só passaria a ser indicada quando surgisse sintoma relacionado à estenose pulmonar",
+      "Indicar intervenção — valvuloplastia por balão, se anatomicamente adequada — já que na obstrução da via de saída do VD classificada como grave (gradiente de pico ao Doppler >64 mmHg) a intervenção é recomendada independentemente de sintomas (Classe I, Nível C)",
+      "Aguardar até o gradiente ultrapassar 100 mmHg, valor que definiria estenose 'crítica' exigindo intervenção no adulto",
+      "Indicar diretamente troca cirúrgica da valva, sem tentar valvuloplastia por balão, pelo fato de ele já ser adulto"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Pela graduação de gravidade da diretriz ESC 2020 de cardiopatia congênita do adulto, gradiente de pico ao Doppler >64 mmHg classifica a obstrução da via de saída do ventrículo direito como grave (leve <36 mmHg; moderada 36-64 mmHg). Neste caso, 78 mmHg está na faixa grave. A tabela de indicação de intervenção da mesma diretriz é explícita: desde que não seja necessária troca valvar, a intervenção na obstrução da via de saída do VD em qualquer nível é recomendada independentemente de sintomas quando a estenose é grave — Classe I, Nível de evidência C. E, na estenose pulmonar valvar, a valvuloplastia por balão é a intervenção de escolha quando a anatomia é adequada (Classe I, Nível C) — que é o caso descrito, com valva em cúpula e base móvel preservada, sem menção a displasia. Adiar a intervenção esperando sintoma aparecer, neste grau de gravidade, contraria diretamente a recomendação: a indicação já é Classe I independentemente de sintoma. Não existe corte de 100 mmHg definindo 'estenose crítica' no adulto na classificação desta diretriz — o termo crítica é reservado, na literatura pediátrica, ao recém-nascido com fluxo pulmonar dependente de canal arterial, cenário distinto deste. E a troca cirúrgica direta, sem tentar a valvuloplastia por balão, só é indicada quando a anatomia não é adequada ao balão (por exemplo, valva displásica) ou após falha do procedimento percutâneo — a idade adulta isolada não é critério para pular a etapa percutânea.",
+    "source_refs": [
+      "Baumgartner H, De Backer J, Babu-Narayan SV, et al. 2020 ESC Guidelines for the management of adult congenital heart disease. Eur Heart J. 2021;42(6):563-645. DOI: 10.1093/eurheartj/ehaa554. PMID: 32860028."
+    ],
+    "review_status": "revisado"
   }
 ]
