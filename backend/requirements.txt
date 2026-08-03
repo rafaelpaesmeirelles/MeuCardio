@@ -27,7 +27,7 @@ pillow==12.3.0
 # Geração de PDF de todos os documentos do sistema (receita, atestado, laudo).
 # Escolhido pelo Rafael em 29/07/2026: python puro, sem lib de sistema, e
 # controle de coordenada preciso — que é o que formulário regulado exige.
-reportlab==4.2.5
+reportlab==5.0.0
 # Templates dos e-mails transacionais (02/08/2026) — HTML + texto puro
 # renderizados a partir de backend/app/templates/emails/.
 jinja2==3.1.6
