@@ -1,4 +1,4 @@
-from datetime import date
+from datetime import date, datetime, timedelta, timezone
 
 from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel
@@ -54,6 +54,27 @@ def _paciente_do_usuario(pid: int, db: Session, user) -> Patient:
     if not p or (p.created_by != user.id and user.role != "admin"):
         raise HTTPException(status_code=404, detail="Paciente não encontrado.")
     return p
+
+
+def _consultas_ia_hoje(db: Session, user_id: int, agora: datetime | None = None) -> int:
+    """Conta solicitações de auxílio do round no dia UTC corrente.
+
+    O registro de auditoria é gravado somente após uma resposta bem-sucedida do
+    provedor, portanto falhas externas não consomem a cota diária.
+    """
+    agora = agora or datetime.now(timezone.utc)
+    inicio = agora.astimezone(timezone.utc).replace(hour=0, minute=0, second=0, microsecond=0)
+    fim = inicio + timedelta(days=1)
+    return (
+        db.query(AuditLog)
+        .filter(
+            AuditLog.user_id == user_id,
+            AuditLog.action == "ai_assist_round",
+            AuditLog.created_at >= inicio,
+            AuditLog.created_at < fim,
+        )
+        .count()
+    )
 
 
 @router.get("/patients")
@@ -165,6 +186,7 @@ def gerar_auxilio_ia(pid: int, db: Session = Depends(get_db), user=Depends(curre
         raise HTTPException(status_code=503, detail="A IA clínica está desligada nesta instalação.")
 
     p = _paciente_do_usuario(pid, db, user)
+    usado = _consultas_ia_hoje(db, user.id)
     if usado >= settings.ai_daily_limit:
         raise HTTPException(
             status_code=429,
