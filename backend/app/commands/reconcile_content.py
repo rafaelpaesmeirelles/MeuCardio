@@ -35,6 +35,7 @@ from app.models.study_track import StudyTrack
 from app.services.importer import import_directory
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[3]
+BLOCKING_DIAGNOSTIC_KEYS = ("recusadas", "recusados", "sem_arquivo")
 
 FRONTS: dict[str, dict[str, Any]] = {
     "documentos": {
@@ -126,12 +127,28 @@ def _ensure_source(front: str, path: str) -> Path:
     return source
 
 
+def _assert_no_rejections(front: str, result: dict[str, Any]) -> None:
+    diagnostics = {
+        key: result[key]
+        for key in BLOCKING_DIAGNOSTIC_KEYS
+        if result.get(key)
+    }
+    if diagnostics:
+        raise RuntimeError(
+            f"Frente {front} recusou conteúdo: "
+            + json.dumps(diagnostics, ensure_ascii=False, sort_keys=True)
+        )
+
+
 def _load_front(front: str, config: dict[str, Any]) -> dict:
     source = _ensure_source(front, str(config["path"]))
     if config["loader"] is None:
-        return import_directory(str(source))
-    module = importlib.import_module(f"app.services.{config['loader']}")
-    return module.carregar(str(source))
+        result = import_directory(str(source))
+    else:
+        module = importlib.import_module(f"app.services.{config['loader']}")
+        result = module.carregar(str(source))
+    _assert_no_rejections(front, result)
+    return result
 
 
 def _load_controlled_substances(db: Session) -> dict:
