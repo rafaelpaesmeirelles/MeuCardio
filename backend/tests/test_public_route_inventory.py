@@ -27,7 +27,11 @@ PUBLIC_ROUTE_RATIONALES: dict[tuple[str, str], str] = {
     ("GET", "/api/documentos-publicos/{token}"): (
         "Download destinado ao paciente, autorizado por token de alta entropia na URL."
     ),
-    ("POST", "/api/auth/login"): "Emissão inicial da sessão da plataforma.",
+    ("POST", "/api/auth/login"): "Emissão Bearer para integrações e clientes externos.",
+    ("POST", "/api/auth/sessao"): "Emissão da sessão web em cookie HttpOnly antes da autenticação.",
+    ("POST", "/api/auth/sair"): (
+        "Limpeza idempotente do cookie HttpOnly mesmo quando expirado ou revogado."
+    ),
     ("POST", "/api/auth/solicitar-acesso"): "Autocadastro anterior à autenticação.",
     ("POST", "/api/auth/esqueci-senha"): "Início da recuperação de credencial.",
     ("POST", "/api/auth/redefinir-senha"): "Conclusão da recuperação por token descartável.",
