@@ -43,7 +43,10 @@ fi
 RESTORE_INPUT="$BACKUP_FILE"
 TMP_DUMP=""
 cleanup() {
-  [[ -n "$TMP_DUMP" ]] && rm -f "$TMP_DUMP"
+  if [[ -n "$TMP_DUMP" ]]; then
+    rm -f "$TMP_DUMP"
+  fi
+  return 0
 }
 trap cleanup EXIT
 
