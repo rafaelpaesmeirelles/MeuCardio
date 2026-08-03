@@ -73,6 +73,9 @@ jobs:
             backend/requirements.txt
             backend/requirements-dev.txt
 
+      - name: Install PostgreSQL client
+        run: sudo apt-get update && sudo apt-get install -y postgresql-client
+
       - name: Install dependencies
         working-directory: backend
         run: python -m pip install --upgrade pip && pip install -r requirements-dev.txt
@@ -108,6 +111,43 @@ jobs:
       - name: Run pytest
         working-directory: backend
         run: python -m pytest -q
+
+      - name: Exercise live HTTP release flow
+        working-directory: backend
+        run: |
+          python -m app.commands.create_admin \
+            --email release-smoke@teste.local \
+            --password release-smoke-seguro-123
+          python -m uvicorn app.main:app --host 127.0.0.1 --port 8000 > /tmp/corvia-api.log 2>&1 &
+          API_PID=$!
+          trap 'kill "$API_PID" 2>/dev/null || true' EXIT
+          cd ..
+          python scripts/release_smoke.py \
+            --email release-smoke@teste.local \
+            --password release-smoke-seguro-123 \
+            || { cat /tmp/corvia-api.log; exit 1; }
+
+      - name: Prove PostgreSQL backup and restore
+        run: |
+          export PGHOST=localhost
+          export PGPORT=5432
+          export PGUSER="$POSTGRES_USER"
+          export PGPASSWORD="$POSTGRES_PASSWORD"
+          export PGDATABASE="$POSTGRES_DB"
+          export BACKUP_DIR=/tmp/corvia-backups
+          export ALLOW_UNENCRYPTED_BACKUP=1
+
+          BACKUP_FILE="$(bash ops/backup-postgres.sh)"
+          createdb meucardio_restore
+          TARGET_PGDATABASE=meucardio_restore \
+            CONFIRM_RESTORE_TARGET=meucardio_restore \
+            bash ops/restore-postgres.sh "$BACKUP_FILE"
+
+          RESTORED_ADMIN_COUNT="$(
+            PGDATABASE=meucardio_restore psql --no-psqlrc --tuples-only --no-align \
+              --command "SELECT count(*) FROM users WHERE email = 'release-smoke@teste.local';"
+          )"
+          test "$RESTORED_ADMIN_COUNT" = "1"
 
   frontend:
     name: Frontend build
