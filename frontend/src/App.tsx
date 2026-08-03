@@ -1,55 +1,68 @@
+import { lazy, Suspense } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import Shell from "./components/Shell";
 import { Carregando } from "./components/Estado";
 import { useAuth } from "./lib/auth";
-import Entrar from "./pages/Entrar";
-import Painel from "./pages/Painel";
-import Trilhas from "./pages/Trilhas";
-import MaterialPaciente from "./pages/MaterialPaciente";
-import Emergencia from "./pages/Emergencia";
-import Trilha from "./pages/Trilha";
-import CasosClinicos from "./pages/CasosClinicos";
-import CasoClinico from "./pages/CasoClinico";
-import Checklists from "./pages/Checklists";
-import ChecklistAlta from "./pages/ChecklistAlta";
-import Indicadores from "./pages/Indicadores";
-import Cursos from "./pages/Cursos";
-import Curso from "./pages/Curso";
-import Biblioteca from "./pages/Biblioteca";
-import Fluxogramas from "./pages/Fluxogramas";
-import Diretrizes from "./pages/Diretrizes";
-import Galeria from "./pages/Galeria";
-import ImagemGaleria from "./pages/ImagemGaleria";
-import Documento from "./pages/Documento";
-import Busca from "./pages/Busca";
-import Calculadoras from "./pages/Calculadoras";
-import Calculadora from "./pages/Calculadora";
-import Medicamentos from "./pages/Medicamentos";
-import Interacoes from "./pages/Interacoes";
-import Condicoes from "./pages/Condicoes";
-import Round from "./pages/Round";
-import Assistente from "./pages/Assistente";
-import Admin from "./pages/Admin";
-import SolicitarAcesso from "./pages/SolicitarAcesso";
-import EsqueciSenha from "./pages/EsqueciSenha";
-import RedefinirSenha from "./pages/RedefinirSenha";
-import Favoritos from "./pages/Favoritos";
-import Exames from "./pages/Exames";
-import Exame from "./pages/Exame";
-import Evidencias from "./pages/Evidencias";
-import Evidencia from "./pages/Evidencia";
-import Estudos from "./pages/Estudos";
-import Estudo from "./pages/Estudo";
-import Agenda from "./pages/Agenda";
-import Templates from "./pages/Templates";
-import Assinatura from "./pages/Assinatura";
-import MinhaConta from "./pages/MinhaConta";
-import Telediagnostico from "./pages/Telediagnostico";
-import FilaTelediagnostico from "./pages/FilaTelediagnostico";
-import CaixaDeEmail from "./pages/CaixaDeEmail";
-import CorviaMail from "./pages/CorviaMail";
-import Receituario from "./pages/Receituario";
-import UsuariosOnline from "./pages/UsuariosOnline";
+
+// Cada tela é um ponto de divisão real do bundle. O shell, autenticação e
+// roteador permanecem no carregamento inicial; páginas clínicas, administrativas
+// e renderizadores pesados só são baixados quando a rota é aberta.
+const Entrar = lazy(() => import("./pages/Entrar"));
+const Painel = lazy(() => import("./pages/Painel"));
+const Trilhas = lazy(() => import("./pages/Trilhas"));
+const MaterialPaciente = lazy(() => import("./pages/MaterialPaciente"));
+const Emergencia = lazy(() => import("./pages/Emergencia"));
+const Trilha = lazy(() => import("./pages/Trilha"));
+const CasosClinicos = lazy(() => import("./pages/CasosClinicos"));
+const CasoClinico = lazy(() => import("./pages/CasoClinico"));
+const Checklists = lazy(() => import("./pages/Checklists"));
+const ChecklistAlta = lazy(() => import("./pages/ChecklistAlta"));
+const Indicadores = lazy(() => import("./pages/Indicadores"));
+const Cursos = lazy(() => import("./pages/Cursos"));
+const Curso = lazy(() => import("./pages/Curso"));
+const Biblioteca = lazy(() => import("./pages/Biblioteca"));
+const Fluxogramas = lazy(() => import("./pages/Fluxogramas"));
+const Diretrizes = lazy(() => import("./pages/Diretrizes"));
+const Galeria = lazy(() => import("./pages/Galeria"));
+const ImagemGaleria = lazy(() => import("./pages/ImagemGaleria"));
+const Documento = lazy(() => import("./pages/Documento"));
+const Busca = lazy(() => import("./pages/Busca"));
+const Calculadoras = lazy(() => import("./pages/Calculadoras"));
+const Calculadora = lazy(() => import("./pages/Calculadora"));
+const Medicamentos = lazy(() => import("./pages/Medicamentos"));
+const Interacoes = lazy(() => import("./pages/Interacoes"));
+const Condicoes = lazy(() => import("./pages/Condicoes"));
+const Round = lazy(() => import("./pages/Round"));
+const Assistente = lazy(() => import("./pages/Assistente"));
+const Admin = lazy(() => import("./pages/Admin"));
+const SolicitarAcesso = lazy(() => import("./pages/SolicitarAcesso"));
+const EsqueciSenha = lazy(() => import("./pages/EsqueciSenha"));
+const RedefinirSenha = lazy(() => import("./pages/RedefinirSenha"));
+const Favoritos = lazy(() => import("./pages/Favoritos"));
+const Exames = lazy(() => import("./pages/Exames"));
+const Exame = lazy(() => import("./pages/Exame"));
+const Evidencias = lazy(() => import("./pages/Evidencias"));
+const Evidencia = lazy(() => import("./pages/Evidencia"));
+const Estudos = lazy(() => import("./pages/Estudos"));
+const Estudo = lazy(() => import("./pages/Estudo"));
+const Agenda = lazy(() => import("./pages/Agenda"));
+const Templates = lazy(() => import("./pages/Templates"));
+const Assinatura = lazy(() => import("./pages/Assinatura"));
+const MinhaConta = lazy(() => import("./pages/MinhaConta"));
+const Telediagnostico = lazy(() => import("./pages/Telediagnostico"));
+const FilaTelediagnostico = lazy(() => import("./pages/FilaTelediagnostico"));
+const CaixaDeEmail = lazy(() => import("./pages/CaixaDeEmail"));
+const CorviaMail = lazy(() => import("./pages/CorviaMail"));
+const Receituario = lazy(() => import("./pages/Receituario"));
+const UsuariosOnline = lazy(() => import("./pages/UsuariosOnline"));
+
+function RotasSuspensas({ children }: { children: React.ReactNode }) {
+  return (
+    <Suspense fallback={<Carregando texto="Carregando a tela…" />}>
+      {children}
+    </Suspense>
+  );
+}
 
 export default function App() {
   const { usuario, carregando } = useAuth();
@@ -57,79 +70,74 @@ export default function App() {
   if (carregando) return <Carregando texto="Abrindo a Corvia…" />;
   if (!usuario) {
     return (
-      <Routes>
-        <Route path="/entrar" element={<Entrar />} />
-        <Route path="/solicitar-acesso" element={<SolicitarAcesso />} />
-        <Route path="/esqueci-senha" element={<EsqueciSenha />} />
-        <Route path="/redefinir-senha" element={<RedefinirSenha />} />
-        {/* Fora do Shell de propósito: CorvIA Mail precisa ser alcançável por
-            quem ainda não tem sessão da Corvia aberta (a própria tela orienta
-            a entrar/cadastrar primeiro — exigir conta aprovada é decisão do
-            Rafael, não impede a página de existir sem login). */}
-        <Route path="/corvia-mail" element={<CorviaMail />} />
-        <Route path="*" element={<Navigate to="/entrar" replace />} />
-      </Routes>
+      <RotasSuspensas>
+        <Routes>
+          <Route path="/entrar" element={<Entrar />} />
+          <Route path="/solicitar-acesso" element={<SolicitarAcesso />} />
+          <Route path="/esqueci-senha" element={<EsqueciSenha />} />
+          <Route path="/redefinir-senha" element={<RedefinirSenha />} />
+          <Route path="/corvia-mail" element={<CorviaMail />} />
+          <Route path="*" element={<Navigate to="/entrar" replace />} />
+        </Routes>
+      </RotasSuspensas>
     );
   }
 
   return (
-    <Routes>
-      <Route element={<Shell />}>
-        <Route index element={<Painel />} />
-        <Route path="biblioteca" element={<Biblioteca />} />
-        <Route path="biblioteca/:slug" element={<Documento />} />
-        <Route path="fluxogramas" element={<Fluxogramas />} />
-        <Route path="diretrizes" element={<Diretrizes />} />
-        <Route path="busca" element={<Busca />} />
-        <Route path="calculadoras" element={<Calculadoras />} />
-        <Route path="calculadoras/:slug" element={<Calculadora />} />
-        <Route path="medicamentos" element={<Medicamentos />} />
-        <Route path="interacoes" element={<Interacoes />} />
-        <Route path="condicoes" element={<Condicoes />} />
-        <Route path="galeria" element={<Galeria />} />
-        <Route path="galeria/:slug" element={<ImagemGaleria />} />
-        <Route path="exames" element={<Exames />} />
-        <Route path="exames/:slug" element={<Exame />} />
-        <Route path="evidencias" element={<Evidencias />} />
-        <Route path="evidencias/:slug" element={<Evidencia />} />
-        <Route path="estudos" element={<Estudos />} />
-        <Route path="estudos/:slug" element={<Estudo />} />
-        <Route path="trilhas" element={<Trilhas />} />
-
-        <Route path="material-paciente" element={<MaterialPaciente />} />
-
-
-        <Route path="emergencia" element={<Emergencia />} />
-        <Route path="trilhas/:slug" element={<Trilha />} />
-        <Route path="casos-clinicos" element={<CasosClinicos />} />
-        <Route path="casos-clinicos/:slug" element={<CasoClinico />} />
-        <Route path="checklists" element={<Checklists />} />
-        <Route path="checklists/alta/:id" element={<ChecklistAlta />} />
-        <Route path="indicadores" element={<Indicadores />} />
-        <Route path="cursos" element={<Cursos />} />
-        <Route path="cursos/:slug" element={<Curso />} />
-        <Route path="favoritos" element={<Favoritos />} />
-        <Route path="assistente" element={<Assistente />} />
-        <Route path="round" element={<Round />} />
-        <Route path="agenda" element={<Agenda />} />
-        <Route path="documentos" element={<Templates />} />
-        <Route path="receituario" element={<Receituario />} />
-        <Route path="assinatura" element={<Assinatura />} />
-        <Route path="minha-conta" element={<MinhaConta />} />
-        <Route path="telediagnostico" element={<Telediagnostico />} />
-        <Route path="caixa-de-email" element={<CaixaDeEmail />} />
-        <Route path="corvia-mail" element={<CorviaMail />} />
-        {usuario.role === "admin" && (
-          <Route path="admin" element={<Admin />} />
-        )}
-        {usuario.role === "admin" && (
-          <Route path="fila-telediagnostico" element={<FilaTelediagnostico />} />
-        )}
-        {usuario.role === "admin" && (
-          <Route path="admin/usuarios-online" element={<UsuariosOnline />} />
-        )}
-      </Route>
-      <Route path="*" element={<Navigate to="/" replace />} />
-    </Routes>
+    <RotasSuspensas>
+      <Routes>
+        <Route element={<Shell />}>
+          <Route index element={<Painel />} />
+          <Route path="biblioteca" element={<Biblioteca />} />
+          <Route path="biblioteca/:slug" element={<Documento />} />
+          <Route path="fluxogramas" element={<Fluxogramas />} />
+          <Route path="diretrizes" element={<Diretrizes />} />
+          <Route path="busca" element={<Busca />} />
+          <Route path="calculadoras" element={<Calculadoras />} />
+          <Route path="calculadoras/:slug" element={<Calculadora />} />
+          <Route path="medicamentos" element={<Medicamentos />} />
+          <Route path="interacoes" element={<Interacoes />} />
+          <Route path="condicoes" element={<Condicoes />} />
+          <Route path="galeria" element={<Galeria />} />
+          <Route path="galeria/:slug" element={<ImagemGaleria />} />
+          <Route path="exames" element={<Exames />} />
+          <Route path="exames/:slug" element={<Exame />} />
+          <Route path="evidencias" element={<Evidencias />} />
+          <Route path="evidencias/:slug" element={<Evidencia />} />
+          <Route path="estudos" element={<Estudos />} />
+          <Route path="estudos/:slug" element={<Estudo />} />
+          <Route path="trilhas" element={<Trilhas />} />
+          <Route path="material-paciente" element={<MaterialPaciente />} />
+          <Route path="emergencia" element={<Emergencia />} />
+          <Route path="trilhas/:slug" element={<Trilha />} />
+          <Route path="casos-clinicos" element={<CasosClinicos />} />
+          <Route path="casos-clinicos/:slug" element={<CasoClinico />} />
+          <Route path="checklists" element={<Checklists />} />
+          <Route path="checklists/alta/:id" element={<ChecklistAlta />} />
+          <Route path="indicadores" element={<Indicadores />} />
+          <Route path="cursos" element={<Cursos />} />
+          <Route path="cursos/:slug" element={<Curso />} />
+          <Route path="favoritos" element={<Favoritos />} />
+          <Route path="assistente" element={<Assistente />} />
+          <Route path="round" element={<Round />} />
+          <Route path="agenda" element={<Agenda />} />
+          <Route path="documentos" element={<Templates />} />
+          <Route path="receituario" element={<Receituario />} />
+          <Route path="assinatura" element={<Assinatura />} />
+          <Route path="minha-conta" element={<MinhaConta />} />
+          <Route path="telediagnostico" element={<Telediagnostico />} />
+          <Route path="caixa-de-email" element={<CaixaDeEmail />} />
+          <Route path="corvia-mail" element={<CorviaMail />} />
+          {usuario.role === "admin" && <Route path="admin" element={<Admin />} />}
+          {usuario.role === "admin" && (
+            <Route path="fila-telediagnostico" element={<FilaTelediagnostico />} />
+          )}
+          {usuario.role === "admin" && (
+            <Route path="admin/usuarios-online" element={<UsuariosOnline />} />
+          )}
+        </Route>
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </RotasSuspensas>
   );
 }
