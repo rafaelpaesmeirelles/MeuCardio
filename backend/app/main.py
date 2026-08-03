@@ -12,10 +12,12 @@ from app.api import (
 from app.core.config import settings
 from app.core.course_uploads import CourseUploadSecurityMiddleware
 from app.core.http_security import HttpSecurityMiddleware
+from app.core.observability import ObservabilityMiddleware, configure_observability_logging
 from app.core.runtime import validar_configuracao_de_execucao
 from app.core.security import assinante_ativo
 from app.core.uploads import UploadSecurityMiddleware
 
+configure_observability_logging()
 validar_configuracao_de_execucao(settings)
 
 app = FastAPI(
@@ -42,6 +44,9 @@ app.add_middleware(
 app.add_middleware(UploadSecurityMiddleware)
 app.add_middleware(CourseUploadSecurityMiddleware)
 app.add_middleware(HttpSecurityMiddleware)
+# Observabilidade é a camada mais externa: inclusive respostas 403/429/503 das
+# proteções acima recebem X-Request-ID e um evento estruturado sem payload.
+app.add_middleware(ObservabilityMiddleware)
 
 ROUTERS_LIVRES = (
     health.router, auth.router, browser_session.router, password_reset.router,
