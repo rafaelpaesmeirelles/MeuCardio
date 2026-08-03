@@ -88,7 +88,7 @@ jobs:
 
       - name: Audit Python production dependencies
         working-directory: backend
-        run: python -m pip_audit -r requirements.txt --progress-spinner=off --strict
+        run: python -m app.commands.audit_dependencies
 
       - name: Apply migrations through the operational command
         working-directory: backend
