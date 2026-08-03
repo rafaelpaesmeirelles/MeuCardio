@@ -1,8 +1,8 @@
 from datetime import datetime, timedelta, timezone
 
+import jwt
 from fastapi import Depends, HTTPException, Request, Response, status
 from fastapi.security import OAuth2PasswordBearer
-from jose import JWTError, jwt
 from passlib.context import CryptContext
 from sqlalchemy.orm import Session
 
@@ -75,7 +75,7 @@ def limpar_cookie_sessao(response: Response) -> None:
 def _identidade_do_token(token: str, escopo_exigido: str) -> tuple[str, datetime | None]:
     try:
         payload = jwt.decode(token, settings.jwt_secret, algorithms=[settings.jwt_algorithm])
-    except (JWTError, TypeError):
+    except (jwt.PyJWTError, TypeError):
         raise ValueError("token inválido") from None
 
     # Token emitido antes da separação de escopos continua sendo token app.
