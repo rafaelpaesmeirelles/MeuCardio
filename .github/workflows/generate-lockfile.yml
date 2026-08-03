@@ -7,15 +7,20 @@ on:
       - ".github/workflows/generate-lockfile.yml"
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   generate:
+    if: >-
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      github.event.pull_request.head.ref == 'agent/supply-chain-node24'
     name: Generate audited package-lock
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout head branch
         uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
 
       - name: Set up Node.js
         uses: actions/setup-node@v6
@@ -28,10 +33,31 @@ jobs:
         working-directory: frontend
         run: npm install --package-lock-only --ignore-scripts
 
-      - name: Upload regenerated lockfile
-        uses: actions/upload-artifact@v7
-        with:
-          name: frontend-package-lock
-          path: frontend/package-lock.json
-          if-no-files-found: error
-          retention-days: 1
+      - name: Verify vulnerable generator is gone
+        working-directory: frontend
+        run: |
+          node - <<'NODE'
+          const lock = require('./package-lock.json');
+          const packages = lock.packages || {};
+          if (Object.keys(packages).some((name) => name.includes('@capacitor/assets'))) {
+            throw new Error('@capacitor/assets ainda está presente no lockfile');
+          }
+          const tar = packages['node_modules/tar']?.version;
+          if (!tar || Number(tar.split('.')[0]) < 7) {
+            throw new Error(`versão inesperada de tar: ${tar || 'ausente'}`);
+          }
+          console.log(`Lockfile validado: tar ${tar}; @capacitor/assets ausente.`);
+          NODE
+          sha256sum package-lock.json
+
+      - name: Commit regenerated lockfile
+        run: |
+          if git diff --quiet -- frontend/package-lock.json; then
+            echo "Lockfile já está sincronizado."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add frontend/package-lock.json
+          git commit -m "Regenera lockfile sem gerador vulnerável"
+          git push origin "HEAD:${{ github.event.pull_request.head.ref }}"
