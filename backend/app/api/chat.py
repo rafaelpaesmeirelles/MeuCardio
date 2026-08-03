@@ -1,43 +1,25 @@
-"""Chat entre assinantes (Tarefa de 31/07/2026, pedido do Rafael).
+"""Chat entre assinantes.
 
-Sem tabela de "conversa": o par (sender_id, recipient_id) já identifica a
-thread. Entrega em tempo real via WebSocket, com um `ConnectionManager` em
-memória — este backend roda como processo único (ver docker-compose.prod.yml,
-sem réplicas), então não há necessidade de pub/sub via Redis para sincronizar
-conexões entre instâncias. Se isso mudar, é aqui que entra.
-
-Autenticação do WebSocket é manual (não usa `Depends(oauth2_scheme)`): o
-WebSocket nativo do browser não permite header `Authorization` customizado, só
-query string ou subprotocolo — o token chega como `?token=`.
+As rotas HTTP persistem e consultam mensagens. A autenticação e o ciclo de vida
+do WebSocket ficam em ``app.api.chat_session``, que usa a sessão HttpOnly do
+navegador e mantém Bearer legado apenas como fallback para clientes externos.
 """
 from __future__ import annotations
 
 from datetime import datetime, timezone
 
-from fastapi import APIRouter, Depends, HTTPException, Query, WebSocket, WebSocketDisconnect
-from jose import JWTError, jwt
+from fastapi import APIRouter, Depends, HTTPException, Query
 from pydantic import BaseModel
 from sqlalchemy import and_, func, or_
 from sqlalchemy.orm import Session
 
-from app.core.config import settings
-from app.core.db import SessionLocal, get_db
+from app.core.db import get_db
 from app.core.security import ACESSO_LIBERADO, current_user
 from app.models.chat import ChatMessage
 from app.models.subscription import TIPO_MEUCARDIO, Subscription
 from app.models.user import User
 
 router = APIRouter(prefix="/api/chat", tags=["chat"])
-
-# O WebSocket vive num router À PARTE, sem o `Depends(assinante_ativo)` que
-# `main.py` aplica a `router` via `include_router(..., dependencies=[...])`.
-# Medido na prática: esse `dependencies` do include_router SE APLICA também a
-# rotas de WebSocket, e `assinante_ativo`/`current_user` dependem de
-# `OAuth2PasswordBearer`, que exige um `Request` HTTP — recebendo um
-# `WebSocket` no lugar, estoura `TypeError` e a conexão cai com HTTP 500 no
-# handshake. Autenticação e checagem de assinatura do WS são feitas à mão,
-# dentro do próprio handler (`_usuario_do_token_ws` + `_e_assinante`).
-router_ws = APIRouter(prefix="/api/chat", tags=["chat"])
 
 
 class NovaMensagem(BaseModel):
@@ -77,8 +59,7 @@ def buscar_usuarios(
     user: User = Depends(current_user),
 ):
     """Busca por nome, e-mail ou número de registro — com filtro opcional de
-    órgão de classe (CRM, COREN, CRF...). Só retorna quem também é assinante:
-    conversar com uma conta pendente/sem assinatura não faz sentido aqui."""
+    órgão de classe. Só retorna usuários que também são assinantes."""
     termo = f"%{q.strip()}%"
     consulta = db.query(User).filter(
         User.id != user.id,
@@ -98,8 +79,7 @@ def buscar_usuarios(
 
 @router.get("/orgaos-de-classe")
 def orgaos_de_classe(db: Session = Depends(get_db), _: User = Depends(current_user)):
-    """Lista de `council_name` distintos já cadastrados, para popular o filtro
-    de busca sem hardcodar a lista de conselhos no frontend."""
+    """Lista órgãos de classe distintos já cadastrados."""
     linhas = (
         db.query(User.council_name)
         .filter(User.council_name.isnot(None), User.council_name != "")
@@ -112,19 +92,7 @@ def orgaos_de_classe(db: Session = Depends(get_db), _: User = Depends(current_us
 
 @router.get("/suporte")
 def contato_de_suporte(db: Session = Depends(get_db), user: User = Depends(current_user)):
-    """Quem é o "Dr. Rafael" do atalho "Fale com o Dr. Rafael" (pedido dele em
-    31/07/2026).
-
-    O responsável é o **admin de menor id** — mesmo critério que o resto do
-    sistema já usa para identificar o administrador principal (ver as gravações
-    de `AuditLog`). Não há coluna "é o dono do produto" no modelo, e criar uma
-    só para isto seria migração de esquema para um dado que hoje tem uma única
-    resposta possível.
-
-    Devolve `null` em vez de 404 quando o próprio usuário é o responsável: para
-    ele o atalho não faz sentido (conversaria consigo mesmo) e o frontend
-    simplesmente não desenha o botão.
-    """
+    """Retorna o administrador principal para o atalho de suporte."""
     admin = (
         db.query(User)
         .filter(User.role == "admin", User.is_active.is_(True))
@@ -135,8 +103,6 @@ def contato_de_suporte(db: Session = Depends(get_db), user: User = Depends(curre
         return None
     return {
         **_dump_usuario_busca(admin),
-        # O frontend precisa saber se pode contar com resposta rápida antes de
-        # prometer isso ao assinante na interface.
         "online": bool(
             admin.last_seen_at
             and (datetime.now(timezone.utc) - admin.last_seen_at).total_seconds() <= 300
@@ -146,8 +112,7 @@ def contato_de_suporte(db: Session = Depends(get_db), user: User = Depends(curre
 
 @router.get("/conversas")
 def listar_conversas(db: Session = Depends(get_db), user: User = Depends(current_user)):
-    """Uma linha por interlocutor, com a última mensagem e a contagem de não
-    lidas — o que a lista de conversas de qualquer chat mostra."""
+    """Uma linha por interlocutor, com última mensagem e contagem de não lidas."""
     mensagens = (
         db.query(ChatMessage)
         .filter(or_(ChatMessage.sender_id == user.id, ChatMessage.recipient_id == user.id))
@@ -156,43 +121,42 @@ def listar_conversas(db: Session = Depends(get_db), user: User = Depends(current
     )
 
     por_interlocutor: dict[int, dict] = {}
-    for m in mensagens:
-        outro_id = m.recipient_id if m.sender_id == user.id else m.sender_id
+    for mensagem in mensagens:
+        outro_id = mensagem.recipient_id if mensagem.sender_id == user.id else mensagem.sender_id
         if outro_id not in por_interlocutor:
             por_interlocutor[outro_id] = {
                 "user_id": outro_id,
-                "ultima_mensagem": m.body,
-                "ultima_em": m.created_at,
-                "de_mim": m.sender_id == user.id,
+                "ultima_mensagem": mensagem.body,
+                "ultima_em": mensagem.created_at,
+                "de_mim": mensagem.sender_id == user.id,
                 "nao_lidas": 0,
             }
-        if m.recipient_id == user.id and m.read_at is None:
+        if mensagem.recipient_id == user.id and mensagem.read_at is None:
             por_interlocutor[outro_id]["nao_lidas"] += 1
 
     if not por_interlocutor:
         return []
 
     outros = db.query(User).filter(User.id.in_(por_interlocutor.keys())).all()
-    nomes = {u.id: u for u in outros}
+    nomes = {usuario.id: usuario for usuario in outros}
 
     resultado = []
     for outro_id, dados in por_interlocutor.items():
-        u = nomes.get(outro_id)
-        if not u:
+        usuario = nomes.get(outro_id)
+        if not usuario:
             continue
         resultado.append({
             **dados,
-            "full_name": u.full_name,
-            "photo_url": u.photo_url,
+            "full_name": usuario.full_name,
+            "photo_url": usuario.photo_url,
         })
-    resultado.sort(key=lambda c: c["ultima_em"], reverse=True)
+    resultado.sort(key=lambda conversa: conversa["ultima_em"], reverse=True)
     return resultado
 
 
 @router.get("/nao-lidas")
 def contar_nao_lidas(db: Session = Depends(get_db), user: User = Depends(current_user)):
-    """Só o total — usado pelo badge do ícone flutuante, chamado com mais
-    frequência que a lista de conversas inteira."""
+    """Retorna o total de mensagens não lidas para o badge do chat."""
     total = (
         db.query(func.count(ChatMessage.id))
         .filter(ChatMessage.recipient_id == user.id, ChatMessage.read_at.is_(None))
@@ -226,14 +190,14 @@ def historico(
 
     return [
         {
-            "id": m.id,
-            "sender_id": m.sender_id,
-            "recipient_id": m.recipient_id,
-            "body": m.body,
-            "created_at": m.created_at,
-            "read_at": m.read_at,
+            "id": mensagem.id,
+            "sender_id": mensagem.sender_id,
+            "recipient_id": mensagem.recipient_id,
+            "body": mensagem.body,
+            "created_at": mensagem.created_at,
+            "read_at": mensagem.read_at,
         }
-        for m in mensagens
+        for mensagem in mensagens
     ]
 
 
@@ -256,21 +220,21 @@ async def enviar_mensagem(
     if not _e_assinante(db, outro_id, outro.role):
         raise HTTPException(status_code=403, detail="Este usuário não tem assinatura ativa no momento.")
 
-    msg = ChatMessage(sender_id=user.id, recipient_id=outro_id, body=corpo)
-    db.add(msg)
+    mensagem = ChatMessage(sender_id=user.id, recipient_id=outro_id, body=corpo)
+    db.add(mensagem)
     db.commit()
-    db.refresh(msg)
+    db.refresh(mensagem)
 
     payload = {
         "tipo": "mensagem",
-        "id": msg.id,
-        "sender_id": msg.sender_id,
-        "recipient_id": msg.recipient_id,
-        "body": msg.body,
-        "created_at": msg.created_at.isoformat(),
+        "id": mensagem.id,
+        "sender_id": mensagem.sender_id,
+        "recipient_id": mensagem.recipient_id,
+        "body": mensagem.body,
+        "created_at": mensagem.created_at.isoformat(),
     }
     await gerenciador.enviar_para(outro_id, payload)
-    await gerenciador.enviar_para(user.id, payload)  # ecoa nas outras abas do remetente
+    await gerenciador.enviar_para(user.id, payload)
 
     return payload
 
@@ -291,20 +255,17 @@ def marcar_lidas(outro_id: int, db: Session = Depends(get_db), user: User = Depe
     return {"marcadas": atualizadas}
 
 
-# --------------------------------------------------------------- WebSocket --
-
 class GerenciadorDeConexoes:
-    """Um usuário pode ter mais de uma aba/dispositivo aberto — por isso a
-    lista, não uma conexão única por `user_id`."""
+    """Mantém as conexões WebSocket ativas por usuário e dispositivo."""
 
     def __init__(self) -> None:
-        self._conexoes: dict[int, list[WebSocket]] = {}
+        self._conexoes: dict[int, list] = {}
 
-    async def conectar(self, user_id: int, ws: WebSocket) -> None:
+    async def conectar(self, user_id: int, ws) -> None:
         await ws.accept()
         self._conexoes.setdefault(user_id, []).append(ws)
 
-    def desconectar(self, user_id: int, ws: WebSocket) -> None:
+    def desconectar(self, user_id: int, ws) -> None:
         conexoes = self._conexoes.get(user_id)
         if not conexoes:
             return
@@ -322,43 +283,3 @@ class GerenciadorDeConexoes:
 
 
 gerenciador = GerenciadorDeConexoes()
-
-
-def _usuario_do_token_ws(token: str, db: Session) -> User | None:
-    try:
-        payload = jwt.decode(token, settings.jwt_secret, algorithms=[settings.jwt_algorithm])
-    except JWTError:
-        return None
-    if payload.get("scope", "app") != "app":
-        return None
-    email = payload.get("sub")
-    if not email:
-        return None
-    return db.query(User).filter(User.email == email, User.is_active.is_(True)).first()
-
-
-@router_ws.websocket("/ws")
-async def chat_ws(ws: WebSocket, token: str = Query(...)):
-    # Dependência própria de sessão: `Depends(get_db)` é para rotas HTTP
-    # normais, um WebSocket de vida longa não pode segurar essa sessão presa
-    # à requisição inteira sem risco de vazar conexão do pool.
-    db = SessionLocal()
-    try:
-        user = _usuario_do_token_ws(token, db)
-        if user is None or not _e_assinante(db, user.id, user.role):
-            await ws.close(code=4401)
-            return
-    finally:
-        db.close()
-
-    await gerenciador.conectar(user.id, ws)
-    try:
-        while True:
-            # O envio de mensagem em si vai por HTTP (POST /mensagens/{id}),
-            # que já cuida de persistência e validação. O socket só recebe
-            # pings/keepalive do cliente para detectar desconexão cedo.
-            await ws.receive_text()
-    except WebSocketDisconnect:
-        pass
-    finally:
-        gerenciador.desconectar(user.id, ws)
