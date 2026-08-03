@@ -107,9 +107,14 @@ def run(args: argparse.Namespace) -> None:
         raise SmokeFailure(f"resposta de login inesperada: {login!r}")
 
     set_cookie = response.headers.get("Set-Cookie", "")
-    required_cookie_attributes = ("corvia_session=", "HttpOnly", "SameSite=Strict")
-    missing = [attribute for attribute in required_cookie_attributes if attribute not in set_cookie]
-    if args.expect_secure_cookie and "Secure" not in set_cookie:
+    cookie_lower = set_cookie.lower()
+    required_cookie_attributes = {
+        "corvia_session=": "corvia_session=",
+        "httponly": "HttpOnly",
+        "samesite=strict": "SameSite=Strict",
+    }
+    missing = [label for attribute, label in required_cookie_attributes.items() if attribute not in cookie_lower]
+    if args.expect_secure_cookie and "secure" not in cookie_lower:
         missing.append("Secure")
     if missing:
         raise SmokeFailure(f"cookie de sessão sem atributos obrigatórios: {', '.join(missing)}")
