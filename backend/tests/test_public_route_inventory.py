@@ -1,3 +1,5 @@
+from fastapi.routing import iter_route_contexts
+
 from app.core.security import (
     assinante_ativo,
     current_email_account,
@@ -54,17 +56,16 @@ def _dependency_tree_contains_auth(dependant) -> bool:
 
 
 def _public_routes() -> set[tuple[str, str]]:
-    """Inventaria rotas HTTP por contrato, sem depender da classe interna.
+    """Inventaria a superfície HTTP efetiva, inclusive routers incluídos.
 
-    FastAPI/Starlette podem trocar a classe concreta de rota entre versões. Os
-    atributos públicos usados pela aplicação — ``path``, ``methods`` e
-    ``dependant`` — continuam sendo o contrato relevante para esta auditoria.
-    Rotas WebSocket e mounts não possuem o trio completo e são ignorados.
+    ``iter_route_contexts`` aplica os prefixos e dependências herdados de
+    ``include_router`` antes da inspeção. Isso mantém a auditoria correta nas
+    versões do FastAPI que materializam routers incluídos de forma lazy.
     """
     routes: set[tuple[str, str]] = set()
-    for route in app.routes:
-        path = getattr(route, "path", None)
-        methods = getattr(route, "methods", None)
+    for route in iter_route_contexts(app.routes):
+        path = route.path
+        methods = route.methods
         dependant = getattr(route, "dependant", None)
         if not path or not methods or dependant is None:
             continue
