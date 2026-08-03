@@ -105,7 +105,7 @@ jobs:
 
       - name: Run pytest
         working-directory: backend
-        run: pytest -q
+        run: python -m pytest -q
 
   frontend:
     name: Frontend build
