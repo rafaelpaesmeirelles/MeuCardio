@@ -54,27 +54,19 @@ services:
       - ./medicamentos:/medicamentos:ro
       - ./checklists:/checklists:ro
       - ./trilhas:/trilhas:ro
-      # Material educativo do paciente (Tarefa 12). Somente-leitura como as
-      # demais frentes de conteudo: o backend le, nunca escreve.
       - ./material-paciente:/material-paciente:ro
       - ./emergencia:/emergencia:ro
       - ./casos-clinicos:/casos-clinicos:ro
-      # Listas da Portaria 344/98 e regras de adendo (Tarefa 27).
       - ./controlados:/controlados:ro
       - ./backend/migrations/versions:/app/migrations/versions
-      # Único volume gravável pelo backend: arquivos enviados pelo usuário
-      # (foto de perfil). O Caddy monta o mesmo volume como somente-leitura.
       - userfiles:/uploads
-      # Exames de paciente, cifrados em repouso. Este volume NAO e montado no
-      # Caddy de proposito: arquivo de exame nao pode ter URL alcancavel de
-      # fora, o acesso passa obrigatoriamente pela rota autenticada que audita.
       - examefiles:/exames-pacientes
-      # PDF de receita/documento emitido, cifrado em repouso (Tarefa 4).
-      # Mesmo motivo do examefiles: nao montado no Caddy, so rota autenticada
-      # ou link publico com token servem o arquivo.
       - documentofiles:/documentos-emitidos
       - cursofiles:/materiais-curso
-    command: ["sh", "-c", "python -m app.commands.migrate && exec uvicorn app.main:app --host 0.0.0.0 --port 8000 --workers 2"]
+    # O access log padrão do Uvicorn é desativado para não duplicar nem voltar
+    # a registrar caminhos não normalizados. Erros internos do servidor seguem
+    # ativos; requisições HTTP usam o logger JSON da aplicação.
+    command: ["sh", "-c", "python -m app.commands.migrate && exec uvicorn app.main:app --host 0.0.0.0 --port 8000 --workers 2 --no-access-log"]
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/ready', timeout=2).read()"]
       interval: 10s
