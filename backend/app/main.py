@@ -10,6 +10,7 @@ from app.api import (
     exportacao, emergencia, receituario, clinical_cases,
 )
 from app.core.config import settings
+from app.core.request_logging import StructuredRequestLoggingMiddleware
 from app.core.runtime import validar_configuracao_de_execucao
 from app.core.security import assinante_ativo
 
@@ -33,6 +34,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+app.add_middleware(StructuredRequestLoggingMiddleware)
 
 ROUTERS_LIVRES = (
     health.router, auth.router, browser_session.router, password_reset.router,
