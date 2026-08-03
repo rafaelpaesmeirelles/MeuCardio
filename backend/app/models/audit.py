@@ -5,6 +5,7 @@ from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.orm import Mapped, mapped_column
 
 from app.core.db import Base
+from app.core.observability import current_request_id
 
 
 class AuditLog(Base):
@@ -21,6 +22,11 @@ class AuditLog(Base):
     # acervo simplesmente nao podiam ser publicados nem despublicados.
     entity_id: Mapped[str | None] = mapped_column(String(255), nullable=True)
     detail: Mapped[dict] = mapped_column(JSONB, default=dict)
+    # Preenchido automaticamente pelo contexto HTTP. Permanece nulo em scripts
+    # antigos ou ações administrativas executadas fora de uma requisição.
+    request_id: Mapped[str | None] = mapped_column(
+        String(64), nullable=True, default=current_request_id, index=True
+    )
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
     )

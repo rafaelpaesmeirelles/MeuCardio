@@ -42,9 +42,9 @@ class Patient(Base):
     plan: Mapped[str | None] = mapped_column(Text, nullable=True)
     pending: Mapped[list] = mapped_column(JSONB, default=list)
     created_by: Mapped[int] = mapped_column(ForeignKey("users.id"), index=True)
-    # Dono do registro — cada usuário só enxerga os pacientes que ele mesmo
-    # cadastrou, exceto admin (vê todos). Modelo pensado para profissional
-    # autônomo/consultório individual, não para round hospitalar compartilhado.
+    # Dono clínico do registro. O papel administrativo não concede leitura ou
+    # alteração transversal: administração da plataforma e acesso ao prontuário
+    # são capacidades distintas.
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
     )

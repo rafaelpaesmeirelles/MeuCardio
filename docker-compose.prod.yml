@@ -4,6 +4,7 @@
 #
 #   cp .env.example .env    # preencha DOMAIN, senhas e OPENAI_API_KEY
 #   docker compose -f docker-compose.prod.yml up -d --build
+#   docker compose -f docker-compose.prod.yml exec backend python -m app.commands.create_admin
 #
 services:
   db:
@@ -26,17 +27,24 @@ services:
     command: ["redis-server", "--appendonly", "yes"]
     volumes:
       - redisdata:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
     restart: unless-stopped
 
   backend:
     build:
       context: ./backend
     env_file: .env
+    environment:
+      ENVIRONMENT: production
     depends_on:
       db:
         condition: service_healthy
       redis:
-        condition: service_started
+        condition: service_healthy
     volumes:
       - ./content:/content:ro
       - ./galeria:/galeria:ro
@@ -66,7 +74,13 @@ services:
       # ou link publico com token servem o arquivo.
       - documentofiles:/documentos-emitidos
       - cursofiles:/materiais-curso
-    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --workers 2
+    command: ["sh", "-c", "python -m app.commands.migrate && exec uvicorn app.main:app --host 0.0.0.0 --port 8000 --workers 2"]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/ready', timeout=2).read()"]
+      interval: 10s
+      timeout: 3s
+      retries: 12
+      start_period: 20s
     restart: unless-stopped
 
   frontend-build:
@@ -83,7 +97,7 @@ services:
     image: caddy:2-alpine
     depends_on:
       backend:
-        condition: service_started
+        condition: service_healthy
       frontend-build:
         condition: service_completed_successfully
     environment:

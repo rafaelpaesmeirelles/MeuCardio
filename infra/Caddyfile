@@ -43,10 +43,6 @@
 
 	# Arquivos com hash no nome (Vite): podem ser cacheados por muito tempo,
 	# porque qualquer mudança de conteúdo já vem com um nome de arquivo novo.
-	# Bloco à parte, e não `header /assets/* ...` dentro do handle abaixo,
-	# porque testado que o matcher de path embutido no `header` não se impõe
-	# sobre um `header` sem matcher no mesmo bloco — o padrão geral vencia
-	# mesmo para requisição de asset.
 	handle_path /assets/* {
 		root * /site/assets
 		file_server
@@ -54,11 +50,7 @@
 	}
 
 	# PWA: arquivos estáticos, com fallback para index.html (rotas do React
-	# Router). Cache-Control "no-cache" é o que corrige a raiz do problema:
-	# index.html, sw.js e o manifest não tinham Cache-Control nenhum (só
-	# ETag/Last-Modified), e o navegador podia aplicar cache heurístico e
-	# continuar rodando o bundle antigo por um tempo mesmo após um rebuild,
-	# porque nunca chegava a revalidar.
+	# Router). Cache-Control "no-cache" força revalidação do shell da aplicação.
 	handle {
 		root * /site
 		header Cache-Control "no-cache"
@@ -67,9 +59,16 @@
 	}
 
 	header {
+		-Server
 		Strict-Transport-Security "max-age=31536000; includeSubDomains"
 		X-Content-Type-Options "nosniff"
 		X-Frame-Options "DENY"
+		X-Permitted-Cross-Domain-Policies "none"
 		Referrer-Policy "strict-origin-when-cross-origin"
+		Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+		# Bundles, fontes e imagens são locais. `unsafe-inline` fica limitado a
+		# estilos porque React/Mermaid geram atributos style em tempo de execução;
+		# scripts inline continuam bloqueados.
+		Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' wss:; worker-src 'self' blob:; manifest-src 'self'; upgrade-insecure-requests"
 	}
 }

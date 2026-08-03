@@ -1,7 +1,9 @@
 from datetime import date, datetime, timezone
 
-from sqlalchemy import Boolean, Date, DateTime, ForeignKey, String
+from sqlalchemy import Boolean, Date, DateTime, ForeignKey, String, event
 from sqlalchemy.orm import Mapped, mapped_column
+from sqlalchemy.orm.attributes import NO_VALUE
+
 from app.core.db import Base
 
 
@@ -87,8 +89,22 @@ class User(Base):
     # da consulta (últimos 5 minutos), não é um booleano gravado.
     last_seen_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
 
+    # Tokens de aplicação emitidos neste instante ou antes são recusados.
+    # Nulo preserva sessões anteriores à implantação até ocorrer troca de senha
+    # ou encerramento explícito de todas as sessões.
+    sessions_valid_after: Mapped[datetime | None] = mapped_column(
+        DateTime(timezone=True), nullable=True
+    )
+
     # Método de assinatura preferido do médico (Tarefa 4) — código do
     # catálogo em `services/assinatura/catalogo.py` (ex.: "MANUAL", "VIDAAS").
     # Só o DEFAULT sugerido na tela de emissão; o médico ainda escolhe (ou
     # troca) a cada documento. Nulo = usa `settings.assinatura_metodo_padrao`.
     assinatura_metodo_preferido: Mapped[str | None] = mapped_column(String(20), nullable=True)
+
+
+@event.listens_for(User.password_hash, "set")
+def _revogar_sessoes_ao_trocar_senha(target, value, oldvalue, initiator) -> None:
+    """Centraliza a invalidação para troca autenticada, reset e ações admin."""
+    if oldvalue is not NO_VALUE and oldvalue is not None and value != oldvalue:
+        target.sessions_valid_after = datetime.now(timezone.utc)

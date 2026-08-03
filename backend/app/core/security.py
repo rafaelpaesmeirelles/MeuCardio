@@ -1,6 +1,6 @@
 from datetime import datetime, timedelta, timezone
 
-from fastapi import Depends, HTTPException, status
+from fastapi import Depends, HTTPException, Request, Response, status
 from fastapi.security import OAuth2PasswordBearer
 from jose import JWTError, jwt
 from passlib.context import CryptContext
@@ -8,9 +8,15 @@ from sqlalchemy.orm import Session
 
 from app.core.config import settings
 from app.core.db import get_db
+from app.core.runtime import ambiente_atual
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/auth/login")
+
+# O Bearer permanece disponível para clientes externos, testes e integrações.
+# No navegador, a sessão principal usa cookie HttpOnly e não fica acessível a
+# JavaScript. `auto_error=False` permite escolher conscientemente entre os dois.
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/auth/login", auto_error=False)
+AUTH_COOKIE_NAME = "corvia_session"
 
 
 def hash_password(raw: str) -> str:
@@ -22,34 +28,125 @@ def verify_password(raw: str, hashed: str) -> bool:
 
 
 def create_access_token(subject: str, scope: str = "app") -> str:
-    """`scope` separa o token da conta Corvia ('app', valor padrão — mesmo
-    token de sempre, sem mudança de comportamento pra quem já está logado)
-    do token da "sessão email" ('email', emitido só por
-    `POST /api/email/entrar`). Sem essa marca, um token roubado de um dos
-    dois sistemas serviria no outro — a senha própria da caixa de e-mail
-    (decisão do Rafael, 30/07/2026) perderia o sentido se o token da conta
-    principal também abrisse a caixa."""
-    expire = datetime.now(timezone.utc) + timedelta(minutes=settings.jwt_expire_minutes)
+    """Emite JWT com escopo e instante preciso para revogação de sessões.
+
+    `scope` separa o token da conta Corvia (`app`) do token da caixa de e-mail
+    (`email`). `session_iat` preserva microssegundos para que uma troca de senha
+    invalide imediatamente todos os tokens anteriores sem depender de blacklist.
+    """
+    issued_at = datetime.now(timezone.utc)
+    expire = issued_at + timedelta(minutes=settings.jwt_expire_minutes)
     return jwt.encode(
-        {"sub": subject, "scope": scope, "exp": expire}, settings.jwt_secret, algorithm=settings.jwt_algorithm
+        {
+            "sub": subject,
+            "scope": scope,
+            "iat": issued_at,
+            "session_iat": issued_at.isoformat(),
+            "exp": expire,
+        },
+        settings.jwt_secret,
+        algorithm=settings.jwt_algorithm,
     )
 
 
-def _decodificar(token: str, escopo_exigido: str, erro: HTTPException):
+def gravar_cookie_sessao(response: Response, token: str) -> None:
+    """Entrega a sessão do navegador sem expor o JWT ao JavaScript."""
+    response.set_cookie(
+        key=AUTH_COOKIE_NAME,
+        value=token,
+        max_age=settings.jwt_expire_minutes * 60,
+        httponly=True,
+        secure=ambiente_atual() == "production",
+        samesite="strict",
+        path="/",
+    )
+
+
+def limpar_cookie_sessao(response: Response) -> None:
+    response.delete_cookie(
+        key=AUTH_COOKIE_NAME,
+        httponly=True,
+        secure=ambiente_atual() == "production",
+        samesite="strict",
+        path="/",
+    )
+
+
+def _identidade_do_token(token: str, escopo_exigido: str) -> tuple[str, datetime | None]:
     try:
         payload = jwt.decode(token, settings.jwt_secret, algorithms=[settings.jwt_algorithm])
-    except JWTError:
-        raise erro
-    # Token emitido antes desta mudança não tem "scope" — trata como "app"
-    # (comportamento anterior), pra não deslogar quem já estava com sessão
-    # aberta no momento do deploy.
+    except (JWTError, TypeError):
+        raise ValueError("token inválido") from None
+
+    # Token emitido antes da separação de escopos continua sendo token app.
     escopo = payload.get("scope", "app")
     if escopo != escopo_exigido:
-        raise erro
+        raise ValueError("escopo inválido")
+
     email = payload.get("sub")
-    if not email:
+    if not isinstance(email, str) or not email:
+        raise ValueError("sujeito ausente")
+
+    issued_at = None
+    raw_issued_at = payload.get("session_iat")
+    if raw_issued_at is not None:
+        try:
+            issued_at = datetime.fromisoformat(raw_issued_at)
+            if issued_at.tzinfo is None:
+                issued_at = issued_at.replace(tzinfo=timezone.utc)
+            else:
+                issued_at = issued_at.astimezone(timezone.utc)
+        except (TypeError, ValueError):
+            raise ValueError("instante de sessão inválido") from None
+
+    return email, issued_at
+
+
+def _decodificar(
+    token: str,
+    escopo_exigido: str,
+    erro: HTTPException,
+) -> tuple[str, datetime | None]:
+    try:
+        return _identidade_do_token(token, escopo_exigido)
+    except ValueError:
         raise erro
-    return email
+
+
+def _marco_utc(value: datetime) -> datetime:
+    if value.tzinfo is None:
+        return value.replace(tzinfo=timezone.utc)
+    return value.astimezone(timezone.utc)
+
+
+def _sessao_valida_para_usuario(user, issued_at: datetime | None) -> bool:
+    if user.sessions_valid_after is None:
+        return True
+    valid_after = _marco_utc(user.sessions_valid_after)
+    # JWT legado sem `session_iat` permanece aceito apenas enquanto o usuário
+    # nunca rotacionou credenciais/sessões. Após o primeiro marco, a ausência
+    # do claim é motivo suficiente para rejeição.
+    return issued_at is not None and issued_at > valid_after
+
+
+def usuario_por_token_app(db: Session, token: str | None):
+    """Resolve um usuário por JWT app para HTTP ou WebSocket.
+
+    Retorna ``None`` em qualquer falha e aplica o mesmo marco de revogação usado
+    por `current_user`, evitando que o WebSocket mantenha uma regra paralela.
+    """
+    from app.models.user import User
+
+    if not token:
+        return None
+    try:
+        email, issued_at = _identidade_do_token(token, "app")
+    except ValueError:
+        return None
+    user = db.query(User).filter(User.email == email, User.is_active.is_(True)).first()
+    if not user or not _sessao_valida_para_usuario(user, issued_at):
+        return None
+    return user
 
 
 # Janela de throttle da presença: gravar `last_seen_at` a cada requisição
@@ -61,16 +158,18 @@ def _decodificar(token: str, escopo_exigido: str, erro: HTTPException):
 PRESENCA_THROTTLE_SEGUNDOS = 60
 
 
-def current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(get_db)):
-    from app.models.user import User
-
+def current_user(
+    request: Request,
+    token_bearer: str | None = Depends(oauth2_scheme),
+    db: Session = Depends(get_db),
+):
     credentials_error = HTTPException(
         status_code=status.HTTP_401_UNAUTHORIZED,
         detail="Sessão inválida ou expirada. Entre novamente.",
         headers={"WWW-Authenticate": "Bearer"},
     )
-    email = _decodificar(token, "app", credentials_error)
-    user = db.query(User).filter(User.email == email, User.is_active.is_(True)).first()
+    token = token_bearer or request.cookies.get(AUTH_COOKIE_NAME)
+    user = usuario_por_token_app(db, token)
     if not user:
         raise credentials_error
 
@@ -166,11 +265,15 @@ def assinatura_email_ativa(db: Session, user) -> bool:
     )
 
 
-def current_email_account(token: str = Depends(oauth2_scheme), db: Session = Depends(get_db)):
-    """Identidade da "sessão email" — só aceita token emitido por
-    `POST /api/email/entrar` (scope="email"), nunca o token da conta Corvia.
-    É o equivalente, para a caixa de e-mail, do que `current_user` é para o
-    resto do sistema: gate de toda rota que lê ou envia mensagem."""
+def current_email_account(
+    token: str | None = Depends(oauth2_scheme),
+    db: Session = Depends(get_db),
+):
+    """Identidade da sessão separada da caixa de e-mail.
+
+    Continua Bearer de propósito nesta etapa: a caixa tem credencial, escopo e
+    ciclo próprios. O cookie app nunca é usado como sessão da caixa.
+    """
     from app.models.email_account import EmailAccount
 
     credentials_error = HTTPException(
@@ -178,7 +281,9 @@ def current_email_account(token: str = Depends(oauth2_scheme), db: Session = Dep
         detail="Sessão da caixa de e-mail inválida ou expirada. Entre novamente.",
         headers={"WWW-Authenticate": "Bearer"},
     )
-    email_address = _decodificar(token, "email", credentials_error)
+    if not token:
+        raise credentials_error
+    email_address, _ = _decodificar(token, "email", credentials_error)
     conta = db.query(EmailAccount).filter(EmailAccount.email_address == email_address).first()
     if not conta or conta.status != "ativa":
         raise credentials_error

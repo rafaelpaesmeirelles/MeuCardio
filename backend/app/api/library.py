@@ -4,9 +4,34 @@ from sqlalchemy.orm import Session
 
 from app.core.db import get_db
 from app.core.security import current_user, require_admin
+from app.models.checklist import DischargeChecklist
+from app.models.clinical_case import ClinicalCase
 from app.models.content import Document, DocumentRevision
+from app.models.drug import Drug
+from app.models.emergency import EmergencyProtocol
+from app.models.evidence import EvidenceRecord
+from app.models.gallery import GalleryImage
+from app.models.lab_test import LabTest
+from app.models.patient_material import PatientMaterial
+from app.models.study import ScientificStudy
+from app.models.study_track import StudyTrack
 
 router = APIRouter(prefix="/api/library", tags=["biblioteca"])
+
+
+CATALOG_FRONTS = (
+    ("documentos", "Documentos científicos", "/biblioteca", Document),
+    ("evidencias", "Evidências e recomendações", "/evidencias", EvidenceRecord),
+    ("estudos", "Estudos clínicos", "/estudos", ScientificStudy),
+    ("casos_clinicos", "Casos clínicos", "/casos-clinicos", ClinicalCase),
+    ("trilhas", "Trilhas de estudo", "/trilhas", StudyTrack),
+    ("galeria", "Galeria de imagens", "/galeria", GalleryImage),
+    ("exames", "Exames e interpretação", "/exames", LabTest),
+    ("medicamentos", "Medicamentos", "/medicamentos", Drug),
+    ("checklists", "Checklists", "/checklists", DischargeChecklist),
+    ("material_paciente", "Material para pacientes", "/material-paciente", PatientMaterial),
+    ("emergencia", "Protocolos de emergência", "/emergencia", EmergencyProtocol),
+)
 
 
 def _card(d: Document) -> dict:
@@ -26,6 +51,24 @@ def _card(d: Document) -> dict:
     }
 
 
+@router.get("/catalog")
+def catalog(db: Session = Depends(get_db), _=Depends(current_user)):
+    """Resumo do conteúdo científico realmente publicado.
+
+    A tela antiga chamava apenas ``documents`` e dava a impressão de que a
+    biblioteca inteira tinha o tamanho daquela única tabela. O catálogo torna
+    explícitas todas as frentes e suas rotas, sem misturar conteúdo retido em
+    revisão com o que está disponível ao assinante.
+    """
+    fronts = []
+    total = 0
+    for key, label, route, model in CATALOG_FRONTS:
+        count = db.query(model).filter(model.published.is_(True)).count()
+        total += count
+        fronts.append({"key": key, "label": label, "route": route, "count": count})
+    return {"total": total, "fronts": fronts}
+
+
 @router.get("/themes")
 def themes(db: Session = Depends(get_db), _=Depends(current_user)):
     rows = db.execute(
@@ -40,8 +83,8 @@ def themes(db: Session = Depends(get_db), _=Depends(current_user)):
 def list_documents(
     theme: str | None = None,
     kind: str | None = None,
-    limit: int = Query(50, le=200),
-    offset: int = 0,
+    limit: int = Query(100, ge=1, le=200),
+    offset: int = Query(0, ge=0),
     db: Session = Depends(get_db),
     _=Depends(current_user),
 ):
@@ -51,8 +94,16 @@ def list_documents(
     if kind:
         q = q.filter(Document.kind == kind)
     total = q.count()
-    items = q.order_by(Document.title).offset(offset).limit(limit).all()
-    return {"total": total, "items": [_card(d) for d in items]}
+    items = q.order_by(Document.title, Document.id).offset(offset).limit(limit).all()
+    next_offset = offset + len(items)
+    return {
+        "total": total,
+        "limit": limit,
+        "offset": offset,
+        "next_offset": next_offset if next_offset < total else None,
+        "has_more": next_offset < total,
+        "items": [_card(d) for d in items],
+    }
 
 
 @router.get("/documents/{slug}")

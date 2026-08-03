@@ -21,6 +21,7 @@ def _detail(e: EvidenceRecord) -> dict:
     return {
         **_card(e), "guideline_title": e.guideline_title, "reference": e.reference,
         "tags": e.tags, "document_slug": e.document_slug,
+        "review_status": e.review_status, "review_note": e.review_note,
     }
 
 

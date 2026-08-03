@@ -1,7 +1,7 @@
 """Carrega imagens da galeria a partir de um JSON de metadados. As imagens em
-si (arquivo binário) precisam já estar em /galeria no servidor — este script
-só cria/atualiza os registros no banco, e confere que o arquivo existe antes
-de publicar (nunca publica registro apontando pra arquivo inexistente).
+si precisam existir no volume /galeria em produção ou ao lado do manifesto no
+checkout de CI/desenvolvimento. O script só cria/atualiza registros quando o
+arquivo existe, evitando cartões quebrados.
 
 Uso:
     python -m app.services.carregar_galeria /caminho/galeria.json
@@ -21,19 +21,25 @@ GALERIA_DIR = Path("/galeria")
 # pela rota /api/admin/conteudo/publicar — e o checkpoint de revisao clinica
 # exigido para conteudo que vai a producao. Antes desta guarda, qualquer
 # recarga copiava `published: false` do arquivo por cima do banco e tirava do
-# ar tudo que ja estava publicado. Foi o que aconteceu com evidencias e
-# estudos ao recarregar uma correcao de texto. Mesmo principio que o
-# importer.py ja aplica aos documentos de content/.
+# ar tudo que ja estava publicado.
+
+
+def _asset_root(caminho_json: str) -> Path:
+    """Prioriza o volume produtivo e usa o diretório versionado em CI/dev."""
+    if GALERIA_DIR.exists():
+        return GALERIA_DIR
+    return Path(caminho_json).resolve().parent
 
 
 def carregar(caminho_json: str) -> dict:
     itens = json.load(open(caminho_json, encoding="utf-8"))
+    asset_root = _asset_root(caminho_json)
     db = SessionLocal()
     novos, atualizados, sem_arquivo = 0, 0, []
     try:
         for item in itens:
-            caminho_arquivo = GALERIA_DIR / item["file_path"]
-            if not caminho_arquivo.exists():
+            caminho_arquivo = asset_root / item["file_path"]
+            if not caminho_arquivo.is_file():
                 sem_arquivo.append(item["file_path"])
                 continue
 
@@ -51,7 +57,12 @@ def carregar(caminho_json: str) -> dict:
         db.commit()
     finally:
         db.close()
-    return {"novos": novos, "atualizados": atualizados, "sem_arquivo": sem_arquivo}
+    return {
+        "novos": novos,
+        "atualizados": atualizados,
+        "sem_arquivo": sem_arquivo,
+        "asset_root": str(asset_root),
+    }
 
 
 if __name__ == "__main__":
