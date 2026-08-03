@@ -5,7 +5,7 @@ from app.api import (
     admin, ai, appointments, assinatura, auth, calculators, chat, cmed, documents, documentos_publicos,
     drugs, email as email_api, evidence,
     favorites, gallery, health, lab_tests, library, password_reset,
-    prescriptions, round as round_api, search, service_orders, studies,
+    prescriptions, round as round_api, search, service_orders, sessions, studies,
     timeline, billing, partner_courses, guidelines, indicadores, checklists, study_tracks,
     exportacao, emergencia, receituario, clinical_cases,
 )
@@ -50,12 +50,14 @@ app.add_middleware(
 # decide sua própria autorização (`current_user` + `assinatura_email_ativa`
 # para status/ativação; `current_email_account`, com login e token
 # próprios, para pastas e mensagens).
+# `sessions` precisa ficar fora do gate de assinatura: uma conta inadimplente
+# ou sem plano ainda deve conseguir encerrar credenciais autenticadas.
 # `documentos_publicos` também entra aqui, mas por um motivo diferente dos
 # outros: não é "sem assinatura vigente", é sem conta nenhuma — quem acessa
 # é o PACIENTE (Tarefa 29), que nunca terá login na Corvia. A única defesa
 # é o token de alta entropia na própria URL, não uma dependência de rota.
 ROUTERS_LIVRES = (
-    health.router, auth.router, password_reset.router, billing.router, admin.router,
+    health.router, auth.router, password_reset.router, sessions.router, billing.router, admin.router,
     service_orders.router, partner_courses.router, email_api.router, documentos_publicos.router,
     cmed.router,
 )
