@@ -10,8 +10,13 @@ from app.api import (
     exportacao, emergencia, receituario, clinical_cases,
 )
 from app.core.config import settings
+from app.core.runtime import validar_configuracao_de_execucao
 from app.core.security import assinante_ativo
 from app.services.bootstrap import init_db
+
+# Falha antes de registrar rotas, abrir conexões ou criar usuário administrador
+# quando a implantação de produção mantém segredos previsíveis/incompletos.
+validar_configuracao_de_execucao(settings)
 
 app = FastAPI(
     title="Corvia — API",
