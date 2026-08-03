@@ -28,6 +28,11 @@ def ambiente_atual() -> str:
     return ambiente
 
 
+def documentacao_api_habilitada() -> bool:
+    """Swagger/OpenAPI ficam disponíveis apenas fora de produção."""
+    return ambiente_atual() != "production"
+
+
 def validar_configuracao_de_execucao(settings) -> None:
     """Recusa inicialização insegura quando ``ENVIRONMENT=production``.
 
