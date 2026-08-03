@@ -10,6 +10,7 @@ from app.api import (
     exportacao, emergencia, receituario, clinical_cases,
 )
 from app.core.config import settings
+from app.core.http_security import HttpSecurityMiddleware
 from app.core.runtime import validar_configuracao_de_execucao
 from app.core.security import assinante_ativo
 
@@ -33,6 +34,10 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+# Registrado depois do CORS para ficar na camada externa do stack Starlette.
+# Em produção valida origem de mutações com cookie e aplica limites Redis nas
+# superfícies sensíveis antes de executar dependências ou abrir o body.
+app.add_middleware(HttpSecurityMiddleware)
 
 ROUTERS_LIVRES = (
     health.router, auth.router, browser_session.router, password_reset.router,
