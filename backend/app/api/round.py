@@ -47,11 +47,13 @@ def _dump(p: Patient) -> dict:
 
 
 def _paciente_do_usuario(pid: int, db: Session, user) -> Patient:
-    """Busca um paciente garantindo que só o dono (ou um admin) o veja.
-    Usa 404 — não 403 — para não revelar nem a existência de um paciente
-    de outro profissional."""
+    """Busca paciente com isolamento estrito por proprietário.
+
+    O papel administrativo gerencia a plataforma, mas não concede acesso
+    clínico transversal. Usa 404 para não revelar a existência do registro.
+    """
     p = db.get(Patient, pid)
-    if not p or (p.created_by != user.id and user.role != "admin"):
+    if not p or p.created_by != user.id:
         raise HTTPException(status_code=404, detail="Paciente não encontrado.")
     return p
 
@@ -79,10 +81,12 @@ def _consultas_ia_hoje(db: Session, user_id: int, agora: datetime | None = None)
 
 @router.get("/patients")
 def list_patients(status: str = "internado", db: Session = Depends(get_db), user=Depends(current_user)):
-    query = db.query(Patient).filter(Patient.status == status)
-    if user.role != "admin":
-        query = query.filter(Patient.created_by == user.id)
-    rows = query.order_by(Patient.bed).all()
+    rows = (
+        db.query(Patient)
+        .filter(Patient.status == status, Patient.created_by == user.id)
+        .order_by(Patient.bed)
+        .all()
+    )
     return [_dump(p) for p in rows]
 
 
