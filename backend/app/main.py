@@ -13,6 +13,7 @@ from app.core.config import settings
 from app.core.http_security import HttpSecurityMiddleware
 from app.core.runtime import validar_configuracao_de_execucao
 from app.core.security import assinante_ativo
+from app.core.uploads import UploadSecurityMiddleware
 
 validar_configuracao_de_execucao(settings)
 
@@ -34,9 +35,10 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-# Registrado depois do CORS para ficar na camada externa do stack Starlette.
-# Em produção valida origem de mutações com cookie e aplica limites Redis nas
-# superfícies sensíveis antes de executar dependências ou abrir o body.
+# Starlette executa primeiro o último middleware registrado. Upload fica por
+# dentro da proteção de origem/rate limit HTTP: uma origem hostil é recusada
+# antes que o body multipart seja lido e validado.
+app.add_middleware(UploadSecurityMiddleware)
 app.add_middleware(HttpSecurityMiddleware)
 
 ROUTERS_LIVRES = (
