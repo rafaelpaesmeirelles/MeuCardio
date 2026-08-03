@@ -2,3 +2,4 @@
 # (Dockerfile instala apenas requirements.txt).
 -r requirements.txt
 pytest==8.3.4
+pip-audit==2.10.1

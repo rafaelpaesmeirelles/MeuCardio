@@ -255,7 +255,7 @@ class TestIsolamentoDeEscopo:
         """Token emitido antes da mudança de 30/07/2026 não tem `scope` no
         payload — precisa continuar valendo como 'app' (ver `_decodificar`),
         senão todo mundo logado no momento do deploy seria deslogado."""
-        from jose import jwt
+        import jwt
 
         from app.core.config import settings
 

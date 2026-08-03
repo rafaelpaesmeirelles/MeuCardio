@@ -1,4 +1,4 @@
-from fastapi.routing import APIRoute
+from fastapi.routing import iter_route_contexts
 
 from app.core.security import (
     assinante_ativo,
@@ -47,7 +47,7 @@ EXPECTED_PUBLIC_ROUTES = set(PUBLIC_ROUTE_RATIONALES)
 
 
 def _dependency_tree_contains_auth(dependant) -> bool:
-    for dependency in dependant.dependencies:
+    for dependency in getattr(dependant, "dependencies", ()):
         if dependency.call in AUTH_CALLS:
             return True
         if _dependency_tree_contains_auth(dependency):
@@ -56,15 +56,26 @@ def _dependency_tree_contains_auth(dependant) -> bool:
 
 
 def _public_routes() -> set[tuple[str, str]]:
+    """Inventaria a superfície HTTP efetiva, inclusive routers incluídos.
+
+    Desde o FastAPI 0.137, ``router.routes`` forma uma árvore e a API pública
+    ``iter_route_contexts`` materializa prefixos e dependências herdados de
+    ``include_router``. O ponto de entrada correto é ``app.router.routes``;
+    ``app.routes`` é uma compatibilidade herdada do Starlette e não representa
+    necessariamente a árvore efetiva do router FastAPI.
+    """
     routes: set[tuple[str, str]] = set()
-    for route in app.routes:
-        if not isinstance(route, APIRoute):
+    for route_context in iter_route_contexts(app.router.routes):
+        path = route_context.path
+        methods = route_context.methods
+        dependant = getattr(route_context, "dependant", None)
+        if not path or not methods or dependant is None:
             continue
-        if _dependency_tree_contains_auth(route.dependant):
+        if _dependency_tree_contains_auth(dependant):
             continue
-        for method in route.methods or set():
+        for method in methods:
             if method not in {"HEAD", "OPTIONS"}:
-                routes.add((method, route.path))
+                routes.add((method, path))
     return routes
 
 
