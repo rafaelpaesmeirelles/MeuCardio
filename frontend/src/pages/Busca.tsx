@@ -1,9 +1,35 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { api } from "../lib/api";
 import { Carregando, Vazio } from "../components/Estado";
 
 type Res = { slug: string; title: string; kind: string; theme: string; snippet: string };
+
+function SnippetDestacado({ snippet }: { snippet: string }) {
+  const partes = snippet.split(/(<mark>|<\/mark>)/gi);
+  let destacado = false;
+  const nos: ReactNode[] = [];
+
+  partes.forEach((parte, indice) => {
+    if (/^<mark>$/i.test(parte)) {
+      destacado = true;
+      return;
+    }
+    if (/^<\/mark>$/i.test(parte)) {
+      destacado = false;
+      return;
+    }
+    if (!parte) return;
+
+    // Todo o texto vindo do banco continua como texto React escapado. Somente
+    // os delimitadores exatos <mark> gerados pelo PostgreSQL ganham estilo.
+    nos.push(
+      destacado ? <mark key={indice}>{parte}</mark> : <span key={indice}>{parte}</span>,
+    );
+  });
+
+  return <>{nos}</>;
+}
 
 export default function Busca() {
   const [params] = useSearchParams();
@@ -22,8 +48,6 @@ export default function Busca() {
     }
   }
 
-  // Permite chegar aqui já com o termo pronto (ex.: busca da faixa superior)
-  // e disparar a pesquisa sem exigir um segundo clique.
   useEffect(() => {
     const inicial = params.get("q");
     if (inicial && inicial.trim().length >= 2) buscar(inicial);
@@ -57,10 +81,9 @@ export default function Busca() {
           <Link key={r.slug} to={`/biblioteca/${r.slug}`} className="cartao" style={{ color: "inherit" }}>
             <p className="eyebrow">{r.theme} · {r.kind}</p>
             <h3>{r.title}</h3>
-            <p
-              style={{ color: "var(--texto-secundario)", fontSize: "0.88rem", margin: 0 }}
-              dangerouslySetInnerHTML={{ __html: r.snippet }}
-            />
+            <p style={{ color: "var(--texto-secundario)", fontSize: "0.88rem", margin: 0 }}>
+              <SnippetDestacado snippet={r.snippet} />
+            </p>
           </Link>
         ))}
       </div>
