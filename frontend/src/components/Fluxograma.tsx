@@ -18,9 +18,9 @@ function validarSvgGerado(svg: string): string {
 
 /** Renderiza um bloco Mermaid sem inserir SVG como HTML no DOM.
  *
- * O Mermaid permanece em `securityLevel: strict`. O SVG resultante passa por
- * uma validação defensiva e é exibido como imagem por Blob URL; assim, mesmo
- * conteúdo clínico malformado não vira nó HTML executável na página. */
+ * O Mermaid permanece em `securityLevel: strict`, com rótulos HTML
+ * desativados. O SVG resultante passa por validação defensiva e é exibido como
+ * imagem por Blob URL; conteúdo malformado não vira nó executável na página. */
 export default function Fluxograma({ fonte }: { fonte: string }) {
   const id = "fluxograma-" + useId().replace(/[^a-zA-Z0-9]/g, "");
   const [svgUrl, setSvgUrl] = useState("");
@@ -39,6 +39,7 @@ export default function Fluxograma({ fonte }: { fonte: string }) {
         mermaid.initialize({
           startOnLoad: false,
           securityLevel: "strict",
+          flowchart: { htmlLabels: false },
           theme: "base",
           fontFamily: "Inter, system-ui, sans-serif",
           themeVariables: {
