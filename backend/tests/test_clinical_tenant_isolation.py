@@ -31,20 +31,18 @@ def _criar_documento_gerado(client, token: str) -> int:
 
 
 def _garantir_receituario_comum(db) -> None:
-    if db.get(PrescriptionType, "COMUM") is None:
-        # A PK real é inteira; buscar pelo código evita depender da sequence.
-        existente = db.query(PrescriptionType).filter(
-            PrescriptionType.codigo == "COMUM"
-        ).first()
-        if existente is None:
-            db.add(
-                PrescriptionType(
-                    codigo="COMUM",
-                    nome="Receituário comum",
-                    ativo=True,
-                )
+    existente = db.query(PrescriptionType).filter(
+        PrescriptionType.codigo == "COMUM"
+    ).first()
+    if existente is None:
+        db.add(
+            PrescriptionType(
+                codigo="COMUM",
+                nome="Receituário comum",
+                ativo=True,
             )
-            db.commit()
+        )
+        db.commit()
 
 
 def test_even_admin_cannot_read_or_operate_another_doctors_generated_document(
