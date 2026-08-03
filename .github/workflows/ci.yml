@@ -127,6 +127,10 @@ jobs:
         working-directory: frontend
         run: npm ci
 
+      - name: Enforce browser session storage policy
+        working-directory: frontend
+        run: node scripts/check-auth-storage.mjs
+
       - name: Build production frontend
         working-directory: frontend
         run: npm run build
