@@ -140,17 +140,25 @@ jobs:
           export BACKUP_DIR=/tmp/corvia-backups
           export ALLOW_UNENCRYPTED_BACKUP=1
 
+          SOURCE_ADMIN_ID="$(
+            psql --no-psqlrc --tuples-only --no-align --set=ON_ERROR_STOP=1 \
+              --command "SELECT id FROM users WHERE email = 'release-smoke@teste.local';"
+          )"
+          test -n "$SOURCE_ADMIN_ID"
+          test "$(printf '%s' "$SOURCE_ADMIN_ID" | wc -l)" = "0"
+
           BACKUP_FILE="$(bash ops/backup-postgres.sh)"
           createdb meucardio_restore
           TARGET_PGDATABASE=meucardio_restore \
             CONFIRM_RESTORE_TARGET=meucardio_restore \
             bash ops/restore-postgres.sh "$BACKUP_FILE"
 
-          RESTORED_ADMIN_COUNT="$(
-            PGDATABASE=meucardio_restore psql --no-psqlrc --tuples-only --no-align \
-              --command "SELECT count(*) FROM users WHERE email = 'release-smoke@teste.local';"
+          RESTORED_ADMIN_ID="$(
+            PGDATABASE=meucardio_restore psql \
+              --no-psqlrc --tuples-only --no-align --set=ON_ERROR_STOP=1 \
+              --command "SELECT id FROM users WHERE email = 'release-smoke@teste.local';"
           )"
-          test "$RESTORED_ADMIN_COUNT" = "1"
+          test "$RESTORED_ADMIN_ID" = "$SOURCE_ADMIN_ID"
 
   frontend:
     name: Frontend build
