@@ -167,3 +167,59 @@ def test_receituario_rejects_direct_id_access_from_another_admin(
         json={"email": "paciente@teste.local"},
     )
     assert send.status_code == 404
+
+
+def test_round_rejects_cross_tenant_access_even_for_admin(
+    client, criar_usuario
+):
+    _, owner_token = criar_usuario(email="dono.round@teste.local", role="admin")
+    _, other_token = criar_usuario(email="outro.round@teste.local", role="admin")
+
+    created = client.post(
+        "/api/round/patients",
+        headers=_headers(owner_token),
+        json={
+            "record_number": "ROUND-ISOLAMENTO-1",
+            "initials": "RI",
+            "bed": "101",
+            "unit": "Cardiologia",
+        },
+    )
+    assert created.status_code == 201, created.text
+    patient_id = created.json()["id"]
+
+    listing = client.get(
+        "/api/round/patients", headers=_headers(other_token)
+    )
+    assert listing.status_code == 200
+    assert listing.json() == []
+
+    attempts = (
+        client.get(
+            f"/api/round/patients/{patient_id}", headers=_headers(other_token)
+        ),
+        client.patch(
+            f"/api/round/patients/{patient_id}",
+            headers=_headers(other_token),
+            json={"bed": "999"},
+        ),
+        client.post(
+            f"/api/round/patients/{patient_id}/problems",
+            headers=_headers(other_token),
+            json={"label": "Problema indevido"},
+        ),
+        client.post(
+            f"/api/round/patients/{patient_id}/notes",
+            headers=_headers(other_token),
+            json={"body": "Nota indevida"},
+        ),
+        client.get(
+            f"/api/round/patients/{patient_id}/summary",
+            headers=_headers(other_token),
+        ),
+        client.get(
+            f"/api/round/patients/{patient_id}/ai-assist",
+            headers=_headers(other_token),
+        ),
+    )
+    assert all(response.status_code == 404 for response in attempts)
