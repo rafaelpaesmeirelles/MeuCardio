@@ -1,11 +1,10 @@
 name: Generate frontend lockfile
 
 on:
-  push:
-    branches:
-      - agent/supply-chain-node24
+  pull_request:
     paths:
-      - frontend/package.json
+      - "frontend/package.json"
+      - ".github/workflows/generate-lockfile.yml"
 
 permissions:
   contents: read
