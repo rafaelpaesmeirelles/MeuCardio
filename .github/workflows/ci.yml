@@ -129,16 +129,7 @@ jobs:
 
       - name: Audit dependency security
         working-directory: frontend
-        run: |
-          set +e
-          npm audit --omit=dev --audit-level=high
-          production_status=$?
-          npm audit --audit-level=critical
-          complete_status=$?
-          set -e
-          if [ "$production_status" -ne 0 ] || [ "$complete_status" -ne 0 ]; then
-            exit 1
-          fi
+        run: node scripts/audit-dependencies.mjs
 
       - name: Enforce browser session storage policy
         working-directory: frontend
