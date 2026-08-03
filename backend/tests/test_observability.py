@@ -69,12 +69,13 @@ def test_request_id_e_template_da_rota_sem_token_ou_query():
 def test_request_id_invalido_e_substituido_por_identificador_opaco():
     stream = io.StringIO()
     app = _app(Route("/api/health", _ok), stream)
+    invalid = "bad id with spaces"
 
     with TestClient(app) as client:
-        response = client.get("/api/health", headers={"X-Request-ID": "ruim com espaços"})
+        response = client.get("/api/health", headers={"X-Request-ID": invalid})
 
     generated = response.headers["X-Request-ID"]
-    assert generated != "ruim com espaços"
+    assert generated != invalid
     assert re.fullmatch(r"[0-9a-f]{32}", generated)
     assert _last_event(stream)["request_id"] == generated
 
