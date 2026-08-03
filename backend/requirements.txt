@@ -19,7 +19,7 @@ tenacity==9.0.0
 alembic==1.14.0
 httpx==0.28.1
 stripe==15.3.1
-cryptography==49.0.0
+cryptography==50.0.0
 tzdata==2024.2
 # Decodificação estrutural de JPEG/PNG/WEBP nos uploads. Dependência direta,
 # em vez de depender acidentalmente da versão transitiva do ReportLab.
