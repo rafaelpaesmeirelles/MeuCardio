@@ -56,6 +56,9 @@ jobs:
       STRIPE_SECRET_KEY: sk_test_dummy
       STRIPE_WEBHOOK_SECRET: whsec_teste_dummy
       PUBLIC_URL: https://corvia.med.br
+      UPLOADS_DIR: /tmp/corvia-test/uploads
+      EXAMES_DIR: /tmp/corvia-test/exames-pacientes
+      DOCUMENTOS_DIR: /tmp/corvia-test/documentos-emitidos
 
     steps:
       - name: Checkout
