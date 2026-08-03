@@ -29,12 +29,13 @@ def _capture_requests():
     return handler
 
 
-def test_request_id_is_propagated_and_unknown_path_is_normalized(client):
+def test_request_id_is_propagated_exposed_and_unknown_path_is_normalized(client):
     handler = _capture_requests()
     try:
         response = client.get(
             "/api/nao-existe/123?token=segredo-na-query",
             headers={
+                "Origin": "http://localhost:5173",
                 "X-Request-ID": "corr-frontend-1234",
                 "Authorization": "Bearer segredo-no-header",
             },
@@ -44,6 +45,7 @@ def test_request_id_is_propagated_and_unknown_path_is_normalized(client):
 
     assert response.status_code == 404
     assert response.headers["X-Request-ID"] == "corr-frontend-1234"
+    assert "X-Request-ID" in response.headers["access-control-expose-headers"]
     assert handler.records
 
     record = handler.records[-1]
