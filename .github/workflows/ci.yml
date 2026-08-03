@@ -212,6 +212,18 @@ jobs:
         working-directory: frontend
         run: node scripts/check-auth-storage.mjs
 
+      - name: Enforce safe content rendering
+        working-directory: frontend
+        run: node scripts/check-rendering-security.mjs
+
+      - name: Enforce route-level code splitting
+        working-directory: frontend
+        run: node scripts/check-route-splitting.mjs
+
       - name: Build production frontend
         working-directory: frontend
         run: npm run build
+
+      - name: Enforce bundle and PWA budgets
+        working-directory: frontend
+        run: node scripts/check-bundle-budget.mjs
