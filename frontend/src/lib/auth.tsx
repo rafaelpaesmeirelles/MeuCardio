@@ -1,11 +1,11 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
-import { api, token, type Usuario } from "./api";
+import { api, type Usuario } from "./api";
 
 type Estado = {
   usuario: Usuario | null;
   carregando: boolean;
   entrar: (email: string, senha: string) => Promise<void>;
-  sair: () => void;
+  sair: () => Promise<void>;
   recarregar: () => void;
 };
 
@@ -16,14 +16,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [carregando, setCarregando] = useState(true);
 
   useEffect(() => {
-    if (!token.get()) {
-      setCarregando(false);
-      return;
-    }
+    // O cookie é HttpOnly: o cliente não tenta "ver" se existe. A fonte da
+    // verdade é sempre /auth/me, que responde 200 ou 401.
     api
       .get<Usuario>("/auth/me")
       .then(setUsuario)
-      .catch(() => token.clear())
+      .catch(() => setUsuario(null))
       .finally(() => setCarregando(false));
   }, []);
 
@@ -32,16 +30,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setUsuario(await api.get<Usuario>("/auth/me"));
   }
 
-  function sair() {
-    token.clear();
+  async function sair() {
+    await api.logout();
     setUsuario(null);
   }
 
   // Usada depois de editar o perfil em /minha-conta, pra que o nome no
   // cabeçalho reflita a alteração sem exigir novo login.
   function recarregar() {
-    if (!token.get()) return;
-    api.get<Usuario>("/auth/me").then(setUsuario).catch(() => {});
+    api.get<Usuario>("/auth/me").then(setUsuario).catch(() => setUsuario(null));
   }
 
   return (
