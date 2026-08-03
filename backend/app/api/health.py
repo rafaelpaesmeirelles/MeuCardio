@@ -1,11 +1,15 @@
+import logging
+
 from fastapi import APIRouter, HTTPException
 from redis import Redis
 from sqlalchemy import text
 
 from app.core.config import settings
 from app.core.db import engine
+from app.core.observability import current_request_id
 
 router = APIRouter(prefix="/api", tags=["infra"])
+logger = logging.getLogger("corvia.health")
 
 
 @router.get("/health")
@@ -18,12 +22,14 @@ def health() -> dict[str, str]:
 def ready() -> dict[str, object]:
     """Readiness: exige banco e Redis disponíveis antes de receber tráfego."""
     components: dict[str, str] = {"database": "ok", "redis": "ok"}
+    failures: dict[str, str] = {}
 
     try:
         with engine.connect() as connection:
             connection.execute(text("SELECT 1"))
-    except Exception:
+    except Exception as exc:
         components["database"] = "unavailable"
+        failures["database"] = type(exc).__name__
 
     redis_client = None
     try:
@@ -33,13 +39,23 @@ def ready() -> dict[str, object]:
             socket_timeout=1,
         )
         redis_client.ping()
-    except Exception:
+    except Exception as exc:
         components["redis"] = "unavailable"
+        failures["redis"] = type(exc).__name__
     finally:
         if redis_client is not None:
             redis_client.close()
 
     if any(status != "ok" for status in components.values()):
+        logger.warning(
+            "readiness_failed",
+            extra={
+                "event": "readiness_failed",
+                "request_id": current_request_id(),
+                "components": components,
+                "result": failures,
+            },
+        )
         raise HTTPException(
             status_code=503,
             detail={"status": "not_ready", "components": components},
