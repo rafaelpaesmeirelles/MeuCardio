@@ -2,19 +2,20 @@
 
 Duas checagens que só existem nesta frente, e as duas por causa do que a tela é:
 
-1. **O documento referenciado precisa existir e estar publicado.** Uma seleção
-   apontando para slug inexistente produziria um cartão que abre vazio — na
-   única tela do sistema em que abrir vazio custa tempo que o paciente não tem.
-   O registro é recusado, com o motivo, em vez de carregado torto.
+1. **O documento referenciado precisa existir e estar disponível para publicação.**
+   Aceita documento já publicado ou explicitamente revisado, pois o comando de
+   reconciliação promove os revisados somente depois de carregar todas as frentes.
+   Uma seleção apontando para slug inexistente continua sendo recusada.
 2. **`published` nunca vem do arquivo**, como nas demais frentes. Repetido aqui
-   porque já aconteceu de verdade: um carregador copiava o campo do JSON por
-   cima do banco e qualquer recarga despublicava tudo em silêncio.
+   porque uma recarga não pode despublicar conteúdo em silêncio.
 """
 
 from __future__ import annotations
 
 import json
 from pathlib import Path
+
+from sqlalchemy import or_
 
 from app.core.db import SessionLocal
 from app.models.content import Document
@@ -27,19 +28,28 @@ def carregar(caminho: str = "/emergencia/metadados.json") -> dict:
     novos = atualizados = 0
     recusados: list[dict] = []
     try:
-        publicados = {
-            s for (s,) in db.query(Document.slug).filter(Document.published.is_(True)).all()
+        disponiveis = {
+            s for (s,) in (
+                db.query(Document.slug)
+                .filter(
+                    or_(
+                        Document.published.is_(True),
+                        Document.review_status == "revisado",
+                    )
+                )
+                .all()
+            )
         }
 
         for item in dados:
             faltando = [
                 s for s in ([item["documento_slug"], item.get("fluxograma_slug")]
                             + list(item.get("relacionados") or []))
-                if s and s not in publicados
+                if s and s not in disponiveis
             ]
             if faltando:
                 recusados.append({"slug": item["slug"],
-                                  "motivo": "documento não publicado ou inexistente",
+                                  "motivo": "documento inexistente ou ainda não revisado",
                                   "slugs": faltando})
                 continue
 
