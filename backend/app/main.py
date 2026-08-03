@@ -10,6 +10,7 @@ from app.api import (
     exportacao, emergencia, receituario, clinical_cases,
 )
 from app.core.config import settings
+from app.core.course_uploads import CourseUploadSecurityMiddleware
 from app.core.http_security import HttpSecurityMiddleware
 from app.core.runtime import validar_configuracao_de_execucao
 from app.core.security import assinante_ativo
@@ -35,10 +36,11 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-# Starlette executa primeiro o último middleware registrado. Upload fica por
-# dentro da proteção de origem/rate limit HTTP: uma origem hostil é recusada
-# antes que o body multipart seja lido e validado.
+# Starlette executa primeiro o último middleware registrado. As políticas de
+# upload ficam por dentro da proteção de origem/rate limit HTTP: uma origem
+# hostil é recusada antes que o body multipart seja lido e validado.
 app.add_middleware(UploadSecurityMiddleware)
+app.add_middleware(CourseUploadSecurityMiddleware)
 app.add_middleware(HttpSecurityMiddleware)
 
 ROUTERS_LIVRES = (
