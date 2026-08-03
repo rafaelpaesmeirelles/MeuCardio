@@ -89,7 +89,7 @@ def gerar_documento(dados: GerarDocumentoIn, db: Session = Depends(get_db), user
 
     if dados.patient_id is not None:
         p = db.get(Patient, dados.patient_id)
-        if not p or (p.created_by != user.id and user.role != "admin"):
+        if not p or p.created_by != user.id:
             raise HTTPException(status_code=404, detail="Paciente não encontrado.")
 
     if dados.endereco not in (None, "residencial", "profissional"):
@@ -128,8 +128,9 @@ def gerar_documento(dados: GerarDocumentoIn, db: Session = Depends(get_db), user
 
 
 def _obter_gerado(gid: int, db: Session, user) -> GeneratedDocument:
+    """Resolve documento clínico sem bypass administrativo entre locatários."""
     g = db.get(GeneratedDocument, gid)
-    if not g or (g.created_by != user.id and user.role != "admin"):
+    if not g or g.created_by != user.id:
         raise HTTPException(status_code=404, detail="Documento não encontrado.")
     return g
 
@@ -173,7 +174,6 @@ def baixar_pdf_gerado(gid: int, metodo: str = "MANUAL", db: Session = Depends(ge
     foi emitido (mesma semântica de uma vez só que a receita tem via
     `status`, só que aqui não existe esse campo — quem marca "já emitido" é
     a própria existência do `DocumentoEmitido`)."""
-    from app.models.user import User
     from app.services.pdf_documento import documento_generico, resolver_endereco
 
     g = _obter_gerado(gid, db, user)
@@ -195,10 +195,10 @@ def baixar_pdf_gerado(gid: int, metodo: str = "MANUAL", db: Session = Depends(ge
             "erro": "Emissão indisponível.", "bloqueios": [motivo], "nada_foi_simulado": True,
         })
 
-    # O cabeçalho do PDF tem que trazer o médico que EMITIU o documento, não
-    # quem está baixando agora — um admin vendo o documento de outro médico
-    # não pode aparecer como se fosse o emissor.
-    emissor = db.get(User, g.created_by) or user
+    # A resolução de propriedade acima garante que o emissor é o próprio
+    # usuário autenticado. Não existe mais leitura administrativa transversal
+    # de documentos clínicos entre médicos.
+    emissor = user
     medico = {"full_name": emissor.full_name, "council_name": emissor.council_name,
               "council_number": emissor.council_number, "council_state": emissor.council_state,
               "rqe": emissor.rqe, "specialty": emissor.specialty,
@@ -234,12 +234,8 @@ class EnviarEmailIn(BaseModel):
 
 @router.post("/gerados/{gid}/enviar-email")
 def enviar_email_gerado(gid: int, dados: EnviarEmailIn, db: Session = Depends(get_db), user=Depends(current_user)):
-    """Mesma decisão do receituário (30/07/2026): manda ao paciente um LINK,
-    nunca o PDF anexado — atestado/laudo também é dado clínico, e a caixa de
-    e-mail (CorvIA Mail) tem termo LGPD que proíbe isso. Diferente de
-    `_obter_gerado` (que permite admin ver documento de outro médico), esta
-    rota exige ser o próprio autor: mandar e-mail a um paciente em nome de
-    outro médico não é ação que um admin deva poder disparar."""
+    """Manda ao paciente um link, nunca o PDF anexado. A rota exige ser o
+    próprio autor do documento e não admite bypass administrativo."""
     g = db.get(GeneratedDocument, gid)
     if not g or g.created_by != user.id:
         raise HTTPException(status_code=404, detail="Documento não encontrado.")
