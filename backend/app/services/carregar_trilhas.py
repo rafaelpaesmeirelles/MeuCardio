@@ -17,6 +17,7 @@ from app.core.db import SessionLocal
 from app.models.checklist import DischargeChecklist
 from app.models.content import Document
 from app.models.drug import Drug
+from app.models.evidence import EvidenceRecord
 from app.models.study import ScientificStudy
 from app.models.study_track import StudyTrack
 
@@ -32,6 +33,8 @@ def _existe(db, item_type: str, slug: str) -> bool:
         return db.query(ScientificStudy).filter(ScientificStudy.slug == slug).first() is not None
     if item_type == "checklist":
         return db.query(DischargeChecklist).filter(DischargeChecklist.slug == slug).first() is not None
+    if item_type == "evidencia":
+        return db.query(EvidenceRecord).filter(EvidenceRecord.slug == slug).first() is not None
     if item_type == "calculadora":
         # As calculadoras vivem em código, não em tabela — a existência é
         # conferida pela rota de calculadoras, e aqui a referência é aceita.
