@@ -25,6 +25,8 @@ class SmokeFailure(RuntimeError):
 class ApiClient:
     def __init__(self, base_url: str) -> None:
         self.base_url = base_url.rstrip("/")
+        parsed = urllib.parse.urlsplit(self.base_url)
+        self.origin = f"{parsed.scheme}://{parsed.netloc}"
         self.cookies = CookieJar()
         self.opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(self.cookies))
 
@@ -38,6 +40,10 @@ class ApiClient:
     ) -> tuple[int, Any, urllib.response.addinfourl]:
         data = None
         headers = {"Accept": "application/json"}
+        if method.upper() in {"POST", "PUT", "PATCH", "DELETE"}:
+            # O smoke representa a interface web real e, portanto, envia a
+            # origem do próprio ambiente nas operações que mudam estado.
+            headers["Origin"] = self.origin
         if form is not None:
             data = urllib.parse.urlencode(form).encode()
             headers["Content-Type"] = "application/x-www-form-urlencoded"
