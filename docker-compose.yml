@@ -1,6 +1,6 @@
 services:
   db:
-    image: pgvector/pgvector:pg16   # Postgres 16 com a extensão vector
+    image: pgvector/pgvector:pg16
     environment:
       POSTGRES_USER: ${POSTGRES_USER:-meucardio}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-meucardio}
@@ -37,7 +37,7 @@ services:
     volumes:
       - ./backend:/app
       - ./content:/content:ro
-    command: ["sh", "-c", "python -m app.commands.migrate && exec uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload"]
+    command: ["sh", "-c", "python -m app.commands.migrate && exec uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload --no-access-log"]
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/ready', timeout=2).read()"]
       interval: 10s
