@@ -1,53 +1,79 @@
-import { useEffect, useId, useRef, useState } from "react";
+import { useEffect, useId, useState } from "react";
 
-/** Renderiza um bloco ```mermaid``` como diagrama.
+function validarSvgGerado(svg: string): string {
+  const padroesProibidos = [
+    /<\s*(?:script|foreignObject|iframe|object|embed|audio|video)\b/i,
+    /(?:^|\s)on[a-z]+\s*=/i,
+    /(?:javascript|data\s*:\s*text\/html)\s*:/i,
+    /@import\b/i,
+    /url\(\s*["']?(?:https?:|\/\/)/i,
+    /(?:href|xlink:href)\s*=\s*["'](?:https?:|\/\/)/i,
+  ];
+
+  if (!svg.trimStart().startsWith("<svg") || padroesProibidos.some((padrao) => padrao.test(svg))) {
+    throw new Error("SVG gerado contém estrutura não permitida.");
+  }
+  return svg;
+}
+
+/** Renderiza um bloco Mermaid sem inserir SVG como HTML no DOM.
  *
- * A lib entra por import() dinâmico de propósito: o mermaid é grande e só faz
- * falta em documento que tenha diagrama, então fica num chunk à parte em vez de
- * pesar no bundle inicial de quem nunca abre um fluxograma. */
+ * O Mermaid permanece em `securityLevel: strict`. O SVG resultante passa por
+ * uma validação defensiva e é exibido como imagem por Blob URL; assim, mesmo
+ * conteúdo clínico malformado não vira nó HTML executável na página. */
 export default function Fluxograma({ fonte }: { fonte: string }) {
-  // useId devolve algo como ":r3:", com caracteres inválidos para id de DOM.
   const id = "fluxograma-" + useId().replace(/[^a-zA-Z0-9]/g, "");
-  const [svg, setSvg] = useState("");
+  const [svgUrl, setSvgUrl] = useState("");
   const [falhou, setFalhou] = useState(false);
-  const container = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     let cancelado = false;
+    let urlCriada: string | null = null;
+
+    setSvgUrl("");
+    setFalhou(false);
 
     (async () => {
       try {
         const mermaid = (await import("mermaid")).default;
         mermaid.initialize({
           startOnLoad: false,
-          securityLevel: "strict", // não permite HTML arbitrário nos rótulos
+          securityLevel: "strict",
           theme: "base",
           fontFamily: "Inter, system-ui, sans-serif",
-          // Espelha os tokens de tokens.css. O mermaid recebe cor literal, não
-          // aceita var(--…), então este é o único ponto do frontend em que a
-          // paleta aparece em hex fora do arquivo de tema — se a paleta mudar,
-          // mudar aqui junto.
           themeVariables: {
-            primaryColor: "#eef5f8",      // --acento-tinta
-            primaryBorderColor: "#1c7293", // --teal
-            primaryTextColor: "#26333b",   // --ink
-            lineColor: "#0b2e45",          // --navy
-            secondaryColor: "#fcfcfc",     // --off-white
+            primaryColor: "#eef5f8",
+            primaryBorderColor: "#1c7293",
+            primaryTextColor: "#26333b",
+            lineColor: "#0b2e45",
+            secondaryColor: "#fcfcfc",
             tertiaryColor: "#ffffff",
             fontSize: "14px",
           },
         });
-        const { svg } = await mermaid.render(id, fonte);
-        if (!cancelado) setSvg(svg);
+
+        const resultado = await mermaid.render(id, fonte);
+        const svgSeguro = validarSvgGerado(resultado.svg);
+        urlCriada = URL.createObjectURL(
+          new Blob([svgSeguro], { type: "image/svg+xml;charset=utf-8" }),
+        );
+
+        if (cancelado) {
+          URL.revokeObjectURL(urlCriada);
+          urlCriada = null;
+          return;
+        }
+        setSvgUrl(urlCriada);
       } catch {
-        // Sintaxe inválida no diagrama não pode derrubar a página inteira:
-        // cai para o código-fonte, que ainda é legível.
         if (!cancelado) setFalhou(true);
-        document.getElementById(id)?.remove(); // mermaid deixa nó órfão ao falhar
+        document.getElementById(id)?.remove();
       }
     })();
 
-    return () => { cancelado = true; };
+    return () => {
+      cancelado = true;
+      if (urlCriada) URL.revokeObjectURL(urlCriada);
+    };
   }, [fonte, id]);
 
   if (falhou) {
@@ -58,16 +84,20 @@ export default function Fluxograma({ fonte }: { fonte: string }) {
     );
   }
 
-  if (!svg) return <p className="eyebrow" role="status">Desenhando o fluxograma…</p>;
+  if (!svgUrl) return <p className="eyebrow" role="status">Desenhando o fluxograma…</p>;
 
   return (
     <div
-      ref={container}
       className="fluxograma"
       role="img"
       aria-label="Fluxograma clínico"
       style={{ overflowX: "auto", margin: "1rem 0", textAlign: "center" }}
-      dangerouslySetInnerHTML={{ __html: svg }}
-    />
+    >
+      <img
+        src={svgUrl}
+        alt="Fluxograma clínico"
+        style={{ display: "block", maxWidth: "100%", height: "auto", margin: "0 auto" }}
+      />
+    </div>
   );
 }
