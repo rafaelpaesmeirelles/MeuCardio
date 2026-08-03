@@ -50,7 +50,7 @@ const apiPath = new URL("../src/lib/api.ts", import.meta.url);
 const api = await readFile(apiPath, "utf8");
 for (const required of [
   'credentials: "include"',
-  '"/auth/sessao"',
+  "/auth/sessao",
   "localStorage.removeItem(LEGACY_TOKEN_KEY)",
 ]) {
   if (!api.includes(required)) {
