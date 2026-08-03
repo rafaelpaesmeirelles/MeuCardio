@@ -30,7 +30,13 @@ SOURCES: dict[str, dict[str, str]] = {
     "material_paciente": {"directory": "material-paciente", "manifest": "metadados.json"},
     "emergencia": {"directory": "emergencia", "manifest": "metadados.json"},
     "casos_clinicos": {"directory": "casos-clinicos", "manifest": "metadados.json"},
-    "controlados": {"directory": "controlados", "manifest": "metadados.json"},
+    # Base normativa, não somada ao corpus científico. É inventariada à parte
+    # para garantir que as listas usadas pelo receituário também não desapareçam.
+    "controlados": {
+        "directory": "controlados",
+        "manifest": "listas-344-98.json",
+        "kind": "legal",
+    },
 }
 
 LIST_KEYS = (
@@ -82,6 +88,25 @@ def _file_inventory(directory: Path) -> tuple[int, int]:
     return len(files), sum(path.stat().st_size for path in files)
 
 
+def _legal_inventory(payload: Any) -> dict[str, int]:
+    if not isinstance(payload, dict):
+        return {"listas": 0, "substancias": 0, "regras": 0}
+    listas = payload.get("listas")
+    if not isinstance(listas, list):
+        return {"listas": 0, "substancias": 0, "regras": 0}
+    return {
+        "listas": len(listas),
+        "substancias": sum(
+            len(item.get("substancias") or []) for item in listas if isinstance(item, dict)
+        ),
+        "regras": sum(
+            len(item.get("regras_condicionais") or [])
+            for item in listas
+            if isinstance(item, dict)
+        ),
+    }
+
+
 def inventory() -> dict[str, Any]:
     fronts: dict[str, Any] = {}
     total_files = 0
@@ -122,12 +147,18 @@ def inventory() -> dict[str, Any]:
 
         try:
             payload = json.loads(manifest.read_text(encoding="utf-8"))
-            records = _records(payload)
         except (OSError, UnicodeError, json.JSONDecodeError) as exc:
             invalid.append(f"{manifest.relative_to(ROOT)}: {type(exc).__name__}")
             fronts[name] = result
             continue
 
+        result["manifest"] = str(manifest.relative_to(ROOT))
+        if config.get("kind") == "legal":
+            result["legal_records"] = _legal_inventory(payload)
+            fronts[name] = result
+            continue
+
+        records = _records(payload)
         keys: dict[str, int] = {}
         for item in records:
             key = _slug(item)
@@ -137,7 +168,6 @@ def inventory() -> dict[str, Any]:
         duplicates = sorted(key for key, count in keys.items() if count > 1)
         result["records"] = len(records)
         result["duplicate_keys"] = duplicates[:100]
-        result["manifest"] = str(manifest.relative_to(ROOT))
         total_records += len(records)
         fronts[name] = result
 
