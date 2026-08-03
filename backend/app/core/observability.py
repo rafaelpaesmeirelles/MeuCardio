@@ -22,6 +22,7 @@ from pathlib import Path
 from typing import Iterator
 
 from starlette.datastructures import Headers, MutableHeaders
+from starlette.responses import JSONResponse
 from starlette.types import ASGIApp, Message, Receive, Scope, Send
 
 _REQUEST_ID: ContextVar[str | None] = ContextVar("corvia_request_id", default=None)
@@ -145,10 +146,12 @@ class ObservabilityMiddleware:
         scope.setdefault("state", {})["request_id"] = request_id
         started = time.perf_counter()
         status_code = 500
+        response_started = False
 
         async def send_with_request_id(message: Message) -> None:
-            nonlocal status_code
+            nonlocal status_code, response_started
             if message["type"] == "http.response.start":
+                response_started = True
                 status_code = int(message["status"])
                 MutableHeaders(scope=message)["X-Request-ID"] = request_id
             await send(message)
@@ -170,7 +173,16 @@ class ObservabilityMiddleware:
                     "error_stack": _stack_summary(exc),
                 },
             )
-            raise
+            if response_started:
+                # Streaming já iniciado não pode ser substituído por outra
+                # resposta. O header de correlação já foi enviado nesse caso.
+                raise
+            response = JSONResponse(
+                {"detail": "Erro interno. Informe o X-Request-ID ao suporte."},
+                status_code=500,
+                headers={"X-Request-ID": request_id},
+            )
+            await response(scope, receive, send)
         else:
             duration_ms = round((time.perf_counter() - started) * 1000, 2)
             log = self.logger.warning if status_code >= 500 else self.logger.info
