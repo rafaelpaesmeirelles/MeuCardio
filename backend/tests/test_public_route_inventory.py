@@ -1,5 +1,3 @@
-from fastapi.routing import APIRoute
-
 from app.core.security import (
     assinante_ativo,
     current_email_account,
@@ -47,7 +45,7 @@ EXPECTED_PUBLIC_ROUTES = set(PUBLIC_ROUTE_RATIONALES)
 
 
 def _dependency_tree_contains_auth(dependant) -> bool:
-    for dependency in dependant.dependencies:
+    for dependency in getattr(dependant, "dependencies", ()):
         if dependency.call in AUTH_CALLS:
             return True
         if _dependency_tree_contains_auth(dependency):
@@ -56,15 +54,25 @@ def _dependency_tree_contains_auth(dependant) -> bool:
 
 
 def _public_routes() -> set[tuple[str, str]]:
+    """Inventaria rotas HTTP por contrato, sem depender da classe interna.
+
+    FastAPI/Starlette podem trocar a classe concreta de rota entre versões. Os
+    atributos públicos usados pela aplicação — ``path``, ``methods`` e
+    ``dependant`` — continuam sendo o contrato relevante para esta auditoria.
+    Rotas WebSocket e mounts não possuem o trio completo e são ignorados.
+    """
     routes: set[tuple[str, str]] = set()
     for route in app.routes:
-        if not isinstance(route, APIRoute):
+        path = getattr(route, "path", None)
+        methods = getattr(route, "methods", None)
+        dependant = getattr(route, "dependant", None)
+        if not path or not methods or dependant is None:
             continue
-        if _dependency_tree_contains_auth(route.dependant):
+        if _dependency_tree_contains_auth(dependant):
             continue
-        for method in route.methods or set():
+        for method in methods:
             if method not in {"HEAD", "OPTIONS"}:
-                routes.add((method, route.path))
+                routes.add((method, path))
     return routes
 
 
