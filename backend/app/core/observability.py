@@ -23,6 +23,7 @@ from typing import Iterator
 
 from starlette.datastructures import Headers, MutableHeaders
 from starlette.responses import JSONResponse
+from starlette.routing import Match
 from starlette.types import ASGIApp, Message, Receive, Scope, Send
 
 _REQUEST_ID: ContextVar[str | None] = ContextVar("corvia_request_id", default=None)
@@ -105,12 +106,42 @@ def _request_id(headers: Headers) -> str:
     return uuid.uuid4().hex
 
 
-def _safe_route(scope: Scope) -> str:
-    """Prefere o template da rota; antes do roteamento, registra só a família."""
+def _route_template(app: ASGIApp, scope: Scope) -> str | None:
+    """Encontra o template sem depender de dados adicionados depois pelo router.
+
+    O middleware é a camada mais externa, portanto ``scope['route']`` pode não
+    existir mesmo após a resposta. Desembrulhar as camadas e usar ``matches``
+    permite obter o padrão registrado sem registrar o caminho real do usuário.
+    """
+    current: object | None = app
+    visited: set[int] = set()
+    while current is not None and id(current) not in visited:
+        visited.add(id(current))
+        routes = getattr(current, "routes", None)
+        if routes:
+            for route in routes:
+                try:
+                    match, _ = route.matches(dict(scope))
+                except Exception:
+                    continue
+                if match == Match.FULL:
+                    template = getattr(route, "path", None)
+                    if isinstance(template, str) and template:
+                        return template
+        current = getattr(current, "app", None)
+    return None
+
+
+def _safe_route(scope: Scope, app: ASGIApp) -> str:
+    """Prefere o template da rota e nunca registra query ou parâmetros reais."""
     route = scope.get("route")
     template = getattr(route, "path", None)
     if isinstance(template, str) and template:
         return template
+
+    resolved = _route_template(app, scope)
+    if resolved:
+        return resolved
 
     path = str(scope.get("path") or "/")
     parts = [part for part in path.split("/") if part]
@@ -166,7 +197,7 @@ class ObservabilityMiddleware:
                     "event": "http_request_failed",
                     "request_id": request_id,
                     "method": str(scope.get("method", "GET")).upper(),
-                    "route": _safe_route(scope),
+                    "route": _safe_route(scope, self.app),
                     "status_code": 500,
                     "duration_ms": duration_ms,
                     "error_type": type(exc).__name__,
@@ -192,7 +223,7 @@ class ObservabilityMiddleware:
                     "event": "http_request_completed",
                     "request_id": request_id,
                     "method": str(scope.get("method", "GET")).upper(),
-                    "route": _safe_route(scope),
+                    "route": _safe_route(scope, self.app),
                     "status_code": status_code,
                     "duration_ms": duration_ms,
                 },
