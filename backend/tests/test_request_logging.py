@@ -61,11 +61,11 @@ def test_request_id_is_propagated_and_unknown_path_is_normalized(client):
 def test_invalid_request_id_is_replaced(client):
     response = client.get(
         "/api/nao-existe",
-        headers={"X-Request-ID": "quebra\nlinha"},
+        headers={"X-Request-ID": "curto"},
     )
 
     generated = response.headers["X-Request-ID"]
-    assert generated != "quebra\nlinha"
+    assert generated != "curto"
     assert re.fullmatch(r"[0-9a-f]{32}", generated)
 
 
@@ -133,6 +133,6 @@ def test_normalize_path_masks_tokens_ids_uuid_and_email():
     assert normalize_path(
         "/api/documentos-publicos/abcdefghijklmnopqrstuvwxyz0123456789ABCDEFG"
     ) == "/api/documentos-publicos/{token}"
-    assert normalize_path("/api/contas/medico%40teste.com") == (
-        "/api/contas/medico%40teste.com"
+    assert normalize_path("/api/contas/medico@teste.com") == (
+        "/api/contas/{value}"
     )
