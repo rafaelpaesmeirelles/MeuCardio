@@ -26,17 +26,24 @@ services:
     command: ["redis-server", "--appendonly", "yes"]
     volumes:
       - redisdata:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
     restart: unless-stopped
 
   backend:
     build:
       context: ./backend
     env_file: .env
+    environment:
+      ENVIRONMENT: production
     depends_on:
       db:
         condition: service_healthy
       redis:
-        condition: service_started
+        condition: service_healthy
     volumes:
       - ./content:/content:ro
       - ./galeria:/galeria:ro
