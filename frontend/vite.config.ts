@@ -2,6 +2,8 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { VitePWA } from "vite-plugin-pwa";
 
+const limitePrecacheJs = 160 * 1024;
+
 export default defineConfig({
   plugins: [
     react(),
@@ -11,8 +13,7 @@ export default defineConfig({
       manifest: {
         name: "Corvia — O caminho do coração",
         short_name: "Corvia",
-        description:
-          "Plataforma clínica de apoio à decisão em Cardiologia.",
+        description: "Plataforma clínica de apoio à decisão em Cardiologia.",
         lang: "pt-BR",
         theme_color: "#0B2E45",
         background_color: "#FFFFFF",
@@ -26,43 +27,40 @@ export default defineConfig({
         ]
       },
       workbox: {
-        // Sem clientsClaim, o novo service worker fica "waiting" até que TODAS
-        // as abas antigas fechem — quem já tinha o app aberto continua rodando
-        // o bundle velho indefinidamente. skipWaiting + clientsClaim juntos
-        // fazem o SW novo assumir o controle na hora; o reload em main.tsx
-        // (ouvindo controllerchange) é o que garante que o JS já carregado
-        // também seja substituído, não só as respostas de rede futuras.
         skipWaiting: true,
         clientsClaim: true,
         globPatterns: ["**/*.{js,css,html,svg,png,woff2}"],
-        // Sem isto, abrir /emergencia offline devolveria 404 do servidor em vez
-        // da aplicação: a rota é do roteador do cliente, não existe no disco.
+        manifestTransforms: [
+          async (entries) => ({
+            manifest: entries.filter((entry) => {
+              if (!entry.url.endsWith(".js")) return true;
+              if (/(?:^|\/)(?:index|registerSW)-[^/]*\.js$/.test(entry.url)) return true;
+              return (entry.size ?? 0) <= limitePrecacheJs;
+            }),
+            warnings: [],
+          }),
+        ],
         navigateFallback: "index.html",
         runtimeCaching: [
           {
-            // O pacote do Modo Emergência tem regra própria e vem primeiro: a
-            // resposta guardada é servida de imediato e revalidada em segundo
-            // plano, de modo que a tela abre mesmo sem rede. A página também
-            // guarda o pacote por conta própria (localStorage), porque um
-            // service worker pode não estar ativo no primeiro acesso — e a
-            // única tela que não pode falhar é justamente esta.
-            urlPattern: /\/api\/emergencia/,
+            urlPattern: /\/assets\/.*\.(?:js|css)$/,
             handler: "StaleWhileRevalidate",
             options: {
-              // Nome novo de propósito: descarta qualquer cache antigo que já
-              // tenha guardado uma resposta de erro, em vez de esperar que ela
-              // expire por conta própria.
-              cacheName: "corvia-emergencia-v2",
-              expiration: { maxEntries: 8 },
-              // Sem isto, uma resposta de erro (401/404 — por exemplo, de antes
-              // de a rota existir em produção) fica presa em cache e a tela
-              // volta a mostrá-la a cada abertura, mesmo com o backend já
-              // corrigido: só uma resposta 200 substitui o cache.
+              cacheName: "corvia-assets-v1",
+              expiration: { maxEntries: 160, maxAgeSeconds: 2592000 },
               cacheableResponse: { statuses: [200] }
             }
           },
           {
-            // Conteúdo científico fica disponível offline após a primeira leitura.
+            urlPattern: /\/api\/emergencia/,
+            handler: "StaleWhileRevalidate",
+            options: {
+              cacheName: "corvia-emergencia-v2",
+              expiration: { maxEntries: 8 },
+              cacheableResponse: { statuses: [200] }
+            }
+          },
+          {
             urlPattern: /\/api\/(library|calculators|drugs|material-paciente)/,
             handler: "StaleWhileRevalidate",
             options: {
@@ -72,7 +70,6 @@ export default defineConfig({
             }
           },
           {
-            // Dados de paciente nunca são cacheados.
             urlPattern: /\/api\/round/,
             handler: "NetworkOnly"
           }
@@ -80,6 +77,7 @@ export default defineConfig({
       }
     })
   ],
+  build: { manifest: true },
   server: {
     port: 5173,
     proxy: { "/api": { target: "http://backend:8000", changeOrigin: true } }
