@@ -20,6 +20,9 @@ httpx==0.28.1
 stripe==15.3.1
 cryptography==44.0.0
 tzdata==2024.2
+# Decodificação estrutural de JPEG/PNG/WEBP nos uploads. Dependência direta,
+# em vez de depender acidentalmente da versão transitiva do ReportLab.
+pillow==12.3.0
 # Geração de PDF de todos os documentos do sistema (receita, atestado, laudo).
 # Escolhido pelo Rafael em 29/07/2026: python puro, sem lib de sistema, e
 # controle de coordenada preciso — que é o que formulário regulado exige.
