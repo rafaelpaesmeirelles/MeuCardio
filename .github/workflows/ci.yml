@@ -77,34 +77,33 @@ jobs:
         working-directory: backend
         run: python -m pip install --upgrade pip && pip install -r requirements-dev.txt
 
-      - name: Create PostgreSQL extensions required by the baseline
+      - name: Apply migrations through the operational command
+        working-directory: backend
+        run: python -m app.commands.migrate
+
+      - name: Verify migration command is idempotent
+        working-directory: backend
+        run: python -m app.commands.migrate
+
+      - name: Smoke test explicit administrator bootstrap
         working-directory: backend
         run: |
+          python -m app.commands.create_admin --email ci-admin@teste.local --password admin-ci-seguro-123
+          python -m app.commands.create_admin --email ci-admin@teste.local --password outra-senha-que-nao-deve-substituir
           python - <<'PY'
-          import os
-          import psycopg
+          from app.core.db import SessionLocal
+          from app.models.user import User
 
-          connection = psycopg.connect(
-              host=os.environ["POSTGRES_HOST"],
-              port=os.environ["POSTGRES_PORT"],
-              user=os.environ["POSTGRES_USER"],
-              password=os.environ["POSTGRES_PASSWORD"],
-              dbname=os.environ["POSTGRES_DB"],
-              autocommit=True,
-          )
-          with connection:
-              with connection.cursor() as cursor:
-                  for extension in ("vector", "pg_trgm", "unaccent"):
-                      cursor.execute(f'CREATE EXTENSION IF NOT EXISTS "{extension}"')
+          db = SessionLocal()
+          try:
+              assert db.query(User).filter(User.email == "ci-admin@teste.local").count() == 1
+          finally:
+              db.close()
           PY
-
-      - name: Apply migrations
-        working-directory: backend
-        run: alembic upgrade head
 
       - name: Compile Python modules
         working-directory: backend
-        run: python -m compileall -q app tests
+        run: python -m compileall -q app tests migrations
 
       - name: Run pytest
         working-directory: backend
