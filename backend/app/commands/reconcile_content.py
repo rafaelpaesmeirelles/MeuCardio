@@ -34,6 +34,7 @@ from app.models.study import ScientificStudy
 from app.models.study_track import StudyTrack
 from app.services.importer import import_directory
 
+REPOSITORY_ROOT = Path(__file__).resolve().parents[3]
 
 FRONTS: dict[str, dict[str, Any]] = {
     "documentos": {
@@ -107,27 +108,37 @@ FRONTS: dict[str, dict[str, Any]] = {
 SCIENTIFIC_MINIMUM = sum(front["minimum"] for front in FRONTS.values())
 
 
-def _ensure_source(front: str, path: str) -> None:
-    source = Path(path)
+def _source_path(path: str) -> Path:
+    """Usa o volume absoluto em produção e o checkout do repositório em CI/dev."""
+    configured = Path(path)
+    if configured.exists():
+        return configured
+    fallback = REPOSITORY_ROOT / path.lstrip("/")
+    if fallback.exists():
+        return fallback
+    return configured
+
+
+def _ensure_source(front: str, path: str) -> Path:
+    source = _source_path(path)
     if not source.exists():
         raise FileNotFoundError(f"Fonte da frente {front} não encontrada: {path}")
+    return source
 
 
 def _load_front(front: str, config: dict[str, Any]) -> dict:
-    path = str(config["path"])
-    _ensure_source(front, path)
+    source = _ensure_source(front, str(config["path"]))
     if config["loader"] is None:
-        return import_directory(path)
+        return import_directory(str(source))
     module = importlib.import_module(f"app.services.{config['loader']}")
-    return module.carregar(path)
+    return module.carregar(str(source))
 
 
 def _load_controlled_substances(db: Session) -> dict:
-    path = "/controlados/listas-344-98.json"
-    _ensure_source("controlados", path)
+    source = _ensure_source("controlados", "/controlados/listas-344-98.json")
     from app.services.carregar_controlados import carregar
 
-    return carregar(db, path)
+    return carregar(db, str(source))
 
 
 def _publish_reviewed(db: Session) -> dict[str, int]:
@@ -147,6 +158,7 @@ def _publish_reviewed(db: Session) -> dict[str, int]:
 def _database_inventory(db: Session) -> dict[str, Any]:
     fronts: dict[str, Any] = {}
     total = 0
+    published_total = 0
     below_minimum: dict[str, dict[str, int]] = {}
     for front, config in FRONTS.items():
         model = config["model"]
@@ -159,10 +171,12 @@ def _database_inventory(db: Session) -> dict[str, Any]:
             "minimum": minimum,
         }
         total += count
+        published_total += published
         if count < minimum:
             below_minimum[front] = {"database": count, "minimum": minimum}
     return {
         "total": total,
+        "published_total": published_total,
         "minimum": SCIENTIFIC_MINIMUM,
         "fronts": fronts,
         "below_minimum": below_minimum,
