@@ -12,10 +12,10 @@ from app.api import (
 from app.core.config import settings
 from app.core.runtime import validar_configuracao_de_execucao
 from app.core.security import assinante_ativo
-from app.services.bootstrap import init_db
 
-# Falha antes de registrar rotas, abrir conexões ou criar usuário administrador
-# quando a implantação de produção mantém segredos previsíveis/incompletos.
+# Falha antes de registrar rotas ou abrir conexões quando uma implantação de
+# produção mantém segredos previsíveis/incompletos. Mudanças de schema e criação
+# do administrador são operações explícitas, executadas fora do ciclo da API.
 validar_configuracao_de_execucao(settings)
 
 app = FastAPI(
@@ -79,8 +79,3 @@ for r in ROUTERS_ASSINANTES:
 # quebra rota de WebSocket (ver comentário em app/api/chat.py). Autenticação e
 # checagem de assinatura são feitas manualmente dentro do próprio handler.
 app.include_router(chat.router_ws)
-
-
-@app.on_event("startup")
-def on_startup() -> None:
-    init_db()
