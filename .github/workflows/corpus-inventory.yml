@@ -1,0 +1,34 @@
+name: Corpus inventory
+
+on:
+  pull_request:
+    paths:
+      - "content/**"
+      - "galeria/**"
+      - "exames/**"
+      - "evidencias/**"
+      - "estudos/**"
+      - "medicamentos/**"
+      - "checklists/**"
+      - "trilhas/**"
+      - "material-paciente/**"
+      - "emergencia/**"
+      - "casos-clinicos/**"
+      - "controlados/**"
+      - "scripts/content_inventory.py"
+      - ".github/workflows/corpus-inventory.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inventory:
+    name: Scientific corpus inventory
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Inventory versioned scientific corpus
+        run: python scripts/content_inventory.py
