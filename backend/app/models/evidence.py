@@ -32,6 +32,7 @@ class EvidenceRecord(Base):
     # rígida porque documentos são geridos por arquivo, não é garantido que o slug já exista.
 
     review_status: Mapped[str] = mapped_column(String(40), default="pendente_revisao")
+    review_note: Mapped[str | None] = mapped_column(Text, nullable=True)
     published: Mapped[bool] = mapped_column(Boolean, default=False, index=True)
 
     created_at: Mapped[datetime] = mapped_column(
