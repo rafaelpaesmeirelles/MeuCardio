@@ -151,8 +151,8 @@ jobs:
             "$SOURCE_DATABASE" "$SOURCE_USER_COUNT" "$SOURCE_ADMIN_ID"
 
           BACKUP_FILE="$(bash ops/backup-postgres.sh)"
-          pg_restore --data-only --table=users --file=- "$BACKUP_FILE" \
-            | grep -Fq 'release-smoke@teste.local'
+          pg_restore --data-only --table=users --file=/tmp/users-data.sql "$BACKUP_FILE"
+          grep -Fq 'release-smoke@teste.local' /tmp/users-data.sql
 
           createdb meucardio_restore
           TARGET_PGDATABASE=meucardio_restore \
