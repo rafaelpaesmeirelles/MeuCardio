@@ -1,5 +1,4 @@
 import io
-import os
 import zipfile
 from pathlib import Path
 
@@ -11,6 +10,11 @@ from starlette.responses import JSONResponse
 from starlette.routing import Route
 from starlette.testclient import TestClient
 
+from app.core.course_uploads import (
+    CourseUploadSecurityMiddleware,
+    is_course_upload,
+    validate_course_file,
+)
 from app.core.uploads import (
     UploadRejected,
     UploadSecurityMiddleware,
@@ -43,18 +47,25 @@ async def echo_upload(request: Request):
 
 
 def _app(redis=None) -> Starlette:
+    shared_redis = redis or FakeRedis()
     app = Starlette(
         routes=[
             Route("/api/auth/me/foto", echo_upload, methods=["POST"]),
             Route("/api/auth/me/logo", echo_upload, methods=["POST"]),
             Route("/api/pedidos/{pedido_id:int}/exame", echo_upload, methods=["POST"]),
             Route("/api/email/mensagens/anexos", echo_upload, methods=["POST"]),
+            Route("/api/cursos/admin/{slug}/material", echo_upload, methods=["POST"]),
         ]
     )
     app.add_middleware(
         UploadSecurityMiddleware,
         force_enabled=True,
-        redis_client=redis or FakeRedis(),
+        redis_client=shared_redis,
+    )
+    app.add_middleware(
+        CourseUploadSecurityMiddleware,
+        force_enabled=True,
+        redis_client=shared_redis,
     )
     return app
 
@@ -129,6 +140,33 @@ def test_anexo_executavel_e_rejeitado_e_docx_valido_e_aceito():
     assert allowed.status_code == 200
 
 
+def test_material_de_curso_tem_politica_propria():
+    material = _docx()
+    with TestClient(_app()) as client:
+        allowed = client.post(
+            "/api/cursos/admin/cardiologia/material",
+            files={"arquivo": ("apostila.docx", material, "application/octet-stream")},
+        )
+        blocked = client.post(
+            "/api/cursos/admin/cardiologia/material",
+            files={"arquivo": ("notas.txt", b"conteudo", "text/plain")},
+        )
+    assert allowed.status_code == 200
+    assert allowed.json() == {"filename": "apostila.docx", "size": len(material)}
+    assert blocked.status_code == 422
+    assert "Material de curso" in blocked.json()["detail"]
+
+
+def test_material_de_curso_rejeita_macro():
+    output = io.BytesIO()
+    with zipfile.ZipFile(output, "w") as archive:
+        archive.writestr("[Content_Types].xml", "<Types />")
+        archive.writestr("word/document.xml", "<document />")
+        archive.writestr("word/vbaProject.bin", b"macro")
+    with pytest.raises(UploadRejected, match="macro"):
+        validate_course_file(output.getvalue(), "apostila.docx")
+
+
 def test_documento_ooxml_com_macro_e_rejeitado():
     output = io.BytesIO()
     with zipfile.ZipFile(output, "w") as archive:
@@ -196,10 +234,17 @@ def test_inventario_de_rotas_upload_exige_politica_central():
         for path in api_dir.glob("*.py")
         if "UploadFile" in path.read_text(encoding="utf-8")
     }
-    assert upload_modules == {"auth.py", "email.py", "service_orders.py"}
+    assert upload_modules == {
+        "auth.py",
+        "email.py",
+        "partner_courses.py",
+        "service_orders.py",
+    }
 
     assert policy_for("POST", "/api/auth/me/foto") is not None
     assert policy_for("POST", "/api/auth/me/logo") is not None
     assert policy_for("POST", "/api/pedidos/1/exame") is not None
     assert policy_for("POST", "/api/email/mensagens/anexos") is not None
+    assert is_course_upload("POST", "/api/cursos/admin/cardiologia/material")
     assert policy_for("GET", "/api/auth/me/foto") is None
+    assert not is_course_upload("GET", "/api/cursos/admin/cardiologia/material")
