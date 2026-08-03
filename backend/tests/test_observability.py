@@ -79,14 +79,19 @@ def test_request_id_invalido_e_substituido_por_identificador_opaco():
     assert _last_event(stream)["request_id"] == generated
 
 
-def test_excecao_registra_tipo_e_stack_sem_mensagem_sensivel():
+def test_excecao_devolve_request_id_e_nao_expoe_mensagem_sensivel():
     stream = io.StringIO()
     app = _app(Route("/api/falha/{token}", _boom), stream)
 
     with TestClient(app, raise_server_exceptions=False) as client:
-        response = client.get("/api/falha/token-secreto")
+        response = client.get(
+            "/api/falha/token-secreto",
+            headers={"X-Request-ID": "erro-test-123"},
+        )
 
     assert response.status_code == 500
+    assert response.headers["X-Request-ID"] == "erro-test-123"
+    assert response.json() == {"detail": "Erro interno. Informe o X-Request-ID ao suporte."}
     event = _last_event(stream)
     assert event["event"] == "http_request_failed"
     assert event["error_type"] == "RuntimeError"
