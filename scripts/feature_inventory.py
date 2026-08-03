@@ -119,13 +119,26 @@ def main() -> int:
     )
     assert_exact("Routers FastAPI", backend_routers, EXPECTED_BACKEND_ROUTERS)
 
-    imported_pages = set(re.findall(r'import\s+\w+\s+from\s+"\./pages/([^"]+)"', app_source))
+    eager_pages = set(
+        re.findall(r'import\s+\w+\s+from\s+"\./pages/([^"]+)"', app_source)
+    )
+    lazy_pages = set(
+        re.findall(
+            r'lazy\s*\(\s*\(\)\s*=>\s*import\s*\(\s*"\./pages/([^"]+)"\s*\)\s*\)',
+            app_source,
+        )
+    )
+    imported_pages = eager_pages | lazy_pages
     missing_pages = sorted(
         page for page in imported_pages
         if not (ROOT / "frontend/src/pages" / f"{page}.tsx").is_file()
     )
     if missing_pages:
         raise AssertionError(f"Páginas importadas ausentes: {missing_pages}")
+    if len(imported_pages) < 48:
+        raise AssertionError(
+            f"Apenas {len(imported_pages)} páginas registradas no App.tsx; mínimo publicado: 48"
+        )
 
     missing_support = sorted(path for path in EXPECTED_SUPPORT_FILES if not (ROOT / path).is_file())
     if missing_support:
