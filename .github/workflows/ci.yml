@@ -74,6 +74,27 @@ jobs:
         working-directory: backend
         run: python -m pip install --upgrade pip && pip install -r requirements-dev.txt
 
+      - name: Create PostgreSQL extensions required by the baseline
+        working-directory: backend
+        run: |
+          python - <<'PY'
+          import os
+          import psycopg
+
+          connection = psycopg.connect(
+              host=os.environ["POSTGRES_HOST"],
+              port=os.environ["POSTGRES_PORT"],
+              user=os.environ["POSTGRES_USER"],
+              password=os.environ["POSTGRES_PASSWORD"],
+              dbname=os.environ["POSTGRES_DB"],
+              autocommit=True,
+          )
+          with connection:
+              with connection.cursor() as cursor:
+                  for extension in ("vector", "pg_trgm", "unaccent"):
+                      cursor.execute(f'CREATE EXTENSION IF NOT EXISTS "{extension}"')
+          PY
+
       - name: Apply migrations
         working-directory: backend
         run: alembic upgrade head
