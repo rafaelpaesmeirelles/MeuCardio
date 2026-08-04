@@ -24,6 +24,33 @@ falha() {
 }
 trap falha ERR
 
+validar_checksum_vinculado() {
+  local arquivo="$1"
+  local sidecar="$2"
+  local hash_esperado nome_registrado hash_calculado
+
+  if [[ ! -f "$sidecar" ]]; then
+    echo "Checksum obrigatório não encontrado: $sidecar" >&2
+    return 1
+  fi
+
+  # O sidecar deve conter exatamente a referência ao dump selecionado. Isso
+  # impede que um .sha256 copiado de outro backup valide um arquivo diferente.
+  read -r hash_esperado nome_registrado < "$sidecar" || true
+  nome_registrado="${nome_registrado#\*}"
+  if [[ ! "$hash_esperado" =~ ^[0-9a-fA-F]{64}$ ]] || \
+     [[ "$nome_registrado" != "$(basename "$arquivo")" ]]; then
+    echo "Checksum não corresponde ao dump selecionado: $sidecar" >&2
+    return 1
+  fi
+
+  hash_calculado="$(sha256sum "$arquivo" | awk '{print $1}')"
+  if [[ "${hash_calculado,,}" != "${hash_esperado,,}" ]]; then
+    echo "Checksum inválido para o dump selecionado: $arquivo" >&2
+    return 1
+  fi
+}
+
 if [[ -z "$ARQUIVO" || ! -f "$ARQUIVO" ]]; then
   echo "Uso: $0 <backup.dump|backup.sql.gz>"
   echo
@@ -42,6 +69,13 @@ source .env
 : "${POSTGRES_USER:?Defina POSTGRES_USER no .env.}"
 : "${POSTGRES_DB:?Defina POSTGRES_DB no .env.}"
 
+for comando in docker sha256sum awk; do
+  if ! command -v "$comando" >/dev/null 2>&1; then
+    echo "Comando obrigatório ausente no host: $comando" >&2
+    exit 1
+  fi
+done
+
 ARQUIVO="$(cd "$(dirname "$ARQUIVO")" && pwd)/$(basename "$ARQUIVO")"
 CHECKSUM="${ARQUIVO}.sha256"
 FORMATO=""
@@ -49,22 +83,12 @@ FORMATO=""
 case "$ARQUIVO" in
   *.dump)
     FORMATO="custom"
-    if [[ ! -f "$CHECKSUM" ]]; then
-      echo "Checksum obrigatório não encontrado: $CHECKSUM" >&2
-      exit 1
-    fi
-    (
-      cd "$(dirname "$ARQUIVO")"
-      sha256sum -c "$(basename "$CHECKSUM")"
-    )
+    validar_checksum_vinculado "$ARQUIVO" "$CHECKSUM"
     ;;
   *.sql.gz)
     FORMATO="sql-gzip-legado"
     if [[ -f "$CHECKSUM" ]]; then
-      (
-        cd "$(dirname "$ARQUIVO")"
-        sha256sum -c "$(basename "$CHECKSUM")"
-      )
+      validar_checksum_vinculado "$ARQUIVO" "$CHECKSUM"
     fi
     gzip -t "$ARQUIVO"
     ;;
@@ -104,8 +128,15 @@ read -r -p "Digite o nome do banco ($POSTGRES_DB) para confirmar novamente: " ba
 [[ "$banco_confirmado" == "$POSTGRES_DB" ]] || { echo "Cancelado: banco não confirmado."; exit 1; }
 
 RESTAURACAO_INICIADA=1
-echo "Parando o backend para evitar escrita durante a restauração..."
-"${COMPOSE[@]}" stop backend >/dev/null 2>&1 || true
+BACKEND_CONTAINER="$("${COMPOSE[@]}" ps -a -q backend 2>/dev/null || true)"
+if [[ -n "$BACKEND_CONTAINER" ]]; then
+  echo "Parando o backend para evitar escrita durante a restauração..."
+  # Uma falha aqui é bloqueante. Não se pode apagar o banco enquanto o backend
+  # ainda pode reconectar, executar migrations ou gravar durante o pg_restore.
+  "${COMPOSE[@]}" stop backend
+else
+  echo "Backend não existe neste projeto Compose; não há processo da aplicação para parar."
+fi
 
 echo "Recriando o banco vazio..."
 "${COMPOSE[@]}" exec -T db dropdb \
