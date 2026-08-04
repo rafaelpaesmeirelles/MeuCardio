@@ -6,9 +6,10 @@ Este documento marca o SHA submetido à certificação integral antes da integra
 
 ## Escopo certificado
 
-- CRBM e catálogo profissional ampliado;
+- CRBM e catálogo profissional ampliado no autocadastro, Minha Conta e criação administrativa;
+- o formulário administrativo envia e persiste profissão, conselho, registro, UF, especialidade, tratamento, local de trabalho e opção de complementação no primeiro acesso;
 - forma de tratamento escolhida pelo profissional;
-- local de trabalho opcional nos documentos;
+- local de trabalho opcional nos documentos, sempre respeitando o consentimento de inclusão;
 - contraste automático de logo claro/transparente;
 - identidade e logo em receitas, atestados, laudos, documentos públicos, materiais ao paciente e exportações em modo apresentação;
 - históricos de receitas, laudos, atestados e documentos agrupados por paciente, pesquisáveis por nome parcial e filtráveis por tipo;
