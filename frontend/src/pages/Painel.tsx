@@ -7,13 +7,7 @@ import { useAuth } from "../lib/auth";
 type Tema = { theme: string; count: number };
 type Paciente = { id: number };
 type ListaComTotal = { total?: number };
-type Catalogo = {
-  total: number;
-  expected_minimum?: number;
-  physical_files_expected?: number;
-  integrity_ok?: boolean;
-  missing?: number;
-};
+type Catalogo = { total: number };
 
 /** Uma função do sistema no Painel.
  *  `to` ausente = função ainda não construída: vira cartão "em breve", sem link.
@@ -315,23 +309,6 @@ export default function Painel() {
         <Numero rotulo="estudos" valor={estudos} to="/estudos" />
         <Numero rotulo="no round" valor={pacientes} to="/round" />
       </div>
-
-      {usuario?.role === "admin" && catalogo?.integrity_ok === false && (
-        <section
-          className="cartao"
-          role="alert"
-          style={{ borderColor: "var(--acao)", marginBottom: "1rem" }}
-        >
-          <strong>Acervo de produção abaixo do inventário certificado</strong>
-          <p style={{ marginBottom: 0 }}>
-            O PostgreSQL retornou {catalogo.total.toLocaleString("pt-BR")} itens das 11 coleções.
-            O mínimo certificado é {(catalogo.expected_minimum ?? 4_936).toLocaleString("pt-BR")};
-            faltam {(catalogo.missing ?? 0).toLocaleString("pt-BR")} registros. O inventário também
-            preserva {(catalogo.physical_files_expected ?? 1_327).toLocaleString("pt-BR")} arquivos físicos.
-            Execute a reconciliação do corpus antes de considerar o deploy íntegro.
-          </p>
-        </section>
-      )}
 
       {/* Os modos de uso ficam fora dos grupos porque mudam a forma de usar o
           sistema inteiro. */}
