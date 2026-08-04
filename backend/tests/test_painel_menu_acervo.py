@@ -1,3 +1,4 @@
+import re
 from pathlib import Path
 
 from app.commands import publish_preserved_content as command
@@ -99,6 +100,6 @@ def test_ordem_do_menu_alerta_e_deploy():
     assert "Acervo de produção abaixo do inventário certificado" not in painel
     assert 'className="emerg-atalho"' in shell
     assert ".emerg-atalho {" not in shell_css
-    assert emergencia_css.count(".emerg-atalho {") == 1
+    assert len(re.findall(r"(?m)^\.emerg-atalho\s*\{", emergencia_css)) == 1
     assert "padding: 0.8rem 1.15rem" in emergencia_css
     assert "app.commands.publish_preserved_content" in deploy
