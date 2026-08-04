@@ -120,3 +120,20 @@ def test_existe_uma_só_regra_do_atalho_explícito_de_emergência():
     assert emergencia.count(".emerg-atalho {") == 1
     assert "padding: 0.8rem 1.15rem" in emergencia
     assert "border-radius: 999px" in emergencia
+
+
+def test_apresentação_comercial_escolhida_é_o_texto_prescrito_e_impresso():
+    frontend = (ROOT / "frontend/src/pages/Receituario.tsx").read_text(encoding="utf-8")
+    backend = (ROOT / "backend/app/api/receituario.py").read_text(encoding="utf-8")
+
+    # Ao selecionar, o item deve assumir exatamente o produto e a apresentação
+    # escolhidos, em vez de manter a descrição genérica ou uma dose anterior.
+    assert "descricao: ap.produto" in frontend
+    assert "apresentacao: ap.apresentacao" in frontend
+    assert "apresentacao: it.apresentacao || ap.apresentacao" not in frontend
+
+    # Defesa no backend para clientes antigos: a marca explícita prevalece no
+    # texto da prescrição, mas a substância genérica continua sendo usada apenas
+    # para classificação regulatória do tipo de receituário.
+    assert "i.brand_name or i.descricao" in backend
+    assert "substancia = d.generic_name" in backend
