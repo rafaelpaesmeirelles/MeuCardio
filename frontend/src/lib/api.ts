@@ -3,11 +3,8 @@ const LEGACY_TOKEN_KEY = "meucardio.token";
 
 /**
  * Compatibilidade temporária para componentes antigos que só perguntam se há
- * uma sessão antes de abrir recursos auxiliares (notadamente o WebSocket do
- * chat). O valor não é credencial e nunca é enviado como Authorization.
- *
- * O JWT real fica exclusivamente no cookie HttpOnly. A remoção abaixo limpa
- * credenciais persistidas por versões anteriores assim que o novo bundle abre.
+ * uma sessão antes de abrir recursos auxiliares. O JWT real fica exclusivamente
+ * no cookie HttpOnly; este marcador nunca é enviado como Authorization.
  */
 function removerTokenLegado() {
   if (typeof window !== "undefined") {
@@ -28,10 +25,62 @@ export class ApiError extends Error {
   }
 }
 
+type DetalheEstruturado = {
+  erro?: unknown;
+  campos?: unknown;
+  bloqueios?: unknown;
+  itens?: unknown;
+};
+
+function textoPermitido(valor: unknown): string | null {
+  if (typeof valor !== "string") return null;
+  const texto = valor.trim();
+  return texto || null;
+}
+
+function mensagensDeLista(valor: unknown): string[] {
+  if (!Array.isArray(valor)) return [];
+  return valor.flatMap((entrada) => {
+    const direta = textoPermitido(entrada);
+    if (direta) return [direta];
+    if (!entrada || typeof entrada !== "object") return [];
+
+    const objeto = entrada as Record<string, unknown>;
+    const mensagem =
+      textoPermitido(objeto.erro) ??
+      textoPermitido(objeto.mensagem) ??
+      textoPermitido(objeto.motivo);
+    const campo = textoPermitido(objeto.campo);
+    const indice = typeof objeto.indice === "number" ? `Item ${objeto.indice}` : null;
+    if (mensagem && (campo || indice)) return [`${campo ?? indice}: ${mensagem}`];
+    return mensagem ? [mensagem] : campo ? [`Verifique: ${campo}`] : [];
+  });
+}
+
+function mensagemEstruturada(detail: DetalheEstruturado, fallback: string): string {
+  const partes: string[] = [];
+  const erro = textoPermitido(detail.erro);
+  if (erro) partes.push(erro);
+
+  const campos = mensagensDeLista(detail.campos);
+  if (campos.length) partes.push(`Campos pendentes: ${campos.join(", ")}.`);
+
+  partes.push(...mensagensDeLista(detail.bloqueios));
+  partes.push(...mensagensDeLista(detail.itens));
+
+  const unicas = [...new Set(partes.map((parte) => parte.trim()).filter(Boolean))];
+  return unicas.length ? unicas.join(" ") : fallback;
+}
+
 async function erroDaResposta(res: Response, fallback: string): Promise<ApiError> {
   const payload = await res.json().catch(() => null);
   const detail = payload?.detail;
-  const message = typeof detail === "string" ? detail : fallback;
+  let message = fallback;
+  if (typeof detail === "string" && detail.trim()) {
+    message = detail.trim();
+  } else if (detail && typeof detail === "object") {
+    message = mensagemEstruturada(detail as DetalheEstruturado, fallback);
+  }
   return new ApiError(res.status, message);
 }
 
