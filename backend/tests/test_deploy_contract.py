@@ -7,6 +7,8 @@ import subprocess
 REPO_ROOT = Path(__file__).resolve().parents[2]
 DEPLOY = REPO_ROOT / "deploy.sh"
 BACKUP = REPO_ROOT / "infra/backup/backup.sh"
+COMPOSE = REPO_ROOT / "docker-compose.prod.yml"
+HEALTH = REPO_ROOT / "backend/app/api/health.py"
 
 
 def _fonte(caminho: Path) -> str:
@@ -57,6 +59,19 @@ def test_deploy_faz_backup_e_exige_https_publico():
     assert 'if [[ "$PUBLICO_PRONTO" != "1" ]]' in fonte
     assert "--build --remove-orphans" in fonte
     assert "git rev-parse --verify HEAD" in fonte
+
+
+def test_deploy_injeta_e_confirma_commit_publico():
+    deploy = _fonte(DEPLOY)
+    compose = _fonte(COMPOSE)
+    health = _fonte(HEALTH)
+
+    assert 'export DEPLOY_COMMIT="$COMMIT_ATUAL"' in deploy
+    assert 'https://${DOMAIN}/api/version' in deploy
+    assert '"commit\":\"${COMMIT_ATUAL}' in deploy
+    assert "DEPLOY_COMMIT: ${DEPLOY_COMMIT:-unknown}" in compose
+    assert '@router.get("/version")' in health
+    assert 'os.getenv("DEPLOY_COMMIT", "unknown")' in health
 
 
 def test_backup_e_portavel_atomico_e_verificado():
