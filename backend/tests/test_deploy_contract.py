@@ -42,6 +42,23 @@ def test_deploy_exige_readiness_antes_de_migrar_e_reconciliar():
     )
 
 
+def test_deploy_diagnostica_falhas_inesperadas_apos_subir_servicos():
+    fonte = _fonte(DEPLOY)
+
+    assert "SERVICOS_INICIADOS=0" in fonte
+    assert "diagnosticar_erro()" in fonte
+    assert "trap diagnosticar_erro ERR" in fonte
+    assert "trap - ERR" in fonte
+    assert 'if [[ "$SERVICOS_INICIADOS" == "1" ]]' in fonte
+    assert 'SERVICOS_INICIADOS=1' in fonte
+    assert fonte.index('SERVICOS_INICIADOS=1') < fonte.index(
+        '"${COMPOSE[@]}" up -d --build --remove-orphans'
+    )
+    assert fonte.index("trap diagnosticar_erro ERR") < fonte.index(
+        "python -m app.commands.reconcile_content --publish-reviewed"
+    )
+
+
 def test_deploy_nao_volta_ao_importador_parcial():
     fonte = _fonte(DEPLOY)
 
