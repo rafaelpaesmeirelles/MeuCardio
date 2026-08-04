@@ -78,6 +78,10 @@ export default function Shell() {
       ]
     : [PAINEL, ...NAV_BASE, INDICADORES, CONTA];
 
+  if (usuario?.role === "admin") {
+    nav.splice(nav.length - 1, 0, { to: "/fila-telediagnostico", rotulo: "Fila de telediagnóstico — desativada", curto: "Fila" });
+  }
+
   return (
     <div>
       <header className="topo">
