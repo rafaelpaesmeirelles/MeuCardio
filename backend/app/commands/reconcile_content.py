@@ -35,7 +35,23 @@ from app.models.study_track import StudyTrack
 from app.services.importer import import_directory
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[3]
-BLOCKING_DIAGNOSTIC_KEYS = ("recusadas", "recusados", "sem_arquivo")
+# Os carregadores foram escritos em épocas diferentes e usam nomes distintos
+# para o mesmo evento operacional: um arquivo/item do checkout não entrou no
+# banco. Em deploy, qualquer ocorrência deve bloquear a certificação, mesmo que
+# os registros históricos ainda façam o banco superar o baseline numérico.
+BLOCKING_DIAGNOSTIC_KEYS = frozenset({
+    "avisos",
+    "duplicados_ignorados",
+    "erros",
+    "falhas",
+    "ignoradas",
+    "ignorados",
+    "puladas",
+    "pulados",
+    "recusadas",
+    "recusados",
+    "sem_arquivo",
+})
 
 FRONTS: dict[str, dict[str, Any]] = {
     "documentos": {
@@ -127,12 +143,33 @@ def _ensure_source(front: str, path: str) -> Path:
     return source
 
 
+def _collect_blocking_diagnostics(value: Any, path: str = "") -> dict[str, Any]:
+    """Coleta diagnósticos bloqueantes inclusive quando aninhados.
+
+    Alguns carregadores devolvem listas no topo; outros agrupam o resultado por
+    arquivo ou subtipo. A travessia recursiva evita que uma mudança de formato
+    volte a permitir itens ignorados silenciosamente.
+    """
+    diagnostics: dict[str, Any] = {}
+    if isinstance(value, dict):
+        for key, item in value.items():
+            current = f"{path}.{key}" if path else str(key)
+            if key in BLOCKING_DIAGNOSTIC_KEYS:
+                if item:
+                    diagnostics[current] = item
+                continue
+            if isinstance(item, (dict, list, tuple)):
+                diagnostics.update(_collect_blocking_diagnostics(item, current))
+    elif isinstance(value, (list, tuple)):
+        for index, item in enumerate(value):
+            if isinstance(item, (dict, list, tuple)):
+                current = f"{path}[{index}]" if path else f"[{index}]"
+                diagnostics.update(_collect_blocking_diagnostics(item, current))
+    return diagnostics
+
+
 def _assert_no_rejections(front: str, result: dict[str, Any]) -> None:
-    diagnostics = {
-        key: result[key]
-        for key in BLOCKING_DIAGNOSTIC_KEYS
-        if result.get(key)
-    }
+    diagnostics = _collect_blocking_diagnostics(result)
     if diagnostics:
         raise RuntimeError(
             f"Frente {front} recusou conteúdo: "
@@ -155,7 +192,9 @@ def _load_controlled_substances(db: Session) -> dict:
     source = _ensure_source("controlados", "/controlados/listas-344-98.json")
     from app.services.carregar_controlados import carregar
 
-    return carregar(db, str(source))
+    result = carregar(db, str(source))
+    _assert_no_rejections("controlados", result)
+    return result
 
 
 def _publish_reviewed(db: Session) -> dict[str, int]:
