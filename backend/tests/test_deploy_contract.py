@@ -53,7 +53,7 @@ def test_deploy_nao_volta_ao_importador_parcial():
 def test_deploy_faz_backup_e_exige_https_publico():
     fonte = _fonte(DEPLOY)
 
-    assert 'PROJETO="$PWD" ./infra/backup/backup.sh' in fonte
+    assert 'PROJETO="$PWD" bash ./infra/backup/backup.sh' in fonte
     assert 'https://${DOMAIN}/api/ready' in fonte
     assert "PUBLICO_PRONTO=0" in fonte
     assert 'if [[ "$PUBLICO_PRONTO" != "1" ]]' in fonte
