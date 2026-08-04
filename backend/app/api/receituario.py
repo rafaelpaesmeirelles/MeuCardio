@@ -14,7 +14,7 @@ O médico **não escolhe** o tipo de receituário. Ele revisa a classificação 
 discordar, corrige com motivo registrado — que é o que permite descobrir depois
 que uma regra está errada.
 """
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Query
 from fastapi.responses import Response
 from datetime import datetime, timedelta, timezone
 from pydantic import BaseModel, Field
@@ -37,6 +37,7 @@ from app.services.classificacao_receituario import (
     ItemPrescrito, Regra, Substancia, classificar, normalizar,
 )
 from app.services.notificar import tentar_enviar_email
+from app.services.professional_profile import document_identity, professional_name
 
 router = APIRouter(prefix="/api/receituario", tags=["receituário"])
 
@@ -243,44 +244,41 @@ def criar(dados: ReceituarioIn, db: Session = Depends(get_db), user=Depends(curr
 
 
 @router.get("")
-def listar(db: Session = Depends(get_db), user=Depends(current_user)):
-    """Arquivo de receituários do médico (Tarefa 4 — pedido do Rafael de
-    02/08/2026): tudo que ele já criou, mais recente primeiro, pra reabrir
-    (`GET /{id}`) ou usar como base de uma receita nova.
-
-    Decifra o nome do destinatário de cada uma — é o que torna a lista
-    reconhecível ("a receita da Dona Maria semana passada"), não só uma
-    lista de datas. Mas audita em LOTE, uma linha por chamada desta rota,
-    não uma por paciente decifrado: isto é montar uma tela de listagem, não
-    uma decisão clínica sobre um paciente específico — N inserts de auditoria
-    por carregamento de página seria desproporcional ao padrão que `obter()`
-    já usa (uma leitura direcionada = uma linha de auditoria).
-    """
+def listar(
+    nome: str | None = Query(None, max_length=120),
+    tipo: str | None = Query(None, max_length=20),
+    db: Session = Depends(get_db), user=Depends(current_user),
+):
     prescricoes = (
         db.query(Prescription)
         .filter(Prescription.created_by == user.id)
         .order_by(Prescription.created_at.desc())
-        .limit(200)
+        .limit(500)
         .all()
     )
+    busca = (nome or "").strip().casefold()
     tipos = _tipos(db)
     resultado = []
     for presc in prescricoes:
         dest = db.query(PrescriptionRecipient).filter(
             PrescriptionRecipient.prescription_id == presc.id).first()
-        nome = cofre.decifrar_campo(dest.nome_cifrado, presc.id) if dest else None
+        patient_name = cofre.decifrar_campo(dest.nome_cifrado, presc.id) if dest else None
+        if busca and busca not in (patient_name or "").casefold():
+            continue
         docs = db.query(PrescriptionDocument).filter(
             PrescriptionDocument.prescription_id == presc.id).all()
+        if tipo and not any(d.tipo_codigo == tipo for d in docs):
+            continue
         resultado.append({
-            "prescricao_id": presc.id, "criado_em": presc.created_at, "paciente_nome": nome,
+            "prescricao_id": presc.id, "criado_em": presc.created_at,
+            "paciente_nome": patient_name,
             "documentos": [{"tipo": d.tipo_codigo, "tipo_nome": tipos[d.tipo_codigo].nome
                             if d.tipo_codigo in tipos else None, "status": d.status}
                            for d in docs],
         })
-
     if resultado:
         db.add(AuditLog(user_id=user.id, action="listar_receituarios", entity="prescription",
-                        detail={"count": len(resultado)}))
+                        detail={"count": len(resultado), "filtro_nome": bool(nome), "filtro_tipo": tipo}))
         db.commit()
     return resultado
 
@@ -442,10 +440,7 @@ def emitir(documento_id: int, dados: EmitirIn = EmitirIn(), db: Session = Depend
             destinatario["endereco"] = cofre.decifrar_campo(dest.endereco_cifrado, presc.id)
 
     endereco_medico = resolver_endereco(user, dados.endereco)
-    medico = {"full_name": user.full_name, "council_name": user.council_name,
-              "council_number": user.council_number, "council_state": user.council_state,
-              "rqe": user.rqe, "specialty": user.specialty,
-              "document_logo_url": user.document_logo_url}
+    medico = document_identity(user)
     data_emissao = datetime.now(timezone.utc)
     pdf_visual = receituario_comum(
         destinatario=destinatario, itens=doc.itens, observacoes=presc.notes or "",
@@ -510,7 +505,7 @@ def enviar_email(documento_id: int, dados: EnviarEmailIn, db: Session = Depends(
         destinatario=dados.email,
         assunto="Corvia — documento do seu médico disponível",
         corpo=(
-            f"Dr(a). {user.full_name} disponibilizou um documento para você na Corvia.\n\n"
+            f"{professional_name(user)} disponibilizou um documento para você na Corvia.\n\n"
             f"Acesse pelo link abaixo (válido por {VALIDADE_LINK_DIAS} dias): {url}\n\n"
             f"Este link é pessoal — não compartilhe."
         ),

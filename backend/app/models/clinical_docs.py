@@ -67,6 +67,8 @@ class GeneratedDocument(Base):
     # própria aqui porque este documento já não tem paciente identificável
     # em nenhum outro campo (`patient_id` aponta pro Patient anonimizado).
     destinatario_email_cifrado: Mapped[bytes | None] = mapped_column(LargeBinary, nullable=True)
+    # Nome do paciente/destinatário para organização do arquivo, cifrado em repouso.
+    patient_name_cifrado: Mapped[bytes | None] = mapped_column(LargeBinary, nullable=True)
     # Acrescentado em 30/07/2026 (Tarefa 29 — letterhead). Mesma lógica do
     # campo homônimo em PrescriptionDocument: gravado na geração, não
     # recalculado depois, para o PDF sair idêntico toda vez que for reaberto.

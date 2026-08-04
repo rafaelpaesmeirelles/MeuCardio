@@ -302,56 +302,58 @@ function HistoricoReceituario({ onAbrir, onRecriar }: {
   const [itens, setItens] = useState<HistoricoItem[] | null>(null);
   const [erro, setErro] = useState("");
   const [carregandoId, setCarregandoId] = useState<number | null>(null);
+  const [nome, setNome] = useState("");
+  const [tipo, setTipo] = useState("");
 
   useEffect(() => {
-    api.get<HistoricoItem[]>("/receituario")
+    setItens(null);
+    const params = new URLSearchParams();
+    if (nome.trim()) params.set("nome", nome.trim());
+    if (tipo) params.set("tipo", tipo);
+    const suffix = params.toString() ? `?${params}` : "";
+    api.get<HistoricoItem[]>(`/receituario${suffix}`)
       .then(setItens)
       .catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível carregar o histórico."));
-  }, []);
+  }, [nome, tipo]);
 
   async function abrir(id: number, acao: (d: PrescricaoDetalhe) => void) {
-    setCarregandoId(id);
-    setErro("");
-    try {
-      acao(await api.get<PrescricaoDetalhe>(`/receituario/${id}`));
-    } catch (e) {
-      setErro(e instanceof ApiError ? e.message : "Não foi possível abrir esta receita.");
-    } finally {
-      setCarregandoId(null);
-    }
+    setCarregandoId(id); setErro("");
+    try { acao(await api.get<PrescricaoDetalhe>(`/receituario/${id}`)); }
+    catch (e) { setErro(e instanceof ApiError ? e.message : "Não foi possível abrir esta receita."); }
+    finally { setCarregandoId(null); }
   }
 
-  if (erro) return <Erro mensagem={erro} />;
-  if (!itens) return <Carregando />;
-  if (itens.length === 0) return <Vazio titulo="Nenhuma receita criada ainda" acao="Crie a primeira na aba Nova receita." />;
+  const tiposDisponiveis = Array.from(new Map((itens ?? []).flatMap((i) => i.documentos).map((d) => [d.tipo, d.tipo_nome ?? d.tipo])).entries());
+  const grupos = new Map<string, HistoricoItem[]>();
+  for (const item of itens ?? []) {
+    const chave = item.paciente_nome ?? "Paciente não informado";
+    grupos.set(chave, [...(grupos.get(chave) ?? []), item]);
+  }
 
   return (
-    <div style={{ maxWidth: "72ch" }}>
-      {itens.map((it) => (
-        <div key={it.prescricao_id} className="cartao" style={{ marginBottom: "0.6rem" }}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-            <strong>{it.paciente_nome ?? "Paciente sem nome"}</strong>
-            <span className="eyebrow" style={{ margin: 0 }}>{new Date(it.criado_em).toLocaleString("pt-BR")}</span>
-          </div>
-          <p style={{ fontSize: "0.86rem", margin: "0.3rem 0 0", color: "var(--texto-secundario)" }}>
-            {it.documentos.map((d, i) => (
-              <span key={i}>
-                {i > 0 && " · "}{d.tipo_nome ?? d.tipo} ({STATUS_RÓTULO[d.status] ?? d.status})
-              </span>
+    <div style={{ maxWidth: "76ch" }}>
+      <div className="grade grade--2" style={{ marginBottom: "0.8rem" }}>
+        <div><label>Procurar pelo nome do paciente</label><input value={nome} onChange={(e) => setNome(e.target.value)} placeholder="Nome completo ou parte do nome" /></div>
+        <div><label>Tipo de receita</label><select value={tipo} onChange={(e) => setTipo(e.target.value)}><option value="">Todos</option>{tiposDisponiveis.map(([codigo, rotulo]) => <option key={codigo} value={codigo}>{rotulo}</option>)}</select></div>
+      </div>
+      {erro && <Erro mensagem={erro} />}
+      {!itens ? <Carregando /> : itens.length === 0 ? <Vazio titulo="Nenhuma receita encontrada" /> : (
+        [...grupos.entries()].sort(([a], [b]) => a.localeCompare(b, "pt-BR")).map(([paciente, receitas]) => (
+          <section key={paciente} style={{ marginBottom: "1rem" }}>
+            <h3 style={{ marginBottom: "0.45rem" }}>{paciente}</h3>
+            {receitas.map((it) => (
+              <div key={it.prescricao_id} className="cartao" style={{ marginBottom: "0.5rem" }}>
+                <span className="eyebrow">{new Date(it.criado_em).toLocaleString("pt-BR")}</span>
+                <p style={{ fontSize: "0.86rem", margin: "0.3rem 0", color: "var(--texto-secundario)" }}>{it.documentos.map((d, i) => <span key={i}>{i > 0 && " · "}{d.tipo_nome ?? d.tipo} ({STATUS_RÓTULO[d.status] ?? d.status})</span>)}</p>
+                <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                  <button className="botao botao--secundario" disabled={carregandoId === it.prescricao_id} onClick={() => abrir(it.prescricao_id, onAbrir)}>{carregandoId === it.prescricao_id ? "Abrindo…" : "Abrir"}</button>
+                  <button className="botao botao--secundario" disabled={carregandoId === it.prescricao_id} onClick={() => abrir(it.prescricao_id, onRecriar)}>Recriar baseado nesta</button>
+                </div>
+              </div>
             ))}
-          </p>
-          <div style={{ display: "flex", gap: 8, marginTop: "0.5rem" }}>
-            <button className="botao botao--secundario" disabled={carregandoId === it.prescricao_id}
-                    onClick={() => abrir(it.prescricao_id, onAbrir)}>
-              {carregandoId === it.prescricao_id ? "Abrindo…" : "Abrir"}
-            </button>
-            <button className="botao botao--secundario" disabled={carregandoId === it.prescricao_id}
-                    onClick={() => abrir(it.prescricao_id, onRecriar)}>
-              Recriar baseado nesta
-            </button>
-          </div>
-        </div>
-      ))}
+          </section>
+        ))
+      )}
     </div>
   );
 }

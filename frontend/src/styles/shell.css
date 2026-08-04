@@ -767,3 +767,19 @@
   margin: 0 0 1.4rem;
 }
 .boasvindas__cartao .botao { min-width: 200px; }
+
+
+/* Contraste automático da logo profissional em documentos */
+.logo-profissional-preview,
+.doc-cabecalho__logo-pessoal-placa {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 7px;
+  background: #fff;
+  border: 1px solid var(--borda);
+}
+.logo-profissional-preview--escuro,
+.doc-cabecalho__logo-pessoal-placa--escura { background: var(--primaria); }
+.doc-cabecalho__logo-pessoal { max-width: 96px; max-height: 64px; object-fit: contain; }

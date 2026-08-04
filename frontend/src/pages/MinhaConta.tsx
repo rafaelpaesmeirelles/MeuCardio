@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { api, ApiError, type Usuario } from "../lib/api";
 import { useAuth } from "../lib/auth";
 
-const CONSELHOS = ["CRM", "COREN", "CRF", "CRBM", "CREFITO", "CRN", "CRP", "CRO", "Outro"];
+const CONSELHOS = ["CRM", "CRO", "CRBM", "COREN", "CRF", "CREFITO", "CRN", "CRP", "CREF", "CRESS", "Outro"];
+const TITULOS = ["", "Sr.", "Sra.", "Dr.", "Dra.", "Prof.", "Profa.", "Prof. Dr.", "Profa. Dra.", "Me.", "Ma.", "Esp."];
 const UFS = [
   "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG",
   "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO",
@@ -101,6 +102,12 @@ function DadosPessoais({ perfil, aoSalvar }: { perfil: Usuario; aoSalvar: (u: Us
     council_state: perfil.council_state ?? "",
     specialty: perfil.specialty ?? "",
     rqe: perfil.rqe ?? "",
+    professional_title: perfil.professional_title ?? "",
+    workplace_name: perfil.workplace_name ?? "",
+    workplace_department: perfil.workplace_department ?? "",
+    workplace_role: perfil.workplace_role ?? "",
+    workplace_notes: perfil.workplace_notes ?? "",
+    include_workplace_on_documents: perfil.include_workplace_on_documents ?? false,
   });
   const [residencial, setResidencial] = useState<CamposEndereco>({
     street: perfil.home_street ?? "", number: perfil.home_number ?? "",
@@ -117,7 +124,7 @@ function DadosPessoais({ perfil, aoSalvar }: { perfil: Usuario; aoSalvar: (u: Us
   const [erro, setErro] = useState("");
   const [ok, setOk] = useState(false);
 
-  function set<K extends keyof typeof dados>(campo: K, valor: string) {
+  function set<K extends keyof typeof dados>(campo: K, valor: (typeof dados)[K]) {
     setDados((d) => ({ ...d, [campo]: valor }));
     setOk(false);
   }
@@ -175,6 +182,11 @@ function DadosPessoais({ perfil, aoSalvar }: { perfil: Usuario; aoSalvar: (u: Us
         </p>
       )}
 
+      <label htmlFor="conta-tratamento" style={{ marginTop: "0.8rem" }}>Como deseja ser chamado(a)</label>
+      <select id="conta-tratamento" value={dados.professional_title} onChange={(e) => set("professional_title", e.target.value)}>
+        {TITULOS.map((t) => <option key={t || "sem"} value={t}>{t || "Sem título"}</option>)}
+      </select>
+
       <label htmlFor="conta-profissao" style={{ marginTop: "0.8rem" }}>Profissão</label>
       <input id="conta-profissao" value={dados.profession} onChange={(e) => set("profession", e.target.value)} />
 
@@ -213,6 +225,19 @@ function DadosPessoais({ perfil, aoSalvar }: { perfil: Usuario; aoSalvar: (u: Us
                  placeholder="Registro de qualificação de especialista" />
         </div>
       </div>
+
+      <h3 style={{ marginTop: "1.4rem", marginBottom: 0 }}>Local de trabalho</h3>
+      <div className="grade grade--2" style={{ marginTop: "0.6rem" }}>
+        <div><label>Instituição, clínica ou consultório</label><input value={dados.workplace_name} onChange={(e) => set("workplace_name", e.target.value)} /></div>
+        <div><label>Setor/unidade</label><input value={dados.workplace_department} onChange={(e) => set("workplace_department", e.target.value)} /></div>
+        <div><label>Cargo/função</label><input value={dados.workplace_role} onChange={(e) => set("workplace_role", e.target.value)} /></div>
+        <div><label>Outras informações</label><input value={dados.workplace_notes} onChange={(e) => set("workplace_notes", e.target.value)} /></div>
+      </div>
+      <label style={{ display: "flex", gap: 8, alignItems: "center", fontWeight: 400, marginTop: "0.6rem" }}>
+        <input type="checkbox" style={{ width: "auto" }} checked={dados.include_workplace_on_documents}
+               onChange={(e) => set("include_workplace_on_documents", e.target.checked)} />
+        Incluir essas informações em receitas, laudos, atestados e demais documentos
+      </label>
 
       <h3 style={{ marginTop: "1.4rem", marginBottom: 0 }}>Endereço residencial</h3>
       <p className="eyebrow" style={{ margin: "0.2rem 0 0" }}>
@@ -351,7 +376,9 @@ function LogoDocumento({ perfil, aoTrocar }: { perfil: Usuario; aoTrocar: (u: Us
   return (
     <div className="cartao" style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
       {perfil.document_logo_url ? (
-        <img src={perfil.document_logo_url} alt="Sua logo" style={{ maxWidth: 96, maxHeight: 64 }} />
+        <span className={`logo-profissional-preview ${perfil.document_logo_dark_background ? "logo-profissional-preview--escuro" : ""}`}>
+          <img src={perfil.document_logo_url} alt="Sua logo" style={{ maxWidth: 96, maxHeight: 64 }} />
+        </span>
       ) : (
         <div style={{ width: 96, height: 64, display: "flex", alignItems: "center", justifyContent: "center",
                       border: "1px dashed var(--linha)", borderRadius: 6, fontSize: "0.75rem", color: "var(--texto-secundario)" }}>
@@ -363,7 +390,7 @@ function LogoDocumento({ perfil, aoTrocar }: { perfil: Usuario; aoTrocar: (u: Us
         <h2 style={{ margin: "0 0 0.2rem" }}>Logo pessoal ou do consultório</h2>
         <p style={{ margin: 0, fontSize: "0.82rem", color: "var(--texto-secundario)" }}>
           Opcional — aparece junto da logo da Corvia nas receitas e documentos que você emitir.
-          JPEG, PNG ou WEBP, até 3 MB.
+          JPEG, PNG ou WEBP, até 3 MB. O sistema detecta logos claras ou transparentes e aplica automaticamente um fundo de contraste nos documentos.
         </p>
         {erro && <p role="alert" style={{ color: "var(--alerta)", fontSize: "0.84rem" }}>{erro}</p>}
 

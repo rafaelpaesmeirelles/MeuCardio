@@ -1,7 +1,7 @@
 import re
 from datetime import datetime, timedelta, timezone
 
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Query
 from fastapi.responses import Response
 from pydantic import BaseModel, Field
 from sqlalchemy.orm import Session
@@ -16,6 +16,7 @@ from app.models.round import Patient
 from app.services import cofre
 from app.services.assinatura import emissao as assinatura_emissao
 from app.services.notificar import tentar_enviar_email
+from app.services.professional_profile import document_identity, professional_name
 
 router = APIRouter(prefix="/api/document-templates", tags=["documentos"])
 
@@ -69,6 +70,7 @@ class GerarDocumentoIn(BaseModel):
     template_id: int
     patient_id: int | None = None
     variables: dict[str, str] = {}
+    patient_name: str | None = None
     # 'residencial' | 'profissional' | None — mesma escolha do receituário
     # (Tarefa 29), gravada aqui porque o PDF é gerado sob demanda depois
     # (GET .../pdf, ou pelo link público) e precisa sair sempre igual.
@@ -112,6 +114,11 @@ def gerar_documento(dados: GerarDocumentoIn, db: Session = Depends(get_db), user
         endereco_exibido=dados.endereco, variables=dados.variables,
     )
     db.add(gerado)
+    db.flush()
+    nome_paciente = (dados.patient_name or dados.variables.get("nome_paciente") or
+                     dados.variables.get("paciente") or dados.variables.get("nome") or "").strip()
+    if nome_paciente:
+        gerado.patient_name_cifrado = cofre.cifrar_campo(nome_paciente, gerado.id)
     db.commit()
     db.refresh(gerado)
     return {
@@ -120,10 +127,8 @@ def gerar_documento(dados: GerarDocumentoIn, db: Session = Depends(get_db), user
         # `document_logo_url` — mesmo par logo pessoal + logo Corvia que o
         # PDF do backend já desenha (`pdf_documento.py`), agora também no
         # cabeçalho de impressão pelo navegador (`CabecalhoDocumento.tsx`).
-        "medico": {"full_name": user.full_name, "council_name": user.council_name,
-                   "council_number": user.council_number, "council_state": user.council_state,
-                   "rqe": user.rqe, "specialty": user.specialty,
-                   "document_logo_url": user.document_logo_url},
+        "patient_name": nome_paciente or None,
+        "medico": document_identity(user),
     }
 
 
@@ -136,18 +141,33 @@ def _obter_gerado(gid: int, db: Session, user) -> GeneratedDocument:
 
 
 @router.get("/gerados")
-def listar_gerados(db: Session = Depends(get_db), user=Depends(current_user)):
+def listar_gerados(
+    nome: str | None = Query(None, max_length=120),
+    tipo: str | None = Query(None, max_length=30),
+    db: Session = Depends(get_db), user=Depends(current_user),
+):
     rows = (
         db.query(GeneratedDocument)
         .filter(GeneratedDocument.created_by == user.id)
         .order_by(GeneratedDocument.created_at.desc())
-        .limit(200)
+        .limit(500)
         .all()
     )
-    return [
-        {"id": g.id, "title": g.title, "doc_type": g.doc_type, "created_at": g.created_at}
-        for g in rows
-    ]
+    busca = (nome or "").strip().casefold()
+    resultado = []
+    for g in rows:
+        patient_name = None
+        if g.patient_name_cifrado:
+            patient_name = cofre.decifrar_campo(g.patient_name_cifrado, g.id)
+        if busca and busca not in (patient_name or "").casefold():
+            continue
+        if tipo and g.doc_type != tipo:
+            continue
+        resultado.append({
+            "id": g.id, "title": g.title, "doc_type": g.doc_type,
+            "created_at": g.created_at, "patient_name": patient_name,
+        })
+    return resultado
 
 
 @router.get("/gerados/{gid}")
@@ -162,6 +182,7 @@ def obter_gerado(gid: int, db: Session = Depends(get_db), user=Depends(current_u
         # preenchidos, em vez de começar do zero. `variables` só existe pra
         # documento gerado depois desta tarefa; nulo pros anteriores.
         "template_id": g.template_id, "variables": g.variables,
+        "patient_name": cofre.decifrar_campo(g.patient_name_cifrado, g.id) if g.patient_name_cifrado else None,
     }
 
 
@@ -199,10 +220,7 @@ def baixar_pdf_gerado(gid: int, metodo: str = "MANUAL", db: Session = Depends(ge
     # usuário autenticado. Não existe mais leitura administrativa transversal
     # de documentos clínicos entre médicos.
     emissor = user
-    medico = {"full_name": emissor.full_name, "council_name": emissor.council_name,
-              "council_number": emissor.council_number, "council_state": emissor.council_state,
-              "rqe": emissor.rqe, "specialty": emissor.specialty,
-              "document_logo_url": emissor.document_logo_url}
+    medico = document_identity(emissor)
     titulo = {"atestado": "Atestado", "laudo": "Laudo"}.get(g.doc_type, g.title)
     # `g.created_at`, não `datetime.now()`: se esta rota for chamada mais de
     # uma vez antes de conseguir persistir (ex.: primeira tentativa recusada
@@ -255,7 +273,7 @@ def enviar_email_gerado(gid: int, dados: EnviarEmailIn, db: Session = Depends(ge
         destinatario=dados.email,
         assunto="Corvia — documento do seu médico disponível",
         corpo=(
-            f"Dr(a). {user.full_name} disponibilizou um documento para você na Corvia.\n\n"
+            f"{professional_name(user)} disponibilizou um documento para você na Corvia.\n\n"
             f"Acesse pelo link abaixo (válido por {VALIDADE_LINK_DIAS} dias): {url}\n\n"
             f"Este link é pessoal — não compartilhe."
         ),

@@ -3,7 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { api, ApiError } from "../lib/api";
 import Credito from "../components/Credito";
 
-const CONSELHOS = ["CRM", "COREN", "CRF", "CRBM", "CREFITO", "CRN", "CRP", "CRO", "Outro"];
+const CONSELHOS = ["CRM", "CRO", "CRBM", "COREN", "CRF", "CREFITO", "CRN", "CRP", "CREF", "CRESS", "Outro"];
+const TITULOS = ["", "Sr.", "Sra.", "Dr.", "Dra.", "Prof.", "Profa.", "Prof. Dr.", "Profa. Dra.", "Me.", "Ma.", "Esp."];
 const UFS = [
   "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG",
   "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO",
@@ -22,13 +23,15 @@ export default function SolicitarAcesso() {
   const [dados, setDados] = useState({
     full_name: "", birth_date: "", cpf: "", profession: "Médico(a)",
     council_name: "CRM", council_number: "", council_state: "",
-    specialty: "", email: "", password: "",
+    specialty: "", professional_title: "", workplace_name: "", workplace_department: "",
+    workplace_role: "", workplace_notes: "", include_workplace_on_documents: false,
+    email: "", password: "",
   });
   const [erro, setErro] = useState("");
   const [enviando, setEnviando] = useState(false);
   const [enviado, setEnviado] = useState(false);
 
-  function set<K extends keyof typeof dados>(campo: K, valor: string) {
+  function set<K extends keyof typeof dados>(campo: K, valor: (typeof dados)[K]) {
     setDados((d) => ({ ...d, [campo]: valor }));
   }
 
@@ -104,6 +107,11 @@ export default function SolicitarAcesso() {
           </div>
         </div>
 
+        <label htmlFor="tratamento" style={{ marginTop: "0.8rem" }}>Como deseja ser chamado(a)</label>
+        <select id="tratamento" value={dados.professional_title} onChange={(e) => set("professional_title", e.target.value)}>
+          {TITULOS.map((t) => <option key={t || "sem"} value={t}>{t || "Sem título"}</option>)}
+        </select>
+
         <label htmlFor="profissao" style={{ marginTop: "0.8rem" }}>Profissão</label>
         <input id="profissao" value={dados.profession} onChange={(e) => set("profession", e.target.value)} />
 
@@ -131,6 +139,19 @@ export default function SolicitarAcesso() {
           Especialidade <span className="eyebrow">(opcional)</span>
         </label>
         <input id="especialidade" value={dados.specialty} onChange={(e) => set("specialty", e.target.value)} />
+
+        <h2 style={{ fontSize: "1rem", marginTop: "1.1rem" }}>Local de trabalho <span className="eyebrow">(opcional)</span></h2>
+        <input placeholder="Instituição, clínica ou consultório" value={dados.workplace_name} onChange={(e) => set("workplace_name", e.target.value)} />
+        <div className="grade grade--2" style={{ marginTop: "0.6rem" }}>
+          <input placeholder="Setor/unidade" value={dados.workplace_department} onChange={(e) => set("workplace_department", e.target.value)} />
+          <input placeholder="Cargo/função" value={dados.workplace_role} onChange={(e) => set("workplace_role", e.target.value)} />
+        </div>
+        <input style={{ marginTop: "0.6rem" }} placeholder="Outras informações profissionais" value={dados.workplace_notes} onChange={(e) => set("workplace_notes", e.target.value)} />
+        <label style={{ display: "flex", gap: 8, alignItems: "center", fontWeight: 400, marginTop: "0.6rem" }}>
+          <input type="checkbox" style={{ width: "auto" }} checked={dados.include_workplace_on_documents}
+                 onChange={(e) => set("include_workplace_on_documents", e.target.checked)} />
+          Incluir o local de trabalho em receitas e documentos
+        </label>
 
         <label htmlFor="email" style={{ marginTop: "0.8rem" }}>E-mail (será seu login)</label>
         <input id="email" type="email" value={dados.email} onChange={(e) => set("email", e.target.value)} />
