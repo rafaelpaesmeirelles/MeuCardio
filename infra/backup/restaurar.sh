@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 # Restaura um backup específico. USO RARO E DESTRUTIVO: valida integralmente o
 # arquivo antes de apagar o banco e mantém o backend parado se a carga falhar.
-#
-#   PROJETO=/opt/meucardio bash ./infra/backup/restaurar.sh \
-#     infra/backup/dumps/meucardio_2026-08-03_230000.dump
 set -Eeuo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -11,12 +8,19 @@ PROJETO="${PROJETO:-$(cd "$SCRIPT_DIR/../.." && pwd)}"
 COMPOSE=(docker compose -f "$PROJETO/docker-compose.prod.yml")
 ARQUIVO="${1:-}"
 RESTAURACAO_INICIADA=0
+BACKEND_RELIGADO=0
 
 falha() {
   local status=$?
   trap - ERR
   if [[ "$RESTAURACAO_INICIADA" == "1" ]]; then
-    echo "ERRO: restauração interrompida. O backend permanece parado para evitar uso de banco incompleto." >&2
+    if [[ "$BACKEND_RELIGADO" == "1" ]]; then
+      echo "Falha após tentar religar o backend; parando-o novamente." >&2
+      if ! "${COMPOSE[@]}" stop backend; then
+        echo "CRÍTICO: não foi possível confirmar a parada do backend; bloqueie o tráfego antes de nova tentativa." >&2
+      fi
+    fi
+    echo "ERRO: restauração interrompida. O backend deve permanecer parado para evitar uso de banco incompleto." >&2
     "${COMPOSE[@]}" ps || true
     "${COMPOSE[@]}" logs --tail=150 db backend || true
   fi
@@ -25,8 +29,7 @@ falha() {
 trap falha ERR
 
 validar_checksum_vinculado() {
-  local arquivo="$1"
-  local sidecar="$2"
+  local arquivo="$1" sidecar="$2"
   local hash_esperado nome_registrado hash_calculado
 
   if [[ ! -f "$sidecar" ]]; then
@@ -34,8 +37,6 @@ validar_checksum_vinculado() {
     return 1
   fi
 
-  # O sidecar deve conter exatamente a referência ao dump selecionado. Isso
-  # impede que um .sha256 copiado de outro backup valide um arquivo diferente.
   read -r hash_esperado nome_registrado < "$sidecar" || true
   nome_registrado="${nome_registrado#\*}"
   if [[ ! "$hash_esperado" =~ ^[0-9a-fA-F]{64}$ ]] || \
@@ -53,7 +54,6 @@ validar_checksum_vinculado() {
 
 if [[ -z "$ARQUIVO" || ! -f "$ARQUIVO" ]]; then
   echo "Uso: $0 <backup.dump|backup.sql.gz>"
-  echo
   echo "Backups disponíveis:"
   ls -lh "$PROJETO/infra/backup/dumps/" 2>/dev/null || echo "  (nenhum encontrado)"
   exit 1
@@ -98,8 +98,6 @@ case "$ARQUIVO" in
     ;;
 esac
 
-# O banco precisa estar acessível para validar o catálogo e executar a carga,
-# mas iniciar somente `db` não executa migrations nem toca no conteúdo.
 "${COMPOSE[@]}" up -d --no-deps db
 DB_PRONTO=0
 for _ in $(seq 1 30); do
@@ -114,8 +112,6 @@ if [[ "$DB_PRONTO" != "1" ]]; then
   exit 1
 fi
 
-# Valida o formato custom dentro da mesma imagem PostgreSQL que fará a carga,
-# antes de qualquer operação destrutiva.
 if [[ "$FORMATO" == "custom" ]]; then
   "${COMPOSE[@]}" exec -T db pg_restore --list < "$ARQUIVO" >/dev/null
 fi
@@ -128,42 +124,31 @@ read -r -p "Digite o nome do banco ($POSTGRES_DB) para confirmar novamente: " ba
 [[ "$banco_confirmado" == "$POSTGRES_DB" ]] || { echo "Cancelado: banco não confirmado."; exit 1; }
 
 RESTAURACAO_INICIADA=1
-# Consulta vazia significa serviço ausente; erro do Docker/Compose é bloqueante.
 BACKEND_CONTAINER="$("${COMPOSE[@]}" ps -a -q backend)"
 if [[ -n "$BACKEND_CONTAINER" ]]; then
   echo "Parando o backend para evitar escrita durante a restauração..."
-  # Uma falha aqui é bloqueante. Não se pode apagar o banco enquanto o backend
-  # ainda pode reconectar, executar migrations ou gravar durante o pg_restore.
   "${COMPOSE[@]}" stop backend
 else
   echo "Backend não existe neste projeto Compose; não há processo da aplicação para parar."
 fi
 
 echo "Recriando o banco vazio..."
-"${COMPOSE[@]}" exec -T db dropdb \
-  -U "$POSTGRES_USER" --if-exists --force "$POSTGRES_DB"
-"${COMPOSE[@]}" exec -T db createdb \
-  -U "$POSTGRES_USER" "$POSTGRES_DB"
+"${COMPOSE[@]}" exec -T db dropdb -U "$POSTGRES_USER" --if-exists --force "$POSTGRES_DB"
+"${COMPOSE[@]}" exec -T db createdb -U "$POSTGRES_USER" "$POSTGRES_DB"
 
 echo "Restaurando backup validado..."
 if [[ "$FORMATO" == "custom" ]]; then
   "${COMPOSE[@]}" exec -T db pg_restore \
-    -U "$POSTGRES_USER" \
-    --dbname="$POSTGRES_DB" \
-    --exit-on-error \
-    --no-owner \
-    --no-privileges \
-    < "$ARQUIVO"
+    -U "$POSTGRES_USER" --dbname="$POSTGRES_DB" --exit-on-error \
+    --no-owner --no-privileges < "$ARQUIVO"
 else
   gunzip -c "$ARQUIVO" | "${COMPOSE[@]}" exec -T db psql \
-    -v ON_ERROR_STOP=1 \
-    -U "$POSTGRES_USER" \
-    "$POSTGRES_DB"
+    -v ON_ERROR_STOP=1 -U "$POSTGRES_USER" "$POSTGRES_DB"
 fi
 
-# `up` recria o backend quando necessário e executa o comando operacional de
-# migrations antes de iniciar o Uvicorn.
 echo "Religando o backend e aplicando migrations idempotentes..."
+# Marca antes do comando: até uma falha parcial de `up` aciona nova tentativa de parada.
+BACKEND_RELIGADO=1
 "${COMPOSE[@]}" up -d backend
 
 BACKEND_PRONTO=0
@@ -181,6 +166,7 @@ if [[ "$BACKEND_PRONTO" != "1" ]]; then
   false
 fi
 
+BACKEND_RELIGADO=0
 RESTAURACAO_INICIADA=0
 trap - ERR
 echo "Restauração concluída e backend pronto. Confira o site e o inventário antes de encerrar o incidente."
