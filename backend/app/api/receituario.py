@@ -64,6 +64,8 @@ class ItemIn(BaseModel):
     drug_slug: str | None = None
     descricao: str = ""
     apresentacao: str = ""
+    quantidade: str = ""
+    quantidade_extenso: str = ""
     posologia: str = ""
     orientacao: str = ""
     brand_name: str | None = None
@@ -125,9 +127,15 @@ def _resolver(db: Session, itens: list[ItemIn]) -> list[ItemPrescrito]:
                 substancia = d.generic_name
                 if not apresentacao and d.presentations:
                     apresentacao = d.presentations[0]
+        quantidade = (i.quantidade or "").strip()
+        quantidade_extenso = (i.quantidade_extenso or "").strip()
+        quantidade_impressa = quantidade
+        if quantidade_extenso:
+            quantidade_impressa = f"{quantidade} ({quantidade_extenso})" if quantidade else quantidade_extenso
         fora.append(ItemPrescrito(
             descricao=i.descricao or (substancia or i.drug_slug or "item sem descrição"),
             substancia=substancia, apresentacao=apresentacao or None,
+            quantidade=quantidade_impressa or None,
             posologia=i.posologia or None,
         ))
     return fora
@@ -201,6 +209,36 @@ def criar(dados: ReceituarioIn, db: Session = Depends(get_db), user=Depends(curr
             "itens": [{"item": x.item.descricao, "motivo": x.motivo} for x in resultado.recusados],
         })
 
+    rce_itens = [
+        item for plano in resultado.documentos if plano.tipo == "RCE" for item in plano.itens
+    ]
+    if rce_itens:
+        from app.services.pdf_documento import resolver_endereco
+        from app.services.receita_controle_especial import validar_requisitos_rce
+
+        medico_rce = document_identity(user)
+        medico_rce["cpf"] = user.cpf
+        requisitos = validar_requisitos_rce(
+            medico=medico_rce,
+            destinatario={
+                "nome": dados.destinatario.nome,
+                "endereco": dados.destinatario.endereco,
+                "documento": dados.destinatario.documento,
+            },
+            itens=[{
+                "descricao": item.descricao, "substancia": item.substancia,
+                "apresentacao": item.apresentacao, "quantidade": item.quantidade,
+                "posologia": item.posologia, "lista": item.lista,
+            } for item in rce_itens],
+            endereco_profissional=resolver_endereco(user, "profissional"),
+            cid=dados.cid,
+        )
+        if requisitos:
+            raise HTTPException(status_code=422, detail={
+                "erro": "Complete os campos obrigatórios antes de criar a Receita de Controle Especial.",
+                "campos": requisitos,
+            })
+
     presc = Prescription(
         patient_id=dados.patient_id, created_by=user.id, notes=dados.observacoes,
         items=[i.model_dump() for i in dados.itens],
@@ -221,7 +259,8 @@ def criar(dados: ReceituarioIn, db: Session = Depends(get_db), user=Depends(curr
         doc = PrescriptionDocument(
             prescription_id=presc.id, tipo_codigo=plano.tipo,
             itens=[{"descricao": i.descricao, "substancia": i.substancia,
-                    "apresentacao": i.apresentacao, "posologia": i.posologia,
+                    "apresentacao": i.apresentacao, "quantidade": i.quantidade,
+                    "posologia": i.posologia,
                     # `lista` (ex.: "C5") não é usado hoje — a emissão de RCE
                     # continua bloqueada — mas é dado que já existe em
                     # `ItemClassificado` sem custo de consulta extra, e vai

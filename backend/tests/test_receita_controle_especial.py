@@ -35,7 +35,7 @@ def _endereco():
 def test_rce_gera_duas_vias_com_frente_e_verso():
     pdf = receita_controle_especial(
         destinatario={"nome": "Paciente Teste", "documento": "12345678900", "endereco": "Rua A, 1"},
-        itens=[{"descricao": "Medicamento controlado", "apresentacao": "20 mg", "posologia": "Tomar 1 comprimido à noite", "lista": "C1"}],
+        itens=[{"descricao": "Medicamento controlado", "apresentacao": "20 mg", "quantidade": "60 comprimidos (sessenta comprimidos)", "posologia": "Tomar 1 comprimido à noite", "lista": "C1"}],
         observacoes="Uso conforme orientação.",
         medico=_medico(), endereco_profissional=_endereco(),
         data_emissao=datetime(2026, 8, 4, tzinfo=timezone.utc),
@@ -65,7 +65,7 @@ def test_c5_exige_medico_ou_dentista_e_campos_da_lei_9965():
 def test_c5_completo_gera_pdf_sem_bloqueios():
     medico = _medico()
     destinatario = {"nome": "Paciente Teste", "documento": "12345678900", "endereco": "Rua A, 1"}
-    itens = [{"descricao": "Testosterona", "apresentacao": "100 mg", "posologia": "Uso conforme prescrição", "lista": "C5"}]
+    itens = [{"descricao": "Testosterona", "apresentacao": "100 mg", "quantidade": "10 ampolas (dez ampolas)", "posologia": "Uso conforme prescrição", "lista": "C5"}]
     assert validar_requisitos_rce(
         medico=medico, destinatario=destinatario, itens=itens,
         endereco_profissional=_endereco(), cid="E29.1",
@@ -78,3 +78,13 @@ def test_c5_completo_gera_pdf_sem_bloqueios():
     assert pdf.startswith(b"%PDF")
     assert pdf.rstrip().endswith(b"%%EOF")
     assert len(re.findall(rb"/Type\s*/Page\b", pdf)) == 4
+
+
+def test_rce_recusa_quantidade_sem_algarismos_e_extenso():
+    erros = validar_requisitos_rce(
+        medico=_medico(),
+        destinatario={"nome": "Paciente", "documento": "123", "endereco": "Rua A, 1"},
+        itens=[{"descricao": "Controlado", "quantidade": "60 comprimidos", "lista": "C1"}],
+        endereco_profissional=_endereco(), cid=None,
+    )
+    assert any("algarismos e por extenso" in erro for erro in erros)

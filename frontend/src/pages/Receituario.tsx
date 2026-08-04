@@ -5,7 +5,8 @@ import { Carregando, Erro, Vazio } from "../components/Estado";
 
 type Farmaco = { slug: string; nome: string };
 type Item = {
-  drug_slug?: string; descricao: string; apresentacao: string; posologia: string; orientacao: string;
+  drug_slug?: string; descricao: string; apresentacao: string;
+  quantidade: string; quantidade_extenso: string; posologia: string; orientacao: string;
   // Tarefa B (CLAUDE.md, 02/08/2026) — escolha de marca via CMED, sempre
   // opcional: o genérico (sem estes seis campos) continua sendo o padrão.
   brand_name?: string; manufacturer?: string; ggrem?: string;
@@ -53,7 +54,7 @@ type HistoricoItem = {
 };
 type ItemOriginal = {
   drug_slug: string | null; descricao: string; apresentacao: string;
-  posologia: string; orientacao: string;
+  quantidade: string; quantidade_extenso: string; posologia: string; orientacao: string;
 };
 type PrescricaoDetalhe = {
   prescricao_id: number;
@@ -379,7 +380,10 @@ function HistoricoReceituario({ onAbrir, onRecriar }: {
   );
 }
 
-const ITEM_VAZIO: Item = { descricao: "", apresentacao: "", posologia: "", orientacao: "" };
+const ITEM_VAZIO: Item = {
+  descricao: "", apresentacao: "", quantidade: "", quantidade_extenso: "",
+  posologia: "", orientacao: "",
+};
 
 export default function Receituario() {
   const [aba, setAba] = useState<"nova" | "historico">("nova");
@@ -425,7 +429,9 @@ export default function Receituario() {
   function escolherFarmaco(i: number, f: Farmaco) {
     setPrevia(null);
     setItens((lista) => lista.map((it, idx) => idx === i
-      ? { drug_slug: f.slug, descricao: f.nome, apresentacao: "", posologia: it.posologia, orientacao: it.orientacao }
+      ? { drug_slug: f.slug, descricao: f.nome, apresentacao: "",
+          quantidade: it.quantidade, quantidade_extenso: it.quantidade_extenso,
+          posologia: it.posologia, orientacao: it.orientacao }
       : it));
     setBuscaFarmaco((b) => b.map((v, idx) => idx === i ? f.nome : v));
     // Marca é escolha explícita do médico, nunca automática (Tarefa B,
@@ -474,6 +480,7 @@ export default function Receituario() {
     destinatario: { nome, endereco: endereco || undefined, documento: documento || undefined },
     itens: itensValidos.map((it) => ({
       drug_slug: it.drug_slug, descricao: it.descricao, apresentacao: it.apresentacao,
+      quantidade: it.quantidade, quantidade_extenso: it.quantidade_extenso,
       posologia: it.posologia, orientacao: it.orientacao,
       brand_name: it.brand_name, manufacturer: it.manufacturer, ggrem: it.ggrem,
       pmc_snapshot: it.pmc_snapshot, uf: it.uf, cmed_version: it.cmed_version,
@@ -544,7 +551,8 @@ export default function Receituario() {
     const novosItens: Item[] = d.itens_originais.length > 0
       ? d.itens_originais.map((i) => ({
           drug_slug: i.drug_slug ?? undefined, descricao: i.descricao,
-          apresentacao: i.apresentacao ?? "", posologia: i.posologia ?? "",
+          apresentacao: i.apresentacao ?? "", quantidade: i.quantidade ?? "",
+          quantidade_extenso: i.quantidade_extenso ?? "", posologia: i.posologia ?? "",
           orientacao: i.orientacao ?? "",
         }))
       : [{ ...ITEM_VAZIO }];
@@ -578,7 +586,7 @@ export default function Receituario() {
           <p className="eyebrow" style={{ margin: 0 }}>Paciente</p>
           <label>Nome</label>
           <input value={nome} onChange={(e) => setNome(e.target.value)} />
-          <label style={{ marginTop: "0.5rem" }}>Endereço (opcional)</label>
+          <label style={{ marginTop: "0.5rem" }}>Endereço completo (obrigatório para controle especial)</label>
           <input value={endereco} onChange={(e) => setEndereco(e.target.value)} />
           <label style={{ marginTop: "0.5rem" }}>CPF ou passaporte do paciente</label>
           <input value={documento} onChange={(e) => setDocumento(e.target.value)} />
@@ -692,6 +700,22 @@ export default function Receituario() {
                 );
               })()}
 
+              <div className="grade grade--2" style={{ marginTop: "0.4rem" }}>
+                <div>
+                  <label>Quantidade em algarismos</label>
+                  <input value={it.quantidade} onChange={(e) => atualizarItem(i, "quantidade", e.target.value)}
+                         placeholder="Ex.: 60 comprimidos" />
+                </div>
+                <div>
+                  <label>Quantidade por extenso</label>
+                  <input value={it.quantidade_extenso}
+                         onChange={(e) => atualizarItem(i, "quantidade_extenso", e.target.value)}
+                         placeholder="Ex.: sessenta comprimidos" />
+                </div>
+              </div>
+              <p className="eyebrow" style={{ margin: "0.2rem 0 0" }}>
+                Os dois campos são obrigatórios para Receita de Controle Especial.
+              </p>
               <label style={{ marginTop: "0.4rem" }}>Posologia</label>
               <input value={it.posologia} onChange={(e) => atualizarItem(i, "posologia", e.target.value)} />
               <label style={{ marginTop: "0.4rem" }}>Orientação (opcional)</label>

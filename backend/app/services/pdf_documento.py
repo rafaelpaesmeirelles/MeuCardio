@@ -323,6 +323,12 @@ def _itens(c: canvas.Canvas, y: float, itens: list[dict]) -> float:
         for linha in _quebrar(c, f"{n}. {titulo}", "Helvetica-Bold", 10.5, util):
             c.drawString(MARGEM, y, linha)
             y -= 5 * mm
+        if item.get("quantidade"):
+            c.setFont("Helvetica", 9.5)
+            c.setFillColorRGB(0.2, 0.2, 0.2)
+            for linha in _quebrar(c, f"Quantidade: {item['quantidade']}", "Helvetica", 9.5, util - 6 * mm):
+                c.drawString(MARGEM + 6 * mm, y, linha)
+                y -= 4.4 * mm
         if item.get("posologia"):
             c.setFont("Helvetica", 10)
             c.setFillColorRGB(0.2, 0.2, 0.2)

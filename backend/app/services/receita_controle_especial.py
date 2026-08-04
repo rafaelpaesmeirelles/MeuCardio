@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import io
 import logging
+import re
 from datetime import datetime
 from pathlib import Path
 from typing import Any
@@ -155,6 +156,9 @@ def _prescricao(c: canvas.Canvas, y: float, itens: list[dict], observacoes: str,
         primeira = f"{indice}) {descricao}"
         if apresentacao:
             primeira += f" - {apresentacao}"
+        quantidade = _texto(item.get("quantidade"))
+        if quantidade:
+            primeira += f" - Quantidade: {quantidade}"
         for linha in _linhas(primeira, "Helvetica-Bold", 9.2, largura):
             c.setFont("Helvetica-Bold", 9.2)
             c.drawString(x, y, linha)
@@ -320,6 +324,14 @@ def validar_requisitos_rce(*, medico: Any, destinatario: dict, itens: list[dict]
         erros.append("Informe CPF ou passaporte do paciente.")
     if not itens:
         erros.append("A receita precisa conter ao menos um medicamento.")
+    for indice, item in enumerate(itens, start=1):
+        quantidade = _texto(item.get("quantidade"))
+        extenso = quantidade.split("(", 1)[1].rsplit(")", 1)[0] if "(" in quantidade and ")" in quantidade else ""
+        if not re.search(r"\d", quantidade) or not re.search(r"[A-Za-zÀ-ÿ]", extenso):
+            erros.append(
+                f"Informe a quantidade do item {indice} em algarismos e por extenso "
+                "(ex.: 60 comprimidos / sessenta comprimidos)."
+            )
     if not endereco_profissional or not _endereco_completo(endereco_profissional):
         erros.append("Cadastre o endereço profissional completo para a Receita de Controle Especial.")
 

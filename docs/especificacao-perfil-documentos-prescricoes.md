@@ -205,3 +205,5 @@ O histórico de atestados, laudos e demais documentos deve:
 - Lista C5: validação obrigatória de CRM/CRO, CPF do prescritor, endereço e telefone profissionais, endereço do paciente e CID.
 - NRA, NRB, NRB2, NRR, NRT e RET: permanecem fail-closed sem numeração oficial/integração aplicável; nenhum número é simulado.
 - Emissão RCE disponível somente como documento físico com assinatura manual enquanto as funcionalidades eletrônicas do SNCR não estiverem integradas.
+
+- RCE: cada item exige quantidade em algarismos e por extenso, conforme art. 52, §1º, da Portaria SVS/MS nº 344/1998.
