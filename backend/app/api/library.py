@@ -18,6 +18,11 @@ from app.models.study_track import StudyTrack
 
 router = APIRouter(prefix="/api/library", tags=["biblioteca"])
 
+# Baselines certificados pelo inventário e pela reconciliação do corpus. Eles
+# não substituem a contagem real do PostgreSQL: servem para tornar qualquer
+# redução de produção visível imediatamente no painel e nas verificações.
+SCIENTIFIC_CORPUS_MINIMUM = 4_936
+SCIENTIFIC_FILES_EXPECTED = 1_327
 
 CATALOG_FRONTS = (
     ("documentos", "Documentos científicos", "/biblioteca", Document),
@@ -53,12 +58,12 @@ def _card(d: Document) -> dict:
 
 @router.get("/catalog")
 def catalog(db: Session = Depends(get_db), _=Depends(current_user)):
-    """Resumo do conteúdo científico realmente publicado.
+    """Resumo canônico do conteúdo científico realmente publicado.
 
-    A tela antiga chamava apenas ``documents`` e dava a impressão de que a
-    biblioteca inteira tinha o tamanho daquela única tabela. O catálogo torna
-    explícitas todas as frentes e suas rotas, sem misturar conteúdo retido em
-    revisão com o que está disponível ao assinante.
+    A tela antiga chamava apenas ``documents`` ou somava ``themes`` e dava a
+    impressão de que a biblioteca inteira tinha o tamanho daquela única tabela.
+    O catálogo soma as 11 frentes publicadas e também compara o resultado com o
+    baseline certificado, permitindo detectar banco incompleto ou deploy antigo.
     """
     fronts = []
     total = 0
@@ -66,7 +71,16 @@ def catalog(db: Session = Depends(get_db), _=Depends(current_user)):
         count = db.query(model).filter(model.published.is_(True)).count()
         total += count
         fronts.append({"key": key, "label": label, "route": route, "count": count})
-    return {"total": total, "fronts": fronts}
+
+    missing = max(SCIENTIFIC_CORPUS_MINIMUM - total, 0)
+    return {
+        "total": total,
+        "fronts": fronts,
+        "expected_minimum": SCIENTIFIC_CORPUS_MINIMUM,
+        "physical_files_expected": SCIENTIFIC_FILES_EXPECTED,
+        "integrity_ok": missing == 0,
+        "missing": missing,
+    }
 
 
 @router.get("/themes")
