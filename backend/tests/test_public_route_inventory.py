@@ -23,6 +23,9 @@ AUTH_CALLS = {
 PUBLIC_ROUTE_RATIONALES: dict[tuple[str, str], str] = {
     ("GET", "/api/health"): "Liveness do processo para orquestrador e proxy.",
     ("GET", "/api/ready"): "Readiness sem segredos, usado pelo healthcheck do backend.",
+    ("GET", "/api/version"): (
+        "Comprovação externa do deploy; retorna somente o SHA Git injetado, sem configuração."
+    ),
     ("GET", "/api/pedidos/precos"): "Catálogo comercial necessário antes de login ou assinatura.",
     ("GET", "/api/documentos-publicos/{token}"): (
         "Download destinado ao paciente, autorizado por token de alta entropia na URL."
