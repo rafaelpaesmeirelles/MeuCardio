@@ -10,7 +10,7 @@ Este documento marca o SHA submetido à certificação integral antes da integra
 - forma de tratamento escolhida pelo profissional;
 - local de trabalho opcional nos documentos;
 - contraste automático de logo claro/transparente;
-- identidade e logo em receitas, atestados, laudos, documentos públicos e materiais ao paciente;
+- identidade e logo em receitas, atestados, laudos, documentos públicos, materiais ao paciente e exportações em modo apresentação;
 - históricos de receitas, laudos, atestados e documentos agrupados por paciente, pesquisáveis por nome parcial e filtráveis por tipo;
 - recriação de documentos preservando o nome do paciente;
 - Receita de Controle Especial física Anvisa V2 em duas vias, frente e verso;
