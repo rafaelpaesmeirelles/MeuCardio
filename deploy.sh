@@ -79,6 +79,7 @@ diagnosticar_erro() {
 
 detectar_banco_persistente() {
   local container_id projeto volume_rotulado volume_deterministico volumes
+  BANCO_PERSISTENTE=0
   container_id="$("${COMPOSE[@]}" ps -a -q db)"
   if [[ -n "$container_id" ]]; then BANCO_PERSISTENTE=1; return 0; fi
 
@@ -100,6 +101,32 @@ aguardar_postgres() {
     sleep 2
   done
   [[ "$pronto" == "1" ]]
+}
+
+criar_backup_pre_deploy() {
+  local backup_log
+  detectar_banco_persistente
+  if [[ "$BANCO_PERSISTENTE" != "1" ]]; then
+    log "Nenhum container ou volume pgdata existente; backup não se aplica ao primeiro deploy."
+    return 0
+  fi
+
+  log "Banco persistente imobilizado; iniciando somente o PostgreSQL para o snapshot de rollback."
+  "${COMPOSE[@]}" up -d --no-deps db
+  aguardar_postgres || { echo "PostgreSQL não ficou pronto para backup." >&2; return 1; }
+
+  backup_log="$(mktemp)"
+  if PROJETO="$PWD" bash ./infra/backup/backup.sh | tee "$backup_log"; then
+    BACKUP_PRE_DEPLOY="$(tail -n 1 "$backup_log")"
+    rm -f "$backup_log"
+  else
+    rm -f "$backup_log"
+    return 1
+  fi
+  [[ -f "$BACKUP_PRE_DEPLOY" && -f "${BACKUP_PRE_DEPLOY}.sha256" ]] || {
+    echo "Backup pré-deploy não foi materializado com checksum." >&2
+    return 1
+  }
 }
 
 validar_checkout_imutavel() {
@@ -157,37 +184,21 @@ if [[ -n "$IP_SERVIDOR" && -n "$IP_DOMINIO" && "$IP_SERVIDOR" != "$IP_DOMINIO" ]
   [[ "$resposta" == "y" ]] || exit 1
 fi
 
-detectar_banco_persistente
-if [[ "$BANCO_PERSISTENTE" == "1" ]]; then
-  log "Banco persistente detectado; iniciando somente o PostgreSQL para backup pré-deploy."
-  SERVICOS_INICIADOS=1
-  "${COMPOSE[@]}" up -d --no-deps db
-  aguardar_postgres || { echo "PostgreSQL não ficou pronto para backup." >&2; false; }
-
-  BACKUP_LOG="$(mktemp)"
-  if PROJETO="$PWD" bash ./infra/backup/backup.sh | tee "$BACKUP_LOG"; then
-    BACKUP_PRE_DEPLOY="$(tail -n 1 "$BACKUP_LOG")"
-    rm -f "$BACKUP_LOG"
-  else
-    rm -f "$BACKUP_LOG"
-    false
-  fi
-  [[ -f "$BACKUP_PRE_DEPLOY" && -f "${BACKUP_PRE_DEPLOY}.sha256" ]] || {
-    echo "Backup pré-deploy não foi materializado com checksum." >&2; false;
-  }
-else
-  log "Nenhum container ou volume pgdata existente; backup não se aplica ao primeiro deploy."
-fi
-
 log "Construindo imagens a partir do checkout imutável, sem interromper o tráfego atual."
 validar_checkout_imutavel
 "${COMPOSE[@]}" build backend frontend-build
 validar_checkout_imutavel
 
-log "Fechando o proxy antes de substituir backend, frontend e banco lógico."
+log "Fechando o proxy e o backend antigo antes do snapshot usado no rollback."
 parar_servico_se_existir caddy
 TRAFEGO_ABERTO=0
+parar_servico_se_existir backend
 SERVICOS_INICIADOS=1
+# Todas as requisições aceitas antes da indisponibilidade já terminaram; o dump
+# feito agora não perde gravações durante o build se houver rollback posterior.
+criar_backup_pre_deploy
+validar_checkout_imutavel
+
 # O backend executa migrations no próprio comando de entrada. O rollback precisa
 # estar armado antes deste `up`, não apenas antes da confirmação idempotente.
 ROLLBACK_NECESSARIO=1
