@@ -9,6 +9,7 @@ import { useAuth } from "./lib/auth";
 // e renderizadores pesados só são baixados quando a rota é aberta.
 const Entrar = lazy(() => import("./pages/Entrar"));
 const Painel = lazy(() => import("./pages/Painel"));
+const Apresentacao = lazy(() => import("./pages/Apresentacao"));
 const Trilhas = lazy(() => import("./pages/Trilhas"));
 const MaterialPaciente = lazy(() => import("./pages/MaterialPaciente"));
 const Emergencia = lazy(() => import("./pages/Emergencia"));
@@ -93,6 +94,7 @@ export default function App() {
       <Routes>
         <Route element={<Shell />}>
           <Route index element={<Painel />} />
+          <Route path="apresentacao" element={<Apresentacao />} />
           <Route path="biblioteca" element={<Biblioteca />} />
           <Route path="biblioteca/:slug" element={<Documento />} />
           <Route path="fluxogramas" element={<Fluxogramas />} />
