@@ -17,6 +17,28 @@ jobs:
         with:
           ref: agent/perfil-documentos-prescricoes-historico
           fetch-depth: 0
+      - name: Correct follow-up mutation script
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          path = Path("tools/apply_profile_followup.py")
+          source = path.read_text(encoding="utf-8")
+          old = '''regex_once(
+              "backend/app/api/exportacao.py",
+              r'svc_material\\.gerar\\(material, \\{.*?\\}\\)',
+              'svc_material.gerar(material, document_identity(user))',
+          )
+          '''
+          new = '''replace_once(
+              "backend/app/api/exportacao.py",
+              ''' + '"""def _dados_do_medico(user) -> dict:\n    return {\n        \\\"full_name\\\": getattr(user, \\\"full_name\\\", \\\"\\\") or \\\"\\\",\n        \\\"council_name\\\": getattr(user, \\\"council_name\\\", None),\n        \\\"council_number\\\": getattr(user, \\\"council_number\\\", None),\n        \\\"council_state\\\": getattr(user, \\\"council_state\\\", None),\n        \\\"rqe\\\": getattr(user, \\\"rqe\\\", None),\n    }\n"""' + ''',
+              ''' + '"""def _dados_do_medico(user) -> dict:\n    return document_identity(user)\n"""' + ''',
+          )
+          '''
+          if source.count(old) != 1:
+              raise SystemExit(f"Bloco problemático encontrado {source.count(old)} vezes")
+          path.write_text(source.replace(old, new, 1), encoding="utf-8")
+          PY
       - name: Apply profile, documents and onboarding changes
         run: |
           python tools/apply_profile_followup.py
