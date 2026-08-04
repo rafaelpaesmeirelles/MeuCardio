@@ -61,6 +61,7 @@ def upgrade() -> None:
         sa.Column("error", sa.Text(), nullable=True),
         sa.Column("created_at", sa.DateTime(timezone=True), nullable=False, server_default=sa.text("now()")),
         sa.Column("sent_at", sa.DateTime(timezone=True), nullable=True),
+        sa.Column("read_at", sa.DateTime(timezone=True), nullable=True),
         sa.ForeignKeyConstraint(["guideline_id"], ["guidelines.id"], ondelete="CASCADE"),
         sa.ForeignKeyConstraint(["user_id"], ["users.id"], ondelete="CASCADE"),
         sa.PrimaryKeyConstraint("id"),
