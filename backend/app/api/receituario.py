@@ -37,7 +37,9 @@ from app.services.classificacao_receituario import (
     ItemPrescrito, Regra, Substancia, classificar, normalizar,
 )
 from app.services.notificar import tentar_enviar_email
-from app.services.professional_profile import document_identity, professional_name
+from app.services.professional_profile import (
+    document_identity, normalize_search_text, professional_name,
+)
 
 router = APIRouter(prefix="/api/receituario", tags=["receituário"])
 
@@ -256,14 +258,14 @@ def listar(
         .limit(500)
         .all()
     )
-    busca = (nome or "").strip().casefold()
+    busca = normalize_search_text(nome)
     tipos = _tipos(db)
     resultado = []
     for presc in prescricoes:
         dest = db.query(PrescriptionRecipient).filter(
             PrescriptionRecipient.prescription_id == presc.id).first()
         patient_name = cofre.decifrar_campo(dest.nome_cifrado, presc.id) if dest else None
-        if busca and busca not in (patient_name or "").casefold():
+        if busca and busca not in normalize_search_text(patient_name):
             continue
         docs = db.query(PrescriptionDocument).filter(
             PrescriptionDocument.prescription_id == presc.id).all()

@@ -26,6 +26,7 @@ from app.models.receituario import PrescriptionDocument, PrescriptionRecipient
 from app.models.user import User
 from app.services import cofre
 from app.services.assinatura import emissao as assinatura_emissao
+from app.services.professional_profile import document_identity
 
 router = APIRouter(prefix="/api/documentos-publicos", tags=["documentos públicos"])
 
@@ -60,15 +61,7 @@ def _pdf_receita(db: Session, referencia_id: int) -> tuple[bytes, str]:
 
         return receituario_comum(
             destinatario=destinatario, itens=doc.itens, observacoes=presc.notes or "",
-            medico={
-                "full_name": medico.full_name if medico else "",
-                "council_name": medico.council_name if medico else None,
-                "council_number": medico.council_number if medico else None,
-                "council_state": medico.council_state if medico else None,
-                "rqe": medico.rqe if medico else None,
-                "specialty": medico.specialty if medico else None,
-                "document_logo_url": medico.document_logo_url if medico else None,
-            },
+            medico=document_identity(medico) if medico else {"full_name": ""},
             endereco=resolver_endereco(medico, doc.endereco_exibido) if medico else None,
             data_emissao=doc.emitido_em,
         )
@@ -91,13 +84,7 @@ def _pdf_material_paciente(db: Session, referencia_id: int, criado_por: int) -> 
     if not m or not m.published:
         raise HTTPException(status_code=404, detail="Material não disponível.")
     medico = db.get(User, criado_por)
-    pdf = svc_material.gerar(m, {
-        "full_name": medico.full_name if medico else "",
-        "council_name": medico.council_name if medico else None,
-        "council_number": medico.council_number if medico else None,
-        "council_state": medico.council_state if medico else None,
-        "rqe": medico.rqe if medico else None,
-    })
+    pdf = svc_material.gerar(m, document_identity(medico) if medico else {"full_name": ""})
     return pdf, f"material-{m.slug}.pdf"
 
 
@@ -117,15 +104,7 @@ def _pdf_documento(db: Session, referencia_id: int) -> tuple[bytes, str]:
         titulo = {"atestado": "Atestado", "laudo": "Laudo"}.get(g.doc_type, g.title)
         return documento_generico(
             titulo=titulo, corpo=g.rendered_body,
-            medico={
-                "full_name": emissor.full_name if emissor else "",
-                "council_name": emissor.council_name if emissor else None,
-                "council_number": emissor.council_number if emissor else None,
-                "council_state": emissor.council_state if emissor else None,
-                "rqe": emissor.rqe if emissor else None,
-                "specialty": emissor.specialty if emissor else None,
-                "document_logo_url": emissor.document_logo_url if emissor else None,
-            },
+            medico=document_identity(emissor) if emissor else {"full_name": ""},
             endereco=resolver_endereco(emissor, g.endereco_exibido) if emissor else None,
             data_emissao=g.created_at,
         )

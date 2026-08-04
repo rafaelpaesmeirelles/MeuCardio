@@ -210,6 +210,7 @@ def atualizar_me(dados: DadosPessoais, background_tasks: BackgroundTasks,
     user.workplace_role = (dados.workplace_role or "").strip() or None
     user.workplace_notes = (dados.workplace_notes or "").strip() or None
     user.include_workplace_on_documents = dados.include_workplace_on_documents
+    user.profile_completion_required = False
 
     user.home_street = (dados.home_street or "").strip() or None
     user.home_number = (dados.home_number or "").strip() or None

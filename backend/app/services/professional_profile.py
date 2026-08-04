@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+import unicodedata
 from typing import Any
 
 from PIL import Image, UnidentifiedImageError
@@ -36,6 +37,12 @@ def normalize_council(value: str | None) -> str | None:
     if value not in COUNCILS:
         raise ValueError("Conselho profissional inválido.")
     return value
+
+
+def normalize_search_text(value: str | None) -> str:
+    """Normaliza busca parcial sem expor ou persistir uma segunda cópia do nome."""
+    decomposed = unicodedata.normalize("NFKD", (value or "").strip().casefold())
+    return "".join(char for char in decomposed if not unicodedata.combining(char))
 
 
 def professional_name(source: Any) -> str:
@@ -80,7 +87,8 @@ def logo_needs_dark_plate_path(path: Path | None) -> bool:
             image = original.convert("RGBA")
             image.thumbnail((128, 128))
             luminances: list[float] = []
-            for red, green, blue, alpha in image.getdata():
+            pixels = image.get_flattened_data() if hasattr(image, "get_flattened_data") else image.getdata()
+            for red, green, blue, alpha in pixels:
                 if alpha < 32:
                     continue
                 luminances.append(0.2126 * red + 0.7152 * green + 0.0722 * blue)
@@ -106,6 +114,7 @@ def profile_payload(user: Any) -> dict:
         "workplace_role": user.workplace_role,
         "workplace_notes": user.workplace_notes,
         "include_workplace_on_documents": user.include_workplace_on_documents,
+        "profile_completion_required": user.profile_completion_required,
         "document_logo_dark_background": logo_needs_dark_plate(user.document_logo_url),
     }
 

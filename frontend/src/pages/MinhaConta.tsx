@@ -731,6 +731,12 @@ export default function MinhaConta() {
   return (
     <div className="pagina">
       <h1>Minha conta</h1>
+      {perfil.profile_completion_required && (
+        <div className="cartao" role="status" style={{ borderLeft: "4px solid var(--destaque)" }}>
+          <strong>Complete seus dados pessoais e profissionais para continuar.</strong>
+          <p style={{ marginBottom: 0 }}>A senha atual continuará válida; não é necessário alterá-la.</p>
+        </div>
+      )}
 
       <div style={{ display: "grid", gap: "1rem", maxWidth: 560 }}>
         <Foto

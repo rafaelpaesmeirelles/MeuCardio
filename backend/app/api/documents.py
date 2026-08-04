@@ -16,7 +16,9 @@ from app.models.round import Patient
 from app.services import cofre
 from app.services.assinatura import emissao as assinatura_emissao
 from app.services.notificar import tentar_enviar_email
-from app.services.professional_profile import document_identity, professional_name
+from app.services.professional_profile import (
+    document_identity, normalize_search_text, professional_name,
+)
 
 router = APIRouter(prefix="/api/document-templates", tags=["documentos"])
 
@@ -153,13 +155,13 @@ def listar_gerados(
         .limit(500)
         .all()
     )
-    busca = (nome or "").strip().casefold()
+    busca = normalize_search_text(nome)
     resultado = []
     for g in rows:
         patient_name = None
         if g.patient_name_cifrado:
             patient_name = cofre.decifrar_campo(g.patient_name_cifrado, g.id)
-        if busca and busca not in (patient_name or "").casefold():
+        if busca and busca not in normalize_search_text(patient_name):
             continue
         if tipo and g.doc_type != tipo:
             continue

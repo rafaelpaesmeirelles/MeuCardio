@@ -24,11 +24,17 @@ def upgrade() -> None:
         sa.Column("include_workplace_on_documents", sa.Boolean(), nullable=False, server_default=sa.false()),
     )
     op.alter_column("users", "include_workplace_on_documents", server_default=None)
+    op.add_column(
+        "users",
+        sa.Column("profile_completion_required", sa.Boolean(), nullable=False, server_default=sa.false()),
+    )
+    op.alter_column("users", "profile_completion_required", server_default=None)
     op.add_column("generated_documents", sa.Column("patient_name_cifrado", sa.LargeBinary(), nullable=True))
 
 
 def downgrade() -> None:
     op.drop_column("generated_documents", "patient_name_cifrado")
+    op.drop_column("users", "profile_completion_required")
     op.drop_column("users", "include_workplace_on_documents")
     op.drop_column("users", "workplace_notes")
     op.drop_column("users", "workplace_role")

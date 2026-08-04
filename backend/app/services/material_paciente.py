@@ -18,17 +18,23 @@ Duas seções são obrigatórias e não dependem do conteúdo cadastrado:
 from __future__ import annotations
 
 from datetime import datetime, timezone
+import tempfile
+
+from PIL import Image, UnidentifiedImageError
 
 from app.models.patient_material import PatientMaterial
 
 from .pdf import Documento
 from .pdf.marca import (
-    NAVY, NEUTRO, TEAL, TINTA, TINTA_TEAL, TINTA_VERMELHA, VERMELHO,
+    BRANCO, NAVY, NEUTRO, TEAL, TINTA, TINTA_TEAL, TINTA_VERMELHA, VERMELHO,
+)
+from .professional_profile import (
+    logo_needs_dark_plate_path, logo_path, professional_name, workplace_lines,
 )
 
 
 def gerar(material: PatientMaterial, medico: dict) -> bytes:
-    nome = (medico.get("full_name") or "").strip()
+    nome = professional_name(medico)
     registro = " ".join(
         x for x in (medico.get("council_name"), medico.get("council_number")) if x
     )
@@ -46,6 +52,27 @@ def gerar(material: PatientMaterial, medico: dict) -> bytes:
     d.capa_simples(material.titulo, material.subtitulo or "",
                    etiqueta="Material para o paciente")
 
+    # Logo profissional: o núcleo PDF aceita PNG; Pillow converte JPEG/WEBP
+    # apenas em memória/arquivo temporário, sem alterar o upload original.
+    caminho_logo = logo_path(medico.get("document_logo_url"))
+    if caminho_logo:
+        try:
+            with Image.open(caminho_logo) as original:
+                imagem = original.convert("RGBA")
+                imagem.thumbnail((360, 160))
+                largura = 92.0
+                altura = largura * imagem.height / max(imagem.width, 1)
+                d._garantir(altura + 28)
+                y_base = d.y - altura
+                fundo = NAVY if logo_needs_dark_plate_path(caminho_logo) else BRANCO
+                d.pdf.retangulo(d.margem, y_base - 7, largura + 14, altura + 14, fundo)
+                with tempfile.NamedTemporaryFile(suffix=".png") as temp:
+                    imagem.save(temp.name, format="PNG")
+                    d.pdf.imagem("LogoProfissional", temp.name, d.margem + 7, y_base, largura, altura)
+                d.y = y_base - 18
+        except (OSError, UnidentifiedImageError):
+            pass
+
     # Quem entrega. Fica logo abaixo do título porque é a primeira pergunta de
     # quem recebe um papel na mão: quem me deu isto e como falo com essa pessoa.
     if nome:
@@ -56,6 +83,9 @@ def gerar(material: PatientMaterial, medico: dict) -> bytes:
         d.pdf.texto(d.margem + 16, d.y - 32, nome + (f"  ·  {registro}" if registro else ""),
                     10, NAVY, negrito=True)
         d.y -= 54
+        for linha in workplace_lines(medico):
+            d.pdf.texto(d.margem + 16, d.y - 9, linha, 8.5, NEUTRO)
+            d.y -= 13
 
     for secao in (material.secoes or []):
         if secao.get("titulo"):
