@@ -1,129 +1,226 @@
-# Colocar a Corvia no ar
+# Publicação certificada da Corvia
 
-Guia para o seu servidor já contratado, com o domínio já registrado.
+Este guia descreve o deploy de produção em `corvia.med.br`, usando o diretório histórico `/opt/meucardio`, Docker Compose, PostgreSQL/pgvector, Redis e Caddy.
 
-> **Sobre o nome `meucardio` que aparece adiante neste arquivo.** Ele sobrou do
-> nome anterior do produto em lugares onde **não é texto de marca, e sim
-> identificador real em uso**: o diretório do projeto no servidor
-> (`/opt/meucardio`), o usuário e o banco do PostgreSQL (`POSTGRES_USER` e
-> `POSTGRES_DB`) e o prefixo dos dumps gerados por `infra/backup/backup.sh`.
-> **Trocar esses valores aqui quebra os comandos** — renomear o banco é migração
-> de dado, não edição de documentação. Estão listados como resíduo conhecido no
-> `CLAUDE.md`; enquanto não forem migrados de fato, este arquivo tem de
-> descrevê-los como são.
+> O nome `meucardio` ainda aparece em caminhos, usuário e banco porque são identificadores operacionais existentes. Renomeá-los exige migração própria; não faça substituição textual durante um deploy.
 
-## 1. Antes de começar
+## O que `deploy.sh` garante
 
-- **DNS**: crie um registro **A** apontando seu domínio (ou subdomínio, ex.
-  `corvia.med.br`) para o **IP do servidor**. Sem isso o
-  Caddy não consegue emitir o certificado HTTPS.
-- **Portas 80 e 443 liberadas** no firewall do servidor/provedor.
-- **Chave da OpenAI** em mãos, se for ligar a IA clínica agora.
+O script de deploy agora só declara sucesso depois de:
 
-## 2. Colocar o projeto no servidor
+1. validar as variáveis críticas do `.env`;
+2. registrar o commit que está sendo publicado;
+3. verificar DNS;
+4. criar backup pré-deploy se o banco já estiver em execução;
+5. reconstruir e subir os serviços;
+6. aguardar `/api/ready` no backend;
+7. confirmar as migrations de forma idempotente;
+8. reconciliar as 11 coleções científicas;
+9. publicar somente conteúdo com `review_status=revisado`;
+10. falhar se qualquer coleção permanecer abaixo do mínimo versionado;
+11. reindexar a IA quando `AI_ENABLED=true`;
+12. confirmar `/api/ready` pelo domínio HTTPS público.
 
-Envie a pasta do projeto (via `scp`, `rsync` ou `git clone` se você versionar
-em algum repositório privado). Exemplo com `scp` a partir do seu computador:
+O importador parcial antigo não é mais usado no deploy.
 
-    scp -r meucardio usuario@SEU_SERVIDOR:/opt/
+## 1. Pré-requisitos do servidor
 
-## 3. Configurar o ambiente
+- DNS `A` de `corvia.med.br` apontando para o IP do servidor;
+- portas TCP 80 e 443 liberadas;
+- Docker Engine e Docker Compose v2;
+- checkout do repositório em `/opt/meucardio`;
+- arquivo `/opt/meucardio/.env` preservado fora do Git;
+- acesso administrativo ao host para o ajuste do Redis:
 
-No servidor, dentro da pasta do projeto:
+  ```bash
+  sudo sysctl -w vm.overcommit_memory=1
+  echo 'vm.overcommit_memory=1' | sudo tee /etc/sysctl.d/99-corvia-redis.conf
+  ```
 
-    cp .env.example .env
-    nano .env
+## 2. Variáveis mínimas
 
-Preencha, no mínimo:
+No diretório do projeto:
 
-| Variável | O que colocar |
+```bash
+cd /opt/meucardio
+cp .env.example .env  # somente no primeiro deploy
+nano .env
+```
+
+Preencha ao menos:
+
+| Variável | Finalidade |
 |---|---|
-| `DOMAIN` | o domínio/subdomínio que você apontou no DNS |
-| `POSTGRES_PASSWORD` | uma senha forte, só sua |
-| `JWT_SECRET` | gere com `openssl rand -hex 32` |
-| `ADMIN_EMAIL` / `ADMIN_PASSWORD` | seu login inicial — troque a senha depois de entrar |
-| `OPENAI_API_KEY` | se for usar o assistente clínico agora; senão deixe `AI_ENABLED=false` |
+| `DOMAIN` | `corvia.med.br` |
+| `POSTGRES_USER` | usuário existente do banco |
+| `POSTGRES_PASSWORD` | senha forte do banco |
+| `POSTGRES_DB` | banco existente |
+| `JWT_SECRET` | `openssl rand -hex 32` no primeiro deploy |
+| `ADMIN_EMAIL` / `ADMIN_PASSWORD` | bootstrap inicial; troque a senha após entrar |
+| `AI_ENABLED` | `true` somente quando a indexação estiver configurada |
+| `OPENAI_API_KEY` | necessária quando a IA estiver habilitada |
 
-## 4. Subir
+Nunca recrie ou substitua o `.env` durante uma atualização comum.
 
-    ./deploy.sh
+## 3. Atualizar o código
 
-O script confere se as senhas de exemplo foram trocadas, verifica se o
-Docker está instalado, sobe os serviços, importa o conteúdo científico e
-indexa para a IA (se ligada). Leva alguns minutos na primeira vez, porque
-o Postgres com pgvector e o build do frontend rodam do zero.
+```bash
+cd /opt/meucardio
+git fetch origin
+git checkout main
+git pull --ff-only origin main
+git status --short
+```
 
-## 5. Conferir
+O último comando deve ficar vazio. Confirme o commit antes de publicar:
 
-- `https://SEU_DOMINIO` deve abrir a tela de login.
-- `https://SEU_DOMINIO/api/docs` mostra a documentação da API.
-- Entre com o `ADMIN_EMAIL`/`ADMIN_PASSWORD` do `.env` e **troque a senha**.
+```bash
+git log -1 --oneline
+```
 
-## Comandos do dia a dia
+## 4. Executar o deploy
 
-    # ver logs
-    docker compose -f docker-compose.prod.yml logs -f backend
+```bash
+chmod +x deploy.sh infra/backup/backup.sh
+./deploy.sh
+```
 
-    # reiniciar depois de mudar código
-    docker compose -f docker-compose.prod.yml up -d --build
+Não rode o processo em segundo plano. Se alguma etapa falhar, o script mostra o estado dos containers e os logs recentes e termina com código diferente de zero.
 
-    # importar conteúdo novo (depois de colocar .md em content/<tema>/)
-    docker compose -f docker-compose.prod.yml exec backend python -m app.services.importer
-    docker compose -f docker-compose.prod.yml exec backend python -m app.services.indexar
+## 5. Reconciliação científica
 
-    # backup do banco
-    docker compose -f docker-compose.prod.yml exec db pg_dump -U meucardio meucardio > backup.sql
+O comando oficial, executado automaticamente pelo deploy, é:
 
-    # parar tudo
-    docker compose -f docker-compose.prod.yml down
+```bash
+docker compose -f docker-compose.prod.yml exec -T backend \
+  python -m app.commands.reconcile_content --publish-reviewed
+```
 
-## Se o certificado HTTPS não sair
+Ele carrega e valida:
 
-Confira `docker compose -f docker-compose.prod.yml logs caddy`. A causa mais
-comum é o DNS ainda não ter propagado — pode levar de minutos a algumas
-horas dependendo do provedor. Teste com `dig SEU_DOMINIO` até o IP bater
-com o do servidor, então rode `docker compose -f docker-compose.prod.yml
-restart caddy`.
+- documentos;
+- evidências;
+- estudos;
+- casos clínicos;
+- trilhas;
+- galeria;
+- exames;
+- medicamentos;
+- checklists;
+- material para pacientes;
+- protocolos de emergência;
+- listas de controlados.
 
-## Backup automático
+A operação é idempotente. Registros existentes não são apagados, e somente itens explicitamente revisados são promovidos para publicação. Não use `--allow-partial` em produção.
 
-    scp -r infra/backup root@SEU_SERVIDOR:/opt/meucardio/infra/
-    ssh root@SEU_SERVIDOR
-    chmod +x /opt/meucardio/infra/backup/*.sh
-    crontab -e
-    # adicionar:
-    0 3 * * * /opt/meucardio/infra/backup/backup.sh >> /opt/meucardio/infra/backup/backup.log 2>&1
+## 6. Verificações após o deploy
 
-Backup diário às 3h, compactado, com 14 dias de retenção automática. Os arquivos ficam em
-`infra/backup/dumps/`. Para restaurar:
+```bash
+curl --fail --silent --show-error https://corvia.med.br/api/health
+curl --fail --silent --show-error https://corvia.med.br/api/ready
 
-    ./infra/backup/restaurar.sh infra/backup/dumps/meucardio_AAAA-MM-DD_HHMM.sql.gz
+docker compose -f docker-compose.prod.yml ps
+docker compose -f docker-compose.prod.yml logs --tail=200 backend caddy frontend-build
+```
 
-O script pede confirmação explícita antes de apagar o banco atual — não é destrutivo por acidente.
+Depois de entrar como administrador, confirme:
 
-## Migração de banco (Alembic)
+- o Painel mostra o inventário integral das 11 coleções;
+- não há alerta de coleção abaixo do mínimo;
+- a Biblioteca diferencia registros preservados de itens publicados;
+- CorvIA Mail aparece no Painel e no menu;
+- CorvIA Chat abre pelo cartão e pelo botão flutuante;
+- envio e recebimento de mensagem funcionam em duas contas/abas;
+- o WebSocket usa `wss://` sem erro no navegador.
 
-O esquema do banco agora é versionado. Depois de aplicar o pacote que traz `backend/migrations/`,
-rode **uma vez**:
+## Comandos operacionais
 
-    ./migrations_setup.sh
+### Logs
 
-Isso gera a migração de linha de base a partir do banco real e marca como já aplicada — não
-recria nem altera nenhuma tabela existente.
+```bash
+docker compose -f docker-compose.prod.yml logs -f backend
+docker compose -f docker-compose.prod.yml logs -f caddy
+docker compose -f docker-compose.prod.yml logs -f redis
+```
 
-Daqui pra frente, mudança de esquema (nova coluna, nova tabela) é:
+### Migrations
 
-    # 1. editar o modelo em backend/app/models/
-    docker compose -f docker-compose.prod.yml exec backend alembic revision --autogenerate -m "descricao"
-    # 2. revisar o arquivo gerado em backend/migrations/versions/
-    docker compose -f docker-compose.prod.yml exec backend alembic upgrade head
+```bash
+docker compose -f docker-compose.prod.yml exec -T backend python -m app.commands.migrate
+```
 
-Sem mais `ALTER TABLE` manual.
+O comando pode ser repetido; a CI exige idempotência.
 
-## O que este deploy NÃO cobre ainda
+### Backup manual
 
-- Alertas de monitoramento/uptime.
-- Ambiente de homologação separado do de produção.
+```bash
+cd /opt/meucardio
+PROJETO="$PWD" ./infra/backup/backup.sh
+```
 
-Para um piloto com poucos usuários da equipe, o que está aqui é suficiente.
-Antes de abrir para todo o serviço, vale revisar esses dois pontos.
+O arquivo compactado e seu SHA-256 ficam em `infra/backup/dumps/`. O script usa arquivo temporário, valida o gzip e só então publica o backup.
+
+### Backup automático
+
+```bash
+crontab -e
+```
+
+Adicione:
+
+```cron
+0 3 * * * PROJETO=/opt/meucardio /opt/meucardio/infra/backup/backup.sh >> /opt/meucardio/infra/backup/backup.log 2>&1
+```
+
+A retenção padrão é de 14 dias e pode ser alterada com `BACKUP_RETENCAO_DIAS`.
+
+## Falhas comuns
+
+### Backend não atinge readiness
+
+```bash
+docker compose -f docker-compose.prod.yml ps
+docker compose -f docker-compose.prod.yml logs --tail=300 backend db redis
+```
+
+O deploy não executa reconciliação enquanto o backend estiver indisponível.
+
+### Corpus abaixo do mínimo
+
+O reconciliador informa exatamente quais coleções estão incompletas. Verifique se todos os diretórios versionados foram recebidos pelo checkout e se os volumes somente-leitura estão montados no backend. Não contorne com `--allow-partial`.
+
+### HTTPS não responde
+
+```bash
+dig +short corvia.med.br
+docker compose -f docker-compose.prod.yml logs --tail=300 caddy
+```
+
+O IP retornado pelo DNS deve ser o IP público do servidor, e as portas 80/443 devem estar liberadas.
+
+### Redis alerta sobre memory overcommit
+
+Aplique `vm.overcommit_memory=1` no host. Essa configuração não pode ser feita de dentro do container ou do repositório.
+
+## Rollback
+
+Antes de cada atualização, o deploy cria backup quando o banco já está em execução. Para voltar apenas o código:
+
+```bash
+cd /opt/meucardio
+git log --oneline -10
+git checkout <commit-anterior-certificado>
+./deploy.sh
+```
+
+Não execute downgrade manual de migrations. Restauração de banco é operação destrutiva e deve usar o script de restauração somente após confirmar o arquivo, o banco-alvo e a necessidade clínica/operacional.
+
+## Limitações externas
+
+O repositório não consegue, sozinho:
+
+- abrir a porta SSH do provedor;
+- alterar firewall ou DNS;
+- aplicar `sysctl` no host;
+- executar o deploy sem acesso administrativo ao servidor;
+- validar credenciais reais de e-mail, Stripe ou provedores de IA.
