@@ -79,12 +79,16 @@ def test_library_catalog_counts_all_registered_fronts(client, db, criar_usuario,
 
     response = client.get("/api/library/catalog", headers=headers)
     assert response.status_code == 200
-    assert response.json() == {
-        "total": 3,
-        "fronts": [{
-            "key": "documentos",
-            "label": "Documentos científicos",
-            "route": "/biblioteca",
-            "count": 3,
-        }],
-    }
+    body = response.json()
+
+    assert body["total"] == 3
+    assert body["fronts"] == [{
+        "key": "documentos",
+        "label": "Documentos científicos",
+        "route": "/biblioteca",
+        "count": 3,
+    }]
+    assert body["expected_minimum"] == library_api.SCIENTIFIC_CORPUS_MINIMUM
+    assert body["physical_files_expected"] == library_api.SCIENTIFIC_FILES_EXPECTED
+    assert body["integrity_ok"] is False
+    assert body["missing"] == library_api.SCIENTIFIC_CORPUS_MINIMUM - 3
