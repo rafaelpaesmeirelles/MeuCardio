@@ -1,6 +1,4 @@
-"""Testes da Tarefa 4 — arquivo/histórico de receituário e "recriar baseado
-numa anterior" (GET /api/receituario e extensão de GET /api/receituario/{id}).
-"""
+"""Testes do arquivo/histórico paginado de receituário e recriação."""
 import pytest
 from sqlalchemy import text
 
@@ -42,15 +40,43 @@ class TestListarReceituarios:
 
         r = client.get("/api/receituario", headers={"Authorization": f"Bearer {token}"})
         assert r.status_code == 200, r.text
-        itens = r.json()
+        payload = r.json()
+        itens = payload["items"]
         assert len(itens) == 2
+        assert payload["page"] == 1
+        assert payload["page_size"] == 20
+        assert payload["has_more"] is False
+        assert payload["total"] == 2
         por_id = {i["prescricao_id"]: i for i in itens}
         assert por_id[id1]["paciente_nome"] == "Ana Paula"
         assert por_id[id2]["paciente_nome"] == "Bruno Silva"
         assert por_id[id1]["documentos"][0]["tipo"] == "COMUM"
         assert por_id[id1]["documentos"][0]["status"] == "rascunho"
-        # Mais recente primeiro.
         assert itens[0]["prescricao_id"] == id2
+
+    def test_pagina_depois_de_filtrar_nome_decifrado(self, client, criar_usuario):
+        _, token = criar_usuario(role="admin")
+        _criar(client, token, nome="Ana Primeira")
+        id2 = _criar(client, token, nome="Ana Segunda")
+        _criar(client, token, nome="Bruno Fora do Filtro")
+
+        cabecalho = {"Authorization": f"Bearer {token}"}
+        primeira = client.get(
+            "/api/receituario?nome=Ana&page=1&page_size=1", headers=cabecalho
+        )
+        assert primeira.status_code == 200, primeira.text
+        payload1 = primeira.json()
+        assert payload1["total"] == 2
+        assert payload1["has_more"] is True
+        assert [i["prescricao_id"] for i in payload1["items"]] == [id2]
+
+        segunda = client.get(
+            "/api/receituario?nome=Ana&page=2&page_size=1", headers=cabecalho
+        )
+        assert segunda.status_code == 200, segunda.text
+        payload2 = segunda.json()
+        assert len(payload2["items"]) == 1
+        assert payload2["has_more"] is False
 
     def test_lista_audita_uma_vez_por_chamada_nao_por_paciente(self, client, criar_usuario, db):
         _, token = criar_usuario(role="admin")
@@ -62,6 +88,8 @@ class TestListarReceituarios:
         auditorias = db.query(AuditLog).filter(AuditLog.action == "listar_receituarios").all()
         assert len(auditorias) == 1
         assert auditorias[0].detail["count"] == 2
+        assert auditorias[0].detail["total_filtrado"] == 2
+        assert auditorias[0].detail["page"] == 1
 
     def test_lista_so_traz_receituarios_do_proprio_medico(self, client, criar_usuario):
         _, token1 = criar_usuario(email="medico1@teste.local", role="admin")
@@ -70,7 +98,10 @@ class TestListarReceituarios:
 
         r = client.get("/api/receituario", headers={"Authorization": f"Bearer {token2}"})
         assert r.status_code == 200
-        assert r.json() == []
+        payload = r.json()
+        assert payload["items"] == []
+        assert payload["total"] == 0
+        assert payload["has_more"] is False
 
 
 class TestRecriarBaseadoEmAnterior:
@@ -110,6 +141,10 @@ class TestRecriarBaseadoEmAnterior:
         id2 = r.json()["prescricao_id"]
         assert id2 != id1
 
-        lista = client.get("/api/receituario", headers={"Authorization": f"Bearer {token}"}).json()
+        payload = client.get(
+            "/api/receituario", headers={"Authorization": f"Bearer {token}"}
+        ).json()
+        lista = payload["items"]
         assert len(lista) == 2
+        assert payload["total"] == 2
         assert {i["prescricao_id"] for i in lista} == {id1, id2}
