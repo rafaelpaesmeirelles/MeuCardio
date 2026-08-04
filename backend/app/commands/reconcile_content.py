@@ -14,6 +14,7 @@ from __future__ import annotations
 import argparse
 import importlib
 import json
+from collections import Counter
 from pathlib import Path
 from typing import Any
 
@@ -35,99 +36,30 @@ from app.models.study_track import StudyTrack
 from app.services.importer import import_directory
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[3]
-# Os carregadores foram escritos em épocas diferentes e usam nomes distintos
-# para o mesmo evento operacional: um arquivo/item do checkout não entrou no
-# banco. Em deploy, qualquer ocorrência deve bloquear a certificação, mesmo que
-# os registros históricos ainda façam o banco superar o baseline numérico.
 BLOCKING_DIAGNOSTIC_KEYS = frozenset({
-    "avisos",
-    "duplicados_ignorados",
-    "erros",
-    "falhas",
-    "ignoradas",
-    "ignorados",
-    "puladas",
-    "pulados",
-    "recusadas",
-    "recusados",
-    "sem_arquivo",
-    "vazios",
+    "avisos", "duplicados_ignorados", "erros", "falhas", "ignoradas",
+    "ignorados", "puladas", "pulados", "recusadas", "recusados",
+    "sem_arquivo", "vazios",
 })
 
 FRONTS: dict[str, dict[str, Any]] = {
-    "documentos": {
-        "path": settings.content_dir,
-        "model": Document,
-        "minimum": 1077,
-        "loader": None,
-    },
-    "galeria": {
-        "path": "/galeria/metadados.json",
-        "model": GalleryImage,
-        "minimum": 236,
-        "loader": "carregar_galeria",
-    },
-    "exames": {
-        "path": "/exames/metadados.json",
-        "model": LabTest,
-        "minimum": 244,
-        "loader": "carregar_exames",
-    },
-    "evidencias": {
-        "path": "/evidencias/metadados.json",
-        "model": EvidenceRecord,
-        "minimum": 1776,
-        "loader": "carregar_evidencias",
-    },
-    "estudos": {
-        "path": "/estudos/metadados.json",
-        "model": ScientificStudy,
-        "minimum": 383,
-        "loader": "carregar_estudos",
-    },
-    "medicamentos": {
-        "path": "/medicamentos/metadados.json",
-        "model": Drug,
-        "minimum": 114,
-        "loader": "carregar_drugs",
-    },
-    "checklists": {
-        "path": "/checklists/metadados.json",
-        "model": DischargeChecklist,
-        "minimum": 23,
-        "loader": "carregar_checklists",
-    },
-    "trilhas": {
-        "path": "/trilhas/metadados.json",
-        "model": StudyTrack,
-        "minimum": 469,
-        "loader": "carregar_trilhas",
-    },
-    "material_paciente": {
-        "path": "/material-paciente/metadados.json",
-        "model": PatientMaterial,
-        "minimum": 27,
-        "loader": "carregar_material_paciente",
-    },
-    "emergencia": {
-        "path": "/emergencia/metadados.json",
-        "model": EmergencyProtocol,
-        "minimum": 31,
-        "loader": "carregar_emergencia",
-    },
-    "casos_clinicos": {
-        "path": "/casos-clinicos/metadados.json",
-        "model": ClinicalCase,
-        "minimum": 556,
-        "loader": "carregar_casos_clinicos",
-    },
+    "documentos": {"path": settings.content_dir, "model": Document, "minimum": 1077, "loader": None},
+    "galeria": {"path": "/galeria/metadados.json", "model": GalleryImage, "minimum": 236, "loader": "carregar_galeria"},
+    "exames": {"path": "/exames/metadados.json", "model": LabTest, "minimum": 244, "loader": "carregar_exames"},
+    "evidencias": {"path": "/evidencias/metadados.json", "model": EvidenceRecord, "minimum": 1776, "loader": "carregar_evidencias"},
+    "estudos": {"path": "/estudos/metadados.json", "model": ScientificStudy, "minimum": 383, "loader": "carregar_estudos"},
+    "medicamentos": {"path": "/medicamentos/metadados.json", "model": Drug, "minimum": 114, "loader": "carregar_drugs"},
+    "checklists": {"path": "/checklists/metadados.json", "model": DischargeChecklist, "minimum": 23, "loader": "carregar_checklists"},
+    "trilhas": {"path": "/trilhas/metadados.json", "model": StudyTrack, "minimum": 469, "loader": "carregar_trilhas"},
+    "material_paciente": {"path": "/material-paciente/metadados.json", "model": PatientMaterial, "minimum": 27, "loader": "carregar_material_paciente"},
+    "emergencia": {"path": "/emergencia/metadados.json", "model": EmergencyProtocol, "minimum": 31, "loader": "carregar_emergencia"},
+    "casos_clinicos": {"path": "/casos-clinicos/metadados.json", "model": ClinicalCase, "minimum": 556, "loader": "carregar_casos_clinicos"},
 }
 
 SCIENTIFIC_MINIMUM = sum(front["minimum"] for front in FRONTS.values())
 
 
 def _source_path(path: str) -> Path:
-    """Usa o volume absoluto em produção e o checkout do repositório em CI/dev."""
     configured = Path(path)
     if configured.exists():
         return configured
@@ -144,13 +76,48 @@ def _ensure_source(front: str, path: str) -> Path:
     return source
 
 
-def _collect_blocking_diagnostics(value: Any, path: str = "") -> dict[str, Any]:
-    """Coleta diagnósticos bloqueantes inclusive quando aninhados.
+def _validate_manifest_slugs(front: str, source: Path) -> int | None:
+    """Valida os manifestos JSON antes do upsert.
 
-    Alguns carregadores devolvem listas no topo; outros agrupam o resultado por
-    arquivo ou subtipo. A travessia recursiva evita que uma mudança de formato
-    volte a permitir itens ignorados silenciosamente.
+    Carregadores históricos fazem upsert sequencial; dois itens com o mesmo slug
+    sobrescreveriam o mesmo registro sem emitir diagnóstico. A validação também
+    rejeita item não-objeto e slug ausente/vazio. Retorna a quantidade de itens
+    para tornar o inventário-fonte observável no resultado da reconciliação.
     """
+    if source.suffix.lower() != ".json":
+        return None
+
+    data = json.loads(source.read_text(encoding="utf-8"))
+    if not isinstance(data, list):
+        raise RuntimeError(f"Manifesto da frente {front} deve ser uma lista JSON.")
+
+    slugs: list[str] = []
+    invalidos: list[int] = []
+    for index, item in enumerate(data):
+        if not isinstance(item, dict):
+            invalidos.append(index)
+            continue
+        slug = item.get("slug")
+        if not isinstance(slug, str) or not slug.strip():
+            invalidos.append(index)
+            continue
+        slugs.append(slug.strip())
+
+    if invalidos:
+        raise RuntimeError(
+            f"Frente {front} contém itens sem slug válido nos índices: {invalidos}"
+        )
+
+    duplicados = sorted(slug for slug, count in Counter(slugs).items() if count > 1)
+    if duplicados:
+        raise RuntimeError(
+            f"Frente {front} contém slugs duplicados: "
+            + json.dumps(duplicados, ensure_ascii=False)
+        )
+    return len(data)
+
+
+def _collect_blocking_diagnostics(value: Any, path: str = "") -> dict[str, Any]:
     diagnostics: dict[str, Any] = {}
     if isinstance(value, dict):
         for key, item in value.items():
@@ -180,11 +147,14 @@ def _assert_no_rejections(front: str, result: dict[str, Any]) -> None:
 
 def _load_front(front: str, config: dict[str, Any]) -> dict:
     source = _ensure_source(front, str(config["path"]))
+    source_items = _validate_manifest_slugs(front, source)
     if config["loader"] is None:
         result = import_directory(str(source))
     else:
         module = importlib.import_module(f"app.services.{config['loader']}")
         result = module.carregar(str(source))
+    if source_items is not None:
+        result = {**result, "itens_fonte": source_items}
     _assert_no_rejections(front, result)
     return result
 
@@ -222,11 +192,7 @@ def _database_inventory(db: Session) -> dict[str, Any]:
         count = db.query(model).count()
         published = db.query(model).filter(model.published.is_(True)).count()
         minimum = int(config["minimum"])
-        fronts[front] = {
-            "database": count,
-            "published": published,
-            "minimum": minimum,
-        }
+        fronts[front] = {"database": count, "published": published, "minimum": minimum}
         total += count
         published_total += published
         if count < minimum:
@@ -253,11 +219,7 @@ def reconcile(*, publish_reviewed: bool = False, allow_partial: bool = False) ->
     finally:
         db.close()
 
-    result = {
-        "loads": loads,
-        "published_reviewed": published,
-        "database": database,
-    }
+    result = {"loads": loads, "published_reviewed": published, "database": database}
     if database["below_minimum"] and not allow_partial:
         raise RuntimeError(
             "Reconciliação incompleta: "
@@ -268,24 +230,16 @@ def reconcile(*, publish_reviewed: bool = False, allow_partial: bool = False) ->
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument(
-        "--publish-reviewed",
-        action="store_true",
-        help="Publica somente registros com review_status=revisado.",
-    )
-    parser.add_argument(
-        "--allow-partial",
-        action="store_true",
-        help="Não falha quando o banco fica abaixo do baseline versionado.",
-    )
+    parser.add_argument("--publish-reviewed", action="store_true",
+                        help="Publica somente registros com review_status=revisado.")
+    parser.add_argument("--allow-partial", action="store_true",
+                        help="Não falha quando o banco fica abaixo do baseline versionado.")
     args = parser.parse_args()
 
     try:
-        result = reconcile(
-            publish_reviewed=args.publish_reviewed,
-            allow_partial=args.allow_partial,
-        )
-    except Exception as exc:  # noqa: BLE001 - comando precisa sair não-zero com diagnóstico
+        result = reconcile(publish_reviewed=args.publish_reviewed,
+                           allow_partial=args.allow_partial)
+    except Exception as exc:  # noqa: BLE001
         print(json.dumps({"status": "error", "type": type(exc).__name__, "detail": str(exc)},
                          ensure_ascii=False, indent=2))
         return 1
