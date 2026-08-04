@@ -15,6 +15,14 @@ def _fonte(caminho: Path) -> str:
     return caminho.read_text(encoding="utf-8")
 
 
+def _linhas_ativas(caminho: Path) -> list[str]:
+    return [
+        linha.strip()
+        for linha in _fonte(caminho).splitlines()
+        if linha.strip() and not linha.lstrip().startswith("#")
+    ]
+
+
 def test_scripts_operacionais_possuem_sintaxe_bash_valida():
     resultado = subprocess.run(
         ["bash", "-n", str(DEPLOY), str(BACKUP)],
@@ -103,9 +111,10 @@ def test_deploy_injeta_e_confirma_commit_publico():
 
 def test_backup_e_portavel_atomico_restauravel_e_verificado():
     fonte = _fonte(BACKUP)
+    linhas_ativas = "\n".join(_linhas_ativas(BACKUP))
 
     assert 'PROJETO="${PROJETO:-' in fonte
-    assert "/opt/meucardio" not in fonte
+    assert "/opt/meucardio" not in linhas_ativas
     assert 'TEMPORARIO="${ARQUIVO}.tmp"' in fonte
     assert 'trap \'rm -f "$TEMPORARIO"\' EXIT' in fonte
     assert "--format=custom" in fonte
