@@ -53,22 +53,43 @@ def _pdf_receita(db: Session, referencia_id: int) -> tuple[bytes, str]:
 
         dest = db.query(PrescriptionRecipient).filter(
             PrescriptionRecipient.prescription_id == presc.id).first()
-        destinatario = {}
+        destinatario = {"nome": "", "endereco": "", "documento": ""}
         if dest:
             destinatario["nome"] = cofre.decifrar_campo(dest.nome_cifrado, presc.id)
             if dest.endereco_cifrado:
                 destinatario["endereco"] = cofre.decifrar_campo(dest.endereco_cifrado, presc.id)
+            if dest.documento_cifrado:
+                destinatario["documento"] = cofre.decifrar_campo(dest.documento_cifrado, presc.id)
+
+        identidade = document_identity(medico) if medico else {"full_name": ""}
+        endereco = resolver_endereco(medico, doc.endereco_exibido) if medico else None
+        if doc.tipo_codigo == "RCE":
+            from app.services.receita_controle_especial import receita_controle_especial
+
+            identidade = dict(identidade)
+            identidade["cpf"] = medico.cpf if medico else None
+            return receita_controle_especial(
+                destinatario=destinatario,
+                itens=doc.itens,
+                observacoes=presc.notes or "",
+                medico=identidade,
+                endereco_profissional=endereco,
+                data_emissao=doc.emitido_em,
+                cid=doc.cid,
+            )
 
         return receituario_comum(
             destinatario=destinatario, itens=doc.itens, observacoes=presc.notes or "",
-            medico=document_identity(medico) if medico else {"full_name": ""},
-            endereco=resolver_endereco(medico, doc.endereco_exibido) if medico else None,
-            data_emissao=doc.emitido_em,
+            medico=identidade, endereco=endereco, data_emissao=doc.emitido_em,
         )
 
     pdf = assinatura_emissao.servir_ou_regerar(
         db, tipo=assinatura_emissao.TIPO_RECEITA, referencia_id=doc.id, regerar=_regerar)
-    return pdf, f"receituario-{doc.id}.pdf"
+    nome = (
+        f"receita-controle-especial-{doc.id}.pdf"
+        if doc.tipo_codigo == "RCE" else f"receituario-{doc.id}.pdf"
+    )
+    return pdf, nome
 
 
 def _pdf_material_paciente(db: Session, referencia_id: int, criado_por: int) -> tuple[bytes, str]:

@@ -37,3 +37,11 @@ def test_forma_de_tratamento_nao_e_inferida_pelo_conselho():
     profile = _ler("app/services/professional_profile.py")
     assert "professional_title" in profile
     assert 'return f"{title} {name}".strip()' in profile
+
+
+def test_link_publico_preserva_modelo_da_receita_controle_especial():
+    source = _ler("app/api/documentos_publicos.py")
+    assert 'doc.tipo_codigo == "RCE"' in source
+    assert "receita_controle_especial(" in source
+    assert 'identidade["cpf"]' in source
+    assert "cid=doc.cid" in source
