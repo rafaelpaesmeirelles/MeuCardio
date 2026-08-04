@@ -49,10 +49,15 @@ TIPOS = [
     dict(codigo="NRT", nome="Notificação de Receita — talidomida", cor="branca", vias=1,
          exige_numeracao_sncr=True, endpoint_sncr="/numeracoes/notificacao-receita",
          lote_min=10, lote_max=50, exige_retencao=True, ativo=False),
-    # "em duas vias" está no subtítulo da própria lista C1 e C5 — conferido.
+    # Modelo físico Anvisa V2, vigente e obrigatório desde 18/05/2026.
+    # Não contém numeração SNCR. A saída é manual/impressa em duas vias;
+    # emissão eletrônica permanece bloqueada até a integração oficial.
     dict(codigo="RCE", nome="Receita de Controle Especial", cor="branca", vias=2,
-         exige_numeracao_sncr=True, endpoint_sncr="/numeracoes/receita-especial-retencao",
-         lote_min=1000, lote_max=1000, exige_retencao=True, ativo=False),
+         destinacao_vias=["1ª via - Retenção pela Farmácia", "2ª via - Paciente"],
+         validade_dias=30, exige_numeracao_sncr=False, endpoint_sncr=None,
+         lote_min=None, lote_max=None, exige_retencao=True,
+         campos_obrigatorios=["emitente", "paciente_nome", "paciente_documento",
+                              "prescricao", "data", "assinatura"], ativo=True),
     dict(codigo="RET", nome="Receita sujeita a retenção", cor="branca", vias=2,
          exige_numeracao_sncr=True, endpoint_sncr="/numeracoes/receita-especial-retencao",
          lote_min=1000, lote_max=1000, exige_retencao=True, ativo=False),

@@ -85,6 +85,7 @@ class ReceituarioIn(BaseModel):
     destinatario: DestinatarioIn
     itens: list[ItemIn] = Field(min_length=1)
     observacoes: str = ""
+    cid: str | None = Field(default=None, max_length=10)
 
 
 class RevisaoIn(BaseModel):
@@ -149,6 +150,7 @@ def _doc_json(doc: PrescriptionDocument, tipo: PrescriptionType | None) -> dict:
         "classificacao_corrigida_de": doc.classificacao_corrigida_de,
         "motivo_correcao": doc.motivo_correcao,
         "fonte_versao_listas": doc.fonte_versao_listas,
+        "cid": doc.cid,
     }
 
 
@@ -229,6 +231,7 @@ def criar(dados: ReceituarioIn, db: Session = Depends(get_db), user=Depends(curr
                     "lista": i.lista}
                    for i in plano.itens],
             pendencias=plano.pendencias, fonte_versao_listas=versao,
+            cid=(dados.cid or "").strip() or None,
         )
         db.add(doc)
         criados.append(doc)
@@ -372,14 +375,11 @@ class EmitirIn(BaseModel):
 @router.post("/documentos/{documento_id}/emitir")
 def emitir(documento_id: int, dados: EmitirIn = EmitirIn(), db: Session = Depends(get_db),
           user=Depends(current_user)):
-    """Recusa e explica, em vez de simular.
+    """Emite receituário comum ou RCE física; demais tipos continuam fail-closed.
 
-    Emitir exige o tipo ligado e, se o tipo exigir, numeração do SNCR — as
-    duas ainda pendentes para tudo que não é receituário comum. Assinatura
-    digital (Tarefa 4) já é uma escolha real: `dados.metodo` no catálogo de
-    `services/assinatura/catalogo.py`, com "MANUAL" (carimbo e assinatura do
-    próprio punho) sendo o único que funciona hoje — qualquer outro método
-    recusa aqui, com motivo, exatamente como SNCR/RCE.
+    A Receita de Controle Especial usa o modelo físico Anvisa V2 e somente o
+    método MANUAL, para impressão e assinatura de próprio punho. Notificações
+    A/B/B2, retinoides e talidomida permanecem bloqueadas sem numeração oficial.
     """
     doc = db.get(PrescriptionDocument, documento_id)
     if not doc:
@@ -388,83 +388,139 @@ def emitir(documento_id: int, dados: EmitirIn = EmitirIn(), db: Session = Depend
     if not presc or presc.created_by != user.id:
         raise HTTPException(status_code=404, detail="Documento não encontrado.")
 
+    if dados.endereco not in (None, "residencial", "profissional"):
+        raise HTTPException(
+            status_code=422,
+            detail="endereco precisa ser 'residencial', 'profissional' ou omitido.",
+        )
+
     try:
         provedor, info_metodo = assinatura_emissao.preparar(dados.metodo)
     except assinatura_emissao.MetodoInvalido as e:
         raise HTTPException(status_code=422, detail=str(e)) from e
 
     tipo = _tipos(db).get(doc.tipo_codigo)
-    bloqueios = []
+    bloqueios: list[str] = []
     if doc.status != "revisado":
         bloqueios.append("O documento precisa ser revisado antes de emitido.")
-    if not tipo or not tipo.ativo:
+    if not tipo:
+        bloqueios.append(f"Tipo de receita desconhecido: {doc.tipo_codigo}.")
+    elif not tipo.ativo:
         bloqueios.append(
-            f"O tipo {doc.tipo_codigo} está desligado: depende da integração com o "
-            f"SNCR, que a Anvisa disponibiliza até 30/09/2026, e do layout oficial "
-            f"(fixo, publicado pela Anvisa) ainda não reproduzido. Não depende mais "
-            f"da assinatura digital — o método MANUAL já funciona para qualquer tipo."
+            f"O tipo {doc.tipo_codigo} permanece indisponível sem numeração oficial "
+            "ou integração SNCR aplicável; nenhum número será simulado."
         )
     if tipo and tipo.exige_numeracao_sncr and not doc.numeracao:
         bloqueios.append(
-            "Este tipo exige numeração do SNCR, e o prescritor precisa estar "
-            "cadastrado no sistema da Anvisa para obtê-la."
+            "Este tipo exige numeração oficial do SNCR/Vigilância Sanitária; "
+            "nenhuma numeração foi atribuída ao documento."
         )
+    if doc.tipo_codigo not in {"COMUM", "RCE"}:
+        bloqueios.append(
+            "A geração deste modelo numerado só será liberada após integração "
+            "oficial e validação do número atribuído ao prescritor."
+        )
+    if doc.tipo_codigo == "RCE" and dados.metodo != "MANUAL":
+        bloqueios.append(
+            "A RCE disponível nesta etapa é o modelo físico para impressão e "
+            "assinatura manual. A emissão eletrônica aguarda o SNCR."
+        )
+
     disponivel, motivo_indisponivel = provedor.disponivel()
     if not disponivel:
         bloqueios.append(motivo_indisponivel)
-    if bloqueios:
-        raise HTTPException(status_code=409, detail={
-            "erro": "Emissão indisponível.", "bloqueios": bloqueios,
-            "nada_foi_simulado": True,
-        })
-
-    # Só o receituário comum é desenhado. Notificação de Receita e Receita de
-    # Controle Especial têm modelo oficial de layout fixo publicado pela Anvisa,
-    # e reproduzi-lo de memória geraria formulário parecido e inválido.
-    if doc.tipo_codigo != "COMUM":
-        raise HTTPException(status_code=501, detail={
-            "erro": f"O modelo oficial do tipo {doc.tipo_codigo} ainda não foi reproduzido.",
-            "motivo": "Layout fixo publicado pela Anvisa; desenhar de memória "
-                      "produziria documento inválido com aparência de válido.",
-        })
-
-    if dados.endereco not in (None, "residencial", "profissional"):
-        raise HTTPException(status_code=422, detail="endereco precisa ser 'residencial', 'profissional' ou omitido.")
 
     from app.services.pdf_documento import receituario_comum, resolver_endereco
 
     dest = db.query(PrescriptionRecipient).filter(
         PrescriptionRecipient.prescription_id == presc.id).first()
-    destinatario = {}
+    destinatario = {"nome": "", "endereco": "", "documento": ""}
     if dest:
         destinatario["nome"] = cofre.decifrar_campo(dest.nome_cifrado, presc.id)
         if dest.endereco_cifrado:
             destinatario["endereco"] = cofre.decifrar_campo(dest.endereco_cifrado, presc.id)
+        if dest.documento_cifrado:
+            destinatario["documento"] = cofre.decifrar_campo(dest.documento_cifrado, presc.id)
 
-    endereco_medico = resolver_endereco(user, dados.endereco)
+    endereco_medico = resolver_endereco(
+        user, "profissional" if doc.tipo_codigo == "RCE" else dados.endereco
+    )
     medico = document_identity(user)
     data_emissao = datetime.now(timezone.utc)
-    pdf_visual = receituario_comum(
-        destinatario=destinatario, itens=doc.itens, observacoes=presc.notes or "",
-        medico=medico, endereco=endereco_medico, data_emissao=data_emissao,
-        metodo_assinatura=dados.metodo, provedor_nome=info_metodo.nome,
-    )
+
+    if doc.tipo_codigo == "RCE":
+        from app.services.receita_controle_especial import (
+            MODELO_VERSAO, receita_controle_especial, validar_requisitos_rce,
+        )
+        medico_rce = dict(medico)
+        medico_rce["cpf"] = user.cpf
+        requisitos = validar_requisitos_rce(
+            medico=medico_rce, destinatario=destinatario, itens=doc.itens,
+            endereco_profissional=endereco_medico, cid=doc.cid,
+        )
+        bloqueios.extend(requisitos)
+    else:
+        MODELO_VERSAO = "CORVIA-RECEITUARIO-COMUM"
+        medico_rce = medico
+
+    if bloqueios:
+        raise HTTPException(status_code=409, detail={
+            "erro": "Emissão indisponível.",
+            "bloqueios": list(dict.fromkeys(bloqueios)),
+            "nada_foi_simulado": True,
+        })
+
+    if doc.tipo_codigo == "RCE":
+        try:
+            pdf_visual = receita_controle_especial(
+                destinatario=destinatario, itens=doc.itens,
+                observacoes=presc.notes or "", medico=medico_rce,
+                endereco_profissional=endereco_medico,
+                data_emissao=data_emissao, cid=doc.cid,
+            )
+        except ValueError as e:
+            raise HTTPException(status_code=409, detail={
+                "erro": "RCE incompleta.", "bloqueios": str(e).split(" | "),
+                "nada_foi_simulado": True,
+            }) from e
+    else:
+        pdf_visual = receituario_comum(
+            destinatario=destinatario, itens=doc.itens,
+            observacoes=presc.notes or "", medico=medico,
+            endereco=endereco_medico, data_emissao=data_emissao,
+            metodo_assinatura=dados.metodo, provedor_nome=info_metodo.nome,
+        )
+
     emitido = assinatura_emissao.assinar_e_persistir(
-        db, tipo=assinatura_emissao.TIPO_RECEITA, referencia_id=doc.id, metodo=dados.metodo,
-        provedor=provedor, info=info_metodo, pdf_visual=pdf_visual, medico=medico,
+        db, tipo=assinatura_emissao.TIPO_RECEITA, referencia_id=doc.id,
+        metodo=dados.metodo, provedor=provedor, info=info_metodo,
+        pdf_visual=pdf_visual, medico=medico_rce,
         criado_por=user.id, data_emissao=data_emissao,
     )
 
     doc.status = "emitido"
     doc.emitido_em = data_emissao
-    doc.endereco_exibido = dados.endereco if endereco_medico else None
-    db.add(AuditLog(user_id=user.id, action="emitir_documento_receita",
-                    entity="prescription_document", entity_id=str(doc.id),
-                    detail={"tipo": doc.tipo_codigo, "bytes": len(emitido.pdf),
-                            "metodo": dados.metodo, "sha256": emitido.registro.sha256}))
+    doc.endereco_exibido = "profissional" if doc.tipo_codigo == "RCE" else (
+        dados.endereco if endereco_medico else None
+    )
+    db.add(AuditLog(
+        user_id=user.id, action="emitir_documento_receita",
+        entity="prescription_document", entity_id=str(doc.id),
+        detail={
+            "tipo": doc.tipo_codigo, "bytes": len(emitido.pdf),
+            "metodo": dados.metodo, "sha256": emitido.registro.sha256,
+            "modelo": MODELO_VERSAO,
+            "lista_c5": any(str(i.get("lista") or "").upper() == "C5" for i in doc.itens),
+        },
+    ))
     db.commit()
+    nome_arquivo = (
+        f"receita-controle-especial-{doc.id}.pdf"
+        if doc.tipo_codigo == "RCE" else f"receituario-{doc.id}.pdf"
+    )
     return Response(content=emitido.pdf, media_type="application/pdf", headers={
-        "Content-Disposition": f'inline; filename="receituario-{doc.id}.pdf"'})
+        "Content-Disposition": f'inline; filename="{nome_arquivo}"',
+    })
 
 
 class EnviarEmailIn(BaseModel):

@@ -197,3 +197,11 @@ O histórico de atestados, laudos e demais documentos deve:
 - isolamento entre usuários;
 - PDFs reais começam com `%PDF` e terminam com `%%EOF`;
 - frontend build e suíte completa.
+
+
+## Estado de implementação regulatória — 04/08/2026
+
+- RCE física no modelo Anvisa V2: implementada em duas vias, frente e verso.
+- Lista C5: validação obrigatória de CRM/CRO, CPF do prescritor, endereço e telefone profissionais, endereço do paciente e CID.
+- NRA, NRB, NRB2, NRR, NRT e RET: permanecem fail-closed sem numeração oficial/integração aplicável; nenhum número é simulado.
+- Emissão RCE disponível somente como documento físico com assinatura manual enquanto as funcionalidades eletrônicas do SNCR não estiverem integradas.

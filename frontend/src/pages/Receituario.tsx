@@ -39,7 +39,7 @@ type Documento = {
   vias: number | null; exige_retencao: boolean | null; tipo_ativo: boolean;
   numeracao: string | null; status: string; itens: any[]; pendencias: string[];
   classificacao_corrigida_de: string | null; motivo_correcao: string | null;
-  fonte_versao_listas: string | null;
+  fonte_versao_listas: string | null; cid: string | null;
 };
 type ReceituarioCriado = { prescricao_id: number; exige_revisao: boolean; documentos: Documento[] };
 
@@ -108,6 +108,7 @@ function CartaoDocumento({ doc, provedores, tipos, onAtualizado }: {
   const [email, setEmail] = useState("");
   const [enviando, setEnviando] = useState(false);
   const [resultadoEnvio, setResultadoEnvio] = useState<{ enviado: boolean; link: string | null } | null>(null);
+  const temC5 = doc.itens.some((item) => String(item.lista ?? "").toUpperCase() === "C5");
 
   async function revisar() {
     setRevisando(true);
@@ -183,9 +184,20 @@ function CartaoDocumento({ doc, provedores, tipos, onAtualizado }: {
 
       {!doc.tipo_ativo && (
         <p style={{ fontSize: "0.86rem", marginTop: "0.4rem" }}>
-          Este tipo depende da integração com o SNCR (Anvisa, previsto até 30/09/2026) e do layout
-          oficial ainda não reproduzido — ainda não pode ser emitido. A assinatura digital (manual)
-          já funciona para qualquer tipo, não é mais o que falta aqui.
+          Este modelo exige numeração oficial ou integração SNCR. O sistema não simula número,
+          talonário ou autorização; a emissão permanece bloqueada até o requisito existir.
+        </p>
+      )}
+      {doc.tipo === "RCE" && (
+        <p style={{ fontSize: "0.86rem", marginTop: "0.4rem" }}>
+          Modelo físico Anvisa V2: serão geradas duas vias, cada uma com frente e verso,
+          para impressão e assinatura manual.
+        </p>
+      )}
+      {temC5 && (
+        <p style={{ color: "var(--alerta)", fontSize: "0.84rem", marginTop: "0.4rem" }}>
+          Lista C5: emissão somente por CRM/CRO e com CPF do prescritor, endereço e telefone
+          profissionais, endereço do paciente e CID preenchidos.
         </p>
       )}
 
@@ -199,15 +211,24 @@ function CartaoDocumento({ doc, provedores, tipos, onAtualizado }: {
 
       {doc.status === "revisado" && doc.tipo_ativo && (
         <div style={{ marginTop: "0.6rem" }}>
-          <label>Endereço no cabeçalho/rodapé (opcional)</label>
-          <select value={endereco} onChange={(e) => setEndereco(e.target.value as typeof endereco)}>
-            <option value="">Nenhum</option>
-            <option value="profissional">Profissional (consultório)</option>
-            <option value="residencial">Residencial</option>
-          </select>
-          <p className="eyebrow" style={{ margin: "0.3rem 0 0" }}>
-            Preencha em Minha Conta antes, se ainda não tiver cadastrado.
-          </p>
+          {doc.tipo === "RCE" ? (
+            <p className="eyebrow" style={{ margin: "0.3rem 0" }}>
+              A RCE usa automaticamente o endereço profissional cadastrado. Para Lista C5,
+              endereço e telefone profissionais são obrigatórios.
+            </p>
+          ) : (
+            <>
+              <label>Endereço no cabeçalho/rodapé (opcional)</label>
+              <select value={endereco} onChange={(e) => setEndereco(e.target.value as typeof endereco)}>
+                <option value="">Nenhum</option>
+                <option value="profissional">Profissional (consultório)</option>
+                <option value="residencial">Residencial</option>
+              </select>
+              <p className="eyebrow" style={{ margin: "0.3rem 0 0" }}>
+                Preencha em Minha Conta antes, se ainda não tiver cadastrado.
+              </p>
+            </>
+          )}
 
           <label style={{ marginTop: "0.5rem" }}>Método de assinatura</label>
           <select value={metodo} onChange={(e) => setMetodo(e.target.value)}>
@@ -370,6 +391,7 @@ export default function Receituario() {
   const [nome, setNome] = useState("");
   const [endereco, setEndereco] = useState("");
   const [documento, setDocumento] = useState("");
+  const [cid, setCid] = useState("");
   const [observacoes, setObservacoes] = useState("");
   const [itens, setItens] = useState<Item[]>([{ ...ITEM_VAZIO }]);
   const [buscaFarmaco, setBuscaFarmaco] = useState<string[]>([""]);
@@ -457,6 +479,7 @@ export default function Receituario() {
       pmc_snapshot: it.pmc_snapshot, uf: it.uf, cmed_version: it.cmed_version,
     })),
     observacoes,
+    cid: cid.trim() || undefined,
   };
   const podeEnviar = nome.trim().length >= 3 && itensValidos.length > 0;
 
@@ -511,6 +534,7 @@ export default function Receituario() {
     setNome(d.destinatario.nome ?? "");
     setEndereco(d.destinatario.endereco ?? "");
     setDocumento(d.destinatario.documento ?? "");
+    setCid(d.documentos.find((doc) => doc.cid)?.cid ?? "");
     setObservacoes(d.observacoes ?? "");
     // Marca/preço NÃO são carregados daqui de propósito: pmc_snapshot é o
     // preço no momento em que a receita ORIGINAL foi feita, e a lista da
@@ -556,8 +580,15 @@ export default function Receituario() {
           <input value={nome} onChange={(e) => setNome(e.target.value)} />
           <label style={{ marginTop: "0.5rem" }}>Endereço (opcional)</label>
           <input value={endereco} onChange={(e) => setEndereco(e.target.value)} />
-          <label style={{ marginTop: "0.5rem" }}>Documento — RG/CPF (opcional)</label>
+          <label style={{ marginTop: "0.5rem" }}>CPF ou passaporte do paciente</label>
           <input value={documento} onChange={(e) => setDocumento(e.target.value)} />
+          <label style={{ marginTop: "0.5rem" }}>CID (obrigatório para anabolizantes/Lista C5)</label>
+          <input value={cid} onChange={(e) => setCid(e.target.value.toUpperCase())}
+                 placeholder="Ex.: E29.1" maxLength={10} />
+          <p className="eyebrow" style={{ margin: "0.3rem 0 0" }}>
+            Para Lista C5, também são obrigatórios endereço do paciente, CPF do prescritor,
+            endereço e telefone profissionais. A emissão é restrita a CRM ou CRO.
+          </p>
 
           <p className="eyebrow" style={{ margin: "1rem 0 0" }}>Itens da receita</p>
           {itens.map((it, i) => (
@@ -720,7 +751,7 @@ export default function Receituario() {
             <CartaoDocumento key={d.id} doc={d} provedores={provedores} tipos={tipos} onAtualizado={atualizarDocumento} />
           ))}
           <button className="botao botao--secundario" style={{ marginTop: "1rem" }}
-                  onClick={() => { setCriado(null); setItens([{ ...ITEM_VAZIO }]); setBuscaFarmaco([""]); setNome(""); setPrevia(null); }}>
+                  onClick={() => { setCriado(null); setItens([{ ...ITEM_VAZIO }]); setBuscaFarmaco([""]); setNome(""); setEndereco(""); setDocumento(""); setCid(""); setPrevia(null); }}>
             Criar outra receita
           </button>
         </div>
