@@ -1,4 +1,5 @@
 import logging
+import os
 
 from fastapi import APIRouter, HTTPException
 from redis import Redis
@@ -16,6 +17,12 @@ logger = logging.getLogger("corvia.health")
 def health() -> dict[str, str]:
     """Liveness: confirma que o processo HTTP está respondendo."""
     return {"status": "ok"}
+
+
+@router.get("/version")
+def version() -> dict[str, str]:
+    """Identifica o commit injetado pelo deploy, sem expor configuração sensível."""
+    return {"commit": os.getenv("DEPLOY_COMMIT", "unknown")}
 
 
 @router.get("/ready")
