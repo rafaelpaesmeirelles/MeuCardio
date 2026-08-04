@@ -11,7 +11,8 @@ Este documento marca o SHA submetido à certificação integral antes da integra
 - local de trabalho opcional nos documentos;
 - contraste automático de logo claro/transparente;
 - identidade e logo em receitas, atestados, laudos, documentos públicos e materiais ao paciente;
-- histórico pesquisável e filtrável por paciente e tipo;
+- históricos de receitas, laudos, atestados e documentos agrupados por paciente, pesquisáveis por nome parcial e filtráveis por tipo;
+- recriação de documentos preservando o nome do paciente;
 - Receita de Controle Especial física Anvisa V2 em duas vias, frente e verso;
 - identificação do emitente, endereço profissional completo, nome/endereço/documento do paciente e data recomendada de impressão na RCE;
 - quantidade de cada item em algarismos e por extenso, conforme Portaria SVS/MS nº 344/1998;
