@@ -39,6 +39,7 @@ EXPECTED_NAV_ROUTES = {
     "/exames", "/favoritos", "/fluxogramas", "/galeria", "/telediagnostico",
     "/material-paciente", "/medicamentos", "/indicadores", "/receituario",
     "/round", "/trilhas", "/usuarios-online", "/minha-conta", "/admin",
+    "/fila-telediagnostico",
 }
 
 EXPECTED_BACKEND_ROUTERS = {
@@ -122,7 +123,7 @@ def main() -> int:
     assert_exact("Destinos de navegação", nav_paths, EXPECTED_NAV_ROUTES)
 
     backend_routers = set(
-        re.findall(r"\b([a-z_]+\.(?:router|router_ws))\b", main_source)
+        re.findall(r"\b([a-z0-9_]+\.(?:router|router_ws))\b", main_source)
     )
     assert_exact("Routers FastAPI", backend_routers, EXPECTED_BACKEND_ROUTERS)
 
