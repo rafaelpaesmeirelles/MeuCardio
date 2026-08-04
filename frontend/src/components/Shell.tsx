@@ -69,7 +69,13 @@ export default function Shell() {
   };
 
   const nav: ItemNav[] = usuario?.role === "admin"
-    ? [PAINEL, ...NAV_BASE, INDICADORES, ADMIN, CONTA]
+    ? [
+        PAINEL,
+        ...NAV_BASE,
+        INDICADORES,
+        ADMIN,
+        CONTA,
+      ]
     : [PAINEL, ...NAV_BASE, INDICADORES, CONTA];
 
   return (
