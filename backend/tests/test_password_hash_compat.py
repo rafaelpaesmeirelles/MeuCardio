@@ -38,9 +38,14 @@ def test_hash_invalido_retorna_falso_sem_excecao():
 
 def test_passlib_nao_permanece_no_codigo_ou_dependencias():
     backend = Path(__file__).resolve().parents[1]
-    requisitos = (backend / "requirements.txt").read_text(encoding="utf-8").lower()
+    linhas = (backend / "requirements.txt").read_text(encoding="utf-8").splitlines()
+    requisitos_ativos = [
+        linha.strip().lower()
+        for linha in linhas
+        if linha.strip() and not linha.lstrip().startswith("#")
+    ]
     seguranca = (backend / "app/core/security.py").read_text(encoding="utf-8").lower()
 
-    assert "passlib" not in requisitos
+    assert not any(requisito.startswith("passlib") for requisito in requisitos_ativos)
     assert "from passlib" not in seguranca
     assert "import passlib" not in seguranca
