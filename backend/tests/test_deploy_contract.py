@@ -39,18 +39,34 @@ def test_deploy_exige_readiness_antes_de_migrar_e_reconciliar():
     fonte = _fonte(DEPLOY)
     assert "BACKEND_PRONTO=0" in fonte
     assert "http://localhost:8000/api/ready" in fonte
-    assert 'if [[ "$BACKEND_PRONTO" != "1" ]]' in fonte
-    assert "mostrar_diagnostico" in fonte
+    assert "tráfego permanecerá fechado" in fonte
     assert fonte.index("BACKEND_PRONTO=0") < fonte.index("python -m app.commands.migrate")
     assert fonte.index("python -m app.commands.migrate") < fonte.index(
         "python -m app.commands.reconcile_content --publish-reviewed"
     )
 
 
+def test_deploy_constroi_antes_da_indisponibilidade_e_abre_proxy_por_ultimo():
+    fonte = _fonte(DEPLOY)
+    indice_build = fonte.index('"${COMPOSE[@]}" build backend frontend-build')
+    indice_stop_caddy = fonte.index("parar_servico_se_existir caddy", indice_build)
+    indice_up_privado = fonte.index(
+        '"${COMPOSE[@]}" up -d --no-build --remove-orphans db redis backend frontend-build'
+    )
+    indice_reconcile = fonte.index("python -m app.commands.reconcile_content --publish-reviewed")
+    indice_up_caddy = fonte.index('"${COMPOSE[@]}" up -d --no-build caddy')
+
+    assert indice_build < indice_stop_caddy < indice_up_privado < indice_reconcile < indice_up_caddy
+    assert 'up -d --build --remove-orphans' not in fonte
+    assert "Abrindo o proxy somente após banco, corpus e build estarem certificados" in fonte
+
+
 def test_deploy_diagnostica_falhas_inesperadas_apos_subir_servicos():
     fonte = _fonte(DEPLOY)
     linhas = [linha.strip() for linha in fonte.splitlines()]
-    linha_up = linhas.index('"${COMPOSE[@]}" up -d --build --remove-orphans')
+    linha_up = linhas.index(
+        '"${COMPOSE[@]}" up -d --no-build --remove-orphans db redis backend frontend-build'
+    )
     inicios = [i for i, linha in enumerate(linhas) if linha == "SERVICOS_INICIADOS=1"]
     assert "diagnosticar_erro()" in fonte
     assert "trap diagnosticar_erro ERR" in fonte
@@ -58,7 +74,24 @@ def test_deploy_diagnostica_falhas_inesperadas_apos_subir_servicos():
     assert any(inicio < linha_up for inicio in inicios)
 
 
-def test_deploy_preserva_banco_persistente_mesmo_parado_e_falha_fechado():
+def test_deploy_restaura_dump_se_fase_mutavel_falhar():
+    fonte = _fonte(DEPLOY)
+    indice_rollback_on = fonte.index("ROLLBACK_NECESSARIO=1")
+    indice_migrate = fonte.index("python -m app.commands.migrate")
+    indice_reconcile = fonte.index("python -m app.commands.reconcile_content --publish-reviewed")
+    indice_rollback_off = fonte.index("ROLLBACK_NECESSARIO=0", indice_reconcile)
+
+    assert indice_rollback_on < indice_migrate < indice_reconcile < indice_rollback_off
+    assert "restaurar_backup_pre_deploy()" in fonte
+    assert "RESTAURACAO_AUTOMATICA=1" in fonte
+    assert "RESTAURACAO_SEM_RELIGAR=1" in fonte
+    assert 'CONFIRM_RESTORE_TARGET="$POSTGRES_DB"' in fonte
+    assert 'bash ./infra/backup/restaurar.sh "$BACKUP_PRE_DEPLOY"' in fonte
+    assert "aplicação permanecerá parada; não há dump para restaurar" in fonte
+    assert "rollback automático também falhou" in fonte
+
+
+def test_deploy_preserva_banco_persistente_mesmo_parado_e_sem_labels():
     fonte = _fonte(DEPLOY)
     linhas_ativas = "\n".join(_linhas_ativas(DEPLOY))
     assert "BANCO_PERSISTENTE=0" in fonte
@@ -66,9 +99,11 @@ def test_deploy_preserva_banco_persistente_mesmo_parado_e_falha_fechado():
     assert 'container_id="$("${COMPOSE[@]}" ps -a -q db)"' in fonte
     assert 'ps -a -q db 2>/dev/null || true' not in linhas_ativas
     assert "label=com.docker.compose.volume=pgdata" in fonte
-    assert "detectar_banco_persistente\nif [[ \"$BANCO_PERSISTENTE\" == \"1\" ]]" in fonte
+    assert 'volume_deterministico="${projeto}_pgdata"' in fonte
+    assert 'grep -Fxq "$volume_deterministico"' in fonte
     assert '"${COMPOSE[@]}" up -d --no-deps db' in fonte
     assert 'PROJETO="$PWD" bash ./infra/backup/backup.sh' in fonte
+    assert 'BACKUP_PRE_DEPLOY="$(tail -n 1 "$BACKUP_LOG")"' in fonte
 
 
 def test_deploy_nao_volta_ao_importador_parcial():
@@ -78,19 +113,25 @@ def test_deploy_nao_volta_ao_importador_parcial():
     assert "python -m app.commands.reconcile_content --publish-reviewed" in fonte
 
 
-def test_deploy_faz_backup_e_exige_https_publico():
+def test_deploy_exige_https_publico_e_fecha_proxy_se_certificacao_falhar():
     fonte = _fonte(DEPLOY)
     assert 'https://${DOMAIN}/api/ready' in fonte
     assert "PUBLICO_PRONTO=0" in fonte
-    assert "--build --remove-orphans" in fonte
-    assert "git rev-parse --verify HEAD" in fonte
+    assert "TRAFEGO_ABERTO=1" in fonte
+    assert "Falha durante a certificação pública; fechando o proxy" in fonte
+    assert 'https://${DOMAIN}/api/version' in fonte
 
 
-def test_deploy_exige_checkout_limpo_e_ferramentas_do_host():
+def test_deploy_bloqueia_concorrencia_e_revalida_checkout():
     fonte = _fonte(DEPLOY)
     assert "git status --porcelain --untracked-files=normal" in fonte
-    assert "checkout contém alterações não versionadas" in fonte
-    assert "for comando in git curl getent sha256sum" in fonte
+    assert 'exec 9>"${GIT_DIR}/corvia-deploy.lock"' in fonte
+    assert "flock -n 9" in fonte
+    assert "Outro deploy já está em execução" in fonte
+    assert "ARVORE_ATUAL" in fonte
+    assert "O checkout mudou durante o deploy" in fonte
+    assert fonte.count("validar_checkout_imutavel") >= 5
+    assert "for comando in git curl getent sha256sum flock mktemp tail tee grep" in fonte
 
 
 def test_contextos_docker_excluem_artefatos_ignorados_locais():
@@ -159,11 +200,21 @@ def test_restaurador_so_apaga_depois_de_parar_backend_existente():
         for i, linha in enumerate(linhas[indice_stop + 1 :], indice_stop + 1)
         if " exec -T db dropdb " in f" {linha} "
     )
-
     assert indice_container < indice_stop < indice_drop
     fonte = _fonte(RESTORE)
     assert 'ps -a -q backend 2>/dev/null || true' not in fonte
     assert 'stop backend >/dev/null 2>&1 || true' not in fonte
+
+
+def test_restaurador_suporta_rollback_automatico_sem_reabrir_backend():
+    fonte = _fonte(RESTORE)
+    assert 'MODO_AUTOMATICO="${RESTAURACAO_AUTOMATICA:-0}"' in fonte
+    assert 'SEM_RELIGAR="${RESTAURACAO_SEM_RELIGAR:-0}"' in fonte
+    assert 'CONFIRM_RESTORE_TARGET' in fonte
+    assert "Confirmação automática divergente" in fonte
+    assert 'if [[ "$SEM_RELIGAR" == "1" ]]' in fonte
+    assert "Backend e tráfego permanecem parados" in fonte
+    assert fonte.index('if [[ "$SEM_RELIGAR" == "1" ]]') < fonte.index("BACKEND_RELIGADO=1")
 
 
 def test_restaurador_para_backend_novamente_se_readiness_final_falhar():
