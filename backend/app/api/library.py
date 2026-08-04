@@ -2,6 +2,7 @@ from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
+from app.commands.reconcile_content import SCIENTIFIC_MINIMUM
 from app.core.db import get_db
 from app.core.security import current_user, require_admin
 from app.models.checklist import DischargeChecklist
@@ -18,10 +19,10 @@ from app.models.study_track import StudyTrack
 
 router = APIRouter(prefix="/api/library", tags=["biblioteca"])
 
-# Baselines certificados pelo inventário e pela reconciliação do corpus. Eles
-# não substituem a contagem real do PostgreSQL: servem para tornar qualquer
-# redução de produção visível imediatamente no painel e nas verificações.
-SCIENTIFIC_CORPUS_MINIMUM = 4_936
+# O mínimo vem da mesma fonte usada pelo reconciliador operacional. O número de
+# arquivos físicos é certificado pelo inventário versionado e não é inferido das
+# tabelas, que representam registros científicos, não arquivos do filesystem.
+SCIENTIFIC_CORPUS_MINIMUM = SCIENTIFIC_MINIMUM
 SCIENTIFIC_FILES_EXPECTED = 1_327
 
 CATALOG_FRONTS = (
@@ -58,23 +59,35 @@ def _card(d: Document) -> dict:
 
 @router.get("/catalog")
 def catalog(db: Session = Depends(get_db), _=Depends(current_user)):
-    """Resumo canônico do conteúdo científico realmente publicado.
+    """Resumo canônico das 11 frentes científicas.
 
-    A tela antiga chamava apenas ``documents`` ou somava ``themes`` e dava a
-    impressão de que a biblioteca inteira tinha o tamanho daquela única tabela.
-    O catálogo soma as 11 frentes publicadas e também compara o resultado com o
-    baseline certificado, permitindo detectar banco incompleto ou deploy antigo.
+    ``total`` permanece sendo a quantidade publicada, preservando o contrato da
+    Biblioteca. ``inventory_total`` mede todos os registros existentes no banco
+    e é comparado ao baseline do reconciliador. Essa separação evita confundir
+    conteúdo preservado/em revisão com conteúdo já liberado ao assinante.
     """
     fronts = []
-    total = 0
+    published_total = 0
+    inventory_total = 0
     for key, label, route, model in CATALOG_FRONTS:
-        count = db.query(model).filter(model.published.is_(True)).count()
-        total += count
-        fronts.append({"key": key, "label": label, "route": route, "count": count})
+        inventory_count = db.query(model).count()
+        published_count = db.query(model).filter(model.published.is_(True)).count()
+        inventory_total += inventory_count
+        published_total += published_count
+        fronts.append({
+            "key": key,
+            "label": label,
+            "route": route,
+            "count": published_count,
+            "inventory_count": inventory_count,
+        })
 
-    missing = max(SCIENTIFIC_CORPUS_MINIMUM - total, 0)
+    missing = max(SCIENTIFIC_CORPUS_MINIMUM - inventory_total, 0)
     return {
-        "total": total,
+        "total": published_total,
+        "published_total": published_total,
+        "inventory_total": inventory_total,
+        "unpublished": max(inventory_total - published_total, 0),
         "fronts": fronts,
         "expected_minimum": SCIENTIFIC_CORPUS_MINIMUM,
         "physical_files_expected": SCIENTIFIC_FILES_EXPECTED,
