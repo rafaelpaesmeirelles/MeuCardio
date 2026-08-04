@@ -34,7 +34,7 @@ from app.models.lab_test import LabTest
 from app.models.patient_material import PatientMaterial
 from app.models.study import ScientificStudy
 from app.models.study_track import StudyTrack
-from app.services.importer import _slugify, import_directory
+from app.services.importer import _resolve_markdown_slug, import_directory
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[3]
 BLOCKING_DIAGNOSTIC_KEYS = frozenset({
@@ -125,20 +125,16 @@ def _manifest_slugs(front: str, source: Path) -> set[str] | None:
 
 
 def _markdown_slugs(front: str, source: Path) -> set[str]:
-    """Obtém os mesmos slugs que o importador gera para os Markdown."""
+    """Usa exatamente a mesma resolução de slug do importador Markdown."""
     slugs: list[str] = []
     for md in sorted(source.rglob("*.md")):
         post = frontmatter.load(md)
-        meta = post.metadata
-        title = meta.get("title") or md.stem
-        explicit_slug = meta.get("slug")
-        slug = explicit_slug or _slugify(title)
-        if not isinstance(slug, str) or not slug.strip():
-            raise RuntimeError(f"Frente {front} contém Markdown sem slug válido: {md}")
-        if explicit_slug is not None and slug != slug.strip():
-            raise RuntimeError(
-                f"Frente {front} contém Markdown com slug com espaços nas extremidades: {md}"
-            )
+        title = post.metadata.get("title") or md.stem
+        slug = _resolve_markdown_slug(
+            post.metadata,
+            title,
+            source=f"Frente {front}, arquivo {md}",
+        )
         slugs.append(slug)
     return _validate_unique_slugs(front, slugs)
 

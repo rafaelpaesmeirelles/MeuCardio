@@ -1,110 +1,145 @@
 # Status dos reparos — CorvIA / MeuCardio
 
-Última atualização: 04/08/2026 00:27 (BRT)
+Última atualização: 04/08/2026 00:28 (BRT)
 
 ## Resumo executivo
 
-A `main` permanece no commit `1bea10cf2f168abf069f721ec0d5017573c05528`, com os PRs #34, #35 e #36 publicados. O PR #37 está **aberto, mergeável e ainda não integrado**, no head:
+A `main` já contém os PRs #34, #35, #36 e #37. O PR #37 foi integrado no commit:
 
 ```text
-f2217ee44972b287c0a3a79c3ac29840df9ae05c
+d7a4589d2135e368dbcf1743369f60a1a8fa4acd
 ```
 
-O head final do PR #37 está certificado por CI e reconciliação independentes. O único bloqueio antes do merge é concluir a revisão Codex final, tratar qualquer nova observação e encerrar as threads já corrigidas.
+Esse merge publicou o deploy certificado, backup/restauração endurecidos, rollback automático, identificação pública do commit e reconciliação científica fail-closed.
 
-Nenhuma credencial, senha ou dado do servidor foi gravado neste arquivo ou no repositório.
+Após o merge, a revisão Codex encontrou um último caso-limite isolado: Markdown que declara explicitamente `slug` vazio, nulo, falso ou numérico ainda podia receber fallback pelo título. A correção foi reaplicada numa branch limpa baseada na `main`:
+
+```text
+agent/reconcile-slug-explicito
+```
+
+Nenhuma credencial, senha ou dado do servidor foi gravado no repositório, documentação, commits, PRs ou logs produzidos neste trabalho.
 
 ## Publicado na `main`
 
-- inventário certificado de **4.936 registros científicos** e **1.327 arquivos físicos**;
-- catálogo das 11 coleções, total integral no Painel e alertas por coleção;
-- CorvIA Mail em rota, menu e Painel;
-- CorvIA Chat em cartão, widget, HTTP e WebSocket;
-- sessão HttpOnly, PyJWT e revogação após troca de senha;
-- Passlib substituído por bcrypt direto compatível com hashes existentes;
-- ReportLab 4.4.10 e geração real de PDFs clínicos.
+### PR #34 — bcrypt direto
 
-### Publicações recentes
+Commit publicado:
 
-- `2209d1e3` — PR #34: bcrypt direto; 174 testes;
-- `54ccee76` — PR #35: acervo, Mail e Chat; 182 testes;
-- `1bea10cf` — PR #36: ReportLab; 186 testes.
+```text
+2209d1e3
+```
 
-## Trabalho realizado no PR #37
+Resultado:
 
-### 1. Deploy em duas fases
+- Passlib removido;
+- bcrypt direto compatível com hashes `$2a$`, `$2b$` e `$2y$`;
+- hashes truncados ou malformados bloqueados antes do binding nativo;
+- nenhuma senha armazenada alterada;
+- CI verde com **174 testes backend**.
 
-O deploy agora separa construção e publicação:
+### PR #35 — acervo, CorvIA Mail e CorvIA Chat
 
-1. valida ambiente, commit e checkout;
-2. detecta banco persistente e cria dump pré-deploy;
+Commit publicado:
+
+```text
+54ccee76
+```
+
+Resultado:
+
+- Painel usa o inventário integral das 11 coleções;
+- separação entre registros preservados e conteúdo publicado;
+- mínimos individuais impedem que excesso numa coleção esconda déficit em outra;
+- alertas de integridade no Painel e na Biblioteca;
+- CorvIA Mail visível no Painel e menu;
+- CorvIA Chat visível em cartão e widget, com HTTP, WebSocket, histórico, busca e não lidas;
+- CI verde com **182 testes backend**.
+
+### PR #36 — ReportLab e Python 3.14
+
+Commit publicado:
+
+```text
+1bea10cf
+```
+
+Resultado:
+
+- ReportLab atualizado para 4.4.10, permanecendo na linha 4.x;
+- warning de `ast.NameConstant` eliminado;
+- receituário e documento clínico protegidos por geração real de PDF;
+- CI verde com **186 testes backend e zero warnings**.
+
+### PR #37 — deploy, corpus e commit publicado
+
+Commit de merge:
+
+```text
+d7a4589d2135e368dbcf1743369f60a1a8fa4acd
+```
+
+Head certificado antes do merge:
+
+```text
+4b0e1359eb637ba4989b6baa5e619d310e94139c
+```
+
+Certificação:
+
+- CI #204 — run `30875803741`;
+- **233 testes backend aprovados em 74,40 s**;
+- frontend integralmente aprovado;
+- auditorias Python e Node sem vulnerabilidades conhecidas;
+- migrations completas e idempotentes;
+- bootstrap administrativo aprovado;
+- smoke HTTP aprovado: health, readiness, sessão HttpOnly e logout;
+- backup/restauração PostgreSQL aprovados com preservação da identidade do registro de prova;
+- Corpus database reconciliation #80 — run `30875803765`;
+- **4.936 registros científicos** confirmados nas 11 coleções.
+
+## Garantias operacionais publicadas pelo PR #37
+
+### Build determinístico
+
+- lock exclusivo com `flock` impede deploys concorrentes;
+- `HEAD`, árvore Git e checkout limpo são revalidados durante o processo;
+- `.dockerignore` exclui artefatos locais ignorados;
+- frontend usa `package-lock.json` e `npm ci`;
+- imagens são construídas antes da indisponibilidade;
+- `/api/version` expõe somente o SHA injetado;
+- o deploy compara o SHA público com o commit local antes de declarar sucesso.
+
+### Deploy em duas fases
+
+1. valida host, `.env`, Git e Docker;
+2. adquire lock e confirma checkout imutável;
 3. constrói as imagens sem interromper o site atual;
-4. fecha o Caddy antes da fase que pode alterar banco ou corpus;
-5. sobe backend, banco, Redis e frontend sem reabrir tráfego;
-6. exige readiness interno;
-7. executa migrations e reconciliação;
-8. reabre o Caddy somente após sucesso integral;
-9. confirma HTTPS, readiness e commit em `/api/version`.
+4. fecha Caddy e backend antigo antes do snapshot usado no rollback;
+5. detecta banco por container ou volume `pgdata`, inclusive sem labels;
+6. cria e valida o backup pré-deploy sem escritores ativos;
+7. arma rollback antes de iniciar o novo backend e suas migrations automáticas;
+8. executa migrations, reconciliação e eventual indexação;
+9. exige readiness interno e revalidação do checkout;
+10. abre o Caddy somente após os gates privados;
+11. valida HTTPS, readiness e SHA público.
 
-### 2. Proteção contra falso commit publicado
+### Backup e restauração
 
-- exige SHA Git completo;
-- exige checkout limpo, incluindo arquivos não rastreados;
-- exclui artefatos locais ignorados dos contextos Docker;
-- frontend usa `package-lock.json` com `npm ci`;
-- usa lock com `flock` para impedir dois deploys simultâneos;
-- registra a árvore Git inicial;
-- revalida `HEAD`, árvore e estado do checkout antes e depois do build e antes da certificação pública;
-- injeta `DEPLOY_COMMIT` no backend;
-- compara o SHA público com o commit local antes de declarar sucesso.
+- dump custom e comprimido do PostgreSQL;
+- arquivo temporário e publicação atômica;
+- validação por `pg_restore --list`;
+- SHA-256 vinculado ao nome e conteúdo do dump selecionado;
+- permissões restritas;
+- restaurador compatível com `.dump` atual e `.sql.gz` legado;
+- checksum e catálogo validados antes do `dropdb`;
+- confirmação destrutiva em duas etapas no uso manual;
+- backend e proxy permanecem fora do tráfego durante restauração;
+- restauração usa `pg_restore --exit-on-error`;
+- falha durante a fase mutável aciona rollback automático;
+- após rollback, backend e Caddy permanecem parados até intervenção.
 
-### 3. Banco persistente e backup pré-deploy
-
-A detecção de banco cobre:
-
-- container `db` ativo;
-- container `db` parado;
-- volume `pgdata` rotulado pelo Compose;
-- volume determinístico `${projeto}_pgdata` sem labels;
-- erro de Docker/Compose tratado como falha, nunca como primeiro deploy.
-
-O backup pré-deploy:
-
-- ocorre antes da inicialização do novo backend;
-- usa dump custom do PostgreSQL;
-- grava primeiro em arquivo temporário;
-- valida o catálogo com `pg_restore --list`;
-- aplica permissão restrita;
-- publica checksum SHA-256 vinculado ao nome e conteúdo do dump.
-
-### 4. Rollback automático
-
-O rollback é armado **antes** do `docker compose up` que inicia o novo backend, pois o entrypoint do backend também pode executar migrations.
-
-Se houver falha desde a inicialização do novo backend até o fim de migrations, reconciliação ou indexação:
-
-- Caddy e backend são parados;
-- o dump pré-deploy é restaurado automaticamente;
-- a restauração roda em modo não interativo controlado;
-- backend e proxy não são religados automaticamente;
-- o tráfego permanece fechado caso o rollback falhe;
-- o deploy termina com erro e exibe estado e logs.
-
-No primeiro deploy, sem banco anterior, uma falha mantém a aplicação parada e não simula um rollback inexistente.
-
-### 5. Restaurador endurecido
-
-- aceita `.dump` custom atual e `.sql.gz` legado;
-- valida checksum, nome registrado e hash real antes do `dropdb`;
-- valida o catálogo custom antes da etapa destrutiva;
-- exige confirmação manual em duas etapas no uso normal;
-- aceita modo automático apenas quando explicitamente habilitado pelo deploy;
-- exige que o backend seja parado antes de recriar o banco;
-- usa `dropdb --force`, `createdb` e `pg_restore --exit-on-error`;
-- pode restaurar sem religar backend ou tráfego;
-- se uma religação manual não atingir readiness, tenta parar o backend novamente.
-
-### 6. Reconciliação científica fail-closed
+### Reconciliação científica fail-closed
 
 Comando oficial:
 
@@ -112,146 +147,133 @@ Comando oficial:
 python -m app.commands.reconcile_content --publish-reviewed
 ```
 
-Garantias adicionadas:
+Garantias:
 
-- ausência de `--allow-partial` no deploy;
-- bloqueio para falhas, avisos, duplicados, recusados, ausências e arquivos vazios;
-- diagnósticos pesquisados recursivamente;
-- Markdown vazio passa a ser reportado;
-- manifestos JSON devem ser listas de objetos com `slug` válido;
-- slugs duplicados são rejeitados antes de qualquer upsert;
-- quantidade de itens-fonte fica observável no resultado;
-- mínimos individuais das 11 coleções continuam obrigatórios;
-- listas de controlados seguem a mesma política fail-closed.
+- o deploy não usa `--allow-partial`;
+- falhas, avisos, recusados, duplicados ignorados, ausências e Markdown vazio bloqueiam a certificação;
+- diagnósticos são pesquisados recursivamente;
+- manifestos JSON devem ser listas de objetos com `slug` válido e único;
+- slugs com espaços externos são rejeitados antes dos loaders/upserts;
+- conjunto canônico de slugs é inventariado por commit;
+- somente itens revisados e presentes na fonte atual são publicados;
+- slugs removidos ou renomeados são despublicados, preservando histórico no banco;
+- mínimos individuais das 11 coleções permanecem obrigatórios;
+- excesso numa coleção não mascara déficit em outra.
 
-## Certificação do head final
+## Correção complementar em andamento
 
-### CI
-
-Execução:
-
-```text
-CI #193 — run 30874577322
-```
-
-Resultado:
-
-- frontend build: aprovado;
-- auditoria de dependências frontend: aprovada;
-- políticas de sessão, renderização segura e code splitting: aprovadas;
-- sintaxe dos scripts operacionais: aprovada;
-- auditoria Python: **nenhuma vulnerabilidade conhecida**;
-- migrations: aprovadas e idempotentes;
-- bootstrap explícito de administrador: aprovado;
-- compilação Python: aprovada;
-- pytest: **226 testes aprovados em 93,38 s**;
-- release smoke: health, readiness, sessão HttpOnly e logout aprovados;
-- backup/restauração PostgreSQL: aprovados, com identidade do registro preservada.
-
-### Reconciliação do corpus
-
-Execução:
+Branch:
 
 ```text
-Corpus database reconciliation #69 — run 30874577320
+agent/reconcile-slug-explicito
 ```
 
-Resultado:
+Problema residual:
 
-- migrations aprovadas;
-- reconciliação e publicação do corpus aprovadas;
-- inventário mínimo integral de **4.936 registros científicos** confirmado.
+- em Markdown, `slug: ""`, `slug: null`, `slug: false` ou `slug: 0` era interpretado como se a chave não existisse;
+- o reconciliador então gerava um slug pelo título, certificando o arquivo sob identificador diferente do explicitamente declarado.
 
-## Revisão automática
+Correção implementada:
 
-O comentário de revisão final foi solicitado para o SHA certificado `f2217ee44972b287c0a3a79c3ac29840df9ae05c`, com foco em:
+- fallback por título ocorre somente quando a chave `slug` está realmente ausente;
+- qualquer `slug` declarado deve ser string não vazia;
+- espaços nas extremidades continuam bloqueados;
+- valores vazio, nulo, falso e numérico são rejeitados antes de qualquer carregador ou upsert;
+- arquivo sem chave `slug` continua recebendo fallback legítimo pelo título.
 
-- deploy em duas fases;
-- rollback armado antes do backend;
-- fechamento do Caddy;
-- restauração sem reabrir tráfego;
-- volume `pgdata` sem labels;
-- alteração concorrente do checkout;
-- caminhos residuais de falso sucesso, perda de dados ou banco parcialmente exposto.
+Testes adicionados:
 
-No momento desta atualização, a resposta final do Codex ainda não havia sido publicada.
-
-Threads já resolvidas nesta sessão incluem:
-
-- checkout sujo;
-- diagnóstico de falhas pós-start;
-- restaurador compatível com dump custom;
-- banco persistente parado;
-- conteúdo recusado ou ignorado na reconciliação.
-
-Outras threads antigas permanecem visíveis no PR e devem ser resolvidas somente após conferir que o head final realmente contém a correção correspondente.
+- fallback legítimo quando a chave é omitida;
+- rejeição de `slug: ""`;
+- rejeição de `slug: null`;
+- rejeição de `slug: false`;
+- rejeição de `slug: 0`.
 
 ## Bloqueio externo de produção
 
-O ambiente desta sessão não conseguiu resolver ou alcançar `corvia.med.br` nem o IP anteriormente informado nas portas 22, 80 ou 443. Por isso não foi possível executar login real ou testes autenticados.
+O deploy real não foi executado nesta sessão.
 
-As credenciais fornecidas pelo proprietário:
+O ambiente utilizado não conseguiu resolver ou alcançar `corvia.med.br`. O host anteriormente informado também não aceitou as conexões tentadas. Portanto não foi possível:
 
-- não foram usadas;
-- não foram copiadas para código, documentação, comentários ou logs;
-- não devem ser registradas em futuras atualizações.
+- confirmar o SHA atualmente implantado;
+- criar o backup real;
+- atualizar `/opt/meucardio`;
+- executar o novo `deploy.sh`;
+- reconciliar o PostgreSQL real;
+- validar login, Painel, Biblioteca, CorvIA Mail e CorvIA Chat;
+- testar mensagens em duas sessões e WebSocket `wss://`;
+- testar envio/recebimento do CorvIA Mail;
+- aplicar `vm.overcommit_memory=1` no host.
 
-Recomenda-se rotacionar a senha após a validação em produção, pois ela foi compartilhada em texto na conversa.
+As credenciais fornecidas pelo proprietário não foram usadas porque o domínio permaneceu inacessível e não foram persistidas em nenhum artefato. Recomenda-se rotacionar a senha após a validação, pois ela foi compartilhada em texto na conversa.
 
-## Trabalho pendente para a próxima sessão
+## Trabalho pendente imediato
 
-### Antes do merge
+1. abrir PR complementar da branch `agent/reconcile-slug-explicito`;
+2. executar CI completa e reconciliação independente;
+3. solicitar revisão Codex no SHA final;
+4. corrigir qualquer novo P1/P2 material;
+5. integrar somente com CI, corpus e revisão verdes;
+6. atualizar este arquivo com o número do PR, runs, quantidade final de testes e commit de merge.
 
-1. consultar a revisão Codex final solicitada no head `f2217ee4`;
-2. corrigir qualquer novo P1/P2 material;
-3. repetir CI e reconciliação caso o código seja alterado;
-4. conferir e resolver todas as threads antigas realmente corrigidas;
-5. atualizar a descrição do PR #37 para incluir:
-   - deploy em duas fases;
-   - rollback automático;
-   - lock/revalidação do checkout;
-   - detecção de volume sem labels;
-   - CI com 226 testes;
-   - runs `30874577322` e `30874577320`;
-6. integrar o PR #37 somente com head esperado e revisão final limpa.
+## Trabalho pendente no servidor
 
-### Depois do merge
+Quando o acesso ao host for restabelecido:
 
-1. confirmar CI e reconciliação na `main`;
-2. confirmar o novo SHA da `main`;
-3. no servidor, executar backup manual independente antes do primeiro uso do novo fluxo;
-4. aplicar `vm.overcommit_memory=1` no host;
-5. atualizar `/opt/meucardio` com `git pull --ff-only`;
-6. executar `bash ./deploy.sh` presencialmente, sem segundo deploy concorrente;
-7. confirmar:
+1. aplicar no host:
+
+   ```bash
+   sudo sysctl -w vm.overcommit_memory=1
+   echo 'vm.overcommit_memory=1' | sudo tee /etc/sysctl.d/99-corvia-redis.conf
+   ```
+
+2. acessar `/opt/meucardio`;
+3. confirmar que `.env` permanece preservado;
+4. executar backup manual independente;
+5. atualizar a `main` com `git pull --ff-only`;
+6. confirmar checkout limpo;
+7. executar presencialmente:
+
+   ```bash
+   bash ./deploy.sh
+   ```
+
+8. confirmar:
    - `/api/health`;
    - `/api/ready`;
    - `/api/version` com o SHA correto;
-   - containers e logs sem erro;
-   - inventário das 11 coleções no Painel.
+   - 4.936 registros e mínimos individuais das 11 coleções;
+   - ausência de erros em backend, PostgreSQL, Redis, Caddy e frontend.
 
-### Validação autenticada de produção
-
-Após o deploy:
+## Validação autenticada após o deploy
 
 - login principal;
-- Painel e inventário;
-- Biblioteca e buscas;
+- Painel e inventário integral;
+- Biblioteca, paginação e buscas;
 - CorvIA Chat por cartão e botão flutuante;
-- envio e recebimento entre duas sessões/abas;
-- WebSocket em `wss://`;
-- CorvIA Mail;
-- criação/acesso da caixa usando a autenticação principal prevista;
+- envio/recebimento entre duas sessões ou abas;
+- WebSocket `wss://`;
+- CorvIA Mail, ativação/acesso da caixa e webmail;
 - envio e recebimento de e-mail;
-- PDFs clínicos, receituário e links públicos;
+- receituário e PDFs clínicos;
+- links públicos de documentos;
 - logout e revogação de sessão.
+
+## Ponto exato para a próxima sessão
+
+1. consultar a branch `agent/reconcile-slug-explicito`;
+2. localizar o PR complementar aberto para essa branch;
+3. confirmar o último SHA;
+4. conferir CI, reconciliação e revisão Codex;
+5. integrar o PR se não houver apontamento material;
+6. depois retomar o acesso ao servidor e o deploy real.
 
 ## Estado de publicação
 
-- PRs #34, #35 e #36: publicados;
-- PR #37: aberto, mergeável, CI verde e corpus verde;
-- head certificado: `f2217ee44972b287c0a3a79c3ac29840df9ae05c`;
-- merge do PR #37: **não realizado**;
-- deploy em produção: **não realizado**;
-- credenciais persistidas: **nenhuma**;
-- dados do servidor real alterados nesta sessão: **nenhum**.
+- PRs #34, #35, #36 e #37: publicados na `main`;
+- correção de slug explícito inválido: implementada em branch complementar;
+- deploy real: não executado;
+- credenciais persistidas: nenhuma;
+- arquivos científicos removidos: nenhum;
+- senhas armazenadas alteradas: nenhuma;
+- dados do servidor real alterados nesta sessão: nenhum.

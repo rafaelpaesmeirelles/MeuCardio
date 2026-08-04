@@ -22,6 +22,7 @@ de publicação já tomada por um humano.
 
 import re
 from pathlib import Path
+from typing import Any, Mapping
 
 import frontmatter
 
@@ -113,6 +114,33 @@ def _slugify(value: str) -> str:
     return re.sub(r"[\s_-]+", "-", value)[:200]
 
 
+def _resolve_markdown_slug(
+    meta: Mapping[str, Any],
+    title: str,
+    *,
+    source: str = "Markdown",
+) -> str:
+    """Resolve o slug sem confundir chave ausente com valor inválido.
+
+    O fallback derivado do título é permitido somente quando o front matter não
+    declara a chave ``slug``. Se a chave existe, seu valor deve ser uma string
+    não vazia, já canônica e sem espaços nas extremidades. Esta função é usada
+    tanto pelo importador direto quanto pelo reconciliador do deploy.
+    """
+    if "slug" not in meta:
+        slug = _slugify(title)
+        if not slug:
+            raise ValueError(f"{source}: título não produz slug válido")
+        return slug
+
+    explicit_slug = meta["slug"]
+    if not isinstance(explicit_slug, str) or not explicit_slug.strip():
+        raise ValueError(f"{source}: slug explicitamente inválido")
+    if explicit_slug != explicit_slug.strip():
+        raise ValueError(f"{source}: slug com espaços nas extremidades")
+    return explicit_slug
+
+
 def import_directory(path: str | None = None) -> dict:
     root = Path(path or settings.content_dir)
     if not root.exists():
@@ -137,7 +165,11 @@ def import_directory(path: str | None = None) -> dict:
                     continue
 
                 title = meta.get("title") or md.stem
-                slug = meta.get("slug") or _slugify(title)
+                slug = _resolve_markdown_slug(
+                    meta,
+                    title,
+                    source=str(md.relative_to(root)),
+                )
 
                 # Duplicata DENTRO deste lote: dois arquivos com o mesmo slug.
                 # Checar só o banco não pega isso, porque nenhum dos dois foi
