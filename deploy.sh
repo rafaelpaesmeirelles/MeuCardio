@@ -211,11 +211,13 @@ if [[ "${AI_ENABLED:-false}" == "true" ]]; then
   log "Indexando a base reconciliada para a IA clínica."
   backend_exec python -m app.services.indexar
 fi
-ROLLBACK_NECESSARIO=0
 
+# Ainda dentro da janela de rollback: readiness e checkout imutável precisam
+# passar antes que o dump deixe de ser a recuperação automática do deploy.
 backend_exec python -c \
   "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/ready', timeout=5).read()"
 validar_checkout_imutavel
+ROLLBACK_NECESSARIO=0
 
 log "Abrindo o proxy somente após banco, corpus e build estarem certificados."
 "${COMPOSE[@]}" up -d --no-build caddy
