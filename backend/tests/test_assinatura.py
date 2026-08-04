@@ -15,8 +15,6 @@ from app.models.assinatura import DocumentoEmitido
 from app.models.audit import AuditLog
 from app.models.receituario import PrescriptionType
 
-# Tabelas desta suíte, além das já limpas por `_banco_limpo` em conftest.py —
-# aquela suíte é do CorvIA Mail e não mexe em conteúdo clínico de propósito.
 _TABELAS_ASSINATURA = (
     "documentos_emitidos", "prescription_documents", "prescription_recipients",
     "prescriptions", "generated_documents", "document_templates", "prescription_types",
@@ -26,9 +24,6 @@ _TABELAS_ASSINATURA = (
 @pytest.fixture(autouse=True)
 def _limpar_e_semear(db):
     db.execute(text(f"TRUNCATE {', '.join(_TABELAS_ASSINATURA)} RESTART IDENTITY CASCADE"))
-    # Seed mínimo: "COMUM" ativo — o único tipo com layout de PDF reproduzido
-    # hoje — e "RCE" inativo, pra testar a correção manual de tipo (Tarefa 4)
-    # sem depender do SNCR/layout real.
     db.add(PrescriptionType(codigo="COMUM", nome="Receituário comum", ativo=True))
     db.add(PrescriptionType(codigo="RCE", nome="Receita de Controle Especial", ativo=False))
     db.commit()
@@ -36,8 +31,6 @@ def _limpar_e_semear(db):
 
 
 def _autorizado(role="admin"):
-    """Admin pula `assinante_ativo` (ver core/security.py) sem precisar
-    montar uma Subscription — o que importa aqui é a emissão, não billing."""
     return role
 
 
@@ -78,9 +71,7 @@ def _criar_e_revisar_receita(client, token, itens=None):
 
 
 class TestCorrigirTipo:
-    """O médico não é obrigado a aceitar a classificação automática — pode
-    corrigir pra outro tipo do catálogo na revisão, com motivo obrigatório
-    (ver docstring de `revisar` em `api/receituario.py`)."""
+    """O médico pode corrigir a classificação automática, com motivo auditável."""
 
     def _criar_documento(self, client, token):
         r = client.post(
@@ -131,9 +122,6 @@ class TestCorrigirTipo:
         assert r.status_code == 422
 
     def test_bloqueio_de_tipo_inativo_nao_culpa_assinatura_digital(self, client, criar_usuario):
-        """A mensagem de bloqueio é regressão em potencial: antes da Tarefa 4
-        ela citava "assinatura digital" como pendência — ficou errado desde
-        que o método MANUAL passou a funcionar pra qualquer tipo."""
         _, token = criar_usuario(role="admin")
         doc_id = self._criar_documento(client, token)
         client.post(
@@ -150,7 +138,7 @@ class TestCorrigirTipo:
         assert r.status_code == 409, r.text
         bloqueios = " ".join(r.json()["detail"]["bloqueios"]).lower()
         assert "sncr" in bloqueios
-        assert "não depende mais da assinatura digital" in bloqueios
+        assert "assinatura digital" not in bloqueios
 
 
 class TestEmitirReceituario:
@@ -172,7 +160,7 @@ class TestEmitirReceituario:
         assert registro.metodo == "MANUAL"
         assert registro.nivel == "nenhuma"
         assert registro.sha256 == hashlib.sha256(r.content).hexdigest()
-        assert registro.assinado_em is None  # MANUAL não assina
+        assert registro.assinado_em is None
 
         auditoria = db.query(AuditLog).filter(
             AuditLog.entity == "prescription_document", AuditLog.entity_id == str(doc_id),
@@ -238,8 +226,6 @@ class TestGerarDocumento:
         assert r1.status_code == 200, r1.text
         assert r1.content.startswith(b"%PDF")
 
-        # Segundo download: já emitido — serve os mesmos bytes, sem levar em
-        # conta um `metodo` diferente (o método já foi decidido no primeiro).
         r2 = client.get(
             f"/api/document-templates/gerados/{gerado_id}/pdf?metodo=VIDAAS",
             headers={"Authorization": f"Bearer {token}"},
@@ -254,7 +240,7 @@ class TestGerarDocumento:
         auditoria = db.query(AuditLog).filter(
             AuditLog.entity == "generated_document", AuditLog.entity_id == str(gerado_id),
         ).all()
-        assert len(auditoria) == 1  # só o primeiro download audita — o segundo só leu do cofre
+        assert len(auditoria) == 1
         assert auditoria[0].detail["metodo"] == "MANUAL"
 
     def test_primeiro_download_provedor_indisponivel_recusa(self, client, criar_usuario, db):
