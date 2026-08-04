@@ -6,65 +6,94 @@ import BotaoFavorito from "../components/BotaoFavorito";
 import { rotuloClasse, rotuloNivel } from "../lib/evidencia";
 
 type Detalhe = {
-  id: number; slug: string; statement: string; recommendation_class: string;
-  evidence_level: string; society: string; year: number; theme: string;
-  guideline_title: string; reference: string; document_slug: string | null; tags: string[];
+  id: number;
+  slug: string;
+  statement: string;
+  summary: string;
+  recommendation_class: string;
+  evidence_level: string;
+  society: string;
+  year: number;
+  theme: string;
+  guideline_title: string;
+  reference: string;
+  source_url: string | null;
+  doi: string | null;
+  document_slug: string | null;
+  tags: string[];
 };
-
-// Os rótulos de classe/força e nível/certeza vivem em ../lib/evidencia porque a
-// mesma regra vale na lista de evidências. Ver os três sistemas de graduação
-// que a base concilia no comentário daquele arquivo.
 
 export default function Evidencia() {
   const { slug } = useParams();
-  const [e, setE] = useState<Detalhe | null>(null);
+  const [evidencia, setEvidencia] = useState<Detalhe | null>(null);
   const [erro, setErro] = useState("");
 
   useEffect(() => {
     if (!slug) return;
-    api.get<Detalhe>(`/evidence/${slug}`).then(setE)
+    api.get<Detalhe>(`/evidence/${slug}`)
+      .then(setEvidencia)
       .catch((err) => setErro(err instanceof ApiError ? err.message : "Não foi possível carregar."));
   }, [slug]);
 
   if (erro) return <Erro mensagem={erro} />;
-  if (!e) return <Carregando />;
+  if (!evidencia) return <Carregando />;
 
   return (
-    <>
+    <article style={{ maxWidth: "78ch" }}>
       <Link to="/evidencias" style={{ fontSize: "0.86rem" }}>← Voltar para evidências</Link>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "start", marginTop: "0.8rem" }}>
-        <p className="eyebrow">{e.society} {e.year} · {e.theme}</p>
-        <BotaoFavorito itemType="evidencia" itemId={e.id} />
+        <p className="eyebrow">{evidencia.society} {evidencia.year} · {evidencia.theme}</p>
+        <BotaoFavorito itemType="evidencia" itemId={evidencia.id} />
       </div>
 
-      <div className="cartao" style={{ marginTop: "0.4rem" }}>
-        <div style={{ display: "flex", gap: 10, marginBottom: "0.6rem" }}>
+      <section className="cartao" style={{ marginTop: "0.4rem" }}>
+        <div style={{ display: "flex", gap: 10, marginBottom: "0.6rem", flexWrap: "wrap" }}>
           <span className="selo" style={{ background: "var(--acento)", color: "var(--branco)" }}>
-            {rotuloClasse(e.recommendation_class)}
+            {rotuloClasse(evidencia.recommendation_class)}
           </span>
           <span className="selo" style={{ background: "var(--acento)", color: "var(--branco)" }}>
-            {rotuloNivel(e.evidence_level)}
+            {rotuloNivel(evidencia.evidence_level)}
           </span>
         </div>
-        <p style={{ fontSize: "1.05rem", margin: 0 }}>{e.statement}</p>
-      </div>
+        <h1 style={{ fontSize: "1.25rem", margin: 0 }}>{evidencia.statement}</h1>
+      </section>
 
-      <div className="cartao" style={{ marginTop: "0.8rem" }}>
+      <section className="cartao" style={{ marginTop: "0.8rem" }}>
+        <p className="eyebrow">Resumo clínico</p>
+        <p style={{ lineHeight: 1.65, marginBottom: 0 }}>{evidencia.summary}</p>
+      </section>
+
+      <section className="cartao" style={{ marginTop: "0.8rem" }}>
         <p className="eyebrow">Diretriz de origem</p>
-        <p>{e.guideline_title}</p>
-      </div>
+        <p>{evidencia.guideline_title}</p>
+        {evidencia.doi && <p style={{ fontSize: "0.86rem" }}><strong>DOI:</strong> {evidencia.doi}</p>}
+        {evidencia.source_url && (
+          <a
+            href={evidencia.source_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="botao"
+            style={{ display: "inline-block" }}
+          >
+            Abrir documento original ↗
+          </a>
+        )}
+      </section>
 
-      <div className="cartao" style={{ marginTop: "0.8rem" }}>
+      <section className="cartao" style={{ marginTop: "0.8rem" }}>
         <p className="eyebrow">Referência completa</p>
-        <p style={{ fontSize: "0.88rem" }}>{e.reference}</p>
-      </div>
+        <p style={{ fontSize: "0.88rem", overflowWrap: "anywhere" }}>{evidencia.reference}</p>
+      </section>
 
-      {e.document_slug && (
-        <Link to={`/biblioteca/${e.document_slug}`} className="botao botao--secundario"
-              style={{ display: "inline-block", marginTop: "0.8rem" }}>
-          Ver documento relacionado na Biblioteca
+      {evidencia.document_slug && (
+        <Link
+          to={`/biblioteca/${evidencia.document_slug}`}
+          className="botao botao--secundario"
+          style={{ display: "inline-block", marginTop: "0.8rem" }}
+        >
+          Ver análise relacionada na Biblioteca
         </Link>
       )}
-    </>
+    </article>
   );
 }
