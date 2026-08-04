@@ -4,6 +4,7 @@
 set -Eeuo pipefail
 
 COMPOSE=(docker compose -f docker-compose.prod.yml)
+SERVICOS_INICIADOS=0
 
 log() {
   printf '[%s] %s\n' "$(date -Is)" "$*"
@@ -17,6 +18,22 @@ mostrar_diagnostico() {
   "${COMPOSE[@]}" ps || true
   "${COMPOSE[@]}" logs --tail=200 backend caddy frontend-build || true
 }
+
+diagnosticar_erro() {
+  local status=$?
+  local linha="${BASH_LINENO[0]:-desconhecida}"
+  # Impede recursão caso uma das consultas de diagnóstico também falhe.
+  trap - ERR
+  if [[ "$SERVICOS_INICIADOS" == "1" ]]; then
+    echo "ERRO: deploy interrompido na linha $linha (status $status)." >&2
+    mostrar_diagnostico
+  fi
+  exit "$status"
+}
+
+# Falhas anteriores à subida ainda terminam imediatamente. Desde a tentativa de
+# subir os serviços, qualquer comando não tratado passa pelo diagnóstico acima.
+trap diagnosticar_erro ERR
 
 if [[ ! -f .env ]]; then
   echo "Falta o arquivo .env. Rode: cp .env.example .env e preencha antes de continuar."
@@ -90,6 +107,8 @@ else
 fi
 
 log "Construindo e subindo serviços de produção."
+# A partir daqui até uma falha parcial de `up` deve produzir diagnóstico.
+SERVICOS_INICIADOS=1
 "${COMPOSE[@]}" up -d --build --remove-orphans
 
 log "Aguardando readiness do backend."
@@ -114,8 +133,8 @@ log "Confirmando migrations de forma idempotente."
 backend_exec python -m app.commands.migrate
 
 log "Reconciliando as 11 coleções e publicando somente conteúdo revisado."
-# O comando sai com código diferente de zero se qualquer coleção permanecer
-# abaixo do mínimo versionado. `set -e` impede declarar sucesso nesse cenário.
+# Se qualquer coleção permanecer abaixo do mínimo, o status não zero aciona o
+# handler ERR e publica estado/logs antes de encerrar.
 backend_exec python -m app.commands.reconcile_content --publish-reviewed
 
 if [[ "${AI_ENABLED:-false}" == "true" ]]; then
