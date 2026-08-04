@@ -23,6 +23,7 @@ from app.commands.reconcile_content import (
         "recusadas",
         "recusados",
         "sem_arquivo",
+        "vazios",
     ],
 )
 def test_todo_diagnostico_de_item_ignorado_bloqueia(chave):
@@ -59,6 +60,7 @@ def test_contagens_e_notas_informativas_nao_bloqueiam():
         "nota": "Carga idempotente concluída.",
         "falhas": [],
         "avisos": [],
+        "vazios": [],
     }
 
     assert _collect_blocking_diagnostics(resultado) == {}
