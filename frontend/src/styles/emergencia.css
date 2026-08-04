@@ -64,6 +64,71 @@
 .emerg__aviso { color: var(--e-suave); font-size: 0.95rem; margin: 0 0 1.1rem; }
 .emerg__erro  { color: var(--e-alerta); font-size: 1rem; margin: 0 0 1.1rem; }
 
+.emerg__busca {
+  margin: 0 0 1rem;
+  padding: 0.9rem;
+  border: 1px solid var(--e-borda);
+  border-radius: 10px;
+  background: var(--e-superficie);
+}
+.emerg__busca label {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: var(--e-texto);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.emerg__buscaLinha {
+  display: flex;
+  gap: 0.55rem;
+  align-items: stretch;
+}
+.emerg__busca input {
+  min-width: 0;
+  flex: 1;
+  min-height: 48px;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid #5686a2;
+  border-radius: 8px;
+  background: #fff;
+  color: #102838;
+  font: inherit;
+  font-size: 1rem;
+}
+.emerg__busca input:focus-visible {
+  outline: 3px solid #8fd0ea;
+  outline-offset: 2px;
+}
+.emerg__busca button {
+  min-height: 48px;
+  padding: 0.6rem 0.9rem;
+  border: 1px solid #5686a2;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--e-texto);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+.emerg__busca button:hover,
+.emerg__busca button:focus-visible {
+  background: #16435e;
+  outline: none;
+}
+.emerg__busca small {
+  display: block;
+  margin-top: 0.45rem;
+  color: var(--e-suave);
+  font-size: 0.8rem;
+}
+.emerg__semResultado {
+  padding: 1rem;
+  border: 1px dashed #5686a2;
+  border-radius: 10px;
+  color: var(--e-suave);
+  text-align: center;
+}
+
 .emerg__lista { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.7rem; }
 
 /* Alvo de toque grande de propósito: mão trêmula, tela suja, pressa. */
@@ -103,6 +168,16 @@
  * preserva o contraste do próprio diagrama em vez de forçar um tema escuro
  * que mudaria as cores das formas — e as formas têm significado. */
 .emerg__diagrama > div { background: #fff; border-radius: 10px; padding: 0.6rem; overflow-x: auto; }
+.fluxograma__erro {
+  margin: 0;
+  padding: 0.9rem;
+  border: 2px solid #b00018;
+  border-radius: 8px;
+  background: #fff1f2;
+  color: #6f0010;
+  font-weight: 700;
+  text-align: left;
+}
 
 .emerg__secao { border-top: 1px solid var(--e-borda); }
 .emerg__secaoTitulo {
@@ -147,4 +222,10 @@
   cursor: pointer;
 }
 .emerg-atalho:hover, .emerg-atalho:focus-visible { background: #b00018; outline: none; }
+
+@media (max-width: 520px) {
+  .emerg__buscaLinha { flex-direction: column; }
+  .emerg__busca button { width: 100%; }
+}
+
 @media print { .emerg-atalho { display: none; } }
