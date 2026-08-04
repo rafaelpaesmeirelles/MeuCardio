@@ -98,6 +98,7 @@ def _manifest_slugs(front: str, source: Path) -> set[str] | None:
 
     slugs: list[str] = []
     invalidos: list[int] = []
+    com_espacos: list[int] = []
     for index, item in enumerate(data):
         if not isinstance(item, dict):
             invalidos.append(index)
@@ -106,11 +107,19 @@ def _manifest_slugs(front: str, source: Path) -> set[str] | None:
         if not isinstance(slug, str) or not slug.strip():
             invalidos.append(index)
             continue
-        slugs.append(slug.strip())
+        if slug != slug.strip():
+            com_espacos.append(index)
+            continue
+        slugs.append(slug)
 
     if invalidos:
         raise RuntimeError(
             f"Frente {front} contém itens sem slug válido nos índices: {invalidos}"
+        )
+    if com_espacos:
+        raise RuntimeError(
+            f"Frente {front} contém slugs com espaços nas extremidades nos índices: "
+            f"{com_espacos}"
         )
     return _validate_unique_slugs(front, slugs)
 
@@ -122,10 +131,15 @@ def _markdown_slugs(front: str, source: Path) -> set[str]:
         post = frontmatter.load(md)
         meta = post.metadata
         title = meta.get("title") or md.stem
-        slug = meta.get("slug") or _slugify(title)
+        explicit_slug = meta.get("slug")
+        slug = explicit_slug or _slugify(title)
         if not isinstance(slug, str) or not slug.strip():
             raise RuntimeError(f"Frente {front} contém Markdown sem slug válido: {md}")
-        slugs.append(slug.strip())
+        if explicit_slug is not None and slug != slug.strip():
+            raise RuntimeError(
+                f"Frente {front} contém Markdown com slug com espaços nas extremidades: {md}"
+            )
+        slugs.append(slug)
     return _validate_unique_slugs(front, slugs)
 
 
