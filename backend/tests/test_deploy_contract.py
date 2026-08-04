@@ -145,11 +145,23 @@ def test_restaurador_valida_antes_de_apagar_e_usa_pg_restore():
 
 
 def test_restaurador_so_apaga_depois_de_parar_backend_existente():
-    fonte = _fonte(RESTORE)
-    indice_container = fonte.index('BACKEND_CONTAINER="$(')
-    indice_stop = fonte.index('"${COMPOSE[@]}" stop backend')
-    indice_drop = fonte.index("dropdb")
+    linhas = _linhas_ativas(RESTORE)
+    indice_container = next(
+        i for i, linha in enumerate(linhas) if linha.startswith('BACKEND_CONTAINER="$(')
+    )
+    indice_stop = next(
+        i
+        for i, linha in enumerate(linhas[indice_container + 1 :], indice_container + 1)
+        if linha == '"${COMPOSE[@]}" stop backend'
+    )
+    indice_drop = next(
+        i
+        for i, linha in enumerate(linhas[indice_stop + 1 :], indice_stop + 1)
+        if " exec -T db dropdb " in f" {linha} "
+    )
+
     assert indice_container < indice_stop < indice_drop
+    fonte = _fonte(RESTORE)
     assert 'ps -a -q backend 2>/dev/null || true' not in fonte
     assert 'stop backend >/dev/null 2>&1 || true' not in fonte
 
