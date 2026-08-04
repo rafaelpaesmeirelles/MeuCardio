@@ -4,7 +4,7 @@ Data: 04/08/2026
 
 ## Estado da implementação
 
-O primeiro lote funcional está na branch do PR #42 para certificação: perfil profissional ampliado, forma de tratamento, local de trabalho, contraste automático da logo e pesquisa dos históricos. Os modelos regulados permanecem bloqueados até a reprodução e validação dos formulários oficiais vigentes.
+O primeiro lote funcional está na branch do PR #42 para certificação: perfil profissional ampliado, forma de tratamento, local de trabalho, contraste automático da logo e pesquisa dos históricos. O fluxo também admite contas internas marcadas para complementação obrigatória: no primeiro acesso, a navegação fica restrita à página **Minha conta** até o salvamento dos dados pessoais e profissionais, sem exigir troca de senha. Os modelos regulados permanecem bloqueados até a reprodução e validação dos formulários oficiais vigentes.
 
 ## Contexto observado
 
