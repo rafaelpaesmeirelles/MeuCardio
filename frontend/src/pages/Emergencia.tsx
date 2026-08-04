@@ -78,12 +78,22 @@ function secoes(md: string): { titulo: string; corpo: string }[] {
     .filter((s) => s.titulo || s.corpo);
 }
 
+function normalizarBusca(valor: string): string {
+  return valor
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLocaleLowerCase("pt-BR")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 export default function Emergencia() {
   const [pacote, setPacote] = useState<Pacote | null>(null);
   const [deCache, setDeCache] = useState<number | null>(null);
   const [erro, setErro] = useState("");
   const [aberto, setAberto] = useState<string | null>(null);
   const [secaoAberta, setSecaoAberta] = useState<number>(0);
+  const [busca, setBusca] = useState("");
 
   useEffect(() => {
     const local = recuperar();
@@ -102,6 +112,23 @@ export default function Emergencia() {
         if (!local) setErro(e?.message || "Sem conexão e sem cópia guardada.");
       });
   }, []);
+
+  const protocolosFiltrados = useMemo(() => {
+    const protocolos = pacote?.protocolos || [];
+    const termos = normalizarBusca(busca).split(" ").filter(Boolean);
+    if (termos.length === 0) return protocolos;
+
+    return protocolos.filter((p) => {
+      const documento = pacote?.documentos[p.documento_slug];
+      const texto = normalizarBusca([
+        p.titulo,
+        p.gatilho || "",
+        documento?.title || "",
+        documento?.theme || "",
+      ].join(" "));
+      return termos.every((termo) => texto.includes(termo));
+    });
+  }, [busca, pacote]);
 
   const protocolo = useMemo(
     () => pacote?.protocolos.find((p) => p.slug === aberto) || null,
@@ -138,8 +165,34 @@ export default function Emergencia() {
             Protocolos de risco imediato de vida. O conteúdo é o mesmo da
             biblioteca — aqui ele está filtrado e ampliado para leitura rápida.
           </p>
+
+          <div className="emerg__busca">
+            <label htmlFor="busca-emergencia">Buscar assunto</label>
+            <div className="emerg__buscaLinha">
+              <input
+                id="busca-emergencia"
+                type="search"
+                value={busca}
+                onChange={(event) => setBusca(event.target.value)}
+                placeholder="Ex.: infarto, choque, arritmia"
+                autoComplete="off"
+                spellCheck={false}
+              />
+              {busca && (
+                <button type="button" onClick={() => setBusca("")}>
+                  Limpar
+                </button>
+              )}
+            </div>
+            {pacote && (
+              <small aria-live="polite">
+                {protocolosFiltrados.length} de {pacote.protocolos.length} protocolo(s)
+              </small>
+            )}
+          </div>
+
           <ul className="emerg__lista">
-            {(pacote?.protocolos || []).map((p) => (
+            {protocolosFiltrados.map((p) => (
               <li key={p.slug}>
                 <button
                   className="emerg__alvo"
@@ -155,8 +208,14 @@ export default function Emergencia() {
               </li>
             ))}
           </ul>
+
           {pacote && pacote.protocolos.length === 0 && !erro && (
             <p className="emerg__aviso">Nenhum protocolo publicado no modo emergência.</p>
+          )}
+          {pacote && pacote.protocolos.length > 0 && protocolosFiltrados.length === 0 && (
+            <p className="emerg__semResultado">
+              Nenhum protocolo encontrado para “{busca.trim()}”.
+            </p>
           )}
         </>
       )}
