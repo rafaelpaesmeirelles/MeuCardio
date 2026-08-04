@@ -6,10 +6,10 @@ Este guia descreve o deploy de produção em `corvia.med.br`, usando o diretóri
 
 ## O que `deploy.sh` garante
 
-O script de deploy agora só declara sucesso depois de:
+O script só declara sucesso depois de:
 
 1. validar as variáveis críticas do `.env`;
-2. registrar o commit que está sendo publicado;
+2. identificar um SHA Git completo;
 3. verificar DNS;
 4. criar backup pré-deploy se o banco já estiver em execução;
 5. reconstruir e subir os serviços;
@@ -19,7 +19,8 @@ O script de deploy agora só declara sucesso depois de:
 9. publicar somente conteúdo com `review_status=revisado`;
 10. falhar se qualquer coleção permanecer abaixo do mínimo versionado;
 11. reindexar a IA quando `AI_ENABLED=true`;
-12. confirmar `/api/ready` pelo domínio HTTPS público.
+12. confirmar `/api/ready` pelo domínio HTTPS público;
+13. confirmar em `/api/version` que o domínio serve exatamente o commit solicitado.
 
 O importador parcial antigo não é mais usado no deploy.
 
@@ -70,19 +71,16 @@ git fetch origin
 git checkout main
 git pull --ff-only origin main
 git status --short
-```
-
-O último comando deve ficar vazio. Confirme o commit antes de publicar:
-
-```bash
 git log -1 --oneline
 ```
+
+`git status --short` deve ficar vazio. O SHA mostrado será injetado no backend e confirmado publicamente no final.
 
 ## 4. Executar o deploy
 
 ```bash
-chmod +x deploy.sh infra/backup/backup.sh
-./deploy.sh
+cd /opt/meucardio
+bash ./deploy.sh
 ```
 
 Não rode o processo em segundo plano. Se alguma etapa falhar, o script mostra o estado dos containers e os logs recentes e termina com código diferente de zero.
@@ -118,10 +116,13 @@ A operação é idempotente. Registros existentes não são apagados, e somente 
 ```bash
 curl --fail --silent --show-error https://corvia.med.br/api/health
 curl --fail --silent --show-error https://corvia.med.br/api/ready
+curl --fail --silent --show-error https://corvia.med.br/api/version
 
 docker compose -f docker-compose.prod.yml ps
 docker compose -f docker-compose.prod.yml logs --tail=200 backend caddy frontend-build
 ```
+
+O SHA de `/api/version` deve ser idêntico ao de `git rev-parse HEAD`.
 
 Depois de entrar como administrador, confirme:
 
@@ -155,10 +156,10 @@ O comando pode ser repetido; a CI exige idempotência.
 
 ```bash
 cd /opt/meucardio
-PROJETO="$PWD" ./infra/backup/backup.sh
+PROJETO="$PWD" bash ./infra/backup/backup.sh
 ```
 
-O arquivo compactado e seu SHA-256 ficam em `infra/backup/dumps/`. O script usa arquivo temporário, valida o gzip e só então publica o backup.
+O backup é um dump custom do PostgreSQL (`.dump`), comprimido internamente pelo `pg_dump`. Antes de ser publicado, seu catálogo é validado por `pg_restore --list`. O script usa arquivo temporário, permissões `0600` e cria um SHA-256 portátil no mesmo diretório.
 
 ### Backup automático
 
@@ -169,7 +170,7 @@ crontab -e
 Adicione:
 
 ```cron
-0 3 * * * PROJETO=/opt/meucardio /opt/meucardio/infra/backup/backup.sh >> /opt/meucardio/infra/backup/backup.log 2>&1
+0 3 * * * PROJETO=/opt/meucardio bash /opt/meucardio/infra/backup/backup.sh >> /opt/meucardio/infra/backup/backup.log 2>&1
 ```
 
 A retenção padrão é de 14 dias e pode ser alterada com `BACKUP_RETENCAO_DIAS`.
@@ -189,14 +190,16 @@ O deploy não executa reconciliação enquanto o backend estiver indisponível.
 
 O reconciliador informa exatamente quais coleções estão incompletas. Verifique se todos os diretórios versionados foram recebidos pelo checkout e se os volumes somente-leitura estão montados no backend. Não contorne com `--allow-partial`.
 
-### HTTPS não responde
+### HTTPS não responde ou commit diverge
 
 ```bash
 dig +short corvia.med.br
-docker compose -f docker-compose.prod.yml logs --tail=300 caddy
+curl -fsS https://corvia.med.br/api/version
+git rev-parse HEAD
+docker compose -f docker-compose.prod.yml logs --tail=300 caddy backend
 ```
 
-O IP retornado pelo DNS deve ser o IP público do servidor, e as portas 80/443 devem estar liberadas.
+O IP retornado pelo DNS deve ser o IP público do servidor. Se `/api/version` divergir, o backend antigo ainda está atendendo ou o container não foi recriado.
 
 ### Redis alerta sobre memory overcommit
 
@@ -204,16 +207,16 @@ Aplique `vm.overcommit_memory=1` no host. Essa configuração não pode ser feit
 
 ## Rollback
 
-Antes de cada atualização, o deploy cria backup quando o banco já está em execução. Para voltar apenas o código:
+Antes de cada atualização, o deploy cria um dump custom quando o banco já está em execução. Para voltar apenas o código:
 
 ```bash
 cd /opt/meucardio
 git log --oneline -10
 git checkout <commit-anterior-certificado>
-./deploy.sh
+bash ./deploy.sh
 ```
 
-Não execute downgrade manual de migrations. Restauração de banco é operação destrutiva e deve usar o script de restauração somente após confirmar o arquivo, o banco-alvo e a necessidade clínica/operacional.
+Não execute downgrade manual de migrations. Restauração de banco é operação destrutiva e deve usar o dump, seu SHA-256 e um banco-alvo explicitamente confirmado.
 
 ## Limitações externas
 
