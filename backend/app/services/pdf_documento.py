@@ -46,6 +46,9 @@ from reportlab.pdfgen import canvas
 
 from app.core.config import settings
 from app.services.pdf.marca import LOGO, logo_disponivel
+from app.services.professional_profile import (
+    logo_needs_dark_plate_path, logo_path, professional_name, workplace_lines,
+)
 
 log = logging.getLogger("meucardio.pdf_documento")
 
@@ -191,15 +194,7 @@ LARGURA_LOGO_PESSOAL = 24 * mm
 
 
 def _caminho_logo_pessoal(document_logo_url: str | None) -> Path | None:
-    """`document_logo_url` é sempre '/logos/<arquivo>' (ver `POST /api/auth/
-    me/logo`). Resolve pro caminho de disco real — não passa por HTTP,
-    porque quem lê aqui é o próprio processo do backend, no mesmo volume que
-    o Caddy serve pro navegador."""
-    if not document_logo_url or not document_logo_url.startswith("/logos/"):
-        return None
-    nome = document_logo_url.removeprefix("/logos/")
-    caminho = Path(settings.uploads_dir) / "logos" / nome
-    return caminho if caminho.is_file() else None
+    return logo_path(document_logo_url)
 
 
 def _logo_pessoal(c: canvas.Canvas, x_direita: float, y: float, medico: dict) -> float:
@@ -214,8 +209,13 @@ def _logo_pessoal(c: canvas.Canvas, x_direita: float, y: float, medico: dict) ->
         img = ImageReader(str(caminho))
         largura_px, altura_px = img.getSize()
         altura = LARGURA_LOGO_PESSOAL * altura_px / largura_px
-        _fundo_logo(c, x_direita - LARGURA_LOGO_PESSOAL, y - altura, LARGURA_LOGO_PESSOAL, altura)
-        c.drawImage(img, x_direita - LARGURA_LOGO_PESSOAL, y - altura,
+        x = x_direita - LARGURA_LOGO_PESSOAL
+        y_base = y - altura
+        escura = logo_needs_dark_plate_path(caminho)
+        c.setFillColorRGB(*(NAVY if escura else (1, 1, 1)))
+        c.roundRect(x - 2 * mm, y_base - 2 * mm, LARGURA_LOGO_PESSOAL + 4 * mm,
+                    altura + 4 * mm, 2.5 * mm, fill=1, stroke=0)
+        c.drawImage(img, x, y_base,
                     width=LARGURA_LOGO_PESSOAL, height=altura, mask="auto", preserveAspectRatio=True)
         return y - altura - 3 * mm
     except OSError:
@@ -229,14 +229,20 @@ def _bloco_profissional(c: canvas.Canvas, x_direita: float, y: float, medico: di
 
     c.setFillColorRGB(0, 0, 0)
     c.setFont("Helvetica-Bold", 10.5)
-    c.drawRightString(x_direita, y, medico.get("full_name") or "")
+    c.drawRightString(x_direita, y, professional_name(medico))
     y -= 4.6 * mm
 
     c.setFont("Helvetica", 8.5)
     c.setFillColorRGB(*CINZA)
+    if medico.get("profession"):
+        c.drawRightString(x_direita, y, medico["profession"])
+        y -= 3.8 * mm
     if medico.get("specialty"):
         c.drawRightString(x_direita, y, medico["specialty"])
         y -= 3.8 * mm
+    for linha in workplace_lines(medico):
+        c.drawRightString(x_direita, y, linha)
+        y -= 3.6 * mm
 
     registro = _registro(medico)
     if registro:
@@ -317,6 +323,12 @@ def _itens(c: canvas.Canvas, y: float, itens: list[dict]) -> float:
         for linha in _quebrar(c, f"{n}. {titulo}", "Helvetica-Bold", 10.5, util):
             c.drawString(MARGEM, y, linha)
             y -= 5 * mm
+        if item.get("quantidade"):
+            c.setFont("Helvetica", 9.5)
+            c.setFillColorRGB(0.2, 0.2, 0.2)
+            for linha in _quebrar(c, f"Quantidade: {item['quantidade']}", "Helvetica", 9.5, util - 6 * mm):
+                c.drawString(MARGEM + 6 * mm, y, linha)
+                y -= 4.4 * mm
         if item.get("posologia"):
             c.setFont("Helvetica", 10)
             c.setFillColorRGB(0.2, 0.2, 0.2)
@@ -366,12 +378,15 @@ def _rodape(c: canvas.Canvas, medico: dict, endereco: dict | None, via: str | No
 
     c.setFillColorRGB(0, 0, 0)
     c.setFont("Helvetica-Bold", 9.5)
-    nome = medico.get("full_name") or ""
-    c.drawCentredString(LARGURA / 2, y, f"Dr. {nome}" if nome else "")
+    nome = professional_name(medico)
+    c.drawCentredString(LARGURA / 2, y, nome)
     y -= 4.4 * mm
 
     c.setFont("Helvetica", 8.5)
     c.setFillColorRGB(*CINZA)
+    if medico.get("profession"):
+        c.drawCentredString(LARGURA / 2, y, medico["profession"])
+        y -= 4 * mm
     if medico.get("specialty"):
         c.drawCentredString(LARGURA / 2, y, medico["specialty"])
         y -= 4 * mm

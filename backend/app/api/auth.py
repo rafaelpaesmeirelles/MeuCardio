@@ -14,6 +14,9 @@ from app.core.validators import UFS, cpf_valido, limpar_cpf
 from app.models.user import User
 from app.services import emails
 from app.services.assinatura import catalogo
+from app.services.professional_profile import (
+    normalize_council, normalize_professional_title, profile_payload,
+)
 
 router = APIRouter(prefix="/api/auth", tags=["auth"])
 
@@ -77,6 +80,7 @@ def _perfil(user: User) -> dict:
         "practice_city": user.practice_city, "practice_state": user.practice_state,
         "practice_zip": user.practice_zip, "practice_phone": user.practice_phone,
         "document_logo_url": user.document_logo_url,
+        **profile_payload(user),
         "boas_vindas_pendente": user.boas_vindas_pendente,
         # Método de assinatura preferido (Tarefa 4) — só o DEFAULT sugerido
         # na tela de emissão; nunca impede escolher outro a cada documento.
@@ -101,6 +105,12 @@ class DadosPessoais(BaseModel):
     council_state: str | None = None
     specialty: str | None = None
     rqe: str | None = None
+    professional_title: str | None = None
+    workplace_name: str | None = None
+    workplace_department: str | None = None
+    workplace_role: str | None = None
+    workplace_notes: str | None = None
+    include_workplace_on_documents: bool = False
 
     # Endereços completos (Tarefa 29) — residencial e profissional, os dois
     # opcionais. `practice_phone` é exigido por lei para receita de
@@ -130,6 +140,16 @@ class DadosPessoais(BaseModel):
             raise ValueError("Informe nome completo.")
         return v.strip()
 
+    @field_validator("professional_title")
+    @classmethod
+    def _titulo(cls, v: str | None) -> str | None:
+        return normalize_professional_title(v)
+
+    @field_validator("council_name")
+    @classmethod
+    def _conselho(cls, v: str | None) -> str | None:
+        return normalize_council(v)
+
     @field_validator("council_state", "home_state", "practice_state")
     @classmethod
     def _uf(cls, v: str | None) -> str | None:
@@ -154,6 +174,12 @@ _ROTULOS_CADASTRO = {
     "council_state": "UF do conselho",
     "specialty": "Especialidade",
     "rqe": "RQE",
+    "professional_title": "Forma de tratamento",
+    "workplace_name": "Local de trabalho",
+    "workplace_department": "Setor/unidade",
+    "workplace_role": "Cargo/função",
+    "workplace_notes": "Informações profissionais",
+    "include_workplace_on_documents": "Exibir local de trabalho nos documentos",
 }
 _CAMPOS_ENDERECO_RESIDENCIAL = (
     "home_street", "home_number", "home_complement", "home_neighborhood", "home_city", "home_state", "home_zip",
@@ -178,6 +204,13 @@ def atualizar_me(dados: DadosPessoais, background_tasks: BackgroundTasks,
     user.council_state = dados.council_state
     user.specialty = (dados.specialty or "").strip() or None
     user.rqe = (dados.rqe or "").strip() or None
+    user.professional_title = dados.professional_title
+    user.workplace_name = (dados.workplace_name or "").strip() or None
+    user.workplace_department = (dados.workplace_department or "").strip() or None
+    user.workplace_role = (dados.workplace_role or "").strip() or None
+    user.workplace_notes = (dados.workplace_notes or "").strip() or None
+    user.include_workplace_on_documents = dados.include_workplace_on_documents
+    user.profile_completion_required = False
 
     user.home_street = (dados.home_street or "").strip() or None
     user.home_number = (dados.home_number or "").strip() or None
@@ -417,6 +450,12 @@ class SolicitacaoAcesso(BaseModel):
     council_number: str
     council_state: str
     specialty: str | None = None
+    professional_title: str | None = None
+    workplace_name: str | None = None
+    workplace_department: str | None = None
+    workplace_role: str | None = None
+    workplace_notes: str | None = None
+    include_workplace_on_documents: bool = False
     email: str
     password: str
 
@@ -426,6 +465,16 @@ class SolicitacaoAcesso(BaseModel):
         if len(v.strip().split()) < 2:
             raise ValueError("Informe nome completo.")
         return v.strip()
+
+    @field_validator("professional_title")
+    @classmethod
+    def _titulo(cls, v: str | None) -> str | None:
+        return normalize_professional_title(v)
+
+    @field_validator("council_name")
+    @classmethod
+    def _conselho(cls, v: str) -> str:
+        return normalize_council(v) or "OUTRO"
 
     @field_validator("council_state")
     @classmethod
@@ -466,6 +515,12 @@ def solicitar_acesso(dados: SolicitacaoAcesso, db: Session = Depends(get_db)):
         cpf=cpf_limpo, profession=dados.profession.strip(),
         council_name=dados.council_name.strip().upper(), council_number=dados.council_number.strip(),
         council_state=dados.council_state, specialty=(dados.specialty or "").strip() or None,
+        professional_title=dados.professional_title,
+        workplace_name=(dados.workplace_name or "").strip() or None,
+        workplace_department=(dados.workplace_department or "").strip() or None,
+        workplace_role=(dados.workplace_role or "").strip() or None,
+        workplace_notes=(dados.workplace_notes or "").strip() or None,
+        include_workplace_on_documents=dados.include_workplace_on_documents,
         password_hash=hash_password(dados.password),
         role="leitor",  # perfil mínimo até o admin decidir o perfil definitivo na aprovação
         status="pendente", is_active=False,

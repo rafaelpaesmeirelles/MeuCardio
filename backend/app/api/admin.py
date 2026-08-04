@@ -3,7 +3,7 @@
 from datetime import datetime, timezone
 
 from fastapi import APIRouter, Depends, HTTPException, Query
-from pydantic import BaseModel
+from pydantic import BaseModel, field_validator
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
@@ -11,6 +11,7 @@ from app.core.db import get_db
 from app.core.security import require_admin
 from app.models.audit import AuditLog
 from app.models.content import Document
+from app.services.professional_profile import normalize_council, normalize_professional_title
 
 router = APIRouter(prefix="/api/admin", tags=["administração"])
 
@@ -262,8 +263,38 @@ class NovoUsuario(BaseModel):
     email: str
     full_name: str
     crm: str | None = None
+    profession: str | None = None
+    council_name: str | None = None
+    council_number: str | None = None
+    council_state: str | None = None
+    specialty: str | None = None
+    professional_title: str | None = None
+    workplace_name: str | None = None
+    workplace_department: str | None = None
+    workplace_role: str | None = None
+    workplace_notes: str | None = None
+    include_workplace_on_documents: bool = False
+    profile_completion_required: bool = False
     role: str = "medico"  # admin | medico | residente | leitor
     password: str
+
+    @field_validator("professional_title")
+    @classmethod
+    def _title(cls, value: str | None) -> str | None:
+        return normalize_professional_title(value)
+
+    @field_validator("council_name")
+    @classmethod
+    def _council(cls, value: str | None) -> str | None:
+        return normalize_council(value)
+
+    @field_validator("council_state")
+    @classmethod
+    def _state(cls, value: str | None) -> str | None:
+        value = (value or "").strip().upper()
+        if value and (len(value) != 2 or not value.isalpha()):
+            raise ValueError("UF inválida.")
+        return value or None
 
 
 class SenhaTemporaria(BaseModel):
@@ -282,6 +313,13 @@ def _dump_usuario(u) -> dict:
         "birth_date": u.birth_date, "cpf": u.cpf, "profession": u.profession,
         "council_name": u.council_name, "council_number": u.council_number,
         "council_state": u.council_state, "specialty": u.specialty,
+        "professional_title": u.professional_title,
+        "workplace_name": u.workplace_name,
+        "workplace_department": u.workplace_department,
+        "workplace_role": u.workplace_role,
+        "workplace_notes": u.workplace_notes,
+        "include_workplace_on_documents": u.include_workplace_on_documents,
+        "profile_completion_required": u.profile_completion_required,
         "role": u.role, "status": u.status, "is_active": u.is_active,
         "rejection_note": u.rejection_note, "created_at": u.created_at,
     }
@@ -352,6 +390,18 @@ def criar_usuario(dados: NovoUsuario, db: Session = Depends(get_db), admin=Depen
 
     novo = User(
         email=email, full_name=dados.full_name.strip(), crm=dados.crm,
+        profession=(dados.profession or "").strip() or None,
+        council_name=dados.council_name,
+        council_number=(dados.council_number or "").strip() or None,
+        council_state=dados.council_state,
+        specialty=(dados.specialty or "").strip() or None,
+        professional_title=dados.professional_title,
+        workplace_name=(dados.workplace_name or "").strip() or None,
+        workplace_department=(dados.workplace_department or "").strip() or None,
+        workplace_role=(dados.workplace_role or "").strip() or None,
+        workplace_notes=(dados.workplace_notes or "").strip() or None,
+        include_workplace_on_documents=dados.include_workplace_on_documents,
+        profile_completion_required=dados.profile_completion_required,
         role=dados.role, password_hash=hash_password(dados.password), is_active=True,
     )
     db.add(novo)

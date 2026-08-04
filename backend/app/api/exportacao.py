@@ -31,6 +31,7 @@ from app.models.patient_material_send import PatientMaterialSend
 from app.services import apresentacao as svc_apres
 from app.services import cofre, emails, mail360
 from app.services import material_paciente as svc_material
+from app.services.professional_profile import document_identity
 from app.services.mail360 import Mail360Error
 
 router = APIRouter(tags=["exportação"])
@@ -39,13 +40,7 @@ LIMITE_ANOTACAO = 2000
 
 
 def _dados_do_medico(user) -> dict:
-    return {
-        "full_name": getattr(user, "full_name", "") or "",
-        "council_name": getattr(user, "council_name", None),
-        "council_number": getattr(user, "council_number", None),
-        "council_state": getattr(user, "council_state", None),
-        "rqe": getattr(user, "rqe", None),
-    }
+    return document_identity(user)
 
 
 def _nome_arquivo(base: str, sufixo: str) -> str:

@@ -23,6 +23,9 @@ import re
 from datetime import datetime, timezone
 
 from app.models.content import Document
+from app.services.professional_profile import (
+    professional_name, rendered_logo_png, workplace_lines,
+)
 
 from .pdf import Apresentacao
 from .pdf import arvore as arv
@@ -87,13 +90,21 @@ def _secoes(markdown: str) -> list[tuple[str, list[tuple[str, str]]]]:
 
 def gerar(doc: Document, medico: dict, anotacao: str = "") -> bytes:
     """Monta a apresentação de um documento publicado."""
-    nome = (medico.get("full_name") or "").strip()
+    nome = professional_name(medico)
+    conselho = " ".join(
+        x for x in (
+            medico.get("council_name"), medico.get("council_number"),
+            medico.get("council_state"),
+        ) if x
+    )
     registro = " · ".join(
         p for p in (
-            " ".join(x for x in (medico.get("council_name"), medico.get("council_number")) if x),
+            conselho,
             f"RQE {medico['rqe']}" if medico.get("rqe") else "",
+            *workplace_lines(medico),
         ) if p
     )
+    logo_profissional = rendered_logo_png(medico.get("document_logo_url"))
 
     a = Apresentacao(
         titulo=doc.title,
@@ -101,7 +112,10 @@ def gerar(doc: Document, medico: dict, anotacao: str = "") -> bytes:
         assunto=f"Material de apresentação — {doc.theme}",
         rodape=f"Corvia · {doc.theme} · corvia.med.br",
     )
-    a.capa(doc.title, doc.summary or "", nome, registro)
+    a.capa(
+        doc.title, doc.summary or "", nome, registro,
+        logo_profissional=str(logo_profissional) if logo_profissional else None,
+    )
 
     # --- fluxograma: a árvore é o conteúdo principal, vai logo após a capa ---
     fonte = arv.extrair_mermaid(doc.body_md or "")

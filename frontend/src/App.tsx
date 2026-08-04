@@ -1,5 +1,5 @@
 import { lazy, Suspense, type ReactNode } from "react";
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import Shell from "./components/Shell";
 import { Carregando } from "./components/Estado";
 import { useAuth } from "./lib/auth";
@@ -66,6 +66,7 @@ function RotasSuspensas({ children }: { children: ReactNode }) {
 
 export default function App() {
   const { usuario, carregando } = useAuth();
+  const location = useLocation();
 
   if (carregando) return <Carregando texto="Abrindo a Corvia…" />;
   if (!usuario) {
@@ -81,6 +82,10 @@ export default function App() {
         </Routes>
       </RotasSuspensas>
     );
+  }
+
+  if (usuario.profile_completion_required && location.pathname !== "/minha-conta") {
+    return <Navigate to="/minha-conta" replace />;
   }
 
   return (

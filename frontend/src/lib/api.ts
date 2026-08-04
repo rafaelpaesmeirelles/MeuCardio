@@ -209,6 +209,14 @@ export type Usuario = {
   practice_zip: string | null;
   practice_phone: string | null;
   document_logo_url: string | null;
+  document_logo_dark_background: boolean;
+  professional_title: string | null;
+  workplace_name: string | null;
+  workplace_department: string | null;
+  workplace_role: string | null;
+  workplace_notes: string | null;
+  include_workplace_on_documents: boolean;
+  profile_completion_required: boolean;
   boas_vindas_pendente: boolean;
   assinatura_metodo_preferido: string | null;
 };

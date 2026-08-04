@@ -6,9 +6,16 @@ type Usuario = {
   id: number; email: string; full_name: string; crm: string | null;
   birth_date: string | null; cpf: string | null; profession: string | null;
   council_name: string | null; council_number: string | null; council_state: string | null;
-  specialty: string | null; role: string; status: string; is_active: boolean;
+  specialty: string | null; professional_title: string | null;
+  workplace_name: string | null; workplace_department: string | null;
+  workplace_role: string | null; workplace_notes: string | null;
+  include_workplace_on_documents: boolean; role: string; status: string; is_active: boolean;
   rejection_note: string | null; created_at: string;
 };
+
+const CONSELHOS = ["CRM", "CRO", "CRBM", "COREN", "CRF", "CREFITO", "CRN", "CRP", "CREF", "CRESS", "OUTRO"];
+const TITULOS = ["", "Sr.", "Sra.", "Dr.", "Dra.", "Prof.", "Profa.", "Prof. Dr.", "Profa. Dra.", "Me.", "Ma.", "Esp."];
+const UFS = ["AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO"];
 
 const PERFIS = [
   { valor: "admin", rotulo: "Administrador" },
@@ -86,7 +93,11 @@ export default function Admin() {
   const [erro, setErro] = useState("");
   const [enviando, setEnviando] = useState(false);
   const [novo, setNovo] = useState({
-    email: "", full_name: "", crm: "", role: "medico", password: "",
+    email: "", full_name: "", crm: "", profession: "", council_name: "CRM",
+    council_number: "", council_state: "", specialty: "", professional_title: "",
+    workplace_name: "", workplace_department: "", workplace_role: "", workplace_notes: "",
+    include_workplace_on_documents: false, profile_completion_required: false,
+    role: "medico", password: "",
   });
 
   const recarregar = () =>
@@ -102,10 +113,26 @@ export default function Admin() {
         email: novo.email.trim(),
         full_name: novo.full_name.trim(),
         crm: novo.crm.trim() || null,
+        profession: novo.profession.trim() || null,
+        council_name: novo.council_name || null,
+        council_number: novo.council_number.trim() || null,
+        council_state: novo.council_state || null,
+        specialty: novo.specialty.trim() || null,
+        professional_title: novo.professional_title || null,
+        workplace_name: novo.workplace_name.trim() || null,
+        workplace_department: novo.workplace_department.trim() || null,
+        workplace_role: novo.workplace_role.trim() || null,
+        workplace_notes: novo.workplace_notes.trim() || null,
+        include_workplace_on_documents: novo.include_workplace_on_documents,
+        profile_completion_required: novo.profile_completion_required,
         role: novo.role,
         password: novo.password,
       });
-      setNovo({ email: "", full_name: "", crm: "", role: "medico", password: "" });
+      setNovo({ email: "", full_name: "", crm: "", profession: "", council_name: "CRM",
+        council_number: "", council_state: "", specialty: "", professional_title: "",
+        workplace_name: "", workplace_department: "", workplace_role: "", workplace_notes: "",
+        include_workplace_on_documents: false, profile_completion_required: false,
+        role: "medico", password: "" });
       recarregar();
     } catch (e) {
       setErro(e instanceof Error ? e.message : "Não foi possível criar o usuário.");
@@ -177,7 +204,43 @@ export default function Admin() {
                        onChange={(e) => setNovo({ ...novo, email: e.target.value })} />
               </div>
               <div>
-                <label htmlFor="crm">CRM (opcional)</label>
+                <label htmlFor="tratamento-admin">Como será chamado(a)</label>
+                <select id="tratamento-admin" value={novo.professional_title}
+                        onChange={(e) => setNovo({ ...novo, professional_title: e.target.value })}>
+                  {TITULOS.map((t) => <option key={t || "sem"} value={t}>{t || "Sem título"}</option>)}
+                </select>
+              </div>
+              <div>
+                <label htmlFor="profissao-admin">Profissão</label>
+                <input id="profissao-admin" value={novo.profession}
+                       onChange={(e) => setNovo({ ...novo, profession: e.target.value })} />
+              </div>
+              <div>
+                <label htmlFor="conselho-admin">Conselho</label>
+                <select id="conselho-admin" value={novo.council_name}
+                        onChange={(e) => setNovo({ ...novo, council_name: e.target.value })}>
+                  {CONSELHOS.map((c) => <option key={c} value={c}>{c}</option>)}
+                </select>
+              </div>
+              <div>
+                <label htmlFor="registro-admin">Nº de registro</label>
+                <input id="registro-admin" value={novo.council_number}
+                       onChange={(e) => setNovo({ ...novo, council_number: e.target.value })} />
+              </div>
+              <div>
+                <label htmlFor="uf-admin">UF</label>
+                <select id="uf-admin" value={novo.council_state}
+                        onChange={(e) => setNovo({ ...novo, council_state: e.target.value })}>
+                  <option value="">—</option>{UFS.map((uf) => <option key={uf} value={uf}>{uf}</option>)}
+                </select>
+              </div>
+              <div>
+                <label htmlFor="especialidade-admin">Especialidade</label>
+                <input id="especialidade-admin" value={novo.specialty}
+                       onChange={(e) => setNovo({ ...novo, specialty: e.target.value })} />
+              </div>
+              <div>
+                <label htmlFor="crm">CRM legado (opcional)</label>
                 <input id="crm" value={novo.crm}
                        onChange={(e) => setNovo({ ...novo, crm: e.target.value })} />
               </div>
@@ -189,6 +252,27 @@ export default function Admin() {
                 </select>
               </div>
             </div>
+            <h3 style={{ fontSize: "1rem", marginTop: "1rem" }}>Local de trabalho (opcional)</h3>
+            <div className="grade grade--2">
+              <input placeholder="Instituição, clínica ou consultório" value={novo.workplace_name}
+                     onChange={(e) => setNovo({ ...novo, workplace_name: e.target.value })} />
+              <input placeholder="Setor/unidade" value={novo.workplace_department}
+                     onChange={(e) => setNovo({ ...novo, workplace_department: e.target.value })} />
+              <input placeholder="Cargo/função" value={novo.workplace_role}
+                     onChange={(e) => setNovo({ ...novo, workplace_role: e.target.value })} />
+              <input placeholder="Outras informações" value={novo.workplace_notes}
+                     onChange={(e) => setNovo({ ...novo, workplace_notes: e.target.value })} />
+            </div>
+            <label style={{ display: "flex", gap: 8, alignItems: "center", fontWeight: 400, marginTop: 8 }}>
+              <input type="checkbox" style={{ width: "auto" }} checked={novo.include_workplace_on_documents}
+                     onChange={(e) => setNovo({ ...novo, include_workplace_on_documents: e.target.checked })} />
+              Incluir local de trabalho nos documentos
+            </label>
+            <label style={{ display: "flex", gap: 8, alignItems: "center", fontWeight: 400, marginTop: 8 }}>
+              <input type="checkbox" style={{ width: "auto" }} checked={novo.profile_completion_required}
+                     onChange={(e) => setNovo({ ...novo, profile_completion_required: e.target.checked })} />
+              No primeiro acesso, direcionar para completar dados pessoais e profissionais
+            </label>
             <div style={{ marginTop: "0.9rem" }}>
               <label htmlFor="senha">Senha temporária</label>
               <input id="senha" type="text" value={novo.password}
