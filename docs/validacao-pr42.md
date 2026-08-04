@@ -16,6 +16,7 @@ Este documento marca o SHA submetido à certificação integral antes da integra
 - Receita de Controle Especial física Anvisa V2 em duas vias, frente e verso;
 - identificação do emitente, endereço profissional completo, nome/endereço/documento do paciente e data recomendada de impressão na RCE;
 - quantidade de cada item em algarismos e por extenso, conforme Portaria SVS/MS nº 344/1998;
+- limite de até três substâncias da Lista C1 por RCE;
 - Lista C5 com validações da Lei nº 9.965/2000;
 - demais modelos numerados em fail-closed, sem simulação de SNCR;
 - primeiro acesso direcionado à conclusão do perfil;
