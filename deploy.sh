@@ -69,7 +69,7 @@ fi
 # No primeiro deploy ainda não existe serviço db; nesse caso o passo é omitido.
 if "${COMPOSE[@]}" ps --status running --services 2>/dev/null | grep -Fxq db; then
   log "Criando backup pré-deploy do PostgreSQL."
-  PROJETO="$PWD" ./infra/backup/backup.sh
+  PROJETO="$PWD" bash ./infra/backup/backup.sh
 else
   log "Banco ainda não está em execução; backup pré-deploy não se aplica ao primeiro deploy."
 fi
