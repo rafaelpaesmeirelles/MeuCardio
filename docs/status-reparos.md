@@ -1,10 +1,10 @@
 # Status dos reparos — MeuCardio
 
-Última atualização: 03/08/2026 22:10 (BRT)
+Última atualização: 03/08/2026 22:42 (BRT)
 
 ## Visão geral
 
-O trabalho de correção, consolidação e publicação do MeuCardio está em andamento contínuo. Este arquivo registra o estado real do repositório, o que já foi concluído e o que ainda falta executar.
+O trabalho de correção, consolidação e publicação do MeuCardio está em andamento contínuo. Este arquivo registra o estado verificável do repositório, as correções concluídas, as frentes abertas e o que depende do servidor real.
 
 ## Concluído e publicado na `main`
 
@@ -16,7 +16,7 @@ O trabalho de correção, consolidação e publicação do MeuCardio está em an
 - Correção da biblioteca que mostrava apenas os primeiros 50 documentos.
 - Paginação da biblioteca implementada.
 - Catálogo consolidado das 11 frentes científicas implementado.
-- Reconciliação do corpus científico com PostgreSQL validada.
+- Reconciliação idempotente do corpus com PostgreSQL publicada.
 - Proteções automáticas para impedir redução silenciosa do corpus.
 
 ### Funcionalidades e arquitetura
@@ -27,94 +27,143 @@ O trabalho de correção, consolidação e publicação do MeuCardio está em an
 - Preservação de **38 routers FastAPI**.
 - Carregamento lazy por rota implementado.
 - Orçamento de bundle e cache PWA implementado.
-- Renderização segura de Mermaid, snippets de busca e conteúdo externo de e-mail.
+- CorvIA Mail implementado em rota, menu lateral e painel.
+- CorvIA Chat implementado com mensagens HTTP, WebSocket, histórico, não lidas, busca de usuários e widget flutuante.
 
-### Segurança e autenticação
+### Segurança, testes e operação
 
 - Sessão via cookie HttpOnly implementada para navegador.
 - Revogação de sessões após troca de senha implementada.
 - Separação de escopos de token entre aplicação e CorvIA Mail.
-- Validação de origem e rate limiting com Redis.
-- Migração para PyJWT.
-- Auditorias automáticas de dependências Python e Node.
-
-### Operação, banco e infraestrutura
-
 - Migrations Alembic consolidadas e idempotentes.
 - Smoke test HTTP de release implementado.
 - Backup e restauração PostgreSQL comprovados em CI.
 - GitHub Actions atualizadas para versões v7.
-- Preflight de host Redis publicado.
-- Validação de `vm.overcommit_memory=1` documentada e testada.
-- Script do Redis é somente leitura e não executa `sudo`.
-
-### Compatibilidade técnica
-
-- Migração de `Settings.Config` para `SettingsConfigDict`.
-- Compatibilidade do TestClient com HTTPX2 somente em ambiente de testes.
-- Gate AST que impede retorno de configuração Pydantic class-based.
-- Warning legado do Pydantic eliminado.
-- Warning legado do TestClient Starlette/HTTPX eliminado.
-- Suíte atual certificada com **168 testes backend aprovados**.
+- Suíte publicada certificada com **168 testes backend aprovados**.
 
 ### Commits publicados mais recentes
 
 - `4856db20`: preflight Redis e documentação operacional.
 - `55c363da`: compatibilidade Pydantic e HTTPX2.
+- `114fd965`: criação deste acompanhamento contínuo.
 
 ## Em andamento
 
-### Substituição segura do Passlib
+### PR #34 — substituição segura do Passlib
 
-Objetivo atual: eliminar a dependência do `passlib`, que importa o módulo `crypt`, previsto para remoção no Python 3.13.
+Branch: `agent/substitui-passlib-bcrypt`
 
-Requisitos obrigatórios desta etapa:
+Implementado:
 
-- manter compatibilidade com todos os hashes bcrypt já armazenados;
-- não invalidar senhas existentes;
-- preservar `hash_password()` e `verify_password()` como contrato interno;
-- criar testes com hashes antigos e novos;
-- executar auditoria, migrations, 168+ testes, smoke HTTP e backup/restauração;
-- publicar somente após CI integralmente verde.
+- remoção de `passlib[bcrypt]==1.7.4`;
+- uso direto de `bcrypt==4.0.1`;
+- preservação dos contratos `hash_password()` e `verify_password()`;
+- novos hashes com custo 12;
+- compatibilidade coberta para `$2a$`, `$2b$` e `$2y$`;
+- comportamento histórico de 72 bytes documentado;
+- nenhuma senha ou linha do banco alterada;
+- gate contra reintrodução da dependência.
 
-Estado atual:
+Situação:
 
-- código atual localizado em `backend/app/core/security.py`;
-- uso atual confirmado: `CryptContext(schemes=["bcrypt"], deprecated="auto")`;
-- migração ainda não implementada;
-- nenhuma alteração de senha ou banco realizada.
+- PR #34 aberto;
+- primeira CI falhou porque o teste encontrou o nome da dependência dentro de um comentário;
+- apontamento P1 do Codex corrigido em `f46a9bfa`;
+- nova CI pendente/em execução;
+- merge somente após certificação integral verde.
 
-## Pendente
+### Correção do painel, acervo e comunicação
+
+Branch: `agent/corrige-painel-acervo-comunicacao`
+
+Relato de produção recebido em 03/08/2026:
+
+- número de itens inferior ao inventário real;
+- CorvIA Mail não visível no painel publicado;
+- mensagens entre usuários sem acesso explícito no painel.
+
+Diagnóstico confirmado:
+
+- o Painel somava `/library/themes`, portanto mostrava somente registros da tabela `Document`;
+- `/api/library/catalog` já era a fonte canônica das 11 coleções;
+- CorvIA Mail e CorvIA Chat já existem na `main` atual;
+- a ausência deles no site indica frontend/build de produção anterior à `main` atual ou ativos não atualizados;
+- o banco de produção pode ainda precisar da reconciliação oficial do corpus.
+
+Implementado na branch:
+
+- total principal do Painel passou a usar `/library/catalog`;
+- rótulo alterado para **itens científicos**, evitando chamar todas as coleções de documentos;
+- API do catálogo agora expõe baseline mínimo de **4.936**, expectativa de **1.327 arquivos físicos**, déficit e estado de integridade;
+- Painel exibe alerta administrativo quando o banco está abaixo do baseline;
+- Biblioteca exibe alerta de integridade quando o corpus está incompleto;
+- novo grupo **Comunicação profissional** no Painel;
+- cartão acionável para abrir o CorvIA Chat;
+- cartão explícito para CorvIA Mail;
+- gates automatizados impedem retorno da soma parcial por temas ou ocultação de Mail/Chat;
+- baseline do catálogo testado contra o comando oficial `app.commands.reconcile_content`.
+
+Commits principais desta branch:
+
+- `c587dfe9`: integridade no catálogo;
+- `6c7b01bb`: total canônico e comunicação no Painel;
+- `6cfade57`: alerta de integridade na Biblioteca;
+- `bc37bab9`: alinhamento com o reconciliador;
+- `ab927204`: gates de visibilidade e integridade.
+
+Próximo marco:
+
+- abrir PR da correção do painel;
+- executar CI integral;
+- tratar revisão automática;
+- publicar na `main` após certificação verde.
+
+## Pendências organizadas
+
+### Prioridade crítica
+
+1. Finalizar CI e revisão do PR #34.
+2. Abrir e certificar o PR do painel/acervo/comunicação.
+3. Confirmar qual commit está implantado no servidor real.
+4. Recriar frontend e reiniciar a aplicação com a `main` certificada.
+5. Executar no servidor real:
+
+   ```bash
+   python -m app.commands.reconcile_content --publish-reviewed
+   ```
+
+6. Confirmar na produção que o catálogo retorna pelo menos 4.936 itens.
+7. Confirmar visualmente CorvIA Mail, CorvIA Chat e o novo total do acervo.
 
 ### Prioridade alta
 
-1. Substituir Passlib mantendo compatibilidade com bcrypt existente.
-2. Eliminar warning do ReportLab relacionado a `ast.NameConstant` e Python 3.14.
-3. Reexecutar certificação funcional completa após cada mudança.
-4. Confirmar novamente inventário científico após novos merges.
+8. Eliminar warning do ReportLab relacionado a `ast.NameConstant` e Python 3.14.
+9. Reexecutar inventário científico após cada merge relevante.
+10. Manter smoke HTTP, backup/restauração e testes integrais obrigatórios.
 
 ### Prioridade média
 
-5. Revisar atualizações maiores de dependências que foram adiadas por risco:
-   - React Router 7;
-   - React 19;
-   - vite-plugin-pwa major;
-   - Stripe major;
-   - ReportLab major;
-   - bcrypt major;
-   - Capacitor major;
-   - markdown-it major.
-6. Tratar cada upgrade em PR isolado com testes específicos.
-7. Revisar documentação operacional final de deploy.
+11. Revisar upgrades maiores isoladamente: React Router, React, PWA, Stripe, ReportLab, bcrypt, Capacitor e markdown-it.
+12. Revisar documentação operacional final do deploy.
 
-### Dependência externa ao repositório
+## Dependências externas ao repositório
 
-- Aplicar `vm.overcommit_memory=1` no servidor real exige acesso administrativo ao host Linux.
-- O repositório já contém verificação e instruções seguras, mas o servidor real não foi alterado por este processo.
+As seguintes ações exigem acesso administrativo ao host ou à plataforma de deploy:
+
+- identificar o commit efetivamente implantado;
+- executar `git pull`/checkout da `main` certificada;
+- reconstruir containers ou bundle frontend;
+- executar a reconciliação contra o PostgreSQL real;
+- reiniciar serviços;
+- aplicar `vm.overcommit_memory=1` no host;
+- validar domínio, TLS, WebSocket e CorvIA Mail em produção.
+
+O repositório contém o comando seguro e idempotente de reconciliação, mas nenhuma alteração do banco real ou deploy do servidor foi executada nesta sessão.
 
 ## Estado de publicação
 
-- `main` contém todas as correções aprovadas até o commit `55c363da`.
-- Nenhum deploy adicional ao servidor foi executado nesta etapa.
-- Nenhum arquivo científico foi removido nas correções recentes.
-- O acompanhamento continuará sendo atualizado neste arquivo a cada etapa relevante.
+- PR #34 aberto e em recertificação.
+- Correção do painel/acervo/comunicação implementada em branch isolada e ainda sem merge.
+- Nenhum arquivo científico foi removido.
+- Nenhuma senha armazenada foi alterada.
+- A produção ainda precisa ser confrontada com os commits certificados e reconciliada no servidor real.
