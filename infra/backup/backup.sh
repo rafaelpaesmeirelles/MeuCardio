@@ -25,34 +25,46 @@ source .env
 : "${POSTGRES_DB:?Defina POSTGRES_DB no .env.}"
 
 DATA="$(date +%Y-%m-%d_%H%M%S)"
-ARQUIVO="$DESTINO/meucardio_${DATA}.sql.gz"
+ARQUIVO="$DESTINO/meucardio_${DATA}.dump"
 TEMPORARIO="${ARQUIVO}.tmp"
 
 umask 077
 trap 'rm -f "$TEMPORARIO"' EXIT
 
-echo "[$(date -Is)] Iniciando backup em $ARQUIVO"
+echo "[$(date -Is)] Iniciando backup custom em $ARQUIVO"
 
-if ! "${COMPOSE[@]}" exec -T db \
-  pg_dump -U "$POSTGRES_USER" --no-owner --no-privileges "$POSTGRES_DB" \
-  | gzip -9 > "$TEMPORARIO"; then
+if ! "${COMPOSE[@]}" exec -T db pg_dump \
+  -U "$POSTGRES_USER" \
+  --format=custom \
+  --compress=9 \
+  --no-owner \
+  --no-privileges \
+  "$POSTGRES_DB" > "$TEMPORARIO"; then
   echo "[$(date -Is)] ERRO: pg_dump falhou. Removendo arquivo parcial." >&2
   exit 1
 fi
 
-# Prova mínima de legibilidade antes de publicar o arquivo.
-gzip -t "$TEMPORARIO"
+# Verifica o catálogo com a mesma ferramenta usada na restauração antes de
+# publicar o arquivo no diretório de backups.
+if ! "${COMPOSE[@]}" exec -T db pg_restore --list < "$TEMPORARIO" >/dev/null; then
+  echo "[$(date -Is)] ERRO: pg_restore não reconheceu o catálogo do backup." >&2
+  exit 1
+fi
+
 mv "$TEMPORARIO" "$ARQUIVO"
 chmod 600 "$ARQUIVO"
-sha256sum "$ARQUIVO" > "${ARQUIVO}.sha256"
-chmod 600 "${ARQUIVO}.sha256"
+(
+  cd "$DESTINO"
+  sha256sum "$(basename "$ARQUIVO")" > "$(basename "$ARQUIVO").sha256"
+  chmod 600 "$(basename "$ARQUIVO").sha256"
+)
 trap - EXIT
 
 TAMANHO="$(du -h "$ARQUIVO" | cut -f1)"
 echo "[$(date -Is)] Backup concluído: $ARQUIVO ($TAMANHO)"
 
-REMOVIDOS="$(find "$DESTINO" -name 'meucardio_*.sql.gz' -mtime "+${RETENCAO_DIAS}" -print -delete | wc -l)"
-find "$DESTINO" -name 'meucardio_*.sql.gz.sha256' -mtime "+${RETENCAO_DIAS}" -delete
+REMOVIDOS="$(find "$DESTINO" -name 'meucardio_*.dump' -mtime "+${RETENCAO_DIAS}" -print -delete | wc -l)"
+find "$DESTINO" -name 'meucardio_*.dump.sha256' -mtime "+${RETENCAO_DIAS}" -delete
 if [[ "$REMOVIDOS" -gt 0 ]]; then
   echo "[$(date -Is)] Removidos $REMOVIDOS backup(s) com mais de ${RETENCAO_DIAS} dias."
 fi
