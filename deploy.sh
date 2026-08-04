@@ -35,6 +35,13 @@ for var in DOMAIN POSTGRES_USER POSTGRES_PASSWORD POSTGRES_DB JWT_SECRET; do
   fi
 done
 
+for comando in git curl getent sha256sum; do
+  if ! command -v "$comando" >/dev/null 2>&1; then
+    echo "Comando obrigatório ausente no host: $comando" >&2
+    exit 1
+  fi
+done
+
 if ! command -v docker >/dev/null 2>&1; then
   echo "Docker não encontrado. Instale com: curl -fsSL https://get.docker.com | sh"
   exit 1
@@ -50,6 +57,14 @@ if [[ ! "$COMMIT_ATUAL" =~ ^[0-9a-f]{40}$ ]]; then
   echo "Não foi possível identificar um commit Git completo; deploy não pode ser certificado." >&2
   exit 1
 fi
+
+ALTERACOES_LOCAIS="$(git status --porcelain --untracked-files=normal)"
+if [[ -n "$ALTERACOES_LOCAIS" ]]; then
+  echo "O checkout contém alterações não versionadas; o SHA não representaria o código publicado:" >&2
+  printf '%s\n' "$ALTERACOES_LOCAIS" >&2
+  exit 1
+fi
+
 # Docker Compose interpola variáveis exportadas antes de ler o arquivo. O mesmo
 # SHA fica disponível em /api/version para conferência externa.
 export DEPLOY_COMMIT="$COMMIT_ATUAL"
