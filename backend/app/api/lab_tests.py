@@ -1,5 +1,5 @@
 from fastapi import APIRouter, Depends, HTTPException, Query
-from sqlalchemy import func, select
+from sqlalchemy import func, or_, select
 from sqlalchemy.orm import Session
 
 from app.core.db import get_db
@@ -9,16 +9,26 @@ from app.models.lab_test import LabTest
 router = APIRouter(prefix="/api/lab-tests", tags=["exames"])
 
 
-def _card(t: LabTest) -> dict:
-    return {"id": t.id, "slug": t.slug, "name": t.name, "category": t.category, "theme": t.theme, "tags": t.tags}
-
-
-def _detail(t: LabTest) -> dict:
+def _card(test: LabTest) -> dict:
     return {
-        **_card(t),
-        "what_it_measures": t.what_it_measures, "reference_range": t.reference_range,
-        "indications": t.indications, "interpretation": t.interpretation,
-        "limitations": t.limitations, "source_refs": t.source_refs,
+        "id": test.id,
+        "slug": test.slug,
+        "name": test.name,
+        "category": test.category,
+        "theme": test.theme,
+        "tags": test.tags,
+    }
+
+
+def _detail(test: LabTest) -> dict:
+    return {
+        **_card(test),
+        "what_it_measures": test.what_it_measures,
+        "reference_range": test.reference_range,
+        "indications": test.indications,
+        "interpretation": test.interpretation,
+        "limitations": test.limitations,
+        "source_refs": test.source_refs,
     }
 
 
@@ -26,30 +36,77 @@ def _detail(t: LabTest) -> dict:
 def categories(db: Session = Depends(get_db), _=Depends(current_user)):
     rows = db.execute(
         select(LabTest.category, func.count(LabTest.id))
-        .where(LabTest.published.is_(True)).group_by(LabTest.category).order_by(LabTest.category)
+        .where(LabTest.published.is_(True))
+        .group_by(LabTest.category)
+        .order_by(LabTest.category)
     ).all()
-    return [{"category": c, "count": n} for c, n in rows]
+    return [{"category": category, "count": count} for category, count in rows]
+
+
+@router.get("/taxonomy")
+def taxonomy(db: Session = Depends(get_db), _=Depends(current_user)):
+    rows = db.execute(
+        select(LabTest.category, LabTest.theme, func.count(LabTest.id))
+        .where(LabTest.published.is_(True))
+        .group_by(LabTest.category, LabTest.theme)
+        .order_by(LabTest.category, LabTest.theme)
+    ).all()
+    por_tipo: dict[str, dict] = {}
+    for category, theme, count in rows:
+        item = por_tipo.setdefault(category, {"category": category, "count": 0, "subtypes": []})
+        item["count"] += count
+        item["subtypes"].append({"theme": theme, "count": count})
+    return list(por_tipo.values())
 
 
 @router.get("")
 def list_tests(
-    category: str | None = None, q: str | None = None,
-    limit: int = Query(60, le=200), offset: int = 0,
-    db: Session = Depends(get_db), _=Depends(current_user),
+    category: str | None = None,
+    theme: str | None = None,
+    q: str | None = None,
+    limit: int = Query(60, ge=1, le=200),
+    offset: int = Query(0, ge=0),
+    db: Session = Depends(get_db),
+    _=Depends(current_user),
 ):
     query = db.query(LabTest).filter(LabTest.published.is_(True))
     if category:
         query = query.filter(LabTest.category == category)
-    if q:
-        query = query.filter(LabTest.name.ilike(f"%{q.strip()}%"))
+    if theme:
+        query = query.filter(LabTest.theme == theme)
+    if q and q.strip():
+        termo = f"%{q.strip()}%"
+        query = query.filter(or_(
+            LabTest.name.ilike(termo),
+            LabTest.category.ilike(termo),
+            LabTest.theme.ilike(termo),
+            func.array_to_string(LabTest.tags, " ").ilike(termo),
+            LabTest.what_it_measures.ilike(termo),
+        ))
     total = query.count()
-    items = query.order_by(LabTest.name).offset(offset).limit(limit).all()
-    return {"total": total, "items": [_card(t) for t in items]}
+    items = (
+        query.order_by(LabTest.category, LabTest.theme, LabTest.name)
+        .offset(offset)
+        .limit(limit)
+        .all()
+    )
+    has_more = offset + len(items) < total
+    return {
+        "total": total,
+        "limit": limit,
+        "offset": offset,
+        "next_offset": offset + len(items) if has_more else None,
+        "has_more": has_more,
+        "items": [_card(test) for test in items],
+    }
 
 
 @router.get("/{slug}")
 def get_test(slug: str, db: Session = Depends(get_db), _=Depends(current_user)):
-    t = db.query(LabTest).filter(LabTest.slug == slug, LabTest.published.is_(True)).first()
-    if not t:
+    test = db.query(LabTest).filter(
+        LabTest.slug == slug,
+        LabTest.published.is_(True),
+    ).first()
+    if not test:
         raise HTTPException(status_code=404, detail="Exame não encontrado.")
-    return _detail(t)
+    return _detail(test)
