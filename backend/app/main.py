@@ -4,10 +4,10 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.api import (
     admin, ai, appointments, assinatura, auth, browser_session, calculators, chat, chat_session,
     cmed, documents, documentos_publicos, drug_insights, drugs, email as email_api, evidence,
-    favorites, gallery, guideline_updates, health, lab_tests, library, password_reset,
-    prescriptions, round as round_api, search, service_orders, sessions, studies,
-    timeline, billing, partner_courses, guidelines, indicadores, checklists, study_tracks,
-    exportacao, emergencia, receituario, clinical_cases,
+    favorites, gallery, guideline_updates, health, lab_tests, library, mail360_status,
+    password_reset, prescriptions, round as round_api, search, service_orders, sessions,
+    studies, timeline, billing, partner_courses, guidelines, indicadores, checklists,
+    study_tracks, exportacao, emergencia, receituario, clinical_cases,
 )
 from app.core.config import settings
 from app.core.course_uploads import CourseUploadSecurityMiddleware
@@ -54,9 +54,9 @@ ROUTERS_ASSINANTES = (
     round_api.router, ai.router, gallery.router, favorites.router, lab_tests.router,
     evidence.router, studies.router, prescriptions.router, documents.router,
     appointments.router, timeline.router, guidelines.router, guideline_updates.router,
-    indicadores.router, checklists.router, study_tracks.router, exportacao.router,
-    emergencia.router, receituario.router, clinical_cases.router, chat.router,
-    assinatura.router,
+    mail360_status.router, indicadores.router, checklists.router, study_tracks.router,
+    exportacao.router, emergencia.router, receituario.router, clinical_cases.router,
+    chat.router, assinatura.router,
 )
 
 for router in ROUTERS_LIVRES:
