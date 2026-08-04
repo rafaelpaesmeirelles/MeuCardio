@@ -5,6 +5,7 @@ set -Eeuo pipefail
 
 COMPOSE=(docker compose -f docker-compose.prod.yml)
 SERVICOS_INICIADOS=0
+BANCO_PERSISTENTE=0
 
 log() {
   printf '[%s] %s\n' "$(date -Is)" "$*"
@@ -38,20 +39,26 @@ compose_project_name() {
     | sed -E 's/^[^a-z0-9]+//; s/[^a-z0-9_-]+//g'
 }
 
-banco_persistente_existe() {
-  # Container parado ainda representa banco existente.
-  if [[ -n "$("${COMPOSE[@]}" ps -a -q db 2>/dev/null || true)" ]]; then
+detectar_banco_persistente() {
+  local container_id projeto volume
+
+  # A chamada é intencionalmente fail-closed: erro do Docker/Compose não pode
+  # ser reinterpretado como "primeiro deploy" e permitir migrations sem backup.
+  container_id="$("${COMPOSE[@]}" ps -a -q db)"
+  if [[ -n "$container_id" ]]; then
+    BANCO_PERSISTENTE=1
     return 0
   fi
 
   # Também cobre container removido com o volume nomeado preservado.
-  local projeto volume
   projeto="$(compose_project_name)"
   volume="$(docker volume ls -q \
     --filter "label=com.docker.compose.project=${projeto}" \
     --filter "label=com.docker.compose.volume=pgdata" \
     | head -n 1)"
-  [[ -n "$volume" ]]
+  if [[ -n "$volume" ]]; then
+    BANCO_PERSISTENTE=1
+  fi
 }
 
 aguardar_postgres() {
@@ -132,10 +139,10 @@ if [[ -n "$IP_SERVIDOR" && -n "$IP_DOMINIO" && "$IP_SERVIDOR" != "$IP_DOMINIO" ]
   [[ "$resposta" == "y" ]] || exit 1
 fi
 
-# Um banco persistente pode estar com o container parado ou removido. Nesse
-# caso inicia somente o PostgreSQL, sem backend/migrations, e cria o backup antes
-# de qualquer alteração da aplicação.
-if banco_persistente_existe; then
+# Um banco persistente pode estar com o container parado ou removido. A detecção
+# é chamada fora de condição para preservar `set -e`/ERR em toda consulta Docker.
+detectar_banco_persistente
+if [[ "$BANCO_PERSISTENTE" == "1" ]]; then
   log "Banco persistente detectado; iniciando somente o PostgreSQL para backup pré-deploy."
   SERVICOS_INICIADOS=1
   "${COMPOSE[@]}" up -d --no-deps db
