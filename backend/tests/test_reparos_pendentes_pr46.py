@@ -117,7 +117,7 @@ def test_existe_uma_só_regra_do_atalho_explícito_de_emergência():
     shell = (ROOT / "frontend/src/styles/shell.css").read_text(encoding="utf-8")
     emergencia = (ROOT / "frontend/src/styles/emergencia.css").read_text(encoding="utf-8")
     assert ".emerg-atalho {" not in shell
-    assert emergencia.count(".emerg-atalho {") == 1
+    assert len(re.findall(r"(?m)^\.emerg-atalho\s*\{", emergencia)) == 1
     assert "padding: 0.8rem 1.15rem" in emergencia
     assert "border-radius: 999px" in emergencia
 
