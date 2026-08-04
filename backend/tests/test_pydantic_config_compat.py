@@ -54,12 +54,8 @@ def _eh_modelo_pydantic(
         if not caminho:
             continue
 
-        if len(caminho) == 1:
-            nome = caminho[0]
-            if simbolos.get(nome) in PYDANTIC_BASES:
-                return True
-            if nome in {base_nome for _, base_nome in PYDANTIC_BASES}:
-                return True
+        if len(caminho) == 1 and simbolos.get(caminho[0]) in PYDANTIC_BASES:
+            return True
 
         modulo = modulos.get(caminho[0])
         if modulo and (modulo, caminho[-1]) in PYDANTIC_BASES:
@@ -113,6 +109,19 @@ def test_gate_ignora_config_de_classe_que_nao_e_pydantic():
 class ClienteHttp:
     class Config:
         timeout = 5
+"""
+
+    assert _configs_legados_em_fonte(fonte, "modulo.py") == []
+
+
+def test_gate_ignora_classe_local_apenas_chamada_basemodel():
+    fonte = """
+class BaseModel:
+    pass
+
+class Payload(BaseModel):
+    class Config:
+        formato = "interno"
 """
 
     assert _configs_legados_em_fonte(fonte, "modulo.py") == []
