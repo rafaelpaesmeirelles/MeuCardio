@@ -1,19 +1,89 @@
-import { useEffect, useId, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 
-function validarSvgGerado(svg: string): string {
-  const padroesProibidos = [
-    /<\s*(?:script|iframe|object|embed|audio|video|img|image)\b/i,
-    /(?:^|\s)on[a-z]+\s*=/i,
-    /(?:javascript|data\s*:\s*text\/html)\s*:/i,
-    /@import\b/i,
-    /url\(\s*["']?(?:https?:|\/\/|data\s*:)/i,
-    /(?:href|xlink:href|src)\s*=\s*["'](?:https?:|\/\/|data\s*:)/i,
-  ];
+const ELEMENTOS_PROIBIDOS = new Set([
+  "script",
+  "iframe",
+  "object",
+  "embed",
+  "audio",
+  "video",
+  "img",
+  "image",
+  "form",
+  "input",
+  "button",
+  "textarea",
+  "select",
+  "option",
+  "link",
+  "meta",
+  "base",
+  "canvas",
+]);
 
-  if (!svg.trimStart().startsWith("<svg") || padroesProibidos.some((padrao) => padrao.test(svg))) {
-    throw new Error("SVG gerado contém estrutura não permitida.");
+function cssContemReferenciaPerigosa(valor: string): boolean {
+  return (
+    /@import\b/i.test(valor) ||
+    /expression\s*\(/i.test(valor) ||
+    /-moz-binding\s*:/i.test(valor) ||
+    /url\(\s*["']?(?:https?:|\/\/|data\s*:)/i.test(valor)
+  );
+}
+
+/**
+ * Valida e interpreta o SVG retornado pelo Mermaid.
+ *
+ * O acervo clínico usa `<br/>` nos rótulos, então o Mermaid gera
+ * `foreignObject`. O elemento é permitido, mas qualquer capacidade de executar
+ * código, enviar formulário ou carregar recurso externo continua bloqueada.
+ */
+function validarSvgGerado(svg: string): SVGSVGElement {
+  if (!svg.trimStart().startsWith("<svg")) {
+    throw new Error("O Mermaid não retornou um SVG.");
   }
-  return svg;
+  if (/\bjavascript\s*:/i.test(svg) || /\bdata\s*:\s*text\/html/i.test(svg)) {
+    throw new Error("SVG gerado contém protocolo não permitido.");
+  }
+
+  const documentoSvg = new DOMParser().parseFromString(svg, "image/svg+xml");
+  if (documentoSvg.querySelector("parsererror")) {
+    throw new Error("SVG gerado é inválido.");
+  }
+
+  const raiz = documentoSvg.documentElement;
+  if (raiz.localName.toLowerCase() !== "svg") {
+    throw new Error("A raiz do documento gerado não é SVG.");
+  }
+
+  for (const elemento of Array.from(documentoSvg.querySelectorAll("*"))) {
+    const nome = elemento.localName.toLowerCase();
+    if (ELEMENTOS_PROIBIDOS.has(nome)) {
+      throw new Error(`SVG gerado contém elemento não permitido: ${nome}.`);
+    }
+
+    for (const atributo of Array.from(elemento.attributes)) {
+      const nomeAtributo = atributo.name.toLowerCase();
+      const valor = atributo.value.trim();
+
+      if (nomeAtributo.startsWith("on")) {
+        throw new Error("SVG gerado contém manipulador de evento.");
+      }
+      if (["href", "xlink:href", "src"].includes(nomeAtributo)) {
+        if (valor && !valor.startsWith("#")) {
+          throw new Error("SVG gerado contém referência externa.");
+        }
+      }
+      if (nomeAtributo === "style" && cssContemReferenciaPerigosa(valor)) {
+        throw new Error("SVG gerado contém estilo não permitido.");
+      }
+    }
+
+    if (nome === "style" && cssContemReferenciaPerigosa(elemento.textContent || "")) {
+      throw new Error("SVG gerado contém folha de estilo não permitida.");
+    }
+  }
+
+  return raiz as unknown as SVGSVGElement;
 }
 
 function removerRaizesTemporarias(id: string) {
@@ -21,24 +91,26 @@ function removerRaizesTemporarias(id: string) {
   document.getElementById(`d${id}`)?.remove();
 }
 
-/** Renderiza um bloco Mermaid sem inserir SVG como HTML no DOM principal.
+type Estado = "carregando" | "pronto" | "erro";
+
+/**
+ * Renderiza um bloco Mermaid como SVG validado dentro de um contêiner isolado.
  *
- * O Mermaid permanece em `securityLevel: strict`. Os rótulos HTML são
- * necessários porque o acervo usa `<br/>` para organizar textos clínicos
- * extensos. O SVG passa por validação defensiva e é exibido como imagem por
- * Blob URL; `foreignObject` pode existir apenas dentro desse documento de
- * imagem isolado, nunca como HTML executável da aplicação. */
+ * Não usa `dangerouslySetInnerHTML`, `<img>` nem Blob URL. Isso evita o problema
+ * observado em produção, no qual o navegador exibia o SVG com `foreignObject`
+ * como imagem quebrada. O nó validado é importado pelo DOM e anexado por
+ * `replaceChildren`.
+ */
 export default function Fluxograma({ fonte }: { fonte: string }) {
   const id = "fluxograma-" + useId().replace(/[^a-zA-Z0-9]/g, "");
-  const [svgUrl, setSvgUrl] = useState("");
-  const [falhou, setFalhou] = useState(false);
+  const recipiente = useRef<HTMLDivElement>(null);
+  const [estado, setEstado] = useState<Estado>("carregando");
 
   useEffect(() => {
     let cancelado = false;
-    let urlCriada: string | null = null;
 
-    setSvgUrl("");
-    setFalhou(false);
+    setEstado("carregando");
+    recipiente.current?.replaceChildren();
     removerRaizesTemporarias(id);
 
     (async () => {
@@ -64,53 +136,62 @@ export default function Fluxograma({ fonte }: { fonte: string }) {
 
         await mermaid.parse(fonte);
         const resultado = await mermaid.render(id, fonte);
-        const svgSeguro = validarSvgGerado(resultado.svg);
-        urlCriada = URL.createObjectURL(
-          new Blob([svgSeguro], { type: "image/svg+xml;charset=utf-8" }),
-        );
+        const svgValidado = validarSvgGerado(resultado.svg);
 
-        if (cancelado) {
-          URL.revokeObjectURL(urlCriada);
-          urlCriada = null;
-          return;
-        }
-        setSvgUrl(urlCriada);
+        if (cancelado || !recipiente.current) return;
+
+        const svgImportado = document.importNode(svgValidado, true) as SVGSVGElement;
+        svgImportado.removeAttribute("height");
+        svgImportado.setAttribute("width", "100%");
+        svgImportado.setAttribute("preserveAspectRatio", "xMinYMin meet");
+        svgImportado.style.display = "block";
+        svgImportado.style.width = "100%";
+        svgImportado.style.minWidth = "760px";
+        svgImportado.style.height = "auto";
+        svgImportado.style.maxWidth = "none";
+        svgImportado.style.margin = "0 auto";
+
+        recipiente.current.replaceChildren(svgImportado);
+        setEstado("pronto");
+        removerRaizesTemporarias(id);
       } catch (erro) {
         console.error("Falha ao renderizar fluxograma Mermaid", erro);
-        if (!cancelado) setFalhou(true);
+        if (!cancelado) setEstado("erro");
+        recipiente.current?.replaceChildren();
         removerRaizesTemporarias(id);
       }
     })();
 
     return () => {
       cancelado = true;
+      recipiente.current?.replaceChildren();
       removerRaizesTemporarias(id);
-      if (urlCriada) URL.revokeObjectURL(urlCriada);
     };
   }, [fonte, id]);
 
-  if (falhou) {
-    return (
-      <p className="fluxograma__erro" role="alert">
-        Não foi possível desenhar esta árvore de decisão. Recarregue a página;
-        se o problema persistir, use o texto clínico exibido abaixo.
-      </p>
-    );
-  }
-
-  if (!svgUrl) return <p className="eyebrow" role="status">Desenhando o fluxograma…</p>;
-
   return (
-    <div
-      className="fluxograma"
-      role="img"
-      aria-label="Fluxograma clínico"
-      style={{ overflowX: "auto", margin: "1rem 0", textAlign: "center" }}
-    >
-      <img
-        src={svgUrl}
-        alt="Fluxograma clínico"
-        style={{ display: "block", maxWidth: "100%", height: "auto", margin: "0 auto" }}
+    <div className="fluxograma__recipiente">
+      {estado === "carregando" && (
+        <p className="eyebrow" role="status">Desenhando o fluxograma…</p>
+      )}
+      {estado === "erro" && (
+        <p className="fluxograma__erro" role="alert">
+          Não foi possível desenhar esta árvore de decisão. Recarregue a página;
+          se o problema persistir, use o texto clínico exibido abaixo.
+        </p>
+      )}
+      <div
+        ref={recipiente}
+        className="fluxograma"
+        role="img"
+        aria-label="Fluxograma clínico"
+        aria-hidden={estado !== "pronto"}
+        style={{
+          display: estado === "pronto" ? "block" : "none",
+          overflowX: "auto",
+          margin: "1rem 0",
+          textAlign: "center",
+        }}
       />
     </div>
   );
