@@ -61,10 +61,10 @@ def _card(d: Document) -> dict:
 def catalog(db: Session = Depends(get_db), _=Depends(current_user)):
     """Resumo canônico das 11 frentes científicas.
 
-    ``total`` permanece sendo a quantidade publicada, preservando o contrato da
-    Biblioteca. ``inventory_total`` mede todos os registros existentes no banco
-    e é comparado ao baseline do reconciliador. Essa separação evita confundir
-    conteúdo preservado/em revisão com conteúdo já liberado ao assinante.
+    ``total`` e ``inventory_total`` representam todos os registros preservados
+    no PostgreSQL. ``published_total`` informa separadamente o conteúdo já
+    liberado aos assinantes. Assim o Painel mostra o inventário real sem tratar
+    itens em revisão como se já estivessem publicados.
     """
     fronts = []
     published_total = 0
@@ -84,9 +84,9 @@ def catalog(db: Session = Depends(get_db), _=Depends(current_user)):
 
     missing = max(SCIENTIFIC_CORPUS_MINIMUM - inventory_total, 0)
     return {
-        "total": published_total,
-        "published_total": published_total,
+        "total": inventory_total,
         "inventory_total": inventory_total,
+        "published_total": published_total,
         "unpublished": max(inventory_total - published_total, 0),
         "fronts": fronts,
         "expected_minimum": SCIENTIFIC_CORPUS_MINIMUM,
