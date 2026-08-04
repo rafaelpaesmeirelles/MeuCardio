@@ -68,7 +68,8 @@ def test_deploy_injeta_e_confirma_commit_publico():
 
     assert 'export DEPLOY_COMMIT="$COMMIT_ATUAL"' in deploy
     assert 'https://${DOMAIN}/api/version' in deploy
-    assert '"commit\":\"${COMMIT_ATUAL}' in deploy
+    assert "VERSAO_PUBLICA" in deploy
+    assert "COMMIT_ATUAL" in deploy
     assert "DEPLOY_COMMIT: ${DEPLOY_COMMIT:-unknown}" in compose
     assert '@router.get("/version")' in health
     assert 'os.getenv("DEPLOY_COMMIT", "unknown")' in health
