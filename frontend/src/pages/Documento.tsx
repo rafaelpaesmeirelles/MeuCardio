@@ -36,8 +36,10 @@ export default function Documento() {
   if (erro) return <Erro mensagem={erro} />;
   if (!doc) return <Carregando />;
 
+  const contemFluxograma = /```mermaid\s/i.test(doc.body_md);
+
   return (
-    <article style={{ maxWidth: "72ch" }}>
+    <article style={{ maxWidth: contemFluxograma ? "100%" : "72ch", minWidth: 0 }}>
       <Link to="/biblioteca" className="eyebrow">← Biblioteca</Link>
       <p className="eyebrow" style={{ marginTop: "0.8rem" }}>{doc.theme} · {doc.kind}</p>
       <h1>{doc.title}</h1>
@@ -48,7 +50,7 @@ export default function Documento() {
 
       <ExportarApresentacao slug={slug!} titulo={doc.title} />
 
-      <div className="cartao">
+      <div className="cartao" style={{ minWidth: 0, overflow: "visible" }}>
         <Markdown
           remarkPlugins={[remarkGfm]}
           components={{
@@ -64,7 +66,7 @@ export default function Documento() {
       </div>
 
       {doc.source_refs.length > 0 && (
-        <div className="cartao" style={{ marginTop: "1rem" }}>
+        <div className="cartao" style={{ marginTop: "1rem", maxWidth: "72ch" }}>
           <p className="eyebrow">Fontes</p>
           <ul style={{ margin: "0.4rem 0 0", paddingLeft: "1.1rem", fontSize: "0.88rem" }}>
             {doc.source_refs.map((r) => <li key={r}>{r}</li>)}
