@@ -15,6 +15,8 @@ from app.models.patient_material import PatientMaterial
 from .pdf import Documento, largura_texto, quebrar
 from .pdf.marca import BRANCO, FIO, NAVY, NEUTRO, TEAL, TINTA_TEAL, TINTA_VERMELHA, VERMELHO
 from .professional_profile import (
+    logo_needs_dark_plate_path,
+    logo_path,
     professional_name,
     rendered_logo_png,
     workplace_lines,
@@ -32,6 +34,8 @@ class DocumentoProfissional(Documento):
         self.nome_profissional = professional_name(medico)
         self.registro_profissional = _registro(medico)
         self.linhas_trabalho = workplace_lines(medico)
+        self.logo_original = logo_path(medico.get("document_logo_url"))
+        self.logo_precisa_placa_escura = logo_needs_dark_plate_path(self.logo_original)
         self.logo_profissional = rendered_logo_png(medico.get("document_logo_url"))
 
     def _desenhar_logo_profissional(
