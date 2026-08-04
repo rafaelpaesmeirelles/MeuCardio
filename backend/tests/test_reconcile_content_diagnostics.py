@@ -11,6 +11,8 @@ from app.commands.reconcile_content import (
     _manifest_slugs,
     _markdown_slugs,
 )
+from app.models.content import Document
+from app.services.importer import import_directory
 
 
 @pytest.mark.parametrize(
@@ -117,8 +119,30 @@ def test_markdown_com_slug_explicito_invalido_bloqueia_sem_fallback(tmp_path, va
         encoding="utf-8",
     )
 
-    with pytest.raises(RuntimeError, match="slug explicitamente inválido"):
+    with pytest.raises(ValueError, match="slug explicitamente inválido"):
         _markdown_slugs("documentos", tmp_path)
+
+
+@pytest.mark.parametrize("valor_yaml", ['""', "null", "false", "0"])
+def test_importador_direto_nao_grava_slug_explicito_invalido(
+    tmp_path, db, valor_yaml
+):
+    documento = tmp_path / "documento.md"
+    documento.write_text(
+        f"---\ntitle: Documento Clínico\nslug: {valor_yaml}\n---\nConteúdo científico.\n",
+        encoding="utf-8",
+    )
+    quantidade_antes = db.query(Document).count()
+
+    resultado = import_directory(str(tmp_path))
+
+    db.expire_all()
+    assert resultado["novos"] == 0
+    assert resultado["atualizados"] == 0
+    assert resultado["inalterados"] == 0
+    assert len(resultado["falhas"]) == 1
+    assert "slug explicitamente inválido" in resultado["falhas"][0]
+    assert db.query(Document).count() == quantidade_antes
 
 
 def test_markdown_com_slug_explicito_com_espacos_tambem_bloqueia(tmp_path):
@@ -128,7 +152,7 @@ def test_markdown_com_slug_explicito_com_espacos_tambem_bloqueia(tmp_path):
         encoding="utf-8",
     )
 
-    with pytest.raises(RuntimeError, match="slug com espaços nas extremidades"):
+    with pytest.raises(ValueError, match="slug com espaços nas extremidades"):
         _markdown_slugs("documentos", tmp_path)
 
 
