@@ -325,3 +325,187 @@ def remover_foto(db: Session = Depends(get_db), user: User = Depends(current_use
     db.commit()
     db.refresh(user)
     return _perfil(user)
+
+
+@router.post("/me/logo")
+async def enviar_logo(
+    arquivo: UploadFile = File(...),
+    db: Session = Depends(get_db),
+    user: User = Depends(current_user),
+):
+    conteudo = await arquivo.read(TAMANHO_MAXIMO + 1)
+    if len(conteudo) > TAMANHO_MAXIMO:
+        raise HTTPException(status_code=413, detail="A imagem precisa ter no máximo 3 MB.")
+    if not conteudo:
+        raise HTTPException(status_code=422, detail="Arquivo vazio.")
+
+    extensao = _extensao_valida(conteudo)
+    if extensao is None:
+        raise HTTPException(status_code=422, detail="Envie uma imagem JPEG, PNG ou WEBP.")
+
+    destino = Path(settings.uploads_dir) / "logos"
+    destino.mkdir(parents=True, exist_ok=True)
+    for antigo in destino.glob(f"{user.id}-*"):
+        antigo.unlink(missing_ok=True)
+    nome = f"{user.id}-{secrets.token_hex(4)}{extensao}"
+    (destino / nome).write_bytes(conteudo)
+
+    user.document_logo_url = f"/logos/{nome}"
+    db.commit()
+    db.refresh(user)
+    return _perfil(user)
+
+
+@router.delete("/me/logo")
+def remover_logo(db: Session = Depends(get_db), user: User = Depends(current_user)):
+    destino = Path(settings.uploads_dir) / "logos"
+    for antigo in destino.glob(f"{user.id}-*"):
+        antigo.unlink(missing_ok=True)
+    user.document_logo_url = None
+    db.commit()
+    db.refresh(user)
+    return _perfil(user)
+
+
+class TrocaDeSenha(BaseModel):
+    senha_atual: str
+    nova_senha: str
+
+
+@router.post("/alterar-senha")
+def alterar_senha(dados: TrocaDeSenha, background_tasks: BackgroundTasks,
+                  db: Session = Depends(get_db), user: User = Depends(current_user)):
+    if not verify_password(dados.senha_atual, user.password_hash):
+        raise HTTPException(status_code=400, detail="Senha atual incorreta.")
+    if len(dados.nova_senha) < 8:
+        raise HTTPException(status_code=422, detail="A nova senha precisa ter ao menos 8 caracteres.")
+    if dados.nova_senha == dados.senha_atual:
+        raise HTTPException(status_code=422, detail="A nova senha precisa ser diferente da atual.")
+    user.password_hash = hash_password(dados.nova_senha)
+    db.commit()
+    background_tasks.add_task(emails.enviar_senha_alterada, user.id)
+    return {"nota": "Senha alterada."}
+
+
+class TrocaDeEmail(BaseModel):
+    senha_atual: str
+    novo_email: str
+
+    @field_validator("novo_email")
+    @classmethod
+    def _email(cls, v: str) -> str:
+        v = v.strip().lower()
+        if "@" not in v:
+            raise ValueError("E-mail inválido.")
+        return v
+
+
+@router.post("/trocar-email")
+def trocar_email(dados: TrocaDeEmail, background_tasks: BackgroundTasks,
+                 db: Session = Depends(get_db), user: User = Depends(current_user)):
+    if not verify_password(dados.senha_atual, user.password_hash):
+        raise HTTPException(status_code=400, detail="Senha atual incorreta.")
+    if dados.novo_email == user.email:
+        raise HTTPException(status_code=422, detail="Este já é o seu e-mail atual.")
+    if db.query(User).filter(User.email == dados.novo_email).first():
+        raise HTTPException(status_code=409, detail="Já existe uma conta com este e-mail.")
+
+    email_antigo = user.email
+    user.email = dados.novo_email
+    db.commit()
+    background_tasks.add_task(emails.enviar_troca_email, user.id, email_antigo, dados.novo_email)
+    return {"nota": "E-mail alterado. Use o novo endereço para entrar a partir de agora."}
+
+
+class SolicitacaoAcesso(BaseModel):
+    full_name: str
+    birth_date: date
+    cpf: str
+    profession: str
+    council_name: str
+    council_number: str
+    council_state: str
+    specialty: str | None = None
+    professional_title: str | None = None
+    workplace_name: str | None = None
+    workplace_department: str | None = None
+    workplace_role: str | None = None
+    workplace_notes: str | None = None
+    include_workplace_on_documents: bool = False
+    email: str
+    password: str
+
+    @field_validator("full_name")
+    @classmethod
+    def _nome(cls, v: str) -> str:
+        if len(v.strip().split()) < 2:
+            raise ValueError("Informe nome completo.")
+        return v.strip()
+
+    @field_validator("professional_title")
+    @classmethod
+    def _titulo(cls, v: str | None) -> str | None:
+        return normalize_professional_title(v)
+
+    @field_validator("council_name")
+    @classmethod
+    def _conselho(cls, v: str) -> str:
+        return normalize_council(v) or "OUTRO"
+
+    @field_validator("council_state")
+    @classmethod
+    def _uf(cls, v: str) -> str:
+        v = v.strip().upper()
+        if v not in UFS:
+            raise ValueError("Estado do conselho inválido — use a sigla (ex.: SP).")
+        return v
+
+    @field_validator("email")
+    @classmethod
+    def _email(cls, v: str) -> str:
+        v = v.strip().lower()
+        if "@" not in v:
+            raise ValueError("E-mail inválido.")
+        return v
+
+
+@router.post("/solicitar-acesso", status_code=201)
+def solicitar_acesso(dados: SolicitacaoAcesso, db: Session = Depends(get_db)):
+    if dados.birth_date >= date.today():
+        raise HTTPException(status_code=422, detail="Data de nascimento inválida.")
+    if not cpf_valido(dados.cpf):
+        raise HTTPException(status_code=422, detail="CPF inválido — confira os números digitados.")
+    if len(dados.password) < 8:
+        raise HTTPException(status_code=422, detail="A senha precisa ter ao menos 8 caracteres.")
+
+    cpf_limpo = limpar_cpf(dados.cpf)
+    if db.query(User).filter(User.email == dados.email).first():
+        raise HTTPException(status_code=409, detail="Já existe uma solicitação ou conta com este e-mail.")
+    if db.query(User).filter(User.cpf == cpf_limpo).first():
+        raise HTTPException(status_code=409, detail="Já existe uma solicitação ou conta com este CPF.")
+
+    novo = User(
+        email=dados.email, full_name=dados.full_name, birth_date=dados.birth_date,
+        cpf=cpf_limpo, profession=dados.profession.strip(),
+        council_name=dados.council_name.strip().upper(), council_number=dados.council_number.strip(),
+        council_state=dados.council_state, specialty=(dados.specialty or "").strip() or None,
+        professional_title=dados.professional_title,
+        workplace_name=(dados.workplace_name or "").strip() or None,
+        workplace_department=(dados.workplace_department or "").strip() or None,
+        workplace_role=(dados.workplace_role or "").strip() or None,
+        workplace_notes=(dados.workplace_notes or "").strip() or None,
+        include_workplace_on_documents=dados.include_workplace_on_documents,
+        password_hash=hash_password(dados.password),
+        role="leitor",
+        status="pendente", is_active=False,
+    )
+    db.add(novo)
+    db.commit()
+
+    from app.services.notificar import notificar_admins_nova_solicitacao
+    notificar_admins_nova_solicitacao(db, novo.full_name, novo.email)
+
+    return {
+        "nota": "Solicitação registrada. Você recebe acesso assim que um administrador "
+                "conferir seus dados profissionais."
+    }
