@@ -51,6 +51,7 @@ BLOCKING_DIAGNOSTIC_KEYS = frozenset({
     "recusadas",
     "recusados",
     "sem_arquivo",
+    "vazios",
 })
 
 FRONTS: dict[str, dict[str, Any]] = {
