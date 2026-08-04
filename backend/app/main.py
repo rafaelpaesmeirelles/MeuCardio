@@ -5,9 +5,9 @@ from app.api import (
     admin, ai, appointments, assinatura, auth, browser_session, calculators, chat, chat_session,
     cmed, documents, documentos_publicos, drug_insights, drugs, email as email_api, evidence,
     favorites, gallery, guideline_updates, health, lab_tests, library, mail360_status,
-    password_reset, prescriptions, round as round_api, search, service_orders, sessions,
-    studies, timeline, billing, partner_courses, guidelines, indicadores, checklists,
-    study_tracks, exportacao, emergencia, receituario, clinical_cases,
+    password_reset, prescriptions, round as round_api, search, sessions, studies,
+    timeline, billing, guidelines, indicadores, checklists, study_tracks,
+    exportacao, emergencia, receituario, clinical_cases,
 )
 from app.core.config import settings
 from app.core.course_uploads import CourseUploadSecurityMiddleware
@@ -45,8 +45,8 @@ app.add_middleware(ObservabilityMiddleware)
 
 ROUTERS_LIVRES = (
     health.router, auth.router, browser_session.router, password_reset.router,
-    sessions.router, billing.router, admin.router, service_orders.router,
-    partner_courses.router, email_api.router, documentos_publicos.router, cmed.router,
+    sessions.router, billing.router, admin.router, email_api.router,
+    documentos_publicos.router, cmed.router,
 )
 
 ROUTERS_ASSINANTES = (
