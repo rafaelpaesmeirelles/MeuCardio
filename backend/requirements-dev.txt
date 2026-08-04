@@ -3,3 +3,6 @@
 -r requirements.txt
 pytest==8.3.4
 pip-audit==2.10.1
+# Starlette 1.3 usa HTTPX2 no TestClient. Mantido somente em testes porque
+# a aplicação continua usando httpx 0.28.1 nas integrações de produção.
+httpx2==2.7.0
