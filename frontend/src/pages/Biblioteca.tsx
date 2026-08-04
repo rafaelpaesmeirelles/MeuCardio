@@ -13,11 +13,19 @@ type CatalogFront = {
   label: string;
   route: string;
   count: number;
+  inventory_count?: number;
 };
 
 type Catalog = {
   total: number;
+  inventory_total?: number;
+  published_total?: number;
+  unpublished?: number;
   fronts: CatalogFront[];
+  expected_minimum?: number;
+  physical_files_expected?: number;
+  integrity_ok?: boolean;
+  missing?: number;
 };
 
 type DocumentPage = {
@@ -84,8 +92,25 @@ export default function Biblioteca() {
       <h1>Acervo científico</h1>
       {catalogo && (
         <p style={{ color: "var(--texto-secundario)", marginTop: "-0.35rem" }}>
-          {catalogo.total.toLocaleString("pt-BR")} itens publicados em {catalogo.fronts.length} coleções.
+          {catalogo.total.toLocaleString("pt-BR")} registros preservados nas {catalogo.fronts.length} coleções;
+          {" "}{(catalogo.published_total ?? catalogo.total).toLocaleString("pt-BR")} publicados.
         </p>
+      )}
+
+      {catalogo?.integrity_ok === false && (
+        <section
+          className="cartao"
+          role="alert"
+          style={{ borderColor: "var(--acao)", marginBottom: "1rem" }}
+        >
+          <strong>Acervo abaixo do inventário certificado</strong>
+          <p style={{ marginBottom: 0 }}>
+            Esta instalação contém {catalogo.total.toLocaleString("pt-BR")} registros. O mínimo certificado é
+            {" "}{(catalogo.expected_minimum ?? 4_936).toLocaleString("pt-BR")}; faltam
+            {" "}{(catalogo.missing ?? 0).toLocaleString("pt-BR")} registros. O inventário preserva também
+            {" "}{(catalogo.physical_files_expected ?? 1_327).toLocaleString("pt-BR")} arquivos físicos.
+          </p>
+        </section>
       )}
 
       {catalogo === null ? (
@@ -97,7 +122,10 @@ export default function Biblioteca() {
               <p className="eyebrow">Coleção</p>
               <h3>{frente.label}</h3>
               <p style={{ color: "var(--texto-secundario)", marginBottom: 0 }}>
-                {frente.count.toLocaleString("pt-BR")} itens publicados
+                {frente.count.toLocaleString("pt-BR")} publicados
+                {frente.inventory_count !== undefined && frente.inventory_count !== frente.count
+                  ? ` de ${frente.inventory_count.toLocaleString("pt-BR")} preservados`
+                  : ""}
               </p>
             </Link>
           ))}
@@ -134,7 +162,7 @@ export default function Biblioteca() {
       ) : (
         <>
           <p style={{ color: "var(--texto-secundario)", fontSize: "0.9rem" }}>
-            Exibindo {docs.length.toLocaleString("pt-BR")} de {totalDocs.toLocaleString("pt-BR")} documentos.
+            Exibindo {docs.length.toLocaleString("pt-BR")} de {totalDocs.toLocaleString("pt-BR")} documentos publicados.
           </p>
           <div className="grade grade--2">
             {docs.map((d) => (

@@ -65,7 +65,9 @@ def test_library_documents_are_paginated_without_silent_truncation(
     assert all(item["slug"] != "documento-retido" for item in last_body["items"])
 
 
-def test_library_catalog_counts_all_registered_fronts(client, db, criar_usuario, monkeypatch):
+def test_library_catalog_counts_inventory_and_published_separately(
+    client, db, criar_usuario, monkeypatch
+):
     _clear_documents(db)
     _seed_documents(db, count=3)
     _, token = criar_usuario(role="admin")
@@ -79,12 +81,34 @@ def test_library_catalog_counts_all_registered_fronts(client, db, criar_usuario,
 
     response = client.get("/api/library/catalog", headers=headers)
     assert response.status_code == 200
-    assert response.json() == {
-        "total": 3,
-        "fronts": [{
-            "key": "documentos",
-            "label": "Documentos científicos",
-            "route": "/biblioteca",
-            "count": 3,
-        }],
+    body = response.json()
+    minimum = int(library_api.RECONCILIATION_FRONTS["documentos"]["minimum"])
+    missing = minimum - 4
+
+    # Três documentos estão publicados e um quarto permanece preservado em
+    # revisão. O total integral não pode esconder esse registro retido.
+    assert body["total"] == 4
+    assert body["inventory_total"] == 4
+    assert body["published_total"] == 3
+    assert body["unpublished"] == 1
+    assert body["fronts"] == [{
+        "key": "documentos",
+        "label": "Documentos científicos",
+        "route": "/biblioteca",
+        "count": 3,
+        "inventory_count": 4,
+        "minimum": minimum,
+        "missing": missing,
+        "integrity_ok": False,
+    }]
+    assert body["expected_minimum"] == library_api.SCIENTIFIC_CORPUS_MINIMUM
+    assert body["physical_files_expected"] == library_api.SCIENTIFIC_FILES_EXPECTED
+    assert body["integrity_ok"] is False
+    assert body["missing"] == missing
+    assert body["below_minimum"] == {
+        "documentos": {
+            "inventory_count": 4,
+            "minimum": minimum,
+            "missing": missing,
+        }
     }

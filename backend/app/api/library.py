@@ -2,6 +2,8 @@ from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
+from app.commands.reconcile_content import FRONTS as RECONCILIATION_FRONTS
+from app.commands.reconcile_content import SCIENTIFIC_MINIMUM
 from app.core.db import get_db
 from app.core.security import current_user, require_admin
 from app.models.checklist import DischargeChecklist
@@ -18,6 +20,11 @@ from app.models.study_track import StudyTrack
 
 router = APIRouter(prefix="/api/library", tags=["biblioteca"])
 
+# Os mínimos vêm da mesma fonte usada pelo reconciliador operacional. O número
+# de arquivos físicos é certificado pelo inventário versionado e não é inferido
+# das tabelas, que representam registros científicos, não arquivos do filesystem.
+SCIENTIFIC_CORPUS_MINIMUM = SCIENTIFIC_MINIMUM
+SCIENTIFIC_FILES_EXPECTED = 1_327
 
 CATALOG_FRONTS = (
     ("documentos", "Documentos científicos", "/biblioteca", Document),
@@ -53,20 +60,57 @@ def _card(d: Document) -> dict:
 
 @router.get("/catalog")
 def catalog(db: Session = Depends(get_db), _=Depends(current_user)):
-    """Resumo do conteúdo científico realmente publicado.
+    """Resumo canônico das 11 frentes científicas.
 
-    A tela antiga chamava apenas ``documents`` e dava a impressão de que a
-    biblioteca inteira tinha o tamanho daquela única tabela. O catálogo torna
-    explícitas todas as frentes e suas rotas, sem misturar conteúdo retido em
-    revisão com o que está disponível ao assinante.
+    ``total`` e ``inventory_total`` representam todos os registros preservados
+    no PostgreSQL. ``published_total`` informa separadamente o conteúdo já
+    liberado aos assinantes. A integridade é verificada frente a frente, como no
+    reconciliador, para que excedente numa coleção nunca esconda déficit noutra.
     """
     fronts = []
-    total = 0
+    published_total = 0
+    inventory_total = 0
+    below_minimum: dict[str, dict[str, int]] = {}
+
     for key, label, route, model in CATALOG_FRONTS:
-        count = db.query(model).filter(model.published.is_(True)).count()
-        total += count
-        fronts.append({"key": key, "label": label, "route": route, "count": count})
-    return {"total": total, "fronts": fronts}
+        inventory_count = db.query(model).count()
+        published_count = db.query(model).filter(model.published.is_(True)).count()
+        minimum = int(RECONCILIATION_FRONTS[key]["minimum"])
+        missing = max(minimum - inventory_count, 0)
+
+        inventory_total += inventory_count
+        published_total += published_count
+        if missing:
+            below_minimum[key] = {
+                "inventory_count": inventory_count,
+                "minimum": minimum,
+                "missing": missing,
+            }
+
+        fronts.append({
+            "key": key,
+            "label": label,
+            "route": route,
+            "count": published_count,
+            "inventory_count": inventory_count,
+            "minimum": minimum,
+            "missing": missing,
+            "integrity_ok": missing == 0,
+        })
+
+    missing_total = sum(item["missing"] for item in below_minimum.values())
+    return {
+        "total": inventory_total,
+        "inventory_total": inventory_total,
+        "published_total": published_total,
+        "unpublished": max(inventory_total - published_total, 0),
+        "fronts": fronts,
+        "expected_minimum": SCIENTIFIC_CORPUS_MINIMUM,
+        "physical_files_expected": SCIENTIFIC_FILES_EXPECTED,
+        "integrity_ok": not below_minimum,
+        "missing": missing_total,
+        "below_minimum": below_minimum,
+    }
 
 
 @router.get("/themes")
