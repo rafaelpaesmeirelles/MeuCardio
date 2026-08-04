@@ -98,6 +98,15 @@ def _ai_queries_today(db: Session, user_id: int, now: datetime | None = None) ->
     )
 
 
+def _consultas_ia_hoje(
+    db: Session,
+    user_id: int,
+    agora: datetime | None = None,
+) -> int:
+    """Nome histórico mantido para testes e integrações internas."""
+    return _ai_queries_today(db, user_id, now=agora)
+
+
 @router.get("/patients")
 def list_patients(
     status: str = "internado",
@@ -289,7 +298,7 @@ def generate_ai_assistance(
         raise HTTPException(status_code=503, detail="A IA clínica está desligada nesta instalação.")
 
     patient = _patient_for_user(patient_id, db, user)
-    used = _ai_queries_today(db, user.id)
+    used = _consultas_ia_hoje(db, user.id)
     if used >= settings.ai_daily_limit:
         raise HTTPException(
             status_code=429,
