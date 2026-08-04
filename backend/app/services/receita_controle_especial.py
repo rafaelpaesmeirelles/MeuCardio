@@ -233,6 +233,7 @@ def _frente(c: canvas.Canvas, *, via: int, destinatario: dict, itens: list[dict]
 
     y = _secao(c, y, "IDENTIFICAÇÃO DO PACIENTE")
     y = _campo(c, y, "NOME COMPLETO:", _texto(destinatario.get("nome")), tamanho=9)
+    y = _campo(c, y, "ENDEREÇO COMPLETO:", _texto(destinatario.get("endereco")), tamanho=9)
     y = _campo(c, y, "CPF ou, se estrangeiro, PASSAPORTE Nº:",
                _texto(destinatario.get("documento")), tamanho=9)
 
@@ -264,9 +265,14 @@ def _frente(c: canvas.Canvas, *, via: int, destinatario: dict, itens: list[dict]
 
     c.setFont("Helvetica-Oblique", 7.1)
     destino = "1ª via - Retenção pela Farmácia" if via == 1 else "2ª via - Paciente"
-    c.drawRightString(LARGURA - MARGEM_X, 12 * mm, destino)
+    c.drawRightString(LARGURA - MARGEM_X, 14 * mm, destino)
+    c.setFont("Helvetica", 6.5)
+    c.drawString(
+        MARGEM_X, 10 * mm,
+        f"DATA DE IMPRESSÃO DESTE RECEITUÁRIO: {data_local} (recomendável)",
+    )
     c.setFont("Helvetica", 5.8)
-    c.drawString(MARGEM_X, 8 * mm, f"Modelo {MODELO_VERSAO} · via {via}/2")
+    c.drawString(MARGEM_X, 6 * mm, f"Modelo {MODELO_VERSAO} · via {via}/2")
 
 
 def _verso(c: canvas.Canvas, *, via: int) -> None:
@@ -308,10 +314,14 @@ def validar_requisitos_rce(*, medico: Any, destinatario: dict, itens: list[dict]
         erros.append("Complete conselho profissional, número de registro e UF.")
     if not _texto(destinatario.get("nome")):
         erros.append("Informe o nome completo do paciente.")
+    if not _texto(destinatario.get("endereco")):
+        erros.append("Informe o endereço completo do paciente.")
     if not _texto(destinatario.get("documento")):
         erros.append("Informe CPF ou passaporte do paciente.")
     if not itens:
         erros.append("A receita precisa conter ao menos um medicamento.")
+    if not endereco_profissional or not _endereco_completo(endereco_profissional):
+        erros.append("Cadastre o endereço profissional completo para a Receita de Controle Especial.")
 
     tem_c5 = any(_texto(item.get("lista")).upper() == "C5" for item in itens)
     if tem_c5:
@@ -320,12 +330,8 @@ def validar_requisitos_rce(*, medico: Any, destinatario: dict, itens: list[dict]
             erros.append("A Lei nº 9.965/2000 restringe a prescrição de anabolizantes a médico ou dentista (CRM/CRO).")
         if not _texto(_valor(medico, "cpf")):
             erros.append("Cadastre o CPF do prescritor para receita de anabolizantes.")
-        if not _texto(destinatario.get("endereco")):
-            erros.append("Informe o endereço completo do paciente para receita de anabolizantes.")
         if not _texto(cid):
             erros.append("Informe o CID para receita de anabolizantes.")
-        if not endereco_profissional or not _endereco_completo(endereco_profissional):
-            erros.append("Cadastre o endereço profissional completo para receita de anabolizantes.")
         if not _texto((endereco_profissional or {}).get("telefone")):
             erros.append("Cadastre o telefone profissional para receita de anabolizantes.")
     return erros
