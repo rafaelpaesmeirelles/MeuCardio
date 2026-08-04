@@ -131,14 +131,23 @@ def _markdown_slugs(front: str, source: Path) -> set[str]:
         post = frontmatter.load(md)
         meta = post.metadata
         title = meta.get("title") or md.stem
-        explicit_slug = meta.get("slug")
-        slug = explicit_slug or _slugify(title)
-        if not isinstance(slug, str) or not slug.strip():
-            raise RuntimeError(f"Frente {front} contém Markdown sem slug válido: {md}")
-        if explicit_slug is not None and slug != slug.strip():
-            raise RuntimeError(
-                f"Frente {front} contém Markdown com slug com espaços nas extremidades: {md}"
-            )
+
+        if "slug" in meta:
+            explicit_slug = meta["slug"]
+            if not isinstance(explicit_slug, str) or not explicit_slug.strip():
+                raise RuntimeError(
+                    f"Frente {front} contém Markdown com slug explicitamente inválido: {md}"
+                )
+            if explicit_slug != explicit_slug.strip():
+                raise RuntimeError(
+                    f"Frente {front} contém Markdown com slug com espaços nas extremidades: {md}"
+                )
+            slug = explicit_slug
+        else:
+            slug = _slugify(title)
+            if not isinstance(slug, str) or not slug.strip():
+                raise RuntimeError(f"Frente {front} contém Markdown sem slug válido: {md}")
+
         slugs.append(slug)
     return _validate_unique_slugs(front, slugs)
 
