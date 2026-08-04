@@ -81,14 +81,20 @@ def test_library_catalog_counts_all_registered_fronts(client, db, criar_usuario,
     assert response.status_code == 200
     body = response.json()
 
-    assert body["total"] == 3
+    # Três documentos estão publicados e um quarto permanece preservado em
+    # revisão. O total integral não pode esconder esse registro retido.
+    assert body["total"] == 4
+    assert body["inventory_total"] == 4
+    assert body["published_total"] == 3
+    assert body["unpublished"] == 1
     assert body["fronts"] == [{
         "key": "documentos",
         "label": "Documentos científicos",
         "route": "/biblioteca",
         "count": 3,
+        "inventory_count": 4,
     }]
     assert body["expected_minimum"] == library_api.SCIENTIFIC_CORPUS_MINIMUM
     assert body["physical_files_expected"] == library_api.SCIENTIFIC_FILES_EXPECTED
     assert body["integrity_ok"] is False
-    assert body["missing"] == library_api.SCIENTIFIC_CORPUS_MINIMUM - 3
+    assert body["missing"] == library_api.SCIENTIFIC_CORPUS_MINIMUM - 4
