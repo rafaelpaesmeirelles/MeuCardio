@@ -13,20 +13,22 @@ def _fonte(caminho: Path) -> str:
     return caminho.read_text(encoding="utf-8")
 
 
-def test_fluxograma_monta_svg_validado_sem_blob_ou_mermaid_bruto():
+def test_fluxograma_usa_mermaid_run_sem_blob_imagem_ou_parser_manual():
     fonte = _fonte(FLUXOGRAMA)
 
     assert 'securityLevel: "strict"' in fonte
     assert "htmlLabels: true" in fonte
     assert "await mermaid.parse(fonte)" in fonte
-    assert 'new DOMParser().parseFromString(svg, "image/svg+xml")' in fonte
-    assert 'document.importNode(svgValidado, true)' in fonte
-    assert "replaceChildren(svgImportado)" in fonte
+    assert "await mermaid.run({ nodes: [alvo], suppressErrors: true })" in fonte
+    assert "alvo.textContent = fonte" in fonte
+    assert 'alvo.querySelector("svg")' in fonte
+    assert "validarSvgMontado(svg)" in fonte
     assert "URL.createObjectURL" not in fonte
     assert "new Blob" not in fonte
+    assert "DOMParser" not in fonte
+    assert "document.importNode" not in fonte
     assert "<img" not in fonte
     assert "dangerouslySetInnerHTML" not in fonte
-    assert "foreignObject" not in fonte.split("ELEMENTOS_PROIBIDOS", 1)[1].split("]);", 1)[0]
     assert "<code>{fonte}</code>" not in fonte
     assert "Não foi possível desenhar esta árvore de decisão" in fonte
 
@@ -49,7 +51,8 @@ def test_fluxograma_bloqueia_execucao_formularios_e_recursos_externos():
     assert 'nomeAtributo.startsWith("on")' in fonte
     assert '["href", "xlink:href", "src"]' in fonte
     assert "cssContemReferenciaPerigosa" in fonte
-    assert "parsererror" in fonte
+    assert "validarFonteMermaid" in fonte
+    assert "foreignObject" not in fonte.split("ELEMENTOS_PROIBIDOS", 1)[1].split("]);", 1)[0]
 
 
 def test_busca_emergencia_filtra_por_nome_gatilho_titulo_e_tema_sem_acentos():
