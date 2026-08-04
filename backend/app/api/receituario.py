@@ -1,22 +1,10 @@
 # -*- coding: utf-8 -*-
-"""Receituário (Tarefa 27) — da intenção clínica aos documentos a emitir.
+"""Receituário — classificação, persistência, revisão e emissão."""
+from collections import defaultdict
+from datetime import datetime, timedelta, timezone
 
-O desenho está em `controlados/DESENHO.md`. O que estas rotas fazem, e o que
-deliberadamente **não** fazem:
-
-- **Fazem** classificar o que foi prescrito, agrupar por tipo exigido e criar um
-  `PrescriptionDocument` por grupo, com as pendências à vista.
-- **Não** emitem nada. Numeração depende do cadastro do prescritor no SNCR, e
-  assinatura depende da credencial VIDAAS — as duas pendentes. Nenhuma das duas
-  é simulada aqui; a rota de emissão recusa e diz por quê.
-
-O médico **não escolhe** o tipo de receituário. Ele revisa a classificação e, se
-discordar, corrige com motivo registrado — que é o que permite descobrir depois
-que uma regra está errada.
-"""
 from fastapi import APIRouter, Depends, HTTPException, Query
 from fastapi.responses import Response
-from datetime import datetime, timedelta, timezone
 from pydantic import BaseModel, Field
 from sqlalchemy.orm import Session
 
@@ -42,25 +30,10 @@ from app.services.professional_profile import (
 )
 
 router = APIRouter(prefix="/api/receituario", tags=["receituário"])
-
-# Validade do link enviado ao paciente. Não é uso único de propósito (ver
-# DocumentShareLink) — só a janela de tempo controla o acesso.
 VALIDADE_LINK_DIAS = 7
 
 
-# ------------------------------------------------------------------ schemas --
 class ItemIn(BaseModel):
-    """`drug_slug` é o caminho correto: ele resolve a substância na base
-    estruturada. `descricao` livre é aceita para não travar o médico, mas cai
-    em pendência — texto livre não é classificável, e chutar aqui emitiria o
-    documento errado.
-
-    Os seis campos abaixo são a Tarefa B (CLAUDE.md): escolha de marca via
-    CMED, sempre opcional e sempre explícita do médico — nunca preenchida
-    sozinha aqui. `pmc_snapshot`/`uf`/`cmed_version` gravam o preço vigente
-    NO MOMENTO da prescrição, porque a lista da CMED muda todo mês e um
-    relatório antigo não pode recalcular com preço novo. Ausência dos seis
-    (genérico puro, sem marca) continua sendo o caminho padrão e válido."""
     drug_slug: str | None = None
     descricao: str = ""
     apresentacao: str = ""
@@ -96,10 +69,7 @@ class RevisaoIn(BaseModel):
     motivo: str | None = None
 
 
-# ------------------------------------------------------------------ apoio --
 def _carregar_regras(db: Session) -> tuple[dict[str, Substancia], list[Regra], str | None]:
-    """Lê a versão mais recente das listas. Uma receita precisa poder dizer qual
-    versão a classificou, por isso a versão volta junto e é gravada no documento."""
     versao = db.query(ControlledSubstance.fonte_versao).order_by(
         ControlledSubstance.id.desc()).limit(1).scalar()
     subs = {
@@ -115,9 +85,8 @@ def _carregar_regras(db: Session) -> tuple[dict[str, Substancia], list[Regra], s
 
 
 def _resolver(db: Session, itens: list[ItemIn]) -> list[ItemPrescrito]:
-    """Traduz o pedido em itens classificáveis. A substância vem do cadastro do
-    medicamento, nunca do que foi digitado."""
-    fora = []
+    """Resolve substância para regras e mantém intacto o produto escolhido."""
+    resolvidos: list[ItemPrescrito] = []
     for i in itens:
         substancia = None
         apresentacao = i.apresentacao
@@ -132,17 +101,52 @@ def _resolver(db: Session, itens: list[ItemIn]) -> list[ItemPrescrito]:
         quantidade_impressa = quantidade
         if quantidade_extenso:
             quantidade_impressa = f"{quantidade} ({quantidade_extenso})" if quantidade else quantidade_extenso
-        fora.append(ItemPrescrito(
-            descricao=i.descricao or (substancia or i.drug_slug or "item sem descrição"),
-            substancia=substancia, apresentacao=apresentacao or None,
+        resolvidos.append(ItemPrescrito(
+            descricao=(i.brand_name or i.descricao or (substancia or i.drug_slug or "item sem descrição")),
+            substancia=substancia,
+            apresentacao=apresentacao or None,
             quantidade=quantidade_impressa or None,
             posologia=i.posologia or None,
+            brand_name=(i.brand_name or "").strip() or None,
+            manufacturer=(i.manufacturer or "").strip() or None,
+            ggrem=(i.ggrem or "").strip() or None,
+            pmc_snapshot=i.pmc_snapshot,
+            uf=(i.uf or "").strip().upper() or None,
+            cmed_version=(i.cmed_version or "").strip() or None,
         ))
-    return fora
+    return resolvidos
 
 
 def _tipos(db: Session) -> dict[str, PrescriptionType]:
     return {t.codigo: t for t in db.query(PrescriptionType).all()}
+
+
+def _item_snapshot(item: ItemPrescrito) -> dict:
+    snapshot = {
+        "descricao": item.descricao,
+        "substancia": item.substancia,
+        "apresentacao": item.apresentacao,
+        "quantidade": item.quantidade,
+        "posologia": item.posologia,
+        "lista": item.lista,
+        "brand_name": item.brand_name,
+        "manufacturer": item.manufacturer,
+        "ggrem": item.ggrem,
+        "pmc_snapshot": item.pmc_snapshot,
+        "uf": item.uf,
+        "cmed_version": item.cmed_version,
+    }
+    if any((item.brand_name, item.manufacturer, item.ggrem, item.cmed_version, item.pmc_snapshot)):
+        snapshot["cmed_snapshot"] = {
+            "produto": item.brand_name,
+            "apresentacao": item.apresentacao,
+            "laboratorio": item.manufacturer,
+            "ggrem": item.ggrem,
+            "pmc": item.pmc_snapshot,
+            "uf": item.uf,
+            "versao": item.cmed_version,
+        }
+    return snapshot
 
 
 def _doc_json(doc: PrescriptionDocument, tipo: PrescriptionType | None) -> dict:
@@ -162,11 +166,8 @@ def _doc_json(doc: PrescriptionDocument, tipo: PrescriptionType | None) -> dict:
     }
 
 
-# ------------------------------------------------------------------ rotas --
 @router.get("/tipos")
 def listar_tipos(db: Session = Depends(get_db), _=Depends(current_user)):
-    """`ativo` falso não é erro: é o controle especial esperando o SNCR abrir e
-    a assinatura digital existir. A interface deve mostrar, não esconder."""
     return [{
         "codigo": t.codigo, "nome": t.nome, "cor": t.cor, "vias": t.vias,
         "destinacao_vias": t.destinacao_vias, "exige_retencao": t.exige_retencao,
@@ -177,9 +178,6 @@ def listar_tipos(db: Session = Depends(get_db), _=Depends(current_user)):
 @router.post("/classificar")
 def classificar_previa(dados: ReceituarioIn, db: Session = Depends(get_db),
                        _=Depends(current_user)):
-    """Prévia sem gravar nada. Existe para a tela mostrar, enquanto o médico
-    monta a receita, quantos documentos vão sair e o que ficou pendente — antes
-    de ele descobrir isso no fim."""
     subs, regras, versao = _carregar_regras(db)
     r = classificar(_resolver(db, dados.itens), subs, regras)
     tipos = _tipos(db)
@@ -203,7 +201,6 @@ def criar(dados: ReceituarioIn, db: Session = Depends(get_db), user=Depends(curr
     resultado = classificar(_resolver(db, dados.itens), subs, regras)
 
     if resultado.recusados:
-        # Substância proscrita não gera receita nenhuma, nem parcial.
         raise HTTPException(status_code=422, detail={
             "erro": "A receita contém substância proscrita e não pode ser criada.",
             "itens": [{"item": x.item.descricao, "motivo": x.motivo} for x in resultado.recusados],
@@ -225,11 +222,7 @@ def criar(dados: ReceituarioIn, db: Session = Depends(get_db), user=Depends(curr
                 "endereco": dados.destinatario.endereco,
                 "documento": dados.destinatario.documento,
             },
-            itens=[{
-                "descricao": item.descricao, "substancia": item.substancia,
-                "apresentacao": item.apresentacao, "quantidade": item.quantidade,
-                "posologia": item.posologia, "lista": item.lista,
-            } for item in rce_itens],
+            itens=[_item_snapshot(item) for item in rce_itens],
             endereco_profissional=resolver_endereco(user, "profissional"),
             cid=dados.cid,
         )
@@ -258,17 +251,7 @@ def criar(dados: ReceituarioIn, db: Session = Depends(get_db), user=Depends(curr
     for plano in resultado.documentos:
         doc = PrescriptionDocument(
             prescription_id=presc.id, tipo_codigo=plano.tipo,
-            itens=[{"descricao": i.descricao, "substancia": i.substancia,
-                    "apresentacao": i.apresentacao, "quantidade": i.quantidade,
-                    "posologia": i.posologia,
-                    # `lista` (ex.: "C5") não é usado hoje — a emissão de RCE
-                    # continua bloqueada — mas é dado que já existe em
-                    # `ItemClassificado` sem custo de consulta extra, e vai
-                    # ser exatamente o que a Lei 9.965/2000 (anabolizantes)
-                    # precisa pra saber quando exigir CPF/telefone/CID do
-                    # prescritor. Ver CLAUDE.md/DESENHO.md.
-                    "lista": i.lista}
-                   for i in plano.itens],
+            itens=[_item_snapshot(i) for i in plano.itens],
             pendencias=plano.pendencias, fonte_versao_listas=versao,
             cid=(dados.cid or "").strip() or None,
         )
@@ -291,40 +274,72 @@ def criar(dados: ReceituarioIn, db: Session = Depends(get_db), user=Depends(curr
 def listar(
     nome: str | None = Query(None, max_length=120),
     tipo: str | None = Query(None, max_length=20),
+    page: int = Query(1, ge=1),
+    page_size: int = Query(20, ge=1, le=100),
     db: Session = Depends(get_db), user=Depends(current_user),
 ):
+    """Filtra todo o acervo cifrado do usuário antes de aplicar paginação."""
     prescricoes = (
         db.query(Prescription)
         .filter(Prescription.created_by == user.id)
         .order_by(Prescription.created_at.desc())
-        .limit(500)
         .all()
     )
+    ids = [presc.id for presc in prescricoes]
+    destinatarios = {
+        dest.prescription_id: dest
+        for dest in (
+            db.query(PrescriptionRecipient)
+            .filter(PrescriptionRecipient.prescription_id.in_(ids))
+            .all() if ids else []
+        )
+    }
+    documentos_por_prescricao: dict[int, list[PrescriptionDocument]] = defaultdict(list)
+    if ids:
+        for documento in db.query(PrescriptionDocument).filter(
+                PrescriptionDocument.prescription_id.in_(ids)).all():
+            documentos_por_prescricao[documento.prescription_id].append(documento)
+
     busca = normalize_search_text(nome)
     tipos = _tipos(db)
-    resultado = []
+    filtrados = []
     for presc in prescricoes:
-        dest = db.query(PrescriptionRecipient).filter(
-            PrescriptionRecipient.prescription_id == presc.id).first()
+        dest = destinatarios.get(presc.id)
         patient_name = cofre.decifrar_campo(dest.nome_cifrado, presc.id) if dest else None
         if busca and busca not in normalize_search_text(patient_name):
             continue
-        docs = db.query(PrescriptionDocument).filter(
-            PrescriptionDocument.prescription_id == presc.id).all()
-        if tipo and not any(d.tipo_codigo == tipo for d in docs):
+        docs = documentos_por_prescricao.get(presc.id, [])
+        if tipo and not any(documento.tipo_codigo == tipo for documento in docs):
             continue
-        resultado.append({
+        filtrados.append({
             "prescricao_id": presc.id, "criado_em": presc.created_at,
             "paciente_nome": patient_name,
-            "documentos": [{"tipo": d.tipo_codigo, "tipo_nome": tipos[d.tipo_codigo].nome
-                            if d.tipo_codigo in tipos else None, "status": d.status}
-                           for d in docs],
+            "documentos": [{
+                "tipo": documento.tipo_codigo,
+                "tipo_nome": tipos[documento.tipo_codigo].nome if documento.tipo_codigo in tipos else None,
+                "status": documento.status,
+            } for documento in docs],
         })
-    if resultado:
-        db.add(AuditLog(user_id=user.id, action="listar_receituarios", entity="prescription",
-                        detail={"count": len(resultado), "filtro_nome": bool(nome), "filtro_tipo": tipo}))
-        db.commit()
-    return resultado
+
+    inicio = (page - 1) * page_size
+    items = filtrados[inicio:inicio + page_size]
+    has_more = inicio + page_size < len(filtrados)
+    db.add(AuditLog(
+        user_id=user.id, action="listar_receituarios", entity="prescription",
+        detail={
+            "count": len(items), "total_filtrado": len(filtrados),
+            "filtro_nome": bool(nome), "filtro_tipo": tipo,
+            "page": page, "page_size": page_size,
+        },
+    ))
+    db.commit()
+    return {
+        "items": items,
+        "page": page,
+        "page_size": page_size,
+        "has_more": has_more,
+        "total": len(filtrados),
+    }
 
 
 @router.get("/{prescricao_id}")
@@ -335,8 +350,6 @@ def obter(prescricao_id: int, db: Session = Depends(get_db), user=Depends(curren
 
     dest = db.query(PrescriptionRecipient).filter(
         PrescriptionRecipient.prescription_id == presc.id).first()
-    # Toda leitura de dado identificável de paciente vai para a auditoria, do
-    # mesmo jeito que a leitura de exame no Cofre.
     destinatario = {"nome": None, "endereco": None, "documento": None}
     if dest:
         destinatario["nome"] = cofre.decifrar_campo(dest.nome_cifrado, presc.id)
@@ -353,11 +366,6 @@ def obter(prescricao_id: int, db: Session = Depends(get_db), user=Depends(curren
     tipos = _tipos(db)
     return {"prescricao_id": presc.id, "destinatario": destinatario,
             "observacoes": presc.notes,
-            # Formato cru de `ItemIn` (Tarefa 4) — usado pelo frontend pra
-            # "recriar baseado nesta": melhor fonte que os `itens` já
-            # classificados por documento, porque uma receita com listas
-            # diferentes vira mais de um `PrescriptionDocument` e o cru é
-            # um só, no formato exato que `POST ""` espera de volta.
             "itens_originais": presc.items,
             "documentos": [_doc_json(x, tipos.get(x.tipo_codigo)) for x in docs]}
 
@@ -365,9 +373,6 @@ def obter(prescricao_id: int, db: Session = Depends(get_db), user=Depends(curren
 @router.post("/documentos/{documento_id}/revisar")
 def revisar(documento_id: int, dados: RevisaoIn, db: Session = Depends(get_db),
             user=Depends(current_user)):
-    """O checkpoint humano. Confirmar não muda o tipo; corrigir muda, e exige
-    motivo — sem o motivo não há como descobrir depois que uma regra de adendo
-    está mal codificada."""
     doc = db.get(PrescriptionDocument, documento_id)
     if not doc:
         raise HTTPException(status_code=404, detail="Documento não encontrado.")
@@ -379,12 +384,10 @@ def revisar(documento_id: int, dados: RevisaoIn, db: Session = Depends(get_db),
 
     if dados.corrigir_para:
         if not dados.motivo:
-            raise HTTPException(status_code=422,
-                                detail="Corrigir a classificação exige motivo.")
+            raise HTTPException(status_code=422, detail="Corrigir a classificação exige motivo.")
         if not db.query(PrescriptionType).filter(
                 PrescriptionType.codigo == dados.corrigir_para).first():
-            raise HTTPException(status_code=422,
-                                detail=f"Tipo desconhecido: {dados.corrigir_para}")
+            raise HTTPException(status_code=422, detail=f"Tipo desconhecido: {dados.corrigir_para}")
         doc.classificacao_corrigida_de = doc.tipo_codigo
         doc.tipo_codigo = dados.corrigir_para
         doc.motivo_correcao = dados.motivo
@@ -400,26 +403,13 @@ def revisar(documento_id: int, dados: RevisaoIn, db: Session = Depends(get_db),
 
 
 class EmitirIn(BaseModel):
-    # 'residencial' | 'profissional' | None (nenhum endereço no PDF) —
-    # escolha do médico a cada emissão (Tarefa 29, decisão do Rafael em
-    # 30/07/2026: privacidade, nem todo médico quer endereço de casa
-    # impresso num papel que o paciente leva embora).
     endereco: str | None = None
-    # Código do catálogo em `services/assinatura/catalogo.py` (Tarefa 4).
-    # "MANUAL" (carimbo e assinatura do próprio punho) é o único que funciona
-    # de verdade hoje — os demais existem no catálogo e recusam com motivo.
     metodo: str = "MANUAL"
 
 
 @router.post("/documentos/{documento_id}/emitir")
 def emitir(documento_id: int, dados: EmitirIn = EmitirIn(), db: Session = Depends(get_db),
           user=Depends(current_user)):
-    """Emite receituário comum ou RCE física; demais tipos continuam fail-closed.
-
-    A Receita de Controle Especial usa o modelo físico Anvisa V2 e somente o
-    método MANUAL, para impressão e assinatura de próprio punho. Notificações
-    A/B/B2, retinoides e talidomida permanecem bloqueadas sem numeração oficial.
-    """
     doc = db.get(PrescriptionDocument, documento_id)
     if not doc:
         raise HTTPException(status_code=404, detail="Documento não encontrado.")
@@ -447,9 +437,7 @@ def emitir(documento_id: int, dados: EmitirIn = EmitirIn(), db: Session = Depend
     elif not tipo.ativo:
         bloqueios.append(
             f"O tipo {doc.tipo_codigo} permanece indisponível sem numeração oficial "
-            "ou integração SNCR aplicável; nenhum número será simulado. "
-            "Não depende mais da assinatura digital: o bloqueio é regulatório "
-            "e de numeração oficial."
+            "ou integração SNCR aplicável; nenhum número será simulado."
         )
     if tipo and tipo.exige_numeracao_sncr and not doc.numeracao:
         bloqueios.append(
@@ -571,11 +559,6 @@ class EnviarEmailIn(BaseModel):
 @router.post("/documentos/{documento_id}/enviar-email")
 def enviar_email(documento_id: int, dados: EnviarEmailIn, db: Session = Depends(get_db),
                  user=Depends(current_user)):
-    """Manda ao paciente um LINK, nunca o PDF anexado — decisão do Rafael em
-    30/07/2026: a receita é dado clínico, e a caixa de e-mail (CorvIA Mail)
-    tem termo LGPD que proíbe justamente isso. O link é servido por
-    `app/api/documentos_publicos.py`, sem passar pela Zoho em nenhum ponto.
-    """
     doc = db.get(PrescriptionDocument, documento_id)
     if not doc:
         raise HTTPException(status_code=404, detail="Documento não encontrado.")
@@ -614,10 +597,4 @@ def enviar_email(documento_id: int, dados: EnviarEmailIn, db: Session = Depends(
                     entity="prescription_document", entity_id=str(doc.id),
                     detail={"enviado": enviado}))
     db.commit()
-
-    # Sem SMTP configurado, `enviado` vem falso — mesma situação já tratada
-    # em `esqueci_senha` (password_reset.py). Ali um admin repassa o link de
-    # reset manualmente; aqui é o próprio médico quem tem essa autoridade
-    # sobre o paciente dele, então devolvemos o link pra ele copiar e mandar
-    # por outro canal (WhatsApp, telefone), em vez de só um erro sem saída.
     return {"enviado": enviado, "link": None if enviado else url}
