@@ -4,9 +4,9 @@ Uso operacional:
 
     python -m app.commands.reconcile_content --publish-reviewed
 
-A carga é idempotente. Registros já publicados não são despublicados pelos
-carregadores; a opção ``--publish-reviewed`` promove somente itens cujo
-``review_status`` está explicitamente marcado como ``revisado``.
+A carga é idempotente. Registros removidos ou renomeados permanecem armazenados
+para auditoria, mas são despublicados e deixam de contar para a certificação do
+corpus canônico do commit atual.
 """
 
 from __future__ import annotations
@@ -18,6 +18,7 @@ from collections import Counter
 from pathlib import Path
 from typing import Any
 
+import frontmatter
 from sqlalchemy.orm import Session
 
 from app.core.config import settings
@@ -33,7 +34,7 @@ from app.models.lab_test import LabTest
 from app.models.patient_material import PatientMaterial
 from app.models.study import ScientificStudy
 from app.models.study_track import StudyTrack
-from app.services.importer import import_directory
+from app.services.importer import _slugify, import_directory
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[3]
 BLOCKING_DIAGNOSTIC_KEYS = frozenset({
@@ -76,14 +77,18 @@ def _ensure_source(front: str, path: str) -> Path:
     return source
 
 
-def _validate_manifest_slugs(front: str, source: Path) -> int | None:
-    """Valida os manifestos JSON antes do upsert.
+def _validate_unique_slugs(front: str, slugs: list[str]) -> set[str]:
+    duplicados = sorted(slug for slug, count in Counter(slugs).items() if count > 1)
+    if duplicados:
+        raise RuntimeError(
+            f"Frente {front} contém slugs duplicados: "
+            + json.dumps(duplicados, ensure_ascii=False)
+        )
+    return set(slugs)
 
-    Carregadores históricos fazem upsert sequencial; dois itens com o mesmo slug
-    sobrescreveriam o mesmo registro sem emitir diagnóstico. A validação também
-    rejeita item não-objeto e slug ausente/vazio. Retorna a quantidade de itens
-    para tornar o inventário-fonte observável no resultado da reconciliação.
-    """
+
+def _manifest_slugs(front: str, source: Path) -> set[str] | None:
+    """Valida manifestos JSON e devolve o conjunto canônico de slugs."""
     if source.suffix.lower() != ".json":
         return None
 
@@ -107,14 +112,30 @@ def _validate_manifest_slugs(front: str, source: Path) -> int | None:
         raise RuntimeError(
             f"Frente {front} contém itens sem slug válido nos índices: {invalidos}"
         )
+    return _validate_unique_slugs(front, slugs)
 
-    duplicados = sorted(slug for slug, count in Counter(slugs).items() if count > 1)
-    if duplicados:
-        raise RuntimeError(
-            f"Frente {front} contém slugs duplicados: "
-            + json.dumps(duplicados, ensure_ascii=False)
-        )
-    return len(data)
+
+def _markdown_slugs(front: str, source: Path) -> set[str]:
+    """Obtém os mesmos slugs que o importador gera para os Markdown."""
+    slugs: list[str] = []
+    for md in sorted(source.rglob("*.md")):
+        post = frontmatter.load(md)
+        meta = post.metadata
+        title = meta.get("title") or md.stem
+        slug = meta.get("slug") or _slugify(title)
+        if not isinstance(slug, str) or not slug.strip():
+            raise RuntimeError(f"Frente {front} contém Markdown sem slug válido: {md}")
+        slugs.append(slug.strip())
+    return _validate_unique_slugs(front, slugs)
+
+
+def _canonical_source_slugs(front: str, source: Path) -> set[str]:
+    manifest = _manifest_slugs(front, source)
+    if manifest is not None:
+        return manifest
+    if source.is_dir():
+        return _markdown_slugs(front, source)
+    raise RuntimeError(f"Fonte da frente {front} não permite inventariar slugs: {source}")
 
 
 def _collect_blocking_diagnostics(value: Any, path: str = "") -> dict[str, Any]:
@@ -145,18 +166,17 @@ def _assert_no_rejections(front: str, result: dict[str, Any]) -> None:
         )
 
 
-def _load_front(front: str, config: dict[str, Any]) -> dict:
+def _load_front(front: str, config: dict[str, Any]) -> tuple[dict, set[str]]:
     source = _ensure_source(front, str(config["path"]))
-    source_items = _validate_manifest_slugs(front, source)
+    canonical_slugs = _canonical_source_slugs(front, source)
     if config["loader"] is None:
         result = import_directory(str(source))
     else:
         module = importlib.import_module(f"app.services.{config['loader']}")
         result = module.carregar(str(source))
-    if source_items is not None:
-        result = {**result, "itens_fonte": source_items}
+    result = {**result, "itens_fonte": len(canonical_slugs)}
     _assert_no_rejections(front, result)
-    return result
+    return result, canonical_slugs
 
 
 def _load_controlled_substances(db: Session) -> dict:
@@ -168,38 +188,81 @@ def _load_controlled_substances(db: Session) -> dict:
     return result
 
 
-def _publish_reviewed(db: Session) -> dict[str, int]:
-    result: dict[str, int] = {}
-    for front, config in FRONTS.items():
-        model = config["model"]
-        changed = (
-            db.query(model)
-            .filter(model.published.is_(False), model.review_status == "revisado")
-            .update({model.published: True}, synchronize_session=False)
-        )
-        result[front] = int(changed)
-    db.commit()
-    return result
+def _synchronize_publication(
+    db: Session,
+    canonical_slugs: dict[str, set[str]],
+    *,
+    publish_reviewed: bool,
+) -> tuple[dict[str, int], dict[str, int]]:
+    """Publica somente o corpus atual e despublica slugs ausentes do commit."""
+    published: dict[str, int] = {}
+    unpublished_absent: dict[str, int] = {}
+    try:
+        for front, config in FRONTS.items():
+            model = config["model"]
+            slugs = canonical_slugs[front]
+            if publish_reviewed:
+                changed = (
+                    db.query(model)
+                    .filter(
+                        model.slug.in_(slugs),
+                        model.published.is_(False),
+                        model.review_status == "revisado",
+                    )
+                    .update({model.published: True}, synchronize_session=False)
+                )
+                published[front] = int(changed)
+            else:
+                published[front] = 0
+
+            removed = (
+                db.query(model)
+                .filter(model.published.is_(True), model.slug.notin_(slugs))
+                .update({model.published: False}, synchronize_session=False)
+            )
+            unpublished_absent[front] = int(removed)
+        db.commit()
+    except Exception:
+        db.rollback()
+        raise
+    return published, unpublished_absent
 
 
-def _database_inventory(db: Session) -> dict[str, Any]:
+def _database_inventory(
+    db: Session,
+    canonical_slugs: dict[str, set[str]],
+) -> dict[str, Any]:
     fronts: dict[str, Any] = {}
     total = 0
     published_total = 0
+    stored_total = 0
     below_minimum: dict[str, dict[str, int]] = {}
     for front, config in FRONTS.items():
         model = config["model"]
-        count = db.query(model).count()
-        published = db.query(model).filter(model.published.is_(True)).count()
+        slugs = canonical_slugs[front]
+        canonical = db.query(model).filter(model.slug.in_(slugs)).count()
+        published = db.query(model).filter(
+            model.slug.in_(slugs), model.published.is_(True)
+        ).count()
+        stored = db.query(model).count()
         minimum = int(config["minimum"])
-        fronts[front] = {"database": count, "published": published, "minimum": minimum}
-        total += count
+        fronts[front] = {
+            "database": canonical,
+            "published": published,
+            "stored": stored,
+            "archived_absent": max(stored - canonical, 0),
+            "minimum": minimum,
+        }
+        total += canonical
         published_total += published
-        if count < minimum:
-            below_minimum[front] = {"database": count, "minimum": minimum}
+        stored_total += stored
+        if canonical < minimum:
+            below_minimum[front] = {"database": canonical, "minimum": minimum}
     return {
         "total": total,
         "published_total": published_total,
+        "stored_total": stored_total,
+        "archived_absent_total": max(stored_total - total, 0),
         "minimum": SCIENTIFIC_MINIMUM,
         "fronts": fronts,
         "below_minimum": below_minimum,
@@ -208,18 +271,26 @@ def _database_inventory(db: Session) -> dict[str, Any]:
 
 def reconcile(*, publish_reviewed: bool = False, allow_partial: bool = False) -> dict[str, Any]:
     loads: dict[str, Any] = {}
+    canonical_slugs: dict[str, set[str]] = {}
     for front, config in FRONTS.items():
-        loads[front] = _load_front(front, config)
+        loads[front], canonical_slugs[front] = _load_front(front, config)
 
     db = SessionLocal()
     try:
         loads["controlados"] = _load_controlled_substances(db)
-        published = _publish_reviewed(db) if publish_reviewed else {}
-        database = _database_inventory(db)
+        published, unpublished_absent = _synchronize_publication(
+            db, canonical_slugs, publish_reviewed=publish_reviewed
+        )
+        database = _database_inventory(db, canonical_slugs)
     finally:
         db.close()
 
-    result = {"loads": loads, "published_reviewed": published, "database": database}
+    result = {
+        "loads": loads,
+        "published_reviewed": published,
+        "unpublished_absent": unpublished_absent,
+        "database": database,
+    }
     if database["below_minimum"] and not allow_partial:
         raise RuntimeError(
             "Reconciliação incompleta: "
