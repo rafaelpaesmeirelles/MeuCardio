@@ -61,6 +61,15 @@ def test_deploy_faz_backup_e_exige_https_publico():
     assert "git rev-parse --verify HEAD" in fonte
 
 
+def test_deploy_exige_checkout_limpo_e_ferramentas_do_host():
+    fonte = _fonte(DEPLOY)
+
+    assert "git status --porcelain --untracked-files=normal" in fonte
+    assert "ALTERACOES_LOCAIS" in fonte
+    assert "checkout contém alterações não versionadas" in fonte
+    assert "for comando in git curl getent sha256sum" in fonte
+
+
 def test_deploy_injeta_e_confirma_commit_publico():
     deploy = _fonte(DEPLOY)
     compose = _fonte(COMPOSE)
