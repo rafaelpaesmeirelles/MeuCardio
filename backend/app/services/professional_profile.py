@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+import hashlib
 import unicodedata
 from typing import Any
 
@@ -104,6 +105,47 @@ def logo_needs_dark_plate_path(path: Path | None) -> bool:
 
 def logo_needs_dark_plate(document_logo_url: str | None) -> bool:
     return logo_needs_dark_plate_path(logo_path(document_logo_url))
+
+
+def rendered_logo_png(document_logo_url: str | None) -> Path | None:
+    """Cria um derivado PNG com placa de contraste, sem alterar o upload original.
+
+    O motor PDF leve usado em apresentações aceita PNG, enquanto o upload
+    profissional também permite JPEG e WEBP. O cache é invalidado pelo nome,
+    tamanho, mtime e decisão de contraste do arquivo original.
+    """
+    original = logo_path(document_logo_url)
+    if original is None:
+        return None
+    dark = logo_needs_dark_plate_path(original)
+    try:
+        stat = original.stat()
+        key = hashlib.sha256(
+            f"{original.name}:{stat.st_size}:{stat.st_mtime_ns}:{int(dark)}".encode()
+        ).hexdigest()[:20]
+        cache_dir = original.parent / ".rendered"
+        cache_dir.mkdir(parents=True, exist_ok=True)
+        output = cache_dir / f"{key}.png"
+        if output.is_file():
+            return output
+
+        with Image.open(original) as source:
+            image = source.convert("RGBA")
+            image.thumbnail((512, 256), Image.Resampling.LANCZOS)
+            padding = 18
+            background = (11, 46, 69, 255) if dark else (255, 255, 255, 255)
+            canvas = Image.new(
+                "RGBA",
+                (max(1, image.width + 2 * padding), max(1, image.height + 2 * padding)),
+                background,
+            )
+            canvas.alpha_composite(image, (padding, padding))
+            temporary = output.with_suffix(".tmp.png")
+            canvas.save(temporary, format="PNG", optimize=True)
+            temporary.replace(output)
+        return output
+    except (OSError, UnidentifiedImageError):
+        return None
 
 
 def profile_payload(user: Any) -> dict:

@@ -235,12 +235,34 @@ class Apresentacao(_Base):
         self.pdf.texto(self.largura - self.margem - largura_texto(n, 8, True), b,
                        n, 8, NAVY, negrito=True)
 
-    def capa(self, titulo: str, subtitulo: str, autor: str, registro: str) -> None:
+    def capa(
+        self, titulo: str, subtitulo: str, autor: str, registro: str,
+        logo_profissional: str | None = None,
+    ) -> None:
         self.pdf.nova_pagina()
         self.pagina = 1
         self.pdf.retangulo(0, 0, self.largura, self.altura, OFF_WHITE)
         self.pdf.retangulo(0, self.altura - 7, self.largura, 7, VERMELHO)
         self._logo(self.margem, self.altura - 58, 160)
+        if logo_profissional:
+            try:
+                nome_logo = "LogoProfissional"
+                self.pdf.imagem(nome_logo, logo_profissional, 0, 0, 0, 0)
+                self.pdf.atual.pop()
+                imagem = self.pdf.imagens[nome_logo]
+                largura_logo = 132.0
+                altura_logo = largura_logo * imagem["altura"] / max(1, imagem["largura"])
+                if altura_logo > 82.0:
+                    altura_logo = 82.0
+                    largura_logo = altura_logo * imagem["largura"] / max(1, imagem["altura"])
+                self.pdf.imagem(
+                    nome_logo, logo_profissional,
+                    self.largura - self.margem - largura_logo,
+                    self.altura - 48 - altura_logo,
+                    largura_logo, altura_logo,
+                )
+            except (OSError, ValueError):
+                pass
 
         y = self.altura - 230
         for linha in quebrar(titulo, self.util - 40, 30, True):
