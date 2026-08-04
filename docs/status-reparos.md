@@ -1,10 +1,10 @@
 # Status dos reparos — MeuCardio
 
-Última atualização: 03/08/2026 23:18 (BRT)
+Última atualização: 03/08/2026 23:42 (BRT)
 
 ## Estado geral
 
-O repositório está sem warnings conhecidos e contém as correções de segurança, corpus, Painel, CorvIA Mail e CorvIA Chat. O trabalho atual é tornar o deploy do servidor tão verificável quanto a CI.
+A `main` está sem warnings conhecidos e contém as correções de segurança, corpus, Painel, CorvIA Mail, CorvIA Chat e PDFs clínicos. O trabalho atual endurece o deploy, backup, restauração e reconciliação antes de aplicar essas versões no servidor real.
 
 ## Concluído e publicado na `main`
 
@@ -24,95 +24,112 @@ O repositório está sem warnings conhecidos e contém as correções de seguran
 - PyJWT e separação de escopos app/e-mail;
 - Passlib removido, bcrypt direto compatível com `$2a$`, `$2b$` e `$2y$`;
 - hashes truncados bloqueados antes do binding nativo;
-- ReportLab atualizado dentro da linha 4.x para compatibilidade com Python 3.14;
+- ReportLab 4.4.10 compatível com Python 3.14;
 - receituário e documento genérico protegidos por geração real de PDF.
 
 ### Publicações e certificações recentes
 
 - `2209d1e3` — PR #34: bcrypt direto; CI `30870119043`, 174 testes;
 - `54ccee76` — PR #35: acervo, Mail e Chat; CI `30870366597`, 182 testes;
-- `1bea10cf` — PR #36: ReportLab 4.4.10; CI `30870752333`, **186 testes e zero warnings**.
+- `1bea10cf` — PR #36: ReportLab; CI `30870752333`, **186 testes e zero warnings**.
 
-Todas as três certificações incluíram auditoria de dependências, migrations idempotentes, bootstrap, smoke HTTP, build frontend e backup/restauração PostgreSQL.
+As certificações incluíram auditoria de dependências, migrations idempotentes, bootstrap, smoke HTTP, build frontend e backup/restauração PostgreSQL.
 
-## Em andamento — deploy certificado
+## Em andamento — PR #37: deploy certificado
 
 Branch: `agent/deploy-certifica-corpus`
 
-Problemas encontrados no fluxo anterior:
+### Problemas encontrados no fluxo antigo
 
-- `deploy.sh` usava `app.services.importer`, que não reconciliava as 11 coleções;
-- o script podia continuar mesmo sem o backend atingir readiness;
-- não verificava o domínio HTTPS após subir os containers;
-- não comprovava qual commit estava efetivamente publicado;
-- o backup tinha caminho fixo `/opt/meucardio` e não produzia checksum.
+- importador parcial em vez do reconciliador das 11 coleções;
+- continuação possível sem readiness;
+- ausência de verificação HTTPS e do commit publicado;
+- backup sem integrar o deploy;
+- banco parado podia ser alterado sem backup;
+- restaurador não aceitava o novo dump custom;
+- reconciliador podia ignorar arquivos e ainda aprovar pelo total histórico;
+- falhas pós-start nem sempre exibiam estado e logs.
 
-Correções implementadas:
+### Correções implementadas
 
-1. validação das variáveis críticas e do commit Git completo;
-2. backup pré-deploy quando o banco já está em execução;
-3. backup portátil, temporário/atômico, validado por `gzip -t` e acompanhado de SHA-256;
-4. build e subida com remoção de serviços órfãos;
-5. espera obrigatória por `/api/ready` interno;
-6. migrations idempotentes explícitas;
-7. execução obrigatória de:
+1. validação de variáveis críticas, ferramentas do host e SHA Git completo;
+2. recusa de checkout com modificações ou arquivos não versionados;
+3. detecção de banco persistente por container parado **ou** volume `pgdata` preservado;
+4. início exclusivo do PostgreSQL antes do backup, sem backend ou migrations;
+5. backup custom do PostgreSQL com:
+   - arquivo temporário e publicação atômica;
+   - compressão nativa do `pg_dump`;
+   - `pg_restore --list` antes da publicação;
+   - permissões `0600`;
+   - SHA-256 portátil;
+6. restaurador compatível com `.dump` atual e `.sql.gz` legado;
+7. checksum e catálogo validados **antes** de apagar o banco;
+8. confirmação destrutiva em duas etapas;
+9. restauração custom com `pg_restore --exit-on-error`;
+10. backend mantido parado se a restauração falhar;
+11. readiness obrigatório após a restauração;
+12. build com remoção de serviços órfãos;
+13. readiness interno obrigatório antes de migrations e reconciliação;
+14. migrations idempotentes explícitas;
+15. execução obrigatória de:
 
    ```bash
    python -m app.commands.reconcile_content --publish-reviewed
    ```
 
-8. proibição operacional de `--allow-partial` e remoção do importador antigo;
-9. falha do deploy se qualquer coleção ficar abaixo do mínimo;
-10. confirmação final de readiness interno e HTTPS público;
-11. nova rota pública `/api/version`, contendo somente o SHA implantado;
-12. injeção de `DEPLOY_COMMIT` pelo Docker Compose;
-13. comparação entre `/api/version` e o commit local antes de declarar sucesso;
-14. diagnóstico automático com estado e logs se alguma etapa falhar;
-15. documentação de deploy e recuperação atualizada;
-16. testes de sintaxe Bash, contratos operacionais e endpoint de versão.
+16. remoção do importador parcial e ausência de `--allow-partial` no deploy;
+17. reconciliador em modo fail-closed para:
+   - `falhas`;
+   - `duplicados_ignorados`;
+   - `avisos` de itens pulados;
+   - recusados, ausências e demais diagnósticos equivalentes;
+18. diagnóstico recursivo, inclusive quando o carregador agrupa resultados;
+19. verificação dos mínimos individuais das 11 coleções;
+20. confirmação final de readiness interno e HTTPS público;
+21. `/api/version` com somente o SHA implantado;
+22. comparação do SHA público com o commit local;
+23. handler `ERR` para mostrar estado e logs em qualquer falha pós-start;
+24. testes de sintaxe Bash, contratos operacionais, restauração, diagnósticos do corpus e endpoint de versão.
 
-Commits principais da branch:
+### Revisão automática
 
-- `c65f6588`: readiness e reconciliação integral;
-- `40441e19`: backup portátil e verificável;
-- `9d420e2e`: gates do deploy;
-- `5f71e89c`: documentação operacional;
-- `ef8e22df`: endpoint `/api/version`;
-- `4a72f2cf`: SHA injetado no backend;
-- `d3c5b0ab`: testes do endpoint de versão;
-- `e892fd01`: confirmação pública do commit.
+Apontamentos do Codex já tratados:
 
-Próximos marcos:
+- checkout sujo certificado como SHA conhecido;
+- falha do reconciliador sem diagnóstico;
+- restaurador incompatível com dump custom;
+- banco persistente parado sem backup;
+- arquivos ignorados mascarados por registros históricos.
 
-- abrir PR do deploy certificado;
-- executar CI integral;
-- tratar revisão automática;
-- publicar na `main` somente com CI verde.
+A CI final será reiniciada sobre essas correções antes do merge.
 
 ## Bloqueio externo atual
 
 O host anteriormente informado, `169.58.78.100`, recusou conexão SSH na porta 22 nesta sessão. Portanto ainda não foi possível:
 
 - atualizar o checkout real;
-- reconstruir os containers reais;
+- criar o backup real;
+- reconstruir os containers;
 - reconciliar o PostgreSQL real;
 - confirmar o SHA em `https://corvia.med.br/api/version`;
 - validar visualmente Mail, Chat, corpus e WebSocket em produção;
 - aplicar `vm.overcommit_memory=1` no host.
 
-Nenhum dado do servidor real foi alterado nesta sessão.
+A consulta pública automatizada ao domínio também foi inconclusiva; ela não deve ser interpretada como prova de indisponibilidade.
 
-## Próximas frentes após o deploy
+## Próximos marcos
 
-1. reexecutar inventário científico após o merge;
-2. validar a produção assim que o SSH voltar;
-3. revisar upgrades maiores em PRs isolados;
-4. manter CI integral e atualização deste arquivo após cada avanço verificável.
+1. concluir CI e revisão do PR #37;
+2. publicar o deploy certificado na `main`;
+3. reexecutar inventário científico após o merge;
+4. aplicar a `main` no servidor assim que o SSH voltar;
+5. validar a produção com `/api/version`, catálogo, Mail, Chat e WebSocket;
+6. retomar upgrades maiores em PRs isolados.
 
 ## Estado de publicação
 
 - PRs #34, #35 e #36 publicados na `main`;
-- deploy certificado em branch isolada, ainda sem merge;
+- PR #37 aberto e em nova certificação;
 - nenhum arquivo científico removido;
 - nenhuma senha armazenada alterada;
-- produção real ainda aguarda acesso ao servidor para receber a `main` certificada.
+- nenhum dado do servidor real alterado nesta sessão.
