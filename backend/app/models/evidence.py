@@ -8,28 +8,26 @@ from app.core.db import Base
 
 
 class EvidenceRecord(Base):
-    """Uma recomendação pontual, com classe/nível de evidência — não é o
-    documento inteiro, é a afirmação específica que carrega essa força.
-    Ex.: 'Sacubitril-valsartana é recomendado em vez de IECA em ICFEr
-    sintomática — Classe I, Nível A'."""
+    """Recomendação pontual com força, resumo clínico e fonte verificável."""
 
     __tablename__ = "evidence_records"
 
     id: Mapped[int] = mapped_column(primary_key=True)
     slug: Mapped[str] = mapped_column(String(255), unique=True, index=True)
-    statement: Mapped[str] = mapped_column(Text)  # a recomendação em si, texto próprio
-    recommendation_class: Mapped[str] = mapped_column(String(10))  # I | IIa | IIb | III
-    evidence_level: Mapped[str] = mapped_column(String(5))  # A | B | C
-    society: Mapped[str] = mapped_column(String(80))  # ESC | AHA/ACC | SBC | ...
+    statement: Mapped[str] = mapped_column(Text)
+    summary: Mapped[str | None] = mapped_column(Text, nullable=True)
+    recommendation_class: Mapped[str] = mapped_column(String(10))
+    evidence_level: Mapped[str] = mapped_column(String(5))
+    society: Mapped[str] = mapped_column(String(80))
     year: Mapped[int] = mapped_column()
     guideline_title: Mapped[str] = mapped_column(String(400))
-    reference: Mapped[str] = mapped_column(Text)  # citação completa
+    reference: Mapped[str] = mapped_column(Text)
+    source_url: Mapped[str | None] = mapped_column(String(1000), nullable=True)
+    doi: Mapped[str | None] = mapped_column(String(160), nullable=True)
 
     theme: Mapped[str] = mapped_column(String(80), index=True)
     tags: Mapped[list[str]] = mapped_column(ARRAY(String), default=list)
     document_slug: Mapped[str | None] = mapped_column(String(255), nullable=True)
-    # referência solta ao slug do documento relacionado na Biblioteca, se existir — sem FK
-    # rígida porque documentos são geridos por arquivo, não é garantido que o slug já exista.
 
     review_status: Mapped[str] = mapped_column(String(40), default="pendente_revisao")
     review_note: Mapped[str | None] = mapped_column(Text, nullable=True)
