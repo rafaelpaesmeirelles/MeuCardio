@@ -10,6 +10,8 @@ BACKUP = REPO_ROOT / "infra/backup/backup.sh"
 RESTORE = REPO_ROOT / "infra/backup/restaurar.sh"
 COMPOSE = REPO_ROOT / "docker-compose.prod.yml"
 HEALTH = REPO_ROOT / "backend/app/api/health.py"
+FRONTEND_DOCKERIGNORE = REPO_ROOT / "frontend/.dockerignore"
+BACKEND_DOCKERIGNORE = REPO_ROOT / "backend/.dockerignore"
 
 
 def _fonte(caminho: Path) -> str:
@@ -109,6 +111,14 @@ def test_deploy_exige_checkout_limpo_e_ferramentas_do_host():
     assert "for comando in git curl getent sha256sum" in fonte
 
 
+def test_contextos_docker_excluem_artefatos_ignorados_locais():
+    frontend = set(_linhas_ativas(FRONTEND_DOCKERIGNORE))
+    backend = set(_linhas_ativas(BACKEND_DOCKERIGNORE))
+
+    assert {"node_modules/", "dist/", ".env", ".env.*"}.issubset(frontend)
+    assert {"__pycache__/", ".pytest_cache/", ".venv/", "venv/", ".env", ".env.*"}.issubset(backend)
+
+
 def test_deploy_injeta_e_confirma_commit_publico():
     deploy = _fonte(DEPLOY)
     compose = _fonte(COMPOSE)
@@ -143,22 +153,36 @@ def test_backup_e_portavel_atomico_restauravel_e_verificado():
 def test_restaurador_valida_antes_de_apagar_e_usa_pg_restore():
     fonte = _fonte(RESTORE)
     linhas_ativas = "\n".join(_linhas_ativas(RESTORE))
-    indice_checksum = fonte.index("sha256sum -c")
+    indice_hash = fonte.index('hash_calculado="$(sha256sum "$arquivo"')
     indice_catalogo = fonte.index("pg_restore --list")
     indice_drop = fonte.index("dropdb")
 
     assert 'PROJETO="${PROJETO:-' in fonte
     assert "/opt/meucardio" not in linhas_ativas
-    assert indice_checksum < indice_drop
+    assert indice_hash < indice_drop
     assert indice_catalogo < indice_drop
     assert "--if-exists --force" in fonte
     assert "--exit-on-error" in fonte
     assert "--no-owner" in fonte
     assert "--no-privileges" in fonte
     assert "Checksum obrigatório não encontrado" in fonte
+    assert "Checksum não corresponde ao dump selecionado" in fonte
+    assert 'nome_registrado" != "$(basename "$arquivo")"' in fonte
     assert '[[ "$banco_confirmado" == "$POSTGRES_DB" ]]' in fonte
     assert "O backend permanece parado" in fonte
     assert "BACKEND_PRONTO=0" in fonte
+
+
+def test_restaurador_so_apaga_depois_de_parar_backend_existente():
+    fonte = _fonte(RESTORE)
+    indice_container = fonte.index('BACKEND_CONTAINER="$(')
+    indice_stop = fonte.index('"${COMPOSE[@]}" stop backend')
+    indice_drop = fonte.index("dropdb")
+
+    assert indice_container < indice_stop < indice_drop
+    assert 'ps -a -q backend' in fonte
+    assert 'stop backend >/dev/null 2>&1 || true' not in fonte
+    assert "Uma falha aqui é bloqueante" in fonte
 
 
 def test_restaurador_mantem_compatibilidade_com_backup_sql_gzip_legado():
