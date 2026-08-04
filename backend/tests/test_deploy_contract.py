@@ -75,13 +75,17 @@ def test_deploy_injeta_e_confirma_commit_publico():
     assert 'os.getenv("DEPLOY_COMMIT", "unknown")' in health
 
 
-def test_backup_e_portavel_atomico_e_verificado():
+def test_backup_e_portavel_atomico_restauravel_e_verificado():
     fonte = _fonte(BACKUP)
 
     assert 'PROJETO="${PROJETO:-' in fonte
     assert "/opt/meucardio" not in fonte
     assert 'TEMPORARIO="${ARQUIVO}.tmp"' in fonte
     assert 'trap \'rm -f "$TEMPORARIO"\' EXIT' in fonte
-    assert 'gzip -t "$TEMPORARIO"' in fonte
-    assert 'sha256sum "$ARQUIVO"' in fonte
-    assert "--no-owner --no-privileges" in fonte
+    assert "--format=custom" in fonte
+    assert "--compress=9" in fonte
+    assert "pg_restore --list" in fonte
+    assert 'sha256sum "$(basename "$ARQUIVO")"' in fonte
+    assert "--no-owner" in fonte
+    assert "--no-privileges" in fonte
+    assert "meucardio_*.dump" in fonte
