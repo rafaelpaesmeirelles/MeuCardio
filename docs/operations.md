@@ -29,6 +29,35 @@ Executar o comando novamente é seguro e não reaplica migrations concluídas.
 
 ## Subida em produção
 
+Antes do Compose, execute o preflight no próprio host Linux:
+
+```bash
+bash ops/check-redis-host.sh
+```
+
+O comando é somente leitura e termina com:
+
+- código `0` quando `vm.overcommit_memory=1`;
+- código `2` quando o host não está apto para operações de background do Redis;
+- código `3` quando o valor não pode ser lido ou é inválido.
+
+Quando o preflight retornar código `2`, aplique e persista a configuração como
+administrador do host:
+
+```bash
+sudo sysctl -w vm.overcommit_memory=1
+printf 'vm.overcommit_memory = 1\n' | \
+  sudo tee /etc/sysctl.d/99-corvia-redis.conf
+sudo sysctl --system
+bash ops/check-redis-host.sh
+```
+
+A configuração pertence ao kernel do host, não ao container. O script nunca
+executa `sudo`, não modifica `/proc` e não apresenta o requisito como corrigido
+até conseguir ler o valor `1`.
+
+Depois do preflight aprovado:
+
 ```bash
 cp .env.example .env
 # preencher todas as variáveis críticas
