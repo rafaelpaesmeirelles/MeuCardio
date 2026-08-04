@@ -1,10 +1,10 @@
 # Status dos reparos — MeuCardio
 
-Última atualização: 03/08/2026 23:42 (BRT)
+Última atualização: 04/08/2026 00:03 (BRT)
 
 ## Estado geral
 
-A `main` está sem warnings conhecidos e contém as correções de segurança, corpus, Painel, CorvIA Mail, CorvIA Chat e PDFs clínicos. O trabalho atual endurece o deploy, backup, restauração e reconciliação antes de aplicar essas versões no servidor real.
+A `main` contém as correções de segurança, corpus, Painel, CorvIA Mail, CorvIA Chat e PDFs clínicos, sem warnings conhecidos. O PR #37 endurece o deploy, backup, restauração e reconciliação antes de aplicar essas versões no servidor real.
 
 ## Concluído e publicado na `main`
 
@@ -27,109 +27,95 @@ A `main` está sem warnings conhecidos e contém as correções de segurança, c
 - ReportLab 4.4.10 compatível com Python 3.14;
 - receituário e documento genérico protegidos por geração real de PDF.
 
-### Publicações e certificações recentes
+### Publicações recentes
 
 - `2209d1e3` — PR #34: bcrypt direto; CI `30870119043`, 174 testes;
 - `54ccee76` — PR #35: acervo, Mail e Chat; CI `30870366597`, 182 testes;
 - `1bea10cf` — PR #36: ReportLab; CI `30870752333`, **186 testes e zero warnings**.
 
-As certificações incluíram auditoria de dependências, migrations idempotentes, bootstrap, smoke HTTP, build frontend e backup/restauração PostgreSQL.
-
 ## Em andamento — PR #37: deploy certificado
 
 Branch: `agent/deploy-certifica-corpus`
 
-### Problemas encontrados no fluxo antigo
+### Proteções implementadas
 
-- importador parcial em vez do reconciliador das 11 coleções;
-- continuação possível sem readiness;
-- ausência de verificação HTTPS e do commit publicado;
-- backup sem integrar o deploy;
-- banco parado podia ser alterado sem backup;
-- restaurador não aceitava o novo dump custom;
-- reconciliador podia ignorar arquivos e ainda aprovar pelo total histórico;
-- falhas pós-start nem sempre exibiam estado e logs.
-
-### Correções implementadas
-
-1. validação de variáveis críticas, ferramentas do host e SHA Git completo;
-2. recusa de checkout com modificações ou arquivos não versionados;
-3. detecção de banco persistente por container parado **ou** volume `pgdata` preservado;
-4. início exclusivo do PostgreSQL antes do backup, sem backend ou migrations;
-5. backup custom do PostgreSQL com:
-   - arquivo temporário e publicação atômica;
-   - compressão nativa do `pg_dump`;
-   - `pg_restore --list` antes da publicação;
-   - permissões `0600`;
-   - SHA-256 portátil;
-6. restaurador compatível com `.dump` atual e `.sql.gz` legado;
-7. checksum e catálogo validados **antes** de apagar o banco;
-8. confirmação destrutiva em duas etapas;
-9. restauração custom com `pg_restore --exit-on-error`;
-10. backend mantido parado se a restauração falhar;
-11. readiness obrigatório após a restauração;
-12. build com remoção de serviços órfãos;
-13. readiness interno obrigatório antes de migrations e reconciliação;
-14. migrations idempotentes explícitas;
-15. execução obrigatória de:
+1. validação de variáveis críticas, ferramentas do host, SHA Git completo e checkout limpo;
+2. `.dockerignore` nos contextos frontend/backend para excluir artefatos locais ignorados;
+3. detecção fail-closed de banco persistente por container ativo/parado ou volume `pgdata`;
+4. erro de Docker/Compose nunca é interpretado como “primeiro deploy”;
+5. início exclusivo do PostgreSQL antes do backup, sem backend ou migrations;
+6. backup custom com arquivo temporário, compressão nativa, `pg_restore --list`, permissões `0600` e SHA-256;
+7. restaurador compatível com `.dump` atual e `.sql.gz` legado;
+8. checksum vinculado ao nome e conteúdo do dump selecionado;
+9. checksum e catálogo validados antes de qualquer operação destrutiva;
+10. confirmação destrutiva em duas etapas;
+11. backend existente deve ser parado com sucesso antes de `dropdb`;
+12. falha de restauração mantém o backend parado;
+13. readiness obrigatório após a restauração;
+14. build com remoção de serviços órfãos;
+15. readiness interno obrigatório antes de migrations e reconciliação;
+16. migrations idempotentes explícitas;
+17. execução obrigatória de:
 
    ```bash
    python -m app.commands.reconcile_content --publish-reviewed
    ```
 
-16. remoção do importador parcial e ausência de `--allow-partial` no deploy;
-17. reconciliador em modo fail-closed para:
-   - `falhas`;
-   - `duplicados_ignorados`;
-   - `avisos` de itens pulados;
-   - recusados, ausências e demais diagnósticos equivalentes;
-18. diagnóstico recursivo, inclusive quando o carregador agrupa resultados;
-19. verificação dos mínimos individuais das 11 coleções;
-20. confirmação final de readiness interno e HTTPS público;
-21. `/api/version` com somente o SHA implantado;
-22. comparação do SHA público com o commit local;
-23. handler `ERR` para mostrar estado e logs em qualquer falha pós-start;
-24. testes de sintaxe Bash, contratos operacionais, restauração, diagnósticos do corpus e endpoint de versão.
+18. ausência do importador parcial e de `--allow-partial` no deploy;
+19. reconciliador fail-closed para falhas, duplicados, avisos, recusados, ausências e Markdown vazio;
+20. diagnósticos bloqueantes pesquisados recursivamente;
+21. mínimos individuais das 11 coleções;
+22. `/api/version` com somente o SHA implantado;
+23. comparação do SHA público com o commit local;
+24. handler `ERR` para estado e logs em qualquer falha pós-start;
+25. testes de sintaxe Bash, deploy, backup, restauração, Docker contexts, conteúdo e endpoint de versão.
+
+### Certificações já obtidas nesta branch
+
+- reconciliação real fail-closed aprovada com **4.936 registros** nas 11 coleções;
+- CI `30873219782` aprovada com **216 testes**, auditorias, migrations, smoke HTTP, frontend e backup/restauração;
+- após essa CI, a detecção de banco persistente foi endurecida para não ocultar erro do Docker; uma certificação final foi disparada no mesmo PR.
 
 ### Revisão automática
 
-Apontamentos do Codex já tratados:
+Todos os riscos apontados até aqui foram tratados:
 
 - checkout sujo certificado como SHA conhecido;
-- falha do reconciliador sem diagnóstico;
-- restaurador incompatível com dump custom;
+- artefatos locais ignorados entrando na imagem;
+- falha pós-start sem diagnóstico;
 - banco persistente parado sem backup;
-- arquivos ignorados mascarados por registros históricos.
-
-A CI final será reiniciada sobre essas correções antes do merge.
+- restaurador incompatível com dump custom;
+- backend não parado antes da restauração;
+- checksum pertencente a outro dump;
+- arquivos ignorados ou Markdown vazio mascarados por registros históricos.
 
 ## Bloqueio externo atual
 
-O host anteriormente informado, `169.58.78.100`, recusou conexão SSH na porta 22 nesta sessão. Portanto ainda não foi possível:
+O ambiente desta sessão não resolve `corvia.med.br`, e o IP anteriormente informado (`169.58.78.100`) não aceitou conexões nas portas 22, 80 ou 443. Portanto ainda não foi possível:
 
 - atualizar o checkout real;
 - criar o backup real;
 - reconstruir os containers;
 - reconciliar o PostgreSQL real;
-- confirmar o SHA em `https://corvia.med.br/api/version`;
-- validar visualmente Mail, Chat, corpus e WebSocket em produção;
+- confirmar o SHA em `/api/version`;
+- validar com login o Painel, Biblioteca, CorvIA Mail, CorvIA Chat e WebSocket;
 - aplicar `vm.overcommit_memory=1` no host.
 
-A consulta pública automatizada ao domínio também foi inconclusiva; ela não deve ser interpretada como prova de indisponibilidade.
+As credenciais fornecidas para validação não foram usadas, porque o host permaneceu inacessível.
 
 ## Próximos marcos
 
-1. concluir CI e revisão do PR #37;
-2. publicar o deploy certificado na `main`;
-3. reexecutar inventário científico após o merge;
-4. aplicar a `main` no servidor assim que o SSH voltar;
-5. validar a produção com `/api/version`, catálogo, Mail, Chat e WebSocket;
+1. concluir a certificação final do PR #37;
+2. resolver as threads de revisão já corrigidas;
+3. publicar o PR #37 na `main`;
+4. reexecutar inventário científico após o merge;
+5. aplicar a `main` e validar a produção assim que a rede/SSH voltar;
 6. retomar upgrades maiores em PRs isolados.
 
 ## Estado de publicação
 
 - PRs #34, #35 e #36 publicados na `main`;
-- PR #37 aberto e em nova certificação;
+- PR #37 aberto e em certificação final;
 - nenhum arquivo científico removido;
 - nenhuma senha armazenada alterada;
 - nenhum dado do servidor real alterado nesta sessão.
