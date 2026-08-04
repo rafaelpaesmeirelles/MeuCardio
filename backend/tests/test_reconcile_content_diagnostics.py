@@ -1,29 +1,23 @@
 """Garante que nenhum arquivo ignorado seja certificado pelo reconciliador."""
 
+import json
+
 import pytest
 
 from app.commands.reconcile_content import (
     BLOCKING_DIAGNOSTIC_KEYS,
     _assert_no_rejections,
     _collect_blocking_diagnostics,
+    _validate_manifest_slugs,
 )
 
 
 @pytest.mark.parametrize(
     "chave",
     [
-        "avisos",
-        "duplicados_ignorados",
-        "erros",
-        "falhas",
-        "ignoradas",
-        "ignorados",
-        "puladas",
-        "pulados",
-        "recusadas",
-        "recusados",
-        "sem_arquivo",
-        "vazios",
+        "avisos", "duplicados_ignorados", "erros", "falhas", "ignoradas",
+        "ignorados", "puladas", "pulados", "recusadas", "recusados",
+        "sem_arquivo", "vazios",
     ],
 )
 def test_todo_diagnostico_de_item_ignorado_bloqueia(chave):
@@ -65,3 +59,42 @@ def test_contagens_e_notas_informativas_nao_bloqueiam():
 
     assert _collect_blocking_diagnostics(resultado) == {}
     _assert_no_rejections("documentos", resultado)
+
+
+def test_manifesto_com_slugs_unicos_retorna_quantidade(tmp_path):
+    manifesto = tmp_path / "metadados.json"
+    manifesto.write_text(
+        json.dumps([{"slug": "um"}, {"slug": "dois"}], ensure_ascii=False),
+        encoding="utf-8",
+    )
+
+    assert _validate_manifest_slugs("exames", manifesto) == 2
+
+
+def test_manifesto_com_slug_duplicado_bloqueia_antes_do_upsert(tmp_path):
+    manifesto = tmp_path / "metadados.json"
+    manifesto.write_text(
+        json.dumps([{"slug": "duplicado"}, {"slug": "duplicado"}], ensure_ascii=False),
+        encoding="utf-8",
+    )
+
+    with pytest.raises(RuntimeError, match="slugs duplicados") as erro:
+        _validate_manifest_slugs("evidencias", manifesto)
+
+    assert "duplicado" in str(erro.value)
+
+
+@pytest.mark.parametrize(
+    "itens",
+    [
+        [{"name": "sem slug"}],
+        [{"slug": ""}],
+        ["não é objeto"],
+    ],
+)
+def test_manifesto_com_item_sem_slug_valido_bloqueia(tmp_path, itens):
+    manifesto = tmp_path / "metadados.json"
+    manifesto.write_text(json.dumps(itens, ensure_ascii=False), encoding="utf-8")
+
+    with pytest.raises(RuntimeError, match="sem slug válido"):
+        _validate_manifest_slugs("galeria", manifesto)
