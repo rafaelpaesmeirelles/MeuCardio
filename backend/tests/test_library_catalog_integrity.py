@@ -6,6 +6,7 @@ from app.api.library import (
     SCIENTIFIC_FILES_EXPECTED,
     catalog,
 )
+from app.commands.reconcile_content import SCIENTIFIC_MINIMUM
 
 
 class _ConsultaFalsa:
@@ -31,6 +32,10 @@ def _contagens_com_total(total: int) -> dict[type, int]:
     contagens = {modelo: 0 for _, _, _, modelo in CATALOG_FRONTS}
     contagens[CATALOG_FRONTS[0][3]] = total
     return contagens
+
+
+def test_baseline_do_catalogo_nao_diverge_do_reconciliador():
+    assert SCIENTIFIC_CORPUS_MINIMUM == SCIENTIFIC_MINIMUM == 4_936
 
 
 def test_catalogo_soma_as_onze_frentes_e_expõe_baselines():
