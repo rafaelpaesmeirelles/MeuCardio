@@ -13,7 +13,7 @@ Este documento marca o SHA submetido à certificação integral antes da integra
 - identidade e logo em receitas, atestados, laudos, documentos públicos, materiais ao paciente e exportações em modo apresentação;
 - históricos de receitas, laudos, atestados e documentos agrupados por paciente, pesquisáveis por nome parcial e filtráveis por tipo;
 - recriação de documentos preservando o nome do paciente;
-- Receita de Controle Especial física Anvisa V2 em duas vias, frente e verso;
+- Receita de Controle Especial física Anvisa V2 em duas vias, frente e verso, inclusive na reabertura por link público;
 - identificação do emitente, endereço profissional estruturado com logradouro, número, município e UF, nome/endereço/documento do paciente e data recomendada de impressão na RCE;
 - quantidade de cada item em algarismos e por extenso, conforme Portaria SVS/MS nº 344/1998;
 - limite de até três substâncias da Lista C1 por RCE;
