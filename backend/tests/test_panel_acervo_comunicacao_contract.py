@@ -45,13 +45,11 @@ def test_rotas_menu_e_widget_de_comunicacao_continuam_publicados():
     assert 'aria-label={naoLidas > 0 ? `Abrir o CorvIA Chat' in chat
 
 
-def test_painel_e_biblioteca_alertam_quando_corpus_estiver_incompleto():
+def test_painel_nao_expoe_alerta_operacional_e_biblioteca_mantem_integridade():
     painel = _fonte(PAINEL)
     biblioteca = _fonte(BIBLIOTECA)
 
-    assert 'catalogo?.integrity_ok === false' in painel
-    assert "Acervo de produção abaixo do inventário certificado" in painel
-    assert "4_936" in painel
-    assert "1_327" in painel
+    assert 'catalogo?.integrity_ok === false' not in painel
+    assert "Acervo de produção abaixo do inventário certificado" not in painel
     assert 'catalogo?.integrity_ok === false' in biblioteca
     assert "Acervo abaixo do inventário certificado" in biblioteca
