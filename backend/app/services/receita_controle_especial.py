@@ -57,6 +57,20 @@ def _registro(medico: Any) -> str:
     return " ".join(partes)
 
 
+def _endereco_estruturado_completo(endereco: dict | None) -> bool:
+    """A RCE exige endereço profissional completo, não apenas algum texto.
+
+    Logradouro, número, município e UF são o núcleo mínimo verificável do
+    endereço estruturado. Bairro, complemento e CEP continuam impressos quando
+    cadastrados, mas sua ausência não transforma um endereço identificável em
+    inválido.
+    """
+    return bool(
+        endereco
+        and all(_texto(endereco.get(campo)) for campo in ("logradouro", "numero", "cidade", "uf"))
+    )
+
+
 def _endereco_completo(endereco: dict | None) -> str:
     if not endereco:
         return ""
@@ -338,8 +352,11 @@ def validar_requisitos_rce(*, medico: Any, destinatario: dict, itens: list[dict]
             "A Receita de Controle Especial pode conter no máximo três substâncias "
             "da Lista C1 (Portaria SVS/MS nº 344/1998, art. 57)."
         )
-    if not endereco_profissional or not _endereco_completo(endereco_profissional):
-        erros.append("Cadastre o endereço profissional completo para a Receita de Controle Especial.")
+    if not _endereco_estruturado_completo(endereco_profissional):
+        erros.append(
+            "Cadastre logradouro, número, município e UF do endereço profissional "
+            "para a Receita de Controle Especial."
+        )
 
     tem_c5 = any(_texto(item.get("lista")).upper() == "C5" for item in itens)
     if tem_c5:

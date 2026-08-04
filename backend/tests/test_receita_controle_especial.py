@@ -101,3 +101,18 @@ def test_rce_recusa_mais_de_tres_substancias_c1():
         itens=itens, endereco_profissional=_endereco(), cid=None,
     )
     assert any("no máximo três substâncias" in erro for erro in erros)
+
+
+def test_rce_recusa_endereco_profissional_parcial():
+    endereco_parcial = {"logradouro": "Rua das Flores", "numero": "", "cidade": "", "uf": ""}
+    erros = validar_requisitos_rce(
+        medico=_medico(),
+        destinatario={"nome": "Paciente", "documento": "123", "endereco": "Rua A, 1"},
+        itens=[{
+            "descricao": "Controlado", "quantidade": "10 comprimidos (dez comprimidos)",
+            "lista": "C1",
+        }],
+        endereco_profissional=endereco_parcial,
+        cid=None,
+    )
+    assert any("logradouro, número, município e UF" in erro for erro in erros)
