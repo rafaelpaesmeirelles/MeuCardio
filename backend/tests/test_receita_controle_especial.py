@@ -88,3 +88,16 @@ def test_rce_recusa_quantidade_sem_algarismos_e_extenso():
         endereco_profissional=_endereco(), cid=None,
     )
     assert any("algarismos e por extenso" in erro for erro in erros)
+
+
+def test_rce_recusa_mais_de_tres_substancias_c1():
+    itens = [
+        {"descricao": f"Controlado {i}", "quantidade": "10 comprimidos (dez comprimidos)", "lista": "C1"}
+        for i in range(4)
+    ]
+    erros = validar_requisitos_rce(
+        medico=_medico(),
+        destinatario={"nome": "Paciente", "documento": "123", "endereco": "Rua A, 1"},
+        itens=itens, endereco_profissional=_endereco(), cid=None,
+    )
+    assert any("no máximo três substâncias" in erro for erro in erros)

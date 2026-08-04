@@ -332,6 +332,12 @@ def validar_requisitos_rce(*, medico: Any, destinatario: dict, itens: list[dict]
                 f"Informe a quantidade do item {indice} em algarismos e por extenso "
                 "(ex.: 60 comprimidos / sessenta comprimidos)."
             )
+    total_c1 = sum(_texto(item.get("lista")).upper() == "C1" for item in itens)
+    if total_c1 > 3:
+        erros.append(
+            "A Receita de Controle Especial pode conter no máximo três substâncias "
+            "da Lista C1 (Portaria SVS/MS nº 344/1998, art. 57)."
+        )
     if not endereco_profissional or not _endereco_completo(endereco_profissional):
         erros.append("Cadastre o endereço profissional completo para a Receita de Controle Especial.")
 

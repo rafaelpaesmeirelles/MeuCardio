@@ -714,7 +714,8 @@ export default function Receituario() {
                 </div>
               </div>
               <p className="eyebrow" style={{ margin: "0.2rem 0 0" }}>
-                Os dois campos são obrigatórios para Receita de Controle Especial.
+                Os dois campos são obrigatórios para Receita de Controle Especial. A RCE aceita
+                no máximo três substâncias C1 e, em regra, quantidade para até 60 dias de tratamento.
               </p>
               <label style={{ marginTop: "0.4rem" }}>Posologia</label>
               <input value={it.posologia} onChange={(e) => atualizarItem(i, "posologia", e.target.value)} />
