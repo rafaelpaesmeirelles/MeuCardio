@@ -25,9 +25,9 @@ tzdata==2024.2
 # em vez de depender acidentalmente da versão transitiva do ReportLab.
 pillow==12.3.0
 # Geração de PDF de todos os documentos do sistema (receita, atestado, laudo).
-# Escolhido pelo Rafael em 29/07/2026: python puro, sem lib de sistema, e
-# controle de coordenada preciso — que é o que formulário regulado exige.
-reportlab==4.2.5
+# Mantida na linha 4.x: 4.4.10 declara suporte a Python 3.14 e elimina o uso
+# legado de ast.NameConstant, sem assumir as mudanças incompatíveis da versão 5.
+reportlab==4.4.10
 # Templates dos e-mails transacionais (02/08/2026) — HTML + texto puro
 # renderizados a partir de backend/app/templates/emails/.
 jinja2==3.1.6
