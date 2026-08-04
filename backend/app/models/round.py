@@ -11,43 +11,39 @@ class Patient(Base):
     __tablename__ = "patients"
 
     id: Mapped[int] = mapped_column(primary_key=True)
-    record_number: Mapped[str] = mapped_column(String(60), index=True)  # prontuário
+    record_number: Mapped[str] = mapped_column(String(60), index=True)
     initials: Mapped[str] = mapped_column(String(20))
     birth_date: Mapped[date | None] = mapped_column(Date, nullable=True)
     sex: Mapped[str | None] = mapped_column(String(1), nullable=True)
     bed: Mapped[str | None] = mapped_column(String(40), nullable=True)
-    unit: Mapped[str | None] = mapped_column(String(60), nullable=True)  # UTI, enfermaria...
+    unit: Mapped[str | None] = mapped_column(String(60), nullable=True)
     admission_date: Mapped[date | None] = mapped_column(Date, nullable=True)
-    status: Mapped[str] = mapped_column(String(30), default="internado")  # internado|alta
+    status: Mapped[str] = mapped_column(String(30), default="internado")
 
-    # --- dados clínicos estruturados ---------------------------------------
-    chief_complaint: Mapped[str | None] = mapped_column(Text, nullable=True)  # queixa principal
+    chief_complaint: Mapped[str | None] = mapped_column(Text, nullable=True)
     anamnesis: Mapped[str | None] = mapped_column(Text, nullable=True)
-    physical_exam: Mapped[str | None] = mapped_column(Text, nullable=True)  # texto livre, achados gerais
+    physical_exam: Mapped[str | None] = mapped_column(Text, nullable=True)
     cardiac_exam: Mapped[dict] = mapped_column(JSONB, default=dict)
-    # exame físico cardiológico estruturado — ex.:
-    # {"ritmo": "regular", "bulhas": "normofoneticas", "b3": false, "b4": false,
-    #  "sopro": true, "sopro_detalhes": "sistólico, foco mitral, 3+/6, irradia p/ axila",
-    #  "ictus": "normolocalizado, normodinâmico", "turgencia_jugular": "ausente",
-    #  "edema_mmii": "+2/4", "pulsos_perifericos": "cheios e simétricos",
-    #  "perfusao_periferica": "TEC < 2s"}
     vital_signs: Mapped[dict] = mapped_column(JSONB, default=dict)
-    # ex.: {"pa_sistolica": 130, "pa_diastolica": 80, "fc": 88, "fr": 18,
-    #       "temperatura": 36.5, "spo2": 97, "glicemia": 110}
-    imaging: Mapped[str | None] = mapped_column(Text, nullable=True)  # achados de imagem, texto livre
-    diagnostic_hypothesis: Mapped[list] = mapped_column(JSONB, default=list)  # lista de strings
-
+    imaging: Mapped[str | None] = mapped_column(Text, nullable=True)
+    diagnostic_hypothesis: Mapped[list] = mapped_column(JSONB, default=list)
     labs: Mapped[dict] = mapped_column(JSONB, default=dict)
     medications: Mapped[list] = mapped_column(JSONB, default=list)
     plan: Mapped[str | None] = mapped_column(Text, nullable=True)
     pending: Mapped[list] = mapped_column(JSONB, default=list)
+
     created_by: Mapped[int] = mapped_column(ForeignKey("users.id"), index=True)
-    # Dono clínico do registro. O papel administrativo não concede leitura ou
-    # alteração transversal: administração da plataforma e acesso ao prontuário
-    # são capacidades distintas.
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
     )
+
+    archived_at: Mapped[datetime | None] = mapped_column(
+        DateTime(timezone=True), nullable=True, index=True
+    )
+    archived_by: Mapped[int | None] = mapped_column(
+        ForeignKey("users.id", ondelete="SET NULL"), nullable=True
+    )
+    archive_reason: Mapped[str | None] = mapped_column(String(300), nullable=True)
 
     problems: Mapped[list["PatientProblem"]] = relationship(
         back_populates="patient", cascade="all, delete-orphan"
@@ -84,27 +80,19 @@ class PatientNote(Base):
 
 
 class PatientAISuggestion(Base):
-    """Sugestão gerada pela IA a partir do caso — NUNCA gravada como fato no
-    prontuário. Fica registrada à parte, sempre rotulada como sugestão que
-    exige validação clínica, com o snapshot dos dados que foram enviados
-    (para auditoria: saber exatamente o que saiu para o provedor externo)."""
-
     __tablename__ = "patient_ai_suggestions"
 
     id: Mapped[int] = mapped_column(primary_key=True)
     patient_id: Mapped[int] = mapped_column(ForeignKey("patients.id", ondelete="CASCADE"))
     requested_by: Mapped[int | None] = mapped_column(ForeignKey("users.id"), nullable=True)
-
-    case_snapshot: Mapped[dict] = mapped_column(JSONB)  # exatamente o que foi enviado à IA
+    case_snapshot: Mapped[dict] = mapped_column(JSONB)
     differential_diagnosis: Mapped[str] = mapped_column(Text)
     suggested_workup: Mapped[str] = mapped_column(Text)
     treatment_considerations: Mapped[str] = mapped_column(Text)
-    sources: Mapped[list] = mapped_column(JSONB, default=list)  # documentos da biblioteca usados como base
-    sources_pubmed: Mapped[list] = mapped_column(JSONB, default=list)  # artigos externos (PubMed) usados como base
+    sources: Mapped[list] = mapped_column(JSONB, default=list)
+    sources_pubmed: Mapped[list] = mapped_column(JSONB, default=list)
     model: Mapped[str] = mapped_column(String(80))
-
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
     )
-
     patient: Mapped[Patient] = relationship(back_populates="ai_suggestions")
