@@ -1,6 +1,6 @@
 # Status dos reparos — MeuCardio
 
-Última atualização: 03/08/2026 22:19 (BRT)
+Última atualização: 03/08/2026 22:10 (BRT)
 
 ## Visão geral
 
@@ -61,7 +61,6 @@ O trabalho de correção, consolidação e publicação do MeuCardio está em an
 
 - `4856db20`: preflight Redis e documentação operacional.
 - `55c363da`: compatibilidade Pydantic e HTTPX2.
-- `114fd965`: criação deste acompanhamento contínuo dos reparos.
 
 ## Em andamento
 
@@ -80,13 +79,9 @@ Requisitos obrigatórios desta etapa:
 
 Estado atual:
 
-- execução iniciada em 03/08/2026 às 22:19 BRT;
-- branch isolada criada: `agent/substitui-passlib-bcrypt`;
 - código atual localizado em `backend/app/core/security.py`;
 - uso atual confirmado: `CryptContext(schemes=["bcrypt"], deprecated="auto")`;
-- dependências atuais confirmadas: `passlib[bcrypt]==1.7.4` e `bcrypt==4.0.1`;
-- estratégia em validação: usar diretamente a biblioteca `bcrypt`, sem regravar hashes existentes;
-- implementação e testes ainda não publicados em PR;
+- migração ainda não implementada;
 - nenhuma alteração de senha ou banco realizada.
 
 ## Pendente
@@ -119,9 +114,7 @@ Estado atual:
 
 ## Estado de publicação
 
-- Correções funcionais publicadas na `main` até `55c363da`.
-- Acompanhamento documental publicado na `main` até `114fd965`.
-- A correção do Passlib está em branch isolada e ainda não foi integrada.
+- `main` contém todas as correções aprovadas até o commit `55c363da`.
 - Nenhum deploy adicional ao servidor foi executado nesta etapa.
 - Nenhum arquivo científico foi removido nas correções recentes.
 - O acompanhamento continuará sendo atualizado neste arquivo a cada etapa relevante.
