@@ -1,16 +1,16 @@
 from datetime import datetime, timedelta, timezone
 
+import bcrypt
 import jwt
 from fastapi import Depends, HTTPException, Request, Response, status
 from fastapi.security import OAuth2PasswordBearer
-from passlib.context import CryptContext
 from sqlalchemy.orm import Session
 
 from app.core.config import settings
 from app.core.db import get_db
 from app.core.runtime import ambiente_atual
 
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+BCRYPT_ROUNDS = 12
 
 # O Bearer permanece disponível para clientes externos, testes e integrações.
 # No navegador, a sessão principal usa cookie HttpOnly e não fica acessível a
@@ -20,11 +20,17 @@ AUTH_COOKIE_NAME = "corvia_session"
 
 
 def hash_password(raw: str) -> str:
-    return pwd_context.hash(raw)
+    """Gera hash bcrypt compatível com os hashes já armazenados pelo Passlib."""
+    hashed = bcrypt.hashpw(raw.encode("utf-8"), bcrypt.gensalt(rounds=BCRYPT_ROUNDS))
+    return hashed.decode("ascii")
 
 
 def verify_password(raw: str, hashed: str) -> bool:
-    return pwd_context.verify(raw, hashed)
+    """Valida hashes bcrypt existentes sem regravar credenciais no banco."""
+    try:
+        return bcrypt.checkpw(raw.encode("utf-8"), hashed.encode("ascii"))
+    except (TypeError, ValueError, UnicodeEncodeError):
+        return False
 
 
 def create_access_token(subject: str, scope: str = "app") -> str:
