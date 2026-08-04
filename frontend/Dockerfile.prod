@@ -3,8 +3,11 @@
 # direto do volume compartilhado "sitefiles".
 FROM node:22-alpine AS build
 WORKDIR /app
-COPY package.json ./
-RUN npm install
+
+# O lockfile participa da camada de dependências e `npm ci` recusa divergência
+# entre package.json e package-lock.json. Assim o mesmo commit gera o mesmo grafo.
+COPY package.json package-lock.json ./
+RUN npm ci
 COPY . .
 ARG VITE_API_URL=/api
 ENV VITE_API_URL=${VITE_API_URL}
