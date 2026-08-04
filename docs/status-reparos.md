@@ -1,139 +1,118 @@
 # Status dos reparos — MeuCardio
 
-Última atualização: 03/08/2026 23:05 (BRT)
+Última atualização: 03/08/2026 23:18 (BRT)
 
-## Visão geral
+## Estado geral
 
-O trabalho de correção, consolidação e publicação do MeuCardio segue em andamento contínuo. Este arquivo registra apenas avanços verificáveis, resultados de CI, publicações e bloqueios externos.
+O repositório está sem warnings conhecidos e contém as correções de segurança, corpus, Painel, CorvIA Mail e CorvIA Chat. O trabalho atual é tornar o deploy do servidor tão verificável quanto a CI.
 
 ## Concluído e publicado na `main`
 
-### Corpus científico e biblioteca
+### Corpus científico e funções
 
-- Inventário certificado de **4.936 registros científicos**.
-- Preservação certificada de **1.327 arquivos físicos**.
-- Paginação da biblioteca implementada.
-- Catálogo consolidado das 11 frentes científicas.
-- Reconciliação idempotente do corpus com PostgreSQL.
-- Proteções automáticas contra redução silenciosa.
-- Total do Painel corrigido para o inventário integral das 11 coleções.
-- Separação explícita entre registros preservados e conteúdo publicado.
-- Integridade verificada pelos mínimos individuais de cada coleção.
-- Excedente numa frente não mascara déficit em outra.
-- Alertas de integridade publicados no Painel administrativo e na Biblioteca.
-
-### Painel e comunicação
-
-- CorvIA Mail publicado em rota, navegação e cartão explícito no Painel.
-- CorvIA Chat publicado com cartão acionável no Painel, widget flutuante, mensagens HTTP, WebSocket, histórico, busca de usuários e não lidas.
-- Grupo **Comunicação profissional** publicado no Painel.
+- inventário certificado de **4.936 registros científicos**;
+- preservação certificada de **1.327 arquivos físicos**;
+- catálogo das 11 coleções com inventário, publicação e mínimos individuais;
+- alertas quando qualquer coleção está abaixo do mínimo;
+- total integral publicado no Painel;
+- CorvIA Mail publicado em rota, menu e Painel;
+- CorvIA Chat publicado em cartão, widget, HTTP e WebSocket.
 
 ### Segurança e compatibilidade
 
-- Sessão de navegador via cookie HttpOnly.
-- Revogação de sessões após troca de senha.
-- Separação dos escopos da aplicação e do CorvIA Mail.
-- Migração para PyJWT.
-- Passlib removido e substituído por bcrypt direto.
-- Compatibilidade preservada com hashes `$2a$`, `$2b$` e `$2y$`.
-- Validação estrutural impede que hash bcrypt truncado alcance o binding nativo.
-- Warning Passlib/`crypt` eliminado.
+- sessão HttpOnly e revogação após troca de senha;
+- PyJWT e separação de escopos app/e-mail;
+- Passlib removido, bcrypt direto compatível com `$2a$`, `$2b$` e `$2y$`;
+- hashes truncados bloqueados antes do binding nativo;
+- ReportLab atualizado dentro da linha 4.x para compatibilidade com Python 3.14;
+- receituário e documento genérico protegidos por geração real de PDF.
 
-### Operação e certificação
+### Publicações e certificações recentes
 
-- Migrations Alembic completas e idempotentes.
-- Bootstrap administrativo testado.
-- Smoke HTTP de health, readiness, sessão HttpOnly e logout.
-- Backup e restauração PostgreSQL comprovados em CI.
-- Auditorias Python e Node sem vulnerabilidades conhecidas.
-- Build, divisão por rota, segurança de renderização e orçamentos PWA certificados.
+- `2209d1e3` — PR #34: bcrypt direto; CI `30870119043`, 174 testes;
+- `54ccee76` — PR #35: acervo, Mail e Chat; CI `30870366597`, 182 testes;
+- `1bea10cf` — PR #36: ReportLab 4.4.10; CI `30870752333`, **186 testes e zero warnings**.
 
-### Publicações recentes
+Todas as três certificações incluíram auditoria de dependências, migrations idempotentes, bootstrap, smoke HTTP, build frontend e backup/restauração PostgreSQL.
 
-- `2209d1e3`: substituição segura do Passlib por bcrypt direto — PR #34.
-- `54ccee76`: total canônico do acervo e acessos de comunicação — PR #35.
+## Em andamento — deploy certificado
 
-### Certificação do PR #35
+Branch: `agent/deploy-certifica-corpus`
 
-- CI `30870366597` integralmente verde.
-- **182 testes backend aprovados**.
-- `pip-audit` sem vulnerabilidades conhecidas.
-- migrations e idempotência aprovadas.
-- bootstrap administrativo aprovado.
-- smoke HTTP aprovado.
-- backup e restauração aprovados.
-- frontend integralmente aprovado.
-- único warning remanescente após essa publicação: ReportLab/`ast.NameConstant`.
+Problemas encontrados no fluxo anterior:
 
-## Em andamento
+- `deploy.sh` usava `app.services.importer`, que não reconciliava as 11 coleções;
+- o script podia continuar mesmo sem o backend atingir readiness;
+- não verificava o domínio HTTPS após subir os containers;
+- não comprovava qual commit estava efetivamente publicado;
+- o backup tinha caminho fixo `/opt/meucardio` e não produzia checksum.
 
-### Compatibilidade ReportLab com Python 3.14
+Correções implementadas:
 
-Branch: `agent/reportlab-python314-compat`
+1. validação das variáveis críticas e do commit Git completo;
+2. backup pré-deploy quando o banco já está em execução;
+3. backup portátil, temporário/atômico, validado por `gzip -t` e acompanhado de SHA-256;
+4. build e subida com remoção de serviços órfãos;
+5. espera obrigatória por `/api/ready` interno;
+6. migrations idempotentes explícitas;
+7. execução obrigatória de:
 
-Objetivo:
+   ```bash
+   python -m app.commands.reconcile_content --publish-reviewed
+   ```
 
-- eliminar o último warning da suíte;
-- manter a geração de receituário, atestado e laudo;
-- evitar o salto major para ReportLab 5;
-- preservar a stack Python pura e os layouts clínicos existentes.
+8. proibição operacional de `--allow-partial` e remoção do importador antigo;
+9. falha do deploy se qualquer coleção ficar abaixo do mínimo;
+10. confirmação final de readiness interno e HTTPS público;
+11. nova rota pública `/api/version`, contendo somente o SHA implantado;
+12. injeção de `DEPLOY_COMMIT` pelo Docker Compose;
+13. comparação entre `/api/version` e o commit local antes de declarar sucesso;
+14. diagnóstico automático com estado e logs se alguma etapa falhar;
+15. documentação de deploy e recuperação atualizada;
+16. testes de sintaxe Bash, contratos operacionais e endpoint de versão.
 
-Implementado:
+Commits principais da branch:
 
-- `reportlab==4.2.5` atualizado para `reportlab==4.4.10`;
-- permanência na linha 4.x;
-- versão escolhida declara suporte a Python 3.14;
-- teste em processo Python limpo transforma `DeprecationWarning` em erro e importa `reportlab.lib.rl_safe_eval`;
-- teste exige versão exata 4.4.10;
-- teste gera receituário comum real e valida assinatura estrutural do PDF;
-- teste gera documento genérico real e valida assinatura estrutural do PDF.
-
-Commits atuais:
-
-- `cb66e511`: atualização da dependência;
-- `426bc1c7`: testes de compatibilidade e geração de PDFs.
+- `c65f6588`: readiness e reconciliação integral;
+- `40441e19`: backup portátil e verificável;
+- `9d420e2e`: gates do deploy;
+- `5f71e89c`: documentação operacional;
+- `ef8e22df`: endpoint `/api/version`;
+- `4a72f2cf`: SHA injetado no backend;
+- `d3c5b0ab`: testes do endpoint de versão;
+- `e892fd01`: confirmação pública do commit.
 
 Próximos marcos:
 
-1. abrir PR da atualização;
-2. executar CI integral;
-3. confirmar ausência completa de warnings;
-4. tratar eventual revisão automática;
-5. publicar na `main` após certificação verde.
+- abrir PR do deploy certificado;
+- executar CI integral;
+- tratar revisão automática;
+- publicar na `main` somente com CI verde.
 
-## Dependências externas ao repositório
+## Bloqueio externo atual
 
-As seguintes ações continuam exigindo acesso administrativo ao servidor real ou à plataforma de deploy:
+O host anteriormente informado, `169.58.78.100`, recusou conexão SSH na porta 22 nesta sessão. Portanto ainda não foi possível:
 
-- identificar o commit efetivamente implantado;
-- atualizar o checkout para a `main` certificada;
-- reconstruir containers e bundle frontend;
-- executar migrations;
-- executar:
-
-  ```bash
-  python -m app.commands.reconcile_content --publish-reviewed
-  ```
-
-- reiniciar serviços;
-- confirmar pelo menos 4.936 registros e os mínimos individuais das 11 coleções;
-- validar visualmente CorvIA Mail, CorvIA Chat e o total do Painel;
-- validar WebSocket, domínio e TLS;
+- atualizar o checkout real;
+- reconstruir os containers reais;
+- reconciliar o PostgreSQL real;
+- confirmar o SHA em `https://corvia.med.br/api/version`;
+- validar visualmente Mail, Chat, corpus e WebSocket em produção;
 - aplicar `vm.overcommit_memory=1` no host.
 
-O host anteriormente informado, `169.58.78.100`, recusou conexão na porta 22 nesta sessão. Nenhuma alteração do PostgreSQL real ou deploy do servidor foi executada.
+Nenhum dado do servidor real foi alterado nesta sessão.
 
-## Pendências após o ReportLab
+## Próximas frentes após o deploy
 
-1. Reexecutar inventário científico após o merge.
-2. Revisar documentação operacional final de deploy.
-3. Tratar upgrades maiores em PRs isolados, começando pelos de menor risco e maior benefício.
-4. Manter CI integral obrigatória para cada alteração.
+1. reexecutar inventário científico após o merge;
+2. validar a produção assim que o SSH voltar;
+3. revisar upgrades maiores em PRs isolados;
+4. manter CI integral e atualização deste arquivo após cada avanço verificável.
 
 ## Estado de publicação
 
-- PRs #34 e #35 publicados na `main`.
-- Atualização do ReportLab em branch isolada, ainda sem merge.
-- Nenhum arquivo científico foi removido.
-- Nenhuma senha armazenada foi alterada.
-- A produção real ainda precisa receber e validar a `main` certificada.
+- PRs #34, #35 e #36 publicados na `main`;
+- deploy certificado em branch isolada, ainda sem merge;
+- nenhum arquivo científico removido;
+- nenhuma senha armazenada alterada;
+- produção real ainda aguarda acesso ao servidor para receber a `main` certificada.
