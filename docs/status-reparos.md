@@ -1,6 +1,6 @@
 # Status dos reparos — MeuCardio
 
-Última atualização: 03/08/2026 22:42 (BRT)
+Última atualização: 03/08/2026 22:58 (BRT)
 
 ## Visão geral
 
@@ -35,44 +35,36 @@ O trabalho de correção, consolidação e publicação do MeuCardio está em an
 - Sessão via cookie HttpOnly implementada para navegador.
 - Revogação de sessões após troca de senha implementada.
 - Separação de escopos de token entre aplicação e CorvIA Mail.
+- Passlib removido e substituído por bcrypt direto, preservando hashes existentes `$2a$`, `$2b$` e `$2y$`.
+- Validação estrutural impede que hash bcrypt truncado alcance o binding nativo.
 - Migrations Alembic consolidadas e idempotentes.
 - Smoke test HTTP de release implementado.
 - Backup e restauração PostgreSQL comprovados em CI.
 - GitHub Actions atualizadas para versões v7.
-- Suíte publicada certificada com **168 testes backend aprovados**.
+- Suíte publicada certificada com **174 testes backend aprovados**.
 
 ### Commits publicados mais recentes
 
-- `4856db20`: preflight Redis e documentação operacional.
 - `55c363da`: compatibilidade Pydantic e HTTPX2.
 - `114fd965`: criação deste acompanhamento contínuo.
+- `2209d1e3`: substituição segura do Passlib por bcrypt direto — PR #34.
+
+### Certificação do PR #34
+
+- CI `30870119043` integralmente verde;
+- 174 testes backend aprovados;
+- `pip-audit` sem vulnerabilidades conhecidas;
+- migrations completas e idempotentes;
+- bootstrap administrativo aprovado;
+- smoke HTTP de health, readiness, sessão HttpOnly e logout aprovado;
+- backup e restauração PostgreSQL aprovados;
+- frontend, segurança, divisão por rota, build e orçamentos PWA aprovados;
+- warning Passlib/`crypt` eliminado;
+- único warning atual: ReportLab/`ast.NameConstant`.
 
 ## Em andamento
 
-### PR #34 — substituição segura do Passlib
-
-Branch: `agent/substitui-passlib-bcrypt`
-
-Implementado:
-
-- remoção de `passlib[bcrypt]==1.7.4`;
-- uso direto de `bcrypt==4.0.1`;
-- preservação dos contratos `hash_password()` e `verify_password()`;
-- novos hashes com custo 12;
-- compatibilidade coberta para `$2a$`, `$2b$` e `$2y$`;
-- comportamento histórico de 72 bytes documentado;
-- nenhuma senha ou linha do banco alterada;
-- gate contra reintrodução da dependência.
-
-Situação:
-
-- PR #34 aberto;
-- primeira CI falhou porque o teste encontrou o nome da dependência dentro de um comentário;
-- apontamento P1 do Codex corrigido em `f46a9bfa`;
-- nova CI pendente/em execução;
-- merge somente após certificação integral verde.
-
-### Correção do painel, acervo e comunicação
+### PR #35 — painel, acervo e comunicação
 
 Branch: `agent/corrige-painel-acervo-comunicacao`
 
@@ -93,77 +85,79 @@ Diagnóstico confirmado:
 Implementado na branch:
 
 - total principal do Painel passou a usar `/library/catalog`;
-- rótulo alterado para **itens científicos**, evitando chamar todas as coleções de documentos;
-- API do catálogo agora expõe baseline mínimo de **4.936**, expectativa de **1.327 arquivos físicos**, déficit e estado de integridade;
-- Painel exibe alerta administrativo quando o banco está abaixo do baseline;
-- Biblioteca exibe alerta de integridade quando o corpus está incompleto;
+- `total` representa o inventário integral preservado nas 11 coleções;
+- `published_total` informa separadamente o conteúdo liberado aos assinantes;
+- itens em revisão permanecem preservados e não são publicados indevidamente;
+- integridade é calculada com registros armazenados, não somente publicados;
+- cada coleção é comparada ao seu mínimo oficial do reconciliador;
+- excedente numa coleção não pode mascarar déficit em outra;
+- API expõe baseline de **4.936**, expectativa de **1.327 arquivos físicos**, déficit total e frentes abaixo do mínimo;
+- Painel e Biblioteca exibem alerta quando o corpus está incompleto;
 - novo grupo **Comunicação profissional** no Painel;
 - cartão acionável para abrir o CorvIA Chat;
 - cartão explícito para CorvIA Mail;
 - gates automatizados impedem retorno da soma parcial por temas ou ocultação de Mail/Chat;
-- baseline do catálogo testado contra o comando oficial `app.commands.reconcile_content`.
+- testes cobrem 3 publicados + 1 preservado em revisão;
+- teste específico comprova que excedente em documentos não mascara falta em emergência.
 
-Commits principais desta branch:
+Revisão automática:
 
-- `c587dfe9`: integridade no catálogo;
-- `6c7b01bb`: total canônico e comunicação no Painel;
-- `6cfade57`: alerta de integridade na Biblioteca;
-- `bc37bab9`: alinhamento com o reconciliador;
-- `ab927204`: gates de visibilidade e integridade.
+- P1 sobre integridade calculada apenas com publicados: corrigido;
+- P1 sobre validação apenas pelo agregado: corrigido com mínimos individuais por coleção;
+- nova CI foi disparada após o merge do PR #34 para certificar a combinação real da `main` sem Passlib.
 
 Próximo marco:
 
-- abrir PR da correção do painel;
-- executar CI integral;
-- tratar revisão automática;
-- publicar na `main` após certificação verde.
+- concluir CI integral do PR #35;
+- resolver os threads obsoletos do Codex;
+- publicar na `main` após certificação verde;
+- retomar a frente ReportLab/Python 3.14.
 
 ## Pendências organizadas
 
 ### Prioridade crítica
 
-1. Finalizar CI e revisão do PR #34.
-2. Abrir e certificar o PR do painel/acervo/comunicação.
-3. Confirmar qual commit está implantado no servidor real.
-4. Recriar frontend e reiniciar a aplicação com a `main` certificada.
-5. Executar no servidor real:
+1. Finalizar CI e revisão do PR #35.
+2. Confirmar qual commit está implantado no servidor real.
+3. Recriar frontend e reiniciar a aplicação com a `main` certificada.
+4. Executar no servidor real:
 
    ```bash
    python -m app.commands.reconcile_content --publish-reviewed
    ```
 
-6. Confirmar na produção que o catálogo retorna pelo menos 4.936 itens.
-7. Confirmar visualmente CorvIA Mail, CorvIA Chat e o novo total do acervo.
+5. Confirmar na produção inventário de pelo menos 4.936 registros e os mínimos de cada coleção.
+6. Confirmar visualmente CorvIA Mail, CorvIA Chat e o novo total do acervo.
 
 ### Prioridade alta
 
-8. Eliminar warning do ReportLab relacionado a `ast.NameConstant` e Python 3.14.
-9. Reexecutar inventário científico após cada merge relevante.
-10. Manter smoke HTTP, backup/restauração e testes integrais obrigatórios.
+7. Eliminar warning do ReportLab relacionado a `ast.NameConstant` e Python 3.14.
+8. Reexecutar inventário científico após cada merge relevante.
+9. Manter smoke HTTP, backup/restauração e testes integrais obrigatórios.
 
 ### Prioridade média
 
-11. Revisar upgrades maiores isoladamente: React Router, React, PWA, Stripe, ReportLab, bcrypt, Capacitor e markdown-it.
-12. Revisar documentação operacional final do deploy.
+10. Revisar upgrades maiores isoladamente: React Router, React, PWA, Stripe, ReportLab, bcrypt, Capacitor e markdown-it.
+11. Revisar documentação operacional final do deploy.
 
 ## Dependências externas ao repositório
 
 As seguintes ações exigem acesso administrativo ao host ou à plataforma de deploy:
 
 - identificar o commit efetivamente implantado;
-- executar `git pull`/checkout da `main` certificada;
+- executar checkout da `main` certificada;
 - reconstruir containers ou bundle frontend;
 - executar a reconciliação contra o PostgreSQL real;
 - reiniciar serviços;
 - aplicar `vm.overcommit_memory=1` no host;
 - validar domínio, TLS, WebSocket e CorvIA Mail em produção.
 
-O repositório contém o comando seguro e idempotente de reconciliação, mas nenhuma alteração do banco real ou deploy do servidor foi executada nesta sessão.
+O host anteriormente informado, `169.58.78.100`, recusou conexão na porta 22 nesta sessão. Nenhuma alteração do banco real ou deploy do servidor foi executada.
 
 ## Estado de publicação
 
-- PR #34 aberto e em recertificação.
-- Correção do painel/acervo/comunicação implementada em branch isolada e ainda sem merge.
+- PR #34 publicado na `main` como `2209d1e3`.
+- PR #35 aberto e em certificação sobre a nova `main`.
 - Nenhum arquivo científico foi removido.
 - Nenhuma senha armazenada foi alterada.
 - A produção ainda precisa ser confrontada com os commits certificados e reconciliada no servidor real.
