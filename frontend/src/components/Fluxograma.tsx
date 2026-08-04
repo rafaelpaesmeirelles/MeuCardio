@@ -1,48 +1,110 @@
-import { useEffect, useId, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-function validarSvgGerado(svg: string): string {
-  const padroesProibidos = [
-    /<\s*(?:script|iframe|object|embed|audio|video|img|image)\b/i,
-    /(?:^|\s)on[a-z]+\s*=/i,
-    /(?:javascript|data\s*:\s*text\/html)\s*:/i,
-    /@import\b/i,
-    /url\(\s*["']?(?:https?:|\/\/|data\s*:)/i,
-    /(?:href|xlink:href|src)\s*=\s*["'](?:https?:|\/\/|data\s*:)/i,
+const ELEMENTOS_PROIBIDOS = new Set([
+  "script",
+  "iframe",
+  "object",
+  "embed",
+  "audio",
+  "video",
+  "img",
+  "image",
+  "form",
+  "input",
+  "button",
+  "textarea",
+  "select",
+  "option",
+  "link",
+  "meta",
+  "base",
+  "canvas",
+]);
+
+function cssContemReferenciaPerigosa(valor: string): boolean {
+  return (
+    /@import\b/i.test(valor) ||
+    /expression\s*\(/i.test(valor) ||
+    /-moz-binding\s*:/i.test(valor) ||
+    /url\(\s*["']?(?:https?:|\/\/|data\s*:)/i.test(valor)
+  );
+}
+
+function validarFonteMermaid(fonte: string) {
+  const diretivasInterativas = [
+    /\bclick\s+[A-Za-z0-9_-]+/i,
+    /\bcallback\b/i,
+    /\bcall\s+[A-Za-z0-9_.-]+/i,
+    /\bhref\s+["']/i,
+    /\bjavascript\s*:/i,
+    /\bdata\s*:\s*text\/html/i,
   ];
-
-  if (!svg.trimStart().startsWith("<svg") || padroesProibidos.some((padrao) => padrao.test(svg))) {
-    throw new Error("SVG gerado contém estrutura não permitida.");
+  if (diretivasInterativas.some((padrao) => padrao.test(fonte))) {
+    throw new Error("Fluxograma contém diretiva interativa não permitida.");
   }
-  return svg;
 }
 
-function removerRaizesTemporarias(id: string) {
-  document.getElementById(id)?.remove();
-  document.getElementById(`d${id}`)?.remove();
+/**
+ * Confere o SVG que o Mermaid já montou no contêiner. O acervo clínico usa
+ * `<br/>`, portanto `foreignObject` é necessário para os rótulos, mas scripts,
+ * formulários, mídia, eventos e referências externas continuam bloqueados.
+ */
+function validarSvgMontado(svg: SVGSVGElement) {
+  for (const elemento of Array.from(svg.querySelectorAll("*"))) {
+    const nome = elemento.localName.toLowerCase();
+    if (ELEMENTOS_PROIBIDOS.has(nome)) {
+      throw new Error(`SVG gerado contém elemento não permitido: ${nome}.`);
+    }
+
+    for (const atributo of Array.from(elemento.attributes)) {
+      const nomeAtributo = atributo.name.toLowerCase();
+      const valor = atributo.value.trim();
+
+      if (nomeAtributo.startsWith("on")) {
+        throw new Error("SVG gerado contém manipulador de evento.");
+      }
+      if (["href", "xlink:href", "src"].includes(nomeAtributo)) {
+        if (valor && !valor.startsWith("#")) {
+          throw new Error("SVG gerado contém referência externa.");
+        }
+      }
+      if (nomeAtributo === "style" && cssContemReferenciaPerigosa(valor)) {
+        throw new Error("SVG gerado contém estilo não permitido.");
+      }
+    }
+
+    if (nome === "style" && cssContemReferenciaPerigosa(elemento.textContent || "")) {
+      throw new Error("SVG gerado contém folha de estilo não permitida.");
+    }
+  }
 }
 
-/** Renderiza um bloco Mermaid sem inserir SVG como HTML no DOM principal.
+type Estado = "carregando" | "pronto" | "erro";
+
+/**
+ * Renderiza Mermaid no próprio contêiner por meio da API oficial `run`.
  *
- * O Mermaid permanece em `securityLevel: strict`. Os rótulos HTML são
- * necessários porque o acervo usa `<br/>` para organizar textos clínicos
- * extensos. O SVG passa por validação defensiva e é exibido como imagem por
- * Blob URL; `foreignObject` pode existir apenas dentro desse documento de
- * imagem isolado, nunca como HTML executável da aplicação. */
+ * A fonte entra no nó somente por `textContent`. O Mermaid opera em modo
+ * estrito e o SVG resultante ainda passa pela validação defensiva acima antes
+ * de ser mostrado. Assim não há transporte por Blob/imagem nem parsing manual
+ * de marcação pela aplicação.
+ */
 export default function Fluxograma({ fonte }: { fonte: string }) {
-  const id = "fluxograma-" + useId().replace(/[^a-zA-Z0-9]/g, "");
-  const [svgUrl, setSvgUrl] = useState("");
-  const [falhou, setFalhou] = useState(false);
+  const recipiente = useRef<HTMLDivElement>(null);
+  const [estado, setEstado] = useState<Estado>("carregando");
 
   useEffect(() => {
     let cancelado = false;
-    let urlCriada: string | null = null;
+    const alvo = recipiente.current;
+    if (!alvo) return;
 
-    setSvgUrl("");
-    setFalhou(false);
-    removerRaizesTemporarias(id);
+    setEstado("carregando");
+    alvo.removeAttribute("data-processed");
+    alvo.textContent = fonte;
 
     (async () => {
       try {
+        validarFonteMermaid(fonte);
         const mermaid = (await import("mermaid")).default;
         mermaid.initialize({
           startOnLoad: false,
@@ -63,54 +125,66 @@ export default function Fluxograma({ fonte }: { fonte: string }) {
         });
 
         await mermaid.parse(fonte);
-        const resultado = await mermaid.render(id, fonte);
-        const svgSeguro = validarSvgGerado(resultado.svg);
-        urlCriada = URL.createObjectURL(
-          new Blob([svgSeguro], { type: "image/svg+xml;charset=utf-8" }),
-        );
+        await mermaid.run({ nodes: [alvo], suppressErrors: true });
+        if (cancelado) return;
 
-        if (cancelado) {
-          URL.revokeObjectURL(urlCriada);
-          urlCriada = null;
-          return;
+        const svg = alvo.querySelector("svg");
+        if (!(svg instanceof SVGSVGElement)) {
+          throw new Error("O Mermaid não montou um SVG no contêiner.");
         }
-        setSvgUrl(urlCriada);
+
+        validarSvgMontado(svg);
+        svg.removeAttribute("height");
+        svg.setAttribute("width", "100%");
+        svg.setAttribute("preserveAspectRatio", "xMinYMin meet");
+        svg.style.display = "block";
+        svg.style.width = "100%";
+        svg.style.minWidth = "760px";
+        svg.style.height = "auto";
+        svg.style.maxWidth = "none";
+        svg.style.margin = "0 auto";
+        setEstado("pronto");
       } catch (erro) {
         console.error("Falha ao renderizar fluxograma Mermaid", erro);
-        if (!cancelado) setFalhou(true);
-        removerRaizesTemporarias(id);
+        if (!cancelado) {
+          alvo.textContent = "";
+          alvo.removeAttribute("data-processed");
+          setEstado("erro");
+        }
       }
     })();
 
     return () => {
       cancelado = true;
-      removerRaizesTemporarias(id);
-      if (urlCriada) URL.revokeObjectURL(urlCriada);
+      alvo.textContent = "";
+      alvo.removeAttribute("data-processed");
     };
-  }, [fonte, id]);
-
-  if (falhou) {
-    return (
-      <p className="fluxograma__erro" role="alert">
-        Não foi possível desenhar esta árvore de decisão. Recarregue a página;
-        se o problema persistir, use o texto clínico exibido abaixo.
-      </p>
-    );
-  }
-
-  if (!svgUrl) return <p className="eyebrow" role="status">Desenhando o fluxograma…</p>;
+  }, [fonte]);
 
   return (
-    <div
-      className="fluxograma"
-      role="img"
-      aria-label="Fluxograma clínico"
-      style={{ overflowX: "auto", margin: "1rem 0", textAlign: "center" }}
-    >
-      <img
-        src={svgUrl}
-        alt="Fluxograma clínico"
-        style={{ display: "block", maxWidth: "100%", height: "auto", margin: "0 auto" }}
+    <div className="fluxograma__recipiente">
+      {estado === "carregando" && (
+        <p className="eyebrow" role="status">Desenhando o fluxograma…</p>
+      )}
+      {estado === "erro" && (
+        <p className="fluxograma__erro" role="alert">
+          Não foi possível desenhar esta árvore de decisão. Recarregue a página;
+          se o problema persistir, use o texto clínico exibido abaixo.
+        </p>
+      )}
+      <div
+        ref={recipiente}
+        className="mermaid fluxograma"
+        role="img"
+        aria-label="Fluxograma clínico"
+        aria-hidden={estado !== "pronto"}
+        style={{
+          visibility: estado === "pronto" ? "visible" : "hidden",
+          overflowX: "auto",
+          margin: estado === "pronto" ? "1rem 0" : 0,
+          height: estado === "pronto" ? "auto" : 0,
+          textAlign: "center",
+        }}
       />
     </div>
   );
