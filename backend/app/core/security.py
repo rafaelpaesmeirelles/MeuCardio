@@ -1,16 +1,24 @@
 from datetime import datetime, timedelta, timezone
+import re
 
+import bcrypt
 import jwt
 from fastapi import Depends, HTTPException, Request, Response, status
 from fastapi.security import OAuth2PasswordBearer
-from passlib.context import CryptContext
 from sqlalchemy.orm import Session
 
 from app.core.config import settings
 from app.core.db import get_db
 from app.core.runtime import ambiente_atual
 
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+BCRYPT_ROUNDS = 12
+# Formato modular bcrypt completo: versão histórica aceita, custo válido,
+# salt de 22 caracteres e checksum de 31. A validação evita enviar entradas
+# truncadas ao binding Rust do bcrypt 4.0.1, que pode gerar PanicException.
+_BCRYPT_HASH_RE = re.compile(
+    r"^\$2[aby]\$(?:0[4-9]|[12][0-9]|3[01])\$[./A-Za-z0-9]{53}$",
+    re.ASCII,
+)
 
 # O Bearer permanece disponível para clientes externos, testes e integrações.
 # No navegador, a sessão principal usa cookie HttpOnly e não fica acessível a
@@ -20,11 +28,21 @@ AUTH_COOKIE_NAME = "corvia_session"
 
 
 def hash_password(raw: str) -> str:
-    return pwd_context.hash(raw)
+    """Gera hash bcrypt compatível com os hashes já armazenados pelo Passlib."""
+    hashed = bcrypt.hashpw(raw.encode("utf-8"), bcrypt.gensalt(rounds=BCRYPT_ROUNDS))
+    return hashed.decode("ascii")
 
 
 def verify_password(raw: str, hashed: str) -> bool:
-    return pwd_context.verify(raw, hashed)
+    """Valida hashes bcrypt existentes sem regravar credenciais no banco."""
+    if not isinstance(raw, str) or not isinstance(hashed, str):
+        return False
+    if _BCRYPT_HASH_RE.fullmatch(hashed) is None:
+        return False
+    try:
+        return bcrypt.checkpw(raw.encode("utf-8"), hashed.encode("ascii"))
+    except (TypeError, ValueError, UnicodeEncodeError):
+        return False
 
 
 def create_access_token(subject: str, scope: str = "app") -> str:
