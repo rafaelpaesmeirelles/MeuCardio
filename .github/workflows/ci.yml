@@ -17,10 +17,11 @@ jobs:
         with:
           ref: agent/perfil-documentos-prescricoes-historico
           fetch-depth: 0
-      - name: Correct follow-up mutation script
+      - name: Correct mutation scripts
         run: |
           python - <<'PY'
           from pathlib import Path
+
           path = Path("tools/apply_profile_followup.py")
           source = path.read_text(encoding="utf-8")
           old = '''regex_once(
@@ -36,7 +37,29 @@ jobs:
           )
           '''
           if source.count(old) != 1:
-              raise SystemExit(f"Bloco problemático encontrado {source.count(old)} vezes")
+              raise SystemExit(f"Bloco de exportação encontrado {source.count(old)} vezes")
+          path.write_text(source.replace(old, new, 1), encoding="utf-8")
+
+          path = Path("tools/apply_onboarding_provision.py")
+          source = path.read_text(encoding="utf-8")
+          old = '''replace_once(
+              "backend/app/services/professional_profile.py",
+              '        "include_workplace_on_documents": user.include_workplace_on_documents,\\n',
+              '        "include_workplace_on_documents": user.include_workplace_on_documents,\\n'
+              '        "profile_completion_required": user.profile_completion_required,\\n',
+          )
+          '''
+          new = '''replace_once(
+              "backend/app/services/professional_profile.py",
+              '        "include_workplace_on_documents": user.include_workplace_on_documents,\\n'
+              '        "document_logo_dark_background": logo_needs_dark_plate(user.document_logo_url),\\n',
+              '        "include_workplace_on_documents": user.include_workplace_on_documents,\\n'
+              '        "profile_completion_required": user.profile_completion_required,\\n'
+              '        "document_logo_dark_background": logo_needs_dark_plate(user.document_logo_url),\\n',
+          )
+          '''
+          if source.count(old) != 1:
+              raise SystemExit(f"Bloco de perfil encontrado {source.count(old)} vezes")
           path.write_text(source.replace(old, new, 1), encoding="utf-8")
           PY
       - name: Apply profile, documents and onboarding changes
