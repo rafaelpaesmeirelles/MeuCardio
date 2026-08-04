@@ -16,7 +16,7 @@ backend_exec() {
 
 mostrar_diagnostico() {
   "${COMPOSE[@]}" ps || true
-  "${COMPOSE[@]}" logs --tail=200 backend caddy frontend-build || true
+  "${COMPOSE[@]}" logs --tail=200 backend caddy frontend-build db || true
 }
 
 diagnosticar_erro() {
@@ -31,8 +31,43 @@ diagnosticar_erro() {
   exit "$status"
 }
 
+compose_project_name() {
+  local nome="${COMPOSE_PROJECT_NAME:-$(basename "$PWD")}"
+  printf '%s' "$nome" \
+    | tr '[:upper:]' '[:lower:]' \
+    | sed -E 's/^[^a-z0-9]+//; s/[^a-z0-9_-]+//g'
+}
+
+banco_persistente_existe() {
+  # Container parado ainda representa banco existente.
+  if [[ -n "$("${COMPOSE[@]}" ps -a -q db 2>/dev/null || true)" ]]; then
+    return 0
+  fi
+
+  # Também cobre container removido com o volume nomeado preservado.
+  local projeto volume
+  projeto="$(compose_project_name)"
+  volume="$(docker volume ls -q \
+    --filter "label=com.docker.compose.project=${projeto}" \
+    --filter "label=com.docker.compose.volume=pgdata" \
+    | head -n 1)"
+  [[ -n "$volume" ]]
+}
+
+aguardar_postgres() {
+  local pronto=0
+  for _ in $(seq 1 30); do
+    if "${COMPOSE[@]}" exec -T db pg_isready -U "$POSTGRES_USER" >/dev/null 2>&1; then
+      pronto=1
+      break
+    fi
+    sleep 2
+  done
+  [[ "$pronto" == "1" ]]
+}
+
 # Falhas anteriores à subida ainda terminam imediatamente. Desde a tentativa de
-# subir os serviços, qualquer comando não tratado passa pelo diagnóstico acima.
+# iniciar qualquer serviço, comandos não tratados passam pelo diagnóstico acima.
 trap diagnosticar_erro ERR
 
 if [[ ! -f .env ]]; then
@@ -97,13 +132,20 @@ if [[ -n "$IP_SERVIDOR" && -n "$IP_DOMINIO" && "$IP_SERVIDOR" != "$IP_DOMINIO" ]
   [[ "$resposta" == "y" ]] || exit 1
 fi
 
-# Antes de alterar imagens ou executar migrations, preserva o banco existente.
-# No primeiro deploy ainda não existe serviço db; nesse caso o passo é omitido.
-if "${COMPOSE[@]}" ps --status running --services 2>/dev/null | grep -Fxq db; then
-  log "Criando backup pré-deploy do PostgreSQL."
+# Um banco persistente pode estar com o container parado ou removido. Nesse
+# caso inicia somente o PostgreSQL, sem backend/migrations, e cria o backup antes
+# de qualquer alteração da aplicação.
+if banco_persistente_existe; then
+  log "Banco persistente detectado; iniciando somente o PostgreSQL para backup pré-deploy."
+  SERVICOS_INICIADOS=1
+  "${COMPOSE[@]}" up -d --no-deps db
+  if ! aguardar_postgres; then
+    echo "PostgreSQL persistente não ficou pronto para o backup pré-deploy." >&2
+    false
+  fi
   PROJETO="$PWD" bash ./infra/backup/backup.sh
 else
-  log "Banco ainda não está em execução; backup pré-deploy não se aplica ao primeiro deploy."
+  log "Nenhum container ou volume pgdata existente; backup não se aplica ao primeiro deploy."
 fi
 
 log "Construindo e subindo serviços de produção."
@@ -133,8 +175,8 @@ log "Confirmando migrations de forma idempotente."
 backend_exec python -m app.commands.migrate
 
 log "Reconciliando as 11 coleções e publicando somente conteúdo revisado."
-# Se qualquer coleção permanecer abaixo do mínimo, o status não zero aciona o
-# handler ERR e publica estado/logs antes de encerrar.
+# Se qualquer coleção permanecer abaixo do mínimo ou algum arquivo for ignorado,
+# o status não zero aciona o handler ERR e publica estado/logs antes de encerrar.
 backend_exec python -m app.commands.reconcile_content --publish-reviewed
 
 if [[ "${AI_ENABLED:-false}" == "true" ]]; then
