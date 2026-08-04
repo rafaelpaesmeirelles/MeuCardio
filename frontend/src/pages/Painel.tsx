@@ -320,12 +320,11 @@ export default function Painel() {
             com cópia local que abre mesmo sem conexão.
           </span>
         </Link>
-        <Link to="/biblioteca" className="cartao painel__modo">
+        <Link to="/apresentacao" className="cartao painel__modo">
           <strong>▣ Modo Apresentação</strong>
           <span>
-            Exporte qualquer documento ou fluxograma em PDF pronto para projetar em
-            aula ou round — o botão fica dentro de cada documento, com espaço para a
-            sua anotação.
+            Escolha qualquer documento ou fluxograma e gere um PDF pronto para
+            aula ou round, com a marca Corvia e sua identificação profissional.
           </span>
         </Link>
         <Link to="/corvia-mail" className="cartao painel__modo painel__modo--mail">
