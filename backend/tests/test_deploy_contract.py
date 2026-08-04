@@ -1,4 +1,4 @@
-"""Gates operacionais do deploy de produção e do backup pré-deploy."""
+"""Gates operacionais do deploy, backup e restauração de produção."""
 
 from pathlib import Path
 import subprocess
@@ -7,6 +7,7 @@ import subprocess
 REPO_ROOT = Path(__file__).resolve().parents[2]
 DEPLOY = REPO_ROOT / "deploy.sh"
 BACKUP = REPO_ROOT / "infra/backup/backup.sh"
+RESTORE = REPO_ROOT / "infra/backup/restaurar.sh"
 COMPOSE = REPO_ROOT / "docker-compose.prod.yml"
 HEALTH = REPO_ROOT / "backend/app/api/health.py"
 
@@ -25,7 +26,7 @@ def _linhas_ativas(caminho: Path) -> list[str]:
 
 def test_scripts_operacionais_possuem_sintaxe_bash_valida():
     resultado = subprocess.run(
-        ["bash", "-n", str(DEPLOY), str(BACKUP)],
+        ["bash", "-n", str(DEPLOY), str(BACKUP), str(RESTORE)],
         cwd=REPO_ROOT,
         capture_output=True,
         text=True,
@@ -53,18 +54,31 @@ def test_deploy_exige_readiness_antes_de_migrar_e_reconciliar():
 def test_deploy_diagnostica_falhas_inesperadas_apos_subir_servicos():
     fonte = _fonte(DEPLOY)
     linhas = [linha.strip() for linha in fonte.splitlines()]
-    linha_inicio = linhas.index("SERVICOS_INICIADOS=1")
     linha_up = linhas.index('"${COMPOSE[@]}" up -d --build --remove-orphans')
+    inicios = [i for i, linha in enumerate(linhas) if linha == "SERVICOS_INICIADOS=1"]
 
     assert "SERVICOS_INICIADOS=0" in fonte
     assert "diagnosticar_erro()" in fonte
     assert "trap diagnosticar_erro ERR" in fonte
     assert "trap - ERR" in fonte
     assert 'if [[ "$SERVICOS_INICIADOS" == "1" ]]' in fonte
-    assert linha_inicio < linha_up
+    assert any(inicio < linha_up for inicio in inicios)
     assert fonte.index("trap diagnosticar_erro ERR") < fonte.index(
         "python -m app.commands.reconcile_content --publish-reviewed"
     )
+
+
+def test_deploy_preserva_banco_persistente_mesmo_parado():
+    fonte = _fonte(DEPLOY)
+
+    assert "banco_persistente_existe()" in fonte
+    assert 'ps -a -q db' in fonte
+    assert "label=com.docker.compose.project=" in fonte
+    assert "label=com.docker.compose.volume=pgdata" in fonte
+    assert '"${COMPOSE[@]}" up -d --no-deps db' in fonte
+    assert "aguardar_postgres" in fonte
+    assert 'PROJETO="$PWD" bash ./infra/backup/backup.sh' in fonte
+    assert "--status running" not in "\n".join(_linhas_ativas(DEPLOY))
 
 
 def test_deploy_nao_volta_ao_importador_parcial():
@@ -73,12 +87,12 @@ def test_deploy_nao_volta_ao_importador_parcial():
     assert "app.services.importer" not in fonte
     assert "--allow-partial" not in fonte
     assert "as 11 coleções" in fonte
+    assert "algum arquivo for ignorado" in fonte
 
 
 def test_deploy_faz_backup_e_exige_https_publico():
     fonte = _fonte(DEPLOY)
 
-    assert 'PROJETO="$PWD" bash ./infra/backup/backup.sh' in fonte
     assert 'https://${DOMAIN}/api/ready' in fonte
     assert "PUBLICO_PRONTO=0" in fonte
     assert 'if [[ "$PUBLICO_PRONTO" != "1" ]]' in fonte
@@ -124,3 +138,34 @@ def test_backup_e_portavel_atomico_restauravel_e_verificado():
     assert "--no-owner" in fonte
     assert "--no-privileges" in fonte
     assert "meucardio_*.dump" in fonte
+
+
+def test_restaurador_valida_antes_de_apagar_e_usa_pg_restore():
+    fonte = _fonte(RESTORE)
+    linhas_ativas = "\n".join(_linhas_ativas(RESTORE))
+    indice_checksum = fonte.index("sha256sum -c")
+    indice_catalogo = fonte.index("pg_restore --list")
+    indice_drop = fonte.index("dropdb")
+
+    assert 'PROJETO="${PROJETO:-' in fonte
+    assert "/opt/meucardio" not in linhas_ativas
+    assert indice_checksum < indice_drop
+    assert indice_catalogo < indice_drop
+    assert "--if-exists --force" in fonte
+    assert "--exit-on-error" in fonte
+    assert "--no-owner" in fonte
+    assert "--no-privileges" in fonte
+    assert "Checksum obrigatório não encontrado" in fonte
+    assert '[[ "$banco_confirmado" == "$POSTGRES_DB" ]]' in fonte
+    assert "O backend permanece parado" in fonte
+    assert "BACKEND_PRONTO=0" in fonte
+
+
+def test_restaurador_mantem_compatibilidade_com_backup_sql_gzip_legado():
+    fonte = _fonte(RESTORE)
+
+    assert "*.sql.gz" in fonte
+    assert 'FORMATO="sql-gzip-legado"' in fonte
+    assert 'gzip -t "$ARQUIVO"' in fonte
+    assert 'gunzip -c "$ARQUIVO"' in fonte
+    assert "ON_ERROR_STOP=1" in fonte
