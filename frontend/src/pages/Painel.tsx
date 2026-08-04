@@ -7,11 +7,25 @@ import { useAuth } from "../lib/auth";
 type Tema = { theme: string; count: number };
 type Paciente = { id: number };
 type ListaComTotal = { total?: number };
+type Catalogo = {
+  total: number;
+  expected_minimum?: number;
+  physical_files_expected?: number;
+  integrity_ok?: boolean;
+  missing?: number;
+};
 
 /** Uma função do sistema no Painel.
  *  `to` ausente = função ainda não construída: vira cartão "em breve", sem link.
+ *  `acao` permite abrir uma função global, como o chat flutuante.
  *  `destaque` reserva a borda vermelha da marca para o que se usa sob pressão. */
-type Funcao = { to?: string; nome: string; descricao: string; destaque?: boolean };
+type Funcao = {
+  to?: string;
+  acao?: "abrir-chat";
+  nome: string;
+  descricao: string;
+  destaque?: boolean;
+};
 type Grupo = { titulo: string; descricao: string; funcoes: Funcao[] };
 
 /** Agrupado por finalidade, não por ordem de construção — o médico procura pelo
@@ -165,6 +179,22 @@ const GRUPOS: Grupo[] = [
     ],
   },
   {
+    titulo: "Comunicação profissional",
+    descricao: "Converse com outros usuários e use sua caixa profissional integrada.",
+    funcoes: [
+      {
+        acao: "abrir-chat",
+        nome: "CorvIA Chat",
+        descricao: "Mensagens em tempo real entre usuários, busca por profissional, conversas, não lidas e contato direto com o suporte.",
+      },
+      {
+        to: "/corvia-mail",
+        nome: "CorvIA Mail",
+        descricao: "Acesse ou assine sua caixa profissional @corvia.med.br e abra o webmail integrado.",
+      },
+    ],
+  },
+  {
     titulo: "Sua conta",
     descricao: "O que é seu e só você vê.",
     funcoes: [
@@ -190,14 +220,35 @@ const GRUPOS: Grupo[] = [
 function Numero({ rotulo, valor, to }: { rotulo: string; valor: number | null; to: string }) {
   return (
     <Link to={to} className="painel__numero">
-      <span className="dado">{valor === null ? "—" : valor}</span>
+      <span className="dado">{valor === null ? "—" : valor.toLocaleString("pt-BR")}</span>
       <span>{rotulo}</span>
     </Link>
   );
 }
 
+function abrirChatGlobal() {
+  const botao = document.querySelector<HTMLButtonElement>(
+    'button[aria-label^="Abrir o CorvIA Chat"]',
+  );
+  botao?.click();
+}
+
 function Cartao({ f }: { f: Funcao }) {
   const classe = `cartao painel__funcao${f.destaque ? " painel__funcao--destaque" : ""}`;
+
+  if (f.acao === "abrir-chat") {
+    return (
+      <button
+        type="button"
+        className={classe}
+        onClick={abrirChatGlobal}
+        style={{ textAlign: "left", width: "100%", cursor: "pointer" }}
+      >
+        <strong>{f.nome}</strong>
+        <span>{f.descricao}</span>
+      </button>
+    );
+  }
 
   // Sem rota: a função ainda não existe. Vira cartão inerte, com o selo dizendo
   // isso — melhor do que link que leva a lugar nenhum ou do que esconder o que
@@ -223,6 +274,7 @@ function Cartao({ f }: { f: Funcao }) {
 
 export default function Painel() {
   const { usuario } = useAuth();
+  const [catalogo, setCatalogo] = useState<Catalogo | null>(null);
   const [temas, setTemas] = useState<Tema[] | null>(null);
   const [pacientes, setPacientes] = useState<number | null>(null);
   const [fluxogramas, setFluxogramas] = useState<number | null>(null);
@@ -237,6 +289,7 @@ export default function Painel() {
     const total = (p: string) =>
       api.get<ListaComTotal>(p).then((d) => d.total ?? 0).catch(() => null);
 
+    api.get<Catalogo>("/library/catalog").then(setCatalogo).catch(() => setCatalogo(null));
     api.get<Tema[]>("/library/themes").then(setTemas).catch(() => setTemas([]));
     api.get<Paciente[]>("/round/patients").then((l) => setPacientes(l.length)).catch(() => setPacientes(null));
     total("/library/documents?kind=fluxograma&limit=1").then(setFluxogramas);
@@ -246,17 +299,15 @@ export default function Painel() {
     total("/studies?limit=1").then(setEstudos);
   }, []);
 
-  const totalDocs = temas?.reduce((s, t) => s + t.count, 0) ?? null;
-
   return (
     <>
       <p className="eyebrow">Painel</p>
       <h1>Bom trabalho, {usuario?.full_name.split(" ")[0]}.</h1>
 
-      {/* Barra compacta: os números continuam existindo, mas deixam de ser o
-          elemento principal da tela. Cada um leva à própria seção. */}
+      {/* O primeiro número usa o catálogo canônico das 11 coleções. Somar temas
+          mostrava apenas a tabela Document e subestimava o acervo completo. */}
       <div className="painel__numeros">
-        <Numero rotulo="documentos" valor={totalDocs} to="/biblioteca" />
+        <Numero rotulo="itens científicos" valor={catalogo?.total ?? null} to="/biblioteca" />
         <Numero rotulo="fluxogramas" valor={fluxogramas} to="/fluxogramas" />
         <Numero rotulo="imagens" valor={imagens} to="/galeria" />
         <Numero rotulo="exames" valor={exames} to="/exames" />
@@ -265,8 +316,25 @@ export default function Painel() {
         <Numero rotulo="no round" valor={pacientes} to="/round" />
       </div>
 
-      {/* Os dois modos de uso ficam fora dos grupos porque não são "mais uma
-          função": mudam a forma de usar o sistema inteiro. */}
+      {usuario?.role === "admin" && catalogo?.integrity_ok === false && (
+        <section
+          className="cartao"
+          role="alert"
+          style={{ borderColor: "var(--acao)", marginBottom: "1rem" }}
+        >
+          <strong>Acervo de produção abaixo do inventário certificado</strong>
+          <p style={{ marginBottom: 0 }}>
+            O PostgreSQL retornou {catalogo.total.toLocaleString("pt-BR")} itens das 11 coleções.
+            O mínimo certificado é {(catalogo.expected_minimum ?? 4_936).toLocaleString("pt-BR")};
+            faltam {(catalogo.missing ?? 0).toLocaleString("pt-BR")} registros. O inventário também
+            preserva {(catalogo.physical_files_expected ?? 1_327).toLocaleString("pt-BR")} arquivos físicos.
+            Execute a reconciliação do corpus antes de considerar o deploy íntegro.
+          </p>
+        </section>
+      )}
+
+      {/* Os modos de uso ficam fora dos grupos porque mudam a forma de usar o
+          sistema inteiro. */}
       <div className="painel__modos">
         <Link to="/emergencia" className="cartao painel__modo painel__modo--emergencia">
           <strong>● Modo Emergência</strong>
@@ -311,7 +379,7 @@ export default function Painel() {
             {temas.map((t) => (
               <Link key={t.theme} to={`/biblioteca?tema=${encodeURIComponent(t.theme)}`} className="painel__tema">
                 {t.theme}
-                <span className="dado">{t.count}</span>
+                <span className="dado">{t.count.toLocaleString("pt-BR")}</span>
               </Link>
             ))}
           </div>
