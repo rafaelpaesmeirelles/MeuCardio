@@ -1,24 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 
 const ELEMENTOS_PROIBIDOS = new Set([
-  "script",
-  "iframe",
-  "object",
-  "embed",
-  "audio",
-  "video",
-  "img",
-  "image",
-  "form",
-  "input",
-  "button",
-  "textarea",
-  "select",
-  "option",
-  "link",
-  "meta",
-  "base",
-  "canvas",
+  "script", "iframe", "object", "embed", "audio", "video", "img", "image",
+  "form", "input", "button", "textarea", "select", "option", "link", "meta",
+  "base", "canvas",
 ]);
 
 function cssContemReferenciaPerigosa(valor: string): boolean {
@@ -44,11 +29,6 @@ function validarFonteMermaid(fonte: string) {
   }
 }
 
-/**
- * Confere o SVG que o Mermaid já montou no contêiner. O acervo clínico usa
- * `<br/>`, portanto `foreignObject` é necessário para os rótulos, mas scripts,
- * formulários, mídia, eventos e referências externas continuam bloqueados.
- */
 function validarSvgMontado(svg: SVGSVGElement) {
   for (const elemento of Array.from(svg.querySelectorAll("*"))) {
     const nome = elemento.localName.toLowerCase();
@@ -59,14 +39,11 @@ function validarSvgMontado(svg: SVGSVGElement) {
     for (const atributo of Array.from(elemento.attributes)) {
       const nomeAtributo = atributo.name.toLowerCase();
       const valor = atributo.value.trim();
-
       if (nomeAtributo.startsWith("on")) {
         throw new Error("SVG gerado contém manipulador de evento.");
       }
-      if (["href", "xlink:href", "src"].includes(nomeAtributo)) {
-        if (valor && !valor.startsWith("#")) {
-          throw new Error("SVG gerado contém referência externa.");
-        }
+      if (["href", "xlink:href", "src"].includes(nomeAtributo) && valor && !valor.startsWith("#")) {
+        throw new Error("SVG gerado contém referência externa.");
       }
       if (nomeAtributo === "style" && cssContemReferenciaPerigosa(valor)) {
         throw new Error("SVG gerado contém estilo não permitido.");
@@ -80,18 +57,13 @@ function validarSvgMontado(svg: SVGSVGElement) {
 }
 
 type Estado = "carregando" | "pronto" | "erro";
+const ZOOMS = [100, 125, 150, 175, 200];
 
-/**
- * Renderiza Mermaid no próprio contêiner por meio da API oficial `run`.
- *
- * A fonte entra no nó somente por `textContent`. O Mermaid opera em modo
- * estrito e o SVG resultante ainda passa pela validação defensiva acima antes
- * de ser mostrado. Assim não há transporte por Blob/imagem nem parsing manual
- * de marcação pela aplicação.
- */
 export default function Fluxograma({ fonte }: { fonte: string }) {
   const recipiente = useRef<HTMLDivElement>(null);
+  const quadro = useRef<HTMLDivElement>(null);
   const [estado, setEstado] = useState<Estado>("carregando");
+  const [zoom, setZoom] = useState(100);
 
   useEffect(() => {
     let cancelado = false;
@@ -99,6 +71,7 @@ export default function Fluxograma({ fonte }: { fonte: string }) {
     if (!alvo) return;
 
     setEstado("carregando");
+    setZoom(100);
     alvo.removeAttribute("data-processed");
     alvo.textContent = fonte;
 
@@ -134,14 +107,20 @@ export default function Fluxograma({ fonte }: { fonte: string }) {
         }
 
         validarSvgMontado(svg);
+        if (!svg.getAttribute("viewBox")) {
+          const caixa = svg.getBBox();
+          if (caixa.width > 0 && caixa.height > 0) {
+            svg.setAttribute("viewBox", `${caixa.x} ${caixa.y} ${caixa.width} ${caixa.height}`);
+          }
+        }
         svg.removeAttribute("height");
-        svg.setAttribute("width", "100%");
-        svg.setAttribute("preserveAspectRatio", "xMinYMin meet");
+        svg.removeAttribute("width");
+        svg.setAttribute("preserveAspectRatio", "xMidYMin meet");
         svg.style.display = "block";
         svg.style.width = "100%";
-        svg.style.minWidth = "760px";
         svg.style.height = "auto";
         svg.style.maxWidth = "none";
+        svg.style.minWidth = "0";
         svg.style.margin = "0 auto";
         setEstado("pronto");
       } catch (erro) {
@@ -161,8 +140,34 @@ export default function Fluxograma({ fonte }: { fonte: string }) {
     };
   }, [fonte]);
 
+  useEffect(() => {
+    const svg = recipiente.current?.querySelector("svg");
+    if (svg instanceof SVGSVGElement) {
+      svg.style.width = `${zoom}%`;
+    }
+  }, [zoom, estado]);
+
+  async function telaCheia() {
+    const alvo = quadro.current;
+    if (!alvo) return;
+    if (document.fullscreenElement) {
+      await document.exitFullscreen();
+    } else {
+      await alvo.requestFullscreen();
+    }
+  }
+
   return (
-    <div className="fluxograma__recipiente">
+    <div
+      ref={quadro}
+      className="fluxograma__recipiente"
+      style={{
+        width: "100%",
+        minWidth: 0,
+        background: "var(--superficie)",
+        padding: estado === "pronto" ? "0.75rem" : 0,
+      }}
+    >
       {estado === "carregando" && (
         <p className="eyebrow" role="status">Desenhando o fluxograma…</p>
       )}
@@ -172,20 +177,46 @@ export default function Fluxograma({ fonte }: { fonte: string }) {
           se o problema persistir, use o texto clínico exibido abaixo.
         </p>
       )}
+      {estado === "pronto" && (
+        <div style={{ display: "flex", gap: 6, justifyContent: "flex-end", alignItems: "center", flexWrap: "wrap", marginBottom: "0.5rem" }}>
+          <label htmlFor="zoom-fluxograma" className="eyebrow" style={{ margin: 0 }}>Zoom</label>
+          <select
+            id="zoom-fluxograma"
+            value={zoom}
+            onChange={(e) => setZoom(Number(e.target.value))}
+            style={{ width: "auto" }}
+          >
+            {ZOOMS.map((valor) => <option key={valor} value={valor}>{valor}%</option>)}
+          </select>
+          <button type="button" className="botao botao--secundario" onClick={telaCheia}>
+            Tela cheia
+          </button>
+        </div>
+      )}
       <div
-        ref={recipiente}
-        className="mermaid fluxograma"
-        role="img"
-        aria-label="Fluxograma clínico"
-        aria-hidden={estado !== "pronto"}
         style={{
-          visibility: estado === "pronto" ? "visible" : "hidden",
-          overflowX: "auto",
-          margin: estado === "pronto" ? "1rem 0" : 0,
-          height: estado === "pronto" ? "auto" : 0,
-          textAlign: "center",
+          width: "100%",
+          minWidth: 0,
+          overflowX: zoom > 100 ? "auto" : "hidden",
+          overflowY: "visible",
         }}
-      />
+      >
+        <div
+          ref={recipiente}
+          className="mermaid fluxograma"
+          role="img"
+          aria-label="Fluxograma clínico"
+          aria-hidden={estado !== "pronto"}
+          style={{
+            visibility: estado === "pronto" ? "visible" : "hidden",
+            width: "100%",
+            minWidth: 0,
+            margin: estado === "pronto" ? "0 auto" : 0,
+            height: estado === "pronto" ? "auto" : 0,
+            textAlign: "center",
+          }}
+        />
+      </div>
     </div>
   );
 }
