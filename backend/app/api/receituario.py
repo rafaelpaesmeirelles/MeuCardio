@@ -408,7 +408,9 @@ def emitir(documento_id: int, dados: EmitirIn = EmitirIn(), db: Session = Depend
     elif not tipo.ativo:
         bloqueios.append(
             f"O tipo {doc.tipo_codigo} permanece indisponível sem numeração oficial "
-            "ou integração SNCR aplicável; nenhum número será simulado."
+            "ou integração SNCR aplicável; nenhum número será simulado. "
+            "Não depende mais da assinatura digital: o bloqueio é regulatório "
+            "e de numeração oficial."
         )
     if tipo and tipo.exige_numeracao_sncr and not doc.numeracao:
         bloqueios.append(
