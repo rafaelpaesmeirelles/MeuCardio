@@ -70,17 +70,21 @@ def test_deploy_diagnostica_falhas_inesperadas_apos_subir_servicos():
     )
 
 
-def test_deploy_preserva_banco_persistente_mesmo_parado():
+def test_deploy_preserva_banco_persistente_mesmo_parado_e_falha_fechado():
     fonte = _fonte(DEPLOY)
+    linhas_ativas = "\n".join(_linhas_ativas(DEPLOY))
 
-    assert "banco_persistente_existe()" in fonte
-    assert 'ps -a -q db' in fonte
+    assert "BANCO_PERSISTENTE=0" in fonte
+    assert "detectar_banco_persistente()" in fonte
+    assert 'container_id="$("${COMPOSE[@]}" ps -a -q db)"' in fonte
+    assert 'ps -a -q db 2>/dev/null || true' not in linhas_ativas
     assert "label=com.docker.compose.project=" in fonte
     assert "label=com.docker.compose.volume=pgdata" in fonte
+    assert "detectar_banco_persistente\nif [[ \"$BANCO_PERSISTENTE\" == \"1\" ]]" in fonte
     assert '"${COMPOSE[@]}" up -d --no-deps db' in fonte
     assert "aguardar_postgres" in fonte
     assert 'PROJETO="$PWD" bash ./infra/backup/backup.sh' in fonte
-    assert "--status running" not in "\n".join(_linhas_ativas(DEPLOY))
+    assert "--status running" not in linhas_ativas
 
 
 def test_deploy_nao_volta_ao_importador_parcial():
@@ -181,6 +185,7 @@ def test_restaurador_so_apaga_depois_de_parar_backend_existente():
 
     assert indice_container < indice_stop < indice_drop
     assert 'ps -a -q backend' in fonte
+    assert 'ps -a -q backend 2>/dev/null || true' not in fonte
     assert 'stop backend >/dev/null 2>&1 || true' not in fonte
     assert "Uma falha aqui é bloqueante" in fonte
 
