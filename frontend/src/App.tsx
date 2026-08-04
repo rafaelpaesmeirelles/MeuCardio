@@ -47,6 +47,7 @@ const Templates = lazy(() => import("./pages/Templates"));
 const Assinatura = lazy(() => import("./pages/Assinatura"));
 const MinhaConta = lazy(() => import("./pages/MinhaConta"));
 const Telediagnostico = lazy(() => import("./pages/Telediagnostico"));
+const FilaTelediagnostico = lazy(() => import("./pages/FilaTelediagnostico"));
 const CaixaDeEmail = lazy(() => import("./pages/CaixaDeEmail"));
 const CorviaMail = lazy(() => import("./pages/CorviaMail"));
 const Receituario = lazy(() => import("./pages/Receituario"));
@@ -132,6 +133,9 @@ export default function App() {
           <Route path="corvia-mail" element={<CorviaMail />} />
           <Route path="usuarios-online" element={<UsuariosOnline />} />
           {usuario.role === "admin" && <Route path="admin" element={<Admin />} />}
+          {usuario.role === "admin" && (
+            <Route path="fila-telediagnostico" element={<FilaTelediagnostico />} />
+          )}
           {usuario.role === "admin" && (
             <Route path="admin/usuarios-online" element={<Navigate to="/usuarios-online" replace />} />
           )}
