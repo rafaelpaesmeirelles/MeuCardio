@@ -1,11 +1,6 @@
 const BASE = import.meta.env.VITE_API_URL ?? "/api";
 const LEGACY_TOKEN_KEY = "meucardio.token";
 
-/**
- * Compatibilidade temporária para componentes antigos que só perguntam se há
- * uma sessão antes de abrir recursos auxiliares. O JWT real fica exclusivamente
- * no cookie HttpOnly; este marcador nunca é enviado como Authorization.
- */
 function removerTokenLegado() {
   if (typeof window !== "undefined") {
     window.localStorage.removeItem(LEGACY_TOKEN_KEY);
@@ -44,7 +39,6 @@ function mensagensDeLista(valor: unknown): string[] {
     const direta = textoPermitido(entrada);
     if (direta) return [direta];
     if (!entrada || typeof entrada !== "object") return [];
-
     const objeto = entrada as Record<string, unknown>;
     const mensagem =
       textoPermitido(objeto.erro) ??
@@ -61,13 +55,10 @@ function mensagemEstruturada(detail: DetalheEstruturado, fallback: string): stri
   const partes: string[] = [];
   const erro = textoPermitido(detail.erro);
   if (erro) partes.push(erro);
-
   const campos = mensagensDeLista(detail.campos);
   if (campos.length) partes.push(`Campos pendentes: ${campos.join(", ")}.`);
-
   partes.push(...mensagensDeLista(detail.bloqueios));
   partes.push(...mensagensDeLista(detail.itens));
-
   const unicas = [...new Set(partes.map((parte) => parte.trim()).filter(Boolean))];
   return unicas.length ? unicas.join(" ") : fallback;
 }
@@ -124,7 +115,8 @@ export const api = {
     request<T>(p, { method: "PATCH", body: JSON.stringify(body) }),
   put: <T>(p: string, body: unknown) =>
     request<T>(p, { method: "PUT", body: JSON.stringify(body) }),
-  delete: <T>(p: string) => request<T>(p, { method: "DELETE" }),
+  delete: <T>(p: string, body?: unknown) =>
+    request<T>(p, { method: "DELETE", body: body === undefined ? undefined : JSON.stringify(body) }),
 
   upload: <T>(p: string, campo: string, arquivo: File) => {
     const form = new FormData();
