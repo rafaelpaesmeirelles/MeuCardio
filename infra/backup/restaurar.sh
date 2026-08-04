@@ -9,6 +9,8 @@ COMPOSE=(docker compose -f "$PROJETO/docker-compose.prod.yml")
 ARQUIVO="${1:-}"
 RESTAURACAO_INICIADA=0
 BACKEND_RELIGADO=0
+MODO_AUTOMATICO="${RESTAURACAO_AUTOMATICA:-0}"
+SEM_RELIGAR="${RESTAURACAO_SEM_RELIGAR:-0}"
 
 falha() {
   local status=$?
@@ -51,6 +53,15 @@ validar_checksum_vinculado() {
     return 1
   fi
 }
+
+if [[ "$MODO_AUTOMATICO" != "0" && "$MODO_AUTOMATICO" != "1" ]]; then
+  echo "RESTAURACAO_AUTOMATICA deve ser 0 ou 1." >&2
+  exit 1
+fi
+if [[ "$SEM_RELIGAR" != "0" && "$SEM_RELIGAR" != "1" ]]; then
+  echo "RESTAURACAO_SEM_RELIGAR deve ser 0 ou 1." >&2
+  exit 1
+fi
 
 if [[ -z "$ARQUIVO" || ! -f "$ARQUIVO" ]]; then
   echo "Uso: $0 <backup.dump|backup.sql.gz>"
@@ -116,12 +127,21 @@ if [[ "$FORMATO" == "custom" ]]; then
   "${COMPOSE[@]}" exec -T db pg_restore --list < "$ARQUIVO" >/dev/null
 fi
 
-echo "ATENÇÃO: isso vai APAGAR o banco '$POSTGRES_DB' e substituir pelo conteúdo de:"
-echo "  $ARQUIVO"
-read -r -p "Digite RESTAURAR para confirmar: " confirmacao
-[[ "$confirmacao" == "RESTAURAR" ]] || { echo "Cancelado."; exit 1; }
-read -r -p "Digite o nome do banco ($POSTGRES_DB) para confirmar novamente: " banco_confirmado
-[[ "$banco_confirmado" == "$POSTGRES_DB" ]] || { echo "Cancelado: banco não confirmado."; exit 1; }
+if [[ "$MODO_AUTOMATICO" == "1" ]]; then
+  : "${CONFIRM_RESTORE_TARGET:?Defina CONFIRM_RESTORE_TARGET no rollback automático.}"
+  if [[ "$CONFIRM_RESTORE_TARGET" != "$POSTGRES_DB" ]]; then
+    echo "Confirmação automática divergente; restauração cancelada." >&2
+    exit 1
+  fi
+  echo "Rollback automático confirmado para o banco '$POSTGRES_DB'."
+else
+  echo "ATENÇÃO: isso vai APAGAR o banco '$POSTGRES_DB' e substituir pelo conteúdo de:"
+  echo "  $ARQUIVO"
+  read -r -p "Digite RESTAURAR para confirmar: " confirmacao
+  [[ "$confirmacao" == "RESTAURAR" ]] || { echo "Cancelado."; exit 1; }
+  read -r -p "Digite o nome do banco ($POSTGRES_DB) para confirmar novamente: " banco_confirmado
+  [[ "$banco_confirmado" == "$POSTGRES_DB" ]] || { echo "Cancelado: banco não confirmado."; exit 1; }
+fi
 
 RESTAURACAO_INICIADA=1
 BACKEND_CONTAINER="$("${COMPOSE[@]}" ps -a -q backend)"
@@ -144,6 +164,14 @@ if [[ "$FORMATO" == "custom" ]]; then
 else
   gunzip -c "$ARQUIVO" | "${COMPOSE[@]}" exec -T db psql \
     -v ON_ERROR_STOP=1 -U "$POSTGRES_USER" "$POSTGRES_DB"
+fi
+
+if [[ "$SEM_RELIGAR" == "1" ]]; then
+  BACKEND_RELIGADO=0
+  RESTAURACAO_INICIADA=0
+  trap - ERR
+  echo "Restauração concluída. Backend e tráfego permanecem parados para intervenção operacional."
+  exit 0
 fi
 
 echo "Religando o backend e aplicando migrations idempotentes..."
