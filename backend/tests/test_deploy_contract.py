@@ -102,8 +102,13 @@ def test_deploy_preserva_banco_persistente_mesmo_parado_e_sem_labels():
     assert 'volume_deterministico="${projeto}_pgdata"' in fonte
     assert 'grep -Fxq "$volume_deterministico"' in fonte
     assert '"${COMPOSE[@]}" up -d --no-deps db' in fonte
+    assert "criar_backup_pre_deploy()" in fonte
     assert 'PROJETO="$PWD" bash ./infra/backup/backup.sh' in fonte
-    assert 'BACKUP_PRE_DEPLOY="$(tail -n 1 "$BACKUP_LOG")"' in fonte
+    assert 'BACKUP_PRE_DEPLOY="$(tail -n 1 "$backup_log")"' in fonte
+    assert '[[ -f "$BACKUP_PRE_DEPLOY" && -f "${BACKUP_PRE_DEPLOY}.sha256" ]]' in fonte
+    assert fonte.index("parar_servico_se_existir backend", fonte.index("Construindo imagens")) < fonte.index(
+        "criar_backup_pre_deploy", fonte.index("Construindo imagens")
+    )
 
 
 def test_deploy_nao_volta_ao_importador_parcial():
