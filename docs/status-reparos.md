@@ -1,265 +1,291 @@
 # Status dos reparos — CorvIA / MeuCardio
 
-Última atualização: 04/08/2026 (BRT)
+Última atualização: 04/08/2026 11:18 (BRT)
 
 ## Resumo executivo
 
-As correções planejadas no repositório foram concluídas e publicadas na `main` pelos PRs #34, #35, #36, #37 e #38.
+As correções funcionais e operacionais planejadas foram publicadas na `main` pelos PRs #34 a #40.
 
-A `main` atual contém:
+A produção em `corvia.med.br` foi acessada e recuperada nesta sessão. O site está respondendo novamente com:
 
-- autenticação bcrypt sem Passlib;
-- biblioteca e Painel com inventário canônico das 11 coleções;
-- CorvIA Mail e CorvIA Chat expostos no Painel;
-- ReportLab compatível com Python 3.14 e suíte sem warnings conhecidos;
-- deploy determinístico em duas fases;
-- backup, restauração e rollback automático;
-- identificação pública do commit implantado;
-- reconciliação científica fail-closed;
-- uma única regra de slug usada pelo importador direto e pelo reconciliador.
+- `/api/health`: sucesso;
+- `/api/ready`: `database=ok` e `redis=ok`;
+- `/api/version`: commit do hotfix local `46d5cbe928218305f75fd37ac6a2caa1df51a5f2` no momento da recuperação.
 
-O trabalho pendente agora depende do acesso ao servidor real: implantar a `main`, reconciliar o PostgreSQL de produção e validar o site autenticado.
+O banco de produção está na revisão Alembic consolidada:
 
-Nenhuma credencial, senha ou dado do servidor foi gravado no repositório, em commits, PRs, documentação ou logs criados neste trabalho.
+```text
+d63a0cc83807
+```
+
+O PR #40 publicou essa mesma cadeia na `main`, eliminando o risco de o próximo checkout remover migrations já registradas no banco.
+
+Nenhuma credencial, senha ou conteúdo do `.env` foi gravado no repositório, em commits ou em PRs.
 
 ## Publicações concluídas
 
 ### PR #34 — bcrypt direto
 
-Commit:
-
-```text
-2209d1e3
-```
-
 - Passlib removido;
-- compatibilidade preservada com hashes `$2a$`, `$2b$` e `$2y$`;
-- hashes truncados ou malformados rejeitados antes do binding nativo;
+- compatibilidade com hashes `$2a$`, `$2b$` e `$2y$`;
 - nenhuma senha armazenada alterada;
-- CI verde com **174 testes backend**.
+- 174 testes backend.
 
 ### PR #35 — acervo, CorvIA Mail e CorvIA Chat
 
-Commit:
-
-```text
-54ccee76
-```
-
-- Painel passou a usar o inventário integral das 11 coleções;
-- registros preservados e conteúdo publicado são apresentados separadamente;
-- mínimos individuais impedem que excedente numa coleção esconda déficit em outra;
-- alertas de integridade publicados no Painel e na Biblioteca;
+- Painel e Biblioteca baseados no inventário canônico das 11 coleções;
 - CorvIA Mail publicado em rota, menu e Painel;
 - CorvIA Chat publicado em cartão, widget, HTTP e WebSocket;
-- CI verde com **182 testes backend**.
+- 182 testes backend.
 
 ### PR #36 — ReportLab e Python 3.14
 
-Commit:
+- ReportLab 4.4.10;
+- PDFs clínicos testados por geração real;
+- 186 testes backend e zero warnings conhecidos.
 
-```text
-1bea10cf
-```
+### PR #37 — deploy certificado
 
-- ReportLab atualizado para 4.4.10, sem salto para a linha major 5;
-- warning de `ast.NameConstant` eliminado;
-- receituário e documento clínico protegidos por geração real de PDF;
-- CI verde com **186 testes backend e zero warnings**.
-
-### PR #37 — deploy, corpus e commit publicado
-
-Commit de merge:
+Merge:
 
 ```text
 d7a4589d2135e368dbcf1743369f60a1a8fa4acd
 ```
 
-Certificação funcional principal:
+- deploy determinístico em duas fases;
+- lock exclusivo e checkout limpo;
+- snapshot após bloquear escritores;
+- rollback automático da fase mutável;
+- reconciliação fail-closed;
+- `/api/version` para confirmar o SHA publicado;
+- backup e restauração validados;
+- corpus de 4.936 registros certificado.
 
-- CI #204 — run `30875803741`;
-- **233 testes backend aprovados**;
-- Corpus database reconciliation #80 — run `30875803765`;
-- **4.936 registros científicos** confirmados nas 11 coleções;
-- frontend, auditorias, migrations, bootstrap, smoke HTTP e backup/restauração aprovados.
+### PR #38 — slug canônico
 
-Correções finais incorporadas antes do merge:
-
-- build determinístico com lockfile e `.dockerignore`;
-- lock exclusivo de deploy;
-- revalidação de `HEAD`, árvore e checkout durante o processo;
-- snapshot somente depois de bloquear Caddy e backend antigo;
-- rollback armado antes do novo backend executar migrations;
-- janela de rollback mantida até readiness interno e checkout privado serem aprovados;
-- restauração automática sem reabrir backend ou proxy;
-- detecção de `pgdata` por container, labels ou nome determinístico;
-- despublicação de slugs ausentes da fonte canônica, preservando histórico;
-- bloqueio de slugs ausentes, duplicados, vazios ou com espaços externos.
-
-### PR #38 — slug Markdown explicitamente inválido
-
-Commit de merge:
+Merge:
 
 ```text
 955047999ab7b4015c9a29f8c86368e13d4b0576
 ```
 
+- importador direto e reconciliador usam a mesma resolução de slug;
+- valores vazios, nulos, booleanos, numéricos e espaços externos são rejeitados;
+- 242 testes backend;
+- 4.936 registros reconciliados.
+
+### PR #39 — consolidação documental
+
+Merge:
+
+```text
+a4b9c8efa8c5becda9efebbbbd7f4a47a62edba0
+```
+
+- registrou o estado pré-deploy e o roteiro de acesso ao servidor.
+
+### PR #40 — hotfix da cadeia Alembic de produção
+
 Head certificado:
 
 ```text
-af492b697436747b0da275b0975fbc5b213ef498
+46d5cbe928218305f75fd37ac6a2caa1df51a5f2
 ```
 
-Certificação:
+Merge na `main`:
 
-- CI #209 — run `30876684232`;
-- **242 testes backend aprovados em 76,29 s**;
-- Corpus database reconciliation #84 — run `30876684227`;
-- **4.936 registros científicos** confirmados nas 11 coleções;
-- frontend integralmente aprovado;
-- `pip-audit` sem vulnerabilidades conhecidas;
+```text
+a0b24f345ab7ffd48fb6f65502b8dc4220884dd4
+```
+
+Arquivos publicados:
+
+```text
+backend/migrations/versions/a7c92e4f6b18_subscriptions_periodicidade.py
+backend/migrations/versions/b3f8a1d92e64_plano_pretendido_e_onboarding.py
+backend/migrations/versions/d63a0cc83807_merge_producao_main.py
+```
+
+Cadeia consolidada:
+
+```text
+c4a8e6f1b3d7
+├── a7c92e4f6b18 → b3f8a1d92e64
+└── d5b9f2c7a104 → e6c1a8d4f209 → f7d2b9c4a601 → a4c8e1f2b703
+
+(a4c8e1f2b703, b3f8a1d92e64) → d63a0cc83807
+```
+
+Certificação do PR #40:
+
+- CI #213 — run `30917296235`;
+- **242 testes backend aprovados em 75,30 s**;
 - migrations completas e idempotentes;
-- bootstrap administrativo aprovado;
 - smoke HTTP aprovado;
-- backup/restauração PostgreSQL aprovados com preservação do registro de prova;
-- revisão Codex final: nenhum problema relevante encontrado.
+- backup/restauração PostgreSQL aprovados;
+- Corpus database reconciliation #85 — run `30917296311`;
+- **4.936 registros científicos** confirmados;
+- frontend aprovado;
+- `pip-audit` sem vulnerabilidades conhecidas;
+- revisão Codex no SHA `46d5cbe928`: nenhum problema relevante.
 
-Correção publicada:
+## Incidente de produção em 04/08/2026
 
-- `_resolve_markdown_slug` centraliza a resolução do identificador;
-- `import_directory` e o reconciliador usam exatamente a mesma regra;
-- fallback pelo título ocorre somente quando a chave `slug` não existe;
-- `slug: ""`, `slug: null`, `slug: false` e `slug: 0` são rejeitados;
-- espaços nas extremidades continuam bloqueados;
-- quatro testes executam o importador diretamente e confirmam que nenhum registro inválido é gravado.
+### Estado inicial do servidor
 
-## Garantias operacionais atuais
+O checkout em `/opt/meucardio` estava na `main` antiga `3d19738`, nove commits locais à frente e com arquivos modificados/não rastreados.
 
-### Deploy determinístico em duas fases
+Antes de qualquer reset, foram criados:
 
-1. valida `.env`, ferramentas, Git e Docker;
-2. adquire lock exclusivo;
-3. confirma SHA, árvore e checkout limpo;
-4. constrói imagens antes de interromper o site existente;
-5. fecha Caddy e backend antigo;
-6. inicia somente o PostgreSQL quando necessário;
-7. cria e valida o snapshot sem escritores ativos;
-8. arma rollback antes de iniciar o novo backend;
-9. executa migrations, reconciliação e eventual indexação;
-10. exige readiness interno e nova validação do checkout;
-11. abre o proxy somente após aprovação dos gates privados;
-12. confirma HTTPS, readiness e SHA em `/api/version`.
+- branch local de resgate `rescue/server-20260804T121756Z`;
+- commit de resgate `ddf6f5c`;
+- bundle independente `/root/corvia-rescue-20260804T121756Z/rescue.bundle` (~110 MB);
+- patch das alterações rastreadas;
+- arquivo dos untracked;
+- backup protegido do `.env`;
+- checksums SHA-256.
 
-### Backup e restauração
+### Backup real do PostgreSQL
 
-- dump custom e comprimido do PostgreSQL;
-- arquivo temporário e publicação atômica;
-- validação por `pg_restore --list`;
-- SHA-256 vinculado ao dump selecionado;
-- permissões restritas;
-- compatibilidade controlada com `.sql.gz` legado;
-- validação anterior ao `dropdb`;
-- confirmação destrutiva em duas etapas no modo manual;
-- `pg_restore --exit-on-error`;
-- backend e proxy fora do tráfego durante restauração;
-- falha da fase mutável aciona rollback automático;
-- após rollback, backend e Caddy permanecem parados até intervenção.
+Foi criado e validado o dump:
 
-### Reconciliação científica fail-closed
+```text
+/root/corvia-backups/meucardio_2026-08-04_143903.dump
+```
 
-Comando oficial:
+Características:
+
+- aproximadamente 80 MB;
+- dump custom do PostgreSQL;
+- checksum SHA-256 aprovado;
+- catálogo validado com `pg_restore --list`.
+
+### Correção do `.env`
+
+O arquivo possuía sintaxe Bash inválida em `SMTP_FROM` devido a espaço e caracteres `< >` sem aspas.
+
+Formato corrigido:
 
 ```bash
-python -m app.commands.reconcile_content --publish-reviewed
+SMTP_FROM='CorvIA <contato@corvia.med.br>'
 ```
 
-- o deploy não usa `--allow-partial`;
-- falhas, avisos, recusados, duplicados ignorados, ausências e Markdown vazio bloqueiam a certificação;
-- diagnósticos são pesquisados recursivamente;
-- manifestos JSON precisam ser listas de objetos com `slug` válido e único;
-- Markdown e importação direta compartilham a mesma validação de slug;
-- somente itens revisados e presentes na fonte atual são publicados;
-- slugs removidos ou renomeados são despublicados, sem apagar o histórico;
-- mínimos individuais das 11 coleções permanecem obrigatórios;
-- excesso numa coleção não mascara déficit em outra.
+Após a correção:
 
-## Bloqueio externo de produção
+- `bash -n .env`: código 0;
+- `docker compose --env-file .env -f docker-compose.prod.yml config`: código 0.
 
-O deploy real ainda não foi executado.
+### Falha do primeiro deploy
 
-O ambiente desta sessão não conseguiu resolver ou alcançar `corvia.med.br`, e o host anteriormente informado não aceitou as conexões tentadas. Assim, ainda não foi possível:
+O backend entrou em restart loop durante `python -m app.commands.migrate` porque o banco registrava a revisão:
 
-- identificar o SHA atualmente implantado;
-- criar o backup real do PostgreSQL;
-- atualizar `/opt/meucardio` para a `main` atual;
-- executar `bash ./deploy.sh` no servidor;
-- reconciliar o banco de produção;
-- validar login, Painel, Biblioteca, CorvIA Mail e CorvIA Chat;
-- testar mensagens entre duas sessões e WebSocket `wss://`;
-- testar envio e recebimento no CorvIA Mail;
-- aplicar `vm.overcommit_memory=1` no host.
+```text
+b3f8a1d92e64
+```
 
-As credenciais fornecidas pelo proprietário não foram usadas nem persistidas. Como foram compartilhadas em texto na conversa, recomenda-se rotacionar a senha depois da validação de produção.
+Essa migration e seu ancestral `a7c92e4f6b18` existiam apenas no histórico local antigo e não na `main` publicada.
 
-## Próxima sessão — ponto exato de retomada
+Depois de restaurar os dois arquivos, o Alembic encontrou duas heads:
 
-Não é necessário retomar nenhum PR funcional pendente. Começar pela produção:
+```text
+a4c8e1f2b703
+b3f8a1d92e64
+```
 
-1. confirmar acesso SSH ao servidor;
-2. entrar em `/opt/meucardio`;
-3. preservar e revisar o `.env`, sem substituí-lo;
-4. aplicar no host:
+Foi criada a migration de merge `d63a0cc83807`. O comando operacional concluiu com `RC_MIGRATE=0`, o backend atingiu readiness e somente então o Caddy foi religado.
 
-   ```bash
-   sudo sysctl -w vm.overcommit_memory=1
-   echo 'vm.overcommit_memory=1' | sudo tee /etc/sysctl.d/99-corvia-redis.conf
-   ```
+### Produção recuperada
 
-5. criar um backup manual independente;
-6. atualizar o repositório:
+Validações realizadas:
 
-   ```bash
-   git fetch origin
-   git checkout main
-   git pull --ff-only origin main
-   git status --short
-   git log -1 --oneline
-   ```
+- banco em `d63a0cc83807`;
+- backend saudável;
+- PostgreSQL saudável;
+- Redis saudável;
+- Caddy religado após readiness;
+- `/api/health`: código 0;
+- `/api/ready`: código 0;
+- `/api/version`: código 0;
+- branch do hotfix enviada ao GitHub;
+- PR #40 certificado e integrado à `main`.
 
-7. confirmar checkout limpo;
-8. executar presencialmente:
+## Garantias preservadas
 
-   ```bash
-   bash ./deploy.sh
-   ```
+- nenhum volume PostgreSQL removido;
+- nenhuma restauração manual destrutiva executada;
+- backup real validado antes das alterações;
+- branch, bundle e `.env` antigo preservados;
+- nenhum arquivo científico removido;
+- nenhuma senha armazenada alterada;
+- corpus de 4.936 registros preservado;
+- 1.327 arquivos físicos preservados conforme inventário anterior.
 
-9. confirmar:
-   - `https://corvia.med.br/api/health`;
-   - `https://corvia.med.br/api/ready`;
-   - `https://corvia.med.br/api/version` com o SHA da `main`;
-   - 4.936 registros e mínimos individuais das 11 coleções;
-   - ausência de erros em backend, PostgreSQL, Redis, Caddy e frontend.
+## Pendências atuais
 
-## Validação autenticada após o deploy
+### 1. Alinhar o checkout do servidor à `main` após o PR #40
+
+O servidor continua na branch local do hotfix, embora o conteúdo já esteja publicado na `main`.
+
+No servidor:
+
+```bash
+cd /opt/meucardio
+git fetch --prune origin
+git switch main
+git reset --hard origin/main
+git status --short
+git log -1 --oneline
+```
+
+O commit esperado é:
+
+```text
+a0b24f345ab7ffd48fb6f65502b8dc4220884dd4
+```
+
+Depois, atualizar somente a identificação pública do backend:
+
+```bash
+export DEPLOY_COMMIT="$(git rev-parse HEAD)"
+docker compose -f docker-compose.prod.yml up -d --no-deps --force-recreate backend
+```
+
+Aguardar readiness, manter o Caddy ativo e confirmar `/api/version` com o SHA da `main`.
+
+### 2. Validação autenticada ainda pendente
 
 - login principal;
-- Painel mostrando o inventário integral;
+- Painel mostrando 4.936 registros e mínimos das 11 coleções;
 - Biblioteca, paginação e buscas;
 - CorvIA Chat pelo cartão e pelo botão flutuante;
-- envio e recebimento entre duas sessões ou abas;
+- mensagens entre duas sessões/abas;
 - WebSocket `wss://`;
-- CorvIA Mail, acesso da caixa e webmail;
+- CorvIA Mail e webmail;
 - envio e recebimento de e-mail;
 - receituário e PDFs clínicos;
 - links públicos de documentos;
 - logout e revogação de sessão.
 
-## Estado final desta sessão
+### 3. Segurança operacional
 
-- PRs #34, #35, #36, #37 e #38: publicados na `main`;
-- correções funcionais pendentes no GitHub: nenhuma conhecida;
-- deploy real: não executado;
-- credenciais persistidas: nenhuma;
-- arquivos científicos removidos: nenhum;
-- senhas armazenadas alteradas: nenhuma;
-- dados do servidor real alterados nesta sessão: nenhum.
+A senha administrativa foi compartilhada em texto na conversa. Após terminar os testes autenticados, rotacioná-la e não reutilizar o valor anterior.
+
+### 4. Limpeza futura, somente após estabilidade confirmada
+
+Não apagar ainda:
+
+- `/root/corvia-rescue-20260804T121756Z`;
+- `/root/corvia-backups/meucardio_2026-08-04_143903.dump` e checksum;
+- branch local de resgate;
+- stashes anteriores.
+
+A limpeza pode ser avaliada somente após validação autenticada e novo backup de retenção.
+
+## Ponto exato de retomada
+
+1. sincronizar o servidor com `origin/main` no commit `a0b24f34`;
+2. recriar somente o backend com `DEPLOY_COMMIT` da `main`;
+3. confirmar health, readiness e version;
+4. executar testes autenticados do Painel, Biblioteca, Chat e Mail;
+5. rotacionar a senha compartilhada;
+6. registrar resultados e eventuais correções em novo PR isolado.
