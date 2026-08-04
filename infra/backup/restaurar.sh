@@ -128,7 +128,8 @@ read -r -p "Digite o nome do banco ($POSTGRES_DB) para confirmar novamente: " ba
 [[ "$banco_confirmado" == "$POSTGRES_DB" ]] || { echo "Cancelado: banco não confirmado."; exit 1; }
 
 RESTAURACAO_INICIADA=1
-BACKEND_CONTAINER="$("${COMPOSE[@]}" ps -a -q backend 2>/dev/null || true)"
+# Consulta vazia significa serviço ausente; erro do Docker/Compose é bloqueante.
+BACKEND_CONTAINER="$("${COMPOSE[@]}" ps -a -q backend)"
 if [[ -n "$BACKEND_CONTAINER" ]]; then
   echo "Parando o backend para evitar escrita durante a restauração..."
   # Uma falha aqui é bloqueante. Não se pode apagar o banco enquanto o backend
