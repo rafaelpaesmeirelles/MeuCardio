@@ -45,7 +45,14 @@ if ! docker compose version >/dev/null 2>&1; then
   exit 1
 fi
 
-COMMIT_ATUAL="$(git rev-parse --verify HEAD 2>/dev/null || printf 'desconhecido')"
+COMMIT_ATUAL="$(git rev-parse --verify HEAD 2>/dev/null || true)"
+if [[ ! "$COMMIT_ATUAL" =~ ^[0-9a-f]{40}$ ]]; then
+  echo "Não foi possível identificar um commit Git completo; deploy não pode ser certificado." >&2
+  exit 1
+fi
+# Docker Compose interpola variáveis exportadas antes de ler o arquivo. O mesmo
+# SHA fica disponível em /api/version para conferência externa.
+export DEPLOY_COMMIT="$COMMIT_ATUAL"
 log "Iniciando deploy do commit $COMMIT_ATUAL para $DOMAIN."
 
 log "Verificando se o DNS aponta para este servidor."
@@ -117,6 +124,14 @@ done
 
 if [[ "$PUBLICO_PRONTO" != "1" ]]; then
   echo "ERRO: backend está pronto internamente, mas https://${DOMAIN}/api/ready não respondeu." >&2
+  mostrar_diagnostico
+  exit 1
+fi
+
+log "Confirmando que o domínio público serve o commit solicitado."
+VERSAO_PUBLICA="$(curl -fsS --max-time 10 "https://${DOMAIN}/api/version")"
+if [[ "$VERSAO_PUBLICA" != *"\"commit\":\"${COMMIT_ATUAL}\""* ]]; then
+  echo "ERRO: /api/version não confirmou o commit $COMMIT_ATUAL: $VERSAO_PUBLICA" >&2
   mostrar_diagnostico
   exit 1
 fi
