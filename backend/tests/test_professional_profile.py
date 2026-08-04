@@ -3,10 +3,11 @@ from pathlib import Path
 from PIL import Image
 import pytest
 
+from app.core.config import settings
 from app.services.professional_profile import (
     logo_needs_dark_plate_path,
     normalize_professional_title, normalize_search_text,
-    professional_name,
+    professional_name, rendered_logo_png,
 )
 
 
@@ -36,6 +37,28 @@ def test_logo_escura_mantem_placa_branca(tmp_path: Path):
     path = tmp_path / "escura.png"
     Image.new("RGBA", (40, 20), (10, 20, 30, 255)).save(path)
     assert logo_needs_dark_plate_path(path) is False
+
+
+def test_logo_jpeg_e_convertida_para_png_contrastado_sem_alterar_original(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch,
+):
+    uploads = tmp_path / "uploads"
+    logos = uploads / "logos"
+    logos.mkdir(parents=True)
+    original = logos / "logo.jpg"
+    Image.new("RGB", (80, 30), (245, 245, 245)).save(original, format="JPEG")
+    original_bytes = original.read_bytes()
+    monkeypatch.setattr(settings, "uploads_dir", str(uploads))
+
+    rendered = rendered_logo_png("/logos/logo.jpg")
+
+    assert rendered is not None
+    assert rendered.suffix == ".png"
+    assert rendered.is_file()
+    assert original.read_bytes() == original_bytes
+    with Image.open(rendered) as image:
+        assert image.format == "PNG"
+        assert image.convert("RGBA").getpixel((0, 0))[:3] == (11, 46, 69)
 
 
 def test_busca_normaliza_acentos_maiusculas_e_espacos():
