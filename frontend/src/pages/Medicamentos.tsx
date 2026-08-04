@@ -1,15 +1,66 @@
 import { useEffect, useMemo, useState } from "react";
-import { api } from "../lib/api";
-import { useAuth } from "../lib/auth";
+import { api, ApiError } from "../lib/api";
 import { Carregando, SeloRevisao, Vazio } from "../components/Estado";
 
-type Item = { slug: string; generic_name: string; drug_class: string; review_status: string };
-type Detalhe = Record<string, any>;
+type Item = {
+  slug: string;
+  generic_name: string;
+  drug_class: string;
+  review_status: string;
+};
 
-// A classe salva no banco é bem específica (ex.: "Betabloqueador cardiosseletivo
-// (beta-1 seletivo), hidrofílico" — só do Atenolol), então filtrar pelo texto
-// exato não agruparia nada. Isto reconhece a classe ampla pela presença de
-// palavras-chave. Ordem importa: grupos mais específicos vêm antes dos genéricos.
+type ApresentacaoCmed = {
+  brand_name: string;
+  manufacturer: string;
+  presentation: string;
+  ggrem: string;
+  hospital_only: boolean;
+  pmc: number | null;
+  pmc_label: string | null;
+};
+
+type Insight = {
+  slug: string;
+  generic_name: string;
+  drug_class: string;
+  brand_names: string[];
+  mechanism: string | null;
+  presentations: string[];
+  commercial_presentations: Record<string, unknown>[];
+  dosing: Record<string, unknown>;
+  renal_adjustment: string | null;
+  hepatic_adjustment: string | null;
+  contraindications: string[];
+  interactions: string[];
+  monitoring: string[];
+  indications: string[];
+  adverse_effects: string[];
+  pregnancy: string | null;
+  lactation: string | null;
+  notes: Record<string, unknown>;
+  half_life_hours: number | null;
+  half_life_note: string | null;
+  duration_of_action_hours: number | null;
+  duration_of_action_note: string | null;
+  duration_of_action_source: string | null;
+  sbp_reduction_mmhg: number | null;
+  dbp_reduction_mmhg: number | null;
+  bp_evidence_source: string | null;
+  references: string[];
+  review_status: string;
+  cmed: {
+    published_at: string | null;
+    uf: string | null;
+    presentations: ApresentacaoCmed[];
+    average_pmc: number | null;
+    average_label: string;
+  };
+};
+
+type Comparacao = { uf: string | null; drugs: Insight[]; warnings: string[] };
+
+type Serie = { label: string; value: number; detail?: string };
+
 const GRUPOS_AMPLOS: [string, string[]][] = [
   ["Antagonista mineralocorticoide", ["mineralocorticoide", "poupador de potássio"]],
   ["IECA", ["enzima conversora de angiotensina"]],
@@ -18,361 +69,279 @@ const GRUPOS_AMPLOS: [string, string[]][] = [
   ["Betabloqueador", ["betabloqueador"]],
   ["Bloqueador de canal de cálcio", ["canal de cálcio"]],
   ["Diurético", ["diurético", "diuretico"]],
-  ["Anticoagulante", ["anticoagulante", "heparina", "hbpm"]],
-  ["Antiagregante/antiplaquetário", ["antiagregante", "antiplaquetário"]],
-  ["Estatina/hipolipemiante", ["estatina", "hipolipemiante", "pcsk9", "angptl3",
-                               "absorção de colesterol"]],
-  ["Antiarrítmico", ["antiarrítmico"]],
-  ["Nitrato/vasodilatador", ["nitrato", "vasodilatador"]],
-  ["Glicosídeo cardíaco", ["glicosídeo cardíaco", "digitálico"]],
-  ["iSGLT2/antidiabético", ["cotransportador sódio-glicose", "glp-1", "biguanida"]],
-  ["Inotrópico/vasopressor", ["inotrópico", "catecolamina", "vasopressor"]],
-  ["Agonista alfa-2 central", ["alfa-2 adrenérgico"]],
+  ["Antiarrítmico", ["antiarrítmico", "antiarritmico"]],
+  ["Anticoagulante", ["anticoagulante", "inibidor direto do fator", "antagonista da vitamina k"]],
+  ["Antiagregante", ["antiagregante", "antiplaquetário", "antiplaquetario"]],
+  ["Hipolipemiante", ["estatina", "pcsk9", "hipolipemiante", "colesterol"]],
+  ["Vasodilatador/antianginoso", ["nitrato", "vasodilatador", "antianginoso"]],
+  ["iSGLT2", ["sglt2", "cotransportador sódio-glicose"]],
 ];
 
-function classeAmpla(drugClass: string): string {
-  const alvo = drugClass.toLowerCase();
-  for (const [grupo, chaves] of GRUPOS_AMPLOS) {
-    if (chaves.some((c) => alvo.includes(c))) return grupo;
-  }
-  return "Outros";
+function grupoAmplo(classe: string) {
+  const normalizada = classe.toLocaleLowerCase("pt-BR");
+  return GRUPOS_AMPLOS.find(([, pistas]) => pistas.some((pista) => normalizada.includes(pista)))?.[0]
+    ?? "Outros";
 }
 
-function GraficoMeiaVida({ drogas, admin, aoSalvar }: {
-  drogas: Detalhe[]; admin: boolean; aoSalvar: () => void;
-}) {
-  const comDado = drogas.filter((d) => typeof d.half_life_hours === "number");
-  const max = Math.max(1, ...comDado.map((d) => d.half_life_hours as number));
-  const [editando, setEditando] = useState<string | null>(null);
-  const [valor, setValor] = useState("");
-
-  async function salvar(slug: string) {
-    const numero = valor.trim() ? Number(valor.replace(",", ".")) : null;
-    await api.patch(`/drugs/${slug}/meia-vida`, { half_life_hours: numero });
-    setEditando(null);
-    aoSalvar();
-  }
-
-  return (
-    <div className="cartao" style={{ marginTop: "1rem" }}>
-      <p className="eyebrow">Meia-vida de eliminação</p>
-      <div style={{ display: "flex", flexDirection: "column", gap: 10, marginTop: "0.6rem" }}>
-        {drogas.map((d) => {
-          const valorAtual = d.half_life_hours as number | null;
-          const pct = valorAtual ? Math.max(4, (valorAtual / max) * 100) : 0;
-          return (
-            <div key={d.slug}>
-              <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.86rem" }}>
-                <span>{d.generic_name}</span>
-                <span className="dado" style={{ color: "var(--texto-secundario)" }}>
-                  {valorAtual ? `${valorAtual} h` : "sem dado"}
-                </span>
-              </div>
-              <div style={{
-                background: "var(--fundo)", borderRadius: 5, height: 18, marginTop: 4,
-                border: "1px solid var(--borda)", overflow: "hidden",
-              }}>
-                {valorAtual !== null && (
-                  <div style={{
-                    width: `${pct}%`, height: "100%", background: "var(--acento)",
-                    borderRadius: 4, transition: "width 0.3s",
-                  }} />
-                )}
-              </div>
-              {admin && (
-                editando === d.slug ? (
-                  <div style={{ display: "flex", gap: 6, marginTop: 4 }}>
-                    <input
-                      autoFocus type="text" inputMode="decimal" placeholder="horas, ex.: 8.5"
-                      value={valor} onChange={(e) => setValor(e.target.value)}
-                      style={{ maxWidth: 120, padding: "0.2rem 0.4rem", fontSize: "0.82rem" }}
-                    />
-                    <button className="botao" style={{ padding: "0.2rem 0.6rem", fontSize: "0.8rem" }}
-                            onClick={() => salvar(d.slug)}>Salvar</button>
-                    <button className="botao botao--secundario" style={{ padding: "0.2rem 0.6rem", fontSize: "0.8rem" }}
-                            onClick={() => setEditando(null)}>Cancelar</button>
-                  </div>
-                ) : (
-                  <button
-                    className="botao botao--secundario"
-                    style={{ padding: "0.1rem 0.5rem", fontSize: "0.76rem", marginTop: 4 }}
-                    onClick={() => { setEditando(d.slug); setValor(valorAtual ? String(valorAtual) : ""); }}
-                  >
-                    {valorAtual ? "Editar" : "Preencher"}
-                  </button>
-                )
-              )}
-            </div>
-          );
-        })}
-      </div>
-      {comDado.length === 0 && (
-        <p style={{ color: "var(--texto-secundario)", fontSize: "0.9rem", marginTop: "0.5rem" }}>
-          Nenhum dos medicamentos selecionados tem meia-vida cadastrada ainda.
-          {admin ? " Use os botões abaixo pra preencher." : " Peça a um administrador para preencher."}
-        </p>
-      )}
-      {comDado.length < drogas.length && comDado.length > 0 && (
-        <p className="aviso">
-          Valor por medicamento, a partir da bula ou referência farmacocinética — não extraído
-          automaticamente. {admin ? "Preencha acima." : "Peça a um administrador para preencher."}
-        </p>
-      )}
-    </div>
-  );
+function dinheiro(valor: number | null) {
+  return valor == null ? "—" : valor.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 }
 
-function BarraComparativa({ rotulo, valor, unidade, max, cor }: {
-  rotulo: string; valor: number | null; unidade: string; max: number; cor: string;
-}) {
-  const pct = valor !== null ? Math.max(6, (valor / max) * 100) : 0;
-  return (
-    <div>
-      <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.86rem" }}>
-        <span>{rotulo}</span>
-        <span className="dado" style={{ color: "var(--texto-secundario)" }}>
-          {valor !== null ? `${valor} ${unidade}` : "sem dado"}
-        </span>
-      </div>
-      <div style={{
-        background: "var(--fundo)", borderRadius: 5, height: 18, marginTop: 4,
-        border: "1px solid var(--borda)", overflow: "hidden",
-      }}>
-        {valor !== null && (
-          <div style={{
-            width: `${pct}%`, height: "100%", background: cor,
-            borderRadius: 4, transition: "width 0.3s",
-          }} />
-        )}
-      </div>
-    </div>
-  );
-}
-
-function GraficoEficaciaPA({ drogas }: { drogas: Detalhe[] }) {
-  const comDado = drogas.filter((d) => typeof d.sbp_reduction_mmhg === "number");
-  const max = Math.max(1, ...comDado.map((d) => d.sbp_reduction_mmhg as number));
-
-  return (
-    <div className="cartao" style={{ marginTop: "1rem" }}>
-      <p className="eyebrow">Redução média de pressão arterial (PAS/PAD, mmHg)</p>
-
-      {comDado.length === 0 ? (
-        <p style={{ color: "var(--texto-secundario)", fontSize: "0.9rem", marginTop: "0.5rem" }}>
-          Nenhum dos medicamentos selecionados tem dado de eficácia anti-hipertensiva
-          cadastrado ainda — cobrimos só os principais anti-hipertensivos por classe até agora.
-        </p>
-      ) : (
-        <div style={{ display: "flex", flexDirection: "column", gap: 14, marginTop: "0.7rem" }}>
-          {drogas.map((d) => {
-            const sbp = typeof d.sbp_reduction_mmhg === "number" ? d.sbp_reduction_mmhg : null;
-            const dbp = typeof d.dbp_reduction_mmhg === "number" ? d.dbp_reduction_mmhg : null;
-            return (
-              <div key={d.slug}>
-                <strong style={{ fontSize: "0.9rem" }}>{d.generic_name}</strong>
-                <div style={{ display: "flex", flexDirection: "column", gap: 6, marginTop: 4 }}>
-                  <BarraComparativa rotulo="PAS" valor={sbp} unidade="mmHg" max={max} cor="var(--acento)" />
-                  <BarraComparativa rotulo="PAD" valor={dbp} unidade="mmHg" max={max} cor="var(--acento)" />
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      )}
-
-      <p className="aviso">
-        Valores de dose padrão/quase-máxima, de ensaios controlados por placebo — populações e
-        desenhos de estudo diferem entre fármacos, então a comparação é aproximada, não uma régua
-        única. Fonte de cada valor disponível na tabela de comparação acima.
-      </p>
-    </div>
-  );
-}
-
-const LINHAS: [string, string][] = [
-  ["drug_class", "Classe"],
-  ["mechanism", "Mecanismo"],
-
-  ["dosing", "Doses"],
-  ["renal_adjustment", "Ajuste renal"],
-  ["hepatic_adjustment", "Ajuste hepático"],
-  ["contraindications", "Contraindicações"],
-  ["interactions", "Interações"],
-  ["monitoring", "Monitorização"],
-  ["outcomes", "Desfechos"],
-  ["pregnancy", "Gestação"],
-  ["lactation", "Lactação"],
-  ["references", "Referências"],
-];
-
-function celula(v: unknown) {
-  if (v === null || v === undefined || (Array.isArray(v) && v.length === 0)) return "—";
-  if (Array.isArray(v)) return v.join("; ");
-  if (typeof v === "object") {
-    return Object.entries(v as object)
-      .map(([k, val]) => `${k}: ${val}`)
+function textoEstruturado(valor: unknown): string {
+  if (valor == null) return "—";
+  if (typeof valor === "string" || typeof valor === "number" || typeof valor === "boolean") return String(valor);
+  if (Array.isArray(valor)) return valor.map(textoEstruturado).join(" · ");
+  if (typeof valor === "object") {
+    return Object.entries(valor as Record<string, unknown>)
+      .map(([chave, item]) => `${chave.replaceAll("_", " ")}: ${textoEstruturado(item)}`)
       .join(" · ");
   }
-  return String(v);
+  return String(valor);
+}
+
+function Lista({ itens }: { itens: string[] }) {
+  if (!itens.length) return <p style={{ color: "var(--texto-secundario)" }}>Sem dado estruturado publicado.</p>;
+  return <ul>{itens.map((item, indice) => <li key={`${indice}-${item}`}>{item}</li>)}</ul>;
+}
+
+function Grafico({ titulo, series, unidade }: { titulo: string; series: Serie[]; unidade: string }) {
+  if (series.length === 0) return null;
+  const maximo = Math.max(...series.map((serie) => Math.abs(serie.value)), 1);
+  return (
+    <section className="cartao">
+      <h3>{titulo}</h3>
+      <div style={{ display: "grid", gap: "0.55rem" }}>
+        {series.map((serie) => (
+          <div key={serie.label}>
+            <div style={{ display: "flex", justifyContent: "space-between", gap: 8, fontSize: "0.84rem" }}>
+              <span>{serie.label}</span>
+              <strong>{serie.value.toLocaleString("pt-BR")} {unidade}</strong>
+            </div>
+            <div style={{ height: 12, background: "var(--fundo)", borderRadius: 999, overflow: "hidden", marginTop: 3 }}>
+              <span
+                aria-hidden="true"
+                style={{ display: "block", height: "100%", width: `${Math.max(4, Math.abs(serie.value) / maximo * 100)}%`, background: "var(--acento)" }}
+              />
+            </div>
+            {serie.detail && <small style={{ color: "var(--texto-secundario)" }}>{serie.detail}</small>}
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function ResumoFarmaco({ drug }: { drug: Insight }) {
+  return (
+    <article id={`medicamento-${drug.slug}`} style={{ scrollMarginTop: "1rem" }}>
+      <div style={{ display: "flex", justifyContent: "space-between", gap: 12, alignItems: "start", flexWrap: "wrap" }}>
+        <div>
+          <p className="eyebrow">{drug.drug_class}</p>
+          <h2>{drug.generic_name}</h2>
+        </div>
+        <SeloRevisao status={drug.review_status} />
+      </div>
+
+      <div className="grade grade--3">
+        <div className="cartao"><p className="eyebrow">Meia-vida</p><strong>{drug.half_life_hours == null ? "—" : `${drug.half_life_hours} h`}</strong><p>{drug.half_life_note}</p></div>
+        <div className="cartao"><p className="eyebrow">Tempo de ação</p><strong>{drug.duration_of_action_hours == null ? "—" : `${drug.duration_of_action_hours} h`}</strong><p>{drug.duration_of_action_note}</p></div>
+        <div className="cartao"><p className="eyebrow">PMC médio de referência</p><strong>{dinheiro(drug.cmed.average_pmc)}</strong><p style={{ fontSize: "0.78rem" }}>{drug.cmed.average_label}</p></div>
+      </div>
+
+      {(drug.sbp_reduction_mmhg != null || drug.dbp_reduction_mmhg != null) && (
+        <section className="cartao" style={{ marginTop: "0.8rem" }}>
+          <p className="eyebrow">Potência anti-hipertensiva publicada</p>
+          <p>
+            PAS: <strong>{drug.sbp_reduction_mmhg ?? "—"} mmHg</strong> · PAD:{" "}
+            <strong>{drug.dbp_reduction_mmhg ?? "—"} mmHg</strong>
+          </p>
+          {drug.bp_evidence_source && <small>{drug.bp_evidence_source}</small>}
+        </section>
+      )}
+
+      <div className="grade grade--2" style={{ marginTop: "0.8rem" }}>
+        <section className="cartao"><p className="eyebrow">Mecanismo</p><p>{drug.mechanism || "Sem dado publicado."}</p></section>
+        <section className="cartao"><p className="eyebrow">Dose e administração</p><p>{textoEstruturado(drug.dosing)}</p></section>
+        <section className="cartao"><p className="eyebrow">Indicações</p><Lista itens={drug.indications} /></section>
+        <section className="cartao"><p className="eyebrow">Monitorização</p><Lista itens={drug.monitoring} /></section>
+        <section className="cartao"><p className="eyebrow">Ajuste renal</p><p>{drug.renal_adjustment || "Sem dado publicado."}</p></section>
+        <section className="cartao"><p className="eyebrow">Ajuste hepático</p><p>{drug.hepatic_adjustment || "Sem dado publicado."}</p></section>
+        <section className="cartao"><p className="eyebrow">Contraindicações</p><Lista itens={drug.contraindications} /></section>
+        <section className="cartao"><p className="eyebrow">Efeitos adversos</p><Lista itens={drug.adverse_effects} /></section>
+      </div>
+
+      <section className="cartao" style={{ marginTop: "0.8rem" }}>
+        <p className="eyebrow">Marcas e apresentações comerciais — CMED</p>
+        {drug.cmed.presentations.length === 0 ? (
+          <p>Não há apresentação vinculada à lista CMED atual.</p>
+        ) : (
+          <div style={{ overflowX: "auto" }}>
+            <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.84rem" }}>
+              <thead><tr><th>Produto</th><th>Laboratório</th><th>Apresentação</th><th>PMC</th></tr></thead>
+              <tbody>
+                {drug.cmed.presentations.map((item) => (
+                  <tr key={`${item.ggrem}-${item.presentation}`}>
+                    <td>{item.brand_name}</td><td>{item.manufacturer}</td><td>{item.presentation}</td><td>{dinheiro(item.pmc)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+        <p className="eyebrow" style={{ marginTop: "0.5rem" }}>
+          Lista {drug.cmed.published_at ?? "não importada"} · UF {drug.cmed.uf ?? "não definida"}. PMC é teto regulatório, não preço final.
+        </p>
+      </section>
+
+      {drug.references.length > 0 && (
+        <section className="cartao" style={{ marginTop: "0.8rem" }}><p className="eyebrow">Fontes</p><Lista itens={drug.references} /></section>
+      )}
+    </article>
+  );
 }
 
 export default function Medicamentos() {
-  const { usuario } = useAuth();
-  const [todos, setTodos] = useState<Item[] | null>(null);
+  const [lista, setLista] = useState<Item[] | null>(null);
   const [busca, setBusca] = useState("");
-  const [classe, setClasse] = useState("");
-  const [sel, setSel] = useState<string[]>([]);
-  const [comparacao, setComparacao] = useState<Detalhe[] | null>(null);
+  const [grupo, setGrupo] = useState("");
+  const [aberto, setAberto] = useState<string | null>(null);
+  const [selecionados, setSelecionados] = useState<string[]>([]);
+  const [detalhe, setDetalhe] = useState<Insight | null>(null);
+  const [comparacao, setComparacao] = useState<Comparacao | null>(null);
+  const [carregando, setCarregando] = useState(false);
+  const [erro, setErro] = useState("");
 
-  useEffect(() => { api.get<Item[]>("/drugs").then(setTodos); }, []);
+  useEffect(() => {
+    api.get<Item[]>("/drugs").then(setLista).catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível carregar."));
+  }, []);
 
   const grupos = useMemo(() => {
-    if (!todos) return [];
-    const contagem = new Map<string, number>();
-    for (const d of todos) {
-      const g = classeAmpla(d.drug_class);
-      contagem.set(g, (contagem.get(g) ?? 0) + 1);
-    }
-    return [...contagem.entries()].sort((a, b) => b[1] - a[1]);
-  }, [todos]);
+    const valores = new Set((lista ?? []).map((item) => grupoAmplo(item.drug_class)));
+    return [...valores].sort((a, b) => a.localeCompare(b, "pt-BR"));
+  }, [lista]);
 
-  const lista = useMemo(() => {
-    if (!todos) return null;
-    const termo = busca.trim().toLowerCase();
-    return todos.filter((d) => {
-      const bateBusca = !termo || d.generic_name.toLowerCase().includes(termo);
-      const bateClasse = !classe || classeAmpla(d.drug_class) === classe;
-      return bateBusca && bateClasse;
+  const filtrados = useMemo(() => {
+    const termo = busca.trim().toLocaleLowerCase("pt-BR");
+    return (lista ?? []).filter((item) => {
+      const pertence = !grupo || grupoAmplo(item.drug_class) === grupo;
+      const casa = !termo || `${item.generic_name} ${item.drug_class}`.toLocaleLowerCase("pt-BR").includes(termo);
+      return pertence && casa;
     });
-  }, [todos, busca, classe]);
+  }, [lista, busca, grupo]);
 
-  function alternar(slug: string) {
+  async function visualizar(slug: string) {
+    setCarregando(true); setErro(""); setComparacao(null);
+    try {
+      const resposta = await api.get<Insight>(`/drug-insights/${slug}`);
+      setDetalhe(resposta);
+      requestAnimationFrame(() => document.getElementById(`medicamento-${slug}`)?.scrollIntoView({ behavior: "smooth" }));
+    } catch (e) {
+      setErro(e instanceof ApiError ? e.message : "Não foi possível abrir o medicamento.");
+    } finally { setCarregando(false); }
+  }
+
+  function alternarComparacao(slug: string) {
+    setSelecionados((atuais) => {
+      if (atuais.includes(slug)) return atuais.filter((item) => item !== slug);
+      if (atuais.length >= 4) return atuais;
+      return [...atuais, slug];
+    });
     setComparacao(null);
-    setSel((s) => (s.includes(slug) ? s.filter((x) => x !== slug) : s.length < 4 ? [...s, slug] : s));
   }
 
   async function comparar() {
-    const qs = sel.map((s) => `slug=${encodeURIComponent(s)}`).join("&");
-    const r = await api.get<{ drugs: Detalhe[] }>(`/drugs/compare?${qs}`);
-    setComparacao(r.drugs);
+    if (selecionados.length < 2) return;
+    setCarregando(true); setErro(""); setDetalhe(null);
+    try {
+      setComparacao(await api.post<Comparacao>("/drug-insights/compare", { slugs: selecionados }));
+      requestAnimationFrame(() => document.getElementById("comparacao-medicamentos")?.scrollIntoView({ behavior: "smooth" }));
+    } catch (e) {
+      setErro(e instanceof ApiError ? e.message : "Não foi possível comparar.");
+    } finally { setCarregando(false); }
   }
 
-  async function recomparar() {
-    const qs = sel.map((s) => `slug=${encodeURIComponent(s)}`).join("&");
-    const r = await api.get<{ drugs: Detalhe[] }>(`/drugs/compare?${qs}`);
-    setComparacao(r.drugs);
-  }
+  if (!lista && !erro) return <Carregando />;
+
+  const pas = comparacao?.drugs.flatMap((drug) => drug.sbp_reduction_mmhg == null ? [] : [{ label: `${drug.generic_name} — PAS`, value: drug.sbp_reduction_mmhg, detail: drug.bp_evidence_source ?? undefined }]) ?? [];
+  const pad = comparacao?.drugs.flatMap((drug) => drug.dbp_reduction_mmhg == null ? [] : [{ label: `${drug.generic_name} — PAD`, value: drug.dbp_reduction_mmhg }]) ?? [];
+  const meiasVidas = comparacao?.drugs.flatMap((drug) => drug.half_life_hours == null ? [] : [{ label: drug.generic_name, value: drug.half_life_hours, detail: drug.half_life_note ?? undefined }]) ?? [];
+  const duracoes = comparacao?.drugs.flatMap((drug) => drug.duration_of_action_hours == null ? [] : [{ label: drug.generic_name, value: drug.duration_of_action_hours, detail: drug.duration_of_action_note ?? undefined }]) ?? [];
 
   return (
     <>
       <p className="eyebrow">Farmacologia</p>
       <h1>Medicamentos</h1>
+      <p style={{ color: "var(--texto-secundario)", maxWidth: "70ch" }}>
+        Clique em um medicamento e escolha entre visualizar o verbete completo ou adicioná-lo a uma comparação de até quatro opções.
+      </p>
 
-      <input
-        value={busca}
-        onChange={(e) => setBusca(e.target.value)}
-        placeholder="Buscar por nome — ex.: losartana, enalapril, digoxina…"
-        aria-label="Buscar medicamento"
-        style={{ maxWidth: 420, marginTop: "0.8rem" }}
-      />
+      <div className="grade grade--2" style={{ marginTop: "0.8rem" }}>
+        <div><label>Buscar</label><input value={busca} onChange={(e) => setBusca(e.target.value)} placeholder="Nome genérico ou classe" /></div>
+        <div><label>Grupo terapêutico</label><select value={grupo} onChange={(e) => setGrupo(e.target.value)}><option value="">Todos</option>{grupos.map((item) => <option key={item}>{item}</option>)}</select></div>
+      </div>
 
-      {grupos.length > 0 && (
-        <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginTop: "0.7rem" }}>
-          <button
-            className={`botao ${classe ? "botao--secundario" : ""}`}
-            style={{ padding: "0.3rem 0.7rem", fontSize: "0.8rem" }}
-            onClick={() => setClasse("")}
-          >
-            Todas ({todos?.length})
-          </button>
-          {grupos.map(([g, n]) => (
-            <button
-              key={g}
-              className={`botao ${classe === g ? "" : "botao--secundario"}`}
-              style={{ padding: "0.3rem 0.7rem", fontSize: "0.8rem" }}
-              onClick={() => setClasse(g)}
-            >
-              {g} ({n})
-            </button>
-          ))}
+      {selecionados.length > 0 && (
+        <div className="cartao" style={{ margin: "0.9rem 0", position: "sticky", top: 8, zIndex: 4 }}>
+          <strong>Comparação: {selecionados.length}/4</strong>
+          <p style={{ margin: "0.3rem 0" }}>{selecionados.map((slug) => lista?.find((item) => item.slug === slug)?.generic_name ?? slug).join(" · ")}</p>
+          <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+            <button className="botao" onClick={comparar} disabled={selecionados.length < 2 || carregando}>Comparar selecionados</button>
+            <button className="botao botao--secundario" onClick={() => { setSelecionados([]); setComparacao(null); }}>Limpar</button>
+          </div>
         </div>
       )}
 
-      {lista === null ? (
-        <Carregando />
-      ) : lista.length === 0 ? (
-        <div style={{ marginTop: "1rem" }}>
-          <Vazio
-            titulo={busca || classe ? "Nenhum medicamento encontrado" : "O banco de medicamentos está vazio"}
-            acao={busca || classe ? "Tente outro termo ou outra classe." : "Importe os registros pelo painel de administração."}
-          />
+      {erro && <p role="alert" style={{ color: "var(--alerta)" }}>{erro}</p>}
+      {filtrados.length === 0 ? <Vazio titulo="Nenhum medicamento encontrado" /> : (
+        <div className="grade grade--3" style={{ marginTop: "1rem" }}>
+          {filtrados.map((item) => {
+            const expandido = aberto === item.slug;
+            const marcado = selecionados.includes(item.slug);
+            return (
+              <article key={item.slug} className="cartao" style={{ borderLeft: marcado ? "4px solid var(--acento)" : undefined }}>
+                <button type="button" onClick={() => setAberto(expandido ? null : item.slug)} style={{ display: "block", width: "100%", textAlign: "left", border: 0, background: "transparent", padding: 0, cursor: "pointer", color: "inherit" }} aria-expanded={expandido}>
+                  <p className="eyebrow">{grupoAmplo(item.drug_class)}</p>
+                  <h3>{item.generic_name}</h3>
+                  <p style={{ color: "var(--texto-secundario)", fontSize: "0.82rem" }}>{item.drug_class}</p>
+                  <SeloRevisao status={item.review_status} />
+                </button>
+                {expandido && (
+                  <div style={{ display: "grid", gap: 8, marginTop: "0.8rem", borderTop: "1px solid var(--linha)", paddingTop: "0.7rem" }}>
+                    <button className="botao" onClick={() => visualizar(item.slug)}>Visualizar</button>
+                    <button className="botao botao--secundario" onClick={() => alternarComparacao(item.slug)}>
+                      {marcado ? "Remover da comparação" : "Comparar"}
+                    </button>
+                  </div>
+                )}
+              </article>
+            );
+          })}
         </div>
-      ) : (
-        <>
-          <p style={{ color: "var(--texto-secundario)", marginTop: "0.9rem" }}>
-            Selecione um medicamento para ver os detalhes, ou até 4 para comparar lado a lado.
-          </p>
-          <div className="grade grade--3" style={{ marginTop: "0.8rem" }}>
-            {lista.map((d) => (
-              <button
-                key={d.slug}
-                onClick={() => alternar(d.slug)}
-                className="cartao"
-                style={{
-                  textAlign: "left",
-                  cursor: "pointer",
-                  borderLeft: sel.includes(d.slug) ? "3px solid var(--acento)" : undefined,
-                }}
-              >
-                <p className="eyebrow">{classeAmpla(d.drug_class)}</p>
-                <strong>{d.generic_name}</strong>
-                <div style={{ fontSize: "0.78rem", color: "var(--texto-secundario)", marginTop: 2 }}>
-                  {d.drug_class}
-                </div>
-                <div style={{ marginTop: 6 }}><SeloRevisao status={d.review_status} /></div>
-              </button>
-            ))}
+      )}
+
+      {carregando && <Carregando texto="Carregando dados farmacológicos…" />}
+      {detalhe && <div style={{ marginTop: "2rem" }}><ResumoFarmaco drug={detalhe} /></div>}
+
+      {comparacao && (
+        <section id="comparacao-medicamentos" style={{ marginTop: "2rem", scrollMarginTop: "1rem" }}>
+          <p className="eyebrow">Comparação</p>
+          <h2>{comparacao.drugs.map((drug) => drug.generic_name).join(" × ")}</h2>
+          <div className="grade grade--3">
+            <Grafico titulo="Redução média de PAS" series={pas} unidade="mmHg" />
+            <Grafico titulo="Redução média de PAD" series={pad} unidade="mmHg" />
+            <Grafico titulo="Meia-vida" series={meiasVidas} unidade="h" />
+            <Grafico titulo="Tempo de ação" series={duracoes} unidade="h" />
           </div>
 
-          <button
-            className="botao"
-            style={{ marginTop: "1rem" }}
-            onClick={comparar}
-            disabled={sel.length < 1}
-          >
-            {sel.length <= 1 ? "Ver detalhes" : `Comparar (${sel.length})`}
-          </button>
-        </>
-      )}
+          <div style={{ overflowX: "auto", marginTop: "1rem" }}>
+            <table style={{ width: "100%", minWidth: 760, borderCollapse: "collapse" }}>
+              <thead><tr><th>Medicamento</th><th>Classe</th><th>Marcas</th><th>PMC médio</th><th>Ajuste renal</th><th>Monitorização</th></tr></thead>
+              <tbody>{comparacao.drugs.map((drug) => <tr key={drug.slug}><td><strong>{drug.generic_name}</strong></td><td>{drug.drug_class}</td><td>{drug.cmed.presentations.slice(0, 6).map((item) => item.brand_name).filter((nome, indice, listaNomes) => listaNomes.indexOf(nome) === indice).join(", ") || drug.brand_names.join(", ") || "—"}</td><td>{dinheiro(drug.cmed.average_pmc)}</td><td>{drug.renal_adjustment || "—"}</td><td>{drug.monitoring.join("; ") || "—"}</td></tr>)}</tbody>
+            </table>
+          </div>
 
-      {comparacao && (
-        <div className="grade grade--2" style={{ marginTop: "1.4rem" }}>
-          {comparacao.map((d) => (
-            <div key={d.slug} className="cartao cartao--clinico">
-              <p className="eyebrow">{classeAmpla(d.drug_class)}</p>
-              <h3 style={{ marginBottom: "0.7rem" }}>{d.generic_name}</h3>
-              <div style={{ display: "flex", flexDirection: "column", gap: "0.6rem" }}>
-                {LINHAS.map(([campo, rotulo]) => {
-                  const valor = celula(d[campo]);
-                  if (valor === "—") return null;
-                  return (
-                    <div key={campo}>
-                      <div className="eyebrow" style={{ marginBottom: 2 }}>{rotulo}</div>
-                      <div style={{ fontSize: "0.9rem" }}>{valor}</div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
-
-      {comparacao && (
-        <>
-          <GraficoEficaciaPA drogas={comparacao} />
-          <GraficoMeiaVida drogas={comparacao} admin={usuario?.role === "admin"} aoSalvar={recomparar} />
-        </>
+          <div className="cartao" style={{ marginTop: "1rem" }}><p className="eyebrow">Limitações</p><Lista itens={comparacao.warnings} /></div>
+        </section>
       )}
     </>
   );
