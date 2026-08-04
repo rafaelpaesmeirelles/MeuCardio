@@ -2,6 +2,10 @@
 
 Data: 04/08/2026
 
+## Estado da implementação
+
+O primeiro lote funcional está na branch do PR #42 para certificação: perfil profissional ampliado, forma de tratamento, local de trabalho, contraste automático da logo e pesquisa dos históricos. Os modelos regulados permanecem bloqueados até a reprodução e validação dos formulários oficiais vigentes.
+
 ## Contexto observado
 
 O receituário de exemplo enviado pelo proprietário mostrou três falhas concretas:
