@@ -783,3 +783,42 @@
 .logo-profissional-preview--escuro,
 .doc-cabecalho__logo-pessoal-placa--escura { background: var(--primaria); }
 .doc-cabecalho__logo-pessoal { max-width: 96px; max-height: 64px; object-fit: contain; }
+
+
+/* Atalhos flutuantes: Emergência e CorvIA Chat */
+.emerg-atalho {
+  position: fixed;
+  right: 84px;
+  bottom: 78px;
+  z-index: 1199;
+  width: 56px;
+  height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 2px solid var(--branco);
+  border-radius: 50%;
+  background: var(--acao);
+  color: var(--branco);
+  box-shadow: 0 4px 14px rgba(176, 0, 26, 0.34);
+  cursor: pointer;
+  transition: transform 0.12s ease, background 0.12s ease;
+}
+.emerg-atalho:hover {
+  background: var(--acao-hover);
+  transform: translateY(-1px);
+}
+.emerg-atalho:active { transform: translateY(0); }
+
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}

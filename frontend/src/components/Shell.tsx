@@ -37,12 +37,14 @@ const NAV_BASE: ItemNav[] = [
   { to: "/telediagnostico", rotulo: "Laudo e consultoria", curto: "Laudo" },
   { to: "/material-paciente", rotulo: "Material para o paciente", curto: "Paciente" },
   { to: "/medicamentos", rotulo: "Medicamentos", curto: "Fármacos" },
-  { to: "/indicadores", rotulo: "Meus indicadores", curto: "Indicadores" },
-  { to: "/", rotulo: "Painel", curto: "Painel", fim: true },
   { to: "/receituario", rotulo: "Prescrição Eletrônica", curto: "Prescrição" },
   { to: "/round", rotulo: "Round hospitalar", curto: "Round" },
   { to: "/trilhas", rotulo: "Trilhas de estudo", curto: "Trilhas" },
 ];
+
+const PAINEL: ItemNav = { to: "/", rotulo: "Painel", curto: "Painel", fim: true };
+const INDICADORES: ItemNav = { to: "/indicadores", rotulo: "Meus indicadores", curto: "Indicadores" };
+const CONTA: ItemNav = { to: "/minha-conta", rotulo: "Minha conta", curto: "Conta" };
 
 export default function Shell() {
   const { usuario, sair } = useAuth();
@@ -67,17 +69,23 @@ export default function Shell() {
     setBuscaTopo("");
   }
 
-  const CONTA: ItemNav = { to: "/minha-conta", rotulo: "Minha conta", curto: "Conta" };
+  const ADMIN: ItemNav = {
+    to: "/admin",
+    rotulo: pendentes > 0 ? `Administração (${pendentes})` : "Administração",
+    curto: pendentes > 0 ? `Admin (${pendentes})` : "Admin",
+  };
 
-  const nav: ItemNav[] =
-    usuario?.role === "admin"
-      ? [...NAV_BASE, {
-          to: "/admin",
-          rotulo: pendentes > 0 ? `Administração (${pendentes})` : "Administração",
-          curto: pendentes > 0 ? `Admin (${pendentes})` : "Admin",
-        }, { to: "/fila-telediagnostico", rotulo: "Fila de telediagnóstico", curto: "Fila" },
-        { to: "/admin/usuarios-online", rotulo: "Usuários online", curto: "Online" }, CONTA]
-      : [...NAV_BASE, CONTA];
+  const nav: ItemNav[] = usuario?.role === "admin"
+    ? [
+        PAINEL,
+        ...NAV_BASE,
+        { to: "/fila-telediagnostico", rotulo: "Fila de telediagnóstico", curto: "Fila" },
+        { to: "/admin/usuarios-online", rotulo: "Usuários online", curto: "Online" },
+        INDICADORES,
+        ADMIN,
+        CONTA,
+      ]
+    : [PAINEL, ...NAV_BASE, INDICADORES, CONTA];
 
   return (
     <div>
@@ -191,7 +199,10 @@ export default function Shell() {
           aria-label="Abrir o modo emergência"
           title="Protocolos de risco imediato de vida"
         >
-          ● Emergência
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="30" height="30">
+            <path d="M9.5 3h5v6.5H21v5h-6.5V21h-5v-6.5H3v-5h6.5V3Z" fill="currentColor" />
+          </svg>
+          <span className="sr-only">Modo Emergência</span>
         </button>
       )}
 </div>
