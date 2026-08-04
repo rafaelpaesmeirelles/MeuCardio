@@ -9,6 +9,7 @@ from app.commands.reconcile_content import (
     _assert_no_rejections,
     _collect_blocking_diagnostics,
     _manifest_slugs,
+    _markdown_slugs,
 )
 
 
@@ -82,6 +83,31 @@ def test_manifesto_com_slug_duplicado_bloqueia_antes_do_upsert(tmp_path):
         _manifest_slugs("evidencias", manifesto)
 
     assert "duplicado" in str(erro.value)
+
+
+@pytest.mark.parametrize("slug", [" exame-x", "exame-x ", " exame-x "])
+def test_manifesto_com_slug_com_espacos_bloqueia_sem_normalizar(tmp_path, slug):
+    manifesto = tmp_path / "metadados.json"
+    manifesto.write_text(
+        json.dumps([{"slug": slug}], ensure_ascii=False),
+        encoding="utf-8",
+    )
+
+    with pytest.raises(RuntimeError, match="slugs com espaços nas extremidades") as erro:
+        _manifest_slugs("exames", manifesto)
+
+    assert "índices: [0]" in str(erro.value)
+
+
+def test_markdown_com_slug_explicito_com_espacos_tambem_bloqueia(tmp_path):
+    documento = tmp_path / "documento.md"
+    documento.write_text(
+        '---\ntitle: Documento\nslug: " documento "\n---\nConteúdo científico.\n',
+        encoding="utf-8",
+    )
+
+    with pytest.raises(RuntimeError, match="slug com espaços nas extremidades"):
+        _markdown_slugs("documentos", tmp_path)
 
 
 @pytest.mark.parametrize(
