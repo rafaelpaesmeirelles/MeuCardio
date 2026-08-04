@@ -5,6 +5,7 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 PAINEL = REPO_ROOT / "frontend/src/pages/Painel.tsx"
+BIBLIOTECA = REPO_ROOT / "frontend/src/pages/Biblioteca.tsx"
 SHELL = REPO_ROOT / "frontend/src/components/Shell.tsx"
 APP = REPO_ROOT / "frontend/src/App.tsx"
 CHAT = REPO_ROOT / "frontend/src/components/ChatFlutuante.tsx"
@@ -44,10 +45,13 @@ def test_rotas_menu_e_widget_de_comunicacao_continuam_publicados():
     assert 'aria-label={naoLidas > 0 ? `Abrir o CorvIA Chat' in chat
 
 
-def test_painel_alerta_admin_quando_corpus_estiver_incompleto():
-    fonte = _fonte(PAINEL)
+def test_painel_e_biblioteca_alertam_quando_corpus_estiver_incompleto():
+    painel = _fonte(PAINEL)
+    biblioteca = _fonte(BIBLIOTECA)
 
-    assert 'catalogo?.integrity_ok === false' in fonte
-    assert "Acervo de produção abaixo do inventário certificado" in fonte
-    assert "4_936" in fonte
-    assert "1_327" in fonte
+    assert 'catalogo?.integrity_ok === false' in painel
+    assert "Acervo de produção abaixo do inventário certificado" in painel
+    assert "4_936" in painel
+    assert "1_327" in painel
+    assert 'catalogo?.integrity_ok === false' in biblioteca
+    assert "Acervo abaixo do inventário certificado" in biblioteca
