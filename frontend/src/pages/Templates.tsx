@@ -11,6 +11,7 @@ type Gerado = { id: number; title: string; doc_type: string; created_at: string;
 type GeradoDetalhe = {
   template_id: number | null;
   variables: Record<string, string> | null;
+  patient_name: string | null;
 };
 
 // Catálogo de métodos de assinatura (Tarefa 4) — GET /assinatura/provedores.
@@ -251,12 +252,21 @@ export default function Templates() {
         setErroGerados("O modelo original não existe mais.");
         return;
       }
-      setValoresIniciais(detalhe.variables ?? {});
+      setValoresIniciais({
+        ...(detalhe.variables ?? {}),
+        nome_paciente: detalhe.patient_name ?? detalhe.variables?.nome_paciente ?? "",
+      });
       setGerandoDe(template);
       document.getElementById(`modelo-${template.id}`)?.scrollIntoView({ behavior: "smooth", block: "center" });
     } catch (e) {
       setErroGerados(e instanceof ApiError ? e.message : "Não foi possível recriar este documento.");
     }
+  }
+
+  const gruposGerados = new Map<string, Gerado[]>();
+  for (const gerado of gerados ?? []) {
+    const paciente = gerado.patient_name?.trim() || "Paciente não informado";
+    gruposGerados.set(paciente, [...(gruposGerados.get(paciente) ?? []), gerado]);
   }
 
   return (
@@ -342,31 +352,37 @@ export default function Templates() {
       ) : gerados.length === 0 ? (
         <Vazio titulo="Nenhum documento gerado ainda" />
       ) : (
-        gerados.map((g) => (
-          <div key={g.id} className="cartao" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.5rem" }}>
-            <div>
-              <p className="eyebrow" style={{ margin: 0 }}>{RÓTULO[g.doc_type] ?? g.doc_type}</p>
-              <strong>{g.patient_name ?? "Paciente não informado"}</strong>
-              <div style={{ fontSize: "0.86rem" }}>{g.title}</div>
-              <p style={{ margin: 0, fontSize: "0.8rem", color: "var(--texto-secundario)" }}>
-                {new Date(g.created_at).toLocaleString("pt-BR")}
-              </p>
-            </div>
-            <div style={{ display: "flex", gap: 6 }}>
-              <button className="botao botao--secundario" style={{ padding: "0.3rem 0.6rem" }}
-                      onClick={() => recriarBaseadoEm(g.id)}>
-                Recriar baseado neste
-              </button>
-              <button className="botao botao--secundario" style={{ padding: "0.3rem 0.6rem" }}
-                      onClick={async () => {
-                        const blob = await api.blob(`/document-templates/gerados/${g.id}/pdf`);
-                        baixarBlob(blob, `${g.doc_type}-${g.id}.pdf`);
-                      }}>
-                Baixar PDF
-              </button>
-            </div>
-          </div>
-        ))
+        [...gruposGerados.entries()]
+          .sort(([a], [b]) => a.localeCompare(b, "pt-BR"))
+          .map(([paciente, documentos]) => (
+            <section key={paciente} style={{ marginBottom: "1rem" }}>
+              <h3 style={{ marginBottom: "0.45rem" }}>{paciente}</h3>
+              {documentos.map((g) => (
+                <div key={g.id} className="cartao" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.5rem" }}>
+                  <div>
+                    <p className="eyebrow" style={{ margin: 0 }}>{RÓTULO[g.doc_type] ?? g.doc_type}</p>
+                    <strong>{g.title}</strong>
+                    <p style={{ margin: 0, fontSize: "0.8rem", color: "var(--texto-secundario)" }}>
+                      {new Date(g.created_at).toLocaleString("pt-BR")}
+                    </p>
+                  </div>
+                  <div style={{ display: "flex", gap: 6 }}>
+                    <button className="botao botao--secundario" style={{ padding: "0.3rem 0.6rem" }}
+                            onClick={() => recriarBaseadoEm(g.id)}>
+                      Recriar baseado neste
+                    </button>
+                    <button className="botao botao--secundario" style={{ padding: "0.3rem 0.6rem" }}
+                            onClick={async () => {
+                              const blob = await api.blob(`/document-templates/gerados/${g.id}/pdf`);
+                              baixarBlob(blob, `${g.doc_type}-${g.id}.pdf`);
+                            }}>
+                      Baixar PDF
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </section>
+          ))
       )}
     </>
   );
