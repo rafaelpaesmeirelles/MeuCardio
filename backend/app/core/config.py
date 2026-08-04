@@ -1,8 +1,10 @@
 from pydantic import model_validator
-from pydantic_settings import BaseSettings
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
+    model_config = SettingsConfigDict(env_file=".env", case_sensitive=False)
+
     # Preferível deixar essas três — não a DATABASE_URL inteira — porque é
     # o que o container oficial do Postgres já lê (POSTGRES_USER/PASSWORD/DB).
     # Ter uma DATABASE_URL solta e desincronizada foi a causa de um bug real
@@ -174,10 +176,6 @@ class Settings(BaseSettings):
                 f"@{self.postgres_host}:{self.postgres_port}/{self.postgres_db}"
             )
         return self
-
-    class Config:
-        env_file = ".env"
-        case_sensitive = False
 
 
 settings = Settings()
