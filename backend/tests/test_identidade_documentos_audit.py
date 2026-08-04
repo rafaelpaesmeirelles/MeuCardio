@@ -45,3 +45,19 @@ def test_link_publico_preserva_modelo_da_receita_controle_especial():
     assert "receita_controle_especial(" in source
     assert 'identidade["cpf"]' in source
     assert "cid=doc.cid" in source
+
+
+def test_admin_envia_todos_os_campos_profissionais_ao_backend():
+    source = (ROOT.parent / "frontend/src/pages/Admin.tsx").read_text(encoding="utf-8")
+    for field in (
+        "profession", "council_name", "council_number", "council_state",
+        "specialty", "professional_title", "workplace_name",
+        "workplace_department", "workplace_role", "workplace_notes",
+        "include_workplace_on_documents", "profile_completion_required",
+    ):
+        assert f"{field}: novo.{field}" in source, field
+
+
+def test_rce_respeita_opt_in_do_local_de_trabalho():
+    source = _ler("app/services/receita_controle_especial.py")
+    assert 'include_workplace_on_documents' in source

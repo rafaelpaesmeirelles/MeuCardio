@@ -96,7 +96,8 @@ export default function Admin() {
     email: "", full_name: "", crm: "", profession: "", council_name: "CRM",
     council_number: "", council_state: "", specialty: "", professional_title: "",
     workplace_name: "", workplace_department: "", workplace_role: "", workplace_notes: "",
-    include_workplace_on_documents: false, role: "medico", password: "",
+    include_workplace_on_documents: false, profile_completion_required: false,
+    role: "medico", password: "",
   });
 
   const recarregar = () =>
@@ -112,13 +113,26 @@ export default function Admin() {
         email: novo.email.trim(),
         full_name: novo.full_name.trim(),
         crm: novo.crm.trim() || null,
+        profession: novo.profession.trim() || null,
+        council_name: novo.council_name || null,
+        council_number: novo.council_number.trim() || null,
+        council_state: novo.council_state || null,
+        specialty: novo.specialty.trim() || null,
+        professional_title: novo.professional_title || null,
+        workplace_name: novo.workplace_name.trim() || null,
+        workplace_department: novo.workplace_department.trim() || null,
+        workplace_role: novo.workplace_role.trim() || null,
+        workplace_notes: novo.workplace_notes.trim() || null,
+        include_workplace_on_documents: novo.include_workplace_on_documents,
+        profile_completion_required: novo.profile_completion_required,
         role: novo.role,
         password: novo.password,
       });
       setNovo({ email: "", full_name: "", crm: "", profession: "", council_name: "CRM",
         council_number: "", council_state: "", specialty: "", professional_title: "",
         workplace_name: "", workplace_department: "", workplace_role: "", workplace_notes: "",
-        include_workplace_on_documents: false, role: "medico", password: "" });
+        include_workplace_on_documents: false, profile_completion_required: false,
+        role: "medico", password: "" });
       recarregar();
     } catch (e) {
       setErro(e instanceof Error ? e.message : "Não foi possível criar o usuário.");
@@ -253,6 +267,11 @@ export default function Admin() {
               <input type="checkbox" style={{ width: "auto" }} checked={novo.include_workplace_on_documents}
                      onChange={(e) => setNovo({ ...novo, include_workplace_on_documents: e.target.checked })} />
               Incluir local de trabalho nos documentos
+            </label>
+            <label style={{ display: "flex", gap: 8, alignItems: "center", fontWeight: 400, marginTop: 8 }}>
+              <input type="checkbox" style={{ width: "auto" }} checked={novo.profile_completion_required}
+                     onChange={(e) => setNovo({ ...novo, profile_completion_required: e.target.checked })} />
+              No primeiro acesso, direcionar para completar dados pessoais e profissionais
             </label>
             <div style={{ marginTop: "0.9rem" }}>
               <label htmlFor="senha">Senha temporária</label>

@@ -226,7 +226,10 @@ def _frente(c: canvas.Canvas, *, via: int, destinatario: dict, itens: list[dict]
     for linha in _linhas(nome_registro, "Helvetica-Bold", 8.8, largura_texto)[:2]:
         c.drawString(x_texto, y, linha)
         y -= 4.2 * mm
-    instituicao = _texto(_valor(medico, "workplace_name"))
+    instituicao = (
+        _texto(_valor(medico, "workplace_name"))
+        if bool(_valor(medico, "include_workplace_on_documents")) else ""
+    )
     if instituicao:
         c.setFont("Helvetica", 8.4)
         for linha in _linhas(instituicao, "Helvetica", 8.4, largura_texto)[:2]:
