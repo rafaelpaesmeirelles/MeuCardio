@@ -18,6 +18,10 @@ type CatalogFront = {
 type Catalog = {
   total: number;
   fronts: CatalogFront[];
+  expected_minimum?: number;
+  physical_files_expected?: number;
+  integrity_ok?: boolean;
+  missing?: number;
 };
 
 type DocumentPage = {
@@ -86,6 +90,22 @@ export default function Biblioteca() {
         <p style={{ color: "var(--texto-secundario)", marginTop: "-0.35rem" }}>
           {catalogo.total.toLocaleString("pt-BR")} itens publicados em {catalogo.fronts.length} coleções.
         </p>
+      )}
+
+      {catalogo?.integrity_ok === false && (
+        <section
+          className="cartao"
+          role="alert"
+          style={{ borderColor: "var(--acao)", marginBottom: "1rem" }}
+        >
+          <strong>Acervo abaixo do inventário certificado</strong>
+          <p style={{ marginBottom: 0 }}>
+            Esta instalação contém {catalogo.total.toLocaleString("pt-BR")} itens. O mínimo certificado é
+            {(catalogo.expected_minimum ?? 4_936).toLocaleString("pt-BR")}; faltam
+            {(catalogo.missing ?? 0).toLocaleString("pt-BR")} registros. O inventário preserva também
+            {(catalogo.physical_files_expected ?? 1_327).toLocaleString("pt-BR")} arquivos físicos.
+          </p>
+        </section>
       )}
 
       {catalogo === null ? (
