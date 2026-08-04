@@ -121,6 +121,7 @@ def import_directory(path: str | None = None) -> dict:
     db = SessionLocal()
     novos = atualizados = inalterados = 0
     duplicados: list[str] = []
+    vazios: list[str] = []
     falhas: list[str] = []
     vistos_neste_lote: dict[str, str] = {}  # slug -> caminho do arquivo já processado
 
@@ -130,6 +131,9 @@ def import_directory(path: str | None = None) -> dict:
                 post = frontmatter.load(md)
                 meta, body = post.metadata, post.content.strip()
                 if not body:
+                    vazios.append(
+                        f"{md.relative_to(root)} (arquivo sem corpo Markdown; ignorado)"
+                    )
                     continue
 
                 title = meta.get("title") or md.stem
@@ -216,6 +220,8 @@ def import_directory(path: str | None = None) -> dict:
     }
     if duplicados:
         resultado["duplicados_ignorados"] = duplicados
+    if vazios:
+        resultado["vazios"] = vazios
     if falhas:
         resultado["falhas"] = falhas
     return resultado

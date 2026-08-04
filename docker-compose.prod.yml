@@ -3,8 +3,7 @@
 # banco e cache não expostos à internet.
 #
 #   cp .env.example .env    # preencha DOMAIN, senhas e OPENAI_API_KEY
-#   docker compose -f docker-compose.prod.yml up -d --build
-#   docker compose -f docker-compose.prod.yml exec backend python -m app.commands.create_admin
+#   ./deploy.sh             # fluxo certificado de backup, corpus e readiness
 #
 services:
   db:
@@ -40,6 +39,9 @@ services:
     env_file: .env
     environment:
       ENVIRONMENT: production
+      # Injetado por deploy.sh a partir de git rev-parse HEAD. Permite comprovar
+      # externamente qual revisão está atendendo em /api/version.
+      DEPLOY_COMMIT: ${DEPLOY_COMMIT:-unknown}
     depends_on:
       db:
         condition: service_healthy
@@ -55,23 +57,18 @@ services:
       - ./checklists:/checklists:ro
       - ./trilhas:/trilhas:ro
       # Material educativo do paciente (Tarefa 12). Somente-leitura como as
-      # demais frentes de conteudo: o backend le, nunca escreve.
+      # demais frentes de conteúdo: o backend lê, nunca escreve.
       - ./material-paciente:/material-paciente:ro
       - ./emergencia:/emergencia:ro
       - ./casos-clinicos:/casos-clinicos:ro
       # Listas da Portaria 344/98 e regras de adendo (Tarefa 27).
       - ./controlados:/controlados:ro
       - ./backend/migrations/versions:/app/migrations/versions
-      # Único volume gravável pelo backend: arquivos enviados pelo usuário
-      # (foto de perfil). O Caddy monta o mesmo volume como somente-leitura.
+      # Único volume gravável pelo backend: arquivos enviados pelo usuário.
       - userfiles:/uploads
-      # Exames de paciente, cifrados em repouso. Este volume NAO e montado no
-      # Caddy de proposito: arquivo de exame nao pode ter URL alcancavel de
-      # fora, o acesso passa obrigatoriamente pela rota autenticada que audita.
+      # Exames de paciente, cifrados em repouso e servidos por rota autenticada.
       - examefiles:/exames-pacientes
-      # PDF de receita/documento emitido, cifrado em repouso (Tarefa 4).
-      # Mesmo motivo do examefiles: nao montado no Caddy, so rota autenticada
-      # ou link publico com token servem o arquivo.
+      # PDFs de receita/documento emitidos, cifrados em repouso.
       - documentofiles:/documentos-emitidos
       - cursofiles:/materiais-curso
     command: ["sh", "-c", "python -m app.commands.migrate && exec uvicorn app.main:app --host 0.0.0.0 --port 8000 --workers 2"]
