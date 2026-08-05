@@ -153,6 +153,31 @@ def list_documents(
     }
 
 
+@router.get("/presentation-options")
+def presentation_options(db: Session = Depends(get_db), _=Depends(current_user)):
+    """Catálogo leve e completo usado pelo Modo Apresentação.
+
+    Evita baixar seis páginas do objeto científico completo (tags, lacunas,
+    metadados de revisão) para uma tela que precisa apenas identificar e
+    selecionar o documento. Uma única resposta também elimina a falha parcial
+    em que cinco páginas carregavam e a sexta derrubava todo o catálogo.
+    """
+    documents = (
+        db.query(Document)
+        .filter(Document.published.is_(True))
+        .order_by(Document.theme, Document.title, Document.id)
+        .all()
+    )
+    return [{
+        "slug": document.slug,
+        "title": document.title,
+        "theme": document.theme,
+        "kind": document.kind,
+        "summary": document.summary,
+        "review_status": document.review_status,
+    } for document in documents]
+
+
 @router.get("/documents/{slug}")
 def get_document(slug: str, db: Session = Depends(get_db), _=Depends(current_user)):
     d = db.query(Document).filter(Document.slug == slug, Document.published.is_(True)).first()

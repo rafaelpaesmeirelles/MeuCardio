@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { api } from "../lib/api";
-import { Carregando, Vazio } from "../components/Estado";
+import { Carregando, Erro, Vazio } from "../components/Estado";
 
 type Item = {
   slug: string; title: string; modality: string; theme: string;
@@ -14,20 +14,28 @@ export default function Galeria() {
   const [modalidades, setModalidades] = useState<{ modality: string; count: number }[]>([]);
   const [busca, setBusca] = useState("");
   const [itens, setItens] = useState<Item[] | null>(null);
+  const [erro, setErro] = useState("");
 
   useEffect(() => {
-    api.get<{ modality: string; count: number }[]>("/gallery/modalities").then(setModalidades);
+    api.get<{ modality: string; count: number }[]>("/gallery/modalities")
+      .then(setModalidades)
+      .catch(() => setModalidades([]));
   }, []);
 
   useEffect(() => {
     setItens(null);
+    setErro("");
+    let ativo = true;
     const atraso = setTimeout(() => {
       const qs = new URLSearchParams();
       if (modalidade) qs.set("modality", modalidade);
       if (busca.trim()) qs.set("q", busca.trim());
-      api.get<{ items: Item[] }>(`/gallery/images?${qs}`).then((r) => setItens(r.items));
+      qs.set("limit", "500");
+      api.get<{ items: Item[] }>(`/gallery/images?${qs}`)
+        .then((r) => { if (ativo) setItens(r.items); })
+        .catch((causa) => { if (ativo) setErro(causa instanceof Error ? causa.message : "Não foi possível carregar as imagens."); });
     }, 250);
-    return () => clearTimeout(atraso);
+    return () => { ativo = false; clearTimeout(atraso); };
   }, [modalidade, busca]);
 
   return (
@@ -67,7 +75,9 @@ export default function Galeria() {
         ))}
       </div>
 
-      {itens === null ? (
+      {erro ? (
+        <Erro mensagem={`${erro} Atualize a página; se a falha persistir, o sistema registrará o erro para diagnóstico.`} />
+      ) : itens === null ? (
         <Carregando />
       ) : itens.length === 0 ? (
         <Vazio

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { api } from "../lib/api";
 import { Carregando, Vazio, SeloRevisao } from "../components/Estado";
+import { normalizarBusca } from "../lib/taxonomiaCardiologia";
 
 type Item = {
   slug: string; title: string; theme: string;
@@ -11,6 +12,7 @@ type Item = {
 export default function Fluxogramas() {
   const [params, setParams] = useSearchParams();
   const tema = params.get("tema") ?? "";
+  const [busca, setBusca] = useState("");
   const [itens, setItens] = useState<Item[] | null>(null);
 
   useEffect(() => {
@@ -25,7 +27,12 @@ export default function Fluxogramas() {
   const temas = itens
     ? [...new Set(itens.map((f) => f.theme))].sort((a, b) => a.localeCompare(b, "pt-BR"))
     : [];
-  const visiveis = itens?.filter((f) => !tema || f.theme === tema) ?? null;
+  const termo = normalizarBusca(busca);
+  const visiveis = itens?.filter((f) => {
+    if (tema && f.theme !== tema) return false;
+    if (!termo) return true;
+    return normalizarBusca([f.title, f.theme, f.summary ?? ""].join(" ")).includes(termo);
+  }) ?? null;
 
   return (
     <>
@@ -35,6 +42,18 @@ export default function Fluxogramas() {
         Algoritmos visuais de investigação e tratamento, organizados por patologia
         e fundamentados nas diretrizes vigentes (ESC, AHA/ACC, SBC).
       </p>
+
+      <div className="busca-clinica" role="search">
+        <label htmlFor="busca-fluxograma">Procurar por termo específico</label>
+        <input
+          id="busca-fluxograma"
+          type="search"
+          value={busca}
+          onChange={(event) => setBusca(event.target.value)}
+          placeholder="Ex.: fibrilação atrial, síncope, dor torácica, anticoagulação…"
+        />
+        {busca && <button type="button" onClick={() => setBusca("")}>Limpar busca</button>}
+      </div>
 
       {temas.length > 1 && (
         <div style={{ display: "flex", gap: 6, flexWrap: "wrap", margin: "0.8rem 0 1.2rem" }}>
@@ -62,9 +81,11 @@ export default function Fluxogramas() {
         <Carregando />
       ) : visiveis.length === 0 ? (
         <Vazio
-          titulo={tema ? "Nenhum fluxograma neste tema" : "Nenhum fluxograma publicado ainda"}
+          titulo={busca ? "Nenhum fluxograma corresponde à busca" : tema ? "Nenhum fluxograma neste tema" : "Nenhum fluxograma publicado ainda"}
           acao={
-            tema
+            busca
+              ? "Tente outro termo, uma sigla ou o nome da patologia."
+              : tema
               ? "Escolha outro tema ou veja todos."
               : "Os algoritmos por patologia estão em elaboração e aparecerão aqui conforme forem publicados."
           }

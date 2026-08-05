@@ -65,6 +65,26 @@ def test_library_documents_are_paginated_without_silent_truncation(
     assert all(item["slug"] != "documento-retido" for item in last_body["items"])
 
 
+def test_presentation_options_are_complete_lightweight_and_published_only(
+    client, db, criar_usuario
+):
+    _clear_documents(db)
+    _seed_documents(db)
+    _, token = criar_usuario(role="admin")
+    headers = {"Authorization": f"Bearer {token}"}
+
+    response = client.get("/api/library/presentation-options", headers=headers)
+
+    assert response.status_code == 200
+    body = response.json()
+    assert len(body) == 205
+    assert body[0]["theme"] in {"Arritmias", "Insuficiência cardíaca"}
+    assert all(item["slug"] != "documento-retido" for item in body)
+    assert all(set(item) == {
+        "slug", "title", "theme", "kind", "summary", "review_status",
+    } for item in body)
+
+
 def test_library_catalog_counts_inventory_and_published_separately(
     client, db, criar_usuario, monkeypatch
 ):

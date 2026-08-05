@@ -39,8 +39,8 @@ export default function Entrar() {
         <div className="login-vitrine__luz login-vitrine__luz--dois" aria-hidden="true" />
 
         <Link to="/" className="login-vitrine__marca" aria-label="Corvia — página inicial">
-          <span className="login-vitrine__simbolo" aria-hidden="true"><Icone nome="doencas" /></span>
-          <span><strong>Corvia</strong><small>Ecossistema clínico</small></span>
+          <img src="/corvia-logo.png" alt="Corvia — O caminho do coração" />
+          <span><small>Ecossistema Clínico Cardiológico</small></span>
         </Link>
 
         <div className="login-vitrine__conteudo">

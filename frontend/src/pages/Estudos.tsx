@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../lib/api";
 import { Carregando, Vazio } from "../components/Estado";
+import { areaDaCardiologia } from "../lib/taxonomiaCardiologia";
 
 type Item = { slug: string; title: string; study_type: string; journal: string; year: number; theme: string };
 
@@ -19,21 +20,49 @@ const RÓTULO_TIPO: Record<string, string> = {
 export default function Estudos() {
   const [tipos, setTipos] = useState<{ study_type: string; count: number }[]>([]);
   const [tipo, setTipo] = useState("");
+  const [temas, setTemas] = useState<{ theme: string; count: number }[]>([]);
+  const [tema, setTema] = useState("");
+  const [area, setArea] = useState("");
   const [busca, setBusca] = useState("");
   const [itens, setItens] = useState<Item[] | null>(null);
 
-  useEffect(() => { api.get<{ study_type: string; count: number }[]>("/studies/types").then(setTipos); }, []);
+  useEffect(() => {
+    Promise.all([
+      api.get<{ study_type: string; count: number }[]>("/studies/types"),
+      api.get<{ theme: string; count: number }[]>("/studies/themes"),
+    ]).then(([tiposResposta, temasResposta]) => {
+      setTipos(tiposResposta);
+      setTemas(temasResposta);
+    });
+  }, []);
 
   useEffect(() => {
     setItens(null);
     const atraso = setTimeout(() => {
       const qs = new URLSearchParams();
       if (tipo) qs.set("study_type", tipo);
+      if (tema) qs.set("theme", tema);
       if (busca.trim()) qs.set("q", busca.trim());
+      qs.set("limit", "500");
       api.get<{ items: Item[] }>(`/studies?${qs}`).then((r) => setItens(r.items));
     }, 250);
     return () => clearTimeout(atraso);
-  }, [tipo, busca]);
+  }, [tipo, tema, busca]);
+
+  const areas = useMemo(() => {
+    const agrupadas = new Map<string, { id: string; label: string; count: number }>();
+    temas.forEach((item) => {
+      const encontrada = areaDaCardiologia(item.theme);
+      const atual = agrupadas.get(encontrada.id);
+      agrupadas.set(encontrada.id, { id: encontrada.id, label: encontrada.label, count: (atual?.count ?? 0) + item.count });
+    });
+    return [...agrupadas.values()].sort((a, b) => a.label.localeCompare(b.label, "pt-BR"));
+  }, [temas]);
+
+  const visiveis = useMemo(() => {
+    if (!itens) return null;
+    return itens.filter((item) => !area || areaDaCardiologia(item.theme, item.title).id === area);
+  }, [itens, area]);
 
   return (
     <>
@@ -43,9 +72,11 @@ export default function Estudos() {
         Ensaios clínicos, revisões sistemáticas e metanálises — resumo, principais achados e implicação clínica.
       </p>
 
-      <input value={busca} onChange={(e) => setBusca(e.target.value)}
-             placeholder="Buscar por título — ex.: DAPA-HF, EMPEROR…" aria-label="Buscar estudo"
-             style={{ maxWidth: 420, marginTop: "0.8rem" }} />
+      <section className="filtros-conteudo filtros-conteudo--3">
+        <label><strong>Buscar estudo ou patologia</strong><input value={busca} onChange={(e) => setBusca(e.target.value)} placeholder="Ex.: DAPA-HF, fibrilação atrial, insuficiência cardíaca…" aria-label="Buscar estudo" /></label>
+        <label><strong>Área da Cardiologia</strong><select value={area} onChange={(e) => setArea(e.target.value)}><option value="">Todas as áreas</option>{areas.map((item) => <option key={item.id} value={item.id}>{item.label} ({item.count})</option>)}</select></label>
+        <label><strong>Patologia ou assunto</strong><select value={tema} onChange={(e) => setTema(e.target.value)}><option value="">Todas as patologias</option>{temas.map((item) => <option key={item.theme} value={item.theme}>{item.theme} ({item.count})</option>)}</select></label>
+      </section>
 
       <div style={{ display: "flex", gap: 6, flexWrap: "wrap", margin: "0.8rem 0 1.2rem" }}>
         <button className={`botao ${tipo ? "botao--secundario" : ""}`}
@@ -60,17 +91,17 @@ export default function Estudos() {
         ))}
       </div>
 
-      {itens === null ? (
+      {visiveis === null ? (
         <Carregando />
-      ) : itens.length === 0 ? (
-        <Vazio titulo="Nenhum estudo encontrado" acao="Tente outro termo ou tipo." />
+      ) : visiveis.length === 0 ? (
+        <Vazio titulo="Nenhum estudo encontrado" acao="Tente outro termo, área, patologia ou tipo de estudo." />
       ) : (
         <div className="grade grade--2">
-          {itens.map((s) => (
+          {visiveis.map((s) => (
             <Link key={s.slug} to={`/estudos/${s.slug}`} className="cartao" style={{ textDecoration: "none" }}>
-              <p className="eyebrow">{RÓTULO_TIPO[s.study_type] ?? s.study_type} · {s.year}</p>
+              <p className="eyebrow">{areaDaCardiologia(s.theme, s.title).label} · {s.theme}</p>
               <strong>{s.title}</strong>
-              <div style={{ fontSize: "0.82rem", color: "var(--texto-secundario)", marginTop: 4 }}>{s.journal}</div>
+              <div style={{ fontSize: "0.82rem", color: "var(--texto-secundario)", marginTop: 4 }}>{RÓTULO_TIPO[s.study_type] ?? s.study_type} · {s.journal} · {s.year}</div>
             </Link>
           ))}
         </div>

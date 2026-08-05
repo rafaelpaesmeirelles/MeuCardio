@@ -85,7 +85,14 @@ def _dump(db: Session, t: StudyTrack, prog: StudyTrackProgress | None, com_etapa
 @router.get("")
 def listar(db: Session = Depends(get_db), user: User = Depends(current_user)):
     ts = db.query(StudyTrack).filter(StudyTrack.published.is_(True)).order_by(StudyTrack.titulo).all()
-    return [_dump(db, t, _progresso(db, user.id, t), com_etapas=False) for t in ts]
+    progressos = {
+        progresso.track_id: progresso
+        for progresso in db.query(StudyTrackProgress).filter(
+            StudyTrackProgress.user_id == user.id,
+            StudyTrackProgress.track_id.in_([track.id for track in ts]),
+        ).all()
+    } if ts else {}
+    return [_dump(db, t, progressos.get(t.id), com_etapas=False) for t in ts]
 
 
 @router.get("/{slug}")

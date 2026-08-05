@@ -26,7 +26,7 @@ type Response = {
   has_more: boolean;
 };
 
-type Tab = "catalogo" | "assistentes" | "congenitas" | "fetal";
+type Tab = "catalogo" | "assistentes" | "areas" | "congenitas" | "fetal" | "pediatrica" | "oncologia" | "gestacao" | "outros";
 
 const AREAS = [
   ["", "Todas as áreas"],
@@ -39,9 +39,23 @@ const AREAS = [
 const TAB_LABELS: Record<Tab, string> = {
   catalogo: "Catálogo",
   assistentes: "Assistentes por doença",
+  areas: "Assistentes por áreas da Cardiologia",
   congenitas: "Cardiopatias congênitas",
   fetal: "Cardiologia fetal",
+  pediatrica: "Cardiologia pediátrica",
+  oncologia: "Cardio-Oncologia",
+  gestacao: "Gestação e puerpério",
+  outros: "Outros",
 };
+
+const AREAS_ASSISTENTE = [
+  { area: "cardiopediatria", titulo: "Cardiologia pediátrica", texto: "Infância e adolescência, com assistentes clínicos estruturados.", tab: "pediatrica" as Tab },
+  { area: "cardiopediatria", titulo: "Cardiopatias congênitas", texto: "Anatomia, fisiologia, apresentação e seguimento.", tab: "congenitas" as Tab },
+  { area: "cardiopediatria", titulo: "Cardiologia fetal", texto: "Rastreamento, diagnóstico e planejamento perinatal.", tab: "fetal" as Tab },
+  { area: "cardiooncologia", titulo: "Cardio-Oncologia", texto: "Risco, cardiotoxicidade, monitorização e sobrevivência.", tab: "oncologia" as Tab },
+  { area: "gravidez", titulo: "Gestação e puerpério", texto: "Gravidez, parto, puerpério e amamentação.", tab: "gestacao" as Tab },
+  { area: "cardiogeriatria", titulo: "Outras áreas da Cardiologia", texto: "Cardio-Geriatria e acesso a todas as demais coleções cardiológicas.", tab: "outros" as Tab },
+];
 
 function labelArea(area: string) {
   return AREAS.find(([value]) => value === area)?.[1] ?? area;
@@ -73,6 +87,10 @@ export default function GuiaDoencas() {
     if (tab === "assistentes") result.assistant_only = "true";
     if (tab === "congenitas") result.category = "cardiopatia_congenita";
     if (tab === "fetal") result.category = "cardiologia_fetal";
+    if (tab === "pediatrica") result.area = "cardiopediatria";
+    if (tab === "oncologia") result.area = "cardiooncologia";
+    if (tab === "gestacao") result.area = "gravidez";
+    if (tab === "outros") result.area = "cardiogeriatria";
     if (cyanosis && tab === "congenitas") result.cyanosis_class = cyanosis;
     return result;
   }, [q, area, tab, cyanosis, page]);
@@ -98,11 +116,19 @@ export default function GuiaDoencas() {
     setPage(1);
     setItems([]);
     setCyanosis("");
+    if (!["catalogo", "assistentes"].includes(next)) setArea("");
     const nextParams = new URLSearchParams();
     nextParams.set("tab", next);
     if (q.trim()) nextParams.set("q", q.trim());
-    if (area) nextParams.set("area", area);
+    if (["catalogo", "assistentes"].includes(next) && area) nextParams.set("area", area);
     setParams(nextParams);
+  }
+
+  function abrirAssistentesDaArea(areaSelecionada: string) {
+    setPage(1);
+    setItems([]);
+    setArea(areaSelecionada);
+    setParams({ tab: "assistentes", area: areaSelecionada });
   }
 
   function updateSearch(value: string) {
@@ -136,9 +162,45 @@ export default function GuiaDoencas() {
         ))}
       </div>
 
-      <section className="cartao" style={{ marginTop: "1rem" }}>
+      {tab === "areas" && (
+        <section className="guia-areas" aria-labelledby="assistentes-areas-titulo">
+          <div className="guia-areas__topo">
+            <div>
+              <p className="eyebrow">Navegação especializada</p>
+              <h2 id="assistentes-areas-titulo">Escolha a área da Cardiologia</h2>
+            </div>
+            <p>Entre diretamente nos assistentes estruturados da área ou consulte todo o acervo relacionado.</p>
+          </div>
+          <div className="guia-areas__grade">
+            {AREAS_ASSISTENTE.map((item) => (
+              <article className="cartao guia-area" key={item.titulo}>
+                <span className="guia-area__marca" aria-hidden="true">{item.titulo.slice(0, 2).toUpperCase()}</span>
+                <div><h3>{item.titulo}</h3><p>{item.texto}</p></div>
+                {item.tab === "outros" ? (
+                  <button className="botao botao--secundario" type="button" onClick={() => changeTab("outros")}>Explorar áreas</button>
+                ) : (
+                  <button className="botao botao--secundario" type="button" onClick={() => abrirAssistentesDaArea(item.area)}>Abrir assistentes</button>
+                )}
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {tab === "outros" && (
+        <section className="cartao guia-outros">
+          <div>
+            <p className="eyebrow">Acervo cardiológico completo</p>
+            <h2>Demais áreas e patologias</h2>
+            <p>Além dos guias especializados em Cardio-Geriatria abaixo, a biblioteca reúne arritmias, doença coronariana, insuficiência cardíaca, valvopatias, hipertensão, prevenção, aorta, doença vascular, pericárdio, endocardite e outras coleções.</p>
+          </div>
+          <Link className="botao" to="/biblioteca#documentos">Ver todas as áreas e conteúdos</Link>
+        </section>
+      )}
+
+      {tab !== "areas" && <section className="cartao" style={{ marginTop: "1rem" }}>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 15rem), 1fr))", gap: "0.7rem" }}>
-          <label>
+          {!["pediatrica", "oncologia", "gestacao", "outros"].includes(tab) && <label>
             <strong>Pesquisar</strong>
             <input
               value={q}
@@ -146,7 +208,7 @@ export default function GuiaDoencas() {
               placeholder="Nome, sigla, sinônimo, sintoma ou tema…"
               style={{ marginTop: "0.35rem" }}
             />
-          </label>
+          </label>}
           <label>
             <strong>Área</strong>
             <select
@@ -174,14 +236,14 @@ export default function GuiaDoencas() {
             ))}
           </div>
         )}
-      </section>
+      </section>}
 
-      <p style={{ marginTop: "1rem", color: "var(--texto-secundario)" }}>
+      {tab !== "areas" && <p style={{ marginTop: "1rem", color: "var(--texto-secundario)" }}>
         {total} {total === 1 ? "tema encontrado" : "temas encontrados"}
-      </p>
+      </p>}
 
-      {error && <Erro mensagem={error} />}
-      {loading && page === 1 ? <Carregando /> : (
+      {tab !== "areas" && error && <Erro mensagem={error} />}
+      {tab !== "areas" && (loading && page === 1 ? <Carregando /> : (
         <div style={{ display: "grid", gap: "0.8rem" }}>
           {items.map((item) => (
             <article key={item.slug} className="cartao painel__funcao">
@@ -210,9 +272,9 @@ export default function GuiaDoencas() {
           ))}
           {!items.length && !loading && <p className="cartao">Nenhum conteúdo corresponde aos filtros.</p>}
         </div>
-      )}
+      ))}
 
-      {hasMore && (
+      {tab !== "areas" && hasMore && (
         <button className="botao botao--secundario" style={{ marginTop: "1rem" }} onClick={() => setPage((value) => value + 1)} disabled={loading}>
           {loading ? "Carregando…" : "Carregar mais"}
         </button>

@@ -1,5 +1,5 @@
 from fastapi import APIRouter, Depends, HTTPException, Query
-from sqlalchemy import func, select
+from sqlalchemy import Text, cast, func, or_, select
 from sqlalchemy.orm import Session
 
 from app.core.db import get_db
@@ -46,7 +46,7 @@ def list_images(
     modality: str | None = None,
     theme: str | None = None,
     q: str | None = None,
-    limit: int = Query(60, le=200),
+    limit: int = Query(60, le=500),
     offset: int = 0,
     db: Session = Depends(get_db),
     _=Depends(current_user),
@@ -58,7 +58,12 @@ def list_images(
         query = query.filter(GalleryImage.theme == theme)
     if q:
         termo = f"%{q.strip()}%"
-        query = query.filter(GalleryImage.title.ilike(termo))
+        query = query.filter(or_(
+            GalleryImage.title.ilike(termo),
+            GalleryImage.theme.ilike(termo),
+            GalleryImage.findings.ilike(termo),
+            cast(GalleryImage.tags, Text).ilike(termo),
+        ))
     total = query.count()
     items = query.order_by(GalleryImage.theme, GalleryImage.title).offset(offset).limit(limit).all()
     return {"total": total, "items": [_card(i) for i in items]}

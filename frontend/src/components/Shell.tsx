@@ -318,7 +318,7 @@ export default function Shell() {
       <aside className="lateral" aria-label="Navegação principal">
         <NavLink to="/" className="lateral__marca" aria-label="Corvia — ir para Hoje">
           <span className="lateral__logo"><img src="/corvia-logo-compacta.png" alt="" /></span>
-          <span className="lateral__produto">Ecossistema clínico</span>
+          <span className="lateral__produto">Ecossistema Clínico Cardiológico</span>
         </NavLink>
         <Navegacao secoes={secoes} />
         <div className="lateral__rodape">

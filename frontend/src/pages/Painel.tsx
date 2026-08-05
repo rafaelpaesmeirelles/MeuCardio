@@ -630,6 +630,19 @@ export default function Painel() {
             <Link to="/checklists"><Icone nome="check" /><span><strong>Checklist de alta</strong><small>Segurança na transição do cuidado</small></span><Icone nome="seta" /></Link>
           </div>
         </article>
+
+        <article className="hoje-card hoje-card--apresentacao">
+          <div className="hoje-apresentacao__conteudo">
+            <span className="hoje-apresentacao__icone"><Icone nome="curso" /></span>
+            <div>
+              <p className="eyebrow">Aulas, reuniões e discussão de casos</p>
+              <h2>Transforme o acervo CorvIA em uma apresentação profissional</h2>
+              <p>Escolha um documento ou fluxograma revisado e gere um PDF em paisagem com sua identificação profissional e logo cadastrada.</p>
+              <div className="hoje-apresentacao__beneficios"><span><Icone nome="check" /> Catálogo científico completo</span><span><Icone nome="check" /> Identidade profissional</span><span><Icone nome="check" /> PDF pronto para apresentar</span></div>
+            </div>
+          </div>
+          <Link className="botao hoje-apresentacao__acao" to="/apresentacao">Criar apresentação <Icone nome="seta" /></Link>
+        </article>
       </section>
 
       <section className="hoje__acervo" aria-labelledby="acervo-titulo">

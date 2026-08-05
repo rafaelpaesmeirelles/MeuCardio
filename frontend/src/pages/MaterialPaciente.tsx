@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { api } from "../lib/api";
-import { Carregando, Erro } from "../components/Estado";
+import { Carregando, Erro, Vazio } from "../components/Estado";
+import { normalizarBusca } from "../lib/taxonomiaCardiologia";
 
 /**
  * Tarefa 12 — material educativo para entregar ao paciente.
@@ -31,6 +32,8 @@ export default function MaterialPaciente() {
   const [erro, setErro] = useState("");
   const [baixando, setBaixando] = useState("");
   const [corviaMailAtivo, setCorviaMailAtivo] = useState<boolean | null>(null);
+  const [busca, setBusca] = useState("");
+  const [tema, setTema] = useState("");
 
   const [envioAberto, setEnvioAberto] = useState<string>("");
   const [nomePaciente, setNomePaciente] = useState("");
@@ -51,6 +54,24 @@ export default function MaterialPaciente() {
       .then((c) => setCorviaMailAtivo(c.ativa && c.status === "ativa"))
       .catch(() => setCorviaMailAtivo(false));
   }, []);
+
+  const temas = useMemo(() => {
+    if (!itens) return [];
+    return [...new Set(itens.map((item) => item.tema))].sort((a, b) => a.localeCompare(b, "pt-BR"));
+  }, [itens]);
+
+  const grupos = useMemo(() => {
+    if (!itens) return [];
+    const termo = normalizarBusca(busca);
+    const filtrados = itens.filter((item) => {
+      if (tema && item.tema !== tema) return false;
+      if (!termo) return true;
+      return normalizarBusca([item.titulo, item.subtitulo ?? "", item.tema, item.resumo ?? ""].join(" ")).includes(termo);
+    });
+    return [...new Set(filtrados.map((item) => item.tema))]
+      .sort((a, b) => a.localeCompare(b, "pt-BR"))
+      .map((assunto) => ({ assunto, materiais: filtrados.filter((item) => item.tema === assunto) }));
+  }, [itens, busca, tema]);
 
   async function baixar(m: Material) {
     setBaixando(m.slug);
@@ -135,13 +156,37 @@ export default function MaterialPaciente() {
         </p>
       </div>
 
+      <section className="filtros-conteudo" aria-label="Localizar material para o paciente">
+        <label>
+          <strong>Buscar por tema específico</strong>
+          <input
+            type="search"
+            value={busca}
+            onChange={(event) => setBusca(event.target.value)}
+            placeholder="Ex.: insuficiência cardíaca, hipertensão, anticoagulação…"
+          />
+        </label>
+        <label>
+          <strong>Assunto</strong>
+          <select value={tema} onChange={(event) => setTema(event.target.value)}>
+            <option value="">Todos os assuntos</option>
+            {temas.map((item) => <option value={item} key={item}>{item}</option>)}
+          </select>
+        </label>
+      </section>
+
       {erro && <p className="erro">{erro}</p>}
 
       {itens.length === 0 ? (
         <p>Nenhum material publicado ainda.</p>
+      ) : grupos.length === 0 ? (
+        <Vazio titulo="Nenhum material encontrado" acao="Tente outro termo ou selecione todos os assuntos." />
       ) : (
-        <div className="painel__funcoes">
-          {itens.map((m) => (
+        <div className="colecoes-conteudo">
+          {grupos.map((grupo) => <section className="colecao-conteudo" key={grupo.assunto}>
+            <header><div><p className="eyebrow">Assunto</p><h2>{grupo.assunto}</h2></div><span>{grupo.materiais.length} {grupo.materiais.length === 1 ? "material" : "materiais"}</span></header>
+            <div className="painel__funcoes">
+          {grupo.materiais.map((m) => (
             <div key={m.slug} className="cartao painel__funcao">
               <p className="eyebrow">{m.tema}</p>
               <strong>{m.titulo}</strong>
@@ -241,6 +286,8 @@ export default function MaterialPaciente() {
               )}
             </div>
           ))}
+            </div>
+          </section>)}
         </div>
       )}
     </div>

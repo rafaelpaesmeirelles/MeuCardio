@@ -11,15 +11,6 @@ type Documento = {
   review_status: string;
 };
 
-type PaginaDocumentos = {
-  total: number;
-  limit: number;
-  offset: number;
-  next_offset: number | null;
-  has_more: boolean;
-  items: Documento[];
-};
-
 function baixar(blob: Blob, nome: string) {
   const url = URL.createObjectURL(blob);
   const ancora = document.createElement("a");
@@ -29,20 +20,6 @@ function baixar(blob: Blob, nome: string) {
   URL.revokeObjectURL(url);
 }
 
-async function carregarTodoCatalogo(): Promise<Documento[]> {
-  const todos: Documento[] = [];
-  let offset = 0;
-  do {
-    const pagina = await api.get<PaginaDocumentos>(
-      `/library/documents?limit=200&offset=${offset}`,
-    );
-    todos.push(...pagina.items);
-    if (pagina.next_offset === null) break;
-    offset = pagina.next_offset;
-  } while (true);
-  return todos;
-}
-
 export default function Apresentacao() {
   const [documentos, setDocumentos] = useState<Documento[] | null>(null);
   const [busca, setBusca] = useState("");
@@ -50,12 +27,15 @@ export default function Apresentacao() {
   const [anotacao, setAnotacao] = useState("");
   const [gerando, setGerando] = useState(false);
   const [erro, setErro] = useState("");
+  const [tentativa, setTentativa] = useState(0);
 
   useEffect(() => {
-    carregarTodoCatalogo()
+    setDocumentos(null);
+    setErro("");
+    api.get<Documento[]>("/library/presentation-options")
       .then(setDocumentos)
       .catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível carregar os documentos."));
-  }, []);
+  }, [tentativa]);
 
   const filtrados = useMemo(() => {
     const termo = busca.trim().toLocaleLowerCase("pt-BR");
@@ -83,7 +63,7 @@ export default function Apresentacao() {
     }
   }
 
-  if (erro && !documentos) return <Erro mensagem={erro} />;
+  if (erro && !documentos) return <div><Erro mensagem={erro} /><button className="botao" style={{ marginTop: "0.8rem" }} onClick={() => setTentativa((valor) => valor + 1)}>Tentar carregar novamente</button></div>;
   if (!documentos) return <Carregando texto="Abrindo o catálogo de apresentações…" />;
 
   return (

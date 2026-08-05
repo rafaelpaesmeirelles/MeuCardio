@@ -7,9 +7,9 @@ por médico é o histórico de tentativas, para Indicadores agregar taxa de
 acerto ao longo do tempo.
 """
 
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Query
 from pydantic import BaseModel
-from sqlalchemy import func
+from sqlalchemy import func, or_
 from sqlalchemy.orm import Session
 
 from app.core.db import get_db
@@ -33,18 +33,72 @@ def _resumo_tentativas(db: Session, user_id: int, case_id: int) -> dict:
     }
 
 
-@router.get("")
-def listar(db: Session = Depends(get_db), user: User = Depends(current_user)):
-    casos = (
-        db.query(ClinicalCase)
+@router.get("/themes")
+def temas(db: Session = Depends(get_db), _=Depends(current_user)):
+    rows = (
+        db.query(ClinicalCase.tema, func.count(ClinicalCase.id))
         .filter(ClinicalCase.published.is_(True))
-        .order_by(ClinicalCase.tema, ClinicalCase.titulo)
+        .group_by(ClinicalCase.tema)
+        .order_by(ClinicalCase.tema)
+        .all()
+    )
+    return [{"theme": theme or "Outros", "count": int(count)} for theme, count in rows]
+
+
+@router.get("")
+def listar(
+    q: str | None = Query(None, max_length=160),
+    theme: str | None = Query(None, max_length=120),
+    db: Session = Depends(get_db),
+    user: User = Depends(current_user),
+):
+    query = db.query(ClinicalCase).filter(ClinicalCase.published.is_(True))
+    if theme:
+        query = query.filter(ClinicalCase.tema == theme)
+    if q and q.strip():
+        term = f"%{q.strip()}%"
+        query = query.filter(or_(
+            ClinicalCase.titulo.ilike(term),
+            ClinicalCase.tema.ilike(term),
+            ClinicalCase.enunciado.ilike(term),
+            ClinicalCase.pergunta.ilike(term),
+        ))
+    casos = query.order_by(ClinicalCase.tema, ClinicalCase.titulo).all()
+
+    if not casos:
+        return []
+
+    ids = [case.id for case in casos]
+    contagens = dict(
+        db.query(ClinicalCaseAttempt.case_id, func.count(ClinicalCaseAttempt.id))
+        .filter(ClinicalCaseAttempt.user_id == user.id, ClinicalCaseAttempt.case_id.in_(ids))
+        .group_by(ClinicalCaseAttempt.case_id)
+        .all()
+    )
+    ultimas_subquery = (
+        db.query(
+            ClinicalCaseAttempt.case_id.label("case_id"),
+            func.max(ClinicalCaseAttempt.created_at).label("created_at"),
+        )
+        .filter(ClinicalCaseAttempt.user_id == user.id, ClinicalCaseAttempt.case_id.in_(ids))
+        .group_by(ClinicalCaseAttempt.case_id)
+        .subquery()
+    )
+    ultimas = dict(
+        db.query(ClinicalCaseAttempt.case_id, ClinicalCaseAttempt.acertou)
+        .join(ultimas_subquery, (
+            ClinicalCaseAttempt.case_id == ultimas_subquery.c.case_id
+        ) & (
+            ClinicalCaseAttempt.created_at == ultimas_subquery.c.created_at
+        ))
+        .filter(ClinicalCaseAttempt.user_id == user.id)
         .all()
     )
     return [
         {
             "slug": c.slug, "titulo": c.titulo, "tema": c.tema, "nivel": c.nivel,
-            **_resumo_tentativas(db, user.id, c.id),
+            "tentativas": int(contagens.get(c.id, 0)),
+            "acertou_na_ultima": ultimas.get(c.id),
         }
         for c in casos
     ]

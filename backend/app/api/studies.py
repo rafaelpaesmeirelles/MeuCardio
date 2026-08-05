@@ -1,5 +1,5 @@
 from fastapi import APIRouter, Depends, HTTPException, Query
-from sqlalchemy import func, select
+from sqlalchemy import Text, cast, func, or_, select
 from sqlalchemy.orm import Session
 
 from app.core.db import get_db
@@ -34,10 +34,21 @@ def types(db: Session = Depends(get_db), _=Depends(current_user)):
     return [{"study_type": t, "count": c} for t, c in rows]
 
 
+@router.get("/themes")
+def themes(db: Session = Depends(get_db), _=Depends(current_user)):
+    rows = db.execute(
+        select(ScientificStudy.theme, func.count(ScientificStudy.id))
+        .where(ScientificStudy.published.is_(True))
+        .group_by(ScientificStudy.theme)
+        .order_by(ScientificStudy.theme)
+    ).all()
+    return [{"theme": theme, "count": count} for theme, count in rows]
+
+
 @router.get("")
 def list_studies(
     study_type: str | None = None, theme: str | None = None, q: str | None = None,
-    limit: int = Query(60, le=200), offset: int = 0,
+    limit: int = Query(60, le=500), offset: int = 0,
     db: Session = Depends(get_db), _=Depends(current_user),
 ):
     query = db.query(ScientificStudy).filter(ScientificStudy.published.is_(True))
@@ -46,7 +57,13 @@ def list_studies(
     if theme:
         query = query.filter(ScientificStudy.theme == theme)
     if q:
-        query = query.filter(ScientificStudy.title.ilike(f"%{q.strip()}%"))
+        term = f"%{q.strip()}%"
+        query = query.filter(or_(
+            ScientificStudy.title.ilike(term),
+            ScientificStudy.theme.ilike(term),
+            ScientificStudy.journal.ilike(term),
+            cast(ScientificStudy.tags, Text).ilike(term),
+        ))
     total = query.count()
     items = query.order_by(ScientificStudy.title).offset(offset).limit(limit).all()
     return {"total": total, "items": [_card(s) for s in items]}

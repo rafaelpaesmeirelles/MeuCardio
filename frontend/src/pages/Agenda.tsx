@@ -264,6 +264,7 @@ export default function Agenda() {
   const [compromissoAberto, setCompromissoAberto] = useState(false);
   const [ajustando, setAjustando] = useState<Agendamento | null>(null);
   const [configAberta, setConfigAberta] = useState(false);
+  const [focarContasExternas, setFocarContasExternas] = useState(false);
   const [cancelando, setCancelando] = useState<Agendamento | null>(null);
   const [motivoCancelamento, setMotivoCancelamento] = useState("");
   const [salvando, setSalvando] = useState(false);
@@ -295,6 +296,7 @@ export default function Agenda() {
   const compromissoModalRef = useRef<HTMLDivElement>(null);
   const ajusteModalRef = useRef<HTMLDivElement>(null);
   const configModalRef = useRef<HTMLDivElement>(null);
+  const contasExternasRef = useRef<HTMLElement>(null);
   const cancelarModalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -331,6 +333,16 @@ export default function Agenda() {
       previous?.focus();
     };
   }, [novoAberto, compromissoAberto, configAberta, cancelando, ajustando]);
+
+  useEffect(() => {
+    if (!configAberta || !focarContasExternas) return;
+    const timer = window.setTimeout(() => {
+      contasExternasRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+      contasExternasRef.current?.focus({ preventScroll: true });
+      setFocarContasExternas(false);
+    }, 100);
+    return () => window.clearTimeout(timer);
+  }, [configAberta, focarContasExternas]);
 
   async function carregar() {
     const [appointments, locations, services, integrations, capabilities, mobility, routines, commitmentSeries] = await Promise.all([
@@ -515,6 +527,11 @@ export default function Agenda() {
     await carregar();
   }
 
+  function abrirContasExternas() {
+    setFocarContasExternas(true);
+    setConfigAberta(true);
+  }
+
   async function confirmarCancelamento() {
     if (!cancelando || !motivoCancelamento.trim()) return;
     try {
@@ -607,6 +624,26 @@ export default function Agenda() {
         <span><Icone nome="sincronizar" /> {integracoes.filter((item) => item.status === "connected").length} integrações conectadas</span>
         <span>{capacidades?.external_writes_enabled ? "Escrita externa homologada" : "Escrita externa protegida"}</span>
         <button onClick={() => atualizarAgenda().catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível atualizar."))}><Icone nome="sincronizar" /> Atualizar</button>
+      </section>
+
+      <section className="agenda-contas-destaque" aria-labelledby="agenda-contas-titulo">
+        <div className="agenda-contas-destaque__topo">
+          <div>
+            <p className="eyebrow">Sincronização externa</p>
+            <h2 id="agenda-contas-titulo">Conecte seus calendários e contatos</h2>
+            <p>Google, Microsoft e Apple aparecem juntos na Agenda e alimentam também os contatos do CorvIA Mail.</p>
+          </div>
+          <button className="botao botao--secundario" onClick={abrirContasExternas}><Icone nome="configuracao" /> Gerenciar conexões</button>
+        </div>
+        <label className="agenda-check agenda-contas-destaque__consentimento"><input type="checkbox" checked={consentimentoContas} onChange={(event) => setConsentimentoContas(event.target.checked)} /> Autorizo a leitura dos meus calendários e contatos para uso na Agenda e no CorvIA Mail.</label>
+        <div className="agenda-contas-destaque__grade">
+          {[{ provider: "google_calendar", nome: "Google", acao: "google" as const }, { provider: "microsoft_365", nome: "Microsoft", acao: "microsoft" as const }].map((conta) => {
+            const integracao = integracoes.find((item) => item.provider === conta.provider && item.enabled);
+            const configurado = capacidades?.connectors.find((item) => item.provider === conta.provider)?.oauth_configured !== false;
+            return <article key={conta.provider} className="agenda-conta-provider"><span className={`agenda-conta-provider__marca agenda-conta-provider__marca--${conta.acao}`}>{conta.nome.slice(0, 1)}</span><div><strong>{conta.nome}</strong><small>{integracao ? `${integracao.contact_count} contatos · conexão ativa` : configurado ? "Calendário e contatos disponíveis para conectar" : "Configuração administrativa pendente"}</small></div>{integracao ? <button onClick={() => sincronizarConta(integracao.id).catch((e) => setErro(e instanceof ApiError ? e.message : "Falha na sincronização."))}>Sincronizar</button> : <button disabled={!consentimentoContas || !configurado} onClick={() => conectarConta(conta.acao).catch((e) => setErro(e instanceof ApiError ? e.message : `Não foi possível conectar ${conta.nome}.`))}>Conectar</button>}</article>;
+          })}
+          <article className="agenda-conta-provider"><span className="agenda-conta-provider__marca agenda-conta-provider__marca--apple">A</span><div><strong>Apple</strong><small>{integracoes.find((item) => item.provider === "apple_icloud" && item.enabled) ? "Calendário e contatos do iCloud conectados" : "Conexão segura por senha específica de app"}</small></div><button disabled={!consentimentoContas} onClick={abrirContasExternas}>{integracoes.find((item) => item.provider === "apple_icloud" && item.enabled) ? "Gerenciar" : "Conectar"}</button></article>
+        </div>
       </section>
 
       {erro && <div className="agenda-alerta" role="alert"><strong>Atenção</strong><span>{erro}</span><button onClick={() => setErro("")} aria-label="Fechar"><Icone nome="fechar" /></button></div>}
@@ -754,7 +791,7 @@ export default function Agenda() {
         </section>
         <section className="agenda-config-section"><div className="agenda-config-section__title"><div><h3>Catálogo de serviços</h3><p>Duração, preço, modalidade e política de encaixe.</p></div><span>{servicos.length}</span></div>{servicos.map((item) => <div className="agenda-config-item" key={item.id}><i style={{ background: item.color }} /><span><strong>{item.name} · {item.duration_minutes} min</strong><small>{item.visit_mode} · {formatarDinheiro(item.private_price_cents)}{item.allow_extra_slot ? " · aceita encaixe" : ""}</small></span></div>)}<div className="agenda-config-form agenda-config-form--service"><input placeholder="Nome do serviço" value={novoServico.name} onChange={(e) => setNovoServico({ ...novoServico, name: e.target.value, code: e.target.value })} /><select value={novoServico.location_id} onChange={(e) => setNovoServico({ ...novoServico, location_id: e.target.value })}><option value="">Todos os locais</option>{locais.map((item) => <option key={item.id} value={item.id}>{item.name}</option>)}</select><input type="number" min={5} value={novoServico.duration_minutes} onChange={(e) => setNovoServico({ ...novoServico, duration_minutes: Number(e.target.value) })} /><input inputMode="decimal" placeholder="Preço particular" value={novoServico.price} onChange={(e) => setNovoServico({ ...novoServico, price: e.target.value })} /><label className="agenda-check"><input type="checkbox" checked={novoServico.allow_extra_slot} onChange={(e) => setNovoServico({ ...novoServico, allow_extra_slot: e.target.checked })} /> Permitir encaixe</label><button className="botao botao--secundario" onClick={() => adicionarServico().catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível adicionar o serviço."))}>Adicionar serviço</button></div></section>
         <section className="agenda-config-section"><div className="agenda-config-section__title"><div><h3>Deslocamento inteligente</h3><p>A posição atual não é armazenada; a permissão permanece sob controle do aparelho.</p></div><button className={`agenda-switch${mobilidade?.enabled ? " ativo" : ""}`} role="switch" aria-checked={mobilidade?.enabled || false} onClick={() => alternarMobilidade().catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível alterar a mobilidade."))}><span /></button></div><div className="agenda-config-note"><Icone nome="rota" /><span><strong>{mobilidade?.enabled ? "Atualização automática em primeiro plano" : "Recurso desativado"}</strong><small>{capacidades?.traffic_configured ? "Trânsito em tempo real disponível." : "É preciso configurar uma credencial de trânsito no servidor."}</small></span></div></section>
-        <section className="agenda-config-section">
+        <section className="agenda-config-section" ref={contasExternasRef} tabIndex={-1} style={{ scrollMarginTop: "1rem" }}>
           <div className="agenda-config-section__title"><div><h3>Google, Microsoft e Apple</h3><p>Sincronize calendários e contatos para usar na Agenda e no CorvIA Mail.</p></div><span>{integracoes.filter((item) => ["google_calendar", "microsoft_365", "apple_icloud"].includes(item.provider) && item.enabled).length}</span></div>
           <div className="agenda-contas-externas">
             <button className="botao botao--secundario" disabled={!consentimentoContas || capacidades?.connectors.find((item) => item.provider === "google_calendar")?.oauth_configured === false} onClick={() => conectarConta("google").catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível iniciar a conexão Google."))}>Conectar Google</button>
