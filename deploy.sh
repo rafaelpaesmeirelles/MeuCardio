@@ -218,7 +218,7 @@ log "Confirmando migrations de forma idempotente."
 backend_exec python -m app.commands.migrate
 log "Reconciliando as 11 coleções e publicando somente conteúdo revisado."
 backend_exec python -m app.commands.reconcile_content --publish-reviewed
-log "Publicando todo conteúdo preservado que já está revisado."
+log "Publicando somente conteúdo atual que já está revisado."
 backend_exec python -m app.commands.publish_preserved_content
 if [[ "${AI_ENABLED:-false}" == "true" ]]; then
   log "Indexando a base reconciliada para a IA clínica."

@@ -1,9 +1,9 @@
-"""Publica registros preservados que já passaram por revisão editorial.
+"""Publica registros revisados que pertencem ao corpus canônico atual.
 
-O reconciliador mantém registros antigos no PostgreSQL para auditoria. Este
-comando torna públicos todos os registros preservados com
-``review_status == "revisado"`` e mantém rascunhos/pendências indisponíveis.
-É idempotente e seguro para execução em todo deploy.
+O reconciliador mantém registros antigos no PostgreSQL para auditoria. Eles
+devem permanecer despublicados mesmo que tenham sido revisados no passado.
+Este comando, mantido para uso operacional, restringe a publicação aos slugs
+presentes nas fontes versionadas do commit atual.
 """
 
 from __future__ import annotations
@@ -14,7 +14,11 @@ from typing import Any
 
 from sqlalchemy.orm import Session
 
-from app.commands.reconcile_content import FRONTS
+from app.commands.reconcile_content import (
+    FRONTS,
+    _canonical_source_slugs,
+    _ensure_source,
+)
 from app.core.db import SessionLocal
 
 
@@ -24,7 +28,10 @@ def publish_preserved_reviewed(db: Session, *, dry_run: bool = False) -> dict[st
     try:
         for front, config in FRONTS.items():
             model = config["model"]
+            source = _ensure_source(front, str(config["path"]))
+            canonical_slugs = _canonical_source_slugs(front, source)
             query = db.query(model).filter(
+                model.slug.in_(canonical_slugs),
                 model.published.is_(False),
                 model.review_status == "revisado",
             )

@@ -10,11 +10,15 @@ class _Field:
     def is_(self, value):
         return ("is", value)
 
+    def in_(self, values):
+        return ("in", frozenset(values))
+
     def __eq__(self, value):
         return ("eq", value)
 
 
 class _Model:
+    slug = _Field()
     published = _Field()
     review_status = _Field()
 
@@ -61,9 +65,15 @@ class _Session:
 
 def test_publica_preservados_revisados(monkeypatch):
     monkeypatch.setattr(command, "FRONTS", {
-        "documentos": {"model": _Model},
-        "evidencias": {"model": _Model},
+        "documentos": {"model": _Model, "path": "/documentos"},
+        "evidencias": {"model": _Model, "path": "/evidencias.json"},
     })
+    monkeypatch.setattr(command, "_ensure_source", lambda front, path: path)
+    monkeypatch.setattr(
+        command,
+        "_canonical_source_slugs",
+        lambda front, source: {f"{front}-atual"},
+    )
     db = _Session([3, 2])
     result = command.publish_preserved_reviewed(db)
 
@@ -72,11 +82,17 @@ def test_publica_preservados_revisados(monkeypatch):
     assert db.commits == 1
     assert db.rollbacks == 0
     assert all(query.updated for query in db.queries)
-    assert all(len(query.filters) == 2 for query in db.queries)
+    assert all(len(query.filters) == 3 for query in db.queries)
+    assert db.queries[0].filters[0] == ("in", frozenset({"documentos-atual"}))
+    assert db.queries[1].filters[0] == ("in", frozenset({"evidencias-atual"}))
 
 
 def test_dry_run_nao_altera_banco(monkeypatch):
-    monkeypatch.setattr(command, "FRONTS", {"documentos": {"model": _Model}})
+    monkeypatch.setattr(command, "FRONTS", {
+        "documentos": {"model": _Model, "path": "/documentos"},
+    })
+    monkeypatch.setattr(command, "_ensure_source", lambda front, path: path)
+    monkeypatch.setattr(command, "_canonical_source_slugs", lambda front, source: {"atual"})
     db = _Session([4])
     result = command.publish_preserved_reviewed(db, dry_run=True)
 
