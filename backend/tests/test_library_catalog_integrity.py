@@ -1,5 +1,7 @@
 """Protege o total canônico das 13 coleções e o baseline científico."""
 
+from pathlib import Path
+
 from app.api.library import (
     CATALOG_FRONTS,
     SCIENTIFIC_CORPUS_MINIMUM,
@@ -11,6 +13,7 @@ from app.commands.reconcile_content import SCIENTIFIC_MINIMUM
 
 
 MODELS_BY_KEY = {key: model for key, _, _, model in CATALOG_FRONTS}
+REPOSITORY_ROOT = Path(__file__).resolve().parents[2]
 
 
 class _ConsultaFalsa:
@@ -42,6 +45,19 @@ def _contagens_no_minimo() -> dict[type, int]:
 def test_baseline_do_catalogo_nao_diverge_do_reconciliador():
     assert SCIENTIFIC_CORPUS_MINIMUM == SCIENTIFIC_MINIMUM == 5_035
     assert set(MODELS_BY_KEY) == set(RECONCILIATION_FRONTS)
+
+
+def test_compose_de_producao_monta_todas_as_fontes_do_reconciliador():
+    compose = (REPOSITORY_ROOT / "docker-compose.prod.yml").read_text(encoding="utf-8")
+
+    for config in RECONCILIATION_FRONTS.values():
+        source = Path(config["path"])
+        container_dir = source if source.suffix == "" else source.parent
+        if container_dir == Path("/content"):
+            host_dir = "content"
+        else:
+            host_dir = container_dir.name
+        assert f"./{host_dir}:{container_dir}:ro" in compose
 
 
 def test_catalogo_soma_as_treze_frentes_e_expõe_baselines():
