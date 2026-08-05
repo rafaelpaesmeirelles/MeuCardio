@@ -68,6 +68,7 @@ def test_receituario_comum_continua_gerando_pdf_valido():
             "substancia": "Losartana potássica",
             "apresentacao": "50 mg — comprimidos",
             "posologia": "Tomar 1 comprimido por via oral a cada 12 horas.",
+            "uso_continuo": True,
         }],
         medico=MEDICO,
         data_emissao=EMITIDO_EM,

@@ -59,7 +59,7 @@ FRONTS: dict[str, dict[str, Any]] = {
     "doencas_especializadas": {
         "path": "/doencas/metadados.json",
         "model": SpecialtyDisease,
-        "minimum": 26,
+        "minimum": 87,
         "loader": "carregar_doencas_especializadas",
     },
     "triagem_sintomas": {
@@ -216,10 +216,11 @@ def _synchronize_publication(
     canonical_slugs: dict[str, set[str]],
     *,
     publish_reviewed: bool,
-) -> tuple[dict[str, int], dict[str, int]]:
+) -> tuple[dict[str, int], dict[str, int], dict[str, int]]:
     """Publica somente o corpus atual e despublica slugs ausentes do commit."""
     published: dict[str, int] = {}
     unpublished_absent: dict[str, int] = {}
+    unpublished_unreviewed: dict[str, int] = {}
     try:
         for front, config in FRONTS.items():
             model = config["model"]
@@ -238,6 +239,17 @@ def _synchronize_publication(
             else:
                 published[front] = 0
 
+            demoted = (
+                db.query(model)
+                .filter(
+                    model.slug.in_(slugs),
+                    model.published.is_(True),
+                    model.review_status != "revisado",
+                )
+                .update({model.published: False}, synchronize_session=False)
+            )
+            unpublished_unreviewed[front] = int(demoted)
+
             removed = (
                 db.query(model)
                 .filter(model.published.is_(True), model.slug.notin_(slugs))
@@ -248,7 +260,7 @@ def _synchronize_publication(
     except Exception:
         db.rollback()
         raise
-    return published, unpublished_absent
+    return published, unpublished_absent, unpublished_unreviewed
 
 
 def _database_inventory(
@@ -301,7 +313,7 @@ def reconcile(*, publish_reviewed: bool = False, allow_partial: bool = False) ->
     db = SessionLocal()
     try:
         loads["controlados"] = _load_controlled_substances(db)
-        published, unpublished_absent = _synchronize_publication(
+        published, unpublished_absent, unpublished_unreviewed = _synchronize_publication(
             db, canonical_slugs, publish_reviewed=publish_reviewed
         )
         database = _database_inventory(db, canonical_slugs)
@@ -312,6 +324,7 @@ def reconcile(*, publish_reviewed: bool = False, allow_partial: bool = False) ->
         "loads": loads,
         "published_reviewed": published,
         "unpublished_absent": unpublished_absent,
+        "unpublished_unreviewed": unpublished_unreviewed,
         "database": database,
     }
     if database["below_minimum"] and not allow_partial:

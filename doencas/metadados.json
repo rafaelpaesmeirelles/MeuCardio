@@ -725,5 +725,432 @@
     "review_status": "revisado",
     "review_note": "O verbete não prescreve antiarrítmico automaticamente.",
     "version": 1
+  },
+  {
+    "slug": "comunicacao-interatrial", "name": "Comunicação interatrial", "aliases": ["CIA", "defeito do septo atrial"],
+    "area": "cardiopediatria", "category": "cardiopatia_congenita", "subtype": "shunt_esquerda_direita", "cyanosis_class": "acianotica", "prevalence_rank": 11, "completeness": "basico",
+    "summary": "Defeito do septo atrial cujo impacto depende do tipo anatômico, magnitude do shunt, repercussão de câmaras direitas e condições associadas.",
+    "tags": ["CIA", "septo atrial", "congênita"], "source_refs": ["ACC Pediatric and Congenital Cardiology Clinical Practice Algorithms"], "source_urls": ["https://www.acc.org/membership/sections-and-councils/adult-congenital-and-pediatric-cardiology-section/clinical-algorithms"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "persistencia-canal-arterial", "name": "Persistência do canal arterial", "aliases": ["PCA", "ductus arteriosus persistente"],
+    "area": "cardiopediatria", "category": "cardiopatia_congenita", "subtype": "shunt_esquerda_direita", "cyanosis_class": "acianotica", "prevalence_rank": 12, "completeness": "basico",
+    "summary": "Persistência da comunicação entre a aorta e a artéria pulmonar, com apresentação e repercussão dependentes da idade, do tamanho e da resistência vascular pulmonar.",
+    "tags": ["PCA", "ductus", "congênita"], "source_refs": ["ACC Pediatric and Congenital Cardiology Clinical Practice Algorithms"], "source_urls": ["https://www.acc.org/membership/sections-and-councils/adult-congenital-and-pediatric-cardiology-section/clinical-algorithms"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "defeito-septo-atrioventricular", "name": "Defeito do septo atrioventricular", "aliases": ["DSAV", "canal atrioventricular"],
+    "area": "cardiopediatria", "category": "cardiopatia_congenita", "subtype": "juncoes_atrioventriculares", "cyanosis_class": "acianotica", "prevalence_rank": 13, "completeness": "basico",
+    "summary": "Espectro de defeitos das junções atrioventriculares que exige descrição anatômica, avaliação valvar e acompanhamento antes e depois da correção.",
+    "tags": ["DSAV", "canal AV", "trisomia 21"], "source_refs": ["ACC Pediatric and Congenital Cardiology Clinical Practice Algorithms"], "source_urls": ["https://www.acc.org/membership/sections-and-councils/adult-congenital-and-pediatric-cardiology-section/clinical-algorithms"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "estenose-pulmonar-congenita", "name": "Estenose pulmonar congênita", "aliases": ["estenose valvar pulmonar", "EP pulmonar"],
+    "area": "cardiopediatria", "category": "cardiopatia_congenita", "subtype": "obstrucao_via_saida_direita", "cyanosis_class": "acianotica", "prevalence_rank": 14, "completeness": "basico",
+    "summary": "Obstrução da via de saída direita, geralmente valvar, cuja gravidade e evolução orientam a necessidade de vigilância ou intervenção especializada.",
+    "tags": ["estenose pulmonar", "valva pulmonar", "congênita"], "source_refs": ["ACC Clinical Practice Algorithm for Pulmonary Stenosis"], "source_urls": ["https://www.acc.org/latest-in-cardiology/articles/2023/05/16/10/31/clinical-practice-algorithm-for-the-follow-up-of-pulmonary-stenosis-pre-and-post-intervention"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "valva-aortica-bicuspide-pediatrica", "name": "Valva aórtica bicúspide na infância", "aliases": ["VAB pediátrica", "bicúspide aórtica"],
+    "area": "cardiopediatria", "category": "cardiopatia_congenita", "subtype": "valva_e_aorta", "cyanosis_class": "acianotica", "prevalence_rank": 15, "completeness": "basico",
+    "summary": "Anomalia congênita da valva aórtica que requer avaliação da função valvar, dimensões da aorta e agregação familiar ao longo da vida.",
+    "tags": ["valva aórtica bicúspide", "aortopatia", "pediatria"], "source_refs": ["AHA Pediatric Cardiology scientific resources"], "source_urls": ["https://professional.heart.org/en/science-central/pediatrics/pediatric-cardiology"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "retorno-venoso-pulmonar-anomalo", "name": "Retorno venoso pulmonar anômalo total ou parcial", "aliases": ["RVPAT", "RVPAP", "drenagem anômala de veias pulmonares"],
+    "area": "cardiopediatria", "category": "cardiopatia_congenita", "subtype": "conexoes_venosas", "cyanosis_class": "cianotica", "prevalence_rank": 16, "completeness": "basico",
+    "summary": "Conexão anômala de veias pulmonares, total ou parcial, com risco e apresentação determinados pela anatomia, obstrução e repercussão hemodinâmica.",
+    "tags": ["RVPAT", "RVPAP", "veias pulmonares"], "source_refs": ["AHA Pediatric Cardiology scientific resources"], "source_urls": ["https://professional.heart.org/en/science-central/pediatrics/pediatric-cardiology"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "atresia-pulmonar", "name": "Atresia pulmonar", "aliases": ["atresia da valva pulmonar", "pulmonary atresia"],
+    "area": "cardiopediatria", "category": "cardiopatia_congenita", "subtype": "obstrucao_critica_direita", "cyanosis_class": "cianotica", "prevalence_rank": 17, "completeness": "basico",
+    "summary": "Cardiopatia congênita crítica sem continuidade efetiva pela valva pulmonar, com anatomia ventricular e coronariana determinantes para o planejamento especializado.",
+    "tags": ["atresia pulmonar", "cianose", "neonato"], "source_refs": ["AHA Pediatric Cardiology scientific resources"], "source_urls": ["https://professional.heart.org/en/science-central/pediatrics/pediatric-cardiology"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "atresia-tricuspide", "name": "Atresia tricúspide", "aliases": ["atresia da tricúspide", "tricuspid atresia"],
+    "area": "cardiopediatria", "category": "cardiopatia_congenita", "subtype": "coracao_univentricular", "cyanosis_class": "cianotica", "prevalence_rank": 18, "completeness": "basico",
+    "summary": "Ausência de conexão atrioventricular direita funcional, pertencente ao espectro univentricular e dependente de planejamento longitudinal por centro especializado.",
+    "tags": ["atresia tricúspide", "ventrículo único", "cianose"], "source_refs": ["AHA Pediatric Cardiology scientific resources"], "source_urls": ["https://professional.heart.org/en/science-central/pediatrics/pediatric-cardiology"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "tronco-arterial-comum", "name": "Tronco arterial comum", "aliases": ["truncus arteriosus", "tronco arterioso persistente"],
+    "area": "cardiopediatria", "category": "cardiopatia_congenita", "subtype": "conotruncal", "cyanosis_class": "cianotica", "prevalence_rank": 19, "completeness": "basico",
+    "summary": "Malformação conotruncal com um único tronco arterial e comunicação interventricular, exigindo avaliação anatômica e cirúrgica precoce.",
+    "tags": ["tronco arterial", "conotruncal", "cianose"], "source_refs": ["AHA Pediatric Cardiology scientific resources"], "source_urls": ["https://professional.heart.org/en/science-central/pediatrics/pediatric-cardiology"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "anomalia-ebstein", "name": "Anomalia de Ebstein", "aliases": ["doença de Ebstein", "malformação de Ebstein"],
+    "area": "cardiopediatria", "category": "cardiopatia_congenita", "subtype": "valva_tricuspide", "cyanosis_class": "cianotica", "prevalence_rank": 20, "completeness": "basico",
+    "summary": "Malformação da valva tricúspide com espectro amplo de repercussão, frequentemente associada a dilatação direita e arritmias.",
+    "tags": ["Ebstein", "tricúspide", "arritmia"], "source_refs": ["AHA Pediatric Cardiology scientific resources"], "source_urls": ["https://professional.heart.org/en/science-central/pediatrics/pediatric-cardiology"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "fisiologia-ventriculo-unico", "name": "Fisiologia de ventrículo único", "aliases": ["coração univentricular", "circulação de Fontan"],
+    "area": "cardiopediatria", "category": "cardiopatia_congenita", "subtype": "coracao_univentricular", "cyanosis_class": "cianotica", "prevalence_rank": 21, "completeness": "basico",
+    "summary": "Conjunto heterogêneo de anatomias tratadas em estratégia univentricular, com necessidades específicas entre estágios e após a circulação de Fontan.",
+    "tags": ["ventrículo único", "Fontan", "interstage"], "source_refs": ["ACC Clinical Practice Algorithm for Fontan Circulation Follow-Up"], "source_urls": ["https://www.acc.org/membership/sections-and-councils/adult-congenital-and-pediatric-cardiology-section/clinical-algorithms"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "canalopatias-pediatricas", "name": "Canalopatias na infância", "aliases": ["síndrome do QT longo", "Brugada pediátrica", "CPVT"],
+    "area": "cardiopediatria", "category": "arritmia", "subtype": "eletrica_hereditaria", "prevalence_rank": 22, "completeness": "basico",
+    "summary": "Doenças elétricas hereditárias que podem se manifestar por síncope, arritmia ou morte súbita e exigem interpretação especializada clínica, eletrocardiográfica e familiar.",
+    "tags": ["canalopatia", "QT longo", "Brugada", "CPVT"], "source_refs": ["ACC Pediatric and Congenital Cardiology Clinical Algorithms"], "source_urls": ["https://www.acc.org/membership/sections-and-councils/adult-congenital-and-pediatric-cardiology-section/clinical-algorithms"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "cardiomiopatias-pediatricas", "name": "Cardiomiopatias pediátricas", "aliases": ["miocardiopatia infantil", "cardiomiopatia na criança"],
+    "area": "cardiopediatria", "category": "cardiomiopatia", "subtype": "pediatrica", "prevalence_rank": 23, "completeness": "basico",
+    "summary": "Grupo de doenças do miocárdio com fenótipos, etiologias e riscos distintos, incluindo formas genéticas, metabólicas, inflamatórias e sindrômicas.",
+    "tags": ["cardiomiopatia", "genética", "insuficiência cardíaca"], "source_refs": ["AHA Pediatric Cardiology scientific resources"], "source_urls": ["https://professional.heart.org/en/science-central/pediatrics/pediatric-cardiology"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "febre-reumatica-cardite", "name": "Febre reumática e cardite", "aliases": ["doença reumática pediátrica", "cardite reumática"],
+    "area": "cardiopediatria", "category": "cardiopatia_adquirida", "subtype": "inflamatoria", "prevalence_rank": 24, "completeness": "basico",
+    "summary": "Doença inflamatória pós-estreptocócica com potencial comprometimento cardíaco agudo e valvar crônico, relevante em contextos de maior prevalência.",
+    "tags": ["febre reumática", "cardite", "valvopatia"], "source_refs": ["AHA Pediatric Cardiology scientific resources"], "source_urls": ["https://professional.heart.org/en/science-central/pediatrics/pediatric-cardiology"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "endocardite-pediatrica", "name": "Endocardite infecciosa pediátrica", "aliases": ["endocardite na criança", "EI pediátrica"],
+    "area": "cardiopediatria", "category": "cardiopatia_adquirida", "subtype": "infecciosa", "prevalence_rank": 25, "completeness": "basico",
+    "summary": "Infecção endovascular rara e grave, com risco relacionado a cardiopatias, próteses, dispositivos, bacteremia e contexto clínico.",
+    "tags": ["endocardite", "febre", "hemocultura"], "source_refs": ["AHA Pediatric Cardiology scientific resources"], "source_urls": ["https://professional.heart.org/en/science-central/pediatrics/pediatric-cardiology"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "hipertensao-pulmonar-pediatrica", "name": "Hipertensão pulmonar pediátrica", "aliases": ["HP pediátrica", "hipertensão pulmonar na criança"],
+    "area": "cardiopediatria", "category": "circulacao_pulmonar", "subtype": "pediatrica", "prevalence_rank": 26, "completeness": "basico",
+    "summary": "Síndrome hemodinâmica heterogênea que requer classificação etiológica, avaliação de cardiopatia congênita e seguimento em centro especializado.",
+    "tags": ["hipertensão pulmonar", "circulação pulmonar", "congênita"], "source_refs": ["AHA Scientific Statement: Pulmonary Hypertension in Congenital Heart Disease"], "source_urls": ["https://professional.heart.org/en/science-news/Pulmonary-Hypertension-in-Congenital-Heart-Disease/commentary"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "dislipidemias-pediatricas", "name": "Dislipidemias pediátricas", "aliases": ["colesterol alto na criança", "dislipidemia familiar pediátrica"],
+    "area": "cardiopediatria", "category": "prevencao", "subtype": "lipides", "prevalence_rank": 27, "completeness": "basico",
+    "summary": "Alterações lipídicas na infância, primárias ou secundárias, que exigem contexto familiar, causas associadas e estratégia preventiva longitudinal.",
+    "tags": ["dislipidemia", "colesterol", "hipercolesterolemia familiar"], "source_refs": ["AHA Pediatric Cardiology scientific resources"], "source_urls": ["https://professional.heart.org/en/science-central/pediatrics/pediatric-cardiology"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "sopros-na-infancia", "name": "Sopros cardíacos na infância", "aliases": ["sopro inocente", "sopro pediátrico"],
+    "area": "cardiopediatria", "category": "sintoma_e_exame", "subtype": "ausculta", "prevalence_rank": 28, "completeness": "basico",
+    "summary": "Achado auscultatório frequente que deve ser interpretado com idade, características do sopro, sintomas, pulsos, oximetria e exame cardiovascular completo.",
+    "tags": ["sopro", "ausculta", "criança"], "source_refs": ["AHA Pediatric Cardiology scientific resources"], "source_urls": ["https://professional.heart.org/en/science-central/pediatrics/pediatric-cardiology"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "dor-toracica-pediatrica", "name": "Dor torácica pediátrica", "aliases": ["dor no peito na criança", "precordialgia pediátrica"],
+    "area": "cardiopediatria", "category": "sintoma_e_exame", "subtype": "dor_toracica", "prevalence_rank": 29, "completeness": "basico",
+    "summary": "Sintoma geralmente não cardíaco na infância, mas que exige busca ativa de sinais de alarme relacionados a esforço, síncope, exame, história familiar e doença sistêmica.",
+    "tags": ["dor torácica", "esforço", "pediatria"], "source_refs": ["AHA Pediatric Cardiology scientific resources"], "source_urls": ["https://professional.heart.org/en/science-central/pediatrics/pediatric-cardiology"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "arritmias-pediatricas", "name": "Arritmias pediátricas", "aliases": ["taquicardia na criança", "bradicardia pediátrica"],
+    "area": "cardiopediatria", "category": "arritmia", "subtype": "pediatrica", "prevalence_rank": 30, "completeness": "basico",
+    "summary": "Distúrbios do ritmo na infância com apresentação variável, desde achados incidentais até instabilidade, síncope ou associação com cardiopatia estrutural.",
+    "tags": ["arritmia", "taquicardia", "bradicardia", "ECG"], "source_refs": ["ACC Pediatric and Congenital Cardiology Clinical Algorithms"], "source_urls": ["https://www.acc.org/membership/sections-and-councils/adult-congenital-and-pediatric-cardiology-section/clinical-algorithms"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "indicacoes-ecocardiograma-fetal", "name": "Indicações de ecocardiograma fetal", "aliases": ["quando pedir eco fetal", "indicação de ecocardiografia fetal"],
+    "area": "cardiopediatria", "category": "cardiologia_fetal", "subtype": "rastreamento_e_indicacoes", "prevalence_rank": 31, "completeness": "basico",
+    "summary": "Organização das indicações maternas, fetais e familiares para ecocardiografia fetal, sempre integrada à qualidade do rastreamento obstétrico local.",
+    "tags": ["eco fetal", "rastreamento", "pré-natal"], "source_refs": ["2023 ASE Guidelines for Performance of the Fetal Echocardiogram"], "source_urls": ["https://www.asecho.org/wp-content/uploads/2023/07/PIIS0894731723002067-1.pdf"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "bloqueio-atrioventricular-fetal", "name": "Bloqueio atrioventricular fetal", "aliases": ["BAV fetal", "bloqueio cardíaco congênito"],
+    "area": "cardiopediatria", "category": "cardiologia_fetal", "subtype": "bradiarritmia", "prevalence_rank": 32, "completeness": "basico",
+    "summary": "Bradiarritmia fetal que requer definição do grau, associação estrutural, exposição a autoanticorpos e repercussão hemodinâmica.",
+    "tags": ["BAV fetal", "bradicardia", "autoanticorpos"], "source_refs": ["AHA Scientific Statement: Diagnosis and Treatment of Fetal Cardiac Disease"], "source_urls": ["https://professional.heart.org/en/science-news/diagnosis-and-treatment-of-fetal-cardiac-disease/top-things-to-know"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "flutter-atrial-fetal", "name": "Flutter atrial fetal", "aliases": ["flutter fetal", "taquiarritmia atrial fetal"],
+    "area": "cardiopediatria", "category": "cardiologia_fetal", "subtype": "taquiarritmia", "prevalence_rank": 33, "completeness": "basico",
+    "summary": "Taquiarritmia atrial fetal cujo impacto depende da condução ventricular, duração, função cardíaca e presença de hidropisia.",
+    "tags": ["flutter fetal", "taquiarritmia", "hidropisia"], "source_refs": ["AHA Scientific Statement: Diagnosis and Treatment of Fetal Cardiac Disease"], "source_urls": ["https://professional.heart.org/en/science-news/diagnosis-and-treatment-of-fetal-cardiac-disease/top-things-to-know"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "extrassistoles-fetais", "name": "Extrassístoles fetais", "aliases": ["ectopia fetal", "batimentos ectópicos fetais"],
+    "area": "cardiopediatria", "category": "cardiologia_fetal", "subtype": "ectopia", "prevalence_rank": 34, "completeness": "basico",
+    "summary": "Irregularidade do ritmo fetal frequentemente benigna, mas que exige documentação do mecanismo e vigilância quando persistente, complexa ou associada a outros achados.",
+    "tags": ["extrassístole fetal", "ectopia", "ritmo fetal"], "source_refs": ["AHA Scientific Statement: Diagnosis and Treatment of Fetal Cardiac Disease"], "source_urls": ["https://professional.heart.org/en/science-news/diagnosis-and-treatment-of-fetal-cardiac-disease/top-things-to-know"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "tumores-cardiacos-fetais", "name": "Tumores cardíacos fetais", "aliases": ["rabdomioma fetal", "massa cardíaca fetal"],
+    "area": "cardiopediatria", "category": "cardiologia_fetal", "subtype": "massa_intracardiaca", "prevalence_rank": 35, "completeness": "basico",
+    "summary": "Massas cardíacas fetais com implicações variáveis para obstrução, ritmo, função e investigação de condições associadas.",
+    "tags": ["tumor fetal", "rabdomioma", "massa cardíaca"], "source_refs": ["2023 ASE Guidelines for Performance of the Fetal Echocardiogram"], "source_urls": ["https://www.asecho.org/wp-content/uploads/2023/07/PIIS0894731723002067-1.pdf"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "hidropisia-fetal-cardiovascular", "name": "Hidropisia fetal de possível causa cardiovascular", "aliases": ["hydrops fetal", "insuficiência cardíaca fetal"],
+    "area": "cardiopediatria", "category": "cardiologia_fetal", "subtype": "insuficiencia_cardiaca_fetal", "prevalence_rank": 36, "completeness": "basico",
+    "summary": "Síndrome fetal grave que demanda investigação rápida de arritmia, anemia, cardiopatia estrutural, disfunção e causas não cardíacas.",
+    "tags": ["hidropisia", "insuficiência cardíaca fetal", "alto risco"], "source_refs": ["AHA Scientific Statement: Diagnosis and Treatment of Fetal Cardiac Disease"], "source_urls": ["https://professional.heart.org/en/science-news/diagnosis-and-treatment-of-fetal-cardiac-disease/top-things-to-know"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "coarctacao-aorta-fetal", "name": "Suspeita fetal de coarctação da aorta", "aliases": ["coarctação fetal", "hipoplasia do arco fetal"],
+    "area": "cardiopediatria", "category": "cardiologia_fetal", "subtype": "arco_aortico", "prevalence_rank": 37, "completeness": "basico",
+    "summary": "Suspeita pré-natal desafiadora que requer avaliação seriada do arco, fluxos, proporções cardíacas e planejamento neonatal proporcional ao risco.",
+    "tags": ["coarctação fetal", "arco aórtico", "planejamento neonatal"], "source_refs": ["2023 ASE Guidelines for Performance of the Fetal Echocardiogram"], "source_urls": ["https://www.asecho.org/wp-content/uploads/2023/07/PIIS0894731723002067-1.pdf"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "tetralogia-fallot-fetal", "name": "Tetralogia de Fallot no período fetal", "aliases": ["Fallot fetal", "TOF fetal"],
+    "area": "cardiopediatria", "category": "cardiologia_fetal", "subtype": "conotruncal", "prevalence_rank": 38, "completeness": "basico",
+    "summary": "Diagnóstico fetal de malformação conotruncal que deve descrever anatomia da via de saída, artérias pulmonares, arco e achados extracardíacos.",
+    "tags": ["Fallot fetal", "conotruncal", "diagnóstico pré-natal"], "source_refs": ["2023 ASE Guidelines for Performance of the Fetal Echocardiogram"], "source_urls": ["https://www.asecho.org/wp-content/uploads/2023/07/PIIS0894731723002067-1.pdf"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "transposicao-grandes-arterias-fetal", "name": "Transposição das grandes artérias no período fetal", "aliases": ["TGA fetal", "transposição fetal"],
+    "area": "cardiopediatria", "category": "cardiologia_fetal", "subtype": "conotruncal", "prevalence_rank": 39, "completeness": "basico",
+    "summary": "Diagnóstico fetal de discordância ventriculoarterial que permite preparar nascimento, avaliação das comunicações e atendimento neonatal especializado.",
+    "tags": ["TGA fetal", "transposição", "planejamento do parto"], "source_refs": ["AHA Scientific Statement: Diagnosis and Treatment of Fetal Cardiac Disease"], "source_urls": ["https://professional.heart.org/en/science-news/diagnosis-and-treatment-of-fetal-cardiac-disease/top-things-to-know"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "retorno-venoso-pulmonar-anomalo-fetal", "name": "Retorno venoso pulmonar anômalo no período fetal", "aliases": ["RVPAT fetal", "veias pulmonares anômalas fetais"],
+    "area": "cardiopediatria", "category": "cardiologia_fetal", "subtype": "conexoes_venosas", "prevalence_rank": 40, "completeness": "basico",
+    "summary": "Avaliação pré-natal das conexões venosas pulmonares, reconhecendo limitações diagnósticas e sinais indiretos de obstrução.",
+    "tags": ["RVPAT fetal", "veias pulmonares", "obstrução"], "source_refs": ["2023 ASE Guidelines for Performance of the Fetal Echocardiogram"], "source_urls": ["https://www.asecho.org/wp-content/uploads/2023/07/PIIS0894731723002067-1.pdf"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "planejamento-parto-cardiopatia-fetal", "name": "Planejamento do parto na cardiopatia fetal", "aliases": ["parto e cardiopatia congênita", "planejamento perinatal cardíaco"],
+    "area": "cardiopediatria", "category": "cardiologia_fetal", "subtype": "planejamento_perinatal", "prevalence_rank": 41, "completeness": "basico",
+    "summary": "Coordenação do local, tempo, equipe e recursos do nascimento conforme risco de instabilidade e necessidade de intervenção neonatal.",
+    "tags": ["parto", "cardiopatia fetal", "equipe perinatal"], "source_refs": ["AHA Scientific Statement: Diagnosis and Treatment of Fetal Cardiac Disease"], "source_urls": ["https://professional.heart.org/en/science-news/diagnosis-and-treatment-of-fetal-cardiac-disease/top-things-to-know"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "avaliacao-multidimensional-cardiogeriatrica", "name": "Avaliação multidimensional em cardiogeriatria", "aliases": ["avaliação geriátrica cardiovascular", "avaliação geriátrica ampla"],
+    "area": "cardiogeriatria", "category": "avaliacao_global", "subtype": "multidimensional", "prevalence_rank": 6, "completeness": "basico",
+    "summary": "Integra função, cognição, humor, nutrição, medicamentos, suporte social, metas e vulnerabilidades à avaliação cardiovascular convencional.",
+    "tags": ["idoso", "multidimensional", "função", "cognição"], "source_refs": ["AHA Scientific Statement: Older Adults in the Cardiac Intensive Care Unit"], "source_urls": ["https://professional.heart.org/en/science-news/older-adults-in-the-cardiac-intensive-care-unit/commentary"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "risco-quedas-cardiogeriatria", "name": "Risco de quedas no paciente cardiovascular idoso", "aliases": ["quedas no cardiopata", "risco de queda e coração"],
+    "area": "cardiogeriatria", "category": "sindrome_geriatrica", "subtype": "quedas", "prevalence_rank": 7, "completeness": "basico",
+    "summary": "Avaliação multifatorial de quedas considerando síncope, ortostatismo, ritmo, medicamentos, visão, mobilidade, ambiente e consequências da anticoagulação.",
+    "tags": ["quedas", "síncope", "ortostatismo", "anticoagulação"], "source_refs": ["AHA Scientific Statement: Older Adults in the Cardiac Intensive Care Unit"], "source_urls": ["https://professional.heart.org/en/science-news/older-adults-in-the-cardiac-intensive-care-unit/commentary"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "delirium-cardiogeriatria", "name": "Delirium no paciente cardiovascular", "aliases": ["confusão aguda no cardiopata", "delirium na unidade cardíaca"],
+    "area": "cardiogeriatria", "category": "sindrome_geriatrica", "subtype": "delirium", "prevalence_rank": 8, "completeness": "basico",
+    "summary": "Síndrome aguda de atenção e consciência que pode sinalizar doença, iatrogenia ou vulnerabilidade e exige busca de precipitantes e prevenção de dano.",
+    "tags": ["delirium", "cognição", "iatrogenia", "idoso"], "source_refs": ["AHA Scientific Statement: Older Adults in the Cardiac Intensive Care Unit"], "source_urls": ["https://professional.heart.org/en/science-news/older-adults-in-the-cardiac-intensive-care-unit/commentary"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "sarcopenia-cardiovascular", "name": "Sarcopenia e doença cardiovascular", "aliases": ["perda muscular no cardiopata", "massa muscular e coração"],
+    "area": "cardiogeriatria", "category": "sindrome_geriatrica", "subtype": "sarcopenia", "prevalence_rank": 9, "completeness": "basico",
+    "summary": "Perda de força e massa muscular associada a pior função e prognóstico, demandando avaliação nutricional, funcional e do contexto cardiovascular.",
+    "tags": ["sarcopenia", "força", "nutrição", "reabilitação"], "source_refs": ["AHA Scientific Statement: Exercise in High-Risk Populations"], "source_urls": ["https://professional.heart.org/en/science-news/exercise-training-in-high-risk-populations/top-things-to-know"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "anticoagulacao-idoso", "name": "Anticoagulação no idoso", "aliases": ["anticoagulante em idosos", "DOAC no idoso frágil"],
+    "area": "cardiogeriatria", "category": "antitromboticos", "subtype": "decisao_compartilhada", "prevalence_rank": 10, "completeness": "basico",
+    "summary": "Decisão antitrombótica individualizada que integra indicação, função renal e hepática, interações, adesão, fragilidade, quedas, sangramento e preferências.",
+    "tags": ["anticoagulação", "idoso", "fragilidade", "sangramento"], "source_refs": ["ACC Scientific Statement on Direct Oral Anticoagulants, 2026"], "source_urls": ["https://www.acc.org/latest-in-cardiology/journal-scans/2026/06/29/15/38/acc-scientific-statement-addresses-doacs"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "estenose-aortica-tavi-idoso", "name": "Estenose aórtica e TAVI no idoso", "aliases": ["TAVI geriátrica", "estenose aórtica no idoso"],
+    "area": "cardiogeriatria", "category": "valvopatia", "subtype": "heart_team", "prevalence_rank": 11, "completeness": "basico",
+    "summary": "Avaliação valvar centrada em sintomas, gravidade, anatomia, expectativa e qualidade de vida, cognição, fragilidade e objetivos do paciente pelo Heart Team.",
+    "tags": ["estenose aórtica", "TAVI", "Heart Team", "idoso"], "source_refs": ["2025 ESC/EACTS Guidelines for Valvular Heart Disease"], "source_urls": ["https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/valvular-heart-disease/"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "amiloidose-cardiaca-idoso", "name": "Amiloidose cardíaca no idoso", "aliases": ["ATTR cardíaca", "cardiomiopatia amiloide"],
+    "area": "cardiogeriatria", "category": "cardiomiopatia", "subtype": "infiltrativa", "prevalence_rank": 12, "completeness": "basico",
+    "summary": "Cardiomiopatia infiltrativa que deve ser lembrada diante de fenótipo compatível, sinais extracardíacos e achados de imagem, com tipagem antes de tratamento.",
+    "tags": ["amiloidose", "ATTR", "insuficiência cardíaca", "idoso"], "source_refs": ["2023 ACC Expert Consensus Decision Pathway on Cardiac Amyloidosis"], "source_urls": ["https://www.acc.org/guidelines/guidelines/2023/01/23/14/11/cardiac-amyloidosis-ecdp"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "doenca-coronariana-idoso", "name": "Doença coronariana no idoso", "aliases": ["DAC no idoso", "coronariopatia geriátrica"],
+    "area": "cardiogeriatria", "category": "doenca_coronariana", "subtype": "multimorbidade", "prevalence_rank": 13, "completeness": "basico",
+    "summary": "Doença coronariana em contexto de multimorbidade e apresentações atípicas, exigindo equilíbrio entre benefício, risco, função, sintomas e objetivos de cuidado.",
+    "tags": ["coronariopatia", "idoso", "multimorbidade", "decisão compartilhada"], "source_refs": ["AHA Scientific Statement: Patient-Centered Adult Cardiovascular Care"], "source_urls": ["https://professional.heart.org/en/science-news/Patient-Centered-Adult-Cardiovascular-Care/commentary"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "cuidados-paliativos-cardiovasculares", "name": "Cuidados paliativos em doença cardiovascular avançada", "aliases": ["paliação cardiológica", "metas de cuidado em cardiologia"],
+    "area": "cardiogeriatria", "category": "cuidado_centrado_pessoa", "subtype": "paliativo", "prevalence_rank": 14, "completeness": "basico",
+    "summary": "Abordagem interdisciplinar para sintomas, comunicação, decisões e qualidade de vida, aplicável em paralelo ao tratamento dirigido à doença.",
+    "tags": ["cuidados paliativos", "metas", "qualidade de vida", "família"], "source_refs": ["AHA Scientific Statement: Palliative Care and Advanced Cardiovascular Disease"], "source_urls": ["https://professional.heart.org/en/guidelines-statements/palliative-care-and-advanced-cardiovascular-disease-in-adults-not-justcir0000000000001323"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "plano-alta-cardiogeriatria", "name": "Plano de alta cardiogeriátrico", "aliases": ["alta segura do idoso cardiopata", "transição de cuidado geriátrica"],
+    "area": "cardiogeriatria", "category": "transicao_cuidado", "subtype": "alta_segura", "prevalence_rank": 15, "completeness": "basico",
+    "summary": "Transição que integra reconciliação medicamentosa, função e cognição, sinais de alerta, cuidador, seguimento, reabilitação e barreiras sociais.",
+    "tags": ["alta", "transição", "cuidador", "reconciliação medicamentosa"], "source_refs": ["AHA Scientific Statement: Older Adults in the Cardiac Intensive Care Unit"], "source_urls": ["https://professional.heart.org/en/science-news/older-adults-in-the-cardiac-intensive-care-unit/commentary"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "cardiotoxicidade-anti-her2", "name": "Toxicidade cardiovascular por anti-HER2", "aliases": ["trastuzumabe e coração", "anti-HER2 cardiotoxicidade"],
+    "area": "cardiooncologia", "category": "terapia_alvo", "subtype": "anti_her2", "prevalence_rank": 6, "completeness": "basico",
+    "summary": "Vigilância cardiovascular durante terapias anti-HER2, integrada ao risco basal, sintomas, biomarcadores, imagem e continuidade oncológica.",
+    "tags": ["anti-HER2", "trastuzumabe", "disfunção ventricular"], "source_refs": ["2022 ESC Guidelines on Cardio-Oncology"], "source_urls": ["https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/cardio-oncology/"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "cardiotoxicidade-bcr-abl", "name": "Toxicidade cardiovascular por inibidores BCR-ABL", "aliases": ["TKI BCR-ABL e coração", "cardiotoxicidade na LMC"],
+    "area": "cardiooncologia", "category": "terapia_alvo", "subtype": "bcr_abl", "prevalence_rank": 7, "completeness": "basico",
+    "summary": "Avaliação de risco vascular, metabólico, pressórico e arrítmico em pacientes expostos a inibidores BCR-ABL, considerando diferenças entre agentes.",
+    "tags": ["BCR-ABL", "TKI", "risco vascular"], "source_refs": ["2022 ESC Guidelines on Cardio-Oncology"], "source_urls": ["https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/cardio-oncology/"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "cardiotoxicidade-inibidor-proteassoma", "name": "Toxicidade cardiovascular por inibidores de proteassoma", "aliases": ["carfilzomibe e coração", "proteassoma cardiotoxicidade"],
+    "area": "cardiooncologia", "category": "terapia_alvo", "subtype": "proteassoma", "prevalence_rank": 8, "completeness": "basico",
+    "summary": "Monitorização de insuficiência cardíaca, pressão e eventos vasculares em contexto de inibidores de proteassoma e mieloma múltiplo.",
+    "tags": ["proteassoma", "carfilzomibe", "mieloma", "insuficiência cardíaca"], "source_refs": ["2022 ESC Guidelines on Cardio-Oncology"], "source_urls": ["https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/cardio-oncology/"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "cardiotoxicidade-raf-mek", "name": "Toxicidade cardiovascular por inibidores RAF/MEK", "aliases": ["MEK e coração", "RAF cardiotoxicidade"],
+    "area": "cardiooncologia", "category": "terapia_alvo", "subtype": "raf_mek", "prevalence_rank": 9, "completeness": "basico",
+    "summary": "Vigilância de função ventricular, pressão e eventos vasculares durante terapias direcionadas à via RAF/MEK.",
+    "tags": ["RAF", "MEK", "terapia-alvo", "função ventricular"], "source_refs": ["2022 ESC Guidelines on Cardio-Oncology"], "source_urls": ["https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/cardio-oncology/"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "fluoropirimidinas-isquemia", "name": "Fluoropirimidinas e toxicidade cardiovascular", "aliases": ["5-FU e dor torácica", "capecitabina e coração"],
+    "area": "cardiooncologia", "category": "quimioterapia", "subtype": "fluoropirimidina", "prevalence_rank": 10, "completeness": "basico",
+    "summary": "Toxicidade associada sobretudo a sintomas isquêmicos, cujo reconhecimento exige relação temporal, avaliação urgente apropriada e coordenação com oncologia.",
+    "tags": ["fluoropirimidina", "5-FU", "capecitabina", "isquemia"], "source_refs": ["2022 ESC Guidelines on Cardio-Oncology"], "source_urls": ["https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/cardio-oncology/"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "toxicidade-cardiovascular-car-t", "name": "Toxicidade cardiovascular associada a CAR-T", "aliases": ["CAR-T e coração", "síndrome de liberação de citocinas cardíaca"],
+    "area": "cardiooncologia", "category": "imunoterapia_celular", "subtype": "car_t", "prevalence_rank": 11, "completeness": "basico",
+    "summary": "Complicações hemodinâmicas, miocárdicas e arrítmicas relacionadas ao contexto de terapia celular e síndrome de liberação de citocinas.",
+    "tags": ["CAR-T", "citocinas", "choque", "arritmia"], "source_refs": ["2022 ESC Guidelines on Cardio-Oncology"], "source_urls": ["https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/cardio-oncology/"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "qt-longo-terapia-oncologica", "name": "Prolongamento do QT em terapia oncológica", "aliases": ["QT longo por quimioterapia", "oncologia e torsades"],
+    "area": "cardiooncologia", "category": "arritmia", "subtype": "qt_longo_adquirido", "prevalence_rank": 12, "completeness": "basico",
+    "summary": "Gestão do risco de prolongamento do QT considerando fármacos, interações, eletrólitos, ECG basal e sintomas, sem depender de um único valor isolado.",
+    "tags": ["QT", "torsades", "interação medicamentosa", "ECG"], "source_refs": ["2022 ESC Guidelines on Cardio-Oncology"], "source_urls": ["https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/cardio-oncology/"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "trombose-associada-cancer", "name": "Trombose associada ao câncer", "aliases": ["TEV no câncer", "trombose oncológica"],
+    "area": "cardiooncologia", "category": "tromboembolismo", "subtype": "cancer_associado", "prevalence_rank": 13, "completeness": "basico",
+    "summary": "Risco trombótico arterial e venoso influenciado pelo tumor, tratamento, dispositivos, mobilidade e risco concorrente de sangramento.",
+    "tags": ["câncer", "trombose", "TEV", "sangramento"], "source_refs": ["2022 ESC Guidelines on Cardio-Oncology"], "source_urls": ["https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/cardio-oncology/"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "doenca-pericardica-oncologia", "name": "Doença pericárdica em oncologia", "aliases": ["derrame pericárdico no câncer", "pericardite oncológica"],
+    "area": "cardiooncologia", "category": "pericardio", "subtype": "cancer_e_tratamento", "prevalence_rank": 14, "completeness": "basico",
+    "summary": "Derrame, pericardite, constrição ou tamponamento em paciente oncológico, com diagnósticos diferenciais relacionados ao câncer, tratamento e causas gerais.",
+    "tags": ["pericárdio", "derrame", "tamponamento", "câncer"], "source_refs": ["2022 ESC Guidelines on Cardio-Oncology"], "source_urls": ["https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/cardio-oncology/"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "plano-sobrevivencia-cardiooncologica", "name": "Plano de sobrevivência cardio-oncológica", "aliases": ["survivorship cardiovascular", "seguimento tardio após câncer"],
+    "area": "cardiooncologia", "category": "sobrevivencia", "subtype": "seguimento_longo_prazo", "prevalence_rank": 15, "completeness": "basico",
+    "summary": "Registro de exposições, eventos, risco residual, prevenção cardiovascular, sintomas de alerta e responsabilidades de seguimento após o tratamento oncológico.",
+    "tags": ["sobrevivência", "seguimento", "prevenção", "radioterapia"], "source_refs": ["2022 ESC Guidelines on Cardio-Oncology"], "source_urls": ["https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/cardio-oncology/"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "hipertensao-cronica-gravidez", "name": "Hipertensão crônica na gravidez", "aliases": ["hipertensão prévia e gestação", "HAS crônica gestante"],
+    "area": "gravidez", "category": "hipertensao", "subtype": "cronica", "prevalence_rank": 7, "completeness": "basico",
+    "summary": "Hipertensão presente antes da gestação ou reconhecida precocemente, com necessidade de distinguir controle basal, lesão de órgão-alvo e pré-eclâmpsia sobreposta.",
+    "tags": ["hipertensão crônica", "gestação", "pré-eclâmpsia sobreposta"], "source_refs": ["2025 ESC Guidelines for Cardiovascular Disease and Pregnancy"], "source_urls": ["https://www.escardio.org/guidelines/clinical-practice-guidelines/pocket-guidelines/management-of-cardiovascular-diseases-during-pregnancy/"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "hipertensao-gestacional", "name": "Hipertensão gestacional", "aliases": ["pressão alta gestacional", "HAS gestacional"],
+    "area": "gravidez", "category": "hipertensao", "subtype": "gestacional", "prevalence_rank": 8, "completeness": "basico",
+    "summary": "Elevação pressórica reconhecida durante a gestação que requer confirmação, diferenciação de pré-eclâmpsia e vigilância materno-fetal.",
+    "tags": ["hipertensão gestacional", "pressão", "pré-eclâmpsia"], "source_refs": ["2025 ESC Guidelines for Cardiovascular Disease and Pregnancy"], "source_urls": ["https://www.escardio.org/guidelines/clinical-practice-guidelines/pocket-guidelines/management-of-cardiovascular-diseases-during-pregnancy/"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "valvopatias-na-gravidez", "name": "Valvopatias na gravidez", "aliases": ["doença valvar gestante", "estenose valvar e gravidez"],
+    "area": "gravidez", "category": "valvopatia", "subtype": "gestacao", "prevalence_rank": 9, "completeness": "basico",
+    "summary": "Doença valvar em contexto de aumento da demanda hemodinâmica, com risco dependente da lesão, gravidade, sintomas, função ventricular e pressão pulmonar.",
+    "tags": ["valvopatia", "gravidez", "estenose", "regurgitação"], "source_refs": ["2025 ESC Guidelines for Cardiovascular Disease and Pregnancy"], "source_urls": ["https://www.escardio.org/guidelines/clinical-practice-guidelines/pocket-guidelines/management-of-cardiovascular-diseases-during-pregnancy/"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "cardiopatia-congenita-gravidez", "name": "Cardiopatia congênita na gravidez", "aliases": ["GUCH e gestação", "ACHD pregnancy"],
+    "area": "gravidez", "category": "cardiopatia_congenita", "subtype": "gestacao", "prevalence_rank": 10, "completeness": "basico",
+    "summary": "Gestação em paciente com cardiopatia congênita reparada ou não, exigindo avaliação anatômica, funcional, arrítmica, obstétrica e de intervenções prévias.",
+    "tags": ["cardiopatia congênita", "gravidez", "Pregnancy Heart Team"], "source_refs": ["2025 ESC Guidelines for Cardiovascular Disease and Pregnancy"], "source_urls": ["https://www.escardio.org/guidelines/clinical-practice-guidelines/pocket-guidelines/management-of-cardiovascular-diseases-during-pregnancy/"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "hipertensao-pulmonar-gravidez", "name": "Hipertensão pulmonar na gravidez", "aliases": ["HAP e gestação", "pressão pulmonar alta na gestante"],
+    "area": "gravidez", "category": "circulacao_pulmonar", "subtype": "alto_risco", "prevalence_rank": 11, "completeness": "basico",
+    "summary": "Condição materna de alto risco que requer aconselhamento especializado e coordenação precoce por equipe multidisciplinar experiente.",
+    "tags": ["hipertensão pulmonar", "gravidez", "alto risco"], "source_refs": ["2025 ESC Guidelines for Cardiovascular Disease and Pregnancy"], "source_urls": ["https://www.escardio.org/guidelines/clinical-practice-guidelines/pocket-guidelines/management-of-cardiovascular-diseases-during-pregnancy/"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "sindrome-coronariana-gravidez", "name": "Síndrome coronariana na gravidez e puerpério", "aliases": ["infarto na gestante", "SCAD no puerpério"],
+    "area": "gravidez", "category": "doenca_coronariana", "subtype": "aguda", "prevalence_rank": 12, "completeness": "basico",
+    "summary": "Dor torácica e isquemia durante gestação ou puerpério exigem avaliação urgente, incluindo causas específicas como dissecção espontânea de coronária.",
+    "tags": ["síndrome coronariana", "SCAD", "gravidez", "puerpério"], "source_refs": ["2025 ESC Guidelines for Cardiovascular Disease and Pregnancy"], "source_urls": ["https://www.escardio.org/guidelines/clinical-practice-guidelines/pocket-guidelines/management-of-cardiovascular-diseases-during-pregnancy/"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "tromboembolismo-gravidez", "name": "Tromboembolismo na gravidez e pós-parto", "aliases": ["TEV na gestante", "embolia pulmonar no puerpério"],
+    "area": "gravidez", "category": "tromboembolismo", "subtype": "gestacao_puerperio", "prevalence_rank": 13, "completeness": "basico",
+    "summary": "Risco tromboembólico aumentado na gestação e no pós-parto, exigindo diagnóstico oportuno e escolhas compatíveis com mãe, feto e amamentação.",
+    "tags": ["TEV", "embolia pulmonar", "gravidez", "puerpério"], "source_refs": ["2025 ESC Guidelines for Cardiovascular Disease and Pregnancy"], "source_urls": ["https://www.escardio.org/guidelines/clinical-practice-guidelines/pocket-guidelines/management-of-cardiovascular-diseases-during-pregnancy/"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "medicamentos-cardiovasculares-gestacao-lactacao", "name": "Medicamentos cardiovasculares na gestação e lactação", "aliases": ["remédios cardíacos na gravidez", "cardiologia e amamentação"],
+    "area": "gravidez", "category": "farmacologia", "subtype": "gestacao_lactacao", "prevalence_rank": 14, "completeness": "basico",
+    "summary": "Revisão individualizada de benefício materno, risco fetal ou neonatal, período gestacional, dose, alternativas e compatibilidade com lactação.",
+    "tags": ["medicamentos", "gravidez", "lactação", "segurança"], "source_refs": ["2025 ESC Guidelines for Cardiovascular Disease and Pregnancy"], "source_urls": ["https://www.escardio.org/guidelines/clinical-practice-guidelines/pocket-guidelines/management-of-cardiovascular-diseases-during-pregnancy/"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "plano-parto-cardiopatia-materna", "name": "Plano de parto na cardiopatia materna", "aliases": ["delivery plan cardíaco", "parto e doença cardíaca"],
+    "area": "gravidez", "category": "planejamento", "subtype": "parto", "prevalence_rank": 15, "completeness": "basico",
+    "summary": "Documento multidisciplinar que organiza local, equipe, monitorização, analgesia, anticoagulação, contingências e cuidados pós-parto conforme risco individual.",
+    "tags": ["plano de parto", "Pregnancy Heart Team", "anestesia", "anticoagulação"], "source_refs": ["2025 ESC Guidelines for Cardiovascular Disease and Pregnancy"], "source_urls": ["https://www.escardio.org/guidelines/clinical-practice-guidelines/pocket-guidelines/management-of-cardiovascular-diseases-during-pregnancy/"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
+  },
+  {
+    "slug": "seguimento-cardiovascular-pos-parto", "name": "Seguimento cardiovascular pós-parto", "aliases": ["cardiologia no puerpério", "follow-up após gestação de risco"],
+    "area": "gravidez", "category": "seguimento", "subtype": "pos_parto", "prevalence_rank": 16, "completeness": "basico",
+    "summary": "Continuidade após o parto para reavaliar hemodinâmica, sintomas, pressão, medicações, anticoagulação, cardiomiopatia e risco cardiovascular futuro.",
+    "tags": ["pós-parto", "puerpério", "seguimento", "risco futuro"], "source_refs": ["2025 ESC Guidelines for Cardiovascular Disease and Pregnancy"], "source_urls": ["https://www.escardio.org/guidelines/clinical-practice-guidelines/pocket-guidelines/management-of-cardiovascular-diseases-during-pregnancy/"],
+    "review_status": "revisado", "review_note": "Revisado e aprovado pelo responsável clínico em 04/08/2026; conteúdo permanece sujeito a julgamento clínico individual.", "version": 1
   }
 ]

@@ -1,12 +1,16 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { api, ApiError } from "../lib/api";
 import { useAuth } from "../lib/auth";
 import { Carregando, Erro, Vazio } from "../components/Estado";
 
-type Farmaco = { slug: string; nome: string };
+type Farmaco = {
+  slug: string; nome: string; marca?: string | null; fabricante?: string | null;
+  fonte?: string;
+};
 type Item = {
   drug_slug?: string; descricao: string; apresentacao: string;
   quantidade: string; quantidade_extenso: string; posologia: string; orientacao: string;
+  uso_continuo: boolean;
   brand_name?: string; manufacturer?: string; ggrem?: string;
   pmc_snapshot?: number; uf?: string; cmed_version?: string;
 };
@@ -14,6 +18,7 @@ type Item = {
 type PrecoCmed = { valor: number | null; rotulo: string };
 type ApresentacaoCmed = {
   produto: string; laboratorio: string; apresentacao: string; ggrem: string;
+  apresentacao_cmed?: string;
   restricao_hospitalar: boolean; preco: PrecoCmed;
 };
 type RespostaApresentacoes = {
@@ -37,6 +42,7 @@ type Documento = {
   numeracao: string | null; status: string; itens: any[]; pendencias: string[];
   classificacao_corrigida_de: string | null; motivo_correcao: string | null;
   fonte_versao_listas: string | null; cid: string | null;
+  pode_enviar_email: boolean;
 };
 type ReceituarioCriado = { prescricao_id: number; exige_revisao: boolean; documentos: Documento[] };
 
@@ -51,6 +57,7 @@ type HistoricoResposta = {
 type ItemOriginal = {
   drug_slug: string | null; descricao: string; apresentacao: string;
   quantidade: string; quantidade_extenso: string; posologia: string; orientacao: string;
+  uso_continuo?: boolean;
   brand_name?: string | null; manufacturer?: string | null; ggrem?: string | null;
   pmc_snapshot?: number | null; uf?: string | null; cmed_version?: string | null;
 };
@@ -68,6 +75,10 @@ type TipoReceituario = { codigo: string; nome: string; ativo: boolean };
 const STATUS_RÓTULO: Record<string, string> = {
   rascunho: "Rascunho", revisado: "Revisado", emitido: "Emitido",
 };
+
+function normalizarBusca(valor: string | null | undefined) {
+  return (valor ?? "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("pt-BR").trim();
+}
 
 function baixarBlob(blob: Blob, nomeArquivo: string) {
   const url = URL.createObjectURL(blob);
@@ -121,7 +132,14 @@ function CartaoDocumento({ doc, provedores, tipos, onAtualizado }: {
         body: JSON.stringify({ endereco: endereco || null, metodo }),
       });
       baixarBlob(blob, `receituario-${doc.id}.pdf`);
-      onAtualizado({ ...doc, status: "emitido" });
+      const provedor = provedores?.find((item) => item.codigo === metodo);
+      onAtualizado({
+        ...doc,
+        status: "emitido",
+        pode_enviar_email: Boolean(
+          metodo !== "MANUAL" && provedor?.disponivel && provedor.nivel === "qualificada",
+        ),
+      });
     } catch (e) {
       setErro(e instanceof ApiError ? e.message : "Não foi possível emitir.");
     } finally {
@@ -270,7 +288,7 @@ function CartaoDocumento({ doc, provedores, tipos, onAtualizado }: {
         )}
       </div>
 
-      {doc.status === "emitido" && (
+      {doc.status === "emitido" && doc.pode_enviar_email && (
         <div style={{ marginTop: "0.8rem" }}>
           <label>Enviar por e-mail ao paciente (link seguro, válido por 7 dias)</label>
           <input type="email" value={email} onChange={(e) => setEmail(e.target.value)}
@@ -289,6 +307,12 @@ function CartaoDocumento({ doc, provedores, tipos, onAtualizado }: {
             )
           )}
         </div>
+      )}
+      {doc.status === "emitido" && !doc.pode_enviar_email && (
+        <p className="eyebrow" style={{ marginTop: "0.8rem" }}>
+          O envio por e-mail será liberado quando esta receita tiver assinatura digital
+          qualificada ICP-Brasil. Documento com assinatura manual não é enviado como receita digital.
+        </p>
       )}
     </div>
   );
@@ -395,7 +419,7 @@ function HistoricoReceituario({ onAbrir, onRecriar }: {
 
 const ITEM_VAZIO: Item = {
   descricao: "", apresentacao: "", quantidade: "", quantidade_extenso: "",
-  posologia: "", orientacao: "",
+  posologia: "", orientacao: "", uso_continuo: false,
 };
 
 export default function Receituario() {
@@ -412,7 +436,11 @@ export default function Receituario() {
   const [observacoes, setObservacoes] = useState("");
   const [itens, setItens] = useState<Item[]>([{ ...ITEM_VAZIO }]);
   const [buscaFarmaco, setBuscaFarmaco] = useState<string[]>([""]);
+  const [sugestoesFarmaco, setSugestoesFarmaco] = useState<(Farmaco[] | undefined)[]>([[]]);
+  const [marcaConsultada, setMarcaConsultada] = useState<(string | null)[]>([null]);
   const [apresentacoes, setApresentacoes] = useState<(RespostaApresentacoes | null | undefined)[]>([null]);
+  const temporizadoresBusca = useRef<(number | undefined)[]>([]);
+  const sequenciasBusca = useRef<number[]>([0]);
   const { usuario } = useAuth();
 
   const [previa, setPrevia] = useState<Previa | null>(null);
@@ -427,11 +455,49 @@ export default function Receituario() {
       .catch((e) => setErroCarregar(e instanceof ApiError ? e.message : "Não foi possível carregar os medicamentos."));
     api.get<Provedor[]>("/assinatura/provedores").then(setProvedores).catch(() => {});
     api.get<TipoReceituario[]>("/receituario/tipos").then(setTipos).catch(() => {});
+    return () => temporizadoresBusca.current.forEach((timer) => timer && window.clearTimeout(timer));
   }, []);
 
-  function atualizarItem(i: number, campo: keyof Item, valor: string) {
+  function atualizarItem(i: number, campo: keyof Item, valor: string | boolean | undefined) {
     setPrevia(null);
     setItens((lista) => lista.map((it, idx) => idx === i ? { ...it, [campo]: valor } : it));
+  }
+
+  function buscarMedicamentos(i: number, valor: string) {
+    setBuscaFarmaco((atuais) => atuais.map((item, indice) => indice === i ? valor : item));
+    setMarcaConsultada((atuais) => atuais.map((item, indice) => indice === i ? null : item));
+    atualizarItem(i, "drug_slug", undefined);
+    atualizarItem(i, "descricao", valor);
+    setApresentacoes((atuais) => atuais.map((item, indice) => indice === i ? null : item));
+
+    const sequencia = (sequenciasBusca.current[i] ?? 0) + 1;
+    sequenciasBusca.current[i] = sequencia;
+    if (temporizadoresBusca.current[i]) window.clearTimeout(temporizadoresBusca.current[i]);
+    if (valor.trim().length < 2) {
+      setSugestoesFarmaco((atuais) => atuais.map((item, indice) => indice === i ? [] : item));
+      return;
+    }
+    setSugestoesFarmaco((atuais) => atuais.map((item, indice) => indice === i ? undefined : item));
+    temporizadoresBusca.current[i] = window.setTimeout(() => {
+      api.get<{
+        slug: string; generic_name: string; brand_name: string | null;
+        manufacturer: string | null; source: string;
+      }[]>(`/drugs/sugestoes?q=${encodeURIComponent(valor.trim())}`)
+        .then((resultado) => {
+          if (sequenciasBusca.current[i] !== sequencia) return;
+          setSugestoesFarmaco((atuais) => atuais.map((item, indice) => indice === i
+            ? resultado.map((s) => ({
+                slug: s.slug, nome: s.generic_name, marca: s.brand_name,
+                fabricante: s.manufacturer, fonte: s.source,
+              }))
+            : item));
+        })
+        .catch(() => {
+          if (sequenciasBusca.current[i] === sequencia) {
+            setSugestoesFarmaco((atuais) => atuais.map((item, indice) => indice === i ? [] : item));
+          }
+        });
+    }, 180);
   }
 
   function escolherFarmaco(i: number, f: Farmaco) {
@@ -439,9 +505,11 @@ export default function Receituario() {
     setItens((lista) => lista.map((it, idx) => idx === i
       ? { drug_slug: f.slug, descricao: f.nome, apresentacao: "",
           quantidade: it.quantidade, quantidade_extenso: it.quantidade_extenso,
-          posologia: it.posologia, orientacao: it.orientacao }
+          posologia: it.posologia, orientacao: it.orientacao, uso_continuo: it.uso_continuo }
       : it));
-    setBuscaFarmaco((b) => b.map((v, idx) => idx === i ? f.nome : v));
+    setBuscaFarmaco((b) => b.map((v, idx) => idx === i ? (f.marca ?? f.nome) : v));
+    setMarcaConsultada((atuais) => atuais.map((valor, indice) => indice === i ? (f.marca ?? null) : valor));
+    setSugestoesFarmaco((atuais) => atuais.map((valor, indice) => indice === i ? [] : valor));
     setApresentacoes((a) => a.map((v, idx) => idx === i ? undefined : v));
     api.get<RespostaApresentacoes>(`/drugs/${f.slug}/apresentacoes${usuario?.council_state ? `?uf=${usuario.council_state}` : ""}`)
       .then((r) => setApresentacoes((a) => a.map((v, idx) => idx === i ? r : v)))
@@ -474,17 +542,23 @@ export default function Receituario() {
         pmc_snapshot: undefined, uf: undefined, cmed_version: undefined,
       };
     }));
+    setMarcaConsultada((atuais) => atuais.map((valor, indice) => indice === i ? null : valor));
   }
 
   function adicionarItem() {
     setItens((l) => [...l, { ...ITEM_VAZIO }]);
     setBuscaFarmaco((b) => [...b, ""]);
+    setSugestoesFarmaco((b) => [...b, []]);
+    setMarcaConsultada((b) => [...b, null]);
+    sequenciasBusca.current.push(0);
     setApresentacoes((a) => [...a, null]);
   }
 
   function removerItem(i: number) {
     setItens((l) => l.filter((_, idx) => idx !== i));
     setBuscaFarmaco((b) => b.filter((_, idx) => idx !== i));
+    setSugestoesFarmaco((b) => b.filter((_, idx) => idx !== i));
+    setMarcaConsultada((b) => b.filter((_, idx) => idx !== i));
     setApresentacoes((a) => a.filter((_, idx) => idx !== i));
     setPrevia(null);
   }
@@ -495,7 +569,7 @@ export default function Receituario() {
     itens: itensValidos.map((it) => ({
       drug_slug: it.drug_slug, descricao: it.descricao, apresentacao: it.apresentacao,
       quantidade: it.quantidade, quantidade_extenso: it.quantidade_extenso,
-      posologia: it.posologia, orientacao: it.orientacao,
+      posologia: it.posologia, orientacao: it.orientacao, uso_continuo: it.uso_continuo,
       brand_name: it.brand_name, manufacturer: it.manufacturer, ggrem: it.ggrem,
       pmc_snapshot: it.pmc_snapshot, uf: it.uf, cmed_version: it.cmed_version,
     })),
@@ -560,6 +634,7 @@ export default function Receituario() {
           quantidade_extenso: i.quantidade_extenso ?? "",
           posologia: i.posologia ?? "",
           orientacao: i.orientacao ?? "",
+          uso_continuo: Boolean(i.uso_continuo),
           brand_name: i.brand_name ?? undefined,
           manufacturer: i.manufacturer ?? undefined,
           ggrem: i.ggrem ?? undefined,
@@ -573,6 +648,8 @@ export default function Receituario() {
       farmacos?.find((f) => f.slug === item.drug_slug)?.nome ?? item.descricao,
     ));
     setApresentacoes(novosItens.map(() => null));
+    setSugestoesFarmaco(novosItens.map(() => []));
+    setMarcaConsultada(novosItens.map((item) => item.brand_name ?? null));
     setAba("nova");
   }
 
@@ -618,19 +695,19 @@ export default function Receituario() {
               <label>Medicamento</label>
               <input
                 value={buscaFarmaco[i] ?? ""}
-                onChange={(e) => {
-                  setBuscaFarmaco((b) => b.map((v, idx) => idx === i ? e.target.value : v));
-                  atualizarItem(i, "drug_slug", "");
-                  atualizarItem(i, "descricao", e.target.value);
-                  setApresentacoes((a) => a.map((v, idx) => idx === i ? null : v));
-                }}
-                placeholder="Busque na base ou digite livremente"
+                onChange={(e) => buscarMedicamentos(i, e.target.value)}
+                placeholder="Digite o nome genérico ou comercial"
+                autoComplete="off"
               />
               {(() => {
                 if (!buscaFarmaco[i] || it.drug_slug) return null;
-                const sugestoes = farmacos
-                  .filter((f) => f.nome.toLowerCase().includes(buscaFarmaco[i].toLowerCase()))
-                  .slice(0, 8);
+                if (buscaFarmaco[i].trim().length < 2) {
+                  return <p className="eyebrow" style={{ margin: "0.3rem 0 0" }}>Digite ao menos 2 caracteres.</p>;
+                }
+                const sugestoes = sugestoesFarmaco[i];
+                if (sugestoes === undefined) {
+                  return <p className="eyebrow" style={{ margin: "0.3rem 0 0" }}>Buscando genéricos e marcas na lista CMED…</p>;
+                }
                 if (sugestoes.length === 0) {
                   return (
                     <p className="eyebrow" style={{ margin: "0.3rem 0 0" }}>
@@ -641,10 +718,16 @@ export default function Receituario() {
                 return (
                   <div style={{ maxHeight: 140, overflowY: "auto", border: "1px solid var(--linha)", borderRadius: 6, marginTop: 4 }}>
                     {sugestoes.map((f) => (
-                      <button key={f.slug} type="button"
+                      <button key={`${f.slug}:${f.marca ?? ""}:${f.fabricante ?? ""}`} type="button"
                               style={{ display: "block", width: "100%", textAlign: "left", padding: "0.3rem 0.5rem", border: "none", background: "transparent", cursor: "pointer" }}
                               onClick={() => escolherFarmaco(i, f)}>
-                        {f.nome}
+                        <strong>{f.marca ?? f.nome}</strong>
+                        {f.marca && <span> — {f.nome}</span>}
+                        {(f.fabricante || f.fonte) && (
+                          <small style={{ display: "block", color: "var(--texto-secundario)" }}>
+                            {[f.fabricante, f.fonte].filter(Boolean).join(" · ")}
+                          </small>
+                        )}
                       </button>
                     ))}
                   </div>
@@ -680,11 +763,23 @@ export default function Receituario() {
                     ? <p className="eyebrow" style={{ margin: "0.3rem 0 0" }}>{resp.aviso}</p>
                     : null;
                 }
+                const marcaAlvo = normalizarBusca(marcaConsultada[i]);
+                const opcoes = marcaAlvo
+                  ? resp.apresentacoes.filter((ap) => normalizarBusca(ap.produto) === marcaAlvo)
+                  : resp.apresentacoes;
+                if (marcaAlvo && opcoes.length === 0) {
+                  return (
+                    <p className="eyebrow" style={{ margin: "0.3rem 0 0" }}>
+                      A marca foi localizada no catálogo, mas não há apresentação vinculada a este
+                      princípio ativo na versão CMED carregada. Se necessário, selecione o genérico.
+                    </p>
+                  );
+                }
                 return (
                   <div style={{ marginTop: "0.3rem" }}>
                     <label style={{ margin: 0 }}>Marca (opcional — genérico já está selecionado)</label>
                     <div style={{ maxHeight: 180, overflowY: "auto", border: "1px solid var(--linha)", borderRadius: 6 }}>
-                      {resp.apresentacoes.map((ap, ai) => (
+                      {opcoes.map((ap, ai) => (
                         <button key={ai} type="button"
                                 style={{ display: "block", width: "100%", textAlign: "left", padding: "0.3rem 0.5rem", border: "none", borderBottom: "1px solid var(--linha)", background: "transparent", cursor: "pointer", fontSize: "0.86rem" }}
                                 onClick={() => escolherApresentacao(i, ap, resp)}>
@@ -711,16 +806,44 @@ export default function Receituario() {
               <div className="grade grade--2" style={{ marginTop: "0.4rem" }}>
                 <div>
                   <label>Quantidade em algarismos</label>
-                  <input value={it.quantidade} onChange={(e) => atualizarItem(i, "quantidade", e.target.value)}
+                  <input value={it.quantidade} disabled={it.uso_continuo}
+                         onChange={(e) => atualizarItem(i, "quantidade", e.target.value)}
                          placeholder="Ex.: 60 comprimidos" />
                 </div>
                 <div>
                   <label>Quantidade por extenso</label>
-                  <input value={it.quantidade_extenso}
+                  <input value={it.quantidade_extenso} disabled={it.uso_continuo}
                          onChange={(e) => atualizarItem(i, "quantidade_extenso", e.target.value)}
                          placeholder="Ex.: sessenta comprimidos" />
                 </div>
               </div>
+              <label style={{ display: "flex", alignItems: "flex-start", gap: 8, marginTop: "0.55rem" }}>
+                <input
+                  type="checkbox"
+                  checked={it.uso_continuo}
+                  onChange={(e) => {
+                    const marcado = e.target.checked;
+                    setPrevia(null);
+                    setItens((atuais) => atuais.map((item, indice) => indice === i
+                      ? {
+                          ...item,
+                          uso_continuo: marcado,
+                          quantidade: marcado ? "" : item.quantidade,
+                          quantidade_extenso: marcado ? "" : item.quantidade_extenso,
+                        }
+                      : item));
+                  }}
+                  style={{ width: "auto", marginTop: 2 }}
+                />
+                <span>
+                  <strong>Uso contínuo / tempo indeterminado</strong><br />
+                  <small style={{ color: "var(--texto-secundario)" }}>
+                    Na receita comum, substitui a quantidade pela orientação de dispensar o máximo
+                    permitido pela legislação aplicável. Não elimina limites de controlados,
+                    antimicrobianos ou outras categorias especiais.
+                  </small>
+                </span>
+              </label>
               <p className="eyebrow" style={{ margin: "0.2rem 0 0" }}>
                 Os dois campos são obrigatórios para Receita de Controle Especial. A RCE aceita
                 no máximo três substâncias C1 e, em regra, quantidade para até 60 dias de tratamento.

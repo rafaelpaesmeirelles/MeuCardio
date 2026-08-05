@@ -216,6 +216,10 @@ jobs:
         working-directory: frontend
         run: node scripts/check-rendering-security.mjs
 
+      - name: Test the restricted email rendering exception
+        working-directory: frontend
+        run: node --test scripts/check-rendering-security.test.mjs
+
       - name: Enforce route-level code splitting
         working-directory: frontend
         run: node scripts/check-route-splitting.mjs

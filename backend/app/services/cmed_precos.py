@@ -230,6 +230,71 @@ def eh_match(cmed_palavras: frozenset[str], local_palavras: frozenset[str]) -> b
     return bool(cmed_palavras) and cmed_palavras <= local_palavras
 
 
+FORMAS_FARMACEUTICAS = (
+    (r"\bCOM\s+REV\b", "comprimido revestido"),
+    (r"\bCOM\b", "comprimido"),
+    (r"\bCAP\b", "cápsula"),
+    (r"\bSOL\s+INJ\b", "solução injetável"),
+    (r"\bSOL\s+OR\b", "solução oral"),
+    (r"\bSUSP\s+OR\b", "suspensão oral"),
+    (r"\bSER\s+PREENC\b", "seringa preenchida"),
+    (r"\bAMP\b", "ampola"),
+    (r"\bFR\b", "frasco"),
+    (r"\bXPE\b", "xarope"),
+    (r"\bCREM\b", "creme"),
+    (r"\bPOM\b", "pomada"),
+    (r"\bGEL\b", "gel"),
+)
+
+
+def apresentacao_legivel(valor: str) -> str:
+    """Reduz a descrição logística da CMED ao que é clínico e legível.
+
+    A planilha usa siglas de embalagem como ``CT BL AL``. Elas identificam a
+    linha comercial, mas não devem ser impressas para o paciente. O texto
+    original continua preservado na linha CMED e é rastreável pelo GGREM.
+    """
+    original = (valor or "").strip()
+    if not original:
+        return ""
+    texto = re.sub(r"\s+", " ", original.upper())
+    doses = []
+    for numero, unidade, divisor in re.findall(
+        r"\b(\d+(?:[.,]\d+)?)\s*(MCG|MG|G|UI|U|MEQ)(?:\s*/\s*(ML|DOSE))?\b",
+        texto,
+    ):
+        unidade_formatada = unidade if unidade in {"UI", "U"} else unidade.lower()
+        dose = f"{numero} {unidade_formatada}"
+        if divisor:
+            dose += f"/{divisor.lower()}"
+        if dose not in doses:
+            doses.append(dose)
+
+    forma = next((rotulo for padrao, rotulo in FORMAS_FARMACEUTICAS if re.search(padrao, texto)), None)
+    partes = []
+    if doses:
+        partes.append(" + ".join(doses))
+    if forma:
+        partes.append(forma)
+
+    if forma in {"comprimido", "comprimido revestido", "cápsula", "ampola"}:
+        quantidades = re.findall(r"\bX\s*(\d+)\b", texto)
+        if quantidades:
+            plural = {
+                "comprimido": "comprimidos",
+                "comprimido revestido": "comprimidos revestidos",
+                "cápsula": "cápsulas",
+                "ampola": "ampolas",
+            }[forma]
+            partes.append(f"caixa com {quantidades[-1]} {plural}")
+    elif forma in {"frasco", "xarope", "solução oral", "suspensão oral"}:
+        volumes = re.findall(r"\b(\d+(?:[.,]\d+)?)\s*ML\b", texto)
+        if volumes:
+            partes.append(f"frasco com {volumes[-1]} mL")
+
+    return " — ".join(partes) or "Apresentação comercial registrada na CMED"
+
+
 def casar_substancia(substancia_cmed: str, farmacos_normalizados: list[tuple[int, frozenset[str]]]) -> list[int]:
     """`farmacos_normalizados` é [(drug_id, palavras_normalizadas(generic_name)), ...].
     Nunca casa com uma linha de combinação (`;`) — ver docstring de `eh_match`."""

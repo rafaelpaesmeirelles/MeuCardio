@@ -12,6 +12,7 @@ from app.core.config import settings
 from app.core.db import get_db
 from app.core.security import current_user
 from app.models.audit import AuditLog
+from app.models.assinatura import DocumentoEmitido
 from app.models.clinical_docs import Prescription
 from app.models.compartilhamento import DocumentShareLink
 from app.models.drug import Drug
@@ -41,6 +42,7 @@ class ItemIn(BaseModel):
     quantidade_extenso: str = ""
     posologia: str = ""
     orientacao: str = ""
+    uso_continuo: bool = False
     brand_name: str | None = None
     manufacturer: str | None = None
     ggrem: str | None = None
@@ -96,8 +98,8 @@ def _resolver(db: Session, itens: list[ItemIn]) -> list[ItemPrescrito]:
                 substancia = d.generic_name
                 if not apresentacao and d.presentations:
                     apresentacao = d.presentations[0]
-        quantidade = (i.quantidade or "").strip()
-        quantidade_extenso = (i.quantidade_extenso or "").strip()
+        quantidade = "" if i.uso_continuo else (i.quantidade or "").strip()
+        quantidade_extenso = "" if i.uso_continuo else (i.quantidade_extenso or "").strip()
         quantidade_impressa = quantidade
         if quantidade_extenso:
             quantidade_impressa = f"{quantidade} ({quantidade_extenso})" if quantidade else quantidade_extenso
@@ -107,6 +109,7 @@ def _resolver(db: Session, itens: list[ItemIn]) -> list[ItemPrescrito]:
             apresentacao=apresentacao or None,
             quantidade=quantidade_impressa or None,
             posologia=i.posologia or None,
+            uso_continuo=i.uso_continuo,
             brand_name=(i.brand_name or "").strip() or None,
             manufacturer=(i.manufacturer or "").strip() or None,
             ggrem=(i.ggrem or "").strip() or None,
@@ -128,6 +131,7 @@ def _item_snapshot(item: ItemPrescrito) -> dict:
         "apresentacao": item.apresentacao,
         "quantidade": item.quantidade,
         "posologia": item.posologia,
+        "uso_continuo": item.uso_continuo,
         "lista": item.lista,
         "brand_name": item.brand_name,
         "manufacturer": item.manufacturer,
@@ -149,7 +153,18 @@ def _item_snapshot(item: ItemPrescrito) -> dict:
     return snapshot
 
 
-def _doc_json(doc: PrescriptionDocument, tipo: PrescriptionType | None) -> dict:
+def _doc_json(db: Session, doc: PrescriptionDocument, tipo: PrescriptionType | None) -> dict:
+    emitido = (
+        db.query(DocumentoEmitido)
+        .filter(
+            DocumentoEmitido.tipo == assinatura_emissao.TIPO_RECEITA,
+            DocumentoEmitido.referencia_id == doc.id,
+        )
+        .first()
+    )
+    pode_enviar_email = bool(
+        emitido and emitido.assinado_em is not None and emitido.nivel == "qualificada"
+    )
     return {
         "id": doc.id, "tipo": doc.tipo_codigo,
         "tipo_nome": tipo.nome if tipo else None,
@@ -163,6 +178,7 @@ def _doc_json(doc: PrescriptionDocument, tipo: PrescriptionType | None) -> dict:
         "motivo_correcao": doc.motivo_correcao,
         "fonte_versao_listas": doc.fonte_versao_listas,
         "cid": doc.cid,
+        "pode_enviar_email": pode_enviar_email,
     }
 
 
@@ -267,7 +283,7 @@ def criar(dados: ReceituarioIn, db: Session = Depends(get_db), user=Depends(curr
 
     tipos = _tipos(db)
     return {"prescricao_id": presc.id, "exige_revisao": resultado.exige_revisao,
-            "documentos": [_doc_json(x, tipos.get(x.tipo_codigo)) for x in criados]}
+            "documentos": [_doc_json(db, x, tipos.get(x.tipo_codigo)) for x in criados]}
 
 
 @router.get("")
@@ -367,7 +383,7 @@ def obter(prescricao_id: int, db: Session = Depends(get_db), user=Depends(curren
     return {"prescricao_id": presc.id, "destinatario": destinatario,
             "observacoes": presc.notes,
             "itens_originais": presc.items,
-            "documentos": [_doc_json(x, tipos.get(x.tipo_codigo)) for x in docs]}
+            "documentos": [_doc_json(db, x, tipos.get(x.tipo_codigo)) for x in docs]}
 
 
 @router.post("/documentos/{documento_id}/revisar")
@@ -399,7 +415,7 @@ def revisar(documento_id: int, dados: RevisaoIn, db: Session = Depends(get_db),
                     detail={"corrigido_de": doc.classificacao_corrigida_de,
                             "para": doc.tipo_codigo, "motivo": doc.motivo_correcao}))
     db.commit()
-    return _doc_json(doc, _tipos(db).get(doc.tipo_codigo))
+    return _doc_json(db, doc, _tipos(db).get(doc.tipo_codigo))
 
 
 class EmitirIn(BaseModel):
@@ -567,6 +583,18 @@ def enviar_email(documento_id: int, dados: EnviarEmailIn, db: Session = Depends(
         raise HTTPException(status_code=404, detail="Documento não encontrado.")
     if doc.status != "emitido":
         raise HTTPException(status_code=409, detail="Só é possível enviar um documento já emitido.")
+
+    registro = assinatura_emissao.buscar(
+        db, tipo=assinatura_emissao.TIPO_RECEITA, referencia_id=doc.id,
+    )
+    if not registro or registro.assinado_em is None or registro.nivel != "qualificada":
+        raise HTTPException(
+            status_code=409,
+            detail=(
+                "O envio por e-mail só é liberado para receita assinada digitalmente "
+                "com assinatura qualificada ICP-Brasil."
+            ),
+        )
 
     dest = db.query(PrescriptionRecipient).filter(
         PrescriptionRecipient.prescription_id == presc.id).first()

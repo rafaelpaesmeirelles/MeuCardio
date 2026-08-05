@@ -78,17 +78,20 @@ export default function GuiaDoencas() {
   }, [q, area, tab, cyanosis, page]);
 
   useEffect(() => {
+    let active = true;
     setLoading(true);
     setError("");
     const search = new URLSearchParams(filters).toString();
     api.get<Response>(`/specialty-guides/diseases?${search}`)
       .then((response) => {
+        if (!active) return;
         setItems((previous) => page === 1 ? response.items : [...previous, ...response.items]);
         setHasMore(response.has_more);
         setTotal(response.total);
       })
-      .catch((cause) => setError(cause.message))
-      .finally(() => setLoading(false));
+      .catch((cause) => { if (active) setError(cause.message); })
+      .finally(() => { if (active) setLoading(false); });
+    return () => { active = false; };
   }, [filters, page]);
 
   function changeTab(next: Tab) {
@@ -121,6 +124,8 @@ export default function GuiaDoencas() {
         {(Object.keys(TAB_LABELS) as Tab[]).map((value) => (
           <button
             key={value}
+            type="button"
+            role="tab"
             className="painel__tema"
             onClick={() => changeTab(value)}
             aria-selected={tab === value}
@@ -132,7 +137,7 @@ export default function GuiaDoencas() {
       </div>
 
       <section className="cartao" style={{ marginTop: "1rem" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "minmax(15rem, 2fr) minmax(12rem, 1fr)", gap: "0.7rem" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 15rem), 1fr))", gap: "0.7rem" }}>
           <label>
             <strong>Pesquisar</strong>
             <input
@@ -159,6 +164,7 @@ export default function GuiaDoencas() {
             {["", "acianotica", "cianotica"].map((value) => (
               <button
                 key={value || "todas"}
+                type="button"
                 className="painel__tema"
                 onClick={() => { setCyanosis(value); setPage(1); setItems([]); }}
                 style={cyanosis === value ? { borderColor: "var(--acento)" } : undefined}

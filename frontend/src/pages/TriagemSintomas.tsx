@@ -89,9 +89,11 @@ export default function TriagemSintomas() {
   const [assessing, setAssessing] = useState(false);
 
   useEffect(() => {
+    let active = true;
     api.get<TriageSummary[]>("/specialty-guides/triage")
-      .then(setCatalog)
-      .catch((cause) => setError(cause.message));
+      .then((response) => { if (active) setCatalog(response); })
+      .catch((cause) => { if (active) setError(cause.message); });
+    return () => { active = false; };
   }, []);
 
   useEffect(() => {
@@ -103,10 +105,12 @@ export default function TriagemSintomas() {
     setError("");
     setAnswers({});
     setAssessment(null);
+    let active = true;
     api.get<TriageDetail>(`/specialty-guides/triage/${selectedSlug}`)
-      .then(setDetail)
-      .catch((cause) => setError(cause.message))
-      .finally(() => setLoadingDetail(false));
+      .then((response) => { if (active) setDetail(response); })
+      .catch((cause) => { if (active) setError(cause.message); })
+      .finally(() => { if (active) setLoadingDetail(false); });
+    return () => { active = false; };
   }, [selectedSlug]);
 
   const filtered = useMemo(() => {
@@ -161,8 +165,8 @@ export default function TriagemSintomas() {
       <section className="cartao" style={{ marginTop: "1rem" }}>
         <h2>1. Ambiente de atendimento</h2>
         <div className="painel__temas">
-          <button className="painel__tema" onClick={() => { setContext("ambulatorio"); setAssessment(null); }} style={context === "ambulatorio" ? { borderColor: "var(--acento)", fontWeight: 700 } : undefined}>Consultório / ambulatório</button>
-          <button className="painel__tema" onClick={() => { setContext("emergencia"); setAssessment(null); }} style={context === "emergencia" ? { borderColor: "var(--acento)", fontWeight: 700 } : undefined}>Emergência</button>
+          <button type="button" className="painel__tema" onClick={() => { setContext("ambulatorio"); setAssessment(null); }} style={context === "ambulatorio" ? { borderColor: "var(--acento)", fontWeight: 700 } : undefined}>Consultório / ambulatório</button>
+          <button type="button" className="painel__tema" onClick={() => { setContext("emergencia"); setAssessment(null); }} style={context === "emergencia" ? { borderColor: "var(--acento)", fontWeight: 700 } : undefined}>Emergência</button>
         </div>
       </section>
 
@@ -171,7 +175,7 @@ export default function TriagemSintomas() {
         <input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Pesquisar dor, dispneia, palpitação, síncope…" />
         <div className="painel__temas" style={{ marginTop: "0.7rem" }}>
           {filtered.map((item) => (
-            <button key={item.slug} className="painel__tema" onClick={() => setSelectedSlug(item.slug)} style={selectedSlug === item.slug ? { borderColor: "var(--acento)", fontWeight: 700 } : undefined}>{item.name}</button>
+            <button type="button" key={item.slug} className="painel__tema" onClick={() => setSelectedSlug(item.slug)} style={selectedSlug === item.slug ? { borderColor: "var(--acento)", fontWeight: 700 } : undefined}>{item.name}</button>
           ))}
         </div>
         {!filtered.length && <p>Nenhum sintoma encontrado.</p>}

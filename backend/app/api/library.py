@@ -15,6 +15,7 @@ from app.models.evidence import EvidenceRecord
 from app.models.gallery import GalleryImage
 from app.models.lab_test import LabTest
 from app.models.patient_material import PatientMaterial
+from app.models.specialty_guide import SpecialtyDisease, SymptomTriageGuide
 from app.models.study import ScientificStudy
 from app.models.study_track import StudyTrack
 
@@ -38,6 +39,8 @@ CATALOG_FRONTS = (
     ("checklists", "Checklists", "/checklists", DischargeChecklist),
     ("material_paciente", "Material para pacientes", "/material-paciente", PatientMaterial),
     ("emergencia", "Protocolos de emergência", "/emergencia", EmergencyProtocol),
+    ("doencas_especializadas", "Guias por doença", "/guias-doencas", SpecialtyDisease),
+    ("triagem_sintomas", "Triagem por sintomas", "/triagem-sintomas", SymptomTriageGuide),
 )
 
 
@@ -60,7 +63,7 @@ def _card(d: Document) -> dict:
 
 @router.get("/catalog")
 def catalog(db: Session = Depends(get_db), _=Depends(current_user)):
-    """Resumo canônico das 11 frentes científicas.
+    """Resumo canônico das 13 frentes científicas.
 
     ``total`` e ``inventory_total`` representam todos os registros preservados
     no PostgreSQL. ``published_total`` informa separadamente o conteúdo já

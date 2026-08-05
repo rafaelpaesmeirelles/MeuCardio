@@ -25,7 +25,6 @@ from reportlab.pdfbase.pdfmetrics import stringWidth
 from reportlab.pdfgen import canvas
 
 from app.services.professional_profile import (
-    logo_needs_dark_plate_path,
     logo_path,
     professional_name,
 )
@@ -173,14 +172,12 @@ def _logo_profissional(c: canvas.Canvas, medico: Any, x: float, y_topo: float) -
         largura = 25 * mm
         altura = min(14 * mm, largura * altura_px / max(1, largura_px))
         largura = altura * largura_px / max(1, altura_px)
-        escura = logo_needs_dark_plate_path(caminho)
-        c.setFillColorRGB(*(0.043, 0.18, 0.27) if escura else (1, 1, 1))
-        c.roundRect(x, y_topo - altura - 1.5 * mm, largura + 3 * mm, altura + 3 * mm,
-                    2 * mm, fill=1, stroke=0)
-        c.drawImage(img, x + 1.5 * mm, y_topo - altura,
+        c.setFillColorRGB(1, 1, 1)
+        c.rect(x, y_topo - altura, largura, altura, fill=1, stroke=0)
+        c.drawImage(img, x, y_topo - altura,
                     width=largura, height=altura, preserveAspectRatio=True, mask="auto")
         c.setFillColorRGB(0, 0, 0)
-        return largura + 5 * mm
+        return largura + 4 * mm
     except (OSError, ValueError):
         log.warning("Logo profissional ilegível em %s; RCE gerada sem a imagem.", caminho)
         return 0.0
@@ -433,6 +430,11 @@ def validar_requisitos_rce(*, medico: Any, destinatario: dict, itens: list[dict]
     if not itens:
         erros.append("A receita precisa conter ao menos um medicamento.")
     for indice, item in enumerate(itens, start=1):
+        if item.get("uso_continuo"):
+            erros.append(
+                f"Uso contínuo não dispensa a quantidade regulamentar do item {indice} "
+                "em Receita de Controle Especial."
+            )
         quantidade = _texto(item.get("quantidade"))
         extenso = quantidade.split("(", 1)[1].rsplit(")", 1)[0] if "(" in quantidade and ")" in quantidade else ""
         if not re.search(r"\d", quantidade) or not re.search(r"[A-Za-zÀ-ÿ]", extenso):

@@ -7,7 +7,12 @@ from urllib.parse import urlparse
 import pytest
 
 from app.commands.reconcile_content import FRONTS
-from app.services.clinical_rule_engine import evaluate_rules, validate_answers
+from app.services.clinical_rule_engine import (
+    evaluate_rules,
+    validate_answers,
+    validate_question_definitions,
+    validate_rule_definitions,
+)
 
 ROOT = Path(__file__).resolve().parents[2]
 DISEASES_PATH = ROOT / "doencas/metadados.json"
@@ -32,14 +37,22 @@ def test_specialty_catalog_has_all_areas_and_canonical_minimum():
     items = _load(DISEASES_PATH)
     slugs = [item["slug"] for item in items]
 
-    assert len(items) >= 26
+    assert len(items) >= 87
     assert len(slugs) == len(set(slugs))
     assert {item["area"] for item in items} == {
         "cardiopediatria", "cardiogeriatria", "cardiooncologia", "gravidez",
     }
-    assert FRONTS["doencas_especializadas"]["minimum"] == 26
+    assert FRONTS["doencas_especializadas"]["minimum"] == 87
     assert all(item.get("summary") for item in items)
-    assert all(item.get("review_status") == "revisado" for item in items)
+    assert {item.get("review_status") for item in items} <= {
+        "revisado", "pendente_revisao", "lacuna_declarada",
+    }
+    assert sum(item.get("review_status") == "revisado" for item in items) >= 26
+    assert all(
+        item.get("review_note")
+        for item in items
+        if item.get("review_status") != "revisado"
+    )
     assert all(item.get("source_refs") for item in items)
     _assert_urls(items)
 
@@ -189,6 +202,42 @@ def test_answer_validation_rejects_non_finite_and_oversized_values():
     )
 
     assert invalid == ["multi", "number", "text"]
+
+
+def test_required_empty_multiselect_and_blank_text_are_reported_missing():
+    questions = [
+        {"id": "multi", "type": "multiselect", "required": True},
+        {"id": "text", "type": "text", "required": True},
+    ]
+
+    missing, invalid = validate_answers(
+        questions,
+        {"multi": [], "text": "   "},
+    )
+
+    assert missing == ["multi", "text"]
+    assert invalid == []
+
+
+def test_manifest_schema_rejects_unsafe_or_malformed_rules():
+    question_errors, question_ids = validate_question_definitions(
+        "guia-invalido",
+        [{"id": "choice", "type": "select", "options": []}],
+    )
+    rule_errors = validate_rule_definitions(
+        "guia-invalido",
+        [{
+            "id": "regra",
+            "when": {"all": ["condicao-nao-estruturada"]},
+            "add": {"risk": "critico", "prescricao": "automatica"},
+        }],
+        question_ids,
+    )
+
+    assert any("precisa de opções" in error for error in question_errors)
+    assert any("condição inválida" in error for error in rule_errors)
+    assert any("campos não permitidos" in error for error in rule_errors)
+    assert any("risco inválido" in error for error in rule_errors)
 
 
 def test_engine_rejects_unsupported_context_and_excessive_rules():

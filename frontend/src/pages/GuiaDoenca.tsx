@@ -103,11 +103,14 @@ export default function GuiaDoenca() {
   const assistantMode = params.get("modo") === "assistente";
 
   useEffect(() => {
+    let active = true;
     setLoading(true);
+    setError("");
     api.get<Disease>(`/specialty-guides/diseases/${slug}`)
-      .then(setDisease)
-      .catch((cause) => setError(cause.message))
-      .finally(() => setLoading(false));
+      .then((response) => { if (active) setDisease(response); })
+      .catch((cause) => { if (active) setError(cause.message); })
+      .finally(() => { if (active) setLoading(false); });
+    return () => { active = false; };
   }, [slug]);
 
   const sections = useMemo(() => {
@@ -155,6 +158,7 @@ export default function GuiaDoenca() {
         <Link className="painel__tema" to="/doencas">← Voltar ao guia</Link>
         {disease.assistant_questions.length > 0 && (
           <button
+            type="button"
             className="painel__tema"
             onClick={() => setParams(assistantMode ? {} : { modo: "assistente" })}
             style={assistantMode ? { borderColor: "var(--acento)", fontWeight: 700 } : undefined}
@@ -171,8 +175,8 @@ export default function GuiaDoenca() {
           <section className="cartao" style={{ marginTop: "1rem" }}>
             <h2>Contexto do atendimento</h2>
             <div className="painel__temas">
-              <button className="painel__tema" onClick={() => setContext("ambulatorio")} style={context === "ambulatorio" ? { borderColor: "var(--acento)" } : undefined}>Consultório / ambulatório</button>
-              <button className="painel__tema" onClick={() => setContext("emergencia")} style={context === "emergencia" ? { borderColor: "var(--acento)" } : undefined}>Emergência</button>
+              <button type="button" className="painel__tema" onClick={() => setContext("ambulatorio")} style={context === "ambulatorio" ? { borderColor: "var(--acento)" } : undefined}>Consultório / ambulatório</button>
+              <button type="button" className="painel__tema" onClick={() => setContext("emergencia")} style={context === "emergencia" ? { borderColor: "var(--acento)" } : undefined}>Emergência</button>
             </div>
           </section>
 

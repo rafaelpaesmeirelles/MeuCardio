@@ -1,4 +1,4 @@
-"""Protege o total canônico das 11 coleções e o baseline científico."""
+"""Protege o total canônico das 13 coleções e o baseline científico."""
 
 from app.api.library import (
     CATALOG_FRONTS,
@@ -40,17 +40,17 @@ def _contagens_no_minimo() -> dict[type, int]:
 
 
 def test_baseline_do_catalogo_nao_diverge_do_reconciliador():
-    assert SCIENTIFIC_CORPUS_MINIMUM == SCIENTIFIC_MINIMUM == 4_936
+    assert SCIENTIFIC_CORPUS_MINIMUM == SCIENTIFIC_MINIMUM == 5_035
     assert set(MODELS_BY_KEY) == set(RECONCILIATION_FRONTS)
 
 
-def test_catalogo_soma_as_onze_frentes_e_expõe_baselines():
+def test_catalogo_soma_as_treze_frentes_e_expõe_baselines():
     resposta = catalog(db=_SessaoFalsa(_contagens_no_minimo()), _=object())
 
-    assert len(resposta["fronts"]) == 11
+    assert len(resposta["fronts"]) == 13
     assert resposta["total"] == SCIENTIFIC_CORPUS_MINIMUM
     assert resposta["inventory_total"] == SCIENTIFIC_CORPUS_MINIMUM
-    assert resposta["expected_minimum"] == 4_936
+    assert resposta["expected_minimum"] == 5_035
     assert resposta["physical_files_expected"] == 1_327
     assert resposta["integrity_ok"] is True
     assert resposta["missing"] == 0
@@ -65,7 +65,7 @@ def test_excedente_em_uma_frente_nao_mascara_deficit_em_outra():
 
     resposta = catalog(db=_SessaoFalsa(contagens), _=object())
 
-    # O agregado ainda é 4.936, mas emergência está abaixo do mínimo próprio.
+    # O agregado ainda é 5.035, mas emergência está abaixo do mínimo próprio.
     assert resposta["total"] == SCIENTIFIC_CORPUS_MINIMUM
     assert resposta["integrity_ok"] is False
     assert resposta["missing"] == 1

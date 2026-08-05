@@ -8,7 +8,10 @@ from urllib.parse import urlparse
 
 from app.core.db import SessionLocal
 from app.models.specialty_guide import SymptomTriageGuide
-from app.services.clinical_rule_engine import ALLOWED_OPERATORS
+from app.services.clinical_rule_engine import (
+    validate_question_definitions,
+    validate_rule_definitions,
+)
 
 CAMPOS = {
     "slug", "name", "aliases", "areas", "summary", "questions", "rules",
@@ -19,56 +22,11 @@ CAMPOS = {
 
 AREAS = {"geral", "cardiopediatria", "cardiogeriatria", "cardiooncologia", "gravidez"}
 REVIEW = {"pendente_revisao", "revisado", "lacuna_declarada"}
-QUESTION_TYPES = {"boolean", "number", "select", "multiselect", "text"}
 
 
 def _valid_url(value: str) -> bool:
     parsed = urlparse(value)
     return parsed.scheme in {"http", "https"} and bool(parsed.netloc)
-
-
-def _validate_questions(slug: str, questions: list) -> tuple[list[str], set[str]]:
-    errors: list[str] = []
-    ids: list[str] = []
-    for index, question in enumerate(questions or []):
-        if not isinstance(question, dict):
-            errors.append(f"{slug}: pergunta {index} não é objeto")
-            continue
-        question_id = question.get("id")
-        if not isinstance(question_id, str) or not question_id.strip():
-            errors.append(f"{slug}: pergunta {index} sem id")
-            continue
-        ids.append(question_id)
-        if question.get("type") not in QUESTION_TYPES:
-            errors.append(f"{slug}: pergunta {question_id} com tipo inválido")
-    if len(ids) != len(set(ids)):
-        errors.append(f"{slug}: ids de pergunta repetidos")
-    return errors, set(ids)
-
-
-def _validate_rules(slug: str, rules: list, question_ids: set[str]) -> list[str]:
-    errors: list[str] = []
-    ids: list[str] = []
-    for index, rule in enumerate(rules or []):
-        if not isinstance(rule, dict):
-            errors.append(f"{slug}: regra {index} não é objeto")
-            continue
-        rule_id = str(rule.get("id") or "")
-        if not rule_id:
-            errors.append(f"{slug}: regra {index} sem id")
-            continue
-        ids.append(rule_id)
-        for group_name in ("all", "any", "none"):
-            for condition in (rule.get("when") or {}).get(group_name, []) or []:
-                field = condition.get("field")
-                operator = condition.get("op", "eq")
-                if field not in question_ids:
-                    errors.append(f"{slug}: regra {rule_id} usa campo desconhecido {field}")
-                if operator not in ALLOWED_OPERATORS:
-                    errors.append(f"{slug}: regra {rule_id} usa operador inválido {operator}")
-    if len(ids) != len(set(ids)):
-        errors.append(f"{slug}: ids de regra repetidos")
-    return errors
 
 
 def carregar(caminho_json: str) -> dict:
@@ -104,8 +62,12 @@ def carregar(caminho_json: str) -> dict:
                 erros.append(f"{slug}: conteúdo revisado sem referência")
                 continue
 
-            question_errors, question_ids = _validate_questions(slug, item.get("questions") or [])
-            rule_errors = _validate_rules(slug, item.get("rules") or [], question_ids)
+            question_errors, question_ids = validate_question_definitions(
+                slug, item.get("questions") or [],
+            )
+            rule_errors = validate_rule_definitions(
+                slug, item.get("rules") or [], question_ids,
+            )
             if question_errors or rule_errors:
                 erros.extend(question_errors + rule_errors)
                 continue
