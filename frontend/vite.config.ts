@@ -2,7 +2,10 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { VitePWA } from "vite-plugin-pwa";
 
-const limitePrecacheJs = 160 * 1024;
+// Diagramas e outras páginas pesadas continuam disponíveis pelo cache em
+// tempo de execução. O precache deve conter apenas o shell e módulos menores,
+// para não atrasar a primeira instalação do PWA em rede móvel.
+const limitePrecacheJs = 140 * 1024;
 
 export default defineConfig({
   plugins: [
