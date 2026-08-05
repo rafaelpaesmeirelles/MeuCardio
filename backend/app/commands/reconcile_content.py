@@ -32,6 +32,7 @@ from app.models.evidence import EvidenceRecord
 from app.models.gallery import GalleryImage
 from app.models.lab_test import LabTest
 from app.models.patient_material import PatientMaterial
+from app.models.specialty_guide import SpecialtyDisease, SymptomTriageGuide
 from app.models.study import ScientificStudy
 from app.models.study_track import StudyTrack
 from app.services.importer import _resolve_markdown_slug, import_directory
@@ -55,6 +56,18 @@ FRONTS: dict[str, dict[str, Any]] = {
     "material_paciente": {"path": "/material-paciente/metadados.json", "model": PatientMaterial, "minimum": 27, "loader": "carregar_material_paciente"},
     "emergencia": {"path": "/emergencia/metadados.json", "model": EmergencyProtocol, "minimum": 31, "loader": "carregar_emergencia"},
     "casos_clinicos": {"path": "/casos-clinicos/metadados.json", "model": ClinicalCase, "minimum": 556, "loader": "carregar_casos_clinicos"},
+    "doencas_especializadas": {
+        "path": "/doencas/metadados.json",
+        "model": SpecialtyDisease,
+        "minimum": 26,
+        "loader": "carregar_doencas_especializadas",
+    },
+    "triagem_sintomas": {
+        "path": "/triagem-sintomas/metadados.json",
+        "model": SymptomTriageGuide,
+        "minimum": 12,
+        "loader": "carregar_triagem_sintomas",
+    },
 }
 
 SCIENTIFIC_MINIMUM = sum(front["minimum"] for front in FRONTS.values())
