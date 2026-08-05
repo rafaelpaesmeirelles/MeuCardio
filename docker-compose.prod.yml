@@ -61,6 +61,8 @@ services:
       - ./material-paciente:/material-paciente:ro
       - ./emergencia:/emergencia:ro
       - ./casos-clinicos:/casos-clinicos:ro
+      - ./doencas:/doencas:ro
+      - ./triagem-sintomas:/triagem-sintomas:ro
       # Listas da Portaria 344/98 e regras de adendo (Tarefa 27).
       - ./controlados:/controlados:ro
       - ./backend/migrations/versions:/app/migrations/versions
