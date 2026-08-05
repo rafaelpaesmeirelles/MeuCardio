@@ -18,6 +18,8 @@ on:
       - "material-paciente/**"
       - "emergencia/**"
       - "casos-clinicos/**"
+      - "doencas/**"
+      - "triagem-sintomas/**"
       - "controlados/**"
       - ".github/workflows/corpus-database.yml"
   workflow_dispatch:
@@ -27,7 +29,7 @@ permissions:
 
 jobs:
   reconcile:
-    name: Load 4,936 scientific records
+    name: Load 5,035 scientific records
     runs-on: ubuntu-latest
     services:
       postgres:

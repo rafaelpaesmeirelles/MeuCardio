@@ -30,6 +30,8 @@ SOURCES: dict[str, dict[str, str]] = {
     "material_paciente": {"directory": "material-paciente", "manifest": "metadados.json"},
     "emergencia": {"directory": "emergencia", "manifest": "metadados.json"},
     "casos_clinicos": {"directory": "casos-clinicos", "manifest": "metadados.json"},
+    "doencas_especializadas": {"directory": "doencas", "manifest": "metadados.json"},
+    "triagem_sintomas": {"directory": "triagem-sintomas", "manifest": "metadados.json"},
     # Base normativa, não somada ao corpus científico. É inventariada à parte
     # para garantir que as listas usadas pelo receituário também não desapareçam.
     "controlados": {
