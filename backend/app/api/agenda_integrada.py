@@ -5,6 +5,7 @@ from __future__ import annotations
 import re
 from datetime import date, datetime, time, timedelta, timezone
 from typing import Literal
+from urllib.parse import urlencode
 from zoneinfo import ZoneInfo
 
 from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException, Query
@@ -1168,8 +1169,26 @@ def _oauth_callback(provider: str, code: str | None, state: str | None, error: s
     try:
         integration = complete_oauth(db, provider=provider, code=code, state=state)
     except ConnectorError as exc:
-        return RedirectResponse(f"{target}?conta_erro={exc.code}", status_code=303)
-    return RedirectResponse(f"{target}?conta_conectada={integration.provider}", status_code=303)
+        return RedirectResponse(f"{target}?{urlencode({'conta_erro': exc.code})}", status_code=303)
+
+    # A autorização já deve produzir valor imediato: importa a agenda e os
+    # contatos na primeira volta do provedor. Uma indisponibilidade temporária
+    # não revoga a conta recém-conectada; ela permanece pronta para a ação
+    # manual “Sincronizar”, com o erro técnico registrado na integração.
+    sincronizacao = "ok"
+    try:
+        sync_integration(db, integration, full=True)
+        if integration.contacts_enabled:
+            integration = db.get(CalendarIntegration, integration.id) or integration
+            sync_contacts(db, integration, full=True)
+    except ConnectorError as exc:
+        sincronizacao = "pendente"
+        integration = db.get(CalendarIntegration, integration.id) or integration
+        integration.last_error_code = exc.code
+        integration.last_error_message = str(exc)[:500]
+        db.commit()
+
+    return RedirectResponse(f"{target}?{urlencode({'conta_conectada': integration.provider, 'sincronizacao': sincronizacao})}", status_code=303)
 
 
 @oauth_callback_router.get("/google/callback")

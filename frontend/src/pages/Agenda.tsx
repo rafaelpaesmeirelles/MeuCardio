@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { CSSProperties } from "react";
 import Icone from "../components/Icone";
+import LogoProvedor from "../components/LogoProvedor";
 import { ApiError, api } from "../lib/api";
 
 type Visao = "dia" | "semana" | "mes" | "lista";
@@ -269,6 +270,9 @@ export default function Agenda() {
   const [motivoCancelamento, setMotivoCancelamento] = useState("");
   const [salvando, setSalvando] = useState(false);
   const [erro, setErro] = useState("");
+  const [mensagem, setMensagem] = useState("");
+  const [contaEmConexao, setContaEmConexao] = useState<"google" | "microsoft" | null>(null);
+  const [integracaoSincronizando, setIntegracaoSincronizando] = useState<number | null>(null);
   const [novo, setNovo] = useState({
     patient_name: "", patient_phone: "", patient_email: "", email_consent: false,
     starts_at: localDateTime(), service_id: "", location_id: "", duration_minutes: 30,
@@ -371,6 +375,28 @@ export default function Agenda() {
 
   useEffect(() => { carregar().catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível abrir a agenda.")); }, []);
   useEffect(() => { carregarCompromissos(referencia).catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível carregar os compromissos pessoais.")); }, [referencia]);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const conectada = params.get("conta_conectada");
+    const falha = params.get("conta_erro");
+    const sincronizacao = params.get("sincronizacao");
+    if (conectada) {
+      const nome = conectada === "google_calendar" ? "Google" : conectada === "microsoft_365" ? "Microsoft" : "externa";
+      setMensagem(sincronizacao === "pendente"
+        ? `Conta ${nome} conectada. A primeira sincronização ficou pendente; use “Sincronizar” para tentar novamente.`
+        : `Conta ${nome} conectada. Calendário e contatos foram atualizados.`);
+    } else if (falha) {
+      const mensagens: Record<string, string> = {
+        autorizacao_cancelada: "A autorização foi cancelada antes de concluir a conexão.",
+        invalid_oauth_state: "A autorização expirou ou já foi utilizada. Inicie a conexão novamente.",
+        oauth_exchange_error: "O provedor recusou a autorização. Confira o aplicativo OAuth e tente novamente.",
+        oauth_refresh_token_missing: "O provedor não concedeu acesso contínuo. Remova a autorização anterior e conecte novamente.",
+      };
+      setErro(mensagens[falha] || "Não foi possível concluir a conexão com a conta externa.");
+    }
+    if (conectada || falha) window.history.replaceState({}, "", window.location.pathname);
+  }, []);
 
   const filtrados = useMemo(() => [...(agendamentos ?? []), ...compromissos].filter((item) => {
     const query = busca.trim().toLocaleLowerCase("pt-BR");
@@ -506,8 +532,14 @@ export default function Agenda() {
   }
 
   async function conectarConta(provider: "google" | "microsoft") {
-    const result = await api.get<{ authorization_url: string }>(`/agenda/oauth/${provider}/start?contacts=true&calendar_write=false&consent_accepted=true`);
-    window.location.assign(result.authorization_url);
+    setContaEmConexao(provider); setErro(""); setMensagem("");
+    try {
+      const result = await api.get<{ authorization_url: string }>(`/agenda/oauth/${provider}/start?contacts=true&calendar_write=false&consent_accepted=true`);
+      window.location.assign(result.authorization_url);
+    } catch (error) {
+      setContaEmConexao(null);
+      throw error;
+    }
   }
 
   async function conectarApple() {
@@ -517,8 +549,12 @@ export default function Agenda() {
   }
 
   async function sincronizarConta(id: number) {
-    await api.post(`/agenda/integrations/${id}/sync-all?full=false`, {});
-    await carregar();
+    setIntegracaoSincronizando(id); setErro(""); setMensagem("");
+    try {
+      await api.post(`/agenda/integrations/${id}/sync-all?full=false`, {});
+      await carregar();
+      setMensagem("Calendário e contatos atualizados com sucesso.");
+    } finally { setIntegracaoSincronizando(null); }
   }
 
   async function desconectarConta(id: number) {
@@ -640,12 +676,13 @@ export default function Agenda() {
           {[{ provider: "google_calendar", nome: "Google", acao: "google" as const }, { provider: "microsoft_365", nome: "Microsoft", acao: "microsoft" as const }].map((conta) => {
             const integracao = integracoes.find((item) => item.provider === conta.provider && item.enabled);
             const configurado = capacidades?.connectors.find((item) => item.provider === conta.provider)?.oauth_configured !== false;
-            return <article key={conta.provider} className="agenda-conta-provider"><span className={`agenda-conta-provider__marca agenda-conta-provider__marca--${conta.acao}`}>{conta.nome.slice(0, 1)}</span><div><strong>{conta.nome}</strong><small>{integracao ? `${integracao.contact_count} contatos · conexão ativa` : configurado ? "Calendário e contatos disponíveis para conectar" : "Configuração administrativa pendente"}</small></div>{integracao ? <button onClick={() => sincronizarConta(integracao.id).catch((e) => setErro(e instanceof ApiError ? e.message : "Falha na sincronização."))}>Sincronizar</button> : <button disabled={!consentimentoContas || !configurado} onClick={() => conectarConta(conta.acao).catch((e) => setErro(e instanceof ApiError ? e.message : `Não foi possível conectar ${conta.nome}.`))}>Conectar</button>}</article>;
+            return <article key={conta.provider} className="agenda-conta-provider"><LogoProvedor provedor={conta.acao} /><div><strong>{conta.nome}</strong><small>{integracao ? `${integracao.contact_count} contatos · conexão ativa` : configurado ? "Calendário e contatos disponíveis para conectar" : "Credenciais OAuth ainda não cadastradas"}</small></div>{integracao ? <button disabled={integracaoSincronizando === integracao.id} onClick={() => sincronizarConta(integracao.id).catch((e) => setErro(e instanceof ApiError ? e.message : "Falha na sincronização."))}>{integracaoSincronizando === integracao.id ? "Atualizando…" : "Sincronizar"}</button> : <button disabled={!consentimentoContas || !configurado || contaEmConexao !== null} onClick={() => conectarConta(conta.acao).catch((e) => setErro(e instanceof ApiError ? e.message : `Não foi possível conectar ${conta.nome}.`))}>{contaEmConexao === conta.acao ? "Abrindo…" : "Conectar"}</button>}</article>;
           })}
-          <article className="agenda-conta-provider"><span className="agenda-conta-provider__marca agenda-conta-provider__marca--apple">A</span><div><strong>Apple</strong><small>{integracoes.find((item) => item.provider === "apple_icloud" && item.enabled) ? "Calendário e contatos do iCloud conectados" : "Conexão segura por senha específica de app"}</small></div><button disabled={!consentimentoContas} onClick={abrirContasExternas}>{integracoes.find((item) => item.provider === "apple_icloud" && item.enabled) ? "Gerenciar" : "Conectar"}</button></article>
+          <article className="agenda-conta-provider"><LogoProvedor provedor="apple" /><div><strong>Apple iCloud</strong><small>{integracoes.find((item) => item.provider === "apple_icloud" && item.enabled) ? "Calendário e contatos do iCloud conectados" : "Conexão segura por senha específica de app"}</small></div><button disabled={!consentimentoContas} onClick={abrirContasExternas}>{integracoes.find((item) => item.provider === "apple_icloud" && item.enabled) ? "Gerenciar" : "Conectar"}</button></article>
         </div>
       </section>
 
+      {mensagem && <div className="agenda-alerta agenda-alerta--sucesso" role="status"><strong>Sincronização</strong><span>{mensagem}</span><button onClick={() => setMensagem("")} aria-label="Fechar"><Icone nome="fechar" /></button></div>}
       {erro && <div className="agenda-alerta" role="alert"><strong>Atenção</strong><span>{erro}</span><button onClick={() => setErro("")} aria-label="Fechar"><Icone nome="fechar" /></button></div>}
 
       <section className="agenda-ferramentas">
@@ -794,12 +831,12 @@ export default function Agenda() {
         <section className="agenda-config-section" ref={contasExternasRef} tabIndex={-1} style={{ scrollMarginTop: "1rem" }}>
           <div className="agenda-config-section__title"><div><h3>Google, Microsoft e Apple</h3><p>Sincronize calendários e contatos para usar na Agenda e no CorvIA Mail.</p></div><span>{integracoes.filter((item) => ["google_calendar", "microsoft_365", "apple_icloud"].includes(item.provider) && item.enabled).length}</span></div>
           <div className="agenda-contas-externas">
-            <button className="botao botao--secundario" disabled={!consentimentoContas || capacidades?.connectors.find((item) => item.provider === "google_calendar")?.oauth_configured === false} onClick={() => conectarConta("google").catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível iniciar a conexão Google."))}>Conectar Google</button>
-            <button className="botao botao--secundario" disabled={!consentimentoContas || capacidades?.connectors.find((item) => item.provider === "microsoft_365")?.oauth_configured === false} onClick={() => conectarConta("microsoft").catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível iniciar a conexão Microsoft."))}>Conectar Microsoft</button>
+            <button className="botao botao--secundario agenda-botao-provedor" disabled={!consentimentoContas || contaEmConexao !== null || capacidades?.connectors.find((item) => item.provider === "google_calendar")?.oauth_configured === false} onClick={() => conectarConta("google").catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível iniciar a conexão Google."))}><LogoProvedor provedor="google" /> {contaEmConexao === "google" ? "Abrindo Google…" : "Conectar Google"}</button>
+            <button className="botao botao--secundario agenda-botao-provedor" disabled={!consentimentoContas || contaEmConexao !== null || capacidades?.connectors.find((item) => item.provider === "microsoft_365")?.oauth_configured === false} onClick={() => conectarConta("microsoft").catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível iniciar a conexão Microsoft."))}><LogoProvedor provedor="microsoft" /> {contaEmConexao === "microsoft" ? "Abrindo Microsoft…" : "Conectar Microsoft"}</button>
           </div>
           <label className="agenda-check"><input type="checkbox" checked={consentimentoContas} onChange={(e) => setConsentimentoContas(e.target.checked)} /> Autorizo a leitura dos meus calendários e contatos para uso na Agenda e no CorvIA Mail.</label>
           {capacidades?.connectors.some((item) => ["google_calendar", "microsoft_365"].includes(item.provider) && item.oauth_configured === false) && <p className="agenda-config-help">O administrador ainda precisa cadastrar o cliente OAuth correspondente no servidor.</p>}
-          <details className="agenda-apple-config"><summary>Conectar Calendário e Contatos Apple</summary><div className="agenda-config-form agenda-config-form--routine">
+          <details className="agenda-apple-config"><summary><LogoProvedor provedor="apple" /> Conectar Calendário e Contatos Apple</summary><div className="agenda-config-form agenda-config-form--routine">
             <label>ID Apple<input type="email" autoComplete="username" value={apple.apple_id} onChange={(e) => setApple({ ...apple, apple_id: e.target.value })} placeholder="nome@icloud.com" /></label>
             <label>Senha específica de app<input type="password" autoComplete="new-password" value={apple.app_specific_password} onChange={(e) => setApple({ ...apple, app_specific_password: e.target.value })} placeholder="xxxx-xxxx-xxxx-xxxx" /></label>
             <label className="agenda-check span-2"><input type="checkbox" checked={apple.consent_accepted} onChange={(e) => setApple({ ...apple, consent_accepted: e.target.checked })} /> Autorizo a leitura do Calendário e dos Contatos do iCloud.</label>
