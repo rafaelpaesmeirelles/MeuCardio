@@ -142,5 +142,7 @@ def test_proxy_de_producao_define_politicas_essenciais():
     assert "frame-ancestors 'none'" in caddy
     assert "object-src 'none'" in caddy
     assert "Permissions-Policy" in caddy
+    assert "geolocation=(self)" in caddy
+    assert "https://maps.googleapis.com" in caddy
     assert "Strict-Transport-Security" in caddy
     assert "-Server" in caddy

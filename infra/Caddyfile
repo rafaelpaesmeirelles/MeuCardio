@@ -65,10 +65,10 @@
 		X-Frame-Options "DENY"
 		X-Permitted-Cross-Domain-Policies "none"
 		Referrer-Policy "strict-origin-when-cross-origin"
-		Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
-		# Bundles, fontes e imagens são locais. `unsafe-inline` fica limitado a
-		# estilos porque React/Mermaid geram atributos style em tempo de execução;
-		# scripts inline continuam bloqueados.
-		Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' wss:; worker-src 'self' blob:; manifest-src 'self'; upgrade-insecure-requests"
+		Permissions-Policy "camera=(), microphone=(), geolocation=(self), payment=(), usb=()"
+		# Scripts inline continuam bloqueados. Os únicos terceiros liberados são
+		# os endpoints necessários ao Google Maps; geolocalização segue limitada
+		# ao próprio CorvIA pela Permissions-Policy acima.
+		Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self' https://maps.googleapis.com https://maps.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob: https://*.googleapis.com https://*.gstatic.com https://*.google.com; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' wss: https://*.googleapis.com https://*.gstatic.com; worker-src 'self' blob:; manifest-src 'self'; upgrade-insecure-requests"
 	}
 }

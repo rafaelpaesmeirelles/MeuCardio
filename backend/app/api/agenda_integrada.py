@@ -758,6 +758,22 @@ def get_mobility(db: Session = Depends(get_db), user: User = Depends(current_use
     return {"enabled": bool(pref and pref.enabled), "consent_version": pref.consent_version if pref else None, "consent_at": pref.consent_at if pref else None, "automatic_foreground_refresh": pref.automatic_foreground_refresh if pref else True, "refresh_interval_minutes": pref.refresh_interval_minutes if pref else 5, "travel_mode": pref.travel_mode if pref else "driving", "traffic_configured": settings.traffic_configured}
 
 
+@router.get("/mobility/map-config")
+def get_map_config(user: User = Depends(current_user)):
+    """Configuração pública do mapa, entregue somente a uma sessão autenticada.
+
+    Chaves de Maps JavaScript são visíveis no navegador por definição e devem
+    ser protegidas no Google Cloud por HTTP referrer e restrição de API. A
+    credencial privada de Routes nunca é devolvida por esta rota.
+    """
+    is_google = settings.traffic_provider == "google_routes"
+    return {
+        "provider": "google_maps" if is_google else settings.traffic_provider,
+        "configured": bool(is_google and settings.google_maps_browser_api_key),
+        "api_key": settings.google_maps_browser_api_key if is_google else None,
+    }
+
+
 @router.put("/mobility/preferences")
 def set_mobility(data: MobilityIn, db: Session = Depends(get_db), user: User = Depends(current_user)):
     if data.enabled and not data.consent_accepted: raise HTTPException(status_code=422, detail="É necessário aceitar o uso da localização para cálculo de deslocamento.")

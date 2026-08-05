@@ -153,6 +153,7 @@
 .produto-rodape img { width: auto; height: 28px; }
 .produto-rodape p { max-width: 660px; margin: 0; color: var(--slate-600); font-size: 0.68rem; }
 .produto-rodape a { display: inline-flex; align-items: center; min-height: 44px; font-size: 0.75rem; font-weight: 700; }
+.produto-rodape > div { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: .25rem .8rem; }
 
 @media (max-width: 1050px) {
   .produto-nav { grid-template-columns: 1fr auto; }

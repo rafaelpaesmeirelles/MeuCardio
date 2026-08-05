@@ -55,6 +55,10 @@ class Settings(BaseSettings):
     agenda_outbox_max_attempts: int = 8
     traffic_provider: str = "google_routes"  # google_routes | mapbox
     google_routes_api_key: str = ""
+    # Chave pública separada, restrita por HTTP referrer a corvia.med.br e
+    # autorizada somente para Maps JavaScript API. Nunca reutilizar aqui a
+    # chave privada do Routes, que é restrita ao IP do backend.
+    google_maps_browser_api_key: str = ""
     mapbox_access_token: str = ""
 
     @property

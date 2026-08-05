@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import Icone, { type NomeIcone } from "../components/Icone";
+import MapaDeslocamento, { type RotaDeslocamento } from "../components/MapaDeslocamento";
 import { api } from "../lib/api";
 import { useAuth } from "../lib/auth";
 
@@ -23,6 +24,8 @@ type PreferenciaMobilidade = {
   traffic_configured: boolean;
 };
 
+type ConfiguracaoMapa = { provider: string; configured: boolean; api_key: string | null };
+
 type ProximoLocal = {
   appointment_id: number | null;
   routine_id: number | null;
@@ -39,7 +42,7 @@ type Deslocamento = {
   provider?: string;
   updated_at?: string;
   destination: ProximoLocal | null;
-  routes: Array<{ duration_seconds: number; distance_meters: number; traffic_delay_seconds: number; congestion: string; summary: string }>;
+  routes: RotaDeslocamento[];
   tips: string[];
 };
 
@@ -210,8 +213,10 @@ export default function Painel() {
   const [evidencias, setEvidencias] = useState<number | null>(null);
   const [estudos, setEstudos] = useState<number | null>(null);
   const [mobilidade, setMobilidade] = useState<PreferenciaMobilidade | null>(null);
+  const [configuracaoMapa, setConfiguracaoMapa] = useState<ConfiguracaoMapa | null>(null);
   const [proximosLocais, setProximosLocais] = useState<ProximoLocal[]>([]);
   const [deslocamento, setDeslocamento] = useState<Deslocamento | null>(null);
+  const [origemDeslocamento, setOrigemDeslocamento] = useState<{ latitude: number; longitude: number } | null>(null);
   const [erroLocalizacao, setErroLocalizacao] = useState("");
 
   useEffect(() => {
@@ -226,6 +231,7 @@ export default function Painel() {
     total("/evidence?limit=1").then(setEvidencias);
     total("/studies?limit=1").then(setEstudos);
     api.get<PreferenciaMobilidade>("/agenda/mobility/preferences").then(setMobilidade).catch(() => setMobilidade(null));
+    api.get<ConfiguracaoMapa>("/agenda/mobility/map-config").then(setConfiguracaoMapa).catch(() => setConfiguracaoMapa(null));
     api.get<ProximoLocal[]>("/agenda/workday/next-locations").then(setProximosLocais).catch(() => setProximosLocais([]));
   }, []);
 
@@ -240,7 +246,11 @@ export default function Painel() {
         api.post<Deslocamento>("/agenda/mobility/commute", {
           latitude: position.coords.latitude,
           longitude: position.coords.longitude,
-        }).then((result) => { if (ativo) setDeslocamento(result); }).catch(() => {
+        }).then((result) => {
+          if (!ativo) return;
+          setOrigemDeslocamento({ latitude: position.coords.latitude, longitude: position.coords.longitude });
+          setDeslocamento(result);
+        }).catch(() => {
           if (ativo) setErroLocalizacao("Não foi possível atualizar o trânsito agora.");
         });
       },
@@ -375,13 +385,27 @@ export default function Painel() {
                 <div><strong>{proximosLocais[0].location.name}</strong><small>{new Date(proximosLocais[0].starts_at).toLocaleDateString("pt-BR", { weekday: "short", day: "2-digit", month: "short" })} · início às {new Date(proximosLocais[0].starts_at).toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" })}</small></div>
               </div>
               {deslocamento?.status === "live" && deslocamento.routes[0] ? (
-                <div className="deslocamento-live">
-                  <div><strong>{Math.ceil(deslocamento.routes[0].duration_seconds / 60)} min</strong><span>{(deslocamento.routes[0].distance_meters / 1000).toLocaleString("pt-BR", { maximumFractionDigits: 1 })} km</span></div>
-                  <span className={`transito transito--${deslocamento.routes[0].congestion}`}>{deslocamento.routes[0].congestion}</span>
-                  {saidaRecomendada && <p>Saída recomendada às {saidaRecomendada.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" })}.</p>}
-                  {deslocamento.routes[0].traffic_delay_seconds > 120 && <p>+{Math.ceil(deslocamento.routes[0].traffic_delay_seconds / 60)} min pelo trânsito atual.</p>}
-                  {deslocamento.tips[0] && <small>{deslocamento.tips[0]}</small>}
-                </div>
+                <>
+                  <div className="deslocamento-resumo">
+                    <span><strong>{Math.ceil(deslocamento.routes[0].duration_seconds / 60)} min</strong><small>tempo estimado</small></span>
+                    <span><strong>{(deslocamento.routes[0].distance_meters / 1000).toLocaleString("pt-BR", { maximumFractionDigits: 1 })} km</strong><small>distância</small></span>
+                    <span><strong>{deslocamento.routes[0].traffic_delay_seconds > 60 ? `+${Math.ceil(deslocamento.routes[0].traffic_delay_seconds / 60)} min` : "Sem atraso"}</strong><small>impacto do trânsito</small></span>
+                    {saidaRecomendada && <span><strong>{saidaRecomendada.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" })}</strong><small>saída recomendada</small></span>}
+                  </div>
+                  <MapaDeslocamento
+                    rotas={deslocamento.routes}
+                    origem={origemDeslocamento}
+                    destino={{
+                      name: proximosLocais[0].location.name,
+                      latitude: proximosLocais[0].location.latitude,
+                      longitude: proximosLocais[0].location.longitude,
+                    }}
+                    provider={deslocamento.provider}
+                    updatedAt={deslocamento.updated_at}
+                    googleMapsApiKey={configuracaoMapa?.api_key}
+                  />
+                  {deslocamento.tips.length > 0 && <div className="deslocamento-dicas">{deslocamento.tips.map((dica) => <span key={dica}>{dica}</span>)}</div>}
+                </>
               ) : erroLocalizacao ? (
                 <p className="deslocamento-estado">{erroLocalizacao}</p>
               ) : mobilidade?.enabled ? (

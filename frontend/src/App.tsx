@@ -56,6 +56,8 @@ const UsuariosOnline = lazy(() => import("./pages/UsuariosOnline"));
 const GuiaDoencas = lazy(() => import("./pages/GuiaDoencas"));
 const GuiaDoenca = lazy(() => import("./pages/GuiaDoenca"));
 const TriagemSintomas = lazy(() => import("./pages/TriagemSintomas"));
+const PoliticaPrivacidade = lazy(() => import("./pages/PoliticaPrivacidade"));
+const TermosUso = lazy(() => import("./pages/TermosUso"));
 
 function RotasSuspensas({ children }: { children: ReactNode }) {
   return (
@@ -81,6 +83,8 @@ export default function App() {
           <Route path="/esqueci-senha" element={<EsqueciSenha />} />
           <Route path="/redefinir-senha" element={<RedefinirSenha />} />
           <Route path="/corvia-mail" element={<CorviaMail />} />
+          <Route path="/privacidade" element={<PoliticaPrivacidade />} />
+          <Route path="/termos" element={<TermosUso />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </RotasSuspensas>
@@ -141,6 +145,8 @@ export default function App() {
           <Route path="caixa-de-email" element={<CaixaDeEmail />} />
           <Route path="corvia-mail" element={<CorviaMail />} />
           <Route path="usuarios-online" element={<UsuariosOnline />} />
+          <Route path="privacidade" element={<PoliticaPrivacidade />} />
+          <Route path="termos" element={<TermosUso />} />
           {usuario.role === "admin" && <Route path="admin" element={<Admin />} />}
           {usuario.role === "admin" && (
             <Route path="fila-telediagnostico" element={<FilaTelediagnostico />} />

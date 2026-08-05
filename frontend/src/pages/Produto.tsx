@@ -188,7 +188,7 @@ export default function Produto() {
       <footer className="produto-rodape">
         <img src="/corvia-logo-compacta.png" alt="Corvia" />
         <p>Suporte à decisão clínica para profissionais de saúde. Não substitui avaliação, julgamento ou responsabilidade profissional.</p>
-        <Link to="/entrar">Acesso profissional</Link>
+        <div><Link to="/privacidade">Privacidade</Link><Link to="/termos">Termos</Link><Link to="/entrar">Acesso profissional</Link></div>
       </footer>
     </div>
   );

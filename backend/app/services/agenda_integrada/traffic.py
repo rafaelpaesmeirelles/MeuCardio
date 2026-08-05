@@ -62,6 +62,24 @@ def _tips(routes: list[dict[str, Any]], buffer_minutes: int) -> list[str]:
     return tips
 
 
+def _finalize_routes(routes: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Ordena as opções e acrescenta comparadores úteis para a interface.
+
+    O provedor nem sempre devolve a rota padrão como a mais rápida. A ordem que
+    chega ao profissional precisa refletir o trânsito atual, mas o índice
+    original é preservado para diagnóstico e rastreabilidade.
+    """
+    routes.sort(key=lambda item: (item["duration_seconds"], item["distance_meters"]))
+    if not routes:
+        return routes
+    fastest = routes[0]["duration_seconds"]
+    for index, route in enumerate(routes):
+        route["rank"] = index + 1
+        route["recommended"] = index == 0
+        route["extra_time_seconds"] = max(0, route["duration_seconds"] - fastest)
+    return routes
+
+
 def _google_routes(origin: tuple[float, float], destination: tuple[float, float]) -> dict[str, Any]:
     body = {
         "origin": {"location": {"latLng": {"latitude": origin[0], "longitude": origin[1]}}},
@@ -70,12 +88,15 @@ def _google_routes(origin: tuple[float, float], destination: tuple[float, float]
         "routingPreference": "TRAFFIC_AWARE_OPTIMAL",
         "departureTime": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
         "computeAlternativeRoutes": True,
+        "extraComputations": ["TRAFFIC_ON_POLYLINE"],
         "languageCode": "pt-BR",
         "units": "METRIC",
     }
     field_mask = ",".join((
         "routes.duration", "routes.staticDuration", "routes.distanceMeters",
         "routes.description", "routes.routeLabels", "routes.localizedValues",
+        "routes.polyline.encodedPolyline",
+        "routes.travelAdvisory.speedReadingIntervals",
     ))
     response = httpx.post(
         "https://routes.googleapis.com/directions/v2:computeRoutes",
@@ -96,18 +117,32 @@ def _google_routes(origin: tuple[float, float], destination: tuple[float, float]
         duration = _seconds(route.get("duration")) or 0
         typical = _seconds(route.get("staticDuration"))
         delay = max(0, duration - (typical or duration))
+        intervals = route.get("travelAdvisory", {}).get("speedReadingIntervals") or []
         routes.append({
-            "rank": index + 1,
+            "provider_rank": index + 1,
             "duration_seconds": duration,
             "typical_duration_seconds": typical,
             "traffic_delay_seconds": delay,
-            "distance_meters": route.get("distanceMeters"),
+            "distance_meters": round(route.get("distanceMeters") or 0),
             "congestion": _congestion(delay, typical),
             "summary": route.get("description") or ("Rota principal" if index == 0 else f"Alternativa {index}"),
+            "labels": route.get("routeLabels") or [],
+            "geometry": {
+                "format": "encoded_polyline",
+                "value": route.get("polyline", {}).get("encodedPolyline") or "",
+                "precision": 5,
+            },
+            "traffic_segments": [
+                {
+                    "start_index": interval.get("startPolylinePointIndex", 0),
+                    "end_index": interval.get("endPolylinePointIndex"),
+                    "speed": str(interval.get("speed") or "NORMAL").lower(),
+                }
+                for interval in intervals
+            ],
             "incidents": [],
         })
-    routes.sort(key=lambda item: item["duration_seconds"])
-    return {"provider": "Google Routes", "routes": routes}
+    return {"provider": "Google Maps", "routes": _finalize_routes(routes)}
 
 
 def _mapbox_routes(origin: tuple[float, float], destination: tuple[float, float]) -> dict[str, Any]:
@@ -119,6 +154,7 @@ def _mapbox_routes(origin: tuple[float, float], destination: tuple[float, float]
             "access_token": settings.mapbox_access_token,
             "alternatives": "true",
             "overview": "full",
+            "geometries": "polyline6",
             "steps": "false",
             "annotations": "congestion,closure",
             "depart_at": "now",
@@ -144,17 +180,23 @@ def _mapbox_routes(origin: tuple[float, float], destination: tuple[float, float]
             for leg in legs for incident in (leg.get("incidents") or [])[:5]
         ]
         routes.append({
-            "rank": index + 1,
+            "provider_rank": index + 1,
             "duration_seconds": duration,
             "typical_duration_seconds": typical,
             "traffic_delay_seconds": delay,
             "distance_meters": round(route.get("distance") or 0),
             "congestion": _congestion(delay, typical),
             "summary": ", ".join(filter(None, (leg.get("summary") for leg in legs))) or f"Rota {index + 1}",
+            "labels": [],
+            "geometry": {
+                "format": "encoded_polyline",
+                "value": route.get("geometry") or "",
+                "precision": 6,
+            },
+            "traffic_segments": [],
             "incidents": incidents,
         })
-    routes.sort(key=lambda item: item["duration_seconds"])
-    return {"provider": "Mapbox", "routes": routes}
+    return {"provider": "Mapbox", "routes": _finalize_routes(routes)}
 
 
 def traffic_eta(
