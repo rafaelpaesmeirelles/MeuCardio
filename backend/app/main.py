@@ -6,7 +6,7 @@ from app.api import (
     cmed, documents, documentos_publicos, drug_insights, drugs, email as email_api, evidence,
     favorites, gallery, guideline_updates, health, lab_tests, library, mail360_status,
     partner_courses, password_reset, prescriptions, presence, round as round_api, search,
-    service_orders, sessions, studies, timeline, billing, guidelines, indicadores,
+    service_orders, sessions, specialty_guides, studies, timeline, billing, guidelines, indicadores,
     checklists, study_tracks, exportacao, emergencia, receituario, clinical_cases,
 )
 from app.core.config import settings
@@ -56,7 +56,7 @@ ROUTERS_ASSINANTES = (
     appointments.router, timeline.router, guidelines.router, guideline_updates.router,
     mail360_status.router, presence.router, indicadores.router, checklists.router,
     study_tracks.router, exportacao.router, emergencia.router, receituario.router,
-    clinical_cases.router, chat.router, assinatura.router,
+    clinical_cases.router, specialty_guides.router, chat.router, assinatura.router,
 )
 
 for router in ROUTERS_LIVRES:
