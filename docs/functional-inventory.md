@@ -30,7 +30,12 @@ superfície é adicionada sem revisão explícita do inventário.
 - trilhas de estudo, casos clínicos, cursos parceiros e checklists;
 - material para pacientes e envio associado;
 - Round hospitalar e assistente clínico com IA/RAG;
-- Agenda e indicadores pessoais;
+- Agenda Integrada em dia/semana/mês/lista, rotina profissional recorrente,
+  planejamento diário, locais, serviços, recursos, exceções e indicadores pessoais;
+- mobilidade consentida com próximo local, ETA e trânsito, sem persistência da
+  posição atual; Google Routes/Mapbox dependem de credencial real;
+- sincronização incremental e escrita protegida para Google Calendar e Microsoft
+  365; demais PEP/PMS ficam bloqueados até homologação oficial;
 - emissão de documentos, prescrição eletrônica e assinatura;
 - telediagnóstico e fila administrativa;
 - CorvIA Mail, caixa de e-mail e chat flutuante;

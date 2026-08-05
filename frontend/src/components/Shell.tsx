@@ -98,6 +98,13 @@ const SECOES_BASE: SecaoNav[] = [
   },
 ];
 
+const PAINEL: ItemNav = { to: "/", rotulo: "Hoje", icone: "hoje", fim: true };
+const INDICADORES: ItemNav = { to: "/indicadores", rotulo: "Meus indicadores", icone: "indicadores" };
+const CONTA: ItemNav = { to: "/minha-conta", rotulo: "Minha conta", icone: "conta" };
+const NAV_BASE: ItemNav[] = SECOES_BASE.flatMap((secao) => secao.itens).filter(
+  (item) => item.to !== INDICADORES.to && item.to !== CONTA.to,
+);
+
 function iniciais(nome?: string) {
   return (nome || "Médico")
     .trim()
@@ -263,7 +270,24 @@ export default function Shell() {
   }
 
   const secoes = useMemo(() => {
+    const ADMIN: ItemNav = {
+      to: "/admin", rotulo: "Administração", icone: "gestao", badge: pendentes,
+    };
+    const nav: ItemNav[] = usuario?.role === "admin"
+      ? [
+        PAINEL,
+        ...NAV_BASE,
+        INDICADORES,
+        ADMIN,
+        CONTA,
+      ]
+      : [PAINEL, ...NAV_BASE, INDICADORES, CONTA];
+
+    if (usuario?.role === "admin") {
+      nav.splice(nav.length - 1, 0, { to: "/fila-telediagnostico", rotulo: "Fila de telediagnóstico", icone: "evidencia", indisponivel: true });
+    }
     if (usuario?.role !== "admin") return SECOES_BASE;
+    const extrasGestao = nav.filter((item) => item.to === "/admin" || item.to === "/fila-telediagnostico");
     return SECOES_BASE.map((secao) =>
       secao.id !== "gestao"
         ? secao
@@ -271,13 +295,7 @@ export default function Shell() {
             ...secao,
             itens: [
               ...secao.itens,
-              { to: "/admin", rotulo: "Administração", icone: "gestao" as NomeIcone, badge: pendentes },
-              {
-                to: "/fila-telediagnostico",
-                rotulo: "Fila de telediagnóstico",
-                icone: "evidencia" as NomeIcone,
-                indisponivel: true,
-              },
+              ...extrasGestao,
             ],
           },
     );

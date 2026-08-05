@@ -18,7 +18,7 @@ SHELL = ROOT / "frontend/src/components/Shell.tsx"
 MAIN = ROOT / "backend/app/main.py"
 
 EXPECTED_APP_ROUTES = {
-    "/", "/entrar", "/solicitar-acesso", "/esqueci-senha", "/redefinir-senha",
+    "/", "/produto", "/entrar", "/solicitar-acesso", "/esqueci-senha", "/redefinir-senha",
     "/corvia-mail", "/apresentacao", "/biblioteca", "/biblioteca/:slug",
     "/doencas", "/doencas/:slug", "/triagem-sintomas",
     "/fluxogramas", "/diretrizes", "/busca", "/calculadoras",
@@ -34,7 +34,7 @@ EXPECTED_APP_ROUTES = {
 }
 
 EXPECTED_NAV_ROUTES = {
-    "/", "/agenda", "/condicoes", "/diretrizes", "/assistente", "/doencas",
+    "/", "/apresentacao", "/agenda", "/condicoes", "/diretrizes", "/assistente", "/doencas",
     "/triagem-sintomas", "/biblioteca", "/busca", "/calculadoras",
     "/casos-clinicos", "/interacoes", "/checklists", "/corvia-mail", "/cursos",
     "/documentos", "/estudos", "/evidencias", "/exames", "/favoritos",
@@ -55,7 +55,7 @@ EXPECTED_BACKEND_ROUTERS = {
     "mail360_status.router", "presence.router", "indicadores.router",
     "checklists.router", "study_tracks.router", "exportacao.router",
     "emergencia.router", "receituario.router", "clinical_cases.router",
-    "specialty_guides.router", "chat.router", "assinatura.router",
+    "specialty_guides.router", "chat.router", "assinatura.router", "agenda_integrada.router",
     "chat_session.router_ws",
 }
 
@@ -68,6 +68,8 @@ EXPECTED_SUPPORT_FILES = {
     "frontend/src/pages/Biblioteca.tsx",
     "frontend/src/pages/CaixaDeEmail.tsx",
     "frontend/src/pages/CorviaMail.tsx",
+    "frontend/src/pages/Agenda.tsx",
+    "frontend/src/pages/Produto.tsx",
     "frontend/src/pages/Emergencia.tsx",
     "frontend/src/pages/GuiaDoencas.tsx",
     "frontend/src/pages/GuiaDoenca.tsx",
@@ -88,13 +90,19 @@ EXPECTED_SUPPORT_FILES = {
     "backend/app/api/receituario.py",
     "backend/app/api/service_orders.py",
     "backend/app/api/clinical_cases.py",
+    "backend/app/api/agenda_integrada.py",
     "backend/app/api/specialty_guides.py",
     "backend/app/models/specialty_guide.py",
+    "backend/app/models/agenda.py",
+    "backend/app/services/agenda_integrada/connectors.py",
+    "backend/app/services/agenda_integrada/domain.py",
+    "backend/app/services/agenda_integrada/traffic.py",
     "backend/app/services/clinical_rule_engine.py",
     "backend/app/services/carregar_doencas_especializadas.py",
     "backend/app/services/carregar_triagem_sintomas.py",
     "backend/app/commands/reconcile_content.py",
     "backend/migrations/versions/f48a20260805_specialty_guides.py",
+    "backend/migrations/versions/f49a20260805_agenda_integrada.py",
     "doencas/metadados.json",
     "triagem-sintomas/metadados.json",
     "scripts/release_smoke.py",

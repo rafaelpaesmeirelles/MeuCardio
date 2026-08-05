@@ -16,8 +16,36 @@ type Agendamento = {
   status: string;
 };
 
+type PreferenciaMobilidade = {
+  enabled: boolean;
+  automatic_foreground_refresh: boolean;
+  refresh_interval_minutes: number;
+  traffic_configured: boolean;
+};
+
+type ProximoLocal = {
+  appointment_id: number | null;
+  routine_id: number | null;
+  starts_at: string;
+  ends_at: string | null;
+  service_name: string;
+  source: "work_routine" | "appointment";
+  arrival_buffer_minutes: number;
+  location: { id: number; name: string; address: Record<string, string>; latitude: number | null; longitude: number | null };
+};
+
+type Deslocamento = {
+  status: string;
+  provider?: string;
+  updated_at?: string;
+  destination: ProximoLocal | null;
+  routes: Array<{ duration_seconds: number; distance_meters: number; traffic_delay_seconds: number; congestion: string; summary: string }>;
+  tips: string[];
+};
+
 type Atalho = {
-  to: string;
+  to?: string;
+  acao?: "abrir-chat";
   nome: string;
   descricao: string;
   icone: NomeIcone;
@@ -56,6 +84,18 @@ const ATALHOS: Atalho[] = [
     nome: "Perguntar ao assistente",
     descricao: "Consulte a base clínica com fontes verificáveis.",
     icone: "assistente",
+  },
+  {
+    to: "/corvia-mail",
+    nome: "CorvIA Mail",
+    descricao: "Centralize mensagens, prioridades, modelos e comunicação clínica.",
+    icone: "mail",
+  },
+  {
+    acao: "abrir-chat",
+    nome: "CorvIA Chat",
+    descricao: "Fale com profissionais e acompanhe mensagens não lidas.",
+    icone: "comunicacao",
   },
 ];
 
@@ -144,6 +184,17 @@ function quantidade(valor: number | null | undefined) {
   return valor == null ? "—" : valor.toLocaleString("pt-BR");
 }
 
+function Numero({ rotulo, valor, to }: { rotulo: string; valor: number | null; to: string }) {
+  return <Link to={to}><strong>{quantidade(valor)}</strong><span>{rotulo}</span></Link>;
+}
+
+function abrirChatGlobal() {
+  const botao = document.querySelector<HTMLButtonElement>(
+    'button[aria-label^="Abrir o CorvIA Chat"]',
+  );
+  botao?.click();
+}
+
 function nomeTipo(tipo: string) {
   return ({ consulta: "Consulta", retorno: "Retorno", exame: "Exame", outro: "Compromisso" } as Record<string, string>)[tipo]
     || "Compromisso";
@@ -158,6 +209,10 @@ export default function Painel() {
   const [fluxogramas, setFluxogramas] = useState<number | null>(null);
   const [evidencias, setEvidencias] = useState<number | null>(null);
   const [estudos, setEstudos] = useState<number | null>(null);
+  const [mobilidade, setMobilidade] = useState<PreferenciaMobilidade | null>(null);
+  const [proximosLocais, setProximosLocais] = useState<ProximoLocal[]>([]);
+  const [deslocamento, setDeslocamento] = useState<Deslocamento | null>(null);
+  const [erroLocalizacao, setErroLocalizacao] = useState("");
 
   useEffect(() => {
     const total = (rota: string) =>
@@ -170,7 +225,39 @@ export default function Painel() {
     total("/library/documents?kind=fluxograma&limit=1").then(setFluxogramas);
     total("/evidence?limit=1").then(setEvidencias);
     total("/studies?limit=1").then(setEstudos);
+    api.get<PreferenciaMobilidade>("/agenda/mobility/preferences").then(setMobilidade).catch(() => setMobilidade(null));
+    api.get<ProximoLocal[]>("/agenda/workday/next-locations").then(setProximosLocais).catch(() => setProximosLocais([]));
   }, []);
+
+  useEffect(() => {
+    if (!mobilidade?.enabled || !mobilidade.automatic_foreground_refresh || !navigator.geolocation) return;
+    let ativo = true;
+    let timer: number | undefined;
+    const atualizar = () => navigator.geolocation.getCurrentPosition(
+      (position) => {
+        if (!ativo) return;
+        setErroLocalizacao("");
+        api.post<Deslocamento>("/agenda/mobility/commute", {
+          latitude: position.coords.latitude,
+          longitude: position.coords.longitude,
+        }).then((result) => { if (ativo) setDeslocamento(result); }).catch(() => {
+          if (ativo) setErroLocalizacao("Não foi possível atualizar o trânsito agora.");
+        });
+      },
+      (error) => {
+        if (!ativo) return;
+        setErroLocalizacao(error.code === error.PERMISSION_DENIED
+          ? "A permissão de localização está bloqueada neste aparelho."
+          : "Localização temporariamente indisponível.");
+      },
+      { enableHighAccuracy: false, timeout: 12_000, maximumAge: 120_000 },
+    );
+    atualizar();
+    timer = window.setInterval(atualizar, Math.max(2, mobilidade.refresh_interval_minutes) * 60_000);
+    const aoVoltar = () => { if (document.visibilityState === "visible") atualizar(); };
+    document.addEventListener("visibilitychange", aoVoltar);
+    return () => { ativo = false; if (timer) window.clearInterval(timer); document.removeEventListener("visibilitychange", aoVoltar); };
+  }, [mobilidade]);
 
   const compromissosHoje = useMemo(() => {
     if (!agenda) return [];
@@ -188,6 +275,10 @@ export default function Painel() {
   }, [agenda]);
 
   const primeiroNome = usuario?.full_name?.trim().split(/\s+/)[0] || "Doutor(a)";
+  const saidaRecomendada = proximosLocais[0] && deslocamento?.routes[0]
+    ? new Date(new Date(proximosLocais[0].starts_at).getTime()
+      - (deslocamento.routes[0].duration_seconds + proximosLocais[0].arrival_buffer_minutes * 60) * 1000)
+    : null;
 
   return (
     <div className="hoje">
@@ -212,17 +303,13 @@ export default function Painel() {
           </div>
         </div>
         <div className="hoje__atalhos-grade">
-          {ATALHOS.map((atalho) => (
-            <Link
-              key={atalho.to}
-              to={atalho.to}
-              className={`hoje-atalho${atalho.principal ? " hoje-atalho--principal" : ""}`}
-            >
-              <span className="hoje-atalho__icone"><Icone nome={atalho.icone} /></span>
-              <span className="hoje-atalho__texto"><strong>{atalho.nome}</strong><small>{atalho.descricao}</small></span>
-              <Icone nome="seta" className="hoje-atalho__seta" />
-            </Link>
-          ))}
+          {ATALHOS.map((atalho) => {
+            const conteudo = <><span className="hoje-atalho__icone"><Icone nome={atalho.icone} /></span><span className="hoje-atalho__texto"><strong>{atalho.nome}</strong><small>{atalho.descricao}</small></span><Icone nome="seta" className="hoje-atalho__seta" /></>;
+            const classe = `hoje-atalho${atalho.principal ? " hoje-atalho--principal" : ""}`;
+            return atalho.acao === "abrir-chat"
+              ? <button key={atalho.nome} type="button" className={classe} onClick={abrirChatGlobal}>{conteudo}</button>
+              : <Link key={atalho.nome} to={atalho.to || "/"} className={classe}>{conteudo}</Link>;
+          })}
         </div>
       </section>
 
@@ -274,6 +361,40 @@ export default function Painel() {
           <Link className="hoje-card__acao" to="/round">Abrir round <Icone nome="seta" /></Link>
         </article>
 
+        <article className="hoje-card hoje-card--deslocamento">
+          <div className="hoje-card__topo">
+            <div><p className="eyebrow">Próximo deslocamento</p><h2>Rota para o trabalho</h2></div>
+            <Icone nome="rota" />
+          </div>
+          {proximosLocais.length === 0 ? (
+            <div className="deslocamento-vazio"><strong>Rotina ainda não cadastrada.</strong><span>Defina seus dias, entrada, saída e locais na Agenda.</span></div>
+          ) : (
+            <>
+              <div className="deslocamento-destino">
+                <span><Icone nome="pin" /></span>
+                <div><strong>{proximosLocais[0].location.name}</strong><small>{new Date(proximosLocais[0].starts_at).toLocaleDateString("pt-BR", { weekday: "short", day: "2-digit", month: "short" })} · início às {new Date(proximosLocais[0].starts_at).toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" })}</small></div>
+              </div>
+              {deslocamento?.status === "live" && deslocamento.routes[0] ? (
+                <div className="deslocamento-live">
+                  <div><strong>{Math.ceil(deslocamento.routes[0].duration_seconds / 60)} min</strong><span>{(deslocamento.routes[0].distance_meters / 1000).toLocaleString("pt-BR", { maximumFractionDigits: 1 })} km</span></div>
+                  <span className={`transito transito--${deslocamento.routes[0].congestion}`}>{deslocamento.routes[0].congestion}</span>
+                  {saidaRecomendada && <p>Saída recomendada às {saidaRecomendada.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" })}.</p>}
+                  {deslocamento.routes[0].traffic_delay_seconds > 120 && <p>+{Math.ceil(deslocamento.routes[0].traffic_delay_seconds / 60)} min pelo trânsito atual.</p>}
+                  {deslocamento.tips[0] && <small>{deslocamento.tips[0]}</small>}
+                </div>
+              ) : erroLocalizacao ? (
+                <p className="deslocamento-estado">{erroLocalizacao}</p>
+              ) : mobilidade?.enabled ? (
+                <p className="deslocamento-estado">{mobilidade.traffic_configured ? "Atualizando trânsito…" : "Local e horário prontos; provedor de trânsito ainda não configurado."}</p>
+              ) : (
+                <p className="deslocamento-estado">Ative a localização uma vez nas configurações da Agenda para receber ETAs automáticos.</p>
+              )}
+              {proximosLocais.length > 1 && <div className="deslocamento-proximos">Depois: {proximosLocais.slice(1).map((item) => item.location.name).join(" · ")}</div>}
+            </>
+          )}
+          <Link className="hoje-card__acao" to="/agenda">Abrir agenda e rotas <Icone nome="seta" /></Link>
+        </article>
+
         <article className="hoje-card hoje-card--mail">
           <div className="hoje-card__topo">
             <div><p className="eyebrow">Comunicação</p><h2>Corvia Mail</h2></div>
@@ -290,10 +411,10 @@ export default function Painel() {
           <Link to="/biblioteca">Explorar biblioteca <Icone nome="seta" /></Link>
         </div>
         <div className="hoje__metricas">
-          <Link to="/biblioteca"><strong>{quantidade(catalogo?.total)}</strong><span>itens científicos</span></Link>
-          <Link to="/fluxogramas"><strong>{quantidade(fluxogramas)}</strong><span>fluxogramas</span></Link>
-          <Link to="/evidencias"><strong>{quantidade(evidencias)}</strong><span>evidências</span></Link>
-          <Link to="/estudos"><strong>{quantidade(estudos)}</strong><span>estudos</span></Link>
+          <Numero rotulo="itens científicos" valor={catalogo?.total ?? null} to="/biblioteca" />
+          <Numero rotulo="fluxogramas" valor={fluxogramas} to="/fluxogramas" />
+          <Numero rotulo="evidências" valor={evidencias} to="/evidencias" />
+          <Numero rotulo="estudos" valor={estudos} to="/estudos" />
         </div>
         {temas.length > 0 && (
           <div className="hoje__temas" aria-label="Temas disponíveis">
