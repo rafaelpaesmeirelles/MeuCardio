@@ -1282,7 +1282,13 @@ def create_integration(data: IntegrationIn, professional_id: int | None = None, 
 @router.post("/integrations/{integration_id}/diagnose")
 def diagnose_integration(integration_id: int, professional_id: int | None = None, db: Session = Depends(get_db), user: User = Depends(current_user)):
     owner_id = _owner_for(db, user, professional_id, "configure"); item = _integration(db, integration_id, owner_id)
-    try: result = get_connector(item.provider, ensure_fresh_credentials(db, item), item.configuration).diagnose()
+    try:
+        credentials = (
+            ensure_fresh_credentials(db, item)
+            if item.provider in {"google_calendar", "microsoft_365", "apple_icloud"}
+            else integration_credentials(item)
+        )
+        result = get_connector(item.provider, credentials, item.configuration).diagnose()
     except ConnectorError as exc:
         item.status = "error"; item.last_error_code = exc.code; item.last_error_message = str(exc)[:500]
         _audit(db, user, "agenda_integration_diagnose_failed", "calendar_integration", item.id, {"provider": item.provider, "code": exc.code}); db.commit()

@@ -322,7 +322,7 @@ def test_integration_without_external_write_confirms_locally_and_queues_email(cl
     user, token = criar_usuario(email="agenda.local-confirmation@teste.local")
     _subscribe(db, user.id)
     integration = client.post("/api/agenda/integrations", headers=_headers(token), json={
-        "provider": "google_calendar", "display_name": "Google somente leitura",
+        "provider": "feegow", "display_name": "Agenda externa somente leitura",
         "sync_strategy": "bidirectional", "enabled": True, "write_enabled": False,
         "consent_accepted": True,
     })

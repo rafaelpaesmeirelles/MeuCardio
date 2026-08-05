@@ -30,6 +30,14 @@ PUBLIC_ROUTE_RATIONALES: dict[tuple[str, str], str] = {
     ("GET", "/api/documentos-publicos/{token}"): (
         "Download destinado ao paciente, autorizado por token de alta entropia na URL."
     ),
+    ("GET", "/api/agenda/oauth/google/callback"): (
+        "Retorno servidor-a-servidor do Google; autorizado por estado de alta entropia, "
+        "uso único, armazenado somente como SHA-256 e com expiração de dez minutos."
+    ),
+    ("GET", "/api/agenda/oauth/microsoft/callback"): (
+        "Retorno servidor-a-servidor da Microsoft; autorizado por estado de alta entropia, "
+        "uso único, armazenado somente como SHA-256 e com expiração de dez minutos."
+    ),
     ("POST", "/api/auth/login"): "Emissão Bearer para integrações e clientes externos.",
     ("POST", "/api/auth/sessao"): "Emissão da sessão web em cookie HttpOnly antes da autenticação.",
     ("POST", "/api/auth/sair"): (
