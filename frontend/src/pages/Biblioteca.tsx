@@ -28,6 +28,25 @@ type Catalog = {
   missing?: number;
 };
 
+type AreaCount = {
+  id: string;
+  label: string;
+  count: number;
+  collections: number;
+};
+
+type AreaCountsResponse = { areas: AreaCount[] };
+
+const AREA_ROUTES: Record<string, string> = {
+  pediatrica: "/doencas?tab=pediatrica",
+  neonatal: "/doencas?tab=pediatrica&q=neonatal",
+  congenita: "/doencas?tab=congenitas",
+  geriatria: "/doencas?tab=outros",
+  gestacao: "/doencas?tab=gestacao",
+  cardiooncologia: "/doencas?tab=oncologia",
+  fetal: "/doencas?tab=fetal",
+};
+
 type DocumentPage = {
   total: number;
   next_offset: number | null;
@@ -42,6 +61,7 @@ export default function Biblioteca() {
   const [params, setParams] = useSearchParams();
   const tema = params.get("tema") ?? "";
   const [catalogo, setCatalogo] = useState<Catalog | null>(null);
+  const [contagensAreas, setContagensAreas] = useState<AreaCount[]>([]);
   const [temas, setTemas] = useState<{ theme: string; count: number }[]>([]);
   const [docs, setDocs] = useState<Doc[] | null>(null);
   const [totalDocs, setTotalDocs] = useState(0);
@@ -52,9 +72,11 @@ export default function Biblioteca() {
     Promise.all([
       api.get<Catalog>("/library/catalog"),
       api.get<{ theme: string; count: number }[]>("/library/themes"),
-    ]).then(([catalogoResposta, temasResposta]) => {
+      api.get<AreaCountsResponse>("/library/area-counts"),
+    ]).then(([catalogoResposta, temasResposta, areasResposta]) => {
       setCatalogo(catalogoResposta);
       setTemas(temasResposta);
+      setContagensAreas(areasResposta.areas);
     });
   }, []);
 
@@ -105,6 +127,26 @@ export default function Biblioteca() {
           {catalogo.total.toLocaleString("pt-BR")} registros preservados nas {catalogo.fronts.length} coleções;
           {" "}{(catalogo.published_total ?? catalogo.total).toLocaleString("pt-BR")} publicados.
         </p>
+      )}
+
+      {contagensAreas.length > 0 && (
+        <section className="cartao" style={{ margin: "1rem 0 1.25rem" }} aria-labelledby="acervo-especializado-titulo">
+          <p className="eyebrow">Acervo especializado consolidado</p>
+          <h2 id="acervo-especializado-titulo">Conteúdos por área clínica</h2>
+          <p style={{ color: "var(--texto-secundario)", maxWidth: "78ch" }}>
+            Os totais incluem documentos, evidências, estudos, casos, trilhas, imagens, exames,
+            materiais e guias especializados publicados. Um conteúdo pode aparecer em mais de uma
+            área relacionada, mas nunca é duplicado dentro da mesma coleção e área.
+          </p>
+          <div className="hoje__temas" aria-label="Totais consolidados por área especializada">
+            {contagensAreas.map((area) => (
+              <Link key={area.id} to={AREA_ROUTES[area.id] || "/doencas"}>
+                <span>{area.label}</span>
+                <small>{area.count.toLocaleString("pt-BR")} · {area.collections} coleções</small>
+              </Link>
+            ))}
+          </div>
+        </section>
       )}
 
       {catalogo?.integrity_ok === false && (

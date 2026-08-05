@@ -26,6 +26,14 @@ type Response = {
   has_more: boolean;
 };
 
+type AreaCount = {
+  id: string;
+  count: number;
+  collections: number;
+};
+
+type AreaCountsResponse = { areas: AreaCount[] };
+
 type Tab = "catalogo" | "assistentes" | "areas" | "congenitas" | "fetal" | "pediatrica" | "oncologia" | "gestacao" | "outros";
 
 const AREAS = [
@@ -49,12 +57,12 @@ const TAB_LABELS: Record<Tab, string> = {
 };
 
 const AREAS_ASSISTENTE = [
-  { area: "cardiopediatria", titulo: "Cardiologia pediátrica", texto: "Infância e adolescência, com assistentes clínicos estruturados.", tab: "pediatrica" as Tab },
-  { area: "cardiopediatria", titulo: "Cardiopatias congênitas", texto: "Anatomia, fisiologia, apresentação e seguimento.", tab: "congenitas" as Tab },
-  { area: "cardiopediatria", titulo: "Cardiologia fetal", texto: "Rastreamento, diagnóstico e planejamento perinatal.", tab: "fetal" as Tab },
-  { area: "cardiooncologia", titulo: "Cardio-Oncologia", texto: "Risco, cardiotoxicidade, monitorização e sobrevivência.", tab: "oncologia" as Tab },
-  { area: "gravidez", titulo: "Gestação e puerpério", texto: "Gravidez, parto, puerpério e amamentação.", tab: "gestacao" as Tab },
-  { area: "cardiogeriatria", titulo: "Outras áreas da Cardiologia", texto: "Cardio-Geriatria e acesso a todas as demais coleções cardiológicas.", tab: "outros" as Tab },
+  { area: "cardiopediatria", areaId: "pediatrica", titulo: "Cardiologia pediátrica", texto: "Infância e adolescência, com assistentes clínicos estruturados.", tab: "pediatrica" as Tab },
+  { area: "cardiopediatria", areaId: "congenita", titulo: "Cardiopatias congênitas", texto: "Anatomia, fisiologia, apresentação e seguimento.", tab: "congenitas" as Tab },
+  { area: "cardiopediatria", areaId: "fetal", titulo: "Cardiologia fetal", texto: "Rastreamento, diagnóstico e planejamento perinatal.", tab: "fetal" as Tab },
+  { area: "cardiooncologia", areaId: "cardiooncologia", titulo: "Cardio-Oncologia", texto: "Risco, cardiotoxicidade, monitorização e sobrevivência.", tab: "oncologia" as Tab },
+  { area: "gravidez", areaId: "gestacao", titulo: "Gestação e puerpério", texto: "Gravidez, parto, puerpério e amamentação.", tab: "gestacao" as Tab },
+  { area: "cardiogeriatria", areaId: "geriatria", titulo: "Outras áreas da Cardiologia", texto: "Cardio-Geriatria e acesso a todas as demais coleções cardiológicas.", tab: "outros" as Tab },
 ];
 
 function labelArea(area: string) {
@@ -79,6 +87,13 @@ export default function GuiaDoencas() {
   const [total, setTotal] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [areaCounts, setAreaCounts] = useState<AreaCount[]>([]);
+
+  useEffect(() => {
+    api.get<AreaCountsResponse>("/library/area-counts")
+      .then((response) => setAreaCounts(response.areas))
+      .catch(() => setAreaCounts([]));
+  }, []);
 
   const filters = useMemo(() => {
     const result: Record<string, string> = { page_size: "60", page: String(page) };
@@ -172,17 +187,23 @@ export default function GuiaDoencas() {
             <p>Entre diretamente nos assistentes estruturados da área ou consulte todo o acervo relacionado.</p>
           </div>
           <div className="guia-areas__grade">
-            {AREAS_ASSISTENTE.map((item) => (
-              <article className="cartao guia-area" key={item.titulo}>
-                <span className="guia-area__marca" aria-hidden="true">{item.titulo.slice(0, 2).toUpperCase()}</span>
-                <div><h3>{item.titulo}</h3><p>{item.texto}</p></div>
-                {item.tab === "outros" ? (
-                  <button className="botao botao--secundario" type="button" onClick={() => changeTab("outros")}>Explorar áreas</button>
-                ) : (
-                  <button className="botao botao--secundario" type="button" onClick={() => abrirAssistentesDaArea(item.area)}>Abrir assistentes</button>
-                )}
-              </article>
-            ))}
+            {AREAS_ASSISTENTE.map((item) => {
+              const areaCount = areaCounts.find((candidate) => candidate.id === item.areaId);
+              return (
+                <article className="cartao guia-area" key={item.titulo}>
+                  <span className="guia-area__marca" aria-hidden="true">{item.titulo.slice(0, 2).toUpperCase()}</span>
+                  <div>
+                    <h3>{item.titulo}</h3><p>{item.texto}</p>
+                    {areaCount && <small>{areaCount.count.toLocaleString("pt-BR")} conteúdos em {areaCount.collections} coleções</small>}
+                  </div>
+                  {item.tab === "outros" ? (
+                    <button className="botao botao--secundario" type="button" onClick={() => changeTab("outros")}>Explorar áreas</button>
+                  ) : (
+                    <button className="botao botao--secundario" type="button" onClick={() => abrirAssistentesDaArea(item.area)}>Abrir assistentes</button>
+                  )}
+                </article>
+              );
+            })}
           </div>
         </section>
       )}

@@ -18,6 +18,7 @@ from app.models.patient_material import PatientMaterial
 from app.models.specialty_guide import SpecialtyDisease, SymptomTriageGuide
 from app.models.study import ScientificStudy
 from app.models.study_track import StudyTrack
+from app.services.content_areas import content_area_counts
 
 router = APIRouter(prefix="/api/library", tags=["biblioteca"])
 
@@ -124,6 +125,22 @@ def themes(db: Session = Depends(get_db), _=Depends(current_user)):
         .group_by(Document.theme).order_by(Document.theme)
     ).all()
     return [{"theme": t, "count": c} for t, c in rows]
+
+
+@router.get("/area-counts")
+def area_counts(db: Session = Depends(get_db), _=Depends(current_user)):
+    """Totais publicados das áreas especializadas em todas as coleções.
+
+    São contagens por faceta e podem se sobrepor: um guia fetal, por exemplo,
+    também pode ser parte da Cardiologia Pediátrica. O ``breakdown`` permite à
+    interface explicar de quais coleções veio o total sem contar um registro
+    duas vezes dentro da mesma área/frente.
+    """
+    return {
+        "areas": content_area_counts(db),
+        "counting_rule": "published_unique_per_area_and_collection",
+        "overlapping_facets": True,
+    }
 
 
 @router.get("/documents")

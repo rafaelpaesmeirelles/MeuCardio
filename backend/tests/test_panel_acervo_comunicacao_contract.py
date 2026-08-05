@@ -6,6 +6,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[2]
 PAINEL = REPO_ROOT / "frontend/src/pages/Painel.tsx"
 BIBLIOTECA = REPO_ROOT / "frontend/src/pages/Biblioteca.tsx"
+GUIA_DOENCAS = REPO_ROOT / "frontend/src/pages/GuiaDoencas.tsx"
 SHELL = REPO_ROOT / "frontend/src/components/Shell.tsx"
 APP = REPO_ROOT / "frontend/src/App.tsx"
 CHAT = REPO_ROOT / "frontend/src/components/ChatFlutuante.tsx"
@@ -19,9 +20,27 @@ def test_painel_usa_catalogo_canônico_em_vez_de_somar_temas():
     fonte = _fonte(PAINEL)
 
     assert 'api.get<Catalogo>("/library/catalog")' in fonte
-    assert 'valor={catalogo?.total ?? null}' in fonte
+    assert 'valor={catalogo?.published_total ?? catalogo?.total ?? null}' in fonte
     assert "temas?.reduce" not in fonte
-    assert 'rotulo="itens científicos"' in fonte
+    assert 'rotulo="conteúdos publicados"' in fonte
+
+
+def test_painel_usa_contagem_transversal_nas_areas_especializadas():
+    fonte = _fonte(PAINEL)
+
+    assert 'api.get<AreaCountsResponse>("/library/area-counts")' in fonte
+    assert "contagensAreas.find((item) => item.id === area.areaId)" in fonte
+    assert "em ${contagem.collections} coleções" in fonte
+
+
+def test_biblioteca_e_guia_exibem_totais_consolidados_por_area():
+    biblioteca = _fonte(BIBLIOTECA)
+    guia = _fonte(GUIA_DOENCAS)
+
+    assert 'api.get<AreaCountsResponse>("/library/area-counts")' in biblioteca
+    assert "Conteúdos por área clínica" in biblioteca
+    assert 'api.get<AreaCountsResponse>("/library/area-counts")' in guia
+    assert "conteúdos em {areaCount.collections} coleções" in guia
 
 
 def test_painel_expoe_mail_e_chat_com_acesso_acionavel():

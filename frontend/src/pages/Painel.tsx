@@ -11,7 +11,15 @@ import { useAuth } from "../lib/auth";
 type Tema = { theme: string; count: number };
 type Paciente = { id: number };
 type ListaComTotal = { total?: number };
-type Catalogo = { total: number };
+type AreaCount = {
+  id: string;
+  label: string;
+  count: number;
+  collections: number;
+  breakdown: Record<string, number>;
+};
+type Catalogo = { total: number; published_total?: number };
+type AreaCountsResponse = { areas: AreaCount[] };
 type Agendamento = {
   id: number;
   patient_name: string | null;
@@ -72,6 +80,7 @@ type AreaDestaque = {
   to: string;
   marca: AreaClinicaMarca;
   tema?: string;
+  areaId: string;
 };
 
 type StatusEmail = {
@@ -209,6 +218,7 @@ const AREAS_DESTAQUE: AreaDestaque[] = [
     to: "/biblioteca?tema=Cardiologia%20pedi%C3%A1trica",
     marca: "pediatrica",
     tema: "Cardiologia pediátrica",
+    areaId: "pediatrica",
   },
   {
     nome: "Cardiologia Neonatal",
@@ -216,6 +226,7 @@ const AREAS_DESTAQUE: AreaDestaque[] = [
     descricao: "Triagem, cardiopatias congênitas e abordagem cardiovascular do recém-nascido.",
     to: "/doencas?tab=congenitas&area=cardiopediatria",
     marca: "neonatal",
+    areaId: "neonatal",
   },
   {
     nome: "Cardiopatias Congênitas no Adulto",
@@ -223,6 +234,7 @@ const AREAS_DESTAQUE: AreaDestaque[] = [
     descricao: "Anatomia, intervenções prévias, risco tardio e cuidado longitudinal do adulto.",
     to: "/doencas?tab=congenitas",
     marca: "congenita",
+    areaId: "congenita",
   },
   {
     nome: "Cardio-Geriatria",
@@ -231,6 +243,7 @@ const AREAS_DESTAQUE: AreaDestaque[] = [
     to: "/biblioteca?tema=Cardiologia%20geri%C3%A1trica",
     marca: "geriatria",
     tema: "Cardiologia geriátrica",
+    areaId: "geriatria",
   },
   {
     nome: "Cardiologia na Gestação e Amamentação",
@@ -239,6 +252,7 @@ const AREAS_DESTAQUE: AreaDestaque[] = [
     to: "/biblioteca?tema=Gravidez",
     marca: "gestacao",
     tema: "Gravidez",
+    areaId: "gestacao",
   },
   {
     nome: "Cardio-Oncologia",
@@ -247,6 +261,7 @@ const AREAS_DESTAQUE: AreaDestaque[] = [
     to: "/biblioteca?tema=Cardio-oncologia",
     marca: "oncologia",
     tema: "Cardio-oncologia",
+    areaId: "cardiooncologia",
   },
 ];
 
@@ -315,6 +330,7 @@ function dataCurtaDoEmail(mensagem: MensagemEmail) {
 export default function Painel() {
   const { usuario } = useAuth();
   const [catalogo, setCatalogo] = useState<Catalogo | null>(null);
+  const [contagensAreas, setContagensAreas] = useState<AreaCount[]>([]);
   const [temas, setTemas] = useState<Tema[]>([]);
   const [pacientes, setPacientes] = useState<number | null>(null);
   const [agenda, setAgenda] = useState<Agendamento[] | null>(null);
@@ -337,6 +353,7 @@ export default function Painel() {
       api.get<ListaComTotal>(rota).then((dados) => dados.total ?? 0).catch(() => null);
 
     api.get<Catalogo>("/library/catalog").then(setCatalogo).catch(() => setCatalogo(null));
+    api.get<AreaCountsResponse>("/library/area-counts").then((response) => setContagensAreas(response.areas)).catch(() => setContagensAreas([]));
     api.get<Tema[]>("/library/themes").then(setTemas).catch(() => setTemas([]));
     api.get<Paciente[]>("/round/patients").then((lista) => setPacientes(lista.length)).catch(() => setPacientes(null));
     api.get<Agendamento[]>("/appointments").then(setAgenda).catch(() => setAgenda([]));
@@ -651,7 +668,7 @@ export default function Painel() {
           <Link to="/biblioteca">Explorar biblioteca <Icone nome="seta" /></Link>
         </div>
         <div className="hoje__metricas">
-          <Numero rotulo="itens científicos" valor={catalogo?.total ?? null} to="/biblioteca" />
+          <Numero rotulo="conteúdos publicados" valor={catalogo?.published_total ?? catalogo?.total ?? null} to="/biblioteca" />
           <Numero rotulo="fluxogramas" valor={fluxogramas} to="/fluxogramas" />
           <Numero rotulo="evidências" valor={evidencias} to="/evidencias" />
           <Numero rotulo="estudos" valor={estudos} to="/estudos" />
@@ -667,9 +684,11 @@ export default function Painel() {
           </div>
           <div className="hoje__destaques-grade">
             {AREAS_DESTAQUE.map((area, index) => {
-              const total = area.tema
+              const contagem = contagensAreas.find((item) => item.id === area.areaId);
+              const totalDocumentos = area.tema
                 ? temas.find((tema) => mesmoTema(area.tema || "", tema.theme))?.count
                 : undefined;
+              const total = contagem?.count ?? totalDocumentos;
               return (
                 <article className="hoje-area" key={area.nome}>
                   <Link to={area.to} aria-label={`Explorar ${area.nome}`}>
@@ -681,7 +700,11 @@ export default function Painel() {
                     <h4>{area.nome}</h4>
                     <p>{area.descricao}</p>
                     <span className="hoje-area__rodape">
-                      <small>{total !== undefined ? `${total.toLocaleString("pt-BR")} conteúdos` : "Coleção especializada"}</small>
+                      <small>
+                        {total !== undefined
+                          ? `${total.toLocaleString("pt-BR")} conteúdos${contagem ? ` em ${contagem.collections} coleções` : ""}`
+                          : "Coleção especializada"}
+                      </small>
                       <span>Explorar <Icone nome="seta" /></span>
                     </span>
                   </Link>
