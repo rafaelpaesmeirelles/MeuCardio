@@ -3,11 +3,11 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.api import (
     admin, ai, appointments, assinatura, auth, browser_session, calculators, chat, chat_session,
-    cmed, documents, documentos_publicos, drugs, email as email_api, evidence,
-    favorites, gallery, health, lab_tests, library, password_reset,
-    prescriptions, round as round_api, search, service_orders, sessions, studies,
-    timeline, billing, partner_courses, guidelines, indicadores, checklists, study_tracks,
-    exportacao, emergencia, receituario, clinical_cases,
+    cmed, documents, documentos_publicos, drug_insights, drugs, email as email_api, evidence,
+    favorites, gallery, guideline_updates, health, lab_tests, library, mail360_status,
+    partner_courses, password_reset, prescriptions, presence, round as round_api, search,
+    service_orders, sessions, studies, timeline, billing, guidelines, indicadores,
+    checklists, study_tracks, exportacao, emergencia, receituario, clinical_cases,
 )
 from app.core.config import settings
 from app.core.course_uploads import CourseUploadSecurityMiddleware
@@ -38,14 +38,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-# Starlette executa primeiro o último middleware registrado. As políticas de
-# upload ficam por dentro da proteção de origem/rate limit HTTP: uma origem
-# hostil é recusada antes que o body multipart seja lido e validado.
 app.add_middleware(UploadSecurityMiddleware)
 app.add_middleware(CourseUploadSecurityMiddleware)
 app.add_middleware(HttpSecurityMiddleware)
-# Observabilidade é a camada mais externa: inclusive respostas 403/429/503 das
-# proteções acima recebem X-Request-ID e um evento estruturado sem payload.
 app.add_middleware(ObservabilityMiddleware)
 
 ROUTERS_LIVRES = (
@@ -55,12 +50,13 @@ ROUTERS_LIVRES = (
 )
 
 ROUTERS_ASSINANTES = (
-    library.router, search.router, calculators.router, drugs.router, round_api.router,
-    ai.router, gallery.router, favorites.router, lab_tests.router, evidence.router,
-    studies.router, prescriptions.router, documents.router, appointments.router,
-    timeline.router, guidelines.router, indicadores.router, checklists.router, study_tracks.router,
-    exportacao.router, emergencia.router, receituario.router, clinical_cases.router, chat.router,
-    assinatura.router,
+    library.router, search.router, calculators.router, drugs.router, drug_insights.router,
+    round_api.router, ai.router, gallery.router, favorites.router, lab_tests.router,
+    evidence.router, studies.router, prescriptions.router, documents.router,
+    appointments.router, timeline.router, guidelines.router, guideline_updates.router,
+    mail360_status.router, presence.router, indicadores.router, checklists.router,
+    study_tracks.router, exportacao.router, emergencia.router, receituario.router,
+    clinical_cases.router, chat.router, assinatura.router,
 )
 
 for router in ROUTERS_LIVRES:

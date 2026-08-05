@@ -8,9 +8,6 @@ import ChatFlutuante from "./ChatFlutuante";
 
 type ItemNav = { to: string; rotulo: string; curto: string; fim?: boolean };
 
-// Lista única, em ordem alfabética por rótulo — pedido do Rafael em
-// 31/07/2026. Só Administração e Minha conta (acrescidas mais abaixo, fora
-// deste array) ficam de fora da ordenação, sempre por último.
 const NAV_BASE: ItemNav[] = [
   { to: "/agenda", rotulo: "Agenda", curto: "Agenda" },
   { to: "/condicoes", rotulo: "Alerta por condição", curto: "Condições" },
@@ -22,9 +19,6 @@ const NAV_BASE: ItemNav[] = [
   { to: "/casos-clinicos", rotulo: "Casos clínicos interativos", curto: "Casos" },
   { to: "/interacoes", rotulo: "Checador de Interação Medicamentosa", curto: "Interações" },
   { to: "/checklists", rotulo: "Checklist de alta", curto: "Alta" },
-  // Aponta para /corvia-mail (login/assinatura próprios do add-on), não
-  // direto pra /caixa-de-email — o e-mail tem senha separada da conta
-  // Corvia desde 30/07/2026, então precisa passar pelo login dele primeiro.
   { to: "/corvia-mail", rotulo: "CorvIA Mail", curto: "Mail" },
   { to: "/cursos", rotulo: "Cursos parceiros", curto: "Cursos" },
   { to: "/documentos", rotulo: "Emissão de Documentos Online", curto: "Documentos" },
@@ -40,6 +34,7 @@ const NAV_BASE: ItemNav[] = [
   { to: "/receituario", rotulo: "Prescrição Eletrônica", curto: "Prescrição" },
   { to: "/round", rotulo: "Round hospitalar", curto: "Round" },
   { to: "/trilhas", rotulo: "Trilhas de estudo", curto: "Trilhas" },
+  { to: "/usuarios-online", rotulo: "Usuários online", curto: "Online" },
 ];
 
 const PAINEL: ItemNav = { to: "/", rotulo: "Painel", curto: "Painel", fim: true };
@@ -49,8 +44,6 @@ const CONTA: ItemNav = { to: "/minha-conta", rotulo: "Minha conta", curto: "Cont
 export default function Shell() {
   const { usuario, sair } = useAuth();
   const navigate = useNavigate();
-  // O atalho não aparece dentro do próprio modo emergência: lá ele seria um
-  // botão que não leva a lugar nenhum, ocupando o canto que a tela usa.
   const naEmergencia = useLocation().pathname.startsWith("/emergencia");
   const [pendentes, setPendentes] = useState(0);
   const [menuAberto, setMenuAberto] = useState(false);
@@ -58,11 +51,11 @@ export default function Shell() {
 
   useEffect(() => {
     if (usuario?.role !== "admin") return;
-    api.get<any[]>("/admin/users?status=pendente").then((l) => setPendentes(l.length)).catch(() => {});
+    api.get<any[]>("/admin/users?status=pendente").then((lista) => setPendentes(lista.length)).catch(() => {});
   }, [usuario]);
 
-  function buscarDaFaixa(e: FormEvent) {
-    e.preventDefault();
+  function buscarDaFaixa(evento: FormEvent) {
+    evento.preventDefault();
     const termo = buscaTopo.trim();
     if (termo.length < 2) return;
     navigate(`/busca?q=${encodeURIComponent(termo)}`);
@@ -79,13 +72,15 @@ export default function Shell() {
     ? [
         PAINEL,
         ...NAV_BASE,
-        { to: "/fila-telediagnostico", rotulo: "Fila de telediagnóstico", curto: "Fila" },
-        { to: "/admin/usuarios-online", rotulo: "Usuários online", curto: "Online" },
         INDICADORES,
         ADMIN,
         CONTA,
       ]
     : [PAINEL, ...NAV_BASE, INDICADORES, CONTA];
+
+  if (usuario?.role === "admin") {
+    nav.splice(nav.length - 1, 0, { to: "/fila-telediagnostico", rotulo: "Fila de telediagnóstico — desativada", curto: "Fila" });
+  }
 
   return (
     <div>
@@ -98,12 +93,8 @@ export default function Shell() {
         >
           <span /><span /><span />
         </button>
-        
+
         <div className="topo__identidade">
-          {/* A logo já traz o nome "CorvIA" na própria arte — repetir em texto
-              ao lado era duplicata. A placa clara existe porque metade da arte é
-              navy (#003048) e o cabeçalho também: sobre o fundo do topo esse
-              trecho fica com 1,02:1 de contraste, ou seja, invisível. */}
           <span className="topo__logo">
             <img src="/corvia-logo-compacta.png" alt="Corvia" />
           </span>
@@ -136,14 +127,14 @@ export default function Shell() {
 
       <div className="shell">
         <nav className="lateral" aria-label="Navegação principal">
-          {nav.map((i) => (
+          {nav.map((item) => (
             <NavLink
-              key={i.to}
-              to={i.to}
-              end={i.fim}
+              key={item.to}
+              to={item.to}
+              end={item.fim}
               className={({ isActive }) => (isActive ? "ativo" : "")}
             >
-              {i.rotulo}
+              {item.rotulo}
             </NavLink>
           ))}
         </nav>
@@ -155,11 +146,6 @@ export default function Shell() {
       </div>
 
       <BoasVindas />
-
-      {/* CorvIA Chat — widget flutuante, disponível de qualquer tela. Fica fora
-          do modo emergência pelo mesmo motivo do atalho vermelho: lá a tela é
-          para uma coisa só. O botão do chat é posicionado acima do atalho de
-          emergência para não cobri-lo. */}
       {!naEmergencia && <ChatFlutuante />}
 
       {menuAberto && (
@@ -171,27 +157,28 @@ export default function Shell() {
       >
         <div className="gaveta__topo">
           <img src="/corvia-logo-compacta.png" alt="Corvia" className="gaveta__logo" />
-          <button className="botao botao--secundario" style={{ padding: "0.3rem 0.6rem" }}
-                  onClick={() => setMenuAberto(false)} aria-label="Fechar menu">
+          <button
+            className="botao botao--secundario"
+            style={{ padding: "0.3rem 0.6rem" }}
+            onClick={() => setMenuAberto(false)}
+            aria-label="Fechar menu"
+          >
             ✕
           </button>
         </div>
-        {nav.map((i) => (
+        {nav.map((item) => (
           <NavLink
-            key={i.to}
-            to={i.to}
-            end={i.fim}
+            key={item.to}
+            to={item.to}
+            end={item.fim}
             onClick={() => setMenuAberto(false)}
             className={({ isActive }) => (isActive ? "ativo" : "")}
           >
-            {i.rotulo}
+            {item.rotulo}
           </NavLink>
         ))}
       </nav>
-    
-      {/* Tarefa 15 — acesso ao Modo Emergência em um toque, de qualquer tela.
-          Fica fora do menu de propósito: o requisito é chegar lá sob pressão,
-          e um item de menu já custa o toque de abrir o menu. */}
+
       {!naEmergencia && (
         <button
           className="emerg-atalho"
@@ -205,6 +192,6 @@ export default function Shell() {
           <span className="sr-only">Modo Emergência</span>
         </button>
       )}
-</div>
+    </div>
   );
 }

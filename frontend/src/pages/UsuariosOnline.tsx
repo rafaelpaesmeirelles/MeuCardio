@@ -1,136 +1,138 @@
-/** Painel de presença — quem está usando a Corvia agora (só admin).
- *
- *  Consome `GET /api/admin/usuarios-online`, que já existia sem tela desde
- *  31/07/2026. "Online" não é campo gravado: é derivado de `last_seen_at` numa
- *  janela de 5 minutos, e o próprio backend faz esse cálculo — a tela não
- *  recalcula nada, só mostra.
- *
- *  Atualiza sozinha a cada 30s. A janela do backend é de 5 minutos, então
- *  intervalo menor que isso é o suficiente para a lista não ficar visivelmente
- *  velha, sem transformar a página aberta num gerador de requisições.
- */
 import { useCallback, useEffect, useState } from "react";
-import { api } from "../lib/api";
-import { Carregando, Erro } from "../components/Estado";
+import { api, ApiError } from "../lib/api";
+import { Carregando, Erro, Vazio } from "../components/Estado";
 
-type UsuarioPresenca = {
-  id: number;
-  full_name: string;
-  email: string;
-  role: string;
-  last_seen_at: string | null;
-  online: boolean;
+type Preferencia = {
+  visible: boolean;
+  online_window_minutes: number;
 };
 
-function desde(iso: string | null) {
-  if (!iso) return "nunca acessou";
-  const minutos = Math.floor((Date.now() - new Date(iso).getTime()) / 60000);
-  if (minutos < 1) return "agora mesmo";
-  if (minutos < 60) return `há ${minutos} min`;
-  const horas = Math.floor(minutos / 60);
-  if (horas < 24) return `há ${horas} h`;
-  const dias = Math.floor(horas / 24);
-  if (dias < 30) return `há ${dias} ${dias === 1 ? "dia" : "dias"}`;
-  return new Date(iso).toLocaleDateString("pt-BR");
+type UsuarioOnline = {
+  id: number;
+  full_name: string;
+  profession: string | null;
+  specialty: string | null;
+  council: string | null;
+  last_seen_at: string | null;
+};
+
+type RespostaOnline = {
+  online_window_minutes: number;
+  items: UsuarioOnline[];
+};
+
+function atividade(iso: string | null) {
+  if (!iso) return "atividade recente";
+  const minutos = Math.max(0, Math.floor((Date.now() - new Date(iso).getTime()) / 60000));
+  return minutos < 1 ? "online agora" : `atividade há ${minutos} min`;
 }
 
 export default function UsuariosOnline() {
-  const [lista, setLista] = useState<UsuarioPresenca[] | null>(null);
+  const [preferencia, setPreferencia] = useState<Preferencia | null>(null);
+  const [online, setOnline] = useState<RespostaOnline | null>(null);
+  const [salvando, setSalvando] = useState(false);
   const [erro, setErro] = useState("");
-  const [atualizadoEm, setAtualizadoEm] = useState<Date | null>(null);
 
-  const carregar = useCallback(() => {
-    api
-      .get<UsuarioPresenca[]>("/admin/usuarios-online")
-      .then((l) => { setLista(l); setAtualizadoEm(new Date()); setErro(""); })
-      .catch(() => setErro("Não foi possível carregar a lista de presença."));
+  const carregar = useCallback(async () => {
+    try {
+      const [minhaPreferencia, lista] = await Promise.all([
+        api.get<Preferencia>("/presence/me"),
+        api.get<RespostaOnline>("/presence/online"),
+      ]);
+      setPreferencia(minhaPreferencia);
+      setOnline(lista);
+      setErro("");
+    } catch (e) {
+      setErro(e instanceof ApiError ? e.message : "Não foi possível carregar a presença online.");
+    }
   }, []);
 
   useEffect(() => {
     carregar();
-    const t = setInterval(carregar, 30000);
-    return () => clearInterval(t);
+    const timer = window.setInterval(carregar, 30_000);
+    return () => window.clearInterval(timer);
   }, [carregar]);
 
-  if (erro && !lista) return <Erro mensagem={erro} />;
-  if (!lista) return <Carregando texto="Verificando quem está online…" />;
+  async function alterarVisibilidade(visible: boolean) {
+    setSalvando(true);
+    setErro("");
+    try {
+      const resposta = await api.put<Preferencia>("/presence/me", { visible });
+      setPreferencia((atual) => ({
+        visible: resposta.visible,
+        online_window_minutes: atual?.online_window_minutes ?? 5,
+      }));
+      await carregar();
+    } catch (e) {
+      setErro(e instanceof ApiError ? e.message : "Não foi possível alterar sua visibilidade.");
+    } finally {
+      setSalvando(false);
+    }
+  }
 
-  const online = lista.filter((u) => u.online);
-  const offline = lista.filter((u) => !u.online);
+  if (erro && (!preferencia || !online)) return <Erro mensagem={erro} />;
+  if (!preferencia || !online) return <Carregando texto="Verificando presença online…" />;
 
   return (
-    <div>
+    <section style={{ maxWidth: "82ch" }}>
+      <p className="eyebrow">Comunidade profissional</p>
       <h1>Usuários online</h1>
-      <p style={{ color: "var(--texto-suave, #5a6b78)" }}>
-        Considera-se online quem teve atividade nos últimos 5 minutos. A lista se atualiza sozinha a
-        cada 30 segundos
-        {atualizadoEm && <> — última verificação às {atualizadoEm.toLocaleTimeString("pt-BR")}</>}.
+      <p style={{ color: "var(--texto-secundario)", maxWidth: "70ch" }}>
+        A presença é opcional e nasce desativada. Você só aparece para outros assinantes
+        quando autoriza, e pode revogar a autorização a qualquer momento.
       </p>
 
-      {erro && <p style={{ color: "var(--erro, #8a1c12)" }}>{erro}</p>}
-
-      <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", margin: "1rem 0 1.5rem" }}>
-        <div style={{ padding: ".7rem 1.1rem", borderRadius: 8, background: "var(--acento-suave, #eef5f8)", minWidth: 120 }}>
-          <strong style={{ display: "block", fontSize: "1.6rem", color: "var(--acento)", lineHeight: 1.1 }}>
-            {online.length}
-          </strong>
-          <span style={{ fontSize: ".85rem", color: "var(--texto-suave, #5a6b78)" }}>online agora</span>
-        </div>
-        <div style={{ padding: ".7rem 1.1rem", borderRadius: 8, background: "var(--fundo-suave, #f6f4f1)", minWidth: 120 }}>
-          <strong style={{ display: "block", fontSize: "1.6rem", lineHeight: 1.1 }}>{lista.length}</strong>
-          <span style={{ fontSize: ".85rem", color: "var(--texto-suave, #5a6b78)" }}>contas ativas</span>
+      <div className="cartao" style={{ margin: "1rem 0" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
+          <div>
+            <strong>Mostrar meu nome quando eu estiver online</strong>
+            <p style={{ color: "var(--texto-secundario)", margin: "0.3rem 0 0", fontSize: "0.86rem" }}>
+              Online significa atividade nos últimos {preferencia.online_window_minutes} minutos.
+              E-mail, telefone e dados de acesso nunca são exibidos.
+            </p>
+          </div>
+          <label style={{ display: "flex", alignItems: "center", gap: 8, fontWeight: 600 }}>
+            <input
+              type="checkbox"
+              style={{ width: "auto" }}
+              checked={preferencia.visible}
+              disabled={salvando}
+              onChange={(e) => alterarVisibilidade(e.target.checked)}
+            />
+            {preferencia.visible ? "Visível" : "Oculto"}
+          </label>
         </div>
       </div>
 
-      <h2 style={{ fontSize: "1.05rem" }}>Online agora</h2>
-      {online.length === 0 ? (
-        <p style={{ color: "var(--texto-suave, #5a6b78)" }}>Ninguém online neste momento.</p>
-      ) : (
-        <Tabela linhas={online} destacar />
-      )}
+      {erro && <p role="alert" style={{ color: "var(--alerta)" }}>{erro}</p>}
 
-      <h2 style={{ fontSize: "1.05rem", marginTop: "1.75rem" }}>Demais contas</h2>
-      {offline.length === 0 ? (
-        <p style={{ color: "var(--texto-suave, #5a6b78)" }}>Todas as contas estão online.</p>
-      ) : (
-        <Tabela linhas={offline} />
-      )}
-    </div>
-  );
-}
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 12 }}>
+        <h2>Online e visíveis agora</h2>
+        <span className="dado">{online.items.length}</span>
+      </div>
 
-function Tabela({ linhas, destacar = false }: { linhas: UsuarioPresenca[]; destacar?: boolean }) {
-  return (
-    <div style={{ overflowX: "auto" }}>
-      <table style={{ width: "100%", borderCollapse: "collapse", fontSize: ".92rem" }}>
-        <thead>
-          <tr style={{ textAlign: "left", borderBottom: "2px solid var(--linha, #e2ddd5)" }}>
-            <th style={{ padding: ".5rem .4rem" }}>Nome</th>
-            <th style={{ padding: ".5rem .4rem" }}>E-mail</th>
-            <th style={{ padding: ".5rem .4rem" }}>Perfil</th>
-            <th style={{ padding: ".5rem .4rem" }}>Última atividade</th>
-          </tr>
-        </thead>
-        <tbody>
-          {linhas.map((u) => (
-            <tr key={u.id} style={{ borderBottom: "1px solid var(--linha, #eee9e2)" }}>
-              <td style={{ padding: ".5rem .4rem" }}>
-                <span
-                  aria-hidden="true"
-                  style={{
-                    display: "inline-block", width: 8, height: 8, borderRadius: "50%", marginRight: 8,
-                    background: destacar ? "#1f9d55" : "var(--linha, #cfcac3)",
-                  }}
-                />
-                {u.full_name}
-              </td>
-              <td style={{ padding: ".5rem .4rem", color: "var(--texto-suave, #5a6b78)" }}>{u.email}</td>
-              <td style={{ padding: ".5rem .4rem" }}>{u.role === "admin" ? "Administrador" : "Assinante"}</td>
-              <td style={{ padding: ".5rem .4rem", whiteSpace: "nowrap" }}>{desde(u.last_seen_at)}</td>
-            </tr>
+      {online.items.length === 0 ? (
+        <Vazio
+          titulo="Nenhum assinante visível neste momento"
+          acao="A lista mostra somente quem está online e autorizou a exibição do próprio nome."
+        />
+      ) : (
+        <div className="grade grade--2">
+          {online.items.map((usuario) => (
+            <article key={usuario.id} className="cartao">
+              <div style={{ display: "flex", gap: 9, alignItems: "center" }}>
+                <span aria-hidden="true" style={{ width: 9, height: 9, borderRadius: "50%", background: "var(--sucesso)", flexShrink: 0 }} />
+                <strong>{usuario.full_name}</strong>
+              </div>
+              <p style={{ margin: "0.45rem 0 0", color: "var(--texto-secundario)" }}>
+                {[usuario.profession, usuario.specialty].filter(Boolean).join(" · ") || "Profissional de saúde"}
+              </p>
+              {usuario.council && <p className="eyebrow" style={{ margin: "0.35rem 0 0" }}>{usuario.council}</p>}
+              <small style={{ color: "var(--texto-secundario)" }}>{atividade(usuario.last_seen_at)}</small>
+            </article>
           ))}
-        </tbody>
-      </table>
-    </div>
+        </div>
+      )}
+    </section>
   );
 }

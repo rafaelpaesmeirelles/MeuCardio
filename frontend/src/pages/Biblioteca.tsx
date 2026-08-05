@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { Link, useLocation, useSearchParams } from "react-router-dom";
 import { api } from "../lib/api";
 import { Carregando, SeloRevisao, Vazio } from "../components/Estado";
 
@@ -38,6 +38,7 @@ type DocumentPage = {
 const PAGE_SIZE = 100;
 
 export default function Biblioteca() {
+  const location = useLocation();
   const [params, setParams] = useSearchParams();
   const tema = params.get("tema") ?? "";
   const [catalogo, setCatalogo] = useState<Catalog | null>(null);
@@ -67,6 +68,15 @@ export default function Biblioteca() {
       setProximoOffset(r.next_offset);
     });
   }, [tema]);
+
+  useEffect(() => {
+    if (location.hash !== "#documentos" || docs === null) return;
+    requestAnimationFrame(() => {
+      const alvo = document.getElementById("documentos");
+      alvo?.scrollIntoView({ behavior: "smooth", block: "start" });
+      alvo?.focus({ preventScroll: true });
+    });
+  }, [location.hash, docs]);
 
   async function carregarMais() {
     if (proximoOffset === null || carregandoMais) return;
@@ -117,74 +127,81 @@ export default function Biblioteca() {
         <Carregando texto="Contando o acervo…" />
       ) : (
         <div className="grade grade--3" style={{ margin: "1rem 0 1.5rem" }}>
-          {catalogo.fronts.map((frente) => (
-            <Link key={frente.key} to={frente.route} className="cartao" style={{ color: "inherit" }}>
-              <p className="eyebrow">Coleção</p>
-              <h3>{frente.label}</h3>
-              <p style={{ color: "var(--texto-secundario)", marginBottom: 0 }}>
-                {frente.count.toLocaleString("pt-BR")} publicados
-                {frente.inventory_count !== undefined && frente.inventory_count !== frente.count
-                  ? ` de ${frente.inventory_count.toLocaleString("pt-BR")} preservados`
-                  : ""}
-              </p>
-            </Link>
-          ))}
+          {catalogo.fronts.map((frente) => {
+            const destino = frente.key === "documentos"
+              ? "/biblioteca?colecao=documentos#documentos"
+              : frente.route;
+            return (
+              <Link key={frente.key} to={destino} className="cartao" style={{ color: "inherit" }}>
+                <p className="eyebrow">Coleção</p>
+                <h3>{frente.label}</h3>
+                <p style={{ color: "var(--texto-secundario)", marginBottom: 0 }}>
+                  {frente.count.toLocaleString("pt-BR")} publicados
+                  {frente.inventory_count !== undefined && frente.inventory_count !== frente.count
+                    ? ` de ${frente.inventory_count.toLocaleString("pt-BR")} preservados`
+                    : ""}
+                </p>
+              </Link>
+            );
+          })}
         </div>
       )}
 
-      <p className="eyebrow">Documentos científicos</p>
-      <h2>{tema || "Todos os temas"}</h2>
+      <section id="documentos" tabIndex={-1} style={{ scrollMarginTop: "1rem", outline: "none" }}>
+        <p className="eyebrow">Documentos científicos</p>
+        <h2>{tema || "Todos os temas"}</h2>
 
-      <div style={{ display: "flex", gap: 6, flexWrap: "wrap", margin: "0.8rem 0 1.2rem" }}>
-        <button
-          className={`botao ${tema ? "botao--secundario" : ""}`}
-          style={{ padding: "0.35rem 0.75rem", fontSize: "0.82rem" }}
-          onClick={() => setParams({})}
-        >
-          Tudo
-        </button>
-        {temas.map((t) => (
+        <div style={{ display: "flex", gap: 6, flexWrap: "wrap", margin: "0.8rem 0 1.2rem" }}>
           <button
-            key={t.theme}
-            className={`botao ${tema === t.theme ? "" : "botao--secundario"}`}
+            className={`botao ${tema ? "botao--secundario" : ""}`}
             style={{ padding: "0.35rem 0.75rem", fontSize: "0.82rem" }}
-            onClick={() => setParams({ tema: t.theme })}
+            onClick={() => setParams({ colecao: "documentos" })}
           >
-            {t.theme} ({t.count.toLocaleString("pt-BR")})
+            Tudo
           </button>
-        ))}
-      </div>
+          {temas.map((t) => (
+            <button
+              key={t.theme}
+              className={`botao ${tema === t.theme ? "" : "botao--secundario"}`}
+              style={{ padding: "0.35rem 0.75rem", fontSize: "0.82rem" }}
+              onClick={() => setParams({ colecao: "documentos", tema: t.theme })}
+            >
+              {t.theme} ({t.count.toLocaleString("pt-BR")})
+            </button>
+          ))}
+        </div>
 
-      {docs === null ? (
-        <Carregando />
-      ) : docs.length === 0 ? (
-        <Vazio titulo="Nenhum documento neste tema" acao="Importe conteúdo pelo painel de administração." />
-      ) : (
-        <>
-          <p style={{ color: "var(--texto-secundario)", fontSize: "0.9rem" }}>
-            Exibindo {docs.length.toLocaleString("pt-BR")} de {totalDocs.toLocaleString("pt-BR")} documentos publicados.
-          </p>
-          <div className="grade grade--2">
-            {docs.map((d) => (
-              <Link key={d.slug} to={`/biblioteca/${d.slug}`} className="cartao" style={{ color: "inherit" }}>
-                <p className="eyebrow">{d.kind}</p>
-                <h3>{d.title}</h3>
-                {d.summary && (
-                  <p style={{ color: "var(--texto-secundario)", fontSize: "0.88rem" }}>{d.summary}</p>
-                )}
-                <SeloRevisao status={d.review_status} />
-              </Link>
-            ))}
-          </div>
-          {proximoOffset !== null && (
-            <div style={{ display: "flex", justifyContent: "center", marginTop: "1.25rem" }}>
-              <button className="botao botao--secundario" onClick={carregarMais} disabled={carregandoMais}>
-                {carregandoMais ? "Carregando…" : "Carregar mais documentos"}
-              </button>
+        {docs === null ? (
+          <Carregando />
+        ) : docs.length === 0 ? (
+          <Vazio titulo="Nenhum documento neste tema" acao="Importe conteúdo pelo painel de administração." />
+        ) : (
+          <>
+            <p style={{ color: "var(--texto-secundario)", fontSize: "0.9rem" }}>
+              Exibindo {docs.length.toLocaleString("pt-BR")} de {totalDocs.toLocaleString("pt-BR")} documentos publicados.
+            </p>
+            <div className="grade grade--2">
+              {docs.map((d) => (
+                <Link key={d.slug} to={`/biblioteca/${d.slug}`} className="cartao" style={{ color: "inherit" }}>
+                  <p className="eyebrow">{d.kind}</p>
+                  <h3>{d.title}</h3>
+                  {d.summary && (
+                    <p style={{ color: "var(--texto-secundario)", fontSize: "0.88rem" }}>{d.summary}</p>
+                  )}
+                  <SeloRevisao status={d.review_status} />
+                </Link>
+              ))}
             </div>
-          )}
-        </>
-      )}
+            {proximoOffset !== null && (
+              <div style={{ display: "flex", justifyContent: "center", marginTop: "1.25rem" }}>
+                <button className="botao botao--secundario" onClick={carregarMais} disabled={carregandoMais}>
+                  {carregandoMais ? "Carregando…" : "Carregar mais documentos"}
+                </button>
+              </div>
+            )}
+          </>
+        )}
+      </section>
     </>
   );
 }

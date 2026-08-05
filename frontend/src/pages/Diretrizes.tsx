@@ -1,133 +1,142 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { api } from "../lib/api";
-import { Carregando, Erro } from "../components/Estado";
+import { api, ApiError } from "../lib/api";
+import { Carregando, Erro, Vazio } from "../components/Estado";
 
-/** Espelha `_dump` de `app/api/guidelines.py`. A lista não traz qual diretriz
- *  substituiu qual — só o fato de ter sido substituída. Quem cruza as duas
- *  pontas é `/meus-alertas`, e é por isso que ele é a parte de cima da tela. */
-type Diretriz = {
+type Atualizacao = {
+  id: number;
   slug: string;
   org: string;
-  titulo: string;
-  ano: number;
-  doi: string | null;
+  title: string;
+  published_at: string;
+  discovered_at: string;
   url: string | null;
-  vinculos: number;
-  vinculos_confirmados: number;
-  substituida: boolean;
-  substituida_em: string | null;
+  status: "detected" | "aguardando_revisao" | "revisada";
+  clinical_content_changed: false;
 };
 
-type Alerta = {
-  diretriz_revisada: { titulo: string; org: string; ano: number };
-  nova_versao: { titulo: string; ano: number; doi: string | null; url: string | null } | null;
-  seus_documentos: { slug: string; titulo: string }[];
-  significado: string;
+type Notificacao = {
+  notification_id: number;
+  read_at: string | null;
+  message: string;
+  guideline: Atualizacao;
 };
 
-type RespostaAlertas = { alertas: Alerta[]; nota?: string };
+type RespostaAtualizacoes = { cutoff: string; items: Atualizacao[] };
+type RespostaNotificacoes = { cutoff: string; items: Notificacao[] };
+
+function dataBr(valor: string) {
+  return new Date(valor).toLocaleDateString("pt-BR", { timeZone: "UTC" });
+}
 
 export default function Diretrizes() {
-  const [alertas, setAlertas] = useState<RespostaAlertas | null>(null);
-  const [revisadas, setRevisadas] = useState<Diretriz[] | null>(null);
+  const [atualizacoes, setAtualizacoes] = useState<RespostaAtualizacoes | null>(null);
+  const [notificacoes, setNotificacoes] = useState<RespostaNotificacoes | null>(null);
   const [erro, setErro] = useState("");
 
   useEffect(() => {
-    api.get<RespostaAlertas>("/diretrizes/meus-alertas")
-      .then(setAlertas)
-      .catch((e) => setErro(e.message));
-    // A lista geral falha sozinha: sem ela a página ainda mostra os alertas,
-    // que são a razão de ela existir.
-    api.get<Diretriz[]>("/diretrizes?substituidas=true")
-      .then(setRevisadas)
-      .catch(() => setRevisadas([]));
+    Promise.all([
+      api.get<RespostaAtualizacoes>("/guideline-updates"),
+      api.get<RespostaNotificacoes>("/guideline-updates/me?include_read=true"),
+    ])
+      .then(([lista, alertas]) => {
+        setAtualizacoes(lista);
+        setNotificacoes(alertas);
+      })
+      .catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível carregar as atualizações."));
   }, []);
 
-  if (erro) return <Erro mensagem={erro} />;
-  if (!alertas) return <Carregando />;
+  async function marcarLida(id: number) {
+    try {
+      const resposta = await api.post<{ notification_id: number; read_at: string }>(
+        `/guideline-updates/${id}/read`,
+        {},
+      );
+      setNotificacoes((atual) => atual ? {
+        ...atual,
+        items: atual.items.map((item) => item.notification_id === id
+          ? { ...item, read_at: resposta.read_at }
+          : item),
+      } : atual);
+    } catch (e) {
+      setErro(e instanceof ApiError ? e.message : "Não foi possível marcar o alerta como lido.");
+    }
+  }
 
-  const temAlerta = alertas.alertas.length > 0;
+  if (erro) return <Erro mensagem={erro} />;
+  if (!atualizacoes || !notificacoes) return <Carregando texto="Verificando publicações oficiais…" />;
+
+  const naoLidas = notificacoes.items.filter((item) => !item.read_at);
 
   return (
     <>
       <p className="eyebrow">Diretrizes</p>
-      <h1>Alertas de revisão</h1>
-      <p style={{ maxWidth: "68ch", color: "var(--texto-secundario)" }}>
-        Quando uma diretriz que embasa um conteúdo seu é revisada, o aviso aparece
-        aqui. O alerta é sobre <strong>a diretriz ter mudado</strong> — não afirma
-        que o material da Corvia esteja desatualizado.
+      <h1>Alertas de novas diretrizes</h1>
+      <p style={{ maxWidth: "72ch", color: "var(--texto-secundario)" }}>
+        Este painel mostra somente publicações oficiais com data igual ou posterior a{" "}
+        <strong>10/08/2026</strong>. A detecção automática confirma que a publicação existe;
+        ela não modifica recomendações, doses ou protocolos da Corvia sem revisão clínica humana.
       </p>
 
-      {!temAlerta && (
-        <div className="cartao" style={{ marginTop: "1.2rem" }}>
-          <strong>Nenhum alerta para você agora.</strong>
-          <p style={{ margin: "0.4rem 0 0", fontSize: "0.88rem", color: "var(--texto-secundario)" }}>
-            {alertas.nota ??
-              "Nenhuma das diretrizes que sustentam os seus documentos favoritados foi revisada."}
-          </p>
-          <p style={{ margin: "0.6rem 0 0", fontSize: "0.88rem" }}>
-            <Link to="/biblioteca">Favoritar documentos</Link> é o que liga este canal:
-            os alertas seguem o que você marcou.
-          </p>
-        </div>
-      )}
-
-      {temAlerta && (
-        <div style={{ display: "grid", gap: "0.8rem", marginTop: "1.2rem" }}>
-          {alertas.alertas.map((a, i) => (
-            <article key={i} className="cartao painel__funcao painel__funcao--destaque">
-              <strong>
-                {a.diretriz_revisada.org} {a.diretriz_revisada.ano} — {a.diretriz_revisada.titulo}
-              </strong>
-              {a.nova_versao && (
-                <span>
-                  Versão mais recente: <strong>{a.nova_versao.titulo}</strong> ({a.nova_versao.ano})
-                  {a.nova_versao.doi && <> · DOI: {a.nova_versao.doi}</>}
-                  {a.nova_versao.url && (
-                    <> · <a href={a.nova_versao.url} target="_blank" rel="noreferrer">abrir</a></>
+      {naoLidas.length > 0 && (
+        <section style={{ marginTop: "1.2rem" }}>
+          <p className="eyebrow">Novos para você</p>
+          <div style={{ display: "grid", gap: "0.8rem" }}>
+            {naoLidas.map((item) => (
+              <article key={item.notification_id} className="cartao painel__funcao painel__funcao--destaque">
+                <p className="eyebrow" style={{ margin: 0 }}>
+                  {item.guideline.org} · publicado em {dataBr(item.guideline.published_at)}
+                </p>
+                <strong>{item.guideline.title}</strong>
+                <span>{item.message}</span>
+                <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                  {item.guideline.url && (
+                    <a className="botao" href={item.guideline.url} target="_blank" rel="noopener noreferrer">
+                      Abrir publicação oficial ↗
+                    </a>
                   )}
-                </span>
-              )}
-              <span>{a.significado}</span>
-              <span>
-                <strong>Seus documentos que se apoiam nela:</strong>
-                <ul style={{ margin: "0.3rem 0 0", paddingLeft: "1.1rem" }}>
-                  {a.seus_documentos.map((d) => (
-                    <li key={d.slug}>
-                      <Link to={`/biblioteca/${d.slug}`}>{d.titulo}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </span>
-            </article>
-          ))}
-        </div>
-      )}
-
-      {revisadas !== null && revisadas.length > 0 && (
-        <section className="painel__grupo">
-          <h2>Todas as diretrizes já revisadas</h2>
-          <p className="painel__grupo-sub">
-            Independentemente de você usar o conteúdo que se apoia nelas.
-          </p>
-          <div className="painel__funcoes">
-            {revisadas.map((g) => (
-              <div key={g.slug} className="cartao painel__funcao painel__funcao--breve">
-                <strong>
-                  {g.org} {g.ano} — {g.titulo}
-                </strong>
-                <span>
-                  Revisada{g.substituida_em ? ` em ${g.substituida_em.slice(0, 10)}` : ""} ·{" "}
-                  {g.vinculos === 0
-                    ? "sem conteúdo vinculado"
-                    : `${g.vinculos} item(ns) da Corvia se apoiam nela`}
-                </span>
-              </div>
+                  <button className="botao botao--secundario" onClick={() => marcarLida(item.notification_id)}>
+                    Marcar como lido
+                  </button>
+                </div>
+              </article>
             ))}
           </div>
         </section>
       )}
+
+      <section className="painel__grupo">
+        <h2>Publicações identificadas desde 10/08/2026</h2>
+        <p className="painel__grupo-sub">
+          Itens aguardando revisão clínica permanecem claramente rotulados; nenhum conteúdo da plataforma é atualizado em silêncio.
+        </p>
+        {atualizacoes.items.length === 0 ? (
+          <Vazio
+            titulo="Nenhuma nova diretriz oficial identificada"
+            acao="A rotina continuará consultando automaticamente as fontes oficiais."
+          />
+        ) : (
+          <div className="painel__funcoes">
+            {atualizacoes.items.map((item) => (
+              <article key={item.id} className="cartao painel__funcao">
+                <p className="eyebrow" style={{ margin: 0 }}>
+                  {item.org} · {dataBr(item.published_at)}
+                </p>
+                <strong>{item.title}</strong>
+                <span>
+                  {item.status === "revisada"
+                    ? "Revisão clínica concluída."
+                    : "Publicação detectada; análise clínica aguardando revisão humana."}
+                </span>
+                {item.url && (
+                  <a href={item.url} target="_blank" rel="noopener noreferrer">
+                    Documento oficial ↗
+                  </a>
+                )}
+              </article>
+            ))}
+          </div>
+        )}
+      </section>
     </>
   );
 }

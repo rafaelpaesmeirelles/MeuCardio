@@ -19,17 +19,17 @@ MAIN = ROOT / "backend/app/main.py"
 
 EXPECTED_APP_ROUTES = {
     "/", "/entrar", "/solicitar-acesso", "/esqueci-senha", "/redefinir-senha",
-    "/corvia-mail", "/biblioteca", "/biblioteca/:slug", "/fluxogramas",
-    "/diretrizes", "/busca", "/calculadoras", "/calculadoras/:slug",
-    "/medicamentos", "/interacoes", "/condicoes", "/galeria", "/galeria/:slug",
-    "/exames", "/exames/:slug", "/evidencias", "/evidencias/:slug", "/estudos",
-    "/estudos/:slug", "/trilhas", "/material-paciente", "/emergencia",
-    "/trilhas/:slug", "/casos-clinicos", "/casos-clinicos/:slug", "/checklists",
-    "/checklists/alta/:id", "/indicadores", "/cursos", "/cursos/:slug",
-    "/favoritos", "/assistente", "/round", "/agenda", "/documentos",
-    "/receituario", "/assinatura", "/minha-conta", "/telediagnostico",
-    "/caixa-de-email", "/admin", "/fila-telediagnostico",
-    "/admin/usuarios-online",
+    "/corvia-mail", "/apresentacao", "/biblioteca", "/biblioteca/:slug",
+    "/fluxogramas", "/diretrizes", "/busca", "/calculadoras",
+    "/calculadoras/:slug", "/medicamentos", "/interacoes", "/condicoes",
+    "/galeria", "/galeria/:slug", "/exames", "/exames/:slug", "/evidencias",
+    "/evidencias/:slug", "/estudos", "/estudos/:slug", "/trilhas",
+    "/material-paciente", "/emergencia", "/trilhas/:slug", "/casos-clinicos",
+    "/casos-clinicos/:slug", "/checklists", "/checklists/alta/:id",
+    "/indicadores", "/cursos", "/cursos/:slug", "/favoritos", "/assistente",
+    "/round", "/agenda", "/documentos", "/receituario", "/assinatura",
+    "/minha-conta", "/telediagnostico", "/caixa-de-email", "/usuarios-online",
+    "/admin", "/fila-telediagnostico", "/admin/usuarios-online",
 }
 
 EXPECTED_NAV_ROUTES = {
@@ -38,8 +38,8 @@ EXPECTED_NAV_ROUTES = {
     "/corvia-mail", "/cursos", "/documentos", "/estudos", "/evidencias",
     "/exames", "/favoritos", "/fluxogramas", "/galeria", "/telediagnostico",
     "/material-paciente", "/medicamentos", "/indicadores", "/receituario",
-    "/round", "/trilhas", "/minha-conta", "/admin", "/fila-telediagnostico",
-    "/admin/usuarios-online",
+    "/round", "/trilhas", "/usuarios-online", "/minha-conta", "/admin",
+    "/fila-telediagnostico",
 }
 
 EXPECTED_BACKEND_ROUTERS = {
@@ -47,18 +47,20 @@ EXPECTED_BACKEND_ROUTERS = {
     "sessions.router", "billing.router", "admin.router", "service_orders.router",
     "partner_courses.router", "email_api.router", "documentos_publicos.router",
     "cmed.router", "library.router", "search.router", "calculators.router",
-    "drugs.router", "round_api.router", "ai.router", "gallery.router",
-    "favorites.router", "lab_tests.router", "evidence.router", "studies.router",
-    "prescriptions.router", "documents.router", "appointments.router",
-    "timeline.router", "guidelines.router", "indicadores.router", "checklists.router",
-    "study_tracks.router", "exportacao.router", "emergencia.router",
-    "receituario.router", "clinical_cases.router", "chat.router",
-    "assinatura.router", "chat_session.router_ws",
+    "drugs.router", "drug_insights.router", "round_api.router", "ai.router",
+    "gallery.router", "favorites.router", "lab_tests.router", "evidence.router",
+    "studies.router", "prescriptions.router", "documents.router", "appointments.router",
+    "timeline.router", "guidelines.router", "guideline_updates.router",
+    "mail360_status.router", "presence.router", "indicadores.router",
+    "checklists.router", "study_tracks.router", "exportacao.router",
+    "emergencia.router", "receituario.router", "clinical_cases.router",
+    "chat.router", "assinatura.router", "chat_session.router_ws",
 }
 
 EXPECTED_SUPPORT_FILES = {
     "frontend/src/components/ChatFlutuante.tsx",
     "frontend/src/pages/Admin.tsx",
+    "frontend/src/pages/Apresentacao.tsx",
     "frontend/src/pages/Assistente.tsx",
     "frontend/src/pages/Assinatura.tsx",
     "frontend/src/pages/Biblioteca.tsx",
@@ -67,11 +69,17 @@ EXPECTED_SUPPORT_FILES = {
     "frontend/src/pages/Emergencia.tsx",
     "frontend/src/pages/Receituario.tsx",
     "frontend/src/pages/Round.tsx",
+    "frontend/src/pages/RoundGerenciavel.tsx",
     "frontend/src/pages/Telediagnostico.tsx",
+    "frontend/src/pages/UsuariosOnline.tsx",
     "backend/app/api/assinatura.py",
     "backend/app/api/chat.py",
+    "backend/app/api/drug_insights.py",
     "backend/app/api/email.py",
     "backend/app/api/emergencia.py",
+    "backend/app/api/guideline_updates.py",
+    "backend/app/api/mail360_status.py",
+    "backend/app/api/presence.py",
     "backend/app/api/receituario.py",
     "backend/app/api/service_orders.py",
     "backend/app/api/clinical_cases.py",
@@ -115,7 +123,7 @@ def main() -> int:
     assert_exact("Destinos de navegação", nav_paths, EXPECTED_NAV_ROUTES)
 
     backend_routers = set(
-        re.findall(r"\b([a-z_]+\.(?:router|router_ws))\b", main_source)
+        re.findall(r"\b([a-z0-9_]+\.(?:router|router_ws))\b", main_source)
     )
     assert_exact("Routers FastAPI", backend_routers, EXPECTED_BACKEND_ROUTERS)
 

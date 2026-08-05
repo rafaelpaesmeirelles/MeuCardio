@@ -4,11 +4,9 @@ import Shell from "./components/Shell";
 import { Carregando } from "./components/Estado";
 import { useAuth } from "./lib/auth";
 
-// Cada tela é um ponto de divisão real do bundle. O shell, autenticação e
-// roteador permanecem no carregamento inicial; páginas clínicas, administrativas
-// e renderizadores pesados só são baixados quando a rota é aberta.
 const Entrar = lazy(() => import("./pages/Entrar"));
 const Painel = lazy(() => import("./pages/Painel"));
+const Apresentacao = lazy(() => import("./pages/Apresentacao"));
 const Trilhas = lazy(() => import("./pages/Trilhas"));
 const MaterialPaciente = lazy(() => import("./pages/MaterialPaciente"));
 const Emergencia = lazy(() => import("./pages/Emergencia"));
@@ -19,7 +17,6 @@ const Checklists = lazy(() => import("./pages/Checklists"));
 const ChecklistAlta = lazy(() => import("./pages/ChecklistAlta"));
 const Indicadores = lazy(() => import("./pages/Indicadores"));
 const Cursos = lazy(() => import("./pages/Cursos"));
-const Curso = lazy(() => import("./pages/Curso"));
 const Biblioteca = lazy(() => import("./pages/Biblioteca"));
 const Fluxogramas = lazy(() => import("./pages/Fluxogramas"));
 const Diretrizes = lazy(() => import("./pages/Diretrizes"));
@@ -32,7 +29,7 @@ const Calculadora = lazy(() => import("./pages/Calculadora"));
 const Medicamentos = lazy(() => import("./pages/Medicamentos"));
 const Interacoes = lazy(() => import("./pages/Interacoes"));
 const Condicoes = lazy(() => import("./pages/Condicoes"));
-const Round = lazy(() => import("./pages/Round"));
+const Round = lazy(() => import("./pages/RoundGerenciavel"));
 const Assistente = lazy(() => import("./pages/Assistente"));
 const Admin = lazy(() => import("./pages/Admin"));
 const SolicitarAcesso = lazy(() => import("./pages/SolicitarAcesso"));
@@ -93,6 +90,7 @@ export default function App() {
       <Routes>
         <Route element={<Shell />}>
           <Route index element={<Painel />} />
+          <Route path="apresentacao" element={<Apresentacao />} />
           <Route path="biblioteca" element={<Biblioteca />} />
           <Route path="biblioteca/:slug" element={<Documento />} />
           <Route path="fluxogramas" element={<Fluxogramas />} />
@@ -121,7 +119,7 @@ export default function App() {
           <Route path="checklists/alta/:id" element={<ChecklistAlta />} />
           <Route path="indicadores" element={<Indicadores />} />
           <Route path="cursos" element={<Cursos />} />
-          <Route path="cursos/:slug" element={<Curso />} />
+          <Route path="cursos/:slug" element={<Navigate to="/cursos" replace />} />
           <Route path="favoritos" element={<Favoritos />} />
           <Route path="assistente" element={<Assistente />} />
           <Route path="round" element={<Round />} />
@@ -133,12 +131,13 @@ export default function App() {
           <Route path="telediagnostico" element={<Telediagnostico />} />
           <Route path="caixa-de-email" element={<CaixaDeEmail />} />
           <Route path="corvia-mail" element={<CorviaMail />} />
+          <Route path="usuarios-online" element={<UsuariosOnline />} />
           {usuario.role === "admin" && <Route path="admin" element={<Admin />} />}
           {usuario.role === "admin" && (
             <Route path="fila-telediagnostico" element={<FilaTelediagnostico />} />
           )}
           {usuario.role === "admin" && (
-            <Route path="admin/usuarios-online" element={<UsuariosOnline />} />
+            <Route path="admin/usuarios-online" element={<Navigate to="/usuarios-online" replace />} />
           )}
         </Route>
         <Route path="*" element={<Navigate to="/" replace />} />
