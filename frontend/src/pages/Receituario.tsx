@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { api, ApiError } from "../lib/api";
 import { useAuth } from "../lib/auth";
 import { Carregando, Erro, Vazio } from "../components/Estado";
+import Icone from "../components/Icone";
 
 type Farmaco = {
   slug: string; nome: string; marca?: string | null; fabricante?: string | null;
@@ -657,15 +658,24 @@ export default function Receituario() {
   if (!farmacos) return <Carregando />;
 
   return (
-    <>
-      <p className="eyebrow">Documentos</p>
-      <h1>Prescrição Eletrônica</h1>
+    <div className="prescricao">
+      <header className="prescricao__cabecalho">
+        <div>
+          <p className="eyebrow">Documentos clínicos</p>
+          <h1>Prescrição Eletrônica</h1>
+          <p>Prepare, revise e emita a receita com rastreabilidade do medicamento à assinatura.</p>
+        </div>
+        <div className="prescricao__seguranca">
+          <Icone nome="check" />
+          <span><strong>Fluxo seguro</strong><small>Revisão obrigatória antes da emissão</small></span>
+        </div>
+      </header>
 
-      <div style={{ display: "flex", gap: 8, marginBottom: "1rem" }}>
-        <button className={aba === "nova" ? "botao" : "botao botao--secundario"} onClick={() => setAba("nova")}>
+      <div className="prescricao__abas" role="tablist" aria-label="Seções da prescrição">
+        <button role="tab" aria-selected={aba === "nova"} className={aba === "nova" ? "ativo" : ""} onClick={() => setAba("nova")}>
           Nova receita
         </button>
-        <button className={aba === "historico" ? "botao" : "botao botao--secundario"} onClick={() => setAba("historico")}>
+        <button role="tab" aria-selected={aba === "historico"} className={aba === "historico" ? "ativo" : ""} onClick={() => setAba("historico")}>
           Histórico
         </button>
       </div>
@@ -673,26 +683,49 @@ export default function Receituario() {
       {aba === "historico" ? (
         <HistoricoReceituario onAbrir={abrirDoHistorico} onRecriar={recriarDoHistorico} />
       ) : !criado ? (
-        <div className="cartao" style={{ maxWidth: "72ch" }}>
-          <p className="eyebrow" style={{ margin: 0 }}>Paciente</p>
-          <label>Nome</label>
-          <input value={nome} onChange={(e) => setNome(e.target.value)} />
-          <label style={{ marginTop: "0.5rem" }}>Endereço completo (obrigatório para controle especial)</label>
-          <input value={endereco} onChange={(e) => setEndereco(e.target.value)} />
-          <label style={{ marginTop: "0.5rem" }}>CPF ou passaporte do paciente</label>
-          <input value={documento} onChange={(e) => setDocumento(e.target.value)} />
-          <label style={{ marginTop: "0.5rem" }}>CID (obrigatório para anabolizantes/Lista C5)</label>
-          <input value={cid} onChange={(e) => setCid(e.target.value.toUpperCase())}
-                 placeholder="Ex.: E29.1" maxLength={10} />
-          <p className="eyebrow" style={{ margin: "0.3rem 0 0" }}>
+        <div className="cartao prescricao__formulario">
+          <section className="prescricao-bloco">
+            <div className="prescricao-bloco__titulo">
+              <span>1</span><div><p className="eyebrow">Destinatário</p><h2>Dados do paciente</h2></div>
+            </div>
+            <div className="prescricao-paciente__grade">
+              <div className="prescricao-campo prescricao-campo--largo">
+                <label>Nome completo</label>
+                <input value={nome} onChange={(e) => setNome(e.target.value)} autoComplete="name" />
+              </div>
+              <div className="prescricao-campo prescricao-campo--largo">
+                <label>Endereço completo <small>Obrigatório para controle especial</small></label>
+                <input value={endereco} onChange={(e) => setEndereco(e.target.value)} autoComplete="street-address" />
+              </div>
+              <div className="prescricao-campo">
+                <label>CPF ou passaporte</label>
+                <input value={documento} onChange={(e) => setDocumento(e.target.value)} />
+              </div>
+              <div className="prescricao-campo">
+                <label>CID <small>Obrigatório para anabolizantes/Lista C5</small></label>
+                <input value={cid} onChange={(e) => setCid(e.target.value.toUpperCase())}
+                       placeholder="Ex.: E29.1" maxLength={10} />
+              </div>
+            </div>
+          <p className="prescricao__nota-legal">
             Para Lista C5, também são obrigatórios endereço do paciente, CPF do prescritor,
             endereço e telefone profissionais. A emissão é restrita a CRM ou CRO.
           </p>
+          </section>
 
-          <p className="eyebrow" style={{ margin: "1rem 0 0" }}>Itens da receita</p>
+          <section className="prescricao-bloco">
+            <div className="prescricao-bloco__titulo">
+              <span>2</span><div><p className="eyebrow">Medicamentos</p><h2>Itens da receita</h2></div>
+            </div>
           {itens.map((it, i) => (
-            <div key={i} style={{ borderTop: "1px solid var(--linha)", paddingTop: "0.6rem", marginTop: "0.6rem" }}>
-              <label>Medicamento</label>
+            <article key={i} className="prescricao-item">
+              <div className="prescricao-item__topo">
+                <span>Item {String(i + 1).padStart(2, "0")}</span>
+                {itens.length > 1 && (
+                  <button type="button" className="prescricao-item__remover" onClick={() => removerItem(i)}>Remover</button>
+                )}
+              </div>
+              <label>Medicamento <small>nome genérico ou comercial</small></label>
               <input
                 value={buscaFarmaco[i] ?? ""}
                 onChange={(e) => buscarMedicamentos(i, e.target.value)}
@@ -716,7 +749,7 @@ export default function Receituario() {
                   );
                 }
                 return (
-                  <div style={{ maxHeight: 140, overflowY: "auto", border: "1px solid var(--linha)", borderRadius: 6, marginTop: 4 }}>
+                  <div className="prescricao-sugestoes" role="listbox" aria-label="Sugestões de medicamentos">
                     {sugestoes.map((f) => (
                       <button key={`${f.slug}:${f.marca ?? ""}:${f.fabricante ?? ""}`} type="button"
                               style={{ display: "block", width: "100%", textAlign: "left", padding: "0.3rem 0.5rem", border: "none", background: "transparent", cursor: "pointer" }}
@@ -817,7 +850,7 @@ export default function Receituario() {
                          placeholder="Ex.: sessenta comprimidos" />
                 </div>
               </div>
-              <label style={{ display: "flex", alignItems: "flex-start", gap: 8, marginTop: "0.55rem" }}>
+              <label className="prescricao-continuo">
                 <input
                   type="checkbox"
                   checked={it.uso_continuo}
@@ -852,22 +885,23 @@ export default function Receituario() {
               <input value={it.posologia} onChange={(e) => atualizarItem(i, "posologia", e.target.value)} />
               <label style={{ marginTop: "0.4rem" }}>Orientação (opcional)</label>
               <input value={it.orientacao} onChange={(e) => atualizarItem(i, "orientacao", e.target.value)} />
-              {itens.length > 1 && (
-                <button type="button" className="botao botao--secundario" style={{ marginTop: "0.4rem" }}
-                        onClick={() => removerItem(i)}>Remover item</button>
-              )}
-            </div>
+            </article>
           ))}
           <button type="button" className="botao botao--secundario" style={{ marginTop: "0.6rem" }} onClick={adicionarItem}>
             + Adicionar item
           </button>
+          </section>
 
-          <label style={{ marginTop: "0.8rem" }}>Observações (opcional)</label>
-          <textarea rows={3} value={observacoes} onChange={(e) => setObservacoes(e.target.value)} />
+          <section className="prescricao-bloco">
+            <div className="prescricao-bloco__titulo">
+              <span>3</span><div><p className="eyebrow">Finalização</p><h2>Revisar e gerar</h2></div>
+            </div>
+            <label>Observações <small>Opcional</small></label>
+            <textarea rows={3} value={observacoes} onChange={(e) => setObservacoes(e.target.value)} />
 
           {erro && <p role="alert" style={{ color: "var(--alerta)", fontSize: "0.86rem" }}>{erro}</p>}
 
-          <div style={{ display: "flex", gap: 8, marginTop: "1rem" }}>
+          <div className="prescricao__acoes">
             <button className="botao botao--secundario" onClick={verPrevia} disabled={classificando || !podeEnviar}>
               {classificando ? "Classificando…" : "Ver prévia"}
             </button>
@@ -899,6 +933,7 @@ export default function Receituario() {
               )}
             </div>
           )}
+          </section>
         </div>
       ) : (
         <div style={{ maxWidth: "72ch" }}>
@@ -912,6 +947,6 @@ export default function Receituario() {
           </button>
         </div>
       )}
-    </>
+    </div>
   );
 }

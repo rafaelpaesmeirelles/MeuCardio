@@ -5,6 +5,7 @@ import { Carregando } from "./components/Estado";
 import { useAuth } from "./lib/auth";
 
 const Entrar = lazy(() => import("./pages/Entrar"));
+const Produto = lazy(() => import("./pages/Produto"));
 const Painel = lazy(() => import("./pages/Painel"));
 const Apresentacao = lazy(() => import("./pages/Apresentacao"));
 const Trilhas = lazy(() => import("./pages/Trilhas"));
@@ -73,12 +74,14 @@ export default function App() {
     return (
       <RotasSuspensas>
         <Routes>
+          <Route path="/" element={<Produto />} />
+          <Route path="/produto" element={<Produto />} />
           <Route path="/entrar" element={<Entrar />} />
           <Route path="/solicitar-acesso" element={<SolicitarAcesso />} />
           <Route path="/esqueci-senha" element={<EsqueciSenha />} />
           <Route path="/redefinir-senha" element={<RedefinirSenha />} />
           <Route path="/corvia-mail" element={<CorviaMail />} />
-          <Route path="*" element={<Navigate to="/entrar" replace />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </RotasSuspensas>
     );
