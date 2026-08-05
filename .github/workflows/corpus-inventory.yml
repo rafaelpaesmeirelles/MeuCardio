@@ -14,6 +14,8 @@ on:
       - "material-paciente/**"
       - "emergencia/**"
       - "casos-clinicos/**"
+      - "doencas/**"
+      - "triagem-sintomas/**"
       - "controlados/**"
       - "scripts/content_inventory.py"
       - ".github/workflows/corpus-inventory.yml"
@@ -33,6 +35,6 @@ jobs:
       - name: Enforce scientific corpus baseline
         run: >-
           python scripts/content_inventory.py
-          --minimum-records 4936
-          --minimum-files 1327
+          --minimum-records 5035
+          --minimum-files 1329
           --strict

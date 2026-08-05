@@ -1,223 +1,191 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
+import Icone, { type NomeIcone } from "../components/Icone";
 import { api } from "../lib/api";
-import LogoCorviaMail from "../components/LogoCorviaMail";
 import { useAuth } from "../lib/auth";
 
 type Tema = { theme: string; count: number };
 type Paciente = { id: number };
 type ListaComTotal = { total?: number };
 type Catalogo = { total: number };
+type Agendamento = {
+  id: number;
+  patient_name: string | null;
+  scheduled_at: string;
+  appointment_type: string;
+  status: string;
+};
 
-/** Uma função do sistema no Painel.
- *  `to` ausente = função ainda não construída: vira cartão "em breve", sem link.
- *  `acao` permite abrir uma função global, como o chat flutuante.
- *  `destaque` reserva a borda vermelha da marca para o que se usa sob pressão. */
-type Funcao = {
+type PreferenciaMobilidade = {
+  enabled: boolean;
+  automatic_foreground_refresh: boolean;
+  refresh_interval_minutes: number;
+  traffic_configured: boolean;
+};
+
+type ProximoLocal = {
+  appointment_id: number | null;
+  routine_id: number | null;
+  starts_at: string;
+  ends_at: string | null;
+  service_name: string;
+  source: "work_routine" | "appointment";
+  arrival_buffer_minutes: number;
+  location: { id: number; name: string; address: Record<string, string>; latitude: number | null; longitude: number | null };
+};
+
+type Deslocamento = {
+  status: string;
+  provider?: string;
+  updated_at?: string;
+  destination: ProximoLocal | null;
+  routes: Array<{ duration_seconds: number; distance_meters: number; traffic_delay_seconds: number; congestion: string; summary: string }>;
+  tips: string[];
+};
+
+type Atalho = {
   to?: string;
   acao?: "abrir-chat";
   nome: string;
   descricao: string;
-  destaque?: boolean;
+  icone: NomeIcone;
+  principal?: boolean;
 };
-type Grupo = { titulo: string; descricao: string; funcoes: Funcao[] };
 
-/** Agrupado por finalidade, não por ordem de construção — o médico procura pelo
- *  problema que tem ("preciso decidir", "preciso estudar"), não pelo nome do
- *  módulo. As descrições dizem o que a função resolve, não o que ela é. */
+type Grupo = {
+  titulo: string;
+  descricao: string;
+  icone: NomeIcone;
+  links: { to: string; nome: string }[];
+};
+
+const ATALHOS: Atalho[] = [
+  {
+    to: "/receituario",
+    nome: "Nova prescrição",
+    descricao: "Prescreva, revise e prepare a assinatura digital.",
+    icone: "prescricao",
+    principal: true,
+  },
+  {
+    to: "/documentos",
+    nome: "Emitir documento",
+    descricao: "Atestado, relatório, solicitação ou encaminhamento.",
+    icone: "documento",
+  },
+  {
+    to: "/triagem-sintomas",
+    nome: "Iniciar triagem",
+    descricao: "Organize sintomas, risco e próximos passos.",
+    icone: "triagem",
+  },
+  {
+    to: "/assistente",
+    nome: "Perguntar ao assistente",
+    descricao: "Consulte a base clínica com fontes verificáveis.",
+    icone: "assistente",
+  },
+  {
+    to: "/corvia-mail",
+    nome: "CorvIA Mail",
+    descricao: "Centralize mensagens, prioridades, modelos e comunicação clínica.",
+    icone: "mail",
+  },
+  {
+    acao: "abrir-chat",
+    nome: "CorvIA Chat",
+    descricao: "Fale com profissionais e acompanhe mensagens não lidas.",
+    icone: "comunicacao",
+  },
+];
+
 const GRUPOS: Grupo[] = [
   {
-    titulo: "Apoio à decisão clínica",
-    descricao: "Para usar com o paciente na frente.",
-    funcoes: [
-      {
-        to: "/condicoes",
-        nome: "Alerta por condição especial",
-        descricao: "Cruza o que vai ser prescrito ou pedido com gestação, doença renal crônica, hepatopatia e outras condições.",
-      },
-      {
-        to: "/assistente",
-        nome: "Assistente clínico",
-        descricao: "Pergunte em linguagem natural e receba a resposta ancorada nos documentos da biblioteca, com a fonte citada.",
-        destaque: true,
-      },
-      {
-        to: "/calculadoras",
-        nome: "Calculadoras",
-        descricao: "Escores validados — GRACE, HEART, CHA₂DS₂-VASc, HAS-BLED, CKD-EPI — prontos para uso no leito, com a fórmula à vista.",
-        destaque: true,
-      },
-      {
-        to: "/interacoes",
-        nome: "Checador de Interação Medicamentosa",
-        descricao: "Monte a lista do que o paciente já usa e do que você vai prescrever, e veja as interações com gravidade e fonte.",
-      },
-      {
-        to: "/fluxogramas",
-        nome: "Fluxogramas clínicos",
-        descricao: "Árvores de decisão fundamentadas em diretriz vigente (ESC, AHA/ACC, SBC) — cada ramo termina numa conduta.",
-        destaque: true,
-      },
-      {
-        to: "/medicamentos",
-        nome: "Medicamentos",
-        descricao: "Comparador lado a lado: dose, apresentação, ajuste renal, contraindicação e interação, com a bula de origem declarada.",
-      },
+    titulo: "Decisão clínica",
+    descricao: "Da dúvida à conduta, com rastreabilidade.",
+    icone: "clinica",
+    links: [
+      { to: "/assistente", nome: "Assistente clínico" },
+      { to: "/doencas", nome: "Guia de doenças" },
+      { to: "/calculadoras", nome: "Calculadoras e escores" },
+      { to: "/interacoes", nome: "Interações medicamentosas" },
+      { to: "/condicoes", nome: "Condições especiais" },
+      { to: "/fluxogramas", nome: "Fluxogramas" },
+      { to: "/medicamentos", nome: "Medicamentos" },
+    ],
+  },
+  {
+    titulo: "Prática e pacientes",
+    descricao: "Continuidade do consultório ao hospital.",
+    icone: "pacientes",
+    links: [
+      { to: "/agenda", nome: "Agenda" },
+      { to: "/round", nome: "Round hospitalar" },
+      { to: "/receituario", nome: "Prescrição eletrônica" },
+      { to: "/documentos", nome: "Documentos" },
+      { to: "/checklists", nome: "Checklist de alta" },
+      { to: "/material-paciente", nome: "Material ao paciente" },
+      { to: "/telediagnostico", nome: "Laudo e consultoria" },
     ],
   },
   {
     titulo: "Ciência e atualização",
-    descricao: "A base que sustenta a conduta, com referência verificável.",
-    funcoes: [
-      {
-        to: "/diretrizes",
-        nome: "Alertas de diretriz",
-        descricao: "Avisa quando sai versão nova da diretriz que embasa um documento que você favoritou.",
-      },
-      {
-        to: "/biblioteca",
-        nome: "Biblioteca científica",
-        descricao: "Documentos organizados por tema, cada um com referência completa e verificável.",
-      },
-      {
-        to: "/busca",
-        nome: "Busca",
-        descricao: "Busca em texto completo nos documentos, com o trecho relevante destacado no resultado.",
-      },
-      {
-        to: "/evidencias",
-        nome: "Evidências",
-        descricao: "A recomendação pontual, com classe, nível, sociedade e ano — não o documento inteiro.",
-      },
-      {
-        to: "/exames",
-        nome: "Exames e marcadores",
-        descricao: "O que cada exame mede, valor de referência, quando pedir e o que limita a interpretação.",
-      },
-      {
-        to: "/galeria",
-        nome: "Galeria de imagens",
-        descricao: "Achados de ECG, eco, TC, radiografia e angiografia, com o achado descrito e os pontos de ensino.",
-      },
-      {
-        to: "/estudos",
-        nome: "Trabalhos científicos",
-        descricao: "Ensaios, revisões e metanálises com os números reais do estudo e a implicação clínica.",
-      },
+    descricao: "Conteúdo clínico para consultar e aprofundar.",
+    icone: "conhecimento",
+    links: [
+      { to: "/biblioteca", nome: "Biblioteca científica" },
+      { to: "/diretrizes", nome: "Alertas de diretriz" },
+      { to: "/evidencias", nome: "Evidências" },
+      { to: "/estudos", nome: "Estudos" },
+      { to: "/exames", nome: "Exames e marcadores" },
+      { to: "/galeria", nome: "Galeria de imagens" },
+      { to: "/casos-clinicos", nome: "Casos clínicos" },
+      { to: "/trilhas", nome: "Trilhas de estudo" },
     ],
   },
   {
-    titulo: "Beira do leito",
-    descricao: "O que acompanha o paciente do round à alta.",
-    funcoes: [
-      {
-        to: "/checklists",
-        nome: "Checklist de alta",
-        descricao: "O que não pode faltar na alta pós-evento cardiovascular, marcado item a item antes de liberar.",
-      },
-      {
-        to: "/round",
-        nome: "Round hospitalar",
-        descricao: "Pacientes internados, evolução, prescrição e linha do tempo de cada caso.",
-      },
-    ],
-  },
-  {
-    titulo: "Documentos",
-    descricao: "O que sai do consultório — receita, atestado, laudo, material do paciente e agenda.",
-    funcoes: [
-      {
-        to: "/agenda",
-        nome: "Agenda",
-        descricao: "Compromissos, retornos e o que está marcado para os próximos dias.",
-      },
-      {
-        to: "/documentos",
-        nome: "Emissão de Documentos Online",
-        descricao: "Templates que geram o documento já preenchido com os dados do paciente.",
-      },
-      {
-        nome: "Laudo e consultoria",
-        descricao: "Envie ECG, MAPA, Holter ou teste ergométrico e receba interpretação ou laudo, com prazo definido.",
-      },
-      {
-        to: "/material-paciente",
-        nome: "Material para o paciente",
-        descricao: "Explicação da condição em linguagem acessível, em PDF, para entregar na consulta.",
-      },
-      {
-        to: "/receituario",
-        nome: "Prescrição Eletrônica",
-        descricao: "Monte a receita com os fármacos da base estruturada e emita para o paciente.",
-      },
-    ],
-  },
-  {
-    titulo: "Educação continuada",
-    descricao: "Para estudar e para ensinar.",
-    funcoes: [
-      {
-        to: "/casos-clinicos",
-        nome: "Casos clínicos interativos",
-        descricao: "Um caso, a sua decisão, e depois a conduta correta com a evidência que a sustenta.",
-      },
-      {
-        nome: "Cursos parceiros",
-        descricao: "Preparação para o Título de Especialista, com material de apoio arquivado aqui.",
-      },
-      {
-        to: "/trilhas",
-        nome: "Trilhas de estudo",
-        descricao: "Sequência guiada por tema: o protocolo, a farmacologia, os estudos pivotais e as calculadoras, nessa ordem.",
-      },
-    ],
-  },
-  {
-    titulo: "Comunicação profissional",
-    descricao: "Converse com outros usuários e use sua caixa profissional integrada.",
-    funcoes: [
-      {
-        acao: "abrir-chat",
-        nome: "CorvIA Chat",
-        descricao: "Mensagens em tempo real entre usuários, busca por profissional, conversas, não lidas e contato direto com o suporte.",
-      },
-      {
-        to: "/corvia-mail",
-        nome: "CorvIA Mail",
-        descricao: "Acesse ou assine sua caixa profissional @corvia.med.br e abra o webmail integrado.",
-      },
-    ],
-  },
-  {
-    titulo: "Sua conta",
-    descricao: "O que é seu e só você vê.",
-    funcoes: [
-      {
-        to: "/favoritos",
-        nome: "Favoritos",
-        descricao: "O que você marcou para reencontrar sem procurar de novo.",
-      },
-      {
-        to: "/indicadores",
-        nome: "Meus indicadores",
-        descricao: "Laudos emitidos, tempo de resposta frente ao SLA e receita do telediagnóstico no período.",
-      },
-      {
-        to: "/minha-conta",
-        nome: "Minha conta",
-        descricao: "Dados pessoais, troca de senha e gestão da assinatura.",
-      },
+    titulo: "Comunicação e gestão",
+    descricao: "Mensagens, acompanhamento e organização profissional.",
+    icone: "comunicacao",
+    links: [
+      { to: "/corvia-mail", nome: "Corvia Mail" },
+      { to: "/usuarios-online", nome: "Rede profissional" },
+      { to: "/indicadores", nome: "Meus indicadores" },
+      { to: "/favoritos", nome: "Favoritos" },
+      { to: "/cursos", nome: "Cursos" },
+      { to: "/apresentacao", nome: "Modo apresentação" },
     ],
   },
 ];
 
+function saudacao() {
+  const hora = new Date().getHours();
+  if (hora < 12) return "Bom dia";
+  if (hora < 18) return "Boa tarde";
+  return "Boa noite";
+}
+
+function dataExtenso() {
+  const texto = new Intl.DateTimeFormat("pt-BR", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+  }).format(new Date());
+  return texto.charAt(0).toUpperCase() + texto.slice(1);
+}
+
+function mesmoDia(a: Date, b: Date) {
+  return a.getFullYear() === b.getFullYear()
+    && a.getMonth() === b.getMonth()
+    && a.getDate() === b.getDate();
+}
+
+function quantidade(valor: number | null | undefined) {
+  return valor == null ? "—" : valor.toLocaleString("pt-BR");
+}
+
 function Numero({ rotulo, valor, to }: { rotulo: string; valor: number | null; to: string }) {
-  return (
-    <Link to={to} className="painel__numero">
-      <span className="dado">{valor === null ? "—" : valor.toLocaleString("pt-BR")}</span>
-      <span>{rotulo}</span>
-    </Link>
-  );
+  return <Link to={to}><strong>{quantidade(valor)}</strong><span>{rotulo}</span></Link>;
 }
 
 function abrirChatGlobal() {
@@ -227,140 +195,254 @@ function abrirChatGlobal() {
   botao?.click();
 }
 
-function Cartao({ f }: { f: Funcao }) {
-  const classe = `cartao painel__funcao${f.destaque ? " painel__funcao--destaque" : ""}`;
-
-  if (f.acao === "abrir-chat") {
-    return (
-      <button
-        type="button"
-        className={classe}
-        onClick={abrirChatGlobal}
-        style={{ textAlign: "left", width: "100%", cursor: "pointer" }}
-      >
-        <strong>{f.nome}</strong>
-        <span>{f.descricao}</span>
-      </button>
-    );
-  }
-
-  // Sem rota: a função ainda não existe. Vira cartão inerte, com o selo dizendo
-  // isso — melhor do que link que leva a lugar nenhum ou do que esconder o que
-  // está por vir.
-  if (!f.to) {
-    return (
-      <div className={`${classe} painel__funcao--breve`}>
-        <strong>
-          {f.nome} <span className="painel__breve">em breve</span>
-        </strong>
-        <span>{f.descricao}</span>
-      </div>
-    );
-  }
-
-  return (
-    <Link to={f.to} className={classe}>
-      <strong>{f.nome}</strong>
-      <span>{f.descricao}</span>
-    </Link>
-  );
+function nomeTipo(tipo: string) {
+  return ({ consulta: "Consulta", retorno: "Retorno", exame: "Exame", outro: "Compromisso" } as Record<string, string>)[tipo]
+    || "Compromisso";
 }
 
 export default function Painel() {
   const { usuario } = useAuth();
   const [catalogo, setCatalogo] = useState<Catalogo | null>(null);
-  const [temas, setTemas] = useState<Tema[] | null>(null);
+  const [temas, setTemas] = useState<Tema[]>([]);
   const [pacientes, setPacientes] = useState<number | null>(null);
+  const [agenda, setAgenda] = useState<Agendamento[] | null>(null);
   const [fluxogramas, setFluxogramas] = useState<number | null>(null);
-  const [imagens, setImagens] = useState<number | null>(null);
-  const [exames, setExames] = useState<number | null>(null);
   const [evidencias, setEvidencias] = useState<number | null>(null);
   const [estudos, setEstudos] = useState<number | null>(null);
+  const [mobilidade, setMobilidade] = useState<PreferenciaMobilidade | null>(null);
+  const [proximosLocais, setProximosLocais] = useState<ProximoLocal[]>([]);
+  const [deslocamento, setDeslocamento] = useState<Deslocamento | null>(null);
+  const [erroLocalizacao, setErroLocalizacao] = useState("");
 
   useEffect(() => {
-    // Cada contador falha sozinho: um endpoint fora do ar deixa o número como
-    // "—" em vez de derrubar o painel inteiro, que é a tela de entrada.
-    const total = (p: string) =>
-      api.get<ListaComTotal>(p).then((d) => d.total ?? 0).catch(() => null);
+    const total = (rota: string) =>
+      api.get<ListaComTotal>(rota).then((dados) => dados.total ?? 0).catch(() => null);
 
     api.get<Catalogo>("/library/catalog").then(setCatalogo).catch(() => setCatalogo(null));
     api.get<Tema[]>("/library/themes").then(setTemas).catch(() => setTemas([]));
-    api.get<Paciente[]>("/round/patients").then((l) => setPacientes(l.length)).catch(() => setPacientes(null));
+    api.get<Paciente[]>("/round/patients").then((lista) => setPacientes(lista.length)).catch(() => setPacientes(null));
+    api.get<Agendamento[]>("/appointments").then(setAgenda).catch(() => setAgenda([]));
     total("/library/documents?kind=fluxograma&limit=1").then(setFluxogramas);
-    total("/gallery/images?limit=1").then(setImagens);
-    total("/lab-tests?limit=1").then(setExames);
     total("/evidence?limit=1").then(setEvidencias);
     total("/studies?limit=1").then(setEstudos);
+    api.get<PreferenciaMobilidade>("/agenda/mobility/preferences").then(setMobilidade).catch(() => setMobilidade(null));
+    api.get<ProximoLocal[]>("/agenda/workday/next-locations").then(setProximosLocais).catch(() => setProximosLocais([]));
   }, []);
 
+  useEffect(() => {
+    if (!mobilidade?.enabled || !mobilidade.automatic_foreground_refresh || !navigator.geolocation) return;
+    let ativo = true;
+    let timer: number | undefined;
+    const atualizar = () => navigator.geolocation.getCurrentPosition(
+      (position) => {
+        if (!ativo) return;
+        setErroLocalizacao("");
+        api.post<Deslocamento>("/agenda/mobility/commute", {
+          latitude: position.coords.latitude,
+          longitude: position.coords.longitude,
+        }).then((result) => { if (ativo) setDeslocamento(result); }).catch(() => {
+          if (ativo) setErroLocalizacao("Não foi possível atualizar o trânsito agora.");
+        });
+      },
+      (error) => {
+        if (!ativo) return;
+        setErroLocalizacao(error.code === error.PERMISSION_DENIED
+          ? "A permissão de localização está bloqueada neste aparelho."
+          : "Localização temporariamente indisponível.");
+      },
+      { enableHighAccuracy: false, timeout: 12_000, maximumAge: 120_000 },
+    );
+    atualizar();
+    timer = window.setInterval(atualizar, Math.max(2, mobilidade.refresh_interval_minutes) * 60_000);
+    const aoVoltar = () => { if (document.visibilityState === "visible") atualizar(); };
+    document.addEventListener("visibilitychange", aoVoltar);
+    return () => { ativo = false; if (timer) window.clearInterval(timer); document.removeEventListener("visibilitychange", aoVoltar); };
+  }, [mobilidade]);
+
+  const compromissosHoje = useMemo(() => {
+    if (!agenda) return [];
+    const hoje = new Date();
+    return agenda
+      .filter((item) => item.status !== "cancelado" && mesmoDia(new Date(item.scheduled_at), hoje))
+      .sort((a, b) => +new Date(a.scheduled_at) - +new Date(b.scheduled_at));
+  }, [agenda]);
+
+  const proximo = useMemo(() => {
+    const agora = Date.now();
+    return (agenda ?? [])
+      .filter((item) => item.status !== "cancelado" && +new Date(item.scheduled_at) >= agora)
+      .sort((a, b) => +new Date(a.scheduled_at) - +new Date(b.scheduled_at))[0];
+  }, [agenda]);
+
+  const primeiroNome = usuario?.full_name?.trim().split(/\s+/)[0] || "Doutor(a)";
+  const saidaRecomendada = proximosLocais[0] && deslocamento?.routes[0]
+    ? new Date(new Date(proximosLocais[0].starts_at).getTime()
+      - (deslocamento.routes[0].duration_seconds + proximosLocais[0].arrival_buffer_minutes * 60) * 1000)
+    : null;
+
   return (
-    <>
-      <p className="eyebrow">Painel</p>
-      <h1>Bom trabalho, {usuario?.full_name.split(" ")[0]}.</h1>
-
-      {/* O primeiro número usa o catálogo canônico das 11 coleções. Somar temas
-          mostrava apenas a tabela Document e subestimava o acervo completo. */}
-      <div className="painel__numeros">
-        <Numero rotulo="itens científicos" valor={catalogo?.total ?? null} to="/biblioteca" />
-        <Numero rotulo="fluxogramas" valor={fluxogramas} to="/fluxogramas" />
-        <Numero rotulo="imagens" valor={imagens} to="/galeria" />
-        <Numero rotulo="exames" valor={exames} to="/exames" />
-        <Numero rotulo="evidências" valor={evidencias} to="/evidencias" />
-        <Numero rotulo="estudos" valor={estudos} to="/estudos" />
-        <Numero rotulo="no round" valor={pacientes} to="/round" />
-      </div>
-
-      {/* Os modos de uso ficam fora dos grupos porque mudam a forma de usar o
-          sistema inteiro. */}
-      <div className="painel__modos">
-        <Link to="/emergencia" className="cartao painel__modo painel__modo--emergencia">
-          <strong>● Modo Emergência</strong>
-          <span>
-            Protocolos de risco imediato de vida, em fonte grande e alto contraste,
-            com cópia local que abre mesmo sem conexão.
-          </span>
+    <div className="hoje">
+      <section className="hoje__cabecalho">
+        <div>
+          <p className="eyebrow">Central clínica</p>
+          <h1>{saudacao()}, {primeiroNome}.</h1>
+          <p className="hoje__data">{dataExtenso()} · sua rotina clínica em um só lugar.</p>
+        </div>
+        <Link to="/emergencia" className="hoje__emergencia">
+          <Icone nome="emergencia" />
+          <span><strong>Modo Emergência</strong><small>Protocolos de risco imediato</small></span>
+          <Icone nome="seta" />
         </Link>
-        <Link to="/apresentacao" className="cartao painel__modo">
-          <strong>▣ Modo Apresentação</strong>
-          <span>
-            Escolha qualquer documento ou fluxograma e gere um PDF pronto para
-            aula ou round, com a marca Corvia e sua identificação profissional.
-          </span>
-        </Link>
-        <Link to="/corvia-mail" className="cartao painel__modo painel__modo--mail">
-          <LogoCorviaMail tamanho="compacto" />
-          <span>
-            Sua caixa de e-mail própria @corvia.med.br, com webmail integrado —
-            entre ou assine em um clique.
-          </span>
-        </Link>
-      </div>
+      </section>
 
-      {GRUPOS.map((g) => (
-        <section key={g.titulo} className="painel__grupo">
-          <h2>{g.titulo}</h2>
-          <p className="painel__grupo-sub">{g.descricao}</p>
-          <div className="painel__funcoes">
-            {g.funcoes.map((f) => (
-              <Cartao key={f.nome} f={f} />
-            ))}
+      <section className="hoje__atalhos" aria-labelledby="acoes-frequentes">
+        <div className="hoje__secao-topo">
+          <div>
+            <p className="eyebrow">Fluxo rápido</p>
+            <h2 id="acoes-frequentes">O que você precisa fazer agora?</h2>
           </div>
-        </section>
-      ))}
+        </div>
+        <div className="hoje__atalhos-grade">
+          {ATALHOS.map((atalho) => {
+            const conteudo = <><span className="hoje-atalho__icone"><Icone nome={atalho.icone} /></span><span className="hoje-atalho__texto"><strong>{atalho.nome}</strong><small>{atalho.descricao}</small></span><Icone nome="seta" className="hoje-atalho__seta" /></>;
+            const classe = `hoje-atalho${atalho.principal ? " hoje-atalho--principal" : ""}`;
+            return atalho.acao === "abrir-chat"
+              ? <button key={atalho.nome} type="button" className={classe} onClick={abrirChatGlobal}>{conteudo}</button>
+              : <Link key={atalho.nome} to={atalho.to || "/"} className={classe}>{conteudo}</Link>;
+          })}
+        </div>
+      </section>
 
-      {temas !== null && temas.length > 0 && (
-        <section className="painel__grupo">
-          <h2>Temas da biblioteca</h2>
-          <div className="painel__temas">
-            {temas.map((t) => (
-              <Link key={t.theme} to={`/biblioteca?tema=${encodeURIComponent(t.theme)}`} className="painel__tema">
-                {t.theme}
-                <span className="dado">{t.count.toLocaleString("pt-BR")}</span>
+      <section className="hoje__grade" aria-label="Resumo do dia">
+        <article className="hoje-card hoje-card--agenda">
+          <div className="hoje-card__topo">
+            <div><p className="eyebrow">Seu dia</p><h2>Agenda de hoje</h2></div>
+            <Link to="/agenda">Abrir agenda <Icone nome="seta" /></Link>
+          </div>
+
+          {agenda === null ? (
+            <p className="hoje-card__estado" role="status">Carregando compromissos…</p>
+          ) : compromissosHoje.length === 0 ? (
+            <div className="hoje-card__vazio">
+              <span><Icone nome="agenda" /></span>
+              <div>
+                <strong>Nenhum compromisso marcado para hoje.</strong>
+                {proximo ? (
+                  <small>
+                    Próximo: {new Date(proximo.scheduled_at).toLocaleDateString("pt-BR", { day: "2-digit", month: "short" })}
+                    {" às "}{new Date(proximo.scheduled_at).toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" })}.
+                  </small>
+                ) : <small>Sua agenda está livre para novos atendimentos.</small>}
+              </div>
+            </div>
+          ) : (
+            <div className="hoje-agenda">
+              {compromissosHoje.slice(0, 4).map((item) => (
+                <div className="hoje-agenda__item" key={item.id}>
+                  <time>{new Date(item.scheduled_at).toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" })}</time>
+                  <span><strong>{item.patient_name || "Paciente não informado"}</strong><small>{nomeTipo(item.appointment_type)}</small></span>
+                  <span className="hoje-agenda__status">{item.status}</span>
+                </div>
+              ))}
+              {compromissosHoje.length > 4 && (
+                <Link className="hoje-agenda__mais" to="/agenda">Ver mais {compromissosHoje.length - 4} compromissos</Link>
+              )}
+            </div>
+          )}
+        </article>
+
+        <article className="hoje-card hoje-card--round">
+          <div className="hoje-card__topo">
+            <div><p className="eyebrow">Continuidade</p><h2>Round hospitalar</h2></div>
+            <Icone nome="round" />
+          </div>
+          <div className="hoje-card__numero"><strong>{quantidade(pacientes)}</strong><span>pacientes no round</span></div>
+          <p>Acompanhe evolução, pendências e linha do tempo dos pacientes cadastrados.</p>
+          <Link className="hoje-card__acao" to="/round">Abrir round <Icone nome="seta" /></Link>
+        </article>
+
+        <article className="hoje-card hoje-card--deslocamento">
+          <div className="hoje-card__topo">
+            <div><p className="eyebrow">Próximo deslocamento</p><h2>Rota para o trabalho</h2></div>
+            <Icone nome="rota" />
+          </div>
+          {proximosLocais.length === 0 ? (
+            <div className="deslocamento-vazio"><strong>Rotina ainda não cadastrada.</strong><span>Defina seus dias, entrada, saída e locais na Agenda.</span></div>
+          ) : (
+            <>
+              <div className="deslocamento-destino">
+                <span><Icone nome="pin" /></span>
+                <div><strong>{proximosLocais[0].location.name}</strong><small>{new Date(proximosLocais[0].starts_at).toLocaleDateString("pt-BR", { weekday: "short", day: "2-digit", month: "short" })} · início às {new Date(proximosLocais[0].starts_at).toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" })}</small></div>
+              </div>
+              {deslocamento?.status === "live" && deslocamento.routes[0] ? (
+                <div className="deslocamento-live">
+                  <div><strong>{Math.ceil(deslocamento.routes[0].duration_seconds / 60)} min</strong><span>{(deslocamento.routes[0].distance_meters / 1000).toLocaleString("pt-BR", { maximumFractionDigits: 1 })} km</span></div>
+                  <span className={`transito transito--${deslocamento.routes[0].congestion}`}>{deslocamento.routes[0].congestion}</span>
+                  {saidaRecomendada && <p>Saída recomendada às {saidaRecomendada.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" })}.</p>}
+                  {deslocamento.routes[0].traffic_delay_seconds > 120 && <p>+{Math.ceil(deslocamento.routes[0].traffic_delay_seconds / 60)} min pelo trânsito atual.</p>}
+                  {deslocamento.tips[0] && <small>{deslocamento.tips[0]}</small>}
+                </div>
+              ) : erroLocalizacao ? (
+                <p className="deslocamento-estado">{erroLocalizacao}</p>
+              ) : mobilidade?.enabled ? (
+                <p className="deslocamento-estado">{mobilidade.traffic_configured ? "Atualizando trânsito…" : "Local e horário prontos; provedor de trânsito ainda não configurado."}</p>
+              ) : (
+                <p className="deslocamento-estado">Ative a localização uma vez nas configurações da Agenda para receber ETAs automáticos.</p>
+              )}
+              {proximosLocais.length > 1 && <div className="deslocamento-proximos">Depois: {proximosLocais.slice(1).map((item) => item.location.name).join(" · ")}</div>}
+            </>
+          )}
+          <Link className="hoje-card__acao" to="/agenda">Abrir agenda e rotas <Icone nome="seta" /></Link>
+        </article>
+
+        <article className="hoje-card hoje-card--mail">
+          <div className="hoje-card__topo">
+            <div><p className="eyebrow">Comunicação</p><h2>Corvia Mail</h2></div>
+            <Icone nome="mail" />
+          </div>
+          <p>Central profissional com caixa de entrada, prioridades, modelos e continuidade do trabalho clínico.</p>
+          <Link className="hoje-card__acao" to="/corvia-mail">Abrir comunicação <Icone nome="seta" /></Link>
+        </article>
+      </section>
+
+      <section className="hoje__acervo" aria-labelledby="acervo-titulo">
+        <div className="hoje__secao-topo">
+          <div><p className="eyebrow">Conhecimento aplicável</p><h2 id="acervo-titulo">Ciência à mão, quando a decisão acontece</h2></div>
+          <Link to="/biblioteca">Explorar biblioteca <Icone nome="seta" /></Link>
+        </div>
+        <div className="hoje__metricas">
+          <Numero rotulo="itens científicos" valor={catalogo?.total ?? null} to="/biblioteca" />
+          <Numero rotulo="fluxogramas" valor={fluxogramas} to="/fluxogramas" />
+          <Numero rotulo="evidências" valor={evidencias} to="/evidencias" />
+          <Numero rotulo="estudos" valor={estudos} to="/estudos" />
+        </div>
+        {temas.length > 0 && (
+          <div className="hoje__temas" aria-label="Temas disponíveis">
+            {temas.slice(0, 8).map((tema) => (
+              <Link key={tema.theme} to={`/biblioteca?tema=${encodeURIComponent(tema.theme)}`}>
+                <span>{tema.theme}</span><small>{tema.count.toLocaleString("pt-BR")}</small>
               </Link>
             ))}
           </div>
-        </section>
-      )}
-    </>
+        )}
+      </section>
+
+      <section className="hoje__explorar" aria-labelledby="explorar-titulo">
+        <div className="hoje__secao-topo">
+          <div><p className="eyebrow">Ecossistema Corvia</p><h2 id="explorar-titulo">Um espaço de trabalho, todas as etapas</h2></div>
+        </div>
+        <div className="hoje__grupos">
+          {GRUPOS.map((grupo) => (
+            <article className="hoje-grupo" key={grupo.titulo}>
+              <span className="hoje-grupo__icone"><Icone nome={grupo.icone} /></span>
+              <div className="hoje-grupo__titulo"><h3>{grupo.titulo}</h3><p>{grupo.descricao}</p></div>
+              <div className="hoje-grupo__links">
+                {grupo.links.map((link) => <Link key={link.to} to={link.to}>{link.nome}<Icone nome="seta" /></Link>)}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+    </div>
   );
 }

@@ -5,6 +5,7 @@ import { Carregando } from "./components/Estado";
 import { useAuth } from "./lib/auth";
 
 const Entrar = lazy(() => import("./pages/Entrar"));
+const Produto = lazy(() => import("./pages/Produto"));
 const Painel = lazy(() => import("./pages/Painel"));
 const Apresentacao = lazy(() => import("./pages/Apresentacao"));
 const Trilhas = lazy(() => import("./pages/Trilhas"));
@@ -52,6 +53,9 @@ const CaixaDeEmail = lazy(() => import("./pages/CaixaDeEmail"));
 const CorviaMail = lazy(() => import("./pages/CorviaMail"));
 const Receituario = lazy(() => import("./pages/Receituario"));
 const UsuariosOnline = lazy(() => import("./pages/UsuariosOnline"));
+const GuiaDoencas = lazy(() => import("./pages/GuiaDoencas"));
+const GuiaDoenca = lazy(() => import("./pages/GuiaDoenca"));
+const TriagemSintomas = lazy(() => import("./pages/TriagemSintomas"));
 
 function RotasSuspensas({ children }: { children: ReactNode }) {
   return (
@@ -70,12 +74,14 @@ export default function App() {
     return (
       <RotasSuspensas>
         <Routes>
+          <Route path="/" element={<Produto />} />
+          <Route path="/produto" element={<Produto />} />
           <Route path="/entrar" element={<Entrar />} />
           <Route path="/solicitar-acesso" element={<SolicitarAcesso />} />
           <Route path="/esqueci-senha" element={<EsqueciSenha />} />
           <Route path="/redefinir-senha" element={<RedefinirSenha />} />
           <Route path="/corvia-mail" element={<CorviaMail />} />
-          <Route path="*" element={<Navigate to="/entrar" replace />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </RotasSuspensas>
     );
@@ -93,6 +99,9 @@ export default function App() {
           <Route path="apresentacao" element={<Apresentacao />} />
           <Route path="biblioteca" element={<Biblioteca />} />
           <Route path="biblioteca/:slug" element={<Documento />} />
+          <Route path="doencas" element={<GuiaDoencas />} />
+          <Route path="doencas/:slug" element={<GuiaDoenca />} />
+          <Route path="triagem-sintomas" element={<TriagemSintomas />} />
           <Route path="fluxogramas" element={<Fluxogramas />} />
           <Route path="diretrizes" element={<Diretrizes />} />
           <Route path="busca" element={<Busca />} />

@@ -1,6 +1,6 @@
 from datetime import datetime, timezone
 
-from sqlalchemy import Boolean, DateTime, ForeignKey, Integer, LargeBinary, String, Text
+from sqlalchemy import Boolean, DateTime, ForeignKey, Integer, LargeBinary, String, Text, UniqueConstraint
 from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.orm import Mapped, mapped_column
 
@@ -96,8 +96,10 @@ class Appointment(Base):
     patient_id: Mapped[int | None] = mapped_column(ForeignKey("patients.id", ondelete="SET NULL"), nullable=True, index=True)
     patient_name_temp: Mapped[str | None] = mapped_column(String(200), nullable=True)
     patient_phone_temp: Mapped[str | None] = mapped_column(String(30), nullable=True)
+    patient_email_cipher: Mapped[bytes | None] = mapped_column(LargeBinary, nullable=True)
 
     scheduled_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), index=True)
+    ends_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True, index=True)
     duration_minutes: Mapped[int] = mapped_column(Integer, default=30)
     appointment_type: Mapped[str] = mapped_column(String(40), default="consulta")
     # consulta | retorno | exame | outro
@@ -105,6 +107,45 @@ class Appointment(Base):
     # confirmado | cancelado | realizado | faltou
     notes: Mapped[str | None] = mapped_column(Text, nullable=True)
 
+    location_id: Mapped[int | None] = mapped_column(
+        ForeignKey("calendar_locations.id", ondelete="SET NULL"), nullable=True, index=True
+    )
+    service_id: Mapped[int | None] = mapped_column(
+        ForeignKey("scheduling_services.id", ondelete="SET NULL"), nullable=True, index=True
+    )
+    integration_id: Mapped[int | None] = mapped_column(
+        ForeignKey("calendar_integrations.id", ondelete="SET NULL"), nullable=True, index=True
+    )
+    external_practitioner_id: Mapped[str | None] = mapped_column(String(255), nullable=True)
+    external_appointment_id: Mapped[str | None] = mapped_column(String(255), nullable=True)
+    external_version: Mapped[str | None] = mapped_column(String(255), nullable=True)
+    external_updated_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    source: Mapped[str] = mapped_column(String(30), default="corvia", index=True)
+    sync_status: Mapped[str] = mapped_column(String(30), default="local_only", index=True)
+    sync_error: Mapped[str | None] = mapped_column(String(500), nullable=True)
+    timezone: Mapped[str] = mapped_column(String(80), default="America/Sao_Paulo")
+    visit_mode: Mapped[str] = mapped_column(String(30), default="presencial")
+    payment_mode: Mapped[str] = mapped_column(String(30), default="nao_informado")
+    insurance_name: Mapped[str | None] = mapped_column(String(160), nullable=True)
+    price_cents: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    currency: Mapped[str] = mapped_column(String(3), default="BRL")
+    confirmation_status: Mapped[str] = mapped_column(String(30), default="not_requested")
+    conflict_reason: Mapped[str | None] = mapped_column(String(500), nullable=True)
+    version: Mapped[int] = mapped_column(Integer, default=1)
+    cancelled_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    deleted_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True, index=True)
+
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=lambda: datetime.now(timezone.utc)
+    )
+    updated_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), default=lambda: datetime.now(timezone.utc),
+        onupdate=lambda: datetime.now(timezone.utc),
+    )
+
+    __table_args__ = (
+        UniqueConstraint(
+            "integration_id", "external_practitioner_id", "external_appointment_id",
+            name="uq_appointment_external_identity",
+        ),
     )

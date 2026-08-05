@@ -22,9 +22,9 @@ def test_rotas_documentais_usam_identidade_profissional_centralizada():
 
 def test_todos_os_renderizadores_clinicos_suportam_logo_profissional():
     expected = {
-        "app/services/pdf_documento.py": ("logo_path", "logo_needs_dark_plate_path"),
+        "app/services/pdf_documento.py": ("logo_path", "_fundo_logo"),
         "app/services/material_paciente.py": ("logo_path", "logo_needs_dark_plate_path"),
-        "app/services/receita_controle_especial.py": ("logo_path", "logo_needs_dark_plate_path"),
+        "app/services/receita_controle_especial.py": ("logo_path", "stroke=0"),
         "app/services/apresentacao.py": ("rendered_logo_png", "professional_name"),
     }
     for path, symbols in expected.items():

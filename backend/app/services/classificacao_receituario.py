@@ -34,6 +34,7 @@ class ItemPrescrito:
     apresentacao: str | None = None
     quantidade: str | None = None
     posologia: str | None = None
+    uso_continuo: bool = False
     lista: str | None = None
     brand_name: str | None = None
     manufacturer: str | None = None

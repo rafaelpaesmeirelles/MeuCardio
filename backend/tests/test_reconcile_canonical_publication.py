@@ -23,6 +23,7 @@ def test_slug_ausente_fica_arquivado_mas_nao_publicado(db, monkeypatch):
     db.add_all([
         _document("atual", published=True),
         _document("novo-revisado", published=False),
+        _document("rebaixado-para-revisao", published=True, review_status="pendente_revisao"),
         _document("removido-do-commit", published=True),
     ])
     db.commit()
@@ -39,9 +40,9 @@ def test_slug_ausente_fica_arquivado_mas_nao_publicado(db, monkeypatch):
             }
         },
     )
-    canonical = {"documentos": {"atual", "novo-revisado"}}
+    canonical = {"documentos": {"atual", "novo-revisado", "rebaixado-para-revisao"}}
 
-    publicados, despublicados = reconciliation._synchronize_publication(
+    publicados, despublicados, despublicados_sem_revisao = reconciliation._synchronize_publication(
         db,
         canonical,
         publish_reviewed=True,
@@ -50,23 +51,26 @@ def test_slug_ausente_fica_arquivado_mas_nao_publicado(db, monkeypatch):
 
     atual = db.query(Document).filter_by(slug="atual").one()
     novo = db.query(Document).filter_by(slug="novo-revisado").one()
+    rebaixado = db.query(Document).filter_by(slug="rebaixado-para-revisao").one()
     removido = db.query(Document).filter_by(slug="removido-do-commit").one()
 
     assert atual.published is True
     assert novo.published is True
+    assert rebaixado.published is False
     assert removido.published is False
     assert publicados == {"documentos": 1}
     assert despublicados == {"documentos": 1}
+    assert despublicados_sem_revisao == {"documentos": 1}
 
-    assert inventario["total"] == 2
+    assert inventario["total"] == 3
     assert inventario["published_total"] == 2
-    assert inventario["stored_total"] == 3
+    assert inventario["stored_total"] == 4
     assert inventario["archived_absent_total"] == 1
     assert inventario["below_minimum"] == {}
     assert inventario["fronts"]["documentos"] == {
-        "database": 2,
+        "database": 3,
         "published": 2,
-        "stored": 3,
+        "stored": 4,
         "archived_absent": 1,
         "minimum": 2,
     }

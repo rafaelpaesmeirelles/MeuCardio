@@ -24,6 +24,11 @@ def _limpar(db):
 
 
 class TestNormalizacao:
+    def test_apresentacao_logistica_vira_texto_legivel(self):
+        assert cmed_precos.apresentacao_legivel("100 MG COM REV CT BL AL X 30") == (
+            "100 mg — comprimido revestido — caixa com 30 comprimidos revestidos"
+        )
+
     def test_sal_e_hidrato_sao_removidos_dos_dois_lados(self):
         a = cmed_precos.palavras_normalizadas("Dabigatrana (etexilato)")
         b = cmed_precos.palavras_normalizadas("MESILATO DE ETEXILATO DE DABIGATRANA")
@@ -126,6 +131,45 @@ class TestEndpointApresentacoes:
         assert ap["laboratorio"] == "AstraZeneca"
         assert ap["preco"]["valor"] is not None
         assert "CMED" in ap["preco"]["rotulo"]
+        assert ap["apresentacao"] == "100 mg — comprimido — caixa com 30 comprimidos"
+        assert ap["apresentacao_cmed"] == "100 MG COM CT BL AL X 30"
+
+    def test_autocomplete_encontra_nome_comercial_na_versao_cmed(self, client, criar_usuario, db):
+        _, token = criar_usuario(role="admin")
+        d = Drug(
+            slug="metoprolol-autocomplete", generic_name="Metoprolol",
+            brand_names=["Lopressor"], drug_class="beta-bloqueador", published=True,
+        )
+        db.add(d)
+        db.commit()
+        db.refresh(d)
+        versao = CmedVersao(
+            publicado_em="20260801", arquivo_url="https://exemplo.gov.br/cmed.xlsx",
+            sha256="def", linhas=1,
+        )
+        db.add(versao)
+        db.commit()
+        db.refresh(versao)
+        db.add(CmedApresentacao(
+            cmed_versao_id=versao.id, drug_id=d.id,
+            substancia_cmed="TARTARATO DE METOPROLOL", laboratorio="AstraZeneca",
+            produto="SELOKEN", apresentacao="100 MG COM CT BL AL X 30",
+            ggrem="456", restricao_hospitalar=False, pmc_por_aliquota={},
+        ))
+        db.commit()
+
+        resposta = client.get(
+            "/api/drugs/sugestoes?q=selok",
+            headers={"Authorization": f"Bearer {token}"},
+        )
+        assert resposta.status_code == 200, resposta.text
+        assert resposta.json()[0] == {
+            "slug": "metoprolol-autocomplete",
+            "generic_name": "Metoprolol",
+            "brand_name": "SELOKEN",
+            "manufacturer": "AstraZeneca",
+            "source": "CMED 20260801",
+        }
 
     def test_substancia_sem_presenca_na_cmed_avisa_em_vez_de_falhar(self, client, criar_usuario, db):
         _, token = criar_usuario(role="admin")

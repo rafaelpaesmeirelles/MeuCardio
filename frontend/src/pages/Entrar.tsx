@@ -86,10 +86,10 @@ export default function Entrar() {
         </button>
 
         <Link
-          to="/assinatura"
+          to="/produto#acesso"
           style={{ display: "block", textAlign: "center", marginTop: "1rem", fontWeight: 600 }}
         >
-          Assine já
+          Conheça a Corvia
         </Link>
         <Link
           to="/solicitar-acesso"

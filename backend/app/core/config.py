@@ -43,6 +43,27 @@ class Settings(BaseSettings):
     plantao_inicio_hora: int = 7
     plantao_fim_hora: int = 22
     fuso_operacao: str = "America/Sao_Paulo"
+    # --- Agenda Integrada -------------------------------------------------
+    # O núcleo local fica disponível. Escrita em sistemas externos permanece
+    # bloqueada por padrão até homologação explícita do conector e da conta.
+    agenda_integrations_enabled: bool = True
+    agenda_external_writes_enabled: bool = False
+    agenda_background_sync_enabled: bool = False
+    agenda_sync_lookback_days: int = 30
+    agenda_sync_horizon_days: int = 365
+    agenda_sync_batch_size: int = 200
+    agenda_outbox_max_attempts: int = 8
+    traffic_provider: str = "google_routes"  # google_routes | mapbox
+    google_routes_api_key: str = ""
+    mapbox_access_token: str = ""
+
+    @property
+    def traffic_configured(self) -> bool:
+        if self.traffic_provider == "google_routes":
+            return bool(self.google_routes_api_key)
+        if self.traffic_provider == "mapbox":
+            return bool(self.mapbox_access_token)
+        return False
     admin_email: str = "admin@meucardio.local"
     admin_password: str = "troque-esta-senha"
     cors_origins: str = "http://localhost:5173,http://localhost:8080"

@@ -1,172 +1,221 @@
-/* Corvia — paleta oficial da marca.
-   A mesma da logo e do material de divulgação. Nenhuma cor entra aqui sem
-   estar na tabela abaixo, com duas exceções declaradas (ver "cores de estado").
-
-   Os componentes NÃO devem usar os tokens de marca diretamente: usam os papéis
-   semânticos. Assim, se um papel mudar de cor, muda num lugar só. */
-
+/* Corvia Design System — fundações semânticas.
+   Vermelho é sinal clínico: emergência, risco ou falha. Ações comuns usam teal. */
 :root {
-  /* --- Paleta da marca ---------------------------------------------------- */
-  --navy: #0b2e45;
-  --navy-dark: #081e30;
-  --red: #d5001d;
-  --red-dark: #b0001a;
-  --teal: #1c7293;
-  --teal-light: #6fb4cc;
-  --off-white: #fcfcfc;
-  --ink: #26333b;
-  --muted: #55666f;
-  --line: #e4e8ea;
-  --branco: #ffffff;
+  --navy-950: #061923;
+  --navy-900: #082637;
+  --navy-800: #0b344a;
+  --navy-700: #124c64;
+  --teal-700: #11657a;
+  --teal-600: #167d92;
+  --teal-500: #2596a9;
+  --teal-100: #dff3f5;
+  --teal-50: #effafb;
+  --red-700: #a90d24;
+  --red-600: #c8122e;
+  --red-50: #fff1f3;
+  --green-700: #166c4c;
+  --green-50: #edf9f3;
+  --amber-700: #8a5700;
+  --amber-50: #fff7e6;
+  --slate-950: #16242c;
+  --slate-700: #465b66;
+  --slate-600: #5e717b;
+  --slate-300: #cbd6db;
+  --slate-200: #dfe7ea;
+  --slate-100: #edf2f4;
+  --slate-50: #f6f8f9;
+  --white: #ffffff;
 
-  /* --- Papéis semânticos: é isto que os componentes usam ------------------ */
-  --primaria: var(--navy);          /* cabeçalho, marca, superfícies escuras */
-  --primaria-escura: var(--navy-dark);
-  --acao: var(--red);               /* CTA: botão primário, chamada principal */
-  --acao-hover: var(--red-dark);
-  --acento: var(--teal);            /* links, estado ativo, realces */
-  --acento-claro: var(--teal-light);/* só sobre fundo escuro — ver nota */
-  --fundo: var(--off-white);
-  --superficie: var(--branco);
-  --texto: var(--ink);
-  --texto-secundario: var(--muted);
-  --borda: var(--line);
+  /* Compatibilidade com os módulos existentes. */
+  --navy: var(--navy-900);
+  --navy-dark: var(--navy-950);
+  --red: var(--red-600);
+  --red-dark: var(--red-700);
+  --teal: var(--teal-600);
+  --teal-light: #7fc7d2;
+  --off-white: var(--slate-50);
+  --ink: var(--slate-950);
+  --muted: var(--slate-600);
+  --line: var(--slate-200);
+  --branco: var(--white);
 
-  /* --- Cores de estado ----------------------------------------------------
-     Ficam fora da paleta de marca de propósito: comunicam estado do sistema,
-     não identidade. Verde para sucesso é convenção de usabilidade que a paleta
-     não cobre; erro usa o vermelho escuro da marca para não competir com o CTA. */
-  --alerta: var(--red-dark);
-  --sucesso: #1e7a4d;
+  --primaria: var(--navy-900);
+  --primaria-escura: var(--navy-950);
+  --acao: var(--teal-600);
+  --acao-hover: var(--teal-700);
+  --acento: var(--teal-600);
+  --acento-claro: #91d5dd;
+  --perigo: var(--red-600);
+  --perigo-hover: var(--red-700);
+  --alerta: var(--red-700);
+  --sucesso: var(--green-700);
+  --atencao: var(--amber-700);
+  --fundo: var(--slate-50);
+  --superficie: var(--white);
+  --texto: var(--slate-950);
+  --texto-secundario: var(--slate-600);
+  --borda: var(--slate-200);
+  --acento-tinta: var(--teal-50);
+  --acao-tinta: var(--teal-50);
+  --perigo-tinta: var(--red-50);
+  --sucesso-tinta: var(--green-50);
 
-  /* --- Tintas de apoio ----------------------------------------------------
-     Fundos muito claros derivados dos tons acima, para selos e estados hover. */
-  --acento-tinta: #eef5f8;
-  --acao-tinta: #fdeef0;
-  --sucesso-tinta: #edf6f1;
+  --fonte-display: "Archivo", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --fonte-texto: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --fonte-dados: "IBM Plex Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
 
-  --fonte-display: "Archivo", system-ui, sans-serif;
-  --fonte-texto: "Inter", system-ui, sans-serif;
-  --fonte-dados: "IBM Plex Mono", ui-monospace, monospace;
-
-  --r: 6px;
-  --sombra: 0 1px 2px rgba(11, 46, 69, 0.06), 0 8px 24px -16px rgba(11, 46, 69, 0.28);
-  --barra-inferior: 60px;
+  --r-xs: 6px;
+  --r-sm: 9px;
+  --r: 12px;
+  --r-lg: 18px;
+  --r-xl: 24px;
+  --sombra-xs: 0 1px 2px rgba(6, 25, 35, 0.06);
+  --sombra: 0 8px 28px -18px rgba(6, 25, 35, 0.28), 0 1px 3px rgba(6, 25, 35, 0.06);
+  --sombra-lg: 0 24px 60px -30px rgba(6, 25, 35, 0.38);
+  --barra-inferior: 68px;
+  --lateral-largura: 284px;
+  --topo-altura: 76px;
 }
 
 * { box-sizing: border-box; }
-
-html, body, #root { height: 100%; margin: 0; }
-
+html { min-height: 100%; scroll-behavior: smooth; }
+html, body, #root { min-height: 100%; margin: 0; }
 body {
   background: var(--fundo);
   color: var(--texto);
   font-family: var(--fonte-texto);
   font-size: 15px;
-  line-height: 1.55;
+  line-height: 1.58;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 h1, h2, h3, h4 {
+  color: var(--primaria);
   font-family: var(--fonte-display);
   font-weight: 700;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.025em;
   line-height: 1.15;
-  margin: 0 0 0.5rem;
-  color: var(--primaria);
+  margin: 0 0 0.55rem;
 }
-h1 { font-size: 1.6rem; }
-h2 { font-size: 1.2rem; }
-h3 { font-size: 1rem; text-transform: none; }
-
+h1 { font-size: clamp(1.85rem, 2.8vw, 2.65rem); }
+h2 { font-size: clamp(1.25rem, 1.8vw, 1.55rem); }
+h3 { font-size: 1.08rem; }
+p { margin-top: 0; }
 a { color: var(--acento); text-decoration: none; }
 a:hover { text-decoration: underline; }
+button, input, select, textarea { font: inherit; }
+button { touch-action: manipulation; }
 
 :focus-visible {
-  outline: 2px solid var(--acento);
-  outline-offset: 2px;
-  border-radius: 3px;
+  outline: 3px solid var(--teal-500);
+  outline-offset: 3px;
+  border-radius: var(--r-xs);
 }
+::selection { color: var(--navy-950); background: #bfe8ed; }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation: none !important; transition: none !important; }
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
-/* --- Blocos ---------------------------------------------------------------- */
 .cartao {
+  position: relative;
+  padding: 1.15rem 1.25rem;
   background: var(--superficie);
   border: 1px solid var(--borda);
   border-radius: var(--r);
-  box-shadow: var(--sombra);
-  padding: 1rem 1.1rem;
-  position: relative;
+  box-shadow: var(--sombra-xs);
 }
-.cartao--clinico { border-left: 3px solid var(--acento); }
+.cartao--clinico { border-left: 4px solid var(--acento); }
 
 .eyebrow {
+  margin: 0 0 0.35rem;
+  color: var(--teal-700);
   font-family: var(--fonte-dados);
-  font-size: 0.68rem;
-  letter-spacing: 0.14em;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
-  color: var(--texto-secundario);
 }
-
-.dado {
-  font-family: var(--fonte-dados);
-  font-variant-numeric: tabular-nums;
-}
+.dado { font-family: var(--fonte-dados); font-variant-numeric: tabular-nums; }
 
 .selo {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 0.15rem 0.5rem;
+  color: var(--texto-secundario);
+  border: 1px solid var(--borda);
+  border-radius: 999px;
   font-family: var(--fonte-dados);
   font-size: 0.66rem;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
-  padding: 0.15rem 0.45rem;
-  border-radius: 3px;
-  border: 1px solid var(--borda);
-  color: var(--texto-secundario);
 }
-.selo--revisado { border-color: var(--acento); color: var(--acento); background: var(--acento-tinta); }
-.selo--pendente { border-color: var(--alerta); color: var(--alerta); background: var(--acao-tinta); }
+.selo--revisado { color: var(--teal-700); border-color: #a8d7dd; background: var(--acento-tinta); }
+.selo--pendente { color: var(--alerta); border-color: #efb8c0; background: var(--perigo-tinta); }
 
 .botao {
-  font-family: var(--fonte-texto);
-  font-weight: 600;
-  font-size: 0.92rem;
-  padding: 0.6rem 1.05rem;
-  border-radius: var(--r);
-  border: 1px solid var(--acao);
+  min-height: 44px;
+  padding: 0.65rem 1.1rem;
+  color: var(--white);
   background: var(--acao);
-  color: var(--branco);
+  border: 1px solid var(--acao);
+  border-radius: var(--r-sm);
+  font-family: var(--fonte-texto);
+  font-size: 0.92rem;
+  font-weight: 700;
   cursor: pointer;
+  transition: background-color 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease, transform 0.16s ease;
 }
-.botao:hover { background: var(--acao-hover); border-color: var(--acao-hover); }
-.botao:disabled { opacity: 0.5; cursor: not-allowed; }
-.botao--secundario { background: transparent; color: var(--acento); border-color: var(--acento); }
-.botao--secundario:hover { background: var(--acento-tinta); }
+.botao:hover { background: var(--acao-hover); border-color: var(--acao-hover); box-shadow: 0 8px 20px -12px rgba(17, 101, 122, 0.6); }
+.botao:active { transform: translateY(1px); }
+.botao:disabled { opacity: 0.52; cursor: not-allowed; box-shadow: none; }
+.botao--secundario { color: var(--teal-700); background: var(--white); border-color: #98cbd3; }
+.botao--secundario:hover { color: var(--teal-700); background: var(--acento-tinta); border-color: var(--teal-600); }
+.botao--perigo { color: var(--white); background: var(--perigo); border-color: var(--perigo); }
+.botao--perigo:hover { background: var(--perigo-hover); border-color: var(--perigo-hover); }
 
-label { display: block; font-size: 0.86rem; font-weight: 500; margin-bottom: 0.3rem; }
-
+label { display: block; margin-bottom: 0.35rem; color: var(--slate-700); font-size: 0.86rem; font-weight: 650; }
 input, select, textarea {
   width: 100%;
-  font: inherit;
-  padding: 0.55rem 0.65rem;
-  border: 1px solid var(--borda);
-  border-radius: var(--r);
+  min-height: 44px;
+  padding: 0.62rem 0.75rem;
+  color: var(--texto);
   background: var(--superficie);
-  color: inherit;
+  border: 1px solid var(--slate-300);
+  border-radius: var(--r-sm);
 }
-input:focus, select:focus, textarea:focus { border-color: var(--acento); }
+textarea { min-height: 96px; }
+input:hover, select:hover, textarea:hover { border-color: #9db0b8; }
+input:focus, select:focus, textarea:focus { border-color: var(--teal-600); box-shadow: 0 0 0 3px rgba(37, 150, 169, 0.12); outline: none; }
 
-.grade { display: grid; gap: 0.9rem; }
-@media (min-width: 760px) { .grade--2 { grid-template-columns: 1fr 1fr; } }
-@media (min-width: 1020px) { .grade--3 { grid-template-columns: repeat(3, 1fr); } }
+.grade { display: grid; gap: 1rem; }
+@media (min-width: 760px) { .grade--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1120px) { .grade--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 
 .aviso {
-  font-size: 0.82rem;
+  margin-top: 1rem;
+  padding-top: 0.8rem;
   color: var(--texto-secundario);
   border-top: 1px solid var(--borda);
-  padding-top: 0.7rem;
-  margin-top: 0.9rem;
+  font-size: 0.82rem;
+}
+
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 }

@@ -25,12 +25,17 @@ superfície é adicionada sem revisão explícita do inventário.
 - sessão web HttpOnly, encerramento de sessões e conta do usuário;
 - painel, busca global, favoritos e alertas por condição/diretriz;
 - Biblioteca científica, documentos, fluxogramas, diretrizes e galeria;
-- evidências, estudos, exames, medicamentos e interações;
+- evidências, estudos, exames, medicamentos, interações, guias por doença e triagem por sintomas;
 - calculadoras e escores clínicos;
 - trilhas de estudo, casos clínicos, cursos parceiros e checklists;
 - material para pacientes e envio associado;
 - Round hospitalar e assistente clínico com IA/RAG;
-- Agenda e indicadores pessoais;
+- Agenda Integrada em dia/semana/mês/lista, rotina profissional recorrente,
+  planejamento diário, locais, serviços, recursos, exceções e indicadores pessoais;
+- mobilidade consentida com próximo local, ETA e trânsito, sem persistência da
+  posição atual; Google Routes/Mapbox dependem de credencial real;
+- sincronização incremental e escrita protegida para Google Calendar e Microsoft
+  365; demais PEP/PMS ficam bloqueados até homologação oficial;
 - emissão de documentos, prescrição eletrônica e assinatura;
 - telediagnóstico e fila administrativa;
 - CorvIA Mail, caixa de e-mail e chat flutuante;
@@ -41,10 +46,11 @@ superfície é adicionada sem revisão explícita do inventário.
 
 ## Conteúdo científico protegido
 
-O inventário científico mantém baseline mínimo de 4.936 registros distribuídos
-em documentos, galeria, exames, evidências, estudos, medicamentos, checklists,
-trilhas, materiais para pacientes, emergência e casos clínicos. A reconciliação
-com o PostgreSQL é idempotente e não deve reduzir conteúdo já publicado.
+O inventário científico mantém baseline mínimo de 5.035 registros distribuídos
+em 13 frentes: documentos, galeria, exames, evidências, estudos, medicamentos,
+checklists, trilhas, materiais para pacientes, emergência, casos clínicos, guias
+por doença e triagem por sintomas. A reconciliação com o PostgreSQL é
+idempotente e não deve reduzir conteúdo já publicado.
 
 ## Dependências externas que exigem configuração operacional
 

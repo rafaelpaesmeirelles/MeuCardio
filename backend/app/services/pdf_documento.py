@@ -47,7 +47,7 @@ from reportlab.pdfgen import canvas
 from app.core.config import settings
 from app.services.pdf.marca import LOGO, logo_disponivel
 from app.services.professional_profile import (
-    logo_needs_dark_plate_path, logo_path, professional_name, workplace_lines,
+    logo_path, professional_name, workplace_lines,
 )
 
 log = logging.getLogger("meucardio.pdf_documento")
@@ -197,64 +197,71 @@ def _caminho_logo_pessoal(document_logo_url: str | None) -> Path | None:
     return logo_path(document_logo_url)
 
 
-def _logo_pessoal(c: canvas.Canvas, x_direita: float, y: float, medico: dict) -> float:
+def _logo_pessoal(
+    c: canvas.Canvas, x_direita: float, y: float, medico: dict,
+) -> tuple[float, float]:
     """Logo pessoal/do consultório do médico (Tarefa 29, pedido do Rafael em
     30/07/2026) — desenhada JUNTO da logo da Corvia, no bloco profissional,
     não em vez dela. Ausência ou arquivo ilegível não derruba a geração do
     documento, mesma filosofia da logo da Corvia."""
     caminho = _caminho_logo_pessoal(medico.get("document_logo_url"))
     if not caminho:
-        return y
+        return x_direita, y
     try:
         img = ImageReader(str(caminho))
         largura_px, altura_px = img.getSize()
-        altura = LARGURA_LOGO_PESSOAL * altura_px / largura_px
-        x = x_direita - LARGURA_LOGO_PESSOAL
+        escala = min(
+            LARGURA_LOGO_PESSOAL / max(1, largura_px),
+            (18 * mm) / max(1, altura_px),
+        )
+        largura = largura_px * escala
+        altura = altura_px * escala
+        x = x_direita - largura
         y_base = y - altura
-        escura = logo_needs_dark_plate_path(caminho)
-        c.setFillColorRGB(*(NAVY if escura else (1, 1, 1)))
-        c.roundRect(x - 2 * mm, y_base - 2 * mm, LARGURA_LOGO_PESSOAL + 4 * mm,
-                    altura + 4 * mm, 2.5 * mm, fill=1, stroke=0)
+        # O arquivo é aplicado como foi enviado, sobre o branco do papel: sem
+        # placa escura, moldura ou contorno artificial. O texto profissional
+        # usa uma coluna própria à esquerda e nunca fica sob a imagem.
+        _fundo_logo(c, x, y_base, largura, altura)
         c.drawImage(img, x, y_base,
-                    width=LARGURA_LOGO_PESSOAL, height=altura, mask="auto", preserveAspectRatio=True)
-        return y - altura - 3 * mm
+                    width=largura, height=altura, mask="auto", preserveAspectRatio=True)
+        return x - 5 * mm, y_base
     except OSError:
         log.warning("Logo pessoal em %s não pôde ser lida — documento seguiu sem ela.", caminho)
-        return y
+        return x_direita, y
 
 
 def _bloco_profissional(c: canvas.Canvas, x_direita: float, y: float, medico: dict,
                         endereco: dict | None) -> float:
-    y = _logo_pessoal(c, x_direita, y, medico)
+    x_texto, y_base_logo = _logo_pessoal(c, x_direita, y, medico)
 
     c.setFillColorRGB(0, 0, 0)
     c.setFont("Helvetica-Bold", 10.5)
-    c.drawRightString(x_direita, y, professional_name(medico))
+    c.drawRightString(x_texto, y, professional_name(medico))
     y -= 4.6 * mm
 
     c.setFont("Helvetica", 8.5)
     c.setFillColorRGB(*CINZA)
     if medico.get("profession"):
-        c.drawRightString(x_direita, y, medico["profession"])
+        c.drawRightString(x_texto, y, medico["profession"])
         y -= 3.8 * mm
     if medico.get("specialty"):
-        c.drawRightString(x_direita, y, medico["specialty"])
+        c.drawRightString(x_texto, y, medico["specialty"])
         y -= 3.8 * mm
     for linha in workplace_lines(medico):
-        c.drawRightString(x_direita, y, linha)
+        c.drawRightString(x_texto, y, linha)
         y -= 3.6 * mm
 
     registro = _registro(medico)
     if registro:
-        c.drawRightString(x_direita, y, registro)
+        c.drawRightString(x_texto, y, registro)
         y -= 3.8 * mm
 
     if endereco:
         for linha in _endereco_linhas(endereco):
-            c.drawRightString(x_direita, y, linha)
+            c.drawRightString(x_texto, y, linha)
             y -= 3.6 * mm
 
-    return y
+    return min(y, y_base_logo)
 
 
 def _cabecalho(c: canvas.Canvas, medico: dict, titulo: str, endereco: dict | None = None) -> float:
@@ -327,6 +334,16 @@ def _itens(c: canvas.Canvas, y: float, itens: list[dict]) -> float:
             c.setFont("Helvetica", 9.5)
             c.setFillColorRGB(0.2, 0.2, 0.2)
             for linha in _quebrar(c, f"Quantidade: {item['quantidade']}", "Helvetica", 9.5, util - 6 * mm):
+                c.drawString(MARGEM + 6 * mm, y, linha)
+                y -= 4.4 * mm
+        if item.get("uso_continuo"):
+            c.setFont("Helvetica-Bold", 9.5)
+            c.setFillColorRGB(*NAVY)
+            for linha in _quebrar(
+                c,
+                "USO CONTÍNUO — tratamento por tempo indeterminado. Dispensar a quantidade máxima permitida pela legislação sanitária aplicável, observada a posologia prescrita.",
+                "Helvetica-Bold", 9.5, util - 6 * mm,
+            ):
                 c.drawString(MARGEM + 6 * mm, y, linha)
                 y -= 4.4 * mm
         if item.get("posologia"):

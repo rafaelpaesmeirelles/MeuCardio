@@ -169,6 +169,14 @@ class TestEmitirReceituario:
         assert auditoria.detail["metodo"] == "MANUAL"
         assert auditoria.detail["sha256"] == registro.sha256
 
+        envio = client.post(
+            f"/api/receituario/documentos/{doc_id}/enviar-email",
+            headers={"Authorization": f"Bearer {token}"},
+            json={"email": "paciente@teste.local"},
+        )
+        assert envio.status_code == 409
+        assert "assinatura qualificada ICP-Brasil" in envio.json()["detail"]
+
     def test_emitir_provedor_indisponivel_recusa_sem_gerar_nada(self, client, criar_usuario, db):
         _, token = criar_usuario(role="admin")
         doc_id = _criar_e_revisar_receita(client, token)

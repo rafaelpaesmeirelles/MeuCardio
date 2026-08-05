@@ -86,9 +86,80 @@ def list_drugs(
         query = query.filter(Drug.drug_class == drug_class)
     return [
         {"slug": d.slug, "generic_name": d.generic_name, "drug_class": d.drug_class,
-         "review_status": d.review_status}
+         "brand_names": d.brand_names or [], "review_status": d.review_status}
         for d in query.order_by(Drug.generic_name).limit(300)
     ]
+
+
+@router.get("/sugestoes")
+def sugerir_medicamentos(
+    q: str = Query(..., min_length=2, max_length=80),
+    db: Session = Depends(get_db),
+    _=Depends(current_user),
+):
+    """Autocomplete por DCB ou marca, com marcas atualizadas pela CMED.
+
+    O catálogo editorial ajuda mesmo antes da primeira importação CMED. Quando
+    há CMED, a versão mais recente prevalece como fonte dos nomes comerciais;
+    ela é atualizada pelo mesmo pipeline mensal/cron já usado para preços.
+    """
+    from app.services.professional_profile import normalize_search_text
+
+    termo = normalize_search_text(q)
+    candidatos: list[dict] = []
+    drogas = db.query(Drug).filter(Drug.published.is_(True)).order_by(Drug.generic_name).all()
+    por_id = {d.id: d for d in drogas}
+    for droga in drogas:
+        generico_normalizado = normalize_search_text(droga.generic_name)
+        if termo in generico_normalizado:
+            candidatos.append({
+                "slug": droga.slug, "generic_name": droga.generic_name,
+                "brand_name": None, "manufacturer": None, "source": "catálogo clínico",
+            })
+        for marca in droga.brand_names or []:
+            if termo in normalize_search_text(marca):
+                candidatos.append({
+                    "slug": droga.slug, "generic_name": droga.generic_name,
+                    "brand_name": marca, "manufacturer": None, "source": "catálogo clínico",
+                })
+
+    versao = db.query(CmedVersao).order_by(CmedVersao.id.desc()).first()
+    if versao:
+        linhas = (
+            db.query(CmedApresentacao)
+            .filter(
+                CmedApresentacao.cmed_versao_id == versao.id,
+                CmedApresentacao.drug_id.is_not(None),
+                CmedApresentacao.produto.ilike(f"%{q.strip()}%"),
+            )
+            .order_by(CmedApresentacao.produto, CmedApresentacao.laboratorio)
+            .limit(80)
+            .all()
+        )
+        for linha in linhas:
+            droga = por_id.get(linha.drug_id)
+            if droga:
+                candidatos.append({
+                    "slug": droga.slug, "generic_name": droga.generic_name,
+                    "brand_name": linha.produto, "manufacturer": linha.laboratorio,
+                    "source": f"CMED {versao.publicado_em}",
+                })
+
+    unicos: dict[tuple[str, str, str], dict] = {}
+    for item in candidatos:
+        chave = (
+            item["slug"], normalize_search_text(item.get("brand_name")),
+            normalize_search_text(item.get("manufacturer")),
+        )
+        atual = unicos.get(chave)
+        if atual is None or str(item["source"]).startswith("CMED"):
+            unicos[chave] = item
+
+    def ordem(item: dict) -> tuple[int, str, str]:
+        nome = normalize_search_text(item.get("brand_name") or item["generic_name"])
+        return (0 if nome.startswith(termo) else 1, nome, normalize_search_text(item.get("manufacturer")))
+
+    return sorted(unicos.values(), key=ordem)[:12]
 
 
 @router.get("/compare")
@@ -330,7 +401,9 @@ def apresentacoes_comerciais(
     uf_usada = (uf or user.council_state or "").upper() or None
     apresentacoes = [
         {
-            "produto": l.produto, "laboratorio": l.laboratorio, "apresentacao": l.apresentacao,
+            "produto": l.produto, "laboratorio": l.laboratorio,
+            "apresentacao": cmed_precos.apresentacao_legivel(l.apresentacao),
+            "apresentacao_cmed": l.apresentacao,
             "ggrem": l.ggrem, "registro": l.registro, "restricao_hospitalar": l.restricao_hospitalar,
             "preco": cmed_precos.preco_pmc(l.pmc_por_aliquota, uf_usada),
         }

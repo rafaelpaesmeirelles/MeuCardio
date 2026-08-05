@@ -98,7 +98,8 @@ def test_ordem_do_menu_alerta_e_deploy():
     assert "INDICADORES,\n        ADMIN,\n        CONTA," in shell
     assert shell.index("PAINEL,\n        ...NAV_BASE") < shell.index("{ to: \"/fila-telediagnostico\"")
     assert "Acervo de produção abaixo do inventário certificado" not in painel
-    assert 'className="emerg-atalho"' in shell
+    assert 'className="topo__emergencia"' in shell
+    assert ".topo__emergencia {" in shell_css
     assert ".emerg-atalho {" not in shell_css
     assert len(re.findall(r"(?m)^\.emerg-atalho\s*\{", emergencia_css)) == 1
     assert "padding: 0.8rem 1.15rem" in emergencia_css

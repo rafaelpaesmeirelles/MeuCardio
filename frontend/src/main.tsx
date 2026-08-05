@@ -5,6 +5,7 @@ import App from "./App";
 import { AuthProvider } from "./lib/auth";
 import "./styles/tokens.css";
 import "./styles/shell.css";
+import "./styles/produto.css";
 
 // PWA: quando um novo service worker assume o controle (skipWaiting +
 // clientsClaim, configurados em vite.config.ts), recarrega a aba uma única
