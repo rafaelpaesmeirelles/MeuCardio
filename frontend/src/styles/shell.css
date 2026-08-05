@@ -1692,3 +1692,45 @@
   .agenda-modal__acoes-distribuidas > div { display: grid; grid-template-columns: 1fr 1fr; }
   .agenda-modal__acoes-distribuidas .agenda-botao--perigo { width: 100%; }
 }
+
+/* Proteção de largura para celulares dobráveis, cujo viewport pode ficar
+ * acima do breakpoint móvel tradicional. */
+@media (max-width: 900px) {
+  .hoje-card--deslocamento {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+  }
+  .hoje-card--deslocamento .hoje-card__topo,
+  .hoje-card--deslocamento .hoje-card__topo > div,
+  .deslocamento-destino,
+  .deslocamento-destino > div,
+  .deslocamento-resumo,
+  .deslocamento-painel,
+  .deslocamento-mapa,
+  .deslocamento-rotas,
+  .deslocamento-proximos {
+    min-width: 0;
+    max-width: 100%;
+  }
+  .hoje-card--deslocamento .hoje-card__topo > div { flex: 1; }
+  .hoje-card--deslocamento .hoje-card__topo h2,
+  .deslocamento-destino strong,
+  .deslocamento-destino small,
+  .deslocamento-estado,
+  .deslocamento-proximos {
+    overflow-wrap: anywhere;
+    white-space: normal;
+  }
+  .deslocamento-destino > span { flex: 0 0 38px; }
+}
+
+@media (max-width: 719px) {
+  .hoje__grade { grid-template-columns: minmax(0, 1fr); }
+  .hoje-card--deslocamento .hoje-card__acao {
+    width: 100%;
+    justify-content: space-between;
+  }
+}

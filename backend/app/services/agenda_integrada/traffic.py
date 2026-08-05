@@ -81,12 +81,15 @@ def _finalize_routes(routes: list[dict[str, Any]]) -> list[dict[str, Any]]:
 
 
 def _google_routes(origin: tuple[float, float], destination: tuple[float, float]) -> dict[str, Any]:
+    # Para uma saída imediata, a própria Routes API usa o instante da
+    # requisição. Enviar datetime.now() como departureTime é instável: quando
+    # o Google valida o payload, o timestamp já pode estar no passado e a API
+    # responde INVALID_ARGUMENT.
     body = {
         "origin": {"location": {"latLng": {"latitude": origin[0], "longitude": origin[1]}}},
         "destination": {"location": {"latLng": {"latitude": destination[0], "longitude": destination[1]}}},
         "travelMode": "DRIVE",
         "routingPreference": "TRAFFIC_AWARE_OPTIMAL",
-        "departureTime": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
         "computeAlternativeRoutes": True,
         "extraComputations": ["TRAFFIC_ON_POLYLINE"],
         "languageCode": "pt-BR",

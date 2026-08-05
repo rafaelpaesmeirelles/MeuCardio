@@ -18,8 +18,12 @@ em embedding e muito bem em busca léxica.
 
 from __future__ import annotations
 
+from concurrent.futures import ThreadPoolExecutor
 import json
+import logging
 import re
+import time
+import unicodedata
 
 from sqlalchemy import func, select, text
 from sqlalchemy.orm import Session
@@ -28,6 +32,8 @@ from app.core.config import settings
 from app.models.content import Document
 from app.models.rag import AIConversation, AIMessage, DocumentChunk
 from app.services.ia.provedor import obter_provedor, obter_provedor_embeddings
+
+log = logging.getLogger("meucardio.rag")
 
 MAX_CHARS = 1400
 MIN_CHARS = 200
@@ -481,12 +487,103 @@ def contar_uso_diario(db: Session, user_id: int) -> int:
     ).scalar_one()
 
 
+MODELO_RAPIDO = "claude-haiku-4-5"
+MODELO_EQUILIBRADO = "claude-sonnet-5"
+MODELO_COMPLEXO = "claude-opus-5"
+HISTORICO_MAX_MENSAGENS = 6
+HISTORICO_MAX_CHARS = 16_000
+
+# Termos que transformam uma consulta curta em decisão clínica: estas
+# perguntas não devem cair no modelo mais leve só porque têm poucos caracteres.
+MARCADORES_DECISAO = (
+    "ajuste de dose", "anticoag", "contraindic", "diagnostico", "dose",
+    "emergencia", "gesta", "indicacao", "interacao", "lacta", "neonat",
+    "oncolog", "pediatr", "prescri", "prognost", "risco", "tratamento",
+)
+MARCADORES_COMPLEXIDADE = (
+    "caso clinico", "comorbidades", "diagnostico diferencial", "evidencias conflitantes",
+    "fragilidade", "multimorbidade", "multiplas diretrizes", "polifarmacia",
+)
+
+
+def _normalizar(texto: str) -> str:
+    decompondo = unicodedata.normalize("NFKD", texto.casefold())
+    return "".join(caractere for caractere in decompondo if not unicodedata.combining(caractere))
+
+
 def escolher_modelo_automatico(pergunta: str) -> str:
-    """Heurística v1 de seleção automática de modelo Claude, por tamanho da
-    pergunta — perguntas longas/complexas tendem a se beneficiar de um modelo
-    com mais capacidade de raciocínio (Fable 5); perguntas curtas/diretas vão
-    para Opus 5. Ajustar o limiar depois com uso real."""
-    return "claude-fable-5" if len(pergunta) >= 600 else "claude-opus-5"
+    """Seleciona capacidade proporcional à complexidade, não apenas ao tamanho.
+
+    A regra anterior enviava toda pergunta curta para Opus. Em produção, uma
+    consulta direta medida levou ~21 s; a mesma recuperação fundamentada com
+    Haiku levou ~7 s. Decisões terapêuticas continuam, no mínimo, no Sonnet, e
+    casos longos ou com múltiplos fatores sobem para Opus.
+    """
+    texto = _normalizar(pergunta)
+    marcadores_complexos = sum(marcador in texto for marcador in MARCADORES_COMPLEXIDADE)
+    if len(pergunta) >= 600 or marcadores_complexos >= 2:
+        return MODELO_COMPLEXO
+    if len(pergunta) >= 180 or marcadores_complexos or any(
+        marcador in texto for marcador in MARCADORES_DECISAO
+    ):
+        return MODELO_EQUILIBRADO
+    return MODELO_RAPIDO
+
+
+def limitar_historico(historico: list[dict]) -> list[dict]:
+    """Mantém continuidade sem reenviar conversas enormes ao modelo.
+
+    Respostas anteriores podem chegar a 4.096 tokens cada. O antigo `[-8:]`
+    permitia dezenas de milhares de caracteres extras a cada turno, fazendo a
+    latência crescer conforme a conversa avançava. Preservamos as mensagens
+    mais recentes, em pares completos sempre que couberem no orçamento.
+    """
+    selecionadas: list[dict] = []
+    total = 0
+    for mensagem in reversed(historico[-HISTORICO_MAX_MENSAGENS:]):
+        conteudo = str(mensagem.get("content") or "")
+        if total + len(conteudo) > HISTORICO_MAX_CHARS:
+            continue
+        selecionadas.append(mensagem)
+        total += len(conteudo)
+    return list(reversed(selecionadas))
+
+
+def _preparar_contexto(
+    db: Session,
+    pergunta: str,
+    temas: list[str] | None,
+) -> tuple[str, list[dict], list[dict], dict[str, int]]:
+    """Recupera base institucional e PubMed em paralelo.
+
+    O PubMed não usa a sessão do banco e pode executar em outra thread. Assim,
+    uma lentidão do NCBI deixa de ser somada integralmente ao embedding e à
+    consulta vetorial. Nenhum texto da pergunta é registrado em log.
+    """
+    from app.services.pubmed import buscar_pubmed, montar_contexto_pubmed
+
+    inicio = time.perf_counter()
+    with ThreadPoolExecutor(max_workers=1, thread_name_prefix="corvia-pubmed") as executor:
+        futuro_pubmed = executor.submit(buscar_pubmed, pergunta)
+        trechos = recuperar(db, pergunta, temas)
+        apos_rag = time.perf_counter()
+        artigos_pubmed = futuro_pubmed.result()
+    apos_fontes = time.perf_counter()
+
+    contexto, fontes = montar_contexto(trechos)
+    if not contexto:
+        contexto = "[Nenhum trecho da base institucional correspondeu à pergunta.]"
+    contexto_pubmed = montar_contexto_pubmed(artigos_pubmed)
+    if contexto_pubmed:
+        contexto = f"{contexto}\n\n{contexto_pubmed}"
+
+    metricas = {
+        "rag_ms": round((apos_rag - inicio) * 1000),
+        "fontes_ms": round((apos_fontes - inicio) * 1000),
+        "trechos": len(trechos),
+        "pubmed": len(artigos_pubmed),
+    }
+    return contexto, fontes, artigos_pubmed, metricas
 
 
 def perguntar(
@@ -495,28 +592,24 @@ def perguntar(
     historico: list[dict],
     temas: list[str] | None = None,
     modelo: str | None = None,
-    usar_internet: bool = True,
+    usar_internet: bool = False,
 ) -> dict:
-    from app.services.pubmed import buscar_pubmed, montar_contexto_pubmed
-
-    trechos = recuperar(db, pergunta, temas)
-    contexto, fontes = montar_contexto(trechos)
-    if not contexto:
-        contexto = "[Nenhum trecho da base institucional correspondeu à pergunta.]"
-
-    artigos_pubmed = buscar_pubmed(pergunta)
-    contexto_pubmed = montar_contexto_pubmed(artigos_pubmed)
-    if contexto_pubmed:
-        contexto = f"{contexto}\n\n{contexto_pubmed}"
+    inicio = time.perf_counter()
+    contexto, fontes, artigos_pubmed, metricas = _preparar_contexto(db, pergunta, temas)
 
     resposta = obter_provedor().responder(
         PROMPT_SISTEMA,
         [
-            *historico[-8:],
+            *limitar_historico(historico),
             {"role": "user", "content": f"CONTEXTO INSTITUCIONAL:\n{contexto}\n\nPERGUNTA:\n{pergunta}"},
         ],
         modelo=modelo,
         usar_internet=usar_internet,
+    )
+    log.info(
+        "ai_request_completed model=%s internet=%s sources_ms=%s total_ms=%s chunks=%s pubmed=%s",
+        resposta.modelo, usar_internet, metricas["fontes_ms"],
+        round((time.perf_counter() - inicio) * 1000), metricas["trechos"], metricas["pubmed"],
     )
 
     return {
@@ -537,7 +630,7 @@ def perguntar_stream(
     historico: list[dict],
     temas: list[str] | None = None,
     modelo: str | None = None,
-    usar_internet: bool = True,
+    usar_internet: bool = False,
 ):
     """Mesma lógica de `perguntar`, mas em streaming — existe para manter a
     conexão HTTP viva em perguntas longas com busca na internet ligada, que
@@ -548,32 +641,34 @@ def perguntar_stream(
     Gerador: produz {"delta": str} a cada pedaço de texto do modelo e termina
     com {"final": {...}} no mesmo formato de retorno de `perguntar`.
     """
-    from app.services.pubmed import buscar_pubmed, montar_contexto_pubmed
-
-    trechos = recuperar(db, pergunta, temas)
-    contexto, fontes = montar_contexto(trechos)
-    if not contexto:
-        contexto = "[Nenhum trecho da base institucional correspondeu à pergunta.]"
-
-    artigos_pubmed = buscar_pubmed(pergunta)
-    contexto_pubmed = montar_contexto_pubmed(artigos_pubmed)
-    if contexto_pubmed:
-        contexto = f"{contexto}\n\n{contexto_pubmed}"
+    inicio = time.perf_counter()
+    yield {"status": "Consultando a base científica e o PubMed…"}
+    contexto, fontes, artigos_pubmed, metricas = _preparar_contexto(db, pergunta, temas)
+    yield {"status": "Fontes localizadas. Preparando a síntese clínica…"}
 
     gerador = obter_provedor().responder_stream(
         PROMPT_SISTEMA,
         [
-            *historico[-8:],
+            *limitar_historico(historico),
             {"role": "user", "content": f"CONTEXTO INSTITUCIONAL:\n{contexto}\n\nPERGUNTA:\n{pergunta}"},
         ],
         modelo=modelo,
         usar_internet=usar_internet,
     )
+    primeiro_token_ms: int | None = None
     for evento in gerador:
         if "delta" in evento:
+            if primeiro_token_ms is None:
+                primeiro_token_ms = round((time.perf_counter() - inicio) * 1000)
             yield {"delta": evento["delta"]}
         else:
             resposta = evento["final"]
+            log.info(
+                "ai_stream_completed model=%s internet=%s sources_ms=%s first_token_ms=%s total_ms=%s chunks=%s pubmed=%s",
+                resposta.modelo, usar_internet, metricas["fontes_ms"],
+                primeiro_token_ms, round((time.perf_counter() - inicio) * 1000),
+                metricas["trechos"], metricas["pubmed"],
+            )
             yield {"final": {
                 "texto": resposta.texto,
                 "fontes": fontes,

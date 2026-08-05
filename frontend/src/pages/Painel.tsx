@@ -62,6 +62,15 @@ type Grupo = {
   links: { to: string; nome: string }[];
 };
 
+type AreaDestaque = {
+  nome: string;
+  contexto: string;
+  descricao: string;
+  to: string;
+  icone: NomeIcone;
+  tema?: string;
+};
+
 const ATALHOS: Atalho[] = [
   {
     to: "/receituario",
@@ -160,6 +169,52 @@ const GRUPOS: Grupo[] = [
     ],
   },
 ];
+
+const AREAS_DESTAQUE: AreaDestaque[] = [
+  {
+    nome: "Cardiologia Pediátrica",
+    contexto: "Infância e adolescência",
+    descricao: "Congênitas, arritmias, insuficiência cardíaca e seguimento por faixa etária.",
+    to: "/biblioteca?tema=Cardiologia%20pedi%C3%A1trica",
+    icone: "pacientes",
+    tema: "Cardiologia pediátrica",
+  },
+  {
+    nome: "Cardiologia Neonatal",
+    contexto: "Primeiros dias de vida",
+    descricao: "Triagem, cardiopatias congênitas e abordagem cardiovascular do recém-nascido.",
+    to: "/doencas?tab=congenitas&area=cardiopediatria",
+    icone: "doencas",
+  },
+  {
+    nome: "Cardio-Oncologia",
+    contexto: "Cuidado multidisciplinar",
+    descricao: "Avaliação de risco, prevenção e acompanhamento da cardiotoxicidade.",
+    to: "/biblioteca?tema=Cardio-oncologia",
+    icone: "evidencia",
+    tema: "Cardio-oncologia",
+  },
+  {
+    nome: "Cardio-Geriatria",
+    contexto: "Longevidade cardiovascular",
+    descricao: "Decisões adaptadas à multimorbidade, fragilidade e polifarmácia.",
+    to: "/biblioteca?tema=Cardiologia%20geri%C3%A1trica",
+    icone: "clinica",
+    tema: "Cardiologia geriátrica",
+  },
+  {
+    nome: "Cardiologia na Gestação e Amamentação",
+    contexto: "Ciclo gravídico-puerperal",
+    descricao: "Condutas cardiovasculares e segurança terapêutica durante gestação e lactação.",
+    to: "/biblioteca?tema=Gravidez",
+    icone: "medicamento",
+    tema: "Gravidez",
+  },
+];
+
+function mesmoTema(a: string, b: string) {
+  return a.localeCompare(b, "pt-BR", { sensitivity: "base" }) === 0;
+}
 
 function saudacao() {
   const hora = new Date().getHours();
@@ -289,6 +344,12 @@ export default function Painel() {
     ? new Date(new Date(proximosLocais[0].starts_at).getTime()
       - (deslocamento.routes[0].duration_seconds + proximosLocais[0].arrival_buffer_minutes * 60) * 1000)
     : null;
+  const temasSecundarios = useMemo(
+    () => temas.filter((tema) => !AREAS_DESTAQUE.some(
+      (area) => area.tema && mesmoTema(area.tema, tema.theme),
+    )),
+    [temas],
+  );
 
   return (
     <div className="hoje">
@@ -440,14 +501,58 @@ export default function Painel() {
           <Numero rotulo="evidências" valor={evidencias} to="/evidencias" />
           <Numero rotulo="estudos" valor={estudos} to="/estudos" />
         </div>
-        {temas.length > 0 && (
-          <div className="hoje__temas" aria-label="Temas disponíveis">
-            {temas.slice(0, 8).map((tema) => (
-              <Link key={tema.theme} to={`/biblioteca?tema=${encodeURIComponent(tema.theme)}`}>
-                <span>{tema.theme}</span><small>{tema.count.toLocaleString("pt-BR")}</small>
-              </Link>
-            ))}
+
+        <section className="hoje__destaques" aria-labelledby="areas-destaque-titulo">
+          <div className="hoje__destaques-intro">
+            <div>
+              <p className="eyebrow">Áreas em destaque</p>
+              <h3 id="areas-destaque-titulo">Respostas para cenários que exigem mais segurança</h3>
+            </div>
+            <p>Conteúdo especializado para decisões menos frequentes e de maior complexidade.</p>
           </div>
+          <div className="hoje__destaques-grade">
+            {AREAS_DESTAQUE.map((area, index) => {
+              const total = area.tema
+                ? temas.find((tema) => mesmoTema(area.tema || "", tema.theme))?.count
+                : undefined;
+              return (
+                <article className="hoje-area" key={area.nome}>
+                  <Link to={area.to} aria-label={`Explorar ${area.nome}`}>
+                    <span className="hoje-area__topo">
+                      <span className="hoje-area__icone"><Icone nome={area.icone} /></span>
+                      <span className="hoje-area__numero">{String(index + 1).padStart(2, "0")}</span>
+                    </span>
+                    <span className="hoje-area__contexto">{area.contexto}</span>
+                    <h4>{area.nome}</h4>
+                    <p>{area.descricao}</p>
+                    <span className="hoje-area__rodape">
+                      <small>{total !== undefined ? `${total.toLocaleString("pt-BR")} conteúdos` : "Coleção especializada"}</small>
+                      <span>Explorar <Icone nome="seta" /></span>
+                    </span>
+                  </Link>
+                </article>
+              );
+            })}
+          </div>
+        </section>
+
+        {temasSecundarios.length > 0 && (
+          <section className="hoje__outros-temas" aria-labelledby="outros-temas-titulo">
+            <div className="hoje__outros-temas-topo">
+              <div>
+                <p className="eyebrow">Acervo completo</p>
+                <h3 id="outros-temas-titulo">Outras áreas e temas</h3>
+              </div>
+              <span>{temasSecundarios.length} coleções</span>
+            </div>
+            <div className="hoje__temas" aria-label="Outras áreas e temas disponíveis">
+              {temasSecundarios.map((tema) => (
+                <Link key={tema.theme} to={`/biblioteca?tema=${encodeURIComponent(tema.theme)}`}>
+                  <span>{tema.theme}</span><small>{tema.count.toLocaleString("pt-BR")}</small>
+                </Link>
+              ))}
+            </div>
+          </section>
         )}
       </section>
 
