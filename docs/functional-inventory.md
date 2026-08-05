@@ -22,6 +22,7 @@ superfície é adicionada sem revisão explícita do inventário.
 ## Funcionalidades presentes no produto
 
 - autenticação, solicitação de acesso, ativação e recuperação de senha;
+- páginas públicas revisadas de Termos de Uso e Política de Privacidade;
 - sessão web HttpOnly, encerramento de sessões e conta do usuário;
 - painel, busca global, favoritos e alertas por condição/diretriz;
 - Biblioteca científica, documentos, fluxogramas, diretrizes e galeria;

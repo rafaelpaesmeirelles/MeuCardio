@@ -19,6 +19,7 @@ MAIN = ROOT / "backend/app/main.py"
 
 EXPECTED_APP_ROUTES = {
     "/", "/produto", "/entrar", "/solicitar-acesso", "/esqueci-senha", "/redefinir-senha",
+    "/privacidade", "/termos",
     "/corvia-mail", "/apresentacao", "/biblioteca", "/biblioteca/:slug",
     "/doencas", "/doencas/:slug", "/triagem-sintomas",
     "/fluxogramas", "/diretrizes", "/busca", "/calculadoras",
@@ -70,6 +71,8 @@ EXPECTED_SUPPORT_FILES = {
     "frontend/src/pages/CorviaMail.tsx",
     "frontend/src/pages/Agenda.tsx",
     "frontend/src/pages/Produto.tsx",
+    "frontend/src/pages/PoliticaPrivacidade.tsx",
+    "frontend/src/pages/TermosUso.tsx",
     "frontend/src/pages/Emergencia.tsx",
     "frontend/src/pages/GuiaDoencas.tsx",
     "frontend/src/pages/GuiaDoenca.tsx",
