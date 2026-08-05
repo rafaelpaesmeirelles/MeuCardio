@@ -28,7 +28,7 @@ class Pergunta(BaseModel):
     conversation_id: int | None = None
     temas: list[str] | None = None
     modelo: str | None = None
-    usar_internet: bool = True
+    usar_internet: bool = False
 
 
 @router.get("/status")
@@ -233,7 +233,9 @@ def perguntar_stream(dados: Pergunta, db: Session = Depends(get_db), user=Depend
                 db2, dados.pergunta, historico, dados.temas,
                 modelo=modelo_efetivo, usar_internet=dados.usar_internet,
             ):
-                if "delta" in evento:
+                if "status" in evento:
+                    yield f"data: {json.dumps({'tipo': 'status', 'etapa': evento['status']}, ensure_ascii=False)}\n\n"
+                elif "delta" in evento:
                     texto_acumulado.append(evento["delta"])
                     yield f"data: {json.dumps({'tipo': 'delta', 'texto': evento['delta']}, ensure_ascii=False)}\n\n"
                 else:

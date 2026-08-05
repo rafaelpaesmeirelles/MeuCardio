@@ -25,14 +25,16 @@ export default function Assistente() {
   const [pergunta, setPergunta] = useState("");
   const [conversa, setConversa] = useState<number | null>(null);
   const [pensando, setPensando] = useState(false);
+  const [etapa, setEtapa] = useState("");
   const [erro, setErro] = useState("");
   const [historico, setHistorico] = useState<ConversaResumo[]>([]);
   const [mostrarHistorico, setMostrarHistorico] = useState(false);
   // "" = Automático (recomendado) — o backend escolhe o modelo pela pergunta.
   const [modeloEscolhido, setModeloEscolhido] = useState("");
-  // Precisa nascer ligado: é assim que o assistente se comporta "como uma
-  // sessão do Claude comum" — ninguém liga um checkbox que não sabe que existe.
-  const [usarInternet, setUsarInternet] = useState(true);
+  // A base CorvIA e o PubMed continuam sempre ativos. A pesquisa web do Claude
+  // é uma etapa aprofundada e opcional, pois pode acrescentar dezenas de
+  // segundos quando o provedor executa múltiplas buscas.
+  const [usarInternet, setUsarInternet] = useState(false);
   const fim = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -75,6 +77,7 @@ export default function Assistente() {
     setErro("");
     setMensagens((m) => [...m, { papel: "user", conteudo: texto }, { papel: "assistant", conteudo: "" }]);
     setPensando(true);
+    setEtapa("Preparando a consulta clínica…");
     // Sinaliza para main.tsx que um streaming está em andamento: se o
     // service worker trocar de versão nesse meio-tempo, a recarga da página
     // fica pendente em vez de cortar a resposta no meio (ver main.tsx).
@@ -85,7 +88,10 @@ export default function Assistente() {
         modelo: status?.provedor === "anthropic" && modeloEscolhido ? modeloEscolhido : undefined,
         usar_internet: status?.provedor === "anthropic" ? usarInternet : false,
       }, (evento) => {
-        if (evento.tipo === "delta") {
+        if (evento.tipo === "status") {
+          setEtapa(evento.etapa || "Consultando fontes…");
+        } else if (evento.tipo === "delta") {
+          setEtapa("");
           // Acrescenta o pedaço à última mensagem (a bolha do assistente
           // criada vazia acima) em vez de esperar o texto inteiro — é o que
           // faz a resposta aparecer sendo "digitada" e mantém a conexão viva
@@ -120,6 +126,7 @@ export default function Assistente() {
       setErro(e instanceof Error ? e.message : "Não foi possível consultar o assistente.");
     } finally {
       setPensando(false);
+      setEtapa("");
       (window as unknown as { __streamAtivo?: boolean }).__streamAtivo = false;
       (window as unknown as { __streamEncerrado?: () => void }).__streamEncerrado?.();
     }
@@ -170,7 +177,7 @@ export default function Assistente() {
                   checked={usarInternet}
                   onChange={(e) => setUsarInternet(e.target.checked)}
                 />
-                Buscar na internet
+                Pesquisa web aprofundada (mais lenta)
               </label>
             </>
           )}
@@ -246,7 +253,10 @@ export default function Assistente() {
               // primeiro pedaço chegar) — mostra os três pontinhos nela mesma
               // em vez de uma bolha extra embaixo, enquanto não há texto.
               m.conteudo === "" && pensando && i === mensagens.length - 1 ? (
-                <span className="ia__pensando"><span /><span /><span /></span>
+                <span className="ia__carregando">
+                  <span className="ia__pensando" aria-hidden="true"><span /><span /><span /></span>
+                  <small role="status">{etapa || "Preparando resposta…"}</small>
+                </span>
               ) : (
               <>
                 <Markdown remarkPlugins={[remarkGfm]}>{m.conteudo}</Markdown>
