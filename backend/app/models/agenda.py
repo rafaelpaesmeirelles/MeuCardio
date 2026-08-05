@@ -158,6 +158,62 @@ class AvailabilityException(Base):
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_agora)
 
 
+class CalendarCommitmentSeries(Base):
+    """Compromisso manual único ou recorrente, sem dados de paciente."""
+
+    __tablename__ = "calendar_commitment_series"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    owner_id: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), index=True)
+    location_id: Mapped[int | None] = mapped_column(
+        ForeignKey("calendar_locations.id", ondelete="SET NULL"), nullable=True, index=True
+    )
+    title: Mapped[str] = mapped_column(String(200))
+    category: Mapped[str] = mapped_column(String(40), default="compromisso")
+    description: Mapped[str | None] = mapped_column(Text, nullable=True)
+    timezone: Mapped[str] = mapped_column(String(80), default="America/Sao_Paulo")
+    starts_on: Mapped[date] = mapped_column(Date, index=True)
+    start_time: Mapped[time] = mapped_column(Time)
+    duration_minutes: Mapped[int] = mapped_column(Integer, default=30)
+    recurrence: Mapped[str] = mapped_column(String(20), default="none", index=True)
+    recurrence_interval: Mapped[int] = mapped_column(Integer, default=1)
+    weekdays: Mapped[list] = mapped_column(JSONB, default=list)
+    month_day: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    ends_on: Mapped[date | None] = mapped_column(Date, nullable=True, index=True)
+    blocks_scheduling: Mapped[bool] = mapped_column(Boolean, default=True)
+    color: Mapped[str] = mapped_column(String(16), default="#6B4EFF")
+    active: Mapped[bool] = mapped_column(Boolean, default=True, index=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_agora)
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_agora, onupdate=_agora)
+
+
+class CalendarCommitmentException(Base):
+    """Cancelamento ou alteração de uma ocorrência sem mudar a série-base."""
+
+    __tablename__ = "calendar_commitment_exceptions"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    owner_id: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), index=True)
+    series_id: Mapped[int] = mapped_column(
+        ForeignKey("calendar_commitment_series.id", ondelete="CASCADE"), index=True
+    )
+    occurrence_date: Mapped[date] = mapped_column(Date, index=True)
+    action: Mapped[str] = mapped_column(String(20), default="override")
+    override_starts_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    override_ends_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    override_title: Mapped[str | None] = mapped_column(String(200), nullable=True)
+    override_location_id: Mapped[int | None] = mapped_column(
+        ForeignKey("calendar_locations.id", ondelete="SET NULL"), nullable=True
+    )
+    notes: Mapped[str | None] = mapped_column(String(500), nullable=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_agora)
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_agora, onupdate=_agora)
+
+    __table_args__ = (
+        UniqueConstraint("series_id", "occurrence_date", name="uq_commitment_exception_occurrence"),
+    )
+
+
 class CalendarDelegation(Base):
     __tablename__ = "calendar_delegations"
 

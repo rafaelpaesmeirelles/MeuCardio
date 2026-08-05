@@ -169,6 +169,87 @@ def test_work_routine_drives_daily_plan_and_rejects_overlap(client, criar_usuari
     assert plan.json()["routines"][0]["planning_notes"] == "Entrada pela recepção principal."
 
 
+def test_recurring_commitment_allows_single_occurrence_override(client, criar_usuario, db):
+    user, token = criar_usuario(email="agenda.recorrencia@teste.local")
+    _subscribe(db, user.id)
+    first_date = (datetime.now(timezone.utc) + timedelta(days=3)).date()
+    created = client.post("/api/agenda/commitment-series", headers=_headers(token), json={
+        "title": "Reunião do corpo clínico",
+        "category": "reuniao",
+        "timezone": "UTC",
+        "starts_on": first_date.isoformat(),
+        "start_time": "09:00:00",
+        "duration_minutes": 60,
+        "recurrence": "weekly",
+        "weekdays": [first_date.weekday()],
+        "blocks_scheduling": True,
+    })
+    assert created.status_code == 201, created.text
+    series_id = created.json()["id"]
+
+    end_date = first_date + timedelta(days=20)
+    occurrences = client.get(
+        f"/api/agenda/commitments?start={first_date.isoformat()}&end={end_date.isoformat()}",
+        headers=_headers(token),
+    )
+    assert occurrences.status_code == 200, occurrences.text
+    assert len(occurrences.json()) == 3
+    assert all(item["calendar_kind"] == "commitment" for item in occurrences.json())
+
+    moved_start = datetime.combine(first_date, datetime.min.time(), tzinfo=timezone.utc).replace(hour=14)
+    exception = client.put(
+        f"/api/agenda/commitment-series/{series_id}/exceptions",
+        headers=_headers(token),
+        json={
+            "occurrence_date": first_date.isoformat(), "action": "override",
+            "starts_at": moved_start.isoformat(),
+            "ends_at": (moved_start + timedelta(minutes=90)).isoformat(),
+            "title": "Reunião excepcional",
+        },
+    )
+    assert exception.status_code == 200, exception.text
+
+    refreshed = client.get(
+        f"/api/agenda/commitments?start={first_date.isoformat()}&end={end_date.isoformat()}",
+        headers=_headers(token),
+    ).json()
+    assert refreshed[0]["title"] == "Reunião excepcional"
+    assert refreshed[0]["duration_minutes"] == 90
+    assert refreshed[0]["is_exception"] is True
+    assert refreshed[1]["title"] == "Reunião do corpo clínico"
+    assert refreshed[1]["duration_minutes"] == 60
+    assert refreshed[1]["is_exception"] is False
+
+
+def test_blocking_manual_commitment_rejects_patient_double_booking(client, criar_usuario, db):
+    user, token = criar_usuario(email="agenda.bloqueio-manual@teste.local")
+    _subscribe(db, user.id)
+    commitment_date = (datetime.now(timezone.utc) + timedelta(days=4)).date()
+    created = client.post("/api/agenda/commitment-series", headers=_headers(token), json={
+        "title": "Plantão externo",
+        "category": "plantao",
+        "timezone": "UTC",
+        "starts_on": commitment_date.isoformat(),
+        "start_time": "15:00:00",
+        "duration_minutes": 180,
+        "recurrence": "none",
+        "blocks_scheduling": True,
+    })
+    assert created.status_code == 201, created.text
+
+    appointment_start = datetime.combine(
+        commitment_date, datetime.min.time(), tzinfo=timezone.utc,
+    ).replace(hour=16)
+    appointment = client.post("/api/agenda/appointments", headers=_headers(token), json={
+        "patient_name": "Paciente em conflito",
+        "starts_at": appointment_start.isoformat(),
+        "duration_minutes": 30,
+    })
+    assert appointment.status_code == 409, appointment.text
+    assert appointment.json()["detail"]["code"] == "schedule_conflict"
+    assert appointment.json()["detail"]["conflicts"][0]["reason"] == "manual_commitment"
+
+
 def test_resource_cannot_reference_another_tenant_location(client, criar_usuario, db):
     owner, owner_token = criar_usuario(email="agenda.resource.owner@teste.local")
     other, other_token = criar_usuario(email="agenda.resource.other@teste.local")

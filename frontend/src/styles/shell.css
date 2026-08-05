@@ -1663,3 +1663,32 @@
   .deslocamento-rotas__lista button { flex: 0 0 min(78vw, 280px); scroll-snap-align: start; }
   .deslocamento-destino strong { white-space: normal; }
 }
+
+/* Agenda: compromissos recorrentes e integrações por local de trabalho */
+.agenda-evento--compromisso {
+  background: color-mix(in srgb, var(--evento-cor) 9%, white);
+  border-style: dashed;
+}
+.agenda-evento--compromisso .agenda-evento__hora strong { color: color-mix(in srgb, var(--evento-cor) 80%, #102f39); }
+.agenda-form-grid label small { display: block; margin-top: .25rem; color: var(--texto-terciario); font-size: .57rem; font-weight: 500; line-height: 1.4; }
+.agenda-form-grid input[type="color"] { width: 100%; min-height: 44px; padding: .3rem; cursor: pointer; }
+.agenda-modal__destaque { margin: 0; padding: .7rem .8rem; color: var(--acento-escuro); background: color-mix(in srgb, var(--acento) 7%, white); border: 1px solid color-mix(in srgb, var(--acento) 16%, var(--borda)); border-radius: 10px; font-size: .65rem; line-height: 1.45; }
+.agenda-modal__painel > footer.agenda-modal__acoes-distribuidas { align-items: center; justify-content: space-between; }
+.agenda-modal__acoes-distribuidas > div { display: flex; gap: .55rem; }
+.agenda-series-lista { display: grid; gap: .35rem; }
+.agenda-integracao-form { grid-template-columns: minmax(160px, .8fr) minmax(220px, 1.4fr); }
+.agenda-integracao-form label { display: flex; min-width: 0; flex-direction: column; gap: .25rem; color: var(--texto-secundario); font-size: .64rem; font-weight: 750; }
+.agenda-integracao-form label input,
+.agenda-integracao-form label select { margin: 0; }
+.agenda-integracao-form .span-2 { grid-column: 1 / -1; }
+.agenda-conectores-catalogo { margin-top: .75rem; color: var(--texto-secundario); font-size: .65rem; }
+.agenda-conectores-catalogo > summary { padding: .5rem 0; color: var(--acento); font-weight: 750; cursor: pointer; }
+
+@media (max-width: 760px) {
+  .agenda-cabecalho__acoes { display: grid; grid-template-columns: 1fr 1fr; }
+  .agenda-cabecalho__acoes .botao:first-child { grid-column: 1 / -1; }
+  .agenda-integracao-form { grid-template-columns: 1fr; }
+  .agenda-modal__painel > footer.agenda-modal__acoes-distribuidas { align-items: stretch; flex-direction: column-reverse; }
+  .agenda-modal__acoes-distribuidas > div { display: grid; grid-template-columns: 1fr 1fr; }
+  .agenda-modal__acoes-distribuidas .agenda-botao--perigo { width: 100%; }
+}

@@ -32,7 +32,11 @@ type Servico = {
 };
 
 type Agendamento = {
-  id: number;
+  id: number | string;
+  calendar_kind?: "appointment" | "commitment";
+  series_id?: number;
+  occurrence_date?: string;
+  title?: string;
   patient_name: string | null;
   patient_phone: string | null;
   starts_at: string;
@@ -50,6 +54,18 @@ type Agendamento = {
   sync_status: string;
   conflict_reason: string | null;
   version: number;
+  recurrence?: "none" | "daily" | "weekly" | "monthly";
+  blocks_scheduling?: boolean;
+  is_exception?: boolean;
+  color?: string;
+};
+
+type SerieCompromisso = {
+  id: number; title: string; category: string; location_id: number | null;
+  location: LocalAgenda | null; timezone: string; starts_on: string; start_time: string;
+  duration_minutes: number; recurrence: "none" | "daily" | "weekly" | "monthly";
+  recurrence_interval: number; weekdays: number[]; month_day: number | null;
+  ends_on: string | null; blocks_scheduling: boolean; color: string; active: boolean;
 };
 
 type Integracao = {
@@ -119,6 +135,7 @@ const STATUS: Record<string, string> = {
 
 const ORIGEM: Record<string, string> = {
   corvia: "Corvia",
+  corvia_manual: "Compromisso manual",
   google_calendar: "Google",
   microsoft_365: "Microsoft 365",
   feegow: "Feegow",
@@ -171,6 +188,24 @@ function dataTitulo(date: Date, visao: Visao) {
   return `${start.toLocaleDateString("pt-BR", { day: "2-digit", month: "short" })} — ${end.toLocaleDateString("pt-BR", { day: "2-digit", month: "short", year: "numeric" })}`;
 }
 
+function dataApi(date: Date) {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
+function recorrenciaLabel(item: SerieCompromisso) {
+  if (item.recurrence === "none") return "Evento único";
+  const intervalo = item.recurrence_interval > 1 ? ` a cada ${item.recurrence_interval}` : "";
+  if (item.recurrence === "daily") return `Diário${intervalo}${item.recurrence_interval > 1 ? " dias" : ""}`;
+  if (item.recurrence === "weekly") {
+    const dias = item.weekdays.map((day) => DIAS_SEMANA[day]).join(", ");
+    return `Semanal${intervalo}${item.recurrence_interval > 1 ? " semanas" : ""} · ${dias}`;
+  }
+  return `Mensal${intervalo}${item.recurrence_interval > 1 ? " meses" : ""} · dia ${item.month_day}`;
+}
+
 function formatarDinheiro(value: number | null) {
   return value == null ? "Não definido" : (value / 100).toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 }
@@ -179,24 +214,29 @@ function endereco(local: LocalAgenda) {
   return [local.address?.street, local.address?.number, local.address?.city, local.address?.state].filter(Boolean).join(" · ") || "Endereço não informado";
 }
 
-function Evento({ item, aoCancelar }: { item: Agendamento; aoCancelar: (item: Agendamento) => void }) {
+function Evento({ item, aoCancelar, aoAjustar }: {
+  item: Agendamento; aoCancelar: (item: Agendamento) => void;
+  aoAjustar: (item: Agendamento) => void;
+}) {
+  const compromisso = item.calendar_kind === "commitment";
   return (
-    <article className={`agenda-evento agenda-evento--${item.status}`} style={{ "--evento-cor": item.service?.color || item.location?.color || "#087E8B" } as CSSProperties}>
+    <article className={`agenda-evento agenda-evento--${item.status}${compromisso ? " agenda-evento--compromisso" : ""}`} style={{ "--evento-cor": item.color || item.service?.color || item.location?.color || "#087E8B" } as CSSProperties}>
       <div className="agenda-evento__hora"><strong>{horario(item.starts_at)}</strong><span>{item.duration_minutes} min</span></div>
       <div className="agenda-evento__corpo">
         <div className="agenda-evento__linha">
-          <h3>{item.patient_name || "Paciente não informado"}</h3>
+          <h3>{compromisso ? item.title : item.patient_name || "Paciente não informado"}</h3>
           <span className="agenda-pill">{STATUS[item.status] || item.status}</span>
         </div>
-        <p>{item.service?.name || item.appointment_type} · {item.visit_mode === "teleconsulta" ? "Teleconsulta" : item.location?.name || "Local a definir"}</p>
+        <p>{compromisso ? `${item.appointment_type} · ${item.location?.name || "Sem local"}` : `${item.service?.name || item.appointment_type} · ${item.visit_mode === "teleconsulta" ? "Teleconsulta" : item.location?.name || "Local a definir"}`}</p>
         <div className="agenda-evento__meta">
           <span><Icone nome="sincronizar" /> {ORIGEM[item.source] || item.source}</span>
           {item.conflict_reason && <span className="agenda-evento__conflito">Encaixe</span>}
           {item.sync_status === "pending_external" && <span>Sincronizando…</span>}
+          {compromisso && item.recurrence !== "none" && <span>Recorrente{item.is_exception ? " · ajustado" : ""}</span>}
         </div>
       </div>
       {!['cancelado', 'realizado'].includes(item.status) && (
-        <button className="agenda-evento__mais" onClick={() => aoCancelar(item)} aria-label={`Cancelar agendamento de ${item.patient_name || "paciente"}`}><Icone nome="mais" /></button>
+        <button className="agenda-evento__mais" onClick={() => compromisso ? aoAjustar(item) : aoCancelar(item)} aria-label={compromisso ? `Alterar ${item.title}` : `Cancelar agendamento de ${item.patient_name || "paciente"}`}><Icone nome="mais" /></button>
       )}
     </article>
   );
@@ -206,6 +246,8 @@ export default function Agenda() {
   const [visao, setVisao] = useState<Visao>("semana");
   const [referencia, setReferencia] = useState(new Date());
   const [agendamentos, setAgendamentos] = useState<Agendamento[] | null>(null);
+  const [compromissos, setCompromissos] = useState<Agendamento[]>([]);
+  const [series, setSeries] = useState<SerieCompromisso[]>([]);
   const [locais, setLocais] = useState<LocalAgenda[]>([]);
   const [servicos, setServicos] = useState<Servico[]>([]);
   const [integracoes, setIntegracoes] = useState<Integracao[]>([]);
@@ -216,6 +258,8 @@ export default function Agenda() {
   const [filtroLocal, setFiltroLocal] = useState("");
   const [filtroOrigem, setFiltroOrigem] = useState("");
   const [novoAberto, setNovoAberto] = useState(false);
+  const [compromissoAberto, setCompromissoAberto] = useState(false);
+  const [ajustando, setAjustando] = useState<Agendamento | null>(null);
   const [configAberta, setConfigAberta] = useState(false);
   const [cancelando, setCancelando] = useState<Agendamento | null>(null);
   const [motivoCancelamento, setMotivoCancelamento] = useState("");
@@ -226,6 +270,15 @@ export default function Agenda() {
     starts_at: localDateTime(), service_id: "", location_id: "", duration_minutes: 30,
     visit_mode: "presencial", payment_mode: "particular", insurance_name: "", notes: "",
   });
+  const [novoCompromisso, setNovoCompromisso] = useState({
+    title: "", category: "compromisso", starts_at: localDateTime(), duration_minutes: 60,
+    location_id: "", recurrence: "none", recurrence_interval: 1, weekdays: [] as number[],
+    ends_on: "", blocks_scheduling: true, description: "", color: "#6B4EFF",
+  });
+  const [ajusteCompromisso, setAjusteCompromisso] = useState({
+    starts_at: "", ends_at: "", title: "", location_id: "", notes: "",
+  });
+  const [novaIntegracao, setNovaIntegracao] = useState({ provider: "feegow", display_name: "" });
   const [novoLocal, setNovoLocal] = useState({ name: "", city: "", state: "", latitude: "", longitude: "" });
   const [novoServico, setNovoServico] = useState({ name: "", code: "", location_id: "", duration_minutes: 30, price: "", allow_extra_slot: false });
   const [novaRotina, setNovaRotina] = useState({
@@ -234,11 +287,13 @@ export default function Agenda() {
     arrival_buffer_minutes: 15, planning_notes: "",
   });
   const novoModalRef = useRef<HTMLDivElement>(null);
+  const compromissoModalRef = useRef<HTMLDivElement>(null);
+  const ajusteModalRef = useRef<HTMLDivElement>(null);
   const configModalRef = useRef<HTMLDivElement>(null);
   const cancelarModalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const panel = cancelando ? cancelarModalRef.current : configAberta ? configModalRef.current : novoAberto ? novoModalRef.current : null;
+    const panel = ajustando ? ajusteModalRef.current : cancelando ? cancelarModalRef.current : configAberta ? configModalRef.current : compromissoAberto ? compromissoModalRef.current : novoAberto ? novoModalRef.current : null;
     if (!panel) return;
     const previous = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     const oldOverflow = document.body.style.overflow;
@@ -250,8 +305,10 @@ export default function Agenda() {
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         event.preventDefault();
-        if (cancelando) { setCancelando(null); setMotivoCancelamento(""); }
+        if (ajustando) setAjustando(null);
+        else if (cancelando) { setCancelando(null); setMotivoCancelamento(""); }
         else if (configAberta) setConfigAberta(false);
+        else if (compromissoAberto) setCompromissoAberto(false);
         else setNovoAberto(false);
         return;
       }
@@ -268,10 +325,10 @@ export default function Agenda() {
       document.body.style.overflow = oldOverflow;
       previous?.focus();
     };
-  }, [novoAberto, configAberta, cancelando]);
+  }, [novoAberto, compromissoAberto, configAberta, cancelando, ajustando]);
 
   async function carregar() {
-    const [appointments, locations, services, integrations, capabilities, mobility, routines] = await Promise.all([
+    const [appointments, locations, services, integrations, capabilities, mobility, routines, commitmentSeries] = await Promise.all([
       api.get<Agendamento[]>("/agenda/appointments"),
       api.get<LocalAgenda[]>("/agenda/locations"),
       api.get<Servico[]>("/agenda/services"),
@@ -279,20 +336,32 @@ export default function Agenda() {
       api.get<Capacidades>("/agenda/capabilities"),
       api.get<PreferenciaMobilidade>("/agenda/mobility/preferences"),
       api.get<RotinaTrabalho[]>("/agenda/work-routines"),
+      api.get<SerieCompromisso[]>("/agenda/commitment-series"),
     ]);
     setAgendamentos(appointments); setLocais(locations); setServicos(services);
-    setIntegracoes(integrations); setCapacidades(capabilities); setMobilidade(mobility); setRotinas(routines);
+    setIntegracoes(integrations); setCapacidades(capabilities); setMobilidade(mobility); setRotinas(routines); setSeries(commitmentSeries);
+  }
+
+  async function carregarCompromissos(reference = referencia) {
+    const start = somaDias(reference, -90);
+    const end = somaDias(reference, 300);
+    setCompromissos(await api.get<Agendamento[]>(`/agenda/commitments?start=${dataApi(start)}&end=${dataApi(end)}`));
+  }
+
+  async function atualizarAgenda() {
+    await Promise.all([carregar(), carregarCompromissos()]);
   }
 
   useEffect(() => { carregar().catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível abrir a agenda.")); }, []);
+  useEffect(() => { carregarCompromissos(referencia).catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível carregar os compromissos pessoais.")); }, [referencia]);
 
-  const filtrados = useMemo(() => (agendamentos ?? []).filter((item) => {
+  const filtrados = useMemo(() => [...(agendamentos ?? []), ...compromissos].filter((item) => {
     const query = busca.trim().toLocaleLowerCase("pt-BR");
-    if (query && !`${item.patient_name || ""} ${item.service?.name || ""} ${item.location?.name || ""}`.toLocaleLowerCase("pt-BR").includes(query)) return false;
+    if (query && !`${item.title || ""} ${item.patient_name || ""} ${item.service?.name || ""} ${item.location?.name || ""}`.toLocaleLowerCase("pt-BR").includes(query)) return false;
     if (filtroLocal && item.location?.id !== Number(filtroLocal)) return false;
     if (filtroOrigem && item.source !== filtroOrigem) return false;
     return true;
-  }), [agendamentos, busca, filtroLocal, filtroOrigem]);
+  }), [agendamentos, compromissos, busca, filtroLocal, filtroOrigem]);
 
   const diasVisiveis = useMemo(() => {
     if (visao === "dia") return [inicioDia(referencia)];
@@ -336,6 +405,87 @@ export default function Agenda() {
     } catch (e) {
       setErro(e instanceof ApiError ? e.message : "Não foi possível criar o agendamento.");
     } finally { setSalvando(false); }
+  }
+
+  function alternarDiaCompromisso(day: number) {
+    setNovoCompromisso((current) => ({
+      ...current,
+      weekdays: current.weekdays.includes(day)
+        ? current.weekdays.filter((item) => item !== day)
+        : [...current.weekdays, day].sort(),
+    }));
+  }
+
+  async function salvarCompromisso() {
+    if (!novoCompromisso.title.trim() || !novoCompromisso.starts_at) return;
+    setSalvando(true); setErro("");
+    try {
+      const [startsOn, startTime] = novoCompromisso.starts_at.split("T");
+      const selectedLocation = locais.find((item) => item.id === Number(novoCompromisso.location_id));
+      await api.post("/agenda/commitment-series", {
+        title: novoCompromisso.title.trim(), category: novoCompromisso.category,
+        description: novoCompromisso.description || null,
+        location_id: novoCompromisso.location_id ? Number(novoCompromisso.location_id) : null,
+        timezone: selectedLocation?.timezone || Intl.DateTimeFormat().resolvedOptions().timeZone || "America/Sao_Paulo",
+        starts_on: startsOn, start_time: startTime,
+        duration_minutes: novoCompromisso.duration_minutes,
+        recurrence: novoCompromisso.recurrence,
+        recurrence_interval: novoCompromisso.recurrence_interval,
+        weekdays: novoCompromisso.recurrence === "weekly" ? novoCompromisso.weekdays : [],
+        month_day: novoCompromisso.recurrence === "monthly" ? Number(startsOn.slice(8, 10)) : null,
+        ends_on: novoCompromisso.recurrence !== "none" && novoCompromisso.ends_on ? novoCompromisso.ends_on : null,
+        blocks_scheduling: novoCompromisso.blocks_scheduling,
+        color: novoCompromisso.color,
+      });
+      setCompromissoAberto(false);
+      setNovoCompromisso({ title: "", category: "compromisso", starts_at: localDateTime(), duration_minutes: 60, location_id: "", recurrence: "none", recurrence_interval: 1, weekdays: [], ends_on: "", blocks_scheduling: true, description: "", color: "#6B4EFF" });
+      await atualizarAgenda();
+    } catch (e) {
+      setErro(e instanceof ApiError ? e.message : "Não foi possível salvar o compromisso.");
+    } finally { setSalvando(false); }
+  }
+
+  function abrirAjusteCompromisso(item: Agendamento) {
+    setAjusteCompromisso({
+      starts_at: localDateTime(new Date(item.starts_at)), ends_at: localDateTime(new Date(item.ends_at)),
+      title: item.title || "", location_id: item.location ? String(item.location.id) : "", notes: item.notes || "",
+    });
+    setAjustando(item);
+  }
+
+  async function salvarExcecaoCompromisso(action: "cancel" | "override") {
+    if (!ajustando?.series_id || !ajustando.occurrence_date) return;
+    setSalvando(true); setErro("");
+    try {
+      await api.put(`/agenda/commitment-series/${ajustando.series_id}/exceptions`, {
+        occurrence_date: ajustando.occurrence_date, action,
+        starts_at: action === "override" ? new Date(ajusteCompromisso.starts_at).toISOString() : null,
+        ends_at: action === "override" ? new Date(ajusteCompromisso.ends_at).toISOString() : null,
+        title: action === "override" ? ajusteCompromisso.title.trim() || null : null,
+        location_id: action === "override" && ajusteCompromisso.location_id ? Number(ajusteCompromisso.location_id) : null,
+        notes: ajusteCompromisso.notes || null,
+      });
+      setAjustando(null);
+      await carregarCompromissos();
+    } catch (e) {
+      setErro(e instanceof ApiError ? e.message : "Não foi possível alterar esta ocorrência.");
+    } finally { setSalvando(false); }
+  }
+
+  async function removerSerie(id: number) {
+    await api.delete(`/agenda/commitment-series/${id}`);
+    await atualizarAgenda();
+  }
+
+  async function prepararIntegracao() {
+    if (!novaIntegracao.display_name.trim()) return;
+    await api.post("/agenda/integrations", {
+      provider: novaIntegracao.provider, display_name: novaIntegracao.display_name.trim(),
+      sync_strategy: "external_authoritative", configuration: {}, credentials: {},
+      enabled: false, write_enabled: false, consent_accepted: false,
+    });
+    setNovaIntegracao((current) => ({ ...current, display_name: "" }));
+    await carregar();
   }
 
   async function confirmarCancelamento() {
@@ -410,7 +560,9 @@ export default function Agenda() {
 
   const hoje = new Date();
   const conflitos = filtrados.filter((item) => item.conflict_reason).length;
-  const proximos = filtrados.filter((item) => new Date(item.starts_at).getTime() >= Date.now() && item.status !== "cancelado");
+  const proximos = filtrados
+    .filter((item) => new Date(item.starts_at).getTime() >= Date.now() && item.status !== "cancelado")
+    .sort((first, second) => +new Date(first.starts_at) - +new Date(second.starts_at));
 
   return (
     <div className="agenda-integrada">
@@ -418,7 +570,8 @@ export default function Agenda() {
         <div><p className="eyebrow">Operação clínica</p><h1>Agenda Integrada</h1><p>Horários, locais, recursos e sistemas externos em uma única visão.</p></div>
         <div className="agenda-cabecalho__acoes">
           <button className="botao botao--secundario" onClick={() => setConfigAberta(true)}><Icone nome="configuracao" /> Configurar</button>
-          <button className="botao" onClick={() => setNovoAberto(true)}><Icone nome="agenda" /> Novo agendamento</button>
+          <button className="botao botao--secundario" onClick={() => setCompromissoAberto(true)}><Icone nome="agenda" /> Compromisso pessoal</button>
+          <button className="botao" onClick={() => setNovoAberto(true)}><Icone nome="agenda" /> Novo atendimento</button>
         </div>
       </header>
 
@@ -426,7 +579,7 @@ export default function Agenda() {
         <span className="agenda-status__ok"><i /> Agenda Corvia ativa</span>
         <span><Icone nome="sincronizar" /> {integracoes.filter((item) => item.status === "connected").length} integrações conectadas</span>
         <span>{capacidades?.external_writes_enabled ? "Escrita externa homologada" : "Escrita externa protegida"}</span>
-        <button onClick={() => carregar()}><Icone nome="sincronizar" /> Atualizar</button>
+        <button onClick={() => atualizarAgenda().catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível atualizar."))}><Icone nome="sincronizar" /> Atualizar</button>
       </section>
 
       {erro && <div className="agenda-alerta" role="alert"><strong>Atenção</strong><span>{erro}</span><button onClick={() => setErro("")} aria-label="Fechar"><Icone nome="fechar" /></button></div>}
@@ -444,16 +597,16 @@ export default function Agenda() {
       </section>
 
       <section className="agenda-filtros">
-        <label className="agenda-busca"><Icone nome="busca" /><span className="sr-only">Buscar</span><input value={busca} onChange={(e) => setBusca(e.target.value)} placeholder="Paciente, serviço ou local" /></label>
+        <label className="agenda-busca"><Icone nome="busca" /><span className="sr-only">Buscar</span><input value={busca} onChange={(e) => setBusca(e.target.value)} placeholder="Paciente, compromisso, serviço ou local" /></label>
         <label><Icone nome="pin" /><span className="sr-only">Filtrar local</span><select value={filtroLocal} onChange={(e) => setFiltroLocal(e.target.value)}><option value="">Todos os locais</option>{locais.map((item) => <option key={item.id} value={item.id}>{item.name}</option>)}</select></label>
-        <label><Icone nome="sincronizar" /><span className="sr-only">Filtrar origem</span><select value={filtroOrigem} onChange={(e) => setFiltroOrigem(e.target.value)}><option value="">Todas as origens</option><option value="corvia">Corvia</option><option value="google_calendar">Google</option><option value="microsoft_365">Microsoft 365</option></select></label>
+        <label><Icone nome="sincronizar" /><span className="sr-only">Filtrar origem</span><select value={filtroOrigem} onChange={(e) => setFiltroOrigem(e.target.value)}><option value="">Todas as origens</option><option value="corvia">Atendimentos Corvia</option><option value="corvia_manual">Compromissos pessoais</option><option value="google_calendar">Google</option><option value="microsoft_365">Microsoft 365</option></select></label>
       </section>
 
       <div className="agenda-layout">
         <main className="agenda-calendario">
           {agendamentos === null ? <p className="agenda-carregando">Organizando sua agenda…</p> : visao === "lista" ? (
             <div className="agenda-lista">
-              {proximos.length === 0 ? <p className="agenda-vazio">Nenhum compromisso encontrado.</p> : proximos.slice(0, 100).map((item) => <div key={item.id} className="agenda-lista__linha"><time>{new Date(item.starts_at).toLocaleDateString("pt-BR", { day: "2-digit", month: "short" })}</time><Evento item={item} aoCancelar={setCancelando} /></div>)}
+              {proximos.length === 0 ? <p className="agenda-vazio">Nenhum compromisso encontrado.</p> : proximos.slice(0, 100).map((item) => <div key={item.id} className="agenda-lista__linha"><time>{new Date(item.starts_at).toLocaleDateString("pt-BR", { day: "2-digit", month: "short" })}</time><Evento item={item} aoCancelar={setCancelando} aoAjustar={abrirAjusteCompromisso} /></div>)}
             </div>
           ) : (
             <div className={`agenda-grade agenda-grade--${visao}`}>
@@ -462,7 +615,7 @@ export default function Agenda() {
                 const outside = visao === "mes" && dia.getMonth() !== referencia.getMonth();
                 return <section key={dia.toISOString()} className={`agenda-dia${mesmoDia(dia, hoje) ? " agenda-dia--hoje" : ""}${outside ? " agenda-dia--fora" : ""}`}>
                   <header><span>{dataCurta(dia)}</span>{mesmoDia(dia, hoje) && <i>Hoje</i>}</header>
-                  <div>{items.length ? items.map((item) => <Evento key={item.id} item={item} aoCancelar={setCancelando} />) : <button className="agenda-dia__livre" onClick={() => { const slot = new Date(dia); slot.setHours(9, 0, 0, 0); setNovo((current) => ({ ...current, starts_at: localDateTime(slot) })); setNovoAberto(true); }}>Horário livre <span>+</span></button>}</div>
+                  <div>{items.length ? items.map((item) => <Evento key={item.id} item={item} aoCancelar={setCancelando} aoAjustar={abrirAjusteCompromisso} />) : <button className="agenda-dia__livre" onClick={() => { const slot = new Date(dia); slot.setHours(9, 0, 0, 0); setNovo((current) => ({ ...current, starts_at: localDateTime(slot) })); setNovoAberto(true); }}>Horário livre <span>+</span></button>}</div>
                 </section>;
               })}
             </div>
@@ -470,15 +623,48 @@ export default function Agenda() {
         </main>
 
         <aside className="agenda-insights" aria-label="Inteligência da agenda">
-          <article><p className="eyebrow">Próximo atendimento</p>{proximos[0] ? <><strong>{horario(proximos[0].starts_at)} · {proximos[0].patient_name}</strong><span>{proximos[0].location?.name || "Local a definir"}</span></> : <span>Agenda livre.</span>}</article>
+          <article><p className="eyebrow">Próximo compromisso</p>{proximos[0] ? <><strong>{horario(proximos[0].starts_at)} · {proximos[0].title || proximos[0].patient_name || "Compromisso"}</strong><span>{proximos[0].location?.name || "Local a definir"}</span></> : <span>Agenda livre.</span>}</article>
           <article><p className="eyebrow">Operação</p><div className="agenda-insights__metricas"><span><strong>{proximos.length}</strong> próximos</span><span><strong>{conflitos}</strong> encaixes</span><span><strong>{locais.length}</strong> locais</span></div></article>
           <article className="agenda-insights__mobilidade"><p className="eyebrow">Deslocamento inteligente</p><strong>{mobilidade?.enabled ? "Atualização automática ativa" : "Ative o trânsito no painel"}</strong><span>{capacidades?.traffic_configured ? `Trânsito por ${capacidades.traffic_provider}` : "Aguardando credencial do provedor de trânsito"}</span><button onClick={() => setConfigAberta(true)}>Configurar mobilidade <Icone nome="seta" /></button></article>
           <article><p className="eyebrow">Sincronização</p>{integracoes.length ? integracoes.map((item) => <div className="agenda-integracao-mini" key={item.id}><i className={`status-${item.status}`} /><span><strong>{item.display_name}</strong><small>{item.last_success_at ? `Atualizada ${new Date(item.last_success_at).toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" })}` : item.status}</small></span></div>) : <span>Nenhum sistema externo conectado.</span>}</article>
         </aside>
       </div>
 
+      {compromissoAberto && <div className="agenda-modal" role="dialog" aria-modal="true" aria-labelledby="novo-compromisso-titulo"><div className="agenda-modal__painel" ref={compromissoModalRef} tabIndex={-1}>
+        <header><div><p className="eyebrow">Agenda pessoal e profissional</p><h2 id="novo-compromisso-titulo">Novo compromisso</h2></div><button onClick={() => setCompromissoAberto(false)} aria-label="Fechar"><Icone nome="fechar" /></button></header>
+        <div className="agenda-form-grid">
+          <label className="span-2">Título<input autoFocus value={novoCompromisso.title} onChange={(e) => setNovoCompromisso({ ...novoCompromisso, title: e.target.value })} placeholder="Ex.: reunião clínica, plantão ou atividade administrativa" /></label>
+          <label>Tipo<select value={novoCompromisso.category} onChange={(e) => setNovoCompromisso({ ...novoCompromisso, category: e.target.value })}><option value="compromisso">Compromisso</option><option value="trabalho">Trabalho</option><option value="reuniao">Reunião</option><option value="plantao">Plantão</option><option value="estudo">Estudo</option><option value="pessoal">Pessoal</option><option value="outro">Outro</option></select></label>
+          <label>Local<select value={novoCompromisso.location_id} onChange={(e) => setNovoCompromisso({ ...novoCompromisso, location_id: e.target.value })}><option value="">Sem local definido</option>{locais.filter((item) => item.active).map((item) => <option key={item.id} value={item.id}>{item.name}</option>)}</select></label>
+          <label>Primeira ocorrência<input type="datetime-local" value={novoCompromisso.starts_at} onChange={(e) => setNovoCompromisso({ ...novoCompromisso, starts_at: e.target.value })} /></label>
+          <label>Duração (min)<input type="number" min={5} max={1440} value={novoCompromisso.duration_minutes} onChange={(e) => setNovoCompromisso({ ...novoCompromisso, duration_minutes: Number(e.target.value) })} /></label>
+          <label>Repetição<select value={novoCompromisso.recurrence} onChange={(e) => setNovoCompromisso({ ...novoCompromisso, recurrence: e.target.value })}><option value="none">Não repetir</option><option value="daily">Diariamente</option><option value="weekly">Semanalmente</option><option value="monthly">Mensalmente</option></select></label>
+          {novoCompromisso.recurrence !== "none" && <label>Intervalo<input type="number" min={1} max={52} value={novoCompromisso.recurrence_interval} onChange={(e) => setNovoCompromisso({ ...novoCompromisso, recurrence_interval: Number(e.target.value) })} /><small>A cada {novoCompromisso.recurrence_interval} {novoCompromisso.recurrence === "daily" ? "dia(s)" : novoCompromisso.recurrence === "weekly" ? "semana(s)" : "mês(es)"}</small></label>}
+          {novoCompromisso.recurrence === "weekly" && <fieldset className="agenda-rotina__dias span-2"><legend>Dias da semana</legend><div>{DIAS_SEMANA.map((day, index) => <button key={day} type="button" className={novoCompromisso.weekdays.includes(index) ? "ativo" : ""} aria-pressed={novoCompromisso.weekdays.includes(index)} onClick={() => alternarDiaCompromisso(index)}>{day}</button>)}</div></fieldset>}
+          {novoCompromisso.recurrence !== "none" && <label>Repetir até<input type="date" min={novoCompromisso.starts_at.slice(0, 10)} value={novoCompromisso.ends_on} onChange={(e) => setNovoCompromisso({ ...novoCompromisso, ends_on: e.target.value })} /><small>Deixe vazio para manter a rotina ativa.</small></label>}
+          <label>Cor<input type="color" value={novoCompromisso.color} onChange={(e) => setNovoCompromisso({ ...novoCompromisso, color: e.target.value })} /></label>
+          <label className="agenda-check span-2"><input type="checkbox" checked={novoCompromisso.blocks_scheduling} onChange={(e) => setNovoCompromisso({ ...novoCompromisso, blocks_scheduling: e.target.checked })} /> Bloquear este período para novos atendimentos e evitar conflitos.</label>
+          <label className="span-2">Observações<textarea rows={3} value={novoCompromisso.description} onChange={(e) => setNovoCompromisso({ ...novoCompromisso, description: e.target.value })} placeholder="Informações úteis para sua rotina" /></label>
+          <p className="agenda-config-help span-2">Uma rotina contínua será exibida na agenda sem criar eventos infinitos. Depois, cada data poderá ser alterada ou cancelada isoladamente.</p>
+        </div>
+        <footer><button className="botao botao--secundario" onClick={() => setCompromissoAberto(false)}>Cancelar</button><button className="botao" disabled={salvando || !novoCompromisso.title.trim()} onClick={salvarCompromisso}>{salvando ? "Salvando…" : "Criar compromisso"}</button></footer>
+      </div></div>}
+
+      {ajustando && <div className="agenda-modal" role="dialog" aria-modal="true" aria-labelledby="ajustar-compromisso-titulo"><div className="agenda-modal__painel agenda-modal__painel--compacto" ref={ajusteModalRef} tabIndex={-1}>
+        <header><div><p className="eyebrow">Alteração pontual</p><h2 id="ajustar-compromisso-titulo">Ajustar somente esta ocorrência</h2></div><button onClick={() => setAjustando(null)} aria-label="Fechar"><Icone nome="fechar" /></button></header>
+        <div className="agenda-form-grid">
+          <p className="span-2 agenda-modal__destaque">As demais ocorrências da rotina continuarão inalteradas.</p>
+          <label className="span-2">Título<input autoFocus value={ajusteCompromisso.title} onChange={(e) => setAjusteCompromisso({ ...ajusteCompromisso, title: e.target.value })} /></label>
+          <label>Início<input type="datetime-local" value={ajusteCompromisso.starts_at} onChange={(e) => setAjusteCompromisso({ ...ajusteCompromisso, starts_at: e.target.value })} /></label>
+          <label>Fim<input type="datetime-local" value={ajusteCompromisso.ends_at} onChange={(e) => setAjusteCompromisso({ ...ajusteCompromisso, ends_at: e.target.value })} /></label>
+          <label className="span-2">Local<select value={ajusteCompromisso.location_id} onChange={(e) => setAjusteCompromisso({ ...ajusteCompromisso, location_id: e.target.value })}><option value="">Sem local definido</option>{locais.filter((item) => item.active).map((item) => <option key={item.id} value={item.id}>{item.name}</option>)}</select></label>
+          <label className="span-2">Observações<textarea rows={3} value={ajusteCompromisso.notes} onChange={(e) => setAjusteCompromisso({ ...ajusteCompromisso, notes: e.target.value })} /></label>
+        </div>
+        <footer className="agenda-modal__acoes-distribuidas"><button className="botao agenda-botao--perigo" disabled={salvando} onClick={() => salvarExcecaoCompromisso("cancel")}>Cancelar esta data</button><div><button className="botao botao--secundario" onClick={() => setAjustando(null)}>Voltar</button><button className="botao" disabled={salvando || !ajusteCompromisso.starts_at || !ajusteCompromisso.ends_at || new Date(ajusteCompromisso.ends_at) <= new Date(ajusteCompromisso.starts_at)} onClick={() => salvarExcecaoCompromisso("override")}>{salvando ? "Salvando…" : "Salvar alteração"}</button></div></footer>
+      </div></div>}
+
       {novoAberto && <div className="agenda-modal" role="dialog" aria-modal="true" aria-labelledby="novo-agendamento-titulo"><div className="agenda-modal__painel" ref={novoModalRef} tabIndex={-1}>
-        <header><div><p className="eyebrow">Novo compromisso</p><h2 id="novo-agendamento-titulo">Agendar atendimento</h2></div><button onClick={() => setNovoAberto(false)} aria-label="Fechar"><Icone nome="fechar" /></button></header>
+        <header><div><p className="eyebrow">Novo atendimento</p><h2 id="novo-agendamento-titulo">Agendar paciente</h2></div><button onClick={() => setNovoAberto(false)} aria-label="Fechar"><Icone nome="fechar" /></button></header>
         <div className="agenda-form-grid">
           <label className="span-2">Paciente<input autoFocus value={novo.patient_name} onChange={(e) => setNovo({ ...novo, patient_name: e.target.value })} placeholder="Nome completo" /></label>
           <label>Telefone<input value={novo.patient_phone} onChange={(e) => setNovo({ ...novo, patient_phone: e.target.value })} /></label>
@@ -529,9 +715,29 @@ export default function Agenda() {
             <button className="botao botao--secundario" disabled={!novaRotina.location_id || !novaRotina.weekdays.length || novaRotina.end_time <= novaRotina.start_time} onClick={() => adicionarRotina().catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível cadastrar a rotina."))}>Salvar rotina</button>
           </div>
         </section>
+        <section className="agenda-config-section">
+          <div className="agenda-config-section__title"><div><h3>Compromissos recorrentes</h3><p>Rotinas visíveis no calendário, com exceções pontuais por data.</p></div><span>{series.filter((item) => item.active).length}</span></div>
+          <div className="agenda-series-lista">
+            {series.filter((item) => item.active).length ? series.filter((item) => item.active).map((item) => <div className="agenda-config-item" key={item.id}>
+              <i style={{ background: item.color }} />
+              <span><strong>{item.title}</strong><small>{recorrenciaLabel(item)} · {item.start_time.slice(0, 5)} · {item.duration_minutes} min{item.location ? ` · ${item.location.name}` : ""}{item.blocks_scheduling ? " · bloqueia horários" : ""}</small></span>
+              <button className="agenda-icon-button" onClick={() => removerSerie(item.id).catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível encerrar a rotina."))} aria-label={`Encerrar rotina ${item.title}`} title="Encerrar toda a série"><Icone nome="fechar" /></button>
+            </div>) : <p className="agenda-config-vazio">Nenhum compromisso recorrente ativo. Use “Compromisso pessoal” no topo da agenda.</p>}
+          </div>
+        </section>
         <section className="agenda-config-section"><div className="agenda-config-section__title"><div><h3>Catálogo de serviços</h3><p>Duração, preço, modalidade e política de encaixe.</p></div><span>{servicos.length}</span></div>{servicos.map((item) => <div className="agenda-config-item" key={item.id}><i style={{ background: item.color }} /><span><strong>{item.name} · {item.duration_minutes} min</strong><small>{item.visit_mode} · {formatarDinheiro(item.private_price_cents)}{item.allow_extra_slot ? " · aceita encaixe" : ""}</small></span></div>)}<div className="agenda-config-form agenda-config-form--service"><input placeholder="Nome do serviço" value={novoServico.name} onChange={(e) => setNovoServico({ ...novoServico, name: e.target.value, code: e.target.value })} /><select value={novoServico.location_id} onChange={(e) => setNovoServico({ ...novoServico, location_id: e.target.value })}><option value="">Todos os locais</option>{locais.map((item) => <option key={item.id} value={item.id}>{item.name}</option>)}</select><input type="number" min={5} value={novoServico.duration_minutes} onChange={(e) => setNovoServico({ ...novoServico, duration_minutes: Number(e.target.value) })} /><input inputMode="decimal" placeholder="Preço particular" value={novoServico.price} onChange={(e) => setNovoServico({ ...novoServico, price: e.target.value })} /><label className="agenda-check"><input type="checkbox" checked={novoServico.allow_extra_slot} onChange={(e) => setNovoServico({ ...novoServico, allow_extra_slot: e.target.checked })} /> Permitir encaixe</label><button className="botao botao--secundario" onClick={() => adicionarServico().catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível adicionar o serviço."))}>Adicionar serviço</button></div></section>
         <section className="agenda-config-section"><div className="agenda-config-section__title"><div><h3>Deslocamento inteligente</h3><p>A posição atual não é armazenada; a permissão permanece sob controle do aparelho.</p></div><button className={`agenda-switch${mobilidade?.enabled ? " ativo" : ""}`} role="switch" aria-checked={mobilidade?.enabled || false} onClick={() => alternarMobilidade().catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível alterar a mobilidade."))}><span /></button></div><div className="agenda-config-note"><Icone nome="rota" /><span><strong>{mobilidade?.enabled ? "Atualização automática em primeiro plano" : "Recurso desativado"}</strong><small>{capacidades?.traffic_configured ? "Trânsito em tempo real disponível." : "É preciso configurar uma credencial de trânsito no servidor."}</small></span></div></section>
-        <section className="agenda-config-section"><div className="agenda-config-section__title"><div><h3>Sistemas conectados</h3><p>Capacidades são liberadas somente após documentação e homologação.</p></div></div>{capacidades?.connectors.map((item) => <div className="agenda-config-item" key={item.provider}><i className={item.status === "adapter_available" ? "conectavel" : "em-breve"} /><span><strong>{item.name}</strong><small>{item.status === "adapter_available" ? "Adaptador oficial disponível" : item.status === "homologation_required" ? "Aguardando homologação oficial" : "Em breve"}</small></span><span className="agenda-pill">{item.capabilities.create_appointment ? "Bidirecional" : item.capabilities.read_appointments ? "Leitura" : "Protegido"}</span></div>)}</section>
+        <section className="agenda-config-section">
+          <div className="agenda-config-section__title"><div><h3>Importar agendas de clínicas e hospitais</h3><p>Prepare uma conexão para cada local de trabalho. Ativação e escrita exigem API oficial, credenciais e homologação do fornecedor.</p></div><span>{integracoes.length}</span></div>
+          {integracoes.map((item) => <div className="agenda-config-item" key={item.id}><i className={item.status === "connected" ? "conectavel" : "em-breve"} /><span><strong>{item.display_name}</strong><small>{capacidades?.connectors.find((connector) => connector.provider === item.provider)?.name || item.provider} · {item.status === "draft" ? "preparada, aguardando configuração" : item.status === "connected" ? "conectada" : item.last_error_message || item.status}</small></span><span className="agenda-pill">{item.enabled ? "Ativa" : "Rascunho"}</span></div>)}
+          <div className="agenda-config-form agenda-integracao-form">
+            <label>Sistema<select value={novaIntegracao.provider} onChange={(e) => setNovaIntegracao({ ...novaIntegracao, provider: e.target.value })}>{capacidades?.connectors.map((item) => <option key={item.provider} value={item.provider}>{item.name}</option>)}</select></label>
+            <label>Clínica ou hospital<input value={novaIntegracao.display_name} onChange={(e) => setNovaIntegracao({ ...novaIntegracao, display_name: e.target.value })} placeholder="Ex.: Hospital Central · agenda principal" /></label>
+            <p className="agenda-config-help span-2">Esta etapa registra a solicitação sem enviar senhas. O conector só será ativado após consentimento e validação técnica; fornecedores sem API homologada permanecem identificados como pendentes.</p>
+            <button className="botao botao--secundario" disabled={!novaIntegracao.display_name.trim()} onClick={() => prepararIntegracao().catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível preparar a integração."))}>Preparar integração</button>
+          </div>
+          <details className="agenda-conectores-catalogo"><summary>Ver disponibilidade por sistema</summary>{capacidades?.connectors.map((item) => <div className="agenda-config-item" key={item.provider}><i className={item.status === "adapter_available" ? "conectavel" : "em-breve"} /><span><strong>{item.name}</strong><small>{item.status === "adapter_available" ? "Adaptador oficial disponível" : item.status === "homologation_required" ? "Depende de homologação oficial" : "Integração planejada"}</small></span><span className="agenda-pill">{item.capabilities.create_appointment ? "Bidirecional" : item.capabilities.read_appointments ? "Leitura" : "Pendente"}</span></div>)}</details>
+        </section>
         <footer><button className="botao" onClick={() => setConfigAberta(false)}>Concluir configuração</button></footer>
       </div></div>}
     </div>

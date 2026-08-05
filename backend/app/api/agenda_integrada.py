@@ -8,7 +8,7 @@ from typing import Literal
 from zoneinfo import ZoneInfo
 
 from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException, Query
-from pydantic import BaseModel, ConfigDict, Field, field_validator
+from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
 from sqlalchemy.orm import Session
 
 from app.core.config import settings
@@ -19,6 +19,8 @@ from app.models.agenda import (
     AppointmentResource,
     AvailabilityException,
     AvailabilityRule,
+    CalendarCommitmentException,
+    CalendarCommitmentSeries,
     CalendarDelegation,
     CalendarIntegration,
     CalendarLocation,
@@ -46,6 +48,7 @@ from app.services.agenda_integrada.domain import (
 )
 from app.services.agenda_integrada.traffic import traffic_eta
 from app.services.agenda_integrada.notifications import send_appointment_communication, send_pending_communications
+from app.services.agenda_integrada.recurrence import occurrence_dates, occurrence_interval
 from app.services.cofre import cifrar_campo
 
 router = APIRouter(prefix="/api/agenda", tags=["agenda-integrada"])
@@ -159,6 +162,65 @@ class AvailabilityExceptionIn(StrictModel):
     ends_at: datetime
     exception_type: Literal["bloqueio", "ferias", "evento", "disponibilidade_extra"] = "bloqueio"
     reason: str | None = Field(default=None, max_length=300)
+
+
+class CommitmentSeriesIn(StrictModel):
+    title: str = Field(min_length=2, max_length=200)
+    category: Literal["compromisso", "trabalho", "reuniao", "plantao", "estudo", "pessoal", "outro"] = "compromisso"
+    description: str | None = Field(default=None, max_length=4000)
+    location_id: int | None = None
+    timezone: str = "America/Sao_Paulo"
+    starts_on: date
+    start_time: time
+    duration_minutes: int = Field(default=30, ge=5, le=1440)
+    recurrence: Literal["none", "daily", "weekly", "monthly"] = "none"
+    recurrence_interval: int = Field(default=1, ge=1, le=52)
+    weekdays: list[int] = Field(default_factory=list, max_length=7)
+    month_day: int | None = Field(default=None, ge=1, le=31)
+    ends_on: date | None = None
+    blocks_scheduling: bool = True
+    color: str = Field(default="#6B4EFF", pattern=r"^#[0-9A-Fa-f]{6}$")
+
+    @field_validator("timezone")
+    @classmethod
+    def _timezone(cls, value: str) -> str:
+        return timezone_valido(value)
+
+    @field_validator("weekdays")
+    @classmethod
+    def _weekdays(cls, value: list[int]) -> list[int]:
+        if any(day < 0 or day > 6 for day in value):
+            raise ValueError("Dia da semana inválido.")
+        return sorted(set(value))
+
+    @model_validator(mode="after")
+    def _recurrence(self):
+        if self.ends_on and self.ends_on < self.starts_on:
+            raise ValueError("A data final precisa ser igual ou posterior à inicial.")
+        if self.recurrence == "weekly" and not self.weekdays:
+            self.weekdays = [self.starts_on.weekday()]
+        if self.recurrence == "monthly" and self.month_day is None:
+            self.month_day = self.starts_on.day
+        return self
+
+
+class CommitmentExceptionIn(StrictModel):
+    occurrence_date: date
+    action: Literal["cancel", "override"]
+    starts_at: datetime | None = None
+    ends_at: datetime | None = None
+    title: str | None = Field(default=None, max_length=200)
+    location_id: int | None = None
+    notes: str | None = Field(default=None, max_length=500)
+
+    @model_validator(mode="after")
+    def _override(self):
+        if self.action == "override" and (self.starts_at is None or self.ends_at is None):
+            raise ValueError("Informe o novo início e fim da ocorrência.")
+        # A comparação definitiva ocorre no endpoint após ambos os valores
+        # serem normalizados no fuso da ocorrência. Isso também aceita com
+        # segurança um cliente que envie um valor com offset e outro sem.
+        return self
 
 
 class AppointmentIn(StrictModel):
@@ -312,6 +374,106 @@ def _dump_routine(db: Session, item: AvailabilityRule) -> dict:
         "location": _dump_location(location) if location else None,
         "service": _dump_service(service) if service else None,
     }
+
+
+def _commitment_series(db: Session, series_id: int, owner_id: int) -> CalendarCommitmentSeries:
+    item = db.query(CalendarCommitmentSeries).filter(
+        CalendarCommitmentSeries.id == series_id,
+        CalendarCommitmentSeries.owner_id == owner_id,
+    ).first()
+    if not item:
+        raise HTTPException(status_code=404, detail="Compromisso recorrente não encontrado.")
+    return item
+
+
+def _dump_commitment_series(db: Session, item: CalendarCommitmentSeries) -> dict:
+    location = db.get(CalendarLocation, item.location_id) if item.location_id else None
+    return {
+        "id": item.id, "title": item.title, "category": item.category,
+        "description": item.description, "location_id": item.location_id,
+        "location": _dump_location(location) if location else None,
+        "timezone": item.timezone, "starts_on": item.starts_on,
+        "start_time": item.start_time, "duration_minutes": item.duration_minutes,
+        "recurrence": item.recurrence, "recurrence_interval": item.recurrence_interval,
+        "weekdays": item.weekdays or [], "month_day": item.month_day,
+        "ends_on": item.ends_on, "blocks_scheduling": item.blocks_scheduling,
+        "color": item.color, "active": item.active,
+    }
+
+
+def _commitment_occurrences(
+    db: Session, owner_id: int, start_date: date, end_date: date,
+    *, include_cancelled: bool = True,
+) -> list[dict]:
+    series_items = db.query(CalendarCommitmentSeries).filter(
+        CalendarCommitmentSeries.owner_id == owner_id,
+        CalendarCommitmentSeries.active.is_(True),
+        CalendarCommitmentSeries.starts_on <= end_date,
+        (CalendarCommitmentSeries.ends_on.is_(None) | (CalendarCommitmentSeries.ends_on >= start_date)),
+    ).all()
+    series_ids = [item.id for item in series_items]
+    exceptions = db.query(CalendarCommitmentException).filter(
+        CalendarCommitmentException.owner_id == owner_id,
+        CalendarCommitmentException.series_id.in_(series_ids),
+        CalendarCommitmentException.occurrence_date >= start_date,
+        CalendarCommitmentException.occurrence_date <= end_date,
+    ).all() if series_ids else []
+    exception_map = {(item.series_id, item.occurrence_date): item for item in exceptions}
+    result: list[dict] = []
+    for series in series_items:
+        base_location = db.get(CalendarLocation, series.location_id) if series.location_id else None
+        for occurrence_date in occurrence_dates(series, start_date, end_date):
+            exception = exception_map.get((series.id, occurrence_date))
+            cancelled = bool(exception and exception.action == "cancel")
+            if cancelled and not include_cancelled:
+                continue
+            starts_at, ends_at = occurrence_interval(series, occurrence_date)
+            title = series.title
+            location = base_location
+            notes = series.description
+            if exception and exception.action == "override":
+                starts_at = exception.override_starts_at or starts_at
+                ends_at = exception.override_ends_at or ends_at
+                title = exception.override_title or title
+                if exception.override_location_id:
+                    location = db.get(CalendarLocation, exception.override_location_id)
+                notes = exception.notes or notes
+            result.append({
+                "id": f"commitment:{series.id}:{occurrence_date.isoformat()}",
+                "calendar_kind": "commitment", "series_id": series.id,
+                "occurrence_date": occurrence_date, "title": title,
+                "patient_name": None, "patient_phone": None,
+                "starts_at": starts_at, "ends_at": ends_at,
+                "duration_minutes": max(5, int((ends_at - starts_at).total_seconds() // 60)),
+                "appointment_type": series.category,
+                "status": "cancelado" if cancelled else "confirmado",
+                "notes": notes, "location": _dump_location(location) if location else None,
+                "service": None, "visit_mode": "presencial" if location else "nao_informado",
+                "payment_mode": "nao_informado", "price_cents": None,
+                "source": "corvia_manual", "sync_status": "local_only",
+                "conflict_reason": None, "version": 1,
+                "recurrence": series.recurrence,
+                "blocks_scheduling": series.blocks_scheduling,
+                "is_exception": exception is not None,
+                "color": series.color,
+            })
+    return sorted(result, key=lambda item: item["starts_at"])
+
+
+def _commitment_conflicts(
+    db: Session, owner_id: int, starts_at: datetime, ends_at: datetime,
+) -> list[dict]:
+    conflicts = []
+    for item in _commitment_occurrences(
+        db, owner_id, starts_at.date() - timedelta(days=1), ends_at.date() + timedelta(days=1),
+        include_cancelled=False,
+    ):
+        if item["blocks_scheduling"] and starts_at < item["ends_at"] and ends_at > item["starts_at"]:
+            conflicts.append({
+                "commitment_id": item["id"], "starts_at": item["starts_at"].isoformat(),
+                "ends_at": item["ends_at"].isoformat(), "reason": "manual_commitment",
+            })
+    return conflicts
 
 
 def _upcoming_routines(db: Session, owner_id: int, *, days: int = 14) -> list[dict]:
@@ -568,6 +730,129 @@ def create_exception(data: AvailabilityExceptionIn, professional_id: int | None 
     db.commit(); db.refresh(item); return item
 
 
+@router.get("/commitment-series")
+def list_commitment_series(
+    professional_id: int | None = None, db: Session = Depends(get_db),
+    user: User = Depends(current_user),
+):
+    owner_id = _owner_for(db, user, professional_id, "view")
+    return [_dump_commitment_series(db, item) for item in db.query(CalendarCommitmentSeries).filter(
+        CalendarCommitmentSeries.owner_id == owner_id,
+    ).order_by(CalendarCommitmentSeries.active.desc(), CalendarCommitmentSeries.starts_on, CalendarCommitmentSeries.start_time).all()]
+
+
+@router.post("/commitment-series", status_code=201)
+def create_commitment_series(
+    data: CommitmentSeriesIn, professional_id: int | None = None,
+    db: Session = Depends(get_db), user: User = Depends(current_user),
+):
+    owner_id = _owner_for(db, user, professional_id, "create")
+    if data.location_id and not db.query(CalendarLocation).filter(
+        CalendarLocation.id == data.location_id,
+        CalendarLocation.owner_id == owner_id,
+        CalendarLocation.active.is_(True),
+    ).first():
+        raise HTTPException(status_code=404, detail="Local não encontrado.")
+    item = CalendarCommitmentSeries(owner_id=owner_id, active=True, **data.model_dump())
+    db.add(item); db.flush()
+    _audit(db, user, "calendar_commitment_series_create", "calendar_commitment_series", item.id, {
+        "recurrence": item.recurrence, "blocks_scheduling": item.blocks_scheduling,
+    })
+    db.commit(); db.refresh(item)
+    return _dump_commitment_series(db, item)
+
+
+@router.patch("/commitment-series/{series_id}")
+def update_commitment_series(
+    series_id: int, data: CommitmentSeriesIn, professional_id: int | None = None,
+    db: Session = Depends(get_db), user: User = Depends(current_user),
+):
+    owner_id = _owner_for(db, user, professional_id, "configure")
+    item = _commitment_series(db, series_id, owner_id)
+    if data.location_id and not db.query(CalendarLocation).filter(
+        CalendarLocation.id == data.location_id, CalendarLocation.owner_id == owner_id,
+        CalendarLocation.active.is_(True),
+    ).first():
+        raise HTTPException(status_code=404, detail="Local não encontrado.")
+    for key, value in data.model_dump().items():
+        setattr(item, key, value)
+    _audit(db, user, "calendar_commitment_series_update", "calendar_commitment_series", item.id)
+    db.commit(); db.refresh(item)
+    return _dump_commitment_series(db, item)
+
+
+@router.delete("/commitment-series/{series_id}", status_code=204)
+def disable_commitment_series(
+    series_id: int, professional_id: int | None = None, db: Session = Depends(get_db),
+    user: User = Depends(current_user),
+):
+    owner_id = _owner_for(db, user, professional_id, "configure")
+    item = _commitment_series(db, series_id, owner_id)
+    item.active = False
+    _audit(db, user, "calendar_commitment_series_disable", "calendar_commitment_series", item.id)
+    db.commit()
+    return None
+
+
+@router.get("/commitments")
+def list_commitments(
+    start: date = Query(...), end: date = Query(...), include_cancelled: bool = True,
+    professional_id: int | None = None, db: Session = Depends(get_db),
+    user: User = Depends(current_user),
+):
+    if end < start or (end - start).days > 400:
+        raise HTTPException(status_code=422, detail="Consulte um período entre 1 e 400 dias.")
+    owner_id = _owner_for(db, user, professional_id, "view")
+    return _commitment_occurrences(db, owner_id, start, end, include_cancelled=include_cancelled)
+
+
+@router.put("/commitment-series/{series_id}/exceptions")
+def put_commitment_exception(
+    series_id: int, data: CommitmentExceptionIn, professional_id: int | None = None,
+    db: Session = Depends(get_db), user: User = Depends(current_user),
+):
+    owner_id = _owner_for(db, user, professional_id, "configure")
+    series = _commitment_series(db, series_id, owner_id)
+    if data.occurrence_date not in occurrence_dates(series, data.occurrence_date, data.occurrence_date):
+        raise HTTPException(status_code=422, detail="A data informada não pertence a esta recorrência.")
+    location = None
+    if data.location_id:
+        location = db.query(CalendarLocation).filter(
+            CalendarLocation.id == data.location_id, CalendarLocation.owner_id == owner_id,
+            CalendarLocation.active.is_(True),
+        ).first()
+        if not location:
+            raise HTTPException(status_code=404, detail="Local não encontrado.")
+    starts_at = _aware(data.starts_at, location.timezone if location else series.timezone) if data.starts_at else None
+    ends_at = _aware(data.ends_at, location.timezone if location else series.timezone) if data.ends_at else None
+    if starts_at and ends_at and ends_at <= starts_at:
+        raise HTTPException(status_code=422, detail="O novo fim precisa ser posterior ao início.")
+    item = db.query(CalendarCommitmentException).filter(
+        CalendarCommitmentException.series_id == series.id,
+        CalendarCommitmentException.occurrence_date == data.occurrence_date,
+    ).first()
+    if item is None:
+        item = CalendarCommitmentException(
+            owner_id=owner_id, series_id=series.id, occurrence_date=data.occurrence_date,
+        )
+        db.add(item)
+    item.action = data.action
+    item.override_starts_at = starts_at if data.action == "override" else None
+    item.override_ends_at = ends_at if data.action == "override" else None
+    item.override_title = data.title if data.action == "override" else None
+    item.override_location_id = data.location_id if data.action == "override" else None
+    item.notes = data.notes
+    db.flush()
+    _audit(db, user, "calendar_commitment_exception_upsert", "calendar_commitment_exception", item.id, {
+        "series_id": series.id, "occurrence_date": data.occurrence_date.isoformat(), "action": data.action,
+    })
+    db.commit(); db.refresh(item)
+    return {
+        "id": item.id, "series_id": item.series_id, "occurrence_date": item.occurrence_date,
+        "action": item.action,
+    }
+
+
 @router.get("/availability/slots")
 def slots(location_id: int, service_id: int, start_date: date, end_date: date, professional_id: int | None = None, db: Session = Depends(get_db), user: User = Depends(current_user)):
     owner_id = _owner_for(db, user, professional_id, "view")
@@ -616,6 +901,7 @@ def create_appointment(data: AppointmentIn, background_tasks: BackgroundTasks, d
     resources = db.query(SchedulingResource).filter(SchedulingResource.owner_id == owner_id, SchedulingResource.id.in_(data.resource_ids)).all() if data.resource_ids else []
     if len(resources) != len(set(data.resource_ids)): raise HTTPException(status_code=404, detail="Recurso não encontrado.")
     conflicts = find_conflicts(db, owner_id=owner_id, starts_at=starts_at, ends_at=ends_at, resource_ids=data.resource_ids)
+    conflicts.extend(_commitment_conflicts(db, owner_id, starts_at, ends_at))
     extra_allowed = bool(service and service.allow_extra_slot and data.allow_extra_slot)
     if conflicts and not extra_allowed: raise HTTPException(status_code=409, detail={"code": "schedule_conflict", "conflicts": conflicts})
     item = Appointment(
@@ -664,6 +950,7 @@ def reschedule_appointment(appointment_id: int, data: RescheduleIn, professional
     if len(resources) != len(set(resource_ids)):
         raise HTTPException(status_code=404, detail="Recurso não encontrado.")
     conflicts = find_conflicts(db, owner_id=owner_id, starts_at=starts_at, ends_at=ends_at, appointment_id=item.id, resource_ids=resource_ids)
+    conflicts.extend(_commitment_conflicts(db, owner_id, starts_at, ends_at))
     service = db.get(SchedulingService, item.service_id) if item.service_id else None
     if conflicts and not (data.allow_extra_slot and service and service.allow_extra_slot): raise HTTPException(status_code=409, detail={"code": "schedule_conflict", "conflicts": conflicts})
     item.scheduled_at = starts_at; item.ends_at = ends_at; item.duration_minutes = duration; item.version += 1
