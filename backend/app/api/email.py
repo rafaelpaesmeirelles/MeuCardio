@@ -22,8 +22,9 @@ Escopo do conteúdo continua administrativo/profissional, não clínico
 import re
 import unicodedata
 from datetime import datetime, timezone
+from typing import Literal
 
-from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException, UploadFile
+from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException, Response, UploadFile
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
 
@@ -319,10 +320,46 @@ def pastas(conta: EmailAccount = Depends(current_email_account)):
 
 
 @router.get("/mensagens")
-def mensagens(pasta: str | None = None, conta: EmailAccount = Depends(current_email_account)):
+def mensagens(
+    pasta: str | None = None,
+    limite: int = 100,
+    inicio: int = 1,
+    conta: EmailAccount = Depends(current_email_account),
+):
     _exigir_configurado()
     try:
-        return mail360.listar_mensagens(conta.mail360_account_key, pasta=pasta)
+        return mail360.listar_mensagens(
+            conta.mail360_account_key, pasta=pasta, limite=limite, inicio=inicio,
+        )
+    except Mail360Error as e:
+        raise HTTPException(status_code=502, detail=str(e)) from e
+
+
+class AcaoMensagens(BaseModel):
+    message_ids: list[str]
+    acao: Literal["lida", "nao_lida", "mover", "sinalizar"]
+    pasta_destino: str | None = None
+    sinalizador: Literal["info", "important", "followup", "flag_not_set"] | None = None
+
+
+@router.put("/mensagens/acoes", status_code=204)
+def agir_em_mensagens(
+    dados: AcaoMensagens,
+    conta: EmailAccount = Depends(current_email_account),
+):
+    _exigir_configurado()
+    if not dados.message_ids:
+        raise HTTPException(status_code=422, detail="Selecione ao menos uma mensagem.")
+    if len(dados.message_ids) > 200:
+        raise HTTPException(status_code=422, detail="Selecione no máximo 200 mensagens por vez.")
+    try:
+        mail360.alterar_mensagens(
+            conta.mail360_account_key,
+            dados.message_ids,
+            dados.acao,
+            pasta_destino=dados.pasta_destino,
+            sinalizador=dados.sinalizador,
+        )
     except Mail360Error as e:
         raise HTTPException(status_code=502, detail=str(e)) from e
 
@@ -331,16 +368,35 @@ def mensagens(pasta: str | None = None, conta: EmailAccount = Depends(current_em
 def mensagem(message_id: str, conta: EmailAccount = Depends(current_email_account)):
     _exigir_configurado()
     try:
-        return mail360.obter_mensagem(conta.mail360_account_key, message_id)
+        resultado = mail360.obter_mensagem(conta.mail360_account_key, message_id)
+        # Abrir uma mensagem equivale a lê-la. A falha desta atualização não
+        # deve esconder um corpo que já foi obtido com sucesso.
+        try:
+            mail360.alterar_mensagens(conta.mail360_account_key, [message_id], "lida")
+        except Mail360Error:
+            pass
+        return resultado
     except Mail360Error as e:
         raise HTTPException(status_code=502, detail=str(e)) from e
 
 
 class NovaMensagem(BaseModel):
     para: str
+    cc: str | None = None
+    cco: str | None = None
     assunto: str
     corpo_html: str
     anexos: list[str] = []  # fileIds já devolvidos por POST /mensagens/anexos
+
+
+class ResponderMensagem(BaseModel):
+    acao: Literal["reply", "replyall", "forward"]
+    assunto: str
+    conteudo: str
+    para: str | None = None
+    cc: str | None = None
+    cco: str | None = None
+    anexos: list[str] = []
 
 
 TAMANHO_MAXIMO_ANEXO = 15 * 1024 * 1024  # 15 MB — anexo de e-mail comum, não exame
@@ -368,10 +424,68 @@ def enviar(dados: NovaMensagem, conta: EmailAccount = Depends(current_email_acco
     try:
         return mail360.enviar_mensagem(
             conta.mail360_account_key, conta.email_address, dados.para, dados.assunto, dados.corpo_html,
+            anexos=dados.anexos, cc=dados.cc, cco=dados.cco,
+        )
+    except Mail360Error as e:
+        raise HTTPException(status_code=502, detail=str(e)) from e
+
+
+@router.post("/mensagens/{message_id}/responder", status_code=201)
+def responder(
+    message_id: str,
+    dados: ResponderMensagem,
+    conta: EmailAccount = Depends(current_email_account),
+):
+    _exigir_configurado()
+    try:
+        return mail360.responder_mensagem(
+            conta.mail360_account_key,
+            message_id,
+            conta.email_address,
+            dados.acao,
+            dados.assunto,
+            dados.conteudo,
+            para=dados.para,
+            cc=dados.cc,
+            cco=dados.cco,
             anexos=dados.anexos,
         )
     except Mail360Error as e:
         raise HTTPException(status_code=502, detail=str(e)) from e
+
+
+@router.get("/mensagens/{message_id}/anexos")
+def anexos_da_mensagem(
+    message_id: str,
+    conta: EmailAccount = Depends(current_email_account),
+):
+    _exigir_configurado()
+    try:
+        return mail360.listar_anexos(conta.mail360_account_key, message_id)
+    except Mail360Error as e:
+        raise HTTPException(status_code=502, detail=str(e)) from e
+
+
+@router.get("/mensagens/{message_id}/anexos/{attachment_id}")
+def baixar_anexo_da_mensagem(
+    message_id: str,
+    attachment_id: str,
+    nome: str = "anexo",
+    conta: EmailAccount = Depends(current_email_account),
+):
+    _exigir_configurado()
+    try:
+        conteudo, media_type = mail360.baixar_anexo(
+            conta.mail360_account_key, message_id, attachment_id,
+        )
+    except Mail360Error as e:
+        raise HTTPException(status_code=502, detail=str(e)) from e
+    nome_seguro = re.sub(r"[^a-zA-Z0-9._-]", "_", nome)[:180] or "anexo"
+    return Response(
+        content=conteudo,
+        media_type=media_type,
+        headers={"Content-Disposition": f'attachment; filename="{nome_seguro}"'},
+    )
 
 
 @router.delete("/mensagens/{message_id}", status_code=204)

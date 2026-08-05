@@ -153,6 +153,15 @@ class TestFuncoesDeAltoNivel:
         file_id = mail360.upload_anexo("acc-1", "doc.pdf", b"conteudo")
         assert file_id == "file-abc"
 
+    def test_listar_mensagens_usa_folderid_e_paginacao(self, monkeypatch):
+        """Regressão do MA_9018: a API real rejeita o parâmetro `folder`."""
+        chamadas = self._mockar_chamar(monkeypatch, {})
+        mail360.listar_mensagens("acc-1", pasta="folder-10", limite=500, inicio=0)
+        _, caminho, kwargs = chamadas[0]
+        assert caminho == "/accounts/acc-1/messages"
+        assert kwargs["params"] == {"limit": 200, "start": 1, "folderId": "folder-10"}
+        assert "folder" not in kwargs["params"]
+
     def test_enviar_mensagem_inclui_fromaddress(self, monkeypatch):
         """Regressão de bug real, confirmado contra a API em 30/07/2026:
         POST /messages sem `fromAddress` devolve 500 'Given FromAddress not
@@ -171,6 +180,49 @@ class TestFuncoesDeAltoNivel:
         )
         _, _, kwargs = chamadas[0]
         assert kwargs["json"]["attachments"] == [{"fileId": "file-1"}, {"fileId": "file-2"}]
+
+    def test_enviar_mensagem_inclui_cc_cco_e_formato_texto(self, monkeypatch):
+        chamadas = self._mockar_chamar(monkeypatch, {"messageId": "m1"})
+        mail360.enviar_mensagem(
+            "acc-1", "eu@corvia.med.br", "dest@x.com", "Assunto", "Oi",
+            cc="cc@x.com", cco="cco@x.com",
+        )
+        corpo = chamadas[0][2]["json"]
+        assert corpo["ccAddress"] == "cc@x.com"
+        assert corpo["bccAddress"] == "cco@x.com"
+        assert corpo["mailFormat"] == "plaintext"
+
+    def test_alterar_mensagens_monta_payloads_documentados(self, monkeypatch):
+        chamadas = self._mockar_chamar(monkeypatch, {})
+        mail360.alterar_mensagens("acc-1", ["m1", "m2"], "mover", pasta_destino="folder-2")
+        mail360.alterar_mensagens("acc-1", ["m1"], "sinalizar", sinalizador="followup")
+        assert chamadas[0][2]["json"] == {
+            "mode": "moveMessage", "messageId": ["m1", "m2"], "destfolderId": "folder-2",
+        }
+        assert chamadas[1][2]["json"] == {
+            "mode": "setFlag", "messageId": ["m1"], "flagid": "followup",
+        }
+
+    def test_responder_mensagem_preserva_acao_e_conversa(self, monkeypatch):
+        chamadas = self._mockar_chamar(monkeypatch, {"messageId": "m2"})
+        mail360.responder_mensagem(
+            "acc-1", "m1", "eu@corvia.med.br", "replyall", "Re: Oi", "Obrigado",
+            cc="equipe@x.com",
+        )
+        metodo, caminho, kwargs = chamadas[0]
+        assert metodo == "POST"
+        assert caminho == "/accounts/acc-1/messages/m1"
+        assert kwargs["json"]["action"] == "replyall"
+        assert kwargs["json"]["fromAddress"] == "eu@corvia.med.br"
+        assert kwargs["json"]["mailFormat"] == "plaintext"
+
+    def test_listar_anexos_normaliza_envelope_interno(self, monkeypatch):
+        chamadas = self._mockar_chamar(monkeypatch, {
+            "attachments": [{"attachmentId": "a1", "attachmentName": "doc.pdf"}],
+        })
+        resultado = mail360.listar_anexos("acc-1", "m1")
+        assert resultado[0]["attachmentId"] == "a1"
+        assert chamadas[0][2]["params"] == {"includeInline": "false"}
 
     def test_obter_mensagem_funde_metadado_e_conteudo(self, monkeypatch):
         chamadas = self._mockar_chamar(monkeypatch, [

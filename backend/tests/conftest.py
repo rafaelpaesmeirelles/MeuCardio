@@ -107,7 +107,10 @@ def monkeypatch_mail360(monkeypatch):
     testes que precisam conferir o endereço gerado."""
     from app.services import mail360
 
-    estado = {"contas_criadas": [], "mensagens_enviadas": [], "anexos": []}
+    estado = {
+        "contas_criadas": [], "mensagens_enviadas": [], "anexos": [],
+        "acoes": [], "respostas": [],
+    }
 
     def _criar_conta_nativa(email_address, nome_exibicao):
         estado["contas_criadas"].append((email_address, nome_exibicao))
@@ -116,7 +119,7 @@ def monkeypatch_mail360(monkeypatch):
     def _listar_pastas(account_key):
         return [{"folderId": "1", "name": "Inbox"}, {"folderId": "2", "name": "Enviados"}]
 
-    def _listar_mensagens(account_key, pasta=None, limite=50):
+    def _listar_mensagens(account_key, pasta=None, limite=50, inicio=1):
         return [{"messageId": "msg-1", "subject": "Bem-vindo ao CorvIA Mail", "folder": pasta or "Inbox"}]
 
     def _obter_mensagem(account_key, message_id):
@@ -126,16 +129,39 @@ def monkeypatch_mail360(monkeypatch):
         estado["anexos"].append((account_key, nome_arquivo, len(conteudo)))
         return f"file-id-{len(estado['anexos'])}"
 
-    def _enviar_mensagem(account_key, remetente, para, assunto, corpo_html, anexos=None):
+    def _enviar_mensagem(account_key, remetente, para, assunto, corpo_html, anexos=None, cc=None, cco=None):
         registro = {
             "account_key": account_key, "remetente": remetente, "para": para,
-            "assunto": assunto, "anexos": anexos or [],
+            "assunto": assunto, "anexos": anexos or [], "cc": cc, "cco": cco,
         }
         estado["mensagens_enviadas"].append(registro)
         return {"messageId": "msg-enviada-1"}
 
     def _excluir_mensagem(account_key, message_id):
         return None
+
+    def _alterar_mensagens(account_key, message_ids, acao, pasta_destino=None, sinalizador=None):
+        estado["acoes"].append({
+            "account_key": account_key, "message_ids": message_ids, "acao": acao,
+            "pasta_destino": pasta_destino, "sinalizador": sinalizador,
+        })
+
+    def _responder_mensagem(
+        account_key, message_id, remetente, acao, assunto, conteudo,
+        para=None, cc=None, cco=None, anexos=None,
+    ):
+        estado["respostas"].append({
+            "account_key": account_key, "message_id": message_id, "remetente": remetente,
+            "acao": acao, "assunto": assunto, "conteudo": conteudo, "para": para,
+            "cc": cc, "cco": cco, "anexos": anexos or [],
+        })
+        return {"messageId": "resposta-1"}
+
+    def _listar_anexos(account_key, message_id):
+        return [{"attachmentId": "attach-1", "attachmentName": "arquivo.pdf", "attachmentSize": 100}]
+
+    def _baixar_anexo(account_key, message_id, attachment_id):
+        return b"arquivo", "application/pdf"
 
     monkeypatch.setattr(mail360, "criar_conta_nativa", _criar_conta_nativa)
     monkeypatch.setattr(mail360, "listar_pastas", _listar_pastas)
@@ -144,4 +170,8 @@ def monkeypatch_mail360(monkeypatch):
     monkeypatch.setattr(mail360, "upload_anexo", _upload_anexo)
     monkeypatch.setattr(mail360, "enviar_mensagem", _enviar_mensagem)
     monkeypatch.setattr(mail360, "excluir_mensagem", _excluir_mensagem)
+    monkeypatch.setattr(mail360, "alterar_mensagens", _alterar_mensagens)
+    monkeypatch.setattr(mail360, "responder_mensagem", _responder_mensagem)
+    monkeypatch.setattr(mail360, "listar_anexos", _listar_anexos)
+    monkeypatch.setattr(mail360, "baixar_anexo", _baixar_anexo)
     return estado
