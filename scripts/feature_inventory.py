@@ -20,6 +20,7 @@ MAIN = ROOT / "backend/app/main.py"
 EXPECTED_APP_ROUTES = {
     "/", "/entrar", "/solicitar-acesso", "/esqueci-senha", "/redefinir-senha",
     "/corvia-mail", "/apresentacao", "/biblioteca", "/biblioteca/:slug",
+    "/doencas", "/doencas/:slug", "/triagem-sintomas",
     "/fluxogramas", "/diretrizes", "/busca", "/calculadoras",
     "/calculadoras/:slug", "/medicamentos", "/interacoes", "/condicoes",
     "/galeria", "/galeria/:slug", "/exames", "/exames/:slug", "/evidencias",
@@ -33,13 +34,13 @@ EXPECTED_APP_ROUTES = {
 }
 
 EXPECTED_NAV_ROUTES = {
-    "/", "/agenda", "/condicoes", "/diretrizes", "/assistente", "/biblioteca",
-    "/busca", "/calculadoras", "/casos-clinicos", "/interacoes", "/checklists",
-    "/corvia-mail", "/cursos", "/documentos", "/estudos", "/evidencias",
-    "/exames", "/favoritos", "/fluxogramas", "/galeria", "/telediagnostico",
-    "/material-paciente", "/medicamentos", "/indicadores", "/receituario",
-    "/round", "/trilhas", "/usuarios-online", "/minha-conta", "/admin",
-    "/fila-telediagnostico",
+    "/", "/agenda", "/condicoes", "/diretrizes", "/assistente", "/doencas",
+    "/triagem-sintomas", "/biblioteca", "/busca", "/calculadoras",
+    "/casos-clinicos", "/interacoes", "/checklists", "/corvia-mail", "/cursos",
+    "/documentos", "/estudos", "/evidencias", "/exames", "/favoritos",
+    "/fluxogramas", "/galeria", "/telediagnostico", "/material-paciente",
+    "/medicamentos", "/indicadores", "/receituario", "/round", "/trilhas",
+    "/usuarios-online", "/minha-conta", "/admin", "/fila-telediagnostico",
 }
 
 EXPECTED_BACKEND_ROUTERS = {
@@ -54,7 +55,8 @@ EXPECTED_BACKEND_ROUTERS = {
     "mail360_status.router", "presence.router", "indicadores.router",
     "checklists.router", "study_tracks.router", "exportacao.router",
     "emergencia.router", "receituario.router", "clinical_cases.router",
-    "chat.router", "assinatura.router", "chat_session.router_ws",
+    "specialty_guides.router", "chat.router", "assinatura.router",
+    "chat_session.router_ws",
 }
 
 EXPECTED_SUPPORT_FILES = {
@@ -67,6 +69,9 @@ EXPECTED_SUPPORT_FILES = {
     "frontend/src/pages/CaixaDeEmail.tsx",
     "frontend/src/pages/CorviaMail.tsx",
     "frontend/src/pages/Emergencia.tsx",
+    "frontend/src/pages/GuiaDoencas.tsx",
+    "frontend/src/pages/GuiaDoenca.tsx",
+    "frontend/src/pages/TriagemSintomas.tsx",
     "frontend/src/pages/Receituario.tsx",
     "frontend/src/pages/Round.tsx",
     "frontend/src/pages/RoundGerenciavel.tsx",
@@ -83,7 +88,15 @@ EXPECTED_SUPPORT_FILES = {
     "backend/app/api/receituario.py",
     "backend/app/api/service_orders.py",
     "backend/app/api/clinical_cases.py",
+    "backend/app/api/specialty_guides.py",
+    "backend/app/models/specialty_guide.py",
+    "backend/app/services/clinical_rule_engine.py",
+    "backend/app/services/carregar_doencas_especializadas.py",
+    "backend/app/services/carregar_triagem_sintomas.py",
     "backend/app/commands/reconcile_content.py",
+    "backend/migrations/versions/f48a20260805_specialty_guides.py",
+    "doencas/metadados.json",
+    "triagem-sintomas/metadados.json",
     "scripts/release_smoke.py",
     "ops/backup-postgres.sh",
     "ops/restore-postgres.sh",
@@ -143,9 +156,9 @@ def main() -> int:
     )
     if missing_pages:
         raise AssertionError(f"Páginas importadas ausentes: {missing_pages}")
-    if len(imported_pages) < 48:
+    if len(imported_pages) < 51:
         raise AssertionError(
-            f"Apenas {len(imported_pages)} páginas registradas no App.tsx; mínimo publicado: 48"
+            f"Apenas {len(imported_pages)} páginas registradas no App.tsx; mínimo publicado: 51"
         )
 
     missing_support = sorted(path for path in EXPECTED_SUPPORT_FILES if not (ROOT / path).is_file())
