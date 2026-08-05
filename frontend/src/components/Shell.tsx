@@ -141,7 +141,11 @@ function Navegacao({
         className={({ isActive }) => `nav-clinica__hoje${isActive ? " ativo" : ""}`}
       >
         <span className="nav-clinica__hoje-logo"><IconeHoje /></span>
-        <span>Hoje</span>
+        <span className="nav-clinica__hoje-texto">
+          <strong>Hoje</strong>
+          <small>Seu dia clínico</small>
+        </span>
+        <span className="nav-clinica__hoje-equilibrio" aria-hidden="true" />
       </NavLink>
 
       <div className="nav-clinica__separador" />
