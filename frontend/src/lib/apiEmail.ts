@@ -46,6 +46,8 @@ export const apiEmail = {
   get: <T>(p: string) => request<T>(p),
   post: <T>(p: string, body?: unknown) =>
     request<T>(p, { method: "POST", body: body ? JSON.stringify(body) : undefined }),
+  put: <T>(p: string, body?: unknown) =>
+    request<T>(p, { method: "PUT", body: body ? JSON.stringify(body) : undefined }),
   delete: <T>(p: string) => request<T>(p, { method: "DELETE" }),
 
   /** Upload de anexo, em duas etapas — o Mail360 exige subir o arquivo
@@ -56,6 +58,30 @@ export const apiEmail = {
     return request<{ file_id: string; nome: string }>("/email/mensagens/anexos", {
       method: "POST", body: form,
     });
+  },
+
+  async baixarAnexo(messageId: string, attachmentId: string, nome: string) {
+    const headers = new Headers();
+    const token = tokenEmail.get();
+    if (token) headers.set("Authorization", `Bearer ${token}`);
+    const caminho = `/email/mensagens/${encodeURIComponent(messageId)}/anexos/${encodeURIComponent(attachmentId)}?nome=${encodeURIComponent(nome)}`;
+    const res = await fetch(`${BASE}${caminho}`, { headers });
+    if (res.status === 401) {
+      tokenEmail.clear();
+      throw new ApiEmailError(401, "Sessão da caixa de e-mail expirada.");
+    }
+    if (!res.ok) {
+      const detail = await res.json().catch(() => null);
+      throw new ApiEmailError(res.status, detail?.detail ?? "Não foi possível baixar o anexo.");
+    }
+    const url = URL.createObjectURL(await res.blob());
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = nome || "anexo";
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
   },
 
   /** Fora de `request()` de propósito: login nunca tem token prévio pra

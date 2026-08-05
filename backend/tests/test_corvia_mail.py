@@ -476,6 +476,72 @@ class TestPastasEMensagens:
         resp = client.delete("/api/email/mensagens/msg-1", headers={"Authorization": f"Bearer {token}"})
         assert resp.status_code == 204
 
+    def test_abrir_mensagem_marca_como_lida(self, client, db, criar_usuario, monkeypatch_mail360):
+        user, _ = criar_usuario()
+        token, _ = self._token_email(client, db, user, monkeypatch_mail360)
+        resp = client.get("/api/email/mensagens/msg-1", headers={"Authorization": f"Bearer {token}"})
+        assert resp.status_code == 200
+        assert monkeypatch_mail360["acoes"][-1]["acao"] == "lida"
+        assert monkeypatch_mail360["acoes"][-1]["message_ids"] == ["msg-1"]
+
+    def test_acoes_em_lote_encaminham_pasta_e_ids(self, client, db, criar_usuario, monkeypatch_mail360):
+        user, _ = criar_usuario()
+        token, _ = self._token_email(client, db, user, monkeypatch_mail360)
+        resp = client.put(
+            "/api/email/mensagens/acoes",
+            json={"message_ids": ["msg-1", "msg-2"], "acao": "mover", "pasta_destino": "folder-2"},
+            headers={"Authorization": f"Bearer {token}"},
+        )
+        assert resp.status_code == 204
+        assert monkeypatch_mail360["acoes"][-1] == {
+            "account_key": "account-key-1",
+            "message_ids": ["msg-1", "msg-2"],
+            "acao": "mover",
+            "pasta_destino": "folder-2",
+            "sinalizador": None,
+        }
+
+    def test_acoes_em_lote_exigem_selecao(self, client, db, criar_usuario, monkeypatch_mail360):
+        user, _ = criar_usuario()
+        token, _ = self._token_email(client, db, user, monkeypatch_mail360)
+        resp = client.put(
+            "/api/email/mensagens/acoes",
+            json={"message_ids": [], "acao": "lida"},
+            headers={"Authorization": f"Bearer {token}"},
+        )
+        assert resp.status_code == 422
+
+    def test_responder_usa_endpoint_nativo_da_conversa(self, client, db, criar_usuario, monkeypatch_mail360):
+        user, _ = criar_usuario()
+        token, endereco = self._token_email(client, db, user, monkeypatch_mail360)
+        resp = client.post(
+            "/api/email/mensagens/msg-1/responder",
+            json={
+                "acao": "replyall", "assunto": "Re: Oi", "conteudo": "Obrigado.",
+                "cc": "equipe@example.com", "anexos": [],
+            },
+            headers={"Authorization": f"Bearer {token}"},
+        )
+        assert resp.status_code == 201
+        assert monkeypatch_mail360["respostas"][-1]["remetente"] == endereco
+        assert monkeypatch_mail360["respostas"][-1]["acao"] == "replyall"
+
+    def test_lista_e_baixa_anexos_recebidos(self, client, db, criar_usuario, monkeypatch_mail360):
+        user, _ = criar_usuario()
+        token, _ = self._token_email(client, db, user, monkeypatch_mail360)
+        headers = {"Authorization": f"Bearer {token}"}
+        lista = client.get("/api/email/mensagens/msg-1/anexos", headers=headers)
+        assert lista.status_code == 200
+        assert lista.json()[0]["attachmentName"] == "arquivo.pdf"
+
+        arquivo = client.get(
+            "/api/email/mensagens/msg-1/anexos/attach-1?nome=arquivo.pdf",
+            headers=headers,
+        )
+        assert arquivo.status_code == 200
+        assert arquivo.content == b"arquivo"
+        assert arquivo.headers["content-type"].startswith("application/pdf")
+
 
 # ---------------------------------------------------------------------------
 # Sincronização assinatura -> caixa (o bug de roteamento por `tipo` no

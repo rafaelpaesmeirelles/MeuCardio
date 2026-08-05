@@ -146,14 +146,18 @@ def listar_pastas(account_key: str) -> list[dict]:
     return _chamar("GET", f"/accounts/{account_key}/folders")
 
 
-def listar_mensagens(account_key: str, pasta: str | None = None, limite: int = 50) -> list[dict]:
+def listar_mensagens(
+    account_key: str, pasta: str | None = None, limite: int = 50, inicio: int = 1,
+) -> list[dict]:
     """Campos confirmados contra a doc oficial com exemplo de resposta real
     (list-emails-messages-api.html) em 30/07/2026: `messageId`, `subject`,
     `fromAddress`, `receivedTime` (epoch ms), `summary` — batem com o que
     `frontend/src/pages/CaixaDeEmail.tsx` já espera, sem mudança lá."""
-    params = {"limit": limite}
+    params = {"limit": max(1, min(limite, 200)), "start": max(1, inicio)}
     if pasta:
-        params["folder"] = pasta
+        # A API real rejeita `folder` com MA_9018 EXTRA_PARAM_FOUND. O nome
+        # documentado e aceito é `folderId`.
+        params["folderId"] = pasta
     return _chamar("GET", f"/accounts/{account_key}/messages", params=params)
 
 
@@ -172,6 +176,116 @@ def obter_mensagem(account_key: str, message_id: str) -> dict:
         log.warning("Mail360: metadado da mensagem %s ok, conteúdo falhou.", message_id)
         conteudo = {}
     return {**metadado, "content": conteudo.get("content")}
+
+
+def alterar_mensagens(
+    account_key: str,
+    message_ids: list[str],
+    acao: str,
+    *,
+    pasta_destino: str | None = None,
+    sinalizador: str | None = None,
+) -> None:
+    """Aplica ações em lote usando o único endpoint de atualização do Mail360.
+
+    Os nomes de `mode` e dos campos são os documentados pelo provedor. Manter
+    essa tradução no cliente impede que a API HTTP da Corvia aceite payloads
+    arbitrários e os repasse ao Mail360.
+    """
+    ids = [str(message_id) for message_id in message_ids if str(message_id).strip()]
+    if not ids:
+        raise Mail360Error("Nenhuma mensagem foi selecionada.")
+
+    modos = {
+        "lida": "markAsRead",
+        "nao_lida": "markAsUnread",
+        "mover": "moveMessage",
+        "sinalizar": "setFlag",
+    }
+    modo = modos.get(acao)
+    if not modo:
+        raise Mail360Error("Ação de mensagem inválida.")
+
+    corpo: dict[str, object] = {"mode": modo, "messageId": ids}
+    if acao == "mover":
+        if not pasta_destino:
+            raise Mail360Error("Informe a pasta de destino.")
+        corpo["destfolderId"] = str(pasta_destino)
+    if acao == "sinalizar":
+        sinalizadores = {"info", "important", "followup", "flag_not_set"}
+        if sinalizador not in sinalizadores:
+            raise Mail360Error("Sinalizador inválido.")
+        corpo["flagid"] = sinalizador
+
+    _chamar("PUT", f"/accounts/{account_key}/messages", json=corpo)
+
+
+def responder_mensagem(
+    account_key: str,
+    message_id: str,
+    remetente: str,
+    acao: str,
+    assunto: str,
+    conteudo: str,
+    *,
+    para: str | None = None,
+    cc: str | None = None,
+    cco: str | None = None,
+    anexos: list[str] | None = None,
+) -> dict:
+    """Responde, responde a todos ou encaminha preservando a conversa real."""
+    if acao not in {"reply", "replyall", "forward"}:
+        raise Mail360Error("Ação de resposta inválida.")
+    if acao == "forward" and not para:
+        raise Mail360Error("Informe o destinatário do encaminhamento.")
+
+    corpo: dict[str, object] = {
+        "fromAddress": remetente,
+        "action": acao,
+        "subject": assunto,
+        "content": conteudo,
+        "mailFormat": "plaintext",
+    }
+    if para:
+        corpo["toAddress"] = para
+    if cc:
+        corpo["ccAddress"] = cc
+    if cco:
+        corpo["bccAddress"] = cco
+    if anexos:
+        corpo["attachments"] = [{"fileId": file_id} for file_id in anexos]
+    return _chamar(
+        "POST", f"/accounts/{account_key}/messages/{message_id}", json=corpo,
+    )
+
+
+def listar_anexos(account_key: str, message_id: str) -> list[dict]:
+    dados = _chamar(
+        "GET",
+        f"/accounts/{account_key}/messages/{message_id}/attachments",
+        params={"includeInline": "false"},
+    )
+    if isinstance(dados, list):
+        return dados
+    if isinstance(dados, dict):
+        anexos = dados.get("attachments") or []
+        return anexos if isinstance(anexos, list) else []
+    return []
+
+
+def baixar_anexo(account_key: str, message_id: str, attachment_id: str) -> tuple[bytes, str]:
+    """Baixa bytes sem passar por `_chamar`, que pressupõe resposta JSON."""
+    try:
+        with httpx.Client(timeout=TIMEOUT) as cliente:
+            resp = cliente.get(
+                f"{BASE}/accounts/{account_key}/messages/{message_id}/attachments/{attachment_id}",
+                headers={**_cabecalho(), "Accept": "application/octet-stream"},
+            )
+            resp.raise_for_status()
+            return resp.content, resp.headers.get("content-type", "application/octet-stream")
+    except httpx.HTTPError as e:
+        log.error("Mail360 falhou ao baixar anexo: %s", e)
+        raise Mail360Error("Não foi possível baixar o anexo.") from e
 
 
 def upload_anexo(account_key: str, nome_arquivo: str, conteudo: bytes) -> str:
@@ -196,7 +310,7 @@ def upload_anexo(account_key: str, nome_arquivo: str, conteudo: bytes) -> str:
 
 def enviar_mensagem(
     account_key: str, remetente: str, para: str, assunto: str, corpo_html: str,
-    anexos: list[str] | None = None,
+    anexos: list[str] | None = None, cc: str | None = None, cco: str | None = None,
 ) -> dict:
     """`fromAddress` é obrigatório — confirmado em 30/07/2026 contra a API
     real: sem ele, `/messages` devolve 500 "Given FromAddress not exists!".
@@ -207,7 +321,12 @@ def enviar_mensagem(
         "toAddress": para,
         "subject": assunto,
         "content": corpo_html,
+        "mailFormat": "plaintext",
     }
+    if cc:
+        corpo["ccAddress"] = cc
+    if cco:
+        corpo["bccAddress"] = cco
     if anexos:
         # Cada item é o fileId devolvido por upload_anexo — a API não aceita
         # o binário direto aqui, só a referência ao upload já feito.
