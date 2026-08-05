@@ -151,7 +151,7 @@ def _fundo_logo(c: canvas.Canvas, x: float, y: float, largura: float, altura: fl
     """Pinta branco atrás de uma logo antes de desenhá-la — o fundo do
     próprio documento (a página inteira é branca, `_cabecalho`/`_rodape`
     nunca colorem a área da logo). Existe por causa da logo PESSOAL: o
-    upload aceita JPEG (`app/api/auth.py:ASSINATURAS`), formato que não tem
+    upload aceita JPEG (`app/api/auth.py`), formato que não tem
     canal alfa — nunca tem "fundo definido" (transparente). Sem isto, o
     fundo que vier de dentro do arquivo (branco, cinza, o que for) aparece
     como veio; com isto, pelo menos garante que bate com o branco da

@@ -468,6 +468,17 @@
   font-weight: 700;
   border-color: var(--acento);
 }
+.conta__cabecalho {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 560px;
+  margin-bottom: 1rem;
+}
+.conta__cabecalho .eyebrow { margin: 0 0 0.2rem; }
+.conta__cabecalho h1 { margin: 0; }
+.conta__logout { flex: 0 0 auto; }
 
 .gaveta__logo { height: 26px; width: auto; display: block; }
 
@@ -874,6 +885,25 @@
   font-size: 0.7rem;
   line-height: 1.45;
 }
+.lateral__rodape > span { display: block; margin-top: 0.75rem; }
+.lateral__sair {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  width: 100%;
+  min-height: 44px;
+  padding: 0.65rem 0.7rem;
+  color: #d9e7eb;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 10px;
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.lateral__sair:hover { color: var(--white); background: rgba(255, 255, 255, 0.1); }
+.lateral__sair svg { width: 18px; height: 18px; }
 
 .nav-clinica { padding: 0.7rem 0.65rem 1rem; }
 .nav-clinica svg { flex: 0 0 auto; width: 19px; height: 19px; }
@@ -1081,6 +1111,7 @@
   font-size: 0.74rem;
   font-weight: 800;
 }
+.topo__avatar--foto { object-fit: cover; }
 .topo__perfil-texto { display: flex; flex-direction: column; max-width: 150px; line-height: 1.2; }
 .topo__perfil-texto strong { overflow: hidden; font-size: 0.78rem; text-overflow: ellipsis; white-space: nowrap; }
 .topo__perfil-texto small { margin-top: 0.2rem; color: var(--texto-secundario); font-size: 0.65rem; }
@@ -1195,6 +1226,9 @@
     border-radius: 10px;
     cursor: pointer;
   }
+
+  .conta__cabecalho { align-items: stretch; flex-direction: column; }
+  .conta__logout { align-self: flex-start; }
 
   .barra-mobile {
     position: fixed;

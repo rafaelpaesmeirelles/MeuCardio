@@ -28,6 +28,7 @@ from app.services.professional_profile import (
     logo_path,
     professional_name,
 )
+from app.services.pdf.marca import LOGO, logo_disponivel
 
 log = logging.getLogger("meucardio.receita_controle_especial")
 
@@ -183,6 +184,26 @@ def _logo_profissional(c: canvas.Canvas, medico: Any, x: float, y_topo: float) -
         return 0.0
 
 
+def _logo_corvia(c: canvas.Canvas, x: float, y_topo: float) -> None:
+    """Mantém a identificação Corvia também no modelo físico controlado."""
+    if not logo_disponivel():
+        return
+    try:
+        img = ImageReader(str(LOGO))
+        largura_px, altura_px = img.getSize()
+        largura_maxima = 30 * mm
+        altura_maxima = 11 * mm
+        escala = min(largura_maxima / max(1, largura_px), altura_maxima / max(1, altura_px))
+        largura = largura_px * escala
+        altura = altura_px * escala
+        c.drawImage(
+            img, x, y_topo - altura, width=largura, height=altura,
+            preserveAspectRatio=True, mask="auto",
+        )
+    except (OSError, ValueError):
+        log.warning("Logo institucional ilegível; RCE gerada sem a marca Corvia.")
+
+
 def _texto_item(indice: int, item: dict) -> tuple[str, str]:
     descricao = _texto(item.get("descricao") or item.get("substancia"))
     apresentacao = _texto(item.get("apresentacao"))
@@ -287,6 +308,7 @@ def _frente(c: canvas.Canvas, *, via: int, pagina: int, total_paginas: int,
             medico: Any, endereco_profissional: dict | None, data_emissao: datetime,
             cid: str | None, c5: bool) -> None:
     y = ALTURA - MARGEM_Y
+    _logo_corvia(c, MARGEM_X, y + 1 * mm)
     c.setFont("Helvetica-Bold", 16)
     c.drawCentredString(LARGURA / 2, y - 3 * mm, "RECEITA DE CONTROLE ESPECIAL")
     c.setFont("Helvetica-Bold", 8.2)

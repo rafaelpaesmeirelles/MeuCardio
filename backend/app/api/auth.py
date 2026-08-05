@@ -1,3 +1,4 @@
+import logging
 import secrets
 from datetime import date
 from pathlib import Path
@@ -5,11 +6,13 @@ from pathlib import Path
 from fastapi import APIRouter, BackgroundTasks, Depends, File, HTTPException, UploadFile
 from fastapi.security import OAuth2PasswordRequestForm
 from pydantic import BaseModel, field_validator
+from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.orm import Session
 
 from app.core.config import settings
 from app.core.db import get_db
 from app.core.security import create_access_token, current_user, hash_password, verify_password
+from app.core.uploads import UploadRejected, atomic_write_bytes, validate_file
 from app.core.validators import UFS, cpf_valido, limpar_cpf
 from app.models.user import User
 from app.services import emails
@@ -19,6 +22,7 @@ from app.services.professional_profile import (
 )
 
 router = APIRouter(prefix="/api/auth", tags=["auth"])
+log = logging.getLogger("meucardio.auth")
 
 
 @router.post("/login")
@@ -271,20 +275,76 @@ def atualizar_preferencia_assinatura(dados: PreferenciaAssinatura, db: Session =
     return _perfil(user)
 
 
-ASSINATURAS = {
-    b"\xff\xd8\xff": ".jpg",
-    b"\x89PNG\r\n\x1a\n": ".png",
-}
 TAMANHO_MAXIMO = 3 * 1024 * 1024
 
+EXTENSAO_POR_MIME = {
+    "image/jpeg": ".jpg",
+    "image/png": ".png",
+    "image/webp": ".webp",
+}
 
-def _extensao_valida(conteudo: bytes) -> str | None:
-    for assinatura, ext in ASSINATURAS.items():
-        if conteudo.startswith(assinatura):
-            return ext
-    if conteudo[:4] == b"RIFF" and conteudo[8:12] == b"WEBP":
-        return ".webp"
-    return None
+
+def _validar_imagem_perfil(conteudo: bytes, nome_original: str | None) -> str:
+    """Valida o arquivo também fora de produção e devolve extensão canônica.
+
+    A camada ASGI faz a validação antecipada em produção. Repeti-la no router
+    evita que execução local/testes aceitem apenas magic bytes e mantém uma
+    única regra para JPEG, PNG e WEBP.
+    """
+    try:
+        mime = validate_file(conteudo, nome_original or "imagem", "image")
+    except UploadRejected as erro:
+        raise HTTPException(status_code=erro.status_code, detail=erro.detail) from None
+    return EXTENSAO_POR_MIME[mime]
+
+
+def _remover_arquivos_antigos(diretorio: Path, user_id: int, *, preservar: Path | None = None) -> None:
+    for antigo in diretorio.glob(f"{user_id}-*"):
+        if preservar is not None and antigo == preservar:
+            continue
+        try:
+            antigo.unlink(missing_ok=True)
+        except OSError:
+            # O banco já aponta apenas para o arquivo atual. Um órfão eventual
+            # não pode transformar um upload bem-sucedido em erro ao usuário.
+            log.warning("Não foi possível remover imagem de perfil obsoleta: %s", antigo)
+
+
+def _publicar_imagem_perfil(
+    *, conteudo: bytes, nome_original: str | None, subdiretorio: str,
+    prefixo_publico: str, atributo: str, db: Session, user: User,
+) -> dict:
+    extensao = _validar_imagem_perfil(conteudo, nome_original)
+    diretorio = Path(settings.uploads_dir) / subdiretorio
+    nome = f"{user.id}-{secrets.token_hex(8)}{extensao}"
+
+    try:
+        # A imagem é lida por outro contêiner (Caddy) no volume compartilhado.
+        arquivo_novo = atomic_write_bytes(diretorio, nome, conteudo, mode=0o644)
+    except OSError:
+        log.exception("Falha ao gravar imagem de perfil em %s", diretorio)
+        raise HTTPException(
+            status_code=503,
+            detail="O armazenamento de imagens está temporariamente indisponível. Tente novamente.",
+        ) from None
+
+    setattr(user, atributo, f"/{prefixo_publico}/{nome}")
+    try:
+        db.commit()
+        db.refresh(user)
+    except SQLAlchemyError:
+        db.rollback()
+        arquivo_novo.unlink(missing_ok=True)
+        log.exception("Falha ao salvar referência da imagem de perfil no banco")
+        raise HTTPException(
+            status_code=503,
+            detail="Não foi possível concluir o upload agora. O arquivo anterior foi preservado.",
+        ) from None
+
+    # O arquivo anterior só é apagado depois da nova imagem e do banco estarem
+    # confirmados. Assim uma falha no meio da troca nunca deixa o perfil vazio.
+    _remover_arquivos_antigos(diretorio, user.id, preservar=arquivo_novo)
+    return _perfil(user)
 
 
 @router.post("/me/foto")
@@ -299,31 +359,20 @@ async def enviar_foto(
     if not conteudo:
         raise HTTPException(status_code=422, detail="Arquivo vazio.")
 
-    extensao = _extensao_valida(conteudo)
-    if extensao is None:
-        raise HTTPException(status_code=422, detail="Envie uma imagem JPEG, PNG ou WEBP.")
-
-    destino = Path(settings.uploads_dir) / "fotos"
-    destino.mkdir(parents=True, exist_ok=True)
-    for antigo in destino.glob(f"{user.id}-*"):
-        antigo.unlink(missing_ok=True)
-    nome = f"{user.id}-{secrets.token_hex(4)}{extensao}"
-    (destino / nome).write_bytes(conteudo)
-
-    user.photo_url = f"/fotos/{nome}"
-    db.commit()
-    db.refresh(user)
-    return _perfil(user)
+    return _publicar_imagem_perfil(
+        conteudo=conteudo, nome_original=arquivo.filename,
+        subdiretorio="fotos", prefixo_publico="fotos", atributo="photo_url",
+        db=db, user=user,
+    )
 
 
 @router.delete("/me/foto")
 def remover_foto(db: Session = Depends(get_db), user: User = Depends(current_user)):
     destino = Path(settings.uploads_dir) / "fotos"
-    for antigo in destino.glob(f"{user.id}-*"):
-        antigo.unlink(missing_ok=True)
     user.photo_url = None
     db.commit()
     db.refresh(user)
+    _remover_arquivos_antigos(destino, user.id)
     return _perfil(user)
 
 
@@ -339,31 +388,20 @@ async def enviar_logo(
     if not conteudo:
         raise HTTPException(status_code=422, detail="Arquivo vazio.")
 
-    extensao = _extensao_valida(conteudo)
-    if extensao is None:
-        raise HTTPException(status_code=422, detail="Envie uma imagem JPEG, PNG ou WEBP.")
-
-    destino = Path(settings.uploads_dir) / "logos"
-    destino.mkdir(parents=True, exist_ok=True)
-    for antigo in destino.glob(f"{user.id}-*"):
-        antigo.unlink(missing_ok=True)
-    nome = f"{user.id}-{secrets.token_hex(4)}{extensao}"
-    (destino / nome).write_bytes(conteudo)
-
-    user.document_logo_url = f"/logos/{nome}"
-    db.commit()
-    db.refresh(user)
-    return _perfil(user)
+    return _publicar_imagem_perfil(
+        conteudo=conteudo, nome_original=arquivo.filename,
+        subdiretorio="logos", prefixo_publico="logos", atributo="document_logo_url",
+        db=db, user=user,
+    )
 
 
 @router.delete("/me/logo")
 def remover_logo(db: Session = Depends(get_db), user: User = Depends(current_user)):
     destino = Path(settings.uploads_dir) / "logos"
-    for antigo in destino.glob(f"{user.id}-*"):
-        antigo.unlink(missing_ok=True)
     user.document_logo_url = None
     db.commit()
     db.refresh(user)
+    _remover_arquivos_antigos(destino, user.id)
     return _perfil(user)
 
 

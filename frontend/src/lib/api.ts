@@ -8,6 +8,17 @@ function removerTokenLegado() {
 }
 removerTokenLegado();
 
+/** Resolve arquivos públicos do backend tanto no site quanto no app nativo.
+ * No site, /fotos e /logos são servidos pelo mesmo domínio. Quando VITE_API_URL
+ * aponta para uma origem absoluta (Capacitor, homologação ou API separada), a
+ * imagem precisa usar essa origem em vez de `capacitor://localhost`. */
+export function assetUrl(path: string | null | undefined): string | undefined {
+  if (!path) return undefined;
+  if (/^(?:https?:|data:|blob:)/i.test(path)) return path;
+  if (/^https?:\/\//i.test(BASE)) return new URL(path, BASE).toString();
+  return path;
+}
+
 export const token = {
   get: () => "cookie-session",
   set: (_valor?: string) => removerTokenLegado(),

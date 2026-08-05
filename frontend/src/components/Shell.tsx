@@ -7,7 +7,7 @@ import {
 } from "react";
 import { NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "../lib/auth";
-import { api } from "../lib/api";
+import { api, assetUrl } from "../lib/api";
 import Credito from "./Credito";
 import BoasVindas from "./BoasVindas";
 import ChatFlutuante from "./ChatFlutuante";
@@ -195,6 +195,7 @@ export default function Shell() {
   const [pendentes, setPendentes] = useState(0);
   const [menuAberto, setMenuAberto] = useState(false);
   const [buscaTopo, setBuscaTopo] = useState("");
+  const [fotoCabecalhoQuebrada, setFotoCabecalhoQuebrada] = useState(false);
   const buscaRef = useRef<HTMLInputElement>(null);
   const abrirMenuRef = useRef<HTMLButtonElement>(null);
   const fecharRef = useRef<HTMLButtonElement>(null);
@@ -206,6 +207,8 @@ export default function Shell() {
       .then((lista) => setPendentes(lista.length))
       .catch(() => {});
   }, [usuario]);
+
+  useEffect(() => setFotoCabecalhoQuebrada(false), [usuario?.photo_url]);
 
   useEffect(() => {
     function atalhoBusca(evento: KeyboardEvent) {
@@ -261,6 +264,12 @@ export default function Shell() {
     requestAnimationFrame(() => abrirMenuRef.current?.focus());
   }
 
+  async function encerrarSessao() {
+    setMenuAberto(false);
+    await sair();
+    navigate("/entrar", { replace: true });
+  }
+
   function buscarDaFaixa(evento: FormEvent) {
     evento.preventDefault();
     const termo = buscaTopo.trim();
@@ -312,6 +321,10 @@ export default function Shell() {
         </NavLink>
         <Navegacao secoes={secoes} />
         <div className="lateral__rodape">
+          <button type="button" className="lateral__sair" onClick={encerrarSessao}>
+            <Icone nome="sair" />
+            <span>Sair do sistema</span>
+          </button>
           <span>Suporte à decisão, não substitui julgamento clínico.</span>
         </div>
       </aside>
@@ -361,7 +374,12 @@ export default function Shell() {
               <Icone nome="mail" />
             </NavLink>
             <NavLink to="/minha-conta" className="topo__perfil" aria-label={`Abrir conta de ${usuario?.full_name}`}>
-              <span className="topo__avatar">{iniciais(usuario?.full_name)}</span>
+              {usuario?.photo_url && !fotoCabecalhoQuebrada ? (
+                <img className="topo__avatar topo__avatar--foto" src={assetUrl(usuario.photo_url)} alt=""
+                     onError={() => setFotoCabecalhoQuebrada(true)} />
+              ) : (
+                <span className="topo__avatar">{iniciais(usuario?.full_name)}</span>
+              )}
               <span className="topo__perfil-texto">
                 <strong>{usuario?.full_name}</strong>
                 <small>{usuario?.role === "admin" ? "Administrador" : "Profissional"}</small>
@@ -403,7 +421,7 @@ export default function Shell() {
           </button>
         </div>
         <Navegacao secoes={secoes} aoNavegar={() => setMenuAberto(false)} />
-        <button type="button" className="gaveta__sair" onClick={sair}>
+        <button type="button" className="gaveta__sair" onClick={encerrarSessao}>
           <Icone nome="sair" /> Sair da Corvia
         </button>
       </aside>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { api, ApiError, type Usuario } from "../lib/api";
+import { api, ApiError, assetUrl, type Usuario } from "../lib/api";
 import { useAuth } from "../lib/auth";
+import { useNavigate } from "react-router-dom";
 
 const CONSELHOS = ["CRM", "CRO", "CRBM", "COREN", "CRF", "CREFITO", "CRN", "CRP", "CREF", "CRESS", "Outro"];
 const TITULOS = ["", "Sr.", "Sra.", "Dr.", "Dra.", "Prof.", "Profa.", "Prof. Dr.", "Profa. Dra.", "Me.", "Ma.", "Esp."];
@@ -281,6 +282,9 @@ function DadosPessoais({ perfil, aoSalvar }: { perfil: Usuario; aoSalvar: (u: Us
 function Foto({ perfil, aoTrocar }: { perfil: Usuario; aoTrocar: (u: Usuario) => void }) {
   const [enviando, setEnviando] = useState(false);
   const [erro, setErro] = useState("");
+  const [imagemQuebrada, setImagemQuebrada] = useState(false);
+
+  useEffect(() => setImagemQuebrada(false), [perfil.photo_url]);
 
   async function enviar(arquivo: File | undefined) {
     if (!arquivo) return;
@@ -311,8 +315,9 @@ function Foto({ perfil, aoTrocar }: { perfil: Usuario; aoTrocar: (u: Usuario) =>
 
   return (
     <div className="cartao" style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
-      {perfil.photo_url ? (
-        <img src={perfil.photo_url} alt="Sua foto de perfil" className="conta__foto" />
+      {perfil.photo_url && !imagemQuebrada ? (
+        <img src={assetUrl(perfil.photo_url)} alt="Sua foto de perfil" className="conta__foto"
+             onError={() => setImagemQuebrada(true)} />
       ) : (
         <div className="conta__foto conta__foto--vazia" aria-hidden="true">{iniciais}</div>
       )}
@@ -347,6 +352,9 @@ function Foto({ perfil, aoTrocar }: { perfil: Usuario; aoTrocar: (u: Usuario) =>
 function LogoDocumento({ perfil, aoTrocar }: { perfil: Usuario; aoTrocar: (u: Usuario) => void }) {
   const [enviando, setEnviando] = useState(false);
   const [erro, setErro] = useState("");
+  const [imagemQuebrada, setImagemQuebrada] = useState(false);
+
+  useEffect(() => setImagemQuebrada(false), [perfil.document_logo_url]);
 
   async function enviar(arquivo: File | undefined) {
     if (!arquivo) return;
@@ -375,9 +383,10 @@ function LogoDocumento({ perfil, aoTrocar }: { perfil: Usuario; aoTrocar: (u: Us
 
   return (
     <div className="cartao" style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
-      {perfil.document_logo_url ? (
+      {perfil.document_logo_url && !imagemQuebrada ? (
         <span className={`logo-profissional-preview ${perfil.document_logo_dark_background ? "logo-profissional-preview--escuro" : ""}`}>
-          <img src={perfil.document_logo_url} alt="Sua logo" style={{ maxWidth: 96, maxHeight: 64 }} />
+          <img src={assetUrl(perfil.document_logo_url)} alt="Sua logo" style={{ maxWidth: 96, maxHeight: 64 }}
+               onError={() => setImagemQuebrada(true)} />
         </span>
       ) : (
         <div style={{ width: 96, height: 64, display: "flex", alignItems: "center", justifyContent: "center",
@@ -719,8 +728,10 @@ function Assinatura() {
 }
 
 export default function MinhaConta() {
-  const { usuario, recarregar } = useAuth();
+  const { usuario, recarregar, sair } = useAuth();
+  const navigate = useNavigate();
   const [perfil, setPerfil] = useState<Usuario | null>(usuario);
+  const [saindo, setSaindo] = useState(false);
 
   useEffect(() => {
     api.get<Usuario>("/auth/me").then(setPerfil).catch(() => {});
@@ -728,9 +739,24 @@ export default function MinhaConta() {
 
   if (!perfil) return <div className="pagina"><h1>Minha conta</h1><p>Carregando…</p></div>;
 
+  async function encerrarSessao() {
+    setSaindo(true);
+    await sair();
+    navigate("/entrar", { replace: true });
+  }
+
   return (
     <div className="pagina">
-      <h1>Minha conta</h1>
+      <div className="conta__cabecalho">
+        <div>
+          <p className="eyebrow">Perfil e segurança</p>
+          <h1>Minha conta</h1>
+        </div>
+        <button type="button" className="botao botao--secundario conta__logout"
+                onClick={encerrarSessao} disabled={saindo}>
+          {saindo ? "Saindo…" : "Sair do sistema"}
+        </button>
+      </div>
       {perfil.profile_completion_required && (
         <div className="cartao" role="status" style={{ borderLeft: "4px solid var(--destaque)" }}>
           <strong>Complete seus dados pessoais e profissionais para continuar.</strong>
