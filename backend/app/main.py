@@ -47,6 +47,7 @@ ROUTERS_LIVRES = (
     health.router, auth.router, browser_session.router, password_reset.router,
     sessions.router, billing.router, admin.router, service_orders.router,
     partner_courses.router, email_api.router, documentos_publicos.router, cmed.router,
+    agenda_integrada.oauth_callback_router,
 )
 
 ROUTERS_ASSINANTES = (

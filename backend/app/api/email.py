@@ -7,9 +7,10 @@ Corvia — para a "sessão email". Ver `BRIEFING_CLAUDE_CODE_4.md` para o
 histórico completo das duas decisões.
 
 Duas famílias de rota, com dependências diferentes de propósito:
-- `GET/POST /conta` — status e ativação, vistos de DENTRO da conta Corvia
+- `GET/POST /conta` e `GET /resumo` — status, ativação e o resumo mínimo
+  (metadados de até três não lidas) vistos de DENTRO da conta Corvia
   normal (`current_user`): "eu, médico já logado na Corvia, tenho/quero uma
-  caixa de e-mail?". Não expõe mensagem nenhuma.
+  caixa de e-mail?". O resumo nunca expõe corpo, anexos ou ações da caixa.
 - `POST /entrar`, `POST /esqueci-senha` (públicas) e as rotas de
   pastas/mensagens (`current_email_account`) — a "sessão email" em si, com
   login separado. Um token da conta Corvia NÃO abre essas rotas, e
@@ -24,7 +25,14 @@ import unicodedata
 from datetime import datetime, timezone
 from typing import Literal
 
-from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException, Response, UploadFile
+from fastapi import (
+    APIRouter,
+    BackgroundTasks,
+    Depends,
+    HTTPException,
+    Response,
+    UploadFile,
+)
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
 
@@ -32,13 +40,18 @@ from app.content import termo_lgpd_email
 from app.core.config import settings
 from app.core.db import get_db
 from app.core.security import (
-    assinatura_email_ativa, create_access_token, current_email_account,
-    current_user, hash_password, verify_password,
+    assinatura_email_ativa,
+    create_access_token,
+    current_email_account,
+    current_user,
+    hash_password,
+    verify_password,
 )
 from app.models.email_account import EmailAccount
 from app.models.password_reset import PasswordResetToken
 from app.models.user import User
 from app.services import emails, mail360
+from app.services.agenda_integrada.contacts import list_contacts
 from app.services.mail360 import Mail360Error
 from app.services.notificar import tentar_enviar_email
 
@@ -128,6 +141,77 @@ def minha_conta(db: Session = Depends(get_db), user: User = Depends(current_user
         "senha_definida": conta.password_hash is not None,
         "lgpd_aceite_versao": conta.lgpd_aceite_versao,
         "lgpd_versao_atual": termo_lgpd_email.VERSAO,
+    }
+
+
+def _nao_lida(mensagem: dict) -> bool:
+    return str(mensagem.get("status", "")).lower() in {"0", "unread", "nao_lida"}
+
+
+def _momento_da_mensagem(mensagem: dict) -> float:
+    bruto = mensagem.get("receivedTime") or mensagem.get("sentDateInGMT") or mensagem.get("date")
+    if bruto is None:
+        return 0
+    try:
+        numero = float(bruto)
+        return numero / 1000 if numero > 10_000_000_000 else numero
+    except (TypeError, ValueError):
+        try:
+            return datetime.fromisoformat(str(bruto).replace("Z", "+00:00")).timestamp()
+        except ValueError:
+            return 0
+
+
+@router.get("/resumo")
+def resumo_da_caixa(db: Session = Depends(get_db), user: User = Depends(current_user)):
+    """Resumo de privilégio mínimo para o cartão da página Hoje.
+
+    A sessão principal pode ver somente remetente, assunto e horário das três
+    mensagens não lidas mais recentes. Abrir o conteúdo, baixar anexos ou agir
+    sobre qualquer mensagem continua exigindo a sessão própria do CorvIA Mail.
+    """
+    conta = _obter_conta(db, user)
+    if not conta or not assinatura_email_ativa(db, user):
+        return {"disponivel": False, "email_address": None, "pendentes": []}
+    _exigir_configurado()
+    try:
+        pastas = mail360.listar_pastas(conta.mail360_account_key)
+        entrada = next(
+            (
+                pasta for pasta in pastas
+                if str(
+                    pasta.get("folderType")
+                    or pasta.get("folderName")
+                    or pasta.get("name")
+                    or ""
+                ).lower() in {"inbox", "entrada"}
+            ),
+            None,
+        )
+        pasta_id = str(entrada.get("folderId") or entrada.get("id")) if entrada else None
+        mensagens = mail360.listar_mensagens(
+            conta.mail360_account_key, pasta=pasta_id, limite=30, inicio=1,
+        )
+    except Mail360Error as e:
+        raise HTTPException(status_code=502, detail=str(e)) from e
+
+    campos_permitidos = (
+        "messageId", "id", "subject", "fromAddress", "sender",
+        "receivedTime", "sentDateInGMT", "date", "status",
+    )
+    mensagens_nao_lidas = sorted(
+        (mensagem for mensagem in mensagens if _nao_lida(mensagem)),
+        key=_momento_da_mensagem,
+        reverse=True,
+    )
+    pendentes = [
+        {campo: mensagem.get(campo) for campo in campos_permitidos if mensagem.get(campo) is not None}
+        for mensagem in mensagens_nao_lidas
+    ][:3]
+    return {
+        "disponivel": True,
+        "email_address": conta.email_address,
+        "pendentes": pendentes,
     }
 
 
@@ -387,6 +471,19 @@ class NovaMensagem(BaseModel):
     assunto: str
     corpo_html: str
     anexos: list[str] = []  # fileIds já devolvidos por POST /mensagens/anexos
+
+
+@router.get("/contatos")
+def contatos_sincronizados(
+    q: str = "",
+    limite: int = 50,
+    db: Session = Depends(get_db),
+    conta: EmailAccount = Depends(current_email_account),
+):
+    """Contatos Google/Microsoft/Apple do mesmo titular da caixa CorvIA Mail."""
+    if len(q) > 200 or limite < 1 or limite > 100:
+        raise HTTPException(status_code=422, detail="Parâmetros de busca de contatos inválidos.")
+    return list_contacts(db, conta.user_id, query=q, limit=limite)
 
 
 class ResponderMensagem(BaseModel):

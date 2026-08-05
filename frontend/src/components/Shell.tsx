@@ -12,6 +12,7 @@ import Credito from "./Credito";
 import BoasVindas from "./BoasVindas";
 import ChatFlutuante from "./ChatFlutuante";
 import Icone, { type NomeIcone } from "./Icone";
+import { IconeEmergencia, IconeHoje } from "./IdentidadeClinica";
 
 type ItemNav = {
   to: string;
@@ -139,7 +140,7 @@ function Navegacao({
         onClick={aoNavegar}
         className={({ isActive }) => `nav-clinica__hoje${isActive ? " ativo" : ""}`}
       >
-        <Icone nome="hoje" />
+        <span className="nav-clinica__hoje-logo"><IconeHoje /></span>
         <span>Hoje</span>
       </NavLink>
 
@@ -366,12 +367,12 @@ export default function Shell() {
                 className="topo__emergencia"
                 onClick={() => navigate("/emergencia")}
               >
-                <Icone nome="emergencia" />
+                <IconeEmergencia />
                 <span>Emergência</span>
               </button>
             )}
             <NavLink to="/corvia-mail" className="topo__icone" aria-label="Abrir Corvia Mail">
-              <Icone nome="mail" />
+              <img className="topo__mail-logo" src="/corviamail-icone.svg" alt="" />
             </NavLink>
             <NavLink to="/minha-conta" className="topo__perfil" aria-label={`Abrir conta de ${usuario?.full_name}`}>
               {usuario?.photo_url && !fotoCabecalhoQuebrada ? (
@@ -427,7 +428,7 @@ export default function Shell() {
       </aside>
 
       <nav className="barra-mobile" aria-label="Atalhos principais" aria-hidden={menuAberto || undefined}>
-        <NavLink to="/" end><Icone nome="hoje" /><span>Hoje</span></NavLink>
+        <NavLink to="/" end><IconeHoje /><span>Hoje</span></NavLink>
         <NavLink to="/round"><Icone nome="pacientes" /><span>Pacientes</span></NavLink>
         <NavLink to="/busca"><Icone nome="busca" /><span>Buscar</span></NavLink>
         <button type="button" onClick={() => setMenuAberto(true)} aria-expanded={menuAberto}>
@@ -436,6 +437,16 @@ export default function Shell() {
       </nav>
 
       <BoasVindas />
+      {!naEmergencia && (
+        <NavLink
+          to="/emergencia"
+          className="emergencia-flutuante"
+          aria-label="Abrir o Modo Emergência"
+          title="Modo Emergência — protocolos de risco imediato"
+        >
+          <IconeEmergencia />
+        </NavLink>
+      )}
       {!naEmergencia && <ChatFlutuante />}
     </div>
   );

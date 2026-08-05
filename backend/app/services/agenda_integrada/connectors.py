@@ -28,6 +28,7 @@ class ConnectorCapabilities:
     search_patient: bool = False
     create_patient: bool = False
     webhooks: bool = False
+    read_contacts: bool = False
 
 
 @dataclass(frozen=True)
@@ -131,6 +132,7 @@ class GoogleCalendarConnector(_HttpConnector):
         reschedule_appointment=True,
         cancel_appointment=True,
         webhooks=True,
+        read_contacts=True,
     )
     base_url = "https://www.googleapis.com/calendar/v3"
 
@@ -256,6 +258,7 @@ class Microsoft365CalendarConnector(_HttpConnector):
         reschedule_appointment=True,
         cancel_appointment=True,
         webhooks=True,
+        read_contacts=True,
     )
     base_url = "https://graph.microsoft.com/v1.0"
 
@@ -288,6 +291,7 @@ class Microsoft365CalendarConnector(_HttpConnector):
             "name": body.get("name"),
             "capabilities": asdict(self.capabilities),
         }
+
 
     def pull(self, *, cursor: str | None, start: datetime, end: datetime) -> PullResult:
         url = cursor or self._calendar_view_delta_url(start, end)
@@ -365,6 +369,57 @@ class Microsoft365CalendarConnector(_HttpConnector):
         }
 
 
+class AppleICloudCalendarConnector:
+    """Leitura oficial via CalDAV usando senha específica de app.
+
+    A escrita permanece desativada até haver testes de interoperabilidade com
+    recorrências e ETags do iCloud; isso evita sobrescrever eventos do usuário.
+    """
+
+    provider = "apple_icloud"
+    capabilities = ConnectorCapabilities(read_appointments=True, read_contacts=True)
+
+    def __init__(self, credentials: dict[str, Any], configuration: dict[str, Any], transport=None):
+        from app.services.agenda_integrada.apple_dav import AppleDavClient
+
+        self.configuration = configuration
+        self.dav = AppleDavClient(
+            str(credentials.get("username") or ""),
+            str(credentials.get("app_specific_password") or ""),
+            transport=transport,
+        )
+
+    def diagnose(self) -> dict[str, Any]:
+        calendars = self.dav.calendars()
+        addressbooks = self.dav.addressbooks()
+        return {
+            "ok": True, "provider": self.provider, "calendars": len(calendars),
+            "addressbooks": len(addressbooks), "capabilities": asdict(self.capabilities),
+        }
+
+    def pull(self, *, cursor: str | None, start: datetime, end: datetime) -> PullResult:
+        from app.services.agenda_integrada.apple_dav import parse_icalendar
+
+        appointments: list[ExternalAppointment] = []
+        for calendar in self.dav.calendars():
+            for resource in self.dav.calendar_resources(calendar, start, end):
+                for item in parse_icalendar(resource.data, resource.href):
+                    appointments.append(ExternalAppointment(
+                        external_id=str(item["id"]), starts_at=item.get("starts_at"),
+                        ends_at=item.get("ends_at"), status=str(item.get("status") or "confirmed"),
+                        title=item.get("title"), description=item.get("description"),
+                        location=item.get("location"), external_updated_at=item.get("updated_at"),
+                        version=resource.etag,
+                    ))
+        return PullResult(appointments, None)
+
+    def create(self, *_args, **_kwargs) -> dict[str, Any]:
+        raise ConnectorError("write_not_supported", "A escrita no calendário Apple ainda não está habilitada.", status_code=409)
+
+    reschedule = create
+    cancel = create
+
+
 class HomologationRequiredConnector:
     capabilities = ConnectorCapabilities()
 
@@ -399,6 +454,10 @@ _CATALOG = {
         "name": "Microsoft 365 / Outlook", "status": "adapter_available", "official_api": True,
         "capabilities": asdict(Microsoft365CalendarConnector.capabilities),
     },
+    "apple_icloud": {
+        "name": "Apple iCloud (Calendário e Contatos)", "status": "adapter_available",
+        "official_api": True, "capabilities": asdict(AppleICloudCalendarConnector.capabilities),
+    },
     "feegow": {"name": "Feegow", "status": "homologation_required", "official_api": False, "capabilities": asdict(ConnectorCapabilities())},
     "amplimed": {"name": "Amplimed", "status": "coming_soon", "official_api": False, "capabilities": asdict(ConnectorCapabilities())},
     "iclinic": {"name": "iClinic", "status": "coming_soon", "official_api": False, "capabilities": asdict(ConnectorCapabilities())},
@@ -419,6 +478,8 @@ def get_connector(provider: str, credentials: dict[str, Any], configuration: dic
         return GoogleCalendarConnector(credentials, configuration, transport=transport)
     if provider == "microsoft_365":
         return Microsoft365CalendarConnector(credentials, configuration, transport=transport)
+    if provider == "apple_icloud":
+        return AppleICloudCalendarConnector(credentials, configuration, transport=transport)
     if provider in _CATALOG:
         return HomologationRequiredConnector(provider)
     raise ConnectorError("unsupported_provider", "Provedor de agenda não suportado.", status_code=422)

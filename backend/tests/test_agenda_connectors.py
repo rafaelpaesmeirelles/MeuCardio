@@ -2,8 +2,8 @@ from datetime import datetime, timezone
 
 import httpx
 import pytest
-
 from app.models.agenda import CalendarOutboxEvent
+from app.services.agenda_integrada.apple_dav import parse_icalendar, parse_vcard
 from app.services.agenda_integrada.connectors import (
     ConnectorError,
     GoogleCalendarConnector,
@@ -11,6 +11,7 @@ from app.services.agenda_integrada.connectors import (
     Microsoft365CalendarConnector,
     connector_catalog,
 )
+from app.services.agenda_integrada.contacts import GoogleContacts, MicrosoftContacts
 from app.services.agenda_integrada.domain import process_outbox_event
 
 
@@ -18,6 +19,8 @@ def test_catalog_does_not_claim_unverified_clinical_connectors():
     catalog = {item["provider"]: item for item in connector_catalog()}
     assert catalog["google_calendar"]["status"] == "adapter_available"
     assert catalog["microsoft_365"]["status"] == "adapter_available"
+    assert catalog["apple_icloud"]["status"] == "adapter_available"
+    assert catalog["apple_icloud"]["capabilities"]["create_appointment"] is False
     assert catalog["feegow"]["status"] == "homologation_required"
     assert catalog["feegow"]["official_api"] is False
     assert catalog["feegow"]["capabilities"]["create_appointment"] is False
@@ -113,3 +116,52 @@ def test_processed_outbox_event_is_idempotent_without_calling_provider():
     event = CalendarOutboxEvent(id=91, appointment_id=17, status="processed")
     result = process_outbox_event(None, event)  # type: ignore[arg-type]
     assert result == {"id": 91, "status": "processed", "appointment_id": 17}
+
+
+def test_google_contacts_maps_people_and_preserves_sync_token():
+    def handler(request: httpx.Request) -> httpx.Response:
+        assert request.url.host == "people.googleapis.com"
+        return httpx.Response(200, json={
+            "connections": [{
+                "resourceName": "people/1", "etag": "v1",
+                "names": [{"displayName": "Dra. Ana"}],
+                "emailAddresses": [{"value": "ana@example.com"}],
+                "phoneNumbers": [{"value": "+5511999999999"}],
+                "organizations": [{"name": "Clínica"}],
+            }],
+            "nextSyncToken": "contacts-cursor-2",
+        })
+
+    result = GoogleContacts("token", transport=httpx.MockTransport(handler)).pull(None)
+    assert result.cursor == "contacts-cursor-2"
+    assert result.contacts[0].display_name == "Dra. Ana"
+    assert result.contacts[0].emails == ["ana@example.com"]
+
+
+def test_microsoft_contacts_rejects_pagination_outside_graph():
+    calls = 0
+
+    def handler(_request: httpx.Request) -> httpx.Response:
+        nonlocal calls
+        calls += 1
+        return httpx.Response(200, json={"value": [], "@odata.nextLink": "https://example.invalid/token"})
+
+    connector = MicrosoftContacts("token", transport=httpx.MockTransport(handler))
+    with pytest.raises(ConnectorError, match="Paginação Microsoft inválida"):
+        connector.pull(None)
+    assert calls == 1
+
+
+def test_apple_vcard_and_calendar_parsers_unfold_records():
+    contact = parse_vcard(
+        "BEGIN:VCARD\r\nUID:abc\r\nFN:Dra. Ana\r\nEMAIL:ana@icloud.com\r\nTEL:+5511\r\nORG:Corvia;Cardio\r\nEND:VCARD",
+        "fallback",
+    )
+    events = parse_icalendar(
+        "BEGIN:VCALENDAR\r\nBEGIN:VEVENT\r\nUID:event-1\r\nDTSTART:20260805T130000Z\r\nDTEND:20260805T133000Z\r\nSUMMARY:Consulta\r\nEND:VEVENT\r\nEND:VCALENDAR",
+        "fallback",
+    )
+    assert contact["emails"] == ["ana@icloud.com"]
+    assert contact["organization"] == "Corvia · Cardio"
+    assert events[0]["id"] == "event-1"
+    assert events[0]["starts_at"] == "2026-08-05T13:00:00+00:00"

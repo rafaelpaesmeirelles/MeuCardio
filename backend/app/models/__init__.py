@@ -28,6 +28,7 @@ from app.models.cmed import CmedVersao, CmedApresentacao  # noqa: F401
 from app.models.agenda import (  # noqa: F401
     AppointmentCommunication, AppointmentResource, AvailabilityException,
     AvailabilityRule, CalendarDelegation, CalendarIntegration, CalendarLocation,
-    CalendarOutboxEvent, ExternalPatientLink, MobilityPreference, SchedulingResource,
+    CalendarOutboxEvent, ExternalContact, ExternalPatientLink, IntegrationOAuthState,
+    MobilityPreference, SchedulingResource,
     SchedulingService, ServiceResourceRequirement,
 )

@@ -69,7 +69,8 @@ def integration_cursor(integration: CalendarIntegration) -> str | None:
 
 
 def store_integration_credentials(integration: CalendarIntegration, credentials: dict) -> None:
-    allowed = {"access_token", "refresh_token", "expires_at", "token_type", "scope"}
+    oauth = {"access_token", "refresh_token", "expires_at", "token_type", "scope"}
+    allowed = {"username", "app_specific_password"} if integration.provider == "apple_icloud" else oauth
     unknown = set(credentials) - allowed
     if unknown:
         raise ValueError(f"Campos de credencial não aceitos: {', '.join(sorted(unknown))}.")
@@ -261,7 +262,9 @@ def _parse_external_datetime(value: str | None) -> datetime | None:
 def sync_integration(db: Session, integration: CalendarIntegration, *, full: bool = False, transport=None) -> dict:
     if not settings.agenda_integrations_enabled or not integration.enabled:
         raise ConnectorError("integration_disabled", "Integração desativada.", status_code=409)
-    credentials = integration_credentials(integration)
+    from app.services.agenda_integrada.external_accounts import ensure_fresh_credentials
+
+    credentials = ensure_fresh_credentials(db, integration)
     connector = get_connector(integration.provider, credentials, integration.configuration, transport=transport)
     if not connector.capabilities.read_appointments:
         raise ConnectorError("read_not_supported", "Leitura de agenda não homologada.", status_code=409)
@@ -375,8 +378,10 @@ def process_outbox_event(db: Session, event: CalendarOutboxEvent, *, transport=N
     if not integration.enabled or not integration.write_enabled:
         raise ConnectorError("external_writes_disabled", "Escrita desativada nesta integração.", status_code=409)
 
+    from app.services.agenda_integrada.external_accounts import ensure_fresh_credentials
+
     connector = get_connector(
-        integration.provider, integration_credentials(integration), integration.configuration, transport=transport
+        integration.provider, ensure_fresh_credentials(db, integration), integration.configuration, transport=transport
     )
     event.status = "processing"
     event.locked_at = datetime.now(timezone.utc)

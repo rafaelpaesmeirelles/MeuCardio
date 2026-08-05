@@ -8,6 +8,7 @@ from typing import Literal
 from zoneinfo import ZoneInfo
 
 from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException, Query
+from fastapi.responses import RedirectResponse
 from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
 from sqlalchemy.orm import Session
 
@@ -25,6 +26,7 @@ from app.models.agenda import (
     CalendarIntegration,
     CalendarLocation,
     CalendarOutboxEvent,
+    ExternalContact,
     MobilityPreference,
     SchedulingResource,
     SchedulingService,
@@ -33,9 +35,13 @@ from app.models.audit import AuditLog
 from app.models.clinical_docs import Appointment
 from app.models.round import Patient
 from app.models.user import User
-from app.services.agenda_integrada.connectors import ConnectorError, connector_catalog, get_connector
+from app.services.agenda_integrada.connectors import (
+    ConnectorError,
+    connector_catalog,
+    get_connector,
+)
+from app.services.agenda_integrada.contacts import sync_contacts
 from app.services.agenda_integrada.domain import (
-    SYNC_STRATEGIES,
     available_slots,
     fim_agendamento,
     find_conflicts,
@@ -46,12 +52,26 @@ from app.services.agenda_integrada.domain import (
     sync_integration,
     timezone_valido,
 )
+from app.services.agenda_integrada.external_accounts import (
+    begin_oauth,
+    complete_oauth,
+    disconnect_integration,
+    ensure_fresh_credentials,
+    oauth_configured,
+)
+from app.services.agenda_integrada.notifications import (
+    send_appointment_communication,
+    send_pending_communications,
+)
+from app.services.agenda_integrada.recurrence import (
+    occurrence_dates,
+    occurrence_interval,
+)
 from app.services.agenda_integrada.traffic import traffic_eta
-from app.services.agenda_integrada.notifications import send_appointment_communication, send_pending_communications
-from app.services.agenda_integrada.recurrence import occurrence_dates, occurrence_interval
 from app.services.cofre import cifrar_campo
 
 router = APIRouter(prefix="/api/agenda", tags=["agenda-integrada"])
+oauth_callback_router = APIRouter(prefix="/api/agenda/oauth", tags=["contas-externas"])
 
 EMAIL_RE = re.compile(r"^[^\s@]+@[^\s@]+\.[^\s@]+$")
 VALID_STATUSES = {
@@ -275,6 +295,28 @@ class IntegrationIn(StrictModel):
     write_enabled: bool = False
     consent_accepted: bool = False
     consent_version: str | None = Field(default=None, max_length=40)
+
+
+class AppleIntegrationIn(StrictModel):
+    apple_id: str = Field(min_length=5, max_length=320)
+    app_specific_password: str = Field(min_length=16, max_length=32)
+    contacts: bool = True
+    consent_accepted: bool
+
+    @field_validator("apple_id")
+    @classmethod
+    def _apple_id(cls, value: str) -> str:
+        if not EMAIL_RE.fullmatch(value):
+            raise ValueError("ID Apple inválido.")
+        return value.lower()
+
+    @field_validator("app_specific_password")
+    @classmethod
+    def _app_password(cls, value: str) -> str:
+        compact = value.replace("-", "").replace(" ", "")
+        if len(compact) != 16 or not compact.isalnum():
+            raise ValueError("Use a senha específica de app da Apple, com 16 caracteres.")
+        return "-".join(compact[index:index + 4] for index in range(0, 16, 4))
 
 
 class MobilityIn(StrictModel):
@@ -542,7 +584,11 @@ def capabilities(_=Depends(current_user)):
         "background_sync_enabled": settings.agenda_background_sync_enabled,
         "traffic_configured": settings.traffic_configured,
         "traffic_provider": settings.traffic_provider,
-        "connectors": connector_catalog(),
+        "connectors": [
+            {**item, "oauth_configured": oauth_configured(item["provider"])}
+            if item["provider"] in {"google_calendar", "microsoft_365"} else item
+            for item in connector_catalog()
+        ],
     }
 
 
@@ -1089,16 +1135,114 @@ def commute(data: CommuteIn, db: Session = Depends(get_db), user: User = Depends
     db.commit(); return {**result, "destination": destination}
 
 
+@router.get("/oauth/{provider_slug}/start")
+def start_external_account(
+    provider_slug: Literal["google", "microsoft"],
+    contacts: bool = True,
+    calendar_write: bool = False,
+    consent_accepted: bool = False,
+    db: Session = Depends(get_db),
+    user: User = Depends(current_user),
+):
+    provider = "google_calendar" if provider_slug == "google" else "microsoft_365"
+    if not consent_accepted:
+        raise HTTPException(status_code=422, detail="Aceite a sincronização de Calendário e Contatos.")
+    if calendar_write and not settings.agenda_external_writes_enabled:
+        raise HTTPException(status_code=409, detail="A escrita em calendários externos está desativada pelo administrador.")
+    try:
+        url = begin_oauth(
+            db, owner_id=user.id, provider=provider,
+            calendar_write=calendar_write, contacts=contacts,
+        )
+    except ConnectorError as exc:
+        raise HTTPException(status_code=exc.status_code, detail={"code": exc.code, "message": str(exc)}) from exc
+    _audit(db, user, "external_account_oauth_start", "calendar_integration", None, {"provider": provider})
+    db.commit()
+    return {"authorization_url": url}
+
+
+def _oauth_callback(provider: str, code: str | None, state: str | None, error: str | None, db: Session):
+    target = f"{settings.public_url.rstrip('/')}/agenda"
+    if error or not code or not state:
+        return RedirectResponse(f"{target}?conta_erro=autorizacao_cancelada", status_code=303)
+    try:
+        integration = complete_oauth(db, provider=provider, code=code, state=state)
+    except ConnectorError as exc:
+        return RedirectResponse(f"{target}?conta_erro={exc.code}", status_code=303)
+    return RedirectResponse(f"{target}?conta_conectada={integration.provider}", status_code=303)
+
+
+@oauth_callback_router.get("/google/callback")
+def google_oauth_callback(
+    code: str | None = None, state: str | None = None, error: str | None = None,
+    db: Session = Depends(get_db),
+):
+    return _oauth_callback("google_calendar", code, state, error, db)
+
+
+@oauth_callback_router.get("/microsoft/callback")
+def microsoft_oauth_callback(
+    code: str | None = None, state: str | None = None, error: str | None = None,
+    db: Session = Depends(get_db),
+):
+    return _oauth_callback("microsoft_365", code, state, error, db)
+
+
+@router.post("/integrations/apple", status_code=201)
+def connect_apple(data: AppleIntegrationIn, db: Session = Depends(get_db), user: User = Depends(current_user)):
+    if not data.consent_accepted:
+        raise HTTPException(status_code=422, detail="Aceite a sincronização de Calendário e Contatos.")
+    existing = db.query(CalendarIntegration).filter(
+        CalendarIntegration.owner_id == user.id,
+        CalendarIntegration.provider == "apple_icloud",
+        CalendarIntegration.external_account_id == data.apple_id,
+    ).first()
+    item = existing or CalendarIntegration(
+        owner_id=user.id, provider="apple_icloud", display_name=data.apple_id,
+        external_account_id=data.apple_id, sync_strategy="external_authoritative",
+    )
+    if not existing:
+        db.add(item); db.flush()
+    item.status = "connected"
+    item.enabled = True
+    item.write_enabled = False
+    item.contacts_enabled = data.contacts
+    item.capabilities = next(x["capabilities"] for x in connector_catalog() if x["provider"] == "apple_icloud")
+    item.consent_version = "external-accounts-v1-2026-08-05"
+    item.consent_at = datetime.now(timezone.utc)
+    item.revoked_at = None
+    store_integration_credentials(item, {
+        "username": data.apple_id,
+        "app_specific_password": data.app_specific_password,
+    })
+    try:
+        diagnosis = get_connector("apple_icloud", integration_credentials(item), {}).diagnose()
+    except ConnectorError as exc:
+        db.rollback()
+        raise HTTPException(status_code=exc.status_code, detail={"code": exc.code, "message": str(exc)}) from exc
+    _audit(db, user, "external_account_connected", "calendar_integration", item.id, {"provider": "apple_icloud"})
+    db.commit(); db.refresh(item)
+    return {"id": item.id, "provider": item.provider, "status": item.status, "diagnosis": diagnosis}
+
+
 @router.get("/integrations")
 def list_integrations(professional_id: int | None = None, db: Session = Depends(get_db), user: User = Depends(current_user)):
     owner_id = _owner_for(db, user, professional_id, "configure")
-    return [{"id": x.id, "provider": x.provider, "display_name": x.display_name, "status": x.status, "sync_strategy": x.sync_strategy, "enabled": x.enabled, "write_enabled": x.write_enabled, "configuration": x.configuration, "capabilities": x.capabilities, "has_credentials": bool(x.credentials_cipher), "consent_at": x.consent_at, "last_success_at": x.last_success_at, "last_error_code": x.last_error_code, "last_error_message": x.last_error_message} for x in db.query(CalendarIntegration).filter(CalendarIntegration.owner_id == owner_id).order_by(CalendarIntegration.display_name).all()]
+    result = []
+    for x in db.query(CalendarIntegration).filter(CalendarIntegration.owner_id == owner_id).order_by(CalendarIntegration.display_name).all():
+        contact_count = db.query(ExternalContact).filter(
+            ExternalContact.integration_id == x.id, ExternalContact.deleted.is_(False),
+        ).count()
+        result.append({"id": x.id, "provider": x.provider, "display_name": x.display_name, "status": x.status, "sync_strategy": x.sync_strategy, "enabled": x.enabled, "write_enabled": x.write_enabled, "contacts_enabled": x.contacts_enabled, "contact_count": contact_count, "configuration": x.configuration, "capabilities": x.capabilities, "has_credentials": bool(x.credentials_cipher), "consent_at": x.consent_at, "revoked_at": x.revoked_at, "last_success_at": x.last_success_at, "last_error_code": x.last_error_code, "last_error_message": x.last_error_message})
+    return result
 
 
 @router.post("/integrations", status_code=201)
 def create_integration(data: IntegrationIn, professional_id: int | None = None, db: Session = Depends(get_db), user: User = Depends(current_user)):
     owner_id = _owner_for(db, user, professional_id, "configure"); known = {x["provider"]: x for x in connector_catalog()}
     if data.provider not in known: raise HTTPException(status_code=422, detail="Provedor não suportado.")
+    if data.provider in {"google_calendar", "microsoft_365", "apple_icloud"}:
+        raise HTTPException(status_code=422, detail="Use o botão seguro de conexão da conta externa.")
     if data.enabled and not data.consent_accepted: raise HTTPException(status_code=422, detail="Aceite o consentimento de integração e transferência de dados.")
     if data.write_enabled and not known[data.provider]["capabilities"].get("create_appointment"): raise HTTPException(status_code=409, detail="Escrita não homologada para este provedor.")
     allowed_config = {"calendar_id", "timezone", "expose_patient_name"}
@@ -1119,7 +1263,7 @@ def create_integration(data: IntegrationIn, professional_id: int | None = None, 
 @router.post("/integrations/{integration_id}/diagnose")
 def diagnose_integration(integration_id: int, professional_id: int | None = None, db: Session = Depends(get_db), user: User = Depends(current_user)):
     owner_id = _owner_for(db, user, professional_id, "configure"); item = _integration(db, integration_id, owner_id)
-    try: result = get_connector(item.provider, integration_credentials(item), item.configuration).diagnose()
+    try: result = get_connector(item.provider, ensure_fresh_credentials(db, item), item.configuration).diagnose()
     except ConnectorError as exc:
         item.status = "error"; item.last_error_code = exc.code; item.last_error_message = str(exc)[:500]
         _audit(db, user, "agenda_integration_diagnose_failed", "calendar_integration", item.id, {"provider": item.provider, "code": exc.code}); db.commit()
@@ -1134,6 +1278,42 @@ def run_sync(integration_id: int, full: bool = False, professional_id: int | Non
     try: result = sync_integration(db, item, full=full)
     except ConnectorError as exc: raise HTTPException(status_code=exc.status_code, detail={"code": exc.code, "message": str(exc)}) from exc
     _audit(db, user, "agenda_integration_sync", "calendar_integration", item.id, {"provider": item.provider, **result}); db.commit(); return result
+
+
+@router.post("/integrations/{integration_id}/sync-all")
+def run_external_sync(integration_id: int, full: bool = False, db: Session = Depends(get_db), user: User = Depends(current_user)):
+    item = _integration(db, integration_id, user.id)
+    try:
+        calendar_result = sync_integration(db, item, full=full)
+        item = _integration(db, integration_id, user.id)
+        contacts_result = sync_contacts(db, item, full=full) if item.contacts_enabled else None
+    except ConnectorError as exc:
+        raise HTTPException(status_code=exc.status_code, detail={"code": exc.code, "message": str(exc)}) from exc
+    _audit(db, user, "external_account_sync", "calendar_integration", item.id, {
+        "provider": item.provider, "calendar": calendar_result, "contacts": contacts_result,
+    })
+    db.commit()
+    return {"calendar": calendar_result, "contacts": contacts_result}
+
+
+@router.post("/integrations/{integration_id}/sync-contacts")
+def run_contacts_sync(integration_id: int, full: bool = False, db: Session = Depends(get_db), user: User = Depends(current_user)):
+    item = _integration(db, integration_id, user.id)
+    try:
+        result = sync_contacts(db, item, full=full)
+    except ConnectorError as exc:
+        raise HTTPException(status_code=exc.status_code, detail={"code": exc.code, "message": str(exc)}) from exc
+    _audit(db, user, "external_contacts_sync", "calendar_integration", item.id, {"provider": item.provider, **result})
+    db.commit(); return result
+
+
+@router.delete("/integrations/{integration_id}", status_code=204)
+def disconnect_external_account(integration_id: int, db: Session = Depends(get_db), user: User = Depends(current_user)):
+    item = _integration(db, integration_id, user.id)
+    disconnect_integration(db, item)
+    db.query(ExternalContact).filter(ExternalContact.integration_id == item.id).update({ExternalContact.deleted: True})
+    _audit(db, user, "external_account_disconnected", "calendar_integration", item.id, {"provider": item.provider})
+    db.commit()
 
 
 @router.post("/outbox/{event_id}/process")

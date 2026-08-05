@@ -138,6 +138,7 @@
 .mail-painel-card--integracoes a { display: grid; gap: .05rem; padding: .65rem 0; border-top: 1px solid var(--borda); color: var(--texto); }
 .mail-painel-card--integracoes a:hover { text-decoration: none; color: var(--acento); }
 .mail-painel-card--integracoes a span { font-size: .78rem; color: var(--texto-secundario); }
+.mail-painel-card--contatos{display:flex;flex-direction:column}.mail-painel-card--contatos>button{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:.55rem;padding:.5rem 0;text-align:left;background:transparent;border:0;border-top:1px solid var(--borda);cursor:pointer}.mail-painel-card--contatos>button>span:last-child{display:flex;min-width:0;flex-direction:column}.mail-painel-card--contatos>button strong{font-size:.78rem}.mail-painel-card--contatos>button small{overflow:hidden;color:var(--texto-secundario);font-size:.66rem;text-overflow:ellipsis;white-space:nowrap}.mail-contatos-vazio{display:flex;flex-direction:column;gap:.35rem;margin-top:.6rem;padding:.75rem;background:var(--superficie-suave);border-radius:10px;color:var(--texto-secundario);font-size:.72rem}.mail-contatos-vazio a{color:var(--acento);font-weight:800}
 
 /* Caixa ------------------------------------------------------------------ */
 .mail-workspace {
@@ -265,6 +266,7 @@
 .mail-compositor label { margin-top: .6rem; }
 .mail-compositor textarea { resize: vertical; }
 .mail-compositor__copias { display: block; margin-left: auto; border: 0; background: transparent; color: var(--acento); cursor: pointer; min-height: 30px !important; font-size: .75rem; }
+.mail-compositor__contatos{display:flex;align-items:center;gap:.3rem;overflow-x:auto;padding:.15rem 0 .45rem}.mail-compositor__contatos>span{flex:0 0 auto;color:var(--texto-secundario);font-size:.68rem}.mail-compositor__contatos button{display:flex;flex:0 0 auto;flex-direction:column;min-height:38px;padding:.35rem .55rem;text-align:left;color:var(--texto);background:var(--superficie-suave);border:1px solid var(--borda);border-radius:10px;font-size:.68rem;cursor:pointer}.mail-compositor__contatos button small{color:var(--texto-secundario);font-size:.58rem}
 .mail-compositor__grade { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; }
 .mail-compositor__modelos { display: flex; align-items: center; gap: .3rem; overflow-x: auto; padding: .55rem 0; }
 .mail-compositor__modelos span, .mail-compositor__modelos button { flex: 0 0 auto; }

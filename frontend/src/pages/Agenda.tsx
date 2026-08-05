@@ -76,6 +76,8 @@ type Integracao = {
   sync_strategy: string;
   enabled: boolean;
   write_enabled: boolean;
+  contacts_enabled: boolean;
+  contact_count: number;
   has_credentials: boolean;
   last_success_at: string | null;
   last_error_message: string | null;
@@ -90,6 +92,7 @@ type Capacidades = {
     provider: string;
     name: string;
     status: string;
+    oauth_configured?: boolean;
     capabilities: Record<string, boolean>;
   }>;
 };
@@ -279,6 +282,8 @@ export default function Agenda() {
     starts_at: "", ends_at: "", title: "", location_id: "", notes: "",
   });
   const [novaIntegracao, setNovaIntegracao] = useState({ provider: "feegow", display_name: "" });
+  const [apple, setApple] = useState({ apple_id: "", app_specific_password: "", consent_accepted: false });
+  const [consentimentoContas, setConsentimentoContas] = useState(false);
   const [novoLocal, setNovoLocal] = useState({ name: "", city: "", state: "", latitude: "", longitude: "" });
   const [novoServico, setNovoServico] = useState({ name: "", code: "", location_id: "", duration_minutes: 30, price: "", allow_extra_slot: false });
   const [novaRotina, setNovaRotina] = useState({
@@ -485,6 +490,28 @@ export default function Agenda() {
       enabled: false, write_enabled: false, consent_accepted: false,
     });
     setNovaIntegracao((current) => ({ ...current, display_name: "" }));
+    await carregar();
+  }
+
+  async function conectarConta(provider: "google" | "microsoft") {
+    const result = await api.get<{ authorization_url: string }>(`/agenda/oauth/${provider}/start?contacts=true&calendar_write=false&consent_accepted=true`);
+    window.location.assign(result.authorization_url);
+  }
+
+  async function conectarApple() {
+    await api.post("/agenda/integrations/apple", { ...apple, contacts: true });
+    setApple({ apple_id: "", app_specific_password: "", consent_accepted: false });
+    await carregar();
+  }
+
+  async function sincronizarConta(id: number) {
+    await api.post(`/agenda/integrations/${id}/sync-all?full=false`, {});
+    await carregar();
+  }
+
+  async function desconectarConta(id: number) {
+    if (!window.confirm("Desconectar esta conta e remover seus contatos sincronizados do Corvia?")) return;
+    await api.delete(`/agenda/integrations/${id}`);
     await carregar();
   }
 
@@ -728,10 +755,27 @@ export default function Agenda() {
         <section className="agenda-config-section"><div className="agenda-config-section__title"><div><h3>Catálogo de serviços</h3><p>Duração, preço, modalidade e política de encaixe.</p></div><span>{servicos.length}</span></div>{servicos.map((item) => <div className="agenda-config-item" key={item.id}><i style={{ background: item.color }} /><span><strong>{item.name} · {item.duration_minutes} min</strong><small>{item.visit_mode} · {formatarDinheiro(item.private_price_cents)}{item.allow_extra_slot ? " · aceita encaixe" : ""}</small></span></div>)}<div className="agenda-config-form agenda-config-form--service"><input placeholder="Nome do serviço" value={novoServico.name} onChange={(e) => setNovoServico({ ...novoServico, name: e.target.value, code: e.target.value })} /><select value={novoServico.location_id} onChange={(e) => setNovoServico({ ...novoServico, location_id: e.target.value })}><option value="">Todos os locais</option>{locais.map((item) => <option key={item.id} value={item.id}>{item.name}</option>)}</select><input type="number" min={5} value={novoServico.duration_minutes} onChange={(e) => setNovoServico({ ...novoServico, duration_minutes: Number(e.target.value) })} /><input inputMode="decimal" placeholder="Preço particular" value={novoServico.price} onChange={(e) => setNovoServico({ ...novoServico, price: e.target.value })} /><label className="agenda-check"><input type="checkbox" checked={novoServico.allow_extra_slot} onChange={(e) => setNovoServico({ ...novoServico, allow_extra_slot: e.target.checked })} /> Permitir encaixe</label><button className="botao botao--secundario" onClick={() => adicionarServico().catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível adicionar o serviço."))}>Adicionar serviço</button></div></section>
         <section className="agenda-config-section"><div className="agenda-config-section__title"><div><h3>Deslocamento inteligente</h3><p>A posição atual não é armazenada; a permissão permanece sob controle do aparelho.</p></div><button className={`agenda-switch${mobilidade?.enabled ? " ativo" : ""}`} role="switch" aria-checked={mobilidade?.enabled || false} onClick={() => alternarMobilidade().catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível alterar a mobilidade."))}><span /></button></div><div className="agenda-config-note"><Icone nome="rota" /><span><strong>{mobilidade?.enabled ? "Atualização automática em primeiro plano" : "Recurso desativado"}</strong><small>{capacidades?.traffic_configured ? "Trânsito em tempo real disponível." : "É preciso configurar uma credencial de trânsito no servidor."}</small></span></div></section>
         <section className="agenda-config-section">
+          <div className="agenda-config-section__title"><div><h3>Google, Microsoft e Apple</h3><p>Sincronize calendários e contatos para usar na Agenda e no CorvIA Mail.</p></div><span>{integracoes.filter((item) => ["google_calendar", "microsoft_365", "apple_icloud"].includes(item.provider) && item.enabled).length}</span></div>
+          <div className="agenda-contas-externas">
+            <button className="botao botao--secundario" disabled={!consentimentoContas || capacidades?.connectors.find((item) => item.provider === "google_calendar")?.oauth_configured === false} onClick={() => conectarConta("google").catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível iniciar a conexão Google."))}>Conectar Google</button>
+            <button className="botao botao--secundario" disabled={!consentimentoContas || capacidades?.connectors.find((item) => item.provider === "microsoft_365")?.oauth_configured === false} onClick={() => conectarConta("microsoft").catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível iniciar a conexão Microsoft."))}>Conectar Microsoft</button>
+          </div>
+          <label className="agenda-check"><input type="checkbox" checked={consentimentoContas} onChange={(e) => setConsentimentoContas(e.target.checked)} /> Autorizo a leitura dos meus calendários e contatos para uso na Agenda e no CorvIA Mail.</label>
+          {capacidades?.connectors.some((item) => ["google_calendar", "microsoft_365"].includes(item.provider) && item.oauth_configured === false) && <p className="agenda-config-help">O administrador ainda precisa cadastrar o cliente OAuth correspondente no servidor.</p>}
+          <details className="agenda-apple-config"><summary>Conectar Calendário e Contatos Apple</summary><div className="agenda-config-form agenda-config-form--routine">
+            <label>ID Apple<input type="email" autoComplete="username" value={apple.apple_id} onChange={(e) => setApple({ ...apple, apple_id: e.target.value })} placeholder="nome@icloud.com" /></label>
+            <label>Senha específica de app<input type="password" autoComplete="new-password" value={apple.app_specific_password} onChange={(e) => setApple({ ...apple, app_specific_password: e.target.value })} placeholder="xxxx-xxxx-xxxx-xxxx" /></label>
+            <label className="agenda-check span-2"><input type="checkbox" checked={apple.consent_accepted} onChange={(e) => setApple({ ...apple, consent_accepted: e.target.checked })} /> Autorizo a leitura do Calendário e dos Contatos do iCloud.</label>
+            <p className="agenda-config-help span-2">Use somente uma senha específica de app criada em account.apple.com. O Corvia nunca solicita nem armazena sua senha principal da Apple.</p>
+            <button className="botao botao--secundario" disabled={!apple.apple_id || !apple.app_specific_password || !apple.consent_accepted} onClick={() => conectarApple().catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível conectar o iCloud."))}>Conectar Apple</button>
+          </div></details>
+          {integracoes.filter((item) => ["google_calendar", "microsoft_365", "apple_icloud"].includes(item.provider)).map((item) => <div className="agenda-config-item" key={item.id}><i className={item.enabled ? "conectavel" : "em-breve"} /><span><strong>{item.display_name}</strong><small>{item.enabled ? `${item.contact_count} contatos · ${item.last_success_at ? "sincronizada" : "aguardando primeira sincronização"}` : "desconectada"}</small></span><div className="agenda-conta-acoes"><button onClick={() => sincronizarConta(item.id).catch((e) => setErro(e instanceof ApiError ? e.message : "Falha na sincronização."))} disabled={!item.enabled}>Sincronizar</button><button onClick={() => desconectarConta(item.id).catch((e) => setErro(e instanceof ApiError ? e.message : "Falha ao desconectar."))} disabled={!item.enabled}>Desconectar</button></div></div>)}
+        </section>
+        <section className="agenda-config-section">
           <div className="agenda-config-section__title"><div><h3>Importar agendas de clínicas e hospitais</h3><p>Prepare uma conexão para cada local de trabalho. Ativação e escrita exigem API oficial, credenciais e homologação do fornecedor.</p></div><span>{integracoes.length}</span></div>
           {integracoes.map((item) => <div className="agenda-config-item" key={item.id}><i className={item.status === "connected" ? "conectavel" : "em-breve"} /><span><strong>{item.display_name}</strong><small>{capacidades?.connectors.find((connector) => connector.provider === item.provider)?.name || item.provider} · {item.status === "draft" ? "preparada, aguardando configuração" : item.status === "connected" ? "conectada" : item.last_error_message || item.status}</small></span><span className="agenda-pill">{item.enabled ? "Ativa" : "Rascunho"}</span></div>)}
           <div className="agenda-config-form agenda-integracao-form">
-            <label>Sistema<select value={novaIntegracao.provider} onChange={(e) => setNovaIntegracao({ ...novaIntegracao, provider: e.target.value })}>{capacidades?.connectors.map((item) => <option key={item.provider} value={item.provider}>{item.name}</option>)}</select></label>
+            <label>Sistema<select value={novaIntegracao.provider} onChange={(e) => setNovaIntegracao({ ...novaIntegracao, provider: e.target.value })}>{capacidades?.connectors.filter((item) => !["google_calendar", "microsoft_365", "apple_icloud"].includes(item.provider)).map((item) => <option key={item.provider} value={item.provider}>{item.name}</option>)}</select></label>
             <label>Clínica ou hospital<input value={novaIntegracao.display_name} onChange={(e) => setNovaIntegracao({ ...novaIntegracao, display_name: e.target.value })} placeholder="Ex.: Hospital Central · agenda principal" /></label>
             <p className="agenda-config-help span-2">Esta etapa registra a solicitação sem enviar senhas. O conector só será ativado após consentimento e validação técnica; fornecedores sem API homologada permanecem identificados como pendentes.</p>
             <button className="botao botao--secundario" disabled={!novaIntegracao.display_name.trim()} onClick={() => prepararIntegracao().catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível preparar a integração."))}>Preparar integração</button>

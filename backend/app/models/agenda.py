@@ -12,8 +12,8 @@ from sqlalchemy import (
     Boolean,
     Date,
     DateTime,
-    ForeignKey,
     Float,
+    ForeignKey,
     Integer,
     LargeBinary,
     String,
@@ -263,8 +263,11 @@ class CalendarIntegration(Base):
     sync_strategy: Mapped[str] = mapped_column(String(40), default="external_authoritative")
     enabled: Mapped[bool] = mapped_column(Boolean, default=False, index=True)
     write_enabled: Mapped[bool] = mapped_column(Boolean, default=False)
+    contacts_enabled: Mapped[bool] = mapped_column(Boolean, default=False)
+    external_account_id: Mapped[str | None] = mapped_column(String(255), nullable=True)
     credentials_cipher: Mapped[bytes | None] = mapped_column(LargeBinary, nullable=True)
     cursor_cipher: Mapped[bytes | None] = mapped_column(LargeBinary, nullable=True)
+    contacts_cursor_cipher: Mapped[bytes | None] = mapped_column(LargeBinary, nullable=True)
     configuration: Mapped[dict] = mapped_column(JSONB, default=dict)
     capabilities: Mapped[dict] = mapped_column(JSONB, default=dict)
     consent_version: Mapped[str | None] = mapped_column(String(40), nullable=True)
@@ -274,12 +277,64 @@ class CalendarIntegration(Base):
     last_success_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
     last_error_code: Mapped[str | None] = mapped_column(String(80), nullable=True)
     last_error_message: Mapped[str | None] = mapped_column(String(500), nullable=True)
+    revoked_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_agora)
     updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_agora, onupdate=_agora)
 
     __table_args__ = (
         UniqueConstraint("owner_id", "provider", "display_name", name="uq_calendar_integration_owner"),
+        UniqueConstraint(
+            "owner_id", "provider", "external_account_id",
+            name="uq_calendar_integration_external_account",
+        ),
     )
+
+
+class ExternalContact(Base):
+    """Contato externo cifrado, isolado por profissional e provedor.
+
+    Nome, e-mails, telefones e organização permanecem cifrados. O Corvia Mail
+    decifra apenas contatos do próprio titular e aplica busca em memória com
+    limite explícito, evitando criar um índice de dados pessoais em texto claro.
+    """
+
+    __tablename__ = "external_contacts"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    owner_id: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), index=True)
+    integration_id: Mapped[int] = mapped_column(
+        ForeignKey("calendar_integrations.id", ondelete="CASCADE"), index=True
+    )
+    external_id: Mapped[str] = mapped_column(String(512))
+    external_version: Mapped[str | None] = mapped_column(String(512), nullable=True)
+    display_name_cipher: Mapped[bytes | None] = mapped_column(LargeBinary, nullable=True)
+    emails_cipher: Mapped[bytes | None] = mapped_column(LargeBinary, nullable=True)
+    phones_cipher: Mapped[bytes | None] = mapped_column(LargeBinary, nullable=True)
+    organization_cipher: Mapped[bytes | None] = mapped_column(LargeBinary, nullable=True)
+    deleted: Mapped[bool] = mapped_column(Boolean, default=False, index=True)
+    external_updated_at: Mapped[str | None] = mapped_column(String(80), nullable=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_agora)
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_agora, onupdate=_agora)
+
+    __table_args__ = (
+        UniqueConstraint("integration_id", "external_id", name="uq_external_contact_provider_id"),
+    )
+
+
+class IntegrationOAuthState(Base):
+    """Estado OAuth descartável; armazena somente o digest do valor público."""
+
+    __tablename__ = "integration_oauth_states"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    owner_id: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), index=True)
+    provider: Mapped[str] = mapped_column(String(40), index=True)
+    state_digest: Mapped[str] = mapped_column(String(64), unique=True, index=True)
+    code_verifier_cipher: Mapped[bytes] = mapped_column(LargeBinary)
+    request_data: Mapped[dict] = mapped_column(JSONB, default=dict)
+    expires_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), index=True)
+    used_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=_agora)
 
 
 class ExternalPatientLink(Base):

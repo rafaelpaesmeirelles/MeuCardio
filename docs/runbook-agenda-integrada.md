@@ -13,6 +13,11 @@ Variáveis suportadas (registrar os valores somente no gerenciador de segredos/`
 - `AGENDA_OUTBOX_MAX_ATTEMPTS`
 - `TRAFFIC_PROVIDER` (`google_routes` ou `mapbox`)
 - `GOOGLE_ROUTES_API_KEY`
+- `GOOGLE_OAUTH_CLIENT_ID`
+- `GOOGLE_OAUTH_CLIENT_SECRET`
+- `MICROSOFT_OAUTH_CLIENT_ID`
+- `MICROSOFT_OAUTH_CLIENT_SECRET`
+- `MICROSOFT_OAUTH_TENANT`
 - `MAPBOX_ACCESS_TOKEN`
 - `STORAGE_ENCRYPTION_KEY`
 
@@ -66,3 +71,33 @@ Coordenadas de origem e rotas não podem aparecer em auditoria ou logs. O evento
 7. Confirmar que conectores não homologados não geram chamada de rede.
 8. Consultar logs por erro novo, sem expor o `.env`.
 
+## Contas externas e CorvIA Mail
+
+### Google
+
+1. Habilitar **Google Calendar API** e **People API** no projeto Google Cloud.
+2. Configurar a tela de consentimento e um cliente OAuth de aplicação Web.
+3. Cadastrar exatamente `https://corvia.med.br/api/agenda/oauth/google/callback` como URI de redirecionamento.
+4. Gravar o ID e o segredo do cliente apenas no `.env` de produção.
+5. Validar/publicar os escopos de calendário e `contacts.readonly` antes de liberar usuários externos.
+
+### Microsoft
+
+1. Registrar uma aplicação Web no Microsoft Entra com os tipos de conta pretendidos.
+2. Cadastrar exatamente `https://corvia.med.br/api/agenda/oauth/microsoft/callback`.
+3. Conceder permissões delegadas `User.Read`, `Calendars.Read`, `Contacts.Read` e `offline_access`; usar `Calendars.ReadWrite` somente se a escrita global estiver habilitada.
+4. Gravar ID, segredo e tenant apenas no `.env` de produção.
+
+### Apple
+
+- O usuário cria uma **senha específica de app** em `account.apple.com` e a informa junto ao ID Apple. A senha principal nunca é solicitada.
+- O backend usa somente endpoints fixos CalDAV/CardDAV do iCloud; URLs descobertas fora de `*.icloud.com` são recusadas.
+- A sincronização Apple é de leitura. Escrita fica bloqueada até homologação de recorrências, ETags e conflitos CalDAV.
+
+### Smoke test das contas
+
+1. Conectar uma conta de teste de cada provedor em **Agenda > Configurar agenda**.
+2. Executar “Sincronizar” e conferir eventos na Agenda e a contagem de contatos.
+3. Abrir o CorvIA Mail com sua sessão própria e confirmar sugestões no campo “Para”.
+4. Desconectar e confirmar que credenciais/cursores foram apagados e contatos deixaram de ser exibidos.
+5. Nunca registrar tokens OAuth, senha específica de app, contatos ou conteúdo do `.env` em diagnóstico, auditoria ou logs.

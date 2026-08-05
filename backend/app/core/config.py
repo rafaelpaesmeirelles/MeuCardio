@@ -53,6 +53,11 @@ class Settings(BaseSettings):
     agenda_sync_horizon_days: int = 365
     agenda_sync_batch_size: int = 200
     agenda_outbox_max_attempts: int = 8
+    google_oauth_client_id: str = ""
+    google_oauth_client_secret: str = ""
+    microsoft_oauth_client_id: str = ""
+    microsoft_oauth_client_secret: str = ""
+    microsoft_oauth_tenant: str = "common"
     traffic_provider: str = "google_routes"  # google_routes | mapbox
     google_routes_api_key: str = ""
     # Chave pública separada, restrita por HTTP referrer a corvia.med.br e

@@ -123,6 +123,35 @@ class TestStatusEAtivacao:
         assert corpo["status"] == "ativa"
         assert corpo["senha_definida"] is True
 
+    def test_resumo_expoe_so_tres_metadados_nao_lidos(
+        self, client, db, criar_usuario, monkeypatch_mail360, monkeypatch,
+    ):
+        from app.services import mail360
+
+        user, token = criar_usuario()
+        _ativar_caixa(client, db, user, monkeypatch_mail360)
+        mensagens = [
+            {
+                "messageId": f"msg-{indice}", "status": "0",
+                "fromAddress": f"remetente{indice}@example.com",
+                "subject": f"Assunto {indice}", "receivedTime": str(1000 + indice),
+                "summary": "não deve sair", "content": "não deve sair",
+            }
+            for indice in range(4)
+        ]
+        mensagens.append({"messageId": "lida", "status": "1", "subject": "Já lida"})
+        monkeypatch.setattr(mail360, "listar_mensagens", lambda *args, **kwargs: mensagens)
+
+        resposta = client.get(
+            "/api/email/resumo", headers={"Authorization": f"Bearer {token}"},
+        )
+        assert resposta.status_code == 200
+        corpo = resposta.json()
+        assert corpo["disponivel"] is True
+        assert len(corpo["pendentes"]) == 3
+        assert all("summary" not in mensagem and "content" not in mensagem for mensagem in corpo["pendentes"])
+        assert all(mensagem["status"] == "0" for mensagem in corpo["pendentes"])
+
     def test_ativar_sem_local_part_devolve_422(self, client, db, criar_usuario):
         user, token = criar_usuario()
         _dar_assinatura_email_ativa(db, user)

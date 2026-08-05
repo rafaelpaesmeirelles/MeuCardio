@@ -1,8 +1,11 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import Icone, { type NomeIcone } from "../components/Icone";
+import { AreaClinicaIcone, type AreaClinicaMarca } from "../components/IdentidadeClinica";
+import LogoCorviaMail from "../components/LogoCorviaMail";
 import MapaDeslocamento, { type RotaDeslocamento } from "../components/MapaDeslocamento";
-import { api } from "../lib/api";
+import { api, assetUrl } from "../lib/api";
+import { tokenEmail } from "../lib/apiEmail";
 import { useAuth } from "../lib/auth";
 
 type Tema = { theme: string; count: number };
@@ -67,8 +70,36 @@ type AreaDestaque = {
   contexto: string;
   descricao: string;
   to: string;
-  icone: NomeIcone;
+  marca: AreaClinicaMarca;
   tema?: string;
+};
+
+type StatusEmail = {
+  status: string;
+  incluido_no_plano: boolean;
+};
+
+type ContaEmail = {
+  ativa: boolean;
+  email_address?: string;
+};
+
+type MensagemEmail = {
+  messageId?: string;
+  id?: string;
+  subject?: string;
+  fromAddress?: string;
+  sender?: string;
+  receivedTime?: string;
+  sentDateInGMT?: string;
+  date?: string;
+  status?: string;
+};
+
+type ResumoEmail = {
+  disponivel: boolean;
+  email_address: string | null;
+  pendentes: MensagemEmail[];
 };
 
 const ATALHOS: Atalho[] = [
@@ -176,7 +207,7 @@ const AREAS_DESTAQUE: AreaDestaque[] = [
     contexto: "Infância e adolescência",
     descricao: "Congênitas, arritmias, insuficiência cardíaca e seguimento por faixa etária.",
     to: "/biblioteca?tema=Cardiologia%20pedi%C3%A1trica",
-    icone: "pacientes",
+    marca: "pediatrica",
     tema: "Cardiologia pediátrica",
   },
   {
@@ -184,22 +215,21 @@ const AREAS_DESTAQUE: AreaDestaque[] = [
     contexto: "Primeiros dias de vida",
     descricao: "Triagem, cardiopatias congênitas e abordagem cardiovascular do recém-nascido.",
     to: "/doencas?tab=congenitas&area=cardiopediatria",
-    icone: "doencas",
+    marca: "neonatal",
   },
   {
-    nome: "Cardio-Oncologia",
-    contexto: "Cuidado multidisciplinar",
-    descricao: "Avaliação de risco, prevenção e acompanhamento da cardiotoxicidade.",
-    to: "/biblioteca?tema=Cardio-oncologia",
-    icone: "evidencia",
-    tema: "Cardio-oncologia",
+    nome: "Cardiopatias Congênitas no Adulto",
+    contexto: "Transição e seguimento",
+    descricao: "Anatomia, intervenções prévias, risco tardio e cuidado longitudinal do adulto.",
+    to: "/doencas?tab=congenitas",
+    marca: "congenita",
   },
   {
     nome: "Cardio-Geriatria",
     contexto: "Longevidade cardiovascular",
     descricao: "Decisões adaptadas à multimorbidade, fragilidade e polifarmácia.",
     to: "/biblioteca?tema=Cardiologia%20geri%C3%A1trica",
-    icone: "clinica",
+    marca: "geriatria",
     tema: "Cardiologia geriátrica",
   },
   {
@@ -207,8 +237,16 @@ const AREAS_DESTAQUE: AreaDestaque[] = [
     contexto: "Ciclo gravídico-puerperal",
     descricao: "Condutas cardiovasculares e segurança terapêutica durante gestação e lactação.",
     to: "/biblioteca?tema=Gravidez",
-    icone: "medicamento",
+    marca: "gestacao",
     tema: "Gravidez",
+  },
+  {
+    nome: "Cardio-Oncologia",
+    contexto: "Cuidado multidisciplinar",
+    descricao: "Avaliação de risco, prevenção e acompanhamento da cardiotoxicidade.",
+    to: "/biblioteca?tema=Cardio-oncologia",
+    marca: "oncologia",
+    tema: "Cardio-oncologia",
   },
 ];
 
@@ -258,6 +296,22 @@ function nomeTipo(tipo: string) {
     || "Compromisso";
 }
 
+function dataDoEmail(mensagem: MensagemEmail) {
+  const bruto = mensagem.receivedTime ?? mensagem.sentDateInGMT ?? mensagem.date;
+  if (!bruto) return null;
+  const numero = Number(bruto);
+  const data = Number.isFinite(numero) && String(bruto).length > 8 ? new Date(numero) : new Date(bruto);
+  return Number.isNaN(data.getTime()) ? null : data;
+}
+
+function dataCurtaDoEmail(mensagem: MensagemEmail) {
+  const data = dataDoEmail(mensagem);
+  if (!data) return "";
+  return data.toDateString() === new Date().toDateString()
+    ? data.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" })
+    : data.toLocaleDateString("pt-BR", { day: "2-digit", month: "short" });
+}
+
 export default function Painel() {
   const { usuario } = useAuth();
   const [catalogo, setCatalogo] = useState<Catalogo | null>(null);
@@ -273,6 +327,10 @@ export default function Painel() {
   const [deslocamento, setDeslocamento] = useState<Deslocamento | null>(null);
   const [origemDeslocamento, setOrigemDeslocamento] = useState<{ latitude: number; longitude: number } | null>(null);
   const [erroLocalizacao, setErroLocalizacao] = useState("");
+  const [statusEmail, setStatusEmail] = useState<StatusEmail | null>(null);
+  const [contaEmail, setContaEmail] = useState<ContaEmail | null>(null);
+  const [emailsPendentes, setEmailsPendentes] = useState<MensagemEmail[]>([]);
+  const [resumoEmail, setResumoEmail] = useState<"carregando" | "disponivel" | "indisponivel">("carregando");
 
   useEffect(() => {
     const total = (rota: string) =>
@@ -288,6 +346,17 @@ export default function Painel() {
     api.get<PreferenciaMobilidade>("/agenda/mobility/preferences").then(setMobilidade).catch(() => setMobilidade(null));
     api.get<ConfiguracaoMapa>("/agenda/mobility/map-config").then(setConfiguracaoMapa).catch(() => setConfiguracaoMapa(null));
     api.get<ProximoLocal[]>("/agenda/workday/next-locations").then(setProximosLocais).catch(() => setProximosLocais([]));
+    api.get<StatusEmail>("/billing/status-email").then(setStatusEmail).catch(() => setStatusEmail(null));
+    api.get<ContaEmail>("/email/conta").then(setContaEmail).catch(() => setContaEmail(null));
+    api.get<ResumoEmail>("/email/resumo")
+      .then((resumo) => {
+        setEmailsPendentes(resumo.pendentes ?? []);
+        setResumoEmail(resumo.disponivel ? "disponivel" : "indisponivel");
+      })
+      .catch(() => {
+        setEmailsPendentes([]);
+        setResumoEmail("indisponivel");
+      });
   }, []);
 
   useEffect(() => {
@@ -340,6 +409,8 @@ export default function Painel() {
   }, [agenda]);
 
   const primeiroNome = usuario?.full_name?.trim().split(/\s+/)[0] || "Doutor(a)";
+  const assinanteEmail = !!statusEmail && ["ativo", "teste", "inadimplente"].includes(statusEmail.status);
+  const totalPrioridades = compromissosHoje.length + (pacientes ?? 0);
   const saidaRecomendada = proximosLocais[0] && deslocamento?.routes[0]
     ? new Date(new Date(proximosLocais[0].starts_at).getTime()
       - (deslocamento.routes[0].duration_seconds + proximosLocais[0].arrival_buffer_minutes * 60) * 1000)
@@ -359,11 +430,17 @@ export default function Painel() {
           <h1>{saudacao()}, {primeiroNome}.</h1>
           <p className="hoje__data">{dataExtenso()} · sua rotina clínica em um só lugar.</p>
         </div>
-        <Link to="/emergencia" className="hoje__emergencia">
-          <Icone nome="emergencia" />
-          <span><strong>Modo Emergência</strong><small>Protocolos de risco imediato</small></span>
-          <Icone nome="seta" />
-        </Link>
+        <div className="hoje__identidade-profissional">
+          {usuario?.document_logo_url ? (
+            <img src={assetUrl(usuario.document_logo_url)} alt="Logo profissional" />
+          ) : (
+            <img src="/corvia-logo-compacta.png" alt="CorvIA" />
+          )}
+          <span>
+            <small>{usuario?.document_logo_url ? "Identidade profissional" : "Seu ambiente clínico"}</small>
+            <strong>{usuario?.workplace_name || usuario?.specialty || "Cardiologia conectada"}</strong>
+          </span>
+        </div>
       </section>
 
       <section className="hoje__atalhos" aria-labelledby="acoes-frequentes">
@@ -432,6 +509,20 @@ export default function Painel() {
           <Link className="hoje-card__acao" to="/round">Abrir round <Icone nome="seta" /></Link>
         </article>
 
+        <article className="hoje-card hoje-card--prioridades">
+          <div className="hoje-card__topo">
+            <div><p className="eyebrow">Foco clínico</p><h2>Prioridades do dia</h2></div>
+            <span className="hoje-prioridades__sinal"><Icone nome="check" /></span>
+          </div>
+          <strong className="hoje-prioridades__total">{quantidade(totalPrioridades)}</strong>
+          <div className="hoje-prioridades__lista">
+            <Link to="/agenda"><span><Icone nome="agenda" /> Atendimentos</span><strong>{quantidade(compromissosHoje.length)}</strong></Link>
+            <Link to="/round"><span><Icone nome="round" /> Pacientes em round</span><strong>{quantidade(pacientes)}</strong></Link>
+            <Link to="/agenda"><span><Icone nome="rota" /> Próximo local</span><strong>{proximosLocais[0] ? "Definido" : "Configurar"}</strong></Link>
+          </div>
+          <Link className="hoje-card__acao" to="/agenda">Organizar meu dia <Icone nome="seta" /></Link>
+        </article>
+
         <article className="hoje-card hoje-card--deslocamento">
           <div className="hoje-card__topo">
             <div><p className="eyebrow">Próximo deslocamento</p><h2>Rota para o trabalho</h2></div>
@@ -481,12 +572,63 @@ export default function Painel() {
         </article>
 
         <article className="hoje-card hoje-card--mail">
-          <div className="hoje-card__topo">
-            <div><p className="eyebrow">Comunicação</p><h2>Corvia Mail</h2></div>
-            <Icone nome="mail" />
+          <div className="hoje-mail__topo">
+            <div><p className="eyebrow">Comunicação</p><h2>Seu consultório, também no e-mail</h2></div>
+            <span className="hoje-mail__logo"><LogoCorviaMail tamanho="compacto" /></span>
           </div>
-          <p>Central profissional com caixa de entrada, prioridades, modelos e continuidade do trabalho clínico.</p>
-          <Link className="hoje-card__acao" to="/corvia-mail">Abrir comunicação <Icone nome="seta" /></Link>
+
+          {assinanteEmail ? (
+            contaEmail?.ativa ? (
+              <div className="hoje-mail__assinante">
+                <div className="hoje-mail__conta">
+                  <span><i />{contaEmail.email_address}</span>
+                  <small>{resumoEmail === "disponivel" ? "Resumo de pendências atualizado" : "Caixa profissional conectada"}</small>
+                </div>
+                {emailsPendentes.length > 0 ? (
+                  <div className="hoje-mail__mensagens" aria-label="E-mails não lidos mais recentes">
+                    {emailsPendentes.map((mensagem, index) => (
+                      <Link to="/caixa-de-email" key={mensagem.messageId ?? mensagem.id ?? index}>
+                        <span><strong>{mensagem.fromAddress ?? mensagem.sender ?? "Remetente não informado"}</strong><small>{mensagem.subject || "Sem assunto"}</small></span>
+                        <time>{dataCurtaDoEmail(mensagem)}</time>
+                      </Link>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="hoje-mail__sem-pendencias">
+                    <Icone nome={resumoEmail === "disponivel" ? "check" : "sincronizar"} />
+                    <span>
+                      <strong>{resumoEmail === "carregando" ? "Atualizando pendências…" : resumoEmail === "disponivel" ? "Nenhum e-mail pendente" : "Resumo temporariamente indisponível"}</strong>
+                      <small>{resumoEmail === "disponivel" ? "Sua caixa está em dia." : "Abra a caixa para consultar as mensagens recebidas."}</small>
+                    </span>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <div className="hoje-mail__ativacao"><Icone nome="configuracao" /><span><strong>Assinatura ativa</strong><small>Escolha seu endereço @corvia.med.br e conclua a ativação segura.</small></span></div>
+            )
+          ) : (
+            <div className="hoje-mail__beneficios">
+              <span><Icone nome="mail" /><small>Endereço profissional<br /><strong>@corvia.med.br</strong></small></span>
+              <span><Icone nome="sincronizar" /><small>Contatos e agenda<br /><strong>sincronizados</strong></small></span>
+              <span><Icone nome="documento" /><small>Modelos, anexos e<br /><strong>fluxo profissional</strong></small></span>
+            </div>
+          )}
+          <Link className="hoje-card__acao" to={contaEmail?.ativa && tokenEmail.get() ? "/caixa-de-email" : "/corvia-mail"}>
+            {assinanteEmail ? contaEmail?.ativa ? "Abrir caixa de entrada" : "Ativar meu endereço" : "Conhecer e assinar o CorvIA Mail"} <Icone nome="seta" />
+          </Link>
+        </article>
+
+        <article className="hoje-card hoje-card--central-documentos">
+          <div className="hoje-card__topo">
+            <div><p className="eyebrow">Produção clínica</p><h2>Central de documentos</h2></div>
+            <Icone nome="documento" />
+          </div>
+          <p>Prescreva, documente e oriente o paciente sem interromper o fluxo do atendimento.</p>
+          <div className="hoje-documentos__acoes">
+            <Link to="/receituario"><Icone nome="prescricao" /><span><strong>Nova prescrição</strong><small>Medicamentos e uso contínuo</small></span><Icone nome="seta" /></Link>
+            <Link to="/documentos"><Icone nome="documento" /><span><strong>Emitir documento</strong><small>Atestado, relatório ou solicitação</small></span><Icone nome="seta" /></Link>
+            <Link to="/checklists"><Icone nome="check" /><span><strong>Checklist de alta</strong><small>Segurança na transição do cuidado</small></span><Icone nome="seta" /></Link>
+          </div>
         </article>
       </section>
 
@@ -519,7 +661,7 @@ export default function Painel() {
                 <article className="hoje-area" key={area.nome}>
                   <Link to={area.to} aria-label={`Explorar ${area.nome}`}>
                     <span className="hoje-area__topo">
-                      <span className="hoje-area__icone"><Icone nome={area.icone} /></span>
+                      <span className={`hoje-area__icone hoje-area__icone--${area.marca}`}><AreaClinicaIcone area={area.marca} /></span>
                       <span className="hoje-area__numero">{String(index + 1).padStart(2, "0")}</span>
                     </span>
                     <span className="hoje-area__contexto">{area.contexto}</span>

@@ -44,6 +44,10 @@ type AnexoRecebido = {
   size?: number;
 };
 type AnexoEnviado = { file_id: string; nome: string };
+type ContatoExterno = {
+  id: number; name: string; emails: string[]; phones: string[];
+  organization: string; provider: string; integration_id: number;
+};
 type Filtro = "todas" | "nao_lidas" | "anexos" | "acompanhamento";
 type AcaoResposta = "reply" | "replyall" | "forward";
 
@@ -286,6 +290,7 @@ export default function CaixaDeEmail() {
   const [enviando, setEnviando] = useState(false);
   const [anexos, setAnexos] = useState<AnexoEnviado[]>([]);
   const [enviandoAnexo, setEnviandoAnexo] = useState(false);
+  const [contatos, setContatos] = useState<ContatoExterno[]>([]);
 
   function mensagemDeErro(e: unknown, fallback: string): string {
     if (e instanceof ApiEmailError && e.status === 401) {
@@ -339,6 +344,7 @@ export default function CaixaDeEmail() {
   useEffect(() => {
     if (semSessao || !enderecoAtual) return;
     void carregarPastas();
+    apiEmail.get<ContatoExterno[]>("/email/contatos?limite=100").then(setContatos).catch(() => setContatos([]));
   }, [semSessao, enderecoAtual]);
 
   useEffect(() => {
@@ -625,6 +631,12 @@ export default function CaixaDeEmail() {
               </div>
             </section>
 
+            <section className="mail-painel-card mail-painel-card--contatos">
+              <p className="eyebrow">Contatos conectados</p>
+              <h2>Google, Microsoft e Apple</h2>
+              {contatos.length ? contatos.slice(0, 5).map((contato) => <button key={contato.id} onClick={() => { novaMensagem(); setRascunho({ ...RASCUNHO_VAZIO, para: contato.emails[0] || "" }); }}><span className="mail-avatar">{contato.name.slice(0, 1).toUpperCase()}</span><span><strong>{contato.name}</strong><small>{contato.emails[0]}{contato.organization ? ` · ${contato.organization}` : ""}</small></span></button>) : <div className="mail-contatos-vazio"><span>Nenhum contato sincronizado.</span><Link to="/agenda">Conectar uma conta na Agenda</Link></div>}
+            </section>
+
             <section className="mail-painel-card mail-painel-card--integracoes">
               <p className="eyebrow">Ecossistema Corvia</p>
               <h2>Continue o trabalho</h2>
@@ -830,8 +842,9 @@ export default function CaixaDeEmail() {
               <button onClick={() => setCompondo(false)} aria-label="Fechar">×</button>
             </header>
             {(rascunho.modo === "nova" || rascunho.modo === "forward") && (
-              <label>Para<input type="email" value={rascunho.para} onChange={(e) => setRascunho({ ...rascunho, para: e.target.value })} /></label>
+              <label>Para<input type="email" list="corvia-mail-contatos" value={rascunho.para} onChange={(e) => setRascunho({ ...rascunho, para: e.target.value })} /><datalist id="corvia-mail-contatos">{contatos.flatMap((contato) => contato.emails.map((email) => <option key={`${contato.id}-${email}`} value={email}>{contato.name}{contato.organization ? ` · ${contato.organization}` : ""}</option>))}</datalist></label>
             )}
+            {(rascunho.modo === "nova" || rascunho.modo === "forward") && contatos.length > 0 && <div className="mail-compositor__contatos"><span>Contatos:</span>{contatos.filter((contato) => !rascunho.para || `${contato.name} ${contato.emails.join(" ")}`.toLocaleLowerCase("pt-BR").includes(rascunho.para.toLocaleLowerCase("pt-BR"))).slice(0, 6).map((contato) => <button key={contato.id} type="button" onClick={() => setRascunho({ ...rascunho, para: contato.emails[0] || "" })}>{contato.name}<small>{contato.emails[0]}</small></button>)}</div>}
             <button className="mail-compositor__copias" onClick={() => setMostrarCopias((valor) => !valor)}>
               {mostrarCopias ? "Ocultar Cc/Cco" : "Adicionar Cc/Cco"}
             </button>
