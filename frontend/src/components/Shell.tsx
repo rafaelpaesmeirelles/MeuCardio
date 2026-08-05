@@ -13,6 +13,8 @@ const NAV_BASE: ItemNav[] = [
   { to: "/condicoes", rotulo: "Alerta por condição", curto: "Condições" },
   { to: "/diretrizes", rotulo: "Alertas de diretriz", curto: "Diretrizes" },
   { to: "/assistente", rotulo: "Assistente clínico", curto: "Assistente" },
+  { to: "/doencas", rotulo: "Guia de doenças", curto: "Doenças" },
+  { to: "/triagem-sintomas", rotulo: "Triagem de sintomas", curto: "Triagem" },
   { to: "/biblioteca", rotulo: "Biblioteca científica", curto: "Biblioteca" },
   { to: "/busca", rotulo: "Busca", curto: "Busca" },
   { to: "/calculadoras", rotulo: "Calculadoras", curto: "Escores" },
