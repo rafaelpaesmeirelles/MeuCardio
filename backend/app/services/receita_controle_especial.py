@@ -3,8 +3,10 @@
 
 O modelo vigente foi publicado em 16/03/2026 e tornou-se obrigatório para
 impressões realizadas desde 18/05/2026. A saída contém as duas vias, cada uma
-com frente e verso. Os demais modelos controlados permanecem fail-closed até
-existir numeração oficial/integração SNCR aplicável.
+com frente e verso. Quando a prescrição excede uma frente, são geradas páginas
+de continuação explicitamente numeradas, cada qual com seu verso correspondente.
+Os demais modelos controlados permanecem fail-closed até existir numeração
+oficial/integração SNCR aplicável.
 """
 from __future__ import annotations
 
@@ -35,6 +37,8 @@ MARGEM_X = 14 * mm
 MARGEM_Y = 13 * mm
 FUSO = ZoneInfo("America/Sao_Paulo")
 MODELO_VERSAO = "ANVISA-RCE-V2-2026-03-16"
+ALTURA_PRESCRICAO_UTIL = 84 * mm
+ALTURA_LINHA_OBSERVACAO = 3.8 * mm
 
 
 def _valor(source: Any, nome: str) -> Any:
@@ -47,24 +51,47 @@ def _texto(value: Any) -> str:
     return str(value or "").strip()
 
 
-def _registro(medico: Any) -> str:
-    conselho = _texto(_valor(medico, "council_name"))
+def _registro_legado_completo(valor: str) -> tuple[str, str, str] | None:
+    """Interpreta apenas registros legados que contenham conselho, número e UF."""
+    texto = _texto(valor).upper()
+    if not texto:
+        return None
+    padrao = re.compile(
+        r"^(?P<conselho>[A-Z]{2,10})\s*"
+        r"(?:[-/]\s*(?P<uf_antes>[A-Z]{2}))?\s*"
+        r"(?P<numero>\d[0-9A-Z.\-]*)\s*"
+        r"(?:[/\-\s]+(?P<uf_depois>[A-Z]{2}))?$"
+    )
+    match = padrao.fullmatch(texto)
+    if not match:
+        return None
+    conselho = match.group("conselho")
+    numero = match.group("numero")
+    uf = match.group("uf_antes") or match.group("uf_depois")
+    if not (conselho and numero and uf):
+        return None
+    return conselho, numero, uf
+
+
+def _registro_componentes(medico: Any) -> tuple[str, str, str]:
+    conselho = _texto(_valor(medico, "council_name")).upper()
     numero = _texto(_valor(medico, "council_number"))
-    uf = _texto(_valor(medico, "council_state"))
-    if not conselho and _texto(_valor(medico, "crm")):
-        return _texto(_valor(medico, "crm"))
-    partes = [x for x in (conselho, numero, uf) if x]
-    return " ".join(partes)
+    uf = _texto(_valor(medico, "council_state")).upper()
+    if conselho or numero or uf:
+        return conselho, numero, uf
+    legado = _registro_legado_completo(_texto(_valor(medico, "crm")))
+    return legado or ("", "", "")
+
+
+def _registro(medico: Any) -> str:
+    conselho, numero, uf = _registro_componentes(medico)
+    if not all((conselho, numero, uf)):
+        return ""
+    return f"{conselho} {numero}/{uf}"
 
 
 def _endereco_estruturado_completo(endereco: dict | None) -> bool:
-    """A RCE exige endereço profissional completo, não apenas algum texto.
-
-    Logradouro, número, município e UF são o núcleo mínimo verificável do
-    endereço estruturado. Bairro, complemento e CEP continuam impressos quando
-    cadastrados, mas sua ausência não transforma um endereço identificável em
-    inválido.
-    """
+    """A RCE exige endereço profissional completo, não apenas algum texto."""
     return bool(
         endereco
         and all(_texto(endereco.get(campo)) for campo in ("logradouro", "numero", "cidade", "uf"))
@@ -159,20 +186,73 @@ def _logo_profissional(c: canvas.Canvas, medico: Any, x: float, y_topo: float) -
         return 0.0
 
 
-def _prescricao(c: canvas.Canvas, y: float, itens: list[dict], observacoes: str,
-                *, c5: bool, destinatario: dict, cid: str | None) -> float:
+def _texto_item(indice: int, item: dict) -> tuple[str, str]:
+    descricao = _texto(item.get("descricao") or item.get("substancia"))
+    apresentacao = _texto(item.get("apresentacao"))
+    primeira = f"{indice}) {descricao}"
+    if apresentacao:
+        primeira += f" - {apresentacao}"
+    quantidade = _texto(item.get("quantidade"))
+    if quantidade:
+        primeira += f" - Quantidade: {quantidade}"
+    return primeira, _texto(item.get("posologia"))
+
+
+def _altura_item(indice: int, item: dict, largura: float) -> float:
+    primeira, posologia = _texto_item(indice, item)
+    linhas_titulo = len(_linhas(primeira, "Helvetica-Bold", 9.2, largura))
+    linhas_posologia = len(_linhas(posologia, "Helvetica", 8.7, largura - 7 * mm)) if posologia else 0
+    return linhas_titulo * 4.3 * mm + linhas_posologia * 4 * mm + 2 * mm
+
+
+def _paginar_prescricao(itens: list[dict], observacoes: str, *, c5: bool) -> list[dict]:
+    """Distribui todo o conteúdo sem cortes silenciosos e sem texto fora da área útil."""
+    largura = LARGURA - 2 * MARGEM_X - 4 * mm
+    paginas: list[dict] = []
+    pagina = {"itens": [], "altura_usada": 0.0, "c5": False, "observacoes": []}
+
+    for indice, item in enumerate(itens, start=1):
+        altura = _altura_item(indice, item, largura)
+        if pagina["itens"] and pagina["altura_usada"] + altura > ALTURA_PRESCRICAO_UTIL:
+            paginas.append(pagina)
+            pagina = {"itens": [], "altura_usada": 0.0, "c5": False, "observacoes": []}
+        pagina["itens"].append((indice, item))
+        pagina["altura_usada"] += altura
+    paginas.append(pagina)
+
+    if c5:
+        altura_c5 = 27 * mm
+        if paginas[-1]["altura_usada"] + altura_c5 > ALTURA_PRESCRICAO_UTIL:
+            paginas.append({"itens": [], "altura_usada": 0.0, "c5": False, "observacoes": []})
+        paginas[-1]["c5"] = True
+        paginas[-1]["altura_usada"] += altura_c5
+
+    linhas_observacao = (
+        _linhas(observacoes, "Helvetica", 8.3, largura) if _texto(observacoes) else []
+    )
+    while linhas_observacao:
+        atual = paginas[-1]
+        altura_cabecalho = 8 * mm if not atual["observacoes"] else 0.0
+        disponivel = ALTURA_PRESCRICAO_UTIL - atual["altura_usada"] - altura_cabecalho
+        capacidade = int(disponivel // ALTURA_LINHA_OBSERVACAO)
+        if capacidade <= 0:
+            paginas.append({"itens": [], "altura_usada": 0.0, "c5": False, "observacoes": []})
+            continue
+        trecho = linhas_observacao[:capacidade]
+        del linhas_observacao[:capacidade]
+        atual["observacoes"].extend(trecho)
+        atual["altura_usada"] += altura_cabecalho + len(trecho) * ALTURA_LINHA_OBSERVACAO
+
+    return paginas
+
+
+def _prescricao(c: canvas.Canvas, y: float, itens: list[tuple[int, dict]],
+                observacoes_linhas: list[str], *, c5: bool,
+                destinatario: dict, cid: str | None) -> float:
     x = MARGEM_X + 2 * mm
     largura = LARGURA - 2 * MARGEM_X - 4 * mm
-    for indice, item in enumerate(itens[:12], start=1):
-        descricao = _texto(item.get("descricao") or item.get("substancia"))
-        apresentacao = _texto(item.get("apresentacao"))
-        posologia = _texto(item.get("posologia"))
-        primeira = f"{indice}) {descricao}"
-        if apresentacao:
-            primeira += f" - {apresentacao}"
-        quantidade = _texto(item.get("quantidade"))
-        if quantidade:
-            primeira += f" - Quantidade: {quantidade}"
+    for indice, item in itens:
+        primeira, posologia = _texto_item(indice, item)
         for linha in _linhas(primeira, "Helvetica-Bold", 9.2, largura):
             c.setFont("Helvetica-Bold", 9.2)
             c.drawString(x, y, linha)
@@ -183,8 +263,6 @@ def _prescricao(c: canvas.Canvas, y: float, itens: list[dict], observacoes: str,
                 c.drawString(x + 7 * mm, y, linha)
                 y -= 4 * mm
         y -= 2 * mm
-        if y < 92 * mm:
-            break
 
     if c5:
         c.setFont("Helvetica-Bold", 8.7)
@@ -196,25 +274,29 @@ def _prescricao(c: canvas.Canvas, y: float, itens: list[dict], observacoes: str,
         c.drawString(x, y, "1ª via retida no estabelecimento por cinco anos, conforme Lei nº 9.965/2000.")
         y -= 4.5 * mm
 
-    if observacoes:
+    if observacoes_linhas:
         c.setFont("Helvetica-Bold", 8.3)
         c.drawString(x, y, "OBSERVAÇÕES:")
         y -= 4 * mm
-        for linha in _linhas(observacoes, "Helvetica", 8.3, largura):
+        for linha in observacoes_linhas:
             c.setFont("Helvetica", 8.3)
             c.drawString(x, y, linha)
-            y -= 3.8 * mm
-            if y < 88 * mm:
-                break
+            y -= ALTURA_LINHA_OBSERVACAO
     return y
 
 
-def _frente(c: canvas.Canvas, *, via: int, destinatario: dict, itens: list[dict],
-            observacoes: str, medico: Any, endereco_profissional: dict | None,
-            data_emissao: datetime, cid: str | None, c5: bool) -> None:
+def _frente(c: canvas.Canvas, *, via: int, pagina: int, total_paginas: int,
+            destinatario: dict, itens: list[tuple[int, dict]], observacoes_linhas: list[str],
+            medico: Any, endereco_profissional: dict | None, data_emissao: datetime,
+            cid: str | None, c5: bool) -> None:
     y = ALTURA - MARGEM_Y
     c.setFont("Helvetica-Bold", 16)
     c.drawCentredString(LARGURA / 2, y - 3 * mm, "RECEITA DE CONTROLE ESPECIAL")
+    c.setFont("Helvetica-Bold", 8.2)
+    c.drawRightString(LARGURA - MARGEM_X, y - 3 * mm, f"PÁGINA {pagina}/{total_paginas}")
+    if pagina > 1:
+        c.setFont("Helvetica-Bold", 8.2)
+        c.drawCentredString(LARGURA / 2, y - 8 * mm, "CONTINUAÇÃO")
     y -= 13 * mm
 
     y = _secao(c, y, "IDENTIFICAÇÃO DO EMITENTE")
@@ -259,7 +341,10 @@ def _frente(c: canvas.Canvas, *, via: int, destinatario: dict, itens: list[dict]
                _texto(destinatario.get("documento")), tamanho=9)
 
     y = _secao(c, y - 1 * mm, "PRESCRIÇÃO")
-    y = _prescricao(c, y, itens, observacoes, c5=c5, destinatario=destinatario, cid=cid)
+    _prescricao(
+        c, y, itens, observacoes_linhas, c5=c5,
+        destinatario=destinatario, cid=cid,
+    )
 
     assinatura_y = 76 * mm
     c.rect(MARGEM_X, assinatura_y, LARGURA - 2 * MARGEM_X, 20 * mm, fill=0, stroke=1)
@@ -288,16 +373,18 @@ def _frente(c: canvas.Canvas, *, via: int, destinatario: dict, itens: list[dict]
     destino = "1ª via - Retenção pela Farmácia" if via == 1 else "2ª via - Paciente"
     c.drawRightString(LARGURA - MARGEM_X, 14 * mm, destino)
     c.setFont("Helvetica", 6.5)
-    c.drawString(
-        MARGEM_X, 10 * mm,
-        f"DATA DE IMPRESSÃO DESTE RECEITUÁRIO: {data_local} (recomendável)",
-    )
+    c.drawString(MARGEM_X, 10 * mm, f"DATA DE IMPRESSÃO DESTE RECEITUÁRIO: {data_local} (recomendável)")
     c.setFont("Helvetica", 5.8)
-    c.drawString(MARGEM_X, 6 * mm, f"Modelo {MODELO_VERSAO} · via {via}/2")
+    c.drawString(
+        MARGEM_X, 6 * mm,
+        f"Modelo {MODELO_VERSAO} · via {via}/2 · PÁGINA {pagina}/{total_paginas}",
+    )
 
 
-def _verso(c: canvas.Canvas, *, via: int) -> None:
+def _verso(c: canvas.Canvas, *, via: int, pagina: int, total_paginas: int) -> None:
     y = ALTURA - MARGEM_Y
+    c.setFont("Helvetica-Bold", 8.2)
+    c.drawRightString(LARGURA - MARGEM_X, y, f"PÁGINA {pagina}/{total_paginas}")
     c.setFont("Helvetica-Oblique", 7.1)
     aviso = ("VERSO *IMPRESSÃO OPCIONAL - CONFORME PORTARIA Nº 6/99, ARTIGO 85, ALÍNEA C, "
              "ESSES DADOS PODEM SER APOSTOS MEDIANTE CARIMBO PELA FARMÁCIA NO MOMENTO "
@@ -322,7 +409,10 @@ def _verso(c: canvas.Canvas, *, via: int) -> None:
                    "NOME DO RESPONSÁVEL PELA DISPENSAÇÃO:", "ASSINATURA:", "DATA:"):
         y = _campo(c, y, rotulo, tamanho=8.8)
     c.setFont("Helvetica", 5.8)
-    c.drawString(MARGEM_X, 8 * mm, f"Modelo {MODELO_VERSAO} · verso da via {via}/2")
+    c.drawString(
+        MARGEM_X, 8 * mm,
+        f"Modelo {MODELO_VERSAO} · verso da via {via}/2 · PÁGINA {pagina}/{total_paginas}",
+    )
 
 
 def validar_requisitos_rce(*, medico: Any, destinatario: dict, itens: list[dict],
@@ -331,7 +421,8 @@ def validar_requisitos_rce(*, medico: Any, destinatario: dict, itens: list[dict]
     erros: list[str] = []
     if not _texto(_valor(medico, "full_name")):
         erros.append("Complete o nome do prescritor em Minha conta.")
-    if not _registro(medico):
+    conselho, numero, uf = _registro_componentes(medico)
+    if not all((conselho, numero, uf)):
         erros.append("Complete conselho profissional, número de registro e UF.")
     if not _texto(destinatario.get("nome")):
         erros.append("Informe o nome completo do paciente.")
@@ -363,7 +454,6 @@ def validar_requisitos_rce(*, medico: Any, destinatario: dict, itens: list[dict]
 
     tem_c5 = any(_texto(item.get("lista")).upper() == "C5" for item in itens)
     if tem_c5:
-        conselho = _texto(_valor(medico, "council_name")).upper()
         if conselho not in {"CRM", "CRO"}:
             erros.append("A Lei nº 9.965/2000 restringe a prescrição de anabolizantes a médico ou dentista (CRM/CRO).")
         if not _texto(_valor(medico, "cpf")):
@@ -378,7 +468,7 @@ def validar_requisitos_rce(*, medico: Any, destinatario: dict, itens: list[dict]
 def receita_controle_especial(*, destinatario: dict, itens: list[dict], observacoes: str,
                               medico: Any, endereco_profissional: dict | None,
                               data_emissao: datetime, cid: str | None = None) -> bytes:
-    """Gera quatro páginas: frente/verso da via da farmácia e frente/verso da via do paciente."""
+    """Gera as duas vias completas, com frente/verso para cada página numerada."""
     c5 = any(_texto(item.get("lista")).upper() == "C5" for item in itens)
     bloqueios = validar_requisitos_rce(
         medico=medico, destinatario=destinatario, itens=itens,
@@ -387,18 +477,24 @@ def receita_controle_especial(*, destinatario: dict, itens: list[dict], observac
     if bloqueios:
         raise ValueError(" | ".join(bloqueios))
 
+    paginas = _paginar_prescricao(itens, observacoes, c5=c5)
+    total_paginas = len(paginas)
     buffer = io.BytesIO()
     pdf = canvas.Canvas(buffer, pagesize=A4, pageCompression=1)
     pdf.setTitle("Receita de Controle Especial")
     pdf.setAuthor(professional_name(medico))
     pdf.setSubject(MODELO_VERSAO)
     for via in (1, 2):
-        _frente(pdf, via=via, destinatario=destinatario, itens=itens,
-                observacoes=observacoes, medico=medico,
-                endereco_profissional=endereco_profissional,
-                data_emissao=data_emissao, cid=cid, c5=c5)
-        pdf.showPage()
-        _verso(pdf, via=via)
-        pdf.showPage()
+        for numero_pagina, conteudo in enumerate(paginas, start=1):
+            _frente(
+                pdf, via=via, pagina=numero_pagina, total_paginas=total_paginas,
+                destinatario=destinatario, itens=conteudo["itens"],
+                observacoes_linhas=conteudo["observacoes"], medico=medico,
+                endereco_profissional=endereco_profissional, data_emissao=data_emissao,
+                cid=cid, c5=bool(conteudo["c5"]),
+            )
+            pdf.showPage()
+            _verso(pdf, via=via, pagina=numero_pagina, total_paginas=total_paginas)
+            pdf.showPage()
     pdf.save()
     return buffer.getvalue()

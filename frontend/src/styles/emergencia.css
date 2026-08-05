@@ -228,4 +228,4 @@
   .emerg__busca button { width: 100%; }
 }
 
-@media print { .emerg-atalho { display: none; } }
+@media print { a.emerg-atalho { display: none; } }

@@ -5,20 +5,26 @@ import { Carregando, Vazio } from "../components/Estado";
 
 type Template = { id: number; title: string; doc_type: string; body: string };
 type Gerado = { id: number; title: string; doc_type: string; created_at: string; patient_name: string | null };
-// GET /document-templates/gerados/{gid} — usado só por "Recriar baseado
-// neste" (Tarefa 4): busca o modelo de origem e os valores usados, pra
-// pré-preencher em vez de começar do zero.
+type GeradosResposta = {
+  items: Gerado[];
+  page: number;
+  page_size: number;
+  has_more: boolean;
+  total: number;
+};
 type GeradoDetalhe = {
   template_id: number | null;
   variables: Record<string, string> | null;
   patient_name: string | null;
 };
-
-// Catálogo de métodos de assinatura (Tarefa 4) — GET /assinatura/provedores.
-// Escolhido no MOMENTO DO DOWNLOAD, não ao gerar: `GeneratedDocument` nasce
-// só como texto (endereço é a exceção histórica, gravado ao gerar); quem
-// decide se vira PDF assinado ou manual é o primeiro `GET .../pdf`.
-type Provedor = { codigo: string; nome: string; nivel: string; familia: string; disponivel: boolean; motivo: string | null };
+type Provedor = {
+  codigo: string;
+  nome: string;
+  nivel: string;
+  familia: string;
+  disponivel: boolean;
+  motivo: string | null;
+};
 
 const RÓTULO: Record<string, string> = { atestado: "Atestado", laudo: "Laudo", outro: "Outro" };
 
@@ -37,18 +43,20 @@ function baixarBlob(blob: Blob, nomeArquivo: string) {
   URL.revokeObjectURL(url);
 }
 
-/** Formulário de "gerar documento" a partir de um modelo — preenche as
- * variáveis, gera, e a partir daí baixa PDF ou envia por e-mail (link
- * seguro, nunca o PDF anexado — ver Tarefa 29 no CLAUDE.md). */
 function GerarDocumento({ template, provedores, valoresIniciais, onFechar, onGerado }: {
-  template: Template; provedores: Provedor[] | null; valoresIniciais?: Record<string, string>;
-  onFechar: () => void; onGerado: () => void;
+  template: Template;
+  provedores: Provedor[] | null;
+  valoresIniciais?: Record<string, string>;
+  onFechar: () => void;
+  onGerado: () => void;
 }) {
   const { usuario } = useAuth();
   const variaveis = variaveisDoModelo(template.body);
   const [valores, setValores] = useState<Record<string, string>>(valoresIniciais ?? {});
   const [endereco, setEndereco] = useState<"" | "residencial" | "profissional">("");
-  const [patientName, setPatientName] = useState(valoresIniciais?.nome_paciente ?? valoresIniciais?.paciente ?? valoresIniciais?.nome ?? "");
+  const [patientName, setPatientName] = useState(
+    valoresIniciais?.nome_paciente ?? valoresIniciais?.paciente ?? valoresIniciais?.nome ?? "",
+  );
   const [metodo, setMetodo] = useState(usuario?.assinatura_metodo_preferido ?? "MANUAL");
   const [gerando, setGerando] = useState(false);
   const [erro, setErro] = useState("");
@@ -64,7 +72,10 @@ function GerarDocumento({ template, provedores, valoresIniciais, onFechar, onGer
     setErro("");
     try {
       const r = await api.post<{ id: number }>("/document-templates/gerar", {
-        template_id: template.id, variables: valores, endereco: endereco || null, patient_name: patientName.trim() || null,
+        template_id: template.id,
+        variables: valores,
+        endereco: endereco || null,
+        patient_name: patientName.trim() || null,
       });
       setGeradoId(r.id);
       onGerado();
@@ -78,9 +89,9 @@ function GerarDocumento({ template, provedores, valoresIniciais, onFechar, onGer
   async function baixar() {
     if (!geradoId) return;
     try {
-      // `metodo` só tem efeito no PRIMEIRO download — depois disso o
-      // documento já foi emitido e sempre serve os mesmos bytes.
-      const blob = await api.blob(`/document-templates/gerados/${geradoId}/pdf?metodo=${encodeURIComponent(metodo)}`);
+      const blob = await api.blob(
+        `/document-templates/gerados/${geradoId}/pdf?metodo=${encodeURIComponent(metodo)}`,
+      );
       baixarBlob(blob, `${template.doc_type}-${geradoId}.pdf`);
     } catch (e) {
       setErro(e instanceof ApiError ? e.message : "Não foi possível baixar o PDF.");
@@ -93,7 +104,8 @@ function GerarDocumento({ template, provedores, valoresIniciais, onFechar, onGer
     setErro("");
     try {
       const r = await api.post<{ enviado: boolean; link: string | null }>(
-        `/document-templates/gerados/${geradoId}/enviar-email`, { email },
+        `/document-templates/gerados/${geradoId}/enviar-email`,
+        { email },
       );
       setResultadoEnvio(r);
     } catch (e) {
@@ -110,7 +122,11 @@ function GerarDocumento({ template, provedores, valoresIniciais, onFechar, onGer
       {!geradoId ? (
         <>
           <label>Nome do paciente/destinatário</label>
-          <input value={patientName} onChange={(e) => setPatientName(e.target.value)} placeholder="Usado para organizar e pesquisar o histórico" />
+          <input
+            value={patientName}
+            onChange={(e) => setPatientName(e.target.value)}
+            placeholder="Usado para organizar e pesquisar o histórico"
+          />
           {variaveis.length === 0 && <p style={{ fontSize: "0.86rem" }}>Este modelo não tem variáveis a preencher.</p>}
           {variaveis.map((v) => (
             <div key={v} style={{ marginTop: "0.5rem" }}>
@@ -137,7 +153,6 @@ function GerarDocumento({ template, provedores, valoresIniciais, onFechar, onGer
       ) : (
         <>
           <p style={{ color: "var(--sucesso)" }}>Documento gerado.</p>
-
           <div style={{ marginTop: "0.4rem" }}>
             <label>Método de assinatura</label>
             <select value={metodo} onChange={(e) => setMetodo(e.target.value)}>
@@ -157,10 +172,18 @@ function GerarDocumento({ template, provedores, valoresIniciais, onFechar, onGer
 
           <div style={{ marginTop: "0.8rem" }}>
             <label>Enviar por e-mail ao paciente (link seguro, válido por 7 dias)</label>
-            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)}
-                   placeholder="paciente@exemplo.com" />
-            <button className="botao" style={{ marginTop: "0.4rem" }}
-                    onClick={enviar} disabled={enviando || !email}>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="paciente@exemplo.com"
+            />
+            <button
+              className="botao"
+              style={{ marginTop: "0.4rem" }}
+              onClick={enviar}
+              disabled={enviando || !email}
+            >
               {enviando ? "Enviando…" : "Enviar por e-mail"}
             </button>
           </div>
@@ -191,26 +214,67 @@ export default function Templates() {
   const [gerandoDe, setGerandoDe] = useState<Template | null>(null);
   const [valoresIniciais, setValoresIniciais] = useState<Record<string, string> | undefined>(undefined);
   const [gerados, setGerados] = useState<Gerado[] | null>(null);
+  const [paginaGerados, setPaginaGerados] = useState(1);
+  const [temMaisGerados, setTemMaisGerados] = useState(false);
+  const [carregandoMais, setCarregandoMais] = useState(false);
   const [provedores, setProvedores] = useState<Provedor[] | null>(null);
   const [erroGerados, setErroGerados] = useState("");
   const [buscaGerados, setBuscaGerados] = useState("");
   const [tipoGerados, setTipoGerados] = useState("");
 
   const recarregar = () => api.get<Template[]>("/document-templates").then(setLista);
-  const recarregarGerados = () => {
-    const p = new URLSearchParams();
+
+  function caminhoGerados(pagina: number) {
+    const p = new URLSearchParams({ page: String(pagina), page_size: "20" });
     if (buscaGerados.trim()) p.set("nome", buscaGerados.trim());
     if (tipoGerados) p.set("tipo", tipoGerados);
-    return api.get<Gerado[]>(`/document-templates/gerados${p.toString() ? `?${p}` : ""}`).then(setGerados);
-  };
+    return `/document-templates/gerados?${p}`;
+  }
+
+  async function recarregarGerados() {
+    const resposta = await api.get<GeradosResposta>(caminhoGerados(1));
+    setGerados(resposta.items);
+    setPaginaGerados(resposta.page);
+    setTemMaisGerados(resposta.has_more);
+  }
+
+  async function carregarMaisGerados() {
+    setCarregandoMais(true);
+    setErroGerados("");
+    try {
+      const resposta = await api.get<GeradosResposta>(caminhoGerados(paginaGerados + 1));
+      setGerados((atuais) => [...(atuais ?? []), ...resposta.items]);
+      setPaginaGerados(resposta.page);
+      setTemMaisGerados(resposta.has_more);
+    } catch (e) {
+      setErroGerados(e instanceof ApiError ? e.message : "Não foi possível carregar mais documentos.");
+    } finally {
+      setCarregandoMais(false);
+    }
+  }
+
   useEffect(() => {
     recarregar();
-    recarregarGerados();
-    // Falha aqui não trava a tela — GerarDocumento cai para o `<select>`
-    // vazio e o default "MANUAL", que é o método que sempre funciona.
     api.get<Provedor[]>("/assinatura/provedores").then(setProvedores).catch(() => {});
   }, []);
-  useEffect(() => { recarregarGerados(); }, [buscaGerados, tipoGerados]);
+
+  useEffect(() => {
+    let ativo = true;
+    setGerados(null);
+    setErroGerados("");
+    setPaginaGerados(1);
+    api.get<GeradosResposta>(caminhoGerados(1))
+      .then((resposta) => {
+        if (!ativo) return;
+        setGerados(resposta.items);
+        setPaginaGerados(resposta.page);
+        setTemMaisGerados(resposta.has_more);
+      })
+      .catch((e) => {
+        if (ativo) setErroGerados(e instanceof ApiError ? e.message : "Não foi possível carregar o histórico.");
+      });
+    return () => { ativo = false; };
+  }, [buscaGerados, tipoGerados]);
 
   async function salvar() {
     if (!editando?.title || !editando.doc_type || !editando.body) return;
@@ -233,12 +297,6 @@ export default function Templates() {
     recarregar();
   }
 
-  // "Recriar baseado neste" (Tarefa 4) — busca de qual modelo o documento
-  // veio e com quais valores, e reabre o formulário de gerar já preenchido
-  // (o médico edita o que precisar e gera um `GeneratedDocument` novo,
-  // independente do antigo). Modelo apagado ou documento sem `template_id`
-  // (gerado antes desta tarefa) não tem como recriar — avisa em vez de falhar
-  // silenciosamente.
   async function recriarBaseadoEm(gid: number) {
     setErroGerados("");
     try {
@@ -278,8 +336,11 @@ export default function Templates() {
         preenchidas na hora de gerar o documento.
       </p>
 
-      <button className="botao" style={{ marginTop: "0.8rem" }}
-              onClick={() => setEditando({ title: "", doc_type: "atestado", body: "" })}>
+      <button
+        className="botao"
+        style={{ marginTop: "0.8rem" }}
+        onClick={() => setEditando({ title: "", doc_type: "atestado", body: "" })}
+      >
         + Novo modelo
       </button>
 
@@ -288,16 +349,21 @@ export default function Templates() {
           <label>Título</label>
           <input value={editando.title ?? ""} onChange={(e) => setEditando({ ...editando, title: e.target.value })} />
           <label style={{ marginTop: "0.5rem" }}>Tipo</label>
-          <select value={editando.doc_type ?? "atestado"}
-                  onChange={(e) => setEditando({ ...editando, doc_type: e.target.value })}>
+          <select
+            value={editando.doc_type ?? "atestado"}
+            onChange={(e) => setEditando({ ...editando, doc_type: e.target.value })}
+          >
             <option value="atestado">Atestado</option>
             <option value="laudo">Laudo</option>
             <option value="outro">Outro</option>
           </select>
           <label style={{ marginTop: "0.5rem" }}>Corpo do documento</label>
-          <textarea rows={8} value={editando.body ?? ""}
-                    placeholder={"Atesto que o(a) paciente {{nome}} necessita de afastamento de suas atividades por {{dias_afastamento}} dias, a partir de {{data_inicio}}, por motivo de {{motivo}}."}
-                    onChange={(e) => setEditando({ ...editando, body: e.target.value })} />
+          <textarea
+            rows={8}
+            value={editando.body ?? ""}
+            placeholder={"Atesto que o(a) paciente {{nome}} necessita de afastamento de suas atividades por {{dias_afastamento}} dias, a partir de {{data_inicio}}, por motivo de {{motivo}}."}
+            onChange={(e) => setEditando({ ...editando, body: e.target.value })}
+          />
           <div style={{ display: "flex", gap: 8, marginTop: "0.6rem" }}>
             <button className="botao" onClick={salvar} disabled={salvando}>
               {salvando ? "Salvando…" : "Salvar modelo"}
@@ -321,20 +387,43 @@ export default function Templates() {
                   <strong>{t.title}</strong>
                 </div>
                 <div style={{ display: "flex", gap: 6 }}>
-                  <button className="botao" style={{ padding: "0.3rem 0.6rem" }}
-                          onClick={() => { setGerandoDe(gerandoDe?.id === t.id ? null : t); setValoresIniciais(undefined); }}>
+                  <button
+                    className="botao"
+                    style={{ padding: "0.3rem 0.6rem" }}
+                    onClick={() => {
+                      setGerandoDe(gerandoDe?.id === t.id ? null : t);
+                      setValoresIniciais(undefined);
+                    }}
+                  >
                     Usar
                   </button>
-                  <button className="botao botao--secundario" style={{ padding: "0.3rem 0.6rem" }}
-                          onClick={() => setEditando(t)}>Editar</button>
-                  <button className="botao botao--secundario" style={{ padding: "0.3rem 0.6rem" }}
-                          onClick={() => apagar(t.id)}>Apagar</button>
+                  <button
+                    className="botao botao--secundario"
+                    style={{ padding: "0.3rem 0.6rem" }}
+                    onClick={() => setEditando(t)}
+                  >
+                    Editar
+                  </button>
+                  <button
+                    className="botao botao--secundario"
+                    style={{ padding: "0.3rem 0.6rem" }}
+                    onClick={() => apagar(t.id)}
+                  >
+                    Apagar
+                  </button>
                 </div>
               </div>
               {gerandoDe?.id === t.id && (
-                <GerarDocumento template={t} provedores={provedores} valoresIniciais={valoresIniciais}
-                                onFechar={() => { setGerandoDe(null); setValoresIniciais(undefined); }}
-                                onGerado={recarregarGerados} />
+                <GerarDocumento
+                  template={t}
+                  provedores={provedores}
+                  valoresIniciais={valoresIniciais}
+                  onFechar={() => {
+                    setGerandoDe(null);
+                    setValoresIniciais(undefined);
+                  }}
+                  onGerado={recarregarGerados}
+                />
               )}
             </div>
           ))
@@ -343,8 +432,23 @@ export default function Templates() {
 
       <h2 style={{ marginTop: "2rem" }}>Documentos gerados</h2>
       <div className="grade grade--2" style={{ marginBottom: "0.8rem" }}>
-        <div><label>Procurar pelo paciente</label><input value={buscaGerados} onChange={(e) => setBuscaGerados(e.target.value)} placeholder="Nome completo ou parte do nome" /></div>
-        <div><label>Tipo de documento</label><select value={tipoGerados} onChange={(e) => setTipoGerados(e.target.value)}><option value="">Todos</option><option value="atestado">Atestado</option><option value="laudo">Laudo</option><option value="outro">Outro</option></select></div>
+        <div>
+          <label>Procurar pelo paciente</label>
+          <input
+            value={buscaGerados}
+            onChange={(e) => setBuscaGerados(e.target.value)}
+            placeholder="Nome completo ou parte do nome"
+          />
+        </div>
+        <div>
+          <label>Tipo de documento</label>
+          <select value={tipoGerados} onChange={(e) => setTipoGerados(e.target.value)}>
+            <option value="">Todos</option>
+            <option value="atestado">Atestado</option>
+            <option value="laudo">Laudo</option>
+            <option value="outro">Outro</option>
+          </select>
+        </div>
       </div>
       {erroGerados && <p role="alert" style={{ color: "var(--alerta)", fontSize: "0.86rem" }}>{erroGerados}</p>}
       {gerados === null ? (
@@ -352,37 +456,58 @@ export default function Templates() {
       ) : gerados.length === 0 ? (
         <Vazio titulo="Nenhum documento gerado ainda" />
       ) : (
-        [...gruposGerados.entries()]
-          .sort(([a], [b]) => a.localeCompare(b, "pt-BR"))
-          .map(([paciente, documentos]) => (
-            <section key={paciente} style={{ marginBottom: "1rem" }}>
-              <h3 style={{ marginBottom: "0.45rem" }}>{paciente}</h3>
-              {documentos.map((g) => (
-                <div key={g.id} className="cartao" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.5rem" }}>
-                  <div>
-                    <p className="eyebrow" style={{ margin: 0 }}>{RÓTULO[g.doc_type] ?? g.doc_type}</p>
-                    <strong>{g.title}</strong>
-                    <p style={{ margin: 0, fontSize: "0.8rem", color: "var(--texto-secundario)" }}>
-                      {new Date(g.created_at).toLocaleString("pt-BR")}
-                    </p>
+        <>
+          {[...gruposGerados.entries()]
+            .sort(([a], [b]) => a.localeCompare(b, "pt-BR"))
+            .map(([paciente, documentos]) => (
+              <section key={paciente} style={{ marginBottom: "1rem" }}>
+                <h3 style={{ marginBottom: "0.45rem" }}>{paciente}</h3>
+                {documentos.map((g) => (
+                  <div
+                    key={g.id}
+                    className="cartao"
+                    style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.5rem" }}
+                  >
+                    <div>
+                      <p className="eyebrow" style={{ margin: 0 }}>{RÓTULO[g.doc_type] ?? g.doc_type}</p>
+                      <strong>{g.title}</strong>
+                      <p style={{ margin: 0, fontSize: "0.8rem", color: "var(--texto-secundario)" }}>
+                        {new Date(g.created_at).toLocaleString("pt-BR")}
+                      </p>
+                    </div>
+                    <div style={{ display: "flex", gap: 6 }}>
+                      <button
+                        className="botao botao--secundario"
+                        style={{ padding: "0.3rem 0.6rem" }}
+                        onClick={() => recriarBaseadoEm(g.id)}
+                      >
+                        Recriar baseado neste
+                      </button>
+                      <button
+                        className="botao botao--secundario"
+                        style={{ padding: "0.3rem 0.6rem" }}
+                        onClick={async () => {
+                          const blob = await api.blob(`/document-templates/gerados/${g.id}/pdf`);
+                          baixarBlob(blob, `${g.doc_type}-${g.id}.pdf`);
+                        }}
+                      >
+                        Baixar PDF
+                      </button>
+                    </div>
                   </div>
-                  <div style={{ display: "flex", gap: 6 }}>
-                    <button className="botao botao--secundario" style={{ padding: "0.3rem 0.6rem" }}
-                            onClick={() => recriarBaseadoEm(g.id)}>
-                      Recriar baseado neste
-                    </button>
-                    <button className="botao botao--secundario" style={{ padding: "0.3rem 0.6rem" }}
-                            onClick={async () => {
-                              const blob = await api.blob(`/document-templates/gerados/${g.id}/pdf`);
-                              baixarBlob(blob, `${g.doc_type}-${g.id}.pdf`);
-                            }}>
-                      Baixar PDF
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </section>
-          ))
+                ))}
+              </section>
+            ))}
+          {temMaisGerados && (
+            <button
+              className="botao botao--secundario"
+              onClick={carregarMaisGerados}
+              disabled={carregandoMais}
+            >
+              {carregandoMais ? "Carregando…" : "Carregar mais"}
+            </button>
+          )}
+        </>
       )}
     </>
   );

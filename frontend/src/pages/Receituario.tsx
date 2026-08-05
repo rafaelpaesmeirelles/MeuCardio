@@ -7,14 +7,10 @@ type Farmaco = { slug: string; nome: string };
 type Item = {
   drug_slug?: string; descricao: string; apresentacao: string;
   quantidade: string; quantidade_extenso: string; posologia: string; orientacao: string;
-  // Tarefa B (CLAUDE.md, 02/08/2026) — escolha de marca via CMED, sempre
-  // opcional: o genérico (sem estes seis campos) continua sendo o padrão.
   brand_name?: string; manufacturer?: string; ggrem?: string;
   pmc_snapshot?: number; uf?: string; cmed_version?: string;
 };
 
-// GET /drugs/{slug}/apresentacoes?uf=XX (Tarefa A/B) — marca, laboratório,
-// apresentação e PMC (teto CMED) pra escolha explícita durante a digitação.
 type PrecoCmed = { valor: number | null; rotulo: string };
 type ApresentacaoCmed = {
   produto: string; laboratorio: string; apresentacao: string; ggrem: string;
@@ -44,17 +40,19 @@ type Documento = {
 };
 type ReceituarioCriado = { prescricao_id: number; exige_revisao: boolean; documentos: Documento[] };
 
-// Arquivo/histórico (Tarefa 4, pedido do Rafael de 02/08/2026) — GET
-// /receituario (lista) e GET /receituario/{id} (detalhe, usado tanto pra
-// "Abrir" quanto pra "Recriar baseado nesta").
 type HistoricoDocResumo = { tipo: string; tipo_nome: string | null; status: string };
 type HistoricoItem = {
   prescricao_id: number; criado_em: string; paciente_nome: string | null;
   documentos: HistoricoDocResumo[];
 };
+type HistoricoResposta = {
+  items: HistoricoItem[]; page: number; page_size: number; has_more: boolean; total: number;
+};
 type ItemOriginal = {
   drug_slug: string | null; descricao: string; apresentacao: string;
   quantidade: string; quantidade_extenso: string; posologia: string; orientacao: string;
+  brand_name?: string | null; manufacturer?: string | null; ggrem?: string | null;
+  pmc_snapshot?: number | null; uf?: string | null; cmed_version?: string | null;
 };
 type PrescricaoDetalhe = {
   prescricao_id: number;
@@ -64,14 +62,7 @@ type PrescricaoDetalhe = {
   documentos: Documento[];
 };
 
-// Catálogo de métodos de assinatura (Tarefa 4) — GET /assinatura/provedores.
-// "MANUAL" é o único com disponivel=true hoje; os demais aparecem desabilitados
-// com o motivo, no mesmo espírito de "recusa e explica" que o tipo_ativo já usa.
 type Provedor = { codigo: string; nome: string; nivel: string; familia: string; disponivel: boolean; motivo: string | null };
-
-// GET /receituario/tipos — usado pra deixar o médico escolher/corrigir o
-// tipo do documento na revisão (comum ou controle especial), em vez de só
-// aceitar a classificação automática.
 type TipoReceituario = { codigo: string; nome: string; ativo: boolean };
 
 const STATUS_RÓTULO: Record<string, string> = {
@@ -87,10 +78,6 @@ function baixarBlob(blob: Blob, nomeArquivo: string) {
   URL.revokeObjectURL(url);
 }
 
-/** Um documento já criado (PrescriptionDocument): revisar, emitir, enviar
- * por e-mail. Emissão só funciona para tipo COMUM hoje — os demais (NRA,
- * RCE etc.) esperam o SNCR e o layout oficial, e a própria rota recusa
- * com explicação em vez de simular. */
 function CartaoDocumento({ doc, provedores, tipos, onAtualizado }: {
   doc: Documento; provedores: Provedor[] | null; tipos: TipoReceituario[] | null;
   onAtualizado: (d: Documento) => void;
@@ -100,9 +87,6 @@ function CartaoDocumento({ doc, provedores, tipos, onAtualizado }: {
   const [emitindo, setEmitindo] = useState(false);
   const [endereco, setEndereco] = useState<"" | "residencial" | "profissional">("");
   const [metodo, setMetodo] = useState(usuario?.assinatura_metodo_preferido ?? "MANUAL");
-  // Correção de tipo na revisão (comum ↔ controle especial): o médico não
-  // é obrigado a aceitar a classificação automática. `corrigirPara` começa
-  // igual a `doc.tipo` (sem correção) e só exige `motivo` quando muda.
   const [corrigirPara, setCorrigirPara] = useState(doc.tipo);
   const [motivoCorrecao, setMotivoCorrecao] = useState("");
   const [erro, setErro] = useState("");
@@ -167,10 +151,6 @@ function CartaoDocumento({ doc, provedores, tipos, onAtualizado }: {
         <span className="eyebrow" style={{ margin: 0 }}>{STATUS_RÓTULO[doc.status] ?? doc.status}</span>
       </div>
 
-      {/* Sem isto, um item digitado manualmente (sem drug_slug — ver
-         "Busque na base ou digite livremente" no formulário) já ia pro
-         documento, mas o médico não tinha como conferir aqui que a
-         digitação foi capturada antes de revisar e emitir. */}
       {doc.itens.length > 0 && (
         <ul style={{ fontSize: "0.86rem", marginTop: "0.5rem", paddingLeft: "1.1rem" }}>
           {doc.itens.map((it, i) => (
@@ -191,8 +171,8 @@ function CartaoDocumento({ doc, provedores, tipos, onAtualizado }: {
       )}
       {doc.tipo === "RCE" && (
         <p style={{ fontSize: "0.86rem", marginTop: "0.4rem" }}>
-          Modelo físico Anvisa V2: serão geradas duas vias, cada uma com frente e verso,
-          para impressão e assinatura manual.
+          Modelo físico Anvisa V2: duas vias completas, com frente e verso para cada página
+          numerada da prescrição.
         </p>
       )}
       {temC5 && (
@@ -314,29 +294,55 @@ function CartaoDocumento({ doc, provedores, tipos, onAtualizado }: {
   );
 }
 
-/** Arquivo de receituários já criados (Tarefa 4) — "Abrir" retoma um
- * rascunho pra continuar revisando/emitindo; "Recriar baseado nesta"
- * pré-preenche o formulário de uma receita NOVA com os dados desta, pro
- * médico editar em vez de montar tudo de novo (retorno de paciente, refil). */
 function HistoricoReceituario({ onAbrir, onRecriar }: {
   onAbrir: (d: PrescricaoDetalhe) => void; onRecriar: (d: PrescricaoDetalhe) => void;
 }) {
   const [itens, setItens] = useState<HistoricoItem[] | null>(null);
   const [erro, setErro] = useState("");
   const [carregandoId, setCarregandoId] = useState<number | null>(null);
+  const [carregandoMais, setCarregandoMais] = useState(false);
   const [nome, setNome] = useState("");
   const [tipo, setTipo] = useState("");
+  const [pagina, setPagina] = useState(1);
+  const [temMais, setTemMais] = useState(false);
 
-  useEffect(() => {
-    setItens(null);
-    const params = new URLSearchParams();
+  function caminhoHistorico(paginaAlvo: number) {
+    const params = new URLSearchParams({ page: String(paginaAlvo), page_size: "20" });
     if (nome.trim()) params.set("nome", nome.trim());
     if (tipo) params.set("tipo", tipo);
-    const suffix = params.toString() ? `?${params}` : "";
-    api.get<HistoricoItem[]>(`/receituario${suffix}`)
-      .then(setItens)
-      .catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível carregar o histórico."));
+    return `/receituario?${params}`;
+  }
+
+  useEffect(() => {
+    let ativo = true;
+    setItens(null);
+    setErro("");
+    setPagina(1);
+    api.get<HistoricoResposta>(caminhoHistorico(1))
+      .then((r) => {
+        if (!ativo) return;
+        setItens(r.items);
+        setTemMais(r.has_more);
+      })
+      .catch((e) => ativo && setErro(e instanceof ApiError ? e.message : "Não foi possível carregar o histórico."));
+    return () => { ativo = false; };
   }, [nome, tipo]);
+
+  async function carregarMais() {
+    const proxima = pagina + 1;
+    setCarregandoMais(true);
+    setErro("");
+    try {
+      const r = await api.get<HistoricoResposta>(caminhoHistorico(proxima));
+      setItens((atuais) => [...(atuais ?? []), ...r.items]);
+      setPagina(r.page);
+      setTemMais(r.has_more);
+    } catch (e) {
+      setErro(e instanceof ApiError ? e.message : "Não foi possível carregar mais receitas.");
+    } finally {
+      setCarregandoMais(false);
+    }
+  }
 
   async function abrir(id: number, acao: (d: PrescricaoDetalhe) => void) {
     setCarregandoId(id); setErro("");
@@ -360,21 +366,28 @@ function HistoricoReceituario({ onAbrir, onRecriar }: {
       </div>
       {erro && <Erro mensagem={erro} />}
       {!itens ? <Carregando /> : itens.length === 0 ? <Vazio titulo="Nenhuma receita encontrada" /> : (
-        [...grupos.entries()].sort(([a], [b]) => a.localeCompare(b, "pt-BR")).map(([paciente, receitas]) => (
-          <section key={paciente} style={{ marginBottom: "1rem" }}>
-            <h3 style={{ marginBottom: "0.45rem" }}>{paciente}</h3>
-            {receitas.map((it) => (
-              <div key={it.prescricao_id} className="cartao" style={{ marginBottom: "0.5rem" }}>
-                <span className="eyebrow">{new Date(it.criado_em).toLocaleString("pt-BR")}</span>
-                <p style={{ fontSize: "0.86rem", margin: "0.3rem 0", color: "var(--texto-secundario)" }}>{it.documentos.map((d, i) => <span key={i}>{i > 0 && " · "}{d.tipo_nome ?? d.tipo} ({STATUS_RÓTULO[d.status] ?? d.status})</span>)}</p>
-                <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-                  <button className="botao botao--secundario" disabled={carregandoId === it.prescricao_id} onClick={() => abrir(it.prescricao_id, onAbrir)}>{carregandoId === it.prescricao_id ? "Abrindo…" : "Abrir"}</button>
-                  <button className="botao botao--secundario" disabled={carregandoId === it.prescricao_id} onClick={() => abrir(it.prescricao_id, onRecriar)}>Recriar baseado nesta</button>
+        <>
+          {[...grupos.entries()].sort(([a], [b]) => a.localeCompare(b, "pt-BR")).map(([paciente, receitas]) => (
+            <section key={paciente} style={{ marginBottom: "1rem" }}>
+              <h3 style={{ marginBottom: "0.45rem" }}>{paciente}</h3>
+              {receitas.map((it) => (
+                <div key={it.prescricao_id} className="cartao" style={{ marginBottom: "0.5rem" }}>
+                  <span className="eyebrow">{new Date(it.criado_em).toLocaleString("pt-BR")}</span>
+                  <p style={{ fontSize: "0.86rem", margin: "0.3rem 0", color: "var(--texto-secundario)" }}>{it.documentos.map((d, i) => <span key={i}>{i > 0 && " · "}{d.tipo_nome ?? d.tipo} ({STATUS_RÓTULO[d.status] ?? d.status})</span>)}</p>
+                  <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                    <button className="botao botao--secundario" disabled={carregandoId === it.prescricao_id} onClick={() => abrir(it.prescricao_id, onAbrir)}>{carregandoId === it.prescricao_id ? "Abrindo…" : "Abrir"}</button>
+                    <button className="botao botao--secundario" disabled={carregandoId === it.prescricao_id} onClick={() => abrir(it.prescricao_id, onRecriar)}>Recriar baseado nesta</button>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </section>
-        ))
+              ))}
+            </section>
+          ))}
+          {temMais && (
+            <button className="botao botao--secundario" onClick={carregarMais} disabled={carregandoMais}>
+              {carregandoMais ? "Carregando…" : "Carregar mais"}
+            </button>
+          )}
+        </>
       )}
     </div>
   );
@@ -399,8 +412,6 @@ export default function Receituario() {
   const [observacoes, setObservacoes] = useState("");
   const [itens, setItens] = useState<Item[]>([{ ...ITEM_VAZIO }]);
   const [buscaFarmaco, setBuscaFarmaco] = useState<string[]>([""]);
-  // Uma entrada por índice de item — null enquanto não escolheu fármaco
-  // nenhum, undefined enquanto a busca de apresentações está em voo.
   const [apresentacoes, setApresentacoes] = useState<(RespostaApresentacoes | null | undefined)[]>([null]);
   const { usuario } = useAuth();
 
@@ -414,9 +425,6 @@ export default function Receituario() {
     api.get<{ slug: string; generic_name: string }[]>("/drugs")
       .then((l) => setFarmacos(l.map((d) => ({ slug: d.slug, nome: d.generic_name }))))
       .catch((e) => setErroCarregar(e instanceof ApiError ? e.message : "Não foi possível carregar os medicamentos."));
-    // Falha em carregar o catálogo não impede a tela — CartaoDocumento cai
-    // para o `<select>` vazio e o default "MANUAL", que é o método que
-    // sempre funciona.
     api.get<Provedor[]>("/assinatura/provedores").then(setProvedores).catch(() => {});
     api.get<TipoReceituario[]>("/receituario/tipos").then(setTipos).catch(() => {});
   }, []);
@@ -434,9 +442,6 @@ export default function Receituario() {
           posologia: it.posologia, orientacao: it.orientacao }
       : it));
     setBuscaFarmaco((b) => b.map((v, idx) => idx === i ? f.nome : v));
-    // Marca é escolha explícita do médico, nunca automática (Tarefa B,
-    // CLAUDE.md) — a busca só traz o que existe pra ele escolher; o genérico
-    // (sem marca) continua valendo até ele decidir trocar.
     setApresentacoes((a) => a.map((v, idx) => idx === i ? undefined : v));
     api.get<RespostaApresentacoes>(`/drugs/${f.slug}/apresentacoes${usuario?.council_state ? `?uf=${usuario.council_state}` : ""}`)
       .then((r) => setApresentacoes((a) => a.map((v, idx) => idx === i ? r : v)))
@@ -447,7 +452,8 @@ export default function Receituario() {
     setPrevia(null);
     setItens((lista) => lista.map((it, idx) => idx === i ? {
       ...it,
-      apresentacao: it.apresentacao || ap.apresentacao,
+      descricao: ap.produto,
+      apresentacao: ap.apresentacao,
       brand_name: ap.produto, manufacturer: ap.laboratorio, ggrem: ap.ggrem,
       pmc_snapshot: ap.preco.valor ?? undefined,
       uf: resp.uf ?? undefined, cmed_version: resp.cmed_publicado_em ?? undefined,
@@ -456,10 +462,18 @@ export default function Receituario() {
 
   function voltarParaGenerico(i: number) {
     setPrevia(null);
-    setItens((lista) => lista.map((it, idx) => idx === i ? {
-      ...it, brand_name: undefined, manufacturer: undefined, ggrem: undefined,
-      pmc_snapshot: undefined, uf: undefined, cmed_version: undefined,
-    } : it));
+    setItens((lista) => lista.map((it, idx) => {
+      if (idx !== i) return it;
+      const generico = farmacos?.find((f) => f.slug === it.drug_slug)?.nome ?? buscaFarmaco[i] ?? it.descricao;
+      setBuscaFarmaco((atuais) => atuais.map((valor, indice) => indice === i ? generico : valor));
+      return {
+        ...it,
+        descricao: generico,
+        apresentacao: "",
+        brand_name: undefined, manufacturer: undefined, ggrem: undefined,
+        pmc_snapshot: undefined, uf: undefined, cmed_version: undefined,
+      };
+    }));
   }
 
   function adicionarItem() {
@@ -519,8 +533,6 @@ export default function Receituario() {
     setCriado((c) => c ? { ...c, documentos: c.documentos.map((x) => x.id === d.id ? d : x) } : c);
   }
 
-  // "Abrir" (histórico) — retoma uma receita já criada, pro médico continuar
-  // revisando/emitindo/baixando exatamente como se tivesse acabado de criar.
   function abrirDoHistorico(d: PrescricaoDetalhe) {
     setCriado({
       prescricao_id: d.prescricao_id,
@@ -530,10 +542,6 @@ export default function Receituario() {
     setAba("nova");
   }
 
-  // "Recriar baseado nesta" (histórico) — pré-preenche o FORMULÁRIO de uma
-  // receita nova com os dados desta. Não reabre nada: o médico edita e
-  // clica "Criar receituário" como sempre, virando uma Prescription nova,
-  // independente da que serviu de base.
   function recriarDoHistorico(d: PrescricaoDetalhe) {
     setCriado(null);
     setErro("");
@@ -543,21 +551,27 @@ export default function Receituario() {
     setDocumento(d.destinatario.documento ?? "");
     setCid(d.documentos.find((doc) => doc.cid)?.cid ?? "");
     setObservacoes(d.observacoes ?? "");
-    // Marca/preço NÃO são carregados daqui de propósito: pmc_snapshot é o
-    // preço no momento em que a receita ORIGINAL foi feita, e a lista da
-    // CMED muda todo mês — reaproveitar seria mostrar preço velho como se
-    // fosse atual. Recriar sempre volta pro genérico; o médico escolhe marca
-    // de novo se quiser, com o preço de agora.
     const novosItens: Item[] = d.itens_originais.length > 0
       ? d.itens_originais.map((i) => ({
-          drug_slug: i.drug_slug ?? undefined, descricao: i.descricao,
-          apresentacao: i.apresentacao ?? "", quantidade: i.quantidade ?? "",
-          quantidade_extenso: i.quantidade_extenso ?? "", posologia: i.posologia ?? "",
+          drug_slug: i.drug_slug ?? undefined,
+          descricao: i.brand_name ?? i.descricao,
+          apresentacao: i.apresentacao ?? "",
+          quantidade: i.quantidade ?? "",
+          quantidade_extenso: i.quantidade_extenso ?? "",
+          posologia: i.posologia ?? "",
           orientacao: i.orientacao ?? "",
+          brand_name: i.brand_name ?? undefined,
+          manufacturer: i.manufacturer ?? undefined,
+          ggrem: i.ggrem ?? undefined,
+          pmc_snapshot: i.pmc_snapshot ?? undefined,
+          uf: i.uf ?? undefined,
+          cmed_version: i.cmed_version ?? undefined,
         }))
       : [{ ...ITEM_VAZIO }];
     setItens(novosItens);
-    setBuscaFarmaco(novosItens.map((i) => i.descricao));
+    setBuscaFarmaco(novosItens.map((item) =>
+      farmacos?.find((f) => f.slug === item.drug_slug)?.nome ?? item.descricao,
+    ));
     setApresentacoes(novosItens.map(() => null));
     setAba("nova");
   }
@@ -618,8 +632,6 @@ export default function Receituario() {
                   .filter((f) => f.nome.toLowerCase().includes(buscaFarmaco[i].toLowerCase()))
                   .slice(0, 8);
                 if (sugestoes.length === 0) {
-                  // Não achou na base — deixa explícito que digitar segue valendo:
-                  // nome, mg e apresentação ficam nos campos abaixo, texto livre.
                   return (
                     <p className="eyebrow" style={{ margin: "0.3rem 0 0" }}>
                       Não consta na base — pode preencher nome, mg e apresentação abaixo por conta própria.
@@ -644,8 +656,6 @@ export default function Receituario() {
               {it.drug_slug && (() => {
                 const resp = apresentacoes[i];
                 if (it.brand_name) {
-                  // Marca já escolhida — mostra o que foi selecionado e a
-                  // saída pra voltar ao genérico (marca nunca é obrigatória).
                   return (
                     <div style={{ marginTop: "0.4rem", padding: "0.4rem 0.6rem", border: "1px solid var(--linha)", borderRadius: 6 }}>
                       <p style={{ margin: 0, fontSize: "0.86rem" }}>
@@ -654,6 +664,7 @@ export default function Receituario() {
                           <> · {it.pmc_snapshot.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}</>
                         )}
                       </p>
+                      <p className="eyebrow" style={{ margin: "0.2rem 0 0" }}>{it.apresentacao}</p>
                       <button type="button" className="botao botao--secundario" style={{ marginTop: "0.3rem", fontSize: "0.82rem" }}
                               onClick={() => voltarParaGenerico(i)}>
                         Usar genérico (sem marca)
@@ -665,9 +676,6 @@ export default function Receituario() {
                   return <p className="eyebrow" style={{ margin: "0.3rem 0 0" }}>Buscando marcas e preços…</p>;
                 }
                 if (!resp || resp.apresentacoes.length === 0) {
-                  // Ausência de marca com PMC publicado é informação real na
-                  // maioria dos casos (substância fora da CMED, ou só existe
-                  // em combinação) — mostra o aviso em vez de sumir calada.
                   return resp?.aviso
                     ? <p className="eyebrow" style={{ margin: "0.3rem 0 0" }}>{resp.aviso}</p>
                     : null;
@@ -680,7 +688,7 @@ export default function Receituario() {
                         <button key={ai} type="button"
                                 style={{ display: "block", width: "100%", textAlign: "left", padding: "0.3rem 0.5rem", border: "none", borderBottom: "1px solid var(--linha)", background: "transparent", cursor: "pointer", fontSize: "0.86rem" }}
                                 onClick={() => escolherApresentacao(i, ap, resp)}>
-                        <strong>{ap.produto}</strong> — {ap.laboratorio}
+                          <strong>{ap.produto}</strong> — {ap.laboratorio}
                           <br />
                           <span style={{ color: "var(--texto-secundario, #666)" }}>
                             {ap.apresentacao} · {ap.preco.valor != null

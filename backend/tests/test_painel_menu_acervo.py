@@ -1,3 +1,4 @@
+import re
 from pathlib import Path
 
 from app.commands import publish_preserved_content as command
@@ -89,7 +90,8 @@ def test_ordem_do_menu_alerta_e_deploy():
     root = Path(__file__).resolve().parents[2]
     shell = (root / "frontend/src/components/Shell.tsx").read_text(encoding="utf-8")
     painel = (root / "frontend/src/pages/Painel.tsx").read_text(encoding="utf-8")
-    css = (root / "frontend/src/styles/shell.css").read_text(encoding="utf-8")
+    shell_css = (root / "frontend/src/styles/shell.css").read_text(encoding="utf-8")
+    emergencia_css = (root / "frontend/src/styles/emergencia.css").read_text(encoding="utf-8")
     deploy = (root / "deploy.sh").read_text(encoding="utf-8")
 
     assert ': [PAINEL, ...NAV_BASE, INDICADORES, CONTA];' in shell
@@ -97,5 +99,7 @@ def test_ordem_do_menu_alerta_e_deploy():
     assert shell.index("PAINEL,\n        ...NAV_BASE") < shell.index("{ to: \"/fila-telediagnostico\"")
     assert "Acervo de produção abaixo do inventário certificado" not in painel
     assert 'className="emerg-atalho"' in shell
-    assert ".emerg-atalho" in css
+    assert ".emerg-atalho {" not in shell_css
+    assert len(re.findall(r"(?m)^\.emerg-atalho\s*\{", emergencia_css)) == 1
+    assert "padding: 0.8rem 1.15rem" in emergencia_css
     assert "app.commands.publish_preserved_content" in deploy

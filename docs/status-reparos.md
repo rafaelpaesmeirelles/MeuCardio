@@ -1,291 +1,212 @@
 # Status dos reparos — CorvIA / MeuCardio
 
-Última atualização: 04/08/2026 11:18 (BRT)
+Última atualização: 04/08/2026 19:20 (BRT)
 
 ## Resumo executivo
 
-As correções funcionais e operacionais planejadas foram publicadas na `main` pelos PRs #34 a #40.
+A produção está sincronizada com a `main` no merge do PR #45:
 
-A produção em `corvia.med.br` foi acessada e recuperada nesta sessão. O site está respondendo novamente com:
+```text
+be3a73a9028cd00f1d57c82d9dc338eeb943c22b
+```
 
-- `/api/health`: sucesso;
-- `/api/ready`: `database=ok` e `redis=ok`;
-- `/api/version`: commit do hotfix local `46d5cbe928218305f75fd37ac6a2caa1df51a5f2` no momento da recuperação.
+Após o deploy, foram confirmados:
 
-O banco de produção está na revisão Alembic consolidada:
+- `/api/health` saudável;
+- `/api/ready` com PostgreSQL e Redis disponíveis;
+- `/api/version` retornando o mesmo SHA publicado;
+- deploy concluído com código de retorno zero;
+- testes autenticados e validação funcional executados;
+- parâmetro operacional do Redis verificado;
+- senha administrativa compartilhada durante a intervenção rotacionada;
+- checkout do servidor alinhado à `main`.
+
+O PR #46 está em desenvolvimento isolado e **não foi mesclado nem publicado em produção**.
+
+## Estado de produção
+
+| Item | Estado |
+|---|---|
+| Branch publicada | `main` |
+| SHA publicado | `be3a73a9028cd00f1d57c82d9dc338eeb943c22b` |
+| PostgreSQL | saudável |
+| Redis | saudável |
+| Backend | saudável |
+| Caddy/HTTPS | ativo |
+| Revisão Alembic consolidada | `d63a0cc83807` |
+| Corpus científico | 4.936 registros preservados |
+| Senha administrativa da intervenção | rotacionada |
+
+## Publicações concluídas
+
+### PRs #34–#40 — recuperação e consolidação operacional
+
+Esse ciclo entregou, entre outros itens:
+
+- migração para bcrypt direto;
+- Painel e Biblioteca baseados no inventário canônico;
+- CorvIA Mail e CorvIA Chat;
+- atualização do ReportLab;
+- deploy determinístico com rollback;
+- reconciliação do corpus científico;
+- unificação da cadeia Alembic da produção;
+- backup e restauração certificados.
+
+A cadeia Alembic consolidada permanece em:
 
 ```text
 d63a0cc83807
 ```
 
-O PR #40 publicou essa mesma cadeia na `main`, eliminando o risco de o próximo checkout remover migrations já registradas no banco.
+### PR #42
 
-Nenhuma credencial, senha ou conteúdo do `.env` foi gravado no repositório, em commits ou em PRs.
+Correções posteriores de interface e operação incorporadas à `main`.
 
-## Publicações concluídas
+### PR #43
 
-### PR #34 — bcrypt direto
+Correções posteriores de segurança e consistência incorporadas à `main`.
 
-- Passlib removido;
-- compatibilidade com hashes `$2a$`, `$2b$` e `$2y$`;
-- nenhuma senha armazenada alterada;
-- 174 testes backend.
+### PR #44
 
-### PR #35 — acervo, CorvIA Mail e CorvIA Chat
+Ajustes adicionais certificados e incorporados à `main`.
 
-- Painel e Biblioteca baseados no inventário canônico das 11 coleções;
-- CorvIA Mail publicado em rota, menu e Painel;
-- CorvIA Chat publicado em cartão, widget, HTTP e WebSocket;
-- 182 testes backend.
+### PR #45 — árvores SVG do Modo Emergência
 
-### PR #36 — ReportLab e Python 3.14
+- corrigiu a renderização Mermaid das árvores do Modo Emergência;
+- eliminou a remoção prematura do SVG montado;
+- passou a validar o SVG antes da exibição;
+- CI concluída com sucesso;
+- merge e deploy confirmados em produção.
 
-- ReportLab 4.4.10;
-- PDFs clínicos testados por geração real;
-- 186 testes backend e zero warnings conhecidos.
-
-### PR #37 — deploy certificado
-
-Merge:
+Merge publicado:
 
 ```text
-d7a4589d2135e368dbcf1743369f60a1a8fa4acd
+be3a73a9028cd00f1d57c82d9dc338eeb943c22b
 ```
-
-- deploy determinístico em duas fases;
-- lock exclusivo e checkout limpo;
-- snapshot após bloquear escritores;
-- rollback automático da fase mutável;
-- reconciliação fail-closed;
-- `/api/version` para confirmar o SHA publicado;
-- backup e restauração validados;
-- corpus de 4.936 registros certificado.
-
-### PR #38 — slug canônico
-
-Merge:
-
-```text
-955047999ab7b4015c9a29f8c86368e13d4b0576
-```
-
-- importador direto e reconciliador usam a mesma resolução de slug;
-- valores vazios, nulos, booleanos, numéricos e espaços externos são rejeitados;
-- 242 testes backend;
-- 4.936 registros reconciliados.
-
-### PR #39 — consolidação documental
-
-Merge:
-
-```text
-a4b9c8efa8c5becda9efebbbbd7f4a47a62edba0
-```
-
-- registrou o estado pré-deploy e o roteiro de acesso ao servidor.
-
-### PR #40 — hotfix da cadeia Alembic de produção
-
-Head certificado:
-
-```text
-46d5cbe928218305f75fd37ac6a2caa1df51a5f2
-```
-
-Merge na `main`:
-
-```text
-a0b24f345ab7ffd48fb6f65502b8dc4220884dd4
-```
-
-Arquivos publicados:
-
-```text
-backend/migrations/versions/a7c92e4f6b18_subscriptions_periodicidade.py
-backend/migrations/versions/b3f8a1d92e64_plano_pretendido_e_onboarding.py
-backend/migrations/versions/d63a0cc83807_merge_producao_main.py
-```
-
-Cadeia consolidada:
-
-```text
-c4a8e6f1b3d7
-├── a7c92e4f6b18 → b3f8a1d92e64
-└── d5b9f2c7a104 → e6c1a8d4f209 → f7d2b9c4a601 → a4c8e1f2b703
-
-(a4c8e1f2b703, b3f8a1d92e64) → d63a0cc83807
-```
-
-Certificação do PR #40:
-
-- CI #213 — run `30917296235`;
-- **242 testes backend aprovados em 75,30 s**;
-- migrations completas e idempotentes;
-- smoke HTTP aprovado;
-- backup/restauração PostgreSQL aprovados;
-- Corpus database reconciliation #85 — run `30917296311`;
-- **4.936 registros científicos** confirmados;
-- frontend aprovado;
-- `pip-audit` sem vulnerabilidades conhecidas;
-- revisão Codex no SHA `46d5cbe928`: nenhum problema relevante.
 
 ## Incidente de produção em 04/08/2026
 
-### Estado inicial do servidor
+### Estado inicial
 
-O checkout em `/opt/meucardio` estava na `main` antiga `3d19738`, nove commits locais à frente e com arquivos modificados/não rastreados.
+O checkout em `/opt/meucardio` estava divergente da `main`, com histórico local e arquivos modificados. Antes de qualquer alinhamento foram preservados:
 
-Antes de qualquer reset, foram criados:
-
-- branch local de resgate `rescue/server-20260804T121756Z`;
-- commit de resgate `ddf6f5c`;
-- bundle independente `/root/corvia-rescue-20260804T121756Z/rescue.bundle` (~110 MB);
+- branch local de resgate;
+- commit de resgate;
+- bundle independente;
 - patch das alterações rastreadas;
-- arquivo dos untracked;
-- backup protegido do `.env`;
+- inventário dos arquivos não rastreados;
+- cópia protegida do `.env`;
 - checksums SHA-256.
 
-### Backup real do PostgreSQL
+### Backup do PostgreSQL
 
-Foi criado e validado o dump:
+Foi criado e validado um dump custom do PostgreSQL, com catálogo conferido por `pg_restore --list` e checksum aprovado.
 
-```text
-/root/corvia-backups/meucardio_2026-08-04_143903.dump
-```
+### Cadeia Alembic
 
-Características:
-
-- aproximadamente 80 MB;
-- dump custom do PostgreSQL;
-- checksum SHA-256 aprovado;
-- catálogo validado com `pg_restore --list`.
-
-### Correção do `.env`
-
-O arquivo possuía sintaxe Bash inválida em `SMTP_FROM` devido a espaço e caracteres `< >` sem aspas.
-
-Formato corrigido:
-
-```bash
-SMTP_FROM='CorvIA <contato@corvia.med.br>'
-```
-
-Após a correção:
-
-- `bash -n .env`: código 0;
-- `docker compose --env-file .env -f docker-compose.prod.yml config`: código 0.
-
-### Falha do primeiro deploy
-
-O backend entrou em restart loop durante `python -m app.commands.migrate` porque o banco registrava a revisão:
+O banco registrava uma revisão que não existia integralmente na `main` daquele momento. As migrations históricas necessárias foram restauradas e unificadas pela revisão:
 
 ```text
-b3f8a1d92e64
+d63a0cc83807
 ```
 
-Essa migration e seu ancestral `a7c92e4f6b18` existiam apenas no histórico local antigo e não na `main` publicada.
+A migração operacional concluiu com sucesso; o backend atingiu readiness antes da reabertura do proxy público.
 
-Depois de restaurar os dois arquivos, o Alembic encontrou duas heads:
+### `.env`
+
+O `.env` de produção permanece fora do controle de versão e não foi copiado para commits, PRs ou documentação.
+
+Durante a recuperação foi corrigida localmente uma declaração com sintaxe inadequada. A documentação registra apenas que a validação passou, sem reproduzir valores, remetentes, senhas, tokens ou demais segredos:
 
 ```text
-a4c8e1f2b703
-b3f8a1d92e64
+bash -n .env: aprovado
+docker compose config: aprovado
 ```
-
-Foi criada a migration de merge `d63a0cc83807`. O comando operacional concluiu com `RC_MIGRATE=0`, o backend atingiu readiness e somente então o Caddy foi religado.
-
-### Produção recuperada
-
-Validações realizadas:
-
-- banco em `d63a0cc83807`;
-- backend saudável;
-- PostgreSQL saudável;
-- Redis saudável;
-- Caddy religado após readiness;
-- `/api/health`: código 0;
-- `/api/ready`: código 0;
-- `/api/version`: código 0;
-- branch do hotfix enviada ao GitHub;
-- PR #40 certificado e integrado à `main`.
 
 ## Garantias preservadas
 
 - nenhum volume PostgreSQL removido;
-- nenhuma restauração manual destrutiva executada;
-- backup real validado antes das alterações;
-- branch, bundle e `.env` antigo preservados;
+- nenhuma restauração destrutiva executada;
+- backup validado antes das alterações críticas;
+- branch e bundle de resgate preservados;
 - nenhum arquivo científico removido;
-- nenhuma senha armazenada alterada;
+- nenhuma senha armazenada de usuário alterada;
 - corpus de 4.936 registros preservado;
-- 1.327 arquivos físicos preservados conforme inventário anterior.
+- credenciais e segredos mantidos fora do Git;
+- produção alinhada ao SHA publicado na `main`.
 
-## Pendências atuais
+## PR #46 — correções em desenvolvimento
 
-### 1. Alinhar o checkout do servidor à `main` após o PR #40
-
-O servidor continua na branch local do hotfix, embora o conteúdo já esteja publicado na `main`.
-
-No servidor:
-
-```bash
-cd /opt/meucardio
-git fetch --prune origin
-git switch main
-git reset --hard origin/main
-git status --short
-git log -1 --oneline
-```
-
-O commit esperado é:
+Título:
 
 ```text
-a0b24f345ab7ffd48fb6f65502b8dc4220884dd4
+Corrige RCE, medicamentos comerciais, históricos e atalho de emergência
 ```
 
-Depois, atualizar somente a identificação pública do backend:
+Branch:
 
-```bash
-export DEPLOY_COMMIT="$(git rev-parse HEAD)"
-docker compose -f docker-compose.prod.yml up -d --no-deps --force-recreate backend
+```text
+agent/corrige-rce-historicos-emergencia-docs
 ```
 
-Aguardar readiness, manter o Caddy ativo e confirmar `/api/version` com o SHA da `main`.
+Estado: **rascunho, sem merge e sem deploy**.
 
-### 2. Validação autenticada ainda pendente
+Escopo:
 
-- login principal;
-- Painel mostrando 4.936 registros e mínimos das 11 coleções;
-- Biblioteca, paginação e buscas;
-- CorvIA Chat pelo cartão e pelo botão flutuante;
-- mensagens entre duas sessões/abas;
-- WebSocket `wss://`;
-- CorvIA Mail e webmail;
-- envio e recebimento de e-mail;
-- receituário e PDFs clínicos;
-- links públicos de documentos;
-- logout e revogação de sessão.
+1. paginação explícita da Receita de Controle Especial, sem truncar medicamentos ou observações;
+2. validação completa de conselho, número e UF do registro profissional;
+3. manutenção do bloqueio de primeiro acesso enquanto o perfil profissional estiver incompleto;
+4. apresentação legível de erros estruturados da API;
+5. pesquisa em todo o acervo cifrado do usuário antes da paginação de históricos;
+6. remoção da regra CSS duplicada do atalho de Emergência, mantendo o botão textual;
+7. preservação exata do produto e da apresentação comercial escolhidos;
+8. atualização desta documentação e dos testes de regressão.
 
-### 3. Segurança operacional
+### Regra para medicamentos comerciais
 
-A senha administrativa foi compartilhada em texto na conversa. Após terminar os testes autenticados, rotacioná-la e não reutilizar o valor anterior.
+Quando o prescritor escolher uma apresentação comercial, o nome e a apresentação selecionados devem permanecer exatamente iguais na prévia, persistência, revisão, PDF, histórico e recriação.
 
-### 4. Limpeza futura, somente após estabilidade confirmada
+Exemplo:
 
-Não apagar ainda:
+```text
+Benicar 20 mg
+```
 
-- `/root/corvia-rescue-20260804T121756Z`;
-- `/root/corvia-backups/meucardio_2026-08-04_143903.dump` e checksum;
-- branch local de resgate;
-- stashes anteriores.
+não pode ser substituído visualmente por:
 
-A limpeza pode ser avaliada somente após validação autenticada e novo backup de retenção.
+```text
+olmesartana 20 mg
+```
 
-## Ponto exato de retomada
+A substância genérica continua armazenada separadamente para classificação regulatória, interações e regras de receituário.
 
-1. sincronizar o servidor com `origin/main` no commit `a0b24f34`;
-2. recriar somente o backend com `DEPLOY_COMMIT` da `main`;
-3. confirmar health, readiness e version;
-4. executar testes autenticados do Painel, Biblioteca, Chat e Mail;
-5. rotacionar a senha compartilhada;
-6. registrar resultados e eventuais correções em novo PR isolado.
+### Regra para históricos
+
+A busca por paciente não cria índice em texto claro. O backend:
+
+1. restringe a consulta aos registros pertencentes ao usuário autenticado;
+2. decifra somente os nomes desse acervo;
+3. aplica busca parcial e filtro por tipo;
+4. pagina o resultado já filtrado;
+5. devolve `page`, `page_size`, `has_more` e `total`.
+
+Essa estratégia prioriza confidencialidade e correção. O custo de varrer o acervo cifrado deverá ser acompanhado por métricas antes de qualquer otimização futura.
+
+## Critérios para concluir o PR #46
+
+O PR somente poderá sair de rascunho após:
+
+- testes de regressão do escopo aprovados;
+- suíte backend integral aprovada;
+- build frontend aprovado;
+- migrations e reconciliação aprovadas;
+- smoke HTTP aprovado;
+- backup/restauração aprovado;
+- revisão do diff sem pendências críticas;
+- confirmação de que nenhuma alteração destrutiva de banco foi introduzida.
+
+O merge e o deploy exigem decisão separada após a certificação. O documento não orienta mais o servidor a retornar ao commit obsoleto `a0b24f34`.
+
+## Retenção e limpeza operacional
+
+Os artefatos de resgate e o backup do incidente devem permanecer retidos até existir política formal de expiração e um backup posterior validado. A remoção não faz parte do PR #46.

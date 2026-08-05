@@ -21,13 +21,12 @@ from app.services.professional_profile import (
 )
 
 router = APIRouter(prefix="/api/document-templates", tags=["documentos"])
-
 VALIDADE_LINK_DIAS = 7
 
 
 class TemplateIn(BaseModel):
     title: str
-    doc_type: str  # atestado | laudo | outro
+    doc_type: str
     body: str
 
 
@@ -73,15 +72,6 @@ class GerarDocumentoIn(BaseModel):
     patient_id: int | None = None
     variables: dict[str, str] = {}
     patient_name: str | None = None
-    # 'residencial' | 'profissional' | None — mesma escolha do receituário
-    # (Tarefa 29), gravada aqui porque o PDF é gerado sob demanda depois
-    # (GET .../pdf, ou pelo link público) e precisa sair sempre igual.
-    #
-    # Método de assinatura (Tarefa 4) NÃO entra aqui: `GeneratedDocument`
-    # nasce só como texto renderizado — quem usa `PatientDocumentos.tsx`
-    # nem chega a baixar PDF, só imprime `rendered_body` pelo navegador. O
-    # método é escolhido em `GET .../pdf`, no primeiro download de fato, que
-    # é quando o documento passa a existir como PDF.
     endereco: str | None = None
 
 
@@ -126,16 +116,12 @@ def gerar_documento(dados: GerarDocumentoIn, db: Session = Depends(get_db), user
     return {
         "id": gerado.id, "title": gerado.title, "doc_type": gerado.doc_type,
         "rendered_body": gerado.rendered_body, "created_at": gerado.created_at,
-        # `document_logo_url` — mesmo par logo pessoal + logo Corvia que o
-        # PDF do backend já desenha (`pdf_documento.py`), agora também no
-        # cabeçalho de impressão pelo navegador (`CabecalhoDocumento.tsx`).
         "patient_name": nome_paciente or None,
         "medico": document_identity(user),
     }
 
 
 def _obter_gerado(gid: int, db: Session, user) -> GeneratedDocument:
-    """Resolve documento clínico sem bypass administrativo entre locatários."""
     g = db.get(GeneratedDocument, gid)
     if not g or g.created_by != user.id:
         raise HTTPException(status_code=404, detail="Documento não encontrado.")
@@ -146,17 +132,19 @@ def _obter_gerado(gid: int, db: Session, user) -> GeneratedDocument:
 def listar_gerados(
     nome: str | None = Query(None, max_length=120),
     tipo: str | None = Query(None, max_length=30),
+    page: int = Query(1, ge=1),
+    page_size: int = Query(20, ge=1, le=100),
     db: Session = Depends(get_db), user=Depends(current_user),
 ):
+    """Pesquisa o acervo cifrado completo do titular e só então pagina."""
     rows = (
         db.query(GeneratedDocument)
         .filter(GeneratedDocument.created_by == user.id)
         .order_by(GeneratedDocument.created_at.desc())
-        .limit(500)
         .all()
     )
     busca = normalize_search_text(nome)
-    resultado = []
+    filtrados = []
     for g in rows:
         patient_name = None
         if g.patient_name_cifrado:
@@ -165,11 +153,30 @@ def listar_gerados(
             continue
         if tipo and g.doc_type != tipo:
             continue
-        resultado.append({
+        filtrados.append({
             "id": g.id, "title": g.title, "doc_type": g.doc_type,
             "created_at": g.created_at, "patient_name": patient_name,
         })
-    return resultado
+
+    inicio = (page - 1) * page_size
+    items = filtrados[inicio:inicio + page_size]
+    has_more = inicio + page_size < len(filtrados)
+    db.add(AuditLog(
+        user_id=user.id, action="listar_documentos_gerados", entity="generated_document",
+        detail={
+            "count": len(items), "total_filtrado": len(filtrados),
+            "filtro_nome": bool(nome), "filtro_tipo": tipo,
+            "page": page, "page_size": page_size,
+        },
+    ))
+    db.commit()
+    return {
+        "items": items,
+        "page": page,
+        "page_size": page_size,
+        "has_more": has_more,
+        "total": len(filtrados),
+    }
 
 
 @router.get("/gerados/{gid}")
@@ -179,10 +186,6 @@ def obter_gerado(gid: int, db: Session = Depends(get_db), user=Depends(current_u
         "id": g.id, "title": g.title, "doc_type": g.doc_type,
         "rendered_body": g.rendered_body, "created_at": g.created_at,
         "tem_email_destinatario": g.destinatario_email_cifrado is not None,
-        # `template_id`/`variables` (Tarefa 4) — pra "recriar baseado neste":
-        # o frontend reabre o MESMO modelo com os MESMOS valores pré-
-        # preenchidos, em vez de começar do zero. `variables` só existe pra
-        # documento gerado depois desta tarefa; nulo pros anteriores.
         "template_id": g.template_id, "variables": g.variables,
         "patient_name": cofre.decifrar_campo(g.patient_name_cifrado, g.id) if g.patient_name_cifrado else None,
     }
@@ -191,16 +194,9 @@ def obter_gerado(gid: int, db: Session = Depends(get_db), user=Depends(current_u
 @router.get("/gerados/{gid}/pdf")
 def baixar_pdf_gerado(gid: int, metodo: str = "MANUAL", db: Session = Depends(get_db),
                       user=Depends(current_user)):
-    """Primeiro download de fato EMITE o documento (Tarefa 4): escolhe o
-    método de assinatura, gera o PDF e persiste — downloads seguintes servem
-    exatamente os mesmos bytes, ignorando `metodo`, porque o documento já
-    foi emitido (mesma semântica de uma vez só que a receita tem via
-    `status`, só que aqui não existe esse campo — quem marca "já emitido" é
-    a própria existência do `DocumentoEmitido`)."""
     from app.services.pdf_documento import documento_generico, resolver_endereco
 
     g = _obter_gerado(gid, db, user)
-
     existente = assinatura_emissao.buscar(db, tipo=assinatura_emissao.TIPO_DOCUMENTO, referencia_id=g.id)
     if existente is not None:
         pdf = assinatura_emissao.ler_bytes(existente)
@@ -218,15 +214,9 @@ def baixar_pdf_gerado(gid: int, metodo: str = "MANUAL", db: Session = Depends(ge
             "erro": "Emissão indisponível.", "bloqueios": [motivo], "nada_foi_simulado": True,
         })
 
-    # A resolução de propriedade acima garante que o emissor é o próprio
-    # usuário autenticado. Não existe mais leitura administrativa transversal
-    # de documentos clínicos entre médicos.
     emissor = user
     medico = document_identity(emissor)
     titulo = {"atestado": "Atestado", "laudo": "Laudo"}.get(g.doc_type, g.title)
-    # `g.created_at`, não `datetime.now()`: se esta rota for chamada mais de
-    # uma vez antes de conseguir persistir (ex.: primeira tentativa recusada
-    # por provedor indisponível), o PDF ainda sai determinístico.
     pdf_visual = documento_generico(
         titulo=titulo, corpo=g.rendered_body, medico=medico,
         endereco=resolver_endereco(emissor, g.endereco_exibido),
@@ -237,8 +227,6 @@ def baixar_pdf_gerado(gid: int, metodo: str = "MANUAL", db: Session = Depends(ge
         provedor=provedor, info=info_metodo, pdf_visual=pdf_visual, medico=medico,
         criado_por=g.created_by, data_emissao=g.created_at,
     )
-    # `documents.py` não auditava emissão nenhuma até aqui — assimetria com
-    # `receituario.py`, corrigida junto da Tarefa 4.
     db.add(AuditLog(user_id=user.id, action="emitir_documento_gerado",
                     entity="generated_document", entity_id=str(g.id),
                     detail={"doc_type": g.doc_type, "bytes": len(emitido.pdf),
@@ -254,14 +242,11 @@ class EnviarEmailIn(BaseModel):
 
 @router.post("/gerados/{gid}/enviar-email")
 def enviar_email_gerado(gid: int, dados: EnviarEmailIn, db: Session = Depends(get_db), user=Depends(current_user)):
-    """Manda ao paciente um link, nunca o PDF anexado. A rota exige ser o
-    próprio autor do documento e não admite bypass administrativo."""
     g = db.get(GeneratedDocument, gid)
     if not g or g.created_by != user.id:
         raise HTTPException(status_code=404, detail="Documento não encontrado.")
 
     g.destinatario_email_cifrado = cofre.cifrar_campo(dados.email, g.id)
-
     link = DocumentShareLink(
         tipo="generated_document", referencia_id=g.id, criado_por=user.id,
         expires_at=datetime.now(timezone.utc) + timedelta(days=VALIDADE_LINK_DIAS),

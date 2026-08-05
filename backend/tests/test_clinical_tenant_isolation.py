@@ -60,7 +60,10 @@ def test_even_admin_cannot_read_or_operate_another_doctors_generated_document(
         "/api/document-templates/gerados", headers=_headers(other_token)
     )
     assert listing.status_code == 200
-    assert listing.json() == []
+    payload = listing.json()
+    assert payload["items"] == []
+    assert payload["total"] == 0
+    assert payload["has_more"] is False
 
     detail = client.get(
         f"/api/document-templates/gerados/{generated_id}",
