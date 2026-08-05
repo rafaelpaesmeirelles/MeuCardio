@@ -1573,3 +1573,62 @@
 
 /* Card de deslocamento no painel Hoje */
 .hoje-card--deslocamento{background:linear-gradient(160deg,#062b3a,#0a4654);border-color:transparent;color:white}.hoje-card--deslocamento .eyebrow,.hoje-card--deslocamento .hoje-card__topo>svg{color:var(--teal-200)}.hoje-card--deslocamento .hoje-card__acao{color:var(--teal-100);border-top-color:rgb(255 255 255/.12)}.deslocamento-destino{display:flex;align-items:center;gap:.65rem;margin-top:.75rem}.deslocamento-destino>span{display:grid;width:38px;height:38px;place-items:center;color:var(--teal-200);background:rgb(255 255 255/.09);border-radius:10px}.deslocamento-destino>span svg{width:18px}.deslocamento-destino>div{display:flex;min-width:0;flex-direction:column}.deslocamento-destino strong{overflow:hidden;font-size:.8rem;text-overflow:ellipsis;white-space:nowrap}.deslocamento-destino small{margin-top:.12rem;color:rgb(255 255 255/.62);font-size:.62rem}.deslocamento-live{position:relative;margin-top:.72rem;padding:.65rem;background:rgb(255 255 255/.08);border:1px solid rgb(255 255 255/.1);border-radius:11px}.deslocamento-live>div{display:flex;align-items:baseline;gap:.45rem}.deslocamento-live>div strong{font-family:var(--fonte-dados);font-size:1.45rem}.deslocamento-live>div span{color:rgb(255 255 255/.62);font-size:.65rem}.deslocamento-live>.transito{position:absolute;top:.7rem;right:.7rem;padding:.18rem .42rem;border-radius:999px;font-size:.55rem;font-weight:800;text-transform:capitalize}.transito--normal{color:#a7f3d0;background:rgb(16 185 129/.18)}.transito--leve,.transito--moderado{color:#fde68a;background:rgb(245 158 11/.17)}.transito--intenso{color:#fecaca;background:rgb(239 68 68/.18)}.deslocamento-live p{margin:.38rem 0 0;color:#fde68a;font-size:.62rem}.deslocamento-live small{display:block;margin-top:.28rem;color:rgb(255 255 255/.63);font-size:.58rem}.deslocamento-estado{margin:.75rem 0 0;color:rgb(255 255 255/.67);font-size:.67rem;line-height:1.5}.deslocamento-proximos{margin-top:.55rem;color:rgb(255 255 255/.5);font-size:.57rem}.deslocamento-vazio{display:flex;flex-direction:column;margin-top:.8rem}.deslocamento-vazio strong{font-size:.75rem}.deslocamento-vazio span{margin-top:.2rem;color:rgb(255 255 255/.6);font-size:.63rem}
+
+/* Em celulares dobráveis, o viewport pode permanecer acima do breakpoint
+ * móvel tradicional. O deslocamento usa toda a linha e nenhum conteúdo pode
+ * aumentar a largura intrínseca da grade. */
+@media (max-width: 900px) {
+  .hoje-card--deslocamento {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+  }
+  .hoje-card--deslocamento .hoje-card__topo,
+  .hoje-card--deslocamento .hoje-card__topo > div,
+  .deslocamento-destino,
+  .deslocamento-destino > div,
+  .deslocamento-live,
+  .deslocamento-proximos {
+    min-width: 0;
+    max-width: 100%;
+  }
+  .hoje-card--deslocamento .hoje-card__topo > div { flex: 1; }
+  .hoje-card--deslocamento .hoje-card__topo h2,
+  .deslocamento-destino strong,
+  .deslocamento-destino small,
+  .deslocamento-live p,
+  .deslocamento-live small,
+  .deslocamento-proximos {
+    overflow-wrap: anywhere;
+    white-space: normal;
+  }
+  .deslocamento-destino > span { flex: 0 0 38px; }
+  .deslocamento-live > div { flex-wrap: wrap; }
+}
+
+@media (max-width: 719px) {
+  .hoje__grade { grid-template-columns: minmax(0, 1fr); }
+  .hoje-card--deslocamento { padding: 1rem; }
+  .hoje-card--deslocamento .hoje-card__topo { gap: 0.65rem; }
+  .hoje-card--deslocamento .hoje-card__topo > svg { flex: 0 0 auto; }
+  .deslocamento-live {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.45rem 0.65rem;
+    padding: 0.75rem;
+  }
+  .deslocamento-live > div { align-self: center; }
+  .deslocamento-live > .transito {
+    position: static;
+    align-self: center;
+    justify-self: end;
+  }
+  .deslocamento-live > p,
+  .deslocamento-live > small { grid-column: 1 / -1; }
+  .hoje-card--deslocamento .hoje-card__acao {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
