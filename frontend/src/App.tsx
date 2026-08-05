@@ -52,6 +52,9 @@ const CaixaDeEmail = lazy(() => import("./pages/CaixaDeEmail"));
 const CorviaMail = lazy(() => import("./pages/CorviaMail"));
 const Receituario = lazy(() => import("./pages/Receituario"));
 const UsuariosOnline = lazy(() => import("./pages/UsuariosOnline"));
+const GuiaDoencas = lazy(() => import("./pages/GuiaDoencas"));
+const GuiaDoenca = lazy(() => import("./pages/GuiaDoenca"));
+const TriagemSintomas = lazy(() => import("./pages/TriagemSintomas"));
 
 function RotasSuspensas({ children }: { children: ReactNode }) {
   return (
@@ -93,6 +96,9 @@ export default function App() {
           <Route path="apresentacao" element={<Apresentacao />} />
           <Route path="biblioteca" element={<Biblioteca />} />
           <Route path="biblioteca/:slug" element={<Documento />} />
+          <Route path="doencas" element={<GuiaDoencas />} />
+          <Route path="doencas/:slug" element={<GuiaDoenca />} />
+          <Route path="triagem-sintomas" element={<TriagemSintomas />} />
           <Route path="fluxogramas" element={<Fluxogramas />} />
           <Route path="diretrizes" element={<Diretrizes />} />
           <Route path="busca" element={<Busca />} />
