@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import math
 from collections.abc import Iterable
 from typing import Any
 
@@ -15,6 +16,17 @@ ALLOWED_OPERATORS = {
     "eq", "neq", "in", "not_in", "gt", "gte", "lt", "lte",
     "truthy", "falsy", "contains", "exists", "missing",
 }
+
+RESULT_LIST_FIELDS = {
+    "red_flags", "supporting", "opposing", "missing_information",
+    "suggested_tests", "differentials", "ambulatory_flow",
+    "emergency_flow", "messages",
+}
+ALLOWED_ADDITION_FIELDS = RESULT_LIST_FIELDS | {"risk"}
+MAX_ANSWERS = 120
+MAX_RULES = 500
+MAX_TEXT_LENGTH = 2000
+MAX_MULTISELECT_ITEMS = 50
 
 
 def _as_iterable(value: Any) -> list[Any]:
@@ -33,9 +45,9 @@ def _compare(actual: Any, operator: str, expected: Any = None) -> bool:
     if operator == "missing":
         return actual is None or actual == ""
     if operator == "truthy":
-        return bool(actual)
+        return actual is True
     if operator == "falsy":
-        return not bool(actual)
+        return actual is False
     if operator == "eq":
         return actual == expected
     if operator == "neq":
@@ -49,9 +61,13 @@ def _compare(actual: Any, operator: str, expected: Any = None) -> bool:
             return str(expected).casefold() in actual.casefold()
         return expected in _as_iterable(actual)
     try:
+        if isinstance(actual, bool) or isinstance(expected, bool):
+            return False
         left = float(actual)
         right = float(expected)
     except (TypeError, ValueError):
+        return False
+    if not math.isfinite(left) or not math.isfinite(right):
         return False
     if operator == "gt":
         return left > right
@@ -116,10 +132,19 @@ def validate_answers(
         if value is None or value == "":
             continue
         question_type = question.get("type")
-        if question_type == "number":
+        if question_type == "boolean":
+            if not isinstance(value, bool):
+                invalid_fields.append(field)
+        elif question_type == "number":
+            if isinstance(value, bool):
+                invalid_fields.append(field)
+                continue
             try:
                 number = float(value)
             except (TypeError, ValueError):
+                invalid_fields.append(field)
+                continue
+            if not math.isfinite(number):
                 invalid_fields.append(field)
                 continue
             minimum = question.get("min")
@@ -129,17 +154,42 @@ def validate_answers(
             if maximum is not None and number > float(maximum):
                 invalid_fields.append(field)
         elif question_type == "select":
-            options = {option.get("value") for option in question.get("options", []) if isinstance(option, dict)}
+            options = {
+                option.get("value")
+                for option in question.get("options", [])
+                if isinstance(option, dict)
+            }
             if options and value not in options:
                 invalid_fields.append(field)
         elif question_type == "multiselect":
-            options = {option.get("value") for option in question.get("options", []) if isinstance(option, dict)}
-            if not isinstance(value, list) or (options and any(item not in options for item in value)):
+            options = {
+                option.get("value")
+                for option in question.get("options", [])
+                if isinstance(option, dict)
+            }
+            if (
+                not isinstance(value, list)
+                or len(value) > MAX_MULTISELECT_ITEMS
+                or len(value) != len(set(map(str, value)))
+                or (options and any(item not in options for item in value))
+            ):
                 invalid_fields.append(field)
+        elif question_type == "text":
+            if not isinstance(value, str) or len(value) > MAX_TEXT_LENGTH:
+                invalid_fields.append(field)
+        else:
+            invalid_fields.append(field)
 
     unknown = set(answers) - set(known)
     invalid_fields.extend(sorted(unknown))
     return sorted(set(missing_required)), sorted(set(invalid_fields))
+
+
+def _priority(rule: dict[str, Any]) -> int:
+    try:
+        return max(-1000, min(1000, int(rule.get("priority", 0))))
+    except (TypeError, ValueError):
+        return 0
 
 
 def evaluate_rules(
@@ -153,8 +203,12 @@ def evaluate_rules(
     base_emergency_flow: list[Any] | None = None,
     context: str = "ambulatorio",
 ) -> dict[str, Any]:
-    if len(answers) > 120:
+    if len(answers) > MAX_ANSWERS:
         raise ValueError("Quantidade de respostas acima do limite permitido.")
+    if len(rules) > MAX_RULES:
+        raise ValueError("Quantidade de regras acima do limite permitido.")
+    if context not in {"ambulatorio", "emergencia"}:
+        raise ValueError("Contexto de atendimento inválido.")
 
     missing_required, invalid_fields = validate_answers(questions, answers)
     result: dict[str, Any] = {
@@ -173,30 +227,32 @@ def evaluate_rules(
         "context": context,
     }
 
-    for rule in sorted(
-        (item for item in rules if isinstance(item, dict)),
-        key=lambda item: int(item.get("priority", 0)),
-        reverse=True,
-    ):
-        condition = rule.get("when") or {}
-        if not _group_matches(condition, answers):
-            continue
-        additions = rule.get("add") or {}
-        rule_id = str(rule.get("id") or f"regra-{len(result['matched_rules']) + 1}")
-        result["matched_rules"].append(rule_id)
-
-        candidate_risk = str(additions.get("risk") or "")
-        if candidate_risk in RISK_ORDER and RISK_ORDER[candidate_risk] > RISK_ORDER[result["risk"]]:
-            result["risk"] = candidate_risk
-
-        for key in (
-            "red_flags", "supporting", "opposing", "missing_information",
-            "suggested_tests", "differentials", "ambulatory_flow",
-            "emergency_flow", "messages",
+    if not invalid_fields:
+        for rule in sorted(
+            (item for item in rules if isinstance(item, dict)),
+            key=_priority,
+            reverse=True,
         ):
-            values = additions.get(key)
-            if values:
-                _append_unique(result[key], _as_iterable(values))
+            condition = rule.get("when") or {}
+            if not _group_matches(condition, answers):
+                continue
+            additions = rule.get("add") or {}
+            if not isinstance(additions, dict):
+                continue
+            rule_id = str(rule.get("id") or f"regra-{len(result['matched_rules']) + 1}")
+            result["matched_rules"].append(rule_id)
+
+            candidate_risk = str(additions.get("risk") or "")
+            if (
+                candidate_risk in RISK_ORDER
+                and RISK_ORDER[candidate_risk] > RISK_ORDER[result["risk"]]
+            ):
+                result["risk"] = candidate_risk
+
+            for key in RESULT_LIST_FIELDS:
+                values = additions.get(key)
+                if values:
+                    _append_unique(result[key], _as_iterable(values))
 
     if result["red_flags"] and RISK_ORDER[result["risk"]] < RISK_ORDER["urgente"]:
         result["risk"] = "urgente"
