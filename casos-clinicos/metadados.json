@@ -11438,5 +11438,46 @@
       "Sucato V, Madaudo C, Galassi AR. The ANOCA/INOCA Dilemma Considering the 2024 ESC Guidelines on Chronic Coronary Syndromes. J Cardiovasc Dev Dis. 2024;11(10):302. DOI: 10.3390/jcdd11100302. PMID: 39452273"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "icfep-ou-icfelp-finerenona-nao-esteroidal-fineartshf",
+    "titulo": "IC com fração de ejeção preservada ou levemente reduzida: finerenona tem lugar aqui?",
+    "tema": "Insuficiência cardíaca",
+    "nivel": "intermediário",
+    "enunciado": "Mulher de 71 anos, hipertensa e com fibrilação atrial paroxística, é acompanhada por insuficiência cardíaca com fração de ejeção de 48%. Já teve duas visitas de urgência por congestão no último ano, atualmente compensada, em uso de diurético e anti-hipertensivos otimizados. O cardiologista assistente considera acrescentar um antagonista mineralocorticoide, mas lembra que a espironolactona tem indicação mais robusta na fração de ejeção reduzida.",
+    "pergunta": "Com base no ensaio FINEARTS-HF, qual das afirmações abaixo está correta sobre o uso de finerenona (antagonista mineralocorticoide não esteroidal) nesta paciente?",
+    "opcoes": [
+      "Finerenona não tem papel na IC com FEVE ≥ 40%, pois os antagonistas mineralocorticoides só demonstraram benefício com FEVE reduzida.",
+      "No FINEARTS-HF, finerenona reduziu significativamente o desfecho composto de eventos totais de piora da IC e morte cardiovascular em pacientes com FEVE ≥ 40% (taxa de eventos por 100 pacientes-ano: razão de taxa 0,84; IC95% 0,74-0,95; p=0,007), com redução isolada dos eventos de piora da IC (razão de taxa 0,82) — é candidata a receber o fármaco.",
+      "Finerenona só deve ser considerada após falha de sacubitril-valsartana e iSGLT2 associados, como quarta linha de tratamento.",
+      "O ensaio mostrou benefício apenas em mortalidade cardiovascular isolada, sem efeito sobre hospitalização por IC."
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O FINEARTS-HF (Solomon SD et al., N Engl J Med 2024) randomizou 6.001 pacientes com IC e FEVE ≥ 40% (a maioria com internação ou visita de urgência recente por IC) para finerenona (até 20 ou 40 mg/dia, conforme a taxa de filtração glomerular) ou placebo, além da terapia habitual. Ao longo de mediana de 32 meses, o desfecho primário (eventos totais de piora da IC — internação ou visita de urgência — mais morte cardiovascular) ocorreu em 1.083 eventos em 624/3.003 pacientes do grupo finerenona vs. 1.283 eventos em 719/2.998 do grupo placebo (razão de taxa 0,84; IC95% 0,74-0,95; p=0,007). Isoladamente, os eventos de piora da IC caíram de 1.024 para 842 (razão de taxa 0,82; IC95% 0,71-0,94; p=0,006); já a mortalidade cardiovascular isolada não atingiu significância (8,7% placebo vs. 8,1% finerenona; HR 0,93; IC95% 0,78-1,11) — ou seja, o benefício do ensaio está concentrado nos eventos de piora clínica, não na mortalidade cardiovascular isolada, o que descarta a alternativa que atribui o efeito só à mortalidade. Finerenona associou-se a mais hipercalemia e menos hipocalemia que placebo, no mesmo padrão de segurança já conhecido de antagonistas mineralocorticoides. O ensaio não testou finerenona como quarta linha condicionada à falha de outros fármacos — ela entrou associada à terapia habitual desde o início, sem essa hierarquia.",
+    "source_refs": [
+      "Solomon SD, McMurray JJV, Vaduganathan M, et al.; FINEARTS-HF Committees and Investigators. Finerenone in Heart Failure with Mildly Reduced or Preserved Ejection Fraction. N Engl J Med. 2024;391(16):1475-1485. DOI: 10.1056/NEJMoa2407107. PMID: 39225278 — NCT04435626, 6.001 pacientes. Financiamento: Bayer."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "anticoncepcao-em-valvopatia-complicada-por-hipertensao-pulmonar-criterios-oms",
+    "titulo": "Valvopatia mitral com hipertensão pulmonar: qual método contraceptivo é seguro?",
+    "tema": "Gravidez",
+    "nivel": "intermediário",
+    "enunciado": "Mulher de 26 anos, com estenose mitral reumática moderada e hipertensão pulmonar secundária (pressão sistólica de artéria pulmonar estimada em 48 mmHg ao ecocardiograma), procura a cardiologista para discutir contracepção — não deseja gravidez nos próximos anos e hoje não usa nenhum método. Ela pergunta especificamente sobre o adesivo transdérmico combinado, que uma amiga usa sem problemas.",
+    "pergunta": "Segundo os critérios de elegibilidade da OMS adaptados pelo Posicionamento SBC 2020 para doença valvar, qual é a orientação correta?",
+    "opcoes": [
+      "O adesivo combinado é categoria 2 (vantagens superam riscos teóricos) mesmo com hipertensão pulmonar, porque a via transdérmica evita o primeiro passo hepático do estrogênio oral.",
+      "Valvopatia é sempre contraindicação absoluta a qualquer contracepção hormonal, independentemente de complicação associada.",
+      "A valvopatia é classificada como 'complicada' pela presença de hipertensão pulmonar (um dos três marcadores da tabela, junto com risco de fibrilação atrial e endocardite infecciosa prévia) — nessa condição, o método combinado (oral, adesivo, anel ou injetável mensal) é categoria 4 (contraindicação), enquanto progestágeno isolado, DIU de cobre e DIU de levonorgestrel permanecem em categorias 1-2.",
+      "A hipertensão pulmonar só reclassifica o risco de método combinado quando associada a fibrilação atrial confirmada — isoladamente, mantém-se em categoria 2."
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O Posicionamento da Sociedade Brasileira de Cardiologia para Gravidez e Planejamento Familiar na Mulher Portadora de Cardiopatia (Avila WS et al., Arq Bras Cardiol 2020, PMID 32491078), na Tabela 51 (Seção 6.2), divide a doença valvar em duas faixas por presença de complicação — hipertensão pulmonar, risco de fibrilação atrial, ou história de endocardite bacteriana subaguda. Na valvopatia NÃO complicada, o método combinado é categoria 2 (aceitável, vantagens superam riscos teóricos). Assim que qualquer um dos três marcadores de complicação está presente — como nesta paciente, com hipertensão pulmonar documentada por ecocardiograma —, o método combinado salta para categoria 4 (contraindicação absoluta), enquanto progestágeno isolado (oral, injetável trimestral, implante) permanece em categoria 1, e os DIUs de cobre e levonorgestrel em categoria 2. A justificativa fisiopatológica está descrita em outro documento desta mesma pasta sobre o mecanismo trombótico do estrogênio: o etinilestradiol aumenta a síntese hepática de fatores pró-coagulantes, e hipertensão pulmonar já é, por si só, estado de maior risco tromboembólico e de descompensação hemodinâmica — a soma dos dois riscos é o que move a categoria de 2 para 4, não a hipertensão pulmonar isolada nem a via de administração (transdérmica não muda a categoria, ao contrário do que a paciente presume). A conduta correta é orientar método não estrogênico — progestágeno isolado ou DIU — como primeira escolha.",
+    "source_refs": [
+      "Avila WS, Alexandre ERG, Castro ML, Freire CMV, Sette DGB, Sette JB, et al. Brazilian Cardiology Society Statement for Management of Pregnancy and Family Planning in Women with Heart Disease - 2020. Arq Bras Cardiol. 2020;114(5):849-942. PMID: 32491078. Seção 6.2 (Contracepção na Paciente com Doença Cardiovascular), Tabela 51.",
+      "World Health Organization. Medical Eligibility Criteria for Contraceptive Use. 5th ed. Geneva: World Health Organization; 2015 — fonte primária das categorias 1 a 4."
+    ],
+    "review_status": "revisado"
   }
 ]
