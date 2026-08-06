@@ -51,7 +51,7 @@ def redirect_uri(provider: str) -> str:
     return f"{settings.public_url.rstrip('/')}/api/agenda/oauth/{slug}/callback"
 
 
-def oauth_scopes(provider: str, *, calendar_write: bool, contacts: bool) -> list[str]:
+def oauth_scopes(provider: str, *, calendar_write: bool, contacts: bool, mail: bool = False) -> list[str]:
     if provider == "google_calendar":
         scopes = ["openid", "email", "profile"]
         scopes.append(
@@ -60,12 +60,19 @@ def oauth_scopes(provider: str, *, calendar_write: bool, contacts: bool) -> list
         )
         if contacts:
             scopes.append("https://www.googleapis.com/auth/contacts.readonly")
+        if mail:
+            scopes.extend([
+                "https://www.googleapis.com/auth/gmail.modify",
+                "https://www.googleapis.com/auth/gmail.send",
+            ])
         return scopes
     if provider == "microsoft_365":
         scopes = ["openid", "profile", "email", "offline_access", "User.Read"]
         scopes.append("Calendars.ReadWrite" if calendar_write else "Calendars.Read")
         if contacts:
             scopes.append("Contacts.Read")
+        if mail:
+            scopes.extend(["Mail.ReadWrite", "Mail.Send"])
         return scopes
     raise ConnectorError("unsupported_provider", "OAuth não suportado para este provedor.", status_code=422)
 
@@ -77,6 +84,7 @@ def begin_oauth(
     provider: str,
     calendar_write: bool,
     contacts: bool,
+    mail: bool = False,
 ) -> str:
     if not oauth_configured(provider):
         raise ConnectorError(
@@ -92,12 +100,12 @@ def begin_oauth(
         provider=provider,
         state_digest=hashlib.sha256(state.encode()).hexdigest(),
         code_verifier_cipher=cifrar_campo(verifier, owner_id),
-        request_data={"calendar_write": calendar_write, "contacts": contacts},
+        request_data={"calendar_write": calendar_write, "contacts": contacts, "mail": mail},
         expires_at=datetime.now(timezone.utc) + timedelta(minutes=10),
     )
     db.add(record)
     db.commit()
-    scopes = oauth_scopes(provider, calendar_write=calendar_write, contacts=contacts)
+    scopes = oauth_scopes(provider, calendar_write=calendar_write, contacts=contacts, mail=mail)
     common = {
         "response_type": "code",
         "redirect_uri": redirect_uri(provider),
@@ -224,6 +232,8 @@ def complete_oauth(db: Session, *, provider: str, code: str, state: str) -> Cale
         "reschedule_appointment": bool(record.request_data.get("calendar_write")),
         "cancel_appointment": bool(record.request_data.get("calendar_write")),
         "read_contacts": bool(record.request_data.get("contacts")),
+        "read_mail": bool(record.request_data.get("mail")),
+        "send_mail": bool(record.request_data.get("mail")),
     }
     if not integration:
         integration = CalendarIntegration(
@@ -241,7 +251,7 @@ def complete_oauth(db: Session, *, provider: str, code: str, state: str) -> Cale
     integration.write_enabled = bool(record.request_data.get("calendar_write"))
     integration.contacts_enabled = bool(record.request_data.get("contacts"))
     integration.capabilities = capabilities
-    integration.consent_version = "external-accounts-v1-2026-08-05"
+    integration.consent_version = "external-accounts-v2-2026-08-06"
     integration.consent_at = datetime.now(timezone.utc)
     integration.revoked_at = None
     integration.last_error_code = None

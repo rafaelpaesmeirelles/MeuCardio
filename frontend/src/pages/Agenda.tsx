@@ -534,7 +534,7 @@ export default function Agenda() {
   async function conectarConta(provider: "google" | "microsoft") {
     setContaEmConexao(provider); setErro(""); setMensagem("");
     try {
-      const result = await api.get<{ authorization_url: string }>(`/agenda/oauth/${provider}/start?contacts=true&calendar_write=false&consent_accepted=true`);
+      const result = await api.get<{ authorization_url: string }>(`/agenda/oauth/${provider}/start?contacts=true&mail=true&calendar_write=false&consent_accepted=true`);
       window.location.assign(result.authorization_url);
     } catch (error) {
       setContaEmConexao(null);
@@ -671,7 +671,7 @@ export default function Agenda() {
           </div>
           <button className="botao botao--secundario" onClick={abrirContasExternas}><Icone nome="configuracao" /> Gerenciar conexões</button>
         </div>
-        <label className="agenda-check agenda-contas-destaque__consentimento"><input type="checkbox" checked={consentimentoContas} onChange={(event) => setConsentimentoContas(event.target.checked)} /> Autorizo a leitura dos meus calendários e contatos para uso na Agenda e no CorvIA Mail.</label>
+        <label className="agenda-check agenda-contas-destaque__consentimento"><input type="checkbox" checked={consentimentoContas} onChange={(event) => setConsentimentoContas(event.target.checked)} /> Autorizo a leitura dos meus calendários, contatos e e-mails, e o envio de mensagens por minha conta, para uso na Agenda e no CorvIA Mail. Posso revogar o acesso a qualquer momento.</label>
         <div className="agenda-contas-destaque__grade">
           {[{ provider: "google_calendar", nome: "Google", acao: "google" as const }, { provider: "microsoft_365", nome: "Microsoft", acao: "microsoft" as const }].map((conta) => {
             const integracao = integracoes.find((item) => item.provider === conta.provider && item.enabled);
@@ -834,7 +834,7 @@ export default function Agenda() {
             <button className="botao botao--secundario agenda-botao-provedor" disabled={!consentimentoContas || contaEmConexao !== null || capacidades?.connectors.find((item) => item.provider === "google_calendar")?.oauth_configured === false} onClick={() => conectarConta("google").catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível iniciar a conexão Google."))}><LogoProvedor provedor="google" /> {contaEmConexao === "google" ? "Abrindo Google…" : "Conectar Google"}</button>
             <button className="botao botao--secundario agenda-botao-provedor" disabled={!consentimentoContas || contaEmConexao !== null || capacidades?.connectors.find((item) => item.provider === "microsoft_365")?.oauth_configured === false} onClick={() => conectarConta("microsoft").catch((e) => setErro(e instanceof ApiError ? e.message : "Não foi possível iniciar a conexão Microsoft."))}><LogoProvedor provedor="microsoft" /> {contaEmConexao === "microsoft" ? "Abrindo Microsoft…" : "Conectar Microsoft"}</button>
           </div>
-          <label className="agenda-check"><input type="checkbox" checked={consentimentoContas} onChange={(e) => setConsentimentoContas(e.target.checked)} /> Autorizo a leitura dos meus calendários e contatos para uso na Agenda e no CorvIA Mail.</label>
+          <label className="agenda-check"><input type="checkbox" checked={consentimentoContas} onChange={(e) => setConsentimentoContas(e.target.checked)} /> Autorizo a leitura dos meus calendários, contatos e e-mails, e o envio de mensagens por minha conta, para uso na Agenda e no CorvIA Mail. Posso revogar o acesso a qualquer momento.</label>
           {capacidades?.connectors.some((item) => ["google_calendar", "microsoft_365"].includes(item.provider) && item.oauth_configured === false) && <p className="agenda-config-help">O administrador ainda precisa cadastrar o cliente OAuth correspondente no servidor.</p>}
           <details className="agenda-apple-config"><summary><LogoProvedor provedor="apple" /> Conectar Calendário e Contatos Apple</summary><div className="agenda-config-form agenda-config-form--routine">
             <label>ID Apple<input type="email" autoComplete="username" value={apple.apple_id} onChange={(e) => setApple({ ...apple, apple_id: e.target.value })} placeholder="nome@icloud.com" /></label>

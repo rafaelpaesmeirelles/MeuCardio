@@ -1140,6 +1140,7 @@ def commute(data: CommuteIn, db: Session = Depends(get_db), user: User = Depends
 def start_external_account(
     provider_slug: Literal["google", "microsoft"],
     contacts: bool = True,
+    mail: bool = False,
     calendar_write: bool = False,
     consent_accepted: bool = False,
     db: Session = Depends(get_db),
@@ -1147,13 +1148,13 @@ def start_external_account(
 ):
     provider = "google_calendar" if provider_slug == "google" else "microsoft_365"
     if not consent_accepted:
-        raise HTTPException(status_code=422, detail="Aceite a sincronização de Calendário e Contatos.")
+        raise HTTPException(status_code=422, detail="Aceite a sincronização de Calendário, Contatos e, quando solicitado, E-mail.")
     if calendar_write and not settings.agenda_external_writes_enabled:
         raise HTTPException(status_code=409, detail="A escrita em calendários externos está desativada pelo administrador.")
     try:
         url = begin_oauth(
             db, owner_id=user.id, provider=provider,
-            calendar_write=calendar_write, contacts=contacts,
+            calendar_write=calendar_write, contacts=contacts, mail=mail,
         )
     except ConnectorError as exc:
         raise HTTPException(status_code=exc.status_code, detail={"code": exc.code, "message": str(exc)}) from exc

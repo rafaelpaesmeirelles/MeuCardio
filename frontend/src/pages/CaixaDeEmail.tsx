@@ -3,6 +3,7 @@ import { Link, Navigate, useNavigate } from "react-router-dom";
 import { apiEmail, ApiEmailError, tokenEmail } from "../lib/apiEmail";
 import { Carregando, Vazio } from "../components/Estado";
 import LogoCorviaMail from "../components/LogoCorviaMail";
+import LogoProvedor from "../components/LogoProvedor";
 import "../styles/corvia-mail.css";
 
 type Pasta = {
@@ -47,6 +48,11 @@ type AnexoEnviado = { file_id: string; nome: string };
 type ContatoExterno = {
   id: number; name: string; emails: string[]; phones: string[];
   organization: string; provider: string; integration_id: number;
+};
+type ContaEmail = {
+  id: string; provider: "corvia" | "google" | "microsoft";
+  display_name: string; email_address: string; native: boolean;
+  read_mail: boolean; send_mail: boolean;
 };
 type Filtro = "todas" | "nao_lidas" | "anexos" | "acompanhamento";
 type AcaoResposta = "reply" | "replyall" | "forward";
@@ -102,6 +108,16 @@ const NOMES_PASTAS: Record<string, string> = {
   Spam: "Spam",
   Trash: "Lixeira",
   Outbox: "Saída",
+  INBOX: "Entrada",
+  DRAFT: "Rascunhos",
+  SENT: "Enviados",
+  SPAM: "Spam",
+  TRASH: "Lixeira",
+  inbox: "Entrada",
+  drafts: "Rascunhos",
+  sentitems: "Enviados",
+  junkemail: "Spam",
+  deleteditems: "Lixeira",
 };
 
 const MARCAS_PASTAS: Record<string, string> = {
@@ -270,6 +286,8 @@ export default function CaixaDeEmail() {
   const navigate = useNavigate();
   const [semSessao, setSemSessao] = useState(!tokenEmail.get());
   const [enderecoAtual, setEnderecoAtual] = useState<string | null>(null);
+  const [contasEmail, setContasEmail] = useState<ContaEmail[]>([]);
+  const [contaEmailId, setContaEmailId] = useState("corvia");
   const [erro, setErro] = useState<string | null>(null);
   const [aviso, setAviso] = useState<string | null>(null);
   const [modo, setModo] = useState<"hoje" | "caixa">("hoje");
@@ -291,6 +309,9 @@ export default function CaixaDeEmail() {
   const [anexos, setAnexos] = useState<AnexoEnviado[]>([]);
   const [enviandoAnexo, setEnviandoAnexo] = useState(false);
   const [contatos, setContatos] = useState<ContatoExterno[]>([]);
+  const contaSelecionada = contasEmail.find((conta) => conta.id === contaEmailId);
+  const contaExterna = contaSelecionada && !contaSelecionada.native ? contaSelecionada : null;
+  const prefixoConta = contaExterna ? `/email/externas/${contaExterna.id}` : "/email";
 
   function mensagemDeErro(e: unknown, fallback: string): string {
     if (e instanceof ApiEmailError && e.status === 401) {
@@ -307,9 +328,9 @@ export default function CaixaDeEmail() {
 
   async function carregarPastas() {
     try {
-      const resultado = await apiEmail.get<Pasta[]>("/email/pastas");
+      const resultado = await apiEmail.get<Pasta[]>(`${prefixoConta}/pastas`);
       setPastas(resultado);
-      const inbox = resultado.find((p) => tipoDaPasta(p) === "Inbox");
+      const inbox = resultado.find((p) => tipoDaPasta(p).toLowerCase() === "inbox");
       setPastaAtual((atual) => atual ?? (inbox ? idDaPasta(inbox) : undefined));
     } catch (e) {
       setErro(mensagemDeErro(e, "Não foi possível carregar as pastas."));
@@ -322,7 +343,7 @@ export default function CaixaDeEmail() {
     try {
       const params = new URLSearchParams({ limite: "100", inicio: "1" });
       if (pasta) params.set("pasta", pasta);
-      const resultado = await apiEmail.get<Mensagem[]>(`/email/mensagens?${params}`);
+      const resultado = await apiEmail.get<Mensagem[]>(`${prefixoConta}/mensagens?${params}`);
       setMensagens(resultado);
       setSelecionadas(new Set());
     } catch (e) {
@@ -337,13 +358,16 @@ export default function CaixaDeEmail() {
     if (semSessao) return;
     apiEmail
       .get<{ email_address: string }>("/email/eu")
-      .then((r) => setEnderecoAtual(r.email_address))
+      .then(async (r) => {
+        setEnderecoAtual(r.email_address);
+        const contas = await apiEmail.get<ContaEmail[]>("/email/contas");
+        setContasEmail(contas);
+      })
       .catch((e) => setErro(mensagemDeErro(e, "Não foi possível carregar sua caixa de e-mail.")));
   }, [semSessao]);
 
   useEffect(() => {
     if (semSessao || !enderecoAtual) return;
-    void carregarPastas();
     apiEmail.get<ContatoExterno[]>("/email/contatos?limite=100").then(setContatos).catch(() => setContatos([]));
   }, [semSessao, enderecoAtual]);
 
@@ -352,7 +376,17 @@ export default function CaixaDeEmail() {
     setMensagemAberta(null);
     setAnexosRecebidos([]);
     void carregarMensagens(pastaAtual);
-  }, [semSessao, enderecoAtual, pastaAtual, pastas]);
+  }, [semSessao, enderecoAtual, pastaAtual, pastas, contaEmailId]);
+
+  useEffect(() => {
+    if (!enderecoAtual) return;
+    setPastas(null);
+    setPastaAtual(undefined);
+    setMensagens(null);
+    setMensagemAberta(null);
+    setAnexosRecebidos([]);
+    void carregarPastas();
+  }, [contaEmailId, enderecoAtual]);
 
   const mensagensFiltradas = useMemo(() => {
     const termo = busca.trim().toLocaleLowerCase("pt-BR");
@@ -383,12 +417,12 @@ export default function CaixaDeEmail() {
     setErro(null);
     setModo("caixa");
     try {
-      const completa = await apiEmail.get<MensagemCompleta>(`/email/mensagens/${encodeURIComponent(id)}`);
+      const completa = await apiEmail.get<MensagemCompleta>(`${prefixoConta}/mensagens/${encodeURIComponent(id)}`);
       setMensagemAberta(completa);
       setMensagens((lista) => (lista ?? []).map((item) =>
         idDaMensagem(item) === id ? { ...item, status: "1" } : item,
       ));
-      if (temAnexo(completa)) {
+      if (temAnexo(completa) && !contaExterna) {
         const recebidos = await apiEmail
           .get<AnexoRecebido[]>(`/email/mensagens/${encodeURIComponent(id)}/anexos`)
           .catch(() => []);
@@ -418,7 +452,7 @@ export default function CaixaDeEmail() {
     if (!ids.length) return;
     setAtualizando(true);
     try {
-      await apiEmail.put("/email/mensagens/acoes", { message_ids: ids, acao, ...extras });
+      await apiEmail.put(`${prefixoConta}/mensagens/acoes`, { message_ids: ids, acao, ...extras });
       setMensagens((lista) => (lista ?? []).flatMap((mensagem) => {
         if (!ids.includes(idDaMensagem(mensagem))) return [mensagem];
         if (acao === "mover") return [];
@@ -443,7 +477,7 @@ export default function CaixaDeEmail() {
     if (!ids.length || !window.confirm(`Excluir ${ids.length === 1 ? "esta mensagem" : `${ids.length} mensagens`}?`)) return;
     setAtualizando(true);
     try {
-      await Promise.all(ids.map((id) => apiEmail.delete(`/email/mensagens/${encodeURIComponent(id)}`)));
+      await Promise.all(ids.map((id) => apiEmail.delete(`${prefixoConta}/mensagens/${encodeURIComponent(id)}`)));
       setMensagens((lista) => (lista ?? []).filter((mensagem) => !ids.includes(idDaMensagem(mensagem))));
       if (mensagemAberta && ids.includes(idDaMensagem(mensagemAberta))) setMensagemAberta(null);
       setSelecionadas(new Set());
@@ -499,8 +533,8 @@ export default function CaixaDeEmail() {
   async function enviar() {
     setEnviando(true);
     try {
-      if (rascunho.modo === "nova") {
-        await apiEmail.post("/email/mensagens", {
+      if (rascunho.modo === "nova" || contaExterna) {
+        await apiEmail.post(`${prefixoConta}/mensagens`, {
           para: rascunho.para,
           cc: rascunho.cc || null,
           cco: rascunho.cco || null,
@@ -544,7 +578,12 @@ export default function CaixaDeEmail() {
           <LogoCorviaMail tamanho="compacto" />
           <div>
             <p className="eyebrow">Central de comunicação profissional</p>
-            <strong>{enderecoAtual}</strong>
+            <div className="mail-conta-ativa">
+              {contaExterna && contaExterna.provider !== "corvia" && <LogoProvedor provedor={contaExterna.provider} />}
+              <select value={contaEmailId} onChange={(event) => setContaEmailId(event.target.value)} aria-label="Conta de e-mail ativa">
+                {contasEmail.map((conta) => <option key={conta.id} value={conta.id}>{conta.email_address}</option>)}
+              </select>
+            </div>
           </div>
         </div>
         <div className="mail-topo__acoes">
@@ -709,7 +748,7 @@ export default function CaixaDeEmail() {
               <div className="mail-acoes-lote" role="toolbar" aria-label="Ações em lote">
                 <button onClick={() => void agir("lida")}>Marcar lidas</button>
                 <button onClick={() => void agir("nao_lida")}>Não lidas</button>
-                <button onClick={() => void agir("sinalizar", undefined, { sinalizador: "followup" })}>Acompanhar</button>
+                {!contaExterna && <button onClick={() => void agir("sinalizar", undefined, { sinalizador: "followup" })}>Acompanhar</button>}
                 <select
                   aria-label="Mover mensagens para pasta"
                   defaultValue=""
@@ -772,7 +811,7 @@ export default function CaixaDeEmail() {
                   <button onClick={() => responder("replyall")}>Responder a todos</button>
                   <button onClick={() => responder("forward")}>Encaminhar</button>
                   <button onClick={() => void agir("nao_lida", [idDaMensagem(mensagemAberta)])}>Marcar não lida</button>
-                  <button onClick={() => void agir("sinalizar", [idDaMensagem(mensagemAberta)], { sinalizador: "followup" })}>⚑ Acompanhar</button>
+                  {!contaExterna && <button onClick={() => void agir("sinalizar", [idDaMensagem(mensagemAberta)], { sinalizador: "followup" })}>⚑ Acompanhar</button>}
                   <select
                     aria-label="Mover mensagem"
                     defaultValue=""
@@ -794,7 +833,7 @@ export default function CaixaDeEmail() {
                   <h2>{mensagemAberta.subject ?? "(sem assunto)"}</h2>
                   <div className="mail-leitura__remetente">
                     <span className="mail-avatar mail-avatar--grande">{iniciais(mensagemAberta)}</span>
-                    <span><strong>{remetente(mensagemAberta)}</strong><small>Para: {mensagemAberta.toAddress ?? enderecoAtual}</small></span>
+                    <span><strong>{remetente(mensagemAberta)}</strong><small>Para: {mensagemAberta.toAddress ?? contaSelecionada?.email_address ?? enderecoAtual}</small></span>
                     <time>{dataMensagem(mensagemAberta, true)}</time>
                   </div>
                 </header>
@@ -862,7 +901,7 @@ export default function CaixaDeEmail() {
                 <button key={modelo.titulo} onClick={() => setRascunho({ ...rascunho, assunto: modelo.assunto, corpo: modelo.corpo })}>{modelo.titulo}</button>
               ))}
             </div>
-            <div className="mail-compositor__anexos">
+            {!contaExterna ? <div className="mail-compositor__anexos">
               <label className="botao botao--secundario">
                 {enviandoAnexo ? "Enviando anexo…" : "▱ Anexar arquivo"}
                 <input
@@ -878,7 +917,7 @@ export default function CaixaDeEmail() {
               {anexos.map((anexo) => (
                 <span key={anexo.file_id}>{anexo.nome}<button onClick={() => setAnexos((lista) => lista.filter((item) => item.file_id !== anexo.file_id))}>×</button></span>
               ))}
-            </div>
+            </div> : <p className="mail-conta-nota">A conta externa envia pelo provedor original. Anexos externos serão liberados após a validação específica de segurança do Google e da Microsoft.</p>}
             <footer>
               <button className="botao" onClick={() => void enviar()} disabled={enviando || enviandoAnexo || !rascunho.assunto || !rascunho.corpo || ((rascunho.modo === "nova" || rascunho.modo === "forward") && !rascunho.para)}>
                 {enviando ? "Enviando…" : rascunho.modo === "forward" ? "Encaminhar" : "Enviar"}

@@ -48,9 +48,11 @@ from app.core.security import (
     verify_password,
 )
 from app.models.email_account import EmailAccount
+from app.models.agenda import CalendarIntegration
 from app.models.password_reset import PasswordResetToken
 from app.models.user import User
 from app.services import emails, mail360
+from app.services import external_mail
 from app.services.agenda_integrada.contacts import list_contacts
 from app.services.mail360 import Mail360Error
 from app.services.notificar import tentar_enviar_email
@@ -394,6 +396,43 @@ def eu(conta: EmailAccount = Depends(current_email_account)):
     return {"email_address": conta.email_address}
 
 
+@router.get("/contas")
+def contas_da_caixa_unificada(
+    db: Session = Depends(get_db),
+    conta: EmailAccount = Depends(current_email_account),
+):
+    """Caixa nativa e contas OAuth do mesmo titular, sem expor tokens."""
+    resultado = [{
+        "id": "corvia",
+        "provider": "corvia",
+        "display_name": "CorvIA Mail",
+        "email_address": conta.email_address,
+        "native": True,
+        "read_mail": True,
+        "send_mail": True,
+    }]
+    integracoes = db.query(CalendarIntegration).filter(
+        CalendarIntegration.owner_id == conta.user_id,
+        CalendarIntegration.enabled.is_(True),
+        CalendarIntegration.status == "connected",
+        CalendarIntegration.provider.in_(["google_calendar", "microsoft_365"]),
+    ).order_by(CalendarIntegration.id.asc()).all()
+    for integracao in integracoes:
+        capacidades = integracao.capabilities or {}
+        if not capacidades.get("read_mail"):
+            continue
+        resultado.append({
+            "id": str(integracao.id),
+            "provider": "google" if integracao.provider == "google_calendar" else "microsoft",
+            "display_name": integracao.display_name,
+            "email_address": integracao.display_name,
+            "native": False,
+            "read_mail": True,
+            "send_mail": bool(capacidades.get("send_mail")),
+        })
+    return resultado
+
+
 @router.get("/pastas")
 def pastas(conta: EmailAccount = Depends(current_email_account)):
     _exigir_configurado()
@@ -592,3 +631,135 @@ def excluir(message_id: str, conta: EmailAccount = Depends(current_email_account
         mail360.excluir_mensagem(conta.mail360_account_key, message_id)
     except Mail360Error as e:
         raise HTTPException(status_code=502, detail=str(e)) from e
+
+
+# --------------------------------------------------------------------------
+# Contas externas — proxy ao vivo; o conteúdo permanece no provedor
+# --------------------------------------------------------------------------
+
+def _integracao_email(
+    db: Session,
+    conta: EmailAccount,
+    integration_id: int,
+    *,
+    escrita: bool = False,
+) -> CalendarIntegration:
+    integracao = db.query(CalendarIntegration).filter(
+        CalendarIntegration.id == integration_id,
+        CalendarIntegration.owner_id == conta.user_id,
+        CalendarIntegration.enabled.is_(True),
+        CalendarIntegration.status == "connected",
+        CalendarIntegration.provider.in_(["google_calendar", "microsoft_365"]),
+    ).first()
+    capacidades = (integracao.capabilities or {}) if integracao else {}
+    exigida = "send_mail" if escrita else "read_mail"
+    if not integracao or not capacidades.get(exigida):
+        raise HTTPException(
+            status_code=403,
+            detail="Esta conta não autorizou o CorvIA Mail. Reconecte-a na Agenda e aceite o acesso ao e-mail.",
+        )
+    return integracao
+
+
+def _traduzir_erro_externo(exc: external_mail.ExternalMailError) -> HTTPException:
+    return HTTPException(status_code=exc.status_code, detail=str(exc))
+
+
+@router.get("/externas/{integration_id}/pastas")
+def pastas_externas(
+    integration_id: int,
+    db: Session = Depends(get_db),
+    conta: EmailAccount = Depends(current_email_account),
+):
+    integracao = _integracao_email(db, conta, integration_id)
+    try:
+        return external_mail.list_folders(db, integracao)
+    except external_mail.ExternalMailError as exc:
+        raise _traduzir_erro_externo(exc) from exc
+
+
+@router.get("/externas/{integration_id}/mensagens")
+def mensagens_externas(
+    integration_id: int,
+    pasta: str | None = None,
+    limite: int = 50,
+    inicio: int = 1,
+    db: Session = Depends(get_db),
+    conta: EmailAccount = Depends(current_email_account),
+):
+    if limite < 1 or limite > 100 or inicio < 1:
+        raise HTTPException(status_code=422, detail="Paginação inválida.")
+    integracao = _integracao_email(db, conta, integration_id)
+    try:
+        return external_mail.list_messages(db, integracao, folder=pasta, limit=limite, start=inicio)
+    except external_mail.ExternalMailError as exc:
+        raise _traduzir_erro_externo(exc) from exc
+
+
+@router.get("/externas/{integration_id}/mensagens/{message_id}")
+def mensagem_externa(
+    integration_id: int,
+    message_id: str,
+    db: Session = Depends(get_db),
+    conta: EmailAccount = Depends(current_email_account),
+):
+    integracao = _integracao_email(db, conta, integration_id)
+    try:
+        return external_mail.get_message(db, integracao, message_id)
+    except external_mail.ExternalMailError as exc:
+        raise _traduzir_erro_externo(exc) from exc
+
+
+@router.put("/externas/{integration_id}/mensagens/acoes", status_code=204)
+def agir_em_mensagens_externas(
+    integration_id: int,
+    dados: AcaoMensagens,
+    db: Session = Depends(get_db),
+    conta: EmailAccount = Depends(current_email_account),
+):
+    if not dados.message_ids or len(dados.message_ids) > 100:
+        raise HTTPException(status_code=422, detail="Selecione entre 1 e 100 mensagens.")
+    if dados.acao == "sinalizar":
+        raise HTTPException(status_code=422, detail="Sinalizadores externos ainda não são compatíveis entre provedores.")
+    if dados.acao == "mover" and not dados.pasta_destino:
+        raise HTTPException(status_code=422, detail="Informe a pasta de destino.")
+    integracao = _integracao_email(db, conta, integration_id)
+    try:
+        external_mail.act_on_messages(
+            db, integracao, dados.message_ids, dados.acao, destination=dados.pasta_destino,
+        )
+    except external_mail.ExternalMailError as exc:
+        raise _traduzir_erro_externo(exc) from exc
+
+
+@router.post("/externas/{integration_id}/mensagens", status_code=201)
+def enviar_mensagem_externa(
+    integration_id: int,
+    dados: NovaMensagem,
+    db: Session = Depends(get_db),
+    conta: EmailAccount = Depends(current_email_account),
+):
+    if dados.anexos:
+        raise HTTPException(status_code=422, detail="Envie anexos pela caixa nativa; anexos externos serão liberados após validação específica de cada provedor.")
+    integracao = _integracao_email(db, conta, integration_id, escrita=True)
+    try:
+        return external_mail.send_message(
+            db, integracao, to=dados.para, subject=dados.assunto, html=dados.corpo_html,
+            cc=dados.cc, bcc=dados.cco,
+        )
+    except external_mail.ExternalMailError as exc:
+        raise _traduzir_erro_externo(exc) from exc
+
+
+@router.delete("/externas/{integration_id}/mensagens/{message_id}", status_code=204)
+def excluir_mensagem_externa(
+    integration_id: int,
+    message_id: str,
+    db: Session = Depends(get_db),
+    conta: EmailAccount = Depends(current_email_account),
+):
+    integracao = _integracao_email(db, conta, integration_id)
+    try:
+        external_mail.delete_message(db, integracao, message_id)
+    except external_mail.ExternalMailError as exc:
+        raise _traduzir_erro_externo(exc) from exc
