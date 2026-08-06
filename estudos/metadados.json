@@ -9553,5 +9553,55 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "takemura-cetoacidose-euglicemica-perioperatoria-isglt2",
+    "title": "Fatores e estratégias preventivas de cetoacidose diabética euglicêmica perioperatória em usuários de inibidores de SGLT2",
+    "study_type": "estudo_de_coorte",
+    "authors": "Takemura M, Ikemura K, Okuda M",
+    "journal": "Journal of Pharmaceutical Health Care and Sciences",
+    "year": 2025,
+    "doi": "10.1186/s40780-025-00487-6",
+    "pmid": "40855351",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12376744/",
+    "summary": "Estudo de coorte retrospectivo unicêntrico (Japão, 2014-2023) com 1.169 pacientes diabéticos tipo 2 em uso de inibidor de SGLT2, submetidos a cirurgia sob anestesia geral.",
+    "key_findings": "Incidência de cetoacidose diabética euglicêmica (CAD-eu) perioperatória: 1,8% no total (21/1.169). Entre quem suspendeu o iSGLT2 por ≥3 dias antes da cirurgia: 0,2% (1/627); entre quem não suspendeu por ≥3 dias: 3,7% (20/542), p<0,001. Análise multivariada: suspensão ≥3 dias (OR 0,047, p=0,003) e infusão perioperatória de insulina+glicose (OR 0,054, p=0,005) foram fatores protetores independentes. Entre quem não suspendeu ≥3 dias, a infusão de insulina/glicose reduziu a incidência de 6,5% para 0,4%.",
+    "clinical_implications": "Primeiro estudo com número real de incidência associando diretamente o prazo de suspensão pré-operatória do iSGLT2 ao risco de cetoacidose euglicêmica — sustenta com dado quantitativo a recomendação de suspender a classe 3-4 dias antes de cirurgia eletiva, e identifica a infusão de insulina/glicose como estratégia de mitigação quando a suspensão adequada não foi possível.",
+    "limitations": "Estudo unicêntrico, retrospectivo, população japonesa — generalização a outras populações não testada. Baixo número absoluto de eventos (21) limita a precisão das estimativas de efeito.",
+    "theme": "Perioperatório",
+    "tags": [
+      "isglt2",
+      "cetoacidose euglicêmica",
+      "perioperatório",
+      "diabetes",
+      "coorte retrospectiva"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "hoogma-metanalise-eras-cirurgia-cardiaca",
+    "title": "Eficácia dos programas de recuperação acelerada (ERAS/fast-track) em cirurgia cardíaca: revisão sistemática e metanálise",
+    "study_type": "metanalise",
+    "authors": "Hoogma DF, Meeusen I, Coppens S, et al.",
+    "journal": "British Journal of Anaesthesia",
+    "year": 2025,
+    "doi": null,
+    "pmid": "40287362",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40287362/",
+    "summary": "Revisão sistemática e metanálise de 18 estudos, 2.625 pacientes, comparando programas de recuperação acelerada (ERP) e protocolos fast-track contra cuidado padrão em cirurgia cardíaca.",
+    "key_findings": "Tempo de internação hospitalar reduzido em 1,40 dia (IC95% -2,19 a -0,61; p=0,001). Tempo de UTI reduzido em 13,22 horas (IC95% -21,75 a -4,68; p=0,006). Tempo de ventilação mecânica reduzido em 4,68 horas (IC95% -7,85 a -1,52; p=0,008). Programas ERP completos (pré+intra+pós-operatório) reduziram a internação em 2,11 dias a mais que fast-track isolado (p=0,003).",
+    "clinical_implications": "Quantifica o benefício do pacote ERAS Cardíaco completo frente a estratégias restritas ao período intraoperatório — o ganho é maior quando as três fases (pré, intra e pós-operatória) são coordenadas, não apenas otimizando a fase intraoperatória.",
+    "limitations": "Abstract consultado não relatou desfechos de mortalidade ou complicação — apenas desfechos de tempo (internação, UTI, ventilação). Heterogeneidade esperada entre 18 estudos de diferentes protocolos ERAS.",
+    "theme": "Perioperatório",
+    "tags": [
+      "eras cardiac",
+      "recuperação acelerada",
+      "cirurgia cardíaca",
+      "metanálise",
+      "tempo de internação"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]

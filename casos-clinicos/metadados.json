@@ -11275,5 +11275,26 @@
       "van Dissel AC, Opotowsky AR, Burchill LJ, et al. End-stage heart failure in congenitally corrected transposition of the great arteries: a multicentre study. Eur Heart J. 2023;44(34):3278-3291. PMID: 37592821"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "isglt2-cirurgia-eletiva-quando-suspender",
+    "titulo": "Usuária de dapagliflozina antes de cirurgia eletiva: quando suspender?",
+    "tema": "Perioperatório",
+    "nivel": "básico",
+    "enunciado": "Mulher, 64 anos, diabetes tipo 2 e insuficiência cardíaca com fração de ejeção reduzida, em uso de dapagliflozina 10mg/dia. Está agendada para colecistectomia eletiva em 5 dias.",
+    "pergunta": "Qual a conduta correta em relação à dapagliflozina antes da cirurgia?",
+    "opcoes": [
+      "Manter a dapagliflozina até a véspera da cirurgia, sem necessidade de suspensão",
+      "Suspender a dapagliflozina pelo menos 3 dias antes da cirurgia eletiva, pelo risco de cetoacidose diabética euglicêmica perioperatória",
+      "Suspender a dapagliflozina apenas no dia da cirurgia",
+      "Trocar a dapagliflozina por insulina basal 24 horas antes, sem necessidade de suspender previamente"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Dapagliflozina, empagliflozina e canagliflozina devem ser suspensas pelo menos 3 dias antes de cirurgia eletiva (ertugliflozina, 4 dias), pelo risco de cetoacidose diabética euglicêmica perioperatória — quadro em que a glicemia capilar permanece normal ou pouco elevada, o que atrasa o reconhecimento clínico. Um estudo de coorte retrospectivo (Takemura et al., 2025) mostrou incidência de 0,2% de cetoacidose euglicêmica em quem suspendeu o iSGLT2 por ≥3 dias, contra 3,7% em quem não suspendeu nesse prazo (p<0,001) — suspensão ≥3 dias foi fator protetor independente (OR 0,047). Mesmo com a suspensão adequada, o risco não é zero, e vigilância clínica pós-operatória (náusea, dor abdominal, taquipneia) permanece indicada independentemente do valor da glicemia capilar.",
+    "source_refs": [
+      "Preoperative Cessation of SGLT2i. American College of Cardiology, 2022.",
+      "Takemura M, Ikemura K, Okuda M. Factors and preventive strategies for perioperative euglycemic diabetic ketoacidosis in patients with type 2 diabetes receiving sodium-glucose cotransporter 2 inhibitors: a retrospective study. J Pharm Health Care Sci. 2025;11:56. PMID: 40855351"
+    ],
+    "review_status": "revisado"
   }
 ]
