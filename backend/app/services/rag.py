@@ -31,6 +31,7 @@ from sqlalchemy.orm import Session
 from app.core.config import settings
 from app.models.content import Document
 from app.models.rag import AIConversation, AIMessage, DocumentChunk
+from app.services.ia.assistant_tools import ASSISTANT_TOOLS_SCHEMA, executar_tool_assistente
 from app.services.ia.provedor import obter_provedor, obter_provedor_embeddings
 
 log = logging.getLogger("meucardio.rag")
@@ -321,6 +322,37 @@ Encerre com: "Apoio à decisão — não substitui julgamento clínico, bula e d
 """
 
 
+# Anexado a PROMPT_SISTEMA somente quando as ferramentas de agenda/e-mail
+# estão habilitadas para esta pergunta (settings.ai_assistant_tools_enabled
+# E o médico consentiu) — ver `_ferramentas_para` mais abaixo. Sem isto
+# escrito explicitamente, o modelo tem o tool_use disponível na API mas não
+# sabe que deve usá-lo por conta própria (mesmo problema já resolvido aqui
+# antes para a web_search: a ferramenta ficava disponível e nunca era
+# chamada até o prompt autorizar de forma explícita).
+PROMPT_FERRAMENTAS = """
+
+Você também tem ferramentas que agem sobre a AGENDA e a caixa de E-MAIL \
+(CorvIA Mail) do próprio médico com quem você conversa agora — nunca de outra \
+pessoa. Use-as quando a pergunta pedir isso: ver compromissos, marcar/\
+reagendar/cancelar um compromisso, saber o próximo local de trabalho e o \
+trânsito até lá, ou ler algo da caixa de e-mail dele.
+
+Regras adicionais só para estas ferramentas:
+- Nunca chame uma ferramenta que CRIA, REAGENDA ou CANCELA compromisso sem o \
+médico ter pedido isso claramente nesta conversa — nunca por iniciativa própria.
+- Se os dados para criar/reagendar/cancelar estiverem ambíguos (data relativa \
+sem confirmação, qual compromisso entre vários), pergunte antes de agir; se \
+estiverem claros, execute e relate o resultado.
+- Se uma ferramenta devolver erro ou indisponibilidade, diga isso ao médico com \
+honestidade — nunca finja que a ação funcionou nem invente dado (distância, \
+trânsito, conteúdo de e-mail) que a ferramenta não devolveu.
+- Resuma e-mail longo em vez de citá-lo por inteiro; nunca peça nem repita \
+identificador de paciente que porventura apareça num e-mail.
+- Isto é ação administrativa, não conteúdo clínico: não use aqui os marcadores \
+[F#], [PM#] ou [W#].
+"""
+
+
 PROMPT_CASO = """Você é o assistente clínico da Corvia, ajudando um médico a conduzir um caso.
 
 Você recebeu os dados estruturados de um paciente internado. Sua tarefa é produzir uma análise
@@ -586,6 +618,20 @@ def _preparar_contexto(
     return contexto, fontes, artigos_pubmed, metricas
 
 
+def _ferramentas_para(db: Session, user) -> tuple[str, list[dict] | None, object]:
+    """Decide se esta pergunta ganha acesso às tools de agenda/e-mail.
+
+    As duas condições — flag de instalação e consentimento individual —
+    precisam estar de acordo; nenhuma delas sozinha libera. Sem `user` (ex.:
+    análise de caso do Round, que não passa usuário autenticado a este ponto),
+    nunca libera.
+    """
+    if not settings.ai_assistant_tools_enabled or user is None or getattr(user, "ia_ferramentas_consent_em", None) is None:
+        return "", None, None
+    executor = lambda nome, argumentos: executar_tool_assistente(nome, argumentos, db, user)  # noqa: E731
+    return PROMPT_FERRAMENTAS, ASSISTANT_TOOLS_SCHEMA, executor
+
+
 def perguntar(
     db: Session,
     pergunta: str,
@@ -593,18 +639,22 @@ def perguntar(
     temas: list[str] | None = None,
     modelo: str | None = None,
     usar_internet: bool = False,
+    user=None,
 ) -> dict:
     inicio = time.perf_counter()
     contexto, fontes, artigos_pubmed, metricas = _preparar_contexto(db, pergunta, temas)
+    prompt_extra, ferramentas, executor_ferramenta = _ferramentas_para(db, user)
 
     resposta = obter_provedor().responder(
-        PROMPT_SISTEMA,
+        PROMPT_SISTEMA + prompt_extra,
         [
             *limitar_historico(historico),
             {"role": "user", "content": f"CONTEXTO INSTITUCIONAL:\n{contexto}\n\nPERGUNTA:\n{pergunta}"},
         ],
         modelo=modelo,
         usar_internet=usar_internet,
+        ferramentas=ferramentas,
+        executor_ferramenta=executor_ferramenta,
     )
     log.info(
         "ai_request_completed model=%s internet=%s sources_ms=%s total_ms=%s chunks=%s pubmed=%s",
@@ -631,6 +681,7 @@ def perguntar_stream(
     temas: list[str] | None = None,
     modelo: str | None = None,
     usar_internet: bool = False,
+    user=None,
 ):
     """Mesma lógica de `perguntar`, mas em streaming — existe para manter a
     conexão HTTP viva em perguntas longas com busca na internet ligada, que
@@ -645,15 +696,18 @@ def perguntar_stream(
     yield {"status": "Consultando a base científica e o PubMed…"}
     contexto, fontes, artigos_pubmed, metricas = _preparar_contexto(db, pergunta, temas)
     yield {"status": "Fontes localizadas. Preparando a síntese clínica…"}
+    prompt_extra, ferramentas, executor_ferramenta = _ferramentas_para(db, user)
 
     gerador = obter_provedor().responder_stream(
-        PROMPT_SISTEMA,
+        PROMPT_SISTEMA + prompt_extra,
         [
             *limitar_historico(historico),
             {"role": "user", "content": f"CONTEXTO INSTITUCIONAL:\n{contexto}\n\nPERGUNTA:\n{pergunta}"},
         ],
         modelo=modelo,
         usar_internet=usar_internet,
+        ferramentas=ferramentas,
+        executor_ferramenta=executor_ferramenta,
     )
     primeiro_token_ms: int | None = None
     for evento in gerador:

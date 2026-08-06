@@ -1,5 +1,6 @@
 import json
 import logging
+from datetime import datetime, timezone
 
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import StreamingResponse
@@ -22,6 +23,13 @@ router = APIRouter(prefix="/api/ai", tags=["ia"])
 # para validar `modelo` e para popular o seletor no frontend.
 MODELOS_ANTHROPIC_PERMITIDOS = ["claude-opus-5", "claude-sonnet-5", "claude-haiku-4-5", "claude-fable-5"]
 
+# Versão do texto de consentimento para o assistente usar ferramentas de
+# agenda/e-mail — mesmo padrão de MOBILITY_CONSENT_VERSION em
+# agenda_integrada.py. Mudar o texto do consentimento (app/api/ai.py, tela
+# correspondente) exige subir esta versão; quem já aceitou a antiga volta a
+# ver o pedido de consentimento.
+FERRAMENTAS_CONSENT_VERSION = "assistente-ferramentas-v1-2026-08-06"
+
 
 class Pergunta(BaseModel):
     pergunta: str = Field(min_length=3, max_length=4000)
@@ -29,6 +37,10 @@ class Pergunta(BaseModel):
     temas: list[str] | None = None
     modelo: str | None = None
     usar_internet: bool = False
+
+
+class ConsentimentoFerramentas(BaseModel):
+    ativar: bool
 
 
 @router.get("/status")
@@ -43,6 +55,36 @@ def status(db: Session = Depends(get_db), user=Depends(current_user)):
         "usado_hoje": usado,
         "restante_hoje": max(settings.ai_daily_limit - usado, 0),
         "aviso": "Não envie identificadores de paciente. As respostas exigem validação clínica.",
+        # Duas condições independentes — as duas precisam ser verdadeiras
+        # para o assistente de fato usar as ferramentas nesta pergunta
+        # (ver app/services/rag.py::_ferramentas_para). O frontend usa isto
+        # para decidir se mostra o convite ao consentimento.
+        "ferramentas_disponiveis_instalacao": settings.ai_assistant_tools_enabled,
+        "ferramentas_consentidas": user.ia_ferramentas_consent_em is not None,
+    }
+
+
+@router.put("/ferramentas/consentimento")
+def consentimento_ferramentas(dados: ConsentimentoFerramentas, db: Session = Depends(get_db), user=Depends(current_user)):
+    """Liga/desliga o acesso do assistente às tools de agenda e CorvIA Mail
+    do próprio médico. Revogável a qualquer momento — desligar aqui vale
+    imediatamente na próxima pergunta, sem esperar a conversa atual acabar."""
+    if dados.ativar:
+        user.ia_ferramentas_consent_em = datetime.now(timezone.utc)
+        user.ia_ferramentas_consent_versao = FERRAMENTAS_CONSENT_VERSION
+    else:
+        user.ia_ferramentas_consent_em = None
+        user.ia_ferramentas_consent_versao = None
+    db.add(AuditLog(
+        user_id=user.id,
+        action="ia_ferramentas_consent_concedido" if dados.ativar else "ia_ferramentas_consent_revogado",
+        entity="user", entity_id=str(user.id),
+        detail={"versao": FERRAMENTAS_CONSENT_VERSION},
+    ))
+    db.commit()
+    return {
+        "ferramentas_consentidas": user.ia_ferramentas_consent_em is not None,
+        "consent_em": user.ia_ferramentas_consent_em,
     }
 
 
@@ -158,7 +200,7 @@ def perguntar(dados: Pergunta, db: Session = Depends(get_db), user=Depends(curre
     try:
         r = rag.perguntar(
             db, dados.pergunta, historico, dados.temas,
-            modelo=modelo_efetivo, usar_internet=dados.usar_internet,
+            modelo=modelo_efetivo, usar_internet=dados.usar_internet, user=user,
         )
     except NotImplementedError as e:
         raise HTTPException(status_code=501, detail=str(e))
@@ -225,13 +267,19 @@ def perguntar_stream(dados: Pergunta, db: Session = Depends(get_db), user=Depend
         # simples (conv_id, user_id) atravessam a fronteira, nunca os
         # objetos ORM.
         from app.core.db import SessionLocal
+        from app.models.user import User
 
         db2 = SessionLocal()
         texto_acumulado = []
         try:
+            # Mesmo motivo do comentário acima (DetachedInstanceError): o
+            # `user` ORM injetado pelo Depends não atravessa para dentro
+            # deste generator — busca-se de novo, na sessão própria, só o
+            # necessário para as tools (id e consentimento).
+            user2 = db2.get(User, user_id)
             for evento in rag.perguntar_stream(
                 db2, dados.pergunta, historico, dados.temas,
-                modelo=modelo_efetivo, usar_internet=dados.usar_internet,
+                modelo=modelo_efetivo, usar_internet=dados.usar_internet, user=user2,
             ):
                 if "status" in evento:
                     yield f"data: {json.dumps({'tipo': 'status', 'etapa': evento['status']}, ensure_ascii=False)}\n\n"

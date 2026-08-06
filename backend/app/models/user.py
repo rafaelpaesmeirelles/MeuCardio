@@ -70,6 +70,15 @@ class User(Base):
     )
     assinatura_metodo_preferido: Mapped[str | None] = mapped_column(String(20), nullable=True)
 
+    # Consentimento específico para o assistente de IA acionar ferramentas
+    # (agenda e CorvIA Mail do próprio médico) em vez de só responder texto.
+    # Presença de `ia_ferramentas_consent_em` = consentiu; ausência = nunca
+    # consentiu ou revogou. Mesmo padrão de MobilityPreference (versão +
+    # timestamp), porque também é consentimento sobre ação automatizada
+    # sobre dado real, não preferência de exibição.
+    ia_ferramentas_consent_em: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    ia_ferramentas_consent_versao: Mapped[str | None] = mapped_column(String(40), nullable=True)
+
 
 @event.listens_for(User.password_hash, "set")
 def _revogar_sessoes_ao_trocar_senha(target, value, oldvalue, initiator) -> None:

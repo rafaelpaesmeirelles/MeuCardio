@@ -92,6 +92,12 @@ class Settings(BaseSettings):
     ai_max_output_tokens: int = 4096
     ai_top_k: int = 8
     ai_max_context_chars: int = 24000
+    # Desligada por padrão: dá ao assistente acesso a ferramentas que agem
+    # sobre dados reais do médico (agenda, e-mail, deslocamento), não só
+    # texto. Precisa estar ligada no servidor E o médico ter consentido
+    # individualmente (users.ia_ferramentas_consent_em) — as duas condições,
+    # não uma ou outra. Ver app/services/ia/assistant_tools.py.
+    ai_assistant_tools_enabled: bool = False
 
     openai_api_key: str = ""
     # Confirme o identificador exato do modelo no painel da OpenAI antes do piloto.
