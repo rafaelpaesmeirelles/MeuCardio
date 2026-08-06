@@ -136,6 +136,18 @@ export const api = {
     return request<T>(p, { method: "POST", body: form });
   },
 
+  // Vários arquivos num só multipart — usado pelo KYC (Trabalho 11/12), que
+  // recebe até 6 campos de arquivo numa submissão só. `arquivos` com valor
+  // `undefined`/`null` é simplesmente omitido (campo opcional do formulário
+  // do backend, ex.: documento pessoal como PDF em vez de par de fotos).
+  uploadMultiplo: <T>(p: string, arquivos: Record<string, File | null | undefined>) => {
+    const form = new FormData();
+    for (const [campo, arquivo] of Object.entries(arquivos)) {
+      if (arquivo) form.append(campo, arquivo);
+    }
+    return request<T>(p, { method: "POST", body: form });
+  },
+
   async blob(p: string, init: RequestInit = {}): Promise<Blob> {
     const headers = new Headers(init.headers);
     if (init.body && !(init.body instanceof FormData) && !headers.has("Content-Type")) {
@@ -272,4 +284,5 @@ export type Usuario = {
   profile_completion_required: boolean;
   boas_vindas_pendente: boolean;
   assinatura_metodo_preferido: string | null;
+  kyc_required: boolean;
 };

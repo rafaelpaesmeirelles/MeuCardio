@@ -58,7 +58,31 @@ def _cpf_mascarado(cpf: str | None) -> str | None:
     return f"***.***.{digitos[6:9]}-{digitos[9:]}"
 
 
-def _perfil(user: User) -> dict:
+def _kyc_required(db: Session, user: User) -> bool:
+    """Gate de KYC obrigatório (Trabalho 12, 06/08/2026) — só se aplica a
+    quem já paga a assinatura principal (`kind='meucardio'`, status em
+    `ACESSO_LIBERADO`). Calculado toda vez, nunca persistido: diferente de
+    `profile_completion_required`, o KYC pode mudar por ação de OUTRA
+    pessoa (o Rafael aprovando pela fila do admin), então um valor
+    guardado ficaria velho até o próximo `PATCH /me` do próprio médico."""
+    from app.core.security import ACESSO_LIBERADO
+    from app.models.subscription import Subscription
+    from app.services.kyc import verificacao as kyc_verificacao
+
+    if user.role == "admin":
+        return False
+    sub = (
+        db.query(Subscription)
+        .filter(Subscription.user_id == user.id, Subscription.kind == "meucardio")
+        .order_by(Subscription.id)
+        .first()
+    )
+    if sub is None or sub.status not in ACESSO_LIBERADO:
+        return False
+    return not kyc_verificacao.liberado_para_uso(kyc_verificacao.obter(db, user))
+
+
+def _perfil(db: Session, user: User) -> dict:
     return {
         "id": user.id, "email": user.email, "full_name": user.full_name,
         "role": user.role, "specialty": user.specialty,
@@ -85,12 +109,13 @@ def _perfil(user: User) -> dict:
         **profile_payload(user),
         "boas_vindas_pendente": user.boas_vindas_pendente,
         "assinatura_metodo_preferido": user.assinatura_metodo_preferido,
+        "kyc_required": _kyc_required(db, user),
     }
 
 
 @router.get("/me")
-def me(user: User = Depends(current_user)):
-    return _perfil(user)
+def me(db: Session = Depends(get_db), user: User = Depends(current_user)):
+    return _perfil(db, user)
 
 
 class DadosPessoais(BaseModel):
@@ -249,7 +274,7 @@ def atualizar_me(dados: DadosPessoais, background_tasks: BackgroundTasks,
     db.refresh(user)
     if mudancas:
         background_tasks.add_task(emails.enviar_alteracao_cadastro, user.id, mudancas)
-    return _perfil(user)
+    return _perfil(db, user)
 
 
 @router.post("/me/boas-vindas-vista")
@@ -272,7 +297,7 @@ def atualizar_preferencia_assinatura(dados: PreferenciaAssinatura, db: Session =
     user.assinatura_metodo_preferido = dados.metodo
     db.commit()
     db.refresh(user)
-    return _perfil(user)
+    return _perfil(db, user)
 
 
 TAMANHO_MAXIMO = 3 * 1024 * 1024
@@ -344,7 +369,7 @@ def _publicar_imagem_perfil(
     # O arquivo anterior só é apagado depois da nova imagem e do banco estarem
     # confirmados. Assim uma falha no meio da troca nunca deixa o perfil vazio.
     _remover_arquivos_antigos(diretorio, user.id, preservar=arquivo_novo)
-    return _perfil(user)
+    return _perfil(db, user)
 
 
 @router.post("/me/foto")
@@ -373,7 +398,7 @@ def remover_foto(db: Session = Depends(get_db), user: User = Depends(current_use
     db.commit()
     db.refresh(user)
     _remover_arquivos_antigos(destino, user.id)
-    return _perfil(user)
+    return _perfil(db, user)
 
 
 @router.post("/me/logo")
@@ -402,7 +427,7 @@ def remover_logo(db: Session = Depends(get_db), user: User = Depends(current_use
     db.commit()
     db.refresh(user)
     _remover_arquivos_antigos(destino, user.id)
-    return _perfil(user)
+    return _perfil(db, user)
 
 
 class TrocaDeSenha(BaseModel):

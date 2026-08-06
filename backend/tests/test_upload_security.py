@@ -239,6 +239,16 @@ def test_inventario_de_rotas_upload_exige_politica_central():
         "email.py",
         "partner_courses.py",
         "service_orders.py",
+        # Trabalho 7 (assinatura.py, certificado A1) e Trabalho 11 (kyc.py,
+        # documento/selfie) — os dois já fazem leitura limitada por tamanho
+        # (`await arquivo.read(LIMITE + 1)`) e validação de conteúdo real
+        # (PKCS#12 genuíno via `certificado_a1.analisar()`; imagem/PDF real
+        # via `core.uploads.validate_file()`), só que fora do registro
+        # `policy_for()` — esse registro é para o subconjunto de rotas que
+        # também precisam do corte de tamanho na camada ASGI, antes do
+        # FastAPI montar o multipart; nenhum dos dois exige isso.
+        "assinatura.py",
+        "kyc.py",
     }
 
     assert policy_for("POST", "/api/auth/me/foto") is not None

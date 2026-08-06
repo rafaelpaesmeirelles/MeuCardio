@@ -58,6 +58,7 @@ const GuiaDoenca = lazy(() => import("./pages/GuiaDoenca"));
 const TriagemSintomas = lazy(() => import("./pages/TriagemSintomas"));
 const PoliticaPrivacidade = lazy(() => import("./pages/PoliticaPrivacidade"));
 const TermosUso = lazy(() => import("./pages/TermosUso"));
+const VerificacaoIdentidade = lazy(() => import("./pages/VerificacaoIdentidade"));
 
 function RotasSuspensas({ children }: { children: ReactNode }) {
   return (
@@ -93,6 +94,15 @@ export default function App() {
 
   if (usuario.profile_completion_required && location.pathname !== "/minha-conta") {
     return <Navigate to="/minha-conta" replace />;
+  }
+
+  // KYC obrigatório pós-pagamento (Trabalho 11/12, 06/08/2026) — só passa
+  // daqui quem já teve o cadastro liberado (checagem automática do
+  // conselho, ou já aprovado pelo Rafael). Vem DEPOIS do gate de perfil
+  // acima de propósito: sem profissão/conselho preenchidos, o KYC nem
+  // teria o que checar.
+  if (usuario.kyc_required && location.pathname !== "/verificacao-identidade") {
+    return <Navigate to="/verificacao-identidade" replace />;
   }
 
   return (
@@ -141,6 +151,7 @@ export default function App() {
           <Route path="receituario" element={<Receituario />} />
           <Route path="assinatura" element={<Assinatura />} />
           <Route path="minha-conta" element={<MinhaConta />} />
+          <Route path="verificacao-identidade" element={<VerificacaoIdentidade />} />
           <Route path="telediagnostico" element={<Telediagnostico />} />
           <Route path="caixa-de-email" element={<CaixaDeEmail />} />
           <Route path="corvia-mail" element={<CorviaMail />} />
