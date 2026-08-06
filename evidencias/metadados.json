@@ -32185,5 +32185,170 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "transtorno-mental-exige-atencao-intensificada-para-adesao-ao-tratamento-cv",
+    "statement": "Pacientes com transtornos mentais precisam de atenção e suporte intensificados para melhorar a adesão a mudanças de estilo de vida e ao tratamento medicamentoso cardiovascular.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice",
+    "reference": "Visseren FLJ et al. Eur Heart J. 2021;42(34):3227-3337. PMID 34458905. DOI 10.1093/eurheartj/ehab484 — Seção 4.4 (Mental healthcare and psychosocial interventions), tabela de recomendações.",
+    "theme": "Saúde mental e cardiologia",
+    "tags": [
+      "transtorno mental",
+      "adesão ao tratamento",
+      "prevenção cardiovascular"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cuidado-de-saude-mental-baseado-em-evidencia-e-cooperacao-interdisciplinar-na-dcva",
+    "statement": "Em pacientes com doença cardiovascular aterosclerótica (DCVA) e transtorno mental, cuidado de saúde mental baseado em evidência e cooperação interdisciplinar entre cardiologia e saúde mental são recomendados.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice",
+    "reference": "Visseren FLJ et al. Eur Heart J. 2021;42(34):3227-3337. PMID 34458905. DOI 10.1093/eurheartj/ehab484 — Seção 4.4 (Mental healthcare and psychosocial interventions), tabela de recomendações.",
+    "theme": "Saúde mental e cardiologia",
+    "tags": [
+      "transtorno mental",
+      "cooperação interdisciplinar",
+      "doença cardiovascular aterosclerótica"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "encaminhamento-para-manejo-de-estresse-psicoterapeutico-na-dcva",
+    "statement": "Pacientes com doença cardiovascular aterosclerótica (DCVA) e estresse devem ser considerados para encaminhamento a manejo de estresse psicoterapêutico, para melhorar desfechos cardiovasculares e reduzir sintomas de estresse.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice",
+    "reference": "Visseren FLJ et al. Eur Heart J. 2021;42(34):3227-3337. PMID 34458905. DOI 10.1093/eurheartj/ehab484 — Seção 4.4, referenciando o ensaio SUPRIM (redução de 41% no desfecho composto de eventos fatais/não fatais de DCVA recorrente, HR 0,59) e um ECR de reabilitação cardíaca reforçada por manejo de estresse (HR 0,49 para eventos de DCVA vs. reabilitação padrão).",
+    "theme": "Saúde mental e cardiologia",
+    "tags": [
+      "manejo de estresse",
+      "psicoterapia",
+      "doença cardiovascular aterosclerótica",
+      "suprim"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cessacao-do-tabagismo-e-causalmente-independente-para-dcva-esc-2021",
+    "statement": "Todo tabagismo deve ser cessado, já que o uso de tabaco é causa forte e independente de doença cardiovascular aterosclerótica (DCVA).",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice",
+    "reference": "Visseren FLJ et al. Eur Heart J. 2021;42(34):3227-3337. PMID 34458905. DOI 10.1093/eurheartj/ehab484 — Seção 4.5 (Smoking intervention), tabela de recomendações.",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "tabagismo",
+      "cessação",
+      "prevenção primária"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "suporte-de-seguimento-reposicao-de-nicotina-vareniclina-e-bupropiona-na-cessacao-esc-2021",
+    "statement": "Em fumantes, oferecer suporte de seguimento, terapia de reposição de nicotina, vareniclina e bupropiona — individualmente ou em combinação — deve ser considerado para apoiar a cessação do tabagismo.",
+    "recommendation_class": "IIa",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice",
+    "reference": "Visseren FLJ et al. Eur Heart J. 2021;42(34):3227-3337. PMID 34458905. DOI 10.1093/eurheartj/ehab484 — Seção 4.5 (Smoking intervention), tabela de recomendações.",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "tabagismo",
+      "reposição de nicotina",
+      "vareniclina",
+      "bupropiona"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cessacao-do-tabagismo-recomendada-independente-de-ganho-de-peso-esc-2021",
+    "statement": "A cessação do tabagismo é recomendada independentemente do ganho de peso associado, já que o ganho de peso não reduz os benefícios da cessação sobre a doença cardiovascular aterosclerótica (DCVA).",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice",
+    "reference": "Visseren FLJ et al. Eur Heart J. 2021;42(34):3227-3337. PMID 34458905. DOI 10.1093/eurheartj/ehab484 — Seção 4.5 (Smoking intervention), tabela de recomendações.",
+    "theme": "Prevenção e lipídios",
+    "tags": [
+      "tabagismo",
+      "cessação",
+      "ganho de peso"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "participacao-em-reabilitacao-cardiaca-estruturada-multidisciplinar-esc-2021",
+    "statement": "Participação em programa de reabilitação cardíaca baseada em exercício (EBCR), estruturado, multidisciplinar e supervisionado por profissional de saúde, é recomendada após eventos de doença cardiovascular aterosclerótica e/ou revascularização, e em pacientes com insuficiência cardíaca (principalmente ICFEr), para melhorar os desfechos do paciente.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice",
+    "reference": "Visseren FLJ et al. Eur Heart J. 2021;42(34):3227-3337. PMID 34458905. DOI 10.1093/eurheartj/ehab484 — Seção 4.11 (Cardiac rehabilitation and prevention programmes), tabela de recomendações.",
+    "theme": "Geral",
+    "tags": [
+      "reabilitação cardíaca",
+      "programa multidisciplinar",
+      "prevenção secundária"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "metodos-para-aumentar-encaminhamento-e-adesao-a-reabilitacao-cardiaca-esc-2021",
+    "statement": "Métodos para aumentar o encaminhamento e a adesão à reabilitação cardíaca devem ser considerados — por exemplo, lembretes eletrônicos ou encaminhamento automático, visitas de encaminhamento e ligação, seguimento estruturado por enfermeiros ou outros profissionais de saúde, e início precoce do programa após a alta hospitalar.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice",
+    "reference": "Visseren FLJ et al. Eur Heart J. 2021;42(34):3227-3337. PMID 34458905. DOI 10.1093/eurheartj/ehab484 — Seção 4.11 (Cardiac rehabilitation and prevention programmes), tabela de recomendações.",
+    "theme": "Geral",
+    "tags": [
+      "reabilitação cardíaca",
+      "adesão",
+      "encaminhamento"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "reabilitacao-cardiaca-domiciliar-telessaude-e-mhealth-esc-2021",
+    "statement": "Reabilitação cardíaca domiciliar, telessaúde e intervenções por dispositivo móvel (mHealth) podem ser consideradas para aumentar a participação do paciente e a adesão de longo prazo a comportamentos saudáveis.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice",
+    "reference": "Visseren FLJ et al. Eur Heart J. 2021;42(34):3227-3337. PMID 34458905. DOI 10.1093/eurheartj/ehab484 — Seção 4.11 (Cardiac rehabilitation and prevention programmes), tabela de recomendações.",
+    "theme": "Geral",
+    "tags": [
+      "reabilitação cardíaca",
+      "telessaúde",
+      "mhealth",
+      "reabilitação domiciliar"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
