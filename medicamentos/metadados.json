@@ -6094,5 +6094,479 @@
       "Diferencial farmacológico dentro da classe III": "Ao contrário de sotalol e amiodarona, a ibutilida prolonga a repolarização por ativação de uma corrente lenta de entrada, predominantemente de sódio — mecanismo distinto dentro do mesmo efeito eletrofisiológico classe III.",
       "Uso exclusivo hospitalar/intravenoso": "Não existe apresentação oral. O uso é restrito a ambiente com monitorização eletrocardiográfica contínua e recursos imediatos de cardioversão/desfibrilação, dado o risco de torsades de pointes."
     }
+  },
+  {
+    "slug": "lidocaina-cloridrato",
+    "review_status": "revisado",
+    "generic_name": "Lidocaína (cloridrato de lidocaína, sem vasoconstritor, uso intravenoso)",
+    "drug_class": "Antiarrítmico classe IB (classificação de Vaughan-Williams) — anestésico local do tipo amida usado por via sistêmica",
+    "mechanism": "Estabiliza a membrana neuronal e miocárdica por inibição dos fluxos iônicos de sódio necessários para o início e a condução dos impulsos elétricos — efetua, assim, tanto a ação anestésica local quanto a ação antiarrítmica. No miocárdio isquêmico/despolarizado, a lidocaína encurta a duração do potencial de ação e o período refratário efetivo do tecido de Purkinje e ventricular, com afinidade preferencial pelo canal de sódio no estado inativado — por isso seu efeito é mais pronunciado em tecido isquêmico ou digitálico-intoxicado que em miocárdio sadio. Fonte: bula profissional brasileira do Xylestesin® Isobárico (Cristália).",
+    "indications": [
+      "Controle de arritmias ventriculares agudas por via intravenosa ou intramuscular — texto da bula brasileira: 'especialmente indicado no controle das arritmias ventriculares agudas como aquelas que ocorrem relacionadas ao infarto agudo do miocárdio ou durante a manipulação cardíaca, em cirurgias cardíacas'.",
+      "Alternativa antiarrítmica à amiodarona em parada cardiorrespiratória por fibrilação ventricular/taquicardia ventricular sem pulso refratária à desfibrilação, dentro do algoritmo de suporte avançado de vida — papel de segunda linha, sem benefício demonstrado de sobrevida com bom desfecho neurológico sobre placebo no ensaio ALPS (ver Evidência pivotal)."
+    ],
+    "dosing": {
+      "apresentacao e vias": "Solução injetável de **20 mg/mL** (cloridrato de lidocaína), sem vasoconstritor e sem conservantes — ampola/frasco para uso intravenoso (bolus ou infusão contínua) ou intramuscular. Não confundir com as formulações COM vasoconstritor usadas em anestesia local/odontologia, de uso e apresentação distintos.",
+      "arritmia ventricular aguda — injecao intravenosa direta": "**1 a 1,5 mg/kg em bolus**, podendo repetir a intervalos de 8-10 minutos até **dose máxima cumulativa de 3 mg/kg**.",
+      "arritmia ventricular aguda — infusao intravenosa continua": "Após o bolus, infusão contínua com velocidade inicial de **1 a 4 mg/min (0,014 a 0,050 mg/kg/min)**. Ajustar assim que o ritmo cardíaco estabilizar ou ao menor sinal de toxicidade; raramente é necessário manter a infusão por período prolongado. Solução de manutenção típica: 1 g (ou 2 g) de cloridrato de lidocaína por litro de glicose 5%, resultando em ~1 mg/mL (ou 2 mg/mL).",
+      "via intramuscular": "**4,0 mg/kg**, preferencialmente no músculo deltoide (pico sanguíneo mais rápido e mais alto que coxa/glúteo). Aspiração frequente durante a injeção para evitar administração intravascular inadvertida. Trocar por via intravenosa assim que possível; se necessária nova dose IM, aguardar intervalo de 60-90 minutos.",
+      "populacoes especiais": "Idosos, debilitados e pacientes graves: **doses reduzidas** conforme o estado clínico — maior sensibilidade e maior risco de efeito adverso. Insuficiência hepática e renal: usar com cautela pelo risco de acúmulo do fármaco/metabólitos.",
+      "fonte": "Bula profissional brasileira do Xylestesin® Isobárico (cloridrato de lidocaína 20 mg/mL sem vasoconstritor, uso IV/IM), Cristália Produtos Químicos Farmacêuticos Ltda., seção 8 (Posologia e modo de usar)."
+    },
+    "outcomes": {
+      "Evidencia pivotal — ALPS": "- **desenho**: ensaio randomizado, duplo-cego, controlado por placebo, comparando amiodarona, lidocaína e placebo em parada cardiorrespiratória extra-hospitalar por FV/TV sem pulso refratária a pelo menos um choque - **resultado**: sem diferença significativa de sobrevida até a alta hospitalar entre os três braços (24,4% amiodarona, 23,7% lidocaína, 21,0% placebo) nem de desfecho neurológico favorável; em subgrupo de parada testemunhada por circunstante, tanto amiodarona quanto lidocaína se associaram a maior sobrevida que placebo (achado de subgrupo, não do desfecho primário) - **fonte**: N Engl J Med 2016;374(18):1711-1722, PMID 27043165 (Kudenchuk PJ et al.)."
+    },
+    "references": [
+      "Kudenchuk PJ, Brown SP, Daya M, et al. Amiodarone, Lidocaine, or Placebo in Out-of-Hospital Cardiac Arrest. N Engl J Med. 2016;374(18):1711-1722. PMID 27043165.",
+      "Bula profissional brasileira do Xylestesin® Isobárico (cloridrato de lidocaína, solução injetável 20 mg/mL, sem vasoconstritor), Cristália Produtos Químicos Farmacêuticos Ltda. — seções 1 (Indicações), 4 (Contraindicações), 5 (Advertências e Precauções — Gravidez/Amamentação/Idosos), 8 (Posologia) e 9 (Reações adversas). Registro ANVISA 1.0298.0365.",
+      "Harrison DC, Sprouse JH, Morrow AG. The antiarrhythmic properties of lidocaine and procaine amide. Circulation. 1963;28:486-491 (citado na bula, seção 2 — Resultados de eficácia)."
+    ],
+    "pregnancy": "**Categoria de risco B.** Estudos de reprodução em ratos, com doses até 6,6 vezes a dose humana, não revelaram evidência de dano fetal — mas não há estudos adequados e controlados em gestantes. A bula orienta usar na gravidez **somente se claramente necessário**, e não usar sem orientação médica. A lidocaína atravessa rapidamente a barreira placentária; os efeitos ao binômio mãe-feto quando usada para arritmia cardíaca durante trabalho de parto/parto **não são conhecidos**. Fonte: bula profissional brasileira do Xylestesin® Isobárico (Cristália), seção 5 — Gravidez/Trabalho de Parto e Parto.",
+    "lactation": "**Não se sabe se a lidocaína é excretada no leite materno.** Como muitos fármacos são excretados no leite, a bula recomenda precaução e uso criterioso durante a amamentação ou doação de leite humano, com avaliação e acompanhamento médico. Fonte: bula profissional brasileira do Xylestesin® Isobárico (Cristália), seção 5 — Amamentação.",
+    "contraindications": [
+      "Hipersensibilidade conhecida a anestésicos locais do tipo amida ou a qualquer componente da fórmula",
+      "Síndrome de Stokes-Adams",
+      "Síndrome de Wolff-Parkinson-White",
+      "Graus severos de bloqueio sinoatrial, atrioventricular ou intraventricular na ausência de marca-passo artificial"
+    ],
+    "notes": {
+      "Monitorizacao obrigatoria": "Monitoramento eletrocardiográfico constante é essencial durante a administração. Disfunção do nódulo sinusal, prolongamento de PR/QRS ou surgimento/agravamento de arritmia exigem ajuste do fluxo e, se necessário, interrupção da infusão.",
+      "Uso cauteloso — nao contraindicacao formal": "Hipovolemia, insuficiência cardíaca congestiva grave, choque e todas as formas de bloqueio cardíaco. Em bradicardia sinusal ou bloqueio cardíaco incompleto, administrar IV sem aceleração prévia da frequência cardíaca (por exemplo, atropina, isoproterenol ou marca-passo) pode precipitar arritmia grave ou bloqueio cardíaco completo.",
+      "Toxicidade do sistema nervoso central": "Sinais precoces incluem sedação ou irritabilidade, podendo progredir a convulsões com depressão e/ou parada respiratória. Diazepam 0,1 mg/kg IV ou barbitúrico de ação ultracurta são as opções citadas na bula para convulsão persistente apesar de suporte ventilatório com oxigênio.",
+      "Interacoes relevantes": "Uso cauteloso em intoxicação digitálica com bloqueio atrioventricular. Betabloqueadores (propranolol, metoprolol, nadolol) e cimetidina reduzem o clearance hepático da lidocaína, elevando seus níveis séricos — o pindolol não teve esse efeito nos estudos citados pela bula. A tocainida, farmacodinamicamente similar, pode somar toxicidade em sistema nervoso central.",
+      "Flutter/fibrilacao atrial": "Aceleração da resposta ventricular pode ocorrer ocasionalmente quando o medicamento é administrado nesses ritmos.",
+      "Doacao de sangue": "Contraindicada durante o tratamento com lidocaína, pelo risco ao receptor."
+    }
+  },
+  {
+    "slug": "andexaneta-alfa",
+    "review_status": "revisado",
+    "generic_name": "Andexaneta alfa (alfa-andexanete)",
+    "drug_class": "Agente reversor específico de anticoagulante — proteína recombinante modificada e inativada do fator Xa (fator Xa \"chamariz\")",
+    "mechanism": "Proteína recombinante análoga ao fator Xa humano, modificada para eliminar sua atividade catalítica e sua capacidade de se incorporar ao complexo protrombinase — funciona como \"chamariz\" (decoy), sequestrando os inibidores diretos e indiretos do fator Xa com alta afinidade e restaurando a atividade do fator Xa endógeno. Restaura a geração de trombina de forma dependente da dose e do esquema de administração. Fonte: EMA, Ondexxya — Summary of Product Characteristics, seção 5.1.",
+    "indications": [
+      "Pacientes tratados com inibidores do fator Xa (apixabana ou rivaroxabana) quando a reversão da anticoagulação for necessária em razão de sangramento com risco à vida ou não controlado — indicação aprovada pela ANVISA (registro publicado em 04/09/2023, laboratório AstraZeneca do Brasil)."
+    ],
+    "dosing": {
+      "apresentacao": "Pó liofilizado para solução para infusão, frasco-ampola de 200 mg, reconstituído antes do uso.",
+      "esquema geral — bolus mais infusao": "Bolus intravenoso a uma velocidade-alvo de aproximadamente **30 mg/min**, por **15 minutos (dose baixa)** ou **30 minutos (dose alta)**, seguido imediatamente de infusão contínua de **4 mg/min (dose baixa)** ou **8 mg/min (dose alta)** por **120 minutos**.",
+      "dose baixa": "Bolus de **400 mg**, seguido de infusão de **4 mg/min por 120 minutos (480 mg)** — total de 400 + 480 mg.",
+      "dose alta": "Bolus de **800 mg**, seguido de infusão de **8 mg/min por 120 minutos (960 mg)** — total de 800 + 960 mg.",
+      "escolha da dose — apixabana": "Última dose **≤ 5 mg** (qualquer intervalo) ou última dose **> 5 mg há ≥ 8 horas ou desconhecida**: **dose baixa**. Última dose **> 5 mg há < 8 horas ou desconhecida**: **dose alta**.",
+      "escolha da dose — rivaroxabana": "Última dose **≤ 10 mg** (qualquer intervalo) ou última dose **> 10 mg há ≥ 8 horas ou desconhecida**: **dose baixa**. Última dose **> 10 mg há < 8 horas ou desconhecida**: **dose alta**.",
+      "quando a dose nao pode ser recomendada": "Se a dose do último anticoagulante ou o intervalo entre a última tomada e o episódio de sangramento forem desconhecidos, **não há recomendação de dose disponível** — a bula orienta administrar o esquema de dose alta nesse cenário de incerteza.",
+      "populacoes especiais": "**Idosos (≥ 65 anos): sem necessidade de ajuste.** Insuficiência hepática: sem ajuste recomendado, com base nos dados existentes de depuração. Insuficiência renal grave/diálise: dados não avaliados de forma completa.",
+      "fonte": "EMA, Ondexxya (andexanet alfa) — Summary of Product Characteristics, seção 4.2 (Posology and method of administration), Tabelas 1-3. Mesma apresentação registrada no Brasil pela ANVISA (Ondexxya, AstraZeneca do Brasil, alfa-andexanete)."
+    },
+    "outcomes": {
+      "Evidencia pivotal — ANNEXA-4": "- **desenho**: estudo de coorte prospectivo, multicêntrico, aberto, de braço único (fase IIIb/IV), em pacientes com sangramento agudo maior dentro de 18 horas da última dose de um inibidor do fator Xa (apixabana, rivaroxabana ou, em menor número, edoxabana/enoxaparina) - **resultado**: em 352 pacientes avaliáveis para eficácia, **82% tiveram hemostasia excelente ou boa em 12 horas**, com redução acentuada da atividade anti-fator Xa; **9,7% apresentaram evento trombótico em 30 dias** (14 AVC isquêmicos, 13 tromboses venosas profundas, 7 IAM, 5 embolias pulmonares, 1 AIT) - **limitação declarada**: sem grupo controle, o que impede atribuir causalidade ao efeito sobre desfecho clínico - **fonte**: N Engl J Med. 2019;380(14):1326-1335. PMID 30730782 (Connolly SJ et al.).",
+      "Estudos de reversao em voluntarios sadios — 14-503/14-504": "- **desenho**: ensaios randomizados, controlados por placebo, em voluntários sadios em uso de apixabana 5 mg 2x/dia ou rivaroxabana 20 mg/dia - **resultado**: redução da atividade anti-fator Xa de **-92,3%** (apixabana) e **-96,7%** (rivaroxabana) com andexaneta alfa, contra -32,7% e -44,8% com placebo (p<0,0001 nos dois) - **fonte**: EMA, Ondexxya SmPC, seção 5.1."
+    },
+    "references": [
+      "Connolly SJ, Milling TJ Jr, Eikelboom JW, et al. Full Study Report of Andexanet Alfa for Bleeding Associated with Factor Xa Inhibitors. N Engl J Med. 2019;380(14):1326-1335. PMID 30730782. DOI 10.1056/NEJMoa1814051.",
+      "European Medicines Agency. Ondexxya (andexanet alfa) — Summary of Product Characteristics (Annex I), seções 4.2, 4.3, 4.4, 4.6, 5.1.",
+      "ANVISA. Ondexxya (alfa-andexanete) — novo registro. Publicação DOU 04/09/2023. Detentor: AstraZeneca do Brasil Ltda."
+    ],
+    "pregnancy": "**Sem dados de uso em gestantes.** Estudos em animais são insuficientes para avaliar toxicidade reprodutiva. Andexaneta alfa **não é recomendada durante a gravidez nem em mulheres com potencial reprodutivo que não usem contracepção**, exceto se o benefício clínico superar o risco. Fonte: EMA, Ondexxya SmPC, seção 4.6.",
+    "lactation": "Sem dados publicados sobre excreção no leite materno na fonte consultada — **VERIFICAÇÃO HUMANA NECESSÁRIA** para a orientação específica de amamentação; decisão deve ponderar o caráter agudo e potencialmente salvador da indicação (sangramento com risco à vida) contra o desconhecimento do perfil de excreção.",
+    "contraindications": [
+      "Hipersensibilidade à substância ativa ou a qualquer excipiente",
+      "Reação alérgica conhecida a proteínas de hamster"
+    ],
+    "notes": {
+      "Limitacoes de uso, declaradas na bula": "Benefício clínico em termos de redução de morbimortalidade **não foi demonstrado** — a eficácia se baseia na reversão da atividade anti-fator Xa e na hemostasia em pacientes sangrando. **Não é adequada para pré-tratamento de cirurgia urgente.** Uso para reversão de edoxabana ou enoxaparina **não é recomendado por falta de dados**. Não reverte efeito de anticoagulantes que não sejam inibidores do fator Xa (ex.: varfarina, dabigatrana).",
+      "Monitorizacao": "Deve ser baseada principalmente em parâmetros clínicos (hemostasia alcançada, ressangramento, eventos adversos/trombóticos) — **não usar ensaios comerciais de atividade anti-fator Xa** para monitorizar o efeito, pois superestimam artificialmente a atividade residual e subestimam a reversão.",
+      "Risco tromboembolico": "Eventos trombóticos arteriais e venosos graves foram relatados após o tratamento — mecanismo de reação é a própria pró-coagulação induzida pelo fármaco em paciente já predisposto (pela doença de base que motivou a anticoagulação). Risco parece maior com a dose alta e em pacientes em uso de rivaroxabana.",
+      "Reacoes relacionadas a infusao": "Sintomas leves a moderados (rubor, calor, tosse, disgeusia, dispneia) dentro de minutos a horas da infusão — observação cuidadosa costuma bastar; para sintomas moderados, considerar interrupção breve ou redução da velocidade, com difenidramina se necessário.",
+      "Custo e disponibilidade": "Alternativa de menor custo e mais disponível para sangramento grave sob DOAC anti-Xa é o concentrado de complexo protrombínico (CCP) — a escolha entre os dois depende de disponibilidade institucional e não é objeto desta bula."
+    }
+  },
+  {
+    "slug": "acido-tranexamico",
+    "review_status": "revisado",
+    "generic_name": "Ácido tranexâmico",
+    "drug_class": "Antifibrinolítico — análogo sintético da lisina, inibidor competitivo da ativação do plasminogênio",
+    "mechanism": "Inibe competitivamente a ativação do plasminogênio em plasmina ao se ligar aos sítios de ligação à lisina no plasminogênio, bloqueando sua interação com a fibrina — em concentração mais alta, inibe também diretamente a atividade da plasmina. O efeito final é a estabilização do coágulo de fibrina já formado (efeito antifibrinolítico, não pró-coagulante/pró-trombótico direto). Fonte: bula profissional brasileira do Transamin® (ácido tranexâmico), seção de ação farmacológica.",
+    "indications": [
+      "Controle e profilaxia de hemorragias por hiperfibrinólise em cirurgias cardíacas, ortopédicas, ginecológicas, obstétricas, otorrinolaringológicas, odontológicas, urológicas e neurológicas.",
+      "Pacientes hemofílicos e hemorragias digestivas e de vias aéreas.",
+      "Redução de sangramento perioperatório e de necessidade transfusional em cirurgia cardíaca com circulação extracorpórea — uso consagrado na prática, avaliado formalmente quanto à segurança tromboembólica no ensaio ATACAS (ver Evidência pivotal)."
+    ],
+    "dosing": {
+      "apresentacao e vias": "Solução injetável para uso endovenoso (ampola) e comprimidos para uso oral. Administração endovenosa **sempre lenta** (não em bolus rápido).",
+      "fibrinolise local — adultos": "**500 a 1000 mg por injeção endovenosa lenta (50 mg/min), sem diluição, três vezes ao dia.**",
+      "fibrinolise sistemica — adultos": "**Dose única de 1000 mg por injeção endovenosa lenta (50 mg/min)** costuma ser suficiente.",
+      "criancas": "**10 mg/kg/dose, duas a três vezes ao dia.**",
+      "cirurgia cardiaca com circulacao extracorporea — uso descrito na literatura, nao e a posologia padrao da bula": "Esquemas publicados variam por protocolo institucional; um dos regimes mais citados na literatura é infusão de **10 g ao longo de 20 minutos** logo após a indução anestésica (ensaio duplo-cego com 210 pacientes, perda sanguínea pós-operatória média de 474 ± 24 mL vs. 906 ± 51 mL no placebo). A bula brasileira reconhece explicitamente que **em cirurgias cardíacas com CEC a dose diária pode variar de acordo com a necessidade do paciente e a experiência do profissional, a critério médico** — ou seja, o teto de 3-4,5 g/dia (abaixo) não se aplica de forma rígida a esse cenário.",
+      "dose maxima diaria — demais indicacoes": "**3 g/dia**; sob supervisão, pode ser elevada a **4,5 g/dia** em alguns casos.",
+      "ajuste renal — por creatinina serica": "120-150 µmol/L: 10 mg/kg EV 2x/dia. · 150-250 µmol/L (faixa intermediária, ver bula para o valor exato de corte): reduzir proporcionalmente. · 250-500 µmol/L: 10 mg/kg EV 1x/dia. · >500 µmol/L: 5 mg/kg EV 1x/dia.",
+      "fonte": "Bula profissional brasileira do Transamin® (ácido tranexâmico) solução injetável — seções Indicações, Posologia e Modo de Usar (incluindo o quadro de ajuste renal por creatinina)."
+    },
+    "outcomes": {
+      "Evidencia pivotal — ATACAS": "- **desenho**: ensaio clínico randomizado, duplo-cego, fatorial 2x2, comparando ácido tranexâmico versus placebo (e aspirina versus placebo) em pacientes de risco submetidos a cirurgia coronariana - **resultado**: desfecho composto de morte ou evento trombótico em 30 dias sem diferença significativa entre os grupos (16,7% ácido tranexâmico vs. 18,1% placebo; RR 0,92; IC95% 0,81-1,05; p=0,22); ácido tranexâmico **reduziu significativamente** reoperação por sangramento e necessidade de transfusão, mas **aumentou o risco de convulsão pós-operatória** - **fonte**: N Engl J Med. 2017;376(2):136-148. PMID 27774838 (Myles PS et al.)."
+    },
+    "references": [
+      "Myles PS, Smith JA, Forbes A, et al. Tranexamic Acid in Patients Undergoing Coronary-Artery Surgery (ATACAS). N Engl J Med. 2017;376(2):136-148. PMID 27774838.",
+      "Bula profissional brasileira do Transamin® (ácido tranexâmico), solução injetável — seções Indicações, Contraindicações, Reações Adversas, Posologia e Modo de Usar, Gravidez e Lactação."
+    ],
+    "pregnancy": "**Categoria de risco B.** A bula brasileira orienta **não recomendar o uso no primeiro trimestre da gestação**. Fonte: bula profissional brasileira do Transamin®, seção Gravidez e Lactação.",
+    "lactation": "**Apenas cerca de 1% da concentração plasmática do ácido tranexâmico é excretada no leite materno** e, em doses terapêuticas, efeitos sobre o lactente são considerados improváveis pela bula. Fonte: bula profissional brasileira do Transamin®, seção Gravidez e Lactação.",
+    "contraindications": [
+      "Coagulação intravascular ativa",
+      "Vasculopatia oclusiva aguda (risco de tromboembolismo)",
+      "Hipersensibilidade aos componentes da fórmula"
+    ],
+    "notes": {
+      "Convulsao — risco descrito, dose-dependente": "O ensaio ATACAS mostrou aumento do risco de convulsão pós-operatória com ácido tranexâmico em cirurgia cardíaca — achado atribuído a doses altas atravessando a barreira hematoencefálica e antagonizando receptores GABA-A/glicina no córtex; reforça cautela com esquemas de dose muito alta, sobretudo em cirurgia com CEC e em paciente com função renal reduzida (acúmulo do fármaco).",
+      "Via de administracao": "Administração endovenosa deve ser sempre **lenta** — injeção rápida associa-se a hipotensão.",
+      "Reacoes adversas, por frequencia": "Comuns (1-10%): náusea e vômito. Raras (0,01-0,1%): tontura, cefaleia, alteração visual, hipotensão arterial e tromboembolismo.",
+      "Nao e pro-trombotico direto, mas estabiliza coagulo existente": "O mecanismo antifibrinolítico não ativa a cascata de coagulação — ele impede a dissolução do coágulo já formado. Isso é o que sustenta seu uso amplo mesmo em populações de risco vascular, mas também explica por que vasculopatia oclusiva aguda é contraindicação formal."
+    }
+  },
+  {
+    "slug": "fenilefrina-cloridrato",
+    "review_status": "revisado",
+    "generic_name": "Fenilefrina (cloridrato de fenilefrina)",
+    "drug_class": "Vasopressor — agonista alfa-1 adrenérgico seletivo, agente simpatomimético sintético quimicamente relacionado à epinefrina",
+    "mechanism": "Potente estimulante alfa-adrenérgico pós-sináptico, com pouco efeito sobre os receptores beta cardíacos — ao contrário de epinefrina e efedrina, praticamente não tem ação cronotrópica/inotrópica direta. Produz vasoconstrição arterial e venosa mais duradoura que epinefrina/efedrina (até ~20 minutos por via IV), aumenta a resistência periférica e as pressões sistólica/diastólica; acompanha bradicardia reflexa (bloqueável por atropina). Débito cardíaco é levemente reduzido; fluxo coronariano é aumentado, enquanto os fluxos esplâncnico, renal, cutâneo e de extremidades diminuem por vasoconstrição. Fonte: bula profissional brasileira do Fenilefrin® (Cristália), seção 3 — Características Farmacológicas.",
+    "indications": [
+      "Controle da pressão arterial em hipotensão e choque.",
+      "Manutenção de nível pressórico adequado durante anestesia geral inalatória e espinhal — inclusive profilaxia da hipotensão da raquianestesia (uso obstétrico bem estabelecido).",
+      "Hipotensão induzida por fármacos (por exemplo, agentes bloqueadores adrenérgicos/gangliônicos, fenotiazínicos).",
+      "Reversão de taquicardia paroxística supraventricular, por via intravenosa em bolus com ajuste pela resposta pressora — uso de emergência, distinto do uso vasopressor contínuo."
+    ],
+    "dosing": {
+      "apresentacao": "Solução injetável de **10 mg/mL** (1%), uso subcutâneo, intramuscular ou intravenoso (lento/diluído para infusão contínua; bolus direto reservado para taquicardia paroxística supraventricular).",
+      "hipotensao suave a moderada — SC/IM": "Dose usual **2 a 5 mg**, limites de 1 a 10 mg; dose inicial não deve exceder 5 mg. Efeito pressor dura 1-2 horas.",
+      "hipotensao suave a moderada — IV": "Dose usual **0,2 mg**, limites de 0,1 a 0,5 mg; dose inicial não deve exceder 0,5 mg; não repetir em intervalo menor que 10-15 minutos. Efeito dura cerca de 15 minutos.",
+      "infusao intravenosa continua — preparo": "Diluir **10 mg (1 mL a 10 mg/mL) em 500 mL** de solução glicosada ou salina (concentração final 1:50.000, ≈ 20 mcg/mL).",
+      "infusao intravenosa continua — dose de ataque": "**100 a 180 mcg/min** para elevação rápida da pressão.",
+      "infusao intravenosa continua — manutencao": "**40 a 60 mcg/min**, uma vez estabilizada a pressão em nível individual adequado. Se não houver resposta pressora inicial rápida, adicionar 10 mg ou mais ao frasco de infusão; se a hipotensão persistir grave/intratável, a bula orienta considerar vasopressor mais potente (cita hemitartarato de norepinefrina).",
+      "hipotensao grave e choque, incluindo por farmaco": "Corrigir a volemia o mais precisamente possível, administrando o vasopressor simultaneamente à reposição — nunca como substituto da correção volêmica. Doses iniciais e de manutenção mais altas são necessárias nesse cenário.",
+      "pediatria — hipotensao da anestesia espinhal": "**0,5 a 1 mg por 10 kg de peso corporal**, via subcutânea ou intramuscular.",
+      "fonte": "Bula profissional brasileira do Fenilefrin® (cloridrato de fenilefrina, solução injetável 10 mg/mL), Cristália Produtos Químicos Farmacêuticos Ltda., seção 8 (Posologia e Modo de Usar)."
+    },
+    "outcomes": {
+      "Evidencias citadas na propria bula — profilaxia de hipotensao na raquianestesia": "- Alahuhta et al. (1992), Ramanathan & Grant (1988), Hall et al. (1994) e Moran et al. (1991) documentam segurança e eficácia da fenilefrina na profilaxia da hipotensão durante anestesia espinhal, incluindo obstétrica; Ramanathan & Grant (1988) e Moran et al. (1991) mostraram que a fenilefrina **não causa acidose fetal** quando usada para tratar hipotensão materna, com eficácia comparável à efedrina - **fonte**: bula profissional brasileira do Fenilefrin® (Cristália), seção 2 — Resultados de Eficácia."
+    },
+    "references": [
+      "Bula profissional brasileira do Fenilefrin® (cloridrato de fenilefrina, solução injetável 10 mg/mL), Cristália Produtos Químicos Farmacêuticos Ltda. — seções 1 (Indicações), 2 (Resultados de Eficácia), 3 (Características Farmacológicas), 4 (Contraindicações), 5 (Advertências e Precauções), 6 (Interações Medicamentosas), 8 (Posologia)."
+    ],
+    "pregnancy": "**Categoria de risco C.** Estudos de reprodução animal não foram conduzidos; não se sabe se causa dano fetal ou afeta a capacidade reprodutiva. Só administrar na gravidez se **estritamente necessário** e se o benefício superar o risco; não usar sem orientação médica. No trabalho de parto, a bula alerta que o uso de vasopressor associado a drogas ocitócicas pode causar hipertensão persistente grave e até ruptura de vaso cerebral. Fonte: bula profissional brasileira do Fenilefrin® (Cristália), seção 5 — Gravidez/Trabalho de Parto.",
+    "lactation": "**Não é conhecido se é excretada no leite humano.** Como muitas drogas o são, a bula recomenda cautela e uso criterioso na amamentação/doação de leite, com avaliação médica. Fonte: bula profissional brasileira do Fenilefrin® (Cristália), seção 5 — Amamentação.",
+    "contraindications": [
+      "Hipertensão grave",
+      "Taquicardia ventricular",
+      "Hipertireoidismo severo",
+      "Hipersensibilidade à fenilefrina ou a componentes da fórmula (inclui metabissulfito de sódio — risco de reação alérgica/anafilática, mais frequente em asmáticos)"
+    ],
+    "notes": {
+      "Bradicardia reflexa — achado farmacologico central": "A resposta vasopressora da fenilefrina acompanha bradicardia reflexa (bloqueável por atropina) — é o oposto do padrão de outros vasopressores catecolaminérgicos, e o que a torna útil quando se quer elevar a pressão sem taquicardia (ex.: hipotensão da raquianestesia, hipotensão com taquiarritmia associada).",
+      "Interacao com IMAO e tricíclicos": "Efeito pressor potencializado por inibidores da monoaminoxidase e por antidepressivos tricíclicos — iniciar com dose menor e cautela redobrada nesses pacientes.",
+      "Interacao com ocitocicos": "Efeito pressor das aminas simpatomiméticas é potencializado por drogas ocitócicas — risco de hipertensão grave.",
+      "Uso cauteloso, nao contraindicacao formal": "Extrema cautela em idosos e em pacientes com hipertireoidismo, bradicardia, bloqueio cardíaco parcial, doença do miocárdio ou aterosclerose.",
+      "Monitorizacao": "Cefaleia e/ou bradicardia durante a infusão podem indicar hipertensão — monitorar a pressão arterial com frequência e evitar hipertensão iatrogênica. Arritmia é evento raro com este fármaco, ao contrário de vasopressores catecolaminérgicos beta-agonistas.",
+      "Metabissulfito de sodio": "Excipiente da formulação — risco de reação alérgica/anafilática ou broncoespasmo em pacientes susceptíveis, mais comum entre asmáticos."
+    }
+  },
+  {
+    "slug": "dipiridamol",
+    "review_status": "revisado",
+    "generic_name": "Dipiridamol (uso intravenoso, agente de estresse farmacológico)",
+    "drug_class": "Vasodilatador coronariano — inibidor da fosfodiesterase e bloqueador da captação de adenosina, usado como agente de estresse farmacológico em exame de perfusão miocárdica",
+    "mechanism": "Inibe a fosfodiesterase (elevando AMPc) e bloqueia a captação celular de adenosina, potencializando o efeito vasodilatador coronariano endógeno da adenosina — produz vasodilatação coronariana intensa, com roubo de fluxo relativo em território suprido por artéria com estenose significativa, o que torna visível a diferença de perfusão entre miocárdio normal e isquêmico na cintilografia com tálio-201 ou no ecocardiograma de estresse. Efeito farmacológico que substitui o esforço físico em paciente incapaz de exercitar-se adequadamente. Fonte: bula profissional brasileira do Persantin® injetável (Boehringer Ingelheim), seções 1 e 3.",
+    "indications": [
+      "Auxiliar em teste diagnóstico de estresse farmacológico — avaliação de perfusão miocárdica com tálio-201 e ecocardiografia de estresse — para investigação de coronariopatia isquêmica em paciente que não consegue realizar exercício adequado no teste ergométrico convencional. Sensibilidade e especificidade das imagens com tálio e dipiridamol são descritas na bula como praticamente idênticas às obtidas com tálio e esforço físico."
+    ],
+    "dosing": {
+      "apresentacao e via": "Ampola de 2 mL contendo 10 mg de dipiridamol (5 mg/mL), uso exclusivamente intravenoso para esta indicação.",
+      "dose padrao": "**0,142 mg/kg/minuto infundida durante 4 minutos** — é a dose validada nos estudos de eficácia citados na bula (imagem de perfusão miocárdica igual ou superior à obtida com esforço isolado).",
+      "dose maxima": "**0,84 mg/kg infundida durante 6-10 minutos.** Não exceder.",
+      "diluicao": "Diluir em solução de cloreto de sódio 0,45% ou 0,9%, ou solução glicosada 5%, em proporção mínima de 1:2, para volume total de aproximadamente 20 a 50 mL. Nunca infundir não diluído (risco de irritação local) nem misturar com outro fármaco na mesma seringa ou frasco de infusão.",
+      "sequencia com o radiofarmaco": "O tálio-201 deve ser injetado dentro de 5 minutos após o término da infusão de 4 minutos de dipiridamol.",
+      "preparo do paciente": "Pacientes em uso de dipiridamol oral que também farão o teste de estresse com dipiridamol intravenoso devem **suspender o dipiridamol oral 24 horas antes** — caso contrário, a sensibilidade do teste pode ficar prejudicada.",
+      "populacao pediatrica": "Uso não recomendado — eficácia e segurança não estabelecidas em crianças.",
+      "fonte": "Bula profissional brasileira do Persantin® injetável (dipiridamol 5 mg/mL), Boehringer Ingelheim — seção 8 (Posologia e Modo de Usar)."
+    },
+    "outcomes": {
+      "Estudos de eficacia citados na bula": "- **desenho**: estudo com 162 imagens de perfusão miocárdica avaliando vasodilatação coronariana induzida por dipiridamol intravenoso - **resultado**: qualidade das imagens com tálio-201 durante vasodilatação por dipiridamol igual ou melhor que as obtidas por tálio isolado após esteira; dose de eficácia ótima de 0,142 mg/kg por 4 minutos - **segundo estudo, 384 pacientes** (idade média 58±9,8 anos): sensibilidade de 95% para estenose luminal >70% - **fonte**: bula profissional brasileira do Persantin® injetável, seção 2 (Resultados de Eficácia)."
+    },
+    "references": [
+      "Bula profissional brasileira do Persantin® injetável (dipiridamol, solução injetável 5 mg/mL), Boehringer Ingelheim do Brasil — seções 1 (Indicações), 2 (Resultados de Eficácia), 4 (Contraindicações), 5 (Advertências e Precauções — Gravidez/Lactação), 6 (Interações Medicamentosas), 8 (Posologia), 9 (Reações Adversas). CCDS 0150-05/I13-00."
+    ],
+    "pregnancy": "**Categoria de risco B.** Não há evidência de total segurança na gravidez, mas o fármaco é usado há muitos anos na gestação sem efeitos aparentes à saúde; estudos pré-clínicos não evidenciaram risco. Ainda assim, a bula orienta evitar medicamentos na gravidez, sobretudo no primeiro trimestre, a menos que o benefício esperado supere o risco potencial ao feto — e não usar sem orientação médica. Fonte: bula profissional brasileira do Persantin® injetável, seção 5 — Fertilidade, Gravidez e Lactação.",
+    "lactation": "Estudos não clínicos demonstraram que o dipiridamol **pode ser excretado no leite materno**. A bula orienta usar na lactação **somente se considerado essencial pelo médico**. Fonte: bula profissional brasileira do Persantin® injetável, seção 5.",
+    "contraindications": [
+      "Hipersensibilidade a qualquer componente da fórmula"
+    ],
+    "notes": {
+      "Antidoto disponivel obrigatoriamente durante o exame": "Ter **aminofilina parenteral** disponível para reverter eventos adversos como broncoespasmo ou dor torácica — 50 a 250 mg por injeção intravenosa lenta (50-100 mg em 30-60 segundos). Se a dor torácica persistir mesmo após aminofilina e nitroglicerina sublingual, considerar infarto do miocárdio em curso.",
+      "Monitorizacao obrigatoria": "ECG contínuo (pelo menos uma derivação torácica), pulso e pressão arterial durante a infusão e por 10-15 minutos após — reações comparáveis ao estresse do exercício físico podem ocorrer.",
+      "Populacao de maior risco": "Histórico de asma e coronariopatia grave — maior risco de broncoespasmo e de evento isquêmico durante o teste, respectivamente.",
+      "Interacao central": "Derivados da xantina (cafeína, teofilina) são antagonistas farmacológicos diretos — reduzem o efeito vasodilatador do dipiridamol e podem comprometer a sensibilidade do exame; por isso a orientação usual de suspender cafeína antes do teste, além do próprio dipiridamol oral.",
+      "Miastenia gravis": "Considerar possível interação entre dipiridamol e inibidores da colinesterase.",
+      "Reacoes adversas mais comuns": "Muito comuns (>1/10): cefaleia, tontura, dor torácica/angina. Comuns: parestesia, arritmia, taquicardia, hipotensão, fogacho, náusea, alteração de ST-T. Reações graves raras a muito raras incluem infarto do miocárdio, AVC, parada cardíaca e fibrilação ventricular — a bula nota que a frequência de eventos adversos graves é maior na dose usada para imagem cardíaca do que nas doses orais/IV convencionais, mas que a relação risco-benefício permanece pelo menos tão favorável quanto a do teste de esforço convencional."
+    }
+  },
+  {
+    "slug": "irbesartana-potassica",
+    "review_status": "revisado",
+    "generic_name": "Irbesartana",
+    "brand_names": [
+      "Aprovel"
+    ],
+    "drug_class": "Bloqueador do receptor de angiotensina II (BRA/ARA-II)",
+    "mechanism": "Antagonista seletivo do receptor AT1 de angiotensina II, bloqueando a vasoconstrição e a liberação de aldosterona mediadas pela angiotensina II. É metabolizada primariamente pela CYP2C9 do citocromo P450 e, ao contrário de outros BRA, não é conhecida por interações farmacocinéticas clinicamente relevantes mediadas pela CYP3A4.",
+    "presentations": [
+      "Comprimidos revestidos de 150 mg e 300 mg"
+    ],
+    "indications": [
+      "Hipertensão arterial, isolada ou em associação com outros anti-hipertensivos (diuréticos tiazídicos, betabloqueadores, bloqueadores de canal de cálcio de longa duração); tratamento da doença renal em pacientes com hipertensão e diabetes tipo 2, reduzindo a taxa de progressão da nefropatia (duplicação da creatinina sérica e doença renal em estágio final)."
+    ],
+    "contraindications": [
+      "Hipersensibilidade à irbesartana ou a qualquer componente da fórmula",
+      "Uso concomitante com medicamentos contendo alisquireno em pacientes com diabetes mellitus ou com insuficiência renal moderada a severa (TFG <60 mL/min/1,73m²)",
+      "Uso concomitante com inibidor da ECA em pacientes com nefropatia diabética",
+      "Segundo e terceiro trimestres de gestação — exposição in utero a fármacos que atuam no sistema renina-angiotensina causa dano e morte fetal",
+      "fonte: bula do APROVEL (irbesartana, Sanofi-Aventis Farmacêutica Ltda.), itens 3 e 4"
+    ],
+    "adverse_effects": [
+      "Eventos mais frequentes (≥1%): fadiga, edema, náusea, vômitos, tontura e dor de cabeça. Entre 0,5% e <1%: dor no peito, tosse, diarreia, dispepsia/azia, tontura ortostática, disfunção sexual e taquicardia — nenhum com diferença estatisticamente significativa frente a placebo nos estudos clínicos.",
+      "Pós-comercialização: reações de hipersensibilidade (angioedema, urticária, reação anafilática incluindo choque anafilático), hipercalemia, mialgia, icterícia, elevação de enzimas hepáticas, hepatite, tinido, trombocitopenia (incluindo púrpura trombocitopênica), psoríase (e agravamento de psoríase preexistente), fotossensibilidade e diminuição da função renal, incluindo insuficiência renal em pacientes de risco.",
+      "No estudo IDNT, o percentual de pacientes com hipercalemia (K+ ≥6 mEq/L) foi de 18,6% no grupo irbesartana, contra taxa bem menor (1,0%) observada em outro estudo com população de risco renal mais baixo — a diferença reflete a gravidade da nefropatia de base, não um efeito farmacológico variável.",
+      "fonte: bula do APROVEL, item 8 (Quais os males que este medicamento pode me causar?)"
+    ],
+    "dosing": {
+      "hipertensao": "Dose inicial e usual de 150 mg 1x/dia; pode ser aumentada para 300 mg 1x/dia se necessário controle adicional. Se a pressão não for adequadamente controlada com irbesartana isolada, associar diurético (ex.: hidroclorotiazida 12,5 mg/dia) ou outro anti-hipertensivo.",
+      "hipertensao e doenca renal diabetica tipo 2": "300 mg 1x/dia é a dose de manutenção preferida.",
+      "idosos": "Sem diferença global de eficácia/segurança entre idosos (>65 anos) e mais jovens nos estudos clínicos; geralmente não é necessária redução de dose.",
+      "pediatria": "Segurança e eficácia não estabelecidas — uso não recomendado em menores de 18 anos.",
+      "insuficiencia renal ou hepatica": "Geralmente não é necessária redução de dose em insuficiência hepática leve a moderada ou em insuficiência renal, independentemente do grau de disfunção.",
+      "deplecao de volume": "Corrigir hiponatremia/hipovolemia grave (ex.: uso vigoroso de diurético, hemodiálise) antes de iniciar, ou considerar dose inicial mais baixa.",
+      "fonte": "Bula do APROVEL (irbesartana, Sanofi-Aventis Farmacêutica Ltda.), item 6 (Como devo usar este medicamento?)"
+    },
+    "outcomes": {
+      "Evidencia pivotal IRMA 2": "Estudo IRMA 2 (Parving HH et al., N Engl J Med. 2001;345(12):870-878): 590 pacientes hipertensos com diabetes tipo 2 e microalbuminúria, seguidos por 2 anos. A irbesartana 300 mg/dia reduziu em 70% o risco de progressão para nefropatia diabética manifesta em relação ao placebo (HR 0,30; IC95% 0,14-0,61; p<0,001), com a dose de 150 mg/dia mostrando redução não significativa (HR 0,61; IC95% 0,34-1,08; p=0,08) — efeito dose-dependente e independente da redução pressórica.",
+      "Evidencia pivotal IDNT": "Estudo IDNT (Lewis EJ et al., N Engl J Med. 2001;345(12):851-860): 1.715 pacientes hipertensos com nefropatia estabelecida por diabetes tipo 2, comparando irbesartana 300 mg/dia, anlodipino 10 mg/dia e placebo, com meta pressórica igual nos três braços (≤135/85 mmHg). A irbesartana reduziu o desfecho composto primário (duplicação da creatinina, doença renal terminal ou morte) em 20% frente a placebo (p=0,02) e em 23% frente a anlodipino (p=0,006), com redução de 33% no risco de duplicação da creatinina frente a placebo — efeito independente do controle pressórico alcançado, que foi semelhante nos três grupos."
+    },
+    "notes": {
+      "Bloqueio duplo do SRAA": "A associação de irbesartana com IECA ou com alisquireno não é recomendada — maior risco de hipotensão, hipercalemia e alteração da função renal comparado à monoterapia, sem benefício adicional demonstrado na maioria dos cenários.",
+      "Sem interação farmacocinética relevante com varfarina, digoxina ou sinvastatina": "Em estudos clínicos de interação, a irbesartana não alterou de modo farmacodinamicamente significativo o efeito da varfarina, apesar de ambas dependerem da CYP2C9; e não afeta a farmacocinética de digoxina ou sinvastatina — diferencial prático frente a outros BRA metabolizados por outras vias."
+    },
+    "references": [
+      "Parving HH, Lehnert H, Bröchner-Mortensen J, et al. The effect of irbesartan on the development of diabetic nephropathy in patients with type 2 diabetes (IRMA 2). N Engl J Med. 2001;345(12):870-878. DOI: 10.1056/NEJMoa011489. PMID: 11565519",
+      "Lewis EJ, Hunsicker LG, Clarke WR, et al. Renoprotective effect of the angiotensin-receptor antagonist irbesartan in patients with nephropathy due to type 2 diabetes (IDNT). N Engl J Med. 2001;345(12):851-860. DOI: 10.1056/NEJMoa011303. PMID: 11565517",
+      "Bula do APROVEL (irbesartana), Sanofi-Aventis Farmacêutica Ltda. — bula ao paciente/profissional, itens 1 a 9"
+    ],
+    "pregnancy": "Fármacos que atuam no sistema renina-angiotensina, quando usados no segundo e terceiro trimestres, causam dano e morte fetal — irbesartana **não deve ser usada durante a gravidez**. Se a gravidez for detectada durante o tratamento, descontinuar assim que possível; nos raros casos sem alternativa adequada, informar a gestante sobre o risco fetal e realizar ultrassonografias periódicas do ambiente intra-amniótico. Fonte: bula do APROVEL, item 4 (Advertências: morbidade e mortalidade fetal/neonatal).",
+    "lactation": "Não se sabe se a irbesartana ou seus metabólitos são excretados no leite humano (é excretada no leite de ratas lactantes). A decisão sobre descontinuar a amamentação ou o tratamento deve levar em conta a importância do fármaco para a mãe e o risco potencial ao lactente. Fonte: bula do APROVEL, item 4 (Gravidez e amamentação)."
+  },
+  {
+    "slug": "estreptoquinase",
+    "review_status": "revisado",
+    "generic_name": "Estreptoquinase",
+    "brand_names": [
+      "Streptase"
+    ],
+    "drug_class": "Trombolítico/fibrinolítico — ativador indireto do plasminogênio, de primeira geração",
+    "mechanism": "Proteína bacteriana altamente purificada, extraída de filtrado de cultura de estreptococos beta-hemolíticos do Grupo C de Lancefield. Forma um complexo estreptoquinase-plasminogênio que converte o plasminogênio em plasmina, enzima proteolítica que degrada a fibrina do trombo. Ao contrário dos ativadores diretos (alteplase, tenecteplase), não é fibrino-específica: ativa o sistema fibrinolítico de forma sistêmica, gerando estado lítico generalizado e maior risco de sangramento fora do sítio do trombo. Meia-vida curta (~18 minutos para a fração livre; ~80 minutos considerando a formação do complexo ativador) — altas doses saturam anticorpos antiestreptoquinase e reduzem, paradoxalmente, o risco de sangramento em relação a doses subterapêuticas.",
+    "presentations": [
+      "Pó liofilizado para solução injetável de 250.000 UI, 750.000 UI e 1.500.000 UI (frasco-ampola)"
+    ],
+    "indications": [
+      "Infarto agudo transmural do miocárdio com elevação persistente do segmento ST ou bloqueio de ramo esquerdo recente, para reperfusão coronariana em até 12 horas do início dos sintomas (administração sistêmica ou intracoronária); trombose venosa profunda (até 14 dias); embolia pulmonar maciça aguda; trombose aguda/subaguda de artérias periféricas; doença arterial obstrutiva crônica (até 6 semanas); oclusão de artéria ou veia central da retina."
+    ],
+    "contraindications": [
+      "Reação alérgica grave prévia à preparação",
+      "Hemorragia interna existente ou recente; qualquer distúrbio grave de coagulação ou fibrinólise espontânea",
+      "AVC recente, cirurgia intracraniana ou intraespinhal recente; neoplasia intracraniana; trauma craniano recente; malformação arteriovenosa ou aneurisma",
+      "Neoplasia conhecida com risco de hemorragia; pancreatite aguda",
+      "Hipertensão arterial grave (PAS >200 mmHg e/ou PAD >100 mmHg) ou retinopatia hipertensiva Grau III/IV",
+      "Implantação recente de prótese vascular; cirurgia de grande porte nos últimos 6-10 dias; procedimento invasivo recente (biópsia de órgão, massagem cardíaca prolongada com tórax fechado)",
+      "Tratamento concomitante com anticoagulante oral (RNI >1,3)",
+      "Insuficiência hepática ou renal grave",
+      "Endocardite ou pericardite — caso de pericardite diagnosticada erroneamente como IAM e tratada com estreptoquinase já resultou em efusão pericárdica com tamponamento",
+      "Não indicado para menores de 18 anos",
+      "fonte: bula do STREPTASE (estreptoquinase, CSL Behring), item 4. CONTRAINDICAÇÕES"
+    ],
+    "adverse_effects": [
+      "Comuns: hemorragia no local da injeção e equimoses, sangramento gastrointestinal ou urogenital, epistaxe.",
+      "Incomuns: hemorragia cerebral (com possíveis consequências fatais), hemorragia de retina, hemorragias graves incluindo hepáticas, sangramento retroperitoneal, ruptura esplênica.",
+      "Muito raras: hemorragia pericárdica, incluindo ruptura miocárdica durante tratamento trombolítico do IAM.",
+      "Muito comum: desenvolvimento de anticorpos antiestreptoquinase, que reduzem a eficácia de retratamento entre 5 dias e 12 meses após a dose inicial.",
+      "Comuns: reações alérgico-anafiláticas (erupção cutânea, rubor, prurido, urticária, edema angioneurótico, dispneia, broncoespasmo, hipotensão). Muito raras: reações tardias tipo doença do soro, artrite, vasculite, nefrite, síndrome de Guillain-Barré, choque anafilático com parada respiratória.",
+      "fonte: bula do STREPTASE, item 9. REAÇÕES ADVERSAS"
+    ],
+    "dosing": {
+      "iam sistemica": "1.500.000 UI IV em 60 minutos (lise de curto prazo).",
+      "iam intracoronaria administracao local": "Bolo intracoronário de 20.000 UI seguido de 2.000-4.000 UI/minuto por 30-90 minutos.",
+      "trombose tep periferica sistemica": "Dose inicial de 250.000 UI em 30 min, seguida de manutenção de 1.500.000 UI/hora por até 6 horas (repetível no dia seguinte, nunca após 5 dias da 1ª aplicação); alternativa de longo prazo: 250.000 UI iniciais + manutenção de 100.000 UI/hora, até 5 dias.",
+      "oclusao de vasos centrais da retina": "Lise de oclusão arterial limitada a 24h; oclusão venosa, a 72h.",
+      "criancas": "Sem experiência suficiente — benefício deve ser avaliado contra risco individual.",
+      "controle do tratamento": "Na lise de curto prazo, associar heparina quando TT ou TTPa caírem abaixo de 2x ou 1,5x o valor de referência, respectivamente, mantendo TT em 2-4x e TTPa em 1,5-2,5x o normal para proteção contra retrombose. Pré-tratamento com heparina deve ser neutralizado com protamina antes de iniciar; RNI deve ser <1,3 em paciente previamente cumarinizado.",
+      "fonte": "Bula do STREPTASE (estreptoquinase, CSL Behring), item 8. POSOLOGIA E MODO DE USAR"
+    },
+    "outcomes": {
+      "Evidencia pivotal ISIS-2": "ISIS-2 Collaborative Group. Lancet. 1988;2(8607):349-360 (PMID 2899772): 17.187 pacientes com IAM suspeito, randomizados para estreptoquinase IV, AAS oral, ambos ou nenhum. Estreptoquinase isolada reduziu mortalidade vascular em 5 semanas (9,2% vs. 12,0%; redução de 25%; 2p<0,00001); AAS isolado, redução semelhante (9,4% vs. 11,8%; 23%; 2p<0,00001). A combinação foi significativamente superior a qualquer um isolado, com efeito aditivo: 8,0% vs. 13,2% (redução de 42%) no grupo que recebeu ambos versus nenhum. Excesso de sangramento com necessidade de transfusão (0,5% vs. 0,2%) e hemorragia cerebral confirmada (0,1% vs. 0,0%) com estreptoquinase, sem aumento do total de AVC.",
+      "Contexto adicional citado na bula": "White HD et al. N Engl J Med. 1987;317:850-855 (função ventricular e sobrevida precoce); EMERAS Collaborative Group. Lancet. 1993;342(8874):767-772 (trombólise tardia); ISIS-3 Collaborative Group. Lancet. 1992;339:753-770 (estreptoquinase vs. t-PA vs. anistreplase, com/sem heparina)."
+    },
+    "notes": {
+      "Uso ainda relevante no Brasil": "Apesar de menos fibrino-específica e com maior taxa de reação alérgica/hipotensão que os trombolíticos de segunda/terceira geração (alteplase, tenecteplase), a estreptoquinase segue amplamente utilizada no SUS por custo muito inferior — é frequentemente a única opção de reperfusão farmacológica disponível em serviços sem hemodinâmica, sobretudo fora dos grandes centros.",
+      "Retratamento": "Devido a anticorpos antiestreptoquinase, retratamento entre 5 dias e 12 meses após uma dose prévia (ou após infecção estreptocócica recente) pode ser ineficaz — usar fibrinolítico fibrino-específico (alteplase/tenecteplase) nesse cenário, não estreptoquinase.",
+      "Associação com AAS": "A bula registra efeito mutuamente reforçador entre AAS e estreptoquinase na sobrevida do IAM suspeito (base do próprio desenho fatorial do ISIS-2) — AAS deve ser iniciado antes ou junto da estreptoquinase e mantido por pelo menos 1 mês."
+    },
+    "references": [
+      "ISIS-2 (Second International Study of Infarct Survival) Collaborative Group. Randomised trial of intravenous streptokinase, oral aspirin, both, or neither among 17,187 cases of suspected acute myocardial infarction. Lancet. 1988;2(8607):349-360. PMID: 2899772",
+      "Bula do STREPTASE (estreptoquinase), CSL Behring Comércio de Produtos Farmacêuticos Ltda. — bula profissional completa, itens 1 a 10"
+    ],
+    "pregnancy": "Categoria de risco C. Deve ser administrado na gravidez somente após avaliação cuidadosa risco-benefício; nas primeiras 18 semanas de gestação, o uso deve ser restrito a indicação com risco de vida. Fonte: bula do STREPTASE, item 5 (Gravidez e lactação).",
+    "lactation": "Informação sobre o uso durante a amamentação não está disponível na bula. Fonte: bula do STREPTASE, item 5."
+  },
+  {
+    "slug": "ambrisentana",
+    "review_status": "revisado",
+    "generic_name": "Ambrisentana",
+    "brand_names": [
+      "Volibris"
+    ],
+    "drug_class": "Antagonista do receptor de endotelina (ARE), seletivo para o receptor ETA",
+    "mechanism": "Antagonista seletivo do receptor de endotelina tipo A (ETA, predominante em células musculares lisas vasculares e miócitos cardíacos), da classe do ácido propanoico, ativo por via oral. Bloqueia a ativação mediada por endotelina de vias intracelulares que resultam em vasoconstrição e proliferação de células musculares lisas. A seletividade para ETA em relação ao ETB preserva, em teoria, a produção de óxido nítrico e prostaciclina mediada pelo receptor ETB.",
+    "presentations": [
+      "Comprimidos revestidos de 5 mg e 10 mg"
+    ],
+    "indications": [
+      "Hipertensão arterial pulmonar (HAP), classes funcionais OMS II e III, para aumentar a capacidade aos exercícios físicos — eficácia demonstrada na HAP idiopática e na HAP associada a doença do tecido conjuntivo; em associação com tadalafila, para reduzir o risco de falha clínica (morte, hospitalização por HAP, progressão da doença, resposta clínica insatisfatória) e aumentar a resposta clínica satisfatória e a capacidade aos exercícios."
+    ],
+    "contraindications": [
+      "Gravidez — teratogenicidade demonstrada em ratos e coelhos, efeito de classe dos ARE",
+      "Fibrose pulmonar idiopática (FPI), com ou sem hipertensão pulmonar secundária",
+      "Menores de 18 anos",
+      "fonte: bula do VOLIBRIS (ambrisentana, GlaxoSmithKline Brasil Ltda.), item 4. CONTRAINDICAÇÕES"
+    ],
+    "adverse_effects": [
+      "Comum (>1% e <10%): aumento das transaminases hepáticas.",
+      "Frequência desconhecida (pós-comercialização): anemia (podendo exigir transfusão), insuficiência cardíaca associada à retenção hídrica, hipotensão, lesão hepática e hepatite autoimune — incluindo casos de exacerbação de hepatite autoimune preexistente.",
+      "fonte: bula do VOLIBRIS, item 9. REAÇÕES ADVERSAS (Experiência pós-comercialização)"
+    ],
+    "dosing": {
+      "hap agente unico": "Iniciar com 5 mg 1x/dia; considerar aumento para 10 mg 1x/dia se 5 mg forem bem tolerados.",
+      "hap em associacao com tadalafila": "Ajustar para 10 mg 1x/dia.",
+      "uso concomitante com ciclosporina a": "Limitar a 5 mg 1x/dia.",
+      "idosos": "Sem ajuste necessário em ≥65 anos.",
+      "insuficiencia renal": "Metabolismo e excreção renal mínimos — ajuste de dose improvável de ser necessário.",
+      "insuficiencia hepatica": "Não estudada em insuficiência hepática grave ou elevação clinicamente significativa de aminotransferases — uso não recomendado nesses pacientes.",
+      "pediatria": "Segurança e eficácia não estabelecidas em menores de 18 anos; uso não recomendado. Estudos em animais sugerem risco de menor peso cerebral, com relevância clínica desconhecida, potencialmente maior em crianças <4 anos.",
+      "fonte": "Bula do VOLIBRIS (ambrisentana, GlaxoSmithKline Brasil Ltda.), item 8. POSOLOGIA E MODO DE USAR"
+    },
+    "outcomes": {
+      "Evidencia pivotal ARIES-1 e ARIES-2": "Galiè N et al. Circulation. 2008;117(23):3010-3019 (PMID 18506008): dois estudos de fase III, randomizados, duplo-cegos, controlados por placebo, 12 semanas, em 393 pacientes com HAP (ARIES-1: 5 e 10 mg/dia, 201 pacientes; ARIES-2: 2,5 e 5 mg/dia, 192 pacientes). Desfecho primário foi a distância percorrida no teste de caminhada de 6 minutos (TC6M): no ARIES-2, melhora corrigida para placebo de 59,4 m com 5 mg e 32,3 m com 2,5 mg (p<0,001 e p=0,022); no ARIES-1, melhora de 51,4 m com 10 mg e 30,6 m com 5 mg (p<0,001 e p=0,008). Na análise combinada, redução de 71% na probabilidade de agravamento clínico em 12 semanas (HR 0,29; IC95% 0,14-0,59)."
+    },
+    "notes": {
+      "Contraindicação absoluta em FPI": "Diferente de outros vasodilatadores pulmonares, a ambrisentana é formalmente contraindicada na fibrose pulmonar idiopática com ou sem hipertensão pulmonar secundária — achado do estudo ARTEMIS-IPF, citado nas referências da própria bula, motivou a restrição.",
+      "Combinação inicial com tadalafila": "A bula cita o estudo AMBITION (referenciado na literatura publicada da GSK) como base da indicação em associação com tadalafila para reduzir falha clínica — terapia combinada inicial, não sequencial, é hoje estratégia de primeira linha em HAP de risco intermediário/alto conforme diretrizes internacionais."
+    },
+    "references": [
+      "Galiè N, Olschewski H, Oudiz RJ, et al. Ambrisentan for the treatment of pulmonary arterial hypertension: results of the ambrisentan in pulmonary arterial hypertension, randomized, double-blind, placebo-controlled, multicenter, efficacy (ARIES) study 1 and 2. Circulation. 2008;117(23):3010-3019. DOI: 10.1161/CIRCULATIONAHA.107.742510. PMID: 18506008",
+      "Bula do VOLIBRIS (ambrisentana), GlaxoSmithKline Brasil Ltda., aprovada pela Anvisa em 26/08/2025 — bula profissional completa"
+    ],
+    "pregnancy": "**Categoria X — contraindicado na gravidez.** Estudos em ratos e coelhos demonstraram teratogenicidade, efeito de classe dos ARE. Mulheres com potencial para engravidar devem ser orientadas sobre o risco de lesão fetal; excluir gravidez antes de iniciar o tratamento e usar contracepção confiável durante todo o uso. Fonte: bula do VOLIBRIS, item 4.",
+    "lactation": "Uso criterioso no aleitamento ou na doação de leite humano — depende de avaliação médica individual, dado categoria X de risco na gravidez. Fonte: bula do VOLIBRIS, item 4."
+  },
+  {
+    "slug": "tadalafila-hap",
+    "review_status": "revisado",
+    "generic_name": "Tadalafila",
+    "brand_names": [
+      "Adcirca"
+    ],
+    "drug_class": "Inibidor da fosfodiesterase tipo 5 (PDE5) — indicação em hipertensão arterial pulmonar",
+    "mechanism": "Inibe seletivamente a PDE5, enzima que degrada o GMP cíclico (cGMP) na musculatura lisa vascular pulmonar. O acúmulo de cGMP prolonga o relaxamento induzido por óxido nítrico, promovendo vasodilatação pulmonar e reduzindo a resistência vascular pulmonar e a sobrecarga do ventrículo direito. Concentração plasmática máxima em tempo mediano de 4 horas após administração oral.",
+    "presentations": [
+      "Comprimidos revestidos de 20 mg (apresentação ADCIRCA, específica para HAP — dose diária usual é de 2 comprimidos)"
+    ],
+    "indications": [
+      "Hipertensão arterial pulmonar (HAP), para melhorar a capacidade funcional/hemodinâmica pulmonar."
+    ],
+    "contraindications": [
+      "Hipersensibilidade à tadalafila ou a qualquer componente da fórmula",
+      "Uso concomitante de nitratos, em qualquer forma (propatilnitrato, isossorbida, nitroglicerina, dinitrato de isossorbida) — risco de hipotensão grave por potencialização do efeito vasodilatador",
+      "Menores de 18 anos",
+      "fonte: bula do ADCIRCA (tadalafila, Eli Lilly do Brasil Ltda.), 'Quando não devo usar este medicamento?'"
+    ],
+    "adverse_effects": [
+      "Muito comuns (>10%): cefaleia, mialgia, rubor facial, congestão nasal, sinusite, rinite, náusea, dor em membros, lombalgia, dispepsia.",
+      "Comuns (1-10%): vômito, sangramento menstrual anormal, visão borrada, hipotensão.",
+      "Pós-comercialização (muito raras): reações de hipersensibilidade (urticária, edema facial, síndrome de Stevens-Johnson, dermatite esfoliativa); eventos cardiovasculares graves (IAM, morte súbita cardíaca, AVC, palpitações, taquicardia) em associação temporal, predominantemente em pacientes com fator de risco cardiovascular preexistente; neuropatia óptica isquêmica anterior não arterítica; perda auditiva súbita; priapismo (>4h).",
+      "fonte: bula do ADCIRCA, 'Quais os males que este medicamento pode me causar?'"
+    ],
+    "dosing": {
+      "hap dose usual": "40 mg (dois comprimidos de 20 mg) uma vez ao dia, independente das refeições. Não dividir a dose ao longo do dia.",
+      "insuficiencia renal leve a moderada": "Dose inicial de 20 mg 1x/dia, podendo aumentar para 40 mg 1x/dia conforme eficácia e tolerabilidade.",
+      "insuficiencia renal grave": "Uso deve ser evitado.",
+      "cirrose hepatica leve a moderada child pugh a e b": "Considerar dose inicial de 20 mg 1x/dia, com avaliação individual cuidadosa da relação risco-benefício. Não administrar em cirrose hepática grave, por falta de experiência clínica.",
+      "uso concomitante com ritonavir": "Iniciar (ou reiniciar) tadalafila com 20 mg 1x/dia após pelo menos 1 semana de ritonavir estabelecido, podendo aumentar para 40 mg conforme tolerabilidade; ao introduzir ritonavir em paciente já em uso de tadalafila, suspender a tadalafila pelo menos 24h antes.",
+      "fonte": "Bula do ADCIRCA (tadalafila, Eli Lilly do Brasil Ltda.), 'Como devo usar este medicamento?'"
+    },
+    "outcomes": {
+      "Evidencia pivotal PHIRST": "Galiè N et al. Circulation. 2009;119(22):2894-2903 (PMID 19470885): estudo de 16 semanas, duplo-cego, controlado por placebo, com 405 pacientes com HAP (idiopática ou associada), virgens de tratamento ou já em uso de bosentana, randomizados para placebo ou tadalafila 2,5/10/20/40 mg/dia. Aumento dose-dependente na distância percorrida no TC6M; apenas a dose de 40 mg atingiu significância estatística pré-especificada (p<0,01), com efeito corrigido para placebo de 33 m (IC95% 15-50 m) — maior em pacientes virgens de bosentana (44 m) que naqueles já em uso de bosentana (23 m). A dose de 40 mg também reduziu o tempo até piora clínica (p=0,041) e a incidência de piora clínica em 68% (p=0,038)."
+    },
+    "notes": {
+      "Não confundir com a dose para disfunção erétil": "A apresentação e a dose diária de 40 mg (dois comprimidos de 20 mg) usadas na HAP são maiores e administradas diariamente, diferente do uso sob demanda ou da dose diária baixa (2,5-5 mg) usada em disfunção erétil/hiperplasia prostática benigna — são apresentações e indicações regulatoriamente distintas no Brasil (ADCIRCA vs. Cialis e genéricos).",
+      "Contraindicação a nitrato é absoluta": "Igual a outros inibidores de PDE5, a combinação com qualquer nitrato está contraindicada de forma absoluta pelo risco de hipotensão grave — checagem obrigatória antes de prescrever, inclusive em uso esporádico de nitrato sublingual para angina."
+    },
+    "references": [
+      "Galiè N, Brundage BH, Ghofrani HA, et al. Tadalafil therapy for pulmonary arterial hypertension (PHIRST). Circulation. 2009;119(22):2894-2903. DOI: 10.1161/CIRCULATIONAHA.108.839274. PMID: 19470885",
+      "Bula do ADCIRCA (tadalafila), Eli Lilly do Brasil Ltda., aprovada pela Anvisa em 07/06/2010 — bula ao paciente, CDS19NOV10"
+    ],
+    "pregnancy": "A bula consultada (ADCIRCA, indicação HAP) não traz seção específica de categoria de risco gestacional além da orientação geral de informar o médico em caso de gravidez — **VERIFICAÇÃO HUMANA NECESSÁRIA**: confirmar a categoria de risco formal (item 'Gravidez e amamentação') na bula profissional completa antes de aconselhar gestante ou mulher planejando engravidar.",
+    "lactation": "Não há dado específico sobre uso na amamentação na bula ao paciente consultada. **VERIFICAÇÃO HUMANA NECESSÁRIA**: confirmar orientação formal na bula profissional completa do ADCIRCA."
+  },
+  {
+    "slug": "epoprostenol-sodico",
+    "review_status": "revisado",
+    "generic_name": "Epoprostenol sódico",
+    "brand_names": [
+      "Flolan",
+      "Veletri"
+    ],
+    "drug_class": "Análogo sintético da prostaciclina (PGI2) — vasodilatador pulmonar e sistêmico, antiagregante plaquetário",
+    "mechanism": "Duas ações principais: (1) vasodilatação direta dos leitos vasculares pulmonar e sistêmico, e (2) inibição da agregação plaquetária. É considerado o vasodilatador pulmonar mais potente disponível e a única classe com demonstração histórica de redução de mortalidade em ensaio randomizado na hipertensão pulmonar primária grave. Meia-vida plasmática muito curta (poucos minutos), exigindo infusão intravenosa contínua por cateter venoso central — a interrupção abrupta pode causar rebote de hipertensão pulmonar com risco de morte.",
+    "presentations": [
+      "Pó liofilizado estéril para reconstituição e infusão intravenosa contínua, equivalente a 0,5 mg (500.000 ng) ou 1,5 mg (1.500.000 ng) de epoprostenol por frasco (apresentação VELETRI, termoestável, formulação sem glicina; a formulação FLOLAN original requer diluente próprio com gelo)"
+    ],
+    "indications": [
+      "Hipertensão arterial pulmonar (HAP, Grupo 1 da OMS), para melhorar a capacidade aos exercícios — a base de eficácia inclui predominantemente pacientes em classe funcional NYHA III-IV com HAP idiopática/hereditária ou associada a doença do tecido conjuntivo. É a terapia de escolha na HAP de alto risco/classe funcional IV, apesar da complexidade de administração."
+    ],
+    "contraindications": [
+      "Insuficiência cardíaca congestiva por disfunção sistólica grave do ventrículo esquerdo",
+      "Edema pulmonar",
+      "Hipersensibilidade ao fármaco ou a compostos estruturalmente relacionados",
+      "fonte: rótulo do VELETRI (epoprostenol) aprovado pelo FDA, DailyMed setid df502787-46ec-4dd1-a2c0-be90f6d95a5d, seção Contraindications"
+    ],
+    "adverse_effects": [
+      "Durante a titulação inicial: rubor (58%), cefaleia (49%), náusea/vômito (32%).",
+      "Durante uso crônico: cefaleia, dor mandibular, rubor, diarreia, náusea/vômito, sintomas tipo-gripe.",
+      "Risco específico do método de administração: infecção de corrente sanguínea relacionada a cateter venoso central, e rebote grave de hipertensão pulmonar (podendo ser fatal) em caso de interrupção abrupta da infusão — nunca suspender subitamente.",
+      "fonte: rótulo do VELETRI aprovado pelo FDA, seção Adverse Reactions"
+    ],
+    "dosing": {
+      "inicio": "2 ng/kg/min IV contínuo, com incrementos de 1-2 ng/kg/min a cada 15 minutos ou mais, conforme resposta clínica e tolerabilidade, até estabelecer a dose de manutenção individualizada.",
+      "reducao": "Decréscimos graduais de 2 ng/kg/min — nunca interromper a infusão de forma abrupta, pelo risco de rebote de hipertensão pulmonar com risco de morte.",
+      "administracao": "Exclusivamente por infusão intravenosa contínua, via cateter venoso central, com bomba de infusão ambulatorial dedicada — reconstituir apenas conforme instruções específicas de cada formulação (água estéril para injeção ou cloreto de sódio 0,9%, conforme o produto).",
+      "fonte": "Rótulo do VELETRI (epoprostenol) aprovado pelo FDA, DailyMed setid df502787-46ec-4dd1-a2c0-be90f6d95a5d, seção Dosage and Administration"
+    },
+    "outcomes": {
+      "Evidencia pivotal Barst 1996": "Barst RJ et al. N Engl J Med. 1996;334(5):296-301 (PMID 8532025): primeiro (e até hoje único) ensaio randomizado a demonstrar melhora de sobrevida com terapia específica na hipertensão pulmonar primária grave (NYHA III-IV). 81 pacientes randomizados para epoprostenol IV contínuo + terapia convencional vs. terapia convencional isolada, por 12 semanas. A distância no teste de caminhada de 6 minutos aumentou no grupo epoprostenol (315→362 m) e caiu no grupo controle (270→204 m; p<0,002 na comparação entre grupos). A pressão média de artéria pulmonar caiu 8% com epoprostenol e subiu 3% no controle (p<0,002); resistência vascular pulmonar caiu 21% vs. subiu 9% (p<0,001). Oito pacientes morreram durante o estudo, todos do grupo controle (p=0,003)."
+    },
+    "notes": {
+      "Registro no Brasil não confirmado nesta sessão": "A busca realizada não localizou bula brasileira registrada na ANVISA para epoprostenol — o fármaco é citado aqui com base no rótulo aprovado pelo FDA (produto VELETRI). **VERIFICAÇÃO HUMANA NECESSÁRIA**: confirmar disponibilidade/registro comercial no Brasil antes de indicar a um paciente específico; onde não disponível, escalonamento terapêutico costuma recorrer a treprostinil (análogo com meia-vida mais longa) ou às vias oral/inalatória.",
+      "Padrão-ouro histórico, uso restrito na prática": "Apesar do benefício de sobrevida mais robusto entre os vasodilatadores pulmonares, o uso é limitado pela complexidade logística (infusão contínua por bomba portátil, cateter central permanente, risco de infecção e de rebote letal por interrupção acidental) — reservado a HAP grave refratária a terapia oral, com manejo em centro de referência."
+    },
+    "references": [
+      "Barst RJ, Rubin LJ, Long WA, et al. A comparison of continuous intravenous epoprostenol (prostacyclin) with conventional therapy for primary pulmonary hypertension. N Engl J Med. 1996;334(5):296-301. DOI: 10.1056/NEJM199602013340504. PMID: 8532025",
+      "Rótulo do VELETRI (epoprostenol) aprovado pelo FDA — DailyMed SPL setid df502787-46ec-4dd1-a2c0-be90f6d95a5d"
+    ],
+    "pregnancy": "Dados publicados limitados não estabeleceram risco associado ao fármaco para malformações maiores, aborto ou desfechos maternos/fetais adversos — mas a experiência é escassa, e a HAP em si já é condição de alto risco gestacional. Fonte: rótulo do VELETRI aprovado pelo FDA. **VERIFICAÇÃO HUMANA NECESSÁRIA**: não há bula brasileira localizada com categoria de risco formal.",
+    "lactation": "Não há dados sobre a presença do fármaco no leite humano nem sobre efeitos no lactente. Fonte: rótulo do VELETRI aprovado pelo FDA."
   }
 ]

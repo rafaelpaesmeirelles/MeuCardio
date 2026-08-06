@@ -11213,5 +11213,271 @@
       "Hill KD, Kannankeril PJ, Jacobs JP, Baldwin HS, Jacobs ML, O'Brien SM, Bichel DP, Graham EM, Blasiole B, Resheidat A, Overman D, Crawford J, Wallace A, Habib RH, Pizarro C, Lee JJ, Turek JW, Frost KE, Hoffman TM, Katz JD, Pigula FA, Twite MD, Jonas RA, Yerokun BA, Kanter K, Alsoufi B, Duncan BW, Deshpande SR, Kavarana MN, Kumar SR; STRESS Network Investigators. Methylprednisolone for Heart Surgery in Infants — A Randomized, Controlled Trial. N Engl J Med. 2022;387(23):2138-2149. DOI: 10.1056/NEJMoa2212667. PMID: 36342116 — citação conferida contra o registro já publicado nesta base: stress-metilprednisolona-em-cirurgia-cardiaca-de-lactentes."
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "febre-reumatica-artrite-escolha-do-anti-inflamatorio",
+    "titulo": "Artrite de febre reumática aguda: naproxeno ou AAS?",
+    "tema": "Febre reumática",
+    "nivel": "básico",
+    "enunciado": "Menino, 11 anos, com poliartrite migratória de grandes articulações (joelhos e tornozelos), febre e VHS elevado. ASLO em ascensão em duas dosagens. Ecocardiograma sem sinais de cardite. Diagnóstico de febre reumática aguda confirmado pelos critérios de Jones. O serviço optou, por protocolo local, por iniciar anti-inflamatório para controle da artrite.",
+    "pergunta": "Entre naproxeno e AAS para controle da artrite neste paciente, o que a evidência comparativa direta mostra?",
+    "opcoes": [
+      "AAS é superior ao naproxeno no controle da artrite, mas com pior perfil de segurança hepática",
+      "Naproxeno e AAS têm eficácia equivalente no controle da artrite (tempo médio de resolução de cerca de 3 dias em ambos), mas o AAS tem maior frequência de elevação de enzimas hepáticas",
+      "Nenhum anti-inflamatório deve ser usado na febre reumática aguda, segundo a diretriz da OMS 2024",
+      "Naproxeno é contraindicado em crianças com febre reumática pela ausência de qualquer estudo comparativo"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O único ensaio clínico randomizado que comparou diretamente os dois agentes (Hashkes et al., J Pediatr. 2003) encontrou eficácia equivalente no controle da artrite — tempo médio até resolução de 2,9 ± 2,9 dias em ambos os grupos — mas elevação de enzimas hepáticas significativamente mais frequente no grupo AAS (p=0,002). Isso não significa que o uso de anti-inflamatório seja obrigatório ou baseado em recomendação forte: a diretriz da OMS 2024 explicitamente não recomenda a favor nem contra o uso de anti-inflamatório na febre reumática aguda, por insuficiência de evidência sobre impacto em desfecho cardíaco a longo prazo. A pergunta respondida pelo ensaio é mais estreita: SE um anti-inflamatório for usado por protocolo local, qual dos dois agentes preferir.",
+    "source_refs": [
+      "Hashkes PJ, Tauber T, Somekh E, et al.; Pediatric Rheumatology Study Group of Israel. Naproxen as an alternative to aspirin for the treatment of arthritis of rheumatic fever: a randomized trial. J Pediatr. 2003;143(3):399-401. PMID: 14517527",
+      "WHO guideline on the prevention and diagnosis of rheumatic fever and rheumatic heart disease. Geneva: WHO, 2024 (NCBI Bookshelf NBK609692)."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "displasia-fibromuscular-hipertensao-em-mulher-jovem",
+    "titulo": "Hipertensão em mulher jovem: quando pensar em displasia fibromuscular?",
+    "tema": "Aorta e doença arterial periférica",
+    "nivel": "intermediário",
+    "enunciado": "Mulher, 34 anos, hipertensão de início recente e difícil controle com três classes de anti-hipertensivo. Sem história familiar de hipertensão, sem obesidade, função renal normal. Angiotomografia de artérias renais mostra estenose única em artéria renal direita, sem o padrão clássico em colar de contas, sem aneurisma ou dissecção associados.",
+    "pergunta": "Segundo o Primeiro Consenso Internacional de Displasia Fibromuscular (2019), o que é necessário para fechar o diagnóstico de DFM neste caso, e qual a conduta de imagem recomendada em seguida?",
+    "opcoes": [
+      "O achado de estenose focal isolada já é suficiente para diagnóstico de DFM; não é necessária nenhuma outra investigação de imagem",
+      "A estenose focal já preenche o critério mínimo de diagnóstico de DFM (lesão focal ou multifocal); a conduta recomendada é complementar com imagem de todos os vasos do crânio à pelve, para identificar outras áreas de acometimento e rastrear aneurismas/dissecções ocultos",
+      "Sem o padrão em colar de contas, o diagnóstico de DFM está descartado — a estenose focal isolada não conta como critério diagnóstico",
+      "É necessário biópsia da artéria renal para confirmar o diagnóstico de DFM antes de qualquer conduta"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O consenso de 2019 define que a presença de pelo menos uma lesão arterial FOCAL OU multifocal já é suficiente para o diagnóstico de DFM — o padrão focal (estenose única) é reconhecido como subtipo válido, tipicamente em paciente mais jovem e com pressões mais elevadas que a forma multifocal clássica em colar de contas. Uma vez firmado o diagnóstico em qualquer leito arterial, a recomendação do consenso é obter imagem de todos os vasos do crânio à pelve, porque envolvimento de múltiplos leitos ocorre em mais da metade dos pacientes, e o objetivo é tanto mapear outras áreas de DFM quanto rastrear aneurismas e dissecções ocultos associados. Biópsia não é parte do algoritmo diagnóstico do consenso.",
+    "source_refs": [
+      "Gornik HL, Persu A, Adlam D, et al. First International Consensus on the diagnosis and management of fibromuscular dysplasia. Vasc Med. 2019;24(2):164-189. DOI: 10.1177/1358863X18821816. PMID: 30648921"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cctga-troca-valvar-tricuspide-momento-certo",
+    "titulo": "Transposição corrigida congenitamente: qual o momento certo de trocar a valva tricúspide?",
+    "tema": "Cardiopatias congênitas",
+    "nivel": "avançado",
+    "enunciado": "Homem, 38 anos, ccTGA sem cirurgia prévia de duplo switch, em acompanhamento em centro de cardiopatia congênita do adulto. Assintomático (NYHA I), mas o ecocardiograma seriado mostra dilatação progressiva do ventrículo direito sistêmico nos últimos 2 anos, com fração de ejeção do VD de 44% (função levemente reduzida) e regurgitação tricúspide moderada a grave.",
+    "pergunta": "Segundo a diretriz ESC 2020, qual a conduta mais alinhada com a evidência para este paciente?",
+    "opcoes": [
+      "Manter conduta expectante até que o paciente se torne sintomático, já que a fração de ejeção ainda está acima de 40%",
+      "Troca valvar tricúspide deve ser considerada (Classe IIa) — paciente assintomático, mas com dilatação progressiva do VD e função ainda preservada/levemente reduzida (FE >40%), no ponto em que a indicação cirúrgica ainda é forte",
+      "Troca valvar está contraindicada em paciente assintomático, independentemente da função do VD",
+      "Indicação de troca valvar só se aplica a paciente sintomático — a Classe I é reservada exclusivamente para essa situação"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A diretriz ESC 2020 gradua a troca valvar tricúspide na ccTGA em três cenários por sintoma e função do VD sistêmico: sintomático com FE >40% é Classe I; ASSINTOMÁTICO com dilatação progressiva do VD e/ou disfunção leve (FE >40%) é Classe IIa — exatamente o cenário deste paciente; e sintomático com FE ≤40% cai para Classe IIb, porque o benefício da cirurgia já compete com uma disfunção ventricular que ela não reverte. A lógica clínica central é operar a regurgitação tricúspide grave ANTES que a função do VD sistêmico caia abaixo de 40% — esperar o paciente ficar sintomático, neste caso, seria perder a janela de melhor prognóstico cirúrgico.",
+    "source_refs": [
+      "Baumgartner H, De Backer J, Babu-Narayan SV, et al. 2020 ESC Guidelines for the management of adult congenital heart disease. Eur Heart J. 2021;42(6):563-645. DOI: 10.1093/eurheartj/ehaa554",
+      "van Dissel AC, Opotowsky AR, Burchill LJ, et al. End-stage heart failure in congenitally corrected transposition of the great arteries: a multicentre study. Eur Heart J. 2023;44(34):3278-3291. PMID: 37592821"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "isglt2-cirurgia-eletiva-quando-suspender",
+    "titulo": "Usuária de dapagliflozina antes de cirurgia eletiva: quando suspender?",
+    "tema": "Perioperatório",
+    "nivel": "básico",
+    "enunciado": "Mulher, 64 anos, diabetes tipo 2 e insuficiência cardíaca com fração de ejeção reduzida, em uso de dapagliflozina 10mg/dia. Está agendada para colecistectomia eletiva em 5 dias.",
+    "pergunta": "Qual a conduta correta em relação à dapagliflozina antes da cirurgia?",
+    "opcoes": [
+      "Manter a dapagliflozina até a véspera da cirurgia, sem necessidade de suspensão",
+      "Suspender a dapagliflozina pelo menos 3 dias antes da cirurgia eletiva, pelo risco de cetoacidose diabética euglicêmica perioperatória",
+      "Suspender a dapagliflozina apenas no dia da cirurgia",
+      "Trocar a dapagliflozina por insulina basal 24 horas antes, sem necessidade de suspender previamente"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Dapagliflozina, empagliflozina e canagliflozina devem ser suspensas pelo menos 3 dias antes de cirurgia eletiva (ertugliflozina, 4 dias), pelo risco de cetoacidose diabética euglicêmica perioperatória — quadro em que a glicemia capilar permanece normal ou pouco elevada, o que atrasa o reconhecimento clínico. Um estudo de coorte retrospectivo (Takemura et al., 2025) mostrou incidência de 0,2% de cetoacidose euglicêmica em quem suspendeu o iSGLT2 por ≥3 dias, contra 3,7% em quem não suspendeu nesse prazo (p<0,001) — suspensão ≥3 dias foi fator protetor independente (OR 0,047). Mesmo com a suspensão adequada, o risco não é zero, e vigilância clínica pós-operatória (náusea, dor abdominal, taquipneia) permanece indicada independentemente do valor da glicemia capilar.",
+    "source_refs": [
+      "Preoperative Cessation of SGLT2i. American College of Cardiology, 2022.",
+      "Takemura M, Ikemura K, Okuda M. Factors and preventive strategies for perioperative euglycemic diabetic ketoacidosis in patients with type 2 diabetes receiving sodium-glucose cotransporter 2 inhibitors: a retrospective study. J Pharm Health Care Sci. 2025;11:56. PMID: 40855351"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sincope-ou-crise-convulsiva-mordedura-lingua-mioclonia",
+    "titulo": "Perda transitória da consciência com abalos: síncope ou crise epiléptica?",
+    "tema": "Síncope",
+    "nivel": "intermediário",
+    "enunciado": "Homem, 45 anos, episódio presenciado de perda súbita de consciência após ficar em pé por tempo prolongado em ambiente quente. Testemunha relata poucos abalos musculares irregulares e assimétricos que começaram alguns segundos DEPOIS da queda, mordedura na ponta da língua, e recuperação da consciência com plena orientação em menos de 30 segundos.",
+    "pergunta": "Segundo a Tabela 10 da diretriz ESC 2018 (diferenciação síncope vs. crise epiléptica), qual conjunto de achados está descrito neste caso?",
+    "opcoes": [
+      "Achados típicos de crise epiléptica: mioclonia sincrônica de início simultâneo à perda de consciência e confusão pós-ictal prolongada",
+      "Achados típicos de síncope: mioclonia de início tardio (após a perda de consciência), poucas contrações irregulares e assimétricas, mordedura na ponta da língua, e recuperação rápida com plena orientação",
+      "O quadro é indeterminado — mordedura de língua sempre indica crise epiléptica, independentemente de outros achados",
+      "Face cianótica é o achado mais importante deste caso e por si só confirma síncope"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A Tabela 10 da diretriz ESC 2018 lista como achados que favorecem síncope (não crise epiléptica): mioclonia com menos de 10 contrações, de amplitude irregular, assíncrona e assimétrica, com início APÓS o início da perda de consciência (na crise epiléptica, a mioclonia tem 20-100 contrações síncronas e simétricas, com início coincidindo com a perda de consciência); mordedura na PONTA da língua (na crise epiléptica, tipicamente lateral); e recuperação da consciência em 10-30 segundos com plena orientação (na crise epiléptica, o déficit de memória com perguntas repetidas dura muitos minutos). O gatilho (ortostatismo prolongado em ambiente quente) também favorece síncope reflexa. Mordedura de língua isoladamente não é discriminativa — o local da mordedura (ponta vs. lateral) é que tem valor, e cianose facial é achado de utilidade limitada segundo a própria diretriz, não decisivo isoladamente.",
+    "source_refs": [
+      "Brignole M, Moya A, de Lange FJ, et al. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948. DOI: 10.1093/eurheartj/ehy037, Tabela 10"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "biopotese-mitral-anticoagulacao-primeiros-3-meses",
+    "titulo": "Bioprótese mitral recém-implantada: aspirina ou anticoagulante nos primeiros meses?",
+    "tema": "Valvopatias",
+    "nivel": "básico",
+    "enunciado": "Mulher, 58 anos, submetida a troca valvar mitral por bioprótese há 2 semanas, em ritmo sinusal, sem fibrilação atrial ou outra indicação prévia de anticoagulação oral.",
+    "pergunta": "Segundo a diretriz ESC/EACTS 2021, qual a conduta antitrombótica recomendada para os primeiros 3 meses?",
+    "opcoes": [
+      "Aspirina 75-100 mg/dia isolada, mesma conduta da bioprótese aórtica",
+      "Anticoagulação oral com antagonista de vitamina K deve ser considerada (Classe IIa, Nível B) — diferente da bioprótese aórtica, a posição mitral/tricúspide não tem aspirina como alternativa de mesmo peso",
+      "Nenhum antitrombótico é necessário, já que a paciente está em ritmo sinusal",
+      "Anticoagulante oral direto (DOAC) é a primeira escolha para bioprótese mitral nos primeiros 3 meses"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A diretriz ESC/EACTS 2021 diferencia a recomendação por posição da bioprótese: na posição AÓRTICA, aspirina OU antagonista de vitamina K (AVK) são apresentados como alternativas de mesmo peso (Classe IIa, Nível B) nos primeiros 3 meses. Já na posição MITRAL ou TRICÚSPIDE, a recomendação é especificamente por AVK (Classe IIa, Nível B) — sem aspirina como alternativa de mesmo peso —, refletindo o maior risco trombogênico reconhecido dessas posições. DOAC não tem essa indicação estabelecida nesta diretriz para bioprótese recém-implantada.",
+    "source_refs": [
+      "Vahanian A, Beyersdorf F, Praz F, et al. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "endocardite-avc-isquemico-timing-cirurgico",
+    "titulo": "Endocardite com AVC isquêmico: quando não atrasar a cirurgia?",
+    "tema": "Endocardite",
+    "nivel": "avançado",
+    "enunciado": "Homem, 62 anos, endocardite infecciosa de valva mitral nativa por Staphylococcus aureus, com vegetação de 14mm e insuficiência mitral grave associada a insuficiência cardíaca. Há 3 dias apresentou déficit neurológico focal transitório, totalmente resolvido em poucas horas. TC de crânio sem hemorragia. Paciente alerta, sem coma, Glasgow 15.",
+    "pergunta": "Segundo a Seção 10.4 da diretriz ESC 2023, qual a conduta quanto ao timing cirúrgico?",
+    "opcoes": [
+      "Aguardar pelo menos 4 semanas antes de operar, pelo risco de transformação hemorrágica após qualquer evento neurológico",
+      "Cirurgia sem qualquer atraso — as condições estão preenchidas: insuficiência cardíaca presente, coma ausente, e hemorragia cerebral já excluída por TC de crânio (Classe I, Nível B)",
+      "Aguardar confirmação de que o evento foi realmente um AIT e não um AVC estabelecido antes de decidir qualquer conduta",
+      "Cirurgia contraindicada até 6 meses após qualquer evento neurológico documentado"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A diretriz ESC 2023 recomenda cirurgia sem qualquer atraso após um AVC (Classe I, Nível B) quando há insuficiência cardíaca, infecção não controlada, abscesso ou risco embólico persistentemente alto — DESDE QUE o coma esteja ausente e a hemorragia cerebral já tenha sido excluída por TC ou RM de crânio. Este caso preenche exatamente essas condições: paciente alerta (Glasgow 15, sem coma), TC sem hemorragia, e indicação cirúrgica clara por insuficiência cardíaca associada a insuficiência mitral grave. Após um ataque isquêmico transitório especificamente, a cirurgia também é recomendada sem atraso (Classe I, Nível B) — reforçando a mesma conduta. A condição central da recomendação não é 'o evento foi isquêmico', é a combinação de ausência de coma com hemorragia já descartada por imagem.",
+    "source_refs": [
+      "Delgado V, Ajmone Marsan N, de Waha S, et al. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI: 10.1093/eurheartj/ehad193, Seção 10.4 e Recommendation Table 17"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "massa-incidental-angulo-cardiofrenico-direito-cisto-pericardico",
+    "titulo": "Massa incidental no ângulo cardiofrênico direito: o que fazer?",
+    "tema": "Pericárdio",
+    "nivel": "básico",
+    "enunciado": "Mulher, 45 anos, assintomática, com radiografia de tórax de rotina mostrando opacidade arredondada, bem delimitada, no ângulo cardiofrênico direito. Ecocardiograma confirma estrutura cística adjacente ao coração, sem repercussão hemodinâmica. TC de tórax sem contraste mostra massa única, homogênea, ovoide, de parede fina, sem realce, medindo 3 cm.",
+    "pergunta": "Qual a conduta mais apropriada?",
+    "opcoes": [
+      "Ressecção cirúrgica imediata, pelo risco de malignização do cisto",
+      "Manejo conservador com ecocardiografia seriada de vigilância — a maioria dos cistos pericárdicos é achado incidental, assintomático, e a apresentação de imagem é típica de lesão benigna",
+      "Biópsia percutânea guiada por imagem antes de qualquer decisão de conduta",
+      "Aspiração percutânea imediata, independentemente de sintomas, para confirmação diagnóstica"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Cisto pericárdico é achado incidental em cerca de 75% dos casos, tipicamente no ângulo cardiofrênico direito (51-70% dos casos) — exatamente a localização e a aparência de imagem (massa única, homogênea, ovoide, de parede fina, sem realce à TC sem contraste) descritas neste caso. Em paciente assintomático e estável, a conduta recomendada é manejo conservador com ecocardiografia transtorácica seriada de vigilância, não intervenção reflexa — ressecção cirúrgica e aspiração percutânea ficam reservadas a casos sintomáticos ou em crescimento documentado no seguimento.",
+    "source_refs": [
+      "Khayata M, Alkharabsheh S, Shah NP, Klein AL. Pericardial Cysts: a Contemporary Comprehensive Review. Curr Cardiol Rep. 2019;21(7):64. DOI: 10.1007/s11886-019-1153-5",
+      "Meredith A, Zazai IK, Kyriakopoulos C. Pericardial Cyst. StatPearls [Internet]. Atualizado em 04/01/2023."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "hve-t1-nativo-baixo-doenca-de-fabry-vs-amiloidose",
+    "titulo": "Hipertrofia ventricular com T1 nativo baixo: Fabry ou amiloidose?",
+    "tema": "Cardiomiopatias",
+    "nivel": "avançado",
+    "enunciado": "Homem, 34 anos, hipertrofia ventricular esquerda moderada em ecocardiograma de rotina, sem hipertensão. Refere dor neuropática em extremidades desde a adolescência, angioceratomas em região umbilical e proteinúria leve em exame de urina. RM cardíaca mostra T1 nativo BAIXO, sem o padrão de pseudonormalização, e realce tardio basal-ínfero-lateral.",
+    "pergunta": "Qual a hipótese diagnóstica mais provável e a via de confirmação?",
+    "opcoes": [
+      "Amiloidose cardíaca — solicitar cintilografia com pirofosfato e eletroforese de proteínas séricas/urinárias",
+      "Doença de Anderson-Fabry — confirmar em homem por dosagem de atividade de alfa-galactosidase A e lyso-Gb3",
+      "Cardiomiopatia hipertrófica sarcomérica — solicitar painel genético de genes do sarcômero apenas",
+      "Hipertensão arterial secundária — investigar causas endócrinas de HVE antes de qualquer outro exame"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O conjunto de achados — HVE em homem jovem sem hipertensão, dor neuropática desde a adolescência, angioceratomas, proteinúria e, especialmente, T1 NATIVO BAIXO à RM cardíaca (achado que diferencia Fabry de amiloidose, cujo padrão típico é T1 nativo ELEVADO) — aponta para doença de Anderson-Fabry, não amiloidose. Em homens, o diagnóstico é confirmado por dosagem de atividade de alfa-galactosidase A (α-GalA) e de lyso-Gb3; em mulheres, como a atividade enzimática pode estar normal apesar da doença (inativação variável do X), o diagnóstico geralmente exige teste genético para variantes no gene GLA. Identificar Fabry é clinicamente relevante porque, ao contrário da maioria das fenocópias de cardiomiopatia hipertrófica, existe tratamento etiológico específico (terapia de reposição enzimática com agalsidase alfa/beta, ou migalastat).",
+    "source_refs": [
+      "Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI: 10.1093/eurheartj/ehad194, Seção 7.6.1 e Tabelas 22-23"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "choque-cardiogenico-doenca-multiarterial-quanto-revascularizar",
+    "titulo": "Choque cardiogênico com doença multiarterial: revascularizar tudo no mesmo procedimento?",
+    "tema": "Doença coronariana",
+    "nivel": "avançado",
+    "enunciado": "Homem, 68 anos, IAM com supra de ST e choque cardiogênico (Killip IV), coronariografia mostrando oclusão de artéria descendente anterior (lesão culpada) e lesões significativas adicionais em circunflexa e coronária direita.",
+    "pergunta": "Segundo o ensaio CULPRIT-SHOCK, qual a estratégia de revascularização no procedimento índice associada a melhor desfecho em 30 dias?",
+    "opcoes": [
+      "Revascularização multiarterial imediata de todas as lesões significativas no mesmo procedimento, para minimizar o número de intervenções",
+      "Angioplastia restrita à lesão culpada (descendente anterior), com desfecho composto de morte ou necessidade de terapia renal substitutiva de 45,9% contra 55,4% da estratégia multiarterial imediata (RR 0,83; p=0,01)",
+      "Aguardar estabilização hemodinâmica completa antes de qualquer intervenção coronariana",
+      "Cirurgia de revascularização miocárdica de urgência, evitando angioplastia neste cenário"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O ensaio CULPRIT-SHOCK (706 pacientes com doença multiarterial e choque cardiogênico) mostrou que revascularizar apenas a artéria culpada no procedimento índice é superior à revascularização multiarterial imediata: desfecho composto de morte ou insuficiência renal grave com necessidade de terapia de substituição em 30 dias foi 45,9% na estratégia só-culpada contra 55,4% na multiarterial imediata (RR 0,83; IC95% 0,71-0,96; p=0,01). Importante: esse benefício de mortalidade NÃO se sustentou em 1 ano (50,0% vs. 56,9%, sem significância), e a estratégia só-culpada teve mais revascularização repetida (32,3% vs. 9,4%) e mais reinternação por insuficiência cardíaca (5,2% vs. 1,2%) — a leitura correta é 'adiar o que não é urgente', não abandonar a revascularização das outras lesões indefinidamente.",
+    "source_refs": [
+      "Thiele H, Akin I, Sandri M, Fuernau G, et al. PCI Strategies in Patients with Acute Myocardial Infarction and Cardiogenic Shock. N Engl J Med. 2017;377(25):2419-2432. PMID: 29083953",
+      "Thiele H, Akin I, Sandri M, de Waha-Thiele S, et al. One-Year Outcomes after PCI Strategies in Cardiogenic Shock. N Engl J Med. 2018;379(18):1699-1710. PMID: 30145971"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "angina-persistente-coronarias-normais-anoca-inoca-endotipo",
+    "titulo": "Angina persistente com coronárias angiograficamente normais: e agora?",
+    "tema": "Doença coronariana",
+    "nivel": "avançado",
+    "enunciado": "Mulher, 52 anos, angina típica recorrente, teste não invasivo com resultado inconclusivo. Angiografia coronariana invasiva não mostra lesão obstrutiva. Teste provocativo com acetilcolina realizado no mesmo procedimento reproduz a dor torácica habitual da paciente, com alteração isquêmica ao ECG, mas SEM constrição maior que 90% do calibre da artéria coronária à angiografia.",
+    "pergunta": "Segundo os critérios COVADIS, qual o endótipo mais provável e a implicação terapêutica?",
+    "opcoes": [
+      "Espasmo epicárdico — os três critérios estão presentes, tratamento de primeira linha com antagonista de canal de cálcio",
+      "Espasmo microvascular — apenas dois dos três critérios COVADIS estão presentes (dor reproduzida + alteração isquêmica de ECG, sem constrição epicárdica >90%), o que direciona para tratamento de disfunção microvascular (IECA, ranolazina) em vez de antagonista de cálcio isolado",
+      "Teste negativo — sem lesão obstrutiva e sem constrição >90%, não há indicação de qualquer tratamento anti-isquêmico adicional",
+      "Teste inconclusivo, deve ser repetido antes de qualquer decisão terapêutica"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Os critérios COVADIS para teste de acetilcolina positivo definem espasmo EPICÁRDICO quando os três critérios estão presentes simultaneamente: reprodução da dor torácica habitual, alteração isquêmica ao ECG, e constrição maior que 90% do calibre da artéria coronária à angiografia. Quando apenas os dois primeiros critérios estão presentes (dor + ECG), sem a constrição epicárdica de 90%, a interpretação é de espasmo MICROVASCULAR — endótipo diferente, que direciona para tratamento de disfunção microvascular (IECA, ranolazina) em vez do antagonista de canal de cálcio isolado usado no espasmo epicárdico. A diretriz ESC 2024 recomenda, com Classe I Nível B, que a avaliação funcional invasiva esteja disponível quando o mecanismo da dor torácica permanece incerto após teste não invasivo — exatamente o racional que levou a este teste provocativo.",
+    "source_refs": [
+      "Sucato V, Madaudo C, Galassi AR. The ANOCA/INOCA Dilemma Considering the 2024 ESC Guidelines on Chronic Coronary Syndromes. J Cardiovasc Dev Dis. 2024;11(10):302. DOI: 10.3390/jcdd11100302. PMID: 39452273"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "icfep-ou-icfelp-finerenona-nao-esteroidal-fineartshf",
+    "titulo": "IC com fração de ejeção preservada ou levemente reduzida: finerenona tem lugar aqui?",
+    "tema": "Insuficiência cardíaca",
+    "nivel": "intermediário",
+    "enunciado": "Mulher de 71 anos, hipertensa e com fibrilação atrial paroxística, é acompanhada por insuficiência cardíaca com fração de ejeção de 48%. Já teve duas visitas de urgência por congestão no último ano, atualmente compensada, em uso de diurético e anti-hipertensivos otimizados. O cardiologista assistente considera acrescentar um antagonista mineralocorticoide, mas lembra que a espironolactona tem indicação mais robusta na fração de ejeção reduzida.",
+    "pergunta": "Com base no ensaio FINEARTS-HF, qual das afirmações abaixo está correta sobre o uso de finerenona (antagonista mineralocorticoide não esteroidal) nesta paciente?",
+    "opcoes": [
+      "Finerenona não tem papel na IC com FEVE ≥ 40%, pois os antagonistas mineralocorticoides só demonstraram benefício com FEVE reduzida.",
+      "No FINEARTS-HF, finerenona reduziu significativamente o desfecho composto de eventos totais de piora da IC e morte cardiovascular em pacientes com FEVE ≥ 40% (taxa de eventos por 100 pacientes-ano: razão de taxa 0,84; IC95% 0,74-0,95; p=0,007), com redução isolada dos eventos de piora da IC (razão de taxa 0,82) — é candidata a receber o fármaco.",
+      "Finerenona só deve ser considerada após falha de sacubitril-valsartana e iSGLT2 associados, como quarta linha de tratamento.",
+      "O ensaio mostrou benefício apenas em mortalidade cardiovascular isolada, sem efeito sobre hospitalização por IC."
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O FINEARTS-HF (Solomon SD et al., N Engl J Med 2024) randomizou 6.001 pacientes com IC e FEVE ≥ 40% (a maioria com internação ou visita de urgência recente por IC) para finerenona (até 20 ou 40 mg/dia, conforme a taxa de filtração glomerular) ou placebo, além da terapia habitual. Ao longo de mediana de 32 meses, o desfecho primário (eventos totais de piora da IC — internação ou visita de urgência — mais morte cardiovascular) ocorreu em 1.083 eventos em 624/3.003 pacientes do grupo finerenona vs. 1.283 eventos em 719/2.998 do grupo placebo (razão de taxa 0,84; IC95% 0,74-0,95; p=0,007). Isoladamente, os eventos de piora da IC caíram de 1.024 para 842 (razão de taxa 0,82; IC95% 0,71-0,94; p=0,006); já a mortalidade cardiovascular isolada não atingiu significância (8,7% placebo vs. 8,1% finerenona; HR 0,93; IC95% 0,78-1,11) — ou seja, o benefício do ensaio está concentrado nos eventos de piora clínica, não na mortalidade cardiovascular isolada, o que descarta a alternativa que atribui o efeito só à mortalidade. Finerenona associou-se a mais hipercalemia e menos hipocalemia que placebo, no mesmo padrão de segurança já conhecido de antagonistas mineralocorticoides. O ensaio não testou finerenona como quarta linha condicionada à falha de outros fármacos — ela entrou associada à terapia habitual desde o início, sem essa hierarquia.",
+    "source_refs": [
+      "Solomon SD, McMurray JJV, Vaduganathan M, et al.; FINEARTS-HF Committees and Investigators. Finerenone in Heart Failure with Mildly Reduced or Preserved Ejection Fraction. N Engl J Med. 2024;391(16):1475-1485. DOI: 10.1056/NEJMoa2407107. PMID: 39225278 — NCT04435626, 6.001 pacientes. Financiamento: Bayer."
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "anticoncepcao-em-valvopatia-complicada-por-hipertensao-pulmonar-criterios-oms",
+    "titulo": "Valvopatia mitral com hipertensão pulmonar: qual método contraceptivo é seguro?",
+    "tema": "Gravidez",
+    "nivel": "intermediário",
+    "enunciado": "Mulher de 26 anos, com estenose mitral reumática moderada e hipertensão pulmonar secundária (pressão sistólica de artéria pulmonar estimada em 48 mmHg ao ecocardiograma), procura a cardiologista para discutir contracepção — não deseja gravidez nos próximos anos e hoje não usa nenhum método. Ela pergunta especificamente sobre o adesivo transdérmico combinado, que uma amiga usa sem problemas.",
+    "pergunta": "Segundo os critérios de elegibilidade da OMS adaptados pelo Posicionamento SBC 2020 para doença valvar, qual é a orientação correta?",
+    "opcoes": [
+      "O adesivo combinado é categoria 2 (vantagens superam riscos teóricos) mesmo com hipertensão pulmonar, porque a via transdérmica evita o primeiro passo hepático do estrogênio oral.",
+      "Valvopatia é sempre contraindicação absoluta a qualquer contracepção hormonal, independentemente de complicação associada.",
+      "A valvopatia é classificada como 'complicada' pela presença de hipertensão pulmonar (um dos três marcadores da tabela, junto com risco de fibrilação atrial e endocardite infecciosa prévia) — nessa condição, o método combinado (oral, adesivo, anel ou injetável mensal) é categoria 4 (contraindicação), enquanto progestágeno isolado, DIU de cobre e DIU de levonorgestrel permanecem em categorias 1-2.",
+      "A hipertensão pulmonar só reclassifica o risco de método combinado quando associada a fibrilação atrial confirmada — isoladamente, mantém-se em categoria 2."
+    ],
+    "resposta_correta": 2,
+    "explicacao": "O Posicionamento da Sociedade Brasileira de Cardiologia para Gravidez e Planejamento Familiar na Mulher Portadora de Cardiopatia (Avila WS et al., Arq Bras Cardiol 2020, PMID 32491078), na Tabela 51 (Seção 6.2), divide a doença valvar em duas faixas por presença de complicação — hipertensão pulmonar, risco de fibrilação atrial, ou história de endocardite bacteriana subaguda. Na valvopatia NÃO complicada, o método combinado é categoria 2 (aceitável, vantagens superam riscos teóricos). Assim que qualquer um dos três marcadores de complicação está presente — como nesta paciente, com hipertensão pulmonar documentada por ecocardiograma —, o método combinado salta para categoria 4 (contraindicação absoluta), enquanto progestágeno isolado (oral, injetável trimestral, implante) permanece em categoria 1, e os DIUs de cobre e levonorgestrel em categoria 2. A justificativa fisiopatológica está descrita em outro documento desta mesma pasta sobre o mecanismo trombótico do estrogênio: o etinilestradiol aumenta a síntese hepática de fatores pró-coagulantes, e hipertensão pulmonar já é, por si só, estado de maior risco tromboembólico e de descompensação hemodinâmica — a soma dos dois riscos é o que move a categoria de 2 para 4, não a hipertensão pulmonar isolada nem a via de administração (transdérmica não muda a categoria, ao contrário do que a paciente presume). A conduta correta é orientar método não estrogênico — progestágeno isolado ou DIU — como primeira escolha.",
+    "source_refs": [
+      "Avila WS, Alexandre ERG, Castro ML, Freire CMV, Sette DGB, Sette JB, et al. Brazilian Cardiology Society Statement for Management of Pregnancy and Family Planning in Women with Heart Disease - 2020. Arq Bras Cardiol. 2020;114(5):849-942. PMID: 32491078. Seção 6.2 (Contracepção na Paciente com Doença Cardiovascular), Tabela 51.",
+      "World Health Organization. Medical Eligibility Criteria for Contraceptive Use. 5th ed. Geneva: World Health Organization; 2015 — fonte primária das categorias 1 a 4."
+    ],
+    "review_status": "revisado"
   }
 ]

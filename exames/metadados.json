@@ -5921,5 +5921,180 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "lipoproteina-a-lp-a",
+    "name": "Lipoproteína(a) [Lp(a)]",
+    "category": "laboratorial",
+    "theme": "Prevenção e lipídios",
+    "what_it_measures": "Quantifica no plasma a Lp(a), partícula semelhante ao LDL (uma apoB-100 ligada de forma covalente a uma apolipoproteína(a), homóloga ao plasminogênio) cuja concentração é predominantemente determinada geneticamente (herança codominante, níveis relativamente estáveis ao longo da vida do indivíduo) — ao contrário do LDL, pouco responsiva a mudança de estilo de vida ou à maioria dos hipolipemiantes.",
+    "reference_range": "A Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose – 2025 (SBC) considera risco cardiovascular aumentado com **Lp(a) ≥ 50 mg/dL (ou ≥ 125 nmol/L)**. A diretriz recomenda que o **método preferencial seja o ensaio independente de isoforma, que mede número de partículas em nmol/L** — a dosagem por unidade de massa (mg/dL) deve ser evitada quando o ensaio em nmol/L estiver disponível, porque o tamanho variável da apolipoproteína(a) entre indivíduos torna a conversão entre as duas unidades imprecisa.",
+    "indications": "Dosagem **uma vez na vida** para a população geral, como parte da estratificação de risco cardiovascular (recomendação Forte, certeza Moderada). Prioridade mais alta (Forte, certeza Alta) em populações específicas: doença arterial coronariana precoce, estenose aórtica, hipercolesterolemia familiar, história familiar de doença cardiovascular aterosclerótica precoce ou de Lp(a) aumentada. A diretriz também recomenda investigação em cascata em familiares de portador com Lp(a) ≥ 50 mg/dL.",
+    "interpretation": "Lp(a) elevada é fator de risco causal e independente para doença arterial coronariana, AVC isquêmico e estenose valvar aórtica calcífica — mecanismo atribuído tanto ao componente pró-aterogênico (partícula rica em colesterol, retida na parede arterial) quanto ao componente pró-trombótico/pró-inflamatório (homologia estrutural com o plasminogênio, interferindo na fibrinólise). Por ser determinada geneticamente e estável ao longo da vida, **uma única dosagem normal na vida adulta em geral dispensa repetição**, exceto após terapia especificamente dirigida à Lp(a) (ainda não disponível rotineiramente no Brasil) ou em populações com suspeita de variação secundária relevante.",
+    "limitations": "Não é modificada de forma relevante por estatina, dieta ou a maioria dos demais hipolipemiantes de uso corrente — a elevação da Lp(a), quando encontrada, direciona para intensificar o controle dos demais fatores de risco modificáveis (LDL, pressão arterial, tabagismo), não para uma terapia específica de redução da Lp(a) ainda disponível na prática brasileira. A variabilidade de isoforma da apolipoproteína(a) entre indivíduos faz com que ensaios calibrados por massa (mg/dL) subestimem ou superestimem o risco em quem tem isoformas de tamanho incomum — daí a preferência da diretriz pelo ensaio em nmol/L.",
+    "source_refs": [
+      "Rached FH, Miname MH, Rocha VZ, et al. Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose – 2025. Arq Bras Cardiol. 2025;122(9):e20250640. DOI 10.36660/abc.20250640. PMID 41379178."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "lipoproteina a",
+      "lp(a)",
+      "risco cardiovascular residual",
+      "prevencao primaria",
+      "estenose aortica",
+      "hipercolesterolemia familiar"
+    ]
+  },
+  {
+    "slug": "angiotomografia-de-arterias-pulmonares-no-diagnostico-de-tromboembolismo-pulmonar",
+    "name": "Angiotomografia de artérias pulmonares (CTPA) no diagnóstico de tromboembolismo pulmonar",
+    "category": "imagem",
+    "theme": "Tromboembolismo",
+    "what_it_measures": "Tomografia computadorizada multidetector com contraste iodado endovenoso, sincronizada para opacificar o leito arterial pulmonar — identifica falha de enchimento (trombo) dentro do vaso, define a extensão anatômica da obstrução (do tronco da artéria pulmonar até ramos subsegmentares) e permite avaliar simultaneamente o parênquima pulmonar em busca de diagnóstico alternativo.",
+    "reference_range": "Exame positivo = falha de enchimento intraluminal em artéria pulmonar de qualquer calibre. A diretriz ESC 2019 destaca também um achado quantitativo com valor prognóstico: **razão de diâmetro ventrículo direito/ventrículo esquerdo (VD/VE) ≥ 1,0** na própria angiotomografia diagnóstica, associada a risco cerca de 2,5 vezes maior de mortalidade por todas as causas e cerca de 5 vezes maior de mortalidade relacionada à embolia pulmonar — usada na estratificação de risco do paciente normotenso, sem precisar de exame adicional.",
+    "indications": "Recomendada como **exame de primeira escolha (Classe I) em paciente com alta probabilidade clínica** de TEP. Em paciente com probabilidade clínica baixa a intermediária, entra depois de D-dímero positivo, como teste confirmatório definitivo. Em paciente hemodinamicamente instável, é a opção de imagem quando estiver imediatamente disponível e o paciente puder ser transportado com segurança até a sala de tomografia — senão, o ecocardiograma transtorácico à beira do leito assume esse papel.",
+    "interpretation": "Especificidade elevada (~96%) — um resultado positivo com boa probabilidade clínica pré-teste confirma o diagnóstico sem necessidade de exame adicional. Além de confirmar/excluir TEP, frequentemente revela diagnóstico alternativo para o quadro clínico (pneumonia, derrame pleural, dissecção de aorta, neoplasia) quando o resultado é negativo. Razão VD/VE ≥ 1,0 reclassifica o paciente normotenso para maior risco de desfecho adverso precoce, com peso equivalente ao de outros marcadores de disfunção de ventrículo direito na estratificação da diretriz.",
+    "limitations": "Dose de radiação efetiva de 3-10 mSv, com exposição mamária relevante — motivo pelo qual a cintilografia V/Q costuma ser preferida na gestante quando a radiografia de tórax é normal. Exige função renal adequada e ausência de contraindicação ao contraste iodado (nesses casos, a cintilografia de ventilação/perfusão é a alternativa). Trombo subsegmentar isolado, achado incidental cada vez mais comum com tomógrafos de alta resolução, tem significado clínico incerto e concordância interobservador baixa — a diretriz orienta correlacionar sempre com a probabilidade clínica antes de tratar.",
+    "source_refs": [
+      "Konstantinides SV, Meyer G, Becattini C, et al. 2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism developed in collaboration with the European Respiratory Society (ERS). Eur Heart J. 2020;41(4):543-603. DOI 10.1093/eurheartj/ehz405. PMID 31504429."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "angiotomografia",
+      "ctpa",
+      "tromboembolismo pulmonar",
+      "embolia pulmonar",
+      "razao vd/ve",
+      "diagnostico"
+    ]
+  },
+  {
+    "slug": "estudo-eletrofisiologico-invasivo",
+    "name": "Estudo eletrofisiológico (EEF) invasivo",
+    "category": "metodo_grafico",
+    "theme": "Arritmias",
+    "what_it_measures": "Registro intracardíaco de eletrogramas por cateteres posicionados em átrio direito, região do feixe de His, ventrículo direito e, quando necessário, seio coronário, com estimulação elétrica programada para medir tempos de condução (intervalos AH e HV), identificar o substrato de bradi ou taquiarritmia e tentar induzir a arritmia clínica sob monitorização controlada — é exame funcional do sistema de condução e do circuito arrítmico, não um exame de imagem.",
+    "reference_range": "Intervalo HV (condução do feixe de His ao músculo ventricular) normal costuma estar entre 35 e 55 ms; a Diretriz da SBC sobre Cardiomiopatia da Doença de Chagas – 2023 usa dois cortes com peso terapêutico direto nessa população: **HV > 70 ms com sintoma** e **HV > 100 ms mesmo assintomático** — os dois indicam marca-passo por bloqueio intra ou infra-hissiano iminente (recomendação Forte, Nível C nos dois cortes).",
+    "indications": "Investigação de síncope ou pré-síncope inquestionável com suspeita de bradi ou taquiarritmia, **quando os exames não invasivos (ECG, Holter, monitor de eventos) foram inconclusivos** — na cardiomiopatia chagásica, essa indicação é recomendação Forte, Nível B (Diretriz SBC 2023). Também indicado no diagnóstico diferencial de taquicardia de QRS largo quando a origem (supraventricular com aberrância vs. ventricular) permanece incerta após o ECG de superfície, e no planejamento pré-ablação por radiofrequência de taquiarritmia documentada, mapeando o circuito antes da queima.",
+    "interpretation": "Indução de taquicardia ventricular sustentada monomórfica ao EEF em paciente com cardiopatia estrutural e sintoma sugestivo tem peso diagnóstico e, a depender da tolerância hemodinâmica da arritmia induzida e da fração de ejeção, orienta diretamente a decisão entre ablação por cateter e terapia farmacológica (amiodarona) — a mesma diretriz de Chagas cadastra essa bifurcação como duas recomendações Ponderadas distintas, conforme a TV induzida seja bem ou mal tolerada. Já a estimulação ventricular programada **não deve ser usada para estratificar risco de morte súbita em canalopatias como a taquicardia ventricular polimórfica catecolaminérgica (CPVT)** — nessas doenças, o substrato é funcional/elétrico, não estrutural, e o EEF tem baixo valor preditivo.",
+    "limitations": "É procedimento invasivo, com os riscos inerentes ao acesso vascular e à manipulação intracardíaca (sangramento, perfuração, arritmia induzida não desejada). Resultado negativo (não indução de arritmia) não exclui definitivamente doença arrítmica, sobretudo em substratos com baixa reprodutibilidade de indução — por isso a diretriz de Chagas o reserva para depois de exames não invasivos inconclusivos, e não como primeira linha. Interpretação exige correlação com o quadro clínico e a cardiopatia de base; o mesmo intervalo HV alargado tem peso diagnóstico diferente conforme a etiologia (chagásica, isquêmica, degenerativa).",
+    "source_refs": [
+      "Marin-Neto JA, Rassi A Jr, Oliveira GMM, et al. Diretriz da SBC sobre Diagnóstico e Tratamento de Pacientes com Cardiomiopatia da Doença de Chagas – 2023. Arq Bras Cardiol. 2023;120(6):e20230269. DOI 10.36660/abc.20230269. PMID 37377258. PMCID PMC10344417 (acesso aberto). Tabela 6.1.",
+      "Priori SG, Blomström-Lundqvist C, Mazzanti A, et al. 2015 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2015;36(41):2793-2867 — base da recomendação Classe III contra estimulação ventricular programada na estratificação de risco de CPVT."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "estudo eletrofisiologico",
+      "eef",
+      "intervalo hv",
+      "sincope",
+      "taquicardia ventricular",
+      "ablacao"
+    ]
+  },
+  {
+    "slug": "cateter-de-arteria-pulmonar-swan-ganz-na-monitorizacao-hemodinamica-do-choque",
+    "name": "Cateter de artéria pulmonar (Swan-Ganz) na monitorização hemodinâmica do choque",
+    "category": "metodo_grafico",
+    "theme": "Terapia intensiva",
+    "what_it_measures": "Cateter de balão flutuante, inserido por via venosa central e guiado pelo próprio fluxo sanguíneo até se alojar em ramo da artéria pulmonar. Mede diretamente pressão de átrio direito, pressão de artéria pulmonar (sistólica, diastólica e média) e, por oclusão temporária do balão, a pressão capilar pulmonar (estimativa da pressão de enchimento do átrio esquerdo). Permite calcular débito cardíaco (termodiluição), resistência vascular sistêmica e pulmonar, e saturação venosa mista de oxigênio — o conjunto de dados usado para classificar o fenótipo hemodinâmico do choque (congesto vs. seco, quente vs. frio) e os estágios SCAI.",
+    "reference_range": "Valores hemodinâmicos normais de referência: pressão de átrio direito 2-6 mmHg; pressão sistólica de artéria pulmonar 15-30 mmHg; pressão diastólica de artéria pulmonar 4-12 mmHg; pressão capilar pulmonar (encunhamento) 6-12 mmHg; índice cardíaco ≥ 2,2 L/min/m². No choque cardiogênico, índice cardíaco < 2,2 L/min/m² associado a pressão capilar pulmonar elevada (> 15-18 mmHg) caracteriza o padrão hemodinâmico clássico de baixo débito com congestão.",
+    "indications": "Não é rotina na insuficiência cardíaca descompensada sem choque — o ensaio randomizado ESCAPE (Binanay C et al., JAMA 2005;294(13):1625-1633, PMID 16204662) não mostrou benefício de desfecho ao acrescentar o cateter à avaliação clínica nessa população, com mais eventos adversos no grupo monitorizado (21,9% vs. 11,5%; p=0,04). No choque cardiogênico propriamente dito, o uso é defensável quando a informação hemodinâmica for efetivamente mudar a decisão clínica: distinguir fenótipo de choque, titular vasoativo por alvo hemodinâmico, ou decidir e monitorizar suporte circulatório mecânico e candidatura a transplante — a justificativa está na decisão que o dado vai alterar, não no dado isolado.",
+    "interpretation": "Dados observacionais contemporâneos (metanálise de estudos observacionais e de registro, 14 estudos, 789.553 pacientes: Ortega-Hernández JA et al., Shock. 2026;65(4):648-659, PMID 41894663) mostram associação entre uso do cateter e menor mortalidade (OR 0,70; IC95% 0,63-0,78) — **mas com heterogeneidade acima de 90% e viés de publicação documentado**, compatível com confusão por indicação (quem recebe o cateter já está numa via de cuidado mais intensiva, com acesso a suporte circulatório mecânico). Não há ensaio randomizado em choque cardiogênico franco que resolva essa divergência entre o dado randomizado (neutro, mas de outra população) e o observacional (favorável, mas sujeito a viés). A classificação de estágio SCAI do choque cardiogênico complementa a leitura hemodinâmica do cateter com achados clínicos e laboratoriais.",
+    "limitations": "Procedimento invasivo com risco de complicação mecânica na inserção (pneumotórax, arritmia, perfuração), infecção relacionada a cateter e, raramente, ruptura de artéria pulmonar. A pressão capilar pulmonar é uma estimativa indireta da pressão de enchimento do átrio esquerdo, sujeita a erro técnico (posicionamento, ventilação mecânica com PEEP alto, valvopatia mitral). O valor do exame depende inteiramente de a equipe interpretar corretamente o dado e agir sobre ele — um cateter bem posicionado com dado ignorado não beneficia ninguém, e é essa dependência de processo que ajuda a explicar por que o dado randomizado disponível (ESCAPE) foi neutro.",
+    "source_refs": [
+      "Binanay C, Califf RM, Hasselblad V, et al. Evaluation study of congestive heart failure and pulmonary artery catheterization effectiveness: the ESCAPE trial. JAMA. 2005;294(13):1625-1633. PMID 16204662.",
+      "Ortega-Hernández JA, Chacon-Lozsan FJ, Baldetti L, et al. Pulmonary Artery Catheter Monitoring in Cardiogenic Shock: A Systematic Review and Meta-Analysis. Shock. 2026;65(4):648-659. DOI 10.1097/SHK.0000000000002784. PMID 41894663.",
+      "Documento relacionado nesta biblioteca: content/Terapia_intensiva/cateter-de-arteria-pulmonar-no-choque-cardiogenico-escape-e-o-limite-do-dado-observacional.md"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "cateter de artéria pulmonar",
+      "swan-ganz",
+      "choque cardiogênico",
+      "monitorização hemodinâmica",
+      "pressão capilar pulmonar",
+      "escape"
+    ]
+  },
+  {
+    "slug": "ecocardiograma-transtoracico-probabilidade-de-hipertensao-pulmonar-pela-velocidade-de-regurgitacao-tricuspide",
+    "name": "Ecocardiograma transtorácico — probabilidade de hipertensão pulmonar pela velocidade de regurgitação tricúspide (VRT)",
+    "category": "imagem",
+    "theme": "Hipertensão pulmonar",
+    "what_it_measures": "Estima de forma não invasiva a pressão sistólica de artéria pulmonar a partir da velocidade de pico do jato de regurgitação tricúspide ao Doppler contínuo (equação de Bernoulli simplificada, somada à pressão estimada de átrio direito) — é o exame de triagem inicial diante da suspeita clínica de hipertensão pulmonar, e não substitui o cateterismo cardíaco direito para confirmação diagnóstica.",
+    "reference_range": "A diretriz ESC/ERS 2022 mantém o corte de **VRT > 2,8 m/s** para probabilidade ecocardiográfica aumentada de hipertensão pulmonar, mesmo após a redefinição hemodinâmica do diagnóstico (pressão média de artéria pulmonar > 20 mmHg em repouso). A classificação combina a VRT com sinais ecocardiográficos adicionais de três categorias (A — morfologia/função do ventrículo direito, incluindo razão VD/VE > 1,0 e tempo de aceleração do fluxo de via de saída do VD; B — artéria pulmonar, incluindo diâmetro > 25 mm e regurgitação pulmonar diastólica precoce > 2,2 m/s; C — veia cava inferior e átrio direito, incluindo diâmetro da cava e colapso inspiratório reduzido) — **sinais de pelo menos duas categorias diferentes (A/B/C) precisam estar presentes para alterar o nível de probabilidade** para cima ou para baixo do que a VRT isolada sugeriria.",
+    "indications": "Primeiro exame diante de sintoma sugestivo de hipertensão pulmonar (dispneia aos esforços desproporcional, síncope, sinais de insuficiência de câmaras direitas) ou como rastreio em populações de risco (esclerose sistêmica, história familiar de hipertensão arterial pulmonar hereditária, avaliação pré-operatória de transplante hepático). Resultado de probabilidade intermediária ou alta, em contexto clínico compatível, indica encaminhamento para cateterismo cardíaco direito confirmatório.",
+    "interpretation": "Probabilidade ecocardiográfica **baixa**: VRT ≤ 2,8 m/s (ou não mensurável) sem sinais adicionais — hipertensão pulmonar pouco provável, mas não totalmente excluída se a suspeita clínica for alta. Probabilidade **intermediária**: VRT ≤ 2,8 m/s com sinais adicionais de outras categorias, ou VRT entre 2,9 e 3,4 m/s. Probabilidade **alta**: VRT > 3,4 m/s, ou VRT entre 2,9 e 3,4 m/s associada a sinais adicionais. A decisão de investigar com cateterismo direito integra essa probabilidade ecocardiográfica ao quadro clínico — não é regra automática baseada só no número.",
+    "limitations": "A VRT pode ser subestimada por janela acústica inadequada ou jato de regurgitação tricúspide de baixa velocidade tecnicamente difícil de alinhar ao Doppler, e superestimada em alto débito cardíaco (anemia grave, hipertireoidismo, shunt) sem elevação real da resistência vascular pulmonar. A estimativa da pressão de átrio direito (necessária para o cálculo) tem variabilidade interobservador. Por todas essas razões, o ecocardiograma **estabelece probabilidade, não diagnóstico definitivo** — a confirmação hemodinâmica pelo cateterismo cardíaco direito continua sendo o padrão-ouro.",
+    "source_refs": [
+      "Humbert M, Kovacs G, Hoeper MM, et al. 2022 ESC/ERS Guidelines for the diagnosis and treatment of pulmonary hypertension. Eur Heart J. 2022;43(38):3618-3731. PMID 36017548."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ecocardiograma",
+      "hipertensão pulmonar",
+      "regurgitação tricúspide",
+      "psap",
+      "rastreio",
+      "esc/ers 2022"
+    ]
+  },
+  {
+    "slug": "ressonancia-magnetica-cardiaca-com-realce-tardio-na-avaliacao-etiologica-da-insuficiencia-cardiaca",
+    "name": "Ressonância magnética cardíaca com realce tardio na avaliação etiológica da insuficiência cardíaca",
+    "category": "imagem",
+    "theme": "Insuficiência cardíaca",
+    "what_it_measures": "Administra gadolínio intravenoso e adquire imagens 10-15 minutos depois — o contraste lava mais lentamente de áreas de fibrose/cicatriz miocárdica (espaço extracelular expandido) que do miocárdio normal, aparecendo como hipersinal (\"realce tardio\"). O padrão espacial de distribuição do realce é o dado central: subendocárdico ou transmural, respeitando território coronariano, aponta origem isquêmica; mesocárdico ou subepicárdico, sem respeitar território de artéria coronária, aponta origem não isquêmica (miocardite, sarcoidose, cardiomiopatia dilatada não isquêmica, doença de Chagas, entre outras).",
+    "reference_range": "Ausência de realce tardio é o padrão de normalidade. A diretriz brasileira de TC e RM Cardiovascular da SBC (2024) classifica a detecção de infarto agudo e crônico pelo realce tardio como **Classe I, Nível A**, e o diagnóstico diferencial entre etiologia isquêmica e não isquêmica pelo padrão de distribuição como **Classe I, Nível B** — é a distinção que redireciona toda a investigação subsequente (coronariografia vs. rastreio de doença infiltrativa/inflamatória).",
+    "indications": "A diretriz ESC 2023 de cardiomiopatias recomenda ressonância com contraste **na avaliação inicial de todo paciente com cardiomiopatia** (Classe I, Nível B) — não é exame de exceção ou de segunda linha, precisamente porque a caracterização tecidual muda a hipótese etiológica e o realce tardio pesa na estratificação de risco. Na cardiomiopatia dilatada especificamente, a diretriz japonesa JCS/JHFS 2018 recomenda considerar o realce tardio tanto para diferenciar etiologia isquêmica de não isquêmica (Classe IIa, Nível B) quanto para predizer eventos arrítmicos, mortalidade e probabilidade de recuperação funcional (Classe IIa, Nível C).",
+    "interpretation": "Além de apontar etiologia, a extensão e o padrão do realce tardio têm valor prognóstico independente: presença de realce mesocárdico em cardiomiopatia dilatada associa-se a maior risco arrítmico e menor probabilidade de recuperação da fração de ejeção sob tratamento otimizado, informação usada para discutir indicação de cardiodesfibrilador em casos limítrofes de fração de ejeção. Ausência completa de realce, com fração de ejeção reduzida, sugere maior chance de resposta e de reversibilidade sob terapia guiada por diretriz.",
+    "limitations": "Exige gadolínio intravenoso — contraindicado ou usado com cautela em disfunção renal grave (risco de fibrose sistêmica nefrogênica com agentes lineares mais antigos; agentes macrocíclicos atuais têm risco muito menor, mas a triagem de função renal permanece rotina). Não é acessível em todos os serviços e exige paciente cooperativo com pausas respiratórias repetidas — arritmia importante ou claustrofobia grave podem inviabilizar a aquisição de qualidade diagnóstica. Realce tardio identifica fibrose macroscópica; fibrose intersticial difusa, mais precoce, é melhor avaliada por mapeamento de T1 nativo/volume extracelular, técnica complementar e não substituta.",
+    "source_refs": [
+      "Arbelo E, Protonotarios A, Gimeno JR, et al. 2023 ESC Guidelines for the management of cardiomyopathies. Eur Heart J. 2023;44(37):3503-3626. DOI 10.1093/eurheartj/ehad194.",
+      "Magalhães TA, Carneiro ACC, Moreira VM, Trad HS, et al. Diretriz de Tomografia Computadorizada e Ressonância Magnética Cardiovascular da Sociedade Brasileira de Cardiologia – 2024. Arq Bras Cardiol. 2024;121(9):e20240608. DOI 10.36660/abc.20240608. PMID 39475988.",
+      "Kitaoka H, Tsutsui H, Kubo T, et al. JCS/JHFS 2018 Guideline on the Diagnosis and Treatment of Cardiomyopathies. Circ J. 2021;85(9):1590-1689. DOI 10.1253/circj.CJ-20-0910. PMID 34305070."
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "ressonância magnética cardíaca",
+      "realce tardio",
+      "insuficiência cardíaca",
+      "cardiomiopatia",
+      "avaliação etiológica",
+      "prognóstico"
+    ]
+  },
+  {
+    "slug": "perfil-lipidico-colesterol-total-ldl-hdl-e-triglicerideos",
+    "name": "Perfil lipídico (colesterol total, LDL-C, HDL-C e triglicerídeos)",
+    "category": "laboratorial",
+    "theme": "Prevenção e lipídios",
+    "what_it_measures": "Painel bioquímico sérico que mede colesterol total, HDL-colesterol (HDL-C) e triglicerídeos diretamente; o LDL-colesterol (LDL-C) é tradicionalmente calculado pela fórmula de Friedewald (LDL-C = CT − HDL-C − TG/5, em mg/dL), que perde precisão com triglicerídeos >400 mg/dL — nesses casos, métodos diretos de dosagem de LDL-C ou a fórmula de Martin/Hopkins (que usa um fator ajustável em vez do divisor fixo 5) são preferíveis. É o exame de base para estimar o risco cardiovascular aterosclerótico e para guiar e monitorizar a terapia hipolipemiante.",
+    "reference_range": "A diretriz ESC/EAS não define um valor único de \"normalidade\" populacional para o LDL-C — a meta é escalonada pela categoria de risco cardiovascular total do paciente: baixo risco <116 mg/dL; risco moderado <100 mg/dL; alto risco <70 mg/dL e redução ≥50% do valor basal; muito alto risco <55 mg/dL e redução ≥50% do valor basal; risco extremo (evento cardiovascular recorrente em até 2 anos, em uso de estatina em dose máxima tolerada) <40 mg/dL. Triglicerídeos >200 mg/dL (>2,3 mmol/L) em paciente de alto risco (ou risco maior) já indicam considerar estatina como fármaco de primeira escolha, mesmo antes de se avaliar terapia específica para hipertrigliceridemia.",
+    "indications": "Rastreio de risco cardiovascular em adultos (ao menos uma vez, e periodicamente conforme o risco basal); diagnóstico e classificação de dislipidemia (hipercolesterolemia, hipertrigliceridemia, dislipidemia mista); acompanhamento de resposta e adesão à terapia hipolipemiante (estatina, ezetimiba, inibidor de PCSK9); investigação inicial de hipercolesterolemia familiar quando LDL-C muito elevado (>190 mg/dL) sem outra causa evidente.",
+    "interpretation": "A diretriz ESC/EAS aceita a coleta sem jejum para a avaliação inicial na maioria dos pacientes; a Diretriz Brasileira de Dislipidemias 2025 reafirma essa orientação (recomendação Forte, certeza Moderada), com a ressalva de que, se os triglicerídeos vierem >440 mg/dL em amostra sem jejum, deve-se colher nova amostra em jejum de 12 horas para melhor caracterização. O LDL-C calculado (Friedewald) é o parâmetro mais usado na prática para decisão terapêutica e definição de meta, mas torna-se não confiável com triglicerídeos muito elevados — cenário em que medir o LDL-C diretamente ou usar a apolipoproteína B (mais estável nesse contexto) é preferível.",
+    "limitations": "O cálculo de Friedewald subestima o LDL-C quando os triglicerídeos estão elevados e não é válido acima de 400 mg/dL de triglicerídeos, nem na presença de quilomicronemia; variação biológica intraindividual (dieta recente, doença aguda intercorrente, gestação) pode alterar temporariamente os valores — dosagem em vigência de doença aguda grave (incluindo síndrome coronariana aguda recente) tende a subestimar o LDL-C basal do paciente.",
+    "source_refs": [
+      "Mach F, Baigent C, Catapano AL, et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188. DOI: 10.1093/eurheartj/ehz455. PMID: 31504418",
+      "Mach F, Koskinas KC, Roeters van Lennep JE, et al. 2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias. Eur Heart J. 2025;46(42):4359-4378. DOI: 10.1093/eurheartj/ehaf190. PMID: 40878289 — Tabela de categorias de risco cardiovascular e metas de LDL-C"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "perfil lipidico",
+      "colesterol total",
+      "ldl",
+      "hdl",
+      "triglicerideos",
+      "friedewald",
+      "rastreio cardiovascular"
+    ]
   }
 ]

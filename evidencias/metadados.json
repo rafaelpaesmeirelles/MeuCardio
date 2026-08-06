@@ -32350,5 +32350,1586 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "marca-passo-definitivo-doenca-do-no-sinusal-sintomatica-documentada",
+    "statement": "Implante de marca-passo definitivo é recomendado na doença do nó sinusal (bradicardia sinusal, pausa/parada sinusal, bloqueio sinoatrial ou síndrome bradi-taquicardia) espontânea, sem causa passível de tratamento ou induzida por fármaco necessário e insubstituível, com documentação de sintomas (síncope, pré-síncope, tontura ou cansaço/fadiga) relacionados à bradicardia.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2023,
+    "guideline_title": "Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023",
+    "reference": "Teixeira RA et al. Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023. Arq Bras Cardiol. 2023;120(1):e20220892.",
+    "theme": "Dispositivos",
+    "tags": [
+      "marca-passo",
+      "doença do nó sinusal",
+      "bradicardia sinusal",
+      "dispositivo cardíaco implantável"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cdi-prevencao-primaria-cardiopatia-isquemica-cronica-feve-35-ou-menos",
+    "statement": "CDI é recomendado em pacientes com história de infarto agudo do miocárdio há mais de 40 dias ou cardiopatia isquêmica crônica, sob tratamento farmacológico ótimo, sem isquemia miocárdica passível de tratamento por revascularização cirúrgica ou percutânea e expectativa de vida de pelo menos 1 ano, que apresentem FEVE ≤35% e classe funcional II-III, ou FEVE ≤30% e classe funcional I, II ou III.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2023,
+    "guideline_title": "Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023",
+    "reference": "Teixeira RA et al. Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023. Arq Bras Cardiol. 2023;120(1):e20220892.",
+    "theme": "Dispositivos",
+    "tags": [
+      "cdi",
+      "prevenção primária",
+      "cardiopatia isquêmica",
+      "morte súbita",
+      "dispositivo cardíaco implantável"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cdi-nao-indicado-infarto-recente-menos-de-40-dias-ou-com-indicacao-de-revascularizacao",
+    "statement": "CDI não é indicado em pacientes com infarto agudo do miocárdio com menos de 40 dias de evolução, ou que tenham indicação de revascularização miocárdica pendente.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2023,
+    "guideline_title": "Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023",
+    "reference": "Teixeira RA et al. Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023. Arq Bras Cardiol. 2023;120(1):e20220892.",
+    "theme": "Dispositivos",
+    "tags": [
+      "cdi",
+      "prevenção primária",
+      "infarto do miocárdio",
+      "revascularização",
+      "dispositivo cardíaco implantável"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cdi-prevencao-primaria-cardiomiopatia-nao-isquemica-feve-35-ou-menos",
+    "statement": "CDI é recomendado em pacientes com cardiomiopatia não isquêmica, FEVE ≤35%, tratamento clínico otimizado, classe funcional NYHA II-III e expectativa de vida maior que 1 ano.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2023,
+    "guideline_title": "Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023",
+    "reference": "Teixeira RA et al. Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023. Arq Bras Cardiol. 2023;120(1):e20220892.",
+    "theme": "Dispositivos",
+    "tags": [
+      "cdi",
+      "prevenção primária",
+      "cardiomiopatia não isquêmica",
+      "dispositivo cardíaco implantável"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "remocao-completa-do-dcei-em-infeccao-confirmada",
+    "statement": "Remoção completa do sistema (marca-passo, CDI ou ressincronizador) é recomendada em pacientes com infecção relacionada ao dispositivo cardíaco eletrônico implantável (DCEI), sistêmica ou local, confirmada.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2023,
+    "guideline_title": "Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023",
+    "reference": "Teixeira RA et al. Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023. Arq Bras Cardiol. 2023;120(1):e20220892.",
+    "theme": "Dispositivos",
+    "tags": [
+      "dispositivo cardíaco implantável",
+      "infecção",
+      "explante",
+      "endocardite de dispositivo"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "remocao-do-dcei-em-bacteremia-por-staphylococcus-aureus-ou-candida",
+    "statement": "Remoção completa do dispositivo cardíaco eletrônico implantável (DCEI) é recomendada nos casos de bacteremia por Staphylococcus aureus, estafilococo coagulase-negativo, Cutibacterium spp. ou fungemia por Candida spp., afastados outros sítios de infecção.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2023,
+    "guideline_title": "Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023",
+    "reference": "Teixeira RA et al. Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023. Arq Bras Cardiol. 2023;120(1):e20220892.",
+    "theme": "Dispositivos",
+    "tags": [
+      "dispositivo cardíaco implantável",
+      "bacteremia",
+      "staphylococcus aureus",
+      "candida",
+      "explante"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "eletrocauterio-bipolar-preferencial-e-magneto-sobre-a-loja-do-cdi",
+    "statement": "Em cirurgia com uso de eletrocautério em portador de dispositivo cardíaco eletrônico implantável (DCEI), deve-se usar preferencialmente o eletrocautério bipolar (a eletrocirurgia monopolar pode provocar anormalidades no dispositivo); no paciente com CDI não dependente de marca-passo, a aplicação do magneto sobre a loja do CDI pode ser feita com segurança para desabilitar as terapias de taquiarritmia e evitar choques inapropriados.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2023,
+    "guideline_title": "Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023",
+    "reference": "Teixeira RA et al. Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023. Arq Bras Cardiol. 2023;120(1):e20220892.",
+    "theme": "Dispositivos",
+    "tags": [
+      "dispositivo cardíaco implantável",
+      "eletrocautério",
+      "cirurgia",
+      "interferência eletromagnética",
+      "cdi"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ressonancia-magnetica-em-dispositivo-condicional-exige-modo-rm-e-fluxo-padronizado",
+    "statement": "Dispositivos cardíacos eletrônicos implantáveis (DCEI) condicionais para ressonância magnética (RM) só devem ser considerados seguros para o exame quando a especificação do produto for respeitada — incluindo a programação do \"modo RM\" apropriado — e a RM deve sempre ser realizada em fluxo de trabalho institucional padronizado e rigorosamente aplicado, com ECG e oximetria de pulso monitorizados até o fim da observação do paciente.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2023,
+    "guideline_title": "Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023",
+    "reference": "Teixeira RA et al. Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023. Arq Bras Cardiol. 2023;120(1):e20220892.",
+    "theme": "Dispositivos",
+    "tags": [
+      "dispositivo cardíaco implantável",
+      "ressonância magnética",
+      "modo rm",
+      "interferência eletromagnética"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "avaliacao-do-dcei-antes-e-apos-radioterapia-nao-produtora-de-neutrons-preferencial",
+    "statement": "Antes de iniciar radioterapia em portador de dispositivo cardíaco eletrônico implantável (DCEI), deve-se realizar avaliação completa do dispositivo e informar a equipe responsável (tipo de dispositivo, dependência de estimulação, frequências programadas); tratamento radioterápico que não produz nêutrons é preferível ao que produz nêutrons, pelo menor risco de disfunção do dispositivo (como reset do gerador), e a avaliação completa do DCEI deve ser repetida semanalmente durante radioterapia produtora de nêutrons e ao término do curso de tratamento.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2023,
+    "guideline_title": "Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023",
+    "reference": "Teixeira RA et al. Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023. Arq Bras Cardiol. 2023;120(1):e20220892.",
+    "theme": "Dispositivos",
+    "tags": [
+      "dispositivo cardíaco implantável",
+      "radioterapia",
+      "interferência eletromagnética",
+      "nêutrons"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "reposicionamento-do-dcei-nao-recomendado-com-dose-cumulativa-abaixo-de-5-gy",
+    "statement": "O reposicionamento cirúrgico do dispositivo cardíaco eletrônico implantável (DCEI) para fora do campo de radioterapia não é recomendado quando a dose cumulativa de radiação recebida pelo dispositivo é inferior a 5 Gy.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2023,
+    "guideline_title": "Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023",
+    "reference": "Teixeira RA et al. Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023. Arq Bras Cardiol. 2023;120(1):e20220892.",
+    "theme": "Dispositivos",
+    "tags": [
+      "dispositivo cardíaco implantável",
+      "radioterapia",
+      "reposicionamento",
+      "interferência eletromagnética"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "diagnostico-de-fibrilacao-atrial-exige-documentacao-eletrocardiografica",
+    "statement": "A documentação eletrocardiográfica é necessária para o diagnóstico de fibrilação atrial (FA). O diagnóstico de FA clínica deve ser realizado pelo eletrocardiograma de 12 derivações ou traçado de derivação única com ausência de onda P e irregularidade RR por, no mínimo, 30 segundos de duração.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2025,
+    "guideline_title": "Brazilian Atrial Fibrillation Guidelines - 2025",
+    "reference": "Cintra FD, Pisani CF, Rezende AGDS, et al. Brazilian Atrial Fibrillation Guidelines - 2025. Arq Bras Cardiol. 2025;122(9):e20250618. DOI: 10.36660/abc.20250618. PMID: 41294177. PMCID: PMC13400077 — texto integral aberto, lido e conferido nesta sessão via efetch XML do PMC.",
+    "theme": "Fibrilação atrial",
+    "tags": [
+      "fibrilação atrial",
+      "diagnóstico",
+      "eletrocardiograma",
+      "diretriz brasileira"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cha2ds2-va-deve-ser-usado-em-todos-os-pacientes-com-fibrilacao-atrial",
+    "statement": "O escore CHA2DS2-VA (sem o componente de sexo feminino, substituindo o antigo CHA2DS2-VASc) deve ser empregado em todos os pacientes com fibrilação atrial para estimar risco tromboembólico.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2025,
+    "guideline_title": "Brazilian Atrial Fibrillation Guidelines - 2025",
+    "reference": "Cintra FD, Pisani CF, Rezende AGDS, et al. Brazilian Atrial Fibrillation Guidelines - 2025. Arq Bras Cardiol. 2025;122(9):e20250618. DOI: 10.36660/abc.20250618. PMID: 41294177. PMCID: PMC13400077 — texto integral aberto, lido e conferido nesta sessão via efetch XML do PMC.",
+    "theme": "Fibrilação atrial",
+    "tags": [
+      "fibrilação atrial",
+      "cha2ds2-va",
+      "risco tromboembólico",
+      "diretriz brasileira"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "terapia-antitrombotica-recomendada-com-cha2ds2-va-2-ou-mais",
+    "statement": "Em pacientes com fibrilação atrial e escore CHA2DS2-VA ≥2, é recomendada a terapia antitrombótica para prevenção de fenômenos tromboembólicos. Pacientes de baixo risco, com CHA2DS2-VA = 0, não têm indicação para terapia antitrombótica.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2025,
+    "guideline_title": "Brazilian Atrial Fibrillation Guidelines - 2025",
+    "reference": "Cintra FD, Pisani CF, Rezende AGDS, et al. Brazilian Atrial Fibrillation Guidelines - 2025. Arq Bras Cardiol. 2025;122(9):e20250618. DOI: 10.36660/abc.20250618. PMID: 41294177. PMCID: PMC13400077 — texto integral aberto, lido e conferido nesta sessão via efetch XML do PMC.",
+    "theme": "Fibrilação atrial",
+    "tags": [
+      "fibrilação atrial",
+      "cha2ds2-va",
+      "anticoagulação",
+      "diretriz brasileira"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "anticoagulacao-oral-independente-de-escore-em-cmh-amiloidose-e-hipertireoidismo",
+    "statement": "Anticoagulação oral é recomendada para todos os pacientes com fibrilação atrial e cardiomiopatia hipertrófica, amiloidose cardíaca ou hipertireoidismo, independentemente do escore CHA2DS2-VA, para prevenção de eventos embólicos.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2025,
+    "guideline_title": "Brazilian Atrial Fibrillation Guidelines - 2025",
+    "reference": "Cintra FD, Pisani CF, Rezende AGDS, et al. Brazilian Atrial Fibrillation Guidelines - 2025. Arq Bras Cardiol. 2025;122(9):e20250618. DOI: 10.36660/abc.20250618. PMID: 41294177. PMCID: PMC13400077 — texto integral aberto, lido e conferido nesta sessão via efetch XML do PMC.",
+    "theme": "Fibrilação atrial",
+    "tags": [
+      "fibrilação atrial",
+      "cardiomiopatia hipertrófica",
+      "amiloidose cardíaca",
+      "hipertireoidismo",
+      "anticoagulação",
+      "diretriz brasileira"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "acod-preferiveis-a-varfarina-exceto-valva-mecanica-ou-estenose-mitral",
+    "statement": "Em pacientes com fibrilação atrial elegíveis a terapia antitrombótica, os anticoagulantes orais de ação direta (ACOD) são preferíveis aos antagonistas da vitamina K, exceto em pacientes com válvula cardíaca mecânica ou estenose mitral moderada a grave.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2025,
+    "guideline_title": "Brazilian Atrial Fibrillation Guidelines - 2025",
+    "reference": "Cintra FD, Pisani CF, Rezende AGDS, et al. Brazilian Atrial Fibrillation Guidelines - 2025. Arq Bras Cardiol. 2025;122(9):e20250618. DOI: 10.36660/abc.20250618. PMID: 41294177. PMCID: PMC13400077 — texto integral aberto, lido e conferido nesta sessão via efetch XML do PMC.",
+    "theme": "Fibrilação atrial",
+    "tags": [
+      "fibrilação atrial",
+      "acod",
+      "varfarina",
+      "anticoagulação",
+      "diretriz brasileira"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "antiagregante-plaquetario-isolado-nao-recomendado-para-prevencao-tromboembolica-na-fa",
+    "statement": "Terapia com antiagregantes plaquetários isolados ou em combinação não é recomendada para prevenção de fenômenos tromboembólicos em pacientes com fibrilação atrial.",
+    "recommendation_class": "III",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2025,
+    "guideline_title": "Brazilian Atrial Fibrillation Guidelines - 2025",
+    "reference": "Cintra FD, Pisani CF, Rezende AGDS, et al. Brazilian Atrial Fibrillation Guidelines - 2025. Arq Bras Cardiol. 2025;122(9):e20250618. DOI: 10.36660/abc.20250618. PMID: 41294177. PMCID: PMC13400077 — texto integral aberto, lido e conferido nesta sessão via efetch XML do PMC.",
+    "theme": "Fibrilação atrial",
+    "tags": [
+      "fibrilação atrial",
+      "antiagregante plaquetário",
+      "anticoagulação",
+      "diretriz brasileira"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cardioversao-eletiva-eletrica-exige-3-semanas-de-anticoagulacao-previa",
+    "statement": "A cardioversão elétrica em paciente com fibrilação atrial de duração superior a 24 horas deve ser realizada após anticoagulação por, no mínimo, 3 semanas com antagonista da vitamina K ou ACOD, mantida por pelo menos 4 semanas após o procedimento. O uso do ecocardiograma transesofágico é recomendado como alternativa à anticoagulação oral prévia de 3 semanas.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2025,
+    "guideline_title": "Brazilian Atrial Fibrillation Guidelines - 2025",
+    "reference": "Cintra FD, Pisani CF, Rezende AGDS, et al. Brazilian Atrial Fibrillation Guidelines - 2025. Arq Bras Cardiol. 2025;122(9):e20250618. DOI: 10.36660/abc.20250618. PMID: 41294177. PMCID: PMC13400077 — texto integral aberto, lido e conferido nesta sessão via efetch XML do PMC.",
+    "theme": "Fibrilação atrial",
+    "tags": [
+      "fibrilação atrial",
+      "cardioversão elétrica",
+      "anticoagulação",
+      "ecocardiograma transesofágico",
+      "diretriz brasileira"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "varfarina-e-o-farmaco-de-escolha-na-fibrilacao-atrial-com-valva-mecanica",
+    "statement": "Em pacientes com fibrilação atrial e próteses valvares mecânicas, a varfarina é o fármaco de escolha; os anticoagulantes orais de ação direta são contraindicados nessa população.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2025,
+    "guideline_title": "Brazilian Atrial Fibrillation Guidelines - 2025",
+    "reference": "Cintra FD, Pisani CF, Rezende AGDS, et al. Brazilian Atrial Fibrillation Guidelines - 2025. Arq Bras Cardiol. 2025;122(9):e20250618. DOI: 10.36660/abc.20250618. PMID: 41294177. PMCID: PMC13400077 — texto integral aberto, lido e conferido nesta sessão via efetch XML do PMC.",
+    "theme": "Fibrilação atrial",
+    "tags": [
+      "fibrilação atrial",
+      "prótese valvar mecânica",
+      "varfarina",
+      "acod contraindicado",
+      "diretriz brasileira"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "varfarina-preferida-na-fa-com-estenose-mitral-moderada-a-grave",
+    "statement": "Em pacientes com fibrilação atrial e estenose mitral moderada a grave, a varfarina é o fármaco de escolha para anticoagulação; os anticoagulantes orais de ação direta são contraindicados nessa população.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2025,
+    "guideline_title": "Brazilian Atrial Fibrillation Guidelines - 2025",
+    "reference": "Cintra FD, Pisani CF, Rezende AGDS, et al. Brazilian Atrial Fibrillation Guidelines - 2025. Arq Bras Cardiol. 2025;122(9):e20250618. DOI: 10.36660/abc.20250618. PMID: 41294177. PMCID: PMC13400077 — texto integral aberto, lido e conferido nesta sessão via efetch XML do PMC.",
+    "theme": "Fibrilação atrial",
+    "tags": [
+      "fibrilação atrial",
+      "estenose mitral",
+      "varfarina",
+      "acod contraindicado",
+      "diretriz brasileira"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "oclusao-cirurgica-do-apendice-atrial-esquerdo-em-cirurgia-cardiaca-com-fa",
+    "statement": "A indicação de fechamento ou exclusão cirúrgica do apêndice atrial esquerdo (AAE) deve ser considerada em pacientes com fibrilação atrial submetidos à cirurgia cardíaca.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2025,
+    "guideline_title": "Brazilian Atrial Fibrillation Guidelines - 2025",
+    "reference": "Cintra FD, Pisani CF, Rezende AGDS, et al. Brazilian Atrial Fibrillation Guidelines - 2025. Arq Bras Cardiol. 2025;122(9):e20250618. DOI: 10.36660/abc.20250618. PMID: 41294177. PMCID: PMC13400077 — texto integral aberto, lido e conferido nesta sessão via efetch XML do PMC.",
+    "theme": "Fibrilação atrial",
+    "tags": [
+      "fibrilação atrial",
+      "apêndice atrial esquerdo",
+      "cirurgia cardíaca",
+      "diretriz brasileira"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "oclusao-percutanea-do-apendice-atrial-esquerdo-em-alto-risco-e-contraindicacao-a-anticoagulacao",
+    "statement": "A indicação de fechamento ou exclusão percutânea do apêndice atrial esquerdo (AAE) deve ser considerada em pacientes com fibrilação atrial de alto risco tromboembólico e contraindicação absoluta ou falha da terapia anticoagulante.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2025,
+    "guideline_title": "Brazilian Atrial Fibrillation Guidelines - 2025",
+    "reference": "Cintra FD, Pisani CF, Rezende AGDS, et al. Brazilian Atrial Fibrillation Guidelines - 2025. Arq Bras Cardiol. 2025;122(9):e20250618. DOI: 10.36660/abc.20250618. PMID: 41294177. PMCID: PMC13400077 — texto integral aberto, lido e conferido nesta sessão via efetch XML do PMC.",
+    "theme": "Fibrilação atrial",
+    "tags": [
+      "fibrilação atrial",
+      "apêndice atrial esquerdo",
+      "oclusão percutânea",
+      "diretriz brasileira"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "controle-de-ritmo-como-estrategia-preferencial-no-tratamento-da-fibrilacao-atrial",
+    "statement": "O controle do ritmo está recomendado como estratégia de tratamento preferencial na fibrilação atrial. A estratégia de controle de frequência cardíaca pode ser utilizada em pacientes assintomáticos ou com baixa probabilidade de manutenção do ritmo sinusal.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2025,
+    "guideline_title": "Brazilian Atrial Fibrillation Guidelines - 2025",
+    "reference": "Cintra FD, Pisani CF, Rezende AGDS, et al. Brazilian Atrial Fibrillation Guidelines - 2025. Arq Bras Cardiol. 2025;122(9):e20250618. DOI: 10.36660/abc.20250618. PMID: 41294177. PMCID: PMC13400077 — texto integral aberto, lido e conferido nesta sessão via efetch XML do PMC.",
+    "theme": "Fibrilação atrial",
+    "tags": [
+      "fibrilação atrial",
+      "controle de ritmo",
+      "controle de frequência",
+      "diretriz brasileira"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "tep-tratamento-domiciliar-em-baixo-risco-com-acesso-garantido-a-saude",
+    "statement": "Sugerimos tratamento domiciliar (ambulatorial) para pacientes com diagnóstico de tromboembolismo pulmonar (TEP) agudo de baixo risco e que tenham acesso garantido a serviços de saúde. Diretriz em metodologia GRADE (Associação Médica Brasileira/Sociedade Brasileira de Pneumologia e Tisiologia). recommendation_class usa Forte/Cond (força da recomendação); evidence_level usa Alta/Mod/Baixa/MtBx (qualidade da evidência) — vocabulário GRADE, não o sistema Classe/Nível da ESC.",
+    "recommendation_class": "Cond",
+    "evidence_level": "MtBx",
+    "society": "Brazilian Thoracic Association",
+    "year": 2025,
+    "guideline_title": "Brazilian guidelines for the pharmacological treatment of pulmonary embolism (Brazilian Thoracic Association, GRADE)",
+    "reference": "Amado VM, Fernandes CJCDS, Salibe-Filho W, et al. Brazilian guidelines for the pharmacological treatment of pulmonary embolism. Official document of the Brazilian Thoracic Association based on the GRADE methodology. J Bras Pneumol. 2025;51(2):e20240314. DOI: 10.36416/1806-3756/e20240314. PMID: 40531728. PMCID: PMC12401105 — texto integral aberto, lido e conferido nesta sessão via efetch XML do PMC, Tabela de recomendações (Summary of recommendations for the pharmacological treatment of patients with acute pulmonary embolism).",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "tromboembolismo pulmonar",
+      "tratamento domiciliar",
+      "baixo risco",
+      "grade",
+      "diretriz brasileira"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "tep-em-cancer-acod-preferido-sobre-heparina-de-baixo-peso-molecular",
+    "statement": "Sugerimos tratamento com anticoagulantes orais de ação direta (ACOD) em vez de heparina de baixo peso molecular em pacientes com tromboembolismo pulmonar (TEP) diagnosticados com câncer. Diretriz em metodologia GRADE (Associação Médica Brasileira/Sociedade Brasileira de Pneumologia e Tisiologia). recommendation_class usa Forte/Cond (força da recomendação); evidence_level usa Alta/Mod/Baixa/MtBx (qualidade da evidência) — vocabulário GRADE, não o sistema Classe/Nível da ESC.",
+    "recommendation_class": "Cond",
+    "evidence_level": "Baixa",
+    "society": "Brazilian Thoracic Association",
+    "year": 2025,
+    "guideline_title": "Brazilian guidelines for the pharmacological treatment of pulmonary embolism (Brazilian Thoracic Association, GRADE)",
+    "reference": "Amado VM, Fernandes CJCDS, Salibe-Filho W, et al. Brazilian guidelines for the pharmacological treatment of pulmonary embolism. Official document of the Brazilian Thoracic Association based on the GRADE methodology. J Bras Pneumol. 2025;51(2):e20240314. DOI: 10.36416/1806-3756/e20240314. PMID: 40531728. PMCID: PMC12401105 — texto integral aberto, lido e conferido nesta sessão via efetch XML do PMC, Tabela de recomendações (Summary of recommendations for the pharmacological treatment of patients with acute pulmonary embolism).",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "tromboembolismo pulmonar",
+      "câncer",
+      "acod",
+      "heparina de baixo peso molecular",
+      "grade",
+      "diretriz brasileira"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "tep-nao-provocado-anticoagulacao-estendida-com-acod-apos-3-a-6-meses",
+    "statement": "Recomendamos tratamento com ACOD por pelo menos 3-6 meses adicionais (anticoagulação estendida) para pacientes diagnosticados com tromboembolismo pulmonar (TEP) não provocado que já completaram, no mínimo, 3 meses de anticoagulação. Diretriz em metodologia GRADE (Associação Médica Brasileira/Sociedade Brasileira de Pneumologia e Tisiologia). recommendation_class usa Forte/Cond (força da recomendação); evidence_level usa Alta/Mod/Baixa/MtBx (qualidade da evidência) — vocabulário GRADE, não o sistema Classe/Nível da ESC.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Alta",
+    "society": "Brazilian Thoracic Association",
+    "year": 2025,
+    "guideline_title": "Brazilian guidelines for the pharmacological treatment of pulmonary embolism (Brazilian Thoracic Association, GRADE)",
+    "reference": "Amado VM, Fernandes CJCDS, Salibe-Filho W, et al. Brazilian guidelines for the pharmacological treatment of pulmonary embolism. Official document of the Brazilian Thoracic Association based on the GRADE methodology. J Bras Pneumol. 2025;51(2):e20240314. DOI: 10.36416/1806-3756/e20240314. PMID: 40531728. PMCID: PMC12401105 — texto integral aberto, lido e conferido nesta sessão via efetch XML do PMC, Tabela de recomendações (Summary of recommendations for the pharmacological treatment of patients with acute pulmonary embolism).",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "tromboembolismo pulmonar",
+      "tep não provocado",
+      "anticoagulação estendida",
+      "acod",
+      "grade",
+      "diretriz brasileira"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "tep-acod-recomendado-por-3-a-6-meses-em-todos-os-estratos-de-risco-apos-estabilizacao",
+    "statement": "Recomendamos tratamento com ACOD por pelo menos 3-6 meses em vez de anticoagulação convencional (heparina de baixo peso molecular ou não fracionada, seguida de varfarina) em pacientes diagnosticados com tromboembolismo pulmonar (TEP) de baixo risco, risco intermediário, risco intermediário-alto após estabilização, ou alto risco após reperfusão e estabilização. Diretriz em metodologia GRADE (Associação Médica Brasileira/Sociedade Brasileira de Pneumologia e Tisiologia). recommendation_class usa Forte/Cond (força da recomendação); evidence_level usa Alta/Mod/Baixa/MtBx (qualidade da evidência) — vocabulário GRADE, não o sistema Classe/Nível da ESC.",
+    "recommendation_class": "Forte",
+    "evidence_level": "Mod",
+    "society": "Brazilian Thoracic Association",
+    "year": 2025,
+    "guideline_title": "Brazilian guidelines for the pharmacological treatment of pulmonary embolism (Brazilian Thoracic Association, GRADE)",
+    "reference": "Amado VM, Fernandes CJCDS, Salibe-Filho W, et al. Brazilian guidelines for the pharmacological treatment of pulmonary embolism. Official document of the Brazilian Thoracic Association based on the GRADE methodology. J Bras Pneumol. 2025;51(2):e20240314. DOI: 10.36416/1806-3756/e20240314. PMID: 40531728. PMCID: PMC12401105 — texto integral aberto, lido e conferido nesta sessão via efetch XML do PMC, Tabela de recomendações (Summary of recommendations for the pharmacological treatment of patients with acute pulmonary embolism).",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "tromboembolismo pulmonar",
+      "acod",
+      "anticoagulação",
+      "grade",
+      "diretriz brasileira"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "tep-risco-intermediario-alto-trombolise-sistemica-nao-sugerida-de-rotina",
+    "statement": "Sugerimos NÃO utilizar trombólise farmacológica sistêmica de rotina, em vez de anticoagulação isolada (heparina de baixo peso molecular ou não fracionada), em pacientes com tromboembolismo pulmonar (TEP) de risco intermediário-alto. Diretriz em metodologia GRADE (Associação Médica Brasileira/Sociedade Brasileira de Pneumologia e Tisiologia). recommendation_class usa Forte/Cond (força da recomendação); evidence_level usa Alta/Mod/Baixa/MtBx (qualidade da evidência) — vocabulário GRADE, não o sistema Classe/Nível da ESC.",
+    "recommendation_class": "Cond",
+    "evidence_level": "Mod",
+    "society": "Brazilian Thoracic Association",
+    "year": 2025,
+    "guideline_title": "Brazilian guidelines for the pharmacological treatment of pulmonary embolism (Brazilian Thoracic Association, GRADE)",
+    "reference": "Amado VM, Fernandes CJCDS, Salibe-Filho W, et al. Brazilian guidelines for the pharmacological treatment of pulmonary embolism. Official document of the Brazilian Thoracic Association based on the GRADE methodology. J Bras Pneumol. 2025;51(2):e20240314. DOI: 10.36416/1806-3756/e20240314. PMID: 40531728. PMCID: PMC12401105 — texto integral aberto, lido e conferido nesta sessão via efetch XML do PMC, Tabela de recomendações (Summary of recommendations for the pharmacological treatment of patients with acute pulmonary embolism).",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "tromboembolismo pulmonar",
+      "trombólise sistêmica",
+      "risco intermediário-alto",
+      "grade",
+      "diretriz brasileira"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "tep-alto-risco-trombolise-sistemica-sugerida",
+    "statement": "Sugerimos trombólise farmacológica sistêmica, em vez de anticoagulação isolada (heparina de baixo peso molecular ou não fracionada), em pacientes com tromboembolismo pulmonar (TEP) de alto risco. Diretriz em metodologia GRADE (Associação Médica Brasileira/Sociedade Brasileira de Pneumologia e Tisiologia). recommendation_class usa Forte/Cond (força da recomendação); evidence_level usa Alta/Mod/Baixa/MtBx (qualidade da evidência) — vocabulário GRADE, não o sistema Classe/Nível da ESC.",
+    "recommendation_class": "Cond",
+    "evidence_level": "MtBx",
+    "society": "Brazilian Thoracic Association",
+    "year": 2025,
+    "guideline_title": "Brazilian guidelines for the pharmacological treatment of pulmonary embolism (Brazilian Thoracic Association, GRADE)",
+    "reference": "Amado VM, Fernandes CJCDS, Salibe-Filho W, et al. Brazilian guidelines for the pharmacological treatment of pulmonary embolism. Official document of the Brazilian Thoracic Association based on the GRADE methodology. J Bras Pneumol. 2025;51(2):e20240314. DOI: 10.36416/1806-3756/e20240314. PMID: 40531728. PMCID: PMC12401105 — texto integral aberto, lido e conferido nesta sessão via efetch XML do PMC, Tabela de recomendações (Summary of recommendations for the pharmacological treatment of patients with acute pulmonary embolism).",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "tromboembolismo pulmonar",
+      "trombólise sistêmica",
+      "alto risco",
+      "grade",
+      "diretriz brasileira"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "confirmacao-diagnostica-de-hipertensao-com-medida-fora-do-consultorio",
+    "statement": "Em indivíduos com risco cardiovascular aumentado cuja pressão arterial de consultório está entre 120-139/70-89 mmHg, é recomendado medir a pressão arterial fora do consultório, com MAPA e/ou MRPA — ou, quando isso não for logisticamente viável, com medidas repetidas de consultório em mais de uma visita — antes de confirmar o diagnóstico.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+    "reference": "McEvoy JW, Touyz RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "diagnóstico",
+      "mapa",
+      "mrpa",
+      "has 2024"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "tratamento-farmacologico-apos-3-meses-de-estilo-de-vida-em-pa-elevada-de-alto-risco",
+    "statement": "Em adultos com pressão arterial elevada (120-139/70-89 mmHg) e risco cardiovascular suficientemente alto, após 3 meses de intervenção no estilo de vida, o tratamento farmacológico é recomendado para reduzir o risco cardiovascular quando a pressão arterial confirmada permanecer ≥130/80 mmHg.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+    "reference": "McEvoy JW, Touyz RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "pa elevada",
+      "tratamento farmacológico",
+      "has 2024"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "tratamento-imediato-na-hipertensao-confirmada-independente-do-risco",
+    "statement": "Em pacientes hipertensos com pressão arterial confirmada ≥140/90 mmHg, é recomendado iniciar prontamente medidas de estilo de vida e tratamento farmacológico anti-hipertensivo para reduzir o risco cardiovascular, independentemente da categoria de risco cardiovascular.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+    "reference": "McEvoy JW, Touyz RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "início de tratamento",
+      "has 2024"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "manutencao-vitalicia-do-anti-hipertensivo-mesmo-apos-os-85-anos",
+    "statement": "É recomendado manter o tratamento anti-hipertensivo por toda a vida, mesmo além dos 85 anos de idade, desde que bem tolerado.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+    "reference": "McEvoy JW, Touyz RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "idoso",
+      "adesão",
+      "has 2024"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "adiamento-do-inicio-do-anti-hipertensivo-no-idoso-fragil-ou-com-hipotensao-ortostatica",
+    "statement": "Como o benefício em reduzir desfechos cardiovasculares é incerto nesses cenários e é aconselhado monitoramento próximo da tolerância ao tratamento, o início do tratamento anti-hipertensivo deve ser considerado somente a partir de ≥140/90 mmHg em pacientes com hipotensão ortostática sintomática pré-tratamento, idade ≥85 anos, fragilidade moderada a grave clinicamente significativa, e/ou expectativa de vida limitada (<3 anos).",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+    "reference": "McEvoy JW, Touyz RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "idoso frágil",
+      "hipotensão ortostática",
+      "has 2024"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "ecg-de-12-derivacoes-para-todo-paciente-hipertenso",
+    "statement": "Um eletrocardiograma de 12 derivações é recomendado para todos os pacientes com hipertensão, como rastreio de lesão de órgão-alvo cardíaca.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+    "reference": "McEvoy JW, Touyz RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "ecg",
+      "lesão de órgão-alvo",
+      "has 2024"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "ecocardiograma-no-hipertenso-com-ecg-anormal-ou-sintomas-cardiacos",
+    "statement": "A ecocardiografia é recomendada em pacientes com hipertensão quando o eletrocardiograma é anormal, há sopros detectados, ou existem sintomas cardíacos.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+    "reference": "McEvoy JW, Touyz RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "ecocardiograma",
+      "lesão de órgão-alvo",
+      "has 2024"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "encaminhamento-da-hipertensao-resistente-a-centro-especializado",
+    "statement": "Pacientes com hipertensão resistente devem ser considerados para encaminhamento a centros clínicos com expertise em manejo de hipertensão, para investigação adicional.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+    "reference": "McEvoy JW, Touyz RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão resistente",
+      "encaminhamento",
+      "has 2024"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "denervacao-renal-por-cateter-pode-ser-considerada-na-hipertensao-resistente",
+    "statement": "Para reduzir a pressão arterial, e se realizada em centro de médio a alto volume, a denervação renal por cateter pode ser considerada em pacientes com hipertensão resistente cuja pressão arterial permaneça descontrolada apesar de combinação de três fármacos anti-hipertensivos (incluindo um diurético tiazídico ou similar), e que expressem preferência por se submeter ao procedimento após discussão compartilhada de risco-benefício e avaliação multidisciplinar.",
+    "recommendation_class": "IIb",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+    "reference": "McEvoy JW, Touyz RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão resistente",
+      "denervação renal",
+      "dispositivo",
+      "has 2024"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "denervacao-renal-nao-e-recomendada-como-primeira-linha",
+    "statement": "Pela falta de estudos de desfecho adequadamente dimensionados demonstrando segurança e benefício cardiovascular, a denervação renal não é recomendada como intervenção de primeira linha para redução da pressão arterial na hipertensão.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+    "reference": "McEvoy JW, Touyz RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão",
+      "denervação renal",
+      "não recomendado",
+      "has 2024"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "denervacao-renal-contraindicada-em-doenca-renal-avancada-ou-causa-secundaria",
+    "statement": "A denervação renal não é recomendada para tratar hipertensão em pacientes com função renal moderada a gravemente comprometida (TFGe <40 mL/min/1,73m²) ou com causas secundárias de hipertensão, até que evidências adicionais estejam disponíveis.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+    "reference": "McEvoy JW, Touyz RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715.",
+    "theme": "Hipertensão",
+    "tags": [
+      "hipertensão secundária",
+      "denervação renal",
+      "doença renal crônica",
+      "has 2024"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "primeira-linha-farmacologica-na-hipertensao-ieca-bra-bcc-diuretico",
+    "statement": "Entre todos os fármacos anti-hipertensivos, IECA, BRA, bloqueadores de canal de cálcio diidropiridínicos e diuréticos (tiazídicos e similares, como clortalidona e indapamida) demonstraram a redução mais efetiva de pressão arterial e de eventos cardiovasculares, sendo por isso recomendados como tratamento de primeira linha.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+    "reference": "McEvoy JW, Touyz RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715.",
+    "theme": "Farmacologia",
+    "tags": [
+      "hipertensão",
+      "ieca",
+      "bra",
+      "bloqueador de canal de cálcio",
+      "diurético",
+      "primeira linha"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "betabloqueador-combinado-por-indicacao-compelente-na-hipertensao",
+    "statement": "É recomendado combinar betabloqueador com qualquer uma das outras classes principais de anti-hipertensivos quando há indicação convincente para seu uso — por exemplo angina, pós-infarto do miocárdio, insuficiência cardíaca com fração de ejeção reduzida, ou necessidade de controle de frequência cardíaca.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+    "reference": "McEvoy JW, Touyz RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715.",
+    "theme": "Farmacologia",
+    "tags": [
+      "betabloqueador",
+      "hipertensão",
+      "indicação compelente"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "espironolactona-como-quarto-farmaco-na-hipertensao-resistente",
+    "statement": "Se a pressão arterial não for controlada com combinação de três fármacos, a adição de espironolactona deve ser considerada como quarto agente.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+    "reference": "McEvoy JW, Touyz RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715.",
+    "theme": "Farmacologia",
+    "tags": [
+      "espironolactona",
+      "hipertensão resistente",
+      "quarto fármaco"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "eplerenona-no-lugar-da-espironolactona-quando-nao-tolerada",
+    "statement": "Se a pressão arterial não for controlada com combinação de três fármacos e a espironolactona não for eficaz ou não for tolerada, tratamento com eplerenona no lugar da espironolactona — ou a adição de um betabloqueador (se ainda não indicado por outro motivo), e em seguida um fármaco de ação central, um alfabloqueador, hidralazina ou um diurético poupador de potássio — deve ser considerado.",
+    "recommendation_class": "IIa",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+    "reference": "McEvoy JW, Touyz RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715.",
+    "theme": "Farmacologia",
+    "tags": [
+      "eplerenona",
+      "espironolactona",
+      "hipertensão resistente",
+      "escalonamento"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "combinacao-de-dois-bloqueadores-do-sraa-nao-e-recomendada",
+    "statement": "Combinar dois bloqueadores do sistema renina-angiotensina-aldosterona (um inibidor da ECA e um bloqueador do receptor de angiotensina) não é recomendado.",
+    "recommendation_class": "III",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2024,
+    "guideline_title": "2024 ESC Guidelines for the management of elevated blood pressure and hypertension",
+    "reference": "McEvoy JW, Touyz RM, et al. 2024 ESC Guidelines for the management of elevated blood pressure and hypertension. Eur Heart J. 2024;45(38):3912-4018. DOI: 10.1093/eurheartj/ehae178. PMID: 39210715.",
+    "theme": "Farmacologia",
+    "tags": [
+      "ieca",
+      "bra",
+      "duplo bloqueio do sraa",
+      "não recomendado"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "betabloqueador-nao-seletivo-em-todo-paciente-com-cpvt",
+    "statement": "Betabloqueadores, idealmente não seletivos (nadolol ou propranolol), são recomendados em todos os pacientes com diagnóstico clínico de taquicardia ventricular polimórfica catecolaminérgica (CPVT).",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+    "theme": "Farmacologia",
+    "tags": [
+      "betabloqueador",
+      "cpvt",
+      "nadolol",
+      "propranolol"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "betabloqueador-no-qt-longo-com-prolongamento-documentado",
+    "statement": "Betabloqueadores, idealmente não seletivos (nadolol ou propranolol), são recomendados em pacientes com síndrome do QT longo e prolongamento documentado do intervalo QT, para reduzir o risco de eventos arrítmicos.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+    "theme": "Farmacologia",
+    "tags": [
+      "betabloqueador",
+      "síndrome do qt longo",
+      "nadolol",
+      "propranolol"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "mexiletina-no-qt-longo-tipo-3-com-qt-prolongado",
+    "statement": "Mexiletina é indicada em pacientes com síndrome do QT longo tipo 3 (LQT3) que apresentam intervalo QT prolongado.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+    "theme": "Farmacologia",
+    "tags": [
+      "mexiletina",
+      "síndrome do qt longo",
+      "lqt3"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "evitar-farmacos-que-induzem-supra-de-st-nas-derivacoes-precordiais-direitas-na-brugada",
+    "statement": "Em todos os pacientes com síndrome de Brugada, é recomendado evitar fármacos que possam induzir elevação do segmento ST nas derivações precordiais direitas, além de evitar cocaína, cannabis e consumo excessivo de álcool, e tratar febre com antipiréticos.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+    "theme": "Farmacologia",
+    "tags": [
+      "síndrome de brugada",
+      "fármacos a evitar",
+      "brugadadrugs"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "brs-diagnostico-por-padrao-espontaneo-tipo-1",
+    "statement": "É recomendado diagnosticar síndrome de Brugada em pacientes sem outra cardiopatia que apresentem padrão eletrocardiográfico tipo 1 de Brugada espontâneo.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+    "theme": "Arritmias",
+    "tags": [
+      "síndrome de brugada",
+      "diagnóstico",
+      "padrão tipo 1"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "brs-diagnostico-por-teste-de-bloqueador-de-canal-de-sodio-ou-febre-em-sobrevivente-de-pcr",
+    "statement": "É recomendado diagnosticar síndrome de Brugada em pacientes sem outra cardiopatia que sobreviveram a uma parada cardíaca por fibrilação ventricular ou taquicardia ventricular polimórfica e que apresentem padrão eletrocardiográfico tipo 1 de Brugada induzido por teste de bloqueador de canal de sódio ou durante febre.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+    "theme": "Arritmias",
+    "tags": [
+      "síndrome de brugada",
+      "diagnóstico",
+      "teste farmacológico",
+      "parada cardíaca"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "brs-teste-genetico-scn5a-para-probandos",
+    "statement": "O teste genético para o gene SCN5A é recomendado para probandos com síndrome de Brugada.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+    "theme": "Arritmias",
+    "tags": [
+      "síndrome de brugada",
+      "teste genético",
+      "scn5a"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "brs-teste-de-bloqueador-de-sodio-contraindicado-com-padrao-tipo-1-previo",
+    "statement": "O teste de bloqueador de canal de sódio não é recomendado em pacientes que já apresentam padrão eletrocardiográfico tipo 1 de Brugada prévio.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+    "theme": "Arritmias",
+    "tags": [
+      "síndrome de brugada",
+      "teste farmacológico",
+      "não recomendado"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "brs-cdi-em-sobrevivente-de-pcr-ou-com-tv-sustentada-documentada",
+    "statement": "O implante de CDI é recomendado em pacientes com síndrome de Brugada que são sobreviventes de parada cardíaca abortada e/ou têm taquicardia ventricular sustentada documentada.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+    "theme": "Arritmias",
+    "tags": [
+      "síndrome de brugada",
+      "cdi",
+      "parada cardíaca",
+      "morte súbita"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "brs-ablacao-nao-recomendada-em-assintomatico",
+    "statement": "A ablação por cateter em pacientes com síndrome de Brugada assintomáticos não é recomendada.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+    "theme": "Arritmias",
+    "tags": [
+      "síndrome de brugada",
+      "ablação",
+      "assintomático",
+      "não recomendado"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "lqts-criterios-diagnosticos",
+    "statement": "É recomendado diagnosticar síndrome do QT longo (LQTS) na presença de QTc ≥480 ms em ECGs de 12 derivações repetidos (com ou sem sintomas), de escore diagnóstico de LQTS >3, ou de mutação patogênica, independentemente da duração do QT.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+    "theme": "Arritmias",
+    "tags": [
+      "síndrome do qt longo",
+      "diagnóstico",
+      "qtc"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "lqts-teste-genetico-e-aconselhamento-genetico",
+    "statement": "Em pacientes com diagnóstico clínico de síndrome do QT longo, o teste genético e o aconselhamento genético são recomendados.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+    "theme": "Arritmias",
+    "tags": [
+      "síndrome do qt longo",
+      "teste genético",
+      "aconselhamento genético"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "lqts-cdi-associado-a-betabloqueador-apos-parada-cardiaca",
+    "statement": "O implante de CDI associado a betabloqueador é recomendado em pacientes com síndrome do QT longo que sofreram parada cardíaca.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+    "theme": "Arritmias",
+    "tags": [
+      "síndrome do qt longo",
+      "cdi",
+      "parada cardíaca"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "lqts-cdi-em-sintomatico-apesar-de-betabloqueador-e-terapia-genotipo-especifica",
+    "statement": "O implante de CDI é recomendado em pacientes com síndrome do QT longo que permanecem sintomáticos apesar de betabloqueador e terapias genótipo-específicas.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+    "theme": "Arritmias",
+    "tags": [
+      "síndrome do qt longo",
+      "cdi",
+      "sintomático",
+      "terapia genótipo-específica"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cpvt-criterios-diagnosticos",
+    "statement": "É recomendado diagnosticar taquicardia ventricular polimórfica catecolaminérgica (CPVT) na presença de coração estruturalmente normal, ECG normal, e taquicardia ventricular bidirecional ou polimórfica induzida por esforço ou emoção — ou em portadores de mutação em gene causador da doença.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+    "theme": "Arritmias",
+    "tags": [
+      "cpvt",
+      "diagnóstico",
+      "taquicardia ventricular bidirecional"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cpvt-teste-genetico-e-aconselhamento-genetico",
+    "statement": "Teste genético e aconselhamento genético são indicados em pacientes com suspeita clínica ou diagnóstico clínico de CPVT.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+    "theme": "Arritmias",
+    "tags": [
+      "cpvt",
+      "teste genético",
+      "aconselhamento genético"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "cpvt-cdi-com-betabloqueador-e-flecainida-apos-parada-cardiaca-abortada",
+    "statement": "O implante de CDI combinado com betabloqueador e flecainida é recomendado em pacientes com CPVT após parada cardíaca abortada.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+    "theme": "Arritmias",
+    "tags": [
+      "cpvt",
+      "cdi",
+      "flecainida",
+      "parada cardíaca"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "eef-nao-recomendado-para-estratificacao-de-risco-em-cpvt",
+    "statement": "O estudo eletrofisiológico com estimulação ventricular programada não é recomendado para estratificação de risco de morte súbita cardíaca em pacientes com CPVT.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+    "theme": "Arritmias",
+    "tags": [
+      "cpvt",
+      "estudo eletrofisiológico",
+      "estratificação de risco",
+      "não recomendado"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sqts-criterios-diagnosticos",
+    "statement": "É recomendado diagnosticar síndrome do QT curto (SQTS) na presença de QTc ≤360 ms associado a um ou mais dos seguintes: mutação patogênica, história familiar de SQTS, ou sobrevivência a episódio de taquicardia/fibrilação ventricular na ausência de cardiopatia estrutural.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+    "theme": "Arritmias",
+    "tags": [
+      "síndrome do qt curto",
+      "diagnóstico",
+      "qtc"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sqts-cdi-em-sobrevivente-de-pcr-ou-com-tv-sustentada-documentada",
+    "statement": "O implante de CDI é recomendado em pacientes com síndrome do QT curto que são sobreviventes de parada cardíaca abortada e/ou têm taquicardia ventricular sustentada documentada.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2022,
+    "guideline_title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+    "reference": "Zeppenfeld K, Tfelt-Hansen J, de Riva M, et al. 2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death. Eur Heart J. 2022;43(40):3997-4126. DOI: 10.1093/eurheartj/ehac262. PMID: 36017572.",
+    "theme": "Arritmias",
+    "tags": [
+      "síndrome do qt curto",
+      "cdi",
+      "parada cardíaca"
+    ],
+    "review_status": "revisado"
+  },
+  {
+    "slug": "iecai-icfer-classe-i",
+    "statement": "Um IECA é recomendado para pacientes com ICFEr para reduzir o risco de hospitalização por IC e morte.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "icfer",
+      "ieca",
+      "quatro pilares"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "betabloqueador-icfer-classe-i",
+    "statement": "Um betabloqueador é recomendado para pacientes com ICFEr estável para reduzir o risco de hospitalização por IC e morte.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "icfer",
+      "betabloqueador",
+      "quatro pilares"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "mra-icfer-classe-i",
+    "statement": "Um antagonista mineralocorticoide (MRA) é recomendado para pacientes com ICFEr para reduzir o risco de hospitalização por IC e morte.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "icfer",
+      "mra",
+      "espironolactona",
+      "eplerenona",
+      "quatro pilares"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "diureticos-icfer-com-congestao",
+    "statement": "Diuréticos são recomendados em pacientes com ICFEr com sinais e/ou sintomas de congestão, para aliviar os sintomas de IC, melhorar a capacidade de exercício e reduzir hospitalizações por IC.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "icfer",
+      "diuretico",
+      "congestao"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "arb-icfer-intolerancia-a-ieca-ou-arni",
+    "statement": "Um BRA é recomendado para reduzir o risco de hospitalização por IC e morte cardiovascular em pacientes sintomáticos incapazes de tolerar um IECA ou um INRA (esses pacientes também devem receber betabloqueador e MRA).",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "icfer",
+      "bra",
+      "intolerancia a ieca"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "triplo-bloqueio-sraa-nao-recomendado-na-ic",
+    "statement": "A adição de um BRA (ou inibidor de renina) à combinação de um IECA e um MRA NÃO é recomendada em pacientes com IC, pelo aumento do risco de disfunção renal e hipercalemia.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "icfer",
+      "triplo bloqueio sraa",
+      "hipercalemia",
+      "recomendacao negativa"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cdi-prevencao-secundaria-pos-arritmia-ventricular",
+    "statement": "Um CDI é recomendado para reduzir o risco de morte súbita e mortalidade por todas as causas em pacientes recuperados de arritmia ventricular causadora de instabilidade hemodinâmica, com expectativa de sobrevida >1 ano com bom estado funcional, na ausência de causas reversíveis ou a menos que a arritmia tenha ocorrido <48h após um IAM.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "cdi",
+      "prevencao secundaria",
+      "morte subita",
+      "dispositivos"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cdi-prevencao-primaria-icfer-isquemica",
+    "statement": "Um CDI é recomendado para reduzir o risco de morte súbita e mortalidade por todas as causas em pacientes com IC sintomática (NYHA II-III) de etiologia isquêmica (exceto se IAM nos últimos 40 dias) e FEVE ≤35% apesar de ≥3 meses de terapia clínica otimizada, desde que a expectativa de sobrevida seja substancialmente maior que 1 ano com bom estado funcional.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "cdi",
+      "prevencao primaria",
+      "icfer isquemica",
+      "dispositivos"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cdi-nao-recomendado-menos-de-40-dias-pos-iam",
+    "statement": "A implantação de CDI NÃO é recomendada dentro de 40 dias de um IAM, pois o implante nesse momento não melhora o prognóstico.",
+    "recommendation_class": "III",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "cdi",
+      "iam recente",
+      "dispositivos",
+      "recomendacao negativa"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "trc-classe-i-qrs-150ms-lbbb",
+    "statement": "TRC é recomendada para pacientes sintomáticos com IC em ritmo sinusal, duração do QRS ≥150 ms e morfologia de bloqueio de ramo esquerdo (BRE), com FEVE ≤35% apesar de terapia clínica otimizada, para melhorar sintomas e reduzir morbimortalidade.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "trc",
+      "ressincronizacao",
+      "bre",
+      "dispositivos"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "trc-preferivel-a-estimulacao-de-vd-em-bloqueio-av",
+    "statement": "TRC, em vez de estimulação de VD isolada, é recomendada para pacientes com ICFEr, independentemente da classe NYHA ou da largura do QRS, que tenham indicação de estimulação ventricular por bloqueio atrioventricular de alto grau, para reduzir a morbidade — inclui pacientes com fibrilação atrial.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "trc",
+      "bloqueio atrioventricular",
+      "marca-passo",
+      "dispositivos"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "trc-nao-recomendada-qrs-menor-130ms",
+    "statement": "TRC NÃO é recomendada em pacientes com duração do QRS <130 ms que não tenham indicação de marca-passo por bloqueio atrioventricular de alto grau.",
+    "recommendation_class": "III",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "trc",
+      "qrs estreito",
+      "dispositivos",
+      "recomendacao negativa"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "diltiazem-verapamil-nao-recomendados-icfer",
+    "statement": "Diltiazem ou verapamil NÃO são recomendados em pacientes com ICFEr, pois aumentam o risco de piora da IC e de hospitalização por IC.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "icfer",
+      "bloqueadores de canal de calcio",
+      "recomendacao negativa"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "antiarritmicos-classe-i-e-iii-inseguros-na-ic",
+    "statement": "O tratamento com os antiarrítmicos flecainida, encainida, disopiramida, dronedarona e D-sotalol NÃO é recomendado em pacientes com IC, por motivo de segurança.",
+    "recommendation_class": "III",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "antiarritmicos",
+      "fibrilacao atrial",
+      "seguranca",
+      "recomendacao negativa"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "programa-multidisciplinar-reduz-hospitalizacao-por-ic",
+    "statement": "É recomendado que pacientes com IC sejam matriculados em um programa multidisciplinar de manejo de IC, para reduzir o risco de hospitalização por IC e mortalidade.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2021,
+    "guideline_title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure",
+    "reference": "McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-3726. DOI: 10.1093/eurheartj/ehab368. PMID: 34447992.",
+    "theme": "Insuficiência cardíaca",
+    "tags": [
+      "manejo multidisciplinar",
+      "reabilitacao",
+      "prevencao de reinternacao"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "hbpm-ou-fondaparinux-preferiveis-a-hnf-no-tep",
+    "statement": "Se a anticoagulação for iniciada por via parenteral, HBPM ou fondaparinux são recomendados (em vez de HNF) para a maioria dos pacientes com TEP agudo de risco intermediário ou baixo.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2019,
+    "guideline_title": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism",
+    "reference": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism developed in collaboration with the European Respiratory Society (ERS). Eur Heart J. 2020;41(4):543-603. DOI: 10.1093/eurheartj/ehz405. PMID: 31504429.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "tep",
+      "hbpm",
+      "fondaparinux",
+      "anticoagulação parenteral"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "noac-nao-recomendado-em-insuficiencia-renal-grave-gestacao-e-saf-no-tep",
+    "statement": "NOAC (DOAC) NÃO são recomendados em pacientes com TEP e insuficiência renal grave, durante gestação e lactação, e em pacientes com síndrome do anticorpo antifosfolípide.",
+    "recommendation_class": "III",
+    "evidence_level": "C",
+    "society": "ESC",
+    "year": 2019,
+    "guideline_title": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism",
+    "reference": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism developed in collaboration with the European Respiratory Society (ERS). Eur Heart J. 2020;41(4):543-603. DOI: 10.1093/eurheartj/ehz405. PMID: 31504429.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "tep",
+      "doac",
+      "insuficiência renal",
+      "gestação",
+      "saf",
+      "recomendacao negativa"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "trombolise-de-resgate-na-deterioracao-hemodinamica-sob-anticoagulacao-no-tep",
+    "statement": "Terapia trombolítica de resgate é recomendada para pacientes com TEP e deterioração hemodinâmica durante anticoagulação (risco intermediário/baixo inicial que evolui para instabilidade).",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2019,
+    "guideline_title": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism",
+    "reference": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism developed in collaboration with the European Respiratory Society (ERS). Eur Heart J. 2020;41(4):543-603. DOI: 10.1093/eurheartj/ehz405. PMID: 31504429.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "tep",
+      "trombólise",
+      "deterioração hemodinâmica",
+      "resgate"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "trombolise-sistemica-rotineira-nao-recomendada-em-tep-de-risco-intermediario-ou-baixo",
+    "statement": "O uso rotineiro de trombólise sistêmica primária NÃO é recomendado em pacientes com TEP de risco intermediário ou baixo.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "ESC",
+    "year": 2019,
+    "guideline_title": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism",
+    "reference": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism developed in collaboration with the European Respiratory Society (ERS). Eur Heart J. 2020;41(4):543-603. DOI: 10.1093/eurheartj/ehz405. PMID: 31504429.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "tep",
+      "trombólise",
+      "risco intermediário",
+      "recomendacao negativa"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "filtro-de-veia-cava-inferior-de-rotina-nao-recomendado-no-tep",
+    "statement": "O uso rotineiro de filtro de veia cava inferior NÃO é recomendado em pacientes com TEP agudo. O filtro deve ser considerado (Classe IIa) apenas em contraindicação absoluta à anticoagulação, ou em recorrência de TEP apesar de anticoagulação terapêutica.",
+    "recommendation_class": "III",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2019,
+    "guideline_title": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism",
+    "reference": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism developed in collaboration with the European Respiratory Society (ERS). Eur Heart J. 2020;41(4):543-603. DOI: 10.1093/eurheartj/ehz405. PMID: 31504429.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "tep",
+      "filtro de veia cava inferior",
+      "recomendacao negativa"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "overlap-vka-com-anticoagulante-parenteral-ate-inr-alvo-no-tep",
+    "statement": "Quando o paciente com TEP é tratado com antagonista de vitamina K, é recomendada sobreposição (overlap) com anticoagulante parenteral até que um INR de 2,5 (faixa 2,0-3,0) seja atingido.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "ESC",
+    "year": 2019,
+    "guideline_title": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism",
+    "reference": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism developed in collaboration with the European Respiratory Society (ERS). Eur Heart J. 2020;41(4):543-603. DOI: 10.1093/eurheartj/ehz405. PMID: 31504429.",
+    "theme": "Tromboembolismo",
+    "tags": [
+      "tep",
+      "antagonista de vitamina k",
+      "warfarina",
+      "inr",
+      "overlap"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]

@@ -21407,5 +21407,165 @@
         "por_que": "Fecha a trilha com critérios objetivos e mensuráveis para calibrar a intensidade da vigilância: nesta coorte multi-institucional de 1.117 sobreviventes perioperatórios da Fontan, pressão venosa central elevada e regurgitação atrioventricular grave ao cateterismo pós-operatório foram preditores independentes de cirrose hepática e carcinoma hepatocelular em seguimento mediano de 10,3 anos — transformando a vigilância hepática de rotina genérica em estratificação de risco individualizada."
       }
     ]
+  },
+  {
+    "slug": "trilha-doenca-coronariana-choque-cardiogenico-e-angina-sem-obstrucao",
+    "titulo": "Doença coronariana nos dois extremos: choque cardiogênico e angina sem obstrução",
+    "tema": "Doença coronariana",
+    "objetivo": "Percorrer os dois polos menos discutidos da doença coronariana: a decisão de quanto revascularizar e que suporte usar no choque cardiogênico, e o que fazer quando a angiografia não mostra lesão obstrutiva mas o paciente segue sintomático.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "choque-cardiogenico-na-sindrome-coronariana-aguda-culprit-shock-e-iabp-shock-ii",
+        "por_que": "Começa pelo cenário mais grave: choque cardiogênico. Fixa as duas decisões centrais do procedimento índice — quanto revascularizar (CULPRIT-SHOCK) e se usar balão intra-aórtico (IABP-SHOCK II)."
+      },
+      {
+        "ordem": 2,
+        "item_type": "estudo",
+        "item_slug": "culprit-shock-revascularizacao-so-da-culpada-no-choque-cardiogenico",
+        "por_que": "O ensaio por trás da primeira decisão, com os dois tempos (30 dias e 1 ano) que mudam a leitura do resultado."
+      },
+      {
+        "ordem": 3,
+        "item_type": "estudo",
+        "item_slug": "iabp-shock-ii-balao-intra-aortico-no-choque-cardiogenico",
+        "por_que": "O ensaio que retirou o balão intra-aórtico do uso de rotina — resultado neutro em 30 dias e em 12 meses."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "anoca-inoca-angina-e-isquemia-sem-obstrucao-coronariana-esc-2024",
+        "por_que": "Do choque ao outro extremo: paciente estável, sintomático, com coronárias angiograficamente normais. A recomendação Classe I da ESC 2024 para teste funcional invasivo, e os dois endótipos com tratamento diferente."
+      },
+      {
+        "ordem": 5,
+        "item_type": "caso_clinico",
+        "item_slug": "angina-persistente-coronarias-normais-anoca-inoca-endotipo",
+        "por_que": "Aplica a distinção entre espasmo epicárdico e microvascular pelos critérios COVADIS — o ponto que mais confunde na leitura do teste de acetilcolina."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-cardiomiopatias-fenocopias-tratamento-e-reclassificacao-esc-2023",
+    "titulo": "Cardiomiopatias: fenocópias com tratamento próprio e a reclassificação ESC 2023",
+    "tema": "Cardiomiopatias",
+    "objetivo": "Sair sabendo por que hipertrabeculação e takotsubo deixaram de ser chamados de 'cardiomiopatia' pela ESC 2023, o que é a nova categoria NDLVC, e como reconhecer a doença de Fabry como fenocópia de CMH com tratamento etiológico específico.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "manejo-das-cardiomiopatias-primeira-diretriz-abrangente-esc-2023",
+        "por_que": "Ponto de partida: a primeira diretriz abrangente de cardiomiopatias, já publicada neste tema, dá o panorama geral antes de entrar nas reclassificações específicas."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "reclassificacao-fenotipica-esc-2023-ndlvc-hipertrabeculacao-e-takotsubo-deixam-de-ser-cardiomiopatia",
+        "por_que": "O texto integral da Seção 3: por que hipertrabeculação e takotsubo deixaram de ser 'cardiomiopatia' no sentido estrito, e o que é a nova categoria NDLVC."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "cardiomiopatia-hipertrofica-diagnostico-estratificacao-de-risco-e-tratamento-esc-2023-versao-completa",
+        "por_que": "Volta ao fenótipo mais comum (CMH) para contextualizar por que as fenocópias importam — quem entra na lista de causas que não são CMH sarcomérica."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "doenca-de-fabry-acometimento-cardiaco-red-flags-e-tratamento-especifico-esc-2023",
+        "por_que": "A fenocópia com tratamento etiológico próprio — red flags por método de imagem (Tabela 23) e a diferença de T1 nativo frente à amiloidose."
+      },
+      {
+        "ordem": 5,
+        "item_type": "documento",
+        "item_slug": "fluxograma-amiloidose-cardiaca-diagnostico-nao-invasivo",
+        "por_que": "A outra fenocópia clássica de HVE, para fixar o contraste de imagem (T1 elevado na amiloidose vs. baixo em Fabry) que mais aparece em prova e em prática."
+      },
+      {
+        "ordem": 6,
+        "item_type": "caso_clinico",
+        "item_slug": "hve-t1-nativo-baixo-doenca-de-fabry-vs-amiloidose",
+        "por_que": "Fecha a trilha aplicando o diferencial completo num caso só — sexo, achados extracardíacos, T1 nativo e via de confirmação diagnóstica."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-endocardite-avc-e-protese-valvar-duas-decisoes-de-timing",
+    "titulo": "Endocardite: duas decisões de timing que a prática mais erra",
+    "tema": "Endocardite",
+    "objetivo": "Fechar duas lacunas de timing cirúrgico na endocardite infecciosa — quando não atrasar a cirurgia após AVC, e como decidir a cirurgia na endocardite protética por tempo desde a implantação, incluindo o estudo que questiona esse corte.",
+    "nivel": "avançado",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "indicacoes-e-timing-cirurgico-na-endocardite-infecciosa",
+        "por_que": "Ponto de partida: as três indicações principais de cirurgia e a classificação geral de timing (emergencial, urgente, não urgente), já publicadas neste tema."
+      },
+      {
+        "ordem": 2,
+        "item_type": "documento",
+        "item_slug": "timing-cirurgico-apos-avc-na-endocardite-infecciosa-esc-2023",
+        "por_que": "O complemento que faltava: a condição real da recomendação Classe I não é 'foi isquêmico', é 'coma ausente e hemorragia já excluída por imagem' — texto integral da Seção 10.4."
+      },
+      {
+        "ordem": 3,
+        "item_type": "caso_clinico",
+        "item_slug": "endocardite-avc-isquemico-timing-cirurgico",
+        "por_que": "Aplica a condição exata da recomendação Classe I num caso concreto, para não simplificar para 'isquêmico opera, hemorrágico espera'."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "endocardite-protetica-precoce-versus-tardia-esc-2023",
+        "por_que": "A segunda decisão de timing: cirurgia mandatória (Classe I) para PVE dentro de 6 meses — e o estudo de 2024 que questiona esse corte automático por tempo."
+      },
+      {
+        "ordem": 5,
+        "item_type": "estudo",
+        "item_slug": "papadimitriou-olivgeris-mortalidade-endocardite-protetica-precoce-vs-tardia",
+        "por_que": "Fecha a trilha com a evidência em tensão direta com a diretriz — sem diferença de mortalidade entre PVE precoce e tardia, defendendo decisão mais individualizada."
+      }
+    ]
+  },
+  {
+    "slug": "trilha-cardiologia-geriatrica-quedas-bradiarritmia-e-seguranca-da-internacao",
+    "titulo": "Cardiologia geriátrica: quedas, bradiarritmia e a segurança do idoso internado por causa cardiovascular",
+    "tema": "Cardiologia geriátrica",
+    "objetivo": "Sair sabendo investigar duas causas de queda/síncope no idoso que costumam passar despercebidas por não serem procuradas ativamente (hipotensão pós-prandial e disfunção do nó sinusal), e reconhecer que a internação clínica cardiológica — não só a cirúrgica — exige prevenção estruturada de delirium.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "hipotensao-pos-prandial-no-idoso-cardiopata-mecanismo-prevalencia-e-manejo",
+        "por_que": "Começa pela causa de queda/tontura pós-refeição que o médico raramente pergunta porque raramente pensa em perguntar — mecanismo, prevalência (até 36% de queda >20 mmHg em idoso institucionalizado) e associação com maior risco de evento cardiovascular e mortalidade."
+      },
+      {
+        "ordem": 2,
+        "item_type": "estudo",
+        "item_slug": "midodrina-versus-placebo-na-hipotensao-ortostatica-neurogenica",
+        "por_que": "Amplia o raciocínio farmacológico para a hipotensão de causa autonômica em geral — evidência de um vasoconstritor oral em síndrome relacionada de queda pressórica postural, útil para julgar quando a mesma classe de intervenção se aplicaria ao quadro pós-prandial do passo anterior."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "doenca-do-no-sinusal-no-idoso-epidemiologia-por-idade-sindrome-taquicardia-bradicardia-e-indicacao-de-marca-passo",
+        "por_que": "Muda o eixo para a causa arrítmica de síncope/queda no idoso: por que a incidência de disfunção do nó sinusal multiplica com a idade, como reconhecer a síndrome taquicardia-bradicardia, e por que a decisão de marca-passo segue sendo guiada pelo sintoma correlacionado à bradicardia, não pela idade isolada."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "prevencao-de-delirium-na-internacao-clinica-cardiologica-do-idoso-fora-do-contexto-cirurgico",
+        "por_que": "Fecha a trilha no que conecta os dois problemas anteriores à segurança da internação: o idoso investigado por síncope/queda de causa cardiovascular soma os mesmos fatores de risco para delirium hospitalar que o pós-operatório, e o programa multicomponente HELP foi testado exatamente nessa população de clínica médica, não cirúrgica."
+      }
+    ]
   }
 ]

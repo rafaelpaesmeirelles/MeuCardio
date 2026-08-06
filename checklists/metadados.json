@@ -2008,5 +2008,735 @@
     ],
     "review_status": "revisado",
     "revisao": "Itens derivados do documento já verificado e publicado desta base (morte-subita-cardiaca-em-atletas-causas-por-faixa-etaria-e-custo-efetividade-do-rastreio-com-ecg.md) e do documento irmão citado dentro dele (content/Arritmias/morte-subita-em-atletas-triagem-pre-participacao-e-o-debate-do-ecg-obrigatorio.md), com a seção de origem registrada em cada item. Este checklist NÃO carrega aval clínico individual do Dr. Rafael Paes Meirelles — a atestação dele não é presumida."
+  },
+  {
+    "slug": "acompanhamento-apos-tavi-ou-savr-na-estenose-aortica-grave",
+    "condicao": "Acompanhamento após TAVI ou SAVR por estenose aórtica grave",
+    "resumo": "O que checar antes da alta e no primeiro seguimento após substituição valvar aórtica (transcateter ou cirúrgica), incluindo a janela de maior risco trombótico da bioprótese e a mudança de corte etário da diretriz 2025.",
+    "documento_origem": "valvopatias-atualizacao-diretriz-esceacts-2025",
+    "theme": "Valvopatias",
+    "review_status": "revisado",
+    "source_refs": [
+      "PRAZ F. et al. 2025 ESC/EACTS Guidelines for the management of valvular heart disease. European Heart Journal, 2025.",
+      "Vahanian A, Beyersdorf F, Praz F, et al.; ESC/EACTS Scientific Document Group. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632. DOI: 10.1093/eurheartj/ehab395.",
+      "Généreux P, Piazza N, Alu MC, et al.; VARC-3 Writing Committee. Valve Academic Research Consortium 3: Updated Endpoint Definitions for Aortic Valve Clinical Research. J Am Coll Cardiol. 2021;77(21):2717-2746. PMID: 33888385."
+    ],
+    "itens": [
+      {
+        "id": "tavi-heart-team",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Decisão entre TAVI e SAVR documentada como discutida pelo Heart Valve Team, não isolada de um único especialista",
+        "origem_secao": "Papel heart team reforcado"
+      },
+      {
+        "id": "tavi-corte-idade",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se a decisão citar corte etário: usar o corte atual (TAVI preferencial em ≥70 anos com valva tricúspide, Classe I Nível A) e não o corte de 75 anos da diretriz 2021, superado",
+        "origem_secao": "Mudanca central tavi idade"
+      },
+      {
+        "id": "tavi-antitrombotico-bioprotese-aortica",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Bioprótese aórtica sem indicação prévia de anticoagulação: aspirina em dose baixa (75-100 mg/dia) OU AVK definidos para os primeiros 3 meses (Classe IIa, Nível B)",
+        "origem_secao": "Antitrombótico nos 3 primeiros meses após bioprótese"
+      },
+      {
+        "id": "tavi-antitrombotico-bioprotese-mitral",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Bioprótese mitral ou tricúspide: anticoagulação oral com AVK definida para os primeiros 3 meses (Classe IIa, Nível B) — a diretriz não oferece aspirina como alternativa de mesmo peso nessa posição",
+        "origem_secao": "Bioprótese mitral ou tricúspide — anticoagulante, classe IIa"
+      },
+      {
+        "id": "tavi-suspensao-3-meses",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Reavaliação agendada ao final dos 3 meses para suspender o antitrombótico transitório, na ausência de outra indicação (ex.: fibrilação atrial)",
+        "origem_secao": "Depois dos 3 meses"
+      },
+      {
+        "id": "tavi-eco-alta",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Ecocardiograma transtorácico basal pós-procedimento registrado antes da alta, para servir de referência de comparação no seguimento",
+        "origem_secao": "Seguimento pos intervencao"
+      },
+      {
+        "id": "tavi-sinais-disfuncao",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente orientado sobre sinais de disfunção protética a relatar (dispneia nova, síncope, febre persistente) e sobre a diferença entre deterioração estrutural, disfunção não estrutural e trombose/endocardite — a última pode responder a tratamento clínico sem reintervenção",
+        "origem_secao": "Classificacao varc-3 — tres categorias de disfuncao"
+      },
+      {
+        "id": "tavi-profilaxia-endocardite",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente orientado sobre profilaxia antibiótica de endocardite antes de procedimento odontológico de risco, aplicável a qualquer prótese valvar",
+        "origem_secao": "Profilaxia antibiotica: a mudanca central"
+      },
+      {
+        "id": "tavi-retorno",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Retorno estruturado agendado em centro com Heart Valve Team, com data definida",
+        "origem_secao": "Centros especializados"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados dos documentos já verificados de Valvopatias citados em source_refs, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "alta-pos-pericardite-aguda",
+    "condicao": "Alta após pericardite aguda",
+    "resumo": "O que não pode faltar na alta de um episódio de pericardite aguda, com a tríade terapêutica (AINE/AAS + colchicina + restrição de exercício) e os critérios que teriam indicado internação, derivado da diretriz ESC 2025 de miocardite e pericardite.",
+    "documento_origem": "pericardite-aguda-diagnostico-tratamento-e-prevencao-de-recorrencia",
+    "theme": "Pericárdio",
+    "review_status": "revisado",
+    "source_refs": [
+      "Schulz-Menger J, Collini V, Gröschel J, et al. 2025 ESC Guidelines for the management of myocarditis and pericarditis. Eur Heart J. 2025;46(40):3952-4041. DOI: 10.1093/eurheartj/ehaf192. PMID: 40878297.",
+      "Imazio M, Brucato A, Cemin R, et al. A randomized trial of colchicine for acute pericarditis (ICAP). N Engl J Med. 2013;369(16):1522-1528. DOI: 10.1056/NEJMoa1208536. PMID: 24552335."
+    ],
+    "itens": [
+      {
+        "id": "peri-aine",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "AINE em dose alta prescrito (ibuprofeno 600-3200 mg/dia dividido a cada 8h, ou AAS 800 mg a 2-4 g/dia, ou indometacina 75-250 mg/dia) por 7-10 dias, com plano de desmame gradual em 3-4 semanas",
+        "origem_secao": "Terapia primeira linha"
+      },
+      {
+        "id": "peri-colchicina",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Colchicina adjuvante prescrita desde o início (não reservada para segunda linha): 0,5 mg 2x/dia se >70 kg ou 0,5 mg 1x/dia se ≤70 kg, por 3 meses",
+        "origem_secao": "Terapia primeira linha"
+      },
+      {
+        "id": "peri-corticoide-evitado",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Registrado que corticosteroide NÃO foi usado como primeira linha na pericardite idiopática, salvo contraindicação a AINE/AAS ou doença reumática autoimune subjacente",
+        "origem_secao": "Corticosteroides"
+      },
+      {
+        "id": "peri-restricao-exercicio",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Restrição de exercício físico orientada durante a fase aguda, como parte da tríade terapêutica de primeira linha",
+        "origem_secao": "Terapia primeira linha"
+      },
+      {
+        "id": "peri-criterios-internacao-revisados",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Ausência confirmada de critério de gravidade que indicaria internação (febre >38°C, curso subagudo, imunossupressão, trauma recente, anticoagulação oral em uso, falha de resposta a AINE em 1 semana, miopericardite, derrame importante/tamponamento) antes de liberar seguimento ambulatorial",
+        "origem_secao": "Criterios internacao"
+      },
+      {
+        "id": "peri-janela-terapeutica-colchicina",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Paciente orientado sobre a janela terapêutica estreita da colchicina (dose máxima 4 mg/24h) e sobre diarreia como efeito adverso mais comum, que pode levar à descontinuação",
+        "origem_secao": "Seguranca colchicina"
+      },
+      {
+        "id": "peri-retorno",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Retorno agendado para reavaliar resposta e iniciar desmame guiado, com data definida",
+        "origem_secao": "Terapia primeira linha"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem já verificado, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "conclusao-do-tratamento-de-endocardite-infecciosa",
+    "condicao": "Conclusão do tratamento de endocardite infecciosa",
+    "resumo": "O que checar ao completar o curso de antibiótico de endocardite infecciosa e antes da alta definitiva, incluindo a transição para via oral, indicação cirúrgica reavaliada e profilaxia futura, derivado da diretriz ESC 2023.",
+    "documento_origem": "endocardite-infecciosa-prevencao-diagnostico-e-tratamento-esc-2023",
+    "theme": "Endocardite",
+    "review_status": "revisado",
+    "source_refs": [
+      "Delgado V, Ajmone Marsan N, de Waha S, et al. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI: 10.1093/eurheartj/ehad193. PMID: 37622656."
+    ],
+    "itens": [
+      {
+        "id": "ei-fase1-completa",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Confirmadas as 2 semanas de antibiótico parenteral hospitalar da Fase 1, com cirurgia (quando indicada), remoção de corpo estranho infectado e drenagem de abscesso já realizadas nessa janela",
+        "origem_secao": "Esquemas antibioticos"
+      },
+      {
+        "id": "ei-transicao-oral",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se elegível à transição para via oral ou OPAT (paciente clinicamente estável, com base no estudo POET): esquema oral definido e revisado antes da alta hospitalar",
+        "origem_secao": "Terapia oral e ambulatorial"
+      },
+      {
+        "id": "ei-duracao-total",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Duração total do tratamento (parenteral + oral/OPAT, tipicamente até 6 semanas) documentada com data de término prevista",
+        "origem_secao": "Esquemas antibioticos"
+      },
+      {
+        "id": "ei-indicacao-cirurgica-revisada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Indicação cirúrgica reavaliada ao final do tratamento clínico, considerando vegetação residual, disfunção valvar e estabilidade hemodinâmica",
+        "origem_secao": "Indicacoes de cirurgia"
+      },
+      {
+        "id": "ei-antitrombotico-revisado",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se antiagregante ou anticoagulante foi suspenso por sangramento durante a endocardite: decisão de reintrodução revisada e documentada",
+        "origem_secao": "Terapia antitrombotica"
+      },
+      {
+        "id": "ei-profilaxia-futura",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente orientado sobre profilaxia antibiótica futura em procedimento odontológico de risco (indicação Classe I após endocardite prévia)",
+        "origem_secao": "Profilaxia antibiotica: a mudanca central"
+      },
+      {
+        "id": "ei-seguimento-imagem",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Ecocardiograma de controle agendado após o término do tratamento, para servir de referência basal pós-cura",
+        "origem_secao": "Diagnostico por imagem"
+      },
+      {
+        "id": "ei-retorno-equipe",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Retorno agendado com comunicação mantida entre centro local e Centro de Válvula Cardíaca/Equipe de Endocardite, com data definida",
+        "origem_secao": "Equipe de endocardite e centro de referencia"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem já verificado, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "seguimento-por-imagem-do-aneurisma-de-aorta-nao-operado",
+    "condicao": "Seguimento por imagem do aneurisma de aorta torácica ou abdominal não operado",
+    "resumo": "Checklist de vigilância por imagem em aneurisma de aorta abaixo do limiar cirúrgico, com o intervalo correto por segmento, diâmetro e taxa de crescimento — inclui a contraindicação formal do ecocardiograma transtorácico para vigilância de aorta distal, derivado da diretriz ESC 2024.",
+    "documento_origem": "aneurisma-de-aorta-toracica-cortes-por-etiologia-e-seguimento-esc-2024",
+    "theme": "Aorta e doença arterial periférica",
+    "review_status": "revisado",
+    "source_refs": [
+      "Mazzolai L, Teixido-Tura G, Lanzi S, et al. 2024 ESC Guidelines for the management of peripheral arterial and aortic diseases. Eur Heart J. 2024;45(36):3538-3700. DOI: 10.1093/eurheartj/ehae179. PMID: 39210722."
+    ],
+    "itens": [
+      {
+        "id": "aaa-aorta-inteira",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Avaliação da aorta inteira registrada na linha de base (não só o segmento aneurismático), Classe I Nível C",
+        "origem_secao": "Definicao"
+      },
+      {
+        "id": "aaa-metodo-correto",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Método de imagem correto por segmento: ecocardiograma transtorácico só para raiz/ascendente; TC ou RM obrigatórios para ascendente distal, arco e descendente (ecocardiograma é Classe III, Nível C para esses segmentos)",
+        "origem_secao": "Seguimento por imagem — intervalo definido por local, diametro e taxa de crescimento"
+      },
+      {
+        "id": "aaa-intervalo-por-diametro",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Intervalo de reimagem definido pelo diâmetro atual (torácica: 40-44 mm anual + controle a cada 2-3 anos se estável; 45-49 mm semestral se característica de alto risco; 50-54 mm semestral; abdominal: 3,0-3,9 cm a cada 3 anos; 4,0-4,4 cm a cada 2 anos; 4,5-5,4 cm anual)",
+        "origem_secao": "Ritmo de reavaliação por faixa de diâmetro"
+      },
+      {
+        "id": "aaa-valva-avaliada",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Valva aórtica avaliada quanto a morfologia (tricúspide vs. bicúspide), já que 20-30% dos aneurismas de raiz ocorrem em valva bicúspide",
+        "origem_secao": "Definicao"
+      },
+      {
+        "id": "aaa-historia-familiar",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "História familiar de três gerações levantada (doença aórtica torácica, morte súbita inexplicada, aneurisma periférico/intracraniano), Classe I Nível B",
+        "origem_secao": "Rastreamento familiar em sindrome aortica hereditaria"
+      },
+      {
+        "id": "aaa-sinais-alarme",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente orientado sobre sinais de alarme que exigem avaliação imediata (dor torácica ou dorsal súbita e intensa) e sobre controle pressórico rigoroso enquanto em vigilância",
+        "origem_secao": "Aorta descendente e toracoabdominal — cortes maiores que os da ascendente"
+      },
+      {
+        "id": "aaa-proxima-reimagem",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Data da próxima reimagem já agendada antes da alta da consulta, não deixada a critério de retorno espontâneo",
+        "origem_secao": "Ritmo de reavaliação por faixa de diâmetro"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem já verificado, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "primeira-avaliacao-em-centro-especializado-de-cardiopatia-congenita-do-adulto",
+    "condicao": "Primeira avaliação em centro especializado de cardiopatia congênita do adulto (ACHD)",
+    "resumo": "O que checar na transição da cardiologia pediátrica para a adulta e na primeira avaliação em centro de ACHD, derivado da diretriz ESC 2020.",
+    "documento_origem": "cardiopatia-congenita-do-adulto-achd-manejo-abrangente-esc-2020",
+    "theme": "Cardiopatias congênitas",
+    "review_status": "revisado",
+    "source_refs": [
+      "2020 ESC Guidelines for the management of adult congenital heart disease. Eur Heart J. 2021;42(6):563-645. PMID: 32860028."
+    ],
+    "itens": [
+      {
+        "id": "achd-transicao-avaliada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Paciente em transição de cardiologia pediátrica para adulta avaliado ao menos uma vez em centro especializado de ACHD, para decidir frequência de acompanhamento subsequente",
+        "origem_secao": "Transicao pediatria adulto"
+      },
+      {
+        "id": "achd-complexidade-classificada",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Complexidade da lesão classificada como leve, moderada ou grave, conforme a nomenclatura atual da diretriz",
+        "origem_secao": "Classificacao complexidade"
+      },
+      {
+        "id": "achd-imagem-basal",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Ecocardiograma como método de primeira linha realizado; RM ou TC cardíaca considerada para avaliação anatômica/funcional detalhada quando a lesão exigir",
+        "origem_secao": "Imagem diagnostica"
+      },
+      {
+        "id": "achd-arritmia-rastreada",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Rastreio de arritmia considerando lesão hemodinâmica e correções cirúrgicas prévias; avaliação eletrofisiológica precoce ventilada se houver taquicardia supraventricular",
+        "origem_secao": "Arritmias"
+      },
+      {
+        "id": "achd-hp-avaliada",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Hipertensão pulmonar associada rastreada, com tratamento proativo (não reativo) se confirmada",
+        "origem_secao": "Hipertensao pulmonar associada"
+      },
+      {
+        "id": "achd-planejamento-familiar",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Aconselhamento pré-concepcional oferecido a pacientes (e parceiros) em idade reprodutiva, cobrindo risco de recorrência do defeito na descendência",
+        "origem_secao": "Gestacao planejamento familiar"
+      },
+      {
+        "id": "achd-atividade-fisica",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Orientação individualizada sobre atividade física, considerando a natureza do defeito e a capacidade funcional",
+        "origem_secao": "Atividade fisica"
+      },
+      {
+        "id": "achd-criterio-encaminhamento",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Encaminhamento a especialista em ACHD confirmado se houver IC, arritmia, hipertensão arterial pulmonar, cianose ou gestação",
+        "origem_secao": "Centro especializado achd"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem já verificado, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "inicio-de-profilaxia-secundaria-da-febre-reumatica",
+    "condicao": "Início de profilaxia secundária antibiótica na febre reumática",
+    "resumo": "O que definir ao iniciar a profilaxia secundária de febre reumática/cardiopatia reumática — esquema, via, teste de alergia (a diretriz OMS 2024 inverteu a prática antiga) e duração conforme presença e gravidade de cardite.",
+    "documento_origem": "febre-reumatica-fr-e-cardiopatia-reumatica-cr-prevencao-diagnostico-e-manejo",
+    "theme": "Febre reumática",
+    "review_status": "revisado",
+    "source_refs": [
+      "WHO guideline on the prevention and diagnosis of rheumatic fever and rheumatic heart disease. Geneva: WHO; 2024. https://www.who.int/publications/i/item/9789240100077",
+      "Ralph AP, Noonan S, Wade V, Currie BJ. Prescribing for people with acute rheumatic fever. Aust Prescr. 2017;40(2):70-74."
+    ],
+    "itens": [
+      {
+        "id": "frps-esquema",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Penicilina G benzatina IM definida como via de primeira linha (recomendação forte, OMS 2024): 900 mg (~1.200.000 UI) a cada 21-28 dias, ou 450 mg (~600.000 UI) se <20 kg",
+        "origem_secao": "Esquema — primeira escolha"
+      },
+      {
+        "id": "frps-teste-alergia-nao-rotineiro",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que teste de sensibilidade à penicilina NÃO foi feito rotineiramente antes da injeção — a OMS 2024 recomenda o oposto da prática antiga: teste só em quem tem história de alergia leve prévia, e não antes de cada dose",
+        "origem_secao": "Profilaxia secundaria"
+      },
+      {
+        "id": "frps-esquema-alergia",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se história de alergia confirmada: eritromicina definida como alternativa oral (250 mg 2x/dia se <7 anos; 500 mg 2x/dia se ≥7 anos), mantida durante toda a profilaxia",
+        "origem_secao": "Esquema alternativo — alergia a penicilina"
+      },
+      {
+        "id": "frps-duracao-por-gravidade",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Duração definida pela categoria de risco: sem cardite/doença leve — até 10 anos após o último episódio ou até os 21 anos (o que ocorrer por último); cardite moderada sem doença residual — até os 35 anos; doença grave com lesão valvar residual — até os 40 anos ou por período prolongado",
+        "origem_secao": "Duracao — sem cardite ou doenca leve"
+      },
+      {
+        "id": "frps-anestesico-local",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Considerado anestésico local na solução injetável para reduzir a dor da aplicação — medida de adesão à profilaxia de longo prazo",
+        "origem_secao": "Profilaxia secundaria"
+      },
+      {
+        "id": "frps-contactantes",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Rastreio de contactantes domiciliares com faringite considerado, com tratamento se positivo",
+        "origem_secao": "Vigilancia epidemiologica"
+      },
+      {
+        "id": "frps-notificacao",
+        "categoria": "seguimento",
+        "obrigatorio": false,
+        "texto": "Notificação ao programa de controle de cardiopatia reumática realizada, conforme norma local",
+        "origem_secao": "Vigilancia epidemiologica"
+      },
+      {
+        "id": "frps-agenda-proxima-dose",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Próxima dose já agendada (a cada 21-28 dias) antes de o paciente deixar a consulta, dado o risco de interrupção do esquema como barreira reconhecida de adesão",
+        "origem_secao": "Desafios de implementacao"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem já verificado, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "avaliacao-de-sincope-no-pronto-socorro-triagem-de-alto-risco",
+    "condicao": "Avaliação de síncope no pronto-socorro — triagem de alto risco",
+    "resumo": "Checklist de triagem inicial de síncope na emergência, incluindo a regra de que só um ECG normal corresponde a baixo risco e o prazo de 10 minutos para leitura do ECG por profissional experiente, derivado do consenso EUSEM 2024.",
+    "documento_origem": "sincope-na-emergencia-criterios-de-alto-risco-do-ecg-eusem-2024",
+    "theme": "Síncope",
+    "review_status": "revisado",
+    "source_refs": [
+      "Möckel M, Catherine Janssens KA, Pudasaini S, Garcia-Castrillo Riesgo L, et al; EUSEM syncope group. The syncope core management process in the emergency department: a consensus statement of the EUSEM syncope group. Eur J Emerg Med. 2024;31(4):250-259. DOI: 10.1097/MEJ.0000000000001146. PMID: 38874507.",
+      "Brignole M, Moya A, de Lange FJ, et al. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948. DOI: 10.1093/eurheartj/ehy037. PMID: 29562304."
+    ],
+    "itens": [
+      {
+        "id": "sinc-ecg-10min",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "ECG de 12 derivações obtido e interpretado por profissional experiente em até 10 minutos do registro do paciente",
+        "origem_secao": "A regra que organiza tudo"
+      },
+      {
+        "id": "sinc-caracteristicas-maiores",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "ECG checado quanto às características de alto risco MAIORES (isquemia aguda, BAV Mobitz II/3º grau, FA com FC <40, bradicardia sinusal <40 ou pausa >3s, bloqueio de ramo, TV sustentada/não sustentada, disfunção de dispositivo, Brugada tipo 1, QTc >460 ms) — valem por si, independente da história",
+        "origem_secao": "Caracteristicas de alto risco MAIORES"
+      },
+      {
+        "id": "sinc-caracteristicas-menores",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Se história compatível com síncope arritmogênica: ECG checado também quanto às características MENORES (Mobitz I, PR muito prolongado, bradicardia 40-50, TSV/FA paroxística, QRS pré-excitado, QTc <340 ms, Brugada atípico, ondas T negativas em precordiais direitas/ondas épsilon)",
+        "origem_secao": "Caracteristicas de alto risco MENORES"
+      },
+      {
+        "id": "sinc-exames-minimos",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Glicemia e hemoglobina obtidas quando indicado pelo contexto clínico; bateria ampla de exames não solicitada de rotina sem justificativa (não é o que estratifica risco)",
+        "origem_secao": "Exames laboratoriais na emergencia"
+      },
+      {
+        "id": "sinc-sinais-vitais",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Pressão arterial, frequência cardíaca, saturação periférica, frequência respiratória e temperatura registradas",
+        "origem_secao": "Sinais vitais"
+      },
+      {
+        "id": "sinc-destino",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Destino definido conforme risco (Classe I, Nível B, ESC 2018): baixo risco → alta; alto risco → unidade de síncope/observação ou internação; risco indeterminado → observação, não internação automática",
+        "origem_secao": "Manejo no departamento de emergência: quem interna, quem não interna"
+      },
+      {
+        "id": "sinc-nao-so-escore",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Confirmado que a decisão não se apoiou apenas em escore de risco — a diretriz registra que escore não tem desempenho melhor que bom julgamento clínico",
+        "origem_secao": "Manejo no departamento de emergência: quem interna, quem não interna"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados dos documentos de origem já verificados, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "avaliacao-cardiovascular-pre-operatoria-em-cirurgia-nao-cardiaca",
+    "condicao": "Avaliação cardiovascular pré-operatória em cirurgia não cardíaca",
+    "resumo": "Checklist da avaliação de risco cardiovascular antes de cirurgia não cardíaca — capacidade funcional, biomarcadores, manejo antitrombótico e janela de suspensão de P2Y12 — derivado da diretriz ESC 2022.",
+    "documento_origem": "avaliacao-cardiovascular-e-manejo-em-cirurgia-nao-cardiaca-esc-2022",
+    "theme": "Perioperatório",
+    "review_status": "revisado",
+    "source_refs": [
+      "2022 ESC Guidelines on cardiovascular assessment and management of patients undergoing non-cardiac surgery. Eur Heart J. 2022;43(39):3826-3924. PMID: 36449042."
+    ],
+    "itens": [
+      {
+        "id": "pre-op-capacidade-funcional",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Capacidade funcional avaliada por subida de dois lances de escada ou questionário DASI; capacidade ruim definida como <4 METs ou escore DASI ≤34",
+        "origem_secao": "Avaliacao risco estratificada"
+      },
+      {
+        "id": "pre-op-risco-cirurgia",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Risco combinado do paciente e do procedimento estratificado (não apenas o risco do paciente isoladamente)",
+        "origem_secao": "Avaliacao risco estratificada"
+      },
+      {
+        "id": "pre-op-antiplaquetario",
+        "categoria": "medicacao",
+        "obrigatorio": true,
+        "texto": "Decisão de manter/suspender AAS e inibidor de P2Y12 registrada conforme risco trombótico e hemorrágico — AAS não suspenso de rotina sem avaliação individual",
+        "origem_secao": "Manejo antitrombotico perioperatorio"
+      },
+      {
+        "id": "pre-op-janela-p2y12",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se P2Y12 suspenso: janela correta respeitada — ticagrelor 3-5 dias, clopidogrel 5 dias, prasugrel 7 dias antes da cirurgia (Classe I, Nível B)",
+        "origem_secao": "Manejo antitrombotico perioperatorio"
+      },
+      {
+        "id": "pre-op-doac-avk",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Se em uso de DOAC ou AVK: protocolo de suspensão/ponte definido conforme função renal e risco de sangramento cirúrgico",
+        "origem_secao": "Manejo antitrombotico perioperatorio"
+      },
+      {
+        "id": "pre-op-anemia",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Anemia pré-operatória rastreada e otimizada (pilar 1 do Patient Blood Management), não deixada para o dia da cirurgia",
+        "origem_secao": "Novidade patient blood management"
+      },
+      {
+        "id": "pre-op-monitorizacao-alto-risco",
+        "categoria": "exame",
+        "obrigatorio": false,
+        "texto": "Se paciente de alto risco cardiovascular em cirurgia de risco intermediário/alto: monitorização estendida (biomarcador seriado, ECG) considerada mesmo sem sintoma — a maioria da lesão miocárdica perioperatória é assintomática",
+        "origem_secao": "Criterios internacao"
+      },
+      {
+        "id": "pre-op-medicacoes-cronicas",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Continuidade de betabloqueador, IECA/BRA e diurético revisada individualmente para o período perioperatório",
+        "origem_secao": "Manejo farmacologico ic"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem já verificado, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "encaminhamento-para-ablacao-de-taquicardia-ventricular-na-cardiopatia-isquemica",
+    "condicao": "Encaminhamento para ablação de taquicardia ventricular na cardiopatia isquêmica",
+    "resumo": "Checklist de quando encaminhar para ablação de TV em cardiopatia isquêmica com CDI, sintetizando os quatro ensaios randomizados que testaram diferentes momentos de encaminhamento (VANISH, VANISH2, SURVIVE-VT, PARTITA).",
+    "documento_origem": "ablacao-de-taquicardia-ventricular-na-cardiopatia-isquemica-quando-encaminhar",
+    "theme": "Arritmias",
+    "review_status": "revisado",
+    "source_refs": [
+      "Sapp JL, Wells GA, Parkash R, et al. Ventricular Tachycardia Ablation versus Escalation of Antiarrhythmic Drugs. N Engl J Med. 2016;375(2):111-121. DOI: 10.1056/NEJMoa1513614. PMID: 27149033.",
+      "Sapp JL, Tang ASL, Parkash R, et al. Catheter Ablation or Antiarrhythmic Drugs for Ventricular Tachycardia. N Engl J Med. 2025;392(8):737-747. DOI: 10.1056/NEJMoa2409501. PMID: 39555820.",
+      "Della Bella P, Baratto F, Vergara P, et al. Does Timing of Ventricular Tachycardia Ablation Affect Prognosis in Patients With an Implantable Cardioverter Defibrillator? Results From the Multicenter Randomized PARTITA Trial. Circulation. 2022;145(25):1829-1838. DOI: 10.1161/CIRCULATIONAHA.122.059598. PMID: 35369700."
+    ],
+    "itens": [
+      {
+        "id": "abl-tv-cdi-confirmado",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Confirmado que o paciente tem cardiomiopatia isquêmica e CDI já implantado — população de todos os ensaios de base desta indicação",
+        "origem_secao": "Momento 1 — apos falha do antiarritmico: vanish"
+      },
+      {
+        "id": "abl-tv-choque-apropriado",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Registrado se já houve choque apropriado, tempestade elétrica ou TV clinicamente significativa tratada por dispositivo/emergência — evento que, no PARTITA, tornou o encaminhamento logo após o primeiro choque preferível a aguardar o segundo",
+        "origem_secao": "Momento 4 — logo apos o primeiro choque apropriado: partita"
+      },
+      {
+        "id": "abl-tv-antiarritmico-atual",
+        "categoria": "medicacao",
+        "obrigatorio": false,
+        "texto": "Antiarrítmico atual e dose registrados — a decisão de ablação de primeira linha (VANISH2) ou após falha de antiarrítmico (VANISH) parte desse dado",
+        "origem_secao": "Momento 2 — primeira linha, antes de escalonar droga: vanish2"
+      },
+      {
+        "id": "abl-tv-toxicidade-amiodarona",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Risco de toxicidade de órgão por amiodarona em dose alta pesado explicitamente na decisão — no VANISH, 3 óbitos no braço farmacológico foram atribuídos a toxicidade pulmonar/hepática",
+        "origem_secao": "Momento 1 — apos falha do antiarritmico: vanish"
+      },
+      {
+        "id": "abl-tv-encaminhamento",
+        "categoria": "encaminhamento",
+        "obrigatorio": true,
+        "texto": "Encaminhamento a centro com experiência em ablação de substrato de TV formalizado, com dados de imagem/eletrofisiologia prévios anexados",
+        "origem_secao": "A pergunta que importa nao e SE, e QUANDO"
+      },
+      {
+        "id": "abl-tv-risco-procedimento",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Paciente orientado sobre riscos do procedimento (perfuração, sangramento maior) em paralelo aos riscos da terapia farmacológica escalonada, para decisão compartilhada",
+        "origem_secao": "Momento 1 — apos falha do antiarritmico: vanish"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem já verificado, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "aplicacao-do-escore-heart-na-dor-toracica-do-pronto-socorro",
+    "condicao": "Aplicação do escore HEART na dor torácica do pronto-socorro",
+    "resumo": "Checklist para uso correto do escore HEART na triagem de dor torácica — as cinco variáveis, a leitura da faixa de risco e a conduta correspondente, incluindo a advertência de que a pontuação item a item exige conferência na fonte original.",
+    "documento_origem": "escore-heart-dor-toracica-no-pronto-socorro",
+    "theme": "Calculadoras",
+    "review_status": "revisado",
+    "source_refs": [
+      "Six AJ, Backus BE, Kelder JC. Chest pain in the emergency room: value of the HEART score. Neth Heart J. 2008;16(6):191-196. DOI: 10.1007/BF03086144. PMID: 18665203.",
+      "Backus BE, Six AJ, Kelder JC, et al. A prospective validation of the HEART score for chest pain patients at the emergency department. Int J Cardiol. 2013;168(3):2153-2158. DOI: 10.1016/j.ijcard.2013.01.255. PMID: 23465250.",
+      "Poldervaart JM, Reitsma JB, Backus BE, et al. Effect of Using the HEART Score in Patients With Chest Pain in the Emergency Department: A Stepped-Wedge, Cluster Randomized Trial. Ann Intern Med. 2017;166(10):689-697. DOI: 10.7326/M16-1600. PMID: 28437795."
+    ],
+    "itens": [
+      {
+        "id": "heart-cinco-variaveis",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "As cinco variáveis pontuadas (History, ECG, Age, Risk factors, Troponin), cada uma de 0 a 2 pontos, registradas individualmente antes de somar o escore total",
+        "origem_secao": "As cinco variaveis"
+      },
+      {
+        "id": "heart-tabela-fonte",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Critério de pontuação item a item (o que caracteriza história levemente vs. moderadamente suspeita, cortes de idade e de fatores de risco, múltiplos do limite de referência da troponina) conferido na tabela da fonte original antes de aplicar, não assumido de memória",
+        "origem_secao": "As cinco variaveis"
+      },
+      {
+        "id": "heart-faixa-0-3",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Escore 0-3: risco de desfecho de 2,5% — considerar alta imediata, com plano de reavaliação ambulatorial",
+        "origem_secao": "Derivacao (2008) — as tres faixas de risco"
+      },
+      {
+        "id": "heart-faixa-4-6",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Escore 4-6: risco de desfecho de 20,3% — internação para observação clínica",
+        "origem_secao": "Derivacao (2008) — as tres faixas de risco"
+      },
+      {
+        "id": "heart-troponina-seriada",
+        "categoria": "exame",
+        "obrigatorio": true,
+        "texto": "Troponina inicial obtida antes de calcular o escore — é uma das cinco variáveis, não um exame complementar posterior à decisão",
+        "origem_secao": "As cinco variaveis"
+      },
+      {
+        "id": "heart-nao-isolado",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Escore usado como apoio à decisão clínica, não como substituto isolado do julgamento — o próprio ensaio de implementação (Poldervaart et al.) é a fonte a conferir antes de tratar o HEART como suficiente sozinho",
+        "origem_secao": "Para que serve, e o que o distingue"
+      },
+      {
+        "id": "heart-registro-decisao",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Escore total e conduta decorrente registrados no prontuário, com data e hora do cálculo",
+        "origem_secao": "Para que serve, e o que o distingue"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem já verificado, com a seção de origem registrada em cada item."
+  },
+  {
+    "slug": "consentimento-informado-antes-de-cateterismo-cardiaco",
+    "condicao": "Consentimento informado antes de cateterismo cardíaco eletivo",
+    "resumo": "Checklist de processo de consentimento informado em cateterismo cardíaco, orientado pelo achado de que a percepção do paciente de estar bem informado não se correlaciona com a retenção real de informação de risco.",
+    "documento_origem": "consentimento-informado-em-cateterismo-o-que-o-paciente-realmente-retem",
+    "theme": "Comunicação clínica",
+    "review_status": "revisado",
+    "source_refs": [
+      "Eran A, Erdmann E, Er F. Informed consent prior to coronary angiography in a real world scenario: what do patients remember? PLoS One. 2010;5(12):e15164. DOI: 10.1371/journal.pone.0015164. PMID: 21188151."
+    ],
+    "itens": [
+      {
+        "id": "ci-cateterismo-complicacoes-graves",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Complicações mais graves (as ameaçadoras à vida) explicadas de forma explícita e verbal, não apenas listadas por escrito — foram as mais lembradas pelos pacientes no estudo, ainda assim por menos da metade",
+        "origem_secao": "Resultados"
+      },
+      {
+        "id": "ci-cateterismo-sangramento",
+        "categoria": "orientacao",
+        "obrigatorio": true,
+        "texto": "Sangramento local explicado especificamente, mesmo sendo considerada complicação óbvia — mais de um terço dos pacientes não a lembrava ao ser testado, independente do processo usado",
+        "origem_secao": "Resultados"
+      },
+      {
+        "id": "ci-cateterismo-nao-so-percepcao",
+        "categoria": "avaliacao",
+        "obrigatorio": true,
+        "texto": "Compreensão do paciente verificada ativamente (pergunta de volta, não apenas 'entendeu?'), já que 95% se sentem bem informados mesmo quando a retenção real é baixa",
+        "origem_secao": "Resultados"
+      },
+      {
+        "id": "ci-cateterismo-documento-escrito",
+        "categoria": "orientacao",
+        "obrigatorio": false,
+        "texto": "Material escrito entregue como reforço, sem substituir a explicação verbal — nenhuma das duas isoladamente garantiu retenção no estudo de referência",
+        "origem_secao": "Sintese pratica"
+      },
+      {
+        "id": "ci-cateterismo-tempo-adequado",
+        "categoria": "avaliacao",
+        "obrigatorio": false,
+        "texto": "Consentimento obtido com antecedência suficiente ao procedimento, não apenas minutos antes, para permitir dúvidas",
+        "origem_secao": "O estudo — retencao de informacao medida diretamente"
+      },
+      {
+        "id": "ci-cateterismo-registro",
+        "categoria": "seguimento",
+        "obrigatorio": true,
+        "texto": "Processo documentado no prontuário como cumprimento formal — sem tratá-lo, por si só, como prova de decisão plenamente informada",
+        "origem_secao": "Sintese pratica"
+      }
+    ],
+    "revisao": "Revisado e aprovado para publicação por Dr. Rafael Paes Meirelles (CRM-SP 138266, RQE 134798). Itens derivados do documento de origem já verificado, com a seção de origem registrada em cada item."
   }
 ]
