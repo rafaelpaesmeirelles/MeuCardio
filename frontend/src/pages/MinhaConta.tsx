@@ -94,6 +94,29 @@ function BlocoEndereco({ prefixo, valores, onMudar }: {
   );
 }
 
+/** Rever o tour de boas-vindas (Trabalho 13, ampliação de 06/08/2026) —
+ * pedido do Rafael: deixar disponível pra revisão a qualquer momento,
+ * fora do fluxo obrigatório do primeiro acesso. `/tour` não exige
+ * `onboarding_pendente` para abrir — só o gate do App.tsx é que FORÇA a
+ * navegação pra lá quando pendente; visitar por conta própria sempre
+ * funciona. */
+function RevisarTour() {
+  const navigate = useNavigate();
+  return (
+    <div className="cartao" style={{ display: "flex", gap: "1rem", alignItems: "center", justifyContent: "space-between" }}>
+      <div>
+        <h2 style={{ margin: "0 0 0.2rem" }}>Tour da plataforma</h2>
+        <p style={{ margin: 0, fontSize: "0.82rem", color: "var(--texto-secundario)" }}>
+          Reveja rapidamente todas as funções da Corvia, quando quiser.
+        </p>
+      </div>
+      <button type="button" className="botao botao--secundario" onClick={() => navigate("/tour")}>
+        Rever o tour
+      </button>
+    </div>
+  );
+}
+
 function DadosPessoais({ perfil, aoSalvar }: { perfil: Usuario; aoSalvar: (u: Usuario) => void }) {
   const [dados, setDados] = useState({
     full_name: perfil.full_name ?? "",
@@ -971,6 +994,7 @@ export default function MinhaConta() {
       )}
 
       <div style={{ display: "grid", gap: "1rem", maxWidth: 560 }}>
+        <RevisarTour />
         <Foto
           perfil={perfil}
           aoTrocar={(u) => {
