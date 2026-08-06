@@ -5205,5 +5205,27 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "hipertrofia-ventricular-esquerda-criterios-de-voltagem",
+    "title": "Eletrocardiograma — Hipertrofia ventricular esquerda por critérios de voltagem",
+    "modality": "Eletrocardiograma",
+    "theme": "Hipertensão",
+    "file_path": "ecg/hipertrofia-ventricular-esquerda-criterios-de-voltagem.jpg",
+    "findings": "ECG de 12 derivações mostrando aumento de amplitude do QRS nas derivações precordiais — onda S profunda em V1-V3 e onda R proeminente em V4-V6, com complexos que ultrapassam o traçado nas derivações laterais — associado a alteração do padrão de repolarização (segmento ST/onda T) nas derivações laterais e a sinais de aumento atrial esquerdo. A fonte descreve o traçado como material didático de hipertrofia ventricular esquerda (HVE) com alteração atrial esquerda, ilustrando critérios de voltagem de Sokolow-Lyon, Cornell, Framingham e Romhilt-Estes.",
+    "teaching_points": "A HVE ao ECG é achado eletrocardiográfico clássico na cardiopatia hipertensiva, refletindo o remodelamento do ventrículo esquerdo por sobrecarga pressórica crônica. O critério de voltagem mais usado na prática (Sokolow-Lyon) soma a profundidade da onda S em V1 à altura da onda R em V5 ou V6 — soma ≥35 mm (ou R em aVL ≥11 mm) sugere HVE, mas tem sensibilidade moderada e é influenciado por idade, sexo, biotipo e espessura da parede torácica, o que limita seu uso isolado como triagem em obesos e idosos. O chamado padrão de 'strain' (infradesnivelamento do ST descendente com T invertida assimétrica) nas derivações com QRS predominantemente positivo, quando presente junto ao critério de voltagem, aumenta a especificidade para hipertrofia verdadeira (em vez de apenas variante normal de alta voltagem) e se associa a pior prognóstico cardiovascular. O ecocardiograma continua sendo o método de referência para quantificar massa ventricular esquerda — o ECG tem alta especificidade mas sensibilidade limitada, e um ECG normal não exclui HVE ao eco.",
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:E307_(CardioNetworks_ECGpedia).jpg",
+    "license": "CC BY-SA 3.0",
+    "attribution": "Michael Rosengarten, BEng, MD (McGill), CardioNetworks ECGpedia (en.ecgpedia.org), via Wikimedia Commons — CC BY-SA 3.0.",
+    "tags": [
+      "eletrocardiograma",
+      "hipertrofia ventricular esquerda",
+      "hipertensão",
+      "sokolow-lyon",
+      "cardiopatia hipertensiva"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
