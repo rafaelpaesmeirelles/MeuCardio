@@ -9603,5 +9603,30 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "vivid-registro-valve-in-valve-transcateter-em-biopotese-degenerada",
+    "title": "VIVID — Registro internacional de valve-in-valve transcateter em bioprótese aórtica cirúrgica degenerada",
+    "study_type": "estudo_de_coorte",
+    "authors": "Dvir D, Webb JG, Bleiziffer S, et al.; Valve-in-Valve International Data Registry Investigators",
+    "journal": "JAMA",
+    "year": 2014,
+    "doi": "10.1001/jama.2014.7246",
+    "pmid": "25005653",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/25005653/",
+    "summary": "Registro internacional multicêntrico com 459 pacientes (idade média 77,6 anos, 56% homens) submetidos a implante de válvula transcateter dentro de bioprótese aórtica cirúrgica degenerada (valve-in-valve).",
+    "key_findings": "Modo de falha da bioprótese original: estenose 39,4% (181), regurgitação 30,3% (139), combinada 30,3% (139). Mortalidade em 1 mês: 7,6%; AVC maior: 1,7%; 92,6% em NYHA I/II. Sobrevida em 1 ano (Kaplan-Meier): 83,2%, variando por tamanho da prótese original (≤21mm: 74,8%; >21-<25mm: 81,8%; ≥25mm: 93,3%) e por modo de falha (estenose: 76,6%; regurgitação: 91,2%; combinada: 83,9%).",
+    "clinical_implications": "Maior registro internacional sobre valve-in-valve aórtico: bioprótese original pequena e modo de falha por estenose (versus regurgitação) predizem pior sobrevida em 1 ano — mismatch paciente-prótese pré-existente se soma ao novo dispositivo implantado dentro dele, relevante para a decisão entre valve-in-valve e reoperação cirúrgica.",
+    "limitations": "Registro de 2014, sem grupo controle randomizado; gerações mais recentes de válvulas transcateter podem ter resultado diferente do reportado. Dados observacionais sujeitos a viés de seleção e de centro.",
+    "theme": "Valvopatias",
+    "tags": [
+      "valve-in-valve",
+      "vivid",
+      "bioprótese degenerada",
+      "tavi",
+      "registro internacional"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]

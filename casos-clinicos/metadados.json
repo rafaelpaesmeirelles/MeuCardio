@@ -11316,5 +11316,25 @@
       "Brignole M, Moya A, de Lange FJ, et al. 2018 ESC Guidelines for the diagnosis and management of syncope. Eur Heart J. 2018;39(21):1883-1948. DOI: 10.1093/eurheartj/ehy037, Tabela 10"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "biopotese-mitral-anticoagulacao-primeiros-3-meses",
+    "titulo": "Bioprótese mitral recém-implantada: aspirina ou anticoagulante nos primeiros meses?",
+    "tema": "Valvopatias",
+    "nivel": "básico",
+    "enunciado": "Mulher, 58 anos, submetida a troca valvar mitral por bioprótese há 2 semanas, em ritmo sinusal, sem fibrilação atrial ou outra indicação prévia de anticoagulação oral.",
+    "pergunta": "Segundo a diretriz ESC/EACTS 2021, qual a conduta antitrombótica recomendada para os primeiros 3 meses?",
+    "opcoes": [
+      "Aspirina 75-100 mg/dia isolada, mesma conduta da bioprótese aórtica",
+      "Anticoagulação oral com antagonista de vitamina K deve ser considerada (Classe IIa, Nível B) — diferente da bioprótese aórtica, a posição mitral/tricúspide não tem aspirina como alternativa de mesmo peso",
+      "Nenhum antitrombótico é necessário, já que a paciente está em ritmo sinusal",
+      "Anticoagulante oral direto (DOAC) é a primeira escolha para bioprótese mitral nos primeiros 3 meses"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A diretriz ESC/EACTS 2021 diferencia a recomendação por posição da bioprótese: na posição AÓRTICA, aspirina OU antagonista de vitamina K (AVK) são apresentados como alternativas de mesmo peso (Classe IIa, Nível B) nos primeiros 3 meses. Já na posição MITRAL ou TRICÚSPIDE, a recomendação é especificamente por AVK (Classe IIa, Nível B) — sem aspirina como alternativa de mesmo peso —, refletindo o maior risco trombogênico reconhecido dessas posições. DOAC não tem essa indicação estabelecida nesta diretriz para bioprótese recém-implantada.",
+    "source_refs": [
+      "Vahanian A, Beyersdorf F, Praz F, et al. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632."
+    ],
+    "review_status": "revisado"
   }
 ]
