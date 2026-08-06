@@ -6005,5 +6005,31 @@
       "avaliação etiológica",
       "prognóstico"
     ]
+  },
+  {
+    "slug": "perfil-lipidico-colesterol-total-ldl-hdl-e-triglicerideos",
+    "name": "Perfil lipídico (colesterol total, LDL-C, HDL-C e triglicerídeos)",
+    "category": "laboratorial",
+    "theme": "Prevenção e lipídios",
+    "what_it_measures": "Painel bioquímico sérico que mede colesterol total, HDL-colesterol (HDL-C) e triglicerídeos diretamente; o LDL-colesterol (LDL-C) é tradicionalmente calculado pela fórmula de Friedewald (LDL-C = CT − HDL-C − TG/5, em mg/dL), que perde precisão com triglicerídeos >400 mg/dL — nesses casos, métodos diretos de dosagem de LDL-C ou a fórmula de Martin/Hopkins (que usa um fator ajustável em vez do divisor fixo 5) são preferíveis. É o exame de base para estimar o risco cardiovascular aterosclerótico e para guiar e monitorizar a terapia hipolipemiante.",
+    "reference_range": "A diretriz ESC/EAS não define um valor único de \"normalidade\" populacional para o LDL-C — a meta é escalonada pela categoria de risco cardiovascular total do paciente: baixo risco <116 mg/dL; risco moderado <100 mg/dL; alto risco <70 mg/dL e redução ≥50% do valor basal; muito alto risco <55 mg/dL e redução ≥50% do valor basal; risco extremo (evento cardiovascular recorrente em até 2 anos, em uso de estatina em dose máxima tolerada) <40 mg/dL. Triglicerídeos >200 mg/dL (>2,3 mmol/L) em paciente de alto risco (ou risco maior) já indicam considerar estatina como fármaco de primeira escolha, mesmo antes de se avaliar terapia específica para hipertrigliceridemia.",
+    "indications": "Rastreio de risco cardiovascular em adultos (ao menos uma vez, e periodicamente conforme o risco basal); diagnóstico e classificação de dislipidemia (hipercolesterolemia, hipertrigliceridemia, dislipidemia mista); acompanhamento de resposta e adesão à terapia hipolipemiante (estatina, ezetimiba, inibidor de PCSK9); investigação inicial de hipercolesterolemia familiar quando LDL-C muito elevado (>190 mg/dL) sem outra causa evidente.",
+    "interpretation": "A diretriz ESC/EAS aceita a coleta sem jejum para a avaliação inicial na maioria dos pacientes; a Diretriz Brasileira de Dislipidemias 2025 reafirma essa orientação (recomendação Forte, certeza Moderada), com a ressalva de que, se os triglicerídeos vierem >440 mg/dL em amostra sem jejum, deve-se colher nova amostra em jejum de 12 horas para melhor caracterização. O LDL-C calculado (Friedewald) é o parâmetro mais usado na prática para decisão terapêutica e definição de meta, mas torna-se não confiável com triglicerídeos muito elevados — cenário em que medir o LDL-C diretamente ou usar a apolipoproteína B (mais estável nesse contexto) é preferível.",
+    "limitations": "O cálculo de Friedewald subestima o LDL-C quando os triglicerídeos estão elevados e não é válido acima de 400 mg/dL de triglicerídeos, nem na presença de quilomicronemia; variação biológica intraindividual (dieta recente, doença aguda intercorrente, gestação) pode alterar temporariamente os valores — dosagem em vigência de doença aguda grave (incluindo síndrome coronariana aguda recente) tende a subestimar o LDL-C basal do paciente.",
+    "source_refs": [
+      "Mach F, Baigent C, Catapano AL, et al. 2019 ESC/EAS Guidelines for the management of dyslipidaemias: lipid modification to reduce cardiovascular risk. Eur Heart J. 2020;41(1):111-188. DOI: 10.1093/eurheartj/ehz455. PMID: 31504418",
+      "Mach F, Koskinas KC, Roeters van Lennep JE, et al. 2025 Focused Update of the 2019 ESC/EAS Guidelines for the management of dyslipidaemias. Eur Heart J. 2025;46(42):4359-4378. DOI: 10.1093/eurheartj/ehaf190. PMID: 40878289 — Tabela de categorias de risco cardiovascular e metas de LDL-C"
+    ],
+    "review_status": "revisado",
+    "published": false,
+    "tags": [
+      "perfil lipidico",
+      "colesterol total",
+      "ldl",
+      "hdl",
+      "triglicerideos",
+      "friedewald",
+      "rastreio cardiovascular"
+    ]
   }
 ]
