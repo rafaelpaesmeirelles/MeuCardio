@@ -6031,5 +6031,70 @@
       "friedewald",
       "rastreio cardiovascular"
     ]
+  },
+  {
+    "slug": "cintilografia-de-perfusao-miocardica-no-rastreio-de-isquemia-silenciosa-no-diabetico-assintomatico",
+    "name": "Cintilografia de perfusão miocárdica (SPECT) no rastreio de isquemia silenciosa no diabético assintomático",
+    "category": "imagem",
+    "theme": "Diabetes e cardiologia",
+    "what_it_measures": "Perfusão miocárdica sob estresse farmacológico ou físico por SPECT, usada para detectar isquemia miocárdica em pacientes com diabetes tipo 2 que não relatam sintomas anginosos — a chamada isquemia silenciosa, mais frequente no diabético pela neuropatia autonômica.",
+    "reference_range": "Não há um corte único; o resultado é qualitativo/semiquantitativo (normal, defeito de perfusão leve/moderado/grave, reversível ou fixo). No estudo DIAD, cintilografia anormal (defeito de perfusão) foi encontrada em 22% dos 1123 pacientes diabéticos tipo 2 assintomáticos rastreados, e isquemia moderada a grave em 6%.",
+    "indications": "Rastreio de doença arterial coronariana silenciosa em diabético tipo 2 assintomático, historicamente considerado em pacientes com fatores de risco adicionais (ECG de repouso anormal, doença arterial periférica ou carotídea, ou múltiplos fatores de risco cardiovascular).",
+    "interpretation": "O estudo DIAD (Detection of Ischemia in Asymptomatic Diabetics) rastreou 1123 pacientes com diabetes tipo 2 sem sintomas cardíacos com SPECT de perfusão miocárdica sob estresse com adenosina: 22% tiveram cintilografia anormal e 6% tiveram isquemia moderada a grave, proporção considerada relevante para uma população sem sintomas.",
+    "limitations": "O próprio estudo DIAD, em publicação de desfecho posterior com 5 anos de seguimento, mostrou que o rastreio sistemático por cintilografia não reduziu eventos cardíacos em comparação a não rastrear — resultado que levou as diretrizes de diabetes (ADA) a não recomendarem rastreio de rotina com exame de imagem em diabético assintomático sem outros indicadores de alto risco, reservando o exame para paciente com sintomas ou ECG alterado.",
+    "source_refs": [
+      "Wackers FJ et al. Detection of silent myocardial ischemia in asymptomatic diabetic subjects: the DIAD study. Diabetes Care. 2004;27(8):1954-1961. PMID 15277423."
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "metanefrinas-plasmaticas-livres-no-rastreio-de-feocromocitoma",
+    "name": "Metanefrinas plasmáticas livres no rastreio de feocromocitoma como causa de hipertensão secundária",
+    "category": "laboratorial",
+    "theme": "Hipertensão",
+    "what_it_measures": "Metanefrina e normetanefrina livres no plasma, metabólitos da adrenalina e noradrenalina produzidos continuamente dentro das células cromafins do tumor (ao contrário das catecolaminas circulantes, cuja liberação é episódica) — por isso o teste de escolha para rastreio de feocromocitoma e paraganglioma secretor.",
+    "reference_range": "A diretriz da Endocrine Society recomenda interpretar como positivo qualquer valor acima do limite superior de referência do laboratório que processou a amostra; a sensibilidade do teste é considerada muito alta (próxima de 97-99% em séries publicadas), o que faz do resultado normal um bom exame para excluir o diagnóstico.",
+    "indications": "Investigação de hipertensão em paciente com tríade clássica (cefaleia, sudorese, palpitação paroxística), hipertensão resistente ou paroxística, incidentaloma adrenal, hipertensão associada a síndromes genéticas predisponentes (NEM2, von Hippel-Lindau, neurofibromatose tipo 1, mutações de SDHx) ou história familiar de feocromocitoma/paraganglioma.",
+    "interpretation": "A diretriz de 2014 da Endocrine Society recomenda metanefrinas plasmáticas livres OU metanefrinas fracionadas urinárias de 24 horas como teste bioquímico inicial (Recomendação forte). Resultado positivo deve ser seguido de exame de imagem (TC ou RM de abdome/pelve) para localizar o tumor; a coleta de sangue deve ser feita com o paciente em decúbito dorsal, por causa de falso-positivos relacionados à postura.",
+    "limitations": "Falsos-positivos são relativamente comuns e podem ocorrer por coleta em posição sentada, estresse agudo, alguns antidepressivos tricíclicos, e outros fármacos — a diretriz recomenda repetir o teste em condições controladas antes de investigação de imagem extensa quando o resultado for apenas discretamente elevado. Há uma correção publicada ao texto original da diretriz, não lida nesta revisão.",
+    "source_refs": [
+      "Lenders JW et al. Pheochromocytoma and paraganglioma: an Endocrine Society clinical practice guideline. J Clin Endocrinol Metab. 2014;99(6):1915-1942. PMID 24893135.",
+      "Correction to \"Pheochromocytoma and Paraganglioma: An Endocrine Society Clinical Practice Guideline\". J Clin Endocrinol Metab. 2023;108(5):e226. PMID 36752564 — errata publicada, não lida nesta revisão."
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "holter-ou-monitor-externo-prolongado-no-diagnostico-de-fa-paroxistica",
+    "name": "Holter de 24-72 horas ou monitor externo prolongado no diagnóstico e quantificação de fibrilação atrial paroxística",
+    "category": "metodo_grafico",
+    "theme": "Fibrilação atrial",
+    "what_it_measures": "Registro eletrocardiográfico contínuo (Holter clássico de 24-48h) ou monitorização externa prolongada (patches ou gravadores de eventos de 7 a 30 dias), usado tanto para diagnosticar fibrilação atrial paroxística em paciente com sintomas intermitentes (palpitação, dispneia) quanto para quantificar a carga de FA (percentual de tempo em ritmo fibrilatório) em paciente com diagnóstico já estabelecido.",
+    "reference_range": "Não há valor de referência único — o resultado é qualitativo (presença/ausência de episódio de FA com duração mínima definida, tipicamente ≥30 segundos para caracterizar o diagnóstico) e quantitativo quando se mede a carga de FA (percentual do tempo total monitorizado em fibrilação atrial).",
+    "indications": "Suspeita clínica de FA paroxística com ECG de repouso normal (sintomas intermitentes de palpitação), avaliação da resposta de frequência ventricular ao longo do dia em FA já diagnosticada, quantificação da carga de FA para orientar decisão terapêutica, e rastreio pós-AVC criptogênico quando não há indicação de monitor implantável.",
+    "interpretation": "A diretriz ESC 2024 de fibrilação atrial recomenda escolher a duração e o tipo de monitorização ambulatorial conforme a frequência esperada dos sintomas — quanto mais espaçados os episódios, maior a duração de monitorização necessária para captar um evento, o mesmo princípio já aplicado à investigação de síncope. Em paciente com sintomas diários a semanais, Holter convencional de 24-72h costuma ser suficiente; em sintomas mais esparsos, monitores externos prolongados (7-30 dias) ou eventualmente monitor implantável têm maior rendimento diagnóstico.",
+    "limitations": "Resultado negativo não exclui FA paroxística quando os episódios são pouco frequentes — a decisão de estender a investigação (monitor implantável) depende da probabilidade pré-teste e da relevância clínica de não perder o diagnóstico (por exemplo, paciente pós-AVC criptogênico).",
+    "source_refs": [
+      "2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the European Association for Cardio-Thoracic Surgery (EACTS). Eur Heart J. 2024;45(36):3314-3414. PMID 39210723."
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "variabilidade-da-frequencia-cardiaca-hrv-como-marcador-de-risco-autonomico-na-depressao-e-doenca-coronariana",
+    "name": "Variabilidade da frequência cardíaca (HRV) como marcador de risco autonômico no paciente com depressão e doença coronariana",
+    "category": "metodo_grafico",
+    "theme": "Saúde mental e cardiologia",
+    "what_it_measures": "Variação batimento a batimento do intervalo entre complexos R-R, calculada a partir de registro eletrocardiográfico contínuo (Holter), refletindo o equilíbrio entre os sistemas simpático e parassimpático — usada como marcador substituto de risco autonômico e cardiovascular em pacientes com depressão e doença coronariana, populações nas quais a variabilidade tende a estar reduzida.",
+    "reference_range": "Não há corte único endossado por diretriz — os parâmetros mais usados na literatura de pesquisa são o SDNN (desvio padrão de todos os intervalos R-R normais) e a RMSSD (raiz quadrada da média dos quadrados das diferenças sucessivas de R-R), ambos reduzidos em estados de menor tônus parassimpático/predomínio simpático. Valores absolutos variam por método de registro e duração da gravação, não permitindo comparação direta entre laboratórios sem padronização.",
+    "indications": "Pesquisa clínica e avaliação complementar de risco autonômico em paciente coronariano com sintomas depressivos, como desfecho substituto em ensaios que testam intervenção sobre depressão nessa população (não é exame de uso rotineiro isolado na prática clínica).",
+    "interpretation": "No ensaio UPBEAT, que comparou exercício aeróbico, sertralina e placebo em pacientes com doença coronariana e sintomas depressivos, tanto exercício quanto medicação tenderam a melhorar a variabilidade da frequência cardíaca mais que placebo (p=0,052), com tendência de o exercício superar a sertralina nesse desfecho específico (p=0,093) — achado consistente com a hipótese de que a melhora do tônus autonômico é um dos mecanismos pelos quais tratar a depressão pode beneficiar o prognóstico cardiovascular.",
+    "limitations": "HRV é biomarcador substituto (não um desfecho clínico direto) — a associação entre melhora da variabilidade e redução de eventos cardiovasculares duros não foi estabelecida com poder estatístico suficiente no UPBEAT, que teve amostra pequena (101 pacientes) e não foi desenhado para avaliar desfechos duros.",
+    "source_refs": [
+      "Blumenthal JA et al. Exercise and pharmacological treatment of depressive symptoms in patients with coronary heart disease: results from the UPBEAT study. J Am Coll Cardiol. 2012;60(12):1053-1063. PMID 22858387."
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
