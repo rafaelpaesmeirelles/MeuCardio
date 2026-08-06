@@ -2093,5 +2093,251 @@
       "Delgado V, Ajmone Marsan N, de Waha S, et al. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI 10.1093/eurheartj/ehad193. PMID 37622656",
       "Wilson WR, Gewitz M, Lockhart PB, et al. Prevention of Viridans Group Streptococcal Infective Endocarditis: A Scientific Statement From the American Heart Association. Circulation. 2021;143(20):e963-e978. PMID 33853363"
     ]
+  },
+  {
+    "slug": "dor-no-peito-investigacao-da-doenca-coronariana",
+    "titulo": "Dor no peito",
+    "subtitulo": "O que a investigação da doença coronariana crônica envolve, e por que nem toda dor precisa do mesmo exame",
+    "tema": "Doença coronariana",
+    "documento_slug": "fluxograma-sindrome-coronariana-cronica-esc-2024",
+    "resumo": "Explicação em linguagem simples sobre como o médico decide, diante de dor no peito que não é uma emergência, qual exame pedir e por que — a partir da diretriz europeia de 2024 sobre síndrome coronariana crônica.",
+    "review_status": "revisado",
+    "secoes": [
+      {
+        "titulo": "O que é a doença coronariana crônica",
+        "paragrafos": [
+          "As artérias coronárias levam sangue ao próprio músculo do coração. Quando elas estreitam aos poucos, por acúmulo de placas de gordura (aterosclerose), o coração pode não receber sangue suficiente durante o esforço — isso costuma aparecer como dor, aperto ou peso no peito ao caminhar, subir escada ou se estressar, que melhora com o repouso.",
+          "Isso é diferente do infarto agudo, que é uma emergência com obstrução súbita. A doença coronariana crônica se desenvolve devagar, ao longo de anos, e por isso a investigação também costuma ser planejada, não urgente."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Por que o médico não pede o mesmo exame para todo mundo",
+        "paragrafos": [
+          "Antes de escolher o exame, o médico estima, a partir da sua idade, sexo, tipo de dor e fatores de risco (colesterol, pressão, diabetes, tabagismo, histórico familiar), qual é a probabilidade de a dor ser realmente causada por artéria coronária estreitada.",
+          "Quando essa probabilidade é muito baixa, a diretriz mais recente (2024) passou a recomendar considerar adiar o exame em vez de pedir uma tomografia 'por segurança' — porque o exame, nesse cenário, tem mais chance de gerar um achado incerto (que leva a mais exames, ansiedade e às vezes procedimento desnecessário) do que de esclarecer alguma coisa. Isso não significa que sua dor não importa: significa que a matemática do risco-benefício do exame mudou com base em estudo científico."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Os exames possíveis, em linhas gerais",
+        "paragrafos": [
+          "Não existe um único exame certo para todo mundo — a escolha depende da sua probabilidade estimada, da sua idade e de outras condições que você tenha."
+        ],
+        "itens": [
+          "Angiotomografia de coronárias: mostra as artérias por dentro, útil principalmente quando a probabilidade de doença é baixa a intermediária",
+          "Escore de cálcio coronariano: mede a quantidade de cálcio nas artérias, complementa a decisão em alguns casos",
+          "Teste de esforço, cintilografia ou ecocardiograma de estresse: mostram se o coração recebe sangue suficiente durante o esforço físico ou simulado",
+          "Cateterismo cardíaco: reservado para quando a probabilidade de doença é alta ou os outros exames já indicaram necessidade de olhar diretamente por dentro da artéria"
+        ]
+      },
+      {
+        "titulo": "O que fazer com o resultado",
+        "paragrafos": [
+          "Um exame normal não é motivo para ignorar sintomas novos ou que piorem depois — procure orientação se a dor mudar de padrão, mesmo com exame recente normal.",
+          "Se o exame mostrar estreitamento, o próximo passo (só remédio, ou remédio associado a procedimento) depende do grau de estreitamento e de como você se sente — essa decisão é conversada com seu médico, caso a caso."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Dor no peito que não melhora com repouso em poucos minutos",
+      "Dor associada a suor frio, falta de ar intensa ou sensação de morte iminente",
+      "Dor irradiando para o braço esquerdo, mandíbula ou costas, de início súbito",
+      "Desmaio ou quase-desmaio junto com a dor no peito",
+      "Qualquer dor no peito muito diferente da que você já sentiu antes — procure emergência imediatamente, não espere pela consulta agendada"
+    ],
+    "perguntas": [
+      "Qual é a probabilidade estimada de eu ter doença coronariana, e como ela foi calculada?",
+      "Por que este exame e não outro foi escolhido para o meu caso?",
+      "O que acontece se o exame vier normal, mas a dor continuar?",
+      "Preciso mudar alguma atividade enquanto aguardo o exame?",
+      "Quais sintomas devem me levar direto à emergência, sem esperar a consulta de retorno?"
+    ],
+    "fontes": [
+      "2024 ESC Guidelines for the management of chronic coronary syndromes. European Heart Journal. 2024;45(36):3415-3537. PMID 39210710."
+    ]
+  },
+  {
+    "slug": "entendendo-o-escore-de-risco-cardiovascular",
+    "titulo": "O escore de risco cardiovascular",
+    "subtitulo": "O que aquele número (ou porcentagem) que o médico calcula realmente significa",
+    "tema": "Calculadoras",
+    "documento_slug": "framingham-risk-score-frs",
+    "resumo": "Explicação em linguagem simples sobre o que é um escore de risco cardiovascular, para que serve e o que fazer (e não fazer) com o resultado.",
+    "review_status": "revisado",
+    "secoes": [
+      {
+        "titulo": "O que é",
+        "paragrafos": [
+          "Um escore de risco cardiovascular é uma estimativa — não uma sentença — da chance de você ter um evento cardiovascular (como infarto ou AVC) num período futuro, geralmente nos próximos 10 anos.",
+          "O cálculo usa informações que já sabemos que influenciam esse risco: idade, sexo, se você fuma, sua pressão arterial, seu colesterol e se você tem diabetes. Existem várias versões desse tipo de escore (Framingham, Pooled Cohort Equations, SCORE2, entre outras), desenvolvidas em populações diferentes — por isso o número pode variar um pouco conforme qual escore o médico usa."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Por que o médico calcula isso",
+        "paragrafos": [
+          "O escore ajuda a decidir, junto com você, se vale a pena começar um remédio para prevenir um evento que ainda não aconteceu — por exemplo, uma estatina para baixar o colesterol, mesmo sem sintoma algum hoje.",
+          "Essa decisão é diferente de tratar uma doença que já está causando sintoma. Aqui, o remédio é prevenção baseada em probabilidade — e por isso o número do escore, junto com sua preferência pessoal sobre tomar remédio a longo prazo, entra na conversa."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que o número NÃO significa",
+        "paragrafos": [],
+        "itens": [
+          "Não é uma previsão exata do que vai acontecer com você — é uma probabilidade estatística baseada em grupos de pessoas parecidas com você",
+          "Risco 'baixo' não significa risco zero — significa que a chance é menor comparada a quem tem risco 'alto'",
+          "O escore não substitui sintoma novo — dor no peito, falta de ar ou outro sintoma de alerta merece avaliação independentemente do que o escore calculado antes indicava",
+          "Um escore feito há alguns anos pode estar desatualizado se sua pressão, colesterol, peso ou hábito de fumar mudaram — vale recalcular periodicamente"
+        ]
+      },
+      {
+        "titulo": "O que você pode fazer para melhorar seu risco, além do remédio",
+        "paragrafos": [
+          "Boa parte das variáveis que entram no cálculo pode ser modificada: parar de fumar reduz risco de forma expressiva e relativamente rápida; controlar a pressão e o colesterol (por hábito de vida e, quando indicado, remédio) reduz risco de forma mensurável; atividade física regular ajuda em várias dessas variáveis ao mesmo tempo."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Dor no peito nova, mesmo com escore de risco calculado como baixo",
+      "Falta de ar súbita",
+      "Fraqueza ou dormência de um lado do corpo, boca torta, dificuldade de falar — procure emergência imediatamente",
+      "Palpitação associada a tontura ou desmaio"
+    ],
+    "perguntas": [
+      "Qual escore foi usado no meu caso, e qual foi o resultado em número?",
+      "O que exatamente esse número muda na minha conduta — remédio, exame adicional, ou só acompanhamento?",
+      "Com que frequência devo recalcular esse risco?",
+      "Quais dos meus próprios fatores (pressão, colesterol, tabagismo, peso) pesam mais no meu resultado?",
+      "Existe diferença relevante se usarmos outro escore no meu caso?"
+    ],
+    "fontes": [
+      "D'Agostino RB Sr et al. General cardiovascular risk profile for use in primary care: the Framingham Heart Study. Circulation. 2008;117(6):743-753. PMID 18212285."
+    ]
+  },
+  {
+    "slug": "doenca-de-kawasaki-o-que-os-pais-precisam-saber",
+    "titulo": "Doença de Kawasaki",
+    "subtitulo": "O que os pais precisam saber sobre o diagnóstico, o tratamento e o acompanhamento do coração",
+    "tema": "Cardiologia pediátrica",
+    "documento_slug": "doenca-de-kawasaki-criterios-diagnosticos-estratificacao-de-risco-por-z-score-e-tratamento",
+    "resumo": "Explicação em linguagem simples, para pais e responsáveis, sobre a doença de Kawasaki: o que causa, como se trata, e por que o acompanhamento do coração continua importante mesmo depois da criança melhorar.",
+    "review_status": "revisado",
+    "secoes": [
+      {
+        "titulo": "O que é",
+        "paragrafos": [
+          "A doença de Kawasaki é uma inflamação aguda dos vasos sanguíneos que afeta principalmente crianças pequenas. A causa exata ainda não é conhecida, mas não é contagiosa — não passa de uma criança para outra.",
+          "O motivo de tanta atenção médica é que a doença pode afetar as artérias que levam sangue ao próprio coração (artérias coronárias). Quando tratada a tempo, a grande maioria das crianças se recupera bem, sem sequela — por isso o diagnóstico e o tratamento precoces importam tanto."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Como se reconhece",
+        "paragrafos": [
+          "Os médicos procuram uma combinação de sinais: febre alta que dura vários dias, olhos vermelhos (sem secreção purulenta), lábios muito vermelhos e rachados ou língua avermelhada ('língua em framboesa'), manchas na pele, inchaço ou vermelhidão nas mãos e pés, e gânglios inchados no pescoço.",
+          "Nem toda criança apresenta todos os sinais ao mesmo tempo — por isso o diagnóstico às vezes exige exames de sangue e ecocardiograma complementares, não só a observação dos sinais visíveis."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O tratamento",
+        "paragrafos": [
+          "O tratamento padrão é feito com imunoglobulina, aplicada na veia, em dose única, geralmente combinada com ácido acetilsalicílico (AAS) — aqui, diferente da recomendação geral que evita AAS em criança por outros motivos, o uso é específico e orientado pelo médico nesta doença.",
+          "A maioria das crianças melhora rapidamente após o tratamento, com queda da febre em 1 a 2 dias. Uma parcela menor de crianças precisa de uma segunda dose de imunoglobulina ou de outro medicamento, quando a resposta inicial não é suficiente."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Por que o coração continua sendo acompanhado depois que a criança melhora",
+        "paragrafos": [
+          "Mesmo com o tratamento adequado, uma parte das crianças pode desenvolver uma dilatação (aneurisma) numa artéria coronária. Por isso, mesmo depois que os sintomas passam e a criança volta a se sentir bem, o cardiologista pediátrico continua pedindo ecocardiogramas de acompanhamento — a frequência depende do que foi encontrado no exame inicial.",
+          "Se o primeiro ecocardiograma for normal, o acompanhamento costuma ser mais espaçado. Se houver dilatação, mesmo pequena, o acompanhamento é mais frequente, e pode incluir outros exames do coração conforme a criança cresce."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Febre alta que persiste por 5 dias ou mais sem explicação, especialmente associada a outros dos sinais descritos acima",
+      "Sonolência excessiva ou irritabilidade incomum na criança com febre prolongada",
+      "Recusa de alimentos e líquidos com sinais de desidratação",
+      "Dor abdominal intensa ou vômitos persistentes durante o quadro febril",
+      "Qualquer piora súbita depois de um diagnóstico já confirmado de Kawasaki — procure o serviço de emergência combinado com o cardiologista pediátrico"
+    ],
+    "perguntas": [
+      "O ecocardiograma do meu filho mostrou alguma alteração na artéria coronária?",
+      "Com que frequência precisaremos repetir o ecocardiograma daqui para frente?",
+      "Meu filho vai precisar tomar AAS por quanto tempo?",
+      "Há alguma restrição de atividade física enquanto o acompanhamento continua?",
+      "Se houver dilatação da artéria coronária, o que isso muda no futuro dele?"
+    ],
+    "fontes": [
+      "Fukazawa R et al. JCS/JSCS 2020 Guideline on Diagnosis and Management of Cardiovascular Sequelae in Kawasaki Disease. Circ J. 2020;84(8):1348-1407. PMID 32641591.",
+      "McCrindle BW et al. Diagnosis, Treatment, and Long-Term Management of Kawasaki Disease: A Scientific Statement for Health Professionals From the American Heart Association. Circulation. 2017;135(17):e927-e999. PMID 28356445."
+    ]
+  },
+  {
+    "slug": "fibrilacao-atrial-no-idoso-medo-de-cair-e-anticoagulacao",
+    "titulo": "Fibrilação atrial e medo de cair",
+    "subtitulo": "Por que 'ele cai muito' quase nunca é motivo para não tomar o anticoagulante",
+    "tema": "Cardiologia geriátrica",
+    "documento_slug": "fibrilacao-atrial-no-idoso-anticoagulacao-versus-risco-de-queda-e-ajuste-renal",
+    "resumo": "Explicação em linguagem simples, para o idoso com fibrilação atrial e sua família, sobre por que o risco de queda raramente deve pesar na decisão de tomar o anticoagulante — e o que fazer de verdade quando há risco de queda.",
+    "review_status": "revisado",
+    "secoes": [
+      {
+        "titulo": "A preocupação mais comum",
+        "paragrafos": [
+          "\"Ele cai muito, não pode tomar remédio para afinar o sangue\" é uma das frases mais repetidas entre famílias de idosos com fibrilação atrial — e é uma preocupação compreensível: o medo é de que uma queda, com o sangue mais 'fino', cause um sangramento grave dentro do crânio.",
+          "Só que essa lógica, quando estudada com números reais, quase nunca se sustenta. Um estudo dedicado a essa pergunta calculou que uma pessoa precisaria cair centenas de vezes num único ano para que o risco da queda superasse o benefício do anticoagulante na prevenção de AVC."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Por que o anticoagulante geralmente vence essa comparação",
+        "paragrafos": [
+          "A fibrilação atrial aumenta o risco de formar coágulo dentro do coração, que pode viajar até o cérebro e causar um AVC — um risco que existe todos os dias do ano, não só em ocasiões especiais.",
+          "Uma queda, por outro lado, é um evento pontual, e a maioria das quedas não causa nenhum sangramento grave. Comparando o risco constante do AVC (sem proteção) com o risco pontual e raro de sangramento grave por queda, a balança favorece o anticoagulante na grande maioria dos casos."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "O que de fato deveria ser feito diante do medo de queda",
+        "paragrafos": [
+          "Em vez de suspender o remédio que protege contra AVC, o caminho certo costuma ser investigar e tratar a CAUSA da queda: revisar todos os remédios em uso (alguns combinam para causar tontura), verificar a pressão ao levantar (hipotensão postural), avaliar força muscular e equilíbrio, checar a visão, e adaptar o ambiente da casa (tapetes soltos, iluminação, barras de apoio no banheiro).",
+          "Existem, sim, algumas situações específicas em que a avaliação muda de fato — por exemplo, quedas com traumatismo na cabeça já documentado repetidas vezes, ou uma hemorragia no cérebro que já aconteceu antes. Fora dessas situações específicas, a decisão de manter o anticoagulante costuma continuar sendo a mais segura."
+        ],
+        "itens": []
+      },
+      {
+        "titulo": "Sobre o tipo de anticoagulante",
+        "paragrafos": [
+          "Existem diferentes classes de anticoagulante, e a escolha entre elas pode ser ajustada justamente pensando no risco de queda — os medicamentos mais novos (os chamados anticoagulantes orais diretos) têm menor risco do tipo de sangramento mais temido (dentro do crânio) comparados ao medicamento mais antigo (varfarina), mesmo com risco de sangramento parecido no total.",
+          "A dose também costuma ser ajustada pela função dos rins, que naturalmente diminui com a idade — não é incomum precisar de uma dose menor no paciente muito idoso, o que é diferente de não tratar."
+        ],
+        "itens": []
+      }
+    ],
+    "sinais_de_alerta": [
+      "Dor de cabeça súbita e muito intensa, diferente da habitual, especialmente após uma queda",
+      "Confusão mental nova ou sonolência excessiva após uma queda",
+      "Fraqueza ou dormência de um lado do corpo, boca torta, dificuldade de falar — procure emergência imediatamente",
+      "Qualquer sangramento que não para com pressão local por tempo prolongado",
+      "Sangue na urina ou fezes escurecidas — comunique ao médico"
+    ],
+    "perguntas": [
+      "Por que meu médico decidiu manter (ou trocar) meu anticoagulante mesmo eu caindo com frequência?",
+      "O que está sendo feito para investigar a CAUSA das minhas quedas?",
+      "Minha dose de anticoagulante já foi ajustada considerando meus rins?",
+      "Quais sinais de sangramento eu devo procurar em casa?",
+      "Existe algum cenário específico no meu caso em que a decisão mudaria?"
+    ],
+    "fontes": [
+      "Man-Son-Hing M et al. Choosing antithrombotic therapy for elderly patients with atrial fibrillation who are at risk for falls. Arch Intern Med. 1999;159(7):677-685. PMID 10218746.",
+      "Granger CB et al. Apixaban versus warfarin in patients with atrial fibrillation (ARISTOTLE). N Engl J Med. 2011;365(11):981-992. PMID 21870978."
+    ]
   }
 ]
