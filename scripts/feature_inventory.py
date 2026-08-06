@@ -32,6 +32,10 @@ EXPECTED_APP_ROUTES = {
     "/round", "/agenda", "/documentos", "/receituario", "/assinatura",
     "/minha-conta", "/telediagnostico", "/caixa-de-email", "/usuarios-online",
     "/admin", "/fila-telediagnostico", "/admin/usuarios-online",
+    # Trabalho 13 (tour guiado) e Trabalho 11/12 (gate de identidade
+    # pós-pagamento) — as duas são redirecionamento de gate, não item de
+    # menu, por isso não entram em EXPECTED_NAV_ROUTES.
+    "/tour", "/verificacao-identidade",
 }
 
 EXPECTED_NAV_ROUTES = {
@@ -58,6 +62,8 @@ EXPECTED_BACKEND_ROUTERS = {
     "emergencia.router", "receituario.router", "clinical_cases.router",
     "specialty_guides.router", "chat.router", "assinatura.router", "agenda_integrada.router",
     "chat_session.router_ws",
+    # Trabalho 11 (06/08/2026): verificação de identidade pós-pagamento (KYC).
+    "kyc.router",
 }
 
 EXPECTED_SUPPORT_FILES = {

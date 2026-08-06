@@ -58,13 +58,17 @@ def test_listar_provedores_inclui_a1_arquivo_indisponivel_sem_certificado(client
     assert a1["nivel"] == "qualificada"
 
 
-def test_provedores_em_nuvem_mostram_mensagem_em_breve(client, db, criar_usuario):
+def test_provedores_em_nuvem_disponiveis_via_fluxo_manual_iti(client, db, criar_usuario):
+    """Trabalho 14 (06/08/2026): VIDAAS e as demais clouds sem credencial
+    comercial deixaram de ser "em breve" — passaram a ter o fluxo manual
+    do Assinador ITI (o médico assina fora e reenvia), disponível sem
+    nenhuma credencial. Substitui o teste antigo, que assumia recusa."""
     user, token = criar_usuario()
     _subscribe(db, user.id)
     resposta = client.get("/api/assinatura/provedores", headers=_headers(token))
     vidaas = next(p for p in resposta.json() if p["codigo"] == "VIDAAS")
-    assert vidaas["disponivel"] is False
-    assert "em breve" in vidaas["motivo"].lower()
+    assert vidaas["disponivel"] is True
+    assert vidaas["motivo"] is None
 
 
 def test_listar_certificadoras_devolve_lista_nao_vazia(client, db, criar_usuario):

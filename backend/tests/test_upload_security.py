@@ -249,6 +249,14 @@ def test_inventario_de_rotas_upload_exige_politica_central():
         # FastAPI montar o multipart; nenhum dos dois exige isso.
         "assinatura.py",
         "kyc.py",
+        # Trabalho 14 (06/08/2026): upload do PDF assinado de volta pelo
+        # fluxo manual do Assinador ITI (.../assinatura-externa, em
+        # receituario.py e documents.py) — mesmo padrão de assinatura.py/
+        # kyc.py, leitura capada (TAMANHO_MAXIMO_PDF_ASSINADO + 1) e
+        # validação de conteúdo real (validate_file(), depois a assinatura
+        # digital embutida é conferida de verdade em verificacao_pdf.py).
+        "receituario.py",
+        "documents.py",
     }
 
     assert policy_for("POST", "/api/auth/me/foto") is not None
