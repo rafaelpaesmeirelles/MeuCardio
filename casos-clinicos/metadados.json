@@ -11336,5 +11336,25 @@
       "Vahanian A, Beyersdorf F, Praz F, et al. 2021 ESC/EACTS Guidelines for the management of valvular heart disease. Eur Heart J. 2022;43(7):561-632."
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "endocardite-avc-isquemico-timing-cirurgico",
+    "titulo": "Endocardite com AVC isquêmico: quando não atrasar a cirurgia?",
+    "tema": "Endocardite",
+    "nivel": "avançado",
+    "enunciado": "Homem, 62 anos, endocardite infecciosa de valva mitral nativa por Staphylococcus aureus, com vegetação de 14mm e insuficiência mitral grave associada a insuficiência cardíaca. Há 3 dias apresentou déficit neurológico focal transitório, totalmente resolvido em poucas horas. TC de crânio sem hemorragia. Paciente alerta, sem coma, Glasgow 15.",
+    "pergunta": "Segundo a Seção 10.4 da diretriz ESC 2023, qual a conduta quanto ao timing cirúrgico?",
+    "opcoes": [
+      "Aguardar pelo menos 4 semanas antes de operar, pelo risco de transformação hemorrágica após qualquer evento neurológico",
+      "Cirurgia sem qualquer atraso — as condições estão preenchidas: insuficiência cardíaca presente, coma ausente, e hemorragia cerebral já excluída por TC de crânio (Classe I, Nível B)",
+      "Aguardar confirmação de que o evento foi realmente um AIT e não um AVC estabelecido antes de decidir qualquer conduta",
+      "Cirurgia contraindicada até 6 meses após qualquer evento neurológico documentado"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "A diretriz ESC 2023 recomenda cirurgia sem qualquer atraso após um AVC (Classe I, Nível B) quando há insuficiência cardíaca, infecção não controlada, abscesso ou risco embólico persistentemente alto — DESDE QUE o coma esteja ausente e a hemorragia cerebral já tenha sido excluída por TC ou RM de crânio. Este caso preenche exatamente essas condições: paciente alerta (Glasgow 15, sem coma), TC sem hemorragia, e indicação cirúrgica clara por insuficiência cardíaca associada a insuficiência mitral grave. Após um ataque isquêmico transitório especificamente, a cirurgia também é recomendada sem atraso (Classe I, Nível B) — reforçando a mesma conduta. A condição central da recomendação não é 'o evento foi isquêmico', é a combinação de ausência de coma com hemorragia já descartada por imagem.",
+    "source_refs": [
+      "Delgado V, Ajmone Marsan N, de Waha S, et al. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI: 10.1093/eurheartj/ehad193, Seção 10.4 e Recommendation Table 17"
+    ],
+    "review_status": "revisado"
   }
 ]

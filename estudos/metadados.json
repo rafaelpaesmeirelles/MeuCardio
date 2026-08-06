@@ -9628,5 +9628,30 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "papadimitriou-olivgeris-mortalidade-endocardite-protetica-precoce-vs-tardia",
+    "title": "Mortalidade em 1 ano na endocardite protética precoce versus tardia",
+    "study_type": "estudo_de_coorte",
+    "authors": "Papadimitriou-Olivgeris M, Ledergerber B, Siedentop B, et al.",
+    "journal": "Clinical Infectious Diseases",
+    "year": 2024,
+    "doi": "10.1093/cid/ciae392",
+    "pmid": null,
+    "url": "https://academic.oup.com/cid/article/80/4/804/7721986",
+    "summary": "Estudo de coorte bicêntrico (Lausanne e Zurique, 2014-2023, retrospectivo até 2017 e prospectivo depois) com 302 episódios de endocardite protética (PVE) em 286 pacientes, comparando mortalidade em 1 ano entre PVE precoce (≤6 meses da cirurgia valvar) e tardia (>6 meses), usando o mesmo corte temporal da diretriz ESC 2023.",
+    "key_findings": "Mortalidade em 1 ano: 21% na PVE precoce contra 32% na PVE tardia, diferença não significativa (p=0,126). Mortalidade geral da coorte: 31% (IC95% 26-36%). Preditores independentes de mortalidade: índice de Charlson >4 (HR 2,06), sepse (HR 3,57), infecção por S. aureus (HR 1,65); reoperação cardíaca foi protetora (HR 0,57).",
+    "clinical_implications": "Questiona diretamente a recomendação ESC 2023 (Classe I) de cirurgia mandatória para toda PVE precoce dentro de 6 meses — não encontrou diferença significativa de mortalidade entre precoce e tardia, apesar de taxas cirúrgicas semelhantes, e defende decisão individualizada por fatores de risco (comorbidade, sepse, agente) em vez de corte automático por tempo.",
+    "limitations": "Amostra modesta com representação pequena de PVE precoce (13% da coorte), componente retrospectivo nos primeiros anos, dois centros terciários de um único país (Suíça) — generalização limitada. Possível viés de sobrevivência; decisões de tratamento influenciadas por preferência do paciente e comorbidade.",
+    "theme": "Endocardite",
+    "tags": [
+      "endocardite protética",
+      "pve precoce",
+      "pve tardia",
+      "mortalidade",
+      "coorte"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
