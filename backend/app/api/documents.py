@@ -280,6 +280,14 @@ def enviar_email_gerado(gid: int, dados: EnviarEmailIn, db: Session = Depends(ge
                     detail={"enviado": resultado.enviado, "erro": resultado.erro,
                             "assinado_smime": resultado.assinado_smime}))
     db.commit()
-    if not resultado.enviado:
-        raise HTTPException(status_code=502, detail=resultado.erro or "Não foi possível enviar o e-mail agora.")
-    return {"enviado": True, "link": None, "assinado_smime": resultado.assinado_smime}
+    # Nunca joga fora o link em caso de falha de envio — o médico sem
+    # CorvIA Mail ativo (nem outra conta conectada como padrão) esbarra
+    # aqui direto, e precisa de um jeito de mandar o documento por fora
+    # (WhatsApp, SMS...). Comportamento restaurado do que já existia antes
+    # desta ampliação; `resultado.erro` some do payload de sucesso.
+    return {
+        "enviado": resultado.enviado,
+        "link": None if resultado.enviado else url,
+        "erro": None if resultado.enviado else resultado.erro,
+        "assinado_smime": resultado.assinado_smime,
+    }
