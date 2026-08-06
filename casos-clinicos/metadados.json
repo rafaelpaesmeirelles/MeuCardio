@@ -11213,5 +11213,26 @@
       "Hill KD, Kannankeril PJ, Jacobs JP, Baldwin HS, Jacobs ML, O'Brien SM, Bichel DP, Graham EM, Blasiole B, Resheidat A, Overman D, Crawford J, Wallace A, Habib RH, Pizarro C, Lee JJ, Turek JW, Frost KE, Hoffman TM, Katz JD, Pigula FA, Twite MD, Jonas RA, Yerokun BA, Kanter K, Alsoufi B, Duncan BW, Deshpande SR, Kavarana MN, Kumar SR; STRESS Network Investigators. Methylprednisolone for Heart Surgery in Infants — A Randomized, Controlled Trial. N Engl J Med. 2022;387(23):2138-2149. DOI: 10.1056/NEJMoa2212667. PMID: 36342116 — citação conferida contra o registro já publicado nesta base: stress-metilprednisolona-em-cirurgia-cardiaca-de-lactentes."
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "febre-reumatica-artrite-escolha-do-anti-inflamatorio",
+    "titulo": "Artrite de febre reumática aguda: naproxeno ou AAS?",
+    "tema": "Febre reumática",
+    "nivel": "básico",
+    "enunciado": "Menino, 11 anos, com poliartrite migratória de grandes articulações (joelhos e tornozelos), febre e VHS elevado. ASLO em ascensão em duas dosagens. Ecocardiograma sem sinais de cardite. Diagnóstico de febre reumática aguda confirmado pelos critérios de Jones. O serviço optou, por protocolo local, por iniciar anti-inflamatório para controle da artrite.",
+    "pergunta": "Entre naproxeno e AAS para controle da artrite neste paciente, o que a evidência comparativa direta mostra?",
+    "opcoes": [
+      "AAS é superior ao naproxeno no controle da artrite, mas com pior perfil de segurança hepática",
+      "Naproxeno e AAS têm eficácia equivalente no controle da artrite (tempo médio de resolução de cerca de 3 dias em ambos), mas o AAS tem maior frequência de elevação de enzimas hepáticas",
+      "Nenhum anti-inflamatório deve ser usado na febre reumática aguda, segundo a diretriz da OMS 2024",
+      "Naproxeno é contraindicado em crianças com febre reumática pela ausência de qualquer estudo comparativo"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "O único ensaio clínico randomizado que comparou diretamente os dois agentes (Hashkes et al., J Pediatr. 2003) encontrou eficácia equivalente no controle da artrite — tempo médio até resolução de 2,9 ± 2,9 dias em ambos os grupos — mas elevação de enzimas hepáticas significativamente mais frequente no grupo AAS (p=0,002). Isso não significa que o uso de anti-inflamatório seja obrigatório ou baseado em recomendação forte: a diretriz da OMS 2024 explicitamente não recomenda a favor nem contra o uso de anti-inflamatório na febre reumática aguda, por insuficiência de evidência sobre impacto em desfecho cardíaco a longo prazo. A pergunta respondida pelo ensaio é mais estreita: SE um anti-inflamatório for usado por protocolo local, qual dos dois agentes preferir.",
+    "source_refs": [
+      "Hashkes PJ, Tauber T, Somekh E, et al.; Pediatric Rheumatology Study Group of Israel. Naproxen as an alternative to aspirin for the treatment of arthritis of rheumatic fever: a randomized trial. J Pediatr. 2003;143(3):399-401. PMID: 14517527",
+      "WHO guideline on the prevention and diagnosis of rheumatic fever and rheumatic heart disease. Geneva: WHO, 2024 (NCBI Bookshelf NBK609692)."
+    ],
+    "review_status": "revisado"
   }
 ]

@@ -9477,5 +9477,56 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "hashkes-naproxeno-vs-aas-artrite-febre-reumatica",
+    "title": "Naproxeno como alternativa ao AAS no tratamento da artrite da febre reumática aguda",
+    "study_type": "ensaio_clinico",
+    "authors": "Hashkes PJ, Tauber T, Somekh E, Brik R, Barash J, Mukamel M, Harel L, Lorber A, Berkovitch M, Uziel Y; Pediatric Rheumatology Study Group of Israel",
+    "journal": "The Journal of Pediatrics",
+    "year": 2003,
+    "doi": "10.1067/S0022-3476(03)00388-3",
+    "pmid": "14517527",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/14517527/",
+    "summary": "Ensaio clínico randomizado, multicêntrico (Grupo de Estudo de Reumatologia Pediátrica de Israel), com 33 crianças/adolescentes com artrite de febre reumática aguda, comparando naproxeno versus ácido acetilsalicílico (AAS).",
+    "key_findings": "Tempo médio até resolução da artrite: 2,9 ± 2,9 dias em ambos os grupos, sem diferença significativa. Elevação de enzimas hepáticas foi mais frequente no grupo AAS (p=0,002).",
+    "clinical_implications": "Único ensaio randomizado comparando diretamente naproxeno e AAS na artrite da febre reumática aguda: eficácia equivalente no controle articular, com melhor perfil de segurança hepática e posologia mais simples (2x/dia) para o naproxeno. Não informa se o uso de anti-inflamatório em si altera desfecho cardíaco — pergunta que a diretriz OMS 2024 explicitamente deixa em aberto.",
+    "limitations": "Amostra pequena (33 pacientes), desfecho avaliado foi controle articular a curto prazo, não desfecho cardíaco a longo prazo. Não avalia corticosteroide como comparador.",
+    "theme": "Febre reumática",
+    "tags": [
+      "febre reumática",
+      "artrite",
+      "naproxeno",
+      "aas",
+      "anti-inflamatório",
+      "ensaio clínico"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "mcbenedict-mortalidade-cardiopatia-reumatica-brasil-2000-2021",
+    "title": "Tendências temporais de mortalidade ajustada por idade por cardiopatia reumática no Brasil (2000-2021)",
+    "study_type": "estudo_ecologico_descritivo",
+    "authors": "McBenedict B, Mansoor Z, Chaudhary A, Thomas A, Yaseen M, Hauwanga W",
+    "journal": "Cureus",
+    "year": 2024,
+    "doi": "10.7759/cureus.52322",
+    "pmid": "38357062",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10866569/",
+    "summary": "Estudo ecológico descritivo de série temporal, usando dados do Sistema de Informações Hospitalares do SUS (DATASUS, cobertura de ~80% da população brasileira), com regressão joinpoint para calcular taxas de mortalidade ajustadas por idade (AAMR) por cardiopatia reumática aguda (ARHD) e crônica (CRHD) entre 2000 e 2021, estratificadas por sexo e faixa etária (20 a 80+ anos).",
+    "key_findings": "Taxa de mortalidade ajustada por idade combinada (ARHD, ambos os sexos) declinou de 78 para 67 óbitos por 100.000 (fonte declara essa unidade explicitamente); em mulheres, de 85 para 69/100.000, e em homens, de 73 para 63/100.000. Mortalidade por CRHD caiu de 13 para 8/100.000. Mulheres tiveram pico de mortalidade por ARHD aos 40-49 anos e homens aos 50-59 anos; para CRHD, ambos os sexos tiveram pico aos 60-69 anos. Homens de 50-59 anos mostraram aumento abrupto de mortalidade por ARHD entre 2019-2021 (variação percentual anual de 72,29%, segundo o método joinpoint).",
+    "clinical_implications": "Confirma declínio geral da mortalidade por cardiopatia reumática (aguda e crônica) no Brasil ao longo de duas décadas, mas aponta um sinal de alerta recente e específico — aumento de mortalidade por forma aguda em homens de 50-59 anos no período 2019-2021 — que merece investigação dirigida, não capturada pelas diretrizes internacionais de febre reumática, focadas em população pediátrica.",
+    "limitations": "Publicado em periódico de menor fator de impacto (Cureus) frente às fontes primárias habitualmente priorizadas nesta base; método administrativo (DATASUS) sujeito a subnotificação e a mudanças de codificação ao longo de 21 anos; exclui população pediátrica/adolescente; não investiga fatores causais por trás das diferenças de sexo nem do pico de 2019-2021 em homens de 50-59 anos — associação temporal, não causalidade estabelecida.",
+    "theme": "Febre reumática",
+    "tags": [
+      "cardiopatia reumática",
+      "epidemiologia brasileira",
+      "mortalidade",
+      "datasus",
+      "série temporal"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
