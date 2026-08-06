@@ -706,5 +706,103 @@
     "conduta": "Ao iniciar um inotrópico negativo novo, ou ao aumentar a dose de um em uso, manter supervisão médica rigorosa **com monitorização da fração de ejeção** até que a dose esteja estável e a resposta clínica definida.",
     "fonte": "Resumo das Características do Medicamento (RCM) da EMA, em português, secção 4.5 do CAMZYOS (mavacamten, Bristol-Myers Squibb), item de interações farmacodinâmicas.",
     "review_status": "revisado"
+  },
+  {
+    "slug": "espironolactona-ieca-ou-bra",
+    "farmacos": [
+      "espironolactona"
+    ],
+    "classe_oposta": "inibidor da ECA (IECA) ou bloqueador do receptor de angiotensina II (BRA)",
+    "gravidade": "grave",
+    "efeito": "Há casos relatados de hiperpotassemia grave em pacientes que fazem uso concomitante de diurético poupador de potássio (espironolactona) e IECA, ou de outros fármacos que elevam o potássio. O risco cresce ainda mais com a associação tríplice IECA + BRA + espironolactona.",
+    "conduta": "Monitorar potássio sérico e função renal periodicamente, sobretudo no início do tratamento combinado e a cada ajuste de dose — indicação central em IC com FEVE reduzida (RALES), onde a associação com IECA/BRA é terapêutica e não deve ser evitada, apenas vigiada. Nunca associar IECA + BRA + espironolactona simultaneamente (tríplice bloqueio do sistema renina-angiotensina-aldosterona).",
+    "fonte": "Bula do ALDACTONE (espironolactona, Wyeth Indústria Farmacêutica Ltda.), seção Interações Medicamentosas: \"Há casos relatados de hiperpotassemia grave em pacientes que fazem uso de diuréticos poupadores de potássio, incluindo Aldactone® (espironolactona) e inibidores da ECA.\"",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "espironolactona-digoxina",
+    "farmacos": [
+      "espironolactona",
+      "digoxina"
+    ],
+    "gravidade": "moderada",
+    "efeito": "A bula do Aldactone declara que foi demonstrado que a espironolactona aumenta a meia-vida da digoxina, o que pode elevar seu nível sérico. A espironolactona também pode interferir na dosagem laboratorial da concentração plasmática de digoxina, gerando leitura não confiável.",
+    "conduta": "Monitorar sinais clínicos de toxicidade digitálica ao associar; interpretar dosagem de digoxina sérica com cautela nesse contexto, pela possível interferência analítica declarada em bula.",
+    "fonte": "Bula do ALDACTONE (espironolactona, Wyeth Indústria Farmacêutica Ltda.), seção Interações Medicamentosas: \"Foi demonstrado que Aldactone® aumenta a meia-vida da digoxina (...) Aldactone® pode interferir na análise dos exames de concentração plasmática de digoxina.\"",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "amiodarona-sinvastatina",
+    "farmacos": [
+      "amiodarona-cloridrato",
+      "sinvastatina"
+    ],
+    "gravidade": "grave",
+    "efeito": "A amiodarona inibe o CYP3A4, reduzindo a eliminação da sinvastatina e aumentando o risco de miopatia/rabdomiólise dose-dependente.",
+    "conduta": "Com uso concomitante de amiodarona, a dose de sinvastatina não deve exceder 20 mg/dia — limite explícito da bula, não apenas recomendação de cautela.",
+    "fonte": "Bula para o profissional de saúde — Sinvastatina (genérico), Merck S/A, item 6 (Interações Medicamentosas): \"Amiodarona: dose de sinvastatina não deve exceder 20 mg/dia.\"",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sinvastatina-genfibrozila",
+    "farmacos": [
+      "sinvastatina",
+      "genfibrozila"
+    ],
+    "gravidade": "contraindicada",
+    "efeito": "Risco aumentado de miopatia grave, elevação acentuada de CK, mioglobinúria e rabdomiólise. A bula da genfibrozila relata casos de miosite grave e rabdomiólise com o uso concomitante de genfibrozila e inibidores da HMG-CoA redutase (incluindo sinvastatina, lovastatina, atorvastatina e rosuvastatina) — o possível benefício da associação não supera o risco de miopatia grave, rabdomiólise e insuficiência renal aguda.",
+    "conduta": "Combinação contraindicada pela bula da sinvastatina. Se hipolipemiante fibrato for necessário junto de estatina, considerar fenofibrato, com o qual o risco de miopatia — embora presente — não está descrito como excedendo a soma dos riscos individuais.",
+    "fonte": "Bula para o profissional de saúde — Sinvastatina (genérico), Merck S/A, item 6, e bula do LOPID® (genfibrozila, Laboratórios Pfizer Ltda.), seção Advertências e Precauções — as duas bulas convergem em contraindicar a associação.",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "sinvastatina-verapamil-ou-diltiazem",
+    "farmacos": [
+      "sinvastatina",
+      "verapamil-cloridrato",
+      "diltiazem-cloridrato"
+    ],
+    "gravidade": "moderada",
+    "efeito": "Verapamil e diltiazem são inibidores moderados do CYP3A4 e elevam a exposição sistêmica à sinvastatina, aumentando o risco de miopatia dose-dependente.",
+    "conduta": "Com uso concomitante de verapamil ou diltiazem, a dose de sinvastatina não deve exceder 20 mg/dia — limite explícito da bula.",
+    "fonte": "Bula para o profissional de saúde — Sinvastatina (genérico), Merck S/A, item 6 (Interações Medicamentosas): \"Verapamil ou diltiazem: dose de sinvastatina não deve exceder 20 mg/dia.\"",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "varfarina-aas-ou-aine",
+    "farmacos": [
+      "varfarina-sodica",
+      "acido-acetilsalicilico-aas"
+    ],
+    "classe_oposta": "antiagregante plaquetário ou anti-inflamatório não esteroidal (AINE)",
+    "gravidade": "grave",
+    "efeito": "Aumenta o risco de sangramento por efeito aditivo na hemostasia, sem necessariamente alterar o INR — ou seja, o exame de rotina pode não sinalizar o risco maior.",
+    "conduta": "Evitar a associação rotineira. Quando clinicamente indispensável (ex.: síndrome coronariana aguda recente, prótese valvar mecânica com indicação de antiagregação), usar a menor dose e o menor tempo possíveis, com vigilância clínica de sangramento independente do valor do INR.",
+    "fonte": "Rótulo do warfarin sodium aprovado pelo FDA (DailyMed SPL setid 541c9a70-adaf-4ef3-94ba-ad4e70dfa057), já citado no verbete de varfarina-sodica em medicamentos/metadados.json, campo interactions: \"aumentam o risco de sangramento sem alterar o INR: antiagregantes, AINEs, corticosteroides, outros anticoagulantes\".",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "colchicina-inibidor-de-cyp3a4-ou-p-gp",
+    "farmacos": [
+      "colchicina"
+    ],
+    "classe_oposta": "inibidor moderado (ex.: diltiazem, verapamil, eritromicina, fluconazol) ou forte (ex.: claritromicina, cetoconazol, itraconazol, ritonavir) do CYP3A4, ou inibidor da glicoproteína P (ex.: ciclosporina, ranolazina)",
+    "gravidade": "grave",
+    "efeito": "Aumento significativo das concentrações plasmáticas de colchicina — a bula declara que toxicidade FATAL já foi relatada com essa associação.",
+    "conduta": "Usar com cautela e, quando associado a inibidor de protease, ajustar a dose de colchicina. Evitar a combinação sempre que uma alternativa terapêutica existir; se inevitável, reduzir a dose de colchicina e vigiar sinais de toxicidade (neuromuscular, gastrointestinal, hematológica).",
+    "fonte": "Bula da COLCHICINA (Geolab Indústria Farmacêutica S.A.), seção Interações Medicamentosas: \"A colchicina deve ser usada com cautela em pacientes usando medicamentos inibidores da P-gp (...) ou medicamentos inibidores moderados (...) ou fortes (...) do CYP3A4; aumento significativo das concentrações plasmáticas de colchicina e toxicidade fatal já foram relatados.\"",
+    "review_status": "revisado"
+  },
+  {
+    "slug": "colchicina-estatina-ou-fibrato",
+    "farmacos": [
+      "colchicina"
+    ],
+    "classe_oposta": "estatina (inibidor da HMG-CoA redutase) ou fibrato (derivado do ácido fíbrico)",
+    "gravidade": "grave",
+    "efeito": "A colchicina pode aumentar o risco de rabdomiólise (destruição de células musculares) associado a estatinas e a fibratos.",
+    "conduta": "Monitorar sintomas musculares (mialgia, fraqueza, urina escura) e, se indicado, CK, especialmente em idosos e em disfunção renal ou hepática — população de maior risco segundo a própria bula.",
+    "fonte": "Bula da COLCHICINA (Geolab Indústria Farmacêutica S.A.), seção Interações Medicamentosas: \"A colchicina pode aumentar o risco de rabdomiólise (...) de inibidores da enzima HMG-CoA redutase (estatinas) e de derivados do ácido fíbrico (fibratos).\"",
+    "review_status": "revisado"
   }
 ]
