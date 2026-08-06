@@ -21533,5 +21533,39 @@
         "por_que": "Fecha a trilha com a evidência em tensão direta com a diretriz — sem diferença de mortalidade entre PVE precoce e tardia, defendendo decisão mais individualizada."
       }
     ]
+  },
+  {
+    "slug": "trilha-cardiologia-geriatrica-quedas-bradiarritmia-e-seguranca-da-internacao",
+    "titulo": "Cardiologia geriátrica: quedas, bradiarritmia e a segurança do idoso internado por causa cardiovascular",
+    "tema": "Cardiologia geriátrica",
+    "objetivo": "Sair sabendo investigar duas causas de queda/síncope no idoso que costumam passar despercebidas por não serem procuradas ativamente (hipotensão pós-prandial e disfunção do nó sinusal), e reconhecer que a internação clínica cardiológica — não só a cirúrgica — exige prevenção estruturada de delirium.",
+    "nivel": "intermediário",
+    "review_status": "revisado",
+    "etapas": [
+      {
+        "ordem": 1,
+        "item_type": "documento",
+        "item_slug": "hipotensao-pos-prandial-no-idoso-cardiopata-mecanismo-prevalencia-e-manejo",
+        "por_que": "Começa pela causa de queda/tontura pós-refeição que o médico raramente pergunta porque raramente pensa em perguntar — mecanismo, prevalência (até 36% de queda >20 mmHg em idoso institucionalizado) e associação com maior risco de evento cardiovascular e mortalidade."
+      },
+      {
+        "ordem": 2,
+        "item_type": "estudo",
+        "item_slug": "midodrina-versus-placebo-na-hipotensao-ortostatica-neurogenica",
+        "por_que": "Amplia o raciocínio farmacológico para a hipotensão de causa autonômica em geral — evidência de um vasoconstritor oral em síndrome relacionada de queda pressórica postural, útil para julgar quando a mesma classe de intervenção se aplicaria ao quadro pós-prandial do passo anterior."
+      },
+      {
+        "ordem": 3,
+        "item_type": "documento",
+        "item_slug": "doenca-do-no-sinusal-no-idoso-epidemiologia-por-idade-sindrome-taquicardia-bradicardia-e-indicacao-de-marca-passo",
+        "por_que": "Muda o eixo para a causa arrítmica de síncope/queda no idoso: por que a incidência de disfunção do nó sinusal multiplica com a idade, como reconhecer a síndrome taquicardia-bradicardia, e por que a decisão de marca-passo segue sendo guiada pelo sintoma correlacionado à bradicardia, não pela idade isolada."
+      },
+      {
+        "ordem": 4,
+        "item_type": "documento",
+        "item_slug": "prevencao-de-delirium-na-internacao-clinica-cardiologica-do-idoso-fora-do-contexto-cirurgico",
+        "por_que": "Fecha a trilha no que conecta os dois problemas anteriores à segurança da internação: o idoso investigado por síncope/queda de causa cardiovascular soma os mesmos fatores de risco para delirium hospitalar que o pós-operatório, e o programa multicomponente HELP foi testado exatamente nessa população de clínica médica, não cirúrgica."
+      }
+    ]
   }
 ]
