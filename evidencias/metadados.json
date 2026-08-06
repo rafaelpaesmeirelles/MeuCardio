@@ -32185,5 +32185,199 @@
     ],
     "review_status": "revisado",
     "published": false
+  },
+  {
+    "slug": "marca-passo-definitivo-doenca-do-no-sinusal-sintomatica-documentada",
+    "statement": "Implante de marca-passo definitivo é recomendado na doença do nó sinusal (bradicardia sinusal, pausa/parada sinusal, bloqueio sinoatrial ou síndrome bradi-taquicardia) espontânea, sem causa passível de tratamento ou induzida por fármaco necessário e insubstituível, com documentação de sintomas (síncope, pré-síncope, tontura ou cansaço/fadiga) relacionados à bradicardia.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2023,
+    "guideline_title": "Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023",
+    "reference": "Teixeira RA et al. Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023. Arq Bras Cardiol. 2023;120(1):e20220892.",
+    "theme": "Dispositivos",
+    "tags": [
+      "marca-passo",
+      "doença do nó sinusal",
+      "bradicardia sinusal",
+      "dispositivo cardíaco implantável"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cdi-prevencao-primaria-cardiopatia-isquemica-cronica-feve-35-ou-menos",
+    "statement": "CDI é recomendado em pacientes com história de infarto agudo do miocárdio há mais de 40 dias ou cardiopatia isquêmica crônica, sob tratamento farmacológico ótimo, sem isquemia miocárdica passível de tratamento por revascularização cirúrgica ou percutânea e expectativa de vida de pelo menos 1 ano, que apresentem FEVE ≤35% e classe funcional II-III, ou FEVE ≤30% e classe funcional I, II ou III.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2023,
+    "guideline_title": "Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023",
+    "reference": "Teixeira RA et al. Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023. Arq Bras Cardiol. 2023;120(1):e20220892.",
+    "theme": "Dispositivos",
+    "tags": [
+      "cdi",
+      "prevenção primária",
+      "cardiopatia isquêmica",
+      "morte súbita",
+      "dispositivo cardíaco implantável"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cdi-nao-indicado-infarto-recente-menos-de-40-dias-ou-com-indicacao-de-revascularizacao",
+    "statement": "CDI não é indicado em pacientes com infarto agudo do miocárdio com menos de 40 dias de evolução, ou que tenham indicação de revascularização miocárdica pendente.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2023,
+    "guideline_title": "Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023",
+    "reference": "Teixeira RA et al. Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023. Arq Bras Cardiol. 2023;120(1):e20220892.",
+    "theme": "Dispositivos",
+    "tags": [
+      "cdi",
+      "prevenção primária",
+      "infarto do miocárdio",
+      "revascularização",
+      "dispositivo cardíaco implantável"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "cdi-prevencao-primaria-cardiomiopatia-nao-isquemica-feve-35-ou-menos",
+    "statement": "CDI é recomendado em pacientes com cardiomiopatia não isquêmica, FEVE ≤35%, tratamento clínico otimizado, classe funcional NYHA II-III e expectativa de vida maior que 1 ano.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2023,
+    "guideline_title": "Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023",
+    "reference": "Teixeira RA et al. Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023. Arq Bras Cardiol. 2023;120(1):e20220892.",
+    "theme": "Dispositivos",
+    "tags": [
+      "cdi",
+      "prevenção primária",
+      "cardiomiopatia não isquêmica",
+      "dispositivo cardíaco implantável"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "remocao-completa-do-dcei-em-infeccao-confirmada",
+    "statement": "Remoção completa do sistema (marca-passo, CDI ou ressincronizador) é recomendada em pacientes com infecção relacionada ao dispositivo cardíaco eletrônico implantável (DCEI), sistêmica ou local, confirmada.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2023,
+    "guideline_title": "Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023",
+    "reference": "Teixeira RA et al. Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023. Arq Bras Cardiol. 2023;120(1):e20220892.",
+    "theme": "Dispositivos",
+    "tags": [
+      "dispositivo cardíaco implantável",
+      "infecção",
+      "explante",
+      "endocardite de dispositivo"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "remocao-do-dcei-em-bacteremia-por-staphylococcus-aureus-ou-candida",
+    "statement": "Remoção completa do dispositivo cardíaco eletrônico implantável (DCEI) é recomendada nos casos de bacteremia por Staphylococcus aureus, estafilococo coagulase-negativo, Cutibacterium spp. ou fungemia por Candida spp., afastados outros sítios de infecção.",
+    "recommendation_class": "I",
+    "evidence_level": "C",
+    "society": "SBC",
+    "year": 2023,
+    "guideline_title": "Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023",
+    "reference": "Teixeira RA et al. Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023. Arq Bras Cardiol. 2023;120(1):e20220892.",
+    "theme": "Dispositivos",
+    "tags": [
+      "dispositivo cardíaco implantável",
+      "bacteremia",
+      "staphylococcus aureus",
+      "candida",
+      "explante"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "eletrocauterio-bipolar-preferencial-e-magneto-sobre-a-loja-do-cdi",
+    "statement": "Em cirurgia com uso de eletrocautério em portador de dispositivo cardíaco eletrônico implantável (DCEI), deve-se usar preferencialmente o eletrocautério bipolar (a eletrocirurgia monopolar pode provocar anormalidades no dispositivo); no paciente com CDI não dependente de marca-passo, a aplicação do magneto sobre a loja do CDI pode ser feita com segurança para desabilitar as terapias de taquiarritmia e evitar choques inapropriados.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2023,
+    "guideline_title": "Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023",
+    "reference": "Teixeira RA et al. Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023. Arq Bras Cardiol. 2023;120(1):e20220892.",
+    "theme": "Dispositivos",
+    "tags": [
+      "dispositivo cardíaco implantável",
+      "eletrocautério",
+      "cirurgia",
+      "interferência eletromagnética",
+      "cdi"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "ressonancia-magnetica-em-dispositivo-condicional-exige-modo-rm-e-fluxo-padronizado",
+    "statement": "Dispositivos cardíacos eletrônicos implantáveis (DCEI) condicionais para ressonância magnética (RM) só devem ser considerados seguros para o exame quando a especificação do produto for respeitada — incluindo a programação do \"modo RM\" apropriado — e a RM deve sempre ser realizada em fluxo de trabalho institucional padronizado e rigorosamente aplicado, com ECG e oximetria de pulso monitorizados até o fim da observação do paciente.",
+    "recommendation_class": "I",
+    "evidence_level": "A",
+    "society": "SBC",
+    "year": 2023,
+    "guideline_title": "Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023",
+    "reference": "Teixeira RA et al. Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023. Arq Bras Cardiol. 2023;120(1):e20220892.",
+    "theme": "Dispositivos",
+    "tags": [
+      "dispositivo cardíaco implantável",
+      "ressonância magnética",
+      "modo rm",
+      "interferência eletromagnética"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "avaliacao-do-dcei-antes-e-apos-radioterapia-nao-produtora-de-neutrons-preferencial",
+    "statement": "Antes de iniciar radioterapia em portador de dispositivo cardíaco eletrônico implantável (DCEI), deve-se realizar avaliação completa do dispositivo e informar a equipe responsável (tipo de dispositivo, dependência de estimulação, frequências programadas); tratamento radioterápico que não produz nêutrons é preferível ao que produz nêutrons, pelo menor risco de disfunção do dispositivo (como reset do gerador), e a avaliação completa do DCEI deve ser repetida semanalmente durante radioterapia produtora de nêutrons e ao término do curso de tratamento.",
+    "recommendation_class": "I",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2023,
+    "guideline_title": "Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023",
+    "reference": "Teixeira RA et al. Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023. Arq Bras Cardiol. 2023;120(1):e20220892.",
+    "theme": "Dispositivos",
+    "tags": [
+      "dispositivo cardíaco implantável",
+      "radioterapia",
+      "interferência eletromagnética",
+      "nêutrons"
+    ],
+    "review_status": "revisado",
+    "published": false
+  },
+  {
+    "slug": "reposicionamento-do-dcei-nao-recomendado-com-dose-cumulativa-abaixo-de-5-gy",
+    "statement": "O reposicionamento cirúrgico do dispositivo cardíaco eletrônico implantável (DCEI) para fora do campo de radioterapia não é recomendado quando a dose cumulativa de radiação recebida pelo dispositivo é inferior a 5 Gy.",
+    "recommendation_class": "III",
+    "evidence_level": "B",
+    "society": "SBC",
+    "year": 2023,
+    "guideline_title": "Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023",
+    "reference": "Teixeira RA et al. Diretriz Brasileira de Dispositivos Cardíacos Eletrônicos Implantáveis – 2023. Arq Bras Cardiol. 2023;120(1):e20220892.",
+    "theme": "Dispositivos",
+    "tags": [
+      "dispositivo cardíaco implantável",
+      "radioterapia",
+      "reposicionamento",
+      "interferência eletromagnética"
+    ],
+    "review_status": "revisado",
+    "published": false
   }
 ]
