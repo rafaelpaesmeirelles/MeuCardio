@@ -11356,5 +11356,26 @@
       "Delgado V, Ajmone Marsan N, de Waha S, et al. 2023 ESC Guidelines for the management of endocarditis. Eur Heart J. 2023;44(39):3948-4042. DOI: 10.1093/eurheartj/ehad193, Seção 10.4 e Recommendation Table 17"
     ],
     "review_status": "revisado"
+  },
+  {
+    "slug": "massa-incidental-angulo-cardiofrenico-direito-cisto-pericardico",
+    "titulo": "Massa incidental no ângulo cardiofrênico direito: o que fazer?",
+    "tema": "Pericárdio",
+    "nivel": "básico",
+    "enunciado": "Mulher, 45 anos, assintomática, com radiografia de tórax de rotina mostrando opacidade arredondada, bem delimitada, no ângulo cardiofrênico direito. Ecocardiograma confirma estrutura cística adjacente ao coração, sem repercussão hemodinâmica. TC de tórax sem contraste mostra massa única, homogênea, ovoide, de parede fina, sem realce, medindo 3 cm.",
+    "pergunta": "Qual a conduta mais apropriada?",
+    "opcoes": [
+      "Ressecção cirúrgica imediata, pelo risco de malignização do cisto",
+      "Manejo conservador com ecocardiografia seriada de vigilância — a maioria dos cistos pericárdicos é achado incidental, assintomático, e a apresentação de imagem é típica de lesão benigna",
+      "Biópsia percutânea guiada por imagem antes de qualquer decisão de conduta",
+      "Aspiração percutânea imediata, independentemente de sintomas, para confirmação diagnóstica"
+    ],
+    "resposta_correta": 1,
+    "explicacao": "Cisto pericárdico é achado incidental em cerca de 75% dos casos, tipicamente no ângulo cardiofrênico direito (51-70% dos casos) — exatamente a localização e a aparência de imagem (massa única, homogênea, ovoide, de parede fina, sem realce à TC sem contraste) descritas neste caso. Em paciente assintomático e estável, a conduta recomendada é manejo conservador com ecocardiografia transtorácica seriada de vigilância, não intervenção reflexa — ressecção cirúrgica e aspiração percutânea ficam reservadas a casos sintomáticos ou em crescimento documentado no seguimento.",
+    "source_refs": [
+      "Khayata M, Alkharabsheh S, Shah NP, Klein AL. Pericardial Cysts: a Contemporary Comprehensive Review. Curr Cardiol Rep. 2019;21(7):64. DOI: 10.1007/s11886-019-1153-5",
+      "Meredith A, Zazai IK, Kyriakopoulos C. Pericardial Cyst. StatPearls [Internet]. Atualizado em 04/01/2023."
+    ],
+    "review_status": "revisado"
   }
 ]
